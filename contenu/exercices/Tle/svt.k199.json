@@ -1,0 +1,4812 @@
+{
+  "niveau": "Tle",
+  "matiere": "svt",
+  "exercices": [
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le filon dans la falaise",
+      "competence": "observer-schema",
+      "situation": "Sur une falaise non déformée, Nora observe quatre couches sédimentaires empilées et un filon de basalte, une roche volcanique qui s’est injectée dans les couches.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "La falaise de Nora",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 30,
+              "l": 200,
+              "h": 40,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "d",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 70,
+              "l": 200,
+              "h": 40,
+              "teinte": "brun",
+              "motif": "points",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 110,
+              "l": 200,
+              "h": 40,
+              "teinte": "brun",
+              "motif": "hachures",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 150,
+              "l": 200,
+              "h": 40,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 132,
+              "y": 70,
+              "l": 16,
+              "h": 120,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "filon",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 54,
+              "texte": "Couche D",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 94,
+              "texte": "Couche C",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 134,
+              "texte": "Couche B",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 174,
+              "texte": "Couche A",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 210,
+              "texte": "Filon de basalte",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche la couche la plus ancienne.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Dans une série non déformée, on lit le temps du bas vers le haut.",
+          "explication": "C’est la couche **A**, tout en bas : d’après le principe de superposition, elle s’est déposée la première."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le filon traverse les couches A, B et C, mais pas la couche D. Que peut-on en conclure ?",
+          "options": [
+            "Il est plus récent que C et plus ancien que D",
+            "Il est plus ancien que la couche A",
+            "Il a exactement le même âge que la couche B",
+            "Il est plus récent que la couche D"
+          ],
+          "reponse": 0,
+          "aide": "Ce qui recoupe est plus récent que ce qui est recoupé ; D n’est pas recoupée.",
+          "explication": "Le filon recoupe C : il est **postérieur à C**. La couche D, non traversée, s’est déposée après lui."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Dépôt de la couche A",
+            "Dépôt de la couche B",
+            "Dépôt de la couche C",
+            "Arrivée du filon de basalte",
+            "Dépôt de la couche D"
+          ],
+          "aide": "Les couches d’abord, dans l’ordre du bas vers le haut ; le filon s’insère quand C existe déjà.",
+          "explication": "A, B, C, puis le **filon**, qui recoupe C, et enfin D qui le recouvre."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La carrière à l’envers",
+      "competence": "analyser-document",
+      "situation": "Dans une carrière, des bancs de grès sont très inclinés. Un banc déposé normalement a ses grains les plus gros en bas ; ses fentes de dessiccation, creusées depuis la surface du sol, sont larges en haut et finissent en pointe vers le bas.",
+      "documents": [
+        {
+          "id": "bancs",
+          "type": "tableau",
+          "titre": "Relevés sur trois bancs",
+          "colonnes": [
+            "Banc",
+            "Grains en bas",
+            "Grains en haut",
+            "Fentes larges vers…"
+          ],
+          "lignes": [
+            [
+              "Banc 1 (le plus bas)",
+              "fins",
+              "grossiers",
+              "le bas"
+            ],
+            [
+              "Banc 2 (au milieu)",
+              "fins",
+              "grossiers",
+              "le bas"
+            ],
+            [
+              "Banc 3 (le plus haut)",
+              "fins",
+              "grossiers",
+              "le bas"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Relevés imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que disent le granoclassement et les fentes de dessiccation de cette série ?",
+          "options": [
+            "Elle est renversée : le haut actuel était le bas à l’origine",
+            "Elle est normale : le plus ancien est en bas",
+            "Elle est normale, mais les bancs sont mal classés",
+            "On ne peut rien savoir sans dater les roches"
+          ],
+          "reponse": 0,
+          "aide": "Compare avec un banc déposé normalement : gros grains où ? fentes larges où ?",
+          "explication": "Les gros grains sont **en haut** et les fentes sont larges **vers le bas** : c’est l’inverse d’un dépôt normal. La série est **renversée**."
+        },
+        {
+          "type": "zone",
+          "document": "bancs",
+          "enonce": "Touche la case du banc 3 qui indique où ses fentes de dessiccation sont larges.",
+          "reponse": [
+            "r2c3"
+          ],
+          "aide": "Lis la dernière colonne, troisième ligne.",
+          "explication": "Pour le banc 3, les fentes sont larges vers **le bas**, ce qui trahit le renversement."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les bancs du plus ancien au plus récent.",
+          "items": [
+            "Banc 3 (le plus haut)",
+            "Banc 2 (au milieu)",
+            "Banc 1 (le plus bas)"
+          ],
+          "aide": "Comme la série est renversée, le principe de superposition se lit à l’envers.",
+          "explication": "La série étant renversée, le banc le plus haut est le plus **ancien** : 3, puis 2, puis 1."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion.",
+          "texte": "Comme la série est ___, c’est le banc le plus ___ de la carrière qui s’est déposé en dernier.",
+          "reponses": [
+            [
+              "renversée"
+            ],
+            [
+              "bas"
+            ]
+          ],
+          "banque": [
+            "renversée",
+            "normale",
+            "bas",
+            "haut"
+          ],
+          "aide": "Le dernier déposé est au sommet de la série d’origine.",
+          "explication": "Série **renversée** : le sommet d’origine est en bas, donc le banc le plus **bas** est le plus récent."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une histoire en cinq chapitres",
+      "competence": "raisonner",
+      "situation": "Les géologues de Tania lisent une coupe : des couches inclinées sont tronquées par une surface plane, au-dessus de laquelle deux couches horizontales se sont déposées. La couche C contient des galets arrachés à A.",
+      "documents": [
+        {
+          "id": "discordance",
+          "type": "schema",
+          "titre": "Coupe géologique",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  147,
+                  115
+                ],
+                [
+                  310,
+                  164
+                ],
+                [
+                  310,
+                  205
+                ],
+                [
+                  280,
+                  205
+                ],
+                [
+                  30,
+                  130
+                ],
+                [
+                  30,
+                  115
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  30,
+                  130
+                ],
+                [
+                  280,
+                  205
+                ],
+                [
+                  47,
+                  205
+                ],
+                [
+                  30,
+                  200
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "hachures",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 80,
+              "l": 280,
+              "h": 29,
+              "teinte": "brun",
+              "motif": "points",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 50,
+              "l": 280,
+              "h": 30,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "d",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 109,
+              "l": 280,
+              "h": 6,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "surface",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 62,
+              "cy": 96,
+              "r": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 112,
+              "cy": 100,
+              "r": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 92,
+              "r": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 232,
+              "cy": 99,
+              "r": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 282,
+              "cy": 94,
+              "r": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 322,
+              "y": 99,
+              "texte": "C",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 322,
+              "y": 69,
+              "texte": "D",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 182,
+              "texte": "A",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 185,
+              "texte": "B",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "fossiles",
+          "type": "tableau",
+          "titre": "Fossiles trouvés dans la couche D",
+          "colonnes": [
+            "Fossile",
+            "Durée (Ma)",
+            "Répartition",
+            "Nombre"
+          ],
+          "lignes": [
+            [
+              "Ammonite P",
+              1,
+              "mondiale",
+              "fort"
+            ],
+            [
+              "Ammonite Q",
+              150,
+              "mondiale",
+              "fort"
+            ],
+            [
+              "Mollusque R",
+              2,
+              "une baie",
+              "faible"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Ma = millions d’années. Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "discordance",
+          "enonce": "Touche la surface d’érosion qui tronque les couches inclinées A et B.",
+          "reponse": [
+            "surface"
+          ],
+          "aide": "C’est la ligne plane qui coupe les couches inclinées.",
+          "explication": "La **surface d’érosion** arase A et B : elle est plus récente qu’elles et plus ancienne que C qui la recouvre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les galets de la couche C viennent de la couche A. Que conclut-on ?",
+          "options": [
+            "A est plus ancienne que C",
+            "A est plus récente que C",
+            "A et C ont le même âge",
+            "On ne peut pas comparer A et C"
+          ],
+          "reponse": 0,
+          "aide": "Un élément inclus existait avant la roche qui le contient.",
+          "explication": "Un galet inclus est **antérieur** à la roche qui l’englobe : A est plus ancienne que C."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Dépôt des couches B puis A",
+            "Inclinaison des couches A et B",
+            "Érosion qui arase A et B",
+            "Dépôt de C, avec ses galets",
+            "Dépôt de D"
+          ],
+          "aide": "Il faut que A et B soient inclinées avant d’être tronquées, et tronquées avant d’être recouvertes.",
+          "explication": "Dépôt de B puis A, inclinaison, érosion, dépôt de C (qui contient des galets de A), dépôt de D."
+        },
+        {
+          "type": "zone",
+          "document": "fossiles",
+          "enonce": "Touche le fossile qui ferait le meilleur fossile stratigraphique.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Il faut une courte durée, une large répartition et de l’abondance.",
+          "explication": "L’**ammonite P** cumule les trois critères : 1 million d’années seulement, partout, en grand nombre."
+        },
+        {
+          "type": "choix",
+          "enonce": "La couche D contient l’ammonite P. À 6 000 km, une couche d’une autre coupe en contient aussi. Que peut-on dire ?",
+          "options": [
+            "Les deux couches sont contemporaines",
+            "La couche éloignée est plus ancienne",
+            "La couche D est plus récente",
+            "On ne peut rien dire sans datation radiochronologique"
+          ],
+          "reponse": 0,
+          "aide": "Même assemblage de fossiles, même âge : c’est le principe d’identité paléontologique.",
+          "explication": "Un bon fossile stratigraphique permet de **corréler** des coupes éloignées : les deux couches ont le même âge."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quelle horloge pour quel objet ?",
+      "competence": "analyser-document",
+      "situation": "Un laboratoire de datation reçoit trois échantillons. Pour chacun, il faut choisir le couple père-fils dont la demi-vie est du même ordre que l’âge cherché.",
+      "documents": [
+        {
+          "id": "echantillons",
+          "type": "tableau",
+          "titre": "Les échantillons",
+          "colonnes": [
+            "Échantillon",
+            "Âge supposé"
+          ],
+          "lignes": [
+            [
+              "Bois d’une pirogue",
+              "environ 3 000 ans"
+            ],
+            [
+              "Coulée de basalte",
+              "quelques millions d’années"
+            ],
+            [
+              "Zircon d’un granite",
+              "environ 4 milliards d’années"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "couples",
+          "type": "tableau",
+          "titre": "Les horloges disponibles",
+          "colonnes": [
+            "Couple",
+            "Demi-vie"
+          ],
+          "lignes": [
+            [
+              "Carbone 14 → azote 14",
+              "5 730 ans"
+            ],
+            [
+              "Potassium 40 → argon 40",
+              "1,3 milliard d’années"
+            ],
+            [
+              "Uranium → plomb",
+              "4,5 milliards d’années"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque échantillon au couple le mieux adapté.",
+          "paires": [
+            [
+              "Bois d’une pirogue",
+              "Carbone 14 → azote 14"
+            ],
+            [
+              "Coulée de basalte",
+              "Potassium 40 → argon 40"
+            ],
+            [
+              "Zircon d’un granite",
+              "Uranium → plomb"
+            ]
+          ],
+          "aide": "Cherche la demi-vie du même ordre que l’âge.",
+          "explication": "Bois récent : **carbone 14** ; coulée volcanique : **potassium-argon** ; zircon très ancien : **uranium-plomb**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un bois contient 80 atomes de carbone 14 à la mort de l’arbre. Combien en restera-t-il après une demi-vie, soit 5 730 ans ?",
+          "reponse": 40,
+          "unite": "atomes",
+          "aide": "À chaque demi-vie, il reste la moitié des atomes pères.",
+          "explication": "La moitié de 80, soit **40 atomes**."
+        },
+        {
+          "type": "zone",
+          "document": "couples",
+          "enonce": "Touche le couple dont la demi-vie est du même ordre que l’âge de la Terre.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "La Terre a 4,57 milliards d’années.",
+          "explication": "C’est **uranium → plomb**, avec une demi-vie d’environ 4,5 milliards d’années."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La décroissance du carbone 14",
+      "competence": "lire-graphique",
+      "situation": "Marc étudie un os archéologique. La courbe montre la part d’atomes de carbone 14 qui restent en fonction du nombre de demi-vies écoulées. La demi-vie du carbone 14 est de 5 730 ans.",
+      "documents": [
+        {
+          "id": "decroissance",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Atomes de carbone 14 restants",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Atomes de carbone 14 restants",
+              "valeurs": [
+                100,
+                50,
+                25,
+                12.5,
+                6.25
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Part restante",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 25
+          },
+          "axeX": {
+            "titre": "Demi-vies écoulées"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "decroissance",
+          "enonce": "Touche le nombre de demi-vies au bout duquel il ne reste que le quart des atomes.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la graduation où la courbe est à 25 %.",
+          "explication": "Au bout de **2 demi-vies**, il reste 25 % des atomes de départ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage de carbone 14 reste-t-il après 3 demi-vies ?",
+          "reponse": 12.5,
+          "unite": "%",
+          "tolerance": 0.3,
+          "aide": "Lis la courbe, ou divise 100 par 2 trois fois de suite.",
+          "explication": "100 → 50 → 25 → **12,5 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans l’os de Marc, il reste 25 % du carbone 14 de départ. Quel âge a-t-il ?",
+          "reponse": 11460,
+          "unite": "ans",
+          "aide": "Combien de demi-vies pour arriver à 25 % ? Multiplie par 5 730 ans.",
+          "explication": "25 % correspond à 2 demi-vies : 2 × 5 730 = **11 460 ans**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Marc chauffe l’échantillon à 500 °C avant la mesure. La courbe de décroissance est-elle modifiée ?",
+          "options": [
+            "Non : la vitesse de désintégration ne dépend ni de la température ni de la pression",
+            "Oui : la chaleur accélère la désintégration, la demi-vie devient deux fois plus courte",
+            "Oui : la chaleur ralentit la désintégration, la demi-vie devient deux fois plus longue",
+            "Oui, mais seulement si la pression est basse, car la demi-vie dépend alors de celle-ci"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui fait de la radioactivité une horloge fiable.",
+          "explication": "La désintégration est **indifférente au milieu** : c’est ce qui fait sa valeur comme horloge."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Encadrer l’âge d’une couche",
+      "competence": "raisonner",
+      "situation": "Dans un bassin, une couche sédimentaire M est prise en sandwich entre deux coulées de basalte. On a daté ces coulées par potassium-argon. Attention : un échantillon altéré a pu perdre de l’argon.",
+      "documents": [
+        {
+          "id": "bassin",
+          "type": "schema",
+          "titre": "Coupe du bassin",
+          "largeur": 340,
+          "hauteur": 226,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 160,
+              "l": 200,
+              "h": 34,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "s1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 126,
+              "l": 200,
+              "h": 34,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "c1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 92,
+              "l": 200,
+              "h": 34,
+              "teinte": "brun",
+              "motif": "points",
+              "id": "m",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 58,
+              "l": 200,
+              "h": 34,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "c2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 24,
+              "l": 200,
+              "h": 34,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "s2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 46,
+              "texte": "Couche S2",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 80,
+              "texte": "Coulée 2",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 114,
+              "texte": "Couche M",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 148,
+              "texte": "Coulée 1",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 182,
+              "texte": "Couche S1",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        },
+        {
+          "id": "datations",
+          "type": "tableau",
+          "titre": "Datations potassium-argon",
+          "colonnes": [
+            "Échantillon",
+            "Âge mesuré"
+          ],
+          "lignes": [
+            [
+              "Basalte sain, coulée 1",
+              "66 Ma"
+            ],
+            [
+              "Basalte altéré, coulée 1",
+              "41 Ma"
+            ],
+            [
+              "Basalte sain, coulée 2",
+              "60 Ma"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Ma = millions d’années"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "datations",
+          "enonce": "Touche l’âge qu’il faut retenir pour la coulée 1.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Un système qui a perdu de l’argon n’est plus fermé.",
+          "explication": "On retient **66 Ma**, mesuré sur un basalte sain : le système y est resté fermé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le basalte altéré donne-t-il un âge plus jeune ?",
+          "options": [
+            "Il a perdu une partie de son argon : le système n’était pas resté fermé",
+            "Il a gagné de l’uranium, ce qui a rajeuni artificiellement sa datation",
+            "Sa demi-vie est plus courte que celle des autres roches de la coulée",
+            "Son altération a ajouté de l’argon radiogénique, ce qui l’a rajeuni"
+          ],
+          "reponse": 0,
+          "aide": "L’âge vient du rapport fils sur père.",
+          "explication": "Moins d’argon (le fils) donne un rapport plus faible, donc un âge **sous-estimé** : la mesure n’est valable que si le système est fermé."
+        },
+        {
+          "type": "zone",
+          "document": "bassin",
+          "enonce": "Touche la couche dont l’âge de dépôt est compris entre 60 et 66 Ma.",
+          "reponse": [
+            "m"
+          ],
+          "aide": "Elle est entre les deux coulées datées.",
+          "explication": "La couche **M** est au-dessus de la coulée 1 (66 Ma) et sous la coulée 2 (60 Ma)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millions d’années l’âge de dépôt de la couche M est-il incertain, au maximum ?",
+          "reponse": 6,
+          "unite": "Ma",
+          "aide": "Fais la différence entre les deux datations.",
+          "explication": "66 − 60 = **6 Ma** : c’est la largeur de l’encadrement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire de la couche S1, sous la coulée 1 ?",
+          "options": [
+            "Elle a plus de 66 millions d’années",
+            "Elle a exactement 66 millions d’années",
+            "Elle a moins de 60 millions d’années",
+            "Elle a entre 60 et 66 millions d’années"
+          ],
+          "reponse": 0,
+          "aide": "Elle s’est déposée avant la coulée qui la recouvre.",
+          "explication": "S1 est plus ancienne que la coulée 1 : son âge dépasse **66 Ma**."
+        }
+      ]
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un morceau d’océan dans les Alpes",
+      "competence": "observer-schema",
+      "situation": "Au Chenaillet, dans les Hautes-Alpes, on lit de bas en haut quatre niveaux A, B, C et D d’une séquence rocheuse. Le tableau décrit ce qu’on y observe.",
+      "documents": [
+        {
+          "id": "colonne",
+          "type": "schema",
+          "titre": "La séquence du Chenaillet",
+          "largeur": 340,
+          "hauteur": 226,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 24,
+              "l": 160,
+              "h": 44,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "d",
+              "zone": true,
+              "texte": "D"
+            },
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 68,
+              "l": 160,
+              "h": 44,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "c",
+              "zone": true,
+              "texte": "C"
+            },
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 112,
+              "l": 160,
+              "h": 44,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "b",
+              "zone": true,
+              "texte": "B"
+            },
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 156,
+              "l": 160,
+              "h": 44,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "a",
+              "zone": true,
+              "texte": "A"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                196
+              ],
+              "a": [
+                40,
+                30
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 40,
+              "y": 214,
+              "texte": "Vers le haut",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "obs",
+          "type": "tableau",
+          "titre": "Observations sur le terrain",
+          "colonnes": [
+            "Niveau",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Roche dense, riche en olivine, sans litage"
+            ],
+            [
+              "B",
+              "Roche à gros cristaux visibles à l’œil nu"
+            ],
+            [
+              "C",
+              "Roche fine, en boules empilées comme des coussins"
+            ],
+            [
+              "D",
+              "Boue durcie faite de squelettes de micro-organismes marins"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Descriptions simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "colonne",
+          "enonce": "Touche le niveau qui était le manteau terrestre.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Cherche la roche riche en olivine.",
+          "explication": "Le niveau **A** est une péridotite : la roche du manteau, à la base de la lithosphère océanique."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque niveau à sa roche.",
+          "paires": [
+            [
+              "A",
+              "Péridotites"
+            ],
+            [
+              "B",
+              "Gabbros"
+            ],
+            [
+              "C",
+              "Basaltes en coussins"
+            ],
+            [
+              "D",
+              "Radiolarites"
+            ]
+          ],
+          "aide": "Gros cristaux : refroidissement lent. Coussins : lave sous l’eau.",
+          "explication": "A péridotite, B gabbro (refroidi lentement en profondeur), C basalte en coussins, D radiolarite (sédiment marin)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la forme en coussins des roches du niveau C ?",
+          "options": [
+            "La lave s’est refroidie sous l’eau",
+            "La lave a coulé à l’air libre",
+            "La roche a été écrasée en collision",
+            "La roche s’est formée dans le manteau"
+          ],
+          "reponse": 0,
+          "aide": "Pense au contact d’une lave chaude avec l’eau de mer.",
+          "explication": "Le contact brutal avec l’eau fige la lave en **coussins** : c’est un volcanisme sous-marin."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que prouve la présence de cette séquence complète en plein massif alpin ?",
+          "options": [
+            "Un fragment de lithosphère océanique a été charrié sur un continent",
+            "Un volcan en activité vient de se former au cœur du massif alpin actuel",
+            "Les Alpes se sont formées sans aucun océan, par simple soulèvement continental",
+            "Une météorite géante est tombée sur les Alpes et y a apporté ces roches"
+          ],
+          "reponse": 0,
+          "aide": "Cette pile de roches est celle d’un plancher océanique.",
+          "explication": "C’est une **ophiolite** : un morceau d’océan disparu, remonté sur un continent."
+        }
+      ]
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand la plaque plonge",
+      "competence": "lire-graphique",
+      "situation": "La lithosphère océanique refroidit en vieillissant. L’asthénosphère a une masse volumique de 3 300 kg/m³. La courbe (valeurs simplifiées pour l’exercice) montre l’évolution de la lithosphère, et le tableau les roches d’une plaque en subduction.",
+      "documents": [
+        {
+          "id": "densite",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Masse volumique de la lithosphère océanique",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50"
+          ],
+          "series": [
+            {
+              "nom": "Masse volumique",
+              "valeurs": [
+                3270,
+                3280,
+                3290,
+                3300,
+                3310,
+                3320
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Masse volumique",
+            "unite": "kg/m³",
+            "min": 3250,
+            "max": 3350,
+            "pas": 25
+          },
+          "axeX": {
+            "titre": "Âge de la lithosphère (Ma)"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "roches",
+          "type": "tableau",
+          "titre": "Les roches d’une plaque plongeante",
+          "colonnes": [
+            "Roche",
+            "Minéraux caractéristiques",
+            "Conditions"
+          ],
+          "lignes": [
+            [
+              "Gabbro de départ",
+              "plagioclase, pyroxène",
+              "surface, basse pression"
+            ],
+            [
+              "Métagabbro à glaucophane",
+              "glaucophane",
+              "haute pression, basse température"
+            ],
+            [
+              "Éclogite",
+              "grenat, jadéite",
+              "très haute pression"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "À quel âge la lithosphère océanique devient-elle aussi dense que l’asthénosphère ?",
+          "reponse": 30,
+          "unite": "Ma",
+          "tolerance": 2,
+          "aide": "Cherche où la courbe atteint 3 300 kg/m³.",
+          "explication": "La courbe atteint 3 300 kg/m³ à **30 Ma**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À 50 Ma, que peut faire cette lithosphère ?",
+          "options": [
+            "S’enfoncer dans le manteau, car elle est plus dense que l’asthénosphère",
+            "Remonter vers la surface, car elle est plus légère que l’asthénosphère",
+            "Rester immobile indéfiniment, car elle est en équilibre avec l’asthénosphère",
+            "Fondre entièrement sur place, sans jamais s’enfoncer dans le manteau"
+          ],
+          "reponse": 0,
+          "aide": "Compare 3 320 à 3 300 kg/m³.",
+          "explication": "Plus dense que l’asthénosphère, elle peut **plonger en subduction**."
+        },
+        {
+          "type": "zone",
+          "document": "roches",
+          "enonce": "Touche la roche qui contient du grenat et de la jadéite.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Regarde la colonne des minéraux.",
+          "explication": "C’est l’**éclogite**, signature d’une très haute pression."
+        },
+        {
+          "type": "choix",
+          "enonce": "Des métagabbros à glaucophane sont trouvés dans les Alpes. Que prouvent-ils ?",
+          "options": [
+            "Des roches de lithosphère océanique sont descendues en subduction puis remontées",
+            "Les Alpes se sont formées sur un continent stable",
+            "Un volcan a fondu ces roches en surface",
+            "Ces roches se sont formées au fond de la mer, sans être enfouies"
+          ],
+          "reponse": 0,
+          "aide": "Le glaucophane se forme à haute pression et basse température.",
+          "explication": "Le **glaucophane** signe un métamorphisme haute pression – basse température, propre à la subduction."
+        }
+      ]
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le cycle d’un océan alpin",
+      "competence": "raisonner",
+      "situation": "Les géologues relisent les Alpes comme les archives d’un océan disparu. La croûte continentale normale mesure environ 35 km d’épaisseur. Le tableau regroupe quatre observations, le schéma une coupe de la chaîne actuelle.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "schema",
+          "titre": "Coupe d’une chaîne de collision",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 150,
+              "l": 300,
+              "h": 70,
+              "teinte": "brun",
+              "motif": "points",
+              "id": "manteau",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  20,
+                  110
+                ],
+                [
+                  90,
+                  110
+                ],
+                [
+                  130,
+                  76
+                ],
+                [
+                  170,
+                  56
+                ],
+                [
+                  210,
+                  76
+                ],
+                [
+                  250,
+                  110
+                ],
+                [
+                  320,
+                  110
+                ],
+                [
+                  320,
+                  150
+                ],
+                [
+                  20,
+                  150
+                ]
+              ],
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "croute",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  110,
+                  150
+                ],
+                [
+                  230,
+                  150
+                ],
+                [
+                  200,
+                  200
+                ],
+                [
+                  170,
+                  214
+                ],
+                [
+                  140,
+                  200
+                ]
+              ],
+              "teinte": "gris",
+              "motif": "hachures",
+              "id": "racine",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 132,
+              "texte": "Croûte",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 200,
+              "texte": "Manteau",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                56
+              ],
+              "a": [
+                170,
+                214
+              ],
+              "teinte": "corail",
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 214,
+              "y": 140,
+              "texte": "≈ 70 km",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        },
+        {
+          "id": "obs",
+          "type": "tableau",
+          "titre": "Observations dans les Alpes",
+          "colonnes": [
+            "Repère",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Failles normales et blocs basculés sur une ancienne marge"
+            ],
+            [
+              "B",
+              "Gabbros et basaltes en coussins posés sur un continent"
+            ],
+            [
+              "C",
+              "Métagabbros à glaucophane et éclogites"
+            ],
+            [
+              "D",
+              "Nappes de charriage et croûte très épaissie"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque observation à l’étape du cycle d’un océan qu’elle révèle.",
+          "paires": [
+            [
+              "A",
+              "Rifting"
+            ],
+            [
+              "B",
+              "Expansion océanique"
+            ],
+            [
+              "C",
+              "Subduction"
+            ],
+            [
+              "D",
+              "Collision"
+            ]
+          ],
+          "aide": "Une étape crée l’océan, une autre le ferme.",
+          "explication": "A : **rifting** ; B : lithosphère océanique née à la dorsale ; C : **subduction** ; D : **collision**."
+        },
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche la racine crustale.",
+          "reponse": [
+            "racine"
+          ],
+          "aide": "C’est la partie de croûte qui s’enfonce dans le manteau.",
+          "explication": "La **racine** crustale plonge sous la chaîne comme la partie immergée d’un iceberg."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de kilomètres la croûte est-elle épaissie sous la chaîne, par rapport à une croûte normale de 35 km ?",
+          "reponse": 35,
+          "unite": "km",
+          "aide": "Lis l’épaisseur sur le schéma, puis soustrais.",
+          "explication": "70 − 35 = **35 km** de plus : la croûte a doublé d’épaisseur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi trouve-t-on aujourd’hui en surface des roches formées à 30 km de profondeur ?",
+          "options": [
+            "L’érosion rabote la chaîne et l’isostasie la fait peu à peu remonter",
+            "Un volcan les a projetées jusqu’en surface lors d’une éruption récente",
+            "Elles se sont formées sur place, à l’air libre, sans enfouissement",
+            "Un océan les a déposées récemment sous forme de sédiments marins"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’iceberg qui remonte quand il fond.",
+          "explication": "À mesure que l’**érosion** allège la chaîne, l’**isostasie** la fait remonter, et les roches profondes affleurent."
+        }
+      ]
+    },
+    {
+      "chapitre": "72e8237e-63cf-568f-8827-a34789f6568b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux vagues dans le sang",
+      "competence": "lire-graphique",
+      "situation": "Un élève croise un chien qui aboie violemment. On mesure dans son sang deux hormones, l’adrénaline et le cortisol (unités arbitraires, valeurs simplifiées).",
+      "documents": [
+        {
+          "id": "hormones",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Hormones du stress dans le sang",
+          "categories": [
+            "0",
+            "1 min",
+            "5 min",
+            "30 min",
+            "1 h",
+            "3 h"
+          ],
+          "series": [
+            {
+              "nom": "Adrénaline",
+              "valeurs": [
+                1,
+                10,
+                6,
+                2,
+                1,
+                1
+              ],
+              "teinte": "corail"
+            },
+            {
+              "nom": "Cortisol",
+              "valeurs": [
+                1,
+                1,
+                2,
+                8,
+                10,
+                4
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Concentration",
+            "unite": "unités arbitraires",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps après la frayeur"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "hormones",
+          "enonce": "Touche l’instant où l’adrénaline est à son maximum.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche le pic de la courbe de l’adrénaline.",
+          "explication": "L’adrénaline culmine dès **1 minute** : c’est la réponse rapide."
+        },
+        {
+          "type": "zone",
+          "document": "hormones",
+          "enonce": "Touche l’instant où le cortisol est à son maximum.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Le cortisol monte plus lentement.",
+          "explication": "Le cortisol culmine vers **1 heure** : c’est la réponse lente, qui permet de tenir."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle glande libère l’hormone qui monte en premier ?",
+          "options": [
+            "La médullosurrénale",
+            "La corticosurrénale",
+            "L’hypophyse",
+            "Le pancréas"
+          ],
+          "reponse": 0,
+          "aide": "L’adrénaline est libérée par la partie centrale de la surrénale.",
+          "explication": "L’adrénaline vient de la **médullosurrénale**, commandée par le système nerveux sympathique."
+        }
+      ]
+    },
+    {
+      "chapitre": "72e8237e-63cf-568f-8827-a34789f6568b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le frein du cortisol",
+      "competence": "experimenter",
+      "situation": "Pour comprendre comment l’axe du stress s’arrête, des chercheurs mesurent l’ACTH chez trois lots de rats. Le schéma rappelle les étapes de l’axe corticotrope.",
+      "documents": [
+        {
+          "id": "axe",
+          "type": "schema",
+          "titre": "L’axe corticotrope",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 140,
+              "h": 36,
+              "teinte": "gris",
+              "motif": "clair",
+              "texte": "Hypothalamus"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 100,
+              "l": 140,
+              "h": 36,
+              "teinte": "gris",
+              "motif": "clair",
+              "texte": "Hypophyse"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 180,
+              "l": 140,
+              "h": 36,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cortico",
+              "zone": true,
+              "texte": "Corticosurrénale"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                56
+              ],
+              "a": [
+                90,
+                98
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                136
+              ],
+              "a": [
+                90,
+                178
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 106,
+              "y": 66,
+              "l": 54,
+              "h": 22,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "crh",
+              "zone": true,
+              "texte": "CRH"
+            },
+            {
+              "forme": "rect",
+              "x": 106,
+              "y": 146,
+              "l": 54,
+              "h": 22,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "acth",
+              "zone": true,
+              "texte": "ACTH"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                198
+              ],
+              "a": [
+                300,
+                198
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                198
+              ],
+              "a": [
+                300,
+                38
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                38
+              ],
+              "a": [
+                162,
+                38
+              ],
+              "teinte": "encre",
+              "fleche": "fin",
+              "style": "pointilles"
+            },
+            {
+              "forme": "rect",
+              "x": 186,
+              "y": 187,
+              "l": 66,
+              "h": 22,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "cortisol",
+              "zone": true,
+              "texte": "Cortisol"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 28,
+              "texte": "frein",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 126,
+              "texte": "rétrocontrôle",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "rats",
+          "type": "tableau",
+          "titre": "ACTH dans le sang des rats",
+          "colonnes": [
+            "Lot",
+            "ACTH (pg/mL)"
+          ],
+          "lignes": [
+            [
+              "Lot 1 : rats témoins",
+              20
+            ],
+            [
+              "Lot 2 : surrénales retirées",
+              120
+            ],
+            [
+              "Lot 3 : surrénales retirées, avec injection de cortisol",
+              25
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "axe",
+          "enonce": "Touche la glande qui libère le cortisol.",
+          "reponse": [
+            "cortico"
+          ],
+          "aide": "Regarde la boîte tout en bas du schéma.",
+          "explication": "C’est la **corticosurrénale**, stimulée par l’ACTH."
+        },
+        {
+          "type": "zone",
+          "document": "axe",
+          "enonce": "Touche l’hormone qui relie l’hypophyse à la glande surrénale.",
+          "reponse": [
+            "acth"
+          ],
+          "aide": "Elle part de l’hypophyse vers la glande du bas.",
+          "explication": "L’**ACTH** est libérée par l’hypophyse et stimule la corticosurrénale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par combien l’ACTH est-elle multipliée chez les rats du lot 2 par rapport aux témoins ?",
+          "reponse": 6,
+          "aide": "Divise 120 par 20.",
+          "explication": "120 ÷ 20 = **6** : sans surrénales, l’ACTH explose."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclut-on du lot 2 ?",
+          "options": [
+            "Le cortisol freine la sécrétion d’ACTH : c’est un rétrocontrôle négatif",
+            "Le cortisol stimule la sécrétion d’ACTH : c’est un rétrocontrôle positif",
+            "Les surrénales fabriquent l’ACTH, qui agit ensuite sur l’hypophyse",
+            "L’ACTH ne dépend d’aucune hormone : sa sécrétion est entièrement autonome"
+          ],
+          "reponse": 0,
+          "aide": "Que se passe-t-il quand le cortisol disparaît ?",
+          "explication": "Sans cortisol, l’ACTH monte : le cortisol **freine** l’axe, c’est un **rétrocontrôle négatif**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi sert le lot 3 ?",
+          "options": [
+            "À montrer que c’est l’absence de cortisol, et non l’opération, qui fait monter l’ACTH",
+            "À mesurer l’ACTH chez un animal sans hypophyse pour comparer avec les autres lots",
+            "À prouver que le cortisol est fabriqué par le cerveau et non par les surrénales",
+            "À vérifier que l’ACTH est détruite par le cortisol lorsqu’elle arrive aux surrénales"
+          ],
+          "reponse": 0,
+          "aide": "Le lot 3 est opéré comme le lot 2, mais reçoit du cortisol.",
+          "explication": "En rétablissant le cortisol, l’ACTH redescend à 25 : l’effet vient bien du **cortisol manquant**."
+        }
+      ]
+    },
+    {
+      "chapitre": "72e8237e-63cf-568f-8827-a34789f6568b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Même examen, deux réactions",
+      "competence": "raisonner",
+      "situation": "Léa et Malik passent le même examen. Selye a décrit trois phases de réponse à un stress (schéma simplifié écrit pour l’exercice) ; on a aussi mesuré le cortisol des deux élèves.",
+      "documents": [
+        {
+          "id": "selye",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Résistance de l’organisme à un stress prolongé",
+          "categories": [
+            "J0",
+            "J1",
+            "J2",
+            "J5",
+            "J10",
+            "J20",
+            "J40",
+            "J60"
+          ],
+          "series": [
+            {
+              "nom": "Résistance",
+              "valeurs": [
+                100,
+                75,
+                120,
+                145,
+                150,
+                140,
+                110,
+                60
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Résistance",
+            "unite": "% du niveau normal",
+            "min": 0,
+            "max": 160,
+            "pas": 40
+          },
+          "axeX": {
+            "titre": "Temps depuis le début du stress"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "cortisol",
+          "type": "tableau",
+          "titre": "Cortisol salivaire (nmol/L)",
+          "colonnes": [
+            "Élève",
+            "La veille",
+            "20 min avant",
+            "30 min après"
+          ],
+          "lignes": [
+            [
+              "Léa, se sent préparée et entourée",
+              12,
+              18,
+              20
+            ],
+            [
+              "Malik, se sent dépassé et isolé",
+              12,
+              30,
+              42
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "selye",
+          "enonce": "Touche l’instant où l’organisme est épuisé, sous son niveau normal.",
+          "reponse": [
+            "k7"
+          ],
+          "aide": "Cherche le point qui passe sous 100 %.",
+          "explication": "À **J60**, la résistance est tombée à 60 % : les capacités d’adaptation sont dépassées."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phase correspond au plateau entre J2 et J20 ?",
+          "options": [
+            "La résistance",
+            "L’alarme",
+            "L’épuisement",
+            "Le rétrocontrôle"
+          ],
+          "reponse": 0,
+          "aide": "C’est la phase soutenue par le cortisol.",
+          "explication": "Le plateau haut est la phase de **résistance**, entretenue par le cortisol."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien le cortisol de Malik augmente-t-il entre la veille et 30 minutes après l’examen ?",
+          "reponse": 30,
+          "unite": "nmol/L",
+          "aide": "Soustrais 12 à 42.",
+          "explication": "42 − 12 = **30 nmol/L**."
+        },
+        {
+          "type": "zone",
+          "document": "cortisol",
+          "enonce": "Touche la valeur de cortisol la plus élevée du tableau.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Cherche la plus grande valeur parmi les six.",
+          "explication": "Le pic est **42 nmol/L**, chez Malik après l’examen."
+        },
+        {
+          "type": "choix",
+          "enonce": "Même examen, réactions différentes : comment l’expliquer ?",
+          "options": [
+            "Le stress dépend de l’évaluation de la situation, du contrôle perçu et du soutien social",
+            "Malik a naturellement plus de cortisol depuis la naissance, donc il réagit plus fort",
+            "L’examen était objectivement plus difficile pour Malik, qui avait un sujet plus dur",
+            "Léa n’a pas d’axe corticotrope, donc son organisme ne réagit jamais au stress"
+          ],
+          "reponse": 0,
+          "aide": "Regarde comment chaque élève se sent avant l’examen.",
+          "explication": "Le stress ne dépend pas que de l’événement : le **sentiment de contrôle** et l’**entourage** modulent la réponse."
+        }
+      ]
+    },
+    {
+      "chapitre": "4ee92cee-d904-5d9c-9bae-94a85c7d2aff",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un cortisol qui ne redescend pas",
+      "competence": "lire-graphique",
+      "situation": "Le cortisol est normalement bas le soir. On compare deux groupes de salariés (valeurs simplifiées pour l’exercice).",
+      "documents": [
+        {
+          "id": "soir",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Cortisol mesuré à 20 h",
+          "categories": [
+            "Salariés témoins",
+            "Salariés en stress chronique"
+          ],
+          "series": [
+            {
+              "nom": "Cortisol",
+              "valeurs": [
+                3,
+                8
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Cortisol",
+            "unite": "µg/dL",
+            "min": 0,
+            "max": 10,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Groupe"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "soir",
+          "enonce": "Touche le groupe dont le cortisol du soir est le plus élevé.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "Le groupe en **stress chronique** a un cortisol plus de deux fois plus élevé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart de cortisol entre les deux groupes ?",
+          "reponse": 5,
+          "unite": "µg/dL",
+          "aide": "Soustrais la barre basse à la barre haute.",
+          "explication": "8 − 3 = **5 µg/dL**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le cortisol reste-t-il élevé chez ces salariés ?",
+          "options": [
+            "Les récepteurs au cortisol se sont désensibilisés : le frein ne fonctionne plus",
+            "Ils fabriquent plus d’adrénaline, qui fait monter directement le cortisol",
+            "Leur hypophyse est détruite, ce qui libère les surrénales de tout contrôle",
+            "Le cortisol n’est plus éliminé par les reins, donc il s’accumule dans le sang"
+          ],
+          "reponse": 0,
+          "aide": "Pense au rétrocontrôle négatif.",
+          "explication": "Le frein de l’axe est usé : le cortisol ne freine plus CRH et ACTH, et reste **durablement élevé**."
+        }
+      ]
+    },
+    {
+      "chapitre": "4ee92cee-d904-5d9c-9bae-94a85c7d2aff",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le cercle vicieux de l’hippocampe",
+      "competence": "analyser-document",
+      "situation": "Les chercheurs mesurent le volume de l’hippocampe, structure de la mémoire riche en récepteurs au cortisol (valeurs simplifiées). Ils en tirent un cycle qui s’auto-entretient.",
+      "documents": [
+        {
+          "id": "hippo",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Volume de l’hippocampe",
+          "categories": [
+            "Témoins",
+            "Stress chronique"
+          ],
+          "series": [
+            {
+              "nom": "Volume",
+              "valeurs": [
+                4,
+                3.4
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "cm³",
+            "min": 0,
+            "max": 5,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Groupe"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "cort",
+              "texte": "Cortisol élevé"
+            },
+            {
+              "id": "hip",
+              "texte": "Hippocampe atteint"
+            },
+            {
+              "id": "retro",
+              "texte": "Frein de l’axe affaibli"
+            },
+            {
+              "id": "x",
+              "texte": "?"
+            }
+          ],
+          "liens": [
+            {
+              "de": "cort",
+              "a": "hip"
+            },
+            {
+              "de": "hip",
+              "a": "retro"
+            },
+            {
+              "de": "retro",
+              "a": "x"
+            },
+            {
+              "de": "x",
+              "a": "cort"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage le volume de l’hippocampe a-t-il diminué en cas de stress chronique ?",
+          "reponse": 15,
+          "unite": "%",
+          "tolerance": 0.5,
+          "aide": "Calcule la perte, puis divise par le volume des témoins.",
+          "explication": "(4 − 3,4) ÷ 4 = 0,15 : une perte de **15 %**."
+        },
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche l’étape où le rétrocontrôle perd de son efficacité.",
+          "reponse": [
+            "retro"
+          ],
+          "aide": "Cherche ce qui affaiblit le frein de l’axe.",
+          "explication": "L’hippocampe participe au rétrocontrôle : son atteinte **affaiblit le frein**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il écrire à la place du « ? » pour que le cycle tourne ?",
+          "options": [
+            "Un cortisol encore plus élevé",
+            "Un cortisol qui disparaît",
+            "Une hausse du volume de l’hippocampe",
+            "Un arrêt de la production d’ACTH"
+          ],
+          "reponse": 0,
+          "aide": "Quand le frein cède, que fait le cortisol ?",
+          "explication": "Un frein affaibli laisse le cortisol monter davantage : le cycle s’entretient, c’est un **cercle vicieux**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque système à sa conséquence d’un cortisol élevé durable.",
+          "paires": [
+            [
+              "Cardiovasculaire",
+              "Hypertension et athérosclérose"
+            ],
+            [
+              "Immunitaire",
+              "Plus d’infections, cicatrisation retardée"
+            ],
+            [
+              "Métabolique",
+              "Résistance à l’insuline"
+            ],
+            [
+              "Cérébral",
+              "Perte de volume de l’hippocampe"
+            ]
+          ],
+          "aide": "Le cortisol est immunosuppresseur.",
+          "explication": "Le cortisol élevé touche le cœur, les défenses, le métabolisme et le cerveau."
+        }
+      ]
+    },
+    {
+      "chapitre": "4ee92cee-d904-5d9c-9bae-94a85c7d2aff",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le poids du contrôle au travail",
+      "competence": "raisonner",
+      "situation": "Une étude imaginée pour l’exercice compare le risque d’épuisement professionnel selon le type de poste (base 1 pour la situation la moins exposée). Un second essai mesure l’effet du sport sur le cortisol du réveil.",
+      "documents": [
+        {
+          "id": "risque",
+          "type": "tableau",
+          "titre": "Risque relatif d’épuisement",
+          "colonnes": [
+            "Situation de travail",
+            "Risque relatif"
+          ],
+          "lignes": [
+            [
+              "Faible exigence, forte autonomie",
+              1
+            ],
+            [
+              "Forte exigence, forte autonomie",
+              1.3
+            ],
+            [
+              "Faible exigence, faible autonomie",
+              1.6
+            ],
+            [
+              "Forte exigence, faible autonomie",
+              3.4
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Étude imaginée pour l’exercice"
+        },
+        {
+          "id": "sport",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Cortisol au réveil après 12 semaines",
+          "categories": [
+            "Sédentaires",
+            "Sport régulier"
+          ],
+          "series": [
+            {
+              "nom": "Cortisol",
+              "valeurs": [
+                14,
+                10
+              ],
+              "teinte": "vert"
+            }
+          ],
+          "axeY": {
+            "titre": "Cortisol",
+            "unite": "nmol/L",
+            "min": 0,
+            "max": 16,
+            "pas": 4
+          },
+          "axeX": {
+            "titre": "Groupe"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "risque",
+          "enonce": "Touche la situation où le risque d’épuisement est le plus élevé.",
+          "reponse": [
+            "r3c1"
+          ],
+          "aide": "Cherche la plus grande valeur.",
+          "explication": "La plus exposée est celle qui associe une **forte exigence** et une **faible autonomie** : 3,4."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par combien le risque est-il multiplié entre la situation la moins exposée et la plus exposée ?",
+          "reponse": 3.4,
+          "aide": "Lis la dernière valeur, la base vaut 1.",
+          "explication": "La base vaut 1 et la plus exposée 3,4 : le risque est multiplié par **3,4**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce tableau sur le déterminant le plus important ?",
+          "options": [
+            "L’association d’une forte exigence et d’un faible contrôle est la plus délétère",
+            "Seule la quantité de travail compte, le degré de contrôle n’ayant aucun effet",
+            "Seule l’autonomie compte, l’exigence n’a aucun effet sur la santé des salariés",
+            "Le risque est strictement le même dans toutes les situations de travail étudiées"
+          ],
+          "reponse": 0,
+          "aide": "Compare une forte exigence seule à une forte exigence sans autonomie.",
+          "explication": "La forte exigence seule donne 1,3 ; **avec** un faible contrôle, 3,4 : c’est le sentiment de contrôle qui pèse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien le sport régulier fait-il baisser le cortisol du réveil ?",
+          "reponse": 4,
+          "unite": "nmol/L",
+          "aide": "Soustrais les deux barres.",
+          "explication": "14 − 10 = **4 nmol/L** : l’activité physique abaisse le cortisol de base."
+        },
+        {
+          "type": "choix",
+          "enonce": "Peut-on dire que l’épuisement professionnel vient d’une fragilité individuelle ?",
+          "options": [
+            "Non : l’organisation du travail pèse fortement, et des leviers existent",
+            "Oui : les postes n’ont aucun effet, seule compte la fragilité de la personne",
+            "Oui : seule l’activité sportive explique la différence entre les salariés",
+            "Non : le sport n’a aucun effet sur le stress, et rien d’autre n’agit sur lui"
+          ],
+          "reponse": 0,
+          "aide": "Reprends ce que dit le tableau sur les postes.",
+          "explication": "L’organisation du travail modifie le risque **et** le sport agit sur le cortisol : ce n’est pas une simple fragilité."
+        }
+      ]
+    },
+    {
+      "chapitre": "56ea3fad-1000-5950-8f5e-e37e438fe48e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le genou qui part tout seul",
+      "competence": "observer-schema",
+      "situation": "Le médecin tape sous le genou de Théo : sa jambe se détend sans qu’il l’ait décidé. Le schéma numérote les cinq éléments de cet arc réflexe.",
+      "documents": [
+        {
+          "id": "arc",
+          "type": "schema",
+          "titre": "Le réflexe rotulien",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 250,
+              "cy": 70,
+              "rx": 50,
+              "ry": 32,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "moelle",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 170,
+              "l": 150,
+              "h": 40,
+              "teinte": "rose",
+              "motif": "clair",
+              "arrondi": 18,
+              "id": "muscle",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 70,
+              "cy": 190,
+              "rx": 22,
+              "ry": 9,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "fuseau",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                76,
+                181
+              ],
+              "a": [
+                202,
+                78
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                230,
+                100
+              ],
+              "a": [
+                150,
+                172
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 250,
+              "cy": 70,
+              "r": 11,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "1"
+            },
+            {
+              "forme": "cercle",
+              "cx": 140,
+              "cy": 190,
+              "r": 11,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "2"
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 148,
+              "r": 11,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "3"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                46,
+                158
+              ],
+              "a": [
+                62,
+                182
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 139,
+              "cy": 130,
+              "r": 11,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "4"
+            },
+            {
+              "forme": "cercle",
+              "cx": 190,
+              "cy": 136,
+              "r": 11,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "5"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque numéro du schéma à son rôle dans l’arc réflexe.",
+          "paires": [
+            [
+              "1",
+              "Centre nerveux (moelle épinière)"
+            ],
+            [
+              "2",
+              "Effecteur (muscle)"
+            ],
+            [
+              "3",
+              "Récepteur (fuseau neuromusculaire)"
+            ],
+            [
+              "4",
+              "Nerf sensitif"
+            ],
+            [
+              "5",
+              "Nerf moteur"
+            ]
+          ],
+          "aide": "Le message part du récepteur et arrive à l’effecteur.",
+          "explication": "Le **fuseau** (3) capte l’étirement, le nerf sensitif (4) monte à la **moelle** (1), le nerf moteur (5) descend au **muscle** (2)."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Dans quel ordre le message nerveux traverse-t-il ces éléments ?",
+          "items": [
+            "Fuseau neuromusculaire",
+            "Nerf sensitif",
+            "Moelle épinière",
+            "Nerf moteur",
+            "Muscle"
+          ],
+          "aide": "Le message entre par le récepteur et sort par l’effecteur.",
+          "explication": "Récepteur, nerf sensitif, centre nerveux, nerf moteur, effecteur : le **cerveau** n’intervient pas."
+        },
+        {
+          "type": "zone",
+          "document": "arc",
+          "enonce": "Touche le récepteur qui détecte l’étirement du muscle.",
+          "reponse": [
+            "fuseau"
+          ],
+          "aide": "Il est planté dans le muscle.",
+          "explication": "Le **fuseau neuromusculaire** est le récepteur : il est sensible à l’étirement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de synapses séparent le neurone sensitif du motoneurone dans ce réflexe ?",
+          "reponse": 1,
+          "aide": "Le réflexe myotatique est monosynaptique.",
+          "explication": "Une seule synapse : c’est pourquoi ce réflexe est très **rapide**."
+        }
+      ]
+    },
+    {
+      "chapitre": "56ea3fad-1000-5950-8f5e-e37e438fe48e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Mesurer la vitesse d’un nerf",
+      "competence": "calculer",
+      "situation": "Un fuseau neuromusculaire répond d’autant plus vite que le muscle est étiré (valeurs simplifiées). Un neurologue mesure aussi le délai du réflexe rotulien pour contrôler les nerfs.",
+      "documents": [
+        {
+          "id": "freq",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Fréquence des potentiels d’action",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "series": [
+            {
+              "nom": "Fréquence",
+              "valeurs": [
+                10,
+                30,
+                55,
+                80,
+                100
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Fréquence",
+            "unite": "Hz",
+            "min": 0,
+            "max": 120,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Étirement du muscle (mm)"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "mesure",
+          "type": "tableau",
+          "titre": "Mesures du neurologue",
+          "colonnes": [
+            "Mesure",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Longueur de l’arc réflexe (aller et retour)",
+              "1,2 m"
+            ],
+            [
+              "Délai entre la percussion et la contraction",
+              "25 ms"
+            ],
+            [
+              "dont passage de la synapse",
+              "1 ms"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "1 ms = 0,001 s"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fréquence des potentiels d’action pour un étirement de 4 mm ?",
+          "reponse": 55,
+          "unite": "Hz",
+          "tolerance": 3,
+          "aide": "Lis la courbe à la graduation 4.",
+          "explication": "Pour 4 mm, la courbe donne **55 Hz**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de hertz la fréquence augmente-t-elle quand l’étirement passe de 2 mm à 6 mm ?",
+          "reponse": 50,
+          "unite": "Hz",
+          "aide": "Lis deux valeurs puis soustrais.",
+          "explication": "80 − 30 = **50 Hz** : plus l’étirement croît, plus les potentiels d’action se rapprochent."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la vitesse de conduction du message nerveux ? (distance ÷ durée de conduction, hors synapse)",
+          "reponse": 50,
+          "unite": "m/s",
+          "tolerance": 1,
+          "aide": "Le délai de conduction est 25 − 1 = 24 ms, soit 0,024 s.",
+          "explication": "1,2 ÷ 0,024 = **50 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Chez un patient, pour la même longueur, le délai est de 49 ms dont 1 ms à la synapse. Quelle est sa vitesse de conduction ?",
+          "reponse": 25,
+          "unite": "m/s",
+          "tolerance": 0.5,
+          "aide": "Conduction : 48 ms, soit 0,048 s.",
+          "explication": "1,2 ÷ 0,048 = **25 m/s**, deux fois plus lente."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que suggère cette vitesse réduite chez le patient ?",
+          "options": [
+            "Une lésion d’un nerf, qui ralentit la conduction",
+            "Un excès d’adrénaline",
+            "Une synapse à deux étapes au lieu d’une",
+            "Un muscle plus gros que la normale"
+          ],
+          "reponse": 0,
+          "aide": "L’électromyogramme sert à localiser les lésions nerveuses.",
+          "explication": "Un nerf abîmé conduit moins vite : le réflexe sert d’outil de **diagnostic** neurologique."
+        }
+      ]
+    },
+    {
+      "chapitre": "56ea3fad-1000-5950-8f5e-e37e438fe48e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le motoneurone fait ses comptes",
+      "competence": "modeliser",
+      "situation": "Un motoneurone reçoit trois neurones A, B et C. Stimulés seuls, A et B font varier son potentiel de +8 mV chacun, C de −6 mV. Le motoneurone n’émet un potentiel d’action que si la variation atteint +15 mV.",
+      "documents": [
+        {
+          "id": "synapses",
+          "type": "schema",
+          "titre": "Les trois entrées du motoneurone",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 56,
+              "cy": 50,
+              "r": 16,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "A",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 56,
+              "cy": 118,
+              "r": 16,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "B",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 56,
+              "cy": 186,
+              "r": 16,
+              "teinte": "encre",
+              "motif": "clair",
+              "texte": "C",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 118,
+              "r": 38,
+              "teinte": "gris",
+              "motif": "points"
+            },
+            {
+              "forme": "texte",
+              "x": 230,
+              "y": 172,
+              "texte": "Motoneurone",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                54
+              ],
+              "a": [
+                194,
+                104
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                118
+              ],
+              "a": [
+                192,
+                118
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                182
+              ],
+              "a": [
+                194,
+                134
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            }
+          ]
+        },
+        {
+          "id": "combi",
+          "type": "tableau",
+          "titre": "Effet de chaque combinaison",
+          "colonnes": [
+            "Neurones stimulés",
+            "Variation du potentiel (mV)",
+            "Potentiel d’action ?"
+          ],
+          "lignes": [
+            [
+              "A seul",
+              "+8",
+              "Non"
+            ],
+            [
+              "A et B ensemble",
+              "+16",
+              "Oui"
+            ],
+            [
+              "C seul",
+              "−6",
+              "Non"
+            ],
+            [
+              "A, B et C ensemble",
+              "?",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la variation du potentiel quand A, B et C sont stimulés ensemble ?",
+          "reponse": 10,
+          "unite": "mV",
+          "aide": "Additionne les effets : +8, +8 et −6.",
+          "explication": "8 + 8 − 6 = **+10 mV**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le motoneurone émet-il un potentiel d’action quand A, B et C sont stimulés ensemble ?",
+          "options": [
+            "Non : la somme, +10 mV, reste sous le seuil de +15 mV",
+            "Oui : A et B suffisent toujours à dépasser le seuil de +15 mV",
+            "Oui : C renforce l’effet de A et B et fait dépasser le seuil",
+            "On ne peut pas savoir : il manque des données sur la synapse C"
+          ],
+          "reponse": 0,
+          "aide": "Compare +10 mV au seuil.",
+          "explication": "+10 est **inférieur** au seuil de +15 : pas de potentiel d’action."
+        },
+        {
+          "type": "zone",
+          "document": "synapses",
+          "enonce": "Touche le neurone dont la synapse diminue les chances que le motoneurone émette un potentiel d’action.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche l’effet négatif dans le texte de la situation.",
+          "explication": "Le neurone **C** fait varier le potentiel de −6 mV : sa synapse est inhibitrice."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre cette expérience sur le réflexe ?",
+          "options": [
+            "Le motoneurone somme les messages : le réflexe est modulable, notamment par le cerveau",
+            "Le réflexe est un automatisme aveugle, que rien ne peut modifier ni moduler chez l’humain",
+            "Une seule synapse suffit toujours à déclencher la contraction du muscle concerné",
+            "Les synapses inhibitrices n’ont aucun rôle dans le déclenchement d’un potentiel d’action"
+          ],
+          "reponse": 0,
+          "aide": "Un neurone intègre tout ce qu’il reçoit.",
+          "explication": "La sommation d’entrées excitatrices et inhibitrices rend le réflexe **modulable**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fcbb6705-a58c-5505-927c-312ae73bfc23",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un AVC, un côté paralysé",
+      "competence": "observer-schema",
+      "situation": "Un AVC détruit le cortex moteur gauche d’un patient. Le schéma, vu de dos, montre le trajet de la commande motrice jusqu’aux bras (la gauche du patient est à gauche du dessin).",
+      "documents": [
+        {
+          "id": "trajet",
+          "type": "schema",
+          "titre": "Le faisceau corticospinal",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 95,
+              "cy": 48,
+              "rx": 62,
+              "ry": 26,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "hg",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 245,
+              "cy": 48,
+              "rx": 62,
+              "ry": 26,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "hd",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 95,
+              "y": 52,
+              "texte": "Cortex gauche",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 245,
+              "y": 52,
+              "texte": "Cortex droit",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "rect",
+              "x": 130,
+              "y": 88,
+              "l": 80,
+              "h": 34,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "bulbe",
+              "zone": true
+            },
+            {
+              "forme": "chemin",
+              "d": "M95 74 L150 90 L190 122 L245 140 L245 190",
+              "teinte": "encre"
+            },
+            {
+              "forme": "chemin",
+              "d": "M245 74 L190 90 L150 122 L95 140 L95 190",
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 65,
+              "y": 190,
+              "l": 60,
+              "h": 28,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "brasg",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 215,
+              "y": 190,
+              "l": 60,
+              "h": 28,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "brasd",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 95,
+              "y": 232,
+              "texte": "Bras gauche",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 245,
+              "y": 232,
+              "texte": "Bras droit",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 290,
+              "y": 106,
+              "texte": "Bulbe",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "trajet",
+          "enonce": "Touche le bras qui sera paralysé par l’AVC du cortex moteur gauche.",
+          "reponse": [
+            "brasd"
+          ],
+          "aide": "Suis la fibre qui part du cortex gauche.",
+          "explication": "C’est le **bras droit** : la fibre issue du cortex gauche change de côté avant d’arriver au muscle."
+        },
+        {
+          "type": "zone",
+          "document": "trajet",
+          "enonce": "Touche la région où les fibres passent d’un côté à l’autre.",
+          "reponse": [
+            "bulbe"
+          ],
+          "aide": "Elle est entre le cortex et la moelle.",
+          "explication": "Les fibres se croisent dans le **bulbe rachidien**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle une paralysie du côté opposé à la lésion ?",
+          "options": [
+            "Une hémiplégie controlatérale",
+            "Une paralysie totale",
+            "Une hémiplégie du même côté",
+            "Une perte de sensibilité seule"
+          ],
+          "reponse": 0,
+          "aide": "La lésion est à gauche, la paralysie à droite.",
+          "explication": "Le croisement des fibres explique cette hémiplégie **controlatérale** : l’hémisphère gauche commande le côté droit."
+        }
+      ]
+    },
+    {
+      "chapitre": "fcbb6705-a58c-5505-927c-312ae73bfc23",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le petit homme du cortex",
+      "competence": "lire-graphique",
+      "situation": "Sur le cortex moteur, la place attribuée à chaque partie du corps ne reflète pas sa taille. Le graphique donne ces parts (valeurs simplifiées), le tableau la masse de chaque partie.",
+      "documents": [
+        {
+          "id": "cortex",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Part du cortex moteur",
+          "categories": [
+            "Main",
+            "Langue et lèvres",
+            "Jambe",
+            "Pied",
+            "Tronc"
+          ],
+          "series": [
+            {
+              "nom": "Part du cortex moteur",
+              "valeurs": [
+                30,
+                25,
+                9,
+                7,
+                6
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Part du cortex moteur",
+            "unite": "%",
+            "min": 0,
+            "max": 35,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Partie du corps"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "masse",
+          "type": "tableau",
+          "titre": "Masse de chaque partie",
+          "colonnes": [
+            "Partie du corps",
+            "Part de la masse du corps"
+          ],
+          "lignes": [
+            [
+              "Main",
+              "1 %"
+            ],
+            [
+              "Langue et lèvres",
+              "moins de 1 %"
+            ],
+            [
+              "Jambe",
+              "30 %"
+            ],
+            [
+              "Pied",
+              "3 %"
+            ],
+            [
+              "Tronc",
+              "50 %"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cortex",
+          "enonce": "Touche la partie du corps qui occupe le plus de cortex moteur.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "La **main** occupe 30 % du cortex moteur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part du cortex moteur occupent ensemble la main, la langue et les lèvres ?",
+          "reponse": 55,
+          "unite": "%",
+          "aide": "Additionne deux barres.",
+          "explication": "30 + 25 = **55 %** du cortex moteur pour une fraction minuscule du corps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le tronc pèse 50 fois plus que la main mais occupe 5 fois moins de cortex. Pourquoi ?",
+          "options": [
+            "La surface corticale dépend de la finesse du contrôle, pas de la taille",
+            "Le tronc n’est commandé que par la moelle épinière, sans aucune aire corticale",
+            "Les muscles du tronc sont paralysés, donc ils n’ont pas besoin de cortex",
+            "La main est plus proche du cerveau que le tronc, donc elle occupe plus de cortex"
+          ],
+          "reponse": 0,
+          "aide": "Comparer la précision de geste d’une main et d’un tronc.",
+          "explication": "Le cortex moteur est proportionnel à la **précision** demandée : c’est l’**homonculus** moteur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Chez un violoniste, la zone des doigts de la main gauche est agrandie. Que montre ce fait ?",
+          "options": [
+            "La carte corticale se modifie avec l’apprentissage : c’est la plasticité",
+            "La main gauche est plus volumineuse que la droite, donc mieux représentée",
+            "Le violoniste est né avec un cortex différent de celui des non-musiciens",
+            "Les doigts de la main gauche ont gagné de nouveaux neurones sensitifs avec l’âge"
+          ],
+          "reponse": 0,
+          "aide": "Le cerveau s’adapte à ce qu’on s’entraîne à faire.",
+          "explication": "C’est la **plasticité d’apprentissage** : l’entraînement agrandit la zone corticale utile."
+        }
+      ]
+    },
+    {
+      "chapitre": "fcbb6705-a58c-5505-927c-312ae73bfc23",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Rééduquer après l’AVC",
+      "competence": "analyser-document",
+      "situation": "Mme Roux a fait un AVC. Une IRM fonctionnelle et un test de force ont été répétés. Un autre patient, de lésion identique, n’a pas suivi de rééducation.",
+      "documents": [
+        {
+          "id": "fiche",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Fiche patient",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Mme Roux, 58 ans, a fait un AVC qui a détruit une partie de son cortex moteur gauche. Elle ne pouvait plus bouger la [[c|main]] droite.",
+            "Elle a suivi six mois de rééducation intensive, mesurée par IRMf et test de force."
+          ]
+        },
+        {
+          "id": "irmf",
+          "type": "tableau",
+          "titre": "IRMf et force",
+          "colonnes": [
+            "Patient et période",
+            "Cortex lésé",
+            "Région voisine",
+            "Force de la main droite (kg)"
+          ],
+          "lignes": [
+            [
+              "Mme Roux, 1 mois après l’AVC",
+              5,
+              10,
+              4
+            ],
+            [
+              "Mme Roux, 6 mois, rééducation intensive",
+              6,
+              38,
+              21
+            ],
+            [
+              "M. Petit, 6 mois, sans rééducation",
+              5,
+              12,
+              6
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Activation en unités arbitraires"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fiche",
+          "enonce": "Touche le mot qui dit quelle partie du corps était paralysée.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche le membre de Mme Roux.",
+          "explication": "C’est la **main** droite : controlatérale à la lésion gauche."
+        },
+        {
+          "type": "zone",
+          "document": "irmf",
+          "enonce": "Touche la force de la main droite la plus élevée.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Regarde la dernière colonne.",
+          "explication": "Après six mois de rééducation intensive, Mme Roux atteint **21 kg**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de kilogrammes la force de Mme Roux a-t-elle augmenté entre 1 mois et 6 mois ?",
+          "reponse": 17,
+          "unite": "kg",
+          "aide": "Soustrais 4 à 21.",
+          "explication": "21 − 4 = **17 kg**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’activation de la région voisine chez Mme Roux ?",
+          "options": [
+            "Une région voisine a repris une partie de la fonction : plasticité de réparation",
+            "Les neurones détruits se sont régénérés et ont retrouvé leur fonction d’origine",
+            "Le cortex lésé fonctionne comme avant, car la lésion a complètement cicatrisé",
+            "La moelle épinière a remplacé le cortex moteur détruit dans la commande du mouvement"
+          ],
+          "reponse": 0,
+          "aide": "Le cortex lésé reste peu actif (5 puis 6).",
+          "explication": "Le cortex lésé ne récupère pas, mais une **région voisine** prend le relais."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi M. Petit récupère-t-il beaucoup moins ?",
+          "options": [
+            "La récupération se travaille : sans rééducation, la région voisine est peu sollicitée",
+            "Il est plus âgé que Mme Roux, donc son cerveau ne peut plus rien réparer",
+            "Son cortex moteur est situé dans l’hémisphère droit, donc il récupère moins bien",
+            "Sa lésion est forcément plus grave que celle de Mme Roux, sans autre explication"
+          ],
+          "reponse": 0,
+          "aide": "Mêmes lésions, mais pas de rééducation.",
+          "explication": "À lésion identique, seule la **rééducation** diffère : la plasticité n’est pas passive."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f6beed9-3d58-522f-b01a-3edf37172698",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le circuit de la récompense",
+      "competence": "lire-graphique",
+      "situation": "Le noyau accumbens libère de la dopamine quand on fait quelque chose d’agréable ou d’utile. On compare l’effet d’un repas et de deux drogues (ordres de grandeur simplifiés).",
+      "documents": [
+        {
+          "id": "dopamine",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Dopamine libérée",
+          "categories": [
+            "Repas préféré",
+            "Cocaïne",
+            "Amphétamine"
+          ],
+          "series": [
+            {
+              "nom": "Dopamine",
+              "valeurs": [
+                150,
+                300,
+                600
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Dopamine",
+            "unite": "% du niveau de repos",
+            "min": 0,
+            "max": 700,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Situation"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dopamine",
+          "enonce": "Touche la situation où la libération de dopamine est la plus forte.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "L’**amphétamine** déclenche la plus forte libération de dopamine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points de pourcentage la cocaïne dépasse-t-elle le repas préféré ?",
+          "reponse": 150,
+          "unite": "%",
+          "aide": "Soustrais 150 à 300.",
+          "explication": "300 − 150 = **150 points**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’ont de particulier ces substances par rapport au repas ?",
+          "options": [
+            "Elles libèrent de la dopamine sans aucun rapport avec un besoin vital réel",
+            "Elles libèrent moins de dopamine qu’un repas, mais plus longtemps",
+            "Elles agissent sans passer par les synapses, directement sur les muscles",
+            "Elles détruisent le noyau accumbens dès la première prise chez tous les sujets"
+          ],
+          "reponse": 0,
+          "aide": "Le repas répond à un besoin de survie.",
+          "explication": "Les drogues **court-circuitent** le système de récompense : c’est ce qui fonde la dépendance."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f6beed9-3d58-522f-b01a-3edf37172698",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Toujours plus de doses",
+      "competence": "analyser-document",
+      "situation": "Un consommateur régulier doit augmenter la dose pour obtenir le même effet. On a suivi cette dose et la densité de récepteurs à la dopamine (valeurs simplifiées).",
+      "documents": [
+        {
+          "id": "tolerance",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Dose pour le même effet",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "series": [
+            {
+              "nom": "Dose nécessaire",
+              "valeurs": [
+                1,
+                1.5,
+                2.4,
+                3.5,
+                5
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Dose",
+            "unite": "fois la dose de départ",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Semaines de consommation"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "recepteurs",
+          "type": "tableau",
+          "titre": "Récepteurs à la dopamine",
+          "colonnes": [
+            "Moment",
+            "Récepteurs (% de départ)"
+          ],
+          "lignes": [
+            [
+              "Avant",
+              100
+            ],
+            [
+              "Après 8 semaines",
+              70
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle dose faut-il au bout de 6 semaines pour obtenir le même effet ?",
+          "reponse": 3.5,
+          "unite": "× la dose",
+          "tolerance": 0.3,
+          "aide": "Lis la courbe à la graduation 6.",
+          "explication": "À 6 semaines, il faut **3,5 fois** la dose de départ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage le nombre de récepteurs a-t-il baissé en 8 semaines ?",
+          "reponse": 30,
+          "unite": "%",
+          "aide": "Compare 100 à 70.",
+          "explication": "100 − 70 = **30 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment ces données expliquent-elles la tolérance ?",
+          "options": [
+            "Le cerveau réduit ses récepteurs : il faut augmenter les doses pour le même effet",
+            "Le cerveau augmente ses récepteurs : la drogue agit alors plus fort à dose égale",
+            "La drogue se dégrade dans la seringue, donc les doses doivent être augmentées",
+            "Les neurones du consommateur meurent à chaque prise, donc il faut augmenter les doses"
+          ],
+          "reponse": 0,
+          "aide": "Moins de récepteurs, moins de réponse à une même dose.",
+          "explication": "Moins de récepteurs, donc moins d’effet : c’est la **tolérance**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’adolescence est-elle une période à risque ?",
+          "options": [
+            "Le cortex préfrontal mûrit jusque vers 25 ans : le contrôle de soi est plus fragile",
+            "Les adolescents n’ont pas encore de système de récompense, donc ils l’explorent",
+            "Les synapses y sont moins nombreuses que chez l’adulte, donc le cerveau réagit moins",
+            "Le cortex préfrontal est détruit par les hormones de la puberté, puis se reconstitue"
+          ],
+          "reponse": 0,
+          "aide": "Le cortex préfrontal gère le contrôle de soi et l’évaluation des risques.",
+          "explication": "Le cortex préfrontal est encore en **maturation** : le cerveau adolescent est plus vulnérable."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f6beed9-3d58-522f-b01a-3edf37172698",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Chaque minute compte",
+      "competence": "raisonner",
+      "situation": "Lors d’un AVC ischémique, un vaisseau est bouché : près de 2 millions de neurones meurent chaque minute (ordre de grandeur). Le graphique montre la part de tissu sauvée selon le délai (valeurs simplifiées).",
+      "documents": [
+        {
+          "id": "delai",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Tissu cérébral sauvé",
+          "categories": [
+            "1 h",
+            "3 h",
+            "6 h"
+          ],
+          "series": [
+            {
+              "nom": "Tissu sauvé",
+              "valeurs": [
+                80,
+                55,
+                25
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Tissu sauvé",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Délai avant la prise en charge"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "patients",
+          "type": "tableau",
+          "titre": "Trois patients",
+          "colonnes": [
+            "Patient",
+            "Délai avant la prise en charge",
+            "Séquelles"
+          ],
+          "lignes": [
+            [
+              "Ana",
+              "45 minutes",
+              "légères"
+            ],
+            [
+              "Bruno",
+              "3 heures",
+              "modérées"
+            ],
+            [
+              "Claire",
+              "7 heures",
+              "sévères"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Cas imaginés"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle part du tissu est sauvée quand la prise en charge a lieu après 3 h ?",
+          "reponse": 55,
+          "unite": "%",
+          "aide": "Lis la barre du milieu.",
+          "explication": "Après 3 h, **55 %** du tissu est sauvé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points la part sauvée diminue-t-elle entre 1 h et 6 h ?",
+          "reponse": 55,
+          "unite": "points",
+          "aide": "Soustrais la barre la plus basse à la plus haute.",
+          "explication": "80 − 25 = **55 points**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En 10 minutes, environ combien de millions de neurones meurent ?",
+          "reponse": 20,
+          "unite": "millions",
+          "aide": "Multiplie 2 millions par 10 minutes.",
+          "explication": "2 × 10 = **20 millions**."
+        },
+        {
+          "type": "zone",
+          "document": "patients",
+          "enonce": "Touche le patient qui risque les séquelles les plus lourdes.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Cherche le plus long délai.",
+          "explication": "**Claire**, prise en charge après 7 h : plus le délai est long, plus la zone sauvée est petite."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe ces gestes selon ce qu’ils cherchent à faire.",
+          "categories": [
+            "Prévenir",
+            "Agir vite"
+          ],
+          "items": [
+            [
+              "Porter un casque à vélo",
+              0
+            ],
+            [
+              "Appeler le 15 aux premiers signes",
+              1
+            ],
+            [
+              "Ne pas reprendre le match après une commotion",
+              0
+            ],
+            [
+              "Faire pratiquer un examen d’urgence à un visage paralysé",
+              1
+            ]
+          ],
+          "aide": "Certains gestes évitent le traumatisme, d’autres limitent les dégâts.",
+          "explication": "Casque et arrêt du match **préviennent** ; l’appel au 15 et l’examen d’urgence sont des gestes pour **agir vite**."
+        }
+      ]
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une plante qui ne peut pas bouger",
+      "competence": "observer-schema",
+      "situation": "Une plante ne peut ni fuir, ni chercher sa nourriture : son organisation est celle d’un être fixé entre le sol et l’air. Observe ce schéma.",
+      "documents": [
+        {
+          "id": "plante",
+          "type": "schema",
+          "titre": "Une plante à fleurs",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 152,
+              "l": 300,
+              "h": 70,
+              "teinte": "brun",
+              "motif": "points"
+            },
+            {
+              "forme": "rect",
+              "x": 164,
+              "y": 70,
+              "l": 12,
+              "h": 84,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "tige",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 120,
+              "cy": 92,
+              "rx": 42,
+              "ry": 14,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "f1",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 222,
+              "cy": 76,
+              "rx": 42,
+              "ry": 14,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "f2",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  158,
+                  154
+                ],
+                [
+                  182,
+                  154
+                ],
+                [
+                  184,
+                  172
+                ],
+                [
+                  236,
+                  204
+                ],
+                [
+                  190,
+                  190
+                ],
+                [
+                  176,
+                  216
+                ],
+                [
+                  168,
+                  192
+                ],
+                [
+                  122,
+                  206
+                ],
+                [
+                  160,
+                  174
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "hachures",
+              "id": "racines",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 40,
+              "y": 44,
+              "emoji": "☀️",
+              "taille": 30
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 140,
+              "texte": "Air",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 176,
+              "texte": "Sol",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plante",
+          "enonce": "Touche les deux feuilles.",
+          "reponse": [
+            "f1",
+            "f2"
+          ],
+          "multiple": true,
+          "aide": "Ce sont les organes larges et minces.",
+          "explication": "Les **feuilles** captent la lumière et le CO₂ par une grande surface."
+        },
+        {
+          "type": "zone",
+          "document": "plante",
+          "enonce": "Touche l’organe qui puise l’eau et les ions minéraux dans le sol.",
+          "reponse": [
+            "racines"
+          ],
+          "aide": "Il est enfoui dans le sol.",
+          "explication": "Les **racines**, couvertes de poils absorbants, prélèvent l’eau et les ions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les feuilles sont-elles larges et minces ?",
+          "options": [
+            "Pour offrir une surface maximale à la lumière avec une masse minimale",
+            "Pour retenir l’eau de pluie et la stocker dans les tissus",
+            "Pour résister au vent et aux intempéries sans se déchirer",
+            "Pour absorber les ions minéraux du sol à travers leur surface"
+          ],
+          "reponse": 0,
+          "aide": "Elles doivent intercepter un maximum de lumière.",
+          "explication": "Une feuille **large et mince** maximise la surface d’échange pour un coût minimal."
+        }
+      ]
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Midi, l’heure du compromis",
+      "competence": "lire-graphique",
+      "situation": "Par une journée chaude d’été, on suit l’ouverture des stomates d’une feuille et sa photosynthèse (en % du maximum). Puis on compare les pertes d’eau de deux plantes.",
+      "documents": [
+        {
+          "id": "journee",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Une journée d’été",
+          "categories": [
+            "6 h",
+            "9 h",
+            "12 h",
+            "15 h",
+            "18 h",
+            "21 h"
+          ],
+          "series": [
+            {
+              "nom": "Ouverture des stomates",
+              "valeurs": [
+                10,
+                90,
+                40,
+                70,
+                25,
+                0
+              ],
+              "teinte": "vert"
+            },
+            {
+              "nom": "Photosynthèse",
+              "valeurs": [
+                8,
+                88,
+                38,
+                68,
+                22,
+                0
+              ],
+              "teinte": "jaune"
+            }
+          ],
+          "axeY": {
+            "titre": "Valeur",
+            "unite": "% du maximum",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Heure de la journée"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "plantes",
+          "type": "tableau",
+          "titre": "Perte d’eau de deux plantes",
+          "colonnes": [
+            "Plante",
+            "Perte d’eau (g par jour)"
+          ],
+          "lignes": [
+            [
+              "Plante A, feuille fine, cuticule mince",
+              24
+            ],
+            [
+              "Plante B, feuille épineuse, cuticule épaisse, stomates enfoncés",
+              6
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "journee",
+          "enonce": "Touche l’heure où les stomates sont le plus ouverts.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche le sommet de la courbe des stomates.",
+          "explication": "À **9 h**, les stomates sont ouverts à 90 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la photosynthèse à midi ?",
+          "reponse": 38,
+          "unite": "%",
+          "tolerance": 3,
+          "aide": "Lis la deuxième courbe à la graduation 12 h.",
+          "explication": "À midi, elle tombe à **38 %** du maximum."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la concordance entre les deux courbes ?",
+          "options": [
+            "La photosynthèse dépend de l’ouverture des stomates, donc de l’entrée du CO₂",
+            "La photosynthèse fabrique les stomates, qui s’ouvrent ensuite automatiquement",
+            "Les stomates fabriquent eux-mêmes le sucre et le libèrent dans la feuille",
+            "La lumière est sans effet sur la photosynthèse, seuls l’eau et le CO₂ comptent"
+          ],
+          "reponse": 0,
+          "aide": "Les deux courbes montent et descendent ensemble.",
+          "explication": "Les stomates laissent entrer le **CO₂** : quand ils se ferment, la photosynthèse chute."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les stomates se ferment-ils en partie à midi ?",
+          "options": [
+            "Pour limiter la perte d’eau, au prix d’une photosynthèse un peu réduite",
+            "Pour empêcher le CO₂ de sortir de la feuille, qui en manquerait sinon",
+            "Parce que la lumière est trop faible à midi pour faire la photosynthèse",
+            "Parce que la plante a fini de fabriquer du sucre pour la journée"
+          ],
+          "reponse": 0,
+          "aide": "Il fait chaud et sec : l’eau s’évapore par les stomates.",
+          "explication": "Ouvrir les stomates coûte de l’**eau** : la plante arbitre entre se nourrir et ne pas se dessécher."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la plante A perd-elle plus d’eau que la plante B ?",
+          "reponse": 4,
+          "unite": "fois",
+          "aide": "Divise 24 par 6.",
+          "explication": "24 ÷ 6 = **4** : cuticule épaisse et stomates enfoncés protègent la plante B."
+        }
+      ]
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le message des feuilles attaquées",
+      "competence": "experimenter",
+      "situation": "Une expérience imaginée, inspirée de travaux réels, étudie comment une plante attaquée par des chenilles agit sur sa voisine. La plante A porte des chenilles ; B partage l’air de A, C en est isolée par une cloison étanche.",
+      "documents": [
+        {
+          "id": "cloches",
+          "type": "schema",
+          "titre": "Deux dispositifs",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 30,
+              "l": 140,
+              "h": 120,
+              "teinte": "ciel",
+              "motif": "clair",
+              "id": "c1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 180,
+              "y": 30,
+              "l": 140,
+              "h": 120,
+              "teinte": "ciel",
+              "motif": "clair",
+              "id": "c2",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 40,
+              "y": 96,
+              "emoji": "🌿",
+              "taille": 28
+            },
+            {
+              "forme": "emoji",
+              "x": 72,
+              "y": 70,
+              "emoji": "🐛",
+              "taille": 22
+            },
+            {
+              "forme": "emoji",
+              "x": 112,
+              "y": 96,
+              "emoji": "🌿",
+              "taille": 28
+            },
+            {
+              "forme": "emoji",
+              "x": 196,
+              "y": 96,
+              "emoji": "🌿",
+              "taille": 28
+            },
+            {
+              "forme": "emoji",
+              "x": 224,
+              "y": 70,
+              "emoji": "🐛",
+              "taille": 22
+            },
+            {
+              "forme": "emoji",
+              "x": 282,
+              "y": 96,
+              "emoji": "🌿",
+              "taille": 28
+            },
+            {
+              "forme": "rect",
+              "x": 246,
+              "y": 30,
+              "l": 6,
+              "h": 120,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 54,
+              "y": 126,
+              "texte": "A",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 126,
+              "y": 126,
+              "texte": "B",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 210,
+              "y": 126,
+              "texte": "A",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 296,
+              "y": 126,
+              "texte": "C",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 172,
+              "texte": "Lot 1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 172,
+              "texte": "Lot 2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 190,
+              "texte": "air commun",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 190,
+              "texte": "cloison étanche",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "tanins",
+          "type": "tableau",
+          "titre": "Tanins dans les feuilles après 3 jours",
+          "colonnes": [
+            "Plante",
+            "Tanins (mg/g)"
+          ],
+          "lignes": [
+            [
+              "A, attaquée",
+              18
+            ],
+            [
+              "B, voisine, air commun avec A",
+              14
+            ],
+            [
+              "C, voisine, cloison étanche",
+              5
+            ],
+            [
+              "D, témoin : aucune plante attaquée",
+              5
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cloches",
+          "enonce": "Touche le dispositif où aucun échange d’air n’est possible avec la plante attaquée.",
+          "reponse": [
+            "c2"
+          ],
+          "aide": "Cherche la cloison.",
+          "explication": "Dans le **lot 2**, la cloison étanche bloque l’air venant de A."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de mg/g les tanins de B dépassent-ils ceux du témoin D ?",
+          "reponse": 9,
+          "unite": "mg/g",
+          "aide": "Soustrais 5 à 14.",
+          "explication": "14 − 5 = **9 mg/g**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclut-on de ces résultats ?",
+          "options": [
+            "Des composés volatils transportés par l’air déclenchent la défense de la voisine",
+            "Les chenilles passent directement de la plante A à la plante B pour les attaquer",
+            "Les tanins sont fabriqués par les chenilles, qui les déposent sur les feuilles",
+            "Les plantes ne communiquent pas : la défense observée chez B est due au hasard"
+          ],
+          "reponse": 0,
+          "aide": "B réagit, C non, et seul l’air les sépare.",
+          "explication": "Seule l’**air** commun change entre B et C : un signal **volatil** alerte la voisine."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la plante C est-elle indispensable au raisonnement ?",
+          "options": [
+            "Elle montre que sans air commun rien ne se passe : l’effet vient bien de l’air",
+            "Elle prouve que les tanins sont toxiques pour les chenilles qui les consomment",
+            "Elle remplace le témoin D, dont elle reprend exactement le rôle dans le montage",
+            "Elle permet de compter les chenilles qui passent d’une plante à l’autre chaque jour"
+          ],
+          "reponse": 0,
+          "aide": "C subit tout sauf l’air de A.",
+          "explication": "Elle isole le **facteur testé** : l’air venant de A."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi servent les tanins, métabolites secondaires ?",
+          "options": [
+            "À la défense de la plante contre les herbivores qui la consomment",
+            "À la photosynthèse, dont ils captent directement l’énergie lumineuse",
+            "À la circulation de la sève brute dans les vaisseaux de la tige",
+            "À la croissance des racines, dont ils stimulent l’allongement dans le sol"
+          ],
+          "reponse": 0,
+          "aide": "B en fabrique après l’alerte.",
+          "explication": "Les tanins sont des **métabolites secondaires défensifs**."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La lumière qui compte",
+      "competence": "lire-graphique",
+      "situation": "On éclaire des pigments de feuille avec des lumières de longueurs d’onde différentes. On mesure leur absorption et l’efficacité de la photosynthèse, en % du maximum (valeurs simplifiées).",
+      "documents": [
+        {
+          "id": "spectre",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Absorption et efficacité",
+          "categories": [
+            "400",
+            "450",
+            "500",
+            "550",
+            "600",
+            "650",
+            "700"
+          ],
+          "series": [
+            {
+              "nom": "Absorption des pigments",
+              "valeurs": [
+                65,
+                95,
+                30,
+                10,
+                25,
+                80,
+                30
+              ],
+              "teinte": "vert"
+            },
+            {
+              "nom": "Efficacité de la photosynthèse",
+              "valeurs": [
+                55,
+                90,
+                28,
+                8,
+                24,
+                74,
+                22
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Valeur",
+            "unite": "% du maximum",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Longueur d’onde (nm)"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche la longueur d’onde où l’absorption des pigments est la plus forte.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche le sommet de la première courbe.",
+          "explication": "L’absorption est maximale à **450 nm**, en lumière bleue."
+        },
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche la longueur d’onde où l’absorption est la plus faible.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "C’est la lumière que les pigments renvoient.",
+          "explication": "À **550 nm**, en lumière verte, les pigments absorbent très peu : les feuilles sont vertes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la superposition des deux courbes ?",
+          "options": [
+            "Que ce sont bien ces pigments qui captent l’énergie utilisée par la photosynthèse",
+            "Que la photosynthèse se fait sans lumière, grâce aux seuls pigments de la feuille",
+            "Que la lumière verte est la plus efficace, car les feuilles sont vertes",
+            "Que les pigments sont inutiles, puisque la photosynthèse se fait sans eux"
+          ],
+          "reponse": 0,
+          "aide": "Les deux courbes ont la même forme.",
+          "explication": "Là où les pigments absorbent, la photosynthèse est efficace : les pigments en sont les **capteurs**."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "D’où vient le dioxygène ?",
+      "competence": "experimenter",
+      "situation": "En 1941, des chercheurs ont suivi l’origine du dioxygène dégagé par des algues grâce à de l’oxygène marqué, ¹⁸O. Le schéma montre les deux compartiments du chloroplaste.",
+      "documents": [
+        {
+          "id": "ruben",
+          "type": "tableau",
+          "titre": "Deux lots d’algues éclairées",
+          "colonnes": [
+            "Lot",
+            "Eau fournie",
+            "CO₂ fourni",
+            "Dioxygène dégagé"
+          ],
+          "lignes": [
+            [
+              "1",
+              "H₂¹⁸O (marquée)",
+              "C¹⁶O₂ ordinaire",
+              "¹⁸O₂ (marqué)"
+            ],
+            [
+              "2",
+              "H₂¹⁶O ordinaire",
+              "C¹⁸O₂ (marqué)",
+              "¹⁶O₂ (ordinaire)"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Expérience simplifiée, d’après Ruben et Kamen (1941)"
+        },
+        {
+          "id": "chloro",
+          "type": "schema",
+          "titre": "Le chloroplaste",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 170,
+              "cy": 115,
+              "rx": 140,
+              "ry": 88,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "stroma",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 85,
+              "y": 70,
+              "l": 44,
+              "h": 40,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "g1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 150,
+              "y": 105,
+              "l": 44,
+              "h": 40,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "g2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 215,
+              "y": 70,
+              "l": 44,
+              "h": 40,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "g3",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que conclut-on de ces deux lots ?",
+          "options": [
+            "Le dioxygène dégagé provient de l’eau consommée, et non du CO₂",
+            "Le dioxygène dégagé provient du CO₂ absorbé, et non de l’eau",
+            "Le dioxygène dégagé provient de l’air ambiant, absorbé puis rejeté",
+            "Le dioxygène dégagé provient du glucose fabriqué par la plante"
+          ],
+          "reponse": 0,
+          "aide": "Compare le marquage du dioxygène avec celui de l’eau et du CO₂.",
+          "explication": "Le dioxygène est marqué quand l’**eau** l’est, pas quand c’est le CO₂ : il vient de la **photolyse de l’eau**."
+        },
+        {
+          "type": "zone",
+          "document": "chloro",
+          "enonce": "Touche les empilements de thylakoïdes où se déroule la photolyse de l’eau.",
+          "reponse": [
+            "g1",
+            "g2",
+            "g3"
+          ],
+          "multiple": true,
+          "aide": "La phase photochimique a lieu dans les membranes empilées.",
+          "explication": "La photolyse se déroule dans les **thylakoïdes**, où sont les pigments."
+        },
+        {
+          "type": "zone",
+          "document": "chloro",
+          "enonce": "Touche le compartiment où le cycle de Calvin réduit le CO₂.",
+          "reponse": [
+            "stroma"
+          ],
+          "aide": "C’est le liquide qui entoure les empilements.",
+          "explication": "Le cycle de Calvin se déroule dans le **stroma**, où se trouve la RuBisCO."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le bilan consomme 6 CO₂ et 6 H₂O pour fabriquer un glucose. Combien de molécules de dioxygène sont libérées ?",
+          "reponse": 6,
+          "unite": "molécules",
+          "aide": "Regarde le bilan : C₆H₁₂O₆ + … O₂.",
+          "explication": "Le bilan donne 1 glucose et **6 O₂**."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quand la lumière s’éteint",
+      "competence": "analyser-document",
+      "situation": "Des chercheurs éteignent la lumière sur des algues à t = 0 et mesurent deux molécules du cycle de Calvin, le PGA et le RuBP (en % de leur valeur initiale, valeurs simplifiées). Le tableau rappelle ce que la lumière fournit.",
+      "documents": [
+        {
+          "id": "calvin",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Passage à l’obscurité",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "60"
+          ],
+          "series": [
+            {
+              "nom": "PGA",
+              "valeurs": [
+                100,
+                140,
+                170,
+                180,
+                185
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "RuBP",
+              "valeurs": [
+                100,
+                60,
+                35,
+                25,
+                20
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Quantité",
+            "unite": "% de la valeur initiale",
+            "min": 0,
+            "max": 200,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Secondes après l’obscurité"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "lumiere",
+          "type": "tableau",
+          "titre": "Ce que change l’obscurité",
+          "colonnes": [
+            "Condition",
+            "ATP et RH₂",
+            "Phase photochimique"
+          ],
+          "lignes": [
+            [
+              "Lumière",
+              "produits",
+              "active"
+            ],
+            [
+              "Obscurité",
+              "plus produits",
+              "arrêtée"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la quantité de RuBP 30 secondes après l’obscurité ?",
+          "reponse": 25,
+          "unite": "%",
+          "tolerance": 2,
+          "aide": "Lis la courbe du RuBP à la graduation 30.",
+          "explication": "À 30 s, il reste **25 %** du RuBP de départ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points la quantité de PGA a-t-elle augmenté à 20 secondes ?",
+          "reponse": 70,
+          "unite": "points",
+          "aide": "Compare 170 à 100.",
+          "explication": "170 − 100 = **+70 points**."
+        },
+        {
+          "type": "zone",
+          "document": "lumiere",
+          "enonce": "Touche ce qui manque dans le noir pour réduire le PGA.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Le cycle de Calvin utilise l’ATP et les RH₂.",
+          "explication": "Sans lumière, l’**ATP et les RH₂** ne sont plus produits : le PGA n’est plus réduit."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le PGA s’accumule-t-il alors que le RuBP diminue ?",
+          "options": [
+            "Le PGA n’est plus réduit faute d’ATP et de RH₂, donc le RuBP n’est plus régénéré",
+            "La lumière fabrique directement le PGA, qui s’accumule donc quand elle augmente",
+            "Le RuBP se transforme en dioxygène, qui s’échappe de la feuille dans l’air",
+            "Le cycle de Calvin accélère dans le noir, ce qui consomme tout le RuBP disponible"
+          ],
+          "reponse": 0,
+          "aide": "Le PGA est réduit grâce à l’ATP et aux RH₂.",
+          "explication": "Le cycle est **bloqué** : le PGA s’accumule et le RuBP, non régénéré, s’épuise."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la phase du cycle de Calvin est-elle « non photochimique » sans être indépendante de la lumière ?",
+          "options": [
+            "Elle n’utilise pas la lumière mais dépend de l’ATP et des RH₂ fabriqués grâce à elle",
+            "Elle fonctionne aussi bien dans le noir, sans aucun apport de la phase claire",
+            "Elle se déroule dans les thylakoïdes, où se trouvent les pigments de la lumière",
+            "Elle produit le dioxygène, qui est ensuite libéré par les stomates de la feuille"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce que devient le cycle quand on éteint.",
+          "explication": "Elle ne capte pas de lumière, mais ses **produits** ne peuvent exister qu’avec elle : les deux phases sont **couplées**."
+        }
+      ]
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Autopsie d’une fleur",
+      "competence": "observer-schema",
+      "situation": "Clara observe une fleur en coupe, sans aucune étiquette, pour retrouver ses organes.",
+      "documents": [
+        {
+          "id": "fleur",
+          "type": "schema",
+          "titre": "Une fleur en coupe",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 166,
+              "y": 170,
+              "l": 8,
+              "h": 52,
+              "teinte": "vert",
+              "motif": "plein"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 140,
+              "cy": 168,
+              "rx": 20,
+              "ry": 7,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 200,
+              "cy": 168,
+              "rx": 20,
+              "ry": 7,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 90,
+              "cy": 125,
+              "rx": 34,
+              "ry": 16,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "p1",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 250,
+              "cy": 125,
+              "rx": 34,
+              "ry": 16,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "p2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 136,
+              "y": 100,
+              "l": 4,
+              "h": 52,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "rect",
+              "x": 204,
+              "y": 100,
+              "l": 4,
+              "h": 52,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 138,
+              "cy": 96,
+              "rx": 9,
+              "ry": 11,
+              "teinte": "jaune",
+              "motif": "plein",
+              "id": "e1",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 206,
+              "cy": 96,
+              "rx": 9,
+              "ry": 11,
+              "teinte": "jaune",
+              "motif": "plein",
+              "id": "e2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 166,
+              "y": 84,
+              "l": 8,
+              "h": 40,
+              "teinte": "vert",
+              "motif": "plein"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 170,
+              "cy": 80,
+              "rx": 11,
+              "ry": 7,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "stigmate",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 170,
+              "cy": 142,
+              "rx": 18,
+              "ry": 24,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "ovaire",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fleur",
+          "enonce": "Touche les deux étamines, qui fabriquent le pollen.",
+          "reponse": [
+            "e1",
+            "e2"
+          ],
+          "multiple": true,
+          "aide": "Cherche les petits sacs au bout de fins filaments.",
+          "explication": "Les **anthères** des étamines produisent le pollen."
+        },
+        {
+          "type": "zone",
+          "document": "fleur",
+          "enonce": "Touche l’organe qui deviendra le fruit.",
+          "reponse": [
+            "ovaire"
+          ],
+          "aide": "Il est à la base du pistil, en son centre.",
+          "explication": "L’**ovaire** deviendra le fruit, et ses ovules les graines."
+        },
+        {
+          "type": "zone",
+          "document": "fleur",
+          "enonce": "Touche la partie du pistil qui reçoit le pollen.",
+          "reponse": [
+            "stigmate"
+          ],
+          "aide": "Elle est tout en haut du pistil.",
+          "explication": "Le **stigmate** reçoit le pollen."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes qui mènent de la fleur au fruit.",
+          "items": [
+            "Le pollen se dépose sur le stigmate",
+            "Le pollen féconde l’ovule",
+            "L’ovule devient une graine",
+            "L’ovaire devient un fruit"
+          ],
+          "aide": "La pollinisation vient avant la fécondation.",
+          "explication": "Pollinisation, fécondation, graine, fruit."
+        }
+      ]
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux fleurs, deux stratégies",
+      "competence": "analyser-document",
+      "situation": "Noé compare deux fleurs de son jardin, A et B, pour deviner comment leur pollen voyage (valeurs arrondies pour l’exercice).",
+      "documents": [
+        {
+          "id": "fleurs",
+          "type": "tableau",
+          "titre": "Les deux fleurs",
+          "colonnes": [
+            "Caractère",
+            "Fleur A",
+            "Fleur B"
+          ],
+          "lignes": [
+            [
+              "Pétales",
+              "absents, verdâtres",
+              "grands, colorés"
+            ],
+            [
+              "Nectar",
+              "absent",
+              "abondant"
+            ],
+            [
+              "Pollen",
+              "léger, sec",
+              "lourd, collant"
+            ],
+            [
+              "Grains de pollen par fleur",
+              "4 000 000",
+              "2 000"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Laquelle de ces deux fleurs est pollinisée par le vent ?",
+          "options": [
+            "La fleur A",
+            "La fleur B",
+            "Les deux",
+            "Aucune des deux"
+          ],
+          "reponse": 0,
+          "aide": "Pas de pétales voyants, pas de nectar, pollen léger.",
+          "explication": "La fleur **A** est **anémogame** : discrète, sans nectar, avec un pollen léger."
+        },
+        {
+          "type": "zone",
+          "document": "fleurs",
+          "enonce": "Touche la case qui montre que la fleur B attire des animaux.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Les animaux viennent chercher une récompense.",
+          "explication": "Le **nectar abondant** est la récompense qui attire les pollinisateurs."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois plus de pollen la fleur A produit-elle que la fleur B ?",
+          "reponse": 2000,
+          "aide": "Divise 4 000 000 par 2 000.",
+          "explication": "4 000 000 ÷ 2 000 = **2 000 fois** plus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la fleur A en produit-elle autant ?",
+          "options": [
+            "Le vent disperse le pollen au hasard : la plupart des grains sont perdus",
+            "Son pollen est très gros, donc chaque grain a de fortes chances de féconder",
+            "Elle attire beaucoup d’abeilles, qui transportent le pollen vers d’autres fleurs",
+            "Elle s’autoféconde obligatoirement, donc elle doit produire des grains en excès"
+          ],
+          "reponse": 0,
+          "aide": "Le vent ne vise aucune fleur.",
+          "explication": "Le vent ne « visant » rien, il faut **beaucoup de gaspillage** pour que quelques grains arrivent : c’est aussi l’origine des allergies."
+        }
+      ]
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’orchidée de Darwin",
+      "competence": "raisonner",
+      "situation": "L’orchidée Angraecum sesquipedale, de Madagascar, cache son nectar au fond d’un long éperon. On compare, sur quatre populations imaginées, la longueur de l’éperon et celle de la trompe du papillon qui la pollinise. La frise date la prédiction de Darwin.",
+      "documents": [
+        {
+          "id": "longueurs",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Éperon et trompe",
+          "categories": [
+            "Population 1",
+            "Population 2",
+            "Population 3",
+            "Population 4"
+          ],
+          "series": [
+            {
+              "nom": "Éperon de l’orchidée",
+              "valeurs": [
+                12,
+                20,
+                25,
+                30
+              ],
+              "teinte": "rose"
+            },
+            {
+              "nom": "Trompe du papillon",
+              "valeurs": [
+                11,
+                19,
+                26,
+                29
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Longueur",
+            "unite": "cm",
+            "min": 0,
+            "max": 35,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Population"
+          },
+          "valeurs": false,
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Darwin et le papillon",
+          "debut": 1850,
+          "fin": 1910,
+          "pas": 10,
+          "periodes": [],
+          "evenements": [
+            {
+              "id": "darwin",
+              "date": 1862,
+              "nom": "Darwin prédit"
+            },
+            {
+              "id": "decouverte",
+              "date": 1903,
+              "nom": "Papillon découvert"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart entre l’éperon et la trompe dans la population 3 ?",
+          "reponse": 1,
+          "unite": "cm",
+          "aide": "Soustrais les deux barres de cette population.",
+          "explication": "26 − 25 = **1 cm** : la trompe suit l’éperon de très près."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que suggère l’accord entre les longueurs dans les quatre populations ?",
+          "options": [
+            "Une coévolution : chaque partenaire a exercé une pression de sélection sur l’autre",
+            "Un pur hasard, sans aucun lien entre l’évolution des deux espèces concernées",
+            "Le papillon fabrique lui-même l’éperon de l’orchidée en y déposant ses œufs",
+            "L’orchidée est pollinisée par le vent, donc son éperon n’a rien à voir avec le papillon"
+          ],
+          "reponse": 0,
+          "aide": "Quand l’éperon s’allonge, la trompe aussi.",
+          "explication": "Les deux lignées évoluent **ensemble** : c’est la **coévolution**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la prédiction de Darwin de la découverte du papillon ?",
+          "reponse": 41,
+          "unite": "ans",
+          "aide": "Soustrais les deux dates de la frise.",
+          "explication": "1903 − 1862 = **41 ans**."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui confirme la prédiction de Darwin.",
+          "reponse": [
+            "decouverte"
+          ],
+          "aide": "Il arrive plus tard sur la frise.",
+          "explication": "La **découverte du papillon** en 1903 a confirmé l’hypothèse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Darwin pensait-il que l’orchidée « voulait » attirer ce papillon ?",
+          "options": [
+            "Non : la coévolution est un ajustement par sélection naturelle, sans intention",
+            "Oui : l’orchidée choisit son pollinisateur et adapte sa forme à sa volonté",
+            "Oui : le papillon a décidé d’allonger sa trompe pour atteindre le nectar",
+            "Non : il n’existe aucun lien entre les deux espèces, donc aucun ajustement"
+          ],
+          "reponse": 0,
+          "aide": "Les deux espèces évoluent sur des millions d’années.",
+          "explication": "La coévolution ne suppose **aucune intention** : ce sont les individus les mieux ajustés qui laissent le plus de descendants."
+        }
+      ]
+    }
+  ]
+}

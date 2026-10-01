@@ -1,0 +1,2467 @@
+{
+ "niveau": "Tle",
+ "matiere": "enseignement-scientifique",
+ "exercices": [
+  {
+   "chapitre": "9ca80b90-2d09-5f1a-9206-b3914212f7de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que disent les bulles de glace",
+   "competence": "lire-graphique",
+   "situation": "Les carottes de glace emprisonnent de minuscules bulles d’air ancien. Couplées aux mesures directes plus récentes, elles donnent la teneur de l’air en dioxyde de carbone (CO₂) depuis 1850.",
+   "documents": [
+    {
+     "id": "co2",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "CO₂ atmosphérique",
+     "categories": [
+      "1850",
+      "1950",
+      "2000",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "CO₂",
+       "valeurs": [
+        280,
+        310,
+        370,
+        415
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Teneur en CO₂",
+      "unite": "ppm",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies (carottes de glace puis mesures directes)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co2",
+     "enonce": "Touche l’année où la teneur en CO₂ dépasse 400 ppm pour la première fois.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la seule barre qui passe au-dessus de la graduation 400.",
+     "explication": "La teneur dépasse 400 ppm en **2020** (environ 415 ppm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de ppm la teneur en CO₂ a-t-elle augmenté entre 1850 et 2020 ?",
+     "reponse": 135,
+     "aide": "Soustrais la valeur de 1850 à celle de 2020.",
+     "explication": "415 − 280 = **135 ppm**.",
+     "unite": "ppm",
+     "tolerance": 5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Cette hausse représente quel pourcentage de la teneur de 1850 ? Arrondis à l’unité.",
+     "reponse": 48,
+     "aide": "Divise la hausse (135 ppm) par la teneur de 1850, puis multiplie par 100.",
+     "explication": "135 ÷ 280 ≈ 0,48, soit environ **48 %** de hausse.",
+     "unite": "%",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment connaît-on la teneur en CO₂ de l’air de 1850 ?",
+     "options": [
+      "Grâce à l’air ancien piégé dans les bulles des carottes de glace",
+      "Grâce aux thermomètres que les stations météo de l’époque plongeaient dans l’air",
+      "Grâce aux cernes des arbres, qui gardent l’air de chaque année",
+      "Grâce aux satellites lancés par les premiers observatoires du XIXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Aucun instrument moderne n’existait encore : il faut une archive naturelle qui garde de l’air.",
+     "explication": "Les **bulles d’air piégées dans la glace** conservent l’air de l’époque : on en mesure directement la composition."
+    }
+   ]
+  },
+  {
+   "chapitre": "9ca80b90-2d09-5f1a-9206-b3914212f7de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un rythme jamais vu",
+   "competence": "calculer",
+   "situation": "À la fin de la dernière glaciation, le CO₂ a augmenté naturellement de 80 ppm. Comparons son rythme à celui d’aujourd’hui (valeurs arrondies).",
+   "documents": [
+    {
+     "id": "rythmes",
+     "type": "tableau",
+     "titre": "Deux hausses du CO₂",
+     "colonnes": [
+      "",
+      "Hausse (ppm)",
+      "Durée (années)",
+      "Rythme (ppm par an)"
+     ],
+     "lignes": [
+      [
+       "Fin de la dernière glaciation",
+       80,
+       8000,
+       "?"
+      ],
+      [
+       "Aujourd’hui",
+       25,
+       10,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, carottes de glace et mesures directes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel était le rythme de la hausse à la fin de la dernière glaciation, en ppm par an ?",
+     "reponse": 0.01,
+     "aide": "Divise la hausse (80 ppm) par la durée (8 000 ans).",
+     "explication": "80 ÷ 8 000 = **0,01 ppm par an**.",
+     "unite": "ppm/an",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rythme de la hausse actuelle, en ppm par an ?",
+     "reponse": 2.5,
+     "aide": "Divise 25 ppm par 10 ans.",
+     "explication": "25 ÷ 10 = **2,5 ppm par an**.",
+     "unite": "ppm/an",
+     "tolerance": 0.05
+    },
+    {
+     "type": "zone",
+     "document": "rythmes",
+     "enonce": "Touche la case qui donne la durée de la hausse actuelle.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "La durée s’exprime en années : cherche la ligne « Aujourd’hui ».",
+     "explication": "La hausse actuelle est mesurée sur **10 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le rythme actuel dépasse-t-il celui de la fin de la glaciation ?",
+     "reponse": 250,
+     "aide": "Divise le rythme actuel par l’ancien : 2,5 ÷ 0,01.",
+     "explication": "2,5 ÷ 0,01 = **250** : la hausse actuelle est 250 fois plus rapide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui distingue surtout la hausse actuelle du CO₂ de celles du passé ?",
+     "options": [
+      "Sa vitesse, environ 250 fois plus grande que celle du passé",
+      "Son origine naturelle, liée aux variations de l’orbite terrestre",
+      "Sa lenteur, qui laisse aux milieux le temps de s’adapter",
+      "Sa régularité, qui suit un cycle d’environ 100 000 ans"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux rythmes calculés plus haut.",
+     "explication": "Ce qui distingue le réchauffement actuel, c’est sa **vitesse** (et sa cause humaine), pas le fait que le climat varie."
+    }
+   ]
+  },
+  {
+   "chapitre": "9ca80b90-2d09-5f1a-9206-b3914212f7de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Le climat a toujours changé »",
+   "competence": "raisonner",
+   "situation": "Un élève affirme : « Le climat a déjà varié de 5 °C dans le passé, donc +1,2 °C aujourd’hui n’a rien d’inquiétant. » Vérifie avec deux documents (valeurs arrondies).",
+   "documents": [
+    {
+     "id": "vitesses",
+     "type": "tableau",
+     "titre": "Deux hausses de température",
+     "colonnes": [
+      "",
+      "Hausse (°C)",
+      "Durée (années)",
+      "Rythme (°C par siècle)"
+     ],
+     "lignes": [
+      [
+       "Fin de la dernière glaciation",
+       5,
+       10000,
+       0.05
+      ],
+      [
+       "Depuis 1850",
+       1.2,
+       150,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "scenarios",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Réchauffement à la fin du siècle",
+     "categories": [
+      "Chute rapide des émissions",
+      "Poursuite des émissions"
+     ],
+     "series": [
+      {
+       "nom": "Hausse",
+       "valeurs": [
+        1.7,
+        4
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Hausse de température",
+      "unite": "°C",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "valeurs": false,
+     "source": "Valeurs centrales arrondies des scénarios du GIEC"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rythme du réchauffement depuis 1850, en °C par siècle ?",
+     "reponse": 0.8,
+     "aide": "Une durée de 150 ans vaut 1,5 siècle : divise 1,2 par 1,5.",
+     "explication": "1,2 ÷ 1,5 = **0,8 °C par siècle**.",
+     "unite": "°C/siècle",
+     "tolerance": 0.02
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur ce rythme dépasse-t-il celui de la fin de la dernière glaciation ?",
+     "reponse": 16,
+     "aide": "Divise 0,8 par 0,05.",
+     "explication": "0,8 ÷ 0,05 = **16** : le réchauffement actuel est 16 fois plus rapide."
+    },
+    {
+     "type": "zone",
+     "document": "scenarios",
+     "enonce": "Touche le scénario qui conduit à plus de 3 °C de hausse à la fin du siècle.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare la hauteur des barres avec la graduation 3.",
+     "explication": "C’est le scénario de **poursuite des émissions** (environ +4 °C)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans ce scénario, combien de °C s’ajoutent encore par rapport à aujourd’hui (+1,2 °C) ?",
+     "reponse": 2.8,
+     "aide": "Soustrais 1,2 à la valeur de la barre.",
+     "explication": "4 − 1,2 = **2,8 °C** supplémentaires.",
+     "unite": "°C",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de l’affirmation de l’élève ?",
+     "options": [
+      "Raisonnement faible : les 5 °C du passé ont pris 10 000 ans, alors que 1,2 °C s’est ajouté en 150 ans",
+      "Raisonnement juste : 5 °C dépasse 1,2 °C, donc la hausse actuelle n’a rien de particulier aujourd’hui",
+      "Raisonnement faible : avant l’ère industrielle, le climat n’avait jamais varié de façon mesurable",
+      "Raisonnement juste : tout réchauffement est naturel puisque le climat a déjà varié dans le passé"
+     ],
+     "reponse": 0,
+     "aide": "L’ampleur compte, mais la durée aussi : regarde le rythme.",
+     "explication": "Ce qui compte n’est pas seulement l’ampleur mais la **vitesse** : 16 fois plus rapide que lors de la dernière déglaciation."
+    }
+   ]
+  },
+  {
+   "chapitre": "f085ef8c-8240-5dbe-988b-e2a9a50103bc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’atmosphère en cases",
+   "competence": "observer-schema",
+   "situation": "Pour simuler le climat, un modèle découpe l’atmosphère en cases appelées mailles. Sur ce schéma vu de dessus, une maille fait 50 km de côté.",
+   "documents": [
+    {
+     "id": "mailles",
+     "type": "schema",
+     "titre": "Vue de dessus de l’atmosphère",
+     "largeur": 330,
+     "hauteur": 225,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 16,
+       "texte": "Chaque case est une maille",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 90,
+       "h": 70,
+       "id": "m0",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 30,
+       "l": 90,
+       "h": 70,
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 30,
+       "l": 90,
+       "h": 70,
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 100,
+       "l": 90,
+       "h": 70,
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 100,
+       "l": 90,
+       "h": 70,
+       "id": "m4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 100,
+       "l": 90,
+       "h": 70,
+       "id": "m5",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 165,
+       "cy": 62,
+       "rx": 22,
+       "ry": 11,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 88,
+       "texte": "nuage",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        190
+       ],
+       "a": [
+        120,
+        190
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 208,
+       "texte": "50 km",
+       "taille": "petit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mailles",
+     "enonce": "Touche la maille qui contient le nuage.",
+     "reponse": [
+      "m1"
+     ],
+     "aide": "Le nuage est dessiné dans la case du haut, au milieu.",
+     "explication": "Le nuage est dans la **maille du haut, au centre**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une région carrée de 1 000 km de côté est découpée en mailles de 50 km de côté. Combien de mailles faut-il ?",
+     "reponse": 400,
+     "aide": "Il y en a 1 000 ÷ 50 dans chaque direction : multiplie ce nombre par lui-même.",
+     "explication": "1 000 ÷ 50 = 20 mailles par côté, et 20 × 20 = **400 mailles**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le nuage est bien plus petit que la maille. Que fait le modèle ?",
+     "options": [
+      "Il le représente de façon approchée, par un paramétrage",
+      "Il calcule précisément le trajet de chaque gouttelette du nuage",
+      "Il ignore tout ce qui est plus petit qu’une maille",
+      "Il agrandit la maille pour qu’elle contienne tout le nuage"
+     ],
+     "reponse": 0,
+     "aide": "Un nuage ne peut pas être calculé dans le détail à cette échelle.",
+     "explication": "Ce qui est plus petit que la maille est **paramétré** : représenté de façon approchée, d’où une incertitude."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes d’une simulation.",
+     "items": [
+      "On découpe l’atmosphère en mailles",
+      "Dans chaque maille, on résout les équations de la physique",
+      "On répète le calcul, pas de temps après pas de temps",
+      "On compare le résultat au climat réellement mesuré"
+     ],
+     "aide": "On prépare, on calcule, on répète, puis on vérifie.",
+     "explication": "On **découpe**, on **calcule** dans chaque maille, on **répète** dans le temps, puis on **compare** aux mesures pour valider le modèle."
+    }
+   ]
+  },
+  {
+   "chapitre": "f085ef8c-8240-5dbe-988b-e2a9a50103bc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le test décisif",
+   "competence": "analyser-document",
+   "situation": "On compare la température observée à deux simulations d’un même modèle : l’une avec les seuls facteurs naturels, l’autre avec les facteurs naturels et les émissions humaines (allure simplifiée pour l’exercice).",
+   "documents": [
+    {
+     "id": "sim",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Écart de température par rapport à 1900",
+     "categories": [
+      "1900",
+      "1920",
+      "1940",
+      "1960",
+      "1980",
+      "2000",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Observé",
+       "valeurs": [
+        0,
+        0,
+        0.2,
+        0.1,
+        0.4,
+        0.7,
+        1.1
+       ],
+       "teinte": "encre"
+      },
+      {
+       "nom": "Simulation : facteurs naturels seuls",
+       "valeurs": [
+        0,
+        0,
+        0.1,
+        0,
+        0,
+        0,
+        0.1
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Simulation : naturels + émissions humaines",
+       "valeurs": [
+        0,
+        0.1,
+        0.2,
+        0.1,
+        0.3,
+        0.6,
+        1
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Écart",
+      "unite": "°C",
+      "min": 0,
+      "max": 1.2,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "source": "Allure simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sim",
+     "enonce": "Touche l’année où la température observée atteint 0,7 °C.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Suis la courbe des valeurs observées jusqu’à la graduation 0,7.",
+     "explication": "La température observée atteint 0,7 °C en **2000**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2020, de combien la température observée dépasse-t-elle la simulation avec facteurs naturels seuls ?",
+     "reponse": 1,
+     "aide": "Lis les deux valeurs en 2020 et soustrais-les.",
+     "explication": "1,1 − 0,1 = **1,0 °C** : les seuls facteurs naturels n’expliquent pas la hausse.",
+     "unite": "°C",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2020, de combien la simulation complète s’écarte-t-elle de l’observation ?",
+     "reponse": 0.1,
+     "aide": "Lis la valeur observée et celle de la simulation complète en 2020.",
+     "explication": "1,1 − 1,0 = **0,1 °C** : la simulation complète suit de près l’observation.",
+     "unite": "°C",
+     "tolerance": 0.02
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet de conclure ce test ?",
+     "options": [
+      "Le modèle ne reproduit le réchauffement observé que si on y injecte les émissions humaines",
+      "Le modèle se trompe toujours, car aucune simulation n’est identique aux mesures",
+      "Le réchauffement observé est d’origine naturelle, car la courbe bleue est stable",
+      "Le modèle prévoit le temps précis de chaque année à venir avec certitude"
+     ],
+     "reponse": 0,
+     "aide": "Quelle simulation colle à la courbe observée ?",
+     "explication": "Avec les seuls facteurs naturels, la courbe reste plate : le **réchauffement n’est reproduit qu’avec les émissions humaines**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f085ef8c-8240-5dbe-988b-e2a9a50103bc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Incertitudes, mode d’emploi",
+   "competence": "raisonner",
+   "situation": "Trois modèles ont simulé le climat de 2100 pour deux scénarios d’émissions. Un élève dit : « Les modèles ne sont pas d’accord entre eux, donc on ne peut rien dire. » (Valeurs écrites pour l’exercice.)",
+   "documents": [
+    {
+     "id": "proj",
+     "type": "tableau",
+     "titre": "Hausse de température projetée en 2100 (°C)",
+     "colonnes": [
+      "",
+      "Modèle A",
+      "Modèle B",
+      "Modèle C"
+     ],
+     "lignes": [
+      [
+       "Scénario de chute des émissions",
+       1.5,
+       1.8,
+       2.1
+      ],
+      [
+       "Scénario de poursuite des émissions",
+       3.6,
+       4.2,
+       4.8
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de lecture",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Un scénario est une hypothèse sur nos choix futurs : on ne peut pas le prédire. Un modèle est une représentation physique du climat. Tous les modèles reçoivent les mêmes scénarios."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "proj",
+     "enonce": "Touche la projection la plus élevée du tableau.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Cherche le plus grand nombre du tableau.",
+     "explication": "La valeur la plus élevée est **4,8 °C** (modèle C, poursuite des émissions)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des trois modèles pour le scénario de poursuite des émissions, en °C ?",
+     "reponse": 4.2,
+     "aide": "Additionne les trois valeurs puis divise par 3.",
+     "explication": "(3,6 + 4,2 + 4,8) ÷ 3 = **4,2 °C**.",
+     "unite": "°C",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour la chute des émissions, quel est l’écart entre le modèle le plus chaud et le plus froid, en °C ?",
+     "reponse": 0.6,
+     "aide": "Soustrais la plus petite valeur à la plus grande de la première ligne.",
+     "explication": "2,1 − 1,5 = **0,6 °C** d’écart entre modèles.",
+     "unite": "°C",
+     "tolerance": 0.02
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre les moyennes des deux scénarios, en °C ? (la moyenne de la chute des émissions est 1,8 °C)",
+     "reponse": 2.4,
+     "aide": "Soustrais 1,8 à la moyenne de la poursuite (4,2).",
+     "explication": "4,2 − 1,8 = **2,4 °C** : bien plus que l’écart entre modèles.",
+     "unite": "°C",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répondre à l’élève ?",
+     "options": [
+      "Les modèles divergent peu ; c’est le scénario, donc nos choix, qui pèse le plus",
+      "Il a raison : l’écart entre modèles rend toute conclusion impossible aujourd’hui",
+      "Il a tort : les modèles sont d’accord, leurs résultats étant parfaitement identiques",
+      "Il a raison : seul le modèle A compte, car il donne les valeurs les plus basses"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’écart entre modèles (0,6 à 1,2 °C) à l’écart entre scénarios.",
+     "explication": "L’écart entre modèles (0,6 à 1,2 °C) est **bien plus faible** que l’écart entre scénarios (2,4 °C) : le futur dépend surtout de **nos choix**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1161592-55cd-578a-8797-38d6083799f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de carpes dans le lac ?",
+   "competence": "calculer",
+   "situation": "Pour estimer les carpes d’un lac sans les compter toutes, un garde-pêche en capture 40, les marque et les relâche. Quelques jours plus tard, il en capture de nouveau. On rappelle N = (n₁ × n₂) ÷ m.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Relevés du garde-pêche",
+     "colonnes": [
+      "Relevé sur le lac",
+      "Nombre de carpes"
+     ],
+     "lignes": [
+      [
+       "Carpes marquées au 1er passage (n₁)",
+       40
+      ],
+      [
+       "Carpes capturées au 2e passage (n₂)",
+       30
+      ],
+      [
+       "Parmi elles, carpes portant une marque (m)",
+       6
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releve",
+     "enonce": "Touche le nombre de carpes marquées retrouvées au 2e passage.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Ce sont les carpes qui portent déjà une marque lors de la seconde capture.",
+     "explication": "Ce nombre est **m = 6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des carpes du 2e passage porte une marque ?",
+     "reponse": 20,
+     "aide": "Divise m par n₂, puis multiplie par 100.",
+     "explication": "6 ÷ 30 = 0,2, soit **20 %**.",
+     "unite": "%"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime l’effectif N du lac.",
+     "reponse": 200,
+     "aide": "N = (40 × 30) ÷ 6.",
+     "explication": "N = 40 × 30 ÷ 6 = **200 carpes**. Les marquées étaient 40 sur 200, soit 20 %, comme dans l’échantillon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre les deux passages, beaucoup de carpes marquées sont mortes. L’estimation de N sera…",
+     "options": [
+      "Trop élevée, car on retrouvera moins de carpes marquées que prévu",
+      "Trop faible, car on retrouvera plus de carpes marquées que prévu",
+      "Exacte, car la formule tient compte de tous les décès",
+      "Impossible à calculer, car n₁ ne sera plus jamais connu"
+     ],
+     "reponse": 0,
+     "aide": "Si m diminue, que devient le quotient (n₁ × n₂) ÷ m ?",
+     "explication": "Avec moins de marquées retrouvées, m baisse et **N est surestimé** : l’hypothèse « aucune mort » n’est plus vraie."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1161592-55cd-578a-8797-38d6083799f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les crises biologiques",
+   "competence": "lire-graphique",
+   "situation": "Au cours de l’histoire de la vie, plusieurs crises ont éliminé une grande part des espèces. Le graphique donne des ordres de grandeur.",
+   "documents": [
+    {
+     "id": "crises",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Part des espèces disparues",
+     "categories": [
+      "Ordovicien-Silurien (−445 Ma)",
+      "Permien-Trias (−252 Ma)",
+      "Crétacé-Paléogène (−66 Ma)"
+     ],
+     "series": [
+      {
+       "nom": "Espèces disparues",
+       "valeurs": [
+        85,
+        90,
+        75
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Espèces disparues",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crises",
+     "enonce": "Touche la crise qui a fait disparaître la plus grande part des espèces.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "La crise du **Permien-Trias** (environ 90 %) est la plus grave de l’histoire de la vie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’années séparent la crise du Permien-Trias de celle du Crétacé-Paléogène ?",
+     "reponse": 186,
+     "aide": "Soustrais les deux dates : 252 − 66.",
+     "explication": "252 − 66 = **186 millions d’années**.",
+     "unite": "Ma"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avant la crise du Permien-Trias, un milieu marin compte 1 000 espèces. Combien survivent, environ ?",
+     "reponse": 100,
+     "aide": "Si environ 90 % disparaissent, il en reste 100 − 90 = 10 %.",
+     "explication": "10 % de 1 000 = **100 espèces** survivantes environ.",
+     "unite": "espèces",
+     "tolerance": 10
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque événement à ce qui le caractérise.",
+     "paires": [
+      [
+       "Permien-Trias",
+       "La plus grave crise : environ 90 % des espèces disparues"
+      ],
+      [
+       "Crétacé-Paléogène",
+       "Fin des dinosaures non aviens"
+      ],
+      [
+       "Crise actuelle",
+       "Extinctions 100 à 1 000 fois plus rapides que le rythme naturel"
+      ],
+      [
+       "Après chaque crise",
+       "Diversification des groupes survivants"
+      ]
+     ],
+     "aide": "La sixième crise est la seule dont les causes sont humaines.",
+     "explication": "Le **Permien-Trias** est la plus grave, le **Crétacé-Paléogène** emporte les dinosaures non aviens, la **crise actuelle** va 100 à 1 000 fois plus vite, et les survivants se **diversifient** ensuite."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1161592-55cd-578a-8797-38d6083799f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les papillons marqués",
+   "competence": "argumenter",
+   "situation": "Deux équipes estiment le nombre de papillons d’une prairie par capture-marquage-recapture (N = n₁ × n₂ ÷ m). La seconde équipe marque les papillons avec une grosse tache de peinture blanche, bien visible.",
+   "documents": [
+    {
+     "id": "campagnes",
+     "type": "tableau",
+     "titre": "Deux campagnes de capture",
+     "colonnes": [
+      "",
+      "Équipe 1",
+      "Équipe 2"
+     ],
+     "lignes": [
+      [
+       "Papillons marqués au départ (n₁)",
+       60,
+       60
+      ],
+      [
+       "Papillons capturés au 2e passage (n₂)",
+       45,
+       45
+      ],
+      [
+       "Parmi eux, papillons marqués (m)",
+       9,
+       15
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle estimation N l’équipe 1 obtient-elle ?",
+     "reponse": 300,
+     "aide": "N = (60 × 45) ÷ 9.",
+     "explication": "N = 60 × 45 ÷ 9 = **300 papillons**."
+    },
+    {
+     "type": "zone",
+     "document": "campagnes",
+     "enonce": "Touche la case qui explique pourquoi l’équipe 2 obtient une autre estimation.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Les effectifs n₁ et n₂ sont identiques : une seule valeur change.",
+     "explication": "Seul **m** change : 15 papillons marqués retrouvés au lieu de 9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle estimation N l’équipe 2 obtient-elle ?",
+     "reponse": 180,
+     "aide": "N = (60 × 45) ÷ 15.",
+     "explication": "N = 60 × 45 ÷ 15 = **180 papillons**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication.",
+     "texte": "Si les papillons marqués sont plus faciles à recapturer, le nombre m est ___ que prévu, et l’effectif N est alors ___ .",
+     "reponses": [
+      [
+       "plus grand"
+      ],
+      [
+       "sous-estimé",
+       "sous estimé"
+      ]
+     ],
+     "banque": [
+      "plus grand",
+      "plus petit",
+      "sous-estimé",
+      "surestimé"
+     ],
+     "aide": "Un quotient diminue quand son dénominateur augmente.",
+     "explication": "Un marquage voyant donne un **m plus grand**, donc un **N sous-estimé** : l’hypothèse d’égale chance d’être repris n’est pas respectée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment présenter honnêtement le résultat ?",
+     "options": [
+      "« Entre 180 et 300 papillons environ, selon les conditions de capture »",
+      "« Exactement 300 papillons, car l’équipe 1 a utilisé la bonne formule »",
+      "« Exactement 180 papillons, car le marquage blanc est plus précis »",
+      "« Aucun résultat n’est utilisable : toute estimation est forcément fausse »"
+     ],
+     "reponse": 0,
+     "aide": "Une estimation s’accompagne toujours d’une incertitude.",
+     "explication": "Toute estimation est assortie d’une **incertitude** : on donne un ordre de grandeur et ses limites."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b60335a-9e70-5956-a785-2c91e20c4239",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Huit milliards d’humains",
+   "competence": "lire-graphique",
+   "situation": "La population mondiale a beaucoup augmenté depuis 1950. Le graphique donne ses valeurs, arrondies au dixième de milliard.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Population mondiale",
+     "categories": [
+      "1950",
+      "1960",
+      "1970",
+      "1980",
+      "1990",
+      "2000",
+      "2010",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        2.5,
+        3,
+        3.7,
+        4.4,
+        5.3,
+        6.1,
+        6.9,
+        7.8
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Population",
+      "unite": "milliards d’habitants",
+      "min": 0,
+      "max": 9,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "source": "Valeurs arrondies, ONU"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche l’année où la population mondiale dépasse 5 milliards pour la première fois.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le premier point au-dessus de la graduation 5.",
+     "explication": "Elle dépasse 5 milliards en **1990** (5,3 milliards)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle était la population mondiale en 1970, en milliards ?",
+     "reponse": 3.7,
+     "aide": "Lis la valeur au-dessus de 1970.",
+     "explication": "En 1970, la population est de **3,7 milliards**.",
+     "unite": "milliards",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de milliards la population a-t-elle augmenté entre 1950 et 2020 ?",
+     "reponse": 5.3,
+     "aide": "Soustrais la valeur de 1950 à celle de 2020.",
+     "explication": "7,8 − 2,5 = **5,3 milliards**.",
+     "unite": "milliards",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "Par combien la population a-t-elle été multipliée entre 1950 et 2020 ?",
+     "options": [
+      "Par 3 environ",
+      "Par 2 environ",
+      "Par 5 environ",
+      "Par 10 environ"
+     ],
+     "reponse": 0,
+     "aide": "Divise 7,8 par 2,5.",
+     "explication": "7,8 ÷ 2,5 ≈ 3,1 : la population a été multipliée par **3 environ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b60335a-9e70-5956-a785-2c91e20c4239",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les lapins de l’île",
+   "competence": "modeliser",
+   "situation": "On lâche 100 lapins sur une île. Deux modèles sont comparés : dans l’un, la population augmente de 20 % par an (exponentiel) ; dans l’autre, de 20 lapins par an (linéaire). Effectifs arrondis à l’unité.",
+   "documents": [
+    {
+     "id": "lapins",
+     "type": "tableau",
+     "titre": "Deux modèles",
+     "colonnes": [
+      "Année",
+      "Modèle exponentiel (+20 % par an)",
+      "Modèle linéaire (+20 lapins par an)"
+     ],
+     "lignes": [
+      [
+       0,
+       100,
+       100
+      ],
+      [
+       1,
+       120,
+       120
+      ],
+      [
+       2,
+       144,
+       140
+      ],
+      [
+       3,
+       "?",
+       160
+      ],
+      [
+       5,
+       249,
+       200
+      ]
+     ],
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel effectif donne le modèle exponentiel à l’année 3 ? Arrondis à l’unité.",
+     "reponse": 173,
+     "aide": "Multiplie l’effectif de l’année 2 (144) par 1,2.",
+     "explication": "144 × 1,2 = 172,8, soit **173 lapins**.",
+     "tolerance": 1
+    },
+    {
+     "type": "zone",
+     "document": "lapins",
+     "enonce": "Touche l’effectif du modèle exponentiel la première année où les deux modèles diffèrent.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Les deux modèles donnent 120 à l’année 1 : regarde l’année suivante.",
+     "explication": "Dès l’année 2, le modèle exponentiel donne **144** et le linéaire 140."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À l’année 5, de combien de lapins le modèle exponentiel dépasse-t-il le modèle linéaire ?",
+     "reponse": 49,
+     "aide": "Soustrais les deux valeurs de la ligne « 5 ».",
+     "explication": "249 − 200 = **49 lapins** d’écart.",
+     "unite": "lapins"
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après la règle des 70, en combien d’années la population exponentielle double-t-elle avec 20 % par an ?",
+     "reponse": 3.5,
+     "aide": "Doublement ≈ 70 ÷ taux en pourcentage.",
+     "explication": "70 ÷ 20 = **3,5 ans** environ.",
+     "unite": "ans",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "L’île ne peut nourrir que 400 lapins. Quel modèle convient à long terme ?",
+     "options": [
+      "Le modèle logistique, avec un plateau vers 400 lapins",
+      "Le modèle exponentiel, qui continue d’augmenter de 20 % par an",
+      "Le modèle linéaire, qui continue d’ajouter 20 lapins par an",
+      "Aucun modèle, car une population ne peut pas se décrire par des chiffres"
+     ],
+     "reponse": 0,
+     "aide": "Aucun milieu n’est infini.",
+     "explication": "Quand les ressources deviennent limitantes, la croissance se stabilise autour de la **capacité biotique K** : c’est le modèle **logistique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b60335a-9e70-5956-a785-2c91e20c4239",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand la croissance s’essouffle",
+   "competence": "modeliser",
+   "situation": "Une population de poissons est introduite dans un étang. Le graphique donne l’effectif observé ; le tableau donne ce que prévoirait un modèle exponentiel qui multiplie l’effectif par 3 chaque année.",
+   "documents": [
+    {
+     "id": "etang",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Effectif observé",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Effectif",
+       "valeurs": [
+        10,
+        30,
+        80,
+        190,
+        380,
+        600,
+        790,
+        910,
+        970
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Effectif",
+      "unite": "individus",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "source": "Allure simplifiée, écrite pour l’exercice"
+    },
+    {
+     "id": "prevu",
+     "type": "tableau",
+     "titre": "Effectif prévu par le modèle exponentiel (×3 par an)",
+     "colonnes": [
+      "Année",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Effectif prévu",
+       10,
+       30,
+       90,
+       270,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etang",
+     "enonce": "Touche la première année où l’effectif observé dépasse 500.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le premier point au-dessus de la graduation 500.",
+     "explication": "L’effectif dépasse 500 à l’**année 5** (600 individus)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus forte augmentation d’effectif en une seule année, observée sur le graphique ?",
+     "reponse": 220,
+     "aide": "Calcule l’écart entre années successives, surtout vers le milieu de la courbe.",
+     "explication": "De l’année 4 (380) à l’année 5 (600) : **+220 individus**, le maximum.",
+     "unite": "individus",
+     "tolerance": 5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel effectif le modèle exponentiel prévoit-il à l’année 4 ?",
+     "reponse": 810,
+     "aide": "Multiplie 270 par 3.",
+     "explication": "270 × 3 = **810 individus**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien ce modèle dépasse-t-il l’effectif observé à l’année 4 ?",
+     "reponse": 430,
+     "aide": "Soustrais l’effectif observé à l’année 4 (380) à 810.",
+     "explication": "810 − 380 = **430 individus** d’écart.",
+     "unite": "individus",
+     "tolerance": 5
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le modèle exponentiel s’éloigne-t-il de l’observation ?",
+     "options": [
+      "Les ressources deviennent limitantes : la croissance ralentit quand l’effectif devient grand",
+      "Le milieu offre des ressources illimitées, donc l’observation est forcément erronée",
+      "La natalité augmente chaque année, ce que le modèle ignorait complètement",
+      "Les poissons quittent l’étang au rythme constant de 220 individus par an"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que fait la courbe observée vers la fin.",
+     "explication": "La courbe se tasse vers un plateau : c’est le modèle **logistique**, où les ressources limitent la croissance."
+    }
+   ]
+  },
+  {
+   "chapitre": "909c8ea1-df1d-5ab5-bdcc-6cf7839c237c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre siècles de calcul",
+   "competence": "se-reperer-temps",
+   "situation": "Compter, additionner, programmer : l’humanité a confié peu à peu ces opérations à des machines. Voici quelques étapes sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la Pascaline à la loi de Moore",
+     "debut": 1600,
+     "fin": 2000,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "pascaline",
+       "date": 1642,
+       "nom": "Pascaline"
+      },
+      {
+       "id": "analytique",
+       "date": 1837,
+       "nom": "Machine analytique"
+      },
+      {
+       "id": "turing",
+       "date": 1936,
+       "nom": "Machine de Turing"
+      },
+      {
+       "id": "transistor",
+       "date": 1947,
+       "nom": "Transistor"
+      },
+      {
+       "id": "moore",
+       "date": 1965,
+       "nom": "Loi de Moore"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le transistor.",
+     "reponse": [
+      "transistor"
+     ],
+     "aide": "Il remplace le tube à vide dans les années 1940.",
+     "explication": "Le **transistor** date de 1947."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Pascaline de la machine de Turing ?",
+     "reponse": 294,
+     "aide": "Soustrais 1642 à 1936.",
+     "explication": "1936 − 1642 = **294 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 1965, une puce compte 64 transistors. Ce nombre double tous les 2 ans. Combien en 1971 ?",
+     "reponse": 512,
+     "aide": "De 1965 à 1971 : 6 ans, soit 3 doublements.",
+     "explication": "3 doublements : 64 × 2 × 2 × 2 = **512 transistors**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui distingue la machine analytique de la Pascaline ?",
+     "options": [
+      "Elle devait pouvoir être programmée pour des calculs variés",
+      "Elle utilisait des transistors à la place des roues dentées",
+      "Elle fonctionnait en binaire, avec des cartes de données",
+      "Elle a été construite et utilisée dès la fin du XIXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "La Pascaline ne sait qu’additionner.",
+     "explication": "La machine analytique de Babbage est **programmable** ; elle n’a cependant jamais été achevée."
+    }
+   ]
+  },
+  {
+   "chapitre": "909c8ea1-df1d-5ab5-bdcc-6cf7839c237c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Doubler, encore et encore",
+   "competence": "calculer",
+   "situation": "La loi de Moore observe que le nombre de transistors d’une puce double environ tous les deux ans. On part de la première puce d’un fabricant, en 1971 : 2 300 transistors.",
+   "documents": [
+    {
+     "id": "moore",
+     "type": "tableau",
+     "titre": "Transistors par puce (doublement tous les 2 ans)",
+     "colonnes": [
+      "Année",
+      "Transistors par puce"
+     ],
+     "lignes": [
+      [
+       1971,
+       "2 300"
+      ],
+      [
+       1973,
+       "4 600"
+      ],
+      [
+       1975,
+       "9 200"
+      ],
+      [
+       1977,
+       "?"
+      ],
+      [
+       1979,
+       "?"
+      ]
+     ],
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de transistors en 1977 ?",
+     "reponse": 18400,
+     "aide": "Doubles 9 200.",
+     "explication": "9 200 × 2 = **18 400 transistors**.",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de transistors en 1979 ?",
+     "reponse": 36800,
+     "aide": "Double la valeur de 1977.",
+     "explication": "18 400 × 2 = **36 800 transistors**.",
+     "tolerance": 1
+    },
+    {
+     "type": "zone",
+     "document": "moore",
+     "enonce": "Touche l’année où la puce compte 8 fois plus de transistors qu’en 1971.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "8 = 2 × 2 × 2 : trois doublements, donc six ans.",
+     "explication": "Trois doublements, soit 6 ans après 1971 : **1977**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le nombre de transistors est-il multiplié en 20 ans, soit 10 doublements ?",
+     "reponse": 1024,
+     "aide": "Calcule 2 multiplié 10 fois par lui-même.",
+     "explication": "2¹⁰ = **1 024**, soit environ mille fois plus en 20 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit-on de la loi de Moore ?",
+     "options": [
+      "C’est une observation empirique, qui a guidé l’industrie sans être une loi de la nature",
+      "C’est une loi physique démontrée, valable tant que l’électricité est disponible",
+      "C’est une règle juridique, imposée à tous les fabricants de puces du monde",
+      "C’est un théorème de Turing, valable pour toutes les machines à calculer"
+     ],
+     "reponse": 0,
+     "aide": "Une « loi » n’a pas ici le même sens qu’en physique.",
+     "explication": "La loi de Moore est une **observation** : elle a guidé l’industrie, mais ne s’impose pas comme une loi de la nature."
+    }
+   ]
+  },
+  {
+   "chapitre": "909c8ea1-df1d-5ab5-bdcc-6cf7839c237c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que la machine fait pour nous",
+   "competence": "raisonner",
+   "situation": "Léo compare ce qu’il fait avec ce que font les machines, puis s’interroge sur leurs limites.",
+   "documents": [
+    {
+     "id": "duree",
+     "type": "tableau",
+     "titre": "Humain contre machine",
+     "colonnes": [
+      "Tâche",
+      "Un humain",
+      "Une machine"
+     ],
+     "lignes": [
+      [
+       "Additionner 1 000 nombres",
+       "10 min (600 s)",
+       "0,001 s"
+      ],
+      [
+       "Chercher un mot dans 1 000 pages",
+       "1 h (3 600 s)",
+       "0,01 s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le journal de Léo",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Je ne connais plus par cœur le numéro de mon meilleur ami : mon téléphone s’en souvient.",
+      "Pour aller au stade, l’appli m’a guidé ; sans elle, je me perds.",
+      "Pour mon exposé, j’ai consulté en dix minutes plus de sources qu’en une semaine à la bibliothèque."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "duree",
+     "enonce": "Touche la durée de la machine pour chercher un mot dans 1 000 pages.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne « Chercher un mot », colonne « Une machine ».",
+     "explication": "La machine met **0,01 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la machine est-elle plus rapide que l’humain pour additionner 1 000 nombres ?",
+     "reponse": 600000,
+     "aide": "Divise 600 s par 0,001 s.",
+     "explication": "600 ÷ 0,001 = **600 000** (6 × 10⁵).",
+     "tolerance": 1000
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces situations du journal de Léo : la machine augmente-t-elle sa capacité, ou la remplace-t-elle ?",
+     "categories": [
+      "Capacité augmentée",
+      "Capacité déléguée"
+     ],
+     "items": [
+      [
+       "Consulter en quelques minutes plus de sources que dans une bibliothèque",
+       0
+      ],
+      [
+       "Croiser des millions de données en une nuit",
+       0
+      ],
+      [
+       "Retenir le numéro de son meilleur ami",
+       1
+      ],
+      [
+       "S’orienter seul dans une ville",
+       1
+      ]
+     ],
+     "aide": "Augmenter, c’est faire plus qu’on ne pourrait ; déléguer, c’est ne plus avoir à le faire.",
+     "explication": "L’**accès à l’information** et la **vitesse de calcul** sont augmentés ; la **mémorisation** et l’**orientation** sont souvent déléguées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une machine devient 1 000 fois plus rapide. Que devient l’ensemble des problèmes non calculables ?",
+     "options": [
+      "Il ne change pas : ces problèmes sont non calculables par nature, quelle que soit la vitesse",
+      "Il diminue fortement, car une machine plus rapide finit par résoudre aussi ces problèmes",
+      "Il disparaît à terme, dès que les transistors seront devenus assez petits et nombreux",
+      "Il dépend de la mémoire disponible, qu’on peut toujours agrandir avec des composants neufs"
+     ],
+     "reponse": 0,
+     "aide": "Turing a montré une limite théorique, pas technique.",
+     "explication": "Turing a établi que certains problèmes ne sont **pas calculables par nature** : aucun progrès matériel ne les repoussera."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a9daae4-f705-51c1-a64f-73ac4724a894",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le filtre anti-spam",
+   "competence": "analyser-document",
+   "situation": "Un filtre anti-spam n’a pas reçu de règles : on lui a montré des milliers de courriels déjà classés « utile » ou « indésirable ». On le teste ensuite sur de nouveaux courriels.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "exemples",
+       "texte": "Exemples déjà classés",
+       "emoji": "📚"
+      },
+      {
+       "id": "entrainement",
+       "texte": "Entraînement",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "parametres",
+       "texte": "Paramètres ajustés",
+       "emoji": "🎛️"
+      },
+      {
+       "id": "prediction",
+       "texte": "Décision sur un nouveau courriel",
+       "emoji": "✉️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "exemples",
+       "a": "entrainement"
+      },
+      {
+       "de": "entrainement",
+       "a": "parametres"
+      },
+      {
+       "de": "parametres",
+       "a": "prediction"
+      }
+     ]
+    },
+    {
+     "id": "test",
+     "type": "tableau",
+     "titre": "Test sur 2 000 nouveaux courriels",
+     "colonnes": [
+      "Résultat",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "Bien classés",
+       1940
+      ],
+      [
+       "Mal classés",
+       60
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche l’étape où la machine ajuste ses paramètres à partir des exemples.",
+     "reponse": [
+      "entrainement"
+     ],
+     "aide": "C’est le moment où le système apprend à partir des exemples.",
+     "explication": "C’est l’**entraînement** : les paramètres sont ajustés pour reproduire les classements des exemples."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’erreur du filtre sur ce test, en % ?",
+     "reponse": 3,
+     "aide": "Divise le nombre de courriels mal classés par 2 000, puis multiplie par 100.",
+     "explication": "60 ÷ 2 000 = 0,03, soit **3 %**.",
+     "unite": "%"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Un programme classique suit des ___ écrites par un humain ; un système d’apprentissage ajuste des ___ à partir d’___ .",
+     "reponses": [
+      [
+       "règles"
+      ],
+      [
+       "paramètres",
+       "parametres"
+      ],
+      [
+       "exemples"
+      ]
+     ],
+     "banque": [
+      "règles",
+      "paramètres",
+      "exemples",
+      "virus",
+      "sons"
+     ],
+     "aide": "Regarde le document : le filtre n’a pas reçu de règles.",
+     "explication": "Un programme suit des **règles** ; l’apprentissage ajuste des **paramètres** à partir d’**exemples**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce filtre n’a vu que des courriels en français. Que prévoir pour des courriels en japonais ?",
+     "options": [
+      "Il se trompera sans doute : il généralise à partir des données qu’on lui a montrées",
+      "Il les comprendra, car il a compris le sens des messages en français",
+      "Il se corrigera seul, car une machine apprend toujours par elle-même",
+      "Il classera tout correctement, car les règles anti-spam sont universelles"
+     ],
+     "reponse": 0,
+     "aide": "Un système d’IA ne comprend pas le sens : il généralise.",
+     "explication": "Un système d’IA ne « comprend » pas : il **généralise à partir des données** d’entraînement."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a9daae4-f705-51c1-a64f-73ac4724a894",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tri des candidatures",
+   "competence": "analyser-document",
+   "situation": "Une entreprise entraîne un logiciel à trier des candidatures à partir de ses anciens recrutements. Le logiciel apprend à reproduire les décisions passées.",
+   "documents": [
+    {
+     "id": "recrut",
+     "type": "tableau",
+     "titre": "Données d’entraînement",
+     "colonnes": [
+      "",
+      "Candidatures",
+      "Retenues",
+      "Taux de retenue (%)"
+     ],
+     "lignes": [
+      [
+       "Hommes",
+       800,
+       240,
+       "?"
+      ],
+      [
+       "Femmes",
+       200,
+       40,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recrut",
+     "enonce": "Touche le nombre de candidatures de femmes dans les données d’entraînement.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Femmes », colonne « Candidatures ».",
+     "explication": "Les données contiennent **200 candidatures** de femmes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de retenue des hommes, en % ?",
+     "reponse": 30,
+     "aide": "Divise 240 par 800, puis multiplie par 100.",
+     "explication": "240 ÷ 800 = **30 %**.",
+     "unite": "%"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de retenue des femmes, en % ?",
+     "reponse": 20,
+     "aide": "Divise 40 par 200, puis multiplie par 100.",
+     "explication": "40 ÷ 200 = **20 %**.",
+     "unite": "%"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le logiciel reproduit ces taux. Sur 500 nouvelles candidatures de femmes, combien en retient-il ?",
+     "reponse": 100,
+     "aide": "Calcule 20 % de 500.",
+     "explication": "500 × 0,20 = **100 candidatures**, alors qu’avec 30 % il y en aurait 150.",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "D’où vient le biais de ce logiciel ?",
+     "options": [
+      "Des données d’entraînement, qui reflètent des décisions passées inégales",
+      "Du langage de programmation, qui favorise certains profils de candidats",
+      "D’une intention du logiciel de défavoriser certaines candidates volontairement",
+      "De la puissance de calcul, trop faible pour traiter mille dossiers à la fois"
+     ],
+     "reponse": 0,
+     "aide": "Le logiciel reproduit ce qu’on lui a montré.",
+     "explication": "Le biais vient des **données**, pas d’une intention de la machine : le système reproduit et peut amplifier le passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a9daae4-f705-51c1-a64f-73ac4724a894",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un portique à l’essai",
+   "competence": "argumenter",
+   "situation": "Une ville teste un portique de reconnaissance faciale à l’entrée d’une gare. Il a été entraîné surtout avec des visages du groupe A. Son maire doit décider de l’étendre ou non.",
+   "documents": [
+    {
+     "id": "portique",
+     "type": "tableau",
+     "titre": "Résultats du test, par jour",
+     "colonnes": [
+      "Groupe",
+      "Passages par jour",
+      "Taux d’erreur"
+     ],
+     "lignes": [
+      [
+       "Groupe A",
+       8000,
+       "1 %"
+      ],
+      [
+       "Groupe B",
+       2000,
+       "6 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de la mairie",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le portique est entraîné à partir de photographies fournies par une base de données dont la majorité des visages appartient au groupe A."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’erreurs le portique commet-il par jour sur le groupe B ?",
+     "reponse": 120,
+     "aide": "Calcule 6 % de 2 000.",
+     "explication": "2 000 × 0,06 = **120 erreurs par jour**.",
+     "unite": "erreurs"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des erreurs du jour concerne le groupe B ? (le groupe A en commet 80)",
+     "reponse": 60,
+     "aide": "Additionne les erreurs des deux groupes, puis divise 120 par ce total.",
+     "explication": "120 ÷ (80 + 120) = **60 %** des erreurs, alors que le groupe B ne fait que 20 % des passages.",
+     "unite": "%"
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer cet écart entre les deux groupes ?",
+     "options": [
+      "Les données d’entraînement représentent mal le groupe B",
+      "Le portique a une préférence voulue pour le groupe A",
+      "Le groupe B se déplace plus vite devant le portique",
+      "La puissance de calcul change selon le groupe observé"
+     ],
+     "reponse": 0,
+     "aide": "Relis la note de la mairie.",
+     "explication": "Le biais vient des **données d’entraînement** peu représentatives du groupe B, pas d’une intention."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces affirmations : fait technique ou choix de société ?",
+     "categories": [
+      "Fait technique",
+      "Choix de société"
+     ],
+     "items": [
+      [
+       "Le taux d’erreur du groupe B est de 6 %",
+       0
+      ],
+      [
+       "Le portique a été entraîné surtout avec des visages du groupe A",
+       0
+      ],
+      [
+       "Il faut interdire ce portique dans les gares",
+       1
+      ],
+      [
+       "Un taux d’erreur de 1 % est acceptable pour interpeller quelqu’un",
+       1
+      ]
+     ],
+     "aide": "Un fait se mesure ; un choix relève de ce que la société accepte.",
+     "explication": "Les **taux** et l’**entraînement** sont des faits techniques ; **interdire** ou juger une erreur **acceptable** sont des choix de société."
+    }
+   ]
+  },
+  {
+   "chapitre": "e13a1e3c-740f-5aa8-b110-7e08ed9e1847",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les coléoptères et les oiseaux",
+   "competence": "analyser-document",
+   "situation": "Sur un sol brun vivent des coléoptères bruns et des coléoptères verts. Des oiseaux les chassent à vue. On compte les coléoptères avant et après leur passage.",
+   "documents": [
+    {
+     "id": "col",
+     "type": "tableau",
+     "titre": "Coléoptères sur le sol brun",
+     "colonnes": [
+      "",
+      "Bruns",
+      "Verts"
+     ],
+     "lignes": [
+      [
+       "Avant le passage des oiseaux",
+       800,
+       200
+      ],
+      [
+       "Après le passage des oiseaux",
+       720,
+       100
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "col",
+     "enonce": "Touche le nombre de coléoptères verts survivants.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Après le passage », colonne « Verts ».",
+     "explication": "Il reste **100 coléoptères verts**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des coléoptères verts survit ?",
+     "reponse": 50,
+     "aide": "Divise les verts après (100) par les verts avant (200).",
+     "explication": "100 ÷ 200 = **50 %**, contre 90 % pour les bruns (720 ÷ 800).",
+     "unite": "%"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après le passage, quelle part de la population les verts représentent-ils ? Arrondis à l’unité, en %.",
+     "reponse": 12,
+     "aide": "Divise 100 par le total des survivants (720 + 100).",
+     "explication": "100 ÷ 820 ≈ 0,12, soit **12 %** (contre 20 % avant).",
+     "unite": "%",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment interpréter ce résultat ?",
+     "options": [
+      "La proportion d’individus verts a baissé dans la population, par tri des oiseaux",
+      "Chaque coléoptère vert est devenu brun pour échapper aux oiseaux",
+      "Les oiseaux ont provoqué l’apparition de la couleur brune chez les coléoptères",
+      "Les coléoptères bruns ont mangé les verts pour garder leur territoire"
+     ],
+     "reponse": 0,
+     "aide": "Un individu ne change pas de couleur : c’est la population qui change.",
+     "explication": "La sélection agit sur la **fréquence** d’un caractère dans la population ; aucun individu ne change."
+    }
+   ]
+  },
+  {
+   "chapitre": "e13a1e3c-740f-5aa8-b110-7e08ed9e1847",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une culture qui résiste",
+   "competence": "raisonner",
+   "situation": "Dans une culture de 1 000 000 de bactéries, une sur 10 000 porte, par hasard, une mutation de résistance à un antibiotique. On ajoute l’antibiotique : seules les résistantes survivent, puis elles se multiplient (doublement à chaque génération).",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "tableau",
+     "titre": "Évolution de la culture",
+     "colonnes": [
+      "Étape",
+      "Bactéries au total",
+      "Bactéries résistantes"
+     ],
+     "lignes": [
+      [
+       "Avant l’antibiotique",
+       "1 000 000",
+       "?"
+      ],
+      [
+       "Juste après l’antibiotique",
+       "?",
+       "?"
+      ],
+      [
+       "Après 10 générations",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de bactéries résistantes compte la culture avant l’antibiotique ?",
+     "reponse": 100,
+     "aide": "Une sur 10 000 dans 1 000 000 : divise 1 000 000 par 10 000.",
+     "explication": "1 000 000 ÷ 10 000 = **100 bactéries résistantes**.",
+     "unite": "bactéries"
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes dans l’ordre.",
+     "items": [
+      "Une mutation de résistance apparaît par hasard chez quelques bactéries",
+      "On ajoute l’antibiotique",
+      "Les bactéries sensibles meurent",
+      "Les bactéries résistantes se multiplient"
+     ],
+     "aide": "La mutation précède l’antibiotique.",
+     "explication": "La **mutation précède** la pression : l’antibiotique **trie** et les résistantes **se multiplient**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bactéries résistantes après 10 générations, sachant qu’elles sont 100 juste après l’antibiotique ?",
+     "reponse": 102400,
+     "aide": "Multiplie 100 par 2, dix fois de suite : 100 × 2¹⁰.",
+     "explication": "100 × 1 024 = **102 400 bactéries résistantes**.",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "La mutation de résistance existait déjà avant l’antibiotique, qui n’a fait que trier les bactéries",
+      "L’antibiotique a provoqué la mutation de résistance chez les bactéries qui y ont été exposées",
+      "Les bactéries se sont adaptées chacune pour survivre à l’antibiotique pendant l’exposition",
+      "Les bactéries sensibles sont devenues résistantes après quelques heures d’exposition seulement"
+     ],
+     "reponse": 0,
+     "aide": "Au départ, 100 bactéries étaient déjà résistantes.",
+     "explication": "La mutation est **aléatoire** et **précède** l’antibiotique, qui sélectionne les bactéries déjà résistantes."
+    }
+   ]
+  },
+  {
+   "chapitre": "e13a1e3c-740f-5aa8-b110-7e08ed9e1847",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Hasard ou avantage ?",
+   "competence": "analyser-document",
+   "situation": "Trois populations portent un même allèle au départ, présent chez la moitié des individus. Dans deux d’entre elles, il ne procure aucun avantage ; dans la troisième, il facilite la reproduction.",
+   "documents": [
+    {
+     "id": "allele",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fréquence de l’allèle au fil des générations",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Petite population (20 individus), allèle neutre",
+       "valeurs": [
+        50,
+        35,
+        45,
+        20,
+        10,
+        0
+       ],
+       "teinte": "encre"
+      },
+      {
+       "nom": "Grande population (2 000), allèle neutre",
+       "valeurs": [
+        50,
+        49,
+        51,
+        50,
+        49,
+        50
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Grande population (2 000), allèle avantageux",
+       "valeurs": [
+        50,
+        58,
+        67,
+        77,
+        86,
+        93
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Individus porteurs",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Génération"
+     },
+     "source": "Allure simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "allele",
+     "enonce": "Touche la génération où l’allèle a disparu de la petite population.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche où la première série atteint 0 %.",
+     "explication": "L’allèle a disparu à la **génération 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la fréquence de l’allèle avantageux a-t-elle augmenté en 5 générations ?",
+     "reponse": 43,
+     "aide": "Soustrais la valeur de départ (50) à celle de la génération 5.",
+     "explication": "93 − 50 = **43 points**.",
+     "unite": "points"
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’allèle disparaît-il de la petite population ?",
+     "options": [
+      "Par le hasard de l’échantillonnage : peu de parents transmettent leurs allèles à chaque génération",
+      "Par sélection naturelle : l’allèle désavantage ceux qui le portent et les élimine",
+      "Par décision des porteurs de ne plus se reproduire dans un milieu devenu trop limité",
+      "Par mutation de l’allèle en un autre allèle mieux adapté à la petite population"
+     ],
+     "reponse": 0,
+     "aide": "L’allèle est neutre : il ne désavantage personne.",
+     "explication": "C’est la **dérive génétique** : le hasard de l’échantillonnage, d’autant plus fort que la population est petite."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces affirmations : dérive génétique ou sélection naturelle ?",
+     "categories": [
+      "Dérive génétique",
+      "Sélection naturelle"
+     ],
+     "items": [
+      [
+       "Un allèle peut disparaître sans désavantage",
+       0
+      ],
+      [
+       "Les effets sont les plus nets dans une petite population",
+       0
+      ],
+      [
+       "Un allèle avantageux devient plus fréquent",
+       1
+      ],
+      [
+       "Le moteur est l’avantage reproductif",
+       1
+      ]
+     ],
+     "aide": "L’un est un effet du hasard, l’autre d’un avantage.",
+     "explication": "La **dérive** relève du hasard et frappe les petites populations ; la **sélection** repose sur un **avantage reproductif**."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ffe19b-b878-5111-b0f4-c0298d22ac27",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur la piste des fossiles",
+   "competence": "lire-tableau",
+   "situation": "Les fossiles racontent l’histoire de notre lignée. Le tableau en rassemble quelques-uns (âges arrondis, en millions d’années, notés Ma).",
+   "documents": [
+    {
+     "id": "fossiles",
+     "type": "tableau",
+     "titre": "Quelques repères fossiles",
+     "colonnes": [
+      "Fossile ou espèce",
+      "Âge (Ma)",
+      "Lieu"
+     ],
+     "lignes": [
+      [
+       "Toumaï",
+       7,
+       "Tchad"
+      ],
+      [
+       "Lucy",
+       3.2,
+       "Éthiopie"
+      ],
+      [
+       "Homo habilis",
+       2.4,
+       "Afrique de l’Est"
+      ],
+      [
+       "Homo erectus",
+       1.9,
+       "Afrique, puis Asie et Europe"
+      ],
+      [
+       "Homo sapiens",
+       0.3,
+       "Jebel Irhoud (Maroc)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fossiles",
+     "enonce": "Touche le lieu de découverte de Lucy.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Lucy », colonne « Lieu ».",
+     "explication": "Lucy a été découverte en **Éthiopie**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’années séparent Lucy d’Homo erectus ?",
+     "reponse": 1.3,
+     "aide": "Soustrais les deux âges : 3,2 − 1,9.",
+     "explication": "3,2 − 1,9 = **1,3 million d’années**.",
+     "unite": "Ma",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Homo sapiens a 0,3 Ma. Exprime cet âge en années.",
+     "reponse": 300000,
+     "aide": "0,3 million = 0,3 × 1 000 000.",
+     "explication": "0,3 × 1 000 000 = **300 000 ans**.",
+     "unite": "ans",
+     "tolerance": 1000
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fossile ou espèce à son apport.",
+     "paires": [
+      [
+       "Toumaï",
+       "Proche de la séparation des lignées de l’humain et du chimpanzé"
+      ],
+      [
+       "Lucy",
+       "Bipède, mais encore bonne grimpeuse"
+      ],
+      [
+       "Homo habilis",
+       "Premiers outils taillés"
+      ],
+      [
+       "Homo erectus",
+       "Premier à sortir d’Afrique"
+      ]
+     ],
+     "aide": "Chaque espèce apporte un repère différent : ancêtre commun, bipédie, outils, sortie d’Afrique.",
+     "explication": "**Toumaï** est proche de la séparation des lignées, **Lucy** est bipède, **Homo habilis** taille des outils, **Homo erectus** sort d’Afrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ffe19b-b878-5111-b0f4-c0298d22ac27",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un gros cerveau, et alors ?",
+   "competence": "lire-graphique",
+   "situation": "Le volume du crâne est un indice de la taille du cerveau. Le graphique donne les valeurs moyennes arrondies de plusieurs espèces de la lignée humaine.",
+   "documents": [
+    {
+     "id": "crane",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Volume crânien moyen",
+     "categories": [
+      "Australopithèque",
+      "H. habilis",
+      "H. erectus",
+      "Néandertal",
+      "H. sapiens"
+     ],
+     "series": [
+      {
+       "nom": "Volume",
+       "valeurs": [
+        400,
+        600,
+        900,
+        1500,
+        1350
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume crânien",
+      "unite": "cm³",
+      "min": 0,
+      "max": 1600,
+      "pas": 400
+     },
+     "valeurs": false,
+     "source": "Valeurs moyennes arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crane",
+     "enonce": "Touche l’espèce qui a le plus grand volume crânien moyen.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute, sans supposer qu’il s’agit de nous.",
+     "explication": "C’est **Néandertal** (environ 1 500 cm³), devant *Homo sapiens*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le volume crânien d’Homo sapiens dépasse-t-il celui de l’australopithèque ? Arrondis au dixième.",
+     "reponse": 3.4,
+     "aide": "Divise 1 350 par 400.",
+     "explication": "1 350 ÷ 400 ≈ **3,4**.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % le volume crânien d’Homo erectus dépasse-t-il celui d’Homo habilis ?",
+     "reponse": 50,
+     "aide": "Calcule l’écart (900 − 600), puis divise-le par 600.",
+     "explication": "(900 − 600) ÷ 600 = 0,5, soit **50 %**.",
+     "unite": "%"
+    },
+    {
+     "type": "choix",
+     "enonce": "Néandertal a un crâne plus grand que *Homo sapiens*. Que conclure ?",
+     "options": [
+      "Le volume crânien ne suffit pas à classer les espèces : la lignée est un buisson, pas une échelle",
+      "Néandertal est l’ancêtre direct d’Homo sapiens, puisque son crâne est plus grand",
+      "Homo sapiens est moins évolué que Néandertal, puisque son crâne est plus petit",
+      "Les mesures de Néandertal sont forcément fausses, car les fossiles se déforment toujours"
+     ],
+     "reponse": 0,
+     "aide": "Une lignée n’est pas une marche vers un crâne toujours plus gros.",
+     "explication": "La lignée humaine est un **buisson** : des espèces coexistent, et le volume seul ne les range pas en échelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ffe19b-b878-5111-b0f4-c0298d22ac27",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rencontres avec Néandertal",
+   "competence": "raisonner",
+   "situation": "L’ADN ancien a révélé que Néandertal et Homo sapiens se sont croisés. La frise situe les deux espèces ; le tableau donne la part d’ADN néandertalien chez les humains actuels (valeurs arrondies).",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux espèces de la même époque",
+     "debut": -450000,
+     "fin": 0,
+     "pas": 50000,
+     "periodes": [
+      {
+       "id": "neand",
+       "debut": -400000,
+       "fin": -40000,
+       "nom": "Néandertal",
+       "teinte": "brun"
+      },
+      {
+       "id": "sapiens",
+       "debut": -300000,
+       "fin": 0,
+       "nom": "Homo sapiens",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "irhoud",
+       "date": -300000,
+       "nom": "Jebel Irhoud"
+      },
+      {
+       "id": "fin",
+       "date": -40000,
+       "nom": "Fin de Néandertal"
+      }
+     ],
+     "source": "Dates arrondies, en années avant J.-C."
+    },
+    {
+     "id": "adn",
+     "type": "tableau",
+     "titre": "Part d’ADN néandertalien",
+     "colonnes": [
+      "Population actuelle",
+      "Part d’ADN néandertalien"
+     ],
+     "lignes": [
+      [
+       "Africains subsahariens",
+       "presque 0 %"
+      ],
+      [
+       "Européens",
+       "1 à 3 %"
+      ],
+      [
+       "Asiatiques",
+       "1 à 3 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Néandertal et Homo sapiens ont-ils coexisté ?",
+     "reponse": 260000,
+     "aide": "Compte de l’apparition d’Homo sapiens à la disparition de Néandertal.",
+     "explication": "De −300 000 à −40 000 : **260 000 ans** de coexistence.",
+     "unite": "ans",
+     "tolerance": 5000
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui marque la plus ancienne trace connue d’Homo sapiens.",
+     "reponse": [
+      "irhoud"
+     ],
+     "aide": "Les fossiles de ce site marocain ont environ 300 000 ans.",
+     "explication": "Les fossiles de **Jebel Irhoud** (Maroc) sont les plus anciens connus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un génome humain compte environ 3 milliards de paires de bases. À 2 % d’origine néandertalienne, combien de paires cela fait-il, en millions ?",
+     "reponse": 60,
+     "aide": "Calcule 2 % de 3 000 millions.",
+     "explication": "3 000 × 0,02 = **60 millions** de paires de bases.",
+     "unite": "millions",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les Africains actuels portent-ils presque 0 % d’ADN néandertalien ?",
+     "options": [
+      "Les croisements ont eu lieu hors d’Afrique, là où vivait Néandertal, après l’essaimage de sapiens",
+      "Homo sapiens est apparu trop tard pour avoir jamais rencontré Néandertal, qui était éteint depuis des millénaires",
+      "Les Africains descendent d’une autre lignée que tous les autres humains actuellement vivants sur Terre",
+      "L’ADN néandertalien se conserve mal dans les populations qui vivent sous des climats chauds"
+     ],
+     "reponse": 0,
+     "aide": "Où vivait Néandertal ? Où est apparu Homo sapiens ?",
+     "explication": "Homo sapiens est d’origine **africaine** ; il a rencontré Néandertal **hors d’Afrique**, d’où le 1 à 3 % chez les non-Africains."
+    }
+   ]
+  }
+ ]
+}

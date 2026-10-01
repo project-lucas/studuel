@@ -126,11 +126,18 @@ export function Texte({ doc, zones, portee }: { doc: DocTexte; zones?: ZonesDoc;
   }
 
   const numeroter = doc.blocs.length > 1 && doc.genre !== 'consigne'
+  const retrait = (texte: string) => texte.match(/^ */)?.[0].length ?? 0
   return (
     <div className={cn(s.texte, doc.genre === 'lettre' && 'font-[Georgia,serif]')}>
       {doc.blocs.map((b, i) =>
         garde(i) ? (
-          <div key={i} className={numeroter ? s.paragraphe : 'mb-2 last:mb-0'}>
+          <div
+            key={i}
+            className={numeroter ? s.paragraphe : 'mb-2 last:mb-0'}
+            // Un programme (genre « consigne ») garde son indentation : les espaces de
+            // tête deviennent un retrait, sinon le corps d'un « si » s'alignait sur le « si ».
+            style={doc.genre === 'consigne' ? { paddingLeft: `${retrait(texteDuBloc(b)) * 0.5}em` } : undefined}
+          >
             {numeroter ? (
               <span className={s.repere} aria-hidden="true">
                 {i + 1}

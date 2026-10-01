@@ -1,0 +1,4124 @@
+{
+  "niveau": "5e",
+  "matiere": "svt",
+  "exercices": [
+    {
+      "chapitre": "b8e3138b-fa4b-5f65-ab81-9eeef42fd6b8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quand deux plaques se rencontrent",
+      "competence": "observer-schema",
+      "situation": "Sur ces schémas vus de dessus, deux plaques voisines (en brun) se déplacent. Les flèches montrent le sens de leur mouvement et chaque lettre repère une façon de se rencontrer.",
+      "documents": [
+        {
+          "id": "rencontres",
+          "type": "schema",
+          "titre": "Trois rencontres entre deux plaques (vues de dessus)",
+          "largeur": 340,
+          "hauteur": 215,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 26,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 190,
+              "y": 26,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                130,
+                18
+              ],
+              "a": [
+                70,
+                18
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                18
+              ],
+              "a": [
+                270,
+                18
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 96,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 190,
+              "y": 96,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                88
+              ],
+              "a": [
+                130,
+                88
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                270,
+                88
+              ],
+              "a": [
+                210,
+                88
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 166,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 190,
+              "y": 166,
+              "l": 100,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100,
+                186
+              ],
+              "a": [
+                100,
+                170
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                170
+              ],
+              "a": [
+                240,
+                186
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 24,
+              "cy": 38,
+              "r": 11,
+              "texte": "A",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 24,
+              "cy": 108,
+              "r": 11,
+              "texte": "B",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 24,
+              "cy": 178,
+              "r": 11,
+              "texte": "C",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "c",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rencontres",
+          "enonce": "Touche la lettre du schéma où les deux plaques s’écartent.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Regarde le sens des flèches : elles partent chacune de leur côté.",
+          "explication": "Sur le schéma **A**, les flèches s’éloignent l’une de l’autre : la frontière est **divergente**."
+        },
+        {
+          "type": "zone",
+          "document": "rencontres",
+          "enonce": "Touche la lettre du schéma où les deux plaques glissent l’une contre l’autre.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche les flèches qui vont dans des sens opposés, mais le long de la frontière.",
+          "explication": "Sur le schéma **C**, une plaque monte et l’autre descend le long de la frontière : elles **coulissent**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre du schéma au nom de la frontière.",
+          "paires": [
+            [
+              "A",
+              "Frontière divergente"
+            ],
+            [
+              "B",
+              "Frontière convergente"
+            ],
+            [
+              "C",
+              "Frontière coulissante"
+            ]
+          ],
+          "aide": "Divergent : on s’écarte. Convergent : on se rapproche. Coulissant : on glisse.",
+          "explication": "**A** : les plaques s’écartent (divergente) ; **B** : elles se rapprochent (convergente) ; **C** : elles glissent (coulissante)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une plaque avance de 3 cm par an. Quelle distance parcourt-elle en 1 million d’années, en kilomètres ?",
+          "reponse": 30,
+          "unite": "km",
+          "aide": "1 million d’années × 3 cm = 3 millions de cm ; 100 000 cm font 1 km.",
+          "explication": "3 × 1 000 000 = 3 000 000 cm, soit **30 km** : un mouvement lent, mais qui s’additionne sur des millions d’années."
+        }
+      ]
+    },
+    {
+      "chapitre": "b8e3138b-fa4b-5f65-ab81-9eeef42fd6b8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’âge du plancher océanique",
+      "competence": "lire-graphique",
+      "situation": "Des chercheurs datent les roches du fond de l’océan le long d’une ligne qui part d’une dorsale (0 km) et s’en éloigne. Les âges sont arrondis et imaginés pour l’exercice.",
+      "documents": [
+        {
+          "id": "plancher",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Âge des roches du fond de l’océan",
+          "categories": [
+            "0 km",
+            "100 km",
+            "200 km",
+            "300 km",
+            "400 km"
+          ],
+          "series": [
+            {
+              "nom": "Âge",
+              "valeurs": [
+                0,
+                5,
+                10,
+                15,
+                20
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Âge des roches",
+            "unite": "en millions d’années",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Distance à la dorsale"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plancher",
+          "enonce": "Touche la barre qui correspond à des roches de 10 millions d’années.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Lis l’axe vertical : cherche la graduation 10.",
+          "explication": "À 200 km de la dorsale, les roches ont **10 millions d’années**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre la dorsale et le forage situé à 100 km, le plancher s’est éloigné de 100 km en 5 millions d’années. À quelle vitesse, en cm par an ?",
+          "reponse": 2,
+          "unite": "cm/an",
+          "aide": "100 km = 10 000 000 cm. Divise par 5 000 000 années.",
+          "explication": "10 000 000 cm ÷ 5 000 000 ans = **2 cm par an**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un forage est fait à 250 km de la dorsale. Quel âge attend-on pour les roches, en millions d’années ?",
+          "reponse": 12.5,
+          "unite": "millions d’ans",
+          "aide": "L’âge augmente de la même quantité tous les 100 km : regarde de combien.",
+          "explication": "Tous les 100 km, l’âge augmente de 5 millions d’années : à 250 km, **12,5 millions d’années**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce graphique ?",
+          "options": [
+            "Les roches sont d’autant plus anciennes qu’elles sont loin de la dorsale, où la lithosphère naît",
+            "Les roches les plus anciennes se trouvent sur la dorsale, là où la lithosphère s’enfonce",
+            "L’âge des roches ne dépend pas de la distance à la dorsale, il est à peu près le même partout",
+            "Les plaques se rapprochent de la dorsale en vieillissant, puis s’y enfoncent sous le manteau"
+          ],
+          "reponse": 0,
+          "aide": "Regarde où se trouvent les roches les plus jeunes.",
+          "explication": "Plus on s’éloigne de la dorsale, plus les roches sont **anciennes** : la lithosphère neuve naît à la dorsale puis s’écarte de chaque côté."
+        }
+      ]
+    },
+    {
+      "chapitre": "b8e3138b-fa4b-5f65-ab81-9eeef42fd6b8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Des séismes qui descendent",
+      "competence": "analyser-document",
+      "situation": "Au large d’un pays imaginaire, une plaque océanique plonge sous une plaque continentale. Des sismologues relèvent les foyers de séismes selon leur distance à la fosse (valeurs arrondies, imaginées pour l’exercice).",
+      "documents": [
+        {
+          "id": "fosse",
+          "type": "schema",
+          "titre": "Coupe d’une zone de subduction",
+          "largeur": 340,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  20,
+                  56
+                ],
+                [
+                  168,
+                  56
+                ],
+                [
+                  300,
+                  150
+                ],
+                [
+                  284,
+                  168
+                ],
+                [
+                  154,
+                  76
+                ],
+                [
+                  20,
+                  76
+                ]
+              ],
+              "teinte": "turquoise",
+              "motif": "clair",
+              "id": "plongeante",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  168,
+                  56
+                ],
+                [
+                  322,
+                  56
+                ],
+                [
+                  322,
+                  120
+                ],
+                [
+                  240,
+                  107
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "chevauchante",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  262,
+                  56
+                ],
+                [
+                  280,
+                  30
+                ],
+                [
+                  298,
+                  56
+                ]
+              ],
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "volcan",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 46,
+              "texte": "Océan",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 240,
+              "y": 88,
+              "texte": "Continent",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 140,
+              "texte": "Manteau",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "foyers",
+          "type": "tableau",
+          "titre": "Les foyers de quatre séismes",
+          "colonnes": [
+            "Séisme",
+            "Distance à la fosse (km)",
+            "Profondeur du foyer (km)"
+          ],
+          "lignes": [
+            [
+              "1",
+              50,
+              25
+            ],
+            [
+              "2",
+              100,
+              50
+            ],
+            [
+              "3",
+              200,
+              100
+            ],
+            [
+              "4",
+              300,
+              150
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fosse",
+          "enonce": "Touche la plaque qui plonge sous l’autre.",
+          "reponse": [
+            "plongeante"
+          ],
+          "aide": "C’est celle qui s’enfonce dans le manteau.",
+          "explication": "La plaque **océanique** plonge sous la plaque continentale : c’est la subduction."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un séisme a son foyer à 250 km de la fosse. À quelle profondeur attend-on ce foyer, en km ?",
+          "reponse": 125,
+          "unite": "km",
+          "aide": "Compare les lignes du tableau : la profondeur est toujours la moitié de la distance.",
+          "explication": "La profondeur vaut la moitié de la distance à la fosse : 250 ÷ 2 = **125 km**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’alignement des foyers dans le tableau ?",
+          "options": [
+            "Les foyers sont de plus en plus profonds : ils dessinent la plaque qui s’enfonce",
+            "La plaque reste à la surface : tous les foyers sont à la même profondeur faible",
+            "Les foyers sont répartis au hasard : aucune organisation n’apparaît dans le tableau",
+            "Les plaques s’écartent à la fosse : les foyers s’éloignent les uns des autres"
+          ],
+          "reponse": 0,
+          "aide": "Regarde comment la profondeur change quand on s’éloigne de la fosse.",
+          "explication": "Plus on s’éloigne de la fosse, plus les foyers sont profonds : ils marquent la **plaque qui plonge**."
+        },
+        {
+          "type": "zone",
+          "document": "fosse",
+          "enonce": "Touche l’endroit où l’on s’attend à un volcan explosif.",
+          "reponse": [
+            "volcan"
+          ],
+          "aide": "Les volcans des zones de subduction sont sur la plaque qui chevauche.",
+          "explication": "Au-dessus de la plaque qui plonge, sur la plaque continentale, on trouve un **volcanisme explosif**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fc5fdde9-dde6-5bb7-a803-74c73e84ff8f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sous l’épicentre",
+      "competence": "observer-schema",
+      "situation": "Un séisme se produit en profondeur, le long d’une faille. Sur cette coupe du sol, deux points sont marqués : l’un en profondeur, l’autre en surface.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "Un séisme vu en coupe",
+          "largeur": 340,
+          "hauteur": 210,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 70,
+              "l": 300,
+              "h": 120,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                140,
+                70
+              ],
+              "a": [
+                200,
+                190
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                79
+              ],
+              "a": [
+                170,
+                121
+              ],
+              "teinte": "encre",
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 130,
+              "r": 9,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "foyer",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 70,
+              "r": 9,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "epi",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 90,
+              "y": 54,
+              "emoji": "🏠",
+              "taille": 24
+            },
+            {
+              "forme": "emoji",
+              "x": 250,
+              "y": 54,
+              "emoji": "🏠",
+              "taille": 24
+            },
+            {
+              "forme": "texte",
+              "x": 300,
+              "y": 92,
+              "texte": "Surface du sol",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 218,
+              "y": 184,
+              "texte": "Faille",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche le foyer du séisme.",
+          "reponse": [
+            "foyer"
+          ],
+          "aide": "C’est le point de rupture, en profondeur, sur la faille.",
+          "explication": "Le **foyer** est le point où les roches cassent, en profondeur."
+        },
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche l’épicentre du séisme.",
+          "reponse": [
+            "epi"
+          ],
+          "aide": "C’est le point de la surface situé juste au-dessus du foyer.",
+          "explication": "L’**épicentre** est à la verticale du foyer, en surface."
+        },
+        {
+          "type": "choix",
+          "enonce": "Où les dégâts sont-ils en général les plus importants ?",
+          "options": [
+            "Près de l’épicentre",
+            "Loin de l’épicentre",
+            "Au niveau du foyer, sous terre",
+            "Là où il n’y a aucune maison"
+          ],
+          "reponse": 0,
+          "aide": "Pense au point de la surface le plus proche de la rupture.",
+          "explication": "Les dégâts sont en général maximaux **à l’épicentre**, le point de surface le plus proche du foyer."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes qui mènent à un séisme.",
+          "items": [
+            "Les mouvements des plaques déforment les roches",
+            "Les roches accumulent de l’énergie élastique",
+            "La contrainte dépasse la résistance : les roches cassent",
+            "L’énergie part d’un coup sous forme d’ondes sismiques"
+          ],
+          "aide": "Pense à un bâton qu’on plie de plus en plus avant qu’il casse.",
+          "explication": "Les roches se déforment, stockent de l’énergie, **cassent**, puis l’énergie se libère en ondes sismiques."
+        }
+      ]
+    },
+    {
+      "chapitre": "fc5fdde9-dde6-5bb7-a803-74c73e84ff8f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux séismes, deux bilans",
+      "competence": "analyser-document",
+      "situation": "Deux séismes imaginés frappent deux régions différentes. Compare leurs caractéristiques et leurs bilans.",
+      "documents": [
+        {
+          "id": "bilans",
+          "type": "tableau",
+          "titre": "Deux séismes comparés",
+          "colonnes": [
+            "Mesure",
+            "Séisme A",
+            "Séisme B"
+          ],
+          "lignes": [
+            [
+              "Magnitude",
+              "6,0",
+              "7,0"
+            ],
+            [
+              "Normes parasismiques",
+              "Non",
+              "Oui"
+            ],
+            [
+              "Habitants au km²",
+              900,
+              150
+            ],
+            [
+              "Victimes",
+              1200,
+              15
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "bilans",
+          "enonce": "Touche la magnitude du séisme qui a libéré le plus d’énergie.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "La magnitude mesure l’énergie libérée : cherche la plus grande valeur.",
+          "explication": "Le séisme B a la magnitude la plus forte (**7,0**) : il a libéré le plus d’énergie."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Environ combien de fois l’énergie libérée par B dépasse-t-elle celle de A ? (Une magnitude de plus, c’est environ 30 fois plus d’énergie.)",
+          "reponse": 30,
+          "unite": "fois",
+          "aide": "Combien de points de magnitude séparent A et B ?",
+          "explication": "7,0 − 6,0 = 1 point de magnitude : B libère environ **30 fois** plus d’énergie que A."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi A a-t-il fait beaucoup plus de victimes alors qu’il est moins puissant ?",
+          "options": [
+            "Ses constructions fragiles et sa population dense rendent la région plus vulnérable",
+            "Sa magnitude est plus élevée que celle de B, donc il libère bien plus d’énergie",
+            "Un séisme faible est toujours plus meurtrier qu’un séisme fort, quelle que soit la région",
+            "Il n’a pas eu de foyer : l’énergie s’est libérée directement à la surface du sol"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les deux lignes du tableau sur les normes et sur la densité.",
+          "explication": "Sans normes parasismiques et avec 900 habitants/km², la **vulnérabilité** de A est forte : le risque dépend de l’aléa ET de la vulnérabilité."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque élément : est-ce de l’aléa (on ne peut pas agir) ou de la vulnérabilité (on peut agir) ?",
+          "categories": [
+            "Aléa",
+            "Vulnérabilité"
+          ],
+          "items": [
+            [
+              "La position de la faille",
+              0
+            ],
+            [
+              "Construire selon les normes parasismiques",
+              1
+            ],
+            [
+              "La fréquence des séismes dans la région",
+              0
+            ],
+            [
+              "Apprendre les bons réflexes à l’école",
+              1
+            ],
+            [
+              "Éloigner les constructions fragiles de la faille",
+              1
+            ]
+          ],
+          "aide": "L’aléa, c’est la nature : on n’y peut rien. La vulnérabilité dépend de ce que les humains construisent et préparent.",
+          "explication": "La faille et la fréquence des séismes relèvent de l’**aléa**. Les normes, les réflexes et les choix de construction réduisent la **vulnérabilité**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fc5fdde9-dde6-5bb7-a803-74c73e84ff8f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un séisme sous la mer",
+      "competence": "analyser-document",
+      "situation": "Un séisme sous-marin imaginé secoue le fond de l’océan au large d’une côte. Un tsunami se forme : en eau profonde, la vague avance à environ 720 km/h, soit 12 km par minute.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Alerte au large",
+          "source": "Article imaginé pour l’exercice",
+          "blocs": [
+            "À 9 h 00, un séisme de magnitude 7,5 a secoué le fond de l’océan, à [[d|360]] km de la côte.",
+            "Le mouvement brutal du sol a déplacé toute la colonne d’eau : un tsunami s’est formé. Les autorités ont déclenché l’alerte à 9 h 05, après l’enregistrement des secousses par les sismographes.",
+            "Dans le port de Marbelle, les sirènes ont retenti et les habitants ont rejoint les hauteurs."
+          ]
+        },
+        {
+          "id": "villes",
+          "type": "tableau",
+          "titre": "Distance des villes au séisme",
+          "colonnes": [
+            "Ville",
+            "Distance au séisme (km)"
+          ],
+          "lignes": [
+            [
+              "Marbelle",
+              360
+            ],
+            [
+              "Port-Aven",
+              180
+            ],
+            [
+              "Cap-Sud",
+              720
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche dans l’article le nombre qui donne la distance entre le séisme et la côte.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "C’est un nombre suivi de « km ».",
+          "explication": "Le séisme s’est produit à **360 km** de la côte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes la vague met-elle pour atteindre Marbelle ?",
+          "reponse": 30,
+          "unite": "minutes",
+          "aide": "La vague fait 12 km par minute : divise la distance par 12.",
+          "explication": "360 ÷ 12 = **30 minutes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La vague part à 9 h 00. Combien de minutes les habitants de Port-Aven ont-ils entre l’alerte (9 h 05) et l’arrivée de la vague ?",
+          "reponse": 10,
+          "unite": "minutes",
+          "aide": "Calcule d’abord le temps de trajet pour 180 km, puis retire les 5 minutes avant l’alerte.",
+          "explication": "180 ÷ 12 = 15 minutes de trajet, donc arrivée à 9 h 15. Entre 9 h 05 et 9 h 15 : **10 minutes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il faire dès que l’alerte tsunami est donnée ?",
+          "options": [
+            "Rejoindre immédiatement les hauteurs",
+            "Aller sur la plage regarder la mer",
+            "Attendre que la mer se retire complètement",
+            "Rester dans le port pour protéger son bateau"
+          ],
+          "reponse": 0,
+          "aide": "La vague arrive en quelques dizaines de minutes : il faut monter.",
+          "explication": "Il faut **rejoindre les hauteurs** sans attendre : chaque minute compte."
+        },
+        {
+          "type": "choix",
+          "enonce": "On ne sait pas prédire un séisme. Pourquoi une alerte tsunami est-elle pourtant possible ?",
+          "options": [
+            "Parce que la vague met du temps à arriver : on détecte le séisme avant elle",
+            "Parce qu’on connaît à l’avance la date des séismes grâce aux sismomètres côtiers",
+            "Parce que le tsunami arrive sur les côtes avant les ondes sismiques qui le signalent",
+            "Parce que les séismes sous-marins ne font jamais de vague dangereuse, par principe"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’heure du séisme, l’heure de l’alerte et l’heure d’arrivée de la vague.",
+          "explication": "L’alerte ne **prédit** pas le séisme : elle profite du délai entre le séisme, détecté tout de suite, et l’arrivée de la vague."
+        }
+      ]
+    },
+    {
+      "chapitre": "d18ce9c8-8030-5dfe-ab76-fe9bdabc96eb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Dans le ventre du volcan",
+      "competence": "observer-schema",
+      "situation": "Le magma se forme en profondeur, s’accumule, puis remonte jusqu’à la surface. Voici la coupe d’un volcan : trois parties sont à repérer.",
+      "documents": [
+        {
+          "id": "volcan",
+          "type": "schema",
+          "titre": "Coupe d’un volcan",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  50,
+                  190
+                ],
+                [
+                  135,
+                  60
+                ],
+                [
+                  185,
+                  60
+                ],
+                [
+                  270,
+                  190
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 190,
+              "l": 300,
+              "h": 50,
+              "teinte": "sable",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 152,
+              "y": 62,
+              "l": 16,
+              "h": 135,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "cheminee",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 215,
+              "rx": 60,
+              "ry": 18,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "reservoir",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 60,
+              "rx": 26,
+              "ry": 7,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "cratere",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "volcan",
+          "enonce": "Touche le réservoir où le magma s’accumule.",
+          "reponse": [
+            "reservoir"
+          ],
+          "aide": "Il est tout en bas, sous le volcan.",
+          "explication": "Le magma s’accumule d’abord dans le **réservoir**, en profondeur."
+        },
+        {
+          "type": "zone",
+          "document": "volcan",
+          "enonce": "Touche le cratère, par où le magma sort.",
+          "reponse": [
+            "cratere"
+          ],
+          "aide": "C’est l’ouverture tout en haut du cône.",
+          "explication": "Le magma sort en surface par le **cratère**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range le trajet du magma, du plus profond à la surface.",
+          "items": [
+            "Le réservoir",
+            "La cheminée",
+            "Le cratère"
+          ],
+          "aide": "Le magma monte du bas vers le haut.",
+          "explication": "Le magma s’accumule dans le **réservoir**, remonte par la **cheminée**, puis sort par le **cratère**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment appelle-t-on le magma une fois sorti en surface ?",
+          "options": [
+            "La lave",
+            "La cendre",
+            "Le gaz",
+            "La nuée ardente"
+          ],
+          "reponse": 0,
+          "aide": "Le nom change quand la roche fondue est à l’air libre.",
+          "explication": "Une fois en surface, le magma s’appelle la **lave**."
+        }
+      ]
+    },
+    {
+      "chapitre": "d18ce9c8-8030-5dfe-ab76-fe9bdabc96eb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux magmas, deux éruptions",
+      "competence": "lire-graphique",
+      "situation": "Un magma pauvre en silice est fluide et fait plutôt des coulées. Un magma riche en silice est visqueux : les gaz restent bloqués et l’éruption est explosive. Voici la teneur en silice du magma de quatre volcans.",
+      "documents": [
+        {
+          "id": "silice",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Silice dans le magma de quatre volcans",
+          "categories": [
+            "Piton de la Fournaise",
+            "Kilauea (Hawaï)",
+            "Merapi",
+            "Montagne Pelée"
+          ],
+          "series": [
+            {
+              "nom": "Silice",
+              "valeurs": [
+                49,
+                50,
+                56,
+                60
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Silice dans le magma",
+            "unite": "en %",
+            "min": 0,
+            "max": 70,
+            "pas": 10
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "silice",
+          "enonce": "Touche le volcan dont le magma est le plus riche en silice.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "La Montagne Pelée a **60 %** de silice : son magma est le plus visqueux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence de teneur en silice entre le magma de la Montagne Pelée et celui du Piton de la Fournaise, en points de pourcentage ?",
+          "reponse": 11,
+          "unite": "points",
+          "aide": "Soustrais la plus petite valeur de la plus grande.",
+          "explication": "60 − 49 = **11 points** de pourcentage."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle éruption attend-on plutôt au Merapi qu’au Piton de la Fournaise ?",
+          "options": [
+            "Une éruption explosive",
+            "Une éruption sans aucun gaz",
+            "Une éruption uniquement sous la mer",
+            "Une éruption toujours effusive"
+          ],
+          "reponse": 0,
+          "aide": "Le Merapi a un magma plus riche en silice que le Piton de la Fournaise.",
+          "explication": "Plus de silice rend le magma visqueux : au Merapi, l’éruption est plutôt **explosive**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque signe : éruption effusive ou explosive ?",
+          "categories": [
+            "Éruption effusive",
+            "Éruption explosive"
+          ],
+          "items": [
+            [
+              "Des coulées de lave qui s’étalent",
+              0
+            ],
+            [
+              "Une nuée ardente qui dévale la pente",
+              1
+            ],
+            [
+              "Une fontaine de lave",
+              0
+            ],
+            [
+              "Une haute colonne de cendres",
+              1
+            ],
+            [
+              "Des gaz retenus jusqu’à la rupture",
+              1
+            ]
+          ],
+          "aide": "Fluide : la lave coule. Visqueux : tout éclate.",
+          "explication": "Magma fluide : **coulées** et fontaines (effusive). Magma visqueux : **cendres**, nuées ardentes, gaz retenus (explosive)."
+        }
+      ]
+    },
+    {
+      "chapitre": "d18ce9c8-8030-5dfe-ab76-fe9bdabc96eb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un volcan sous surveillance",
+      "competence": "analyser-document",
+      "situation": "Sur un volcan imaginé, de type explosif, l’observatoire compte chaque jour les petits séismes sous le cratère. Il applique une échelle d’alerte fixée d’avance.",
+      "documents": [
+        {
+          "id": "jours",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Petits séismes sous le volcan",
+          "categories": [
+            "Jour 1",
+            "Jour 2",
+            "Jour 3",
+            "Jour 4",
+            "Jour 5",
+            "Jour 6",
+            "Jour 7"
+          ],
+          "series": [
+            {
+              "nom": "Séismes",
+              "valeurs": [
+                4,
+                9,
+                18,
+                35,
+                70,
+                130,
+                210
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Séismes par jour",
+            "unite": "nombre",
+            "min": 0,
+            "max": 250,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Jours"
+          }
+        },
+        {
+          "id": "alerte",
+          "type": "tableau",
+          "titre": "L’échelle d’alerte",
+          "colonnes": [
+            "Niveau",
+            "Séismes par jour",
+            "Mesure"
+          ],
+          "lignes": [
+            [
+              "1 – Vigilance",
+              "moins de 30",
+              "Surveillance normale"
+            ],
+            [
+              "2 – Alerte",
+              "de 30 à 119",
+              "Préparation de l’évacuation"
+            ],
+            [
+              "3 – Danger",
+              "120 ou plus",
+              "Évacuation de la zone"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Échelle imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jours",
+          "enonce": "Touche le premier jour où l’observatoire doit passer au niveau 2.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la première barre qui atteint 30 séismes.",
+          "explication": "Le jour 4, on compte **35** séismes : c’est la première fois qu’on dépasse 30."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel jour l’observatoire passe-t-il au niveau 3 ?",
+          "reponse": 6,
+          "unite": "jour",
+          "aide": "Cherche la première barre qui atteint 120 séismes.",
+          "explication": "Le jour 6, on compte 130 séismes, plus que 120 : c’est le **jour 6**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque signe précurseur à l’instrument qui le mesure.",
+          "paires": [
+            [
+              "Petits séismes",
+              "Sismographes"
+            ],
+            [
+              "Gonflement de l’édifice",
+              "GPS et inclinomètres"
+            ],
+            [
+              "Changement de composition des gaz",
+              "Analyseurs de gaz"
+            ],
+            [
+              "Hausse de température",
+              "Capteurs et imagerie thermique"
+            ]
+          ],
+          "aide": "Pense à ce que chaque instrument mesure : des secousses, une déformation, un gaz, de la chaleur.",
+          "explication": "Séismes : sismographes ; gonflement : GPS et inclinomètres ; gaz : analyseurs ; température : capteurs et imagerie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi faut-il évacuer avant l’éruption, sans attendre de voir une nuée ardente ?",
+          "options": [
+            "Elle avance à plusieurs centaines de km/h : on ne peut pas la fuir une fois formée",
+            "Elle est lente mais très froide : on peut donc attendre de la voir pour partir",
+            "Elle ne se forme qu’en mer, donc les habitants du volcan ne risquent rien du tout",
+            "Elle s’arrête toujours avant les villages, même quand l’éruption est très forte"
+          ],
+          "reponse": 0,
+          "aide": "Compare la vitesse d’une nuée ardente à celle d’une voiture.",
+          "explication": "Les nuées ardentes dévalent les pentes à **plusieurs centaines de km/h** : la seule protection est d’évacuer avant."
+        }
+      ]
+    },
+    {
+      "chapitre": "55fd906e-1c32-5f45-8403-12c3c19f1553",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Pourquoi fait-il chaud à l’équateur ?",
+      "competence": "lire-graphique",
+      "situation": "Le Soleil chauffe la Terre de façon inégale. Voici l’énergie solaire reçue en moyenne par un mètre carré de sol à quatre latitudes.",
+      "documents": [
+        {
+          "id": "energie",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Énergie solaire reçue selon la latitude",
+          "categories": [
+            "0° (équateur)",
+            "30°",
+            "60°",
+            "90° (pôle)"
+          ],
+          "series": [
+            {
+              "nom": "Énergie",
+              "valeurs": [
+                420,
+                380,
+                270,
+                170
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Énergie reçue en moyenne",
+            "unite": "en W/m²",
+            "min": 0,
+            "max": 500,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Latitude"
+          },
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "energie",
+          "enonce": "Touche la latitude qui reçoit le plus d’énergie solaire.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "L’**équateur** reçoit le plus d’énergie : 420 W/m²."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence d’énergie reçue entre l’équateur et le pôle, en W/m² ?",
+          "reponse": 250,
+          "unite": "W/m²",
+          "aide": "Soustrais la valeur du pôle à celle de l’équateur.",
+          "explication": "420 − 170 = **250 W/m²** de moins au pôle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le pôle reçoit-il moins d’énergie que l’équateur ?",
+          "options": [
+            "Les rayons y arrivent très inclinés et se répartissent sur une grande surface",
+            "Le pôle est plus loin du Soleil que l’équateur, donc les rayons s’y affaiblissent",
+            "L’atmosphère n’existe pas au pôle, donc les rayons n’y arrivent pas du tout",
+            "Le Soleil ne brille jamais au pôle, pas même pendant l’été de cet hémisphère"
+          ],
+          "reponse": 0,
+          "aide": "Pense à une lampe de poche : droite, elle éclaire un petit cercle vif ; inclinée, un grand cercle pâle.",
+          "explication": "Aux pôles, les rayons sont très **inclinés** : leur énergie s’étale sur une grande surface et traverse plus d’atmosphère."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le bilan d’énergie aux pôles ?",
+          "options": [
+            "Un déficit : ils reçoivent moins qu’ils ne perdent",
+            "Un excédent : ils reçoivent plus qu’ils ne perdent",
+            "Un équilibre parfait",
+            "Aucun échange d’énergie"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les valeurs du graphique : elles sont faibles au pôle.",
+          "explication": "Les pôles ont un **déficit** d’énergie, l’équateur un excédent : les vents et les courants redistribuent cette chaleur."
+        }
+      ]
+    },
+    {
+      "chapitre": "55fd906e-1c32-5f45-8403-12c3c19f1553",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "De la haute à la basse pression",
+      "competence": "observer-schema",
+      "situation": "Sur une carte météo simplifiée, deux zones de pression sont marquées : A et D. Une ville se trouve entre les deux.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "schema",
+          "titre": "Une carte de pression",
+          "largeur": 340,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 80,
+              "cy": 100,
+              "rx": 50,
+              "ry": 40,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "anti",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 260,
+              "cy": 100,
+              "rx": 50,
+              "ry": 40,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "depr",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 80,
+              "y": 96,
+              "texte": "A",
+              "taille": "grand",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 80,
+              "y": 118,
+              "texte": "1 028 hPa",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 260,
+              "y": 96,
+              "texte": "D",
+              "taille": "grand",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 260,
+              "y": 118,
+              "texte": "996 hPa",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "emoji",
+              "x": 170,
+              "y": 104,
+              "emoji": "🏙️",
+              "taille": 26
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 130,
+              "texte": "Ville",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la zone de basse pression, la dépression.",
+          "reponse": [
+            "depr"
+          ],
+          "aide": "Compare les deux pressions écrites : la plus faible est la basse pression.",
+          "explication": "La zone **D** a la pression la plus faible (996 hPa) : c’est la dépression."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la différence de pression entre A et D, en hPa ?",
+          "reponse": 32,
+          "unite": "hPa",
+          "aide": "Soustrais la plus petite pression de la plus grande.",
+          "explication": "1 028 − 996 = **32 hPa**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans quel sens le vent souffle-t-il entre A et D ?",
+          "options": [
+            "De A vers D, de la haute vers la basse pression",
+            "De D vers A, de la basse vers la haute pression",
+            "En tournant sans jamais aller vers D",
+            "Il ne souffle pas : les pressions sont différentes"
+          ],
+          "reponse": 0,
+          "aide": "Le vent comble les écarts de pression.",
+          "explication": "Le vent souffle de la **haute** pression vers la **basse** pression : ici de A vers D."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait l’air au centre de la dépression D ?",
+          "options": [
+            "Il s’élève : il est chaud, donc moins dense",
+            "Il descend : il est froid, donc plus dense",
+            "Il reste immobile",
+            "Il disparaît"
+          ],
+          "reponse": 0,
+          "aide": "Une dépression est créée par de l’air chaud.",
+          "explication": "L’air chaud est moins dense : il **s’élève** et crée une basse pression, une dépression."
+        }
+      ]
+    },
+    {
+      "chapitre": "55fd906e-1c32-5f45-8403-12c3c19f1553",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le courant qui adoucit l’hiver",
+      "competence": "analyser-document",
+      "situation": "Brest (France) et Saint-Jean (Terre-Neuve, Canada) sont à peu près à la même latitude, vers 48° N. Leurs températures moyennes diffèrent pourtant beaucoup (valeurs arrondies).",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "tableau",
+          "titre": "Températures moyennes",
+          "colonnes": [
+            "Ville",
+            "Janvier (°C)",
+            "Juillet (°C)"
+          ],
+          "lignes": [
+            [
+              "Brest",
+              7,
+              17
+            ],
+            [
+              "Saint-Jean",
+              -4,
+              16
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "courant",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Deux courants",
+          "source": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Le Gulf Stream est un courant chaud de surface, entraîné par les vents. Il transporte de l’eau tropicale vers l’Atlantique Nord et réchauffe l’air qui passe au-dessus.",
+            "Sur la côte de Terre-Neuve passe au contraire un courant froid, le courant du Labrador."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence de température en janvier entre Brest et Saint-Jean, en °C ?",
+          "reponse": 11,
+          "unite": "°C",
+          "aide": "Attention au signe : Saint-Jean est en dessous de zéro.",
+          "explication": "7 − (−4) = 7 + 4 = **11 °C** de plus à Brest."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle ville a le plus grand écart de température entre l’hiver et l’été ?",
+          "options": [
+            "Saint-Jean",
+            "Brest",
+            "Les deux ont le même écart",
+            "On ne peut pas le savoir"
+          ],
+          "reponse": 0,
+          "aide": "Calcule l’écart juillet − janvier pour chaque ville.",
+          "explication": "Brest : 17 − 7 = 10 °C. Saint-Jean : 16 − (−4) = **20 °C** : l’écart y est le double."
+        },
+        {
+          "type": "zone",
+          "document": "temp",
+          "enonce": "Touche la température de janvier la plus basse.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la valeur négative.",
+          "explication": "À Saint-Jean, janvier est à **−4 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle explication le texte permet-il d’appuyer ?",
+          "options": [
+            "Un courant chaud adoucit l’hiver à Brest, un courant froid refroidit Saint-Jean",
+            "Brest est beaucoup plus près de l’équateur que Saint-Jean, ce qui suffit à l’expliquer",
+            "Saint-Jean est plus haute en altitude que Brest, ce qui la refroidit en hiver",
+            "Les deux villes sont touchées par le même courant, qui les adoucit également"
+          ],
+          "reponse": 0,
+          "aide": "Relis les deux paragraphes du texte.",
+          "explication": "Le **Gulf Stream** (chaud) baigne l’Europe de l’Ouest ; le courant du **Labrador** (froid) longe Terre-Neuve."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète sur les courants océaniques.",
+          "texte": "Un courant de surface est entraîné par les ___ ; un courant profond dépend de la ___ et de la ___ de l’eau.",
+          "reponses": [
+            [
+              "vents"
+            ],
+            [
+              "température",
+              "salinité"
+            ],
+            [
+              "salinité",
+              "température"
+            ]
+          ],
+          "banque": [
+            "vents",
+            "température",
+            "salinité",
+            "marées",
+            "Lune"
+          ],
+          "aide": "Il y a deux moteurs différents : en surface et en profondeur.",
+          "explication": "En surface, ce sont les **vents** ; en profondeur, la **température** et la **salinité** (circulation thermohaline)."
+        }
+      ]
+    },
+    {
+      "chapitre": "520f478a-475c-5467-9f7b-55943338d28e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La Terre se réchauffe",
+      "competence": "lire-graphique",
+      "situation": "Voici l’écart entre la température moyenne mondiale et celle de la fin du XIXe siècle, à plusieurs dates (valeurs arrondies).",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Écart de température moyenne mondiale",
+          "categories": [
+            "1900",
+            "1925",
+            "1950",
+            "1975",
+            "2000",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Écart",
+              "valeurs": [
+                0,
+                0.1,
+                0.1,
+                0.3,
+                0.6,
+                1.2
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Écart à la fin du XIXe siècle",
+            "unite": "en °C",
+            "min": 0,
+            "max": 1.5,
+            "pas": 0.5
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "temp",
+          "enonce": "Touche l’année où la température mondiale est la plus élevée.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "En **2020**, la température dépasse de 1,2 °C celle de la fin du XIXe siècle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la température a-t-elle augmenté entre 1900 et 2020, en °C ?",
+          "reponse": 1.2,
+          "unite": "°C",
+          "aide": "Soustrais la valeur de 1900 à celle de 2020.",
+          "explication": "1,2 − 0 = **1,2 °C** : c’est l’ordre de grandeur du réchauffement depuis l’ère industrielle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit ce graphique de la vitesse du réchauffement ?",
+          "options": [
+            "Il s’accélère : 0,6 °C en 20 ans depuis 2000, contre 0,3 °C en 25 ans de 1975 à 2000",
+            "Il est régulier depuis 1900, avec la même hausse par décennie sur toutes les périodes",
+            "Il ralentit depuis 1975 : chaque période montre une hausse plus faible que la précédente",
+            "Il n’y a aucun réchauffement avant 2020 : la hausse a commencé seulement cette année-là"
+          ],
+          "reponse": 0,
+          "aide": "Compare la hausse entre 1975 et 2000 à celle entre 2000 et 2020.",
+          "explication": "De 1975 à 2000 : +0,3 °C en 25 ans. De 2000 à 2020 : +0,6 °C en **20 ans** : la hausse s’accélère."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la température a-t-elle augmenté entre 2000 et 2020, en °C ?",
+          "reponse": 0.6,
+          "unite": "°C",
+          "aide": "Soustrais la valeur de 2000 à celle de 2020.",
+          "explication": "1,2 − 0,6 = **0,6 °C** en vingt ans."
+        }
+      ]
+    },
+    {
+      "chapitre": "520f478a-475c-5467-9f7b-55943338d28e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le manteau de gaz de la Terre",
+      "competence": "observer-schema",
+      "situation": "Les gaz de l’atmosphère laissent passer le rayonnement du Soleil, mais retiennent une partie de l’infrarouge renvoyé par le sol. Sur le schéma, chaque lettre repère une flèche.",
+      "documents": [
+        {
+          "id": "serre",
+          "type": "schema",
+          "titre": "L’effet de serre, schéma simplifié",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 60,
+              "l": 300,
+              "h": 50,
+              "teinte": "ciel",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 190,
+              "l": 300,
+              "h": 30,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "emoji",
+              "x": 40,
+              "y": 34,
+              "emoji": "☀️",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 90,
+              "texte": "Gaz à effet de serre",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 308,
+              "y": 76,
+              "texte": "Atmosphère",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 308,
+              "y": 210,
+              "texte": "Sol",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                22
+              ],
+              "a": [
+                110,
+                186
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                184
+              ],
+              "a": [
+                150,
+                116
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                114
+              ],
+              "a": [
+                220,
+                182
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                270,
+                58
+              ],
+              "a": [
+                270,
+                18
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 99,
+              "cy": 140,
+              "r": 11,
+              "texte": "A",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 150,
+              "r": 11,
+              "texte": "B",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 220,
+              "cy": 148,
+              "r": 11,
+              "texte": "C",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 38,
+              "r": 11,
+              "texte": "D",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "d",
+              "zone": true
+            }
+          ]
+        },
+        {
+          "id": "gaz",
+          "type": "tableau",
+          "titre": "Trois gaz à effet de serre",
+          "colonnes": [
+            "Gaz",
+            "Sources principales"
+          ],
+          "lignes": [
+            [
+              "Dioxyde de carbone (CO₂)",
+              "Combustibles fossiles, déforestation, ciment"
+            ],
+            [
+              "Méthane",
+              "Élevage, rizières, fuites de gaz"
+            ],
+            [
+              "Protoxyde d’azote",
+              "Engrais"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre à ce qu’elle représente.",
+          "paires": [
+            [
+              "A",
+              "Rayonnement solaire qui arrive"
+            ],
+            [
+              "B",
+              "Infrarouge renvoyé par le sol"
+            ],
+            [
+              "C",
+              "Infrarouge renvoyé vers le sol par les gaz"
+            ],
+            [
+              "D",
+              "Infrarouge qui s’échappe vers l’espace"
+            ]
+          ],
+          "aide": "Suis le trajet : le Soleil chauffe le sol, le sol renvoie de l’infrarouge, les gaz en retiennent une partie.",
+          "explication": "**A** vient du Soleil ; **B** part du sol ; **C** est retenu puis renvoyé vers le sol ; **D** s’échappe vers l’espace."
+        },
+        {
+          "type": "zone",
+          "document": "serre",
+          "enonce": "Touche la lettre de la flèche qui diminue si l’on ajoute des gaz à effet de serre dans l’atmosphère.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Plus de gaz retient plus d’infrarouge : quelle flèche s’affaiblit ?",
+          "explication": "Plus de gaz retient plus d’infrarouge : **D**, ce qui s’échappe vers l’espace, diminue, et **C** augmente."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque source selon le gaz qu’elle émet.",
+          "categories": [
+            "Dioxyde de carbone",
+            "Méthane",
+            "Protoxyde d’azote"
+          ],
+          "items": [
+            [
+              "Une centrale au charbon",
+              0
+            ],
+            [
+              "Une rizière inondée",
+              1
+            ],
+            [
+              "Un engrais épandu sur un champ",
+              2
+            ],
+            [
+              "La fabrication du ciment",
+              0
+            ],
+            [
+              "Une fuite sur un gazoduc",
+              1
+            ]
+          ],
+          "aide": "Relis la colonne « Sources principales » du tableau.",
+          "explication": "Charbon et ciment : **CO₂** ; rizière et fuite de gaz : **méthane** ; engrais : **protoxyde d’azote**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sans aucun effet de serre naturel, que se passerait-il ?",
+          "options": [
+            "La Terre serait beaucoup plus froide, sans doute inhabitable",
+            "La Terre serait beaucoup plus chaude, donc aussi inhabitable",
+            "Rien ne changerait sur la température moyenne de la planète",
+            "Il n’y aurait plus de lumière du Soleil qui atteigne la Terre"
+          ],
+          "reponse": 0,
+          "aide": "Sans gaz pour retenir l’infrarouge, toute la chaleur s’échapperait.",
+          "explication": "L’effet de serre **naturel** rend la Terre habitable : c’est son **renforcement** par les activités humaines qui pose problème."
+        }
+      ]
+    },
+    {
+      "chapitre": "520f478a-475c-5467-9f7b-55943338d28e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Ce que racontent les bulles d’air",
+      "competence": "analyser-document",
+      "situation": "Dans les carottes de glace, chaque bulle d’air est un échantillon d’atmosphère d’autrefois. On compare la teneur en CO₂ de plusieurs époques (valeurs arrondies, en ppm : parties par million).",
+      "documents": [
+        {
+          "id": "co2",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Teneur de l’air en dioxyde de carbone",
+          "categories": [
+            "Période glaciaire",
+            "Période interglaciaire",
+            "1750",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "CO₂",
+              "valeurs": [
+                190,
+                280,
+                280,
+                415
+              ],
+              "teinte": "gris"
+            }
+          ],
+          "axeY": {
+            "titre": "Teneur en CO₂",
+            "unite": "en ppm",
+            "min": 0,
+            "max": 500,
+            "pas": 100
+          },
+          "source": "Valeurs arrondies, ordres de grandeur"
+        },
+        {
+          "id": "glace",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Les carottes de glace",
+          "source": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Les carottes de glace d’Antarctique et du Groenland remontent jusqu’à 800 000 ans. Sur toute cette période, la teneur de l’air en CO₂ n’a jamais dépassé environ [[n|300]] ppm.",
+            "Depuis 1850, les mesures directes confirment la hausse : elle suit celle des émissions humaines."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "glace",
+          "enonce": "Touche dans le texte le nombre qui donne la teneur maximale en CO₂ sur 800 000 ans.",
+          "reponse": [
+            "n"
+          ],
+          "aide": "C’est un nombre suivi de « ppm ».",
+          "explication": "Sur 800 000 ans, le maximum est d’environ **300 ppm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la teneur de 2020 dépasse-t-elle ce maximum, en ppm ?",
+          "reponse": 115,
+          "unite": "ppm",
+          "aide": "Soustrais 300 à la valeur de 2020.",
+          "explication": "415 − 300 = **115 ppm** au-dessus de tout ce que l’on connaît sur 800 000 ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la comparaison avec les périodes glaciaire et interglaciaire ?",
+          "options": [
+            "Les variations naturelles n’expliquent pas une teneur aussi élevée",
+            "Les variations naturelles expliquent entièrement la teneur de 2020",
+            "La teneur en CO₂ n’a jamais changé",
+            "La teneur de 2020 est inférieure à celle de 1750"
+          ],
+          "reponse": 0,
+          "aide": "Regarde si une barre du passé naturel dépasse celle de 2020.",
+          "explication": "Les périodes naturelles restent entre 190 et 300 ppm : **415 ppm** sort de ce cadre, et la cause est humaine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la teneur a-t-elle augmenté entre 1750 et 2020, en ppm ?",
+          "reponse": 135,
+          "unite": "ppm",
+          "aide": "Soustrais la valeur de 1750 à celle de 2020.",
+          "explication": "415 − 280 = **135 ppm** en un peu plus de deux siècles."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque cause : variation naturelle ou activité humaine ?",
+          "categories": [
+            "Variation naturelle",
+            "Activité humaine"
+          ],
+          "items": [
+            [
+              "Les variations de l’orbite de la Terre",
+              0
+            ],
+            [
+              "Les éruptions volcaniques",
+              0
+            ],
+            [
+              "La combustion du charbon et du pétrole",
+              1
+            ],
+            [
+              "La déforestation",
+              1
+            ],
+            [
+              "La fabrication du ciment",
+              1
+            ]
+          ],
+          "aide": "Les causes naturelles étaient déjà là bien avant l’humanité.",
+          "explication": "L’orbite et les volcans sont **naturels** ; charbon, pétrole, déforestation et ciment sont des **activités humaines**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f668472f-1a18-5ea4-bfba-ceb5a96d566d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le cœur de Jade au footing",
+      "competence": "lire-graphique",
+      "situation": "Jade est au repos pendant 2 minutes, puis elle court de la 2e à la 8e minute, puis elle récupère. Son cardiofréquencemètre relève sa fréquence cardiaque toutes les 2 minutes.",
+      "documents": [
+        {
+          "id": "fc",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Fréquence cardiaque de Jade",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "series": [
+            {
+              "nom": "Fréquence",
+              "valeurs": [
+                70,
+                70,
+                140,
+                160,
+                170,
+                110,
+                80
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Fréquence cardiaque",
+            "unite": "battements/min",
+            "min": 0,
+            "max": 200,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Temps (minutes)"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fc",
+          "enonce": "Touche la mesure où la fréquence cardiaque est la plus élevée.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "À la 8e minute, à la fin de l’effort : **170** battements par minute."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de battements par minute la fréquence cardiaque augmente-t-elle entre le repos et le maximum ?",
+          "reponse": 100,
+          "unite": "battements/min",
+          "aide": "Soustrais la valeur de repos à la valeur maximale.",
+          "explication": "170 − 70 = **100** battements par minute de plus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le cœur accélère-t-il pendant l’effort ?",
+          "options": [
+            "Pour envoyer plus de sang, donc plus de dioxygène et de glucose, vers les muscles",
+            "Pour refroidir le sang uniquement, en l’envoyant plus vite vers la peau et les poumons",
+            "Pour fabriquer du glycogène en plus grande quantité et le stocker dans les muscles",
+            "Parce que les poumons se vident et que le cœur doit compenser ce manque d’air"
+          ],
+          "reponse": 0,
+          "aide": "Les muscles ont besoin de bien plus de carburant qu’au repos.",
+          "explication": "Les muscles consomment beaucoup plus : le cœur envoie **plus de sang**, qui apporte plus de dioxygène et de glucose."
+        },
+        {
+          "type": "zone",
+          "document": "fc",
+          "enonce": "Touche la mesure prise 4 minutes après la fin de l’effort.",
+          "reponse": [
+            "k6"
+          ],
+          "aide": "L’effort se termine à la 8e minute : ajoute 4 minutes.",
+          "explication": "L’effort finit à la minute 8 ; 4 minutes plus tard, à la minute 12, la fréquence est revenue à **80**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f668472f-1a18-5ea4-bfba-ceb5a96d566d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le sang part vers les muscles",
+      "competence": "lire-graphique",
+      "situation": "Pendant un effort, l’organisme redistribue le sang. On compare le débit du sang dans cinq organes au repos et à l’effort.",
+      "documents": [
+        {
+          "id": "debit",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Débit du sang dans cinq organes",
+          "categories": [
+            "Muscles",
+            "Appareil digestif",
+            "Cerveau",
+            "Reins",
+            "Autres organes"
+          ],
+          "series": [
+            {
+              "nom": "Au repos",
+              "valeurs": [
+                1,
+                1.3,
+                0.75,
+                1,
+                0.95
+              ],
+              "teinte": "ciel"
+            },
+            {
+              "nom": "À l’effort",
+              "valeurs": [
+                21,
+                1,
+                0.8,
+                0.6,
+                1.6
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Débit sanguin",
+            "unite": "en L/min",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies, adaptées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "debit",
+          "enonce": "Touche l’organe dont le débit sanguin augmente le plus à l’effort.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Regarde l’écart entre les deux barres de chaque organe.",
+          "explication": "Les **muscles** passent de 1 à 21 L/min : c’est la plus forte hausse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le débit cardiaque total à l’effort, en litres par minute (additionne les cinq organes).",
+          "reponse": 25,
+          "unite": "L/min",
+          "aide": "Additionne : 21 + 1 + 0,8 + 0,6 + 1,6.",
+          "explication": "21 + 1 + 0,8 + 0,6 + 1,6 = **25 L/min**, soit 5 fois les 5 L/min du repos."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de ce débit total reçoivent les muscles à l’effort, en % ?",
+          "reponse": 84,
+          "unite": "%",
+          "aide": "Divise 21 par 25, puis multiplie par 100.",
+          "explication": "21 ÷ 25 = 0,84, soit **84 %** : on dépasse bien les 80 % du cours."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devient le débit de l’appareil digestif à l’effort ?",
+          "options": [
+            "Il diminue : une partie du sang est redistribuée vers les muscles actifs",
+            "Il augmente autant que celui des muscles, comme tous les autres organes",
+            "Il reste exactement le même, quel que soit l’effort fourni par le sportif",
+            "Il devient nul : le tube digestif cesse totalement de recevoir du sang"
+          ],
+          "reponse": 0,
+          "aide": "Compare sa barre « au repos » et sa barre « à l’effort ».",
+          "explication": "Il passe de 1,3 à 1 L/min : il **diminue**, le sang va en priorité vers les muscles."
+        }
+      ]
+    },
+    {
+      "chapitre": "f668472f-1a18-5ea4-bfba-ceb5a96d566d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Jusqu’où va le dioxygène ?",
+      "competence": "analyser-document",
+      "situation": "Un sportif court sur un tapis à quatre vitesses. On mesure le dioxygène consommé par minute et l’acide lactique dans son sang, produit par la fermentation lactique quand le dioxygène ne suffit plus.",
+      "documents": [
+        {
+          "id": "o2",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Dioxygène consommé selon la vitesse",
+          "categories": [
+            "6 km/h",
+            "10 km/h",
+            "14 km/h",
+            "18 km/h"
+          ],
+          "series": [
+            {
+              "nom": "O₂",
+              "valeurs": [
+                1,
+                2,
+                3,
+                3.2
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Dioxygène consommé",
+            "unite": "en L/min",
+            "min": 0,
+            "max": 4,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Vitesse de course"
+          },
+          "source": "Valeurs arrondies, imaginées pour l’exercice"
+        },
+        {
+          "id": "lactate",
+          "type": "tableau",
+          "titre": "Acide lactique dans le sang",
+          "colonnes": [
+            "Vitesse",
+            "Acide lactique (mmol/L)"
+          ],
+          "lignes": [
+            [
+              "6 km/h",
+              1
+            ],
+            [
+              "10 km/h",
+              1.5
+            ],
+            [
+              "14 km/h",
+              3
+            ],
+            [
+              "18 km/h",
+              9
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "o2",
+          "enonce": "Touche la vitesse où la consommation de dioxygène est la plus élevée.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "À 18 km/h : **3,2 L/min**, le maximum mesuré."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la consommation de dioxygène augmente-t-elle entre 14 et 18 km/h, en L/min ?",
+          "reponse": 0.2,
+          "unite": "L/min",
+          "aide": "Soustrais la valeur à 14 km/h de celle à 18 km/h.",
+          "explication": "3,2 − 3 = **0,2 L/min** : elle n’augmente presque plus malgré une vitesse bien plus grande."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment expliquer la forte hausse d’acide lactique à 18 km/h ?",
+          "options": [
+            "Le dioxygène ne suffit plus : la fermentation lactique prend le relais",
+            "Les muscles se reposent : ils produisent moins d’énergie à cette vitesse",
+            "Le sportif respire moins : son apport en dioxygène devient plus faible",
+            "Le glucose a disparu du sang : les muscles n’ont plus rien à consommer"
+          ],
+          "reponse": 0,
+          "aide": "La consommation de dioxygène plafonne alors que l’effort augmente.",
+          "explication": "Quand le dioxygène manque, la **fermentation lactique** produit de l’énergie et de l’acide lactique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la teneur en acide lactique à 18 km/h dépasse-t-elle celle à 14 km/h ?",
+          "reponse": 3,
+          "unite": "fois",
+          "aide": "Divise 9 par 3.",
+          "explication": "9 ÷ 3 = **3 fois** plus d’acide lactique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est l’inconvénient de la fermentation lactique par rapport à la respiration cellulaire ?",
+          "options": [
+            "Son rendement énergétique est faible et elle produit de l’acide lactique",
+            "Elle consomme plus de dioxygène que la respiration pour le même effort",
+            "Elle produit plus d’énergie que la respiration pour la même quantité de glucose",
+            "Elle détruit le glycogène du foie, alors que la respiration l’épargne"
+          ],
+          "reponse": 0,
+          "aide": "Relis le tableau de la fiche : rendement et déchets.",
+          "explication": "Elle a un **rendement faible** et produit de l’acide lactique, responsable de la fatigue musculaire."
+        }
+      ]
+    },
+    {
+      "chapitre": "8d96631d-648f-5975-b032-ecf321a98a75",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La semaine de Yanis",
+      "competence": "lire-tableau",
+      "situation": "L’OMS recommande aux adolescents au moins 60 minutes d’activité physique par jour. Yanis a noté le temps qu’il a bougé chaque jour de la semaine.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "tableau",
+          "titre": "Activité physique de Yanis",
+          "colonnes": [
+            "Jour",
+            "Activité physique (min)"
+          ],
+          "lignes": [
+            [
+              "Lundi",
+              70
+            ],
+            [
+              "Mardi",
+              30
+            ],
+            [
+              "Mercredi",
+              90
+            ],
+            [
+              "Jeudi",
+              45
+            ],
+            [
+              "Vendredi",
+              60
+            ],
+            [
+              "Samedi",
+              80
+            ],
+            [
+              "Dimanche",
+              20
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche les trois jours où Yanis n’atteint pas les 60 minutes recommandées.",
+          "reponse": [
+            "r1c1",
+            "r3c1",
+            "r6c1"
+          ],
+          "multiple": true,
+          "aide": "Cherche les valeurs inférieures à 60.",
+          "explication": "Mardi (**30**), jeudi (**45**) et dimanche (**20**) sont sous les 60 minutes."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel est le jour où Yanis a bougé le plus longtemps ? (un mot)",
+          "reponse": [
+            "mercredi",
+            "le mercredi"
+          ],
+          "aide": "Cherche le plus grand nombre de minutes.",
+          "explication": "Le **mercredi**, avec 90 minutes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes Yanis a-t-il bougé en tout dans la semaine ?",
+          "reponse": 395,
+          "unite": "minutes",
+          "aide": "Additionne les sept jours.",
+          "explication": "70 + 30 + 90 + 45 + 60 + 80 + 20 = **395 minutes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La recommandation est de 60 minutes par jour, soit 420 minutes par semaine. Combien de minutes manque-t-il à Yanis ?",
+          "reponse": 25,
+          "unite": "minutes",
+          "aide": "Soustrais son total à 420.",
+          "explication": "420 − 395 = **25 minutes**."
+        }
+      ]
+    },
+    {
+      "chapitre": "8d96631d-648f-5975-b032-ecf321a98a75",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Épuisé, blessé, mal endormi",
+      "competence": "analyser-document",
+      "situation": "Léo s’entraîne beaucoup et il en parle par messages à son amie Inès. Lis leur échange.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Léo",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "Salut Léo ! Tu n’étais pas à l’entraînement hier."
+            },
+            {
+              "qui": "Léo",
+              "texte": "Non… je m’entraîne 6 jours sur 7 mais je suis [[s|épuisé]] depuis deux semaines."
+            },
+            {
+              "qui": "Léo",
+              "texte": "Je me [[s|blesse]] tout le temps et je [[s|dors]] mal."
+            },
+            {
+              "qui": "Inès",
+              "texte": "Et tu t’échauffes avant ?"
+            },
+            {
+              "qui": "Léo",
+              "texte": "Pas vraiment, je commence direct, ça va plus vite !"
+            },
+            {
+              "qui": "Inès",
+              "texte": "Ton corps ne récupère plus. Il faut lever le pied !"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche les trois mots qui montrent que Léo a une surcharge d’entraînement.",
+          "reponse": [
+            "s"
+          ],
+          "aide": "Cherche la fatigue, les blessures et le sommeil.",
+          "explication": "**Épuisé** (fatigue persistante), **blesse** (blessures à répétition) et **dors** mal (sommeil perturbé) : ce sont les signes de surcharge."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conseiller à Léo ?",
+          "options": [
+            "Alléger l’entraînement et récupérer : repos, sommeil, hydratation",
+            "S’entraîner encore plus, en ajoutant des séances pour progresser vite",
+            "Arrêter tout sport définitivement, même une fois qu’il sera guéri",
+            "Prendre un produit dopant pour tenir jusqu’à la prochaine compétition"
+          ],
+          "reponse": 0,
+          "aide": "Son corps « ne récupère plus » : de quoi a-t-il besoin ?",
+          "explication": "Le surentraînement demande du **repos** et de la récupération, pas plus d’efforts et surtout pas de dopage."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque geste : bon réflexe ou à éviter ?",
+          "categories": [
+            "Bon réflexe",
+            "À éviter"
+          ],
+          "items": [
+            [
+              "S’échauffer progressivement",
+              0
+            ],
+            [
+              "Boire pendant et après l’effort",
+              0
+            ],
+            [
+              "Dormir assez",
+              0
+            ],
+            [
+              "Commencer sans échauffement",
+              1
+            ],
+            [
+              "Ignorer une douleur",
+              1
+            ],
+            [
+              "S’entraîner en étant malade",
+              1
+            ]
+          ],
+          "aide": "Pense à ce qui prépare le corps et à ce qui le met en danger.",
+          "explication": "Échauffement, **hydratation** et sommeil protègent ; commencer à froid, ignorer la douleur ou s’entraîner malade exposent aux blessures."
+        }
+      ]
+    },
+    {
+      "chapitre": "8d96631d-648f-5975-b032-ecf321a98a75",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un collège, des pistes cyclables",
+      "competence": "analyser-document",
+      "situation": "Deux quartiers d’une ville imaginée ont chacun 500 collégiens. L’un a des pistes cyclables sécurisées, l’autre non. Chiffres inventés pour l’exercice.",
+      "documents": [
+        {
+          "id": "quartiers",
+          "type": "tableau",
+          "titre": "Deux quartiers comparés",
+          "colonnes": [
+            "Mesure",
+            "Quartier A",
+            "Quartier B"
+          ],
+          "lignes": [
+            [
+              "Pistes cyclables (km)",
+              12,
+              0
+            ],
+            [
+              "Collégiens venant à vélo",
+              210,
+              45
+            ],
+            [
+              "Collégiens en tout",
+              500,
+              500
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres inventés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des collégiens du quartier A vient à vélo, en % ?",
+          "reponse": 42,
+          "unite": "%",
+          "aide": "Divise 210 par 500, puis multiplie par 100.",
+          "explication": "210 ÷ 500 = 0,42, soit **42 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des collégiens du quartier B vient à vélo, en % ?",
+          "reponse": 9,
+          "unite": "%",
+          "aide": "Divise 45 par 500, puis multiplie par 100.",
+          "explication": "45 ÷ 500 = 0,09, soit **9 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre cette comparaison ?",
+          "options": [
+            "Des pistes sécurisées influencent fortement la pratique, pas seulement la volonté",
+            "Seule la volonté individuelle compte : les aménagements n’y changent rien du tout",
+            "Les élèves du quartier B n’aiment pas le vélo, contrairement à ceux du quartier A",
+            "Les pistes cyclables n’ont aucun effet sur le nombre d’élèves qui viennent à vélo"
+          ],
+          "reponse": 0,
+          "aide": "Compare les deux quartiers : qu’est-ce qui les différencie ?",
+          "explication": "Avec des pistes, **42 %** des élèves viennent à vélo contre **9 %** sans : la santé publique se joue aussi dans l’aménagement."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque action : choix individuel ou action collective ?",
+          "categories": [
+            "Choix individuel",
+            "Action collective"
+          ],
+          "items": [
+            [
+              "Prendre l’escalier plutôt que l’ascenseur",
+              0
+            ],
+            [
+              "Construire des pistes cyclables",
+              1
+            ],
+            [
+              "Sécuriser les trajets scolaires",
+              1
+            ],
+            [
+              "Se coucher tôt pour être en forme",
+              0
+            ],
+            [
+              "Ouvrir des équipements sportifs accessibles à tous",
+              1
+            ],
+            [
+              "Décider d’aller à pied au collège",
+              0
+            ]
+          ],
+          "aide": "Une action collective dépend de la ville, de l’école ou de l’État.",
+          "explication": "Les choix de chacun sont **individuels** ; pistes, trajets sûrs et équipements relèvent de l’**action collective**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1b3d8d83-3561-5609-802c-852fa7f71b79",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le phagocyte entre en scène",
+      "competence": "observer-schema",
+      "situation": "Un microbe entre dans le corps par une petite coupure. La réponse immédiate, non spécifique, se met en route.",
+      "documents": [
+        {
+          "id": "phago",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Le phagocyte entre en scène",
+          "noeuds": [
+            {
+              "id": "n1",
+              "texte": "Un microbe entre par une coupure",
+              "emoji": "🦠"
+            },
+            {
+              "id": "n2",
+              "texte": "Le phagocyte l’entoure",
+              "emoji": "⚪"
+            },
+            {
+              "id": "n3",
+              "texte": "Le phagocyte le digère",
+              "emoji": "🧪"
+            }
+          ],
+          "liens": [
+            {
+              "de": "n1",
+              "a": "n2"
+            },
+            {
+              "de": "n2",
+              "a": "n3"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "phago",
+          "enonce": "Touche l’étape où le phagocyte entoure le microbe.",
+          "reponse": [
+            "n2"
+          ],
+          "aide": "Phagocytose : le phagocyte englobe l’intrus.",
+          "explication": "À l’étape 2, le phagocyte **entoure** le microbe : c’est l’englobement."
+        },
+        {
+          "type": "zone",
+          "document": "phago",
+          "enonce": "Touche l’étape où le microbe est détruit.",
+          "reponse": [
+            "n3"
+          ],
+          "aide": "C’est la dernière étape de la chaîne.",
+          "explication": "À l’étape 3, le phagocyte **digère** le microbe."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque acteur de l’immunité à son rôle.",
+          "paires": [
+            [
+              "Phagocyte",
+              "Englobe et digère le micro-organisme"
+            ],
+            [
+              "Lymphocyte B",
+              "Fabrique des anticorps"
+            ],
+            [
+              "Lymphocyte T",
+              "Détruit les cellules infectées"
+            ],
+            [
+              "Anticorps",
+              "Se fixe sur un antigène et le neutralise"
+            ]
+          ],
+          "aide": "Le phagocyte agit vite ; les lymphocytes sont plus lents mais spécifiques.",
+          "explication": "Le **phagocyte** englobe ; le lymphocyte **B** fabrique les anticorps ; le lymphocyte **T** détruit les cellules infectées ; l’**anticorps** neutralise l’antigène."
+        },
+        {
+          "type": "choix",
+          "enonce": "Autour de la coupure, la peau devient rouge, chaude et gonflée. Comment l’expliquer ?",
+          "options": [
+            "Les vaisseaux se dilatent et du liquide passe : c’est la réaction inflammatoire",
+            "Les anticorps brûlent les microbes sur place, ce qui fait rougir et gonfler la peau",
+            "La peau fabrique un vaccin contre les microbes, ce qui la rend chaude et rouge",
+            "Les lymphocytes T se transforment en phagocytes, qui gonflent et chauffent la peau"
+          ],
+          "reponse": 0,
+          "aide": "Rougeur et chaleur viennent de l’arrivée de sang ; le gonflement vient du liquide.",
+          "explication": "La **réaction inflammatoire** dilate les vaisseaux (rougeur, chaleur) et laisse passer du liquide (gonflement)."
+        }
+      ]
+    },
+    {
+      "chapitre": "1b3d8d83-3561-5609-802c-852fa7f71b79",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Premier contact, second contact",
+      "competence": "lire-graphique",
+      "situation": "On mesure la quantité d’anticorps dans le sang après un premier contact avec un microbe, puis après un second contact avec le même microbe (valeurs imaginées).",
+      "documents": [
+        {
+          "id": "anticorps",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Anticorps après un premier et un second contact",
+          "categories": [
+            "J0",
+            "J2",
+            "J4",
+            "J6",
+            "J8",
+            "J10",
+            "J12"
+          ],
+          "series": [
+            {
+              "nom": "Premier contact",
+              "valeurs": [
+                0,
+                0,
+                1,
+                3,
+                6,
+                8,
+                8
+              ],
+              "teinte": "ciel"
+            },
+            {
+              "nom": "Second contact",
+              "valeurs": [
+                0,
+                5,
+                30,
+                50,
+                45,
+                40,
+                35
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Anticorps",
+            "unite": "unités arbitraires",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Jours après le contact"
+          },
+          "valeurs": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "anticorps",
+          "enonce": "Touche le jour où la quantité d’anticorps est maximale après le second contact.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la plus grande valeur du second contact.",
+          "explication": "Le jour **6**, la quantité d’anticorps atteint **50** au second contact."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au jour 4, combien de fois plus d’anticorps y a-t-il après le second contact qu’après le premier ?",
+          "reponse": 30,
+          "unite": "fois",
+          "aide": "Lis les deux barres du jour 4, puis divise la plus grande par la plus petite.",
+          "explication": "Au jour 4 : 30 contre 1, donc **30 fois** plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Après le premier contact, à quel jour dépasse-t-on pour la première fois 5 unités d’anticorps ?",
+          "reponse": 8,
+          "unite": "jour",
+          "aide": "Cherche la première barre du premier contact qui dépasse 5.",
+          "explication": "Au jour 8, on atteint 6 unités : c’est le **jour 8**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la réponse est-elle beaucoup plus rapide au second contact ?",
+          "options": [
+            "Des cellules mémoire ont gardé le souvenir de l’antigène",
+            "Le microbe est devenu plus faible",
+            "Les anticorps du premier contact sont restés en grande quantité",
+            "Les phagocytes ont fabriqué les anticorps"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui persiste après une première infection.",
+          "explication": "Après le premier contact, des **cellules mémoire** persistent : elles déclenchent vite une réponse intense."
+        }
+      ]
+    },
+    {
+      "chapitre": "1b3d8d83-3561-5609-802c-852fa7f71b79",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Protéger ceux qui ne peuvent pas l’être",
+      "competence": "analyser-document",
+      "situation": "La rougeole est une maladie très contagieuse. On compare quatre villes imaginées : la part de la population vaccinée et le nombre de cas relevés pendant une épidémie.",
+      "documents": [
+        {
+          "id": "villes",
+          "type": "tableau",
+          "titre": "Quatre villes comparées",
+          "colonnes": [
+            "Ville",
+            "Habitants vaccinés (%)",
+            "Cas de rougeole"
+          ],
+          "lignes": [
+            [
+              "Ville A",
+              95,
+              12
+            ],
+            [
+              "Ville B",
+              85,
+              140
+            ],
+            [
+              "Ville C",
+              70,
+              850
+            ],
+            [
+              "Ville D",
+              98,
+              3
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres inventés pour l’exercice"
+        },
+        {
+          "id": "louise",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Louise",
+          "source": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Louise a 4 mois. Trop petite pour recevoir le vaccin contre la rougeole, elle est pourtant protégée : dans sa ville, presque tout le monde est immunisé, donc le virus circule très peu."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "villes",
+          "enonce": "Touche le nombre de cas de la ville qui en compte le plus.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche le plus grand nombre dans la dernière colonne.",
+          "explication": "La ville C compte **850** cas : c’est aussi celle où la part de vaccinés est la plus faible."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La ville B compte 12 000 habitants. Combien d’entre eux ne sont pas vaccinés ?",
+          "reponse": 1800,
+          "unite": "habitants",
+          "aide": "100 % − 85 % = la part de non-vaccinés. Calcule ce pourcentage de 12 000.",
+          "explication": "100 − 85 = 15 % de non-vaccinés : 12 000 × 0,15 = **1 800 habitants**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que remarque-t-on quand la part de personnes vaccinées baisse ?",
+          "options": [
+            "Le nombre de cas augmente",
+            "Le nombre de cas diminue",
+            "Le nombre de cas ne change pas",
+            "Il n’y a aucun lien"
+          ],
+          "reponse": 0,
+          "aide": "Classe les villes de la plus vaccinée à la moins vaccinée, et compare leurs cas.",
+          "explication": "De la ville D (98 %, 3 cas) à la ville C (70 %, 850 cas) : moins il y a de vaccinés, **plus il y a de cas**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète sur l’immunité collective.",
+          "texte": "La ___ a été éradiquée en ___ grâce à la vaccination.",
+          "reponses": [
+            [
+              "variole"
+            ],
+            [
+              "1980"
+            ]
+          ],
+          "banque": [
+            "variole",
+            "rougeole",
+            "1980",
+            "1990",
+            "grippe"
+          ],
+          "aide": "Une maladie qui a totalement disparu de la planète.",
+          "explication": "La **variole** a été éradiquée en **1980**, grâce à une vaccination massive."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Louise est-elle protégée sans être vaccinée ?",
+          "options": [
+            "Son entourage immunisé empêche le virus de circuler jusqu’à elle",
+            "Les bébés ne peuvent jamais attraper la rougeole",
+            "Elle a fabriqué seule tous les anticorps nécessaires",
+            "Le virus de la rougeole ne circule jamais"
+          ],
+          "reponse": 0,
+          "aide": "Relis le texte : que fait presque toute la population autour d’elle ?",
+          "explication": "C’est l’**immunité collective** : quand presque tous sont immunisés, le virus ne circule plus assez pour atteindre les plus fragiles."
+        }
+      ]
+    },
+    {
+      "chapitre": "aad896c9-6e55-50c1-9d5c-daa82a4f0ee8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois leviers contre les infections",
+      "competence": "lire-tableau",
+      "situation": "Pour lutter contre les infections, on dispose de trois moyens complémentaires, qui n’agissent pas au même moment. Il ne faut surtout pas les confondre.",
+      "documents": [
+        {
+          "id": "leviers",
+          "type": "tableau",
+          "titre": "Les trois leviers",
+          "colonnes": [
+            "Levier",
+            "Moment où il agit"
+          ],
+          "lignes": [
+            [
+              "Hygiène",
+              "Avant la contamination"
+            ],
+            [
+              "Vaccination",
+              "Avant la maladie"
+            ],
+            [
+              "Antibiotiques",
+              "Après l’infection"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "leviers",
+          "enonce": "Touche le levier qui agit après l’infection.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Regarde la colonne « Moment où il agit ».",
+          "explication": "Les **antibiotiques** agissent après l’infection : ils soignent, et seulement les bactéries."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque geste selon le levier qu’il utilise.",
+          "categories": [
+            "Hygiène",
+            "Vaccination",
+            "Antibiotiques"
+          ],
+          "items": [
+            [
+              "Se laver les mains avant de manger",
+              0
+            ],
+            [
+              "Recevoir un rappel de vaccin",
+              1
+            ],
+            [
+              "Prendre le traitement prescrit pour une angine bactérienne",
+              2
+            ],
+            [
+              "Stériliser les instruments d’un dentiste",
+              0
+            ],
+            [
+              "Se faire vacciner contre la grippe",
+              1
+            ]
+          ],
+          "aide": "Avant la contamination, avant la maladie, ou après l’infection ?",
+          "explication": "Laver, stériliser : **hygiène**. Les rappels et le vaccin : **vaccination**. Le traitement d’une angine bactérienne : **antibiotiques**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot à sa définition.",
+          "paires": [
+            [
+              "Asepsie",
+              "Éviter que les microbes arrivent : matériel stérile, usage unique"
+            ],
+            [
+              "Antisepsie",
+              "Éliminer les microbes déjà présents sur la peau"
+            ]
+          ],
+          "aide": "A-sepsie : on empêche l’arrivée. Anti-sepsie : on combat ce qui est là.",
+          "explication": "L’**asepsie** évite l’arrivée des microbes ; l’**antisepsie** élimine ceux qui sont déjà sur la peau."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un enfant a un rhume, causé par un virus. Les antibiotiques sont-ils utiles ?",
+          "options": [
+            "Non : ils n’ont aucun effet sur les virus",
+            "Oui : ils tuent tous les micro-organismes",
+            "Oui : ils évitent toujours les complications",
+            "Oui, mais seulement le premier jour"
+          ],
+          "reponse": 0,
+          "aide": "Les antibiotiques ciblent une seule catégorie de micro-organismes.",
+          "explication": "Les antibiotiques agissent sur les **bactéries** uniquement : aucun effet sur un virus comme celui du rhume."
+        }
+      ]
+    },
+    {
+      "chapitre": "aad896c9-6e55-50c1-9d5c-daa82a4f0ee8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’antibiogramme d’Hugo",
+      "competence": "analyser-document",
+      "situation": "Hugo a une infection bactérienne. Au laboratoire, on dépose quatre disques d’antibiotiques sur une culture de sa bactérie. Là où l’antibiotique agit, un cercle sans bactéries se forme : plus il est large, plus l’antibiotique est efficace.",
+      "documents": [
+        {
+          "id": "halo",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Cercle sans bactéries autour de chaque disque",
+          "categories": [
+            "Antibiotique A",
+            "Antibiotique B",
+            "Antibiotique C",
+            "Antibiotique D"
+          ],
+          "series": [
+            {
+              "nom": "Diamètre",
+              "valeurs": [
+                0,
+                22,
+                8,
+                30
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Diamètre du cercle",
+            "unite": "en mm",
+            "min": 0,
+            "max": 35,
+            "pas": 5
+          },
+          "valeurs": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        },
+        {
+          "id": "regle",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La règle de lecture",
+          "source": "Règle posée pour l’exercice",
+          "blocs": [
+            "À partir d’un cercle de 15 mm de diamètre, la bactérie est considérée comme sensible à l’antibiotique."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "halo",
+          "enonce": "Touche l’antibiotique le plus efficace contre la bactérie d’Hugo.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le cercle le plus large.",
+          "explication": "L’antibiotique **D** a le cercle le plus large (30 mm) : c’est le plus efficace."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’antibiotiques ont un cercle d’au moins 15 mm ?",
+          "reponse": 2,
+          "unite": "antibiotiques",
+          "aide": "Compare chaque valeur au seuil de 15 mm.",
+          "explication": "B (22 mm) et D (30 mm) dépassent 15 mm : **2 antibiotiques**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Et si Hugo avait une angine virale, que faudrait-il penser de ces quatre antibiotiques ?",
+          "options": [
+            "Aucun ne serait utile : les antibiotiques n’ont pas d’effet sur les virus",
+            "Le D serait utile, comme pour la bactérie, car c’est le plus efficace ici",
+            "Les quatre seraient utiles, car ce sont tous des antibiotiques puissants",
+            "Seul le A serait utile, car c’est le plus ancien des quatre antibiotiques"
+          ],
+          "reponse": 0,
+          "aide": "Un antibiogramme teste des bactéries, pas des virus.",
+          "explication": "Un virus n’est pas une bactérie : **aucun antibiotique** n’agit sur lui."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence de diamètre entre les antibiotiques B et C, en mm ?",
+          "reponse": 14,
+          "unite": "mm",
+          "aide": "Soustrais la plus petite valeur de la plus grande.",
+          "explication": "22 − 8 = **14 mm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "aad896c9-6e55-50c1-9d5c-daa82a4f0ee8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quand les microbes résistent",
+      "competence": "analyser-document",
+      "situation": "Un malade arrête trop tôt son traitement antibiotique. Le tableau compte ses bactéries à trois moments (valeurs imaginées). Par ailleurs, Clara et son père discutent d’un rhume.",
+      "documents": [
+        {
+          "id": "resist",
+          "type": "tableau",
+          "titre": "Bactéries sensibles et résistantes",
+          "colonnes": [
+            "Moment",
+            "Bactéries sensibles",
+            "Bactéries résistantes"
+          ],
+          "lignes": [
+            [
+              "Avant le traitement",
+              99900,
+              100
+            ],
+            [
+              "Après 2 jours (traitement arrêté)",
+              900,
+              100
+            ],
+            [
+              "Quelques jours plus tard",
+              9000,
+              1000
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Clara",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Papa",
+              "emoji": "👨",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Clara",
+              "texte": "Papa, j’ai le nez qui coule et un peu de fièvre depuis hier."
+            },
+            {
+              "qui": "Papa",
+              "texte": "Il reste de vieux antibiotiques dans l’armoire, prends-en quelques jours."
+            },
+            {
+              "qui": "Clara",
+              "texte": "Mon prof de SVT dit que ce sont souvent des [[v|virus]]…"
+            },
+            {
+              "qui": "Papa",
+              "texte": "Ah… alors ça ne servirait à rien ?"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avant le traitement, quelle part des bactéries est résistante, en % ? (Total : 100 000 bactéries.)",
+          "reponse": 0.1,
+          "unite": "%",
+          "aide": "Divise le nombre de résistantes par le total, puis multiplie par 100.",
+          "explication": "100 ÷ 100 000 = 0,001, soit **0,1 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Après 2 jours de traitement, quelle part des bactéries est résistante, en % ? (Total : 1 000 bactéries.)",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Ajoute les sensibles et les résistantes pour obtenir le total.",
+          "explication": "100 ÷ (900 + 100) = 0,10, soit **10 %** : la part des résistantes a été multipliée par 100."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes de la sélection des bactéries résistantes.",
+          "items": [
+            "Un antibiotique tue presque toutes les bactéries sensibles",
+            "Les quelques bactéries résistantes survivent",
+            "Elles se multiplient sans concurrence",
+            "La population devient de plus en plus résistante"
+          ],
+          "aide": "Pense à une sélection : qui survit, puis qui se multiplie ?",
+          "explication": "Les sensibles meurent, les **résistantes survivent**, se multiplient, et finissent par dominer : c’est la sélection naturelle."
+        },
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot qui explique pourquoi les antibiotiques seraient inutiles pour Clara.",
+          "reponse": [
+            "v"
+          ],
+          "aide": "Les antibiotiques n’agissent que sur les bactéries.",
+          "explication": "Un rhume est causé par un **virus** : les antibiotiques n’ont aucun effet dessus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la dernière ligne du tableau ?",
+          "options": [
+            "Les bactéries résistantes sont 10 fois plus nombreuses qu’après l’arrêt du traitement",
+            "Les bactéries résistantes ont disparu",
+            "Il n’y a plus aucune bactérie",
+            "Les bactéries résistantes sont moins nombreuses qu’avant le traitement"
+          ],
+          "reponse": 0,
+          "aide": "Compare 1 000 à 100, dans la colonne des résistantes.",
+          "explication": "On passe de 100 à 1 000 résistantes : elles sont **10 fois plus nombreuses** qu’après l’arrêt du traitement."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6718d8b-2a34-551d-a591-aff988548080",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Des cellules à la personne",
+      "competence": "observer-schema",
+      "situation": "Le vivant est organisé en niveaux emboîtés. Sur ce schéma, on suit le muscle du bras jusqu’à la personne entière ; les « ? » sont à trouver.",
+      "documents": [
+        {
+          "id": "niveaux",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Des cellules à la personne",
+          "noeuds": [
+            {
+              "id": "n1",
+              "texte": "Une cellule de muscle",
+              "emoji": "🔬"
+            },
+            {
+              "id": "n2",
+              "texte": "?"
+            },
+            {
+              "id": "n3",
+              "texte": "Le biceps"
+            },
+            {
+              "id": "n4",
+              "texte": "?"
+            },
+            {
+              "id": "n5",
+              "texte": "Une personne",
+              "emoji": "🧍"
+            }
+          ],
+          "liens": [
+            {
+              "de": "n1",
+              "a": "n2",
+              "texte": "forment"
+            },
+            {
+              "de": "n2",
+              "a": "n3",
+              "texte": "forment"
+            },
+            {
+              "de": "n3",
+              "a": "n4",
+              "texte": "forment"
+            },
+            {
+              "de": "n4",
+              "a": "n5",
+              "texte": "forment"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "niveaux",
+          "enonce": "Touche le niveau qui est l’unité de base du vivant.",
+          "reponse": [
+            "n1"
+          ],
+          "aide": "C’est le plus petit niveau du schéma.",
+          "explication": "La **cellule** est l’unité de base du vivant."
+        },
+        {
+          "type": "texte",
+          "enonce": "Comment s’appelle un ensemble de cellules de même type, niveau du premier « ? » ? (un mot)",
+          "reponse": [
+            "tissu",
+            "un tissu",
+            "le tissu"
+          ],
+          "aide": "Il est juste au-dessus de la cellule.",
+          "explication": "Des cellules musculaires de même type forment un **tissu**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quel niveau d’organisation le biceps appartient-il ?",
+          "options": [
+            "À celui d’organe",
+            "À celui de cellule",
+            "À celui d’appareil",
+            "À celui d’organisme"
+          ],
+          "reponse": 0,
+          "aide": "Il est fait de plusieurs tissus et a une fonction : faire plier le bras.",
+          "explication": "Le biceps, fait de plusieurs tissus pour une fonction, est un **organe**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque niveau à sa définition.",
+          "paires": [
+            [
+              "Cellule",
+              "L’unité du vivant"
+            ],
+            [
+              "Tissu",
+              "Des cellules de même type"
+            ],
+            [
+              "Organe",
+              "Plusieurs tissus pour une fonction"
+            ],
+            [
+              "Appareil",
+              "Des organes qui concourent au même but"
+            ]
+          ],
+          "aide": "Chaque niveau est fait de plusieurs éléments du niveau précédent.",
+          "explication": "Cellule → tissu → organe → **appareil** → organisme : chaque niveau rassemble ceux du dessous."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6718d8b-2a34-551d-a591-aff988548080",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le cerveau, un gros consommateur",
+      "competence": "lire-tableau",
+      "situation": "Toutes les cellules ont besoin de glucose, mais pas dans les mêmes proportions. On compare trois ensembles d’organes au repos (valeurs arrondies, ordres de grandeur).",
+      "documents": [
+        {
+          "id": "glucose",
+          "type": "tableau",
+          "titre": "Masse et consommation de glucose au repos",
+          "colonnes": [
+            "Organe",
+            "Part de la masse du corps (%)",
+            "Part du glucose consommé (%)"
+          ],
+          "lignes": [
+            [
+              "Cerveau",
+              2,
+              20
+            ],
+            [
+              "Muscles au repos",
+              40,
+              25
+            ],
+            [
+              "Autres organes",
+              58,
+              55
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la part de glucose consommée par le cerveau dépasse-t-elle sa part de masse ?",
+          "reponse": 10,
+          "unite": "fois",
+          "aide": "Divise 20 par 2.",
+          "explication": "20 ÷ 2 = **10 fois** : pour sa taille, le cerveau est un très gros consommateur."
+        },
+        {
+          "type": "zone",
+          "document": "glucose",
+          "enonce": "Touche la valeur qui donne la part du glucose consommée par le cerveau.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Regarde la ligne « Cerveau » et la dernière colonne.",
+          "explication": "Le cerveau consomme **20 %** du glucose."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part du glucose consomment ensemble le cerveau et les muscles au repos, en % ?",
+          "reponse": 45,
+          "unite": "%",
+          "aide": "Additionne 20 et 25.",
+          "explication": "20 + 25 = **45 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le cerveau ne peut-il pas « faire une pause » dans sa consommation ?",
+          "options": [
+            "Il consomme sans arrêt et ses cellules supportent mal un manque de glucose",
+            "Il n’a besoin de glucose qu’à l’effort, et jamais pendant le repos complet",
+            "Il stocke le glucose pour plusieurs jours, donc il pourrait s’arrêter un temps",
+            "Il fabrique lui-même son glucose à partir du dioxygène, sans dépendre du sang"
+          ],
+          "reponse": 0,
+          "aide": "Il travaille jour et nuit, même au repos.",
+          "explication": "Le cerveau consomme en **continu** : sans apport régulier de glucose, ses cellules souffrent rapidement."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6718d8b-2a34-551d-a591-aff988548080",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Du ventre à la cellule",
+      "competence": "observer-schema",
+      "situation": "Aucun appareil du corps ne suffit seul : ils travaillent ensemble pour nourrir chaque cellule. Le schéma montre trois appareils et la cellule qu’ils servent.",
+      "documents": [
+        {
+          "id": "appareils",
+          "type": "schema",
+          "titre": "Des appareils jusqu’aux cellules",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 110,
+              "h": 34,
+              "teinte": "rose",
+              "motif": "clair",
+              "arrondi": 8,
+              "texte": "Digestif",
+              "id": "dig",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 210,
+              "y": 20,
+              "l": 110,
+              "h": 34,
+              "teinte": "rose",
+              "motif": "clair",
+              "arrondi": 8,
+              "texte": "Respiratoire",
+              "id": "resp",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 90,
+              "y": 100,
+              "l": 160,
+              "h": 34,
+              "teinte": "rose",
+              "motif": "clair",
+              "arrondi": 8,
+              "texte": "Circulatoire",
+              "id": "circ",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 170,
+              "cy": 190,
+              "rx": 60,
+              "ry": 24,
+              "teinte": "rose",
+              "motif": "clair",
+              "texte": "Cellules",
+              "id": "cell",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                75,
+                54
+              ],
+              "a": [
+                130,
+                100
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                265,
+                54
+              ],
+              "a": [
+                210,
+                100
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                134
+              ],
+              "a": [
+                170,
+                164
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 28,
+              "y": 82,
+              "texte": "nutriments",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 312,
+              "y": 82,
+              "texte": "dioxygène",
+              "taille": "petit",
+              "ancre": "fin"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "appareils",
+          "enonce": "Touche l’appareil qui apporte le dioxygène.",
+          "reponse": [
+            "resp"
+          ],
+          "aide": "Regarde la flèche marquée « dioxygène ».",
+          "explication": "L’appareil **respiratoire** apporte le dioxygène et évacue le CO₂."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque appareil à son rôle.",
+          "paires": [
+            [
+              "Digestif",
+              "Transformer les aliments en nutriments"
+            ],
+            [
+              "Respiratoire",
+              "Apporter le dioxygène et rejeter le CO₂"
+            ],
+            [
+              "Circulatoire",
+              "Transporter nutriments et dioxygène jusqu’aux cellules"
+            ]
+          ],
+          "aide": "Le circulatoire est au milieu : il reçoit et il distribue.",
+          "explication": "**Digestif** : nutriments ; **respiratoire** : dioxygène ; **circulatoire** : il transporte tout jusqu’à chaque cellule."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la respiration cellulaire.",
+          "texte": "Dans la cellule, glucose + ___ donne ___ + eau + ___.",
+          "reponses": [
+            [
+              "dioxygène"
+            ],
+            [
+              "dioxyde de carbone"
+            ],
+            [
+              "énergie"
+            ]
+          ],
+          "banque": [
+            "dioxygène",
+            "dioxyde de carbone",
+            "énergie",
+            "azote",
+            "lumière"
+          ],
+          "aide": "La cellule consomme deux choses et libère de l’énergie, de l’eau et un gaz.",
+          "explication": "glucose + **dioxygène** donne **dioxyde de carbone** + eau + **énergie**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passerait-il si l’appareil circulatoire s’arrêtait ?",
+          "options": [
+            "Les cellules ne recevraient plus ni nutriments ni dioxygène, même avec des poumons intacts",
+            "Seuls les muscles seraient touchés, car les autres organes vivent sur leurs propres réserves",
+            "Le dioxygène passerait directement des poumons aux cellules, sans transport par le sang",
+            "Rien ne changerait tant que les poumons et le tube digestif continuent à fonctionner"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la place de « Circulatoire » entre les autres appareils et les cellules.",
+          "explication": "Sans l’appareil **circulatoire**, rien n’est transporté : c’est la **coordination** des appareils qui maintient en vie."
+        }
+      ]
+    },
+    {
+      "chapitre": "42f3efb8-fcd0-5185-8fc4-dad75f1c181b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le trajet de l’air",
+      "competence": "observer-schema",
+      "situation": "À chaque inspiration, l’air entre dans le corps, suit un trajet et atteint les poumons. Voici l’appareil respiratoire vu de face.",
+      "documents": [
+        {
+          "id": "respi",
+          "type": "schema",
+          "titre": "L’appareil respiratoire",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 160,
+              "y": 25,
+              "l": 20,
+              "h": 75,
+              "teinte": "ciel",
+              "motif": "clair",
+              "arrondi": 6,
+              "id": "trachee",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 110,
+              "cy": 150,
+              "rx": 50,
+              "ry": 65,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "poumon-g",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 230,
+              "cy": 150,
+              "rx": 50,
+              "ry": 65,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "poumon-d",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                100
+              ],
+              "a": [
+                125,
+                125
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                100
+              ],
+              "a": [
+                215,
+                125
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 222,
+              "l": 240,
+              "h": 8,
+              "teinte": "brun",
+              "motif": "plein",
+              "arrondi": 4,
+              "id": "diaphragme",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "respi",
+          "enonce": "Touche la trachée.",
+          "reponse": [
+            "trachee"
+          ],
+          "aide": "C’est le tube vertical qui descend de la gorge.",
+          "explication": "La **trachée** est le tube qui conduit l’air vers les deux bronches."
+        },
+        {
+          "type": "zone",
+          "document": "respi",
+          "enonce": "Touche le muscle qui s’abaisse pendant l’inspiration.",
+          "reponse": [
+            "diaphragme"
+          ],
+          "aide": "Il se trouve sous les poumons.",
+          "explication": "Le **diaphragme** s’abaisse : le volume du thorax augmente et l’air entre."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range le trajet de l’air, de l’extérieur jusqu’à l’échange avec le sang.",
+          "items": [
+            "Les fosses nasales",
+            "La trachée",
+            "Les bronches",
+            "Les alvéoles pulmonaires"
+          ],
+          "aide": "L’air passe par des tubes de plus en plus fins avant d’arriver au bout.",
+          "explication": "Fosses nasales, **trachée**, bronches, puis **alvéoles** : c’est là que se font les échanges de gaz."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans l’alvéole, dans quel sens passe le dioxygène ?",
+          "options": [
+            "De l’air vers le sang",
+            "Du sang vers l’air",
+            "Il ne passe pas, il reste dans l’air",
+            "Du poumon vers l’estomac"
+          ],
+          "reponse": 0,
+          "aide": "Le sang doit se charger en dioxygène pour le distribuer aux cellules.",
+          "explication": "Le dioxygène passe **de l’air vers le sang** par diffusion ; le dioxyde de carbone fait le chemin inverse."
+        }
+      ]
+    },
+    {
+      "chapitre": "42f3efb8-fcd0-5185-8fc4-dad75f1c181b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Où passent les nutriments ?",
+      "competence": "lire-graphique",
+      "situation": "Après la digestion, les nutriments passent dans le sang : c’est l’absorption. Le graphique indique quelle part de cette absorption se fait dans chaque région du tube digestif (ordres de grandeur).",
+      "documents": [
+        {
+          "id": "absorb",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Où les nutriments passent dans le sang",
+          "categories": [
+            "Bouche et œsophage",
+            "Estomac",
+            "Intestin grêle",
+            "Gros intestin"
+          ],
+          "series": [
+            {
+              "nom": "Absorption",
+              "valeurs": [
+                0,
+                5,
+                90,
+                5
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des nutriments absorbés",
+            "unite": "en %",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "source": "Ordres de grandeur, adaptés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "absorb",
+          "enonce": "Touche la région où se fait l’essentiel de l’absorption des nutriments.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "L’**intestin grêle** absorbe environ 90 % des nutriments."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de l’absorption se fait dans l’estomac et le gros intestin ensemble, en % ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Additionne les deux barres.",
+          "explication": "5 + 5 = **10 %** : presque tout se passe dans l’intestin grêle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’intestin grêle est-il si efficace pour l’absorption ?",
+          "options": [
+            "Ses replis, villosités et microvillosités portent sa surface à environ 200 m²",
+            "Il est le plus court des organes digestifs, donc les nutriments le traversent vite",
+            "Il produit lui-même tous les nutriments, à partir de l’eau et de l’air qu’il contient",
+            "Il est rempli d’air, ce qui facilite le passage des nutriments vers le sang"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la surface d’échange : plus elle est grande, plus l’absorption est facile.",
+          "explication": "Une **paroi fine**, une **très grande surface** (200 m²) et beaucoup de vaisseaux : c’est la stratégie de l’échange efficace."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque action : mécanique ou chimique ?",
+          "categories": [
+            "Action mécanique",
+            "Action chimique"
+          ],
+          "items": [
+            [
+              "La mastication",
+              0
+            ],
+            [
+              "Le brassage de l’estomac",
+              0
+            ],
+            [
+              "Les enzymes de la salive",
+              1
+            ],
+            [
+              "Les enzymes du pancréas",
+              1
+            ],
+            [
+              "Le péristaltisme",
+              0
+            ],
+            [
+              "Les enzymes de l’intestin",
+              1
+            ]
+          ],
+          "aide": "Mécanique : on déplace ou on découpe. Chimique : on coupe des molécules.",
+          "explication": "Mastication, brassage et péristaltisme sont **mécaniques** ; les actions des **enzymes** sont chimiques."
+        }
+      ]
+    },
+    {
+      "chapitre": "42f3efb8-fcd0-5185-8fc4-dad75f1c181b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le monoxyde de carbone",
+      "competence": "analyser-document",
+      "situation": "Dans un garage mal aéré, un chauffage défectueux dégage du monoxyde de carbone (CO). Ce gaz se fixe sur l’hémoglobine à la place du dioxygène. Un sang sain transporte environ 20 mL de dioxygène pour 100 mL, et ce transport est proportionnel à l’hémoglobine encore libre.",
+      "documents": [
+        {
+          "id": "co",
+          "type": "tableau",
+          "titre": "Hémoglobine occupée par le CO",
+          "colonnes": [
+            "Situation",
+            "Hémoglobine occupée (%)"
+          ],
+          "lignes": [
+            [
+              "Air normal",
+              1
+            ],
+            [
+              "Fumeur",
+              5
+            ],
+            [
+              "Garage mal aéré",
+              20
+            ],
+            [
+              "Intoxication grave",
+              50
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, illustratives"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "co",
+          "enonce": "Touche la situation où le sang transporte le moins de dioxygène.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Plus l’hémoglobine est occupée par le CO, moins il reste de place pour le dioxygène.",
+          "explication": "Dans l’**intoxication grave**, 50 % de l’hémoglobine est occupée : c’est là que le sang transporte le moins de dioxygène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans le garage mal aéré, quelle part de l’hémoglobine reste disponible pour le dioxygène, en % ?",
+          "reponse": 80,
+          "unite": "%",
+          "aide": "Soustrais la part occupée à 100.",
+          "explication": "100 − 20 = **80 %** reste disponible."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète sur le danger du CO.",
+          "texte": "Le monoxyde de carbone prend la place du ___ sur l’___ des globules rouges.",
+          "reponses": [
+            [
+              "dioxygène"
+            ],
+            [
+              "hémoglobine"
+            ]
+          ],
+          "banque": [
+            "dioxygène",
+            "dioxyde de carbone",
+            "hémoglobine",
+            "plasma"
+          ],
+          "aide": "L’hémoglobine est la molécule qui transporte le dioxygène.",
+          "explication": "Le CO prend la place du **dioxygène** sur l’**hémoglobine** des globules rouges : le sang transporte moins de dioxygène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité de dioxygène 100 mL de sang transportent-ils alors, en mL ?",
+          "reponse": 16,
+          "unite": "mL",
+          "aide": "Calcule 80 % de 20 mL.",
+          "explication": "20 × 0,80 = **16 mL** au lieu de 20 mL."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faire en priorité devant une personne intoxiquée au monoxyde de carbone ?",
+          "options": [
+            "La sortir à l’air libre tout de suite et appeler les secours (15 ou 112)",
+            "La laisser dormir au calme pour qu’elle récupère, sans la déplacer",
+            "Fermer les fenêtres pour la garder au chaud et éviter un refroidissement",
+            "Lui faire boire beaucoup d’eau et attendre que les symptômes passent"
+          ],
+          "reponse": 0,
+          "aide": "Il faut arrêter l’arrivée de CO et la faire respirer de l’air pur.",
+          "explication": "**Air pur et secours** : le CO empêche le sang de porter le dioxygène, c’est une urgence."
+        }
+      ]
+    }
+  ]
+}

@@ -78,8 +78,7 @@ export default function SoundToggle({
       onClick={basculer}
       aria-pressed={on}
       className={cn(
-        'focus-visible:ring-primary/50 flex w-full cursor-pointer items-center gap-3 rounded-xl border p-3 text-left transition-colors focus-visible:ring-2 focus-visible:outline-none',
-        on ? 'border-primary/40 bg-primary/[0.04]' : 'hover:border-primary/30',
+        'carte focus-visible:ring-primary/50 flex w-full cursor-pointer items-center gap-3 p-4 text-left focus-visible:ring-2 focus-visible:outline-none',
         className,
       )}
     >
@@ -96,10 +95,10 @@ export default function SoundToggle({
         )}
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block text-sm font-semibold">
+        <span className="titre-section block">
           Sons et vibrations
         </span>
-        <span className="text-muted-foreground block text-xs">
+        <span className="text-muted-foreground mt-0.5 block text-sm font-semibold">
           {on
             ? 'Activés — les retours de l’app et les jeux sonnent.'
             : 'Coupés — l’app reste entièrement silencieuse.'}

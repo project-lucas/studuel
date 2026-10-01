@@ -11,6 +11,7 @@ import type { ExamProximity } from '@/lib/next-exam'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import type { TraqueCard } from '@/lib/traque'
 import type { ExamPaper } from '@/lib/exam-papers'
+import type { AnneeAnnales } from '@/lib/annales-corrigees/apercu'
 import type { Standing } from '@/lib/percentile'
 
 // ---------------------------------------------------------------------------
@@ -73,6 +74,13 @@ export const DISCIPLINE_LABELS: Record<string, string> = {
   programme: 'Programme',
   fiches: 'Fiches',
   grammaire: 'Grammaire',
+  // Les œuvres sorties du programme limitatif (migration 382) : gardées, mais
+  // hors du rayon Programme, qui ne montre plus que le programme de l'année.
+  anciens: 'Anciens programmes',
+  // Les langues vivantes du lycée : les fiches de langue d'un côté, les axes
+  // culturels du programme 2025 de l'autre (migration 382 et suivantes).
+  langue: 'Langue',
+  culture: 'Culture',
 }
 
 export function disciplineLabel(discipline: string): string {
@@ -495,6 +503,12 @@ export type ChapterRow = {
   aQuiz: boolean
   /** Son quiz a-t-il déjà été joué au moins une fois ? (cf. accesQuizChapitre) */
   quizTeste: boolean
+  /**
+   * L'XP qu'il reste à gagner sur la fiche, au barème de BASE (lib/wallet) :
+   * les leçons pas encore lues et les couronnes pas encore décrochées. C'est
+   * ce que la carte « Reprendre » annonce à côté de l'éclair.
+   */
+  xpRestant: number
 }
 
 // ---------------------------------------------------------------------------
@@ -524,7 +538,7 @@ export function groupChaptersByTheme(chapters: ChapterRow[]): ChapterGroup[] {
     // Les chapitres sans thème d'une matière qui en a se rangent ensemble, à
     // leur place d'apparition — pas dans un fourre-tout final qui casserait
     // l'ordre du programme.
-    const key = theme ?? ' sans-theme'
+    const key = theme ?? '\u0000sans-theme'
     let group = byTheme.get(key)
     if (!group) {
       group = { theme, chapters: [] }
@@ -668,21 +682,32 @@ export function matchChapters<T extends { title: string; theme: string | null }>
 }
 
 // ---------------------------------------------------------------------------
-// Les formats d'un chapitre, en tuiles (Cours, Fiche, Flashcards, Quiz,
-// Exercice, Moi vs IA, Mes erreurs). Ils se posent LÀ OÙ on choisit quoi
+// Les formats d'un chapitre, en tuiles (Cours, Fiche, Quiz, Exercice,
+// Moi vs IA, Mes erreurs). Ils se posent LÀ OÙ on choisit quoi
 // travailler : dans le chapitre et en pied de cours. L'onglet « Mode de jeu »
 // en a porté une liste, chapitre par chapitre — c'était le Programme redit une
 // deuxième fois, et elle a été retirée.
 //
-// TROIS GROUPES, TROIS VERBES (Lucas, 16/09/2026). L'écran de chapitre alignait
+// DES GROUPES, DES VERBES (Lucas, 16/09/2026). L'écran de chapitre alignait
 // cinq tuiles — Cours · Quiz · Flashcards · Fiche · Défi — dont trois (Quiz,
 // Flashcards, Défi) jouaient LES MÊMES huit questions sous trois habillages :
 // « quelle différence, où se tester, que faire ? ». Chaque tuile répond
 // maintenant à UNE question de l'élève, et le groupe la nomme :
 //
-//   Apprendre   « je ne connais pas »        Cours, Fiche
-//   Mémoriser   « je connais mais j'oublie » Flashcards (+ Mes erreurs)
-//   Se tester   « est-ce que je sais »       Quiz, Exercice, Moi vs IA
+//   Apprendre   « je ne connais pas »    Cours, Fiche
+//   Se tester   « est-ce que je sais »   Quiz, Exercice, Mes erreurs, Moi vs IA
+//
+// LES FLASHCARDS SONT PARTIES À LEUR TOUR (Lucas, 01/10/2026 : « quiz et
+// flashcards sont la même chose, pourquoi garder les deux si ce sont les mêmes
+// questions »). Les cartes étaient fabriquées depuis les questions du quiz
+// (recto = l'énoncé, verso = la bonne réponse) : le même contenu, sans les
+// propositions. Le quiz reste — c'est lui qui nourrit couronnes et maîtrise —
+// et ses questions ratées reviennent déjà dans « Mes erreurs ». Le verbe
+// « Mémoriser » part avec elles : il n'aurait plus coiffé qu'une tuile, et
+// l'écran alignait alors deux tuiles seules l'une sous l'autre. DEUX GROUPES
+// donc — on apprend (Cours, Fiche), on se teste — et « Mes erreurs », qui
+// rejoue ce qu'on a raté, se range avec les tests. Les cartes que l'élève
+// écrit lui-même (Ma bibliothèque) ne sont pas concernées.
 //
 // Le Défi solo de leçon est parti : le mot « Défi » ne désigne plus que
 // l'arène (/defi). À sa place, l'EXERCICE — un faux contrôle rédigé par l'IA
@@ -693,42 +718,35 @@ export function matchChapters<T extends { title: string; theme: string | null }>
 export type SupportKind =
   | 'cours'
   | 'quiz'
-  | 'flashcards'
   | 'carte'
   | 'exercice'
   | 'ia'
   | 'erreurs'
 
 /** Le groupe d'une tuile : le verbe qui la range sur l'écran de chapitre. */
-export type SupportGroupe = 'apprendre' | 'memoriser' | 'tester'
+export type SupportGroupe = 'apprendre' | 'tester'
 
 export const SUPPORT_GROUPES: Record<SupportKind, SupportGroupe> = {
   cours: 'apprendre',
   carte: 'apprendre',
-  flashcards: 'memoriser',
-  erreurs: 'memoriser',
   quiz: 'tester',
   exercice: 'tester',
+  erreurs: 'tester',
   ia: 'tester',
 }
 
-/** L'ordre des groupes à l'écran : on apprend, on retient, on vérifie. */
-export const GROUPES_ORDRE: readonly SupportGroupe[] = [
-  'apprendre',
-  'memoriser',
-  'tester',
-]
+/** L'ordre des groupes à l'écran : on apprend, puis on vérifie. */
+export const GROUPES_ORDRE: readonly SupportGroupe[] = ['apprendre', 'tester']
 
 export const GROUPE_LABELS: Record<SupportGroupe, string> = {
   apprendre: 'Apprendre',
-  memoriser: 'Mémoriser',
   tester: 'Se tester',
 }
 
 /**
  * Les tuiles rangées par groupe, dans l'ordre des groupes puis dans l'ordre
- * reçu. Un groupe sans tuile n'apparaît pas : un titre « Mémoriser » au-dessus
- * de rien serait une promesse vide.
+ * reçu. Un groupe sans tuile n'apparaît pas : un titre au-dessus de rien
+ * serait une promesse vide.
  */
 export function groupSupports(
   chips: readonly SupportChip[],
@@ -744,7 +762,7 @@ export function groupSupports(
 export type SupportChip = {
   kind: SupportKind
   label: string
-  /** État lisible : « 7/10 », « 12 cartes · 4 à revoir », « Débloquer »… */
+  /** État lisible : « 7/10 », « 4 notions à revoir », « Débloquer »… */
   meta: string
   /**
    * Version COURTE de l'état, pour la pastille posée sous l'icône des tuiles
@@ -775,7 +793,6 @@ export type SupportChip = {
 export const SUPPORT_LABELS: Record<SupportKind, string> = {
   cours: 'Cours',
   quiz: 'Quiz',
-  flashcards: 'Flashcards',
   // « Fiche » — la FICHE DE RÉVISION, le mot que l'élève emploie (décision de
   // Lucas, 16/09/2026 : « renomme carte mentale par fiche »). Le support s'est
   // appelé « Carte mentale », comme la page qu'il ouvre, parce que le header
@@ -804,12 +821,6 @@ export function quizMeta(
 /** État « vierge » d'un contenu jamais joué, commun à toutes les vues. */
 export const NEVER_TRIED_LABEL = 'Jamais tenté'
 
-// Flashcards : « 12 cartes · 4 à revoir » (le « à revoir » vient de la file SRS).
-export function flashcardsMeta(cardCount: number, dueCount: number): string {
-  const cards = `${cardCount} carte${cardCount > 1 ? 's' : ''}`
-  return dueCount > 0 ? `${cards} · ${dueCount} à revoir` : cards
-}
-
 // --- Pastilles courtes des tuiles carrées -----------------------------------
 
 /**
@@ -823,15 +834,6 @@ export function quizBadge(
 ): string | null {
   if (best && best.total > 0) return `${best.score}/${best.total}`
   return questionCount > 0 ? `--/${questionCount}` : null
-}
-
-/** Flashcards : la file du jour si elle existe (c'est ce qui presse), sinon le paquet. */
-export function flashcardsBadge(
-  cardCount: number,
-  dueCount: number,
-): string | null {
-  if (dueCount > 0) return `${dueCount} à revoir`
-  return cardCount > 0 ? `${cardCount} carte${cardCount > 1 ? 's' : ''}` : null
 }
 
 /** Mes erreurs : le nombre de notions du chapitre qui attendent dans la file. */
@@ -934,4 +936,20 @@ export type SubjectTemplateData = {
    * blanche seule, sans rien casser.
    */
   papers: ExamPaper[]
+  /**
+   * Les annales CORRIGÉES de la matière à ce niveau (sujets officiels +
+   * corrigés Studuel, contenu/annales), en aperçus par année : le corrigé
+   * lui-même ne descend jamais dans le navigateur.
+   */
+  annalesCorrigees: AnneeAnnales[]
+}
+
+/**
+ * Les fiches de la matière portent-elles un numéro (1, 2, 3…) ? Pas en
+ * philosophie : ses notions (la conscience, le bonheur, l'État…) n'ont pas
+ * d'ordre, chaque professeur les traite dans celui qu'il choisit, et un
+ * numéro promettait un parcours qui n'existe pas (Lucas, 25/09/2026).
+ */
+export function fichesNumerotees(subjectSlug: string): boolean {
+  return subjectSlug !== 'philosophie'
 }

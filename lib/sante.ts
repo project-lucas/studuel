@@ -2556,6 +2556,821 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Le récap des matières révisées de l’onglet Moi se replie sur les 1 000 dernières sessions. À exécuter APRÈS la 380.',
     sonde: { type: 'rpc', fn: 'revision_par_quiz', args: {} },
   },
+  {
+    id: '382',
+    fichier: '382_rangement_programmes.sql',
+    feature:
+      'RANGER CE QUI N’EST PAS (OU PLUS) AU PROGRAMME, sans rien supprimer : en français de 1re, les œuvres des anciens programmes — dont Manon Lescaut, La Peau de chagrin et Sido, sorties du programme limitatif du bac 2027 — quittent le rayon Programme pour leur propre rayon « Anciens programmes » ; les fiches de langue d’anglais, d’espagnol et d’allemand forment le rayon « Langue » à côté des axes culturels (rayon « Culture ») ; 24 chapitres de lycée sans chapitre de programme (SNT, espagnol, HLP, SI, maths complémentaires) reçoivent le leur.',
+    siAbsente:
+      'Le rayon Programme du français de 1re mêle les anciennes œuvres aux objets d’étude du bac 2027, et quelques chapitres de lycée restent dans une liste à plat sous les chapitres rangés. Rien ne casse.',
+    // Des UPDATE sur des colonnes existantes : rien que la clé anon distingue.
+    sonde: null,
+  },
+  {
+    id: '383',
+    fichier: '383_matieres_voie_techno.sql',
+    feature:
+      'LES ENSEIGNEMENTS PROPRES À LA VOIE TECHNOLOGIQUE : philosophie, mathématiques et histoire-géographie de tronc commun techno, et les spécialités des séries STMG, STI2D, ST2S et STL — 19 matières déclarées pour les seules classes « 1re techno » et « Tle techno », dont le contenu vit au niveau général correspondant (contentLevelFor).',
+    siAbsente:
+      'La voie technologique continue de lire la philosophie, les maths et l’histoire-géographie de la voie générale, et n’a aucune spécialité. Les migrations de contenu techno qui suivent n’écrivent rien (leurs chapitres se joignent sur des matières absentes). À exécuter AVANT elles.',
+    sonde: { type: 'ligne', table: 'subjects', colonne: 'slug', valeur: 'philosophie-techno' },
+  },
+  {
+    id: '384',
+    fichier: '384_rangement_options_tle.sql',
+    feature:
+      'LES ANCIENNES FICHES DES OPTIONS DE TERMINALE (SI, EPS, latin, grec, LLCER anglais, musique) rejoignent le chapitre du programme qui les couvre, à côté du programme officiel apporté par les migrations de contenu. Rien n’est supprimé.',
+    siAbsente:
+      'Les trois fiches d’origine de chaque option de Tle restent dans une liste à plat sous les chapitres du programme. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '385',
+    fichier: '385_programmes_maths_francais_anglais.sql',
+    feature:
+      'PROGRAMMES EN VIGUEUR — 82 fiches : 14 de maths de 3e (Pythagore, transformations, Scratch, pourcentages, grandeurs composées…), 14 de maths de 1re (automatismes de l’épreuve anticipée, statistiques, Python), 9 d’allemand de 3e, 6 sur les œuvres du bac de français 2027 (Le Chevalier de la charrette, Pot-Bouille, Pluie et vent sur Télumée Miracle) et les axes culturels 2025 d’anglais en 2de, 1re et Tle.',
+    siAbsente:
+      'Ces fiches manquent : la 3e reste à 14 fiches de maths, le français de 1re sans ses œuvres 2027, l’anglais du lycée sans axes culturels. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: 'b531b475-2e30-50e9-8969-740d7561a192' },
+  },
+  {
+    id: '386',
+    fichier: '386_programmes_espagnol_allemand_lycee.sql',
+    feature:
+      'LANGUES DU LYCÉE, PROGRAMME 2025 — 72 fiches : les axes culturels et une grammaire propre à chaque classe, en espagnol et en allemand de 2de, 1re et Tle.',
+    siAbsente:
+      'L’espagnol et l’allemand du lycée gardent les mêmes fiches d’une classe à l’autre. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '4113f286-ddf7-57a8-9154-2816837bdad1' },
+  },
+  {
+    id: '387',
+    fichier: '387_programmes_options_tle.sql',
+    feature:
+      'OPTIONS DE TERMINALE — 89 fiches alignées sur les programmes officiels : LLCER anglais, grec, latin, musique, EPS et SI.',
+    siAbsente:
+      'Chaque option de Tle garde ses trois fiches d’origine. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: 'dc84aa09-719f-56b9-9821-8231fce0c9d7' },
+  },
+  {
+    id: '388',
+    fichier: '388_techno_tronc_commun.sql',
+    feature:
+      'VOIE TECHNOLOGIQUE, TRONC COMMUN — 81 fiches : philosophie de Tle techno, mathématiques de 1re et Tle techno, histoire-géographie de 1re et Tle techno. À exécuter APRÈS la 383 (matières de la voie technologique) : sans elle, rien ne s’écrit.',
+    siAbsente:
+      'La voie techno n’a aucune fiche dans ces matières. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '0fa8840b-ea9b-536d-8ea9-d80ae5a10f47' },
+  },
+  {
+    id: '389',
+    fichier: '389_techno_stmg.sql',
+    feature:
+      'VOIE TECHNOLOGIQUE, STMG — 73 fiches : management, sciences de gestion et numérique, droit et économie, management-SGN. À exécuter APRÈS la 383 (matières de la voie technologique) : sans elle, rien ne s’écrit.',
+    siAbsente:
+      'Les spécialités de STMG restent vides. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '32c42eb9-92a3-5667-b808-7103fc2e356d' },
+  },
+  {
+    id: '390',
+    fichier: '390_techno_sti2d.sql',
+    feature:
+      'VOIE TECHNOLOGIQUE, STI2D — 72 fiches : ingénierie et développement durable, innovation technologique, 2I2D, physique-chimie et mathématiques. À exécuter APRÈS la 383 (matières de la voie technologique) : sans elle, rien ne s’écrit.',
+    siAbsente:
+      'Les spécialités de STI2D restent vides. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '6cb7aadf-41e1-552f-82c2-e653fd402ea7' },
+  },
+  {
+    id: '391',
+    fichier: '391_techno_stl.sql',
+    feature:
+      'VOIE TECHNOLOGIQUE, STL — 80 fiches : SPCL, biotechnologies, biochimie-biologie, biochimie-biologie-biotechnologie. À exécuter APRÈS la 383 (matières de la voie technologique) : sans elle, rien ne s’écrit.',
+    siAbsente:
+      'Les spécialités de STL restent vides. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: 'a59eada7-900e-5ce1-9e48-610535959f4e' },
+  },
+  {
+    id: '392',
+    fichier: '392_techno_st2s.sql',
+    feature:
+      'VOIE TECHNOLOGIQUE, ST2S — 80 fiches : biologie et physiopathologie humaines, physique-chimie pour la santé, sciences et techniques sanitaires et sociales, chimie-biologie-physiopathologie. À exécuter APRÈS la 383 (matières de la voie technologique) : sans elle, rien ne s’écrit.',
+    siAbsente:
+      'Les spécialités de ST2S restent vides. Rien ne casse.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: 'cb8a3e6e-8e94-5b73-9ccb-751dfa851a76' },
+  },
+  {
+    id: '393',
+    fichier: '393_questions_college.sql',
+    feature:
+      'QUIZ À 12 QUESTIONS, COLLÈGE ET OPTIONS — 1 164 questions ajoutées aux quiz de 3e (et aux options de latin, grec, musique, arts plastiques de la 3e à la Tle), sans toucher aux questions existantes.',
+    siAbsente:
+      'Les quiz visés restent à 8 questions. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '394',
+    fichier: '394_questions_langues_lycee.sql',
+    feature:
+      'QUIZ À 12 QUESTIONS, LANGUES — 1 332 questions ajoutées aux fiches d’allemand (3e → Tle), d’anglais et d’espagnol du lycée et de LLCER anglais.',
+    siAbsente:
+      'Les quiz visés restent à 8 questions. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '395',
+    fichier: '395_questions_2de_1re_sciences.sql',
+    feature:
+      'QUIZ À 12 QUESTIONS, 2de ET SCIENCES DE 1re — 1 228 questions ajoutées.',
+    siAbsente:
+      'Les quiz visés restent à 8 questions. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '396',
+    fichier: '396_questions_1re_humanites.sql',
+    feature:
+      'QUIZ À 12 QUESTIONS, HUMANITÉS DE 1re — 1 252 questions ajoutées (français, histoire-géo, HGGSP, HLP, SES, EMC), deux par fiche de lecture, et 16 questions fausses corrigées dans les fiches de lecture.',
+    siAbsente:
+      'Les quiz visés restent à 8 questions et les questions fausses signalées restent en place. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '397',
+    fichier: '397_questions_terminale.sql',
+    feature:
+      'QUIZ À 12 QUESTIONS, TERMINALE — 1 192 questions ajoutées.',
+    siAbsente:
+      'Les quiz visés restent à 8 questions. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '398',
+    fichier: '398_cours_reecrits_1.sql',
+    feature:
+      'COURS RÉÉCRITS (1/2) — 224 cours allongés ou corrigés : anglais, maths et physique-chimie de 3e, maths de 2de, français de 3e et de 1re, histoire de Tle, fiches de lecture (lot e).',
+    siAbsente:
+      'Les cours visés restent dans leur version courte ou fautive. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '399',
+    fichier: '399_cours_reecrits_2.sql',
+    feature:
+      'COURS RÉÉCRITS (2/2) — 208 fiches de lecture de 1re allongées et corrigées (lots a à d).',
+    siAbsente:
+      'Les fiches de lecture gardent leur cours court. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '400',
+    fichier: '400_controles_3e_1.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 3e — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : allemand, anglais, arts-plastiques, emc, espagnol.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '401',
+    fichier: '401_controles_3e_2.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 3e — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : francais, grec, histoire-geo, latin, maths, musique, physique-chimie, sport.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '402',
+    fichier: '402_controles_3e_3.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 3e — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : svt, technologie.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '403',
+    fichier: '403_controles_2de_1.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 2de — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : allemand, anglais, arts-plastiques, emc.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '404',
+    fichier: '404_controles_2de_2.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 2de — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : espagnol, francais, grec, histoire-geo, latin.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '405',
+    fichier: '405_controles_2de_3.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 2de — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : maths, musique, physique-chimie, ses, snt, sport, svt.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '406',
+    fichier: '406_controles_1re_1.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : allemand, anglais, arts-plastiques, biochimie-biologie, biologie-physiopathologie.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '407',
+    fichier: '407_controles_1re_2.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : biotechnologies, droit-economie, emc, enseignement-scientifique, espagnol.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '408',
+    fichier: '408_controles_1re_3.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : francais, hggsp.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '409',
+    fichier: '409_controles_1re_4.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : histoire-geo, histoire-geo-techno, hlp, ingenierie-dd.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '410',
+    fichier: '410_controles_1re_5.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : innovation-technologique, latin, llcer-anglais, management, maths, maths-techno, musique, nsi, physique-chimie.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '411',
+    fichier: '411_controles_1re_6.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : physique-chimie-maths, physique-chimie-sante, sciences-gestion-numerique, sciences-sanitaires-sociales, ses, si.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '412',
+    fichier: '412_controles_1re_7.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 1re — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : spcl, sport, svt.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '413',
+    fichier: '413_controles_tle_1.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : allemand, anglais, arts-plastiques, biochimie-biologie-biotechnologie, chimie-biologie-physiopathologie.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '414',
+    fichier: '414_controles_tle_2.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : droit-economie, emc, enseignement-scientifique, espagnol, grec.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '415',
+    fichier: '415_controles_tle_3.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : hggsp, histoire-geo, histoire-geo-techno.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '416',
+    fichier: '416_controles_tle_4.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : hlp, i2d, latin, llcer-anglais, management-sgn.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '417',
+    fichier: '417_controles_tle_5.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : maths, maths-complementaires, maths-expertes, maths-techno, musique, nsi, philosophie.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '418',
+    fichier: '418_controles_tle_6.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : philosophie-techno, physique-chimie, physique-chimie-maths, sciences-sanitaires-sociales, ses.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '419',
+    fichier: '419_controles_tle_7.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, Tle — trois sujets par fiche (facile, moyen, difficile), barème sur 20 et corrigé type : si, spcl, sport, svt.',
+    siAbsente:
+      'Le premier sujet de chaque fiche visée est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. À exécuter APRÈS les migrations de contenu 385 → 392 : un sujet dont la fiche manque est sauté. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas (quiz_questions, lessons, chapter_exercices).
+    sonde: null,
+  },
+  {
+    id: '420',
+    fichier: '420_corrections_cours_et_quiz.sql',
+    feature:
+      'ERREURS DE COURS ET DE QUIZ CORRIGÉES — 127 fragments faux ou approximatifs relevés par les relecteurs des contrôles blancs (Arctique, traité de Paris de 1783, Schengen à 29, métropoles, élection des maires en 1882, hélicase, Univers observable, tension du secteur, estar, « Mignonne » qui est une ode…), remplacés à l’endroit exact où ils sont. À exécuter APRÈS 385 → 399.',
+    siAbsente:
+      'Les cours et les quiz visés gardent leurs erreurs. Rien ne casse.',
+    // Des remplacements dans lessons et quiz_questions : rien que la clé anon distingue.
+    sonde: null,
+  },
+  {
+    id: '421',
+    fichier: '421_exercices_6e.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e, PREMIÈRE VAGUE — 51 exercices faits comme une page de manuel (★, ★★, ★★★) pour 17 chapitres (maths, histoire-géo, français, anglais, EMC, EPS), écrits le 18/09/2026 et jamais versés en base jusque-là.',
+    siAbsente:
+      'La tuile « Exercice » de ces 17 chapitres reste sur le contrôle blanc (copie notée sur 20). Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '422',
+    fichier: '422_cours_mal_affiches.sql',
+    feature:
+      'COURS MAL AFFICHÉS CORRIGÉS — relevé du 29/09/2026 sur les 2 969 cours : deux tableaux collés qui fusionnaient à l’écran (1re et Tle physique-chimie-maths), une ligne et deux cellules vides (4e français, roman policier), un tableau de 16 colonnes coupé en deux (3e maths, racine carrée), une balise <sup> affichée telle quelle (3e latin), et 12 programmes (Python, pseudo-code, SQL) présentés en tableau avec une indentation simulée par des points, devenus de vrais blocs de code (maths 1re et techno, SPCL, I2D, management).',
+    siAbsente: 'Ces quinze cours gardent leur défaut d’affichage. Rien ne casse.',
+    // Des remplacements dans lessons : rien que la clé anon distingue.
+    sonde: null,
+  },
+  {
+    id: '423',
+    fichier: '423_questions_fiches_de_lecture.sql',
+    feature:
+      'QUESTIONS EN PLUS — LES 260 FICHES DE LECTURE DE 1re : quatre questions de plus par œuvre (8 → 12), 1 040 questions.',
+    siAbsente: 'Les quiz des fiches de lecture restent à 8 questions. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '424',
+    fichier: '424_questions_college_jumelles.sql',
+    feature:
+      'QUESTIONS EN PLUS — FICHES JUMELLES DU COLLÈGE : les fiches de 6e, 5e et 4e qui ont le même titre et le même cours qu’une fiche de 3e reçoivent ses 4 questions ajoutées (944 questions, 236 fiches : anglais, espagnol, SVT, technologie, EMC, EPS, arts, musique).',
+    siAbsente: 'Ces fiches de collège restent à 8 questions quand leur jumelle de 3e en a 12. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '425',
+    fichier: '425_corrections_erreurs_de_cours.sql',
+    feature:
+      'ERREURS DE COURS CORRIGÉES, DEUXIÈME VAGUE — 17 fragments relevés par les relecteurs des contrôles du 29-30/09/2026 : la fin d’Œdipe roi (cours et quiz), Micromégas, la mort de Nana, Rimbaud (5e), les gants près des machines tournantes (technologie 6e, consigne dangereuse), le mouvement rectiligne uniforme (5e), et trois approximations d’anglais de collège (but négatif, a few / a little, pluriel en -o).',
+    siAbsente: 'Ces cours et cette question gardent leur erreur. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '426',
+    fichier: '426_questions_college_5e_4e.sql',
+    feature:
+      'QUESTIONS EN PLUS — COLLÈGE 5e ET 4e : quatre questions de plus par fiche (8 → 12) en français, maths, histoire-géo, anglais, physique-chimie, allemand et latin (1 124 questions, les fiches communes à 5e et 4e comptées une fois par niveau).',
+    siAbsente: 'Ces quiz de 5e et de 4e restent à 8 questions. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '427',
+    fichier: '427_questions_6e.sql',
+    feature:
+      'QUESTIONS EN PLUS — 6e : quatre questions de plus par fiche (8 → 12) dans les dix matières de 6e qui n’en avaient que huit (504 questions).',
+    siAbsente: 'Ces quiz de 6e restent à 8 questions. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '428',
+    fichier: '428_controles_5e.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 5e — trois sujets par fiche (Facile · Moyen · Difficile) avec leur corrigé type : 408 sujets, 136 fiches (anglais, français, histoire-géo, maths, physique-chimie, allemand, latin).',
+    siAbsente:
+      'Le contrôle blanc de ces fiches de 5e est rédigé par l’IA à la demande, sans corrigé de référence. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '429',
+    fichier: '429_controles_4e.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE, 4e — trois sujets par fiche avec leur corrigé type : 225 sujets, 75 fiches (maths, français, histoire-géo, latin).',
+    siAbsente:
+      'Le contrôle blanc de ces fiches de 4e est rédigé par l’IA à la demande, sans corrigé de référence. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '430',
+    fichier: '430_controles_fiches_de_lecture.sql',
+    feature:
+      'CONTRÔLES BLANCS ÉCRITS D’AVANCE — LES 260 FICHES DE LECTURE DE 1re : question d’interprétation, étude d’un procédé, plan de dissertation, avec leur corrigé type (780 sujets).',
+    siAbsente:
+      'Le contrôle blanc des fiches de lecture est rédigé par l’IA à la demande, sans corrigé de référence. Rien ne casse.',
+    sonde: null,
+  },
+  {
+    id: '431',
+    fichier: '431_exercices_3e_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (1/4) — 54 exercices faits comme une page de manuel (★, ★★, ★★★) pour 18 chapitres : français.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '432',
+    fichier: '432_exercices_3e_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (2/4) — 78 exercices faits comme une page de manuel (★, ★★, ★★★) pour 26 chapitres : histoire-géo.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '433',
+    fichier: '433_exercices_3e_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (3/4) — 84 exercices faits comme une page de manuel (★, ★★, ★★★) pour 28 chapitres : maths.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '434',
+    fichier: '434_exercices_3e_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (4/4) — 93 exercices faits comme une page de manuel (★, ★★, ★★★) pour 31 chapitres : physique-chimie.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '435',
+    fichier: '435_exercices_1re.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re — 93 exercices faits comme une page de manuel (★, ★★, ★★★) pour 31 chapitres : français.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '436',
+    fichier: '436_exercices_tle_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (1/20) — 75 exercices faits comme une page de manuel (★, ★★, ★★★) pour 25 chapitres : allemand, anglais.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '437',
+    fichier: '437_exercices_tle_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (2/20) — 99 exercices faits comme une page de manuel (★, ★★, ★★★) pour 33 chapitres : espagnol, LLCER anglais.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '438',
+    fichier: '438_exercices_tle_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (3/20) — 90 exercices faits comme une page de manuel (★, ★★, ★★★) pour 30 chapitres : grec, latin.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '439',
+    fichier: '439_exercices_tle_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (4/20) — 99 exercices faits comme une page de manuel (★, ★★, ★★★) pour 33 chapitres : histoire-géo (lots k154, k155, k156).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '440',
+    fichier: '440_exercices_tle_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (5/20) — 60 exercices faits comme une page de manuel (★, ★★, ★★★) pour 20 chapitres : histoire-géo (lots k157, k158).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '441',
+    fichier: '441_exercices_tle_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (6/20) — 108 exercices faits comme une page de manuel (★, ★★, ★★★) pour 36 chapitres : EMC, HGGSP.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '442',
+    fichier: '442_exercices_tle_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (7/20) — 87 exercices faits comme une page de manuel (★, ★★, ★★★) pour 29 chapitres : histoire-géo (voie techno), philosophie (voie techno).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '443',
+    fichier: '443_exercices_tle_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (8/20) — 99 exercices faits comme une page de manuel (★, ★★, ★★★) pour 33 chapitres : HLP, musique.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '444',
+    fichier: '444_exercices_tle_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (9/20) — 87 exercices faits comme une page de manuel (★, ★★, ★★★) pour 29 chapitres : philosophie, EPS.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '445',
+    fichier: '445_exercices_tle_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (10/20) — 93 exercices faits comme une page de manuel (★, ★★, ★★★) pour 31 chapitres : maths expertes, maths.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '446',
+    fichier: '446_exercices_tle_11.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (11/20) — 90 exercices faits comme une page de manuel (★, ★★, ★★★) pour 30 chapitres : maths complémentaires, maths (voie techno).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '447',
+    fichier: '447_exercices_tle_12.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (12/20) — 93 exercices faits comme une page de manuel (★, ★★, ★★★) pour 31 chapitres : physique-chimie.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '448',
+    fichier: '448_exercices_tle_13.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (13/20) — 96 exercices faits comme une page de manuel (★, ★★, ★★★) pour 32 chapitres : I2D, physique-chimie et maths (STI2D, STL).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '449',
+    fichier: '449_exercices_tle_14.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (14/20) — 66 exercices faits comme une page de manuel (★, ★★, ★★★) pour 22 chapitres : SVT.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '450',
+    fichier: '450_exercices_tle_15.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (15/20) — 108 exercices faits comme une page de manuel (★, ★★, ★★★) pour 36 chapitres : enseignement scientifique, NSI.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '451',
+    fichier: '451_exercices_tle_16.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (16/20) — 93 exercices faits comme une page de manuel (★, ★★, ★★★) pour 31 chapitres : SES.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '452',
+    fichier: '452_exercices_tle_17.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (17/20) — 96 exercices faits comme une page de manuel (★, ★★, ★★★) pour 32 chapitres : droit et économie, management, sciences de gestion et numérique.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '453',
+    fichier: '453_exercices_tle_18.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (18/20) — 66 exercices faits comme une page de manuel (★, ★★, ★★★) pour 22 chapitres : sciences de l’ingénieur.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '454',
+    fichier: '454_exercices_tle_19.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (19/20) — 96 exercices faits comme une page de manuel (★, ★★, ★★★) pour 32 chapitres : biochimie-biologie-biotechnologie, SPCL.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '455',
+    fichier: '455_exercices_tle_20.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (20/20) — 96 exercices faits comme une page de manuel (★, ★★, ★★★) pour 32 chapitres : chimie, biologie et physiopathologie, sciences et techniques sanitaires et sociales.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes d’`exercices` : la policy ne les sert qu’aux élèves connectés.
+    sonde: null,
+  },
+  {
+    id: '456',
+    fichier: '456_actualite_cours_quiz_controles.sql',
+    feature:
+      'COURS, QUIZ ET CONTRÔLES REMIS À JOUR (3e → Tle) — 48 passages périmés ou inexacts : ASEAN à onze États (Timor oriental, 2025), zone euro à 21 (Bulgarie, 2026), 44 pays les moins avancés, Grand oral de la session 2027 (deux temps de dix minutes, coefficient 8), ordonnance du 21 avril 1944 rendue au CFLN, Objectifs de développement durable (17 objectifs, pas 17 cibles), web versé au domaine public en 1993, majorité à 18 ans (2,4 millions d’électeurs), réchauffement de l’Arctique, 8 milliards d’habitants dépassés.',
+    siAbsente:
+      'Ces cours, ces questions et ces corrigés de contrôle gardent leurs chiffres périmés. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '457',
+    fichier: '457_exercices_3e_retouche.sql',
+    feature:
+      'CAHIER DE 3e, RETOUCHE — l’exercice « Les Françaises deviennent électrices » (histoire) attribue l’ordonnance du 21 avril 1944 au Comité français de libération nationale. Le lot histoire-geo.k012 est reversé en entier (27 exercices, identifiants inchangés).',
+    siAbsente:
+      'Le document de cet exercice attribue encore l’ordonnance au gouvernement provisoire. Rien ne casse. À exécuter APRÈS la 432.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '458',
+    fichier: '458_exercices_tle_retouche.sql',
+    feature:
+      'CAHIER DE Tle, RETOUCHE — les exercices de SI sur le Grand oral suivent le format de la session 2027 (deux temps de dix minutes, plus de partie sur l’orientation). Le lot si.k195 est reversé en entier (33 exercices, identifiants inchangés).',
+    siAbsente:
+      'La frise de l’exercice montre encore trois temps de cinq, dix et cinq minutes. Rien ne casse. À exécuter APRÈS la 453.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '459',
+    fichier: '459_explications_de_quiz.sql',
+    feature:
+      'EXPLICATIONS DE QUIZ RÉÉCRITES (3e → Tle) — les 71 explications de moins de 15 caractères (« Symbole N. », « Créé en 1894. », un calcul nu) redisent la méthode en une ou deux phrases ; deux fiches jumelles de 5e et de 4e suivent.',
+    siAbsente:
+      'Ces questions gardent une explication d’un mot. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '460',
+    fichier: '460_questions_autonomes.sql',
+    feature:
+      'QUESTIONS DE QUIZ RENDUES AUTONOMES (1re, Tle) — 23 questions renvoyaient à « cette fonction » ou à « l’exemple de la fiche » : posées seules (flashcards, file « À revoir », duel), elles n’avaient pas de réponse possible. Chacune porte maintenant ses données.',
+    siAbsente:
+      'Ces questions restent sans réponse possible hors de leur quiz. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '461',
+    fichier: '461_exercices_3e_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (5/7) — SVT, première partie : 66 exercices faits comme une page de manuel (★, ★★, ★★★) pour 22 chapitres.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '462',
+    fichier: '462_exercices_3e_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (6/7) — SVT (fin) et EMC : 57 exercices pour 19 chapitres.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '463',
+    fichier: '463_exercices_3e_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (7/7) — technologie : 69 exercices pour 23 chapitres. Avec les 461 et 462, toutes les matières des épreuves écrites du brevet ont leur cahier.',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '464',
+    fichier: '464_phrases_d_un_autre_niveau.sql',
+    feature:
+      'PHRASES ÉCRITES POUR UN AUTRE NIVEAU — des cours et des sujets de contrôle partagés entre le collège et le lycée (fiches jumelles) parlaient du bac à un élève de 3e ou de 5e, et du brevet à un élève de Terminale : 24 passages (allemand, espagnol, anglais) reçoivent une formulation valable à tous les niveaux.',
+    siAbsente:
+      'Ces cours gardent « au bac » en 3e et ces sujets « du brevet » au lycée. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '465',
+    fichier: '465_classement_amis.sql',
+    feature:
+      'LE CLASSEMENT ENTRE AMIS (onglet Moi, bloc « Toi et tes amis », qui remplace « Tes matières ») : `classement_amis()` rend, pour l’élève connecté et chacun de ses amis ACCEPTÉS, le prénom, le blason, le total de trophées, les trophées gagnés dans la semaine (somme des `game_matches.delta` depuis le lundi UTC), le temps de travail de la semaine (`work_daily`) et le cumul. SECURITY DEFINER sans paramètre : le périmètre — soi et ses amis — est dans la fonction, rien à falsifier.',
+    siAbsente:
+      'Le bloc ne montre que la colonne de l’élève (ses propres trophées et son temps de la semaine) et annonce que le classement de ses amis arrive. Rien ne casse. À exécuter APRÈS la 464.',
+    sonde: { type: 'rpc', fn: 'classement_amis', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

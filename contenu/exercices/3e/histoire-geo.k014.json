@@ -1,0 +1,2609 @@
+{
+  "niveau": "3e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "e0803bfa-c2f5-5ae6-bfdc-284d5e9dbbee",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les dates des indépendances",
+      "competence": "se-reperer-temps",
+      "situation": "Lina prépare une frise pour son cahier d’histoire : elle y place quatre repères de la décolonisation, entre 1945 et 1965.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La décolonisation, 1945-1965",
+          "debut": 1945,
+          "fin": 1965,
+          "pas": 5,
+          "periodes": [
+            {
+              "id": "algerie",
+              "debut": 1954,
+              "fin": 1962,
+              "nom": "Guerre d’Algérie",
+              "teinte": "corail"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "inde",
+              "date": 1947,
+              "nom": "Inde indépendante"
+            },
+            {
+              "id": "dbp",
+              "date": 1954,
+              "nom": "Diên Biên Phu"
+            },
+            {
+              "id": "afrique",
+              "date": 1960,
+              "nom": "Année de l’Afrique"
+            },
+            {
+              "id": "evian",
+              "date": 1962,
+              "nom": "Algérie indépendante"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui met fin à la guerre d’Indochine.",
+          "reponse": [
+            "dbp"
+          ],
+          "aide": "La défaite française se joue dans une vallée du nord du Vietnam, en 1954.",
+          "explication": "La défaite française de **Diên Biên Phu** (1954) met fin à la guerre d’Indochine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent l’indépendance de l’Inde de celle de l’Algérie ?",
+          "reponse": 15,
+          "unite": "ans",
+          "aide": "Lis les deux dates sur la frise, puis soustrais.",
+          "explication": "1962 − 1947 = **15 ans**. L’Inde, colonie britannique, est indépendante la première."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années dure la guerre d’Algérie, d’après la période colorée ?",
+          "reponse": 8,
+          "unite": "ans",
+          "aide": "Regarde le début et la fin de la période.",
+          "explication": "De 1954 à 1962 : **huit ans** de guerre, de la « Toussaint rouge » à l’indépendance."
+        }
+      ]
+    },
+    {
+      "chapitre": "e0803bfa-c2f5-5ae6-bfdc-284d5e9dbbee",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une lettre de Dakar",
+      "competence": "analyser-texte",
+      "situation": "Pour comprendre la décolonisation de l’intérieur, Malik lit une lettre imaginaire écrite en 1960 par un instituteur sénégalais à une amie française.",
+      "documents": [
+        {
+          "id": "lettre",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Dakar, 1960",
+          "source": "Lettre écrite pour l’exercice.",
+          "blocs": [
+            "Dakar, le 20 août 1960",
+            "Chère Marie, en 1944, mon père a [[c|combattu]] dans l’armée française pour libérer l’Europe. À son retour, il a répété que l’Afrique avait payé sa part de la victoire et qu’elle attendait autre chose que des remerciements.",
+            "Aujourd’hui, le drapeau change, et aucune bataille n’a eu lieu : tout a été discuté à la table des négociations. Mais tout n’est pas réglé. Notre [[d|arachide]] part presque toute à l’étranger, et nous devons acheter à l’extérieur ce que nos usines ne fabriquent pas encore. L’indépendance est une porte qui s’ouvre, pas une maison construite."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lettre",
+          "enonce": "Touche le mot qui rappelle que les colonies ont participé à la victoire de 1945.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche ce que le père a fait pendant la guerre.",
+          "explication": "Le père a **combattu** dans l’armée française : les colonies réclament une contrepartie à leur effort de guerre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle cause de la décolonisation le père invoque-t-il dans sa lettre ?",
+          "options": [
+            "La participation des colonies à la victoire",
+            "L’affaiblissement des puissances coloniales",
+            "La Charte de l’ONU",
+            "L’hostilité des deux Grands aux empires"
+          ],
+          "reponse": 0,
+          "aide": "Relis la phrase sur l’armée française en 1944.",
+          "explication": "Il rappelle l’effort de guerre des colonies : c’est la **participation à la victoire**, qui nourrit les revendications."
+        },
+        {
+          "type": "zone",
+          "document": "lettre",
+          "enonce": "Touche le mot qui montre que l’économie reste dépendante de l’extérieur.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Quel produit « part presque tout à l’étranger » ?",
+          "explication": "L’**arachide** est exportée presque brute : l’économie dépend toujours de l’extérieur."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de la lettre.",
+          "texte": "L’indépendance ___ ne suffit pas : l’économie reste ___ des anciennes puissances.",
+          "reponses": [
+            [
+              "politique"
+            ],
+            [
+              "dépendante"
+            ]
+          ],
+          "banque": [
+            "politique",
+            "dépendante",
+            "militaire",
+            "indépendante"
+          ],
+          "aide": "L’auteur dit que l’indépendance est « une porte qui s’ouvre, pas une maison construite ».",
+          "explication": "L’indépendance **politique** ne suffit pas : l’économie reste **dépendante**, comme le dit la fin du cours."
+        }
+      ]
+    },
+    {
+      "chapitre": "e0803bfa-c2f5-5ae6-bfdc-284d5e9dbbee",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux voies vers l’indépendance",
+      "competence": "lire-carte",
+      "situation": "Sofia compare quatre territoires sur une carte et dans un tableau : certains ont obtenu leur indépendance par la négociation, d’autres par la guerre.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre lieux de la décolonisation",
+          "fond": "monde",
+          "cadrage": [
+            -30,
+            -15,
+            130,
+            50
+          ],
+          "lieux": [
+            {
+              "id": "delhi",
+              "lieu": "delhi",
+              "symbole": "point",
+              "nom": "Delhi"
+            },
+            {
+              "id": "dbp",
+              "lon": 103.02,
+              "lat": 21.39,
+              "symbole": "point",
+              "nom": "Diên Biên Phu"
+            },
+            {
+              "id": "alger",
+              "lieu": "alger",
+              "symbole": "point",
+              "nom": "Alger"
+            },
+            {
+              "id": "dakar",
+              "lieu": "dakar",
+              "symbole": "point",
+              "nom": "Dakar"
+            },
+            {
+              "id": "bandung",
+              "lon": 107.61,
+              "lat": -6.92,
+              "symbole": "point",
+              "nom": "Bandung"
+            }
+          ]
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Quatre destins",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Territoire",
+            "Puissance",
+            "Voie",
+            "Bilan"
+          ],
+          "lignes": [
+            [
+              "Inde",
+              "Royaume-Uni",
+              "Négociée",
+              "Partition sanglante"
+            ],
+            [
+              "Sénégal",
+              "France",
+              "Négociée",
+              "Indépendance en 1960"
+            ],
+            [
+              "Indochine",
+              "France",
+              "Par la guerre",
+              "Défaite française en 1954"
+            ],
+            [
+              "Algérie",
+              "France",
+              "Par la guerre",
+              "Accords d’Évian, 1962"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les deux** lieux d’une indépendance obtenue par la guerre contre la France.",
+          "reponse": [
+            "dbp",
+            "alger"
+          ],
+          "multiple": true,
+          "aide": "Dans le tableau, repère les deux lignes « Par la guerre ».",
+          "explication": "**Diên Biên Phu** (Indochine) et **Alger** (Algérie) : deux guerres menées contre la France."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville où se réunissent en 1955 vingt-neuf pays d’Asie et d’Afrique qui refusent de choisir entre les deux blocs.",
+          "reponse": [
+            "bandung"
+          ],
+          "aide": "La conférence de 1955 se tient en Indonésie, sur l’île de Java.",
+          "explication": "La conférence de **Bandung** (1955) condamne le colonialisme et refuse le choix entre les deux blocs : c’est l’acte de naissance du tiers-monde politique."
+        },
+        {
+          "type": "zone",
+          "document": "tableau",
+          "enonce": "Touche le prix payé par l’Inde pour son indépendance négociée.",
+          "reponse": [
+            "r0c3"
+          ],
+          "aide": "Regarde la ligne « Inde », dernière colonne.",
+          "explication": "L’indépendance de l’Inde (1947) s’accompagne d’une **partition sanglante** entre l’Inde et le Pakistan."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion le tableau permet-il de tirer ?",
+          "options": [
+            "La voie négociée n’a pas évité toutes les violences",
+            "Seule la guerre a conduit à l’indépendance",
+            "Toutes les indépendances ont été obtenues en 1960",
+            "La France a accordé l’indépendance sans résistance partout"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la colonne « Bilan » de l’Inde, pourtant indépendante sans guerre contre Londres.",
+          "explication": "L’Inde a négocié son indépendance, mais **la partition a fait de nombreuses victimes** : négocier ne garantit pas l’absence de violences."
+        }
+      ]
+    },
+    {
+      "chapitre": "ec58f7aa-3ac6-522b-a154-d39c11aff8b0",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une guerre froide en cinq dates",
+      "competence": "se-reperer-temps",
+      "situation": "Hugo reporte sur une frise cinq repères de la guerre froide, de 1947 à 1962, pour voir comment les deux blocs se sont installés.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La guerre froide, 1945-1965",
+          "debut": 1945,
+          "fin": 1965,
+          "pas": 5,
+          "periodes": [
+            {
+              "id": "coree",
+              "debut": 1950,
+              "fin": 1953,
+              "nom": "Guerre de Corée",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "truman",
+              "date": 1947,
+              "nom": "Doctrine Truman"
+            },
+            {
+              "id": "otan",
+              "date": 1949,
+              "nom": "Naissance de l’OTAN"
+            },
+            {
+              "id": "varsovie",
+              "date": 1955,
+              "nom": "Pacte de Varsovie"
+            },
+            {
+              "id": "mur",
+              "date": 1961,
+              "nom": "Mur de Berlin"
+            },
+            {
+              "id": "cuba",
+              "date": 1962,
+              "nom": "Crise de Cuba"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la date de création du pacte de Varsovie, l’alliance militaire du bloc de l’Est.",
+          "reponse": [
+            "varsovie"
+          ],
+          "aide": "L’OTAN est l’alliance de l’Ouest ; le pacte de Varsovie est celle de l’Est, créée plus tard.",
+          "explication": "Le **pacte de Varsovie** naît en **1955**, en réponse à l’OTAN."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la création de l’OTAN de celle du pacte de Varsovie ?",
+          "reponse": 6,
+          "unite": "ans",
+          "aide": "Lis les deux dates sur la frise, puis soustrais.",
+          "explication": "1955 − 1949 = **6 ans**. Chaque bloc se dote de son alliance militaire."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel événement de la frise suit directement la création du pacte de Varsovie ?",
+          "options": [
+            "Le mur de Berlin",
+            "La crise de Cuba",
+            "La doctrine Truman",
+            "La guerre de Corée"
+          ],
+          "reponse": 0,
+          "aide": "Lis la frise de gauche à droite, à partir de 1955.",
+          "explication": "Après 1955 vient le **mur de Berlin** (1961), puis la crise de Cuba (1962)."
+        }
+      ]
+    },
+    {
+      "chapitre": "ec58f7aa-3ac6-522b-a154-d39c11aff8b0",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Treize jours à la Maison-Blanche",
+      "competence": "analyser-document",
+      "situation": "Octobre 1962 : des missiles soviétiques sont découverts à Cuba, à environ 150 kilomètres des côtes américaines. Elsa suit la crise sur une carte et dans un journal de bord.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Cuba, à côté des États-Unis",
+          "fond": "monde",
+          "cadrage": [
+            -105,
+            12,
+            -65,
+            42
+          ],
+          "lieux": [
+            {
+              "id": "washington",
+              "lieu": "washington",
+              "symbole": "point",
+              "nom": "Washington"
+            },
+            {
+              "id": "havane",
+              "lon": -82.37,
+              "lat": 23.13,
+              "symbole": "point",
+              "nom": "La Havane"
+            },
+            {
+              "id": "miami",
+              "lieu": "miami",
+              "symbole": "point",
+              "nom": "Miami"
+            }
+          ]
+        },
+        {
+          "id": "journal",
+          "type": "tableau",
+          "titre": "Journal de la crise, octobre 1962",
+          "source": "Dates arrondies au jour, d’après le cours.",
+          "colonnes": [
+            "Date",
+            "Événement"
+          ],
+          "lignes": [
+            [
+              "16 octobre",
+              "Kennedy apprend l’existence des missiles"
+            ],
+            [
+              "22 octobre",
+              "Kennedy annonce un blocus naval de Cuba"
+            ],
+            [
+              "28 octobre",
+              "Khrouchtchev accepte de retirer les missiles"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la capitale de Cuba.",
+          "reponse": [
+            "havane"
+          ],
+          "aide": "C’est la grande ville de l’île, tout au nord-ouest.",
+          "explication": "**La Havane** est la capitale de Cuba, à environ 150 km des côtes de la Floride."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de jours s’écoulent entre l’annonce du blocus (22 octobre) et l’accord du 28 octobre ?",
+          "reponse": 6,
+          "unite": "jours",
+          "aide": "Lis les deux dates dans le journal, puis soustrais.",
+          "explication": "28 − 22 = **6 jours**. La crise dure treize jours en tout, du 16 au 28 octobre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que choisit Kennedy le 22 octobre ?",
+          "options": [
+            "Un blocus naval, pour ne pas attaquer directement",
+            "Une invasion immédiate de l’île",
+            "Le retrait de ses propres troupes d’Europe",
+            "Une négociation secrète à Berlin"
+          ],
+          "reponse": 0,
+          "aide": "Relis la ligne du 22 octobre dans le journal.",
+          "explication": "Kennedy impose un **blocus naval** : c’est une pression forte, sans coup de feu, qui laisse à Khrouchtchev une porte de sortie."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète l’issue de la crise.",
+          "texte": "Khrouchtchev retire ses ___ ; les États-Unis s’engagent à ne pas ___ Cuba.",
+          "reponses": [
+            [
+              "missiles"
+            ],
+            [
+              "envahir"
+            ]
+          ],
+          "banque": [
+            "missiles",
+            "envahir",
+            "soldats",
+            "blocus"
+          ],
+          "aide": "Regarde ce que Khrouchtchev accepte de retirer.",
+          "explication": "Les **missiles** soviétiques partent ; les États-Unis promettent de ne pas **envahir** Cuba, et retirent discrètement leurs missiles de Turquie."
+        }
+      ]
+    },
+    {
+      "chapitre": "ec58f7aa-3ac6-522b-a154-d39c11aff8b0",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le mur et les départs",
+      "competence": "lire-graphique",
+      "situation": "Jusqu’en 1961, des milliers d’Allemands de l’Est passent chaque année à l’Ouest. Yanis croise un graphique et le récit d’une Berlinoise imaginaire.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Départs d’Allemands de l’Est vers l’Ouest",
+          "source": "Chiffres arrondis, ordres de grandeur.",
+          "categories": [
+            "1949",
+            "1953",
+            "1956",
+            "1960",
+            "1961",
+            "1962"
+          ],
+          "series": [
+            {
+              "nom": "Départs",
+              "valeurs": [
+                129,
+                331,
+                279,
+                199,
+                207,
+                21
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Départs par an",
+            "unite": "en milliers",
+            "min": 0,
+            "max": 350,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Berlin, dimanche 13 août 1961",
+          "source": "Récit écrit pour l’exercice.",
+          "blocs": [
+            "Ce matin, Anna n’a pas pu aller voir sa tante à l’Ouest. Pendant la nuit, des soldats ont déroulé des [[b|barbelés]] au milieu des rues, puis on a commencé à bâtir un mur.",
+            "Dans les journaux, le gouvernement parle de « protéger » le pays. Dans la rue, tout le monde sait pourquoi : depuis des années, trop de gens s’en vont."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche l’année où les départs ont été les plus nombreux.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "En **1953**, plus de 300 000 personnes quittent la RDA : c’est le pic du graphique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de milliers de départs compte-t-on environ en 1962 ?",
+          "reponse": 21,
+          "unite": "milliers",
+          "tolerance": 3,
+          "aide": "Regarde la dernière barre ; l’axe est gradué en milliers.",
+          "explication": "Environ **21 000** départs en 1962, contre plus de 200 000 en 1961."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment expliquer la chute spectaculaire entre 1961 et 1962 ?",
+          "options": [
+            "Le mur de Berlin ferme la frontière",
+            "La RDA est devenue plus riche que la RFA",
+            "Les Allemands de l’Ouest refusent d’accueillir les réfugiés",
+            "La guerre de Corée a éclaté"
+          ],
+          "reponse": 0,
+          "aide": "Quelle date du récit est située au milieu de l’année 1961 ?",
+          "explication": "Le **mur de Berlin**, construit dans la nuit du 12 au 13 août 1961, rend les départs presque impossibles."
+        },
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche le mot qui montre que la frontière est fermée par la force.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Que déroulent les soldats au milieu des rues ?",
+          "explication": "Les **barbelés** déroulés par les soldats ferment la ville avant même que le mur soit bâti."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le véritable but du mur, d’après le graphique ET le récit ?",
+          "options": [
+            "Arrêter les départs vers l’Ouest",
+            "Protéger Berlin-Est d’une invasion militaire",
+            "Séparer deux armées sur le point de se battre",
+            "Faciliter les échanges commerciaux"
+          ],
+          "reponse": 0,
+          "aide": "Reviens à la dernière phrase du récit, puis regarde les barres avant 1961.",
+          "explication": "Le mur sert à **arrêter les départs vers l’Ouest** : le gouvernement de RDA perd ses habitants, et le graphique le montre."
+        }
+      ]
+    },
+    {
+      "chapitre": "c715f435-ea13-5b1c-9d45-a1440d2aa8fb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les traités de la détente",
+      "competence": "lire-tableau",
+      "situation": "Après la peur de 1962, les deux blocs signent des accords pour encadrer leur rivalité. Clara les range dans un tableau.",
+      "documents": [
+        {
+          "id": "traites",
+          "type": "tableau",
+          "titre": "Les accords de la détente",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Accord",
+            "Année",
+            "Objet"
+          ],
+          "lignes": [
+            [
+              "Interdiction des essais atmosphériques",
+              "1963",
+              "Le nucléaire"
+            ],
+            [
+              "Non-prolifération",
+              "1968",
+              "Limiter le nombre de puissances nucléaires"
+            ],
+            [
+              "SALT I",
+              "1972",
+              "Les armements stratégiques"
+            ],
+            [
+              "Acte final d’Helsinki",
+              "1975",
+              "Frontières et droits de l’homme"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "traites",
+          "enonce": "Touche l’année de la signature de SALT I.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Repère la ligne SALT I, puis la colonne « Année ».",
+          "explication": "**SALT I** est signé en **1972** : il limite les armements stratégiques des deux superpuissances."
+        },
+        {
+          "type": "zone",
+          "document": "traites",
+          "enonce": "Touche l’accord qui porte à la fois sur les frontières et sur les droits de l’homme.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Regarde la colonne « Objet ».",
+          "explication": "L’**acte final d’Helsinki** (1975) reconnaît les frontières et évoque les droits de l’homme."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le traité de non-prolifération de l’acte final d’Helsinki ?",
+          "reponse": 7,
+          "unite": "ans",
+          "aide": "Lis les deux années dans le tableau, puis soustrais.",
+          "explication": "1975 − 1968 = **7 ans**. Tout au long de la détente, les accords se multiplient."
+        }
+      ]
+    },
+    {
+      "chapitre": "c715f435-ea13-5b1c-9d45-a1440d2aa8fb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "1989 : l’année des révolutions",
+      "competence": "lire-carte",
+      "situation": "En 1989, les régimes communistes d’Europe centrale s’effondrent l’un après l’autre. Théo repère les pays concernés sur la carte d’Europe.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "L’Europe en 1989",
+          "fond": "europe",
+          "regionsCliquables": true,
+          "source": "Les frontières sont celles d’aujourd’hui."
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Ce qui se passe en 1989",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Pays",
+            "Événement"
+          ],
+          "lignes": [
+            [
+              "Pologne",
+              "Le syndicat Solidarność conteste le régime"
+            ],
+            [
+              "Hongrie",
+              "La frontière avec l’Ouest s’ouvre"
+            ],
+            [
+              "Tchécoslovaquie",
+              "La « révolution de velours »"
+            ],
+            [
+              "RDA",
+              "Le mur de Berlin tombe le 9 novembre"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le pays où le syndicat Solidarność conteste le régime.",
+          "reponse": [
+            "POL"
+          ],
+          "aide": "Ce pays a pour capitale Varsovie et borde la mer Baltique.",
+          "explication": "**La Pologne** : Solidarność, syndicat libre, incarne la contestation du régime communiste."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les deux** pays qui formaient la Tchécoslovaquie (« révolution de velours »).",
+          "reponse": [
+            "CZE",
+            "SVK"
+          ],
+          "multiple": true,
+          "aide": "La Tchécoslovaquie est aujourd’hui divisée en deux États : Tchéquie et Slovaquie.",
+          "explication": "La Tchécoslovaquie est aujourd’hui divisée en **Tchéquie** et **Slovaquie** ; la « révolution de velours » y renverse le régime sans violence."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le pays qui ouvre sa frontière avec l’Ouest.",
+          "reponse": [
+            "HUN"
+          ],
+          "aide": "Ce pays est entre la Slovaquie, la Roumanie et l’Autriche.",
+          "explication": "**La Hongrie** ouvre sa frontière : c’est par là que passent de nombreux Allemands de l’Est."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’ensemble de ces événements de 1989 ?",
+          "options": [
+            "Les régimes communistes sont contestés de l’intérieur par leurs peuples",
+            "Les armées de l’OTAN envahissent peu à peu l’Europe de l’Est communiste",
+            "L’URSS impose partout ses réformes par la force de ses chars et de son armée",
+            "Les États-Unis rachètent un à un les pays de l’Est avec leurs dollars"
+          ],
+          "reponse": 0,
+          "aide": "Qui agit dans chaque ligne du tableau : des armées étrangères ou des populations ?",
+          "explication": "La chute du Mur n’est pas une victoire militaire : des **régimes cessent d’être crus par leurs propres populations**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c715f435-ea13-5b1c-9d45-a1440d2aa8fb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "De Gorbatchev à la fin de l’URSS",
+      "competence": "analyser-document",
+      "situation": "Noa croise une frise des années 1985-1991 avec le journal imaginaire d’un lycéen de Leipzig, en RDA, pour comprendre pourquoi le bloc de l’Est s’effondre.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "1985-1991",
+          "debut": 1985,
+          "fin": 1991,
+          "pas": 1,
+          "evenements": [
+            {
+              "id": "gorbatchev",
+              "date": 1985,
+              "nom": "Gorbatchev"
+            },
+            {
+              "id": "tchernobyl",
+              "date": 1986,
+              "nom": "Tchernobyl"
+            },
+            {
+              "id": "mur",
+              "date": 1989,
+              "nom": "Chute du Mur"
+            },
+            {
+              "id": "reunif",
+              "date": 1990,
+              "nom": "Réunification"
+            },
+            {
+              "id": "urss",
+              "date": 1991,
+              "nom": "Fin de l’URSS"
+            }
+          ]
+        },
+        {
+          "id": "journal",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Leipzig, lundi 9 octobre 1989",
+          "source": "Journal imaginaire, écrit pour l’exercice.",
+          "blocs": [
+            "Ce soir, des dizaines de milliers de personnes ont marché dans les rues en criant « Nous sommes le peuple ». Les policiers étaient là, mais [[p|personne]] n’a [[p|tiré]].",
+            "Plus tard, j’ai entendu dire qu’à Moscou, on n’enverrait pas les chars. Si c’est vrai, le régime ne tiendra plus longtemps."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la catastrophe de 1986 qui ébranle la confiance dans le régime soviétique.",
+          "reponse": [
+            "tchernobyl"
+          ],
+          "aide": "C’est l’accident d’une centrale nucléaire, en Ukraine soviétique.",
+          "explication": "**Tchernobyl** (1986) détruit la confiance dans le régime, qui a tardé à dire la vérité."
+        },
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche les deux mots qui montrent que la manifestation du 9 octobre n’a pas été réprimée.",
+          "reponse": [
+            "p"
+          ],
+          "aide": "Cherche le sujet et le verbe de la phrase « … n’a … ».",
+          "explication": "« **Personne** n’a **tiré** » : le régime n’ose plus réprimer, ce qui encourage les manifestants."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de jours séparent cette manifestation (9 octobre) de la chute du Mur (9 novembre) ?",
+          "reponse": 31,
+          "unite": "jours",
+          "aide": "Octobre compte 31 jours : du 9 octobre au 9 novembre, il s’écoule un mois entier.",
+          "explication": "Du 9 octobre au 9 novembre 1989, il s’écoule **31 jours**. Le mouvement va très vite."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Gorbatchev arrive au pouvoir",
+            "Le mur de Berlin tombe",
+            "L’Allemagne est réunifiée",
+            "L’URSS disparaît"
+          ],
+          "aide": "Utilise la frise, de gauche à droite.",
+          "explication": "**1985 → 1989 → 1990 → 1991** : le bloc de l’Est se défait en six ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre le document 2 sur les causes de la chute du bloc de l’Est ?",
+          "options": [
+            "Des régimes que leurs peuples ne croient plus et que l’URSS n’ose plus défendre",
+            "Une victoire militaire de l’OTAN sur les armées du pacte de Varsovie",
+            "Une guerre civile en RDA qui aurait renversé le régime par les armes",
+            "Le succès des plans quinquennaux qui ont enrichi tous les pays de l’Est"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière phrase : qu’est-ce que l’auteur attend de Moscou ?",
+          "explication": "Les manifestants ne craignent plus la répression et l’URSS ne veut plus envoyer ses chars : les régimes **ne tiennent plus**."
+        }
+      ]
+    },
+    {
+      "chapitre": "4a141259-43ec-58de-ae70-e895bf65edab",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Six pays, puis vingt-sept",
+      "competence": "lire-carte",
+      "situation": "Jade prépare un exposé sur l’Europe : elle cherche sur la carte les pays fondateurs, puis regarde comment l’Union s’est agrandie.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "L’Europe d’aujourd’hui",
+          "fond": "europe",
+          "regionsCliquables": true
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Le nombre de membres",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Année",
+            "1957",
+            "1973",
+            "1986",
+            "1995",
+            "2004"
+          ],
+          "lignes": [
+            [
+              "Nombre de membres",
+              "6",
+              "9",
+              "12",
+              "15",
+              "25"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche les **trois** fondateurs de la CECA qui ne font pas partie du Benelux (Belgique, Pays-Bas, Luxembourg).",
+          "reponse": [
+            "FRA",
+            "DEU",
+            "ITA"
+          ],
+          "multiple": true,
+          "aide": "Les six fondateurs sont le Benelux plus trois grands pays voisins.",
+          "explication": "La CECA (1951) réunit le Benelux, la **France**, la **RFA** (aujourd’hui l’Allemagne) et l’**Italie**."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le pays qui a quitté l’Union européenne en 2020 (Brexit).",
+          "reponse": [
+            "GBR"
+          ],
+          "aide": "C’est une grande île à l’ouest de la France, de l’autre côté de la Manche.",
+          "explication": "Le **Royaume-Uni** quitte l’Union en 2020 : c’est le Brexit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de pays rejoignent l’Union européenne en 2004 ?",
+          "reponse": 10,
+          "unite": "pays",
+          "aide": "Compare le nombre de membres en 1995 et en 2004.",
+          "explication": "25 − 15 = **10 pays** en 2004, surtout d’Europe centrale et orientale."
+        }
+      ]
+    },
+    {
+      "chapitre": "4a141259-43ec-58de-ae70-e895bf65edab",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’Union s’agrandit",
+      "competence": "lire-graphique",
+      "situation": "Léo a tracé le nombre de membres de l’Union européenne à sept dates, depuis les débuts jusqu’au Brexit.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Le nombre de membres",
+          "source": "D’après le cours.",
+          "categories": [
+            "1957",
+            "1973",
+            "1986",
+            "1995",
+            "2004",
+            "2013",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Membres",
+              "valeurs": [
+                6,
+                9,
+                12,
+                15,
+                25,
+                28,
+                27
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre de membres",
+            "unite": "pays",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche l’année où l’Union compte le plus de membres.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "En **2013**, l’Union atteint 28 membres avec l’entrée de la Croatie."
+        },
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche la barre du plus grand élargissement : celui de l’Europe centrale et orientale.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche le plus grand saut entre deux barres voisines.",
+          "explication": "De 15 à 25 membres en **2004** : dix pays entrent en une seule fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de membres l’Union gagne-t-elle entre 1995 et 2004 ?",
+          "reponse": 10,
+          "unite": "membres",
+          "aide": "Lis la valeur de chaque barre, puis soustrais.",
+          "explication": "25 − 15 = **10 membres** en neuf ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment expliquer la petite baisse entre 2013 et 2020 ?",
+          "options": [
+            "Le Royaume-Uni a quitté l’Union (Brexit)",
+            "La Croatie a quitté l’Union",
+            "Deux pays ont fusionné",
+            "La monnaie unique a été abandonnée"
+          ],
+          "reponse": 0,
+          "aide": "Quel grand pays a voté pour partir en 2016 ?",
+          "explication": "Le **Brexit** fait passer l’Union de 28 à 27 membres en 2020."
+        }
+      ]
+    },
+    {
+      "chapitre": "4a141259-43ec-58de-ae70-e895bf65edab",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Mettre le charbon et l’acier en commun",
+      "competence": "analyser-texte",
+      "situation": "Samir lit un texte adapté de la déclaration du 9 mai 1950, puis repère qui décide quoi dans l’Europe d’aujourd’hui.",
+      "documents": [
+        {
+          "id": "texte",
+          "type": "texte",
+          "genre": "source",
+          "titre": "La déclaration du 9 mai 1950",
+          "source": "D’après la déclaration Schuman — texte très librement adapté pour l’exercice.",
+          "blocs": [
+            "Les pays d’Europe ne construiront pas leur union d’un seul coup. Ils avanceront par de petites réalisations concrètes, qui les rendront solidaires les uns des autres.",
+            "Pour commencer, on propose de placer toute la production de [[m|charbon]] et d’[[m|acier]] de la France et de l’Allemagne sous une autorité commune, ouverte aux autres pays d’Europe.",
+            "Ainsi, une guerre entre ces deux pays ne sera pas seulement impensable : elle deviendra matériellement impossible."
+          ]
+        },
+        {
+          "id": "institutions",
+          "type": "tableau",
+          "titre": "Les institutions européennes",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Institution",
+            "Ce qui la caractérise"
+          ],
+          "lignes": [
+            [
+              "Commission",
+              "Propose les textes et veille à l’application des traités"
+            ],
+            [
+              "Parlement européen",
+              "Élu au suffrage universel direct depuis 1979"
+            ],
+            [
+              "Conseil de l’Union",
+              "Réunit les ministres des États"
+            ],
+            [
+              "Conseil européen",
+              "Réunit les chefs d’État et de gouvernement"
+            ],
+            [
+              "Cour de justice",
+              "Tranche les litiges"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "texte",
+          "enonce": "Touche les deux productions que le texte propose de mettre en commun.",
+          "reponse": [
+            "m"
+          ],
+          "aide": "Ce sont deux matières premières de l’industrie lourde.",
+          "explication": "Le **charbon** et l’**acier** : des matières premières de l’armement, mises en commun pour rendre la guerre impossible."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle méthode le début du texte recommande-t-il pour construire l’Europe ?",
+          "options": [
+            "Avancer par de petites réalisations concrètes",
+            "Créer tout de suite un seul État européen",
+            "Signer un traité militaire unique",
+            "Attendre que les peuples le réclament"
+          ],
+          "reponse": 0,
+          "aide": "Relis la première phrase du texte.",
+          "explication": "Le texte propose d’avancer **par petites réalisations concrètes**, qui créent une solidarité de fait."
+        },
+        {
+          "type": "zone",
+          "document": "institutions",
+          "enonce": "Touche l’institution qui propose les textes européens.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Cherche « propose les textes » dans la colonne de droite.",
+          "explication": "La **Commission** propose les textes et veille à l’application des traités."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque institution selon sa logique : supranationale (ses décisions s’imposent aux États) ou intergouvernementale (les États décident ensemble).",
+          "categories": [
+            "Supranationale",
+            "Intergouvernementale"
+          ],
+          "items": [
+            [
+              "Commission",
+              0
+            ],
+            [
+              "Cour de justice",
+              0
+            ],
+            [
+              "Conseil européen",
+              1
+            ],
+            [
+              "Conseil de l’Union",
+              1
+            ]
+          ],
+          "aide": "Qui compose l’institution : des représentants des États, ou un organe qui s’impose à eux ?",
+          "explication": "La **Commission** et la **Cour de justice** agissent au-dessus des États. Le **Conseil européen** (chefs d’État) et le **Conseil de l’Union** (ministres) sont des lieux où les États décident ensemble."
+        }
+      ]
+    },
+    {
+      "chapitre": "ffa4d950-59b4-5e27-acbe-c80fb3ae0682",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les grands pôles du monde",
+      "competence": "lire-carte",
+      "situation": "Mina prépare un exposé sur le monde multipolaire : elle place sur une carte les capitales de six puissances et note leur atout principal.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Six capitales, six pôles",
+          "fond": "monde",
+          "lieux": [
+            {
+              "id": "washington",
+              "lieu": "washington",
+              "symbole": "point",
+              "nom": "Washington"
+            },
+            {
+              "id": "moscou",
+              "lieu": "moscou",
+              "symbole": "point",
+              "nom": "Moscou"
+            },
+            {
+              "id": "bruxelles",
+              "lieu": "bruxelles",
+              "symbole": "point",
+              "nom": "Bruxelles"
+            },
+            {
+              "id": "pekin",
+              "lieu": "pekin",
+              "symbole": "point",
+              "nom": "Pékin"
+            },
+            {
+              "id": "delhi",
+              "lieu": "delhi",
+              "symbole": "point",
+              "nom": "New Delhi"
+            },
+            {
+              "id": "brasilia",
+              "lieu": "brasilia",
+              "symbole": "point",
+              "nom": "Brasília"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la capitale de la puissance qui a annexé la Crimée en 2014.",
+          "reponse": [
+            "moscou"
+          ],
+          "aide": "C’est la capitale du plus vaste pays du monde.",
+          "explication": "**Moscou** : la Russie annexe la Crimée en 2014 et réaffirme ses ambitions par la force."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville où siègent les principales institutions de l’Union européenne.",
+          "reponse": [
+            "bruxelles"
+          ],
+          "aide": "C’est la capitale d’un pays voisin de la France, au nord.",
+          "explication": "**Bruxelles** accueille la Commission et le Conseil : l’Union pèse par son marché et ses normes."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque puissance à son atout principal.",
+          "paires": [
+            [
+              "États-Unis",
+              "La première puissance militaire"
+            ],
+            [
+              "Chine",
+              "Puissance économique, technologique et navale"
+            ],
+            [
+              "Union européenne",
+              "Son marché et ses normes"
+            ],
+            [
+              "Russie",
+              "Des ambitions réaffirmées par la force"
+            ]
+          ],
+          "aide": "Pense à ce qui fait la force de chaque pôle : armée, usines, marché, armes.",
+          "explication": "Les **États-Unis** restent la première puissance militaire ; la **Chine** est économique, technologique et navale ; l’**Union européenne** pèse par son marché et ses normes ; la **Russie** s’affirme par la force."
+        }
+      ]
+    },
+    {
+      "chapitre": "ffa4d950-59b4-5e27-acbe-c80fb3ae0682",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui dépense le plus pour ses armées ?",
+      "competence": "lire-graphique",
+      "situation": "Noé compare les dépenses militaires de cinq pays, puis lit un tableau des régions où les tensions sont les plus vives.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Dépenses militaires en 2023",
+          "source": "Chiffres arrondis, d’après l’institut SIPRI, en milliards de dollars.",
+          "categories": [
+            "États-Unis",
+            "Chine",
+            "Russie",
+            "Inde",
+            "France"
+          ],
+          "series": [
+            {
+              "nom": "Dépenses",
+              "valeurs": [
+                916,
+                296,
+                109,
+                84,
+                61
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Dépenses militaires",
+            "unite": "milliards de dollars",
+            "min": 0,
+            "max": 1000,
+            "pas": 200
+          },
+          "valeurs": false
+        },
+        {
+          "id": "foyers",
+          "type": "tableau",
+          "titre": "Quelques foyers de tension",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Région",
+            "Tension"
+          ],
+          "lignes": [
+            [
+              "Europe orientale",
+              "Invasion de l’Ukraine en 2022"
+            ],
+            [
+              "Proche et Moyen-Orient",
+              "Conflit israélo-palestinien, guerre en Syrie"
+            ],
+            [
+              "Asie",
+              "Tensions autour de Taïwan et en mer de Chine méridionale"
+            ],
+            [
+              "Sahel",
+              "États fragiles, groupes armés, coups d’État"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche le pays dont les dépenses sont les plus proches de celles de la France.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "La France dépense environ 61 milliards ; cherche la barre juste au-dessus.",
+          "explication": "L’**Inde** (84 milliards) est la plus proche de la France (61) ; la Russie (109) est plus loin."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les États-Unis dépensent environ combien de fois plus que la Russie ? (arrondi à l’unité)",
+          "reponse": 8,
+          "unite": "fois",
+          "aide": "Divise 916 par 109.",
+          "explication": "916 ÷ 109 ≈ 8,4, soit environ **8 fois** plus : les États-Unis restent la première puissance militaire."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les quatre autres pays réunis dépensent-ils plus que les États-Unis ?",
+          "options": [
+            "Non : ils totalisent environ 550 milliards, contre 916",
+            "Oui : ils totalisent plus de 1 000 milliards",
+            "Oui : leur total est égal à celui des États-Unis",
+            "On ne peut pas le savoir avec le graphique"
+          ],
+          "reponse": 0,
+          "aide": "Additionne 296, 109, 84 et 61.",
+          "explication": "296 + 109 + 84 + 61 = **550 milliards**, loin des 916 des États-Unis."
+        },
+        {
+          "type": "zone",
+          "document": "foyers",
+          "enonce": "Touche la région où se situent les tensions autour de Taïwan.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Taïwan est une île située en Asie orientale.",
+          "explication": "**L’Asie** : tensions autour de Taïwan et en mer de Chine méridionale."
+        }
+      ]
+    },
+    {
+      "chapitre": "ffa4d950-59b4-5e27-acbe-c80fb3ae0682",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un veto qui bloque le monde",
+      "competence": "argumenter",
+      "situation": "Le Conseil de sécurité adopte une résolution avec au moins 9 voix « pour » et aucun veto d’un des cinq membres permanents. Mina lit un article imaginaire et un vote fictif.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Cyberattaque : l’ONU divisée",
+          "source": "Article imaginaire, écrit pour l’exercice.",
+          "blocs": [
+            "Dans la nuit du 12 mars, une cyberattaque paralyse les hôpitaux de trois pays voisins. Les pirates n’ont pas de frontières : on ignore même d’où ils frappent.",
+            "Le lendemain, le Conseil de sécurité de l’ONU examine un projet de résolution. Un de ses membres permanents annonce qu’il utilisera son [[v|veto]]. Chaque État promet de protéger ses propres réseaux, en ordre dispersé."
+          ]
+        },
+        {
+          "id": "vote",
+          "type": "tableau",
+          "titre": "Le vote fictif au Conseil de sécurité",
+          "source": "Chiffres imaginaires, écrits pour l’exercice.",
+          "colonnes": [
+            "Vote",
+            "Voix"
+          ],
+          "lignes": [
+            [
+              "Pour",
+              "13"
+            ],
+            [
+              "Contre (un membre permanent)",
+              "1"
+            ],
+            [
+              "Abstention",
+              "1"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche le mot qui désigne le pouvoir de bloquer la résolution.",
+          "reponse": [
+            "v"
+          ],
+          "aide": "Cherche le droit réservé aux cinq membres permanents.",
+          "explication": "Le **veto** : un seul membre permanent peut bloquer une résolution."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de voix « pour » le vote dépasse-t-il le minimum de 9 voix requis ?",
+          "reponse": 4,
+          "unite": "voix",
+          "aide": "Lis le nombre de « pour » dans le tableau, puis soustrais 9.",
+          "explication": "13 − 9 = **4 voix** de plus que le minimum."
+        },
+        {
+          "type": "choix",
+          "enonce": "La résolution est-elle adoptée ?",
+          "options": [
+            "Non : le veto d’un membre permanent la bloque malgré 13 voix",
+            "Oui : 13 voix dépassent largement le minimum de 9 voix requis",
+            "Oui : le veto n’est qu’un simple avis que la majorité peut ignorer",
+            "Non : il manque encore 2 voix pour atteindre les 15 voix"
+          ],
+          "reponse": 0,
+          "aide": "Relis la règle donnée au début de l’exercice : deux conditions.",
+          "explication": "Il faut 9 voix pour **et** aucun veto. Le vote contre d’un membre permanent la bloque : c’est la limite du Conseil de sécurité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Et si ce membre permanent s’était abstenu au lieu de voter contre ?",
+          "options": [
+            "La résolution aurait été adoptée",
+            "Elle aurait été rejetée quand même",
+            "Il aurait fallu 15 voix pour",
+            "Le vote aurait été annulé"
+          ],
+          "reponse": 0,
+          "aide": "Une abstention est-elle un veto ?",
+          "explication": "Une abstention n’est pas un veto : avec 13 voix « pour » et aucun veto, la résolution **aurait été adoptée**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la difficulté de la gouvernance mondiale.",
+          "texte": "Les menaces sont ___ alors que les décisions restent ___.",
+          "reponses": [
+            [
+              "transnationales"
+            ],
+            [
+              "nationales"
+            ]
+          ],
+          "banque": [
+            "transnationales",
+            "nationales",
+            "militaires",
+            "locales"
+          ],
+          "aide": "La cyberattaque traverse les frontières ; les États, eux, protègent chacun leurs réseaux.",
+          "explication": "Les menaces sont **transnationales** alors que les décisions restent **nationales** : c’est la principale difficulté de la gouvernance mondiale."
+        }
+      ]
+    },
+    {
+      "chapitre": "9b55af5a-e29d-5cbb-87e7-2fc8d2f43360",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Paris à grande vitesse",
+      "competence": "lire-carte",
+      "situation": "Camille regarde trois lignes à grande vitesse au départ de Paris et note la durée des trajets en TGV.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Trois lignes à grande vitesse",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "point",
+              "nom": "Paris"
+            },
+            {
+              "id": "lille",
+              "lieu": "lille",
+              "symbole": "point",
+              "nom": "Lille"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "marseille",
+              "lieu": "marseille",
+              "symbole": "point",
+              "nom": "Marseille"
+            },
+            {
+              "id": "bordeaux",
+              "lieu": "bordeaux",
+              "symbole": "point",
+              "nom": "Bordeaux"
+            }
+          ],
+          "traits": [
+            {
+              "id": "nord",
+              "points": [
+                "paris",
+                "lille"
+              ],
+              "style": "ligne"
+            },
+            {
+              "id": "sudest",
+              "points": [
+                "paris",
+                "lyon",
+                "marseille"
+              ],
+              "style": "ligne"
+            },
+            {
+              "id": "atlantique",
+              "points": [
+                "paris",
+                "bordeaux"
+              ],
+              "style": "ligne"
+            }
+          ]
+        },
+        {
+          "id": "durees",
+          "type": "tableau",
+          "titre": "Durée en TGV depuis Paris",
+          "source": "Durées arrondies à l’heure.",
+          "colonnes": [
+            "Trajet",
+            "Durée"
+          ],
+          "lignes": [
+            [
+              "Paris – Lille",
+              "1 h"
+            ],
+            [
+              "Paris – Lyon",
+              "2 h"
+            ],
+            [
+              "Paris – Bordeaux",
+              "2 h"
+            ],
+            [
+              "Paris – Marseille",
+              "3 h"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ligne à grande vitesse qui relie Paris à Lille.",
+          "reponse": [
+            "nord"
+          ],
+          "aide": "Lille est tout au nord de la France.",
+          "explication": "La **LGV Nord** relie Paris à Lille, la ville la plus proche en temps de trajet."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures de plus faut-il pour aller de Paris à Marseille que de Paris à Lille ?",
+          "reponse": 2,
+          "unite": "heures",
+          "aide": "Lis les deux durées dans le tableau.",
+          "explication": "3 h − 1 h = **2 heures** : plus la ville est loin, plus le trajet est long, même à grande vitesse."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville de la carte la plus éloignée de Paris en temps de trajet.",
+          "reponse": [
+            "marseille"
+          ],
+          "aide": "Cherche la durée la plus longue dans le tableau.",
+          "explication": "**Marseille**, à 3 h de Paris, est la plus éloignée en temps de trajet."
+        }
+      ]
+    },
+    {
+      "chapitre": "9b55af5a-e29d-5cbb-87e7-2fc8d2f43360",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La ville que le TGV oublie",
+      "competence": "observer-schema",
+      "situation": "Une nouvelle ligne à grande vitesse relie Paris à Cerval, mais la gare de Mirval, située entre les deux, n’est plus desservie par les trains rapides. Léna observe un schéma et un tableau d’horaires imaginaires.",
+      "documents": [
+        {
+          "id": "schema",
+          "type": "schema",
+          "titre": "La ligne entre Paris et Cerval",
+          "largeur": 320,
+          "hauteur": 190,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 95,
+              "l": 70,
+              "h": 36,
+              "arrondi": 8,
+              "texte": "Paris",
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "paris",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 125,
+              "y": 95,
+              "l": 70,
+              "h": 36,
+              "arrondi": 8,
+              "texte": "Mirval",
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "mirval",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 240,
+              "y": 95,
+              "l": 70,
+              "h": 36,
+              "arrondi": 8,
+              "texte": "Cerval",
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "cerval",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                45,
+                90
+              ],
+              "a": [
+                45,
+                55
+              ],
+              "teinte": "corail"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                45,
+                55
+              ],
+              "a": [
+                275,
+                55
+              ],
+              "teinte": "corail"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                275,
+                55
+              ],
+              "a": [
+                275,
+                90
+              ],
+              "teinte": "corail",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 42,
+              "texte": "TGV direct, sans arrêt",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                113
+              ],
+              "a": [
+                125,
+                113
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                195,
+                113
+              ],
+              "a": [
+                240,
+                113
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 160,
+              "texte": "Ligne classique : trains de moins en moins nombreux",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            }
+          ]
+        },
+        {
+          "id": "horaires",
+          "type": "tableau",
+          "titre": "Trains par jour à la gare de Mirval",
+          "source": "Chiffres imaginaires, écrits pour l’exercice.",
+          "colonnes": [
+            "Destination",
+            "Avant la LGV",
+            "Après la LGV"
+          ],
+          "lignes": [
+            [
+              "Vers Paris",
+              "12",
+              "4"
+            ],
+            [
+              "Vers Cerval",
+              "10",
+              "3"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "schema",
+          "enonce": "Touche la ville que la ligne à grande vitesse traverse sans s’y arrêter.",
+          "reponse": [
+            "mirval"
+          ],
+          "aide": "Regarde la flèche du TGV direct : au-dessus de quelle ville passe-t-elle ?",
+          "explication": "**Mirval** est survolée par le TGV direct, qui ne s’y arrête pas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de trains vers Paris ont disparu à Mirval ?",
+          "reponse": 8,
+          "unite": "trains",
+          "aide": "Soustrais le nombre « après » au nombre « avant » pour la ligne « Vers Paris ».",
+          "explication": "12 − 4 = **8 trains** en moins chaque jour vers Paris."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par combien le nombre de trains vers Paris est-il divisé ?",
+          "reponse": 3,
+          "aide": "Divise le nombre de trains avant la LGV par le nombre après.",
+          "explication": "12 ÷ 4 = **3** : trois fois moins de trains vers Paris."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la définition de cet effet.",
+          "texte": "C’est l’effet ___ : la LGV peut ___ la ville qu’elle traverse sans s’y arrêter.",
+          "reponses": [
+            [
+              "tunnel"
+            ],
+            [
+              "vider",
+              "affaiblir"
+            ]
+          ],
+          "banque": [
+            "tunnel",
+            "vider",
+            "enrichir",
+            "frontière"
+          ],
+          "aide": "Un train qui passe sans s’arrêter est comme un train qui traverse un tunnel.",
+          "explication": "C’est l’**effet tunnel** : la ville traversée perd ses trains, ses emplois et ses habitants, donc la LGV peut la **vider**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9b55af5a-e29d-5cbb-87e7-2fc8d2f43360",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un tramway, plusieurs financeurs",
+      "competence": "analyser-document",
+      "situation": "La ville imaginaire de Belleval veut construire un tramway de 100 millions d’euros. Inès lit le plan de financement et un article sur l’enquête publique.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Qui finance le tramway de Belleval ?",
+          "source": "Parts imaginaires, écrites pour l’exercice, en % du coût total (100 millions d’euros).",
+          "categories": [
+            "Union européenne (FEDER)",
+            "État",
+            "Région",
+            "Département",
+            "Commune"
+          ],
+          "series": [
+            {
+              "nom": "Part du financement",
+              "valeurs": [
+                20,
+                30,
+                25,
+                10,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Belleval : le tramway en débat",
+          "source": "Article imaginaire, écrit pour l’exercice.",
+          "blocs": [
+            "Le projet de tramway de Belleval coûtera 100 millions d’euros. Les habitants sont invités à donner leur avis pendant l’enquête publique.",
+            "L’association « Vivre aux Tilleuls » soutient le tracé, qui désenclave le quartier. Des riverains de la rue principale s’y opposent : ils craignent le bruit et la perte de places de stationnement."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche le financeur qui paie la plus grosse part du tramway.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche le plus grand secteur du graphique.",
+          "explication": "**L’État** finance 30 % du coût : c’est la plus grosse part."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de millions d’euros les trois collectivités locales (région, département, commune) paient-elles ensemble ?",
+          "reponse": 50,
+          "unite": "millions d’euros",
+          "aide": "Additionne leurs parts en %, puis applique-les à 100 millions.",
+          "explication": "25 % + 10 % + 15 % = 50 %, soit **50 millions d’euros** sur 100."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque acteur du projet.",
+          "categories": [
+            "Acteur public",
+            "Habitants et associations"
+          ],
+          "items": [
+            [
+              "La région",
+              0
+            ],
+            [
+              "Le département",
+              0
+            ],
+            [
+              "L’association « Vivre aux Tilleuls »",
+              1
+            ],
+            [
+              "Les riverains de la rue principale",
+              1
+            ],
+            [
+              "L’Union européenne",
+              0
+            ]
+          ],
+          "aide": "Qui finance sur fonds publics ? Qui donne son avis pendant l’enquête ?",
+          "explication": "La région, le département et l’Union européenne sont des **acteurs publics** ; l’association et les riverains sont des **habitants** qui donnent leur avis."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce projet illustre-t-il le principe « aucun aménagement d’ampleur n’a un seul auteur » ?",
+          "options": [
+            "Il faut négocier entre plusieurs échelles et avec les habitants",
+            "L’État décide seul et impose le tracé aux collectivités locales",
+            "Les entreprises privées financent tout le projet sans l’État",
+            "Les habitants choisissent seuls le tracé par un référendum local"
+          ],
+          "reponse": 0,
+          "aide": "Compte les financeurs, puis regarde qui donne son avis.",
+          "explication": "Cinq financeurs et des habitants partagés : c’est une **négociation entre plusieurs échelles**, comme toujours en aménagement."
+        }
+      ]
+    },
+    {
+      "chapitre": "0d896e0b-f92e-567e-a3fb-6306c0b0b0ff",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Pauvreté : un écart à réduire",
+      "competence": "lire-graphique",
+      "situation": "Alix lit un graphique sur la pauvreté dans les quartiers prioritaires de la politique de la ville et dans l’ensemble de la France.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Taux de pauvreté",
+          "source": "Chiffres arrondis, INSEE, années récentes.",
+          "categories": [
+            "Quartiers prioritaires",
+            "Ensemble de la France"
+          ],
+          "series": [
+            {
+              "nom": "Taux de pauvreté",
+              "valeurs": [
+                43,
+                14
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Personnes pauvres",
+            "unite": "en % de la population",
+            "min": 0,
+            "max": 50,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Territoire"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche le territoire où plus de quatre personnes sur dix vivent sous le seuil de pauvreté.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Quatre personnes sur dix, c’est 40 %.",
+          "explication": "Dans les **quartiers prioritaires**, environ 43 % des habitants sont pauvres."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart de taux de pauvreté, en points, entre les quartiers prioritaires (43 %) et la France (14 %) ?",
+          "reponse": 29,
+          "unite": "points",
+          "aide": "Soustrais les deux valeurs du graphique.",
+          "explication": "43 − 14 = **29 points** : l’écart est énorme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel objectif de la politique de la ville ce graphique justifie-t-il ?",
+          "options": [
+            "Réduire l’écart entre quartiers prioritaires et reste de la ville",
+            "Fermer les quartiers prioritaires et disperser leurs équipements",
+            "Faire baisser les prix des logements dans toute l’agglomération",
+            "Déplacer les habitants des quartiers prioritaires hors de la ville"
+          ],
+          "reponse": 0,
+          "aide": "Que montre l’écart entre les deux barres ?",
+          "explication": "Le graphique montre un écart très important : la politique de la ville cherche à le **réduire**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0d896e0b-f92e-567e-a3fb-6306c0b0b0ff",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Rénover les Tilleuls",
+      "competence": "analyser-document",
+      "situation": "La ville imaginaire de Belleval présente son projet pour le quartier des Tilleuls sur une affiche. Sacha trie les actions annoncées.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Quartier des Tilleuls",
+          "sousTitre": "Affiche imaginaire — réunion publique",
+          "emoji": "🏘️",
+          "lignes": [
+            {
+              "texte": "Démolition de deux barres dégradées",
+              "valeur": "240 logements",
+              "id": "demol"
+            },
+            {
+              "texte": "Construction de logements plus petits",
+              "valeur": "120 logements",
+              "id": "constr"
+            },
+            {
+              "texte": "Ouverture d’une rue et d’un arrêt de tramway",
+              "valeur": "désenclavement",
+              "id": "tram"
+            },
+            {
+              "texte": "Aide aux devoirs après la classe",
+              "valeur": "réussite éducative",
+              "id": "devoirs"
+            },
+            {
+              "texte": "Permanence de la maison de justice",
+              "valeur": "accès au droit",
+              "id": "justice"
+            },
+            {
+              "texte": "Réaménagement de la place",
+              "valeur": "espaces publics",
+              "id": "place"
+            }
+          ],
+          "pied": "Une réunion publique est prévue en mairie."
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque action : volet urbain (rénover) ou volet humain (accompagner) ?",
+          "categories": [
+            "Volet urbain",
+            "Volet humain"
+          ],
+          "items": [
+            [
+              "Démolition de deux barres dégradées",
+              0
+            ],
+            [
+              "Ouverture d’une rue et d’un arrêt de tramway",
+              0
+            ],
+            [
+              "Réaménagement de la place",
+              0
+            ],
+            [
+              "Aide aux devoirs après la classe",
+              1
+            ],
+            [
+              "Permanence de la maison de justice",
+              1
+            ]
+          ],
+          "aide": "L’ANRU s’occupe des bâtiments ; l’État et les associations accompagnent les personnes.",
+          "explication": "**Volet urbain** : démolir, ouvrir des rues, réaménager. **Volet humain** : aide aux devoirs, maison de justice."
+        },
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche l’action qui permet de désenclaver le quartier.",
+          "reponse": [
+            "tram"
+          ],
+          "aide": "Désenclaver, c’est relier un quartier isolé au reste de la ville.",
+          "explication": "**Une rue ouverte et un arrêt de tramway** relient le quartier au reste de la ville."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de logements de moins le quartier compte-t-il après l’opération (démolis moins construits) ?",
+          "reponse": 120,
+          "unite": "logements",
+          "aide": "Soustrais les logements construits des logements démolis.",
+          "explication": "240 − 120 = **120 logements** de moins : on remplace de grandes barres par un habitat plus petit."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi construit-on moins, et plus petit ?",
+          "options": [
+            "Pour remplacer de grandes barres dégradées par un habitat plus petit et plus ouvert",
+            "Pour faire partir les habitants les plus modestes et attirer des familles aisées",
+            "Parce que le quartier va être entièrement fermé puis rasé sans remplacement",
+            "Pour construire une grande zone commerciale et des bureaux à la place des logements"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’état des barres des grands ensembles des années 1950-1970.",
+          "explication": "L’ANRU **démolit les barres dégradées** et reconstruit plus petit, pour un quartier plus humain et mieux relié à la ville."
+        }
+      ]
+    },
+    {
+      "chapitre": "0d896e0b-f92e-567e-a3fb-6306c0b0b0ff",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Vingt-cinq pour cent de logements sociaux",
+      "competence": "raisonner",
+      "situation": "La loi SRU impose aux communes d’au moins 3 500 habitants d’avoir 25 % de logements sociaux parmi leurs résidences principales. Malo étudie trois communes imaginaires.",
+      "documents": [
+        {
+          "id": "communes",
+          "type": "tableau",
+          "titre": "Trois communes imaginaires",
+          "source": "Chiffres imaginaires, écrits pour l’exercice.",
+          "colonnes": [
+            "Commune",
+            "Habitants",
+            "Résidences principales",
+            "Logements sociaux"
+          ],
+          "lignes": [
+            [
+              "Val-Riant",
+              "12 000",
+              "5 000",
+              "600"
+            ],
+            [
+              "Les Pins",
+              "2 500",
+              "1 000",
+              "50"
+            ],
+            [
+              "Saint-Clair",
+              "30 000",
+              "12 000",
+              "3 600"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "conseil",
+          "type": "dialogue",
+          "modele": "bulles",
+          "participants": [
+            {
+              "nom": "Le maire",
+              "emoji": "🧑‍💼",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Une conseillère",
+              "emoji": "👩",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Le maire",
+              "texte": "Construire des logements sociaux coûte cher. Je préfère payer l’amende."
+            },
+            {
+              "qui": "Une conseillère",
+              "texte": "Mais l’amende ne loge personne : le logement social reste concentré dans les mêmes communes."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "communes",
+          "enonce": "Touche la commune qui n’est pas soumise à l’obligation des 25 %.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Compare le nombre d’habitants de chaque commune au seuil de 3 500.",
+          "explication": "**Les Pins** compte 2 500 habitants, moins que le seuil de 3 500 : la loi ne s’applique pas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le pourcentage de logements sociaux à Saint-Clair ?",
+          "reponse": 30,
+          "unite": "%",
+          "aide": "Divise les logements sociaux par les résidences principales, puis multiplie par 100.",
+          "explication": "3 600 ÷ 12 000 = 0,30, soit **30 %** : Saint-Clair respecte la loi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de logements sociaux manque-t-il à Val-Riant pour atteindre 25 % de ses résidences principales ?",
+          "reponse": 650,
+          "unite": "logements",
+          "aide": "Calcule 25 % de 5 000, puis retire les 600 logements sociaux déjà présents.",
+          "explication": "25 % de 5 000 = 1 250 ; 1 250 − 600 = **650 logements**. Val-Riant n’est qu’à 12 %."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel objectif de la loi SRU l’amende ne permet-elle pas d’atteindre ?",
+          "options": [
+            "La mixité sociale",
+            "La hausse des impôts locaux",
+            "L’agrandissement de la commune",
+            "La baisse du nombre d’habitants"
+          ],
+          "reponse": 0,
+          "aide": "Relis la réplique de la conseillère.",
+          "explication": "L’amende rapporte de l’argent, mais elle ne loge personne : le logement social reste concentré ailleurs, donc **la mixité sociale** n’avance pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f5f3f5f-1797-5381-829b-8fda245c1ba1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre territoires ultramarins",
+      "competence": "lire-carte",
+      "situation": "Sur une carte du monde, Zoé repère quatre territoires français d’outre-mer et lit leur statut dans un tableau.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre territoires français",
+          "fond": "monde",
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "cayenne",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "b",
+              "lon": 55.45,
+              "lat": -20.88,
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "c",
+              "lieu": "papeete",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "violet"
+            },
+            {
+              "id": "d",
+              "lieu": "noumea",
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "violet"
+            }
+          ]
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Les territoires de la carte",
+          "source": "D’après le cours.",
+          "colonnes": [
+            "Lettre",
+            "Territoire",
+            "Statut"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Guyane",
+              "DROM"
+            ],
+            [
+              "B",
+              "La Réunion",
+              "DROM"
+            ],
+            [
+              "C",
+              "Polynésie française",
+              "COM"
+            ],
+            [
+              "D",
+              "Nouvelle-Calédonie",
+              "Statut particulier"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la Polynésie française.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche sa lettre dans le tableau : c’est un territoire du Pacifique.",
+          "explication": "La **Polynésie française** est la lettre **C** : une collectivité d’outre-mer, plus autonome qu’un DROM."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le DROM situé dans l’océan Indien.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Parmi les deux DROM du tableau, l’un est en Amérique du Sud.",
+          "explication": "**La Réunion** (lettre B) est un DROM de l’océan Indien ; la Guyane (A) est en Amérique du Sud."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de territoires de la carte sont des DROM ?",
+          "reponse": 2,
+          "unite": "territoires",
+          "aide": "Compte les lignes « DROM » dans le tableau.",
+          "explication": "La Guyane et La Réunion : **2 DROM**, départements français à part entière."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f5f3f5f-1797-5381-829b-8fda245c1ba1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Loin de Paris, riche en mer",
+      "competence": "lire-graphique",
+      "situation": "Romane compare la taille des domaines maritimes de cinq pays, puis la distance de quatre territoires ultramarins à Paris.",
+      "documents": [
+        {
+          "id": "graphique",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Les plus grands domaines maritimes",
+          "source": "Ordres de grandeur arrondis, en millions de km².",
+          "categories": [
+            "États-Unis",
+            "France",
+            "Australie",
+            "Russie",
+            "Royaume-Uni"
+          ],
+          "series": [
+            {
+              "nom": "Domaine maritime",
+              "valeurs": [
+                11.4,
+                11,
+                8.5,
+                7.6,
+                6.8
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Surface",
+            "unite": "millions de km²",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "valeurs": false
+        },
+        {
+          "id": "distances",
+          "type": "tableau",
+          "titre": "Distance à Paris",
+          "source": "Distances à vol d’oiseau, arrondies.",
+          "colonnes": [
+            "Territoire",
+            "Distance (km)"
+          ],
+          "lignes": [
+            [
+              "Guadeloupe",
+              "6 700"
+            ],
+            [
+              "Guyane",
+              "7 100"
+            ],
+            [
+              "La Réunion",
+              "9 300"
+            ],
+            [
+              "Polynésie française",
+              "15 700"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "graphique",
+          "enonce": "Touche la barre du pays qui occupe le deuxième rang mondial grâce à l’outre-mer.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Lis les noms des pays sur le graphique.",
+          "explication": "La **France** est au deuxième rang mondial pour son domaine maritime, grâce à ses territoires ultramarins."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millions de km² le domaine maritime des États-Unis dépasse-t-il celui de la France ?",
+          "reponse": 0.4,
+          "unite": "millions de km²",
+          "tolerance": 0.05,
+          "aide": "Soustrais les deux valeurs : 11,4 et 11.",
+          "explication": "11,4 − 11 = **0,4 million de km²** : la France n’est pas loin de la première place."
+        },
+        {
+          "type": "zone",
+          "document": "distances",
+          "enonce": "Touche le territoire le plus éloigné de Paris.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Cherche la plus grande distance du tableau.",
+          "explication": "La **Polynésie française**, à environ 15 700 km de Paris, est le plus lointain."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle distance un aller-retour Paris – La Réunion représente-t-il ?",
+          "reponse": 18600,
+          "unite": "km",
+          "aide": "Double la distance entre Paris et La Réunion.",
+          "explication": "9 300 × 2 = **18 600 km** : cet éloignement renchérit les transports et la vie."
+        }
+      ]
+    },
+    {
+      "chapitre": "5f5f3f5f-1797-5381-829b-8fda245c1ba1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un cyclone et un panier de courses",
+      "competence": "analyser-document",
+      "situation": "Léa lit un reportage imaginaire sur La Réunion, puis compare les prix d’un même panier de courses dans l’Hexagone et sur une île de l’océan Indien.",
+      "documents": [
+        {
+          "id": "reportage",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Février, La Réunion",
+          "source": "Reportage imaginaire, écrit pour l’exercice.",
+          "blocs": [
+            "Leïla, 16 ans, regarde le ciel : un [[r|cyclone]] approche. Le port va fermer quelques jours, et les bateaux qui apportent les produits de l’Hexagone seront retardés.",
+            "Dans la boutique de sa mère, les prix sont plus élevés qu’en métropole : tout vient de très loin. Mais Leïla est fière de son île : le Piton de la Fournaise attire les touristes, et les forêts abritent des espèces qu’on ne trouve nulle part ailleurs."
+          ]
+        },
+        {
+          "id": "panier",
+          "type": "tableau",
+          "titre": "Le prix d’un même panier",
+          "source": "Chiffres imaginaires, écrits pour l’exercice.",
+          "colonnes": [
+            "",
+            "Hexagone",
+            "Île de l’océan Indien"
+          ],
+          "lignes": [
+            [
+              "Panier de 10 produits",
+              "100 €",
+              "112 €"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "reportage",
+          "enonce": "Touche le mot qui désigne le risque naturel qui menace l’île.",
+          "reponse": [
+            "r"
+          ],
+          "aide": "Quel phénomène météo fait fermer le port ?",
+          "explication": "Le **cyclone** : les territoires ultramarins sont exposés à des risques naturels, comme les cyclones, les séismes ou les volcans."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de pour cent le panier coûte-t-il plus cher sur l’île ?",
+          "reponse": 12,
+          "unite": "%",
+          "aide": "Calcule la différence de prix, puis compare-la à 100 €.",
+          "explication": "112 − 100 = 12 € sur 100 €, soit **12 %** de plus : c’est la vie chère."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément du reportage : contrainte ou atout ?",
+          "categories": [
+            "Contrainte",
+            "Atout"
+          ],
+          "items": [
+            [
+              "Un cyclone qui ferme le port",
+              0
+            ],
+            [
+              "Des produits qui arrivent de très loin",
+              0
+            ],
+            [
+              "Le volcan qui attire des touristes",
+              1
+            ],
+            [
+              "Des espèces rares dans les forêts",
+              1
+            ]
+          ],
+          "aide": "Une contrainte complique la vie ; un atout apporte une ressource.",
+          "explication": "Le cyclone et l’éloignement sont des **contraintes** ; le volcan et la biodiversité sont des **atouts**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle contrainte explique le mieux le prix plus élevé du panier ?",
+          "options": [
+            "L’éloignement : les produits viennent de très loin",
+            "Le manque de touristes qui achètent dans les magasins",
+            "La trop grande taille de l’île, qui rend les trajets longs",
+            "L’absence totale de ports pour les bateaux de marchandises"
+          ],
+          "reponse": 0,
+          "aide": "Relis la phrase sur la boutique de la mère de Leïla.",
+          "explication": "**L’éloignement** renchérit le transport : tout est plus cher, c’est la vie chère."
+        }
+      ]
+    }
+  ]
+}

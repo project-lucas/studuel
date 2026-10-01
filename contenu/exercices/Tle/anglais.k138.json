@@ -1,0 +1,2330 @@
+{
+ "niveau": "Tle",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "732d319c-0145-5221-a349-bfbdaa81bfad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une appli gratuite qui en veut trop",
+   "competence": "comprendre-langue",
+   "situation": "Maya veut essayer une application gratuite qui dit à quelle star on ressemble. Son ami Ben, lui, se méfie. Lis leurs messages.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Ben, look at this free app! It tells you which film star you look like."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Careful. It wants access to your [[c|contacts]] and your [[c|location]]. Why would a photo game need that?"
+      },
+      {
+       "qui": "Maya",
+       "texte": "It’s free, so what’s the harm?"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Free apps often pay their bills with your personal data. Every tap teaches an algorithm a bit more about you."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Fine, I’ll log off and read the settings first."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui nomment ce que l’application veut consulter sur le téléphone de Maya.",
+     "aide": "Ben les cite dans sa première réplique, après « access to ».",
+     "explication": "Ce sont **contacts** et **location** : l’appli demande la liste des contacts et la localisation, sans lien avec un jeu de photos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Ben se méfie-t-il de l’application ?",
+     "options": [
+      "Elle réclame des accès sans rapport avec un jeu de photos",
+      "Elle est payante et coûte trop cher pour ce qu’elle fait",
+      "Elle est interdite aux mineurs depuis une loi récente",
+      "Elle ralentit le téléphone dès que l’on prend une photo"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que l’appli « wants access to ».",
+     "explication": "Ben s’étonne qu’un jeu de photos demande les contacts et la position : **des accès sans rapport avec le jeu**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression du dialogue à sa traduction.",
+     "paires": [
+      [
+       "personal data",
+       "les données personnelles"
+      ],
+      [
+       "an algorithm",
+       "un algorithme"
+      ],
+      [
+       "to log off",
+       "se déconnecter"
+      ],
+      [
+       "location",
+       "la localisation"
+      ]
+     ],
+     "aide": "Attention : « location » est un faux ami, il ne veut pas dire « location » comme louer un appartement.",
+     "explication": "**Location** = localisation (et non la location d’un bien) ; **to log off** = se déconnecter."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Ben.",
+     "texte": "Free apps often pay their bills ___ your personal data.",
+     "reponses": [
+      [
+       "with"
+      ]
+     ],
+     "banque": [
+      "with",
+      "by",
+      "for",
+      "at"
+     ],
+     "aide": "On « paie avec » quelque chose.",
+     "explication": "On dit **pay with** : les applis gratuites se financent grâce à tes données."
+    }
+   ]
+  },
+  {
+   "chapitre": "732d319c-0145-5221-a349-bfbdaa81bfad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mon fil ne me contredit jamais",
+   "competence": "analyser-document",
+   "situation": "Leila a remarqué que son fil d’actualité lui donne presque toujours raison. Elle décide de compter les publications pendant quatre jours.",
+   "documents": [
+    {
+     "id": "blog",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Leila’s blog",
+     "blocs": [
+      "Last month, my teacher asked us to follow the campaign for the local council election. I opened my feed and noticed something strange: almost everything I saw agreed with me.",
+      "Nobody had told the app what I think. Yet somehow it knew. Is that a coincidence? I decided to count the posts myself for four days."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "audit",
+     "type": "tableau",
+     "titre": "Audit of Leila’s feed (20 posts per day)",
+     "colonnes": [
+      "Day",
+      "Posts agreeing with her",
+      "Posts disagreeing with her"
+     ],
+     "lignes": [
+      [
+       "Monday",
+       18,
+       2
+      ],
+      [
+       "Tuesday",
+       15,
+       5
+      ],
+      [
+       "Wednesday",
+       19,
+       1
+      ],
+      [
+       "Thursday",
+       16,
+       4
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "audit",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case du jour où Leila a vu le moins de publications qui la contredisent.",
+     "aide": "Cherche le plus petit nombre de la dernière colonne.",
+     "explication": "Mercredi, avec seulement **1** publication en désaccord : c’est le jour où son fil était le plus à sens unique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les quatre jours, quel pourcentage des 80 publications contredisait Leila ?",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Additionne la dernière colonne, puis divise par 80.",
+     "explication": "2 + 5 + 1 + 4 = 12 publications sur 80 : 12 ÷ 80 = 0,15, soit **15 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que laisse entendre Leila dans son texte ?",
+     "options": [
+      "Que l’algorithme a deviné ses opinions sans qu’on le lui dise",
+      "Que ses amis choisissent eux-mêmes tout ce qu’elle lit chaque jour",
+      "Que l’application lui a demandé de choisir ses opinions politiques",
+      "Que son professeur a modifié son fil avant le devoir de classe"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase « Nobody had told the app what I think ».",
+     "explication": "Personne n’a rien dit à l’application, et pourtant elle « savait » : **l’algorithme a deviné ses opinions**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le constat de Leila avec les mots de la banque.",
+     "texte": "Leila’s feed is a ___ : she only sees opinions that ___ her own.",
+     "reponses": [
+      [
+       "filter bubble"
+      ],
+      [
+       "confirm"
+      ]
+     ],
+     "banque": [
+      "filter bubble",
+      "confirm",
+      "whistleblower",
+      "challenge"
+     ],
+     "aide": "Une bulle de filtre ne montre que ce qui conforte.",
+     "explication": "Son fil est une **filter bubble** : elle ne voit que des opinions qui **confirm** les siennes."
+    }
+   ]
+  },
+  {
+   "chapitre": "732d319c-0145-5221-a349-bfbdaa81bfad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Interdire les réseaux aux moins de 16 ans ?",
+   "competence": "argumenter",
+   "situation": "Dans ton lycée, un débat oppose deux élèves sur l’interdiction des réseaux sociaux avant 16 ans. Croise leurs arguments avec les résultats d’un sondage.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Two speakers",
+     "blocs": [
+      "**Hannah, 17:** Social media should be banned for under-16s. Young teenagers are exposed to cyberbullying and endless comparison, and platforms profit from their attention. A law would protect those who cannot protect themselves.",
+      "**Omar, 16:** A ban would be a mistake. Many of us use these tools to organise, to alert and to learn; a teenager who is shut out today will not magically become a responsible citizen at sixteen. We should be taught digital citizenship, not forbidden."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Survey in a sixth-form college (200 pupils)",
+     "colonnes": [
+      "Answer",
+      "Pupils"
+     ],
+     "lignes": [
+      [
+       "In favour of a ban",
+       64
+      ],
+      [
+       "Against a ban",
+       108
+      ],
+      [
+       "No opinion",
+       28
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Sondage imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument dans le bon camp.",
+     "categories": [
+      "For a ban",
+      "Against a ban"
+     ],
+     "items": [
+      [
+       "Platforms profit from young people’s attention",
+       0
+      ],
+      [
+       "Teenagers also use networks to alert and organise",
+       1
+      ],
+      [
+       "Cyberbullying harms young teenagers",
+       0
+      ],
+      [
+       "We should learn to use the tools, not be shut out",
+       1
+      ]
+     ],
+     "aide": "Hannah protège ; Omar veut former.",
+     "explication": "Hannah défend l’interdiction (cyberharcèlement, attention vendue) ; Omar la refuse (s’organiser, alerter, apprendre)."
+    },
+    {
+     "type": "zone",
+     "document": "sondage",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui indique le camp le plus nombreux.",
+     "aide": "Compare les trois nombres de la colonne « Pupils ».",
+     "explication": "**108** élèves sont contre l’interdiction : c’est le camp majoritaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des 200 élèves est contre l’interdiction ?",
+     "reponse": 54,
+     "unite": "%",
+     "aide": "Divise 108 par 200.",
+     "explication": "108 ÷ 200 = 0,54, soit **54 %**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du texte d’Omar.",
+     "texte": "We should be taught digital ___, not forbidden.",
+     "reponses": [
+      [
+       "citizenship"
+      ]
+     ],
+     "banque": [
+      "citizenship",
+      "surveillance",
+      "rhetoric",
+      "censorship"
+     ],
+     "aide": "C’est le mot du cours pour « savoir se servir du numérique en citoyen ».",
+     "explication": "Omar réclame une éducation à la **digital citizenship** plutôt qu’une interdiction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux les deux documents pris ensemble ?",
+     "options": [
+      "Although most pupils reject a ban, a large minority still wants protection.",
+      "Although most pupils want a ban, only Omar disagrees with Hannah’s view.",
+      "Since every pupil agrees with Omar, the survey proves a ban is useless.",
+      "Because Hannah is right, the college has decided to ban social media."
+     ],
+     "reponse": 0,
+     "aide": "Chiffres du sondage : 64, 108, 28. Qui est majoritaire ? Qui reste nombreux ?",
+     "explication": "Seule la première est fidèle : **54 % contre l’interdiction, mais 32 % pour** (64 sur 200). Les autres exagèrent ou inventent."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5430f8-aaab-500d-b03a-9cb8769d5535",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un rapport de sciences en anglais",
+   "competence": "comprendre-langue",
+   "situation": "Jonas (Allemagne) et Priya (Inde) doivent écrire ensemble un rapport. Aucun des deux ne parle la langue de l’autre : regarde comment ils s’y prennent.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Jonas",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Priya",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jonas",
+       "texte": "Hi Priya! Shall we write our science report in English? My Hindi is zero and your German is too."
+      },
+      {
+       "qui": "Priya",
+       "texte": "Of course! English is our [[l|lingua]] [[l|franca]]. Neither of us is a native speaker, but we understand each other."
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Exactly. It’s not Shakespeare’s English, more like Globish: short sentences, simple words."
+      },
+      {
+       "qui": "Priya",
+       "texte": "And it works! Yesterday I gave a short speech in English at school and everybody understood."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux mots de l’expression qui désigne une langue commune à des personnes de langues maternelles différentes.",
+     "aide": "Priya la prononce dans sa première réplique, juste après « English is our ».",
+     "explication": "**Lingua franca** : une langue véhiculaire, que l’on utilise pour se comprendre quand on n’a pas la même langue maternelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Jonas décrit-il l’anglais qu’ils parlent ?",
+     "options": [
+      "Un anglais simplifié, fait de phrases courtes et de mots simples",
+      "Un anglais littéraire, proche de celui de Shakespeare et des poètes",
+      "Un dialecte régional que seuls les natifs peuvent vraiment comprendre",
+      "Un anglais juridique, réservé aux discours officiels et aux contrats"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le mot « Globish » et ce qui le suit.",
+     "explication": "Jonas parle de **Globish** : un anglais réduit à l’essentiel, parlé entre non-natifs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot du dialogue à sa traduction.",
+     "paires": [
+      [
+       "a native speaker",
+       "un locuteur natif"
+      ],
+      [
+       "a speech",
+       "un discours"
+      ],
+      [
+       "Globish",
+       "un anglais simplifié"
+      ],
+      [
+       "a lingua franca",
+       "une langue véhiculaire"
+      ]
+     ],
+     "aide": "Pense à ce que chaque personne fait ou parle.",
+     "explication": "**Native speaker** : dont c’est la langue maternelle ; **speech** : discours ; **Globish** : anglais simplifié entre non-natifs."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Priya.",
+     "texte": "Neither Jonas ___ Priya is a native speaker of English.",
+     "reponses": [
+      [
+       "nor"
+      ]
+     ],
+     "banque": [
+      "nor",
+      "or",
+      "and",
+      "than"
+     ],
+     "aide": "« Neither » appelle toujours le même partenaire.",
+     "explication": "On dit **neither… nor**, « ni… ni »."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5430f8-aaab-500d-b03a-9cb8769d5535",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le discours de la candidate",
+   "competence": "analyser-texte",
+   "situation": "Clara se présente à l’élection du président des élèves. Observe comment son discours est construit, à l’aide de la boîte à outils de la rhétorique.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Clara’s campaign speech",
+     "blocs": [
+      "Friends, classmates, fellow students. Do we want a school where nobody listens? No. Do we want a school where nobody cares? No. We want a school that listens, a school that cares, a school that acts. Together, we can change it. Together, we will."
+     ],
+     "source": "Discours imaginé pour l’exercice"
+    },
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Rhetoric toolbox",
+     "colonnes": [
+      "Device",
+      "What it does"
+     ],
+     "lignes": [
+      [
+       "Rhetorical question",
+       "A question asked for effect, not for an answer"
+      ],
+      [
+       "List of three",
+       "Three parallel items create rhythm"
+      ],
+      [
+       "Inclusive “we”",
+       "The speaker includes the audience in the action"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque passage du discours selon le procédé qu’il emploie.",
+     "categories": [
+      "Rhetorical question",
+      "List of three",
+      "Inclusive “we”"
+     ],
+     "items": [
+      [
+       "Do we want a school where nobody listens?",
+       0
+      ],
+      [
+       "a school that listens, a school that cares, a school that acts",
+       1
+      ],
+      [
+       "Together, we can change it.",
+       2
+      ],
+      [
+       "Do we want a school where nobody cares?",
+       0
+      ]
+     ],
+     "aide": "Relis la colonne « What it does » du tableau.",
+     "explication": "Les questions sont **rhétoriques** (Clara y répond elle-même), la série de trois propositions crée un **rythme**, « we » associe le public à l’action."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Clara pose-t-elle la question « Do we want… » ?",
+     "reponse": 2,
+     "aide": "Compte les phrases qui commencent par « Do we want ».",
+     "explication": "Elle la pose **2** fois : « …nobody listens ? » et « …nobody cares ? »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de la conclusion « Together, we can change it. Together, we will. » ?",
+     "options": [
+      "Il rassemble le public autour d’une promesse collective et énergique",
+      "Il annonce que la candidate se retire de l’élection scolaire",
+      "Il menace ses adversaires en les désignant un par un",
+      "Il donne des chiffres précis pour prouver le bilan du lycée"
+     ],
+     "reponse": 0,
+     "aide": "Que produit la répétition de « Together » ?",
+     "explication": "La répétition et le « we » créent un **élan collectif** : le public est invité à agir avec elle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’analyse.",
+     "texte": "Clara uses repetition and a list of three to create ___.",
+     "reponses": [
+      [
+       "rhythm"
+      ]
+     ],
+     "banque": [
+      "rhythm",
+      "silence",
+      "doubt",
+      "irony"
+     ],
+     "aide": "Ces procédés donnent une cadence.",
+     "explication": "La répétition et la série de trois créent du **rhythm** (du rythme)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5430f8-aaab-500d-b03a-9cb8769d5535",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Réécrire un classique ?",
+   "competence": "argumenter",
+   "situation": "Un journal a publié un article sur la réécriture de livres pour enfants. Deux lecteurs lui répondent. Compare leurs lettres.",
+   "documents": [
+    {
+     "id": "lettreA",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Letter 1 — Ms Patel, English teacher",
+     "blocs": [
+      "Sir, your article on rewritten children’s books misses the point. Publishers have always adapted texts for new readers. Removing a word that hurts a child is not censorship; it is respect. The story remains, and the original versions are still in print."
+     ],
+     "source": "Lettre imaginée pour l’exercice"
+    },
+    {
+     "id": "lettreB",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Letter 2 — Mr Wilson, retired librarian",
+     "blocs": [
+      "Madam, I am afraid I cannot agree. An author chooses every word. Once a publisher starts to rewrite, where does it stop? Readers must be free to meet a book as it was written, difficult words included. Otherwise we are [[t|trading]] literature for comfort."
+     ],
+     "source": "Lettre imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée dans la lettre qui la défend.",
+     "categories": [
+      "Ms Patel",
+      "Mr Wilson"
+     ],
+     "items": [
+      [
+       "The original versions are still on sale",
+       0
+      ],
+      [
+       "Readers should meet the book as it was written",
+       1
+      ],
+      [
+       "Removing a hurtful word is not censorship",
+       0
+      ],
+      [
+       "Where does a publisher stop once it starts rewriting?",
+       1
+      ]
+     ],
+     "aide": "Qui parle de « respect » ? Qui parle de « the author » ?",
+     "explication": "Ms Patel défend l’adaptation (respect, originaux toujours en vente) ; Mr Wilson défend le texte de l’auteur et s’inquiète de la pente."
+    },
+    {
+     "type": "zone",
+     "document": "lettreB",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe par lequel Mr Wilson compare la réécriture à un échange où l’on perd quelque chose.",
+     "aide": "Il parle de littérature « contre » confort.",
+     "explication": "**Trading** : il voit dans la réécriture un marché où l’on échange la littérature contre du confort."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé de la position de Ms Patel.",
+     "texte": "For Ms Patel, changing a hurtful word is an act of ___, not of ___.",
+     "reponses": [
+      [
+       "respect"
+      ],
+      [
+       "censorship"
+      ]
+     ],
+     "banque": [
+      "respect",
+      "censorship",
+      "profit",
+      "fear"
+     ],
+     "aide": "Elle le dit dans sa quatrième phrase.",
+     "explication": "Pour elle, c’est de **respect**, pas de **censorship**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux le désaccord ?",
+     "options": [
+      "Patel protège le lecteur d’aujourd’hui, Wilson protège le texte de l’auteur",
+      "Patel défend la censure d’État, Wilson défend les éditeurs privés",
+      "Patel veut interdire les livres anciens, Wilson veut les rééditer",
+      "Patel parle du prix de vente, Wilson parle de la durée des romans"
+     ],
+     "reponse": 0,
+     "aide": "Demande-toi ce que chacun veut protéger.",
+     "explication": "L’un place le **lecteur** au centre, l’autre **l’œuvre** telle que l’auteur l’a écrite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase ouvre le mieux un paragraphe nuancé de dissertation ?",
+     "options": [
+      "Although rewriting protects some readers, it also raises the question of who decides.",
+      "Everybody knows that rewriting books is always wrong and nobody should do it.",
+      "Rewriting is good because Ms Patel says so and Mr Wilson is simply too old.",
+      "Books are books, so the debate about language has no interest at all today."
+     ],
+     "reponse": 0,
+     "aide": "Une phrase nuancée reconnaît les deux côtés.",
+     "explication": "« **Although… it also raises…** » reconnaît un argument et pose la question de fond : c’est la concession typique du B2."
+    }
+   ]
+  },
+  {
+   "chapitre": "dfea713c-8373-5243-8d94-88b71193a786",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Derrière le portail de Maple Court",
+   "competence": "comprendre-langue",
+   "situation": "À l’entrée d’une résidence fermée, une affiche fixe les règles. Lis-la comme le ferait un visiteur.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Maple Court",
+     "sousTitre": "A gated community — residents only",
+     "emoji": "🏡",
+     "lignes": [
+      {
+       "texte": "Visitors must sign in at the gate",
+       "id": "gate"
+      },
+      {
+       "texte": "CCTV in operation 24 hours a day",
+       "id": "cctv"
+      },
+      {
+       "texte": "Quiet hours: 10 pm to 7 am",
+       "id": "quiet"
+      },
+      {
+       "texte": "Journalists and photographers are not admitted",
+       "id": "press"
+      }
+     ],
+     "pied": "Thank you for respecting your neighbours’ privacy.",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "multiple": false,
+     "reponse": [
+      "cctv"
+     ],
+     "enonce": "Touche la règle qui installe une surveillance par caméras.",
+     "aide": "Cherche un sigle de quatre lettres.",
+     "explication": "**CCTV** est la vidéosurveillance : les habitants sont filmés jour et nuit."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "multiple": false,
+     "reponse": [
+      "press"
+     ],
+     "enonce": "Touche la règle qui protège les habitants de la presse à scandale.",
+     "aide": "Quels visiteurs sont refusés ?",
+     "explication": "« **Journalists and photographers are not admitted** » : la résidence se ferme à la presse."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à sa traduction.",
+     "paires": [
+      [
+       "privacy",
+       "la vie privée"
+      ],
+      [
+       "an intrusion",
+       "une intrusion"
+      ],
+      [
+       "a gated community",
+       "une résidence fermée"
+      ],
+      [
+       "the tabloids",
+       "la presse à scandale"
+      ]
+     ],
+     "aide": "« Gated » vient de « gate », le portail.",
+     "explication": "**Privacy** = vie privée ; **a gated community** = une résidence fermée par un portail."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux l’esprit de cette affiche ?",
+     "options": [
+      "The residents want to protect their private life from outside intrusion.",
+      "The residents invite everyone in the town to visit the estate freely.",
+      "The residents are obliged by law to film themselves every single day.",
+      "The residents ask journalists to write about the estate every week."
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne de l’affiche.",
+     "explication": "L’affiche filtre les entrées pour **protéger la vie privée** des résidents."
+    }
+   ]
+  },
+  {
+   "chapitre": "dfea713c-8373-5243-8d94-88b71193a786",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Salem à Hollywood",
+   "competence": "se-reperer-temps",
+   "situation": "Une brochure de théâtre explique pourquoi Arthur Miller a écrit *The Crucible*. Place les dates sur la frise et lis le texte.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "The anti-communist years",
+     "debut": 1940,
+     "fin": 1960,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "hut",
+       "date": 1947,
+       "nom": "Hollywood Ten"
+      },
+      {
+       "id": "mcc",
+       "date": 1950,
+       "nom": "McCarthy"
+      },
+      {
+       "id": "cru",
+       "date": 1953,
+       "nom": "The Crucible"
+      }
+     ],
+     "source": "Repères du cours"
+    },
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Programme note",
+     "blocs": [
+      "Arthur Miller did not write a history lesson. In 1953 he set The Crucible in Salem, Massachusetts, in 1692, where nineteen people were hanged after accusations of witchcraft.",
+      "Audiences in 1953 [[u|understood]] at once: in their country, people were asked to name others as communists, and refusing could destroy a career. By telling the story of the past, Miller could criticise the present without naming it."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cru"
+     ],
+     "enonce": "Touche sur la frise l’événement qui correspond à la création de la pièce de Miller.",
+     "aide": "Cherche le titre de la pièce.",
+     "explication": "**The Crucible** date de 1953, trois ans après le début de l’action de McCarthy."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les procès de Salem (1692) de la pièce de Miller (1953) ?",
+     "reponse": 261,
+     "unite": "ans",
+     "aide": "Soustrais 1692 de 1953.",
+     "explication": "1953 − 1692 = **261** ans."
+    },
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": true,
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le verbe qui montre que le public de 1953 a saisi l’allusion à son époque.",
+     "aide": "Il est juste après « Audiences in 1953 ».",
+     "explication": "Le public de 1953 **understood** at once : il a compris que Salem parlait de son présent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Miller choisit-il Salem ?",
+     "options": [
+      "Pour critiquer sa propre époque sans avoir à la nommer",
+      "Pour écrire une leçon d’histoire exacte et exhaustive",
+      "Pour faire de la publicité aux musées du Massachusetts",
+      "Pour défendre les juges qui avaient condamné les accusés"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la brochure.",
+     "explication": "Miller **critique le présent sans le nommer** : la fiction du passé lui sert de masque."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la brochure.",
+     "texte": "Miller could criticise the present without ___ it.",
+     "reponses": [
+      [
+       "naming"
+      ]
+     ],
+     "banque": [
+      "naming",
+      "named",
+      "name",
+      "to name"
+     ],
+     "aide": "Après « without », le verbe prend la forme en -ing.",
+     "explication": "On dit **without naming** : après une préposition, on emploie la forme en -ing."
+    }
+   ]
+  },
+  {
+   "chapitre": "dfea713c-8373-5243-8d94-88b71193a786",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui décide du corps des femmes ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves préparent un exposé sur *The Handmaid’s Tale*. Croise leur conversation avec un tableau de repères.",
+   "documents": [
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Landmarks",
+     "colonnes": [
+      "Year",
+      "Country",
+      "Event"
+     ],
+     "lignes": [
+      [
+       1903,
+       "UK",
+       "Emmeline Pankhurst founds the WSPU"
+      ],
+      [
+       1918,
+       "UK",
+       "Some women over 30 can vote"
+      ],
+      [
+       1928,
+       "UK",
+       "Women vote on equal terms with men"
+      ],
+      [
+       1973,
+       "USA",
+       "Roe v. Wade protects abortion rights"
+      ],
+      [
+       2022,
+       "USA",
+       "Dobbs ruling returns the decision to each state"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Repères chronologiques"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Amir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "I’d like to argue that Atwood’s novel is a warning, not a prediction."
+      },
+      {
+       "qui": "Amir",
+       "texte": "Fair. In 1985 she imagined a state that controls women’s bodies. Then in 2022 the Supreme Court handed abortion decisions back to each state."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "So the book says: be careful, rights can be taken back."
+      },
+      {
+       "qui": "Amir",
+       "texte": "Exactly. A cautionary tale, not a crystal ball."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Roe v. Wade de l’arrêt Dobbs ?",
+     "reponse": 49,
+     "unite": "ans",
+     "aide": "Soustrais 1973 de 2022.",
+     "explication": "2022 − 1973 = **49** ans."
+    },
+    {
+     "type": "zone",
+     "document": "reperes",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la case de l’année où les Britanniques obtiennent le droit de vote à égalité avec les hommes.",
+     "aide": "Cherche « equal terms ».",
+     "explication": "C’est **1928** : en 1918, seules certaines femmes de plus de 30 ans votaient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Amir par « a cautionary tale, not a crystal ball » ?",
+     "options": [
+      "L’œuvre avertit d’un danger possible sans prétendre annoncer l’avenir",
+      "L’œuvre prédit exactement ce qui arrivera aux États-Unis un jour",
+      "L’œuvre est un conte pour enfants qui n’a aucun lien avec le réel",
+      "L’œuvre raconte des faits vérifiés, sans rien imaginer du tout"
+     ],
+     "reponse": 0,
+     "aide": "« Crystal ball » = boule de cristal, celle des voyantes.",
+     "explication": "Un **cautionary tale** prévient ; une boule de cristal prédirait. Atwood avertit, elle ne prophétise pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion le tableau et le dialogue permettent-ils d’appuyer ?",
+     "options": [
+      "Un droit obtenu peut être reconnu, puis remis en cause plus tard",
+      "Les droits des femmes ont progressé sans jamais reculer depuis 1903",
+      "Les droits des femmes sont identiques au Royaume-Uni et aux États-Unis",
+      "Le droit de vote est arrivé aux États-Unis en 2022 par une décision"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1973 et 2022, puis relis la réplique de Zoe.",
+     "explication": "De Roe (1973) à Dobbs (2022), un droit reconnu a été **remis à la décision de chaque État** : un droit n’est jamais acquis pour toujours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "In 1928, women in the UK could vote on the same terms ___ men.",
+     "reponses": [
+      [
+       "as"
+      ]
+     ],
+     "banque": [
+      "as",
+      "than",
+      "like",
+      "that"
+     ],
+     "aide": "« Same… as » : c’est une comparaison d’égalité.",
+     "explication": "On dit **the same terms as men** : « dans les mêmes conditions que les hommes »."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9944db1-1b45-5744-b36c-ee0c16e82b38",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Bienvenue à Brightlake",
+   "competence": "analyser-texte",
+   "situation": "Une brochure vante « la ville la plus heureuse du monde ». Lis-la en cherchant ce qui cloche.",
+   "documents": [
+    {
+     "id": "brochure",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Welcome to Brightlake",
+     "blocs": [
+      "Welcome to Brightlake, the happiest town in the world! Every street is spotless, every citizen has a job, and every home has a smart [[d|speaker]] that listens day and night, so that nothing is ever forgotten. [[d|Cameras]] in the parks keep you safe. Citizens who complain lose points on their Happiness Score, but why would anyone complain?"
+     ],
+     "source": "Brochure imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brochure",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux mots qui nomment des appareils qui écoutent ou observent les habitants.",
+     "aide": "L’un est dans chaque maison, l’autre dans les parcs.",
+     "explication": "Le **speaker** connecté (qui écoute) et les **cameras** (qui filment) : deux outils de surveillance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le ton de cette brochure ?",
+     "options": [
+      "Un enthousiasme officiel qui cache un contrôle inquiétant",
+      "Une critique violente de la ville par ses habitants révoltés",
+      "Un simple guide touristique sans rien d’étrange ni de menaçant",
+      "Une annonce publicitaire pour vendre des haut-parleurs connectés"
+     ],
+     "reponse": 0,
+     "aide": "Que se passe-t-il pour ceux qui se plaignent ?",
+     "explication": "La brochure est **joyeuse en surface**, mais elle décrit un contrôle permanent : c’est le ton d’une dystopie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à sa traduction.",
+     "paires": [
+      [
+       "a utopia",
+       "une utopie"
+      ],
+      [
+       "a dystopia",
+       "une dystopie"
+      ],
+      [
+       "a cautionary tale",
+       "un récit d’avertissement"
+      ],
+      [
+       "rags to riches",
+       "de la misère à la fortune"
+      ]
+     ],
+     "aide": "Une dystopie est le contraire d’une utopie.",
+     "explication": "**Utopia** : société idéale ; **dystopia** : société cauchemardesque ; **cautionary tale** : récit qui avertit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le commentaire.",
+     "texte": "Brightlake looks like a utopia, but it is a ___ : its citizens are watched and punished for complaining.",
+     "reponses": [
+      [
+       "dystopia"
+      ]
+     ],
+     "banque": [
+      "dystopia",
+      "utopia",
+      "whistleblower",
+      "surveillance"
+     ],
+     "aide": "Une société parfaite en façade mais oppressive.",
+     "explication": "**Dystopia** : une société qui paraît parfaite mais opprime ses habitants."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9944db1-1b45-5744-b36c-ee0c16e82b38",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Danny, de la misère à la fortune ?",
+   "competence": "analyser-document",
+   "situation": "Un journal présente Danny Reyes comme un « self-made man ». Croise son portrait et le graphique de ses revenus.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Danny Reyes",
+     "blocs": [
+      "Danny Reyes grew up in a small flat in Detroit. At 18 he worked nights in a warehouse. Seven years later he sold his first app, and by 32 his company employed fifty people.",
+      "Newspapers call him a self-made man, yet Danny admits that a teacher lent him his first laptop."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "revenus",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Danny’s yearly income",
+     "categories": [
+      "Age 18",
+      "Age 25",
+      "Age 32",
+      "Age 40"
+     ],
+     "series": [
+      {
+       "nom": "Income",
+       "valeurs": [
+        12,
+        30,
+        85,
+        240
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Income",
+      "unite": "in thousand dollars",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Age"
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel revenu annuel, en milliers de dollars, Danny avait-il à 32 ans ?",
+     "reponse": 85,
+     "unite": "k$",
+     "aide": "Lis la hauteur de la troisième barre.",
+     "explication": "La barre de **32 ans** atteint 85, soit 85 000 dollars."
+    },
+    {
+     "type": "zone",
+     "document": "revenus",
+     "multiple": false,
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la barre de la première année où Danny dépasse 100 000 dollars.",
+     "aide": "Cherche la première barre au-dessus de 100.",
+     "explication": "À 32 ans il est à 85 : c’est à **40 ans** (240) qu’il dépasse 100 000 dollars."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois son revenu à 40 ans est-il plus élevé que celui à 25 ans ?",
+     "reponse": 8,
+     "aide": "Divise 240 par 30.",
+     "explication": "240 ÷ 30 = **8** : son revenu à 40 ans est huit fois celui de ses 25 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle nuance le portrait apporte-t-il à l’expression « self-made man » ?",
+     "options": [
+      "Sa réussite doit aussi à l’aide d’un professeur, pas seulement à son travail",
+      "Sa réussite vient d’un héritage familial reçu à l’âge de dix-huit ans",
+      "Sa réussite est fausse, car ses employés ont écrit l’application seuls",
+      "Sa réussite prouve que l’ascension sociale est possible pour chacun"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du portrait.",
+     "explication": "Un professeur lui a prêté son premier ordinateur : **le mythe du self-made man est nuancé**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le commentaire.",
+     "texte": "Danny’s story looks like a typical ___ story, although he did not do it alone.",
+     "reponses": [
+      [
+       "rags to riches",
+       "rags-to-riches"
+      ]
+     ],
+     "banque": [
+      "rags to riches",
+      "cautionary",
+      "dystopian",
+      "upward"
+     ],
+     "aide": "De la misère à la fortune.",
+     "explication": "C’est une histoire **rags to riches**, mais avec un coup de pouce."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9944db1-1b45-5744-b36c-ee0c16e82b38",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux familles de fictions",
+   "competence": "analyser-document",
+   "situation": "Une élève prépare l’introduction d’une dissertation sur la fiction et le réel. Croise son texte avec un tableau d’œuvres.",
+   "documents": [
+    {
+     "id": "intro",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Student’s introduction",
+     "blocs": [
+      "Fiction holds up a mirror to society, but it does not always show the same face. Dystopias exaggerate a real trend to warn us, whereas novels about the American Dream question a national promise that does not keep its word for everyone. This essay will compare both kinds of stories."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Six works",
+     "colonnes": [
+      "Work",
+      "Author",
+      "Year",
+      "Theme"
+     ],
+     "lignes": [
+      [
+       "Nineteen Eighty-Four",
+       "George Orwell",
+       1949,
+       "Total surveillance"
+      ],
+      [
+       "Fahrenheit 451",
+       "Ray Bradbury",
+       1953,
+       "A society that burns books"
+      ],
+      [
+       "The Hunger Games",
+       "Suzanne Collins",
+       2008,
+       "Deadly games as television"
+      ],
+      [
+       "The Great Gatsby",
+       "F. Scott Fitzgerald",
+       1925,
+       "Wealth cannot erase origins"
+      ],
+      [
+       "Of Mice and Men",
+       "John Steinbeck",
+       1937,
+       "A dream of land that never comes"
+      ],
+      [
+       "Death of a Salesman",
+       "Arthur Miller",
+       1949,
+       "A man broken by the ideal of success"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Repères du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque œuvre dans la bonne famille.",
+     "categories": [
+      "Dystopie",
+      "Rêve américain"
+     ],
+     "items": [
+      [
+       "Nineteen Eighty-Four",
+       0
+      ],
+      [
+       "The Great Gatsby",
+       1
+      ],
+      [
+       "The Hunger Games",
+       0
+      ],
+      [
+       "Of Mice and Men",
+       1
+      ],
+      [
+       "Fahrenheit 451",
+       0
+      ],
+      [
+       "Death of a Salesman",
+       1
+      ]
+     ],
+     "aide": "Regarde la colonne « Theme » : surveillance, censure, spectacle d’un côté ; réussite qui échoue de l’autre.",
+     "explication": "Les trois premières **dénoncent un futur exagéré** ; les trois autres **questionnent le rêve américain**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *The Great Gatsby* de *Fahrenheit 451* ?",
+     "reponse": 28,
+     "unite": "ans",
+     "aide": "Soustrais l’année de Gatsby de celle de Fahrenheit 451.",
+     "explication": "1953 − 1925 = **28** ans."
+    },
+    {
+     "type": "zone",
+     "document": "oeuvres",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche l’année de publication de l’œuvre la plus récente du tableau.",
+     "aide": "Cherche le plus grand nombre de la colonne « Year ».",
+     "explication": "*The Hunger Games* date de **2008**, la plus récente des six."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de l’introduction.",
+     "texte": "Dystopias exaggerate a real trend ___ warn us, ___ novels about the American Dream question a national promise.",
+     "reponses": [
+      [
+       "to"
+      ],
+      [
+       "whereas"
+      ]
+     ],
+     "banque": [
+      "to",
+      "whereas",
+      "because",
+      "unless"
+     ],
+     "aide": "But de l’exagération ; puis opposition entre deux familles.",
+     "explication": "**To warn** (but) et **whereas** (opposition : « alors que »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse relie le mieux le tableau et l’introduction ?",
+     "options": [
+      "Dystopias warn about the future, while American Dream novels question a national myth.",
+      "Dystopias were all written after the year 2000 to criticise new technologies.",
+      "American Dream novels all celebrate success and never mention failure or poverty.",
+      "Every work in the table was published in the United States during the 1950s."
+     ],
+     "reponse": 0,
+     "aide": "Vérifie chaque phrase avec les années et les thèmes du tableau.",
+     "explication": "Seule la première est **fidèle aux deux documents** : les autres sont contredites par les dates et les thèmes."
+    }
+   ]
+  },
+  {
+   "chapitre": "cce272bb-dd9d-5d1f-ae77-8e408b3720c8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mot du comité des fêtes",
+   "competence": "manier-langue",
+   "situation": "Le comité des fêtes remercie les bénévoles sur le site du lycée. Son texte utilise plusieurs inversions.",
+   "documents": [
+    {
+     "id": "mot",
+     "type": "texte",
+     "genre": "article",
+     "titre": "School fair — thank you!",
+     "blocs": [
+      "Never [[a|have]] we had so many volunteers at the school fair. Rarely [[a|does]] a festival attract such a crowd in November. Not only [[a|did]] the band play for free, but they also raised five hundred pounds for the library."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mot",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les trois auxiliaires qui ont été placés avant le sujet à cause de l’adverbe de début de phrase.",
+     "aide": "Dans chaque phrase, l’auxiliaire vient juste après l’adverbe.",
+     "explication": "Ce sont **have**, **does** et **did** : après *Never*, *Rarely* et *Not only*, l’auxiliaire passe avant le sujet."
+    },
+    {
+     "type": "trous",
+     "enonce": "La phrase neutre est « She rarely complains. ». Complète la version avec inversion (présent).",
+     "texte": "Rarely ___ she complain.",
+     "reponses": [
+      [
+       "does"
+      ]
+     ],
+     "banque": [
+      "does",
+      "is",
+      "has",
+      "did"
+     ],
+     "aide": "Au présent simple, on appelle « do/does ».",
+     "explication": "Sans auxiliaire, on utilise **does** : *Rarely does she complain.*"
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à sa traduction.",
+     "paires": [
+      [
+       "Seldom",
+       "rarement"
+      ],
+      [
+       "Hardly… when",
+       "à peine… que"
+      ],
+      [
+       "Under no circumstances",
+       "en aucun cas"
+      ],
+      [
+       "Only then",
+       "ce n’est qu’alors que"
+      ]
+     ],
+     "aide": "Ces quatre expressions déclenchent toutes l’inversion.",
+     "explication": "**Seldom** = rarement ; **Hardly… when** = à peine… que ; **Under no circumstances** = en aucun cas."
+    }
+   ]
+  },
+  {
+   "chapitre": "cce272bb-dd9d-5d1f-ae77-8e408b3720c8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Corriger les copies",
+   "competence": "manier-langue",
+   "situation": "Tu corriges six phrases d’un devoir d’élèves. Trois sont justes, trois contiennent une faute d’inversion.",
+   "documents": [
+    {
+     "id": "copies",
+     "type": "tableau",
+     "titre": "Six sentences from a class essay",
+     "colonnes": [
+      "N°",
+      "Sentence"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Never I have seen a politician so honest."
+      ],
+      [
+       "2",
+       "Rarely does the council listen to young people."
+      ],
+      [
+       "3",
+       "No sooner had the results been announced when protests began."
+      ],
+      [
+       "4",
+       "Not only is the law unfair, but it is also outdated."
+      ],
+      [
+       "5",
+       "Under no circumstances the police should enter without a warrant."
+      ],
+      [
+       "6",
+       "Little did the voters know what was coming."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Phrases écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copies",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1",
+      "r4c1"
+     ],
+     "enonce": "Touche les trois phrases incorrectes.",
+     "aide": "Vérifie dans chaque phrase : l’auxiliaire est-il avant le sujet ? Le bon mot de liaison suit-il ?",
+     "explication": "Fautes : phrase **1** (pas d’inversion), phrase **3** (« than » et non « when ») et phrase **5** (*should the police…*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle faute contient la phrase 3 ?",
+     "options": [
+      "Il faut « than » après « No sooner », pas « when »",
+      "Il faut un auxiliaire « did » après « No sooner »",
+      "Il faut supprimer l’inversion après « No sooner »",
+      "Il faut « as » après « No sooner », pas « when »"
+     ],
+     "reponse": 0,
+     "aide": "« Hardly » va avec « when ». Et « No sooner » ?",
+     "explication": "**No sooner… than** : c’est la faute classique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la phrase 1.",
+     "texte": "Never ___ I seen a politician so honest.",
+     "reponses": [
+      [
+       "have"
+      ]
+     ],
+     "banque": [
+      "have",
+      "did",
+      "do",
+      "am"
+     ],
+     "aide": "Le verbe « seen » est un participe passé.",
+     "explication": "*Never have I seen* : auxiliaire **have** avant le sujet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour former la phrase.",
+     "items": [
+      "Little",
+      "did",
+      "they",
+      "imagine",
+      "the",
+      "consequences"
+     ],
+     "aide": "Après « Little », l’auxiliaire précède le sujet.",
+     "explication": "**Little did they imagine the consequences.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "cce272bb-dd9d-5d1f-ae77-8e408b3720c8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre de réclamation",
+   "competence": "manier-langue",
+   "situation": "M. Turner écrit à son fournisseur d’accès. Sa lettre emploie l’inversion dans la condition. Croise-la avec son dossier client.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Mr Turner’s letter",
+     "blocs": [
+      "Dear Sir or Madam,",
+      "I am writing to complain about the broadband service I have received since March. Never have I experienced such unreliable service. [[c|Had]] your technician arrived on the agreed date, the problem would have been solved in a day. Not only did he fail to come, but nobody informed me.",
+      "[[c|Should]] you wish to keep me as a customer, I expect a full refund. [[c|Were]] the company to ignore this letter, I would contact the regulator.",
+      "Yours faithfully, J. Turner"
+     ],
+     "source": "Lettre imaginée pour l’exercice"
+    },
+    {
+     "id": "dossier",
+     "type": "tableau",
+     "titre": "Customer file",
+     "colonnes": [
+      "Date",
+      "Event"
+     ],
+     "lignes": [
+      [
+       "3 March",
+       "Line goes down"
+      ],
+      [
+       "5 March",
+       "Visit booked for 10 March"
+      ],
+      [
+       "10 March",
+       "Nobody comes"
+      ],
+      [
+       "24 March",
+       "Complaint letter sent"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Dossier imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les trois mots qui remplacent « if » dans une condition.",
+     "aide": "Ils sont en tête de phrase, sans « if ».",
+     "explication": "**Had**, **Should** et **Were** : trois inversions conditionnelles (*If your technician had arrived…*, *If you should wish…*, *If the company were to…*)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de phrases de la lettre (hors formules de politesse) commencent par une inversion ?",
+     "reponse": 5,
+     "aide": "Compte : Never, Had, Not only, Should, Were.",
+     "explication": "**5** phrases : *Never have I*, *Had your technician*, *Not only did he*, *Should you wish*, *Were the company*."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’événement du dossier qui montre que la condition de « Had your technician arrived… » n’a pas été remplie.",
+     "aide": "Le technicien est-il venu à la date convenue ?",
+     "explication": "« **Nobody comes** » le 10 mars : le technicien n’est pas venu, d’où la phrase contrefactuelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase a le même sens que « Had your technician arrived on the agreed date » ?",
+     "options": [
+      "If your technician had arrived on the agreed date",
+      "If your technician arrived on the agreed date",
+      "If your technician would have arrived on the agreed date",
+      "When your technician arrived on the agreed date"
+     ],
+     "reponse": 0,
+     "aide": "L’inversion avec « Had » remplace « if » + past perfect.",
+     "explication": "**If + past perfect** : *Had he arrived* = *If he had arrived*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la lettre.",
+     "texte": "Were the company ___ ignore this letter, I ___ contact the regulator.",
+     "reponses": [
+      [
+       "to"
+      ],
+      [
+       "would"
+      ]
+     ],
+     "banque": [
+      "to",
+      "would",
+      "will",
+      "was"
+     ],
+     "aide": "Forme : « Were + sujet + to + verbe », puis un conditionnel.",
+     "explication": "*Were the company **to** ignore… I **would** contact…* : hypothèse peu probable."
+    }
+   ]
+  },
+  {
+   "chapitre": "bcd86911-66dd-5708-b98d-1eb631b7273d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mail avant la sortie à York",
+   "competence": "manier-langue",
+   "situation": "Le proviseur écrit aux parents avant la sortie scolaire. Son mail est écrit dans un anglais soutenu.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Mr Hart’s email",
+     "blocs": [
+      "Dear parents,",
+      "Our school trip to York takes place on Friday. It is essential that every pupil [[s|arrive]] by 8:30. We insist that no phone [[s|be]] used on the coach. The governors recommend that parents [[s|sign]] the consent form, and it is vital that nobody [[s|forget]] the packed lunch.",
+      "Yours sincerely, Mr Hart"
+     ],
+     "source": "Mail imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les quatre verbes à la base verbale (subjonctif) qui suivent « that ».",
+     "aide": "Aucun de ces verbes ne prend de -s, même avec « every pupil » ou « nobody ».",
+     "explication": "**arrive**, **be**, **sign**, **forget** : après exiger, recommander ou « it is essential », on emploie la base verbale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « that every pupil arrive » et non « arrives » ?",
+     "options": [
+      "Après une expression d’exigence, on emploie la base verbale",
+      "Parce que « pupil » est un nom pluriel dans cette phrase",
+      "Parce que l’anglais n’accorde jamais les verbes au présent",
+      "Parce que l’école a voulu employer le futur de politesse"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le déclencheur : « It is essential that ».",
+     "explication": "C’est un **subjonctif** : après *essential*, *insist*, *recommend*, le verbe reste à la base."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase à la négation.",
+     "texte": "We suggest that he ___ travel alone.",
+     "reponses": [
+      [
+       "not"
+      ]
+     ],
+     "banque": [
+      "not",
+      "doesn’t",
+      "isn’t",
+      "won’t"
+     ],
+     "aide": "Au subjonctif, la négation se fait sans « do ».",
+     "explication": "**Not** + base verbale : *that he not travel alone*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque formule figée à sa traduction.",
+     "paires": [
+      [
+       "God save the King",
+       "Que Dieu sauve le roi"
+      ],
+      [
+       "Be that as it may",
+       "Quoi qu’il en soit"
+      ],
+      [
+       "So be it",
+       "Ainsi soit-il"
+      ],
+      [
+       "Long live the Queen",
+       "Vive la reine"
+      ]
+     ],
+     "aide": "Le subjonctif survit dans ces expressions figées.",
+     "explication": "Dans ces formules, **save**, **be** et **live** sont des subjonctifs sans -s."
+    }
+   ]
+  },
+  {
+   "chapitre": "bcd86911-66dd-5708-b98d-1eb631b7273d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Il parle comme s’il savait tout",
+   "competence": "comprendre-langue",
+   "situation": "Deux amis discutent d’un camarade qui se croit expert en musique. Observe les verbes au prétérit qui ne parlent pas du passé.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Jake talks as if he [[i|knew]] everything about music."
+      },
+      {
+       "qui": "Sam",
+       "texte": "I’d rather he [[i|stayed]] quiet, honestly."
+      },
+      {
+       "qui": "Nina",
+       "texte": "It’s high time somebody [[i|told]] him. If I [[i|were]] you, I’d say it to his face."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les quatre verbes au prétérit qui expriment l’irréel ou un souhait, et non un fait passé.",
+     "aide": "Jake ne sait pas tout ; Sam ne parle pas d’hier.",
+     "explication": "**knew**, **stayed**, **told**, **were** : après *as if*, *I’d rather*, *it’s high time* et *if*, le prétérit dit l’irréel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que souhaite Sam avec « I’d rather he stayed quiet » ?",
+     "options": [
+      "Il préférerait que Jake se taise",
+      "Il constate que Jake est resté silencieux",
+      "Il préfère rester lui-même silencieux ici",
+      "Il demande à Jake de rester après la fête"
+     ],
+     "reponse": 0,
+     "aide": "« I’d rather + sujet + prétérit » exprime une préférence.",
+     "explication": "**Il préférerait que Jake se taise** : *I’d rather you stayed* = je préférerais que tu restes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "It’s high time we ___ home.",
+     "reponses": [
+      [
+       "went"
+      ]
+     ],
+     "banque": [
+      "went",
+      "to go",
+      "going",
+      "will go"
+     ],
+     "aide": "Après « It’s high time », on emploie le prétérit.",
+     "explication": "*It’s high time we **went** home* : il est grand temps que nous rentrions."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réplique à sa traduction.",
+     "paires": [
+      [
+       "Jake talks as if he knew everything",
+       "Jake parle comme s’il savait tout"
+      ],
+      [
+       "I’d rather he stayed quiet",
+       "Je préférerais qu’il se taise"
+      ],
+      [
+       "It’s high time somebody told him",
+       "Il est grand temps que quelqu’un le lui dise"
+      ],
+      [
+       "If I were you",
+       "À ta place"
+      ]
+     ],
+     "aide": "Dans chaque cas, le prétérit anglais correspond à un subjonctif français.",
+     "explication": "Le prétérit de l’irréel se traduit par un **subjonctif** ou un conditionnel en français."
+    }
+   ]
+  },
+  {
+   "chapitre": "bcd86911-66dd-5708-b98d-1eb631b7273d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rapport de la commission",
+   "competence": "manier-langue",
+   "situation": "Une commission municipale publie son rapport sur la bibliothèque. Sa rédaction mêle les trois manières d’exprimer le subjonctif.",
+   "documents": [
+    {
+     "id": "rapport",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Library panel report",
+     "blocs": [
+      "The panel recommends that the library remain open on Sundays. Members insisted that the budget be published before the vote. They also suggest that the council should fund the plan. It is high time the council looked at the real figures, and some members speak as if the library were a luxury."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "brouillons",
+     "type": "tableau",
+     "titre": "Five drafts from a class",
+     "colonnes": [
+      "N°",
+      "Draft"
+     ],
+     "lignes": [
+      [
+       "1",
+       "It is vital that they be informed in writing."
+      ],
+      [
+       "2",
+       "She insisted that he to apologise."
+      ],
+      [
+       "3",
+       "I suggest that she should see a doctor."
+      ],
+      [
+       "4",
+       "It is vital that they being informed."
+      ],
+      [
+       "5",
+       "We demand that the report be made public."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Brouillons imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque passage du rapport selon la forme employée.",
+     "categories": [
+      "Base verbale",
+      "Should",
+      "Prétérit irréel"
+     ],
+     "items": [
+      [
+       "recommends that the library remain open",
+       0
+      ],
+      [
+       "insisted that the budget be published",
+       0
+      ],
+      [
+       "suggest that the council should fund the plan",
+       1
+      ],
+      [
+       "It is high time the council looked at the real figures",
+       2
+      ],
+      [
+       "speak as if the library were a luxury",
+       2
+      ]
+     ],
+     "aide": "Cherche « should », une base verbale sans -s, un prétérit après « high time » ou « as if ».",
+     "explication": "**remain** et **be** : base verbale ; **should fund** : alternative britannique ; **looked** et **were** : prétérit irréel."
+    },
+    {
+     "type": "zone",
+     "document": "brouillons",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les deux brouillons qui contiennent une forme impossible en anglais.",
+     "aide": "Après « that », ni « to + verbe » ni « being » ne fonctionnent ici.",
+     "explication": "Phrase **2** (*that he to apologise*) et phrase **4** (*that they being informed*) : ces formes n’existent pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le brouillon 3 est-il correct alors qu’il n’a pas de base verbale ?",
+     "options": [
+      "L’anglais britannique remplace souvent le subjonctif par should",
+      "Parce que « suggest » n’exige aucune forme particulière après lui",
+      "Parce que « see » est un verbe irrégulier à la troisième personne",
+      "Parce que le sujet « she » rend le verbe toujours invariable ici"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase du rapport avec « should fund ».",
+     "explication": "**Should** est l’alternative britannique courante : *I suggest that she should see a doctor*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Traduis : « Il est grand temps que la ville agisse. »",
+     "texte": "It’s high time the city ___.",
+     "reponses": [
+      [
+       "acted"
+      ]
+     ],
+     "banque": [
+      "acted",
+      "act",
+      "acts",
+      "will act"
+     ],
+     "aide": "Après « high time », le verbe est au prétérit.",
+     "explication": "*It’s high time the city **acted*** : prétérit à valeur de subjonctif."
+    }
+   ]
+  },
+  {
+   "chapitre": "8b0e08dd-a283-592b-8038-b01ba17315c5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vieux pont de Riverton",
+   "competence": "comprendre-langue",
+   "situation": "Un journal local parle du pont de Riverton. Repère comment il dit ce qui doit être fait, ce qui a été fait et ce qui aurait dû l’être.",
+   "documents": [
+    {
+     "id": "pont",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Riverton Gazette",
+     "blocs": [
+      "The old bridge in Riverton must [[b|be]] repaired before winter. It is said to have been built in 1890 and, for years, it has been looked after by volunteers. The residents should have been warned about the cracks, the mayor admits."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pont",
+     "multiple": true,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui suit « must » dans « must ___ repaired ».",
+     "aide": "C’est l’auxiliaire qui porte le passif.",
+     "explication": "**be** : avec un modal, le passif se forme *modal + be + participe passé*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « It is said to have been built in 1890 » ?",
+     "options": [
+      "On dit qu’il a été construit en 1890",
+      "Il dit avoir construit le pont en 1890",
+      "On dit qu’il sera construit en 1890",
+      "Il est obligé de construire en 1890"
+     ],
+     "reponse": 0,
+     "aide": "« is said to have been » parle du passé et d’une rumeur.",
+     "explication": "« **On dit qu’il a été construit en 1890** » : *is said to have been* + participe passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Les bénévoles s’en occupent depuis des années (look after = s’occuper de). Complète.",
+     "texte": "The bridge has been looked ___ by volunteers for years.",
+     "reponses": [
+      [
+       "after"
+      ]
+     ],
+     "banque": [
+      "after",
+      "at",
+      "for",
+      "up"
+     ],
+     "aide": "La particule reste collée au verbe.",
+     "explication": "Le passif garde la particule : **looked after**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8b0e08dd-a283-592b-8038-b01ba17315c5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Piratage au collège",
+   "competence": "analyser-texte",
+   "situation": "Un article rapporte une attaque informatique. Repère les passifs : qui a fait quoi ?",
+   "documents": [
+    {
+     "id": "hack",
+     "type": "texte",
+     "genre": "article",
+     "titre": "School network attacked",
+     "blocs": [
+      "Hackers are [[u|believed]] to have entered the school network on Monday. No data can be recovered, the head says, but parents will be informed today. The problem ought to have been noticed earlier, and students were told to change their passwords. Staff were made to stay late to check the systems."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hack",
+     "multiple": true,
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le mot qui montre que l’identité des pirates n’est pas prouvée.",
+     "aide": "Cherche un verbe d’opinion au passif.",
+     "explication": "**Believed** : « on pense que » ; l’article ne fait que rapporter une hypothèse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que reproche l’article à l’équipe du collège ?",
+     "options": [
+      "De ne pas avoir repéré le problème assez tôt",
+      "D’avoir informé les parents avant les élèves",
+      "D’avoir recruté des pirates pour tester le réseau",
+      "D’avoir changé les mots de passe sans prévenir"
+     ],
+     "reponse": 0,
+     "aide": "Cherche « ought to have ».",
+     "explication": "« *The problem ought to have been noticed earlier* » : **on aurait dû le repérer plus tôt**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase du texte à sa version active.",
+     "paires": [
+      [
+       "Students were told to change their passwords",
+       "The school told students to change their passwords"
+      ],
+      [
+       "Staff were made to stay late",
+       "The head made staff stay late"
+      ],
+      [
+       "Parents will be informed today",
+       "The school will inform parents today"
+      ],
+      [
+       "The problem ought to have been noticed earlier",
+       "Someone ought to have noticed the problem earlier"
+      ]
+     ],
+     "aide": "Le sujet du passif devient le complément de l’actif.",
+     "explication": "Chaque passif déplace le complément en sujet ; **was made to** garde le « to » au passif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les mots de la banque.",
+     "texte": "No data can ___ recovered, and staff were made ___ stay late.",
+     "reponses": [
+      [
+       "be"
+      ],
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "be",
+      "been",
+      "to",
+      "for"
+     ],
+     "aide": "Modal + be ; make au passif + to.",
+     "explication": "*can **be** recovered* (modal + be) et *were made **to** stay* (le « to » réapparaît)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8b0e08dd-a283-592b-8038-b01ba17315c5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La digue que personne n’a surveillée",
+   "competence": "analyser-document",
+   "situation": "Une digue a cédé dans une ville imaginaire. Croise le journal de bord de l’incident et la note de la commission d’enquête.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Incident log — Dykeside",
+     "colonnes": [
+      "Date",
+      "Event",
+      "Result"
+     ],
+     "lignes": [
+      [
+       "3 March",
+       "Residents complain about cracks",
+       "Nobody replies"
+      ],
+      [
+       "10 March",
+       "Inspection planned",
+       "Cancelled by the council"
+      ],
+      [
+       "21 March",
+       "Dyke collapses",
+       "Forty homes flooded"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Journal imaginé pour l’exercice"
+    },
+    {
+     "id": "enquete",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Extract from the inquiry note",
+     "blocs": [
+      "The inquiry found that the dyke had been poorly maintained for years. The residents should have been warned, and the complaints ought to have been dealt with. Instead, an inspection was cancelled and nobody was held responsible."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui montre qu’une plainte n’a reçu aucune réponse.",
+     "aide": "Regarde la colonne « Result » de la première ligne.",
+     "explication": "« **Nobody replies** » : la plainte du 3 mars est restée sans réponse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours s’écoulent entre la première plainte et l’effondrement de la digue ?",
+     "reponse": 18,
+     "unite": "jours",
+     "aide": "Soustrais 3 de 21.",
+     "explication": "21 − 3 = **18** jours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la note d’enquête.",
+     "texte": "The residents should ___ ___ warned.",
+     "reponses": [
+      [
+       "have"
+      ],
+      [
+       "been"
+      ]
+     ],
+     "banque": [
+      "have",
+      "been",
+      "be",
+      "being"
+     ],
+     "aide": "Modal du passé : should + have + been + participe.",
+     "explication": "*should **have been** warned* : modal + have been + participe passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le passif naturel de « The council gave the residents no information » ?",
+     "options": [
+      "The residents were not given any information by the council.",
+      "The information was not given the residents by the council.",
+      "The residents did not be given any information by the council.",
+      "The residents were not give any information by the council."
+     ],
+     "reponse": 0,
+     "aide": "Avec deux compléments, on met la personne en sujet.",
+     "explication": "On met **the residents** en sujet : *were not given any information*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de la note d’enquête exprime une obligation qui n’a pas été respectée ?",
+     "options": [
+      "The residents should have been warned.",
+      "An inspection was cancelled.",
+      "The dyke had been poorly maintained for years.",
+      "Nobody was held responsible."
+     ],
+     "reponse": 0,
+     "aide": "Cherche un modal suivi de « have been ».",
+     "explication": "« **should have been warned** » exprime un reproche : les habitants auraient dû être prévenus."
+    }
+   ]
+  }
+ ]
+}

@@ -405,7 +405,7 @@ Si la musique n’imite rien, que nous apprend-elle ? Peut-être ceci : que la *
 ## Les cinq étapes du « je »
 | Époque | L’auteur | Ce que le moi devient |
 | Antiquité | **Socrate** | Rien d’intime : « connais-toi » invite à mesurer ce qu’on sait et ce qu’on ignore |
-| IVe siècle | **Augustin**, *Confessions* | Un **dedans** : *in interiore homine habitat veritas* |
+| IVe siècle | **Augustin**, *Confessions* | Un **dedans** : *in interiore homine habitat veritas*, écrit-il aussi (*De vera religione*) |
 | 1580 | **Montaigne**, *Essais* | Un **objet d’étude** : « je suis moi-même la matière de mon livre » |
 | 1637 | **Descartes**, *cogito* | Un **fondement** : une substance pensante, transparente à elle-même |
 | XIXe-XXe | Marx, Nietzsche, Freud | Un **soupçon** : le moi n’est plus transparent |
@@ -436,7 +436,7 @@ Freud décrit trois humiliations infligées à l’amour-propre humain.
 Le moi se **met en scène** : profils, avatars, récits de soi. Ce qui était examen intérieur devient **exposition**. Le moi contemporain est peut-être moins un secret à découvrir qu’une image à administrer.`,
           },
           questions: [
-            ['Quel ouvrage inaugure l’écriture de l’intériorité au IVe siècle ?', ['Les Confessions de saint Augustin', 'Les Essais de Montaigne', 'Le Discours de la méthode', 'La République'], 0, '*In interiore homine habitat veritas.*'],
+            ['Quel ouvrage inaugure l’écriture de l’intériorité au IVe siècle ?', ['Les Confessions de saint Augustin', 'Les Essais de Montaigne', 'Le Discours de la méthode', 'La République'], 0, 'Augustin y cherche Dieu au-dedans ; *in interiore homine habitat veritas*, écrit-il dans le *De vera religione*.'],
             ['Que dit Montaigne de son projet dans les « Essais » ?', ['« Je suis moi-même la matière de mon livre »', '« Je pense donc je suis »', '« Connais-toi toi-même »', '« L’enfer, c’est les autres »'], 0, 'Et il ajoute : « Je ne peins pas l’être, je peins le passage. »'],
             ['Chez Descartes, le moi est une substance pensante transparente à elle-même.', ['Vrai', 'Faux'], 0, 'C’est cette transparence que Marx, Nietzsche et Freud contesteront.'],
             ['Quelles sont les trois « blessures narcissiques » selon Freud ?', ['Copernic, Darwin, la psychanalyse', 'Platon, Descartes, Kant', 'Galilée, Newton, Einstein', 'Marx, Nietzsche, Freud'], 0, 'Décentrement cosmologique, biologique, puis psychique.'],

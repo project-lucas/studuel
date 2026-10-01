@@ -1,0 +1,366 @@
+{
+  "niveau": "Tle",
+  "matiere": "spcl",
+  "sujets": [
+    {
+      "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+      "difficulte": 1,
+      "titre": "Les deux incertitudes de Maëlle",
+      "consigne": "Réponds à chaque question en donnant la formule utilisée, l’application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** Maëlle prépare un titrage. Elle dispose d’une burette graduée dont le fabricant indique une tolérance de **± 0,03 mL**. Pour le volume équivalent, la classe a réalisé **6 titrages** identiques ; la série des volumes équivalents a un écart-type **s = 0,15 mL**.\n\n1. Pour chacune des deux situations (la tolérance de la burette, la série de 6 titrages), indique s’il s’agit d’une évaluation de type A ou de type B. Justifie.\n2. Calcule l’incertitude-type associée à la tolérance de la burette.\n3. Calcule l’incertitude-type sur la moyenne des 6 volumes équivalents.",
+      "bareme": [
+        { "critere": "Type B pour la tolérance (une seule donnée d’instrument), type A pour la série (mesures répétées), avec justification", "points": 6 },
+        { "critere": "u = Δ / √3 = 0,03 / √3 ≈ 0,017 mL", "points": 7 },
+        { "critere": "u = s / √n = 0,15 / √6 ≈ 0,061 mL", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **tolérance de la burette** est une donnée de l’instrument, pour une seule mesure : c’est une évaluation de **type B**. La **série de 6 titrages** repose sur des mesures répétées et leur dispersion (écart-type) : c’est une évaluation de **type A**.\n\n2. Type B, tolérance ± Δ : u = Δ / √3 = 0,03 / √3 = 0,03 / 1,732 ≈ **0,017 mL**.\n\n3. Type A : u = s / √n = 0,15 / √6 = 0,15 / 2,449 ≈ **0,061 mL**.\n\nOn remarque que la dispersion des titrages (0,061 mL) pèse bien plus que la tolérance de la burette (0,017 mL)."
+    },
+    {
+      "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+      "difficulte": 2,
+      "titre": "Le titrage de l’eau de Javel diluée",
+      "consigne": "Calcule, combine les incertitudes comme dans le cours, puis écris le résultat correctement.",
+      "enonce": "**Situation.** Karim titre une prise d’essai de solution. La concentration cherchée s’obtient par c = c₁ × V_E / V₀.\n\n| Grandeur | Valeur | Incertitude-type |\n| c₁ (titrant) | 0,0500 mol/L | 0,0003 mol/L |\n| V_E (volume équivalent) | 16,0 mL | 0,04 mL |\n| V₀ (prise d’essai) | 20,00 mL | 0,03 mL |\n\nRelation fournie : u(c) / c = √[ (u(c₁)/c₁)² + (u(V_E)/V_E)² + (u(V₀)/V₀)² ].\n\n1. Calcule c.\n2. Calcule les trois incertitudes relatives, en pourcentage.\n3. Calcule u(c) / c puis u(c), et écris le résultat avec un nombre de chiffres cohérent.\n4. Quelle source domine ? Propose une amélioration ciblée du protocole.",
+      "bareme": [
+        { "critere": "c = 0,0500 × 16,0 / 20,00 = 0,0400 mol/L", "points": 4 },
+        { "critere": "Incertitudes relatives 0,6 % ; 0,25 % ; 0,15 %", "points": 5 },
+        { "critere": "u(c)/c ≈ 0,67 %, u(c) ≈ 0,00027 mol/L et écriture c = 0,0400 mol/L avec u(c) arrondie à 1 ou 2 chiffres", "points": 6 },
+        { "critere": "Source dominante : le titrant ; amélioration ciblée (mieux connaître c₁, par exemple l’étalonner)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. c = c₁ × V_E / V₀ = 0,0500 × 16,0 / 20,00 = **0,0400 mol/L**.\n\n2. - u(c₁)/c₁ = 0,0003 / 0,0500 = 0,006, soit **0,6 %** ;\n- u(V_E)/V_E = 0,04 / 16,0 = 0,0025, soit **0,25 %** ;\n- u(V₀)/V₀ = 0,03 / 20,00 = 0,0015, soit **0,15 %**.\n\n3. u(c)/c = √(0,6² + 0,25² + 0,15²) % = √(0,36 + 0,0625 + 0,0225) % = √0,445 % ≈ **0,67 %**.\nu(c) = 0,0400 × 0,0067 ≈ **0,00027 mol/L**.\nRésultat : **c = 0,0400 mol/L avec u(c) = 0,00027 mol/L** (ou u(c) = 0,0003 mol/L en gardant un seul chiffre significatif ; la valeur est arrondie au même rang).\n\n4. La plus grande incertitude relative est celle du **titrant** (0,6 %) : son carré (0,36) fait presque tout le total (0,445). Améliorer la burette ou la pipette ne changerait presque rien. Il faut **mieux connaître la concentration du titrant** (par exemple l’étalonner soi-même ou utiliser un titrant de concentration garantie plus précisément). On attaque toujours la source dominante."
+    },
+    {
+      "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+      "difficulte": 3,
+      "titre": "Deux protocoles pour un même dosage",
+      "consigne": "Compare les deux protocoles de façon argumentée : calcule, valide chaque résultat, puis analyse ce que révèle la comparaison.",
+      "enonce": "**Situation.** Au laboratoire d’un fabricant, on dose une solution dont la valeur de référence est **c_réf = 0,0250 mol/L**, avec c = c₁ × V_E / V₀ et un titrant de concentration c₁ = 0,0200 mol/L (incertitude relative **0,2 %**).\n\n| | Protocole A | Protocole B |\n| Prise d’essai V₀ | 5,00 mL, u = 0,015 mL | 20,00 mL, u = 0,03 mL |\n| Volume équivalent V_E | 6,2 mL, u = 0,05 mL | 24,8 mL, u = 0,05 mL |\n\nRelation fournie : u(c) / c = √[ (u(c₁)/c₁)² + (u(V_E)/V_E)² + (u(V₀)/V₀)² ]. Un résultat est compatible avec la référence si z = |c − c_réf| / u(c) ≤ 2.\n\n1. Pour le protocole A, calcule les trois incertitudes relatives et identifie la source dominante.\n2. Calcule c, u(c)/c et u(c) pour chaque protocole.\n3. Calcule z pour chaque protocole et conclus.\n4. Pourquoi le protocole B est-il plus précis ? Relie ta réponse au choix de la prise d’essai.\n5. Le protocole le plus précis est celui qui n’est pas compatible avec la référence. Explique ce paradoxe en utilisant les notions de justesse et de fidélité, et propose une démarche pour trancher.",
+      "bareme": [
+        { "critere": "Protocole A : 0,2 % ; 0,81 % ; 0,30 %, source dominante = volume équivalent", "points": 4 },
+        { "critere": "c = 0,0248 mol/L pour les deux ; u(c) ≈ 0,00022 mol/L (A) et ≈ 0,000080 mol/L (B)", "points": 5 },
+        { "critere": "z ≈ 0,9 (A, compatible) et z ≈ 2,5 (B, incompatible)", "points": 4 },
+        { "critere": "B plus précis car une prise d’essai plus grande donne un V_E plus grand, donc des erreurs relatives plus petites", "points": 3 },
+        { "critere": "Paradoxe expliqué (fidélité ≠ justesse, erreur systématique révélée) et démarche proposée (sources d’erreurs, répétitions, histogramme)", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Protocole A : u(c₁)/c₁ = **0,2 %** ; u(V_E)/V_E = 0,05 / 6,2 ≈ **0,81 %** ; u(V₀)/V₀ = 0,015 / 5,00 = **0,30 %**. La source dominante est le **volume équivalent** (0,81 %).\n\n2. - A : c = 0,0200 × 6,2 / 5,00 = **0,0248 mol/L** ; u(c)/c = √(0,04 + 0,65 + 0,09) % = √0,78 % ≈ **0,88 %** ; u(c) = 0,0248 × 0,0088 ≈ **0,00022 mol/L**.\n- B : c = 0,0200 × 24,8 / 20,00 = **0,0248 mol/L** ; u(V_E)/V_E = 0,05 / 24,8 ≈ 0,20 % ; u(V₀)/V₀ = 0,03 / 20,00 = 0,15 % ; u(c)/c = √(0,04 + 0,04 + 0,0225) % = √0,1025 % ≈ **0,32 %** ; u(c) = 0,0248 × 0,0032 ≈ **0,000080 mol/L**.\n\n3. - A : z = |0,0248 − 0,0250| / 0,00022 = 0,0002 / 0,00022 ≈ **0,9 ≤ 2** : résultat **compatible**.\n- B : z = 0,0002 / 0,000080 = **2,5 > 2** : résultat **non compatible**.\n\n4. Dans B, la prise d’essai est 4 fois plus grande, donc le volume équivalent aussi (24,8 mL au lieu de 6,2 mL). Les incertitudes absolues de lecture restent les mêmes (0,05 mL), donc les **incertitudes relatives diminuent** : la source dominante de A (V_E) est presque divisée par 4. C’est l’amélioration ciblée proposée dans le cours.\n\n5. A est compatible seulement parce que son incertitude est **large** : il « couvre » l’écart. B, beaucoup plus **fidèle**, révèle que l’écart de 0,0002 mol/L n’est pas dû au hasard : les deux protocoles donnent la même valeur, décalée de la référence, ce qui fait soupçonner une **erreur systématique** commune (résultat fidèle mais peu juste) : concentration réelle du titrant différente de celle annoncée, repérage du virage toujours décalé (opérateur, méthode), ou référence elle-même discutable. Démarche : faire la liste des sources d’erreurs communes aux deux protocoles, **vérifier la concentration du titrant**, changer de méthode de repérage (suivi pH-métrique plutôt qu’un indicateur), répéter les mesures et tracer l’**histogramme** des séries pour voir si elles sont centrées sur la référence."
+    },
+    {
+      "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+      "difficulte": 1,
+      "titre": "Le bromure d’argent",
+      "consigne": "Réponds en écrivant chaque relation avant de faire le calcul.",
+      "enonce": "**Données.** Le bromure d’argent AgBr(s) est un sel très peu soluble : Ks = 5,0 × 10⁻¹³ à 25 °C.\n\n1. Écris l’équation de dissolution de AgBr dans l’eau et l’expression de son quotient de réaction Qr.\n2. Calcule pKs, puis la solubilité s de AgBr dans l’eau pure.\n3. On mélange des solutions de sorte que, juste après le mélange et avant toute réaction, [Ag⁺] = 1,0 × 10⁻⁴ mol/L et [Br⁻] = 2,0 × 10⁻⁵ mol/L. Un précipité se forme-t-il ? Justifie.",
+      "bareme": [
+        { "critere": "AgBr(s) ⇌ Ag⁺(aq) + Br⁻(aq) et Qr = [Ag⁺] × [Br⁻], sans le solide", "points": 6 },
+        { "critere": "pKs ≈ 12,3 et s = √Ks ≈ 7,1 × 10⁻⁷ mol/L", "points": 7 },
+        { "critere": "Qr = 2,0 × 10⁻⁹ > Ks : un précipité se forme", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. AgBr(s) ⇌ Ag⁺(aq) + Br⁻(aq). Le solide ne figure pas dans le quotient de réaction : **Qr = [Ag⁺] × [Br⁻]** (concentrations divisées par 1 mol/L).\n\n2. pKs = − log(5,0 × 10⁻¹³) ≈ **12,3**.\nDans l’eau pure, [Ag⁺] = [Br⁻] = s, donc Ks = s² et s = √Ks = √(5,0 × 10⁻¹³) ≈ **7,1 × 10⁻⁷ mol/L**.\n\n3. Qr = 1,0 × 10⁻⁴ × 2,0 × 10⁻⁵ = **2,0 × 10⁻⁹**. Comme **Qr > Ks** (2,0 × 10⁻⁹ > 5,0 × 10⁻¹³), le système évolue dans le sens de la formation du solide : **un précipité de AgBr se forme**, jusqu’à ce que Qr = Ks."
+    },
+    {
+      "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+      "difficulte": 2,
+      "titre": "Doser le sel d’une eau par conductimétrie",
+      "consigne": "Utilise la loi de Kohlrausch et la relation entre conductance et conductivité ; attention aux unités.",
+      "enonce": "**Situation.** Inès veut doser une eau légèrement salée (chlorure de sodium) par étalonnage conductimétrique.\n\n**Données.** λ(Na⁺) = 5,01 × 10⁻³ S·m²/mol ; λ(Cl⁻) = 7,63 × 10⁻³ S·m²/mol. Constante de la cellule : k = 1,00 × 10² m⁻¹, avec σ = k × G.\n\n1. Une solution étalon de NaCl a pour concentration c = 2,0 × 10⁻³ mol/L. Convertis c en mol/m³.\n2. Calcule la conductivité σ de cette solution étalon avec la loi de Kohlrausch.\n3. Quelle conductance G le conductimètre affiche-t-il pour cet étalon ?\n4. L’eau à doser a une conductivité σ = 1,89 × 10⁻² S/m. En supposant, comme dans le cours, que σ est proportionnelle à la concentration en solution diluée, calcule sa concentration en NaCl.",
+      "bareme": [
+        { "critere": "c = 2,0 mol/m³", "points": 4 },
+        { "critere": "σ = (λ(Na⁺) + λ(Cl⁻)) × c ≈ 2,53 × 10⁻² S/m", "points": 6 },
+        { "critere": "G = σ / k ≈ 2,53 × 10⁻⁴ S", "points": 4 },
+        { "critere": "Proportionnalité exploitée : c ≈ 1,5 × 10⁻³ mol/L", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 1 mol/L = 1 000 mol/m³, donc c = 2,0 × 10⁻³ × 1 000 = **2,0 mol/m³**.\n\n2. Loi de Kohlrausch : σ = λ(Na⁺) × [Na⁺] + λ(Cl⁻) × [Cl⁻], avec [Na⁺] = [Cl⁻] = c.\nσ = (5,01 + 7,63) × 10⁻³ × 2,0 = 12,64 × 10⁻³ × 2,0 ≈ **2,53 × 10⁻² S/m**.\n\n3. σ = k × G donc G = σ / k = 2,53 × 10⁻² / 1,00 × 10² ≈ **2,53 × 10⁻⁴ S** (0,253 mS).\n\n4. En solution diluée, σ est proportionnelle à c : c(eau) = c(étalon) × σ(eau) / σ(étalon) = 2,0 × 10⁻³ × 1,89 × 10⁻² / 2,53 × 10⁻² ≈ **1,5 × 10⁻³ mol/L**.\n\nPiège : utiliser c en mol/L dans Kohlrausch donnerait une conductivité 1 000 fois trop petite."
+    },
+    {
+      "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+      "difficulte": 3,
+      "titre": "Les ions chlorure d’une saumure diluée",
+      "consigne": "Exploite le titrage conductimétrique, puis justifie chaque phénomène à l’aide du quotient de réaction et de la constante Ks.",
+      "enonce": "**Situation.** On titre V₀ = 20,0 mL d’une saumure diluée (ions Cl⁻) par une solution de nitrate d’argent (Ag⁺ + NO₃⁻) de concentration c = 0,0200 mol/L. Réaction de titrage : Ag⁺(aq) + Cl⁻(aq) → AgCl(s). On suit la conductivité σ. Les points expérimentaux s’alignent sur deux droites :\n- avant l’équivalence : σ = 1,52 − 0,010 × V ;\n- après l’équivalence : σ = 0,98 + 0,030 × V (σ en mS/cm, V en mL).\n\n**Donnée.** AgCl : Ks = 1,8 × 10⁻¹⁰. Une goutte de burette vaut 0,05 mL.\n\n1. Détermine le volume équivalent V_E.\n2. Calcule la concentration en ions chlorure de la saumure diluée.\n3. Explique l’allure de la courbe : pourquoi σ diminue légèrement avant l’équivalence, puis augmente nettement après ?\n4. Montre, par un calcul de Qr, que la toute première goutte de titrant suffit à faire apparaître le précipité (on néglige la variation de volume).\n5. On ajoute du chlorure de sodium à une solution saturée de AgCl. Que devient la quantité de AgCl dissous ? Justifie à l’aide de Qr et Ks.",
+      "bareme": [
+        { "critere": "Intersection des droites : V_E = 13,5 mL", "points": 4 },
+        { "critere": "c(Cl⁻) = c × V_E / V₀ = 0,0135 mol/L", "points": 4 },
+        { "critere": "Allure expliquée : Cl⁻ remplacé par NO₃⁻ un peu moins conducteur, puis accumulation de Ag⁺ et NO₃⁻", "points": 4 },
+        { "critere": "[Ag⁺] ≈ 5 × 10⁻⁵ mol/L, Qr ≈ 7 × 10⁻⁷ > Ks, donc précipitation", "points": 4 },
+        { "critere": "Ion commun : Qr > Ks, précipitation, solubilité de AgCl diminuée", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. À l’équivalence, les deux droites se coupent : 1,52 − 0,010 V = 0,98 + 0,030 V, soit 0,54 = 0,040 V, donc **V_E = 13,5 mL**.\n\n2. À l’équivalence, n(Cl⁻) initial = n(Ag⁺) versé : c(Cl⁻) × V₀ = c × V_E, donc c(Cl⁻) = 0,0200 × 13,5 / 20,0 = **0,0135 mol/L**.\n\n3. **Avant l’équivalence**, chaque ion Cl⁻ qui précipite avec Ag⁺ est remplacé en solution par un ion NO₃⁻ apporté avec le titrant ; NO₃⁻ a une conductivité molaire ionique voisine mais un peu plus faible que Cl⁻ : σ **diminue légèrement**. **Après l’équivalence**, il n’y a plus de Cl⁻ à précipiter : les ions Ag⁺ et NO₃⁻ versés **s’accumulent**, σ **augmente nettement**.\n\n4. Une goutte apporte n(Ag⁺) = 0,0200 × 0,05 × 10⁻³ = 1,0 × 10⁻⁶ mol, dans environ 20 mL : [Ag⁺] ≈ 1,0 × 10⁻⁶ / 0,020 = **5,0 × 10⁻⁵ mol/L**. Qr = [Ag⁺] × [Cl⁻] = 5,0 × 10⁻⁵ × 0,0135 ≈ **6,8 × 10⁻⁷**. Comme **Qr > Ks** (1,8 × 10⁻¹⁰), un **précipité se forme** dès la première goutte.\n\n5. Dans la solution saturée, Qr = Ks. Ajouter des ions Cl⁻ (**ion commun**) augmente [Cl⁻], donc Qr devient **supérieur à Ks** : une partie des ions Ag⁺ précipite jusqu’à ce que Qr = Ks de nouveau. Il reste **moins de AgCl dissous** : l’ion commun **diminue la solubilité** de AgCl."
+    },
+    {
+      "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+      "difficulte": 1,
+      "titre": "pH et espèces prédominantes",
+      "consigne": "Donne la relation utilisée puis le résultat, arrondi à 0,1 unité de pH.",
+      "enonce": "**Données.** À 25 °C. pKa(acide méthanoïque / ion méthanoate) = 3,8 ; pKa(acide éthanoïque / ion éthanoate) = 4,8.\n\n1. Calcule le pH d’une solution d’acide chlorhydrique (acide fort) de concentration 5,0 × 10⁻³ mol/L.\n2. Calcule le pH d’une solution de soude (base forte) de concentration 2,0 × 10⁻² mol/L.\n3. Lequel des deux acides faibles des données est le plus fort ? Justifie.\n4. Dans une solution de pH = 4,0, quelle est l’espèce prédominante du couple acide éthanoïque / ion éthanoate ? Justifie.",
+      "bareme": [
+        { "critere": "pH = − log c ≈ 2,3 pour l’acide et pH = 14 + log c ≈ 12,3 pour la base", "points": 8 },
+        { "critere": "Acide méthanoïque plus fort car pKa plus petit", "points": 6 },
+        { "critere": "pH < pKa : forme acide (acide éthanoïque) prédominante", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Acide fort : pH = − log c = − log(5,0 × 10⁻³) ≈ **2,3**.\n\n2. Base forte à 25 °C : pH = 14 + log c = 14 + log(2,0 × 10⁻²) = 14 − 1,7 ≈ **12,3**.\n\n3. Plus le pKa est petit, plus l’acide est fort : 3,8 < 4,8, donc l’**acide méthanoïque** est le plus fort des deux.\n\n4. pH = 4,0 < pKa = 4,8 : c’est la **forme acide**, l’**acide éthanoïque**, qui prédomine (d’après pH = pKa + log([A⁻]/[AH]), log([A⁻]/[AH]) = − 0,8 < 0, donc [AH] > [A⁻])."
+    },
+    {
+      "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+      "difficulte": 2,
+      "titre": "La solution tampon de Jade",
+      "consigne": "Appuie-toi sur la relation de Henderson-Hasselbalch et justifie chaque réponse.",
+      "enonce": "**Situation.** Pour étalonner un montage, Jade prépare une solution contenant de l’acide éthanoïque à 0,10 mol/L et de l’éthanoate de sodium à 0,050 mol/L. pKa(acide éthanoïque / ion éthanoate) = 4,8.\n\n1. Calcule le pH de cette solution.\n2. Quelle espèce du couple prédomine ? Est-ce cohérent avec ton résultat ?\n3. Jade voudrait plutôt une solution de pH = 5,3 avec le même couple. Quel rapport [A⁻] / [AH] doit-elle obtenir ?\n4. Jade dilue sa solution tampon 5 fois avec de l’eau. Explique pourquoi le pH ne change presque pas.",
+      "bareme": [
+        { "critere": "pH = 4,8 + log(0,050 / 0,10) ≈ 4,5", "points": 6 },
+        { "critere": "Forme acide prédominante, cohérent avec pH < pKa", "points": 4 },
+        { "critere": "log([A⁻]/[AH]) = 0,5 donc rapport ≈ 3,2", "points": 5 },
+        { "critere": "Dilution : les deux concentrations divisées par 5, rapport et pH inchangés (tampon)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. pH = pKa + log([A⁻] / [AH]) = 4,8 + log(0,050 / 0,10) = 4,8 + log 0,5 = 4,8 − 0,3 = **4,5**.\n\n2. [AH] = 0,10 mol/L > [A⁻] = 0,050 mol/L : la **forme acide** prédomine. C’est cohérent : pH = 4,5 < pKa = 4,8.\n\n3. 5,3 = 4,8 + log([A⁻]/[AH]) donc log([A⁻]/[AH]) = 0,5 et [A⁻]/[AH] = 10^0,5 ≈ **3,2** : il faut environ 3,2 fois plus d’ions éthanoate que d’acide.\n\n4. La dilution divise [AH] et [A⁻] **par le même facteur 5** : leur **rapport** reste 0,5, donc pH = pKa + log(0,5) reste **4,5**. C’est la propriété d’une **solution tampon** (mélange AH/A⁻ en quantités voisines) : son pH varie peu par dilution modérée."
+    },
+    {
+      "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+      "difficulte": 3,
+      "titre": "Titrage de l’acide méthanoïque",
+      "consigne": "Exploite le tableau de mesures pour déterminer l’équivalence, la concentration, le pKa, et choisis un indicateur en justifiant.",
+      "enonce": "**Situation.** On titre V₀ = 10,0 mL d’une solution d’acide méthanoïque HCOOH par de la soude (Na⁺ + HO⁻) de concentration c_B = 0,100 mol/L. Relevé :\n\n| V (mL) | 0 | 2,0 | 4,0 | 6,0 | 8,0 | 10,0 | 11,0 | 11,5 | 12,0 | 12,5 | 13,0 | 14,0 | 16,0 |\n| pH | 2,4 | 3,1 | 3,5 | 3,8 | 4,1 | 4,5 | 4,8 | 5,2 | 8,3 | 11,4 | 11,6 | 11,9 | 12,2 |\n\n**Indicateurs.** Hélianthine : 3,1 – 4,4 ; bleu de bromothymol : 6,0 – 7,6 ; phénolphtaléine : 8,2 – 10.\n\n1. Écris l’équation de la réaction de titrage.\n2. Détermine le volume équivalent en exploitant la variation de pH entre deux mesures successives (idée de la dérivée dpH/dV).\n3. Calcule la concentration de l’acide méthanoïque.\n4. Détermine le pKa du couple HCOOH / HCOO⁻ à partir du tableau. Justifie la méthode.\n5. Quel indicateur coloré choisir pour un titrage colorimétrique ? Explique pourquoi l’hélianthine serait un mauvais choix.",
+      "bareme": [
+        { "critere": "HCOOH + HO⁻ → HCOO⁻ + H₂O", "points": 3 },
+        { "critere": "Saut de pH le plus grand autour de 12,0 mL : V_E = 12,0 mL justifié", "points": 4 },
+        { "critere": "c = c_B × V_E / V₀ = 0,120 mol/L", "points": 4 },
+        { "critere": "Demi-équivalence à 6,0 mL : pH = pKa = 3,8, justifié (acide faible)", "points": 5 },
+        { "critere": "Phénolphtaléine (contient pH à l’équivalence 8,3) ; hélianthine vire bien avant l’équivalence", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. HCOOH(aq) + HO⁻(aq) → HCOO⁻(aq) + H₂O(l).\n\n2. On calcule ΔpH / ΔV entre mesures successives : entre 11,0 et 11,5 mL, 0,4 / 0,5 = 0,8 ; entre 11,5 et 12,0 mL, 3,1 / 0,5 = 6,2 ; entre 12,0 et 12,5 mL, 3,1 / 0,5 = 6,2 ; entre 12,5 et 13,0 mL, 0,4. La dérivée est **maximale autour de 12,0 mL** (saut de 5,2 à 11,4) : **V_E = 12,0 mL**.\n\n3. À l’équivalence, n(HCOOH) initial = n(HO⁻) versé (réaction mole à mole) : c × V₀ = c_B × V_E, donc c = 0,100 × 12,0 / 10,0 = **0,120 mol/L**.\n\n4. À la **demi-équivalence** (V = V_E / 2 = 6,0 mL), la moitié de l’acide a été transformée : [HCOOH] = [HCOO⁻], donc pH = pKa + log 1 = pKa. Le tableau donne pH = 3,8 à 6,0 mL : **pKa = 3,8**. Cette lecture est valable car l’acide méthanoïque est un **acide faible**.\n\n5. Le pH à l’équivalence vaut **8,3** : il faut un indicateur dont la zone de virage le contient, la **phénolphtaléine** (8,2 – 10). L’**hélianthine** (3,1 – 4,4) virerait entre 2 et 10 mL environ, **bien avant l’équivalence** : on sous-estimerait fortement V_E."
+    },
+    {
+      "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+      "difficulte": 1,
+      "titre": "Le fer et le cuivre",
+      "consigne": "Écris la relation utilisée avant chaque calcul et justifie le sens de la réaction.",
+      "enonce": "**Données à 25 °C.** E°(Fe³⁺/Fe²⁺) = 0,77 V ; E°(Cu²⁺/Cu) = 0,34 V.\n\n1. Une solution contient [Fe³⁺] = 0,010 mol/L et [Fe²⁺] = 0,10 mol/L. Calcule le potentiel du couple Fe³⁺/Fe²⁺ avec la relation de Nernst (Fe³⁺ + e⁻ = Fe²⁺).\n2. On plonge une plaque de cuivre dans une solution d’ions Fe³⁺. Quelle réaction spontanée peut se produire ? Écris son équation.\n3. Calcule log K pour cette réaction (n = 2). La réaction est-elle quasi totale ?",
+      "bareme": [
+        { "critere": "E = 0,77 + 0,059 × log(0,010 / 0,10) ≈ 0,71 V", "points": 7 },
+        { "critere": "Oxydant Fe³⁺ (plus haut potentiel) sur réducteur Cu : 2 Fe³⁺ + Cu → 2 Fe²⁺ + Cu²⁺", "points": 7 },
+        { "critere": "log K = 2 × (0,77 − 0,34) / 0,059 ≈ 14,6, réaction quasi totale", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. E = E° + (0,059 / n) × log([Ox]/[Red]) avec n = 1 : E = 0,77 + 0,059 × log(0,010 / 0,10) = 0,77 + 0,059 × (− 1) ≈ **0,71 V**. Le potentiel est plus bas que E° car il y a moins d’oxydant que de réducteur.\n\n2. L’oxydant du couple de **plus haut potentiel** (Fe³⁺, 0,77 V) réagit avec le réducteur du couple de **plus bas potentiel** (Cu, 0,34 V) :\n**2 Fe³⁺(aq) + Cu(s) → 2 Fe²⁺(aq) + Cu²⁺(aq)**.\n\n3. log K = n × (E°₁ − E°₂) / 0,059 = 2 × (0,77 − 0,34) / 0,059 = 0,86 / 0,059 ≈ **14,6**, soit K ≈ 4 × 10¹⁴. L’écart de potentiel (0,43 V) dépasse 0,3 V : la réaction est **quasi totale**."
+    },
+    {
+      "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+      "difficulte": 2,
+      "titre": "Nickeler une pièce métallique",
+      "consigne": "Décris l’électrolyse, puis calcule le rendement faradique étape par étape.",
+      "enonce": "**Situation.** Dans un atelier de galvanoplastie, on recouvre une pièce d’acier d’une couche de nickel. La pièce plonge dans une solution d’ions Ni²⁺ ; la réaction à la surface de la pièce est Ni²⁺ + 2 e⁻ → Ni. On impose un courant I = 2,0 A pendant 45 min.\n\n**Données.** F = 96 500 C/mol ; M(Ni) = 58,7 g/mol.\n\n1. La réaction sur la pièce est-elle une oxydation ou une réduction ? La pièce est-elle l’anode ou la cathode, et à quel pôle du générateur est-elle reliée ?\n2. Calcule la charge Q qui a circulé, puis la quantité d’électrons.\n3. Calcule la masse de nickel qui aurait dû se déposer.\n4. La pesée montre un dépôt de 1,48 g. Calcule le rendement faradique et propose une explication à l’écart.",
+      "bareme": [
+        { "critere": "Réduction, la pièce est la cathode, reliée au pôle −", "points": 4 },
+        { "critere": "Q = I × Δt = 5 400 C et n(e⁻) = Q / F ≈ 5,6 × 10⁻² mol", "points": 5 },
+        { "critere": "n(Ni) = n(e⁻) / 2 ≈ 2,8 × 10⁻² mol, m ≈ 1,64 g", "points": 5 },
+        { "critere": "Rendement ≈ 90 % et explication : une partie de la charge sert à une autre réaction", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Ni²⁺ gagne des électrons : c’est une **réduction**. L’électrode siège d’une réduction est la **cathode**, reliée au **pôle −** du générateur. C’est une transformation **forcée**.\n\n2. Δt = 45 × 60 = 2 700 s. Q = I × Δt = 2,0 × 2 700 = **5 400 C**. n(e⁻) = Q / F = 5 400 / 96 500 ≈ **5,6 × 10⁻² mol**.\n\n3. D’après Ni²⁺ + 2 e⁻ → Ni : n(Ni) = n(e⁻) / 2 ≈ 2,8 × 10⁻² mol. m = n × M = 0,0280 × 58,7 ≈ **1,64 g**.\n\n4. Rendement faradique = m obtenue / m attendue = 1,48 / 1,64 ≈ **0,90, soit 90 %**. Une partie de la charge n’a pas servi à déposer du nickel : d’**autres réactions** ont consommé des électrons à la cathode (par exemple la réduction de l’eau en dihydrogène), ou une partie du dépôt adhère mal."
+    },
+    {
+      "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+      "difficulte": 3,
+      "titre": "Titrage potentiométrique des ions fer(II)",
+      "consigne": "Prévois la réaction, exploite le titrage, puis utilise la relation de Nernst pour interpréter les potentiels mesurés.",
+      "enonce": "**Situation.** On titre V₀ = 20,0 mL d’une solution d’ions Fe²⁺ par une solution d’ions cérium(IV) Ce⁴⁺ de concentration c = 0,0500 mol/L. On mesure la tension entre une électrode de platine et une électrode de référence ; les potentiels ci-dessous sont exprimés par rapport à l’ESH. Le saut de potentiel se produit pour **V_E = 14,6 mL**.\n\n**Données.** E°(Ce⁴⁺/Ce³⁺) = 1,44 V ; E°(Fe³⁺/Fe²⁺) = 0,77 V (couples échangeant un électron).\n\n1. Écris l’équation de la réaction de titrage et justifie son sens.\n2. Calcule log K. La réaction convient-elle à un titrage ?\n3. Calcule la concentration en ions Fe²⁺ de la solution titrée.\n4. Quel potentiel mesure-t-on à la demi-équivalence ? Justifie avec la relation de Nernst.\n5. Calcule le potentiel attendu lorsque les trois quarts des ions Fe²⁺ ont été transformés, et le volume versé correspondant.",
+      "bareme": [
+        { "critere": "Ce⁴⁺ + Fe²⁺ → Ce³⁺ + Fe³⁺, oxydant du couple de plus haut potentiel sur réducteur du plus bas", "points": 4 },
+        { "critere": "log K = (1,44 − 0,77) / 0,059 ≈ 11,4, réaction quasi totale donc adaptée", "points": 4 },
+        { "critere": "c(Fe²⁺) = c × V_E / V₀ ≈ 0,0365 mol/L", "points": 4 },
+        { "critere": "Demi-équivalence : [Fe³⁺] = [Fe²⁺], E = E°(Fe³⁺/Fe²⁺) = 0,77 V", "points": 4 },
+        { "critere": "E = 0,77 + 0,059 × log 3 ≈ 0,80 V pour V ≈ 11,0 mL", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Ce⁴⁺(aq) + Fe²⁺(aq) → Ce³⁺(aq) + Fe³⁺(aq)**. L’oxydant du couple de plus haut potentiel (Ce⁴⁺, 1,44 V) réagit avec le réducteur du couple de plus bas potentiel (Fe²⁺, 0,77 V).\n\n2. log K = n × (E°₁ − E°₂) / 0,059 = 1 × (1,44 − 0,77) / 0,059 = 0,67 / 0,059 ≈ **11,4** (K ≈ 2 × 10¹¹). L’écart (0,67 V) dépasse largement 0,3 V : la réaction est **quasi totale**, condition nécessaire pour un titrage.\n\n3. Réaction mole à mole : n(Fe²⁺) = n(Ce⁴⁺) versé à l’équivalence, donc c(Fe²⁺) = c × V_E / V₀ = 0,0500 × 14,6 / 20,0 ≈ **0,0365 mol/L**.\n\n4. Avant l’équivalence, le potentiel de l’électrode de platine est fixé par le couple Fe³⁺/Fe²⁺ : E = 0,77 + 0,059 × log([Fe³⁺]/[Fe²⁺]). À la **demi-équivalence**, la moitié des Fe²⁺ est devenue Fe³⁺ : [Fe³⁺] = [Fe²⁺], le log est nul et **E = E° = 0,77 V**. C’est ainsi qu’un titrage potentiométrique permet de déterminer un potentiel standard.\n\n5. Aux trois quarts, [Fe³⁺]/[Fe²⁺] = 3/1 : E = 0,77 + 0,059 × log 3 = 0,77 + 0,059 × 0,48 ≈ **0,80 V**. Cela correspond à V = 3/4 × V_E = 0,75 × 14,6 ≈ **11,0 mL**."
+    },
+    {
+      "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+      "difficulte": 1,
+      "titre": "Trois alcools, un oxydant",
+      "consigne": "Classe chaque alcool, puis prévois le produit d’oxydation en justifiant ; termine par le calcul demandé.",
+      "enonce": "**Situation.** Tom dispose de trois alcools et d’une solution oxydante (oxydation ménagée) :\n- alcool A : CH₃–CH₂–CH₂–OH ;\n- alcool B : CH₃–CH(OH)–CH₃ ;\n- alcool C : (CH₃)₃C–OH.\n\n1. Indique pour chaque alcool s’il est primaire, secondaire ou tertiaire.\n2. Pour chacun, indique la famille du produit obtenu par oxydation ménagée (ou l’absence de réaction).\n3. Dans une autre expérience, Tom réduit une cétone par NaBH₄. Il pouvait obtenir au maximum 0,30 mol d’alcool ; il en obtient 0,21 mol. Quelle famille d’alcool obtient-il, et quel est le rendement ?",
+      "bareme": [
+        { "critere": "A primaire, B secondaire, C tertiaire", "points": 6 },
+        { "critere": "A : aldéhyde puis acide carboxylique ; B : cétone ; C : pas d’oxydation", "points": 8 },
+        { "critere": "Alcool secondaire et rendement = 0,21 / 0,30 = 70 %", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le carbone qui porte le groupe OH est lié à un seul carbone dans A : **primaire** ; à deux carbones dans B : **secondaire** ; à trois carbones dans C : **tertiaire**.\n\n2. - A (primaire) : oxydé en **aldéhyde** (propanal), puis en **acide carboxylique** (acide propanoïque) si l’oxydant est en excès.\n- B (secondaire) : oxydé en **cétone** (propanone).\n- C (tertiaire) : **ne s’oxyde pas** dans ces conditions.\n\n3. La réduction d’une cétone par NaBH₄ donne un **alcool secondaire**. Rendement = n obtenu / n maximal = 0,21 / 0,30 = **0,70, soit 70 %**."
+    },
+    {
+      "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+      "difficulte": 2,
+      "titre": "L’arôme de banane",
+      "consigne": "Détermine le réactif limitant, calcule le rendement, puis justifie les choix du protocole.",
+      "enonce": "**Situation.** Pour fabriquer l’éthanoate de 3-méthylbutyle (odeur de banane), Clara mélange **0,50 mol d’acide éthanoïque** et **0,25 mol de 3-méthylbutan-1-ol**, ajoute quelques gouttes d’acide sulfurique et chauffe à reflux une heure. Équation : acide + alcool ⇌ ester + eau (une mole de chaque). Après séparation, elle obtient **22,1 g d’ester** (M = 130 g/mol).\n\n1. Quel est le réactif limitant ? Quelle quantité maximale d’ester peut-on obtenir ?\n2. Calcule la quantité d’ester obtenue, puis le rendement.\n3. Pourquoi Clara a-t-elle mis l’acide en excès ? Quel est le rôle de l’acide sulfurique ? Modifie-t-il le rendement final ?\n4. Propose une autre modification du protocole, vue en cours, qui permettrait de dépasser nettement ce rendement. Explique son principe.",
+      "bareme": [
+        { "critere": "Alcool limitant, n(ester) maximal = 0,25 mol", "points": 4 },
+        { "critere": "n = 22,1 / 130 = 0,170 mol, rendement = 68 %", "points": 5 },
+        { "critere": "Excès d’un réactif déplace l’équilibre ; H₂SO₄ catalyseur qui accélère sans changer l’état final", "points": 6 },
+        { "critere": "Dean-Stark (élimine l’eau) ou anhydride d’acide (réaction totale), principe expliqué", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Les réactifs réagissent mole à mole : l’alcool (0,25 mol) est en défaut devant l’acide (0,50 mol). L’**alcool est limitant** : n(ester) maximal = **0,25 mol**.\n\n2. n(ester) = m / M = 22,1 / 130 = **0,170 mol**. Rendement = 0,170 / 0,25 = **0,68, soit 68 %**.\n\n3. L’estérification est **limitée par un équilibre** : mettre un **réactif en excès** (le moins cher, ici l’acide) déplace l’équilibre dans le sens de la formation de l’ester et augmente le rendement. L’acide sulfurique est un **catalyseur** : il **accélère** la réaction (tout comme le chauffage à reflux) mais **ne modifie pas l’état final**, donc pas le rendement à l’équilibre.\n\n4. - **Montage de Dean-Stark** : on élimine l’eau au fur et à mesure par distillation azéotropique avec le cyclohexane ou le toluène ; un produit étant retiré, l’équilibre se déplace vers l’ester (on peut dépasser 90 %).\n- Ou **changer de réactif** : remplacer l’acide par un **anhydride d’acide**, qui rend la réaction totale."
+    },
+    {
+      "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+      "difficulte": 3,
+      "titre": "Choisir un protocole de synthèse",
+      "consigne": "Compare les deux protocoles à l’aide des calculs et des principes de la chimie verte, puis choisis et justifie la méthode d’isolement.",
+      "enonce": "**Situation.** Un laboratoire veut produire l’éthanoate de 3-méthylbutyle (M = 130 g/mol) à partir de 0,20 mol de 3-méthylbutan-1-ol (réactif limitant dans les deux cas).\n\n| | Protocole A | Protocole B |\n| Autre réactif | acide éthanoïque, 0,40 mol | acide éthanoïque, 0,22 mol |\n| Catalyseur | acide sulfurique | acide paratoluènesulfonique |\n| Montage | reflux simple, 60 min | Dean-Stark avec cyclohexane, 90 min |\n| Masse d’ester obtenue | 17,2 g | 23,4 g |\n\n**Solvants d’extraction possibles** (l’ester est très soluble dans les trois) :\n| Solvant | Miscible à l’eau ? | Danger |\n| éthanol | oui | inflammable |\n| cyclohexane | non | inflammable, peu toxique |\n| dichlorométhane | non | suspecté cancérogène |\n\n1. Calcule le rendement de chaque protocole.\n2. Explique pourquoi le protocole B atteint un meilleur rendement avec beaucoup moins d’acide.\n3. Quel est le rôle du catalyseur dans les deux protocoles ? Serait-il utile d’en mettre beaucoup plus pour augmenter le rendement ?\n4. Compare les deux protocoles selon au moins trois critères (rendement, réactifs consommés, durée, énergie, déchets) et choisis-en un.\n5. Pour isoler l’ester par extraction liquide-liquide, quel solvant choisir ? Élimine les deux autres en justifiant.",
+      "bareme": [
+        { "critere": "A : 17,2 / 130 = 0,132 mol, 66 % ; B : 23,4 / 130 = 0,180 mol, 90 %", "points": 4 },
+        { "critere": "Dean-Stark : l’eau éliminée déplace l’équilibre, l’excès d’acide devient inutile", "points": 4 },
+        { "critere": "Catalyseur : accélère sans modifier l’état final, donc plus de catalyseur ne change pas le rendement", "points": 4 },
+        { "critere": "Comparaison sur au moins trois critères et choix argumenté", "points": 4 },
+        { "critere": "Cyclohexane : non miscible et moins nocif ; éthanol miscible, dichlorométhane toxique", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. n(ester) maximal = 0,20 mol (alcool limitant).\n- A : n = 17,2 / 130 ≈ 0,132 mol ; rendement = 0,132 / 0,20 ≈ **66 %**.\n- B : n = 23,4 / 130 = 0,180 mol ; rendement = 0,180 / 0,20 = **90 %**.\n\n2. L’estérification est un **équilibre**. Dans A, on le déplace par un **excès d’acide** (0,40 mol pour 0,20 mol d’alcool), mais on reste vers 66 %. Dans B, le **Dean-Stark** élimine l’eau au fur et à mesure (distillation azéotropique avec le cyclohexane) : un produit étant retiré, l’équilibre est déplacé vers l’ester jusqu’à presque tout l’alcool consommé, sans qu’il faille un gros excès d’acide.\n\n3. Dans les deux cas, le catalyseur **accélère** la réaction et est **régénéré** ; il **ne change pas l’état final**. En mettre beaucoup plus n’augmenterait pas le rendement ; cela ferait seulement plus de réactif corrosif à éliminer.\n\n4. Exemple de comparaison :\n- **rendement** : B (90 %) bien meilleur que A (66 %) ;\n- **réactifs** : B consomme presque deux fois moins d’acide, donc moins de réactif gaspillé et moins de **déchets** à neutraliser ;\n- **durée et énergie** : A est plus court (60 min contre 90 min de chauffage), donc un peu moins énergivore ;\n- **solvant** : B utilise du cyclohexane, qu’il faut récupérer.\nConclusion : **B** est préférable selon la chimie verte (économie de réactifs, moins de déchets, bien meilleure production), le surcoût de durée restant modéré. Toute conclusion argumentée sur ces critères est acceptée.\n\n5. Le solvant d’extraction doit être **non miscible à l’eau** et dissoudre très bien l’ester : l’**éthanol**, miscible à l’eau, est éliminé (pas de deux phases). Entre les deux restants, on évite le **dichlorométhane**, suspecté cancérogène : on choisit le **cyclohexane**, moins nocif (en travaillant loin de toute flamme)."
+    },
+    {
+      "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+      "difficulte": 1,
+      "titre": "Le spectre RMN de l’éthanol",
+      "consigne": "Prévois le spectre en justifiant chaque information par le cours.",
+      "enonce": "**Molécule étudiée.** L’éthanol : CH₃–CH₂–OH.\n\n**Table fournie.** CH₃ d’une chaîne : 0,9 – 1,3 ppm ; H sur un carbone lié à O : 3,3 – 4,3 ppm. Le proton porté par O donne un singulet et ne se couple pas.\n\n1. Combien de groupes de protons équivalents l’éthanol possède-t-il ? Combien de signaux attend-on ?\n2. Pour chaque groupe, donne le nombre de protons, la multiplicité (règle des n + 1) et un ordre de grandeur du déplacement chimique.\n3. Quel rapport d’intégration attend-on ?",
+      "bareme": [
+        { "critere": "Trois groupes équivalents (CH₃, CH₂, OH), donc trois signaux", "points": 6 },
+        { "critere": "CH₃ triplet vers 1,2 ppm ; CH₂ quadruplet vers 3,7 ppm ; OH singulet", "points": 9 },
+        { "critere": "Intégration 3 : 2 : 1", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les protons de l’éthanol forment **trois groupes** d’environnements différents : CH₃, CH₂ et OH. On attend **trois signaux**.\n\n2. - **CH₃** : 3 H ; voisins : les 2 H du CH₂ → 2 + 1 = **triplet** ; δ vers **1,2 ppm** (CH₃ de chaîne).\n- **CH₂** : 2 H ; voisins : les 3 H du CH₃ (le H de OH ne se couple pas) → **quadruplet** ; δ vers **3,7 ppm** (carbone lié à O, atome électronégatif : δ plus grand).\n- **OH** : 1 H, **singulet** (proton porté par O, sans couplage).\n\n3. Intégration **3 : 2 : 1** (CH₃ : CH₂ : OH). Elle donne des proportions : on retrouve bien 6 H au total."
+    },
+    {
+      "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+      "difficulte": 2,
+      "titre": "Butanone ou butanal ?",
+      "consigne": "Identifie la molécule en suivant la méthode d’attribution du cours et justifie chaque étape.",
+      "enonce": "**Situation.** Un flacon a perdu son étiquette. Il contient soit de la **butanone** CH₃–CO–CH₂–CH₃, soit du **butanal** CH₃–CH₂–CH₂–CHO.\n\n**Spectre RMN du contenu.**\n| δ (ppm) | Multiplicité | Intégration |\n| 1,05 | triplet | 3 H |\n| 2,15 | singulet | 3 H |\n| 2,45 | quadruplet | 2 H |\n\n**Table.** CH₃ de chaîne : 0,9 – 1,3 ppm ; H sur un carbone voisin d’un C=O : 2,0 – 2,7 ppm ; H d’aldéhyde : 9 – 10 ppm. Le spectre IR montre une bande vers 1 715 cm⁻¹.\n\n1. Combien de groupes de protons équivalents possède chacune des deux molécules ?\n2. Quelle molécule le nombre de signaux désigne-t-il ? Quel signal manque pour l’autre ?\n3. Attribue chaque signal du spectre à un groupe de protons, en justifiant la multiplicité et le déplacement chimique.\n4. Que confirme le spectre IR ?",
+      "bareme": [
+        { "critere": "Butanone : 3 groupes ; butanal : 4 groupes", "points": 5 },
+        { "critere": "Trois signaux et aucun signal vers 9 – 10 ppm : c’est la butanone", "points": 5 },
+        { "critere": "Attribution complète : 1,05 triplet CH₃ de l’éthyle ; 2,15 singulet CH₃–CO ; 2,45 quadruplet CH₂", "points": 7 },
+        { "critere": "Bande vers 1 715 cm⁻¹ : groupe C=O présent", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. - **Butanone** CH₃–CO–CH₂–CH₃ : trois groupes (CH₃ lié au C=O, CH₂, CH₃ terminal).\n- **Butanal** CH₃–CH₂–CH₂–CHO : quatre groupes (CH₃, CH₂, CH₂, CHO).\n\n2. Le spectre a **trois signaux** et **aucun signal vers 9 – 10 ppm** (le H d’aldéhyde du butanal) : c’est la **butanone**.\n\n3. - **1,05 ppm, triplet, 3 H** : le **CH₃ terminal** ; 2 voisins (CH₂) → triplet ; CH₃ de chaîne → 0,9 – 1,3 ppm.\n- **2,15 ppm, singulet, 3 H** : le **CH₃ lié au C=O** ; aucun voisin (le carbone du C=O ne porte pas de H) → singulet ; voisin d’un C=O → 2,0 – 2,7 ppm.\n- **2,45 ppm, quadruplet, 2 H** : le **CH₂** ; 3 voisins (CH₃) → quadruplet ; voisin du C=O → 2,0 – 2,7 ppm.\nL’intégration 3 : 3 : 2 correspond bien aux 8 H de la butanone.\n\n4. La bande vers 1 715 cm⁻¹ confirme un groupe **C=O** (bande vers 1 700 cm⁻¹). Elle ne suffit pas à trancher seule (les deux molécules en ont un) : c’est la RMN qui décide."
+    },
+    {
+      "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+      "difficulte": 3,
+      "titre": "Quel composé de formule C₄H₈O₂ ?",
+      "consigne": "Élimine les candidats un par un en croisant IR et RMN ; justifie chaque étape avec la table fournie.",
+      "enonce": "**Situation.** Un composé inconnu a pour formule brute C₄H₈O₂. Trois candidats :\n- A : acide butanoïque CH₃–CH₂–CH₂–COOH ;\n- B : éthanoate d’éthyle CH₃–CO–O–CH₂–CH₃ ;\n- C : propanoate de méthyle CH₃–CH₂–CO–O–CH₃.\n\n**Spectre IR.** Bande fine et intense vers 1 740 cm⁻¹ ; pas de bande large vers 3 300 cm⁻¹.\n\n**Spectre RMN.**\n| δ (ppm) | Multiplicité | Hauteur de la marche d’intégration |\n| 1,15 | triplet | 12 mm |\n| 2,30 | quadruplet | 8 mm |\n| 3,65 | singulet | 12 mm |\n\n**Table.** CH₃ de chaîne : 0,9 – 1,3 ppm ; H sur un carbone voisin d’un C=O : 2,0 – 2,7 ppm ; H sur un carbone lié à O : 3,3 – 4,3 ppm ; H d’acide carboxylique : 10 – 13 ppm.\n\n1. Que peut-on conclure du spectre IR ? Quel candidat éliminer, et pourquoi le spectre RMN le confirme-t-il ?\n2. Transforme les hauteurs d’intégration en nombres de protons, sachant que la molécule en compte 8.\n3. Prévois, pour B, le déplacement chimique et la multiplicité de ses signaux.\n4. Montre que le spectre correspond à C et non à B.\n5. Explique pourquoi B et C, qui ont les mêmes groupes (un CH₃ isolé, un CH₂ et un CH₃ couplés), donnent des spectres différents.",
+      "bareme": [
+        { "critere": "C=O présent sans O–H : acide A éliminé, confirmé par l’absence de signal à 10 – 13 ppm", "points": 4 },
+        { "critere": "Rapport 12 : 8 : 12 = 3 : 2 : 3, soit 3 H, 2 H, 3 H", "points": 3 },
+        { "critere": "B prévu : singulet vers 2,0 ppm, quadruplet vers 4,1 ppm, triplet vers 1,3 ppm", "points": 4 },
+        { "critere": "Attribution de C : quadruplet 2,30 (CH₂ voisin du C=O), singulet 3,65 (CH₃ lié à O), triplet 1,15", "points": 5 },
+        { "critere": "Explication : l’environnement (voisin de C=O ou lié à O) fixe δ, qui distingue B et C", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La bande vers 1 740 cm⁻¹ signale un **C=O** ; l’absence de bande large vers 3 300 cm⁻¹ exclut un **O–H**. L’**acide butanoïque (A)** porte un groupe COOH (O–H) : il est **éliminé**. La RMN le confirme : aucun signal entre 10 et 13 ppm (H d’acide carboxylique).\n\n2. Rapport des marches : 12 : 8 : 12 = 3 : 2 : 3, soit 8 parts pour 8 H : **3 H, 2 H et 3 H**.\n\n3. Pour **B**, CH₃–CO–O–CH₂–CH₃ :\n- CH₃ lié au C=O : singulet (aucun voisin) vers **2,0 ppm** ;\n- CH₂ lié à O : quadruplet (3 voisins) vers **4,1 ppm** ;\n- CH₃ de l’éthyle : triplet (2 voisins) vers **1,3 ppm**.\n\n4. Pour **C**, CH₃–CH₂–CO–O–CH₃ :\n- **3,65 ppm, singulet, 3 H** : CH₃ **lié à O** (3,3 – 4,3 ppm), sans voisin porteur de H ;\n- **2,30 ppm, quadruplet, 2 H** : CH₂ **voisin du C=O** (2,0 – 2,7 ppm), 3 voisins ;\n- **1,15 ppm, triplet, 3 H** : CH₃ de chaîne, 2 voisins.\nDans le spectre, le **singulet est à 3,65 ppm** (et non vers 2,0) et le **quadruplet à 2,30 ppm** (et non vers 4,1) : le composé est le **propanoate de méthyle (C)**.\n\n5. B et C ont les mêmes multiplicités (singulet 3 H, quadruplet 2 H, triplet 3 H) : la règle des n + 1 ne suffit pas. Ce qui les distingue est le **déplacement chimique**, fixé par le voisinage : dans B, le groupe isolé est à côté du C=O et le CH₂ est lié à l’oxygène (déblindé vers 4,1 ppm) ; dans C, c’est l’inverse. Un atome électronégatif proche (O) augmente δ davantage que le voisinage d’un C=O."
+    },
+    {
+      "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+      "difficulte": 1,
+      "titre": "Chercher le carbone asymétrique",
+      "consigne": "Justifie chaque réponse avec la définition du cours.",
+      "enonce": "**Molécules.**\n- butan-2-ol : CH₃–CH(OH)–CH₂–CH₃ ;\n- propan-2-ol : CH₃–CH(OH)–CH₃.\n\n1. Laquelle de ces deux molécules possède un carbone asymétrique ? Repère-le et liste les quatre groupes qu’il porte.\n2. Le butan-2-ol existe sous forme de deux énantiomères. Quelles propriétés partagent-ils ? Par quoi diffèrent-ils ?\n3. Un flacon contient les deux énantiomères du butan-2-ol en quantités égales. Comment appelle-t-on ce mélange, et dévie-t-il la lumière polarisée ?",
+      "bareme": [
+        { "critere": "Carbone 2 du butan-2-ol asymétrique (H, OH, CH₃, CH₂–CH₃) ; propan-2-ol sans carbone asymétrique (deux CH₃)", "points": 8 },
+        { "critere": "Mêmes propriétés physiques usuelles ; pouvoirs rotatoires opposés, effets biologiques possiblement différents", "points": 6 },
+        { "critere": "Mélange racémique, optiquement inactif", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Dans le **butan-2-ol**, le carbone qui porte OH est lié à **H, OH, CH₃ et CH₂–CH₃** : quatre groupes différents, c’est un **carbone asymétrique**. Dans le **propan-2-ol**, ce carbone porte deux groupes CH₃ identiques : **pas de carbone asymétrique**.\n\n2. Deux énantiomères ont les **mêmes propriétés physiques usuelles** (température d’ébullition, solubilité…). Ils **dévient la lumière polarisée en sens opposés** (l’un dextrogyre, l’autre lévogyre) et peuvent avoir des **effets biologiques** très différents.\n\n3. C’est un **mélange racémique**. Les déviations des deux énantiomères, égales et opposées, s’annulent : il est **optiquement inactif** (il contient pourtant bien deux énantiomères)."
+    },
+    {
+      "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+      "difficulte": 2,
+      "titre": "Au polarimètre",
+      "consigne": "Utilise la loi de Biot avec les bonnes unités, puis la définition de l’excès énantiomérique.",
+      "enonce": "**Partie A.** Une solution de saccharose donne, dans un tube de longueur ℓ = 2,0 dm, un angle α = + 5,32°. Pouvoir rotatoire spécifique du saccharose : [α] = + 66,5 °·dm⁻¹·g⁻¹·mL.\n\n1. Calcule la concentration massique du saccharose en g/mL, puis en g/L.\n2. Quelle masse de saccharose contiennent 250 mL de cette solution ?\n\n**Partie B.** Un énantiomère pur, dextrogyre, donne α = + 8,0° dans des conditions données. Un échantillon issu d’une synthèse, à la même concentration totale et dans le même tube, donne α = + 5,6°.\n\n3. Calcule l’excès énantiomérique de l’échantillon.\n4. Déduis-en le pourcentage de chaque énantiomère dans l’échantillon.",
+      "bareme": [
+        { "critere": "c = α / ([α] × ℓ) = 0,0400 g/mL, soit 40,0 g/L", "points": 6 },
+        { "critere": "m = 0,0400 × 250 = 10,0 g", "points": 4 },
+        { "critere": "ee = 5,6 / 8,0 × 100 = 70 %", "points": 5 },
+        { "critere": "85 % d’énantiomère dextrogyre et 15 % de l’autre, justifié", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Loi de Biot : α = [α] × ℓ × c, donc c = α / ([α] × ℓ) = 5,32 / (66,5 × 2,0) = 5,32 / 133 = **0,0400 g/mL**, soit **40,0 g/L**.\n\n2. m = c × V = 0,0400 × 250 = **10,0 g** de saccharose.\n\n3. ee = |α(mélange) / α(pur)| × 100 = 5,6 / 8,0 × 100 = **70 %**.\n\n4. L’excès de 70 % est porté par l’énantiomère dextrogyre ; les 30 % restants forment un mélange racémique (15 % + 15 %). Donc **85 % de dextrogyre** (70 + 15) et **15 % de lévogyre**. Vérification : (85 − 15) = 70 %."
+    },
+    {
+      "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+      "difficulte": 3,
+      "titre": "Du mécanisme aux stéréoisomères",
+      "consigne": "Analyse le mécanisme proposé, justifie le produit majoritaire par la stabilité des intermédiaires, puis réponds aux questions de stéréochimie.",
+      "enonce": "**Document 1 : addition de HBr sur le 2-méthylpropène (CH₃)₂C=CH₂.**\n- Étape 1 : la double liaison C=C capte l’ion H⁺ ; il se forme un carbocation. Deux carbocations sont envisageables : (CH₃)₃C⁺ (charge sur le carbone lié à trois carbones) ou (CH₃)₂CH–CH₂⁺ (charge sur un carbone lié à un seul carbone).\n- Étape 2 : l’ion bromure Br⁻ se lie au carbocation.\n\n**Document 2 : estérification catalysée par l’acide.** Dans la première étape, un ion H⁺ se fixe sur l’oxygène du groupe C=O de l’acide ; dans la dernière étape, un ion H⁺ est libéré.\n\n**Document 3.** Le but-2-ène existe sous deux formes, Z et E. Températures d’ébullition : Z : 3,7 °C ; E : 0,9 °C.\n\n1. Dans l’étape 1, indique le site riche en électrons et le site pauvre, puis le sens de la flèche courbe.\n2. Classe les deux carbocations envisageables (primaire, secondaire, tertiaire) et prévois le produit majoritaire. Justifie.\n3. Dans l’étape 2, quel est le site riche en électrons ? Le produit majoritaire possède-t-il un carbone asymétrique ?\n4. D’après le document 2, pourquoi H⁺ est-il un catalyseur ? Apparaît-il dans l’équation-bilan ?\n5. Quelle relation de stéréoisomérie lie les formes Z et E du but-2-ène ? Peut-on les séparer par distillation ? Justifie.",
+      "bareme": [
+        { "critere": "Double liaison C=C site riche, H⁺ site pauvre, flèche de la liaison C=C vers H⁺", "points": 4 },
+        { "critere": "(CH₃)₃C⁺ tertiaire plus stable que le primaire : produit majoritaire (CH₃)₃C–Br", "points": 5 },
+        { "critere": "Br⁻ (doublet) site riche ; pas de carbone asymétrique (trois CH₃ identiques)", "points": 3 },
+        { "critere": "H⁺ consommé puis régénéré : catalyseur, absent de l’équation-bilan", "points": 4 },
+        { "critere": "Z et E diastéréoisomères, propriétés physiques différentes : séparables par distillation", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le **site riche en électrons** est la **double liaison C=C** ; le **site pauvre** est l’ion **H⁺**. La flèche courbe part de la **liaison C=C** et pointe vers **H⁺** : les électrons de la double liaison forment la nouvelle liaison C–H.\n\n2. (CH₃)₃C⁺ : la charge est sur un carbone lié à trois carbones, carbocation **tertiaire**. (CH₃)₂CH–CH₂⁺ : carbocation **primaire**. Stabilité : tertiaire > secondaire > primaire. L’intermédiaire le plus stable se forme le plus facilement et oriente la réaction : le produit majoritaire est le **2-bromo-2-méthylpropane (CH₃)₃C–Br**.\n\n3. Dans l’étape 2, le site riche est l’ion **Br⁻** (doublet non liant), qui attaque le carbone chargé + (site pauvre). Dans (CH₃)₃C–Br, le carbone central porte **trois CH₃ identiques** : il n’est **pas asymétrique**.\n\n4. H⁺ intervient dans la première étape et est **régénéré** dans la dernière : il n’est pas consommé, c’est un **catalyseur** (il active le groupe carbonyle). Il **n’apparaît pas dans l’équation-bilan** (acide + alcool ⇌ ester + eau).\n\n5. Z et E sont des stéréoisomères qui ne sont pas images l’un de l’autre dans un miroir : ce sont des **diastéréoisomères**. Leurs propriétés physiques **diffèrent** (3,7 °C contre 0,9 °C) : on peut les séparer par **distillation** (en pratique une distillation soignée, les températures étant proches), contrairement à deux énantiomères qui ont la même température d’ébullition."
+    },
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "difficulte": 1,
+      "titre": "Deux oscillateurs et une onde",
+      "consigne": "Écris la formule, fais l’application numérique et donne le résultat avec son unité.",
+      "enonce": "1. Un solide de masse m = 0,200 kg est accroché à un ressort de raideur k = 20 N/m. Calcule sa période propre T₀ et sa fréquence propre f₀.\n2. Un circuit LC comporte une bobine L = 0,10 H et un condensateur C = 10 µF. Calcule sa période propre.\n3. Une onde sonore de fréquence 680 Hz se propage dans l’air à 340 m/s. Calcule sa longueur d’onde. Que devient sa fréquence si elle passe dans l’eau ?",
+      "bareme": [
+        { "critere": "T₀ = 2π√(m/k) ≈ 0,63 s et f₀ ≈ 1,6 Hz", "points": 7 },
+        { "critere": "T₀ = 2π√(LC) ≈ 6,3 ms", "points": 6 },
+        { "critere": "λ = v / f = 0,50 m et fréquence inchangée (fixée par la source)", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. T₀ = 2π √(m / k) = 2π √(0,200 / 20) = 2π √0,010 = 2π × 0,10 ≈ **0,63 s**. f₀ = 1 / T₀ ≈ **1,6 Hz**.\n\n2. T₀ = 2π √(L × C) = 2π √(0,10 × 10 × 10⁻⁶) = 2π √(1,0 × 10⁻⁶) = 2π × 1,0 × 10⁻³ ≈ **6,3 × 10⁻³ s = 6,3 ms**.\n\n3. λ = v / f = 340 / 680 = **0,50 m**. Dans l’eau, la **fréquence ne change pas** : elle est fixée par la source ; c’est la longueur d’onde qui change (la célérité étant différente)."
+    },
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "difficulte": 2,
+      "titre": "Résonance d’une lame vibrante",
+      "consigne": "Exploite les données de l’expérience et justifie chaque conclusion avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Un vibreur impose sa fréquence f à une lame métallique. On relève l’amplitude des oscillations de la lame : elle est maximale pour **f = 50,0 Hz**, et la bande passante s’étend de **48,5 Hz à 51,5 Hz**.\n\nOn recommence après avoir fixé une plaquette de mousse sur la lame : l’amplitude maximale est plus faible, toujours vers 50 Hz, et la bande passante s’étend de **45,0 Hz à 55,0 Hz**.\n\n1. Comment s’appelle le phénomène observé à 50,0 Hz ? Que vaut la fréquence propre f₀ de la lame ?\n2. Calcule le facteur de qualité Q dans les deux expériences.\n3. Quel est le rôle de la mousse ? Justifie avec les valeurs de Q.\n4. Sans vibreur, on écarte la lame et on la lâche : on compte 10 oscillations en 0,205 s. Quel régime observe-t-on, et que vaut sa pseudo-période ? Compare à la période propre.",
+      "bareme": [
+        { "critere": "Résonance, f₀ ≈ 50,0 Hz", "points": 4 },
+        { "critere": "Q = f₀ / Δf : ≈ 17 (Δf = 3,0 Hz) puis 5,0 (Δf = 10,0 Hz)", "points": 6 },
+        { "critere": "Mousse : amortissement plus fort, résonance moins aiguë (Q plus petit)", "points": 5 },
+        { "critere": "Régime pseudopériodique, pseudo-période 20,5 ms, voisine de T₀ = 20 ms", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L’amplitude maximale quand la fréquence imposée est proche de la fréquence propre : c’est la **résonance**. f₀ ≈ **50,0 Hz**.\n\n2. - Sans mousse : Δf = 51,5 − 48,5 = 3,0 Hz ; Q = f₀ / Δf = 50,0 / 3,0 ≈ **17**.\n- Avec mousse : Δf = 55,0 − 45,0 = 10,0 Hz ; Q = 50,0 / 10,0 = **5,0**.\n\n3. La mousse **amortit** les oscillations (frottements) : l’amplitude maximale baisse, la bande passante s’élargit, le facteur de qualité diminue (17 → 5). Un oscillateur peu amorti a une résonance **aiguë** (Q grand) ; ici, avec la mousse, la résonance est **plus large et moins marquée**.\n\n4. L’amplitude décroît à cause des frottements : c’est le **régime pseudopériodique**. Pseudo-période T = 0,205 / 10 = 0,0205 s = **20,5 ms**. La période propre vaut T₀ = 1 / 50,0 = 20 ms : la pseudo-période en est très **voisine** (amortissement faible)."
+    },
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "difficulte": 3,
+      "titre": "Le banc à ultrasons",
+      "consigne": "Exploite les mesures, justifie chaque relation utilisée et commente les résultats.",
+      "enonce": "**Situation.** Sur un banc, un émetteur envoie des ultrasons de fréquence **f = 40,0 kHz** dans l’air. Deux récepteurs R₁ et R₂ sont placés sur la même ligne que l’émetteur.\n\n- Mesure 1 : l’émetteur envoie une salve brève. R₂ est placé **8,5 cm** plus loin que R₁ ; la salve arrive en R₂ avec un retard **τ = 0,25 ms** sur R₁.\n- Mesure 2 : l’émetteur émet en continu. Partant d’une position où les signaux de R₁ et R₂ sont en phase, on éloigne R₂ : les signaux redeviennent en phase à chaque déplacement de 8,5 mm.\n- Mesure 3 : l’analyse du signal électrique d’alimentation de l’émetteur (périodique, non sinusoïdal) montre des raies à 40, 80 et 120 kHz.\n\n1. Calcule la célérité des ultrasons à partir de la mesure 1.\n2. Que représente la distance de 8,5 mm de la mesure 2 ? Vérifie la cohérence avec la mesure 1.\n3. Interprète le spectre de la mesure 3 (fondamental, harmoniques).\n4. On place devant l’émetteur une fente de largeur a = 2,0 cm. Calcule le demi-angle de la tache centrale de diffraction. La diffraction est-elle marquée ? Justifie.\n5. On double l’amplitude de l’onde émise. Comment varie la puissance transportée ? L’onde transporte-t-elle de l’air de l’émetteur vers le récepteur ?",
+      "bareme": [
+        { "critere": "v = d / τ = 0,085 / 0,25 × 10⁻³ = 340 m/s", "points": 4 },
+        { "critere": "8,5 mm = λ, et λ = v / f = 340 / 40 000 = 8,5 mm : cohérent", "points": 4 },
+        { "critere": "40 kHz fondamental, 80 et 120 kHz harmoniques de rang 2 et 3", "points": 4 },
+        { "critere": "θ ≈ λ / a ≈ 0,43 rad, diffraction marquée car a de l’ordre de λ", "points": 4 },
+        { "critere": "Puissance multipliée par 4 ; transport d’énergie sans transport de matière", "points": 4 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Un point reproduit le mouvement de la source avec un retard τ = d / v, donc v = d / τ = 0,085 / (0,25 × 10⁻³) = **340 m/s**.\n\n2. Deux points en phase successifs sont distants d’**une longueur d’onde** (périodicité spatiale) : **λ = 8,5 mm**. Avec la mesure 1 : λ = v / f = 340 / 40,0 × 10³ = 8,5 × 10⁻³ m = **8,5 mm**. Les deux mesures sont **cohérentes**.\n\n3. Un signal périodique non sinusoïdal est la somme d’un **fondamental** de même fréquence que le signal (**40 kHz**) et d’**harmoniques** de fréquences multiples : **80 kHz (2f)** et **120 kHz (3f)**.\n\n4. θ ≈ λ / a = 8,5 × 10⁻³ / 2,0 × 10⁻² ≈ **0,43 rad** (environ 24°). L’ouverture (2,0 cm) est **du même ordre de grandeur que λ** (8,5 mm) : la diffraction est **nettement marquée**, l’onde s’étale largement derrière la fente.\n\n5. La puissance transportée est proportionnelle au **carré de l’amplitude** : doubler l’amplitude la **multiplie par 4**. Une onde transporte de l’**énergie sans transport de matière** : l’air oscille sur place, il n’est pas déplacé de l’émetteur au récepteur."
+    }
+  ]
+}

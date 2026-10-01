@@ -1,0 +1,3121 @@
+{
+ "niveau": "3e",
+ "matiere": "svt",
+ "exercices": [
+  {
+   "chapitre": "2255ef7e-b79b-5389-9649-a46db5471130",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du repos à la course",
+   "competence": "lire-tableau",
+   "situation": "Samia mesure ses constantes au repos, puis juste après un footing soutenu. Elle note tout dans un tableau.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les mesures de Samia",
+     "colonnes": [
+      "Mesure",
+      "Au repos",
+      "Pendant l’effort"
+     ],
+     "lignes": [
+      [
+       "Fréquence cardiaque (battements par minute)",
+       70,
+       170
+      ],
+      [
+       "Fréquence respiratoire (mouvements par minute)",
+       15,
+       45
+      ],
+      [
+       "Part du sang reçue par les muscles",
+       "20 %",
+       "80 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la case qui donne la fréquence cardiaque de Samia pendant l’effort.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne « fréquence cardiaque », puis la colonne « pendant l’effort ».",
+     "explication": "La fréquence cardiaque monte à **170 battements par minute** pendant l’effort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute la fréquence cardiaque augmente-t-elle entre le repos et l’effort ?",
+     "reponse": 100,
+     "unite": "battements/min",
+     "aide": "Fais la différence entre les deux valeurs de la première ligne.",
+     "explication": "170 − 70 = **100 battements par minute** de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le corps modifie-t-il ainsi cœur, respiration et circulation du sang ?",
+     "options": [
+      "Pour amener plus de dioxygène et de glucose aux muscles",
+      "Pour économiser l’énergie de l’organisme",
+      "Pour fabriquer moins de dioxyde de carbone",
+      "Pour que les organes digestifs travaillent plus vite"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où va une part du sang de plus en plus grande.",
+     "explication": "Toutes ces adaptations ont un seul but : amener **plus de dioxygène et de glucose aux muscles**, et évacuer plus vite le CO₂ et la chaleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "2255ef7e-b79b-5389-9649-a46db5471130",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un footing sous surveillance",
+   "competence": "lire-graphique",
+   "situation": "Hugo court 20 minutes sur un chemin, puis s’arrête. Sa montre a enregistré sa fréquence cardiaque toutes les cinq minutes.",
+   "documents": [
+    {
+     "id": "fc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fréquence cardiaque de Hugo",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+     ],
+     "series": [
+      {
+       "nom": "Fréquence cardiaque",
+       "valeurs": [
+        70,
+        150,
+        165,
+        175,
+        185,
+        95
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence cardiaque",
+      "unite": "battements par minute",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps (minutes)"
+     },
+     "valeurs": false,
+     "source": "Mesures arrondies, écrites pour l’exercice. Hugo court de la minute 0 à la minute 20."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence cardiaque de Hugo à la 15e minute ?",
+     "reponse": 175,
+     "unite": "battements/min",
+     "tolerance": 3,
+     "aide": "Repère le point d’abscisse 15.",
+     "explication": "À la 15e minute, son cœur bat à **175 battements par minute**."
+    },
+    {
+     "type": "zone",
+     "document": "fc",
+     "enonce": "Touche l’instant où la fréquence cardiaque est la plus élevée.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le maximum (185) est atteint à **20 minutes**, quand l’effort s’arrête."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la fréquence cardiaque a-t-elle augmenté entre le repos (minute 0) et la 10e minute ?",
+     "reponse": 95,
+     "unite": "battements/min",
+     "tolerance": 3,
+     "aide": "Lis les deux valeurs et soustrais.",
+     "explication": "165 − 70 = **95 battements par minute**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la baisse entre la 20e et la 25e minute ?",
+     "options": [
+      "La récupération : le cœur ralentit et revient vers sa valeur de repos",
+      "Une crampe qui bloque le cœur",
+      "Le début d’un dopage",
+      "La fin de la consommation de dioxygène par les muscles"
+     ],
+     "reponse": 0,
+     "aide": "Hugo s’est arrêté de courir à la minute 20.",
+     "explication": "Après l’effort, la fréquence cardiaque **redescend** : c’est la **récupération**. Elle est plus rapide chez une personne entraînée."
+    }
+   ]
+  },
+  {
+   "chapitre": "2255ef7e-b79b-5389-9649-a46db5471130",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sprinter ou courir un marathon",
+   "competence": "analyser-document",
+   "situation": "Un club d’athlétisme compare l’origine de l’énergie des muscles selon l’épreuve. Un sprinteur et un marathonien ne puisent pas de la même manière.",
+   "documents": [
+    {
+     "id": "voies",
+     "type": "tableau",
+     "titre": "Deux façons de produire de l’énergie",
+     "colonnes": [
+      "La voie",
+      "Sa condition",
+      "Son rendement"
+     ],
+     "lignes": [
+      [
+       "Respiration cellulaire",
+       "Assez de dioxygène",
+       "Élevé"
+      ],
+      [
+       "Fermentation lactique",
+       "Le dioxygène manque",
+       "Faible, avec production d’acide lactique"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "part",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de l’énergie fournie sans dioxygène",
+     "categories": [
+      "Sprint (100 m)",
+      "Demi-fond (800 m)",
+      "Marathon"
+     ],
+     "series": [
+      {
+       "nom": "Part sans dioxygène",
+       "valeurs": [
+        90,
+        50,
+        2
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Part sans dioxygène",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 25
+     },
+     "valeurs": false,
+     "source": "Ordres de grandeur arrondis, à titre d’illustration."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "part",
+     "enonce": "Touche l’épreuve où la fermentation lactique est la plus utilisée.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "La fermentation a lieu quand le dioxygène manque : cherche la barre la plus haute.",
+     "explication": "Sur **100 m**, l’effort est si brutal que l’essentiel de l’énergie vient d’une voie sans dioxygène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour un marathonien, quel pourcentage de l’énergie vient de la respiration cellulaire ?",
+     "reponse": 98,
+     "unite": "%",
+     "aide": "Le graphique donne la part SANS dioxygène : le reste, c’est la respiration cellulaire.",
+     "explication": "100 − 2 = **98 %** : sur une épreuve longue, la respiration cellulaire domine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne peut-on pas tenir longtemps une allure de sprint ?",
+     "options": [
+      "La fermentation lactique a un faible rendement et produit de l’acide lactique",
+      "Les muscles n’ont aucune réserve de glycogène",
+      "La respiration cellulaire produit trop d’énergie",
+      "Le cœur s’arrête de battre"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne du tableau.",
+     "explication": "La fermentation lactique fournit **peu d’énergie** pour le glucose consommé et produit de l’**acide lactique** : elle ne peut pas durer."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les réserves dans l’ordre où le muscle les utilise.",
+     "items": [
+      "Le glycogène du muscle",
+      "Le glucose du sang, renouvelé par le foie",
+      "Les lipides, pour les efforts longs"
+     ],
+     "aide": "Le muscle commence par ce qu’il a sur place.",
+     "explication": "Le muscle puise d’abord dans son **glycogène**, puis dans le **glucose sanguin**, enfin dans les **lipides** quand l’effort dure."
+    }
+   ]
+  },
+  {
+   "chapitre": "c44e4650-af80-585b-827b-0252ad8b1010",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Bouger : ce que ça apporte",
+   "competence": "analyser-document",
+   "situation": "Le collège de Nora affiche dans le couloir un panneau pour rappeler pourquoi bouger fait du bien à la santé.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Bouge pour ta santé !",
+     "sousTitre": "Panneau du couloir",
+     "emoji": "🏃",
+     "lignes": [
+      {
+       "texte": "Adolescents : au moins 60 minutes d’activité par jour",
+       "id": "duree",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Cœur : plus efficace, moins de risques d’infarctus"
+      },
+      {
+       "texte": "Os : plus denses, articulations tenues"
+      },
+      {
+       "texte": "Mental : moins de stress, meilleur sommeil"
+      },
+      {
+       "texte": "Social : coopération, règles partagées"
+      }
+     ],
+     "pied": "D’après les recommandations de l’OMS.",
+     "teinte": "violet",
+     "source": "Panneau imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui donne la durée d’activité recommandée aux adolescents.",
+     "reponse": [
+      "duree"
+     ],
+     "aide": "Cherche le chiffre en minutes, en haut de l’affiche.",
+     "explication": "Les adolescents devraient bouger **au moins 60 minutes par jour**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque domaine de la santé à un bénéfice de l’activité physique.",
+     "paires": [
+      [
+       "Cardiovasculaire",
+       "Un cœur plus efficace"
+      ],
+      [
+       "Musculo-squelettique",
+       "Des os plus denses"
+      ],
+      [
+       "Mental",
+       "Un meilleur sommeil"
+      ],
+      [
+       "Social",
+       "Des règles partagées"
+      ]
+     ],
+     "aide": "Reprends les quatre lignes sous le trait de l’affiche.",
+     "explication": "Bouger agit sur le **cœur**, les **os et muscles**, le **mental** et le **social** : sur toute la santé, pas seulement sur le corps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon l’OMS, la santé, c’est…",
+     "options": [
+      "Un état de complet bien-être physique, mental et social",
+      "L’absence de maladie",
+      "Une bonne note en EPS",
+      "Ne jamais être fatigué"
+     ],
+     "reponse": 0,
+     "aide": "L’affiche parle de physique, de mental et de social.",
+     "explication": "Pour l’OMS, la santé est un **état de complet bien-être physique, mental et social**, pas seulement l’absence de maladie."
+    }
+   ]
+  },
+  {
+   "chapitre": "c44e4650-af80-585b-827b-0252ad8b1010",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La semaine de Maël",
+   "competence": "lire-graphique",
+   "situation": "Maël, 14 ans, a noté chaque soir le temps qu’il a passé à bouger. Il se demande s’il atteint la recommandation de l’OMS : 60 minutes par jour.",
+   "documents": [
+    {
+     "id": "semaine",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Activité physique de Maël",
+     "categories": [
+      "Lun.",
+      "Mar.",
+      "Mer.",
+      "Jeu.",
+      "Ven.",
+      "Sam.",
+      "Dim."
+     ],
+     "series": [
+      {
+       "nom": "Minutes d’activité",
+       "valeurs": [
+        20,
+        0,
+        45,
+        10,
+        30,
+        90,
+        40
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Minutes d’activité",
+      "unite": "par jour",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Relevé écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "semaine",
+     "enonce": "Touche le seul jour où Maël atteint la recommandation de 60 minutes.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche une barre qui dépasse la graduation 60.",
+     "explication": "Seul le **samedi** (90 minutes) atteint les 60 minutes recommandées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes d’activité Maël a-t-il faites en tout dans la semaine ?",
+     "reponse": 235,
+     "unite": "min",
+     "aide": "Additionne les sept valeurs : 20 + 0 + 45 + 10 + 30 + 90 + 40.",
+     "explication": "20 + 0 + 45 + 10 + 30 + 90 + 40 = **235 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa moyenne par jour ? Arrondis à l’unité.",
+     "reponse": 34,
+     "unite": "min",
+     "tolerance": 0.5,
+     "aide": "Divise le total de la semaine par 7.",
+     "explication": "235 ÷ 7 ≈ 33,6, soit environ **34 minutes** par jour : loin des 60 minutes recommandées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel conseil est le plus adapté pour Maël ?",
+     "options": [
+      "Bouger un peu chaque jour et augmenter progressivement",
+      "Tout concentrer le samedi, pour compenser",
+      "Arrêter le sport : il se fatigue trop",
+      "Prendre un complément alimentaire à la place du sport"
+     ],
+     "reponse": 0,
+     "aide": "Le mardi, il n’a pas bougé du tout.",
+     "explication": "L’activité est recommandée **chaque jour** et la pratique doit rester **progressive**. Aucun complément ne remplace le mouvement."
+    }
+   ]
+  },
+  {
+   "chapitre": "c44e4650-af80-585b-827b-0252ad8b1010",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Camille, nageuse épuisée",
+   "competence": "argumenter",
+   "situation": "Camille, 16 ans, s’entraîne six fois par semaine. Depuis un mois, elle va mal. Son message à l’infirmière du lycée a été écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "mess",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message de Camille",
+     "blocs": [
+      "Je m’entraîne tous les jours sauf le dimanche. Je suis [[s|fatiguée]] en permanence, même après une nuit entière, et j’ai eu trois [[s|blessures]] depuis la rentrée.",
+      "Je dors mal et je n’ai plus envie d’aller à la piscine. Pour être plus légère, je mange très peu de féculents et je saute des repas."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    },
+    {
+     "id": "apports",
+     "type": "tableau",
+     "titre": "Les apports de l’alimentation",
+     "colonnes": [
+      "L’apport",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Glucides complexes",
+       "?"
+      ],
+      [
+       "Protéines",
+       "?"
+      ],
+      [
+       "Lipides de qualité",
+       "?"
+      ],
+      [
+       "Eau",
+       "Indispensable"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mess",
+     "enonce": "Touche les deux signes qui indiquent une surcharge d’entraînement dans le message.",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "aide": "Pense à ce que ressent Camille en permanence et à ce qui lui arrive à répétition.",
+     "explication": "Une **fatigue persistante** et des **blessures à répétition** sont des signes de surcharge : le corps ne récupère plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure du sommeil perturbé et de la perte de motivation de Camille ?",
+     "options": [
+      "Elle montre des signes de surentraînement",
+      "Elle manque simplement de volonté",
+      "Elle n’a pas assez de matériel adapté",
+      "Elle devrait s’entraîner davantage"
+     ],
+     "reponse": 0,
+     "aide": "Relis la liste des signes de surcharge du cours.",
+     "explication": "Troubles du sommeil et perte de motivation sont des signes de **surentraînement** : il faut du repos."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque apport de l’alimentation à son rôle.",
+     "paires": [
+      [
+       "Glucides complexes",
+       "L’endurance"
+      ],
+      [
+       "Protéines",
+       "La réparation des muscles"
+      ],
+      [
+       "Lipides de qualité",
+       "Une réserve et les membranes"
+      ]
+     ],
+     "aide": "Les protéines servent à « réparer ».",
+     "explication": "Les **glucides complexes** nourrissent l’endurance, les **protéines** réparent les muscles, les **lipides** de qualité forment une réserve et les membranes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le régime restrictif de Camille est-il dangereux à son âge ?",
+     "options": [
+      "Il compromet la croissance, qui n’est pas terminée",
+      "Il fait trop grossir",
+      "Il supprime l’eau du corps",
+      "Il n’a aucun effet"
+     ],
+     "reponse": 0,
+     "aide": "À 16 ans, le corps est encore en croissance.",
+     "explication": "Les régimes restrictifs à l’adolescence **compromettent la croissance** et ne remplacent jamais une alimentation variée."
+    }
+   ]
+  },
+  {
+   "chapitre": "905df1c4-cc24-52ff-a3f1-9822574b5526",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le neurone, de A à Z",
+   "competence": "observer-schema",
+   "situation": "Un neurone reçoit un message, le transmet, puis le passe à la cellule suivante. Ce schéma simplifié montre ses principales parties.",
+   "documents": [
+    {
+     "id": "neurone",
+     "type": "schema",
+     "titre": "Un neurone et la cellule suivante",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         74,
+         98
+        ],
+        [
+         44,
+         62
+        ],
+        [
+         52,
+         58
+        ],
+        [
+         82,
+         90
+        ],
+        [
+         82,
+         130
+        ],
+        [
+         52,
+         162
+        ],
+        [
+         44,
+         158
+        ],
+        [
+         74,
+         122
+        ],
+        [
+         50,
+         114
+        ],
+        [
+         22,
+         114
+        ],
+        [
+         22,
+         106
+        ],
+        [
+         50,
+         106
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "dendrites",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 110,
+       "rx": 30,
+       "ry": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "corps",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 110,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 105,
+       "l": 130,
+       "h": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "axone",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 270,
+       "cy": 110,
+       "rx": 10,
+       "ry": 20,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "synapse",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 282,
+       "y": 90,
+       "l": 30,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Cellule suivante à droite",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la partie du neurone qui **reçoit** le message nerveux.",
+     "reponse": [
+      "dendrites"
+     ],
+     "aide": "Ce sont les prolongements ramifiés, à gauche.",
+     "explication": "Les **dendrites** reçoivent le message."
+    },
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la partie qui **transmet** le message le long du neurone.",
+     "reponse": [
+      "axone"
+     ],
+     "aide": "Le long prolongement qui part du corps cellulaire.",
+     "explication": "L’**axone** transmet le message nerveux."
+    },
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la zone de contact où le message passe d’un neurone à la cellule suivante.",
+     "reponse": [
+      "synapse"
+     ],
+     "aide": "C’est à cet endroit que la plupart des drogues agissent.",
+     "explication": "Le message franchit la **synapse** grâce à des neurotransmetteurs chimiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le message nerveux franchit-il la synapse ?",
+     "options": [
+      "Par des neurotransmetteurs chimiques",
+      "Par un fil électrique continu",
+      "Par le sang uniquement",
+      "Il ne la franchit jamais"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit de petites molécules libérées par le neurone.",
+     "explication": "À la synapse, le message passe par des **neurotransmetteurs** : c’est un signal chimique."
+    }
+   ]
+  },
+  {
+   "chapitre": "905df1c4-cc24-52ff-a3f1-9822574b5526",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Main sur la plaque chaude",
+   "competence": "observer-schema",
+   "situation": "Elsa touche par erreur une plaque de cuisson brûlante et retire sa main avant même d’avoir mal. Le trajet du message nerveux est schématisé.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Le trajet du message nerveux",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "stim",
+       "texte": "Plaque brûlante (stimulus)",
+       "emoji": "🔥"
+      },
+      {
+       "id": "recep",
+       "texte": "Récepteurs de la peau",
+       "emoji": "🖐️"
+      },
+      {
+       "id": "n1",
+       "texte": "?"
+      },
+      {
+       "id": "centre",
+       "texte": "Moelle épinière",
+       "emoji": "🧠"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "effet",
+       "texte": "Muscle du bras (effecteur)",
+       "emoji": "💪"
+      }
+     ],
+     "liens": [
+      {
+       "de": "stim",
+       "a": "recep"
+      },
+      {
+       "de": "recep",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "centre"
+      },
+      {
+       "de": "centre",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "effet"
+      }
+     ]
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Temps de réaction",
+     "colonnes": [
+      "Réaction",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Réflexe de retrait de la main",
+       "0,05 seconde"
+      ],
+      [
+       "Réaction volontaire (retirer la main après réflexion)",
+       "0,25 seconde"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis, à titre d’illustration."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel nerf transporte le message entre les récepteurs et la moelle épinière (premier « ? ») ?",
+     "options": [
+      "Un nerf sensitif",
+      "Un nerf moteur",
+      "Un nerf effecteur",
+      "Un nerf cérébral"
+     ],
+     "reponse": 0,
+     "aide": "Le message part d’un récepteur vers un centre nerveux.",
+     "explication": "Le message est **sensitif** : il part du récepteur par un **nerf sensitif**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nerf transporte le message entre la moelle épinière et le muscle (second « ? ») ?",
+     "options": [
+      "Un nerf moteur",
+      "Un nerf sensitif",
+      "Un nerf récepteur",
+      "Aucun nerf : le muscle réagit seul"
+     ],
+     "reponse": 0,
+     "aide": "Le message part du centre nerveux vers l’organe effecteur.",
+     "explication": "Le message est **moteur** : il part du centre nerveux vers l’**effecteur** par un **nerf moteur**."
+    },
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche le centre nerveux qui traite le message dans ce réflexe.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Dans un réflexe, ce n’est pas le cerveau qui traite.",
+     "explication": "Dans un réflexe, le traitement se fait dans la **moelle épinière** : c’est ce qui le rend si rapide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la réaction volontaire est-elle plus lente que le réflexe ?",
+     "reponse": 5,
+     "unite": "fois",
+     "aide": "Divise 0,25 par 0,05.",
+     "explication": "0,25 ÷ 0,05 = **5 fois** plus lente environ. Le réflexe protège avant même qu’on ait mal."
+    }
+   ]
+  },
+  {
+   "chapitre": "905df1c4-cc24-52ff-a3f1-9822574b5526",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une soirée qui laisse des traces",
+   "competence": "analyser-document",
+   "situation": "Léo, 15 ans, raconte à l’infirmière scolaire ses dernières semaines. Elle lui explique ce que subit son système nerveux. Le témoignage a été écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le récit de Léo",
+     "blocs": [
+      "Je mets mes écouteurs à fond trois heures par jour. Depuis une soirée où j’ai bu, j’entends parfois un [[b|sifflement]] dans les oreilles le soir.",
+      "Je me couche très tard : j’ai du mal à retenir mes leçons et je suis souvent de mauvaise humeur."
+     ],
+     "source": "Témoignage écrit pour l’exercice."
+    },
+    {
+     "id": "facteurs",
+     "type": "tableau",
+     "titre": "Facteurs et effets",
+     "colonnes": [
+      "Le facteur",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Bruit intense, écouteurs forts",
+       "?"
+      ],
+      [
+       "Manque de sommeil",
+       "?"
+      ],
+      [
+       "Alcool à l’adolescence",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche le signe qui peut révéler des cellules de l’oreille interne abîmées.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Léo l’entend le soir, dans les oreilles.",
+     "explication": "Un **sifflement** peut signaler des cellules ciliées de l’oreille interne lésées par le bruit."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque facteur à son effet sur le système nerveux.",
+     "paires": [
+      [
+       "Bruit intense, écouteurs forts",
+       "Destruction irréversible des cellules ciliées"
+      ],
+      [
+       "Manque de sommeil",
+       "Mémoire et attention dégradées"
+      ],
+      [
+       "Alcool à l’adolescence",
+       "Toxique pour un cerveau en développement"
+      ]
+     ],
+     "aide": "Pense à ce que le sommeil consolide.",
+     "explication": "Le bruit détruit **définitivement** les cellules ciliées ; le sommeil **consolide les apprentissages** ; l’alcool est très risqué pour un cerveau **en développement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le sifflement de Léo est-il inquiétant ?",
+     "options": [
+      "Les cellules ciliées détruites ne se régénèrent pas",
+      "Les cellules ciliées se renouvellent chaque semaine",
+      "Le sifflement est toujours sans conséquence",
+      "Il vient forcément de l’alcool"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « bruit » du cours.",
+     "explication": "Les cellules ciliées détruites par le bruit ne se **régénèrent pas** : la perte est **irréversible**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces gestes : à faire ou à éviter pour protéger son système nerveux.",
+     "categories": [
+      "À faire",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "Baisser le volume des écouteurs",
+       0
+      ],
+      [
+       "Porter un casque à vélo",
+       0
+      ],
+      [
+       "Mettre une protection auditive en concert",
+       0
+      ],
+      [
+       "Consommer du cannabis",
+       1
+      ],
+      [
+       "Se coucher très tard en regardant des écrans",
+       1
+      ],
+      [
+       "Boire de l’alcool pour se détendre",
+       1
+      ]
+     ],
+     "aide": "Casque et protection auditive protègent ; substances et manque de sommeil abîment.",
+     "explication": "Casque, protection auditive et volume modéré **protègent**. Alcool, cannabis et manque de sommeil **perturbent** le système nerveux."
+    }
+   ]
+  },
+  {
+   "chapitre": "1fae4080-61e9-51ba-899b-e3162f7754f2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du premier coup de dent à la sortie",
+   "competence": "observer-schema",
+   "situation": "Ce schéma simplifié montre le trajet d’un repas dans le tube digestif. Chaque organe a son rôle.",
+   "documents": [
+    {
+     "id": "tube",
+     "type": "schema",
+     "titre": "Le tube digestif",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 156,
+       "y": 100,
+       "l": 8,
+       "h": 60,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 24,
+       "rx": 28,
+       "ry": 12,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "bouche",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 154,
+       "y": 36,
+       "l": 12,
+       "h": 34,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "oeso",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 88,
+       "rx": 40,
+       "ry": 20,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "estomac",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         90,
+         130
+        ],
+        [
+         230,
+         130
+        ],
+        [
+         230,
+         240
+        ],
+        [
+         190,
+         240
+        ],
+        [
+         190,
+         156
+        ],
+        [
+         130,
+         156
+        ],
+        [
+         130,
+         240
+        ],
+        [
+         90,
+         240
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "gros",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 160,
+       "l": 48,
+       "h": 70,
+       "arrondi": 10,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "grele",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche l’organe où se font l’essentiel de la digestion ET de l’absorption.",
+     "reponse": [
+      "grele"
+     ],
+     "aide": "C’est l’organe enroulé au centre, entouré par le gros intestin.",
+     "explication": "C’est l’**intestin grêle** : les sucs y digèrent les aliments et les nutriments passent dans le sang."
+    },
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche l’organe qui réabsorbe l’eau et forme les matières fécales.",
+     "reponse": [
+      "gros"
+     ],
+     "aide": "Il entoure l’intestin grêle sur trois côtés.",
+     "explication": "C’est le **gros intestin**, qui abrite aussi le microbiote."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque enzyme à ce qu’elle attaque.",
+     "paires": [
+      [
+       "Amylase",
+       "L’amidon"
+      ],
+      [
+       "Protéases",
+       "Les protéines"
+      ],
+      [
+       "Lipases",
+       "Les graisses"
+      ]
+     ],
+     "aide": "Le nom de l’enzyme ressemble à celui de ce qu’elle découpe.",
+     "explication": "L’**amylase** attaque l’amidon, les **protéases** les protéines, les **lipases** les graisses. Chaque enzyme est **spécifique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "En quoi les protéines sont-elles transformées par la digestion ?",
+     "options": [
+      "En acides aminés",
+      "En glucose",
+      "En acides gras",
+      "En fibres"
+     ],
+     "reponse": 0,
+     "aide": "Ce sont les « briques » des protéines.",
+     "explication": "Les protéines sont découpées en **acides aminés**, assez petits pour traverser la paroi intestinale."
+    }
+   ]
+  },
+  {
+   "chapitre": "1fae4080-61e9-51ba-899b-e3162f7754f2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’expérience de la salive",
+   "competence": "experimenter",
+   "situation": "Léa veut savoir si la salive agit sur l’amidon. Elle prépare trois tubes à 37 °C, puis teste le contenu : l’eau iodée devient bleu-noir en présence d’amidon, et la liqueur de Fehling devient rouge brique en présence d’un sucre simple.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "tableau",
+     "titre": "Résultats de l’expérience de Léa",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Eau iodée",
+      "Liqueur de Fehling"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Amidon + eau",
+       "Bleu-noir",
+       "Reste bleue"
+      ],
+      [
+       "2",
+       "Amidon + salive",
+       "Reste orangée",
+       "Rouge brique"
+      ],
+      [
+       "3",
+       "Amidon + salive chauffée à 100 °C",
+       "Bleu-noir",
+       "Reste bleue"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Expérience imaginée pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la case qui montre que l’amidon a **disparu** dans un tube.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le tube où l’eau iodée ne bleuit plus.",
+     "explication": "Dans le tube 2, l’eau iodée **reste orangée** : il n’y a plus d’amidon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison des tubes 1 et 2 ?",
+     "options": [
+      "La salive transforme l’amidon en un sucre simple",
+      "L’eau transforme l’amidon en sucre",
+      "La salive n’a aucun effet sur l’amidon",
+      "Le Fehling détruit l’amidon"
+     ],
+     "reponse": 0,
+     "aide": "Seul le contenu change : de l’eau d’un côté, de la salive de l’autre.",
+     "explication": "Avec la salive, l’amidon disparaît et un sucre simple (**glucose**) apparaît : la salive **digère** l’amidon."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle enzyme de la salive attaque l’amidon ?",
+     "reponse": [
+      "amylase",
+      "l’amylase",
+      "une amylase"
+     ],
+     "placeholder": "Nom de l’enzyme",
+     "aide": "Son nom commence par « amy… ».",
+     "explication": "C’est l’**amylase**, enzyme spécifique de l’amidon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’amidon reste-t-il présent dans le tube 3 ?",
+     "options": [
+      "La chaleur de 100 °C a détruit l’enzyme de la salive",
+      "Il y a trop d’eau dans le tube",
+      "La salive est devenue de l’amidon",
+      "L’eau iodée a empêché la digestion"
+     ],
+     "reponse": 0,
+     "aide": "Compare les tubes 2 et 3 : une seule chose les distingue.",
+     "explication": "Chauffée à 100 °C, la salive **perd son enzyme** : l’amidon n’est plus digéré. Une enzyme est fragile."
+    }
+   ]
+  },
+  {
+   "chapitre": "1fae4080-61e9-51ba-899b-e3162f7754f2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les repas de Nina",
+   "competence": "argumenter",
+   "situation": "Nina, 15 ans, fait du handball trois fois par semaine. Elle a noté ce qu’elle a mangé hier, puis elle explique à sa mère qu’elle veut changer d’alimentation. Son message est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "Ce que Nina a mangé hier",
+     "colonnes": [
+      "Repas",
+      "Fruits et légumes",
+      "Féculents",
+      "Protéines",
+      "Produits laitiers",
+      "Sucré, ultratransformé"
+     ],
+     "lignes": [
+      [
+       "Petit-déjeuner",
+       "Non",
+       "Oui",
+       "Non",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Déjeuner",
+       "Oui",
+       "Oui",
+       "Oui",
+       "Non",
+       "Non"
+      ],
+      [
+       "Goûter",
+       "Oui",
+       "Non",
+       "Non",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Dîner",
+       "Non",
+       "Oui",
+       "Oui",
+       "Non",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevé écrit pour l’exercice."
+    },
+    {
+     "id": "mere",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message de Nina",
+     "blocs": [
+      "Maman, je veux arrêter les féculents et manger le moins possible pour être plus mince. Je saute le petit-déjeuner et je me sens souvent faible à l’entraînement."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de repas de la journée comprennent des fruits ou des légumes ?",
+     "reponse": 2,
+     "unite": "repas",
+     "aide": "Compte les « Oui » de la deuxième colonne.",
+     "explication": "Déjeuner et goûter : **2 repas** sur 4. Les fruits et légumes sont recommandés à chaque repas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quelle durée juge-t-on l’équilibre alimentaire ?",
+     "options": [
+      "Sur plusieurs jours",
+      "Sur un seul repas",
+      "Sur une seule heure",
+      "Seulement le dimanche"
+     ],
+     "reponse": 0,
+     "aide": "Un repas déséquilibré ne ruine pas toute la semaine.",
+     "explication": "L’équilibre alimentaire ne s’évalue pas repas par repas mais **sur plusieurs jours**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces aliments selon la fréquence recommandée.",
+     "categories": [
+      "À chaque repas",
+      "Chaque jour",
+      "Peu"
+     ],
+     "items": [
+      [
+       "Fruits et légumes",
+       0
+      ],
+      [
+       "Produits laitiers",
+       1
+      ],
+      [
+       "Protéines variées, dont les légumineuses",
+       1
+      ],
+      [
+       "Boissons sucrées",
+       2
+      ],
+      [
+       "Plats ultratransformés",
+       2
+      ]
+     ],
+     "aide": "Les aliments sucrés et ultratransformés sont à limiter.",
+     "explication": "**Fruits et légumes** à chaque repas, **protéines** et **produits laitiers** chaque jour, produits **sucrés, salés ou ultratransformés** en petite quantité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il conseiller à Nina, qui se sent faible et veut se restreindre ?",
+     "options": [
+      "Demander de l’aide à un médecin : les troubles du comportement alimentaire se soignent",
+      "Continuer : un régime restrictif est sans danger",
+      "Supprimer aussi les protéines",
+      "S’entraîner davantage pour compenser"
+     ],
+     "reponse": 0,
+     "aide": "À l’adolescence, la croissance demande de l’énergie.",
+     "explication": "Un régime restrictif est **dangereux** pendant la croissance. Les troubles du comportement alimentaire sont des **maladies qui se soignent** : il faut demander de l’aide."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d8f4800-a58c-5119-abb9-0623e7a36e00",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le phagocyte à l’œuvre",
+   "competence": "observer-schema",
+   "situation": "Un micro-organisme a franchi la peau d’Enzo par une égratignure. Un globule blanc, le phagocyte, repère l’intrus. Le schéma montre les deux acteurs.",
+   "documents": [
+    {
+     "id": "phago",
+     "type": "schema",
+     "titre": "Un phagocyte face à un micro-organisme",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 110,
+       "rx": 70,
+       "ry": 55,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "phagocyte",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 105,
+       "r": 14,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 255,
+       "cy": 110,
+       "rx": 30,
+       "ry": 13,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "microbe",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        110
+       ],
+       "a": [
+        215,
+        110
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Le phagocyte s’approche de l’intrus",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phago",
+     "enonce": "Touche le globule blanc qui va s’attaquer au micro-organisme.",
+     "reponse": [
+      "phagocyte"
+     ],
+     "aide": "C’est la grande cellule à gauche, avec un noyau.",
+     "explication": "C’est le **phagocyte**, un globule blanc de la réponse immédiate."
+    },
+    {
+     "type": "zone",
+     "document": "phago",
+     "enonce": "Touche le micro-organisme.",
+     "reponse": [
+      "microbe"
+     ],
+     "aide": "Il est petit et se trouve à droite.",
+     "explication": "Le **micro-organisme** est l’intrus que le phagocyte va englober."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle l’action d’un phagocyte qui englobe un micro-organisme et le digère ?",
+     "options": [
+      "La phagocytose",
+      "La vaccination",
+      "La fermentation",
+      "La fécondation"
+     ],
+     "reponse": 0,
+     "aide": "Le mot commence comme « phagocyte ».",
+     "explication": "C’est la **phagocytose**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque signe de la réaction inflammatoire à sa cause.",
+     "paires": [
+      [
+       "Rougeur, chaleur",
+       "La dilatation des vaisseaux"
+      ],
+      [
+       "Gonflement",
+       "Le passage de liquide"
+      ],
+      [
+       "Douleur",
+       "Les médiateurs chimiques"
+      ]
+     ],
+     "aide": "Les vaisseaux s’élargissent, du liquide passe.",
+     "explication": "**Rougeur** et **chaleur** viennent de la dilatation des vaisseaux, le **gonflement** du passage de liquide, la **douleur** des médiateurs chimiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d8f4800-a58c-5119-abb9-0623e7a36e00",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux contacts, deux réponses",
+   "competence": "lire-graphique",
+   "situation": "Après un premier contact avec un micro-organisme au jour 0, une personne en rencontre à nouveau le même au jour 28. On mesure ses anticorps contre lui.",
+   "documents": [
+    {
+     "id": "anti",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantité d’anticorps dans le sang",
+     "categories": [
+      "0",
+      "7",
+      "14",
+      "21",
+      "28",
+      "35",
+      "42"
+     ],
+     "series": [
+      {
+       "nom": "Anticorps",
+       "valeurs": [
+        0,
+        5,
+        40,
+        30,
+        25,
+        160,
+        120
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Anticorps",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps (jours)"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice. Premier contact au jour 0, second contact au jour 28."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’anticorps mesure-t-on au jour 14 ?",
+     "reponse": 40,
+     "unite": "unités",
+     "tolerance": 3,
+     "aide": "Lis la hauteur du point d’abscisse 14.",
+     "explication": "Au jour 14, on mesure **40 unités** d’anticorps : c’est le pic de la première réponse."
+    },
+    {
+     "type": "zone",
+     "document": "anti",
+     "enonce": "Touche le moment où la quantité d’anticorps est la plus grande.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le maximum (160) est atteint au **jour 35**, sept jours après le second contact."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au pic de la seconde réponse, il y a combien de fois plus d’anticorps qu’au pic de la première ?",
+     "reponse": 4,
+     "unite": "fois",
+     "tolerance": 0.2,
+     "aide": "Divise 160 par 40.",
+     "explication": "160 ÷ 40 = **4 fois** plus. La réponse est aussi bien plus rapide : sept jours suffisent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment explique-t-on que la seconde réponse soit plus rapide et plus intense ?",
+     "options": [
+      "Des cellules mémoire ont persisté après le premier contact",
+      "Les anticorps du premier contact n’ont jamais disparu",
+      "Le micro-organisme est devenu plus faible",
+      "Le phagocyte fabrique des anticorps"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui reste des années après le premier contact ?",
+     "explication": "Des **cellules mémoire** persistent : c’est la **mémoire immunitaire**. L’intrus est éliminé avant tout symptôme."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d8f4800-a58c-5119-abb9-0623e7a36e00",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi la petite Léa reste protégée",
+   "competence": "argumenter",
+   "situation": "Dans une crèche, un cas d’une maladie très contagieuse est signalé chez un adulte. Léa, trois mois, trop jeune pour être vaccinée, n’est pas tombée malade. Comprenons pourquoi.",
+   "documents": [
+    {
+     "id": "vaccin",
+     "type": "chaine",
+     "titre": "Ce que fait un vaccin",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "v",
+       "texte": "Vaccin : antigène rendu inoffensif"
+      },
+      {
+       "id": "r",
+       "texte": "?"
+      },
+      {
+       "id": "m",
+       "texte": "Cellules mémoire",
+       "emoji": "🧬"
+      },
+      {
+       "id": "c",
+       "texte": "Plus tard : contact avec le vrai micro-organisme"
+      },
+      {
+       "id": "f",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "v",
+       "a": "r"
+      },
+      {
+       "de": "r",
+       "a": "m"
+      },
+      {
+       "de": "m",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "f"
+      }
+     ]
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Dans la crèche",
+     "blocs": [
+      "Tous les enfants en âge de l’être sont vaccinés et ils sont protégés. Le micro-organisme ne [[c|circule]] presque plus dans le groupe.",
+      "Léa, trop jeune, bénéficie de l’[[i|immunité]] [[i|collective]]. Elle n’a jamais été en contact avec l’agent de la maladie."
+     ],
+     "source": "Article écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que remplace le premier « ? » : ce que le vaccin déclenche ?",
+     "options": [
+      "Une réponse immunitaire, sans provoquer la maladie",
+      "Une infection grave",
+      "Une destruction des globules blancs",
+      "Un effet immédiat sans mémoire"
+     ],
+     "reponse": 0,
+     "aide": "Le vaccin n’apporte qu’un antigène inoffensif.",
+     "explication": "Le vaccin déclenche une **réponse immunitaire** et crée une mémoire, **sans provoquer la maladie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remplace le second « ? » : ce qui se passe au contact du vrai micro-organisme ?",
+     "options": [
+      "Une réponse très rapide et intense : l’intrus est éliminé avant tout symptôme",
+      "Une réponse lente de plusieurs semaines",
+      "Une maladie grave",
+      "Aucune réponse du corps"
+     ],
+     "reponse": 0,
+     "aide": "Les cellules mémoire sont déjà prêtes.",
+     "explication": "Grâce à la mémoire, la réponse est **beaucoup plus rapide et intense** : l’intrus est éliminé avant tout symptôme."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche les deux mots qui nomment le phénomène qui protège Léa.",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "aide": "C’est un nom suivi d’un adjectif, à la deuxième ligne.",
+     "explication": "C’est l’**immunité collective** : quand assez de personnes sont immunisées, le micro-organisme ne circule plus assez."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle maladie l’immunité collective et la vaccination ont-elles permis d’éradiquer en 1980 ?",
+     "options": [
+      "La variole",
+      "La grippe",
+      "Le rhume",
+      "L’angine"
+     ],
+     "reponse": 0,
+     "aide": "C’est une maladie dont le virus ne circule plus nulle part.",
+     "explication": "La **variole** a été éradiquée en **1980** grâce à la vaccination et à l’immunité collective."
+    }
+   ]
+  },
+  {
+   "chapitre": "9369a0b4-6f60-50b0-8fc1-610fb095ee7d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois leviers, trois moments",
+   "competence": "lire-tableau",
+   "situation": "Un médecin explique à Maëlle qu’il existe trois moyens de lutter contre les infections. Chacun agit à un moment précis.",
+   "documents": [
+    {
+     "id": "leviers",
+     "type": "tableau",
+     "titre": "Les trois leviers",
+     "colonnes": [
+      "Le levier",
+      "Son moment",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Hygiène",
+       "Avant la contamination",
+       "Elle empêche l’arrivée du microbe"
+      ],
+      [
+       "Vaccination",
+       "Avant la maladie",
+       "Elle prépare l’organisme"
+      ],
+      [
+       "Antibiotiques",
+       "Après l’infection",
+       "Ils soignent les bactéries"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "leviers",
+     "enonce": "Touche la case qui indique quand on utilise les antibiotiques.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « Antibiotiques », puis la colonne « Son moment ».",
+     "explication": "Les antibiotiques agissent **après l’infection**, pour soigner."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque geste au levier qui lui correspond.",
+     "paires": [
+      [
+       "Se laver les mains avant de manger",
+       "Hygiène"
+      ],
+      [
+       "Recevoir un rappel de vaccin",
+       "Vaccination"
+      ],
+      [
+       "Suivre un traitement contre une angine bactérienne",
+       "Antibiotiques"
+      ]
+     ],
+     "aide": "Avant la contamination, avant la maladie ou après l’infection ?",
+     "explication": "Le **lavage des mains** relève de l’hygiène, le **rappel** de la vaccination, le **traitement d’une angine bactérienne** des antibiotiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Contre quels micro-organismes les antibiotiques sont-ils efficaces ?",
+     "options": [
+      "Les bactéries seulement",
+      "Tous les micro-organismes",
+      "Les virus seulement",
+      "Les virus et les parasites"
+     ],
+     "reponse": 0,
+     "aide": "Relis la troisième ligne du tableau.",
+     "explication": "Les antibiotiques n’agissent que sur les **bactéries**, jamais sur les virus."
+    }
+   ]
+  },
+  {
+   "chapitre": "9369a0b4-6f60-50b0-8fc1-610fb095ee7d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une grippe, pas d’antibiotique",
+   "competence": "analyser-document",
+   "situation": "Inès a la grippe. Sa mère se demande si elle doit lui donner des antibiotiques. Un message échangé, puis un tableau de médecin, éclairent la situation.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Message entre Inès et sa mère",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "J’ai de la fièvre et je tousse : c’est la [[v|grippe]], dit le médecin."
+      },
+      {
+       "qui": "Maman",
+       "texte": "Je peux te donner l’antibiotique qui me reste, non ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Le médecin a dit que non : les antibiotiques ne marchent pas contre les [[v|virus]]."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "angine",
+     "type": "tableau",
+     "titre": "Le test rapide d’angine",
+     "colonnes": [
+      "Résultat du test",
+      "Type d’angine",
+      "Décision"
+     ],
+     "lignes": [
+      [
+       "Positif",
+       "Bactérienne",
+       "Antibiotique prescrit"
+      ],
+      [
+       "Négatif",
+       "Virale",
+       "Pas d’antibiotique"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui désigne le type de micro-organisme contre lequel les antibiotiques ne servent à rien.",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "aide": "Le médecin d’Inès l’a dit dans sa dernière réplique.",
+     "explication": "Les antibiotiques n’ont **aucun effet sur les virus** : grippe, rhume, bronchiolite, angine virale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répond-on à Maman à propos de l’antibiotique qui lui reste ?",
+     "options": [
+      "Il ne faut pas le donner : la grippe est virale",
+      "Il faut le donner, au cas où",
+      "Il faut le donner à moitié dose",
+      "Il faut en acheter un autre plus fort"
+     ],
+     "reponse": 0,
+     "aide": "Quelle est la cause de la grippe ?",
+     "explication": "La grippe est **virale** : un antibiotique est inutile, et en prendre à tort favorise l’**antibiorésistance**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un test rapide d’angine est négatif. Que dit-il ?",
+     "options": [
+      "L’angine est virale : pas d’antibiotique",
+      "L’angine est bactérienne : antibiotique obligatoire",
+      "Il n’y a pas d’infection du tout",
+      "Le patient est vacciné"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Négatif » du tableau.",
+     "explication": "Un test négatif indique une angine **virale** : le médecin ne prescrit pas d’antibiotique."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment s’appelle l’outil du médecin qui permet de distinguer une angine bactérienne d’une angine virale ?",
+     "reponse": [
+      "test rapide",
+      "le test rapide",
+      "test rapide d’angine",
+      "test d’angine"
+     ],
+     "placeholder": "Nom de l’outil",
+     "aide": "Le tableau porte son nom en titre.",
+     "explication": "Le **test rapide d’angine** aide à distinguer les deux types d’angine."
+    }
+   ]
+  },
+  {
+   "chapitre": "9369a0b4-6f60-50b0-8fc1-610fb095ee7d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand l’antibiotique ne marche plus",
+   "competence": "modeliser",
+   "situation": "Nolan arrête son traitement dès qu’il se sent mieux, au bout de trois jours. Une analyse compte les bactéries dans sa gorge à trois moments. Une autre teste trois antibiotiques sur la bactérie.",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les bactéries au cours du temps",
+     "categories": [
+      "Avant le traitement",
+      "Jour 3 (arrêt trop tôt)",
+      "Jour 10"
+     ],
+     "series": [
+      {
+       "nom": "Bactéries sensibles",
+       "valeurs": [
+        990,
+        30,
+        50
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Bactéries résistantes",
+       "valeurs": [
+        10,
+        10,
+        400
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de bactéries",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 1000,
+      "pas": 250
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice."
+    },
+    {
+     "id": "antibiogramme",
+     "type": "tableau",
+     "titre": "L’antibiogramme de la bactérie isolée",
+     "colonnes": [
+      "Antibiotique",
+      "Effet sur la bactérie"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Résistante"
+      ],
+      [
+       "B",
+       "Sensible"
+      ],
+      [
+       "C",
+       "Résistante"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Antibiogramme imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de bactéries résistantes au jour 10 (en milliers) ?",
+     "reponse": 400,
+     "unite": "milliers",
+     "tolerance": 20,
+     "aide": "Lis la barre corail de la troisième période.",
+     "explication": "Il y a **400 milliers** de bactéries résistantes au jour 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les bactéries résistantes sont multipliées par combien entre le jour 3 et le jour 10 ?",
+     "reponse": 40,
+     "unite": "fois",
+     "tolerance": 1,
+     "aide": "Divise 400 par 10.",
+     "explication": "400 ÷ 10 = **40 fois** plus nombreuses."
+    },
+    {
+     "type": "zone",
+     "document": "antibiogramme",
+     "enonce": "Touche l’antibiotique que le médecin devrait choisir pour soigner la bactérie.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Il faut une bactérie « sensible » : cherche cette mention.",
+     "explication": "Seul l’antibiotique **B** agit : la bactérie y est **sensible**. L’antibiogramme sert à choisir la molécule efficace."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes qui conduisent à une bactérie résistante.",
+     "items": [
+      "Un traitement arrêté trop tôt laisse survivre les bactéries les plus résistantes",
+      "Les bactéries sensibles sont tuées",
+      "Les bactéries résistantes survivantes se multiplient",
+      "La population devient surtout résistante"
+     ],
+     "aide": "Pense au traitement qui tue d’abord les plus fragiles.",
+     "explication": "Les sensibles meurent d’abord, les **résistantes survivent** puis **se multiplient** : c’est une **sélection naturelle** appliquée aux microbes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles sont les deux règles à respecter avec un antibiotique ?",
+     "options": [
+      "Le bon antibiotique et le traitement complet",
+      "N’importe lequel, jusqu’à ce qu’on se sente mieux",
+      "Une demi-dose en continu",
+      "Le même pour tous les malades"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’encadré du cours sur les antibiotiques.",
+     "explication": "Deux règles : **le bon antibiotique** et **le traitement complet**. Arrêter dès qu’on va mieux favorise l’antibiorésistance."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5b6d7ab-1657-5ad8-b0e6-569bf41541df",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui commande la puberté ?",
+   "competence": "observer-schema",
+   "situation": "À l’adolescence, une chaîne de commandes se met en route dans le corps. Elle relie le cerveau aux testicules ou aux ovaires.",
+   "documents": [
+    {
+     "id": "commande",
+     "type": "chaine",
+     "titre": "La chaîne hormonale",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "cerveau",
+       "texte": "Cerveau",
+       "emoji": "🧠"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "gonades",
+       "texte": "Gonades"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cerveau",
+       "a": "x",
+       "texte": "commande"
+      },
+      {
+       "de": "x",
+       "a": "gonades",
+       "texte": "hormones dans le sang"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle glande remplace le « ? » ?",
+     "options": [
+      "L’hypophyse",
+      "Le foie",
+      "Le pancréas",
+      "L’estomac"
+     ],
+     "reponse": 0,
+     "aide": "Elle est située dans le cerveau.",
+     "explication": "C’est l’**hypophyse** : elle libère des hormones dans le sang."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque gonade aux hormones qu’elle produit.",
+     "paires": [
+      [
+       "Testicules",
+       "La testostérone"
+      ],
+      [
+       "Ovaires",
+       "Les œstrogènes et la progestérone"
+      ]
+     ],
+     "aide": "Les gonades masculines et féminines n’ont pas les mêmes hormones.",
+     "explication": "Les **testicules** produisent la **testostérone**, les **ovaires** les **œstrogènes** et la **progestérone**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie chaque changement : caractère sexuel primaire ou secondaire ?",
+     "categories": [
+      "Primaire",
+      "Secondaire"
+     ],
+     "items": [
+      [
+       "Les organes génitaux deviennent fonctionnels",
+       0
+      ],
+      [
+       "Les testicules ou les ovaires se développent",
+       0
+      ],
+      [
+       "La mue de la voix",
+       1
+      ],
+      [
+       "La pilosité",
+       1
+      ],
+      [
+       "Le développement des seins",
+       1
+      ],
+      [
+       "La poussée de croissance",
+       1
+      ]
+     ],
+     "aide": "Les caractères primaires concernent directement la reproduction.",
+     "explication": "Les **primaires** concernent les organes génitaux. Les **secondaires** (pilosité, seins, mue, croissance) apparaissent à la puberté sans être indispensables à la reproduction."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5b6d7ab-1657-5ad8-b0e6-569bf41541df",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cycle de l’appareil féminin",
+   "competence": "analyser-document",
+   "situation": "Chaque mois, l’appareil féminin se prépare à une éventuelle grossesse. Un schéma montre l’appareil, un graphique l’épaisseur de la muqueuse de l’utérus au fil d’un cycle de 28 jours.",
+   "documents": [
+    {
+     "id": "appareil",
+     "type": "schema",
+     "titre": "L’appareil génital féminin (vue de face)",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         80
+        ],
+        [
+         200,
+         80
+        ],
+        [
+         165,
+         170
+        ],
+        [
+         155,
+         170
+        ]
+       ],
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "uterus",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 78,
+       "l": 58,
+       "h": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "trg",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 78,
+       "l": 58,
+       "h": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "trd",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 48,
+       "cy": 88,
+       "rx": 16,
+       "ry": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "ovg",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 272,
+       "cy": 88,
+       "rx": 16,
+       "ry": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "ovd",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "muqueuse",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Épaisseur de la muqueuse utérine",
+     "categories": [
+      "J1",
+      "J7",
+      "J14",
+      "J21",
+      "J28"
+     ],
+     "series": [
+      {
+       "nom": "Épaisseur",
+       "valeurs": [
+        1,
+        2,
+        4,
+        7,
+        7
+       ],
+       "teinte": "rose"
+      }
+     ],
+     "axeY": {
+      "titre": "Épaisseur",
+      "unite": "en mm",
+      "min": 0,
+      "max": 8,
+      "pas": 2
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice. J1 est le premier jour des règles."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareil",
+     "enonce": "Touche les deux organes qui produisent les ovules.",
+     "reponse": [
+      "ovg",
+      "ovd"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux petits organes aux extrémités du schéma.",
+     "explication": "Les **ovaires** produisent les ovules, environ un tous les 28 jours."
+    },
+    {
+     "type": "zone",
+     "document": "appareil",
+     "enonce": "Touche les deux organes où peut avoir lieu la fécondation.",
+     "reponse": [
+      "trg",
+      "trd"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les conduits qui relient les ovaires à l’utérus.",
+     "explication": "La fécondation a lieu dans une **trompe**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’épaisseur de la muqueuse utérine au 21e jour du cycle (en mm) ?",
+     "reponse": 7,
+     "unite": "mm",
+     "tolerance": 0.3,
+     "aide": "Lis le point J21 de la courbe.",
+     "explication": "Au 21e jour, la muqueuse mesure **7 mm** : elle s’est épaissie pour accueillir un embryon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient cette muqueuse s’il n’y a pas de fécondation ?",
+     "options": [
+      "Elle est éliminée : ce sont les règles",
+      "Elle devient un embryon",
+      "Elle reste identique toute la vie",
+      "Elle se transforme en ovule"
+     ],
+     "reponse": 0,
+     "aide": "Le cycle recommence au jour 1.",
+     "explication": "Sans fécondation, la muqueuse est **éliminée** : ce sont les **règles**, premier jour du cycle."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5b6d7ab-1657-5ad8-b0e6-569bf41541df",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Je n’ai pas encore mes règles »",
+   "competence": "argumenter",
+   "situation": "Inès, 14 ans, écrit à l’infirmière du collège pour poser une question. Un tableau résume la différence entre les deux appareils. Le message est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message d’Inès",
+     "blocs": [
+      "Bonjour, je n’ai pas encore eu mes premières règles. Donc, je ne peux pas tomber enceinte, c’est bien ça ?"
+     ],
+     "source": "Message écrit pour l’exercice."
+    },
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les deux appareils",
+     "colonnes": [
+      "Le point",
+      "Appareil masculin",
+      "Appareil féminin"
+     ],
+     "lignes": [
+      [
+       "Production des gamètes",
+       "Continue, dès la puberté et toute la vie",
+       "Cyclique : un ovule environ tous les 28 jours"
+      ],
+      [
+       "Stock initial",
+       "Aucun : fabriqués en permanence",
+       "Constitué dès la naissance"
+      ],
+      [
+       "Arrêt",
+       "Aucun net",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche la case qui indique que les spermatozoïdes sont produits en continu.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne « Production des gamètes », colonne masculine.",
+     "explication": "Les testicules fabriquent des spermatozoïdes de façon **continue**, dès la puberté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répond-on à Inès ?",
+     "options": [
+      "Faux : l’ovulation précède les premières règles, une grossesse est donc possible",
+      "Vrai : sans règles, aucun risque",
+      "Vrai : les cycles irréguliers du début protègent",
+      "Faux : mais seulement après 18 ans"
+     ],
+     "reponse": 0,
+     "aide": "La première ovulation a lieu avant les premières règles.",
+     "explication": "La **première ovulation précède** les premières règles : une grossesse est **possible**, et des cycles irréguliers ne protègent en rien."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment appelle-t-on l’arrêt du fonctionnement cyclique des ovaires (le « ? » du tableau) ?",
+     "reponse": [
+      "ménopause",
+      "la ménopause"
+     ],
+     "placeholder": "Un mot",
+     "aide": "Le mot commence par « méno… ».",
+     "explication": "C’est la **ménopause**. Chez l’homme, la production de spermatozoïdes ne s’arrête pas nettement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition d’une hormone.",
+     "texte": "Une hormone est un message ___ produit par une ___ et transporté par le ___.",
+     "reponses": [
+      [
+       "chimique"
+      ],
+      [
+       "glande"
+      ],
+      [
+       "sang"
+      ]
+     ],
+     "banque": [
+      "chimique",
+      "glande",
+      "sang",
+      "nerf",
+      "électrique",
+      "muscle"
+     ],
+     "aide": "Elle voyage dans le sang jusqu’aux cellules cibles.",
+     "explication": "Une hormone est un message **chimique**, produit par une **glande** et transporté par le **sang**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c97c8d1-2d05-5212-8ebc-7ee745bbe9d7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le calendrier d’une grossesse",
+   "competence": "lire-tableau",
+   "situation": "Une sage-femme remet à Clara un calendrier simplifié des premières étapes de la grossesse.",
+   "documents": [
+    {
+     "id": "cal",
+     "type": "tableau",
+     "titre": "Les étapes",
+     "colonnes": [
+      "L’étape",
+      "Le moment"
+     ],
+     "lignes": [
+      [
+       "Fécondation dans une trompe",
+       "Jour 0"
+      ],
+      [
+       "Division de la cellule œuf",
+       "Jours 1 à 6"
+      ],
+      [
+       "Nidation dans la muqueuse utérine",
+       "6e ou 7e jour"
+      ],
+      [
+       "Fin de l’organogenèse",
+       "8e semaine"
+      ],
+      [
+       "Naissance",
+       "Environ 9 mois"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cal",
+     "enonce": "Touche la case qui donne le moment de la nidation.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « nidation ».",
+     "explication": "La nidation a lieu le **6e ou 7e jour**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "L’___ s’implante dans la muqueuse de l’___ : c’est la ___.",
+     "reponses": [
+      [
+       "embryon",
+       "œuf"
+      ],
+      [
+       "utérus"
+      ],
+      [
+       "nidation"
+      ]
+     ],
+     "banque": [
+      "embryon",
+      "utérus",
+      "nidation",
+      "trompe",
+      "fécondation"
+     ],
+     "aide": "Cette étape précède la mise en place des organes.",
+     "explication": "L’**embryon** s’implante dans la muqueuse de l’**utérus** : c’est la **nidation**. Sans elle, il n’y a pas de grossesse."
+    },
+    {
+     "type": "choix",
+     "enonce": "À partir de quand parle-t-on de fœtus ?",
+     "options": [
+      "À partir de la 9e semaine",
+      "Dès la fécondation",
+      "Dès le 6e jour",
+      "Seulement à la naissance"
+     ],
+     "reponse": 0,
+     "aide": "L’organogenèse s’arrête à la 8e semaine.",
+     "explication": "Après les **huit premières semaines**, on parle de **fœtus** : les organes sont en place, il grandit et mûrit."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c97c8d1-2d05-5212-8ebc-7ee745bbe9d7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les échanges mère-fœtus",
+   "competence": "observer-schema",
+   "situation": "Pendant la grossesse, le fœtus ne respire pas et ne mange pas comme nous. Tout passe par un organe d’échanges. Le schéma est simplifié.",
+   "documents": [
+    {
+     "id": "placenta",
+     "type": "schema",
+     "titre": "Le fœtus dans l’utérus",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 120,
+       "rx": 140,
+       "ry": 100,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 120,
+       "cy": 120,
+       "rx": 82,
+       "ry": 72,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "liquide",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 112,
+       "cy": 125,
+       "rx": 38,
+       "ry": 28,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 252,
+       "cy": 120,
+       "rx": 28,
+       "ry": 55,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "placenta",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 116,
+       "l": 82,
+       "h": 8,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "cordon",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "placenta",
+     "enonce": "Touche l’organe où se font les échanges entre la mère et le fœtus.",
+     "reponse": [
+      "placenta"
+     ],
+     "aide": "C’est l’organe en forme de disque, à droite.",
+     "explication": "C’est le **placenta**, l’organe des échanges."
+    },
+    {
+     "type": "zone",
+     "document": "placenta",
+     "enonce": "Touche ce qui relie le fœtus au placenta.",
+     "reponse": [
+      "cordon"
+     ],
+     "aide": "C’est un conduit mince entre les deux.",
+     "explication": "C’est le **cordon ombilical**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ce qui passe du placenta vers le fœtus et ce qui fait le chemin inverse.",
+     "categories": [
+      "De la mère au fœtus",
+      "Du fœtus à la mère"
+     ],
+     "items": [
+      [
+       "Dioxygène",
+       0
+      ],
+      [
+       "Nutriments",
+       0
+      ],
+      [
+       "Dioxyde de carbone",
+       1
+      ],
+      [
+       "Déchets",
+       1
+      ]
+     ],
+     "aide": "Le fœtus reçoit ce dont il a besoin et rejette ses déchets.",
+     "explication": "La mère apporte **dioxygène** et **nutriments** ; le fœtus rend **dioxyde de carbone** et **déchets**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les sangs de la mère et du fœtus se mélangent-ils ?",
+     "options": [
+      "Non : ils circulent de part et d’autre d’une barrière très fine",
+      "Oui : le sang est le même",
+      "Oui, mais seulement la nuit",
+      "Non : le fœtus n’a pas de sang"
+     ],
+     "reponse": 0,
+     "aide": "Les échanges se font à travers une barrière.",
+     "explication": "Les sangs **ne se mélangent pas** : ils circulent de part et d’autre d’une **barrière très fine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c97c8d1-2d05-5212-8ebc-7ee745bbe9d7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un petit verre de trop",
+   "competence": "argumenter",
+   "situation": "Anaïs, enceinte de six semaines, reçoit des conseils d’un voisin. Un tableau résume les règles qui protègent une grossesse. Le message est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "message",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message d’Anaïs",
+     "blocs": [
+      "Mon voisin m’assure qu’un [[f|petit verre]] de vin de temps en temps ne fera rien, parce que le placenta protège le bébé de tout. J’ai aussi un vieux médicament contre la toux dans mon armoire."
+     ],
+     "source": "Message écrit pour l’exercice."
+    },
+    {
+     "id": "regles",
+     "type": "tableau",
+     "titre": "Ce qui protège la grossesse",
+     "colonnes": [
+      "La règle",
+      "Sa raison"
+     ],
+     "lignes": [
+      [
+       "Aucun alcool",
+       "?"
+      ],
+      [
+       "Ni tabac, ni drogue",
+       "?"
+      ],
+      [
+       "Aucun médicament sans avis médical",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "message",
+     "enonce": "Touche les mots qui expriment une idée dangereuse dans le message.",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "aide": "Le voisin minimise un produit pendant la grossesse.",
+     "explication": "Il n’existe **aucune dose d’alcool sans risque** pendant la grossesse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’affirmation « le placenta protège de tout » est-elle fausse ?",
+     "options": [
+      "L’alcool, le tabac, les drogues et certains virus le traversent",
+      "Le placenta n’existe pas",
+      "Le placenta bloque aussi le dioxygène",
+      "Le placenta fait passer le sang de la mère"
+     ],
+     "reponse": 0,
+     "aide": "Le placenta est un organe d’échanges, pas un mur.",
+     "explication": "Le placenta n’est **pas un filtre absolu** : alcool, tabac, drogues, certains médicaments et certains virus le traversent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque règle à sa raison.",
+     "paires": [
+      [
+       "Aucun alcool",
+       "Aucune dose sans risque"
+      ],
+      [
+       "Ni tabac, ni drogue",
+       "Ils traversent le placenta"
+      ],
+      [
+       "Aucun médicament sans avis médical",
+       "Certains sont tératogènes"
+      ]
+     ],
+     "aide": "Lis chaque règle puis cherche son motif.",
+     "explication": "**Aucune dose** d’alcool n’est sans risque, tabac et drogues **traversent le placenta**, certains médicaments sont **tératogènes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Anaïs est à six semaines. Combien de semaines reste-t-il avant la fin de la période embryonnaire, la plus sensible ?",
+     "reponse": 2,
+     "unite": "semaines",
+     "aide": "La période embryonnaire dure jusqu’à la 8e semaine.",
+     "explication": "8 − 6 = **2 semaines**. La période embryonnaire est la **plus sensible** aux agressions extérieures."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit faire Anaïs avec son vieux médicament contre la toux ?",
+     "options": [
+      "Demander l’avis d’un médecin avant de le prendre",
+      "Le prendre à demi-dose",
+      "Le prendre le matin seulement",
+      "Le prendre sans souci : il est déjà dans l’armoire"
+     ],
+     "reponse": 0,
+     "aide": "Relis la règle sur les médicaments.",
+     "explication": "Certains médicaments sont **tératogènes** : aucun ne se prend sans **avis médical** pendant la grossesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "87819865-cef0-5fe3-a802-80754a06225f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel moyen, pour quel usage ?",
+   "competence": "lire-tableau",
+   "situation": "Un centre de santé sexuelle remet à des élèves un tableau comparant quatre moyens de contraception.",
+   "documents": [
+    {
+     "id": "moyens",
+     "type": "tableau",
+     "titre": "Quatre moyens de contraception",
+     "colonnes": [
+      "Le moyen",
+      "Protège des IST",
+      "Réversible"
+     ],
+     "lignes": [
+      [
+       "Pilule",
+       "Non",
+       "Oui"
+      ],
+      [
+       "Préservatif",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Stérilet",
+       "Non",
+       "Oui"
+      ],
+      [
+       "Vasectomie",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moyens",
+     "enonce": "Touche la case qui indique le seul moyen protégeant des IST.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche un « Oui » dans la colonne « Protège des IST ».",
+     "explication": "Seul le **préservatif** protège à la fois d’une grossesse et des infections sexuellement transmissibles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de moyens du tableau sont définitifs (non réversibles) ?",
+     "reponse": 1,
+     "unite": "moyen",
+     "aide": "Cherche « Non » dans la colonne « Réversible ».",
+     "explication": "Seule la **vasectomie** est définitive."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moyen à son principe.",
+     "paires": [
+      [
+       "Pilule",
+       "Elle bloque l’ovulation"
+      ],
+      [
+       "Préservatif",
+       "Une barrière"
+      ],
+      [
+       "Vasectomie",
+       "Une méthode définitive"
+      ]
+     ],
+     "aide": "La pilule agit sur les hormones.",
+     "explication": "La **pilule** bloque l’**ovulation**, le **préservatif** est une **barrière**, la **vasectomie** est **définitive**."
+    }
+   ]
+  },
+  {
+   "chapitre": "87819865-cef0-5fe3-a802-80754a06225f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un rapport non protégé",
+   "competence": "analyser-document",
+   "situation": "Sarah, 16 ans, vient d’avoir un rapport non protégé. Elle écrit à son amie Inès. Un panneau du centre de santé sexuelle complète leurs échanges.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Conversation de Sarah et d’Inès",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "On n’a pas mis de préservatif hier soir. Je panique."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Il existe une contraception d’urgence, à prendre [[u|le plus tôt possible]]."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Il me faut une ordonnance ? Et ça se paie ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Pour une mineure, c’est gratuit et sans ordonnance. Mais ça ne remplace pas une contraception régulière."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Centre de santé sexuelle",
+     "sousTitre": "Gratuit et confidentiel pour les mineurs",
+     "emoji": "🏥",
+     "lignes": [
+      {
+       "texte": "Contraception",
+       "id": "contra"
+      },
+      {
+       "texte": "Dépistage des IST",
+       "id": "depistage"
+      },
+      {
+       "texte": "Contraception d’urgence",
+       "id": "urgence"
+      },
+      {
+       "texte": "Écoute et information",
+       "id": "ecoute"
+      }
+     ],
+     "teinte": "turquoise",
+     "source": "Panneau imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche l’expression qui donne la condition d’efficacité de la contraception d’urgence.",
+     "reponse": [
+      "u"
+     ],
+     "multiple": true,
+     "aide": "Elle dit quand la prendre, dans la réponse d’Inès.",
+     "explication": "La contraception d’urgence se prend **le plus tôt possible** après le rapport non protégé."
+    },
+    {
+     "type": "choix",
+     "enonce": "La contraception d’urgence peut-elle remplacer une contraception régulière ?",
+     "options": [
+      "Non, jamais",
+      "Oui, si on la prend chaque mois",
+      "Oui, si on est une mineure",
+      "Oui, avec un préservatif"
+     ],
+     "reponse": 0,
+     "aide": "Inès le dit à la fin de sa réponse.",
+     "explication": "Elle ne remplace **jamais** une contraception régulière."
+    },
+    {
+     "type": "zone",
+     "document": "panneau",
+     "enonce": "Touche le service qui permet de traiter tôt une infection sexuellement transmissible.",
+     "reponse": [
+      "depistage"
+     ],
+     "aide": "Le mot commence par « dé… ».",
+     "explication": "Le **dépistage** permet de traiter tôt et d’éviter la transmission."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où Sarah peut-elle en parler sans que ses parents soient prévenus ?",
+     "options": [
+      "Au centre de santé sexuelle, où la consultation est gratuite et confidentielle pour les mineurs",
+      "Nulle part : c’est interdit aux mineurs",
+      "Seulement chez un notaire",
+      "Uniquement à l’école, après les cours"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le sous-titre du panneau.",
+     "explication": "En **centre de santé sexuelle**, la consultation est **gratuite et confidentielle** pour les mineurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "87819865-cef0-5fe3-a802-80754a06225f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand l’enfant ne vient pas",
+   "competence": "argumenter",
+   "situation": "Léa et Karim essaient depuis deux ans d’avoir un enfant. Le médecin leur propose des techniques d’assistance médicale à la procréation. Le tableau présente ces techniques.",
+   "documents": [
+    {
+     "id": "amp",
+     "type": "tableau",
+     "titre": "Les techniques de l’AMP",
+     "colonnes": [
+      "La technique",
+      "Son principe"
+     ],
+     "lignes": [
+      [
+       "Insémination artificielle",
+       "Le sperme est déposé dans l’utérus"
+      ],
+      [
+       "FIV",
+       "La rencontre des gamètes se fait au laboratoire, puis un embryon est transféré"
+      ],
+      [
+       "ICSI",
+       "Un spermatozoïde unique est injecté dans l’ovule"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    },
+    {
+     "id": "situation",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La situation du couple",
+     "blocs": [
+      "Léa et Karim font partie des couples qui consultent pour des difficultés à concevoir. Les examens montrent que les spermatozoïdes de Karim sont peu mobiles."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Environ un couple sur six consulte pour des difficultés à concevoir. Sur 60 couples, combien consultent environ ?",
+     "reponse": 10,
+     "unite": "couples",
+     "aide": "Divise 60 par 6.",
+     "explication": "60 ÷ 6 = **10 couples** environ."
+    },
+    {
+     "type": "zone",
+     "document": "amp",
+     "enonce": "Touche la technique qui consiste à injecter un spermatozoïde unique dans l’ovule.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Le nom de cette technique est un sigle de quatre lettres.",
+     "explication": "C’est l’**ICSI**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il, dans une FIV, entre l’ovule et le spermatozoïde ?",
+     "options": [
+      "Ils se rencontrent au laboratoire, puis un embryon est transféré dans l’utérus",
+      "Ils se rencontrent dans une trompe",
+      "Le sperme est simplement déposé dans l’utérus",
+      "L’ovule est remplacé par une cellule du corps"
+     ],
+     "reponse": 0,
+     "aide": "FIV signifie fécondation in vitro.",
+     "explication": "Dans une **FIV**, la rencontre des gamètes a lieu **au laboratoire** ; un embryon est ensuite **transféré**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui tranche les questions éthiques posées par ces techniques ?",
+     "options": [
+      "La loi de bioéthique, révisée par le débat démocratique",
+      "La science seule",
+      "Chaque médecin, au cas par cas",
+      "Les associations de patients"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas seulement une question de technique.",
+     "explication": "La **loi de bioéthique**, régulièrement révisée, tranche par le **débat démocratique** et non par la seule science."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Jusqu’à combien de semaines de grossesse l’IVG est-elle possible en France ?",
+     "reponse": 14,
+     "unite": "semaines",
+     "aide": "C’est un droit garanti par la loi Veil de 1975, modifiée depuis.",
+     "explication": "L’IVG est possible jusqu’à **14 semaines de grossesse** (16 semaines d’aménorrhée) ; c’est un droit pris en charge à 100 %."
+    }
+   ]
+  }
+ ]
+}

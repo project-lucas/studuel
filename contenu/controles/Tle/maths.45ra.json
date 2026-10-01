@@ -1,0 +1,456 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "difficulte": 1,
+      "titre": "Codes, podium et délégués",
+      "consigne": "Pour chaque question, dis si l’ordre compte et si la répétition est possible, puis donne la formule et le résultat.",
+      "enonce": "1. Un cadenas s’ouvre avec un code de **3 lettres** choisies parmi les 26 lettres de l’alphabet ; une même lettre peut revenir plusieurs fois. Combien de codes différents existe-t-il ?\n2. Dix coureurs disputent une course. Combien de podiums (1er, 2e, 3e) différents sont possibles ?\n3. Dans une classe, on doit choisir **3 délégués** (sans rôle distinct) parmi 10 volontaires. Combien de groupes de délégués différents peut-on former ?\n4. De combien de façons peut-on ranger 5 livres différents sur une étagère ?",
+      "bareme": [
+        { "critere": "Question 1 : k-uplets identifiés (ordre, répétition) et 26³ = 17 576", "points": 6 },
+        { "critere": "Question 2 : arrangement identifié et 10 × 9 × 8 = 720", "points": 7 },
+        { "critere": "Questions 3 et 4 : combinaison C(10,3) = 120 et permutation 5! = 120, chacune justifiée", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L’ordre compte (ABC n’est pas CBA) et la répétition est possible : ce sont des **3-uplets** d’un ensemble à 26 éléments. Nombre de codes : 26³ = **17 576**.\n2. L’ordre compte (être 1er ou 3e n’est pas pareil) et un coureur ne peut pas occuper deux places : c’est un **arrangement** de 3 parmi 10. Nombre : 10!/(10 − 3)! = 10 × 9 × 8 = **720**.\n3. L’ordre ne compte pas (les délégués n’ont pas de rôle) et pas de répétition : c’est une **combinaison**. C(10,3) = 10!/(3! × 7!) = (10 × 9 × 8)/(3 × 2 × 1) = 720/6 = **120**.\n4. On ordonne les 5 livres, tous utilisés, sans répétition : c’est une **permutation**. 5! = 5 × 4 × 3 × 2 × 1 = **120**.\n\nRemarque : en 3, on retrouve 720 / 3! : on part des arrangements et on divise par le nombre de façons d’ordonner les 3 élus."
+    },
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "difficulte": 2,
+      "titre": "Le club de théâtre de Maëlys",
+      "consigne": "Justifie chaque dénombrement en précisant si l’ordre compte et si la répétition est possible.",
+      "enonce": "**Situation.** Le club de théâtre du lycée de Maëlys compte **12 membres** : 7 filles et 5 garçons.\n\n1. Le club doit élire un bureau composé d’un président, d’un trésorier et d’un secrétaire (trois personnes distinctes). Combien de bureaux différents sont possibles ?\n2. Pour un concours, le club envoie une équipe de **4 membres**, sans rôle particulier. Combien d’équipes différentes peut-on former ?\n3. Combien de ces équipes comptent **exactement 2 filles** ?\n4. Combien de ces équipes comptent **au moins une fille** ? (Pense à l’événement contraire.)",
+      "bareme": [
+        { "critere": "Bureau : arrangement de 3 parmi 12 reconnu, 12 × 11 × 10 = 1 320", "points": 4 },
+        { "critere": "Équipes de 4 : combinaison C(12,4) = 495 correctement calculée", "points": 5 },
+        { "critere": "Exactement 2 filles : C(7,2) × C(5,2) = 21 × 10 = 210, produit justifié", "points": 6 },
+        { "critere": "Au moins une fille : passage par le contraire, 495 − C(5,4) = 495 − 5 = 490", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les rôles sont distincts : l’**ordre compte**, et une personne n’a qu’un rôle : **pas de répétition**. C’est un arrangement : 12 × 11 × 10 = **1 320** bureaux.\n2. Pas d’ordre, pas de répétition : combinaison. C(12,4) = (12 × 11 × 10 × 9)/(4 × 3 × 2 × 1) = 11 880/24 = **495** équipes.\n3. On choisit les 2 filles parmi 7 : C(7,2) = (7 × 6)/2 = 21 ; puis les 2 garçons parmi 5 : C(5,2) = (5 × 4)/2 = 10. À chaque choix de filles on associe chaque choix de garçons : 21 × 10 = **210** équipes.\n4. L’événement contraire de « au moins une fille » est « aucune fille », c’est-à-dire 4 garçons choisis parmi 5 : C(5,4) = 5. Donc 495 − 5 = **490** équipes comptent au moins une fille."
+    },
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "difficulte": 3,
+      "titre": "La pizzeria aux huit ingrédients",
+      "consigne": "Réponds en justifiant chaque résultat par une propriété ou une formule du cours.",
+      "enonce": "**Situation.** Chez Luigi, on compose sa pizza en choisissant librement, parmi **8 ingrédients** différents, ceux que l’on veut (on peut n’en prendre aucun : c’est la pizza « nature »). Une pizza est donc une **partie** de l’ensemble des 8 ingrédients.\n\n1. Combien de pizzas différentes peut-on composer en tout ? Justifie à l’aide de la somme des C(8,k).\n2. Combien de pizzas comptent exactement 3 ingrédients ? Sans nouveau calcul, déduis-en le nombre de pizzas à 5 ingrédients et explique pourquoi.\n3. Les champignons font partie des 8 ingrédients. Vérifie la relation de Pascal C(8,3) = C(7,2) + C(7,3) et interprète chacun des deux termes à l’aide des champignons.\n4. Combien de pizzas comptent **au moins 3** ingrédients ?\n5. Inès commande pour trois amis, Paul, Sacha et Rayan, trois pizzas **différentes** de 3 ingrédients chacune, une par ami. Combien de commandes sont possibles ?",
+      "bareme": [
+        { "critere": "Total des pizzas : 2⁸ = 256 justifié par la somme des C(8,k) (nombre de parties)", "points": 4 },
+        { "critere": "C(8,3) = 56 et C(8,5) = 56 par symétrie, avec l’interprétation « choisir 3, c’est écarter 5 »", "points": 4 },
+        { "critere": "Pascal : 21 + 35 = 56 et interprétation (champignons présents ou absents)", "points": 4 },
+        { "critere": "Au moins 3 ingrédients : 256 − (1 + 8 + 28) = 219", "points": 4 },
+        { "critere": "Commande : arrangement de 3 pizzas parmi 56, 56 × 55 × 54 = 166 320", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Une pizza à k ingrédients est une partie à k éléments : il y en a C(8,k). Le total est la somme des C(8,k) pour k de 0 à 8, qui vaut **2⁸ = 256** (nombre total de parties d’un ensemble à 8 éléments).\n2. C(8,3) = (8 × 7 × 6)/(3 × 2 × 1) = 336/6 = **56**. Par **symétrie**, C(8,5) = C(8,3) = **56** : choisir les 5 ingrédients qu’on met, c’est choisir les 3 qu’on écarte.\n3. C(7,2) = 21 et C(7,3) = 35, et 21 + 35 = 56 = C(8,3). Une pizza à 3 ingrédients : soit elle **contient** les champignons, et il reste 2 ingrédients à choisir parmi les 7 autres (C(7,2) = 21 pizzas) ; soit elle **ne les contient pas**, et on choisit les 3 ingrédients parmi les 7 autres (C(7,3) = 35 pizzas).\n4. Pizzas à moins de 3 ingrédients : C(8,0) + C(8,1) + C(8,2) = 1 + 8 + 28 = 37. Donc au moins 3 : 256 − 37 = **219**.\n5. Il y a 56 pizzas possibles à 3 ingrédients. Les pizzas sont différentes (pas de répétition) et l’ordre compte (la pizza de Paul n’est pas celle de Sacha) : arrangement de 3 parmi 56. 56 × 55 × 54 = 3 080 × 54 = **166 320** commandes."
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "difficulte": 1,
+      "titre": "Trois points dans l’espace",
+      "consigne": "L’espace est muni d’un repère orthonormé. Détaille tes calculs.",
+      "enonce": "On considère les points A(1 ; 2 ; −1), B(3 ; −2 ; 1) et D(5 ; −6 ; 3), et le vecteur u(−1 ; 2 ; −1).\n\n1. Calcule les coordonnées du vecteur AB, puis celles du milieu I du segment [AB].\n2. Calcule la distance AB. Pourquoi a-t-on le droit d’utiliser la formule ?\n3. Les vecteurs AB et u sont-ils colinéaires ? Justifie.\n4. Le point D appartient-il à la droite (AB) ? Justifie.",
+      "bareme": [
+        { "critere": "AB(2 ; −4 ; 2) et I(2 ; 0 ; 0) justes", "points": 6 },
+        { "critere": "AB = √24 = 2√6, avec mention du repère orthonormé", "points": 6 },
+        { "critere": "AB = −2u (colinéaires) et AD = 2 AB, donc D sur (AB)", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. AB(3 − 1 ; −2 − 2 ; 1 − (−1)) = **(2 ; −4 ; 2)**. Le milieu I a pour coordonnées la moyenne de celles de A et B : ((1 + 3)/2 ; (2 − 2)/2 ; (−1 + 1)/2) = **(2 ; 0 ; 0)**.\n2. AB = √(2² + (−4)² + 2²) = √(4 + 16 + 4) = **√24 = 2√6** ≈ 4,90. La formule n’est valable que dans un **repère orthonormé**, ce qui est le cas ici.\n3. −2u = (2 ; −4 ; 2) = AB : **AB = −2u**, donc les vecteurs sont **colinéaires**.\n4. AD(5 − 1 ; −6 − 2 ; 3 + 1) = (4 ; −8 ; 4) = 2 AB. AD est colinéaire à AB, vecteur directeur de (AB) : **D appartient à la droite (AB)**."
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "difficulte": 2,
+      "titre": "Un plan défini par un point et deux vecteurs",
+      "consigne": "Justifie chaque réponse par un calcul sur les coordonnées.",
+      "enonce": "Dans un repère de l’espace, on considère le point A(1 ; 0 ; 2) et les vecteurs u(1 ; 2 ; 0) et v(0 ; 1 ; −1). On note P le plan passant par A de vecteurs directeurs u et v.\n\n1. Vérifie que u et v ne sont pas colinéaires : pourquoi est-ce nécessaire pour définir un plan ?\n2. Soit M(3 ; 7 ; −1). Montre qu’il existe deux réels a et b tels que AM = a u + b v. Que peut-on en conclure pour M ?\n3. Soit N(2 ; 3 ; 4). Le point N appartient-il au plan P ?\n4. Déduis-en que les vecteurs u, v et AN forment une base de l’espace.",
+      "bareme": [
+        { "critere": "Non-colinéarité de u et v justifiée (coordonnée nulle / pas de réel k) et rôle expliqué", "points": 4 },
+        { "critere": "AM(2 ; 7 ; −3) = 2u + 3v trouvé en résolvant le système, M dans P", "points": 6 },
+        { "critere": "AN(1 ; 3 ; 2) : système incompatible, N n’est pas dans P", "points": 6 },
+        { "critere": "Conclusion : u, v, AN non coplanaires, donc base de l’espace", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. S’il existait k tel que v = k u, la 1re coordonnée donnerait 0 = k, puis la 2e 1 = 2k = 0 : impossible. u et v **ne sont pas colinéaires**. C’est nécessaire : deux vecteurs colinéaires ne donnent qu’une direction, donc une droite, pas un plan.\n2. AM(3 − 1 ; 7 − 0 ; −1 − 2) = (2 ; 7 ; −3). On cherche a et b tels que :\n- x : a × 1 + b × 0 = 2, donc a = 2 ;\n- y : 2a + b = 7, donc b = 3 ;\n- z : 0 × a − b = −3, donc b = 3 : **cohérent**.\nAinsi **AM = 2u + 3v** : AM, u et v sont coplanaires, donc **M appartient à P**.\n3. AN(1 ; 3 ; 2). x : a = 1 ; y : 2 + b = 3, donc b = 1 ; z : −b = 2, donc b = −2 : **contradiction**. AN ne se décompose pas sur u et v : **N n’appartient pas à P**.\n4. AN n’est pas combinaison linéaire de u et v, donc u, v, AN **ne sont pas coplanaires** : trois vecteurs non coplanaires forment **une base de l’espace**."
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "difficulte": 3,
+      "titre": "Deux droites dans un cube",
+      "consigne": "Justifie chaque conclusion par un calcul ou par un théorème du cours, que tu nommeras.",
+      "enonce": "**Situation.** ABCDEFGH est un cube d’arête 1. On se place dans le repère orthonormé (A ; AB, AD, AE), où :\nA(0 ; 0 ; 0), B(1 ; 0 ; 0), C(1 ; 1 ; 0), D(0 ; 1 ; 0), E(0 ; 0 ; 1), F(1 ; 0 ; 1), G(1 ; 1 ; 1), H(0 ; 1 ; 1).\n\nOn note I le milieu de [EH] et J le milieu de [FG].\n\n1. Calcule les coordonnées de I, de J et du vecteur IJ.\n2. Montre que la droite (IJ) est parallèle à la droite (AB). Déduis-en, en citant le théorème utilisé, que (IJ) est parallèle au plan (ABC).\n3. Montre que les points E, I, J et C ne sont pas coplanaires (étudie les vecteurs EI, EJ et EC).\n4. Déduis-en la position relative des droites (IJ) et (EC). Pourquoi cette situation n’a-t-elle pas d’équivalent dans le plan ?\n5. Calcule la distance IC.",
+      "bareme": [
+        { "critere": "I(0 ; 0,5 ; 1), J(1 ; 0,5 ; 1), IJ(1 ; 0 ; 0) justes", "points": 3 },
+        { "critere": "IJ = AB donc (IJ) ∥ (AB), puis théorème droite-plan cité pour (IJ) ∥ (ABC)", "points": 5 },
+        { "critere": "Non-coplanarité : EC = a EI + b EJ impossible (3e coordonnée 0 = −1)", "points": 5 },
+        { "critere": "(IJ) et (EC) non coplanaires : ni sécantes ni parallèles, différence avec le plan expliquée", "points": 4 },
+        { "critere": "IC = √(1 + 0,25 + 1) = √2,25 = 1,5", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. I milieu de [EH] : ((0 + 0)/2 ; (0 + 1)/2 ; (1 + 1)/2) = **(0 ; 0,5 ; 1)**. J milieu de [FG] : ((1 + 1)/2 ; (0 + 1)/2 ; 1) = **(1 ; 0,5 ; 1)**. IJ = **(1 ; 0 ; 0)**.\n2. AB(1 ; 0 ; 0) : **IJ = AB**, les vecteurs sont colinéaires, donc (IJ) ∥ (AB). La droite (AB) est contenue dans le plan (ABC). D’après le théorème **« si une droite est parallèle à une droite d’un plan, elle est parallèle à ce plan »**, (IJ) est parallèle au plan (ABC).\n3. EI(0 ; 0,5 ; 0), EJ(1 ; 0,5 ; 0), EC(1 ; 1 ; −1). EI et EJ ne sont pas colinéaires (1re coordonnée 0 contre 1). Si EC = a EI + b EJ, la 3e coordonnée donnerait −1 = a × 0 + b × 0 = 0 : **impossible**. EC ne se décompose pas sur EI et EJ : E, I, J, C **ne sont pas coplanaires**.\n4. Si (IJ) et (EC) étaient sécantes ou parallèles, elles seraient contenues dans un même plan, qui contiendrait E, I, J et C. C’est exclu : les droites (IJ) et (EC) sont **non coplanaires**, donc **ni sécantes, ni parallèles**. Dans le plan, deux droites sont toujours sécantes ou parallèles ; dans l’espace, un troisième cas apparaît.\n5. IC(1 − 0 ; 1 − 0,5 ; 0 − 1) = (1 ; 0,5 ; −1). Le repère est orthonormé : IC = √(1 + 0,25 + 1) = √2,25 = **1,5**."
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "difficulte": 1,
+      "titre": "Parallèles ou confondues ?",
+      "consigne": "Justifie chaque réponse par un calcul.",
+      "enonce": "Dans un repère de l’espace, on considère :\n- la droite d₁ passant par A(1 ; 0 ; 2) et de vecteur directeur u(2 ; −1 ; 1) ;\n- la droite d₂ passant par B(3 ; 1 ; 0) et de vecteur directeur v(−4 ; 2 ; −2) ;\n- la droite d₃ passant par C(5 ; −2 ; 4) et de vecteur directeur v.\n\n1. Montre que d₁ et d₂ sont parallèles.\n2. Sont-elles confondues ou strictement parallèles ?\n3. Quelle est la position relative de d₁ et d₃ ?",
+      "bareme": [
+        { "critere": "v = −2u : directeurs colinéaires, d₁ ∥ d₂", "points": 6 },
+        { "critere": "AB(2 ; 1 ; −2) non colinéaire à u : B hors de d₁, d₁ et d₂ strictement parallèles", "points": 7 },
+        { "critere": "AC(4 ; −2 ; 2) = 2u : C sur d₁, d₃ confondue avec d₁", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. −2u = (−4 ; 2 ; −2) = v : **v = −2u**, les vecteurs directeurs sont colinéaires, donc **d₁ et d₂ sont parallèles**.\n2. On teste si B appartient à d₁ : AB(3 − 1 ; 1 − 0 ; 0 − 2) = (2 ; 1 ; −2). S’il existait k tel que AB = k u, on aurait 2 = 2k (k = 1) et 1 = −k (k = −1) : contradiction. B n’est pas sur d₁ : les droites sont **strictement parallèles** (aucun point commun).\n3. d₃ a pour directeur v, colinéaire à u : d₃ ∥ d₁. AC(5 − 1 ; −2 − 0 ; 4 − 2) = (4 ; −2 ; 2) = 2u, donc C appartient à d₁. Une droite parallèle à d₁ qui a un point commun avec elle lui est égale : **d₃ et d₁ sont confondues** (infinité de points communs)."
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "difficulte": 2,
+      "titre": "Trois droites face à un plan",
+      "consigne": "Pour chaque droite, utilise d’abord le critère du vecteur normal, puis confirme par substitution.",
+      "enonce": "On considère le plan P d’équation 2x − y + z − 3 = 0 et les trois droites suivantes, de paramètre t réel :\n\n- d : x = 1 + t ; y = 2 + 3t ; z = −1 + t\n- d′ : x = 2t ; y = 1 − t ; z = 3 + t\n- d″ : x = 1 + t ; y = −1 + 2t ; z = 0\n\n1. Donne un vecteur normal n au plan P et un vecteur directeur de chacune des trois droites.\n2. Détermine la position relative de d et de P.\n3. Détermine la position relative de d′ et de P ; s’il y a un point d’intersection, donne ses coordonnées.\n4. Détermine la position relative de d″ et de P.",
+      "bareme": [
+        { "critere": "n(2 ; −1 ; 1) et directeurs (1 ; 3 ; 1), (2 ; −1 ; 1), (1 ; 2 ; 0) lus correctement", "points": 3 },
+        { "critere": "d : produit scalaire nul, substitution donnant −4 = 0, strictement parallèle", "points": 6 },
+        { "critere": "d′ : 6t − 1 = 0, t = 1/6, point (1/3 ; 5/6 ; 19/6)", "points": 6 },
+        { "critere": "d″ : produit scalaire nul et identité 0 = 0, droite incluse dans P", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **n(2 ; −1 ; 1)** (coefficients de x, y, z). Directeurs : d : u(1 ; 3 ; 1) ; d′ : u′(2 ; −1 ; 1) ; d″ : w(1 ; 2 ; 0).\n2. u · n = 2 − 3 + 1 = 0 : u est orthogonal à n, **d est parallèle à P**. Substitution : 2(1 + t) − (2 + 3t) + (−1 + t) − 3 = 2 + 2t − 2 − 3t − 1 + t − 3 = −4. L’équation devient −4 = 0 : **aucune solution**, d est **strictement parallèle** à P.\n3. u′ · n = 4 + 1 + 1 = 6 ≠ 0 : d′ est **sécante** à P. Substitution : 2(2t) − (1 − t) + (3 + t) − 3 = 4t − 1 + t + t = 6t − 1 = 0, donc **t = 1/6**. Point : x = 2/6 = **1/3**, y = 1 − 1/6 = **5/6**, z = 3 + 1/6 = **19/6**. Vérification : 2/3 − 5/6 + 19/6 − 3 = 4/6 − 5/6 + 19/6 − 18/6 = 0.\n4. w · n = 2 − 2 + 0 = 0 : d″ est parallèle à P. Substitution : 2(1 + t) − (−1 + 2t) + 0 − 3 = 2 + 2t + 1 − 2t − 3 = 0 : l’égalité 0 = 0 est vraie **pour tout t** : **d″ est incluse dans P**."
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "difficulte": 3,
+      "titre": "Droites qui ne se croisent pas",
+      "consigne": "Justifie chaque conclusion : colinéarité d’abord, système ensuite.",
+      "enonce": "On considère les droites (paramètres t, s et k réels) :\n\n- d₁ : x = 1 + t ; y = 2t ; z = −1 + t\n- d₂ : x = 2 + s ; y = 1 − s ; z = 3s\n- d₃ : x = 2 ; y = 2 + k ; z = −k\n\net les plans P₁ : x + y − z − 1 = 0, P₂ : 2x + 2y − 2z + 5 = 0 et P₃ : x − y + 2 = 0.\n\n1. Montre que d₁ et d₂ ne sont ni parallèles ni sécantes. Comment qualifie-t-on ces droites ?\n2. Montre que d₁ et d₃ sont sécantes et donne leur point d’intersection.\n3. Détermine la position relative de P₁ et P₂, puis celle de P₁ et P₃ (sans calculer l’intersection). Que peut être l’intersection de P₁ et P₃ ?\n4. Un élève affirme : « le système formé par d₁ et d₂ n’a pas de solution, donc elles sont parallèles ». Explique son erreur.",
+      "bareme": [
+        { "critere": "Directeurs (1 ; 2 ; 1) et (1 ; −1 ; 3) non colinéaires et système sans solution (−1/3 ≠ −1)", "points": 6 },
+        { "critere": "Conclusion : d₁ et d₂ non coplanaires", "points": 2 },
+        { "critere": "d₁ ∩ d₃ : t = 1, k = 0, 3e équation vérifiée, point (2 ; 2 ; 0)", "points": 5 },
+        { "critere": "P₁ et P₂ strictement parallèles ; P₁ et P₃ sécants selon une droite (jamais un point)", "points": 4 },
+        { "critere": "Erreur expliquée : absence de solution = parallélisme strict OU non-coplanarité", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Directeurs u₁(1 ; 2 ; 1) et u₂(1 ; −1 ; 3). Si u₂ = k u₁, alors k = 1 (1re coordonnée) et −1 = 2k = 2 : impossible. Les droites **ne sont pas parallèles**. Système : 1 + t = 2 + s ; 2t = 1 − s ; −1 + t = 3s. La 1re donne t = 1 + s ; dans la 2e : 2 + 2s = 1 − s, donc s = −1/3 et t = 2/3. 3e équation : −1 + 2/3 = −1/3, alors que 3s = −1 : **−1/3 ≠ −1**. Pas de point commun, donc **pas sécantes**. Ni parallèles ni sécantes : d₁ et d₂ sont **non coplanaires**.\n2. Directeur de d₃ : (0 ; 1 ; −1), non colinéaire à u₁ (1re coordonnée nulle). Système : 1 + t = 2, donc **t = 1** ; 2t = 2 + k, donc **k = 0** ; vérification : −1 + t = 0 et −k = 0 : **vérifié**. Les droites sont sécantes en **(2 ; 2 ; 0)**.\n3. Normaux n₁(1 ; 1 ; −1), n₂(2 ; 2 ; −2) = 2n₁ : colinéaires, P₁ et P₂ sont parallèles. En multipliant l’équation de P₁ par 2 : 2x + 2y − 2z − 2 = 0, qui diffère de P₂ (−2 ≠ 5) : **strictement parallèles**. n₃(1 ; −1 ; 0) : si n₃ = k n₁, 1re coordonnée k = 1, 2e −1 = 1 : impossible. P₁ et P₃ sont **sécants** : leur intersection est une **droite** (jamais un point).\n4. Dans l’espace, un système sans solution signale **soit** des droites strictement parallèles, **soit** des droites **non coplanaires**. Ici les directeurs ne sont pas colinéaires : ce ne peut pas être le parallélisme. Il fallait tester la colinéarité **avant** de conclure."
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "difficulte": 1,
+      "titre": "Orthogonal ou pas ?",
+      "consigne": "Le repère est orthonormé. Détaille chaque produit scalaire.",
+      "enonce": "On considère les vecteurs u(1 ; −2 ; 3), v(4 ; 5 ; 2) et, pour un réel k, w(2 ; 1 ; k).\n\n1. Calcule u · v. Que peut-on en déduire ?\n2. Calcule u · u et déduis-en la norme de u.\n3. Pour quelle valeur de k les vecteurs u et w sont-ils orthogonaux ?\n4. Donne un vecteur normal au plan d’équation 3x − y + 2z − 5 = 0.",
+      "bareme": [
+        { "critere": "u · v = 4 − 10 + 6 = 0, donc u et v orthogonaux", "points": 7 },
+        { "critere": "u · u = 14 et ‖u‖ = √14", "points": 5 },
+        { "critere": "u · w = 3k, orthogonaux pour k = 0 ; vecteur normal (3 ; −1 ; 2) lu", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. u · v = 1 × 4 + (−2) × 5 + 3 × 2 = 4 − 10 + 6 = **0**. Deux vecteurs non nuls de produit scalaire nul sont **orthogonaux**.\n2. u · u = 1² + (−2)² + 3² = 1 + 4 + 9 = **14**. Or u · u = ‖u‖², donc **‖u‖ = √14** ≈ 3,74.\n3. u · w = 1 × 2 + (−2) × 1 + 3k = 2 − 2 + 3k = 3k. Orthogonaux si et seulement si 3k = 0, soit **k = 0**.\n4. Les coefficients de x, y et z sont les coordonnées d’un vecteur normal : **n(3 ; −1 ; 2)**."
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "difficulte": 2,
+      "titre": "Une sphère et un plan",
+      "consigne": "Le repère est orthonormé. Justifie chaque étape.",
+      "enonce": "On considère le plan P d’équation x + 2y − 2z + 1 = 0 et le point A(2 ; 3 ; −1).\n\n1. Le point A appartient-il à P ?\n2. Calcule la distance du point A au plan P.\n3. Détermine les coordonnées du projeté orthogonal H de A sur P, en utilisant la droite passant par A de vecteur directeur n, vecteur normal à P. Vérifie que AH est égal à la distance trouvée.\n4. On considère la sphère S de centre A et de rayon 4, puis la sphère S′ de centre A et de rayon 3. Le plan P coupe-t-il chacune de ces sphères ?",
+      "bareme": [
+        { "critere": "A hors de P : 2 + 6 + 2 + 1 = 11 ≠ 0", "points": 3 },
+        { "critere": "Distance = |11| / √9 = 11/3", "points": 5 },
+        { "critere": "Projeté : t = −11/9, H(7/9 ; 5/9 ; 13/9) et AH = 11/3 vérifiée", "points": 7 },
+        { "critere": "Comparaison distance / rayon : P coupe S (11/3 < 4), pas S′ (11/3 > 3)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 2 + 2 × 3 − 2 × (−1) + 1 = 2 + 6 + 2 + 1 = 11 ≠ 0 : **A n’appartient pas à P**.\n2. d(A ; P) = |11| / √(1² + 2² + (−2)²) = 11/√9 = **11/3** ≈ 3,67.\n3. n(1 ; 2 ; −2). La droite passant par A de directeur n : x = 2 + t ; y = 3 + 2t ; z = −1 − 2t. Dans l’équation de P : (2 + t) + 2(3 + 2t) − 2(−1 − 2t) + 1 = 2 + t + 6 + 4t + 2 + 4t + 1 = 11 + 9t = 0, donc **t = −11/9**. H : x = 2 − 11/9 = **7/9** ; y = 3 − 22/9 = **5/9** ; z = −1 + 22/9 = **13/9**. Vérification : 7/9 + 10/9 − 26/9 + 9/9 = 0. AH = |t| × ‖n‖ = (11/9) × 3 = **11/3** : c’est bien la distance.\n4. On compare la distance du centre au plan au rayon. Pour S : 11/3 ≈ 3,67 < 4, donc **P coupe la sphère S**. Pour S′ : 11/3 > 3, donc **P ne rencontre pas S′**."
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "difficulte": 3,
+      "titre": "Le tétraèdre OABC",
+      "consigne": "Le repère (O ; i, j, k) est orthonormé. Justifie chaque étape ; tu peux donner des valeurs exactes.",
+      "enonce": "On considère les points O(0 ; 0 ; 0), A(1 ; 0 ; 0), B(0 ; 1 ; 0) et C(0 ; 0 ; 1).\n\n1. Montre que n(1 ; 1 ; 1) est normal au plan (ABC), puis donne une équation cartésienne de ce plan.\n2. Calcule la distance du point O au plan (ABC).\n3. Détermine les coordonnées du projeté orthogonal H de O sur le plan (ABC).\n4. Calcule AB · AC, puis la mesure de l’angle BAC. Que peut-on dire du triangle ABC ?\n5. À l’aide de l’identité ‖u + v‖² = ‖u‖² + 2 u · v + ‖v‖², calcule ‖AB + AC‖², puis vérifie avec les coordonnées.",
+      "bareme": [
+        { "critere": "n · AB = n · AC = 0 avec AB, AC non colinéaires ; équation x + y + z − 1 = 0", "points": 5 },
+        { "critere": "Distance de O au plan : 1/√3 = √3/3", "points": 3 },
+        { "critere": "Projeté H(1/3 ; 1/3 ; 1/3) obtenu par la droite de directeur n", "points": 4 },
+        { "critere": "AB · AC = 1, cos = 1/2, angle de 60°, triangle équilatéral (BC = √2)", "points": 5 },
+        { "critere": "‖AB + AC‖² = 2 + 2 + 2 = 6, confirmé par (−2 ; 1 ; 1)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. AB(−1 ; 1 ; 0), AC(−1 ; 0 ; 1), non colinéaires (2e coordonnée 1 contre 0). n · AB = −1 + 1 + 0 = 0 et n · AC = −1 + 0 + 1 = 0 : n est orthogonal à deux vecteurs directeurs non colinéaires, il est **normal** au plan. Équation : x + y + z + d = 0 ; A donne 1 + d = 0, d = −1 : **x + y + z − 1 = 0** (B et C la vérifient aussi).\n2. d(O ; (ABC)) = |0 + 0 + 0 − 1| / √(1 + 1 + 1) = **1/√3 = √3/3** ≈ 0,577.\n3. Droite passant par O de directeur n : x = y = z = t. Dans l’équation : 3t − 1 = 0, t = 1/3. **H(1/3 ; 1/3 ; 1/3)**. (OH = √(3 × 1/9) = 1/√3 : cohérent.)\n4. AB · AC = (−1)(−1) + 1 × 0 + 0 × 1 = **1**. ‖AB‖ = ‖AC‖ = √2. cos(BAC) = 1/(√2 × √2) = 1/2, donc **BAC = 60°**. De plus BC(0 ; −1 ; 1) a pour norme √2 : AB = AC = BC, le triangle ABC est **équilatéral**.\n5. ‖AB + AC‖² = ‖AB‖² + 2 AB · AC + ‖AC‖² = 2 + 2 × 1 + 2 = **6**. Vérification : AB + AC = (−2 ; 1 ; 1), de norme au carré 4 + 1 + 1 = 6."
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "difficulte": 1,
+      "titre": "Une droite et un plan passant par A",
+      "consigne": "Détaille tes calculs.",
+      "enonce": "On considère le point A(2 ; −1 ; 3), le vecteur u(1 ; 2 ; −1) et le vecteur n(3 ; −1 ; 2).\n\n1. Écris une représentation paramétrique de la droite d passant par A de vecteur directeur u. Donne le point de d obtenu pour t = 2.\n2. Les points B(0 ; −5 ; 5) et C(1 ; 1 ; 2) appartiennent-ils à d ?\n3. Détermine une équation cartésienne du plan P passant par A et de vecteur normal n. Le point D(4 ; 1 ; 1) appartient-il à P ?",
+      "bareme": [
+        { "critere": "Paramétrique x = 2 + t, y = −1 + 2t, z = 3 − t et point (4 ; 3 ; 1)", "points": 6 },
+        { "critere": "B sur d (t = −2 cohérent) ; C hors de d (valeurs de t contradictoires)", "points": 7 },
+        { "critere": "Équation 3x − y + 2z − 13 = 0 (d par le point A) et D dans P", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **d : x = 2 + t ; y = −1 + 2t ; z = 3 − t**, t réel. Pour t = 2 : (2 + 2 ; −1 + 4 ; 3 − 2) = **(4 ; 3 ; 1)**.\n2. B : 2 + t = 0 donne t = −2 ; alors y = −1 − 4 = −5 et z = 3 + 2 = 5 : **B appartient à d**. C : 2 + t = 1 donne t = −1 ; alors y = −1 − 2 = −3 ≠ 1 : **C n’appartient pas à d**.\n3. P : 3x − y + 2z + d = 0. A ∈ P : 3 × 2 − (−1) + 2 × 3 + d = 6 + 1 + 6 + d = 0, d’où d = −13. **P : 3x − y + 2z − 13 = 0**. D : 3 × 4 − 1 + 2 × 1 − 13 = 12 − 1 + 2 − 13 = 0 : **D appartient à P** (test immédiat avec l’équation cartésienne)."
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "difficulte": 2,
+      "titre": "Le plan des trois axes",
+      "consigne": "Justifie chaque étape.",
+      "enonce": "On considère les points A(1 ; 0 ; 0), B(0 ; 2 ; 0) et C(0 ; 0 ; 3).\n\n1. Détermine un vecteur n(a ; b ; c) normal au plan (ABC) en écrivant n · AB = 0 et n · AC = 0 (on pourra choisir a = 6).\n2. Déduis-en une équation cartésienne du plan (ABC) et vérifie que B et C lui appartiennent.\n3. La droite d passe par l’origine O et a pour vecteur directeur (1 ; 1 ; 1). Détermine le point d’intersection de d et du plan (ABC).\n4. La droite d′ a pour représentation paramétrique x = 1 + 2t ; y = −4t ; z = 1. Détermine la position relative de d′ et du plan (ABC).",
+      "bareme": [
+        { "critere": "Système −a + 2b = 0 et −a + 3c = 0 résolu : n(6 ; 3 ; 2)", "points": 5 },
+        { "critere": "Équation 6x + 3y + 2z − 6 = 0 et vérification pour B et C", "points": 5 },
+        { "critere": "Intersection avec d : 11t = 6, point (6/11 ; 6/11 ; 6/11)", "points": 5 },
+        { "critere": "d′ : substitution donnant 2 = 0, droite strictement parallèle au plan", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. AB(−1 ; 2 ; 0), AC(−1 ; 0 ; 3). n · AB = −a + 2b = 0 et n · AC = −a + 3c = 0. Avec a = 6 : b = 3 et c = 2. **n(6 ; 3 ; 2)**.\n2. 6x + 3y + 2z + d = 0 ; A donne 6 + d = 0, d = −6 : **6x + 3y + 2z − 6 = 0**. B : 0 + 6 + 0 − 6 = 0 ✓ ; C : 0 + 0 + 6 − 6 = 0 ✓.\n3. d : x = t ; y = t ; z = t. Substitution : 6t + 3t + 2t − 6 = 11t − 6 = 0, donc t = 6/11. Point d’intersection : **(6/11 ; 6/11 ; 6/11)**.\n4. Substitution : 6(1 + 2t) + 3(−4t) + 2 × 1 − 6 = 6 + 12t − 12t + 2 − 6 = 2. On obtient **2 = 0**, égalité impossible : aucune solution, **d′ est strictement parallèle** au plan (ABC). (Cohérent : le directeur (2 ; −4 ; 0) vérifie 12 − 12 + 0 = 0 avec n.)"
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "difficulte": 3,
+      "titre": "Là où trois plans se rencontrent",
+      "consigne": "Justifie chaque étape et vérifie tes résultats.",
+      "enonce": "On considère les plans P₁ : x + y + z − 2 = 0, P₂ : x − y + 2z − 1 = 0 et P₃ : 2x + y − z + 1 = 0.\n\n1. Montre que P₁ et P₂ sont sécants.\n2. En prenant z = t comme paramètre, résous le système formé par les équations de P₁ et P₂ et déduis-en une représentation paramétrique de leur droite d’intersection Δ.\n3. Ilyès propose pour Δ la représentation : x = −3/2 − 3s ; y = 3/2 + s ; z = 2 + 2s. A-t-il raison ? Justifie.\n4. Détermine l’intersection de Δ et de P₃. Que peut-on en conclure pour les trois plans ?",
+      "bareme": [
+        { "critere": "Normaux (1 ; 1 ; 1) et (1 ; −1 ; 2) non colinéaires : plans sécants", "points": 3 },
+        { "critere": "Paramétrique x = 3/2 − 3t/2, y = 1/2 + t/2, z = t obtenue par le système", "points": 6 },
+        { "critere": "Directeurs colinéaires et point (−3/2 ; 3/2 ; 2) sur Δ : même droite", "points": 5 },
+        { "critere": "Substitution dans P₃ : t = 9/7, point (−3/7 ; 8/7 ; 9/7) vérifié", "points": 4 },
+        { "critere": "Conclusion : les trois plans ont un unique point commun", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. n₁(1 ; 1 ; 1), n₂(1 ; −1 ; 2). Si n₂ = k n₁ : k = 1 puis −1 = 1, impossible. Les normaux ne sont pas colinéaires : **P₁ et P₂ sont sécants** selon une droite.\n2. Avec z = t : x + y = 2 − t et x − y = 1 − 2t. En additionnant : 2x = 3 − 3t, x = 3/2 − (3/2)t. Puis y = 2 − t − x = 1/2 + (1/2)t. **Δ : x = 3/2 − (3/2)t ; y = 1/2 + (1/2)t ; z = t**. Directeur (−3/2 ; 1/2 ; 1), ou (−3 ; 1 ; 2) en multipliant par 2. Vérification avec t = 0 : (3/2 ; 1/2 ; 0) : P₁ : 2 − 2 = 0 ; P₂ : 3/2 − 1/2 − 1 = 0.\n3. Directeur proposé (−3 ; 1 ; 2) : **colinéaire** à celui de Δ. Point (−3/2 ; 3/2 ; 2) (s = 0) : P₁ : −3/2 + 3/2 + 2 − 2 = 0 ; P₂ : −3/2 − 3/2 + 4 − 1 = 0 ; il est sur Δ (t = 2 donne x = 3/2 − 3 = −3/2, y = 1/2 + 1 = 3/2). **Ilyès a raison** : une paramétrique n’est pas unique.\n4. Substitution dans P₃ : 2(3/2 − 3t/2) + (1/2 + t/2) − t + 1 = 3 − 3t + 1/2 + t/2 − t + 1 = 9/2 − (7/2)t = 0, donc **t = 9/7**. Point : x = 3/2 − 27/14 = −6/14 = **−3/7** ; y = 1/2 + 9/14 = **8/7** ; z = **9/7**. Vérifications : P₁ : −3/7 + 8/7 + 9/7 = 2 ✓ ; P₂ : −3/7 − 8/7 + 18/7 = 1 ✓ ; P₃ : −6/7 + 8/7 − 9/7 + 1 = 0 ✓. Les trois plans ont **un unique point commun**, (−3/7 ; 8/7 ; 9/7)."
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "difficulte": 1,
+      "titre": "Une formule explicite à prouver",
+      "consigne": "Rédige la récurrence complète : propriété, initialisation, hérédité, conclusion.",
+      "enonce": "On considère la suite (u) définie par u(0) = 2 et, pour tout entier naturel n, u(n+1) = 2u(n) − 1.\n\n1. Calcule u(1), u(2) et u(3).\n2. Démontre par récurrence que, pour tout entier naturel n, u(n) = 2ⁿ + 1.\n3. Déduis-en u(10).",
+      "bareme": [
+        { "critere": "u(1) = 3, u(2) = 5, u(3) = 9 et u(10) = 1 025", "points": 6 },
+        { "critere": "Propriété P(n) définie et initialisation vérifiée (les deux membres valent 2)", "points": 5 },
+        { "critere": "Hérédité : 2(2ⁿ + 1) − 1 = 2ⁿ⁺¹ + 1, en utilisant P(n), puis conclusion", "points": 9 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. u(1) = 2 × 2 − 1 = **3** ; u(2) = 2 × 3 − 1 = **5** ; u(3) = 2 × 5 − 1 = **9**.\n2. Soit P(n) : « u(n) = 2ⁿ + 1 ».\n- **Initialisation** : u(0) = 2 et 2⁰ + 1 = 1 + 1 = 2. P(0) est vraie.\n- **Hérédité** : soit n un entier naturel tel que P(n) est vraie, c’est-à-dire u(n) = 2ⁿ + 1. Alors u(n+1) = 2u(n) − 1 = 2(2ⁿ + 1) − 1 = 2ⁿ⁺¹ + 2 − 1 = 2ⁿ⁺¹ + 1. P(n+1) est vraie.\n- **Conclusion** : par récurrence, pour tout entier naturel n, u(n) = 2ⁿ + 1.\n3. u(10) = 2¹⁰ + 1 = 1 024 + 1 = **1 025**."
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "difficulte": 2,
+      "titre": "Une suite croissante et majorée",
+      "consigne": "Rédige la récurrence avec soin : c’est elle qui est notée.",
+      "enonce": "**Situation.** Dans un étang, Salomé modélise le nombre de carpes (en centaines) par la suite définie par u(0) = 1 et, pour tout entier naturel n, u(n+1) = 0,5 u(n) + 3.\n\n1. Calcule u(1) et u(2).\n2. Démontre par récurrence que, pour tout entier naturel n : 1 ≤ u(n) ≤ u(n+1) ≤ 6.\n3. Que peut-on en déduire sur le sens de variation de la suite ? Sur sa convergence ? (On ne demande pas la valeur de la limite.)\n4. Salomé affirme : « comme la suite est majorée par 6, elle converge vers 6 ». Ce raisonnement est-il valable ?",
+      "bareme": [
+        { "critere": "u(1) = 3,5 et u(2) = 4,75", "points": 3 },
+        { "critere": "Initialisation : 1 ≤ 1 ≤ 3,5 ≤ 6 vérifiée", "points": 4 },
+        { "critere": "Hérédité : on multiplie par 0,5 (positif) et on ajoute 3 aux inégalités de P(n)", "points": 7 },
+        { "critere": "Croissante et majorée donc convergente (limite monotone) ; critique du raisonnement de Salomé", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. u(1) = 0,5 × 1 + 3 = **3,5** ; u(2) = 0,5 × 3,5 + 3 = **4,75**.\n2. Soit P(n) : « 1 ≤ u(n) ≤ u(n+1) ≤ 6 ».\n- **Initialisation** : u(0) = 1 et u(1) = 3,5 ; on a bien 1 ≤ 1 ≤ 3,5 ≤ 6. P(0) est vraie.\n- **Hérédité** : soit n tel que P(n) est vraie : 1 ≤ u(n) ≤ u(n+1) ≤ 6. On multiplie par 0,5 > 0 (l’ordre est conservé) : 0,5 ≤ 0,5 u(n) ≤ 0,5 u(n+1) ≤ 3. On ajoute 3 : 3,5 ≤ 0,5 u(n) + 3 ≤ 0,5 u(n+1) + 3 ≤ 6, c’est-à-dire 3,5 ≤ u(n+1) ≤ u(n+2) ≤ 6. Comme 1 ≤ 3,5, on a 1 ≤ u(n+1) ≤ u(n+2) ≤ 6 : P(n+1) est vraie.\n- **Conclusion** : par récurrence, P(n) est vraie pour tout n.\n3. u(n) ≤ u(n+1) pour tout n : la suite est **croissante**. Elle est **majorée** par 6. D’après le **théorème de la limite monotone**, elle **converge**.\n4. **Non** : le théorème garantit l’**existence** de la limite, pas sa valeur. Une suite croissante majorée par 6 converge vers un réel ℓ ≤ 6, mais pas forcément vers 6 (elle est aussi majorée par 7, et ne converge pas vers 7 et 6 à la fois). Il faut un autre argument pour trouver ℓ."
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "difficulte": 3,
+      "titre": "Divisibilité, Bernoulli et un piège",
+      "consigne": "Rédige chaque récurrence complètement. Justifie chaque inégalité.",
+      "enonce": "1. Démontre par récurrence que, pour tout entier naturel n, 4ⁿ − 1 est divisible par 3.\n2. Soit a un réel tel que a > −1. Démontre par récurrence que, pour tout entier naturel n, (1 + a)ⁿ ≥ 1 + n a (inégalité de Bernoulli). Indique précisément où sert l’hypothèse a > −1.\n3. Application : déduis-en que 1,05ⁿ ≥ 10 dès que n ≥ 180.\n4. Lina démontre que la propriété Q(n) : « 4ⁿ + 1 est divisible par 3 » est héréditaire, en écrivant 4ⁿ⁺¹ + 1 = 4(4ⁿ + 1) − 3. Vérifie son calcul d’hérédité. Q(n) est-elle vraie pour tout n ? Explique ce qui manque, et montre à l’aide de la question 1 que Q(n) n’est vraie pour aucun n.",
+      "bareme": [
+        { "critere": "Divisibilité : initialisation (4⁰ − 1 = 0) et hérédité 4ⁿ⁺¹ − 1 = 4(4ⁿ − 1) + 3", "points": 5 },
+        { "critere": "Bernoulli : hérédité (1 + a)ⁿ⁺¹ ≥ (1 + na)(1 + a), avec 1 + a > 0 cité", "points": 5 },
+        { "critere": "Bernoulli : développement 1 + (n+1)a + na² ≥ 1 + (n+1)a et conclusion", "points": 3 },
+        { "critere": "Application : 1 + 0,05n ≥ 10 pour n ≥ 180, donc 1,05ⁿ ≥ 10", "points": 3 },
+        { "critere": "Piège : hérédité juste mais initialisation fausse ; 4ⁿ + 1 = (4ⁿ − 1) + 2, reste 2", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. P(n) : « 4ⁿ − 1 est divisible par 3 ». Initialisation : 4⁰ − 1 = 0 = 3 × 0 : vraie. Hérédité : si 4ⁿ − 1 = 3k (k entier), alors 4ⁿ⁺¹ − 1 = 4 × 4ⁿ − 1 = 4(4ⁿ − 1) + 4 − 1 = 4 × 3k + 3 = 3(4k + 1), divisible par 3. Conclusion : P(n) vraie pour tout n.\n2. B(n) : « (1 + a)ⁿ ≥ 1 + na ». Initialisation : (1 + a)⁰ = 1 et 1 + 0 × a = 1 : 1 ≥ 1, vraie. Hérédité : supposons (1 + a)ⁿ ≥ 1 + na. Comme **a > −1, 1 + a > 0** : multiplier par 1 + a conserve l’inégalité (c’est là que sert l’hypothèse). (1 + a)ⁿ⁺¹ ≥ (1 + na)(1 + a) = 1 + a + na + na² = 1 + (n+1)a + na². Or na² ≥ 0, donc (1 + a)ⁿ⁺¹ ≥ 1 + (n+1)a. Conclusion : B(n) vraie pour tout n.\n3. Avec a = 0,05 > −1 : 1,05ⁿ ≥ 1 + 0,05n. Si n ≥ 180, 1 + 0,05n ≥ 1 + 9 = 10, donc **1,05ⁿ ≥ 10**.\n4. Calcul : 4(4ⁿ + 1) − 3 = 4ⁿ⁺¹ + 4 − 3 = 4ⁿ⁺¹ + 1 : juste. Si 4ⁿ + 1 = 3m, alors 4ⁿ⁺¹ + 1 = 12m − 3 = 3(4m − 1) : Q est bien **héréditaire**. Mais Q(0) : 4⁰ + 1 = 2, non divisible par 3 ; Q(1) : 5, non plus. Il manque l’**initialisation** : une échelle sans premier barreau. En fait, 4ⁿ + 1 = (4ⁿ − 1) + 2 = 3k + 2 d’après la question 1 : le reste de la division par 3 est toujours 2, donc **Q(n) n’est vraie pour aucun n**."
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "difficulte": 1,
+      "titre": "Quatre limites de référence",
+      "consigne": "Détermine chaque limite en justifiant (règle, factorisation ou résultat du cours).",
+      "enonce": "Détermine la limite, si elle existe, de chacune des suites suivantes, définies pour tout entier n ≥ 1 :\n\n1. a(n) = 3n² − 5n + 1\n2. b(n) = (2n + 1)/(n + 3)\n3. c(n) = 5 × 0,8ⁿ + 2\n4. d(n) = 4 × (−1)ⁿ",
+      "bareme": [
+        { "critere": "a(n) : forme ∞ − ∞ levée par factorisation par n², limite +∞", "points": 7 },
+        { "critere": "b(n) : factorisation par n, limite 2", "points": 6 },
+        { "critere": "c(n) → 2 car 0,8ⁿ → 0 (−1 < 0,8 < 1) ; d(n) sans limite (oscille entre −4 et 4)", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Forme indéterminée ∞ − ∞. On factorise par n² : a(n) = n²(3 − 5/n + 1/n²). Or 5/n → 0 et 1/n² → 0, donc la parenthèse tend vers 3 et n² → +∞ : **a(n) → +∞**.\n2. Forme ∞/∞. b(n) = n(2 + 1/n) / [n(1 + 3/n)] = (2 + 1/n)/(1 + 3/n) → 2/1 = **2**.\n3. −1 < 0,8 < 1, donc 0,8ⁿ → 0, et c(n) → 5 × 0 + 2 = **2**.\n4. d(n) vaut 4 pour n pair et −4 pour n impair : la suite oscille sans se fixer, elle **n’a pas de limite** (elle diverge sans tendre vers l’infini)."
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "difficulte": 2,
+      "titre": "Gendarmes et comparaisons",
+      "consigne": "Nomme le théorème utilisé à chaque question et vérifie ses hypothèses.",
+      "enonce": "Pour tout entier n ≥ 1, on considère :\n\n- u(n) = 1 + cos(n)/n\n- v(n) = n² + (−1)ⁿ × n\n- w(n) = 3ⁿ − 2ⁿ\n\n1. Encadre cos(n)/n, puis détermine la limite de u(n).\n2. Montre que v(n) ≥ n² − n pour tout n ≥ 1, puis détermine la limite de v(n).\n3. Quelle forme indéterminée donne w(n) ? Lève-la en factorisant par 3ⁿ et conclus.",
+      "bareme": [
+        { "critere": "Encadrement −1/n ≤ cos(n)/n ≤ 1/n et gendarmes : u(n) → 1", "points": 6 },
+        { "critere": "Minoration justifiée ((−1)ⁿ n ≥ −n) et n² − n = n(n − 1) → +∞", "points": 5 },
+        { "critere": "Théorème de comparaison par minoration cité : v(n) → +∞", "points": 3 },
+        { "critere": "w(n) = 3ⁿ(1 − (2/3)ⁿ) avec (2/3)ⁿ → 0, limite +∞", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Pour tout n, −1 ≤ cos(n) ≤ 1 ; en divisant par n > 0 : −1/n ≤ cos(n)/n ≤ 1/n. Donc 1 − 1/n ≤ u(n) ≤ 1 + 1/n. Les deux suites qui encadrent tendent vers **1** : d’après le **théorème des gendarmes**, **u(n) → 1**.\n2. (−1)ⁿ vaut 1 ou −1, donc (−1)ⁿ × n ≥ −n et v(n) ≥ n² − n = n(n − 1). Or n → +∞ et n − 1 → +∞, donc n(n − 1) → +∞. Par le **théorème de comparaison par minoration**, **v(n) → +∞**.\n3. 3ⁿ → +∞ et 2ⁿ → +∞ : forme **∞ − ∞**. w(n) = 3ⁿ(1 − 2ⁿ/3ⁿ) = 3ⁿ(1 − (2/3)ⁿ). Comme −1 < 2/3 < 1, (2/3)ⁿ → 0, donc la parenthèse tend vers 1 ; et 3ⁿ → +∞ (raison 3 > 1). **w(n) → +∞**."
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "difficulte": 3,
+      "titre": "Existence d’abord, valeur ensuite",
+      "consigne": "Respecte l’ordre du raisonnement : prouver que la limite existe, puis la calculer.",
+      "enonce": "On considère la fonction f définie sur [−1,5 ; +∞[ par f(x) = √(2x + 3), et la suite (u) définie par u(0) = 0 et, pour tout entier naturel n, u(n+1) = f(u(n)).\n\n1. Calcule u(1) et u(2) (valeurs exactes, puis arrondies au centième).\n2. Justifie que f est croissante sur [0 ; +∞[, puis démontre par récurrence que, pour tout n : 0 ≤ u(n) ≤ u(n+1) ≤ 3.\n3. Déduis-en que la suite (u) converge.\n4. On note ℓ sa limite. Justifie que f(ℓ) = ℓ, puis détermine ℓ.\n5. Amine affirme : « il suffisait de dire que la suite est majorée par 3 pour savoir qu’elle tend vers 3 ». Qu’en penses-tu ?",
+      "bareme": [
+        { "critere": "u(1) = √3 ≈ 1,73 et u(2) = √(2√3 + 3) ≈ 2,54", "points": 3 },
+        { "critere": "Récurrence : initialisation et hérédité appliquant f croissante, avec f(3) = 3", "points": 6 },
+        { "critere": "Croissante et majorée : convergence par le théorème de la limite monotone", "points": 3 },
+        { "critere": "f continue, ℓ = √(2ℓ + 3), ℓ² − 2ℓ − 3 = 0, ℓ = 3 (ℓ ≥ 0 écarte −1)", "points": 5 },
+        { "critere": "Critique : un majorant ne donne pas la valeur de la limite", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. u(1) = √(0 + 3) = **√3 ≈ 1,73** ; u(2) = √(2√3 + 3) ≈ √6,464 ≈ **2,54**.\n2. x ↦ 2x + 3 est croissante et la racine carrée est croissante, donc f est **croissante** sur [−1,5 ; +∞[, en particulier sur [0 ; +∞[. P(n) : « 0 ≤ u(n) ≤ u(n+1) ≤ 3 ».\n- Initialisation : u(0) = 0, u(1) = √3 ≈ 1,73 : 0 ≤ 0 ≤ √3 ≤ 3 ✓.\n- Hérédité : si 0 ≤ u(n) ≤ u(n+1) ≤ 3, on applique f croissante : f(0) ≤ f(u(n)) ≤ f(u(n+1)) ≤ f(3), soit √3 ≤ u(n+1) ≤ u(n+2) ≤ √9 = 3. Comme √3 ≥ 0 : P(n+1) vraie.\n- Conclusion : P(n) vraie pour tout n.\n3. La suite est **croissante** (u(n) ≤ u(n+1)) et **majorée** par 3 : par le **théorème de la limite monotone**, elle **converge**.\n4. f est **continue** (composée de fonctions continues) et u(n+1) = f(u(n)) : la limite vérifie **f(ℓ) = ℓ**, soit √(2ℓ + 3) = ℓ. Comme 0 ≤ u(n) ≤ 3, on a 0 ≤ ℓ ≤ 3. En élevant au carré : 2ℓ + 3 = ℓ², ℓ² − 2ℓ − 3 = 0, (ℓ − 3)(ℓ + 1) = 0. ℓ ≥ 0 écarte −1 : **ℓ = 3**.\n5. Amine a tort : être majorée par 3 garantit seulement une limite **inférieure ou égale** à 3 (la suite est aussi majorée par 10 sans tendre vers 10). Le théorème donne l’existence ; c’est l’équation f(ℓ) = ℓ qui donne la **valeur**."
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "difficulte": 1,
+      "titre": "Limites et asymptotes",
+      "consigne": "Justifie chaque limite et interprète-la graphiquement quand c’est possible.",
+      "enonce": "1. Détermine la limite en +∞ de f(x) = −2x³ + x² + 5.\n2. Détermine la limite en +∞ de g(x) = (3x² + 1)/(x² − 4). Quelle interprétation graphique en donnes-tu ?\n3. Soit h(x) = 1/(x − 2), définie pour x ≠ 2. Détermine la limite de h(x) quand x tend vers 2 par valeurs supérieures, puis par valeurs inférieures. Interprète.",
+      "bareme": [
+        { "critere": "f : terme de plus haut degré −2x³, limite −∞", "points": 6 },
+        { "critere": "g : quotient des termes de plus haut degré 3x²/x², limite 3 et asymptote horizontale y = 3", "points": 7 },
+        { "critere": "h : +∞ à droite, −∞ à gauche de 2, asymptote verticale x = 2", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. En +∞, un polynôme a la même limite que son terme de plus haut degré : −2x³ → **−∞**. Donc f(x) → −∞.\n2. En +∞, une fraction rationnelle a la limite du quotient des termes de plus haut degré : 3x²/x² = 3. Donc **g(x) → 3** : la droite d’équation **y = 3** est **asymptote horizontale** à la courbe de g en +∞.\n3. Quand x → 2 avec x > 2, x − 2 → 0 en restant positif, donc **h(x) → +∞**. Quand x → 2 avec x < 2, x − 2 → 0 en restant négatif, donc **h(x) → −∞**. La droite d’équation **x = 2** est **asymptote verticale** à la courbe de h."
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "difficulte": 2,
+      "titre": "Une asymptote oblique",
+      "consigne": "Justifie chaque étape.",
+      "enonce": "Soit f la fonction définie sur ]−1 ; +∞[ par f(x) = (2x² + 3x − 1)/(x + 1). On note C sa courbe.\n\n1. Détermine la limite de f(x) quand x tend vers −1 (x > −1). Interprète graphiquement.\n2. Détermine la limite de f(x) en +∞.\n3. Vérifie que, pour tout x > −1, f(x) = 2x + 1 − 2/(x + 1).\n4. Déduis-en que la droite D d’équation y = 2x + 1 est asymptote oblique à C en +∞, puis étudie la position de C par rapport à D.",
+      "bareme": [
+        { "critere": "Limite en −1 : numérateur → −2, dénominateur → 0⁺, donc −∞ ; asymptote verticale x = −1", "points": 5 },
+        { "critere": "Limite en +∞ : quotient 2x²/x = 2x, donc +∞", "points": 4 },
+        { "critere": "Identité vérifiée en réduisant au même dénominateur", "points": 5 },
+        { "critere": "f(x) − (2x + 1) = −2/(x + 1) → 0 ; négatif : C sous D", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Quand x → −1 avec x > −1 : 2x² + 3x − 1 → 2 − 3 − 1 = −2 et x + 1 → 0 en restant positif. Le quotient tend vers **−∞**. La droite **x = −1** est **asymptote verticale** à C.\n2. En +∞, f a la limite du quotient des termes de plus haut degré : 2x²/x = 2x → **+∞**.\n3. 2x + 1 − 2/(x + 1) = [(2x + 1)(x + 1) − 2]/(x + 1) = (2x² + 2x + x + 1 − 2)/(x + 1) = (2x² + 3x − 1)/(x + 1) = f(x) ✓.\n4. f(x) − (2x + 1) = −2/(x + 1). En +∞, x + 1 → +∞ donc −2/(x + 1) → **0** : D est **asymptote oblique** à C en +∞. Sur ]−1 ; +∞[, x + 1 > 0, donc −2/(x + 1) < 0 : f(x) < 2x + 1, la courbe C est **au-dessous** de D."
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "difficulte": 3,
+      "titre": "Quatre techniques pour quatre limites",
+      "consigne": "Pour chaque question, nomme la technique employée et justifie-la.",
+      "enonce": "1. Détermine la limite en +∞ de f(x) = √(x² + x) − x. (Indication : expression conjuguée ; pour x > 0, √(x² + x) = x√(1 + 1/x).)\n2. Détermine la limite en +∞ de g(x) = (x + sin x)/x.\n3. Détermine la limite en +∞ de h(x) = √((4x + 1)/(x + 2)).\n4. Soit a un réel et k la fonction définie par k(x) = (x² − 9)/(x − 3) si x ≠ 3, et k(3) = a.\n a) Détermine la limite de k(x) quand x tend vers 3.\n b) Pour quelle valeur de a la fonction k est-elle continue en 3 ? Si a = 5, la limite existe-t-elle ? k est-elle continue en 3 ?",
+      "bareme": [
+        { "critere": "f : forme ∞ − ∞, conjuguée x/(√(x² + x) + x) = 1/(√(1 + 1/x) + 1), limite 1/2", "points": 6 },
+        { "critere": "g : 1 + sin(x)/x, gendarmes avec ±1/x, limite 1", "points": 4 },
+        { "critere": "h : limite intérieure 4 puis composition par la racine, limite 2", "points": 3 },
+        { "critere": "k : simplification en x + 3, limite 6 ; continue ssi a = 6", "points": 4 },
+        { "critere": "Cas a = 5 : limite 6 existe mais k non continue (limite ≠ k(3))", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Forme **∞ − ∞**. On multiplie par l’**expression conjuguée** : f(x) = [(x² + x) − x²]/(√(x² + x) + x) = x/(√(x² + x) + x). Pour x > 0 : = x/(x√(1 + 1/x) + x) = 1/(√(1 + 1/x) + 1). Comme 1/x → 0, √(1 + 1/x) → 1 : **f(x) → 1/2**.\n2. g(x) = 1 + sin(x)/x. Pour x > 0 : −1/x ≤ sin(x)/x ≤ 1/x, et ±1/x → 0. Par le **théorème des gendarmes**, sin(x)/x → 0 et **g(x) → 1**.\n3. (4x + 1)/(x + 2) → 4 en +∞ (quotient des termes de plus haut degré 4x/x). Et √y → √4 = 2 quand y → 4. Par **composition**, **h(x) → 2**.\n4. a) Forme 0/0. x² − 9 = (x − 3)(x + 3), donc pour x ≠ 3, k(x) = x + 3 → **6** quand x → 3.\n b) k est continue en 3 si sa limite en 3 existe et vaut k(3) : **a = 6**. Si a = 5, la limite **existe** (elle vaut 6) mais diffère de k(3) = 5 : k **n’est pas continue** en 3. Une limite peut exister sans continuité."
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "difficulte": 1,
+      "titre": "Quatre dérivées de composées",
+      "consigne": "Pour chaque fonction, identifie u et u′, puis applique la formule.",
+      "enonce": "Calcule la dérivée de chacune des fonctions suivantes sur l’intervalle indiqué :\n\n1. f(x) = (3x + 2)⁵ sur ℝ\n2. g(x) = e^(−2x + 1) sur ℝ\n3. h(x) = √(x² + 4) sur ℝ\n4. k(x) = ln(x² + 1) sur ℝ\n\nPour h et k, explique pourquoi elles sont bien dérivables sur ℝ tout entier.",
+      "bareme": [
+        { "critere": "f′(x) = 15(3x + 2)⁴ et g′(x) = −2e^(−2x + 1), u′ explicité", "points": 8 },
+        { "critere": "h′(x) = x/√(x² + 4) et k′(x) = 2x/(x² + 1)", "points": 8 },
+        { "critere": "Justification : x² + 4 > 0 et x² + 1 > 0 pour tout réel x", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. u = 3x + 2, u′ = 3 ; (uⁿ)′ = n u′ uⁿ⁻¹ : f′(x) = 5 × 3 × (3x + 2)⁴ = **15(3x + 2)⁴**.\n2. u = −2x + 1, u′ = −2 ; (e^u)′ = u′ e^u : g′(x) = **−2e^(−2x + 1)**.\n3. u = x² + 4, u′ = 2x ; (√u)′ = u′/(2√u) : h′(x) = 2x/(2√(x² + 4)) = **x/√(x² + 4)**.\n4. u = x² + 1, u′ = 2x ; (ln u)′ = u′/u : k′(x) = **2x/(x² + 1)**.\n\nDérivabilité : pour tout réel x, x² ≥ 0, donc x² + 4 ≥ 4 > 0 et x² + 1 ≥ 1 > 0. La racine est dérivable là où u est **strictement** positive, et ln u est défini et dérivable là où u > 0 : c’est le cas sur tout ℝ."
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "difficulte": 2,
+      "titre": "La cloche et le logarithme",
+      "consigne": "Justifie chaque dérivée, chaque signe et chaque variation.",
+      "enonce": "1. Soit f définie sur ℝ par f(x) = e^(−x²).\n a) Calcule f′(x) et étudie son signe.\n b) Dresse le tableau de variations de f (sans les limites) et donne son maximum.\n c) Détermine une équation de la tangente à la courbe de f au point d’abscisse 1.\n2. Soit g(x) = ln(x² − 2x + 5).\n a) Justifie que g est définie sur ℝ.\n b) Calcule g′(x) et déduis-en les variations de g ainsi que son minimum.",
+      "bareme": [
+        { "critere": "f′(x) = −2x e^(−x²), signe de −2x, f croissante puis décroissante, maximum f(0) = 1", "points": 6 },
+        { "critere": "Tangente en 1 : y = −2e⁻¹(x − 1) + e⁻¹, soit y = e⁻¹(−2x + 3)", "points": 5 },
+        { "critere": "Discriminant −16 < 0 : x² − 2x + 5 > 0, g définie sur ℝ", "points": 4 },
+        { "critere": "g′(x) = (2x − 2)/(x² − 2x + 5), minimum g(1) = ln 4", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a) u = −x², u′ = −2x : **f′(x) = −2x e^(−x²)**. Une exponentielle est strictement positive, donc f′(x) a le signe de −2x : positive pour x < 0, nulle en 0, négative pour x > 0.\n b) f est **croissante** sur ]−∞ ; 0] et **décroissante** sur [0 ; +∞[. Maximum : **f(0) = e⁰ = 1**.\n c) f(1) = e⁻¹ et f′(1) = −2e⁻¹. Tangente : y = f′(1)(x − 1) + f(1) = −2e⁻¹(x − 1) + e⁻¹ = **e⁻¹(−2x + 3)**, soit y = (−2x + 3)/e.\n2. a) x² − 2x + 5 : discriminant Δ = 4 − 20 = −16 < 0, et le coefficient de x² est positif : le trinôme est **strictement positif** sur ℝ. ln est donc défini, et g est définie sur ℝ.\n b) u = x² − 2x + 5, u′ = 2x − 2 : **g′(x) = (2x − 2)/(x² − 2x + 5)**. Le dénominateur est positif : g′ a le signe de 2x − 2. g est **décroissante** sur ]−∞ ; 1] et **croissante** sur [1 ; +∞[. Minimum : g(1) = ln(1 − 2 + 5) = **ln 4**."
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "difficulte": 3,
+      "titre": "Dériver juste, et corriger les erreurs",
+      "consigne": "Justifie chaque domaine, chaque dérivée et chaque correction.",
+      "enonce": "1. Soit f(x) = √(4 − x²).\n a) Détermine l’ensemble de définition de f, puis l’ensemble sur lequel la formule de dérivation d’une racine s’applique. Pourquoi ces deux ensembles diffèrent-ils ?\n b) Calcule f′(x), étudie son signe et donne le maximum de f.\n2. Calcule la dérivée de g(x) = e^(sin x) sur ℝ.\n3. Tom a écrit : (e^(x²))′ = e^(x²) et (√(1 − 2x))′ = 1/(2√(1 − 2x)). Pour chaque calcul, nomme l’erreur et donne la bonne dérivée, en précisant où elle est valable.\n4. Lis à l’envers les résultats précédents : donne une primitive de x ↦ 2x e^(x²), puis une primitive de x ↦ x e^(x²).",
+      "bareme": [
+        { "critere": "Domaine [−2 ; 2], dérivable sur ]−2 ; 2[ car u doit être strictement positive", "points": 4 },
+        { "critere": "f′(x) = −x/√(4 − x²), croissante puis décroissante, maximum f(0) = 2", "points": 5 },
+        { "critere": "g′(x) = cos(x) e^(sin x)", "points": 3 },
+        { "critere": "Erreurs de Tom : facteur u′ oublié ; 2x e^(x²) et −1/√(1 − 2x) pour x < 1/2", "points": 5 },
+        { "critere": "Primitives : e^(x²) puis (1/2) e^(x²)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. a) f(x) existe si 4 − x² ≥ 0, soit x² ≤ 4 : **[−2 ; 2]**. La formule (√u)′ = u′/(2√u) exige u **strictement** positive : 4 − x² > 0, soit **]−2 ; 2[**. La racine est définie en 0 mais pas dérivable en 0, d’où la différence en ±2.\n b) u = 4 − x², u′ = −2x : f′(x) = −2x/(2√(4 − x²)) = **−x/√(4 − x²)**. Le dénominateur est positif : f′ a le signe de −x. f est **croissante** sur [−2 ; 0] et **décroissante** sur [0 ; 2]. Maximum : **f(0) = √4 = 2**.\n2. u = sin x, u′ = cos x : **g′(x) = cos(x) e^(sin x)**.\n3. Premier calcul : Tom a **oublié u′** (u = x², u′ = 2x). Correct : **(e^(x²))′ = 2x e^(x²)** sur ℝ. Second calcul : même oubli, u = 1 − 2x, u′ = −2. Correct : −2/(2√(1 − 2x)) = **−1/√(1 − 2x)**, valable pour 1 − 2x > 0, soit **x < 1/2**.\n4. 2x e^(x²) est de la forme u′ e^u avec u = x² : une primitive est **e^(x²)**. Pour x e^(x²), il manque un facteur 2 : x e^(x²) = (1/2) × 2x e^(x²), donc une primitive est **(1/2) e^(x²)**."
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "difficulte": 1,
+      "titre": "Le point d’inflexion d’une cubique",
+      "consigne": "Justifie chaque conclusion à l’aide de la dérivée seconde.",
+      "enonce": "Soit f la fonction définie sur ℝ par f(x) = x³ − 3x² + 2.\n\n1. Calcule f′(x) puis f″(x).\n2. Étudie le signe de f″(x) et déduis-en les intervalles sur lesquels f est convexe ou concave.\n3. La courbe de f admet-elle un point d’inflexion ? Si oui, donne ses coordonnées.",
+      "bareme": [
+        { "critere": "f′(x) = 3x² − 6x et f″(x) = 6x − 6", "points": 5 },
+        { "critere": "f″ négative sur ]−∞ ; 1], positive sur [1 ; +∞[ : concave puis convexe", "points": 8 },
+        { "critere": "Inflexion en (1 ; 0), justifiée par le changement de signe de f″", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **f′(x) = 3x² − 6x** et **f″(x) = 6x − 6**.\n2. 6x − 6 ≥ 0 équivaut à x ≥ 1. Donc f″ est négative sur ]−∞ ; 1] : f est **concave** sur ]−∞ ; 1] ; f″ est positive sur [1 ; +∞[ : f est **convexe** sur [1 ; +∞[.\n3. f″ s’annule en 1 **en changeant de signe** : la courbe change de convexité, elle admet un **point d’inflexion** d’abscisse 1. f(1) = 1 − 3 + 2 = 0 : le point d’inflexion est **(1 ; 0)**. En ce point, la tangente traverse la courbe."
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "difficulte": 2,
+      "titre": "Convexité de x eˣ",
+      "consigne": "Justifie chaque étape à l’aide des dérivées.",
+      "enonce": "Soit f la fonction définie sur ℝ par f(x) = x eˣ.\n\n1. Montre que f′(x) = (x + 1)eˣ et que f″(x) = (x + 2)eˣ.\n2. Étudie la convexité de f et donne les coordonnées du point d’inflexion.\n3. Détermine une équation de la tangente T à la courbe au point d’abscisse 0. Déduis-en, grâce à la convexité, que x eˣ ≥ x pour tout x ≥ −2.\n4. Sur l’intervalle [−2 ; −1], f est-elle croissante ou décroissante ? Convexe ou concave ? Que montre cet exemple ?",
+      "bareme": [
+        { "critere": "Dérivées f′ et f″ justes (dérivée d’un produit)", "points": 4 },
+        { "critere": "Concave sur ]−∞ ; −2], convexe sur [−2 ; +∞[, inflexion (−2 ; −2e⁻²)", "points": 6 },
+        { "critere": "T : y = x, et courbe au-dessus de T sur l’intervalle où f est convexe", "points": 6 },
+        { "critere": "Sur [−2 ; −1] : décroissante et convexe, variation et convexité indépendantes", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. f = uv avec u = x, v = eˣ : f′(x) = 1 × eˣ + x eˣ = **(x + 1)eˣ**. De même, f″(x) = 1 × eˣ + (x + 1)eˣ = **(x + 2)eˣ**.\n2. eˣ > 0, donc f″(x) a le signe de x + 2. f est **concave** sur ]−∞ ; −2] et **convexe** sur [−2 ; +∞[. f″ s’annule en −2 en changeant de signe : point d’inflexion d’abscisse −2, avec f(−2) = −2e⁻² : **(−2 ; −2e⁻²)** ≈ (−2 ; −0,27).\n3. f(0) = 0 et f′(0) = 1 : **T : y = x**. Sur [−2 ; +∞[, f est convexe : sa courbe est **au-dessus** de ses tangentes, en particulier de T, tangente en 0 qui appartient à cet intervalle. Donc **x eˣ ≥ x** pour tout x ≥ −2.\n4. Sur [−2 ; −1], x + 1 ≤ 0 donc f′ ≤ 0 : f est **décroissante** ; et x + 2 ≥ 0 donc f″ ≥ 0 : f est **convexe**. Une fonction peut être décroissante et convexe : **variation et convexité sont indépendantes**."
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "difficulte": 3,
+      "titre": "Tangentes, cordes et inflexions",
+      "consigne": "Justifie chaque résultat par une propriété de la convexité.",
+      "enonce": "1. Soit f(x) = x⁴ − 6x² sur ℝ. Étudie sa convexité et donne les coordonnées de ses points d’inflexion.\n2. Pour g(x) = x⁴, on a g″(0) = 0. La courbe de g admet-elle un point d’inflexion en 0 ? Justifie.\n3. a) En utilisant la convexité de l’exponentielle et sa tangente en 0, montre que eˣ ≥ x + 1 pour tout réel x.\n b) Sur [0 ; 1], la corde qui joint les points (0 ; 1) et (1 ; e) a pour équation y = 1 + (e − 1)x. Quelle position la courbe de l’exponentielle a-t-elle par rapport à cette corde sur [0 ; 1] ?\n c) Déduis-en l’encadrement 1,5 ≤ √e ≤ (1 + e)/2.\n4. Le nombre d’abonnés P(t) d’une chaîne vidéo est modélisé par une fonction telle que P′(t) > 0 et P″(t) < 0. Traduis cette situation par une phrase.",
+      "bareme": [
+        { "critere": "f″(x) = 12x² − 12 : convexe sur ]−∞ ; −1] et [1 ; +∞[, concave sur [−1 ; 1]", "points": 5 },
+        { "critere": "Inflexions (−1 ; −5) et (1 ; −5) ; pas d’inflexion pour x⁴ (g″ ≥ 0 sans changement de signe)", "points": 4 },
+        { "critere": "eˣ ≥ x + 1 : courbe convexe au-dessus de sa tangente y = x + 1", "points": 4 },
+        { "critere": "Courbe sous la corde, puis encadrement de √e = e^0,5 avec x = 0,5", "points": 4 },
+        { "critere": "Interprétation : le nombre d’abonnés augmente, de moins en moins vite", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f′(x) = 4x³ − 12x ; f″(x) = 12x² − 12 = 12(x − 1)(x + 1). f″ ≥ 0 sur ]−∞ ; −1] et [1 ; +∞[ : f **convexe** ; f″ ≤ 0 sur [−1 ; 1] : f **concave**. f″ change de signe en −1 et en 1 : inflexions. f(1) = 1 − 6 = −5 et f(−1) = −5 : points **(−1 ; −5)** et **(1 ; −5)**.\n2. g″(x) = 12x² ≥ 0 sur ℝ : g est convexe partout, g″ s’annule en 0 **sans changer de signe**. **Pas de point d’inflexion** : l’annulation de g″ ne suffit pas.\n3. a) exp est convexe (exp″ = exp > 0). Sa tangente en 0 : y = e⁰(x − 0) + e⁰ = x + 1. Une fonction convexe est au-dessus de ses tangentes : **eˣ ≥ x + 1** pour tout réel x.\n b) Une fonction convexe est **au-dessous de ses cordes** : sur [0 ; 1], **eˣ ≤ 1 + (e − 1)x**.\n c) Avec x = 0,5 : d’une part e^0,5 ≥ 0,5 + 1 = 1,5 ; d’autre part e^0,5 ≤ 1 + (e − 1)/2 = (1 + e)/2 ≈ 1,859. Comme e^0,5 = √e : **1,5 ≤ √e ≤ (1 + e)/2** (√e ≈ 1,649).\n4. P′ > 0 : le nombre d’abonnés **augmente** ; P″ < 0 : P′ décroît, P est concave, la croissance **ralentit**. Le nombre d’abonnés augmente **de moins en moins vite**."
+    }
+  ]
+}

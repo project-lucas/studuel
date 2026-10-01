@@ -1,0 +1,679 @@
+{
+  "niveau": "4e",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+      "difficulte": 1,
+      "titre": "Aires et volumes : les bonnes colonnes",
+      "consigne": "Écris chaque conversion en expliquant le nombre de colonnes utilisées.",
+      "enonce": "**Questions de cours et d’application.**\n\n1. Convertis **3,5 m²** en cm².\n2. Convertis **4 500 dm²** en m².\n3. Convertis **0,75 m³** en litres, puis **2 500 cm³** en litres.",
+      "bareme": [
+        {
+          "critere": "3,5 m² = 35 000 cm², avec le facteur 10 000 (et non 100) justifié",
+          "points": 7
+        },
+        {
+          "critere": "4 500 dm² = 45 m², avec le facteur 100 entre dm² et m²",
+          "points": 6
+        },
+        {
+          "critere": "0,75 m³ = 750 L et 2 500 cm³ = 2,5 L, via 1 dm³ = 1 L",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Une aire se convertit **de 100 en 100** : de m² à cm², on passe deux unités, donc on multiplie par 100 × 100 = 10 000. Ainsi 3,5 m² = 3,5 × 10 000 = **35 000 cm²**.\n\n2. De dm² à m², on remonte d’une unité : on divise par 100. Ainsi 4 500 dm² = 4 500 ÷ 100 = **45 m²**.\n\n3. On utilise 1 m³ = 1 000 L. Donc 0,75 m³ = 0,75 × 1 000 = **750 L**.\n   Pour 2 500 cm³ : 1 000 cm³ = 1 dm³ = 1 L, donc 2 500 cm³ = 2 500 ÷ 1 000 = **2,5 L**.\n\nErreur à éviter : convertir une aire comme une longueur (facteur 100 au lieu de 10 000 pour m² → cm²)."
+    },
+    {
+      "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+      "difficulte": 2,
+      "titre": "Scooter contre cycliste",
+      "consigne": "Réponds à chaque question en détaillant tes conversions.",
+      "enonce": "**Situation.** Sur une piste, Malik roule en scooter à **45 km/h** et Inès pédale à **12 m/s**.\n\n1. Convertis la vitesse de Malik en m/s.\n2. Convertis la vitesse d’Inès en km/h.\n3. Qui roule le plus vite ? Justifie.\n4. Quelle distance Malik parcourt-il en 2 minutes, en mètres ? (Pense à utiliser sa vitesse en m/s.)",
+      "bareme": [
+        {
+          "critere": "Vitesse de Malik : 45 ÷ 3,6 = 12,5 m/s",
+          "points": 5
+        },
+        {
+          "critere": "Vitesse d’Inès : 12 × 3,6 = 43,2 km/h",
+          "points": 5
+        },
+        {
+          "critere": "Comparaison dans la même unité : Malik est plus rapide",
+          "points": 4
+        },
+        {
+          "critere": "Distance en 2 min : 12,5 × 120 = 1 500 m, avec conversion des minutes en secondes",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. km/h → m/s : on divise par 3,6. 45 ÷ 3,6 = **12,5 m/s**.\n\n2. m/s → km/h : on multiplie par 3,6. 12 × 3,6 = **43,2 km/h**.\n\n3. Dans la même unité, on compare : 12,5 m/s > 12 m/s (ou 45 km/h > 43,2 km/h). **Malik est plus rapide**, de peu.\n\n4. 2 minutes = 120 secondes. Distance = vitesse × durée = 12,5 × 120 = **1 500 m** (soit 1,5 km).\n\nVérification : 45 km/h pendant 2 min = 45 × (2/60) = 1,5 km. Les deux méthodes concordent."
+    },
+    {
+      "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+      "difficulte": 3,
+      "titre": "Remplir le bassin",
+      "consigne": "Rédige chaque étape avec ses conversions et ses calculs.",
+      "enonce": "**Situation.** Un robinet remplit un bassin avec un débit de **12 L/min**. Le bassin est un pavé droit de **3 m de long, 2 m de large et 1,2 m de profondeur**.\n\n1. Exprime le débit en L/h.\n2. Exprime ce débit en m³/h.\n3. Calcule le volume du bassin en m³, puis en litres.\n4. Combien de temps faut-il pour le remplir complètement ? Donne le résultat en minutes, puis en heures.\n5. L’eau a une masse volumique de **1 g/cm³**. Convertis-la en kg/m³ puis calcule la masse d’eau contenue dans le bassin plein.",
+      "bareme": [
+        {
+          "critere": "Débit en L/h : 12 × 60 = 720 L/h",
+          "points": 3
+        },
+        {
+          "critere": "Débit en m³/h : 720 L/h = 0,72 m³/h (1 m³ = 1 000 L)",
+          "points": 3
+        },
+        {
+          "critere": "Volume du bassin : 3 × 2 × 1,2 = 7,2 m³ = 7 200 L",
+          "points": 4
+        },
+        {
+          "critere": "Durée de remplissage : 7 200 ÷ 12 = 600 min = 10 h",
+          "points": 5
+        },
+        {
+          "critere": "1 g/cm³ = 1 000 kg/m³, donc masse d’eau 7,2 × 1 000 = 7 200 kg",
+          "points": 5
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Une heure vaut 60 minutes : 12 L/min = 12 × 60 = **720 L/h**.\n\n2. 1 m³ = 1 000 L, donc 720 L/h = 720 ÷ 1 000 = **0,72 m³/h**.\n\n3. Volume du pavé droit : 3 × 2 × 1,2 = **7,2 m³**. Comme 1 m³ = 1 000 L : 7,2 × 1 000 = **7 200 L**.\n\n4. Durée = volume ÷ débit = 7 200 ÷ 12 = **600 minutes**, soit 600 ÷ 60 = **10 heures**. Vérification : 7,2 m³ ÷ 0,72 m³/h = 10 h.\n\n5. On convertit le numérateur et le dénominateur séparément : 1 g/cm³ = 1 000 kg/m³. La masse d’eau vaut 7,2 × 1 000 = **7 200 kg** (soit 7,2 tonnes). Elle est égale au nombre de litres, car 1 L d’eau pèse 1 kg."
+    },
+    {
+      "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+      "difficulte": 1,
+      "titre": "Angles et inégalité triangulaire",
+      "consigne": "Justifie chaque réponse avec la propriété du cours.",
+      "enonce": "**Questions de cours et d’application.**\n\n1. Dans un triangle ABC, l’angle A mesure **48°** et l’angle B mesure **67°**. Calcule l’angle C.\n2. Un triangle SAB est isocèle en S et son angle au sommet S mesure **40°**. Calcule ses angles à la base.\n3. Peut-on construire un triangle dont les côtés mesurent **5 cm, 6 cm et 12 cm** ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Angle C = 180 − 48 − 67 = 65°, avec la somme des angles",
+          "points": 6
+        },
+        {
+          "critere": "Angles à la base : (180 − 40) ÷ 2 = 70° chacun, car ils sont égaux",
+          "points": 7
+        },
+        {
+          "critere": "Triangle impossible : 5 + 6 = 11 est inférieur à 12",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La somme des angles d’un triangle vaut 180° : C = 180 − (48 + 67) = 180 − 115 = **65°**.\n\n2. Dans un triangle isocèle, les deux angles à la base sont égaux. Leur somme vaut 180 − 40 = 140°, donc chacun mesure 140 ÷ 2 = **70°**.\n\n3. On applique l’inégalité triangulaire : le plus grand côté doit être plus petit que la somme des deux autres. Ici 5 + 6 = 11 et 11 < 12 : **la construction est impossible**, les deux petits côtés ne peuvent pas se rejoindre."
+    },
+    {
+      "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+      "difficulte": 2,
+      "titre": "Le jardin triangulaire",
+      "consigne": "Réponds à chaque question en détaillant tes calculs.",
+      "enonce": "**Situation.** Le jardin de Sofia est un triangle ABC **rectangle en B**, avec **AB = 12 m** et **BC = 9 m**.\n\n1. Calcule l’aire du jardin en choisissant BC comme base. Quelle est alors la hauteur correspondante ?\n2. Un sachet de graines de gazon couvre **6 m²**. Combien de sachets faut-il pour tout le jardin ?\n3. L’angle en A mesure **50°**. Calcule l’angle en C et explique pourquoi les angles A et C sont complémentaires.\n4. Sofia change de base et prend AB. Quelle est la hauteur relative à AB ? Retrouve l’aire.",
+      "bareme": [
+        {
+          "critere": "Aire = 9 × 12 ÷ 2 = 54 m², hauteur relative à BC : AB = 12 m",
+          "points": 5
+        },
+        {
+          "critere": "54 ÷ 6 = 9 sachets",
+          "points": 4
+        },
+        {
+          "critere": "Angle C = 90 − 50 = 40°, angles complémentaires dans un triangle rectangle",
+          "points": 5
+        },
+        {
+          "critere": "Base AB, hauteur BC = 9 m, aire 12 × 9 ÷ 2 = 54 m²",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le triangle est rectangle en B : les côtés (AB) et (BC) sont perpendiculaires. Avec la base BC = 9 m, la hauteur relative est **AB = 12 m**. Aire = (base × hauteur) ÷ 2 = 9 × 12 ÷ 2 = 108 ÷ 2 = **54 m²**.\n\n2. 54 ÷ 6 = **9 sachets**.\n\n3. Dans un triangle rectangle, les deux autres angles sont complémentaires : leur somme vaut 90°. Donc C = 90 − 50 = **40°**. Vérification avec la somme des angles : 90 + 50 + 40 = 180°.\n\n4. Si la base est AB, la hauteur relative est **BC = 9 m**. Aire = 12 × 9 ÷ 2 = **54 m²** : on retrouve le même résultat, quelle que soit la base choisie."
+    },
+    {
+      "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+      "difficulte": 3,
+      "titre": "Vrai ou faux ? Quatre affirmations",
+      "consigne": "Pour chaque affirmation, réponds par « vrai » ou « faux » et justifie avec une propriété du cours.",
+      "enonce": "**Quatre affirmations sur les triangles.** Pour chacune, dis si elle est vraie ou fausse et justifie ta réponse par un calcul ou une propriété.\n\n**A.** « On peut construire un triangle dont les côtés mesurent 7 cm, 10 cm et 17 cm. »\n\n**B.** « Un triangle isocèle dont un angle à la base mesure 55° a un angle au sommet de 70°. »\n\n**C.** « Dans un triangle ABC, la médiane issue de A mesure 9 cm ; le centre de gravité G est à 6 cm de A. »\n\n**D.** « Un triangle qui a deux angles de 60° et de 65° est équilatéral. »",
+      "bareme": [
+        {
+          "critere": "A fausse : 7 + 10 = 17, donc points alignés, pas de triangle",
+          "points": 5
+        },
+        {
+          "critere": "B vraie : 180 − 55 − 55 = 70°",
+          "points": 5
+        },
+        {
+          "critere": "C vraie : G est aux deux tiers depuis le sommet, soit 6 cm",
+          "points": 5
+        },
+        {
+          "critere": "D fausse : troisième angle 55°, pas trois angles de 60°",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "**A. Fausse.** L’inégalité triangulaire demande que le plus grand côté soit strictement plus petit que la somme des deux autres. Ici 7 + 10 = 17 : il y a égalité, donc les trois points sont **alignés** et il n’y a pas de vrai triangle.\n\n**B. Vraie.** Les deux angles à la base sont égaux : 55° + 55° = 110°. L’angle au sommet vaut 180 − 110 = **70°**.\n\n**C. Vraie.** Le centre de gravité se trouve sur chaque médiane, aux **deux tiers depuis le sommet**. Donc AG = 2/3 × 9 = **6 cm** (et GM = 3 cm).\n\n**D. Fausse.** Le troisième angle vaut 180 − 60 − 65 = **55°**. Un triangle équilatéral aurait trois angles de 60° : ce triangle n’est même pas isocèle, ses trois angles sont différents."
+    },
+    {
+      "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+      "difficulte": 1,
+      "titre": "Un pavé droit de 6 cm sur 4 cm sur 3 cm",
+      "consigne": "Réponds à chaque question en écrivant la formule utilisée.",
+      "enonce": "**Questions de cours et d’application.** Un pavé droit mesure **6 cm de longueur, 4 cm de largeur et 3 cm de hauteur**.\n\n1. Combien a-t-il de faces, d’arêtes et de sommets ?\n2. Calcule son volume.\n3. Calcule son aire totale (somme des aires de toutes ses faces).",
+      "bareme": [
+        {
+          "critere": "6 faces, 12 arêtes et 8 sommets",
+          "points": 5
+        },
+        {
+          "critere": "Volume = 6 × 4 × 3 = 72 cm³",
+          "points": 7
+        },
+        {
+          "critere": "Aire totale = 2 × (24 + 18 + 12) = 108 cm²",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Un pavé droit a **6 faces** (des rectangles), **12 arêtes** et **8 sommets**.\n\n2. Volume = L × l × h = 6 × 4 × 3 = **72 cm³**.\n\n3. Aire totale = 2 × (L × l + L × h + l × h) = 2 × (6 × 4 + 6 × 3 + 4 × 3) = 2 × (24 + 18 + 12) = 2 × 54 = **108 cm²**.\n   Vérification face par face : 2 faces de 24 cm², 2 de 18 cm² et 2 de 12 cm² donnent 48 + 36 + 24 = 108 cm²."
+    },
+    {
+      "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+      "difficulte": 2,
+      "titre": "L’aquarium de Tom",
+      "consigne": "Réponds à chaque question en détaillant tes calculs et tes conversions.",
+      "enonce": "**Situation.** L’aquarium de Tom est un pavé droit de **60 cm de long, 30 cm de large et 40 cm de haut**.\n\n1. Calcule son volume en cm³ puis en litres.\n2. Tom verse **45 L** d’eau. Quelle est la hauteur d’eau dans l’aquarium ? (Pense que 1 L = 1 000 cm³.)\n3. Il colle des vitres sur les quatre faces latérales et sur le fond (pas de dessus). Quelle est l’aire totale du verre nécessaire ?",
+      "bareme": [
+        {
+          "critere": "Volume : 60 × 30 × 40 = 72 000 cm³ = 72 L",
+          "points": 5
+        },
+        {
+          "critere": "Hauteur d’eau : 45 000 ÷ (60 × 30) = 25 cm",
+          "points": 7
+        },
+        {
+          "critere": "Aire de verre : 2 × 2 400 + 2 × 1 200 + 1 800 = 9 000 cm²",
+          "points": 8
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Volume = L × l × h = 60 × 30 × 40 = **72 000 cm³**. Comme 1 L = 1 000 cm³, cela fait **72 L**.\n\n2. 45 L = 45 000 cm³. Le volume d’eau est celui d’un pavé droit de même base (60 × 30 = 1 800 cm²) et de hauteur h : 1 800 × h = 45 000, donc h = 45 000 ÷ 1 800 = **25 cm**. Cette hauteur est bien inférieure à 40 cm.\n\n3. Faces latérales : 2 faces de 60 × 40 = 2 400 cm² et 2 faces de 30 × 40 = 1 200 cm², soit 4 800 + 2 400 = 7 200 cm². Fond : 60 × 30 = 1 800 cm². Total : 7 200 + 1 800 = **9 000 cm²**."
+    },
+    {
+      "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+      "difficulte": 3,
+      "titre": "Se repérer dans la boîte ABCDEFGH",
+      "consigne": "Justifie tes réponses avec le vocabulaire et les formules du cours.",
+      "enonce": "**Situation.** ABCDEFGH est un pavé droit : ABCD est la face du dessous, EFGH celle du dessus, et E est au-dessus de A, F au-dessus de B, G au-dessus de C, H au-dessus de D. On prend **A comme origine** et les arêtes [AB], [AD] et [AE] comme axes, avec **AB = 8 cm, AD = 6 cm et AE = 5 cm**.\n\n1. Donne les coordonnées des points B, D, E et G dans ce repère (en écrivant (x ; y ; z), avec x sur (AB), y sur (AD), z sur (AE)).\n2. Calcule la longueur de la diagonale [AC] de la face ABCD.\n3. Les droites (AB) et (DH) sont-elles parallèles, sécantes ou non coplanaires ? Justifie. Que dire des plans (ABCD) et (EFGH) ?\n4. Calcule le volume du pavé.",
+      "bareme": [
+        {
+          "critere": "Coordonnées : B (8 ; 0 ; 0), D (0 ; 6 ; 0), E (0 ; 0 ; 5), G (8 ; 6 ; 5)",
+          "points": 5
+        },
+        {
+          "critere": "Diagonale [AC] par Pythagore : √(64 + 36) = 10 cm",
+          "points": 6
+        },
+        {
+          "critere": "(AB) et (DH) non coplanaires, justifiées ; plans (ABCD) et (EFGH) parallèles",
+          "points": 5
+        },
+        {
+          "critere": "Volume = 8 × 6 × 5 = 240 cm³",
+          "points": 4
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. B est sur l’axe des x : **B (8 ; 0 ; 0)**. D est sur l’axe des y : **D (0 ; 6 ; 0)**. E est sur l’axe des z : **E (0 ; 0 ; 5)**. G est le sommet opposé à A : **G (8 ; 6 ; 5)**.\n\n2. La diagonale [AC] est celle du rectangle ABCD, dont les côtés mesurent 8 et 6. Par Pythagore : AC² = 8² + 6² = 64 + 36 = 100, donc AC = **10 cm**.\n\n3. La droite (AB) est dans le plan du dessous, la droite (DH) est verticale. Elles ne sont pas parallèles (l’une est horizontale, l’autre verticale) et ne se coupent jamais : elles ne sont pas dans un même plan. Elles sont donc **non coplanaires**. Les plans (ABCD) et (EFGH) sont les faces opposées du pavé : ils sont **parallèles**.\n\n4. Volume = L × l × h = 8 × 6 × 5 = **240 cm³**."
+    },
+    {
+      "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+      "difficulte": 1,
+      "titre": "Volumes d’une pyramide et d’un cône",
+      "consigne": "Écris la formule, puis le calcul avec les unités.",
+      "enonce": "**Questions de cours et d’application.**\n\n1. Une pyramide a pour base un carré de **6 cm de côté** et pour hauteur **10 cm**. Calcule son volume.\n2. Un cône de révolution a pour rayon de base **3 cm** et pour hauteur **7 cm**. Donne son volume exact en fonction de π, puis arrondi à l’unité.\n3. Combien de faces a un tétraèdre ? Quelle est la nature de ces faces ?",
+      "bareme": [
+        {
+          "critere": "Pyramide : (1/3) × 36 × 10 = 120 cm³",
+          "points": 8
+        },
+        {
+          "critere": "Cône : (1/3) × π × 9 × 7 = 21π ≈ 66 cm³",
+          "points": 8
+        },
+        {
+          "critere": "Tétraèdre : 4 faces, toutes des triangles",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Aire de la base = 6 × 6 = 36 cm². Volume = (1/3) × aire de la base × hauteur = (1/3) × 36 × 10 = **120 cm³**.\n\n2. Volume = (1/3) × π × R² × h = (1/3) × π × 3² × 7 = (1/3) × π × 63 = **21π cm³**, soit environ **66 cm³** (21 × 3,14159… ≈ 65,97).\n\n3. Un tétraèdre est une pyramide à base triangulaire : il a **4 faces**, qui sont toutes des **triangles**."
+    },
+    {
+      "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+      "difficulte": 2,
+      "titre": "Le cornet de glace",
+      "consigne": "Réponds à chaque question en détaillant tes calculs.",
+      "enonce": "**Situation.** Un cornet de glace a la forme d’un cône de révolution de **rayon 3 cm** et de **hauteur 12 cm**. On suppose qu’il est rempli à ras bord.\n\n1. Calcule le volume du cornet : d’abord la valeur exacte en fonction de π, puis la valeur arrondie au dixième de cm³.\n2. Convertis ce volume en millilitres (arrondi à l’unité).\n3. Combien de cornets peut-on remplir entièrement avec une bouteille de crème glacée liquide de **1 L** ?",
+      "bareme": [
+        {
+          "critere": "Volume exact (1/3) × π × 9 × 12 = 36π ≈ 113,1 cm³",
+          "points": 8
+        },
+        {
+          "critere": "113,1 cm³ = 113,1 mL, soit environ 113 mL (1 cm³ = 1 mL)",
+          "points": 4
+        },
+        {
+          "critere": "1 000 ÷ 113,1 ≈ 8,84 : 8 cornets entiers",
+          "points": 8
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Volume = (1/3) × π × R² × h = (1/3) × π × 3² × 12 = (1/3) × π × 108 = **36π cm³**, soit environ **113,1 cm³** (36 × 3,14159 ≈ 113,10).\n\n2. 1 cm³ = 1 mL, donc le cornet contient environ **113 mL**.\n\n3. 1 L = 1 000 mL. On calcule 1 000 ÷ 113,1 ≈ 8,84. On ne peut remplir que des cornets entiers : **8 cornets** (le neuvième ne serait rempli qu’aux 84 %)."
+    },
+    {
+      "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+      "difficulte": 3,
+      "titre": "Une pyramide coupée près du sommet",
+      "consigne": "Justifie tes calculs avec les rapports de réduction du cours.",
+      "enonce": "**Situation.** La pyramide SABCD a pour base un carré ABCD de **9 cm de côté** et pour hauteur **12 cm**. On la coupe par un plan **parallèle à la base**, situé à **4 cm du sommet S** (mesurés sur la hauteur). La section est un carré, et la petite pyramide au-dessus de la section est une réduction de la grande.\n\n1. Calcule le volume de la grande pyramide.\n2. Quel est le coefficient de réduction k ? Quel est le côté de la section ?\n3. Calcule l’aire de la section de deux façons : avec son côté, puis avec k².\n4. Calcule le volume de la petite pyramide de deux façons : avec la formule (1/3) × aire × hauteur, puis avec k³.",
+      "bareme": [
+        {
+          "critere": "Grande pyramide : (1/3) × 81 × 12 = 324 cm³",
+          "points": 4
+        },
+        {
+          "critere": "k = 4/12 = 1/3 et côté de la section : 9 × 1/3 = 3 cm",
+          "points": 5
+        },
+        {
+          "critere": "Aire de la section : 3² = 9 cm² et 81 × (1/3)² = 9 cm²",
+          "points": 4
+        },
+        {
+          "critere": "Petite pyramide : (1/3) × 9 × 4 = 12 cm³ et 324 × (1/3)³ = 12 cm³",
+          "points": 7
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Aire de la base = 9 × 9 = 81 cm². Volume = (1/3) × 81 × 12 = 27 × 12 = **324 cm³**.\n\n2. La petite pyramide a pour hauteur 4 cm au lieu de 12 cm : k = 4 ÷ 12 = **1/3**. Les longueurs sont multipliées par 1/3 : le côté de la section vaut 9 × 1/3 = **3 cm**.\n\n3. Avec le côté : 3 × 3 = **9 cm²**. Avec k² : 81 × (1/3)² = 81 × 1/9 = **9 cm²**. Les deux résultats concordent : les aires sont multipliées par k².\n\n4. Avec la formule : (1/3) × 9 × 4 = **12 cm³**. Avec k³ : 324 × (1/3)³ = 324 × 1/27 = **12 cm³**. Les volumes sont multipliés par k³. Le volume du morceau restant vaut 324 − 12 = 312 cm³."
+    },
+    {
+      "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+      "difficulte": 1,
+      "titre": "Agrandir un rectangle",
+      "consigne": "Réponds à chaque question en écrivant le calcul effectué.",
+      "enonce": "**Questions de cours et d’application.** Un rectangle mesure **4 cm sur 6 cm**. On l’agrandit avec un rapport **k = 2,5**.\n\n1. Calcule les dimensions du rectangle agrandi.\n2. Calcule l’aire de chaque rectangle et vérifie que le rapport des aires est égal à k².\n3. Les angles du rectangle sont-ils modifiés par l’agrandissement ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Dimensions agrandies : 4 × 2,5 = 10 cm et 6 × 2,5 = 15 cm",
+          "points": 6
+        },
+        {
+          "critere": "Aires 24 cm² et 150 cm², rapport 150 ÷ 24 = 6,25 = 2,5²",
+          "points": 8
+        },
+        {
+          "critere": "Angles conservés : ils restent droits (90°)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Toutes les longueurs sont multipliées par k = 2,5 : 4 × 2,5 = **10 cm** et 6 × 2,5 = **15 cm**.\n\n2. Aire initiale : 4 × 6 = **24 cm²**. Aire agrandie : 10 × 15 = **150 cm²**. Le rapport des aires vaut 150 ÷ 24 = **6,25**, et k² = 2,5 × 2,5 = 6,25 : les aires sont bien multipliées par k², pas par k.\n\n3. Les angles ne sont **pas modifiés** : un agrandissement conserve la forme, donc les angles gardent la même mesure. Le rectangle agrandi a toujours quatre angles droits."
+    },
+    {
+      "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+      "difficulte": 2,
+      "titre": "La maquette du phare",
+      "consigne": "Réponds à chaque question en détaillant tes calculs et tes conversions.",
+      "enonce": "**Situation.** Une maquette d’un phare est construite à l’échelle **1/40**. Le vrai phare mesure **30 m** de haut.\n\n1. Quelle est la hauteur de la maquette, en cm ?\n2. Une vitre de la lanterne mesure **12 cm²** sur la maquette. Quelle est l’aire réelle de cette vitre, en cm² puis en m² ?\n3. Le volume de la lanterne sur la maquette est de **90 cm³**. Quel est son volume réel, en m³ ?",
+      "bareme": [
+        {
+          "critere": "Hauteur de la maquette : 3 000 ÷ 40 = 75 cm",
+          "points": 5
+        },
+        {
+          "critere": "Aire réelle : 12 × 40² = 19 200 cm² = 1,92 m²",
+          "points": 7
+        },
+        {
+          "critere": "Volume réel : 90 × 40³ = 5 760 000 cm³ = 5,76 m³",
+          "points": 8
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Sur la maquette, les longueurs sont divisées par 40. 30 m = 3 000 cm, et 3 000 ÷ 40 = **75 cm**.\n\n2. La réalité est un agrandissement de rapport k = 40 de la maquette : les aires sont multipliées par k² = 40² = 1 600. Aire réelle = 12 × 1 600 = **19 200 cm²**. Comme 1 m² = 10 000 cm², cela fait **1,92 m²**.\n\n3. Les volumes sont multipliés par k³ = 40³ = 64 000. Volume réel = 90 × 64 000 = 5 760 000 cm³. Comme 1 m³ = 1 000 000 cm³, cela fait **5,76 m³**."
+    },
+    {
+      "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+      "difficulte": 3,
+      "titre": "La statue et sa figurine",
+      "consigne": "Justifie chaque calcul avec le rapport d’agrandissement ou de réduction.",
+      "enonce": "**Situation.** Une figurine est une réduction à l’échelle **1/30** d’une statue de **4,5 m** de haut. La figurine est faite de la même matière que la statue et pèse **120 g** ; la statue est pleine. Pour la peindre, il faut couvrir **27 m²** de surface sur la statue.\n\n1. Calcule la hauteur de la figurine, en cm.\n2. Quelle est la surface à peindre sur la figurine, en cm² ?\n3. Quelle est la masse de la statue, en kg ? (La masse est proportionnelle au volume, car la matière est la même.)\n4. Karim affirme : « La statue est 30 fois plus lourde que la figurine, puisque l’échelle est 1/30. » Explique son erreur.",
+      "bareme": [
+        {
+          "critere": "Hauteur de la figurine : 450 ÷ 30 = 15 cm",
+          "points": 4
+        },
+        {
+          "critere": "Surface : 270 000 ÷ 30² = 300 cm²",
+          "points": 6
+        },
+        {
+          "critere": "Masse : 120 × 30³ = 3 240 000 g = 3 240 kg",
+          "points": 6
+        },
+        {
+          "critere": "Erreur de Karim : les volumes sont multipliés par 30³ = 27 000, pas par 30",
+          "points": 4
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. 4,5 m = 450 cm ; la réduction divise les longueurs par 30 : 450 ÷ 30 = **15 cm**.\n\n2. 27 m² = 270 000 cm². Les aires sont multipliées par k² = 30² = 900 de la figurine à la statue, donc l’aire de la figurine vaut 270 000 ÷ 900 = **300 cm²**.\n\n3. Les volumes sont multipliés par k³ = 30³ = 27 000. La matière étant la même, la masse suit le volume : 120 × 27 000 = 3 240 000 g = **3 240 kg** (3,24 tonnes).\n\n4. Karim confond le rapport des **longueurs** avec celui des **masses**. La masse suit le volume, qui est multiplié par k³ = 27 000, et non par 30. La statue est donc **27 000 fois** plus lourde que la figurine."
+    },
+    {
+      "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+      "difficulte": 1,
+      "titre": "Égaux ou semblables ?",
+      "consigne": "Justifie chaque réponse avec un cas du cours.",
+      "enonce": "**Questions de cours et d’application.**\n\n1. Les triangles ABC et DEF vérifient **AB = DE = 5 cm**, **AC = DF = 6 cm** et **l’angle A = l’angle D = 40°**. Sont-ils égaux ? Quel cas d’égalité utilises-tu ? Que peux-tu dire de BC et EF ?\n2. Cite les trois cas d’égalité des triangles.\n3. Deux triangles ont chacun deux angles de **50°** et de **60°**. Sont-ils semblables ? Quel est leur troisième angle ?",
+      "bareme": [
+        {
+          "critere": "Triangles égaux par le cas deux côtés et l’angle compris ; BC = EF",
+          "points": 7
+        },
+        {
+          "critere": "Trois cas : trois côtés ; deux côtés et l’angle compris ; un côté et deux angles adjacents",
+          "points": 6
+        },
+        {
+          "critere": "Semblables (deux angles égaux) ; troisième angle 70°",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les deux triangles ont deux côtés égaux deux à deux et **l’angle compris entre ces côtés** égal : c’est le cas « deux côtés et l’angle compris ». Les triangles ABC et DEF sont donc **égaux**. Leurs côtés restants sont égaux : **BC = EF**.\n\n2. Trois cas d’égalité : **trois côtés** égaux deux à deux ; **deux côtés et l’angle compris** entre eux ; **un côté et les deux angles adjacents**.\n\n3. Deux angles égaux (50° et 60°) suffisent à démontrer que deux triangles sont **semblables**. Le troisième angle vaut 180 − 50 − 60 = **70°** dans chacun des deux triangles."
+    },
+    {
+      "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+      "difficulte": 2,
+      "titre": "Deux triangles semblables",
+      "consigne": "Réponds à chaque question en justifiant avec le rapport de similitude.",
+      "enonce": "**Situation.** Le triangle ABC est rectangle en A, avec **AB = 3 cm, AC = 4 cm et BC = 5 cm**. Le triangle DEF est semblable à ABC, avec les correspondances A↔D, B↔E, C↔F, et **DE = 7,5 cm**.\n\n1. Calcule le rapport de similitude k de ABC à DEF.\n2. Calcule DF et EF.\n3. Calcule l’aire de ABC. En déduire l’aire de DEF avec k², puis vérifie-la avec les longueurs de DEF (rappel : DEF est rectangle en D).",
+      "bareme": [
+        {
+          "critere": "Rapport k = DE ÷ AB = 7,5 ÷ 3 = 2,5",
+          "points": 5
+        },
+        {
+          "critere": "DF = 4 × 2,5 = 10 cm et EF = 5 × 2,5 = 12,5 cm",
+          "points": 7
+        },
+        {
+          "critere": "Aire ABC = 6 cm², aire DEF = 6 × 6,25 = 37,5 cm², vérifiée par 7,5 × 10 ÷ 2",
+          "points": 8
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les côtés homologues sont AB et DE : k = DE ÷ AB = 7,5 ÷ 3 = **2,5**.\n\n2. Les longueurs de DEF sont celles de ABC multipliées par 2,5 : DF = 4 × 2,5 = **10 cm** (homologue de AC) et EF = 5 × 2,5 = **12,5 cm** (homologue de BC).\n\n3. ABC est rectangle en A : aire = 3 × 4 ÷ 2 = **6 cm²**. Les aires sont multipliées par k² = 2,5² = 6,25 : aire de DEF = 6 × 6,25 = **37,5 cm²**.\n   Vérification : DEF est rectangle en D, donc son aire est 7,5 × 10 ÷ 2 = 75 ÷ 2 = 37,5 cm². Les deux calculs concordent."
+    },
+    {
+      "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+      "difficulte": 3,
+      "titre": "La hauteur de l’arbre",
+      "consigne": "Rédige comme dans le cours : hypothèses, conclusion, puis calculs.",
+      "enonce": "**Situation.** À midi, un piquet vertical de **1,5 m** projette une ombre de **2 m** sur un sol horizontal. Au même moment, l’ombre d’un arbre mesure **12 m**. Les rayons du soleil sont parallèles. On appelle ABC le triangle formé par le piquet, son ombre et le rayon (rectangle au pied du piquet), et DEF celui formé par l’arbre, son ombre et le rayon (rectangle au pied de l’arbre).\n\n1. Explique pourquoi les triangles ABC et DEF sont semblables (rédige en utilisant le critère des deux angles).\n2. Calcule le rapport de similitude, puis la hauteur de l’arbre.\n3. Calcule l’aire du triangle ABC, puis celle du triangle DEF avec k². Vérifie avec les dimensions de DEF.",
+      "bareme": [
+        {
+          "critere": "Justification rédigée : angle droit et angle du rayon du soleil égaux, donc semblables",
+          "points": 7
+        },
+        {
+          "critere": "Rapport 12 ÷ 2 = 6, hauteur de l’arbre 1,5 × 6 = 9 m",
+          "points": 6
+        },
+        {
+          "critere": "Aires 1,5 m² et 1,5 × 36 = 54 m², vérifiée par 9 × 12 ÷ 2",
+          "points": 7
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Dans les triangles ABC et DEF : les deux triangles ont un **angle droit** (le piquet et l’arbre sont verticaux, le sol est horizontal), et l’angle formé par le rayon du soleil et le sol est **le même**, car les rayons sont parallèles. Deux angles sont égaux deux à deux, **donc ABC et DEF sont semblables**. Par conséquent leurs côtés homologues sont proportionnels.\n\n2. Rapport de similitude : k = ombre de l’arbre ÷ ombre du piquet = 12 ÷ 2 = **6**. Hauteur de l’arbre = 1,5 × 6 = **9 m**.\n\n3. Aire de ABC : 1,5 × 2 ÷ 2 = **1,5 m²**. Les aires sont multipliées par k² = 36 : aire de DEF = 1,5 × 36 = **54 m²**. Vérification : 9 × 12 ÷ 2 = 108 ÷ 2 = 54 m²."
+    },
+    {
+      "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+      "difficulte": 1,
+      "titre": "Calculer une longueur avec Thalès",
+      "consigne": "Écris les quotients dans le bon ordre, puis résous par le produit en croix.",
+      "enonce": "**Situation.** Dans le triangle ABC, le point M est sur [AB] et le point N est sur [AC], avec **(MN) // (BC)**. On donne **AM = 3 cm, AB = 5 cm, AN = 4,5 cm et MN = 6 cm**.\n\n1. Écris les égalités de quotients données par le théorème de Thalès.\n2. Calcule AC.\n3. Calcule BC.",
+      "bareme": [
+        {
+          "critere": "Égalités AM/AB = AN/AC = MN/BC, avec les hypothèses citées",
+          "points": 6
+        },
+        {
+          "critere": "AC = 4,5 × 5 ÷ 3 = 7,5 cm",
+          "points": 7
+        },
+        {
+          "critere": "BC = 6 × 5 ÷ 3 = 10 cm",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les points A, M, B sont alignés, les points A, N, C sont alignés et (MN) // (BC). D’après le théorème de Thalès :\n   **AM/AB = AN/AC = MN/BC**, soit 3/5 = 4,5/AC = 6/BC.\n\n2. 3/5 = 4,5/AC. Produit en croix : AC = 4,5 × 5 ÷ 3 = 22,5 ÷ 3 = **7,5 cm**.\n\n3. 3/5 = 6/BC. Produit en croix : BC = 6 × 5 ÷ 3 = 30 ÷ 3 = **10 cm**.\n\nVérification : 3/5 = 0,6 ; 4,5/7,5 = 0,6 ; 6/10 = 0,6. Les trois quotients sont égaux."
+    },
+    {
+      "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+      "difficulte": 2,
+      "titre": "La largeur de la mare",
+      "consigne": "Réponds à chaque question en rédigeant avec le théorème de Thalès.",
+      "enonce": "**Situation.** Pour mesurer la largeur d’une mare, des élèves plantent un piquet en A. Les points B et C sont sur les deux rives (on ne peut pas mesurer BC). Ils placent M sur la droite (AB) et N sur la droite (AC), de l’autre côté de A (A est entre B et M, et entre C et N), de sorte que **(MN) // (BC)**. Ils mesurent : **AB = 15 m, AM = 6 m, AN = 8 m et MN = 9 m**.\n\n1. Comment appelle-t-on cette configuration ? Quelles hypothèses permettent d’appliquer Thalès ?\n2. Écris les égalités de quotients.\n3. Calcule AC.\n4. Calcule la largeur BC de la mare.",
+      "bareme": [
+        {
+          "critere": "Configuration papillon, hypothèses : alignements et (MN) // (BC)",
+          "points": 5
+        },
+        {
+          "critere": "Égalités AM/AB = AN/AC = MN/BC, sommet A en tête de chaque quotient",
+          "points": 5
+        },
+        {
+          "critere": "AC = 8 × 15 ÷ 6 = 20 m",
+          "points": 4
+        },
+        {
+          "critere": "BC = 9 × 15 ÷ 6 = 22,5 m",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les points M et N sont de part et d’autre du sommet A : c’est la configuration **papillon**. Hypothèses : A, B, M sont alignés, A, C, N sont alignés et (MN) // (BC).\n\n2. D’après le théorème de Thalès : **AM/AB = AN/AC = MN/BC**, soit 6/15 = 8/AC = 9/BC.\n\n3. 6/15 = 8/AC, donc AC = 8 × 15 ÷ 6 = 120 ÷ 6 = **20 m**.\n\n4. 6/15 = 9/BC, donc BC = 9 × 15 ÷ 6 = 135 ÷ 6 = **22,5 m**.\n\nLa mare mesure donc 22,5 m de large. Vérification : 6/15 = 0,4 ; 8/20 = 0,4 ; 9/22,5 = 0,4."
+    },
+    {
+      "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+      "difficulte": 3,
+      "titre": "Parallèles ou non ? La réciproque en action",
+      "consigne": "Rédige chaque démonstration : quotients calculés, comparés, puis conclusion.",
+      "enonce": "**Situation.** Dans un triangle ABC, M est sur [AB] et N est sur [AC].\n\n**Cas 1.** AM = 3 cm, AB = 5 cm, AN = 4,5 cm, AC = 7,5 cm.\n**Cas 2.** AM = 4 cm, AB = 6 cm, AN = 5 cm, AC = 8 cm.\n\n1. Dans le cas 1, les droites (MN) et (BC) sont-elles parallèles ? Justifie.\n2. Dans le cas 2, les droites (MN) et (BC) sont-elles parallèles ? Justifie.\n3. Dans le cas 1, on sait que BC = 9 cm. Calcule MN.\n4. Dans le cas 1, l’aire du triangle ABC est de 40 cm². Calcule l’aire du triangle AMN.",
+      "bareme": [
+        {
+          "critere": "Cas 1 : 3/5 = 0,6 = 4,5/7,5, alignements dans le même ordre, donc parallèles",
+          "points": 6
+        },
+        {
+          "critere": "Cas 2 : 4/6 ≈ 0,667 et 5/8 = 0,625, différents, donc non parallèles",
+          "points": 6
+        },
+        {
+          "critere": "MN = 0,6 × 9 = 5,4 cm",
+          "points": 4
+        },
+        {
+          "critere": "Aire AMN = 40 × 0,6² = 14,4 cm²",
+          "points": 4
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Les points A, M, B d’une part, A, N, C d’autre part sont alignés dans le même ordre. On compare AM/AB = 3/5 = 0,6 et AN/AC = 4,5/7,5 = 0,6. Les deux quotients sont égaux : d’après la **réciproque du théorème de Thalès**, **(MN) // (BC)**.\n\n2. On compare AM/AB = 4/6 = 2/3 ≈ 0,667 et AN/AC = 5/8 = 0,625. Les deux quotients sont **différents** : si (MN) était parallèle à (BC), Thalès donnerait l’égalité. Donc **(MN) n’est pas parallèle à (BC)**.\n\n3. Dans le cas 1, (MN) // (BC), donc MN/BC = 3/5 = 0,6. Alors MN = 0,6 × 9 = **5,4 cm**.\n\n4. Le triangle AMN est une réduction du triangle ABC de rapport k = 3/5 = 0,6. Les aires sont multipliées par k² = 0,36 : aire de AMN = 40 × 0,36 = **14,4 cm²**."
+    },
+    {
+      "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+      "difficulte": 1,
+      "titre": "Pythagore et un cosinus",
+      "consigne": "Écris la formule ou la propriété utilisée avant chaque calcul.",
+      "enonce": "**Questions de cours et d’application.**\n\n1. Le triangle ABC est rectangle en A, avec **AB = 6 cm** et **AC = 8 cm**. Calcule BC.\n2. Le triangle DEF est rectangle en D, avec **EF = 13 cm** et **DE = 5 cm**. Calcule DF.\n3. Dans le triangle ABC de la question 1, calcule le cosinus de l’angle ABC, puis donne l’angle arrondi au degré.",
+      "bareme": [
+        {
+          "critere": "BC² = 36 + 64 = 100, donc BC = 10 cm",
+          "points": 7
+        },
+        {
+          "critere": "DF² = 169 − 25 = 144, donc DF = 12 cm (on soustrait)",
+          "points": 7
+        },
+        {
+          "critere": "cos(ABC) = 6/10 = 0,6, angle ≈ 53°",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ABC est rectangle en A : BC est l’hypoténuse. BC² = AB² + AC² = 36 + 64 = 100, donc BC = **10 cm**.\n\n2. DEF est rectangle en D : EF est l’hypoténuse. On cherche un côté de l’angle droit, donc on soustrait : DF² = EF² − DE² = 169 − 25 = 144, donc DF = **12 cm**.\n\n3. cos(ABC) = côté adjacent ÷ hypoténuse = AB ÷ BC = 6 ÷ 10 = **0,6**. Avec la calculatrice en degrés : cos⁻¹(0,6) ≈ 53,13°, soit environ **53°**."
+    },
+    {
+      "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+      "difficulte": 2,
+      "titre": "L’échelle contre le mur",
+      "consigne": "Réponds à chaque question en détaillant tes calculs (calculatrice en degrés).",
+      "enonce": "**Situation.** Une échelle de **5 m** est posée contre un mur vertical, sur un sol horizontal. Son pied est à **1,4 m** du mur.\n\n1. À quelle hauteur du mur l’échelle arrive-t-elle ?\n2. Calcule l’angle que fait l’échelle avec le sol, arrondi au degré.\n3. Pour être stable, l’échelle doit faire avec le sol un angle compris entre 65° et 75°. L’échelle est-elle bien posée ?",
+      "bareme": [
+        {
+          "critere": "Hauteur : √(25 − 1,96) = √23,04 = 4,8 m, en soustrayant les carrés",
+          "points": 7
+        },
+        {
+          "critere": "cos(angle) = 1,4 ÷ 5 = 0,28, angle ≈ 74°",
+          "points": 8
+        },
+        {
+          "critere": "Conclusion : 74° est compris entre 65° et 75°, l’échelle est bien posée",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le mur, le sol et l’échelle forment un triangle rectangle où l’échelle est l’**hypoténuse** (5 m). Hauteur² = 5² − 1,4² = 25 − 1,96 = 23,04, donc hauteur = √23,04 = **4,8 m**.\n\n2. Dans ce triangle, le côté adjacent à l’angle au sol est la distance au mur (1,4 m) : cos(angle) = 1,4 ÷ 5 = 0,28. Avec la calculatrice : cos⁻¹(0,28) ≈ 73,7°, soit environ **74°**.\n\n3. 65° < 74° < 75° : l’échelle est **bien posée**."
+    },
+    {
+      "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+      "difficulte": 3,
+      "titre": "Un terrain rectangle ?",
+      "consigne": "Rédige chaque démonstration avec la réciproque ou la contraposée, puis calcule les angles.",
+      "enonce": "**Situation.** Deux terrains triangulaires sont dessinés sur un plan.\n\n**Terrain 1 :** ABC avec AB = 9 m, AC = 12 m et BC = 15 m.\n**Terrain 2 :** DEF avec DE = 5 m, DF = 7 m et EF = 9 m.\n\n1. Le terrain 1 est-il rectangle ? Si oui, en quel sommet ?\n2. Le terrain 2 est-il rectangle ? Justifie.\n3. Pour le terrain 1, calcule le cosinus de l’angle B, puis les angles B et C arrondis au degré.\n4. Un élève écrit : « cos C = 15 ÷ 12 = 1,25 ». Explique son erreur et donne la bonne valeur de cos C.",
+      "bareme": [
+        {
+          "critere": "Terrain 1 rectangle en A : 81 + 144 = 225 = 15², par la réciproque",
+          "points": 6
+        },
+        {
+          "critere": "Terrain 2 non rectangle : 25 + 49 = 74 différent de 81, contraposée",
+          "points": 5
+        },
+        {
+          "critere": "cos B = 9/15 = 0,6, B ≈ 53° et C ≈ 37°",
+          "points": 5
+        },
+        {
+          "critere": "Erreur : l’hypoténuse doit être au dénominateur ; cos C = 12/15 = 0,8",
+          "points": 4
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Le plus grand côté est BC = 15 m. BC² = 225 et AB² + AC² = 81 + 144 = 225. Les deux sont égaux : d’après la **réciproque du théorème de Pythagore**, ABC est **rectangle en A** (angle droit opposé au plus grand côté).\n\n2. Le plus grand côté est EF = 9 m. EF² = 81 et DE² + DF² = 25 + 49 = 74. Comme 81 ≠ 74, d’après la **contraposée** du théorème de Pythagore, DEF **n’est pas rectangle**.\n\n3. cos B = côté adjacent ÷ hypoténuse = AB ÷ BC = 9 ÷ 15 = **0,6**, donc B ≈ 53° (cos⁻¹(0,6) ≈ 53,13°). Comme le triangle est rectangle en A, C = 90 − 53 = **37°**.\n\n4. L’élève a inversé le quotient : le cosinus est le côté adjacent **divisé par l’hypoténuse**, et l’hypoténuse (15) va au dénominateur. Un cosinus d’angle aigu est toujours compris entre 0 et 1 : 1,25 est un signal d’erreur. Pour l’angle C, le côté adjacent est AC : cos C = 12 ÷ 15 = **0,8**, donc C ≈ 37°, ce qui confirme la question 3."
+    },
+    {
+      "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+      "difficulte": 1,
+      "titre": "Propriétés d’un parallélogramme",
+      "consigne": "Réponds à chaque question en citant la propriété utilisée.",
+      "enonce": "**Questions de cours et d’application.** ABCD est un parallélogramme de centre O (O est le point d’intersection de ses diagonales). On donne **AB = 7 cm, AD = 4 cm, l’angle A = 70°, AC = 10 cm et BD = 8 cm**.\n\n1. Donne les longueurs CD et BC, et la mesure de l’angle C.\n2. Donne les longueurs OA et OB.\n3. Quel est le centre de symétrie de ABCD ? Combien a-t-il d’axes de symétrie ?",
+      "bareme": [
+        {
+          "critere": "CD = 7 cm, BC = 4 cm, angle C = 70° (côtés et angles opposés égaux)",
+          "points": 7
+        },
+        {
+          "critere": "OA = 5 cm et OB = 4 cm (les diagonales se coupent en leur milieu)",
+          "points": 7
+        },
+        {
+          "critere": "Centre de symétrie : O ; aucun axe de symétrie",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Dans un parallélogramme, les côtés opposés ont la même longueur : **CD = AB = 7 cm** et **BC = AD = 4 cm**. Les angles opposés sont égaux : **angle C = angle A = 70°**.\n\n2. Les diagonales d’un parallélogramme se coupent en leur milieu : OA = AC ÷ 2 = 10 ÷ 2 = **5 cm** et OB = BD ÷ 2 = 8 ÷ 2 = **4 cm**.\n\n3. Le centre de symétrie est le point d’intersection des diagonales : **O**. Un parallélogramme quelconque n’a **aucun axe de symétrie**."
+    },
+    {
+      "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+      "difficulte": 2,
+      "titre": "Rectangle, losange ou carré ?",
+      "consigne": "Pour chaque quadrilatère, écris une phrase de démonstration comme dans le cours.",
+      "enonce": "**Situation.** Trois quadrilatères sont tracés sur un plan. Dans chacun, les diagonales se coupent **en leur milieu**.\n\n- **EFGH** : ses diagonales mesurent toutes les deux 12 cm.\n- **IJKL** : ses diagonales sont perpendiculaires.\n- **MNPQ** : ses diagonales mesurent toutes les deux 10 cm et sont perpendiculaires.\n\n1. Quelle est la nature de EFGH ? Rédige la démonstration.\n2. Quelle est la nature de IJKL ? Rédige la démonstration.\n3. Quelle est la nature de MNPQ ? Rédige la démonstration.\n4. Donne le nombre d’axes de symétrie de chacun de ces trois quadrilatères.",
+      "bareme": [
+        {
+          "critere": "EFGH est un rectangle : diagonales de même milieu et de même longueur",
+          "points": 5
+        },
+        {
+          "critere": "IJKL est un losange : diagonales de même milieu et perpendiculaires",
+          "points": 5
+        },
+        {
+          "critere": "MNPQ est un carré : diagonales de même milieu, égales et perpendiculaires",
+          "points": 5
+        },
+        {
+          "critere": "Axes de symétrie : rectangle 2, losange 2, carré 4",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. « Les diagonales de EFGH se coupent en leur milieu, donc EFGH est un parallélogramme. Ses diagonales ont la même longueur, **donc EFGH est un rectangle**. »\n\n2. « Les diagonales de IJKL se coupent en leur milieu, donc IJKL est un parallélogramme. Ses diagonales sont perpendiculaires, **donc IJKL est un losange**. »\n\n3. « Les diagonales de MNPQ se coupent en leur milieu, sont de même longueur et sont perpendiculaires : MNPQ est à la fois un rectangle et un losange, **donc MNPQ est un carré**. »\n\n4. Un rectangle a **2 axes** de symétrie, un losange **2 axes**, un carré **4 axes** (rappel : un parallélogramme quelconque n’en a aucun)."
+    },
+    {
+      "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+      "difficulte": 3,
+      "titre": "Le losange ABCD",
+      "consigne": "Rédige chaque réponse avec la propriété du cours, puis calcule.",
+      "enonce": "**Situation.** ABCD est un parallélogramme dont deux côtés consécutifs sont égaux : **AB = BC = 5 cm**. Ses diagonales se coupent en O, avec **AC = 6 cm** et **BD = 8 cm**. Les diagonales sont perpendiculaires.\n\n1. Quelle est la nature de ABCD ? Justifie. Que valent alors AD et CD ?\n2. Donne les longueurs OA et OB. ABCD est-il un carré ? Justifie.\n3. Combien ABCD a-t-il d’axes de symétrie ? Quel est son centre de symétrie ?\n4. Le losange est découpé par ses diagonales en quatre triangles rectangles superposables. Calcule l’aire d’un de ces triangles (rectangle en O), puis l’aire de ABCD.",
+      "bareme": [
+        {
+          "critere": "Losange : parallélogramme avec deux côtés consécutifs égaux ; AD = CD = 5 cm",
+          "points": 5
+        },
+        {
+          "critere": "OA = 3 cm, OB = 4 cm ; pas un carré car les diagonales 6 et 8 sont différentes",
+          "points": 5
+        },
+        {
+          "critere": "Deux axes de symétrie, centre de symétrie O",
+          "points": 4
+        },
+        {
+          "critere": "Triangle AOB : 3 × 4 ÷ 2 = 6 cm² ; aire du losange 4 × 6 = 24 cm²",
+          "points": 6
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. ABCD est un parallélogramme qui a deux côtés consécutifs de même longueur (AB = BC) : **c’est un losange**. Ses quatre côtés sont égaux, donc **AD = CD = 5 cm**.\n\n2. Les diagonales se coupent en leur milieu : OA = 6 ÷ 2 = **3 cm** et OB = 8 ÷ 2 = **4 cm**. ABCD n’est **pas un carré** : un carré a des diagonales de même longueur, or AC = 6 cm et BD = 8 cm sont différentes (le losange n’est pas un rectangle).\n\n3. Un losange a **2 axes de symétrie** (ses diagonales) ; son centre de symétrie est **O**, intersection des diagonales.\n\n4. Le triangle AOB est rectangle en O, avec OA = 3 cm et OB = 4 cm : aire = 3 × 4 ÷ 2 = **6 cm²**. Les quatre triangles étant superposables, l’aire de ABCD = 4 × 6 = **24 cm²**."
+    }
+  ]
+}

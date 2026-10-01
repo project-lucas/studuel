@@ -1,0 +1,495 @@
+{
+  "niveau": "1re",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+      "difficulte": 1,
+      "titre": "La punaise et le pouce",
+      "consigne": "Réponds à chaque question en donnant la formule utilisée, les conversions d'unités et le résultat avec son unité.",
+      "enonce": "**Situation.** Pour accrocher une affiche, Malik enfonce une punaise dans un panneau de liège en appuyant avec son pouce. Il exerce une force pressante de valeur **F = 20 N**, transmise intégralement par la punaise.\n\n- Surface de la tête de la punaise, en contact avec le pouce : **S(tête) = 1,0 cm²**\n- Surface de la pointe, en contact avec le liège : **S(pointe) = 0,10 mm²**\n\n1. Donne la définition de la pression, sa formule et son unité dans le Système international. Précise la direction d'une force pressante par rapport à la surface.\n2. Convertis les deux surfaces en m², puis calcule la pression exercée sur le pouce et la pression exercée sur le liège.\n3. Exprime la pression exercée sur le liège en bar, puis explique pourquoi la pointe s'enfonce dans le liège alors que le pouce n'est pas blessé.",
+      "bareme": [
+        { "critere": "Définition p = F / S, unité pascal (1 Pa = 1 N/m²), force perpendiculaire à la surface", "points": 6 },
+        { "critere": "Conversions justes (1,0 × 10⁻⁴ m² et 1,0 × 10⁻⁷ m²) et deux pressions calculées : 2,0 × 10⁵ Pa et 2,0 × 10⁸ Pa", "points": 9 },
+        { "critere": "Conversion en bar (2 000 bar) et explication : même force, surface mille fois plus petite, pression mille fois plus grande", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **pression** est le quotient de la force pressante par la surface sur laquelle elle s'exerce : **p = F / S**. Elle s'exprime en **pascals (Pa)**, avec 1 Pa = 1 N/m². La force pressante est toujours **perpendiculaire** à la surface.\n2. Conversions : 1,0 cm² = 1,0 × 10⁻⁴ m² ; 0,10 mm² = 0,10 × 10⁻⁶ m² = 1,0 × 10⁻⁷ m².\n- Sur le pouce : p = 20 / (1,0 × 10⁻⁴) = **2,0 × 10⁵ Pa**.\n- Sur le liège : p = 20 / (1,0 × 10⁻⁷) = **2,0 × 10⁸ Pa**.\n3. 1 bar = 100 000 Pa, donc 2,0 × 10⁸ Pa = **2 000 bar**. La force est la même des deux côtés, mais la surface de la pointe est **mille fois plus petite** que celle de la tête : la pression sur le liège est donc **mille fois plus grande** (2 000 bar contre 2 bar). C'est cette pression énorme qui fait pénétrer la pointe, alors que la pression sur le pouce reste modérée."
+    },
+    {
+      "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+      "difficulte": 2,
+      "titre": "La plongée d'Inès",
+      "consigne": "Réponds en citant la loi utilisée, en détaillant les calculs et en donnant les résultats avec trois chiffres significatifs.",
+      "enonce": "**Situation.** Inès plonge en mer. À la surface, la pression atmosphérique vaut **p(A) = 1,013 × 10⁵ Pa**. L'eau de mer est un liquide incompressible au repos, de masse volumique **ρ = 1 025 kg/m³** ; on prend **g = 9,8 N/kg**.\n\n1. Énonce la loi fondamentale de la statique des fluides et précise la signification de chaque grandeur.\n2. Inès descend à **12 m** de profondeur. Calcule l'augmentation de pression par rapport à la surface, puis la pression totale qu'elle subit. Exprime-la aussi en bar.\n3. La vitre de son masque a une surface **S = 80 cm²**. Calcule la valeur de la force pressante exercée par l'eau sur cette vitre à 12 m.\n4. Son binôme Hugo nage à 12 m de profondeur lui aussi, mais à 20 m d'Inès. Subit-il la même pression ? Justifie.",
+      "bareme": [
+        { "critere": "Loi p(B) − p(A) = ρ × g × (z(A) − z(B)) énoncée, grandeurs et unités précisées", "points": 4 },
+        { "critere": "Augmentation de pression 1,21 × 10⁵ Pa et pression totale 2,22 × 10⁵ Pa (2,22 bar)", "points": 7 },
+        { "critere": "Conversion 80 cm² = 8,0 × 10⁻³ m² et force F = p × S ≈ 1,77 × 10³ N", "points": 5 },
+        { "critere": "Même pression pour Hugo : deux points du même liquide à la même profondeur", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Dans un liquide incompressible au repos : **p(B) − p(A) = ρ × g × (z(A) − z(B))**, où p est la pression (Pa), ρ la masse volumique du liquide (kg/m³), g l'intensité de pesanteur (N/kg) et z(A) − z(B) la différence d'altitude entre A et B (m). La pression augmente avec la profondeur.\n2. Augmentation de pression : Δp = 1 025 × 9,8 × 12 = 120 540 Pa ≈ **1,21 × 10⁵ Pa**.\nPression totale : p(B) = 1,013 × 10⁵ + 1,205 × 10⁵ ≈ **2,22 × 10⁵ Pa**, soit **2,22 bar** (1 bar = 100 000 Pa). La pression a plus que doublé par rapport à la surface.\n3. S = 80 cm² = 80 × 10⁻⁴ m² = 8,0 × 10⁻³ m². F = p × S = 2,218 × 10⁵ × 8,0 × 10⁻³ ≈ **1,77 × 10³ N**. La force est perpendiculaire à la vitre.\n4. **Oui.** Deux points d'un même liquide au repos situés à la **même profondeur** sont à la **même pression** : la distance horizontale entre Inès et Hugo n'intervient pas. Hugo subit donc lui aussi 2,22 × 10⁵ Pa."
+    },
+    {
+      "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+      "difficulte": 3,
+      "titre": "Remonter une ancre avec un ballon de levage",
+      "consigne": "Réponds en nommant à chaque fois la loi utilisée, en justifiant tes calculs et en analysant physiquement les résultats.",
+      "enonce": "**Situation.** Des plongeurs veulent remonter une ancre de **m = 30 kg** posée au fond d'un lac, à **20 m** de profondeur. Ils y attachent un ballon de levage souple qu'ils remplissent d'air jusqu'à ce qu'il contienne **V = 40 L** d'air.\n\nDonnées : eau douce, ρ = 1 000 kg/m³ ; g = 9,8 N/kg ; pression à la surface du lac p(0) = 1,0 × 10⁵ Pa. La température de l'air du ballon reste constante. On néglige la masse du ballon, et la poussée d'Archimède sur l'ancre elle-même.\n\n1. Calcule la pression de l'eau à 20 m de profondeur.\n2. Calcule la valeur de la poussée d'Archimède qui s'exerce sur le ballon à 20 m, puis le poids de l'ancre. L'ensemble remonte-t-il ? Justifie.\n3. En appliquant la loi de Mariotte, calcule le volume d'air du ballon lorsqu'il passe à 10 m de profondeur, puis lorsqu'il arrive à la surface (le ballon est supposé assez grand pour ne pas éclater).\n4. Explique comment évolue la poussée d'Archimède pendant la remontée et pourquoi les plongeurs doivent laisser s'échapper de l'air en montant.",
+      "bareme": [
+        { "critere": "Pression à 20 m : p = 1,0 × 10⁵ + 1 000 × 9,8 × 20 = 2,96 × 10⁵ Pa", "points": 4 },
+        { "critere": "Poussée d'Archimède 392 N (V en m³), poids 294 N, comparaison et conclusion : l'ensemble remonte", "points": 6 },
+        { "critere": "Loi de Mariotte appliquée : environ 59,8 L à 10 m et 118 L en surface", "points": 6 },
+        { "critere": "Analyse : le volume augmente, la poussée augmente, l'ensemble accélère ; purger l'air pour contrôler la remontée", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Loi fondamentale de la statique des fluides : p = p(0) + ρ × g × h = 1,0 × 10⁵ + 1 000 × 9,8 × 20 = 1,0 × 10⁵ + 1,96 × 10⁵ = **2,96 × 10⁵ Pa**.\n2. Poussée d'Archimède : F = ρ(eau) × V(immergé) × g avec V = 40 L = 0,040 m³ : F = 1 000 × 0,040 × 9,8 = **392 N**, verticale vers le haut.\nPoids de l'ancre : P = m × g = 30 × 9,8 = **294 N**, vertical vers le bas.\nComme 392 N > 294 N, la force vers le haut l'emporte : **l'ensemble remonte**.\n3. Loi de Mariotte (gaz à température constante) : p × V = constante, donc p(1) × V(1) = p(2) × V(2).\n- À 10 m : p = 1,0 × 10⁵ + 1 000 × 9,8 × 10 = 1,98 × 10⁵ Pa. V = 2,96 × 10⁵ × 40 / 1,98 × 10⁵ ≈ **59,8 L**.\n- En surface : p = 1,0 × 10⁵ Pa. V = 2,96 × 10⁵ × 40 / 1,0 × 10⁵ ≈ **118 L** (118,4 L).\nLa pression diminuant pendant la remontée, le volume du gaz augmente.\n4. La poussée d'Archimède est proportionnelle au volume immergé du ballon. Comme ce volume augmente pendant la remontée (Mariotte), **la poussée augmente** : à 10 m elle vaut déjà 1 000 × 0,0598 × 9,8 ≈ 586 N. L'écart avec le poids grandit, l'ensemble remonte de plus en plus vite : la remontée s'emballe. Pour la contrôler, les plongeurs doivent **purger de l'air** au fur et à mesure afin de garder un volume, donc une poussée, à peu près constant."
+    },
+    {
+      "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+      "difficulte": 1,
+      "titre": "Chloé dans le bus",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours ; détaille le calcul demandé.",
+      "enonce": "**Situation.** Chloé est assise dans un bus qui roule sur une route droite et horizontale. Pendant 4,0 minutes, le bus parcourt **3,0 km** à vitesse constante.\n\n1. Décris le mouvement de Chloé dans le référentiel du bus, puis dans le référentiel du sol. Que montre cet exemple ?\n2. Calcule la valeur de la vitesse du bus en m/s, puis en km/h.\n3. Pendant ce trajet rectiligne à vitesse constante, que peut-on dire de la somme des forces qui s'exercent sur le bus ? Nomme la loi utilisée.\n4. Plus tard, le bus fait le tour d'un rond-point à vitesse de valeur constante. Son accélération est-elle nulle ? Justifie.",
+      "bareme": [
+        { "critere": "Chloé immobile dans le référentiel du bus, en mouvement dans celui du sol ; le mouvement dépend du référentiel", "points": 5 },
+        { "critere": "Vitesse v = d / t = 12,5 m/s soit 45 km/h, avec conversions justes", "points": 5 },
+        { "critere": "Somme des forces nulle, par la première loi de Newton (principe d'inertie)", "points": 5 },
+        { "critere": "Accélération non nulle au rond-point : la direction du vecteur vitesse change", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Dans le **référentiel du bus**, Chloé est **immobile**. Dans le **référentiel du sol**, elle est **en mouvement** (rectiligne, avec le bus). Un mouvement n'existe pas « en soi » : il faut toujours **préciser le référentiel**.\n2. d = 3,0 km = 3 000 m ; t = 4,0 min = 240 s. v = d / t = 3 000 / 240 = **12,5 m/s**. En km/h : 12,5 × 3,6 = **45 km/h**.\n3. Le bus a un mouvement **rectiligne uniforme**. D'après la **première loi de Newton** (principe d'inertie), dans un référentiel galiléen, un mouvement rectiligne uniforme du centre de masse correspond à une **somme des forces nulle** : les forces qui s'exercent sur le bus se compensent.\n4. **Non.** L'accélération traduit la variation du vecteur vitesse, en valeur **ou en direction**. Au rond-point, la valeur de la vitesse reste constante mais sa **direction change** en permanence : l'accélération est **non nulle**, dirigée vers le centre du rond-point."
+    },
+    {
+      "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+      "difficulte": 2,
+      "titre": "Le démarrage de Jade à vélo",
+      "consigne": "Suis la méthode du cours (système, référentiel, bilan des forces, deuxième loi de Newton) et détaille chaque calcul.",
+      "enonce": "**Situation.** Jade démarre à vélo sur une route droite et horizontale. Le système {Jade + vélo} a une masse **m = 80 kg**. On l'étudie dans le référentiel terrestre, supposé galiléen.\n\nForces horizontales : une force motrice de **160 N** vers l'avant et des frottements de **40 N** vers l'arrière, toutes deux constantes. Les forces verticales (poids et réaction de la route) se compensent.\n\n1. Précise le système et le référentiel étudiés, puis fais le bilan des forces qui s'exercent sur le système.\n2. Calcule la valeur de la somme des forces, puis l'accélération du système grâce à la deuxième loi de Newton.\n3. Quelle est la nature du mouvement ? Jade part de l'arrêt : calcule sa vitesse au bout de 4,0 s, puis la distance parcourue pendant ces 4,0 s, sachant que x(t) = ½ × a × t².",
+      "bareme": [
+        { "critere": "Système {Jade + vélo}, référentiel terrestre, bilan des quatre forces avec leur sens", "points": 5 },
+        { "critere": "Somme des forces 120 N vers l'avant et a = ΣF / m = 1,5 m/s²", "points": 7 },
+        { "critere": "Mouvement rectiligne uniformément accéléré, v = 6,0 m/s et x = 12 m", "points": 8 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Système : **{Jade + vélo}**. Référentiel : **terrestre**, supposé galiléen. Bilan des forces :\n- le **poids**, vertical vers le bas ;\n- la **réaction** de la route, verticale vers le haut (elle compense le poids) ;\n- la **force motrice**, 160 N, horizontale vers l'avant ;\n- les **frottements**, 40 N, horizontaux vers l'arrière.\n2. Les forces verticales se compensent ; horizontalement : ΣF = 160 − 40 = **120 N**, vers l'avant.\nDeuxième loi de Newton : ΣF = m × a, donc a = ΣF / m = 120 / 80 = **1,5 m/s²**, dirigée vers l'avant.\n3. L'accélération est constante et la trajectoire droite : le mouvement est **rectiligne uniformément accéléré**. La vitesse varie linéairement avec le temps : v(t) = a × t (départ à l'arrêt).\n- v(4,0) = 1,5 × 4,0 = **6,0 m/s** (21,6 km/h).\n- x(4,0) = ½ × 1,5 × 4,0² = 0,75 × 16 = **12 m**."
+    },
+    {
+      "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+      "difficulte": 3,
+      "titre": "Deux balles lâchées du haut d'une tour",
+      "consigne": "Justifie chaque réponse par les lois de Newton et la méthode du cours ; détaille les calculs.",
+      "enonce": "**Situation.** Du haut d'une tour, Samuel lâche sans vitesse initiale une balle de tennis (m = 0,058 kg), et Lina, au même instant et à la même hauteur, une boule de pétanque (m = 0,70 kg). Les balles tombent de **h = 20 m**. On néglige l'action de l'air et on prend **g = 9,8 m/s²**. Référentiel terrestre supposé galiléen, axe vertical orienté vers le bas.\n\n1. Fais le bilan des forces sur chaque balle. De quel type de mouvement s'agit-il ? Justifie.\n2. À l'aide de la deuxième loi de Newton, établis l'accélération de chaque balle. Laquelle touche le sol en premier ?\n3. On admet que la distance parcourue vaut d(t) = ½ × g × t² et la vitesse v(t) = g × t. Calcule la durée de la chute et la vitesse d'arrivée au sol.\n4. Pendant la chute, la Terre attire la boule de pétanque et la boule attire la Terre. Compare ces deux forces. Pourquoi ne se compensent-elles pas ?",
+      "bareme": [
+        { "critere": "Seul le poids agit : chute libre, mouvement rectiligne uniformément accéléré", "points": 4 },
+        { "critere": "Deuxième loi : m × g = m × a donc a = g pour les deux balles, indépendante de la masse ; arrivée simultanée", "points": 5 },
+        { "critere": "Durée t = √(2h / g) ≈ 2,0 s et vitesse v ≈ 19,8 m/s", "points": 6 },
+        { "critere": "Troisième loi : même valeur, même direction, sens opposés ; forces appliquées à deux corps différents", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. En négligeant l'action de l'air, chaque balle n'est soumise qu'à **son poids**, vertical vers le bas : c'est une **chute libre**. Partie sans vitesse, elle suit une trajectoire verticale avec une accélération constante : mouvement **rectiligne uniformément accéléré**.\n2. Deuxième loi de Newton : ΣF = m × a, soit P = m × a, donc m × g = m × a et **a = g = 9,8 m/s²**, vers le bas. La masse se simplifie : l'accélération est **indépendante de la masse**. Les deux balles, lâchées ensemble de la même hauteur sans vitesse, ont à chaque instant la même vitesse et la même position : elles **touchent le sol en même temps**.\n3. d(t) = h donne ½ × g × t² = 20, soit t² = 2 × 20 / 9,8 ≈ 4,08 et **t ≈ 2,0 s** (2,02 s).\nv = g × t = 9,8 × 2,02 ≈ **19,8 m/s** (environ 71 km/h), pour les deux balles.\n4. D'après la **troisième loi de Newton** (actions réciproques), la force exercée par la Terre sur la boule et celle exercée par la boule sur la Terre ont la **même valeur**, la **même direction** (verticale) et des **sens opposés**. Elles ne se compensent pas car elles s'appliquent à **deux corps différents** : l'une agit sur la boule, l'autre sur la Terre. Seules des forces appliquées au même système peuvent se compenser."
+    },
+    {
+      "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+      "difficulte": 1,
+      "titre": "L'astronaute sur la Lune",
+      "consigne": "Réponds par des phrases complètes et détaille chaque calcul avec son unité.",
+      "enonce": "**Situation.** Avec sa combinaison, l'astronaute Clara a une masse **m = 90 kg**. On donne : g(Terre) = 9,8 N/kg et g(Lune) = 1,6 N/kg.\n\n1. Rappelle la différence entre la masse et le poids : unité de chacun et ce dont chacun dépend.\n2. Calcule le poids de Clara sur Terre, puis sur la Lune. Quelle est sa masse sur la Lune ?\n3. La force gravitationnelle entre deux corps suit une loi en 1 / d². Si la distance entre deux corps est **doublée**, comment varie la force ? Et si elle est **triplée** ?",
+      "bareme": [
+        { "critere": "Masse en kg, invariable ; poids en N, dépend de l'astre (P = m × g)", "points": 6 },
+        { "critere": "Poids 882 N sur Terre et 144 N sur la Lune ; masse inchangée 90 kg", "points": 8 },
+        { "critere": "Distance doublée : force divisée par 4 ; triplée : divisée par 9", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. La **masse** s'exprime en **kilogrammes (kg)** et ne dépend que du corps : elle est **invariable**. Le **poids** est une force, qui s'exprime en **newtons (N)** ; il dépend de l'astre sur lequel se trouve le corps : **P = m × g**.\n2. Sur Terre : P = 90 × 9,8 = **882 N**. Sur la Lune : P = 90 × 1,6 = **144 N**, environ six fois moins. Sa masse reste **90 kg** : c'est le même corps.\n3. La force varie en 1 / d². Distance **doublée** : la force est divisée par 2² = **4**. Distance **triplée** : elle est divisée par 3² = **9**."
+    },
+    {
+      "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+      "difficulte": 2,
+      "titre": "Du sol à la Station spatiale internationale",
+      "consigne": "Détaille chaque calcul, en écrivant la formule avant l'application numérique ; résultats avec trois chiffres significatifs.",
+      "enonce": "**Données.** G = 6,67 × 10⁻¹¹ (unités SI) ; masse de la Terre M = 5,97 × 10²⁴ kg ; rayon de la Terre R = 6,37 × 10⁶ m. La Station spatiale internationale (ISS) orbite à environ **400 km** d'altitude ; sa masse vaut **4,2 × 10⁵ kg**.\n\n1. Donne l'expression du champ gravitationnel créé par un astre de masse M à la distance d de son centre. Quelle est sa direction ?\n2. Calcule la valeur de ce champ à la surface de la Terre. Compare avec la valeur utilisée en classe.\n3. Calcule la distance entre le centre de la Terre et l'ISS, puis la valeur du champ à cette altitude.\n4. Calcule la valeur de la force gravitationnelle exercée par la Terre sur l'ISS. Le champ de pesanteur peut-il être considéré comme uniforme à l'échelle de l'orbite ? Justifie.",
+      "bareme": [
+        { "critere": "g = G × M / d², dirigé vers le centre de l'astre", "points": 4 },
+        { "critere": "Champ à la surface ≈ 9,81 N/kg, cohérent avec 9,8 N/kg", "points": 6 },
+        { "critere": "d = 6,77 × 10⁶ m et champ ≈ 8,69 N/kg", "points": 5 },
+        { "critere": "F = m × g ≈ 3,65 × 10⁶ N et champ non uniforme à l'échelle de l'orbite (valeur et direction changent)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **g = G × M / d²**, en N/kg. Le champ est dirigé **vers le centre de l'astre**.\n2. À la surface, d = R : g = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ / (6,37 × 10⁶)².\nNumérateur : 6,67 × 5,97 = 39,82, soit 3,982 × 10¹⁴. Dénominateur : 6,37² = 40,58, soit 4,058 × 10¹³.\ng ≈ **9,81 N/kg**, en accord avec la valeur d'environ 9,8 N/kg utilisée en classe.\n3. d = R + altitude = 6,37 × 10⁶ + 0,40 × 10⁶ = **6,77 × 10⁶ m**. d² ≈ 4,58 × 10¹³ m².\ng = 3,98 × 10¹⁴ / 4,58 × 10¹³ ≈ **8,69 N/kg**.\n4. F = m × g = 4,2 × 10⁵ × 8,69 ≈ **3,65 × 10⁶ N**. À l'échelle de l'orbite, le champ **n'est pas uniforme** : sa valeur décroît avec l'altitude (9,81 au sol, 8,69 à 400 km) et sa direction, toujours tournée vers le centre de la Terre, change d'un point de l'orbite à l'autre. Il n'est uniforme qu'à petite échelle, comme une salle de classe."
+    },
+    {
+      "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+      "difficulte": 3,
+      "titre": "La Terre et la Lune",
+      "consigne": "Justifie chaque réponse, écris les formules avant les applications numériques et commente les résultats.",
+      "enonce": "**Données.** G = 6,67 × 10⁻¹¹ (unités SI) ; masse de la Terre M(T) = 5,97 × 10²⁴ kg ; masse de la Lune M(L) = 7,35 × 10²² kg ; rayon de la Lune R(L) = 1,74 × 10⁶ m ; distance moyenne entre les centres de la Terre et de la Lune d = 3,84 × 10⁸ m ; g(Terre) = 9,8 N/kg.\n\n1. Énonce la loi de gravitation universelle. Précise la direction de la force et son caractère attractif ou répulsif.\n2. Calcule la valeur de la force d'attraction exercée par la Terre sur la Lune.\n3. Calcule la valeur du champ gravitationnel créé par la Lune à sa surface. Déduis-en combien de fois le poids d'un astronaute est plus faible sur la Lune que sur la Terre.\n4. Si la Lune se trouvait deux fois plus près de la Terre, que deviendrait la force calculée à la question 2 ? Explique pourquoi on ne peut pas raisonner comme pour une proportionnalité simple.",
+      "bareme": [
+        { "critere": "F = G × m(A) × m(B) / d², portée par la droite joignant les centres, toujours attractive", "points": 4 },
+        { "critere": "Force Terre–Lune ≈ 1,98 × 10²⁰ N avec calcul détaillé", "points": 6 },
+        { "critere": "g(Lune) ≈ 1,62 N/kg et rapport des poids ≈ 6, masse inchangée", "points": 6 },
+        { "critere": "Distance divisée par 2 : force multipliée par 4 (≈ 7,9 × 10²⁰ N), dépendance en 1 / d²", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Deux corps ponctuels de masses m(A) et m(B), distants de d, s'attirent avec une force de valeur **F = G × m(A) × m(B) / d²**. La force est **portée par la droite qui joint les deux corps**, et la gravitation est **toujours attractive**.\n2. F = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ × 7,35 × 10²² / (3,84 × 10⁸)².\nNumérateur : 6,67 × 5,97 × 7,35 ≈ 292,7, soit 2,93 × 10³⁷. Dénominateur : 3,84² ≈ 14,75, soit 1,475 × 10¹⁷.\n**F ≈ 1,98 × 10²⁰ N**.\n3. g(L) = G × M(L) / R(L)² = 6,67 × 10⁻¹¹ × 7,35 × 10²² / (1,74 × 10⁶)² = 4,90 × 10¹² / 3,03 × 10¹² ≈ **1,62 N/kg**.\nPour une même masse m : P(Terre) / P(Lune) = 9,8 / 1,62 ≈ **6**. Le poids d'un astronaute est environ six fois plus faible sur la Lune ; sa masse, elle, ne change pas.\n4. La force dépend de **1 / d²**. Si d est divisée par 2, d² est divisée par 4 et la force est **multipliée par 4** : F ≈ 4 × 1,98 × 10²⁰ ≈ **7,9 × 10²⁰ N**. Ce n'est pas une proportionnalité inverse simple (qui donnerait « multipliée par 2 ») : c'est le **carré** de la distance qui compte."
+    },
+    {
+      "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+      "difficulte": 1,
+      "titre": "Deux petites sphères chargées",
+      "consigne": "Réponds en citant la loi utilisée et en détaillant l'application numérique.",
+      "enonce": "**Situation.** Deux petites sphères, assimilées à des charges ponctuelles, sont posées à **d = 0,30 m** l'une de l'autre. La sphère A porte la charge **q(A) = +2,0 × 10⁻⁶ C** et la sphère B la charge **q(B) = −3,0 × 10⁻⁶ C**. On donne k = 9,0 × 10⁹ (unités SI).\n\n1. Énonce la loi de Coulomb et donne l'unité de la charge électrique.\n2. Les deux sphères s'attirent-elles ou se repoussent-elles ? Justifie.\n3. Calcule la valeur de la force exercée par A sur B.\n4. On éloigne les sphères jusqu'à 0,90 m. Sans refaire tout le calcul, donne la nouvelle valeur de la force.",
+      "bareme": [
+        { "critere": "F = k × q(A) × q(B) / d² en valeurs absolues, charge en coulombs", "points": 5 },
+        { "critere": "Signes contraires : attraction", "points": 3 },
+        { "critere": "F = 0,60 N avec calcul détaillé", "points": 7 },
+        { "critere": "Distance triplée : force divisée par 9, soit environ 0,067 N", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Deux charges ponctuelles q(A) et q(B), distantes de d, exercent l'une sur l'autre une force de valeur **F = k × q(A) × q(B) / d²** (en valeurs absolues), avec k ≈ 9 × 10⁹ SI. La charge s'exprime en **coulombs (C)**.\n2. Les charges sont de **signes contraires** (+ et −) : les sphères **s'attirent**.\n3. F = 9,0 × 10⁹ × 2,0 × 10⁻⁶ × 3,0 × 10⁻⁶ / 0,30² = 9,0 × 10⁹ × 6,0 × 10⁻¹² / 0,090 = 5,4 × 10⁻² / 0,090 = **0,60 N**.\n4. La distance passe de 0,30 m à 0,90 m : elle est **triplée**. La force variant en 1 / d², elle est divisée par 3² = 9 : F = 0,60 / 9 ≈ **0,067 N** (6,7 × 10⁻² N)."
+    },
+    {
+      "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+      "difficulte": 2,
+      "titre": "Un électron entre deux plaques",
+      "consigne": "Réponds en justifiant chaque résultat et en précisant direction et sens des vecteurs demandés.",
+      "enonce": "**Situation.** Dans un laboratoire, on applique une tension **U = 500 V** entre deux plaques métalliques parallèles distantes de **d = 2,0 cm**. La plaque du haut est reliée à la borne +, celle du bas à la borne −. Charge élémentaire : e = 1,6 × 10⁻¹⁹ C.\n\n1. Comment qualifie-t-on le champ électrique entre les plaques ? Décris ses lignes de champ (forme, orientation).\n2. Calcule la valeur du champ électrique E entre les plaques.\n3. Un électron (charge −e) se trouve entre les plaques. Calcule la valeur de la force électrique qu'il subit et donne son sens.\n4. Un proton (charge +e) est placé au même endroit. Compare la force qu'il subit à celle de l'électron.",
+      "bareme": [
+        { "critere": "Champ uniforme ; lignes parallèles, perpendiculaires aux plaques, orientées du + vers le −", "points": 5 },
+        { "critere": "E = U / d = 2,5 × 10⁴ V/m avec conversion de d en mètres", "points": 5 },
+        { "critere": "F = e × E = 4,0 × 10⁻¹⁵ N, sens opposé au champ (vers la plaque +)", "points": 6 },
+        { "critere": "Proton : même valeur, dans le sens du champ (vers la plaque −)", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Entre deux plaques parallèles portant des charges opposées, le champ est **uniforme** : même valeur, même direction, même sens en tout point. Ses lignes de champ sont des **droites parallèles**, **perpendiculaires aux plaques**, orientées **du + vers le −**, c'est-à-dire ici de la plaque du haut vers la plaque du bas.\n2. d = 2,0 cm = 0,020 m. E = U / d = 500 / 0,020 = **2,5 × 10⁴ V/m**.\n3. F = q × E, en valeur : F = 1,6 × 10⁻¹⁹ × 2,5 × 10⁴ = **4,0 × 10⁻¹⁵ N**. La charge de l'électron est **négative** : la force est de **sens opposé au champ**, donc vers le **haut**, vers la plaque +.\n4. Le proton porte une charge de même valeur absolue mais positive : la force a la **même valeur**, 4,0 × 10⁻¹⁵ N, mais elle est **dans le sens du champ**, vers le bas, vers la plaque −."
+    },
+    {
+      "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+      "difficulte": 3,
+      "titre": "Électrique contre gravitationnelle",
+      "consigne": "Détaille les calculs, compare les ordres de grandeur et conclus en rédigeant.",
+      "enonce": "**Données.** k = 9,0 × 10⁹ SI ; G = 6,67 × 10⁻¹¹ SI ; e = 1,6 × 10⁻¹⁹ C ; masse du proton m(p) = 1,67 × 10⁻²⁷ kg ; g = 9,8 N/kg.\n\n**Partie A.** Dans un noyau, deux protons sont distants de **d = 2,0 × 10⁻¹⁵ m**.\n1. Calcule la valeur de la force électrique entre ces deux protons. Est-elle attractive ou répulsive ?\n2. Calcule la valeur de la force gravitationnelle entre ces deux protons. Est-elle attractive ou répulsive ?\n3. Calcule le rapport de la force électrique à la force gravitationnelle. Ce rapport dépend-il de la distance ? Justifie.\n\n**Partie B.** Un proton est placé dans un condensateur plan : U = 2 000 V, distance entre les plaques 4,0 cm.\n4. Calcule la force électrique subie par le proton et compare-la à son poids. Que peut-on en conclure ?",
+      "bareme": [
+        { "critere": "Force électrique ≈ 58 N, répulsive (charges de même signe)", "points": 4 },
+        { "critere": "Force gravitationnelle ≈ 4,7 × 10⁻³⁵ N, attractive", "points": 4 },
+        { "critere": "Rapport ≈ 1,2 × 10³⁶, indépendant de d car les deux lois sont en 1 / d²", "points": 5 },
+        { "critere": "E = 5,0 × 10⁴ V/m, F = 8,0 × 10⁻¹⁵ N, poids 1,6 × 10⁻²⁶ N : poids négligeable", "points": 5 },
+        { "critere": "Rédaction de la conclusion et cohérence des unités", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. F(e) = k × e² / d² = 9,0 × 10⁹ × (1,6 × 10⁻¹⁹)² / (2,0 × 10⁻¹⁵)² = 9,0 × 10⁹ × 2,56 × 10⁻³⁸ / 4,0 × 10⁻³⁰ = 2,30 × 10⁻²⁸ / 4,0 × 10⁻³⁰ ≈ **58 N**. Les deux charges sont **de même signe** : la force est **répulsive**.\n2. F(g) = G × m(p)² / d² = 6,67 × 10⁻¹¹ × (1,67 × 10⁻²⁷)² / 4,0 × 10⁻³⁰ = 6,67 × 10⁻¹¹ × 2,79 × 10⁻⁵⁴ / 4,0 × 10⁻³⁰ = 1,86 × 10⁻⁶⁴ / 4,0 × 10⁻³⁰ ≈ **4,7 × 10⁻³⁵ N**. La gravitation est **toujours attractive**.\n3. F(e) / F(g) = 58 / 4,65 × 10⁻³⁵ ≈ **1,2 × 10³⁶**. Ce rapport **ne dépend pas de la distance** : les deux lois ont la même forme en 1 / d², le d² se simplifie. Entre deux protons, la répulsion électrique est environ 10³⁶ fois plus intense que l'attraction gravitationnelle.\n4. E = U / d = 2 000 / 0,040 = **5,0 × 10⁴ V/m** ; F = e × E = 1,6 × 10⁻¹⁹ × 5,0 × 10⁴ = **8,0 × 10⁻¹⁵ N**, dans le sens du champ (charge positive). Poids : P = m × g = 1,67 × 10⁻²⁷ × 9,8 ≈ **1,6 × 10⁻²⁶ N**. Rapport F / P ≈ 5 × 10¹¹ : **le poids est totalement négligeable** devant la force électrique. Pour une particule chargée, c'est l'interaction électrique qui gouverne le mouvement."
+    },
+    {
+      "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+      "difficulte": 1,
+      "titre": "Le diapason et la corde",
+      "consigne": "Réponds par des phrases complètes et détaille les deux calculs.",
+      "enonce": "1. Donne la définition d'une onde. Que transporte-t-elle, et que ne transporte-t-elle pas ?\n2. Classe chacune des ondes suivantes selon les deux critères du cours (milieu nécessaire ; direction de la perturbation) : le son dans l'air ; une ondulation le long d'une corde tendue. Dis aussi si la lumière a besoin d'un milieu matériel.\n3. Un haut-parleur émet un son dont la période vaut **T = 2,5 ms**. Calcule sa fréquence, puis sa longueur d'onde dans l'air, où la célérité du son vaut **340 m/s**.",
+      "bareme": [
+        { "critere": "Propagation d'une perturbation, transport d'énergie sans transport de matière", "points": 5 },
+        { "critere": "Son : mécanique et longitudinal ; corde : mécanique et transversale ; lumière : pas de milieu nécessaire", "points": 7 },
+        { "critere": "f = 1 / T = 400 Hz et λ = v / f = 0,85 m", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une onde est la **propagation d'une perturbation** dans un milieu. Elle transporte de l'**énergie**, mais **pas de matière** (un bouchon sur l'eau monte et descend sans avancer).\n2. Le **son dans l'air** est une onde **mécanique** (il lui faut un milieu matériel) et **longitudinale** (perturbation parallèle à la propagation). L'ondulation le long d'une **corde** est **mécanique** et **transversale** (perturbation perpendiculaire à la propagation). La **lumière**, onde électromagnétique, **n'a pas besoin de milieu** : elle traverse le vide.\n3. T = 2,5 ms = 2,5 × 10⁻³ s. f = 1 / T = 1 / 2,5 × 10⁻³ = **400 Hz**. λ = v / f = 340 / 400 = **0,85 m**."
+    },
+    {
+      "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+      "difficulte": 2,
+      "titre": "L'orage et la baignade",
+      "consigne": "Détaille chaque calcul et justifie les raisonnements.",
+      "enonce": "**Situation.** Au bord d'un lac, Nathan voit un éclair puis entend le tonnerre **6,0 s** plus tard. Célérité du son dans l'air : 340 m/s ; dans l'eau : 1 500 m/s. Célérité de la lumière : 3,00 × 10⁸ m/s.\n\n1. Estime la distance entre Nathan et la foudre. Pourquoi peut-on considérer que la lumière arrive instantanément ? Justifie par un calcul.\n2. Sa sœur Emma, sous l'eau, entend un son de fréquence **440 Hz** émis par un haut-parleur étanche placé dans l'eau. Calcule sa longueur d'onde dans l'eau.\n3. Ce même son de 440 Hz se propage ensuite dans l'air. Sa fréquence change-t-elle ? Calcule sa longueur d'onde dans l'air et explique la différence avec la question 2.",
+      "bareme": [
+        { "critere": "d = v × τ ≈ 2,0 km et retard de la lumière ≈ 7 × 10⁻⁶ s négligeable", "points": 7 },
+        { "critere": "λ(eau) = 1 500 / 440 ≈ 3,4 m", "points": 5 },
+        { "critere": "Fréquence imposée par la source, inchangée ; λ(air) ≈ 0,77 m ; célérité dépend du milieu", "points": 8 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le retard du son est τ = d / v, donc d = v × τ = 340 × 6,0 = 2 040 m ≈ **2,0 km**. La lumière met τ = 2 040 / 3,00 × 10⁸ ≈ **6,8 × 10⁻⁶ s** : c'est négligeable devant 6,0 s, on peut la considérer comme instantanée.\n2. λ = v / f = 1 500 / 440 ≈ **3,4 m** (3,41 m).\n3. **Non**, la fréquence est imposée par la **source** et ne change pas quand l'onde change de milieu : elle reste 440 Hz. λ(air) = 340 / 440 ≈ **0,77 m**. La célérité **dépend du milieu** (1 500 m/s dans l'eau, 340 m/s dans l'air) ; à fréquence égale, la longueur d'onde, qui vaut v / f, est donc plus grande dans l'eau que dans l'air."
+    },
+    {
+      "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+      "difficulte": 3,
+      "titre": "Mesurer la célérité du son dans un rail",
+      "consigne": "Analyse l'expérience, détaille chaque calcul et discute le résultat obtenu.",
+      "enonce": "**Expérience.** Sur une voie ferrée désaffectée, Léo frappe un rail en acier avec un marteau. Maëlle, qui se trouve à **d = 1 020 m** de là, l'oreille près du rail, entend **deux** sons successifs. Elle mesure un écart de **Δt = 2,80 s** entre les deux. Célérité du son dans l'air : 340 m/s.\n\n1. Explique pourquoi Maëlle entend deux sons. Lequel arrive en premier ? Justifie à l'aide du cours.\n2. Calcule la durée de propagation du son dans l'air sur 1 020 m.\n3. Déduis-en la durée de propagation dans le rail, puis la célérité du son dans l'acier. Compare au repère du cours.\n4. Le marteau produit dans le rail une vibration de fréquence 1 000 Hz. Calcule la longueur d'onde correspondante dans l'acier.\n5. Le son qui se propage dans le rail transporte-t-il de la matière de Léo à Maëlle ? Pourrait-on refaire l'expérience sur la Lune, où il n'y a pas d'air, en écoutant loin du rail ?",
+      "bareme": [
+        { "critere": "Deux trajets (rail et air) ; le son du rail arrive en premier car le milieu est plus rigide", "points": 4 },
+        { "critere": "Durée dans l'air : 1 020 / 340 = 3,00 s", "points": 3 },
+        { "critere": "Durée dans le rail 0,20 s et célérité 5,1 × 10³ m/s, cohérente avec environ 5 000 m/s", "points": 6 },
+        { "critere": "λ = v / f ≈ 5,1 m", "points": 3 },
+        { "critere": "Pas de transport de matière ; son impossible dans le vide, onde mécanique", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Le son produit par le coup de marteau se propage **par deux chemins** : dans le **rail en acier** et dans l'**air**. Plus le milieu est rigide, plus l'onde va vite : le son du **rail arrive en premier**, celui de l'air ensuite.\n2. τ(air) = d / v = 1 020 / 340 = **3,00 s**.\n3. Le son du rail arrive 2,80 s avant celui de l'air : τ(rail) = 3,00 − 2,80 = **0,20 s**. v(acier) = d / τ = 1 020 / 0,20 = **5,1 × 10³ m/s**. C'est cohérent avec l'ordre de grandeur du cours (environ 5 000 m/s dans l'acier).\n4. λ = v / f = 5 100 / 1 000 ≈ **5,1 m**.\n5. **Non** : une onde transporte de l'**énergie** sans transport de matière ; l'acier vibre sur place. Sur la Lune, sans air, le second son **n'existerait pas** : le son est une onde **mécanique**, qui ne se propage pas dans le vide. Seul le son transmis par le rail (milieu matériel) pourrait être perçu en y collant l'oreille, pas en écoutant loin du rail."
+    },
+    {
+      "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+      "difficulte": 1,
+      "titre": "Ranger les rayonnements",
+      "consigne": "Réponds en t'appuyant sur le tableau des domaines du cours ; justifie chaque classement.",
+      "enonce": "Voici six rayonnements électromagnétiques, repérés par leur longueur d'onde dans le vide :\n\n| Rayonnement | Longueur d'onde |\n| A | 650 nm |\n| B | 1,5 µm |\n| C | 3 m |\n| D | 0,05 nm |\n| E | 250 nm |\n| F | 6 cm |\n\n1. Indique le domaine de chacun (radio, micro-ondes, infrarouge, visible, ultraviolet, rayons X) et, pour A, sa couleur approximative.\n2. Range ces six rayonnements du moins énergétique au plus énergétique.\n3. Ces ondes ont-elles besoin d'un milieu matériel pour se propager ? Donne leur célérité dans le vide.",
+      "bareme": [
+        { "critere": "Domaines justes : A visible (rouge), B infrarouge, C radio, D rayons X, E ultraviolet, F micro-ondes", "points": 9 },
+        { "critere": "Classement C, F, B, A, E, D : l'énergie augmente quand la longueur d'onde diminue", "points": 7 },
+        { "critere": "Aucun milieu nécessaire, c ≈ 3,00 × 10⁸ m/s dans le vide", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. \n- A (650 nm) : **visible**, entre 400 et 800 nm, du côté du **rouge**.\n- B (1,5 µm = 1 500 nm) : **infrarouge** (de 800 nm à 1 mm).\n- C (3 m) : **ondes radio** (au-delà du mètre).\n- D (0,05 nm) : **rayons X** (environ 0,01 à 10 nm).\n- E (250 nm) : **ultraviolet** (de 10 à 400 nm).\n- F (6 cm) : **micro-ondes** (du millimètre au décimètre).\n2. Toutes ces ondes sont de même nature ; l'énergie **augmente quand la longueur d'onde diminue**. Du moins au plus énergétique : **C (radio) < F (micro-ondes) < B (infrarouge) < A (visible) < E (ultraviolet) < D (rayons X)**.\n3. **Non**, une onde électromagnétique n'a besoin d'aucun support : elle se propage dans le vide à **c ≈ 3,00 × 10⁸ m/s**."
+    },
+    {
+      "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+      "difficulte": 2,
+      "titre": "Wi-Fi, radio FM et lampe UV",
+      "consigne": "Détaille chaque calcul, puis justifie le domaine et le classement.",
+      "enonce": "**Situation.** Dans la chambre de Yasmine, trois appareils émettent des ondes électromagnétiques :\n- sa box Wi-Fi, de fréquence **f = 5,0 GHz** ;\n- son poste de radio FM, qui capte une station à **f = 100 MHz** ;\n- une lampe de contrôle des billets, de fréquence **f = 1,0 × 10¹⁵ Hz**.\n\nOn rappelle que λ = c / f, avec c = 3,00 × 10⁸ m/s.\n\n1. Calcule la longueur d'onde de chaque rayonnement.\n2. Indique le domaine de chacun, en t'appuyant sur les limites du cours.\n3. Range-les du moins au plus énergétique. Lequel appartient au domaine associé aux brûlures de la peau ?\n4. Explique pourquoi on peut dire que ce ne sont pas la lumière ou le Wi-Fi qui sont « particuliers », mais notre œil.",
+      "bareme": [
+        { "critere": "λ = 6,0 cm ; 3,0 m ; 300 nm, avec conversions GHz et MHz justes", "points": 7 },
+        { "critere": "Domaines : micro-ondes, ondes radio, ultraviolet", "points": 5 },
+        { "critere": "Classement radio < micro-ondes < ultraviolet ; UV associé aux brûlures", "points": 4 },
+        { "critere": "Même nature pour toutes ces ondes, le visible n'est qu'une bande étroite perçue par l'œil", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. \n- Wi-Fi : f = 5,0 × 10⁹ Hz ; λ = 3,00 × 10⁸ / 5,0 × 10⁹ = **6,0 × 10⁻² m = 6,0 cm**.\n- Radio FM : f = 100 × 10⁶ = 1,00 × 10⁸ Hz ; λ = 3,00 × 10⁸ / 1,00 × 10⁸ = **3,0 m**.\n- Lampe : λ = 3,00 × 10⁸ / 1,0 × 10¹⁵ = **3,0 × 10⁻⁷ m = 300 nm**.\n2. Wi-Fi (6 cm, entre le millimètre et le décimètre) : **micro-ondes**. Radio FM (3 m, au-delà du mètre) : **ondes radio**. Lampe (300 nm, entre 10 et 400 nm) : **ultraviolet**.\n3. L'énergie augmente avec la fréquence : **radio FM < Wi-Fi < lampe UV**. La lampe émet dans l'**ultraviolet**, le domaine associé au bronzage et aux brûlures.\n4. Toutes ces ondes sont **de même nature** : seules leur fréquence et leur longueur d'onde les distinguent. Le domaine visible (400 à 800 nm) n'est qu'une **bande minuscule** du spectre : il est « visible » uniquement parce que notre œil y est sensible."
+    },
+    {
+      "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+      "difficulte": 3,
+      "titre": "Lire l'atmosphère d'une étoile",
+      "consigne": "Exploite les documents, justifie chaque conclusion par une comparaison précise des valeurs et rédige.",
+      "enonce": "**Document 1 – Raies d'émission de quelques éléments (en nm)**\n\n| Élément | Raies |\n| Hydrogène | 434,0 ; 486,1 ; 656,3 |\n| Sodium | 589,0 ; 589,6 |\n| Hélium | 587,6 ; 667,8 |\n\n**Document 2 – Spectre de l'étoile Kéra**\n\n> Un fond coloré continu, du violet au rouge, barré de raies noires à **486,1 nm**, **589,0 nm**, **589,6 nm** et **656,3 nm**. Le maximum d'intensité du fond continu se situe vers **480 nm**.\n\n**Document 3 – Une autre étoile, Ombre** : même type de spectre, maximum du fond continu vers **650 nm**.\n\n1. Nomme les trois types de spectres du cours. De quel type est le spectre de Kéra ? Justifie.\n2. Explique l'origine du fond continu et celle des raies noires.\n3. Quels éléments du document 1 peut-on affirmer présents dans l'atmosphère de Kéra ? Et quel élément ne peut-on pas y détecter d'après ce spectre ? Justifie.\n4. Laquelle des deux étoiles, Kéra ou Ombre, est la plus chaude ? Justifie.",
+      "bareme": [
+        { "critere": "Continu, raies d'émission, raies d'absorption ; Kéra : spectre de raies d'absorption (fond continu barré de raies noires)", "points": 4 },
+        { "critere": "Fond continu émis par un corps chaud ; raies noires : absorption par un gaz froid, aux positions où il émettrait", "points": 5 },
+        { "critere": "Hydrogène et sodium identifiés par comparaison des valeurs ; hélium non détecté (raies 587,6 et 667,8 absentes)", "points": 6 },
+        { "critere": "Kéra plus chaude : maximum vers le bleu (480 nm contre 650 nm)", "points": 3 },
+        { "critere": "Rédaction appuyée sur les documents", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Les trois types : spectre **continu**, spectre de **raies d'émission**, spectre de **raies d'absorption**. Le spectre de Kéra est un **spectre de raies d'absorption** : c'est un fond continu **barré de raies noires**.\n2. Le **fond continu** est émis par un **corps chaud** (ici l'étoile) : il contient toutes les longueurs d'onde. Les **raies noires** apparaissent quand cette lumière traverse un **gaz plus froid** (l'atmosphère de l'étoile) : le gaz absorbe certaines longueurs d'onde, **exactement aux positions où il émettrait**. Chaque jeu de raies est la **signature** d'un élément.\n3. \n- Raies à 486,1 et 656,3 nm : elles correspondent à l'**hydrogène** ;\n- raies à 589,0 et 589,6 nm : elles correspondent au **sodium**.\nL'hydrogène et le sodium sont donc présents dans l'atmosphère de Kéra. L'**hélium** n'est pas détecté : ses raies à 587,6 et 667,8 nm n'apparaissent pas dans le spectre. (La raie de l'hydrogène à 434,0 nm n'est pas signalée non plus, mais deux raies de l'hydrogène suffisent à l'identifier.)\n4. Le maximum du spectre continu se déplace **vers le bleu quand la température monte**. Le maximum de Kéra (480 nm) est plus proche du bleu que celui d'Ombre (650 nm, dans le rouge) : **Kéra est la plus chaude**."
+    },
+    {
+      "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+      "difficulte": 1,
+      "titre": "Photons bleu et rouge",
+      "consigne": "Détaille chaque calcul en écrivant la formule avant l'application numérique.",
+      "enonce": "**Données.** h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m/s ; 1 eV = 1,60 × 10⁻¹⁹ J.\n\n1. Donne l'expression de l'énergie d'un photon en fonction de sa fréquence, puis de sa longueur d'onde.\n2. Calcule, en joules puis en électronvolts, l'énergie d'un photon de longueur d'onde **λ = 500 nm**, puis celle d'un photon de **700 nm**.\n3. Lequel de ces deux photons est le plus énergétique ? Relie ta réponse au lien entre longueur d'onde et énergie.",
+      "bareme": [
+        { "critere": "E = h × f = h × c / λ, avec les unités", "points": 5 },
+        { "critere": "E(500 nm) ≈ 3,98 × 10⁻¹⁹ J ≈ 2,49 eV et E(700 nm) ≈ 2,84 × 10⁻¹⁹ J ≈ 1,78 eV", "points": 10 },
+        { "critere": "Le photon de 500 nm est le plus énergétique : plus λ est petite, plus E est grande", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **E = h × f = h × c / λ**, avec E en joules, f en hertz, λ en mètres, h la constante de Planck.\n2. h × c = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ = 1,989 × 10⁻²⁵ J·m.\n- λ = 500 nm = 5,00 × 10⁻⁷ m : E = 1,989 × 10⁻²⁵ / 5,00 × 10⁻⁷ ≈ **3,98 × 10⁻¹⁹ J**, soit 3,98 × 10⁻¹⁹ / 1,60 × 10⁻¹⁹ ≈ **2,49 eV**.\n- λ = 700 nm = 7,00 × 10⁻⁷ m : E = 1,989 × 10⁻²⁵ / 7,00 × 10⁻⁷ ≈ **2,84 × 10⁻¹⁹ J**, soit ≈ **1,78 eV**.\n3. Le photon de **500 nm** (bleu-vert) est le plus énergétique. L'énergie est **inversement proportionnelle** à la longueur d'onde : plus λ est petite, plus le photon est énergétique. Un photon bleu est plus énergétique qu'un photon rouge."
+    },
+    {
+      "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+      "difficulte": 2,
+      "titre": "Le diagramme de l'atome d'hydrogène",
+      "consigne": "Exploite le diagramme, détaille les calculs et justifie chaque conclusion.",
+      "enonce": "**Document – Niveaux d'énergie de l'atome d'hydrogène**\n\n| Niveau | Énergie |\n| n = 1 | −13,6 eV |\n| n = 2 | −3,40 eV |\n| n = 3 | −1,51 eV |\n| n = 4 | −0,85 eV |\n\n**Données.** h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m/s ; 1 eV = 1,60 × 10⁻¹⁹ J.\n\n1. Quel niveau est l'état fondamental ? Comment appelle-t-on les autres ? Que signifie « l'énergie de l'atome est quantifiée » ?\n2. Un atome passe du niveau n = 3 au niveau n = 2. Absorbe-t-il ou émet-il un photon ? Calcule l'énergie de ce photon en eV puis en J, et sa longueur d'onde. Dans quel domaine se situe-t-elle ?\n3. Un atome à l'état fondamental reçoit un photon de **10,2 eV**, puis un autre reçoit un photon de **11,0 eV**. Lesquels sont absorbés ? Justifie.",
+      "bareme": [
+        { "critere": "n = 1 état fondamental, autres états excités ; énergie ne prenant que certaines valeurs", "points": 4 },
+        { "critere": "Émission ; E = 1,89 eV ≈ 3,02 × 10⁻¹⁹ J ; λ ≈ 658 nm, visible (rouge)", "points": 9 },
+        { "critere": "10,2 eV absorbé (transition 1 → 2) ; 11,0 eV non absorbé, aucun écart de niveaux ne correspond", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le niveau le plus bas, **n = 1** (−13,6 eV), est l'**état fondamental** ; les autres sont des **états excités**. L'énergie est **quantifiée** : elle ne peut prendre que ces valeurs déterminées, pas les valeurs intermédiaires.\n2. L'atome **redescend** d'un niveau haut vers un niveau bas : il **émet** un photon.\nE = E(haut) − E(bas) = −1,51 − (−3,40) = **1,89 eV**, soit 1,89 × 1,60 × 10⁻¹⁹ ≈ **3,02 × 10⁻¹⁹ J**.\nλ = h × c / E = 1,989 × 10⁻²⁵ / 3,02 × 10⁻¹⁹ ≈ **6,58 × 10⁻⁷ m ≈ 658 nm** : domaine **visible**, dans le **rouge**.\n3. Depuis le fondamental, les écarts possibles sont : 1 → 2 : −3,40 − (−13,6) = **10,2 eV** ; 1 → 3 : 12,09 eV ; 1 → 4 : 12,75 eV.\n- Le photon de **10,2 eV** correspond **exactement** à l'écart 1 → 2 : il est **absorbé**, l'atome passe au niveau 2.\n- Le photon de **11,0 eV** ne correspond à **aucun** écart : il **n'est pas absorbé** du tout (il n'existe pas de demi-transition), même s'il a « assez » d'énergie pour dépasser le niveau 2."
+    },
+    {
+      "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+      "difficulte": 3,
+      "titre": "La lumière orangée des lampes au sodium",
+      "consigne": "Exploite les données, détaille chaque calcul et rédige les explications demandées.",
+      "enonce": "**Situation.** Certaines lampes d'éclairage public émettent une lumière orangée de longueur d'onde **λ = 589 nm**, due à des atomes de sodium excités.\n\n**Document – Quelques niveaux d'énergie de l'atome de sodium** : E(0) = −5,14 eV (fondamental) ; E(1) = −3,03 eV ; E(2) = −1,94 eV ; E(3) = −1,51 eV.\n\n**Données.** h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m/s ; 1 eV = 1,60 × 10⁻¹⁹ J.\n\n1. Calcule l'énergie d'un photon de 589 nm, en joules puis en eV.\n2. Identifie la transition responsable de cette émission. Justifie.\n3. Un photon de **2,50 eV** arrive sur un atome de sodium à l'état fondamental. Est-il absorbé ? Justifie en calculant les écarts possibles.\n4. Dans le spectre de la lumière du Soleil, on observe une raie noire à 589 nm. Explique ce qu'elle révèle et pourquoi elle se trouve exactement à la même longueur d'onde que la lumière des lampes.\n5. Chaque seconde, une lampe rayonne 0,50 J sous forme de lumière à 589 nm. Combien de photons émet-elle par seconde ?",
+      "bareme": [
+        { "critere": "E = h × c / λ ≈ 3,38 × 10⁻¹⁹ J ≈ 2,11 eV", "points": 4 },
+        { "critere": "Transition E(1) → E(0) : écart de 2,11 eV, émission", "points": 4 },
+        { "critere": "Écarts depuis le fondamental 2,11 ; 3,20 ; 3,63 eV : photon de 2,50 eV non absorbé", "points": 5 },
+        { "critere": "Raie d'absorption du sodium dans l'atmosphère du Soleil ; mêmes écarts de niveaux en absorption et en émission", "points": 4 },
+        { "critere": "Nombre de photons ≈ 1,5 × 10¹⁸ par seconde", "points": 3 }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. E = h × c / λ = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / 589 × 10⁻⁹ = 1,989 × 10⁻²⁵ / 5,89 × 10⁻⁷ ≈ **3,38 × 10⁻¹⁹ J**, soit 3,38 × 10⁻¹⁹ / 1,60 × 10⁻¹⁹ ≈ **2,11 eV**.\n2. On cherche deux niveaux dont l'écart vaut 2,11 eV : E(1) − E(0) = −3,03 − (−5,14) = **2,11 eV**. La lampe émet ce photon quand un atome excité au niveau **E(1)** redescend au **fondamental E(0)** : c'est une **émission**.\n3. Écarts depuis le fondamental : E(1) − E(0) = 2,11 eV ; E(2) − E(0) = 3,20 eV ; E(3) − E(0) = 3,63 eV. Aucun ne vaut 2,50 eV : le photon **n'est pas absorbé**. L'atome n'absorbe un photon que si son énergie correspond **exactement** à l'écart entre deux niveaux.\n4. C'est une **raie d'absorption** : la lumière du Soleil traverse son atmosphère, dont les atomes de **sodium** absorbent les photons de 2,11 eV. La raie révèle donc la **présence de sodium**. Elle est à la même longueur d'onde car l'absorption et l'émission mettent en jeu **le même écart d'énergie** entre les niveaux E(0) et E(1), propre au sodium : c'est sa signature.\n5. N = énergie rayonnée / énergie d'un photon = 0,50 / 3,38 × 10⁻¹⁹ ≈ **1,5 × 10¹⁸ photons par seconde**."
+    },
+    {
+      "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+      "difficulte": 1,
+      "titre": "Vergence et rayons particuliers",
+      "consigne": "Réponds par des phrases complètes et détaille les deux calculs.",
+      "enonce": "1. Une lentille convergente a une vergence **C = 8,0 δ**. Calcule sa distance focale en mètres puis en centimètres.\n2. Une autre lentille a une distance focale **f' = 25 cm**. Calcule sa vergence. Laquelle des deux lentilles est la plus convergente ?\n3. Décris ce que deviennent, après une lentille mince convergente : a) un rayon passant par le centre optique O ; b) un rayon parallèle à l'axe optique ; c) un rayon passant par le foyer objet F.\n4. Le grandissement d'une image vaut **γ = −2**. Décris cette image.",
+      "bareme": [
+        { "critere": "f' = 1 / C = 0,125 m = 12,5 cm ; C = 1 / 0,25 = 4,0 δ ; la première est la plus convergente", "points": 8 },
+        { "critere": "Les trois rayons : non dévié, passe par F', ressort parallèle à l'axe", "points": 7 },
+        { "critere": "γ = −2 : image renversée et deux fois plus grande que l'objet", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. C = 1 / f', donc f' = 1 / C = 1 / 8,0 = **0,125 m = 12,5 cm**.\n2. f' = 25 cm = 0,25 m ; C = 1 / 0,25 = **4,0 δ**. La lentille de **8,0 δ** est la plus convergente : plus la vergence est grande, plus la distance focale est petite.\n3. a) Un rayon passant par le **centre optique O** n'est **pas dévié**. b) Un rayon **parallèle à l'axe** ressort en passant par le **foyer image F'**. c) Un rayon passant par le **foyer objet F** ressort **parallèle à l'axe**.\n4. γ est **négatif** : l'image est **renversée**. Sa valeur absolue vaut 2 > 1 : l'image est **agrandie**, deux fois plus grande que l'objet."
+    },
+    {
+      "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+      "difficulte": 2,
+      "titre": "L'image sur l'écran",
+      "consigne": "Utilise la relation de conjugaison et le grandissement ; détaille les calculs en respectant les signes des mesures algébriques.",
+      "enonce": "**Situation.** Au laboratoire, Anaïs place un objet lumineux AB, haut de **2,0 cm**, perpendiculaire à l'axe optique d'une lentille convergente de distance focale **f' = 10 cm**. L'objet est situé à **30 cm avant** la lentille : OA = −30 cm (mesure algébrique, axe orienté dans le sens de la lumière).\n\n1. Écris la relation de conjugaison et calcule la position OA' de l'image.\n2. Calcule le grandissement γ, puis la taille algébrique A'B' de l'image.\n3. Décris l'image obtenue (réelle ou virtuelle, droite ou renversée, agrandie ou réduite). Où Anaïs doit-elle placer l'écran pour l'observer ?\n4. Vérifie que ce résultat est cohérent avec la position de l'objet indiquée dans le cours pour une image réelle.",
+      "bareme": [
+        { "critere": "1 / OA' − 1 / OA = 1 / f' et OA' = +15 cm", "points": 6 },
+        { "critere": "γ = OA' / OA = −0,50 et A'B' = −1,0 cm", "points": 5 },
+        { "critere": "Image réelle, renversée, réduite ; écran à 15 cm après la lentille", "points": 5 },
+        { "critere": "Objet au-delà de 2f' (30 cm > 20 cm) : image réelle, renversée, plus petite", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Relation de conjugaison : **1 / OA' − 1 / OA = 1 / f'**, d'où 1 / OA' = 1 / f' + 1 / OA = 1 / 10 + 1 / (−30) = 3 / 30 − 1 / 30 = 2 / 30. Donc **OA' = +15 cm**.\n2. γ = OA' / OA = 15 / (−30) = **−0,50**. A'B' = γ × AB = −0,50 × 2,0 = **−1,0 cm**.\n3. OA' > 0 : l'image est **du côté opposé** à l'objet, elle est **réelle**. γ < 0 : elle est **renversée**. |γ| = 0,5 < 1 : elle est **réduite** (1,0 cm de haut). Anaïs doit placer l'écran **à 15 cm après la lentille**.\n4. L'objet est à 30 cm de la lentille, soit **au-delà de 2f' = 20 cm** : d'après le cours, l'image est alors réelle, renversée et plus petite que l'objet. C'est bien ce que donne le calcul."
+    },
+    {
+      "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+      "difficulte": 3,
+      "titre": "De la loupe à l'appareil photo",
+      "consigne": "Traite les deux parties en appliquant la relation de conjugaison et le grandissement, puis compare les deux usages de la lentille.",
+      "enonce": "**Partie A – La loupe.** Pour lire un détail d'un timbre, Tom utilise une loupe de vergence **C = 20 δ**. Il place le timbre à **4,0 cm** de la loupe : OA = −4,0 cm. Un détail du timbre mesure **3,0 mm**.\n1. Calcule la distance focale de la loupe.\n2. Calcule la position de l'image OA' et le grandissement γ. Quelle taille le détail semble-t-il avoir ?\n3. Décris l'image. Peut-on la recueillir sur un écran ? Justifie par la position de l'objet.\n\n**Partie B – L'appareil photo.** L'objectif d'un appareil est modélisé par une lentille convergente de distance focale **f' = 50 mm**. Il photographie une personne de **1,80 m** debout à **5,0 m** : OA = −5,0 m.\n4. Calcule la distance OA' à laquelle doit se trouver le capteur. Compare-la à f'.\n5. Calcule γ puis la taille de l'image de la personne sur le capteur. Décris cette image.",
+      "bareme": [
+        { "critere": "f' = 1 / C = 0,050 m = 5,0 cm", "points": 2 },
+        { "critere": "OA' = −20 cm, γ = +5, détail vu à 15 mm", "points": 6 },
+        { "critere": "Image virtuelle, droite, agrandie, non recueillable : objet entre O et F", "points": 4 },
+        { "critere": "OA' ≈ 50,5 mm, capteur à peine au-delà du foyer image", "points": 4 },
+        { "critere": "γ ≈ −0,010, image ≈ −18 mm : réelle, renversée, réduite", "points": 4 }
+      ],
+      "dureeMin": 19,
+      "corrige": "**Partie A**\n1. f' = 1 / C = 1 / 20 = **0,050 m = 5,0 cm**.\n2. 1 / OA' = 1 / f' + 1 / OA = 1 / 5,0 + 1 / (−4,0) = 4 / 20 − 5 / 20 = −1 / 20, donc **OA' = −20 cm**. γ = OA' / OA = (−20) / (−4,0) = **+5,0**. Le détail de 3,0 mm apparaît avec une taille de 5,0 × 3,0 = **15 mm**.\n3. OA' < 0 : l'image est **du même côté que l'objet**, elle est **virtuelle** ; γ > 0 : **droite** ; |γ| = 5 : **agrandie**. On **ne peut pas** la recueillir sur un écran : on la voit à travers la lentille. C'est le cas où l'objet est placé **entre O et F** (4,0 cm < 5,0 cm) : c'est le principe de la loupe.\n\n**Partie B**\n4. f' = 50 mm ; OA = −5 000 mm. 1 / OA' = 1 / 50 − 1 / 5 000 = 100 / 5 000 − 1 / 5 000 = 99 / 5 000, donc **OA' ≈ 50,5 mm**. Le capteur est à peine au-delà du foyer image : un objet lointain donne une image presque dans le plan focal.\n5. γ = OA' / OA = 50,5 / (−5 000) ≈ **−0,010**. A'B' = γ × AB = −0,0101 × 1 800 mm ≈ **−18 mm**. L'image est **réelle** (recueillie sur le capteur), **renversée** (γ < 0) et très **réduite** : c'est le cas d'un objet placé au-delà de 2f'.\n**Bilan** : la même lentille convergente donne une image virtuelle agrandie (loupe) ou réelle réduite (appareil photo) selon la position de l'objet."
+    },
+    {
+      "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+      "difficulte": 1,
+      "titre": "Écran et imprimante",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Zoé crée une affiche sur son ordinateur puis l'imprime.\n\n1. L'écran de l'ordinateur et l'imprimante n'utilisent pas la même synthèse des couleurs. Pour chacun, nomme la synthèse, ses trois couleurs primaires et ce que donne la superposition des trois primaires.\n2. Donne la couleur complémentaire du rouge, du vert et du bleu. Que signifie « deux couleurs complémentaires » ?\n3. Sur l'affiche imprimée, un dessin de pull apparaît rouge en lumière blanche. De quelle couleur paraît-il si on l'éclaire en lumière verte ? Justifie.",
+      "bareme": [
+        { "critere": "Écran : additive, RVB, blanc ; imprimante : soustractive, cyan, magenta, jaune, noir", "points": 8 },
+        { "critere": "Complémentaires rouge–cyan, vert–magenta, bleu–jaune ; superposition additive donnant du blanc", "points": 6 },
+        { "critere": "Pull noir en lumière verte : il ne diffuse que le rouge, absent de l'éclairage", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**écran** utilise la **synthèse additive** : il combine des **lumières** colorées ; primaires **rouge, vert, bleu** (RVB) ; leur superposition donne du **blanc**. L'**imprimante** utilise la **synthèse soustractive** : des **matières** (encres) qui retranchent des longueurs d'onde ; primaires **cyan, magenta, jaune** ; leur superposition donne du **noir**.\n2. Rouge → **cyan** ; vert → **magenta** ; bleu → **jaune**. Deux couleurs sont complémentaires si leur **superposition en synthèse additive donne du blanc**.\n3. Un objet opaque apparaît de la couleur qu'il **diffuse** et absorbe le reste. Le pull diffuse le rouge ; éclairé en lumière **verte**, il n'a **rien à diffuser** : il paraît **noir**."
+    },
+    {
+      "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+      "difficulte": 2,
+      "titre": "Lumières de scène",
+      "consigne": "Justifie chaque couleur perçue par ce que l'objet diffuse ou transmet ; appuie-toi sur le cours.",
+      "enonce": "**Situation.** Au théâtre du lycée, trois éléments de décor sont sur scène :\n- une **robe blanche** ;\n- une **veste rouge**, qui ne diffuse que la lumière rouge ;\n- un **buisson vert**, qui ne diffuse que la lumière verte.\n\nL'éclairagiste, Rayan, dispose de projecteurs de lumière blanche, rouge et bleue.\n\n1. Rappelle ce qui détermine la couleur d'un objet opaque, d'un objet blanc et d'un objet noir.\n2. Recopie et complète le tableau en indiquant la couleur perçue de chaque élément :\n\n| Éclairage | Robe | Veste | Buisson |\n| Blanc | … | … | … |\n| Rouge | … | … | … |\n| Bleu | … | … | … |\n\n3. Rayan place devant un projecteur blanc un filtre qui paraît vert. Qu'est-ce qui détermine la couleur d'un objet transparent ?\n4. Dans le bar du décor, un sirop de menthe paraît vert. Dans quelle couleur absorbe-t-il principalement ? Justifie.",
+      "bareme": [
+        { "critere": "Opaque : lumière diffusée ; blanc : diffuse tout ; noir : absorbe tout", "points": 4 },
+        { "critere": "Tableau juste (9 cases), chaque cas justifié par la lumière diffusée", "points": 9 },
+        { "critere": "Objet transparent : couleur de la lumière transmise", "points": 3 },
+        { "critere": "Sirop vert : absorbe la complémentaire, le magenta", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Un objet **opaque** a la couleur de la lumière qu'il **diffuse** ; il absorbe le reste. Un objet **blanc** diffuse **toutes** les longueurs d'onde ; un objet **noir** les **absorbe toutes**.\n2. \n| Éclairage | Robe | Veste | Buisson |\n| Blanc | Blanche | Rouge | Vert |\n| Rouge | **Rouge** | **Rouge** | **Noir** |\n| Bleu | **Bleue** | **Noire** | **Noir** |\nLa robe diffuse tout : elle prend la couleur de l'éclairage. La veste ne diffuse que le rouge : elle paraît rouge en lumière rouge et noire en lumière bleue. Le buisson ne diffuse que le vert : il n'a rien à diffuser en lumière rouge ou bleue, il paraît noir.\n3. La couleur d'un objet **transparent** est celle de la lumière qu'il **transmet** : le filtre transmet la lumière verte.\n4. Une solution **absorbe la couleur complémentaire** de celle qu'elle paraît avoir. Le complémentaire du vert est le **magenta** : le sirop absorbe principalement dans le magenta."
+    },
+    {
+      "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+      "difficulte": 3,
+      "titre": "La voiture rouge à la tombée de la nuit",
+      "consigne": "Analyse la situation en mobilisant les trois facteurs de la couleur perçue ; rédige des réponses argumentées.",
+      "enonce": "**Situation.** Le soir, Lou regarde par la fenêtre une voiture rouge garée dans la rue.\n\n> **Étape 1.** En fin d'après-midi, en pleine lumière, la voiture paraît rouge vif.\n> **Étape 2.** Un lampadaire à lumière bleue s'allume au-dessus d'elle : Lou la voit presque noire.\n> **Étape 3.** Plus tard, le lampadaire s'éteint ; dans la pénombre, Lou distingue encore la voiture, mais en gris.\n\n1. Nomme les trois éléments dont résulte la couleur perçue.\n2. Explique l'étape 1, puis l'étape 2 : quel élément a changé ?\n3. Explique l'étape 3 : quels récepteurs de la rétine sont en jeu ? Quel élément a changé cette fois ?\n4. Le petit frère de Lou est daltonien. D'où vient le daltonisme, d'après le cours ?\n5. Montre que ces observations justifient la phrase du cours : « La couleur est une construction, pas une propriété de l'objet ».",
+      "bareme": [
+        { "critere": "Lumière qui éclaire, objet qui la modifie, œil (et cerveau) qui la reçoit", "points": 3 },
+        { "critere": "Étape 1 : diffusion du rouge ; étape 2 : éclairage bleu, rien à diffuser, voiture noire", "points": 5 },
+        { "critere": "Étape 3 : seuls les bâtonnets, aveugles à la couleur, fonctionnent ; les cônes demandent la pleine lumière", "points": 5 },
+        { "critere": "Daltonisme : déficience d'un type de cônes", "points": 3 },
+        { "critere": "Argumentation : même objet, couleurs différentes selon la lumière et l'œil ; cerveau qui reconstruit", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. La couleur perçue résulte de **la lumière qui éclaire**, de **l'objet qui la modifie** et de **l'œil qui la reçoit** (le cerveau reconstruisant la couleur).\n2. **Étape 1** : en lumière blanche, la carrosserie opaque **diffuse le rouge** et absorbe le reste : elle paraît rouge. **Étape 2** : c'est **la lumière** qui a changé. Éclairée en bleu, la voiture n'a pas de rouge à diffuser ; elle absorbe le bleu : elle paraît **noire** (ou presque).\n3. **Étape 3** : c'est **l'œil** qui a changé de régime. Les **cônes** (sensibles au rouge, au vert et au bleu) ne fonctionnent qu'**en pleine lumière**. Dans la pénombre, seuls les **bâtonnets**, très sensibles mais **aveugles à la couleur**, restent actifs : Lou voit la voiture en **niveaux de gris**.\n4. Le daltonisme vient d'une **déficience d'un type de cônes** : le cerveau reçoit alors des signaux incomplets et reconstruit les couleurs différemment.\n5. L'objet est **le même** aux trois étapes, et pourtant sa couleur perçue change : rouge, noire, grise. Il suffit de modifier l'éclairage ou le fonctionnement de l'œil pour changer la couleur. Le cerveau **reconstruit** la couleur à partir des signaux des trois types de cônes : ce changement de teinte n'est pas une illusion mais la conséquence directe du mécanisme. La couleur est donc une **construction**, pas une propriété de l'objet seul."
+    },
+    {
+      "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+      "difficulte": 1,
+      "titre": "Le skateur sur la rampe",
+      "consigne": "Écris chaque formule avant l'application numérique et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Enzo, avec son skate, a une masse **m = 50 kg**. On prend **g = 9,8 N/kg**.\n\n1. Donne l'expression de l'énergie mécanique et celle de chacun de ses deux termes, avec les unités.\n2. Enzo roule à **6,0 m/s**. Calcule son énergie cinétique. Que devient-elle s'il roule deux fois plus vite ?\n3. Au sommet d'une rampe, il se trouve à **2,0 m** au-dessus du sol, choisi comme origine des altitudes. Calcule son énergie potentielle de pesanteur. Pourquoi dit-on que seule la variation de cette énergie a un sens physique ?",
+      "bareme": [
+        { "critere": "Em = Ec + Epp, Ec = ½ × m × v², Epp = m × g × z, en joules", "points": 6 },
+        { "critere": "Ec = 900 J ; vitesse doublée : Ec quadruplée, 3 600 J", "points": 7 },
+        { "critere": "Epp = 980 J ; valeur dépendant du choix de l'origine des altitudes", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Em = Ec + Epp**, avec **Ec = ½ × m × v²** et **Epp = m × g × z** ; m en kg, v en m/s, g en N/kg, z en m, énergies en **joules (J)**.\n2. Ec = ½ × 50 × 6,0² = 25 × 36 = **900 J**. Ec croît avec le **carré** de la vitesse : à 12 m/s, Ec = ½ × 50 × 144 = **3 600 J**, soit **quatre fois plus**.\n3. Epp = 50 × 9,8 × 2,0 = **980 J**. Cette valeur dépend du choix, libre, de l'**origine des altitudes** : si on avait pris le sommet de la rampe comme origine, on aurait trouvé 0 J. Seules les **variations** d'Epp, qui ne dépendent pas de ce choix, ont un sens physique."
+    },
+    {
+      "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+      "difficulte": 2,
+      "titre": "La descente du toboggan",
+      "consigne": "Justifie l'utilisation de la conservation de l'énergie mécanique, puis détaille les calculs.",
+      "enonce": "**Situation.** Au parc aquatique, Léna (m = 30 kg) part **sans vitesse** du haut d'un toboggan, **4,5 m** au-dessus de l'arrivée, choisie comme origine des altitudes. On prend g = 9,8 N/kg.\n\n1. On néglige d'abord tout frottement. Justifie que l'énergie mécanique se conserve, puis calcule l'énergie mécanique de Léna au départ.\n2. Calcule sa vitesse à l'arrivée. Cette vitesse dépend-elle de la forme du toboggan ? Justifie.\n3. En réalité, on mesure une vitesse de **7,0 m/s** à l'arrivée. Calcule l'énergie cinétique réelle, puis l'énergie dissipée par les frottements. Que vaut le travail des frottements ? Que devient cette énergie ?",
+      "bareme": [
+        { "critere": "Seule la pesanteur travaille (réaction perpendiculaire) : conservation ; Em = Epp = 1 323 J", "points": 6 },
+        { "critere": "v = √(2 × g × h) ≈ 9,4 m/s, indépendante de la forme de la piste", "points": 7 },
+        { "critere": "Ec réelle 735 J, énergie dissipée 588 J, travail des frottements −588 J, transfert thermique au milieu", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Sans frottement, Léna est soumise à son poids et à la réaction du toboggan, perpendiculaire au déplacement (elle ne travaille pas). Seule une force **conservative**, la pesanteur, travaille : **l'énergie mécanique se conserve**.\nAu départ : v = 0 donc Ec = 0 ; Epp = m × g × z = 30 × 9,8 × 4,5 = **1 323 J**. Em = **1 323 J**.\n2. À l'arrivée, z = 0 donc Epp = 0 et Ec = Em = 1 323 J. ½ × m × v² = m × g × h, donc v = √(2 × g × h) = √(2 × 9,8 × 4,5) = √88,2 ≈ **9,4 m/s**. Cette vitesse **ne dépend pas de la forme** de la piste, seulement de la **dénivellation** (et même pas de la masse).\n3. Ec réelle = ½ × 30 × 7,0² = 15 × 49 = **735 J**. Énergie dissipée : 1 323 − 735 = **588 J**. ΔEm = W(frottements), donc **W(frottements) = −588 J** (négatif). Cette énergie n'est pas perdue : elle est **transférée au milieu sous forme thermique** (le toboggan, l'eau et Léna chauffent légèrement)."
+    },
+    {
+      "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+      "difficulte": 3,
+      "titre": "Freiner à 90 ou à 45 km/h",
+      "consigne": "Applique le théorème de l'énergie cinétique en justifiant le travail de chaque force, puis analyse les résultats.",
+      "enonce": "**Situation.** Une voiture de masse **m = 1 200 kg** roule sur une route droite et horizontale. Le conducteur freine à fond : on modélise l'ensemble des actions de freinage par une force **constante**, horizontale, opposée au mouvement, de valeur **F = 7 500 N**. On néglige les autres frottements.\n\n1. Calcule l'énergie cinétique de la voiture à **90 km/h**, après avoir converti la vitesse en m/s.\n2. Fais le bilan des forces. Justifie que le poids et la réaction de la route ne travaillent pas, puis donne l'expression du travail de la force de freinage sur une distance d.\n3. Énonce le théorème de l'énergie cinétique et déduis-en la distance de freinage d, jusqu'à l'arrêt.\n4. Reprends le calcul pour une vitesse initiale de **45 km/h**. Compare les deux distances et explique ce résultat à l'aide de l'expression de Ec.\n5. Que devient l'énergie cinétique de la voiture pendant le freinage ?",
+      "bareme": [
+        { "critere": "v = 25 m/s et Ec = 3,75 × 10⁵ J", "points": 3 },
+        { "critere": "Poids et réaction perpendiculaires au déplacement : travail nul ; W = F × d × cos 180° = −F × d", "points": 4 },
+        { "critere": "ΔEc = Σ W et d = Ec / F = 50 m", "points": 5 },
+        { "critere": "À 45 km/h : 12,5 m/s, Ec = 93 750 J, d = 12,5 m ; vitesse doublée, distance multipliée par 4 car Ec varie avec v²", "points": 5 },
+        { "critere": "Énergie transférée au milieu sous forme thermique (freins, route)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. v = 90 / 3,6 = **25 m/s**. Ec = ½ × 1 200 × 25² = 600 × 625 = **375 000 J = 3,75 × 10⁵ J**.\n2. Forces : le **poids** (vertical), la **réaction** de la route (verticale), la **force de freinage** (horizontale, opposée au mouvement). Le poids et la réaction sont **perpendiculaires au déplacement** horizontal : leur travail est **nul**. La force de freinage fait un angle α = 180° avec le déplacement : **W = F × d × cos 180° = −F × d**.\n3. Théorème de l'énergie cinétique : **ΔEc = Σ W(F)**. Entre le début du freinage et l'arrêt : 0 − Ec = −F × d, donc d = Ec / F = 375 000 / 7 500 = **50 m**.\n4. v = 45 / 3,6 = 12,5 m/s ; Ec = ½ × 1 200 × 12,5² = 600 × 156,25 = **93 750 J** ; d = 93 750 / 7 500 = **12,5 m**. À 90 km/h, la vitesse est **double**, mais la distance est **quatre fois plus grande** (50 m contre 12,5 m) : Ec croît avec le **carré** de la vitesse, et la force de freinage étant la même, la distance est proportionnelle à Ec. C'est l'argument physique des limitations de vitesse.\n5. L'énergie mécanique **diminue** : elle n'est pas perdue mais **transférée au milieu sous forme thermique** (échauffement des freins, des pneus, de la route), et dégradée."
+    },
+    {
+      "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+      "difficulte": 1,
+      "titre": "La bouilloire",
+      "consigne": "Écris chaque formule, convertis les unités et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** La bouilloire de Farah porte l'indication **2 000 W – 230 V**. Farah la fait fonctionner pendant **3,0 minutes** pour faire chauffer de l'eau.\n\n1. Donne la relation entre puissance, tension et intensité. Calcule l'intensité du courant qui traverse la bouilloire.\n2. Calcule l'énergie électrique reçue par la bouilloire, en joules puis en kilowattheures.\n3. L'effet Joule est-il ici utile ou nuisible ? Justifie, et cite un appareil où il est nuisible.",
+      "bareme": [
+        { "critere": "P = U × I et I ≈ 8,7 A", "points": 6 },
+        { "critere": "E = P × Δt = 3,6 × 10⁵ J avec Δt en secondes, soit 0,10 kWh", "points": 8 },
+        { "critere": "Effet Joule utile ici (chauffer l'eau) ; exemple d'effet nuisible : ordinateur ou ligne électrique", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **P = U × I**, donc I = P / U = 2 000 / 230 ≈ **8,7 A**.\n2. Δt = 3,0 min = 180 s. E = P × Δt = 2 000 × 180 = **360 000 J = 3,6 × 10⁵ J**. En kWh : 3,6 × 10⁵ / 3,6 × 10⁶ = **0,10 kWh** (on peut aussi calculer 2,0 kW × 0,050 h).\n3. Ici l'effet Joule est **utile** : c'est lui qui transforme l'énergie électrique en énergie thermique pour chauffer l'eau, comme dans un radiateur ou un grille-pain. Il est **nuisible** dans un **ordinateur** ou une **ligne électrique**, où il échauffe sans servir."
+    },
+    {
+      "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+      "difficulte": 2,
+      "titre": "Le radiateur de Victor",
+      "consigne": "Détaille chaque calcul et vérifie la cohérence de tes résultats.",
+      "enonce": "**Situation.** Le radiateur électrique de la chambre de Victor contient un conducteur ohmique de résistance **R = 46 Ω**, alimenté sous **U = 230 V**.\n\n1. Énonce la loi d'Ohm et calcule l'intensité du courant.\n2. Calcule la puissance dissipée par effet Joule avec P = R × I², puis vérifie ce résultat avec P = U × I.\n3. Victor utilise ce radiateur **2 heures par jour** pendant **30 jours**. Calcule l'énergie consommée en kWh, puis en joules.\n4. Le kilowattheure coûte **0,25 €**. Calcule le coût de ce chauffage sur le mois.",
+      "bareme": [
+        { "critere": "U = R × I et I = 5,0 A", "points": 5 },
+        { "critere": "P = R × I² = 1 150 W, vérifiée par U × I", "points": 5 },
+        { "critere": "E = 1,15 kW × 60 h = 69 kWh ≈ 2,5 × 10⁸ J", "points": 6 },
+        { "critere": "Coût : 69 × 0,25 ≈ 17 €", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Loi d'Ohm pour un conducteur ohmique : **U = R × I**, donc I = U / R = 230 / 46 = **5,0 A**.\n2. P = R × I² = 46 × 5,0² = 46 × 25 = **1 150 W**. Vérification : P = U × I = 230 × 5,0 = 1 150 W. Les deux calculs concordent.\n3. Durée totale : 2 × 30 = 60 h. E = P × Δt = 1,15 kW × 60 h = **69 kWh**. En joules : 69 × 3,6 × 10⁶ ≈ **2,5 × 10⁸ J** (2,484 × 10⁸ J).\n4. Coût = 69 × 0,25 = **17,25 €**, soit environ 17 €."
+    },
+    {
+      "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+      "difficulte": 3,
+      "titre": "Transporter l'électricité, alimenter un moteur",
+      "consigne": "Traite les deux parties en détaillant les calculs, puis rédige les analyses demandées.",
+      "enonce": "**Partie A – La ligne.** Une centrale doit acheminer une puissance **P = 10 MW** vers une ville par une ligne de résistance totale **R = 5,0 Ω**. On compare deux tensions de transport : **20 kV** et **400 kV**.\n1. Pour chaque tension, calcule l'intensité dans la ligne (I = P / U), puis la puissance perdue par effet Joule dans la ligne.\n2. Exprime chaque perte en pourcentage de la puissance transportée. Explique pourquoi on transporte l'électricité à très haute tension.\n\n**Partie B – Le générateur réel.** Une batterie de force électromotrice **E = 12,0 V** et de résistance interne **r = 0,50 Ω** alimente un petit moteur ; elle débite **I = 4,0 A**.\n3. Calcule la tension U aux bornes de la batterie. Que devient U si le moteur appelle un courant plus fort ?\n4. Calcule la puissance fournie par la batterie au circuit extérieur (U × I), la puissance dissipée dans la résistance interne, et la puissance totale E × I. Vérifie le bilan, puis calcule le rendement de la batterie.",
+      "bareme": [
+        { "critere": "20 kV : I = 500 A, pertes 1,25 MW ; 400 kV : I = 25 A, pertes 3 125 W", "points": 6 },
+        { "critere": "Pertes 12,5 % et environ 0,03 % ; pertes en I², haute tension pour réduire I", "points": 4 },
+        { "critere": "U = E − r × I = 10,0 V ; U diminue quand I augmente", "points": 4 },
+        { "critere": "40 W utiles, 8 W dissipés, 48 W au total ; bilan vérifié ; rendement ≈ 83 %", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A**\n1. \n- À 20 kV : I = 10 × 10⁶ / 20 × 10³ = **500 A** ; pertes P = R × I² = 5,0 × 500² = **1,25 × 10⁶ W = 1,25 MW**.\n- À 400 kV : I = 10 × 10⁶ / 400 × 10³ = **25 A** ; pertes P = 5,0 × 25² = **3 125 W** (environ 3,1 kW).\n2. À 20 kV : 1,25 / 10 = **12,5 %** de la puissance perdue. À 400 kV : 3 125 / 10⁷ ≈ **0,03 %**. Les pertes varient avec le **carré** de I : multiplier la tension par 20 divise I par 20 et les pertes par 400. D'où le transport à **très haute tension**, qui réduit l'intensité et donc les pertes par effet Joule.\n\n**Partie B**\n3. **U = E − r × I** = 12,0 − 0,50 × 4,0 = **10,0 V**. Si le courant appelé augmente, la chute r × I augmente : **la tension délivrée diminue**.\n4. Puissance fournie au circuit : U × I = 10,0 × 4,0 = **40 W**. Puissance dissipée dans r : r × I² = 0,50 × 16 = **8,0 W**. Puissance totale : E × I = 12,0 × 4,0 = **48 W**. Bilan : 48 = 40 + 8 : énergie fournie = énergie utile + énergie dissipée.\nRendement : η = 40 / 48 ≈ **0,83**, soit **83 %**, bien inférieur à 1."
+    }
+  ]
+}

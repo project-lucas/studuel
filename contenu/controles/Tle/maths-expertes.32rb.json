@@ -1,0 +1,278 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths-expertes",
+  "sujets": [
+    {
+      "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+      "difficulte": 1,
+      "titre": "PGCD par l'algorithme d'Euclide",
+      "consigne": "Détaille chaque étape et cite le résultat du cours utilisé.",
+      "enonce": "1. À l'aide de l'algorithme d'Euclide, calcule PGCD(252 ; 198).\n2. Déduis-en le PPCM de 252 et 198.\n3. Vérifie que 7 × 3 + 5 × (−4) = 1. Que peux-tu en conclure pour 7 et 5 ? Quel théorème utilises-tu ?\n4. 8 et 9 sont-ils premiers entre eux ? Sont-ils des nombres premiers ? Commente.",
+      "bareme": [
+        { "critere": "Étapes de l'algorithme justes et PGCD = 18 (dernier reste non nul)", "points": 7 },
+        { "critere": "PPCM = 252 × 198 / 18 = 2 772", "points": 4 },
+        { "critere": "Théorème de Bézout : un couple (u ; v) suffit à prouver que 7 et 5 sont premiers entre eux", "points": 5 },
+        { "critere": "8 et 9 premiers entre eux sans être premiers", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 252 = 1 × 198 + 54 ; 198 = 3 × 54 + 36 ; 54 = 1 × 36 + 18 ; 36 = 2 × 18 + 0. Le dernier reste non nul est **18** : PGCD(252 ; 198) = 18.\n2. PGCD × PPCM = |252 × 198|, donc PPCM = 252 × 198 / 18 = 252 × 11 = **2 772**.\n3. 21 − 20 = 1 ✓. Il existe des entiers u = 3 et v = −4 tels que 7u + 5v = 1 : d'après le **théorème de Bézout**, **7 et 5 sont premiers entre eux**. Exhiber un seul couple suffit.\n4. Les diviseurs positifs de 8 sont 1, 2, 4, 8 ; ceux de 9 sont 1, 3, 9 : seul 1 est commun, **PGCD = 1**, ils sont premiers entre eux (ou : 9 × 1 + 8 × (−1) = 1). Pourtant **aucun n'est premier** (8 = 2³, 9 = 3²) : « premiers entre eux » ne signifie pas « nombres premiers »."
+    },
+    {
+      "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+      "difficulte": 2,
+      "titre": "Une équation diophantienne",
+      "consigne": "Suis les quatre étapes de la méthode du cours en justifiant chacune.",
+      "enonce": "1. L'équation 6x + 9y = 4 admet-elle des solutions entières ? Justifie.\n2. On considère l'équation (E) : 7x + 5y = 3, d'inconnues x et y entières.\n   a. Justifie que (E) admet des solutions.\n   b. Vérifie que le couple (−1 ; 2) est solution.\n   c. Soit (x ; y) une solution. En soustrayant l'égalité vérifiée par (−1 ; 2), montre que 7(x + 1) = 5(2 − y).\n   d. À l'aide du théorème de Gauss, déduis-en l'ensemble des solutions de (E).\n   e. Vérifie tes solutions.",
+      "bareme": [
+        { "critere": "6x + 9y = 4 sans solution car PGCD(6 ; 9) = 3 ne divise pas 4", "points": 4 },
+        { "critere": "Existence justifiée (PGCD(7 ; 5) = 1 divise 3) et solution particulière vérifiée", "points": 4 },
+        { "critere": "Soustraction et égalité 7(x + 1) = 5(2 − y)", "points": 4 },
+        { "critere": "Gauss appliqué avec l'hypothèse de primalité : x = −1 + 5k, y = 2 − 7k", "points": 6 },
+        { "critere": "Vérification des solutions générales", "points": 2 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. PGCD(6 ; 9) = 3 et 3 ne divise pas 4 : **aucune solution** entière (6x + 9y est toujours multiple de 3).\n2. a. PGCD(7 ; 5) = 1 et 1 divise 3 : (E) **admet des solutions**.\n   b. 7 × (−1) + 5 × 2 = −7 + 10 = 3 ✓.\n   c. 7x + 5y = 3 et 7 × (−1) + 5 × 2 = 3. Par soustraction : 7(x + 1) + 5(y − 2) = 0, soit **7(x + 1) = 5(2 − y)**.\n   d. 5 divise 7(x + 1) et 5 est **premier avec 7** : d'après le **théorème de Gauss**, 5 divise x + 1. Il existe k entier tel que x + 1 = 5k, soit **x = −1 + 5k**. En reportant : 7 × 5k = 5(2 − y), donc 2 − y = 7k, soit **y = 2 − 7k**.\n   e. Réciproquement : 7(−1 + 5k) + 5(2 − 7k) = −7 + 35k + 10 − 35k = 3 ✓. Solutions : **(−1 + 5k ; 2 − 7k), k entier relatif**."
+    },
+    {
+      "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+      "difficulte": 3,
+      "titre": "Remonter l'algorithme d'Euclide",
+      "consigne": "Traite les questions dans l'ordre ; dis à chaque fois si tu utilises Bézout ou Gauss, et pourquoi.",
+      "enonce": "1. Applique l'algorithme d'Euclide à 43 et 17. Que vaut leur PGCD ?\n2. En remontant les calculs, trouve des entiers u et v tels que 43u + 17v = 1.\n3. Résous dans les entiers relatifs l'équation 43x + 17y = 1.\n4. Un entier a vérifie : 17 divise 43a. Que peut-on en conclure ? Justifie.\n5. Montre que, pour tout entier naturel n, les entiers 2n + 1 et 3n + 2 sont premiers entre eux.\n6. Un élève affirme : « 6 divise 4 × 3, donc 6 divise 4 ou 6 divise 3. » Explique son erreur à l'aide du théorème de Gauss.",
+      "bareme": [
+        { "critere": "Algorithme juste et PGCD(43 ; 17) = 1", "points": 3 },
+        { "critere": "Remontée : 1 = 2 × 43 − 5 × 17, soit (u ; v) = (2 ; −5)", "points": 5 },
+        { "critere": "Solutions générales (2 + 17k ; −5 − 43k) obtenues par soustraction et Gauss, vérifiées", "points": 5 },
+        { "critere": "Gauss : 17 premier avec 43 donc 17 divise a ; Bézout : 3(2n + 1) − 2(3n + 2) = −1", "points": 4 },
+        { "critere": "Contre-exemple : l'hypothèse « 6 premier avec 4 » manque", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 43 = 2 × 17 + 9 ; 17 = 1 × 9 + 8 ; 9 = 1 × 8 + 1 ; 8 = 8 × 1 + 0. Dernier reste non nul : **PGCD(43 ; 17) = 1**.\n2. 1 = 9 − 8 = 9 − (17 − 9) = 2 × 9 − 17 = 2 × (43 − 2 × 17) − 17 = **2 × 43 − 5 × 17**. Donc **u = 2 et v = −5** (86 − 85 = 1 ✓).\n3. (2 ; −5) est une solution particulière. Si 43x + 17y = 1, par soustraction : 43(x − 2) = 17(−5 − y). 17 divise 43(x − 2) et 17 est premier avec 43 : par **Gauss**, 17 divise x − 2, donc x = 2 + 17k ; en reportant, 43 × 17k = 17(−5 − y), donc y = −5 − 43k. Réciproquement, 43(2 + 17k) + 17(−5 − 43k) = 86 − 85 = 1 ✓. Solutions : **(2 + 17k ; −5 − 43k), k ∈ ℤ**.\n4. 17 divise 43a et PGCD(17 ; 43) = 1 : d'après le **théorème de Gauss**, **17 divise a**.\n5. 3(2n + 1) − 2(3n + 2) = 6n + 3 − 6n − 4 = −1, soit (2n + 1) × (−3) + (3n + 2) × 2 = 1. D'après le **théorème de Bézout** (un couple suffit), 2n + 1 et 3n + 2 sont **premiers entre eux**.\n6. 6 divise bien 12 = 4 × 3, mais 6 ne divise ni 4 ni 3. Gauss exige que **a soit premier avec b** : ici PGCD(6 ; 4) = 2 ≠ 1, l'hypothèse manque et la conclusion tombe. Bézout sert à prouver qu'on est premiers entre eux, Gauss à conclure qu'un facteur divise."
+    },
+    {
+      "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+      "difficulte": 1,
+      "titre": "Premier ou pas ?",
+      "consigne": "Justifie chaque réponse en citant la méthode du cours.",
+      "enonce": "1. Le nombre 221 est-il premier ? Et 227 ? Indique jusqu'à quel entier il suffit de tester les diviseurs, et pourquoi.\n2. Décompose 360 en produit de facteurs premiers.\n3. Déduis-en le nombre de diviseurs positifs de 360.\n4. Pourquoi 1 n'est-il pas considéré comme un nombre premier ?",
+      "bareme": [
+        { "critere": "Test jusqu'à √n justifié ; 221 = 13 × 17 non premier, 227 premier", "points": 8 },
+        { "critere": "360 = 2³ × 3² × 5 et 24 diviseurs par le produit des exposants augmentés de 1", "points": 8 },
+        { "critere": "1 n'a qu'un diviseur ; l'exclure garantit l'unicité de la décomposition", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Si n n'est pas premier, il a un diviseur inférieur ou égal à √n (sinon le produit de deux facteurs dépasserait n) : on teste les premiers jusqu'à **√n**.\n- 221 : √221 ≈ 14,9 ; on teste 2, 3, 5, 7, 11, 13 : **221 = 13 × 17**, il **n'est pas premier**.\n- 227 : √227 ≈ 15,1 ; 227 n'est divisible ni par 2, ni par 3 (somme 11), ni par 5, ni par 7 (7 × 32 = 224, reste 3), ni par 11 (11 × 20 = 220, reste 7), ni par 13 (13 × 17 = 221, reste 6) : **227 est premier**.\n2. 360 = 2 × 180 = 2 × 2 × 90 = 2 × 2 × 2 × 45 = **2³ × 3² × 5**.\n3. Nombre de diviseurs = (3 + 1)(2 + 1)(1 + 1) = **24**.\n4. Un nombre premier a exactement **deux** diviseurs positifs ; 1 n'en a qu'**un seul**. L'exclure est nécessaire à l'**unicité** de la décomposition : sinon 6 = 2 × 3 = 1 × 2 × 3 = 1 × 1 × 2 × 3…"
+    },
+    {
+      "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+      "difficulte": 2,
+      "titre": "Décompositions et Fermat",
+      "consigne": "Justifie chaque résultat par le théorème fondamental ou par le petit théorème de Fermat.",
+      "enonce": "1. Décompose 756 et 1 260 en produits de facteurs premiers.\n2. Déduis-en leur PGCD et leur PPCM. Vérifie avec la relation qui lie PGCD, PPCM et produit.\n3. Combien 756 a-t-il de diviseurs positifs ?\n4. À l'aide du petit théorème de Fermat, détermine le reste de 3¹⁰⁰ dans la division par 7. Vérifie d'abord que les hypothèses sont remplies.",
+      "bareme": [
+        { "critere": "756 = 2² × 3³ × 7 et 1 260 = 2² × 3² × 5 × 7", "points": 5 },
+        { "critere": "PGCD = 252 (facteurs communs, plus petits exposants) et PPCM = 3 780, vérification du produit", "points": 6 },
+        { "critere": "24 diviseurs pour 756", "points": 3 },
+        { "critere": "Hypothèses de Fermat vérifiées, 3⁶ ≡ 1 [7], 100 = 6 × 16 + 4, reste 4", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 756 = 4 × 189 = 2² × 27 × 7 = **2² × 3³ × 7**. 1 260 = 4 × 315 = 2² × 9 × 35 = **2² × 3² × 5 × 7**.\n2. PGCD : facteurs **communs** aux **plus petits** exposants : 2² × 3² × 7 = **252**. PPCM : **tous** les facteurs aux **plus grands** exposants : 2² × 3³ × 5 × 7 = **3 780**.\nVérification : 252 × 3 780 = 952 560 et 756 × 1 260 = 952 560 ✓.\n3. (2 + 1)(3 + 1)(1 + 1) = **24** diviseurs.\n4. 7 est **premier** et 3 n'est **pas divisible** par 7 : le petit théorème de Fermat donne 3⁶ ≡ 1 [7]. 100 = 6 × 16 + 4, donc 3¹⁰⁰ = (3⁶)¹⁶ × 3⁴ ≡ 3⁴ = 81 [7]. Or 81 = 7 × 11 + 4. Reste : **4**."
+    },
+    {
+      "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+      "difficulte": 3,
+      "titre": "Ce que Fermat permet d'affirmer",
+      "consigne": "Traite les questions en précisant à chaque fois quelle forme du théorème tu utilises et ce qu'elle permet de conclure.",
+      "enonce": "1. Détermine le reste de 2²⁰²⁶ dans la division par 11.\n2. Calcule le reste de 2¹⁴ modulo 15 (on pourra remarquer que 2⁴ = 16). Que peut-on en conclure sur 15, par la contraposée du petit théorème de Fermat ?\n3. On admet que 341 = 11 × 31 et que 2³⁴⁰ ≡ 1 [341]. Que permet de conclure ce résultat sur la primalité de 341 ? Qu'enseigne cet exemple sur les tests de primalité fondés sur Fermat ?\n4. Démontre que, pour tout entier n, n⁷ − n est divisible par 7.\n5. Euclide considère le produit des premiers nombres premiers augmenté de 1. On donne 2 × 3 × 5 × 7 × 11 × 13 + 1 = 30 031 = 59 × 509. Ce nombre est-il premier ? Cela contredit-il la démonstration d'Euclide ? Explique.",
+      "bareme": [
+        { "critere": "2¹⁰ ≡ 1 [11], 2026 = 10 × 202 + 6, reste 2⁶ ≡ 9", "points": 4 },
+        { "critere": "2¹⁴ ≡ 4 [15], non congru à 1 : 15 n'est pas premier (contraposée)", "points": 4 },
+        { "critere": "341 composé passe le test : le test ne prouve jamais qu'un nombre est premier", "points": 4 },
+        { "critere": "Forme générale n⁷ ≡ n [7] appliquée à tout n", "points": 4 },
+        { "critere": "30 031 non premier mais ses facteurs premiers 59 et 509 sont nouveaux : pas de contradiction", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 11 est premier et ne divise pas 2 : 2¹⁰ ≡ 1 [11]. 2026 = 10 × 202 + 6, donc 2²⁰²⁶ ≡ 2⁶ = 64 [11], et 64 = 5 × 11 + 9. Reste : **9**.\n2. 2⁴ = 16 ≡ 1 [15], donc 2¹⁴ = (2⁴)³ × 2² ≡ 4 [15]. Ainsi 2¹⁴ n'est **pas** congru à 1 modulo 15. Si 15 était premier, comme 15 ne divise pas 2, on aurait 2¹⁴ ≡ 1 [15]. Par **contraposée**, **15 n'est pas premier** (en effet 15 = 3 × 5).\n3. 2³⁴⁰ ≡ 1 [341] ne permet **rien** de conclure : le théorème ne dit rien quand la congruence est vérifiée. Et en effet 341 = 11 × 31 est **composé** : certains nombres composés passent le test. Le test permet d'affirmer qu'un nombre **n'est pas** premier, **jamais** qu'il l'est.\n4. 7 est premier : la forme générale du petit théorème de Fermat donne, pour **tout** entier n, n⁷ ≡ n [7], soit n⁷ − n ≡ 0 [7] : **7 divise n⁷ − n**.\n5. 30 031 = 59 × 509 **n'est pas premier**. Ce n'est pas une contradiction : la démonstration d'Euclide dit seulement que ce nombre laisse le reste 1 dans la division par chacun des premiers utilisés (2, 3, 5, 7, 11, 13), donc qu'il est premier **ou** qu'il possède un facteur premier **nouveau**. Ici, 59 et 509 sont des premiers absents de la liste : la conclusion (il existe un premier hors de toute liste finie) tient."
+    },
+    {
+      "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+      "difficulte": 1,
+      "titre": "Opérations sur les matrices",
+      "consigne": "Convention : A = (a b ; c d) désigne la matrice 2 × 2 de première ligne (a b) et de deuxième ligne (c d). Détaille chaque calcul.",
+      "enonce": "On pose A = (1 2 ; 3 4) et B = (0 1 ; −1 2).\n\n1. Calcule A + B et 2A.\n2. Calcule A × B, puis B × A. Que remarques-tu ?\n3. Calcule le déterminant de A. A est-elle inversible ? Si oui, donne A⁻¹ et vérifie que A × A⁻¹ = I₂.",
+      "bareme": [
+        { "critere": "A + B = (1 3 ; 2 6) et 2A = (2 4 ; 6 8)", "points": 4 },
+        { "critere": "AB = (−2 5 ; −4 11) et BA = (3 4 ; 5 6), non-commutativité relevée", "points": 8 },
+        { "critere": "Déterminant −2, A inversible, A⁻¹ = (−2 1 ; 3/2 −1/2) vérifiée", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. A + B = **(1 3 ; 2 6)** ; 2A = **(2 4 ; 6 8)**.\n2. A × B : ligne 1 : (1 × 0 + 2 × (−1) ; 1 × 1 + 2 × 2) = (−2 ; 5) ; ligne 2 : (3 × 0 + 4 × (−1) ; 3 × 1 + 4 × 2) = (−4 ; 11). **AB = (−2 5 ; −4 11)**.\nB × A : ligne 1 : (0 × 1 + 1 × 3 ; 0 × 2 + 1 × 4) = (3 ; 4) ; ligne 2 : (−1 × 1 + 2 × 3 ; −1 × 2 + 2 × 4) = (5 ; 6). **BA = (3 4 ; 5 6)**.\nAB ≠ BA : le produit matriciel **n'est pas commutatif**.\n3. det A = 1 × 4 − 2 × 3 = **−2 ≠ 0** : A est **inversible**. On échange a et d, on change le signe de b et c, on divise par le déterminant : A⁻¹ = (1/−2) × (4 −2 ; −3 1) = **(−2 1 ; 3/2 −1/2)**.\nVérification : ligne 1 de A × A⁻¹ : (1 × (−2) + 2 × 3/2 ; 1 × 1 + 2 × (−1/2)) = (1 ; 0) ; ligne 2 : (3 × (−2) + 4 × 3/2 ; 3 × 1 + 4 × (−1/2)) = (0 ; 1). On obtient I₂ ✓."
+    },
+    {
+      "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+      "difficulte": 2,
+      "titre": "Résoudre un système par l'inverse",
+      "consigne": "Convention : (a b ; c d) désigne la matrice 2 × 2 de lignes (a b) et (c d) ; (x ; y) désigne une matrice colonne. Justifie chaque étape.",
+      "enonce": "1. On considère le système : 2x + 3y = 7 et x − y = 1.\n   a. Écris-le sous la forme A X = B, en précisant A, X et B.\n   b. Justifie que A est inversible et calcule A⁻¹.\n   c. Déduis-en la solution du système, puis vérifie-la.\n2. Soit C = (2 4 ; 1 2).\n   a. C est-elle inversible ? Que peut-on dire du nombre de solutions du système C X = B′ pour un second membre B′ quelconque ?\n   b. Calcule C × (2 ; −1). Quelle propriété du produit matriciel, absente chez les réels, ce calcul illustre-t-il ?",
+      "bareme": [
+        { "critere": "Écriture A = (2 3 ; 1 −1), X = (x ; y), B = (7 ; 1)", "points": 4 },
+        { "critere": "det A = −5 ≠ 0 et A⁻¹ = (1/5 3/5 ; 1/5 −2/5)", "points": 6 },
+        { "critere": "X = A⁻¹B = (2 ; 1) et vérification", "points": 5 },
+        { "critere": "C non inversible (det 0), aucune ou une infinité de solutions ; produit nul de facteurs non nuls", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a. **A = (2 3 ; 1 −1)**, **X = (x ; y)**, **B = (7 ; 1)** : le système s'écrit A X = B.\n   b. det A = 2 × (−1) − 3 × 1 = **−5 ≠ 0** : A est inversible. A⁻¹ = (1/−5) × (−1 −3 ; −1 2) = **(1/5 3/5 ; 1/5 −2/5)**.\n   c. A inversible, la solution est **unique** : X = A⁻¹ B. x = (1/5) × 7 + (3/5) × 1 = 10/5 = **2** ; y = (1/5) × 7 + (−2/5) × 1 = 5/5 = **1**. Vérification : 2 × 2 + 3 × 1 = 7 ✓ et 2 − 1 = 1 ✓.\n2. a. det C = 2 × 2 − 4 × 1 = **0** : C **n'est pas inversible**. Le système C X = B′ a alors **une infinité de solutions ou aucune**, selon B′.\n   b. C × (2 ; −1) = (2 × 2 + 4 × (−1) ; 1 × 2 + 2 × (−1)) = **(0 ; 0)**. Un produit de matrices peut être **nul sans qu'aucun facteur ne le soit** : on ne peut donc pas « simplifier » comme avec des réels."
+    },
+    {
+      "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+      "difficulte": 3,
+      "titre": "Puissances par diagonalisation",
+      "consigne": "Convention : (a b ; c d) désigne la matrice 2 × 2 de lignes (a b) et (c d). Justifie chaque étape et vérifie tes résultats.",
+      "enonce": "On considère A = (3 −2 ; 1 0), P = (1 2 ; 1 1) et D = (1 0 ; 0 2).\n\n1. Justifie que P est inversible et calcule P⁻¹.\n2. Vérifie que A = P D P⁻¹. Précise l'ordre dans lequel tu effectues les produits.\n3. Démontre par récurrence que, pour tout entier naturel n, Aⁿ = P Dⁿ P⁻¹, et donne Dⁿ.\n4. Déduis-en l'expression de Aⁿ en fonction de n.\n5. Contrôle ta formule en calculant A² directement et avec la formule, puis pour n = 0.\n6. Donne le coefficient de la première ligne et de la première colonne de A⁵.",
+      "bareme": [
+        { "critere": "det P = −1 et P⁻¹ = (−1 2 ; 1 −1)", "points": 3 },
+        { "critere": "Produit P D = (1 4 ; 1 2) puis (P D) P⁻¹ = A", "points": 4 },
+        { "critere": "Récurrence rédigée (initialisation, hérédité avec P⁻¹P = I) et Dⁿ = (1 0 ; 0 2ⁿ)", "points": 5 },
+        { "critere": "Aⁿ = (2ⁿ⁺¹ − 1  2 − 2ⁿ⁺¹ ; 2ⁿ − 1  2 − 2ⁿ)", "points": 5 },
+        { "critere": "Contrôles A² = (7 −6 ; 3 −2) et A⁰ = I, coefficient 63", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. det P = 1 × 1 − 2 × 1 = **−1 ≠ 0** : P est inversible. P⁻¹ = (1/−1) × (1 −2 ; −1 1) = **(−1 2 ; 1 −1)**.\n2. P D = (1 × 1 + 2 × 0  1 × 0 + 2 × 2 ; 1 × 1 + 1 × 0  1 × 0 + 1 × 2) = (1 4 ; 1 2). Puis (P D) P⁻¹ : ligne 1 : (1 × (−1) + 4 × 1 ; 1 × 2 + 4 × (−1)) = (3 ; −2) ; ligne 2 : (1 × (−1) + 2 × 1 ; 1 × 2 + 2 × (−1)) = (1 ; 0). On retrouve **A** ✓ (les produits sont faits de gauche à droite, sans jamais changer l'ordre des facteurs).\n3. Initialisation : A⁰ = I et P D⁰ P⁻¹ = P I P⁻¹ = I ✓. Hérédité : si Aⁿ = P Dⁿ P⁻¹, alors Aⁿ⁺¹ = Aⁿ A = P Dⁿ P⁻¹ P D P⁻¹ = P Dⁿ I D P⁻¹ = P Dⁿ⁺¹ P⁻¹. Conclusion : **Aⁿ = P Dⁿ P⁻¹** pour tout n. D étant diagonale, **Dⁿ = (1 0 ; 0 2ⁿ)**.\n4. P Dⁿ = (1 2ⁿ⁺¹ ; 1 2ⁿ). Puis × P⁻¹ :\nligne 1 : (−1 + 2ⁿ⁺¹ ; 2 − 2ⁿ⁺¹) ; ligne 2 : (−1 + 2ⁿ ; 2 − 2ⁿ).\n**Aⁿ = (2ⁿ⁺¹ − 1  2 − 2ⁿ⁺¹ ; 2ⁿ − 1  2 − 2ⁿ)**.\n5. Directement : A² = (3 × 3 + (−2) × 1  3 × (−2) + (−2) × 0 ; 1 × 3 + 0 × 1  1 × (−2) + 0 × 0) = **(7 −6 ; 3 −2)**. Formule pour n = 2 : (8 − 1  2 − 8 ; 4 − 1  2 − 4) = (7 −6 ; 3 −2) ✓. Pour n = 0 : (2 − 1  2 − 2 ; 1 − 1  2 − 1) = (1 0 ; 0 1) = I ✓.\n6. Coefficient (1 ; 1) de A⁵ : 2⁶ − 1 = **63**."
+    },
+    {
+      "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+      "difficulte": 1,
+      "titre": "Degrés, matrice et chaîne eulérienne",
+      "consigne": "Justifie chaque réponse par une définition ou un théorème du cours.",
+      "enonce": "Un graphe non orienté a quatre sommets A, B, C, D et quatre arêtes : A–B, A–C, B–C et C–D.\n\n1. Donne le degré de chaque sommet. Vérifie que la somme des degrés vaut le double du nombre d'arêtes.\n2. Écris la matrice d'adjacence M du graphe (sommets dans l'ordre A, B, C, D). Pourquoi est-elle symétrique ?\n3. Le graphe admet-il une chaîne eulérienne ? un cycle eulérien ? Justifie avec le théorème d'Euler et, s'il en existe une, donne une chaîne eulérienne.",
+      "bareme": [
+        { "critere": "Degrés 2, 2, 3, 1 et somme 8 = 2 × 4", "points": 5 },
+        { "critere": "Matrice d'adjacence juste et symétrie justifiée (graphe non orienté)", "points": 7 },
+        { "critere": "Graphe connexe avec 2 sommets de degré impair : chaîne eulérienne de C à D (ou D à C), pas de cycle", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. deg(A) = **2** (B, C) ; deg(B) = **2** (A, C) ; deg(C) = **3** (A, B, D) ; deg(D) = **1** (C). Somme : 2 + 2 + 3 + 1 = 8 = 2 × 4 ✓ (chaque arête compte pour deux sommets).\n2. Lignes dans l'ordre A, B, C, D :\n| | A | B | C | D |\n| A | 0 | 1 | 1 | 0 |\n| B | 1 | 0 | 1 | 0 |\n| C | 1 | 1 | 0 | 1 |\n| D | 0 | 0 | 1 | 0 |\nLe graphe est **non orienté** : une arête entre i et j est aussi une arête entre j et i, donc le coefficient (i ; j) égale le coefficient (j ; i) : M est **symétrique**.\n3. Le graphe est **connexe** et a exactement **2 sommets de degré impair** (C et D) : d'après le théorème d'Euler, il admet une **chaîne eulérienne**, qui va de l'un à l'autre, par exemple **D – C – A – B – C** (les quatre arêtes, une seule fois chacune). Il n'y a **pas de cycle eulérien** : il faudrait 0 sommet de degré impair."
+    },
+    {
+      "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+      "difficulte": 2,
+      "titre": "Compter les chemins de longueur 2",
+      "consigne": "Justifie chaque réponse ; interprète les coefficients avec le théorème du cours.",
+      "enonce": "On reprend le graphe non orienté à quatre sommets A, B, C, D d'arêtes A–B, A–C, B–C et C–D, de matrice d'adjacence M (ordre A, B, C, D) :\n\n| | A | B | C | D |\n| A | 0 | 1 | 1 | 0 |\n| B | 1 | 0 | 1 | 0 |\n| C | 1 | 1 | 0 | 1 |\n| D | 0 | 0 | 1 | 0 |\n\n1. Calcule M².\n2. Combien y a-t-il de chemins de longueur 2 de A à D ? de C à D ? Décris-les et vérifie sur le graphe.\n3. Que représentent les coefficients diagonaux de M² ? Compare avec les degrés.\n4. Détermine le nombre chromatique du graphe : donne un minorant, un majorant, puis une coloration optimale.",
+      "bareme": [
+        { "critere": "M² = (2 1 1 1 ; 1 2 1 1 ; 1 1 3 0 ; 1 1 0 1)", "points": 7 },
+        { "critere": "Interprétation : 1 chemin de A à D (A–C–D), 0 de C à D, vérifiés", "points": 5 },
+        { "critere": "Diagonale = allers-retours = degrés", "points": 3 },
+        { "critere": "Nombre chromatique 3 : triangle ABC (minorant), degré max + 1 = 4 (majorant), coloration à 3 couleurs", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le coefficient (i ; j) de M² s'obtient en parcourant la ligne i et la colonne j de M :\n| | A | B | C | D |\n| A | 2 | 1 | 1 | 1 |\n| B | 1 | 2 | 1 | 1 |\n| C | 1 | 1 | 3 | 0 |\n| D | 1 | 1 | 0 | 1 |\nPar exemple (A ; D) : 0 × 0 + 1 × 0 + 1 × 1 + 0 × 0 = 1.\n2. Le coefficient (i ; j) de M² est le **nombre de chemins de longueur exactement 2** de i à j. De A à D : **1** chemin, **A – C – D**. De C à D : **0** chemin (le seul voisin de D est C lui-même, et il n'y a pas de boucle en C).\n3. Le coefficient (i ; i) compte les chemins i – x – i, c'est-à-dire les allers-retours vers chaque voisin : il vaut le **degré** du sommet (2, 2, 3, 1) ✓.\n4. A, B, C forment un **sous-graphe complet** à 3 sommets (triangle) : il faut au moins **3** couleurs. Le degré maximal est 3, donc au plus 3 + 1 = **4** couleurs. Coloration à 3 couleurs : A rouge, B bleu, C vert, D rouge (D n'est voisin que de C). Nombre chromatique : **3**."
+    },
+    {
+      "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+      "difficulte": 3,
+      "titre": "Le réseau de pistes cyclables",
+      "consigne": "Traite toutes les questions en justifiant par les théorèmes du cours.",
+      "enonce": "**Situation.** Une commune relie cinq quartiers, numérotés de 1 à 5, par des pistes cyclables à double sens : 1–2, 1–3, 2–3, 2–4, 3–4, 3–5 et 4–5.\n\n1. Donne le degré de chaque quartier et la matrice d'adjacence M (ordre 1 à 5). Le graphe est-il connexe ?\n2. Un agent veut repeindre le marquage de toutes les pistes en passant une seule fois sur chacune. Est-ce possible ? Si oui, d'où doit-il partir et où arrivera-t-il ? Propose un tel parcours.\n3. Un livreur veut passer par chaque quartier exactement une fois. Propose un tel parcours. Existe-t-il un critère simple, comme pour la question 2, pour savoir si c'est possible ?\n4. Calcule la première ligne de M², puis le coefficient (1 ; 5) de M³. Combien existe-t-il de trajets de exactement 3 pistes du quartier 1 au quartier 5 ? Écris-les.\n5. La commune veut installer un panneau de couleur dans chaque quartier, deux quartiers reliés ne devant pas avoir la même couleur. Quel est le nombre minimal de couleurs ? Justifie.",
+      "bareme": [
+        { "critere": "Degrés 2, 3, 4, 3, 2, matrice juste, graphe connexe", "points": 4 },
+        { "critere": "Chaîne eulérienne entre les quartiers 2 et 4 (seuls degrés impairs) et parcours valable des 7 pistes", "points": 4 },
+        { "critere": "Chaîne hamiltonienne proposée et absence de critère simple", "points": 3 },
+        { "critere": "Ligne 1 de M² = (2 1 1 2 1), coefficient (1 ; 5) de M³ = 3 et les trois trajets", "points": 5 },
+        { "critere": "Nombre chromatique 3 : triangle (minorant) et coloration à 3 couleurs", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Degrés : 1 → **2** ; 2 → **3** ; 3 → **4** ; 4 → **3** ; 5 → **2** (somme 14 = 2 × 7 ✓).\nM, lignes 1 à 5 : (0 1 1 0 0) ; (1 0 1 1 0) ; (1 1 0 1 1) ; (0 1 1 0 1) ; (0 0 1 1 0).\nLe graphe est **connexe** : depuis 3, on atteint directement 1, 2, 4 et 5.\n2. Graphe connexe avec exactement **deux sommets de degré impair** (2 et 4) : d'après le théorème d'Euler, il existe une **chaîne eulérienne**, qui part de l'un et arrive à l'autre. Exemple : **2 – 1 – 3 – 2 – 4 – 3 – 5 – 4** (pistes 21, 13, 32, 24, 43, 35, 54 : les sept, une fois chacune).\n3. Exemple de chaîne hamiltonienne : **1 – 2 – 4 – 5 – 3** (pistes 12, 24, 45, 53). Il **n'existe pas de critère simple** pour les chaînes hamiltoniennes, contrairement aux chaînes eulériennes : c'est ce qui rend difficile le problème du voyageur de commerce.\n4. Ligne 1 de M² : ligne 1 de M, (0 1 1 0 0), fois chaque colonne : **(2 1 1 2 1)**. Coefficient (1 ; 5) de M³ = ligne 1 de M² × colonne 5 de M (0 0 1 1 0) = 1 × 1 + 2 × 1 = **3**. Il y a **3 trajets** de exactement 3 pistes : **1 – 2 – 3 – 5**, **1 – 2 – 4 – 5**, **1 – 3 – 4 – 5**.\n5. 1, 2, 3 forment un triangle (sous-graphe complet) : au moins **3** couleurs. Coloration à 3 couleurs : 1 rouge, 2 bleu, 3 vert, 4 rouge (voisins 2, 3, 5), 5 bleu (voisins 3, 4). Le nombre minimal est **3** (le majorant « degré maximal + 1 » donnait seulement 5)."
+    },
+    {
+      "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+      "difficulte": 1,
+      "titre": "Deux suites couplées",
+      "consigne": "Convention : (a b ; c d) désigne la matrice 2 × 2 de lignes (a b) et (c d) ; (x ; y) désigne une matrice colonne. Justifie chaque étape.",
+      "enonce": "On considère les suites (u) et (v) définies par u(0) = 1, v(0) = 0 et, pour tout entier naturel n :\nu(n+1) = 2u(n) + v(n) et v(n+1) = u(n) + 2v(n).\nOn pose U(n) = (u(n) ; v(n)).\n\n1. Détermine la matrice A telle que U(n+1) = A U(n).\n2. Calcule U(1) et U(2) de deux façons : avec les relations de l'énoncé, puis avec la matrice A.\n3. Exprime U(n) en fonction de A, n et U(0). Justifie en une phrase.",
+      "bareme": [
+        { "critere": "A = (2 1 ; 1 2)", "points": 6 },
+        { "critere": "U(1) = (2 ; 1) et U(2) = (5 ; 4) par les deux méthodes", "points": 8 },
+        { "critere": "U(n) = Aⁿ U(0), justifié par récurrence immédiate", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les coefficients du système donnent **A = (2 1 ; 1 2)** : U(n+1) = A U(n).\n2. Avec les relations : u(1) = 2 × 1 + 0 = 2, v(1) = 1 + 0 = 1 ; u(2) = 2 × 2 + 1 = 5, v(2) = 2 + 2 × 1 = 4.\nAvec A : A × (1 ; 0) = (2 × 1 + 1 × 0 ; 1 × 1 + 2 × 0) = **(2 ; 1)** ; A × (2 ; 1) = (4 + 1 ; 2 + 2) = **(5 ; 4)** ✓.\n3. **U(n) = Aⁿ U(0)** : on passe d'un terme au suivant en multipliant à gauche par A, donc n étapes reviennent à multiplier n fois par A (récurrence immédiate : U(n+1) = A U(n) = A Aⁿ U(0) = Aⁿ⁺¹ U(0))."
+    },
+    {
+      "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+      "difficulte": 2,
+      "titre": "Deux étangs et un état stable",
+      "consigne": "Convention : (a b ; c d) désigne la matrice 2 × 2 de lignes (a b) et (c d) ; (x ; y) désigne une matrice colonne. Justifie chaque étape.",
+      "enonce": "**Situation.** Un technicien suit le nombre de poissons (en milliers) dans deux étangs reliés. On note a(n) et b(n) ces nombres l'année n, avec a(0) = 10 et b(0) = 2. Le modèle retenu est :\na(n+1) = 0,4 a(n) + 0,2 b(n) + 2 et b(n+1) = 0,2 a(n) + 0,4 b(n) + 2.\nOn pose U(n) = (a(n) ; b(n)).\n\n1. Écris le système sous la forme U(n+1) = A U(n) + B. Calcule U(1).\n2. Détermine l'état stable C = (c₁ ; c₂), solution de C = A C + B.\n3. On pose V(n) = U(n) − C. Montre que V(n+1) = A V(n), puis exprime U(n) en fonction de A, n, U(0) et C.\n4. On admet que Aⁿ tend vers la matrice nulle quand n tend vers l'infini. Que devient la répartition des poissons à long terme ? Dépend-elle des effectifs de départ ?",
+      "bareme": [
+        { "critere": "A = (0,4 0,2 ; 0,2 0,4), B = (2 ; 2) et U(1) = (6,4 ; 4,8)", "points": 5 },
+        { "critere": "Système de l'état stable résolu : C = (5 ; 5)", "points": 6 },
+        { "critere": "V(n+1) = A V(n) démontré et U(n) = Aⁿ(U(0) − C) + C", "points": 5 },
+        { "critere": "Interprétation : 5 000 poissons par étang, indépendamment du départ", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **A = (0,4 0,2 ; 0,2 0,4)** et **B = (2 ; 2)**. U(1) = A U(0) + B : a(1) = 0,4 × 10 + 0,2 × 2 + 2 = **6,4** ; b(1) = 0,2 × 10 + 0,4 × 2 + 2 = **4,8**.\n2. C = A C + B ⇔ c₁ = 0,4c₁ + 0,2c₂ + 2 et c₂ = 0,2c₁ + 0,4c₂ + 2, soit 0,6c₁ − 0,2c₂ = 2 et −0,2c₁ + 0,6c₂ = 2. En soustrayant : 0,8c₁ − 0,8c₂ = 0, donc c₁ = c₂ = c, puis 0,4c = 2, **c = 5**. **C = (5 ; 5)**.\n3. V(n+1) = U(n+1) − C = A U(n) + B − (A C + B) = A(U(n) − C) = **A V(n)**. Donc V(n) = Aⁿ V(0), et **U(n) = Aⁿ(U(0) − C) + C**. (Contrôle : V(0) = (5 ; −3), A V(0) = (2 − 0,6 ; 1 − 1,2) = (1,4 ; −0,2), et C + (1,4 ; −0,2) = (6,4 ; 4,8) = U(1) ✓.)\n4. Aⁿ tend vers la matrice nulle, donc Aⁿ(U(0) − C) tend vers la colonne nulle et **U(n) tend vers C** : à long terme, environ **5 000 poissons dans chaque étang**. Cette limite **ne dépend pas** des effectifs de départ : l'état stable est attractif. C'est la méthode de la suite arithmético-géométrique, appliquée à des matrices."
+    },
+    {
+      "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+      "difficulte": 3,
+      "titre": "Migrations entre deux villes",
+      "consigne": "Convention : (a b ; c d) désigne la matrice 2 × 2 de lignes (a b) et (c d) ; (x ; y) désigne une matrice colonne. Rédige dans l'ordre attendu : système, matrice, puissances, interprétation.",
+      "enonce": "**Situation.** Une région compte deux villes, Arvieux et Belrive. Chaque année, 10 % des habitants d'Arvieux s'installent à Belrive et 20 % des habitants de Belrive s'installent à Arvieux ; les autres restent. On néglige naissances, décès et départs hors de la région. On note a(n) et b(n) les populations (en milliers) l'année n, avec a(0) = 30 et b(0) = 60, et U(n) = (a(n) ; b(n)).\n\n1. Justifie que a(n+1) = 0,9a(n) + 0,2b(n), écris b(n+1), puis la matrice A telle que U(n+1) = A U(n). Calcule U(1).\n2. On donne P = (2 1 ; 1 −1) et D = (1 0 ; 0 0,7). Vérifie que A P = P D, calcule P⁻¹ et déduis-en que A = P D P⁻¹.\n3. On admet que Aⁿ = P Dⁿ P⁻¹. Montre que Aⁿ = (1/3) × (2 + 0,7ⁿ  2 − 2 × 0,7ⁿ ; 1 − 0,7ⁿ  1 + 2 × 0,7ⁿ).\n4. Déduis-en a(n) et b(n) en fonction de n. Vérifie avec U(1).\n5. Quelle est la répartition à long terme ? Montre qu'elle ne dépendrait pas de la répartition de départ, pour une population totale donnée.",
+      "bareme": [
+        { "critere": "Système et A = (0,9 0,2 ; 0,1 0,8), U(1) = (39 ; 51)", "points": 4 },
+        { "critere": "A P = P D vérifié, P⁻¹ = (1/3 1/3 ; 1/3 −2/3), A = P D P⁻¹", "points": 4 },
+        { "critere": "Calcul de Aⁿ par P Dⁿ P⁻¹", "points": 4 },
+        { "critere": "a(n) = 60 − 30 × 0,7ⁿ et b(n) = 30 + 30 × 0,7ⁿ, contrôle avec U(1)", "points": 4 },
+        { "critere": "Limite 60 000 / 30 000 (deux tiers, un tiers) indépendante du départ, avec 0,7ⁿ qui tend vers 0", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. À Arvieux l'année suivante : les 90 % qui restent, plus 20 % des habitants de Belrive : **a(n+1) = 0,9a(n) + 0,2b(n)**. De même **b(n+1) = 0,1a(n) + 0,8b(n)**. **A = (0,9 0,2 ; 0,1 0,8)**. U(1) : a(1) = 27 + 12 = **39**, b(1) = 3 + 48 = **51** (total 90 conservé).\n2. A P : colonne 1 : A(2 ; 1) = (1,8 + 0,2 ; 0,2 + 0,8) = (2 ; 1) ; colonne 2 : A(1 ; −1) = (0,9 − 0,2 ; 0,1 − 0,8) = (0,7 ; −0,7). P D = (2 × 1  1 × 0,7 ; 1 × 1  −1 × 0,7) = (2 0,7 ; 1 −0,7). Donc **A P = P D** ✓.\ndet P = −2 − 1 = −3 ≠ 0 : P⁻¹ = (1/−3) × (−1 −1 ; −1 2) = **(1/3 1/3 ; 1/3 −2/3)**. En multipliant A P = P D à droite par P⁻¹ : **A = P D P⁻¹**.\n3. Dⁿ = (1 0 ; 0 0,7ⁿ) ; P Dⁿ = (2 0,7ⁿ ; 1 −0,7ⁿ). Puis × P⁻¹ :\nligne 1 : (2/3 + 0,7ⁿ/3 ; 2/3 − 2 × 0,7ⁿ/3) ; ligne 2 : (1/3 − 0,7ⁿ/3 ; 1/3 + 2 × 0,7ⁿ/3). C'est la formule annoncée ✓ (pour n = 1 : (0,9 0,2 ; 0,1 0,8) = A).\n4. U(n) = Aⁿ U(0) :\na(n) = (1/3)[(2 + 0,7ⁿ) × 30 + (2 − 2 × 0,7ⁿ) × 60] = (1/3)[180 − 90 × 0,7ⁿ] = **60 − 30 × 0,7ⁿ** ;\nb(n) = (1/3)[(1 − 0,7ⁿ) × 30 + (1 + 2 × 0,7ⁿ) × 60] = (1/3)[90 + 90 × 0,7ⁿ] = **30 + 30 × 0,7ⁿ**.\nContrôle : a(1) = 60 − 21 = 39 ✓ ; b(1) = 30 + 21 = 51 ✓.\n5. 0 < 0,7 < 1, donc 0,7ⁿ tend vers 0 : a(n) tend vers **60** et b(n) vers **30** milliers d'habitants. Plus généralement, avec a(0) + b(0) = N : a(n) = (2/3)N + (0,7ⁿ/3)(a(0) − 2b(0)), qui tend vers **(2/3)N**, et b(n) vers **(1/3)N**, **quelle que soit la répartition de départ**. L'état stable est attractif : à long terme, deux tiers de la population vivent à Arvieux."
+    },
+    {
+      "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+      "difficulte": 1,
+      "titre": "La météo de demain",
+      "consigne": "Les distributions sont écrites en ligne. Justifie chaque calcul.",
+      "enonce": "Dans une ville, la météo est modélisée par deux états : S (soleil) et P (pluie). Si un jour est ensoleillé, le lendemain l'est avec la probabilité 0,7 ; si un jour est pluvieux, le lendemain est pluvieux avec la probabilité 0,6.\n\n1. Dessine le graphe probabiliste et écris la matrice de transition T (ordre S, P). Vérifie qu'elle est stochastique.\n2. Aujourd'hui il fait soleil : P(0) = (1 0). Calcule P(1) et P(2).\n3. Que représente le coefficient (1 ; 2) de T² ? Donne sa valeur sans calculer toute la matrice.",
+      "bareme": [
+        { "critere": "Graphe et T = (0,7 0,3 ; 0,4 0,6), lignes de somme 1", "points": 7 },
+        { "critere": "P(1) = (0,7 0,3) et P(2) = (0,61 0,39) par P(n+1) = P(n) × T", "points": 8 },
+        { "critere": "Coefficient (1 ; 2) de T² : probabilité de pluie dans deux jours partant du soleil, 0,39", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Graphe : S → S (0,7), S → P (0,3), P → S (0,4), P → P (0,6). Matrice (ligne i = état de départ) : **T = (0,7 0,3 ; 0,4 0,6)**. Chaque ligne a des coefficients positifs de somme 1 (0,7 + 0,3 = 1 ; 0,4 + 0,6 = 1) : T est **stochastique**.\n2. P(1) = P(0) × T = (1 0) × T = **(0,7 0,3)**.\nP(2) = P(1) × T = (0,7 × 0,7 + 0,3 × 0,4 ; 0,7 × 0,3 + 0,3 × 0,6) = (0,49 + 0,12 ; 0,21 + 0,18) = **(0,61 0,39)**. Somme 1 ✓.\n3. Le coefficient (1 ; 2) de T² est la probabilité d'être dans l'état P (pluie) au bout de 2 jours en partant de S (soleil). Comme P(0) = (1 0), P(2) est la première ligne de T² : ce coefficient vaut **0,39**."
+    },
+    {
+      "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+      "difficulte": 2,
+      "titre": "Le climat à long terme",
+      "consigne": "Les distributions sont écrites en ligne. Justifie chaque étape et conclus par une interprétation.",
+      "enonce": "On reprend le modèle météo à deux états S (soleil) et P (pluie), de matrice de transition T = (0,7 0,3 ; 0,4 0,6) (lignes : départ S, départ P).\n\n1. Rappelle ce qu'affirme la propriété de Markov dans ce modèle. Te paraît-elle raisonnable ici ? Discute en une ou deux phrases.\n2. Détermine l'état stable π = (x y), en écrivant le système π × T = π et la condition nécessaire.\n3. Justifie que la distribution P(n) converge vers π, quelle que soit la météo du premier jour.\n4. Interprète le résultat sur une année de 365 jours.",
+      "bareme": [
+        { "critere": "Propriété de Markov énoncée (sans mémoire) et discutée", "points": 4 },
+        { "critere": "Système π T = π et condition x + y = 1 : π = (4/7 3/7)", "points": 7 },
+        { "critere": "Convergence justifiée par l'absence de coefficient nul dans T, indépendante du départ", "points": 5 },
+        { "critere": "Interprétation : environ 209 jours de soleil et 156 de pluie sur une année", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La météo du lendemain ne dépend **que** de celle du jour, pas des jours précédents : le processus est **sans mémoire**. C'est une simplification : en réalité, un épisode pluvieux long tend à durer (l'historique compte), mais le modèle reste raisonnable pour une première approche.\n2. π × T = π donne : x = 0,7x + 0,4y et y = 0,3x + 0,6y, soit une seule équation utile : **0,3x = 0,4y**. Sans condition supplémentaire, il y aurait une infinité de solutions proportionnelles : on ajoute **x + y = 1**. Alors x = (4/3)y, donc (7/3)y = 1, **y = 3/7** et **x = 4/7**. **π = (4/7 3/7)**. Somme 1 ✓.\n3. T n'a **aucun coefficient nul** : d'après le cours, P(n) converge vers l'**unique état stable π**, et cette limite **ne dépend pas** de la distribution initiale (soleil ou pluie le premier jour).\n4. À long terme, un jour donné est ensoleillé avec la probabilité 4/7 ≈ 0,57. Sur 365 jours : environ 365 × 4/7 ≈ **209 jours de soleil** et 365 × 3/7 ≈ **156 jours de pluie**."
+    },
+    {
+      "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+      "difficulte": 3,
+      "titre": "Trois marques de céréales",
+      "consigne": "Les distributions sont écrites en ligne ; fixe cette convention et tiens-la jusqu'au bout. Justifie chaque étape.",
+      "enonce": "**Situation.** Un magasin vend trois marques de céréales, A, B et C. Chaque semaine, un client fidèle en achète un paquet. Une étude donne :\n- un client ayant acheté A rachète A avec la probabilité 0,8, sinon il choisit B ou C avec la même probabilité ;\n- un client ayant acheté B rachète B avec la probabilité 0,7, choisit A avec la probabilité 0,2, sinon C ;\n- un client ayant acheté C rachète C avec la probabilité 0,7, choisit B avec la probabilité 0,2, sinon A.\n\n1. Écris la matrice de transition T (ordre A, B, C) et vérifie qu'elle est stochastique.\n2. La première semaine, les trois marques se partagent également les clients : P(0) = (1/3 1/3 1/3). Calcule P(1).\n3. Un client achète A cette semaine. Quelle est la probabilité qu'il achète C dans deux semaines ?\n4. Détermine l'état stable π = (x y z) : écris le système, résous-le, vérifie.\n5. Justifie la convergence et interprète : quelle part de marché chaque marque aura-t-elle à long terme ? La marque C peut-elle espérer changer ce résultat par une grosse promotion ponctuelle qui modifierait seulement la répartition de départ ?",
+      "bareme": [
+        { "critere": "T = (0,8 0,1 0,1 ; 0,2 0,7 0,1 ; 0,1 0,2 0,7), lignes de somme 1", "points": 4 },
+        { "critere": "P(1) ≈ (0,367 0,333 0,3) par P(0) × T", "points": 3 },
+        { "critere": "Coefficient (A ; C) de T² : 0,08 + 0,01 + 0,07 = 0,16", "points": 4 },
+        { "critere": "Système de l'état stable avec la condition de somme : π = (7/16 5/16 1/4), vérifié", "points": 6 },
+        { "critere": "Convergence (aucun coefficient nul) et interprétation : la limite ne dépend pas du départ", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Lignes : départ A, B, C.\n**T = (0,8 0,1 0,1 ; 0,2 0,7 0,1 ; 0,1 0,2 0,7)**. Chaque ligne a des coefficients positifs de somme 1 ✓.\n2. P(1) = P(0) × T = ((0,8 + 0,2 + 0,1)/3 ; (0,1 + 0,7 + 0,2)/3 ; (0,1 + 0,1 + 0,7)/3) = (1,1/3 ; 1/3 ; 0,9/3) ≈ **(0,367 0,333 0,3)**. Somme 1 ✓.\n3. C'est le coefficient (A ; C) de T² : ligne A de T × colonne C de T = 0,8 × 0,1 + 0,1 × 0,1 + 0,1 × 0,7 = 0,08 + 0,01 + 0,07 = **0,16**.\n4. π × T = π :\nx = 0,8x + 0,2y + 0,1z ⇔ 2x = 2y + z\ny = 0,1x + 0,7y + 0,2z ⇔ 3y = x + 2z\nz = 0,1x + 0,1y + 0,7z ⇔ 3z = x + y\nDe la troisième, x = 3z − y ; dans la deuxième : 3y = 3z − y + 2z, donc y = (5/4)z, puis x = 3z − (5/4)z = (7/4)z. Première équation : 2x = (7/2)z et 2y + z = (5/2)z + z = (7/2)z ✓.\nCondition **x + y + z = 1** : (7/4 + 5/4 + 1)z = 4z = 1, donc z = 1/4, y = 5/16, x = 7/16.\n**π = (7/16 5/16 1/4)** = (0,4375 0,3125 0,25). Somme 1 ✓.\n5. T n'a **aucun coefficient nul** : P(n) converge vers l'unique état stable π, **quelle que soit la distribution initiale**. À long terme : A ≈ **43,75 %**, B ≈ **31,25 %**, C = **25 %** des achats. Une promotion ponctuelle qui ne change que la répartition de départ **ne change pas la limite** : la répartition finale oublie d'où elle vient. Pour gagner durablement, C devrait modifier les **probabilités de transition** (la fidélité de ses clients), donc la matrice T elle-même."
+    }
+  ]
+}

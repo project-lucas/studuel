@@ -5,8 +5,14 @@ import type { MindMapData } from '@/lib/types'
 // l'éditeur de la bibliothèque. Rendu « vraie carte mentale » : la notion
 // centrale au milieu, les branches qui rayonnent de part et d'autre (moitié à
 // gauche, moitié à droite), reliées au cœur par des rameaux colorés — au lieu
-// d'une pile verticale de blocs. Composant serveur pur. Sur mobile, le canevas
-// défile horizontalement (une carte mentale est intrinsèquement en 2D).
+// d'une pile verticale de blocs. Composant serveur pur.
+//
+// SUR UN TÉLÉPHONE, LA CARTE SE LIT DE HAUT EN BAS (01/10/2026). Le canevas en
+// deux colonnes mesure ~650 px : à 390 px il défilait de côté, et la carte
+// s'ouvrait coupée au bord de l'écran — une branche à demi visible, ses
+// mots-clés tronqués. Sous `sm`, le cœur passe en tête et les branches se
+// rangent dessous, une par ligne, accrochées à un tronc vertical : tout tient
+// dans la largeur, rien à faire glisser. À partir de `sm`, le rayonnement.
 
 // Classes statiques (compilateur Tailwind), mêmes familles pastel que
 // lib/subject-style.ts — on cycle sur 5 teintes pour distinguer les branches.
@@ -133,46 +139,86 @@ export default function MindMap({
   const rankOf = (b: Branch) => branches.indexOf(b)
 
   return (
-    <div className={cn('overflow-x-auto overscroll-x-contain', className)}>
-      <div className="flex min-w-max items-stretch justify-center gap-0 px-1 py-2">
-        {/* Colonne gauche : branches alignées vers le tronc. */}
-        <ul className="flex flex-col justify-center gap-3">
-          {left.map((branch, i) => (
-            <BranchCard
-              key={`${i}-${branch.titre}`}
-              branch={branch}
-              index={rankOf(branch)}
-              side="left"
-            />
-          ))}
-        </ul>
-
-        {/* Le cœur : notion centrale, avec un tronc vertical qui relie les
-            branches des deux côtés. */}
-        <div className="relative flex flex-col items-center justify-center px-1">
-          <span
-            aria-hidden="true"
-            className="absolute inset-y-6 w-1 rounded-full bg-primary/20"
-          />
-          <div className="bg-primary text-primary-foreground relative z-10 max-w-[13rem] rounded-3xl px-6 py-4 text-center shadow-lg">
-            <p className="font-heading text-lg font-extrabold text-balance md:text-xl">
-              {data.centre}
-            </p>
-          </div>
+    <>
+      {/* Téléphone : le cœur, puis une branche par ligne le long du tronc. */}
+      <div className={cn('sm:hidden', className)}>
+        <div className="bg-primary text-primary-foreground rounded-3xl px-5 py-4 text-center shadow-lg">
+          <p className="font-heading text-lg font-extrabold text-balance">{data.centre}</p>
         </div>
-
-        {/* Colonne droite. */}
-        <ul className="flex flex-col justify-center gap-3">
-          {right.map((branch, i) => (
-            <BranchCard
-              key={`${i}-${branch.titre}`}
-              branch={branch}
-              index={rankOf(branch)}
-              side="right"
-            />
-          ))}
-        </ul>
+        <ol className="relative flex flex-col gap-3 pt-4 pl-7 before:absolute before:top-0 before:bottom-7 before:left-2.5 before:w-1 before:rounded-full before:bg-primary/20">
+          {branches.map((branch, i) => {
+            const style = BRANCH_STYLES[i % BRANCH_STYLES.length]
+            return (
+              <li key={`${i}-${branch.titre}`} className="relative">
+                <span
+                  aria-hidden="true"
+                  className={cn('absolute top-5 -left-[1.125rem] h-1 w-[1.125rem] rounded-full', style.twig)}
+                />
+                <div className={cn('rounded-2xl border-2 p-3 shadow-sm', style.card)}>
+                  <p className="font-heading flex items-center gap-2 font-extrabold">
+                    <span className={cn('size-2.5 shrink-0 rounded-full', style.dot)} aria-hidden="true" />
+                    {branch.titre}
+                  </p>
+                  {branch.enfants.length > 0 ? (
+                    <ul className="mt-2 flex flex-wrap gap-1.5">
+                      {branch.enfants.map((enfant, k) => (
+                        <li
+                          key={`${k}-${enfant}`}
+                          className={cn('rounded-full px-2.5 py-1 text-xs font-medium', style.chip)}
+                        >
+                          {enfant}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              </li>
+            )
+          })}
+        </ol>
       </div>
-    </div>
+  
+      <div className={cn('hidden overflow-x-auto overscroll-x-contain sm:block', className)}>
+        <div className="flex min-w-max items-stretch justify-center gap-0 px-1 py-2">
+          {/* Colonne gauche : branches alignées vers le tronc. */}
+          <ul className="flex flex-col justify-center gap-3">
+            {left.map((branch, i) => (
+              <BranchCard
+                key={`${i}-${branch.titre}`}
+                branch={branch}
+                index={rankOf(branch)}
+                side="left"
+              />
+            ))}
+          </ul>
+  
+          {/* Le cœur : notion centrale, avec un tronc vertical qui relie les
+              branches des deux côtés. */}
+          <div className="relative flex flex-col items-center justify-center px-1">
+            <span
+              aria-hidden="true"
+              className="absolute inset-y-6 w-1 rounded-full bg-primary/20"
+            />
+            <div className="bg-primary text-primary-foreground relative z-10 max-w-[13rem] rounded-3xl px-6 py-4 text-center shadow-lg">
+              <p className="font-heading text-lg font-extrabold text-balance md:text-xl">
+                {data.centre}
+              </p>
+            </div>
+          </div>
+  
+          {/* Colonne droite. */}
+          <ul className="flex flex-col justify-center gap-3">
+            {right.map((branch, i) => (
+              <BranchCard
+                key={`${i}-${branch.titre}`}
+                branch={branch}
+                index={rankOf(branch)}
+                side="right"
+              />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
   )
 }

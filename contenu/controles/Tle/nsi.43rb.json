@@ -1,0 +1,449 @@
+{
+  "niveau": "Tle",
+  "matiere": "nsi",
+  "sujets": [
+    {
+      "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+      "difficulte": 1,
+      "titre": "Le classement du tournoi",
+      "consigne": "Écris chaque requête SQL demandée et réponds à la dernière question en quelques lignes.",
+      "enonce": "On dispose de la table `joueur(id, pseudo, score)` d'un tournoi en ligne.\n\n1. Écris une requête qui affiche le pseudo et le score de tous les joueurs, du plus haut score au plus bas ; en cas d'égalité de score, les pseudos sont rangés par ordre alphabétique.\n2. Écris une requête qui affiche le pseudo des **trois meilleurs** joueurs.\n3. Léna a écrit `SELECT pseudo FROM joueur LIMIT 3` pour afficher le podium. Pourquoi sa requête est-elle fausse, même si elle semble parfois donner le bon résultat ?",
+      "bareme": [
+        { "critere": "ORDER BY score DESC, pseudo ASC (ASC facultatif, ordre par défaut)", "points": 7 },
+        { "critere": "ORDER BY score DESC LIMIT 3", "points": 6 },
+        { "critere": "LIMIT sans ORDER BY : trois lignes arbitraires, erreur silencieuse", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. `SELECT pseudo, score FROM joueur ORDER BY score DESC, pseudo ASC` — la seconde colonne de tri **départage les ex æquo** de la première ; ASC est l'ordre par défaut, on peut l'omettre.\n2. `SELECT pseudo FROM joueur ORDER BY score DESC LIMIT 3` — on trie d'abord, puis LIMIT borne le nombre de lignes. On peut trier sur une colonne non affichée (score).\n3. Sans ORDER BY, **rien n'oblige le SGBD à respecter un ordre** : LIMIT 3 renvoie trois lignes **arbitraires**, pas les trois meilleures. Le résultat peut sembler juste un jour (par exemple si les lignes sont rangées par hasard dans le bon ordre) et faux le lendemain : c'est une erreur **silencieuse**, donc redoutable."
+    },
+    {
+      "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+      "difficulte": 2,
+      "titre": "Points, dossards et pages",
+      "consigne": "Écris les requêtes, donne les résultats exacts et justifie les réponses.",
+      "enonce": "**Données.** Table `equipe(nom, victoires, nuls)` d'un championnat de handball scolaire (une victoire rapporte 3 points, un nul 1 point) :\n\n| nom | victoires | nuls |\n| Lions | 5 | 2 |\n| Aigles | 4 | 5 |\n| Loups | 6 | 0 |\n| Ours | 3 | 1 |\n\n1. Écris une requête qui affiche le nom et le **nombre de points** de chaque équipe, dans une colonne nommée `points`, par points décroissants puis par nom croissant. Donne le résultat.\n2. Les numéros de dossard des joueurs ont été enregistrés dans une colonne de type TEXT : '2', '10', '9' et '1'. Dans quel ordre `ORDER BY dossard` les range-t-il ? Explique et propose une correction.\n3. Le site affiche la liste des joueurs par pages de 10, triée par nom. Écris la requête qui affiche la **page 3**.",
+      "bareme": [
+        { "critere": "Colonne calculée victoires * 3 + nuls AS points, triée par points DESC, nom ASC", "points": 6 },
+        { "critere": "Résultat exact : Loups 18, Aigles 17, Lions 17, Ours 10", "points": 4 },
+        { "critere": "Tri alphabétique '1', '10', '2', '9' expliqué ; stocker le dossard en INTEGER", "points": 5 },
+        { "critere": "ORDER BY nom LIMIT 10 OFFSET 20", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. `SELECT nom, victoires * 3 + nuls AS points FROM equipe ORDER BY points DESC, nom ASC`\nCalculs : Lions 5 × 3 + 2 = 17 ; Aigles 4 × 3 + 5 = 17 ; Loups 6 × 3 + 0 = 18 ; Ours 3 × 3 + 1 = 10.\nRésultat : **Loups 18 ; Aigles 17 ; Lions 17 ; Ours 10** (Aigles avant Lions : ex æquo départagés par le nom). L'alias **AS** permet de réutiliser la colonne calculée dans ORDER BY.\n2. En TEXT, le tri est **alphabétique**, caractère par caractère : **'1', '10', '2', '9'** — « 10 » passe avant « 2 » car son premier caractère « 1 » vient avant « 2 ». Correction : stocker le dossard dans une colonne **INTEGER**, dont le tri est numérique (1, 2, 9, 10).\n3. `SELECT nom FROM joueur ORDER BY nom LIMIT 10 OFFSET 20` — on saute les 20 lignes des pages 1 et 2 et on en affiche 10. Sans ORDER BY, les pages ne seraient pas cohérentes d'un affichage à l'autre."
+    },
+    {
+      "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+      "difficulte": 3,
+      "titre": "Les meilleurs vendeurs",
+      "consigne": "Écris les requêtes, calcule les résultats et argumente sur le coût des tris.",
+      "enonce": "**Données.** Un extrait de la table `vente(id, vendeur, montant, annee)` :\n\n| id | vendeur | montant | annee |\n| 1 | Nadia | 120 | 2026 |\n| 2 | Oscar | 80 | 2026 |\n| 3 | Nadia | 50 | 2026 |\n| 4 | Paul | 200 | 2026 |\n| 5 | Oscar | 100 | 2026 |\n| 6 | Rose | 90 | 2026 |\n| 7 | Paul | 10 | 2026 |\n\n1. Écris une requête qui affiche les **trois vendeurs** ayant le plus grand total de ventes, avec ce total dans une colonne `total`. Donne le résultat sur l'extrait.\n2. Un collègue a écrit la même requête sans ORDER BY. Pourquoi est-ce dangereux ?\n3. La table complète compte 1 000 000 de lignes. Compare l'ordre de grandeur du nombre d'opérations d'un tri par insertion et d'un tri fusion (on prendra log₂(10⁶) ≈ 20). Combien de fois le second est-il plus rapide ?\n4. On ne veut que les ventes de 2025. Où placer ce filtre, et pourquoi le faire avant de trier ?\n5. Après avoir exécuté la requête 1, les lignes de la table `vente` sont-elles rangées par total décroissant ? Quelle structure, elle, conserve un ordre durable ?",
+      "bareme": [
+        { "critere": "SUM(montant) AS total, GROUP BY vendeur, ORDER BY total DESC LIMIT 3", "points": 5 },
+        { "critere": "Résultat : Paul 210, Oscar 180, Nadia 170", "points": 3 },
+        { "critere": "LIMIT sans ORDER BY : lignes arbitraires, résultat qui a l'air juste", "points": 3 },
+        { "critere": "10¹² contre 2 × 10⁷ opérations, rapport 50 000 ; WHERE annee = 2025 pour filtrer avant de trier", "points": 5 },
+        { "critere": "ORDER BY n'a aucun effet sur les lignes stockées ; l'index est la structure durable", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. `SELECT vendeur, SUM(montant) AS total FROM vente GROUP BY vendeur ORDER BY total DESC LIMIT 3`\nTotaux : Nadia 120 + 50 = 170 ; Oscar 80 + 100 = 180 ; Paul 200 + 10 = 210 ; Rose 90.\nRésultat : **Paul 210 ; Oscar 180 ; Nadia 170**.\n2. Sans ORDER BY, LIMIT 3 renvoie **trois groupes arbitraires** : rien n'oblige le SGBD à les ranger par total. Le résultat **a l'air juste** (trois vendeurs avec leur total) mais ne donne pas forcément les meilleurs : erreur silencieuse.\n3. Tri par insertion : n² = (10⁶)² = **10¹²** opérations. Tri fusion : n log₂ n ≈ 10⁶ × 20 = **2 × 10⁷**. Rapport : 10¹² / (2 × 10⁷) = **50 000**. C'est la différence entre « instantané » et « impossible » ; le SGBD choisit lui-même son algorithme selon la taille et les index.\n4. Dans la clause **WHERE annee = 2025**, qui agit **avant** le regroupement et le tri. Filtrer d'abord réduit le nombre de lignes à regrouper et à trier : on ne trie que ce qui est nécessaire (trier un million de lignes pour en afficher trois est le gaspillage typique).\n5. **Non** : ORDER BY ordonne le **résultat de la requête**, le temps de l'exécution ; il n'a **aucun effet** sur les lignes de la table. Un **index** est une structure auxiliaire **durable** qui conserve un ordre sur une colonne (lui non plus ne réordonne pas les lignes de la table) ; un tri sur une colonne indexée est bien plus rapide."
+    },
+    {
+      "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+      "difficulte": 1,
+      "titre": "Von Neumann, compilateur et interpréteur",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Quel est le principe de l'**architecture de von Neumann** ? Donne une conséquence de ce principe.\n2. Compare un **compilateur** et un **interpréteur** selon trois critères (moment de la traduction, vitesse d'exécution, détection des erreurs de type ou portabilité), avec un langage en exemple pour chacun.\n3. Python est à typage **dynamique** et **fort**. Explique ces deux mots, en t'appuyant sur ce qui se passe quand on exécute `3 + 'a'`.",
+      "bareme": [
+        { "critere": "Même mémoire pour programmes et données ; conséquence : un programme peut lire ou produire un autre programme (compilateur, système, virus)", "points": 6 },
+        { "critere": "Trois différences justes entre compilation et interprétation, exemples C ou Rust / Python", "points": 8 },
+        { "critere": "Dynamique : types vérifiés à l'exécution ; fort : pas de conversion implicite, 3 + 'a' provoque une erreur", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. L'architecture de von Neumann place dans une **même mémoire** les instructions et les données, adressées de la même façon : un programme et une donnée ont la même nature. Conséquence : un programme peut **lire, écrire, transformer** un autre programme — d'où l'existence des compilateurs, des interpréteurs, des systèmes d'exploitation… et des virus.\n2. **Compilateur** : traduit **une fois pour toutes** ; exécution **rapide** ; erreurs de type détectées **avant** l'exécution ; résultat lié à une machine ; exemples C, Rust. **Interpréteur** : traduit **au fil de la lecture** ; exécution **plus lente** ; erreurs découvertes **à l'exécution** ; programme **portable** ; exemple Python. (Java est une solution mixte : code intermédiaire exécuté par une machine virtuelle.)\n3. **Dynamique** : on ne déclare pas les types, ils sont vérifiés **à l'exécution**. **Fort** : pas de conversion implicite hasardeuse. `3 + 'a'` ne produit donc ni « 3a » ni un nombre : Python **refuse** l'opération et déclenche une erreur (TypeError) au moment où la ligne est exécutée."
+    },
+    {
+      "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+      "difficulte": 2,
+      "titre": "Des fonctions dans une liste",
+      "consigne": "Exécute les programmes à la main et justifie chaque réponse avec le cours.",
+      "enonce": "```python\ndef appliquer(f, liste):\n    resultat = []\n    for x in liste:\n        resultat.append(f(x))\n    return resultat\n\ndef double(x):\n    return 2 * x\n\ndef carre(x):\n    return x * x\n\noperations = [double, carre]\nfor op in operations:\n    print(appliquer(op, [1, 2, 3]))\n\ndef multiplicateur(k):\n    def f(x):\n        return k * x\n    return f\n\ntriple = multiplicateur(3)\nprint(triple(7))\n```\n\n1. Qu'affiche ce programme ? Détaille.\n2. Que signifie « une fonction est une donnée de **première classe** » ? Relève dans ce programme les trois façons dont une fonction est traitée comme une donnée.\n3. Jules ajoute l'annotation `def double(x: int) -> int:` puis appelle `double('ab')`. Python refuse-t-il l'appel ? Qu'obtient-il ? Explique.",
+      "bareme": [
+        { "critere": "Affichage exact : [2, 4, 6], [1, 4, 9] puis 21, avec explication", "points": 7 },
+        { "critere": "Première classe définie ; stockée dans une liste, passée en argument, renvoyée par une fonction", "points": 7 },
+        { "critere": "Annotations non vérifiées par l'interpréteur ; 'abab' obtenu (2 * 'ab')", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La boucle parcourt la liste de fonctions : `appliquer(double, [1, 2, 3])` renvoie **[2, 4, 6]** ; `appliquer(carre, [1, 2, 3])` renvoie **[1, 4, 9]**. Puis `multiplicateur(3)` renvoie une fonction qui multiplie par 3 : `triple(7)` vaut **21**. Affichage :\n```\n[2, 4, 6]\n[1, 4, 9]\n21\n```\n2. Une fonction de **première classe** peut être manipulée comme n'importe quelle valeur. Ici elle est : **stockée** dans une variable ou une liste (`operations = [double, carre]`, `triple = …`) ; **passée en argument** (`appliquer(op, …)` reçoit `f`) ; **renvoyée** par une autre fonction (`multiplicateur` renvoie `f`). C'est ce qui permet d'écrire un traitement qui reçoit l'opération à effectuer.\n3. **Non** : les annotations de type sont **facultatives** et l'interpréteur **ne les vérifie pas**. L'appel s'exécute : `2 * 'ab'` est une opération permise en Python (répétition d'une chaîne), le résultat est **'abab'**. L'annotation documente l'intention, elle ne protège de rien ; seul le typage fort à l'exécution refuse les opérations impossibles."
+    },
+    {
+      "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+      "difficulte": 3,
+      "titre": "Le détecteur de bugs universel",
+      "consigne": "Rédige une réponse argumentée pour chaque question, en t'appuyant sur le cours.",
+      "enonce": "**Document — publicité d'une jeune entreprise (fictive).**\n\n> « Avec VérifTout, fini les tests ! Notre logiciel lit n'importe quel programme Python et vous dit, en quelques secondes, s'il finira par s'arrêter ou s'il tournera sans fin, quelles que soient ses entrées. »\n\n1. Ce que promet VérifTout est-il possible ? Appuie-toi sur un résultat théorique précis et nomme son auteur.\n2. Qu'en déduis-tu sur l'affirmation « fini les tests » ?\n3. Pourquoi l'idée même d'un programme qui en analyse un autre est-elle concevable ? Relie-la à l'architecture des machines.\n4. En mémoire, on lit l'octet **01000001**. On admet qu'il vaut 65 lu comme un entier et qu'il code la lettre « A » dans la table ASCII. Que vaut réellement cet octet ? Quelle phrase du cours cela illustre-t-il ?\n5. Un studio veut distribuer un jeu sur plusieurs systèmes sans le recompiler pour chacun, tandis qu'un laboratoire veut la vitesse maximale pour un calcul qui tournera des semaines sur la même machine. Quel mode de traduction conseilles-tu à chacun ?",
+      "bareme": [
+        { "critere": "Impossible : problème de l'arrêt indécidable, démontré par Turing", "points": 5 },
+        { "critere": "Aucun outil ne prouve automatiquement qu'un programme quelconque est correct : tester reste indispensable", "points": 4 },
+        { "critere": "Programmes et données dans la même mémoire (von Neumann) : un programme est une donnée", "points": 3 },
+        { "critere": "L'octet ne vaut rien hors du type attribué : le type est dans l'interprétation", "points": 4 },
+        { "critere": "Studio : interprétation ou solution mixte (portabilité) ; laboratoire : compilation (rapidité)", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Non**. **Turing** a montré que le **problème de l'arrêt** — décider si un programme **quelconque** s'arrête sur une entrée donnée — est **indécidable** : aucun algorithme ne peut le résoudre pour tous les programmes. VérifTout peut au mieux répondre pour certains programmes, jamais pour n'importe lequel.\n2. Conséquence directe du cours : **aucun outil ne prouvera jamais automatiquement qu'un programme quelconque est correct**. « Fini les tests » est donc faux : **tester reste indispensable**.\n3. Dans l'architecture de **von Neumann**, instructions et données sont dans la **même mémoire** et ont la même nature : un programme peut donc être lu comme une donnée par un autre programme (c'est ce que font les compilateurs et les interpréteurs). C'est ce qui fait espérer un détecteur universel… que Turing interdit.\n4. L'octet n'est **ni** 65 **ni** « A » en soi : une même suite de bits ne veut rien dire hors du **type** qu'on lui attribue ; elle pourrait aussi faire partie d'un flottant ou d'une instruction. Le cours le dit : **le type n'est pas dans la donnée, il est dans l'interprétation qu'on en fait**.\n5. **Studio** : l'**interprétation**, ou une solution **mixte** comme Java (code intermédiaire exécuté par une machine virtuelle), car le programme reste **portable**. **Laboratoire** : la **compilation** (C, Rust), qui traduit une fois pour toutes et donne une exécution **rapide** sur la machine visée ; les erreurs de type sont en plus détectées avant le lancement."
+    },
+    {
+      "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+      "difficulte": 1,
+      "titre": "Quatre paradigmes",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Cite les **quatre paradigmes** de programmation au programme. Pour chacun, dis en une phrase ce qu'est un programme dans ce paradigme et donne un terrain où il excelle.\n2. Définis un **effet de bord** et la **transparence référentielle**.\n3. Que signifie « Python est **multiparadigme** » ? Le choix d'un paradigme change-t-il ce que la machine peut calculer ?",
+      "bareme": [
+        { "critere": "Impératif, fonctionnel, objet, événementiel : définition et terrain justes pour chacun", "points": 8 },
+        { "critere": "Effet de bord = modification hors de la fonction ; transparence = même résultat, appel remplaçable par sa valeur", "points": 7 },
+        { "critere": "Python combine plusieurs paradigmes ; aucun ne calcule plus que les autres", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Impératif** : une suite d'instructions qui modifient l'état ; algorithme court, performance critique. **Fonctionnel** : une composition de fonctions ; calcul, transformation de données, tests fiables. **Objet** : des objets qui échangent des messages ; modélisation d'un domaine, code appelé à durer. **Événementiel** : une réaction à des événements, par des gestionnaires ; interface, réseau, temps réel.\n2. Un **effet de bord** est une modification, par une fonction, de quelque chose **en dehors d'elle-même** (variable globale, argument modifié, affichage…). La **transparence référentielle** : avec les mêmes arguments, la fonction donne toujours le même résultat, si bien que **l'appel peut être remplacé par sa valeur** sans changer le programme.\n3. Python permet de mélanger les paradigmes : un même programme peut avoir une interface événementielle, des objets pour le domaine, des fonctions pures pour les calculs et de l'impératif dans les boucles. Le paradigme ne change **pas** ce que la machine calcule — tous ont la même puissance d'expression ; il change ce que le lecteur comprend et le coût de la modification."
+    },
+    {
+      "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+      "difficulte": 2,
+      "titre": "Pure ou pas pure ?",
+      "consigne": "Exécute le programme à la main, puis analyse chaque fonction avec le vocabulaire du paradigme fonctionnel.",
+      "enonce": "```python\ntotal = 0\n\ndef ajouter(x):\n    global total\n    total = total + x\n    return total\n\ndef somme(a, b):\n    return a + b\n\ndef ajoute_note(notes, n):\n    notes.append(n)\n    return notes\n\nprint(ajouter(5))\nprint(ajouter(5))\nprint(somme(2, 3))\nprint(somme(2, 3))\nmes_notes = [12, 15]\nnouvelles = ajoute_note(mes_notes, 9)\nprint(mes_notes)\n```\n\n1. Qu'affiche ce programme ?\n2. Laquelle des trois fonctions est **pure** ? Pour chacune des deux autres, identifie l'**effet de bord** et montre sur l'affichage que la transparence référentielle n'est pas respectée ou que l'état a changé.\n3. Réécris `ajouter` et `ajoute_note` sous forme de fonctions pures, en respectant l'**immutabilité**.\n4. Pourquoi une fonction pure est-elle plus facile à tester ?",
+      "bareme": [
+        { "critere": "Affichage exact : 5, 10, 5, 5, [12, 15, 9]", "points": 5 },
+        { "critere": "somme pure ; ajouter modifie total (deux appels identiques, deux résultats) ; ajoute_note modifie la liste reçue", "points": 6 },
+        { "critere": "Versions pures correctes : total passé en paramètre et renvoyé ; nouvelle liste créée (notes + [n])", "points": 5 },
+        { "critere": "Aucun contexte à préparer, même résultat à chaque appel", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Affichage :\n```\n5\n10\n5\n5\n[12, 15, 9]\n```\n2. **somme** est pure : elle ne modifie rien hors d'elle-même et `somme(2, 3)` vaut toujours 5. **ajouter** modifie la variable globale `total` (effet de bord) : le même appel `ajouter(5)` renvoie 5 puis 10, on ne peut pas remplacer l'appel par une valeur, la transparence référentielle est perdue. **ajoute_note** modifie la liste reçue en argument : `mes_notes` est devenue [12, 15, 9] alors qu'on ne l'a jamais réaffectée.\n3. Par exemple :\n```python\ndef ajouter_pur(total, x):\n    return total + x\n\ndef ajoute_note_pur(notes, n):\n    return notes + [n]\n```\nOn **crée une nouvelle valeur** au lieu de modifier l'ancienne ; l'appelant écrit `total = ajouter_pur(total, 5)` s'il veut garder le nouveau total.\n4. Une fonction pure ne dépend d'**aucun contexte extérieur** : pas d'état global à préparer ni à remettre à zéro entre deux tests, et le même appel donne toujours le même résultat. Un test s'écrit en une ligne, par exemple `assert somme(2, 3) == 5`."
+    },
+    {
+      "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+      "difficulte": 3,
+      "titre": "Une application de covoiturage",
+      "consigne": "Justifie chaque choix de paradigme, puis écris et exécute la fonction demandée.",
+      "enonce": "**Situation.** L'équipe de Salomé développe une application de covoiturage pour les lycéens. Elle comporte :\n- a. l'écran de l'application, avec ses boutons et les notifications qui arrivent quand un conducteur accepte un trajet ;\n- b. la représentation des conducteurs, passagers, voitures et trajets, que l'équipe devra faire évoluer pendant des années ;\n- c. le calcul du prix d'un trajet à partir de la distance et du nombre de passagers, qui doit être testé de façon très fiable ;\n- d. une boucle interne, exécutée des millions de fois, qui cherche le conducteur le plus proche.\n\n1. Pour chaque partie, propose le paradigme le plus adapté et justifie-le.\n2. Dans l'esprit du paradigme fonctionnel, écris une fonction **récursive** `somme(liste)` qui renvoie la somme des distances d'une liste, sans boucle ni variable modifiée.\n3. Déroule l'appel `somme([4, 1, 7])` en montrant chaque appel récursif.\n4. Un développeur affirme : « En passant tout le projet en fonctionnel, l'application pourra faire des calculs impossibles en impératif. » Qu'en penses-tu ?",
+      "bareme": [
+        { "critere": "a événementiel, b objet, c fonctionnel, d impératif, chacun justifié (2 points par partie)", "points": 8 },
+        { "critere": "Fonction récursive pure correcte : cas de base liste vide → 0, sinon premier + somme du reste", "points": 5 },
+        { "critere": "Déroulement exact jusqu'au résultat 12", "points": 3 },
+        { "critere": "Affirmation réfutée : même puissance d'expression, le paradigme change la lisibilité et le coût de modification", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. a. **Événementiel** : le programme réagit à ce qui arrive (clic, notification réseau) par des gestionnaires ; le flot d'exécution est décidé par les événements.\nb. **Objet** : modélisation d'un domaine appelé à durer ; classes Conducteur, Trajet… qui regroupent données et méthodes.\nc. **Fonctionnel** : une fonction pure (mêmes arguments, même prix) est facile à tester, sans contexte à préparer.\nd. **Impératif** : boucle interne à performance critique, au plus près de l'exécution réelle.\nUn programme réel les combine, et Python le permet (multiparadigme).\n2.\n```python\ndef somme(liste):\n    if liste == []:\n        return 0\n    return liste[0] + somme(liste[1:])\n```\nAucune variable n'est modifiée, la liste reçue n'est pas changée : fonction pure, récursivité à la place de la boucle.\n3. somme([4, 1, 7]) = 4 + somme([1, 7]) = 4 + (1 + somme([7])) = 4 + (1 + (7 + somme([]))) = 4 + (1 + (7 + 0)) = **12**.\n4. C'est **faux** : tous les paradigmes sont **équivalents en puissance d'expression**, aucun ne calcule ce qu'un autre ne pourrait pas calculer. Le paradigme change ce que le **lecteur** du code comprend sans tout lire, donc le **coût de la modification** et la facilité des tests — pas ce que la machine calcule."
+    },
+    {
+      "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+      "difficulte": 1,
+      "titre": "Interface, cohésion et contrat",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Qu'est-ce que l'**interface** d'un module ? Son **implémentation** ? Laquelle l'utilisateur du module doit-il connaître, et pourquoi ?\n2. Explique les deux critères d'un bon découpage : **forte cohésion** et **faible couplage**.\n3. Pour une fonction `maximum(liste)`, donne une **précondition** et une **postcondition**, en précisant qui doit garantir chacune.",
+      "bareme": [
+        { "critere": "Interface = ce que le module promet ; implémentation = comment il le fait ; seule l'interface connue, pour changer l'intérieur sans casser l'extérieur", "points": 7 },
+        { "critere": "Cohésion : un seul sujet par module ; couplage : dépendances minimales entre modules", "points": 7 },
+        { "critere": "Précondition garantie par l'appelant (liste non vide) ; postcondition garantie par la fonction (valeur renvoyée ≥ chaque élément et présente dans la liste)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**interface** est ce que le module **promet** (ses fonctions, ce qu'elles font) ; l'**implémentation** est la façon dont il tient sa promesse. L'utilisateur ne doit connaître **que l'interface** : l'auteur peut alors **changer l'intérieur sans casser l'extérieur**.\n2. **Forte cohésion** : tout ce qui est dans un module concerne le **même sujet**. **Faible couplage** : les modules dépendent le **moins possible** les uns des autres ; un module qui doit connaître l'intérieur d'un autre est mal découpé, car toute modification de l'un obligera à modifier l'autre.\n3. **Précondition** (garantie par l'**appelant**) : la liste n'est pas vide. **Postcondition** (garantie par la **fonction**) : la valeur renvoyée appartient à la liste et est supérieure ou égale à chacun de ses éléments. On peut les vérifier pendant le développement avec `assert`."
+    },
+    {
+      "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+      "difficulte": 2,
+      "titre": "Deux fonctions aire pour un seul nom",
+      "consigne": "Analyse le programme, explique l'erreur et corrige-le ; écris ensuite la documentation demandée.",
+      "enonce": "**Situation.** Élise dispose de deux modules :\n\n```python\n# geometrie.py\ndef aire(r):\n    return 3.14 * r * r\n```\n\n```python\n# terrain.py\ndef aire(longueur, largeur):\n    return longueur * largeur\n```\n\nSon programme principal :\n\n```python\nfrom geometrie import *\nfrom terrain import *\nprint(aire(3))\n```\n\n1. Le programme s'arrête sur une erreur. Explique précisément pourquoi.\n2. Réécris le programme principal avec la forme d'importation la plus lisible pour afficher l'aire d'un disque de rayon 3, puis celle d'un terrain de 20 m sur 15 m.\n3. Écris une fonction `moyenne(notes)` avec une **docstring** qui décrit son contrat, et une instruction `assert` qui vérifie sa précondition.\n4. Pourquoi `assert` n'est-il pas un mécanisme de gestion d'erreur adapté à la version mise en production ?",
+      "bareme": [
+        { "critere": "Import de tout le contenu : aire de terrain écrase silencieusement celle de geometrie, appel avec un seul argument refusé", "points": 6 },
+        { "critere": "import geometrie / import terrain et appels préfixés corrects", "points": 5 },
+        { "critere": "Docstring décrivant le contrat (paramètre, valeur renvoyée, précondition) et assert sur la liste non vide", "points": 6 },
+        { "critere": "assert peut être désactivé : ce n'est pas une gestion d'erreur de production", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. `from … import *` importe **tout le contenu** des modules dans l'espace courant. Les deux modules définissent le même nom `aire` : le second import **écrase silencieusement** le premier. `aire` désigne donc la fonction de terrain, qui attend deux arguments : `aire(3)` provoque une erreur (argument manquant). C'est pourquoi cette forme d'importation est à proscrire.\n2.\n```python\nimport geometrie\nimport terrain\n\nprint(geometrie.aire(3))\nprint(terrain.aire(20, 15))\n```\nAffichages : environ 28,26 (3,14 × 9) puis 300. Le préfixe indique l'origine de chaque fonction.\n3. Par exemple :\n```python\ndef moyenne(notes):\n    \"\"\"Renvoie la moyenne des nombres de la liste notes.\n    Précondition : notes est une liste non vide de nombres.\"\"\"\n    assert len(notes) > 0, 'liste vide'\n    return sum(notes) / len(notes)\n```\nLa docstring décrit le **contrat** (ce que la fonction garantit et ce qu'elle exige), pas l'algorithme.\n4. `assert` sert à vérifier les hypothèses **pendant le développement** ; il **peut être désactivé** : on ne peut donc pas compter sur lui pour traiter une erreur une fois le programme en production."
+    },
+    {
+      "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+      "difficulte": 3,
+      "titre": "Le module fourre-tout",
+      "consigne": "Critique le découpage existant et propose une réorganisation argumentée.",
+      "enonce": "**Situation.** Le projet de vie scolaire de la classe contient un module `outils.py` avec ces fonctions : `lire_fichier_notes`, `calculer_moyenne`, `calculer_rang`, `envoyer_courriel_parents`, `dessiner_histogramme`. Le module `bulletin.py` utilise directement la variable interne `outils._cache_notes` pour éviter de relire le fichier. Enfin, `calculer_rang` contient un tri écrit à la main.\n\nDeux docstrings sont proposées pour `calculer_moyenne` :\n\n> A. « Parcourt la liste avec une boucle for, additionne dans une variable s, puis divise s par len(notes). »\n\n> B. « Renvoie la moyenne des notes. Précondition : notes est une liste non vide de nombres entre 0 et 20. »\n\n1. Applique à `outils.py` le test du cours : peut-on dire ce qu'il fait en une phrase sans « et » ? Quel critère de découpage est violé ?\n2. Propose un découpage en plusieurs modules : donne leur nom, leur contenu et une phrase qui résume chacun.\n3. Quel problème pose l'usage de `outils._cache_notes` par `bulletin.py` ? Que faudrait-il faire ?\n4. Quelle docstring choisir ? Justifie.\n5. Que penses-tu du tri écrit à la main ?",
+      "bareme": [
+        { "critere": "Phrase impossible sans « et » : faible cohésion (sujets mélangés)", "points": 4 },
+        { "critere": "Découpage cohérent (lecture, calculs, communication, graphiques) avec une phrase par module", "points": 5 },
+        { "critere": "Couplage fort : dépendance à l'implémentation ; passer par une fonction de l'interface", "points": 4 },
+        { "critere": "Docstring B : elle décrit le contrat, A devrait être réécrite à chaque modification interne", "points": 4 },
+        { "critere": "Réutiliser un tri de bibliothèque éprouvé plutôt qu'un tri maison", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Non** : `outils.py` « lit les fichiers de notes **et** calcule moyennes et rangs **et** envoie des courriels **et** dessine des graphiques ». Il contient plusieurs sujets : la **forte cohésion** n'est pas respectée.\n2. Par exemple :\n- `lecture.py` — `lire_fichier_notes` : « il charge les notes depuis les fichiers » ;\n- `calculs.py` — `calculer_moyenne`, `calculer_rang` : « il calcule les résultats scolaires » ;\n- `communication.py` — `envoyer_courriel_parents` : « il envoie les messages aux familles » ;\n- `graphiques.py` — `dessiner_histogramme` : « il dessine les graphiques ».\nChaque module se résume en une phrase sans « et ».\n3. Le souligné signale une variable **interne** (implémentation). En l'utilisant, `bulletin.py` dépend de l'intérieur d'`outils.py` : **couplage fort**. Si l'auteur change sa façon de mettre en cache, `bulletin.py` cassera. Il faut passer par l'**interface** : une fonction publique (par exemple `lire_fichier_notes`) qui gère elle-même son cache.\n4. **B** : une bonne docstring décrit le **contrat** — ce que la fonction garantit et sa précondition — et non l'algorithme. A décrit la façon de faire : elle devrait être **réécrite à chaque modification interne**, et deviendrait fausse si on l'oubliait.\n5. Devant un besoin courant comme un tri, le bon réflexe est de **réutiliser une bibliothèque existante**, éprouvée et testée par d'autres (le tri fourni par Python) : un tri écrit à la main est presque toujours plus lent et moins sûr."
+    },
+    {
+      "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+      "difficulte": 1,
+      "titre": "Nommer, commenter, tester",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Énonce la règle du cours qui relie la **portée** d'une variable et la précision de son **nom**. Donne un exemple où un nom d'une lettre est acceptable et un exemple où il ne l'est pas.\n2. Voici deux commentaires : « # ajoute 1 à compteur » et « # on commence à 1 car la ligne 0 du fichier est l'en-tête ». Lequel est utile ? Pourquoi ? Qu'est-ce qui est pire qu'une absence de commentaire ?\n3. Quelles **trois catégories de cas** un jeu de tests unitaires doit-il couvrir ? Donne un exemple de chacune pour une fonction qui calcule la moyenne d'une liste de notes.",
+      "bareme": [
+        { "critere": "Plus la portée est large, plus le nom doit être explicite ; exemples justes (i dans une boucle courte, x pour une donnée globale)", "points": 6 },
+        { "critere": "Le second est utile car il explique le pourquoi ; un commentaire faux est pire", "points": 7 },
+        { "critere": "Cas nominal, cas limites, cas d'erreur, avec un exemple pertinent chacun", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Plus la portée est large, plus le nom doit être explicite.** Un compteur de boucle courte peut s'appeler `i` ; en revanche une variable utilisée dans tout le programme doit s'appeler par exemple `nb_eleves_inscrits` et non `x`, qui exigerait forcément un commentaire. Un nom dit ce que la chose **est**.\n2. Le premier est **inutile** : il répète le code. Le second est **indispensable** : il explique le **pourquoi**, que le code ne dit pas. Pire qu'une absence de commentaire : un commentaire **faux**, qui induit en erreur celui qui lui fait confiance.\n3. **Cas nominal** : l'usage attendu, par exemple moyenne([10, 14, 12]) vaut 12. **Cas limites** : une liste d'un seul élément ([15] → 15), des notes nulles ([0, 0] → 0), une borne exacte ([20, 20] → 20). **Cas d'erreur** : une entrée invalide, par exemple la liste vide, qui doit produire une erreur annoncée."
+    },
+    {
+      "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+      "difficulte": 2,
+      "titre": "Rendre lisible et tester une fonction",
+      "consigne": "Améliore la fonction, écris ses tests et réponds à la question finale.",
+      "enonce": "**Situation.** Théo a écrit :\n\n```python\ndef f(l):\n    # boucle\n    m = l[0]\n    for x in l:\n        if x > m:\n            m = x\n    return m\n```\n\n1. Critique le nom de la fonction, celui du paramètre et le commentaire. Propose une version corrigée (noms et, si besoin, commentaire).\n2. Écris au moins **quatre tests** avec `assert` pour ta version : un cas nominal, deux cas limites différents, et indique ce qui se passe dans le cas de la liste vide.\n3. Tous les tests passent. Théo en conclut que sa fonction est correcte. Que répondrait Dijkstra ? À quoi ces tests serviront-ils quand on modifiera la fonction ?",
+      "bareme": [
+        { "critere": "Noms explicites (ex. maximum, valeurs) et commentaire inutile supprimé ou remplacé par un pourquoi", "points": 6 },
+        { "critere": "Tests justes : nominal, deux limites (un élément, négatifs ou maximum en tête) ; liste vide → IndexError", "points": 9 },
+        { "critere": "Les tests montrent la présence de bugs, jamais leur absence ; filet pour la refactorisation", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. `f` et `l` ne disent rien de ce que sont la fonction et sa donnée ; « # boucle » répète le code et n'apporte rien. Version corrigée :\n```python\ndef maximum(valeurs):\n    plus_grand = valeurs[0]\n    for v in valeurs:\n        if v > plus_grand:\n            plus_grand = v\n    return plus_grand\n```\n2. Par exemple :\n```python\nassert maximum([3, 8, 2]) == 8        # cas nominal\nassert maximum([7]) == 7              # limite : un seul élément\nassert maximum([-5, -2, -9]) == -2    # limite : que des négatifs\nassert maximum([9, 1, 4]) == 9        # limite : maximum en première position\n```\nListe vide : `valeurs[0]` n'existe pas, la fonction s'arrête sur une erreur d'exécution (IndexError, indice hors bornes). Le test du cas d'erreur vérifie ce comportement, ou conduit à documenter la précondition « liste non vide ».\n3. Dijkstra : les tests montrent la **présence** de bugs, jamais leur **absence**. Des tests réussis prouvent seulement que la fonction n'échoue pas **sur les cas testés**. Ils servent en revanche de **filet** : si l'on modifie la fonction, on les relance et l'on voit tout de suite si l'on a cassé quelque chose — c'est ce qui rend la **refactorisation** possible."
+    },
+    {
+      "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+      "difficulte": 3,
+      "titre": "La billetterie du musée",
+      "consigne": "Repère le bug, refactorise, teste et rédige le message d'enregistrement demandé.",
+      "enonce": "**Situation.** La spécification de la billetterie d'un musée dit : « Le billet adulte coûte 12 €, le billet enfant 7 €. Une remise de 10 % s'applique à partir de 10 billets achetés. » Le code actuel :\n\n```python\ndef prix_adulte(nb):\n    total = nb * 12\n    if nb >= 10:\n        total = total * 90 / 100\n    return total\n\ndef prix_enfant(nb):\n    total = nb * 7\n    if nb > 10:\n        total = total * 90 / 100\n    return total\n```\n\n1. Une des deux fonctions ne respecte pas la spécification. Laquelle ? Donne un achat précis pour lequel elle se trompe, avec le prix obtenu et le prix attendu.\n2. Explique comment la **duplication de code** a rendu ce bug possible.\n3. Réécris le code en **une seule** fonction `prix(nb, tarif)`.\n4. Écris des tests `assert` qui couvrent le cas nominal et les cas limites de la remise, pour les deux tarifs.\n5. Rédige le message qui accompagnera l'enregistrement de cette correction dans git, et dis ce qu'il doit expliquer.",
+      "bareme": [
+        { "critere": "prix_enfant fautive (> au lieu de >=) ; 10 enfants : 70 € obtenus au lieu de 63 €", "points": 4 },
+        { "critere": "Deux copies qui évoluent séparément : correction faite dans l'une, oubliée dans l'autre", "points": 3 },
+        { "critere": "Fonction unique prix(nb, tarif) correcte avec nb >= 10", "points": 5 },
+        { "critere": "Tests justes sur 9, 10 et un cas nominal (ex. 9 enfants 63, 10 enfants 63, 10 adultes 108, 0 billet 0)", "points": 5 },
+        { "critere": "Message court qui explique l'intention (remise dès 10 billets, fonctions fusionnées)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **prix_enfant** : elle teste `nb > 10` au lieu de `nb >= 10`. Pour **10 billets enfant**, elle renvoie 10 × 7 = **70 €** alors que la spécification donne 70 × 90 / 100 = **63 €**.\n2. Les deux fonctions sont des **copies** du même calcul : elles évoluent **séparément**. Un bug corrigé (ou une règle changée) dans l'une subsiste dans l'autre ; ici la borne a été écrite différemment dans chaque copie.\n3.\n```python\ndef prix(nb, tarif):\n    total = nb * tarif\n    if nb >= 10:\n        total = total * 90 / 100\n    return total\n```\nAppels : `prix(nb, 12)` pour les adultes, `prix(nb, 7)` pour les enfants. La règle de remise n'est plus écrite qu'une fois.\n4. Par exemple :\n```python\nassert prix(3, 12) == 36      # nominal, sans remise\nassert prix(9, 7) == 63       # limite : juste sous le seuil\nassert prix(10, 7) == 63      # limite : borne exacte, remise appliquée\nassert prix(10, 12) == 108    # borne exacte, tarif adulte\nassert prix(0, 12) == 0       # limite : aucun billet\n```\n(Calculs : 9 × 7 = 63 ; 70 × 90 / 100 = 63 ; 120 × 90 / 100 = 108.) Le test sur **10 billets enfant** échouait avant la correction : il empêche le bug de revenir.\n5. Par exemple : « Remise de 10 % dès 10 billets pour tous les tarifs : prix_adulte et prix_enfant fusionnées en prix(nb, tarif) ». L'enregistrement doit être **petit** et son message doit expliquer l'**intention** (le pourquoi), pour qu'on retrouve plus tard quand et pourquoi la ligne a changé."
+    },
+    {
+      "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+      "difficulte": 1,
+      "titre": "Trois familles d'erreurs",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Cite les **trois familles d'erreurs** d'un programme. Pour chacune, dis quand elle se manifeste et donne un exemple. Laquelle est la plus dangereuse, et pourquoi ?\n2. Donne dans l'ordre les **cinq étapes** de la méthode de correction d'un bug. Laquelle est le plus souvent oubliée, et qu'apporte-t-elle ?",
+      "bareme": [
+        { "critere": "Syntaxe (avant exécution), exécution (arrêt en route), logique (résultat faux) avec exemples ; logique la plus dangereuse, justifiée", "points": 10 },
+        { "critere": "Reproduire, localiser, comprendre, corriger, ajouter un test ; l'étape 5 distingue une correction d'un rafistolage", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Erreur de syntaxe** : se manifeste **avant toute exécution**, le code ne peut pas être lu (parenthèse non fermée, deux-points oubliés) ; la plus facile. **Erreur d'exécution** : le programme **s'arrête en route** (division par zéro, indice hors bornes, fichier absent) ; bruyante, donc repérable. **Erreur de logique** : le programme s'exécute **et donne un résultat faux** (une moyenne mal calculée) ; elle ne se manifeste jamais d'elle-même : c'est la **plus dangereuse**.\n2. 1. **Reproduire** l'erreur de façon fiable, avec le plus petit cas possible ; 2. **Localiser** la zone où l'état devient incorrect ; 3. **Comprendre** la cause, pas seulement le symptôme ; 4. **Corriger** ; 5. **Ajouter un test** qui échouait avant la correction. L'étape 5 est celle qu'on saute : c'est elle qui distingue une **correction** d'un **rafistolage**, car le test empêche le bug de revenir."
+    },
+    {
+      "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+      "difficulte": 2,
+      "titre": "Une moyenne trop sévère",
+      "consigne": "Mène l'enquête pas à pas : exécution, diagnostic, correction, test.",
+      "enonce": "**Situation.** Anaïs a écrit :\n\n```python\ndef moyenne(notes):\n    total = 0\n    for i in range(1, len(notes)):\n        total = total + notes[i]\n    return total / len(notes)\n```\n\nElle appelle `moyenne([12, 8, 16])`.\n\n1. Exécute l'appel à la main : quelle valeur est renvoyée ? Quelle valeur était attendue ? À quelle famille appartient cette erreur ?\n2. Quelle est la cause du bug ? Nomme ce type d'erreur fréquente et corrige la fonction.\n3. Que se passe-t-il avec `moyenne([])` ? À quelle famille appartient cette erreur ? Propose une façon de la traiter.\n4. Écris le test qu'Anaïs doit ajouter après sa correction, et explique pourquoi il est indispensable.",
+      "bareme": [
+        { "critere": "Valeur renvoyée 8.0 au lieu de 12 ; erreur de logique", "points": 4 },
+        { "critere": "Erreur de borne (l'indice 0 est sauté) identifiée et corrigée", "points": 6 },
+        { "critere": "Liste vide : division par zéro, erreur d'exécution ; traitement proposé (précondition, message ou exception)", "points": 5 },
+        { "critere": "Test assert moyenne([12, 8, 16]) == 12 qui échouait avant la correction", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. `range(1, 3)` donne i = 1 puis 2 : total = 8 + 16 = 24, puis 24 / 3 = **8.0**. On attendait (12 + 8 + 16) / 3 = **12**. Le programme s'exécute sans s'arrêter et donne un résultat faux : c'est une **erreur de logique**, la plus dangereuse.\n2. La boucle commence à l'indice 1 : la première note est **oubliée**. C'est une **erreur de borne** (décalage d'un rang). Correction :\n```python\ndef moyenne(notes):\n    total = 0\n    for i in range(len(notes)):\n        total = total + notes[i]\n    return total / len(notes)\n```\n(ou `for n in notes: total = total + n`).\n3. `len([])` vaut 0 : **division par zéro**, le programme s'arrête en route. C'est une **erreur d'exécution** (l'oubli du cas « collection vide » est un bug classique). On peut documenter la précondition « liste non vide », ou tester le cas et signaler l'erreur par un message ou une exception traitée là où l'on sait quoi faire.\n4. `assert moyenne([12, 8, 16]) == 12`. Ce test **échouait avant** la correction et passe après : il prouve que le bug est corrigé et **empêche qu'il revienne** lors d'une modification future. C'est l'étape qui distingue une correction d'un rafistolage."
+    },
+    {
+      "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+      "difficulte": 3,
+      "titre": "Les négatifs qui résistent",
+      "consigne": "Exécute le programme à la main, diagnostique, corrige, puis réponds aux questions sur les exceptions et les outils.",
+      "enonce": "**Situation.** Une station météo envoie des relevés ; les valeurs négatives sont des erreurs de capteur. Bastien écrit :\n\n```python\ndef supprimer_negatifs(liste):\n    for x in liste:\n        if x < 0:\n            liste.remove(x)\n    return liste\n\nreleves = [3, -1, -4, 5]\npropres = supprimer_negatifs(releves)\nprint(propres)\nprint(releves)\n```\n\n(On rappelle que `liste.remove(x)` retire de la liste la première occurrence de x, et que la boucle `for` avance d'un indice à chaque tour.)\n\n1. Exécute le programme à la main, tour par tour : qu'affiche-t-il ?\n2. Identifie **les deux** bugs fréquents à l'œuvre, puis écris une version correcte qui ne modifie pas la liste reçue.\n3. Le programme doit lire les relevés dans un fichier. Un collègue propose d'entourer tout le programme d'un bloc qui attrape toutes les exceptions sans rien faire. Qu'en penses-tu ? Que proposes-tu si le fichier est absent ?\n4. Le programme tourne en continu sur un serveur de la station, sans écran. Quel outil de mise au point faut-il prévoir pour comprendre un incident a posteriori ? Pourquoi pas le débogueur ?",
+      "bareme": [
+        { "critere": "Déroulement exact : [3, -4, 5] affiché deux fois", "points": 5 },
+        { "critere": "Bugs : modification de la liste pendant son parcours et effet de bord sur l'argument mutable", "points": 4 },
+        { "critere": "Version correcte qui construit une nouvelle liste des valeurs positives ou nulles", "points": 4 },
+        { "critere": "Tout attraper masque les bugs ; traiter le fichier absent là où l'on sait quoi faire (avertir, autre chemin)", "points": 4 },
+        { "critere": "Journalisation, car le débogueur n'est pas disponible en production", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Tour d'indice 0 : x = 3, rien. Tour d'indice 1 : x = −1, retiré → la liste devient [3, −4, 5]. Tour d'indice 2 : x = 5 (−4 est passé à l'indice 1 et a été **sauté**), rien. Fin. Affichage :\n```\n[3, -4, 5]\n[3, -4, 5]\n```\n2. Premier bug : **modifier une liste pendant son parcours** (les éléments se décalent, un négatif est sauté). Second bug : **effet de bord sur un argument mutable** — `releves` a été modifiée alors que Bastien voulait la garder. Version correcte :\n```python\ndef supprimer_negatifs(liste):\n    resultat = []\n    for x in liste:\n        if x >= 0:\n            resultat.append(x)\n    return resultat\n```\nElle renvoie [3, 5] et laisse `releves` intacte.\n3. **Mauvaise idée** : tout attraper sans rien en faire **masque les bugs** au lieu de les traiter. On traite l'exception **au niveau où l'on sait quoi faire** : essayer d'ouvrir le fichier et, s'il est absent, avertir (message, trace) et proposer un autre chemin ou attendre le relevé suivant. Les autres erreurs doivent rester visibles. Une exception signale l'exceptionnel, elle ne sert pas de contrôle de flux ordinaire.\n4. La **journalisation** : elle garde une **trace** de ce qui s'est passé pendant le fonctionnement réel. Le **débogueur** (points d'arrêt, pas à pas) n'existe pas en production : on ne peut pas arrêter la station pour inspecter ses variables."
+    },
+    {
+      "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+      "difficulte": 1,
+      "titre": "La factorielle, pas à pas",
+      "consigne": "Réponds à chaque question en justifiant avec le vocabulaire du cours.",
+      "enonce": "1. Quels sont les **deux composants obligatoires** d'un algorithme récursif ? Que se passe-t-il si l'un d'eux manque ?\n2. On rappelle que la factorielle de n vaut 1 si n = 0, et n × factorielle(n − 1) sinon. Écris en Python une fonction récursive `factorielle(n)`.\n3. Détaille les appels déclenchés par `factorielle(3)` : dans quel ordre sont-ils lancés, dans quel ordre se terminent-ils, et quel est le résultat ?",
+      "bareme": [
+        { "critere": "Cas de base et appel sur un cas strictement plus petit ; sinon récursion infinie et dépassement de la pile", "points": 6 },
+        { "critere": "Fonction récursive correcte avec cas de base n == 0", "points": 7 },
+        { "critere": "Appels empilés de 3 à 0, terminés du plus profond au plus superficiel, résultat 6", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Un **cas de base**, qui renvoie une valeur **sans** rappel, et un **appel sur un cas strictement plus petit**, qui rapproche du cas de base. Sans cas de base, la récursion ne s'arrête jamais ; sans décroissance, le cas de base n'est jamais atteint. Dans les deux cas : **récursion infinie**, terminée par un **dépassement de la pile d'appels**.\n2.\n```python\ndef factorielle(n):\n    if n == 0:\n        return 1\n    return n * factorielle(n - 1)\n```\n3. Les appels s'**empilent** : factorielle(3) appelle factorielle(2), qui appelle factorielle(1), qui appelle factorielle(0). factorielle(0) renvoie 1 (cas de base). Puis ils se **dépilent du plus profond au plus superficiel** : factorielle(1) = 1 × 1 = 1 ; factorielle(2) = 2 × 1 = 2 ; factorielle(3) = 3 × 2 = **6**."
+    },
+    {
+      "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+      "difficulte": 2,
+      "titre": "La fonction mystère",
+      "consigne": "Exécute la fonction à la main, analyse-la, puis écris la fonction demandée.",
+      "enonce": "```python\ndef mystere(s):\n    if s == '':\n        return ''\n    return mystere(s[1:]) + s[0]\n```\n\n(On rappelle que `s[0]` est le premier caractère de s et que `s[1:]` est la chaîne s privée de son premier caractère.)\n\n1. Détaille les appels et les valeurs renvoyées pour `mystere('nsi')`. Que fait cette fonction ?\n2. Sur quel argument la fonction décroît-elle, et jusqu'où ? Pourquoi est-on sûr qu'elle s'arrête ?\n3. Écris une fonction récursive `somme(liste)` qui renvoie la somme des éléments d'une liste de nombres.\n4. Maëlys appelle `somme` sur une liste d'un million d'éléments et obtient une erreur, alors qu'une boucle fonctionne. Explique.",
+      "bareme": [
+        { "critere": "Appels mystere('nsi'), ('si'), ('i'), ('') et résultat 'isn' ; la fonction inverse la chaîne", "points": 6 },
+        { "critere": "Décroissance de la longueur de la chaîne jusqu'à la chaîne vide (cas de base)", "points": 4 },
+        { "critere": "Fonction somme récursive correcte avec cas de base liste vide", "points": 6 },
+        { "critere": "Profondeur de récursion bornée (environ mille appels) : dépassement de la pile d'appels", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. mystere('nsi') = mystere('si') + 'n' ; mystere('si') = mystere('i') + 's' ; mystere('i') = mystere('') + 'i' ; mystere('') = '' (cas de base). En remontant : mystere('i') = 'i' ; mystere('si') = 'is' ; mystere('nsi') = **'isn'**. La fonction **inverse** une chaîne de caractères.\n2. La fonction décroît sur la **longueur de la chaîne** : chaque appel porte sur une chaîne d'un caractère plus courte, jusqu'à la **chaîne vide**, qui est le cas de base. La longueur étant un entier positif qui diminue strictement, le cas de base est forcément atteint.\n3.\n```python\ndef somme(liste):\n    if liste == []:\n        return 0\n    return liste[0] + somme(liste[1:])\n```\n(Acte de foi : on suppose que somme fonctionne déjà pour la liste privée de son premier élément.)\n4. Chaque appel en cours occupe une place dans la **pile d'appels**. Python borne la profondeur par défaut autour de **mille** appels : une récursion d'un million d'appels **déborde la pile** et s'arrête sur une erreur, là où une boucle ne consomme pas de pile."
+    },
+    {
+      "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+      "difficulte": 3,
+      "titre": "Fibonacci et la puissance",
+      "consigne": "Compte les appels, écris les fonctions demandées et justifie tes choix entre récursif et itératif.",
+      "enonce": "```python\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)\n```\n\n1. Combien d'appels à `fib` (y compris le premier) déclenche `fib(5)` ? Quelle valeur renvoie-t-il ? Présente ton calcul (un arbre des appels ou une relation entre les nombres d'appels).\n2. Combien de fois `fib(2)` est-il calculé pendant `fib(5)` ? Explique pourquoi le coût de cette version devient exponentiel.\n3. Écris une fonction récursive `puissance(x, n)` qui calcule x à la puissance n (n entier positif ou nul), sachant que x⁰ = 1 et xⁿ = x × xⁿ⁻¹. Combien d'appels déclenche `puissance(2, 4)` et que renvoie-t-il ?\n4. Écris une version **itérative** de `fib(n)`.\n5. Pour un arbre, tu choisirais une fonction récursive ; pour une liste de 100 000 éléments, une boucle. Justifie ces deux choix.",
+      "bareme": [
+        { "critere": "15 appels pour fib(5), valeur 5, calcul présenté", "points": 5 },
+        { "critere": "fib(2) calculé 3 fois ; recalculs et doublement des appels : coût exponentiel", "points": 3 },
+        { "critere": "puissance récursive correcte ; 5 appels, résultat 16", "points": 5 },
+        { "critere": "fib itératif correct (deux variables mises à jour dans une boucle)", "points": 4 },
+        { "critere": "Récursif pour une structure récursive ; itératif pour une grande profondeur", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Notons A(n) le nombre d'appels : A(0) = A(1) = 1 et A(n) = 1 + A(n − 1) + A(n − 2). A(2) = 1 + 1 + 1 = 3 ; A(3) = 1 + 3 + 1 = 5 ; A(4) = 1 + 5 + 3 = 9 ; A(5) = 1 + 9 + 5 = **15 appels**. Valeur : fib(5) = fib(4) + fib(3) = 3 + 2 = **5** (suite 0, 1, 1, 2, 3, 5).\n2. fib(5) appelle fib(4) et fib(3) ; fib(4) appelle fib(3) et fib(2) ; chacun des deux fib(3) appelle fib(2). fib(2) est donc calculé **3 fois**. Chaque niveau relance **deux** appels et les mêmes valeurs sont **recalculées** : le nombre d'appels double presque à chaque rang, le coût est **exponentiel** (plus d'un million d'appels pour le trentième terme).\n3.\n```python\ndef puissance(x, n):\n    if n == 0:\n        return 1\n    return x * puissance(x, n - 1)\n```\npuissance(2, 4) appelle puissance(2, 3), (2, 2), (2, 1), (2, 0) : **5 appels** ; résultat 2 × 2 × 2 × 2 × 1 = **16**.\n4.\n```python\ndef fib(n):\n    a, b = 0, 1\n    for i in range(n):\n        a, b = b, a + b\n    return a\n```\nVérification : n = 5 → (a, b) passe par (1, 1), (1, 2), (2, 3), (3, 5), (5, 8) : renvoie 5.\n5. Un **arbre** est une structure **récursive par définition** : un parcours récursif tient en quelques lignes, alors que l'itératif doit gérer une pile à la main ; sa profondeur reste modeste. Pour **100 000 éléments**, une récursion d'un appel par élément dépasserait la limite d'environ mille appels : la **boucle** s'impose. Les deux ont la même puissance, le choix dépend de la structure et de la profondeur."
+    },
+    {
+      "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+      "difficulte": 1,
+      "titre": "Diviser, régner, combiner",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Décris les **trois étapes** de la stratégie « diviser pour régner ».\n2. Quelle condition la **recherche dichotomique** exige-t-elle ? Que se passe-t-il si elle n'est pas respectée ? Combien faut-il environ de comparaisons pour chercher dans un million d'éléments, contre combien pour une recherche séquentielle ?\n3. Donne le coût du **tri fusion**, sa principale qualité autre que la vitesse, et son défaut.",
+      "bareme": [
+        { "critere": "Diviser en sous-problèmes, les résoudre récursivement, combiner les solutions", "points": 6 },
+        { "critere": "Tableau trié ; sinon résultat faux sans avertissement ; environ 20 contre jusqu'à 1 000 000", "points": 7 },
+        { "critere": "n log n dans tous les cas ; stable ; mémoire auxiliaire proportionnelle à n", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Diviser** : découper l'entrée en sous-problèmes de même nature, généralement deux moitiés. **Régner** : résoudre chaque partie par un appel récursif, jusqu'au cas de base. **Combiner** : reconstruire la solution globale à partir des solutions partielles.\n2. Le tableau **doit être trié**. Sinon, la dichotomie ne signale rien : elle renvoie simplement un résultat **faux**. Chaque comparaison écarte la moitié du tableau : environ **20** comparaisons pour un million d'éléments (2²⁰ ≈ 10⁶), contre jusqu'à **1 000 000** pour la recherche séquentielle.\n3. Le tri fusion coûte **n log n** dans **tous** les cas (la borne optimale des tris par comparaison). Il est **stable** : deux éléments égaux gardent leur ordre d'origine (et sa performance ne dépend pas des données). Défaut : il utilise un **tableau auxiliaire**, donc une mémoire supplémentaire proportionnelle à n."
+    },
+    {
+      "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+      "difficulte": 2,
+      "titre": "Dichotomie et fusion à la main",
+      "consigne": "Déroule les algorithmes en donnant les valeurs des variables à chaque étape.",
+      "enonce": "```python\ndef dicho(t, v):\n    g, d = 0, len(t) - 1\n    while g <= d:\n        m = (g + d) // 2\n        if t[m] == v:\n            return m\n        elif t[m] < v:\n            g = m + 1\n        else:\n            d = m - 1\n    return -1\n\nt = [3, 8, 12, 17, 21, 26, 30, 35, 41]\n```\n\n1. Déroule `dicho(t, 30)` : donne g, d et m à chaque tour et la valeur renvoyée.\n2. Déroule `dicho(t, 10)` de la même façon.\n3. Pour le tri fusion, fusionne les deux listes triées **[2, 9, 14]** et **[5, 6, 20]** en indiquant chaque comparaison et l'élément retenu.",
+      "bareme": [
+        { "critere": "dicho(t, 30) : m = 4 puis m = 6, renvoie 6", "points": 6 },
+        { "critere": "dicho(t, 10) : m = 4, 1, 2, puis g > d, renvoie -1", "points": 6 },
+        { "critere": "Fusion détaillée donnant [2, 5, 6, 9, 14, 20]", "points": 8 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Tour 1 : g = 0, d = 8, m = 4, t[4] = 21 < 30 → g = 5. Tour 2 : g = 5, d = 8, m = 6, t[6] = 30 → **renvoie 6**. Deux tours suffisent.\n2. Tour 1 : g = 0, d = 8, m = 4, t[4] = 21 > 10 → d = 3. Tour 2 : g = 0, d = 3, m = 1, t[1] = 8 < 10 → g = 2. Tour 3 : g = 2, d = 3, m = 2, t[2] = 12 > 10 → d = 1. Tour 4 : g = 2 > d = 1, la boucle s'arrête → **renvoie −1** (10 est absent). Chaque tour a divisé par deux la zone de recherche.\n3. On compare à chaque étape les deux plus petits éléments disponibles :\n- 2 contre 5 → **2** ;\n- 9 contre 5 → **5** ;\n- 9 contre 6 → **6** ;\n- 9 contre 20 → **9** ;\n- 14 contre 20 → **14** ;\n- la première liste est épuisée : on recopie **20**.\nRésultat : **[2, 5, 6, 9, 14, 20]**. C'est l'étape « combiner » du tri fusion, qui coûte de l'ordre de la somme des longueurs."
+    },
+    {
+      "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+      "difficulte": 3,
+      "titre": "Le tri fusion en entier",
+      "consigne": "Déroule le tri, complète le programme, puis justifie par le calcul le choix de l'algorithme.",
+      "enonce": "On dispose de la fonction de fusion suivante :\n\n```python\ndef fusion(a, b):\n    res = []\n    i, j = 0, 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            res.append(a[i])\n            i = i + 1\n        else:\n            res.append(b[j])\n            j = j + 1\n    return res + a[i:] + b[j:]\n```\n\n1. Déroule le tri fusion sur **[5, 2, 7, 1, 8, 3, 6, 4]** : donne les découpages successifs, puis chaque fusion.\n2. Écris la fonction récursive `tri_fusion(t)` qui utilise `fusion`, en précisant le cas de base.\n3. Pourquoi le test `a[i] <= b[j]` (et non `<`) rend-il ce tri **stable** ?\n4. Un ordinateur effectue 10⁹ opérations par seconde. Estime la durée du tri d'un million d'éléments par un tri par insertion (n²) et par le tri fusion (environ 2 × 10⁷ opérations).\n5. Quel est le défaut du tri fusion ? Dans quel cas pourrait-il gêner ?",
+      "bareme": [
+        { "critere": "Découpages jusqu'aux singletons et fusions exactes jusqu'à [1, 2, 3, 4, 5, 6, 7, 8]", "points": 5 },
+        { "critere": "tri_fusion correct : cas de base longueur ≤ 1, découpage au milieu, fusion des deux appels", "points": 5 },
+        { "critere": "À égalité, l'élément de la moitié gauche passe en premier : ordre d'origine conservé", "points": 3 },
+        { "critere": "10¹² / 10⁹ = 1 000 s (environ 17 min) contre 0,02 s", "points": 4 },
+        { "critere": "Mémoire auxiliaire proportionnelle à n, gênante quand la mémoire est limitée", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Diviser** : [5, 2, 7, 1, 8, 3, 6, 4] → [5, 2, 7, 1] et [8, 3, 6, 4] → [5, 2], [7, 1], [8, 3], [6, 4] → huit singletons.\n**Combiner** : [5] + [2] → [2, 5] ; [7] + [1] → [1, 7] ; [8] + [3] → [3, 8] ; [6] + [4] → [4, 6] ; puis [2, 5] + [1, 7] → [1, 2, 5, 7] ; [3, 8] + [4, 6] → [3, 4, 6, 8] ; enfin → **[1, 2, 3, 4, 5, 6, 7, 8]**.\n2.\n```python\ndef tri_fusion(t):\n    if len(t) <= 1:\n        return t\n    m = len(t) // 2\n    return fusion(tri_fusion(t[:m]), tri_fusion(t[m:]))\n```\nCas de base : une liste de 0 ou 1 élément est déjà triée.\n3. En cas d'égalité, `<=` prend l'élément de **a**, la moitié **gauche**, qui était placé avant dans le tableau d'origine : deux éléments égaux **gardent leur ordre d'origine**, c'est la définition d'un tri stable. Avec `<`, l'élément de droite passerait devant.\n4. Insertion : (10⁶)² = 10¹² opérations, soit 10¹² / 10⁹ = **1 000 s**, environ **17 minutes**. Fusion : 2 × 10⁷ / 10⁹ = **0,02 s**. C'est la différence entre « instantané » et « impossible » dès qu'on répète l'opération.\n5. Le tri fusion utilise un **tableau auxiliaire** : une mémoire supplémentaire **proportionnelle à n**. Cela peut gêner quand la mémoire est limitée (objet connecté, très gros volume de données)."
+    },
+    {
+      "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+      "difficulte": 1,
+      "titre": "Ne pas calculer deux fois",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Quelles sont les **deux conditions** d'application de la programmation dynamique ? Laquelle la distingue de « diviser pour régner » ?\n2. Compare les approches **descendante** (mémoïsation) et **ascendante** (tabulation) : écriture, mécanisme, avantage.\n3. Pour Fibonacci, donne le coût de la version naïve et celui de la version avec mémoïsation. Que troque-t-on pour gagner ce temps ?",
+      "bareme": [
+        { "critere": "Sous-structure optimale et chevauchement des sous-problèmes ; le chevauchement justifie la programmation dynamique", "points": 7 },
+        { "critere": "Mémoïsation : récursivité gardée, résultats rangés dans un dictionnaire ; tabulation : tableau rempli des petits aux grands, sans récursivité ni risque de pile", "points": 7 },
+        { "critere": "Exponentiel contre linéaire ; de la mémoire contre du temps", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Sous-structure optimale** : la solution optimale se construit à partir des solutions optimales des sous-problèmes. **Chevauchement** des sous-problèmes : les mêmes sous-problèmes réapparaissent. Si seule la première est vérifiée, diviser pour régner suffit : c'est le **chevauchement** qui justifie la programmation dynamique.\n2. **Descendante (mémoïsation)** : on garde l'écriture **récursive** naturelle et on range chaque résultat dans un **dictionnaire** avant de le renvoyer ; le code change à peine, mais la pile reste limitée. **Ascendante (tabulation)** : on **remplit un tableau** des plus petits sous-problèmes vers les plus grands, sans récursivité ; plus rapide, **aucun risque** de dépassement de pile, mais il faut trouver soi-même l'ordre de remplissage.\n3. Naïve : coût **exponentiel** (plus d'un million d'appels pour le 30ᵉ terme). Avec mémoïsation : coût **linéaire** (une trentaine de calculs). On échange de la **mémoire** (le dictionnaire) contre du **temps**."
+    },
+    {
+      "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+      "difficulte": 2,
+      "titre": "Fibonacci, deux fois plus malin",
+      "consigne": "Transforme la fonction naïve comme demandé et justifie chaque étape.",
+      "enonce": "Voici la version naïve :\n\n```python\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)\n```\n\n1. Réécris cette fonction avec **mémoïsation**, en utilisant un dictionnaire `memo`. Explique pourquoi le nombre de calculs devient linéaire.\n2. Écris une version **ascendante** `fib_tab(n)` qui remplit une liste `t` où `t[i]` vaut le i-ième terme. Donne le contenu de `t` pour n = 10 et la valeur renvoyée.\n3. Pour n = 5 000, la version mémoïsée échoue alors que la version ascendante répond. Explique.",
+      "bareme": [
+        { "critere": "Version mémoïsée correcte : test de présence dans memo, rangement avant de renvoyer ; chaque valeur calculée une fois", "points": 7 },
+        { "critere": "Version ascendante correcte ; t = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55] et renvoie 55", "points": 8 },
+        { "critere": "Mémoïsation récursive : pile d'appels limitée ; tabulation sans récursivité", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n```python\nmemo = {}\n\ndef fib(n):\n    if n < 2:\n        return n\n    if n in memo:\n        return memo[n]\n    memo[n] = fib(n - 1) + fib(n - 2)\n    return memo[n]\n```\nChaque valeur fib(k) n'est **calculée qu'une fois**, puis relue dans le dictionnaire : il y a environ n calculs au lieu d'un nombre exponentiel d'appels. Le même algorithme, plus un dictionnaire, **change de classe de complexité**.\n2.\n```python\ndef fib_tab(n):\n    t = [0] * (n + 1)\n    if n >= 1:\n        t[1] = 1\n    for i in range(2, n + 1):\n        t[i] = t[i - 1] + t[i - 2]\n    return t[n]\n```\nPour n = 10 : t = **[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]**, la fonction renvoie **55**. On remplit des petits indices vers les grands : chaque case utilise deux cases déjà calculées.\n3. La version mémoïsée reste **récursive** : fib(5000) empile environ 5 000 appels, bien au-delà de la limite de Python (environ mille) : **dépassement de la pile**. La version ascendante n'utilise **aucune récursivité** : aucun risque de dépassement."
+    },
+    {
+      "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+      "difficulte": 3,
+      "titre": "Rendre la monnaie avec 1, 3 et 4",
+      "consigne": "Compare les deux méthodes, remplis le tableau et justifie le recours à la programmation dynamique.",
+      "enonce": "**Situation.** Dans un jeu, les pièces valent **1, 3 et 4** crédits. Il faut rendre une somme avec le **moins de pièces possible**.\n\nL'algorithme **glouton** prend à chaque étape la plus grosse pièce qui ne dépasse pas ce qu'il reste à rendre.\n\n```python\ndef rendu(pieces, somme):\n    m = [0] * (somme + 1)\n    for s in range(1, somme + 1):\n        m[s] = s   # pire cas : que des pièces de 1\n        for p in pieces:\n            if p <= s and m[s - p] + 1 < m[s]:\n                m[s] = m[s - p] + 1\n    return m[somme]\n```\n\n1. Applique l'algorithme glouton pour rendre 6, puis 10. Combien de pièces utilise-t-il ?\n2. Remplis le tableau m[s], nombre minimal de pièces, pour s allant de 0 à 10, en détaillant au moins le calcul de m[6] et de m[10].\n3. Donne une façon optimale de rendre 6 et de rendre 10. Conclus sur le glouton.\n4. Explique en quelques lignes ce que fait la fonction `rendu` et pourquoi m[s − p] est déjà connu au moment où on l'utilise.\n5. Quelle condition d'application de la programmation dynamique apparaît ici ? Montre-la sur un exemple.",
+      "bareme": [
+        { "critere": "Glouton : 6 = 4 + 1 + 1 (3 pièces), 10 = 4 + 4 + 1 + 1 (4 pièces)", "points": 4 },
+        { "critere": "Tableau exact : 0, 1, 2, 1, 1, 2, 2, 2, 2, 3, 3 avec calculs de m[6] et m[10]", "points": 7 },
+        { "critere": "6 = 3 + 3 (2 pièces), 10 = 4 + 3 + 3 (3 pièces) ; le glouton n'est pas optimal ici", "points": 3 },
+        { "critere": "Fonction expliquée : tabulation ascendante, sommes plus petites déjà calculées", "points": 4 },
+        { "critere": "Chevauchement : un même sous-problème (ex. m[3]) réutilisé par plusieurs sommes", "points": 2 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Rendre 6 : 4 (reste 2), 1 (reste 1), 1 → **3 pièces**. Rendre 10 : 4 (reste 6), 4 (reste 2), 1, 1 → **4 pièces**.\n2. m[s] = 1 + min des m[s − p] pour les pièces p ≤ s :\n\n| s | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n| m[s] | 0 | 1 | 2 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 |\n\nm[6] = 1 + min(m[5], m[3], m[2]) = 1 + min(2, 1, 2) = **2**.\nm[10] = 1 + min(m[9], m[7], m[6]) = 1 + min(3, 2, 2) = **3**.\n(Autres calculs : m[5] = 1 + min(1, 2, 1) = 2 ; m[7] = 1 + min(2, 1, 1) = 2 ; m[8] = 1 + min(2, 2, 1) = 2 ; m[9] = 1 + min(2, 2, 2) = 3.)\n3. 6 = **3 + 3** (2 pièces) ; 10 = **4 + 3 + 3** (3 pièces). Le glouton donne 3 et 4 pièces : il **n'est pas optimal** avec ce système de pièces (il l'est avec les pièces européennes, pas en général). La programmation dynamique donne **toujours** l'optimum.\n4. La fonction calcule le nombre minimal de pièces pour **chaque** somme de 0 à la somme visée, **dans l'ordre croissant** (approche ascendante, tabulation). Pour s, elle part du pire cas (s pièces de 1) puis essaie chaque pièce p : utiliser p coûte une pièce plus le meilleur rendu de s − p. Comme s − p < s, **m[s − p] a déjà été rempli** : c'est le bon ordre de remplissage.\n5. Le **chevauchement des sous-problèmes** : par exemple m[3] sert au calcul de m[4], m[6] et m[7] ; en récursif naïf, on le recalculerait à chaque fois. (La sous-structure optimale est vérifiée aussi : le meilleur rendu de s prolonge un meilleur rendu de s − p.) On troque un tableau de 11 cases contre un nombre exponentiel de recalculs."
+    },
+    {
+      "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+      "difficulte": 1,
+      "titre": "Trois façons de chercher un motif",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "On cherche un motif de longueur m dans un texte de longueur n.\n\n1. Présente les **trois algorithmes** du cours (naïf, Boyer-Moore-Horspool, Knuth-Morris-Pratt) : pour chacun, son idée et son coût.\n2. Qu'ont en commun les deux algorithmes efficaces ? Dans quel cas ce choix est-il rentable ?\n3. Quel algorithme choisir pour : a. un petit script qui cherche un mot de 3 lettres dans une phrase ; b. une garantie de performance sur un motif très répétitif ; c. des milliers de recherches dans une encyclopédie qui ne change pas ?",
+      "bareme": [
+        { "critere": "Naïf (décalage d'un cran, m × n), Horspool (droite à gauche, sauts, rapide en pratique), KMP (sans recul dans le texte, n + m garanti)", "points": 10 },
+        { "critere": "Prétraitement du motif en m opérations, rentable quand le texte est bien plus long que le motif", "points": 5 },
+        { "critere": "a naïf, b Knuth-Morris-Pratt, c construire un index", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Naïf** : on aligne le motif, on compare caractère par caractère et, au moindre désaccord, on décale **d'un cran** ; coût jusqu'à **m × n**. **Boyer-Moore-Horspool** : on compare le motif **de droite à gauche** et une **table de décalage** calculée sur le motif permet de **sauter d'un bloc** ; m × n dans le pire cas mais très rapide en pratique. **Knuth-Morris-Pratt** : grâce à une table précalculée, il ne **revient jamais en arrière** dans le texte ; coût **n + m**, garanti.\n2. Ils **investissent un prétraitement** sur le motif (de l'ordre de m opérations) pour économiser ensuite sur le texte. C'est rentable dès que le texte est **bien plus long** que le motif, ce qui est le cas usuel.\n3. a. Le **naïf** (motif court, texte court, code à écrire vite). b. **Knuth-Morris-Pratt** (garantie de performance, motif très répétitif). c. Construire un **index** une fois pour toutes (recherches nombreuses dans un texte fixe)."
+    },
+    {
+      "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+      "difficulte": 2,
+      "titre": "L'algorithme naïf au travail",
+      "consigne": "Exécute la fonction à la main et compte les comparaisons demandées.",
+      "enonce": "```python\ndef recherche(texte, motif):\n    n, m = len(texte), len(motif)\n    positions = []\n    for i in range(n - m + 1):\n        j = 0\n        while j < m and texte[i + j] == motif[j]:\n            j = j + 1\n        if j == m:\n            positions.append(i)\n    return positions\n```\n\n1. Que renvoie `recherche('ABRACADABRA', 'ABRA')` ? Justifie (les positions commencent à 0).\n2. On appelle `recherche('AAAAAAAAAA', 'AAB')` (dix lettres A). Combien d'alignements sont examinés ? Combien de comparaisons de caractères chacun demande-t-il ? Combien au total ? Pourquoi est-ce le pire cas de cet algorithme ?\n3. Dans cet exemple, qu'est-ce que l'algorithme naïf « oublie » à chaque échec ? Quel algorithme du cours évite ce gaspillage, et avec quelle garantie ?",
+      "bareme": [
+        { "critere": "Renvoie [0, 7], justifié par les positions de ABRA dans le texte", "points": 6 },
+        { "critere": "8 alignements, 3 comparaisons chacun, 24 au total ; chaque alignement va presque au bout avant d'échouer", "points": 8 },
+        { "critere": "Il oublie les caractères déjà comparés ; Knuth-Morris-Pratt, sans recul dans le texte, n + m garanti", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le texte s'indexe A0 B1 R2 A3 C4 A5 D6 A7 B8 R9 A10. « ABRA » apparaît à partir de l'indice **0** (ABRA) et de l'indice **7** (A7 B8 R9 A10). Aux autres positions, la comparaison échoue avant la fin du motif. La fonction renvoie **[0, 7]**.\n2. n = 10, m = 3 : i va de 0 à 7, soit **8 alignements**. À chaque alignement : A = A (j = 0), A = A (j = 1), puis A ≠ B (j = 2) → **3 comparaisons**, et un échec. Total : 8 × 3 = **24 comparaisons**, de l'ordre de m × n. C'est le pire cas décrit en cours : un texte fait d'une lettre répétée et un motif presque identique, où chaque alignement va **presque au bout** avant d'échouer.\n3. À chaque échec, l'algorithme naïf **oublie tout** ce qu'il vient d'apprendre : il sait que les caractères comparés étaient des A, mais repart du début du motif en décalant d'un seul cran. **Knuth-Morris-Pratt** précalcule, pour chaque préfixe du motif, le plus long préfixe qui est aussi un suffixe, et reprend au bon endroit sans **jamais reculer dans le texte** : coût **n + m**, garanti."
+    },
+    {
+      "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+      "difficulte": 3,
+      "titre": "Horspool dans le texte des données",
+      "consigne": "Déroule l'algorithme avec la table fournie, compare avec l'algorithme naïf, puis réponds aux questions.",
+      "enonce": "**Règles de Boyer-Moore-Horspool utilisées ici.** On aligne le motif (longueur m) à la position i du texte et on compare **de droite à gauche**. Qu'il y ait une correspondance complète ou un échec, on décale ensuite le motif d'après le caractère c du texte placé **sous la dernière lettre du motif** : décalage(c) = m − 1 − (dernière position de c parmi les m − 1 premières lettres du motif), ou **m** si c n'y figure pas.\n\n**Motif** : DATA (m = 4). **Texte** : BIGDATAETDATASET (n = 16, positions de 0 à 15).\n\n1. Calcule la table de décalage du motif DATA (pour D, A, T et les autres lettres).\n2. Déroule l'algorithme : pour chaque position d'alignement, indique le caractère sous la dernière lettre du motif, le résultat de la comparaison et le décalage. Donne les positions où le motif est trouvé.\n3. Combien d'alignements l'algorithme naïf aurait-il examinés ? Explique d'où vient le gain.\n4. Pour Knuth-Morris-Pratt, calcule pour chaque préfixe de **ABAB** (A, AB, ABA, ABAB) la longueur du plus long préfixe **propre** (différent du mot entier) qui est aussi un suffixe.\n5. Un laboratoire cherche un motif très répétitif dans des séquences génétiques et exige une durée garantie. Quel algorithme lui conseilles-tu ?",
+      "bareme": [
+        { "critere": "Table : D → 3, A → 2, T → 1, autres → 4", "points": 4 },
+        { "critere": "Déroulement exact (i = 0, 3, 5, 6, 9, 11) et motif trouvé aux positions 3 et 9", "points": 7 },
+        { "critere": "13 alignements pour le naïf contre 6 ; gain par les sauts, positions écartées sans être examinées", "points": 3 },
+        { "critere": "Table KMP de ABAB : 0, 0, 1, 2", "points": 3 },
+        { "critere": "Knuth-Morris-Pratt, coût n + m garanti", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Les m − 1 = 3 premières lettres sont D (0), A (1), T (2). décalage(D) = 3 − 0 = **3** ; décalage(A) = 3 − 1 = **2** ; décalage(T) = 3 − 2 = **1** ; toute autre lettre : **4**.\n2. Texte : B0 I1 G2 D3 A4 T5 A6 E7 T8 D9 A10 T11 A12 S13 E14 T15.\n- i = 0 : sous la dernière lettre, texte[3] = D ≠ A → échec, décalage(D) = 3 → i = 3 ;\n- i = 3 : fenêtre D A T A → **trouvé en 3** ; caractère texte[6] = A, décalage 2 → i = 5 ;\n- i = 5 : texte[8] = T ≠ A → échec, décalage(T) = 1 → i = 6 ;\n- i = 6 : texte[9] = D ≠ A → échec, décalage 3 → i = 9 ;\n- i = 9 : fenêtre D A T A → **trouvé en 9** ; texte[12] = A, décalage 2 → i = 11 ;\n- i = 11 : texte[14] = E ≠ A → échec, E absent du motif, décalage 4 → i = 15 > n − m = 12 : fin.\nPositions trouvées : **3 et 9**.\n3. L'algorithme naïf examine toutes les positions de 0 à n − m = 12 : **13 alignements**, contre **6** ici. Le gain vient des **sauts** : quand le caractère fautif n'apparaît pas dans le motif (E), on décale de la longueur entière, et des positions sont écartées **sans jamais être examinées**.\n4. A : **0** ; AB : **0** ; ABA : **1** (« A ») ; ABAB : **2** (« AB »). Table : 0, 0, 1, 2.\n5. **Knuth-Morris-Pratt** : il ne recule jamais dans le texte et garantit un coût **n + m** dans tous les cas, même sur un motif très répétitif, là où Horspool peut retomber à m × n."
+    }
+  ]
+}

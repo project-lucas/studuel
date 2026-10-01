@@ -308,7 +308,7 @@ Une phrase entière ne se reprend jamais par *el que* : toujours par le neutre *
 | Un **doute, une certitude niée** | **Subjonctif** | *Dudo que sea verdad* · *No creo que venga* |
 | Un **jugement impersonnel** | **Subjonctif** | *Es necesario que estudies* |
 
-> La bascule la plus rentable au bac : *creo que viene* (indicatif) mais *no creo que venga* (subjonctif). **Nier la certitude fait changer de mode** — le verbe n’a pas changé, sa polarité si.
+> La bascule la plus rentable à l’écrit : *creo que viene* (indicatif) mais *no creo que venga* (subjonctif). **Nier la certitude fait changer de mode** — le verbe n’a pas changé, sa polarité si.
 
 ## L’infinitif quand le sujet ne change pas
 | Sujet | Construction | Exemple |
@@ -1526,7 +1526,7 @@ La tournure explicite, à ne pas confondre avec *deber* seul.
           titre: 'Le conseil',
           lecon: {
             titre: 'Conseiller, suggérer, ordonner',
-            cours: `Conseiller, c’est doser. Entre l’ordre brut et la suggestion polie, l’espagnol offre une échelle complète — et le bac valorise celui qui sait en changer de barreau.
+            cours: `Conseiller, c’est doser. Entre l’ordre brut et la suggestion polie, l’espagnol offre une échelle complète — et l’on valorise celui qui sait en changer de barreau.
 
 ## L’échelle, du plus direct au plus poli
 | Registre | Structure | Exemple |
@@ -1630,7 +1630,7 @@ Dans les deux cas, *nosotros* et *vosotros* restent **réguliers** : c’est la 
 | *haber* | *he, has, ha, hemos, habéis, han* |
 | *estar* | *estoy, estás, está, estamos, estáis, están* |
 
-> *Estar* porte un **accent écrit** sur cinq de ses six formes : il marque l’accent tonique sur la terminaison, contrairement à tous les autres verbes. L’oublier est une faute d’orthographe, pas de conjugaison.
+> *Estar* porte un **accent écrit** sur quatre de ses six formes (*estás, está, estáis, están*) : il marque l’accent tonique sur la terminaison, contrairement à tous les autres verbes. L’oublier est une faute d’orthographe, pas de conjugaison.
 
 ## Ce que le présent peut dire d’autre
 | Emploi | Exemple |

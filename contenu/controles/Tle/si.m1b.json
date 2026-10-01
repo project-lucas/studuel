@@ -1,0 +1,410 @@
+{
+  "niveau": "Tle",
+  "matiere": "si",
+  "sujets": [
+    {
+      "chapitre": "46474d5f-9c19-5f45-8690-3683dc0186a5",
+      "difficulte": 1,
+      "titre": "Réduire un schéma-bloc",
+      "consigne": "Utilise les règles de calcul du cours et écris chaque étape.",
+      "enonce": "**Situation.** Une régulation de vitesse est décrite par un schéma-bloc : un comparateur, puis un correcteur de gain **5** en série avec un moteur de gain statique **0,8**, et un capteur à **retour unitaire**.\n\n1. Quel calcul fait le comparateur ?\n2. Calcule le gain A de la chaîne directe.\n3. Calcule le gain de la boucle fermée et l'erreur relative restante.\n4. Pour une consigne de 50 rad/s, à quelle vitesse le moteur se stabilise-t-il ?",
+      "bareme": [
+        { "critere": "Comparateur : consigne − mesure ; chaîne directe A = 5 × 0,8 = 4", "points": 6 },
+        { "critere": "Gain en boucle fermée 4 / 5 = 0,8 et erreur 1 / 5 = 20 %", "points": 8 },
+        { "critere": "Vitesse stabilisée : 0,8 × 50 = 40 rad/s", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le comparateur calcule l'écart **consigne − mesure**.\n2. Deux blocs en série : A = 5 × 0,8 = **4**.\n3. Retour unitaire : gain en boucle fermée = A / (1 + A) = 4 / 5 = **0,8**. Erreur relative : ε = 1 / (1 + A) = 1 / 5 = **20 %**.\n4. En régime établi : 0,8 × 50 = **40 rad/s**. Il reste 10 rad/s d'écart, soit 20 % de la consigne."
+    },
+    {
+      "chapitre": "46474d5f-9c19-5f45-8690-3683dc0186a5",
+      "difficulte": 2,
+      "titre": "Régler le tapis de convoyage",
+      "consigne": "Calcule, puis conclus sur chaque exigence en justifiant par les formules du cours.",
+      "enonce": "**Situation.** La vitesse d'un tapis de convoyage est régulée par une boucle comprenant un correcteur proportionnel de gain **Kp**, un ensemble moteur-tapis de gain statique **0,4** et un capteur à retour unitaire. Le cahier des charges exige une erreur statique d'au plus **2 %**.\n\n1. Calcule le gain minimal A de la chaîne directe, puis la valeur minimale de Kp.\n2. On choisit **Kp = 125**. Pour une consigne de 2 m/s, calcule la vitesse atteinte.\n3. Une charge lourde posée sur le tapis agit comme une perturbation dans la boucle. Comment la boucle réduit-elle son effet ?\n4. Le capteur, mal étalonné, **surestime** la vitesse de 3 % : il se comporte comme un retour de gain B = 1,03. Calcule le nouveau gain de la boucle fermée et la vitesse réelle. Que conclus-tu ?",
+      "bareme": [
+        { "critere": "A ≥ 49 et Kp ≥ 122,5 justifiés par 1 / (1 + A) ≤ 0,02", "points": 5 },
+        { "critere": "Kp = 125 : A = 50, vitesse 2 × 50 / 51 ≈ 1,96 m/s", "points": 5 },
+        { "critere": "Effet de la perturbation divisé par environ 1 + A ≈ 51", "points": 4 },
+        { "critere": "Capteur faux : gain ≈ 0,952, vitesse ≈ 1,90 m/s, la boucle ne corrige pas l'erreur du capteur", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Il faut 1 / (1 + A) ≤ 0,02, donc 1 + A ≥ 50, soit **A ≥ 49**. A = Kp × 0,4, donc Kp ≥ 49 / 0,4 = **122,5**.\n2. A = 125 × 0,4 = 50. Gain en boucle fermée : 50 / 51 ≈ 0,980. Vitesse : 2 × 0,980 ≈ **1,96 m/s**, erreur ≈ 2 % : exigence respectée.\n3. Une perturbation qui agit dans la boucle voit son effet **divisé par environ 1 + A**, ici par environ **51** : la chute de vitesse due à la charge est fortement atténuée.\n4. Avec un retour de gain B : A / (1 + A × B) = 50 / (1 + 50 × 1,03) = 50 / 52,5 ≈ **0,952**. Vitesse : 2 × 0,952 ≈ **1,90 m/s**, soit environ 3 % de moins qu'avec un capteur juste. Conclusion : la boucle ne corrige que ce qu'elle **mesure** ; une boucle n'est jamais plus juste que son capteur, quel que soit le gain."
+    },
+    {
+      "chapitre": "46474d5f-9c19-5f45-8690-3683dc0186a5",
+      "difficulte": 3,
+      "titre": "L'antenne orientable",
+      "consigne": "Réduis le schéma-bloc, dimensionne le correcteur, puis analyse les limites de la boucle. Justifie chaque conclusion.",
+      "enonce": "**Situation.** Une antenne de télécommunication est orientée par un asservissement de position. La chaîne directe comprend un correcteur proportionnel de gain **K**, un amplificateur de gain **2** et un ensemble moteur-réducteur de gain statique **0,5**. Le capteur d'angle est à retour unitaire. Le cahier des charges exige une erreur statique d'au plus **1 %**.\n\n1. Exprime le gain A de la chaîne directe en fonction de K. Pour K = 4, calcule le gain en boucle fermée et l'angle atteint pour une consigne de 30°.\n2. Calcule la valeur minimale de K qui respecte l'exigence.\n3. Un technicien propose de régler K = 1 000 « pour être tranquille ». Quel risque cela présente-t-il ? Quelle autre solution le cours propose-t-il pour annuler l'erreur ?\n4. Avec K = 99, le capteur se dérègle et surestime l'angle de 2 % (retour de gain B = 1,02). Calcule le gain en boucle fermée, l'angle atteint pour 30° et l'erreur. L'exigence est-elle encore respectée ?\n5. Conclus sur ce qui limite la précision de cette antenne.",
+      "bareme": [
+        { "critere": "A = K ; pour K = 4 : gain 0,8, angle 24°", "points": 4 },
+        { "critere": "K ≥ 99 justifié par 1 / (1 + A) ≤ 0,01", "points": 5 },
+        { "critere": "Risque d'oscillation ou d'instabilité et action intégrale", "points": 3 },
+        { "critere": "Capteur faux : gain ≈ 0,971, angle ≈ 29,1°, erreur ≈ 2,9 %, exigence non respectée", "points": 5 },
+        { "critere": "Conclusion : précision limitée par le capteur et par le gain", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Blocs en série : A = K × 2 × 0,5 = **K**. Pour K = 4 : gain = 4 / 5 = **0,8** ; angle = 0,8 × 30 = **24°**, erreur de 20 %.\n2. 1 / (1 + A) ≤ 0,01, donc 1 + A ≥ 100 : **K ≥ 99**. Avec K = 99, l'antenne atteint 30 × 99 / 100 = 29,7°.\n3. Un gain trop fort rend le système **oscillant, voire instable**. Pour annuler l'erreur statique sans pousser le gain à l'infini, on ajoute une **action intégrale** au correcteur.\n4. Gain = A / (1 + A × B) = 99 / (1 + 99 × 1,02) = 99 / 101,98 ≈ **0,971**. Angle : 30 × 0,971 ≈ **29,1°**. Erreur : (30 − 29,1) / 30 ≈ **2,9 %** > 1 % : **exigence non respectée**, alors que le gain n'a pas changé.\n5. La précision dépend du gain de la chaîne directe (qu'on ne peut pas monter sans limite) mais surtout du **capteur** : la boucle ne corrige que ce qu'elle mesure. Ici, l'erreur de 2 % du capteur s'ajoute à l'erreur de 1 % de la boucle. Il faut réétalonner le capteur."
+    },
+    {
+      "chapitre": "6e845b41-3fa7-589e-89d6-1e41bfb48047",
+      "difficulte": 1,
+      "titre": "La charge du condensateur",
+      "consigne": "Utilise les repères du premier ordre à connaître. Donne chaque résultat avec son unité.",
+      "enonce": "**Situation.** Un circuit RC comporte une résistance **R = 10 kΩ** et un condensateur **C = 100 µF**. À t = 0, on applique un échelon de **5 V** ; la tension du condensateur, initialement nulle, tend vers 5 V.\n\n1. Calcule la constante de temps τ.\n2. Quelle tension le condensateur atteint-il à t = τ ? à t = 3τ ?\n3. Quel est le temps de réponse à 5 % ? La tension peut-elle dépasser 5 V ? Justifie.",
+      "bareme": [
+        { "critere": "τ = R × C = 10 000 × 0,0001 = 1 s", "points": 6 },
+        { "critere": "Tensions : ≈ 3,15 V à τ et ≈ 4,75 V à 3τ", "points": 8 },
+        { "critere": "Temps de réponse 3 s et absence de dépassement pour un premier ordre", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. τ = R × C = 10 000 × 100 × 10⁻⁶ = **1 s**.\n2. À t = τ, la sortie atteint 63 % de sa valeur finale : 0,63 × 5 ≈ **3,15 V**. À t = 3τ, 95 % : 0,95 × 5 = **4,75 V**.\n3. Le temps de réponse à 5 % vaut 3τ = **3 s**. Un premier ordre monte **sans jamais dépasser** sa valeur finale : la tension ne dépasse pas 5 V."
+    },
+    {
+      "chapitre": "6e845b41-3fa7-589e-89d6-1e41bfb48047",
+      "difficulte": 2,
+      "titre": "Le radiateur de la salle de TP",
+      "consigne": "Identifie le modèle du premier ordre à partir des mesures, en suivant la méthode du cours.",
+      "enonce": "**Situation.** Dans une salle à **18 °C**, on allume à t = 0 un radiateur de **1 500 W**. La température monte sans jamais dépasser sa valeur finale et se stabilise à **33 °C**. On relève **27,5 °C** environ au bout de **20 min**.\n\n1. Calcule le gain statique K du système (entrée : puissance ; sortie : température).\n2. Montre que la constante de temps vaut environ 20 min.\n3. Calcule le temps de réponse à 5 % et la température atteinte à cet instant.\n4. On règle le radiateur sur **1 000 W**, toujours depuis 18 °C. Quelle température finale atteint-on ? La constante de temps change-t-elle ?",
+      "bareme": [
+        { "critere": "K = (33 − 18) / 1 500 = 0,01 °C/W", "points": 5 },
+        { "critere": "τ ≈ 20 min justifié : 63 % de 15 °C ≈ 9,5 °C, soit ≈ 27,5 °C", "points": 5 },
+        { "critere": "Temps de réponse 60 min et température ≈ 32,3 °C", "points": 5 },
+        { "critere": "À 1 000 W : 28 °C final, même constante de temps", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. K = Δs / Δe = (33 − 18) / 1 500 = 15 / 1 500 = **0,01 °C/W**.\n2. 63 % de la variation : 0,63 × 15 ≈ 9,5 °C, soit 18 + 9,5 ≈ **27,5 °C**. C'est la valeur relevée à 20 min : **τ ≈ 20 min**.\n3. Temps de réponse à 5 % : 3τ = **60 min**. La température vaut alors 18 + 0,95 × 15 ≈ **32,3 °C**.\n4. Variation finale : K × 1 000 = 0,01 × 1 000 = 10 °C, soit **28 °C**. La constante de temps **ne change pas** : elle ne dépend pas de la hauteur de l'échelon (20 min, temps de réponse 60 min)."
+    },
+    {
+      "chapitre": "6e845b41-3fa7-589e-89d6-1e41bfb48047",
+      "difficulte": 3,
+      "titre": "Identifier le moteur du convoyeur",
+      "consigne": "Exploite le relevé d'essai pour identifier le modèle, puis conclus sur le cahier des charges. Justifie chaque étape.",
+      "enonce": "**Situation.** On applique à t = 0 un échelon de **10 V** au moteur d'un convoyeur, à l'arrêt. On relève sa vitesse :\n\n| t (s) | 0 | 0,05 | 0,15 | 0,30 | 0,45 | 0,75 | 1,0 |\n| Ω (rad/s) | 0 | 142 | 316 | 432 | 475 | 497 | 500 |\n\nLe cahier des charges impose un temps de réponse à 5 % d'au plus **0,5 s**.\n\n1. L'allure est-elle celle d'un premier ordre ? Justifie avec deux observations.\n2. Calcule le gain statique K.\n3. Détermine la constante de temps τ à partir du tableau, puis contrôle-la avec une autre valeur du tableau.\n4. Calcule le temps de réponse à 5 % et conclus sur l'exigence. Donne aussi la pente de la tangente à l'origine.\n5. Sous **12 V**, quelles seraient la vitesse finale et le temps de réponse ?\n6. Un autre moteur, essayé de la même façon, atteint **520 rad/s** à 0,3 s puis se stabilise à 500 rad/s. Peut-on le modéliser par un premier ordre ? Justifie.",
+      "bareme": [
+        { "critere": "Allure de premier ordre justifiée (pente initiale non nulle, pas de dépassement, stabilisation) et K = 50 rad/s par volt", "points": 4 },
+        { "critere": "τ = 0,15 s lu à 63 % (316 rad/s) et contrôlé par une autre valeur (95 % à 0,45 s ou 99 % à 0,75 s)", "points": 5 },
+        { "critere": "Temps de réponse 0,45 s ≤ 0,5 s et pente à l'origine ≈ 3 333 rad/s²", "points": 4 },
+        { "critere": "Sous 12 V : 600 rad/s, même temps de réponse 0,45 s", "points": 3 },
+        { "critere": "Second moteur : dépassement, donc modèle au moins du deuxième ordre", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Oui : la vitesse part avec une **pente non nulle** (142 rad/s dès 0,05 s), monte de plus en plus lentement et se **stabilise à 500 rad/s sans jamais la dépasser**.\n2. K = Δs / Δe = 500 / 10 = **50 rad/s par volt**.\n3. 63 % de 500 = 315 rad/s, atteint à t = 0,15 s : **τ = 0,15 s**. Contrôle : à 3τ = 0,45 s, on lit 475 rad/s = 95 % de 500 ; à 5τ = 0,75 s, 497 rad/s ≈ 99 %. Le modèle est cohérent.\n4. Temps de réponse à 5 % : 3τ = **0,45 s** ≤ 0,5 s : **exigence respectée** (marge de 0,05 s). La tangente à l'origine coupe la valeur finale à t = τ : pente = 500 / 0,15 ≈ **3 333 rad/s²**.\n5. Sous 12 V : vitesse finale K × 12 = **600 rad/s** ; la constante de temps ne dépend pas de l'échelon, le temps de réponse reste **0,45 s**.\n6. **Non** : ce moteur dépasse sa valeur finale (520 > 500) puis revient. Un premier ordre ne dépasse jamais : le modèle est **au moins du deuxième ordre**."
+    },
+    {
+      "chapitre": "b466f003-d477-534b-935a-293235541784",
+      "difficulte": 1,
+      "titre": "Classer les capteurs, lire un nombre",
+      "consigne": "Réponds en justifiant ; pour le calcul, écris la formule et l'unité.",
+      "enonce": "**Situation.** Un portail automatique utilise trois capteurs : un **fin de course**, un **potentiomètre** qui mesure l'angle du vantail, et un **codeur incrémental** sur l'arbre du moteur.\n\n1. Classe chacun des trois capteurs dans sa famille (tout ou rien, analogique, numérique) en justifiant par ce qu'il délivre.\n2. Le potentiomètre est relié à un convertisseur analogique-numérique de **10 bits** et de pleine échelle **5 V**. Calcule le quantum.\n3. Le potentiomètre délivre **1,8 V**. Quel nombre le convertisseur renvoie-t-il ?",
+      "bareme": [
+        { "critere": "Fin de course : tout ou rien ; potentiomètre : analogique ; codeur : numérique, justifiés", "points": 8 },
+        { "critere": "Quantum q = 5 / 1 024 ≈ 4,88 mV", "points": 6 },
+        { "critere": "Nombre N = 1,8 / 0,004 88 ≈ 368 (arrondi à l'entier inférieur)", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le **fin de course** ne délivre que deux états (0 ou 1) : **tout ou rien**. Le **potentiomètre** délivre une tension qui varie continûment : **analogique**. Le **codeur incrémental** délivre des impulsions à compter : **numérique**.\n2. Un CAN de n bits découpe la plage en 2ⁿ niveaux : 2¹⁰ = 1 024. q = U_ref / 2ⁿ = 5 / 1 024 ≈ **4,88 mV**.\n3. N = U / q = 1,8 / 0,004 88 ≈ 368,6, arrondi à l'entier inférieur : **N = 368**."
+    },
+    {
+      "chapitre": "b466f003-d477-534b-935a-293235541784",
+      "difficulte": 2,
+      "titre": "La station météo du lycée",
+      "consigne": "Calcule les résolutions, puis justifie le conditionnement proposé.",
+      "enonce": "**Situation.** La station météo du lycée mesure la température avec un capteur qui délivre **20 mV/°C** sur la plage **0 – 50 °C**. Sa documentation indique une précision de **± 0,5 °C**. Il est relié à un convertisseur de **12 bits** et de pleine échelle **3,3 V**.\n\n1. Quelle tension le capteur délivre-t-il à 50 °C ? Quelle part de la pleine échelle du convertisseur est utilisée ?\n2. Calcule le quantum du convertisseur, puis la résolution en °C.\n3. On ajoute un amplificateur. Quel gain maximal peut-on choisir sans saturer le convertisseur ? On retient un gain de **3** : calcule la nouvelle résolution en °C.\n4. L'écran affiche la température au centième de degré. Un élève affirme : « la mesure est donc juste au centième ». Qu'en penses-tu ?",
+      "bareme": [
+        { "critere": "1 V à 50 °C, soit ≈ 30 % de la pleine échelle", "points": 4 },
+        { "critere": "q = 3,3 / 4 096 ≈ 0,81 mV et résolution ≈ 0,04 °C", "points": 5 },
+        { "critere": "Gain maximal 3,3, puis résolution ≈ 0,013 °C avec un gain de 3", "points": 6 },
+        { "critere": "Résolution et précision distinguées : la mesure reste juste à ± 0,5 °C", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. À 50 °C : 20 × 50 = 1 000 mV = **1 V**. Sur 3,3 V, seule une part 1 / 3,3 ≈ **30 %** de la plage du convertisseur est utilisée.\n2. q = 3,3 / 2¹² = 3,3 / 4 096 ≈ **0,81 mV**. Résolution : 0,81 / 20 ≈ **0,04 °C**.\n3. Pour ne pas saturer, la tension maximale ne doit pas dépasser 3,3 V : gain maximal 3,3 / 1 = **3,3**. Avec un gain de 3, la sensibilité devient 60 mV/°C (0 – 3 V) et la résolution 0,81 / 60 ≈ **0,013 °C**.\n4. L'élève confond **résolution** et **précision**. La résolution dit la plus petite variation détectable ; la précision dit de combien le capteur peut se tromper. Ici, la mesure peut être fausse de **± 0,5 °C** : afficher le centième n'y change rien."
+    },
+    {
+      "chapitre": "b466f003-d477-534b-935a-293235541784",
+      "difficulte": 3,
+      "titre": "Les capteurs du bras robotisé",
+      "consigne": "Choisis et dimensionne chaque maillon de la chaîne de mesure. Chaque choix doit être justifié par un calcul ou une notion du cours.",
+      "enonce": "**Situation.** Un bras robotisé doit être positionné à **0,5°** près et mesurer l'effort de serrage de sa pince entre **0 et 200 N** avec une résolution d'au moins **0,5 N**.\n\n**Position.** Un codeur incrémental est monté directement sur l'axe du bras.\n\n**Effort.** Une jauge de déformation, montée en pont, délivre **0 à 20 mV** pour 0 à 200 N. Le signal est envoyé à un convertisseur de **10 bits** et de pleine échelle **5 V**.\n\n1. Un codeur de **500 impulsions par tour** convient-il ? Sinon, combien d'impulsions par tour faut-il au minimum ? Pourquoi le codeur a-t-il deux voies décalées ?\n2. Sans conditionnement, calcule la résolution de la mesure d'effort. Conclus.\n3. Calcule le gain d'amplification qui fait occuper toute la pleine échelle, puis la nouvelle résolution. Conclus.\n4. Un technicien propose un gain de **300**. Calcule l'effort à partir duquel le convertisseur sature, et explique la conséquence.\n5. Le signal de la jauge est parasité par le moteur voisin. Quelle étape du conditionnement faut-il ajouter ? Résume la chaîne complète dans l'ordre.",
+      "bareme": [
+        { "critere": "Codeur : 500 imp. donnent 0,72° (insuffisant), il en faut au moins 720 ; voies décalées pour le sens", "points": 5 },
+        { "critere": "Sans amplificateur : q ≈ 4,88 mV, résolution ≈ 48,8 N, insuffisante", "points": 4 },
+        { "critere": "Gain 250 et résolution ≈ 0,2 N ≤ 0,5 N", "points": 5 },
+        { "critere": "Gain 300 : saturation au-delà d'environ 167 N, efforts hauts tous lus pareil", "points": 3 },
+        { "critere": "Filtrage ajouté et chaîne pont, amplification, filtrage, conversion", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Résolution : 360 / 500 = **0,72°** > 0,5° : **ne convient pas**. Il faut 360 / N ≤ 0,5, donc **N ≥ 720 impulsions** par tour (par exemple un codeur de 1 000 impulsions : 0,36°). Les deux voies décalées permettent de connaître le **sens** de rotation.\n2. q = 5 / 1 024 ≈ 4,88 mV. La jauge donne 20 mV pour 200 N, soit 0,1 mV/N : résolution 4,88 / 0,1 ≈ **48,8 N**. C'est cent fois trop grossier : la plage n'utilise que 20 mV sur 5 V.\n3. Gain = 5 V / 20 mV = **250**. La sensibilité devient 25 mV/N : résolution 4,88 / 25 ≈ **0,2 N** ≤ 0,5 N : **exigence respectée**.\n4. Avec un gain de 300, la sensibilité est 30 mV/N : 5 V sont atteints pour 5 000 / 30 ≈ **167 N**. Au-delà, le convertisseur **sature** : tous les efforts entre 167 et 200 N donnent le même nombre, la pince ne sait plus s'il serre trop fort.\n5. Il faut **filtrer** les parasites. Chaîne complète : jauge en **pont** (résistance transformée en tension) → **amplification** (gain 250) → **filtrage** → **conversion** analogique-numérique."
+    },
+    {
+      "chapitre": "b71fc46a-e108-52ce-a4a8-96157419e849",
+      "difficulte": 1,
+      "titre": "Le message du module Bluetooth",
+      "consigne": "Réponds en justifiant ; pour le calcul, compte les bits réellement envoyés.",
+      "enonce": "**Situation.** Une carte à microcontrôleur envoie un message de **48 octets** à un module radio par une liaison UART à **9 600 bauds**, format **8 bits de données, sans parité, 1 bit d'arrêt**.\n\n1. Combien de bits sont réellement transmis pour chaque octet ? Détaille la trame.\n2. Calcule la durée de transmission du message.\n3. Un élève relie le TX de la carte au TX du module et le RX au RX. Pourquoi cela ne fonctionne-t-il pas ? Comment faut-il câbler ?",
+      "bareme": [
+        { "critere": "Trame de 10 bits : 1 départ, 8 données, 1 arrêt", "points": 6 },
+        { "critere": "Durée : 480 bits / 9 600 = 0,05 s", "points": 7 },
+        { "critere": "TX et RX croisés : ce qui sort de l'un doit entrer dans l'autre", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Chaque octet est encadré : 1 bit de **départ** + 8 bits de **données** + 1 bit d'**arrêt** = **10 bits**.\n2. 48 × 10 = 480 bits ; durée = 480 / 9 600 = **0,05 s** (50 ms).\n3. TX est la sortie, RX l'entrée : relier TX à TX met deux sorties face à face, et aucune entrée ne reçoit rien. Il faut **croiser** : TX de la carte sur RX du module, RX de la carte sur TX du module (et relier les masses)."
+    },
+    {
+      "chapitre": "b71fc46a-e108-52ce-a4a8-96157419e849",
+      "difficulte": 2,
+      "titre": "Les bus du robot explorateur",
+      "consigne": "Choisis un bus pour chaque périphérique en argumentant, puis calcule les durées de transmission.",
+      "enonce": "**Situation.** Le microcontrôleur d'un robot explorateur doit dialoguer avec :\n- un **petit écran** et un **capteur de pression**, peu rapides, alors qu'il ne reste que deux broches libres ;\n- un **capteur d'images**, qui envoie beaucoup de données et doit être lu vite ;\n- un **module GPS**, qui envoie ses trames sur une liaison série asynchrone.\n\n1. Quel bus (UART, I2C ou SPI) choisis-tu pour chacun ? Justifie avec les caractéristiques de chaque bus.\n2. Le GPS envoie des trames de **80 octets** à **9 600 bauds**, format 8 bits, sans parité, 1 bit d'arrêt. Calcule la durée d'une trame.\n3. Combien de trames au plus peut-il envoyer par seconde ? En veut-on 15 par seconde : est-ce possible ?\n4. On ajoute un bit de parité. À quoi sert-il ? Recalcule la durée d'une trame.",
+      "bareme": [
+        { "critere": "Écran et capteur de pression en I2C (deux fils, adresses), images en SPI (rapide, full duplex), GPS en UART", "points": 6 },
+        { "critere": "Trame GPS : 800 bits, ≈ 83 ms", "points": 5 },
+        { "critere": "Au plus 12 trames par seconde, 15 impossible", "points": 4 },
+        { "critere": "Parité : détection d'une erreur simple ; 880 bits, ≈ 92 ms", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. \n- **Écran et capteur de pression : I2C**. Deux fils (SDA, SCL) pour tout le bus, chaque esclave désigné par son **adresse** : c'est ce qu'il faut quand il manque des broches.\n- **Capteur d'images : SPI**. Synchrone, **rapide**, **full duplex** ; il demande plus de fils (MOSI, MISO, SCK et un CS par esclave), mais c'est le débit qui compte.\n- **GPS : UART**, liaison série asynchrone point à point, débit convenu.\n2. 80 octets × 10 bits = **800 bits** ; durée = 800 / 9 600 ≈ **0,083 s** (83 ms).\n3. En une seconde : 9 600 / 800 = **12 trames** au plus. 15 trames demanderaient 15 × 800 = 12 000 bits/s > 9 600 : **impossible** à ce débit.\n4. Le bit de parité permet de **détecter une erreur simple** de transmission. Trame : 11 bits par octet, 80 × 11 = **880 bits**, durée 880 / 9 600 ≈ **0,092 s** (92 ms) : le débit utile baisse encore."
+    },
+    {
+      "chapitre": "b71fc46a-e108-52ce-a4a8-96157419e849",
+      "difficulte": 3,
+      "titre": "La télémétrie du drone",
+      "consigne": "Calcule les durées et les charges de chaque liaison, puis analyse les choix de bus. Chaque conclusion doit s'appuyer sur un chiffre.",
+      "enonce": "**Situation.** Le calculateur de vol d'un drone lit sa centrale inertielle sur un bus **I2C** et envoie sa télémétrie au sol par un module radio relié en **UART**.\n\n**Centrale inertielle.** Une lecture complète (adresse, registres, accusés de réception compris) représente **120 bits** sur le bus. L'horloge I2C est réglée à **100 kHz** (un bit par période d'horloge). Le calculateur doit faire **500 lectures par seconde**.\n\n**Télémétrie.** Le drone envoie **50 messages par seconde**, de **32 octets** chacun, format 8 bits, sans parité, 1 bit d'arrêt.\n\n1. Calcule la durée d'une lecture de la centrale, puis la part de chaque seconde pendant laquelle le bus I2C est occupé. Commente.\n2. Même question avec une horloge I2C à **400 kHz**.\n3. Calcule le nombre de bits transmis chaque seconde pour la télémétrie. Une liaison à **9 600 bauds** suffit-elle ? Et à **115 200 bauds** (calcule la part occupée) ?\n4. Pour la télémétrie, calcule le rapport entre débit utile (bits de données) et débit brut. Explique l'écart.\n5. Le constructeur envisage de passer la centrale en **SPI**. Quels avantages et quel coût ce choix présente-t-il ?",
+      "bareme": [
+        { "critere": "I2C à 100 kHz : 1,2 ms par lecture, 60 % du temps occupé", "points": 4 },
+        { "critere": "I2C à 400 kHz : 0,3 ms par lecture, 15 % du temps", "points": 3 },
+        { "critere": "Télémétrie : 16 000 bits/s, 9 600 bauds insuffisant, 115 200 bauds occupé à ≈ 14 %", "points": 5 },
+        { "critere": "Débit utile = 80 % du débit brut, dû aux bits de départ et d'arrêt", "points": 4 },
+        { "critere": "SPI : plus rapide et full duplex, mais plus de fils (un CS par esclave)", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Durée d'une lecture : 120 / 100 000 = **1,2 ms**. Par seconde : 500 × 1,2 ms = 600 ms, soit **60 %** du temps : le bus fonctionne, mais il reste peu de place pour un autre périphérique ou une lecture plus fréquente.\n2. À 400 kHz : 120 / 400 000 = **0,3 ms** par lecture, 500 × 0,3 = 150 ms, soit **15 %** du temps : large marge.\n3. Bits par seconde : 50 × 32 × 10 = **16 000 bits/s**. À 9 600 bauds : 16 000 > 9 600, **impossible**. À 115 200 bauds : 16 000 / 115 200 ≈ **14 %** de la capacité : **convient**.\n4. Chaque octet utile (8 bits) coûte 10 bits transmis : débit utile / débit brut = 8 / 10 = **80 %**. Les bits de **départ** et d'**arrêt** qui encadrent chaque octet d'une liaison asynchrone ne transportent pas de données.\n5. **SPI** est plus **rapide** et **full duplex** (envoi et réception simultanés) : la lecture de la centrale prendrait bien moins de temps. En contrepartie, il faut **plus de fils** (MOSI, MISO, SCK et un CS par esclave) : le choix dépend de ce qui manque, des broches ou du débit."
+    },
+    {
+      "chapitre": "28322603-40df-540b-a330-633aec5834de",
+      "difficulte": 1,
+      "titre": "Lire une transition",
+      "consigne": "Réponds avec le vocabulaire du diagramme d'états.",
+      "enonce": "**Situation.** Dans le diagramme d'états d'un distributeur de boissons, on lit la transition suivante, de l'état « Attente » vers l'état « Préparation » :\n\n> pièce insérée [crédit ≥ 1 €] / afficher « Choisissez »\n\n1. Dans cette transition, nomme l'événement, la condition de garde et l'effet.\n2. Explique en une phrase ce qui se passe quand un client insère une pièce alors que son crédit total vaut 0,50 €.\n3. Comment représente-t-on l'état initial du distributeur ?\n4. Le distributeur possède un bouton d'arrêt d'urgence. Faut-il le lire par scrutation ou par interruption ? Justifie.",
+      "bareme": [
+        { "critere": "Événement, garde et effet correctement identifiés", "points": 8 },
+        { "critere": "Transition non franchie car la garde est fausse ; état initial = disque noir", "points": 6 },
+        { "critere": "Arrêt d'urgence par interruption, justifié par l'urgence", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Événement** : « pièce insérée » (ce qui déclenche). **Garde** : [crédit ≥ 1 €], entre crochets, qui doit être vraie. **Effet** : « afficher Choisissez », après la barre oblique, fait pendant la transition.\n2. L'événement survient, mais la garde est **fausse** (0,50 € < 1 €) : la transition **n'est pas franchie**, le distributeur reste en « Attente ».\n3. L'état initial est représenté par un **disque noir**, relié par une flèche au premier état.\n4. Par **interruption** : c'est un événement **urgent**. Le matériel suspend le programme dès l'appui, sans attendre le prochain tour de boucle comme en scrutation."
+    },
+    {
+      "chapitre": "28322603-40df-540b-a330-633aec5834de",
+      "difficulte": 2,
+      "titre": "La barrière du parking",
+      "consigne": "Construis le tableau des transitions, puis explique comment le programme le traduit.",
+      "enonce": "**Situation.** La barrière d'un parking fonctionne ainsi :\n- au départ, elle est **fermée** ;\n- quand un ticket valide est lu, elle **s'ouvre** jusqu'à son capteur de fin de course haut ;\n- elle reste **ouverte** jusqu'à ce qu'une boucle au sol détecte que le véhicule est passé ;\n- elle **se ferme** jusqu'à son fin de course bas ;\n- si, pendant la fermeture, la boucle détecte un véhicule sous la barrière, elle **se rouvre**.\n\n1. Liste les états du système.\n2. Construis le tableau des transitions (état de départ, événement [garde], état d'arrivée).\n3. Quelle transition traduit une exigence de sécurité ? Pourquoi est-il utile qu'elle apparaisse sur le diagramme ?\n4. Décris les trois étapes d'un tour de la boucle infinie du programme, et la façon dont chaque état est traduit dans le code.",
+      "bareme": [
+        { "critere": "Quatre états : Fermée, Ouverture, Ouverte, Fermeture", "points": 4 },
+        { "critere": "Cinq transitions justes avec leur événement", "points": 7 },
+        { "critere": "Transition de sécurité identifiée et intérêt de la lire sur le diagramme", "points": 4 },
+        { "critere": "Boucle lire, décider, commander et état traduit par une structure de choix", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. États : **Fermée** (état initial), **Ouverture**, **Ouverte**, **Fermeture**.\n2. \n| État de départ | Événement [garde] | État d'arrivée |\n| Fermée | ticket lu [ticket valide] | Ouverture |\n| Ouverture | fin de course haut atteinte | Ouverte |\n| Ouverte | véhicule passé | Fermeture |\n| Fermeture | véhicule détecté | Ouverture |\n| Fermeture | fin de course bas atteinte | Fermée |\n3. « Fermeture → Ouverture si véhicule détecté » est une **exigence de sécurité** : elle évite d'abaisser la barrière sur une voiture. Elle se lit immédiatement sur le diagramme, ce qui permet de **vérifier qu'elle n'a pas été oubliée**.\n4. À chaque tour : **lire** les entrées (lecteur de ticket, boucle, fins de course) ; **décider** : selon l'état courant et les événements, changer d'état ; **commander** les sorties (moteur de la barrière) selon l'état. Chaque état devient un cas d'une **structure de choix** (« si état = Fermée alors… »), chaque transition un test."
+    },
+    {
+      "chapitre": "28322603-40df-540b-a330-633aec5834de",
+      "difficulte": 3,
+      "titre": "Le feu du passage piéton",
+      "consigne": "Construis le diagramme sous forme de tableau, analyse les défauts d'une première version, puis traduis-le en programme.",
+      "enonce": "**Situation.** Un feu tricolore protège un passage piéton. Il fonctionne ainsi :\n- au départ, les voitures ont le **vert** ;\n- quand un piéton appuie sur le bouton, les voitures passent à l'**orange**, à condition que les voitures aient eu le vert depuis au moins **60 s** ;\n- après **3 s** d'orange, les voitures ont le rouge et les **piétons le vert** ;\n- après **20 s**, les voitures reprennent le **vert**.\n\nDans l'état « Piétons verts », on veut allumer un signal sonore pour les malvoyants dès l'entrée, et l'éteindre à la sortie.\n\n1. Écris le tableau des transitions en utilisant la syntaxe événement [garde] / effet quand c'est utile.\n2. Comment écrire, dans l'état « Piétons verts », l'allumage et l'extinction du signal sonore ?\n3. Une première version oubliait la garde des 60 s. Quel défaut de fonctionnement cela aurait-il produit ?\n4. Des essais montrent qu'un seul appui fait parfois passer deux fois de suite à l'orange. Explique la cause et propose une parade.\n5. Le bouton doit-il être lu par scrutation ou par interruption ? Justifie, puis décris en quelques lignes la structure du programme.",
+      "bareme": [
+        { "critere": "Trois états et trois transitions justes, garde [vert depuis ≥ 60 s] bien placée", "points": 6 },
+        { "critere": "entry / allumer signal et exit / éteindre signal", "points": 3 },
+        { "critere": "Défaut sans garde : trafic coupé à chaque appui répété", "points": 3 },
+        { "critere": "Rebond du bouton expliqué et anti-rebond logiciel ou matériel", "points": 4 },
+        { "critere": "Choix scrutation argumenté et structure lire, décider, commander avec un cas par état", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. États : **Voitures vertes** (initial), **Voitures orange**, **Piétons verts**.\n| État de départ | Transition | État d'arrivée |\n| Voitures vertes | appui bouton [vert depuis ≥ 60 s] | Voitures orange |\n| Voitures orange | 3 s écoulées / rouge voitures | Piétons verts |\n| Piétons verts | 20 s écoulées | Voitures vertes |\n2. Dans l'état « Piétons verts » : **entry / allumer signal sonore** et **exit / éteindre signal sonore**. L'action d'entrée se fait à chaque arrivée dans l'état, celle de sortie à chaque départ.\n3. Sans garde, chaque appui ferait passer à l'orange dès le retour au vert : un piéton qui appuie sans cesse **bloquerait la circulation**. La garde garantit 60 s de vert aux voitures.\n4. Un bouton mécanique **rebondit** : il envoie plusieurs impulsions en quelques millisecondes, qui peuvent déclencher plusieurs transitions. Parade : un **anti-rebond**, logiciel (ignorer les nouveaux appuis pendant quelques dizaines de millisecondes) ou matériel.\n5. Un appui de piéton dure bien plus qu'un tour de boucle et n'est pas une urgence : la **scrutation** suffit (l'interruption se justifierait pour un événement bref ou urgent). Programme : une boucle infinie qui, à chaque tour, **lit** le bouton et le temps écoulé, **décide** (structure de choix : « si état = Voitures vertes et appui et vert depuis ≥ 60 s, alors état = Voitures orange… »), puis **commande** les feux et le signal sonore selon l'état."
+    },
+    {
+      "chapitre": "f357b47e-2a08-5d33-bda5-3f7851e9d901",
+      "difficulte": 1,
+      "titre": "La sonde du vignoble",
+      "consigne": "Réponds en justifiant ; pour le calcul, écris la formule et l'unité.",
+      "enonce": "**Situation.** Un viticulteur installe une sonde d'humidité au milieu de ses vignes, à **3 km** de la ferme. Elle envoie quelques octets toutes les 5 minutes et fonctionne sur pile.\n\n1. Cite les quatre maillons d'une solution connectée et le rôle de chacun.\n2. Quelle technologie sans fil choisis-tu : Wi-Fi, Bluetooth Low Energy ou LoRa ? Justifie avec la portée, le débit et la consommation.\n3. La sonde consomme **15 mA** pendant **2 s** toutes les **5 min**, et **5 µA** en veille. Calcule sa consommation moyenne.",
+      "bareme": [
+        { "critere": "Objet, passerelle, serveur, application et leur rôle", "points": 6 },
+        { "critere": "Choix de LoRa justifié par la portée kilométrique, la faible consommation et le faible débit suffisant", "points": 6 },
+        { "critere": "I_moy = 15 × 2 / 300 + 0,005 = 0,105 mA", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Objet** : mesurer et émettre, le plus sobrement possible. **Passerelle** : recevoir la radio et relayer vers Internet. **Serveur** : stocker, traiter, déclencher des alertes. **Application** : montrer les données à l'utilisateur.\n2. **LoRa** : portée de **plusieurs kilomètres** (3 km ici) et **très faible consommation** ; son débit très faible suffit pour quelques octets toutes les 5 minutes. Le Wi-Fi et le Bluetooth Low Energy portent à quelques dizaines de mètres, et le Wi-Fi consomme beaucoup.\n3. I_moy = I_actif × (t_actif / T) + I_veille, avec T = 5 min = 300 s : 15 × 2 / 300 = 0,1 mA ; I_moy = 0,1 + 0,005 = **0,105 mA**."
+    },
+    {
+      "chapitre": "f357b47e-2a08-5d33-bda5-3f7851e9d901",
+      "difficulte": 2,
+      "titre": "Le capteur de place de parking",
+      "consigne": "Calcule l'autonomie, conclus sur le cahier des charges, puis compare deux pistes d'amélioration.",
+      "enonce": "**Situation.** Un capteur de place de parking est collé au sol et alimenté par une pile de **2 400 mAh**. Il consomme **30 mA** pendant **0,5 s** toutes les **2 min** pour mesurer et émettre, et **20 µA** en veille. Le cahier des charges exige une autonomie d'au moins **3 ans** (on prendra 1 an = 8 760 h).\n\n1. Calcule la consommation moyenne du capteur.\n2. Calcule son autonomie en heures puis en années. L'exigence est-elle respectée ?\n3. Quelle part de la consommation moyenne est due à la veille ?\n4. Piste A : un composant plus sobre ramène la veille à **5 µA**. Piste B : on garde 20 µA mais on n'émet plus que toutes les **5 min**. Calcule l'autonomie dans chaque cas et conclus.",
+      "bareme": [
+        { "critere": "I_moy = 30 × 0,5 / 120 + 0,020 = 0,145 mA", "points": 5 },
+        { "critere": "Autonomie ≈ 16 550 h ≈ 1,9 an, exigence non respectée", "points": 5 },
+        { "critere": "Part de la veille ≈ 14 %", "points": 3 },
+        { "critere": "Piste A ≈ 2,1 ans (insuffisant), piste B ≈ 3,9 ans (suffisant), conclusion argumentée", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Part active : 30 × 0,5 / 120 = **0,125 mA**. I_moy = 0,125 + 0,020 = **0,145 mA**.\n2. t = 2 400 / 0,145 ≈ **16 550 h**, soit 16 550 / 8 760 ≈ **1,9 an** < 3 ans : **exigence non respectée**.\n3. Veille : 0,020 / 0,145 ≈ **14 %** de la consommation moyenne.\n4. **Piste A** : I_moy = 0,125 + 0,005 = 0,130 mA ; t = 2 400 / 0,130 ≈ 18 460 h ≈ **2,1 ans** : encore insuffisant, car ici c'est la phase active qui domine. **Piste B** : part active 30 × 0,5 / 300 = 0,05 mA ; I_moy = 0,05 + 0,020 = 0,070 mA ; t = 2 400 / 0,070 ≈ 34 290 h ≈ **3,9 ans** : **exigence respectée**. On retient la piste B, à condition qu'une information toutes les 5 minutes suffise à l'usage (occupation d'une place)."
+    },
+    {
+      "chapitre": "f357b47e-2a08-5d33-bda5-3f7851e9d901",
+      "difficulte": 3,
+      "titre": "Les ruches connectées",
+      "consigne": "Conçois la solution : choisis la technologie, chiffre l'autonomie, décris l'échange des messages et la sécurité. Justifie chaque choix.",
+      "enonce": "**Situation.** Une apicultrice veut suivre le poids et la température de **20 ruches** installées à **2 km** de chez elle, sans prise électrique. Chaque ruche envoie quelques octets toutes les **15 min**. Ses données doivent être lues à la fois par son application et par la coopérative apicole. Chaque ruche a une pile de **3 000 mAh** ; on vise **au moins 3 ans** d'autonomie (1 an = 8 760 h).\n\nDeux modules radio sont envisagés, avec la même veille de **8 µA** :\n\n| Module | Courant actif | Durée active par envoi |\n| LoRa | 40 mA | 1,5 s |\n| Wi-Fi | 150 mA | 5 s (connexion comprise) |\n\n1. Sans calcul, quelle technologie paraît adaptée ? Justifie avec le triangle portée, débit, consommation.\n2. Calcule la consommation moyenne et l'autonomie avec le module LoRa.\n3. Fais le même calcul avec le module Wi-Fi et compare.\n4. Explique comment un protocole de publication / abonnement permet de servir l'apicultrice et la coopérative sans que les ruches les connaissent. Propose un nom de sujet.\n5. Pour quatre risques de sécurité (mot de passe par défaut, données interceptées, fausse ruche qui envoie de fausses mesures, faille découverte après l'installation), propose une parade.",
+      "bareme": [
+        { "critere": "LoRa justifié : portée kilométrique, faible consommation, débit faible suffisant", "points": 4 },
+        { "critere": "LoRa : I_moy ≈ 0,075 mA, autonomie ≈ 40 000 h ≈ 4,6 ans", "points": 5 },
+        { "critere": "Wi-Fi : I_moy ≈ 0,84 mA, ≈ 3 570 h ≈ 5 mois, comparaison et conclusion", "points": 4 },
+        { "critere": "Publication sur un sujet auprès d'un courtier, abonnés multiples", "points": 3 },
+        { "critere": "Quatre parades : identifiant unique, chiffrement, authentification, mises à jour à distance", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **LoRa** : il porte à **plusieurs kilomètres** (2 km ici) en consommant **très peu** ; son débit très faible suffit pour quelques octets toutes les 15 min. Le Wi-Fi porte à quelques dizaines de mètres et consomme beaucoup.\n2. T = 15 min = 900 s. Part active : 40 × 1,5 / 900 ≈ 0,067 mA ; I_moy ≈ 0,067 + 0,008 ≈ **0,075 mA**. Autonomie : 3 000 / 0,075 ≈ **40 000 h**, soit environ **4,6 ans** ≥ 3 ans : exigence respectée.\n3. Wi-Fi : 150 × 5 / 900 ≈ 0,833 mA ; I_moy ≈ 0,841 mA ; autonomie : 3 000 / 0,841 ≈ **3 570 h**, environ **5 mois**. Onze fois moins que LoRa : le Wi-Fi est à écarter.\n4. Chaque ruche **publie** sa mesure sur un **sujet** (par exemple « rucher/ruche07/poids ») auprès d'un **courtier** (broker). L'application de l'apicultrice et celle de la coopérative sont **abonnées** à ce sujet et reçoivent chaque mesure. La ruche n'a pas besoin de connaître ses destinataires : on peut ajouter un abonné sans la reprogrammer.\n5. Mot de passe par défaut → **identifiant unique par objet** ; données interceptées → **chiffrement des échanges** ; fausse ruche → **authentification** des objets ; faille après l'installation → **mises à jour à distance**."
+    },
+    {
+      "chapitre": "388ca274-5b45-5bf2-be52-eae4d56f6ff6",
+      "difficulte": 1,
+      "titre": "Supervisé ou non supervisé ?",
+      "consigne": "Réponds en justifiant avec les notions du cours.",
+      "enonce": "**Situation.** Une usine envisage trois usages de l'apprentissage automatique :\n- A. classer des photos de soudures en « conforme » ou « défectueuse », à partir de milliers de photos déjà classées par des contrôleurs ;\n- B. regrouper les machines de l'atelier selon leurs profils de consommation électrique, sans catégories définies à l'avance ;\n- C. reconnaître des pièces rayées à partir d'images étiquetées.\n\n1. Pour chaque usage, dis s'il s'agit d'apprentissage supervisé ou non supervisé. Justifie.\n2. Pour l'usage A, pourquoi faut-il garder un jeu de test séparé du jeu d'entraînement ?\n3. Sur 200 soudures de test, le modèle en classe correctement 180. Calcule son exactitude.",
+      "bareme": [
+        { "critere": "A et C supervisés (exemples étiquetés), B non supervisé (sans étiquette)", "points": 9 },
+        { "critere": "Jeu de test : évaluer sur des données jamais vues, sinon le modèle se note lui-même", "points": 6 },
+        { "critere": "Exactitude 180 / 200 = 90 %", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **A : supervisé**, les photos sont **étiquetées** (la bonne réponse est connue). **B : non supervisé**, on regroupe des exemples **sans étiquette**. **C : supervisé**, les images sont étiquetées.\n2. Un modèle évalué sur ses propres données d'entraînement **se note lui-même** : son score ne prouve rien. Le jeu de test, que le modèle n'a **jamais vu** pendant l'apprentissage, mesure ce qu'il fera sur des cas réels nouveaux.\n3. Exactitude = 180 / 200 = **0,9**, soit **90 %**."
+    },
+    {
+      "chapitre": "388ca274-5b45-5bf2-be52-eae4d56f6ff6",
+      "difficulte": 2,
+      "titre": "Le tri des fruits abîmés",
+      "consigne": "Exploite les matrices de confusion, puis argumente le choix du modèle.",
+      "enonce": "**Situation.** Une coopérative trie ses pommes par caméra. Un fruit « positif » est un fruit **abîmé**. Sur **300 fruits de test**, deux modèles donnent :\n\n| | Modèle A | Modèle B |\n| Vrais positifs (abîmés détectés) | 70 | 78 |\n| Faux négatifs | 10 | 2 |\n| Faux positifs | 20 | 40 |\n| Vrais négatifs | 200 | 180 |\n\n1. Explique ce que représentent, pour la coopérative, un faux négatif et un faux positif.\n2. Calcule l'exactitude de chaque modèle.\n3. Pour chaque modèle, calcule la part des fruits abîmés qui partent chez le client.\n4. Un fruit abîmé livré fait perdre un client ; un fruit sain écarté est revendu en compote. Quel modèle recommandes-tu ? Argumente.",
+      "bareme": [
+        { "critere": "Faux négatif = fruit abîmé déclaré sain, livré ; faux positif = fruit sain écarté", "points": 4 },
+        { "critere": "Exactitudes : A = 90 %, B = 86 %", "points": 5 },
+        { "critere": "Fruits abîmés livrés : A = 10 / 80 = 12,5 %, B = 2 / 80 = 2,5 %", "points": 5 },
+        { "critere": "Recommandation du modèle B argumentée par le coût des faux négatifs", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Faux négatif** : un fruit **abîmé** déclaré sain, qui part chez le client. **Faux positif** : un fruit **sain** déclaré abîmé, écarté à tort.\n2. Exactitude A = (70 + 200) / 300 = 270 / 300 = **90 %**. Exactitude B = (78 + 180) / 300 = 258 / 300 = **86 %**.\n3. Il y a 70 + 10 = 80 fruits abîmés. A en laisse passer 10 / 80 = **12,5 %** ; B, 2 / 80 = **2,5 %**.\n4. Le **modèle B** : son exactitude est plus faible, mais il livre cinq fois moins de fruits abîmés. Ici, un faux négatif (client perdu) coûte bien plus cher qu'un faux positif (fruit revendu en compote). On accepte donc de perdre un peu d'exactitude pour réduire les faux négatifs."
+    },
+    {
+      "chapitre": "388ca274-5b45-5bf2-be52-eae4d56f6ff6",
+      "difficulte": 3,
+      "titre": "Le tri des vis par les plus proches voisins",
+      "consigne": "Applique l'algorithme des k plus proches voisins, puis analyse la démarche d'apprentissage et ses pièges.",
+      "enonce": "**Situation.** Une ligne de production classe ses vis en « conforme » ou « défectueuse » avec l'algorithme des k plus proches voisins, à partir de mesures faites par caméra. Une nouvelle vis arrive. Ses distances aux sept exemples connus les plus proches ont déjà été calculées :\n\n| Exemple | E1 | E2 | E3 | E4 | E5 | E6 | E7 |\n| Distance | 0,8 | 1,1 | 1,3 | 1,5 | 1,6 | 2,4 | 3,0 |\n| Classe | Conforme | Défectueuse | Défectueuse | Conforme | Conforme | Défectueuse | Conforme |\n\n1. Classe la nouvelle vis avec k = 1, k = 3 puis k = 5. Commente l'influence de k.\n2. Que se passerait-il avec k = 4 ? Pourquoi choisit-on souvent k impair ?\n3. Un deuxième modèle, plus complexe, obtient **99 %** d'exactitude sur le jeu d'entraînement mais **72 %** sur le jeu de test. Quel est ce problème ? Explique sa cause.\n4. Toutes les photos d'entraînement ont été prises avec l'éclairage de jour de l'atelier. La nuit, sous un autre éclairage, le modèle se trompe beaucoup plus. Nomme ce piège, explique-le et propose un remède.\n5. Résume en trois étapes la démarche correcte pour entraîner puis évaluer ce modèle.",
+      "bareme": [
+        { "critere": "k = 1 : conforme ; k = 3 : défectueuse ; k = 5 : conforme ; influence de k commentée", "points": 5 },
+        { "critere": "k = 4 : égalité 2 contre 2 ; k impair pour éviter les égalités à deux classes", "points": 3 },
+        { "critere": "Surapprentissage identifié : exemples appris par cœur, bruit compris", "points": 4 },
+        { "critere": "Biais des données d'entraînement non représentatives, remède par des photos sous tous les éclairages", "points": 4 },
+        { "critere": "Démarche : données représentatives étiquetées, séparation entraînement / test, évaluation sur le test", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **k = 1** : le plus proche est E1, **conforme**. **k = 3** : E1 (C), E2 (D), E3 (D) → 2 défectueuses contre 1 : **défectueuse**. **k = 5** : E1, E4, E5 conformes contre E2, E3 défectueuses → 3 contre 2 : **conforme**. Le résultat dépend de k : un k trop petit suit un seul exemple, peut-être atypique ; un k plus grand vote sur davantage de voisins.\n2. Avec **k = 4** : E1 (C), E2 (D), E3 (D), E4 (C) → **2 contre 2**, égalité : on ne peut pas trancher. Avec deux classes, un **k impair** évite ces égalités de vote.\n3. C'est du **surapprentissage** : excellent à l'entraînement, mauvais au test. Le modèle a **appris les exemples par cœur**, bruit compris, au lieu d'une règle qui se généralise.\n4. C'est un **biais** : les données d'entraînement ne représentent pas tous les cas réels (l'éclairage de nuit en est absent), d'où des erreurs systématiques. Remède : ajouter des photos **étiquetées prises sous tous les éclairages** rencontrés, puis réentraîner et réévaluer.\n5. (1) Rassembler des données **étiquetées et représentatives** des cas réels. (2) Les **séparer** en jeu d'entraînement (par exemple 80 %) et jeu de test (20 %). (3) **Entraîner** sur le premier et **évaluer** sur le second, jamais vu pendant l'apprentissage."
+    },
+    {
+      "chapitre": "c3a5d73a-e2ff-53c1-834a-6ee71cdf581f",
+      "difficulte": 1,
+      "titre": "Conclure comme un ingénieur",
+      "consigne": "Rédige des conclusions complètes : chaque phrase compare un résultat à une exigence.",
+      "enonce": "**Situation.** Voici trois résultats extraits de l'étude d'un robot de livraison et le cahier des charges correspondant.\n\n| Grandeur | Résultat obtenu | Exigence du cahier des charges |\n| Temps de réponse de l'asservissement | 1,2 s | ≤ 1,5 s |\n| Autonomie | 42 min | ≥ 45 min |\n\n1. Rédige la conclusion attendue pour le temps de réponse, en calculant la marge en pourcentage de l'exigence.\n2. Rédige la conclusion attendue pour l'autonomie, en chiffrant l'écart en minutes et en pourcentage.\n3. Un élève a écrit, pour une question qui demandait de calculer un couple : « C = 3 ». Explique ce qui manque à cette réponse et ce qu'il aurait dû écrire.",
+      "bareme": [
+        { "critere": "Conclusion sur le temps de réponse : exigence respectée, marge de 20 %", "points": 6 },
+        { "critere": "Conclusion sur l'autonomie : exigence non respectée, écart de 3 min soit ≈ 6,7 %", "points": 6 },
+        { "critere": "Critique de la copie : formule littérale, application numérique et unité manquantes", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. « Le temps de réponse obtenu, 1,2 s, est **inférieur** aux 1,5 s exigés : **l'exigence est respectée**, avec une marge de (1,5 − 1,2) / 1,5 = **20 %**. »\n2. « L'autonomie obtenue, 42 min, est **inférieure** aux 45 min exigées : **l'exigence n'est pas respectée**. Il manque 3 min, soit 3 / 45 ≈ **6,7 %**. » Une bonne conclusion peut ajouter une piste (batterie plus grosse, consommation à réduire).\n3. « C = 3 » est un chiffre seul : il manque la **formule littérale** (le raisonnement est noté même si le calcul dérape), l'**application numérique** qui montre d'où vient le 3, et surtout l'**unité** (3 N·m ? 3 N·mm ?). Il fallait écrire la formule, remplacer par les valeurs, puis donner le résultat avec son unité et vérifier son ordre de grandeur."
+    },
+    {
+      "chapitre": "c3a5d73a-e2ff-53c1-834a-6ee71cdf581f",
+      "difficulte": 2,
+      "titre": "Relire une copie avant de la rendre",
+      "consigne": "Repère les fautes de la copie, corrige-les en justifiant, puis rédige la conclusion attendue. Les formules utiles sont rappelées dans l'énoncé.",
+      "enonce": "**Situation.** Pendant sa relecture, Nolan reprend deux calculs de sa copie sur un petit robot d'accueil. Le cahier des charges exige une énergie embarquée d'au moins **20 Wh**.\n\n**Formules rappelées.** P = C × ω avec ω en rad/s ; ω = 2π × N / 60 avec N en tr/min ; W = Q × U avec Q en Ah et U en V.\n\n**Extrait de la copie.**\n> a. Puissance du moteur : C = 2 N·m et N = 1 500 tr/min, donc P = 2 × 1 500 = 3 000 W.\n> b. Énergie de la batterie : 12 V et 2 200 mAh, donc W = 2 200 × 12 = 26 400 Wh.\n> c. Conclusion : 26 400.\n\n1. Quelle erreur Nolan a-t-il faite au calcul a ? Corrige-le.\n2. Quelle erreur a-t-il faite au calcul b ? Corrige-le.\n3. Quel réflexe aurait dû l'alerter dans les deux cas ? Explique avec les ordres de grandeur.\n4. Réécris la conclusion c comme elle est attendue.",
+      "bareme": [
+        { "critere": "Calcul a : conversion oubliée, ω ≈ 157 rad/s et P ≈ 314 W", "points": 5 },
+        { "critere": "Calcul b : mAh non convertis, Q = 2,2 Ah et W = 26,4 Wh", "points": 5 },
+        { "critere": "Vérification de l'ordre de grandeur expliquée sur les deux résultats", "points": 4 },
+        { "critere": "Conclusion rédigée comparant 26,4 Wh aux 20 Wh exigés", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Nolan a multiplié le couple par une vitesse en **tr/min** : il faut convertir en unités du Système international. ω = 2π × 1 500 / 60 ≈ **157 rad/s** ; P = C × ω = 2 × 157 ≈ **314 W**.\n2. Il a pris 2 200 **mAh** pour 2 200 Ah. Q = 2 200 mAh = **2,2 Ah** ; W = Q × U = 2,2 × 12 = **26,4 Wh**.\n3. Le réflexe : **vérifier l'ordre de grandeur**. 3 000 W pour un petit robot d'accueil, c'est la puissance d'un gros radiateur électrique ; 26 400 Wh, c'est une batterie de voiture électrique dans un petit robot. Les deux résultats auraient dû paraître absurdes.\n4. « La batterie embarque **26,4 Wh**, ce qui est **supérieur** aux 20 Wh exigés par le cahier des charges : **l'exigence est respectée**, avec une marge de 6,4 Wh, soit 32 %. » Un chiffre seul, sans unité ni comparaison, ne rapporte presque rien."
+    },
+    {
+      "chapitre": "c3a5d73a-e2ff-53c1-834a-6ee71cdf581f",
+      "difficulte": 3,
+      "titre": "Modèle, mesure et cahier des charges",
+      "consigne": "Exploite les résultats de simulation et d'essai : conclus sur chaque exigence, chiffre les écarts et propose des causes. Rédige comme dans une copie de SI.",
+      "enonce": "**Situation.** Une équipe étudie le chariot d'un convoyeur automatisé. Elle dispose d'une simulation (modèle) et d'un essai sur le prototype (mesure).\n\n| Grandeur | Simulation | Mesure | Exigence du cahier des charges |\n| Temps de réponse | 0,55 s | 0,72 s | ≤ 0,8 s |\n| Vitesse de palier | 0,52 m/s | 0,48 m/s | ≥ 0,5 m/s |\n\nL'équipe sait que son modèle **néglige les frottements** du guidage.\n\n1. Pour chaque exigence, conclus d'abord à partir de la simulation, puis à partir de la mesure. Laquelle des deux conclusions fait foi pour valider le prototype ? Pourquoi ?\n2. Calcule l'écart relatif entre modèle et mesure pour chaque grandeur (rapporté à la mesure).\n3. Calcule la marge ou le manque de la mesure par rapport à chaque exigence, en pourcentage de l'exigence.\n4. Nomme les écarts et propose une cause cohérente avec l'hypothèse du modèle. Le sens des écarts est-il cohérent avec cette cause ?\n5. Dans le compte rendu, un camarade a écrit que le moteur du chariot (environ 10 kg de charge) doit fournir « 3 MW ». Qu'en penses-tu ?",
+      "bareme": [
+        { "critere": "Conclusions justes : simulation respecte les deux exigences ; mesure respecte le temps mais pas la vitesse ; la mesure fait foi", "points": 6 },
+        { "critere": "Écarts relatifs ≈ 24 % (temps) et ≈ 8 % (vitesse)", "points": 4 },
+        { "critere": "Marge de 10 % sur le temps et manque de 4 % sur la vitesse", "points": 3 },
+        { "critere": "Écarts nommés, frottements négligés proposés comme cause, sens des écarts cohérent", "points": 4 },
+        { "critere": "Ordre de grandeur absurde repéré et justifié", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Simulation** : 0,55 s ≤ 0,8 s et 0,52 m/s ≥ 0,5 m/s, les deux exigences sont respectées. **Mesure** : 0,72 s ≤ 0,8 s, le temps de réponse est respecté ; 0,48 m/s < 0,5 m/s, **la vitesse ne l'est pas**. C'est la **mesure** qui fait foi : elle porte sur le prototype réel, alors que le modèle repose sur des hypothèses simplificatrices.\n2. Temps : (0,72 − 0,55) / 0,72 ≈ **24 %**. Vitesse : (0,52 − 0,48) / 0,48 ≈ **8 %**.\n3. Temps : (0,8 − 0,72) / 0,8 = **10 %** de marge. Vitesse : (0,5 − 0,48) / 0,5 = **4 %** de manque.\n4. Le prototype est **plus lent à répondre** et **roule moins vite** que prévu. Cause proposée : les **frottements du guidage, négligés dans le modèle**, freinent le chariot. Le sens est cohérent : des frottements supplémentaires ralentissent la montée en vitesse et abaissent la vitesse atteinte. Piste : intégrer les frottements au modèle, ou réduire ceux du guidage.\n5. C'est un **ordre de grandeur absurde** : un chariot qui porte une dizaine de kilos ne demande pas 3 MW, la puissance de plusieurs centaines de radiateurs. Il faut revenir au calcul (probablement une unité mal convertie) avant de conclure."
+    },
+    {
+      "chapitre": "c5abb0f1-c4dd-5507-be06-35353a02db0c",
+      "difficulte": 1,
+      "titre": "Les étapes du projet",
+      "consigne": "Range chaque activité dans son étape du projet, puis réponds à la question sur les revues de projet.",
+      "enonce": "**Situation.** Une équipe de quatre élèves conçoit une serre connectée. Voici, dans le désordre, cinq activités de leur projet :\n- a. assembler la maquette de la serre et câbler les capteurs ;\n- b. rédiger les critères et les niveaux attendus (température, autonomie, coût) ;\n- c. mesurer l'autonomie du prototype et la comparer à ce qui était attendu ;\n- d. comparer trois solutions d'arrosage et justifier le choix de l'une d'elles ;\n- e. simuler le comportement de la régulation de température.\n\n1. Associe chaque activité à l'une des cinq étapes du projet : analyse du besoin, recherche et choix de solutions, conception, réalisation, validation. Range-les dans l'ordre.\n2. À quoi servent les revues de projet qui jalonnent le travail ? Que doit y présenter chaque membre de l'équipe ?",
+      "bareme": [
+        { "critere": "Les cinq activités associées à la bonne étape et rangées dans l'ordre", "points": 12 },
+        { "critere": "Revue de projet : ce qui a été fait, les écarts constatés, la suite ; chacun présente sa part", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Dans l'ordre :\n- **Analyse du besoin** : b (cahier des charges avec critères et niveaux).\n- **Recherche et choix de solutions** : d (solutions comparées, choix justifié).\n- **Conception** : e (modèles, simulations, dimensionnements).\n- **Réalisation** : a (le prototype ou la maquette).\n- **Validation** : c (essais, mesures, comparaison au cahier des charges).\n2. Les **revues de projet** font le point sur l'avancement : chacun présente **ce qu'il a fait**, les **écarts constatés** (retards, résultats différents de ce qui était prévu) et **la suite** du travail. Chaque membre doit pouvoir expliquer **sa propre part** et la façon dont elle s'articule avec celle des autres."
+    },
+    {
+      "chapitre": "c5abb0f1-c4dd-5507-be06-35353a02db0c",
+      "difficulte": 2,
+      "titre": "D'une difficulté de projet à une question",
+      "consigne": "Évalue les questions proposées, puis construis une question à partir du projet en suivant la démarche du cours.",
+      "enonce": "**Situation.** Pendant le projet, l'équipe de Léna a réalisé une serre connectée. Difficulté rencontrée : le capteur d'humidité, alimenté par pile, s'est arrêté au bout de **deux semaines**, alors que l'équipe visait plusieurs mois. En passant l'objet en veille entre deux mesures, l'équipe a obtenu une autonomie estimée à **huit mois**.\n\nLéna hésite entre trois questions pour son oral :\n- Q1 : « Qu'est-ce qu'un capteur d'humidité ? »\n- Q2 : « Notre serre connectée »\n- Q3 : « Comment un objet connecté peut-il fonctionner des mois sur une simple pile ? »\n\n1. Pour chacune des trois questions, dis si elle convient et justifie.\n2. Montre comment Léna passe de la difficulté réelle du projet à une question générale, puis comment elle utilise le projet comme exemple. Quel chiffre parlant peut-elle citer ?\n3. Propose deux questions que le jury pourrait lui poser, et indique sur quoi elles portent (limites du modèle, choix écartés, ce qu'elle referait autrement).",
+      "bareme": [
+        { "critere": "Q1 écartée (récitation), Q2 écartée (compte rendu), Q3 retenue (un problème)", "points": 6 },
+        { "critere": "Démarche : difficulté réelle, question générale qui dépasse le prototype, projet comme exemple", "points": 6 },
+        { "critere": "Chiffre parlant tiré du projet (deux semaines puis huit mois)", "points": 3 },
+        { "critere": "Deux questions du jury pertinentes et rattachées à leur catégorie", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Q1 ne convient pas** : c'est une **récitation**, une définition sans problème à résoudre. **Q2 ne convient pas** : c'est un **compte rendu** de projet, pas une question. **Q3 convient** : elle pose un **problème**, s'appuie sur des notions du programme et appelle une réponse argumentée.\n2. Léna part de la **difficulté réelle** (le capteur épuisé en deux semaines), en tire une **question générale** qui dépasse sa serre (l'autonomie de tout objet connecté sur pile), puis utilise le projet comme **exemple** pour illustrer sa réponse. Chiffre parlant : l'autonomie passée de **deux semaines à huit mois** grâce à la veille.\n3. Exemples attendus : « Votre estimation de huit mois a-t-elle été vérifiée, ou reste-t-elle un calcul ? » (**limites du modèle**) ; « Pourquoi ne pas avoir alimenté le capteur sur secteur ou par un panneau solaire ? » (**choix écartés**) ; « Que changeriez-vous si c'était à refaire ? » (**ce qu'elle referait autrement**). Toute question pertinente rattachée à l'une de ces catégories est acceptée."
+    },
+    {
+      "chapitre": "c5abb0f1-c4dd-5507-be06-35353a02db0c",
+      "difficulte": 3,
+      "titre": "Préparer sa part du projet",
+      "consigne": "Rédige les éléments demandés comme tu les présenterais : phrases complètes, chiffres du projet, liens avec le travail de l'équipe.",
+      "enonce": "**Situation.** Trois élèves réalisent un robot à deux roues qui doit suivre une trajectoire rectiligne.\n- **Tom** a conçu le châssis et monté les deux moteurs.\n- **Inès** a programmé l'asservissement de vitesse des roues à partir des codeurs.\n- **Sacha** a écrit le programme de pilotage et réalisé les essais.\n\nLors des essais, sans asservissement, le robot dérivait de **30 cm** sur **3 m** de ligne droite. Avec l'asservissement d'Inès, la dérive est tombée à **4 cm**. Le cahier des charges tolère **5 cm** sur 3 m. L'équipe a d'abord envisagé une caméra qui suit une ligne au sol, puis l'a écartée.\n\n1. Rédige l'intervention d'Inès à la dernière revue de projet : ce qu'elle a fait, les écarts constatés, la suite.\n2. Explique comment la part d'Inès s'articule avec celles de Tom et de Sacha.\n3. Inès prépare une question pour l'oral à partir de ce projet. Propose une question qui pose un problème, et explique pourquoi elle est meilleure que « Mon robot suiveur ».\n4. Dans la même logique, quelle conclusion chiffrée Inès peut-elle tirer des essais au regard du cahier des charges ?\n5. Prépare deux réponses courtes à des questions probables du jury : une sur une limite de l'étude, une sur le choix écarté.",
+      "bareme": [
+        { "critere": "Intervention de revue de projet : travail fait, écarts, suite, avec les chiffres", "points": 4 },
+        { "critere": "Articulation avec le châssis de Tom et les essais de Sacha", "points": 4 },
+        { "critere": "Question qui pose un problème et justification face au compte rendu", "points": 4 },
+        { "critere": "Conclusion chiffrée : 4 cm ≤ 5 cm, exigence respectée, dérive divisée par 7,5", "points": 4 },
+        { "critere": "Deux réponses pertinentes : limite de l'étude et choix écarté", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Exemple : « J'ai programmé l'**asservissement de vitesse** des deux roues à partir des codeurs. **Écart constaté** : sans asservissement, le robot dérivait de 30 cm sur 3 m ; avec, la dérive est de 4 cm. **Suite** : refaire les essais sur d'autres sols et avec la batterie moins chargée, pour vérifier que le résultat tient. »\n2. Le travail d'Inès **dépend** de celui de Tom : elle asservit les moteurs qu'il a montés, et les codeurs doivent être fixés sur son châssis. Il **alimente** celui de Sacha : le programme de pilotage envoie les consignes de vitesse que son asservissement fait respecter, et ce sont les **essais** de Sacha qui mesurent le résultat.\n3. Exemple : « Pourquoi un robot à deux roues ne va-t-il pas droit tout seul ? ». Elle pose un **problème** et permet une réponse argumentée qui dépasse le prototype ; « Mon robot suiveur » n'est qu'un **compte rendu**, qui pousserait à réciter le rapport.\n4. « La dérive mesurée, 4 cm sur 3 m, est **inférieure** aux 5 cm tolérés : **l'exigence est respectée**, avec une marge de 1 cm (20 %). L'asservissement a divisé la dérive par 30 / 4 = **7,5**. »\n5. **Limite** : « Les essais ont été faits sur un seul sol et sur 3 m ; sur une plus longue distance ou un sol glissant, la dérive pourrait dépasser la tolérance. » **Choix écarté** : « La caméra suivrait une ligne au sol, mais le robot devait aller droit sans marquage ; l'asservissement des roues répondait au besoin plus simplement. » Toute réponse cohérente avec la situation est acceptée."
+    }
+  ]
+}

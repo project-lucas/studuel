@@ -1,0 +1,624 @@
+{
+  "niveau": "3e",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "difficulte": 1,
+      "titre": "Trois triangles à étudier",
+      "consigne": "Réponds à chaque question en justifiant : écris l’hypothèse, la propriété utilisée et le calcul.",
+      "enonce": "1. ABC est un triangle **rectangle en A** avec AB = 9 cm et AC = 12 cm. Calcule BC.\n2. DEF est un triangle **rectangle en D** avec EF = 17 cm et DE = 8 cm. Calcule DF.\n3. GHI est un triangle tel que GH = 6 cm, HI = 8 cm et GI = 11 cm. Ce triangle est-il rectangle ? Justifie.",
+      "bareme": [
+        { "critere": "BC = 15 cm : hypothèse rectangle en A, égalité BC² = AB² + AC², calcul juste", "points": 7 },
+        { "critere": "DF = 15 cm : on soustrait les carrés (EF² − DE²), racine carrée finale", "points": 7 },
+        { "critere": "GHI non rectangle : 121 ≠ 100, calculs séparés et contraposée citée", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le triangle ABC est rectangle en A, donc d’après le théorème de Pythagore : BC² = AB² + AC².\nBC² = 9² + 12² = 81 + 144 = 225, donc BC = √225 = **15 cm**.\n\n2. Le triangle DEF est rectangle en D : son hypoténuse est [EF]. D’après le théorème de Pythagore : EF² = DE² + DF², donc DF² = EF² − DE².\nDF² = 17² − 8² = 289 − 64 = 225, donc DF = √225 = **15 cm**.\n\n3. Le plus long côté est [GI].\n- D’une part : GI² = 11² = 121.\n- D’autre part : GH² + HI² = 6² + 8² = 36 + 64 = 100.\n121 ≠ 100 : l’égalité n’est pas vérifiée, donc d’après la **contraposée** du théorème de Pythagore, le triangle GHI **n’est pas rectangle**."
+    },
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "difficulte": 2,
+      "titre": "L’échelle de Mme Diallo",
+      "consigne": "Réponds aux questions en justifiant tes calculs. On considère que le mur est vertical et le sol horizontal.",
+      "enonce": "**Situation.** Mme Diallo veut nettoyer la gouttière de sa maison, située à **6,2 m** de hauteur. Elle pose une échelle de **6,5 m** contre le mur, le pied de l’échelle à **2,5 m** du mur.\n\n1. Fais un schéma et explique pourquoi on peut utiliser le théorème de Pythagore.\n2. À quelle hauteur le haut de l’échelle touche-t-il le mur ? L’échelle atteint-elle la gouttière ?\n3. Elle rapproche le pied de l’échelle à **1,6 m** du mur. Le haut de l’échelle atteint-il maintenant la gouttière ?",
+      "bareme": [
+        { "critere": "Triangle rectangle identifié (mur vertical, sol horizontal), échelle = hypoténuse", "points": 4 },
+        { "critere": "Hauteur de 6 m calculée et comparée à 6,2 m : la gouttière n’est pas atteinte", "points": 8 },
+        { "critere": "Hauteur de 6,3 m calculée et conclusion : la gouttière est atteinte", "points": 8 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Notons M le pied du mur, P le pied de l’échelle et H le haut de l’échelle. Le mur est vertical et le sol horizontal, donc le triangle MPH est **rectangle en M**. Son hypoténuse est l’échelle [PH] = 6,5 m.\n\n2. D’après le théorème de Pythagore : PH² = MP² + MH², donc MH² = PH² − MP².\nMH² = 6,5² − 2,5² = 42,25 − 6,25 = 36, donc MH = √36 = **6 m**.\n6 m < 6,2 m : l’échelle **n’atteint pas** la gouttière.\n\n3. Maintenant MP = 1,6 m.\nMH² = 6,5² − 1,6² = 42,25 − 2,56 = 39,69, donc MH = √39,69 = **6,3 m** (car 6,3² = 39,69).\n6,3 m > 6,2 m : l’échelle **atteint** la gouttière."
+    },
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "difficulte": 3,
+      "titre": "Le champ de M. Leroy",
+      "consigne": "Réponds aux questions en rédigeant chaque justification. Les longueurs sont en mètres.",
+      "enonce": "**Situation.** Le champ de M. Leroy a la forme d’un quadrilatère ABCD. Un chemin droit [BD] le traverse. Les mesures sont :\n\nAB = 20 m · AD = 15 m · BD = 25 m · BC = 24 m · CD = 7 m.\n\n1. Démontre que le triangle ABD est rectangle, et précise en quel sommet.\n2. Démontre que le triangle BCD est rectangle, et précise en quel sommet.\n3. Calcule l’aire du champ ABCD.\n4. M. Leroy veut clôturer tout le tour du champ. Le grillage est vendu en rouleaux de 25 m. Combien de rouleaux doit-il acheter ?\n5. Son voisin possède un champ triangulaire de côtés 7 m, 20 m et 22 m. Il affirme que son champ a un angle droit. A-t-il raison ?",
+      "bareme": [
+        { "critere": "ABD rectangle en A : 625 = 400 + 225, calculs séparés, réciproque citée", "points": 5 },
+        { "critere": "BCD rectangle en C : 625 = 576 + 49, réciproque citée", "points": 4 },
+        { "critere": "Aire du champ : 150 + 84 = 234 m²", "points": 4 },
+        { "critere": "Périmètre de 66 m et 3 rouleaux", "points": 3 },
+        { "critere": "Champ du voisin : 484 ≠ 449, contraposée, le voisin a tort", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Dans ABD, le plus long côté est [BD].\n- BD² = 25² = 625.\n- AB² + AD² = 20² + 15² = 400 + 225 = 625.\nLes deux résultats sont égaux : d’après la **réciproque** du théorème de Pythagore, ABD est **rectangle en A** (sommet opposé à [BD]).\n\n2. Dans BCD, le plus long côté est [BD].\n- BD² = 625.\n- BC² + CD² = 24² + 7² = 576 + 49 = 625.\nÉgalité : d’après la réciproque du théorème de Pythagore, BCD est **rectangle en C**.\n\n3. Le chemin [BD] partage le champ en deux triangles rectangles.\n- Aire de ABD = AB × AD ÷ 2 = 20 × 15 ÷ 2 = 150 m².\n- Aire de BCD = BC × CD ÷ 2 = 24 × 7 ÷ 2 = 84 m².\nAire du champ : 150 + 84 = **234 m²**.\n\n4. Périmètre : AB + BC + CD + DA = 20 + 24 + 7 + 15 = **66 m** (le chemin [BD] n’en fait pas partie). 2 rouleaux font 50 m (pas assez), 3 rouleaux font 75 m : il faut **3 rouleaux**.\n\n5. Plus long côté : 22 m.\n- 22² = 484.\n- 7² + 20² = 49 + 400 = 449.\n484 ≠ 449 : d’après la **contraposée** du théorème de Pythagore, le triangle n’est pas rectangle. Le voisin **a tort**."
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "difficulte": 1,
+      "titre": "Les quatre isométries",
+      "consigne": "Réponds à chaque question par une ou deux phrases précises.",
+      "enonce": "1. Pour chacune des quatre transformations suivantes, donne ce qui la définit et l’« image mentale » qui l’accompagne : la symétrie axiale, la symétrie centrale, la translation, la rotation.\n2. M′ est l’image de M par la symétrie de centre O. Que représente O pour le segment [MM′] ? Et si M′ est l’image de M par la symétrie d’axe d, que représente d pour [MM′] ?\n3. Cite **trois** propriétés que ces quatre transformations conservent.\n4. Laquelle de ces transformations **retourne** la figure ? À quelle transformation correspond une rotation de 180° ?",
+      "bareme": [
+        { "critere": "Les quatre transformations définies (axe ; centre ; direction, sens et longueur ; centre, angle et sens) avec leur image mentale", "points": 8 },
+        { "critere": "O milieu de [MM′] ; d médiatrice de [MM′]", "points": 4 },
+        { "critere": "Trois propriétés conservées, symétrie axiale qui retourne, rotation de 180° = symétrie centrale", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n- **Symétrie axiale** : définie par un **axe** ; image mentale : un **pliage**.\n- **Symétrie centrale** : définie par un **centre** O ; image mentale : un **demi-tour**.\n- **Translation** : définie par une **direction**, un **sens** et une **longueur** (par exemple de A vers B) ; image mentale : un **glissement**.\n- **Rotation** : définie par un **centre**, un **angle** et un **sens** ; image mentale : un **tour autour d’un point**.\n\n2. O est le **milieu** de [MM′]. L’axe d est la **médiatrice** de [MM′].\n\n3. Ce sont des isométries : elles conservent les **longueurs**, les **angles**, les **aires**, l’**alignement** et le **parallélisme** (trois au choix).\n\n4. La **symétrie axiale** retourne la figure (image vue dans un miroir). Une rotation de 180° est une **symétrie centrale**."
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "difficulte": 2,
+      "titre": "Le logo en fleur",
+      "consigne": "Réponds en nommant tous les éléments de chaque transformation (centre, angle, sens, ou longueur et sens).",
+      "enonce": "**Situation.** Un club dessine son logo : **six pétales identiques**, numérotés de 1 à 6 dans le sens inverse des aiguilles d’une montre, régulièrement répartis autour d’un centre O, sans se chevaucher. Le pétale 1 mesure **3 cm** de long et a une aire de **4 cm²**.\n\n1. Quelle est la plus petite rotation de centre O qui envoie le pétale 1 sur le pétale 2 ? Précise l’angle et le sens.\n2. Quelle rotation envoie le pétale 1 sur le pétale 3 ? Quelle transformation envoie le pétale 1 sur le pétale 4 ?\n3. Quelle est la longueur du pétale 5 ? Quelle est l’aire totale du logo ? Justifie.\n4. Pour une banderole, le logo est reproduit en ligne droite, tous les **5 cm**, vers la droite. Quelle transformation fait passer du 1er logo au 2e ? Du 1er au 5e ? Comment appelle-t-on ce type de motif ?",
+      "bareme": [
+        { "critere": "Rotation de centre O, d’angle 360° ÷ 6 = 60°, sens inverse des aiguilles d’une montre", "points": 5 },
+        { "critere": "Pétale 3 : rotation de 120° ; pétale 4 : rotation de 180°, c’est-à-dire la symétrie de centre O", "points": 5 },
+        { "critere": "Conservation par isométrie : 3 cm, aire totale 6 × 4 = 24 cm²", "points": 5 },
+        { "critere": "Translations de 5 cm puis 20 cm vers la droite, motif appelé frise", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les six pétales sont régulièrement répartis sur un tour complet : 360° ÷ 6 = **60°**. Le pétale 1 va sur le pétale 2 par la **rotation de centre O, d’angle 60°, dans le sens inverse des aiguilles d’une montre**.\n\n2. Du pétale 1 au pétale 3, on avance de deux pétales : **rotation de centre O, d’angle 2 × 60° = 120°**, sens inverse des aiguilles d’une montre.\nDu pétale 1 au pétale 4 : 3 × 60° = 180°. Une rotation de 180° est la **symétrie de centre O**.\n\n3. Le pétale 5 est l’image du pétale 1 par une rotation, qui est une isométrie : elle conserve les longueurs et les aires. Le pétale 5 mesure donc **3 cm**. Les six pétales ont chacun une aire de 4 cm² et ne se chevauchent pas : aire totale = 6 × 4 = **24 cm²**.\n\n4. Du 1er au 2e logo : **translation de 5 cm vers la droite** (le logo glisse sans tourner ni se retourner). Du 1er au 5e : on avance de 4 intervalles, soit la **translation de 4 × 5 = 20 cm vers la droite**. Un motif répété par translation dans une seule direction forme une **frise**."
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "difficulte": 3,
+      "titre": "Reconnaître, construire, justifier",
+      "consigne": "Réponds à chaque question en justifiant par une propriété du cours.",
+      "enonce": "1. La translation qui transforme A en B transforme C en D. On sait que AB = 5 cm et AC = 3 cm.\na) Quelle est la nature du quadrilatère ABDC ?\nb) Déduis-en les longueurs CD et BD.\n\n2. EFG est un triangle avec EF = 6 cm, un angle FEG de 40° et une aire de 12 cm². E′F′G′ est son image par la rotation de centre O, d’angle 90°, dans le sens inverse des aiguilles d’une montre.\na) Donne E′F′, la mesure de l’angle F′E′G′ et l’aire de E′F′G′.\nb) Le triangle E′F′G′ est-il « retourné » par rapport à EFG ?\n\n3. Nomme la transformation dans chaque cas :\na) le motif est retourné, comme vu dans un miroir ;\nb) le motif a fait un demi-tour, et un même point O est le milieu de chaque segment [MM′] ;\nc) le motif a glissé de 4 cm vers la droite, sans tourner.\n\n4. Hugo affirme : « L’homothétie de rapport 2 est une isométrie, comme la rotation. » A-t-il raison ?\n\n5. Quel est le plus petit angle d’une rotation, de centre le centre du triangle, qui laisse un triangle équilatéral invariant ?",
+      "bareme": [
+        { "critere": "ABDC parallélogramme, CD = 5 cm et BD = 3 cm justifiés", "points": 5 },
+        { "critere": "Rotation : 6 cm, 40°, 12 cm² justifiés par l’isométrie ; orientation conservée", "points": 5 },
+        { "critere": "Les trois transformations reconnues : symétrie axiale, symétrie centrale de centre O, translation de 4 cm vers la droite", "points": 4 },
+        { "critere": "Hugo a tort : l’homothétie de rapport 2 multiplie les longueurs par 2", "points": 3 },
+        { "critere": "Angle 360° ÷ 3 = 120° justifié", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. a) La translation qui transforme A en B transforme C en D : **ABDC est un parallélogramme**.\nb) Dans un parallélogramme, les côtés opposés ont la même longueur. Les côtés de ABDC sont [AB], [BD], [DC], [CA] : [DC] est opposé à [AB] et [BD] est opposé à [CA]. Donc **CD = AB = 5 cm** et **BD = AC = 3 cm**.\n\n2. a) Une rotation est une isométrie : elle conserve les longueurs, les angles et les aires. Donc **E′F′ = 6 cm**, l’angle **F′E′G′ mesure 40°** et l’aire de E′F′G′ vaut **12 cm²**.\nb) **Non** : la rotation conserve l’orientation de la figure ; seule la symétrie axiale retourne la figure.\n\n3. a) **Symétrie axiale**. b) **Symétrie de centre O** (rotation de 180°). c) **Translation de 4 cm vers la droite**.\n\n4. **Hugo a tort.** Une isométrie conserve les longueurs. L’homothétie de rapport 2 **multiplie les longueurs par 2** : elle change la taille, ce n’est pas une isométrie (elle ne le serait que pour un rapport 1 ou −1).\n\n5. Les trois sommets sont régulièrement répartis sur un tour : 360° ÷ 3 = **120°**. La rotation de 120° autour du centre envoie chaque sommet sur le suivant, donc le triangle sur lui-même (ainsi que ses multiples, 240°, 360°)."
+    },
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "difficulte": 1,
+      "titre": "Suivre une variable",
+      "consigne": "Pour chaque script, fais un tableau de suivi de la variable, puis donne ce que dit le lutin.",
+      "enonce": "**Script 1**\n- quand le drapeau vert est cliqué\n- mettre x à 5\n- répéter 3 fois :\n  - ajouter 4 à x\n- dire x\n\n**Script 2**\n- quand le drapeau vert est cliqué\n- mettre n à 2\n- si n > 3 alors dire « grand », sinon dire « petit »\n\n1. Que dit le lutin avec le script 1 ? Fais un tableau, une ligne par tour de boucle.\n2. Que dit le lutin avec le script 2 ? Justifie.\n3. On veut tracer un **pentagone régulier** (5 côtés égaux) de côté 60. Combien de fois faut-il répéter « avancer de 60 », et de combien de degrés le lutin doit-il tourner à chaque fois ?",
+      "bareme": [
+        { "critere": "Tableau de suivi juste (5, 9, 13, 17) et réponse 17", "points": 8 },
+        { "critere": "Test n > 3 faux, le lutin dit « petit »", "points": 5 },
+        { "critere": "Répéter 5 fois, tourner de 360 ÷ 5 = 72 degrés", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Tableau de suivi :\n\n| Passage | x |\n| Départ | 5 |\n| 1er tour | 9 |\n| 2e tour | 13 |\n| 3e tour | 17 |\n\nLe bloc « dire x » est **après** la boucle : il n’est exécuté qu’une fois. Le lutin dit **17**.\n\n2. n vaut 2. Le test n > 3 est **faux** (2 n’est pas supérieur à 3), donc c’est la partie « sinon » qui s’exécute : le lutin dit **« petit »**.\n\n3. Pour un polygone régulier à n côtés, on répète n fois « avancer de L, tourner de 360 ÷ n degrés ». Ici n = 5 : on **répète 5 fois** « avancer de 60 », « tourner de **360 ÷ 5 = 72 degrés** »."
+    },
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "difficulte": 2,
+      "titre": "Deux boucles à dérouler",
+      "consigne": "Exécute les scripts pas à pas dans un tableau, puis réponds aux questions.",
+      "enonce": "**Script A**\n- quand le drapeau vert est cliqué\n- mettre a à 1\n- mettre b à 0\n- répéter 4 fois :\n  - ajouter a à b\n  - ajouter 2 à a\n- dire b\n\n**Script B**\n- quand le drapeau vert est cliqué\n- mettre x à 50\n- répéter jusqu’à ce que x < 10 :\n  - ajouter −12 à x\n- dire x\n\n1. Suis les valeurs de a et de b à chaque tour du script A. Que dit le lutin ?\n2. Combien de fois la boucle du script B tourne-t-elle ? Que dit le lutin ?\n3. Léa déplace le bloc « dire b » **à l’intérieur** de la boucle du script A, en dernière position. Qu’affiche maintenant le lutin, et combien de fois parle-t-il ?",
+      "bareme": [
+        { "critere": "Script A : tableau juste pour a et b, le lutin dit 16", "points": 7 },
+        { "critere": "Script B : 4 tours (50, 38, 26, 14, 2), arrêt quand la condition devient vraie, le lutin dit 2", "points": 7 },
+        { "critere": "Bloc dans la boucle : le lutin dit 1, 4, 9, 16, soit 4 fois", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Script A :\n\n| Passage | b | a |\n| Départ | 0 | 1 |\n| 1er tour | 0 + 1 = 1 | 3 |\n| 2e tour | 1 + 3 = 4 | 5 |\n| 3e tour | 4 + 5 = 9 | 7 |\n| 4e tour | 9 + 7 = 16 | 9 |\n\nÀ chaque tour, on ajoute d’abord a à b, puis 2 à a. Le lutin dit **16**.\n\n2. Script B : la boucle « répéter jusqu’à » s’arrête dès que la condition x < 10 devient **vraie**.\n- x = 50 : condition fausse → x devient 38\n- x = 38 : fausse → 26\n- x = 26 : fausse → 14\n- x = 14 : fausse → 2\n- x = 2 : 2 < 10 est vraie → arrêt.\nLa boucle tourne **4 fois** et le lutin dit **2**.\n\n3. « dire b » est maintenant exécuté **à chaque tour**, juste après les deux ajouts : le lutin dit **1, puis 4, puis 9, puis 16**. Il parle **4 fois** (un bloc à l’intérieur d’une boucle « répéter 4 fois » est exécuté 4 fois ; placé après, une seule fois)."
+    },
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "difficulte": 3,
+      "titre": "Des carrés emboîtés",
+      "consigne": "Exécute le programme pas à pas et justifie chaque réponse. « Tourner ↻ » signifie tourner dans le sens des aiguilles d’une montre.",
+      "enonce": "**Bloc personnalisé « carré (côté) »**\n- répéter 4 fois :\n  - avancer de (côté)\n  - tourner ↻ de 90 degrés\n\n**Script principal**\n- quand le drapeau vert est cliqué\n- effacer tout\n- aller à x : 0 y : 0\n- s’orienter à 90\n- stylo en position d’écriture\n- mettre c à 10\n- répéter 3 fois :\n  - carré (c)\n  - ajouter 20 à c\n\n1. Donne les coordonnées des quatre sommets du **premier** carré tracé. Où est le lutin, et dans quelle direction regarde-t-il, à la fin de ce carré ?\n2. Quelles sont les longueurs des côtés des trois carrés ? Quelle est la valeur de c à la fin du programme ? Quelle distance le lutin a-t-il parcourue en tout ?\n3. Tom remplace « ajouter 20 à c » par « mettre c à 20 ». Quels carrés obtient-on ?\n4. On veut transformer le bloc en « polygone (n, côté) » qui trace un polygone régulier à n côtés. Écris ce bloc. Pour un triangle équilatéral, Nour propose de tourner de 60°. A-t-elle raison ?",
+      "bareme": [
+        { "critere": "Sommets (0 ; 0), (10 ; 0), (10 ; −10), (0 ; −10) ; retour en (0 ; 0), orienté à 90 (vers la droite)", "points": 5 },
+        { "critere": "Côtés 10, 30, 50 ; c = 70 à la fin ; distance 4 × 90 = 360", "points": 5 },
+        { "critere": "Avec « mettre c à 20 » : carrés de côtés 10, 20 et 20", "points": 3 },
+        { "critere": "Bloc polygone juste (répéter n fois, tourner de 360 ÷ n) ; triangle : 120°, angle extérieur = 180° − 60°", "points": 5 },
+        { "critere": "Tableaux de suivi et justifications rédigées", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le lutin part de (0 ; 0), orienté à 90 : vers la **droite**.\n- avancer de 10 → **(10 ; 0)** ; tourner ↻ de 90 → il regarde vers le **bas** ;\n- avancer de 10 → **(10 ; −10)** ; tourner → vers la **gauche** ;\n- avancer de 10 → **(0 ; −10)** ; tourner → vers le **haut** ;\n- avancer de 10 → **(0 ; 0)** ; tourner → vers la **droite**.\nSommets : (0 ; 0), (10 ; 0), (10 ; −10), (0 ; −10). À la fin, le lutin est revenu en **(0 ; 0)**, orienté à **90** (vers la droite) : chaque carré part donc du même point, dans la même direction.\n\n2. Suivi de c :\n\n| Tour | Carré tracé | c après « ajouter 20 » |\n| 1 | côté 10 | 30 |\n| 2 | côté 30 | 50 |\n| 3 | côté 50 | 70 |\n\nCôtés : **10, 30 et 50**. À la fin, **c = 70** (valeur jamais utilisée pour tracer). Distance parcourue : 4 × 10 + 4 × 30 + 4 × 50 = 4 × 90 = **360**.\n\n3. « mettre c à 20 » **remplace** la valeur au lieu de l’augmenter : 1er carré de côté 10, puis c vaut 20 ; 2e carré de côté 20, c reste 20 ; 3e carré de côté 20. On obtient **un carré de 10 et deux carrés de 20 superposés**.\n\n4. Bloc « polygone (n, côté) » :\n- répéter (n) fois :\n  - avancer de (côté)\n  - tourner ↻ de (360 ÷ n) degrés\n\nPour un triangle équilatéral, n = 3 : le lutin tourne de 360 ÷ 3 = **120°**. **Nour a tort** : 60° est l’angle intérieur du triangle, or le lutin tourne de l’**angle extérieur**, 180° − 60° = 120°. Avec 60°, il tracerait un morceau d’hexagone."
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "difficulte": 1,
+      "titre": "Calculs de pourcentages",
+      "consigne": "Réponds à chaque question en écrivant le calcul.",
+      "enonce": "1. Calcule 15 % de 360.\n2. Dans un club de 48 adhérents, 12 sont des filles. Quel pourcentage des adhérents sont des filles ?\n3. Le prix d’un abonnement passe de 80 € à 92 €. Calcule le taux d’évolution.\n4. Donne le coefficient multiplicateur associé à une hausse de 7 %, puis à une baisse de 35 %.\n5. Une veste coûte 60 €. Elle est soldée à −20 %. Calcule son nouveau prix avec un coefficient multiplicateur.",
+      "bareme": [
+        { "critere": "Les trois calculs de base justes : 54 ; 25 % ; +15 % (division par la valeur de départ)", "points": 10 },
+        { "critere": "Coefficients 1,07 et 0,65, nouveau prix 60 × 0,8 = 48 €", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 15 % de 360 = 360 × 0,15 = **54**.\n\n2. 12 ÷ 48 = 0,25, soit **25 %** de filles.\n\n3. Taux d’évolution = (arrivée − départ) ÷ départ = (92 − 80) ÷ 80 = 12 ÷ 80 = 0,15, soit **+15 %**. On divise par la valeur de **départ**.\n\n4. Hausse de 7 % : 1 + 7 ÷ 100 = **1,07**. Baisse de 35 % : 1 − 35 ÷ 100 = **0,65**.\n\n5. Baisse de 20 % : coefficient 0,8. Nouveau prix : 60 × 0,8 = **48 €**."
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "difficulte": 2,
+      "titre": "Le blouson de Nina",
+      "consigne": "Réponds aux questions en justifiant avec des coefficients multiplicateurs.",
+      "enonce": "**Situation.** Un blouson coûte **120 €**. Pendant les soldes, il baisse de **30 %**. La dernière semaine, le magasin fait une **nouvelle baisse de 10 %** sur le prix soldé.\n\n1. Calcule le prix du blouson après la première baisse.\n2. Calcule son prix final.\n3. Nina affirme : « En tout, le blouson a baissé de 40 %. » A-t-elle raison ? Calcule le pourcentage de baisse réel.\n4. Le prix final affiché comprend une TVA de 20 %. Calcule le prix hors taxes.",
+      "bareme": [
+        { "critere": "Premier prix soldé : 120 × 0,7 = 84 €", "points": 4 },
+        { "critere": "Prix final : 84 × 0,9 = 75,60 €", "points": 4 },
+        { "critere": "Coefficients multipliés : 0,7 × 0,9 = 0,63, baisse de 37 %, Nina a tort", "points": 7 },
+        { "critere": "Prix HT : 75,60 ÷ 1,2 = 63 € (division par le coefficient)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Baisse de 30 % : coefficient 1 − 0,30 = 0,7. Prix soldé : 120 × 0,7 = **84 €**.\n\n2. Nouvelle baisse de 10 % sur le prix soldé : coefficient 0,9. Prix final : 84 × 0,9 = **75,60 €**.\n\n3. Les coefficients se **multiplient**, les pourcentages ne s’additionnent pas : 0,7 × 0,9 = 0,63. Le prix final vaut 63 % du prix de départ, soit une baisse de 1 − 0,63 = 0,37, c’est-à-dire **37 %**. **Nina a tort** : la deuxième baisse de 10 % porte sur 84 €, pas sur 120 €.\nVérification : 120 × 0,63 = 75,60 €.\n\n4. Le prix TTC est le prix HT augmenté de 20 % : prix TTC = prix HT × 1,2. Pour remonter, on **divise** : 75,60 ÷ 1,2 = **63 € HT**.\nVérification : 63 × 1,2 = 75,60."
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "difficulte": 3,
+      "titre": "La population de Saint-Aubin",
+      "consigne": "Réponds aux questions en justifiant chaque calcul. Arrondis les pourcentages au centième si besoin.",
+      "enonce": "**Situation.** La commune de Saint-Aubin comptait **2 000 habitants** en 2020. De 2020 à 2023, sa population a augmenté de **15 %**. De 2023 à 2025, elle a baissé de **5 %**.\n\n1. Calcule la population en 2023, puis en 2025.\n2. Léo affirme : « +15 % puis −5 %, cela fait +10 % en tout. » Montre qu’il a tort et calcule l’évolution réelle entre 2020 et 2025.\n3. En 2020, **45 %** des habitants avaient moins de 25 ans, et **30 %** d’entre eux faisaient partie d’un club sportif. Combien d’habitants étaient concernés ? Quelle part de la population totale cela représentait-il ?\n4. La commune voisine compte **2 530 habitants** en 2025, après une hausse de **10 %** depuis 2020. Combien d’habitants avait-elle en 2020 ?",
+      "bareme": [
+        { "critere": "Populations 2 300 en 2023 et 2 185 en 2025, avec les coefficients 1,15 et 0,95", "points": 6 },
+        { "critere": "Coefficient global 1,15 × 0,95 = 1,0925, évolution de +9,25 %, Léo réfuté", "points": 5 },
+        { "critere": "Pourcentage de pourcentage : 900 puis 270 habitants, soit 0,45 × 0,3 = 13,5 %", "points": 5 },
+        { "critere": "Valeur de départ : 2 530 ÷ 1,1 = 2 300 habitants", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Hausse de 15 % : coefficient 1,15. En 2023 : 2 000 × 1,15 = **2 300 habitants**.\nBaisse de 5 % : coefficient 0,95. En 2025 : 2 300 × 0,95 = **2 185 habitants**.\n\n2. Les coefficients se multiplient : 1,15 × 0,95 = 1,0925. L’évolution globale est donc de **+9,25 %**, et non +10 %. Vérification : 2 000 × 1,0925 = 2 185. **Léo a tort** : les 5 % de baisse portent sur 2 300, pas sur 2 000.\n\n3. Moins de 25 ans : 2 000 × 0,45 = **900 habitants**. Parmi eux, en club : 900 × 0,30 = **270 habitants**.\nPart de la population totale : 0,45 × 0,30 = 0,135, soit **13,5 %** (vérification : 270 ÷ 2 000 = 0,135).\n\n4. Population 2020 × 1,1 = 2 530, donc on **divise** par le coefficient : 2 530 ÷ 1,1 = **2 300 habitants** en 2020.\nVérification : 2 300 × 1,1 = 2 530. (Retirer 10 % de 2 530 donnerait 2 277 : c’est faux, car les 10 % portaient sur la population de 2020.)"
+    },
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "difficulte": 1,
+      "titre": "Vitesses et densité",
+      "consigne": "Réponds en écrivant les calculs avec leurs unités.",
+      "enonce": "1. Une voiture parcourt **180 km** en **2 h 15 min**. Convertis la durée en heures décimales, puis calcule la vitesse moyenne en km/h.\n2. Convertis **90 km/h** en m/s.\n3. Combien de minutes représentent **0,75 h** ?\n4. Une commune de **8 km²** compte **2 400 habitants**. Calcule sa densité de population.",
+      "bareme": [
+        { "critere": "Durée 2,25 h (15 min = 0,25 h) et vitesse 80 km/h", "points": 7 },
+        { "critere": "90 ÷ 3,6 = 25 m/s et 0,75 h = 45 min", "points": 8 },
+        { "critere": "Densité 2 400 ÷ 8 = 300 hab/km²", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 15 min = 15 ÷ 60 = 0,25 h, donc 2 h 15 min = **2,25 h** (et non 2,15 h : une heure compte 60 minutes).\nv = d ÷ t = 180 ÷ 2,25 = **80 km/h**.\n\n2. Pour passer des km/h aux m/s, on divise par 3,6 : 90 ÷ 3,6 = **25 m/s**.\n\n3. 0,75 × 60 = **45 min**.\n\n4. Densité = nombre d’habitants ÷ aire = 2 400 ÷ 8 = **300 hab/km²**."
+    },
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "difficulte": 2,
+      "titre": "Remplir la piscine",
+      "consigne": "Réponds aux questions en convertissant avant de calculer.",
+      "enonce": "**Situation.** La famille Martin remplit une piscine hors-sol de **12 m³**.\n\n1. Combien de litres d’eau faut-il ?\n2. Avec un tuyau de débit **20 L/min**, combien de temps faut-il pour la remplir ? Donne la réponse en heures.\n3. Pour aller plus vite, on ajoute un deuxième tuyau de débit **30 L/min**. Les deux tuyaux fonctionnent ensemble à partir de **9 h**. À quelle heure la piscine sera-t-elle pleine ?\n4. La masse volumique de l’eau est de 1 kg/L. Quelle masse d’eau contient la piscine pleine ?",
+      "bareme": [
+        { "critere": "Conversion : 12 m³ = 12 000 L", "points": 4 },
+        { "critere": "Un tuyau : 12 000 ÷ 20 = 600 min = 10 h", "points": 5 },
+        { "critere": "Deux tuyaux : 50 L/min, 240 min = 4 h, pleine à 13 h", "points": 6 },
+        { "critere": "Masse : 12 000 × 1 = 12 000 kg", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 1 m³ = 1 000 L, donc 12 m³ = **12 000 L**.\n\n2. Durée = volume ÷ débit = 12 000 ÷ 20 = 600 min. Or 600 ÷ 60 = 10, donc il faut **10 h**.\n\n3. Ensemble, les deux tuyaux débitent 20 + 30 = **50 L/min**. Durée : 12 000 ÷ 50 = 240 min = 240 ÷ 60 = **4 h**. Commencé à 9 h, le remplissage se termine à **13 h**.\n\n4. m = ρ × V = 1 kg/L × 12 000 L = **12 000 kg**."
+    },
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "difficulte": 3,
+      "titre": "L’aller-retour à vélo de Lina",
+      "consigne": "Réponds aux questions en justifiant chaque calcul. Arrondis au dixième si nécessaire.",
+      "enonce": "**Situation.** Lina fait un aller-retour à vélo électrique entre sa maison et un lac situé à **36 km**.\n- À l’aller, elle met **1 h 30 min**.\n- Au retour, fatiguée, elle roule à la vitesse moyenne de **18 km/h**.\n\n1. Calcule sa vitesse moyenne à l’aller, en km/h puis en m/s.\n2. Combien de temps dure le retour ?\n3. Lina pense que sa vitesse moyenne sur tout l’aller-retour est de (24 + 18) ÷ 2 = 21 km/h. Calcule la vraie vitesse moyenne sur l’aller-retour et explique son erreur.\n4. Le moteur d’assistance, d’une puissance de **250 W**, a fonctionné pendant **2 h** au total. Quelle énergie a-t-il consommée, en kWh ?",
+      "bareme": [
+        { "critere": "Vitesse aller : 36 ÷ 1,5 = 24 km/h", "points": 4 },
+        { "critere": "Conversion : 24 ÷ 3,6 ≈ 6,7 m/s", "points": 4 },
+        { "critere": "Durée du retour : 36 ÷ 18 = 2 h", "points": 3 },
+        { "critere": "Vitesse moyenne : 72 km ÷ 3,5 h ≈ 20,6 km/h, erreur de Lina expliquée", "points": 6 },
+        { "critere": "Énergie : 0,25 kW × 2 h = 0,5 kWh", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. 1 h 30 min = 1,5 h. v = 36 ÷ 1,5 = **24 km/h**. En m/s : 24 ÷ 3,6 ≈ **6,7 m/s**.\n\n2. t = d ÷ v = 36 ÷ 18 = **2 h**.\n\n3. Distance totale : 36 + 36 = 72 km. Durée totale : 1,5 + 2 = 3,5 h.\nv = 72 ÷ 3,5 ≈ **20,6 km/h**.\nL’erreur de Lina : une vitesse moyenne se calcule par **distance totale ÷ durée totale**. Elle a fait la moyenne des deux vitesses, comme si elle avait roulé aussi longtemps à 24 km/h qu’à 18 km/h ; or elle a passé plus de temps au retour (2 h) qu’à l’aller (1,5 h), à la vitesse la plus faible : la vraie moyenne est donc plus basse que 21 km/h.\n\n4. Énergie = puissance × durée. 250 W = 0,25 kW, donc E = 0,25 × 2 = **0,5 kWh** (soit 500 Wh)."
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "difficulte": 1,
+      "titre": "Coordonnées dans le plan et dans un pavé",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. On donne le point A(−4 ; 3). Donne les coordonnées de son symétrique :\na) par rapport à l’origine ;\nb) par rapport à l’axe des ordonnées ;\nc) par rapport à l’axe des abscisses.\n\n2. Le point B(5 ; −2) est-il à droite ou à gauche de l’axe des ordonnées ? Au-dessus ou en dessous de l’axe des abscisses ?\n\n3. Un point C est situé sur l’axe des ordonnées. Que peut-on dire de ses coordonnées ?\n\n4. ABCDEFGH est un pavé droit (E au-dessus de A, F de B, G de C, H de D). A est l’origine, B(6 ; 0 ; 0), D(0 ; 4 ; 0) et E(0 ; 0 ; 3). Donne les coordonnées de C et de G.",
+      "bareme": [
+        { "critere": "Les trois symétriques justes : (4 ; −3), (4 ; 3), (−4 ; −3)", "points": 8 },
+        { "critere": "Position de B et coordonnées d’un point de l’axe des ordonnées (abscisse nulle)", "points": 4 },
+        { "critere": "C(6 ; 4 ; 0) et G(6 ; 4 ; 3) justifiés", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) Par rapport à l’origine, on change les deux signes : **(4 ; −3)**.\nb) Par rapport à l’axe des ordonnées, on change le signe de l’abscisse : **(4 ; 3)**.\nc) Par rapport à l’axe des abscisses, on change le signe de l’ordonnée : **(−4 ; −3)**.\n\n2. L’abscisse de B est positive : B est **à droite** de l’axe des ordonnées. Son ordonnée est négative : B est **en dessous** de l’axe des abscisses.\n\n3. C est sur l’axe des ordonnées : son **abscisse est nulle**, C(0 ; y).\n\n4. C est sur la base : on avance de 6 (arête [AB]) et de 4 (arête [AD]), sans monter : **C(6 ; 4 ; 0)**.\nG est le sommet opposé à A : il cumule les trois longueurs : **G(6 ; 4 ; 3)**."
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "difficulte": 2,
+      "titre": "Le drone du gymnase",
+      "consigne": "Réponds aux questions en expliquant comment tu lis chaque coordonnée.",
+      "enonce": "**Situation.** Un gymnase a la forme d’un pavé droit ABCDEFGH de **20 m** de long, **12 m** de large et **8 m** de haut (E au-dessus de A, F de B, G de C, H de D). On choisit un repère d’origine A, avec B sur l’axe des abscisses, D sur l’axe des ordonnées et E sur l’axe des altitudes, en mètres.\n\n1. Donne les coordonnées des huit sommets du gymnase.\n2. Une lampe est fixée **au centre du plafond** EFGH. Quelles sont ses coordonnées ?\n3. Un drone est au point P(5 ; 3 ; 2). À quelle hauteur au-dessus du sol vole-t-il ? Il monte ensuite **verticalement** de 4 m : donne ses nouvelles coordonnées. Peut-il encore monter de 3 m sans toucher le plafond ?",
+      "bareme": [
+        { "critere": "Les huit sommets justes, avec 0 dans les directions non parcourues", "points": 8 },
+        { "critere": "Lampe en (10 ; 6 ; 8) justifiée", "points": 5 },
+        { "critere": "Drone : hauteur 2 m, position (5 ; 3 ; 6) après la montée, 9 m > 8 m donc il toucherait le plafond", "points": 7 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. A(0 ; 0 ; 0), B(20 ; 0 ; 0), D(0 ; 12 ; 0), C(20 ; 12 ; 0) ; au plafond, altitude 8 : E(0 ; 0 ; 8), F(20 ; 0 ; 8), G(20 ; 12 ; 8), H(0 ; 12 ; 8).\n\n2. Le centre du plafond est à mi-longueur (20 ÷ 2 = 10), à mi-largeur (12 ÷ 2 = 6), à l’altitude du plafond (8) : la lampe est en **(10 ; 6 ; 8)**.\n\n3. La troisième coordonnée est l’altitude : le drone vole à **2 m** du sol. En montant verticalement de 4 m, seule l’altitude change : **(5 ; 3 ; 6)**. S’il montait encore de 3 m, son altitude serait 6 + 3 = 9 m, plus haut que le plafond (8 m) : **non**, il toucherait le plafond (il ne peut monter que de 2 m)."
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "difficulte": 3,
+      "titre": "Symétries et navires",
+      "consigne": "Réponds en justifiant chaque résultat.",
+      "enonce": "**Partie A – Dans le plan.** On place le point A(2 ; 3) dans un repère d’unité 1 cm.\n1. B est le symétrique de A par rapport à l’axe des ordonnées, C le symétrique de A par rapport à l’origine, D le symétrique de A par rapport à l’axe des abscisses. Donne les coordonnées de B, C et D.\n2. On admet que ABCD est un rectangle. Calcule AB et AD à partir des coordonnées, puis le périmètre et l’aire de ABCD.\n\n**Partie B – Sur la sphère terrestre.**\n3. Deux navires sont sur le même méridien, de longitude 10° E : le premier à la latitude 20° N, le second à 50° N. Qu’ont-ils en commun ? Quel écart de latitude les sépare ?\n4. Un troisième navire est sur l’équateur, sur ce même méridien. Donne ses coordonnées.\n5. Un message radio annonce un navire « à la latitude 100° N ». Pourquoi est-ce impossible ?",
+      "bareme": [
+        { "critere": "B(−2 ; 3), C(−2 ; −3), D(2 ; −3)", "points": 6 },
+        { "critere": "AB = 4 cm, AD = 6 cm justifiés par les coordonnées ; périmètre 20 cm, aire 24 cm²", "points": 6 },
+        { "critere": "Même longitude, écart de 30° ; navire de l’équateur en latitude 0°, longitude 10° E ; latitude au plus 90°", "points": 6 },
+        { "critere": "Justifications rédigées", "points": 2 }
+      ],
+      "dureeMin": 15,
+      "corrige": "**Partie A.**\n1. On change le signe de l’abscisse : **B(−2 ; 3)**. On change les deux signes : **C(−2 ; −3)**. On change le signe de l’ordonnée : **D(2 ; −3)**.\n\n2. A et B ont la même ordonnée (3) ; leurs abscisses sont 2 et −2 : de −2 à 2, il y a **AB = 4 cm**.\nA et D ont la même abscisse (2) ; leurs ordonnées sont 3 et −3 : **AD = 6 cm**.\nPérimètre : 2 × (4 + 6) = **20 cm**. Aire : 4 × 6 = **24 cm²**.\n\n**Partie B.**\n3. Ils sont sur le même méridien : ils ont la **même longitude**, 10° E. Leurs latitudes sont 20° N et 50° N : l’écart de latitude est de 50 − 20 = **30°**.\n\n4. Tous les points de l’équateur ont une latitude de 0°. Le navire est donc en **latitude 0°, longitude 10° E**.\n\n5. La latitude se mesure à partir de l’équateur, **de 0° à 90°** Nord ou Sud : 90° N est le pôle Nord. Une latitude de 100° N **n’existe pas**."
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "difficulte": 1,
+      "titre": "Développer et factoriser",
+      "consigne": "Développe ou factorise en utilisant une identité remarquable. Écris l’identité utilisée.",
+      "enonce": "1. Développe et réduis :\na) A = (x + 4)²\nb) B = (3x − 2)²\nc) C = (x + 6)(x − 6)\n\n2. Factorise :\na) D = 49x² − 9\nb) E = x² − 10x + 25",
+      "bareme": [
+        { "critere": "Les trois développements justes, double produit compris", "points": 12 },
+        { "critere": "Les deux factorisations justes, avec l’identité reconnue", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) (a + b)² = a² + 2ab + b² avec a = x, b = 4 : A = x² + 2 × x × 4 + 4² = **x² + 8x + 16**.\nb) (a − b)² = a² − 2ab + b² avec a = 3x, b = 2 : B = (3x)² − 2 × 3x × 2 + 2² = **9x² − 12x + 4**.\nc) (a + b)(a − b) = a² − b² : C = x² − 6² = **x² − 36**.\n\n2. a) D = (7x)² − 3² : c’est une différence de deux carrés, donc D = **(7x − 3)(7x + 3)**.\nb) E = x² − 2 × x × 5 + 5² : c’est a² − 2ab + b² avec a = x, b = 5, donc E = **(x − 5)²**."
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "difficulte": 2,
+      "titre": "Calcul mental et factorisation",
+      "consigne": "Réponds en montrant l’identité ou le facteur commun utilisé. La calculatrice est interdite.",
+      "enonce": "1. Calcule de tête, en utilisant une identité remarquable (écris-la) :\na) 99 × 101\nb) 51²\nc) 998²\n\n2. Factorise F = (2x + 1)(x − 3) + (2x + 1)(x + 5).\n\n3. Développe et réduis G = −(x + 2)².\n\n4. Samir écrit : « (x + 5)² = x² + 25 ». Montre qu’il a tort avec un contre-exemple.",
+      "bareme": [
+        { "critere": "Calculs mentaux justes : 9 999 ; 2 601 ; 996 004, identité écrite", "points": 8 },
+        { "critere": "Factorisation par le facteur commun (2x + 1) : (2x + 1)(2x + 2)", "points": 5 },
+        { "critere": "G = −x² − 4x − 4 : développement puis distribution du signe", "points": 4 },
+        { "critere": "Contre-exemple numérique juste", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. a) 99 × 101 = (100 − 1)(100 + 1) = 100² − 1² = 10 000 − 1 = **9 999**.\nb) 51² = (50 + 1)² = 2 500 + 2 × 50 × 1 + 1 = 2 500 + 100 + 1 = **2 601**.\nc) 998² = (1 000 − 2)² = 1 000 000 − 2 × 1 000 × 2 + 4 = 1 000 000 − 4 000 + 4 = **996 004**.\n\n2. On cherche d’abord un facteur commun : (2x + 1).\nF = (2x + 1)[(x − 3) + (x + 5)] = **(2x + 1)(2x + 2)**.\n\n3. On développe d’abord, on distribue le signe ensuite : (x + 2)² = x² + 4x + 4, donc G = −(x² + 4x + 4) = **−x² − 4x − 4**.\n\n4. Avec x = 1 : (1 + 5)² = 36, mais 1² + 25 = 26. 36 ≠ 26 : l’égalité est fausse. Un seul contre-exemple suffit. Il manque le double produit : (x + 5)² = x² + 10x + 25."
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "difficulte": 3,
+      "titre": "Le programme de calcul d’Emma",
+      "consigne": "Réponds aux questions en rédigeant. Distingue bien tester, conjecturer et démontrer.",
+      "enonce": "**Programme d’Emma**\n- Choisir un nombre.\n- Calculer le carré de ce nombre augmenté de 3.\n- Calculer le carré de ce nombre diminué de 3.\n- Soustraire le second résultat au premier.\n\n1. Applique le programme au nombre 5, puis au nombre −2.\n2. Quelle conjecture peux-tu faire sur le résultat ?\n3. Démontre cette conjecture pour tout nombre x.\n4. Quel nombre faut-il choisir au départ pour obtenir 84 ?\n5. Hugo simplifie trop vite et écrit : « (x + 3)² = x² + 9 ». Prouve qu’il se trompe.",
+      "bareme": [
+        { "critere": "Tests justes : 60 pour 5, −24 pour −2", "points": 4 },
+        { "critere": "Conjecture : le résultat est 12 fois le nombre de départ", "points": 2 },
+        { "critere": "Démonstration : (x + 3)² − (x − 3)² = 12x, parenthèses et signes justes", "points": 7 },
+        { "critere": "Nombre de départ : 12x = 84, donc 7", "points": 3 },
+        { "critere": "Contre-exemple pour l’affirmation d’Hugo", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Avec 5 : (5 + 3)² = 64 ; (5 − 3)² = 4 ; 64 − 4 = **60**.\nAvec −2 : (−2 + 3)² = 1² = 1 ; (−2 − 3)² = (−5)² = 25 ; 1 − 25 = **−24**.\n\n2. 60 = 12 × 5 et −24 = 12 × (−2) : on conjecture que le résultat est toujours **12 fois le nombre de départ**. Deux tests ne démontrent rien : c’est une conjecture.\n\n3. Soit x le nombre de départ. Le programme donne (x + 3)² − (x − 3)².\n(x + 3)² = x² + 6x + 9 et (x − 3)² = x² − 6x + 9.\n(x + 3)² − (x − 3)² = x² + 6x + 9 − (x² − 6x + 9) = x² + 6x + 9 − x² + 6x − 9 = **12x**.\nQuel que soit x, le résultat est 12x : la conjecture est démontrée.\n\n4. On veut 12x = 84, donc x = 84 ÷ 12 = **7**. Vérification : (7 + 3)² − (7 − 3)² = 100 − 16 = 84.\n\n5. Avec x = 1 : (1 + 3)² = 16, mais 1² + 9 = 10. 16 ≠ 10 : un seul contre-exemple suffit, Hugo a tort. Il oublie le double produit : (x + 3)² = x² + 6x + 9."
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "difficulte": 1,
+      "titre": "Produits nuls et inéquations",
+      "consigne": "Résous chaque équation ou inéquation en détaillant les étapes.",
+      "enonce": "1. Résous les équations :\na) (x − 4)(3x + 6) = 0\nb) x² + 5x = 0\n\n2. Résous les inéquations :\na) 4x + 3 ≤ 19\nb) −3x + 2 > 11",
+      "bareme": [
+        { "critere": "Équations produits nuls : propriété citée, solutions 4 et −2, puis factorisation et solutions 0 et −5", "points": 10 },
+        { "critere": "Inéquations : x ≤ 4, puis x < −3 avec le sens inversé lors de la division par −3", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) Un produit est nul si et seulement si l’un au moins de ses facteurs est nul :\nx − 4 = 0 ou 3x + 6 = 0\nx = 4 ou 3x = −6, soit x = −2.\nSolutions : **4 et −2**.\nb) On factorise par x : x(x + 5) = 0.\nx = 0 ou x + 5 = 0, soit x = −5.\nSolutions : **0 et −5**. (Diviser par x aurait fait perdre la solution 0.)\n\n2. a) 4x + 3 ≤ 19\n4x ≤ 16\nx ≤ 4 (division par 4, positif : sens inchangé).\nSolutions : les nombres **x ≤ 4**.\nb) −3x + 2 > 11\n−3x > 9\nx < −3 (division par −3, négatif : **on retourne** le sens).\nSolutions : les nombres **x < −3**."
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "difficulte": 2,
+      "titre": "Mettre en équation",
+      "consigne": "Pour chaque problème : choisis l’inconnue, traduis, résous, réponds par une phrase et vérifie.",
+      "enonce": "**Problème 1.** La longueur d’un rectangle est égale au double de sa largeur, augmenté de 3 cm. Son périmètre est de **54 cm**. Quelles sont ses dimensions ?\n\n**Problème 2.** Au cinéma du quartier, on peut :\n- payer **8 €** la séance sans carte ;\n- ou acheter une carte à **15 €** pour l’année, puis payer **5 €** la séance.\n\na) Écris une inéquation qui traduit : « la carte revient moins cher que le tarif sans carte pour x séances ».\nb) Résous-la. À partir de combien de séances la carte est-elle avantageuse ?\nc) Le nombre 5 est-il solution de l’inéquation ? Interprète.",
+      "bareme": [
+        { "critere": "Problème 1 : inconnue choisie, 2(x + 2x + 3) = 54, x = 8, dimensions 8 cm et 19 cm vérifiées", "points": 7 },
+        { "critere": "Problème 2 : inéquation 15 + 5x < 8x résolue, x > 5", "points": 7 },
+        { "critere": "Conclusion : à partir de 6 séances ; 5 n’est pas solution (40 € dans les deux cas)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "**Problème 1.** Soit x la largeur, en cm. La longueur vaut 2x + 3.\nPérimètre : 2 × (x + 2x + 3) = 54, soit 2 × (3x + 3) = 54, donc 6x + 6 = 54, 6x = 48, **x = 8**.\nLe rectangle mesure **8 cm de large** et 2 × 8 + 3 = **19 cm de long**.\nVérification : 2 × (8 + 19) = 2 × 27 = 54 cm.\n\n**Problème 2.** Soit x le nombre de séances.\na) Avec la carte : 15 + 5x ; sans carte : 8x. Inéquation : **15 + 5x < 8x**.\nb) 15 + 5x < 8x\n15 < 8x − 5x\n15 < 3x\n5 < x, soit **x > 5**.\nLe nombre de séances est un entier : la carte est avantageuse **à partir de 6 séances**. Vérification : pour 6 séances, 15 + 30 = 45 € avec la carte, contre 48 € sans.\nc) Pour x = 5 : 15 + 5 × 5 = 40 et 8 × 5 = 40. 40 < 40 est faux : **5 n’est pas solution**. Pour 5 séances, les deux tarifs coûtent le même prix, 40 €."
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "difficulte": 3,
+      "titre": "Le carré et le rectangle",
+      "consigne": "Réponds aux questions en justifiant chaque étape. x désigne une longueur en cm, strictement positive.",
+      "enonce": "**Situation.** On considère un carré de côté **x cm** et un rectangle de dimensions **6 cm** et **x cm**.\n\n1. Exprime l’aire de chaque figure en fonction de x.\n2. Pour quelle valeur de x les deux figures ont-elles la même aire ? Résous l’équation en la ramenant à un produit nul. Pourquoi ne faut-il pas diviser les deux membres par x ?\n3. Exprime le périmètre de chaque figure en fonction de x.\n4. Pour quelles valeurs de x le périmètre du carré est-il **strictement supérieur** à celui du rectangle ? Résous l’inéquation et représente les solutions sur une droite graduée.\n5. Le nombre 4 est-il solution de l’inéquation de la question 4 ? Vérifie par le calcul.",
+      "bareme": [
+        { "critere": "Aires x² et 6x ; équation x² = 6x ramenée à x(x − 6) = 0", "points": 5 },
+        { "critere": "Solutions 0 et 6, la solution 0 écartée (longueur positive), danger de la division par x expliqué", "points": 4 },
+        { "critere": "Périmètres 4x et 12 + 2x ; inéquation 4x > 12 + 2x résolue : x > 6", "points": 6 },
+        { "critere": "Représentation : trait vers la droite, 6 exclu (crochet tourné vers l’extérieur)", "points": 2 },
+        { "critere": "Test de x = 4 : 16 n’est pas supérieur à 20, donc 4 n’est pas solution", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Aire du carré : **x²**. Aire du rectangle : **6x**.\n\n2. On résout x² = 6x. On passe tout d’un côté : x² − 6x = 0, puis on factorise par x : x(x − 6) = 0.\nUn produit est nul si et seulement si l’un de ses facteurs est nul : x = 0 ou x = 6.\nx est une longueur strictement positive, donc on écarte 0 : les aires sont égales pour **x = 6 cm** (36 cm² chacune).\nDiviser par x ferait perdre la solution 0 : on ne divise jamais par une expression qui peut être nulle ; on factorise.\n\n3. Périmètre du carré : **4x**. Périmètre du rectangle : 2 × (6 + x) = **12 + 2x**.\n\n4. 4x > 12 + 2x\n4x − 2x > 12\n2x > 12\nx > 6 (division par 2, positif : sens inchangé).\nLe périmètre du carré est plus grand pour **x > 6**. Sur la droite graduée : un trait qui part de 6 vers la droite, avec un **crochet tourné vers l’extérieur** en 6 (6 est exclu : pour x = 6, les deux périmètres valent 24 cm).\n\n5. Pour x = 4 : 4 × 4 = 16 et 12 + 2 × 4 = 20. 16 n’est pas supérieur à 20 : **4 n’est pas solution**, ce qui est cohérent avec x > 6."
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "difficulte": 1,
+      "titre": "Racines carrées et équation x² = a",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "1. Donne la valeur de √144, de √0 et de (√11)². Que peut-on dire de √(−16) ?\n2. Entre quels entiers consécutifs se trouve √30 ? Justifie avec des carrés parfaits.\n3. Résous les équations :\na) x² = 64\nb) x² = −9\nc) x² = 13",
+      "bareme": [
+        { "critere": "√144 = 12, √0 = 0, (√11)² = 11, √(−16) n’existe pas", "points": 8 },
+        { "critere": "Encadrement 25 < 30 < 36, donc 5 < √30 < 6", "points": 4 },
+        { "critere": "Équations : 8 et −8 ; aucune solution ; √13 et −√13", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. √144 = **12** (12² = 144 et 12 est positif) ; √0 = **0** ; (√11)² = **11** par définition. √(−16) **n’existe pas** : aucun carré n’est négatif.\n\n2. 25 < 30 < 36, c’est-à-dire 5² < 30 < 6², donc **5 < √30 < 6**.\n\n3. a) 64 > 0 : deux solutions, **8 et −8** (car 8² = 64 et (−8)² = 64).\nb) −9 < 0 : un carré n’est jamais négatif, l’équation n’a **aucune solution**.\nc) 13 > 0 : deux solutions, **√13 et −√13**."
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "difficulte": 2,
+      "titre": "Clôturer deux terrains carrés",
+      "consigne": "Réponds aux questions en justifiant. Donne les valeurs approchées au centième.",
+      "enonce": "**Situation.** M. Caron possède deux terrains carrés.\n\n1. Le premier a une aire de **1 600 m²**. Calcule la longueur de son côté, puis la longueur de clôture nécessaire pour en faire le tour. La clôture coûte **12 € le mètre** : quel est le prix total ?\n2. Le second a une aire de **200 m²**.\na) Donne la valeur exacte de son côté.\nb) Encadre ce côté entre deux entiers consécutifs, en justifiant.\nc) Donne sa valeur approchée au centième, puis une valeur approchée du périmètre de ce terrain.\nd) L’équation c² = 200 a deux solutions. Pourquoi n’en garde-t-on qu’une ?",
+      "bareme": [
+        { "critere": "Côté √1 600 = 40 m, clôture 160 m, prix 1 920 €", "points": 7 },
+        { "critere": "Valeur exacte √200 et encadrement 14 < √200 < 15 justifié (196 < 200 < 225)", "points": 6 },
+        { "critere": "√200 ≈ 14,14 m, périmètre ≈ 56,57 m, solution négative écartée (longueur positive)", "points": 7 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Le côté c vérifie c² = 1 600, c positif, donc c = √1 600 = **40 m**. Périmètre : 4 × 40 = **160 m** de clôture. Prix : 160 × 12 = **1 920 €**.\n\n2. a) Le côté vaut **√200 m** (valeur exacte).\nb) 196 < 200 < 225, soit 14² < 200 < 15², donc **14 < √200 < 15**.\nc) √200 ≈ **14,14 m**. Périmètre : 4 × √200 ≈ **56,57 m** (on garde la valeur exacte jusqu’au bout : 4 × 14,142… ≈ 56,57).\nd) Les solutions de c² = 200 sont √200 et −√200. Une longueur est **positive** : on écarte −√200."
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "difficulte": 3,
+      "titre": "Des racines sous contrôle",
+      "consigne": "Réponds à chaque question en rédigeant ta justification.",
+      "enonce": "1. Résous les équations :\na) 2x² − 50 = 0\nb) x² + 7 = 3\n\n2. Léa écrit : « √16 + √9 = √25 ». Vérifie son calcul. Que peut-on en conclure sur √(a + b) et √a + √b ?\n\n3. Un carré a une aire de **18 cm²**.\na) Donne la valeur exacte de son côté, puis sa valeur arrondie au centième.\nb) Calcule la longueur de sa diagonale : montre qu’elle tombe juste.\nc) Pourquoi valait-il mieux garder la valeur exacte du côté pour la question b ?",
+      "bareme": [
+        { "critere": "2x² = 50, x² = 25, solutions 5 et −5 ; x² = −4 sans solution", "points": 7 },
+        { "critere": "Calcul de Léa réfuté (7 ≠ 5) et conclusion √(a + b) ≠ √a + √b", "points": 4 },
+        { "critere": "Côté √18 ≈ 4,24 cm ; diagonale d² = 18 + 18 = 36, d = 6 cm", "points": 7 },
+        { "critere": "Intérêt de la valeur exacte expliqué (arrondir seulement à la fin)", "points": 2 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. a) 2x² − 50 = 0, donc 2x² = 50, puis x² = 25. Comme 25 > 0, il y a deux solutions : **5 et −5**.\nb) x² + 7 = 3, donc x² = −4. Un carré n’est jamais négatif : **aucune solution**.\n\n2. √16 + √9 = 4 + 3 = 7, alors que √25 = 5. 7 ≠ 5 : Léa se trompe. Ce contre-exemple montre que **√(a + b) n’est pas égal à √a + √b** en général.\n\n3. a) Le côté c vérifie c² = 18, c positif : c = **√18 cm** ≈ **4,24 cm**.\nb) La diagonale est l’hypoténuse d’un triangle rectangle dont les deux autres côtés sont des côtés du carré. D’après le théorème de Pythagore : d² = c² + c² = 18 + 18 = 36, donc d = √36 = **6 cm**.\nc) Avec la valeur exacte, (√18)² = 18 exactement, et le résultat tombe juste. Avec l’arrondi : 4,24² + 4,24² = 35,9552, et d ≈ 5,996 : on obtiendrait une valeur approchée au lieu de 6. On garde la valeur exacte tant qu’on calcule et on n’arrondit qu’à la fin."
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "difficulte": 1,
+      "titre": "Quotients, restes et diviseurs",
+      "consigne": "Écris chaque division euclidienne sous la forme a = b × q + r, avec 0 ≤ r < b.",
+      "enonce": "1. Effectue la division euclidienne de 245 par 12, puis de 500 par 9. Écris l’égalité, le quotient et le reste.\n2. Donne la liste de tous les diviseurs de 48. Combien y en a-t-il ?\n3. 8 est-il un diviseur de 100 ? Justifie à l’aide d’une division euclidienne.",
+      "bareme": [
+        { "critere": "245 = 12 × 20 + 5 et 500 = 9 × 55 + 5, reste inférieur au diviseur", "points": 8 },
+        { "critere": "Les dix diviseurs de 48, trouvés par paires", "points": 7 },
+        { "critere": "100 = 8 × 12 + 4 : reste non nul, 8 ne divise pas 100", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **245 = 12 × 20 + 5** : quotient 20, reste 5 (5 < 12).\n**500 = 9 × 55 + 5** : quotient 55, reste 5 (9 × 55 = 495 et 5 < 9).\n\n2. Par paires : 1 × 48, 2 × 24, 3 × 16, 4 × 12, 6 × 8. Les diviseurs de 48 sont **1, 2, 3, 4, 6, 8, 12, 16, 24, 48** : il y en a **10**.\n\n3. 100 = 8 × 12 + 4. Le reste vaut 4, il n’est pas nul : **8 n’est pas un diviseur de 100**."
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "difficulte": 2,
+      "titre": "Les bouquets de Mme Roux",
+      "consigne": "Réponds aux questions en justifiant tes calculs.",
+      "enonce": "**Situation.** Une fleuriste dispose de **90 roses** et de **72 tulipes**. Elle veut composer le **plus grand nombre possible de bouquets identiques** en utilisant toutes les fleurs.\n\n1. Décompose 90 et 72 en produits de facteurs premiers.\n2. Combien de bouquets peut-elle faire au maximum ? Justifie.\n3. Combien chaque bouquet contient-il de roses et de tulipes ?\n4. Une cliente veut plutôt des bouquets de **7 roses** chacun (sans tulipes). Combien de bouquets complets peut-on faire avec les 90 roses, et combien en reste-t-il ?",
+      "bareme": [
+        { "critere": "90 = 2 × 3² × 5 et 72 = 2³ × 3²", "points": 6 },
+        { "critere": "Plus grand diviseur commun 2 × 3² = 18 bouquets, justifié", "points": 5 },
+        { "critere": "5 roses et 4 tulipes par bouquet", "points": 4 },
+        { "critere": "90 = 7 × 12 + 6 : 12 bouquets, 6 roses restantes", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 90 = 2 × 45 = 2 × 3 × 15 = **2 × 3² × 5**.\n72 = 2 × 36 = 2 × 2 × 18 = **2³ × 3²**.\n\n2. Le nombre de bouquets doit diviser 90 **et** 72, et être le plus grand possible : c’est leur plus grand diviseur commun. On garde les facteurs communs avec le plus petit exposant : 2 × 3² = **18**. Elle peut faire au maximum **18 bouquets**.\n\n3. 90 ÷ 18 = **5 roses** et 72 ÷ 18 = **4 tulipes** par bouquet.\n\n4. 90 = 7 × 12 + 6 (7 × 12 = 84 et 6 < 7). On peut faire **12 bouquets complets** de 7 roses, et il reste **6 roses**."
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "difficulte": 3,
+      "titre": "La fête du collège",
+      "consigne": "Réponds aux questions en justifiant et en choisissant le bon outil (diviseur, multiple, reste).",
+      "enonce": "**Situation.** Le foyer du collège organise une fête.\n\n1. Il y a **126 cookies** et **90 briques de jus**. On veut préparer le plus grand nombre possible de sachets identiques, en utilisant tout. Combien de sachets ? Que contient chacun ?\n2. Déduis-en l’écriture irréductible de la fraction 126/90. Pourquoi est-elle irréductible ?\n3. Deux navettes partent ensemble du collège à **7 h**. La première repasse toutes les **12 min**, la seconde toutes les **18 min**. À quelle heure repartiront-elles ensemble pour la première fois ?\n4. On attend **250 invités**, assis par tables de **8**. Combien de tables faut-il installer ?",
+      "bareme": [
+        { "critere": "126 = 2 × 3² × 7 et 90 = 2 × 3² × 5 ; 18 sachets de 7 cookies et 5 jus", "points": 6 },
+        { "critere": "126/90 = 7/5, irréductible car 7 et 5 sont premiers entre eux", "points": 3 },
+        { "critere": "Plus petit multiple commun de 12 et 18 : 36, départ commun à 7 h 36", "points": 5 },
+        { "critere": "250 = 8 × 31 + 2 : il faut 32 tables", "points": 4 },
+        { "critere": "Choix de l’outil justifié à chaque question", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. On cherche le plus grand diviseur commun de 126 et 90.\n126 = 2 × 63 = **2 × 3² × 7** ; 90 = **2 × 3² × 5**.\nFacteurs communs : 2 × 3² = **18**. On prépare **18 sachets**, contenant chacun 126 ÷ 18 = **7 cookies** et 90 ÷ 18 = **5 briques de jus**.\n\n2. 126/90 = (18 × 7)/(18 × 5) = **7/5**. Le seul diviseur commun de 7 et 5 est 1 : ils sont **premiers entre eux**, donc la fraction est irréductible.\n\n3. « La prochaine fois qu’elles se retrouvent » : on cherche le plus petit **multiple commun** de 12 et 18. Multiples de 18 : 18 (pas multiple de 12), **36** (36 = 12 × 3). Elles repartent ensemble au bout de 36 min, soit à **7 h 36**.\n\n4. 250 = 8 × 31 + 2. 31 tables accueillent 248 personnes ; il reste 2 invités, qui ont besoin d’une table de plus : il faut **32 tables** (on relit la question : ici, quotient + 1)."
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "difficulte": 1,
+      "titre": "Tableur et diagramme circulaire",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. La cellule A2 contient le nombre 5. La cellule B2 contient la formule **=2*A2-3**.\na) Qu’affiche la cellule B2 ?\nb) On recopie la formule de B2 vers le bas. Quelle formule obtient-on en B3 ?\n2. Que calcule la formule **=SOMME(C2:C6)** ? Combien de cellules compte la plage C2:C11 ?\n3. Dans un diagramme circulaire, quel angle représente une fréquence de 0,3 ? Et une fréquence de 20 % ?",
+      "bareme": [
+        { "critere": "B2 affiche 7 ; en B3 la formule devient =2*A3-3", "points": 7 },
+        { "critere": "SOMME additionne C2 à C6 ; la plage C2:C11 compte 10 cellules", "points": 5 },
+        { "critere": "Angles : 0,3 × 360 = 108° et 0,2 × 360 = 72°", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. a) 2 × 5 − 3 = 10 − 3 : B2 affiche **7**.\nb) La recopie vers le bas décale les références d’une ligne : en B3, la formule devient **=2*A3-3**.\n\n2. =SOMME(C2:C6) calcule **C2 + C3 + C4 + C5 + C6**. La plage C2:C11 va de la ligne 2 à la ligne 11 : elle compte **10 cellules**.\n\n3. Angle = fréquence × 360°.\n0,3 × 360 = **108°** ; 20 % = 0,2, et 0,2 × 360 = **72°**."
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "difficulte": 2,
+      "titre": "Comment viens-tu au collège ?",
+      "consigne": "Réponds aux questions en justifiant tes calculs.",
+      "enonce": "**Situation.** On a demandé à **40 élèves** leur moyen de transport. Les résultats sont saisis dans une feuille de calcul.\n\n| | A | B | C |\n| 1 | Transport | Effectif | Angle (en °) |\n| 2 | Bus | 18 | |\n| 3 | Vélo | 8 | |\n| 4 | Voiture | 10 | |\n| 5 | À pied | 4 | |\n| 6 | Total | | |\n\n1. Quelle formule faut-il saisir en B6 pour obtenir le total ? Quel résultat affiche-t-elle ?\n2. Calcule la fréquence de chaque moyen de transport, puis l’angle correspondant dans un diagramme circulaire.\n3. Quelle formule saisir en C2, puis recopier vers le bas jusqu’en C5, pour obtenir les angles ?\n4. Si l’on trace un diagramme en bâtons, quelle grandeur est proportionnelle à l’effectif ?",
+      "bareme": [
+        { "critere": "Formule =SOMME(B2:B5) en B6, qui affiche 40", "points": 4 },
+        { "critere": "Fréquences 0,45 ; 0,2 ; 0,25 ; 0,1 et angles 162°, 72°, 90°, 36°", "points": 8 },
+        { "critere": "Formule en C2 commençant par = et utilisant B2 (=B2/40*360 ou =B2*9), recopiable", "points": 5 },
+        { "critere": "La hauteur des bâtons est proportionnelle à l’effectif", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. En B6 : **=SOMME(B2:B5)**, qui affiche 18 + 8 + 10 + 4 = **40**.\n\n2. Fréquence = effectif ÷ 40 ; angle = fréquence × 360°.\n- Bus : 18 ÷ 40 = 0,45 → 0,45 × 360 = **162°**\n- Vélo : 8 ÷ 40 = 0,2 → **72°**\n- Voiture : 10 ÷ 40 = 0,25 → **90°**\n- À pied : 4 ÷ 40 = 0,1 → **36°**\nVérification : 162 + 72 + 90 + 36 = 360°.\n\n3. En C2 : **=B2/40*360** (ou =B2*9, car 360 ÷ 40 = 9). Recopiée vers le bas, elle devient =B3/40*360 en C3, et ainsi de suite. (On peut aussi écrire =B2/B6*360 si B6 contient déjà le total, mais la recopie décalerait B6 en B7 : on garde 40 écrit en nombre.)\n\n4. Dans un diagramme en bâtons, c’est la **hauteur** de chaque bâton qui est proportionnelle à l’effectif."
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "difficulte": 3,
+      "titre": "Deux clubs, deux courbes",
+      "consigne": "Réponds aux questions en justifiant. Appuie-toi sur les nombres, pas seulement sur l’allure des courbes.",
+      "enonce": "**Document 1 – Nombre d’inscrits dans deux clubs de sport**\n\n| | A | B | C | D |\n| 1 | Année | Club A | Club B | Écart |\n| 2 | 2021 | 950 | 1 010 | |\n| 3 | 2022 | 960 | 995 | |\n| 4 | 2023 | 975 | 975 | |\n| 5 | 2024 | 990 | 960 | |\n| 6 | 2025 | 1 000 | 940 | |\n\n**Document 2.** Le club A publie ces données sous forme de courbe, avec un axe des ordonnées qui **commence à 900**, et le titre : « Nos inscriptions explosent ! »\n\n1. Sur un graphique avec les deux courbes, en quelle année se croiseraient-elles ? Que signifie ce point ?\n2. Décris l’évolution de chaque club entre 2021 et 2025, en donnant la variation du nombre d’inscrits.\n3. On veut calculer, dans la colonne D, l’écart « Club A − Club B ». Quelle formule saisir en D2 avant de la recopier vers le bas ? Quelles valeurs s’afficheront de D2 à D6 ?\n4. Le titre « Nos inscriptions explosent ! » est-il justifié ? Explique l’effet produit par l’axe qui commence à 900.",
+      "bareme": [
+        { "critere": "Croisement en 2023 : les deux clubs ont le même nombre d’inscrits, 975", "points": 4 },
+        { "critere": "Club A en hausse de 50 inscrits, club B en baisse de 70", "points": 4 },
+        { "critere": "Formule =B2-C2 et valeurs −60, −35, 0, 30, 60", "points": 6 },
+        { "critere": "Critique du titre : hausse faible (50 sur environ 1 000), écarts grossis par l’axe qui commence à 900", "points": 4 },
+        { "critere": "Réponses rédigées avec les unités (inscrits, années)", "points": 2 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Les deux courbes se croiseraient en **2023** : les deux clubs ont alors **le même nombre d’inscrits, 975**. Avant, le club B en a plus ; après, c’est le club A.\n\n2. Le club A **augmente** chaque année : de 950 à 1 000, soit **+50 inscrits** en quatre ans. Le club B **diminue** chaque année : de 1 010 à 940, soit **−70 inscrits**.\n\n3. En D2 : **=B2-C2**. Recopiée vers le bas, elle devient =B3-C3, =B4-C4, etc. Valeurs affichées :\n- D2 : 950 − 1 010 = **−60**\n- D3 : 960 − 995 = **−35**\n- D4 : 975 − 975 = **0**\n- D5 : 990 − 960 = **30**\n- D6 : 1 000 − 940 = **60**\nL’écart nul en 2023 confirme le croisement des courbes.\n\n4. **Non, le titre n’est pas justifié.** Le club A n’a gagné que 50 inscrits en quatre ans, sur environ 1 000 : c’est une hausse faible. Mais comme l’axe des ordonnées commence à 900 au lieu de 0, les écarts sont grossis : la courbe semble monter très fort. Il faut toujours lire les nombres et les graduations, pas seulement la forme de la courbe."
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "difficulte": 1,
+      "titre": "Formules et conversions",
+      "consigne": "Écris la formule utilisée, le calcul et l’unité. Arrondis au dixième si besoin.",
+      "enonce": "1. Calcule l’aire d’un triangle de base 10 cm et de hauteur 6 cm.\n2. Calcule l’aire d’un disque de rayon 4 cm : donne la valeur exacte, puis l’arrondi au dixième.\n3. Calcule le volume d’un pavé droit de 5 cm × 4 cm × 3 cm.\n4. Convertis :\na) 3 m² en cm²\nb) 4 500 cm³ en litres",
+      "bareme": [
+        { "critere": "Aires : 30 cm² ; 16π cm² ≈ 50,3 cm²", "points": 8 },
+        { "critere": "Volume du pavé : 60 cm³", "points": 4 },
+        { "critere": "Conversions : 30 000 cm² ; 4,5 L", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Aire = base × hauteur ÷ 2 = 10 × 6 ÷ 2 = **30 cm²**.\n\n2. Aire = π × r² = π × 4² = **16π cm²** ≈ **50,3 cm²**.\n\n3. V = L × l × h = 5 × 4 × 3 = **60 cm³**.\n\n4. a) 1 m² = 10 000 cm², donc 3 m² = **30 000 cm²**.\nb) 1 000 cm³ = 1 dm³ = 1 L, donc 4 500 cm³ = **4,5 L**."
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "difficulte": 2,
+      "titre": "L’aquarium de Yasmine",
+      "consigne": "Réponds aux questions en justifiant et en indiquant les unités.",
+      "enonce": "**Situation.** Yasmine achète un aquarium en forme de pavé droit : **80 cm** de long, **40 cm** de large et **50 cm** de haut.\n\n1. Calcule le volume de l’aquarium en cm³, puis sa contenance en litres.\n2. Elle le remplit d’eau jusqu’à **45 cm** de hauteur. Quel volume d’eau, en litres, contient-il ?\n3. Elle utilise un seau de **8 L**. Combien de seaux doit-elle verser ?\n4. Elle veut coller un décor sur toute la vitre avant (80 cm × 50 cm). Quelle est l’aire de ce décor, en cm² puis en m² ?",
+      "bareme": [
+        { "critere": "Volume 160 000 cm³, soit 160 L", "points": 6 },
+        { "critere": "Eau : 80 × 40 × 45 = 144 000 cm³ = 144 L", "points": 6 },
+        { "critere": "144 ÷ 8 = 18 seaux", "points": 3 },
+        { "critere": "Aire du décor : 4 000 cm² = 0,4 m²", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. V = 80 × 40 × 50 = **160 000 cm³**. Comme 1 000 cm³ = 1 L : contenance = **160 L**.\n(Autre méthode : 8 dm × 4 dm × 5 dm = 160 dm³ = 160 L.)\n\n2. L’eau forme un pavé de 80 cm × 40 cm × 45 cm : 80 × 40 × 45 = 144 000 cm³ = **144 L**.\n\n3. 144 ÷ 8 = **18 seaux**.\n\n4. Aire = 80 × 50 = **4 000 cm²**. Comme 1 m² = 10 000 cm² : 4 000 cm² = **0,4 m²**."
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "difficulte": 3,
+      "titre": "Le silo à grain",
+      "consigne": "Réponds aux questions en justifiant. Garde π dans les calculs et arrondis seulement à la fin.",
+      "enonce": "**Situation.** Un silo à grain est formé d’un **cylindre** de rayon **3 m** et de hauteur **10 m**, surmonté d’un **cône** de même rayon et de hauteur **4 m**.\n\n1. Calcule l’aire du sol du silo (valeur exacte, puis arrondi au dixième).\n2. Calcule le volume du cylindre, puis celui du cône, en valeur exacte.\n3. Calcule le volume total du silo en valeur exacte, puis arrondi au m³. L’agriculteur peut-il y stocker **300 m³** de grain ?\n4. Léa affirme : « Le volume du cône est le tiers de celui du cylindre du dessous. » A-t-elle raison ? Explique ce que représente vraiment le « tiers » dans la formule du volume d’un cône.",
+      "bareme": [
+        { "critere": "Aire du sol : 9π m² ≈ 28,3 m²", "points": 3 },
+        { "critere": "Volume du cylindre 90π m³ et du cône 12π m³, formules citées", "points": 7 },
+        { "critere": "Volume total 102π ≈ 320 m³, comparaison avec 300 m³", "points": 4 },
+        { "critere": "Léa a tort (12π ≠ 30π) ; le cône est le tiers d’un cylindre de même base et de même hauteur", "points": 4 },
+        { "critere": "Unités justes (m², m³) et arrondis faits à la fin", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Le sol est un disque de rayon 3 m : aire = π × 3² = **9π m²** ≈ **28,3 m²**.\n\n2. Cylindre : V = aire de la base × hauteur = 9π × 10 = **90π m³**.\nCône : V = aire de la base × hauteur ÷ 3 = 9π × 4 ÷ 3 = **12π m³**.\n\n3. Volume total : 90π + 12π = **102π m³** ≈ **320 m³** (102π ≈ 320,4). Comme 320 m³ > 300 m³, **oui**, il peut stocker 300 m³ de grain.\n\n4. **Léa a tort.** Le tiers du cylindre du dessous vaut 90π ÷ 3 = 30π m³, alors que le cône fait 12π m³. Le « tiers » de la formule compare le cône à un cylindre de **même base et de même hauteur** que lui : ici un cylindre de rayon 3 m et de hauteur 4 m, de volume 9π × 4 = 36π m³, dont le tiers vaut bien 12π m³. Le cylindre du silo est plus haut (10 m) : la comparaison de Léa ne tient pas."
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "difficulte": 1,
+      "titre": "Le coefficient k",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "1. Une figure est agrandie avec un coefficient k = 2. Par combien sont multipliées ses longueurs ? Ses aires ? Ses volumes, s’il s’agit d’un solide ? Ses angles changent-ils ?\n2. Un segment de 3 cm devient, après agrandissement, un segment de 7,5 cm. Calcule le coefficient.\n3. Sur une carte à l’échelle 1/50 000, deux villages sont à 6 cm l’un de l’autre. Quelle est la distance réelle, en km ?\n4. Un triangle d’aire 5 cm² est agrandi avec k = 3. Quelle est l’aire du triangle obtenu ?",
+      "bareme": [
+        { "critere": "k = 2 : longueurs × 2, aires × 4, volumes × 8, angles inchangés", "points": 6 },
+        { "critere": "Coefficient 7,5 ÷ 3 = 2,5", "points": 4 },
+        { "critere": "Distance réelle : 6 × 50 000 = 300 000 cm = 3 km", "points": 5 },
+        { "critere": "Aire : 5 × 3² = 45 cm²", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les longueurs sont multipliées par k = **2**, les aires par k² = **4**, les volumes par k³ = **8**. Les **angles ne changent pas**.\n\n2. k = longueur image ÷ longueur de départ = 7,5 ÷ 3 = **2,5**.\n\n3. 1 cm sur la carte représente 50 000 cm en vrai. 6 × 50 000 = 300 000 cm = 3 000 m = **3 km**.\n\n4. Les aires sont multipliées par k² = 3² = 9 : 5 × 9 = **45 cm²**."
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "difficulte": 2,
+      "titre": "La maquette de l’immeuble",
+      "consigne": "Réponds en précisant à chaque fois par quelle puissance de k tu multiplies.",
+      "enonce": "**Situation.** Un architecte construit la maquette d’un immeuble à l’échelle **1/200**.\n\n1. L’immeuble réel mesure **60 m** de haut. Quelle est la hauteur de la maquette, en cm ?\n2. Sur la maquette, l’emprise au sol de l’immeuble a une aire de **45 cm²**. Quelle est l’aire au sol réelle, en m² ?\n3. Le volume de la maquette est de **1 350 cm³**. Quel est le volume réel de l’immeuble, en m³ ?",
+      "bareme": [
+        { "critere": "Hauteur : 6 000 cm ÷ 200 = 30 cm", "points": 5 },
+        { "critere": "Aire : 45 × 200² = 1 800 000 cm² = 180 m²", "points": 7 },
+        { "critere": "Volume : 1 350 × 200³ = 10 800 000 000 cm³ = 10 800 m³", "points": 8 }
+      ],
+      "dureeMin": 12,
+      "corrige": "La maquette est une réduction de coefficient k = 1/200 ; pour passer de la maquette au réel, on multiplie les longueurs par 200.\n\n1. 60 m = 6 000 cm. Hauteur de la maquette : 6 000 ÷ 200 = **30 cm**.\n\n2. Les aires sont multipliées par 200² = 40 000 : 45 × 40 000 = 1 800 000 cm². Or 1 m² = 10 000 cm², donc l’aire réelle vaut 1 800 000 ÷ 10 000 = **180 m²**.\n\n3. Les volumes sont multipliés par 200³ = 8 000 000 : 1 350 × 8 000 000 = 10 800 000 000 cm³. Or 1 m³ = 1 000 000 cm³ (1 m³ = 1 000 dm³ et 1 dm³ = 1 000 cm³), donc le volume réel vaut **10 800 m³**.\nVérification : 180 m² × 60 m = 10 800 m³ pour un immeuble en forme de prisme droit."
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "difficulte": 3,
+      "titre": "La pyramide coupée",
+      "consigne": "Réponds aux questions en rédigeant. Écris la phrase qui justifie le coefficient avant tout calcul.",
+      "enonce": "**Situation.** Une pyramide SABCD a pour base un carré ABCD de côté **9 cm** et pour hauteur **12 cm**. On la coupe par un plan parallèle à la base, à **4 cm du sommet** S.\n\n1. Calcule le volume de la grande pyramide.\n2. Justifie que la petite pyramide obtenue est une réduction de la grande, et donne le coefficient k.\n3. Calcule le côté de la base de la petite pyramide, l’aire de cette base et le volume de la petite pyramide. Vérifie ce volume avec la formule du volume d’une pyramide.\n4. Calcule le volume du tronc de pyramide restant.\n5. À quelle distance du sommet aurait-il fallu couper pour que la petite pyramide ait un volume égal au **huitième** de celui de la grande ?",
+      "bareme": [
+        { "critere": "Volume de la grande pyramide : 81 × 12 ÷ 3 = 324 cm³", "points": 4 },
+        { "critere": "Phrase de réduction et coefficient k = 4 ÷ 12 = 1/3", "points": 4 },
+        { "critere": "Petite pyramide : côté 3 cm, aire 9 cm², volume 324 ÷ 27 = 12 cm³ vérifié", "points": 6 },
+        { "critere": "Tronc : 324 − 12 = 312 cm³", "points": 2 },
+        { "critere": "k³ = 1/8, donc k = 1/2 : couper à 6 cm du sommet", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Aire de la base : 9 × 9 = 81 cm². V = aire de la base × hauteur ÷ 3 = 81 × 12 ÷ 3 = **324 cm³**.\n\n2. La section parallèle à la base découpe une petite pyramide : **la petite pyramide est une réduction de la grande**, de coefficient k = 4 ÷ 12 = **1/3**.\n\n3. Côté de la petite base : 9 × 1/3 = **3 cm**. Aire : 81 × (1/3)² = 81 ÷ 9 = **9 cm²** (c’est bien 3 × 3).\nVolume : 324 × (1/3)³ = 324 ÷ 27 = **12 cm³**.\nVérification par la formule : 9 × 4 ÷ 3 = 12 cm³.\n\n4. Volume du tronc : 324 − 12 = **312 cm³**.\n\n5. Les volumes sont multipliés par k³. On veut k³ = 1/8, donc k = **1/2** (car (1/2)³ = 1/8). La hauteur de la petite pyramide doit être 12 × 1/2 = 6 cm : il faut couper à **6 cm du sommet**, au milieu de la hauteur."
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "difficulte": 1,
+      "titre": "Série d’automatismes",
+      "consigne": "Sans calculatrice. Donne directement chaque réponse, puis réponds à la question 11.",
+      "enonce": "1. Combien valent les 3/4 de 40 ?\n2. Combien vaut 25 % de 80 ?\n3. Résous 2x − 5 = 9.\n4. Simplifie la fraction 15/25.\n5. Combien vaut 0,5 × 60 ?\n6. Écris 1 h 45 min en heures décimales.\n7. Un triangle a des côtés de 5 cm, 12 cm et 13 cm. Est-il rectangle ?\n8. Un triangle a deux angles de 50° et 60°. Combien mesure le troisième ?\n9. On lance un dé équilibré à six faces. Quelle est la probabilité d’obtenir un nombre pair ?\n10. 1 L correspond à combien de dm³ ?\n\n11. Combien de temps dure la partie « automatismes » de l’épreuve de maths du brevet, sur combien de points est-elle notée, et la calculatrice y est-elle autorisée ?",
+      "bareme": [
+        { "critere": "Calculs 1 à 5 justes : 30 ; 20 ; x = 7 ; 3/5 ; 30", "points": 8 },
+        { "critere": "Questions 6 à 10 justes : 1,75 h ; oui (triplet 5, 12, 13) ; 70° ; 1/2 ; 1 dm³", "points": 8 },
+        { "critere": "Format : 20 minutes, 6 points sur 20, calculatrice interdite", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. 40 ÷ 4 × 3 = **30**.\n2. 25 % = un quart : 80 ÷ 4 = **20**.\n3. 2x = 14, donc **x = 7**.\n4. 15/25 = **3/5** (on divise par 5).\n5. 0,5 × 60 = la moitié de 60 = **30**.\n6. 45 min = 0,75 h, donc 1 h 45 min = **1,75 h**.\n7. **Oui** : 5, 12, 13 est un triplet de Pythagore (13² = 169 = 25 + 144).\n8. 180 − 50 − 60 = **70°**.\n9. Trois faces paires (2, 4, 6) sur six : 3/6 = **1/2**.\n10. 1 L = **1 dm³**.\n\n11. La partie automatismes dure **20 minutes**, elle est notée sur **6 points sur 20**, et la calculatrice y est **interdite**. Elle est ramassée au bout de 20 minutes."
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "difficulte": 2,
+      "titre": "Rédiger pour gagner des points",
+      "consigne": "Récris les réponses de Sofia comme on les attend dans la partie 2 du brevet, puis réponds à la question 3.",
+      "enonce": "**Exercice posé** : ABC est un triangle rectangle en B avec AB = 5 cm et BC = 12 cm. Calcule AC.\n\n**Copie de Sofia** : « AC = 13 »\n\n**Deuxième exercice posé** : un pull coûte 40 €. Son prix augmente de 10 %. Quel est son nouveau prix ?\n\n**Copie de Sofia** : « 44 »\n\n1. Récris la réponse de Sofia au premier exercice avec une rédaction complète : hypothèse, propriété, calcul, conclusion avec l’unité.\n2. Récris la réponse au deuxième exercice avec le calcul et une phrase de conclusion.\n3. Cite les **cinq temps** de la méthode conseillée pour la partie 2 de l’épreuve.",
+      "bareme": [
+        { "critere": "Pythagore rédigé : triangle rectangle en B, AC² = AB² + BC², 25 + 144 = 169, AC = 13 cm", "points": 8 },
+        { "critere": "Pull : 10 % de 40 = 4 € (ou 40 × 1,1), nouveau prix de 44 € en phrase avec l’unité", "points": 5 },
+        { "critere": "Les cinq temps de la méthode", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. « Le triangle ABC est rectangle en B. D’après le théorème de Pythagore : AC² = AB² + BC².\nAC² = 5² + 12² = 25 + 144 = 169, donc AC = √169 = 13 cm.\nLa longueur AC mesure **13 cm**. »\nLa réponse de Sofia est juste, mais sans l’hypothèse, la propriété, le calcul et l’unité, elle perd des points : dans la partie 2, chaque réponse se justifie, sauf mention contraire.\n\n2. « 10 % de 40 € = 40 × 0,1 = 4 €. Nouveau prix : 40 + 4 = 44 € (ou 40 × 1,1 = 44 €). **Le pull coûte maintenant 44 €.** »\n\n3. Les cinq temps :\n1) **lire tout le sujet** (5 min) et repérer les exercices où l’on se sent à l’aise ;\n2) **commencer par un exercice sûr** (les exercices sont indépendants) ;\n3) **justifier chaque réponse** : citer la propriété, vérifier ses hypothèses, conclure ;\n4) **soigner les résultats** : unité, arrondi demandé, phrase de conclusion ;\n5) **garder 10 minutes** pour relire et vérifier les ordres de grandeur."
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "difficulte": 3,
+      "titre": "Corriger la copie de Yanis",
+      "consigne": "Tu joues le correcteur : repère chaque erreur, explique-la et écris la bonne réponse, puis conseille Yanis.",
+      "enonce": "**Partie 1 (automatismes) – réponses de Yanis**\n1. Les 3/4 de 20 : **16**\n2. 10 % de 350 : **3,5**\n3. Solution de 2x + 3 = 11 : **x = 7**\n4. 1 h 30 min en heures : **1,3 h**\n5. 12/18 simplifié : **2/3**\n\n**Partie 2 – un exercice de Yanis**\n*Énoncé* : ABC est rectangle en A, avec AB = 6 cm et AC = 8 cm. Calcule BC.\n*Copie* : « BC² = 6 + 8 = 14 donc BC = √14 »\n\n**Ce que raconte Yanis** : « Je suis resté bloqué dix minutes sur la question 1 des automatismes, alors je n’ai pas fini. En partie 2, j’ai fait les exercices dans l’ordre et je n’ai pas eu le temps de relire. »\n\n1. Pour chaque automatisme, dis s’il est juste ; sinon, explique l’erreur et donne la bonne réponse.\n2. Relève les défauts de l’exercice de partie 2, puis écris la rédaction attendue.\n3. Donne à Yanis **trois conseils** de stratégie tirés de la méthode de l’épreuve.",
+      "bareme": [
+        { "critere": "Automatismes corrigés : 15 ; 35 ; x = 4 ; 1,5 h ; le 5 est juste", "points": 6 },
+        { "critere": "Erreurs expliquées (fraction, pourcentage, équation, 60 minutes par heure)", "points": 3 },
+        { "critere": "Partie 2 : défauts relevés et rédaction complète avec BC = 10 cm", "points": 6 },
+        { "critere": "Trois conseils de stratégie justes", "points": 3 },
+        { "critere": "Présentation claire de la correction", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "**1.**\n1) Faux : les 3/4 de 20, c’est 20 ÷ 4 × 3 = **15** (Yanis a fait 20 − 4 ou a mal compté).\n2) Faux : 10 % de 350 = 350 ÷ 10 = **35** (il a divisé par 100).\n3) Faux : 2x + 3 = 11 donne 2x = 8, donc **x = 4** (il a ajouté 3 au lieu de le soustraire : 11 + 3 = 14, 14 ÷ 2 = 7). Vérification : 2 × 4 + 3 = 11.\n4) Faux : une heure compte 60 minutes, pas 100 : 30 min = 0,5 h, donc 1 h 30 min = **1,5 h**.\n5) **Juste** : 12/18 = 2/3 (on divise par 6).\n\n**2.** Défauts : l’hypothèse « le triangle est rectangle en A » n’est pas écrite ; la propriété n’est pas citée ; les longueurs **ne sont pas élevées au carré** (6 + 8 au lieu de 6² + 8²) ; pas d’unité ni de phrase de conclusion.\nRédaction attendue :\n« Le triangle ABC est rectangle en A. D’après le théorème de Pythagore : BC² = AB² + AC².\nBC² = 6² + 8² = 36 + 64 = 100, donc BC = √100 = 10 cm.\nLe côté BC mesure **10 cm**. »\n\n**3.** Trois conseils (au choix) :\n- en automatismes, **ne pas rester bloqué** : une question qui résiste plus de 30 secondes, on la passe et on y revient à la fin, car chaque question rapporte autant qu’une autre ;\n- en partie 2, **lire tout le sujet** d’abord et **commencer par un exercice sûr** : on peut les traiter dans l’ordre qu’on veut ;\n- **garder 10 minutes** pour relire et vérifier les ordres de grandeur ;\n- justifier chaque réponse et ne pas effacer un calcul entamé : une recherche incomplète mais bien présentée rapporte des points."
+    }
+  ]
+}

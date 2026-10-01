@@ -476,7 +476,7 @@ Trois formes seulement diffèrent de l’article défini : *dessen*, *deren*, *d
 | Le passif **impersonnel** | Mettre au passif un verbe **sans COD** | *Hier wird getanzt* — « ici, on danse » |
 | Le passif avec **modal** | Le modal se conjugue, le passif passe à l’infinitif | *Die Arbeit muss heute gemacht werden* |
 
-> Le tour le plus fréquent à l’oral n’est pourtant pas le passif, mais **man** : *Man baut ein Haus.* Savoir passer de l’un à l’autre est un réflexe qui paie au bac.`,
+> Le tour le plus fréquent à l’oral n’est pourtant pas le passif, mais **man** : *Man baut ein Haus.* Savoir passer de l’un à l’autre est un réflexe qui paie à l’oral comme à l’écrit.`,
           },
           questions: [
             ['Avec quel auxiliaire se construit le passif d’action ?', ['werden', 'sein', 'haben', 'lassen'], 0, '*Das Haus wird gebaut.* C’est *sein* qui donne le passif d’état.'],

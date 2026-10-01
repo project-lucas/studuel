@@ -1,0 +1,366 @@
+{
+  "niveau": "Tle",
+  "matiere": "spcl",
+  "sujets": [
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "difficulte": 1,
+      "titre": "Niveau sonore en répétition",
+      "consigne": "Écris la relation utilisée, puis réponds en justifiant avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Dans la salle de répétition d’Élio, une enceinte produit à l’endroit où il se tient une intensité sonore I = 1,0 × 10⁻⁴ W/m². Donnée : I₀ = 1,0 × 10⁻¹² W/m².\n\n1. Calcule le niveau d’intensité sonore L correspondant.\n2. On allume une seconde enceinte identique, qui produit la même intensité au même endroit. Quel est le nouveau niveau sonore ? Un camarade répond « 160 dB » : explique son erreur.\n3. Une guitare et un piano jouent le même la (fondamental à 440 Hz). Ont-ils la même hauteur ? Pourquoi les reconnaît-on pourtant ?",
+      "bareme": [
+        { "critere": "L = 10 log(I / I₀) = 80 dB", "points": 6 },
+        { "critere": "Intensité doublée : + 3 dB, soit 83 dB ; les décibels ne s’additionnent pas", "points": 7 },
+        { "critere": "Même hauteur (même fondamental), timbres différents (harmoniques différents)", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L = 10 × log(I / I₀) = 10 × log(1,0 × 10⁻⁴ / 1,0 × 10⁻¹²) = 10 × log(10⁸) = **80 dB**.\n\n2. Deux enceintes identiques **doublent l’intensité** : I = 2,0 × 10⁻⁴ W/m², donc L = 80 + 3 = **83 dB** (10 × log 2 ≈ 3). Le camarade a additionné les décibels (80 + 80) : c’est faux, ce sont les **intensités** qui s’additionnent, pas les niveaux.\n\n3. Oui, ils ont la **même hauteur** : la hauteur est liée à la **fréquence du fondamental** (440 Hz pour les deux). On les distingue par leur **timbre**, c’est-à-dire la composition en **harmoniques** de leur son (leur spectre)."
+    },
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "difficulte": 2,
+      "titre": "La corde de sol du violoncelle",
+      "consigne": "Utilise la relation des modes propres d’une corde fixée à ses deux bouts et justifie chaque étape.",
+      "enonce": "**Situation.** Une corde vibrante de longueur utile L = 0,64 m, fixée à ses deux extrémités, émet un son dont le fondamental vaut f₁ = 196 Hz.\n\n1. Calcule la longueur d’onde λ₁ du mode fondamental, puis la célérité v de l’onde sur la corde.\n2. Calcule les fréquences des deux harmoniques suivants.\n3. La corde vibre sur son mode n = 3. Combien de fuseaux observe-t-on ? Quelle distance sépare deux nœuds consécutifs ?\n4. En appuyant un doigt sur la corde, le musicien raccourcit sa longueur vibrante pour jouer un fondamental à 247 Hz, sans changer la tension. Calcule la nouvelle longueur. Que faudrait-il faire à la tension pour monter la note sans changer la longueur ?",
+      "bareme": [
+        { "critere": "λ₁ = 2L = 1,28 m et v = λ₁ × f₁ ≈ 251 m/s", "points": 6 },
+        { "critere": "f₂ = 392 Hz et f₃ = 588 Hz", "points": 4 },
+        { "critere": "Trois fuseaux, nœuds distants de λ₃ / 2 = L / 3 ≈ 0,21 m", "points": 4 },
+        { "critere": "L’ = v / (2 f) ≈ 0,51 m ; tendre davantage la corde", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Les deux extrémités sont des nœuds ; pour le fondamental, L = λ₁ / 2, donc **λ₁ = 2L = 1,28 m**. v = λ₁ × f₁ = 1,28 × 196 ≈ **251 m/s**.\n\n2. fₙ = n × f₁ : **f₂ = 392 Hz** et **f₃ = 588 Hz**.\n\n3. Pour n = 3, la corde contient **trois fuseaux** (L = 3 × λ₃ / 2). Deux nœuds consécutifs sont distants de λ₃ / 2 = L / 3 = 0,64 / 3 ≈ **0,21 m**.\n\n4. La tension ne change pas, donc v reste 251 m/s. f₁’ = v / (2L’) donne L’ = v / (2 f₁’) = 251 / (2 × 247) ≈ **0,51 m**. Pour monter la note sans changer la longueur, il faut **tendre davantage** la corde : la célérité augmente, donc la fréquence aussi (son plus aigu)."
+    },
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "difficulte": 3,
+      "titre": "Le tuyau d’orgue mystère",
+      "consigne": "Analyse le spectre, déduis-en le type de tuyau et ses dimensions, puis traite la partie sur le niveau sonore en justifiant.",
+      "enonce": "**Situation.** Un facteur d’orgues analyse le son d’un tuyau. Le spectre montre des raies à **110 Hz, 330 Hz, 550 Hz et 770 Hz**, et aucune autre. Célérité du son dans l’air : v = 340 m/s.\n\n**Rappel.** Colonne ouverte aux deux bouts : fₙ = n × v / (2L). Colonne fermée à un bout : fₙ = (2n − 1) × v / (4L).\n\n1. Quelle est la fréquence du fondamental ? Que remarques-tu sur les harmoniques présents ? Déduis-en si le tuyau est ouvert aux deux bouts ou fermé à un bout.\n2. Calcule la longueur du tuyau.\n3. Un tuyau ouvert aux deux bouts, de même longueur, jouerait quel fondamental ? Compare les deux sons.\n4. À 5 m, ce tuyau produit un niveau sonore de 70 dB. Calcule l’intensité sonore correspondante, puis le niveau quand 10 tuyaux identiques jouent ensemble (même intensité chacun). Donnée : I₀ = 1,0 × 10⁻¹² W/m².\n5. L’organiste pense que 20 tuyaux donneraient 140 dB. Corrige-le, et dis si ce niveau dépasse le seuil de 85 dB au-delà duquel une exposition prolongée abîme l’oreille.",
+      "bareme": [
+        { "critere": "Fondamental 110 Hz ; seulement les harmoniques impairs (×3, ×5, ×7) : tuyau fermé à un bout", "points": 4 },
+        { "critere": "L = v / (4 f₁) ≈ 0,77 m", "points": 4 },
+        { "critere": "Tuyau ouvert : 220 Hz, une octave plus aigu", "points": 4 },
+        { "critere": "I = 1,0 × 10⁻⁵ W/m² et 10 tuyaux : 80 dB", "points": 4 },
+        { "critere": "20 tuyaux ≈ 83 dB, pas 140 dB, sous le seuil de 85 dB mais proche", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le fondamental est la plus basse fréquence : **f₁ = 110 Hz**. Les autres raies valent 3f₁, 5f₁ et 7f₁ : **seuls les harmoniques impairs** sont présents. C’est la signature d’un tuyau **fermé à un bout**.\n\n2. Pour n = 1 : f₁ = v / (4L), donc L = v / (4 f₁) = 340 / (4 × 110) = 340 / 440 ≈ **0,77 m**.\n\n3. Tuyau ouvert de même longueur : f₁ = v / (2L) = 340 / (2 × 0,773) ≈ **220 Hz**. Le tuyau fermé sonne **une octave plus grave** (fréquence divisée par 2), et son timbre diffère (le tuyau ouvert produit tous les harmoniques).\n\n4. L = 10 log(I / I₀) donne I = I₀ × 10^(L/10) = 1,0 × 10⁻¹² × 10⁷ = **1,0 × 10⁻⁵ W/m²**. Dix tuyaux : I = 1,0 × 10⁻⁴ W/m², intensité multipliée par 10, donc **+ 10 dB : 80 dB**.\n\n5. Les décibels ne s’additionnent pas. 20 tuyaux : intensité multipliée par 20 = 2 × 10, soit + 10 dB + 3 dB : **environ 83 dB**. C’est **sous le seuil de 85 dB**, mais très proche : une exposition longue mérite de la prudence."
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "difficulte": 1,
+      "titre": "Du Wi-Fi à la LED bleue",
+      "consigne": "Écris chaque relation avant l’application numérique et donne les résultats avec leur unité.",
+      "enonce": "**Données.** c = 3,00 × 10⁸ m/s ; h = 6,63 × 10⁻³⁴ J·s.\n\n1. Une box Wi-Fi émet à f = 2,4 GHz. Calcule la longueur d’onde et indique le domaine du spectre électromagnétique.\n2. Une LED bleue émet à λ = 450 nm. Calcule l’énergie d’un de ses photons.\n3. Cette lumière traverse une plaque de verre d’indice n = 1,50. À quelle vitesse s’y propage-t-elle ?",
+      "bareme": [
+        { "critere": "λ = c / f = 0,125 m : domaine des ondes radio (plus de 1 mm)", "points": 7 },
+        { "critere": "E = h × c / λ ≈ 4,42 × 10⁻¹⁹ J", "points": 7 },
+        { "critere": "v = c / n = 2,00 × 10⁸ m/s", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. λ = c / f = 3,00 × 10⁸ / 2,4 × 10⁹ = **0,125 m** (12,5 cm). C’est plus de 1 mm : domaine des **ondes radio**.\n\n2. E = h × c / λ = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / 450 × 10⁻⁹ = 1,989 × 10⁻²⁵ / 4,50 × 10⁻⁷ ≈ **4,42 × 10⁻¹⁹ J**.\n\n3. v = c / n = 3,00 × 10⁸ / 1,50 = **2,00 × 10⁸ m/s**. La lumière va moins vite dans le verre que dans le vide."
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "difficulte": 2,
+      "titre": "Ampoule à filament ou LED ?",
+      "consigne": "Utilise la loi de Wien et les grandeurs photométriques ; conclus de façon argumentée.",
+      "enonce": "**Données.** Loi de Wien : λ_max × T = 2,90 × 10⁻³ m·K. Visible : 400 – 800 nm ; infrarouge : 800 nm – 1 mm.\n\n| Lampe | Puissance électrique | Flux lumineux |\n| halogène (filament à 2 700 K) | 53 W | 806 lm |\n| LED | 8,5 W | 806 lm |\n\n1. Calcule la longueur d’onde du maximum d’émission du filament. Dans quel domaine se trouve-t-elle ?\n2. Même calcul pour la surface du Soleil (5 800 K). Compare.\n3. Calcule l’efficacité lumineuse de chaque lampe.\n4. Explique, à l’aide des questions précédentes, pourquoi deux lampes de même flux lumineux consomment des puissances si différentes.",
+      "bareme": [
+        { "critere": "Filament : λ_max ≈ 1,07 × 10⁻⁶ m, dans l’infrarouge", "points": 5 },
+        { "critere": "Soleil : λ_max = 500 nm, dans le visible ; plus chaud, maximum à plus courte longueur d’onde", "points": 4 },
+        { "critere": "Efficacités ≈ 15 lm/W (halogène) et ≈ 95 lm/W (LED)", "points": 5 },
+        { "critere": "Explication : le filament rayonne surtout en infrarouge, que l’œil ne perçoit pas (grandeurs photométriques)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. λ_max = 2,90 × 10⁻³ / 2 700 ≈ **1,07 × 10⁻⁶ m = 1 070 nm** : dans l’**infrarouge**.\n\n2. λ_max = 2,90 × 10⁻³ / 5 800 = **5,00 × 10⁻⁷ m = 500 nm** : dans le **visible**. Plus un corps est chaud, plus son maximum d’émission est à courte longueur d’onde.\n\n3. Efficacité lumineuse = flux / puissance :\n- halogène : 806 / 53 ≈ **15 lm/W** ;\n- LED : 806 / 8,5 ≈ **95 lm/W**, environ 6 fois plus.\n\n4. Le flux lumineux (lumen) est une grandeur **photométrique** : il ne compte que ce que l’**œil perçoit**, avec une sensibilité maximale dans le vert. Le filament, à 2 700 K, rayonne surtout dans l’**infrarouge** : une grande partie de la puissance devient de la chaleur invisible, qui ne compte pas dans les lumens. La LED émet principalement dans le visible : pour le même flux, elle consomme **beaucoup moins**."
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "difficulte": 3,
+      "titre": "Relier deux bâtiments d’un campus",
+      "consigne": "Compare les solutions de transmission par des calculs d’atténuation et de débit, puis justifie chaque choix.",
+      "enonce": "**Situation.** Un campus doit relier deux bâtiments distants de **1,0 km**, puis prévoir la liaison vers une antenne à **40 km**.\n\n**Données.**\n- Fibre optique : atténuation 0,25 dB/km.\n- Câble coaxial : atténuation 6,0 dB pour 100 m.\n- Atténuation : A (dB) = 10 × log(P_entrée / P_sortie).\n- Wi-Fi : le canal 1 utilise une porteuse à 2,412 GHz, le canal 6 une porteuse à 2,437 GHz ; c = 3,00 × 10⁸ m/s.\n\n1. Calcule l’atténuation du câble coaxial et celle de la fibre sur 1,0 km, puis le rapport P_entrée / P_sortie pour chacun. Conclus.\n2. Sur 40 km de fibre, l’émetteur injecte 2,0 mW. Calcule la puissance reçue.\n3. Un fichier de 2,4 × 10¹⁰ bits doit passer par un lien de débit binaire 1,0 × 10⁸ bit/s. Combien de temps dure le transfert ?\n4. Dans les salles, on utilise le Wi-Fi (canal libre). Calcule la longueur d’onde de la porteuse du canal 1. Pourquoi deux réseaux voisins utilisent-ils des canaux différents ?\n5. Pour archiver les données, on hésite entre DVD (laser rouge, 650 nm) et Blu-ray (laser bleu, 405 nm). Lequel stocke le plus, et pourquoi ?",
+      "bareme": [
+        { "critere": "Coaxial 60 dB (rapport 10⁶), fibre 0,25 dB (rapport ≈ 1,06) : fibre bien meilleure", "points": 5 },
+        { "critere": "40 km : A = 10 dB, P_sortie = 0,20 mW", "points": 4 },
+        { "critere": "Durée = 2,4 × 10¹⁰ / 1,0 × 10⁸ = 240 s", "points": 3 },
+        { "critere": "λ ≈ 0,124 m et porteuses différentes pour partager l’espace sans se brouiller", "points": 4 },
+        { "critere": "Blu-ray : longueur d’onde plus courte, creux plus petits, plus de données", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. - Coaxial : 6,0 dB par 100 m, soit **60 dB** sur 1,0 km ; P_entrée / P_sortie = 10^(60/10) = **10⁶** : il ne reste qu’un millionième de la puissance.\n- Fibre : 0,25 × 1,0 = **0,25 dB** ; rapport = 10^0,025 ≈ **1,06** : la perte est d’environ 6 %.\nLa **fibre** est de très loin la meilleure solution pour relier les bâtiments (elle résiste en plus aux perturbations électromagnétiques).\n\n2. A = 0,25 × 40 = **10 dB**, donc P_entrée / P_sortie = 10 : P_sortie = 2,0 / 10 = **0,20 mW**.\n\n3. Durée = quantité d’information / débit = 2,4 × 10¹⁰ / 1,0 × 10⁸ = **240 s**, soit 4 min.\n\n4. λ = c / f = 3,00 × 10⁸ / 2,412 × 10⁹ ≈ **0,124 m**. En canal libre, tous les signaux partagent le même espace : on les sépare en leur attribuant des **fréquences porteuses différentes**, sinon ils se brouilleraient.\n\n5. Le **Blu-ray** : sa lecture repose sur des interférences entre creux et plats ; une **longueur d’onde plus courte** (405 nm contre 650 nm) permet des **creux plus petits**, donc plus de données sur la même surface."
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "difficulte": 1,
+      "titre": "Un rayon laser dans l’aquarium",
+      "consigne": "Applique la loi de Snell-Descartes en mesurant les angles par rapport à la normale ; justifie chaque réponse.",
+      "enonce": "**Données.** n(air) = 1,00 ; n(eau) = 1,33.\n\n1. Un rayon laser passe de l’air à l’eau avec un angle d’incidence de 40°. Calcule l’angle de réfraction. Le rayon se rapproche-t-il ou s’éloigne-t-il de la normale ?\n2. Dans l’autre sens (de l’eau vers l’air), calcule l’angle limite au-delà duquel il n’y a plus de rayon réfracté.\n3. Un rayon arrive dans l’eau sur la surface de l’eau avec un angle d’incidence de 60°. Que se passe-t-il ?",
+      "bareme": [
+        { "critere": "sin i₂ = 1,00 × sin 40° / 1,33 ≈ 0,483, i₂ ≈ 29°, rapproché de la normale", "points": 7 },
+        { "critere": "sin i_lim = 1,00 / 1,33 ≈ 0,752, i_lim ≈ 49°", "points": 7 },
+        { "critere": "60° > angle limite : réflexion totale", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. n₁ × sin i₁ = n₂ × sin i₂ : sin i₂ = 1,00 × sin 40° / 1,33 = 0,643 / 1,33 ≈ 0,483, donc **i₂ ≈ 29°**. L’eau est plus réfringente que l’air : le rayon **se rapproche de la normale** (29° < 40°).\n\n2. De l’eau vers l’air : sin i_lim = n₂ / n₁ = 1,00 / 1,33 ≈ 0,752, donc **i_lim ≈ 49°**.\n\n3. 60° > 49° : il n’y a plus de rayon réfracté, toute la lumière est réfléchie dans l’eau : c’est la **réflexion totale** (principe de la fibre optique)."
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "difficulte": 2,
+      "titre": "Mesurer un fil, puis un réseau",
+      "consigne": "Exploite chaque mesure en rappelant la relation utilisée ; les angles de diffraction s’expriment en radians.",
+      "enonce": "**Partie A.** Lina éclaire un fil fin avec un laser vert (λ = 532 nm). Sur un écran placé à D = 1,50 m, la tache centrale de diffraction mesure 2,4 cm de large.\n\n1. Calcule le demi-angle θ de la tache centrale (angle petit : on assimile θ à la tangente).\n2. Déduis-en le diamètre a du fil.\n\n**Partie B.** Elle remplace le fil par un réseau portant 600 traits par millimètre.\n\n3. Calcule le pas a du réseau.\n4. Calcule l’angle de déviation du maximum d’ordre 1, puis d’ordre 2. Combien d’ordres (de chaque côté) peut-on observer au maximum ? Justifie.",
+      "bareme": [
+        { "critere": "θ = (2,4 / 2) / 150 = 8,0 × 10⁻³ rad", "points": 4 },
+        { "critere": "a = λ / θ ≈ 6,7 × 10⁻⁵ m (67 µm)", "points": 5 },
+        { "critere": "Pas = 1 / 600 mm ≈ 1,67 µm", "points": 4 },
+        { "critere": "θ₁ ≈ 18,6°, θ₂ ≈ 39,7° et au plus 3 ordres car sin θ ≤ 1", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Demi-largeur de la tache : 1,2 cm. θ ≈ 1,2 / 150 = **8,0 × 10⁻³ rad**.\n\n2. θ ≈ λ / a donc a = λ / θ = 532 × 10⁻⁹ / 8,0 × 10⁻³ ≈ **6,7 × 10⁻⁵ m, soit 67 µm**.\n\n3. 600 traits par mm : a = 1 / 600 mm ≈ 1,67 × 10⁻³ mm = **1,67 µm**.\n\n4. sin θ = k × λ / a.\n- Ordre 1 : sin θ₁ = 0,532 / 1,67 ≈ 0,319, **θ₁ ≈ 18,6°**.\n- Ordre 2 : sin θ₂ ≈ 0,638, **θ₂ ≈ 39,7°**.\nComme sin θ ≤ 1, il faut k ≤ a / λ = 1,67 / 0,532 ≈ 3,1 : on observe **au plus 3 ordres** de chaque côté (sin θ₃ ≈ 0,96)."
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "difficulte": 3,
+      "titre": "Des ondes pour mesurer à l’hôpital et au labo",
+      "consigne": "Traite chaque situation en justifiant la relation utilisée, puis argumente le choix des instruments.",
+      "enonce": "**Situation 1.** Une ambulance, sirène allumée, s’approche puis s’éloigne d’un piéton.\n\n**Situation 2.** Une sonde Doppler émet des ultrasons de fréquence f = 4,0 MHz dans une artère ; célérité dans les tissus c = 1 540 m/s. Le décalage mesuré entre l’onde émise et l’onde reçue vaut Δf = 1,3 kHz. L’onde étant réfléchie par les globules rouges en mouvement, le décalage est doublé : Δf ≈ 2 × f × v / c.\n\n**Situation 3.** Deux haut-parleurs alimentés par le même générateur émettent un son de 1 700 Hz (célérité 340 m/s). Un micro est placé en un point M.\n\n1. Décris ce que perçoit le piéton (situation 1) et justifie.\n2. Calcule la vitesse du sang (situation 2).\n3. Pourquoi faut-il alimenter les deux haut-parleurs par le même générateur pour observer des interférences stables ?\n4. En M, la différence de chemin vaut δ = 0,50 m. Les interférences y sont-elles constructives ou destructives ? Donne une valeur de δ, voisine, qui donnerait un maximum.\n5. Au laboratoire, il faut mesurer : (a) la teneur en sucre d’un jus par son indice ; (b) la concentration d’une solution de saccharose, espèce chirale ; (c) le diamètre d’un fil fin. Associe à chaque mesure un instrument ou une méthode du cours, en justifiant.",
+      "bareme": [
+        { "critere": "Son plus aigu à l’approche, plus grave en s’éloignant (effet Doppler)", "points": 3 },
+        { "critere": "v = Δf × c / (2f) ≈ 0,25 m/s", "points": 4 },
+        { "critere": "Ondes synchrones : même fréquence, déphasage constant", "points": 3 },
+        { "critere": "λ = 0,20 m, δ = 2,5 λ : destructives ; maximum pour δ = 0,40 m ou 0,60 m", "points": 5 },
+        { "critere": "(a) réfractomètre, (b) polarimètre (loi de Biot), (c) diffraction d’un laser, chacun justifié", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Quand la source se **rapproche**, la fréquence reçue est **plus grande** que la fréquence émise : la sirène paraît **plus aiguë**. Quand elle **s’éloigne**, la fréquence reçue est **plus petite** : plus **grave**. C’est l’**effet Doppler**.\n\n2. Δf ≈ 2 × f × v / c donc v = Δf × c / (2f) = 1 300 × 1 540 / (2 × 4,0 × 10⁶) ≈ **0,25 m/s**.\n\n3. Des interférences stables exigent des ondes **synchrones** : même fréquence et déphasage constant. Un seul générateur impose la même fréquence aux deux haut-parleurs ; deux générateurs n’auraient jamais exactement la même fréquence, et la figure bougerait.\n\n4. λ = v / f = 340 / 1 700 = **0,20 m**. δ = 0,50 m = **2,5 λ** = (2 + 1/2) λ : interférences **destructives** (amplitude minimale). Un maximum exige δ = k λ : par exemple **δ = 0,40 m** (2λ) ou **0,60 m** (3λ).\n\n5. (a) **Réfractomètre** : il mesure un indice de réfraction, qui dépend de la teneur en sucre du jus. (b) **Polarimètre** : le saccharose, chiral, fait tourner la direction de polarisation d’un angle proportionnel à sa concentration (loi de Biot). (c) **Diffraction d’un laser** par le fil : on mesure la tache centrale, θ ≈ λ / a donne le diamètre a."
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "difficulte": 1,
+      "titre": "Échographie, loupe et microscope",
+      "consigne": "Écris la relation utilisée, puis fais l’application numérique avec les bonnes unités.",
+      "enonce": "1. Lors d’une échographie, l’écho d’une interface revient 52 µs après l’émission. Dans les tissus mous, v = 1 540 m/s. À quelle profondeur se trouve l’interface ?\n2. Une loupe a une distance focale f’ = 2,5 cm. Calcule son grossissement commercial.\n3. Un microscope est équipé d’un objectif ×40 et d’un oculaire ×15. Calcule son grossissement commercial. Qu’est-ce qui limite finalement la finesse des détails observables ?",
+      "bareme": [
+        { "critere": "d = v × Δt / 2 ≈ 4,0 cm (aller-retour pris en compte)", "points": 7 },
+        { "critere": "G_c = 0,25 / f’ = 10", "points": 6 },
+        { "critere": "G = 40 × 15 = 600 et résolution limitée par la diffraction", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L’onde fait un aller et un retour : d = v × Δt / 2 = 1 540 × 52 × 10⁻⁶ / 2 ≈ **0,040 m = 4,0 cm**.\n\n2. G_c = 0,25 / f’ = 0,25 / 0,025 = **10**.\n\n3. G_c(microscope) = |γ_objectif| × G_c(oculaire) = 40 × 15 = **600**. Augmenter le grossissement ne suffit pas : la **résolution** est limitée par la **diffraction** (elle s’améliore avec l’ouverture numérique de l’objectif ou une longueur d’onde plus courte)."
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "difficulte": 2,
+      "titre": "La lunette de Noé",
+      "consigne": "Réponds en justifiant chaque résultat par une relation du cours.",
+      "enonce": "**Situation.** Noé observe la Lune avec une lunette astronomique réglée à l’infini : objectif de focale f’₁ = 900 mm et de diamètre D = 70 mm, oculaire de focale f’₂ = 25 mm.\n\n**Données.** Diamètre apparent de la Lune à l’œil nu : α = 9,1 × 10⁻³ rad. L’œil sépare deux points vus sous un angle d’au moins 3 × 10⁻⁴ rad. Lumière : λ = 550 nm.\n\n1. Pourquoi dit-on que la lunette est afocale ? Calcule son grossissement.\n2. Sous quel angle Noé voit-il la Lune dans la lunette ?\n3. Il remplace l’oculaire par un oculaire de 10 mm. Nouveau grossissement ?\n4. Calcule le pouvoir de résolution θ_min ≈ 1,22 × λ / D de la lunette et compare-le à celui de l’œil. Pourquoi un objectif de plus grand diamètre est-il intéressant ?",
+      "bareme": [
+        { "critere": "Foyers confondus, objet et image à l’infini ; G = f’₁ / f’₂ = 36", "points": 5 },
+        { "critere": "α’ = G × α ≈ 0,33 rad", "points": 4 },
+        { "critere": "G = 900 / 10 = 90", "points": 4 },
+        { "critere": "θ_min ≈ 9,6 × 10⁻⁶ rad, environ 30 fois mieux que l’œil ; grand D : plus de lumière et meilleure résolution", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le foyer image de l’objectif est confondu avec le foyer objet de l’oculaire : un objet à l’infini donne une image à l’infini, le système est **afocal**. G = f’₁ / f’₂ = 900 / 25 = **36**.\n\n2. G = α’ / α donc α’ = G × α = 36 × 9,1 × 10⁻³ ≈ **0,33 rad**.\n\n3. G = 900 / 10 = **90**.\n\n4. θ_min ≈ 1,22 × 550 × 10⁻⁹ / 0,070 ≈ **9,6 × 10⁻⁶ rad**. L’œil sépare 3 × 10⁻⁴ rad : la lunette résout environ **30 fois mieux** (3 × 10⁻⁴ / 9,6 × 10⁻⁶ ≈ 31). Un objectif de plus grand **diamètre** collecte **plus de lumière** (images plus lumineuses) et a un θ_min plus petit (**meilleure résolution**)."
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "difficulte": 3,
+      "titre": "Choisir la sonde, choisir l’instrument",
+      "consigne": "Exploite les mesures, repère l’erreur de calcul, puis justifie chaque choix d’instrument par ses limites.",
+      "enonce": "**Situation 1.** En échographie (v = 1 540 m/s dans les tissus mous), une sonde reçoit deux échos, venant de la face avant et de la face arrière d’un organe, **26 µs** et **91 µs** après l’émission.\n\n**Situation 2.** Le service dispose de deux sondes, à **3,5 MHz** et à **10 MHz**. Il faut examiner un tendon situé à 1 cm sous la peau, puis un foie dont la face arrière est à 12 cm.\n\n**Situation 3.** Un observatoire hésite entre une lunette dont l’objectif mesure 1,0 m de diamètre et un télescope à miroir de 8,0 m (λ = 550 nm).\n\n1. Calcule la profondeur de chaque face de l’organe, puis son épaisseur.\n2. Un stagiaire trouve 4,0 cm pour la face avant. Quelle erreur a-t-il commise ?\n3. Pourquoi applique-t-on du gel entre la sonde et la peau ?\n4. Quelle sonde choisir pour le tendon ? pour le foie ? Justifie par le compromis résolution / profondeur.\n5. Calcule le pouvoir de résolution θ_min ≈ 1,22 × λ / D des deux instruments de la situation 3, et donne deux raisons, autres que la résolution, de préférer le télescope.",
+      "bareme": [
+        { "critere": "Profondeurs 2,0 cm et 7,0 cm, épaisseur 5,0 cm", "points": 5 },
+        { "critere": "Erreur : oubli du facteur 1/2 (aller-retour)", "points": 3 },
+        { "critere": "Gel : supprime l’air qui réfléchirait presque toute l’onde", "points": 3 },
+        { "critere": "10 MHz pour le tendon (résolution), 3,5 MHz pour le foie (profondeur), justifiés", "points": 5 },
+        { "critere": "θ_min ≈ 6,7 × 10⁻⁷ rad et 8,4 × 10⁻⁸ rad ; pas d’aberration chromatique, grand miroir plus facile à fabriquer", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. d = v × Δt / 2.\n- Face avant : 1 540 × 26 × 10⁻⁶ / 2 ≈ **0,020 m = 2,0 cm**.\n- Face arrière : 1 540 × 91 × 10⁻⁶ / 2 ≈ **0,070 m = 7,0 cm**.\n- Épaisseur : 7,0 − 2,0 = **5,0 cm**.\n\n2. 1 540 × 26 × 10⁻⁶ = 0,040 m : le stagiaire a **oublié de diviser par 2**. L’onde fait un **aller et un retour** ; sans le « / 2 », on double la profondeur.\n\n3. Sans gel, une couche d’air sépare la sonde de la peau : **presque toute l’onde serait réfléchie** à cette interface et ne pénétrerait pas dans le corps.\n\n4. Une fréquence plus élevée donne une **meilleure résolution** mais l’onde est **plus vite absorbée**. Le tendon est proche de la surface : on privilégie la finesse des détails avec la sonde à **10 MHz**. Le foie s’étend jusqu’à 12 cm : il faut une onde qui pénètre profondément, la sonde à **3,5 MHz**, au prix d’une résolution moindre.\n\n5. - Lunette : θ_min ≈ 1,22 × 550 × 10⁻⁹ / 1,0 ≈ **6,7 × 10⁻⁷ rad**.\n- Télescope : θ_min ≈ 1,22 × 550 × 10⁻⁹ / 8,0 ≈ **8,4 × 10⁻⁸ rad**, 8 fois meilleur ; il collecte aussi beaucoup plus de lumière.\nAutres avantages du télescope : **pas d’aberration chromatique** (un miroir réfléchit toutes les couleurs de la même façon) et un **grand miroir est plus facile à fabriquer** qu’une grande lentille."
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "difficulte": 1,
+      "titre": "Numériser une température, tourner un plateau",
+      "consigne": "Donne la relation utilisée, puis le résultat avec son unité.",
+      "enonce": "**Situation.** Dans un incubateur, un capteur de température suivi d’un conditionneur délivre une tension qui augmente de **10 mV par degré Celsius**. Cette tension est numérisée par un **CAN 10 bits** de plage 0 – 3,3 V. Le plateau porte-échantillons est entraîné par un **moteur pas à pas de 200 pas par tour**.\n\n1. Calcule la résolution (quantum) du CAN.\n2. À quel écart de température ce quantum correspond-il ? Le système peut-il distinguer 0,1 °C ?\n3. Calcule l’angle d’un pas du moteur, puis l’angle parcouru après 50 impulsions.",
+      "bareme": [
+        { "critere": "q = 3,3 / 2¹⁰ = 3,3 / 1 024 ≈ 3,2 mV", "points": 7 },
+        { "critere": "3,2 mV ↔ 0,32 °C : 0,1 °C n’est pas distinguable", "points": 6 },
+        { "critere": "1,8° par pas et 90° pour 50 impulsions", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. q = plage de tension / 2ⁿ = 3,3 / 2¹⁰ = 3,3 / 1 024 ≈ **3,2 × 10⁻³ V = 3,2 mV**.\n\n2. 10 mV correspondent à 1 °C, donc 3,2 mV correspondent à **0,32 °C**. Le CAN ne distingue pas deux températures séparées de moins de 0,32 °C environ : **0,1 °C n’est pas mesurable** avec ce montage.\n\n3. Angle par pas = 360° / 200 = **1,8°**. Après 50 impulsions : 50 × 1,8 = **90°** (un quart de tour)."
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "difficulte": 2,
+      "titre": "Filtrer le bruit d’un capteur",
+      "consigne": "Exploite le relevé du filtre, conclus sur son type et son usage, puis traite la fibre optique.",
+      "enonce": "**Situation.** Le signal utile d’un capteur varie lentement (fréquences inférieures à 100 Hz), mais il est perturbé par un bruit à 10 kHz. On teste un filtre avec une tension d’entrée U_e = 2,00 V :\n\n| f (Hz) | 10 | 100 | 1 000 | 2 000 | 5 000 | 10 000 |\n| U_s (V) | 2,00 | 2,00 | 1,79 | 1,41 | 0,74 | 0,39 |\n\n1. Calcule le gain en décibels à 10 Hz, à 2 000 Hz et à 10 000 Hz.\n2. Détermine la fréquence de coupure. Quel est le type de ce filtre ?\n3. Ce filtre convient-il pour ce capteur ? Justifie.\n4. Le signal est ensuite transmis par une fibre à saut d’indice : n₁ = 1,48 (cœur), n₂ = 1,46 (gaine). Calcule son ouverture numérique et l’angle d’entrée maximal θ_max.",
+      "bareme": [
+        { "critere": "G = 0 dB à 10 Hz, ≈ − 3 dB à 2 000 Hz, ≈ − 14 dB à 10 000 Hz", "points": 6 },
+        { "critere": "f_c = 2 kHz (chute de 3 dB) ; filtre passe-bas", "points": 5 },
+        { "critere": "Convient : garde le signal lent, atténue fortement le bruit à 10 kHz", "points": 4 },
+        { "critere": "ON = √(n₁² − n₂²) ≈ 0,24 et θ_max ≈ 14°", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. G = 20 × log(U_s / U_e).\n- 10 Hz : 20 log(2,00 / 2,00) = **0 dB** (gain maximal).\n- 2 000 Hz : 20 log(1,41 / 2,00) = 20 log 0,705 ≈ **− 3,0 dB**.\n- 10 000 Hz : 20 log(0,39 / 2,00) = 20 log 0,195 ≈ **− 14 dB**.\n\n2. La fréquence de coupure correspond à une chute de 3 dB par rapport au gain maximal : **f_c ≈ 2 kHz**. Les basses fréquences passent, les hautes sont atténuées : filtre **passe-bas**.\n\n3. Oui : le signal utile (moins de 100 Hz) est dans la bande passante, transmis sans atténuation (gain 0 dB), tandis que le bruit à 10 kHz est atténué de 14 dB (tension divisée par 5 environ).\n\n4. ON = sin θ_max = √(n₁² − n₂²) = √(1,48² − 1,46²) = √(2,1904 − 2,1316) = √0,0588 ≈ **0,24**, donc **θ_max ≈ 14°**."
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "difficulte": 3,
+      "titre": "Régler un bain thermostaté",
+      "consigne": "Exploite les essais avec les critères de performance du cours, explique les écarts observés, puis choisis une correction en justifiant.",
+      "enonce": "**Situation.** Un bain thermostaté doit maintenir des échantillons à **37,0 °C**. Cahier des charges : écart statique nul ; premier dépassement ≤ 2,0 °C ; temps de réponse à 5 % ≤ 10 min.\n\nEssais à partir de 20,0 °C :\n- correction P de gain K : la température se stabilise à **35,2 °C** ;\n- correction P de gain 2K : elle se stabilise à **36,1 °C**, avec des oscillations plus marquées avant ;\n- correction PI :\n\n| t (min) | 0 | 2 | 4 | 6 | 8 | 10 | 12 | 15 | 20 |\n| T (°C) | 20,0 | 29,0 | 35,0 | 38,4 | 37,6 | 37,2 | 36,9 | 37,0 | 37,0 |\n\n1. Calcule l’écart statique pour les deux corrections P.\n2. Explique pourquoi une correction proportionnelle seule ne peut jamais ramener exactement à la consigne, et pourquoi on ne peut pas augmenter K indéfiniment.\n3. Pour la correction PI, détermine la bande de ± 5 % de la variation totale autour de la valeur finale, et le temps de réponse à 5 %.\n4. Calcule le premier dépassement de la correction PI.\n5. Quelle correction retenir ? Vérifie chaque exigence du cahier des charges.",
+      "bareme": [
+        { "critere": "Écarts statiques 1,8 °C (K) et 0,9 °C (2K)", "points": 4 },
+        { "critere": "P : sans écart plus d’action, donc écart résiduel ; K trop grand : dépassement puis instabilité", "points": 4 },
+        { "critere": "Bande [36,15 ; 37,85] °C (5 % de la variation de 17,0 °C) et temps de réponse ≈ 8 min justifié", "points": 4 },
+        { "critere": "Premier dépassement = 38,4 − 37,0 = 1,4 °C", "points": 4 },
+        { "critere": "PI retenue : les trois exigences vérifiées une par une", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Écart statique = consigne − valeur finale :\n- gain K : 37,0 − 35,2 = **1,8 °C** ;\n- gain 2K : 37,0 − 36,1 = **0,9 °C** (divisé par 2 environ en doublant K).\n\n2. En correction P, l’action est **proportionnelle à l’écart** : s’il n’y avait plus d’écart, il n’y aurait plus d’action de chauffe, et la température redescendrait. Il subsiste donc toujours un **écart statique**. Augmenter K le réduit, mais augmente le **dépassement** et les oscillations, jusqu’à rendre le système **instable**.\n\n3. Variation totale : 37,0 − 20,0 = 17,0 °C ; 5 % de 17,0 = 0,85 °C : bande **[36,15 ; 37,85] °C** autour de la valeur finale 37,0 °C. À 6 min, T = 38,4 °C est encore hors de la bande ; à partir de 8 min (37,6 ; 37,2 ; 36,9 ; 37,0) la température y reste. Le temps de réponse à 5 % est compris entre 6 et 8 min : **environ 8 min**.\n\n4. Premier dépassement = 38,4 − 37,0 = **1,4 °C**.\n\n5. On retient la **correction PI** :\n- écart statique : T finale = 37,0 °C, **nul** (la partie intégrale accumule l’écart et l’annule) ✓ ;\n- dépassement : 1,4 °C ≤ 2,0 °C ✓ ;\n- temps de réponse : environ 8 min ≤ 10 min ✓.\nLes corrections P ne respectent pas l’exigence d’écart statique nul."
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "difficulte": 1,
+      "titre": "Isoler le mur du laboratoire",
+      "consigne": "Calcule chaque résistance thermique avec R_th = e / (λ × S), puis le flux thermique.",
+      "enonce": "**Situation.** Un mur de laboratoire de surface S = 10 m² est en brique : épaisseur e = 0,20 m, conductivité thermique λ = 0,80 W·m⁻¹·K⁻¹. La température intérieure est 20 °C, la température extérieure 0 °C.\n\n1. Calcule la résistance thermique du mur, puis le flux thermique qui le traverse. Dans quel sens se fait ce transfert ?\n2. On ajoute une couche d’isolant : e = 0,10 m, λ = 0,040 W·m⁻¹·K⁻¹. Calcule sa résistance thermique, puis la résistance totale du mur isolé.\n3. Calcule le nouveau flux thermique et commente.",
+      "bareme": [
+        { "critere": "R = 0,025 K/W et Φ = 800 W, de l’intérieur (chaud) vers l’extérieur (froid)", "points": 7 },
+        { "critere": "R(isolant) = 0,25 K/W et R totale = 0,275 K/W (résistances additionnées)", "points": 7 },
+        { "critere": "Φ ≈ 73 W, flux divisé par 11 environ", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. R_th = e / (λ × S) = 0,20 / (0,80 × 10) = **0,025 K/W**. Φ = (T_chaude − T_froide) / R_th = 20 / 0,025 = **800 W**. Le transfert se fait spontanément **de l’intérieur (chaud) vers l’extérieur (froid)**.\n\n2. R(isolant) = 0,10 / (0,040 × 10) = **0,25 K/W**. Pour une paroi à plusieurs couches, les résistances **s’additionnent** : R totale = 0,025 + 0,25 = **0,275 K/W**.\n\n3. Φ = 20 / 0,275 ≈ **73 W**. Le flux est divisé par environ 11 : l’isolant, de faible conductivité, apporte presque toute la résistance thermique du mur."
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "difficulte": 2,
+      "titre": "Pasteuriser le lait",
+      "consigne": "Fais un bilan énergétique de l’échangeur en régime stationnaire, puis dimensionne la chaudière.",
+      "enonce": "**Situation.** Dans une laiterie, un échangeur à plaques chauffe du lait de 4 °C à 72 °C avec un débit massique de 0,40 kg/s. Le fluide chaud est de l’eau qui entre à 90 °C avec un débit de 1,2 kg/s.\n\n**Données.** c(lait) = 3 900 J·kg⁻¹·K⁻¹ ; c(eau) = 4 180 J·kg⁻¹·K⁻¹. Pouvoir calorifique du gaz utilisé par la chaudière : PC = 50 MJ/kg.\n\n1. Calcule le flux thermique reçu par le lait.\n2. En négligeant les pertes, calcule la température de sortie de l’eau chaude.\n3. L’échangeur fonctionne à contre-courant. Explique ce que cela signifie et pourquoi c’est intéressant.\n4. La chaudière réchauffe l’eau. En négligeant ses pertes, quelle masse de gaz brûle-t-elle en une heure de fonctionnement ?",
+      "bareme": [
+        { "critere": "Φ = q_m × c × ΔT = 0,40 × 3 900 × 68 ≈ 1,06 × 10⁵ W", "points": 6 },
+        { "critere": "ΔT(eau) ≈ 21 °C, sortie ≈ 69 °C", "points": 5 },
+        { "critere": "Contre-courant : sens opposés, écart plus régulier, échange plus efficace", "points": 4 },
+        { "critere": "E ≈ 3,8 × 10⁸ J et m = E / PC ≈ 7,6 kg", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Φ = q_m × c × ΔT = 0,40 × 3 900 × (72 − 4) = 0,40 × 3 900 × 68 ≈ **1,06 × 10⁵ W (106 kW)**.\n\n2. En régime stationnaire, le flux cédé par l’eau est reçu par le lait : ΔT(eau) = Φ / (q_m × c) = 106 080 / (1,2 × 4 180) ≈ **21 °C**. L’eau sort à 90 − 21 ≈ **69 °C**.\n\n3. À **contre-courant**, les deux fluides circulent **en sens opposés** : le lait le plus chaud rencontre l’eau qui vient d’entrer, la plus chaude. L’écart de température reste **plus régulier** tout le long de l’échangeur, l’échange est **plus efficace** (pour une même surface, on transfère plus).\n\n4. Énergie à fournir en 1 h : E = Φ × Δt = 1,06 × 10⁵ × 3 600 ≈ **3,8 × 10⁸ J**. Masse de gaz = E / PC = 3,8 × 10⁸ / 50 × 10⁶ ≈ **7,6 kg**."
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "difficulte": 3,
+      "titre": "Pompe à chaleur contre radiateurs",
+      "consigne": "Applique les deux principes, calcule les énergies en jeu et argumente la comparaison.",
+      "enonce": "**Situation 1.** Une maison a besoin d’une puissance de chauffage de **12 kW**. On compare une pompe à chaleur de **COP = 3,5** et des radiateurs électriques (toute l’énergie électrique devient chaleur). La saison de chauffe représente **1 500 h** de fonctionnement à cette puissance.\n\n**Situation 2.** Un congélateur prélève **150 W** à l’intérieur de sa cuve pour une puissance électrique de **60 W**.\n\n1. Décris le trajet du fluide frigorigène de la pompe à chaleur : où s’évapore-t-il, où se condense-t-il, que font le compresseur et le détendeur ?\n2. Calcule la puissance électrique W de la pompe à chaleur et la puissance Q_f prélevée à l’extérieur. Quel principe utilises-tu ?\n3. Calcule l’énergie électrique consommée sur la saison par chaque solution, et l’économie réalisée.\n4. Un voisin affirme : « Un COP de 3,5, c’est impossible, on ne peut pas récupérer plus d’énergie qu’on en paie. » Réponds-lui, en citant le second principe.\n5. Calcule le COP du congélateur et la puissance qu’il cède à la cuisine. Ouvrir la porte du congélateur refroidirait-il la cuisine ?",
+      "bareme": [
+        { "critere": "Évaporation côté extérieur (froid), compression, condensation côté maison (chaud), détente", "points": 4 },
+        { "critere": "W = Q_c / COP ≈ 3,4 kW et Q_f = Q_c − W ≈ 8,6 kW (premier principe)", "points": 4 },
+        { "critere": "18 000 kWh (radiateurs) contre ≈ 5 100 kWh (PAC), économie ≈ 12 900 kWh", "points": 4 },
+        { "critere": "La PAC déplace de l’énergie, travail nécessaire car le transfert froid → chaud n’est pas spontané", "points": 4 },
+        { "critere": "COP = 2,5, Q_c = 210 W cédés à la cuisine, qui se réchauffe", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le fluide **s’évapore** dans l’échangeur **extérieur** (côté froid) en y prélevant Q_f ; le **compresseur** le comprime, sa température monte ; il **se condense** dans l’échangeur de la **maison** (côté chaud) en y cédant Q_c ; le **détendeur** fait chuter sa pression et sa température, et le cycle recommence.\n\n2. COP = Q_c / W donc W = 12 / 3,5 ≈ **3,4 kW**. Premier principe (conservation) : Q_c = W + Q_f, donc Q_f = 12 − 3,4 ≈ **8,6 kW** prélevés à l’air extérieur.\n\n3. - Radiateurs : 12 kW × 1 500 h = **18 000 kWh** électriques.\n- PAC : 18 000 / 3,5 ≈ **5 100 kWh** électriques.\n- Économie ≈ 18 000 − 5 100 ≈ **12 900 kWh**.\n\n4. La PAC ne crée pas d’énergie : elle en **déplace** depuis l’extérieur. Sur 12 kW rendus à la maison, 8,6 kW viennent de l’air extérieur et 3,4 kW seulement de l’électricité : Q_c = W + Q_f, rien n’est violé. Le **second principe** dit qu’un transfert thermique **spontané du froid vers le chaud est impossible** : c’est pourquoi il faut **fournir un travail** (le compresseur). Il interdit de s’en passer, pas d’avoir un COP supérieur à 1.\n\n5. COP(frigo) = Q_f / W = 150 / 60 = **2,5**. Q_c = W + Q_f = 60 + 150 = **210 W** cédés à la cuisine. Porte ouverte, l’appareil prélève de l’énergie dans la cuisine et en rejette davantage dans la même pièce : la cuisine **se réchauffe** globalement."
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "difficulte": 1,
+      "titre": "Le tuyau qui se rétrécit",
+      "consigne": "Écris chaque relation, convertis les unités, puis calcule.",
+      "enonce": "**Données.** ρ(eau) = 1 000 kg/m³ ; g = 9,81 N/kg ; 1 bar = 10⁵ Pa.\n\n1. De l’eau circule à v₁ = 2,0 m/s dans un tuyau de section S₁ = 3,0 cm². Calcule le débit volumique en m³/s puis en L/min.\n2. Le tuyau se rétrécit à S₂ = 1,0 cm². Calcule la vitesse de l’eau dans la partie étroite. Justifie.\n3. Au fond d’une cuve, sous 4,0 m d’eau, de combien la pression dépasse-t-elle celle de la surface ?",
+      "bareme": [
+        { "critere": "Q_v = S × v = 6,0 × 10⁻⁴ m³/s = 36 L/min", "points": 7 },
+        { "critere": "Conservation du débit : v₂ = 6,0 m/s", "points": 6 },
+        { "critere": "Δp = ρ × g × h ≈ 3,9 × 10⁴ Pa, soit environ 0,39 bar", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. S₁ = 3,0 cm² = 3,0 × 10⁻⁴ m². Q_v = S₁ × v₁ = 3,0 × 10⁻⁴ × 2,0 = **6,0 × 10⁻⁴ m³/s**, soit 0,60 L/s, c’est-à-dire **36 L/min**.\n\n2. Pour un liquide incompressible en écoulement permanent, le débit **se conserve** : S₁ × v₁ = S₂ × v₂, donc v₂ = 3,0 × 2,0 / 1,0 = **6,0 m/s**. Le fluide accélère dans le rétrécissement.\n\n3. Principe fondamental de la statique des fluides : Δp = ρ × g × h = 1 000 × 9,81 × 4,0 ≈ **3,9 × 10⁴ Pa**, soit environ **0,39 bar** (cohérent avec « 10 m d’eau ≈ 1 bar »)."
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "difficulte": 2,
+      "titre": "La pompe du château d’eau",
+      "consigne": "Détermine ce que la pompe doit compenser, puis calcule ses puissances ; justifie chaque étape.",
+      "enonce": "**Situation.** Une pompe remonte de l’eau d’une citerne vers un réservoir situé **12 m plus haut**. Les deux surfaces libres sont à la pression atmosphérique, et l’eau y est quasiment immobile. Débit : **2,0 L/s**. Les pertes de charge dans la conduite équivalent à **0,30 bar**.\n\n**Données.** ρ = 1 000 kg/m³ ; g = 9,81 N/kg ; 1 bar = 10⁵ Pa ; rendement de la pompe η = 0,65.\n\n1. Calcule la différence de pression correspondant à la seule différence de hauteur.\n2. Déduis-en la différence de pression totale Δp que doit fournir la pompe.\n3. Calcule la puissance hydraulique utile, puis la puissance absorbée par la pompe.\n4. On allonge la conduite et on ajoute trois coudes et une vanne. Quelle conséquence sur la puissance nécessaire ? Propose une modification de l’installation qui la réduirait.",
+      "bareme": [
+        { "critere": "ρ × g × h ≈ 1,18 × 10⁵ Pa", "points": 5 },
+        { "critere": "Δp ≈ 1,48 × 10⁵ Pa (hauteur + pertes de charge)", "points": 5 },
+        { "critere": "P_h = Q_v × Δp ≈ 295 W et P_absorbée ≈ 450 W", "points": 5 },
+        { "critere": "Pertes de charge accrues donc puissance plus grande ; tuyau de plus grand diamètre ou moins de singularités", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Δp(hauteur) = ρ × g × h = 1 000 × 9,81 × 12 ≈ **1,18 × 10⁵ Pa**.\n\n2. Les pressions aux deux surfaces sont égales et les vitesses négligeables : la pompe doit compenser la **différence de hauteur** et les **pertes de charge** : Δp = 1,18 × 10⁵ + 0,30 × 10⁵ ≈ **1,48 × 10⁵ Pa**.\n\n3. Q_v = 2,0 L/s = 2,0 × 10⁻³ m³/s. P_h = Q_v × Δp = 2,0 × 10⁻³ × 1,48 × 10⁵ ≈ **295 W**. P_absorbée = P_h / η = 295 / 0,65 ≈ **450 W**.\n\n4. Les pertes de charge **augmentent** avec la longueur et avec les **singularités** (coudes, vannes) : Δp augmente, donc la puissance nécessaire aussi. Pour la réduire : utiliser un **tuyau de plus grand diamètre** (les pertes diminuent quand le diamètre augmente, et la vitesse est plus faible), raccourcir le trajet ou supprimer des coudes inutiles."
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "difficulte": 3,
+      "titre": "Distiller un mélange eau-éthanol",
+      "consigne": "Exploite les données du diagramme binaire pour expliquer le fonctionnement de la colonne et ses limites ; justifie chaque réponse.",
+      "enonce": "**Situation.** On distille un mélange préparé avec **46 g d’éthanol** et **72 g d’eau**, sous 1 bar.\n\n**Données.** M(éthanol) = 46 g/mol ; M(eau) = 18 g/mol. Températures d’ébullition : éthanol 78 °C, eau 100 °C.\n**Lecture du diagramme binaire isobare.** Pour un liquide de fraction molaire x(éthanol) = 0,20, la première bulle apparaît à 82 °C ; la vapeur alors formée a une fraction molaire x(éthanol) = 0,53. Les courbes d’ébullition et de rosée se touchent pour x(éthanol) = 0,89 (soit 95,6 % en masse), à 78,2 °C.\n\n1. Calcule la fraction molaire en éthanol du mélange.\n2. Quelle courbe du diagramme indique l’apparition de la première bulle ? Compare la composition de la vapeur à celle du liquide et explique.\n3. Explique comment la colonne à plateaux enrichit progressivement la vapeur en éthanol.\n4. Qu’obtient-on en tête de colonne et dans le bouilleur ? Peut-on obtenir de l’éthanol pur par distillation fractionnée ? Justifie.\n5. Quel est le rôle du reflux ?",
+      "bareme": [
+        { "critere": "n(éthanol) = 1,0 mol, n(eau) = 4,0 mol, x = 0,20", "points": 4 },
+        { "critere": "Courbe d’ébullition ; vapeur à 0,53, plus riche en éthanol, le plus volatil", "points": 4 },
+        { "critere": "Chaque plateau réalise un nouvel équilibre liquide-vapeur : vapeur de plus en plus riche en éthanol", "points": 4 },
+        { "critere": "Tête : azéotrope (95,6 % en masse) ; bouilleur : eau ; pas d’éthanol pur", "points": 5 },
+        { "critere": "Reflux : renvoyer une partie du distillat améliore la séparation", "points": 3 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. n(éthanol) = 46 / 46 = 1,0 mol ; n(eau) = 72 / 18 = 4,0 mol. x(éthanol) = 1,0 / (1,0 + 4,0) = **0,20**.\n\n2. L’apparition de la première bulle quand on chauffe le liquide est donnée par la **courbe d’ébullition** (du bas) : à **82 °C**. La vapeur formée a x = 0,53 : elle est **plus riche en éthanol** que le liquide (0,20), car la vapeur en équilibre est plus riche en constituant le **plus volatil** (l’éthanol, qui bout à 78 °C contre 100 °C).\n\n3. Dans la colonne, la vapeur monte et le liquide redescend : sur **chaque plateau** s’établit un **nouvel équilibre liquide-vapeur**. La vapeur qui quitte un plateau est plus riche en éthanol que celle qui y est arrivée ; de plateau en plateau, elle s’enrichit, et le liquide qui redescend s’appauvrit en éthanol.\n\n4. En **tête de colonne** on recueille le plus volatil… mais ici, c’est l’**azéotrope** (x = 0,89, soit 95,6 % en masse d’éthanol) : il bout à température constante (78,2 °C) sans changer de composition, la vapeur a la même composition que le liquide et la colonne ne peut plus l’enrichir. Dans le **bouilleur** reste le moins volatil, l’**eau**. On **ne peut pas obtenir d’éthanol pur** par simple distillation fractionnée.\n\n5. Le **reflux** consiste à renvoyer une partie du distillat dans la colonne : ce liquide riche en éthanol multiplie les équilibres liquide-vapeur et **améliore la séparation** (au prix d’un débit de distillat plus faible)."
+    },
+    {
+      "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+      "difficulte": 1,
+      "titre": "Les étapes du projet de l’équipe d’Anaïs",
+      "consigne": "Remets les étapes dans l’ordre du cours, puis justifie tes réponses en une ou deux phrases.",
+      "enonce": "**Situation.** L’équipe d’Anaïs (3 élèves) mène un projet sur la question : « Quelle eau minérale du commerce est la plus riche en calcium ? ». Leur carnet mentionne ces étapes, dans le désordre :\n\n(a) expérimenter ; (b) présenter à l’oral ; (c) s’approprier la problématique ; (d) planifier les séances ; (e) rédiger ; (f) chercher de la documentation ; (g) analyser les résultats ; (h) proposer une stratégie ; (i) adapter.\n\n1. Remets ces étapes dans l’ordre donné par le cours.\n2. Après les premiers essais, les résultats de l’équipe sont incohérents d’une séance à l’autre. À quelle étape du projet correspond ce qu’elle doit faire alors ? Donne un exemple concret d’action.\n3. Pourquoi est-il utile, dans ce projet, de rencontrer un technicien de laboratoire d’analyse des eaux ?",
+      "bareme": [
+        { "critere": "Ordre : c, f, h, d, a, g, i, e, b", "points": 8 },
+        { "critere": "Analyser puis adapter, avec une action concrète (répéter, revoir le protocole)", "points": 7 },
+        { "critere": "Ouverture sur le monde professionnel : méthodes réelles, conseils, contexte", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Ordre : **(c)** s’approprier la problématique → **(f)** chercher de la documentation → **(h)** proposer une stratégie → **(d)** planifier → **(a)** expérimenter → **(g)** analyser → **(i)** adapter → **(e)** rédiger → **(b)** présenter à l’oral.\n\n2. L’équipe doit **analyser** ses résultats puis **adapter** sa démarche. Exemples d’actions : chercher d’où vient la dispersion (prise d’essai, repérage de l’équivalence), répéter les mesures, fixer un protocole identique à chaque séance, changer de méthode de repérage, puis replanifier les séances restantes.\n\n3. Le projet est **ouvert sur la recherche ou l’industrie** : un technicien montre les **méthodes réellement utilisées**, les précautions et les contrôles de qualité ; il aide à confronter la démarche de l’équipe à une pratique professionnelle et à mieux formuler la problématique."
+    },
+    {
+      "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+      "difficulte": 2,
+      "titre": "Présenter et valider un résultat",
+      "consigne": "Rédige les calculs comme le recommande le cours (formule littérale, application numérique, résultat avec unité), puis valide et critique le résultat.",
+      "enonce": "**Situation.** Pour son projet, l’équipe de Samuel a dosé les ions calcium d’une eau minérale. La relation du protocole est c = c₁ × V_E / V₀, avec c₁ = 0,0100 mol/L, V_E = 12,1 mL et V₀ = 50,0 mL. L’étude des sources d’erreurs donne u(c) = 0,05 mmol/L. L’étiquette annonce **2,30 mmol/L**. Donnée : M(Ca) = 40,1 g/mol.\n\nLeur compte rendu contient la ligne : « c = 0,00242 ».\n\n1. Critique cette ligne et réécris le calcul de c correctement présenté.\n2. Convertis c en mg/L.\n3. Calcule z = |c − c_réf| / u(c). Le résultat est-il compatible avec l’étiquette ?\n4. Samuel propose de « corriger un peu » ses mesures pour tomber sur l’étiquette. Explique pourquoi c’est une mauvaise idée et rédige ce que l’équipe devrait écrire à la place.",
+      "bareme": [
+        { "critere": "Ligne critiquée (pas de formule, d’application numérique ni d’unité) et c = 2,42 mmol/L correctement présentée", "points": 5 },
+        { "critere": "c ≈ 97 mg/L", "points": 4 },
+        { "critere": "z = 0,12 / 0,05 = 2,4 > 2 : non compatible", "points": 5 },
+        { "critere": "Refus d’arranger les mesures ; analyse honnête avec sources d’erreur possibles et suite proposée", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La ligne donne un nombre seul : **ni formule littérale, ni application numérique, ni unité**. Présentation attendue :\nc = c₁ × V_E / V₀ = 0,0100 × 12,1 / 50,0 = 2,42 × 10⁻³ mol/L, soit **c = 2,42 mmol/L** (avec u(c) = 0,05 mmol/L).\n\n2. c(massique) = c × M = 2,42 × 10⁻³ × 40,1 ≈ 0,0970 g/L, soit **97 mg/L**.\n\n3. z = |2,42 − 2,30| / 0,05 = 0,12 / 0,05 = **2,4**. Comme z > 2, le résultat **n’est pas compatible** avec l’étiquette.\n\n4. Modifier les mesures, c’est **fabriquer** un résultat : il ne dit plus rien de l’eau ni de la qualité du protocole. Un résultat qui s’écarte de la référence, **honnêtement critiqué**, a bien plus de valeur. L’équipe devrait écrire par exemple : « Notre résultat, 2,42 mmol/L avec u = 0,05 mmol/L, n’est pas compatible avec la valeur de l’étiquette (z = 2,4). Sources possibles : concentration du titrant moins bien connue que prévu, repérage tardif de l’équivalence, ou valeur d’étiquette moyenne d’une production qui varie. Nous proposons de vérifier la concentration du titrant et de répéter le dosage. »"
+    },
+    {
+      "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+      "difficulte": 3,
+      "titre": "Quel isolant pour une glacière ?",
+      "consigne": "Exploite les résultats de l’équipe avec les outils fournis, tire une conclusion prudente, puis replanifie la suite du projet et rédige le résultat pour l’oral.",
+      "enonce": "**Situation.** L’équipe de Yanis cherche le meilleur isolant pour une glacière. Même glacière, même masse de glace au départ, même pièce : on mesure la température intérieure après 2 h. Chaque isolant est testé 3 fois.\n\n| Isolant | Essai 1 | Essai 2 | Essai 3 | Moyenne | Écart-type s |\n| A | 8,2 °C | 8,6 °C | 8,4 °C | 8,4 °C | 0,2 °C |\n| B | 7,9 °C | 8,5 °C | 8,2 °C | 8,2 °C | 0,3 °C |\n| C | 10,1 °C | 10,3 °C | 10,2 °C | 10,2 °C | 0,1 °C |\n\n**Outils fournis.** Incertitude-type sur une moyenne de n mesures : u = s / √n. On considère deux moyennes comme indiscernables si les intervalles [m − 2u ; m + 2u] se recouvrent.\n\nIl reste à l’équipe **trois séances de 2 h**.\n\n1. Calcule l’incertitude-type sur chaque moyenne.\n2. Écris les trois intervalles [m − 2u ; m + 2u].\n3. Que peut conclure l’équipe ? Un membre affirme : « B est le meilleur, c’est prouvé. » Réponds-lui.\n4. Propose comment **adapter** la démarche pour trancher entre A et B, et planifie les trois séances restantes.\n5. Rédige en trois ou quatre phrases la conclusion que l’équipe pourrait présenter à l’oral aujourd’hui.",
+      "bareme": [
+        { "critere": "u(A) ≈ 0,12 °C ; u(B) ≈ 0,17 °C ; u(C) ≈ 0,06 °C", "points": 4 },
+        { "critere": "A [8,17 ; 8,63] ; B [7,85 ; 8,55] ; C [10,08 ; 10,32]", "points": 4 },
+        { "critere": "C nettement moins bon ; A et B indiscernables : l’affirmation est réfutée", "points": 4 },
+        { "critere": "Adaptation pertinente (plus d’essais, conditions mieux contrôlées) et planning réaliste des trois séances", "points": 4 },
+        { "critere": "Conclusion orale claire, chiffrée, avec incertitude et limites", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. u = s / √3 (√3 ≈ 1,73) :\n- A : 0,2 / 1,73 ≈ **0,12 °C** ;\n- B : 0,3 / 1,73 ≈ **0,17 °C** ;\n- C : 0,1 / 1,73 ≈ **0,06 °C**.\n\n2. - A : 8,4 ± 0,23 → **[8,17 ; 8,63] °C** ;\n- B : 8,2 ± 0,35 → **[7,85 ; 8,55] °C** ;\n- C : 10,2 ± 0,12 → **[10,08 ; 10,32] °C**.\n\n3. Une température intérieure plus basse signifie un meilleur isolant. L’intervalle de **C** ne recouvre aucun autre et il est plus haut : **C est nettement moins bon**. Les intervalles de **A et B se recouvrent** : avec ces mesures, **A et B sont indiscernables**. L’affirmation « B est le meilleur, c’est prouvé » est fausse : l’écart de 0,2 °C est du même ordre que la dispersion des essais.\n\n4. Adapter : **multiplier les essais** sur A et B (u diminue comme 1/√n), mieux **contrôler les conditions** (même température de départ de la pièce, même masse de glace pesée, même position du thermomètre), éventuellement allonger la durée pour creuser l’écart. Planning possible :\n- séance 1 : 3 nouveaux essais de A et 3 de B, dans des conditions contrôlées ;\n- séance 2 : 3 essais supplémentaires de chacun, puis calcul des nouvelles moyennes et incertitudes ;\n- séance 3 : analyse finale, rédaction et préparation de l’oral.\n\n5. Exemple : « Après 2 h, l’isolant C laisse la température monter à 10,2 °C, contre 8,4 °C pour A et 8,2 °C pour B : C est nettement le moins efficace. En revanche, A et B ne peuvent pas être départagés avec trois essais : leurs intervalles [8,17 ; 8,63] °C et [7,85 ; 8,55] °C se recouvrent. Nous refaisons des essais en conditions mieux contrôlées pour trancher. »"
+    }
+  ]
+}

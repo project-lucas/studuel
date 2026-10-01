@@ -963,14 +963,14 @@ Dupin résout par la seule **déduction**.
 | Le sous-genre | Son ressort | Ses auteurs |
 | Le **roman à énigme** | Un mystère, des indices, une solution **logique** | Christie, Leroux |
 | Le **roman noir** | La société est **corrompue**, le détective désabusé | Chandler, Manchette |
-| Le **thriller** | Le **suspense** l’emporte sur l’énigme : on court après le criminel |
+| Le **thriller** | Le **suspense** l’emporte sur l’énigme : on court après le criminel | Harlan Coben, Franck Thilliez |
 
 ## Le rôle de la ville
-| Ce qu’elle fournit | |
+| Ce qu’elle fournit | Ce qu’elle apporte au roman |
 | L’**anonymat** | On disparaît dans la foule |
 | La **variété sociale** | Le crime traverse les milieux |
 | Les **lieux typiques** | Bar, port, gare, terrain vague |
-| Une **atmosphère** | |
+| Une **atmosphère** | Brouillard, pluie, nuit : le décor inquiète avant le crime |
 
 !> Chez les meilleurs auteurs, changer la ville changerait le roman. **Maigret n’existe pas hors de Paris.**`,
           },

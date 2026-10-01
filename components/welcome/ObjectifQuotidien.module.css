@@ -1,0 +1,220 @@
+/*
+ * Écran « objectif quotidien » : la flamme de la série grandit avec le rythme
+ * choisi et le dit dans sa bulle ; chaque rythme porte sa petite flamme ; en
+ * bas, ce que le rythme donne sur un mois. Transform et opacité seulement.
+ */
+
+.scene {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-top: 18px;
+}
+
+.heros {
+  position: relative;
+  width: 104px;
+  height: 116px;
+  flex-shrink: 0;
+}
+
+/* Le disque chaud sous la flamme : une lueur qui respire (opacité seule). */
+.lueur {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(245, 183, 34, 0.45) 0%, rgba(245, 183, 34, 0) 70%);
+  animation: respire 2.4s ease-in-out infinite;
+}
+
+.flamme {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  transform-origin: 50% 100%;
+  animation: surgit 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.5) both;
+}
+
+.bulle {
+  position: relative;
+  flex: 1;
+  margin-bottom: 34px;
+  padding: 12px 14px;
+  border: 2px solid var(--onb-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 3px 0 var(--onb-line-d);
+  color: var(--onb-ink);
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  animation: bulle 0.35s ease-out both;
+}
+
+/* La pointe, tournée vers la flamme. */
+.bulle::before,
+.bulle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.bulle::before {
+  left: -12px;
+  margin-top: -9px;
+  border-width: 9px 12px 9px 0;
+  border-color: transparent var(--onb-line) transparent transparent;
+}
+.bulle::after {
+  left: -8px;
+  margin-top: -7px;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+.vignette {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #fbf3e2;
+}
+
+.vignette img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+}
+
+[aria-checked='true'] .vignette {
+  background: #fff;
+}
+
+[aria-checked='true'] .vignette img {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+.droite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.conseille {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--onb-yl);
+  box-shadow: 0 2px 0 var(--onb-yld);
+  color: var(--onb-ink);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.radio {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 2px solid var(--onb-line);
+  border-radius: 999px;
+  background: #fff;
+}
+
+[aria-checked='true'] .radio {
+  border-color: var(--onb-pp);
+  background: var(--onb-pp);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* Ce que le rythme donne en un mois. */
+.mois {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: var(--onb-pps);
+  color: var(--onb-ink);
+}
+
+.moisChiffre {
+  flex-shrink: 0;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--onb-pp);
+  animation: bulle 0.35s ease-out both;
+}
+
+.moisTexte {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.moisTexte b {
+  font-weight: 900;
+}
+
+@keyframes surgit {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bulle {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes respire {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lueur,
+  .flamme,
+  .bulle,
+  .moisChiffre {
+    animation: none;
+  }
+}

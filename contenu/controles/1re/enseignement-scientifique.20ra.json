@@ -1,0 +1,500 @@
+{
+  "niveau": "1re",
+  "matiere": "enseignement-scientifique",
+  "sujets": [
+    {
+      "chapitre": "f059ebc4-8649-5154-ae05-7af3e0d1035f",
+      "difficulte": 1,
+      "titre": "Les atomes de Nour",
+      "consigne": "Réponds à chaque question en une ou deux phrases, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Nour lit sur une affiche : « Les atomes de ton corps ont été fabriqués avant toi, ailleurs dans l’Univers. » Elle veut comprendre.\n\n**Données.** Le carbone 12 et le carbone 14 ont tous deux 6 protons. Le nombre (12 ou 14) est le nombre de nucléons, c’est-à-dire protons + neutrons.\n\n1. Qu’est-ce qui définit un élément chimique ? Explique pourquoi le carbone 12 et le carbone 14 sont le même élément, et donne le nombre de neutrons de chacun.\n2. Pour chacun de ces atomes, indique la « fabrique » qui l’a produit : l’hydrogène de l’eau de son corps ; le carbone de ses muscles ; l’or de sa bague.\n3. Un échantillon radioactif contient 1 000 noyaux. Combien en reste-t-il après deux demi-vies ?",
+      "bareme": [
+        { "critere": "Définition de l’élément par le numéro atomique Z et notion d’isotope, avec 6 et 8 neutrons", "points": 8 },
+        { "critere": "Les trois fabriques correctement attribuées (primordiale, stellaire, explosions d’étoiles)", "points": 8 },
+        { "critere": "Deux demi-vies : il reste 250 noyaux (le quart)", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un élément chimique est défini par son **numéro atomique Z**, c’est-à-dire son **nombre de protons**. Le carbone 12 et le carbone 14 ont tous deux 6 protons : c’est le même élément. Ce sont des **isotopes** (même Z, nombre de neutrons différent) : carbone 12 → 12 − 6 = **6 neutrons** ; carbone 14 → 14 − 6 = **8 neutrons**.\n2. L’**hydrogène** vient de la **nucléosynthèse primordiale** (les 3 premières minutes après le Big Bang). Le **carbone** vient de la **nucléosynthèse stellaire** (fusion au cœur des étoiles, qui produit les éléments jusqu’au fer). L’**or**, plus lourd que le fer, vient des **explosions d’étoiles** (supernovae, fusions d’astres compacts).\n3. Après une demi-vie il reste la moitié (500), après deux demi-vies le **quart** : 1 000 / 4 = **250 noyaux**."
+    },
+    {
+      "chapitre": "f059ebc4-8649-5154-ae05-7af3e0d1035f",
+      "difficulte": 2,
+      "titre": "Le chronomètre du carbone 14",
+      "consigne": "Réponds en détaillant tes calculs et en justifiant avec le cours.",
+      "enonce": "**Situation.** Dans un laboratoire, Hugo étudie un échantillon qui contient au départ N0 = 8 000 noyaux de carbone 14. La demi-vie du carbone 14 est T = 5 730 ans.\n\n1. Rappelle la définition de la demi-vie.\n2. Complète le tableau : nombre de noyaux restants après 1, 2 et 3 demi-vies, et durée écoulée en années.\n3. À l’aide de la relation N = N0 × (1/2)^(t/T), calcule le nombre de noyaux restants au bout de t = 11 460 ans. Ce résultat est-il cohérent avec ton tableau ?\n4. Son camarade Léo propose de chauffer fortement l’échantillon « pour aller plus vite ». Explique pourquoi c’est inutile, et pourquoi cette propriété fait de la radioactivité une horloge.",
+      "bareme": [
+        { "critere": "Définition correcte de la demi-vie (la moitié des noyaux s’est désintégrée)", "points": 4 },
+        { "critere": "Tableau juste : 4 000, 2 000, 1 000 noyaux ; 5 730, 11 460, 17 190 ans", "points": 6 },
+        { "critere": "Calcul avec la formule : 2 000 noyaux, cohérence avec la ligne des 2 demi-vies", "points": 5 },
+        { "critere": "La demi-vie ne dépend ni de la température, ni de la pression, ni de la chimie : d’où l’horloge", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La **demi-vie** T est la durée au bout de laquelle **la moitié** des noyaux radioactifs d’un échantillon s’est désintégrée.\n2. Tableau :\n- 1 demi-vie : 5 730 ans, 8 000 / 2 = **4 000** noyaux ;\n- 2 demi-vies : 11 460 ans, **2 000** noyaux (le quart) ;\n- 3 demi-vies : 17 190 ans, **1 000** noyaux (le huitième).\n3. t / T = 11 460 / 5 730 = 2, donc N = 8 000 × (1/2)² = 8 000 × 1/4 = **2 000 noyaux**. C’est bien la valeur du tableau après 2 demi-vies.\n4. La désintégration est spontanée et se fait à un rythme statistique fixe : **ni la température, ni la pression, ni la chimie ne modifient la demi-vie**. Chauffer ne sert donc à rien. Comme cette durée est constante quelles que soient les conditions, mesurer la part de noyaux restants permet de connaître le temps écoulé : c’est une **horloge**."
+    },
+    {
+      "chapitre": "f059ebc4-8649-5154-ae05-7af3e0d1035f",
+      "difficulte": 3,
+      "titre": "Trois inventaires, une même histoire",
+      "consigne": "Exploite le document et les données, puis rédige des réponses argumentées qui mobilisent plusieurs notions du chapitre.",
+      "enonce": "**Document – Les éléments dominants dans trois inventaires**\n\n| Inventaire | Éléments dominants |\n| Univers | hydrogène (92 % des atomes), hélium (près de 8 %) ; tout le reste pèse moins de 1 % |\n| Croûte terrestre | oxygène (environ 47 % en masse), silicium (environ 28 %) |\n| Corps humain | oxygène, carbone, hydrogène, azote : plus de 99 % de la masse |\n\n**Données.** Numéros atomiques : H (1), He (2), C (6), N (7), O (8), Si (14), Fe (26), Au (79), U (92).\n\n1. Compare la place de l’hydrogène dans les trois inventaires. Que montre la différence des trois classements ?\n2. Dans quelle « fabrique » ont été produits le carbone, l’azote et l’oxygène du corps humain ? Justifie avec les numéros atomiques.\n3. Pourquoi l’uranium ne peut-il pas avoir été fabriqué par fusion au cœur d’une étoile ? Où a-t-il été produit ?\n4. Samia brûle un morceau de charbon (du carbone) et affirme : « Le carbone a disparu. » Corrige-la.",
+      "bareme": [
+        { "critere": "Comparaison des trois inventaires et idée que la matière s’est triée en se rassemblant", "points": 5 },
+        { "critere": "C, N, O issus de la nucléosynthèse stellaire, justifié par Z inférieur à celui du fer", "points": 5 },
+        { "critere": "Au-delà du fer la fusion consomme de l’énergie ; uranium issu des explosions d’étoiles", "points": 6 },
+        { "critere": "Conservation de l’élément : le carbone passe dans le CO2", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. L’hydrogène domine l’**Univers** (92 % des atomes) ; il n’apparaît pas parmi les éléments dominants de la **croûte terrestre** (oxygène et silicium) ; il fait partie des quatre éléments principaux du **corps humain** (O, C, H, N). Trois inventaires donnent **trois classements différents** : la matière s’est **triée** en se rassemblant (planète, êtres vivants).\n2. Le carbone (Z = 6), l’azote (Z = 7) et l’oxygène (Z = 8) ont un numéro atomique **inférieur à celui du fer** (Z = 26). Ils ont été fabriqués par **nucléosynthèse stellaire** : la **fusion** au cœur des étoiles, qui produit les éléments **jusqu’au fer**. (La nucléosynthèse primordiale n’a produit que l’hydrogène et l’hélium.)\n3. L’uranium (Z = 92) est **plus lourd que le fer**. Or **au-delà du fer, la fusion consomme de l’énergie** au lieu d’en libérer : l’étoile ne peut pas s’en servir. Les éléments plus lourds que le fer sont produits lors des **explosions d’étoiles** (supernovae, fusions d’astres compacts).\n4. Un élément chimique **se conserve** dans une transformation chimique. Brûler du carbone ne le détruit pas : les atomes de carbone passent dans le **dioxyde de carbone CO2** libéré dans l’air. Le carbone n’a pas disparu, il a changé de molécule."
+    },
+    {
+      "chapitre": "f6faf72e-98a5-5d76-8274-519620c30a2e",
+      "difficulte": 1,
+      "titre": "Quartz ou verre ?",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "**Situation.** Au musée de minéralogie, Mathis observe un cristal de quartz et, juste à côté, un morceau de verre. Les deux sont faits de dioxyde de silicium.\n\n1. Donne la différence entre un solide cristallin et un solide amorphe. Classe le quartz et le verre.\n2. Comment la même espèce chimique peut-elle donner le quartz ou le verre ?\n3. Définis la maille d’un cristal. Montre par un calcul que la maille cubique simple contient 1 atome et la maille cubique à faces centrées 4 atomes (un atome au sommet compte pour 1/8, un atome au centre d’une face pour 1/2).",
+      "bareme": [
+        { "critere": "Distinction cristallin (ordre périodique) / amorphe (désordre figé), quartz et verre bien classés", "points": 7 },
+        { "critere": "Rôle de la vitesse de refroidissement", "points": 5 },
+        { "critere": "Définition de la maille et calculs 8 × 1/8 = 1 et 8 × 1/8 + 6 × 1/2 = 4", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Dans un solide **cristallin**, un motif se répète **à l’identique dans les trois directions** : c’est un empilement ordonné et périodique, un ordre à longue distance. Dans un solide **amorphe**, les atomes sont **figés en désordre**, comme un liquide arrêté net. Le **quartz** est cristallin, le **verre** est amorphe.\n2. Le dioxyde de silicium donne le quartz **ou** le verre selon la **vitesse de refroidissement** : lente, les atomes ont le temps de s’ordonner (quartz) ; très rapide, ils se figent en désordre (verre).\n3. La **maille** est le plus petit volume qui, répété par translation, reconstruit tout le cristal.\n- Cubique simple : 8 sommets × 1/8 = **1 atome**.\n- Cubique à faces centrées : 8 × 1/8 + 6 faces × 1/2 = 1 + 3 = **4 atomes**."
+    },
+    {
+      "chapitre": "f6faf72e-98a5-5d76-8274-519620c30a2e",
+      "difficulte": 2,
+      "titre": "La masse volumique du cuivre",
+      "consigne": "Détaille chaque calcul, avec les unités, et donne les résultats en écriture scientifique.",
+      "enonce": "**Situation.** Le cuivre cristallise dans une maille **cubique à faces centrées**.\n\n**Données.**\n- Arête de la maille : a = 361 pm = 3,61 × 10^-10 m\n- Masse d’un atome de cuivre : m = 1,055 × 10^-25 kg\n- Masse volumique mesurée du cuivre : 8 960 kg/m³\n\n1. Combien d’atomes contient une maille cubique à faces centrées ? Justifie.\n2. Calcule la masse des atomes de la maille, puis le volume de la maille (V = a³).\n3. Déduis-en la masse volumique ρ du cuivre et compare-la à la valeur mesurée.\n4. La compacité de cette maille vaut environ 0,74, celle de la maille cubique simple environ 0,52. Que signifient ces nombres ?",
+      "bareme": [
+        { "critere": "Maille CFC : 8 × 1/8 + 6 × 1/2 = 4 atomes", "points": 4 },
+        { "critere": "Masse de la maille 4,22 × 10^-25 kg et volume 4,70 × 10^-29 m³", "points": 6 },
+        { "critere": "ρ ≈ 8,97 × 10³ kg/m³ et comparaison avec 8 960 kg/m³", "points": 6 },
+        { "critere": "Interprétation de la compacité : CFC est l’empilement le plus dense", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Dans une maille CFC : 8 atomes aux sommets comptés pour 1/8 et 6 atomes au centre des faces comptés pour 1/2 : 8 × 1/8 + 6 × 1/2 = 1 + 3 = **4 atomes**.\n2. Masse des atomes de la maille : 4 × 1,055 × 10^-25 = **4,22 × 10^-25 kg**.\nVolume : V = a³ = (3,61 × 10^-10)³ = 47,05 × 10^-30 ≈ **4,70 × 10^-29 m³**.\n3. ρ = masse des atomes de la maille / volume de la maille = 4,22 × 10^-25 / 4,70 × 10^-29 ≈ **8,97 × 10³ kg/m³**, soit environ 8 970 kg/m³. C’est très proche de la valeur mesurée (8 960 kg/m³) : le modèle de la maille décrit bien le cristal réel.\n4. La compacité est la fraction du volume de la maille réellement occupée par les atomes : 74 % pour la CFC, 52 % pour la cubique simple. La maille **cubique à faces centrées** est **l’empilement le plus dense**."
+    },
+    {
+      "chapitre": "f6faf72e-98a5-5d76-8274-519620c30a2e",
+      "difficulte": 3,
+      "titre": "Ce que racontent les cristaux",
+      "consigne": "Exploite les documents et rédige des réponses argumentées en mobilisant plusieurs notions du chapitre.",
+      "enonce": "**Document 1 – Trois roches issues d’un même magma**\n\n| Roche | Observation au microscope |\n| Roche A | Entièrement cristallisée, gros cristaux visibles à l’œil nu : quartz, feldspaths, micas |\n| Roche B | Petits cristaux noyés dans une pâte non cristallisée |\n| Roche C (obsidienne) | Aucun cristal, cassure lisse comme du verre |\n\n**Document 2 – La nacre**\n\n> La nacre qui tapisse l’intérieur de certaines coquilles est faite de plaquettes de carbonate de calcium (aragonite) déposées sur une fine trame organique. Elle résiste bien mieux à la fracture que l’aragonite pure.\n\n1. Identifie les roches A et B (granite ou basalte) et explique ce que la taille des cristaux raconte de leur histoire.\n2. La roche C est-elle cristalline ou amorphe ? Propose une explication de sa formation.\n3. Explique pourquoi on peut dire que les trois roches illustrent une seule variable.\n4. À l’aide du document 2, montre que le vivant fabrique lui aussi des cristaux, et explique ce que la trame organique apporte. Cite un autre biominéral du cours et où on le trouve.",
+      "bareme": [
+        { "critere": "A = granite (refroidissement lent en profondeur), B = basalte (refroidissement rapide en surface)", "points": 6 },
+        { "critere": "C amorphe : refroidissement très rapide, atomes figés en désordre", "points": 4 },
+        { "critere": "La vitesse de refroidissement est la seule variable qui distingue les textures", "points": 3 },
+        { "critere": "Biominéral sur trame organique, résistance accrue ; phosphate de calcium dans l’os et l’émail", "points": 5 },
+        { "critere": "Rédaction claire, vocabulaire du cours (maille, texture, cristallin, amorphe)", "points": 2 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. La roche A, entièrement cristallisée à gros grains de quartz, feldspaths et micas, est un **granite** : le magma a refroidi **lentement, en profondeur**, et les cristaux ont eu le temps de grandir. La roche B, à petits cristaux noyés dans un verre, est un **basalte** : refroidissement **rapide, en surface**. La taille des cristaux raconte donc la vitesse de refroidissement.\n2. La roche C n’a aucun cristal : c’est un solide **amorphe** (comme le verre, l’obsidienne est citée dans le cours). Le magma a refroidi **très rapidement** : les atomes se sont **figés en désordre** avant de pouvoir s’ordonner en réseau.\n3. Les trois roches viennent d’un **même magma** : seule la **vitesse de refroidissement** change. Lente → gros cristaux ; rapide → petits cristaux + verre ; très rapide → verre seul. Même espèce chimique, textures différentes, comme le dioxyde de silicium qui donne le quartz ou le verre.\n4. La nacre est faite de **carbonate de calcium** cristallisé (aragonite) par un être vivant : c’est un **biominéral**. Ces cristaux se déposent sur une **trame organique**, ce qui donne des propriétés que le minéral seul n’a pas : la nacre **résiste bien mieux à la fracture** que l’aragonite pure. Autre biominéral : le **phosphate de calcium**, dans l’**os** et l’**émail** dentaire (le carbonate de calcium forme aussi les coquilles de mollusques et les tests d’oursins)."
+    },
+    {
+      "chapitre": "2f65b9bd-356e-5b44-9ce9-d02b235d98d7",
+      "difficulte": 1,
+      "titre": "Une théorie née du microscope",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "**Situation.** Pour un exposé, Inès doit résumer l’histoire de la théorie cellulaire et expliquer ce qu’on voit au microscope optique.\n\n**Données.** Pouvoir de résolution du microscope optique : 0,2 µm. Épaisseur de la membrane plasmique : environ 7,5 nm. 1 µm = 1 000 nm.\n\n1. Que montrent Schleiden et Schwann vers 1838, puis Virchow en 1855 ? Qu’en déduit-on sur la lignée cellulaire ?\n2. Donne la taille typique d’une cellule animale et celle d’une bactérie.\n3. Explique, en comparant les valeurs, pourquoi le microscope optique montre la cellule mais pas sa membrane.",
+      "bareme": [
+        { "critere": "Apports de Schleiden et Schwann puis de Virchow, lignée cellulaire ininterrompue", "points": 8 },
+        { "critere": "Ordres de grandeur : 10 à 100 µm et environ 1 µm", "points": 4 },
+        { "critere": "Comparaison chiffrée : 7,5 nm est inférieur à 0,2 µm = 200 nm", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Vers 1838, **Schleiden et Schwann** établissent que **tous les êtres vivants sont constitués de cellules**. En 1855, **Virchow** ajoute que **toute cellule provient d’une cellule préexistante**. On en déduit que la **lignée cellulaire est ininterrompue** depuis les origines de la vie.\n2. Une cellule animale mesure **10 à 100 µm** ; une bactérie environ **1 µm**.\n3. Le microscope optique ne distingue pas deux détails plus proches que **0,2 µm = 200 nm**. Une cellule (10 à 100 µm) est bien plus grande que 0,2 µm : on la voit. La membrane ne fait qu’environ **7,5 nm**, soit bien moins que 200 nm : elle est invisible au microscope optique. Il a fallu le **microscope électronique** pour l’observer."
+    },
+    {
+      "chapitre": "2f65b9bd-356e-5b44-9ce9-d02b235d98d7",
+      "difficulte": 2,
+      "titre": "Une frontière qui se forme toute seule",
+      "consigne": "Justifie chaque réponse et détaille les calculs.",
+      "enonce": "**Situation.** Dans un tube, Yanis agite des phospholipides dans de l’eau. Au microscope électronique, il observe ensuite de petites sphères limitées par une double couche.\n\n**Données.** Cellule animale observée : 50 µm de diamètre. Épaisseur de la membrane : 7,5 nm. 1 µm = 1 000 nm.\n\n1. Qu’est-ce qu’une molécule amphiphile ? Décris le comportement de chaque partie d’un phospholipide dans l’eau.\n2. Explique pourquoi les phospholipides forment spontanément une bicouche. Qu’a de surprenant ce résultat ?\n3. Combien d’épaisseurs de membrane faudrait-il aligner pour atteindre le diamètre de la cellule ?\n4. Pourquoi la membrane est-elle la condition première d’une cellule ?",
+      "bareme": [
+        { "critere": "Amphiphile : tête hydrophile vers l’eau, deux queues hydrophobes qui la fuient", "points": 5 },
+        { "critere": "Organisation spontanée en bicouche, sans qu’aucune information ne la commande", "points": 5 },
+        { "critere": "Calcul : 50 000 nm / 7,5 nm ≈ 6 700 épaisseurs", "points": 5 },
+        { "critere": "Rôle de la membrane : milieu intérieur distinct, contrôle des échanges", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Une molécule **amphiphile** possède une partie **hydrophile** et une partie **hydrophobe**. Dans un phospholipide, la **tête hydrophile** se tourne **vers l’eau**, les deux **queues hydrophobes** la **fuient**.\n2. Dans l’eau, les queues hydrophobes se regroupent face à face à l’abri de l’eau, les têtes restant au contact de l’eau de part et d’autre : c’est une **bicouche**, qui peut se refermer en sphère. Ce qui surprend, c’est que cette organisation se fait **spontanément**, **sans qu’aucune information ne la commande**.\n3. 50 µm = 50 000 nm. 50 000 / 7,5 ≈ **6 700 épaisseurs** de membrane (6 667).\n4. La membrane **délimite un milieu intérieur** distinct de l’extérieur et **contrôle les échanges** entre les deux. Sans cette frontière, pas de milieu propre où se déroule le métabolisme : c’est la condition première d’une cellule."
+    },
+    {
+      "chapitre": "2f65b9bd-356e-5b44-9ce9-d02b235d98d7",
+      "difficulte": 3,
+      "titre": "Levures et algues sous cloche",
+      "consigne": "Analyse les résultats expérimentaux et rédige des réponses argumentées qui mobilisent le vocabulaire du chapitre.",
+      "enonce": "**Document – Trois enceintes étudiées pendant une heure**\n\n| Enceinte | Contenu | Résultats |\n| A | Algues chlorophylliennes dans une eau minérale, éclairées | Le CO2 diminue, le O2 augmente, de la matière organique est produite |\n| B | Levures + glucose, avec dioxygène | Le O2 diminue, le CO2 augmente |\n| C | Levures + glucose, sans dioxygène | Le CO2 augmente, de l’éthanol apparaît |\n\n1. Définis le métabolisme d’une cellule.\n2. Pour l’enceinte A, indique si les algues sont autotrophes ou hétérotrophes pour le carbone et nomme la voie métabolique. Justifie avec les résultats.\n3. Pour les enceintes B et C, nomme la façon dont les levures obtiennent leur matière organique et la voie qui la dégrade dans chaque cas. Justifie.\n4. En comparant B et C, puis A et B, montre que le métabolisme dépend de deux facteurs que tu nommeras.",
+      "bareme": [
+        { "critere": "Définition du métabolisme : ensemble des réactions chimiques de la cellule", "points": 3 },
+        { "critere": "Enceinte A : autotrophie par photosynthèse, justifiée par CO2 consommé et matière produite", "points": 5 },
+        { "critere": "Levures hétérotrophes : respiration en B (O2 consommé), fermentation en C (sans O2)", "points": 6 },
+        { "critere": "B/C : rôle des conditions du milieu ; A/B : rôle du patrimoine génétique (enzymes)", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Le **métabolisme** est l’**ensemble des réactions chimiques** d’une cellule.\n2. Enceinte A : les algues fabriquent de la matière organique à partir de **minéral** (CO2 de l’eau, qui diminue) et d’une source d’énergie, la **lumière**. Elles sont **autotrophes** ; la voie est la **photosynthèse** (le O2 produit en est le sous-produit).\n3. Les levures **prélèvent** leur matière organique dans le milieu (le glucose) : elles sont **hétérotrophes**.\n- En B, avec dioxygène : le O2 diminue et le CO2 augmente → la matière organique est dégradée par **respiration** (avec O2).\n- En C, sans dioxygène : du CO2 et de l’éthanol apparaissent → la dégradation se fait par **fermentation** (sans O2).\n4. Entre B et C, ce sont les **mêmes levures** : seule la présence de dioxygène change, et la voie métabolique change → le métabolisme dépend des **conditions du milieu** (lumière, dioxygène, nutriments). Entre A et B, les conditions diffèrent mais surtout les cellules sont différentes : l’algue possède les enzymes de la photosynthèse, la levure non → le métabolisme dépend aussi du **patrimoine génétique**, c’est-à-dire des **enzymes disponibles**."
+    },
+    {
+      "chapitre": "4022cbc0-aa1c-5cda-8b5e-2a7e0e6aa6da",
+      "difficulte": 1,
+      "titre": "La couleur dit la température",
+      "consigne": "Réponds en détaillant les calculs, avec les unités.",
+      "enonce": "**Situation.** Chloé compare deux étoiles : le Soleil, dont la surface est à 5 800 K, et une étoile rouge dont la surface est à 3 000 K.\n\n**Donnée.** Loi de Wien : λmax × T = 2,9 × 10^-3 m·K.\n\n1. Quelle réaction nucléaire produit l’énergie du Soleil ? Où a-t-elle lieu ?\n2. Calcule la longueur d’onde du maximum d’émission de chaque étoile, en nanomètres (1 nm = 10^-9 m).\n3. Dans quel domaine se situe chaque maximum ? Explique pourquoi on dit que « la couleur dit la température ».",
+      "bareme": [
+        { "critere": "Fusion de l’hydrogène en hélium au cœur du Soleil (environ 15 millions de degrés)", "points": 5 },
+        { "critere": "λmax ≈ 500 nm pour le Soleil et ≈ 967 nm pour l’étoile rouge, calculs posés", "points": 10 },
+        { "critere": "Domaines (visible vert-jaune ; rouge et infrarouge) et lien couleur-température", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L’énergie du Soleil vient de la **fusion** : au cœur du Soleil, à environ **15 millions de degrés**, quatre noyaux d’**hydrogène** fusionnent en un noyau d’**hélium**.\n2. λmax = 2,9 × 10^-3 / T.\n- Soleil : 2,9 × 10^-3 / 5 800 = 5,0 × 10^-7 m = **500 nm**.\n- Étoile rouge : 2,9 × 10^-3 / 3 000 ≈ 9,67 × 10^-7 m ≈ **967 nm**.\n3. Le maximum du Soleil (500 nm) est dans le **visible**, vers le **vert-jaune**. Celui de l’étoile à 3 000 K (environ 970 nm) est dans le **rouge et l’infrarouge**. Plus l’étoile est chaude, plus λmax est petite : la **couleur** d’une étoile renseigne donc sur sa **température** de surface."
+    },
+    {
+      "chapitre": "4022cbc0-aa1c-5cda-8b5e-2a7e0e6aa6da",
+      "difficulte": 2,
+      "titre": "La masse que perd le Soleil",
+      "consigne": "Détaille chaque calcul en écriture scientifique, avec les unités.",
+      "enonce": "**Situation.** Le Soleil rayonne une puissance de 3,8 × 10^26 W depuis 4,6 milliards d’années. Adam veut vérifier qu’il perd bien de la masse en brillant.\n\n**Données.** E = m × c², avec c = 3,0 × 10^8 m/s. Masse du Soleil : 2 × 10^30 kg. 1 an ≈ 3,15 × 10^7 s. 1 tonne = 10³ kg.\n\n1. Explique d’où vient l’énergie libérée par la fusion, en parlant de la masse.\n2. La puissance est l’énergie libérée chaque seconde. Calcule la masse perdue par le Soleil en une seconde. Exprime-la en millions de tonnes.\n3. En supposant cette perte constante, calcule la masse perdue en 4,6 milliards d’années, puis la fraction de la masse du Soleil que cela représente.\n4. Pourquoi aucune combustion chimique ne pourrait-elle expliquer l’énergie du Soleil ?",
+      "bareme": [
+        { "critere": "L’hélium formé est moins massif que les 4 noyaux d’hydrogène : la masse manquante devient énergie", "points": 4 },
+        { "critere": "m = E / c² ≈ 4,2 × 10^9 kg par seconde, soit environ 4 millions de tonnes", "points": 7 },
+        { "critere": "Masse perdue ≈ 6,1 × 10^26 kg, fraction ≈ 3 × 10^-4 (0,03 %)", "points": 6 },
+        { "critere": "Une combustion ne tiendrait que quelques milliers d’années", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Lors de la fusion, le noyau d’hélium formé est **moins massif** que les quatre noyaux d’hydrogène de départ. Cette **masse manquante** est convertie en énergie selon **E = m × c²**.\n2. En une seconde, E = 3,8 × 10^26 J. m = E / c² = 3,8 × 10^26 / (3,0 × 10^8)² = 3,8 × 10^26 / 9,0 × 10^16 ≈ **4,2 × 10^9 kg**, soit 4,2 × 10^6 tonnes : environ **4 millions de tonnes par seconde**.\n3. Durée : 4,6 × 10^9 × 3,15 × 10^7 ≈ 1,45 × 10^17 s. Masse perdue : 4,2 × 10^9 × 1,45 × 10^17 ≈ **6,1 × 10^26 kg**. Fraction : 6,1 × 10^26 / 2 × 10^30 ≈ **3 × 10^-4**, soit environ **0,03 %** de la masse du Soleil : une paille à l’échelle de l’astre.\n4. Une combustion est une réaction **chimique** : elle ne libère pas assez d’énergie et **ne tiendrait pas plus de quelques milliers d’années**, alors que le Soleil brille depuis 4,6 milliards d’années. Seule la fusion nucléaire l’explique."
+    },
+    {
+      "chapitre": "4022cbc0-aa1c-5cda-8b5e-2a7e0e6aa6da",
+      "difficulte": 3,
+      "titre": "Du Soleil au sol : ce qui arrive vraiment",
+      "consigne": "Résous chaque question en détaillant les calculs, puis rédige une conclusion argumentée.",
+      "enonce": "**Données.**\n- Loi de Stefan : P/S = σ × T⁴, avec σ = 5,67 × 10^-8 W·m^-2·K^-4\n- Température de surface du Soleil : 5 800 K\n- Constante solaire à la distance Terre-Soleil : 1 360 W/m²\n- La constante solaire décroît comme 1/d² ; Mars est environ 1,5 fois plus loin du Soleil que la Terre\n- cos 0° = 1 ; cos 60° ≈ 0,5\n\n1. Calcule la puissance émise par mètre carré de surface solaire.\n2. Une étoile a une surface deux fois moins chaude (2 900 K). Par combien sa puissance par mètre carré est-elle divisée ? Justifie sans refaire tout le calcul.\n3. Calcule la puissance reçue par mètre carré face au Soleil au niveau de Mars.\n4. Sur Terre, au-dessus de l’atmosphère, compare la puissance reçue par un mètre carré de surface quand les rayons arrivent perpendiculairement (angle d’incidence 0°) et quand ils arrivent avec un angle d’incidence de 60°.\n5. En t’appuyant sur la question 4, explique pourquoi il fait plus chaud à l’équateur qu’aux pôles.",
+      "bareme": [
+        { "critere": "Stefan : P/S ≈ 6,4 × 10^7 W/m², calcul posé", "points": 4 },
+        { "critere": "Température divisée par 2 : puissance divisée par 2⁴ = 16", "points": 4 },
+        { "critere": "Mars : 1 360 / 1,5² ≈ 604 W/m²", "points": 4 },
+        { "critere": "Incidence : 1 360 W/m² contre environ 680 W/m²", "points": 4 },
+        { "critere": "Explication : rayons inclinés, même énergie étalée sur une plus grande surface", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. T⁴ = (5 800)⁴ = (5,8 × 10³)⁴ ≈ 1,13 × 10^15 K⁴. P/S = 5,67 × 10^-8 × 1,13 × 10^15 ≈ **6,4 × 10^7 W/m²**.\n2. La loi de Stefan est en **puissance quatrième** : diviser T par 2 divise P/S par 2⁴ = **16**. (Réciproquement, doubler la température multiplie la puissance par 16.) L’étoile à 2 900 K émet environ 6,4 × 10^7 / 16 ≈ 4,0 × 10^6 W/m².\n3. La constante solaire décroît comme 1/d². À une distance 1,5 fois plus grande, elle est divisée par 1,5² = 2,25 : 1 360 / 2,25 ≈ **604 W/m²**.\n4. La puissance reçue par mètre carré est proportionnelle au cosinus de l’angle d’incidence : à 0°, 1 360 × 1 = **1 360 W/m²** ; à 60°, 1 360 × 0,5 ≈ **680 W/m²**, deux fois moins.\n5. Plus la latitude est élevée, plus les rayons arrivent **inclinés** : la **même énergie** s’étale sur une **plus grande surface**, donc chaque mètre carré de sol en reçoit moins. À l’équateur, les rayons arrivent presque perpendiculairement : la puissance par mètre carré est maximale. Cette inégalité de répartition crée les **zones climatiques**."
+    },
+    {
+      "chapitre": "bf9799ea-8997-5754-b886-66f9d80e1ecf",
+      "difficulte": 1,
+      "titre": "Des 1 360 aux 240 watts",
+      "consigne": "Réponds en détaillant les calculs et en justifiant.",
+      "enonce": "**Situation.** Sur un poster du CDI, Emma lit trois nombres : 1 360 W/m², 340 W/m² et 240 W/m². Elle veut comprendre le passage de l’un à l’autre.\n\n**Données.** Aire d’un disque : π R². Aire d’une sphère : 4 π R². Albédo moyen de la Terre : environ 30 %.\n\n1. Explique pourquoi la puissance solaire moyenne reçue par mètre carré de Terre vaut 340 W/m² et non 1 360 W/m². Fais le calcul.\n2. Définis l’albédo. Calcule la puissance réfléchie puis la puissance réellement absorbée par mètre carré.",
+      "bareme": [
+        { "critere": "Explication disque interceptant / sphère recevant, quatre fois plus grande", "points": 8 },
+        { "critere": "Calcul 1 360 / 4 = 340 W/m²", "points": 4 },
+        { "critere": "Définition de l’albédo, puissance réfléchie ≈ 100 W/m² et absorbée ≈ 240 W/m²", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La Terre **intercepte** le rayonnement solaire sur un **disque** d’aire π R², mais en tournant sur elle-même elle le **répartit** sur toute sa **sphère**, d’aire 4 π R², **quatre fois plus grande**. La puissance moyenne reçue par mètre carré est donc 1 360 / 4 = **340 W/m²**.\n2. L’**albédo** est la fraction du rayonnement solaire **réfléchie sans être absorbée**. Puissance réfléchie : 30 % de 340 = 0,30 × 340 ≈ 102, soit environ **100 W/m²**. Puissance absorbée : 340 − 100 = **240 W/m²** : c’est elle qui chauffe le système Terre."
+    },
+    {
+      "chapitre": "bf9799ea-8997-5754-b886-66f9d80e1ecf",
+      "difficulte": 2,
+      "titre": "Quand la banquise fond",
+      "consigne": "Réponds en détaillant les calculs et en justifiant chaque étape.",
+      "enonce": "**Situation.** Au printemps arctique, une zone reçoit en moyenne 200 W/m² de rayonnement solaire. Elle est d’abord couverte de neige fraîche, puis la banquise fond et laisse place à l’océan.\n\n**Données.** Albédo de la neige fraîche : 0,9. Albédo de l’océan : 0,1. Loi de Wien : λmax × T = 2,9 × 10^-3 m·K.\n\n1. Calcule la puissance absorbée par mètre carré par la neige, puis par l’océan.\n2. Explique pourquoi la fonte de la banquise amplifie le réchauffement. Comment appelle-t-on ce mécanisme ?\n3. La surface terrestre, à 288 K, rayonne à son tour. Calcule la longueur d’onde de son maximum d’émission et nomme le domaine.",
+      "bareme": [
+        { "critere": "Neige : 200 × (1 − 0,9) = 20 W/m² ; océan : 200 × (1 − 0,1) = 180 W/m²", "points": 7 },
+        { "critere": "Baisse de l’albédo, absorption accrue, réchauffement : rétroaction positive", "points": 7 },
+        { "critere": "λmax ≈ 1,0 × 10^-5 m = 10 µm, domaine infrarouge", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. La part absorbée est (1 − albédo).\n- Neige : 200 × (1 − 0,9) = 200 × 0,1 = **20 W/m²**.\n- Océan : 200 × (1 − 0,1) = 200 × 0,9 = **180 W/m²**, soit **9 fois plus**.\n2. Quand la banquise fond, la neige très réfléchissante est remplacée par l’océan sombre : l’**albédo baisse**, la surface **absorbe davantage** d’énergie, elle se réchauffe, ce qui fait fondre encore plus de glace. L’effet renforce sa propre cause : c’est une **rétroaction positive**.\n3. λmax = 2,9 × 10^-3 / 288 ≈ 1,0 × 10^-5 m = **10 µm**. La Terre rayonne dans l’**infrarouge**."
+    },
+    {
+      "chapitre": "bf9799ea-8997-5754-b886-66f9d80e1ecf",
+      "difficulte": 3,
+      "titre": "Un watt de trop",
+      "consigne": "Exploite les données, détaille les calculs et rédige des réponses argumentées.",
+      "enonce": "**Document – Quelques valeurs du climat**\n\n| Grandeur | Valeur |\n| Température moyenne de surface sans effet de serre | −18 °C |\n| Température moyenne de surface observée | +15 °C |\n| Teneur en CO2, ère préindustrielle | environ 280 ppm |\n| Teneur en CO2 actuelle | plus de 420 ppm |\n| Excédent d’énergie reçu par la Terre | de l’ordre de 1 W/m² |\n\n**Données.** Surface de la Terre : 5,1 × 10^14 m². 1 an ≈ 3,15 × 10^7 s. 1 W = 1 J/s.\n\n1. Décris le mécanisme de l’effet de serre en trois étapes, en nommant deux gaz à effet de serre.\n2. Calcule la valeur de l’effet de serre naturel. Pourquoi est-il indispensable à la vie ?\n3. Calcule de combien de ppm la teneur en CO2 a augmenté depuis l’ère préindustrielle, puis ce que cela représente en pourcentage de la valeur préindustrielle.\n4. Calcule l’excédent de puissance sur toute la surface terrestre, puis l’énergie accumulée en un an.\n5. Kylian affirme : « 1 W/m², c’est ridicule, ça ne peut rien changer. » Réponds-lui en t’appuyant sur tes calculs.",
+      "bareme": [
+        { "critere": "Mécanisme : absorption de l’infrarouge, réémission dans toutes les directions, double apport au sol", "points": 5 },
+        { "critere": "Effet de serre naturel de 33 °C, condition de l’eau liquide", "points": 3 },
+        { "critere": "Hausse de 140 ppm, soit 50 %", "points": 3 },
+        { "critere": "5,1 × 10^14 W et environ 1,6 × 10^22 J par an", "points": 5 },
+        { "critere": "Réponse argumentée : écart minuscule accumulé sur toute la surface et des décennies", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le sol rayonne dans l’**infrarouge**. Les **gaz à effet de serre** (vapeur d’eau, **CO2**, méthane, protoxyde d’azote) **absorbent** cet infrarouge. Ils le **réémettent dans toutes les directions**, donc en partie **vers le sol**. Le sol reçoit ainsi **deux apports** : le Soleil **et** l’atmosphère.\n2. 15 − (−18) = **33 °C**. Sans lui, la surface serait à −18 °C en moyenne : l’effet de serre naturel est la condition de l’**eau liquide**.\n3. 420 − 280 = **140 ppm** de plus. 140 / 280 = 0,5, soit une hausse de **50 %**.\n4. Puissance : 1 × 5,1 × 10^14 = **5,1 × 10^14 W**. Énergie en un an : 5,1 × 10^14 × 3,15 × 10^7 ≈ **1,6 × 10^22 J**.\n5. 1 W/m² semble minuscule face aux 240 W/m² absorbés, mais il s’applique à **toute la surface** de la Terre, **sans arrêt** : cela fait environ 1,6 × 10^22 J de plus chaque année, accumulés **sur des décennies**. La Terre ne renvoie plus exactement autant d’énergie qu’elle en reçoit : cet écart minuscule **est** le réchauffement climatique."
+    },
+    {
+      "chapitre": "d1eae4d4-ed1d-53e7-9419-4a0a80060455",
+      "difficulte": 1,
+      "titre": "La feuille, usine à matière",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "**Situation.** Jules observe une feuille d’épinard au microscope et se demande comment elle fabrique sa matière.\n\n1. Écris l’équation bilan de la photosynthèse et précise les deux conditions nécessaires.\n2. Vérifie que l’équation est équilibrée en comptant les atomes de C, H et O de chaque côté.\n3. Dans quel organite a lieu la photosynthèse ?\n4. Pourquoi les feuilles sont-elles vertes ?",
+      "bareme": [
+        { "critere": "Équation 6 CO2 + 6 H2O → C6H12O6 + 6 O2, avec lumière et chlorophylle", "points": 7 },
+        { "critere": "Vérification : 6 C, 12 H et 18 O de chaque côté", "points": 5 },
+        { "critere": "Le chloroplaste", "points": 3 },
+        { "critere": "Bleu et rouge absorbés, vert réfléchi", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **6 CO2 + 6 H2O → C6H12O6 + 6 O2**, en présence de **lumière** et de **chlorophylle**.\n2. À gauche : C = 6 ; H = 6 × 2 = 12 ; O = 6 × 2 + 6 × 1 = 18. À droite : C = 6 ; H = 12 ; O = 6 + 6 × 2 = 18. L’équation est **équilibrée**.\n3. La photosynthèse a lieu dans les **chloroplastes**.\n4. Les pigments **absorbent le bleu et le rouge** et **réfléchissent le vert** : c’est la lumière verte renvoyée qui arrive à notre œil."
+    },
+    {
+      "chapitre": "d1eae4d4-ed1d-53e7-9419-4a0a80060455",
+      "difficulte": 2,
+      "titre": "Le rendement d’un champ de blé",
+      "consigne": "Détaille les calculs et justifie avec le cours.",
+      "enonce": "**Situation.** Sur une journée d’été, un mètre carré de champ de blé reçoit 2,0 × 10^7 J d’énergie lumineuse. Les agronomes estiment que la matière organique fabriquée ce jour-là par ce mètre carré stocke 1,6 × 10^5 J.\n\n**Document – Deux spectres**\n\n> Une chromatographie de l’extrait de feuilles sépare des chlorophylles a et b et des caroténoïdes. Le spectre d’absorption de cet extrait montre deux pics, dans le bleu et dans le rouge. Le spectre d’action (intensité de la photosynthèse selon la couleur de la lumière) montre deux pics aux mêmes endroits.\n\n1. Où l’énergie lumineuse est-elle stockée dans la plante ?\n2. Calcule le rendement de la photosynthèse de ce champ, en pourcentage. Compare au cours.\n3. Que montre la superposition des deux spectres ?\n4. Ce rendement est faible. Pourquoi la photosynthèse reste-t-elle pourtant essentielle à toute la biosphère ?",
+      "bareme": [
+        { "critere": "L’énergie est stockée dans les liaisons chimiques de la matière organique", "points": 4 },
+        { "critere": "Rendement = 1,6 × 10^5 / 2,0 × 10^7 = 0,8 %, inférieur à 1 % comme dans le cours", "points": 7 },
+        { "critere": "L’activité suit les longueurs d’onde absorbées par les pigments", "points": 5 },
+        { "critere": "Seule porte d’entrée de l’énergie solaire dans le vivant", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L’énergie lumineuse est **stockée dans les liaisons chimiques** de la matière organique fabriquée (le glucose et ce qui en dérive).\n2. Rendement = énergie stockée / énergie reçue = 1,6 × 10^5 / 2,0 × 10^7 = 0,008, soit **0,8 %**. C’est conforme au cours : la part de l’énergie solaire stockée en matière organique est de **moins de 1 %**.\n3. Les pics du spectre d’action coïncident avec ceux du spectre d’absorption : l’activité photosynthétique suit **exactement les longueurs d’onde absorbées** par les pigments (bleu et rouge). Ce sont donc bien les pigments qui captent l’énergie utilisée.\n4. La photosynthèse est la **seule porte d’entrée notable** de l’énergie solaire dans la matière vivante : tout ce que nous mangeons, brûlons ou respirons en dépend. Même avec un rendement dérisoire, elle produit de l’ordre de **100 milliards de tonnes de carbone par an** et alimente toute la biosphère."
+    },
+    {
+      "chapitre": "d1eae4d4-ed1d-53e7-9419-4a0a80060455",
+      "difficulte": 3,
+      "titre": "Brûler du soleil ancien",
+      "consigne": "Exploite les documents et rédige des réponses argumentées en mobilisant plusieurs notions du chapitre.",
+      "enonce": "**Document 1 – La production primaire**\n\n> La production primaire de la planète est de l’ordre de 100 milliards de tonnes de carbone par an, répartie à parts à peu près égales entre les continents et les océans, où elle est assurée par le phytoplancton.\n\n**Document 2 – Les combustibles**\n\n> Le charbon provient surtout des forêts du Carbonifère, il y a environ 350 millions d’années. Le pétrole provient du plancton marin enfoui. Un moteur brûle un litre d’essence en quelques minutes.\n\n1. Estime la production primaire des océans en une année. Qui en est responsable ?\n2. Retrace le trajet de l’énergie depuis le Soleil jusqu’au moteur d’une voiture, en passant par la photosynthèse et le pétrole.\n3. Explique pourquoi on peut dire que brûler de l’essence, c’est libérer de l’énergie solaire ancienne.\n4. En comparant les durées, explique pourquoi ce stock n’est pas renouvelable à l’échelle humaine.\n5. Écris l’équation de la photosynthèse, puis explique en quoi elle éclaire le rôle des forêts et du phytoplancton vis-à-vis du CO2 de l’air.",
+      "bareme": [
+        { "critere": "Environ 50 milliards de tonnes de carbone par an, par le phytoplancton", "points": 3 },
+        { "critere": "Chaîne Soleil → photosynthèse → matière organique du plancton → enfouissement → pétrole → combustion", "points": 5 },
+        { "critere": "Énergie stockée dans les liaisons chimiques, libérée à la combustion", "points": 4 },
+        { "critere": "Comparaison millions d’années / minutes : stock consommé plus vite qu’il ne se reconstitue", "points": 4 },
+        { "critere": "Équation juste et rôle de la photosynthèse : le CO2 est consommé", "points": 4 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. La production est répartie à parts à peu près égales : environ 100 / 2 = **50 milliards de tonnes de carbone par an** pour les océans, assurée par le **phytoplancton**.\n2. L’énergie lumineuse du **Soleil** est captée par le plancton marin, qui la stocke par **photosynthèse** dans sa **matière organique**. Ce plancton, **enfoui** au fond des mers, s’est transformé en **pétrole** au fil de millions d’années. Raffiné en essence, il est **brûlé** dans le moteur, qui libère l’énergie stockée.\n3. L’énergie contenue dans l’essence est celle qui a été **stockée dans les liaisons chimiques** de la matière organique par la photosynthèse, il y a des millions d’années. La combustion ne fait que la **libérer** : c’est de l’énergie solaire captée autrefois.\n4. Le stock s’est constitué en **millions d’années** (charbon : environ 350 millions d’années), et on le consomme en **minutes**. Il se consomme **infiniment plus vite** qu’il ne se reconstitue : à l’échelle humaine, il n’est pas renouvelable.\n5. **6 CO2 + 6 H2O → C6H12O6 + 6 O2**. La photosynthèse **consomme du dioxyde de carbone** et en fait de la matière organique : forêts et phytoplancton retirent du CO2 de l’air, et rejettent du dioxygène."
+    },
+    {
+      "chapitre": "1a259568-bee7-5c34-a467-acf8db4bfe56",
+      "difficulte": 1,
+      "titre": "Une ampoule de 100 watts",
+      "consigne": "Réponds en détaillant tes calculs.",
+      "enonce": "**Situation.** Au repos, le corps de Léna dissipe environ 100 W de chaleur, comme une vieille ampoule.\n\n**Données.** 1 W = 1 J/s. Une journée dure 86 400 s. 1 kcal = 4,18 kJ.\n\n1. Calcule l’énergie dissipée par Léna au repos en une journée, en kJ puis en kcal. Compare à l’ordre de grandeur donné par le cours.\n2. Cite les quatre voies par lesquelles le corps évacue sa chaleur.\n3. Laquelle fonctionne encore quand l’air est plus chaud que la peau ?",
+      "bareme": [
+        { "critere": "100 × 86 400 = 8,64 × 10^6 J = 8 640 kJ ≈ 2 070 kcal, cohérent avec 2 000 kcal", "points": 9 },
+        { "critere": "Rayonnement, convection, conduction, évaporation de la sueur", "points": 7 },
+        { "critere": "L’évaporation de la sueur", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. E = P × t = 100 × 86 400 = 8 640 000 J = **8 640 kJ**. En kcal : 8 640 / 4,18 ≈ **2 070 kcal**. C’est cohérent avec le cours : une journée représente de l’ordre de **2 000 kcal**, soit près de 8 400 kJ.\n2. Les quatre voies : le **rayonnement** (infrarouge émis par la peau), la **convection** (échange avec l’air), la **conduction** (contact avec les objets), l’**évaporation** de la sueur.\n3. Quand l’air est plus chaud que la peau, seule l’**évaporation de la sueur** permet encore d’évacuer de la chaleur."
+    },
+    {
+      "chapitre": "1a259568-bee7-5c34-a467-acf8db4bfe56",
+      "difficulte": 2,
+      "titre": "Pédaler sous la canicule",
+      "consigne": "Détaille chaque calcul avec les unités et justifie tes réponses.",
+      "enonce": "**Situation.** Tom fait une sortie à vélo d’une heure par 38 °C. Son effort l’oblige à évacuer 600 W de chaleur en plus de son métabolisme de base. On suppose que l’air est plus chaud que sa peau.\n\n**Données.** L’évaporation d’un litre de sueur prélève environ 2 400 kJ. 1 h = 3 600 s.\n\n1. Pourquoi, dans ces conditions, Tom ne peut-il compter ni sur le rayonnement ni sur la convection pour se refroidir ?\n2. Calcule l’énergie supplémentaire à évacuer pendant la sortie, en kJ.\n3. Calcule le volume de sueur qui doit s’évaporer pour l’évacuer. Quel conseil pratique en tires-tu ?\n4. Si l’air est très humide, la sueur s’évapore mal. Quel risque court Tom ? Explique.",
+      "bareme": [
+        { "critere": "Air plus chaud que la peau : seule l’évaporation reste efficace", "points": 4 },
+        { "critere": "E = 600 × 3 600 = 2,16 × 10^6 J = 2 160 kJ", "points": 5 },
+        { "critere": "Volume = 2 160 / 2 400 = 0,9 L ; conseil : boire pour compenser", "points": 6 },
+        { "critere": "Chaleur humide : évacuation insuffisante, hyperthermie (coup de chaleur)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Le rayonnement et la convection évacuent la chaleur vers un milieu plus froid. Quand l’air est **plus chaud que la peau**, ils ne peuvent plus refroidir le corps : l’**évaporation de la sueur** est **la seule voie** qui fonctionne encore.\n2. E = P × t = 600 × 3 600 = 2 160 000 J = **2 160 kJ**.\n3. V = 2 160 / 2 400 = **0,9 L** de sueur. Tom perd presque un litre d’eau : il doit **boire** régulièrement pour compenser et continuer à transpirer.\n4. Si la sueur s’évapore mal (chaleur **humide**), l’évacuation **ne suffit plus** : la chaleur produite par l’effort s’accumule et la température interne monte. Tom risque l’**hyperthermie**, le **coup de chaleur**."
+    },
+    {
+      "chapitre": "1a259568-bee7-5c34-a467-acf8db4bfe56",
+      "difficulte": 3,
+      "titre": "Tenir 37 °C",
+      "consigne": "Analyse les trois situations et rédige des réponses argumentées qui mobilisent le vocabulaire du chapitre.",
+      "enonce": "**Situation 1.** Lors d’une randonnée en hiver, Maëlle tombe dans un lac glacé. Sortie de l’eau, elle est pâle et grelotte.\n\n**Situation 2.** Le soir, son frère Nathan a 39 °C de fièvre à cause d’une grippe.\n\n**Situation 3.** Lors d’un marathon par temps chaud et humide, un coureur s’effondre avec une température interne de 41 °C.\n\n1. Pourquoi tomber dans l’eau froide fait-il perdre la chaleur bien plus vite que rester dans l’air froid ? Nomme la voie d’échange.\n2. Situation 1 : explique la pâleur et les frissons de Maëlle. Quelle structure du cerveau déclenche ces réponses, et comment ?\n3. Que risque Maëlle si les pertes dépassent durablement sa production de chaleur ? Donne le seuil.\n4. Compare les situations 2 et 3 : dans les deux cas, la température dépasse 37 °C. Explique pourquoi l’une est une régulation et l’autre une panne.\n5. Explique pourquoi toute l’énergie des aliments qui ne sert pas au travail finit en chaleur, et pourquoi être homéotherme a un coût.",
+      "bareme": [
+        { "critere": "Conduction : l’eau est bien plus conductrice que l’air", "points": 3 },
+        { "critere": "Vasoconstriction (pâleur) et frissons, déclenchés par l’hypothalamus qui compare à une consigne", "points": 6 },
+        { "critere": "Hypothermie en dessous de 35 °C", "points": 3 },
+        { "critere": "Fièvre = consigne relevée ; coup de chaleur = évacuation insuffisante", "points": 5 },
+        { "critere": "Respiration cellulaire, reste en chaleur, coût énergétique permanent", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Dans l’eau, la chaleur part par **conduction** (contact). L’eau froide est **bien plus conductrice que l’air** : les pertes sont beaucoup plus rapides.\n2. La pâleur traduit la **vasoconstriction** : moins de sang circule en surface, ce qui réduit les pertes de chaleur. Les **frissons** sont des contractions musculaires qui **produisent de la chaleur**. Ces réponses sont déclenchées par l’**hypothalamus**, qui compare l’information des **thermorécepteurs** à une **valeur de consigne** et réagit à l’écart.\n3. Si les pertes dépassent durablement la production, Maëlle risque l’**hypothermie**, en dessous de **35 °C** : confusion, puis arrêt cardiaque.\n4. Chez Nathan, la **fièvre n’est pas une panne** : c’est la **valeur de consigne** elle-même que l’organisme **relève délibérément** ; la régulation fonctionne et maintient la température autour de cette nouvelle consigne. Chez le coureur, la consigne n’a pas changé : c’est l’**évacuation qui ne suffit plus** (effort intense, chaleur humide qui gêne l’évaporation) : c’est une **hyperthermie**, un coup de chaleur.\n5. La **respiration cellulaire** libère l’énergie chimique des aliments ; une part sert aux muscles et aux organes, **tout le reste finit en chaleur**. Maintenir environ 37 °C quelle que soit la température extérieure impose de produire et d’ajuster cette chaleur en permanence : c’est un **coût énergétique permanent** (environ 100 W au repos)."
+    },
+    {
+      "chapitre": "d4f4f580-32d1-5e04-8307-0384549f0a82",
+      "difficulte": 1,
+      "titre": "Un bâton et une ombre",
+      "consigne": "Réponds en justifiant et en détaillant les calculs.",
+      "enonce": "**Situation.** Vers 240 avant J.-C., Ératosthène sait qu’au solstice, à Syène, le Soleil est au zénith : un puits est éclairé jusqu’au fond. Au même instant, à Alexandrie, un gnomon fait une ombre qui correspond à un angle de 7,2°. Les deux villes sont séparées d’environ 5 000 stades.\n\n**Donnée.** On prend 1 stade ≈ 160 m.\n\n1. Cite deux observations anciennes qui montrent que la Terre est ronde.\n2. Montre que 7,2° représente 1/50 de 360°.\n3. Calcule la circonférence de la Terre en stades, puis en kilomètres. Compare à la valeur moderne de 40 075 km.",
+      "bareme": [
+        { "critere": "Deux indices : ombre circulaire sur la Lune, navires qui disparaissent par la coque, hauteur d’une étoile", "points": 6 },
+        { "critere": "360 / 7,2 = 50", "points": 4 },
+        { "critere": "50 × 5 000 = 250 000 stades ≈ 40 000 km, écart très faible avec 40 075 km", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Au choix : l’**ombre circulaire** de la Terre sur la Lune lors des éclipses ; les navires qui **disparaissent par la coque** avant le mât (surface courbe) ; une **étoile qui change de hauteur** quand on se déplace vers le nord ou le sud.\n2. 360 / 7,2 = **50** : l’angle de 7,2° est bien 1/50 du tour complet.\n3. La distance Syène-Alexandrie correspond à 1/50 du tour de la Terre : circonférence = 50 × 5 000 = **250 000 stades**. En kilomètres : 250 000 × 160 m = 40 000 000 m = **40 000 km**. La valeur moderne est 40 075 km : l’écart n’est que de 75 km, moins de 1 %, obtenu avec un bâton et une ombre."
+    },
+    {
+      "chapitre": "d4f4f580-32d1-5e04-8307-0384549f0a82",
+      "difficulte": 2,
+      "titre": "De Dunkerque à Barcelone",
+      "consigne": "Détaille chaque calcul et arrondis au kilomètre.",
+      "enonce": "**Situation.** À la fin du XVIIIe siècle, deux savants mesurent l’arc de méridien entre Dunkerque et Barcelone pour définir le mètre. On considère que les deux villes sont sur le même méridien.\n\n**Données.**\n- Latitude de Dunkerque : 51,03° N ; latitude de Barcelone : 41,38° N\n- Rayon de la Terre : R = 6 371 km\n- π ≈ 3,1416 ; un angle en radians vaut l’angle en degrés × π / 180\n\n1. Définis la latitude d’un lieu et donne sa plage de valeurs.\n2. Calcule l’écart de latitude entre les deux villes.\n3. Calcule la longueur de l’arc de méridien avec L = R × α. Pourquoi faut-il convertir l’angle en radians ?\n4. Vérifie ton résultat avec l’équivalence « 1° de latitude ≈ 111 km ».\n5. Exprime cette distance en milles marins, sachant qu’une minute d’arc correspond à un mille marin.",
+      "bareme": [
+        { "critere": "Latitude : angle depuis l’équateur sur un méridien, de −90° à +90°", "points": 3 },
+        { "critere": "Écart de 9,65°", "points": 2 },
+        { "critere": "α ≈ 0,1684 rad et L ≈ 1 073 km ; la formule exige des radians", "points": 7 },
+        { "critere": "Vérification 9,65 × 111 ≈ 1 071 km, résultats cohérents", "points": 4 },
+        { "critere": "9,65° = 579 minutes, soit 579 milles marins", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La **latitude** est l’angle mesuré depuis l’**équateur**, sur un méridien. Elle va de **−90° à +90°**.\n2. Écart : 51,03 − 41,38 = **9,65°**.\n3. α = 9,65 × π / 180 ≈ 9,65 × 0,017 45 ≈ **0,1684 rad**. L = R × α = 6 371 × 0,1684 ≈ **1 073 km**. La formule L = R × α n’est valable que si l’angle est exprimé en **radians** (avec des degrés, on obtiendrait un résultat 57 fois trop grand).\n4. 9,65 × 111 ≈ **1 071 km**. Les deux résultats sont très proches (l’équivalence 111 km est arrondie) : le calcul est cohérent.\n5. 9,65° = 9,65 × 60 = **579 minutes d’arc**, donc environ **579 milles marins** (579 × 1,852 ≈ 1 072 km, encore cohérent)."
+    },
+    {
+      "chapitre": "d4f4f580-32d1-5e04-8307-0384549f0a82",
+      "difficulte": 3,
+      "titre": "Ni ronde ni plate : la vraie Terre",
+      "consigne": "Détaille les calculs, puis rédige des réponses argumentées.",
+      "enonce": "**Données.**\n- En 1791, le mètre est défini comme la dix-millionième partie du quart du méridien terrestre.\n- Rayon équatorial : 6 378 km ; rayon polaire : 6 357 km.\n- Valeur moderne du tour de la Terre à l’équateur : 40 075 km.\n\n**Document.**\n\n> Sur un planisphère, la route d’un avion entre Paris et Tokyo dessine une grande courbe qui remonte vers le nord. Un passager, Rayan, s’étonne : « Le pilote fait un détour, il suffirait de suivre toujours le même cap ! »\n\n1. À partir de la définition du mètre de 1791, calcule la longueur du quart de méridien puis du méridien complet, en km. Pourquoi les 40 000 km ne sont-ils pas une coïncidence ?\n2. Calcule l’écart entre les rayons équatorial et polaire, puis ce qu’il représente en pourcentage du rayon équatorial. Quelle est la forme réelle de la Terre, et d’où vient cet aplatissement ?\n3. Ératosthène trouvait environ 40 000 km. Calcule l’écart relatif avec la valeur moderne.\n4. Réponds à Rayan en distinguant orthodromie et loxodromie.",
+      "bareme": [
+        { "critere": "Quart de méridien = 10 000 km, méridien = 40 000 km, lien avec la définition du mètre", "points": 5 },
+        { "critere": "Écart de 21 km, environ 0,33 %, ellipsoïde aplati par la rotation", "points": 5 },
+        { "critere": "Écart relatif ≈ 0,2 %", "points": 3 },
+        { "critere": "Orthodromie (grand cercle, plus court) contre loxodromie (cap constant, plus long)", "points": 5 },
+        { "critere": "Rédaction argumentée et vocabulaire exact", "points": 2 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Un quart de méridien = 10 000 000 m = **10 000 km**. Le méridien complet = 4 × 10 000 = **40 000 km**. Ce n’est **pas une coïncidence** : c’est le mètre qui a été défini à partir de la Terre, de façon que le quart de méridien mesure exactement dix millions de mètres.\n2. Écart : 6 378 − 6 357 = **21 km**. 21 / 6 378 ≈ 0,0033, soit environ **0,33 %** (moins de 0,4 %). La Terre est un **ellipsoïde**, légèrement **aplati aux pôles** ; cet aplatissement est dû à sa **rotation**.\n3. (40 075 − 40 000) / 40 075 ≈ 0,0019, soit environ **0,2 %** : une précision remarquable pour une mesure faite avec un gnomon.\n4. Le chemin le plus court entre deux points de la surface est l’**orthodromie**, l’arc de **grand cercle**. Suivre toujours le même cap, c’est la **loxodromie** : plus simple à suivre, mais **plus long**. Sur un planisphère, qui déforme la sphère, l’orthodromie paraît courbée vers le nord : ce n’est pas un détour, c’est au contraire la route **la plus courte**."
+    },
+    {
+      "chapitre": "b827458d-1d1b-5c5e-a7ee-249c0c075c8d",
+      "difficulte": 1,
+      "titre": "Quatre réponses pour une question",
+      "consigne": "Réponds à chaque question en quelques phrases.",
+      "enonce": "**Situation.** Pour un débat en classe, Lou doit présenter l’histoire des estimations de l’âge de la Terre.\n\n1. Associe chaque auteur à sa méthode et à l’ordre de grandeur de son résultat : Ussher (1650), Buffon (1778), Hutton et Lyell (XIXe siècle), Kelvin (1862).\n2. Pourquoi l’estimation de Kelvin est-elle fausse, alors que son raisonnement était rigoureux ?\n3. Quel est l’âge admis de la Terre aujourd’hui, et qui l’a obtenu le premier, en datant quels objets ?",
+      "bareme": [
+        { "critere": "Les quatre méthodes et ordres de grandeur correctement associés", "points": 10 },
+        { "critere": "Hypothèse manquante : chaleur de la radioactivité, convection du manteau", "points": 6 },
+        { "critere": "4,54 milliards d’années, Patterson (1953) datant des météorites", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. - **Ussher** (1650) : addition des **générations bibliques** → quelques **milliers** d’années.\n- **Buffon** (1778) : **refroidissement de boulets de fer**, extrapolé → **75 000 ans** annoncés.\n- **Hutton et Lyell** (XIXe) : épaisseur des **séries sédimentaires** et lenteur de l’érosion → des **centaines de millions** d’années.\n- **Kelvin** (1862) : **thermodynamique du refroidissement** → **20 à 100 millions** d’années.\n2. Le modèle de Kelvin supposait une Terre qui se refroidit **sans source de chaleur interne** et **sans convection** du manteau. Or la **radioactivité** (découverte en 1896) chauffe l’intérieur du globe en permanence. Une **hypothèse manquante** suffit à fausser un raisonnement rigoureux.\n3. L’âge admis est **4,54 milliards d’années**. En 1953, **Clair Patterson** a daté des **météorites** par la méthode uranium-plomb et trouvé 4,55 milliards d’années."
+    },
+    {
+      "chapitre": "b827458d-1d1b-5c5e-a7ee-249c0c075c8d",
+      "difficulte": 2,
+      "titre": "Dater un foyer préhistorique",
+      "consigne": "Détaille les calculs et justifie le choix de la méthode.",
+      "enonce": "**Situation.** Dans une grotte, des archéologues trouvent du charbon de bois dans un ancien foyer. Il ne contient plus que le quart du carbone 14 que contenait le bois vivant. Dans une autre couche, un second charbon n’en contient plus que le huitième.\n\n**Donnée.** Demi-vie du carbone 14 : 5 730 ans.\n\n1. Sur quelle propriété repose la datation radiochronologique ? Que mesure-t-on pour obtenir un âge ?\n2. Calcule l’âge de chaque charbon. Lequel est le plus ancien ?\n3. Un camarade veut dater une météorite de plusieurs milliards d’années avec le carbone 14. Explique pourquoi c’est inadapté et nomme un couple d’isotopes qui conviendrait.",
+      "bareme": [
+        { "critere": "Demi-vie constante ; rapport isotope père restant / isotope fils accumulé", "points": 5 },
+        { "critere": "Quart : 2 demi-vies = 11 460 ans ; huitième : 3 demi-vies = 17 190 ans ; le second est le plus ancien", "points": 9 },
+        { "critere": "Demi-vie du C14 trop courte ; uranium-plomb, de l’ordre du milliard d’années", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. La datation repose sur la **constance de la demi-vie** d’un isotope radioactif. On mesure le **rapport entre l’isotope père restant et l’isotope fils accumulé** (ou la part d’isotope père restante), ce qui donne le temps écoulé depuis la fermeture du système.\n2. - Le quart restant correspond à **2 demi-vies** : 2 × 5 730 = **11 460 ans**.\n- Le huitième correspond à **3 demi-vies** : 3 × 5 730 = **17 190 ans**.\nLe second charbon est **le plus ancien**.\n3. La demi-vie du carbone 14 (5 730 ans) est **beaucoup trop courte** : au bout de milliards d’années, il ne resterait pratiquement plus de carbone 14 à mesurer. Le carbone 14 sert à l’**archéologie**. Pour les objets les plus vieux, on utilise un couple à demi-vie longue, comme **uranium-plomb** (demi-vie de l’ordre du **milliard d’années**)."
+    },
+    {
+      "chapitre": "b827458d-1d1b-5c5e-a7ee-249c0c075c8d",
+      "difficulte": 3,
+      "titre": "La Terre a effacé ses archives",
+      "consigne": "Exploite le document et rédige des réponses argumentées : c’est un sujet d’épistémologie autant que de sciences.",
+      "enonce": "**Document – Quelques âges mesurés**\n\n| Objet | Âge |\n| Plus vieilles roches terrestres (gneiss d’Acasta) | environ 4 milliards d’années |\n| Plus vieux cristaux de zircon terrestres | environ 4,4 milliards d’années |\n| Météorites datées par Patterson en 1953 | 4,55 milliards d’années |\n| Âge admis de la Terre | 4,54 milliards d’années |\n\n1. Le résultat d’Ussher (environ 6 000 ans) et l’âge admis diffèrent énormément. Calcule le rapport entre les deux et compare au « facteur un million » évoqué par le cours.\n2. Pourquoi ne trouve-t-on sur Terre aucune roche de 4,54 milliards d’années ?\n3. Pourquoi les météorites permettent-elles de dater la Terre ?\n4. En prenant l’exemple de Kelvin, explique la phrase : « Une hypothèse manquante suffit à fausser un raisonnement rigoureux. » Quelle découverte a comblé ce manque, et quelle méthode de datation en est née ?\n5. Chaque estimation historique était-elle absurde ? Réponds en quelques lignes argumentées.",
+      "bareme": [
+        { "critere": "Rapport ≈ 750 000, de l’ordre du million", "points": 3 },
+        { "critere": "La tectonique des plaques recycle la croûte et efface les roches anciennes", "points": 4 },
+        { "critere": "Météorites inchangées depuis la formation du système solaire", "points": 4 },
+        { "critere": "Kelvin : pas de chaleur interne ni de convection ; radioactivité (1896) et radiochronologie", "points": 5 },
+        { "critere": "Chaque méthode était défendable avec les connaissances du moment", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. 4,54 × 10^9 / 6 000 ≈ **7,6 × 10^5**, soit environ **750 000** : les réponses varient bien d’un facteur de l’ordre d’**un million**.\n2. La **tectonique des plaques recycle** sans cesse la croûte : les roches les plus anciennes ont été détruites ou transformées. Les plus vieilles roches ont environ 4 milliards d’années, les plus vieux zircons 4,4 milliards : **la Terre a effacé ses propres archives**.\n3. Les météorites **n’ont pas bougé** (pas de recyclage) depuis la **formation du système solaire**, dont la Terre fait partie : leur âge donne celui de la formation des planètes. Patterson les a datées par **uranium-plomb** : 4,55 milliards d’années, valeur admise aujourd’hui 4,54 Ga.\n4. Kelvin a appliqué rigoureusement la thermodynamique du refroidissement, mais son modèle supposait une Terre **sans source de chaleur interne** et **sans convection** du manteau. Or la **radioactivité**, découverte par Becquerel en **1896**, chauffe l’intérieur du globe en permanence : sa Terre se refroidissait trop vite, d’où un âge trop faible (20 à 100 millions d’années). La radioactivité a aussi fourni l’horloge qui manquait : la **radiochronologie**.\n5. Non : chaque réponse reposait sur une méthode **défendable avec les connaissances du moment** (textes, expériences de refroidissement de Buffon, épaisseur des sédiments, thermodynamique). La science progresse en remplaçant un modèle quand une nouvelle observation ou découverte en montre les limites."
+    },
+    {
+      "chapitre": "9dc55dfc-6047-51ae-838c-4ff23ad119be",
+      "difficulte": 1,
+      "titre": "Qui tourne autour de qui ?",
+      "consigne": "Réponds à chaque question en quelques phrases.",
+      "enonce": "**Situation.** Dans un vieux livre, Timéo découvre un schéma où la Terre est au centre de tout. Il veut savoir pourquoi on a abandonné ce modèle.\n\n1. Compare le géocentrisme de Ptolémée et l’héliocentrisme de Copernic : qui est au centre, et comment chacun explique-t-il le mouvement rétrograde des planètes ?\n2. Quelles observations Galilée fait-il en 1610 qui contredisent le géocentrisme ?\n3. Qu’apportent ensuite Kepler, puis Newton en 1687 ?",
+      "bareme": [
+        { "critere": "Terre au centre / Soleil au centre ; épicycles contre composition des mouvements", "points": 8 },
+        { "critere": "Satellites de Jupiter et phases de Vénus", "points": 6 },
+        { "critere": "Kepler : ellipses, Soleil à un foyer ; Newton : gravitation universelle, la cause", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Dans le **géocentrisme** de Ptolémée (IIe siècle), la **Terre**, immobile, est au centre ; le mouvement rétrograde des planètes est expliqué par des **épicycles** de plus en plus nombreux. Dans l’**héliocentrisme** de Copernic (**1543**), le **Soleil** est au centre ; le mouvement rétrograde s’explique **d’un coup**, par la **composition des mouvements** de la Terre et de la planète.\n2. Galilée observe les **quatre satellites de Jupiter** : tout ne tourne donc pas autour de la Terre. Il observe aussi les **phases de Vénus**, incompatibles avec le modèle de Ptolémée.\n3. **Kepler** montre que les orbites sont des **ellipses** dont le Soleil occupe un **foyer**. **Newton**, en 1687, en donne la **cause** : la **gravitation universelle**, F = G × m × M / d²."
+    },
+    {
+      "chapitre": "9dc55dfc-6047-51ae-838c-4ff23ad119be",
+      "difficulte": 2,
+      "titre": "Voyage vers l’étoile la plus proche",
+      "consigne": "Détaille chaque calcul en écriture scientifique, avec les unités.",
+      "enonce": "**Situation.** Zoé se demande combien de temps mettrait la sonde Voyager, qui file à 17 km/s, pour atteindre l’étoile la plus proche.\n\n**Données.**\n- Distance Terre-Soleil (1 unité astronomique) : 1,5 × 10^8 km\n- Vitesse de la lumière : 3,0 × 10^5 km/s\n- 1 année-lumière (al) ≈ 9,5 × 10^12 km\n- Distance de l’étoile la plus proche : 4,2 al\n- 1 an ≈ 3,15 × 10^7 s\n\n1. Calcule la durée du trajet de la lumière du Soleil jusqu’à la Terre, en secondes puis en minutes.\n2. Définis l’année-lumière. Convertis la distance de l’étoile la plus proche en km.\n3. Calcule la durée du voyage de Voyager jusqu’à cette étoile, en années.\n4. Explique l’expression « regarder loin, c’est regarder tôt » à partir de ton résultat de la question 1.",
+      "bareme": [
+        { "critere": "t = 1,5 × 10^8 / 3,0 × 10^5 = 500 s, environ 8 min", "points": 5 },
+        { "critere": "Définition de l’année-lumière et 4,2 al ≈ 4,0 × 10^13 km", "points": 5 },
+        { "critere": "Durée ≈ 2,3 × 10^12 s, soit environ 75 000 ans", "points": 6 },
+        { "critere": "La lumière met du temps : on voit l’astre tel qu’il était", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. t = d / v = 1,5 × 10^8 / 3,0 × 10^5 = **500 s**, soit environ **8 minutes** (8 min 20 s).\n2. L’**année-lumière** est la **distance parcourue par la lumière en un an**. d = 4,2 × 9,5 × 10^12 ≈ **4,0 × 10^13 km**.\n3. t = 4,0 × 10^13 / 17 ≈ 2,35 × 10^12 s. En années : 2,35 × 10^12 / 3,15 × 10^7 ≈ **7,5 × 10^4 ans**, soit environ **75 000 ans**.\n4. La lumière met du temps à nous parvenir : la lumière du Soleil que l’on voit est partie il y a environ 8 minutes, on voit donc le Soleil **tel qu’il était** il y a 8 minutes. Plus un objet est loin, plus sa lumière est ancienne : **regarder loin, c’est regarder tôt**."
+    },
+    {
+      "chapitre": "9dc55dfc-6047-51ae-838c-4ff23ad119be",
+      "difficulte": 3,
+      "titre": "Une planète habitable ?",
+      "consigne": "Exploite le document, détaille les raisonnements et rédige une conclusion nuancée.",
+      "enonce": "**Document – Une exoplanète imaginaire**\n\n> Des astronomes suivent la luminosité d’une étoile. Tous les 37 jours, elle baisse légèrement pendant quelques heures, puis revient à sa valeur habituelle. Ils en déduisent la présence d’une planète, qu’ils baptisent Kéra-b. D’autres mesures indiquent qu’elle est rocheuse et dense, de masse proche de celle de la Terre, et qu’elle se trouve dans la zone d’habitabilité de son étoile. On ignore encore si elle possède un champ magnétique.\n\n1. Quelle méthode de détection a été utilisée ? Explique son principe et ce que représente la durée de 37 jours.\n2. Cite l’autre méthode de détection du cours et son principe.\n3. Kéra-b est-elle plutôt une planète tellurique ou une planète géante ? Justifie.\n4. Définis la zone d’habitabilité. Pourquoi est-ce une condition nécessaire mais pas suffisante ?\n5. En t’appuyant sur les trois conditions que réunit la Terre, rédige une conclusion : que sait-on, et que faudrait-il encore savoir pour dire que Kéra-b pourrait porter de l’eau liquide durablement ?\n6. D’après la loi de Newton F = G × m × M / d², que devient la force exercée par l’étoile sur la planète si la distance était deux fois plus grande ?",
+      "bareme": [
+        { "critere": "Méthode des transits : baisse périodique de luminosité ; 37 jours = période de révolution", "points": 4 },
+        { "critere": "Vitesses radiales : l’étoile est légèrement entraînée par la planète", "points": 2 },
+        { "critere": "Tellurique : rocheuse, dense, petite", "points": 3 },
+        { "critere": "Zone d’habitabilité et analyse des trois conditions (distance, masse, champ magnétique)", "points": 7 },
+        { "critere": "Distance doublée : force divisée par 4", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. C’est la méthode des **transits** : quand la planète passe devant son étoile, la luminosité de l’étoile **baisse périodiquement**. La baisse revient tous les 37 jours : c’est la durée d’un tour de la planète autour de son étoile, sa **période de révolution**.\n2. La méthode des **vitesses radiales** : l’étoile est **légèrement entraînée** par la planète qui tourne autour d’elle, et ce mouvement se mesure.\n3. Kéra-b est rocheuse, dense et de masse proche de celle de la Terre : c’est une **planète tellurique**, comme Mercure, Vénus, la Terre et Mars, par opposition aux planètes géantes gazeuses et glacées.\n4. La **zone d’habitabilité** est la région autour d’une étoile où l’**eau peut rester liquide** à la surface d’une planète. C’est **nécessaire** (trop près l’eau s’évapore, trop loin elle gèle) mais **pas suffisant** : d’autres conditions sont indispensables.\n5. La Terre réunit trois conditions : une **distance** dans la zone d’habitabilité (eau liquide), une **masse** suffisante (qui **retient une atmosphère**), un **champ magnétique** (qui **dévie le vent solaire**). Pour Kéra-b, on sait la distance (dans la zone) et la masse (proche de la Terre, donc probablement capable de retenir une atmosphère), mais on **ignore le champ magnétique**, et on ne sait pas si elle a effectivement une atmosphère. Conclusion : Kéra-b est une **candidate intéressante**, mais on ne peut pas encore affirmer qu’elle garde durablement de l’eau liquide.\n6. La force est proportionnelle à 1/d² : si d double, F est divisée par 2² = **4**."
+    },
+    {
+      "chapitre": "ebc637f1-bc2f-5bb4-be13-4dd99e1dde25",
+      "difficulte": 1,
+      "titre": "Le la du diapason",
+      "consigne": "Réponds en détaillant les calculs, avec les unités.",
+      "enonce": "**Situation.** Anaïs frappe un diapason qui émet un la3 de fréquence 440 Hz.\n\n**Données.** Célérité du son : 340 m/s dans l’air à 20 °C, 1 500 m/s dans l’eau.\n\n1. Pourquoi le son ne se propage-t-il pas dans le vide ? Explique ce qui se déplace réellement quand le son avance dans l’air.\n2. Calcule la période du son émis.\n3. Calcule la longueur d’onde de ce son dans l’air, puis dans l’eau.\n4. Ce son est-il audible par l’oreille humaine ? Justifie.",
+      "bareme": [
+        { "critere": "Onde mécanique : il faut un milieu matériel ; l’énergie se déplace, pas la matière", "points": 6 },
+        { "critere": "T = 1/440 ≈ 2,3 × 10^-3 s", "points": 4 },
+        { "critere": "λ ≈ 0,77 m dans l’air et ≈ 3,4 m dans l’eau", "points": 6 },
+        { "critere": "440 Hz est dans le domaine 20 Hz – 20 000 Hz", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le son est une **onde mécanique** : la vibration de la source met en mouvement les particules du milieu, de proche en proche. **Sans matière, pas de son** : dans le vide, rien ne peut transmettre la vibration. Les particules d’air **oscillent autour de leur position** (compressions et dilatations) : c’est l’**énergie** qui se déplace, **pas la matière**.\n2. T = 1 / f = 1 / 440 ≈ **2,3 × 10^-3 s** (environ 2,3 ms).\n3. λ = v / f.\n- Dans l’air : 340 / 440 ≈ **0,77 m**.\n- Dans l’eau : 1 500 / 440 ≈ **3,4 m**.\n4. Oui : 440 Hz est compris dans le domaine **audible**, de **20 Hz à 20 000 Hz**."
+    },
+    {
+      "chapitre": "ebc637f1-bc2f-5bb4-be13-4dd99e1dde25",
+      "difficulte": 2,
+      "titre": "L’atelier bruyant",
+      "consigne": "Détaille les calculs et justifie chaque réponse.",
+      "enonce": "**Situation.** Dans un atelier, une machine produit au poste de travail une intensité sonore I = 1,0 × 10^-4 W/m².\n\n**Données.** L = 10 × log(I / I0), avec I0 = 1,0 × 10^-12 W/m². log(10^n) = n. Risque en exposition prolongée à partir de 85 dB.\n\n1. Calcule le niveau d’intensité sonore d’une machine.\n2. Le chef d’atelier installe une deuxième machine identique juste à côté. Un ouvrier affirme : « On va passer à 160 dB. » Corrige-le et donne le nouveau niveau.\n3. On installe finalement dix machines identiques. Quel est le niveau sonore ?\n4. Dans quels cas les ouvriers doivent-ils porter une protection auditive ? Justifie.",
+      "bareme": [
+        { "critere": "L = 10 × log(10^8) = 80 dB", "points": 5 },
+        { "critere": "Doubler l’intensité : +3 dB, soit 83 dB et non 160 dB", "points": 6 },
+        { "critere": "Intensité × 10 : +10 dB, soit 90 dB", "points": 5 },
+        { "critere": "Comparaison au seuil de 85 dB", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. I / I0 = 1,0 × 10^-4 / 1,0 × 10^-12 = 10^8. L = 10 × log(10^8) = 10 × 8 = **80 dB**.\n2. Deux machines identiques **doublent l’intensité**, elles ne doublent pas le niveau en décibels. L’échelle est **logarithmique** : doubler l’intensité ajoute seulement **3 dB**. Le niveau passe à **83 dB**, pas à 160 dB.\n3. Dix machines multiplient l’intensité par 10 : I = 1,0 × 10^-3 W/m², I / I0 = 10^9, L = 10 × 9 = **90 dB** (+10 dB).\n4. Avec une ou deux machines (80 ou 83 dB), on reste sous 85 dB. Avec dix machines (90 dB), on dépasse le seuil de **85 dB** : en exposition prolongée, il y a un risque pour l’audition, une protection auditive est nécessaire."
+    },
+    {
+      "chapitre": "ebc637f1-bc2f-5bb4-be13-4dd99e1dde25",
+      "difficulte": 3,
+      "titre": "Sons, ultrasons et timbre",
+      "consigne": "Détaille les calculs et rédige des réponses argumentées qui combinent plusieurs notions du chapitre.",
+      "enonce": "**Données.** Célérité du son : 340 m/s dans l’air, 1 500 m/s dans l’eau (on prendra la même valeur dans les tissus du corps). Distance = célérité × durée.\n\n**Situation 1 – Le sonar.** Un bateau envoie une brève impulsion sonore vers le fond de la mer. L’écho revient 0,40 s après l’émission.\n\n**Situation 2 – L’échographie.** Une sonde médicale émet une onde de fréquence 2,0 MHz (2,0 × 10^6 Hz) dans le corps.\n\n**Situation 3 – Le concert.** Une flûte et un violon jouent tous deux un la3 à 440 Hz. On les distingue pourtant sans hésiter.\n\n1. Situation 1 : calcule la profondeur du fond. Explique pourquoi il faut diviser la durée par deux.\n2. Situation 2 : l’onde est-elle audible ? Comment l’appelle-t-on ? Calcule sa longueur d’onde dans les tissus, en millimètres.\n3. Situation 3 : quelle caractéristique du son est commune aux deux instruments ? Laquelle les distingue ? Explique.\n4. Pour chaque situation, précise pourquoi le son a besoin d’un milieu matériel et dans quel milieu il se propage le plus vite.",
+      "bareme": [
+        { "critere": "Profondeur = 1 500 × 0,20 = 300 m, aller-retour justifié", "points": 5 },
+        { "critere": "Ultrason (au-dessus de 20 kHz), λ = 1 500 / 2,0 × 10^6 = 0,75 mm", "points": 5 },
+        { "critere": "Même hauteur (fréquence fondamentale), timbre différent (harmoniques)", "points": 5 },
+        { "critere": "Onde mécanique, célérité dépendant du milieu (eau plus rapide que l’air)", "points": 3 },
+        { "critere": "Rédaction claire, unités et vocabulaire justes", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. L’onde fait l’**aller et le retour** : le trajet jusqu’au fond dure 0,40 / 2 = 0,20 s. Profondeur = 1 500 × 0,20 = **300 m**.\n2. 2,0 × 10^6 Hz est bien au-dessus de 20 kHz : l’onde n’est **pas audible**, c’est un **ultrason** (utilisé aussi par les sonars et les chauves-souris). λ = v / f = 1 500 / 2,0 × 10^6 = 7,5 × 10^-4 m = **0,75 mm**.\n3. Les deux instruments ont la même **hauteur**, fixée par la **fréquence fondamentale** (440 Hz). Ils diffèrent par leur **timbre**, déterminé par les **harmoniques** : chaque instrument a sa propre composition en harmoniques, qui distingue une flûte d’un violon sur la même note.\n4. Dans les trois cas, le son est une **onde mécanique** : il lui faut de la matière (eau de mer, tissus du corps, air de la salle) pour se propager. Sa célérité dépend du milieu : **1 500 m/s dans l’eau**, bien plus que **340 m/s dans l’air** (et environ 5 000 m/s dans l’acier)."
+    }
+  ]
+}

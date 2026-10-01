@@ -46,7 +46,7 @@ function Fleche({ tendance }: { tendance: Exclude<Tendance, null> }) {
           ? 'text-success'
           : tendance === 'baisse'
             ? 'text-warning'
-            : 'text-white/70',
+            : 'text-muted-foreground',
       )}
       strokeWidth={3}
       aria-hidden="true"
@@ -71,7 +71,7 @@ export default function TuileMoyenne({
   if (disabled) {
     return (
       <CompteurVerre
-        valeur={<span className="text-sm text-white/70">Bientôt</span>}
+        valeur={<span className="text-sm text-muted-foreground">Bientôt</span>}
         legende="notes"
       />
     )
@@ -91,7 +91,7 @@ export default function TuileMoyenne({
             : 'Ajouter mes moyennes de trimestre'
         }
         title={moyenne ? phraseDelta(bilan) ?? undefined : 'Ajoute tes notes'}
-        className="block h-full w-full min-w-0 cursor-pointer rounded-2xl text-left transition hover:bg-white/5 active:scale-[0.97]"
+        className="block h-full w-full min-w-0 cursor-pointer rounded-2xl text-left transition hover:bg-foreground/5 active:scale-[0.97]"
       >
         <CompteurVerre
           className="h-full"

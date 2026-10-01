@@ -1,0 +1,586 @@
+{
+  "niveau": "1re",
+  "matiere": "si",
+  "sujets": [
+    {
+      "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+      "difficulte": 1,
+      "titre": "Le disque de la ponceuse",
+      "consigne": "Donne chaque formule, le calcul et le résultat avec son unité.",
+      "enonce": "**Situation.** Le disque d'une ponceuse tourne à la vitesse angulaire ω = 20 rad/s.\n\n1. Calcule la vitesse linéaire d'un point situé à 5 cm de l'axe, puis d'un point situé à 15 cm. Qu'est-ce qui est commun à ces deux points, et qu'est-ce qui diffère ?\n2. Un chariot se déplace en ligne droite à vitesse constante v = 2 m/s ; à t = 0, sa position est x0 = 5 m. Quel est le nom de ce mouvement ? Calcule sa position à t = 10 s. Que vaut son accélération ?\n3. Le point situé à 15 cm tourne à vitesse constante. A-t-il une accélération ? Si oui, donne sa direction et calcule sa valeur.",
+      "bareme": [
+        { "critere": "v = 1 m/s et 3 m/s ; ω commune, v proportionnelle à la distance à l'axe", "points": 7 },
+        { "critere": "Mouvement rectiligne uniforme, x = 25 m, accélération nulle", "points": 6 },
+        { "critere": "Accélération centripète non nulle, a = v² / R = 60 m/s²", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. v = ω × R. À 5 cm : v = 20 × 0,05 = **1 m/s**. À 15 cm : v = 20 × 0,15 = **3 m/s**. La **vitesse angulaire** ω est commune à tous les points du disque ; la **vitesse linéaire** diffère : elle est **proportionnelle à la distance à l'axe**.\n\n2. C'est un mouvement **rectiligne uniforme**. x = v × t + x0 = 2 × 10 + 5 = **25 m**. Son accélération est **nulle**.\n\n3. **Oui** : la valeur de la vitesse est constante, mais sa **direction** change sans cesse ; au sens de la mécanique, le point accélère. L'accélération est dirigée **vers le centre** (centripète) : a = v² / R = 3² / 0,15 = 9 / 0,15 = **60 m/s²**."
+    },
+    {
+      "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+      "difficulte": 2,
+      "titre": "La transmission par courroie du tapis roulant",
+      "consigne": "Détaille chaque calcul et justifie les relations utilisées.",
+      "enonce": "**Situation.** Le moteur d'un tapis roulant de caisse entraîne une poulie motrice de rayon 4 cm, qui tourne à 150 rad/s. Une courroie transmet le mouvement à une poulie réceptrice de rayon 12 cm. Le couple sur l'arbre moteur vaut 2 N·m. On néglige les pertes.\n\n1. Calcule la vitesse linéaire de la courroie.\n2. Pourquoi les deux poulies ont-elles la même vitesse linéaire au contact de la courroie ? Déduis-en la vitesse angulaire de la poulie réceptrice.\n3. Calcule la puissance transmise, puis le couple sur l'arbre de la poulie réceptrice.\n4. Ce montage est-il un réducteur ? Explique ce qu'il fait à la vitesse et au couple, et dans quelle proportion.",
+      "bareme": [
+        { "critere": "v = ω × R = 6 m/s", "points": 5 },
+        { "critere": "Même vitesse linéaire au contact et ω = 50 rad/s", "points": 5 },
+        { "critere": "P = 300 W et couple de sortie 6 N·m", "points": 5 },
+        { "critere": "Réducteur : vitesse divisée par 3, couple multiplié par 3, puissance conservée", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. v = ω × R = 150 × 0,04 = **6 m/s**.\n\n2. La courroie ne glisse pas : elle a une seule vitesse, qui est celle de chaque poulie à son contact. Donc ω(sortie) × R(sortie) = ω(entrée) × R(entrée), soit ω(sortie) / ω(entrée) = R(entrée) / R(sortie).\nω(sortie) = 150 × 0,04 / 0,12 = 6 / 0,12 = **50 rad/s**.\n\n3. P = C × ω = 2 × 150 = **300 W**. Sans pertes, la puissance se conserve : C(sortie) = P / ω(sortie) = 300 / 50 = **6 N·m**.\n\n4. **Oui**, c'est un réducteur : il **diminue la vitesse** (divisée par 3, rapport des rayons 12 / 4) et **augmente le couple dans la même proportion** (multiplié par 3). La **puissance se conserve**, aux pertes près."
+    },
+    {
+      "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+      "difficulte": 3,
+      "titre": "Le rotor de l'éolienne",
+      "consigne": "Mène l'étude cinématique complète ; justifie chaque relation et détaille les calculs.",
+      "enonce": "**Situation.** Le rotor d'une éolienne porte des pales de 40 m. Il tourne à la vitesse angulaire constante ω = 1,5 rad/s et fournit une puissance de 1,2 MW. Sur l'arbre du rotor, une grande roue dentée de rayon 0,60 m engrène avec un pignon de rayon 0,06 m, monté sur l'arbre de la génératrice. On néglige les pertes.\n\n1. Calcule la vitesse linéaire de l'extrémité d'une pale, puis celle d'un point situé à 10 m de l'axe.\n2. L'extrémité de la pale tourne à vitesse constante. Calcule son accélération et donne sa direction.\n3. Calcule la vitesse angulaire de la génératrice. En quoi cet engrenage fonctionne-t-il à l'inverse d'un réducteur ?\n4. Calcule le couple sur l'arbre du rotor, puis sur l'arbre de la génératrice. Commente.\n5. Un visiteur dit : « Toutes les parties d'une pale vont à la même vitesse, puisqu'elle est rigide. » Corrige-le.",
+      "bareme": [
+        { "critere": "v = 60 m/s en bout de pale et 15 m/s à 10 m", "points": 4 },
+        { "critere": "a = v² / R = 90 m/s², dirigée vers l'axe", "points": 4 },
+        { "critere": "ω génératrice = 15 rad/s par le rapport des rayons ; vitesse augmentée, couple diminué", "points": 5 },
+        { "critere": "C rotor = 800 000 N·m, C génératrice = 80 000 N·m, puissance conservée", "points": 4 },
+        { "critere": "ω commune, vitesse linéaire proportionnelle à la distance à l'axe", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. v = ω × R. En bout de pale : 1,5 × 40 = **60 m/s**. À 10 m : 1,5 × 10 = **15 m/s**.\n\n2. Le mouvement est circulaire uniforme : l'accélération est **centripète**, dirigée **vers l'axe** du rotor. a = v² / R = 60² / 40 = 3 600 / 40 = **90 m/s²**.\n\n3. Les deux roues en prise ont la même vitesse linéaire au contact : ω(génératrice) / ω(rotor) = R(roue) / R(pignon) = 0,60 / 0,06 = 10. ω(génératrice) = 1,5 × 10 = **15 rad/s**. Un réducteur diminue la vitesse et augmente le couple ; ici la grande roue entraîne le petit pignon : la vitesse est **multipliée** par 10 et le couple **divisé** par 10. C'est un multiplicateur de vitesse.\n\n4. C(rotor) = P / ω = 1 200 000 / 1,5 = **800 000 N·m**. C(génératrice) = 1 200 000 / 15 = **80 000 N·m**. La puissance se conserve : on échange du couple contre de la vitesse, ce qui permet à la génératrice de tourner assez vite.\n\n5. La pale est rigide, donc tous ses points ont la **même vitesse angulaire** (1,5 rad/s). Mais leur **vitesse linéaire** v = ω × R est **proportionnelle à la distance à l'axe** : 15 m/s à 10 m, 60 m/s en bout de pale. C'est pourquoi l'extrémité d'une pale va bien plus vite que sa base."
+    },
+    {
+      "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+      "difficulte": 1,
+      "titre": "Trois signaux dans la maison",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** Dans la maison de Jade, on trouve : la tension délivrée par le microphone d'un babyphone ; le fichier audio d'une chanson stocké sur un téléphone ; le signal d'un détecteur de présence du couloir, qui vaut 0 ou 1.\n\n1. Donne la nature de chacun de ces trois signaux (analogique, numérique ou logique) et le nombre de valeurs qu'il peut prendre.\n2. Pour numériser le son du microphone, on passe par trois étapes. Nomme-les dans l'ordre et dis ce que fait chacune. Combien de niveaux permet une quantification sur 8 bits ? Sur 16 bits ?\n3. Le signal d'un capteur a une période T = 20 ms. Calcule sa fréquence.",
+      "bareme": [
+        { "critere": "Microphone analogique (infinité), fichier numérique (nombre fini), détecteur logique (deux)", "points": 6 },
+        { "critere": "Échantillonnage, quantification, codage expliqués ; 256 et 65 536 niveaux", "points": 8 },
+        { "critere": "f = 1 / T = 50 Hz", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Microphone : **analogique**, une **infinité** de valeurs (variation continue). Fichier audio : **numérique**, un nombre **fini** de valeurs codées en binaire. Détecteur de présence : **logique**, **deux** valeurs seulement, 0 et 1.\n\n2. **Échantillonnage** : prélever la valeur à intervalles réguliers. **Quantification** : arrondir chaque échantillon à la valeur disponible la plus proche. **Codage** : écrire chaque niveau en binaire. n bits donnent 2 puissance n niveaux : 8 bits → **256** niveaux ; 16 bits → **65 536** niveaux.\n\n3. T = 20 ms = 0,020 s. f = 1 / T = 1 / 0,020 = **50 Hz**."
+    },
+    {
+      "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+      "difficulte": 2,
+      "titre": "Enregistrer la voix de la chorale",
+      "consigne": "Détaille chaque calcul ; un octet vaut 8 bits.",
+      "enonce": "**Situation.** Nathan enregistre la chorale du lycée avec un seul micro (son mono). Le son contient des fréquences jusqu'à 20 kHz.\n\n1. Quelle fréquence d'échantillonnage minimale faut-il ? Le réglage de 44,1 kHz proposé par le logiciel convient-il ? Que se passerait-il avec un réglage à 32 kHz ?\n2. Il enregistre à 44,1 kHz, avec une quantification sur 16 bits. Calcule le nombre de bits produits en une seconde, puis la taille d'un enregistrement d'une minute, en octets puis en mégaoctets (1 Mo = 10⁶ octets).\n3. Pour gagner de la place, Nathan veut passer à 8 bits. Combien de niveaux restera-t-il ? Quel est le prix de ce choix ?\n4. Nathan copie son fichier numérique dix fois de suite, de clé en clé. La dixième copie est-elle moins bonne que l'original ? Compare avec une cassette analogique recopiée dix fois.",
+      "bareme": [
+        { "critere": "40 kHz minimum, 44,1 kHz convient, 32 kHz : information irrémédiablement perdue", "points": 5 },
+        { "critere": "705 600 bits par seconde et ≈ 5,3 Mo par minute", "points": 6 },
+        { "critere": "256 niveaux au lieu de 65 536 : fichier plus léger mais copie moins fidèle", "points": 5 },
+        { "critere": "Numérique régénéré exactement, analogique dégradé par le bruit accumulé", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La fréquence d'échantillonnage doit être au moins **double** de la plus haute fréquence du signal : 2 × 20 = **40 kHz**. 44,1 kHz ≥ 40 kHz : **convient**. À 32 kHz, trop bas, l'information serait **irrémédiablement perdue** : aucun traitement ne la récupérerait.\n\n2. Bits par seconde : 44 100 × 16 = **705 600 bits/s**, soit 705 600 / 8 = 88 200 octets/s. Pour une minute : 88 200 × 60 = **5 292 000 octets ≈ 5,3 Mo**.\n\n3. 8 bits → 2 puissance 8 = **256 niveaux** au lieu de 65 536. Le fichier est deux fois plus léger, mais chaque échantillon est arrondi beaucoup plus grossièrement : la copie est **moins fidèle**. C'est l'arbitrage entre fidélité et poids du fichier.\n\n4. **Non** : un signal numérique se **régénère exactement** à chaque copie, tant que le bruit ne dépasse pas le seuil de décision ; il se corrige en outre par des codes détecteurs et correcteurs d'erreurs. Une cassette analogique, elle, **se dégrade** à chaque copie : le bruit accumulé ne s'enlève plus."
+    },
+    {
+      "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+      "difficulte": 3,
+      "titre": "La commande du ventilateur en MLI",
+      "consigne": "Analyse le signal, puis argumente tes choix de conception avec le cours.",
+      "enonce": "**Situation.** Un microcontrôleur commande le moteur d'un ventilateur par un signal logique périodique : pendant chaque période de 2 ms, le signal vaut 1 (12 V) pendant 0,5 ms, puis 0 (0 V) le reste du temps.\n\nOn admet que la tension moyenne reçue par le moteur vaut : rapport cyclique × 12 V.\n\n1. Calcule la fréquence du signal et son rapport cyclique.\n2. Calcule la tension moyenne reçue par le moteur. Combien de temps le signal doit-il valoir 1 par période pour obtenir 9 V ? Comment s'appelle ce procédé de commande, et à quoi sert-il ?\n3. Le capteur de courant du moteur donne un signal analogique qui contient des fréquences jusqu'à 200 Hz. On le numérise. Propose une fréquence d'échantillonnage et une résolution parmi 8, 10 ou 12 bits, en justifiant l'arbitrage.\n4. Le signal de commande doit parcourir un long câble dans un atelier bruyant électriquement. Explique pourquoi un signal logique résiste mieux à ce bruit qu'une commande analogique.",
+      "bareme": [
+        { "critere": "f = 500 Hz et rapport cyclique 0,25", "points": 5 },
+        { "critere": "3 V ; 1,5 ms à l'état 1 pour 9 V ; MLI qui règle la puissance envoyée", "points": 5 },
+        { "critere": "Échantillonnage d'au moins 400 Hz et résolution argumentée (fidélité contre poids des données)", "points": 5 },
+        { "critere": "Régénération exacte tant que le bruit reste sous le seuil de décision, dégradation analogique", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. f = 1 / T = 1 / 0,002 = **500 Hz**. Rapport cyclique = durée à 1 / période = 0,5 / 2 = **0,25** (25 %).\n\n2. Tension moyenne = 0,25 × 12 = **3 V**. Pour 9 V : rapport cyclique = 9 / 12 = 0,75, soit 0,75 × 2 ms = **1,5 ms** à l'état 1 par période. C'est la **MLI** (modulation de largeur d'impulsion) : on fait varier le rapport cyclique pour **régler la puissance** envoyée au moteur.\n\n3. Théorème de Shannon : fréquence d'échantillonnage **au moins double** de 200 Hz, soit **400 Hz minimum** ; on choisit par exemple 1 kHz pour garder de la marge. Résolution : 10 bits (1 024 niveaux) est un bon compromis ; 12 bits (4 096 niveaux) serait plus fidèle mais produirait plus de données ; 8 bits (256 niveaux) serait léger mais grossier. Toute réponse est acceptée si elle respecte Shannon et explicite l'arbitrage **fidélité contre poids des données**.\n\n4. Un signal logique n'a que deux valeurs : à l'arrivée, on décide s'il vaut 0 ou 1 par rapport à un **seuil de décision**. Tant que le bruit ne dépasse pas ce seuil, le signal est **régénéré exactement**. Une commande analogique porte l'information dans la valeur même de la tension : le bruit accumulé la **déforme**, et il ne s'enlève plus."
+    },
+    {
+      "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+      "difficulte": 1,
+      "titre": "Conversions sur un octet",
+      "consigne": "Détaille chaque conversion.",
+      "enonce": "**Situation.** Un capteur envoie ses mesures sur un octet à un microcontrôleur.\n\n1. Combien de bits compte un octet ? Combien de valeurs différentes peut-il coder, et de quelle valeur à quelle valeur ?\n2. Le capteur envoie l'octet 1011 0110. Convertis-le en décimal en détaillant le poids de chaque bit.\n3. Convertis ce même octet en hexadécimal. Pourquoi l'hexadécimal est-il pratique pour écrire du binaire ?\n4. Convertis le nombre décimal 45 en binaire par la méthode des divisions successives par 2.",
+      "bareme": [
+        { "critere": "8 bits, 256 valeurs de 0 à 255", "points": 4 },
+        { "critere": "1011 0110 = 182 avec les poids détaillés", "points": 6 },
+        { "critere": "B6 et un chiffre hexadécimal pour quatre bits", "points": 5 },
+        { "critere": "45 = 101101 par divisions, restes lus de bas en haut", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Un octet compte **8 bits** ; il code 2 puissance 8 = **256** valeurs, de **0 à 255**.\n\n2. Poids de gauche à droite : 128, 64, 32, 16, 8, 4, 2, 1.\n1011 0110 = 128 + 0 + 32 + 16 + 0 + 4 + 2 + 0 = **182**.\n\n3. On découpe en paquets de quatre bits : 1011 = 11 = **B** ; 0110 = 6. L'octet s'écrit **B6** en hexadécimal. Un chiffre hexadécimal vaut exactement **quatre bits** : c'est une abréviation compacte et sans calcul du binaire.\n\n4. 45 ÷ 2 = 22 reste **1** ; 22 ÷ 2 = 11 reste **0** ; 11 ÷ 2 = 5 reste **1** ; 5 ÷ 2 = 2 reste **1** ; 2 ÷ 2 = 1 reste **0** ; 1 ÷ 2 = 0 reste **1**. Lus de bas en haut : **101101**. Vérification : 32 + 8 + 4 + 1 = 45."
+    },
+    {
+      "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+      "difficulte": 2,
+      "titre": "Coder un inventaire et une image",
+      "consigne": "Détaille chaque raisonnement et chaque calcul.",
+      "enonce": "**Situation.** Le magasin du lycée veut numériser son stock et les photos de ses pièces.\n\n1. Le magasin compte 300 références différentes, chacune identifiée par un numéro binaire. Quel est le nombre minimal de bits nécessaire ? Justifie avec la relation du cours.\n2. Une photo fait 800 × 600 pixels ; chaque pixel est codé par ses composantes rouge, verte et bleue, sur un octet chacune. Calcule la taille de l'image non compressée, en octets. Combien de couleurs différentes ce codage permet-il ?\n3. Un technicien lit l'octet 01000001 dans la mémoire. Il affirme : « C'est la lettre A. » A-t-il forcément raison ? Donne trois interprétations possibles de cet octet.\n4. Pourquoi l'ASCII a-t-il été remplacé par Unicode encodé en UTF-8 ?",
+      "bareme": [
+        { "critere": "9 bits, car 2 puissance 8 = 256 < 300 ≤ 512 = 2 puissance 9", "points": 5 },
+        { "critere": "1 440 000 octets et 256 × 256 × 256 = 16 777 216 couleurs", "points": 6 },
+        { "critere": "Rien dans le mot ne dit ce qu'il représente : entier 65, lettre A, niveau de gris", "points": 5 },
+        { "critere": "ASCII sur 7 bits insuffisant pour les langues accentuées ; UTF-8 couvre tous les alphabets", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Un mot de n bits code 2 puissance n valeurs. 2 puissance 8 = 256 < 300 : 8 bits ne suffisent pas. 2 puissance 9 = 512 ≥ 300 : il faut **9 bits** au minimum.\n\n2. Nombre de pixels : 800 × 600 = 480 000. Trois octets par pixel : 480 000 × 3 = **1 440 000 octets**. Couleurs : 256 × 256 × 256 = **16 777 216**, soit plus de 16 millions.\n\n3. **Non**. Rien dans le mot ne dit ce qu'il représente : c'est la **convention**, portée par le programme, qui l'interprète. 01000001 vaut **65** en entier, la lettre **A** en ASCII, ou une **nuance de gris** dans une image.\n\n4. L'**ASCII**, sur **7 bits**, est **insuffisant pour les langues accentuées** (et pour les autres alphabets). **Unicode**, encodé en **UTF-8** (longueur variable), **couvre tous les alphabets**."
+    },
+    {
+      "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+      "difficulte": 3,
+      "titre": "Le bit de parité de la liaison série",
+      "consigne": "Détaille chaque conversion et chaque décompte de bits ; justifie tes conclusions.",
+      "enonce": "**Situation.** Deux cartes échangent des caractères codés en ASCII sur 7 bits. On y ajoute, à gauche, un bit de parité paire : il est choisi pour que le nombre total de 1 dans les 8 bits soit pair.\n\nOn donne : en ASCII, A = 65, B = 66, C = 67… et ainsi de suite dans l'ordre alphabétique.\n\n1. Donne le code ASCII décimal de la lettre C, puis son écriture binaire sur 7 bits et en hexadécimal.\n2. Calcule le bit de parité de C et écris l'octet envoyé.\n3. Le récepteur reçoit 1 1000111. Y a-t-il une erreur détectée ? Peut-on retrouver le caractère envoyé ?\n4. Il reçoit ensuite 1 1001111. Le contrôle de parité détecte-t-il une erreur ? Quel caractère le récepteur affiche-t-il ? Que s'est-il passé si l'émetteur avait envoyé C ?\n5. Conclus sur les possibilités et les limites du bit de parité. Quel procédé faudrait-il pour retrouver la valeur exacte ?",
+      "bareme": [
+        { "critere": "C = 67 = 1000011, soit 43 en hexadécimal", "points": 4 },
+        { "critere": "Trois 1, bit de parité 1, octet 1 1000011", "points": 4 },
+        { "critere": "Cinq 1 : erreur détectée mais non corrigeable", "points": 4 },
+        { "critere": "Six 1 : pas de détection, O (79) affiché, deux erreurs passées inaperçues", "points": 5 },
+        { "critere": "Détection d'un nombre impair d'erreurs sans correction ; codes correcteurs", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. C = 67. 67 = 64 + 2 + 1 → sur 7 bits : **1000011**. En hexadécimal, sur 8 bits 0100 0011 → **43**.\n\n2. 1000011 contient **trois** 1 (nombre impair) : le bit de parité paire vaut **1** pour rendre le total pair. Octet envoyé : **1 1000011** (quatre 1).\n\n3. 1 1000111 : on compte 1 + 1 + 1 + 1 + 1 = **cinq** 1, nombre impair : **erreur détectée**. Mais le bit de parité ne dit pas quel bit est faux : on **ne peut pas retrouver** le caractère ; il faut demander une retransmission.\n\n4. 1 1001111 : on compte **six** 1, nombre pair : **aucune erreur détectée**. Les 7 bits 1001111 = 64 + 8 + 4 + 2 + 1 = **79**, soit la lettre **O** (C = 67, donc O, douze lettres plus loin, vaut 79). Par rapport à 1 1000011, deux bits ont changé : **deux erreurs** (nombre pair) se compensent et passent inaperçues.\n\n5. Le bit de parité **détecte un nombre impair d'erreurs, sans les corriger**, et laisse passer un nombre pair d'erreurs. Pour **retrouver la valeur exacte**, il faut des **codes correcteurs**, au prix de bits supplémentaires."
+    },
+    {
+      "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+      "difficulte": 1,
+      "titre": "Trois tables de vérité",
+      "consigne": "Recopie et complète les tables, puis réponds aux questions.",
+      "enonce": "**Situation.** Karim découvre les opérateurs logiques en câblant des maquettes.\n\n1. Donne la table de vérité de l'opérateur ET à deux entrées a et b, puis celle de l'opérateur OU. Le OU est-il inclusif ou exclusif ? Justifie par une ligne de la table.\n2. Donne la table de vérité du NON-ET (NAND) à deux entrées. Pourquoi dit-on qu'il est universel ?\n3. Combien de lignes compte la table de vérité d'une fonction à 3 entrées ? À 4 entrées ? Donne la règle générale et une astuce pour ne pas oublier de ligne.",
+      "bareme": [
+        { "critere": "Tables ET et OU exactes, OU inclusif justifié par 1 OU 1 = 1", "points": 8 },
+        { "critere": "Table NON-ET exacte et universalité expliquée", "points": 6 },
+        { "critere": "8 et 16 lignes, 2 puissance n, ordre binaire croissant", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n| a | b | a ET b | a OU b |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 |\n| 1 | 0 | 0 | 1 |\n| 1 | 1 | 1 | 1 |\nLe OU est **inclusif** : la dernière ligne donne 1 OU 1 = **1** (à la différence du « ou » exclusif du langage courant).\n\n2.\n| a | b | a NON-ET b |\n|---|---|---|\n| 0 | 0 | 1 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 1 | 1 | 0 |\nIl est **universel** : avec des NON-ET seuls, on reconstruit NON, ET et OU, donc **toute fonction logique**. L'industrie les fabrique en masse.\n\n3. 3 entrées : **8** lignes ; 4 entrées : **16** lignes. Règle : **2 puissance n** lignes pour n entrées. On les écrit dans l'**ordre binaire croissant** pour n'en oublier aucune."
+    },
+    {
+      "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+      "difficulte": 2,
+      "titre": "L'alarme du local technique",
+      "consigne": "Traduis le cahier des charges en logique, puis dresse la table de vérité.",
+      "enonce": "**Situation.** L'alarme d'un local technique doit sonner (S = 1) lorsque le système est armé (c = 1) et que la porte est ouverte (a = 1) ou que la fenêtre est ouverte (b = 1).\n\n1. Quels opérateurs logiques interviennent ? Justifie chacun par une phrase du cahier des charges et donne l'équation de S.\n2. Dresse la table de vérité complète de S, avec les lignes dans l'ordre binaire croissant (a, b, c).\n3. On ajoute trois capteurs d'ouverture (soit cinq entrées en tout). Combien de lignes comptera la nouvelle table ?\n4. Une presse de l'atelier ne doit démarrer que si l'opérateur appuie simultanément sur deux boutons. Quel opérateur faut-il ? Pourquoi ce choix protège-t-il l'opérateur ?",
+      "bareme": [
+        { "critere": "OU entre porte et fenêtre, ET avec l'armement, équation S = c . (a + b)", "points": 6 },
+        { "critere": "Table de 8 lignes exacte (S = 1 pour 011, 101 et 111)", "points": 7 },
+        { "critere": "2 puissance 5 = 32 lignes", "points": 3 },
+        { "critere": "Opérateur ET : les deux mains sur les boutons, donc hors de la zone dangereuse", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. « La porte **ou** la fenêtre » : l'alarme réagit à **n'importe lequel** des capteurs → **OU** (a + b). « Le système est armé **et**… » : les deux conditions doivent être réunies → **ET**. Équation : **S = c . (a + b)**.\n\n2.\n| a | b | c | S |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | **1** |\n| 1 | 0 | 0 | 0 |\n| 1 | 0 | 1 | **1** |\n| 1 | 1 | 0 | 0 |\n| 1 | 1 | 1 | **1** |\n\n3. Cinq entrées : 2 puissance 5 = **32 lignes**.\n\n4. Opérateur **ET** : la sortie ne vaut 1 que si **toutes** les entrées valent 1. La presse ne démarre que si les **deux mains** sont sur les boutons : elles ne peuvent donc pas se trouver sous l'outil. C'est l'usage typique du ET : une sécurité qui exige plusieurs conditions simultanées."
+    },
+    {
+      "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+      "difficulte": 3,
+      "titre": "Le va-et-vient et la porte universelle",
+      "consigne": "Justifie chaque résultat par une table de vérité complète.",
+      "enonce": "**Situation.** Dans un couloir, une lampe L est commandée par deux interrupteurs a (en bas de l'escalier) et b (en haut). On veut que toute manœuvre de l'un ou de l'autre change l'état de la lampe. Au départ, a = 0, b = 0 et la lampe est éteinte.\n\n1. Dresse la table de vérité de L. Quel opérateur reconnais-tu ? Explique pourquoi il convient à ce cahier des charges.\n2. Le stock de l'atelier ne contient que des portes NON-ET (NAND). Montre, par une table, qu'une porte NON-ET dont les deux entrées sont reliées à a réalise NON a.\n3. Montre, par une table, qu'une porte NON-ET suivie d'une porte NON (elle-même faite d'un NON-ET) réalise a ET b.\n4. Montre, par une table complète, qu'une porte NON-ET dont les entrées sont NON a et NON b réalise a OU b. Conclus sur le caractère universel du NON-ET.",
+      "bareme": [
+        { "critere": "Table du OU EXCLUSIF et justification (sortie 1 quand les entrées diffèrent)", "points": 5 },
+        { "critere": "NON-ET(a, a) = NON a démontré par la table", "points": 4 },
+        { "critere": "NON(NON-ET(a, b)) = a ET b démontré par la table", "points": 5 },
+        { "critere": "NON-ET(NON a, NON b) = a OU b démontré ; universalité conclue", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Départ : a = 0, b = 0 → L = 0. Changer un seul interrupteur allume la lampe ; changer les deux la rééteint.\n| a | b | L |\n|---|---|---|\n| 0 | 0 | 0 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 1 | 1 | 0 |\nC'est le **OU EXCLUSIF** (XOR) : la sortie vaut 1 quand les entrées sont **différentes**. Il détecte les changements : toute manœuvre d'un seul interrupteur change l'égalité des entrées, donc l'état de la lampe.\n\n2.\n| a | NON-ET(a, a) | NON a |\n|---|---|---|\n| 0 | NON(0 ET 0) = 1 | 1 |\n| 1 | NON(1 ET 1) = 0 | 0 |\nLes colonnes sont identiques : **NON-ET(a, a) = NON a**.\n\n3.\n| a | b | NON-ET(a, b) | NON de ce résultat | a ET b |\n|---|---|---|---|---|\n| 0 | 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 0 |\n| 1 | 0 | 1 | 0 | 0 |\n| 1 | 1 | 0 | 1 | 1 |\nIdentiques : on obtient **a ET b** avec deux NON-ET.\n\n4.\n| a | b | NON a | NON b | NON-ET(NON a, NON b) | a OU b |\n|---|---|---|---|---|---|\n| 0 | 0 | 1 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 1 | 1 |\n| 1 | 1 | 0 | 0 | 1 | 1 |\nIdentiques : **a OU b** s'obtient avec trois NON-ET. Avec des NON-ET seuls, on reconstruit NON, ET et OU, donc toute fonction logique : le NON-ET est **universel**, et l'atelier peut tout câbler avec son stock."
+    },
+    {
+      "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+      "difficulte": 1,
+      "titre": "De la table au logigramme",
+      "consigne": "On note /a le complément de a (NON a). Détaille chaque étape.",
+      "enonce": "**Situation.** Une fonction logique S de deux entrées a et b est donnée par sa table de vérité :\n\n| a | b | S |\n|---|---|---|\n| 0 | 0 | 0 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 1 | 1 | 0 |\n\n1. Nomme les trois représentations équivalentes d'une fonction logique et l'intérêt de chacune.\n2. Écris l'équation de S par la méthode de la somme de produits. Explique la méthode.\n3. Décris le logigramme correspondant : quelles portes, combien, et dans quel ordre les placer ? Où se trouvent les entrées et la sortie ?",
+      "bareme": [
+        { "critere": "Table (exhaustive), équation (se simplifie), logigramme (se câble)", "points": 5 },
+        { "critere": "Lignes à 1 retenues, S = /a . b + a . /b", "points": 9 },
+        { "critere": "Deux NON, deux ET, un OU, dans l'ordre des priorités ; entrées à gauche, sortie à droite", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La **table de vérité** est **exhaustive** : elle ne ment pas. L'**équation logique** est algébrique : elle **se simplifie**. Le **logigramme** est graphique : il **se câble**.\n\n2. On retient les lignes où **S = 1** : (a = 0 ; b = 1) et (a = 1 ; b = 0). Pour chaque ligne, on écrit le **produit** des entrées, **complémentées si elles valent 0** : /a . b et a . /b. Puis on **additionne** : **S = /a . b + a . /b**.\n\n3. On respecte les priorités : **complément**, puis **ET**, puis **OU**. Il faut **deux portes NON** (pour /a et /b), **deux portes ET** (pour /a . b et a . /b), et **une porte OU** qui réunit les deux produits. Les **entrées sont à gauche**, les portes au centre, la **sortie à droite**."
+    },
+    {
+      "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+      "difficulte": 2,
+      "titre": "Le vote du jury",
+      "consigne": "On note /a le complément de a (NON a). Justifie chaque étape.",
+      "enonce": "**Situation.** Un jury de trois membres (a, b, c) vote en appuyant sur un bouton (1 = oui). Le projet est accepté (S = 1) si au moins deux membres votent oui.\n\n1. Dresse la table de vérité de S (ordre binaire croissant a, b, c).\n2. Écris l'équation de S par la somme de produits. Combien de portes faudrait-il pour la câbler telle quelle ?\n3. Un technicien propose un autre montage : trois portes ET à deux entrées donnent X = a . b, Y = a . c, Z = b . c, puis une porte OU à trois entrées donne S = X + Y + Z. Analyse ce montage en complétant une table de X, Y, Z et S.\n4. Les deux montages réalisent-ils la même fonction ? Lequel choisirais-tu, et de quoi dépend ce choix ?",
+      "bareme": [
+        { "critere": "Table exacte : S = 1 pour 011, 101, 110, 111", "points": 5 },
+        { "critere": "Somme de quatre produits juste et décompte des portes", "points": 5 },
+        { "critere": "Table de X, Y, Z et S du second montage exacte", "points": 5 },
+        { "critere": "Même fonction ; choix argumenté (moins de portes, portes disponibles dans le boîtier)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n| a | b | c | S |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 |\n| 0 | 1 | 0 | 0 |\n| 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 1 |\n| 1 | 1 | 1 | 1 |\n\n2. Lignes à 1 : **S = /a . b . c + a . /b . c + a . b . /c + a . b . c**. Câblage direct : **3 portes NON**, **4 portes ET** à trois entrées, **1 porte OU** à quatre entrées, soit 8 portes.\n\n3. On nomme les sorties intermédiaires porte par porte :\n| a | b | c | X = a.b | Y = a.c | Z = b.c | S |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 0 | 1 | 0 | 1 |\n| 1 | 1 | 0 | 1 | 0 | 0 | 1 |\n| 1 | 1 | 1 | 1 | 1 | 1 | 1 |\n\n4. La colonne S est identique à celle de la question 1 : les deux montages réalisent **la même fonction**. Un même comportement admet **plusieurs logigrammes**. Le second n'emploie que 4 portes : il est a priori préférable, mais le **moins coûteux dépend des portes réellement disponibles dans le boîtier** utilisé."
+    },
+    {
+      "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+      "difficulte": 3,
+      "titre": "Le montage mystère de l'aiguillage",
+      "consigne": "On note /a le complément de a (NON a). Analyse le montage méthodiquement et justifie chaque conclusion.",
+      "enonce": "**Situation.** On retrouve dans une maquette de train un montage sans documentation, qui commande un aiguillage. Il comporte quatre portes :\n\n- porte 1 : NON, d'entrée a ;\n- porte 2 : ET, d'entrées (sortie de la porte 1) et b ;\n- porte 3 : ET, d'entrées a et c ;\n- porte 4 : OU, d'entrées (sortie de la porte 2) et (sortie de la porte 3) ; sa sortie est S.\n\n1. Analyse le montage : nomme les sorties intermédiaires, écris l'équation de chacune et remonte jusqu'à l'équation de S.\n2. Dresse la table de vérité de S pour vérifier.\n3. Interprète le rôle de l'entrée a d'après ta table : que recopie S quand a = 0 ? Quand a = 1 ?\n4. Un élève recopie l'équation de S en oubliant l'ordre des priorités : il câble /(a . b) + a . c au lieu de /a . b + a . c. Montre, sur une ligne de la table, que son montage est faux, et explique d'où vient l'erreur.",
+      "bareme": [
+        { "critere": "X1 = /a, X2 = /a . b, X3 = a . c, S = /a . b + a . c", "points": 5 },
+        { "critere": "Table de vérité exacte sur 8 lignes", "points": 6 },
+        { "critere": "S recopie b si a = 0, c si a = 1 : a sélectionne l'entrée", "points": 4 },
+        { "critere": "Ligne 000 donnant 1 au lieu de 0, erreur de priorité expliquée", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Porte 1 : X1 = **/a**. Porte 2 : X2 = X1 . b = **/a . b**. Porte 3 : X3 = **a . c**. Porte 4 : **S = /a . b + a . c**.\n\n2.\n| a | b | c | /a . b | a . c | S |\n|---|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 0 | 1 |\n| 0 | 1 | 1 | 1 | 0 | 1 |\n| 1 | 0 | 0 | 0 | 0 | 0 |\n| 1 | 0 | 1 | 0 | 1 | 1 |\n| 1 | 1 | 0 | 0 | 0 | 0 |\n| 1 | 1 | 1 | 0 | 1 | 1 |\n\n3. Quand **a = 0**, S = b (lignes 1 à 4) ; quand **a = 1**, S = c (lignes 5 à 8). L'entrée a **choisit** laquelle des deux entrées b ou c est transmise à la sortie : c'est un sélecteur, qui oriente l'aiguillage selon b ou selon c.\n\n4. Ligne a = 0, b = 0, c = 0 : le vrai montage donne S = 0. Le montage de l'élève donne /(0 . 0) + 0 . 0 = /0 + 0 = **1**. Les tables diffèrent : le montage est **faux**. Dans /a . b, le complément porte **sur a seul** et s'applique **avant** le ET (priorité : complément, puis ET, puis OU) ; l'élève l'a appliqué au produit entier. Une équation mal parenthésée donne un montage faux, même si l'algèbre était juste."
+    },
+    {
+      "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+      "difficulte": 1,
+      "titre": "Les règles du calcul logique",
+      "consigne": "On note /a le complément de a. Donne à chaque fois le résultat et le nom de la propriété utilisée.",
+      "enonce": "**Situation.** Pour simplifier des équations logiques, Mia révise les règles de l'algèbre de Boole.\n\n1. Simplifie chacune des expressions suivantes en nommant la propriété utilisée :\n   - a . 1\n   - a + 0\n   - a . 0\n   - a + 1\n   - a . a\n   - a + /a\n   - a . /a\n   - le complément de /a\n2. Simplifie a + (a . b) et a . (a + b). Quel théorème utilises-tu ?\n3. Applique les lois de De Morgan au complément de (a . b), puis au complément de (a + b). Énonce la règle en une phrase.",
+      "bareme": [
+        { "critere": "Huit résultats justes avec le nom de la propriété", "points": 8 },
+        { "critere": "Les deux absorptions donnent a, théorème d'absorption nommé", "points": 5 },
+        { "critere": "/a + /b et /a . /b, règle : complémenter chaque terme et échanger les opérateurs", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n- a . 1 = **a** (élément neutre du ET)\n- a + 0 = **a** (élément neutre du OU)\n- a . 0 = **0** (élément absorbant du ET)\n- a + 1 = **1** (élément absorbant du OU)\n- a . a = **a** (idempotence)\n- a + /a = **1** (complémentarité)\n- a . /a = **0** (complémentarité)\n- le complément de /a = **a** (involution)\n\n2. a + (a . b) = **a** et a . (a + b) = **a** : c'est le **théorème d'absorption**.\n\n3. Complément de (a . b) = **/a + /b**. Complément de (a + b) = **/a . /b**. Règle : **on complémente chaque terme et on échange les opérateurs**."
+    },
+    {
+      "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+      "difficulte": 2,
+      "titre": "Simplifier l'éclairage du hall",
+      "consigne": "On note /a le complément de a. Nomme chaque propriété utilisée à chaque ligne de calcul.",
+      "enonce": "**Situation.** L'éclairage du hall est commandé par l'équation S = a . b + a . /b + /a . b, où a et b sont deux détecteurs.\n\n1. Factorise les deux premiers termes par a et simplifie-les.\n2. Termine la simplification de S en utilisant la distributivité du OU sur le ET. Donne l'expression finale.\n3. Vérifie ton résultat en dressant la table de vérité de l'expression de départ et de l'expression finale.\n4. On ne dispose que de portes NON-ET. À l'aide d'une loi de De Morgan, réécris l'expression finale sous la forme du complément d'un produit.",
+      "bareme": [
+        { "critere": "a . (b + /b) = a . 1 = a, propriétés nommées", "points": 6 },
+        { "critere": "a + /a . b = (a + /a) . (a + b) = a + b, distributivité du OU sur le ET", "points": 6 },
+        { "critere": "Tables identiques de l'expression de départ et de a + b", "points": 4 },
+        { "critere": "a + b = complément de (/a . /b) par De Morgan", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a . b + a . /b = a . (b + /b) (distributivité du ET sur le OU) = a . 1 (complémentarité) = **a** (élément neutre).\nDonc S = a + /a . b.\n\n2. Distributivité du OU sur le ET : a + (/a . b) = (a + /a) . (a + b) = 1 . (a + b) (complémentarité) = **a + b** (élément neutre). Donc **S = a + b**. (Cette égalité serait fausse en algèbre ordinaire : c'est le piège du chapitre.)\n\n3.\n| a | b | a.b | a./b | /a.b | S départ | a + b |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 0 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 0 | 1 | 1 |\n| 1 | 1 | 1 | 0 | 0 | 1 | 1 |\nLes colonnes sont identiques.\n\n4. De Morgan : complément de (/a . /b) = complément de /a + complément de /b = a + b (involution). Donc **S = complément de (/a . /b)** : c'est une porte NON-ET dont les entrées sont /a et /b."
+    },
+    {
+      "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+      "difficulte": 3,
+      "titre": "La commande du tapis de tri",
+      "consigne": "On note /a le complément de a. Justifie chaque ligne de calcul par une propriété nommée.",
+      "enonce": "**Situation.** Le moteur d'un tapis de tri est commandé par S = complément de (/a + b) + a . b . c.\n\n1. Applique De Morgan au premier terme et simplifie-le.\n2. Factorise par a, puis simplifie l'expression obtenue en utilisant la distributivité du OU sur le ET. Donne S sous la forme d'une somme de deux produits.\n3. Vérifie ton résultat par une table de vérité complète (8 lignes).\n4. On veut câbler S uniquement avec des portes NON-ET. Transforme l'expression avec De Morgan et indique combien de portes NON-ET à deux entrées il faut.\n5. Un élève écrit : « a + b . c = a . b + a . c ». Explique son erreur et donne l'égalité correcte.",
+      "bareme": [
+        { "critere": "Complément de (/a + b) = a . /b par De Morgan et involution", "points": 4 },
+        { "critere": "a . (/b + b . c) = a . (/b + c), soit S = a . /b + a . c, avec propriétés nommées", "points": 6 },
+        { "critere": "Table de vérité complète et identique pour les deux expressions", "points": 4 },
+        { "critere": "S = complément de [ /(a . /b) . /(a . c) ], quatre portes NON-ET", "points": 4 },
+        { "critere": "Confusion des deux distributivités ; a + b . c = (a + b) . (a + c)", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. De Morgan : complément de (/a + b) = complément de /a . /b = **a . /b** (involution).\nDonc S = a . /b + a . b . c.\n\n2. Distributivité du ET sur le OU : S = a . (/b + b . c).\nDistributivité du OU sur le ET : /b + b . c = (/b + b) . (/b + c) = 1 . (/b + c) (complémentarité) = /b + c (élément neutre).\nDonc S = a . (/b + c) = **a . /b + a . c**.\n\n3.\n| a | b | c | départ | a./b + a.c |\n|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 0 | 0 |\n| 0 | 1 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 0 | 0 |\n| 1 | 0 | 0 | 1 | 1 |\n| 1 | 0 | 1 | 1 | 1 |\n| 1 | 1 | 0 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 1 |\n(Exemple de ligne, a = 1, b = 0 : complément de (0 + 0) = 1.)\n\n4. Par involution puis De Morgan : S = complément du complément de (a . /b + a . c) = **complément de [ /(a . /b) . /(a . c) ]**.\nPortes NON-ET : une pour /b (NON-ET(b, b)), une pour /(a . /b), une pour /(a . c), une dernière pour S : **4 portes NON-ET**.\n\n5. L'élève a appliqué la distributivité **ordinaire** (celle du ET sur le OU) au OU. En algèbre de Boole, le OU se distribue sur le ET : **a + b . c = (a + b) . (a + c)**. L'égalité écrite par l'élève est fausse : pour a = 1, b = 0, c = 0, a + b . c = 1 alors que a . b + a . c = 0."
+    },
+    {
+      "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+      "difficulte": 1,
+      "titre": "Premiers pas avec Karnaugh",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** Lina doit simplifier la commande d'un voyant avant de la câbler.\n\n1. Cite quatre gains apportés par la simplification d'une expression logique.\n2. Dans un tableau de Karnaugh, dans quel ordre écrit-on les en-têtes de deux variables ? Pourquoi pas en binaire naturel ?\n3. La table de vérité du voyant S, de trois entrées a, b, c, vaut 1 pour abc = 100, 101, 110, 111, et 0 ailleurs. Place ces valeurs dans un tableau de Karnaugh (lignes a = 0 et a = 1, colonnes bc), entoure le groupe et donne l'expression simplifiée de S.",
+      "bareme": [
+        { "critere": "Moins de portes, de consommation, de pannes possibles, coût plus bas", "points": 6 },
+        { "critere": "Code de Gray 00, 01, 11, 10 : une seule variable change entre cases voisines", "points": 6 },
+        { "critere": "Tableau juste, groupe de quatre cases, S = a", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Moins de **portes** (moins de composants, moins de place), moins de **consommation**, moins de **pannes possibles** (moins de points de défaillance), un **coût** plus bas.\n\n2. En **code de Gray** : **00, 01, 11, 10**. Ainsi deux cases voisines ne diffèrent que par **une seule variable**. En binaire naturel (00, 01, 10, 11), le passage de 01 à 10 change deux variables : les voisinages seraient faux, et la simplification aussi.\n\n3.\n| a \\ bc | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 |\n| 1 | 1 | 1 | 1 | 1 |\nLes quatre 1 forment un **groupe de 4 cases** (toute la ligne a = 1). Dans ce groupe, b et c varient, seule **a** reste constante (a = 1) : **S = a**."
+    },
+    {
+      "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+      "difficulte": 2,
+      "titre": "Le voyant du distributeur",
+      "consigne": "On note /a le complément de a. Construis le tableau de Karnaugh et justifie chaque groupe.",
+      "enonce": "**Situation.** Le voyant d'un distributeur de boissons est commandé par une fonction S de trois entrées a, b, c. S vaut 1 pour abc = 000, 010, 100, 110 et 111 ; S vaut 0 pour les autres combinaisons.\n\n1. Construis le tableau de Karnaugh (lignes a = 0 et a = 1, colonnes bc en code de Gray).\n2. Forme les groupes les plus grands possibles. Justifie en particulier le groupe qui utilise les bords du tableau.\n3. Écris l'expression simplifiée de S et vérifie-la sur deux lignes de la table (une où S = 1, une où S = 0).\n4. Clément a formé trois groupes de deux cases au lieu d'utiliser le plus grand groupe possible. Son résultat est-il faux ? Qu'a-t-il perdu ?",
+      "bareme": [
+        { "critere": "Tableau exact avec en-têtes 00, 01, 11, 10", "points": 5 },
+        { "critere": "Groupe de 4 par les bords (colonnes 00 et 10) et groupe de 2 (a = 1, bc = 11 et 10)", "points": 6 },
+        { "critere": "S = /c + a . b et vérification sur deux lignes", "points": 5 },
+        { "critere": "Résultat juste mais non simplifié : plus de termes et de variables", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n| a \\ bc | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 0 | 1 | 0 | 0 | 1 |\n| 1 | 1 | 0 | 1 | 1 |\n\n2. Le tableau **se referme** : les colonnes 00 et 10 (bords gauche et droit) sont **voisines**. Les quatre 1 de ces deux colonnes forment un **groupe de 4**. Le 1 de la case (a = 1 ; bc = 11) se regroupe avec sa voisine (a = 1 ; bc = 10) en un **groupe de 2** ; les groupes peuvent se **chevaucher**.\n\n3. Groupe de 4 : bc = 00 ou 10, donc b varie, a varie, seule **c = 0** reste constante → **/c**. Groupe de 2 : a = 1, b = 1, c varie → **a . b**. Donc **S = /c + a . b**.\nVérification : abc = 111 → /c = 0, a . b = 1 → S = 1 ✓. abc = 101 → /c = 0, a . b = 0 → S = 0 ✓.\n\n4. Son résultat **reste juste**, mais il **n'est pas simplifié** : des petits groupes laissent plus de termes et plus de variables par terme. Un groupe deux fois plus grand élimine une variable de plus ; il perd donc des portes, donc du coût."
+    },
+    {
+      "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+      "difficulte": 3,
+      "titre": "Le détecteur de chiffre sur l'afficheur",
+      "consigne": "On note /a le complément de a. Construis le tableau, justifie les cas indifférents et chaque groupe.",
+      "enonce": "**Situation.** Un afficheur reçoit un chiffre de 0 à 9 codé en binaire sur quatre bits a b c d (a est le bit de poids fort : 5 s'écrit 0101, 9 s'écrit 1001). Un voyant S doit s'allumer si le chiffre est supérieur ou égal à 5.\n\n1. Les combinaisons 1010 à 1111 peuvent-elles se produire ? Comment les note-t-on dans le tableau de Karnaugh, et comment peut-on les utiliser ?\n2. Construis le tableau de Karnaugh de S (lignes ab et colonnes cd, en code de Gray).\n3. Forme les groupes en exploitant les cas indifférents et écris l'expression simplifiée de S. Vérifie-la pour les chiffres 4, 6 et 9.\n4. Sans utiliser les cas indifférents, on obtiendrait S = a . /b . /c + /a . b . d + /a . b . c. Compare les deux expressions et conclus.",
+      "bareme": [
+        { "critere": "Combinaisons 10 à 15 impossibles, notées φ, incluses si elles agrandissent un groupe", "points": 4 },
+        { "critere": "Tableau exact : 1 pour 5, 6, 7, 8, 9 ; φ pour 10 à 15 ; en-têtes en code de Gray", "points": 5 },
+        { "critere": "Groupes justes et S = a + b . d + b . c", "points": 7 },
+        { "critere": "Vérification sur 4, 6, 9 et comparaison argumentée des deux expressions", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Un chiffre va de 0 à 9 : les combinaisons 1010 à 1111 (10 à 15) **ne peuvent pas se produire** dans le système réel. Ce sont des **cas indifférents**, notés **φ**. On les utilise **librement** : on les **inclut** dans un groupe s'ils l'agrandissent, on les **ignore** sinon.\n\n2.\n| ab \\ cd | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 00 | 0 (0) | 0 (1) | 0 (3) | 0 (2) |\n| 01 | 0 (4) | 1 (5) | 1 (7) | 1 (6) |\n| 11 | φ (12) | φ (13) | φ (15) | φ (14) |\n| 10 | 1 (8) | 1 (9) | φ (11) | φ (10) |\n(Entre parenthèses, le nombre codé.)\n\n3. Groupes :\n- les lignes ab = 11 et ab = 10 (8 cases, avec les φ) : seule **a = 1** est constante → **a** ;\n- lignes ab = 01 et 11, colonnes cd = 01 et 11 (4 cases) : b = 1 et d = 1 constants → **b . d** ;\n- lignes ab = 01 et 11, colonnes cd = 11 et 10 (4 cases) : b = 1 et c = 1 constants → **b . c**.\nDonc **S = a + b . d + b . c**.\nVérification : 4 = 0100 → a = 0, b . d = 0, b . c = 0 → S = 0 ✓ (4 < 5). 6 = 0110 → b . c = 1 → S = 1 ✓. 9 = 1001 → a = 1 → S = 1 ✓.\n\n4. Sans φ : trois termes de trois variables chacun. Avec φ : un terme d'une variable et deux termes de deux variables. Les deux expressions donnent le même résultat pour les chiffres 0 à 9, mais la seconde demande **moins de portes et moins d'entrées** : moins de coût, de consommation et de pannes possibles. Les cas indifférents sont un **cadeau pour la simplification**."
+    },
+    {
+      "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+      "difficulte": 1,
+      "titre": "Quelle exigence est menacée ?",
+      "consigne": "Associe chaque situation à l'exigence de sécurité concernée, puis réponds aux questions de cours.",
+      "enonce": "**Situation.** Le service informatique du lycée recense des incidents.\n\n1. Pour chaque situation, indique l'exigence de sécurité qui n'a pas été respectée (intégrité, confidentialité, disponibilité, authentification ou non-répudiation) :\n   - a : un pirate modifie le montant d'un paiement de la cantine pendant son transfert ;\n   - b : une personne extérieure lit les notes des élèves envoyées aux familles ;\n   - c : l'ENT est saturé et inaccessible la veille d'un devoir ;\n   - d : des élèves reçoivent un courriel qui prétend venir du proviseur, mais qui vient d'un inconnu ;\n   - e : un fournisseur nie avoir envoyé un devis que le lycée a pourtant reçu.\n2. Compare le chiffrement symétrique et le chiffrement asymétrique (clés, vitesse, difficulté).\n3. Quelle est la différence entre un bit de parité et un code correcteur ?",
+      "bareme": [
+        { "critere": "a intégrité, b confidentialité, c disponibilité, d authentification, e non-répudiation", "points": 8 },
+        { "critere": "Symétrique (même clé, rapide, clé à transmettre) et asymétrique (publique/privée, lent)", "points": 6 },
+        { "critere": "Parité : détecte un nombre impair d'erreurs sans corriger ; correcteur : retrouve la valeur", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a : **intégrité** (le message reçu n'est plus identique à celui émis). b : **confidentialité** (seul le destinataire devait pouvoir lire). c : **disponibilité** (le service n'est pas accessible quand on en a besoin). d : **authentification** (on n'est pas sûr de l'identité de l'émetteur). e : **non-répudiation** (l'émetteur nie avoir envoyé le message).\n\n2. **Symétrique** : la **même clé** chiffre et déchiffre ; il est **rapide** ; sa difficulté est qu'il faut **transmettre la clé**. **Asymétrique** : une **clé publique** chiffre, une **clé privée**, jamais transmise, déchiffre ; il est **lent**, mais il **résout l'échange de clés**.\n\n3. Le **bit de parité** **détecte** un nombre impair d'erreurs, **sans les corriger**. Un **code correcteur** **retrouve la valeur exacte**, au prix de bits supplémentaires."
+    },
+    {
+      "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+      "difficulte": 2,
+      "titre": "Le message d'Inès à Karim",
+      "consigne": "Pour chaque question, précise la clé utilisée et à qui elle appartient.",
+      "enonce": "**Situation.** Inès et Karim disposent chacun d'une paire de clés : une clé publique, connue de tous, et une clé privée, gardée secrète.\n\n1. Inès veut envoyer à Karim un fichier que personne d'autre ne doit lire. Avec quelle clé le chiffre-t-elle ? Avec quelle clé Karim le déchiffre-t-il ? Pourquoi un espion qui intercepte le fichier ne peut-il pas le lire ?\n2. Inès publie un communiqué que tout le monde peut lire, mais elle veut prouver qu'il vient bien d'elle. Explique comment elle le signe et comment les lecteurs vérifient la signature. Qu'apporte la signature, et que n'apporte-t-elle pas ?\n3. Le fichier de la question 1 est très volumineux. Pourquoi ne le chiffre-t-on pas entièrement en asymétrique ? Décris la solution utilisée par HTTPS.\n4. Karim veut vérifier que le fichier n'a pas été modifié en route. Quel outil utilise la signature pour cela, et quelle est sa propriété ?",
+      "bareme": [
+        { "critere": "Chiffrement avec la clé publique de Karim, déchiffrement avec sa clé privée jamais transmise", "points": 5 },
+        { "critere": "Empreinte chiffrée avec la clé privée d'Inès, vérifiée avec sa clé publique ; pas de confidentialité", "points": 5 },
+        { "critere": "Asymétrique lent ; clé symétrique de session transmise en asymétrique", "points": 5 },
+        { "critere": "Fonction de hachage : empreinte de taille fixe, changée par la moindre modification", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Inès chiffre avec la **clé publique de Karim** ; Karim déchiffre avec **sa clé privée**. L'espion ne possède pas la clé privée de Karim, qui n'est **jamais transmise** : il ne peut pas déchiffrer.\n\n2. La signature **inverse** l'usage des clés : Inès chiffre l'**empreinte** du communiqué avec **sa clé privée** ; chacun la vérifie avec **la clé publique d'Inès**. La signature apporte l'**authentification** et la **non-répudiation** ; elle n'apporte **pas la confidentialité** : le message peut rester en clair.\n\n3. Le chiffrement asymétrique est **lent**. On **combine** : l'asymétrique sert seulement à transmettre une **clé symétrique de session**, qui chiffre ensuite rapidement tout le trafic. C'est ce que fait **HTTPS**.\n\n4. Une **fonction de hachage** : elle produit une **empreinte de taille fixe**, et **la moindre modification** du fichier la change entièrement. Si l'empreinte recalculée par Karim est identique à celle signée par Inès, le fichier est **intègre**."
+    },
+    {
+      "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+      "difficulte": 3,
+      "titre": "Les capteurs de pollution de la ville",
+      "consigne": "Analyse les besoins de sécurité, critique la proposition et argumente ta propre solution avec le cours.",
+      "enonce": "**Situation.** Une ville installe 500 capteurs de qualité de l'air. Chaque capteur envoie ses mesures à un serveur municipal, qui les publie en accès libre sur un site. Un capteur est aussi embarqué sur un ballon-sonde, dont la liaison radio ne permet aucune retransmission.\n\nL'équipe technique propose :\n\n> « On chiffre toutes les mesures en symétrique, avec la même clé enregistrée dans les 500 capteurs. Comme ça, les mesures sont confidentielles et on est sûr qu'elles viennent de nos capteurs. »\n\n1. Parmi les exigences du cours (intégrité, confidentialité, disponibilité, authentification, non-répudiation), lesquelles sont importantes ici ? Laquelle ne l'est pas ? Justifie.\n2. Critique la proposition de l'équipe : ce qu'elle apporte, ce qu'elle suppose à tort, et le risque qu'elle crée.\n3. Propose une solution pour garantir l'origine et l'intégrité des mesures. Précise les clés utilisées.\n4. Pour le ballon-sonde, les données arrivent parfois altérées par le bruit radio. Quel procédé faut-il, et pourquoi un simple bit de parité ne suffit-il pas ?",
+      "bareme": [
+        { "critere": "Intégrité, authentification et disponibilité importantes ; confidentialité inutile (données publiées)", "points": 5 },
+        { "critere": "Critique : chiffrer ne prouve pas l'origine, clé à transmettre et partagée dans 500 capteurs", "points": 5 },
+        { "critere": "Signature numérique : empreinte chiffrée par la clé privée du capteur, vérifiée par sa clé publique", "points": 5 },
+        { "critere": "Code correcteur indispensable sans retransmission ; la parité ne fait que détecter", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Les mesures sont **publiées en accès libre** : la **confidentialité** n'a pas d'intérêt. En revanche comptent l'**intégrité** (les valeurs ne doivent pas être modifiées), l'**authentification** (elles doivent venir des vrais capteurs, pas d'un faussaire) et la **disponibilité** (le service doit rester accessible). La non-répudiation peut aussi être citée, par exemple en cas de litige sur un dépassement de seuil.\n\n2. La proposition apporte une confidentialité **dont on n'a pas besoin**. Elle suppose à tort que **chiffrer garantit l'origine** : le chiffrement protège le **contenu**, c'est la **signature** qui garantit l'**origine**. De plus, en symétrique, il faut **transmettre la clé** ; ici elle est **partagée** par 500 capteurs : il suffit d'en ouvrir un pour la récupérer et fabriquer de fausses mesures au nom de n'importe quel capteur.\n\n3. Une **signature numérique** : chaque capteur calcule l'**empreinte** de ses mesures par une **fonction de hachage** et la chiffre avec **sa propre clé privée** ; le serveur la vérifie avec la **clé publique** de ce capteur. On obtient l'**authentification**, la **non-répudiation** et l'**intégrité** (toute modification change l'empreinte), sans chiffrer les données.\n\n4. Il faut un **code correcteur**, qui **retrouve la valeur exacte** au prix de bits supplémentaires : il est **indispensable quand aucune retransmission n'est possible**. Un bit de parité **détecterait** seulement un nombre impair d'erreurs, **sans les corriger** ; sans retransmission, la mesure serait perdue."
+    },
+    {
+      "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+      "difficulte": 1,
+      "titre": "Le vocabulaire du réseau",
+      "consigne": "Réponds en utilisant le vocabulaire exact du cours.",
+      "enonce": "**Situation.** Sofia fait l'inventaire des communications de sa journée.\n\n1. Classe chaque réseau dans son échelle (PAN, LAN ou WAN) : ses écouteurs Bluetooth reliés à son téléphone ; le réseau Wi-Fi du CDI ; la connexion qui lui permet de consulter un site hébergé à l'étranger.\n2. Recopie et complète :\n\n| Élément | Sa nature | Ce qu'il désigne |\n|---|---|---|\n| Adresse MAC | ? | ? |\n| Adresse IP | ? | ? |\n| Masque de sous-réseau | ? | ? |\n| Port | ? | ? |\n\n3. Quelle différence y a-t-il entre un commutateur et un routeur ? Sur quelle adresse chacun s'appuie-t-il ?",
+      "bareme": [
+        { "critere": "PAN, LAN, WAN correctement associés", "points": 6 },
+        { "critere": "Tableau complet et exact (physique/usine, logique/réseau, découpage, numéro d'application)", "points": 8 },
+        { "critere": "Commutateur dans un réseau local par la MAC ; routeur entre réseaux par l'IP", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Écouteurs Bluetooth : **PAN** (quelques mètres, autour d'une personne). Wi-Fi du CDI : **LAN** (un bâtiment). Site à l'étranger : **WAN** (Internet, une étendue géographique large).\n\n2.\n| Élément | Sa nature | Ce qu'il désigne |\n|---|---|---|\n| Adresse MAC | Physique, attribuée en usine, unique | La **carte réseau** |\n| Adresse IP | Logique, attribuée par le réseau, peut changer | La **machine dans le réseau** |\n| Masque de sous-réseau | Un découpage | Ce qui, dans l'IP, désigne le **réseau** et ce qui désigne la **machine** |\n| Port | Un numéro | L'**application** destinataire sur la machine |\n\n3. Le **commutateur** (*switch*) distribue les trames **dans un réseau local**, d'après l'adresse **MAC**. Le **routeur** **relie des réseaux différents** et **choisit le chemin**, d'après l'adresse **IP**."
+    },
+    {
+      "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+      "difficulte": 2,
+      "titre": "Le réseau du laboratoire de SI",
+      "consigne": "Justifie chaque réponse à l'aide des données de l'énoncé et du cours.",
+      "enonce": "**Situation.** Le laboratoire de SI est câblé en étoile autour d'un commutateur. Le poste du professeur a l'adresse IP 192.168.1.23 avec le masque 255.255.255.0. Avec ce masque, les trois premiers nombres de l'adresse désignent le réseau, et le dernier désigne la machine.\n\n1. Quelle partie de l'adresse du poste désigne le réseau, et quelle partie désigne la machine ?\n2. Le poste doit communiquer avec l'imprimante 3D d'adresse 192.168.1.140, puis avec le serveur du CDI d'adresse 192.168.2.10 (même masque). Dans chaque cas, les deux machines se parlent-elles directement, ou faut-il passer par un routeur ? Justifie.\n3. Choisis entre TCP et UDP pour : envoyer le fichier d'impression à l'imprimante 3D ; une visioconférence en direct avec un autre lycée. Justifie chaque choix.\n4. Le commutateur central tombe en panne. Quelle est la conséquence, et pourquoi ?",
+      "bareme": [
+        { "critere": "Réseau 192.168.1, machine 23", "points": 5 },
+        { "critere": "Imprimante sur le même réseau (directement) ; serveur sur 192.168.2 (routeur)", "points": 5 },
+        { "critere": "TCP pour le fichier (fiabilité, ordre) ; UDP pour la visio (paquet retransmis trop tard)", "points": 5 },
+        { "critere": "Panne du centre de l'étoile : tout le laboratoire est coupé", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Avec le masque 255.255.255.0 : **192.168.1** désigne le **réseau** ; **23** désigne la **machine**.\n\n2. Imprimante 192.168.1.140 : même partie réseau (192.168.1) → même réseau, les machines se parlent **directement** (par le commutateur). Serveur 192.168.2.10 : partie réseau **192.168.2**, différente → il faut passer par un **routeur**, qui relie des réseaux différents. C'est le masque qui permet de le savoir.\n\n3. Fichier d'impression : **TCP**, connexion **fiable** (accusés de réception, retransmission des paquets perdus, remise dans l'ordre) : un fichier incomplet ou désordonné donnerait une pièce fausse. Visioconférence : **UDP**, sans garantie mais **rapide** : un paquet retransmis arriverait **trop tard pour servir**. (Toute justification équivalente est acceptée.)\n\n4. Dans une topologie en **étoile**, tous les postes sont reliés au nœud central : sa panne **affecte tout le réseau** du laboratoire. C'est la faiblesse de cette topologie, pourtant dominante."
+    },
+    {
+      "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+      "difficulte": 3,
+      "titre": "Connecter l'atelier de fabrication",
+      "consigne": "Propose une architecture réseau et justifie chaque choix avec le cours.",
+      "enonce": "**Situation.** Une entreprise équipe son atelier : 12 postes de travail filaires, 3 machines-outils, 20 capteurs connectés sans fil (température, vibrations), une caméra de surveillance qui filme en direct et un serveur. L'atelier doit accéder à Internet. Une panne réseau arrêterait la production.\n\nPlan d'adressage : masque 255.255.255.0 (les trois premiers nombres désignent le réseau, le dernier la machine). Serveur : 10.0.5.2 ; un capteur : 10.0.5.17 ; la box Internet côté atelier : 10.0.5.1 ; un poste du bureau d'études, dans un autre bâtiment : 10.0.6.30.\n\n1. Quelle topologie proposes-tu pour les postes et les machines ? Donne son avantage et sa faiblesse. Quelle topologie serait la plus robuste, et à quel prix ?\n2. Quels équipements faut-il (pour les postes filaires, pour les capteurs, pour Internet) ? Justifie.\n3. Choisis un protocole pour : l'envoi d'un programme d'usinage vers une machine-outil ; le flux de la caméra ; les mesures des capteurs. Justifie.\n4. Le capteur 10.0.5.17 peut-il joindre directement le serveur ? Et le poste 10.0.6.30 ? Justifie.\n5. L'entreprise remplace plus tard des câbles par du Wi-Fi. Faut-il réécrire le logiciel de supervision, qui utilise HTTP ? Explique.",
+      "bareme": [
+        { "critere": "Étoile justifiée (dominante, panne du centre) ; maillée robuste mais coûteuse", "points": 4 },
+        { "critere": "Commutateur (MAC), point d'accès (sans fil), routeur (entre réseaux, IP) justifiés", "points": 4 },
+        { "critere": "TCP pour le programme, UDP pour la caméra, MQTT pour les capteurs", "points": 5 },
+        { "critere": "Capteur et serveur sur 10.0.5 : direct ; poste sur 10.0.6 : par un routeur", "points": 4 },
+        { "critere": "Découpage en couches : l'accès au support change sans toucher à HTTP", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Une **étoile** autour d'un commutateur : c'est la topologie dominante, simple à étendre, et la coupure d'un câble n'isole qu'un poste. Sa faiblesse : la **panne du centre affecte tout**. Comme une panne arrêterait la production, on peut envisager une topologie **maillée** (plusieurs chemins) : **très robuste**, mais **coûteuse en câblage**.\n\n2. Un **commutateur** pour distribuer les trames aux postes et machines filaires du réseau local, d'après les adresses **MAC** ; un **point d'accès** pour raccorder les capteurs **sans fil** ; un **routeur** (la box) pour relier l'atelier à **Internet** et aux autres réseaux, d'après les adresses **IP**.\n\n3. Programme d'usinage : **TCP**, fiable (accusés de réception, retransmission, ordre) : un programme incomplet serait dangereux. Caméra en direct : **UDP**, rapide ; un paquet retransmis arriverait trop tard. Capteurs : **MQTT**, protocole d'application **léger**, fondé sur **publication-abonnement**, référence des objets connectés.\n\n4. Capteur 10.0.5.17 et serveur 10.0.5.2 : même partie réseau **10.0.5** → communication **directe**. Poste 10.0.6.30 : réseau **10.0.6**, différent → il faut passer par un **routeur**.\n\n5. **Non**. Les protocoles sont organisés **en couches** : chaque couche peut changer sans que les autres soient réécrites. Le Wi-Fi remplace Ethernet dans la couche d'**accès au support** ; IP, TCP et **HTTP** restent inchangés. C'est ce qui a permis au Wi-Fi de remplacer le câble sans toucher à HTTP."
+    },
+    {
+      "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+      "difficulte": 1,
+      "titre": "Mesures sur la maquette d'éclairage",
+      "consigne": "Justifie chaque réponse par une loi ou une propriété du cours.",
+      "enonce": "**Situation.** Élise étudie la maquette d'éclairage d'une maison.\n\n1. Un courant de 0,5 A arrive à un nœud d'où partent deux branches. On mesure 0,2 A dans la première. Quelle est l'intensité dans la seconde ? Quelle loi utilises-tu, et que traduit-elle ?\n2. Deux résistances de 100 Ω et 220 Ω sont montées en série. Quelle est la résistance équivalente ? Si elles étaient en dérivation, comment se combineraient-elles ?\n3. Comment branche-t-on un ampèremètre ? Un voltmètre ? Que se passe-t-il si l'on branche un ampèremètre en dérivation ?\n4. Pourquoi les lampes de la maison sont-elles câblées en dérivation plutôt qu'en série ?",
+      "bareme": [
+        { "critere": "0,3 A par la loi des nœuds, conservation de la charge", "points": 5 },
+        { "critere": "320 Ω en série ; en dérivation, les inverses s'additionnent", "points": 5 },
+        { "critere": "Ampèremètre en série, voltmètre en dérivation, court-circuit expliqué", "points": 5 },
+        { "critere": "En dérivation, une coupure n'affecte que sa branche", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Loi des nœuds** : la somme des intensités entrantes égale la somme des sortantes. 0,5 = 0,2 + I2 → **I2 = 0,3 A**. Elle traduit la **conservation de la charge** : rien ne s'accumule dans un fil.\n\n2. En série : R = R1 + R2 = 100 + 220 = **320 Ω**. En dérivation, ce sont les **inverses** qui s'additionnent : 1/R = 1/R1 + 1/R2.\n\n3. L'ampèremètre se branche **en série** dans la branche à mesurer ; le voltmètre **en dérivation** aux bornes du dipôle. Branché en dérivation, l'ampèremètre, dont la résistance est presque nulle, **court-circuite** le dipôle : l'appareil ou le circuit peut être détruit.\n\n4. En dérivation, une **coupure n'affecte que sa branche** : une lampe grillée ou éteinte n'éteint pas les autres. En série, une coupure arrête **tout**."
+    },
+    {
+      "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+      "difficulte": 2,
+      "titre": "Adapter le capteur au microcontrôleur",
+      "consigne": "Détaille chaque calcul et nomme la loi ou le montage utilisé.",
+      "enonce": "**Situation.** Un capteur délivre une tension de 12 V, mais l'entrée du microcontrôleur accepte 5 V au plus. On place un pont diviseur : deux résistances en série, R1 = 14 kΩ et R2 = 10 kΩ, alimentées par les 12 V du capteur. Le microcontrôleur lit la tension aux bornes de R2.\n\n1. Rappelle ce que fait un pont diviseur de tension. Calcule la résistance équivalente des deux résistances.\n2. Les deux résistances se partagent la tension proportionnellement à leur valeur. Calcule la tension aux bornes de R2 et celle aux bornes de R1.\n3. Vérifie ton résultat avec la loi des mailles. Que traduit cette loi ?\n4. On veut mesurer l'intensité qui traverse R1 et la tension aux bornes de R2. Où places-tu l'ampèremètre et le voltmètre ? Que vaut l'intensité dans R2 par rapport à celle dans R1 ? Justifie.",
+      "bareme": [
+        { "critere": "Rôle du pont diviseur et Req = 24 kΩ", "points": 5 },
+        { "critere": "U2 = 12 × 10 / 24 = 5 V et U1 = 7 V", "points": 6 },
+        { "critere": "Loi des mailles : 12 − 7 − 5 = 0, conservation de l'énergie", "points": 4 },
+        { "critere": "Ampèremètre en série, voltmètre en dérivation ; même intensité en série", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Deux résistances en série **partagent la tension** proportionnellement à leur valeur : le pont diviseur sert à **adapter le signal d'un capteur à l'entrée d'un microcontrôleur**. En série : Req = 14 + 10 = **24 kΩ**.\n\n2. U2 = 12 × R2 / (R1 + R2) = 12 × 10 / 24 = **5 V**. U1 = 12 × 14 / 24 = **7 V**. Le microcontrôleur reçoit bien 5 V au plus.\n\n3. Loi des mailles, le long du parcours fermé : 12 − U1 − U2 = 12 − 7 − 5 = **0** ✓. Elle traduit la **conservation de l'énergie** : on revient au même potentiel.\n\n4. Ampèremètre **en série** dans la branche de R1 ; voltmètre **en dérivation** aux bornes de R2. R1 et R2 sont **en série** : l'intensité est **la même** partout, donc identique dans R1 et dans R2."
+    },
+    {
+      "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+      "difficulte": 3,
+      "titre": "Le circuit mixte du tableau lumineux",
+      "consigne": "Détaille chaque calcul, nomme la loi utilisée et arrondis au millième si nécessaire. On rappelle la loi d'Ohm : U = R × I.",
+      "enonce": "**Situation.** Un tableau lumineux est alimenté par un générateur de 12 V. Une résistance R1 = 40 Ω est en série avec deux branches en dérivation : l'une contient R2 = 60 Ω, l'autre R3 = 30 Ω.\n\n1. Calcule la résistance équivalente des deux branches en dérivation, puis celle de tout le circuit.\n2. Calcule l'intensité I débitée par le générateur, puis la tension aux bornes de R1.\n3. Déduis la tension aux bornes des branches en dérivation par la loi des mailles. Calcule l'intensité dans R2 et dans R3, et vérifie la loi des nœuds.\n4. Le fil de la branche R3 se coupe. Recalcule l'intensité débitée par le générateur. La branche R2 fonctionne-t-elle encore ? Justifie.",
+      "bareme": [
+        { "critere": "1/R = 1/60 + 1/30, soit 20 Ω, puis 60 Ω au total", "points": 4 },
+        { "critere": "I = 0,2 A et U1 = 8 V", "points": 5 },
+        { "critere": "U = 4 V, I2 ≈ 0,067 A, I3 ≈ 0,133 A, somme 0,2 A", "points": 6 },
+        { "critere": "Circuit de 100 Ω, I = 0,12 A, R2 toujours alimentée (dérivation)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. En dérivation, les inverses s'additionnent : 1/R = 1/60 + 1/30 = 1/60 + 2/60 = 3/60 → R = **20 Ω**. En série avec R1 : Req = 40 + 20 = **60 Ω**.\n\n2. I = U / Req = 12 / 60 = **0,2 A**. U1 = R1 × I = 40 × 0,2 = **8 V**.\n\n3. Loi des mailles : 12 − 8 − U = 0 → **U = 4 V** aux bornes de chaque branche (même tension en dérivation).\nI2 = 4 / 60 ≈ **0,067 A** ; I3 = 4 / 30 ≈ **0,133 A**.\nLoi des nœuds : 0,067 + 0,133 = **0,2 A** = I ✓.\n\n4. Il ne reste que R1 et R2 en série : R = 40 + 60 = 100 Ω, I = 12 / 100 = **0,12 A**. La branche R2 **fonctionne encore** : en dérivation, une **coupure n'affecte que sa branche**. (Sa tension passe à 60 × 0,12 = 7,2 V : l'éclairage de R2 change, mais il n'est pas coupé.)"
+    },
+    {
+      "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+      "difficulte": 1,
+      "titre": "Trois dipôles, trois calculs",
+      "consigne": "Donne chaque formule, le calcul et le résultat avec son unité.",
+      "enonce": "**Situation.** Julien étudie trois dipôles de la carte électronique de son projet.\n\n1. Une batterie a une force électromotrice E = 12 V et une résistance interne r = 0,5 Ω. Calcule la tension à ses bornes quand elle débite 4 A. Pourquoi cette tension est-elle plus faible qu'à vide ?\n2. Une résistance de 220 Ω est traversée par un courant de 0,02 A. Calcule la tension à ses bornes et la puissance qu'elle dissipe. Sous quelle forme cette puissance est-elle dissipée ?\n3. Un condensateur de capacité C = 100 µF est chargé sous 10 V. Calcule la charge stockée et l'énergie stockée.",
+      "bareme": [
+        { "critere": "U = E − r × I = 10 V et chute due à la résistance interne", "points": 6 },
+        { "critere": "U = 4,4 V, P = 0,088 W, dissipation thermique", "points": 7 },
+        { "critere": "Q = 1 × 10⁻³ C et E = 5 × 10⁻³ J", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. U = E − r × I = 12 − 0,5 × 4 = 12 − 2 = **10 V**. Plus le courant appelé est fort, plus la tension **chute** dans la **résistance interne** du générateur réel.\n\n2. U = R × I = 220 × 0,02 = **4,4 V**. P = U × I = 4,4 × 0,02 = **0,088 W** (ou R × I² = 220 × 0,0004 = 0,088 W). Elle est dissipée intégralement sous forme **thermique**.\n\n3. C = 100 µF = 100 × 10⁻⁶ F = 10⁻⁴ F. Q = C × U = 10⁻⁴ × 10 = **10⁻³ C** (1 mC). E = ½ × C × U² = 0,5 × 10⁻⁴ × 100 = **5 × 10⁻³ J** (5 mJ)."
+    },
+    {
+      "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+      "difficulte": 2,
+      "titre": "La LED et la minuterie de Zoé",
+      "consigne": "Détaille chaque calcul et justifie les montages.",
+      "enonce": "**Situation.** Zoé réalise une veilleuse. Une LED doit être alimentée sous 5 V ; on admet qu'elle impose 2 V à ses bornes et qu'elle doit être parcourue par 20 mA.\n\n1. Pourquoi faut-il une résistance en série avec la LED ? Calcule la tension aux bornes de cette résistance (loi des mailles), puis sa valeur.\n2. Calcule la puissance dissipée par cette résistance.\n3. Zoé ajoute une minuterie : un condensateur de 470 µF se charge à travers une résistance de 10 kΩ. Calcule la constante de temps, puis la durée au bout de laquelle la charge atteint 99 % de sa valeur finale.\n4. Une fois le condensateur chargé, un courant continu le traverse-t-il ? Justifie. Quelle propriété du condensateur permet cette temporisation ?",
+      "bareme": [
+        { "critere": "Résistance qui limite le courant ; 3 V et R = 150 Ω", "points": 6 },
+        { "critere": "P = R × I² = 0,06 W", "points": 4 },
+        { "critere": "τ = R × C = 4,7 s et 5τ = 23,5 s", "points": 6 },
+        { "critere": "Pas de courant continu en régime établi ; tension qui ne varie pas brusquement", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Sans résistance, rien ne **limite le courant** : la LED grille. Loi des mailles : 5 − 2 − U(R) = 0 → **U(R) = 3 V**. R = U / I = 3 / 0,020 = **150 Ω**.\n\n2. P = R × I² = 150 × 0,020² = 150 × 0,0004 = **0,06 W** (ou U × I = 3 × 0,020 = 0,06 W).\n\n3. τ = R × C = 10 000 × 470 × 10⁻⁶ = **4,7 s**. Le régime établi est atteint à 99 % au bout de **5τ** = 5 × 4,7 = **23,5 s**.\n\n4. **Non** : un condensateur ne laisse **pas passer le continu en régime établi**. La temporisation repose sur le fait que la **tension à ses bornes ne peut pas varier brusquement** : elle monte progressivement, en exponentielle, avec la constante de temps τ, ce qui crée un délai calibré."
+    },
+    {
+      "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+      "difficulte": 3,
+      "titre": "Le démarrage de la voiture",
+      "consigne": "Détaille chaque calcul et explique chaque phénomène avec le modèle du cours.",
+      "enonce": "**Situation.** La batterie d'une voiture se modélise par une force électromotrice E = 12,6 V en série avec une résistance interne r = 0,02 Ω.\n\n1. Phares allumés, moteur arrêté, la batterie débite 10 A. Calcule la tension à ses bornes.\n2. Au démarrage, le démarreur appelle 200 A en plus des phares. Calcule la nouvelle tension. Explique pourquoi les phares faiblissent à ce moment.\n3. Calcule la puissance perdue dans la résistance interne pendant le démarrage. Sous quelle forme est-elle perdue ?\n4. Un constructeur ajoute un supercondensateur de 500 F chargé sous 2,7 V. Calcule l'énergie qu'il stocke. Il se charge à travers une résistance de 0,1 Ω : au bout de combien de temps est-il chargé à 99 % ?\n5. Le calculateur de la voiture est protégé par des condensateurs de découplage. À quoi servent-ils, et quelle propriété du condensateur exploitent-ils ?",
+      "bareme": [
+        { "critere": "U = 12,6 − 0,02 × 10 = 12,4 V", "points": 3 },
+        { "critere": "I = 210 A, U = 8,4 V, chute de tension expliquée par la résistance interne", "points": 5 },
+        { "critere": "P = r × I² = 882 W, dissipée en chaleur", "points": 4 },
+        { "critere": "E = 1 822,5 J, τ = 50 s et 5τ = 250 s", "points": 5 },
+        { "critere": "Découplage : absorber les appels de courant brefs, tension qui ne varie pas brusquement", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. U = E − r × I = 12,6 − 0,02 × 10 = 12,6 − 0,2 = **12,4 V**.\n\n2. I = 10 + 200 = **210 A**. U = 12,6 − 0,02 × 210 = 12,6 − 4,2 = **8,4 V**. Plus le courant appelé est fort, plus la tension délivrée **chute** dans la résistance interne : les phares, alimentés par cette même tension, reçoivent 8,4 V au lieu de 12,4 V et **faiblissent**.\n\n3. P = r × I² = 0,02 × 210² = 0,02 × 44 100 = **882 W**, dissipés intégralement en **chaleur** (la batterie chauffe).\n\n4. E = ½ × C × U² = 0,5 × 500 × 2,7² = 0,5 × 500 × 7,29 = **1 822,5 J**. τ = R × C = 0,1 × 500 = **50 s** ; chargé à 99 % au bout de 5τ = **250 s**.\n\n5. Ils **découplent** : ils **absorbent les appels de courant brefs** du circuit numérique. Ils exploitent le fait que la **tension aux bornes d'un condensateur ne peut pas varier brusquement** : ils maintiennent l'alimentation du calculateur stable pendant les variations rapides."
+    },
+    {
+      "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+      "difficulte": 1,
+      "titre": "Bobine, diode et transistor",
+      "consigne": "Réponds avec précision ; détaille le calcul de la question 3.",
+      "enonce": "**Situation.** Adam trie les composants d'un kit d'électronique.\n\n1. Recopie et complète :\n\n| Composant | Ce qui ne peut pas varier brusquement | Comportement en continu établi |\n|---|---|---|\n| Condensateur | ? | ? |\n| Bobine | ? | ? |\n\n2. Comment se comporte une diode en sens direct ? En sens inverse ? Quelle est la tension de seuil d'une diode au silicium ? Cite deux usages de la diode.\n3. Une bobine d'inductance L = 0,2 H est parcourue par un courant de 0,5 A. Calcule l'énergie qu'elle stocke. Sous quelle forme cette énergie est-elle stockée ?",
+      "bareme": [
+        { "critere": "Condensateur : tension, interrupteur ouvert ; bobine : courant, simple fil", "points": 7 },
+        { "critere": "Conduit au-delà de 0,7 V en direct, bloque en inverse ; deux usages", "points": 6 },
+        { "critere": "E = ½ × L × I² = 0,025 J, sous forme magnétique", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1.\n| Composant | Ce qui ne peut pas varier brusquement | Comportement en continu établi |\n|---|---|---|\n| Condensateur | La **tension** à ses bornes | Un **interrupteur ouvert** |\n| Bobine | Le **courant** qui la traverse | Un simple **fil** |\n\n2. En **sens direct**, la diode **conduit** dès que la tension dépasse la **tension de seuil**, environ **0,7 V** au silicium. En **sens inverse**, elle **bloque**. Usages : **redresser** (sens unique), **protéger** contre une inversion de polarité, **émettre de la lumière** (LED, avec une résistance en série).\n\n3. E = ½ × L × I² = 0,5 × 0,2 × 0,5² = 0,5 × 0,2 × 0,25 = **0,025 J**. L'énergie est stockée sous forme **magnétique**."
+    },
+    {
+      "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+      "difficulte": 2,
+      "titre": "Le relais de la pompe d'arrosage",
+      "consigne": "Explique le rôle de chaque composant et détaille le calcul.",
+      "enonce": "**Situation.** Un microcontrôleur doit commander le relais qui met en marche la pompe d'arrosage d'un jardin. La sortie du microcontrôleur délivre au plus 20 mA ; la bobine du relais a besoin de 80 mA sous 12 V. On utilise un transistor et une diode.\n\n1. Pourquoi le microcontrôleur ne peut-il pas alimenter directement la bobine du relais ? Quel est le rôle du transistor ?\n2. Dans quel régime le transistor fonctionne-t-il ici ? Décris ses deux états.\n3. La bobine du relais a une inductance de 50 mH. Calcule l'énergie qu'elle stocke quand elle est parcourue par 80 mA.\n4. Quand le transistor se bloque, que se passe-t-il dans la bobine ? Comment et où monte-t-on la diode pour protéger le transistor ?",
+      "bareme": [
+        { "critere": "20 mA insuffisants pour 80 mA ; faible commande qui contrôle un courant fort", "points": 5 },
+        { "critere": "Commutation : bloqué (interrupteur ouvert) ou saturé (fermé)", "points": 5 },
+        { "critere": "E = ½ × 0,05 × 0,08² = 1,6 × 10⁻⁴ J", "points": 5 },
+        { "critere": "Surtension destructrice ; diode de roue libre en inverse aux bornes de la bobine", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Le microcontrôleur ne délivre que **quelques milliampères** (20 mA au plus), alors que la bobine en demande 80 mA. Le **transistor** permet qu'un courant **faible** sur son électrode de commande contrôle un courant **fort** entre les deux autres : la puissance vient de l'alimentation 12 V, le transistor ne fait que l'ouvrir ou la fermer.\n\n2. En régime de **commutation** (tout ou rien) : **bloqué**, il se comporte comme un **interrupteur ouvert** (relais au repos) ; **saturé**, comme un **interrupteur fermé** (relais collé, pompe en marche).\n\n3. E = ½ × L × I² = 0,5 × 0,050 × 0,080² = 0,5 × 0,050 × 0,0064 = **1,6 × 10⁻⁴ J** (0,16 mJ).\n\n4. Le **courant** dans une bobine **ne peut pas varier brusquement** : quand le transistor coupe le courant, la bobine provoque une **surtension** capable de **détruire le transistor**. On monte une **diode de roue libre**, **en inverse aux bornes de la bobine** : elle offre au courant un chemin pour s'éteindre progressivement."
+    },
+    {
+      "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+      "difficulte": 3,
+      "titre": "La commande du moteur du robot",
+      "consigne": "Analyse le montage composant par composant ; détaille les calculs et justifie chaque affirmation.",
+      "enonce": "**Situation.** Le moteur d'un robot (12 V, 3 A en fonctionnement) est commandé par un microcontrôleur à travers un transistor. Le montage comporte aussi :\n\n- une diode placée en série à l'entrée de l'alimentation, pour protéger la carte si l'on branche la batterie à l'envers ;\n- une diode montée en inverse aux bornes du moteur.\n\nL'inductance du bobinage du moteur vaut 2 mH.\n\n1. Un élève écrit dans son rapport : « Le transistor fournit 36 W au moteur. » Calcule la puissance du moteur et corrige cette phrase.\n2. Quel est le rôle de la diode d'entrée ? La tension de seuil d'une diode au silicium valant environ 0,7 V, quelle tension reste-t-il pour le moteur quand la batterie délivre 12 V et que la diode conduit ? Quelle puissance la diode dissipe-t-elle sous 3 A ?\n3. Calcule l'énergie stockée dans le bobinage du moteur quand il est parcouru par 3 A.\n4. Que se passerait-il sans la diode montée aux bornes du moteur, au moment où le transistor se bloque ? Explique le rôle de cette diode.\n5. Le transistor fonctionne en commutation. Pourquoi ce régime convient-il ici, alors que l'amplification sert dans d'autres circuits ?",
+      "bareme": [
+        { "critere": "P = 36 W fournie par l'alimentation ; le transistor module sans fournir", "points": 4 },
+        { "critere": "Protection contre l'inversion de polarité, 11,3 V et 2,1 W", "points": 4 },
+        { "critere": "E = ½ × 0,002 × 3² = 9 × 10⁻³ J", "points": 4 },
+        { "critere": "Surtension destructrice à la coupure ; diode de roue libre qui évacue le courant", "points": 4 },
+        { "critere": "Commutation pour la commande de puissance, amplification pour l'analogique", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. P = U × I = 12 × 3 = **36 W**. Mais le transistor **ne fournit pas** l'énergie : il la **module**. La puissance vient toujours de l'**alimentation** (la batterie) ; le transistor ne fait qu'ouvrir et fermer le robinet. Phrase correcte : « La batterie fournit 36 W au moteur, par l'intermédiaire du transistor qui commande le passage du courant. »\n\n2. La diode ne laisse passer le courant que **dans un seul sens** : batterie branchée à l'envers, elle **bloque** et protège la carte (**protection contre l'inversion de polarité**). Quand elle conduit, elle prend environ 0,7 V : il reste 12 − 0,7 = **11,3 V**. Elle dissipe environ 0,7 × 3 = **2,1 W**.\n\n3. E = ½ × L × I² = 0,5 × 0,002 × 9 = **9 × 10⁻³ J** (9 mJ).\n\n4. Le **courant** dans une bobine **ne peut pas varier brusquement**. Sans diode, couper brutalement le courant du moteur provoquerait une **surtension** capable de **détruire le transistor**. La **diode de roue libre**, montée en inverse aux bornes du moteur, offre au courant un **chemin pour s'éteindre** : l'énergie stockée (9 mJ) s'y dissipe sans danger.\n\n5. Le moteur doit être mis en marche ou arrêté (commande de **puissance**) : le régime de **commutation**, tout ou rien (bloqué / saturé), convient, comme dans toute l'électronique numérique. L'**amplification** (régime linéaire, sortie qui reproduit l'entrée en plus grand) sert en électronique **analogique**, pour reproduire un signal."
+    },
+    {
+      "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+      "difficulte": 1,
+      "titre": "Lire l'oscillogramme",
+      "consigne": "Détaille chaque lecture : nombre de divisions × calibre.",
+      "enonce": "**Situation.** Ambre observe à l'oscilloscope le signal carré d'un générateur de fonctions. Réglages : base de temps 0,5 ms/div ; sensibilité verticale 2 V/div.\n\n1. Un motif complet du signal occupe 5 divisions horizontalement. Calcule la période, puis la fréquence.\n2. L'écart entre la valeur haute et la valeur basse du signal occupe 4 divisions verticalement. Calcule cette amplitude.\n3. Ambre veut aussi mesurer la valeur d'une résistance et l'intensité dans un circuit. Quel appareil utilise-t-elle, et comment le branche-t-elle dans chaque cas ? Qu'est-ce que cet appareil ne peut pas lui montrer ?",
+      "bareme": [
+        { "critere": "T = 2,5 ms et f = 400 Hz", "points": 8 },
+        { "critere": "Amplitude = 4 × 2 = 8 V", "points": 6 },
+        { "critere": "Multimètre : résistance hors tension, intensité en série ; pas d'allure du signal", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. T = 5 × 0,5 = **2,5 ms** = 0,0025 s. f = 1 / T = 1 / 0,0025 = **400 Hz**.\n\n2. Amplitude = 4 × 2 = **8 V**.\n\n3. Elle utilise un **multimètre**. Résistance : **hors tension**, sur le composant isolé du circuit. Intensité : multimètre en ampèremètre, **en série** dans la branche. Le multimètre ne montre pas l'**allure** du signal (sa forme en fonction du temps) : seul l'oscilloscope la révèle."
+    },
+    {
+      "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+      "difficulte": 2,
+      "titre": "Le pont diviseur : calcul, simulation, mesure",
+      "consigne": "Détaille tes calculs et analyse les écarts avec le raisonnement du cours.",
+      "enonce": "**Situation.** Maël étudie un pont diviseur alimenté sous 12 V : R1 = 14 kΩ en série avec R2 = 10 kΩ. La tension de sortie, aux bornes de R2, vaut U2 = 12 × R2 / (R1 + R2).\n\n| Source | U2 obtenue |\n|---|---|\n| Calcul | ? |\n| Simulation | 5,00 V |\n| Mesure au multimètre | 4,82 V |\n\nLes résistances utilisées ont une tolérance de ± 5 %.\n\n1. Fais le calcul de U2. Compare-le à la simulation : que conclus-tu ?\n2. Calcule l'écart entre simulation et mesure. Quelles sont ses deux origines possibles selon le cours ?\n3. Calcule la plus petite valeur possible de U2 compte tenu des tolérances (R2 au plus bas, R1 au plus haut). La mesure est-elle compatible avec des composants dans leur tolérance ?\n4. Un camarade conclut : « La mesure ne donne pas 5 V, notre conception a échoué. » Réponds-lui.",
+      "bareme": [
+        { "critere": "U2 = 5,00 V : calcul et simulation concordent, pas d'erreur de modèle", "points": 5 },
+        { "critere": "Écart de 0,18 V ; phénomène non modélisé ou composant hors tolérance", "points": 5 },
+        { "critere": "U2 minimale ≈ 4,71 V et mesure compatible avec les tolérances", "points": 6 },
+        { "critere": "Un écart n'est pas un échec mais une information à analyser", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. U2 = 12 × 10 / (14 + 10) = 120 / 24 = **5,00 V**. Calcul et simulation **concordent** : pas d'erreur de modèle ou d'hypothèse (écart calcul / simulation nul).\n\n2. Écart : 5,00 − 4,82 = **0,18 V**. Un écart simulation / mesure révèle **un phénomène réel non modélisé** (résistance de contact, échauffement…) **ou un composant hors tolérance** — ou dans sa tolérance, que le simulateur ne connaît pas si on ne la lui donne pas.\n\n3. R2 au plus bas : 10 × 0,95 = 9,5 kΩ ; R1 au plus haut : 14 × 1,05 = 14,7 kΩ.\nU2 min = 12 × 9,5 / (9,5 + 14,7) = 114 / 24,2 ≈ **4,71 V**.\n4,82 V est compris entre 4,71 V et 5,00 V : la mesure est **compatible** avec des composants dans leur tolérance ; les tolérances de fabrication ne figuraient pas dans la simulation.\n\n4. **Un écart n'est pas un échec : c'est une information.** Il faut l'analyser : ici, il s'explique par les tolérances des résistances. La vraie question est l'écart **mesure / cahier des charges** : si l'entrée du microcontrôleur accepte 5 V au plus, 4,82 V convient. La faute serait de ne pas mesurer, ou d'expliquer l'écart sans l'avoir cherché."
+    },
+    {
+      "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+      "difficulte": 3,
+      "titre": "La lampe LED pilotée en MLI",
+      "consigne": "Exploite les mesures, puis mène l'analyse des écarts comme le demande l'épreuve.",
+      "enonce": "**Situation.** Une équipe conçoit une lampe LED commandée par un signal carré de 1 kHz et d'amplitude 5 V. Cahier des charges : un flux lumineux d'au moins 300 lumens.\n\n| Source | Signal de commande | Flux lumineux |\n|---|---|---|\n| Calcul | 1 kHz, 5 V | 320 lm |\n| Simulation | 1 kHz, 5 V | 310 lm |\n| Mesure | voir l'oscillogramme | 270 lm |\n\nOscillogramme mesuré (base de temps 0,25 ms/div, sensibilité 2 V/div) : un motif complet occupe 4 divisions ; l'écart entre valeur haute et valeur basse occupe 2 divisions. On voit aussi de petites oscillations parasites juste après chaque front montant.\n\n1. Lis l'oscillogramme : période, fréquence, amplitude. Compare aux valeurs attendues.\n2. Recopie et complète le tableau d'analyse des trois écarts : entre quoi et quoi, valeur, ce qu'il révèle.\n3. Propose deux vérifications concrètes pour expliquer l'écart entre simulation et mesure. Quels phénomènes le simulateur ignore-t-il ?\n4. Pourquoi les oscillations parasites n'ont-elles été vues qu'à l'oscilloscope ? Que doit décider l'équipe au vu de l'écart mesure / cahier des charges ?",
+      "bareme": [
+        { "critere": "T = 1 ms, f = 1 kHz conforme, amplitude 4 V au lieu de 5 V", "points": 5 },
+        { "critere": "Trois écarts chiffrés et interprétés (10 lm, 40 lm, 30 lm sous l'exigence)", "points": 6 },
+        { "critere": "Deux vérifications pertinentes et phénomènes non modélisés cités", "points": 5 },
+        { "critere": "Seul l'oscilloscope révèle l'allure ; décider quoi corriger", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. T = 4 × 0,25 = **1 ms** → f = 1 / 0,001 = **1 kHz** : conforme. Amplitude = 2 × 2 = **4 V** au lieu de 5 V : écart de 1 V sur la commande.\n\n2.\n| Écart | Valeurs | Ce qu'il révèle |\n|---|---|---|\n| Calcul / simulation | 320 − 310 = **10 lm** | Une petite erreur de **modèle ou d'hypothèse** dans l'un des deux |\n| Simulation / mesure | 310 − 270 = **40 lm** | Un **phénomène réel non modélisé**, ou un **composant hors tolérance** ; ici l'amplitude de 4 V au lieu de 5 V en est une piste |\n| Mesure / cahier des charges | 270 < 300 : **30 lm** manquants | Le produit **ne répond pas au besoin** : il faut décider quoi corriger |\n\n3. Exemples : mesurer la tension d'alimentation de la carte et la sortie du microcontrôleur, pour trouver où se perd 1 V ; mesurer au multimètre (hors tension) les résistances du circuit de commande et vérifier leur tolérance ; vérifier l'échauffement de la LED. Le simulateur ignore ce qui n'est pas modélisé : **résistances de contact, capacités parasites, échauffement, tolérances de fabrication, perturbations électromagnétiques**.\n\n4. Seul l'**oscilloscope** montre l'**allure** du signal en fonction du temps (déformation, temps de montée, rebond) ; un multimètre ne donne qu'une valeur. Pour l'écart mesure / cahier des charges (30 lm manquants), l'équipe doit **décider quoi corriger** : d'abord trouver et corriger la cause de la perte d'amplitude, puis vérifier à nouveau le flux. Un écart n'est pas un échec, c'est une information."
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "niveau": "1re",
+  "matiere": "nsi",
+  "sujets": [
+    {
+      "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+      "difficulte": 1,
+      "titre": "Premières conversions en base 2",
+      "consigne": "Réponds à chaque question en détaillant ta méthode : un résultat sans calcul ne rapporte pas tous les points.",
+      "enonce": "1. Convertis en décimal le nombre binaire **10110**. Présente le poids de chaque bit.\n2. Convertis en binaire le nombre décimal **25** par la méthode des divisions successives par 2. Présente tes divisions dans un tableau (opération, quotient, reste) et indique dans quel sens lire les restes.\n3. Combien de valeurs différentes peut-on coder avec **5 bits** ? Justifie.",
+      "bareme": [
+        { "critere": "10110 converti en 22, avec les poids 16, 8, 4, 2, 1 et les contributions", "points": 7 },
+        { "critere": "25 converti en 11001 par divisions successives, restes lus de bas en haut", "points": 8 },
+        { "critere": "32 valeurs sur 5 bits, justifié par 2 puissance 5", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Poids de droite à gauche : 1, 2, 4, 8, 16.\n\n| Bit | 1 | 0 | 1 | 1 | 0 |\n| Poids | 16 | 8 | 4 | 2 | 1 |\n| Contribution | 16 | 0 | 4 | 2 | 0 |\n\n10110 vaut 16 + 4 + 2 = **22**.\n\n2. Divisions successives par 2 :\n\n| Opération | Quotient | Reste |\n| 25 ÷ 2 | 12 | 1 |\n| 12 ÷ 2 | 6 | 0 |\n| 6 ÷ 2 | 3 | 0 |\n| 3 ÷ 2 | 1 | 1 |\n| 1 ÷ 2 | 0 | 1 |\n\nOn lit les restes **de bas en haut** : **11001**. Vérification : 16 + 8 + 1 = 25.\n\n3. Avec n bits on code 2 puissance n valeurs : 2 puissance 5 = **32** valeurs (de 0 à 31)."
+    },
+    {
+      "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+      "difficulte": 2,
+      "titre": "Les badges du lycée Condorcet",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque calcul.",
+      "enonce": "**Situation.** Le lycée Condorcet accueille **1 500 élèves**. L'intendante veut attribuer à chacun un badge de cantine portant un numéro différent, codé en binaire, sur un nombre de bits identique pour tous.\n\n1. Combien de bits faut-il au minimum pour numéroter les 1 500 élèves ? Justifie en encadrant 1 500 entre deux puissances de 2.\n2. Le badge de Yanis porte le numéro décimal **45**. Convertis-le en binaire, puis écris-le sur le nombre de bits trouvé à la question 1.\n3. L'an prochain, le lycée ajoute un bit au format des badges. Combien de numéros différents deviennent disponibles ? Explique ce que change l'ajout d'un seul bit.\n4. Le numéro suivant celui de Yanis s'obtient en ajoutant 1. Pose l'addition binaire 101101 + 1 et vérifie ton résultat en décimal.",
+      "bareme": [
+        { "critere": "11 bits nécessaires, justifié par 2^10 = 1 024 < 1 500 ≤ 2^11 = 2 048", "points": 6 },
+        { "critere": "45 converti en 101101 par divisions successives, puis écrit 00000101101 sur 11 bits", "points": 6 },
+        { "critere": "4 096 numéros avec 12 bits : un bit de plus double le nombre de valeurs", "points": 4 },
+        { "critere": "Addition 101101 + 1 = 101110, vérifiée : 46", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Avec n bits on code 2 puissance n valeurs. 2^10 = 1 024, insuffisant (1 024 < 1 500) ; 2^11 = 2 048 ≥ 1 500. Il faut **11 bits**.\n\n2. Divisions successives :\n\n| Opération | Quotient | Reste |\n| 45 ÷ 2 | 22 | 1 |\n| 22 ÷ 2 | 11 | 0 |\n| 11 ÷ 2 | 5 | 1 |\n| 5 ÷ 2 | 2 | 1 |\n| 2 ÷ 2 | 1 | 0 |\n| 1 ÷ 2 | 0 | 1 |\n\nRestes lus de bas en haut : **101101** (vérification 32 + 8 + 4 + 1 = 45). Sur 11 bits, on complète à gauche par des 0 : **00000101101**.\n\n3. Avec 12 bits : 2^12 = **4 096** numéros. Ajouter un seul bit **double** le nombre de valeurs représentables (2 048 × 2) : la croissance est exponentielle.\n\n4. 101101 + 1 : le bit de droite 1 + 1 vaut 10, on pose 0 et on retient 1 ; puis 0 + 1 = 1, sans retenue. Résultat : **101110**. Vérification : 32 + 8 + 4 + 2 = 46 = 45 + 1."
+    },
+    {
+      "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+      "difficulte": 3,
+      "titre": "Calculer, combiner, interpréter",
+      "consigne": "Réponds à chaque question en justifiant. Les rappels donnés dans l'énoncé suffisent pour les opérations logiques.",
+      "enonce": "**Rappels.** Les opérations logiques se font bit à bit, position par position, **sans retenue**. Le **ET** vaut 1 seulement si les deux bits valent 1. Le **XOR** vaut 1 si les deux bits sont différents.\n\nOn considère les deux mots de 4 bits **a = 1011** et **b = 0110**.\n\n1. Donne la valeur décimale de a et de b.\n2. Pose l'addition binaire a + b en faisant apparaître les retenues. Vérifie le résultat en décimal.\n3. Le résultat de l'addition peut-il être rangé dans un mot de 4 bits ? Justifie à l'aide du nombre de valeurs codables sur 4 bits.\n4. Calcule a ET b, puis a XOR b. Explique pourquoi ces opérations ne se comportent pas comme l'addition.\n5. Inès lit le mot **01000001** et affirme : « c'est 65 ». Karim lit le même mot et affirme : « c'est la lettre A ». Qui a raison ? Explique ce que cela montre sur la différence entre donnée et information.",
+      "bareme": [
+        { "critere": "a = 11 et b = 6 en décimal ; addition posée donnant 10001, vérifiée : 17", "points": 5 },
+        { "critere": "Sur 4 bits, 16 valeurs de 0 à 15 : 17 ne tient pas, il faut un cinquième bit", "points": 4 },
+        { "critere": "a ET b = 0010 et a XOR b = 1101, calculés position par position sans retenue", "points": 5 },
+        { "critere": "Les deux ont raison : c'est la convention du programme qui interprète le mot", "points": 6 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. a = 1011 = 8 + 2 + 1 = **11** ; b = 0110 = 4 + 2 = **6**.\n\n2. Addition de droite à gauche :\n- bit 1 : 1 + 0 = 1 ;\n- bit 2 : 1 + 1 = 10, on pose 0, retenue 1 ;\n- bit 3 : 0 + 1 + 1 (retenue) = 10, on pose 0, retenue 1 ;\n- bit 4 : 1 + 0 + 1 (retenue) = 10, on pose 0, retenue 1 ;\n- la dernière retenue donne un cinquième chiffre.\n\nRésultat : **10001** = 16 + 1 = 17 = 11 + 6.\n\n3. Sur 4 bits, on code 2^4 = 16 valeurs, de 0 à 15. 17 > 15 : le résultat **ne tient pas** sur 4 bits, il en faut 5 (la retenue finale serait perdue).\n\n4. Position par position :\n- a ET b : 1 et 0 → 0 ; 0 et 1 → 0 ; 1 et 1 → 1 ; 1 et 0 → 0 : **0010** ;\n- a XOR b : 1/0 → 1 ; 0/1 → 1 ; 1/1 → 0 ; 1/0 → 1 : **1101**.\n\nLes opérations logiques traitent chaque position indépendamment, **sans retenue** : 1 XOR 1 donne 0 sans rien reporter, alors qu'en addition 1 + 1 vaut 10 avec une retenue.\n\n5. **Les deux ont raison.** Lu comme un entier, 01000001 vaut 64 + 1 = 65 ; lu comme un caractère ASCII, c'est la lettre A. Rien dans le mot ne dit ce qu'il représente : la donnée (les bits) est la même, l'information dépend de la **convention** du programme qui l'interprète."
+    },
+    {
+      "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+      "difficulte": 1,
+      "titre": "L'octet et ses multiples",
+      "consigne": "Réponds à chaque question par un calcul ou une phrase justifiée.",
+      "enonce": "1. Combien de valeurs différentes un **octet** peut-il coder ? Donne la plus petite et la plus grande.\n2. Combien d'octets y a-t-il dans **1 ko** ? dans **1 Kio** ? Explique d'où vient la différence.\n3. Un débit est annoncé à **80 Mb/s**. Que désigne le b minuscule ? Convertis ce débit en Mo/s.\n4. La couleur web **#0000FF** est écrite en hexadécimal. En t'appuyant sur la lecture de #FF8000 (rouge 255, vert 128, bleu 0), donne la valeur de chacune des trois composantes et nomme la couleur obtenue.",
+      "bareme": [
+        { "critere": "256 valeurs, de 0 à 255 (2 puissance 8)", "points": 5 },
+        { "critere": "1 ko = 1 000 octets et 1 Kio = 1 024 octets : puissances de 10 contre puissances de 2", "points": 5 },
+        { "critere": "b = bit ; 80 Mb/s = 10 Mo/s en divisant par 8", "points": 5 },
+        { "critere": "#0000FF : rouge 0, vert 0, bleu 255, soit un bleu pur", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un octet regroupe 8 bits : 2^8 = **256** valeurs, de **0** à **255**.\n\n2. **1 ko** (kilooctet, préfixe décimal) = **1 000** octets ; **1 Kio** (kibioctet, préfixe binaire) = **1 024** octets = 2^10. Le kilo est une puissance de 10, le kibi une puissance de 2.\n\n3. Le **b** minuscule désigne le **bit** (B majuscule ou « o » désigne l'octet). Un octet vaut 8 bits : 80 Mb/s ÷ 8 = **10 Mo/s**.\n\n4. Chaque composante tient sur un octet, écrit avec deux chiffres hexadécimaux (un chiffre = 4 bits) : les deux premiers pour le rouge, puis le vert, puis le bleu. 00 vaut 0 et FF vaut 255 : rouge **0**, vert **0**, bleu **255**. C'est un **bleu pur**."
+    },
+    {
+      "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+      "difficulte": 2,
+      "titre": "La photo de Maëlys",
+      "consigne": "Réponds aux questions en détaillant tes calculs et en précisant les unités.",
+      "enonce": "**Situation.** Maëlys prend une photo de **2 000 × 1 500 pixels** en couleurs vraies (3 octets par pixel : rouge, vert, bleu). Elle veut l'envoyer à son cousin avant compression.\n\n1. Calcule le poids brut de l'image en octets, puis en Mo (préfixe décimal).\n2. Sa connexion est annoncée à **40 Mb/s**. Convertis ce débit en Mo/s, puis calcule la durée minimale de l'envoi de l'image brute.\n3. Son ordinateur affiche un poids d'environ **8,6 Mio** pour ce même fichier. Maëlys croit qu'une partie de sa photo a disparu. Calcule le poids en Mio (1 Mio = 2^20 = 1 048 576 octets) et explique pourquoi elle a tort.",
+      "bareme": [
+        { "critere": "Poids brut : 2 000 × 1 500 × 3 = 9 000 000 octets, soit 9 Mo", "points": 7 },
+        { "critere": "40 Mb/s = 5 Mo/s ; durée 9 ÷ 5 = 1,8 s", "points": 7 },
+        { "critere": "9 000 000 ÷ 1 048 576 ≈ 8,6 Mio : même fichier, unités en puissances de 2", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Nombre de pixels : 2 000 × 1 500 = 3 000 000. Chaque pixel occupe 3 octets : 3 000 000 × 3 = **9 000 000 octets**, soit **9 Mo** (1 Mo = 10^6 octets).\n\n2. Le b minuscule désigne le bit : 40 Mb/s ÷ 8 = **5 Mo/s**. Durée minimale : 9 Mo ÷ 5 Mo/s = **1,8 s** (c'est une durée théorique, avant compression et au débit maximal).\n\n3. 9 000 000 ÷ 1 048 576 ≈ **8,58 Mio**, arrondi à 8,6 Mio. Rien n'a disparu : c'est **le même nombre d'octets** exprimé dans une autre unité. Le mébioctet (2^20 octets) est plus grand que le mégaoctet (10^6 octets), donc le nombre affiché est plus petit. C'est la même confusion que celle qui donne l'impression, à l'achat d'un disque, qu'il « manque » de la place."
+    },
+    {
+      "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+      "difficulte": 3,
+      "titre": "Le compte rendu aux accents cassés",
+      "consigne": "Lis la situation et réponds en justifiant chaque réponse par une notion du cours.",
+      "enonce": "**Situation.** Théo rédige un compte rendu de **1 000 caractères** : 950 sont des lettres non accentuées, des chiffres, des espaces ou de la ponctuation, et 50 sont des lettres accentuées (é, è, à…). Il l'enregistre en **UTF-8**. Dans ce codage, chacune de ses lettres accentuées occupe **2 octets**.\n\n1. Théo aurait-il pu enregistrer son texte en ASCII ? Justifie à partir de la taille et de la couverture de l'ASCII.\n2. Calcule le poids du fichier en octets. Explique pourquoi les 950 premiers caractères ne coûtent qu'un octet chacun.\n3. Sa professeure ouvre le fichier et voit « Ã© » à la place de chaque « é ». Théo pense que son fichier est abîmé et veut le retaper. Explique ce qui se passe réellement et ce qu'il faut faire.\n4. Pour afficher le contenu brut du fichier, un outil écrit chaque octet en hexadécimal. Combien de chiffres hexadécimaux faut-il pour tout le fichier ? Justifie.",
+      "bareme": [
+        { "critere": "ASCII impossible : 7 bits, 128 caractères, latin non accentué seulement", "points": 4 },
+        { "critere": "950 × 1 + 50 × 2 = 1 050 octets ; l'ASCII est inchangé sur un octet en UTF-8", "points": 5 },
+        { "critere": "Octets intacts, table de lecture fausse : rouvrir en UTF-8 plutôt que retaper", "points": 6 },
+        { "critere": "2 chiffres hexadécimaux par octet (4 bits chacun) : 2 100 chiffres", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. **Non.** L'ASCII code sur 7 bits, soit 128 caractères : l'alphabet latin **non accentué**, les chiffres et la ponctuation. Les 50 lettres accentuées n'y figurent pas.\n\n2. En UTF-8, les caractères de l'ASCII gardent leur code **inchangé, sur un octet** : 950 × 1 = 950 octets. Les lettres accentuées prennent 2 octets : 50 × 2 = 100 octets. Total : **1 050 octets**.\n\n3. Le fichier n'est pas abîmé : **les octets sont intacts**. C'est la **table de lecture** qui est fausse : le logiciel de la professeure lit le fichier avec un autre encodage que l'UTF-8 et interprète les 2 octets de « é » comme deux caractères distincts. Il suffit de rouvrir le fichier **en précisant l'encodage UTF-8** ; retaper le texte ne sert à rien.\n\n4. Un chiffre hexadécimal vaut exactement 4 bits, donc un octet (8 bits) s'écrit avec **2 chiffres**. Pour 1 050 octets : 1 050 × 2 = **2 100 chiffres hexadécimaux**."
+    },
+    {
+      "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+      "difficulte": 1,
+      "titre": "L'architecture de von Neumann",
+      "consigne": "Réponds par des phrases courtes et précises, avec le vocabulaire du cours.",
+      "enonce": "1. Nomme les **quatre parties** de l'architecture de von Neumann et donne le rôle de chacune.\n2. Quelle idée de ce modèle est qualifiée de « décisive » ? Explique pourquoi en une ou deux phrases.\n3. Cite dans l'ordre les **trois étapes** du cycle d'exécution d'une instruction et dis ce que fait chacune.\n4. Qu'est-ce qu'un **transistor** dans un processeur ?",
+      "bareme": [
+        { "critere": "UAL, unité de commande, mémoire, entrées-sorties, chacune avec son rôle", "points": 7 },
+        { "critere": "Programme et données dans la même mémoire : on peut charger un autre logiciel", "points": 5 },
+        { "critere": "Charger, décoder, exécuter, dans l'ordre et expliqués ; transistor = interrupteur commandé", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - **Unité arithmétique et logique** : elle calcule.\n- **Unité de commande** : elle séquence les instructions.\n- **Mémoire** : elle contient à la fois les données et le programme.\n- **Entrées-sorties** : elles relient la machine au monde.\n\n2. Le **programme est stocké dans la même mémoire que les données**. La machine peut donc charger un autre logiciel, ou en compiler un nouveau ; sans cela, elle serait figée dans une seule tâche.\n\n3. - **Charger** l'instruction pointée par le compteur ordinal ;\n- **Décoder** : reconnaître l'opération et ses opérandes ;\n- **Exécuter** : la réaliser, puis passer à la suivante.\n\n4. Un transistor est un **interrupteur commandé électriquement**, sans pièce mobile ; un processeur en contient plusieurs milliards."
+    },
+    {
+      "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+      "difficulte": 2,
+      "titre": "La coupure de courant chez Léo",
+      "consigne": "Lis la situation et réponds en t'appuyant sur le cours et sur les données.",
+      "enonce": "**Situation.** Léo possède un ordinateur dont le processeur fonctionne à **3,2 GHz**. Il travaille sur un exposé : le document ouvert se trouve en mémoire vive, et la dernière version enregistrée est sur le disque (stockage).\n\n1. Combien de cycles d'horloge le processeur effectue-t-il en une seconde ? en une milliseconde ?\n2. Une coupure de courant éteint brutalement la machine. Pour chacune des quatre mémoires (registres, cache, mémoire vive, stockage), dis si son contenu est conservé. Que retrouvera Léo au redémarrage ?\n3. Classe ces quatre mémoires de la plus rapide à la plus lente. Léo demande : « Pourquoi ne pas fabriquer toute la mémoire aussi rapide que le cache ? » Réponds-lui.",
+      "bareme": [
+        { "critere": "3,2 milliards de cycles par seconde et 3,2 millions par milliseconde", "points": 6 },
+        { "critere": "Registres, cache et mémoire vive volatiles, stockage persistant : seule la version enregistrée reste", "points": 7 },
+        { "critere": "Ordre registres, cache, mémoire vive, stockage ; plus rapide = plus cher et plus petite", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 3,2 GHz signifie **3,2 milliards de cycles par seconde** (3 200 000 000). En une milliseconde (un millième de seconde) : 3 200 000 000 ÷ 1 000 = **3 200 000 cycles**.\n\n2. - Registres : **volatiles**, contenu perdu ;\n- cache : **volatile**, perdu ;\n- mémoire vive : **volatile**, perdue : les modifications non enregistrées de l'exposé disparaissent ;\n- stockage : **persistant**, conservé.\n\nAu redémarrage, Léo retrouve **la dernière version enregistrée** sur le disque, pas les modifications faites depuis.\n\n3. De la plus rapide à la plus lente : **registres, cache, mémoire vive, stockage**. Plus une mémoire est rapide, **plus elle coûte cher et plus elle est petite** : une mémoire de plusieurs To aussi rapide que le cache serait hors de prix. D'où la hiérarchie : peu de mémoire très rapide près du processeur, beaucoup de mémoire lente et bon marché pour stocker."
+    },
+    {
+      "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+      "difficulte": 3,
+      "titre": "La machine figée de l'inventeur",
+      "consigne": "Analyse chaque situation en mobilisant plusieurs notions du chapitre et justifie tes réponses.",
+      "enonce": "**Document.**\n\n> Un inventeur présente une machine dont le programme est gravé une fois pour toutes dans un circuit séparé, impossible à modifier. La mémoire de la machine ne contient que des données. « C'est plus sûr, dit-il, personne ne pourra changer le programme. »\n\n1. En quoi cette machine s'écarte-t-elle du modèle de von Neumann ? Quelle conséquence pratique cela a-t-il pour son utilisateur ?\n2. La machine contient des portes logiques, un additionneur et des bascules. Classe ces trois éléments dans la chaîne « transistor → porte logique → circuit combinatoire → bascule » et explique ce qui distingue la bascule de l'additionneur.\n3. Le compteur ordinal pointe sur l'instruction « additionner le contenu de deux registres ». Décris ce qui se passe pendant un cycle d'exécution, étape par étape, et dis quelle partie de la machine intervient.\n4. L'inventeur annonce 2 milliards de cycles par seconde. Quelle est la fréquence de son horloge en GHz ?",
+      "bareme": [
+        { "critere": "Programme hors de la mémoire des données : impossible de charger un autre logiciel, machine figée", "points": 5 },
+        { "critere": "Porte logique, additionneur = circuit combinatoire qui calcule, bascule = circuit qui garde un bit", "points": 5 },
+        { "critere": "Charger, décoder, exécuter appliqués à l'addition, avec l'unité de commande et l'UAL", "points": 6 },
+        { "critere": "Fréquence de 2 GHz", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Dans le modèle de von Neumann, la **mémoire contient à la fois les données et le programme**. Ici, le programme est séparé et figé. Conséquence : la machine ne peut **ni charger un autre logiciel ni en compiler un nouveau** ; elle est **figée dans une seule tâche**. La « sûreté » se paie par la perte de ce qui fait un ordinateur.\n\n2. - Les **portes logiques** (NON, ET, OU) sont faites de quelques transistors.\n- L'**additionneur** est un **circuit combinatoire** : un assemblage de portes qui **calcule**.\n- La **bascule** est le circuit qui **garde un bit** : elle marque le passage du circuit qui calcule au circuit qui **se souvient**. L'additionneur ne mémorise rien.\n\n3. - **Charger** : l'unité de commande va chercher en mémoire l'instruction pointée par le compteur ordinal.\n- **Décoder** : elle reconnaît l'opération (une addition) et ses opérandes (les deux registres).\n- **Exécuter** : l'**unité arithmétique et logique** réalise l'addition ; puis on passe à l'instruction suivante.\n\nLe cycle se répète indéfiniment, au rythme de l'horloge.\n\n4. 2 milliards de cycles par seconde = **2 GHz**."
+    },
+    {
+      "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+      "difficulte": 1,
+      "titre": "Du binaire au langage de haut niveau",
+      "consigne": "Réponds à chaque question par une ou deux phrases précises.",
+      "enonce": "1. Décris les trois niveaux de langage vus en cours : **langage machine**, **assembleur**, **langage de haut niveau**. Qu'est-ce qu'un **jeu d'instructions** ?\n2. Donne **deux** différences entre la **compilation** et l'**interprétation**.\n3. Cite les **trois** structures de contrôle d'un programme.",
+      "bareme": [
+        { "critere": "Machine = binaire exécuté, assembleur = traduction lisible, haut niveau ; jeu d'instructions défini", "points": 7 },
+        { "critere": "Deux différences justes : moment de la traduction, fichier produit, souplesse ou erreurs", "points": 8 },
+        { "critere": "Test conditionnel, boucle bornée, boucle non bornée", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - **Langage machine** : le binaire réellement exécuté par le processeur (charger, additionner, comparer, sauter, écrire).\n- **Assembleur** : sa traduction lisible, un mot mnémonique par instruction.\n- **Haut niveau** : une notation proche des mathématiques et du langage naturel.\n\nLe **jeu d'instructions** est l'ensemble des instructions élémentaires qu'une famille de processeurs sait exécuter.\n\n2. Deux différences parmi :\n- la compilation traduit **tout le programme avant** l'exécution ; l'interprétation traduit **instruction par instruction, pendant** ;\n- la compilation produit **un exécutable rapide, lié à une plateforme** ; l'interprétation ne produit aucun fichier ;\n- l'interprétation est plus **souple** ;\n- en compilation, les erreurs de syntaxe sont détectées **avant** le lancement.\n\n3. Le **test conditionnel**, la **boucle bornée**, la **boucle non bornée**."
+    },
+    {
+      "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+      "difficulte": 2,
+      "titre": "Le programme de Samia",
+      "consigne": "Lis les deux programmes Python, puis réponds en justifiant.",
+      "enonce": "**Programme 1.** Samia lance ce programme, qui met plusieurs secondes à calculer :\n\n```\ntotal = 0\nfor i in range(10000000):\n    total = total + i\nprint('Somme :', totl)\n```\n\n1. Python est interprété. Décris ce qui se passe quand Samia lance ce programme : à quel moment s'arrête-t-il, et pourquoi ?\n2. Dans un langage compilé, à quel moment Samia aurait-elle appris l'existence de cette faute ?\n\n**Programme 2.**\n\n```\na = 0.1 + 0.2\nif a == 0.3:\n    print('égal')\nelse:\n    print('différent')\n```\n\n3. Qu'affiche ce programme ? Explique pourquoi, puis propose une façon fiable de comparer a et 0.3.",
+      "bareme": [
+        { "critere": "La boucle s'exécute en entier, puis arrêt sur la dernière ligne : totl n'existe pas", "points": 6 },
+        { "critere": "En compilation, la faute est signalée avant le lancement", "points": 5 },
+        { "critere": "Affiche « différent » : 0,1 n'a pas d'écriture binaire finie, le flottant est approché", "points": 5 },
+        { "critere": "Comparaison à une tolérance près, par exemple abs(a - 0.3) < 1e-9", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Python traduit et exécute **instruction par instruction**. Il exécute donc toute la boucle (dix millions de tours, plusieurs secondes de calcul), puis atteint la dernière ligne : le nom **totl** (faute de frappe pour total) ne désigne aucune variable, et le programme **s'arrête sur une erreur** à ce moment-là seulement. Tout le calcul a été fait pour rien.\n\n2. Un compilateur traduit **tout le programme avant l'exécution** : la faute aurait été signalée **avant même le lancement**, sans perdre le temps du calcul.\n\n3. Le programme affiche **différent**. Un flottant n'est pas un réel exact : 0,1 n'a **pas d'écriture binaire finie**, donc 0.1 + 0.2 donne une valeur très proche de 0,3 mais pas exactement 0,3, et le test d'égalité stricte échoue.\n\nOn compare **à une tolérance près** :\n\n```\nif abs(a - 0.3) < 1e-9:\n    print('égal')\n```\n\nabs donne la valeur absolue de l'écart ; si l'écart est inférieur à une tolérance choisie, on considère les deux nombres égaux."
+    },
+    {
+      "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+      "difficulte": 3,
+      "titre": "La boucle qui ne s'arrête pas",
+      "consigne": "Analyse le programme et la discussion, en justifiant chaque réponse par une notion du cours.",
+      "enonce": "**Programme.**\n\n```\nx = 0.0\nwhile x != 1.0:\n    x = x + 0.1\nprint('fini')\n```\n\n**Donnée.** En machine, ajouter dix fois 0.1 à 0.0 donne **0.9999999999999999**, et non 1.0.\n\n1. Quelle structure de contrôle ce programme utilise-t-il ? Le nombre de tours est-il fixé d'avance ?\n2. Ce programme affiche-t-il « fini » ? Explique ce qui se passe au dixième tour puis aux suivants.\n3. Propose **deux** corrections : l'une qui garde la boucle non bornée en comparant à une tolérance, l'autre qui utilise une boucle bornée.\n4. Nour propose : « Écrivons un programme qui lit n'importe quel autre programme et dit à coup sûr s'il s'arrêtera. Plus jamais de boucle infinie ! » Est-ce possible ? Distingue ce cas général du cas précis étudié ici.",
+      "bareme": [
+        { "critere": "Boucle non bornée (tant que), nombre de tours non fixé d'avance", "points": 3 },
+        { "critere": "x vaut 0.9999999999999999 au dixième tour puis dépasse 1.0 sans l'atteindre : boucle infinie", "points": 6 },
+        { "critere": "Deux corrections justes : tolérance dans la condition, boucle bornée de dix tours", "points": 6 },
+        { "critere": "Indécidabilité : impossible dans le cas général, résultat démontré ; ici on raisonne au cas par cas", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. C'est une **boucle non bornée** (while, « tant que ») : le nombre de tours n'est pas fixé d'avance, il dépend de la condition.\n\n2. **Non.** Après dix tours, x vaut 0.9999999999999999 ≠ 1.0 : la condition x != 1.0 reste vraie. Au tour suivant x vaut environ 1,1, puis 1,2… x ne fait qu'augmenter et ne vaudra **jamais exactement** 1.0 : la boucle **ne s'arrête jamais** et « fini » n'est jamais affiché. La cause : un flottant est approché, 0,1 n'a pas d'écriture binaire finie.\n\n3. - Comparer **à une tolérance près** :\n\n```\nx = 0.0\nwhile abs(x - 1.0) > 1e-9:\n    x = x + 0.1\nprint('fini')\n```\n\nAu dixième tour, l'écart vaut environ 1e-16, inférieur à la tolérance : la boucle s'arrête.\n- Utiliser une **boucle bornée**, dont la terminaison est assurée par construction :\n\n```\nx = 0.0\nfor i in range(10):\n    x = x + 0.1\nprint('fini')\n```\n\n4. **Non, c'est impossible.** C'est l'**indécidabilité** : aucun programme ne peut déterminer, **dans le cas général**, si un autre programme s'arrêtera. C'est un **résultat démontré**, pas une limite technique qui sera levée un jour. En revanche, pour **un programme précis** comme celui-ci, on peut raisonner et montrer qu'il boucle (ou qu'il termine) : c'est ce qu'on a fait à la question 2."
+    },
+    {
+      "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+      "difficulte": 1,
+      "titre": "Le chef d'orchestre de la machine",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "1. Cite les **quatre fonctions** d'un système d'exploitation et, pour chacune, ce qu'elle garantit.\n2. Quelle est la différence entre le **mode utilisateur** et le **mode noyau** ? Qu'est-ce qu'un **appel système** ?\n3. Vrai ou faux, justifie : « un logiciel libre est forcément gratuit » ; « un logiciel gratuit est forcément libre ».",
+      "bareme": [
+        { "critere": "Processus, mémoire, fichiers, périphériques, chacun avec sa garantie", "points": 8 },
+        { "critere": "Droits restreints ou complets, appel système = demande de service au noyau", "points": 6 },
+        { "critere": "Deux fois faux : un libre peut être payant, un gratuit peut être fermé", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - Gérer les **processus** : l'ordonnanceur donne à chacun de très courtes tranches de temps ; il garantit l'illusion que tout tourne simultanément.\n- Gérer la **mémoire** : il attribue son espace à chaque processus ; il garantit le **cloisonnement** (un logiciel qui plante n'emporte pas la machine).\n- Gérer les **fichiers** : arborescence avec des **droits** par utilisateur (lecture, écriture, exécution).\n- Gérer les **périphériques** : un **pilote** par matériel ; il garantit une interface uniforme pour les applications.\n\n2. En **mode utilisateur**, les droits sont restreints : pas d'accès direct au matériel. En **mode noyau**, tous les droits. Une application accède au matériel en demandant un service au noyau : c'est un **appel système**. Cette frontière fait la sécurité de l'ensemble.\n\n3. Les deux affirmations sont **fausses**. Un logiciel libre garantit quatre libertés (exécuter, étudier le code, redistribuer, modifier et publier ses versions), mais il peut être **payant**. Un logiciel gratuit peut être **fermé** (propriétaire) : on ne peut ni étudier ni modifier son code."
+    },
+    {
+      "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+      "difficulte": 2,
+      "titre": "L'arborescence d'Inès",
+      "consigne": "Observe l'arborescence, puis réponds en justifiant.",
+      "enonce": "**Document.** Une partie de l'arborescence de l'ordinateur d'Inès :\n\n```\n/\n└── home\n    └── ines\n        ├── photos\n        │   └── plage.jpg\n        └── cours\n            └── nsi.txt\n```\n\n1. Écris le **chemin absolu** du fichier plage.jpg. D'où part-il ?\n2. Le répertoire courant est **/home/ines**. Écris le **chemin relatif** de nsi.txt. D'où part-il ?\n3. Inès renomme plage.jpg en **plage.txt**. Que devient le contenu du fichier ? Que se passe-t-il quand elle double-clique dessus ?\n4. Cite trois **métadonnées** que le système conserve pour ce fichier.",
+      "bareme": [
+        { "critere": "/home/ines/photos/plage.jpg, chemin qui part de la racine", "points": 5 },
+        { "critere": "cours/nsi.txt, chemin qui part du répertoire courant", "points": 5 },
+        { "critere": "Contenu inchangé : l'extension est une convention de nom qui choisit l'application", "points": 6 },
+        { "critere": "Trois métadonnées parmi nom, taille, dates, droits", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **/home/ines/photos/plage.jpg**. Un chemin absolu part de la **racine** (/).\n\n2. **cours/nsi.txt**. Un chemin relatif part du **répertoire courant**, ici /home/ines.\n\n3. Le contenu **ne change pas du tout** : ce sont toujours les mêmes octets, ceux d'une image. L'extension n'est qu'une **convention de nom** ; le système la lit seulement pour choisir l'application à ouvrir. En double-cliquant, il lancera un éditeur de texte, qui affichera des caractères incompréhensibles puisque les octets codent une image. En renommant de nouveau en .jpg, tout redevient normal.\n\n4. Trois parmi : le **nom**, la **taille**, les **dates** (création, modification), les **droits** (lecture, écriture, exécution)."
+    },
+    {
+      "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+      "difficulte": 3,
+      "titre": "Le jeu qui plante pendant le devoir",
+      "consigne": "Analyse la situation en mobilisant plusieurs fonctions du système d'exploitation. Justifie chaque réponse.",
+      "enonce": "**Situation.**\n\n> Inès rédige un devoir dans un traitement de texte, écoute de la musique et a lancé un jeu vidéo. Soudain, le jeu plante et se ferme. Le traitement de texte et la musique continuent comme si de rien n'était.\n\n1. Inès n'a qu'un processeur, pourtant les trois logiciels semblaient tourner en même temps. Quel composant du système crée cette impression, et comment ?\n2. Pourquoi le plantage du jeu n'a-t-il pas emporté le traitement de texte ?\n3. Le jeu affiche des images sur l'écran grâce à la carte graphique. Explique pourquoi il ne peut pas piloter directement ce matériel, et comment il fait pour afficher ses images. Pourquoi le même jeu fonctionne-t-il avec des cartes graphiques de modèles différents ?\n4. Le traitement de texte d'Inès est un logiciel libre, fourni gratuitement ; son frère affirme : « libre, ça veut juste dire gratuit ». Corrige-le en citant ce que garantit un logiciel libre.",
+      "bareme": [
+        { "critere": "L'ordonnanceur donne à chaque processus de très courtes tranches de temps", "points": 5 },
+        { "critere": "Cloisonnement de la mémoire : chaque processus a son espace", "points": 4 },
+        { "critere": "Mode utilisateur sans accès direct, appel système au noyau, pilote et interface uniforme", "points": 6 },
+        { "critere": "Les quatre libertés citées ; libre ne veut pas dire gratuit", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. C'est l'**ordonnanceur**, dans la gestion des **processus** : il donne à chaque logiciel de **très courtes tranches de temps**, à tour de rôle. Elles sont si courtes que l'on a **l'illusion** que tout tourne simultanément.\n\n2. Le système gère la **mémoire** : il attribue à chaque processus **son propre espace**. Grâce à ce **cloisonnement**, le jeu qui plante ne peut pas abîmer la mémoire du traitement de texte : un logiciel qui plante n'emporte pas la machine.\n\n3. Le jeu s'exécute en **mode utilisateur** : ses droits sont restreints et il n'a **pas d'accès direct au matériel**. Pour afficher ses images, il demande ce service au **noyau** par un **appel système** ; seul le noyau, en mode noyau, a tous les droits. Le noyau passe par le **pilote** de la carte graphique, qui traduit la demande générale en commandes propres à ce modèle. Comme le système expose une **interface uniforme**, le jeu n'a pas à connaître le modèle exact : il fonctionne avec toute carte dont le pilote est installé. Cette frontière fait aussi la sécurité de l'ensemble.\n\n4. Libre ne veut pas dire gratuit. Un logiciel libre garantit **quatre libertés** : l'exécuter, en étudier le code, le redistribuer, le modifier et publier ses versions. Un logiciel libre peut être **payant**, et un logiciel gratuit peut être **fermé**. Ici, le logiciel est à la fois libre et gratuit, mais ce sont deux propriétés distinctes."
+    },
+    {
+      "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+      "difficulte": 1,
+      "titre": "Ranger les périphériques",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Classe chacun de ces périphériques en **entrée**, **sortie** ou **entrée-sortie** : clavier, imprimante, clé USB, micro, haut-parleur, carte réseau, webcam, écran tactile.\n2. Donne **une force** et **une limite** du disque dur (HDD), puis du SSD.\n3. Qu'ont en commun tous les supports de stockage, par opposition à la mémoire vive ?",
+      "bareme": [
+        { "critere": "Les huit périphériques correctement classés", "points": 8 },
+        { "critere": "Une force et une limite justes pour le HDD et pour le SSD", "points": 7 },
+        { "critere": "Stockage persistant, mémoire vive volatile", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - **Entrée** (grandeur du monde réel → données) : clavier, micro, webcam.\n- **Sortie** : imprimante, haut-parleur.\n- **Entrée-sortie** : clé USB, carte réseau, écran tactile.\n\n2. - **Disque dur** (plateaux magnétiques, tête mobile) : force = capacité élevée, coût faible ; limite = lent, fragile aux chocs.\n- **SSD** (mémoire flash, aucune pièce mobile) : force = rapide, silencieux ; limite = plus cher au téraoctet, cycles d'écriture limités.\n\n3. Tous les supports de stockage sont **persistants** : leur contenu reste quand la machine est éteinte, à la différence de la mémoire vive."
+    },
+    {
+      "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+      "difficulte": 2,
+      "titre": "Copier le film de la sortie scolaire",
+      "consigne": "Lis la situation, puis réponds en détaillant tes calculs.",
+      "enonce": "**Situation.** Malik doit copier le film de la sortie scolaire, un fichier de **12 Go**, sur une clé USB. L'interface utilisée est annoncée à **480 Mb/s**.\n\n1. Convertis le débit annoncé en Mo/s, puis calcule la durée théorique de la copie en secondes (1 Go = 1 000 Mo).\n2. En réalité, Malik mesure un débit de **40 Mo/s**. Calcule la durée réelle. Explique pourquoi le débit réel est toujours inférieur au débit théorique.\n3. Le professeur veut ensuite **archiver** ce film pendant vingt ans, et installer le système de son nouvel ordinateur sur un support rapide. Quel support conseilles-tu pour chaque usage ? Justifie.",
+      "bareme": [
+        { "critere": "480 Mb/s = 60 Mo/s ; 12 000 ÷ 60 = 200 s", "points": 7 },
+        { "critere": "12 000 ÷ 40 = 300 s ; encodage et contrôles d'erreur consomment une part du canal", "points": 7 },
+        { "critere": "Archive : optique ou bandes ; système : SSD rapide, avec justification", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le b minuscule désigne le bit : 480 Mb/s ÷ 8 = **60 Mo/s**. 12 Go = 12 000 Mo. Durée théorique : 12 000 ÷ 60 = **200 s** (3 min 20 s).\n\n2. Durée réelle : 12 000 ÷ 40 = **300 s** (5 min). Le débit réel est toujours inférieur au débit théorique car **l'encodage et les contrôles d'erreur consomment une part du canal** : tous les bits transportés ne sont pas des données du fichier.\n\n3. - **Archivage sur vingt ans** : un support **optique** ou des **bandes**, faits pour l'archivage longue durée (accès lent, mais peu importe pour une archive). Un disque dur conviendrait moins bien (fragile aux chocs).\n- **Système** : un **SSD**, rapide et sans pièce mobile, ce qui accélère le démarrage et le lancement des logiciels. Tous ces supports sont persistants."
+    },
+    {
+      "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+      "difficulte": 3,
+      "titre": "Surveiller ou être prévenu",
+      "consigne": "Analyse la situation, fais les calculs demandés et justifie chaque conclusion par le cours.",
+      "enonce": "**Situation.** Un ingénieur conçoit le système d'une machine reliée à **20 périphériques**. Son processeur effectue **3 milliards de cycles par seconde**. Il hésite entre deux mécanismes :\n\n- **scrutation** : le processeur va vérifier chaque périphérique **1 000 fois par seconde** ; chaque vérification coûte **5 000 cycles** ;\n- **interruption** : chaque périphérique prévient le processeur quand il a quelque chose à signaler.\n\n1. Avec la scrutation, combien de cycles par seconde le processeur consacre-t-il à surveiller ? Quelle part de son travail cela représente-t-il ?\n2. Explique le fonctionnement de l'interruption. Pourquoi est-ce le mécanisme normal ?\n3. Explique pourquoi un ordinateur réagit instantanément à une frappe au clavier sans passer son temps à le surveiller.\n4. Un élève utilise un logiciel de dessin qui « ne connaît aucun modèle d'imprimante » et pourtant imprime. Explique comment.",
+      "bareme": [
+        { "critere": "20 × 1 000 × 5 000 = 100 millions de cycles par seconde, soit environ 3,3 %", "points": 6 },
+        { "critere": "Interruption : le périphérique prévient, le processeur suspend son travail ; efficace", "points": 5 },
+        { "critere": "Le clavier déclenche une interruption à chaque frappe, sans surveillance continue", "points": 4 },
+        { "critere": "Pilote chargé par le noyau, interface uniforme : le logiciel demande au système", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Cycles de surveillance par seconde : 20 × 1 000 × 5 000 = **100 000 000 cycles** (100 millions). Part du travail : 100 000 000 ÷ 3 000 000 000 ≈ 0,033, soit environ **3,3 %** du temps de calcul, dépensés même quand aucun périphérique n'a rien à dire. La scrutation est simple mais **coûteuse en temps de calcul**, et ce coût grandit avec le nombre de périphériques et la fréquence des vérifications.\n\n2. Avec l'**interruption**, c'est le **périphérique qui prévient** le processeur ; celui-ci **suspend son travail** pour le traiter, puis reprend. Le processeur ne dépense rien tant que rien ne se passe : c'est **efficace**, d'où son statut de mécanisme normal.\n\n3. À chaque frappe, le clavier **déclenche une interruption** : le processeur est prévenu immédiatement et traite la touche. Il n'a pas besoin de surveiller le clavier en permanence, et la réaction est pourtant instantanée.\n\n4. Le noyau charge un **pilote** pour l'imprimante, puis expose une **interface uniforme**. Le logiciel de dessin demande simplement au système d'imprimer ; le système transmet au pilote, qui traduit la demande en commandes propres au modèle. Le logiciel n'a donc rien à savoir du modèle d'imprimante."
+    },
+    {
+      "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+      "difficulte": 1,
+      "titre": "Deux adresses, deux rôles",
+      "consigne": "Réponds à chaque question avec précision.",
+      "enonce": "1. Compare l'**adresse MAC** et l'**adresse IP** : leur nature, qui les attribue, leur portée.\n2. Sur combien d'octets s'écrit une adresse **IPv4** ? une adresse **IPv6** ? Pourquoi a-t-on eu besoin d'IPv6 ?\n3. Quel est le rôle d'un **serveur DNS** ? Et celui d'un **routeur** ?",
+      "bareme": [
+        { "critere": "MAC physique, gravée, par le constructeur, locale ; IP logique, attribuée par le réseau, mondiale", "points": 8 },
+        { "critere": "IPv4 sur 4 octets, IPv6 sur 16 ; espace IPv4 épuisé", "points": 6 },
+        { "critere": "DNS : nom de domaine vers adresse IP ; routeur : relie des réseaux d'après l'IP", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - **MAC** : adresse **physique**, gravée à la fabrication, unique au monde, attribuée par le **constructeur** ; sa portée est le **réseau local**.\n- **IP** : adresse **logique**, qui change avec le réseau, attribuée **par le réseau** (souvent par DHCP) ; sa portée est **mondiale**.\n\n2. IPv4 : **4 octets** (de 0.0.0.0 à 255.255.255.255), environ 4 milliards d'adresses. IPv6 : **16 octets**. L'espace d'adresses IPv4 est **épuisé** ; IPv6 offre un espace pratiquement illimité.\n\n3. Le **serveur DNS** traduit un **nom de domaine en adresse IP**. Le **routeur** relie des **réseaux différents** et achemine les paquets d'après l'**adresse IP**, en choisissant le prochain saut dans sa table de routage."
+    },
+    {
+      "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+      "difficulte": 2,
+      "titre": "Le réseau de la salle informatique",
+      "consigne": "Lis la situation, puis réponds en justifiant par le masque de sous-réseau.",
+      "enonce": "**Situation.** Dans la salle informatique, l'ordinateur de Clément a l'adresse **192.168.1.23** et le masque **255.255.255.0**. La passerelle de la salle est le routeur **192.168.1.1**.\n\n1. Avec ce masque, quelle partie de l'adresse identifie le réseau, et quelle partie la machine ? Écris la partie réseau de l'adresse de Clément.\n2. Clément envoie un paquet à chacune des trois machines suivantes : **192.168.1.200**, **192.168.2.23**, **172.16.5.4**. Pour chacune, dis si elle est sur son réseau et ce que fait l'ordinateur de Clément pour lui transmettre le paquet.\n3. Combien de valeurs différentes peut prendre la partie machine de l'adresse ?\n4. Dans la salle, quel équipement distribue les trames entre les ordinateurs, et d'après quelle adresse ?",
+      "bareme": [
+        { "critere": "Trois premiers octets = réseau (192.168.1), dernier octet = machine", "points": 5 },
+        { "critere": "192.168.1.200 sur le réseau : envoi direct via son adresse MAC", "points": 5 },
+        { "critere": "192.168.2.23 et 172.16.5.4 hors réseau : paquet remis à la passerelle", "points": 5 },
+        { "critere": "256 valeurs pour un octet ; commutateur, d'après l'adresse MAC", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Avec le masque 255.255.255.0, les **trois premiers octets** identifient le **réseau** et le **dernier** la **machine**. Partie réseau de Clément : **192.168.1**.\n\n2. - **192.168.1.200** : mêmes trois premiers octets (192.168.1) → **même réseau**. L'ordinateur lui parle **directement**, en trouvant son **adresse MAC**.\n- **192.168.2.23** : partie réseau 192.168.2 ≠ 192.168.1 → **autre réseau**, même si le dernier octet est identique. Le paquet est remis à la **passerelle** (le routeur 192.168.1.1).\n- **172.16.5.4** : partie réseau 172.16.5 → **autre réseau** : remis à la **passerelle**.\n\n3. La partie machine tient sur un octet : **256** valeurs possibles (de 0 à 255).\n\n4. Le **commutateur** distribue les trames dans le réseau local, d'après l'**adresse MAC**."
+    },
+    {
+      "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+      "difficulte": 3,
+      "titre": "Le voyage d'un paquet",
+      "consigne": "Analyse chaque situation en justifiant par les mécanismes du cours.",
+      "enonce": "**Situation.** Depuis le lycée, Awa ouvre le site **www.musee-exemple.fr**.\n\n1. Décris les grandes étapes qui permettent à son premier paquet d'atteindre le serveur : trouver l'adresse du serveur, sortir du réseau du lycée, traverser Internet. Nomme les équipements et les adresses utilisés à chaque étape.\n2. Un paquet part avec un champ **TTL de 64** et traverse **12 routeurs**. Quelle est la valeur du TTL à l'arrivée ? Un autre paquet, mal routé, part avec un TTL de **5** et tourne en rond entre deux routeurs : que lui arrive-t-il, et après combien de routeurs ? Pourquoi ce mécanisme existe-t-il ?\n3. Awa constate que les paquets n° 3 et n° 4 d'un même échange sont arrivés dans l'ordre 4 puis 3. Son ami affirme que « le protocole IP est en panne ». Réponds-lui.",
+      "bareme": [
+        { "critere": "DNS pour l'adresse IP, test du masque, passerelle, routeurs de proche en proche", "points": 7 },
+        { "critere": "TTL 64 − 12 = 52 ; paquet détruit au 5e routeur ; empêche de tourner indéfiniment", "points": 6 },
+        { "critere": "IP sans connexion ni garantie d'ordre ; chemins différents ; ordre rétabli au-dessus", "points": 7 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. - Le poste d'Awa interroge un **serveur DNS**, qui traduit le nom **www.musee-exemple.fr** en **adresse IP**.\n- Grâce au **masque de sous-réseau**, il constate que le serveur **n'est pas sur son réseau** : il remet le paquet à la **passerelle**, le routeur du lycée (joint dans le réseau local grâce à son adresse MAC, via le commutateur).\n- Le paquet traverse ensuite Internet **de proche en proche** : chaque **routeur** consulte sa **table de routage** et choisit le **prochain saut** d'après l'**adresse IP de destination**. Aucun ne connaît le trajet complet.\n\n2. Le TTL est **décrémenté à chaque routeur** : 64 − 12 = **52** à l'arrivée. Pour le paquet mal routé : 5 → 4 → 3 → 2 → 1 → 0 : il est **détruit au 5e routeur**. Ce mécanisme empêche un paquet mal routé de **tourner indéfiniment** et d'encombrer le réseau.\n\n3. IP n'est pas en panne : c'est un protocole **sans connexion et sans garantie**. Il ne promet **ni l'ordre**, ni l'unicité, ni l'arrivée. Avec le routage de proche en proche, deux paquets d'un même échange peuvent **suivre des chemins différents** et arriver dans le désordre. Remettre les paquets dans l'ordre est l'affaire de **la couche au-dessus** d'IP."
+    },
+    {
+      "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+      "difficulte": 1,
+      "titre": "Accuser réception",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "1. Explique le principe de l'**accusé de réception** et le rôle du **délai de garde**.\n2. Que se passe-t-il si c'est le **message** qui se perd ? Et si c'est l'**accusé** ? Quel problème ce second cas crée-t-il ?\n3. Pour chacun de ces usages, dis s'il vaut mieux TCP ou UDP, et justifie : télécharger un fichier, appel vidéo en direct, afficher une page web.",
+      "bareme": [
+        { "critere": "ACK attendu ; sans ACK avant la fin du délai de garde, retransmission", "points": 6 },
+        { "critere": "Message perdu : retransmission correcte ; accusé perdu : doublon compté deux fois", "points": 7 },
+        { "critere": "Fichier et page web en TCP, appel vidéo en UDP, avec justification", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'émetteur envoie un message et **attend un accusé de réception** (ACK). S'il ne reçoit pas d'ACK avant l'expiration du **délai de garde**, il **retransmet** le message.\n\n2. - **Message perdu** : pas d'ACK, l'émetteur retransmet ; c'est **correct**, le destinataire reçoit enfin le message.\n- **Accusé perdu** : l'émetteur ne sait pas que le message est arrivé et le retransmet ; le destinataire reçoit un message **déjà reçu** et risque de le **compter deux fois** : c'est le problème du **doublon**.\n\n3. - **Fichier** : **TCP**, il faut tous les octets, dans l'ordre, sans doublon.\n- **Page web** : **TCP**, pour la même raison.\n- **Appel vidéo en direct** : **UDP**, plus rapide ; un paquet retransmis arriverait de toute façon trop tard pour être joué."
+    },
+    {
+      "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+      "difficulte": 2,
+      "titre": "Suivre le bit alterné",
+      "consigne": "Suis le déroulement pas à pas et justifie chaque action du récepteur.",
+      "enonce": "**Situation.** Lou envoie trois messages M1, M2, M3 à Paul avec le protocole du bit alterné. M1 porte le numéro 0, M2 le numéro 1, M3 le numéro 0. Au départ, Paul attend le numéro 0.\n\nDéroulement :\n- Lou envoie M1 (0) ; Paul le reçoit ; son ACK 0 arrive à Lou.\n- Lou envoie M2 (1) ; Paul le reçoit ; son **ACK 1 se perd**.\n- Le délai de garde de Lou expire.\n\n1. Qu'attend Paul après avoir gardé M1, puis après avoir gardé M2 ?\n2. Que fait Lou quand le délai de garde expire ?\n3. Paul reçoit alors un message portant le numéro 1. Comment sait-il que c'est un doublon ? Que fait-il ?\n4. Que fait Lou ensuite, et avec quel numéro ?\n5. Sans numéro, qu'aurait fait Paul à la question 3 ? Quelle aurait été la conséquence ?",
+      "bareme": [
+        { "critere": "Paul attend 1 après M1, puis 0 après M2 (il bascule son bit)", "points": 4 },
+        { "critere": "Lou retransmet M2 avec le numéro 1", "points": 4 },
+        { "critere": "Numéro 1 = le précédent : Paul jette le doublon et réacquitte avec ACK 1", "points": 6 },
+        { "critere": "Lou reçoit ACK 1 et envoie M3 (0) ; sans numéro, M2 serait gardé deux fois", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Après avoir gardé M1 (numéro attendu 0), Paul **bascule son bit** et attend **1**. Après avoir gardé M2 (numéro 1), il bascule et attend **0**.\n\n2. Lou n'a pas reçu d'ACK avant l'expiration du délai de garde : elle **retransmet M2**, toujours avec le numéro **1**.\n\n3. Paul attend 0 et reçoit 1 : c'est le numéro **précédent**. Il sait donc que son ACK s'est perdu et que ce message est un **doublon**. Il **jette le doublon** et **réacquitte** en renvoyant **ACK 1**.\n\n4. Lou reçoit ACK 1 : M2 est acquitté. Elle envoie **M3 avec le numéro 0**.\n\n5. Sans numéro, Paul n'aurait aucun moyen de distinguer la retransmission d'un nouveau message : il aurait **gardé M2 une seconde fois**. Le message serait compté deux fois (par exemple, un virement effectué deux fois). **Numéroter et acquitter** suffit à rendre fiable un canal qui ne l'est pas."
+    },
+    {
+      "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+      "difficulte": 3,
+      "titre": "Un bit ou une fenêtre",
+      "consigne": "Analyse chaque question, fais les calculs sous les hypothèses données et justifie.",
+      "enonce": "**Hypothèses.** Un aller-retour (envoi d'un message puis réception de son accusé) dure **50 ms**. Chaque message transporte **1 000 octets**. On néglige les pertes et le temps de traitement.\n\n1. Explique pourquoi, dans le protocole du bit alterné, **un seul bit** suffit à numéroter les messages.\n2. Avec le bit alterné, combien de messages l'émetteur peut-il faire passer en une seconde ? Quel débit utile cela donne-t-il en octets par seconde ?\n3. TCP utilise des numéros de séquence **longs**, qui permettent d'avoir plusieurs messages en vol : une **fenêtre**. Si **10 messages** peuvent être en vol pendant chaque aller-retour, quel débit utile obtient-on ? Pourquoi un seul bit ne suffirait-il plus ?\n4. Cite deux autres mécanismes que TCP ajoute, et dis ce que chacun apporte.\n5. Une radio en direct sur Internet utilise UDP. Montre que l'absence de retransmission est ici une qualité.",
+      "bareme": [
+        { "critere": "Un seul message à la fois, jamais plus de deux messages en jeu", "points": 4 },
+        { "critere": "20 messages par seconde, soit 20 000 octets par seconde", "points": 4 },
+        { "critere": "200 000 octets par seconde ; avec 10 messages en vol, il faut les distinguer", "points": 5 },
+        { "critere": "Deux mécanismes justes (connexion en trois temps, contrôle de flux ou de congestion)", "points": 3 },
+        { "critere": "Un paquet retransmis arriverait trop tard pour être joué", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'émetteur n'envoie **qu'un message à la fois** et attend son acquittement avant le suivant. Il ne peut donc jamais y avoir plus de **deux messages en jeu** (le courant et le précédent) : un bit, qui alterne 0, 1, 0, 1, suffit à les distinguer.\n\n2. Un message par aller-retour de 50 ms : 1 000 ms ÷ 50 ms = **20 messages par seconde**. Débit utile : 20 × 1 000 = **20 000 octets par seconde** (20 ko/s).\n\n3. Avec 10 messages en vol par aller-retour : 10 × 20 000 = **200 000 octets par seconde** (200 ko/s), dix fois plus. Un seul bit ne suffit plus : avec dix messages en vol, le récepteur doit savoir **lequel** il reçoit (et lequel manque ou est en double) ; il faut des numéros de séquence **longs**.\n\n4. Deux parmi :\n- l'**établissement de connexion en trois temps** : un canal ouvert avant tout échange ;\n- le **contrôle de flux** : ne pas noyer un récepteur lent ;\n- le **contrôle de congestion** : réduire le débit quand le réseau sature.\n\n5. En direct, chaque morceau de son doit être joué à son moment. Un paquet perdu puis retransmis **arriverait de toute façon trop tard** pour être joué : la retransmission ne servirait à rien et ralentirait l'échange. UDP, sans connexion ni retransmission, est plus **rapide** : l'absence de garantie est ici une qualité."
+    },
+    {
+      "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+      "difficulte": 1,
+      "titre": "Ce qui se passe quand on ouvre une page",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "1. Décris dans l'ordre les **cinq étapes** qui se déroulent quand un navigateur ouvre une page web.\n2. Donne la signification des codes de statut **200**, **301**, **403**, **404** et **500**.\n3. Un serveur répond avec un code commençant par 4. Qui est en faute, le client ou le serveur ? Et avec un code commençant par 5 ?",
+      "bareme": [
+        { "critere": "DNS, connexion TCP (port 80 ou 443), requête, réponse, ressources redemandées", "points": 8 },
+        { "critere": "Les cinq codes correctement interprétés", "points": 7 },
+        { "critere": "4 = faute du client, 5 = faute du serveur", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - Le navigateur interroge le **DNS** : nom de domaine → adresse IP.\n- Il ouvre une connexion **TCP**, port **80** (HTTP) ou **443** (HTTPS).\n- Il envoie une **requête HTTP**.\n- Le serveur renvoie une **réponse** : code de statut, en-têtes, corps.\n- Le navigateur analyse le HTML et **redemande chaque ressource** (styles, scripts, images).\n\n2. - **200** : succès ;\n- **301** : redirection ;\n- **403** : accès interdit ;\n- **404** : ressource introuvable ;\n- **500** : erreur du serveur.\n\n3. Un code en **4** signale une faute du **client** (par exemple une adresse qui n'existe pas). Un code en **5** signale une faute du **serveur**."
+    },
+    {
+      "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+      "difficulte": 2,
+      "titre": "La connexion du cinéma Lumière",
+      "consigne": "Analyse l'adresse et les réponses du serveur, puis justifie tes réponses.",
+      "enonce": "**Document.** En se connectant au site d'un cinéma, Sarah voit s'afficher dans la barre d'adresse :\n\n> http://www.cine-lumiere.fr/connexion?login=sarah&mdp=Soleil42\n\n1. Quelle méthode HTTP le formulaire de connexion utilise-t-il ? Comment le sais-tu ?\n2. Explique en quoi ce choix met en danger le mot de passe de Sarah : cite trois endroits où il apparaît.\n3. L'adresse commence par http et non https. Quel risque supplémentaire cela ajoute-t-il ?\n4. Propose deux corrections au concepteur du site.",
+      "bareme": [
+        { "critere": "Méthode GET : les paramètres apparaissent dans l'URL", "points": 4 },
+        { "critere": "Mot de passe visible dans l'URL, l'historique et les journaux du serveur", "points": 6 },
+        { "critere": "Sans HTTPS, la requête circule sans chiffrement", "points": 4 },
+        { "critere": "Corrections : méthode POST et HTTPS", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. C'est la méthode **GET** : ses paramètres (login=sarah, mdp=Soleil42) sont placés **dans l'URL**, après le point d'interrogation.\n\n2. Avec GET, les données sont visibles, historisées et mises en cache. Le mot de passe apparaît :\n- dans la **barre d'adresse** (visible par quelqu'un qui regarde l'écran) ;\n- dans l'**historique** du navigateur ;\n- dans les **journaux du serveur**.\n\nC'est la faute de conception la plus courante, et la plus facile à éviter.\n\n3. Avec HTTP, la requête circule **sans chiffrement** : toute personne capable d'observer le trafic peut lire l'identifiant et le mot de passe. HTTPS transporte HTTP dans un canal **chiffré** par TLS, qui garantit confidentialité et intégrité.\n\n4. - Utiliser la méthode **POST** : les données passent dans le **corps** de la requête et ne sont pas affichées ; c'est la méthode des formulaires qui envoient un mot de passe.\n- Passer le site en **HTTPS** (port 443), pour chiffrer les échanges et attester l'identité du serveur par un certificat."
+    },
+    {
+      "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+      "difficulte": 3,
+      "titre": "Le panier qui se souvient",
+      "consigne": "Analyse chaque situation en mobilisant plusieurs notions du chapitre et justifie.",
+      "enonce": "**Situation.** Enzo fait des achats sur une boutique en ligne.\n\n1. La page d'accueil de la boutique est un fichier HTML qui fait appel à **2 feuilles de style**, **3 scripts** et **14 images**. Combien de requêtes HTTP le navigateur envoie-t-il au minimum pour l'afficher ? Justifie.\n2. Enzo ajoute un article à son panier, change de page, et retrouve son panier. Pourtant, « HTTP est sans état ». Explique cette contradiction apparente, et ce que cela permet d'autre.\n3. Enzo reçoit ensuite un courriel qui l'invite à se connecter sur **boutique-verif-paiement.com**. La page affiche un **cadenas**. Enzo pense que le site est donc sûr. Qu'est-ce que le cadenas garantit, et qu'est-ce qu'il ne garantit pas ?\n4. Qui prend l'initiative de chaque échange entre le navigateur d'Enzo et le serveur ? Le serveur peut-il envoyer une page de lui-même ?",
+      "bareme": [
+        { "critere": "1 + 2 + 3 + 14 = 20 requêtes : le HTML puis chaque ressource redemandée", "points": 5 },
+        { "critere": "Chaque requête indépendante ; cookie déposé et renvoyé ; il permet aussi le pistage", "points": 6 },
+        { "critere": "HTTPS garantit confidentialité, intégrité, identité du serveur, pas son honnêteté", "points": 5 },
+        { "critere": "Le client demande, le serveur répond et ne prend jamais l'initiative", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Le navigateur demande d'abord la page HTML (1 requête), l'analyse, puis **redemande chaque ressource** : 2 + 3 + 14 = 19. Total : **20 requêtes HTTP** au minimum. Une page affichée est le résultat de dizaines de requêtes.\n\n2. HTTP est bien **sans état** : chaque requête est indépendante et le serveur ne se souvient de rien. Pour reconnaître Enzo d'une page à l'autre, le site dépose chez lui un **cookie**, une petite donnée **renvoyée à chaque requête** : le serveur reconnaît ainsi le visiteur et retrouve son panier. Le même mécanisme permet de rester connecté… et aussi le **pistage** des internautes.\n\n3. Le cadenas indique une connexion **HTTPS** : il garantit la **confidentialité**, l'**intégrité** des échanges et l'**authenticité du serveur** (Enzo parle bien au serveur boutique-verif-paiement.com, attesté par un certificat). Il **ne garantit pas l'honnêteté** du site : un site frauduleux peut afficher un cadenas. Rien ne prouve que ce site appartienne à la boutique : Enzo ne doit pas s'y connecter.\n\n4. C'est toujours le **client** (le navigateur d'Enzo) qui prend l'initiative : il envoie une requête, le serveur **répond**. Le serveur **ne prend jamais l'initiative** : il n'envoie pas de page de lui-même."
+    },
+    {
+      "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+      "difficulte": 1,
+      "titre": "Trois langages, trois rôles",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "1. Donne le rôle de **HTML**, de **CSS** et de **JavaScript** dans une page web.\n2. Pour chaque tâche, dis quel langage s'en charge : (a) mettre les titres en violet ; (b) déclarer qu'un texte est un paragraphe et un autre une liste ; (c) afficher un message quand on clique sur un bouton ; (d) adapter les marges à un écran de téléphone.\n3. Qu'est-ce que le **DOM** ? Qu'est-ce qu'un **gestionnaire d'événement** ?",
+      "bareme": [
+        { "critere": "HTML = structure et sens, CSS = présentation, JavaScript = comportement", "points": 6 },
+        { "critere": "Les quatre tâches attribuées au bon langage", "points": 8 },
+        { "critere": "DOM = arbre d'objets manipulable ; gestionnaire = fonction associée à un événement", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - **HTML** décrit la **structure** et le sens (titres, paragraphes, listes, liens, formulaires).\n- **CSS** décrit la **présentation** (couleurs, polices, marges, adaptation à l'écran).\n- **JavaScript** décrit le **comportement** (réagir à un clic, valider un champ, modifier la page sans la recharger).\n\n2. (a) **CSS** ; (b) **HTML** ; (c) **JavaScript** ; (d) **CSS**.\n\n3. Le **DOM** est l'**arbre d'objets** que le navigateur construit à partir du HTML ; JavaScript agit sur cet arbre (sélectionner un élément, changer son texte, en ajouter un). Un **gestionnaire d'événement** est la **fonction** associée à un événement (clic, saisie, envoi de formulaire, chargement) et appelée quand il se produit."
+    },
+    {
+      "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+      "difficulte": 2,
+      "titre": "Le formulaire d'inscription au club",
+      "consigne": "Observe le formulaire, puis réponds en justifiant.",
+      "enonce": "**Document.** Le formulaire d'inscription au club de théâtre du lycée :\n\n```\n<form action='/inscription' method='post'>\n  <input type='email' name='courriel'>\n  <input type='number' name='age'>\n  <button>Envoyer</button>\n</form>\n```\n\nUn script JavaScript de la page refuse l'envoi si l'âge saisi est inférieur à 15.\n\n1. Par quelle méthode les données sont-elles envoyées, et où passent-elles dans la requête ? Sous quelles clés le serveur lira-t-il les deux valeurs ?\n2. Le type **email** du premier champ garantit-il que le serveur recevra une adresse valide ? Justifie.\n3. Hugo, 13 ans, veut s'inscrire quand même. Explique comment il peut contourner la vérification de l'âge.\n4. Que doit faire le concepteur pour que la règle des 15 ans soit réellement respectée ? À quoi sert alors la vérification en JavaScript ?",
+      "bareme": [
+        { "critere": "POST, données dans le corps ; clés courriel et age (attribut name)", "points": 5 },
+        { "critere": "Le type de champ aide la saisie mais ne garantit rien", "points": 4 },
+        { "critere": "Code client sous contrôle du visiteur : désactiver le script ou envoyer la requête directement", "points": 5 },
+        { "critere": "Revérifier côté serveur ; la validation client n'est qu'un confort", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Méthode **POST** : les données passent dans le **corps** de la requête. Chaque champ porte un **nom** qui devient la clé sous laquelle le serveur lira la valeur : **courriel** et **age**.\n\n2. **Non.** Les types de champ (courriel, nombre, date) apportent une **aide à la saisie**, **aucune garantie** : le serveur peut recevoir n'importe quoi.\n\n3. Le code JavaScript s'exécute **dans le navigateur d'Hugo** : il est **entièrement sous son contrôle**, lisible, modifiable, désactivable. Hugo peut désactiver le script, le modifier, ou **envoyer lui-même la requête** au serveur sans passer par la page.\n\n4. Le serveur doit **revérifier** l'âge reçu : le code côté serveur est **le seul lieu sûr**. La vérification en JavaScript reste utile comme **confort** : elle prévient tout de suite l'élève honnête qui se trompe, sans aller-retour inutile. Mais **une validation côté client est un confort, jamais une sécurité**."
+    },
+    {
+      "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+      "difficulte": 3,
+      "titre": "Le quiz où l'on triche",
+      "consigne": "Analyse la conception de cette page en mobilisant plusieurs notions du chapitre, et justifie.",
+      "enonce": "**Situation.**\n\n> Un professeur crée une page de quiz noté. Le fichier JavaScript de la page contient la liste des bonnes réponses. Quand l'élève clique sur « Valider », une fonction compare sa réponse à la bonne, augmente le score, change le texte d'un paragraphe de la page pour afficher « Bravo ! » ou « Raté », puis envoie le score final au serveur, qui l'enregistre dans le carnet de notes.\n\n1. Quel mécanisme déclenche la fonction au clic ? Comment la fonction modifie-t-elle le paragraphe sans recharger la page ?\n2. Où s'exécute ce code ? Montre, par deux moyens au moins, qu'un élève peut obtenir 20/20 sans connaître les réponses.\n3. Propose une organisation sûre : que doit contenir le code côté client, et que doit faire le serveur ?\n4. Le professeur a écrit la couleur verte de « Bravo ! » directement dans le HTML de chaque paragraphe. Explique pourquoi il vaudrait mieux la placer dans le CSS, en donnant deux raisons.",
+      "bareme": [
+        { "critere": "Gestionnaire d'événement associé au clic ; action sur l'arbre du DOM", "points": 5 },
+        { "critere": "Code client lisible et modifiable : lire les réponses, modifier le score, envoyer la requête", "points": 5 },
+        { "critere": "Réponses gardées et vérifiées côté serveur, score calculé par le serveur", "points": 6 },
+        { "critere": "Séparation structure / présentation : changer l'apparence partout, accessibilité", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le clic est un **événement** ; la fonction est son **gestionnaire d'événement**, appelée quand il se produit. Elle agit sur le **DOM**, l'arbre d'objets construit par le navigateur à partir du HTML : elle sélectionne le paragraphe et change son texte, sans recharger la page.\n\n2. Le code s'exécute **côté client, dans le navigateur de l'élève** : il est **entièrement sous son contrôle**. Un élève peut :\n- **lire** le fichier JavaScript et y trouver la liste des bonnes réponses ;\n- **modifier** le score dans le code avant l'envoi ;\n- **envoyer lui-même** au serveur une requête contenant « 20 », sans passer par la page.\n\n3. Le code client ne doit contenir **aucune réponse** : il affiche les questions et envoie les réponses de l'élève. Le **serveur**, seul lieu sûr et seul à accéder aux données, garde les bonnes réponses, **compare lui-même**, calcule le score et l'enregistre. Il **revérifie** toute donnée reçue. Le JavaScript peut rester pour le confort (affichage immédiat, champ vide signalé), jamais pour la sécurité.\n\n4. HTML décrit la **structure**, CSS la **présentation**. En plaçant la couleur dans le CSS : on peut **changer toute l'apparence** en un seul endroit sans toucher au contenu ; et on garde un HTML qui décrit le sens, sur lequel s'appuient les **lecteurs d'écran** : la séparation assure l'**accessibilité**."
+    }
+  ]
+}

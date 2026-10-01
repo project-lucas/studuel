@@ -1,0 +1,2339 @@
+{
+ "niveau": "Tle",
+ "matiere": "enseignement-scientifique",
+ "exercices": [
+  {
+   "chapitre": "c7199117-4288-5ea0-96ae-042932b4df27",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "D’où vient l’énergie du monde ?",
+   "competence": "lire-graphique",
+   "situation": "Chaque année, le monde consomme environ 600 EJ d’énergie (l’exajoule, EJ, est une unité d’énergie). Le graphique montre d’où elle vient.",
+   "documents": [
+    {
+     "id": "mix",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Part de chaque source dans l’énergie mondiale",
+     "categories": [
+      "Pétrole",
+      "Charbon",
+      "Gaz",
+      "Hydraulique",
+      "Nucléaire",
+      "Biomasse et autres"
+     ],
+     "series": [
+      {
+       "nom": "Part",
+       "valeurs": [
+        30,
+        27,
+        23,
+        7,
+        4,
+        9
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Part de l’énergie consommée",
+      "unite": "en %",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "valeurs": true,
+     "source": "Chiffres arrondis, ordre de grandeur récent"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mix",
+     "enonce": "Touche la source d’énergie la plus utilisée dans le monde.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Le **pétrole** fournit environ 30 % de l’énergie mondiale : c’est la barre la plus longue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’énergie mondiale vient des trois combustibles fossiles (pétrole, charbon, gaz), en % ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Additionne les trois barres concernées.",
+     "explication": "30 + 27 + 23 = **80 %** : les combustibles fossiles fournissent encore environ quatre cinquièmes de l’énergie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les 600 EJ consommés, combien viennent des combustibles fossiles, en EJ ?",
+     "reponse": 480,
+     "unite": "EJ",
+     "aide": "Prends 80 % de 600 : multiplie par 0,80.",
+     "explication": "0,80 × 600 = **480 EJ**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette part pèse-t-elle lourd dans le réchauffement ?",
+     "options": [
+      "Leur combustion libère du CO₂ stocké sous terre depuis très longtemps",
+      "Leur combustion détruit la couche d’ozone de la haute atmosphère",
+      "Leur extraction refroidit les océans et dérègle les courants",
+      "Leur combustion consomme le CO₂ que l’air contenait déjà"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que devient le carbone quand on brûle un combustible.",
+     "explication": "Brûler un combustible fossile **libère du CO₂** stocké depuis des millions d’années : il s’ajoute à celui de l’atmosphère."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7199117-4288-5ea0-96ae-042932b4df27",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le budget carbone de la planète",
+   "competence": "modeliser",
+   "situation": "La hausse de la température moyenne est proportionnelle au CO₂ cumulé émis depuis 1850 (valeur simplifiée pour l’exercice). Depuis 1850, environ 2 500 Gt de CO₂ ont déjà été émis. Aujourd’hui, le monde émet environ 40 Gt de CO₂ par an.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hausse de température selon le CO₂ cumulé",
+     "categories": [
+      "0",
+      "1 000",
+      "2 000",
+      "3 000",
+      "4 000"
+     ],
+     "series": [
+      {
+       "nom": "Hausse de température",
+       "valeurs": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Hausse de température",
+      "unite": "en °C",
+      "min": 0,
+      "max": 2,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "CO₂ cumulé émis depuis 1850 (Gt)"
+     },
+     "source": "Modèle simplifié, écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche la valeur de CO₂ cumulé qui correspond à une hausse de 1,5 °C.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Pars de 1,5 °C sur l’axe vertical, puis regarde la graduation en dessous.",
+     "explication": "Le point à 1,5 °C se trouve au-dessus de **3 000 Gt** de CO₂ cumulé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel budget reste-t-il à émettre avant d’atteindre +1,5 °C, en Gt de CO₂ ?",
+     "reponse": 500,
+     "unite": "Gt",
+     "aide": "Budget total moins ce qui est déjà émis.",
+     "explication": "3 000 − 2 500 = **500 Gt**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 40 Gt par an, en combien d’années ce budget serait-il épuisé ?",
+     "reponse": 12.5,
+     "unite": "ans",
+     "aide": "Divise le budget restant par les émissions d’une année.",
+     "explication": "500 ÷ 40 = **12,5 ans** : c’est très court."
+    },
+    {
+     "type": "choix",
+     "enonce": "On attend 5 ans avant de réduire les émissions, qui restent à 40 Gt par an. Que devient le budget ?",
+     "options": [
+      "Il ne change pas : seul le niveau des émissions annuelles compte pour le climat",
+      "Il perd 200 Gt : il ne reste que 300 Gt, donc l’effort à fournir ensuite est plus brutal",
+      "Il perd 40 Gt : une seule année d’émissions est comptée dans le cumul",
+      "Il augmente de 200 Gt : les puits absorbent ce qu’on n’a pas réduit"
+     ],
+     "reponse": 1,
+     "aide": "Calcule les émissions cumulées pendant ces 5 ans.",
+     "explication": "5 × 40 = 200 Gt : le budget tombe à 500 − 200 = **300 Gt**. Retarder la baisse **consomme** le budget."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7199117-4288-5ea0-96ae-042932b4df27",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rénover une maison",
+   "competence": "raisonner",
+   "situation": "Une famille rénove sa maison. Le gaz émet 0,23 kg de CO₂ par kWh, l’électricité du réseau 0,06 kg par kWh. Après l’isolation, une pompe à chaleur électrique produit la même chaleur avec trois fois moins d’énergie (9 000 kWh ÷ 3).",
+   "documents": [
+    {
+     "id": "maison",
+     "type": "tableau",
+     "titre": "Trois états de la maison",
+     "colonnes": [
+      "Situation",
+      "Énergie finale (kWh/an)",
+      "Énergie utilisée",
+      "Émissions (kg CO₂/an)"
+     ],
+     "lignes": [
+      [
+       "A. Départ",
+       15000,
+       "gaz",
+       3450
+      ],
+      [
+       "B. Après isolation",
+       9000,
+       "gaz",
+       2070
+      ],
+      [
+       "C. B + pompe à chaleur",
+       3000,
+       "électricité",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche l’énergie consommée par la maison après l’isolation.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne B et la colonne des kWh.",
+     "explication": "Après l’isolation, la maison consomme **9 000 kWh** par an (ligne B)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’isolation réduit-elle l’énergie consommée ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Baisse = (15 000 − 9 000) ÷ 15 000.",
+     "explication": "6 000 ÷ 15 000 = 0,40, soit **40 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles sont les émissions de la situation C, en kg de CO₂ par an ?",
+     "reponse": 180,
+     "unite": "kg",
+     "aide": "Multiplie l’énergie en kWh par les émissions d’un kWh d’électricité.",
+     "explication": "3 000 × 0,06 = **180 kg** de CO₂ par an."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque geste au levier d’action qu’il illustre.",
+     "paires": [
+      [
+       "Baisser le chauffage de 1 °C",
+       "Sobriété"
+      ],
+      [
+       "Isoler les combles",
+       "Efficacité"
+      ],
+      [
+       "Remplacer la chaudière par une pompe à chaleur électrique",
+       "Décarbonation"
+      ],
+      [
+       "Replanter une forêt",
+       "Puits de carbone"
+      ]
+     ],
+     "aide": "Sobriété : consommer moins. Efficacité : consommer mieux. Décarbonation : changer d’énergie.",
+     "explication": "Baisser le chauffage = **sobriété** ; isoler = **efficacité** ; changer d’énergie = **décarbonation** ; replanter = **puits de carbone**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeedf56-b872-52c0-9345-38c488aee030",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de CO₂ pour un kWh ?",
+   "competence": "lire-graphique",
+   "situation": "Pour comparer les filières de production d’électricité, on mesure les grammes de CO₂ émis par kilowattheure (kWh) produit, sur tout le cycle de vie.",
+   "documents": [
+    {
+     "id": "co2",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Intensité carbone du kWh par filière",
+     "categories": [
+      "Charbon",
+      "Gaz",
+      "Solaire",
+      "Éolien",
+      "Nucléaire"
+     ],
+     "series": [
+      {
+       "nom": "g CO₂/kWh",
+       "valeurs": [
+        820,
+        490,
+        30,
+        10,
+        10
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Émissions",
+      "unite": "en g de CO₂ par kWh",
+      "min": 0,
+      "max": 900,
+      "pas": 100
+     },
+     "valeurs": false,
+     "source": "Chiffres arrondis, analyses du cycle de vie"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co2",
+     "enonce": "Touche la filière qui émet le plus de CO₂ par kWh.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le **charbon** émet environ 820 g de CO₂ par kWh : la barre la plus haute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de grammes le charbon dépasse-t-il le gaz, par kWh ?",
+     "reponse": 330,
+     "unite": "g",
+     "tolerance": 10,
+     "aide": "Soustrais les deux valeurs lues sur le graphique.",
+     "explication": "820 − 490 = **330 g** de CO₂ de plus par kWh."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une centrale au gaz produit 1 000 kWh. Combien de kilogrammes de CO₂ cela représente-t-il ?",
+     "reponse": 490,
+     "unite": "kg",
+     "tolerance": 10,
+     "aide": "1 000 kWh × 490 g, puis convertis en kg (1 kg = 1 000 g).",
+     "explication": "1 000 × 490 = 490 000 g, soit **490 kg** de CO₂."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet de conclure ce graphique, sur ce seul critère ?",
+     "options": [
+      "Le solaire est la seule filière qui n’émet aucun gramme de CO₂ par kWh",
+      "Le gaz émet à peu près autant de CO₂ par kWh que le charbon",
+      "L’éolien et le nucléaire émettent beaucoup moins de CO₂ par kWh que le gaz",
+      "Le nucléaire est la filière la moins chère pour produire un kWh"
+     ],
+     "reponse": 2,
+     "aide": "Compare les barres une à une, sans aller plus loin que ce qu’elles montrent.",
+     "explication": "Sur le critère **CO₂ par kWh**, éolien et nucléaire (10 g) sont bien en dessous du gaz (490 g). Le graphique ne dit rien du coût."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeedf56-b872-52c0-9345-38c488aee030",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une centrale qu’on décide aujourd’hui",
+   "competence": "se-reperer-temps",
+   "situation": "En 2026, un pays décide de construire une centrale électrique. Elle mettra 12 ans à être construite, puis fonctionnera 50 ans. La frise résume ce calendrier.",
+   "documents": [
+    {
+     "id": "calendrier",
+     "type": "frise",
+     "titre": "Le calendrier de la centrale",
+     "debut": 2020,
+     "fin": 2100,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "chantier",
+       "debut": 2026,
+       "fin": 2038,
+       "nom": "Construction"
+      },
+      {
+       "id": "service",
+       "debut": 2038,
+       "fin": 2088,
+       "nom": "Exploitation"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "decision",
+       "date": 2026,
+       "nom": "Décision"
+      },
+      {
+       "id": "neutre",
+       "date": 2050,
+       "nom": "Neutralité UE"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "calendrier",
+     "enonce": "Touche la période pendant laquelle la centrale produit de l’électricité.",
+     "reponse": [
+      "service"
+     ],
+     "aide": "Une centrale ne produit rien pendant qu’on la construit.",
+     "explication": "La centrale produit pendant l’**exploitation**, de 2038 à 2088."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année la centrale s’arrêtera-t-elle ?",
+     "reponse": 2088,
+     "aide": "Ajoute la durée de fonctionnement à l’année de mise en service.",
+     "explication": "2038 + 50 = **2088**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2050, année visée pour la neutralité carbone, combien d’années la centrale aura-t-elle encore à fonctionner ?",
+     "reponse": 38,
+     "unite": "ans",
+     "aide": "Soustrais 2050 à l’année d’arrêt.",
+     "explication": "2088 − 2050 = **38 ans** : cette décision de 2026 pèsera bien après 2050."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce calendrier sur les choix énergétiques ?",
+     "options": [
+      "Une décision peut être corrigée en quelques mois si elle se révèle coûteuse",
+      "Le temps de construction compte peu devant la durée de fonctionnement",
+      "Une centrale est toujours remplacée avant la fin de sa durée de vie",
+      "Une décision prise aujourd’hui engage le pays pendant plusieurs décennies"
+     ],
+     "reponse": 3,
+     "aide": "Regarde la longueur totale de la frise colorée.",
+     "explication": "Entre la décision (2026) et l’arrêt (2088), il s’écoule **62 ans** : c’est l’**inertie** des choix énergétiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeedf56-b872-52c0-9345-38c488aee030",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle est la meilleure filière ?",
+   "competence": "argumenter",
+   "situation": "Léa prépare un exposé et affirme : « Le nucléaire est la meilleure filière, c’est évident. » Son camarade Hugo demande qu’elle le prouve avec le tableau. Les valeurs sont des ordres de grandeur arrondis, écrits pour l’exercice.",
+   "documents": [
+    {
+     "id": "filieres",
+     "type": "tableau",
+     "titre": "Trois filières comparées",
+     "colonnes": [
+      "Filière",
+      "CO₂ (g/kWh)",
+      "Coût complet (€/MWh)",
+      "Pilotable ?",
+      "Construction (ans)"
+     ],
+     "lignes": [
+      [
+       "Gaz",
+       490,
+       100,
+       "oui",
+       3
+      ],
+      [
+       "Éolien terrestre",
+       10,
+       60,
+       "non",
+       2
+      ],
+      [
+       "Nucléaire",
+       10,
+       110,
+       "oui",
+       12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis, écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "filieres",
+     "enonce": "Touche le coût complet le plus bas du tableau.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare la colonne des €/MWh.",
+     "explication": "Le coût le plus bas est celui de l’éolien terrestre : **60 €/MWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros par MWh le nucléaire est-il plus cher que l’éolien terrestre ?",
+     "reponse": 50,
+     "unite": "€/MWh",
+     "aide": "Soustrais les deux coûts complets.",
+     "explication": "110 − 60 = **50 €/MWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle filière du tableau cumule un faible CO₂ et une production pilotable ?",
+     "options": [
+      "Le nucléaire, à 10 g de CO₂ par kWh et pilotable",
+      "Le gaz, pilotable mais à 10 g de CO₂ par kWh",
+      "L’éolien terrestre, à 10 g de CO₂ par kWh et pilotable",
+      "Aucune : toutes les filières sont intermittentes"
+     ],
+     "reponse": 0,
+     "aide": "Il faut cocher deux critères en même temps dans le tableau.",
+     "explication": "Seul le **nucléaire** est à la fois peu carboné (10 g/kWh) et pilotable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le tableau ne permet-il pas de conclure que le nucléaire est « la meilleure » filière ?",
+     "options": [
+      "Il émet plus de CO₂ par kWh que l’éolien terrestre, comme le montre le tableau",
+      "Il est le plus cher et le plus long à construire : aucune filière ne gagne partout",
+      "Il n’est pas pilotable, contrairement au gaz, d’après la colonne prévue",
+      "Le tableau ne donne aucune donnée chiffrée pour comparer les filières"
+     ],
+     "reponse": 1,
+     "aide": "Cherche un critère où le nucléaire est le dernier du classement.",
+     "explication": "Le nucléaire est premier sur CO₂ et pilotable, mais dernier sur le **coût** (110) et la **durée de construction** (12 ans). Le choix se tranche en **argumentant** avec des données."
+    }
+   ]
+  },
+  {
+   "chapitre": "931709de-4a64-51e3-a92c-373a328fb0c2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle de découvertes électriques",
+   "competence": "se-reperer-temps",
+   "situation": "Le XIXe siècle fait passer l’électricité de la curiosité de laboratoire à l’énergie industrielle. La frise place cinq jalons.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq jalons de l’électricité",
+     "debut": 1790,
+     "fin": 1890,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "volta",
+       "date": 1800,
+       "nom": "Pile de Volta"
+      },
+      {
+       "id": "oersted",
+       "date": 1820,
+       "nom": "Œrsted"
+      },
+      {
+       "id": "faraday",
+       "date": 1831,
+       "nom": "Induction"
+      },
+      {
+       "id": "gramme",
+       "date": 1869,
+       "nom": "Dynamo de Gramme"
+      },
+      {
+       "id": "edison",
+       "date": 1879,
+       "nom": "Lampe d’Edison"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le jalon de la découverte de l’induction électromagnétique.",
+     "reponse": [
+      "faraday"
+     ],
+     "aide": "Cherche le jalon nommé « Induction ».",
+     "explication": "L’induction est découverte par Faraday en **1831**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la pile de Volta de l’induction de Faraday ?",
+     "reponse": 31,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1831 − 1800 = **31 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La dynamo de 1869 produit du courant à partir d’un mouvement. Sur quelle découverte repose-t-elle ?",
+     "options": [
+      "La pile de Volta, qui stocke l’énergie électrique sous forme chimique",
+      "La lampe à incandescence, qui transforme le courant en lumière durable",
+      "L’induction électromagnétique, qui crée du courant grâce à un aimant en mouvement",
+      "La déviation d’une aiguille aimantée par un courant électrique"
+     ],
+     "reponse": 2,
+     "aide": "Quelle découverte relie mouvement et production de courant ?",
+     "explication": "La dynamo convertit un mouvement en courant : c’est le principe de l’**induction** (1831)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la pile de Volta de la lampe d’Edison ?",
+     "reponse": 79,
+     "unite": "ans",
+     "aide": "Soustrais la première date à la dernière.",
+     "explication": "1879 − 1800 = **79 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "931709de-4a64-51e3-a92c-373a328fb0c2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La lampe à incandescence",
+   "competence": "calculer",
+   "situation": "Une lampe à incandescence de la fin du XIXe siècle porte l’étiquette ci-dessous. On l’allume 5 heures. Seuls 3 W de sa puissance sont émis sous forme de lumière.",
+   "documents": [
+    {
+     "id": "lampe",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Lampe à incandescence",
+     "sousTitre": "Fiche technique",
+     "emoji": "💡",
+     "lignes": [
+      {
+       "texte": "Tension d’alimentation",
+       "valeur": "120 V",
+       "id": "tension"
+      },
+      {
+       "texte": "Puissance électrique",
+       "valeur": "60 W",
+       "id": "puissance"
+      },
+      {
+       "texte": "Puissance émise en lumière",
+       "valeur": "3 W",
+       "id": "lumiere"
+      }
+     ],
+     "pied": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lampe",
+     "enonce": "Touche la puissance électrique de la lampe.",
+     "reponse": [
+      "puissance"
+     ],
+     "aide": "La puissance s’exprime en watts (W).",
+     "explication": "La puissance électrique est de **60 W** (ligne « Puissance électrique »)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant dans la lampe, en A ? (P = U × I)",
+     "reponse": 0.5,
+     "unite": "A",
+     "aide": "I = P ÷ U : divise la puissance par la tension.",
+     "explication": "I = 60 ÷ 120 = **0,5 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la lampe consomme-t-elle en 5 heures, en kWh ?",
+     "reponse": 0.3,
+     "unite": "kWh",
+     "tolerance": 0.005,
+     "aide": "E = P × t, avec P en kW : 60 W = 0,060 kW.",
+     "explication": "E = 0,060 × 5 = **0,30 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement lumineux de la lampe, en % ? (énergie utile ÷ énergie reçue)",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "Divise la puissance lumineuse par la puissance électrique.",
+     "explication": "3 ÷ 60 = 0,05, soit **5 %** : le reste part en chaleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "931709de-4a64-51e3-a92c-373a328fb0c2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce qui fait tourner l’aimant",
+   "competence": "observer-schema",
+   "situation": "Toutes les centrales produisent leur courant par induction : un aimant tourne devant une bobine. Seule change la force qui le fait tourner. Une centrale reçoit 900 MW sous forme de chaleur et fournit 300 MW d’électricité.",
+   "documents": [
+    {
+     "id": "alt",
+     "type": "schema",
+     "titre": "Principe d’un alternateur",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 80,
+       "l": 90,
+       "h": 50,
+       "arrondi": 6,
+       "texte": "Aimant",
+       "id": "aimant",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        60
+       ],
+       "a": [
+        110,
+        60
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 48,
+       "texte": "il tourne",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 70,
+       "l": 90,
+       "h": 70,
+       "arrondi": 6,
+       "texte": "Bobine",
+       "id": "bobine",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        105
+       ],
+       "a": [
+        295,
+        105
+       ]
+      },
+      {
+       "forme": "emoji",
+       "x": 300,
+       "y": 112,
+       "emoji": "💡",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 175,
+       "texte": "Un courant apparaît dans la bobine",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alt",
+     "enonce": "Touche la pièce qui est mise en mouvement par le vent, l’eau ou la vapeur.",
+     "reponse": [
+      "aimant"
+     ],
+     "aide": "La bobine reste fixe : qu’est-ce qui tourne devant elle ?",
+     "explication": "C’est l’**aimant** que la turbine ou l’éolienne fait tourner devant la bobine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il dans la bobine si l’aimant s’arrête de tourner ?",
+     "options": [
+      "Le courant double : l’aimant immobile agit plus longtemps sur la bobine",
+      "Le courant continue : la bobine garde en mémoire le champ de l’aimant",
+      "Le courant devient alternatif : l’aimant fixe inverse son sens",
+      "Plus aucun courant : le champ magnétique vu par la bobine ne varie plus"
+     ],
+     "reponse": 3,
+     "aide": "L’induction exige une variation du champ magnétique.",
+     "explication": "Sans mouvement, le champ ne varie pas : **pas d’induction**, donc pas de courant."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque installation à ce qui fait tourner son aimant.",
+     "paires": [
+      [
+       "Éolienne",
+       "Le vent"
+      ],
+      [
+       "Barrage",
+       "L’eau qui chute"
+      ],
+      [
+       "Centrale nucléaire",
+       "La vapeur chauffée par la fission"
+      ],
+      [
+       "Centrale au charbon",
+       "La vapeur chauffée par la combustion"
+      ]
+     ],
+     "aide": "Dans une centrale thermique, on chauffe de l’eau pour obtenir de la vapeur.",
+     "explication": "Seule la force change : **vent**, **eau**, **vapeur** chauffée par fission ou par combustion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement de la centrale, en % ? (arrondi à l’unité)",
+     "reponse": 33,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise 300 par 900, puis multiplie par 100.",
+     "explication": "300 ÷ 900 ≈ 0,33, soit environ **33 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue, essentiellement en chaleur, en MW ?",
+     "reponse": 600,
+     "unite": "MW",
+     "aide": "Retire l’électricité produite de la puissance reçue.",
+     "explication": "900 − 300 = **600 MW** perdus en chaleur : le rendement est toujours inférieur à 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a2d036e-f388-5878-a29f-91ef6e005013",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le nucléaire monte en puissance",
+   "competence": "lire-graphique",
+   "situation": "Après le choc pétrolier de 1973, la France construit un parc de réacteurs. Le graphique donne la part du nucléaire dans sa production d’électricité.",
+   "documents": [
+    {
+     "id": "part",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part du nucléaire dans l’électricité française",
+     "categories": [
+      "1970",
+      "1980",
+      "1990",
+      "2000",
+      "2010",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Part du nucléaire",
+       "valeurs": [
+        8,
+        24,
+        75,
+        76,
+        75,
+        67
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la production",
+      "unite": "en %",
+      "min": 0,
+      "max": 80,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "part",
+     "enonce": "Touche la première année où la part du nucléaire dépasse 50 %.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la première barre au-dessus de la graduation 50.",
+     "explication": "La part dépasse 50 % pour la première fois en **1990** (environ 75 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage la part a-t-elle augmenté entre 1980 et 1990 ?",
+     "reponse": 51,
+     "unite": "points",
+     "tolerance": 1,
+     "aide": "Soustrais la valeur de 1980 à celle de 1990.",
+     "explication": "75 − 24 = **51 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points a-t-elle baissé entre 2010 et 2020 ?",
+     "reponse": 8,
+     "unite": "points",
+     "tolerance": 1,
+     "aide": "Soustrais la valeur de 2020 à celle de 2010.",
+     "explication": "75 − 67 = **8 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer le bond de 1980 à 1990 ?",
+     "options": [
+      "La plupart des réacteurs du parc ont été construits et mis en service entre 1975 et 1990",
+      "La consommation d’électricité a été divisée par trois à cette période",
+      "Les barrages hydrauliques ont été fermés pour laisser la place au nucléaire",
+      "Le transistor a rendu les réacteurs plus puissants à cette période"
+     ],
+     "reponse": 0,
+     "aide": "Pense au plan lancé après 1973.",
+     "explication": "Le plan lancé en 1974 fait construire l’essentiel du parc entre **1975 et 1990**, d’où la forte hausse de la part du nucléaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a2d036e-f388-5878-a29f-91ef6e005013",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la fission à la prise",
+   "competence": "observer-schema",
+   "situation": "Dans une centrale nucléaire, la chaleur de la fission fait tourner une turbine. Le schéma suit l’énergie jusqu’au courant électrique.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "fission",
+       "texte": "Fission de l’uranium",
+       "emoji": "⚛️"
+      },
+      {
+       "id": "fluide",
+       "texte": "?"
+      },
+      {
+       "id": "turbine",
+       "texte": "Turbine"
+      },
+      {
+       "id": "alternateur",
+       "texte": "Alternateur"
+      },
+      {
+       "id": "courant",
+       "texte": "Courant électrique",
+       "emoji": "⚡"
+      }
+     ],
+     "liens": [
+      {
+       "de": "fission",
+       "a": "fluide",
+       "texte": "chauffe"
+      },
+      {
+       "de": "fluide",
+       "a": "turbine",
+       "texte": "fait tourner"
+      },
+      {
+       "de": "turbine",
+       "a": "alternateur",
+       "texte": "entraîne"
+      },
+      {
+       "de": "alternateur",
+       "a": "courant",
+       "texte": "produit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel fluide, chauffé par la fission, fait tourner la turbine ? (un mot)",
+     "reponse": [
+      "vapeur",
+      "la vapeur",
+      "vapeur d’eau",
+      "de la vapeur",
+      "vapeur d eau"
+     ],
+     "placeholder": "un mot",
+     "aide": "On chauffe de l’eau jusqu’à ce qu’elle change d’état.",
+     "explication": "L’eau chauffée devient de la **vapeur**, qui fait tourner la turbine."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’appareil qui produit le courant électrique.",
+     "reponse": [
+      "alternateur"
+     ],
+     "aide": "Cherche l’étape juste avant « Courant électrique ».",
+     "explication": "C’est l’**alternateur**, entraîné par la turbine, qui produit le courant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un réacteur de 1 300 MW fonctionne à pleine puissance pendant 24 h. Quelle énergie électrique produit-il, en GWh ? (1 GWh = 1 000 MWh)",
+     "reponse": 31.2,
+     "unite": "GWh",
+     "tolerance": 0.05,
+     "aide": "Multiplie la puissance en MW par la durée en heures, puis convertis.",
+     "explication": "1 300 × 24 = 31 200 MWh, soit **31,2 GWh**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces installations : entraînent-elles un alternateur avec une turbine ?",
+     "categories": [
+      "Avec turbine et alternateur",
+      "Sans turbine"
+     ],
+     "items": [
+      [
+       "Barrage hydraulique",
+       0
+      ],
+      [
+       "Centrale à gaz",
+       0
+      ],
+      [
+       "Centrale nucléaire",
+       0
+      ],
+      [
+       "Calculatrice à cellule solaire",
+       1
+      ],
+      [
+       "Panneau photovoltaïque",
+       1
+      ]
+     ],
+     "aide": "Une cellule photovoltaïque transforme directement la lumière en courant.",
+     "explication": "Barrage, centrale à gaz et centrale nucléaire utilisent une **turbine** ; les cellules **photovoltaïques** produisent le courant sans pièce mobile."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a2d036e-f388-5878-a29f-91ef6e005013",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le soleil de midi, la demande du soir",
+   "competence": "lire-graphique",
+   "situation": "Le réseau électrique du XXe siècle a été conçu autour de grosses centrales pilotables. Aujourd’hui s’y raccordent des panneaux solaires. Le graphique décrit une journée type (valeurs imaginées pour l’exercice). Les moyens pilotables fournissent ce que le solaire ne couvre pas.",
+   "documents": [
+    {
+     "id": "jour",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Demande et production solaire sur une journée",
+     "categories": [
+      "0 h",
+      "4 h",
+      "8 h",
+      "12 h",
+      "16 h",
+      "20 h"
+     ],
+     "series": [
+      {
+       "nom": "Demande",
+       "valeurs": [
+        45,
+        40,
+        55,
+        60,
+        58,
+        65
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Solaire",
+       "valeurs": [
+        0,
+        0,
+        8,
+        20,
+        12,
+        0
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "en GW",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jour",
+     "enonce": "Touche l’heure à laquelle le solaire produit le plus.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre de production solaire la plus haute.",
+     "explication": "Le solaire produit le plus à **12 h** (20 GW)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 12 h, quelle puissance doivent fournir les moyens pilotables, en GW ?",
+     "reponse": 40,
+     "unite": "GW",
+     "aide": "Demande moins production solaire.",
+     "explication": "60 − 20 = **40 GW**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De 12 h à 20 h, de combien la puissance des moyens pilotables doit-elle augmenter, en GW ?",
+     "reponse": 25,
+     "unite": "GW",
+     "aide": "Calcule d’abord ce qu’ils fournissent à 20 h, quand le solaire ne produit plus.",
+     "explication": "À 20 h : 65 − 0 = 65 GW. Donc 65 − 40 = **25 GW** de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce profil est-il un défi pour un réseau conçu au XXe siècle ?",
+     "options": [
+      "Le solaire produit surtout la nuit, quand les centrales pilotables sont à l’arrêt",
+      "Le solaire produit à midi alors que le pic de demande arrive le soir, quand il ne produit plus",
+      "La demande est constante sur la journée, ce qui masque l’apport solaire",
+      "Le solaire est pilotable, mais il envoie du courant dans le mauvais sens"
+     ],
+     "reponse": 1,
+     "aide": "Compare l’heure du maximum solaire et celle du maximum de demande.",
+     "explication": "Le solaire est **intermittent** : maximal à 12 h, nul à 20 h alors que la demande est la plus forte. Le système hérité doit s’adapter."
+    }
+   ]
+  },
+  {
+   "chapitre": "b64fe4db-1cd3-52aa-881c-5894a6ea0c04",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du réacteur à la prise",
+   "competence": "observer-schema",
+   "situation": "Une centrale produit 1 200 MW. Son électricité suit la chaîne ci-dessous jusqu’aux logements. On rappelle P = U × I, avec P en watts, U en volts et I en ampères.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "centrale",
+       "texte": "Centrale : 20 kV"
+      },
+      {
+       "id": "elevateur",
+       "texte": "Transformateur élévateur"
+      },
+      {
+       "id": "tht",
+       "texte": "Ligne très haute tension : 400 kV"
+      },
+      {
+       "id": "abaisseur",
+       "texte": "Transformateur abaisseur"
+      },
+      {
+       "id": "logement",
+       "texte": "Logement : 230 V"
+      }
+     ],
+     "liens": [
+      {
+       "de": "centrale",
+       "a": "elevateur"
+      },
+      {
+       "de": "elevateur",
+       "a": "tht"
+      },
+      {
+       "de": "tht",
+       "a": "abaisseur"
+      },
+      {
+       "de": "abaisseur",
+       "a": "logement"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche l’appareil qui fait monter la tension à la sortie de la centrale.",
+     "reponse": [
+      "elevateur"
+     ],
+     "aide": "Il faut passer de 20 kV à 400 kV.",
+     "explication": "Le **transformateur élévateur** fait passer la tension de 20 kV à 400 kV."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité dans la ligne à 400 kV, en A ? (1 200 MW = 1,2 × 10⁹ W)",
+     "reponse": 3000,
+     "unite": "A",
+     "aide": "I = P ÷ U, avec U = 400 000 V.",
+     "explication": "I = 1,2 × 10⁹ ÷ 4 × 10⁵ = **3 000 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait l’intensité pour la même puissance sous 20 kV, en A ?",
+     "reponse": 60000,
+     "unite": "A",
+     "aide": "Même calcul avec U = 20 000 V.",
+     "explication": "I = 1,2 × 10⁹ ÷ 2 × 10⁴ = **60 000 A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sous 20 kV au lieu de 400 kV, l’intensité est 20 fois plus grande. Les pertes par effet Joule (R × I²) seraient…",
+     "options": [
+      "multipliées par 20, comme le fait l’intensité elle-même",
+      "multipliées par 40, soit le double de celles de l’intensité",
+      "multipliées par 400, car l’intensité est élevée au carré",
+      "divisées par 20, car la tension diminue dans la même proportion"
+     ],
+     "reponse": 2,
+     "aide": "Les pertes dépendent du carré de l’intensité.",
+     "explication": "20² = **400** : les pertes seraient 400 fois plus grandes. Voilà pourquoi on transporte en très haute tension."
+    }
+   ]
+  },
+  {
+   "chapitre": "b64fe4db-1cd3-52aa-881c-5894a6ea0c04",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les pertes en ligne",
+   "competence": "calculer",
+   "situation": "On transporte 100 MW (10⁸ W) par une ligne de résistance 10 Ω. Comparons une tension de 100 kV et une tension de 400 kV. On rappelle P = U × I et que la puissance perdue vaut R × I².",
+   "documents": [
+    {
+     "id": "ligne",
+     "type": "tableau",
+     "titre": "Deux tensions de transport",
+     "colonnes": [
+      "",
+      "Sous 100 kV",
+      "Sous 400 kV"
+     ],
+     "lignes": [
+      [
+       "Puissance transportée (MW)",
+       100,
+       100
+      ],
+      [
+       "Intensité (A)",
+       1000,
+       "?"
+      ],
+      [
+       "Résistance de la ligne (Ω)",
+       10,
+       10
+      ],
+      [
+       "Puissance perdue",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité sous 400 kV, en A ?",
+     "reponse": 250,
+     "unite": "A",
+     "aide": "I = P ÷ U, avec P = 10⁸ W et U = 4 × 10⁵ V.",
+     "explication": "I = 10⁸ ÷ 4 × 10⁵ = **250 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue sous 100 kV, en MW ?",
+     "reponse": 10,
+     "unite": "MW",
+     "aide": "P(perdue) = R × I² = 10 × 1 000², en watts.",
+     "explication": "10 × 1 000² = 10⁷ W = **10 MW**, soit 10 % de la puissance transportée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue sous 400 kV, en kW ?",
+     "reponse": 625,
+     "unite": "kW",
+     "aide": "P(perdue) = 10 × 250², en watts, puis convertis en kW.",
+     "explication": "10 × 250² = 625 000 W = **625 kW**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La tension est multipliée par 4. Par quel facteur les pertes sont-elles divisées ?",
+     "options": [
+      "4, car l’intensité est divisée par 4 et les pertes la suivent",
+      "2, car la tension n’agit que sur la moitié de la ligne",
+      "8, car les pertes dépendent du cube de l’intensité",
+      "16, car l’intensité est divisée par 4 et les pertes suivent son carré"
+     ],
+     "reponse": 3,
+     "aide": "Compare 10 MW et 0,625 MW.",
+     "explication": "10 000 kW ÷ 625 kW = **16** = 4². Diviser l’intensité par 4 divise les pertes par 16."
+    }
+   ]
+  },
+  {
+   "chapitre": "b64fe4db-1cd3-52aa-881c-5894a6ea0c04",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Stocker l’eau pour stocker l’électricité",
+   "competence": "analyser-document",
+   "situation": "L’électricité ne se stocke pas en grande quantité, sauf dans les STEP : la nuit, on pompe l’eau vers un bassin haut ; le soir, on la laisse redescendre dans des turbines. Une STEP absorbe 12 GWh la nuit et en restitue 9 GWh le soir.",
+   "documents": [
+    {
+     "id": "step",
+     "type": "schema",
+     "titre": "Une station de pompage-turbinage",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 25,
+       "l": 130,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Bassin supérieur",
+       "id": "haut",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 165,
+       "l": 130,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Bassin inférieur",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        160
+       ],
+       "a": [
+        215,
+        80
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 207,
+       "y": 125,
+       "texte": "Pompage",
+       "taille": "petit",
+       "ancre": "fin",
+       "italique": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        265,
+        80
+       ],
+       "a": [
+        265,
+        160
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 273,
+       "y": 125,
+       "texte": "Turbinage",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le réseau à deux moments",
+     "colonnes": [
+      "",
+      "2 h (nuit)",
+      "19 h (soir)"
+     ],
+     "lignes": [
+      [
+       "Production (GW)",
+       50,
+       55
+      ],
+      [
+       "Consommation (GW)",
+       35,
+       70
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "step",
+     "enonce": "Touche le bassin vers lequel on pompe l’eau pendant la nuit.",
+     "reponse": [
+      "haut"
+     ],
+     "aide": "Pomper, c’est faire monter l’eau.",
+     "explication": "La nuit, l’eau est pompée vers le **bassin supérieur**, où elle stocke de l’énergie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 2 h, de combien la production dépasse-t-elle la consommation, en GW ?",
+     "reponse": 15,
+     "unite": "GW",
+     "aide": "Production moins consommation, colonne « 2 h ».",
+     "explication": "50 − 35 = **15 GW** de surplus : on peut les utiliser pour pomper."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la STEP à 19 h, quand il manque 15 GW ?",
+     "options": [
+      "Elle laisse l’eau redescendre dans les turbines pour produire de l’électricité",
+      "Elle pompe l’eau vers le bassin haut pour absorber le manque de production",
+      "Elle se déconnecte du réseau pour éviter de perdre de l’énergie",
+      "Elle transforme l’électricité du réseau en courant continu stocké"
+     ],
+     "reponse": 0,
+     "aide": "Le soir, la production est inférieure à la consommation.",
+     "explication": "Le soir, le réseau manque d’électricité : la STEP **turbine** l’eau du bassin haut et en produit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement de cette STEP, en % ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Énergie restituée ÷ énergie absorbée.",
+     "explication": "9 ÷ 12 = 0,75, soit **75 %**. Le reste (3 GWh) est perdu, surtout en chaleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac80328d-962c-5cfd-9fb1-6675d36ce25a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Moteur électrique contre moteur thermique",
+   "competence": "lire-tableau",
+   "situation": "Deux voitures ont besoin de la même énergie utile aux roues pour faire 100 km : 18 kWh. Le rendement d’un moteur est l’énergie utile divisée par l’énergie consommée.",
+   "documents": [
+    {
+     "id": "moteurs",
+     "type": "tableau",
+     "titre": "Deux moteurs comparés",
+     "colonnes": [
+      "",
+      "Moteur thermique",
+      "Moteur électrique"
+     ],
+     "lignes": [
+      [
+       "Rendement (%)",
+       30,
+       90
+      ],
+      [
+       "Énergie utile aux roues (kWh/100 km)",
+       18,
+       18
+      ],
+      [
+       "Énergie consommée (kWh/100 km)",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moteurs",
+     "enonce": "Touche le rendement du moteur électrique.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne « Rendement » et la colonne du moteur électrique.",
+     "explication": "Le moteur électrique a un rendement de **90 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le moteur électrique consomme-t-il pour 100 km, en kWh ?",
+     "reponse": 20,
+     "unite": "kWh",
+     "aide": "Énergie consommée = énergie utile ÷ rendement (0,90).",
+     "explication": "18 ÷ 0,90 = **20 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le moteur thermique consomme-t-il pour 100 km, en kWh ?",
+     "reponse": 60,
+     "unite": "kWh",
+     "aide": "Même calcul avec un rendement de 0,30.",
+     "explication": "18 ÷ 0,30 = **60 kWh**, soit trois fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où part l’énergie que le moteur thermique ne transforme pas en mouvement ?",
+     "options": [
+      "En électricité, stockée dans la batterie pour le trajet suivant",
+      "Presque toute en chaleur, rejetée dans l’air et les gaz d’échappement",
+      "En lumière, émise par les phares et le tableau de bord",
+      "En énergie chimique, récupérée dans le réservoir de carburant"
+     ],
+     "reponse": 1,
+     "aide": "Le rendement est toujours inférieur à 1 : que devient la différence ?",
+     "explication": "La différence (42 kWh ici) part en **chaleur** : l’écart au rendement de 1 prend toujours cette forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac80328d-962c-5cfd-9fb1-6675d36ce25a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une voiture électrique, partout pareille ?",
+   "competence": "analyser-document",
+   "situation": "Une voiture électrique consomme 20 kWh aux 100 km, à la prise. Une voiture thermique équivalente émet 13,8 kg de CO₂ aux 100 km. On ne compare ici que l’usage, pas la fabrication. Le tableau donne le CO₂ émis pour produire un kWh dans quatre pays.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Intensité carbone de l’électricité",
+     "colonnes": [
+      "Pays",
+      "g de CO₂ par kWh"
+     ],
+     "lignes": [
+      [
+       "Norvège",
+       30
+      ],
+      [
+       "France",
+       60
+      ],
+      [
+       "Allemagne",
+       380
+      ],
+      [
+       "Pologne",
+       700
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche la valeur du pays dont l’électricité émet le moins de CO₂.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la plus petite valeur de la colonne.",
+     "explication": "La **Norvège** a l’électricité la moins carbonée du tableau : 30 g de CO₂ par kWh."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de CO₂ la voiture électrique provoque-t-elle aux 100 km en France, en g ?",
+     "reponse": 1200,
+     "unite": "g",
+     "aide": "Multiplie les 20 kWh par les grammes de CO₂ d’un kWh en France.",
+     "explication": "20 × 60 = **1 200 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même question en Pologne, en kg de CO₂ aux 100 km.",
+     "reponse": 14,
+     "unite": "kg",
+     "aide": "Multiplie 20 par 700, puis convertis en kg.",
+     "explication": "20 × 700 = 14 000 g = **14 kg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de la comparaison avec les 13,8 kg de la voiture thermique ?",
+     "options": [
+      "En Norvège, la voiture électrique émet à l’usage plus que la voiture thermique",
+      "En France, la voiture électrique émet à l’usage presque autant que la thermique",
+      "En Pologne, à l’usage, la voiture électrique émet à peu près autant que la thermique",
+      "Le pays de recharge n’a aucune influence sur les émissions à l’usage"
+     ],
+     "reponse": 2,
+     "aide": "Compare 13,8 kg aux résultats de chaque pays.",
+     "explication": "En Pologne, 14 kg contre 13,8 kg : **presque égalité**. La voiture est la même, c’est le **réseau** qui change."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac80328d-962c-5cfd-9fb1-6675d36ce25a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’analyse du cycle de vie",
+   "competence": "analyser-document",
+   "situation": "Pour comparer honnêtement deux filières, on additionne les émissions de toutes les phases de leur cycle de vie. Le tableau détaille, en g de CO₂ par kWh produit, un panneau solaire et une centrale au gaz.",
+   "documents": [
+    {
+     "id": "acv",
+     "type": "tableau",
+     "titre": "Cycle de vie de deux filières",
+     "colonnes": [
+      "Phase",
+      "Panneau solaire",
+      "Centrale au gaz"
+     ],
+     "lignes": [
+      [
+       "Extraction et fabrication",
+       25,
+       15
+      ],
+      [
+       "Transport du combustible ou du matériel",
+       2,
+       50
+      ],
+      [
+       "Usage (production du courant)",
+       0,
+       420
+      ],
+      [
+       "Fin de vie",
+       3,
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des émissions du panneau solaire, en g de CO₂ par kWh ?",
+     "reponse": 30,
+     "unite": "g/kWh",
+     "aide": "Additionne les quatre phases de la colonne du panneau.",
+     "explication": "25 + 2 + 0 + 3 = **30 g** de CO₂ par kWh."
+    },
+    {
+     "type": "zone",
+     "document": "acv",
+     "enonce": "Touche la phase qui émet le plus pour le panneau solaire.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le panneau n’émet rien en fonctionnant : cherche le plus grand nombre de sa colonne.",
+     "explication": "Pour le panneau, c’est l’**extraction et la fabrication** (25 g) qui émet le plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour la centrale au gaz, quelle part du total vient de l’usage, en % ? (arrondi au dixième)",
+     "reponse": 85.7,
+     "unite": "%",
+     "tolerance": 0.3,
+     "aide": "Divise 420 par le total de la colonne (490), puis multiplie par 100.",
+     "explication": "420 ÷ 490 ≈ **85,7 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau sur l’impact du panneau solaire ?",
+     "options": [
+      "Il émet surtout pendant l’usage, comme la centrale au gaz du tableau",
+      "Son empreinte est nulle, car il ne brûle aucun combustible fossile",
+      "Il émet moins qu’une éolienne à cause de sa fin de vie recyclable",
+      "Il n’émet rien en fonctionnant, mais sa fabrication pèse l’essentiel"
+     ],
+     "reponse": 3,
+     "aide": "Regarde dans quelle ligne se trouve le plus gros chiffre du panneau.",
+     "explication": "Sur 30 g, **25 g** viennent de la fabrication : c’est pourquoi on juge une technologie sur tout son **cycle de vie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146be9f-e43b-5ce1-972f-a51bc834e8d6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De quoi est faite l’air que tu respires ?",
+   "competence": "lire-graphique",
+   "situation": "L’air sec actuel est un mélange de gaz. Le diagramme donne sa composition en volume.",
+   "documents": [
+    {
+     "id": "air",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Composition de l’air sec actuel",
+     "categories": [
+      "Diazote",
+      "Dioxygène",
+      "Autres gaz"
+     ],
+     "series": [
+      {
+       "nom": "Part en volume",
+       "valeurs": [
+        78,
+        21,
+        1
+       ]
+      }
+     ],
+     "source": "Valeurs arrondies, en % du volume"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "air",
+     "enonce": "Touche le gaz le plus abondant de l’air.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Le **diazote** représente environ 78 % de l’air."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de dioxygène contiennent 100 L d’air, en L ?",
+     "reponse": 21,
+     "unite": "L",
+     "aide": "Un pourcentage en volume se lit directement sur 100 L.",
+     "explication": "21 % de 100 L = **21 L** de dioxygène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de diazote contiennent 2 000 L d’air, en L ?",
+     "reponse": 1560,
+     "unite": "L",
+     "aide": "Multiplie 2 000 par 0,78.",
+     "explication": "0,78 × 2 000 = **1 560 L**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les deux gaz principaux de l’air actuel.",
+     "texte": "L’air actuel contient surtout du ___ (78 %) et du ___ (21 %).",
+     "reponses": [
+      [
+       "diazote"
+      ],
+      [
+       "dioxygène",
+       "dioxygene"
+      ]
+     ],
+     "banque": [
+      "diazote",
+      "dioxygène",
+      "dioxyde de carbone",
+      "argon"
+     ],
+     "aide": "Le premier est le plus abondant, le second permet la respiration.",
+     "explication": "L’air contient **78 % de diazote** et **21 % de dioxygène**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146be9f-e43b-5ce1-972f-a51bc834e8d6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les grandes dates de l’atmosphère",
+   "competence": "se-reperer-temps",
+   "situation": "L’atmosphère de la Terre a beaucoup changé. La frise compte le temps en millions d’années (Ma) avant aujourd’hui : −3 800 signifie « il y a 3 800 millions d’années ».",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "frise",
+     "titre": "Dates en millions d’années (Ma)",
+     "debut": -5000,
+     "fin": 0,
+     "pas": 500,
+     "periodes": [
+      {
+       "id": "eau",
+       "debut": -3800,
+       "fin": -450,
+       "nom": "Vie uniquement dans l’eau"
+      },
+      {
+       "id": "ozone",
+       "debut": -2000,
+       "fin": -500,
+       "nom": "Formation de l’ozone"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "terre",
+       "date": -4500,
+       "nom": "Formation de la Terre"
+      },
+      {
+       "id": "oceans",
+       "date": -4400,
+       "nom": "Océans"
+      },
+      {
+       "id": "vie",
+       "date": -3800,
+       "nom": "Apparition de la vie"
+      },
+      {
+       "id": "oxy",
+       "date": -2400,
+       "nom": "Grande Oxydation"
+      },
+      {
+       "id": "sortie",
+       "date": -450,
+       "nom": "Sortie des eaux"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temps",
+     "enonce": "Touche la période pendant laquelle la couche d’ozone se forme.",
+     "reponse": [
+      "ozone"
+     ],
+     "aide": "Lis les noms des périodes.",
+     "explication": "La couche d’ozone se forme entre environ **2 000 et 500 Ma**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’années séparent l’apparition de la vie de la Grande Oxydation ?",
+     "reponse": 1400,
+     "unite": "Ma",
+     "aide": "Soustrais 2 400 à 3 800.",
+     "explication": "3 800 − 2 400 = **1 400 Ma**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’années séparent la Grande Oxydation de la sortie des eaux ?",
+     "reponse": 1950,
+     "unite": "Ma",
+     "aide": "Soustrais 450 à 2 400.",
+     "explication": "2 400 − 450 = **1 950 Ma**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel lien existe-t-il entre la Grande Oxydation et la sortie des eaux ?",
+     "options": [
+      "Le dioxygène a formé la couche d’ozone, qui filtre les UV et libère la vie hors de l’eau",
+      "Le dioxygène a réchauffé l’air, ce qui a asséché les océans et chassé les espèces",
+      "Le dioxygène a rendu l’eau toxique, ce qui a poussé les espèces à en sortir",
+      "Le dioxygène a supprimé l’effet de serre, ce qui a dégagé les continents"
+     ],
+     "reponse": 0,
+     "aide": "Que fait l’ozone vis-à-vis des UV ?",
+     "explication": "Le dioxygène forme l’**ozone**, qui absorbe les UV les plus énergétiques : la vie peut sortir de l’eau, qui jouait jusque-là le rôle d’écran."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146be9f-e43b-5ce1-972f-a51bc834e8d6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dioxygène, signature du vivant",
+   "competence": "analyser-document",
+   "situation": "Les cyanobactéries produisent du dioxygène depuis très longtemps, mais la teneur de l’air n’a pas suivi tout de suite. La courbe donne le dioxygène en % de son niveau actuel (allure simplifiée pour l’exercice).",
+   "documents": [
+    {
+     "id": "o2",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Le dioxygène au cours du temps",
+     "categories": [
+      "4,0",
+      "3,5",
+      "3,0",
+      "2,5",
+      "2,0",
+      "1,5",
+      "1,0",
+      "0,5",
+      "0"
+     ],
+     "series": [
+      {
+       "nom": "Dioxygène",
+       "valeurs": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        5,
+        40,
+        100
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Dioxygène",
+      "unite": "en % du niveau actuel",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Il y a … milliards d’années"
+     },
+     "source": "Allure simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "o2",
+     "enonce": "Touche le premier point où le dioxygène commence à s’accumuler dans l’air.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche où la courbe quitte le zéro.",
+     "explication": "La courbe quitte zéro à **2,0 milliards d’années**, après la Grande Oxydation (vers −2,4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la teneur en dioxygène il y a 0,5 milliard d’années, en % du niveau actuel ?",
+     "reponse": 40,
+     "unite": "%",
+     "tolerance": 2,
+     "aide": "Lis la valeur au-dessus de « 0,5 ».",
+     "explication": "Le graphique donne **40 %** du niveau actuel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la teneur a-t-elle été multipliée entre il y a 1,0 milliard d’années et aujourd’hui ?",
+     "reponse": 20,
+     "aide": "Divise la valeur d’aujourd’hui par celle d’il y a 1,0 milliard d’années.",
+     "explication": "100 ÷ 5 = **20**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément à son rôle dans l’histoire du dioxygène.",
+     "paires": [
+      [
+       "Cyanobactéries",
+       "Elles produisent du dioxygène par photosynthèse"
+      ],
+      [
+       "Fers rubanés",
+       "Trace du dioxygène consommé par l’oxydation du fer"
+      ],
+      [
+       "Grande Oxydation",
+       "Début de l’accumulation du dioxygène dans l’air"
+      ],
+      [
+       "Ozone",
+       "Gaz qui absorbe les UV les plus énergétiques"
+      ]
+     ],
+     "aide": "Le dioxygène a d’abord été consommé avant de s’accumuler.",
+     "explication": "Les **cyanobactéries** produisent le O₂, les **fers rubanés** gardent la trace de sa consommation, la **Grande Oxydation** marque son accumulation, l’**ozone** filtre les UV."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b53f066-8239-5100-9ba5-2928d50e3915",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Miroirs et pièges à chaleur",
+   "competence": "lire-tableau",
+   "situation": "Une surface renvoie vers l’espace une part du rayonnement solaire : c’est son albédo. On suppose que chaque mètre carré reçoit 340 W/m².",
+   "documents": [
+    {
+     "id": "albedo",
+     "type": "tableau",
+     "titre": "Part du rayonnement réfléchie",
+     "colonnes": [
+      "Surface",
+      "Part réfléchie (%)"
+     ],
+     "lignes": [
+      [
+       "Neige fraîche",
+       80
+      ],
+      [
+       "Désert",
+       35
+      ],
+      [
+       "Forêt",
+       15
+      ],
+      [
+       "Océan",
+       6
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "albedo",
+     "enonce": "Touche la plus grande part réfléchie du tableau.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne.",
+     "explication": "La neige fraîche réfléchit **80 %** du rayonnement : c’est la plus grande valeur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance par m² la neige fraîche renvoie-t-elle vers l’espace, en W/m² ?",
+     "reponse": 272,
+     "unite": "W/m²",
+     "aide": "Multiplie 340 par 0,80.",
+     "explication": "0,80 × 340 = **272 W/m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La banquise (80 %) fond et laisse place à l’océan (6 %). De combien la puissance absorbée par m² augmente-t-elle, en W/m² ?",
+     "reponse": 251.6,
+     "unite": "W/m²",
+     "tolerance": 0.5,
+     "aide": "La part absorbée passe de 20 % à 94 % : calcule la différence de parts, puis multiplie.",
+     "explication": "(0,80 − 0,06) × 340 = **251,6 W/m²** de plus absorbés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle surface du tableau absorbe la plus grande part du rayonnement ?",
+     "options": [
+      "Le désert, qui en réfléchit 35 % et en absorbe donc 65 %",
+      "L’océan, qui en réfléchit seulement 6 % et en absorbe donc 94 %",
+      "La neige fraîche, qui en réfléchit 80 % et en absorbe donc 20 %",
+      "La forêt, qui en réfléchit 15 % et en absorbe donc 75 %"
+     ],
+     "reponse": 1,
+     "aide": "La part absorbée est 100 % moins la part réfléchie.",
+     "explication": "L’océan absorbe **94 %** : plus l’albédo est faible, plus la surface chauffe."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b53f066-8239-5100-9ba5-2928d50e3915",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un air plus chaud, plus de vapeur",
+   "competence": "analyser-document",
+   "situation": "La vapeur d’eau est un gaz à effet de serre. L’air chaud peut en contenir plus que l’air froid. Le cycle résume le mécanisme et la courbe donne la quantité maximale de vapeur que contient 1 m³ d’air.",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "chaud",
+       "texte": "Air plus chaud"
+      },
+      {
+       "id": "vapeur",
+       "texte": "Plus de vapeur d’eau dans l’air"
+      },
+      {
+       "id": "serre",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "chaud",
+       "a": "vapeur"
+      },
+      {
+       "de": "vapeur",
+       "a": "serre"
+      },
+      {
+       "de": "serre",
+       "a": "chaud"
+      }
+     ]
+    },
+    {
+     "id": "vap",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vapeur d’eau maximale dans 1 m³ d’air",
+     "categories": [
+      "0 °C",
+      "10 °C",
+      "20 °C",
+      "30 °C"
+     ],
+     "series": [
+      {
+       "nom": "Vapeur maximale",
+       "valeurs": [
+        5,
+        9,
+        17,
+        30
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Vapeur d’eau",
+      "unite": "en g/m³",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans le cycle ?",
+     "options": [
+      "Albédo de la surface augmenté",
+      "Rayonnement solaire diminué",
+      "Effet de serre renforcé",
+      "Couche d’ozone épaissie"
+     ],
+     "reponse": 2,
+     "aide": "La vapeur d’eau est un gaz à effet de serre.",
+     "explication": "Plus de vapeur d’eau signifie un **effet de serre renforcé**, donc un air encore plus chaud."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de vapeur un air à 20 °C peut-il contenir au maximum, en g/m³ ?",
+     "reponse": 17,
+     "unite": "g/m³",
+     "tolerance": 0.5,
+     "aide": "Lis la valeur de la courbe au-dessus de « 20 °C ».",
+     "explication": "La courbe donne **17 g/m³** à 20 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien cette quantité augmente-t-elle quand l’air passe de 20 °C à 30 °C, en g/m³ ?",
+     "reponse": 13,
+     "unite": "g/m³",
+     "tolerance": 0.5,
+     "aide": "Soustrais la valeur à 20 °C à celle à 30 °C.",
+     "explication": "30 − 17 = **13 g/m³** de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel type de rétroaction ce cycle est-il un exemple ?",
+     "options": [
+      "Une rétroaction négative, car elle freine le réchauffement de départ",
+      "Un forçage radiatif négatif, car il refroidit la surface",
+      "Un couplage océan-atmosphère, car il relie deux réservoirs",
+      "Une rétroaction positive, car elle amplifie le réchauffement de départ"
+     ],
+     "reponse": 3,
+     "aide": "Le cycle renforce-t-il ou freine-t-il la cause de départ ?",
+     "explication": "Le cycle **amplifie** la cause de départ : c’est une rétroaction **positive**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b53f066-8239-5100-9ba5-2928d50e3915",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’océan n’a pas fini de se réchauffer",
+   "competence": "analyser-document",
+   "situation": "Après une hausse des gaz à effet de serre, l’air et l’océan profond se réchauffent vers un équilibre, que l’on prend égal à +1,0 °C pour les deux. La courbe est une allure simplifiée.",
+   "documents": [
+    {
+     "id": "inertie",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Réchauffement de l’air et de l’océan profond",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "Air",
+       "valeurs": [
+        0,
+        0.6,
+        0.85,
+        0.95,
+        1,
+        1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Océan profond",
+       "valeurs": [
+        0,
+        0.1,
+        0.25,
+        0.45,
+        0.65,
+        0.8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Réchauffement",
+      "unite": "en °C",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Années après la hausse"
+     },
+     "source": "Allure simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inertie",
+     "enonce": "Touche la première date où l’air atteint le réchauffement d’équilibre de 1,0 °C.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche où la courbe de l’air touche 1,0.",
+     "explication": "L’air atteint 1,0 °C au bout de **80 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de 60 ans, de combien l’air est-il plus chaud que l’océan profond, en °C ?",
+     "reponse": 0.5,
+     "unite": "°C",
+     "tolerance": 0.02,
+     "aide": "Lis les deux courbes à 60 ans et soustrais.",
+     "explication": "0,95 − 0,45 = **0,50 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de 100 ans, quel pourcentage de son réchauffement d’équilibre l’océan profond a-t-il atteint ?",
+     "reponse": 80,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "Divise la valeur de l’océan à 100 ans par 1,0.",
+     "explication": "0,8 ÷ 1,0 = **80 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure si l’on stabilise le forçage après 60 ans ?",
+     "options": [
+      "L’océan profond continuerait de se réchauffer, donc le climat n’aurait pas fini d’évoluer",
+      "Le réchauffement s’arrêterait aussitôt, car l’air est déjà presque à l’équilibre",
+      "L’océan profond se refroidirait, car il réagit plus vite que l’air",
+      "L’air se refroidirait, car l’océan profond absorberait toute la chaleur"
+     ],
+     "reponse": 0,
+     "aide": "Compare où en est chaque courbe à 60 ans par rapport à 1,0.",
+     "explication": "À 60 ans l’océan n’est qu’à 0,45 °C sur 1,0 : il continue de se réchauffer, la réponse du climat **n’est ni immédiate ni linéaire**."
+    }
+   ]
+  }
+ ]
+}

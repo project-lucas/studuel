@@ -1,0 +1,2307 @@
+{
+ "niveau": "Tle",
+ "matiere": "i2d",
+ "exercices": [
+  {
+   "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’enceinte nomade sous la loupe",
+   "competence": "lire-tableau",
+   "situation": "Un bureau d’études chiffre l’impact d’une enceinte Bluetooth sur tout son cycle de vie. Unité fonctionnelle : écouter de la musique 1 h par jour pendant 3 ans.",
+   "documents": [
+    {
+     "id": "acv",
+     "type": "tableau",
+     "titre": "Impact de l’enceinte par phase",
+     "colonnes": [
+      "Phase",
+      "Impact (kg éq. CO2)"
+     ],
+     "lignes": [
+      [
+       "Fabrication",
+       12
+      ],
+      [
+       "Transport",
+       2
+      ],
+      [
+       "Usage",
+       6
+      ],
+      [
+       "Fin de vie",
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acv",
+     "enonce": "Touche la valeur de la phase qui pèse le plus dans l’impact.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne de droite.",
+     "explication": "La **fabrication** (12 kg éq. CO2) domine : c’est la phase la plus lourde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’impact total de l’enceinte sur son cycle de vie.",
+     "reponse": 21,
+     "unite": "kg éq. CO2",
+     "tolerance": 0,
+     "aide": "Additionne les quatre phases.",
+     "explication": "12 + 2 + 6 + 1 = **21 kg éq. CO2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’impact total vient de la fabrication ? Arrondis à l’unité, en pourcentage.",
+     "reponse": 57,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise l’impact de la fabrication par l’impact total.",
+     "explication": "12 / 21 ≈ 0,57, soit **57 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel levier d’éco-conception vise d’abord la phase dominante de cette enceinte ?",
+     "options": [
+      "Allonger la durée de vie, pour étaler la fabrication sur plus d’années",
+      "Réduire le poids de l’emballage, pour alléger la phase de transport",
+      "Baisser la consommation en veille, pour réduire la phase d’usage",
+      "Rendre l’enceinte recyclable, pour améliorer la phase de fin de vie"
+     ],
+     "reponse": 0,
+     "aide": "Quelle phase pèse 12 sur 21 ?",
+     "explication": "La fabrication domine : utiliser l’enceinte plus longtemps **répartit cet impact** sur davantage de services rendus."
+    }
+   ]
+  },
+  {
+   "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux aspirateurs, un seul gagnant",
+   "competence": "modeliser",
+   "situation": "Un collège compare deux aspirateurs pour l’unité fonctionnelle « aspirer 100 m² chaque semaine pendant 8 ans », soit 208 h d’usage. Le mix électrique français émet 60 g de CO2 par kWh.",
+   "documents": [
+    {
+     "id": "asp",
+     "type": "tableau",
+     "titre": "Les deux candidats",
+     "colonnes": [
+      "",
+      "Aspirateur A",
+      "Aspirateur B"
+     ],
+     "lignes": [
+      [
+       "Puissance (W)",
+       900,
+       650
+      ],
+      [
+       "Usage sur 8 ans (h)",
+       208,
+       208
+      ],
+      [
+       "Fabrication (kg éq. CO2)",
+       40,
+       55
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie l’aspirateur A consomme-t-il en 8 ans ?",
+     "reponse": 187.2,
+     "unite": "kWh",
+     "tolerance": 0.1,
+     "aide": "E = P × t, avec P en kW.",
+     "explication": "0,9 kW × 208 h = **187,2 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’impact total de l’aspirateur A (fabrication + usage), arrondi au dixième.",
+     "reponse": 51.2,
+     "unite": "kg éq. CO2",
+     "tolerance": 0.1,
+     "aide": "Usage : 187,2 kWh × 0,06 kg/kWh, puis ajoute la fabrication.",
+     "explication": "187,2 × 0,06 ≈ 11,2 kg ; 11,2 + 40 = **51,2 kg éq. CO2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’impact total de l’aspirateur B, arrondi au dixième.",
+     "reponse": 63.1,
+     "unite": "kg éq. CO2",
+     "tolerance": 0.1,
+     "aide": "B consomme 135,2 kWh en 8 ans.",
+     "explication": "135,2 × 0,06 ≈ 8,1 kg ; 8,1 + 55 = **63,1 kg éq. CO2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec le mix français, quel aspirateur a le plus faible impact sur le cycle de vie ?",
+     "options": [
+      "L’aspirateur B, qui consomme moins mais coûte plus cher à fabriquer",
+      "L’aspirateur A, dont la fabrication pèse moins que celle de B",
+      "Les deux, car leurs impacts sont égaux à un kilo près",
+      "Aucun des deux, car l’impact de l’usage est trop faible"
+     ],
+     "reponse": 1,
+     "aide": "Compare les deux totaux.",
+     "explication": "A : 51,2 contre 63,1 pour B. Avec une électricité peu carbonée, **la fabrication domine** et A gagne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec un mix très carboné (500 g de CO2 par kWh), quel aspirateur devient le meilleur ?",
+     "options": [
+      "L’aspirateur A, dont l’impact total monte à 133,6 kg éq. CO2",
+      "L’aspirateur B, dont l’impact total tombe à 122,6 kg éq. CO2",
+      "L’aspirateur A, car sa fabrication reste la moins émettrice",
+      "Les deux restent à égalité, car le mix ne change pas l’usage"
+     ],
+     "reponse": 1,
+     "aide": "Recalcule l’usage avec 0,5 kg par kWh.",
+     "explication": "A : 133,6 kg ; B : 122,6 kg. Quand l’électricité est carbonée, **l’usage domine** et le moins gourmand, B, gagne."
+    }
+   ]
+  },
+  {
+   "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Gourdes : du neuf ou du recyclé ?",
+   "competence": "raisonner",
+   "situation": "Une PME fabrique 1 000 gourdes en aluminium de 0,4 kg. Son équipe d’éco-conception note ses travaux en vrac, dans le désordre, avant de présenter son ACV.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Notes de l’équipe",
+     "sousTitre": "Carnet de travail, dans le désordre",
+     "emoji": "📝",
+     "lignes": [
+      {
+       "texte": "Conclure : la fabrication domine, il faut changer de matière",
+       "id": "n-interp"
+      },
+      {
+       "texte": "Mesurer 0,4 kg d’aluminium par gourde",
+       "id": "n-inv"
+      },
+      {
+       "texte": "Définir : boire 1,5 L par jour pendant 5 ans",
+       "id": "n-obj"
+      },
+      {
+       "texte": "Convertir les matières en kg éq. CO2 par kilo",
+       "id": "n-eval"
+      }
+     ],
+     "pied": "Aluminium primaire : 10 kg éq. CO2/kg ; recyclé : 1,5 kg éq. CO2/kg (valeurs simplifiées)",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche la ligne qui définit l’unité fonctionnelle.",
+     "reponse": [
+      "n-obj"
+     ],
+     "aide": "C’est le service rendu, quantifié.",
+     "explication": "Définir « boire 1,5 L par jour pendant 5 ans » fixe l’**unité fonctionnelle**, la base de comparaison."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les quatre étapes de l’ACV dans l’ordre où l’équipe les mène.",
+     "items": [
+      "Objectif et unité fonctionnelle",
+      "Inventaire des matières et de l’énergie",
+      "Évaluation des impacts",
+      "Interprétation et choix"
+     ],
+     "aide": "On définit avant de mesurer, et on mesure avant de conclure.",
+     "explication": "L’ACV suit **objectif, inventaire, évaluation, interprétation**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’économie d’impact pour UNE gourde si l’on passe de l’aluminium primaire au recyclé.",
+     "reponse": 3.4,
+     "unite": "kg éq. CO2",
+     "tolerance": 0.05,
+     "aide": "Économie par kilo : 10 − 1,5. Multiplie par 0,4 kg.",
+     "explication": "0,4 × (10 − 1,5) = **3,4 kg éq. CO2** par gourde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle économie pour les 1 000 gourdes, en tonnes éq. CO2 ?",
+     "reponse": 3.4,
+     "unite": "t éq. CO2",
+     "tolerance": 0.05,
+     "aide": "Multiplie par 1 000, puis convertis les kilos en tonnes.",
+     "explication": "3,4 × 1 000 = 3 400 kg = **3,4 t éq. CO2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase justifie correctement le choix de l’aluminium recyclé ?",
+     "options": [
+      "Il est préférable, car le calcul montre une économie de 3,4 kg par gourde",
+      "Il est préférable, car les clients préfèrent la couleur du métal recyclé",
+      "Il est préférable, car l’aluminium recyclé est forcément plus léger",
+      "Il est préférable, car les concurrents communiquent sur le recyclage"
+     ],
+     "reponse": 0,
+     "aide": "Un choix se justifie par un calcul.",
+     "explication": "On justifie un choix d’éco-conception **par un calcul** et la phase qu’il améliore, jamais par une impression."
+    }
+   ]
+  },
+  {
+   "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le thermomètre de la serre",
+   "competence": "observer-schema",
+   "situation": "Dans une serre, une sonde de température mesure 10 mV par °C. Son signal traverse plusieurs étages avant de s’afficher.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne d’information de la serre",
+     "noeuds": [
+      {
+       "id": "sonde",
+       "texte": "Sonde de température",
+       "emoji": "🌡️"
+      },
+      {
+       "id": "amp",
+       "texte": "Amplificateur (gain 10)"
+      },
+      {
+       "id": "can",
+       "texte": "Convertisseur analogique-numérique"
+      },
+      {
+       "id": "mcu",
+       "texte": "Microcontrôleur"
+      },
+      {
+       "id": "aff",
+       "texte": "Afficheur",
+       "emoji": "📟"
+      }
+     ],
+     "liens": [
+      {
+       "de": "sonde",
+       "a": "amp",
+       "texte": "tension"
+      },
+      {
+       "de": "amp",
+       "a": "can",
+       "texte": "tension"
+      },
+      {
+       "de": "can",
+       "a": "mcu",
+       "texte": "nombre"
+      },
+      {
+       "de": "mcu",
+       "a": "aff",
+       "texte": "affichage"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "enonce": "Touche l’étage qui adapte le niveau du signal avant le convertisseur.",
+     "reponse": [
+      "amp"
+     ],
+     "aide": "C’est l’étage de conditionnement.",
+     "explication": "L’**amplificateur** fait partie du conditionnement : il met le signal à l’échelle du CAN."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étage à son rôle.",
+     "paires": [
+      [
+       "Sonde",
+       "Traduit la température en tension"
+      ],
+      [
+       "Amplificateur",
+       "Adapte la tension à la plage du CAN"
+      ],
+      [
+       "CAN",
+       "Transforme la tension en nombre"
+      ],
+      [
+       "Microcontrôleur",
+       "Traite la mesure et décide"
+      ]
+     ],
+     "aide": "Suis le signal de gauche à droite : grandeur, tension, nombre, décision.",
+     "explication": "Chaque étage a **un seul rôle** : capter, conditionner, convertir, traiter."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 30 °C, quelle tension délivre la sonde, en volts ?",
+     "reponse": 0.3,
+     "unite": "V",
+     "tolerance": 0.001,
+     "aide": "10 mV par °C : multiplie par 30, puis convertis en volts.",
+     "explication": "30 × 10 mV = 300 mV = **0,3 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après l’amplificateur de gain 10, quelle tension arrive au CAN, en volts ?",
+     "reponse": 3,
+     "unite": "V",
+     "tolerance": 0.001,
+     "aide": "Multiplie la tension de la sonde par le gain.",
+     "explication": "0,3 × 10 = **3 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de marches pour un thermomètre ?",
+   "competence": "calculer",
+   "situation": "Une sonde donne 50 mV par °C (0 V à 0 °C, 5 V à 100 °C). Elle est reliée à un CAN 10 bits de pleine échelle 5 V.",
+   "documents": [
+    {
+     "id": "carac",
+     "type": "tableau",
+     "titre": "Caractéristiques de la chaîne",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Sensibilité de la sonde",
+       "50 mV/°C"
+      ],
+      [
+       "Pleine échelle du CAN",
+       "5 V"
+      ],
+      [
+       "Résolution du CAN",
+       "10 bits"
+      ],
+      [
+       "Nombre de valeurs possibles",
+       "2¹⁰ = 1 024"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le quantum du CAN en millivolts, arrondi au centième.",
+     "reponse": 4.88,
+     "unite": "mV",
+     "tolerance": 0.01,
+     "aide": "q = pleine échelle / 1 024.",
+     "explication": "5 / 1 024 ≈ **4,88 mV**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La sonde donne 1,8 V. Quel nombre N le CAN fournit-il ? (partie entière)",
+     "reponse": 368,
+     "tolerance": 0,
+     "aide": "N est la partie entière de U / q, avec q = 5 / 1 024.",
+     "explication": "1,8 / (5 / 1 024) ≈ 368,6 : le CAN garde **368**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le programme reconstitue U = N × q puis divise par la sensibilité. Quelle température en déduit-il pour N = 368, arrondie au dixième ?",
+     "reponse": 35.9,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "U = 368 × 5 / 1 024, puis T = U / 0,05.",
+     "explication": "U ≈ 1,797 V ; T ≈ **35,9 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec un CAN 8 bits (256 valeurs) à la place, quelle résolution en °C, arrondie au centième ?",
+     "reponse": 0.39,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Quantum = 5 / 256, à diviser par 0,05 V/°C.",
+     "explication": "(5 / 256) / 0,05 ≈ **0,39 °C** : la mesure est moins fine."
+    }
+   ]
+  },
+  {
+   "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le ventilateur qui se trompe",
+   "competence": "programmer",
+   "situation": "Le programme d’une serre lit la température avec un CAN 10 bits (0 à 5 V pour 0 à 100 °C) et commande un ventilateur. Le technicien teste deux mesures.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme de la serre",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "n ← lecture du CAN",
+      "U ← n × 5 / 1024",
+      "T ← U / 0,05",
+      "si T est supérieure à [[s|30]]",
+      "    allumer le ventilateur",
+      "sinon",
+      "    éteindre le ventilateur"
+     ]
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Deux mesures de test",
+     "colonnes": [
+      "Essai",
+      "n lu par le CAN"
+     ],
+     "lignes": [
+      [
+       "A",
+       300
+      ],
+      [
+       "B",
+       320
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Essai A (n = 300) : quelle température T le programme calcule-t-il, arrondie au dixième ?",
+     "reponse": 29.3,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "U = 300 × 5 / 1 024 ≈ 1,465 V ; T = U / 0,05.",
+     "explication": "U ≈ 1,465 V, donc T ≈ **29,3 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Essai B (n = 320) : que fait le ventilateur ?",
+     "options": [
+      "Il s’allume, car T vaut environ 31,3 °C, au-dessus du seuil",
+      "Il reste éteint, car T vaut environ 29,3 °C, sous le seuil",
+      "Il s’allume, car T vaut environ 28,9 °C, au-dessus du seuil",
+      "Il reste éteint, car T vaut environ 31,3 °C, sous le seuil"
+     ],
+     "reponse": 0,
+     "aide": "Calcule T avec les trois premières lignes.",
+     "explication": "U = 320 × 5 / 1 024 = 1,5625 V ; T = **31,25 °C**, donc supérieure à 30 : le ventilateur **s’allume**."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le seuil de température du programme.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "C’est le nombre comparé à T.",
+     "explication": "Le seuil de déclenchement est **30** (°C)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le programmeur utilise des entiers : « n × 5 / 1024 » est une division entière. Quelle valeur prend U pour n = 300 ?",
+     "reponse": 1,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "Calcule 1 500 / 1 024 et garde seulement la partie entière.",
+     "explication": "1 500 / 1 024 ≈ 1,46 : la partie entière vaut **1**. La mesure devient fausse, il faut travailler en flottants."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel convertisseur dans quel appareil ?",
+   "competence": "observer-schema",
+   "situation": "Quatre appareils du quotidien transforment l’énergie électrique avant de l’utiliser. On relève ce qu’ils reçoivent et ce qu’ils fournissent.",
+   "documents": [
+    {
+     "id": "app",
+     "type": "tableau",
+     "titre": "Quatre appareils",
+     "colonnes": [
+      "Appareil",
+      "Entrée",
+      "Sortie"
+     ],
+     "lignes": [
+      [
+       "Chargeur de téléphone",
+       "Alternatif 230 V",
+       "Continu 5 V"
+      ],
+      [
+       "Variateur de lampe du salon",
+       "Alternatif 230 V",
+       "Alternatif réglable"
+      ],
+      [
+       "Trottinette électrique",
+       "Continu 36 V",
+       "Continu réglable"
+      ],
+      [
+       "Micro-onduleur solaire",
+       "Continu (panneau)",
+       "Alternatif 230 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés simplifiés, écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque appareil au convertisseur qu’il contient.",
+     "paires": [
+      [
+       "Chargeur de téléphone",
+       "Redresseur"
+      ],
+      [
+       "Variateur de lampe",
+       "Gradateur"
+      ],
+      [
+       "Trottinette électrique",
+       "Hacheur"
+      ],
+      [
+       "Micro-onduleur solaire",
+       "Onduleur"
+      ]
+     ],
+     "aide": "Regarde la nature de l’entrée et de la sortie dans le tableau.",
+     "explication": "Continu vers alternatif : **onduleur**. L’inverse : **redresseur**. Continu réglable : **hacheur**. Alternatif réglable : **gradateur**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque appareil selon la conversion qu’il réalise.",
+     "categories": [
+      "Alternatif vers continu",
+      "Continu vers alternatif",
+      "Continu vers continu"
+     ],
+     "items": [
+      [
+       "Chargeur de téléphone",
+       0
+      ],
+      [
+       "Micro-onduleur solaire",
+       1
+      ],
+      [
+       "Trottinette électrique",
+       2
+      ]
+     ],
+     "aide": "Lis les colonnes Entrée et Sortie.",
+     "explication": "Le chargeur **redresse**, le micro-onduleur **ondule**, la trottinette **hache** un continu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La trottinette est alimentée en 36 V et son hacheur a un rapport cyclique de 0,75. Quelle tension moyenne reçoit le moteur ?",
+     "reponse": 27,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "U moyenne = α × U alimentation.",
+     "explication": "0,75 × 36 = **27 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La perceuse à vitesse variable",
+   "competence": "calculer",
+   "situation": "Une perceuse sans fil est alimentée en 12 V. Son hacheur découpe la tension à la fréquence de 10 kHz. On relève la tension moyenne aux bornes du moteur pour quatre rapports cycliques.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Tension moyenne du moteur selon α",
+     "categories": [
+      "α = 0,25",
+      "α = 0,5",
+      "α = 0,75",
+      "α = 1"
+     ],
+     "series": [
+      {
+       "nom": "Tension moyenne",
+       "valeurs": [
+        3,
+        6,
+        9,
+        12
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension moyenne",
+      "unite": "V",
+      "min": 0,
+      "max": 12,
+      "pas": 3
+     },
+     "valeurs": false,
+     "source": "Mesures simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la barre qui donne 9 V au moteur.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Lis l’axe vertical, qui avance de 3 V en 3 V.",
+     "explication": "La barre de **α = 0,75** atteint 9 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période T du découpage, en microsecondes ?",
+     "reponse": 100,
+     "unite": "µs",
+     "tolerance": 0,
+     "aide": "T = 1 / f, avec f = 10 000 Hz.",
+     "explication": "T = 1 / 10 000 = 0,0001 s = **100 µs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour α = 0,75, pendant combien de microsecondes le transistor est-il passant à chaque période ?",
+     "reponse": 75,
+     "unite": "µs",
+     "tolerance": 0,
+     "aide": "t_on = α × T.",
+     "explication": "0,75 × 100 = **75 µs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le transistor reste passant 30 µs par période. Quelle tension moyenne reçoit le moteur ?",
+     "reponse": 3.6,
+     "unite": "V",
+     "tolerance": 0.01,
+     "aide": "Calcule d’abord α = t_on / T.",
+     "explication": "α = 30 / 100 = 0,3 ; U moyenne = 0,3 × 12 = **3,6 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le moteur du tapis roulant",
+   "competence": "modeliser",
+   "situation": "Un tapis roulant industriel est entraîné par un moteur alternatif à 3 paires de pôles. Un onduleur règle sa fréquence d’alimentation pour changer la vitesse.",
+   "documents": [
+    {
+     "id": "chp",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne de puissance du tapis",
+     "noeuds": [
+      {
+       "id": "res",
+       "texte": "Réseau 230 V alternatif"
+      },
+      {
+       "id": "red",
+       "texte": "Redresseur"
+      },
+      {
+       "id": "ond",
+       "texte": "Onduleur"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur alternatif"
+      }
+     ],
+     "liens": [
+      {
+       "de": "res",
+       "a": "red",
+       "texte": "alternatif"
+      },
+      {
+       "de": "red",
+       "a": "ond",
+       "texte": "continu"
+      },
+      {
+       "de": "ond",
+       "a": "mot",
+       "texte": "fréquence réglable"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "vit",
+     "type": "tableau",
+     "titre": "Vitesse du moteur selon la fréquence (p = 3)",
+     "colonnes": [
+      "Fréquence (Hz)",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50"
+     ],
+     "lignes": [
+      [
+       "Vitesse (tr/min)",
+       "200",
+       "400",
+       "600",
+       "800",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Vitesse de synchronisme = 60 × f / p"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chp",
+     "enonce": "Touche le convertisseur qui permet de changer la fréquence.",
+     "reponse": [
+      "ond"
+     ],
+     "aide": "Il fabrique un alternatif dont on règle la fréquence.",
+     "explication": "L’**onduleur** crée une tension alternative de fréquence réglable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle vitesse atteint le moteur à 50 Hz (case « ? ») ?",
+     "reponse": 1000,
+     "unite": "tr/min",
+     "tolerance": 0,
+     "aide": "N = 60 × f / p, avec p = 3.",
+     "explication": "60 × 50 / 3 = **1 000 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour tourner à 600 tr/min, à quelle fréquence l’onduleur alimente-t-il le moteur ?",
+     "reponse": 30,
+     "unite": "Hz",
+     "tolerance": 0,
+     "aide": "Reporte-toi au tableau, ou inverse N = 60 × f / p.",
+     "explication": "f = N × p / 60 = 600 × 3 / 60 = **30 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce redresseur est à diodes. Que se passe-t-il au freinage du tapis ?",
+     "options": [
+      "L’énergie ne peut pas revenir au réseau, car le redresseur n’est pas réversible",
+      "L’énergie retourne au réseau, car le redresseur est réversible",
+      "L’énergie est stockée dans le redresseur, car il fait office de batterie",
+      "L’énergie disparaît, car un moteur ne fait que consommer"
+     ],
+     "reponse": 0,
+     "aide": "Un redresseur à diodes laisse passer le courant dans un seul sens.",
+     "explication": "Un redresseur à diodes n’est **pas réversible** : l’énergie de freinage ne peut pas retourner vers le réseau (elle est dissipée ou stockée ailleurs)."
+    }
+   ]
+  },
+  {
+   "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle technologie pour quel besoin ?",
+   "competence": "lire-tableau",
+   "situation": "Trois technologies de stockage électrique sont comparées pour équiper un petit véhicule de chantier.",
+   "documents": [
+    {
+     "id": "techno",
+     "type": "tableau",
+     "titre": "Trois technologies de stockage",
+     "colonnes": [
+      "Technologie",
+      "Énergie massique (Wh/kg)",
+      "Puissance massique"
+     ],
+     "lignes": [
+      [
+       "Batterie au plomb",
+       35,
+       "Moyenne"
+      ],
+      [
+       "Batterie lithium-ion",
+       200,
+       "Bonne"
+      ],
+      [
+       "Supercondensateur",
+       7,
+       "Très élevée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "techno",
+     "enonce": "Touche l’énergie massique de la technologie qui stocke le plus d’énergie par kilogramme.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne Wh/kg.",
+     "explication": "Le **lithium-ion** stocke 200 Wh/kg, bien plus que les deux autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de batterie lithium-ion faut-il pour stocker 300 Wh ?",
+     "reponse": 1.5,
+     "unite": "kg",
+     "tolerance": 0.05,
+     "aide": "Masse = énergie / énergie massique.",
+     "explication": "300 / 200 = **1,5 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Et avec une batterie au plomb, arrondie au dixième ?",
+     "reponse": 8.6,
+     "unite": "kg",
+     "tolerance": 0.05,
+     "aide": "Même calcul avec 35 Wh/kg.",
+     "explication": "300 / 35 ≈ **8,6 kg**, presque six fois plus lourd."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une benne doit recevoir un énorme éclair de puissance pendant quelques secondes. Quelle technologie y répond le mieux ?",
+     "options": [
+      "Le supercondensateur, qui fournit une puissance très élevée d’un seul coup",
+      "La batterie au plomb, qui stocke beaucoup d’énergie pour son prix",
+      "La batterie lithium-ion, qui stocke le plus d’énergie par kilogramme",
+      "Aucune des trois, car un engin de chantier roule toujours au diesel"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne Puissance massique.",
+     "explication": "Le **supercondensateur** offre la puissance massique la plus élevée ; on l’associe souvent à une batterie."
+    }
+   ]
+  },
+  {
+   "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pack de la trottinette",
+   "competence": "calculer",
+   "situation": "Le pack d’une trottinette électrique est noté « 14S2P » : 14 cellules en série, et 2 branches en parallèle. Chaque cellule fait 3,6 V, 2,5 Ah et 47 g.",
+   "documents": [
+    {
+     "id": "pack",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Pack 14S2P",
+     "sousTitre": "Cellules lithium-ion",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Tension d’une cellule",
+       "valeur": "3,6 V",
+       "id": "tc"
+      },
+      {
+       "texte": "Capacité d’une cellule",
+       "valeur": "2,5 Ah",
+       "id": "cc"
+      },
+      {
+       "texte": "Masse d’une cellule",
+       "valeur": "47 g",
+       "id": "mc"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Association",
+       "valeur": "14S2P",
+       "gras": true,
+       "id": "as"
+      }
+     ],
+     "pied": "Données écrites pour l’exercice",
+     "teinte": "vert"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la tension du pack ?",
+     "reponse": 50.4,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "En série, les tensions s’additionnent.",
+     "explication": "14 × 3,6 = **50,4 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la capacité du pack ?",
+     "reponse": 5,
+     "unite": "Ah",
+     "tolerance": 0.05,
+     "aide": "En parallèle, les capacités s’additionnent : 2 branches.",
+     "explication": "2 × 2,5 = **5 Ah**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le pack stocke-t-il, arrondie au watt-heure ?",
+     "reponse": 252,
+     "unite": "Wh",
+     "tolerance": 0.5,
+     "aide": "E = U × Q.",
+     "explication": "50,4 × 5 = **252 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cellules compte le pack ?",
+     "reponse": 28,
+     "tolerance": 0,
+     "aide": "Multiplie le nombre de cellules en série par le nombre de branches.",
+     "explication": "14 × 2 = **28 cellules**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie massique des cellules, arrondie au dixième en Wh/kg.",
+     "reponse": 191.5,
+     "unite": "Wh/kg",
+     "tolerance": 0.5,
+     "aide": "Masse des cellules : 28 × 47 g, en kilogrammes.",
+     "explication": "28 × 0,047 = 1,316 kg ; 252 / 1,316 ≈ **191,5 Wh/kg**."
+    }
+   ]
+  },
+  {
+   "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le ballon d’eau chaude, une batterie de chaleur",
+   "competence": "modeliser",
+   "situation": "Une maison solaire chauffe un ballon de 150 L de 15 °C à 55 °C quand le soleil brille. Le propriétaire se demande si une batterie 48 V de 100 Ah stockerait autant.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les deux « réservoirs »",
+     "colonnes": [
+      "",
+      "Ballon",
+      "Batterie"
+     ],
+     "lignes": [
+      [
+       "Stockage",
+       "Thermique",
+       "Chimique"
+      ],
+      [
+       "Volume ou capacité",
+       "150 L",
+       "100 Ah"
+      ],
+      [
+       "Tension",
+       "—",
+       "48 V"
+      ],
+      [
+       "Chauffe ou décharge",
+       "15 °C → 55 °C",
+       "—"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "c eau = 4 185 J/(kg·°C) ; 1 L d’eau = 1 kg ; 1 kWh = 3,6 MJ"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le ballon stocke-t-il, en kWh, arrondie au dixième ?",
+     "reponse": 7,
+     "unite": "kWh",
+     "tolerance": 0.05,
+     "aide": "Q = m × c × ΔT, en joules ; puis divise par 3 600 000.",
+     "explication": "150 × 4 185 × 40 ≈ 25,1 MJ, soit **7,0 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la batterie 48 V de 100 Ah stocke-t-elle, en kWh ?",
+     "reponse": 4.8,
+     "unite": "kWh",
+     "tolerance": 0.05,
+     "aide": "E = U × Q en wattheures, puis convertis en kWh.",
+     "explication": "48 × 100 = 4 800 Wh = **4,8 kWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure de cette comparaison ?",
+     "options": [
+      "Le ballon stocke davantage d’énergie que cette batterie",
+      "La batterie stocke davantage d’énergie que ce ballon",
+      "Les deux stockent exactement la même énergie",
+      "On ne peut pas comparer une chaleur et une charge"
+     ],
+     "reponse": 0,
+     "aide": "Compare 7,0 et 4,8 kWh.",
+     "explication": "Le ballon stocke **7,0 kWh** contre 4,8 kWh : le stockage thermique est un excellent moyen de stocker un surplus solaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle capacité, en Ah, aurait une batterie 48 V de même énergie que le ballon ? Arrondis à l’unité.",
+     "reponse": 145,
+     "unite": "Ah",
+     "tolerance": 1,
+     "aide": "Q = E / U, avec E en Wh (6 975 Wh).",
+     "explication": "6 975 / 48 ≈ **145 Ah**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La chaîne d’énergie d’une trottinette",
+   "competence": "calculer",
+   "situation": "On analyse la chaîne d’énergie d’une trottinette électrique. Le rendement de chaque étage est indiqué sous son nom.",
+   "documents": [
+    {
+     "id": "ce",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne d’énergie",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie",
+       "emoji": "🔋"
+      },
+      {
+       "id": "var",
+       "texte": "Variateur η = 0,95"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur η = 0,85"
+      },
+      {
+       "id": "tr",
+       "texte": "Transmission η = 0,90"
+      },
+      {
+       "id": "roue",
+       "texte": "Roue",
+       "emoji": "🛞"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "var",
+       "texte": "électrique"
+      },
+      {
+       "de": "var",
+       "a": "mot",
+       "texte": "électrique"
+      },
+      {
+       "de": "mot",
+       "a": "tr",
+       "texte": "mécanique"
+      },
+      {
+       "de": "tr",
+       "a": "roue",
+       "texte": "mécanique"
+      }
+     ],
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ce",
+     "enonce": "Touche l’étage qui a le plus faible rendement.",
+     "reponse": [
+      "mot"
+     ],
+     "aide": "Compare les trois rendements.",
+     "explication": "Le **moteur** (η = 0,85) est l’étage le moins efficace de la chaîne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement global de la chaîne, arrondi au centième.",
+     "reponse": 0.73,
+     "tolerance": 0.005,
+     "aide": "Multiplie les trois rendements.",
+     "explication": "0,95 × 0,85 × 0,90 ≈ **0,73**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La roue doit recevoir 250 W utiles. Quelle puissance la batterie fournit-elle, arrondie au watt ?",
+     "reponse": 344,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "P absorbée = P utile / η global, avec η ≈ 0,727.",
+     "explication": "250 / 0,727 ≈ **344 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue, en watts ?",
+     "reponse": 94,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Pertes = P absorbée − P utile.",
+     "explication": "344 − 250 = **94 W** perdus, surtout sous forme de chaleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le moteur du monte-charge au banc d’essai",
+   "competence": "calculer",
+   "situation": "Un technicien teste le moteur d’un monte-charge au banc d’essai. Il relève la puissance électrique absorbée, puis le couple et la vitesse de l’arbre.",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Relevés au banc d’essai",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance électrique absorbée",
+       "1 200 W"
+      ],
+      [
+       "Couple sur l’arbre",
+       "28 N·m"
+      ],
+      [
+       "Vitesse de l’arbre",
+       "300 tr/min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse de l’arbre en rad/s, arrondie au dixième.",
+     "reponse": 31.4,
+     "unite": "rad/s",
+     "tolerance": 0.05,
+     "aide": "ω = 2π × N / 60.",
+     "explication": "2π × 300 / 60 ≈ **31,4 rad/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance mécanique l’arbre fournit-il, arrondie au watt ?",
+     "reponse": 880,
+     "unite": "W",
+     "tolerance": 2,
+     "aide": "P = C × ω.",
+     "explication": "28 × 31,4 ≈ **880 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement du moteur, en pourcentage arrondi à l’unité ?",
+     "reponse": 73,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "η = P utile / P absorbée.",
+     "explication": "880 / 1 200 ≈ 0,73, soit **73 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue dans le moteur, en watts ?",
+     "reponse": 320,
+     "unite": "W",
+     "tolerance": 3,
+     "aide": "Pertes = P absorbée − P utile.",
+     "explication": "1 200 − 880 = **320 W**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sous quelle forme ces 320 W de pertes sont-ils surtout dissipés ?",
+     "options": [
+      "Sous forme de chaleur, par effet Joule et frottements du moteur",
+      "Sous forme de lumière, par l’éclairage intégré au moteur",
+      "Sous forme de courant, renvoyé intégralement vers la source",
+      "Sous forme de masse, stockée dans le bobinage du moteur"
+     ],
+     "reponse": 0,
+     "aide": "Un moteur chaud après l’essai, ça te dit quelque chose ?",
+     "explication": "Les pertes d’un moteur sont surtout de la **chaleur** (effet Joule, frottements)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un cycle de la navette autonome",
+   "competence": "analyser-document",
+   "situation": "Une navette autonome de quartier accélère, roule, puis freine. Un capteur relève la puissance utile à ses roues pendant un cycle de 10 s. Le rendement de la chaîne vaut 0,8.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Puissance utile pendant un cycle",
+     "categories": [
+      "0 s",
+      "2 s",
+      "4 s",
+      "6 s",
+      "8 s",
+      "10 s"
+     ],
+     "series": [
+      {
+       "nom": "Puissance utile",
+       "valeurs": [
+        0,
+        600,
+        600,
+        600,
+        600,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "W",
+      "min": 0,
+      "max": 800,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Relevés simplifiés, écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "enonce": "Touche tous les instants du régime établi, où la puissance reste constante.",
+     "reponse": [
+      "k1",
+      "k2",
+      "k3",
+      "k4"
+     ],
+     "aide": "Cherche le palier horizontal de la courbe.",
+     "explication": "La puissance vaut 600 W de **2 s à 8 s** : c’est le régime établi.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie utile du cycle : c’est l’aire sous la courbe. Donne-la en kilojoules.",
+     "reponse": 4.8,
+     "unite": "kJ",
+     "tolerance": 0.05,
+     "aide": "Découpe en trapèzes de 2 s : (P début + P fin) / 2 × 2 s.",
+     "explication": "Montée : 600 J ; palier : 3 × 1 200 J ; descente : 600 J. Total : 4 800 J = **4,8 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la puissance utile moyenne sur les 10 s, en watts ?",
+     "reponse": 480,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Puissance moyenne = énergie / durée.",
+     "explication": "4 800 / 10 = **480 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la batterie doit-elle fournir pour ce cycle, en kilojoules ?",
+     "reponse": 6,
+     "unite": "kJ",
+     "tolerance": 0.05,
+     "aide": "E absorbée = E utile / η.",
+     "explication": "4,8 / 0,8 = **6 kJ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des capteurs dans les poubelles de la ville",
+   "competence": "lire-tableau",
+   "situation": "Une ville équipe ses conteneurs de capteurs de remplissage. Chacun, alimenté par une pile prévue pour 5 ans, envoie une mesure par heure, même à plusieurs kilomètres de la mairie.",
+   "documents": [
+    {
+     "id": "rx",
+     "type": "tableau",
+     "titre": "Quatre réseaux sans fil",
+     "colonnes": [
+      "Réseau",
+      "Portée",
+      "Débit",
+      "Consommation"
+     ],
+     "lignes": [
+      [
+       "Bluetooth Low Energy",
+       "≈ 10 m",
+       "Moyen",
+       "Très faible"
+      ],
+      [
+       "Wi-Fi",
+       "≈ 50 m",
+       "Élevé",
+       "Élevée"
+      ],
+      [
+       "LoRa",
+       "Plusieurs km",
+       "Très faible",
+       "Très faible"
+      ],
+      [
+       "4G/5G",
+       "Réseau opérateur",
+       "Élevé",
+       "Élevée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rx",
+     "enonce": "Touche le réseau qui convient le mieux à ces capteurs.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Il faut une longue portée et une consommation très faible.",
+     "explication": "**LoRa** combine longue portée et consommation très faible."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque objet au réseau le plus adapté.",
+     "paires": [
+      [
+       "Bracelet sportif près du téléphone",
+       "Bluetooth Low Energy"
+      ],
+      [
+       "Caméra de la maison",
+       "Wi-Fi"
+      ],
+      [
+       "Compteur d’eau en pleine campagne",
+       "LoRa"
+      ],
+      [
+       "Voiture connectée sur route",
+       "4G/5G"
+      ]
+     ],
+     "aide": "Pense à la distance et à l’autonomie de chaque objet.",
+     "explication": "Chaque objet a un **compromis portée, débit, consommation** qui lui correspond."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mesures un capteur envoie-t-il en une année de 365 jours ?",
+     "reponse": 8760,
+     "tolerance": 0,
+     "aide": "Une mesure par heure : combien d’heures en 365 jours ?",
+     "explication": "24 × 365 = **8 760 mesures**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’automate qui n’entend plus la supervision",
+   "competence": "analyser-document",
+   "situation": "Dans une usine, tous les équipements ont un masque /24 (255.255.255.0). Depuis l’ajout de la supervision, elle ne communique plus avec l’automate. Aucun routeur n’est installé.",
+   "documents": [
+    {
+     "id": "ip",
+     "type": "tableau",
+     "titre": "Équipements du réseau de l’atelier",
+     "colonnes": [
+      "Équipement",
+      "Adresse IP"
+     ],
+     "lignes": [
+      [
+       "Automate",
+       "192.168.4.10"
+      ],
+      [
+       "Caméra",
+       "192.168.4.25"
+      ],
+      [
+       "Passerelle",
+       "192.168.4.254"
+      ],
+      [
+       "Supervision",
+       "192.168.5.12"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ip",
+     "enonce": "Touche l’adresse de l’équipement qui n’est pas dans le même réseau que l’automate.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Compare les trois premiers octets de chaque adresse.",
+     "explication": "La **supervision** est en 192.168.5.x, alors que l’automate est en 192.168.4.x."
+    },
+    {
+     "type": "texte",
+     "enonce": "Écris l’adresse réseau de l’automate.",
+     "reponse": [
+      "192.168.4.0"
+     ],
+     "placeholder": "xxx.xxx.xxx.xxx",
+     "aide": "Avec un masque /24, le dernier octet est mis à 0.",
+     "explication": "Adresse IP ET masque : **192.168.4.0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’équipements du tableau appartiennent au réseau 192.168.4.0 ?",
+     "reponse": 3,
+     "tolerance": 0,
+     "aide": "Compte ceux dont l’adresse commence par 192.168.4.",
+     "explication": "L’automate, la caméra et la passerelle : **3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle correction simple permet à la supervision de dialoguer avec l’automate ?",
+     "options": [
+      "Lui donner une adresse en 192.168.4.x, différente de celles déjà prises",
+      "Lui donner l’adresse 192.168.4.10, la même que celle de l’automate",
+      "Lui donner l’adresse 192.168.4.0, celle du réseau de l’atelier",
+      "Lui donner l’adresse 192.168.5.13, dans son réseau actuel"
+     ],
+     "reponse": 0,
+     "aide": "Il faut le même réseau, sans doublon d’adresse.",
+     "explication": "Une adresse **192.168.4.x libre** (par exemple .30) place la supervision dans le même réseau, sans conflit."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La serre qui publie ses mesures",
+   "competence": "analyser-document",
+   "situation": "Une serre connectée publie ses mesures par MQTT. Le capteur envoie ses valeurs à un serveur, le broker, qui les redistribue aux appareils abonnés.",
+   "documents": [
+    {
+     "id": "mq",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet d’une mesure",
+     "noeuds": [
+      {
+       "id": "cap",
+       "texte": "Capteur de la serre"
+      },
+      {
+       "id": "brk",
+       "texte": "Broker MQTT"
+      },
+      {
+       "id": "abo",
+       "texte": "Appareils abonnés"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cap",
+       "a": "brk",
+       "texte": "publie"
+      },
+      {
+       "de": "brk",
+       "a": "abo",
+       "texte": "redistribue"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "pub",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les trois publications de la matinée",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "serre/temperature = 23,5",
+      "serre/humidite = 61",
+      "cave/temperature = 12,0"
+     ]
+    },
+    {
+     "id": "ab",
+     "type": "tableau",
+     "titre": "Qui est abonné à quoi ?",
+     "colonnes": [
+      "Appareil",
+      "Abonné au sujet"
+     ],
+     "lignes": [
+      [
+       "Écran A",
+       "serre/temperature"
+      ],
+      [
+       "Écran A",
+       "serre/humidite"
+      ],
+      [
+       "Application B",
+       "serre/humidite"
+      ],
+      [
+       "Alarme C",
+       "cave/temperature"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mq",
+     "enonce": "Touche l’élément qui redistribue les mesures aux abonnés.",
+     "reponse": [
+      "brk"
+     ],
+     "aide": "Il se trouve entre le capteur et les appareils.",
+     "explication": "Le **broker** reçoit les publications et les envoie aux abonnés du sujet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels appareils reçoivent la valeur « serre/humidite = 61 » ?",
+     "options": [
+      "L’écran A et l’application B, tous deux abonnés à ce sujet",
+      "Seulement l’alarme C, abonnée à un sujet de la cave",
+      "L’écran A seul, car il est abonné à deux sujets",
+      "Les trois appareils, car le broker diffuse à tout le monde"
+     ],
+     "reponse": 0,
+     "aide": "Seuls les abonnés d’un sujet reçoivent ses messages.",
+     "explication": "Le tableau montre **l’écran A et l’application B** abonnés à « serre/humidite »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les trois publications, combien de valeurs l’écran A reçoit-il ?",
+     "reponse": 2,
+     "tolerance": 0,
+     "aide": "Compte les sujets auxquels l’écran A est abonné.",
+     "explication": "Il reçoit la température et l’humidité de la serre : **2 valeurs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le broker est ouvert sur Internet avec le mot de passe fourni par défaut. Que faut-il faire en premier ?",
+     "options": [
+      "Changer le mot de passe et chiffrer les échanges entre les appareils",
+      "Publier l’adresse du broker pour que chacun puisse le tester",
+      "Désactiver les mises à jour pour éviter de casser le système",
+      "Mettre tous les objets sur le même réseau que les ordinateurs"
+     ],
+     "reponse": 0,
+     "aide": "Un mot de passe par défaut est connu de tous.",
+     "explication": "Il faut **un mot de passe robuste et des échanges chiffrés** ; séparer le réseau des objets aide aussi."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chauffage qui suit le thermostat",
+   "competence": "observer-schema",
+   "situation": "Dans une pièce, un thermostat règle le radiateur. La consigne est de 21 °C. Les éléments forment une boucle : la sonde mesure, le comparateur calcule l’écart, le correcteur commande le radiateur.",
+   "documents": [
+    {
+     "id": "bo",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Boucle de régulation",
+     "noeuds": [
+      {
+       "id": "comp",
+       "texte": "Comparateur"
+      },
+      {
+       "id": "corr",
+       "texte": "Correcteur"
+      },
+      {
+       "id": "rad",
+       "texte": "Radiateur",
+       "emoji": "♨️"
+      },
+      {
+       "id": "piece",
+       "texte": "Pièce"
+      },
+      {
+       "id": "sonde",
+       "texte": "Sonde de température",
+       "emoji": "🌡️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "comp",
+       "a": "corr",
+       "texte": "écart"
+      },
+      {
+       "de": "corr",
+       "a": "rad",
+       "texte": "commande"
+      },
+      {
+       "de": "rad",
+       "a": "piece",
+       "texte": "chaleur"
+      },
+      {
+       "de": "piece",
+       "a": "sonde",
+       "texte": "température"
+      },
+      {
+       "de": "sonde",
+       "a": "comp",
+       "texte": "mesure"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bo",
+     "enonce": "Touche l’élément qui mesure la température de la pièce.",
+     "reponse": [
+      "sonde"
+     ],
+     "aide": "C’est le capteur de la boucle.",
+     "explication": "La **sonde de température** mesure la grandeur réglée et la renvoie au comparateur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à son rôle.",
+     "paires": [
+      [
+       "Comparateur",
+       "Calcule l’écart entre consigne et mesure"
+      ],
+      [
+       "Correcteur",
+       "Élabore la commande à partir de l’écart"
+      ],
+      [
+       "Radiateur",
+       "Agit sur la température de la pièce"
+      ],
+      [
+       "Sonde",
+       "Renvoie la mesure au comparateur"
+      ]
+     ],
+     "aide": "Suis les flèches de la boucle.",
+     "explication": "Chaque élément a un rôle précis : **comparer, corriger, agir, mesurer**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La sonde mesure 18,5 °C pour une consigne de 21 °C. Quel écart le comparateur calcule-t-il ?",
+     "reponse": 2.5,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "Écart = consigne − mesure.",
+     "explication": "21 − 18,5 = **2,5 °C**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le thermostat qui ne claque pas",
+   "competence": "analyser-document",
+   "situation": "Un thermostat tout ou rien règle une chambre à 19 °C avec une hystérésis de ± 0,5 °C : le chauffage s’allume sous 18,5 °C et s’éteint au-dessus de 19,5 °C. Il est allumé à 18,0 °C.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Relevés de la chambre",
+     "colonnes": [
+      "Relevé",
+      "Température (°C)",
+      "Tendance"
+     ],
+     "lignes": [
+      [
+       "1",
+       "18,0",
+       "Départ"
+      ],
+      [
+       "2",
+       "18,8",
+       "Monte"
+      ],
+      [
+       "3",
+       "19,2",
+       "Monte"
+      ],
+      [
+       "4",
+       "19,6",
+       "Monte"
+      ],
+      [
+       "5",
+       "19,4",
+       "Descend"
+      ],
+      [
+       "6",
+       "19,0",
+       "Descend"
+      ],
+      [
+       "7",
+       "18,6",
+       "Descend"
+      ],
+      [
+       "8",
+       "18,4",
+       "Descend"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range ces relevés selon l’état du chauffage.",
+     "categories": [
+      "Chauffage allumé",
+      "Chauffage éteint"
+     ],
+     "items": [
+      [
+       "Relevé 2 : 18,8 °C, en montant",
+       0
+      ],
+      [
+       "Relevé 3 : 19,2 °C, en montant",
+       0
+      ],
+      [
+       "Relevé 5 : 19,4 °C, en descendant",
+       1
+      ],
+      [
+       "Relevé 7 : 18,6 °C, en descendant",
+       1
+      ]
+     ],
+     "aide": "Il ne change d’état qu’en franchissant 18,5 °C ou 19,5 °C.",
+     "explication": "Allumé jusqu’à **19,5 °C** franchi au relevé 4, puis éteint jusqu’à **18,5 °C** franchi au relevé 8."
+    },
+    {
+     "type": "zone",
+     "document": "rel",
+     "enonce": "Touche la température du relevé où le chauffage s’éteint.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche le premier relevé au-dessus de 19,5 °C.",
+     "explication": "Le relevé 4 (**19,6 °C**) dépasse 19,5 °C : le chauffage s’éteint."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le relais change-t-il d’état entre le relevé 1 et le relevé 8 ?",
+     "reponse": 2,
+     "tolerance": 0,
+     "aide": "Repère les seuils franchis : 19,5 °C en montant, 18,5 °C en descendant.",
+     "explication": "Extinction au relevé 4, rallumage au relevé 8 : **2 changements**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne pas commuter simplement à 19 °C, sans hystérésis ?",
+     "options": [
+      "Le relais commuterait sans cesse autour de 19 °C et s’userait vite",
+      "Le capteur ne saurait plus mesurer la température de la chambre",
+      "La consigne deviendrait impossible à atteindre par le chauffage",
+      "La chambre refroidirait beaucoup plus vite qu’avec l’hystérésis"
+     ],
+     "reponse": 0,
+     "aide": "Imagine une température qui oscille de 0,1 °C autour de 19 °C.",
+     "explication": "Sans hystérésis, le relais **claquerait sans cesse** autour de la consigne."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La réponse du moteur du tapis",
+   "competence": "lire-graphique",
+   "situation": "Un moteur reçoit un échelon de consigne : 0 puis 200 tr/min. Un capteur relève sa vitesse chaque seconde.",
+   "documents": [
+    {
+     "id": "rep",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du moteur après l’échelon de consigne",
+     "categories": [
+      "0 s",
+      "1 s",
+      "2 s",
+      "3 s",
+      "4 s",
+      "5 s",
+      "6 s",
+      "7 s"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse mesurée",
+       "valeurs": [
+        0,
+        120,
+        190,
+        216,
+        204,
+        198,
+        196,
+        196
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "tr/min",
+      "min": 0,
+      "max": 240,
+      "pas": 40
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Relevés simplifiés, écrits pour l’exercice. Consigne : 200 tr/min."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rep",
+     "enonce": "Touche l’instant où la vitesse est maximale.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le pic est atteint à **3 s** (216 tr/min)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’erreur statique, en tr/min, sachant que la vitesse se stabilise à 196 tr/min ?",
+     "reponse": 4,
+     "unite": "tr/min",
+     "tolerance": 0,
+     "aide": "Erreur statique = consigne − valeur finale.",
+     "explication": "200 − 196 = **4 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le dépassement en pourcentage de la valeur finale, arrondi à l’unité.",
+     "reponse": 10,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Dépassement = (pic − valeur finale) / valeur finale.",
+     "explication": "(216 − 196) / 196 ≈ 0,10, soit **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le temps de réponse à 5 % ? La bande vaut 196 ± 5 %, soit de 186,2 à 205,8 tr/min. Donne-le en secondes.",
+     "reponse": 4,
+     "unite": "s",
+     "tolerance": 0,
+     "aide": "Cherche le dernier instant où la vitesse est hors de la bande.",
+     "explication": "À 3 s, 216 est hors bande ; dès 4 s (204), la vitesse y reste : **4 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jusqu’où va le vélo électrique ?",
+   "competence": "calculer",
+   "situation": "Un vélo à assistance électrique roule à 12 km/h. Ses roues ont un rayon de 0,35 m. Le moteur entraîne la roue par un réducteur.",
+   "documents": [
+    {
+     "id": "ve",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne de puissance",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie",
+       "emoji": "🔋"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur"
+      },
+      {
+       "id": "red",
+       "texte": "Réducteur"
+      },
+      {
+       "id": "roue",
+       "texte": "Roue de rayon 0,35 m",
+       "emoji": "🚲"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "mot",
+       "texte": "électrique"
+      },
+      {
+       "de": "mot",
+       "a": "red",
+       "texte": "rotation rapide"
+      },
+      {
+       "de": "red",
+       "a": "roue",
+       "texte": "rotation lente"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ve",
+     "enonce": "Touche l’élément qui réduit la vitesse de rotation.",
+     "reponse": [
+      "red"
+     ],
+     "aide": "Un réducteur a un rapport inférieur à 1.",
+     "explication": "Le **réducteur** diminue la vitesse et augmente le couple."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis 12 km/h en mètres par seconde, arrondi au centième.",
+     "reponse": 3.33,
+     "unite": "m/s",
+     "tolerance": 0.01,
+     "aide": "Divise par 3,6.",
+     "explication": "12 / 3,6 ≈ **3,33 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle vitesse angulaire la roue a-t-elle, arrondie au dixième ?",
+     "reponse": 9.5,
+     "unite": "rad/s",
+     "tolerance": 0.05,
+     "aide": "ω = v / R.",
+     "explication": "3,33 / 0,35 ≈ **9,5 rad/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse de la roue en tours par minute, arrondie à l’unité.",
+     "reponse": 91,
+     "unite": "tr/min",
+     "tolerance": 0.5,
+     "aide": "N = ω × 60 / (2π).",
+     "explication": "9,52 × 60 / 6,283 ≈ **91 tr/min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le réducteur de la porte de garage",
+   "competence": "calculer",
+   "situation": "Le moteur d’une porte de garage tourne à 3 000 tr/min avec un couple de 0,4 N·m. Il entraîne l’arbre de la porte par deux étages d’engrenages. Le rendement du réducteur vaut 0,85.",
+   "documents": [
+    {
+     "id": "eng",
+     "type": "tableau",
+     "titre": "Les deux étages du réducteur",
+     "colonnes": [
+      "Étage",
+      "Roue d’entrée (dents)",
+      "Roue de sortie (dents)"
+     ],
+     "lignes": [
+      [
+       "1",
+       15,
+       45
+      ],
+      [
+       "2",
+       20,
+       60
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rapport de transmission global, arrondi au millième.",
+     "reponse": 0.111,
+     "tolerance": 0.001,
+     "aide": "k = produit des rapports Z entrée / Z sortie de chaque étage.",
+     "explication": "(15 / 45) × (20 / 60) = 1/3 × 1/3 ≈ **0,111**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse de l’arbre de sortie, arrondie à l’unité en tr/min ?",
+     "reponse": 333,
+     "unite": "tr/min",
+     "tolerance": 1,
+     "aide": "N sortie = k × N entrée.",
+     "explication": "3 000 × 0,111 ≈ **333 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel couple l’arbre de sortie reçoit-il, arrondi au centième ?",
+     "reponse": 3.06,
+     "unite": "N·m",
+     "tolerance": 0.01,
+     "aide": "C sortie = η × C entrée / k.",
+     "explication": "0,85 × 0,4 / 0,111 ≈ **3,06 N·m**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion sur ce réducteur.",
+     "texte": "Le réducteur ___ la vitesse et ___ le couple.",
+     "reponses": [
+      [
+       "diminue",
+       "réduit"
+      ],
+      [
+       "augmente"
+      ]
+     ],
+     "banque": [
+      "diminue",
+      "augmente",
+      "conserve",
+      "annule"
+     ],
+     "aide": "Compare 3 000 et 333 tr/min, puis 0,4 et 3,06 N·m.",
+     "explication": "Un réducteur **diminue** la vitesse et **augmente** le couple."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chariot autonome de l’entrepôt",
+   "competence": "raisonner",
+   "situation": "Un chariot autonome de 150 kg doit passer de l’arrêt à 1,2 m/s en 3 s, avec une accélération constante. Les frottements au roulement opposent une force constante de 30 N.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "tableau",
+     "titre": "Cahier des charges du chariot",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse",
+       "150 kg"
+      ],
+      [
+       "Vitesse à atteindre",
+       "1,2 m/s"
+      ],
+      [
+       "Durée de la mise en vitesse",
+       "3 s"
+      ],
+      [
+       "Force de frottement",
+       "30 N"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle accélération le chariot doit-il avoir, en m/s² ?",
+     "reponse": 0.4,
+     "unite": "m/s²",
+     "tolerance": 0.01,
+     "aide": "a = variation de vitesse / durée.",
+     "explication": "1,2 / 3 = **0,4 m/s²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle force faut-il fournir en plus des frottements pour accélérer, en newtons ?",
+     "reponse": 60,
+     "unite": "N",
+     "tolerance": 0.5,
+     "aide": "F = m × a.",
+     "explication": "150 × 0,4 = **60 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle force totale le moteur doit-il exercer pendant la mise en vitesse ?",
+     "reponse": 90,
+     "unite": "N",
+     "tolerance": 0.5,
+     "aide": "Additionne la force d’accélération et la force de frottement.",
+     "explication": "60 + 30 = **90 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une fois la vitesse de 1,2 m/s atteinte, quelle puissance faut-il pour l’entretenir ?",
+     "reponse": 36,
+     "unite": "W",
+     "tolerance": 0.5,
+     "aide": "En régime établi, il ne reste que les frottements : P = F × v.",
+     "explication": "30 × 1,2 = **36 W**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle situation dimensionne le moteur du chariot ?",
+     "options": [
+      "La fin de la mise en vitesse, où la puissance vaut 108 W",
+      "Le régime établi, où la puissance vaut 36 W",
+      "Le régime établi, car il dure plus longtemps",
+      "L’arrêt, car le moteur n’y fournit aucune puissance"
+     ],
+     "reponse": 0,
+     "aide": "Calcule F × v à la fin de l’accélération : 90 × 1,2.",
+     "explication": "Le démarrage demande **108 W** contre 36 W en régime établi : c’est lui qui dimensionne le moteur."
+    }
+   ]
+  }
+ ]
+}

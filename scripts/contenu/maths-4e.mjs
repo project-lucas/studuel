@@ -492,7 +492,7 @@ La méthode : diviser successivement par le **plus petit** nombre premier possib
 | Reconnaître deux nombres **premiers entre eux** | Aucun facteur commun : la fraction est déjà irréductible |`,
           },
           questions: [
-            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs', 'Un entier impair', 'Le premier entier d’une liste', 'Un entier divisible par 2'], 0, '1 et lui-même.'],
+            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs', 'Un entier impair', 'Le premier entier d’une liste', 'Un entier divisible par 2'], 0, 'Ses deux seuls diviseurs positifs sont 1 et lui-même. C’est pourquoi 1 n’est pas premier, et 2 est le seul nombre premier pair.'],
             ['Pourquoi 1 n’est-il pas premier ?', ['Il n’a qu’un seul diviseur', 'Il est trop petit', 'Il est pair', 'Il est divisible par 2'], 0, 'La définition exige exactement deux diviseurs.'],
             ['Quel est le seul nombre premier pair ?', ['2', '4', '0', 'Il n’y en a pas'], 0, 'Tout autre nombre pair est divisible par 2.'],
             ['Combien existe-t-il de nombres premiers ?', ['Une infinité', 'Exactement 100', 'Autant que d’entiers pairs, soit un nombre fini', 'Moins de 1 000'], 0, 'Euclide l’a démontré il y a plus de deux mille ans.'],

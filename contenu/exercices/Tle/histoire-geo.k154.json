@@ -1,0 +1,3516 @@
+{
+ "niveau": "Tle",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "9df5ab38-8f34-5a9c-b31f-9d3e36b689ce",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui commande, qui fournit, qui est oublié ?",
+   "competence": "lire-carte",
+   "situation": "Léo prépare une fiche sur les inégalités de la mondialisation. Il place quatre villes sur une carte du monde avant de les classer.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes du monde",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -20,
+      150,
+      65
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "new-york",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "bamako",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale d’un pays enclavé, classé parmi les pays les moins avancés.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Cherche en Afrique de l’Ouest : ce pays n’a aucun accès à la mer.",
+     "explication": "**D** est Bamako, capitale du Mali : un pays enclavé, parmi les pays les moins avancés (PMA)."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois métropoles situées dans un centre d’impulsion de la mondialisation.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Les centres d’impulsion sont l’Amérique du Nord, l’Europe occidentale et l’Asie orientale.",
+     "explication": "**A** (New York), **B** (Paris) et **C** (Shanghai) sont dans les trois centres d’impulsion : Amérique du Nord, Europe occidentale, Asie orientale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque facteur : il favorise l’intégration ou il marginalise ?",
+     "categories": [
+      "Intégration",
+      "Marginalisation"
+     ],
+     "items": [
+      [
+       "Une façade maritime équipée",
+       0
+      ],
+      [
+       "L’enclavement, sans accès à la mer",
+       1
+      ],
+      [
+       "La dépendance à une seule ressource",
+       1
+      ],
+      [
+       "Une stabilité qui attire les IDE",
+       0
+      ]
+     ],
+     "aide": "Pense à ce qui relie un territoire aux flux du monde, ou l’en coupe.",
+     "explication": "Un port équipé et la stabilité **intègrent** ; l’enclavement et la dépendance à une seule ressource **marginalisent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9df5ab38-8f34-5a9c-b31f-9d3e36b689ce",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un pays riche… pour qui ?",
+   "competence": "lire-tableau",
+   "situation": "Le royaume imaginaire de Petrolia vend du pétrole dans le monde entier. Sa fiche statistique semble excellente : Yanis se demande ce qu’elle cache.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Fiche de Petrolia (pays imaginaire)",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "PIB par habitant",
+       "45 000 dollars"
+      ],
+      [
+       "IDH",
+       "0,88"
+      ],
+      [
+       "Part du revenu national reçue par les 10 % les plus riches",
+       "55 %"
+      ],
+      [
+       "Part du pétrole et du gaz dans les exportations",
+       "90 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la case qui montre que le pays dépend d’une seule ressource.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la ligne qui parle d’exportations.",
+     "explication": "**90 %** des exportations viennent du pétrole et du gaz : Petrolia dépend d’une seule ressource."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle la case « 55 % » ?",
+     "options": [
+      "Que le PIB par habitant cache une répartition très inégale",
+      "Que le pays n’exporte presque rien à l’étranger",
+      "Que l’économie du pays est entièrement tournée vers le tourisme",
+      "Que tous les habitants ont accès à l’éducation"
+     ],
+     "reponse": 0,
+     "aide": "10 % de la population reçoit plus de la moitié du revenu national.",
+     "explication": "Quand 10 % des habitants reçoivent **55 %** du revenu, la moyenne du PIB par habitant **cache de fortes inégalités**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indicateur à sa limite.",
+     "paires": [
+      [
+       "PIB par habitant",
+       "Il ignore la répartition des richesses"
+      ],
+      [
+       "IDH",
+       "Il moyenne les inégalités internes"
+      ],
+      [
+       "Stock d’IDE",
+       "Il peut refléter un statut fiscal avantageux"
+      ]
+     ],
+     "aide": "Aucun indicateur ne suffit seul : relis ce que chacun mesure.",
+     "explication": "Le **PIB** ignore la répartition, l’**IDH** moyenne les inégalités, le **stock d’IDE** peut venir d’un statut fiscal avantageux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Petrolia est plutôt…",
+     "options": [
+      "Une périphérie intégrée : elle fournit des matières premières et en tire une part de la valeur",
+      "Un centre d’impulsion : elle concentre les capitaux et l’innovation du monde",
+      "Une périphérie en marge : elle est presque absente des flux mondiaux",
+      "Un territoire isolé : elle n’a aucun échange avec le reste du monde"
+     ],
+     "reponse": 0,
+     "aide": "Les pays pétroliers sont cités parmi les périphéries intégrées.",
+     "explication": "Petrolia vend des **matières premières** et en capte une part de la valeur : c’est une **périphérie intégrée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9df5ab38-8f34-5a9c-b31f-9d3e36b689ce",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’enclave et la façade",
+   "competence": "analyser-document",
+   "situation": "Deux pays voisins imaginaires, Kalia et Nordane, veulent attirer des usines. Zoé croise une note d’investisseur et un tableau pour dire lequel s’intègre le mieux.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note d’un investisseur",
+     "source": "Note imaginée pour l’exercice.",
+     "blocs": [
+      "Kalia n’a aucun littoral : ses conteneurs passent par le port de Nordane, qui prélève des droits et impose des délais. Un conflit armé ravage sa frontière nord.",
+      "Nordane dispose d’un grand port équipé et d’une capitale dotée de banques et de cabinets d’audit. Le pays est stable : les investisseurs étrangers s’y installent."
+     ]
+    },
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "Kalia et Nordane",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Kalia",
+      "Nordane"
+     ],
+     "lignes": [
+      [
+       "Délai pour exporter un conteneur (jours)",
+       "30",
+       "10"
+      ],
+      [
+       "Investissements étrangers reçus (millions de dollars par an)",
+       "80",
+       "1 200"
+      ],
+      [
+       "Conflit armé sur le territoire",
+       "Oui",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Nordane reçoit-elle plus d’investissements étrangers que Kalia ?",
+     "reponse": 15,
+     "unite": "fois",
+     "aide": "Divise 1 200 par 80.",
+     "explication": "1 200 ÷ 80 = **15** : les investisseurs choisissent le pays stable, au port équipé."
+    },
+    {
+     "type": "zone",
+     "document": "chiffres",
+     "enonce": "Touche la case qui chiffre le handicap de l’enclavement pour Kalia.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "L’enclavement allonge le trajet des marchandises.",
+     "explication": "**30 jours** pour exporter un conteneur, contre 10 à Nordane : sans littoral, Kalia dépend du port de son voisin."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément de la note : il marginalise ou il intègre ?",
+     "categories": [
+      "Marginalise",
+      "Intègre"
+     ],
+     "items": [
+      [
+       "Aucun accès à la mer",
+       0
+      ],
+      [
+       "Un port de conteneurs équipé",
+       1
+      ],
+      [
+       "Un conflit armé à la frontière",
+       0
+      ],
+      [
+       "Des banques et des cabinets d’audit dans la capitale",
+       1
+      ],
+      [
+       "Une stabilité qui rassure les investisseurs",
+       1
+      ]
+     ],
+     "aide": "Un territoire s’intègre quand il est relié aux flux et rassure ceux qui investissent.",
+     "explication": "Le port, les services de haut niveau et la stabilité **intègrent** ; l’enclavement et le conflit **marginalisent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tirer pour Kalia ?",
+     "options": [
+      "Son enclavement et son instabilité la laissent en marge, malgré un voisin intégré",
+      "Sa proximité avec Nordane suffit à en faire un centre d’impulsion de la mondialisation",
+      "Son faible pouvoir d’achat prouve qu’elle est intégrée par ses exportations de services",
+      "Elle deviendra un centre de décision dès que son PIB par habitant aura doublé"
+     ],
+     "reponse": 0,
+     "aide": "Voisin d’un pays intégré ne veut pas dire intégré soi-même.",
+     "explication": "Kalia reste en **marge** : pas de littoral, un conflit, peu d’IDE. Être voisine d’un pays intégré ne suffit pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a6184b-0277-5eb9-956f-fe3032dadea9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les adresses du pouvoir",
+   "competence": "lire-carte",
+   "situation": "Sasha trace la carte des lieux de pouvoir du monde : institutions internationales et grands quartiers d’affaires.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre lieux de pouvoir",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -105,
+      5,
+      145,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "new-york",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "geneve",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "dubai",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où siège l’ONU.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est une métropole de la côte est des États-Unis.",
+     "explication": "L’ONU siège à **New York** (A)."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où siègent l’OMC et l’OMS.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cette ville est en Suisse.",
+     "explication": "L’OMC et l’OMS siègent à **Genève** (B)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque quartier d’affaires à sa ville.",
+     "paires": [
+      [
+       "Manhattan",
+       "New York"
+      ],
+      [
+       "La Défense",
+       "Paris"
+      ],
+      [
+       "Pudong",
+       "Shanghai"
+      ],
+      [
+       "Canary Wharf",
+       "Londres"
+      ]
+     ],
+     "aide": "Le cœur d’une ville mondiale s’appelle le CBD.",
+     "explication": "**Manhattan** à New York, **La Défense** à Paris, **Pudong** à Shanghai, **Canary Wharf** à Londres : ce sont des CBD."
+    },
+    {
+     "type": "choix",
+     "enonce": "Shanghai et Dubaï gagnent des rangs dans le classement. Que montre ce mouvement ?",
+     "options": [
+      "Que la hiérarchie des villes mondiales évolue avec la montée de l’Asie",
+      "Que la hiérarchie des villes mondiales est figée depuis un siècle",
+      "Que seules les villes d’Europe occidentale commandent l’économie",
+      "Que la taille de la population décide seule du classement"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où se trouvent Shanghai et Dubaï.",
+     "explication": "La hiérarchie est **mouvante** : la montée de l’**Asie** fait gagner des rangs à Shanghai, Shenzhen, Singapour et Dubaï."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a6184b-0277-5eb9-956f-fe3032dadea9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand la banque déménage",
+   "competence": "analyser-texte",
+   "situation": "Une banque imaginaire transfère une partie de ses équipes. Nina lit l’article pour comprendre ce que ce départ dit de la hiérarchie des villes mondiales.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Dans les bureaux de Nordbank",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Depuis le [[c|Brexit]], la banque Nordbank a transféré 1 800 de ses 6 000 emplois londoniens vers [[v|Francfort]], [[v|Amsterdam]] et [[v|Paris]].",
+      "La direction explique que la City reste très attractive, mais qu’il lui faut une entité installée dans l’Union européenne pour continuer à servir ses clients du continent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche le mot qui explique le départ d’une partie de l’activité.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est le nom de la sortie du Royaume-Uni de l’Union européenne.",
+     "explication": "Le **Brexit** pousse la banque à installer une entité dans l’Union européenne."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche les trois villes qui accueillent les emplois transférés.",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "aide": "Elles suivent le mot « vers ».",
+     "explication": "Les emplois vont à **Francfort**, **Amsterdam** et **Paris**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des emplois londoniens a été transférée, en pourcentage ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Divise 1 800 par 6 000.",
+     "explication": "1 800 ÷ 6 000 = 0,30, soit **30 %** des emplois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cet exemple de la hiérarchie des villes mondiales ?",
+     "options": [
+      "Qu’elle n’est pas acquise : une ville se maintient par son droit et sa stabilité",
+      "Qu’elle dépend uniquement de la population des villes concernées",
+      "Qu’elle est fixée une fois pour toutes par les grandes banques",
+      "Qu’elle ne change que sous l’effet des catastrophes naturelles"
+     ],
+     "reponse": 0,
+     "aide": "Londres garde des atouts, mais une règle juridique a changé.",
+     "explication": "Une ville mondiale se maintient par ses **infrastructures**, son **droit**, ses **talents** et sa **stabilité** : rien n’est acquis."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a6184b-0277-5eb9-956f-fe3032dadea9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Géante ou connectée ?",
+   "competence": "analyser-document",
+   "situation": "Deux villes imaginaires, Mégalia et Portalis, se disputent le titre de ville mondiale. Malo les compare en distinguant la hiérarchie du réseau.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "tableau",
+     "titre": "Mégalia et Portalis",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Mégalia",
+      "Portalis"
+     ],
+     "lignes": [
+      [
+       "Habitants (millions)",
+       "24",
+       "3"
+      ],
+      [
+       "Sièges de grandes firmes transnationales",
+       "4",
+       "45"
+      ],
+      [
+       "Liaisons aériennes directes avec d’autres villes mondiales",
+       "12",
+       "140"
+      ],
+      [
+       "Places boursières de rang mondial",
+       "0",
+       "2"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux notions",
+     "source": "Rappel de cours.",
+     "blocs": [
+      "La **hiérarchie** dit qui commande à qui. Le **réseau** dit qui est relié à qui."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Mégalia compte-t-elle plus d’habitants que Portalis ?",
+     "reponse": 8,
+     "unite": "fois",
+     "aide": "Divise 24 par 3.",
+     "explication": "24 ÷ 3 = **8** : Mégalia est bien plus peuplée, mais la taille ne fait pas la ville mondiale."
+    },
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche la case qui montre que Mégalia est peu reliée aux autres villes mondiales.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne des liaisons aériennes.",
+     "explication": "Seulement **12** liaisons directes, contre 140 pour Portalis : Mégalia est peu connectée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque indicateur : il mesure la hiérarchie ou le réseau ?",
+     "categories": [
+      "Hiérarchie (qui commande)",
+      "Réseau (qui est relié)"
+     ],
+     "items": [
+      [
+       "Sièges de grandes firmes",
+       0
+      ],
+      [
+       "Places boursières de rang mondial",
+       0
+      ],
+      [
+       "Liaisons aériennes directes",
+       1
+      ],
+      [
+       "Flux de données échangés avec d’autres villes mondiales",
+       1
+      ]
+     ],
+     "aide": "Un siège ou une bourse, ce sont des fonctions de commandement ; une liaison relie deux villes.",
+     "explication": "**Hiérarchie** : sièges et bourses. **Réseau** : liaisons aériennes et flux de données."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces villes est une ville mondiale ?",
+     "options": [
+      "Portalis : elle commande et elle est très reliée",
+      "Mégalia : elle est de très loin la plus peuplée",
+      "Mégalia : elle a une superficie plus étendue",
+      "Aucune, car il faut dépasser vingt millions d’habitants"
+     ],
+     "reponse": 0,
+     "aide": "Une ville mondiale se définit par ses fonctions de commandement, pas par sa taille.",
+     "explication": "**Portalis** cumule commandement (45 sièges, 2 bourses) et connexion (140 liaisons)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Une ville mondiale se définit par ses ___ de commandement et non par sa ___.",
+     "reponses": [
+      [
+       "fonctions"
+      ],
+      [
+       "taille"
+      ]
+     ],
+     "banque": [
+      "fonctions",
+      "taille",
+      "superficie",
+      "langue"
+     ],
+     "aide": "Relis le tableau : le nombre d’habitants ne décide pas.",
+     "explication": "Une ville mondiale se définit par ses **fonctions** de commandement, pas par sa **taille**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8baade1-ae12-5cbc-a653-e487420131d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La France sur la scène du monde",
+   "competence": "lire-carte",
+   "situation": "Camille prépare un exposé sur le rayonnement de la France. Elle repère d’abord les régions qui comptent le plus, puis range les atouts du pays.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les régions de la France métropolitaine",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "regionsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région où se trouvent la capitale et la majorité des sièges sociaux.",
+     "reponse": [
+      "IDF"
+     ],
+     "aide": "C’est une petite région, au centre du nord du pays.",
+     "explication": "L’**Île-de-France** capte la majorité des sièges sociaux, des IDE et des emplois supérieurs."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région de Toulouse, capitale de l’aéronautique.",
+     "reponse": [
+      "OCC"
+     ],
+     "aide": "Toulouse est dans le Sud-Ouest, entre la Garonne et les Pyrénées.",
+     "explication": "Toulouse est en **Occitanie**, où se concentre l’industrie aéronautique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque domaine à l’atout de la France.",
+     "paires": [
+      [
+       "Politique et militaire",
+       "Membre permanent du Conseil de sécurité"
+      ],
+      [
+       "Linguistique et culturel",
+       "La francophonie"
+      ],
+      [
+       "Touristique",
+       "Première destination mondiale"
+      ]
+     ],
+     "aide": "Relis les trois leviers du rayonnement français.",
+     "explication": "**Politique** : siège permanent. **Culturel** : francophonie. **Touristique** : première destination mondiale."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8baade1-ae12-5cbc-a653-e487420131d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Première en visiteurs, pas en recettes",
+   "competence": "lire-tableau",
+   "situation": "Deux pays imaginaires, Francia et Soleia, rivalisent pour le tourisme. Adam compare leurs chiffres pour savoir qui gagne vraiment.",
+   "documents": [
+    {
+     "id": "tourisme",
+     "type": "tableau",
+     "titre": "Francia et Soleia",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Francia",
+      "Soleia"
+     ],
+     "lignes": [
+      [
+       "Visiteurs étrangers (millions)",
+       "90",
+       "60"
+      ],
+      [
+       "Durée moyenne du séjour (nuits)",
+       "4",
+       "9"
+      ],
+      [
+       "Dépense par visiteur et par nuit (euros)",
+       "100",
+       "100"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tourisme",
+     "enonce": "Touche la case qui donne le nombre de visiteurs étrangers de Francia.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne « Visiteurs » et la colonne de Francia.",
+     "explication": "Francia reçoit **90 millions** de visiteurs, plus que Soleia."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nuitées Soleia totalise-t-elle, en millions ?",
+     "reponse": 540,
+     "unite": "M de nuitées",
+     "aide": "Multiplie le nombre de visiteurs par la durée du séjour : 60 × 9.",
+     "explication": "60 × 9 = **540 millions** de nuitées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles sont les recettes totales de Francia, en milliards d’euros ?",
+     "reponse": 36,
+     "unite": "Md d’euros",
+     "aide": "D’abord 90 × 4 nuitées, puis × 100 euros (attention aux millions).",
+     "explication": "90 × 4 = 360 millions de nuitées ; 360 millions × 100 € = 36 000 millions, soit **36 milliards d’euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison entre les deux pays ?",
+     "options": [
+      "Être première en visiteurs ne garantit pas les premières recettes",
+      "Le pays qui reçoit le plus de visiteurs a toujours les plus hautes recettes",
+      "Les recettes ne dépendent que du nombre de visiteurs accueillis",
+      "La durée des séjours n’a aucun effet sur les recettes touristiques"
+     ],
+     "reponse": 0,
+     "aide": "Calcule les recettes de Soleia : 540 millions de nuitées × 100 euros.",
+     "explication": "Soleia gagne **54 milliards** avec moins de visiteurs : des séjours plus longs rapportent plus. C’est la nuance du cas français."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8baade1-ae12-5cbc-a653-e487420131d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une France inégalement branchée",
+   "competence": "se-reperer-espace",
+   "situation": "Le pays a une influence mondiale, mais tous ses territoires n’en profitent pas. Rayan situe quatre villes et une zone de déprise avant de conclure.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Des territoires très inégaux",
+     "source": "Carte schématique : le tracé de la diagonale est approximatif.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ],
+     "aires": [
+      {
+       "id": "diag",
+       "contour": [
+        [
+         6,
+         49.3
+        ],
+        [
+         5,
+         47.8
+        ],
+        [
+         3.8,
+         46.2
+        ],
+        [
+         2.5,
+         44.8
+        ],
+        [
+         1.3,
+         43.4
+        ],
+        [
+         -0.7,
+         43.6
+        ],
+        [
+         0.5,
+         44.8
+        ],
+        [
+         1.8,
+         46.2
+        ],
+        [
+         3,
+         47.8
+        ],
+        [
+         4,
+         49.3
+        ]
+       ],
+       "motif": "hachures",
+       "etiquette": ""
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville d’un ancien bassin industriel du Nord, en reconversion.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Elle est tout au nord, près de la frontière belge.",
+     "explication": "**D** est Lille, au cœur d’un ancien bassin industriel dont la reconversion n’est pas achevée."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone entourée : la diagonale des faibles densités.",
+     "reponse": [
+      "diag"
+     ],
+     "aide": "C’est une bande qui va du nord-est au sud-ouest.",
+     "explication": "La **diagonale des faibles densités** traverse le pays du Nord-Est au Sud-Ouest : c’est une zone de déprise."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque territoire : il profite de la mondialisation ou il décroche ?",
+     "categories": [
+      "Profite",
+      "Décroche"
+     ],
+     "items": [
+      [
+       "L’Île-de-France",
+       0
+      ],
+      [
+       "Une métropole comme Toulouse ou Lyon",
+       0
+      ],
+      [
+       "Les anciens bassins industriels du Nord et de l’Est",
+       1
+      ],
+      [
+       "La diagonale des faibles densités",
+       1
+      ]
+     ],
+     "aide": "Pense à la reconversion et à la déprise.",
+     "explication": "L’**Île-de-France** et les grandes métropoles profitent ; les **bassins industriels** et la **diagonale** décrochent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’Île-de-France est-elle à la fois un atout et un facteur d’inégalité ?",
+     "options": [
+      "Elle concentre sièges, IDE et emplois supérieurs : le reste du territoire en profite moins",
+      "Elle produit seule toute l’industrie du pays : les autres régions n’ont aucune activité",
+      "Elle attire peu d’investisseurs étrangers : les métropoles de province captent tout",
+      "Elle est la seule région accessible aux touristes : toutes les autres sont fermées"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la concentration du pouvoir de décision.",
+     "explication": "Elle capte la majorité des **sièges sociaux**, des **IDE** et des emplois supérieurs : d’où une France **inégalement branchée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b2fbf69-d783-58a4-bc97-e810c2786446",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les institutions du monde",
+   "competence": "lire-tableau",
+   "situation": "Pour son cours, Malik dresse la liste des grandes institutions qui tentent d’organiser l’économie mondiale.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Quatre institutions économiques",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Date",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "OMC",
+       "1995",
+       "Fixe les règles du commerce"
+      ],
+      [
+       "FMI",
+       "1944",
+       "Prête aux États en crise"
+      ],
+      [
+       "Banque mondiale",
+       "1944",
+       "Finance le développement"
+      ],
+      [
+       "G20",
+       "2008 (sommet des chefs d’État)",
+       "Forum informel"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche la case qui donne la date de création de l’OMC.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne « OMC » puis la colonne « Date ».",
+     "explication": "L’OMC est créée en **1995**, en remplacement du GATT."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à son rôle.",
+     "paires": [
+      [
+       "OMC",
+       "Fixe les règles du commerce et arbitre les litiges"
+      ],
+      [
+       "FMI",
+       "Prête aux États en crise, sous conditions"
+      ],
+      [
+       "Banque mondiale",
+       "Finance le développement"
+      ],
+      [
+       "G20",
+       "Forum informel, sans décision contraignante"
+      ]
+     ],
+     "aide": "Reprends la dernière colonne du tableau.",
+     "explication": "L’**OMC** fixe les règles, le **FMI** prête aux États en crise, la **Banque mondiale** finance le développement, le **G20** oriente sans décider."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces institutions de la plus ancienne à la plus récente.",
+     "items": [
+      "FMI et Banque mondiale (1944)",
+      "Sommet du G7 (1975)",
+      "OMC (1995)",
+      "Sommet du G20 des chefs d’État (2008)"
+     ],
+     "aide": "Les deux institutions de Bretton Woods viennent en premier.",
+     "explication": "1944 (**FMI** et Banque mondiale), 1975 (**G7**), 1995 (**OMC**), 2008 (**G20** des chefs d’État)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b2fbf69-d783-58a4-bc97-e810c2786446",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’escalier de l’intégration",
+   "competence": "analyser-document",
+   "situation": "Quatre pays imaginaires veulent s’unir. Élise explore les marches de l’intégration économique, puis y place de vrais ensembles régionaux.",
+   "documents": [
+    {
+     "id": "marches",
+     "type": "chaine",
+     "titre": "Les quatre marches",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Zone de libre-échange"
+      },
+      {
+       "id": "n2",
+       "texte": "Union douanière"
+      },
+      {
+       "id": "n3",
+       "texte": "Marché unique"
+      },
+      {
+       "id": "n4",
+       "texte": "Monnaie unique"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "defs",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Ce que chaque marche ajoute",
+     "source": "Définitions du cours.",
+     "blocs": [
+      "**Libre-échange** : plus de droits de douane entre les membres.",
+      "**Union douanière** : le libre-échange, plus un tarif douanier commun face aux pays extérieurs.",
+      "**Marché unique** : en plus, les capitaux, les services et les personnes circulent librement.",
+      "**Monnaie unique** : en plus, les membres partagent la même monnaie."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "marches",
+     "enonce": "Touche la marche où les membres adoptent un tarif douanier commun face aux pays extérieurs.",
+     "reponse": [
+      "n2"
+     ],
+     "aide": "Relis la deuxième définition.",
+     "explication": "C’est l’**union douanière** : libre-échange entre membres, plus un tarif commun face au reste du monde."
+    },
+    {
+     "type": "zone",
+     "document": "marches",
+     "enonce": "Touche la marche où l’on adopte une même monnaie.",
+     "reponse": [
+      "n4"
+     ],
+     "aide": "C’est la dernière marche, la plus poussée.",
+     "explication": "La **monnaie unique** est la marche la plus haute : c’est celle de l’euro."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ensemble à son degré d’intégration.",
+     "paires": [
+      [
+       "ACEUM (ex-ALENA)",
+       "Libre-échange"
+      ],
+      [
+       "Mercosur",
+       "Union douanière imparfaite"
+      ],
+      [
+       "Union européenne",
+       "Marché unique et monnaie commune"
+      ]
+     ],
+     "aide": "L’Union européenne est l’ensemble le plus poussé.",
+     "explication": "L’**ACEUM** reste un libre-échange, le **Mercosur** une union douanière imparfaite, l’**Union européenne** va jusqu’au marché unique et à la monnaie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les intégrations régionales sont-elles plus efficaces que l’OMC ?",
+     "options": [
+      "Parce qu’elles réunissent peu d’États, plus faciles à mettre d’accord",
+      "Parce qu’elles imposent des sanctions à tous les États du monde",
+      "Parce qu’elles ont supprimé le principe du consentement des États",
+      "Parce qu’elles regroupent tous les membres de l’ONU sans exception"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit : « plus efficaces, parce que plus resserrées ».",
+     "explication": "Elles sont **plus resserrées** : moins d’États, donc plus de chances de s’entendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b2fbf69-d783-58a4-bc97-e810c2786446",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Payer sa part",
+   "competence": "modeliser",
+   "situation": "Une multinationale imaginaire, Globex, déclare ses profits dans un pays à faible taux d’impôt. Inès calcule ce que changerait l’accord de l’OCDE de 2021.",
+   "documents": [
+    {
+     "id": "globex",
+     "type": "tableau",
+     "titre": "Globex en Fiscalia (pays imaginaire)",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Bénéfice déclaré (millions d’euros)",
+      "Taux d’impôt appliqué"
+     ],
+     "lignes": [
+      [
+       "Fiscalia",
+       "200",
+       "5 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La règle de l’impôt minimum",
+     "auteur": "Résumé de l’accord OCDE de 2021",
+     "source": "Règle résumée pour l’exercice.",
+     "blocs": [
+      "Un impôt minimum mondial de 15 % s’applique aux grandes multinationales. Si le taux réel payé dans un pays est inférieur, un complément est dû. La règle n’est contraignante que si les États la transposent dans leur droit."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "globex",
+     "enonce": "Touche la case qui donne le taux d’impôt réellement appliqué à Globex.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la colonne « Taux d’impôt appliqué ».",
+     "explication": "Globex paie seulement **5 %** : c’est très inférieur aux 15 % du minimum mondial."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel impôt total serait dû avec le taux minimum de 15 % ?",
+     "reponse": 30,
+     "unite": "M€",
+     "aide": "Calcule 15 % de 200 millions d’euros.",
+     "explication": "15 % de 200 = **30 millions d’euros**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Globex paie déjà 5 % de 200 millions : quel complément doit-elle verser ?",
+     "reponse": 20,
+     "unite": "M€",
+     "aide": "Soustrais ce qu’elle paie déjà (10 millions) de l’impôt minimum.",
+     "explication": "5 % de 200 = 10 ; 30 − 10 = **20 millions d’euros** de complément."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque instrument selon sa force.",
+     "categories": [
+      "Volontaire ou faible",
+      "Contraignant s’il est transposé"
+     ],
+     "items": [
+      [
+       "Accord de Paris sur le climat (2015)",
+       0
+      ],
+      [
+       "Impôt minimum mondial de l’OCDE (2021)",
+       1
+      ],
+      [
+       "Conventions de l’OIT sur le travail",
+       0
+      ]
+     ],
+     "aide": "Le seul instrument du texte avec un complément à payer est l’impôt minimum.",
+     "explication": "Le **climat** repose sur des engagements volontaires, l’**OIT** est faible ; l’**impôt minimum** est contraignant une fois transposé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel point commun à tous ces dispositifs de régulation ?",
+     "options": [
+      "Ils reposent sur le consentement des États",
+      "Ils sont imposés par un gouvernement mondial",
+      "Ils ont été votés à l’unanimité par l’OMC",
+      "Ils sont appliqués par une police internationale"
+     ],
+     "reponse": 0,
+     "aide": "Aucun gouvernement mondial n’existe.",
+     "explication": "Tous reposent sur le **consentement** des États : d’où leur fragilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f2abc7-b402-5417-b078-93a8477df85a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les secousses de la mondialisation",
+   "competence": "se-reperer-temps",
+   "situation": "Romane replace sur une frise les événements qui ont fait douter de la mondialisation depuis vingt-cinq ans.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq moments de doute",
+     "source": "Dates exactes.",
+     "debut": 1995,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "seattle",
+       "date": 1999,
+       "nom": "Sommet OMC, Seattle"
+      },
+      {
+       "id": "e2008",
+       "date": 2008,
+       "nom": "Crise financière"
+      },
+      {
+       "id": "e2018",
+       "date": 2018,
+       "nom": "Guerre commerciale"
+      },
+      {
+       "id": "covid",
+       "date": 2020,
+       "nom": "Covid-19"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Guerre en Ukraine"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la crise où un défaut américain est devenu une crise mondiale.",
+     "reponse": [
+      "e2008"
+     ],
+     "aide": "C’est une crise financière, en 2008.",
+     "explication": "La **crise de 2008** a révélé la contagion financière : un défaut américain devient une crise mondiale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque choc à ce qu’il a révélé.",
+     "paires": [
+      [
+       "Crise de 2008",
+       "La contagion financière"
+      ],
+      [
+       "Covid-19",
+       "Des chaînes de valeur étirées à l’extrême"
+      ],
+      [
+       "Guerre en Ukraine",
+       "Une dépendance énergétique est une vulnérabilité"
+      ]
+     ],
+     "aide": "Pense aux masques pour le Covid-19 et au gaz pour l’Ukraine.",
+     "explication": "**2008** : la contagion financière. **2020** : des chaînes trop étirées. **2022** : la vulnérabilité énergétique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la crise financière de la pandémie ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais 2008 de 2020.",
+     "explication": "2020 − 2008 = **12 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f2abc7-b402-5417-b078-93a8477df85a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Masques, médicaments, puces",
+   "competence": "lire-tableau",
+   "situation": "Un hôpital imaginaire dresse la liste de ses dépendances. Bilal mesure ce que la pandémie a révélé de la mondialisation.",
+   "documents": [
+    {
+     "id": "dep",
+     "type": "tableau",
+     "titre": "Trois produits, un seul fournisseur étranger",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Produit",
+      "Part venue d’un seul pays étranger"
+     ],
+     "lignes": [
+      [
+       "Masques chirurgicaux",
+       "90 %"
+      ],
+      [
+       "Principe actif d’un médicament courant",
+       "70 %"
+      ],
+      [
+       "Composants électroniques des appareils",
+       "80 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dep",
+     "enonce": "Touche la case qui indique la plus forte dépendance.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche le pourcentage le plus élevé.",
+     "explication": "**90 %** des masques viennent d’un seul pays : c’est la plus forte dépendance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’hôpital utilise 500 000 masques par mois : combien viennent de ce seul pays ?",
+     "reponse": 450000,
+     "unite": "masques",
+     "aide": "Calcule 90 % de 500 000.",
+     "explication": "90 % de 500 000 = **450 000** masques."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à sa définition.",
+     "paires": [
+      [
+       "Relocalisation",
+       "Produire de nouveau sur son territoire"
+      ],
+      [
+       "Friend-shoring",
+       "Produire chez des partenaires jugés fiables"
+      ],
+      [
+       "Souveraineté",
+       "Maîtriser ses approvisionnements essentiels"
+      ]
+     ],
+     "aide": "Le friend-shoring s’appuie sur la confiance entre pays partenaires.",
+     "explication": "**Relocalisation** : revenir produire chez soi. **Friend-shoring** : produire chez des partenaires fiables. **Souveraineté** : maîtriser l’essentiel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel choc de 2020 cette situation illustre-t-elle ?",
+     "options": [
+      "La vulnérabilité de chaînes de valeur étirées à l’extrême",
+      "La fin complète du commerce mondial de marchandises",
+      "La solidité de chaînes de valeur déjà relocalisées",
+      "L’indépendance de l’Europe vis-à-vis de l’Asie"
+     ],
+     "reponse": 0,
+     "aide": "Quand un seul fournisseur s’arrête, que se passe-t-il ?",
+     "explication": "La pandémie a montré la **vulnérabilité** de chaînes de valeur étirées à l’extrême : masques, médicaments, semi-conducteurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f2abc7-b402-5417-b078-93a8477df85a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Démondialisation ou recomposition ?",
+   "competence": "analyser-document",
+   "situation": "Un économiste imaginaire affirme que le commerce ne s’effondre pas. Louise vérifie son propos sur un graphique, puis classe les réponses des États.",
+   "documents": [
+    {
+     "id": "avis",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le point de vue de l’économiste",
+     "source": "Texte imaginé pour l’exercice.",
+     "blocs": [
+      "Les échanges ne s’effondrent pas : ils changent de chemin. Les entreprises produisent désormais chez des partenaires [[f|fiables]], et les États subventionnent chez eux les usines de batteries et de puces."
+     ]
+    },
+    {
+     "id": "part",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des échanges d’un pays avec ses partenaires proches",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "2015",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Part des échanges",
+       "valeurs": [
+        45,
+        58
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des échanges",
+      "unite": "en %",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "avis",
+     "enonce": "Touche le mot qui dit avec quels partenaires les entreprises produisent désormais.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Les partenaires sont jugés sûrs, dignes de confiance.",
+     "explication": "**Fiables** : c’est l’idée du *friend-shoring*, produire chez des partenaires jugés fiables."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part des échanges avec les proches a-t-elle augmenté entre 2015 et 2024 ?",
+     "reponse": 13,
+     "unite": "points",
+     "aide": "Lis les deux barres, puis soustrais : 58 − 45.",
+     "explication": "58 − 45 = **13 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle interprétation du graphique est la bonne ?",
+     "options": [
+      "Les échanges se régionalisent : la part des proches augmente",
+      "Les échanges s’effondrent : la part des proches baisse",
+      "Les échanges se mondialisent : la part des proches recule",
+      "Les échanges stagnent : la part des proches reste la même"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hauteur des deux barres.",
+     "explication": "La part des proches passe de 45 à 58 % : le commerce se **régionalise**, il ne s’effondre pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure : guerre commerciale ou relocalisation ?",
+     "categories": [
+      "Guerre commerciale",
+      "Relocalisation"
+     ],
+     "items": [
+      [
+       "Droits de douane sur les produits de l’autre pays",
+       0
+      ],
+      [
+       "Contrôle des exportations de technologies",
+       0
+      ],
+      [
+       "Aide à l’installation d’usines de batteries",
+       1
+      ],
+      [
+       "Plan européen pour produire des semi-conducteurs",
+       1
+      ]
+     ],
+     "aide": "Une guerre commerciale vise un adversaire ; une relocalisation cherche à produire chez soi.",
+     "explication": "**Guerre commerciale** : droits de douane et contrôle des technologies. **Relocalisation** : aides aux usines de batteries et de puces."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule du cours.",
+     "texte": "Le commerce mondial ne s’effondre pas : il se ___ et se ___.",
+     "reponses": [
+      [
+       "régionalise"
+      ],
+      [
+       "politise"
+      ]
+     ],
+     "banque": [
+      "régionalise",
+      "politise",
+      "arrête",
+      "uniformise"
+     ],
+     "aide": "Relis le graphique et la phrase sur les États qui subventionnent.",
+     "explication": "Le commerce se **régionalise** et se **politise** : c’est une recomposition."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4068b58-70f8-5d47-9a05-0ac4cbf00c1b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux façons d’entrer dans le monde",
+   "competence": "lire-carte",
+   "situation": "Nora compare la Russie et l’Asie du Sud-Est. Elle commence par situer quatre villes sur la carte de l’Eurasie.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes d’Eurasie",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      25,
+      -12,
+      135,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "moscou",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "singapour",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "hanoi",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "manille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de la Russie.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle est à l’ouest du pays, dans sa partie européenne.",
+     "explication": "**A** est Moscou, capitale de la Russie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la cité-État située à l’extrémité du détroit de Malacca.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle est presque sur l’équateur, au sud de la Malaisie.",
+     "explication": "**B** est Singapour, au bout du détroit de Malacca, sur l’une des grandes routes maritimes du monde."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique : Russie ou Asie du Sud-Est ?",
+     "categories": [
+      "Russie",
+      "Asie du Sud-Est"
+     ],
+     "items": [
+      [
+       "Exporte surtout gaz, pétrole et blé",
+       0
+      ],
+      [
+       "Exporte surtout textile et électronique assemblés",
+       1
+      ],
+      [
+       "Vulnérable aux sanctions occidentales",
+       0
+      ],
+      [
+       "Dépend des donneurs d’ordre étrangers",
+       1
+      ]
+     ],
+     "aide": "L’une vit de la rente, l’autre de l’atelier.",
+     "explication": "La **Russie** vit de ses ressources et subit les sanctions ; l’**Asie du Sud-Est** est un atelier qui dépend de ses donneurs d’ordre."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4068b58-70f8-5d47-9a05-0ac4cbf00c1b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sanctions et décote",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis 2014, la Russie subit des sanctions. Théo replace les dates sur une frise, puis calcule ce qu’une décote change pour un acheteur.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Russie et Asie du Sud-Est, dates clés",
+     "source": "Dates exactes.",
+     "debut": 1960,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "asean",
+       "date": 1967,
+       "nom": "Création ASEAN"
+      },
+      {
+       "id": "urss",
+       "date": 1991,
+       "nom": "Fin de l’URSS"
+      },
+      {
+       "id": "crimee",
+       "date": 2014,
+       "nom": "Annexion Crimée"
+      },
+      {
+       "id": "rcep",
+       "date": 2020,
+       "nom": "Signature du RCEP"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Invasion Ukraine"
+      }
+     ]
+    },
+    {
+     "id": "baril",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un baril, deux prix",
+     "source": "Prix simplifiés, inventés pour l’exercice.",
+     "blocs": [
+      "Sur le marché mondial, un baril de pétrole se vend 100 dollars. Après les sanctions, un acheteur asiatique obtient un baril russe à 80 dollars."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui déclenche les premières sanctions occidentales.",
+     "reponse": [
+      "crimee"
+     ],
+     "aide": "C’est en 2014.",
+     "explication": "L’**annexion de la Crimée** (2014) déclenche les premières sanctions occidentales."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les premières sanctions de leur durcissement massif ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Soustrais 2014 de 2022.",
+     "explication": "2022 − 2014 = **8 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle décote l’acheteur obtient-il, en pourcentage du prix de marché ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Calcule d’abord l’écart : 100 − 80.",
+     "explication": "L’écart est de 20 dollars sur 100 : soit **20 %** de décote."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la Russie vend-elle avec une décote ?",
+     "options": [
+      "Parce que les sanctions réduisent le nombre de ses acheteurs",
+      "Parce que son pétrole est de bien moins bonne qualité qu’ailleurs",
+      "Parce qu’elle offre un prix d’ami à tous ses voisins proches",
+      "Parce que la Chine fixe seule le prix mondial du pétrole brut"
+     ],
+     "reponse": 0,
+     "aide": "Moins d’acheteurs possibles, donc moins de pouvoir de négociation.",
+     "explication": "Les sanctions obligent la Russie à se tourner vers la Chine et l’Inde, **souvent avec de fortes décotes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4068b58-70f8-5d47-9a05-0ac4cbf00c1b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une mer disputée",
+   "competence": "analyser-document",
+   "situation": "L’Asie du Sud-Est coopère, mais elle est aussi un espace de tensions et d’inégalités. Sacha croise une carte et des ordres de grandeur.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La mer de Chine méridionale",
+     "source": "Carte schématique : le tracé de la zone est approximatif.",
+     "fond": "monde",
+     "cadrage": [
+      95,
+      -12,
+      135,
+      28
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "hanoi",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "manille",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "singapour",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ],
+     "aires": [
+      {
+       "id": "mer",
+       "contour": [
+        [
+         107,
+         9
+        ],
+        [
+         110,
+         4
+        ],
+        [
+         115,
+         3
+        ],
+        [
+         119,
+         8
+        ],
+        [
+         121,
+         17
+        ],
+        [
+         117,
+         21
+        ],
+        [
+         111,
+         20
+        ],
+        [
+         109,
+         15
+        ]
+       ],
+       "motif": "hachures"
+      }
+     ]
+    },
+    {
+     "id": "ecart",
+     "type": "tableau",
+     "titre": "Deux membres de l’ASEAN",
+     "source": "Ordres de grandeur arrondis, début des années 2020.",
+     "colonnes": [
+      "",
+      "PIB par habitant (dollars)"
+     ],
+     "lignes": [
+      [
+       "Singapour",
+       "80 000"
+      ],
+      [
+       "Laos",
+       "2 000"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone maritime entourée, objet du contentieux entre Pékin et plusieurs membres de l’ASEAN.",
+     "reponse": [
+      "mer"
+     ],
+     "aide": "C’est la zone entourée, entre le Viêt Nam et les Philippines.",
+     "explication": "La **mer de Chine méridionale** est disputée entre Pékin et plusieurs membres de l’ASEAN."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : coopération ou tension ?",
+     "categories": [
+      "Coopération",
+      "Tension"
+     ],
+     "items": [
+      [
+       "Le RCEP, le plus grand accord commercial du monde",
+       0
+      ],
+      [
+       "Le contentieux en mer de Chine méridionale",
+       1
+      ],
+      [
+       "La dépendance économique à la Chine",
+       1
+      ],
+      [
+       "Le libre-échange entre membres de l’ASEAN",
+       0
+      ]
+     ],
+     "aide": "Un accord de libre-échange rapproche ; un contentieux ou une dépendance crée une tension.",
+     "explication": "**Coopération** : RCEP et libre-échange. **Tension** : contentieux maritime et dépendance à la Chine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de fois Singapour est-elle plus riche par habitant que le Laos ?",
+     "reponse": 40,
+     "unite": "fois",
+     "aide": "Divise 80 000 par 2 000.",
+     "explication": "80 000 ÷ 2 000 = **40** : de fortes inégalités internes à l’ASEAN."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’Asie du Sud-Est profite-t-elle du report des chaînes de production hors de Chine ?",
+     "options": [
+      "Parce qu’elle a une main-d’œuvre nombreuse et une position maritime clé",
+      "Parce qu’elle possède les plus grandes réserves mondiales de gaz naturel",
+      "Parce qu’elle a quitté le RCEP et rétabli de fortes barrières douanières",
+      "Parce qu’elle forme un État unique doté d’une seule monnaie commune"
+     ],
+     "reponse": 0,
+     "aide": "Pense à Malacca et aux ateliers de textile et d’électronique.",
+     "explication": "Une **main-d’œuvre nombreuse** et la position sur les **routes maritimes** attirent les relocalisations (Viêt Nam, Indonésie, Malaisie)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc63f1dc-da3e-553e-bc3b-9d850988d7bd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le circuit de l’argent",
+   "competence": "analyser-document",
+   "situation": "Dans les années 1920, l’argent tourne entre Washington, Berlin et les capitales alliées. Jules suit le circuit sur un schéma avant de ranger les innovations de l’époque.",
+   "documents": [
+    {
+     "id": "circuit",
+     "type": "chaine",
+     "titre": "Le circuit financier des années 1920",
+     "source": "Schéma simplifié du cours.",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "usa",
+       "texte": "États-Unis"
+      },
+      {
+       "id": "all",
+       "texte": "Allemagne"
+      },
+      {
+       "id": "allies",
+       "texte": "Alliés (France, Royaume-Uni)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "usa",
+       "a": "all",
+       "texte": "prêtent"
+      },
+      {
+       "de": "all",
+       "a": "allies",
+       "texte": "paie des réparations"
+      },
+      {
+       "de": "allies",
+       "a": "usa",
+       "texte": "remboursent"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit",
+     "enonce": "Touche le pays qui prête des capitaux à l’Allemagne.",
+     "reponse": [
+      "usa"
+     ],
+     "aide": "Suis la flèche « prêtent ».",
+     "explication": "Ce sont les **États-Unis** qui prêtent à l’Allemagne, notamment grâce au plan Dawes (1924)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque innovation à ce qu’elle change.",
+     "paires": [
+      [
+       "Taylorisme",
+       "Le travail est décomposé en tâches simples"
+      ],
+      [
+       "Fordisme",
+       "Chaîne de montage et hauts salaires"
+      ],
+      [
+       "Publicité",
+       "Elle crée le désir du produit"
+      ],
+      [
+       "Crédit à la consommation",
+       "On achète à tempérament ce qu’on ne peut payer comptant"
+      ]
+     ],
+     "aide": "Le fordisme est lié à la chaîne de montage.",
+     "explication": "**Taylorisme** : tâches simples. **Fordisme** : chaîne et hauts salaires. **Publicité** : désir. **Crédit** : achat à tempérament."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il si les États-Unis cessent de prêter ?",
+     "options": [
+      "Le circuit s’arrête : l’Allemagne ne paie plus, les Alliés non plus",
+      "Le circuit continue : l’Allemagne paie sans difficulté avec son or",
+      "Le circuit s’accélère : les Alliés prêtent à leur tour à Washington",
+      "Le circuit reste inchangé : les réparations sont annulées d’office"
+     ],
+     "reponse": 0,
+     "aide": "Reprends la boucle : qui paie avec l’argent de qui ?",
+     "explication": "Tout repose sur un **circuit unique** : sans prêts américains, plus de réparations, plus de remboursements. C’est ce fil-là qui casse en 1929."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc63f1dc-da3e-553e-bc3b-9d850988d7bd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Produire plus qu’on ne consomme",
+   "competence": "lire-graphique",
+   "situation": "Une usine américaine imaginaire produit toujours davantage, mais ses ouvriers gagnent à peine plus. Paul lit la courbe et une annonce publicitaire de l’époque.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Production et salaires dans une usine imaginaire",
+     "source": "Indices simplifiés (base 100 en 1923), inventés pour l’exercice.",
+     "categories": [
+      "1923",
+      "1924",
+      "1925",
+      "1926",
+      "1927",
+      "1928",
+      "1929"
+     ],
+     "series": [
+      {
+       "nom": "Production",
+       "valeurs": [
+        100,
+        108,
+        117,
+        124,
+        130,
+        138,
+        145
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Salaires",
+       "valeurs": [
+        100,
+        102,
+        104,
+        106,
+        107,
+        109,
+        110
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice",
+      "unite": "base 100 en 1923",
+      "min": 90,
+      "max": 150,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "pub",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Une annonce de l’époque",
+     "source": "Annonce imaginée pour l’exercice.",
+     "blocs": [
+      "Une radio neuve dans votre salon dès ce soir : [[c|payez]] [[c|plus]] [[c|tard]] !"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En 1929, de combien de points la production dépasse-t-elle les salaires ?",
+     "reponse": 35,
+     "unite": "points",
+     "aide": "Lis les deux valeurs de 1929 et soustrais.",
+     "explication": "145 − 110 = **35 points** : la production a bien plus augmenté que les salaires."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche l’année où la production et les salaires sont au même niveau.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Regarde le point de départ des deux courbes.",
+     "explication": "En **1923**, les deux indices valent 100 : l’écart se creuse ensuite."
+    },
+    {
+     "type": "zone",
+     "document": "pub",
+     "enonce": "Touche les mots de l’annonce qui décrivent le crédit à la consommation.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "On reçoit l’objet maintenant, on règle la note après.",
+     "explication": "« **Payez plus tard** » : c’est le crédit à la consommation, qui soutient les achats malgré des salaires qui stagnent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cet écart annonce-t-il une crise ?",
+     "options": [
+      "Les salaires ne suffisent pas à acheter toute la production",
+      "Les usines produisent trop peu pour la demande des ménages",
+      "Les salaires montent plus vite que la production des usines",
+      "Les prix chutent parce que les banques cessent de prêter"
+     ],
+     "reponse": 0,
+     "aide": "Qui achète ce que les usines produisent ?",
+     "explication": "Les salaires progressent **moins vite** que la productivité : la consommation ne suivra pas la production, sauf à crédit."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc63f1dc-da3e-553e-bc3b-9d850988d7bd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Acheter sur marge",
+   "competence": "modeliser",
+   "situation": "Un investisseur imaginaire achète des actions à crédit, comme beaucoup d’Américains de l’époque. Clara calcule ses gains, ses risques, puis regarde qui ne participe pas à la fête.",
+   "documents": [
+    {
+     "id": "marge",
+     "type": "tableau",
+     "titre": "Un achat sur marge",
+     "source": "Exemple inventé pour l’exercice.",
+     "colonnes": [
+      "",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Actions achetées",
+       "100"
+      ],
+      [
+       "Cours d’achat (dollars)",
+       "10"
+      ],
+      [
+       "Somme payée comptant (dollars)",
+       "100"
+      ],
+      [
+       "Somme empruntée au courtier (dollars)",
+       "900"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "gens",
+     "type": "tableau",
+     "titre": "Trois Américains des années 1920",
+     "source": "Personnages imaginés pour l’exercice.",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Edna, employée à Chicago",
+       "Elle achète sa radio et sa voiture à crédit"
+      ],
+      [
+       "Walter, fermier de l’Iowa",
+       "Sa récolte se vend mal : les prix agricoles sont bas"
+      ],
+      [
+       "Jim, ouvrier agricole noir du Mississippi",
+       "Il travaille pour un salaire de misère"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le cours monte à 12 dollars et l’investisseur vend tout. Quel est son gain, une fois l’emprunt remboursé ?",
+     "reponse": 200,
+     "unite": "dollars",
+     "aide": "Valeur de vente : 100 × 12. Retire ensuite les 900 empruntés et les 100 de mise.",
+     "explication": "100 × 12 = 1 200 ; 1 200 − 900 − 100 = **200 dollars** de gain, soit le double de sa mise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel cours l’investisseur perd-il toute sa mise de 100 dollars ?",
+     "reponse": 9,
+     "unite": "dollars",
+     "aide": "Ses 100 actions doivent juste valoir ce qu’il doit : 900 dollars.",
+     "explication": "À **9 dollars**, les 100 actions valent 900 dollars : juste de quoi rembourser le courtier. Toute la mise est perdue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’achat sur marge rend-il la Bourse fragile ?",
+     "options": [
+      "Il parie sur une hausse continue : si les cours baissent, il faut vendre",
+      "Il interdit de vendre ses actions tant que la dette n’est pas payée",
+      "Il réserve les achats aux banquiers, qui ne vendent jamais leurs titres",
+      "Il fait baisser les cours quand le nombre d’acheteurs augmente"
+     ],
+     "reponse": 0,
+     "aide": "Que doit faire l’investisseur quand la valeur de ses actions passe sous sa dette ?",
+     "explication": "L’achat sur marge **parie sur une hausse continue** ; dès que les cours baissent, on doit vendre pour rembourser, ce qui fait baisser encore les cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage : a-t-il profité de la prospérité ou est-il resté à l’écart ?",
+     "categories": [
+      "A profité",
+      "Resté à l’écart"
+     ],
+     "items": [
+      [
+       "Edna, employée à Chicago",
+       0
+      ],
+      [
+       "Walter, fermier de l’Iowa",
+       1
+      ],
+      [
+       "Jim, ouvrier agricole noir du Mississippi",
+       1
+      ]
+     ],
+     "aide": "L’agriculture est en surproduction dès le début de la décennie.",
+     "explication": "**Edna** consomme à crédit ; **Walter** et **Jim** restent à l’écart : les « années folles » ne profitent pas à tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "7762545e-e668-55c1-a4e3-ee8d3d3ee54a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre ans de crise",
+   "competence": "se-reperer-temps",
+   "situation": "Tom place sur une frise les grands moments de la crise de 1929, du krach de New York jusqu’à l’arrivée de Roosevelt.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1929 à 1933",
+     "source": "Dates exactes.",
+     "debut": 1928,
+     "fin": 1934,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "krach",
+       "date": 1929,
+       "nom": "Krach de Wall St."
+      },
+      {
+       "id": "tarif",
+       "date": 1930,
+       "nom": "Tarif Hawley-Smoot"
+      },
+      {
+       "id": "credit",
+       "date": 1931,
+       "nom": "Creditanstalt"
+      },
+      {
+       "id": "bas",
+       "date": 1932,
+       "nom": "Bourse au plus bas"
+      },
+      {
+       "id": "fdr",
+       "date": 1933,
+       "nom": "Roosevelt président"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la mesure protectionniste américaine qui freine le commerce mondial.",
+     "reponse": [
+      "tarif"
+     ],
+     "aide": "C’est un tarif de douane, voté en 1930.",
+     "explication": "Le **tarif Hawley-Smoot** (1930) relève les droits de douane : le commerce international s’effondre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à son sens.",
+     "paires": [
+      [
+       "Panique bancaire",
+       "Ruée des déposants pour retirer leur argent"
+      ],
+      [
+       "Hooverville",
+       "Bidonville de chômeurs américains"
+      ],
+      [
+       "Creditanstalt",
+       "Banque autrichienne dont la faillite étend la panique"
+      ]
+     ],
+     "aide": "Une banque dont la faillite étend la panique à l’Europe, en 1931.",
+     "explication": "La **panique bancaire** est la ruée aux guichets ; les **Hoovervilles** sont des bidonvilles ; la faillite de la **Creditanstalt** gagne l’Europe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le krach de l’arrivée de Roosevelt à la présidence ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais 1929 de 1933.",
+     "explication": "1933 − 1929 = **4 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7762545e-e668-55c1-a4e3-ee8d3d3ee54a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La spirale",
+   "competence": "analyser-document",
+   "situation": "Un petit entrepreneur imaginaire raconte comment la crise l’a emporté. Inès reconstitue l’enchaînement sur un schéma.",
+   "documents": [
+    {
+     "id": "spirale",
+     "type": "chaine",
+     "titre": "La spirale déflationniste",
+     "source": "Schéma du cours.",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "credit",
+       "texte": "Le crédit se ferme"
+      },
+      {
+       "id": "licencie",
+       "texte": "Les entreprises licencient"
+      },
+      {
+       "id": "conso",
+       "texte": "La consommation s’effondre"
+      },
+      {
+       "id": "ferme",
+       "texte": "D’autres entreprises ferment"
+      }
+     ],
+     "liens": [
+      {
+       "de": "credit",
+       "a": "licencie"
+      },
+      {
+       "de": "licencie",
+       "a": "conso"
+      },
+      {
+       "de": "conso",
+       "a": "ferme"
+      },
+      {
+       "de": "ferme",
+       "a": "credit"
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un entrepreneur",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Ma banque a fermé ses guichets : je ne peux plus emprunter pour payer mes fournisseurs. J’ai dû licencier la moitié de mes ouvriers. Mes anciens clients n’achètent plus rien, et le magasin de mon voisin a fermé."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spirale",
+     "enonce": "Touche ce qui suit directement les licenciements dans la spirale.",
+     "reponse": [
+      "conso"
+     ],
+     "aide": "Des chômeurs ont moins d’argent à dépenser.",
+     "explication": "Après les licenciements, **la consommation s’effondre**, ce qui fait fermer d’autres entreprises."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes qui mènent à la spirale.",
+     "items": [
+      "Les banques, engagées en Bourse, ne récupèrent pas leurs prêts",
+      "Panique bancaire : les déposants veulent retirer leur argent",
+      "Le crédit se ferme",
+      "Les entreprises licencient"
+     ],
+     "aide": "Tout commence par les banques elles-mêmes.",
+     "explication": "Les banques perdent leurs prêts, la **panique bancaire** éclate, le **crédit se ferme**, les entreprises **licencient**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phénomène : cause financière ou conséquence sociale ?",
+     "categories": [
+      "Financière",
+      "Sociale"
+     ],
+     "items": [
+      [
+       "Les banques ne récupèrent pas leurs prêts",
+       0
+      ],
+      [
+       "Des milliers de banques font faillite",
+       0
+      ],
+      [
+       "Des millions de chômeurs",
+       1
+      ],
+      [
+       "Les bidonvilles des Hoovervilles",
+       1
+      ],
+      [
+       "La faim et les expulsions",
+       1
+      ]
+     ],
+     "aide": "La crise commence dans la finance, puis touche la vie des gens.",
+     "explication": "Prêts perdus et faillites sont **financiers** ; chômage, bidonvilles, faim et expulsions sont **sociaux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi parle-t-on de spirale ?",
+     "options": [
+      "Parce que chaque étape aggrave la précédente et que tout recommence",
+      "Parce que les prix montent de plus en plus vite chaque année",
+      "Parce que les banques prêtent toujours plus pour relancer l’économie",
+      "Parce que la Bourse remonte par paliers avant de rechuter"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le schéma : la dernière flèche revient au début.",
+     "explication": "La dernière étape ramène au **crédit fermé** : l’enchaînement se répète et la crise s’aggrave."
+    }
+   ]
+  },
+  {
+   "chapitre": "7762545e-e668-55c1-a4e3-ee8d3d3ee54a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Comment la crise traverse l’Atlantique",
+   "competence": "analyser-document",
+   "situation": "La crise commence à New York, mais elle ravage Berlin. Hugo suit la route des capitaux, puis compare le coût humain.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le retrait des capitaux américains",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -90,
+      28,
+      35,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "new-york",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "berlin",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ],
+     "traits": [
+      {
+       "id": "retrait",
+       "points": [
+        "berlin",
+        "new-york"
+       ],
+       "style": "fleche"
+      }
+     ]
+    },
+    {
+     "id": "chomeurs",
+     "type": "tableau",
+     "titre": "Les chômeurs en 1932",
+     "source": "D’après le cours, chiffres arrondis.",
+     "colonnes": [
+      "Pays",
+      "Chômeurs en 1932"
+     ],
+     "lignes": [
+      [
+       "États-Unis",
+       "12 à 15 millions"
+      ],
+      [
+       "Allemagne",
+       "6 millions"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville d’où partent les capitaux qui irriguaient l’économie européenne.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est la place financière américaine du krach.",
+     "explication": "**A** est New York : c’est de là que partaient les prêts américains à l’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la flèche du mouvement de capitaux qui asphyxie l’Europe.",
+     "reponse": [
+      "retrait"
+     ],
+     "aide": "C’est le mouvement qui part d’Europe vers l’Amérique.",
+     "explication": "Les banques américaines **rapatrient** leurs capitaux : l’Europe est asphyxiée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’Allemagne est-elle la plus violemment touchée ?",
+     "options": [
+      "Elle dépendait le plus des prêts américains, rapatriés dès 1929",
+      "Elle exportait presque tout vers la seule Union soviétique",
+      "Elle avait abandonné l’étalon-or bien avant le krach",
+      "Elle ne possédait ni banques ni industries importantes"
+     ],
+     "reponse": 0,
+     "aide": "Pense au plan Dawes et au circuit des réparations.",
+     "explication": "L’Allemagne, la plus dépendante des prêts américains, est **la plus violemment touchée** quand ils sont rapatriés."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mécanisme à son effet.",
+     "paires": [
+      [
+       "Retrait des capitaux américains",
+       "L’Europe est asphyxiée"
+      ],
+      [
+       "Faillite de la Creditanstalt (1931)",
+       "La panique gagne le continent"
+      ],
+      [
+       "Tarif Hawley-Smoot (1930)",
+       "Le commerce international s’effondre"
+      ]
+     ],
+     "aide": "Relis les trois étapes de la contagion.",
+     "explication": "Retrait des capitaux, faillite de la **Creditanstalt** et **protectionnisme** font de la crise américaine une crise mondiale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour illustrer le protectionnisme, un droit de douane de 20 % est ajouté à un produit de 50 dollars. Quel est son prix ?",
+     "reponse": 60,
+     "unite": "dollars",
+     "aide": "20 % de 50 dollars = 10 dollars.",
+     "explication": "50 + 10 = **60 dollars** : plus un produit importé coûte cher, moins on en achète, et le commerce recule."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7521023-9e88-5f03-be26-dcf17d503c51",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois réponses à la même crise",
+   "competence": "lire-tableau",
+   "situation": "Face à la crise, trois pays prennent des chemins très différents. Lina les compare dans un tableau.",
+   "documents": [
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Trois politiques face à la crise",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "New Deal",
+      "Front populaire",
+      "Économie nazie"
+     ],
+     "lignes": [
+      [
+       "Dirigeant ou coalition",
+       "Roosevelt (1933)",
+       "Coalition de gauche (1936)",
+       "Hitler (1933)"
+      ],
+      [
+       "Régime",
+       "Démocratie",
+       "Démocratie",
+       "Dictature"
+      ],
+      [
+       "Débouché",
+       "L’État régulateur permanent",
+       "Des acquis sociaux durables",
+       "La guerre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reponses",
+     "enonce": "Touche la case qui donne le débouché de la politique nazie.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Cherche la ligne « Débouché », dernière colonne.",
+     "explication": "Le réarmement et l’autarcie nazis débouchent sur la **guerre**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque politique à son moyen principal.",
+     "paires": [
+      [
+       "New Deal",
+       "Grands travaux et droits sociaux"
+      ],
+      [
+       "Front populaire",
+       "Hausse des salaires et droits sociaux"
+      ],
+      [
+       "Économie nazie",
+       "Grands travaux et réarmement"
+      ]
+     ],
+     "aide": "Un seul des trois moyens parle d’armement.",
+     "explication": "Le **New Deal** mêle grands travaux et droits sociaux, le **Front populaire** les salaires, l’**économie nazie** le réarmement."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque politique : élargit-elle les droits ou supprime-t-elle les libertés ?",
+     "categories": [
+      "Élargit les droits",
+      "Supprime les libertés"
+     ],
+     "items": [
+      [
+       "Le New Deal de Roosevelt",
+       0
+      ],
+      [
+       "Le Front populaire",
+       0
+      ],
+      [
+       "L’économie de guerre nazie",
+       1
+      ]
+     ],
+     "aide": "Regarde la ligne « Régime ».",
+     "explication": "Les **démocraties** élargissent les droits ; la **dictature** nazie supprime les libertés."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7521023-9e88-5f03-be26-dcf17d503c51",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les premières vacances",
+   "competence": "se-reperer-temps",
+   "situation": "En 1936, une ouvrière imaginaire découvre les congés payés. Yanis replace la date sur une frise et calcule ce que la réforme a changé.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Politiques de crise, 1933-1939",
+     "source": "Dates exactes.",
+     "debut": 1933,
+     "fin": 1939,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "fdr",
+       "date": 1933,
+       "nom": "Roosevelt au pouvoir"
+      },
+      {
+       "id": "wagner",
+       "date": 1935,
+       "nom": "Wagner Act"
+      },
+      {
+       "id": "matignon",
+       "date": 1936,
+       "nom": "Accords Matignon"
+      },
+      {
+       "id": "guerre",
+       "date": 1939,
+       "nom": "Début de la guerre"
+      }
+     ]
+    },
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un été de 1936",
+     "source": "Témoignage imaginé pour l’exercice.",
+     "blocs": [
+      "Avant l’été 1936, je travaillais 48 heures par semaine. Après les accords, nous sommes passés à 40 heures, et j’ai eu deux semaines de congés payés. Je n’avais jamais vu la mer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui donne aux ouvriers français les congés payés.",
+     "reponse": [
+      "matignon"
+     ],
+     "aide": "Ils suivent les grèves avec occupation d’usines de 1936.",
+     "explication": "Les **accords Matignon** (1936) apportent les congés payés, la semaine de 40 heures et des hausses de salaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures de moins par semaine l’ouvrière travaille-t-elle après les accords ?",
+     "reponse": 8,
+     "unite": "heures",
+     "aide": "Soustrais 40 de 48.",
+     "explication": "48 − 40 = **8 heures** de moins par semaine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à son pays.",
+     "paires": [
+      [
+       "Wagner Act",
+       "États-Unis"
+      ],
+      [
+       "Congés payés",
+       "France"
+      ],
+      [
+       "Réarmement",
+       "Allemagne nazie"
+      ]
+     ],
+     "aide": "Le Wagner Act porte le nom d’un sénateur américain.",
+     "explication": "Le **Wagner Act** (1935) est américain, les **congés payés** (1936) français, le **réarmement** allemand."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que reste-t-il des accords Matignon malgré l’échec partiel de la relance ?",
+     "options": [
+      "Des acquis sociaux durables : congés payés et semaine de 40 heures",
+      "Une hausse des salaires qui résiste durablement à l’inflation",
+      "Un retour rapide au libéralisme sans aucun droit nouveau",
+      "Une économie de guerre qui finance le réarmement du pays"
+     ],
+     "reponse": 0,
+     "aide": "La hausse de salaires est immédiate ; qu’est-ce qui dure ?",
+     "explication": "La relance échoue en partie, mais les **acquis sociaux** (congés payés, 40 heures, conventions collectives) **restent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7521023-9e88-5f03-be26-dcf17d503c51",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Même crise, régimes opposés",
+   "competence": "analyser-document",
+   "situation": "Face à la crise, les États interviennent partout. Sacha relie une idée de Keynes à des mesures concrètes, puis compare démocraties et dictature.",
+   "documents": [
+    {
+     "id": "keynes",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’idée de Keynes",
+     "source": "Résumé écrit pour l’exercice.",
+     "blocs": [
+      "Pour l’économiste John Maynard Keynes, quand les ménages et les entreprises dépensent moins, l’État doit dépenser davantage pour relancer la demande."
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Des mesures, des pays",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mesure",
+      "Pays"
+     ],
+     "lignes": [
+      [
+       "Séparation des banques de dépôt et d’affaires (Glass-Steagall)",
+       "États-Unis"
+      ],
+      [
+       "Reconnaissance des syndicats (Wagner Act, 1935)",
+       "États-Unis"
+      ],
+      [
+       "Conventions collectives et congés payés",
+       "France"
+      ],
+      [
+       "Grands travaux et réarmement",
+       "Allemagne nazie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure applique l’idée de Keynes ?",
+     "options": [
+      "Les grands travaux publics financés par l’État pour relancer la demande",
+      "La baisse des dépenses publiques pour équilibrer le budget de l’État",
+      "La suppression de toutes les règles encadrant les banques privées",
+      "L’interdiction des syndicats pour réduire le coût du travail"
+     ],
+     "reponse": 0,
+     "aide": "L’État doit dépenser davantage, pas moins.",
+     "explication": "Les **grands travaux** (Tennessee Valley Authority, Works Progress Administration) sont l’application de l’idée de Keynes."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la mesure qui reconnaît les syndicats américains.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le nom d’une loi de 1935.",
+     "explication": "Le **Wagner Act** (1935) reconnaît les syndicats aux États-Unis."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure : démocratie qui élargit les droits ou dictature ?",
+     "categories": [
+      "Démocraties qui élargissent les droits",
+      "Dictature qui supprime les libertés"
+     ],
+     "items": [
+      [
+       "Le Wagner Act américain (1935)",
+       0
+      ],
+      [
+       "Les congés payés français (1936)",
+       0
+      ],
+      [
+       "Le Social Security Act américain (1935)",
+       0
+      ],
+      [
+       "Le réarmement dans un régime sans libertés",
+       1
+      ]
+     ],
+     "aide": "Une seule mesure vient d’un régime autoritaire.",
+     "explication": "Wagner Act, congés payés et Social Security Act **élargissent les droits** ; le réarmement nazi s’inscrit dans une **dictature**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la comparaison.",
+     "texte": "Face à la même crise, les démocraties ___ les droits, les dictatures suppriment les ___.",
+     "reponses": [
+      [
+       "élargissent"
+      ],
+      [
+       "libertés"
+      ]
+     ],
+     "banque": [
+      "élargissent",
+      "libertés",
+      "réduisent",
+      "frontières"
+     ],
+     "aide": "C’est la phrase que le chapitre demande de tenir jusqu’au bout.",
+     "explication": "Les démocraties **élargissent** les droits, les dictatures suppriment les **libertés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que gagnent les régimes autoritaires de la crise ?",
+     "options": [
+      "Leur meilleur argument : l’efficacité contre le désordre",
+      "La confiance durable des marchés financiers mondiaux",
+      "Le soutien unanime des syndicats de tous les pays",
+      "Une baisse immédiate du chômage dans toute l’Europe"
+     ],
+     "reponse": 0,
+     "aide": "La crise a affaibli les démocraties libérales.",
+     "explication": "La crise leur fournit leur **meilleur argument** : l’**efficacité** contre le **désordre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c65cd16c-41c7-5380-8068-b2686297a5f9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les sièges de l’Europe",
+   "competence": "lire-carte",
+   "situation": "Emma prépare un quiz sur les institutions européennes. Elle repère trois villes sur la carte de l’Europe occidentale.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes de l’Union européenne",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "cadrage": [
+      -2,
+      46,
+      12,
+      54
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "bruxelles",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "strasbourg",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "francfort",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où siège la Banque centrale européenne.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est la grande place financière allemande, sur le Main.",
+     "explication": "La BCE siège à **Francfort** (C) : elle gère l’euro."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le siège officiel du Parlement européen.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cette ville est en Alsace, près de la frontière allemande.",
+     "explication": "Le Parlement européen a son siège officiel à **Strasbourg** (B)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque atout de l’Union à ce qu’il produit.",
+     "paires": [
+      [
+       "Marché unique",
+       "Le plus vaste espace économique intégré du monde"
+      ],
+      [
+       "Euro",
+       "Deuxième monnaie de réserve mondiale"
+      ],
+      [
+       "RGPD",
+       "Une norme européenne qui s’impose hors de l’Union"
+      ]
+     ],
+     "aide": "Relis les atouts de l’Union : marché, monnaie, normes.",
+     "explication": "Le **marché unique** est le plus vaste espace intégré, l’**euro** la deuxième monnaie de réserve, le **RGPD** un exemple de pouvoir normatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "c65cd16c-41c7-5380-8068-b2686297a5f9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’effet Bruxelles en action",
+   "competence": "analyser-texte",
+   "situation": "Une entreprise de jouets imaginaire veut vendre en Europe. Nadia découvre pourquoi les règles européennes finissent par s’appliquer bien au-delà de l’Union.",
+   "documents": [
+    {
+     "id": "jouets",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chez Jouetka",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Pour entrer sur le marché de l’Union européenne, Jouetka doit respecter les [[n|normes]] européennes de sécurité. L’entreprise a décidé de les appliquer à tous ses jouets, y compris ceux vendus en Asie, car il coûte moins cher de fabriquer une seule version."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jouets",
+     "enonce": "Touche le mot qui désigne ce que Jouetka doit respecter pour vendre en Europe.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Ce sont les règles de sécurité fixées par l’Union.",
+     "explication": "Ce sont les **normes** européennes : l’Union a un pouvoir normatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Jouetka applique-t-elle ces règles même hors d’Europe ?",
+     "options": [
+      "Parce qu’une seule version du produit coûte moins cher",
+      "Parce que l’Union a une armée qui contrôle ses usines",
+      "Parce que l’OMC interdit de vendre des produits différents",
+      "Parce que les jouets européens sont plus chers partout"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de l’article.",
+     "explication": "C’est l’« **effet Bruxelles** » : produire une seule version coûte moins cher, donc les normes européennes s’imposent hors de l’Union."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique : force ou faiblesse de l’Union ?",
+     "categories": [
+      "Force",
+      "Faiblesse"
+     ],
+     "items": [
+      [
+       "Le marché unique",
+       0
+      ],
+      [
+       "Un pouvoir normatif comme le RGPD",
+       0
+      ],
+      [
+       "Pas d’armée commune",
+       1
+      ],
+      [
+       "Une politique étrangère décidée à l’unanimité",
+       1
+      ],
+      [
+       "Une monnaie commune à de nombreux États",
+       0
+      ]
+     ],
+     "aide": "Ce qui unit l’Union est une force ; ce qui la divise ou la désarme est une faiblesse.",
+     "explication": "**Forces** : marché unique, normes, euro. **Faiblesses** : pas d’armée commune, unanimité en politique étrangère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un vote sur une sanction diplomatique : 26 États pour, 1 contre. Que se passe-t-il ?",
+     "options": [
+      "Elle n’est pas adoptée : la politique étrangère exige l’unanimité",
+      "Elle est adoptée : la majorité suffit en politique étrangère",
+      "Elle est adoptée après un vote du seul Parlement européen",
+      "Elle est confiée à la Commission, qui tranche à la majorité"
+     ],
+     "reponse": 0,
+     "aide": "Relis comment la PESC prend ses décisions.",
+     "explication": "La **PESC** se décide à l’**unanimité** : un seul État peut bloquer la politique étrangère."
+    }
+   ]
+  },
+  {
+   "chapitre": "c65cd16c-41c7-5380-8068-b2686297a5f9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Géant économique, nain politique ?",
+   "competence": "argumenter",
+   "situation": "Une formule classique résume la puissance européenne. Adrien la confronte aux dates de la construction européenne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères de l’Union",
+     "source": "Dates exactes.",
+     "debut": 1955,
+     "fin": 2025,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "rome",
+       "date": 1957,
+       "nom": "Traité de Rome"
+      },
+      {
+       "id": "unique",
+       "date": 1993,
+       "nom": "Marché unique"
+      },
+      {
+       "id": "euro",
+       "date": 2002,
+       "nom": "Billets en euros"
+      },
+      {
+       "id": "relance",
+       "date": 2020,
+       "nom": "Emprunt commun"
+      },
+      {
+       "id": "sanctions",
+       "date": 2022,
+       "nom": "Sanctions communes"
+      }
+     ]
+    },
+    {
+     "id": "formule",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La formule",
+     "source": "Formule classique, citée dans le cours.",
+     "blocs": [
+      "« Géant économique, nain politique »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où les États ont emprunté en commun pour financer un plan de relance.",
+     "reponse": [
+      "relance"
+     ],
+     "aide": "C’est la réponse à la pandémie.",
+     "explication": "En **2020**, l’emprunt commun est un pas fédéral inédit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2022, depuis combien d’années les billets en euros circulent-ils ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais 2002 de 2022.",
+     "explication": "2022 − 2002 = **20 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque épreuve à ce qu’elle a montré.",
+     "paires": [
+      [
+       "Pandémie (2020)",
+       "Un plan de relance emprunté en commun"
+      ],
+      [
+       "Ukraine (depuis 2022)",
+       "Des sanctions communes et un début de politique de défense"
+      ]
+     ],
+     "aide": "Les deux épreuves ont révélé une capacité d’action inattendue.",
+     "explication": "La **pandémie** a mené à un emprunt commun ; la guerre en **Ukraine** à des sanctions communes et à un début de politique de défense."
+    },
+    {
+     "type": "choix",
+     "enonce": "La formule « géant économique, nain politique » est-elle toujours exacte ?",
+     "options": [
+      "À nuancer : la pandémie et l’Ukraine ont montré une capacité d’agir",
+      "Exacte : l’Union n’a jamais agi en commun sur aucun sujet",
+      "Fausse : l’Union dispose d’une armée plus forte que l’OTAN",
+      "Sans objet : l’Union n’a plus de puissance économique"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière section du cours : la formule est « à discuter, pas à réciter ».",
+     "explication": "La formule est **à nuancer** : l’Union a montré, en 2020 et depuis 2022, une **capacité d’action** qu’on ne lui prêtait plus."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La défense des États de l’Union repose largement sur l’___, faute d’___ commune.",
+     "reponses": [
+      [
+       "OTAN"
+      ],
+      [
+       "armée"
+      ]
+     ],
+     "banque": [
+      "OTAN",
+      "armée",
+      "ONU",
+      "monnaie"
+     ],
+     "aide": "C’est la principale faiblesse politique de l’Union.",
+     "explication": "Faute d’**armée** commune, la défense repose largement sur l’**OTAN**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f08f625c-3360-52eb-91e1-dbefddafe420",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De crise en crise",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis 2008, l’Union européenne avance de crise en crise. Léa place cinq moments sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq épreuves de l’Union",
+     "source": "Dates exactes.",
+     "debut": 2008,
+     "fin": 2024,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "dette",
+       "date": 2010,
+       "nom": "Crise de la dette"
+      },
+      {
+       "id": "migr",
+       "date": 2015,
+       "nom": "Crise migratoire"
+      },
+      {
+       "id": "ref",
+       "date": 2016,
+       "nom": "Référendum du Brexit"
+      },
+      {
+       "id": "retrait",
+       "date": 2020,
+       "nom": "Retrait britannique"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Guerre en Ukraine"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où les Britanniques votent pour quitter l’Union.",
+     "reponse": [
+      "ref"
+     ],
+     "aide": "Le vote a lieu le 23 juin 2016.",
+     "explication": "Le **référendum du 23 juin 2016** donne 51,9 % pour la sortie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque crise à ce qu’elle révèle.",
+     "paires": [
+      [
+       "Crise de la dette",
+       "Une monnaie unique sans budget commun est instable"
+      ],
+      [
+       "Crise migratoire",
+       "Le règlement de Dublin est inapplicable"
+      ],
+      [
+       "Brexit",
+       "L’adhésion est réversible"
+      ]
+     ],
+     "aide": "Le Brexit est le premier retrait de l’histoire de l’Union.",
+     "explication": "La **dette** a révélé l’instabilité d’une monnaie sans budget commun, les **migrations** l’échec de Dublin, le **Brexit** la réversibilité de l’adhésion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le référendum britannique du retrait effectif ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais 2016 de 2020.",
+     "explication": "2020 − 2016 = **4 ans** (retrait effectif le 31 janvier 2020)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f08f625c-3360-52eb-91e1-dbefddafe420",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le poids du pays d’entrée",
+   "competence": "analyser-document",
+   "situation": "En 2015, plus d’un million de personnes arrivent en Europe. Karim comprend pourquoi la règle de Dublin met deux pays sous pression.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La Méditerranée et l’Europe du Sud",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      -10,
+      30,
+      45,
+      60
+     ],
+     "regionsCliquables": true
+    },
+    {
+     "id": "dublin",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La règle de Dublin",
+     "source": "Règle résumée pour l’exercice.",
+     "blocs": [
+      "La demande d’asile d’un migrant est examinée par le pays où il est [[e|entré]] dans l’Union européenne."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dublin",
+     "enonce": "Touche le mot qui dit quel pays est responsable de la demande d’asile.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "La règle regarde la porte par laquelle le migrant est arrivé.",
+     "explication": "Le pays responsable est celui où le migrant est **entré** dans l’Union."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux pays d’entrée sur qui la règle de Dublin fait peser la crise de 2015.",
+     "reponse": [
+      "GRC",
+      "ITA"
+     ],
+     "multiple": true,
+     "aide": "Ce sont deux pays du sud de l’Europe, au bord de la Méditerranée.",
+     "explication": "La **Grèce** et l’**Italie** sont les premiers pays d’entrée : la règle de Dublin fait peser la demande d’asile sur eux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Imaginons un million d’arrivées, dont 800 000 par les deux pays d’entrée (chiffres inventés). Quelle part pèse sur eux, en % ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Divise 800 000 par 1 000 000.",
+     "explication": "800 000 ÷ 1 000 000 = 0,8, soit **80 %** : les pays d’entrée sont très vite débordés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le règlement de Dublin devient-il inapplicable en 2015 ?",
+     "options": [
+      "Il fait peser la demande d’asile sur les pays d’entrée, vite débordés",
+      "Il interdit à tout migrant de déposer une demande d’asile en Europe",
+      "Il répartit les demandeurs à parts égales entre tous les États membres",
+      "Il confie l’examen de chaque dossier à la seule agence Frontex"
+     ],
+     "reponse": 0,
+     "aide": "Que devient un pays qui doit traiter presque toutes les demandes ?",
+     "explication": "Le règlement fait peser la demande d’asile sur le **pays d’entrée** ; les désaccords sur la répartition n’ont jamais été surmontés."
+    }
+   ]
+  },
+  {
+   "chapitre": "f08f625c-3360-52eb-91e1-dbefddafe420",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des crises, des outils",
+   "competence": "analyser-document",
+   "situation": "Chaque crise a fragilisé l’Union, mais l’a aussi obligée à se doter d’outils. Paul lit le résultat du référendum britannique puis un tableau des réponses.",
+   "documents": [
+    {
+     "id": "vote",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Référendum du 23 juin 2016",
+     "source": "Résultats arrondis à 0,1 point.",
+     "categories": [
+      "Sortie",
+      "Maintien"
+     ],
+     "series": [
+      {
+       "nom": "Part des voix",
+       "valeurs": [
+        51.9,
+        48.1
+       ]
+      }
+     ]
+    },
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Les outils nés des crises",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Crise",
+      "Outil qui en sort"
+     ],
+     "lignes": [
+      [
+       "Dette (2010-2015)",
+       "MES, BCE, règles budgétaires"
+      ],
+      [
+       "Migrations (2015)",
+       "Frontex renforcée, pacte de 2024"
+      ],
+      [
+       "État de droit (depuis 2017)",
+       "Article 7, conditionnalité budgétaire"
+      ],
+      [
+       "Ukraine (depuis 2022)",
+       "Sanctions communes, élargissement rouvert"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel écart, en points, sépare la sortie du maintien ?",
+     "reponse": 3.8,
+     "unite": "points",
+     "aide": "Soustrais 48,1 de 51,9.",
+     "explication": "51,9 − 48,1 = **3,8 points** d’écart : la sortie l’emporte de peu."
+    },
+    {
+     "type": "zone",
+     "document": "vote",
+     "enonce": "Touche le secteur qui l’a emporté.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est le plus grand des deux secteurs.",
+     "explication": "La **sortie** l’emporte avec 51,9 % : retrait effectif le 31 janvier 2020."
+    },
+    {
+     "type": "zone",
+     "document": "outils",
+     "enonce": "Touche la case qui cite la conditionnalité budgétaire.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cet outil sert face aux atteintes à l’État de droit.",
+     "explication": "La **conditionnalité budgétaire**, avec l’article 7, répond aux atteintes à l’**État de droit**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle le Brexit sur l’adhésion à l’Union ?",
+     "options": [
+      "Qu’elle est réversible : un État peut la quitter",
+      "Qu’elle est définitive : aucun État ne peut partir",
+      "Qu’elle dépend d’un vote de la seule Commission",
+      "Qu’elle suppose l’adoption obligatoire de l’euro"
+     ],
+     "reponse": 0,
+     "aide": "C’est le premier retrait de l’histoire de la construction européenne.",
+     "explication": "L’adhésion est **réversible** : le Royaume-Uni est le premier État à la quitter."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles limites structurelles reviennent à chaque crise ?",
+     "options": [
+      "Un budget minuscule et des décisions lentes à vingt-sept",
+      "Un budget démesuré et des décisions trop rapides",
+      "Une armée trop coûteuse et une monnaie trop faible",
+      "Un élargissement arrêté et des frontières fermées"
+     ],
+     "reponse": 0,
+     "aide": "Pense au budget de l’Union (environ 1 % du revenu national brut).",
+     "explication": "Un **budget minuscule** (environ 1 % du revenu national brut) et des **décisions lentes** : aucune réforme ne les a encore traités."
+    }
+   ]
+  }
+ ]
+}

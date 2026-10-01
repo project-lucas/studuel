@@ -1,0 +1,1915 @@
+{
+ "niveau": "Tle",
+ "matiere": "maths-techno",
+ "exercices": [
+  {
+   "chapitre": "3812a910-20c7-5d22-8eb6-286ae2406786",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le point bas de la courbe",
+   "competence": "lire-tableau",
+   "situation": "Un élève étudie g(x) = x + 9/x pour x > 0 avec un tableur. Il a relevé quelques valeurs avant de passer à la dérivée.",
+   "documents": [
+    {
+     "id": "vals",
+     "type": "tableau",
+     "titre": "Valeurs de g(x) = x + 9/x",
+     "colonnes": [
+      "x",
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+     ],
+     "lignes": [
+      [
+       "g(x)",
+       10,
+       "6,5",
+       6,
+       "6,25",
+       "7,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vals",
+     "enonce": "Touche la plus petite valeur de g(x) relevée dans le tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Compare les cinq valeurs de la ligne g(x).",
+     "explication": "La plus petite valeur relevée est **6**, obtenue pour x = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule g(1,5), valeur de x + 9/x pour x = 1,5.",
+     "reponse": 7.5,
+     "aide": "Calcule d’abord 9 ÷ 1,5.",
+     "explication": "9 ÷ 1,5 = 6, donc g(1,5) = 1,5 + 6 = **7,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La dérivée de g est g′(x) = 1 − 9/x². Calcule g′(2).",
+     "reponse": -1.25,
+     "aide": "Remplace x par 2 : 9 ÷ 2² = 9 ÷ 4.",
+     "explication": "g′(2) = 1 − 9/4 = **−1,25** : g′ est négative, donc g décroît près de x = 2."
+    }
+   ]
+  },
+  {
+   "chapitre": "3812a910-20c7-5d22-8eb6-286ae2406786",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le coût moyen de l’atelier",
+   "competence": "modeliser",
+   "situation": "Un atelier fabrique q centaines de pièces. Le coût total C(q), en centaines d’euros, est relevé pour quelques quantités. On cherche à rendre le coût moyen le plus bas possible.",
+   "documents": [
+    {
+     "id": "cout",
+     "type": "tableau",
+     "titre": "Coût total C(q)",
+     "colonnes": [
+      "q (centaines)",
+      "1",
+      "2",
+      "4",
+      "9",
+      "12",
+      "15"
+     ],
+     "lignes": [
+      [
+       "C(q) (centaines d’euros)",
+       111,
+       120,
+       156,
+       351,
+       540,
+       783
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "mod",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "C(q) = 3q² + 108 pour q > 0.",
+      "Coût moyen : C_M(q) = C(q) ÷ q = 3q + 108/q.",
+      "Sa dérivée : C_M′(q) = 3 − 108/q² = 3(q − 6)(q + 6) ÷ q²."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cout",
+     "enonce": "Touche le coût total de fabrication de 400 pièces.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "400 pièces font q = 4 centaines.",
+     "explication": "Pour q = 4, le coût total est de **156** centaines d’euros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coût moyen pour q = 4, c’est-à-dire C(4) ÷ 4.",
+     "reponse": 39,
+     "unite": "€",
+     "aide": "Divise le coût total lu dans le tableau par 4.",
+     "explication": "156 ÷ 4 = **39**, soit 39 € par pièce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule C_M′(3) avec la formule du document.",
+     "reponse": -9,
+     "aide": "Calcule 108 ÷ 3² avant de soustraire.",
+     "explication": "C_M′(3) = 3 − 108/9 = 3 − 12 = **−9** : le coût moyen baisse encore en q = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle quantité q (en centaines) le coût moyen est-il minimal ?",
+     "reponse": 6,
+     "unite": "centaines",
+     "aide": "Sur ]0 ; +∞[, le signe de C_M′(q) est celui de q − 6.",
+     "explication": "C_M′ est négative avant 6 et positive après : le minimum est en **q = 6**, soit 600 pièces."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est alors le coût moyen minimal, en euros par pièce ?",
+     "reponse": 36,
+     "unite": "€",
+     "aide": "Calcule C_M(6) = 3 × 6 + 108 ÷ 6.",
+     "explication": "C_M(6) = 18 + 18 = **36** € par pièce."
+    }
+   ]
+  },
+  {
+   "chapitre": "3812a910-20c7-5d22-8eb6-286ae2406786",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La boîte la plus économe",
+   "competence": "modeliser",
+   "situation": "Une entreprise veut une boîte ouverte, à base carrée de côté x dm et de hauteur h dm, de volume 32 dm³. Elle cherche le côté qui utilise le moins de carton.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Cahier des charges",
+     "blocs": [
+      "Volume : x² × h = 32, donc h = 32/x².",
+      "Surface de carton : S = x² + 4xh (le fond et quatre côtés)."
+     ]
+    },
+    {
+     "id": "haut",
+     "type": "tableau",
+     "titre": "Hauteur selon le côté",
+     "colonnes": [
+      "x (dm)",
+      "1",
+      "2",
+      "8",
+      "16"
+     ],
+     "lignes": [
+      [
+       "h (dm)",
+       32,
+       8,
+       "0,5",
+       "0,125"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la surface S pour x = 8 dm, avec x² + 4xh et la hauteur du tableau.",
+     "reponse": 80,
+     "unite": "dm²",
+     "aide": "Lis h pour x = 8, puis calcule 8² + 4 × 8 × h.",
+     "explication": "S = 64 + 4 × 8 × 0,5 = 64 + 16 = **80** dm²."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la méthode dans le bon ordre.",
+     "items": [
+      "Exprimer h en fonction de x",
+      "Écrire S(x) = x² + 128/x",
+      "Dériver S et réduire au même dénominateur",
+      "Étudier le signe du numérateur x³ − 64",
+      "Calculer le minimum avec S"
+     ],
+     "aide": "On modélise d’abord, on dérive ensuite, on calcule le minimum en dernier.",
+     "explication": "On exprime **h**, on écrit **S(x)**, on **dérive**, on étudie le **signe**, puis on calcule le minimum avec **S**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "S(x) = x² + 128/x a pour dérivée S′(x) = 2x − 128/x². Calcule S′(2).",
+     "reponse": -28,
+     "aide": "Calcule 128 ÷ 2² = 32.",
+     "explication": "S′(2) = 4 − 32 = **−28** : à x = 2, la surface diminue encore quand x augmente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "S′(x) = 2(x³ − 64) ÷ x² s’annule pour quelle valeur de x ? (en dm)",
+     "reponse": 4,
+     "unite": "dm",
+     "aide": "Cherche x tel que x³ = 64.",
+     "explication": "x³ = 64 donne **x = 4** dm, valeur où S′ passe du négatif au positif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface minimale de carton, en dm² ?",
+     "reponse": 48,
+     "unite": "dm²",
+     "aide": "Calcule S(4) = 4² + 128 ÷ 4.",
+     "explication": "S(4) = 16 + 32 = **48** dm², pour une hauteur h = 2 dm."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8e65288-96c8-5629-83d7-53c50b6219a7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le prix du forfait",
+   "competence": "calculer",
+   "situation": "Le prix mensuel d’un forfait de téléphone a été relevé trois années de suite. Nina veut mesurer ses évolutions.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prix mensuel du forfait",
+     "colonnes": [
+      "Année",
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       40,
+       44,
+       55
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche le prix du forfait en 2022.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Repère la colonne 2022.",
+     "explication": "En 2022, le forfait coûte **44 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du prix entre 2021 et 2022, en pourcentage ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Calcule (44 − 40) ÷ 40.",
+     "explication": "(44 − 40) ÷ 40 = 0,1 : une hausse de **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’indice du prix en 2023 si l’indice vaut 100 en 2021 ?",
+     "reponse": 137.5,
+     "aide": "Indice = 100 × prix 2023 ÷ prix 2021.",
+     "explication": "100 × 55 ÷ 40 = **137,5** : le prix a augmenté de 37,5 % depuis 2021."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8e65288-96c8-5629-83d7-53c50b6219a7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carburant en indices",
+   "competence": "lire-graphique",
+   "situation": "Un journal économique publie l’indice du prix du litre de carburant, base 100 en 2019. Le litre coûtait 1,50 € en 2019.",
+   "documents": [
+    {
+     "id": "ind",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Indice du prix du carburant (base 100 en 2019)",
+     "categories": [
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Indice",
+       "valeurs": [
+        100,
+        80,
+        96,
+        120,
+        108
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice",
+      "min": 0,
+      "max": 140,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ind",
+     "enonce": "Touche la barre de l’année où le carburant est le moins cher.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "En 2020, l’indice est le plus bas : **80**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du prix entre 2020 et 2021, en pourcentage ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Ne soustrais pas directement les indices : divise l’écart par l’indice de départ.",
+     "explication": "(96 − 80) ÷ 80 = 0,2 : **+ 20 %**, et non + 16 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel était le prix du litre en 2022, en euros ?",
+     "reponse": 1.8,
+     "unite": "€",
+     "tolerance": 0.005,
+     "aide": "L’indice 120 signifie un prix multiplié par 1,2 par rapport à 2019.",
+     "explication": "1,50 × 1,2 = **1,80 €** le litre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du prix entre 2022 et 2023, en pourcentage ?",
+     "reponse": -10,
+     "unite": "%",
+     "aide": "Calcule (108 − 120) ÷ 120.",
+     "explication": "(108 − 120) ÷ 120 = −0,1 : **− 10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après 2023, quel taux d’évolution ramènerait l’indice de 108 à 100 ? Arrondis au centième, en pourcentage.",
+     "reponse": -7.41,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Coefficient : 100 ÷ 108, puis retire 1.",
+     "explication": "100 ÷ 108 ≈ 0,9259 : soit environ **− 7,41 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8e65288-96c8-5629-83d7-53c50b6219a7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois évolutions, un prix de départ",
+   "competence": "modeliser",
+   "situation": "Le tarif d’un abonnement de salle de sport a subi trois évolutions successives, ci-dessous. Fin de la troisième année, il coûte 54,10 € par mois. On cherche son prix de départ, puis on prévoit la suite.",
+   "documents": [
+    {
+     "id": "evo",
+     "type": "tableau",
+     "titre": "Les trois évolutions annuelles",
+     "colonnes": [
+      "",
+      "Année 1",
+      "Année 2",
+      "Année 3"
+     ],
+     "lignes": [
+      [
+       "Évolution",
+       "+ 12 %",
+       "+ 5 %",
+       "− 8 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "suite",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La suite du contrat",
+     "blocs": [
+      "À partir de l’année 4, le prix baisse de 4 % par an.",
+      "Le prix de l’année n suit alors une suite géométrique."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "evo",
+     "enonce": "Touche l’évolution qui est une baisse de prix.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Regarde le signe devant chaque pourcentage.",
+     "explication": "L’année 3 est la seule baisse : **− 8 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient multiplicateur global des trois évolutions, arrondi au dix-millième.",
+     "reponse": 1.0819,
+     "tolerance": 0.0001,
+     "aide": "Multiplie 1,12 par 1,05 par 0,92.",
+     "explication": "1,12 × 1,05 × 0,92 = 1,08192 ≈ **1,0819**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel était le prix mensuel de départ, arrondi à l’euro ?",
+     "reponse": 50,
+     "unite": "€",
+     "tolerance": 0.3,
+     "aide": "Divise le prix final par le coefficient global.",
+     "explication": "54,10 ÷ 1,08192 ≈ **50 €** par mois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces trois évolutions ne font-elles pas une hausse de 9 % (12 + 5 − 8) ?",
+     "options": [
+      "Chaque pourcentage s’applique à un prix déjà modifié par le précédent",
+      "Les baisses comptent toujours davantage que les hausses dans un calcul",
+      "Le coefficient d’une baisse de 8 % est de 1,08 et non de 0,92 ici",
+      "La somme des pourcentages se divise par le nombre d’années ensuite"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la base sur laquelle s’applique chaque pourcentage.",
+     "explication": "Les évolutions successives se **multiplient** : chaque taux porte sur le prix de l’année précédente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle évolution, en pourcentage arrondi au centième, ramènerait le prix au niveau de départ ?",
+     "reponse": -7.57,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Prends l’inverse du coefficient global, puis retire 1.",
+     "explication": "1 ÷ 1,08192 ≈ 0,9243 : soit environ **− 7,57 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec une baisse de 4 % par an à partir de 54,10 €, quel est le prix après 3 ans ? Arrondis au centime.",
+     "reponse": 47.86,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "La raison de la suite est 0,96.",
+     "explication": "54,10 × 0,96³ ≈ 54,10 × 0,8847 ≈ **47,86 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3bcced4a-b226-5915-aeae-28c710c39341",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tangente au point A",
+   "competence": "lire-graphique",
+   "situation": "Sur un écran de calculatrice, la courbe de f est tracée avec sa tangente (T) au point A d’abscisse 1. Le quadrillage compte un carreau par unité.",
+   "documents": [
+    {
+     "id": "tg",
+     "type": "figure",
+     "titre": "Tangente (T) à la courbe de f en A",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 1,
+       "position": "ne"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "A",
+        "B"
+       ],
+       "nom": "(T)"
+      }
+     ],
+     "source": "Figure imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tg",
+     "enonce": "Touche le point A, point de tangence de la droite (T).",
+     "reponse": [
+      "A"
+     ],
+     "aide": "A est le point d’abscisse 1.",
+     "explication": "Le point de tangence est **A**, de coordonnées (1 ; 4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur de (T) avec A(1 ; 4) et B(4 ; 1).",
+     "reponse": -1,
+     "aide": "Calcule (yB − yA) ÷ (xB − xA).",
+     "explication": "(1 − 4) ÷ (4 − 1) = **−1**, donc f′(1) = −1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de f au voisinage de x = 1 ?",
+     "options": [
+      "Elle décroît, car le coefficient directeur est négatif",
+      "Elle croît, car le coefficient directeur est négatif",
+      "Elle décroît, car le coefficient directeur est positif",
+      "Elle croît, car le coefficient directeur est positif"
+     ],
+     "reponse": 0,
+     "aide": "Le signe de f′(1) donne le sens de variation.",
+     "explication": "f′(1) = −1 < 0 : **f décroît** près de x = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle ordonnée la droite (T) rencontre-t-elle le bord gauche du cadre, d’abscisse 0 ?",
+     "reponse": 5,
+     "aide": "Elle descend d’un carreau à chaque carreau vers la droite : remonte d’un carreau à gauche de A.",
+     "explication": "Elle passe par (0 ; 5), car elle descend de 1 à chaque pas : ordonnée **5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3bcced4a-b226-5915-aeae-28c710c39341",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Monter, descendre, se poser",
+   "competence": "calculer",
+   "situation": "Une fonction f(x) = x³ − 6x² + 9x modélise la hauteur d’un petit circuit de bille. Son étude passe par sa dérivée.",
+   "documents": [
+    {
+     "id": "fn",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction",
+     "blocs": [
+      "f(x) = x³ − 6x² + 9x.",
+      "f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3)."
+     ]
+    },
+    {
+     "id": "der",
+     "type": "tableau",
+     "titre": "Valeurs de f′(x)",
+     "colonnes": [
+      "x",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "f′(x)",
+       9,
+       0,
+       "−3",
+       0,
+       9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "der",
+     "enonce": "Touche la valeur de f′ pour laquelle la tangente descend.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "La tangente descend quand f′ est négative.",
+     "explication": "En x = 2, f′(2) = **−3** : la courbe descend."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(5) avec la formule 3x² − 12x + 9.",
+     "reponse": 24,
+     "aide": "Calcule 3 × 25 puis retire 12 × 5.",
+     "explication": "f′(5) = 75 − 60 + 9 = **24**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quel intervalle f est-elle décroissante ?",
+     "options": [
+      "Sur [1 ; 3], car f′ y est négative",
+      "Sur [0 ; 1], car f′ y est négative",
+      "Sur [1 ; 3], car f′ y est positive",
+      "Sur [3 ; 4], car f′ y est négative"
+     ],
+     "reponse": 0,
+     "aide": "Utilise l’image mentale de la parabole f′.",
+     "explication": "f′ est une parabole ouverte vers le haut qui coupe l’axe en 1 et 3 : négative sur ]1 ; 3[, donc **f décroît sur [1 ; 3]**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(1).",
+     "reponse": 4,
+     "aide": "Remplace x par 1 dans x³ − 6x² + 9x.",
+     "explication": "f(1) = 1 − 6 + 9 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(3).",
+     "reponse": 0,
+     "aide": "Remplace x par 3 dans x³ − 6x² + 9x.",
+     "explication": "f(3) = 27 − 54 + 27 = **0** : c’est le minimum local de f."
+    }
+   ]
+  },
+  {
+   "chapitre": "3bcced4a-b226-5915-aeae-28c710c39341",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bénéfice de l’atelier",
+   "competence": "modeliser",
+   "situation": "Le bénéfice B(x), en milliers d’euros, d’un atelier qui fabrique x centaines d’objets vaut B(x) = −2x² + 12x − 10. On relève quelques valeurs avant l’étude.",
+   "documents": [
+    {
+     "id": "ben",
+     "type": "tableau",
+     "titre": "Bénéfice relevé",
+     "colonnes": [
+      "x (centaines)",
+      "0",
+      "1",
+      "2",
+      "4",
+      "6"
+     ],
+     "lignes": [
+      [
+       "B(x) (k€)",
+       "−10",
+       0,
+       6,
+       6,
+       "−10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "fact",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Forme factorisée",
+     "blocs": [
+      "B(x) = −2(x − 1)(x − 5).",
+      "B′(x) = −4x + 12."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ben",
+     "enonce": "Touche les deux bénéfices égaux et positifs.",
+     "reponse": [
+      "r0c3",
+      "r0c4"
+     ],
+     "multiple": true,
+     "aide": "Cherche deux cases identiques dont la valeur est supérieure à 0.",
+     "explication": "B(2) et B(4) valent tous deux **6** : la courbe est symétrique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule B′(1), coefficient directeur de la tangente en x = 1.",
+     "reponse": 8,
+     "aide": "Remplace x par 1 dans −4x + 12.",
+     "explication": "B′(1) = −4 + 12 = **8** : le bénéfice augmente vite en x = 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’image mentale de la parabole pour B(x) = −2(x − 1)(x − 5) ?",
+     "options": [
+      "Elle est ouverte vers le bas : B est positive entre 1 et 5",
+      "Elle est ouverte vers le haut : B est positive entre 1 et 5",
+      "Elle est ouverte vers le bas : B est négative entre 1 et 5",
+      "Elle est ouverte vers le haut : B est négative entre 1 et 5"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le signe du coefficient −2.",
+     "explication": "Le coefficient −2 est négatif : parabole ouverte vers le bas, **positive entre ses racines 1 et 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x le bénéfice est-il maximal ? (B′(x) = 0)",
+     "reponse": 3,
+     "unite": "centaines",
+     "aide": "Résous −4x + 12 = 0.",
+     "explication": "−4x + 12 = 0 donne **x = 3**, au milieu de 1 et 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le bénéfice maximal, en milliers d’euros ?",
+     "reponse": 8,
+     "unite": "k€",
+     "aide": "Calcule B(3).",
+     "explication": "B(3) = −18 + 36 − 10 = **8** milliers d’euros."
+    }
+   ]
+  },
+  {
+   "chapitre": "9aa8fe28-7470-5a41-bdde-dcc689398a78",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pub et ventes",
+   "competence": "lire-graphique",
+   "situation": "Une boutique en ligne note chaque mois ses dépenses de publicité x (en centaines d’euros) et ses ventes y (en dizaines d’articles).",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les cinq mois",
+     "colonnes": [
+      "x",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "y",
+       5,
+       7,
+       8,
+       11,
+       14
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "nuage",
+     "type": "figure",
+     "titre": "Nuage de points (x ; y)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 16
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 7,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 3,
+       "y": 8,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 4,
+       "y": 11,
+       "position": "no"
+      },
+      {
+       "id": "E",
+       "x": 5,
+       "y": 14,
+       "position": "no"
+      }
+     ],
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nuage",
+     "enonce": "Touche le point de coordonnées (4 ; 11).",
+     "reponse": [
+      "D"
+     ],
+     "aide": "Le point D est celui qui correspond à x = 4.",
+     "explication": "Le point **D** a pour abscisse 4 et pour ordonnée 11."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne ȳ des ventes (en dizaines d’articles).",
+     "reponse": 9,
+     "aide": "Additionne les cinq valeurs de y puis divise par 5.",
+     "explication": "(5 + 7 + 8 + 11 + 14) ÷ 5 = 45 ÷ 5 = **9**. Le point moyen est G(3 ; 9)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel ajustement choisir pour ce nuage ?",
+     "options": [
+      "Un ajustement affine, car le nuage est allongé et presque rectiligne",
+      "Un ajustement affine, car le nuage forme un cercle presque parfait",
+      "Aucun ajustement, car le nuage compte seulement cinq points au total",
+      "Un changement de variable, car le nuage est très nettement incurvé"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la forme générale du nuage.",
+     "explication": "Le nuage est **allongé**, presque aligné : une droite d’ajustement convient."
+    }
+   ]
+  },
+  {
+   "chapitre": "9aa8fe28-7470-5a41-bdde-dcc689398a78",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une droite pour prévoir",
+   "competence": "modeliser",
+   "situation": "Une brasserie relève ses dépenses de publicité x (en milliers d’euros) et ses ventes y (en milliers de bouteilles) sur six mois. Sa calculatrice donne la droite des moindres carrés y = 2,31x + 3,07.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les six mois",
+     "colonnes": [
+      "x",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "y",
+       6,
+       7,
+       10,
+       12,
+       15,
+       17
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "droite",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La droite d’ajustement",
+     "blocs": [
+      "y = 2,31x + 3,07 (moindres carrés).",
+      "Elle passe par le point moyen G(3,5 ; 11,17)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Estime les ventes pour x = 4,5, arrondies au dixième (en milliers de bouteilles).",
+     "reponse": 13.5,
+     "tolerance": 0.1,
+     "aide": "Remplace x par 4,5 dans l’équation de la droite.",
+     "explication": "y = 2,31 × 4,5 + 3,07 ≈ **13,5** milliers de bouteilles."
+    },
+    {
+     "type": "zone",
+     "document": "don",
+     "enonce": "Touche la vente réellement observée pour x = 3.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la colonne x = 3.",
+     "explication": "Pour x = 3, la vente observée est de **10** milliers de bouteilles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart y observé − y estimé pour x = 3 ? Arrondis au centième.",
+     "reponse": 0,
+     "tolerance": 0.02,
+     "aide": "Estime d’abord y pour x = 3 avec la droite.",
+     "explication": "Estimation : 10,00 ; observé : 10 ; écart ≈ **0,00**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle dépense x les ventes estimées atteignent-elles 30 milliers de bouteilles ? Arrondis au dixième.",
+     "reponse": 11.7,
+     "tolerance": 0.1,
+     "aide": "Résous 2,31x + 3,07 = 30.",
+     "explication": "x = (30 − 3,07) ÷ 2,31 ≈ **11,7** milliers d’euros."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette estimation pour y = 30 est-elle fiable ?",
+     "options": [
+      "Peu fiable : c’est une extrapolation, loin des valeurs observées",
+      "Très fiable : c’est une interpolation entre deux valeurs observées",
+      "Très fiable : la droite passe par tous les points du nuage observé",
+      "Peu fiable : la droite des moindres carrés ne permet jamais de prévoir"
+     ],
+     "reponse": 0,
+     "aide": "Compare x avec les valeurs de 1 à 6 du tableau.",
+     "explication": "La valeur trouvée est bien au-delà de x = 6 : c’est une **extrapolation**, donc fragile."
+    }
+   ]
+  },
+  {
+   "chapitre": "9aa8fe28-7470-5a41-bdde-dcc689398a78",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une culture qui s’emballe",
+   "competence": "modeliser",
+   "situation": "Un laboratoire compte des bactéries (en milliers) chaque heure. Le nuage (x ; y) s’incurve : on essaie le changement de variable z = log(y).",
+   "documents": [
+    {
+     "id": "cb",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Bactéries en milliers",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "y",
+       "valeurs": [
+        5,
+        10,
+        21,
+        39,
+        82
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "y",
+      "unite": "milliers",
+      "min": 0,
+      "max": 90,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Heures x"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "zz",
+     "type": "tableau",
+     "titre": "Changement de variable z = log(y)",
+     "colonnes": [
+      "x",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "y",
+       5,
+       10,
+       21,
+       39,
+       82
+      ],
+      [
+       "z = log(y)",
+       "0,699",
+       "1,000",
+       "1,322",
+       "1,591",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Logarithmes décimaux arrondis au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cb",
+     "enonce": "Touche le premier point où y dépasse 30 milliers.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche l’heure où la courbe passe au-dessus de 30.",
+     "explication": "À l’heure 3, y vaut **39** : c’est le premier point au-dessus de 30."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel changement de variable redresse ce nuage ?",
+     "options": [
+      "z = log(y), car y est à peu près doublé à chaque heure",
+      "z = 1/x, car y semble diminuer quand l’heure augmente",
+      "z = x², car y augmente de façon constante chaque heure",
+      "z = y + x, car les valeurs de y sont toujours positives"
+     ],
+     "reponse": 0,
+     "aide": "Compare y d’une heure à la suivante.",
+     "explication": "Le rapport d’une heure à l’autre est voisin de 2 : croissance exponentielle, donc on pose **z = log(y)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule z pour x = 4, c’est-à-dire log(82), arrondi au millième.",
+     "reponse": 1.914,
+     "tolerance": 0.001,
+     "aide": "Utilise la touche log de la calculatrice.",
+     "explication": "log(82) ≈ **1,914**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La droite d’ajustement est z = 0,302x + 0,701. Sachant que y ≈ k × a^x, calcule a = 10^0,302, arrondi au centième.",
+     "reponse": 2,
+     "tolerance": 0.02,
+     "aide": "Le coefficient directeur de la droite est log(a).",
+     "explication": "a = 10^0,302 ≈ **2,00** : la population est à peu près multipliée par 2,0 chaque heure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec cette droite, estime y pour x = 6 à l’unité près (en milliers).",
+     "reponse": 326,
+     "tolerance": 2,
+     "aide": "Calcule z = 0,302 × 6 + 0,701, puis 10^z.",
+     "explication": "z ≈ 2,513 donc y ≈ **326** milliers, une extrapolation fragile."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b7bc477-be7e-5c01-8110-795ca9de6fae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment vient-on au lycée ?",
+   "competence": "lire-tableau",
+   "situation": "Le lycée a interrogé 200 élèves sur leur moyen de transport. On choisit un élève au hasard parmi eux. F : « c’est une fille » ; V : « il vient à vélo ».",
+   "documents": [
+    {
+     "id": "trans",
+     "type": "tableau",
+     "titre": "Moyen de transport",
+     "colonnes": [
+      "",
+      "Bus",
+      "Vélo",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Filles",
+       54,
+       36,
+       90
+      ],
+      [
+       "Garçons",
+       40,
+       70,
+       110
+      ],
+      [
+       "Total",
+       94,
+       106,
+       200
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trans",
+     "enonce": "Touche le nombre de filles qui viennent à vélo.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Croise la ligne Filles et la colonne Vélo.",
+     "explication": "**36** filles viennent à vélo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(F ∩ V), la probabilité que l’élève soit une fille qui vient à vélo.",
+     "reponse": 0.18,
+     "aide": "Divise l’effectif de la case par 200.",
+     "explication": "36 ÷ 200 = **0,18**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P_F(V), la probabilité qu’une fille vienne à vélo.",
+     "reponse": 0.4,
+     "aide": "On ne garde que les 90 filles.",
+     "explication": "36 ÷ 90 = **0,4** : quatre filles sur dix viennent à vélo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P_V(F), la probabilité qu’un cycliste soit une fille, arrondie au centième.",
+     "reponse": 0.34,
+     "tolerance": 0.005,
+     "aide": "Ici on ne garde que les 106 cyclistes.",
+     "explication": "36 ÷ 106 ≈ **0,34**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b7bc477-be7e-5c01-8110-795ca9de6fae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le test qui se trompe parfois",
+   "competence": "modeliser",
+   "situation": "Dans une population, une maladie M touche 4 % des personnes. Un test T est positif chez 95 % des malades et, à tort, chez 8 % des personnes saines. On choisit une personne au hasard.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les données de l’arbre",
+     "colonnes": [
+      "Probabilité",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "P(M) : être malade",
+       "0,04"
+      ],
+      [
+       "P_M(T) : test positif chez un malade",
+       "0,95"
+      ],
+      [
+       "P_non M(T) : test positif chez un sain",
+       "0,08"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "don",
+     "enonce": "Touche la probabilité qu’un malade ait un test positif.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne qui commence par P_M(T).",
+     "explication": "C’est **P_M(T) = 0,95**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(M ∩ T), la probabilité d’être malade et testé positif.",
+     "reponse": 0.038,
+     "tolerance": 0.0001,
+     "aide": "Multiplie P(M) par P_M(T).",
+     "explication": "0,04 × 0,95 = **0,038**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(T), la probabilité d’un test positif. Pense aux personnes saines.",
+     "reponse": 0.1148,
+     "tolerance": 0.0001,
+     "aide": "P(T) = P(M ∩ T) + P(non M ∩ T).",
+     "explication": "P(non M ∩ T) = 0,96 × 0,08 = 0,0768 ; P(T) = 0,038 + 0,0768 = **0,1148**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un test est positif : calcule P_T(M), arrondie au millième.",
+     "reponse": 0.331,
+     "tolerance": 0.001,
+     "aide": "Divise P(M ∩ T) par P(T).",
+     "explication": "0,038 ÷ 0,1148 ≈ **0,331**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi P_T(M) est-elle si faible, alors que le test repère 95 % des malades ?",
+     "options": [
+      "Les personnes saines sont bien plus nombreuses, et leurs faux positifs pèsent lourd",
+      "Le test est défectueux, car il ne détecte pas la totalité des personnes malades",
+      "La population compte davantage de malades que de personnes saines au total",
+      "Le résultat du test n’a aucun lien avec le fait d’être malade ou non"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,038 et 0,0768 dans les tests positifs.",
+     "explication": "Sur les tests positifs, les **faux positifs (0,0768)** dépassent les vrais positifs (0,038), parce que les personnes saines sont très nombreuses."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b7bc477-be7e-5c01-8110-795ca9de6fae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois fours, un pain raté",
+   "competence": "raisonner",
+   "situation": "Une boulangerie industrielle a trois fours. On prélève un pain au hasard. Fi : « le pain sort du four i » ; D : « le pain est défectueux ».",
+   "documents": [
+    {
+     "id": "fours",
+     "type": "tableau",
+     "titre": "Production et défauts",
+     "colonnes": [
+      "Four",
+      "Part de la production",
+      "Pains défectueux"
+     ],
+     "lignes": [
+      [
+       "Four 1",
+       "45 %",
+       "4 %"
+      ],
+      [
+       "Four 2",
+       "35 %",
+       "2 %"
+      ],
+      [
+       "Four 3",
+       "20 %",
+       "10 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappel",
+     "blocs": [
+      "Les trois fours forment une partition de la production.",
+      "P(D) = P(F1) × P_F1(D) + P(F2) × P_F2(D) + P(F3) × P_F3(D)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fours",
+     "enonce": "Touche la part de la production qui sort du four 3.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne du four 3.",
+     "explication": "Le four 3 fournit **20 %** de la production."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(F3 ∩ D), la probabilité que le pain vienne du four 3 et soit défectueux.",
+     "reponse": 0.02,
+     "tolerance": 0.0001,
+     "aide": "Multiplie la part du four 3 par son taux de défauts.",
+     "explication": "0,2 × 0,1 = **0,02**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(D) avec la formule des probabilités totales.",
+     "reponse": 0.045,
+     "tolerance": 0.0001,
+     "aide": "Additionne les trois produits part × taux.",
+     "explication": "0,018 + 0,007 + 0,02 = **0,045**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un pain est défectueux : calcule la probabilité qu’il vienne du four 3, arrondie au millième.",
+     "reponse": 0.444,
+     "tolerance": 0.001,
+     "aide": "Divise P(F3 ∩ D) par P(D).",
+     "explication": "0,02 ÷ 0,045 ≈ **0,444** : le four 3 fait 20 % des pains mais environ 44 % des défauts."
+    },
+    {
+     "type": "choix",
+     "enonce": "D et F3 sont-ils indépendants ?",
+     "options": [
+      "Non : P_F3(D) = 0,1 alors que P(D) = 0,045, valeurs différentes",
+      "Oui : P_F3(D) = 0,1 et P(D) = 0,045, valeurs de même ordre",
+      "Oui : les deux événements ne peuvent jamais avoir lieu ensemble",
+      "Non : la production du four 3 est inférieure à celle des autres"
+     ],
+     "reponse": 0,
+     "aide": "Compare P_F3(D) et P(D).",
+     "explication": "P_F3(D) = 0,1 ≠ P(D) = 0,045 : les événements ne sont **pas indépendants**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c14659e-d973-5f81-86be-2303a6a977b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le triangle qu’il faut finir",
+   "competence": "lire-tableau",
+   "situation": "Un élève reconstitue le triangle de Pascal, mais trois cases sont restées vides. Chaque case contient le coefficient binomial (n k).",
+   "documents": [
+    {
+     "id": "pascal",
+     "type": "tableau",
+     "titre": "Triangle de Pascal incomplet",
+     "colonnes": [
+      "n",
+      "k = 0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       0,
+       1,
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       1,
+       1,
+       1,
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       2,
+       1,
+       2,
+       1,
+       "",
+       "",
+       ""
+      ],
+      [
+       3,
+       1,
+       3,
+       3,
+       1,
+       "",
+       ""
+      ],
+      [
+       4,
+       1,
+       4,
+       "?",
+       4,
+       1,
+       ""
+      ],
+      [
+       5,
+       1,
+       5,
+       "?",
+       "?",
+       5,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cases à trouver marquées ?"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pascal",
+     "enonce": "Touche les deux nombres de la ligne n = 3 dont la somme donne la case (4 2).",
+     "reponse": [
+      "r3c2",
+      "r3c3"
+     ],
+     "multiple": true,
+     "aide": "Dans le triangle, on additionne les deux nombres situés au-dessus.",
+     "explication": "La case (4 2) est au-dessous de 3 et de 3 : **(4 2) = 3 + 3 = 6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète la case (4 2) du triangle.",
+     "reponse": 6,
+     "aide": "Additionne les deux nombres au-dessus.",
+     "explication": "3 + 3 = **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule (5 2), en additionnant les cases (4 1) et (4 2).",
+     "reponse": 10,
+     "aide": "Utilise la formule de Pascal.",
+     "explication": "(5 2) = (4 1) + (4 2) = 4 + 6 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans additionner, donne (5 3), sachant que (5 3) = (5 2).",
+     "reponse": 10,
+     "aide": "Choisir 3 succès revient à choisir 2 échecs.",
+     "explication": "(5 3) = (5 2) = **10**, par symétrie du triangle."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c14659e-d973-5f81-86be-2303a6a977b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un QCM au hasard",
+   "competence": "raisonner",
+   "situation": "Léa répond au hasard à un QCM de 6 questions. Son arbre a autant de chemins que de façons de répondre. La ligne n = 6 du triangle de Pascal dénombre ces chemins selon le nombre de bonnes réponses k.",
+   "documents": [
+    {
+     "id": "l6",
+     "type": "tableau",
+     "titre": "Ligne n = 6 du triangle de Pascal",
+     "colonnes": [
+      "k",
+      "(6 k)"
+     ],
+     "lignes": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       2,
+       15
+      ],
+      [
+       3,
+       20
+      ],
+      [
+       4,
+       15
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       6,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Coefficients binomiaux (6 k)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "l6",
+     "enonce": "Touche le nombre de chemins qui ont exactement 3 bonnes réponses.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la ligne où k = 3.",
+     "explication": "Il y a **20** chemins à exactement 3 succès."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins avec exactement 4 bonnes réponses ?",
+     "reponse": 15,
+     "aide": "Utilise la symétrie (6 4) = (6 2).",
+     "explication": "(6 4) = (6 2) = **15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins au total dans l’arbre à 6 épreuves ?",
+     "reponse": 64,
+     "aide": "Additionne toute la ligne, ou calcule 2 multiplié 6 fois.",
+     "explication": "1 + 6 + 15 + 20 + 15 + 6 + 1 = **64** = 2⁶."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule (7 3) avec la formule de Pascal et la ligne du tableau.",
+     "reponse": 35,
+     "aide": "Additionne (6 2) et (6 3).",
+     "explication": "(7 3) = (6 2) + (6 3) = 15 + 20 = **35**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi (6 4) est-il égal à (6 2) ?",
+     "options": [
+      "Choisir 4 succès revient à choisir les 2 échecs restants",
+      "Choisir 4 succès revient à choisir 4 échecs parmi les épreuves",
+      "Les deux nombres sont toujours égaux quelles que soient les valeurs",
+      "La ligne du triangle est toujours identique à la ligne précédente"
+     ],
+     "reponse": 0,
+     "aide": "Dans chaque chemin, il y a des succès et des échecs qui se complètent.",
+     "explication": "Un chemin à 4 succès a **2 échecs** : compter ces chemins ou ceux à 2 succès revient au même."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c14659e-d973-5f81-86be-2303a6a977b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le programme du triangle",
+   "competence": "programmer",
+   "situation": "Un programme Python construit les lignes du triangle de Pascal. Chaque tour de boucle fabrique la ligne suivante à partir de la précédente.",
+   "documents": [
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme",
+     "blocs": [
+      "def triangle(n):",
+      "    ligne = [1]",
+      "    for i in range(n):",
+      "        ligne = [1] + [ligne[k] + ligne[k+1] for k in range(len(ligne) - 1)] + [1]",
+      "    return ligne"
+     ]
+    },
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Suivi de la variable ligne",
+     "colonnes": [
+      "Étape",
+      "ligne"
+     ],
+     "lignes": [
+      [
+       "Début",
+       "[1]"
+      ],
+      [
+       "Après le tour i = 0",
+       "[1, 1]"
+      ],
+      [
+       "Après le tour i = 1",
+       "[1, 2, 1]"
+      ],
+      [
+       "Après le tour i = 2",
+       "[1, 3, 3, 1]"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "suivi",
+     "enonce": "Touche la valeur de ligne qui correspond à la ligne n = 2 du triangle.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La ligne n = 2 du triangle est 1, 2, 1.",
+     "explication": "La ligne n = 2 est **[1, 2, 1]**, obtenue après le tour i = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "triangle(6) fait combien de tours de boucle ?",
+     "reponse": 6,
+     "aide": "range(n) compte n valeurs.",
+     "explication": "range(6) donne i = 0 à 5 : **6** tours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments renvoie triangle(10) ?",
+     "reponse": 11,
+     "aide": "La ligne n contient n + 1 nombres.",
+     "explication": "La ligne n = 10 contient **11** nombres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des éléments renvoyés par triangle(6) ?",
+     "reponse": 64,
+     "aide": "La somme de la ligne n vaut 2^n.",
+     "explication": "La somme vaut 2⁶ = **64**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le 4e élément de triangle(6), c’est-à-dire (6 3) ?",
+     "reponse": 20,
+     "aide": "La ligne 6 est 1, 6, 15, …",
+     "explication": "Ligne 6 : 1, 6, 15, **20**, 15, 6, 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "716c1534-9d2c-59a8-9b7a-b0751978d02c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le jeu de la kermesse",
+   "competence": "calculer",
+   "situation": "À la kermesse, un stand propose un jeu : on gagne 0 €, 2 € ou 5 € selon la loi ci-dessous. Jouer une partie coûte 2 €.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "tableau",
+     "titre": "Loi du gain X",
+     "colonnes": [
+      "Gain x (€)",
+      "0",
+      "2",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Probabilité",
+       "0,5",
+       "0,3",
+       "0,2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche la probabilité de gagner 5 €.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la colonne du gain 5.",
+     "explication": "La probabilité de gagner 5 € est **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance E(X) du gain.",
+     "reponse": 1.6,
+     "unite": "€",
+     "aide": "Additionne gain × probabilité pour chaque colonne.",
+     "explication": "E(X) = 0 × 0,5 + 2 × 0,3 + 5 × 0,2 = **1,6 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le jeu coûte 2 € : que peut-on dire de lui ?",
+     "options": [
+      "Il est défavorable au joueur : il gagne moins qu’il ne mise en moyenne",
+      "Il est équitable : le joueur gagne autant qu’il mise en moyenne",
+      "Il est favorable au joueur : il gagne plus qu’il ne mise en moyenne",
+      "On ne peut rien dire : l’espérance ne renseigne jamais sur les mises"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’espérance du gain à la mise.",
+     "explication": "En moyenne, on gagne 1,6 € pour 2 € misés : le jeu est **défavorable au joueur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’espérance du gain net, mise de 2 € déduite ?",
+     "reponse": -0.4,
+     "unite": "€",
+     "aide": "Retire la mise de l’espérance du gain.",
+     "explication": "1,6 − 2 = **−0,4 €** par partie en moyenne."
+    }
+   ]
+  },
+  {
+   "chapitre": "716c1534-9d2c-59a8-9b7a-b0751978d02c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre lancers francs",
+   "competence": "calculer",
+   "situation": "Une basketteuse réussit chaque lancer franc avec la probabilité 0,7, indépendamment des autres. Elle tire 4 lancers ; X compte les réussites. X suit la loi binomiale B(4 ; 0,7).",
+   "documents": [
+    {
+     "id": "lb",
+     "type": "tableau",
+     "titre": "Loi de X = nombre de lancers réussis",
+     "colonnes": [
+      "k",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "P(X = k)",
+       "0,0081",
+       "0,0756",
+       "?",
+       "0,4116",
+       "0,2401"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Probabilités exactes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lb",
+     "enonce": "Touche la probabilité de réussir exactement 3 lancers.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne k = 3.",
+     "explication": "P(X = 3) = **0,4116**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(X = 2) avec (4 2) × 0,7² × 0,3².",
+     "reponse": 0.2646,
+     "tolerance": 0.0001,
+     "aide": "Ici (4 2) = 6 ; calcule 0,49 × 0,09.",
+     "explication": "6 × 0,49 × 0,09 = **0,2646**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(X ≥ 1) en passant par le contraire de X = 0.",
+     "reponse": 0.9919,
+     "tolerance": 0.0001,
+     "aide": "P(X ≥ 1) = 1 − P(X = 0).",
+     "explication": "1 − 0,0081 = **0,9919**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(X ≥ 3), la probabilité de réussir au moins 3 lancers.",
+     "reponse": 0.6517,
+     "tolerance": 0.0001,
+     "aide": "Additionne P(X = 3) et P(X = 4).",
+     "explication": "0,4116 + 0,2401 = **0,6517**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lancers réussit-elle en moyenne ?",
+     "reponse": 2.8,
+     "aide": "Pour B(n ; p), l’espérance est n × p.",
+     "explication": "E(X) = 4 × 0,7 = **2,8** lancers."
+    }
+   ]
+  },
+  {
+   "chapitre": "716c1534-9d2c-59a8-9b7a-b0751978d02c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien de pièces contrôler ?",
+   "competence": "modeliser",
+   "situation": "Une machine produit un grand nombre de pièces, chacune défectueuse avec la probabilité 0,05, indépendamment des autres. Le contrôleur prélève n pièces ; X compte les défectueuses. Il veut repérer au moins un défaut avec une probabilité d’au moins 0,9, soit P(X ≥ 1) ≥ 0,9.",
+   "documents": [
+    {
+     "id": "tl",
+     "type": "tableau",
+     "titre": "P(X ≥ 1) selon la taille du lot",
+     "colonnes": [
+      "n",
+      "10",
+      "30",
+      "40",
+      "50"
+     ],
+     "lignes": [
+      [
+       "P(X ≥ 1)",
+       "0,4013",
+       "0,7854",
+       "0,8715",
+       "0,9231"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au dix-millième"
+    },
+    {
+     "id": "rap",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappels",
+     "blocs": [
+      "X suit B(n ; 0,05).",
+      "P(X = 0) = 0,95^n et P(X ≥ 1) = 1 − 0,95^n.",
+      "E(X) = n × 0,05."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi X suit-elle une loi binomiale ?",
+     "options": [
+      "Chaque pièce a deux issues, avec des prélèvements identiques et indépendants",
+      "Chaque pièce a trois issues, avec des prélèvements identiques et indépendants",
+      "Chaque pièce a deux issues, avec des prélèvements dépendants les uns des autres",
+      "Les pièces sont comptées une à une sans tenir compte des défauts observés"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les conditions d’un schéma de Bernoulli.",
+     "explication": "Deux issues, des épreuves **identiques** et **indépendantes**, et on **compte** les succès : c’est B(n ; 0,05)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 20, calcule P(X = 0), arrondie au dix-millième.",
+     "reponse": 0.3585,
+     "tolerance": 0.0001,
+     "aide": "Calcule 0,95^20.",
+     "explication": "0,95^20 ≈ **0,3585**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 20, calcule P(X ≥ 1), arrondie au dix-millième.",
+     "reponse": 0.6415,
+     "tolerance": 0.0001,
+     "aide": "Passe par le contraire : 1 − P(X = 0).",
+     "explication": "1 − 0,3585 = **0,6415**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 20, combien de pièces défectueuses y a-t-il en moyenne ?",
+     "reponse": 1,
+     "aide": "E(X) = n × p.",
+     "explication": "E(X) = 20 × 0,05 = **1** pièce."
+    },
+    {
+     "type": "zone",
+     "document": "tl",
+     "enonce": "Touche la première taille de lot pour laquelle P(X ≥ 1) dépasse 0,9.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Parcours la ligne de gauche à droite et compare à 0,9.",
+     "explication": "Il faut **n = 50** : avant, la probabilité reste sous 0,9."
+    }
+   ]
+  }
+ ]
+}

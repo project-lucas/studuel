@@ -41,6 +41,10 @@ export type StyleExercice = 'probleme' | 'traduction' | 'redaction' | 'applicati
 const STYLES_PAR_MOT: readonly [RegExp, StyleExercice][] = [
   [/math/i, 'probleme'],
   [/anglais|espagnol|allemand|italien|latin|grec|chinois|portugais|arabe|russe|langue|lv[12]/i, 'traduction'],
+  // La voie techno : « histoire-geo-techno » n'est pas une science, la SPCL ou
+  // l'I2D si (leur slug ne dit ni physique ni techno).
+  [/histoire|philo|sanitaires/i, 'redaction'],
+  [/spcl|i2d|ingenierie|^si( |$)/i, 'application'],
   [/physique|chimie|svt|science|techno|nsi|informatique|sciences?[-_ ]?ing/i, 'application'],
 ]
 

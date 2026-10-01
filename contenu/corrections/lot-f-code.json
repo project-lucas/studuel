@@ -1,0 +1,112 @@
+{
+  "corrections": [
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Simulation et échantillonnage : la moyenne se stabilise",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def essai(p): |\n| 2 | ····if random() < p: |\n| 3 | ········return 1 |\n| 4 | ····return 0 |",
+      "nouveau": "```python\ndef essai(p):\n    if random() < p:\n        return 1\n    return 0\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths-techno",
+      "niveau": "Tle",
+      "chapitre": "Placements, versements réguliers et sommes",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def somme_carres(n): |\n| 2 | … s = 0 |\n| 3 | … for k in range(1, n + 1): |\n| 4 | … … s = s + pow(k, 2) |\n| 5 | … return s |",
+      "nouveau": "```python\ndef somme_carres(n):\n    s = 0\n    for k in range(1, n + 1):\n        s = s + pow(k, 2)\n    return s\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths-techno",
+      "niveau": "1re",
+      "chapitre": "Les suites numériques : générer et représenter",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | n ← 0 |\n| 2 | u ← 2 |\n| 3 | tant que u ≤ 100 : |\n| 4 | … n ← n + 1 |\n| 5 | … u ← 2 × u − 1 |\n| 6 | afficher n |",
+      "nouveau": "```\nn ← 0\nu ← 2\ntant que u ≤ 100 :\n    n ← n + 1\n    u ← 2 × u − 1\nafficher n\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Les listes en Python",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | s = 0 |\n| 2 | for x in L: |\n| 3 | ····s = s + x |",
+      "nouveau": "```python\ns = 0\nfor x in L:\n    s = s + x\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Les listes en Python",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def termes(n): |\n| 2 | ····u = 1000 |\n| 3 | ····L = [u] |\n| 4 | ····for i in range(n): |\n| 5 | ········u = 1.05 * u |\n| 6 | ········L.append(u) |\n| 7 | ····return L |",
+      "nouveau": "```python\ndef termes(n):\n    u = 1000\n    L = [u]\n    for i in range(n):\n        u = 1.05 * u\n        L.append(u)\n    return L\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Seuil, Newton, Euler : les algorithmes à connaître",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def seuil(): |\n| 2 | ····n = 0 |\n| 3 | ····u = 1000 |\n| 4 | ····while u < 2000: |\n| 5 | ········n = n + 1 |\n| 6 | ········u = 1.05 * u |\n| 7 | ····return n |",
+      "nouveau": "```python\ndef seuil():\n    n = 0\n    u = 1000\n    while u < 2000:\n        n = n + 1\n        u = 1.05 * u\n    return n\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "ingenierie-dd",
+      "niveau": "1re",
+      "chapitre": "Codage de l’information et algorithmique",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | tant que vrai : |\n| 2 | lum ← lire_luminosite() |\n| 3 | si lum < 300 et presence = vrai alors allumer() |\n| 4 | sinon eteindre() |\n| 5 | attendre(0,5 s) |",
+      "nouveau": "```\ntant que vrai :\n    lum ← lire_luminosite()\n    si lum < 300 et presence = vrai alors allumer()\n    sinon eteindre()\n    attendre(0,5 s)\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Python : variables, tests, boucles et fonctions",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | s = 0 |\n| 2 | for i in range(4): |\n| 3 | ····s = s + i |",
+      "nouveau": "```python\ns = 0\nfor i in range(4):\n    s = s + i\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths",
+      "niveau": "1re",
+      "chapitre": "Python : variables, tests, boucles et fonctions",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def terme(n): |\n| 2 | ····u = 5 |\n| 3 | ····for i in range(n): |\n| 4 | ········u = 2 * u + 1 |\n| 5 | ····return u |",
+      "nouveau": "```python\ndef terme(n):\n    u = 5\n    for i in range(n):\n        u = 2 * u + 1\n    return u\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "spcl",
+      "niveau": "1re",
+      "chapitre": "Chaîne de mesure en tout ou rien et régulation de température",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | lire la tension du capteur |\n| 2 | convertir en température |\n| 3 | si température > seuil alors allumer l’alarme |\n| 4 | sinon éteindre l’alarme |\n| 5 | attendre, puis recommencer |",
+      "nouveau": "```\nlire la tension du capteur\nconvertir en température\nsi température > seuil alors allumer l’alarme\nsinon éteindre l’alarme\nattendre, puis recommencer\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "management-sgn",
+      "niveau": "Tle",
+      "chapitre": "Systèmes d’information de gestion",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | SELECT nom, ville |\n| 2 | FROM CLIENT |\n| 3 | WHERE ville = 'Lyon' |\n| 4 | ORDER BY nom ; |",
+      "nouveau": "```sql\nSELECT nom, ville\nFROM CLIENT\nWHERE ville = 'Lyon'\nORDER BY nom ;\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    },
+    {
+      "slug": "maths-techno",
+      "niveau": "Tle",
+      "chapitre": "Coefficients binomiaux et triangle de Pascal",
+      "champ": "cours",
+      "ancien": "| Ligne | Code |\n| 1 | def triangle(n): |\n| 2 | … ligne = [1] |\n| 3 | … for i in range(n): |\n| 4 | … … ligne = [1] + [ligne[k] + ligne[k+1] for k in range(len(ligne) - 1)] + [1] |\n| 5 | … return ligne |",
+      "nouveau": "```python\ndef triangle(n):\n    ligne = [1]\n    for i in range(n):\n        ligne = [1] + [ligne[k] + ligne[k+1] for k in range(len(ligne) - 1)] + [1]\n    return ligne\n```",
+      "justification": "Du code présenté en tableau, l’indentation simulée par des points : devient un vrai bloc de code, indentation comprise."
+    }
+  ]
+}

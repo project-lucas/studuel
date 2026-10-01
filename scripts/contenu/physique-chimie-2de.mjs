@@ -927,7 +927,7 @@ Si A exerce une force sur B, B exerce sur A une force de même direction, de mê
           },
           questions: [
             ['Comment modélise-t-on une action mécanique ?', ['Par une force, représentée par un vecteur', 'Par une distance', 'Par une masse', 'Par une durée'], 0, 'Point d’application, direction, sens et valeur en newtons.'],
-            ['Quelle est l’unité de la valeur d’une force ?', ['Le newton', 'Le joule', 'Le pascal', 'Le kilogramme'], 0, 'Symbole N.'],
+            ['Quelle est l’unité de la valeur d’une force ?', ['Le newton', 'Le joule', 'Le pascal', 'Le kilogramme'], 0, 'Une force se mesure en newtons, de symbole N, avec un dynamomètre.'],
             ['Quelle est l’expression du poids d’un objet ?', ['P = m × g', 'P = m / g', 'P = g / m', 'P = m + g'], 0, 'Avec g ≈ 9,8 N·kg⁻¹ à la surface de la Terre.'],
             ['Quelle différence entre masse et poids ?', ['La masse est identique partout, le poids dépend du lieu', 'Le poids est identique partout', 'Ce sont deux mots pour la même grandeur', 'La masse se mesure en newtons'], 0, 'Sur la Lune, g vaut environ 1,6 N·kg⁻¹.'],
             ['Quelle est l’expression de la force d’interaction gravitationnelle ?', ['F = G × m_A × m_B / d²', 'F = G × m_A × m_B / d', 'F = G × d² / (m_A × m_B)', 'F = m_A × m_B × d²'], 0, 'Elle décroît comme le carré de la distance.'],
@@ -1217,7 +1217,7 @@ D'où l'interdiction absolue de manipuler un appareil électrique les mains moui
           },
           questions: [
             ['Quelle est l’expression de la loi d’Ohm ?', ['U = R × I', 'U = I / R', 'R = U × I', 'I = U × R'], 0, 'Avec U en volts, I en ampères, R en ohms.'],
-            ['Quelle est l’unité de la résistance ?', ['L’ohm', 'Le volt', 'L’ampère', 'Le watt'], 0, 'Symbole Ω.'],
+            ['Quelle est l’unité de la résistance ?', ['L’ohm', 'Le volt', 'L’ampère', 'Le watt'], 0, 'La résistance se mesure en ohms, de symbole Ω, avec un ohmmètre.'],
             ['Quelle est l’allure de la caractéristique U = f(I) d’un conducteur ohmique ?', ['Une droite passant par l’origine', 'Une parabole', 'Une courbe croissante puis décroissante', 'Une droite ne passant pas par l’origine'], 0, 'Son coefficient directeur est la résistance.'],
             ['Une lampe est-elle un conducteur ohmique ?', ['Non, sa résistance augmente avec la température', 'Oui, comme un résistor', 'Oui, si la tension est faible', 'Cela dépend de la couleur du filament'], 0, 'Sa caractéristique n’est pas une droite.'],
             ['Comment la résistance d’un fil varie-t-elle avec sa longueur ?', ['Elle augmente quand la longueur augmente', 'Elle diminue quand la longueur augmente', 'Elle ne dépend pas de la longueur', 'Elle est proportionnelle au carré de la longueur'], 0, 'Elle diminue en revanche quand la section augmente.'],

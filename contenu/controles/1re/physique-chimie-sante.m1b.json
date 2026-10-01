@@ -1,0 +1,670 @@
+{
+  "niveau": "1re",
+  "matiere": "physique-chimie-sante",
+  "sujets": [
+    {
+      "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+      "difficulte": 1,
+      "titre": "Débit cardiaque et tension au repos",
+      "consigne": "Écris la relation littérale avant chaque calcul et donne le résultat avec son unité.",
+      "enonce": "**Situation.** Lors d'une visite médicale, l'infirmière relève pour Baptiste, au repos :\n- fréquence cardiaque fC = 75 battements/min ;\n- volume d'éjection systolique VES = 70 mL ;\n- tension artérielle « 13/8 ».\n\n1. Calcule le débit cardiaque de Baptiste en mL/min puis en L/min.\n2. Que signifie l'écriture « 13/8 » ? Donne les deux valeurs en cmHg puis en mmHg, et dis à quel moment du cycle cardiaque correspond chacune.\n3. Une force pressante de 30 N s'exerce sur une surface de 0,0015 m². Calcule la pression correspondante.",
+      "bareme": [
+        {
+          "critere": "DC = fC × VES = 5 250 mL/min ≈ 5,3 L/min",
+          "points": 7
+        },
+        {
+          "critere": "13 cmHg systolique (contraction) et 8 cmHg diastolique (relâchement), soit 130/80 mmHg",
+          "points": 7
+        },
+        {
+          "critere": "P = F / S = 2,0 × 10⁴ Pa",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. DC = fC × VES = 75 × 70 = **5 250 mL/min**, soit **5,25 L/min** (≈ 5,3 L/min), un ordre de grandeur normal au repos.\n2. « 13/8 » s'exprime en **centimètres de mercure** : **13 cmHg** de tension **systolique** (pendant la **contraction** du cœur, valeur maximale) et **8 cmHg** de tension **diastolique** (pendant le **relâchement**, valeur minimale), soit **130/80 mmHg**.\n3. P = F / S = 30 / 0,0015 = **2,0 × 10⁴ Pa** (20 000 Pa)."
+    },
+    {
+      "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+      "difficulte": 2,
+      "titre": "Le rétrécissement de l'artère",
+      "consigne": "Convertis toutes les grandeurs dans les unités internationales avant de calculer, puis conclus par une phrase.",
+      "enonce": "**Situation.** Chez M. Lambert, un examen montre qu'une artère transporte un débit de sang D = 6,0 mL/s. Sa section normale vaut S = 0,30 cm². Plus loin, une plaque d'athérome réduit la section à un tiers de sa valeur normale. Le même jour, sa tension est mesurée à « 16/10 ».\n\n1. Convertis le débit en m³/s et la section en m².\n2. Calcule la vitesse moyenne du sang dans la partie normale de l'artère.\n3. Le débit est le même au niveau du rétrécissement. Calcule la nouvelle vitesse du sang. Conclus.\n4. M. Lambert est-il hypertendu, d'après la définition du cours ? Justifie. Que faudrait-il pour confirmer le diagnostic ?",
+      "bareme": [
+        {
+          "critere": "D = 6,0 × 10⁻⁶ m³/s et S = 3,0 × 10⁻⁵ m²",
+          "points": 5
+        },
+        {
+          "critere": "v = D / S = 0,20 m/s",
+          "points": 5
+        },
+        {
+          "critere": "Section 1,0 × 10⁻⁵ m², v = 0,60 m/s : la vitesse triple au rétrécissement",
+          "points": 5
+        },
+        {
+          "critere": "16/10 ≥ 14/9 : hypertension si la valeur est durablement élevée, mesures répétées",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 1 mL = 10⁻⁶ m³ : D = 6,0 × 10⁻⁶ m³/s. 1 cm² = 10⁻⁴ m² : S = 0,30 × 10⁻⁴ = **3,0 × 10⁻⁵ m²**.\n2. D = v × S, donc v = D / S = 6,0 × 10⁻⁶ / 3,0 × 10⁻⁵ = **0,20 m/s**.\n3. Au rétrécissement, S' = 3,0 × 10⁻⁵ / 3 = 1,0 × 10⁻⁵ m². v' = D / S' = 6,0 × 10⁻⁶ / 1,0 × 10⁻⁵ = **0,60 m/s**. À débit constant, quand la section diminue, la vitesse **augmente** : ici elle est multipliée par 3.\n4. 16/10 dépasse 14/9 (16 ≥ 14 et 10 ≥ 9). L'hypertension se définit par une tension **durablement** supérieure ou égale à 14/9 : une seule mesure ne suffit pas, il faut la confirmer par des **mesures répétées**."
+    },
+    {
+      "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+      "difficulte": 3,
+      "titre": "La poche de perfusion et le bras levé",
+      "consigne": "Utilise la loi fondamentale de la statique des fluides. Rédige chaque calcul et interprète chaque résultat.",
+      "enonce": "**Situation.** À l'hôpital, Mme Diallo reçoit une perfusion. La poche est suspendue de sorte que la surface du liquide soit **0,80 m au-dessus** du point d'injection au bras. Plus tard, l'aide-soignant mesure sa tension en lui faisant lever le bras : le brassard est alors **0,20 m au-dessus** du cœur.\n\n**Données :** g = 9,81 N/kg ; ρ(liquide de perfusion) = 1 000 kg/m³ ; ρ(sang) = 1 060 kg/m³ ; 1 mmHg ≈ 133 Pa ; pression veineuse au bras (au-dessus de la pression atmosphérique) : environ 1,3 × 10³ Pa.\n\n1. Écris la loi fondamentale de la statique des fluides en précisant les unités.\n2. Calcule la différence de pression due à la colonne de liquide de 0,80 m. Exprime-la en mmHg.\n3. Compare-la à la pression veineuse. Pourquoi la poche doit-elle être placée au-dessus du patient ? Que se passerait-il si on la posait sur le lit, plus bas que le bras ?\n4. Calcule la différence de pression sanguine entre le cœur et le brassard placé 0,20 m plus haut. Exprime-la en mmHg. La mesure sera-t-elle surestimée ou sous-estimée ?\n5. Explique la différence entre pression artérielle et tension artérielle, et conclus sur la bonne position pour la mesure.",
+      "bareme": [
+        {
+          "critere": "P₂ − P₁ = ρ × g × (z₁ − z₂) avec les unités",
+          "points": 3
+        },
+        {
+          "critere": "ΔP ≈ 7,8 × 10³ Pa ≈ 59 mmHg",
+          "points": 5
+        },
+        {
+          "critere": "Comparaison avec 1,3 × 10³ Pa, liquide qui entre ; poche trop basse : le sang remonterait dans la tubulure",
+          "points": 4
+        },
+        {
+          "critere": "ΔP ≈ 2,1 × 10³ Pa ≈ 16 mmHg, tension sous-estimée bras levé",
+          "points": 5
+        },
+        {
+          "critere": "Tension = pression artérielle − pression atmosphérique ; mesure à hauteur du cœur",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **P₂ − P₁ = ρ × g × (z₁ − z₂)**, avec P en pascals, ρ en kg/m³, g en N/kg et z en mètres : la pression augmente quand on descend dans un liquide au repos.\n2. ΔP = 1 000 × 9,81 × 0,80 ≈ **7,8 × 10³ Pa** (7 848 Pa). En mmHg : 7 848 / 133 ≈ **59 mmHg**.\n3. Au point d'injection, le liquide est à une pression supérieure de 7,8 × 10³ Pa à celle de sa surface, bien plus que la pression veineuse (≈ 1,3 × 10³ Pa) : le liquide **entre dans la veine**. C'est pourquoi la poche se place **au-dessus** du patient. Posée plus bas que le bras, la pression du liquide deviendrait inférieure à celle du sang : le liquide n'entrerait plus et le **sang remonterait** dans la tubulure.\n4. ΔP = ρ × g × h = 1 060 × 9,81 × 0,20 ≈ **2,1 × 10³ Pa** (2 080 Pa), soit 2 080 / 133 ≈ **16 mmHg**. Le brassard étant plus haut que le cœur, la pression du sang y est **plus faible** : la tension serait **sous-estimée** d'environ 16 mmHg (1,6 cmHg).\n5. La **pression artérielle** est la pression du sang dans l'artère ; la **tension artérielle** mesurée est la **différence** entre cette pression et la pression atmosphérique. Pour que la mesure reflète la pression à la sortie du cœur, on la prend au bras **à hauteur du cœur**, patient au repos."
+    },
+    {
+      "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+      "difficulte": 1,
+      "titre": "Lire une formule semi-développée",
+      "consigne": "Réponds en t'appuyant sur les règles de valence et de nomenclature du cours.",
+      "enonce": "**Situation.** Lucie étudie deux molécules :\n- molécule A : CH₃–CH₂–CH₂–OH ;\n- molécule B : CH₃–CH₂–CHO.\n\n1. Combien de liaisons covalentes forment un atome de carbone, d'oxygène, d'azote et d'hydrogène ?\n2. Écris la formule brute de la molécule A. Nomme sa fonction et donne son nom.\n3. Écris la formule brute de la molécule B. Nomme sa fonction et donne son nom.\n4. A et B sont-elles isomères ? Justifie.",
+      "bareme": [
+        {
+          "critere": "C : 4, O : 2, N : 3, H : 1",
+          "points": 4
+        },
+        {
+          "critere": "A : C₃H₈O, alcool, propan-1-ol",
+          "points": 6
+        },
+        {
+          "critere": "B : C₃H₆O, aldéhyde, propanal",
+          "points": 6
+        },
+        {
+          "critere": "Formules brutes différentes : pas isomères",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Carbone : **4** liaisons ; oxygène : **2** ; azote : **3** ; hydrogène : **1**.\n2. A : 3 C, 3 + 2 + 2 + 1 = 8 H, 1 O : **C₃H₈O**. Groupe –OH sur un carbone lié à quatre atomes : fonction **alcool**. Chaîne de 3 carbones, OH en bout : **propan-1-ol**.\n3. B : 3 C, 3 + 2 + 1 = 6 H, 1 O : **C₃H₆O**. Groupe –CHO en bout de chaîne : fonction **aldéhyde**, nom **propanal**.\n4. Non : des isomères ont la **même formule brute**. Ici C₃H₈O ≠ C₃H₆O : A et B ne sont pas isomères."
+    },
+    {
+      "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+      "difficulte": 2,
+      "titre": "Le tri des fonctions",
+      "consigne": "Pour chaque molécule, repère l'oxygène ou l'azote, regarde ses voisins, puis nomme la fonction.",
+      "enonce": "**Situation.** Un technicien de laboratoire d'analyses doit identifier les fonctions de plusieurs molécules :\n\n| Molécule | Formule semi-développée |\n| 1 | CH₃–COOH |\n| 2 | CH₃–CO–CH₃ |\n| 3 | CH₃–COO–CH₂–CH₃ |\n| 4 | CH₃–CH₂–NH₂ |\n| 5 | CH₃–CH(OH)–CH₂–CH₃ |\n| 6 | CH₃–CH₂–CHO |\n\n1. Nomme la fonction de chaque molécule.\n2. Donne le nom des molécules 1, 2, 5 et 6.\n3. Parmi ces molécules, trouve deux isomères de constitution. Justifie par les formules brutes.",
+      "bareme": [
+        {
+          "critere": "Six fonctions justes : acide carboxylique, cétone, ester, amine, alcool, aldéhyde",
+          "points": 9
+        },
+        {
+          "critere": "Noms : acide éthanoïque, propanone, butan-2-ol, propanal",
+          "points": 6
+        },
+        {
+          "critere": "Isomères 2 et 6 identifiés, formule brute C₃H₆O calculée pour les deux",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 1 : **acide carboxylique** (–COOH) ; 2 : **cétone** (C=O au milieu de la chaîne) ; 3 : **ester** (–COO– entre deux chaînes) ; 4 : **amine** (C–N) ; 5 : **alcool** (C–OH) ; 6 : **aldéhyde** (–CHO en bout de chaîne).\n2. 1 : **acide éthanoïque** ; 2 : **propanone** ; 5 : **butan-2-ol** (4 carbones, OH sur le carbone 2) ; 6 : **propanal**.\n3. Formules brutes : 1 : C₂H₄O₂ ; 2 : C₃H₆O ; 3 : C₄H₈O₂ ; 4 : C₂H₇N ; 5 : C₄H₁₀O ; 6 : C₃H₆O. Les molécules **2 (propanone)** et **6 (propanal)** ont la **même formule brute C₃H₆O** mais des formules développées différentes (C=O au milieu de la chaîne pour l'une, –CHO en bout de chaîne pour l'autre) : ce sont des **isomères de constitution**, deux molécules différentes aux propriétés différentes."
+    },
+    {
+      "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+      "difficulte": 3,
+      "titre": "Quatre molécules pour une formule brute",
+      "consigne": "Écris les formules demandées, vérifie les règles de valence et justifie chaque identification.",
+      "enonce": "**Situation.** Un flacon porte seulement l'étiquette « C₄H₁₀O ». Samia cherche les molécules possibles.\n\n**Document : quatre propositions**\n- A : CH₃–CH₂–CH₂–CH₂–OH\n- B : CH₃–CH(OH)–CH₂–CH₃\n- C : CH₃–CH₂–O–CH₂–CH₃\n- D : CH₃–O–CH₂–CH₂–CH₃\n\n1. Vérifie que A, B, C et D ont bien la formule brute C₄H₁₀O.\n2. Nomme la fonction de chaque molécule. Donne le nom de A et de B.\n3. Comment appelle-t-on des molécules comme A, B, C et D ? Ont-elles les mêmes propriétés ?\n4. Décris la formule topologique de A : combien de sommets et d'extrémités porte la ligne brisée, et où place-t-on le groupe OH ?\n5. Un camarade propose une cinquième molécule : CH₃–CH₂=CH–OH. Montre qu'elle est impossible en comptant les liaisons de chaque carbone.",
+      "bareme": [
+        {
+          "critere": "Quatre formules brutes vérifiées en comptant C, H, O",
+          "points": 4
+        },
+        {
+          "critere": "A et B alcools (butan-1-ol, butan-2-ol), C et D étheroxydes",
+          "points": 5
+        },
+        {
+          "critere": "Isomères de constitution : molécules différentes, propriétés différentes",
+          "points": 3
+        },
+        {
+          "critere": "Topologique de A : 4 carbones sur la ligne brisée, OH écrit en bout, C et H non écrits",
+          "points": 4
+        },
+        {
+          "critere": "Le deuxième carbone forme 5 liaisons : formule impossible",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. A : 4 C ; H : 3 + 2 + 2 + 2 + 1 = 10 ; 1 O → C₄H₁₀O. B : H : 3 + 1 + 1 (OH) + 2 + 3 = 10 → C₄H₁₀O. C : H : 3 + 2 + 2 + 3 = 10 → C₄H₁₀O. D : H : 3 + 2 + 2 + 3 = 10 → C₄H₁₀O. Les quatre ont bien la formule **C₄H₁₀O**.\n2. A et B : fonction **alcool** (C–OH). A : **butan-1-ol** ; B : **butan-2-ol**. C et D : oxygène entre deux carbones, fonction **étheroxyde** (C–O–C).\n3. Même formule brute, formules développées différentes : ce sont des **isomères de constitution**. Ce sont des **molécules différentes**, aux **propriétés différentes** (comme l'éthanol et le méthoxyméthane).\n4. Dans l'écriture topologique, chaque extrémité et chaque sommet de la ligne brisée porte un carbone. Pour A : une ligne brisée de **4 carbones** (deux extrémités et deux sommets), puis un dernier segment terminé par **OH**, écrit en toutes lettres ; les C et les H liés aux C ne sont pas écrits.\n5. Dans CH₃–CH₂=CH–OH, le deuxième carbone porte 2 H (2 liaisons), une liaison simple avec CH₃ (1) et une double liaison avec le carbone suivant (2) : **5 liaisons**. Un carbone en forme **4** : cette formule est **impossible**."
+    },
+    {
+      "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+      "difficulte": 1,
+      "titre": "Sur la feuille du bilan sanguin",
+      "consigne": "Réponds par des phrases complètes, en utilisant le vocabulaire de la chimie organique.",
+      "enonce": "**Situation.** Le bilan sanguin de Mathis mentionne la glycémie (glucose), les triglycérides, le cholestérol et l'urée.\n\n1. Le glucose et le fructose ont la même formule brute C₆H₁₂O₆. Quelle fonction les distingue ? Comment appelle-t-on deux molécules de ce type ?\n2. Classe ces acides gras en saturé, mono-insaturé ou poly-insaturé : acide stéarique (18 carbones, aucune double liaison C=C) ; acide oléique (18 carbones, une double liaison) ; acide α-linoléique (18 carbones, trois doubles liaisons).\n3. De la dégradation de quelles molécules l'urée provient-elle ? Quel organe l'élimine ?",
+      "bareme": [
+        {
+          "critere": "Glucose aldéhyde, fructose cétone ; isomères",
+          "points": 7
+        },
+        {
+          "critere": "Stéarique saturé, oléique mono-insaturé, α-linoléique poly-insaturé",
+          "points": 7
+        },
+        {
+          "critere": "Urée issue des protéines, éliminée par le rein",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **glucose** porte une fonction **aldéhyde** (c'est un aldose), le **fructose** une fonction **cétone** (cétose). Même formule brute, formules développées différentes : ce sont des **isomères**.\n2. Acide stéarique : **saturé** (aucune double liaison C=C). Acide oléique : **mono-insaturé** (une double liaison). Acide α-linoléique : **poly-insaturé** (trois doubles liaisons, c'est un oméga-3).\n3. L'urée CO(NH₂)₂ est le produit de dégradation des **protéines** : le foie transforme l'ammoniac issu des acides aminés en urée, que le **rein** élimine dans les urines."
+    },
+    {
+      "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+      "difficulte": 2,
+      "titre": "Découper un dipeptide",
+      "consigne": "Applique la méthode du cours pour retrouver les acides aminés, et justifie chaque réponse.",
+      "enonce": "**Document.** Formule semi-développée d'un dipeptide :\n\nH₂N–CH₂–CO–NH–CH(CH₃)–COOH\n\n1. Repère la liaison peptidique. Quelle fonction chimique forme-t-elle ?\n2. Coupe la liaison selon la méthode du cours et écris les formules des deux acides aminés obtenus.\n3. Montre que chacun est un acide α-aminé.\n4. Quelle molécule est libérée quand deux acides aminés s'unissent ?\n5. Combien de liaisons peptidiques compte un pentapeptide (cinq acides aminés) ? Combien de molécules d'eau ont été libérées lors de sa formation ?",
+      "bareme": [
+        {
+          "critere": "Liaison –CO–NH– repérée, fonction amide",
+          "points": 4
+        },
+        {
+          "critere": "H₂N–CH₂–COOH et H₂N–CH(CH₃)–COOH obtenus en rendant –OH au C et –H au N",
+          "points": 6
+        },
+        {
+          "critere": "Fonctions amine et acide carboxylique sur le même carbone pour chacun",
+          "points": 4
+        },
+        {
+          "critere": "Une molécule d'eau libérée ; pentapeptide : 4 liaisons, 4 molécules d'eau",
+          "points": 6
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La liaison peptidique est **–CO–NH–**, entre le CO du premier motif et le NH du second. C'est une fonction **amide**.\n2. On coupe entre C et N, puis on rend **–OH au C** et **–H au N** :\n- premier acide aminé : **H₂N–CH₂–COOH** (la glycine) ;\n- second : **H₂N–CH(CH₃)–COOH** (l'alanine).\n3. Dans chacun, la fonction **amine –NH₂** et la fonction **acide carboxylique –COOH** sont portées par le **même carbone** (le CH₂ ou le CH) : ce sont des acides **α-aminés**.\n4. Deux acides aminés s'unissent en libérant **une molécule d'eau**.\n5. Cinq acides aminés à la suite sont reliés par **4 liaisons peptidiques** ; chaque liaison libère une molécule d'eau : **4 molécules d'eau**."
+    },
+    {
+      "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+      "difficulte": 3,
+      "titre": "Beurre, huile d'olive et jus d'orange",
+      "consigne": "Analyse chaque document en mobilisant le cours, puis rédige une conclusion argumentée.",
+      "enonce": "**Situation.** Pour un exposé sur l'alimentation, Élise réunit trois documents.\n\n**Document 1.** Le beurre contient surtout des triglycérides formés avec de l'acide palmitique (16 carbones, aucune double liaison C=C). L'huile d'olive contient surtout des triglycérides formés avec de l'acide oléique (18 carbones, une double liaison C=C).\n\n**Document 2.** Un jus d'orange pressé perd une partie de sa vitamine C s'il reste plusieurs heures à l'air libre.\n\n**Document 3.** Au laboratoire, on chauffe de la liqueur de Fehling avec trois échantillons : une solution de glucose, une solution d'amidon, de l'eau pure. Un précipité rouge brique apparaît dans un seul tube.\n\n1. Qu'est-ce qu'un triglycéride ? De quelles molécules est-il formé ? Quelle fonction chimique contient-il ?\n2. Compare les acides gras majoritaires du beurre et de l'huile d'olive. Relie ta réponse à l'origine animale ou végétale de ces matières grasses.\n3. Explique le document 2 à l'aide d'une propriété chimique de la vitamine C. Donne un conseil de conservation.\n4. Le précipité rouge brique apparaît dans le tube de glucose. Que met en évidence ce test, et quelle fonction du glucose est en jeu ? À quoi sert le tube d'eau pure ?\n5. Le cholestérol est-il un triglycéride ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Triglycéride : triester d'un glycérol et de trois acides gras, fonction ester, forme de stockage",
+          "points": 5
+        },
+        {
+          "critere": "Beurre : acide gras saturé (animal) ; huile d'olive : mono-insaturé (végétal)",
+          "points": 4
+        },
+        {
+          "critere": "Vitamine C réductrice, oxydée par l'air ; boire vite, éviter la cuisson prolongée",
+          "points": 4
+        },
+        {
+          "critere": "Test des sucres réducteurs, fonction aldéhyde du glucose ; eau pure = témoin sans sucre",
+          "points": 4
+        },
+        {
+          "critere": "Cholestérol : stérol à quatre cycles, pas un triglycéride",
+          "points": 3
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Un **triglycéride** est un **triester** : une molécule de **glycérol** (trois fonctions alcool) estérifiée par **trois acides gras**. Il contient trois fonctions **ester**. C'est la forme de **stockage** des graisses.\n2. Beurre : acide palmitique, **saturé** (aucune double liaison C=C). Huile d'olive : acide oléique, **mono-insaturé** (une double liaison). C'est conforme au cours : les graisses **animales** sont riches en acides gras saturés, les huiles **végétales** en insaturés.\n3. La vitamine C est un **réducteur** : elle s'**oxyde** facilement, notamment au contact du dioxygène de l'air. Laissé à l'air, le jus perd donc de la vitamine C. Conseil : **boire le jus rapidement** après l'avoir pressé (et, pour les légumes, éviter une cuisson prolongée).\n4. La liqueur de Fehling chauffée donne un précipité rouge brique avec les **sucres réducteurs** comme le glucose : c'est un test de la fonction **aldéhyde**. Le tube d'**eau pure** sert de **témoin** : sans sucre, pas de précipité, ce qui montre que c'est bien le glucose qui réagit.\n5. Non : le cholestérol est un **stérol**, un lipide bâti sur **quatre cycles**, et non un triester du glycérol."
+    },
+    {
+      "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+      "difficulte": 1,
+      "titre": "Pourquoi l'eau est polaire",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Dans son cahier, Adèle dessine une molécule d'eau H₂O et une molécule voisine.\n\n1. Quel atome est le plus électronégatif dans la liaison O–H ? Indique les charges partielles portées par l'oxygène et par chaque hydrogène.\n2. Pourquoi la molécule d'eau entière est-elle polaire ? Quel rôle joue sa forme ?\n3. Définis la liaison hydrogène et indique comment on la représente entre deux molécules d'eau.\n4. Cite deux propriétés de l'eau expliquées par les liaisons hydrogène.",
+      "bareme": [
+        {
+          "critere": "Oxygène plus électronégatif, δ⁻ sur O, δ⁺ sur chaque H",
+          "points": 5
+        },
+        {
+          "critere": "Molécule coudée : les charges partielles ne se compensent pas",
+          "points": 5
+        },
+        {
+          "critere": "Liaison hydrogène : attraction H δ⁺ / O δ⁻ voisin, en pointillés O–H···O",
+          "points": 5
+        },
+        {
+          "critere": "Deux propriétés : température d'ébullition élevée, glace moins dense qui flotte",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**oxygène** est plus électronégatif que l'hydrogène : il attire davantage les électrons des liaisons O–H. Il porte une charge partielle **δ⁻**, chaque hydrogène une charge partielle **δ⁺**. La liaison O–H est polaire.\n2. La molécule d'eau est **coudée** : les charges partielles ne se compensent pas, la molécule entière est **polaire**. (Si elle était linéaire, les effets des deux liaisons se compenseraient.)\n3. La **liaison hydrogène** est l'attraction entre un **hydrogène δ⁺** d'une molécule et l'**oxygène δ⁻** d'une molécule voisine. On la représente en **pointillés** : O–H···O. Elle est beaucoup plus faible qu'une liaison covalente.\n4. Une **température d'ébullition élevée** (100 °C) pour une si petite molécule ; la **glace**, à structure ouverte, occupe plus de volume que l'eau liquide et **flotte**."
+    },
+    {
+      "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+      "difficulte": 2,
+      "titre": "L'ampoule à décanter",
+      "consigne": "Justifie chaque réponse par la polarité des espèces ou par les densités.",
+      "enonce": "**Situation.** Au laboratoire, Nathan verse dans trois tubes de l'eau et, respectivement, du glucose, du sel et de l'huile de tournesol. Puis il réalise une extraction : il place dans une ampoule à décanter une solution aqueuse jaune-brun de diiode et du cyclohexane, un solvant organique incolore. Après agitation, la phase du haut devient violette et la phase du bas presque incolore.\n\n**Données :** densité du cyclohexane : 0,78 ; densité de l'eau : 1,00 ; le cyclohexane et l'eau ne sont pas miscibles ; le diiode est plus soluble dans le cyclohexane que dans l'eau.\n\n1. Dans quels tubes obtient-on un mélange homogène ? Justifie avec la règle « qui se ressemble s'assemble ».\n2. Pourquoi le glucose est-il très soluble dans l'eau ?\n3. Dans l'ampoule, quelle phase est en haut ? Justifie.\n4. Où se trouve le diiode après agitation ? Explique le principe de l'extraction.",
+      "bareme": [
+        {
+          "critere": "Glucose et sel dissous (hydrophiles), huile non miscible (hydrophobe)",
+          "points": 5
+        },
+        {
+          "critere": "Fonctions –OH du glucose qui forment des liaisons hydrogène avec l'eau",
+          "points": 5
+        },
+        {
+          "critere": "Cyclohexane en haut car moins dense (0,78 < 1,00)",
+          "points": 5
+        },
+        {
+          "critere": "Diiode passé dans la phase organique du haut, plus soluble ; principe de l'extraction",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L'eau, polaire, dissout les espèces **polaires ou ioniques**. Le **glucose** et le **sel** sont **hydrophiles** : on obtient des mélanges homogènes. L'**huile**, faite de longues chaînes carbonées apolaires, est **hydrophobe** : elle forme une phase séparée.\n2. Le glucose possède de **nombreuses fonctions –OH** qui forment des **liaisons hydrogène** avec les molécules d'eau.\n3. Deux liquides non miscibles forment deux phases ; la moins dense est au-dessus. Densité du cyclohexane 0,78 < 1,00 : la phase de **cyclohexane est en haut**, la phase aqueuse en bas.\n4. La phase du haut devient violette, celle du bas presque incolore : le diiode est passé dans le **cyclohexane** (phase du haut). **Extraire**, c'est faire passer une espèce d'une phase aqueuse vers un solvant où elle est **plus soluble**, dans une ampoule à décanter, puis séparer les phases repérées grâce aux densités."
+    },
+    {
+      "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+      "difficulte": 3,
+      "titre": "Sueur, glaçons et savon",
+      "consigne": "Explique chaque phénomène à l'échelle des molécules, en mobilisant plusieurs notions du chapitre.",
+      "enonce": "**Situation.** Pendant une randonnée d'été, Lina observe plusieurs phénomènes.\n\n- a. Au soleil, elle transpire ; au vent, sa peau mouillée de sueur lui paraît fraîche.\n- b. Dans sa gourde, les glaçons flottent à la surface de l'eau.\n- c. La veille, elle avait oublié une bouteille d'eau pleine et fermée au congélateur : la bouteille a éclaté.\n- d. Le soir, elle lave sa casserole grasse à l'eau seule : la graisse reste. Avec du savon, elle part.\n- e. Elle fait fondre de la glace pure dans une casserole et relève la température pendant la fusion.\n\n1. Explique le phénomène a en utilisant les mots « vaporisation » et « endothermique ».\n2. Explique les phénomènes b et c à l'aide des liaisons hydrogène.\n3. Explique le phénomène d : décris la structure d'une molécule de savon et la formation d'une micelle. Cite un équivalent dans le corps humain.\n4. Décris l'évolution de la température relevée en e, et donne sa valeur.",
+      "bareme": [
+        {
+          "critere": "Évaporation de la sueur endothermique : chaleur prélevée à la peau",
+          "points": 4
+        },
+        {
+          "critere": "Structure ouverte de la glace, chaque molécule liée à quatre voisines, plus de volume : flotte et fait éclater la bouteille",
+          "points": 5
+        },
+        {
+          "critere": "Tête hydrophile, queue hydrophobe, micelle autour de la graisse, têtes vers l'eau",
+          "points": 5
+        },
+        {
+          "critere": "Graisse hydrophobe insoluble dans l'eau seule ; sels biliaires dans l'intestin",
+          "points": 3
+        },
+        {
+          "critere": "Palier à 0 °C pendant la fusion d'un corps pur",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La sueur s'évapore : c'est une **vaporisation**, transformation **endothermique** qui **absorbe de la chaleur**. Cette chaleur est prélevée à la peau, qui se refroidit ; le vent accélère l'évaporation.\n2. Dans la **glace**, les **liaisons hydrogène** imposent une **structure ouverte** où chaque molécule est liée à quatre voisines : la glace occupe **plus de volume** que la même masse d'eau liquide. Elle est donc moins dense et **flotte** (b). Dans la bouteille fermée, l'eau qui gèle prend plus de place : la bouteille **éclate** (c).\n3. La graisse est **hydrophobe** (longues chaînes apolaires) : l'eau seule ne la dissout pas. Une molécule de savon a une **tête hydrophile** (chargée) et une **queue hydrophobe** (longue chaîne). Dans l'eau, les queues se regroupent autour d'une gouttelette de graisse, **têtes tournées vers l'eau** : c'est une **micelle**, que l'eau emporte. Dans le corps, les **sels biliaires** agissent de même dans l'intestin pour disperser les lipides alimentaires.\n4. Pendant la fusion d'un corps pur, la température reste **constante** : c'est un **palier**, à **0 °C** sous pression atmosphérique normale."
+    },
+    {
+      "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+      "difficulte": 1,
+      "titre": "L'étiquette du yaourt",
+      "consigne": "Écris chaque calcul et donne le résultat avec son unité.",
+      "enonce": "**Situation.** Sur l'étiquette d'un yaourt aux fruits, Kenza lit, pour un pot : protides 4 g, glucides 12 g, lipides 3 g.\n\n**Données :** glucides et protides ≈ 17 kJ/g ; lipides ≈ 38 kJ/g ; 1 kcal ≈ 4,18 kJ.\n\n1. Calcule l'énergie apportée par un pot, en kJ.\n2. Convertis-la en kcal.\n3. Quel nutriment apporte le plus d'énergie par gramme ?\n4. Sur l'étiquette, il est écrit « 92 calories ». Que désigne en réalité le mot « calorie » sur une étiquette ?",
+      "bareme": [
+        {
+          "critere": "E = 4 × 17 + 12 × 17 + 3 × 38 = 386 kJ",
+          "points": 8
+        },
+        {
+          "critere": "E ≈ 386 / 4,18 ≈ 92 kcal",
+          "points": 5
+        },
+        {
+          "critere": "Les lipides (≈ 38 kJ/g)",
+          "points": 3
+        },
+        {
+          "critere": "Calorie d'étiquette = kilocalorie",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. E = 4 × 17 + 12 × 17 + 3 × 38 = 68 + 204 + 114 = **386 kJ**.\n2. E = 386 / 4,18 ≈ **92 kcal**.\n3. Les **lipides** : environ 38 kJ par gramme, plus du double des glucides et des protides.\n4. Sur les étiquettes, « calorie » désigne en fait la **kilocalorie** : 92 « calories » = 92 kcal, ce qui correspond au calcul."
+    },
+    {
+      "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+      "difficulte": 2,
+      "titre": "La dépense journalière de Nadia",
+      "consigne": "Utilise la relation de Harris et Benedict donnée, écris chaque étape et arrondis à l'unité.",
+      "enonce": "**Situation.** Nadia, 16 ans, mesure 165 cm et pèse 55 kg. Elle va au lycée à vélo et fait du handball deux fois par semaine. Sa diététicienne retient pour elle un coefficient d'activité de **1,6**.\n\n**Données :**\n- relation de Harris et Benedict pour une femme : MB = 655,1 + 9,56 m + 1,85 h − 4,68 a (MB en kcal/jour, m en kg, h en cm, a en années) ;\n- 1 kcal ≈ 4,18 kJ.\n\n1. Qu'est-ce que le métabolisme de base ?\n2. Calcule le métabolisme de base de Nadia.\n3. Calcule sa dépense énergétique journalière (DEJ) en kcal, puis en kJ.\n4. Cite deux postes de dépense, autres que le métabolisme de base, compris dans la DEJ.",
+      "bareme": [
+        {
+          "critere": "MB : énergie nécessaire aux fonctions vitales au repos",
+          "points": 4
+        },
+        {
+          "critere": "MB ≈ 1 411 kcal/jour, calcul détaillé",
+          "points": 7
+        },
+        {
+          "critere": "DEJ = MB × 1,6 ≈ 2 258 kcal ≈ 9 440 kJ",
+          "points": 6
+        },
+        {
+          "critere": "Deux postes parmi thermorégulation, digestion, activité physique",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le **métabolisme de base** est l'énergie nécessaire aux **fonctions vitales au repos** (cœur, respiration, maintien de la température).\n2. MB = 655,1 + 9,56 × 55 + 1,85 × 165 − 4,68 × 16 = 655,1 + 525,8 + 305,25 − 74,88 ≈ **1 411 kcal/jour**.\n3. DEJ = MB × coefficient = 1 411,27 × 1,6 ≈ **2 258 kcal/jour**. En kJ : 2 258 × 4,18 ≈ **9 440 kJ/jour** (environ 9,4 × 10³ kJ).\n4. La DEJ comprend aussi la **thermorégulation**, la **digestion** et l'**activité physique**."
+    },
+    {
+      "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+      "difficulte": 3,
+      "titre": "Une heure de vélo",
+      "consigne": "Fais les calculs demandés, puis explique les transferts de chaleur avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Julien fait une sortie d'une heure à vélo. Pendant ce temps, ses muscles consomment **2 400 kJ** d'énergie chimique. Le rendement du muscle est ici de **22,5 %** (rendement = énergie mécanique fournie ÷ énergie chimique consommée).\n\nPour récupérer, il mange des barres de céréales. Une barre contient : glucides 20 g, lipides 5 g, protides 2 g.\n\n**Données :** glucides et protides ≈ 17 kJ/g ; lipides ≈ 38 kJ/g.\n\n1. Calcule l'énergie mécanique fournie par les muscles de Julien, puis la chaleur produite. Écris le bilan énergétique du muscle.\n2. Pourquoi Julien a-t-il chaud pendant l'effort ?\n3. Cite et explique trois modes de perte de chaleur de son corps pendant la sortie, avec un exemple pour chacun.\n4. La combustion du glucose dans les muscles est-elle exothermique ou endothermique ? Et l'évaporation de la sueur ?\n5. Calcule l'énergie apportée par une barre, puis le nombre de barres qui apporteraient autant d'énergie que celle consommée par ses muscles. Commente.",
+      "bareme": [
+        {
+          "critere": "E méca = 540 kJ, chaleur = 1 860 kJ, bilan énergie chimique = mécanique + chaleur",
+          "points": 5
+        },
+        {
+          "critere": "Rendement faible : l'essentiel part en chaleur",
+          "points": 2
+        },
+        {
+          "critere": "Trois modes justes avec exemple : convection, évaporation, rayonnement ou conduction",
+          "points": 6
+        },
+        {
+          "critere": "Combustion exothermique, évaporation endothermique",
+          "points": 3
+        },
+        {
+          "critere": "Barre ≈ 564 kJ, environ 4,3 barres, commentaire",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. E méca = 0,225 × 2 400 = **540 kJ**. Chaleur = 2 400 − 540 = **1 860 kJ**. Bilan : **énergie chimique consommée (2 400 kJ) = énergie mécanique (540 kJ) + chaleur (1 860 kJ)**.\n2. Le rendement du muscle est faible (environ 20 à 25 %) : plus des trois quarts de l'énergie consommée partent en **chaleur**, d'où l'échauffement à l'effort.\n3. Trois modes parmi :\n- **convection** : l'air en mouvement (le vent de la descente) emporte la chaleur de la peau ;\n- **évaporation** : la sueur absorbe de la chaleur en se vaporisant ;\n- **rayonnement** : toute la surface du corps émet des infrarouges, sans contact ;\n- **conduction** : contact direct avec un corps plus froid (s'asseoir sur une pierre froide à la pause).\n4. La combustion du glucose **libère** de la chaleur : **exothermique**. L'évaporation de la sueur en **absorbe** : **endothermique**.\n5. Une barre : E = 20 × 17 + 5 × 38 + 2 × 17 = 340 + 190 + 34 = **564 kJ**. Nombre de barres : 2 400 / 564 ≈ **4,3 barres**. Une heure de vélo « coûte » plus de quatre barres : il est facile de manger plus d'énergie qu'on n'en dépense, et inutile de compenser par des sucres ajoutés."
+    },
+    {
+      "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+      "difficulte": 1,
+      "titre": "Du lactose au glycogène",
+      "consigne": "Réponds en utilisant le vocabulaire du cours et en écrivant les équations demandées.",
+      "enonce": "**Situation.** Au petit-déjeuner, Clément boit un bol de lait (qui contient du lactose) et mange une tartine de pain (riche en amidon).\n\n1. Classe les glucides suivants en glucides simples, diholosides ou glucides complexes : glucose, lactose, amidon, fructose, glycogène.\n2. Qu'est-ce qu'une hydrolyse ? Écris l'équation de l'hydrolyse du lactose.\n3. Après le repas, que devient le glucose en excès ? Où est-il stocké ?",
+      "bareme": [
+        {
+          "critere": "Classement : glucose et fructose simples, lactose diholoside, amidon et glycogène complexes",
+          "points": 7
+        },
+        {
+          "critere": "Définition de l'hydrolyse et équation C₁₂H₂₂O₁₁ + H₂O → glucose + galactose",
+          "points": 7
+        },
+        {
+          "critere": "Condensé en glycogène, stocké dans le foie et les muscles",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Glucides simples** (oses) : glucose, fructose. **Diholoside** : lactose. **Glucides complexes** (polyosides) : amidon, glycogène.\n2. Une **hydrolyse** est la **coupure d'une molécule par réaction avec l'eau**. Hydrolyse du lactose : **C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ (glucose) + C₆H₁₂O₆ (galactose)**.\n3. Le glucose en excès est **condensé en glycogène**, stocké dans le **foie** et les **muscles**."
+    },
+    {
+      "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+      "difficulte": 2,
+      "titre": "Suivre l'action de l'amylase",
+      "consigne": "Exploite le tableau de résultats et justifie chaque réponse par le cours.",
+      "enonce": "**Situation.** En TP, Anaïs mélange de l'empois d'amidon avec de l'amylase à 37 °C. Toutes les deux minutes, elle prélève une goutte du mélange et la dépose dans de l'eau iodée.\n\n| Temps (min) | 0 | 2 | 4 | 6 | 8 | 10 |\n| Couleur avec l'eau iodée | bleu foncé | bleu foncé | bleu | violet pâle | jaune-brun | jaune-brun |\n\nL'eau iodée seule est jaune-brun.\n\n1. Que met en évidence la coloration bleue de l'eau iodée ?\n2. Interprète l'évolution des couleurs. À partir de quel moment l'hydrolyse est-elle achevée ?\n3. Écris l'équation de l'hydrolyse de l'amidon. Quel produit obtient-on ?\n4. Quel est le rôle de l'amylase ? Où la trouve-t-on dans l'organisme ?\n5. On sait que le saccharose est formé d'un glucose et d'un fructose. Écris l'équation de son hydrolyse, avec la formule brute C₁₂H₂₂O₁₁, et vérifie qu'elle est équilibrée.",
+      "bareme": [
+        {
+          "critere": "Eau iodée bleue en présence d'amidon",
+          "points": 3
+        },
+        {
+          "critere": "Disparition progressive de l'amidon, hydrolyse achevée vers 8 min",
+          "points": 5
+        },
+        {
+          "critere": "(C₆H₁₀O₅)ₙ + n H₂O → n C₆H₁₂O₆, glucose",
+          "points": 4
+        },
+        {
+          "critere": "Amylase : enzyme qui catalyse l'hydrolyse ; salivaire et pancréatique",
+          "points": 4
+        },
+        {
+          "critere": "C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ + C₆H₁₂O₆ avec comptage des atomes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'eau iodée **bleuit en présence d'amidon**.\n2. De 0 à 4 min, la couleur bleue montre qu'il reste beaucoup d'amidon ; elle pâlit (violet à 6 min) : l'amidon est hydrolysé peu à peu. À **8 min**, l'eau iodée garde sa couleur jaune-brun : il **n'y a plus d'amidon**, l'hydrolyse est **achevée**.\n3. **(C₆H₁₀O₅)ₙ + n H₂O → n C₆H₁₂O₆** : on obtient du **glucose**.\n4. L'amylase est une **enzyme** qui **catalyse** l'hydrolyse de l'amidon (elle la rend rapide à 37 °C, sans acide à chaud). On la trouve dans la **salive** (amylase salivaire) et dans le **suc pancréatique**.\n5. **C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ (glucose) + C₆H₁₂O₆ (fructose)**. À gauche : C 12 ; H 22 + 2 = 24 ; O 11 + 1 = 12. À droite : C 6 + 6 = 12 ; H 12 + 12 = 24 ; O 6 + 6 = 12. L'équation est équilibrée."
+    },
+    {
+      "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+      "difficulte": 3,
+      "titre": "Le 400 mètres de Yasmine",
+      "consigne": "Vérifie les équations, puis rédige une explication argumentée qui relie les transformations chimiques à l'effort.",
+      "enonce": "**Situation.** Yasmine court un 400 m à fond. À l'arrivée, elle est essoufflée, son cœur bat vite et ses cuisses « brûlent ». La veille, elle a mangé des pâtes, riches en amidon.\n\n**Données :**\n- respiration : C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O ;\n- fermentation lactique : C₆H₁₂O₆ → 2 C₃H₆O₃ ;\n- combustion de l'acide pyruvique : 2 C₃H₄O₃ + 5 O₂ → 6 CO₂ + 4 H₂O.\n\n1. Vérifie que l'équation de la respiration est équilibrée, en comptant chaque type d'atome.\n2. Vérifie de même l'équation de la fermentation lactique. Nomme le produit formé.\n3. Vérifie l'équation de combustion de l'acide pyruvique. Combien de molécules de dioxygène faut-il pour brûler **une** molécule d'acide pyruvique ?\n4. Compare les deux filières (dioxygène, rendement, rapidité). Explique pourquoi, lors d'un 400 m, l'acide lactique s'accumule dans les muscles de Yasmine.\n5. Pourquoi sa respiration et son cœur s'accélèrent-ils ?\n6. Explique comment l'amidon des pâtes de la veille a pu fournir de l'énergie à ses muscles (hydrolyse, stockage, libération du glucose).",
+      "bareme": [
+        {
+          "critere": "Trois équations vérifiées atome par atome ; acide lactique nommé",
+          "points": 5
+        },
+        {
+          "critere": "5/2 molécules de O₂ par molécule d'acide pyruvique",
+          "points": 2
+        },
+        {
+          "critere": "Comparaison aérobie / anaérobie ; O₂ insuffisant à l'effort intense, acide lactique qui s'accumule",
+          "points": 5
+        },
+        {
+          "critere": "Hausse de la consommation de O₂ : respiration et cœur s'accélèrent",
+          "points": 3
+        },
+        {
+          "critere": "Amidon hydrolysé en glucose, stocké en glycogène (foie, muscles), puis hydrolysé à nouveau",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Respiration : à gauche C 6 ; H 12 ; O 6 + 12 = 18. À droite : C 6 ; H 12 ; O 12 + 6 = 18. **Équilibrée**.\n2. Fermentation : à gauche C₆H₁₂O₆ ; à droite 2 C₃H₆O₃ = C₆H₁₂O₆. **Équilibrée**. Le produit est l'**acide lactique**.\n3. À gauche : C 6 ; H 8 ; O 6 + 10 = 16. À droite : C 6 ; H 8 ; O 12 + 4 = 16. **Équilibrée**. Pour 2 molécules d'acide pyruvique, 5 O₂ : pour **une** molécule, **5/2 = 2,5** molécules de O₂ (C₃H₄O₃ + 5/2 O₂ → 3 CO₂ + 2 H₂O).\n4. **Aérobie** (respiration) : utilise le dioxygène, rendement **élevé**, toute l'énergie est libérée. **Anaérobie** (fermentation lactique) : **sans O₂**, rendement **faible** mais **rapide**. Sur un 400 m à fond, les muscles réclament beaucoup d'énergie très vite ; l'apport de O₂ ne suffit plus : la **filière anaérobie prend le relais** et l'**acide lactique s'accumule** (sensation de brûlure).\n5. À l'effort, les muscles consomment plus d'énergie, donc plus de **dioxygène** pour oxyder les nutriments : la **respiration** et le **cœur** s'accélèrent pour en apporter davantage.\n6. L'amidon des pâtes a été **hydrolysé** par les amylases (salivaire et pancréatique) en **glucose**. Le glucose en excès a été **condensé en glycogène**, stocké dans le **foie** et les **muscles**. Pendant la course, le glycogène est hydrolysé et libère du glucose, que les muscles brûlent (par respiration ou par fermentation)."
+    },
+    {
+      "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+      "difficulte": 1,
+      "titre": "L'analyse de l'eau du village",
+      "consigne": "Compare chaque résultat à la limite de qualité du cours et conclus.",
+      "enonce": "**Document.** Résultats d'analyse de l'eau du robinet d'un village, affichés en mairie :\n\n| Paramètre | Résultat |\n| Nitrates NO₃⁻ | 38 mg/L |\n| Pesticide A | 0,04 µg/L |\n| Pesticide B | 0,25 µg/L |\n| Plomb | 3 µg/L |\n\n1. Rappelle les limites de qualité de l'eau du robinet pour les nitrates, chaque pesticide et le plomb.\n2. Compare chaque résultat à sa limite. L'eau respecte-t-elle toutes les limites ? Conclus.\n3. Quelle est l'origine la plus probable des pesticides et des nitrates dans cette eau ?",
+      "bareme": [
+        {
+          "critere": "Limites : nitrates 50 mg/L, chaque pesticide 0,1 µg/L, plomb 10 µg/L",
+          "points": 6
+        },
+        {
+          "critere": "Comparaisons justes : pesticide B au-dessus de la limite, les autres en dessous",
+          "points": 8
+        },
+        {
+          "critere": "Origine agricole : engrais et pesticides",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Nitrates : **50 mg/L** ; chaque pesticide : **0,1 µg/L** ; plomb : **10 µg/L**.\n2. Nitrates : 38 < 50 mg/L, conforme. Pesticide A : 0,04 < 0,1 µg/L, conforme. **Pesticide B : 0,25 > 0,1 µg/L, non conforme** (2,5 fois la limite). Plomb : 3 < 10 µg/L, conforme. L'eau **ne respecte pas toutes les limites** chimiques : elle n'est pas conforme à cause du pesticide B.\n3. Une origine **agricole** : les **pesticides** pulvérisés sur les cultures et les **nitrates** des engrais, entraînés vers les nappes et les rivières."
+    },
+    {
+      "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+      "difficulte": 2,
+      "titre": "Une eau minérale pour M. Petit",
+      "consigne": "Exploite l'étiquette, puis explique le comportement des ions dans le sol avec le cours.",
+      "enonce": "**Situation.** M. Petit souffre d'hypertension. Il boit chaque jour une eau minérale gazeuse dont l'étiquette indique (en mg/L) :\n\n| Ion | Ca²⁺ | Mg²⁺ | Na⁺ | K⁺ | HCO₃⁻ | Cl⁻ | NO₃⁻ |\n| Teneur | 90 | 11 | 1 200 | 50 | 3 000 | 230 | 2 |\n\nSon fils, agriculteur, se demande pourquoi les nitrates de ses engrais se retrouvent dans la nappe, alors que le potassium reste dans son champ.\n\n1. Classe les ions de l'étiquette en cations et en anions.\n2. Cette eau convient-elle à M. Petit pour un usage quotidien ? Justifie.\n3. Qu'est-ce que le complexe argilo-humique ? Quelle est sa charge ?\n4. Explique pourquoi les ions potassium K⁺ restent dans le sol et pourquoi les ions nitrate NO₃⁻ sont lessivés vers la nappe.",
+      "bareme": [
+        {
+          "critere": "Cations : Ca²⁺, Mg²⁺, Na⁺, K⁺ ; anions : HCO₃⁻, Cl⁻, NO₃⁻",
+          "points": 4
+        },
+        {
+          "critere": "Eau très riche en sodium, déconseillée en cas d'hypertension",
+          "points": 5
+        },
+        {
+          "critere": "Complexe argilo-humique : argile + humus, chargé négativement",
+          "points": 4
+        },
+        {
+          "critere": "Cations retenus et échangés ; anions non retenus, lessivés vers les nappes",
+          "points": 7
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Cations** (charge positive) : Ca²⁺, Mg²⁺, Na⁺, K⁺. **Anions** (charge négative) : HCO₃⁻, Cl⁻, NO₃⁻.\n2. Cette eau contient **1 200 mg/L de sodium** : elle est **très riche en sodium**. Une eau très riche en sodium est **déconseillée en cas d'hypertension** : elle ne convient pas à M. Petit pour un usage quotidien. Certaines eaux minérales ne conviennent pas à une consommation de tous les jours.\n3. Le **complexe argilo-humique** est l'association de l'**argile** et de l'**humus** du sol. Il est **chargé négativement**.\n4. Chargé négativement, le complexe **attire et retient les cations** (K⁺, Ca²⁺, Mg²⁺, NH₄⁺) et les échange avec la solution du sol, où la plante les puise : le potassium reste disponible dans le champ. Les **anions** comme les nitrates **ne sont pas retenus** : l'eau de pluie les entraîne en profondeur, ils sont **lessivés vers les nappes**."
+    },
+    {
+      "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+      "difficulte": 3,
+      "titre": "Le puits de la ferme et la rivière verte",
+      "consigne": "Analyse les documents, mobilise le cours et rédige une réponse argumentée pour chaque question.",
+      "enonce": "**Situation.** M. Le Gall, agriculteur, apporte chaque printemps un engrais NPK sur ses parcelles de maïs, parfois à forte dose « pour être sûr ». Il traite aussi contre les insectes et les champignons.\n\n**Document 1.** Dosage des nitrates dans l'eau du puits de la ferme par échelle de teinte : l'échantillon a une teinte comprise entre celles des solutions étalons à 50 mg/L et à 75 mg/L, plus proche de celle à 75 mg/L.\n\n**Document 2.** En été, la rivière en aval se couvre d'algues vertes ; on y trouve des poissons morts.\n\n**Document 3.** Un projet propose de consacrer une partie des terres de la commune à du maïs destiné à la production de biocarburant.\n\n1. Explique le rôle de chacun des éléments N, P et K pour la plante.\n2. Explique le principe du dosage par échelle de teinte. L'eau du puits peut-elle être bue ? Justifie.\n3. Explique l'enchaînement qui conduit aux observations du document 2. Nomme le phénomène.\n4. Nomme les pesticides utilisés par M. Le Gall. Propose trois règles de bon usage des engrais et des pesticides.\n5. Présente un argument pour et un argument contre le projet du document 3.",
+      "bareme": [
+        {
+          "critere": "N : tiges et feuilles ; P : racines et floraison ; K : fruits et résistance",
+          "points": 3
+        },
+        {
+          "critere": "Échelle de teinte expliquée ; teneur supérieure à 50 mg/L : eau non potable",
+          "points": 5
+        },
+        {
+          "critere": "Eutrophisation : excès de nitrates et phosphates, algues, manque de dioxygène",
+          "points": 5
+        },
+        {
+          "critere": "Insecticide, fongicide ; règles : juste dose, bon moment, protection, zones non traitées",
+          "points": 4
+        },
+        {
+          "critere": "Biocarburant : un argument pour, un argument contre (compétition avec l'alimentation)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **N** (ions nitrate) : croissance des **tiges et des feuilles** ; **P** (ions phosphate) : développement des **racines** et **floraison** ; **K** (ions potassium) : formation des **fruits** et **résistance**.\n2. On **compare la couleur** de l'échantillon (traité pour être coloré) à celle de **solutions de concentrations connues** : sa concentration est comprise entre celles des deux étalons qui l'encadrent. Ici, la teneur est comprise entre 50 et 75 mg/L : elle **dépasse la limite de qualité de 50 mg/L**. L'eau du puits **n'est pas potable** : il ne faut pas la boire.\n3. L'excès d'engrais apporte des **nitrates** (non retenus par le sol, donc lessivés) et des **phosphates** jusqu'à la rivière. Ces nutriments provoquent une **prolifération d'algues** ; leur décomposition consomme le **dioxygène** de l'eau, et les poissons meurent. C'est l'**eutrophisation**.\n4. Contre les insectes : **insecticide** ; contre les champignons : **fongicide**. Bon usage : apporter **la juste dose** (et non « pour être sûr »), **au bon moment**, avec un **équipement de protection**, en respectant les **zones non traitées près des cours d'eau**.\n5. **Pour** : produire une énergie à partir d'une culture, un débouché pour les agriculteurs (à discuter avec les bilans énergétiques). **Contre** : utiliser des terres pour le carburant entre en **compétition avec l'alimentation humaine** ; de plus, une culture de maïs intensive peut aggraver l'usage d'engrais."
+    },
+    {
+      "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+      "difficulte": 1,
+      "titre": "Cinq mesures de pH",
+      "consigne": "Calcule, puis écris le résultat sous la forme demandée par le cours.",
+      "enonce": "**Situation.** Au laboratoire, Mehdi mesure cinq fois, dans les mêmes conditions, le pH d'une solution tampon avec un pH-mètre étalonné :\n\n| Mesure | 1 | 2 | 3 | 4 | 5 |\n| pH | 7,30 | 7,34 | 7,32 | 7,35 | 7,29 |\n\nLa calculatrice donne un écart-type σ = 0,025.\n\n1. Calcule la moyenne des mesures. Que représente-t-elle ?\n2. Que traduit l'écart-type ?\n3. Calcule l'incertitude-type sur la moyenne.\n4. Écris le résultat de la mesure sous la forme « valeur ± incertitude ».",
+      "bareme": [
+        {
+          "critere": "Moyenne = 36,60 / 5 = 7,32, meilleure estimation",
+          "points": 6
+        },
+        {
+          "critere": "Écart-type : dispersion des mesures autour de la moyenne",
+          "points": 4
+        },
+        {
+          "critere": "u = σ / √5 ≈ 0,011",
+          "points": 5
+        },
+        {
+          "critere": "pH = 7,32 ± 0,01, incertitude à un chiffre significatif et valeur au même rang",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Moyenne = (7,30 + 7,34 + 7,32 + 7,35 + 7,29) / 5 = 36,60 / 5 = **7,32**. C'est la **meilleure estimation** de la valeur du pH.\n2. L'écart-type traduit la **dispersion des mesures autour de la moyenne**.\n3. u = σ / √n = 0,025 / √5 = 0,025 / 2,24 ≈ **0,011**.\n4. On arrondit l'incertitude à un chiffre significatif (0,01) et la valeur au même rang : **pH = 7,32 ± 0,01**. (On accepte 7,320 ± 0,011 avec deux chiffres significatifs.)"
+    },
+    {
+      "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+      "difficulte": 2,
+      "titre": "Corriger la copie de Timéo",
+      "consigne": "Repère chaque erreur de la copie, nomme le piège, puis rédige la correction complète.",
+      "enonce": "**Document : extraits de la copie de Timéo**\n\n> **Question 1.** Au repos, fC = 70 battements/min et VES = 70 mL. Calculer le débit cardiaque.\n> *Réponse de Timéo :* 70 × 70 = 4 900. Le débit cardiaque est de 4 900 L/min.\n>\n> **Question 2.** La peau est à 37 °C. Calculer la longueur d'onde du maximum d'émission (λmax × T = 2,90 × 10⁻³ m·K).\n> *Réponse de Timéo :* λmax = 2,90 × 10⁻³ / 37 = 7,8 × 10⁻⁵.\n>\n> **Question 3.** Un patient porte des lunettes divergentes. De quel défaut souffre-t-il ?\n> *Réponse de Timéo :* d'hypermétropie, son image se forme derrière la rétine.\n\n1. Pour la question 1, relève les deux défauts de rédaction et l'erreur d'unité. Rédige la réponse correcte en suivant les étapes du cours. Comment l'ordre de grandeur aurait-il pu alerter Timéo ?\n2. Pour la question 2, nomme le piège et rédige la réponse correcte.\n3. Pour la question 3, corrige la réponse en la justifiant.",
+      "bareme": [
+        {
+          "critere": "Q1 : relation littérale absente, unité fausse ; DC = fC × VES = 4 900 mL/min ≈ 4,9 L/min",
+          "points": 6
+        },
+        {
+          "critere": "Ordre de grandeur : ≈ 5 L/min attendu, 4 900 L/min absurde",
+          "points": 3
+        },
+        {
+          "critere": "Q2 : oubli de la conversion en kelvins et de l'unité ; λmax ≈ 9,4 × 10⁻⁶ m",
+          "points": 6
+        },
+        {
+          "critere": "Q3 : verre divergent = myopie, image avant la rétine",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Défauts : Timéo **n'écrit pas la relation littérale** et ne mentionne pas les unités des données ; il se trompe d'**unité** (le VES est en mL, donc le résultat est en mL/min). Réponse correcte : **DC = fC × VES** = 70 × 70 = 4 900 mL/min = **4,9 L/min**. Un débit cardiaque de repos est de l'ordre de **5 L/min** : 4 900 L/min est **absurde** et aurait dû l'alerter.\n2. Piège : **oublier la conversion en kelvins** (et oublier l'unité du résultat). T = 37 + 273 = 310 K ; **λmax = 2,90 × 10⁻³ / 310 ≈ 9,4 × 10⁻⁶ m** (9,4 µm), dans l'infrarouge.\n3. Un verre **divergent** corrige la **myopie**. Chez le myope, l'œil est trop convergent : l'image d'un objet lointain se forme **avant la rétine**. L'hypermétropie (image derrière la rétine) se corrige, elle, par un verre **convergent**."
+    },
+    {
+      "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+      "difficulte": 3,
+      "titre": "Deux appareils pour un sérum",
+      "consigne": "Exploite les documents, fais les calculs en suivant les étapes du cours et rédige chaque conclusion.",
+      "enonce": "**Situation.** Au laboratoire de contrôle d'une pharmacie hospitalière, on vérifie la concentration massique en chlorure de sodium d'un lot de sérum physiologique. Deux appareils sont utilisés, chacun pour 8 mesures dans les mêmes conditions.\n\n**Document 1 : résultats**\n\n| Appareil | Moyenne (g/L) | Écart-type σ (g/L) |\n| A | 9,05 | 0,16 |\n| B | 8,98 | 0,04 |\n\n**Document 2 : l'histogramme des mesures de B est plus resserré que celui de A.**\n\n**Données :** M(NaCl) = 58,5 g/mol ; Cm = C × M.\n\n1. Lequel des deux appareils est le plus précis ? Justifie avec les deux documents.\n2. Calcule l'incertitude-type sur la moyenne pour chaque appareil, puis écris chaque résultat sous la forme « valeur ± incertitude, avec l'unité ».\n3. À partir du résultat de B, calcule la concentration molaire du sérum.\n4. Un stagiaire écrit : « C = 8,98 × 58,5 = 525 mol/L ». Identifie son erreur de deux façons (relation et ordre de grandeur).\n5. Le sérum physiologique doit être à 9 g/L. Le résultat de B est-il cohérent avec cette valeur ? Rédige une conclusion prudente.",
+      "bareme": [
+        {
+          "critere": "B plus précis : écart-type plus petit, histogramme plus resserré",
+          "points": 4
+        },
+        {
+          "critere": "u(A) ≈ 0,06 g/L, u(B) ≈ 0,01 g/L ; résultats 9,05 ± 0,06 et 8,98 ± 0,01 g/L",
+          "points": 6
+        },
+        {
+          "critere": "C = Cm / M ≈ 0,154 mol/L",
+          "points": 4
+        },
+        {
+          "critere": "Erreur du stagiaire : multiplication au lieu de division, valeur absurde",
+          "points": 3
+        },
+        {
+          "critere": "Conclusion argumentée et prudente sur la cohérence avec 9 g/L",
+          "points": 3
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. L'appareil **B** est le plus précis : son écart-type (0,04 g/L) est quatre fois plus petit que celui de A (0,16 g/L), et son **histogramme est plus resserré** : ses mesures sont moins dispersées.\n2. u = σ / √n avec n = 8 (√8 ≈ 2,83).\n- A : u = 0,16 / 2,83 ≈ 0,057 → **Cm = 9,05 ± 0,06 g/L**.\n- B : u = 0,04 / 2,83 ≈ 0,014 → **Cm = 8,98 ± 0,01 g/L**.\n3. Cm = C × M, donc C = Cm / M = 8,98 / 58,5 ≈ **0,154 mol/L** (0,15 mol/L).\n4. Le stagiaire a **multiplié** au lieu de **diviser** par la masse molaire (il confond les deux concentrations : de g/L on passe à mol/L en divisant par M). L'**ordre de grandeur** aurait dû l'alerter : 525 mol/L est absurde pour une solution aqueuse, alors que le sérum est à environ 0,15 mol/L.\n5. Le résultat de B (8,98 ± 0,01 g/L) est **très proche** de 9 g/L : l'écart n'est que de 0,02 g/L, soit environ 0,2 % de la valeur. On peut conclure que le lot a une concentration **cohérente avec la valeur attendue de 9 g/L** ; pour aller plus loin, on refera la mesure si l'écart persiste. Le résultat de A, moins précis, est lui aussi proche de 9 g/L mais avec une marge plus large."
+    }
+  ]
+}

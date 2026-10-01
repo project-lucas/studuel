@@ -1,0 +1,2568 @@
+{
+ "niveau": "Tle",
+ "matiere": "ses",
+ "exercices": [
+  {
+   "chapitre": "eb59636c-7d22-5a0c-ba07-7e887bcd361e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un seul taux pour deux conjonctures",
+   "competence": "lire-tableau",
+   "situation": "La Banque centrale européenne fixe un taux directeur unique de 2 % pour toute la zone euro. Deux pays imaginaires, Aldia et Borvia, n’ont pourtant pas du tout la même conjoncture.",
+   "documents": [
+    {
+     "id": "conj",
+     "type": "tableau",
+     "titre": "Deux pays de la zone euro",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Croissance du PIB",
+      "Inflation",
+      "Chômage"
+     ],
+     "lignes": [
+      [
+       "Aldia",
+       "− 2 %",
+       "0,5 %",
+       "12 %"
+      ],
+      [
+       "Borvia",
+       "+ 4 %",
+       "5 %",
+       "4 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conj",
+     "enonce": "Touche le pays qui est en récession.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Une récession, c’est un PIB qui recule.",
+     "explication": "**Aldia** a un PIB qui baisse de 2 % et un chômage élevé : elle est en récession."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart d’inflation, en points de pourcentage, sépare Borvia d’Aldia ?",
+     "reponse": 4.5,
+     "unite": "points",
+     "tolerance": 0.05,
+     "aide": "Soustrais la plus petite inflation de la plus grande.",
+     "explication": "5 − 0,5 = **4,5 points** : un même taux directeur pour deux situations très éloignées."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Un taux de 2 % est trop ___ pour Aldia en récession et trop ___ pour Borvia en surchauffe.",
+     "reponses": [
+      [
+       "élevé"
+      ],
+      [
+       "bas"
+      ]
+     ],
+     "banque": [
+      "élevé",
+      "bas",
+      "neutre",
+      "variable"
+     ],
+     "aide": "Une récession appelle un crédit peu cher, une surchauffe un crédit plus cher.",
+     "explication": "Le taux unique est **trop élevé** pour Aldia (il freine encore une économie déjà en panne) et **trop bas** pour Borvia (il alimente l’inflation)."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb59636c-7d22-5a0c-ba07-7e887bcd361e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sans monnaie à dévaluer",
+   "competence": "raisonner",
+   "situation": "Un pays de la zone euro a perdu en compétitivité face à ses voisins. Hors de l’union monétaire, il aurait pu dévaluer ; il ne le peut plus.",
+   "documents": [
+    {
+     "id": "leviers",
+     "type": "tableau",
+     "titre": "Les leviers de rééquilibrage",
+     "source": "Synthèse simplifiée pour l’exercice.",
+     "colonnes": [
+      "Levier",
+      "Avec sa monnaie",
+      "Dans la zone euro"
+     ],
+     "lignes": [
+      [
+       "Dévaluer sa monnaie",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Baisser salaires et prix (dévaluation interne)",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Fixer son propre taux directeur",
+       "Oui",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "leviers",
+     "enonce": "Dans la zone euro, il ne reste que l’un de ces trois leviers. Touche la case qui le montre.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne où la dernière colonne dit « Oui ».",
+     "explication": "Seule la **dévaluation interne** reste possible dans la zone euro : baisser les salaires et les prix."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une voiture exportée coûte 20 000 €. Si tous les coûts de production baissent de 10 %, quel est son nouveau prix en euros ?",
+     "reponse": 18000,
+     "unite": "€",
+     "aide": "Multiplie 20 000 par 0,9.",
+     "explication": "20 000 × 0,9 = **18 000 €**. La compétitivité-prix s’améliore."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les effets de la dévaluation interne dans l’ordre où ils se produisent.",
+     "items": [
+      "Les salaires et les prix baissent",
+      "La demande intérieure se contracte",
+      "La production recule",
+      "Le chômage augmente"
+     ],
+     "aide": "Part de la mesure, et suis la chaîne jusqu’à l’emploi.",
+     "explication": "Salaires en baisse, donc **demande en baisse**, donc production et emploi en baisse : c’est pourquoi on la dit **récessive**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la dévaluation interne est-elle plus douloureuse qu’une dévaluation monétaire ?",
+     "options": [
+      "Elle passe par une baisse des revenus de chacun, longue et récessive",
+      "Elle suppose l’accord de tous les États membres de l’Union",
+      "Elle augmente immédiatement le prix de toutes les importations",
+      "Elle oblige la banque centrale à relever son taux directeur"
+     ],
+     "reponse": 0,
+     "aide": "Comparer : une décision de change d’un côté, des millions de fiches de paie de l’autre.",
+     "explication": "Dévaluer la monnaie est immédiat ; la dévaluation interne exige que **salaires et prix baissent** partout, ce qui freine la demande."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb59636c-7d22-5a0c-ba07-7e887bcd361e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La course au taux d’impôt",
+   "competence": "modeliser",
+   "situation": "Deux États voisins, A et B, peuvent fixer leur impôt sur les sociétés à 30 % ou à 15 % pour attirer les entreprises mobiles. Le tableau donne leurs recettes selon leurs choix.",
+   "documents": [
+    {
+     "id": "gains",
+     "type": "tableau",
+     "titre": "Recettes de l’impôt sur les sociétés",
+     "source": "Chiffres imaginés pour l’exercice, en milliards d’euros.",
+     "colonnes": [
+      "Choix des deux États",
+      "Recettes de A",
+      "Recettes de B"
+     ],
+     "lignes": [
+      [
+       "Tous deux à 30 %",
+       60,
+       60
+      ],
+      [
+       "Tous deux à 15 %",
+       30,
+       30
+      ],
+      [
+       "A à 15 %, B à 30 %",
+       80,
+       10
+      ],
+      [
+       "A à 30 %, B à 15 %",
+       10,
+       80
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gains",
+     "enonce": "Touche les recettes de A quand les deux États choisissent 15 %.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Lis la ligne « Tous deux à 15 % ».",
+     "explication": "Les recettes de A tombent à **30 milliards**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de milliards les recettes cumulées de A et B baissent-elles quand on passe de « tous deux à 30 % » à « tous deux à 15 % » ?",
+     "reponse": 60,
+     "unite": "milliards",
+     "aide": "Additionne les deux recettes dans chaque cas, puis soustrais.",
+     "explication": "120 − 60 = **60 milliards** perdus ensemble."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si B reste à 30 %, de combien de milliards les recettes de A augmentent-elles quand A passe à 15 % ?",
+     "reponse": 20,
+     "unite": "milliards",
+     "aide": "Compare les lignes « Tous deux à 30 % » et « A à 15 %, B à 30 % ».",
+     "explication": "80 − 60 = **20 milliards** de gain pour A : c’est la tentation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi chaque État finit-il par choisir 15 %, alors que tous deux y perdent ?",
+     "options": [
+      "Quoi que fasse l’autre, baisser son taux rapporte plus à chacun pris isolément",
+      "Parce que les traités européens imposent un taux unique à tous les États",
+      "Parce que les entreprises préfèrent toujours payer des impôts plus élevés",
+      "Parce que la baisse des taux augmente mécaniquement les recettes de chacun"
+     ],
+     "reponse": 0,
+     "aide": "Compare les recettes de A à 15 % et à 30 %, en supposant B à 30 %, puis B à 15 %.",
+     "explication": "Si B est à 30 %, A gagne à 15 % (80 > 60) ; si B est à 15 %, A gagne encore à 15 % (30 > 10). C’est un comportement **non coopératif**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse permettrait d’éviter la ligne « Tous deux à 15 % » ?",
+     "options": [
+      "Un taux minimal d’imposition négocié entre les États concernés",
+      "Une hausse du taux directeur décidée par la banque centrale",
+      "Une baisse des salaires dans les deux États en même temps",
+      "Une suppression de toute recette fiscale sur les sociétés"
+     ],
+     "reponse": 0,
+     "aide": "Il faut que les États s’engagent ensemble.",
+     "explication": "Un **taux plancher commun** est une coordination : il retire l’intérêt de baisser seul son impôt."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff4c37f-7cea-5f7c-8f7d-bbbd01e841d0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "D’où vient la croissance ?",
+   "competence": "lire-graphique",
+   "situation": "Les économistes décomposent la croissance d’un pays en contributions. Voici celles d’un pays imaginaire sur une année où le PIB en volume a progressé de 2 %.",
+   "documents": [
+    {
+     "id": "contrib",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Contribution à la croissance (points de %)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Travail",
+      "Capital",
+      "PGF"
+     ],
+     "series": [
+      {
+       "nom": "Contribution",
+       "valeurs": [
+        0.3,
+        0.5,
+        1.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Contribution",
+      "unite": "en points",
+      "min": 0,
+      "max": 1.5,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Source de la croissance"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contrib",
+     "enonce": "Touche la source qui contribue le plus à la croissance.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **PGF** (productivité globale des facteurs) apporte 1,2 point sur 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la croissance, en %, vient de la PGF ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Divise 1,2 par 2, puis multiplie par 100.",
+     "explication": "1,2 ÷ 2 = 0,6, soit **60 %** de la croissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de cette croissance ?",
+     "options": [
+      "Elle est surtout intensive, car elle vient d’abord des gains de productivité",
+      "Elle est surtout extensive, car elle vient d’abord de la hausse des facteurs",
+      "Elle est nulle, car le travail et le capital pèsent peu dans le total",
+      "Elle est impossible à qualifier, car la PGF ne dit rien sur la production"
+     ],
+     "reponse": 0,
+     "aide": "Compare la PGF à la somme travail + capital.",
+     "explication": "Travail et capital apportent 0,8 point contre 1,2 pour la PGF : la croissance est **plutôt intensive**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff4c37f-7cea-5f7c-8f7d-bbbd01e841d0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux pays, même PIB, autre recette",
+   "competence": "calculer",
+   "situation": "Les pays X et Y ont connu la même hausse de PIB en dix ans, mais pas de la même façon. Le tableau donne leur production et le nombre d’heures travaillées.",
+   "documents": [
+    {
+     "id": "x",
+     "type": "tableau",
+     "titre": "Production et travail",
+     "source": "Chiffres imaginés pour l’exercice : PIB en volume (milliards d’euros), heures en milliards.",
+     "colonnes": [
+      "Pays",
+      "PIB 2010",
+      "PIB 2020",
+      "Heures 2010",
+      "Heures 2020"
+     ],
+     "lignes": [
+      [
+       "X",
+       500,
+       560,
+       50,
+       56
+      ],
+      [
+       "Y",
+       500,
+       560,
+       50,
+       50
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PIB par heure travaillée du pays X en 2020, en euros ?",
+     "reponse": 10,
+     "unite": "€",
+     "aide": "Divise le PIB de X en 2020 par ses heures en 2020.",
+     "explication": "560 ÷ 56 = **10 €** par heure, comme en 2010 : aucun gain de productivité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le PIB par heure travaillée du pays Y a-t-il augmenté entre 2010 et 2020 ? (arrondi à l’unité)",
+     "reponse": 12,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Calcule le PIB par heure en 2010 (10 €) et en 2020, puis la variation.",
+     "explication": "Y passe de 10 € à 560 ÷ 50 = 11,2 € par heure : **+ 12 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation selon le type de croissance qu’elle illustre.",
+     "categories": [
+      "Plutôt extensive",
+      "Plutôt intensive"
+     ],
+     "items": [
+      [
+       "Le pays X : 12 % d’heures en plus, 12 % de PIB en plus",
+       0
+      ],
+      [
+       "Le pays Y : le même PIB avec des heures inchangées",
+       1
+      ],
+      [
+       "Une usine qui double ses machines avec des salariés aussi productifs qu’avant",
+       0
+      ],
+      [
+       "Un logiciel qui permet de produire davantage avec les mêmes salariés",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si la hausse vient de plus de facteurs ou de plus d’efficacité.",
+     "explication": "La croissance est **extensive** quand elle vient de plus de facteurs, **intensive** quand la productivité progresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la croissance de Y est-elle plus soutenable que celle de X ?",
+     "options": [
+      "Elle ne suppose pas de faire travailler toujours plus d’heures",
+      "Elle ne nécessite aucun progrès technique dans les entreprises",
+      "Elle évite de produire davantage de biens dans les années suivantes",
+      "Elle repose uniquement sur une hausse des prix de vente des biens"
+     ],
+     "reponse": 0,
+     "aide": "Un nombre d’heures travaillées ne peut pas croître sans limite.",
+     "explication": "Les heures et le capital ne peuvent pas augmenter indéfiniment ; les **gains de productivité**, si."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff4c37f-7cea-5f7c-8f7d-bbbd01e841d0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Détruire pour créer",
+   "competence": "analyser-document",
+   "situation": "Dans une région imaginaire, l’arrivée du numérique ferme des ateliers de cartes postales mais fait naître des entreprises de logiciel. Une de ces entreprises hésite à financer de la recherche.",
+   "documents": [
+    {
+     "id": "emplois",
+     "type": "tableau",
+     "titre": "Emplois détruits et créés en dix ans",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Activité",
+      "Emplois"
+     ],
+     "lignes": [
+      [
+       "Ateliers de cartes postales (fermés)",
+       "− 1 200"
+      ],
+      [
+       "Entreprises de logiciel (créées)",
+       "+ 1 800"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rd",
+     "type": "tableau",
+     "titre": "Un projet de recherche",
+     "source": "Chiffres imaginés pour l’exercice, en millions d’euros.",
+     "colonnes": [
+      "",
+      "Coût du projet",
+      "Gain de l’entreprise",
+      "Gain des autres entreprises"
+     ],
+     "lignes": [
+      [
+       "Projet",
+       10,
+       6,
+       8
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde net d’emplois de la région sur dix ans ?",
+     "reponse": 600,
+     "unite": "emplois",
+     "aide": "Additionne les emplois créés et détruits.",
+     "explication": "1 800 − 1 200 = **+ 600 emplois** : la destruction est réelle, la création plus forte."
+    },
+    {
+     "type": "zone",
+     "document": "rd",
+     "enonce": "Touche le chiffre que l’entreprise compare au coût de 10 millions pour décider d’investir ou non.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Une entreprise ne compte que ce qu’elle gagne elle-même.",
+     "explication": "L’entreprise compare ses **6 millions** de gain au coût de 10 : elle renonce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le gain total du projet pour la société, en millions d’euros ?",
+     "reponse": 14,
+     "unite": "millions",
+     "aide": "Additionne le gain de l’entreprise et celui des autres.",
+     "explication": "6 + 8 = **14 millions**, supérieur au coût de 10 : le projet vaut la peine pour la collectivité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que justifie cet écart entre le gain privé et le gain social ?",
+     "options": [
+      "Une aide publique à la recherche, car la connaissance profite à d’autres qu’à son auteur",
+      "Une interdiction de la recherche, car elle détruit les emplois des ateliers fermés",
+      "Une baisse des salaires, car le projet coûte plus cher que son gain privé",
+      "Une hausse des prix des logiciels, car les autres entreprises y gagnent déjà"
+     ],
+     "reponse": 0,
+     "aide": "Le gain des autres est une externalité positive.",
+     "explication": "Les **externalités positives** font que la recherche privée est inférieure à l’optimum social : subventions et crédit d’impôt recherche la corrigent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume le mieux le processus décrit par le premier tableau ?",
+     "options": [
+      "Une destruction créatrice : douloureuse à court terme, créatrice de croissance à long terme",
+      "Une stagnation séculaire : aucune activité nouvelle ne remplace les activités détruites",
+      "Une croissance extensive : plus de travail et plus de capital, sans changement technique",
+      "Une décroissance choisie : moins de production pour préserver le capital naturel"
+     ],
+     "reponse": 0,
+     "aide": "Schumpeter insiste sur les deux faces à la fois.",
+     "explication": "C’est la **destruction créatrice** de Schumpeter : des activités disparaissent pendant que d’autres apparaissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5838efd-0ecb-5c9e-94c6-c3a260895987",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le brevet de la cuisson douce",
+   "competence": "analyser-document",
+   "situation": "Léa, ingénieure, a mis au point un procédé de cuisson qui conserve mieux les aliments. Elle a déposé un brevet. Voici la fiche de son brevet, imaginée pour l’exercice.",
+   "documents": [
+    {
+     "id": "brevet",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Brevet — procédé de cuisson douce",
+     "sousTitre": "Fiche imaginée pour l’exercice",
+     "emoji": "📄",
+     "lignes": [
+      {
+       "texte": "Dépôt de la demande",
+       "valeur": "2004"
+      },
+      {
+       "texte": "Durée de la protection",
+       "valeur": "20 ans",
+       "id": "duree"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Ce que Léa doit rendre public",
+       "valeur": "La description complète du procédé",
+       "id": "contrepartie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En quelle année la protection de Léa prend-elle fin ?",
+     "reponse": 2024,
+     "unite": "année",
+     "aide": "Ajoute la durée à l’année de dépôt.",
+     "explication": "2004 + 20 = **2024**. Après, tout le monde peut utiliser le procédé."
+    },
+    {
+     "type": "zone",
+     "document": "brevet",
+     "enonce": "Touche la ligne qui indique ce que Léa doit donner en échange du monopole.",
+     "reponse": [
+      "contrepartie"
+     ],
+     "aide": "Le monopole est compensé par une obligation.",
+     "explication": "En échange du monopole, Léa doit **publier** son invention : la connaissance se diffuse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le brevet accorde un ___ temporaire en échange de la ___ de l’invention.",
+     "reponses": [
+      [
+       "monopole"
+      ],
+      [
+       "publication"
+      ]
+     ],
+     "banque": [
+      "monopole",
+      "publication",
+      "subvention",
+      "exonération"
+     ],
+     "aide": "Deux mots de la fiche : ce que Léa obtient, ce qu’elle rend.",
+     "explication": "Le brevet est un **compromis** : inciter à innover (monopole) tout en diffusant la connaissance (publication)."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5838efd-0ecb-5c9e-94c6-c3a260895987",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux pays, deux règles du jeu",
+   "competence": "analyser-document",
+   "situation": "Noria et Sudland, deux pays imaginaires, ont le même capital et la même main-d’œuvre. Ils n’innovent pourtant pas au même rythme. Les institutions y sont très différentes.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Noria et Sudland",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Noria",
+      "Sudland"
+     ],
+     "lignes": [
+      [
+       "Délai pour créer une entreprise (jours)",
+       5,
+       150
+      ],
+      [
+       "Brevets déposés par million d’habitants",
+       250,
+       10
+      ],
+      [
+       "Durée d’un procès pour faire respecter un contrat (jours)",
+       400,
+       1200
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche le délai de création d’une entreprise à Sudland.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Première ligne, colonne du pays qui innove peu.",
+     "explication": "À Sudland, il faut **150 jours** pour créer une entreprise : un signe d’institutions qui protègent les positions en place."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le délai de création d’une entreprise est-il plus long à Sudland qu’à Noria ?",
+     "reponse": 30,
+     "unite": "fois",
+     "aide": "Divise 150 par 5.",
+     "explication": "150 ÷ 5 = **30 fois** plus long."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque règle selon la famille d’institutions à laquelle elle appartient.",
+     "categories": [
+      "Institutions inclusives",
+      "Institutions extractives"
+     ],
+     "items": [
+      [
+       "Les droits de propriété sont garantis à tous par une justice indépendante",
+       0
+      ],
+      [
+       "Les licences d’activité sont réservées à des proches du pouvoir",
+       1
+      ],
+      [
+       "Le pouvoir politique est largement réparti entre plusieurs contre-pouvoirs",
+       0
+      ],
+      [
+       "Les nouveaux concurrents sont écartés pour protéger des rentes",
+       1
+      ]
+     ],
+     "aide": "Pense à qui détient le pouvoir et à qui profite la règle.",
+     "explication": "Selon Acemoglu et Robinson, les institutions **inclusives** répartissent le pouvoir et les droits ; les **extractives** les concentrent sur une élite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi des institutions extractives freinent-elles l’innovation ?",
+     "options": [
+      "La destruction créatrice menace les rentes de ceux qui détiennent le pouvoir",
+      "Les élites n’ont aucun intérêt à faire respecter les contrats des entreprises",
+      "Les brevets sont toujours interdits dans les pays de ce type d’institutions",
+      "La population active de ces pays est trop peu formée pour pouvoir innover"
+     ],
+     "reponse": 0,
+     "aide": "Qui perd quand une activité nouvelle remplace une activité ancienne ?",
+     "explication": "Une innovation peut ruiner des positions acquises : les élites en place bloquent donc la **destruction créatrice**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5838efd-0ecb-5c9e-94c6-c3a260895987",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vélo pliant des Ateliers Morel",
+   "competence": "analyser-document",
+   "situation": "Les Ateliers Morel, entreprise imaginaire, ont multiplié les innovations. Mais qui est vraiment l’entrepreneur innovant quand l’invention vient d’ailleurs ?",
+   "documents": [
+    {
+     "id": "morel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les Ateliers Morel",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Les Ateliers Morel lancent un vélo électrique pliant, qui n’existait pas dans leur catalogue.",
+      "Ils installent des robots de soudure : le coût de revient d’un vélo passe de 400 € à 340 €.",
+      "Ils remplacent la chaîne de montage par des équipes qui gèrent elles-mêmes leurs tâches.",
+      "Ils ouvrent un marché en Norvège, où ils n’avaient jamais vendu."
+     ]
+    },
+    {
+     "id": "qui",
+     "type": "tableau",
+     "titre": "Qui a fait quoi ?",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Acteur",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Laboratoire public",
+       "A mis au point, en 2012, un moteur compact et déposé le brevet"
+      ],
+      [
+       "Léa Durand",
+       "A fondé la société qui a intégré ce moteur dans un vélo et l’a mis sur le marché"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque paragraphe du texte au type d’innovation qu’il décrit.",
+     "paires": [
+      [
+       "Le vélo électrique pliant",
+       "Innovation de produit"
+      ],
+      [
+       "Les robots de soudure",
+       "Innovation de procédé"
+      ],
+      [
+       "Les équipes autonomes",
+       "Innovation d’organisation"
+      ],
+      [
+       "Le marché norvégien",
+       "Innovation de débouché"
+      ]
+     ],
+     "aide": "Produit : un bien nouveau. Procédé : une façon de produire. Organisation : le travail. Débouché : un marché.",
+     "explication": "Quatre types d’innovation : **produit**, **procédé**, **organisation**, **débouché**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le coût de revient d’un vélo a-t-il baissé grâce aux robots ?",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Calcule (400 − 340) ÷ 400 × 100.",
+     "explication": "60 ÷ 400 = 0,15, soit **− 15 %**."
+    },
+    {
+     "type": "zone",
+     "document": "qui",
+     "enonce": "Touche l’acteur qui est l’entrepreneur innovant au sens de Schumpeter.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "L’entrepreneur n’est pas nécessairement l’inventeur.",
+     "explication": "**Léa Durand** : l’entrepreneur est celui qui introduit l’invention sur le marché, pas forcément celui qui l’a imaginée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le laboratoire a déposé un brevet très large couvrant tout moteur de ce type. Quel risque cela fait-il courir à l’innovation ?",
+     "options": [
+      "Bloquer les innovations suivantes, qui s’appuient toujours sur les précédentes",
+      "Supprimer toute incitation à inventer, puisque personne ne protège l’idée",
+      "Obliger les entreprises à publier leurs propres procédés de fabrication",
+      "Empêcher le laboratoire de recevoir le moindre financement public futur"
+     ],
+     "reponse": 0,
+     "aide": "Un brevet protège l’invention, mais aussi ce qu’elle empêche.",
+     "explication": "Un brevet **trop large** ferme la voie aux innovations qui en dépendent : le compromis entre inciter et diffuser est rompu."
+    }
+   ]
+  },
+  {
+   "chapitre": "effb87c0-4aa5-54e6-8d2b-cfa738b06b3c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le PIB monte, les émissions aussi ?",
+   "competence": "lire-tableau",
+   "situation": "Un pays imaginaire suit son PIB et ses émissions de gaz à effet de serre en indice base 100 en 2000.",
+   "documents": [
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "PIB et émissions (base 100 en 2000)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "PIB en volume",
+      "Émissions"
+     ],
+     "lignes": [
+      [
+       2000,
+       100,
+       100
+      ],
+      [
+       2010,
+       120,
+       115
+      ],
+      [
+       2020,
+       140,
+       95
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "indices",
+     "enonce": "Touche l’année où les émissions sont repassées sous leur niveau de 2000.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche un indice inférieur à 100.",
+     "explication": "En **2020**, l’indice des émissions est à 95 : il est repassé sous 100."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le PIB a-t-il augmenté entre 2000 et 2020 ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "L’indice de 2000 vaut 100.",
+     "explication": "De 100 à 140 : **+ 40 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 2000 et 2010, que dit-on de la relation entre PIB et émissions ?",
+     "options": [
+      "Un découplage relatif : les émissions croissent moins vite que le PIB",
+      "Un découplage absolu : les émissions baissent alors que le PIB augmente",
+      "Un couplage parfait : les émissions croissent exactement comme le PIB",
+      "Une décroissance : le PIB et les émissions baissent en même temps"
+     ],
+     "reponse": 0,
+     "aide": "Compare + 20 % et + 15 %.",
+     "explication": "Les émissions augmentent (+ 15 %) mais moins que le PIB (+ 20 %) : **découplage relatif**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Entre 2010 et 2020, le PIB ___ et les émissions ___ : c’est un découplage ___.",
+     "reponses": [
+      [
+       "augmente"
+      ],
+      [
+       "baisse"
+      ],
+      [
+       "absolu"
+      ]
+     ],
+     "banque": [
+      "augmente",
+      "baisse",
+      "absolu",
+      "relatif"
+     ],
+     "aide": "Compare 120 → 140 pour le PIB et 115 → 95 pour les émissions.",
+     "explication": "Le PIB passe de 120 à 140 pendant que les émissions passent de 115 à 95 : **découplage absolu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "effb87c0-4aa5-54e6-8d2b-cfa738b06b3c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les émissions qu’on a déplacées",
+   "competence": "calculer",
+   "situation": "Un pays développé imaginaire se félicite de la baisse de ses émissions. Mais l’empreinte carbone compte aussi les émissions liées à ce qu’il importe. Empreinte = émissions sur le territoire + émissions importées − émissions exportées.",
+   "documents": [
+    {
+     "id": "emis",
+     "type": "tableau",
+     "titre": "Les émissions du pays (millions de tonnes de CO₂)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Sur le territoire",
+      "Importées",
+      "Exportées"
+     ],
+     "lignes": [
+      [
+       2000,
+       500,
+       150,
+       50
+      ],
+      [
+       2020,
+       400,
+       230,
+       90
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’empreinte carbone du pays en 2000, en millions de tonnes ?",
+     "reponse": 600,
+     "unite": "Mt",
+     "aide": "Applique la formule : 500 + 150 − 50.",
+     "explication": "500 + 150 − 50 = **600 Mt**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est son empreinte carbone en 2020, en millions de tonnes ?",
+     "reponse": 540,
+     "unite": "Mt",
+     "aide": "Même formule avec les chiffres de 2020.",
+     "explication": "400 + 230 − 90 = **540 Mt**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, les émissions sur le territoire ont-elles varié entre 2000 et 2020 ? (réponds avec un signe)",
+     "reponse": -20,
+     "unite": "%",
+     "aide": "(400 − 500) ÷ 500 × 100.",
+     "explication": "(400 − 500) ÷ 500 = **− 20 %** sur le territoire, contre − 10 % pour l’empreinte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’empreinte recule-t-elle bien plus lentement que les émissions du territoire ?",
+     "options": [
+      "Les émissions importées ont augmenté : des productions polluantes ont été déplacées",
+      "Les émissions exportées ont disparu : les usines du pays ont toutes fermé",
+      "Les émissions du territoire ont été comptées deux fois dans les statistiques",
+      "Les émissions importées ne sont jamais prises en compte dans l’empreinte"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’évolution de la colonne « Importées ».",
+     "explication": "Les émissions importées passent de 150 à 230 Mt : une part de la baisse tient à la **délocalisation** des industries polluantes."
+    }
+   ]
+  },
+  {
+   "chapitre": "effb87c0-4aa5-54e6-8d2b-cfa738b06b3c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La marée noire qui fait monter le PIB",
+   "competence": "analyser-document",
+   "situation": "Après une marée noire au large d’une région imaginaire, trois personnes donnent leur avis sur l’avenir. Un tableau montre aussi ce que le PIB enregistre.",
+   "documents": [
+    {
+     "id": "avis",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois avis",
+     "source": "Textes écrits pour l’exercice.",
+     "blocs": [
+      "Inès, ingénieure : « Avec de meilleures machines, nous remplacerons ce que la nature ne fournira plus. »",
+      "Malo, écologue : « Une espèce disparue ne se remplace pas : certains éléments sont irremplaçables. »",
+      "Zoé, économiste : « Il faut préserver un stock minimal de ressources, quoi qu’il arrive. »"
+     ]
+    },
+    {
+     "id": "pib",
+     "type": "tableau",
+     "titre": "Ce que le PIB enregistre après la marée noire",
+     "source": "Chiffres imaginés pour l’exercice, en milliards d’euros.",
+     "colonnes": [
+      "Élément",
+      "Effet sur le PIB"
+     ],
+     "lignes": [
+      [
+       "PIB avant la marée noire",
+       1000
+      ],
+      [
+       "Activité de nettoyage",
+       "+ 6"
+      ],
+      [
+       "Pêche et tourisme perdus",
+       "− 4"
+      ],
+      [
+       "Valeur de la zone naturelle détruite",
+       "Non comptée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque avis selon la conception de la soutenabilité qu’il illustre.",
+     "categories": [
+      "Soutenabilité faible",
+      "Soutenabilité forte"
+     ],
+     "items": [
+      [
+       "Avis d’Inès : le capital technologique compense la perte de nature",
+       0
+      ],
+      [
+       "Avis de Malo : certains capitaux sont irremplaçables",
+       1
+      ],
+      [
+       "Avis de Zoé : il faut maintenir un stock minimal de capital naturel",
+       1
+      ]
+     ],
+     "aide": "La soutenabilité faible croit à la substitution des capitaux, la forte la refuse.",
+     "explication": "**Faible** : les capitaux sont substituables. **Forte** : certains sont irremplaçables, on doit préserver un stock minimal."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PIB après la marée noire, en milliards d’euros ?",
+     "reponse": 1002,
+     "unite": "milliards",
+     "aide": "Ajoute les effets comptés : 1 000 + 6 − 4.",
+     "explication": "1 000 + 6 − 4 = **1 002 milliards** : le PIB a légèrement augmenté."
+    },
+    {
+     "type": "zone",
+     "document": "pib",
+     "enonce": "Touche la ligne que le PIB ne compte pas du tout.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche la mention « Non comptée ».",
+     "explication": "La **zone naturelle détruite** n’entre pas dans le PIB : il ignore la destruction du capital naturel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce cas sur l’usage du PIB comme boussole ?",
+     "options": [
+      "Le PIB peut monter alors que le capital naturel, et donc le bien-être, se dégrade",
+      "Le PIB baisse toujours quand une catastrophe écologique frappe une région",
+      "Le PIB mesure le bien-être, puisqu’il inclut le nettoyage d’une pollution",
+      "Le PIB est inutile, car il ne peut jamais mesurer une production de services"
+     ],
+     "reponse": 0,
+     "aide": "Le nettoyage est une production, la nature perdue n’est pas comptée.",
+     "explication": "C’est la critique la plus solide du PIB : une marée noire le **fait monter**, puisque le nettoyage est une production."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel argument les partisans de la décroissance opposent-ils à la croissance verte ?",
+     "options": [
+      "Le découplage absolu est trop lent et trop partiel pour suffire",
+      "Le signal-prix suffira à orienter la production vers des biens propres",
+      "Les capitaux sont parfaitement substituables entre eux à long terme",
+      "Le PIB est la meilleure mesure du bien-être de la population"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux données sur le découplage.",
+     "explication": "Les partisans de la **décroissance** jugent que le découplage absolu ne vient pas assez vite : il faut réduire la production elle-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "72a6b2dd-22b6-5f01-87b5-dbeba4d0c38d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que deviennent les fils d’ouvriers ?",
+   "competence": "lire-tableau",
+   "situation": "Une table de mobilité imaginaire indique, pour 100 fils de chaque origine, la position qu’ils occupent à l’âge adulte.",
+   "documents": [
+    {
+     "id": "dest",
+     "type": "tableau",
+     "titre": "Position du fils selon le métier du père (en %)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Père",
+      "Fils cadre",
+      "Fils profession intermédiaire",
+      "Fils ouvrier"
+     ],
+     "lignes": [
+      [
+       "Cadre",
+       55,
+       30,
+       15
+      ],
+      [
+       "Profession intermédiaire",
+       25,
+       45,
+       30
+      ],
+      [
+       "Ouvrier",
+       10,
+       30,
+       60
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dest",
+     "enonce": "Touche la part de fils d’ouvriers devenus cadres.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Ligne « Ouvrier », colonne « Fils cadre ».",
+     "explication": "Ligne du père ouvrier, colonne du fils cadre : **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des fils de cadres est elle-même cadre, en % ?",
+     "reponse": 55,
+     "unite": "%",
+     "aide": "Lis la première ligne, première colonne de chiffres.",
+     "explication": "**55 %** des fils de cadres deviennent cadres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des fils d’ouvriers n’est pas ouvrière, en % ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Retranche 60 à 100.",
+     "explication": "100 − 60 = **40 %** des fils d’ouvriers occupent une autre position que celle de leur père."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Ce tableau est une table de ___ : chaque ligne totalise ___ %.",
+     "reponses": [
+      [
+       "destinée"
+      ],
+      [
+       "100"
+      ]
+     ],
+     "banque": [
+      "destinée",
+      "recrutement",
+      "100",
+      "50"
+     ],
+     "aide": "Additionne les trois cases d’une ligne.",
+     "explication": "Chaque ligne suit les enfants d’une même origine : c’est une table de **destinée**, et les lignes totalisent **100 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "72a6b2dd-22b6-5f01-87b5-dbeba4d0c38d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Destinée ou recrutement ?",
+   "competence": "lire-tableau",
+   "situation": "Les mêmes données peuvent se lire de deux façons. Ce tableau d’effectifs imaginaires simplifie la société en deux groupes seulement, cadres et ouvriers.",
+   "documents": [
+    {
+     "id": "eff",
+     "type": "tableau",
+     "titre": "Père et fils (en milliers d’hommes)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Père \\ Fils",
+      "Fils cadre",
+      "Fils ouvrier",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Père cadre",
+       100,
+       100,
+       200
+      ],
+      [
+       "Père ouvrier",
+       80,
+       720,
+       800
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eff",
+     "enonce": "Touche l’effectif des fils d’ouvriers devenus cadres.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Ligne du père ouvrier, colonne du fils cadre.",
+     "explication": "Ils sont **80 000** fils d’ouvriers devenus cadres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Table de destinée : quelle part des fils d’ouvriers devient cadre, en % ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Divise 80 par le total de la ligne « Père ouvrier ».",
+     "explication": "80 ÷ 800 = **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Table de recrutement : quelle part des fils cadres a un père ouvrier, en % ? (arrondi au dixième)",
+     "reponse": 44.4,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Le total des fils cadres est la somme de la colonne « Fils cadre ».",
+     "explication": "Il y a 180 000 fils cadres, dont 80 000 de père ouvrier : 80 ÷ 180 ≈ **44,4 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la table qui permet de la justifier.",
+     "categories": [
+      "Table de destinée",
+      "Table de recrutement"
+     ],
+     "items": [
+      [
+       "Un fils d’ouvrier sur dix devient cadre",
+       0
+      ],
+      [
+       "Parmi les cadres, 44 % ont un père ouvrier",
+       1
+      ],
+      [
+       "La moitié des fils de cadres deviennent cadres",
+       0
+      ],
+      [
+       "Les cadres viennent majoritairement d’un père cadre",
+       1
+      ]
+     ],
+     "aide": "Destinée : on part de l’origine. Recrutement : on part de la position d’arrivée.",
+     "explication": "La **destinée** se lit en ligne (« que deviennent-ils ? »), le **recrutement** en colonne (« d’où viennent-ils ? »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi 44 % des cadres sont-ils fils d’ouvriers alors que 10 % seulement des fils d’ouvriers deviennent cadres ?",
+     "options": [
+      "Les groupes n’ont pas la même taille : il y a beaucoup plus de fils d’ouvriers",
+      "Les tables de destinée sont fausses, celles de recrutement sont exactes",
+      "Les cadres recrutent de préférence parmi les enfants de familles ouvrières",
+      "Les fils de cadres deviennent très rarement cadres dans ce tableau"
+     ],
+     "reponse": 0,
+     "aide": "Compare les totaux de départ : 200 contre 800.",
+     "explication": "Les deux lectures donnent des chiffres différents parce que les **groupes sont de tailles différentes** : 800 000 fils d’ouvriers contre 200 000 fils de cadres."
+    }
+   ]
+  },
+  {
+   "chapitre": "72a6b2dd-22b6-5f01-87b5-dbeba4d0c38d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Beaucoup de mobilité, peu de fluidité",
+   "competence": "analyser-document",
+   "situation": "La structure des emplois se transforme : il y a de plus en plus de postes de cadres. Une partie de la mobilité est donc imposée. Deux pays imaginaires sont comparés.",
+   "documents": [
+    {
+     "id": "struct",
+     "type": "tableau",
+     "titre": "La place des cadres dans la population active",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Génération",
+      "Part de cadres"
+     ],
+     "lignes": [
+      [
+       "Pères",
+       "10 %"
+      ],
+      [
+       "Fils",
+       "25 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "mobi",
+     "type": "tableau",
+     "titre": "Mobilité observée et mobilité imposée (en % des fils)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Mobilité observée",
+      "Mobilité imposée par la structure des emplois"
+     ],
+     "lignes": [
+      [
+       "Pays P",
+       64,
+       42
+      ],
+      [
+       "Pays Q",
+       50,
+       20
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part des cadres augmente-t-elle entre les pères et les fils ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Soustrais 10 à 25.",
+     "explication": "25 − 10 = **15 points** : au moins 15 % des fils cadres ne peuvent pas avoir un père cadre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la mobilité nette (hors effet de structure) du pays P, en points ?",
+     "reponse": 22,
+     "unite": "points",
+     "aide": "Retranche la mobilité imposée à la mobilité observée.",
+     "explication": "64 − 42 = **22 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la mobilité nette du pays Q, en points ?",
+     "reponse": 30,
+     "unite": "points",
+     "aide": "Même calcul pour le pays Q.",
+     "explication": "50 − 20 = **30 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel pays a la fluidité sociale la plus forte ?",
+     "options": [
+      "Le pays Q, malgré une mobilité observée plus faible",
+      "Le pays P, parce que sa mobilité observée est la plus forte",
+      "Les deux pays sont à égalité, car la structure des emplois change",
+      "Aucun des deux : la fluidité ne peut pas se calculer avec ces données"
+     ],
+     "reponse": 0,
+     "aide": "La fluidité est la mobilité qui reste une fois l’effet de structure retiré.",
+     "explication": "Le pays **Q** a la mobilité nette la plus élevée (30 contre 22) : c’est lui qui est le plus fluide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette comparaison ?",
+     "options": [
+      "Beaucoup de mobilité observée peut coexister avec peu de fluidité sociale",
+      "Une mobilité observée élevée garantit toujours une société très ouverte",
+      "La structure des emplois n’a aucun effet sur la mobilité des individus",
+      "La fluidité sociale s’obtient en additionnant mobilité observée et imposée"
+     ],
+     "reponse": 0,
+     "aide": "Compare le classement des pays selon les deux mesures.",
+     "explication": "C’est le cas de la France des Trente Glorieuses : la mobilité observée tenait largement à la **structure des emplois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37d27fe8-a02f-59ca-9ab0-339ceae5f03d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux tiers de mobiles",
+   "competence": "lire-graphique",
+   "situation": "Les enquêtes de l’INSEE comparent la position des hommes actifs à celle de leur père. Voici un ordre de grandeur arrondi.",
+   "documents": [
+    {
+     "id": "types",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Position des fils par rapport à leur père (en %)",
+     "source": "Ordres de grandeur arrondis, dans l’esprit des enquêtes FQP.",
+     "categories": [
+      "Mobilité ascendante",
+      "Mobilité descendante",
+      "Même position que le père"
+     ],
+     "series": [
+      {
+       "nom": "Part des hommes",
+       "valeurs": [
+        45,
+        20,
+        35
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "types",
+     "enonce": "Touche la part des hommes qui occupent la même position que leur père.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le secteur qui correspond à l’immobilité.",
+     "explication": "Environ **35 %** des hommes occupent la même position que leur père."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des hommes occupe une position différente de celle de son père, en % ?",
+     "reponse": 65,
+     "unite": "%",
+     "aide": "Additionne mobilité ascendante et descendante.",
+     "explication": "45 + 20 = **65 %**, soit environ deux tiers."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la mobilité ascendante est-elle plus fréquente que la descendante ?",
+     "reponse": 2.25,
+     "unite": "fois",
+     "tolerance": 0.01,
+     "aide": "Divise 45 par 20.",
+     "explication": "45 ÷ 20 = **2,25**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37d27fe8-a02f-59ca-9ab0-339ceae5f03d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tournant des générations",
+   "competence": "lire-graphique",
+   "situation": "La mobilité ascendante a ralenti pour les générations nées après 1960. Ce graphique imaginaire suit cinq générations d’hommes.",
+   "documents": [
+    {
+     "id": "gen",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Mobilité selon la génération de naissance (en % des hommes)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Nés en 1930-39",
+      "Nés en 1940-49",
+      "Nés en 1950-59",
+      "Nés en 1960-69",
+      "Nés en 1970-79"
+     ],
+     "series": [
+      {
+       "nom": "Mobilité ascendante",
+       "valeurs": [
+        48,
+        52,
+        50,
+        42,
+        38
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Mobilité descendante",
+       "valeurs": [
+        12,
+        12,
+        14,
+        19,
+        22
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des hommes",
+      "unite": "en %",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Génération"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gen",
+     "enonce": "Touche la génération qui a connu la mobilité ascendante la plus forte.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre ascendante la plus haute.",
+     "explication": "La génération **1940-49** culmine à 52 % de mobilité ascendante."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour la génération 1970-79, quel écart sépare mobilité ascendante et descendante, en points ?",
+     "reponse": 16,
+     "unite": "points",
+     "aide": "Soustrais la valeur descendante de la valeur ascendante.",
+     "explication": "38 − 22 = **16 points**, contre 40 pour la génération 1940-49."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, la mobilité ascendante a-t-elle baissé entre les générations 1940-49 et 1970-79 ? (arrondi à l’unité, réponds avec un signe)",
+     "reponse": -27,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "(38 − 52) ÷ 52 × 100.",
+     "explication": "(38 − 52) ÷ 52 ≈ −0,27, soit **− 27 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer ce recul de la mobilité ascendante ?",
+     "options": [
+      "La structure des emplois n’offre plus la même expansion de places qualifiées",
+      "Les diplômes ont disparu et n’ouvrent plus aucune porte sur le marché du travail",
+      "La fluidité sociale a fortement augmenté et réduit donc les déplacements",
+      "Les tables de mobilité ont cessé de compter les générations les plus récentes"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’effet de la structure des emplois à partir des années 1980.",
+     "explication": "Après les Trente Glorieuses, les places qualifiées ne croissent plus aussi vite : le **déclassement** devient plus fréquent."
+    }
+   ]
+  },
+  {
+   "chapitre": "37d27fe8-a02f-59ca-9ab0-339ceae5f03d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce qui joue sur la trajectoire",
+   "competence": "analyser-document",
+   "situation": "Quatre personnes imaginaires racontent leur parcours. Chacune illustre un facteur de la mobilité sociale. Un tableau montre aussi ce que devient le diplôme.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Quatre parcours",
+     "source": "Textes écrits pour l’exercice.",
+     "blocs": [
+      "Sarah entre sur le marché du travail en pleine récession et enchaîne des contrats courts pendant des années.",
+      "Hugo a grandi dans une maison pleine de livres, et ses parents l’ont toujours soutenu financièrement dans ses études.",
+      "Camille et Yanis, tous deux enfants de cadres, se rencontrent en classe préparatoire et forment un couple.",
+      "Samir devient cadre alors que son père était agriculteur : il y avait beaucoup plus de postes de cadres que de son temps."
+     ]
+    },
+    {
+     "id": "diplome",
+     "type": "tableau",
+     "titre": "Le rendement du diplôme",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Génération",
+      "Part de diplômés du supérieur (%)",
+      "Part d’entre eux cadres à 35 ans (%)"
+     ],
+     "lignes": [
+      [
+       "Entrée sur le marché en 1990",
+       15,
+       80
+      ],
+      [
+       "Entrée sur le marché en 2020",
+       45,
+       55
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque parcours au facteur de mobilité sociale qu’il illustre.",
+     "paires": [
+      [
+       "Sarah",
+       "La conjoncture"
+      ],
+      [
+       "Hugo",
+       "La famille et son capital culturel"
+      ],
+      [
+       "Camille et Yanis",
+       "L’homogamie"
+      ],
+      [
+       "Samir",
+       "La structure des emplois"
+      ]
+     ],
+     "aide": "Chaque histoire met en avant un seul facteur.",
+     "explication": "Conjoncture, famille, homogamie et structure des emplois : quatre des **cinq facteurs** du cours (le cinquième est l’École)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la part de diplômés du supérieur est-elle plus grande pour l’entrée en 2020 que pour l’entrée en 1990 ?",
+     "reponse": 3,
+     "unite": "fois",
+     "aide": "Divise 45 par 15.",
+     "explication": "45 ÷ 15 = **3 fois** plus de diplômés."
+    },
+    {
+     "type": "zone",
+     "document": "diplome",
+     "enonce": "Touche la part de diplômés devenus cadres à 35 ans pour l’entrée sur le marché en 2020.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Deuxième ligne, dernière colonne.",
+     "explication": "Elle tombe à **55 %**, contre 80 % pour l’entrée en 1990."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part des diplômés cadres à 35 ans a-t-elle varié ? (réponds avec un signe)",
+     "reponse": -25,
+     "unite": "points",
+     "aide": "Soustrais 80 à 55.",
+     "explication": "55 − 80 = **− 25 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau sur le rôle de l’École ?",
+     "options": [
+      "Elle reste un vecteur de mobilité, mais son rendement se dégrade avec l’inflation scolaire",
+      "Elle ne joue plus aucun rôle, puisque la part de cadres chez les diplômés baisse",
+      "Elle garantit un poste de cadre, puisque la part de diplômés triple en trente ans",
+      "Elle ne joue aucun rôle, puisque la famille détermine seule la trajectoire"
+     ],
+     "reponse": 0,
+     "aide": "Plus de diplômés, mais moins d’entre eux deviennent cadres.",
+     "explication": "C’est l’**inflation scolaire** : plus de diplômés pour un nombre de places qualifiées qui ne suit pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a670a32-691d-5b4f-ab06-cf65be051ca5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Meilleur partout, mais pas pour tout",
+   "competence": "calculer",
+   "situation": "Deux pays imaginaires, A et B, produisent du blé et du tissu. Le tableau donne le temps de travail nécessaire pour une unité de chaque bien.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Heures de travail par unité produite",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Une unité de blé",
+      "Une unité de tissu"
+     ],
+     "lignes": [
+      [
+       "A",
+       2,
+       4
+      ],
+      [
+       "B",
+       6,
+       8
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temps",
+     "enonce": "Touche le pays qui est le plus productif dans les deux productions.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Il lui faut moins d’heures pour produire chacun des biens.",
+     "explication": "**A** produit le blé et le tissu en moins d’heures que B : il a un avantage absolu dans les deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’unités de tissu le pays A sacrifie-t-il pour produire une unité de blé ?",
+     "reponse": 0.5,
+     "unite": "unité de tissu",
+     "tolerance": 0.01,
+     "aide": "Divise les heures du blé par celles du tissu dans le pays A.",
+     "explication": "2 ÷ 4 = **0,5** : le coût d’opportunité du blé est de 0,5 tissu dans A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même question pour le pays B.",
+     "reponse": 0.75,
+     "unite": "unité de tissu",
+     "tolerance": 0.01,
+     "aide": "Divise 6 par 8.",
+     "explication": "6 ÷ 8 = **0,75** tissu dans B : le blé y est relativement plus coûteux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel bien A doit-il se spécialiser selon Ricardo ?",
+     "options": [
+      "Le blé, où son désavantage est le plus faible, puisque son coût d’opportunité est le plus bas",
+      "Le tissu, car il produit le tissu plus vite que le pays B pour toutes les quantités",
+      "Aucun des deux : un pays plus productif partout ne gagne rien à l’échange",
+      "Les deux à la fois, pour en vendre davantage au pays B que lui n’en vend"
+     ],
+     "reponse": 0,
+     "aide": "Compare les coûts d’opportunité du blé : 0,5 contre 0,75.",
+     "explication": "Le blé coûte moins cher à A (en tissu sacrifié) qu’à B : A se spécialise dans le **blé**, B dans le tissu."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a670a32-691d-5b4f-ab06-cf65be051ca5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des voitures contre des voitures",
+   "competence": "lire-tableau",
+   "situation": "Les échanges entre la France et l’Allemagne portent en grande partie sur les mêmes produits, dans les deux sens. Le tableau donne des flux imaginaires.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "tableau",
+     "titre": "Échanges France-Allemagne (milliards d’euros)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Produit",
+      "Exportations françaises",
+      "Importations françaises"
+     ],
+     "lignes": [
+      [
+       "Automobiles",
+       10,
+       12
+      ],
+      [
+       "Produits chimiques",
+       8,
+       9
+      ],
+      [
+       "Céréales",
+       4,
+       0.5
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde des échanges d’automobiles pour la France, en milliards d’euros ? (exportations − importations)",
+     "reponse": -2,
+     "unite": "milliards",
+     "aide": "Soustrais les importations aux exportations.",
+     "explication": "10 − 12 = **− 2 milliards**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des échanges d’automobiles (exportations + importations), en milliards ?",
+     "reponse": 22,
+     "unite": "milliards",
+     "aide": "Additionne les deux chiffres de la première ligne.",
+     "explication": "10 + 12 = **22 milliards** : c’est le produit le plus échangé dans les deux sens."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque échange selon son type.",
+     "categories": [
+      "Commerce interbranche",
+      "Commerce intrabranche"
+     ],
+     "items": [
+      [
+       "La France vend des voitures à l’Allemagne et lui en achète",
+       1
+      ],
+      [
+       "Un pays vend du textile et achète des machines",
+       0
+      ],
+      [
+       "Deux pays développés échangent des produits chimiques dans les deux sens",
+       1
+      ],
+      [
+       "Un pays vend du pétrole et achète des avions",
+       0
+      ]
+     ],
+     "aide": "Intrabranche : des produits de la même branche dans les deux sens.",
+     "explication": "L’**interbranche** échange des produits de branches différentes ; l’**intrabranche**, des produits d’une même branche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle explication rend compte de ces échanges de voitures entre pays semblables ?",
+     "options": [
+      "La différenciation des produits et les économies d’échelle",
+      "La différence de dotations en facteurs entre les deux pays",
+      "L’avantage absolu de l’un des deux pays en matière de production",
+      "La protection d’une industrie naissante contre la concurrence"
+     ],
+     "reponse": 0,
+     "aide": "Les consommateurs veulent de la variété, les producteurs de grandes séries.",
+     "explication": "Chaque pays se spécialise sur des **modèles différents** : variété pour le consommateur, grande série pour le producteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a670a32-691d-5b4f-ab06-cf65be051ca5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Construire un avantage",
+   "competence": "analyser-document",
+   "situation": "Le pays imaginaire de Zélandia vendait surtout des produits agricoles en 1960. Quarante ans plus tard, il est l’un des premiers exportateurs d’électronique.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La trajectoire de Zélandia",
+     "source": "Dates imaginées pour l’exercice.",
+     "debut": 1960,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "protec",
+       "date": 1965,
+       "nom": "Protection"
+      },
+      {
+       "id": "ecoles",
+       "date": 1975,
+       "nom": "Écoles ingénieurs"
+      },
+      {
+       "id": "levee",
+       "date": 1985,
+       "nom": "Protection levée"
+      },
+      {
+       "id": "leader",
+       "date": 2005,
+       "nom": "Leader mondial"
+      }
+     ]
+    },
+    {
+     "id": "part",
+     "type": "tableau",
+     "titre": "Zélandia en chiffres",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "1965",
+      "1995"
+     ],
+     "lignes": [
+      [
+       "Ingénieurs diplômés pour 10 000 habitants",
+       2,
+       12
+      ],
+      [
+       "Électronique dans les exportations (%)",
+       1,
+       30
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui marque la fin du protectionnisme éducateur.",
+     "reponse": [
+      "levee"
+     ],
+     "aide": "La protection est levée quand l’industrie a mûri.",
+     "explication": "La protection est **levée en 1985** : l’industrie naissante affronte alors la concurrence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années a duré la protection ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à celle de fin.",
+     "explication": "1985 − 1965 = **20 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le nombre d’ingénieurs diplômés a-t-il été multiplié entre 1965 et 1995 ?",
+     "reponse": 6,
+     "unite": "fois",
+     "aide": "Divise 12 par 2.",
+     "explication": "12 ÷ 2 = **6 fois** : la formation construit un avantage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce cas sur les avantages comparatifs ?",
+     "options": [
+      "Ils se construisent par la formation, la recherche et parfois une protection temporaire",
+      "Ils sont donnés une fois pour toutes par les ressources naturelles du pays",
+      "Ils disparaissent dès qu’un pays cesse de protéger toutes ses industries",
+      "Ils ne dépendent que du niveau des salaires par rapport aux autres pays"
+     ],
+     "reponse": 0,
+     "aide": "Zélandia n’avait aucun avantage dans l’électronique en 1960.",
+     "explication": "Formation, recherche et **protectionnisme éducateur** (List) ont fabriqué l’avantage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le modèle HOS, pris seul, explique-t-il mal cette trajectoire ?",
+     "options": [
+      "Il part de dotations données et ne dit pas comment elles évoluent",
+      "Il affirme que tous les pays doivent produire tous les biens à la fois",
+      "Il suppose que les consommateurs exigent des produits tous différents",
+      "Il ignore totalement le rôle des facteurs de production dans l’échange"
+     ],
+     "reponse": 0,
+     "aide": "HOS part des dotations en facteurs du pays.",
+     "explication": "HOS raisonne avec des **dotations données** : il ne rend pas compte d’un capital humain et technologique qui se construit."
+    }
+   ]
+  },
+  {
+   "chapitre": "6164ecd4-c045-57c1-97c7-475a17a1734f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une usine ferme, des prix baissent",
+   "competence": "lire-tableau",
+   "situation": "Dans un pays imaginaire, les importations de jouets font baisser les prix, mais une usine de jouets ferme. Le tableau compare ce que chacun gagne ou perd.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Effets de l’importation de jouets",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Usine qui ferme",
+      "Consommateurs"
+     ],
+     "lignes": [
+      [
+       "Personnes concernées",
+       "400",
+       "2 000 000"
+      ],
+      [
+       "Effet par personne",
+       "− 24 000 € par an",
+       "+ 12 € par an"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le gain annuel de chaque consommateur.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Deuxième ligne, colonne des consommateurs.",
+     "explication": "Chaque consommateur gagne **12 €** par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le gain total des consommateurs, en millions d’euros ?",
+     "reponse": 24,
+     "unite": "millions",
+     "aide": "Multiplie 2 000 000 par 12 €.",
+     "explication": "2 000 000 × 12 = 24 000 000 €, soit **24 millions d’euros**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la perte totale des salariés de l’usine, en millions d’euros ? (arrondi au dixième)",
+     "reponse": 9.6,
+     "unite": "millions",
+     "tolerance": 0.05,
+     "aide": "Multiplie 400 par 24 000 €.",
+     "explication": "400 × 24 000 = 9 600 000 €, soit **9,6 millions d’euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce gain collectif a-t-il pourtant moins de poids politique que la perte ?",
+     "options": [
+      "Les pertes sont concentrées et visibles, les gains diffus et mal perçus",
+      "Les gains de l’échange sont toujours inférieurs aux pertes des salariés",
+      "Les consommateurs n’ont jamais intérêt à ce que les prix baissent",
+      "Les salariés licenciés retrouvent toujours un emploi équivalent aussitôt"
+     ],
+     "reponse": 0,
+     "aide": "Compare 400 personnes qui perdent beaucoup et 2 millions qui gagnent peu.",
+     "explication": "Les 400 salariés **savent** ce qu’ils perdent ; les consommateurs ignorent ce qu’ils gagnent : c’est la force politique du protectionnisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "6164ecd4-c045-57c1-97c7-475a17a1734f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui gagne à l’ouverture ?",
+   "competence": "raisonner",
+   "situation": "Un pays développé imaginaire s’ouvre à la concurrence des pays à bas salaires. Les économistes mesurent l’effet sur deux groupes de travailleurs.",
+   "documents": [
+    {
+     "id": "hos",
+     "type": "tableau",
+     "titre": "Effet de l’ouverture sur les salaires",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Travailleurs",
+      "Salaire mensuel avant (€)",
+      "Variation après ouverture"
+     ],
+     "lignes": [
+      [
+       "Qualifiés",
+       3000,
+       "+ 6 %"
+      ],
+      [
+       "Peu qualifiés",
+       1600,
+       "− 5 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hos",
+     "enonce": "Touche le groupe de travailleurs dont le salaire baisse.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la variation négative.",
+     "explication": "Les **travailleurs peu qualifiés** voient leur salaire baisser de 5 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nouveau salaire mensuel des travailleurs qualifiés, en euros ?",
+     "reponse": 3180,
+     "unite": "€",
+     "aide": "Multiplie 3 000 par 1,06.",
+     "explication": "3 000 × 1,06 = **3 180 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nouveau salaire mensuel des travailleurs peu qualifiés, en euros ?",
+     "reponse": 1520,
+     "unite": "€",
+     "aide": "Multiplie 1 600 par 0,95.",
+     "explication": "1 600 × 0,95 = **1 520 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le modèle HOS prévoit-il cet effet dans un pays développé ?",
+     "options": [
+      "Ce pays est riche en travail qualifié : l’ouverture profite à ce facteur abondant",
+      "Ce pays manque de travail qualifié : l’ouverture lui permet d’en importer",
+      "Ce pays est riche en travail peu qualifié : l’ouverture en augmente le prix",
+      "Ce pays possède un avantage absolu : l’ouverture améliore tous les revenus"
+     ],
+     "reponse": 0,
+     "aide": "HOS : le facteur abondant voit sa rémunération augmenter.",
+     "explication": "Le facteur **abondant** (travail qualifié) gagne, le facteur rare (travail peu qualifié) perd."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mesure à la réponse de l’État qu’elle illustre.",
+     "paires": [
+      [
+       "Formation et indemnisation des salariés",
+       "Accompagner les transitions"
+      ],
+      [
+       "Droits de douane",
+       "Protéger par un instrument tarifaire"
+      ],
+      [
+       "Normes techniques et quotas",
+       "Protéger par un instrument non tarifaire"
+      ]
+     ],
+     "aide": "Accompagner aide à changer d’emploi, protéger bloque les importations.",
+     "explication": "**Accompagner** (flexicurité danoise) : formation, indemnisation, mobilité. **Protéger** : droits de douane, quotas, normes."
+    }
+   ]
+  },
+  {
+   "chapitre": "6164ecd4-c045-57c1-97c7-475a17a1734f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du GATT aux normes",
+   "competence": "analyser-document",
+   "situation": "Le commerce mondial est régulé depuis 1947. Mais les États ont adapté leurs méthodes de protection. Une frise et un graphique illustrent ce déplacement.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La régulation du commerce mondial",
+     "source": "Dates des institutions.",
+     "debut": 1940,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "gatt",
+       "date": 1947,
+       "nom": "Création du GATT"
+      },
+      {
+       "id": "omc",
+       "date": 1995,
+       "nom": "Création de l’OMC"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des mesures protectionnistes par type (%)",
+     "source": "Répartition illustrative, arrondie, imaginée pour l’exercice.",
+     "categories": [
+      "Droits de douane",
+      "Quotas",
+      "Normes techniques",
+      "Subventions"
+     ],
+     "series": [
+      {
+       "nom": "Part des mesures",
+       "valeurs": [
+        12,
+        15,
+        35,
+        38
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des mesures",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Type de mesure"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création du GATT de celle de l’OMC ?",
+     "reponse": 48,
+     "unite": "ans",
+     "aide": "Soustrais 1947 à 1995.",
+     "explication": "1995 − 1947 = **48 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche le type de mesure le plus utilisé dans ce graphique.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **subventions** arrivent en tête, avec 38 % des mesures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des mesures est non tarifaire (quotas, normes, subventions), en % ?",
+     "reponse": 88,
+     "unite": "%",
+     "aide": "Additionne les trois barres qui ne sont pas des droits de douane.",
+     "explication": "15 + 35 + 38 = **88 %** : les droits de douane, encadrés par l’OMC, ne sont plus l’outil principal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un État subventionne son acier ; un autre estime que cela fausse la concurrence. Quel organe de l’OMC tranche ?",
+     "options": [
+      "L’organe de règlement des différends, qui arbitre les conflits commerciaux",
+      "Le Conseil de sécurité des Nations unies, qui juge les conflits entre États",
+      "Le Fonds monétaire international, qui supervise les politiques budgétaires",
+      "La Banque mondiale, qui finance les projets de développement des pays"
+     ],
+     "reponse": 0,
+     "aide": "L’OMC arbitre les conflits commerciaux par un organe dédié.",
+     "explication": "C’est l’**organe de règlement des différends** de l’OMC."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de copie tient ensemble les faits de ces documents ?",
+     "options": [
+      "Un pays peut gagner à l’échange tout en comptant de nombreux perdants, que les États cherchent à protéger",
+      "Le libre-échange profite à tous les habitants d’un pays, sans aucun perdant à accompagner ni à protéger",
+      "Le protectionnisme a disparu depuis la création de l’OMC, puisque les droits de douane ont baissé",
+      "Les subventions n’ont aucun effet sur les échanges, car elles ne concernent que le marché intérieur"
+     ],
+     "reponse": 0,
+     "aide": "Les deux propositions sont vraies ensemble.",
+     "explication": "Le pays **gagne globalement**, mais les perdants sont concentrés : d’où des mesures de protection de plus en plus non tarifaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "af5338a9-3725-5dc6-88bf-dd5a61ee20e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe du sourire d’un téléphone",
+   "competence": "lire-graphique",
+   "situation": "Un téléphone imaginaire est conçu dans un pays, assemblé dans un autre et vendu partout sous une marque. Le graphique répartit la valeur ajoutée entre les étapes.",
+   "documents": [
+    {
+     "id": "va",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de la valeur ajoutée par étape (%)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Conception",
+      "Composants",
+      "Assemblage",
+      "Marque et vente"
+     ],
+     "series": [
+      {
+       "nom": "Valeur ajoutée",
+       "valeurs": [
+        30,
+        20,
+        10,
+        40
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la valeur ajoutée",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Étape"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "va",
+     "enonce": "Touche l’étape où la valeur ajoutée est la plus faible.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "L’**assemblage** ne capte que 10 % de la valeur ajoutée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la valeur ajoutée revient aux deux extrémités (conception et marque-vente), en % ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Additionne la première et la dernière barre.",
+     "explication": "30 + 40 = **70 %** : c’est la « courbe du sourire »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le téléphone est vendu 500 €. Combien la valeur ajoutée de l’assemblage représente-t-elle, en euros ?",
+     "reponse": 50,
+     "unite": "€",
+     "aide": "Calcule 10 % de 500.",
+     "explication": "500 × 0,10 = **50 €** seulement."
+    }
+   ]
+  },
+  {
+   "chapitre": "af5338a9-3725-5dc6-88bf-dd5a61ee20e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi investir à l’étranger ?",
+   "competence": "analyser-document",
+   "situation": "Les investissements directs à l’étranger (IDE) répondent à plusieurs motifs. Un tableau imaginaire les répartit, puis des projets d’entreprises sont à classer.",
+   "documents": [
+    {
+     "id": "motifs",
+     "type": "tableau",
+     "titre": "Les motifs des IDE d’une économie imaginaire (en %)",
+     "source": "Répartition imaginée pour l’exercice.",
+     "colonnes": [
+      "Motif",
+      "Part des IDE"
+     ],
+     "lignes": [
+      [
+       "Conquérir un marché",
+       55
+      ],
+      [
+       "Réduire les coûts de production",
+       25
+      ],
+      [
+       "Accéder à des matières premières",
+       10
+      ],
+      [
+       "Se rapprocher de compétences",
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "motifs",
+     "enonce": "Touche le motif majoritaire des IDE.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche le pourcentage le plus élevé.",
+     "explication": "**Conquérir un marché** représente 55 % des IDE."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des IDE correspond à une délocalisation au sens strict, en % ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "La délocalisation vise à produire moins cher.",
+     "explication": "Seuls les IDE destinés à **réduire les coûts de production** sont des délocalisations : **25 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque projet selon son motif principal.",
+     "categories": [
+      "Conquérir un marché",
+      "Réduire les coûts",
+      "Accéder aux ressources",
+      "Se rapprocher de compétences"
+     ],
+     "items": [
+      [
+       "Un constructeur automobile ouvre une usine en Chine pour vendre sur place",
+       0
+      ],
+      [
+       "Un fabricant de t-shirts quitte la France pour payer moins de salaires",
+       1
+      ],
+      [
+       "Une entreprise minière prend le contrôle d’une mine de cuivre",
+       2
+      ],
+      [
+       "Une firme ouvre un laboratoire dans un pôle technologique pour recruter",
+       3
+      ]
+     ],
+     "aide": "Demande-toi ce que l’entreprise cherche en s’installant là.",
+     "explication": "Marché, coûts (délocalisation), ressources, compétences : les **quatre logiques** du cours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dire « IDE = délocalisation » est-il une erreur d’analyse ?",
+     "options": [
+      "La plupart des IDE visent à vendre sur place, pas à produire moins cher",
+      "Les IDE sont tous des placements financiers sans création d’unité de production",
+      "Une délocalisation n’est jamais un investissement direct à l’étranger",
+      "Les IDE ne concernent que des entreprises qui exportent plus de la moitié de leur production"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le motif majoritaire.",
+     "explication": "Le motif **marché** domine : l’IDE sert surtout à produire près du consommateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "af5338a9-3725-5dc6-88bf-dd5a61ee20e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a tué l’industrie ?",
+   "competence": "analyser-document",
+   "situation": "Dans un pays développé imaginaire, un élu affirme : « Les délocalisations ont détruit notre industrie. » Deux tableaux permettent de vérifier cette phrase.",
+   "documents": [
+    {
+     "id": "ind",
+     "type": "tableau",
+     "titre": "L’industrie du pays entre 1990 et 2020",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Emplois industriels (millions)",
+      "Production industrielle en volume (indice)"
+     ],
+     "lignes": [
+      [
+       1990,
+       5,
+       100
+      ],
+      [
+       2020,
+       3,
+       120
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "causes",
+     "type": "tableau",
+     "titre": "Emplois industriels perdus selon la cause",
+     "source": "Estimation imaginée pour l’exercice, en millions d’emplois.",
+     "colonnes": [
+      "Cause",
+      "Emplois perdus"
+     ],
+     "lignes": [
+      [
+       "Délocalisations",
+       0.4
+      ],
+      [
+       "Gains de productivité",
+       1.3
+      ],
+      [
+       "Autres (fermetures, demande)",
+       0.3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’emplois industriels le pays a-t-il perdus entre 1990 et 2020, en millions ?",
+     "reponse": 2,
+     "unite": "millions",
+     "aide": "Soustrais 3 à 5.",
+     "explication": "5 − 3 = **2 millions** d’emplois."
+    },
+    {
+     "type": "zone",
+     "document": "causes",
+     "enonce": "Touche la cause qui explique le plus d’emplois industriels perdus.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le chiffre le plus élevé.",
+     "explication": "Les **gains de productivité** expliquent 1,3 million d’emplois perdus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des emplois perdus vient des délocalisations, en % ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Divise 0,4 par 2 puis multiplie par 100.",
+     "explication": "0,4 ÷ 2 = 0,2, soit **20 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien la production par emploi industriel a-t-elle été multipliée entre 1990 et 2020 ?",
+     "reponse": 2,
+     "unite": "fois",
+     "aide": "Calcule production ÷ emplois en 1990 (100 ÷ 5) puis en 2020 (120 ÷ 3).",
+     "explication": "100 ÷ 5 = 20 en 1990, 120 ÷ 3 = 40 en 2020 : la productivité est **multipliée par 2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on répondre à l’élu ?",
+     "options": [
+      "La désindustrialisation s’explique surtout par les gains de productivité",
+      "Il a raison : les délocalisations expliquent l’essentiel des pertes d’emplois",
+      "Il a tort : l’industrie du pays a vu sa production diminuer depuis 1990",
+      "Il a raison : aucune autre cause n’a détruit d’emplois industriels dans ce pays"
+     ],
+     "reponse": 0,
+     "aide": "Compare la production et l’emploi, puis les causes.",
+     "explication": "La production a augmenté de 20 % alors que l’emploi a baissé de 40 % : les **gains de productivité** pèsent plus que les délocalisations."
+    }
+   ]
+  }
+ ]
+}

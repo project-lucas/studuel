@@ -1,0 +1,4088 @@
+{
+ "niveau": "Tle",
+ "matiere": "nsi",
+ "exercices": [
+  {
+   "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le podium de la classe",
+   "competence": "lire-tableau",
+   "situation": "Mme Roche garde les moyennes de ses élèves dans une table SQL nommée eleve. Elle veut les classer du meilleur au moins bon, puis afficher seulement les trois premiers.",
+   "documents": [
+    {
+     "id": "eleve",
+     "type": "tableau",
+     "titre": "La table eleve",
+     "colonnes": [
+      "nom",
+      "moyenne",
+      "classe"
+     ],
+     "lignes": [
+      [
+       "Lina",
+       "15,5",
+       "A"
+      ],
+      [
+       "Hugo",
+       "12",
+       "B"
+      ],
+      [
+       "Zoé",
+       "15,5",
+       "A"
+      ],
+      [
+       "Adam",
+       "9,5",
+       "B"
+      ],
+      [
+       "Nina",
+       "17",
+       "A"
+      ],
+      [
+       "Omar",
+       "12",
+       "A"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La requête de Mme Roche",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT nom FROM eleve",
+      "ORDER BY moyenne DESC, nom ASC"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eleve",
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la plus haute moyenne de la table.",
+     "aide": "Parcours la colonne moyenne et cherche le plus grand nombre.",
+     "explication": "La plus haute moyenne est **17**, celle de Nina."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Nina",
+      "Lina",
+      "Zoé",
+      "Hugo",
+      "Omar",
+      "Adam"
+     ],
+     "enonce": "Range les noms dans l’ordre exact où la requête les renvoie.",
+     "aide": "DESC classe du plus grand au plus petit ; en cas d’égalité, nom ASC range par ordre alphabétique.",
+     "explication": "Nina (17) d’abord. Lina et Zoé ont 15,5 : le second critère les range **Lina puis Zoé**. Hugo et Omar ont 12 : **Hugo puis Omar**. Adam (9,5) ferme la liste."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "SELECT nom FROM eleve ORDER BY moyenne DESC LIMIT 3",
+      "SELECT nom FROM eleve ORDER BY moyenne ASC LIMIT 3",
+      "SELECT nom FROM eleve LIMIT 3 ORDER BY moyenne DESC",
+      "SELECT nom FROM eleve WHERE moyenne DESC LIMIT 3"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle requête affiche seulement les trois meilleurs élèves ?",
+     "aide": "Il faut trier du plus grand au plus petit, puis garder trois lignes. Et LIMIT se place en dernier.",
+     "explication": "On trie d’abord (**ORDER BY moyenne DESC**), puis on borne (**LIMIT 3**), dans cet ordre. Avec ASC, on aurait les trois moins bons ; LIMIT avant ORDER BY est une erreur de syntaxe."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les pages du catalogue",
+   "competence": "modeliser",
+   "situation": "La librairie en ligne de Sacha affiche ses livres par pages de trois. Elle utilise LIMIT pour la taille de la page et OFFSET pour les lignes à sauter.",
+   "documents": [
+    {
+     "id": "livre",
+     "type": "tableau",
+     "titre": "La table livre",
+     "colonnes": [
+      "titre",
+      "prix",
+      "stock"
+     ],
+     "lignes": [
+      [
+       "Alpha",
+       "12,5",
+       3
+      ],
+      [
+       "Brume",
+       "8",
+       10
+      ],
+      [
+       "Cirque",
+       "12,5",
+       0
+      ],
+      [
+       "Delta",
+       "20",
+       5
+      ],
+      [
+       "Écho",
+       "8",
+       7
+      ],
+      [
+       "Fable",
+       "15",
+       2
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La requête de la deuxième page, décalée d’une ligne",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT titre FROM livre",
+      "ORDER BY prix DESC, titre ASC",
+      "LIMIT 3 OFFSET 1"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "reponse": [
+      "Fable"
+     ],
+     "enonce": "Quel est le premier titre renvoyé par cette requête ?",
+     "aide": "Classe d’abord les six livres du plus cher au moins cher, puis saute la première ligne.",
+     "explication": "Ordre : Delta (20), Fable (15), Alpha et Cirque (12,5), Brume et Écho (8). OFFSET 1 saute Delta : la première ligne renvoyée est **Fable**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12.5,
+     "enonce": "Quel est le prix du dernier livre renvoyé par la requête ?",
+     "aide": "Les trois lignes renvoyées sont les lignes 2, 3 et 4 du classement.",
+     "explication": "Les lignes renvoyées sont Fable, Alpha et Cirque. Le dernier, Cirque, coûte **12,5**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "enonce": "Combien de lignes renverrait la requête avec LIMIT 3 OFFSET 4 ?",
+     "aide": "On saute 4 lignes sur 6 : combien en reste-t-il, et est-ce plus ou moins que 3 ?",
+     "explication": "Après avoir sauté 4 lignes, il en reste **2** (Brume et Écho) : LIMIT 3 est un maximum, pas une obligation."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Trois lignes quelconques, sans garantie sur l’ordre",
+      "Les trois premiers livres insérés dans la table",
+      "Une erreur, car LIMIT exige un tri au préalable",
+      "Les trois livres les plus chers, tri automatique"
+     ],
+     "reponse": 0,
+     "enonce": "Sacha retire ORDER BY de la requête et garde LIMIT 3 OFFSET 1. Que devient le résultat ?",
+     "aide": "Que promet le SGBD quand on ne lui demande aucun ordre ?",
+     "explication": "Sans ORDER BY, l’ordre est **arbitraire** : le résultat a l’air juste mais rien ne le garantit. C’est une erreur silencieuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bde5607-e2b6-5a45-8b4e-dfb176e79452",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dossard 100 passe avant le 25",
+   "competence": "analyser-document",
+   "situation": "Le club d’athlétisme classe ses coureurs par numéro de dossard, puis la directrice compare les moyennes des classes du lycée. Deux requêtes, deux surprises à expliquer.",
+   "documents": [
+    {
+     "id": "dossards",
+     "type": "tableau",
+     "titre": "La table coureur (colonne dossard, de type TEXT)",
+     "colonnes": [
+      "dossard"
+     ],
+     "lignes": [
+      [
+       "9"
+      ],
+      [
+       "10"
+      ],
+      [
+       "100"
+      ],
+      [
+       "25"
+      ],
+      [
+       "8"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "req1",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Première requête",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT dossard FROM coureur",
+      "ORDER BY dossard"
+     ]
+    },
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "La table eleve (la seconde requête y calcule AVG(moyenne) AS moy par classe_id)",
+     "colonnes": [
+      "classe_id",
+      "moyenne"
+     ],
+     "lignes": [
+      [
+       "A",
+       14
+      ],
+      [
+       "A",
+       10
+      ],
+      [
+       "B",
+       16
+      ],
+      [
+       "B",
+       12
+      ],
+      [
+       "C",
+       9
+      ],
+      [
+       "C",
+       11
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "10",
+      "100",
+      "25",
+      "8",
+      "9"
+     ],
+     "enonce": "Range les dossards dans l’ordre exact où la première requête les renvoie.",
+     "aide": "Les dossards sont du TEXT : compare-les caractère par caractère, comme des mots.",
+     "explication": "Le tri est **alphabétique** : « 10 » et « 100 » commencent par 1, avant « 25 », puis « 8 » et « 9 »."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "ORDER BY CAST(dossard AS INTEGER)",
+      "ORDER BY dossard DESC, dossard ASC",
+      "ORDER BY dossard LIMIT 5 OFFSET 0",
+      "ORDER BY SUBSTR(dossard, 1, 1)"
+     ],
+     "reponse": 0,
+     "enonce": "Comment obtenir l’ordre numérique 8, 9, 10, 25, 100 ?",
+     "aide": "Il faut que la base compare des nombres, pas des chaînes.",
+     "explication": "**CAST(dossard AS INTEGER)** convertit chaque texte en entier avant le tri. DESC ou ASC ne changent pas la nature de la comparaison."
+    },
+    {
+     "type": "nombre",
+     "reponse": 14,
+     "enonce": "La seconde requête regroupe la table eleve par classe_id, calcule AVG(moyenne) AS moy, puis trie par moy DESC. Quelle moyenne affiche sa première ligne ?",
+     "aide": "Calcule la moyenne de chaque classe : A, B, puis C. Laquelle est la plus haute ?",
+     "explication": "A : (14 + 10) / 2 = 12. B : (16 + 12) / 2 = **14**. C : (9 + 11) / 2 = 10. Le tri décroissant sur l’alias moy place B en premier."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "AS a créé un alias, qu’ORDER BY peut réutiliser",
+      "Le SGBD trie d’abord par la clé primaire puis par moy",
+      "moy est ajoutée comme colonne permanente de eleve",
+      "ORDER BY recalcule AVG sans tenir compte de GROUP BY"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ORDER BY moy fonctionne-t-il alors que moy n’est pas une colonne de la table ?",
+     "aide": "Que fait le mot-clé AS sur une colonne calculée ?",
+     "explication": "Le mot-clé AS donne un **alias** à la colonne calculée ; ORDER BY s’en sert pour trier le résultat, sans rien ajouter à la table."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux fois le même 5",
+   "competence": "programmer",
+   "situation": "Maëlle découvre que Python ne traite pas de la même façon un entier et une chaîne de caractères, même quand ils s’écrivent avec le même chiffre. Elle lance un petit programme.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Maëlle",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "a = 5",
+      "b = \"5\"",
+      "print(a + a)",
+      "print(b + b)",
+      "print(b * 3)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "enonce": "Quel nombre affiche la ligne print(a + a) ?",
+     "aide": "Ici a est un entier : le signe + additionne.",
+     "explication": "a vaut l’entier 5, donc a + a vaut **10**."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "55"
+     ],
+     "enonce": "Que s’affiche-t-il avec print(b + b) ? Écris la valeur sans guillemets.",
+     "aide": "b est la chaîne « 5 », pas le nombre 5. Que fait + entre deux chaînes ?",
+     "explication": "Entre deux chaînes, + **concatène** : « 5 » puis « 5 » donnent « 55 »."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une erreur de type, car Python refuse d’additionner un entier et une chaîne",
+      "Python convertit b en entier puis affiche le nombre 10 sans aucune erreur",
+      "Python convertit a en chaîne puis affiche la valeur 55 sans aucune erreur",
+      "Python affiche 5 puis 5 sur deux lignes, sans aucune erreur ni calcul"
+     ],
+     "reponse": 0,
+     "enonce": "Maëlle ajoute la ligne print(a + b). Que se passe-t-il ?",
+     "aide": "Python est à typage dynamique, mais aussi fort : il évite les conversions hasardeuses.",
+     "explication": "Python est à typage **dynamique et fort** : aucune conversion implicite entre entier et chaîne, donc une erreur de type (TypeError) à l’exécution."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fonction qu’on passe en argument",
+   "competence": "programmer",
+   "situation": "Inès écrit un programme où une fonction en reçoit une autre : elle applique au choix le doublement ou le triplement à toute une liste. Elle en profite pour trier des mots.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme d’Inès",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def double(x):",
+      "    return 2 * x",
+      "def triple(x):",
+      "    return 3 * x",
+      "def appliquer(f, liste):",
+      "    return [f(x) for x in liste]",
+      "print(appliquer(double, [1, 2, 3]))",
+      "print(appliquer(triple, [1, 2, 3]))",
+      "g = double",
+      "print(g(10))"
+     ]
+    },
+    {
+     "id": "tri",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le tri des mots",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "mots = [\"kiwi\", \"fig\", \"banane\", \"pomme\"]",
+      "print(sorted(mots, key=len)[0])"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "enonce": "Quelle est la somme des éléments de la première liste affichée ?",
+     "aide": "La première liste vient de appliquer(double, [1, 2, 3]).",
+     "explication": "double appliquée à 1, 2, 3 donne [2, 4, 6] : 2 + 4 + 6 = **12**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "enonce": "Quel nombre affiche la dernière ligne, print(g(10)) ?",
+     "aide": "Que contient la variable g après la ligne g = double ?",
+     "explication": "g désigne la fonction double : g(10) vaut 2 fois 10, soit **20**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Qu’une fonction est une donnée qu’on peut ranger dans une variable",
+      "Que g est un appel de double qui a déjà renvoyé sa valeur",
+      "Que double est devenue une chaîne de caractères nommée g",
+      "Que g et double sont deux fonctions qui s’exécutent ensemble"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre la ligne g = double, écrite sans parenthèses ?",
+     "aide": "Sans parenthèses, on ne lance pas la fonction : on la désigne.",
+     "explication": "Sans parenthèses, **double** est la fonction elle-même : on la stocke dans g. C’est la fonction « de première classe »."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "fig"
+     ],
+     "enonce": "Quel mot s’affiche à la dernière ligne du second programme, celui du tri ?",
+     "aide": "key=len trie les mots selon leur longueur, du plus court au plus long.",
+     "explication": "La clé est la longueur : fig (3 lettres), kiwi (4), pomme (5), banane (6). Le premier est **fig**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b9ef83c-5e11-548a-91c0-abbd421f759a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le programme qui ne s’arrête peut-être jamais",
+   "competence": "raisonner",
+   "situation": "Sami teste une fonction qui applique une règle simple : si n est pair, on le divise par 2 ; sinon on calcule 3n + 1 ; on s’arrête en arrivant à 1. Il aimerait un outil qui prédise à coup sûr quand un programme s’arrête.",
+   "documents": [
+    {
+     "id": "langages",
+     "type": "tableau",
+     "titre": "Quatre langages, leur traduction et le repérage des erreurs de type",
+     "colonnes": [
+      "Langage",
+      "Traduit par",
+      "Erreur de type repérée"
+     ],
+     "lignes": [
+      [
+       "C",
+       "un compilateur",
+       "à la compilation"
+      ],
+      [
+       "Python",
+       "un interpréteur",
+       "à l’exécution"
+      ],
+      [
+       "Rust",
+       "un compilateur",
+       "à la compilation"
+      ],
+      [
+       "Java",
+       "un compilateur et une machine virtuelle",
+       "à la compilation"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Sami",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def arret(n):",
+      "    while n != 1:",
+      "        if n % 2 == 0:",
+      "            n = n // 2",
+      "        else:",
+      "            n = 3 * n + 1",
+      "    return n"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "langages",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit quand Python repère une erreur de type.",
+     "aide": "Cherche la ligne Python, puis la colonne « Erreur de type repérée ».",
+     "explication": "Python étant interprété, l’erreur de type n’apparaît que **à l’exécution**, au moment où la ligne fautive est lue."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "enonce": "Combien de fois la boucle tourne-t-elle quand on appelle arret(6) ? Suis les valeurs de n : 6, 3, 10…",
+     "aide": "Écris la suite des valeurs de n jusqu’à 1 et compte les passages.",
+     "explication": "6, 3, 10, 5, 16, 8, 4, 2, 1 : on passe de 6 à 1 en **8 tours**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 16,
+     "enonce": "Même question pour arret(7).",
+     "aide": "Continue la suite : 7, 22, 11, 34…",
+     "explication": "7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 : **16 tours**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Qu’un tel programme universel ne peut pas exister",
+      "Qu’un tel programme existe mais serait trop lent",
+      "Qu’il existe pour les programmes de moins de mille lignes",
+      "Qu’il existe pour les langages compilés uniquement"
+     ],
+     "reponse": 0,
+     "enonce": "Sami rêve d’un programme qui dise, pour n’importe quel programme et n’importe quelle entrée, s’il finira par s’arrêter. Que montre Turing ?",
+     "aide": "Le problème de l’arrêt est dit indécidable.",
+     "explication": "Le problème de l’arrêt est **indécidable** : aucun algorithme ne répond correctement pour tous les programmes. Les tests restent indispensables."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux appels, deux résultats",
+   "competence": "raisonner",
+   "situation": "Lina appelle deux fois de suite la même fonction avec le même argument. Avec la première fonction, les résultats diffèrent ; avec la seconde, jamais.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Lina",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "total = 0",
+      "def ajoute(x):",
+      "    global total",
+      "    total = total + x",
+      "    return total",
+      "def double(x):",
+      "    return 2 * x",
+      "print(ajoute(5))",
+      "print(ajoute(5))",
+      "print(double(5))",
+      "print(double(5))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "enonce": "Quel nombre affiche le deuxième appel, print(ajoute(5)) ?",
+     "aide": "total garde la valeur laissée par le premier appel.",
+     "explication": "Le premier appel porte total à 5, le second à 5 + 5 = **10**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "enonce": "Quel nombre affiche le quatrième appel, print(double(5)) ?",
+     "aide": "double utilise seulement son argument.",
+     "explication": "double(5) vaut toujours 2 fois 5, donc **10**, à chaque appel."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Sans effet de bord",
+      "Avec effet de bord"
+     ],
+     "items": [
+      [
+       "double(5)",
+       0
+      ],
+      [
+       "sorted(L)",
+       0
+      ],
+      [
+       "len(L)",
+       0
+      ],
+      [
+       "L.sort()",
+       1
+      ],
+      [
+       "L.append(3)",
+       1
+      ],
+      [
+       "ajoute(5)",
+       1
+      ]
+     ],
+     "enonce": "Classe ces opérations : modifient-elles quelque chose hors d’elles-mêmes ?",
+     "aide": "Une opération a un effet de bord si elle modifie une variable ou une liste existante.",
+     "explication": "**sorted(L)** renvoie une nouvelle liste ; **L.sort()** et **L.append(3)** modifient L ; **ajoute** change la variable globale total."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux façons d’additionner",
+   "competence": "programmer",
+   "situation": "Yanis écrit deux fonctions qui donnent le même résultat : la première avec une boucle et une variable qui change, la seconde avec des appels récursifs. Il se demande de quel paradigme relève chacune.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux sommes de Yanis",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def somme_a(L):",
+      "    s = 0",
+      "    for x in L:",
+      "        s = s + x",
+      "    return s",
+      "def somme_b(L):",
+      "    if L == []:",
+      "        return 0",
+      "    return L[0] + somme_b(L[1:])",
+      "print(somme_a([4, 7, 1]), somme_b([4, 7, 1]))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Combien d’appels de somme_b sont lancés pour somme_b([4, 7, 1]) ? Compte le premier et celui de la liste vide.",
+     "aide": "Les listes successives sont de longueur 3, 2, 1, puis 0.",
+     "explication": "Longueurs 3, 2, 1 et 0 : **4 appels**. Le dernier, sur la liste vide, renvoie 0 et arrête la récursion."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "somme_b, car elle n’a ni boucle ni variable modifiée",
+      "somme_a, car elle calcule le même total avec une variable s",
+      "Aucune, car Python n’accepte que le paradigme impératif",
+      "Les deux, car elles renvoient la même valeur pour [4, 7, 1]"
+     ],
+     "reponse": 0,
+     "enonce": "Laquelle des deux fonctions est écrite dans le style fonctionnel ?",
+     "aide": "Le style fonctionnel remplace la boucle par la récursivité et ne modifie pas de variable.",
+     "explication": "**somme_b** n’a ni boucle ni variable modifiée : elle se rappelle sur une liste plus courte. somme_a est impérative (la variable s change). Python est multiparadigme."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0,
+     "enonce": "Que renvoie somme_b([]) ?",
+     "aide": "Regarde la condition de la deuxième ligne de somme_b.",
+     "explication": "Pour la liste vide, la condition est vraie : la fonction renvoie **0**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Impératif",
+       "Algorithme court, performance critique"
+      ],
+      [
+       "Fonctionnel",
+       "Transformation de données, tests fiables"
+      ],
+      [
+       "Objet",
+       "Modélisation d’un domaine durable"
+      ],
+      [
+       "Événementiel",
+       "Interface, réseau, temps réel"
+      ]
+     ],
+     "enonce": "Associe chaque paradigme à son terrain de prédilection.",
+     "aide": "Relis l’usage qui se dégage de chaque définition.",
+     "explication": "Impératif : instructions proches de la machine. Fonctionnel : fonctions pures, faciles à tester. Objet : un domaine qui dure. Événementiel : on réagit à ce qui arrive."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c861ef3-ddbc-5d34-b037-3d89686d18a2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le compteur qui réagit",
+   "competence": "analyser-document",
+   "situation": "Une petite application compte des clics : chaque événement appelle un gestionnaire. Le programme mélange plusieurs paradigmes et Nina doit les repérer.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Nina",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "total = 0",
+      "def clic():",
+      "    global total",
+      "    total = total + 1",
+      "def double_clic():",
+      "    global total",
+      "    total = total + 10",
+      "gestionnaires = {\"clic\": clic, \"double\": double_clic}",
+      "for e in [\"clic\", \"double\", \"clic\", \"double\"]:",
+      "    gestionnaires[e]()",
+      "print(total)"
+     ]
+    },
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Suivi de la variable total, événement par événement",
+     "colonnes": [
+      "Événement reçu",
+      "clic",
+      "double",
+      "clic",
+      "double"
+     ],
+     "lignes": [
+      [
+       "total après",
+       1,
+       11,
+       "?",
+       22
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "enonce": "Que vaut total après le troisième événement de la liste ?",
+     "aide": "Pars de 11 et ajoute la valeur du gestionnaire du clic.",
+     "explication": "Après 11, un clic ajoute 1 : total vaut **12**, puis le dernier « double » ajoute 10 et donne 22."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’ordre des événements reçus dans la liste",
+      "L’ordre des définitions de fonctions dans le fichier",
+      "Le choix du compilateur au moment du lancement",
+      "La valeur de total au début de chaque tour"
+     ],
+     "reponse": 0,
+     "enonce": "Qu’est-ce qui décide de l’ordre d’exécution des gestionnaires ?",
+     "aide": "Un programme événementiel réagit à ce qui arrive, pas à l’ordre d’écriture.",
+     "explication": "Les événements arrivent dans l’ordre de la liste, et chacun appelle son gestionnaire : le flot est dicté par **ce qui arrive**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Impératif",
+      "Fonctionnel",
+      "Événementiel"
+     ],
+     "items": [
+      [
+       "La variable global total qui change",
+       0
+      ],
+      [
+       "La boucle for sur la liste",
+       0
+      ],
+      [
+       "Des fonctions rangées dans un dictionnaire",
+       1
+      ],
+      [
+       "Passer clic comme une donnée",
+       1
+      ],
+      [
+       "Le gestionnaire appelé à chaque événement",
+       2
+      ],
+      [
+       "Le dictionnaire qui relie événement et réaction",
+       2
+      ]
+     ],
+     "enonce": "Classe chaque élément du programme selon le paradigme qu’il illustre.",
+     "aide": "Impératif : l’état change. Fonctionnel : les fonctions sont des données. Événementiel : on réagit.",
+     "explication": "La variable modifiée et la boucle sont **impératives** ; les fonctions stockées et passées comme données sont **fonctionnelles** ; les gestionnaires déclenchés sont **événementiels**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle dépend de la variable globale total et non de ses arguments",
+      "Elle n’a pas de paramètre, donc Python refuse de l’appeler",
+      "Elle est appelée par un dictionnaire, ce qui empêche les tests",
+      "Elle renvoie toujours None, ce qui empêche de la vérifier"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi la fonction clic est-elle pénible à tester seule ?",
+     "aide": "Une fonction pure ne dépend que de ses arguments.",
+     "explication": "clic modifie un **état global** : il faut préparer total avant chaque test. Une fonction pure n’a aucun contexte à préparer."
+    }
+   ]
+  },
+  {
+   "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand deux modules ont le même nom",
+   "competence": "analyser-document",
+   "situation": "Deux modules de Léo définissent chacun une fonction aire : dans cercle.py, l’aire approchée d’un disque (avec pi pris égal à 3) ; dans carre.py, l’aire d’un carré de côté c. Il les importe tous les deux dans son programme.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux modules et le programme principal",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "# Fichier cercle.py",
+      "def aire(r):",
+      "    return 3 * pow(r, 2)",
+      "# Fichier carre.py",
+      "def aire(c):",
+      "    return c * c",
+      "# Programme principal",
+      "from cercle import *",
+      "from carre import *",
+      "print(aire(2))"
+     ]
+    },
+    {
+     "id": "formes",
+     "type": "tableau",
+     "titre": "Trois formes d’importation",
+     "colonnes": [
+      "Forme d’importation",
+      "Appel de la fonction"
+     ],
+     "lignes": [
+      [
+       "import cercle",
+       "cercle.aire(2)"
+      ],
+      [
+       "from cercle import aire",
+       "aire(2)"
+      ],
+      [
+       "from cercle import *",
+       "aire(2)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Quel nombre affiche le programme principal ?",
+     "aide": "Quelle définition de aire est la dernière à avoir été importée ?",
+     "explication": "La seconde importation écrase silencieusement la première : c’est l’aire du carré qui reste, 2 fois 2 = **4**, et non 12."
+    },
+    {
+     "type": "zone",
+     "document": "formes",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la forme d’importation à proscrire.",
+     "aide": "Laquelle ne dit pas d’où viennent les noms qu’elle apporte ?",
+     "explication": "**Importer tout le contenu** (from … import, suivi d’une étoile) verse tout le contenu du module dans l’espace courant : deux modules peuvent définir le même nom, et le second écrase le premier."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "enonce": "Avec import cercle puis import carre, que vaudrait cercle.aire(2) ?",
+     "aide": "Le préfixe cercle. désigne sans ambiguïté la fonction du module cercle.",
+     "explication": "cercle.aire(2) vaut 3 fois 2 au carré, soit **12**. Avec le préfixe, chaque fonction garde son module d’origine."
+    }
+   ]
+  },
+  {
+   "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le contrat de la fonction moyenne",
+   "competence": "analyser-document",
+   "situation": "Zoé documente une fonction pour l’équipe du club de maths. Sa docstring décrit ce que l’appelant doit garantir et ce que la fonction promet en retour.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Zoé",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def moyenne(notes):",
+      "    \"\"\"Renvoie la moyenne de la liste notes.",
+      "    Précondition : notes n'est pas vide.",
+      "    Postcondition : le résultat est compris entre min(notes) et max(notes).\"\"\"",
+      "    assert len(notes) > 0",
+      "    return sum(notes) / len(notes)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Précondition",
+      "Postcondition"
+     ],
+     "items": [
+      [
+       "La liste notes n’est pas vide",
+       0
+      ],
+      [
+       "n est un entier positif",
+       0
+      ],
+      [
+       "b est différent de 0 avant diviser(a, b)",
+       0
+      ],
+      [
+       "Le résultat est compris entre le minimum et le maximum",
+       1
+      ],
+      [
+       "La liste renvoyée est triée",
+       1
+      ],
+      [
+       "Le résultat de double(n) est un nombre pair",
+       1
+      ]
+     ],
+     "enonce": "Classe ces phrases : précondition (à garantir avant l’appel) ou postcondition (promise après) ?",
+     "aide": "Une précondition se garantit avant l’appel ; une postcondition décrit ce que la fonction garantit après.",
+     "explication": "L’**appelant** garantit les préconditions (liste non vide, n positif, b non nul) ; la **fonction** garantit les postconditions (résultat dans l’intervalle, liste triée, nombre pair)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "enonce": "Que renvoie moyenne([12, 8, 14, 6]) ?",
+     "aide": "Additionne les quatre notes, puis divise par leur nombre.",
+     "explication": "12 + 8 + 14 + 6 = 40, et 40 / 4 = **10**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’appelant, qui n’a pas respecté la précondition",
+      "La fonction, qui aurait dû renvoyer 0 pour une liste vide",
+      "L’interpréteur, qui vérifie les docstrings trop strictement",
+      "La docstring, qui ne contient pas assez de détails"
+     ],
+     "reponse": 0,
+     "enonce": "Zoé appelle moyenne([]) et le programme s’arrête sur une AssertionError. Qui est en faute ?",
+     "aide": "La précondition dit ce que l’appelant doit garantir : une liste non vide.",
+     "explication": "La précondition est **à la charge de l’appelant** : l’assert signale qu’elle n’est pas respectée. La fonction n’a pas à deviner une valeur pour un cas exclu par son contrat."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il peut être désactivé à l’exécution : il ne protège plus",
+      "Il ralentit trop le programme pour un usage réel",
+      "Il ne fonctionne que dans les fonctions récursives",
+      "Il ne peut contrôler que des nombres entiers positifs"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi assert ne suffit-il pas à gérer une erreur de saisie en production ?",
+     "aide": "Pense à ce qui arrive si on lance Python avec une option d’optimisation.",
+     "explication": "**assert** sert à la mise au point : on peut le désactiver. Pour une erreur que l’utilisateur peut provoquer, il faut une vraie gestion d’erreur."
+    }
+   ]
+  },
+  {
+   "chapitre": "7103cc87-d376-547e-be05-ae7c6bf68edc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Découper le logiciel de la cantine",
+   "competence": "modeliser",
+   "situation": "Le logiciel de la cantine tient en un seul fichier de huit fonctions. Nina le découpe en quatre modules et dessine qui importe qui. Elle veut une forte cohésion et un faible couplage.",
+   "documents": [
+    {
+     "id": "fonctions",
+     "type": "tableau",
+     "titre": "Les huit fonctions du fichier unique",
+     "colonnes": [
+      "Fonction",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "calcule_prix",
+       "Multiplie le prix d’un repas par le nombre de repas"
+      ],
+      [
+       "calcule_remise",
+       "Déduit 10 % pour le deuxième enfant inscrit"
+      ],
+      [
+       "affiche_menu",
+       "Écrit le menu de la semaine à l’écran"
+      ],
+      [
+       "dessine_logo",
+       "Trace le logo de la cantine à l’écran"
+      ],
+      [
+       "lit_fichier_eleves",
+       "Charge la liste des élèves depuis un fichier"
+      ],
+      [
+       "ecrit_fichier_resultats",
+       "Enregistre les factures dans un fichier"
+      ],
+      [
+       "envoie_mail_parents",
+       "Expédie la facture par courriel aux parents"
+      ],
+      [
+       "redige_objet_mail",
+       "Compose l’objet du courriel destiné aux parents"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "modules",
+     "type": "schema",
+     "titre": "Qui importe qui ? (une flèche = « importe »)",
+     "largeur": 330,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        149,
+        49
+       ],
+       "a": [
+        76,
+        111
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        165,
+        49
+       ],
+       "a": [
+        165,
+        191
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        181,
+        49
+       ],
+       "a": [
+        254,
+        111
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        78,
+        139
+       ],
+       "a": [
+        147,
+        191
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        252,
+        139
+       ],
+       "a": [
+        183,
+        191
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 123,
+       "y": 21,
+       "l": 84,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Affichage",
+       "id": "n_A",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 18,
+       "y": 111,
+       "l": 84,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Calculs",
+       "id": "n_B",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 228,
+       "y": 111,
+       "l": 84,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Courriels",
+       "id": "n_D",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 123,
+       "y": 191,
+       "l": 84,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Fichiers",
+       "id": "n_C",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l'exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Calculs",
+      "Affichage",
+      "Fichiers",
+      "Courriels"
+     ],
+     "items": [
+      [
+       "calcule_prix",
+       0
+      ],
+      [
+       "calcule_remise",
+       0
+      ],
+      [
+       "affiche_menu",
+       1
+      ],
+      [
+       "dessine_logo",
+       1
+      ],
+      [
+       "lit_fichier_eleves",
+       2
+      ],
+      [
+       "ecrit_fichier_resultats",
+       2
+      ],
+      [
+       "envoie_mail_parents",
+       3
+      ],
+      [
+       "redige_objet_mail",
+       3
+      ]
+     ],
+     "enonce": "Range chaque fonction dans le module dont le sujet est le sien.",
+     "aide": "Forte cohésion : tout ce qui est dans un module concerne le même sujet.",
+     "explication": "Les deux calculs vont ensemble, les deux écritures à l’écran aussi, les deux accès au disque aussi, et les deux fonctions de courriel aussi : on peut résumer chaque module **en une phrase sans « et »**."
+    },
+    {
+     "type": "zone",
+     "document": "modules",
+     "reponse": [
+      "n_A"
+     ],
+     "enonce": "Touche le module qui importe les trois autres.",
+     "aide": "Compte les flèches qui partent de chaque module.",
+     "explication": "**Affichage** a trois flèches sortantes : il dépend de Calculs, de Fichiers et de Courriels."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien de modules dépendent directement de Fichiers ?",
+     "aide": "Compte les flèches qui arrivent sur Fichiers.",
+     "explication": "Affichage, Calculs et Courriels importent tous Fichiers : **3 modules**. Un changement dans Fichiers peut donc les toucher tous."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Lui passer les données déjà lues, sans qu’il connaisse le fichier",
+      "Copier le code de lecture du fichier dans le module Affichage",
+      "Fusionner les quatre modules en un seul pour supprimer les imports",
+      "Importer tout le contenu de Fichiers avec une étoile dans Affichage"
+     ],
+     "reponse": 0,
+     "enonce": "Affichage lit lui-même le fichier des élèves. Que faire pour réduire le couplage ?",
+     "aide": "Un module ne devrait pas avoir besoin de connaître l’intérieur d’un autre.",
+     "explication": "En recevant les données **par ses paramètres**, Affichage n’a plus besoin de connaître le fichier. Copier le code duplique, fusionner détruit la cohésion, et l’étoile apporte des conflits de noms."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que disent les commentaires",
+   "competence": "analyser-document",
+   "situation": "Sacha relit un programme de facturation écrit par un camarade. Chaque ligne importante porte un commentaire, mais tous n’ont pas la même utilité.",
+   "documents": [
+    {
+     "id": "comm",
+     "type": "tableau",
+     "titre": "Quatre lignes commentées",
+     "colonnes": [
+      "Code",
+      "Commentaire"
+     ],
+     "lignes": [
+      [
+       "i = i + 1",
+       "# ajoute 1 à i"
+      ],
+      [
+       "for ligne in lignes[1:]:",
+       "# on saute la 1re ligne : c'est l'en-tête du fichier"
+      ],
+      [
+       "return total",
+       "# renvoie total"
+      ],
+      [
+       "prix = p * 1.055",
+       "# taux réduit : c'est un livre"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comm",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche le commentaire qui explique pourquoi on saute la première ligne.",
+     "aide": "Cherche le commentaire qui parle du fichier, pas de la boucle.",
+     "explication": "Le commentaire « c’est l’en-tête du fichier » donne la **raison** : sans lui, on se demanderait pourquoi la boucle ne commence pas à 0."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Utile",
+      "Inutile"
+     ],
+     "items": [
+      [
+       "ajoute 1 à i",
+       1
+      ],
+      [
+       "renvoie total",
+       1
+      ],
+      [
+       "on saute la 1re ligne : c’est l’en-tête du fichier",
+       0
+      ],
+      [
+       "taux réduit : c’est un livre",
+       0
+      ]
+     ],
+     "enonce": "Classe ces commentaires : utile (il explique le pourquoi) ou inutile (il répète le code) ?",
+     "aide": "Un bon commentaire apporte une information que le code ne dit pas.",
+     "explication": "« ajoute 1 à i » et « renvoie total » répètent le code : **inutiles**. Les deux autres disent pourquoi (en-tête, taux réduit) : **utiles**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le ranger dans une constante nommée TAUX_LIVRE utilisée partout",
+      "Le recopier aussi dans un commentaire au-dessus de chaque fonction",
+      "Le remplacer par 1.06 dans toutes les fonctions pour arrondir",
+      "Ajouter à chaque ligne un commentaire qui répète la valeur 1.055"
+     ],
+     "reponse": 0,
+     "enonce": "Le taux 1.055 est recopié à la main dans douze fonctions. Quelle amélioration s’impose ?",
+     "aide": "Si le taux change, combien de lignes faudra-t-il modifier ?",
+     "explication": "Avec une **constante nommée**, le taux change en un seul endroit et son nom dit ce qu’il est. Les copies évoluent séparément, et un commentaire qui répète la valeur vieillit mal."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois tests, un bug qui se cache",
+   "competence": "analyser-document",
+   "situation": "Yanis écrit une fonction qui renvoie le plus grand élément d’une liste, puis la teste sur trois listes. Il note ce qu’il attendait et ce que la fonction a renvoyé.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction maximum",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def maximum(L):",
+      "    m = 0",
+      "    for x in L:",
+      "        if x > m:",
+      "            m = x",
+      "    return m"
+     ]
+    },
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Les trois tests de Yanis",
+     "colonnes": [
+      "Entrée",
+      "Attendu",
+      "Obtenu"
+     ],
+     "lignes": [
+      [
+       "[3, 9, 4]",
+       9,
+       9
+      ],
+      [
+       "[5]",
+       5,
+       5
+      ],
+      [
+       "[-2, -7]",
+       -2,
+       0
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tests",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui montre que la fonction échoue.",
+     "aide": "Compare la colonne Attendu et la colonne Obtenu.",
+     "explication": "Pour [-2, -7], on attendait **-2** et la fonction renvoie **0** : c’est le seul test raté."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "m commence à 0, alors que les nombres peuvent tous être négatifs",
+      "La boucle for ne lit jamais le dernier élément de la liste",
+      "La comparaison x > m devrait être écrite x < m",
+      "La fonction ne renvoie rien quand la liste contient deux éléments"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle est la cause du résultat 0 ?",
+     "aide": "Que vaut m si aucun élément de la liste n’est plus grand que 0 ?",
+     "explication": "m démarre à **0** : aucun élément négatif ne le dépasse, donc la fonction renvoie 0. Il faudrait démarrer avec le premier élément, m = L[0]."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0,
+     "enonce": "Que renvoie maximum([-5]) ?",
+     "aide": "Pour la liste d’un seul élément négatif, recommence le raisonnement de la question précédente.",
+     "explication": "-5 n’est pas plus grand que 0 : m reste à 0 et la fonction renvoie **0**. C’est un cas limite qui révèle le bug."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Que la fonction marche sur ces cas, pas sur tous les cas",
+      "Que la fonction est correcte pour toutes les listes",
+      "Que la fonction est correcte pour les listes positives",
+      "Que la fonction est assez rapide pour de longues listes"
+     ],
+     "reponse": 0,
+     "enonce": "Les deux premiers tests sont réussis. Que prouvent-ils ?",
+     "aide": "Dijkstra : les tests montrent la présence de bugs, jamais leur absence.",
+     "explication": "Un test réussi prouve seulement qu’on n’échoue pas **sur les cas testés**. Il faut ajouter des cas limites (un seul élément, des négatifs, liste vide)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d4cb955-20d8-5b83-b147-e87b2dce18b2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un bug corrigé d’un seul côté",
+   "competence": "raisonner",
+   "situation": "Au magasin de Nina, deux fonctions presque identiques calculent le prix toutes taxes comprises : une pour les livres, une pour les jeux. Un collègue a corrigé l’arrondi dans l’une, pas dans l’autre. Le journal de git garde la trace de ces modifications.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux fonctions du magasin",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def ttc_livre(p):",
+      "    return p * 1.055",
+      "def ttc_jeu(p):",
+      "    return round(p * 1.2, 2)"
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Le journal des modifications",
+     "colonnes": [
+      "Message d’enregistrement"
+     ],
+     "lignes": [
+      [
+       "modifs"
+      ],
+      [
+       "Corrige l’arrondi du prix TTC des jeux"
+      ],
+      [
+       "fix"
+      ],
+      [
+       "Ajoute le cas de la liste vide dans maximum"
+      ],
+      [
+       "travail de la semaine"
+      ],
+      [
+       "Renomme x en nb_eleves pour plus de clarté"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 21.09,
+     "tolerance": 0.005,
+     "enonce": "Quel prix, arrondi au centime, devrait renvoyer ttc_livre(19.99) si on y appliquait aussi l’arrondi ? (19,99 fois 1,055)",
+     "aide": "Calcule 19,99 multiplié par 1,055, puis arrondis au centime.",
+     "explication": "19,99 × 1,055 = 21,08945 : arrondi au centime, **21,09**. La fonction des livres, elle, renverrait encore toutes les décimales."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les copies évoluent séparément : une correction manque dans l’autre",
+      "Les deux fonctions sont trop courtes pour être utiles au magasin",
+      "Le taux 1.2 est trop élevé pour être manipulé en Python",
+      "Les noms ttc_livre et ttc_jeu sont en français, ce qu’il faut éviter"
+     ],
+     "reponse": 0,
+     "enonce": "Quel est le vrai problème de ce code ?",
+     "aide": "Que se passe-t-il quand on corrige un bug dans une copie et pas dans l’autre ?",
+     "explication": "Le code dupliqué est un **piège** : les copies divergent. Une seule fonction ttc(p, taux) corrige le problème à la source."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Utile",
+      "À réécrire"
+     ],
+     "items": [
+      [
+       "Corrige l’arrondi du prix TTC des jeux",
+       0
+      ],
+      [
+       "Ajoute le cas de la liste vide dans maximum",
+       0
+      ],
+      [
+       "Renomme x en nb_eleves pour plus de clarté",
+       0
+      ],
+      [
+       "modifs",
+       1
+      ],
+      [
+       "fix",
+       1
+      ],
+      [
+       "travail de la semaine",
+       1
+      ]
+     ],
+     "enonce": "Classe les messages d’enregistrement : utile pour le futur lecteur, ou à réécrire ?",
+     "aide": "Un bon message explique l’intention : quoi, et pourquoi.",
+     "explication": "Un bon message est **petit et explique l’intention**. « modifs », « fix » et « travail de la semaine » n’apprendront rien dans six mois."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Qu’elle fait deux choses : il faut la couper en deux fonctions",
+      "Qu’elle est bien nommée, puisque son nom décrit tout son rôle",
+      "Qu’elle doit être récursive, car elle enchaîne deux actions",
+      "Qu’elle doit recevoir deux paramètres exactement, pas davantage"
+     ],
+     "reponse": 0,
+     "enonce": "Une fonction s’appelle calcule_et_affiche_total. Que dit son nom ?",
+     "aide": "Si le nom contient « et », combien de choses fait la fonction ?",
+     "explication": "Un nom qui contient « et » signale une fonction qui fait **deux choses** : on crée calcule_total et affiche_total, chacune plus facile à tester."
+    }
+   ]
+  },
+  {
+   "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois essais, trois symptômes",
+   "competence": "analyser-document",
+   "situation": "Mila lance trois versions de son programme de notes. À chaque essai, elle note ce que l’ordinateur fait. Elle veut savoir de quelle famille d’erreur il s’agit avant de chercher la cause.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Ce que Mila observe",
+     "colonnes": [
+      "Essai",
+      "Ce que l’on observe"
+     ],
+     "lignes": [
+      [
+       "Essai 1",
+       "Python refuse de démarrer : SyntaxError"
+      ],
+      [
+       "Essai 2",
+       "Le programme s’arrête en route : ZeroDivisionError"
+      ],
+      [
+       "Essai 3",
+       "Le programme va au bout et affiche 7 au lieu de 8"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’observation qui révèle une erreur de logique.",
+     "aide": "Dans quel essai le programme s’exécute-t-il sans aucun message ?",
+     "explication": "À l’essai 3, tout s’exécute mais le résultat est **faux** : c’est une erreur de logique, la plus dangereuse car aucun message ne prévient."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Syntaxe",
+      "Exécution",
+      "Logique"
+     ],
+     "items": [
+      [
+       "Oublier le deux-points après un if",
+       0
+      ],
+      [
+       "Diviser par une variable qui vaut 0",
+       1
+      ],
+      [
+       "Lire L[5] dans une liste de 3 éléments",
+       1
+      ],
+      [
+       "Ouvrir un fichier qui n’existe pas",
+       1
+      ],
+      [
+       "Additionner au lieu de soustraire dans une formule",
+       2
+      ],
+      [
+       "Écrire < au lieu de <= dans une comparaison",
+       2
+      ]
+     ],
+     "enonce": "Range ces erreurs dans leur famille.",
+     "aide": "Syntaxe : avant toute exécution. Exécution : le programme s’arrête en route. Logique : résultat faux, sans message.",
+     "explication": "Le deux-points oublié est une erreur de **syntaxe**. Division par zéro, indice hors bornes et fichier absent arrêtent le programme : **exécution**. Une formule fausse ou une comparaison décalée donnent un résultat faux : **logique**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Chercher le plus petit exemple qui reproduit l’erreur à coup sûr",
+      "Réécrire la fonction entière avec une autre méthode de calcul",
+      "Ajouter des commentaires partout avant de relancer le programme",
+      "Modifier quelques lignes au hasard jusqu’à ce que le bug disparaisse"
+     ],
+     "reponse": 0,
+     "enonce": "Un bug apparaît sur un fichier de 10 000 lignes. Quel est le premier geste ?",
+     "aide": "On ne peut corriger que ce que l’on sait provoquer à volonté.",
+     "explication": "La méthode commence par **reproduire** l’erreur de façon fiable, avec le plus petit cas possible. Sans cela, on corrige au hasard."
+    }
+   ]
+  },
+  {
+   "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le nettoyage qui oublie un nombre",
+   "competence": "raisonner",
+   "situation": "Lucas veut retirer les températures négatives d’une liste. Son programme s’exécute sans erreur, mais une valeur négative est restée. Il suit la variable x à chaque tour.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Lucas",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "L = [3, -1, -2, 5, -4]",
+      "for x in L:",
+      "    if x < 0:",
+      "        L.remove(x)",
+      "print(L)"
+     ]
+    },
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Suivi de la boucle",
+     "colonnes": [
+      "Tour",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "x lu",
+       3,
+       -1,
+       "?",
+       -4
+      ],
+      [
+       "Éléments dans L en fin de tour",
+       5,
+       4,
+       4,
+       3
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "enonce": "Quelle valeur x prend-il au troisième tour ?",
+     "aide": "Après avoir retiré -1, la liste a glissé d’un rang : que lit-on à l’indice 2 ?",
+     "explication": "Après le retrait de -1, L vaut [3, -2, 5, -4] : à l’indice 2 se trouve **5**. Le -2 a été sauté."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien d’éléments contient L quand le programme l’affiche ?",
+     "aide": "Regarde la dernière case du tableau de suivi.",
+     "explication": "L vaut [3, -2, 5] : **3 éléments**, et -2 est encore là."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La liste change pendant le parcours, et un élément est sauté",
+      "remove ne sait retirer que le premier nombre de la liste",
+      "La condition x < 0 est fausse pour les nombres pairs",
+      "La boucle for s’arrête dès qu’elle retire un élément"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi le -2 n’a-t-il jamais été examiné ?",
+     "aide": "Que devient l’indice de la boucle quand remove décale les éléments ?",
+     "explication": "Modifier une liste **pendant son parcours** décale les éléments : le suivant prend la place de celui qu’on vient de lire, et la boucle passe son chemin."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L = [x for x in L if x >= 0] (nouvelle liste)",
+      "Parcourir L plus vite avec while au lieu de for",
+      "Remplacer L.remove(x) par L.pop(0) dans la boucle",
+      "Ajouter un second print(L) juste avant la boucle for"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle correction est sûre ?",
+     "aide": "Évite de toucher la liste que tu es en train de lire.",
+     "explication": "Construire une **nouvelle liste** avec une compréhension évite de modifier L pendant le parcours : tous les éléments sont examinés."
+    }
+   ]
+  },
+  {
+   "chapitre": "92393036-4e09-5fae-964d-0807562ef5bc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Enquête sur une moyenne trop basse",
+   "competence": "raisonner",
+   "situation": "Maëlys affiche la moyenne de trois notes : 10, 20 et 30. Elle s’attendait à 20 et obtient un nombre plus petit, sans aucun message d’erreur. Elle mène l’enquête.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Maëlys",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def moyenne(L):",
+      "    total = 0",
+      "    for i in range(1, len(L)):",
+      "        total = total + L[i]",
+      "    return total / len(L)",
+      "print(moyenne([10, 20, 30]))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 16.7,
+     "tolerance": 0.05,
+     "enonce": "Quel nombre affiche le programme ? Arrondis au dixième.",
+     "aide": "La boucle commence à l’indice 1 : quelles notes additionne-t-elle ? Puis divise par 3.",
+     "explication": "La boucle additionne 20 + 30 = 50, puis on divise par 3 : 50 / 3 ≈ **16,7**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0,
+     "enonce": "Quel est le plus petit cas qui reproduit l’erreur ? Que renvoie moyenne([5]) ?",
+     "aide": "Avec une seule note, l’indice 1 n’existe pas : que fait range(1, 1) ?",
+     "explication": "range(1, 1) est vide : total reste à 0 et la fonction renvoie 0 / 1 = **0**, au lieu de 5."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Reproduire l’erreur avec le plus petit cas possible",
+      "Localiser la zone où l’état devient incorrect",
+      "Comprendre la cause, pas seulement le symptôme",
+      "Corriger le code",
+      "Ajouter un test qui échouait avant la correction"
+     ],
+     "enonce": "Remets dans l’ordre les cinq temps de la méthode de correction.",
+     "aide": "On ne corrige qu’après avoir compris ; et on finit par un test.",
+     "explication": "Reproduire, localiser, comprendre, corriger, puis **ajouter un test** : c’est ce dernier temps qui distingue une correction d’un rafistolage."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "for i in range(len(L)):",
+      "for i in range(1, len(L) + 1):",
+      "for i in range(len(L) - 1):",
+      "for i in range(0, len(L), 2):"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle écriture de la boucle corrige le bug ?",
+     "aide": "Les indices d’une liste de n éléments vont de 0 à n - 1.",
+     "explication": "**range(len(L))** parcourt tous les indices de 0 à n - 1. range(1, len(L) + 1) provoquerait un IndexError ; les deux autres oublient des notes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 15,
+     "enonce": "Après correction, que renvoie moyenne([12, 14, 16, 18]) ?",
+     "aide": "Additionne les quatre notes puis divise par 4.",
+     "explication": "12 + 14 + 16 + 18 = 60, et 60 / 4 = **15**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pile d’assiettes et la file de la cantine",
+   "competence": "modeliser",
+   "situation": "Noé empile et dépile des nombres dans une liste Python, comme une pile d’assiettes. À la cantine, les élèves forment une file : le premier arrivé est le premier servi.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La pile de Noé",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "p = []",
+      "p.append(3)",
+      "p.append(8)",
+      "p.pop()",
+      "p.append(5)",
+      "p.append(1)",
+      "print(p)"
+     ]
+    },
+    {
+     "id": "file",
+     "type": "schema",
+     "titre": "La file d'attente de la cantine",
+     "largeur": 330,
+     "hauteur": 130,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 70,
+       "l": 52,
+       "h": 32,
+       "arrondi": 6,
+       "texte": "Sam",
+       "id": "f_Sam",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 70,
+       "l": 52,
+       "h": 32,
+       "arrondi": 6,
+       "texte": "Léa",
+       "id": "f_Lea",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 70,
+       "l": 52,
+       "h": 32,
+       "arrondi": 6,
+       "texte": "Tom",
+       "id": "f_Tom",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 70,
+       "l": 52,
+       "h": 32,
+       "arrondi": 6,
+       "texte": "Ana",
+       "id": "f_Ana",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        6,
+        86
+       ],
+       "a": [
+        54,
+        86
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        324,
+        86
+       ],
+       "a": [
+        296,
+        86
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 62,
+       "texte": "sortie",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 304,
+       "y": 62,
+       "texte": "entrée",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l'exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien d’éléments contient la pile p à la fin ?",
+     "aide": "Suis la pile ligne par ligne : deux ajouts, un retrait, deux ajouts.",
+     "explication": "Après 3 et 8, le pop retire 8 ; puis 5 et 1 s’ajoutent : p vaut [3, 5, 1], soit **3 éléments**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1,
+     "enonce": "Quel nombre retirerait le prochain p.pop() ?",
+     "aide": "Une pile rend toujours le dernier élément entré.",
+     "explication": "Le dernier entré est le premier sorti : **1**."
+    },
+    {
+     "type": "zone",
+     "document": "file",
+     "reponse": [
+      "f_Sam"
+     ],
+     "enonce": "Touche l’élève qui sera servi en premier.",
+     "aide": "Les élèves sortent par l’extrémité indiquée sur le schéma.",
+     "explication": "La file est **premier entré, premier sorti** : Sam, le plus proche de la sortie, est servi en premier."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "Tom"
+     ],
+     "enonce": "Sam et Léa sont servis. Quel prénom est alors en tête de la file ?",
+     "aide": "Retire deux élèves du côté de la sortie.",
+     "explication": "Après Sam et Léa, le prochain à sortir est **Tom**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les parenthèses bien rangées",
+   "competence": "modeliser",
+   "situation": "Une fonction vérifie qu’une expression est bien parenthésée en empilant chaque parenthèse ouvrante et en dépilant à chaque parenthèse fermante. Jade suit la taille de la pile sur l’expression (()(().",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Jade",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def bien_forme(s):",
+      "    pile = []",
+      "    for c in s:",
+      "        if c == \"(\":",
+      "            pile.append(c)",
+      "        elif c == \")\":",
+      "            if pile == []:",
+      "                return False",
+      "            pile.pop()",
+      "    return pile == []"
+     ]
+    },
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Taille de la pile après chaque caractère de (()(()",
+     "colonnes": [
+      "Caractère",
+      "(",
+      "(",
+      ")",
+      "(",
+      "(",
+      ")"
+     ],
+     "lignes": [
+      [
+       "Taille de la pile",
+       1,
+       2,
+       1,
+       2,
+       "?",
+       2
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Quelle est la taille de la pile après le cinquième caractère ?",
+     "aide": "Après le quatrième caractère elle vaut 2 : que fait une parenthèse ouvrante ?",
+     "explication": "Une parenthèse ouvrante **empile** : la taille passe de 2 à **3**."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "False"
+     ],
+     "enonce": "Que renvoie bien_forme pour (()(() ? Réponds par True ou False.",
+     "aide": "Regarde la taille de la pile à la fin du parcours.",
+     "explication": "À la fin, la pile contient encore 2 éléments : pile == [] est faux, donc la fonction renvoie **False**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "enonce": "Quelle taille maximale la pile atteint-elle pour l’expression (())() ?",
+     "aide": "Suis les tailles : 1, 2, puis chaque fermante la fait redescendre.",
+     "explication": "Tailles : 1, 2, 1, 0, 1, 0. Le maximum est **2**, et l’expression est bien formée (la pile finit vide)."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La dernière parenthèse ouverte doit être la première refermée",
+      "La première parenthèse ouverte doit être la première refermée",
+      "Une pile permet de compter les caractères plus vite qu’un tableau",
+      "Une pile trie automatiquement les parenthèses par niveau"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi une pile convient-elle à cette vérification ?",
+     "aide": "Dans (()), quelle parenthèse ouvrante est refermée en premier ?",
+     "explication": "Chaque parenthèse fermante se rapporte à la **dernière ouvrante encore ouverte** : c’est la règle dernier entré, premier sorti d’une pile."
+    }
+   ]
+  },
+  {
+   "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle structure pour quel besoin ?",
+   "competence": "raisonner",
+   "situation": "Une application de sport doit garder des mesures, retrouver un contact, annuler une action, servir des clients, représenter des dossiers et des routes. Chaque besoin appelle une structure différente. Pour l’une d’elles, Sam dessine les maillons et compte les étapes.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "schema",
+     "titre": "Une liste chaînée de trois maillons",
+     "largeur": 330,
+     "hauteur": 120,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 30,
+       "texte": "tête",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 45,
+       "l": 56,
+       "h": 34,
+       "arrondi": 6,
+       "texte": "3",
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        76,
+        62
+       ],
+       "a": [
+        118,
+        62
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 45,
+       "l": 56,
+       "h": 34,
+       "arrondi": 6,
+       "texte": "7",
+       "id": "m7",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        176,
+        62
+       ],
+       "a": [
+        218,
+        62
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 45,
+       "l": 56,
+       "h": 34,
+       "arrondi": 6,
+       "texte": "2",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 286,
+       "y": 100,
+       "texte": "fin",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l'exercice"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le comptage de Sam",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "d = {}",
+      "for mot in [\"a\", \"b\", \"a\", \"c\", \"a\"]:",
+      "    d[mot] = d.get(mot, 0) + 1",
+      "print(d[\"a\"])"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Retrouver le numéro d’un contact à partir de son nom",
+       "Dictionnaire"
+      ],
+      [
+       "Annuler la dernière action d’un éditeur",
+       "Pile"
+      ],
+      [
+       "Servir des clients dans l’ordre d’arrivée",
+       "File"
+      ],
+      [
+       "Représenter des dossiers et sous-dossiers",
+       "Arbre"
+      ],
+      [
+       "Lire très vite la 500e mesure d’un capteur",
+       "Tableau"
+      ],
+      [
+       "Représenter un réseau de routes",
+       "Graphe"
+      ]
+     ],
+     "enonce": "Associe chaque besoin à la structure la plus adaptée.",
+     "aide": "Pense à l’opération la plus fréquente : accès par indice, par clé, dernier entré, premier entré…",
+     "explication": "Clé vers valeur : **dictionnaire**. Annuler : **pile**. Ordre d’arrivée : **file**. Hiérarchie : **arbre**. Accès par indice : **tableau**. Relation quelconque : **graphe**."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "reponse": [
+      "m7"
+     ],
+     "enonce": "Touche le maillon qui contient la référence vers le maillon 2.",
+     "aide": "Une référence part du maillon qui précède.",
+     "explication": "Le maillon **7** porte la référence vers le suivant, le maillon 2 : c’est ce que contient chaque maillon en plus de sa valeur."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien de maillons faut-il parcourir, en partant de la tête, pour atteindre le maillon 2 ?",
+     "aide": "Compte aussi le maillon de tête et le maillon d’arrivée.",
+     "explication": "Tête 3, puis 7, puis 2 : **3 maillons**. C’est le coût linéaire d’un accès par position dans une liste chaînée."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Quel nombre affiche le programme de Sam, print(d[\"a\"]) ?",
+     "aide": "Le dictionnaire compte les occurrences de chaque lettre de la liste.",
+     "explication": "La lettre « a » apparaît 3 fois dans la liste : d[\"a\"] vaut **3**, et la recherche dans un dictionnaire se fait en temps constant en moyenne."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1000,
+     "enonce": "Insérer un élément en tête d’une liste Python de 1 000 éléments oblige à décaler tous les autres. Combien de décalages ?",
+     "aide": "Chaque élément existant doit glisser d’un rang.",
+     "explication": "Les **1 000** éléments se décalent d’un rang : c’est le coût linéaire d’une insertion en tête dans un tableau, contre un coût constant dans une liste chaînée."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le compte bancaire de Jade",
+   "competence": "programmer",
+   "situation": "Une banque modélise ses comptes par une classe Python. Jade ouvre un compte avec 100 euros et y dépose 50 euros.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La classe Compte",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "class Compte:",
+      "    def __init__(self, titulaire, solde):",
+      "        self.titulaire = titulaire",
+      "        self.solde = solde",
+      "    def deposer(self, somme):",
+      "        self.solde = self.solde + somme",
+      "c = Compte(\"Jade\", 100)",
+      "c.deposer(50)",
+      "print(c.solde)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 150,
+     "enonce": "Quel nombre affiche le programme ?",
+     "aide": "deposer ajoute la somme à l’attribut solde de l’objet c.",
+     "explication": "Le solde initial est 100 ; le dépôt de 50 donne **150**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’objet sur lequel la méthode est appelée, ici c",
+      "La classe Compte elle-même, prise dans son ensemble",
+      "Une variable globale qui contient tous les comptes",
+      "Le nombre 50 passé en argument lors de l’appel"
+     ],
+     "reponse": 0,
+     "enonce": "Dans deposer, que désigne self ?",
+     "aide": "Quand on écrit c.deposer(50), qui est l’objet avant le point ?",
+     "explication": "**self** désigne l’instance en cours : avec c.deposer(50), self est c, et self.solde est le solde de ce compte."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Classe",
+       "Compte"
+      ],
+      [
+       "Instance",
+       "c"
+      ],
+      [
+       "Attribut",
+       "solde"
+      ],
+      [
+       "Méthode",
+       "deposer"
+      ]
+     ],
+     "enonce": "Associe chaque terme à son exemple dans le programme.",
+     "aide": "La classe est le modèle ; l’instance est l’objet construit.",
+     "explication": "**Compte** est le modèle (classe), **c** l’objet construit (instance), **solde** une donnée de l’objet (attribut) et **deposer** une fonction de la classe (méthode)."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’attribut qui disparaît",
+   "competence": "programmer",
+   "situation": "Hugo écrit un compteur avec deux méthodes presque identiques, puis une classe Chat qui compte ses propres instances. L’une des méthodes du compteur ne fait pas ce qu’il attend.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le compteur de Hugo",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "class Compteur:",
+      "    def __init__(self):",
+      "        self.n = 0",
+      "    def ajouter(self):",
+      "        n = self.n + 1",
+      "    def bon(self):",
+      "        self.n = self.n + 1",
+      "c = Compteur()",
+      "c.ajouter()",
+      "c.ajouter()",
+      "c.bon()",
+      "print(c.n)"
+     ]
+    },
+    {
+     "id": "chat",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La classe Chat",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "class Chat:",
+      "    total = 0",
+      "    def __init__(self):",
+      "        Chat.total = Chat.total + 1",
+      "a = Chat()",
+      "b = Chat()",
+      "c = Chat()",
+      "d = Chat()",
+      "print(a.total)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 1,
+     "enonce": "Quel nombre affiche le premier programme ?",
+     "aide": "Seule l’une des deux méthodes modifie vraiment l’objet.",
+     "explication": "Les deux appels de ajouter ne changent rien à l’objet ; seul bon fait passer n à 1 : le programme affiche **1**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "n = … crée une variable locale qui disparaît à la fin de la méthode",
+      "La méthode ajouter est trop courte pour modifier un attribut",
+      "Python interdit de lire self.n dans une méthode appelée deux fois",
+      "L’attribut n est de classe et ne peut pas être modifié ici"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ajouter ne modifie-t-elle pas l’objet ?",
+     "aide": "Compare la ligne de ajouter avec celle de bon : que manque-t-il devant n ?",
+     "explication": "Sans **self.**, on crée une variable **locale** qui disparaît à la fin de la méthode : l’attribut de l’objet reste inchangé. C’est l’erreur la plus fréquente du chapitre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien vaudrait c.n si les deux appels c.ajouter() étaient remplacés par c.bon() ?",
+     "aide": "Chaque appel de bon ajoute 1 à l’attribut de l’objet.",
+     "explication": "Trois appels de bon, en tout : n passe de 0 à **3**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Quel nombre affiche le second programme, celui de la classe Chat ?",
+     "aide": "total est un attribut de classe : il est partagé par tous les chats.",
+     "explication": "Chaque création d’un Chat ajoute 1 au compteur partagé : après quatre créations, a.total vaut **4**, comme b.total, c.total et d.total."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux comptes, deux frais",
+   "competence": "analyser-document",
+   "situation": "Une banque prélève des frais à chaque retrait. Le compte courant prend 2 euros ; le compte épargne, qui hérite du compte courant, n’en prend aucun. Nina suit les soldes de deux clients.",
+   "documents": [
+    {
+     "id": "cls",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux classes",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "class Compte:",
+      "    def __init__(self, solde):",
+      "        self.solde = solde",
+      "    def frais(self):",
+      "        return 2",
+      "    def retirer(self, s):",
+      "        self.solde = self.solde - s - self.frais()",
+      "class Epargne(Compte):",
+      "    def frais(self):",
+      "        return 0"
+     ]
+    },
+    {
+     "id": "use",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux retraits de 10 euros",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "a = Compte(100)",
+      "b = Epargne(100)",
+      "a.retirer(10)",
+      "b.retirer(10)",
+      "print(a.solde, b.solde)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 88,
+     "enonce": "Quel solde affiche a.solde ?",
+     "aide": "Le retrait de 10 euros s’accompagne des frais du compte courant.",
+     "explication": "100 - 10 - 2 = **88**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 90,
+     "enonce": "Quel solde affiche b.solde ?",
+     "aide": "Epargne redéfinit frais : que renvoie cette version ?",
+     "explication": "Le compte épargne redéfinit frais et renvoie 0 : 100 - 10 - 0 = **90**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "self.frais() appelle la version qui correspond au type réel de l’objet",
+      "Python copie retirer dans Epargne en la modifiant au passage",
+      "Epargne remplace entièrement la méthode retirer de Compte",
+      "b n’est pas un Compte, donc il n’utilise pas la méthode retirer"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi b.retirer(10) donne-t-il un résultat différent, alors que retirer n’est écrite que dans Compte ?",
+     "aide": "Dans retirer, quel objet est self quand on appelle b.retirer(10) ?",
+     "explication": "C’est le **polymorphisme** : le même appel self.frais() exécute la version d’Epargne quand self est un compte épargne, sans que retirer le sache."
+    },
+    {
+     "type": "nombre",
+     "reponse": 89,
+     "enonce": "Une classe Livret hérite de Compte et redéfinit frais pour renvoyer 1. Quel est le solde d’un Livret de 100 euros après retirer(10) ?",
+     "aide": "Il hérite de retirer et utilise ses propres frais.",
+     "explication": "Livret hérite de retirer et utilise ses frais : 100 - 10 - 1 = **89**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Un compte épargne est un compte",
+       "Héritage"
+      ],
+      [
+       "Une voiture a un moteur",
+       "Composition"
+      ],
+      [
+       "Même appel, comportement propre à chaque objet",
+       "Polymorphisme"
+      ],
+      [
+       "Changer l’intérieur sans casser l’extérieur",
+       "Encapsulation"
+      ]
+     ],
+     "enonce": "Associe chaque situation au mécanisme qui la traduit.",
+     "aide": "« est un » et « a un » ne se traduisent pas de la même façon.",
+     "explication": "« Est un » : **héritage**. « A un » : **composition**. Un même appel qui s’adapte à l’objet : **polymorphisme**. Cacher l’intérieur pour pouvoir le modifier : **encapsulation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’arbre de l’équipe de hand",
+   "competence": "observer-schema",
+   "situation": "Le club de hand affiche ses matchs sous forme d’un arbre binaire : chaque nœud porte un numéro de salle, et chaque salle en ouvre au plus deux autres. Jade décrit l’arbre avec le vocabulaire du cours.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "L'arbre des salles",
+     "largeur": 330,
+     "hauteur": 207,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        23,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        58,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        94,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        130,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        165,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        236,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        307,
+        128
+       ],
+       "a": [
+        272,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        78
+       ],
+       "a": [
+        307,
+        128
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 23,
+       "cy": 128,
+       "r": 15,
+       "texte": "1",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 58,
+       "cy": 78,
+       "r": 15,
+       "texte": "3",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 178,
+       "r": 15,
+       "texte": "4",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 128,
+       "r": 15,
+       "texte": "6",
+       "id": "n6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 178,
+       "r": 15,
+       "texte": "7",
+       "id": "n7",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 28,
+       "r": 15,
+       "texte": "8",
+       "id": "n8",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 236,
+       "cy": 78,
+       "r": 15,
+       "texte": "10",
+       "id": "n10",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 178,
+       "r": 15,
+       "texte": "13",
+       "id": "n13",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 307,
+       "cy": 128,
+       "r": 15,
+       "texte": "14",
+       "id": "n14",
+       "zone": true
+      }
+     ],
+     "source": "Arbre écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "reponse": [
+      "n1",
+      "n4",
+      "n7",
+      "n13"
+     ],
+     "multiple": true,
+     "enonce": "Touche toutes les feuilles de l’arbre.",
+     "aide": "Une feuille est un nœud sans enfant.",
+     "explication": "Les feuilles sont **1, 4, 7 et 13** : aucun de ces nœuds n’a d’enfant."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Quelle est la hauteur de l’arbre ? (0 pour un arbre réduit à sa racine)",
+     "aide": "Compte les arêtes du plus long chemin de la racine à une feuille.",
+     "explication": "Le plus long chemin, 8 → 3 → 6 → 4, compte 3 arêtes : la hauteur est **3**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 9,
+     "enonce": "Quelle est la taille de l’arbre, c’est-à-dire son nombre de nœuds ?",
+     "aide": "Compte chaque cercle une fois.",
+     "explication": "On compte 8, 3, 10, 1, 6, 14, 4, 7, 13 : **9 nœuds**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien de nœuds contient le sous-arbre de racine 6 ?",
+     "aide": "Un sous-arbre, c’est un nœud et toute sa descendance.",
+     "explication": "Le sous-arbre de racine 6 contient 6, 4 et 7 : **3 nœuds**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chercher dans l’arbre de recherche",
+   "competence": "analyser-document",
+   "situation": "L’arbre ci-dessous est un arbre binaire de recherche : toutes les valeurs à gauche d’un nœud lui sont inférieures, toutes celles à droite lui sont supérieures. La fonction cherche y descend en comparant.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Un arbre binaire de recherche",
+     "largeur": 330,
+     "hauteur": 207,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        23,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        58,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        94,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        130,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        165,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        236,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        307,
+        128
+       ],
+       "a": [
+        272,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        78
+       ],
+       "a": [
+        307,
+        128
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 23,
+       "cy": 128,
+       "r": 15,
+       "texte": "1",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 58,
+       "cy": 78,
+       "r": 15,
+       "texte": "3",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 178,
+       "r": 15,
+       "texte": "4",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 128,
+       "r": 15,
+       "texte": "6",
+       "id": "n6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 178,
+       "r": 15,
+       "texte": "7",
+       "id": "n7",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 28,
+       "r": 15,
+       "texte": "8",
+       "id": "n8",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 236,
+       "cy": 78,
+       "r": 15,
+       "texte": "10",
+       "id": "n10",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 178,
+       "r": 15,
+       "texte": "13",
+       "id": "n13",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 307,
+       "cy": 128,
+       "r": 15,
+       "texte": "14",
+       "id": "n14",
+       "zone": true
+      }
+     ],
+     "source": "Arbre écrit pour l’exercice"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La recherche",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def cherche(a, v):",
+      "    if a is None:",
+      "        return False",
+      "    if v == a.val:",
+      "        return True",
+      "    if v < a.val:",
+      "        return cherche(a.g, v)",
+      "    return cherche(a.d, v)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Combien de nœuds la recherche de 13 visite-t-elle, racine comprise ?",
+     "aide": "Compare 13 à chaque nœud rencontré pour choisir le côté.",
+     "explication": "13 > 8 : à droite ; 13 > 10 : à droite ; 13 < 14 : à gauche ; on trouve 13. Nœuds visités : 8, 10, 14, 13, soit **4**."
+    },
+    {
+     "type": "zone",
+     "document": "arbre",
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "On cherche 5. Touche le dernier nœud visité avant que cherche renvoie False.",
+     "aide": "Descends de la racine en comparant 5 à chaque nœud.",
+     "explication": "5 < 8 : gauche ; 5 > 3 : droite ; 5 < 6 : gauche ; 5 > 4 : droite, mais il n’y a rien : on renvoie False. Le dernier nœud visité est **4**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "1",
+      "4",
+      "7",
+      "6",
+      "3"
+     ],
+     "enonce": "Range les valeurs du sous-arbre de racine 3 dans l’ordre du parcours suffixe (gauche, droite, nœud).",
+     "aide": "Dans un parcours suffixe, un nœud ne s’écrit qu’après ses deux sous-arbres.",
+     "explication": "Sous-arbre gauche (1), puis sous-arbre droit de racine 6 (4, 7, puis 6), enfin le nœud **3** : 1, 4, 7, 6, 3."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "enonce": "Quelle est la cinquième valeur du parcours infixe de tout l’arbre ?",
+     "aide": "Le parcours infixe d’un arbre binaire de recherche donne les valeurs triées.",
+     "explication": "Valeurs triées : 1, 3, 4, 6, **7**, 8, 10, 13, 14. La cinquième est 7."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le peigne qui ralentit tout",
+   "competence": "raisonner",
+   "situation": "Deux arbres de recherche contiennent des valeurs voisines. Le premier a été construit en insérant 8, 3, 10, 1, 6, 14, 13, 4, 7 ; le second en insérant 1, 3, 4, 6, 7, 8 dans cet ordre. On compare le coût d’une recherche dans chacun.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "schema",
+     "titre": "Arbre A",
+     "largeur": 330,
+     "hauteur": 207,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        23,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        58,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        94,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        78
+       ],
+       "a": [
+        130,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        128
+       ],
+       "a": [
+        165,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        28
+       ],
+       "a": [
+        236,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        307,
+        128
+       ],
+       "a": [
+        272,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        78
+       ],
+       "a": [
+        307,
+        128
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 23,
+       "cy": 128,
+       "r": 15,
+       "texte": "1",
+       "id": "a1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 58,
+       "cy": 78,
+       "r": 15,
+       "texte": "3",
+       "id": "a3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 178,
+       "r": 15,
+       "texte": "4",
+       "id": "a4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 128,
+       "r": 15,
+       "texte": "6",
+       "id": "a6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 178,
+       "r": 15,
+       "texte": "7",
+       "id": "a7",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 28,
+       "r": 15,
+       "texte": "8",
+       "id": "a8",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 236,
+       "cy": 78,
+       "r": 15,
+       "texte": "10",
+       "id": "a10",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 178,
+       "r": 15,
+       "texte": "13",
+       "id": "a13",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 307,
+       "cy": 128,
+       "r": 15,
+       "texte": "14",
+       "id": "a14",
+       "zone": true
+      }
+     ],
+     "source": "Arbre écrit pour l’exercice"
+    },
+    {
+     "id": "b",
+     "type": "schema",
+     "titre": "Arbre B",
+     "largeur": 330,
+     "hauteur": 247,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        35,
+        28
+       ],
+       "a": [
+        87,
+        66
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        87,
+        66
+       ],
+       "a": [
+        139,
+        104
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        139,
+        104
+       ],
+       "a": [
+        191,
+        142
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        191,
+        142
+       ],
+       "a": [
+        243,
+        180
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        243,
+        180
+       ],
+       "a": [
+        295,
+        218
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 35,
+       "cy": 28,
+       "r": 15,
+       "texte": "1",
+       "id": "b1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 87,
+       "cy": 66,
+       "r": 15,
+       "texte": "3",
+       "id": "b3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 139,
+       "cy": 104,
+       "r": 15,
+       "texte": "4",
+       "id": "b4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 191,
+       "cy": 142,
+       "r": 15,
+       "texte": "6",
+       "id": "b6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 243,
+       "cy": 180,
+       "r": 15,
+       "texte": "7",
+       "id": "b7",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 295,
+       "cy": 218,
+       "r": 15,
+       "texte": "8",
+       "id": "b8",
+       "zone": true
+      }
+     ],
+     "source": "Arbre écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Combien de nœuds visite la recherche de 7 dans l’arbre A ?",
+     "aide": "Descends de la racine : 7 est plus grand ou plus petit que 8, puis que 3, puis que 6 ?",
+     "explication": "8 → 3 → 6 → 7 : **4 nœuds**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "enonce": "Quelle est la hauteur de l’arbre B ?",
+     "aide": "Compte les arêtes entre la racine et la feuille la plus profonde.",
+     "explication": "Chaque nœud n’a qu’un enfant : le chemin 1, 3, 4, 6, 7, 8 compte 5 arêtes, donc une hauteur de **5**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "enonce": "Combien de nœuds visite la recherche de 8 dans l’arbre B ?",
+     "aide": "Dans B, chaque comparaison écarte un seul nœud.",
+     "explication": "1, 3, 4, 6, 7, 8 : **6 nœuds**, soit tous ceux de l’arbre. La recherche est linéaire."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Ses valeurs ont été insérées déjà triées, en croissant",
+      "Ses valeurs ont été insérées dans un ordre aléatoire",
+      "Un arbre de recherche doit toujours avoir cette forme",
+      "Ses valeurs sont plus grandes que celles de l’arbre A"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi l’arbre B a-t-il cette forme de peigne ?",
+     "aide": "Où se place chaque nouvelle valeur quand elle est plus grande que toutes les précédentes ?",
+     "explication": "Insérer des valeurs déjà triées les range toutes du **même côté** : l’arbre dégénère en peigne et la hauteur devient n - 1."
+    },
+    {
+     "type": "nombre",
+     "reponse": 31,
+     "enonce": "Un arbre binaire de hauteur 4 contient au plus combien de nœuds ? Utilise la formule 2^(h+1) - 1.",
+     "aide": "Calcule 2^5 puis retire 1.",
+     "explication": "2^5 = 32, et 32 - 1 = **31**. Un arbre équilibré profite de cette croissance exponentielle ; un peigne non."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le réseau d’amis du lycée",
+   "competence": "observer-schema",
+   "situation": "Un réseau social du lycée relie des élèves qui sont amis : c’est un graphe non orienté, où chaque sommet est un élève et chaque arête une amitié.",
+   "documents": [
+    {
+     "id": "amis",
+     "type": "schema",
+     "titre": "Qui est ami avec qui ?",
+     "largeur": 330,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        68
+       ],
+       "a": [
+        55,
+        162
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        78,
+        68
+       ],
+       "a": [
+        137,
+        102
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        78,
+        162
+       ],
+       "a": [
+        137,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        181,
+        102
+       ],
+       "a": [
+        234,
+        68
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258,
+        68
+       ],
+       "a": [
+        277,
+        157
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 31,
+       "y": 42,
+       "l": 48,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "Ana",
+       "id": "n_A",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 31,
+       "y": 162,
+       "l": 48,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "Bob",
+       "id": "n_B",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 102,
+       "l": 48,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "Cléo",
+       "id": "n_C",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 231,
+       "y": 42,
+       "l": 48,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "Dan",
+       "id": "n_D",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 256,
+       "y": 157,
+       "l": 48,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "Eva",
+       "id": "n_E",
+       "zone": true
+      }
+     ],
+     "source": "Graphe écrit pour l'exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Quel est le degré de Cléo, c’est-à-dire son nombre d’amis ?",
+     "aide": "Compte les arêtes qui touchent Cléo.",
+     "explication": "Cléo est liée à Ana, Bob et Dan : son degré est **3**."
+    },
+    {
+     "type": "zone",
+     "document": "amis",
+     "reponse": [
+      "n_E"
+     ],
+     "enonce": "Touche l’élève qui n’a qu’un seul ami.",
+     "aide": "Cherche le sommet relié par une seule arête.",
+     "explication": "**Eva** n’a qu’une arête, vers Dan : son degré est 1. Ana, Bob et Dan en ont deux."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "enonce": "Combien d’arêtes compte ce graphe ?",
+     "aide": "Compte les traits entre les sommets.",
+     "explication": "Ana-Bob, Ana-Cléo, Bob-Cléo, Cléo-Dan et Dan-Eva : **5 arêtes**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il contient un cycle : Ana, Bob et Cléo forment un triangle",
+      "Il contient un sommet de degré 1, ce que les arbres interdisent",
+      "Il n’est pas connexe : Eva est isolée du reste des élèves",
+      "Il possède moins d’arêtes que de sommets, contrairement aux arbres"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ce graphe n’est-il pas un arbre ?",
+     "aide": "Un arbre n’a aucun cycle : cherche un chemin qui revient à son point de départ.",
+     "explication": "Ana, Bob et Cléo sont reliés deux à deux : c’est un **cycle**. Les arbres n’en ont pas ; les graphes peuvent en avoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Parcourir un graphe en largeur",
+   "competence": "analyser-document",
+   "situation": "Un graphe de six sommets est stocké en listes d’adjacence : pour chaque sommet, la liste de ses voisins. Un parcours en largeur part de A et utilise une file.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "schema",
+     "titre": "Un graphe à six sommets",
+     "largeur": 330,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        102
+       ],
+       "a": [
+        109,
+        58
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        128
+       ],
+       "a": [
+        109,
+        172
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        141,
+        45
+       ],
+       "a": [
+        209,
+        45
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        141,
+        56
+       ],
+       "a": [
+        209,
+        104
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        141,
+        185
+       ],
+       "a": [
+        209,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        128
+       ],
+       "a": [
+        225,
+        172
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 24,
+       "y": 102,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 109,
+       "y": 32,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 109,
+       "y": 172,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "C"
+      },
+      {
+       "forme": "rect",
+       "x": 209,
+       "y": 32,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "D"
+      },
+      {
+       "forme": "rect",
+       "x": 209,
+       "y": 102,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "E"
+      },
+      {
+       "forme": "rect",
+       "x": 209,
+       "y": 172,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "F"
+      }
+     ],
+     "source": "Graphe écrit pour l’exercice"
+    },
+    {
+     "id": "adj",
+     "type": "tableau",
+     "titre": "Les listes d’adjacence",
+     "colonnes": [
+      "Sommet",
+      "Voisins"
+     ],
+     "lignes": [
+      [
+       "A",
+       "C, B"
+      ],
+      [
+       "B",
+       "A, D, E"
+      ],
+      [
+       "C",
+       "A, F"
+      ],
+      [
+       "D",
+       "B"
+      ],
+      [
+       "E",
+       "B, F"
+      ],
+      [
+       "F",
+       "C, E"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le parcours en largeur",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def largeur(g, s):",
+      "    vus = [s]",
+      "    file = [s]",
+      "    while file != []:",
+      "        x = file.pop(0)",
+      "        for y in g[x]:",
+      "            if y not in vus:",
+      "                vus.append(y)",
+      "                file.append(y)",
+      "    return vus"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "A",
+      "C",
+      "B",
+      "F",
+      "D",
+      "E"
+     ],
+     "enonce": "Range les sommets dans l’ordre où largeur(g, \"A\") les renvoie.",
+     "aide": "Les voisins se traitent dans l’ordre des listes : pour A, C vient avant B.",
+     "explication": "On enfile A, puis ses voisins C et B. On traite C (nouveau voisin F), puis B (nouveaux voisins D et E) : **A, C, B, F, D, E**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 36,
+     "enonce": "Combien de cases occuperait une matrice d’adjacence de ce graphe ?",
+     "aide": "Une matrice d’adjacence est un tableau n × n.",
+     "explication": "6 sommets : 6 × 6 = **36 cases**, quel que soit le nombre d’arêtes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "enonce": "Combien de voisins au total les listes d’adjacence contiennent-elles ?",
+     "aide": "Additionne la longueur de chaque liste de voisins.",
+     "explication": "Chaque arête apparaît dans les listes de ses deux extrémités : 6 arêtes donnent **12 entrées**. La mémoire suit le nombre d’arêtes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "enonce": "Combien d’arêtes le plus court chemin de A à F compte-t-il ?",
+     "aide": "Le parcours en largeur trouve le plus court chemin en nombre d’arêtes.",
+     "explication": "A - C - F : **2 arêtes**. F est traité juste après B, dans la deuxième vague."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La liste d’adjacence, dont la mémoire suit le nombre d’arêtes",
+      "La matrice d’adjacence, qui teste plus vite chaque arête",
+      "Un arbre binaire, qui contient les mêmes informations",
+      "Un dictionnaire de matrices, une par sommet du réseau"
+     ],
+     "reponse": 0,
+     "enonce": "Un réseau compte un million de sommets, chacun relié à environ cinq voisins. Quelle représentation choisir ?",
+     "aide": "Une matrice de n sommets occupe n × n cases : combien pour un million ?",
+     "explication": "La matrice aurait **10^12 cases**, presque toutes vides. La liste d’adjacence ne garde que les quelque cinq millions de voisins : c’est le bon choix pour un graphe creux."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plus court n’est pas le moins cher",
+   "competence": "analyser-document",
+   "situation": "Un réseau relie cinq routeurs. Chaque lien a un coût. Le parcours en largeur cherche le chemin qui compte le moins d’arêtes ; l’algorithme de Dijkstra cherche celui dont le coût total est le plus petit. Les deux ne donnent pas toujours la même route de S à D.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "schema",
+     "titre": "Un réseau de routeurs (coût de chaque lien)",
+     "largeur": 330,
+     "hauteur": 235,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        103
+       ],
+       "a": [
+        124,
+        52
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        127
+       ],
+       "a": [
+        124,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        177
+       ],
+       "a": [
+        140,
+        53
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        156,
+        177
+       ],
+       "a": [
+        219,
+        128
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        156,
+        53
+       ],
+       "a": [
+        219,
+        102
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        246,
+        102
+       ],
+       "a": [
+        284,
+        58
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        156,
+        41
+       ],
+       "a": [
+        279,
+        44
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 97,
+       "y": 91,
+       "texte": "7",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 97,
+       "y": 147,
+       "texte": "2",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 152,
+       "y": 119,
+       "texte": "3",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 147,
+       "texte": "8",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 91,
+       "texte": "1",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 274,
+       "y": 92,
+       "texte": "4",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 35,
+       "texte": "9",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 24,
+       "y": 102,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "S"
+      },
+      {
+       "forme": "rect",
+       "x": 124,
+       "y": 27,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 124,
+       "y": 177,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 219,
+       "y": 102,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "C"
+      },
+      {
+       "forme": "rect",
+       "x": 279,
+       "y": 32,
+       "l": 32,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "D"
+      }
+     ],
+     "source": "Graphe écrit pour l’exercice"
+    },
+    {
+     "id": "dijkstra",
+     "type": "tableau",
+     "titre": "Dijkstra depuis S : distances connues après chaque étape",
+     "colonnes": [
+      "Étape",
+      "Sommet traité",
+      "dist A",
+      "dist B",
+      "dist C",
+      "dist D"
+     ],
+     "lignes": [
+      [
+       1,
+       "S",
+       7,
+       2,
+       "∞",
+       "∞"
+      ],
+      [
+       2,
+       "B",
+       5,
+       2,
+       10,
+       "∞"
+      ],
+      [
+       3,
+       "A",
+       5,
+       2,
+       "?",
+       14
+      ],
+      [
+       4,
+       "C",
+       5,
+       2,
+       6,
+       10
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "enonce": "Quelle valeur manque dans la case « ? », la distance de C après le traitement de A ?",
+     "aide": "Compare l’ancienne distance de C (10) avec celle qui passe par A.",
+     "explication": "Par A : 5 + 1 = 6, meilleur que 10 : la distance de C devient **6**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "enonce": "Quelle est la plus petite distance de S à D ?",
+     "aide": "Lis la dernière ligne du tableau.",
+     "explication": "Après le traitement de C, la distance de D est **10** : c’est le coût du meilleur chemin, S - B - A - C - D."
+    },
+    {
+     "type": "nombre",
+     "reponse": 16,
+     "enonce": "Le plus court chemin en nombre d’arêtes de S à D est S - A - D. Quel est son coût total ?",
+     "aide": "Additionne les coûts des liens S - A et A - D.",
+     "explication": "7 + 9 = **16** : plus court en arêtes, mais bien plus cher que 10."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Combien d’arêtes le chemin de coût minimal S - B - A - C - D compte-t-il ?",
+     "aide": "Compte les liens entre les sommets successifs du chemin.",
+     "explication": "S-B, B-A, A-C et C-D : **4 arêtes**, soit deux de plus que le chemin de la largeur."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il minimise le nombre d’arêtes et ignore la somme des coûts",
+      "Il ne visite jamais tous les sommets d’un graphe connexe",
+      "Il exige que tous les coûts du réseau soient négatifs",
+      "Il ne fonctionne que sur les graphes qui n’ont aucun cycle"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi le parcours en largeur ne suffit-il pas ici ?",
+     "aide": "La largeur compte les liens traversés, pas leur coût.",
+     "explication": "Le parcours en largeur ne donne le plus court chemin que sur un graphe **non pondéré**. Dès que les arêtes portent des coûts, il faut Dijkstra, à condition que les poids soient positifs."
+    }
+   ]
+  }
+ ]
+}

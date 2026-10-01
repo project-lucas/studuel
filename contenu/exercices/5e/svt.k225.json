@@ -1,0 +1,3760 @@
+{
+  "niveau": "5e",
+  "matiere": "svt",
+  "exercices": [
+    {
+      "chapitre": "a2eb4a34-fae7-5b41-9ae6-df3fabc58662",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Dans les coulisses du cœur",
+      "competence": "observer-schema",
+      "situation": "Le cœur de Samir est représenté de face, comme sur une planche d’anatomie : la moitié droite du corps est à gauche du dessin. Chaque cavité est en blanc, entourée de la paroi musculaire.",
+      "documents": [
+        {
+          "id": "coeur",
+          "type": "schema",
+          "titre": "Le cœur, vu de face",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 130,
+              "y": 44,
+              "l": 140,
+              "h": 160,
+              "arrondi": 22,
+              "teinte": "rose",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                198,
+                46
+              ],
+              "a": [
+                198,
+                202
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 140,
+              "y": 56,
+              "l": 52,
+              "h": 56,
+              "arrondi": 10,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "od",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 204,
+              "y": 56,
+              "l": 56,
+              "h": 56,
+              "arrondi": 10,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "og",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 140,
+              "y": 128,
+              "l": 52,
+              "h": 66,
+              "arrondi": 10,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "vd",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 224,
+              "y": 136,
+              "l": 30,
+              "h": 52,
+              "arrondi": 10,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "vg",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 116,
+              "y": 88,
+              "texte": "Oreillette droite",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                84
+              ],
+              "a": [
+                140,
+                84
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 116,
+              "y": 164,
+              "texte": "Ventricule droit",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                160
+              ],
+              "a": [
+                140,
+                160
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 24,
+              "texte": "Oreillette gauche",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                232,
+                30
+              ],
+              "a": [
+                232,
+                56
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 238,
+              "y": 232,
+              "texte": "Ventricule gauche",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                238,
+                204
+              ],
+              "a": [
+                238,
+                218
+              ],
+              "teinte": "encre"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coeur",
+          "enonce": "Touche la cavité dont la paroi musculaire est la plus épaisse.",
+          "reponse": [
+            "vg"
+          ],
+          "aide": "Compare l’épaisseur du muscle rose autour de chaque cavité blanche.",
+          "explication": "C’est le **ventricule gauche** : il envoie le sang dans tout l’organisme, il lui faut le muscle le plus puissant."
+        },
+        {
+          "type": "zone",
+          "document": "coeur",
+          "enonce": "Touche la cavité qui reçoit le sang revenant des poumons.",
+          "reponse": [
+            "og"
+          ],
+          "aide": "Après les poumons, le sang revient du côté gauche du cœur, dans la cavité du haut.",
+          "explication": "Le sang enrichi en dioxygène arrive dans l’**oreillette gauche**, puis passe dans le ventricule gauche."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Une goutte de sang revient de la jambe, chargée de CO₂. Range les étapes de son trajet dans le cœur et les poumons.",
+          "items": [
+            "Oreillette droite",
+            "Ventricule droit",
+            "Poumons",
+            "Oreillette gauche",
+            "Ventricule gauche"
+          ],
+          "aide": "Le sang de retour des organes entre par la droite, va aux poumons, puis revient du côté gauche.",
+          "explication": "Dans l’ordre : **oreillette droite, ventricule droit, poumons, oreillette gauche, ventricule gauche**. Le ventricule gauche l’envoie ensuite vers les organes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi une cloison étanche sépare-t-elle la moitié droite de la moitié gauche du cœur ?",
+          "options": [
+            "Pour que le sang chargé de CO₂ ne se mélange pas au sang riche en dioxygène",
+            "Pour que le cœur pèse moins lourd et batte plus facilement dans la poitrine",
+            "Pour que le sang circule plus lentement et laisse le temps aux échanges",
+            "Pour filtrer les déchets du sang avant qu’il ne reparte vers les organes"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce que contient le sang de chaque côté.",
+          "explication": "La cloison empêche tout mélange : le sang à **CO₂** reste à droite, le sang riche en **dioxygène** reste à gauche."
+        }
+      ]
+    },
+    {
+      "chapitre": "a2eb4a34-fae7-5b41-9ae6-df3fabc58662",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois prises de sang, trois diagnostics",
+      "competence": "lire-tableau",
+      "situation": "Au laboratoire, trois élèves ont fait une prise de sang. Le tableau donne le contenu d’1 mm³ de sang, avec la valeur habituelle. Les dossiers médicaux sont à droite.",
+      "documents": [
+        {
+          "id": "num",
+          "type": "tableau",
+          "titre": "Numération sanguine",
+          "colonnes": [
+            "Constituant",
+            "Valeur habituelle",
+            "Léa",
+            "Hugo",
+            "Zoé"
+          ],
+          "lignes": [
+            [
+              "Globules rouges (millions par mm³)",
+              "5",
+              "3",
+              "5",
+              "5"
+            ],
+            [
+              "Globules blancs (milliers par mm³)",
+              "7",
+              "7",
+              "18",
+              "6"
+            ],
+            [
+              "Plaquettes (milliers par mm³)",
+              "250",
+              "240",
+              "260",
+              "40"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, dossiers imaginés pour l’exercice"
+        },
+        {
+          "id": "dossiers",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Les trois dossiers",
+          "blocs": [
+            "Léa, 14 ans : très pâle, essoufflée dès qu’elle monte un escalier.",
+            "Hugo, 12 ans : fièvre depuis deux jours et grosse angine.",
+            "Zoé, 15 ans : saignements de nez très longs, bleus fréquents."
+          ],
+          "source": "Dossiers imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "num",
+          "enonce": "Touche la valeur de Léa qui est anormalement basse.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Compare chaque valeur de Léa à la colonne « Valeur habituelle ».",
+          "explication": "Léa n’a que **3 millions** de globules rouges par mm³ au lieu de 5."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque élève au constituant du sang qui est anormal chez lui.",
+          "paires": [
+            [
+              "Léa",
+              "Globules rouges"
+            ],
+            [
+              "Hugo",
+              "Globules blancs"
+            ],
+            [
+              "Zoé",
+              "Plaquettes"
+            ]
+          ],
+          "aide": "Pour chacun, repère la ligne du tableau où sa valeur s’écarte de la valeur habituelle.",
+          "explication": "Léa manque de **globules rouges**, Hugo a trop de **globules blancs** (18 au lieu de 7), Zoé manque de **plaquettes** (40 au lieu de 250)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millions par mm³ les globules rouges de Léa sont-ils en dessous de la valeur habituelle ?",
+          "reponse": 2,
+          "unite": "millions par mm³",
+          "aide": "Soustrais la valeur de Léa à la valeur habituelle.",
+          "explication": "Valeur habituelle 5, valeur de Léa 3 : 5 − 3 = **2 millions** par mm³ en moins."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Léa est-elle essoufflée ?",
+          "options": [
+            "Ses globules rouges, trop peu nombreux, transportent trop peu de dioxygène",
+            "Ses plaquettes ne bouchent plus les vaisseaux, donc son sang circule mal",
+            "Ses globules blancs attaquent ses poumons, qui captent moins de dioxygène",
+            "Son plasma contient trop d’urée, ce qui bloque le transport du dioxygène"
+          ],
+          "reponse": 0,
+          "aide": "Quel constituant du sang transporte le dioxygène ?",
+          "explication": "Les **globules rouges** transportent le dioxygène grâce à l’hémoglobine : moins il y en a, moins les muscles en reçoivent."
+        }
+      ]
+    },
+    {
+      "chapitre": "a2eb4a34-fae7-5b41-9ae6-df3fabc58662",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Ce que chaque organe change dans le sang",
+      "competence": "analyser-document",
+      "situation": "Un laboratoire a dosé le sang qui arrive dans un organe et celui qui en repart. Le schéma montre le trajet complet du sang dans l’organisme.",
+      "documents": [
+        {
+          "id": "circuit",
+          "type": "chaine",
+          "titre": "Le trajet du sang",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "cd",
+              "texte": "Cœur droit"
+            },
+            {
+              "id": "pou",
+              "texte": "Poumons"
+            },
+            {
+              "id": "cg",
+              "texte": "Cœur gauche"
+            },
+            {
+              "id": "org",
+              "texte": "Autres organes"
+            }
+          ],
+          "liens": [
+            {
+              "de": "cd",
+              "a": "pou"
+            },
+            {
+              "de": "pou",
+              "a": "cg"
+            },
+            {
+              "de": "cg",
+              "a": "org"
+            },
+            {
+              "de": "org",
+              "a": "cd"
+            }
+          ]
+        },
+        {
+          "id": "dosages",
+          "type": "tableau",
+          "titre": "Dosages dans le sang",
+          "colonnes": [
+            "Organe",
+            "Substance",
+            "Sang qui arrive",
+            "Sang qui repart"
+          ],
+          "lignes": [
+            [
+              "Poumons",
+              "Dioxygène (mL pour 100 mL)",
+              "15",
+              "20"
+            ],
+            [
+              "Poumons",
+              "Dioxyde de carbone (mL pour 100 mL)",
+              "52",
+              "48"
+            ],
+            [
+              "Reins",
+              "Urée (g par litre)",
+              "0,30",
+              "0,18"
+            ],
+            [
+              "Intestin grêle, après un repas",
+              "Glucose (g par litre)",
+              "1,0",
+              "1,6"
+            ],
+            [
+              "Muscles en activité",
+              "Dioxygène (mL pour 100 mL)",
+              "20",
+              "12"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, repères pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le sang qui quitte le cœur gauche sort tout juste des poumons. Quelle quantité de dioxygène contient-il pour 100 mL ?",
+          "reponse": 20,
+          "unite": "mL",
+          "aide": "Regarde dans le schéma ce qui précède le cœur gauche, puis cherche la ligne du tableau.",
+          "explication": "Le cœur gauche reçoit le sang des poumons : il contient **20 mL** de dioxygène pour 100 mL."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand 100 mL de sang traversent des muscles en activité, combien de dioxygène perdent-ils ?",
+          "reponse": 8,
+          "unite": "mL",
+          "aide": "Soustrais la valeur du sang qui repart à celle du sang qui arrive.",
+          "explication": "20 − 12 = **8 mL** : les cellules musculaires consomment ce dioxygène, qui passe du sang vers elles dans les capillaires."
+        },
+        {
+          "type": "zone",
+          "document": "dosages",
+          "enonce": "Touche la seule valeur où le sang qui repart contient moins de dioxyde de carbone que celui qui arrive.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Cherche la ligne « Dioxyde de carbone » et regarde le sens de la variation.",
+          "explication": "Dans les poumons, le CO₂ passe de 52 à **48 mL** : le sang s’en débarrasse avant de repartir."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans les reins, l’urée du sang passe de 0,30 à 0,18 g par litre. Où est passée l’urée manquante ?",
+          "options": [
+            "Elle a été éliminée dans l’urine",
+            "Elle a été transformée en glucose",
+            "Elle est restée dans les reins pour toujours",
+            "Elle a été expirée par les poumons"
+          ],
+          "reponse": 0,
+          "aide": "Quel liquide fabriquent les reins ?",
+          "explication": "Les reins filtrent le sang : l’**urée** est éliminée dans l’**urine**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque organe à ce qui change dans son sang.",
+          "paires": [
+            [
+              "Poumons",
+              "Le sang gagne du dioxygène et perd du CO₂"
+            ],
+            [
+              "Reins",
+              "Le sang perd de l’urée"
+            ],
+            [
+              "Intestin grêle",
+              "Le sang gagne du glucose"
+            ],
+            [
+              "Muscles en activité",
+              "Le sang perd du dioxygène"
+            ]
+          ],
+          "aide": "Appuie-toi sur les lignes du tableau : compare « arrive » et « repart ».",
+          "explication": "Les **poumons** enrichissent le sang en O₂, les **reins** l’épurent, l’**intestin** lui apporte les nutriments, les **muscles** lui prennent du dioxygène."
+        }
+      ]
+    },
+    {
+      "chapitre": "ed440b1f-ea9e-524f-b7eb-952a1ae862fc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une plante au soleil",
+      "competence": "observer-schema",
+      "situation": "Sur ce schéma, une plante pousse au soleil. Les flèches montrent ce qui entre ou sort de la plante.",
+      "documents": [
+        {
+          "id": "plante",
+          "type": "schema",
+          "titre": "Une plante chlorophyllienne",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 150,
+              "l": 300,
+              "h": 80,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  150,
+                  152
+                ],
+                [
+                  100,
+                  214
+                ],
+                [
+                  200,
+                  214
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "points",
+              "id": "racines",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 145,
+              "y": 76,
+              "l": 10,
+              "h": 76,
+              "teinte": "vert",
+              "motif": "plein",
+              "id": "tige",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 150,
+              "cy": 62,
+              "rx": 62,
+              "ry": 26,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "feuilles",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 34,
+              "y": 36,
+              "emoji": "☀️",
+              "taille": 30
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                64,
+                40
+              ],
+              "a": [
+                96,
+                50
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 76,
+              "texte": "Lumière",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                282,
+                30
+              ],
+              "a": [
+                226,
+                50
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 300,
+              "y": 26,
+              "texte": "CO₂",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                226,
+                74
+              ],
+              "a": [
+                282,
+                96
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "etiquette",
+              "x": 298,
+              "y": 104,
+              "texte": "?"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                36,
+                200
+              ],
+              "a": [
+                100,
+                200
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 56,
+              "y": 184,
+              "texte": "Eau et sels",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 224,
+              "texte": "minéraux",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plante",
+          "enonce": "Touche la partie de la plante qui prélève l’eau et les sels minéraux dans le sol.",
+          "reponse": [
+            "racines"
+          ],
+          "aide": "Cette partie est enfouie dans la terre.",
+          "explication": "Ce sont les **racines**, et leurs poils absorbants."
+        },
+        {
+          "type": "zone",
+          "document": "plante",
+          "enonce": "Touche la partie de la plante où se fait la photosynthèse.",
+          "reponse": [
+            "feuilles"
+          ],
+          "aide": "Cherche l’endroit où arrivent la lumière et le dioxyde de carbone.",
+          "explication": "La photosynthèse a lieu dans les **feuilles**, riches en chloroplastes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel gaz la flèche marquée « ? » représente-t-elle, à la lumière ?",
+          "options": [
+            "Du dioxygène",
+            "Du dioxyde de carbone",
+            "De l’azote",
+            "De la vapeur de sucre"
+          ],
+          "reponse": 0,
+          "aide": "La plante prend du CO₂ : qu’est-ce qui sort en échange ?",
+          "explication": "La photosynthèse fabrique du glucose et rejette du **dioxygène**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une plante reste plusieurs semaines dans une cave noire. Pourquoi dépérit-elle ?",
+          "options": [
+            "Sans lumière, elle ne peut plus fabriquer sa matière organique",
+            "Sans lumière, elle ne peut plus absorber d’eau",
+            "Sans lumière, elle ne produit plus de dioxygène pour les animaux",
+            "Sans lumière, elle mange ses propres racines"
+          ],
+          "reponse": 0,
+          "aide": "La plante est autotrophe : de quoi a-t-elle besoin pour fabriquer sa propre matière ?",
+          "explication": "Sans énergie lumineuse, pas de photosynthèse : la plante **ne fabrique plus de glucose** et s’épuise."
+        }
+      ]
+    },
+    {
+      "chapitre": "ed440b1f-ea9e-524f-b7eb-952a1ae862fc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le gaz de l’élodée",
+      "competence": "experimenter",
+      "situation": "Lola étudie une plante d’aquarium, l’élodée. Elle prépare trois tubes remplis d’eau et les place pendant une heure près d’une lampe ou dans le noir. Elle recueille le gaz qui se dégage.",
+      "documents": [
+        {
+          "id": "tubes",
+          "type": "schema",
+          "titre": "Le montage",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 34,
+              "y": 60,
+              "l": 62,
+              "h": 120,
+              "arrondi": 12,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "tubeA",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 139,
+              "y": 60,
+              "l": 62,
+              "h": 120,
+              "arrondi": 12,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "tubeB",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 244,
+              "y": 60,
+              "l": 62,
+              "h": 120,
+              "arrondi": 12,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "tubeC",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 64,
+              "y": 150,
+              "emoji": "🌿",
+              "taille": 30
+            },
+            {
+              "forme": "emoji",
+              "x": 169,
+              "y": 150,
+              "emoji": "🌿",
+              "taille": 30
+            },
+            {
+              "forme": "emoji",
+              "x": 64,
+              "y": 34,
+              "emoji": "💡",
+              "taille": 26
+            },
+            {
+              "forme": "emoji",
+              "x": 169,
+              "y": 34,
+              "emoji": "🌑",
+              "taille": 26
+            },
+            {
+              "forme": "emoji",
+              "x": 274,
+              "y": 34,
+              "emoji": "💡",
+              "taille": 26
+            },
+            {
+              "forme": "texte",
+              "x": 65,
+              "y": 200,
+              "texte": "Tube A",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 200,
+              "texte": "Tube B",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 275,
+              "y": 200,
+              "texte": "Tube C",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 65,
+              "y": 220,
+              "texte": "lumière",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 220,
+              "texte": "obscurité",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            },
+            {
+              "forme": "texte",
+              "x": 275,
+              "y": 220,
+              "texte": "lumière",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            }
+          ]
+        },
+        {
+          "id": "gaz",
+          "type": "tableau",
+          "titre": "Résultats après une heure",
+          "colonnes": [
+            "Tube",
+            "Gaz recueilli (mL)",
+            "Brindille incandescente"
+          ],
+          "lignes": [
+            [
+              "A",
+              "4,0",
+              "Se rallume"
+            ],
+            [
+              "B",
+              "0",
+              "Sans objet"
+            ],
+            [
+              "C",
+              "0",
+              "Sans objet"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tubes",
+          "enonce": "Touche le tube témoin, celui qui ne contient pas de plante.",
+          "reponse": [
+            "tubeC"
+          ],
+          "aide": "Le témoin sert de comparaison : il est identique aux autres, sauf un point.",
+          "explication": "Le **tube C** est le témoin : il montre que la lampe et l’eau seules ne produisent aucun gaz."
+        },
+        {
+          "type": "zone",
+          "document": "tubes",
+          "enonce": "Touche le tube où un gaz s’est dégagé.",
+          "reponse": [
+            "tubeA"
+          ],
+          "aide": "Cherche dans le tableau la seule valeur différente de 0.",
+          "explication": "Seul le **tube A** a fourni du gaz : 4,0 mL."
+        },
+        {
+          "type": "choix",
+          "enonce": "La brindille incandescente se rallume dans le gaz du tube A. Quel gaz s’y est dégagé ?",
+          "options": [
+            "Du dioxygène",
+            "Du dioxyde de carbone",
+            "De la vapeur d’eau",
+            "De l’azote"
+          ],
+          "reponse": 0,
+          "aide": "Quel gaz entretient une combustion ?",
+          "explication": "Une brindille qui se rallume indique du **dioxygène**, rejeté par la plante."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la comparaison des tubes A et B ?",
+          "options": [
+            "La plante ne rejette de dioxygène qu’en présence de lumière",
+            "La plante rejette plus de dioxygène dans le noir",
+            "La lumière suffit à produire du dioxygène sans plante",
+            "L’élodée ne respire pas"
+          ],
+          "reponse": 0,
+          "aide": "Les deux tubes contiennent la même plante : qu’est-ce qui change ?",
+          "explication": "Seule la lumière diffère : la production de dioxygène dépend de la **lumière**, donc de la photosynthèse."
+        }
+      ]
+    },
+    {
+      "chapitre": "ed440b1f-ea9e-524f-b7eb-952a1ae862fc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Jour, nuit et anneau d’écorce",
+      "competence": "analyser-document",
+      "situation": "Un jardinier étudie un érable. Il mesure d’abord les échanges de dioxyde de carbone d’une feuille au cours d’une journée, puis il observe ce qui se passe quand il retire un anneau d’écorce sur une branche.",
+      "documents": [
+        {
+          "id": "jour",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Une feuille au cours d’une journée",
+          "categories": [
+            "Minuit",
+            "6 h",
+            "9 h",
+            "12 h",
+            "15 h",
+            "18 h",
+            "21 h"
+          ],
+          "series": [
+            {
+              "nom": "Photosynthèse",
+              "valeurs": [
+                0,
+                1,
+                7,
+                12,
+                8,
+                2,
+                0
+              ],
+              "teinte": "vert"
+            },
+            {
+              "nom": "Respiration",
+              "valeurs": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Quantité de CO₂ échangée",
+            "unite": "unités arbitraires",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Heure"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "anneau",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Un anneau d’écorce sur une branche",
+          "blocs": [
+            "Un jardinier retire sur une branche un anneau d’écorce de 2 cm. Le bois, qui contient le xylème, reste intact ; l’écorce, qui contient le phloème, est coupée sur tout le tour.",
+            "Trois semaines plus tard, les feuilles de la branche sont toujours vertes. Un renflement s’est formé juste au-dessus de l’anneau, et sous l’anneau la branche ne grossit plus."
+          ],
+          "source": "Observation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jour",
+          "enonce": "Touche l’heure où la photosynthèse et la respiration s’équilibrent exactement, en fin de journée.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche le moment où les deux courbes se croisent.",
+          "explication": "À **18 h**, les deux valeurs sont égales (2) : la plante consomme autant de CO₂ qu’elle en rejette."
+        },
+        {
+          "type": "choix",
+          "enonce": "À midi, que fait la plante du dioxyde de carbone ?",
+          "options": [
+            "Elle en consomme plus qu’elle n’en rejette",
+            "Elle en rejette plus qu’elle n’en consomme",
+            "Elle n’en échange pas",
+            "Elle en rejette autant qu’elle en consomme"
+          ],
+          "reponse": 0,
+          "aide": "Compare la valeur de la photosynthèse à celle de la respiration à 12 h.",
+          "explication": "À midi, la photosynthèse (12) l’emporte largement sur la respiration (2) : la plante **absorbe** du CO₂ en net."
+        },
+        {
+          "type": "choix",
+          "enonce": "À minuit, la photosynthèse est nulle. Que montre la courbe de respiration ?",
+          "options": [
+            "La plante respire aussi la nuit : elle absorbe du dioxygène et rejette du CO₂",
+            "La plante s’arrête de vivre la nuit : elle n’échange plus aucun gaz avec l’air",
+            "La plante rejette du dioxygène la nuit, grâce à la respiration de ses feuilles",
+            "La plante ne respire que le jour : la nuit, elle n’absorbe aucun dioxygène"
+          ],
+          "reponse": 0,
+          "aide": "Regarde si la courbe rouge tombe à zéro.",
+          "explication": "La respiration est **constante** : la plante respire jour et nuit, et rejette du CO₂ quand la photosynthèse est à l’arrêt."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les feuilles de la branche restent-elles vertes malgré l’anneau retiré ?",
+          "options": [
+            "Le xylème, intact, continue d’amener l’eau et les sels minéraux",
+            "Le phloème continue d’amener les sucres vers le haut",
+            "Les feuilles n’ont plus besoin d’eau",
+            "Les racines ne sont plus utiles à la branche"
+          ],
+          "reponse": 0,
+          "aide": "Quel vaisseau se trouve dans le bois, que le jardinier a conservé ?",
+          "explication": "Le **xylème** est dans le bois : la sève brute monte toujours vers les feuilles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que contient le renflement formé au-dessus de l’anneau ?",
+          "options": [
+            "De la sève élaborée riche en sucres, bloquée dans sa descente vers les racines",
+            "De la sève brute qui ne peut plus monter, bloquée dans sa montée vers les feuilles",
+            "Du dioxygène qui s’accumule sous l’écorce, ce qui fait gonfler le tronc au-dessus",
+            "De l’eau qui n’est plus absorbée par les racines et qui stagne dans le tronc"
+          ],
+          "reponse": 0,
+          "aide": "Les sucres fabriqués par les feuilles descendent dans l’écorce.",
+          "explication": "Le phloème est coupé : la **sève élaborée**, riche en sucres, s’accumule au-dessus de l’anneau."
+        }
+      ]
+    },
+    {
+      "chapitre": "c803accf-3f86-5a4b-b9ae-0c5c267906d5",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Des SMS pour se rassurer",
+      "competence": "analyser-document",
+      "situation": "Malo et Jade, 12 ans, échangent des messages sur les changements de leur corps et de leurs émotions.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Messages de Malo et Jade",
+          "participants": [
+            {
+              "nom": "Malo",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Jade",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Malo",
+              "texte": "Ma [[s|voix]] part dans les aigus puis dans les graves, c’est n’importe quoi !"
+            },
+            {
+              "qui": "Jade",
+              "texte": "Normal. Moi, j’ai [[s|grandi]] de 7 cm cette année et mes [[s|seins]] se développent."
+            },
+            {
+              "qui": "Malo",
+              "texte": "J’ai aussi envie d’être seul dans ma chambre, et je suis gêné devant mes copains."
+            },
+            {
+              "qui": "Jade",
+              "texte": "Pareil, je me sens bizarre. Et Yanis me plaît… je n’ose pas lui dire."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche les trois mots qui désignent des caractères sexuels secondaires.",
+          "reponse": [
+            "s"
+          ],
+          "multiple": true,
+          "aide": "Cherche les transformations du corps visibles de l’extérieur : voix, taille, poitrine.",
+          "explication": "Ce sont **voix**, **grandi** et **seins** : des caractères sexuels secondaires, qui apparaissent à la puberté."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces changements selon leur nature.",
+          "categories": [
+            "Caractères sexuels primaires",
+            "Caractères sexuels secondaires",
+            "Changements psychologiques"
+          ],
+          "items": [
+            [
+              "Les testicules fabriquent des spermatozoïdes",
+              0
+            ],
+            [
+              "Les ovaires libèrent des ovules",
+              0
+            ],
+            [
+              "La voix mue",
+              1
+            ],
+            [
+              "Les seins se développent",
+              1
+            ],
+            [
+              "Envie d’être plus autonome",
+              2
+            ],
+            [
+              "Premiers sentiments amoureux",
+              2
+            ]
+          ],
+          "aide": "Les organes génitaux sont les caractères primaires ; le reste du corps, les secondaires.",
+          "explication": "Les **primaires** concernent les organes génitaux devenus fonctionnels ; les **secondaires** le reste du corps ; les **psychologiques** les émotions et le besoin d’autonomie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Louna a 13 ans et n’a encore aucun signe de puberté alors que ses amies ont commencé. Que peut-on lui dire ?",
+          "options": [
+            "C’est normal : la puberté commence à des âges très variables, entre 10 et 16 ans",
+            "Elle est malade et doit consulter en urgence : c’est forcément anormal à son âge",
+            "Elle ne connaîtra jamais la puberté, puisqu’elle n’a aucun signe à son âge",
+            "La puberté ne commence qu’à 18 ans, pour toutes les filles sans exception"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’âge moyen de la puberté dans le cours.",
+          "explication": "La puberté démarre **entre 10 et 16 ans** en moyenne : des écarts importants sont parfaitement normaux."
+        }
+      ]
+    },
+    {
+      "chapitre": "c803accf-3f86-5a4b-b9ae-0c5c267906d5",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le message des hormones",
+      "competence": "analyser-document",
+      "situation": "Hugo a suivi, avec son médecin, le taux d’une hormone sexuelle dans son sang de 8 à 16 ans. Le schéma rappelle comment l’ordre de la puberté arrive jusqu’aux testicules.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "titre": "Qui commande qui ?",
+          "disposition": "colonne",
+          "noeuds": [
+            {
+              "id": "cer",
+              "texte": "Cerveau"
+            },
+            {
+              "id": "hyp",
+              "texte": "?"
+            },
+            {
+              "id": "tes",
+              "texte": "Testicules"
+            }
+          ],
+          "liens": [
+            {
+              "de": "cer",
+              "a": "hyp",
+              "texte": "commande"
+            },
+            {
+              "de": "hyp",
+              "a": "tes",
+              "texte": "hormones dans le sang"
+            }
+          ]
+        },
+        {
+          "id": "taux",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Testostérone dans le sang d’Hugo",
+          "categories": [
+            "8 ans",
+            "9 ans",
+            "10 ans",
+            "11 ans",
+            "12 ans",
+            "13 ans",
+            "14 ans",
+            "15 ans",
+            "16 ans"
+          ],
+          "series": [
+            {
+              "nom": "Testostérone",
+              "valeurs": [
+                1,
+                1,
+                1,
+                2,
+                5,
+                10,
+                16,
+                20,
+                22
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Taux de testostérone",
+            "unite": "unités arbitraires",
+            "min": 0,
+            "max": 24,
+            "pas": 4
+          },
+          "axeX": {
+            "titre": "Âge"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "Quelle glande du cerveau, cachée sous le « ? », libère les hormones dans le sang ? (un mot)",
+          "reponse": [
+            "hypophyse",
+            "l’hypophyse",
+            "lhypophyse"
+          ],
+          "aide": "Son nom commence par « hypo- ».",
+          "explication": "C’est l’**hypophyse** : commandée par le cerveau, elle libère des hormones qui stimulent les gonades."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux de testostérone d’Hugo à 14 ans ?",
+          "reponse": 16,
+          "unite": "unités",
+          "tolerance": 1,
+          "aide": "Lis la hauteur du point au-dessus de « 14 ans ».",
+          "explication": "À 14 ans, le taux est de **16 unités**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien le taux augmente-t-il entre 11 ans et 15 ans ?",
+          "reponse": 18,
+          "unite": "unités",
+          "tolerance": 1,
+          "aide": "Lis le taux à 11 ans, puis à 15 ans, et soustrais.",
+          "explication": "À 11 ans : 2 ; à 15 ans : 20. Donc 20 − 2 = **18 unités**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La testostérone circule dans tout le sang, mais elle ne modifie que certains organes. Pourquoi ?",
+          "options": [
+            "Seules les cellules capables de la reconnaître réagissent à sa présence",
+            "Elle ne circule que dans les testicules, sans jamais passer dans le sang",
+            "Elle est détruite par tous les autres organes avant d’avoir pu agir sur eux",
+            "Le cerveau choisit l’organe à chaque fois, en dirigeant la testostérone vers lui"
+          ],
+          "reponse": 0,
+          "aide": "Relis la définition d’une hormone dans le cours.",
+          "explication": "Une hormone n’agit que sur les **cellules capables de la reconnaître**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c803accf-3f86-5a4b-b9ae-0c5c267906d5",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le calendrier de Camille",
+      "competence": "raisonner",
+      "situation": "Camille a un cycle régulier de 28 jours. Son jour 1 (J1) est le premier jour de ses règles : le 3 juin. On admet que l’ovulation a lieu au 14e jour du cycle et que les spermatozoïdes survivent jusqu’à 5 jours dans les voies génitales féminines.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Un cycle de 28 jours",
+          "debut": 0,
+          "fin": 28,
+          "pas": 2,
+          "periodes": [
+            {
+              "id": "regles",
+              "debut": 1,
+              "fin": 5,
+              "nom": "Règles",
+              "teinte": "ambre"
+            },
+            {
+              "id": "epaiss",
+              "debut": 5,
+              "fin": 28,
+              "nom": "Muqueuse qui s’épaissit",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "ovu",
+              "date": 14,
+              "nom": "Ovulation (J14)"
+            }
+          ],
+          "source": "Numéros = jours du cycle"
+        },
+        {
+          "id": "cal",
+          "type": "tableau",
+          "titre": "Le calendrier de Camille",
+          "colonnes": [
+            "Jour du cycle",
+            "J1",
+            "J14",
+            "J28"
+          ],
+          "lignes": [
+            [
+              "Date",
+              "3 juin",
+              "?",
+              "30 juin"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la période où la muqueuse de l’utérus s’épaissit.",
+          "reponse": [
+            "epaiss"
+          ],
+          "aide": "Elle se prépare à accueillir un éventuel embryon, après les règles.",
+          "explication": "La **muqueuse qui s’épaissit** occupe la seconde partie du cycle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel jour de juin Camille ovule-t-elle ?",
+          "reponse": 16,
+          "unite": "juin",
+          "aide": "J1 est le 3 juin : J2 est le 4 juin, et ainsi de suite jusqu’à J14.",
+          "explication": "J14 = 3 + 13 = le **16 juin**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Camille a un rapport non protégé le 14 juin. Une grossesse est-elle possible ?",
+          "options": [
+            "Oui : les spermatozoïdes peuvent être encore vivants lors de l’ovulation, le 16 juin",
+            "Non : l’ovulation n’a pas encore eu lieu, donc il ne peut y avoir de fécondation",
+            "Non : une grossesse est impossible avant les prochaines règles, quelle que soit la date",
+            "Oui, mais seulement si elle ovule le jour même du rapport non protégé, le 14 juin"
+          ],
+          "reponse": 0,
+          "aide": "Compte les jours entre le rapport et l’ovulation, puis compare à la survie des spermatozoïdes.",
+          "explication": "Le rapport a lieu **2 jours** avant l’ovulation, moins que les 5 jours de survie des spermatozoïdes : la fécondation est possible."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sans fécondation, ses prochaines règles commenceront un jour de juillet. Lequel ?",
+          "reponse": 1,
+          "unite": "juillet",
+          "aide": "Le cycle dure 28 jours : ajoute 28 jours au 3 juin.",
+          "explication": "3 juin + 28 jours = le **1er juillet**, nouveau J1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Léna, 12 ans, n’a pas encore eu ses premières règles. Peut-elle déjà être enceinte ?",
+          "options": [
+            "Oui : la première ovulation précède les premières règles",
+            "Non : sans règles, il n’y a jamais d’ovulation",
+            "Non : avant 14 ans, c’est impossible",
+            "Oui, mais seulement si ses cycles sont réguliers"
+          ],
+          "reponse": 0,
+          "aide": "Dans quel ordre arrivent la première ovulation et les premières règles ?",
+          "explication": "La première ovulation **précède** les premières règles : une grossesse est possible avant elles."
+        }
+      ]
+    },
+    {
+      "chapitre": "f2130db8-f255-5382-adfd-6b2b47f073e8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les grandes étapes de la grossesse",
+      "competence": "se-reperer-temps",
+      "situation": "Sofia attend un bébé. La frise compte les semaines depuis la fécondation ; la grossesse dure environ 38 semaines.",
+      "documents": [
+        {
+          "id": "grossesse",
+          "type": "frise",
+          "titre": "De la fécondation à la naissance",
+          "debut": 0,
+          "fin": 40,
+          "pas": 4,
+          "periodes": [
+            {
+              "id": "embryon",
+              "debut": 0,
+              "fin": 8,
+              "nom": "Embryon",
+              "teinte": "ambre"
+            },
+            {
+              "id": "foetus",
+              "debut": 8,
+              "fin": 38,
+              "nom": "Fœtus",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "fec",
+              "date": 0,
+              "nom": "Fécondation"
+            },
+            {
+              "id": "nais",
+              "date": 38,
+              "nom": "Naissance"
+            }
+          ],
+          "source": "Semaines depuis la fécondation"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "grossesse",
+          "enonce": "Touche la période pendant laquelle tous les organes se mettent en place.",
+          "reponse": [
+            "embryon"
+          ],
+          "aide": "Cette période est la plus courte et la plus sensible.",
+          "explication": "C’est la période **embryonnaire**, jusqu’à la 8e semaine : l’organogenèse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de semaines dure la période fœtale, de la 8e semaine à la naissance ?",
+          "reponse": 30,
+          "unite": "semaines",
+          "aide": "Soustrais la date de fin de l’embryon à la date de la naissance.",
+          "explication": "38 − 8 = **30 semaines** de croissance et de maturation."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un médicament dangereux est-il plus risqué à la 4e semaine qu’à la 30e ?",
+          "options": [
+            "Les organes sont en train de se mettre en place",
+            "Le placenta filtre mieux à la 30e semaine",
+            "Le fœtus est plus gros à la 4e semaine",
+            "Le liquide amniotique disparaît à la 4e semaine"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce qui se passe pendant les huit premières semaines.",
+          "explication": "Pendant l’**organogenèse**, une agression peut perturber la formation des organes : c’est la période la plus sensible."
+        }
+      ]
+    },
+    {
+      "chapitre": "f2130db8-f255-5382-adfd-6b2b47f073e8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une vie protégée dans l’utérus",
+      "competence": "observer-schema",
+      "situation": "Ce schéma montre un fœtus dans l’utérus de sa mère, avec quatre structures repérées par des lettres.",
+      "documents": [
+        {
+          "id": "uterus",
+          "type": "schema",
+          "titre": "Un fœtus dans l’utérus",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 150,
+              "cy": 132,
+              "rx": 100,
+              "ry": 96,
+              "teinte": "rose",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 140,
+              "cy": 138,
+              "rx": 70,
+              "ry": 68,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "liquide",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 128,
+              "cy": 146,
+              "rx": 34,
+              "ry": 40,
+              "teinte": "ambre",
+              "motif": "plein",
+              "id": "foetus",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 212,
+              "cy": 78,
+              "rx": 34,
+              "ry": 20,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "placenta",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                122
+              ],
+              "a": [
+                186,
+                90
+              ],
+              "teinte": "encre",
+              "epaisseur": 3,
+              "id": "cordon",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 36,
+              "y": 72,
+              "texte": "A",
+              "vers": [
+                90,
+                108
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 300,
+              "y": 138,
+              "texte": "B",
+              "vers": [
+                170,
+                106
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 300,
+              "y": 40,
+              "texte": "C",
+              "vers": [
+                236,
+                66
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 36,
+              "y": 210,
+              "texte": "D",
+              "vers": [
+                108,
+                170
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre du schéma à son nom.",
+          "paires": [
+            [
+              "A",
+              "Liquide amniotique"
+            ],
+            [
+              "B",
+              "Cordon ombilical"
+            ],
+            [
+              "C",
+              "Placenta"
+            ],
+            [
+              "D",
+              "Fœtus"
+            ]
+          ],
+          "aide": "Le cordon est un tube qui relie le fœtus à l’organe des échanges.",
+          "explication": "A : le **liquide amniotique** ; B : le **cordon ombilical** ; C : le **placenta** ; D : le **fœtus**."
+        },
+        {
+          "type": "zone",
+          "document": "uterus",
+          "enonce": "Une femme enceinte prend un médicament. Touche la structure par laquelle il passera du sang de la mère vers le fœtus.",
+          "reponse": [
+            "placenta"
+          ],
+          "aide": "Quel organe permet les échanges entre la mère et le fœtus ?",
+          "explication": "Les échanges se font à travers le **placenta**, et le médicament peut le traverser."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque substance selon son sens de passage à travers le placenta.",
+          "categories": [
+            "De la mère vers le fœtus",
+            "Du fœtus vers la mère"
+          ],
+          "items": [
+            [
+              "Dioxygène",
+              0
+            ],
+            [
+              "Nutriments",
+              0
+            ],
+            [
+              "Dioxyde de carbone",
+              1
+            ],
+            [
+              "Déchets comme l’urée",
+              1
+            ]
+          ],
+          "aide": "Le fœtus reçoit de quoi vivre et renvoie ses déchets.",
+          "explication": "La mère apporte **dioxygène et nutriments** ; le fœtus renvoie **dioxyde de carbone et déchets**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une femme enceinte boit de l’alcool. Que peut-on dire ?",
+          "options": [
+            "L’alcool traverse le placenta et atteint le fœtus : aucune dose n’est sans risque",
+            "Le placenta arrête toujours l’alcool : le fœtus n’est donc jamais exposé à sa toxicité",
+            "Seul le liquide amniotique est touché, et le fœtus n’est pas atteint par l’alcool",
+            "L’alcool ne passe que pendant l’accouchement, au moment où le placenta se détache"
+          ],
+          "reponse": 0,
+          "aide": "Le placenta n’est pas un filtre absolu.",
+          "explication": "L’alcool passe du sang de la mère à celui du fœtus : il n’existe **aucune dose sans risque**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f2130db8-f255-5382-adfd-6b2b47f073e8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le suivi d’un fœtus",
+      "competence": "analyser-document",
+      "situation": "Noa suit sa grossesse : trois échographies de suivi sont prévues. Le graphique donne la taille moyenne d’un fœtus à différents moments (valeurs arrondies).",
+      "documents": [
+        {
+          "id": "taille",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Taille moyenne du fœtus",
+          "categories": [
+            "8 sem.",
+            "12 sem.",
+            "22 sem.",
+            "32 sem.",
+            "38 sem."
+          ],
+          "series": [
+            {
+              "nom": "Taille",
+              "valeurs": [
+                3,
+                9,
+                28,
+                42,
+                50
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Taille",
+            "unite": "cm",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Semaines depuis la fécondation"
+          },
+          "valeurs": true
+        },
+        {
+          "id": "echo",
+          "type": "tableau",
+          "titre": "Les trois échographies",
+          "colonnes": [
+            "Échographie",
+            "Semaine",
+            "Ce que l’on vérifie"
+          ],
+          "lignes": [
+            [
+              "1re : datation",
+              "12",
+              "La date de début de la grossesse"
+            ],
+            [
+              "2e : morphologie",
+              "22",
+              "La forme des organes"
+            ],
+            [
+              "3e : croissance",
+              "32",
+              "La taille et le poids"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Semaines depuis la fécondation, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echo",
+          "enonce": "Touche la semaine de l’échographie qui sert à mesurer la croissance.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne « croissance ».",
+          "explication": "L’échographie de **croissance** a lieu à la 32e semaine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la taille moyenne du fœtus à la semaine de l’échographie de morphologie ?",
+          "reponse": 28,
+          "unite": "cm",
+          "aide": "Relève d’abord la semaine dans le tableau, puis la barre correspondante.",
+          "explication": "La morphologie est à 22 semaines : la taille moyenne est de **28 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de centimètres le fœtus grandit-il entre la 3e échographie et la naissance à 38 semaines ?",
+          "reponse": 8,
+          "unite": "cm",
+          "aide": "Cherche la taille à 32 semaines, puis celle à 38 semaines.",
+          "explication": "50 − 42 = **8 cm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Entre quels âges le fœtus grandit-il le plus vite, en centimètres par semaine ?",
+          "options": [
+            "Entre 12 et 22 semaines",
+            "Entre 8 et 12 semaines",
+            "Entre 22 et 32 semaines",
+            "Entre 32 et 38 semaines"
+          ],
+          "reponse": 0,
+          "aide": "Pour chaque intervalle, divise la croissance par le nombre de semaines.",
+          "explication": "De 12 à 22 semaines : 19 cm en 10 semaines, soit **1,9 cm par semaine** ; les autres intervalles donnent 1,5 ; 1,4 et environ 1,3."
+        },
+        {
+          "type": "choix",
+          "enonce": "À la 3e échographie, le fœtus de Noa mesure 35 cm au lieu des 42 cm attendus en moyenne. Que conclure ?",
+          "options": [
+            "Sa croissance semble en retard : il faut en chercher la cause et la surveiller",
+            "Tout est normal : tous les fœtus mesurent 35 cm à la 3e échographie, sans exception",
+            "La grossesse est terminée, car le fœtus a atteint une taille suffisante pour naître",
+            "Il faut arrêter les échographies, car elles ont perturbé la croissance du fœtus"
+          ],
+          "reponse": 0,
+          "aide": "Compare la mesure à la valeur moyenne du graphique.",
+          "explication": "Un écart de 7 cm signale un **retard de croissance** : c’est justement le rôle du suivi médical de le repérer."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4a04cd6-f972-5598-834c-c576348da4aa",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Parler de contraception",
+      "competence": "analyser-document",
+      "situation": "Léa, 15 ans, voudrait parler de contraception sans inquiéter personne. Elle trouve cette affiche au collège.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Centre de santé sexuelle",
+          "sousTitre": "Écoute, conseils, contraception",
+          "emoji": "🏥",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Ouvert du lundi au vendredi",
+              "id": "horaires"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Consultation gratuite pour les mineurs",
+              "id": "gratuit"
+            },
+            {
+              "texte": "Confidentielle : tes parents ne sont pas prévenus",
+              "id": "secret"
+            },
+            {
+              "texte": "Une équipe t’aide à choisir un moyen adapté",
+              "id": "choix"
+            }
+          ],
+          "pied": "Affiche imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche la ligne qui garantit que la visite de Léa restera secrète.",
+          "reponse": [
+            "secret"
+          ],
+          "aide": "Cherche le mot « confidentielle ».",
+          "explication": "La ligne **« Confidentielle »** garantit que les parents ne sont pas prévenus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Léa peut-elle consulter sans l’accord de ses parents ?",
+          "options": [
+            "Oui : la consultation est gratuite et confidentielle pour les mineurs",
+            "Non : l’accord d’un parent est obligatoire avant toute consultation",
+            "Oui, mais elle doit payer elle-même la consultation, sans aucune aide",
+            "Non : il faut avoir 18 ans pour consulter sans l’accord de ses parents"
+          ],
+          "reponse": 0,
+          "aide": "Relis les lignes de l’affiche.",
+          "explication": "Oui : pour les mineurs, la consultation est **gratuite et confidentielle**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces moyens selon leur type.",
+          "categories": [
+            "Hormonal",
+            "Mécanique",
+            "D’urgence"
+          ],
+          "items": [
+            [
+              "Pilule",
+              0
+            ],
+            [
+              "Implant",
+              0
+            ],
+            [
+              "Préservatif",
+              1
+            ],
+            [
+              "Stérilet",
+              1
+            ],
+            [
+              "Pilule du lendemain",
+              2
+            ]
+          ],
+          "aide": "Hormonal = hormones ; mécanique = barrière ou action locale ; d’urgence = après un rapport non protégé.",
+          "explication": "La pilule et l’implant sont **hormonaux**, le préservatif et le stérilet **mécaniques**, la pilule du lendemain est **d’urgence**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4a04cd6-f972-5598-834c-c576348da4aa",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Sur 100 couples pendant un an",
+      "competence": "lire-graphique",
+      "situation": "Le graphique indique, pour 100 couples ayant des rapports pendant un an, le nombre de grossesses selon la méthode utilisée (usage courant, chiffres arrondis).",
+      "documents": [
+        {
+          "id": "eff",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Grossesses en un an",
+          "categories": [
+            "Aucune contraception",
+            "Préservatif",
+            "Pilule",
+            "Stérilet",
+            "Implant"
+          ],
+          "series": [
+            {
+              "nom": "Grossesses pour 100 couples",
+              "valeurs": [
+                85,
+                13,
+                7,
+                0.8,
+                0.1
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Grossesses pour 100 couples",
+            "min": 0,
+            "max": 90,
+            "pas": 10
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "eff",
+          "enonce": "Parmi les quatre moyens de contraception, touche celui qui a laissé le plus de grossesses.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Ignore la barre « Aucune contraception ».",
+          "explication": "Le **préservatif** a le plus de grossesses (13), car son efficacité dépend beaucoup de la bonne utilisation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de grossesses de moins pour 100 couples avec la pilule qu’avec aucune contraception ?",
+          "reponse": 78,
+          "unite": "grossesses",
+          "aide": "Soustrais les deux valeurs.",
+          "explication": "85 − 7 = **78 grossesses** de moins."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un couple utilise la pilule. Pourquoi lui recommande-t-on quand même le préservatif avec un nouveau partenaire ?",
+          "options": [
+            "Parce que le préservatif protège aussi des infections sexuellement transmissibles",
+            "Parce que la pilule perd son efficacité dès qu’on change de partenaire sexuel",
+            "Parce que la pilule rend définitivement stérile après quelques mois d’utilisation",
+            "Parce que le préservatif agit sur l’ovulation, que la pilule ne bloque jamais seule"
+          ],
+          "reponse": 0,
+          "aide": "Le graphique ne parle que des grossesses.",
+          "explication": "Seul le **préservatif** protège à la fois d’une grossesse et des **IST**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Yasmine a oublié sa pilule et a eu un rapport non protégé hier. Que doit-elle faire ?",
+          "options": [
+            "Prendre une contraception d’urgence le plus tôt possible après le rapport",
+            "Attendre ses prochaines règles pour voir si elle est enceinte ou non",
+            "Ne rien faire, car la pilule protège pendant un mois entier malgré l’oubli",
+            "Prendre une douche très chaude, qui empêcherait la fécondation"
+          ],
+          "reponse": 0,
+          "aide": "Plus on attend, moins elle est efficace.",
+          "explication": "La **contraception d’urgence**, délivrée sans ordonnance, doit être prise le plus tôt possible."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4a04cd6-f972-5598-834c-c576348da4aa",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quand un bébé se fait attendre",
+      "competence": "analyser-document",
+      "situation": "Quatre couples consultent pour des difficultés à concevoir. Le tableau résume leurs examens et le schéma montre l’appareil génital féminin.",
+      "documents": [
+        {
+          "id": "cas",
+          "type": "tableau",
+          "titre": "Les quatre couples",
+          "colonnes": [
+            "Couple",
+            "Ce que montrent les examens"
+          ],
+          "lignes": [
+            [
+              "A",
+              "La femme n’ovule pas régulièrement ; ses trompes sont libres et le sperme est normal"
+            ],
+            [
+              "B",
+              "Les deux trompes sont obstruées ; ovules et sperme normaux"
+            ],
+            [
+              "C",
+              "L’homme a très peu de spermatozoïdes mobiles ; ovules et trompes normaux"
+            ],
+            [
+              "D",
+              "La femme n’a pas d’ovules utilisables ; l’homme est fertile"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Cas imaginés pour l’exercice"
+        },
+        {
+          "id": "femme",
+          "type": "schema",
+          "titre": "Appareil génital féminin",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 50,
+              "cy": 108,
+              "rx": 24,
+              "ry": 15,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "ovaireG",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 290,
+              "cy": 108,
+              "rx": 24,
+              "ry": 15,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "ovaireD",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 74,
+              "y": 102,
+              "l": 70,
+              "h": 12,
+              "arrondi": 6,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "trompeG",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 196,
+              "y": 102,
+              "l": 70,
+              "h": 12,
+              "arrondi": 6,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "trompeD",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  140,
+                  102
+                ],
+                [
+                  200,
+                  102
+                ],
+                [
+                  188,
+                  184
+                ],
+                [
+                  152,
+                  184
+                ]
+              ],
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "uterus",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 158,
+              "y": 184,
+              "l": 24,
+              "h": 26,
+              "teinte": "rose",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 50,
+              "y": 140,
+              "texte": "Ovaire",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 290,
+              "y": 140,
+              "texte": "Ovaire",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 108,
+              "y": 86,
+              "texte": "Trompe",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 86,
+              "texte": "Trompe",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 226,
+              "texte": "Utérus et vagin",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque couple à la technique la plus adaptée.",
+          "paires": [
+            [
+              "Couple A",
+              "Stimulation ovarienne"
+            ],
+            [
+              "Couple B",
+              "FIV"
+            ],
+            [
+              "Couple C",
+              "ICSI"
+            ],
+            [
+              "Couple D",
+              "Don d’ovocytes"
+            ]
+          ],
+          "aide": "Pour chaque couple, cherche ce qui manque ou ce qui est bloqué.",
+          "explication": "A : des hormones régularisent l’ovulation. B : les trompes bouchées empêchent la rencontre des gamètes, d’où la **FIV**. C : on injecte un seul spermatozoïde dans l’ovule (**ICSI**). D : il faut un **don d’ovocytes**."
+        },
+        {
+          "type": "zone",
+          "document": "femme",
+          "enonce": "Couple B : touche les deux parties de l’appareil génital qui sont obstruées.",
+          "reponse": [
+            "trompeG",
+            "trompeD"
+          ],
+          "multiple": true,
+          "aide": "C’est là que l’ovule et le spermatozoïde se rencontrent normalement.",
+          "explication": "Ce sont les deux **trompes**, lieu habituel de la fécondation."
+        },
+        {
+          "type": "zone",
+          "document": "femme",
+          "enonce": "Dans une insémination artificielle, touche l’organe dans lequel le sperme est déposé.",
+          "reponse": [
+            "uterus"
+          ],
+          "aide": "Le sperme est déposé plus près de l’ovule, mais pas dans la trompe.",
+          "explication": "Le sperme est déposé dans l’**utérus**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi une FIV n’est-elle pas nécessaire pour le couple A ?",
+          "options": [
+            "Les trompes sont libres et le sperme normal : la rencontre peut se faire naturellement",
+            "Les trompes sont bouchées, donc les spermatozoïdes ne peuvent pas rejoindre l’ovule",
+            "L’homme ne produit aucun spermatozoïde, donc la fécondation est impossible naturellement",
+            "La femme n’a pas d’ovaire, donc l’ovule doit venir d’une autre femme en laboratoire"
+          ],
+          "reponse": 0,
+          "aide": "Compare les examens du couple A et du couple B.",
+          "explication": "Chez A, seule l’**ovulation** pose problème : la stimulation ovarienne suffit."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui tranche les questions éthiques posées par ces techniques, comme le devenir des embryons congelés ?",
+          "options": [
+            "La loi de bioéthique, révisée régulièrement par le débat démocratique",
+            "Les médecins seuls, sans débat public ni intervention du législateur",
+            "Le couple seul, sans aucune règle posée par la loi ni par la société",
+            "Les laboratoires pharmaceutiques, qui fixent les règles selon leurs intérêts"
+          ],
+          "reponse": 0,
+          "aide": "Ce n’est pas une question que la science seule peut trancher.",
+          "explication": "Ces questions relèvent de la **loi de bioéthique**, débattue et régulièrement révisée."
+        }
+      ]
+    },
+    {
+      "chapitre": "ee65becb-d051-5f96-801d-8177127fd424",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Beaucoup d’œufs ou peu de petits ?",
+      "competence": "lire-tableau",
+      "situation": "Ce tableau compare quatre animaux : le lieu de la fécondation et le nombre de descendants produits par portée ou par ponte (valeurs arrondies).",
+      "documents": [
+        {
+          "id": "esp",
+          "type": "tableau",
+          "titre": "Quatre animaux",
+          "colonnes": [
+            "Animal",
+            "Fécondation",
+            "Descendants par ponte ou portée"
+          ],
+          "lignes": [
+            [
+              "Morue",
+              "Externe (dans l’eau)",
+              "5 000 000"
+            ],
+            [
+              "Grenouille rousse",
+              "Externe (dans l’eau)",
+              "2 000"
+            ],
+            [
+              "Mésange bleue",
+              "Interne",
+              "10"
+            ],
+            [
+              "Chatte",
+              "Interne",
+              "4"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "esp",
+          "enonce": "Touche le nombre de descendants de l’animal qui en produit le plus.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Compare les nombres de la dernière colonne.",
+          "explication": "La morue produit **5 000 000** d’œufs, bien plus que les autres."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la morue produit-elle plus d’œufs que la grenouille rousse ?",
+          "reponse": 2500,
+          "aide": "Divise 5 000 000 par 2 000.",
+          "explication": "5 000 000 ÷ 2 000 = **2 500** fois plus."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces animaux selon leur stratégie de reproduction.",
+          "categories": [
+            "Beaucoup de descendants peu protégés",
+            "Peu de descendants bien pris en charge"
+          ],
+          "items": [
+            [
+              "Morue",
+              0
+            ],
+            [
+              "Grenouille rousse",
+              0
+            ],
+            [
+              "Mésange bleue",
+              1
+            ],
+            [
+              "Chatte",
+              1
+            ]
+          ],
+          "aide": "Regarde à la fois le type de fécondation et le nombre de descendants.",
+          "explication": "La **morue** et la **grenouille** misent sur le nombre ; la **mésange** et la **chatte**, à fécondation interne, sur la survie de quelques petits."
+        }
+      ]
+    },
+    {
+      "chapitre": "ee65becb-d051-5f96-801d-8177127fd424",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des tortues mâles ou femelles ?",
+      "competence": "lire-graphique",
+      "situation": "Une équipe de chercheurs incube des œufs d’une tortue marine à température constante et note le pourcentage de femelles parmi les petits (données imaginées pour l’exercice).",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Pourcentage de femelles selon la température",
+          "categories": [
+            "26 °C",
+            "28 °C",
+            "29 °C",
+            "30 °C",
+            "32 °C"
+          ],
+          "series": [
+            {
+              "nom": "Femelles",
+              "valeurs": [
+                2,
+                10,
+                50,
+                90,
+                100
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Femelles parmi les petits",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Température d’incubation"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "À quelle température naissent autant de mâles que de femelles ?",
+          "reponse": 29,
+          "unite": "°C",
+          "aide": "Cherche la barre à 50 %.",
+          "explication": "À **29 °C**, la moitié des petits sont des femelles."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 30 °C, 200 œufs éclosent tous. Combien de femelles naissent ?",
+          "reponse": 180,
+          "unite": "femelles",
+          "aide": "Lis le pourcentage à 30 °C, puis calcule-le sur 200.",
+          "explication": "À 30 °C, 90 % de 200 = **180 femelles**."
+        },
+        {
+          "type": "zone",
+          "document": "temp",
+          "enonce": "Touche la température qui donne uniquement des femelles.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre qui atteint 100 %.",
+          "explication": "À **32 °C**, 100 % des petits sont des femelles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur une plage, le sable se réchauffe de 2 °C à cause du climat. Quelle conséquence est probable pour cette tortue ?",
+          "options": [
+            "Davantage de femelles, et très peu de mâles parmi les nouveau-nés",
+            "Davantage de mâles, car la chaleur favorise leur développement",
+            "Autant de mâles que de femelles, quelle que soit la température",
+            "Plus aucun œuf ne sera pondu, car la température est trop élevée"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce qui se passe quand la température augmente.",
+          "explication": "Plus il fait chaud, plus il naît de **femelles** : un réchauffement menace la reproduction de l’espèce, faute de mâles."
+        }
+      ]
+    },
+    {
+      "chapitre": "ee65becb-d051-5f96-801d-8177127fd424",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le marais des hérons",
+      "competence": "analyser-document",
+      "situation": "Une colonie de hérons vit dans un marais. Au début de 2021, elle compte 400 oiseaux. Le tableau donne le bilan de trois années et l’article raconte un événement de 2023.",
+      "documents": [
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Bilan annuel de la colonie",
+          "colonnes": [
+            "Année",
+            "Naissances",
+            "Décès",
+            "Arrivées",
+            "Départs"
+          ],
+          "lignes": [
+            [
+              "2021",
+              "60",
+              "30",
+              "10",
+              "20"
+            ],
+            [
+              "2022",
+              "55",
+              "35",
+              "10",
+              "30"
+            ],
+            [
+              "2023",
+              "30",
+              "40",
+              "5",
+              "25"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "route",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Une route au milieu du marais",
+          "blocs": [
+            "En 2023, une route à quatre voies a coupé le marais en deux : les oiseaux doivent la traverser pour rejoindre leurs sites de nidification.",
+            "Les travaux ont aussi détruit deux des cinq roselières où les hérons nichent."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de hérons la colonie compte-t-elle à la fin de 2021 ?",
+          "reponse": 420,
+          "unite": "hérons",
+          "aide": "Ajoute naissances et arrivées, retire décès et départs.",
+          "explication": "400 + 60 − 30 + 10 − 20 = **420**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de hérons la colonie compte-t-elle à la fin de 2023 ?",
+          "reponse": 390,
+          "unite": "hérons",
+          "aide": "Calcule l’effectif fin 2022, puis fin 2023.",
+          "explication": "Fin 2022 : 420 + 55 − 35 + 10 − 30 = 420. Fin 2023 : 420 + 30 − 40 + 5 − 25 = **390**."
+        },
+        {
+          "type": "zone",
+          "document": "bilan",
+          "enonce": "Touche la seule année où l’effectif reste identique du début à la fin.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Pour chaque année, compare les entrées (naissances, arrivées) et les sorties (décès, départs).",
+          "explication": "En 2022, 55 + 10 = 65 entrées et 35 + 30 = 65 sorties : l’effectif ne varie pas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle cause explique le plus probablement la chute des naissances en 2023 ?",
+          "options": [
+            "La destruction de sites de nidification et la fragmentation du marais",
+            "Un excès de nourriture qui aurait perturbé la reproduction des hérons",
+            "Une hausse des arrivées de hérons, donc une concurrence trop forte",
+            "L’arrêt de la chasse, qui aurait fait disparaître les hérons du marais"
+          ],
+          "reponse": 0,
+          "aide": "Relis l’article : qu’est-ce que la route a changé pour la nidification ?",
+          "explication": "La route a **fragmenté** le marais et les travaux ont **détruit des sites de nidification** : moins de couples peuvent se reproduire."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque problème à la mesure qui peut aider à y répondre.",
+          "paires": [
+            [
+              "Destruction des sites de reproduction",
+              "Restauration de zones humides"
+            ],
+            [
+              "Fragmentation des milieux",
+              "Corridors et passages aménagés"
+            ],
+            [
+              "Surpêche des adultes reproducteurs",
+              "Mise en réserve"
+            ],
+            [
+              "Espèce concurrente introduite",
+              "Lutte contre les espèces invasives"
+            ]
+          ],
+          "aide": "Chaque mesure répond directement à un problème.",
+          "explication": "On **restaure** les sites détruits, on **relie** les milieux coupés, on **protège** les adultes reproducteurs et on **lutte** contre les espèces invasives."
+        }
+      ]
+    },
+    {
+      "chapitre": "048e0b06-4d40-5f73-9f0d-a0cc357eba4b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une hydre qui bourgeonne",
+      "competence": "observer-schema",
+      "situation": "Une hydre est un petit animal d’eau douce. Ce schéma la montre vue de côté, au moment où elle se reproduit.",
+      "documents": [
+        {
+          "id": "hydre",
+          "type": "schema",
+          "titre": "Une hydre d’eau douce",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 140,
+              "y": 70,
+              "l": 36,
+              "h": 120,
+              "arrondi": 14,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 158,
+              "cy": 198,
+              "rx": 32,
+              "ry": 9,
+              "teinte": "vert",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                146,
+                70
+              ],
+              "a": [
+                122,
+                38
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                152,
+                70
+              ],
+              "a": [
+                140,
+                30
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                158,
+                70
+              ],
+              "a": [
+                158,
+                26
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                164,
+                70
+              ],
+              "a": [
+                176,
+                30
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                70
+              ],
+              "a": [
+                194,
+                38
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 198,
+              "cy": 132,
+              "rx": 22,
+              "ry": 28,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "bourgeon",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                192,
+                106
+              ],
+              "a": [
+                186,
+                92
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                204,
+                106
+              ],
+              "a": [
+                212,
+                92
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 158,
+              "y": 224,
+              "texte": "Hydre adulte (parent)",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "hydre",
+          "enonce": "Touche le jeune individu en train de se former sur le parent.",
+          "reponse": [
+            "bourgeon"
+          ],
+          "aide": "Il est plus petit et accroché sur le côté du corps de l’hydre.",
+          "explication": "C’est le **bourgeon**, un futur individu qui grandit sur son parent."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes du bourgeonnement dans l’ordre.",
+          "items": [
+            "Un bourgeon se forme sur le parent",
+            "Le bourgeon grandit et développe des tentacules",
+            "Le bourgeon se détache du parent",
+            "Un nouvel individu vit de façon indépendante"
+          ],
+          "aide": "Le bourgeon doit d’abord apparaître et grandir.",
+          "explication": "Le bourgeon **apparaît, grandit, se détache**, puis le nouvel individu vit seul."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dire des gènes du bourgeon par rapport à ceux du parent ?",
+          "options": [
+            "Ils sont identiques : le bourgeon est un clone génétique de l’hydre parent",
+            "Il a la moitié des gènes du parent, comme le ferait un gamète de l’hydre",
+            "Il a des gènes d’un deuxième parent, rencontré lors de la reproduction",
+            "Ses gènes sont tirés au hasard parmi ceux de toute la population d’hydres"
+          ],
+          "reponse": 0,
+          "aide": "Y a-t-il ici un deuxième parent, des gamètes, une fécondation ?",
+          "explication": "Sans gamète ni fécondation, le descendant est un **clone** : génétiquement identique à son parent."
+        }
+      ]
+    },
+    {
+      "chapitre": "048e0b06-4d40-5f73-9f0d-a0cc357eba4b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le catalogue du jardinier",
+      "competence": "analyser-document",
+      "situation": "Le jardinier d’un lycée multiplie ses plantes sans les semer. Dans son catalogue, il décrit ce qu’il replante pour chaque espèce.",
+      "documents": [
+        {
+          "id": "cat",
+          "type": "tableau",
+          "titre": "Le catalogue du jardinier",
+          "colonnes": [
+            "Plante",
+            "Ce que le jardinier replante"
+          ],
+          "lignes": [
+            [
+              "Tulipe",
+              "Un petit « oignon » prélevé au pied de la plante"
+            ],
+            [
+              "Pomme de terre",
+              "Un morceau de la réserve renflée, avec un œil"
+            ],
+            [
+              "Iris",
+              "Un morceau de tige souterraine horizontale"
+            ],
+            [
+              "Fraisier",
+              "Un jeune plant né au bout d’une tige rampante"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Catalogue imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque plante à son organe de multiplication.",
+          "paires": [
+            [
+              "Tulipe",
+              "Bulbe"
+            ],
+            [
+              "Pomme de terre",
+              "Tubercule"
+            ],
+            [
+              "Iris",
+              "Rhizome"
+            ],
+            [
+              "Fraisier",
+              "Stolon"
+            ]
+          ],
+          "aide": "Le stolon rampe à la surface ; le rhizome est souterrain ; le tubercule est une réserve renflée.",
+          "explication": "La tulipe se multiplie par **bulbes**, la pomme de terre par **tubercules**, l’iris par **rhizomes**, le fraisier par **stolons**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le jardinier plante dix morceaux d’un même tubercule. Que dire des dix plantes obtenues ?",
+          "options": [
+            "Elles sont génétiquement identiques entre elles et à la plante mère",
+            "Elles sont toutes différentes",
+            "Elles sont identiques entre elles, mais pas à la plante mère",
+            "Elles ont la moitié des gènes de la plante mère"
+          ],
+          "reponse": 0,
+          "aide": "Il n’y a ni fleur, ni graine, ni fécondation.",
+          "explication": "La multiplication végétative donne des **clones**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un fraisier produit 5 stolons, chacun donnant un nouveau fraisier. Chaque nouveau fraisier en produit à son tour 5. Combien de fraisiers y a-t-il au total, parent compris, après ces deux générations ?",
+          "reponse": 31,
+          "unite": "fraisiers",
+          "aide": "Compte le parent, puis ses 5 jeunes, puis les jeunes de chacun.",
+          "explication": "1 + 5 + 5 × 5 = **31 fraisiers**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le jardinier veut obtenir un fraisier résistant à une nouvelle maladie. Que lui conseiller ?",
+          "options": [
+            "Semer des graines issues de fleurs : les plants seront différents, certains résisteront",
+            "Multiplier par stolons : les plants seront tous différents, donc certains résisteront",
+            "Multiplier par stolons : tous les plants résisteront, car ils sont identiques au parent",
+            "Changer d’espèce de plante, car aucun fraisier ne pourra jamais résister à une maladie"
+          ],
+          "reponse": 0,
+          "aide": "Pour trouver une résistance, il faut de la diversité.",
+          "explication": "Les stolons donnent des **clones**, tous sensibles ; la reproduction sexuée crée de la **diversité**."
+        }
+      ]
+    },
+    {
+      "chapitre": "048e0b06-4d40-5f73-9f0d-a0cc357eba4b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Clones : vitesse et danger",
+      "competence": "analyser-document",
+      "situation": "Un rosier est envahi par des pucerons. Un naturaliste compte la population chaque semaine. Un second document rappelle une catastrophe agricole du XIXe siècle.",
+      "documents": [
+        {
+          "id": "puc",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Pucerons sur un rosier",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Pucerons",
+              "valeurs": [
+                10,
+                20,
+                40,
+                80,
+                160,
+                320
+              ],
+              "teinte": "vert"
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre de pucerons",
+            "min": 0,
+            "max": 320,
+            "pas": 40
+          },
+          "axeX": {
+            "titre": "Semaines"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "irlande",
+          "type": "texte",
+          "genre": "article",
+          "titre": "L’Irlande et sa pomme de terre",
+          "blocs": [
+            "Au milieu du XIXe siècle, presque toute l’Irlande cultivait la même variété de pomme de terre, multipliée par [[t|tubercules]]. Tous les plants étaient donc des clones.",
+            "En 1845, le mildiou, un champignon microscopique, atteint les champs : presque toutes les plantes tombent malades et les récoltes pourrissent. La famine qui suit fait environ un million de morts et pousse des centaines de milliers d’Irlandais à émigrer."
+          ],
+          "source": "Texte écrit pour l’exercice, chiffres arrondis"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Par combien la population de pucerons est-elle multipliée chaque semaine ?",
+          "reponse": 2,
+          "aide": "Compare le nombre de pucerons d’une semaine à la suivante.",
+          "explication": "Elle passe de 10 à 20, à 40, à 80 : elle est multipliée par **2** chaque semaine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si la population continue ainsi, combien y aura-t-il de pucerons à la semaine 7 ?",
+          "reponse": 1280,
+          "unite": "pucerons",
+          "aide": "Part de la semaine 5 et double deux fois.",
+          "explication": "Semaine 5 : 320, semaine 6 : 640, semaine 7 : **1 280**. Sans partenaire à chercher, les pucerons colonisent vite."
+        },
+        {
+          "type": "zone",
+          "document": "irlande",
+          "enonce": "Touche, dans l’article, le mot qui désigne l’organe par lequel la pomme de terre se multiplie.",
+          "reponse": [
+            "t"
+          ],
+          "aide": "C’est une réserve souterraine renflée.",
+          "explication": "La pomme de terre se multiplie par **tubercules**, sans fécondation."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le mildiou a-t-il ravagé presque tous les champs irlandais ?",
+          "options": [
+            "Tous les plants étaient des clones, donc tous aussi sensibles à la maladie",
+            "Les plants étaient trop variés pour pouvoir être soignés de la même façon",
+            "Les plants étaient issus de graines, donc tous différents les uns des autres",
+            "Le mildiou ne touche que les plantes diverses, et jamais les clones cultivés"
+          ],
+          "reponse": 0,
+          "aide": "Que signifie « tous des clones » face à une maladie ?",
+          "explication": "Sans **diversité génétique**, la maladie frappe tous les plants de la même façon : c’est l’inconvénient majeur de la reproduction asexuée."
+        },
+        {
+          "type": "choix",
+          "enonce": "À l’automne, les pucerons passent à la reproduction sexuée et pondent des œufs résistants. Quel est l’intérêt ?",
+          "options": [
+            "Produire des individus différents et passer l’hiver sous forme d’œufs résistants",
+            "Produire davantage d’individus et plus vite que pendant toute la belle saison",
+            "Se passer de tout partenaire pour se reproduire, même en hiver, comme les clones",
+            "Produire des clones identiques au parent, tous adaptés au froid de l’hiver"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’imprévu : le froid, de nouveaux parasites.",
+          "explication": "La reproduction sexuée prépare l’**imprévu** : diversité des descendants et œufs résistants à la mauvaise saison."
+        }
+      ]
+    },
+    {
+      "chapitre": "eecdeebf-f722-5ba9-9768-218853497a2f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Compter les chromosomes",
+      "competence": "lire-tableau",
+      "situation": "Lucie observe au microscope cinq types de cellules humaines et compte leurs chromosomes.",
+      "documents": [
+        {
+          "id": "chr",
+          "type": "tableau",
+          "titre": "Chromosomes par cellule",
+          "colonnes": [
+            "Type de cellule",
+            "Nombre de chromosomes"
+          ],
+          "lignes": [
+            [
+              "Cellule de peau",
+              "46"
+            ],
+            [
+              "Spermatozoïde",
+              "23"
+            ],
+            [
+              "Cellule musculaire",
+              "46"
+            ],
+            [
+              "Ovule",
+              "23"
+            ],
+            [
+              "Cellule du foie",
+              "46"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Cellules humaines"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chr",
+          "enonce": "Touche les deux nombres de chromosomes des cellules reproductrices (les gamètes).",
+          "reponse": [
+            "r1c1",
+            "r3c1"
+          ],
+          "multiple": true,
+          "aide": "Les gamètes sont le spermatozoïde et l’ovule.",
+          "explication": "Les gamètes ont **23 chromosomes**, la moitié des autres cellules."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de chromosomes la cellule œuf aura-t-elle après la fécondation d’un ovule par un spermatozoïde ?",
+          "reponse": 46,
+          "unite": "chromosomes",
+          "aide": "Additionne les chromosomes des deux gamètes.",
+          "explication": "23 + 23 = **46 chromosomes**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "La ___ réduit le nombre de chromosomes de 46 à 23 dans les gamètes ; la ___ rétablit ensuite les 46 chromosomes.",
+          "reponses": [
+            [
+              "méiose"
+            ],
+            [
+              "fécondation"
+            ]
+          ],
+          "banque": [
+            "méiose",
+            "mitose",
+            "fécondation",
+            "croissance"
+          ],
+          "aide": "La première division fabrique des gamètes, la seconde étape les réunit.",
+          "explication": "La **méiose** divise par deux, la **fécondation** rétablit le nombre de 46."
+        }
+      ]
+    },
+    {
+      "chapitre": "eecdeebf-f722-5ba9-9768-218853497a2f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Lire un caryotype",
+      "competence": "analyser-document",
+      "situation": "Un laboratoire a photographié et classé les chromosomes de quatre personnes : c’est le caryotype. Le tableau en donne un résumé.",
+      "documents": [
+        {
+          "id": "caryo",
+          "type": "tableau",
+          "titre": "Résumé de quatre caryotypes",
+          "colonnes": [
+            "Personne",
+            "Chromosomes en tout",
+            "23e paire",
+            "Chromosomes 21"
+          ],
+          "lignes": [
+            [
+              "Alex",
+              "46",
+              "XY",
+              "2"
+            ],
+            [
+              "Béa",
+              "46",
+              "XX",
+              "2"
+            ],
+            [
+              "Cléo",
+              "47",
+              "XX",
+              "3"
+            ],
+            [
+              "Dan",
+              "46",
+              "XY",
+              "2"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Résultats imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "caryo",
+          "enonce": "Touche la personne qui présente une trisomie 21.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Cherche trois exemplaires du chromosome 21.",
+          "explication": "**Cléo** a 3 chromosomes 21 : c’est la trisomie 21."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de chromosomes Cléo a-t-elle en plus par rapport à un caryotype habituel ?",
+          "reponse": 1,
+          "unite": "chromosome",
+          "aide": "Compare son total à 46.",
+          "explication": "47 − 46 = **1 chromosome** de plus, un troisième chromosome 21."
+        },
+        {
+          "type": "choix",
+          "enonce": "Alex est un garçon (XY). Quel chromosome sexuel a-t-il reçu de son père ?",
+          "options": [
+            "Le chromosome Y",
+            "Le chromosome X",
+            "Les deux",
+            "Aucun des deux"
+          ],
+          "reponse": 0,
+          "aide": "Sa mère (XX) ne peut transmettre que des X.",
+          "explication": "La mère ne transmet qu’un X : le **Y** vient du père, le spermatozoïde détermine le sexe."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment une trisomie 21 peut-elle apparaître ?",
+          "options": [
+            "Par une mauvaise répartition des chromosomes lors de la méiose",
+            "Par une infection virale attrapée par l’enfant après sa naissance",
+            "Par un manque d’exercice physique pendant la grossesse de la mère",
+            "Par une mitose trop rapide au cours du développement de l’embryon"
+          ],
+          "reponse": 0,
+          "aide": "Un gamète peut recevoir un chromosome en trop.",
+          "explication": "Une erreur de répartition à la **méiose** donne un gamète à 24 chromosomes : après fécondation, la cellule œuf en a 47."
+        }
+      ]
+    },
+    {
+      "chapitre": "eecdeebf-f722-5ba9-9768-218853497a2f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le nombre qui ne doit pas doubler",
+      "competence": "raisonner",
+      "situation": "Emma se demande pourquoi le nombre de chromosomes reste le même à chaque génération. Elle compare ce qui se passerait sans méiose et calcule le brassage des chromosomes.",
+      "documents": [
+        {
+          "id": "sans",
+          "type": "chaine",
+          "titre": "Et si les gamètes avaient 46 chromosomes ?",
+          "disposition": "colonne",
+          "noeuds": [
+            {
+              "id": "gp",
+              "texte": "Grands-parents : 46 chromosomes"
+            },
+            {
+              "id": "p",
+              "texte": "Parents : ?"
+            },
+            {
+              "id": "e",
+              "texte": "Enfants : ?"
+            }
+          ],
+          "liens": [
+            {
+              "de": "gp",
+              "a": "p",
+              "texte": "gamètes de 46 + 46"
+            },
+            {
+              "de": "p",
+              "a": "e",
+              "texte": "gamètes de 92 + 92"
+            }
+          ]
+        },
+        {
+          "id": "brass",
+          "type": "tableau",
+          "titre": "Gamètes différents possibles",
+          "colonnes": [
+            "Paires de chromosomes",
+            "Combinaisons de gamètes"
+          ],
+          "lignes": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "4"
+            ],
+            [
+              "3",
+              "8"
+            ],
+            [
+              "4",
+              "16"
+            ],
+            [
+              "5",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chaque paire se répartit au hasard"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Sans méiose, combien de chromosomes auraient les parents ?",
+          "reponse": 92,
+          "unite": "chromosomes",
+          "aide": "Additionne les chromosomes des deux gamètes des grands-parents.",
+          "explication": "46 + 46 = **92 chromosomes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Toujours sans méiose, combien de chromosomes auraient les enfants ?",
+          "reponse": 184,
+          "unite": "chromosomes",
+          "aide": "Additionne les chromosomes des deux gamètes des parents.",
+          "explication": "92 + 92 = **184 chromosomes** : le nombre doublerait à chaque génération."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec 5 paires de chromosomes, combien de gamètes différents peut-on obtenir ?",
+          "reponse": 32,
+          "unite": "gamètes",
+          "aide": "Regarde ce qui se passe quand on ajoute une paire.",
+          "explication": "Chaque paire **double** le nombre de combinaisons : 2, 4, 8, 16, puis **32**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Deux vrais jumeaux sont identiques. Pourquoi ?",
+          "options": [
+            "Ils sont issus d’une même cellule œuf",
+            "Ils ont reçu les mêmes chromosomes par hasard",
+            "Ils sont issus de deux cellules œuf identiques",
+            "Ils n’ont aucun chromosome en commun"
+          ],
+          "reponse": 0,
+          "aide": "Les faux jumeaux viennent de deux fécondations différentes.",
+          "explication": "Les vrais jumeaux viennent d’**une même cellule œuf** : ils ont la même information génétique."
+        },
+        {
+          "type": "categories",
+          "enonce": "Pour chaque caractère, dis s’il sera transmis aux enfants.",
+          "categories": [
+            "Transmis",
+            "Non transmis"
+          ],
+          "items": [
+            [
+              "Une modification de l’ADN d’un ovule",
+              0
+            ],
+            [
+              "Une musculature développée par le sport",
+              1
+            ],
+            [
+              "Une cicatrice",
+              1
+            ],
+            [
+              "Une langue apprise",
+              1
+            ]
+          ],
+          "aide": "Seule l’information portée par les cellules reproductrices se transmet.",
+          "explication": "Les caractères **acquis** ne modifient pas l’information génétique des gamètes ; seule une modification des **cellules reproductrices** est transmise."
+        }
+      ]
+    },
+    {
+      "chapitre": "e7cf2390-a43f-548b-ac62-9314fe7f3b56",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le neurone, cellule messagère",
+      "competence": "observer-schema",
+      "situation": "Ce schéma représente un neurone. Le message nerveux y circule de la gauche vers la droite, puis passe à la cellule suivante.",
+      "documents": [
+        {
+          "id": "neurone",
+          "type": "schema",
+          "titre": "Un neurone",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                98,
+                110
+              ],
+              "a": [
+                56,
+                78
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                96,
+                120
+              ],
+              "a": [
+                48,
+                120
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                98,
+                130
+              ],
+              "a": [
+                56,
+                162
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 120,
+              "cy": 120,
+              "r": 24,
+              "teinte": "rose",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                120
+              ],
+              "a": [
+                270,
+                120
+              ],
+              "teinte": "encre",
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                100
+              ],
+              "a": [
+                250,
+                100
+              ],
+              "teinte": "encre",
+              "fleche": "fin",
+              "style": "pointilles"
+            },
+            {
+              "forme": "texte",
+              "x": 205,
+              "y": 90,
+              "texte": "Sens du message",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 280,
+              "cy": 120,
+              "rx": 10,
+              "ry": 14,
+              "teinte": "rose",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 306,
+              "y": 92,
+              "l": 28,
+              "h": 56,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 296,
+              "cy": 120,
+              "r": 8,
+              "teinte": "jaune",
+              "motif": "clair",
+              "id": "synapse",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 120,
+              "y": 190,
+              "texte": "A",
+              "vers": [
+                120,
+                146
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 34,
+              "y": 40,
+              "texte": "B",
+              "vers": [
+                66,
+                88
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 210,
+              "y": 190,
+              "texte": "C",
+              "vers": [
+                210,
+                124
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 296,
+              "y": 190,
+              "texte": "D",
+              "vers": [
+                296,
+                132
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre à la partie du neurone.",
+          "paires": [
+            [
+              "A",
+              "Corps cellulaire"
+            ],
+            [
+              "B",
+              "Dendrites"
+            ],
+            [
+              "C",
+              "Axone"
+            ],
+            [
+              "D",
+              "Synapse"
+            ]
+          ],
+          "aide": "Le corps cellulaire est la partie renflée ; l’axone est la longue fibre.",
+          "explication": "A : **corps cellulaire** ; B : **dendrites** ; C : **axone** ; D : **synapse**."
+        },
+        {
+          "type": "zone",
+          "document": "neurone",
+          "enonce": "Touche l’endroit où agit la plupart des drogues.",
+          "reponse": [
+            "synapse"
+          ],
+          "aide": "C’est là que le message passe d’un neurone à l’autre grâce à des substances chimiques.",
+          "explication": "La plupart des drogues agissent à la **synapse**, en perturbant les neurotransmetteurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le message circule de gauche à droite. Par quelle partie entre-t-il dans ce neurone ?",
+          "options": [
+            "Par les dendrites",
+            "Par l’axone",
+            "Par la synapse",
+            "Par le corps cellulaire seul"
+          ],
+          "reponse": 0,
+          "aide": "Suis la flèche en pointillés.",
+          "explication": "Le message entre par les **dendrites**, traverse le corps cellulaire, puis est transmis par l’axone."
+        }
+      ]
+    },
+    {
+      "chapitre": "e7cf2390-a43f-548b-ac62-9314fe7f3b56",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Retirer sa main en un éclair",
+      "competence": "analyser-document",
+      "situation": "Hugo retire sa main d’une plaque chaude sans réfléchir. Le schéma suit le trajet du message nerveux ; le graphique compare ce réflexe à une réaction volontaire.",
+      "documents": [
+        {
+          "id": "trajet",
+          "type": "chaine",
+          "titre": "Le trajet du message nerveux",
+          "disposition": "colonne",
+          "noeuds": [
+            {
+              "id": "st",
+              "texte": "Plaque chaude (stimulus)"
+            },
+            {
+              "id": "re",
+              "texte": "Récepteurs de la peau"
+            },
+            {
+              "id": "ns",
+              "texte": "Nerf sensitif"
+            },
+            {
+              "id": "ce",
+              "texte": "?"
+            },
+            {
+              "id": "nm",
+              "texte": "Nerf moteur"
+            },
+            {
+              "id": "mu",
+              "texte": "Muscle du bras"
+            }
+          ],
+          "liens": [
+            {
+              "de": "st",
+              "a": "re"
+            },
+            {
+              "de": "re",
+              "a": "ns"
+            },
+            {
+              "de": "ns",
+              "a": "ce"
+            },
+            {
+              "de": "ce",
+              "a": "nm"
+            },
+            {
+              "de": "nm",
+              "a": "mu"
+            }
+          ]
+        },
+        {
+          "id": "temps",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Temps de réaction d’Hugo",
+          "categories": [
+            "Retirer la main d’une plaque chaude (réflexe)",
+            "Attraper une règle qui tombe (volontaire)"
+          ],
+          "series": [
+            {
+              "nom": "Temps",
+              "valeurs": [
+                0.04,
+                0.2
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Temps de réaction",
+            "unite": "s",
+            "min": 0,
+            "max": 0.25,
+            "pas": 0.05
+          },
+          "valeurs": true,
+          "source": "Mesures arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "Quel centre nerveux traite le message pendant un réflexe, à la place du « ? » ? (deux mots)",
+          "reponse": [
+            "moelle épinière",
+            "la moelle épinière",
+            "moelle epiniere",
+            "moelle"
+          ],
+          "aide": "Il se trouve dans la colonne vertébrale.",
+          "explication": "Dans un réflexe, le message est traité par la **moelle épinière**."
+        },
+        {
+          "type": "zone",
+          "document": "temps",
+          "enonce": "Touche la barre de la réaction la plus lente.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Compare les deux temps, en secondes.",
+          "explication": "La réaction volontaire dure **0,20 s**, contre 0,04 s pour le réflexe."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le réflexe est-il plus rapide que la réaction volontaire ?",
+          "reponse": 5,
+          "aide": "Divise le temps le plus long par le plus court.",
+          "explication": "0,20 ÷ 0,04 = **5** fois plus rapide."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le réflexe est-il beaucoup plus rapide ?",
+          "options": [
+            "Le message est traité par la moelle épinière, sans passer par le cerveau",
+            "Le message se déplace beaucoup plus vite dans les nerfs, pendant un réflexe",
+            "Le muscle réagit avant même que le message nerveux ne soit émis par la peau",
+            "Le cerveau traite le message deux fois plus vite qu’un mouvement volontaire"
+          ],
+          "reponse": 0,
+          "aide": "Quel trajet est plus court ?",
+          "explication": "Le traitement se fait par la **moelle épinière** : le trajet est plus court, donc la réaction beaucoup plus rapide."
+        }
+      ]
+    },
+    {
+      "chapitre": "e7cf2390-a43f-548b-ac62-9314fe7f3b56",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Alcool, bruit et système nerveux",
+      "competence": "analyser-document",
+      "situation": "Deux documents pour comprendre deux risques : le temps de réaction d’un conducteur selon son alcoolémie (données imaginées, dans l’ordre de grandeur des études), et des repères sur le bruit.",
+      "documents": [
+        {
+          "id": "alcool",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Temps de réaction d’un conducteur",
+          "categories": [
+            "0 g/L",
+            "0,5 g/L",
+            "0,8 g/L",
+            "1,2 g/L"
+          ],
+          "series": [
+            {
+              "nom": "Temps de réaction",
+              "valeurs": [
+                0.8,
+                0.9,
+                1,
+                1.2
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Temps de réaction",
+            "unite": "s",
+            "min": 0,
+            "max": 1.4,
+            "pas": 0.2
+          },
+          "axeX": {
+            "titre": "Alcool dans le sang"
+          },
+          "valeurs": true
+        },
+        {
+          "id": "bruit",
+          "type": "tableau",
+          "titre": "Bruit et risque pour l’oreille",
+          "colonnes": [
+            "Situation",
+            "Niveau sonore",
+            "Durée avant risque"
+          ],
+          "lignes": [
+            [
+              "Conversation normale",
+              "60 dB",
+              "Aucun risque"
+            ],
+            [
+              "Circulation très dense",
+              "85 dB",
+              "8 heures environ"
+            ],
+            [
+              "Écouteurs au volume maximum",
+              "100 dB",
+              "15 minutes environ"
+            ],
+            [
+              "Concert, première rangée",
+              "110 dB",
+              "1 à 2 minutes environ"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Repères de prévention, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de secondes le temps de réaction augmente-t-il entre un conducteur sobre et un conducteur à 1,2 g/L ?",
+          "reponse": 0.4,
+          "unite": "s",
+          "aide": "Soustrais les deux temps lus sur le graphique.",
+          "explication": "1,2 − 0,8 = **0,4 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 90 km/h, la voiture parcourt 25 m par seconde. Combien de mètres de plus parcourt-elle avant de réagir, à 1,2 g/L, par rapport à un conducteur sobre ?",
+          "reponse": 10,
+          "unite": "m",
+          "aide": "Multiplie l’écart de temps par 25 m/s.",
+          "explication": "0,4 s × 25 m/s = **10 m** de plus, parfois la distance qui sépare de l’obstacle."
+        },
+        {
+          "type": "zone",
+          "document": "bruit",
+          "enonce": "Touche la durée d’écoute avant risque pour des écouteurs au volume maximum.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne des écouteurs.",
+          "explication": "Des écouteurs à 100 dB deviennent dangereux en **15 minutes environ**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Après un concert à 110 dB, Sam entend un sifflement qui disparaît le lendemain. Que doit-il comprendre ?",
+          "options": [
+            "C’est un signal d’alerte : des cellules ciliées ont pu être abîmées, sans se régénérer",
+            "Tout est revenu à la normale le lendemain, il n’y a donc aucun risque pour l’oreille",
+            "Ses cellules de l’oreille se sont régénérées pendant la nuit, l’audition est intacte",
+            "Le bruit n’agit que sur les muscles de l’oreille, jamais sur les cellules ciliées"
+          ],
+          "reponse": 0,
+          "aide": "Les cellules ciliées de l’oreille interne sont très fragiles.",
+          "explication": "Le bruit intense détruit les **cellules ciliées**, de façon **irréversible** : un sifflement est un signal d’alerte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’alcool allonge-t-il le temps de réaction ?",
+          "options": [
+            "Il ralentit le fonctionnement du système nerveux, dont les réflexes et le jugement",
+            "Il rend les muscles plus rapides, ce qui raccourcirait plutôt le temps de réaction",
+            "Il accélère la transmission des messages nerveux, ce qui rend le cerveau plus rapide",
+            "Il agit seulement sur les yeux, qui repèrent donc plus lentement les obstacles"
+          ],
+          "reponse": 0,
+          "aide": "Relis les effets de l’alcool sur le système nerveux.",
+          "explication": "L’alcool **ralentit le système nerveux** : réflexes plus lents, jugement altéré, donc un temps de réaction plus long."
+        }
+      ]
+    }
+  ]
+}

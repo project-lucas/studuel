@@ -21,10 +21,18 @@ import type { SubjectProgress } from '@/lib/subject-template'
 export default function SubjectStickyBar({
   name,
   progress,
+  jauge,
   gardien = null,
 }: {
   name: string
   progress: SubjectProgress
+  /**
+   * Le remplissage de la barre, sur la courbe d'encouragement (cf.
+   * SubjectHeader). Quand il est fourni, le pourcentage écrit laisse place au
+   * COMPTE exact (« 3/28 ») : un « 4 % » à côté d'une barre au sixième se
+   * contredirait.
+   */
+  jauge?: number
   /**
    * L'écusson du gardien, repris ici en petit. Sans lui, l'anneau s'évaporerait
    * dès qu'on descend dans la liste des chapitres — c'est-à-dire pendant tout
@@ -88,11 +96,11 @@ export default function SubjectStickyBar({
             >
               <span
                 className="block h-full rounded-full bg-highlight transition-all"
-                style={{ width: `${progress.pct}%` }}
+                style={{ width: `${jauge ?? progress.pct}%` }}
               />
             </span>
             <span className="text-xs font-bold text-muted-foreground tabular-nums">
-              {progress.pct}%
+              {jauge === undefined ? `${progress.pct}%` : `${progress.done}/${progress.total}`}
             </span>
           </span>
         </div>

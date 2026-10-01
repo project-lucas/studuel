@@ -11,12 +11,12 @@ export const dynamic = 'force-dynamic'
 // L'écran de chapitre : on choisit AVANT d'entrer.
 //
 // Ouvrir un chapitre menait droit au cours, sans rien demander. C'était rapide
-// pour qui venait lire, et fermé pour tous les autres — celui qui voulait ses
-// flashcards tombait sur trois écrans de leçon rédigée et devait repartir en
-// arrière. L'écran rend le choix, et le RANGE (16/09/2026) sous trois verbes :
-// Apprendre (Cours, Fiche) · Mémoriser (Flashcards) · Se tester (Quiz,
-// Exercice, Moi vs IA). Cinq tuiles en vrac, dont trois jouaient les mêmes
-// questions, ne disaient pas la différence ; les groupes la disent.
+// pour qui venait lire, et fermé pour tous les autres — celui qui voulait son
+// quiz tombait sur trois écrans de leçon rédigée et devait repartir en
+// arrière. L'écran rend le choix, et le RANGE (16/09/2026) sous des verbes :
+// Apprendre (Cours, Fiche) · Se tester (Quiz, Exercice, Mes erreurs, Moi vs
+// IA). Les flashcards — et « Mémoriser » avec elles — en sont parties le
+// 01/10/2026 : elles rejouaient les questions du quiz (cf. lib/subject-template).
 //
 // Plus de lavis bleu ciel ni de « Chapitre N » en surtitre (audit du
 // 23/09/2026, docs/template-matiere.md) : l'en-tête est celui de toutes les

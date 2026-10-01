@@ -42,7 +42,7 @@ Les **routeurs** ne connaissent pas le chemin complet : ils choisissent seulemen
             ['Sur combien de bits s’écrit une adresse IPv4 ?', ['32 bits', '64 bits', '128 bits', '16 bits'], 0, 'Soit environ 4,3 milliards d’adresses, aujourd’hui épuisées.'],
             ['Deux paquets d’un même message empruntent forcément le même chemin.', ['Vrai', 'Faux'], 1, 'Ils peuvent suivre des routes différentes et être réassemblés à l’arrivée.'],
             ['Quel équipement choisit le chemin des paquets ?', ['Le routeur', 'Le serveur DNS', 'Le navigateur', 'Le modem seul'], 0, 'Il décide du prochain saut vers la destination.'],
-            ['IPv6 a été créé parce que les adresses IPv4 étaient épuisées.', ['Vrai', 'Faux'], 0, '128 bits offrent un espace d’adressage pratiquement illimité.'],
+            ['IPv6 a été conçu pour anticiper l’épuisement des adresses IPv4.', ['Vrai', 'Faux'], 0, 'Conçu dès les années 1990, avant que les adresses IPv4 ne manquent : 128 bits offrent un espace d’adressage pratiquement illimité.'],
             ['Internet est dirigé par une machine centrale.', ['Vrai', 'Faux'], 1, 'C’est un réseau décentralisé de réseaux interconnectés.'],
           ],
         },

@@ -143,6 +143,8 @@ DELETE FROM public.chapters c
 
 Chacun contient le précédent : ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ.
 
+On écrit « −5 ∈ ℤ » (−5 appartient à ℤ) et « √2 ∉ ℚ » (√2 n'appartient pas à ℚ). Le symbole ∈ relie un nombre à un ensemble ; le symbole ⊂ relie deux ensembles.
+
 ## La droite numérique
 Chaque réel correspond à un point d'une droite graduée, et réciproquement.
 
@@ -158,17 +160,39 @@ Chaque réel correspond à un point d'une droite graduée, et réciproquement.
 
 > Le crochet est **toujours ouvert** du côté de l'infini : l'infini n'est pas un nombre.
 
+La méthode pour passer d'une inégalité à un intervalle :
+1. Repérer les bornes : 2 < x ≤ 5 a pour bornes 2 et 5.
+2. Choisir chaque crochet : inégalité stricte, crochet ouvert ; inégalité large, crochet fermé.
+3. Écrire la borne la plus petite à gauche : x appartient à ]2 ; 5].
+
 ## Réunion, intersection, valeur absolue
 | Le symbole | Ce qu'il garde |
 | L'intersection ∩ | Ce qui appartient **aux deux** ensembles |
 | La réunion ∪ | Ce qui appartient à **l'un ou à l'autre** |
+
+Exemple : [0 ; 5] ∩ [3 ; 8] = [3 ; 5] et [0 ; 5] ∪ [3 ; 8] = [0 ; 8]. Pour ne pas se tromper, on représente les deux intervalles sur la même droite graduée.
 
 La **valeur absolue** d'un réel x est sa distance à 0.
 
 | L'inéquation | Sa traduction |
 | La valeur absolue de (x − a) est inférieure ou égale à r | x appartient à [a − r ; a + r] |
 
-C'est l'intervalle **centré en a**, de rayon r.`,
+C'est l'intervalle **centré en a**, de rayon r.
+
+Plus généralement, la valeur absolue de (x − a) est la **distance** entre x et a sur la droite. Ainsi |−7| = 7, |3 − 8| = 5.
+
+## Exemple résolu
+Résoudre |x − 4| ≤ 2.
+1. On traduit : la distance entre x et 4 est au plus 2.
+2. Le centre est 4, le rayon 2 : 4 − 2 = 2 et 4 + 2 = 6.
+3. S = **[2 ; 6]**.
+
+## Les erreurs fréquentes
+- Fermer un crochet du côté de l'infini : on écrit ]−∞ ; 3], jamais [−∞ ; 3].
+- Croire que 1/3 est décimal : son écriture est infinie, il est seulement rationnel.
+- Confondre ∩ et ∪ : l'intersection est « et », la réunion est « ou ».
+
+> Ces notations serviront toute l'année pour écrire les solutions des inéquations, les ensembles de définition et les intervalles de variation.`,
           },
           questions: [
             ['Quel ensemble contient tous les autres ?', ['ℝ, l’ensemble des réels', 'ℚ, l’ensemble des rationnels', 'ℤ, l’ensemble des entiers relatifs', 'ⅅ, l’ensemble des décimaux'], 0, 'ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ.'],
@@ -204,11 +228,19 @@ C'est l'intervalle **centré en a**, de rayon r.`,
 
 > Un quotient d'entiers est décimal si, la fraction étant irréductible, le dénominateur ne contient comme facteurs premiers que **2 et 5**.
 
+Exemple : 3/8 = 3/2³ est décimal, et 3/8 = 375/1000 = 0,375. En revanche 7/12 = 7/(2² × 3) ne l'est pas.
+
 ## Des exemples de rationnels et d'irrationnels
 | Le nombre | Son développement |
 | 1/3 | 0,333… — période de longueur 1 |
 | 1/7 | 0,142857142857… — période de longueur 6 |
 | √2, √3, π, le nombre d'or | Infini, sans période |
+
+## Exemple résolu : écrire un développement périodique en fraction
+Soit x = 0,272727… (la période 27 se répète).
+1. On multiplie par 100 pour décaler d'une période : 100x = 27,272727…
+2. On soustrait : 100x − x = 27, donc 99x = 27.
+3. x = 27/99 = **3/11**. Un développement périodique est donc bien un rationnel.
 
 ## Pourquoi √2 est irrationnel
 | L'étape du raisonnement par l'absurde | Ce qu'elle donne |
@@ -217,13 +249,22 @@ C'est l'intervalle **centré en a**, de rayon r.`,
 | On pose p = 2k | 2q² = 4k², donc q² = 2k² |
 | q est donc pair aussi | p et q sont tous deux pairs : **contradiction** avec l'irréductibilité |
 
+Le raisonnement par l'absurde consiste à supposer le contraire de ce qu'on veut prouver, puis à aboutir à une impossibilité. Cette démonstration figure explicitement au programme de Seconde.
+
 ## Calculer avec les fractions
 | L'opération | La règle |
 | **Additionner** | Réduire au même dénominateur |
 | **Multiplier** | Terme à terme |
 | **Diviser** | Multiplier par l'inverse |
 
-> Il est presque toujours plus sûr de garder une valeur **exacte** — 1/3, √2 — qu'une valeur approchée : les arrondis successifs s'accumulent.`,
+Exemples : 2/3 + 1/6 = 4/6 + 1/6 = **5/6** ; 2/3 × 9/4 = 18/12 = 3/2 ; (2/3) ÷ (4/5) = 2/3 × 5/4 = 10/12 = 5/6.
+
+> Il est presque toujours plus sûr de garder une valeur **exacte** — 1/3, √2 — qu'une valeur approchée : les arrondis successifs s'accumulent.
+
+## Les erreurs fréquentes
+- Croire qu'un « nombre à virgule » est forcément décimal : 0,333… ne l'est pas.
+- Additionner numérateurs et dénominateurs : 2/3 + 1/6 n'est pas 3/9.
+- Confondre la valeur affichée par la calculatrice (1,414213562) avec √2 lui-même.`,
           },
           questions: [
             ['Qu’est-ce qu’un nombre décimal ?', ['Un nombre dont l’écriture décimale est finie', 'Un nombre à virgule', 'Un quotient de deux entiers', 'Un nombre inférieur à 1'], 0, 'Il peut s’écrire a/10ⁿ avec a entier.'],
@@ -248,6 +289,10 @@ C'est l'intervalle **centré en a**, de rayon r.`,
 | b **divise** a | Il existe un entier k tel que a = b × k |
 | a est un **multiple** de b | La même relation, vue de l'autre côté |
 
+Exemple : 7 divise 91, car 91 = 7 × 13. On dit aussi que 91 est un multiple de 7.
+
+Deux propriétés utiles, au programme : la somme de deux multiples de a est un multiple de a ; le carré d'un nombre impair est impair. Démonstration de la seconde : si n = 2k + 1, alors n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, qui est impair.
+
 ## Les critères de divisibilité
 | Le diviseur | Le critère |
 | **2** | Le chiffre des unités est pair |
@@ -268,24 +313,39 @@ Les premiers : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29…
 
 > Un nombre premier n'est pas un nombre rare : il y en a une infinité, et Euclide l'a démontré il y a plus de deux mille ans.
 
+## Exemple résolu : 221 est-il premier ?
+1. √221 ≈ 14,9 : il suffit de tester 2, 3, 5, 7, 11 et 13.
+2. 221 est impair, la somme de ses chiffres (5) n'est pas multiple de 3, il ne finit ni par 0 ni par 5.
+3. 221 ÷ 7 ≈ 31,6 et 221 ÷ 11 ≈ 20,1 ne tombent pas juste, mais 221 = **13 × 17**.
+4. Conclusion : 221 **n'est pas premier**.
+
 ## La décomposition
 Tout entier supérieur ou égal à 2 s'écrit de manière **unique** comme produit de facteurs premiers.
 
 360 = 2³ × 3² × 5
 
+On l'obtient en divisant successivement : 360 = 2 × 180 = 2² × 90 = 2³ × 45 = 2³ × 3 × 15 = 2³ × 3² × 5.
+
 | Son usage | Ce qu'elle permet |
 | Simplifier une **fraction** | Repérer les facteurs communs |
 | Trouver le **PGCD** | Prendre les facteurs communs au plus petit exposant |
-| La **cryptographie** moderne | Multiplier deux grands premiers est facile ; retrouver les facteurs d'un très grand produit ne l'est pas |`,
+| La **cryptographie** moderne | Multiplier deux grands premiers est facile ; retrouver les facteurs d'un très grand produit ne l'est pas |
+
+Exemple : 360 = 2³ × 3² × 5 et 84 = 2² × 3 × 7, donc PGCD(360 ; 84) = 2² × 3 = **12**.
+
+## Les erreurs fréquentes
+- Dire qu'un nombre impair est premier : 91 = 7 × 13 ne l'est pas.
+- Tester les diviseurs jusqu'à n/2 : c'est inutilement long, √n suffit.
+- Confondre « a divise b » et « a est un multiple de b ».`,
           },
           questions: [
-            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur ou égal à 2 n’ayant que deux diviseurs positifs', 'Un nombre impair', 'Un nombre qui n’est pas décomposable', 'Le premier terme d’une suite'], 0, '1 et lui-même.'],
+            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur ou égal à 2 n’ayant que deux diviseurs positifs', 'Un nombre impair', 'Un nombre qui n’est pas décomposable', 'Le premier terme d’une suite'], 0, 'Ses deux seuls diviseurs positifs sont 1 et lui-même. C’est pourquoi 1 n’est pas premier, et 2 est le seul nombre premier pair.'],
             ['Le nombre 1 est-il premier ?', ['Non, par convention, pour garantir l’unicité de la décomposition', 'Oui', 'Oui, c’est le plus petit', 'Cela dépend du contexte'], 0, 'Sinon, tout produit pourrait être multiplié par 1 indéfiniment.'],
             ['Quel critère permet de savoir si un nombre est divisible par 3 ?', ['La somme de ses chiffres est divisible par 3', 'Il se termine par 3', 'Il est impair', 'Ses deux derniers chiffres sont divisibles par 3'], 0, 'Même principe pour 9.'],
             ['Quelle est la décomposition en facteurs premiers de 360 ?', ['2³ × 3² × 5', '2² × 3³ × 5', '2 × 3 × 60', '2⁴ × 3 × 5'], 0, '8 × 9 × 5 = 360.'],
             ['Jusqu’où faut-il tester les diviseurs pour savoir si n est premier ?', ['Jusqu’à √n', 'Jusqu’à n/2', 'Jusqu’à n', 'Jusqu’à 100'], 0, 'Au-delà, on retrouverait des diviseurs déjà rencontrés.'],
             ['Il existe une infinité de nombres premiers.', ['Vrai', 'Faux'], 0, 'Démontré par Euclide il y a plus de deux mille ans.'],
-            ['Que signifie que 7 divise 91 ?', ['Il existe un entier k tel que 91 = 7 × k', '91 est premier', '7 est un multiple de 91', '91/7 n’est pas entier'], 0, 'Ici k = 13.'],
+            ['Que signifie que 7 divise 91 ?', ['Il existe un entier k tel que 91 = 7 × k', '91 est premier', '7 est un multiple de 91', '91/7 n’est pas entier'], 0, '91 = 7 × 13 : l’entier k vaut 13. On dit aussi que 91 est un multiple de 7.'],
             ['Sur quoi repose la sécurité de nombreux systèmes de chiffrement ?', ['La difficulté de factoriser un très grand nombre', 'La rareté des nombres pairs', 'Le calcul du PGCD', 'Les critères de divisibilité'], 0, 'Multiplier est facile, factoriser ne l’est pas.'],
           ],
         },
@@ -307,6 +367,8 @@ Tout entier supérieur ou égal à 2 s'écrit de manière **unique** comme produ
 
 La **notation scientifique** écrit tout nombre sous la forme a × 10ⁿ, où la valeur absolue de a est comprise entre 1 inclus et 10 exclu.
 
+Exemple : (a³)⁴ × a⁻⁵ = a¹² × a⁻⁵ = a⁷.
+
 ## Les racines carrées
 Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 
@@ -316,7 +378,17 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 | √(a + b) = √a + √b | **FAUSSE** — la faute la plus fréquente |
 | √(a²) = a | **Fausse** : c'est la valeur absolue de a |
 
+Contre-exemple à retenir : √9 + √16 = 3 + 4 = 7, alors que √(9 + 16) = √25 = 5.
+
 > Une racine au dénominateur se rend rationnelle en multipliant haut et bas par la même racine : 1/√2 = √2/2.
+
+## Exemple résolu : simplifier une racine
+Écrire √72 + √50 sous la forme a√2.
+1. On cherche le plus grand carré parfait qui divise chaque nombre : 72 = 36 × 2 et 50 = 25 × 2.
+2. √72 = √36 × √2 = 6√2 et √50 = √25 × √2 = 5√2.
+3. √72 + √50 = 6√2 + 5√2 = **11√2**.
+
+De même, 1/√3 = √3/(√3 × √3) = **√3/3**.
 
 ## Les quotients
 | La règle | Son contenu |
@@ -324,13 +396,20 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 | Additionner | Réduire au même dénominateur |
 | Simplifier | Factoriser numérateur et dénominateur **avant** de barrer |
 
+Exemple : pour x différent de 3, (x² − 9)/(x − 3) = (x − 3)(x + 3)/(x − 3) = x + 3. On a barré le **facteur** (x − 3), et la valeur interdite 3 reste exclue.
+
 ## Les pièges classiques
 | L'écriture fausse | Pourquoi |
 | (a + b)² = a² + b² | Le **double produit** manque |
 | 1/(a + b) = 1/a + 1/b | L'inverse d'une somme n'est pas la somme des inverses |
 | (x + 3)/(x + 5) = 3/5 | On a barré des **termes**, pas des facteurs |
 
-> Dans tous ces cas, la règle est la même : on ne simplifie que des **facteurs**, jamais des **termes**.`,
+> Dans tous ces cas, la règle est la même : on ne simplifie que des **facteurs**, jamais des **termes**.
+
+Réflexe de contrôle : remplacer x par une valeur simple (x = 1) dans l'expression de départ et dans le résultat. Si les deux valeurs diffèrent, le calcul est faux.
+
+## Pour la suite
+Ces règles sont la grammaire du lycée : on les retrouve dans les fonctions de référence, les dérivées de Première et les exponentielles.`,
           },
           questions: [
             ['Que vaut a⁵ × a³ ?', ['a⁸', 'a¹⁵', 'a²', '2a⁸'], 0, 'On additionne les exposants.'],
@@ -358,6 +437,8 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 
 > Le terme du milieu, le **double produit**, est celui que l'on oublie : (a + b)² n'est **jamais** a² + b².
 
+Ces formules se démontrent par la double distributivité : (a + b)² = (a + b)(a + b) = a² + ab + ba + b² = a² + 2ab + b². Elles sont vraies pour tous réels a et b, et a ou b peuvent être eux-mêmes des expressions comme 3x.
+
 ## Développer
 | L'expression | Son développement |
 | (x + 5)² | x² + 10x + 25 |
@@ -365,6 +446,8 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 | (2x + 7)(2x − 7) | 4x² − 49 |
 
 > Le repérage se fait en identifiant a et b **avant** tout calcul.
+
+Détail pour (3x − 2)² : a = 3x et b = 2 ; a² = 9x², 2ab = 2 × 3x × 2 = 12x, b² = 4.
 
 ## Factoriser
 | L'expression | Sa forme factorisée | L'identité utilisée |
@@ -374,6 +457,19 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 
 > On cherche d'abord un **facteur commun**, puis une identité remarquable.
 
+La méthode pour factoriser :
+1. Chercher un facteur commun à tous les termes et le mettre en évidence.
+2. Compter les termes : deux carrés séparés par un moins, c'est a² − b² ; trois termes dont deux carrés, c'est peut-être (a + b)² ou (a − b)².
+3. Vérifier le double produit avant de conclure : x² + 10x + 25 = (x + 5)², car 2 × x × 5 = 10x.
+4. Redévelopper pour contrôler.
+
+## Exemple résolu : résoudre grâce à une factorisation
+Résoudre (x + 1)² − 16 = 0.
+1. On reconnaît a² − b² avec a = x + 1 et b = 4.
+2. On factorise : (x + 1 − 4)(x + 1 + 4) = 0, soit (x − 3)(x + 5) = 0.
+3. Produit nul : x − 3 = 0 ou x + 5 = 0.
+4. S = **{−5 ; 3}**.
+
 > Développer sert à calculer ; factoriser sert à résoudre. Une équation se résout presque toujours sous forme factorisée.
 
 ## À quoi cela sert
@@ -381,7 +477,12 @@ Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
 | Résoudre une équation | Le **produit nul** : un produit est nul si et seulement si l'un de ses facteurs est nul |
 | Simplifier une fraction rationnelle | Faire apparaître un facteur commun |
 | Calculer de tête | 101 × 99 = (100 + 1)(100 − 1) = 10 000 − 1 = **9 999** |
-| Préparer la Première | La forme canonique du trinôme |`,
+| Préparer la Première | La forme canonique du trinôme |
+
+## Les erreurs fréquentes
+- Écrire (x − 3)² = x² − 9 : il manque −6x.
+- Factoriser x² + 9 en (x + 3)(x − 3) : une **somme** de carrés ne se factorise pas ainsi.
+- Oublier les parenthèses : (2x)² = 4x², pas 2x².`,
           },
           questions: [
             ['Que vaut (a + b)² ?', ['a² + 2ab + b²', 'a² + b²', 'a² − 2ab + b²', '2a + 2b'], 0, 'Le double produit est le terme qu’on oublie.'],
@@ -409,6 +510,8 @@ ax + b = 0 admet, pour a non nul, l'unique solution x = −b/a.
 | 2 | Regrouper les termes en x d'un côté, les constantes de l'autre |
 | 3 | **Diviser** par le coefficient de x |
 
+Exemple : 3x − 12 = 0 donne 3x = 12, donc x = 4. On conclut toujours par l'ensemble des solutions : S = {4}.
+
 ## Produit et quotient
 | L'équation | La condition de nullité |
 | Un **produit** est nul | Si et seulement si **l'un de ses facteurs** est nul |
@@ -417,6 +520,8 @@ ax + b = 0 admet, pour a non nul, l'unique solution x = −b/a.
 (x − 2)(x + 5) = 0 donne x = 2 **ou** x = −5.
 
 > Pour un quotient, déterminer les **valeurs interdites** avant toute résolution.
+
+Exemple : (x − 3)/(x + 1) = 0. Valeur interdite : −1. Le numérateur s'annule pour x = 3, qui n'est pas interdit : S = {3}.
 
 ## Les inéquations
 Mêmes gestes qu'une équation, avec une exception décisive.
@@ -430,6 +535,8 @@ Mêmes gestes qu'une équation, avec une exception décisive.
 
 La solution s'écrit sous forme d'**intervalle** : par exemple S = ]−∞ ; 3].
 
+Exemple : −2x + 6 > 0 donne −2x > −6 ; on divise par −2 en inversant le sens : x < 3, donc S = ]−∞ ; 3[.
+
 ## Le tableau de signes
 | L'étape | Ce qu'on y met |
 | 1 | Les **valeurs qui annulent** chaque facteur, dans l'ordre croissant |
@@ -437,7 +544,19 @@ La solution s'écrit sous forme d'**intervalle** : par exemple S = ]−∞ ; 3].
 | 3 | Le signe du produit ou du quotient, par la règle des signes |
 | 4 | Une **double barre** à la valeur interdite d'un dénominateur |
 
-> Cette méthode se réutilise toute l'année, et l'an prochain avec le second degré.`,
+## Exemple résolu : une inéquation produit
+Résoudre (x − 2)(x + 5) ≤ 0.
+1. Les facteurs s'annulent en −5 et en 2.
+2. x − 2 est négatif avant 2, positif après ; x + 5 est négatif avant −5, positif après.
+3. Le produit est positif sur ]−∞ ; −5[, négatif sur ]−5 ; 2[, positif sur ]2 ; +∞[.
+4. On veut « inférieur ou égal » : on garde l'intervalle négatif, bornes comprises car elles annulent le produit. S = **[−5 ; 2]**.
+
+> Cette méthode se réutilise toute l'année, et l'an prochain avec le second degré.
+
+## Les erreurs fréquentes
+- Diviser par un nombre négatif sans changer le sens de l'inégalité.
+- Diviser les deux membres par x : on risque de perdre la solution x = 0. On factorise plutôt.
+- Fermer un crochet sur une valeur interdite, où le quotient n'existe pas.`,
           },
           questions: [
             ['Quelle est la solution de 3x − 12 = 0 ?', ['x = 4', 'x = −4', 'x = 12', 'x = 36'], 0, 'On isole x puis on divise par 3.'],
@@ -472,12 +591,16 @@ La solution s'écrit sous forme d'**intervalle** : par exemple S = ]−∞ ; 3].
 | **Sinus** | Opposé sur hypoténuse |
 | **Tangente** | Opposé sur adjacent |
 
+Rappels : la réciproque de Pythagore démontre qu'un triangle est rectangle (on compare le carré du plus grand côté à la somme des carrés des deux autres) ; Thalès calcule des longueurs quand des droites sont parallèles, sa réciproque prouve un parallélisme.
+
 ## Les droites remarquables
 | La droite | Son point de concours | Ce qu'il est |
 | **Médiatrices** | Centre du cercle **circonscrit** | Équidistant des trois sommets |
 | **Hauteurs** | **Orthocentre** | — |
 | **Médianes** | Centre de **gravité** | Aux deux tiers de chaque médiane depuis le sommet |
 | **Bissectrices** | Centre du cercle **inscrit** | Équidistant des trois côtés |
+
+Une hauteur passe par un sommet et coupe perpendiculairement la droite portant le côté opposé : son pied est justement le projeté orthogonal de ce sommet sur ce côté.
 
 ## Le projeté orthogonal
 Le **projeté orthogonal** de M sur une droite d est le point H de d tel que (MH) soit perpendiculaire à d.
@@ -490,14 +613,30 @@ C'est ce qu'on appelle la distance du point M à la droite d.
 
 > Le projeté orthogonal, c'est l'ombre d'un point sur une droite quand la lumière vient perpendiculairement.
 
+Pourquoi MH est la plus courte : si N est un autre point de d, le triangle MHN est rectangle en H, donc MN² = MH² + HN² ; comme HN n'est pas nul, MN² > MH², et MN > MH.
+
+## Exemple résolu
+Dans un triangle ABC, AB = 6 cm, AC = 8 cm, BC = 10 cm. Calculer la distance de A à la droite (BC).
+1. 10² = 100 et 6² + 8² = 36 + 64 = 100 : par la réciproque de Pythagore, ABC est rectangle en A.
+2. Aire du triangle : (6 × 8) ÷ 2 = 24 cm².
+3. Soit H le projeté orthogonal de A sur (BC) ; l'aire vaut aussi (BC × AH) ÷ 2, donc 10 × AH ÷ 2 = 24.
+4. AH = **4,8 cm** : c'est la distance de A à (BC).
+
 ## Applications
 | L'application | Ce qu'elle utilise |
 | Calculer une hauteur, une aire | La distance à une droite |
 | Justifier qu'un point est le plus proche | La minimalité |
-| **Optimiser** | Dans de nombreux problèmes concrets, le minimum d'une distance s'obtient au pied de la perpendiculaire |`,
+| **Optimiser** | Dans de nombreux problèmes concrets, le minimum d'une distance s'obtient au pied de la perpendiculaire |
+
+## Les erreurs fréquentes
+- Confondre orthocentre (hauteurs) et centre de gravité (médianes).
+- Placer le centre de gravité au milieu d'une médiane : il est aux deux tiers depuis le sommet.
+- Utiliser Pythagore sans avoir justifié l'angle droit.
+
+> En Première, le projeté orthogonal servira à calculer le produit scalaire.`,
           },
           questions: [
-            ['Qu’est-ce que le projeté orthogonal d’un point M sur une droite d ?', ['Le point H de d tel que (MH) soit perpendiculaire à d', 'Le milieu du segment reliant M à d', 'Le point de d le plus éloigné de M', 'L’intersection de d avec la médiatrice'], 0, 'Il est unique.'],
+            ['Qu’est-ce que le projeté orthogonal d’un point M sur une droite d ?', ['Le point H de d tel que (MH) soit perpendiculaire à d', 'Le milieu du segment reliant M à d', 'Le point de d le plus éloigné de M', 'L’intersection de d avec la médiatrice'], 0, 'H est le point de d le plus proche de M, et il est unique : (MH) est la perpendiculaire à d qui passe par M.'],
             ['Que représente la distance MH lorsque H est le projeté orthogonal de M sur d ?', ['La plus courte distance de M à la droite d', 'La distance moyenne', 'Le rayon du cercle circonscrit', 'La longueur de la médiane'], 0, 'Toute autre distance de M à un point de d est plus grande.'],
             ['Où se coupent les médiatrices d’un triangle ?', ['Au centre du cercle circonscrit', 'À l’orthocentre', 'Au centre de gravité', 'Au centre du cercle inscrit'], 0, 'Elles sont équidistantes des trois sommets.'],
             ['Où se coupent les hauteurs d’un triangle ?', ['À l’orthocentre', 'Au centre de gravité', 'Au centre du cercle inscrit', 'Au centre du cercle circonscrit'], 0, 'Chaque hauteur passe par un sommet perpendiculairement au côté opposé.'],
@@ -522,12 +661,16 @@ C'est ce qu'on appelle la distance du point M à la droite d.
 
 Le **vecteur nul** a une norme nulle et pas de direction propre.
 
+Le vecteur AB est associé à la **translation** qui envoie A sur B : chaque point du plan subit le même déplacement.
+
 ## Égalité et parallélogramme
 Deux vecteurs AB et CD sont **égaux** lorsqu'ils ont même direction, même sens et même norme.
 
 > C'est exactement dire que **ABDC est un parallélogramme**, éventuellement aplati. Un vecteur peut donc être représenté à partir de n'importe quel point.
 
 > Dire que deux vecteurs sont égaux, c'est dire qu'un même déplacement a été effectué à deux endroits.
+
+Attention à l'ordre des lettres : AB = CD donne le parallélogramme ABDC, et non ABCD. On le retrouve en suivant le déplacement : A vers B, puis B vers D, puis D vers C.
 
 ## Somme et relation de Chasles
 | La méthode | Son énoncé |
@@ -539,6 +682,8 @@ Deux vecteurs AB et CD sont **égaux** lorsqu'ils ont même direction, même sen
 | Associativité | (u + v) + w = u + (v + w) |
 | Vecteur opposé | AB + BA est le vecteur nul |
 
+Le vecteur BA est l'**opposé** de AB : même direction, même norme, sens contraire. On note BA = −AB, et la différence u − v se calcule comme u + (−v).
+
 ## Multiplication par un réel
 | Le réel k | La direction | Le sens | La norme |
 | k > 0 | Inchangée | **Conservé** | k fois celle de u |
@@ -546,7 +691,20 @@ Deux vecteurs AB et CD sont **égaux** lorsqu'ils ont même direction, même sen
 
 Deux vecteurs non nuls sont **colinéaires** s'il existe un réel k tel que l'un soit k fois l'autre.
 
-> La colinéarité traduit exactement le **parallélisme** des directions — et l'**alignement** lorsque les vecteurs partagent un point.`,
+> La colinéarité traduit exactement le **parallélisme** des directions — et l'**alignement** lorsque les vecteurs partagent un point.
+
+## Exemple résolu : simplifier avec Chasles
+Simplifier u = AB + CA + BC.
+1. On réordonne grâce à la commutativité : u = CA + AB + BC.
+2. Chasles : CA + AB = CB, puis CB + BC = CC.
+3. u est le **vecteur nul**.
+
+Pour démontrer que A, B, C sont alignés, on montre que AB et AC sont colinéaires : par exemple, si AC = 3AB, les deux vecteurs ont la même direction et partagent le point A.
+
+## Les erreurs fréquentes
+- Appliquer Chasles aux longueurs : pour les distances, AB + BC = AC n'est vrai que si B est sur le segment [AC].
+- Confondre AB et BA : ils sont opposés.
+- Croire que −3u a une norme négative : une norme est toujours positive, c'est le sens qui change.`,
           },
           questions: [
             ['Quelles sont les trois caractéristiques d’un vecteur ?', ['Direction, sens et norme', 'Origine, extrémité et longueur', 'Abscisse, ordonnée et angle', 'Position, vitesse et sens'], 0, 'Un vecteur n’a pas de position fixe.'],
@@ -573,6 +731,8 @@ Si A est le point (xA ; yA) et B le point (xB ; yB), le vecteur AB a pour coordo
 
 > L'ordre compte : on soustrait toujours l'**origine** à l'**extrémité**.
 
+Exemple : A(1 ; 2) et B(4 ; 7) donnent AB(4 − 1 ; 7 − 2), soit **(3 ; 5)**.
+
 ## Les formules à connaître
 | La grandeur | Sa formule | Sa condition |
 | Milieu de [AB] | ((xA + xB)/2 ; (yA + yB)/2) | Tout repère |
@@ -582,6 +742,8 @@ Si A est le point (xA ; yA) et B le point (xB ; yB), le vecteur AB a pour coordo
 
 > Le calcul de distance n'est valable que dans un repère **orthonormé**. Dans un repère quelconque, la formule est fausse. C'est Pythagore, rien de plus.
 
+Un repère est **orthonormé** quand ses axes sont perpendiculaires et ont la même unité. Exemple : pour A(0 ; 0) et B(3 ; 4), AB = √(9 + 16) = √25 = 5.
+
 ## Le critère de colinéarité
 Deux vecteurs u(x ; y) et v(x' ; y') sont colinéaires si et seulement si leur **déterminant** est nul :
 
@@ -589,13 +751,28 @@ xy' − yx' = 0
 
 > Ce critère unique remplace la recherche d'un coefficient k.
 
+Exemple : u(2 ; 6) et v(1 ; 3) : 2 × 3 − 6 × 1 = 0, ils sont colinéaires (u = 2v).
+
 ## Ce qu'on démontre avec
 | La propriété à démontrer | La méthode |
 | Deux droites **parallèles** | Deux vecteurs directeurs colinéaires |
 | Trois points **alignés** | Deux vecteurs colinéaires partageant un point |
 | Un **parallélogramme** | Deux vecteurs égaux, ou des diagonales de même milieu |
 
-> La géométrie repérée offre presque toujours une démonstration purement calculatoire.`,
+> La géométrie repérée offre presque toujours une démonstration purement calculatoire.
+
+## Exemple résolu
+A(1 ; 1), B(4 ; 2), C(5 ; 5) et D(2 ; 4). ABCD est-il un parallélogramme ? Les points A, B et E(7 ; 3) sont-ils alignés ?
+1. AB(3 ; 1) et DC(5 − 2 ; 5 − 4) = (3 ; 1) : AB = DC, donc **ABCD est un parallélogramme**.
+2. Contrôle par les diagonales : le milieu de [AC] est (3 ; 3), celui de [BD] aussi.
+3. AE(6 ; 2) : déterminant de AB et AE = 3 × 2 − 1 × 6 = 0. Ils sont colinéaires et partagent A : **A, B, E sont alignés**.
+
+La méthode générale : 1. traduire la propriété en vecteurs ; 2. calculer les coordonnées utiles ; 3. appliquer le bon critère ; 4. conclure par une phrase.
+
+## Les erreurs fréquentes
+- Soustraire dans le mauvais ordre : xA − xB au lieu de xB − xA.
+- Utiliser la formule de distance dans un repère non orthonormé.
+- Écrire que ABCD est un parallélogramme quand AB = CD : c'est ABDC.`,
           },
           questions: [
             ['Quelles sont les coordonnées du vecteur AB si A(1 ; 2) et B(4 ; 7) ?', ['(3 ; 5)', '(5 ; 9)', '(−3 ; −5)', '(4 ; 14)'], 0, 'On soustrait l’origine à l’extrémité.'],
@@ -623,6 +800,8 @@ xy' − yx' = 0
 
 Dans la forme réduite, m est le **coefficient directeur** et p l'**ordonnée à l'origine**.
 
+p est la valeur de y quand x vaut 0 : la droite coupe l'axe des ordonnées au point (0 ; p). Une droite verticale x = c n'a pas d'équation réduite.
+
 ## Calculer le coefficient directeur
 Pour deux points distincts d'abscisses différentes :
 
@@ -642,12 +821,30 @@ Il mesure la variation de y pour une augmentation de 1 de x.
 
 > Avancer de 1 en abscisse fait monter de m : le vecteur (1 ; m) le dit littéralement.
 
+Exemple : pour 2x + 3y − 6 = 0, a = 2 et b = 3, donc (−3 ; 2) est un vecteur directeur. Sa forme réduite est y = −(2/3)x + 2.
+
+## Exemple résolu : l'équation d'une droite par deux points
+Trouver l'équation réduite de la droite (AB), avec A(1 ; 2) et B(3 ; 8).
+1. Les abscisses sont différentes : la droite n'est pas verticale.
+2. m = (8 − 2) / (3 − 1) = 6 / 2 = **3**.
+3. On remplace avec les coordonnées de A : 2 = 3 × 1 + p, donc p = −1.
+4. L'équation est **y = 3x − 1**. Contrôle avec B : 3 × 3 − 1 = 8.
+
+Pour savoir si un point est sur la droite, on remplace ses coordonnées dans l'équation : l'égalité doit être vraie.
+
 ## Positions relatives
 | La situation | Le critère | Ce qu'on fait |
 | **Parallèles** | Mêmes coefficients directeurs, ou vecteurs directeurs colinéaires | Rien de plus |
 | **Sécantes** | Coefficients directeurs différents | On résout le **système** des deux équations pour trouver le point d'intersection |
 
-> Deux droites sont parallèles si elles ont le même coefficient directeur : c'est le critère le plus rapide, et le plus souvent oublié.`,
+> Deux droites sont parallèles si elles ont le même coefficient directeur : c'est le critère le plus rapide, et le plus souvent oublié.
+
+Exemple : y = 3x − 1 et y = −x + 7 sont sécantes. On résout 3x − 1 = −x + 7, soit 4x = 8 et x = 2 ; puis y = 5. Le point d'intersection est **(2 ; 5)**.
+
+## Les erreurs fréquentes
+- Inverser le quotient : m se calcule « variation des y sur variation des x ».
+- Chercher une équation réduite pour une droite verticale : elle s'écrit x = c.
+- Confondre p, ordonnée à l'origine, et l'abscisse du point où la droite coupe l'axe des abscisses.`,
           },
           questions: [
             ['Que représente m dans l’équation y = mx + p ?', ['Le coefficient directeur', 'L’ordonnée à l’origine', 'L’abscisse à l’origine', 'La pente du vecteur normal'], 0, 'Il mesure la variation de y quand x augmente de 1.'],
@@ -683,6 +880,8 @@ Il mesure la variation de y pour une augmentation de 1 de x.
 
 On exclut de l'ensemble de définition ce qui annule un dénominateur ou rend négatif l'intérieur d'une racine.
 
+Exemples : f(x) = 1/(x − 2) est définie sur ℝ privé de 2 ; g(x) = √(x + 3) est définie sur [−3 ; +∞[. Si f(3) = 7, alors 7 est l'image de 3 et 3 est un antécédent de 7.
+
 ## Trois représentations
 | La représentation | Ce qu'elle donne |
 | Une **formule** | Le calcul exact pour tout x |
@@ -700,11 +899,32 @@ Un point M(x ; y) appartient à la courbe si et seulement si **y = f(x)**.
 
 Le **tableau de variations** résume ce comportement avec des flèches, et fait apparaître les **extremums** — avec la valeur de x où ils sont atteints.
 
+M est le **maximum** de f sur I si f(x) ≤ M pour tout x de I, et s'il existe un a de I tel que f(a) = M. Le minimum se définit de la même façon.
+
 ## Résoudre graphiquement
 | La question | La lecture |
 | f(x) = k | Les **abscisses** des points de la courbe d'ordonnée k |
 | f(x) ≥ k | Les portions de courbe **au-dessus** de la droite y = k |
-| Le signe de f | Où la courbe est au-dessus ou au-dessous de l'axe des abscisses |`,
+| Le signe de f | Où la courbe est au-dessus ou au-dessous de l'axe des abscisses |
+
+La méthode pour résoudre f(x) = k graphiquement :
+1. Tracer la droite horizontale y = k.
+2. Repérer ses points d'intersection avec la courbe.
+3. Lire leurs **abscisses** : ce sont les solutions.
+4. Écrire S = {…} ; pour une inéquation, un intervalle ou une réunion d'intervalles.
+
+## Exemple résolu
+Soit f(x) = x² − 4x + 1, définie sur ℝ.
+1. Image de −1 : f(−1) = 1 + 4 + 1 = **6**.
+2. Le point A(2 ; −3) est-il sur la courbe ? f(2) = 4 − 8 + 1 = −3 : **oui**.
+3. Antécédents de 1 : x² − 4x + 1 = 1 donne x² − 4x = 0, soit x(x − 4) = 0, donc **0 et 4**. Le nombre 1 a deux antécédents.
+
+## Les erreurs fréquentes
+- Lire une ordonnée quand on demande des solutions : ce sont des abscisses.
+- Confondre tableau de signes (où f est positive) et tableau de variations (où f monte).
+- Oublier de préciser l'intervalle quand on énonce une variation.
+
+> Ce vocabulaire sert à chaque chapitre de fonctions jusqu'en Terminale : dérivation, exponentielle, logarithme.`,
           },
           questions: [
             ['Qu’est-ce qu’une fonction ?', ['Un procédé qui associe à chaque nombre au plus une image', 'Une courbe du plan', 'Une équation à deux inconnues', 'Une suite de nombres'], 0, 'Un antécédent a une image unique.'],
@@ -736,12 +956,16 @@ Le **tableau de variations** résume ce comportement avec des flèches, et fait 
 
 > Lorsque b = 0, la fonction est dite **linéaire** : elle traduit une proportionnalité, et sa droite passe par l'origine.
 
+Quand a = 0, f(x) = b pour tout x : la courbe est une droite horizontale.
+
 ## Le taux d'accroissement
 Pour deux valeurs distinctes u et v :
 
 (f(v) − f(u)) / (v − u) = a
 
 > C'est la propriété caractéristique : le résultat ne dépend pas de la paire choisie. Une augmentation de 1 de x fait toujours varier f(x) de a.
+
+Démonstration : f(v) − f(u) = (av + b) − (au + b) = a(v − u), et l'on divise par v − u. C'est aussi ce qui prouve le sens de variation : si a > 0 et u < v, alors f(v) − f(u) est positif.
 
 > Le prix d'un abonnement avec un forfait fixe et un tarif par unité consommée est une fonction affine. C'est le modèle le plus fréquent de la vie courante.
 
@@ -752,6 +976,13 @@ Pour deux valeurs distinctes u et v :
 
 Deux points suffisent toujours à tracer la droite.
 
+## Exemple résolu
+f est affine, f(−1) = 7 et f(2) = −2.
+1. a = (−2 − 7) / (2 − (−1)) = −9 / 3 = **−3**.
+2. f(2) = −3 × 2 + b = −2, donc b = **4**.
+3. f(x) = −3x + 4. Contrôle : f(−1) = 3 + 4 = 7.
+4. f s'annule en x = 4/3 ; comme a < 0, f est positive avant 4/3 et négative après.
+
 ## Signe et résolution
 f(x) = 0 pour x = −b/a, lorsque a est non nul.
 
@@ -759,7 +990,16 @@ f(x) = 0 pour x = −b/a, lorsque a est non nul.
 | a > 0 | f est **négative** | f est **positive** |
 | a < 0 | f est **positive** | f est **négative** |
 
-> Cette règle sert dans toutes les inéquations produit ou quotient.`,
+Exemples : 2x − 6 s'annule en x = 3 ; −2x + 4 s'annule en 2 et elle est négative pour x > 2.
+
+> Cette règle sert dans toutes les inéquations produit ou quotient.
+
+## Les erreurs fréquentes
+- Déduire le sens de variation du signe de b : c'est le signe de **a** qui compte.
+- Calculer a en écrivant les différences dans deux ordres différents.
+- Se tromper de signe dans la valeur d'annulation : dans le doute, on la retrouve en résolvant ax + b = 0.
+
+> En Première, le coefficient directeur deviendra le nombre dérivé : la tangente à une courbe est la droite d'une fonction affine.`,
           },
           questions: [
             ['Quelle est la forme d’une fonction affine ?', ['f(x) = ax + b', 'f(x) = ax²', 'f(x) = a/x', 'f(x) = √x'], 0, 'Sa courbe est une droite.'],
@@ -786,12 +1026,16 @@ f(x) = 0 pour x = −b/a, lorsque a est non nul.
 
 Elle atteint donc un **minimum** égal à **0**, en x = 0. Ce point est le **sommet** de la parabole.
 
+Démonstration sur [0 ; +∞[ : si 0 ≤ a < b, alors b² − a² = (b − a)(b + a), produit de deux nombres positifs, donc a² < b². Sur ]−∞ ; 0], le même calcul donne un produit négatif : l'ordre s'inverse.
+
 ## Symétrie et signe
 | La propriété | Sa raison |
 | Elle est **paire** | (−x)² = x² : la courbe est symétrique par rapport à l'**axe des ordonnées** |
 | Elle est **positive ou nulle** | Un carré n'est jamais négatif |
 
 > Passer au carré ne conserve pas l'ordre : −3 est plus petit que 2, mais 9 est plus grand que 4. C'est l'erreur la plus fréquente de l'année.
+
+Ce qu'on peut dire à coup sûr : si 0 ≤ a < b, alors a² < b² ; si a < b ≤ 0, alors a² > b². Quand a et b sont de signes contraires, on ne peut rien conclure sans calcul.
 
 ## Résoudre x² = k
 | La valeur de k | Les solutions |
@@ -808,7 +1052,26 @@ x² = 25 donne donc x = 5 **ou** x = −5.
 | x² ≤ 9 | [−3 ; 3] |
 | x² > 9 | ]−∞ ; −3[ ∪ ]3 ; +∞[ |
 
-> Le tracé de la parabole et de la droite horizontale rend ces résultats immédiats.`,
+> Le tracé de la parabole et de la droite horizontale rend ces résultats immédiats.
+
+La méthode :
+1. Tracer l'allure de la parabole et la droite y = k.
+2. Placer les points d'intersection, d'abscisses −√k et √k (si k > 0).
+3. Lire où la parabole est au-dessous (pour ≤) ou au-dessus (pour ≥) de la droite.
+4. Écrire la solution en intervalle, avec des crochets fermés pour une inégalité large.
+
+## Exemples résolus
+1. x² = 16 : k = 16 > 0, deux solutions, S = {−4 ; 4}.
+2. x² = −4 : un carré n'est jamais négatif, S est vide.
+3. x² ≥ 5 : la parabole est au-dessus de y = 5 en dehors de [−√5 ; √5], donc S = ]−∞ ; −√5] ∪ [√5 ; +∞[.
+4. Encadrer x² si −2 ≤ x ≤ 3 : on coupe en deux intervalles. Sur [−2 ; 0], x² va de 4 à 0 ; sur [0 ; 3], de 0 à 9. Donc 0 ≤ x² ≤ 9.
+
+## Les erreurs fréquentes
+- Écrire « a < b donc a² < b² » sans regarder les signes.
+- Oublier −√k.
+- Encadrer x² en élevant directement les bornes au carré : −2 ≤ x ≤ 3 ne donne pas 4 ≤ x² ≤ 9.
+
+> En Première, la parabole reviendra avec les fonctions du second degré : elles ont toutes la même forme, décalée et étirée.`,
           },
           questions: [
             ['Sur quel intervalle la fonction carré est-elle décroissante ?', [']−∞ ; 0]', '[0 ; +∞[', 'ℝ tout entier', 'Elle est toujours croissante'], 0, 'Elle atteint son minimum en 0.'],
@@ -838,8 +1101,12 @@ x² = 25 donne donc x = 5 **ou** x = −5.
 
 > Le cube garde le signe, le carré l'efface. Toute la différence entre les deux fonctions tient dans cette phrase.
 
+Une fonction est **impaire** quand f(−x) = −f(x) pour tout x : ici (−x)³ = −x³. Sa courbe est alors symétrique par rapport à l'origine du repère.
+
 ## Variations et ordre
 Elle **conserve l'ordre** : si a < b, alors a³ < b³, quels que soient les signes.
+
+Elle n'a donc ni minimum ni maximum : quand x devient très grand, x³ devient très grand, et quand x devient très négatif, x³ aussi.
 
 ## Signe
 | L'intervalle | Le signe de x³ |
@@ -854,6 +1121,8 @@ x³ = −8 donne x = −2.
 
 > C'est une différence majeure avec x² = k.
 
+La solution de x³ = k se note parfois « racine cubique de k ». Exemples : x³ = 27 donne x = 3 ; x³ = −27 donne x = −3.
+
 ## Comparer les puissances
 | L'intervalle | L'ordre |
 | [0 ; 1] | x³ ≤ x² ≤ x |
@@ -861,7 +1130,21 @@ x³ = −8 donne x = −2.
 
 Le point de bascule est **1**, où les trois valent 1.
 
-> Sur [0 ; 1], élever à une puissance plus grande **rapproche de 0**. Ce résultat sert dès qu'on compare des grandeurs modélisées par des puissances, en géométrie comme en physique.`,
+> Sur [0 ; 1], élever à une puissance plus grande **rapproche de 0**. Ce résultat sert dès qu'on compare des grandeurs modélisées par des puissances, en géométrie comme en physique.
+
+Justification : pour x entre 0 et 1, x³ − x² = x²(x − 1) est un produit d'un nombre positif par un nombre négatif, donc x³ ≤ x². Pour x ≥ 1, le même produit est positif.
+
+## Exemple résolu
+Résoudre x³ ≤ 8, puis comparer 0,5² et 0,5³.
+1. 8 = 2³ et la fonction cube est croissante : x³ ≤ 2³ équivaut à x ≤ 2, donc S = **]−∞ ; 2]**.
+2. 0,5² = 0,25 et 0,5³ = 0,125 : sur [0 ; 1], le cube est plus petit que le carré, comme prévu.
+
+## Les erreurs fréquentes
+- Croire que x³ = −27 n'a pas de solution, par réflexe du carré.
+- Donner deux solutions à x³ = 8 : il n'y en a qu'une, 2.
+- Penser que le cube a un minimum en 0 : il passe par 0 en continuant de croître.
+
+> Le volume d'un cube d'arête x est x³ : doubler l'arête multiplie le volume par 8.`,
           },
           questions: [
             ['Sur quel intervalle la fonction cube est-elle croissante ?', ['Sur ℝ tout entier', 'Sur [0 ; +∞[ seulement', 'Sur ]−∞ ; 0] seulement', 'Elle n’est jamais croissante'], 0, 'Elle conserve l’ordre partout.'],
@@ -890,6 +1173,8 @@ Le point de bascule est **1**, où les trois valent 1.
 
 Sa courbe part de l'origine et monte en s'aplatissant, sans jamais s'arrêter.
 
+Quelques valeurs pour la tracer : √0 = 0, √1 = 1, √4 = 2, √9 = 3, √16 = 4. Il faut multiplier x par 4 pour doubler √x.
+
 ## Le lien avec la fonction carré
 | L'égalité | Sa condition |
 | (√x)² = x | x ≥ 0 |
@@ -900,6 +1185,8 @@ Sa courbe part de l'origine et monte en s'aplatissant, sans jamais s'arrêter.
 
 > Une croissance qui ralentit sans jamais s'arrêter : c'est la forme même de la racine carrée, et la raison de son usage en modélisation.
 
+Exemple : √((−5)²) = √25 = 5, et non −5 : c'est bien la valeur absolue de −5.
+
 ## Comparer avec x
 | L'intervalle | La comparaison |
 | [0 ; 1] | x ≤ **√x** : la racine d'un nombre entre 0 et 1 est **plus grande** que lui |
@@ -907,12 +1194,30 @@ Sa courbe part de l'origine et monte en s'aplatissant, sans jamais s'arrêter.
 
 Les points d'égalité sont 0 et 1.
 
+Exemple : √0,25 = 0,5, plus grand que 0,25 ; √9 = 3, plus petit que 9.
+
 ## Résoudre
 | L'équation | Ses solutions |
 | √x = k, avec k < 0 | **Aucune** |
 | √x = k, avec k ≥ 0 | x = k² |
 
-> Une équation contenant une racine se résout en élevant au carré — mais cette opération peut créer des solutions **parasites**. Il faut toujours vérifier les valeurs trouvées dans l'équation de départ.`,
+> Une équation contenant une racine se résout en élevant au carré — mais cette opération peut créer des solutions **parasites**. Il faut toujours vérifier les valeurs trouvées dans l'équation de départ.
+
+La méthode :
+1. Écrire la condition d'existence : ce qui est sous la racine doit être positif ou nul.
+2. Vérifier le signe de l'autre membre : une racine ne peut pas égaler un nombre négatif.
+3. Élever au carré et résoudre.
+4. Contrôler chaque valeur dans l'équation de départ.
+
+## Exemples résolus
+1. √x = 5 : k = 5 est positif, donc x = 25.
+2. √x = −3 : une racine est toujours positive ou nulle, il n'y a **aucune solution**.
+3. √x ≤ 3 : la fonction est croissante et 3 = √9, donc 0 ≤ x ≤ 9, S = [0 ; 9].
+
+## Les erreurs fréquentes
+- Oublier que l'ensemble de définition commence à 0.
+- Écrire √(x²) = x sans condition.
+- Croire que √x est toujours plus petit que x : c'est faux entre 0 et 1.`,
           },
           questions: [
             ['Quel est l’ensemble de définition de la fonction racine carrée ?', ['[0 ; +∞[', 'ℝ', ']0 ; +∞[', ']−∞ ; 0]'], 0, 'La racine d’un négatif n’existe pas dans ℝ.'],
@@ -948,6 +1253,8 @@ Elle est définie sur ℝ privé de 0, soit :
 
 > On ne dit jamais qu'une fonction est décroissante sur une réunion d'intervalles. On énonce ses variations **intervalle par intervalle**.
 
+Démonstration sur ]0 ; +∞[ : si 0 < a < b, alors 1/b − 1/a = (a − b)/(ab). Le numérateur est négatif, le dénominateur positif : 1/b < 1/a, l'ordre est inversé. Le même calcul vaut sur ]−∞ ; 0[, où ab est encore positif.
+
 ## Courbe et symétrie
 | La propriété | Son contenu |
 | La courbe | Une **hyperbole**, formée de deux branches |
@@ -958,6 +1265,8 @@ Elle est définie sur ℝ privé de 0, soit :
 | Quand x devient très grand | 1/x se rapproche de 0 sans jamais l'atteindre |
 | Quand x se rapproche de 0 | La valeur absolue de 1/x devient arbitrairement grande |
 
+Quelques valeurs : 1/0,1 = 10, 1/0,5 = 2, 1/1 = 1, 1/2 = 0,5, 1/10 = 0,1. La courbe passe par (1 ; 1) et (−1 ; −1).
+
 ## Signe et résolution
 1/x a **le signe de x**.
 
@@ -965,7 +1274,25 @@ Elle est définie sur ℝ privé de 0, soit :
 | k non nul | x = 1/k, unique |
 | k = 0 | **Aucune** |
 
-> Pour une inéquation comme 1/x ≤ 2, on ne multiplie **surtout pas** par x sans connaître son signe : on passe tout d'un côté et on étudie un **tableau de signes**.`,
+Exemple : 1/x = 4 donne x = 1/4 = 0,25.
+
+> Pour une inéquation comme 1/x ≤ 2, on ne multiplie **surtout pas** par x sans connaître son signe : on passe tout d'un côté et on étudie un **tableau de signes**.
+
+## Exemple résolu : 1/x ≤ 2
+1. Valeur interdite : 0.
+2. On passe tout d'un côté : 1/x − 2 ≤ 0, soit (1 − 2x)/x ≤ 0.
+3. 1 − 2x s'annule en 1/2 (positif avant, négatif après) ; x s'annule en 0 (négatif avant, positif après).
+4. Le quotient est négatif sur ]−∞ ; 0[, positif sur ]0 ; 1/2[, négatif sur ]1/2 ; +∞[, nul en 1/2.
+5. S = **]−∞ ; 0[ ∪ [1/2 ; +∞[**, avec un crochet ouvert en 0, valeur interdite.
+
+Contrôle : x = −1 donne −1 ≤ 2, vrai ; x = 0,25 donne 4 ≤ 2, faux ; x = 1 donne 1 ≤ 2, vrai.
+
+## Les erreurs fréquentes
+- Écrire « décroissante sur ℝ privé de 0 ».
+- Multiplier une inéquation par x sans connaître son signe.
+- Croire que 1/x peut valoir 0.
+
+> En physique, les grandeurs inversement proportionnelles (pression et volume d'un gaz à température constante) suivent cette courbe.`,
           },
           questions: [
             ['Quel est l’ensemble de définition de la fonction inverse ?', ['ℝ privé de 0', 'ℝ', '[0 ; +∞[', ']0 ; +∞['], 0, 'Diviser par zéro n’a pas de sens.'],
@@ -974,7 +1301,7 @@ Elle est définie sur ℝ privé de 0, soit :
             ['La fonction inverse est impaire. Quelle en est la conséquence ?', ['Sa courbe est symétrique par rapport à l’origine', 'Sa courbe est symétrique par rapport à l’axe des ordonnées', 'Elle est croissante', 'Elle est positive'], 0, 'Car 1/(−x) = −1/x.'],
             ['Que devient 1/x quand x devient très grand ?', ['Il se rapproche de 0 sans l’atteindre', 'Il devient très grand', 'Il devient négatif', 'Il vaut 1'], 0, 'L’axe des abscisses est une asymptote.'],
             ['Le signe de 1/x est celui de x.', ['Vrai', 'Faux'], 0, 'Négatif avant 0, positif après.'],
-            ['Quelle est la solution de 1/x = 4 ?', ['x = 0,25', 'x = 4', 'x = −4', 'Aucune solution'], 0, 'x = 1/k.'],
+            ['Quelle est la solution de 1/x = 4 ?', ['x = 0,25', 'x = 4', 'x = −4', 'Aucune solution'], 0, 'Pour k non nul, l’équation 1/x = k a pour solution x = 1/k. Ici x = 1/4 = 0,25.'],
             ['Peut-on multiplier les deux membres de 1/x ≤ 2 par x ?', ['Non, pas sans connaître le signe de x', 'Oui, toujours', 'Oui, si x est non nul', 'Oui, en inversant le sens'], 0, 'Il faut passer par un tableau de signes.'],
           ],
         },
@@ -996,6 +1323,8 @@ Elle est définie sur ℝ privé de 0, soit :
 
 Prendre t % d'une quantité, c'est la multiplier par t/100.
 
+Exemple : 35 % de 240 = 240 × 35/100 = 84.
+
 ## Proportion de proportion
 La proportion d'une sous-population dans le tout est le **produit** des proportions successives.
 
@@ -1013,6 +1342,8 @@ La proportion d'une sous-population dans le tout est le **produit** des proporti
 
 > C'est l'outil central : il permet d'enchaîner les évolutions en **multipliant** les coefficients, et de revenir en arrière en divisant.
 
+Le **taux d'évolution** entre une valeur de départ V₀ et une valeur d'arrivée V₁ vaut (V₁ − V₀)/V₀. Le coefficient multiplicateur vaut V₁/V₀, et taux = coefficient − 1.
+
 > Une hausse de 20 % suivie d'une baisse de 20 % ne ramène pas au point de départ : 1,20 × 0,80 = 0,96, soit une **baisse de 4 %**.
 
 ## Évolutions successives et réciproques
@@ -1022,17 +1353,31 @@ La proportion d'une sous-population dans le tout est le **produit** des proporti
 
 Après une hausse de 25 %, il faut baisser de **20 %** pour revenir au départ, car 1/1,25 = 0,80.
 
+## Exemple résolu
+Un loyer de 600 € augmente de 5 % puis de 3 %.
+1. Coefficients : 1,05 et 1,03.
+2. Coefficient global : 1,05 × 1,03 = 1,0815, soit une hausse globale de **8,15 %** (et non 8 %).
+3. Nouveau loyer : 600 × 1,0815 = **648,90 €**.
+4. Pour revenir à 600 €, il faudrait multiplier par 1/1,0815 ≈ 0,9246, soit une baisse d'environ **7,54 %**.
+
+La méthode : 1. traduire chaque évolution en coefficient ; 2. multiplier les coefficients ; 3. retraduire le résultat en pourcentage (coefficient − 1).
+
 ## Points et pourcentages
 | Passer de 10 % à 12 %, c'est… | La valeur |
 | Une hausse de **points** | +2 points |
 | Une hausse en **pourcentage** | +20 % |
 
-> Confondre les deux est l'erreur la plus répandue dans les commentaires de chiffres publics.`,
+> Confondre les deux est l'erreur la plus répandue dans les commentaires de chiffres publics.
+
+## Les erreurs fréquentes
+- Multiplier par 0,15 pour une hausse de 15 % : on obtient la hausse seule, pas la nouvelle valeur.
+- Calculer un taux d'évolution en divisant par la valeur d'arrivée au lieu de celle de départ.
+- Retrouver la valeur initiale en retirant le même pourcentage.`,
           },
           questions: [
             ['Comment calcule-t-on t % d’une quantité ?', ['En la multipliant par t/100', 'En la divisant par t', 'En lui ajoutant t', 'En la multipliant par t'], 0, 'Un pourcentage est une proportion multipliée par 100.'],
-            ['Par quel coefficient multiplie-t-on pour une hausse de 15 % ?', ['1,15', '0,85', '15', '1,015'], 0, '1 + 15/100.'],
-            ['Par quel coefficient multiplie-t-on pour une baisse de 30 % ?', ['0,70', '1,30', '0,30', '−0,30'], 0, '1 − 30/100.'],
+            ['Par quel coefficient multiplie-t-on pour une hausse de 15 % ?', ['1,15', '0,85', '15', '1,015'], 0, 'Augmenter de 15 %, c’est multiplier par 1 + 15/100 = 1,15.'],
+            ['Par quel coefficient multiplie-t-on pour une baisse de 30 % ?', ['0,70', '1,30', '0,30', '−0,30'], 0, 'Baisser de 30 %, c’est garder 70 % : on multiplie par 1 − 30/100 = 0,70.'],
             ['Une hausse de 20 % suivie d’une baisse de 20 % ramène-t-elle au point de départ ?', ['Non, il reste une baisse de 4 %', 'Oui', 'Non, il reste une hausse de 4 %', 'Cela dépend de la valeur initiale'], 0, '1,20 × 0,80 = 0,96.'],
             ['Comment obtient-on le coefficient d’une évolution réciproque ?', ['En prenant l’inverse du coefficient', 'En changeant le signe du pourcentage', 'En soustrayant le coefficient de 2', 'En le divisant par 100'], 0, 'Après +25 %, il faut −20 % pour revenir au départ.'],
             ['Passer de 10 % à 12 % est une hausse de 2 points et de 20 %.', ['Vrai', 'Faux'], 0, 'Confondre points et pourcentages est l’erreur la plus répandue.'],
@@ -1061,7 +1406,18 @@ Après une hausse de 25 %, il faut baisser de **20 %** pour revenir au départ, 
 | L'**écart interquartile** Q3 − Q1 | La dispersion du **cœur** de la série |
 | L'**écart type** | La dispersion autour de la **moyenne** |
 
+Q1 est la plus petite valeur de la série telle qu'au moins un quart des données lui soient inférieures ou égales ; Q3, la plus petite telle qu'au moins les trois quarts le soient. L'écart type se calcule à la calculatrice ou au tableur : il se lit avec la moyenne, comme l'écart interquartile se lit avec la médiane.
+
 > Deux séries peuvent avoir la même moyenne et n'avoir rien à voir. C'est la dispersion qui les distingue.
+
+## Exemple résolu
+Série ordonnée de 12 notes : 4, 7, 8, 9, 10, 11, 11, 12, 13, 14, 16, 17.
+1. Moyenne : la somme vaut 132, donc 132 ÷ 12 = **11**.
+2. Médiane : effectif pair, moyenne de la 6e et de la 7e valeur : (11 + 11) ÷ 2 = **11**.
+3. Q1 : un quart de 12 vaut 3, on prend la 3e valeur : **Q1 = 8**. Q3 : trois quarts de 12 vaut 9, on prend la 9e valeur : **Q3 = 13**.
+4. Écart interquartile : 13 − 8 = **5** ; étendue : 17 − 4 = **13**.
+
+La méthode pour les quartiles : 1. ranger la série ; 2. calculer n/4 et 3n/4 ; 3. arrondir à l'entier supérieur si ce n'est pas un entier ; 4. lire la valeur de ce rang.
 
 ## Les représentations
 | La représentation | Ce qu'elle convient à montrer |
@@ -1078,7 +1434,12 @@ Le choix de la représentation, comme celui des échelles, oriente la lecture.
 | Un **effectif faible** | Tout écart y est peu significatif |
 | Une **moyenne de moyennes** | Elle est presque toujours fausse |
 
-> Interpréter suppose de connaître l'effectif, la source et la définition exacte de ce qui est mesuré.`,
+> Interpréter suppose de connaître l'effectif, la source et la définition exacte de ce qui est mesuré.
+
+## Les erreurs fréquentes
+- Calculer Q1 comme la médiane de la première moitié : la définition de Seconde passe par le rang n/4.
+- Prendre la médiane sans avoir ordonné la série.
+- Moyenner deux moyennes de groupes d'effectifs différents sans pondérer.`,
           },
           questions: [
             ['Que partage la médiane ?', ['La série ordonnée en deux moitiés de même effectif', 'La série en quatre groupes égaux', 'La somme des valeurs', 'L’étendue en deux'], 0, 'Elle est peu sensible aux valeurs extrêmes.'],
@@ -1106,6 +1467,11 @@ Le choix de la représentation, comme celui des échelles, oriente la lecture.
 | L'événement **impossible** | L'ensemble vide |
 | Deux événements **incompatibles** | Ils ne peuvent pas se produire en même temps |
 
+| La notation | Son sens |
+| A ∩ B | A **et** B se réalisent |
+| A ∪ B | A **ou** B (au moins l'un des deux) se réalise |
+| A barre | A ne se réalise **pas** |
+
 ## La loi de probabilité
 | La règle | Son contenu |
 | Chaque issue reçoit une probabilité | **Positive**, et la somme vaut **1** |
@@ -1113,6 +1479,8 @@ Le choix de la représentation, comme celui des échelles, oriente la lecture.
 | En **équiprobabilité** | P(A) = issues favorables / issues possibles |
 
 > Une probabilité est un nombre entre 0 et 1. Toute réponse en dehors de cet intervalle signale une erreur, sans même avoir à relire le calcul.
+
+Exemple : avec un dé équilibré, Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6} ; « obtenir un nombre pair » est l'événement {2 ; 4 ; 6}, de probabilité 3/6 = 1/2.
 
 ## Les formules
 | La formule | Quand l'employer |
@@ -1125,7 +1493,23 @@ Le choix de la représentation, comme celui des échelles, oriente la lecture.
 | L'**arbre de probabilités** | Une expérience à deux épreuves successives |
 | Le **tableau à double entrée** | Deux caractères croisés |
 
-> Sur un arbre : on **multiplie** le long d'un chemin, et on **additionne** les chemins qui réalisent l'événement cherché.`,
+> Sur un arbre : on **multiplie** le long d'un chemin, et on **additionne** les chemins qui réalisent l'événement cherché.
+
+## Exemple résolu
+On tire une carte dans un jeu de 32 cartes. A : « la carte est un cœur » ; B : « la carte est une figure » (valet, dame, roi).
+1. P(A) = 8/32 = 1/4 ; P(B) = 12/32 = 3/8.
+2. A ∩ B : les figures de cœur, 3 cartes : P(A ∩ B) = 3/32.
+3. P(A ∪ B) = 8/32 + 12/32 − 3/32 = **17/32**.
+4. P(A barre) = 1 − 1/4 = **3/4**.
+
+La méthode : 1. décrire l'univers ; 2. vérifier l'équiprobabilité ; 3. traduire l'énoncé en événements (et, ou, contraire) ; 4. choisir la formule ; 5. contrôler que le résultat est entre 0 et 1.
+
+## Les erreurs fréquentes
+- Additionner P(A) et P(B) sans retrancher l'intersection quand A et B peuvent se produire ensemble.
+- Confondre « incompatibles » (pas en même temps) et « contraires » (l'un ou l'autre forcément).
+- Additionner le long d'un chemin de l'arbre au lieu de multiplier.
+
+> En Première, ces outils mènent aux probabilités conditionnelles et à l'indépendance.`,
           },
           questions: [
             ['Qu’est-ce que l’univers d’une expérience aléatoire ?', ['L’ensemble de toutes les issues possibles', 'L’ensemble des événements favorables', 'La probabilité totale', 'Le nombre d’expériences réalisées'], 0, 'On le note souvent Ω.'],
@@ -1158,6 +1542,8 @@ Le choix de la représentation, comme celui des échelles, oriente la lecture.
 
 > Un sondage sur mille personnes n'est pas mille fois moins fiable qu'un recensement : la précision dépend de la **racine** de n.
 
+Une simulation le montre bien : en simulant 100 fois 100 lancers d'une pièce (par un programme Python ou un tableur), les fréquences de pile s'étalent autour de 0,5 ; avec 1 000 lancers par échantillon, elles se resserrent nettement.
+
 ## L'intervalle de fluctuation
 Pour n assez grand et p pas trop proche de 0 ou de 1, environ **95 %** des échantillons donnent une fréquence dans :
 
@@ -1170,12 +1556,27 @@ Pour n assez grand et p pas trop proche de 0 ou de 1, environ **95 %** des écha
 
 > Pour diviser l'incertitude par deux, il faut multiplier la taille de l'échantillon par **quatre**.
 
+Avec p = 0,5 et n = 100, l'intervalle est [0,5 − 0,1 ; 0,5 + 0,1] = [0,4 ; 0,6].
+
 ## À quoi cela sert
 | Le résultat | La conclusion |
 | La fréquence observée tombe **hors** de l'intervalle | On **rejette** l'hypothèse, au seuil de 95 % |
 | Elle tombe **dedans** | On ne la rejette pas — ce qui n'est **pas** la démontrer |
 
-> C'est aussi ce qui justifie la **marge d'erreur** annoncée avec tout sondage. Et l'importance du recrutement : un échantillon mal constitué reste biaisé, quelle que soit sa taille.`,
+> C'est aussi ce qui justifie la **marge d'erreur** annoncée avec tout sondage. Et l'importance du recrutement : un échantillon mal constitué reste biaisé, quelle que soit sa taille.
+
+## Exemple résolu : un dé est-il truqué ?
+Un fabricant affirme que la face 6 sort avec la probabilité 1/6 ≈ 0,167. On lance le dé 400 fois et on obtient 90 fois le 6.
+1. Fréquence observée : f = 90 ÷ 400 = 0,225.
+2. Intervalle au seuil de 95 % : 1/√400 = 0,05, donc [0,167 − 0,05 ; 0,167 + 0,05] ≈ [0,117 ; 0,217].
+3. f = 0,225 est **hors** de l'intervalle : on rejette l'affirmation au seuil de 95 %, avec un risque d'environ 5 % de se tromper.
+
+La méthode : 1. identifier p et n ; 2. calculer l'intervalle ; 3. calculer f ; 4. comparer et conclure prudemment.
+
+## Les erreurs fréquentes
+- Croire qu'une fréquence dans l'intervalle prouve l'hypothèse : elle ne la contredit simplement pas.
+- Penser qu'un énorme échantillon compense un mauvais recrutement : un biais ne se corrige pas par la taille.
+- Confondre la fréquence observée f, connue, et la proportion p de la population.`,
           },
           questions: [
             ['Qu’est-ce qu’un échantillon de taille n ?', ['Le résultat de n répétitions indépendantes de la même expérience', 'Les n premiers individus d’une liste', 'Une population de taille n', 'Un tirage sans remise de n éléments'], 0, 'L’indépendance des tirages est essentielle.'],
@@ -1185,7 +1586,7 @@ Pour n assez grand et p pas trop proche de 0 ou de 1, environ **95 %** des écha
             ['Par combien faut-il multiplier n pour diviser l’incertitude par deux ?', ['Par quatre', 'Par deux', 'Par huit', 'Par seize'], 0, 'Parce que la largeur est en 1/√n.'],
             ['Une fréquence observée hors de l’intervalle de fluctuation conduit à rejeter l’hypothèse au seuil de 95 %.', ['Vrai', 'Faux'], 0, 'Rester dedans ne démontre pas l’hypothèse pour autant.'],
             ['Un échantillon très grand mais mal recruté est-il fiable ?', ['Non, un biais de recrutement ne se corrige pas par la taille', 'Oui, la taille compense tout', 'Oui, au-delà de 10 000 individus', 'Cela dépend de la population'], 0, 'La représentativité prime sur la taille.'],
-            ['Quel est l’intervalle de fluctuation pour p = 0,5 et n = 100 ?', ['[0,4 ; 0,6]', '[0,45 ; 0,55]', '[0,3 ; 0,7]', '[0,49 ; 0,51]'], 0, '1/√100 = 0,1.'],
+            ['Quel est l’intervalle de fluctuation pour p = 0,5 et n = 100 ?', ['[0,4 ; 0,6]', '[0,45 ; 0,55]', '[0,3 ; 0,7]', '[0,49 ; 0,51]'], 0, 'Au seuil de 95 %, l’intervalle est [p − 1/√n ; p + 1/√n]. Ici 1/√100 = 0,1, d’où [0,4 ; 0,6].'],
           ],
         },
       ],

@@ -1,0 +1,328 @@
+{
+  "id": "maths-anticipee-2026-generale-spe-metropole",
+  "matiere": "maths",
+  "niveau": "1re",
+  "examen": "bac-anticipe",
+  "annee": 2026,
+  "centre": "Métropole · avec spécialité maths",
+  "jour": null,
+  "code": "26-MATSPEGEME1",
+  "titre": "Épreuve anticipée de maths 2026",
+  "dureeMin": 120,
+  "coefficient": 2,
+  "consigne": "Voie générale, pour les élèves qui suivent la spécialité maths. Sans calculatrice : huit questions d'automatismes (6 points), puis trois exercices (14 points), tout est à traiter.",
+  "parties": [
+    {
+      "id": "automatismes",
+      "titre": "Automatismes",
+      "nature": "exercice",
+      "enonce": "Première partie : huit questions à choix multiples, sans justification. Une réponse fausse n'enlève rien.",
+      "points": 6,
+      "minutes": 25,
+      "enBref": [
+        "Les bonnes réponses : 1 c · 2 c · 3 d · 4 b · 5 b · 6 b · 7 c · 8 c.",
+        "Chaque question se règle en moins de deux minutes si tu as le bon réflexe : identité remarquable, lecture de pente, pourcentage, ordre de grandeur, puissances de 10.",
+        "Une réponse fausse ne coûte rien : ne laisse jamais une case vide."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "La forme développée de $(3x-2)^2$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** c'est l'identité remarquable $(a-b)^2 = a^2 - 2ab + b^2$ avec $a = 3x$ et $b = 2$." },
+            { "type": "formule", "tex": "(3x-2)^2 = (3x)^2 - 2 \\times 3x \\times 2 + 2^2 = 9x^2 - 12x + 4" },
+            { "type": "reponse", "texte": "Réponse **c** : $9x^2 - 12x + 4$." },
+            { "type": "piege", "texte": "La réponse a ($9x^2 - 4$) oublie le double produit, et la b oublie d'élever le 3 au carré : $(3x)^2 = 9x^2$, pas $3x^2$. Mets toujours des parenthèses autour de $3x$ avant d'élever au carré." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "L'équation de la droite $(\\Delta)$ tracée dans le repère $(O, I, J)$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** lis d'abord l'ordonnée à l'origine, puis la pente avec « un pas à droite, combien en hauteur ? »." },
+            { "type": "texte", "texte": "La droite coupe l'axe des ordonnées en $2$ : l'ordonnée à l'origine est $2$. Elle passe aussi par $(1 ; 1)$ puis $(2 ; 0)$ : un pas vers la droite la fait descendre d'une unité, la pente vaut $-1$." },
+            { "type": "reponse", "texte": "Réponse **c** : $y = -x + 2$." },
+            { "type": "astuce", "texte": "Pour trancher entre plusieurs équations, teste un deuxième point lu sur le graphique : avec $(2 ; 0)$, seule $y = -x + 2$ donne $0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "75 % des élèves étudient le grec, les 9 autres le latin. Combien d'élèves dans la classe ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** les « autres » représentent le complément, $100\\,\\% - 75\\,\\% = 25\\,\\%$, soit un quart de la classe." },
+            { "type": "formule", "tex": "\\frac{1}{4} \\times N = 9 \\iff N = 36" },
+            { "type": "reponse", "texte": "Réponse **d** : 36 élèves." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Un prix augmente de 15 %. Par quoi est-il multiplié ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** augmenter de $t\\,\\%$, c'est multiplier par $1 + \\frac{t}{100}$. Ici $1 + 0{,}15 = 1{,}15$." },
+            { "type": "reponse", "texte": "Réponse **b** : $1{,}15$." },
+            { "type": "piege", "texte": "$0{,}85$ correspond à une BAISSE de 15 %, et $\\frac{15}{100}$ ne donne que le montant de l'augmentation, pas le nouveau prix." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "La valeur la plus proche de $\\frac{150\\,000}{3\\,200}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** un ordre de grandeur, pas un calcul exact. Simplifie par 100 : $\\frac{1\\,500}{32}$. Or $32 \\times 50 = 1\\,600$, un peu plus que $1\\,500$ : le quotient est un peu inférieur à 50." },
+            { "type": "reponse", "texte": "Réponse **b** : 50 (la valeur exacte est environ $46{,}9$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "2 400 images en 1 min 40 s : combien d'images par seconde ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** tout convertir dans l'unité demandée avant de diviser. $1\\text{ min }40\\text{ s} = 60 + 40 = 100\\text{ s}$." },
+            { "type": "formule", "tex": "\\frac{2\\,400}{100} = 24 \\text{ images par seconde}" },
+            { "type": "reponse", "texte": "Réponse **b** : 24 images/seconde." },
+            { "type": "piege", "texte": "« 1 min 40 » n'est pas $1{,}40$ minute : diviser $2\\,400$ par $1{,}4$ ou par $140$ mène tout droit à une mauvaise réponse." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Lequel des points appartient à la courbe de $f(x) = 0{,}5(x-3)^2 + 10$ ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** un point $(a ; b)$ est sur la courbe si et seulement si $f(a) = b$. On calcule l'image de chaque abscisse." },
+            {
+              "type": "tableau",
+              "entetes": ["Point", "Image calculée", "Sur la courbe ?"],
+              "lignes": [
+                ["$A(-3 ; 10)$", "$f(-3) = 0{,}5 \\times 36 + 10 = 28$", "non"],
+                ["$B(3 ; 10{,}5)$", "$f(3) = 0 + 10 = 10$", "non"],
+                ["$C(3 ; 10)$", "$f(3) = 10$", "oui"],
+                ["$D(0 ; 19{,}5)$", "$f(0) = 0{,}5 \\times 9 + 10 = 14{,}5$", "non"]
+              ]
+            },
+            { "type": "reponse", "texte": "Réponse **c** : $C(3 ; 10)$, qui est d'ailleurs le sommet de la parabole." },
+            { "type": "astuce", "texte": "Sous la forme $a(x - \\alpha)^2 + \\beta$, le sommet se lit sans calcul : $(\\alpha ; \\beta) = (3 ; 10)$. Un gain de temps précieux sans calculatrice." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Que vaut $A = \\frac{10^{201} \\times 10^{-4}}{(10^2)^{100}}$ ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** on additionne les exposants d'un produit, on multiplie ceux d'une puissance de puissance, on soustrait ceux d'un quotient." },
+            { "type": "formule", "tex": "A = \\frac{10^{201 - 4}}{10^{200}} = \\frac{10^{197}}{10^{200}} = 10^{-3} = 0{,}001" },
+            { "type": "reponse", "texte": "Réponse **c** : $A = 0{,}001$." },
+            { "type": "piege", "texte": "Un exposant négatif ne rend pas le nombre négatif : $10^{-3}$ est un petit nombre POSITIF. La réponse a est donc impossible d'emblée." }
+          ]
+        },
+        { "type": "attendu", "texte": "Sur la copie, le numéro de la question et la lettre suffisent : aucune justification n'est lue. Les huit questions se partagent les 6 points : une question sautée, c'est des points laissés sur la table." }
+      ]
+    },
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Location de bicyclettes traditionnelles ou électriques, avec ou sans assurance : arbre pondéré et probabilités conditionnelles.",
+      "points": 5,
+      "minutes": 30,
+      "enBref": [
+        "Arbre : $P(T) = 0{,}6$, $P(\\overline{T}) = 0{,}4$, $P_T(A) = 0{,}25$, $P_T(\\overline{A}) = 0{,}75$.",
+        "$P(A) = 0{,}2$ se lit directement dans l'énoncé : c'est une probabilité sur TOUS les clients.",
+        "$P(T \\cap A) = 0{,}6 \\times 0{,}25 = 0{,}15$, puis $P(\\overline{T} \\cap A) = 0{,}2 - 0{,}15 = 0{,}05$.",
+        "$P_{\\overline{T}}(A) = \\frac{0{,}05}{0{,}4} = \\frac{1}{8}$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Compléter l'arbre pondéré.",
+          "blocs": [
+            { "type": "texte", "texte": "60 % des clients louent une bicyclette traditionnelle : $P(T) = 0{,}6$, donc $P(\\overline{T}) = 1 - 0{,}6 = 0{,}4$. « Parmi ceux qui ont loué une bicyclette traditionnelle, 25 % » : c'est une probabilité SACHANT $T$, donc $P_T(A) = 0{,}25$ et $P_T(\\overline{A}) = 0{,}75$." },
+            {
+              "type": "tableau",
+              "entetes": ["Branche", "Probabilité"],
+              "lignes": [
+                ["vers $T$", "$0{,}6$"],
+                ["vers $\\overline{T}$", "$0{,}4$"],
+                ["de $T$ vers $A$", "$0{,}25$"],
+                ["de $T$ vers $\\overline{A}$", "$0{,}75$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$P(T) = 0{,}6$ ; $P(\\overline{T}) = 0{,}4$ ; $P_T(A) = 0{,}25$ ; $P_T(\\overline{A}) = 0{,}75$." },
+            { "type": "astuce", "texte": "Repère les mots « parmi » ou « sachant » : ils annoncent une probabilité conditionnelle, qui se place sur une branche du SECOND niveau." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Donner, par lecture de l'énoncé, $P(A)$.",
+          "blocs": [
+            { "type": "texte", "texte": "« 20 % de l'ensemble des clients ont pris une assurance » : cette fois, la proportion porte sur tous les clients, sans condition." },
+            { "type": "reponse", "texte": "$P(A) = 0{,}2$." },
+            { "type": "piege", "texte": "Ce 20 % ne va sur AUCUNE branche de l'arbre : $P(A)$ est la somme de deux chemins. Le placer sous $\\overline{T}$ est l'erreur classique de cet exercice." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que $P(T \\cap A) = 0{,}15$.",
+          "blocs": [
+            { "type": "texte", "texte": "On multiplie les probabilités le long du chemin $T$ puis $A$ :" },
+            { "type": "formule", "tex": "P(T \\cap A) = P(T) \\times P_T(A) = 0{,}6 \\times 0{,}25 = 0{,}15" },
+            { "type": "reponse", "texte": "$P(T \\cap A) = 0{,}15$." },
+            { "type": "astuce", "texte": "Sans calculatrice, $0{,}25$ c'est un quart : le quart de $0{,}6$ est $0{,}15$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "En déduire que $P(\\overline{T} \\cap A) = 0{,}05$.",
+          "blocs": [
+            { "type": "texte", "texte": "$T$ et $\\overline{T}$ forment une partition de l'univers. D'après la formule des probabilités totales :" },
+            { "type": "formule", "tex": "P(A) = P(T \\cap A) + P(\\overline{T} \\cap A) \\quad \\text{donc} \\quad P(\\overline{T} \\cap A) = 0{,}2 - 0{,}15 = 0{,}05" },
+            { "type": "reponse", "texte": "$P(\\overline{T} \\cap A) = 0{,}05$." },
+            { "type": "attendu", "texte": "Le correcteur attend le nom de la formule des probabilités totales (ou la partition $T$, $\\overline{T}$) avant la soustraction." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Probabilité que le client ait pris une assurance sachant qu'il a loué une bicyclette électrique, en fraction irréductible.",
+          "blocs": [
+            { "type": "texte", "texte": "Louer une bicyclette électrique, c'est l'événement $\\overline{T}$. On cherche $P_{\\overline{T}}(A)$ :" },
+            { "type": "formule", "tex": "P_{\\overline{T}}(A) = \\frac{P(\\overline{T} \\cap A)}{P(\\overline{T})} = \\frac{0{,}05}{0{,}4} = \\frac{5}{40} = \\frac{1}{8}" },
+            { "type": "reponse", "texte": "$P_{\\overline{T}}(A) = \\dfrac{1}{8}$ : un client sur huit qui loue une électrique prend l'assurance." },
+            { "type": "astuce", "texte": "Pour diviser deux décimaux sans calculatrice, multiplie haut et bas par la même puissance de 10 : $\\frac{0{,}05}{0{,}4} = \\frac{5}{40}$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Vrai ou faux, avec justification : un second degré qui dépend d'un paramètre, une suite géométrique, une tangente à la courbe de l'exponentielle.",
+      "points": 5,
+      "minutes": 30,
+      "enBref": [
+        "1. VRAI : le discriminant vaut $1 + 4u^2$, toujours strictement positif.",
+        "2. VRAI : $u_{n+1} = \\frac{1}{2} u_n$ pour tout $n$.",
+        "3. VRAI : la tangente en 0 a pour équation $y = x$, et le point $(3 ; 3)$ la vérifie.",
+        "Les trois affirmations sont vraies : ça arrive, ne te laisse pas déstabiliser."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Pour tout réel $u$, l'équation $x^2 + x - u^2 = 0$ possède deux solutions réelles distinctes.",
+          "blocs": [
+            { "type": "texte", "texte": "C'est une équation du second degré en $x$, avec $a = 1$, $b = 1$ et $c = -u^2$. Son discriminant :" },
+            { "type": "formule", "tex": "\\Delta = b^2 - 4ac = 1^2 - 4 \\times 1 \\times (-u^2) = 1 + 4u^2" },
+            { "type": "texte", "texte": "Un carré est positif ou nul, donc $4u^2 \\geqslant 0$ et $\\Delta \\geqslant 1 > 0$, quelle que soit la valeur de $u$." },
+            { "type": "reponse", "texte": "**VRAI** : $\\Delta = 1 + 4u^2 > 0$, l'équation a toujours deux solutions réelles distinctes." },
+            { "type": "piege", "texte": "La lettre $u$ n'est pas l'inconnue : c'est un paramètre, un nombre fixé. L'inconnue est $x$. Écris $a$, $b$ et $c$ avant de calculer, c'est là que se glissent les erreurs de signe." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "La suite définie par $u_n = 2^{-n}$ est géométrique de raison $\\frac{1}{2}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour tout entier naturel $n$ :" },
+            { "type": "formule", "tex": "u_{n+1} = 2^{-(n+1)} = 2^{-n} \\times 2^{-1} = \\frac{1}{2} \\times u_n" },
+            { "type": "reponse", "texte": "**VRAI** : $(u_n)$ est géométrique de raison $\\frac{1}{2}$ et de premier terme $u_0 = 1$." },
+            { "type": "astuce", "texte": "Pour prouver qu'une suite est géométrique, écris $u_{n+1}$ en fonction de $u_n$ pour TOUT $n$. Vérifier sur les trois premiers termes ne prouve rien." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Avec $f(x) = \\mathrm{e}^x - 1$, le point $A(3 ; 3)$ appartient à la tangente $T$ à la courbe au point d'abscisse 0.",
+          "blocs": [
+            { "type": "texte", "texte": "L'équation de la tangente au point d'abscisse $a$ est $y = f'(a)(x - a) + f(a)$. Ici $f'(x) = \\mathrm{e}^x$, donc $f'(0) = \\mathrm{e}^0 = 1$ et $f(0) = \\mathrm{e}^0 - 1 = 0$." },
+            { "type": "formule", "tex": "T : y = 1 \\times (x - 0) + 0 \\iff y = x" },
+            { "type": "texte", "texte": "Pour $x = 3$, la tangente donne $y = 3$ : les coordonnées de $A$ vérifient l'équation de $T$." },
+            { "type": "reponse", "texte": "**VRAI** : $T$ a pour équation $y = x$ et $A(3 ; 3)$ lui appartient." },
+            { "type": "attendu", "texte": "Trois éléments sont notés : la dérivée $f'(x) = \\mathrm{e}^x$, l'équation de la tangente, et la vérification avec les coordonnées de $A$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Géométrie repérée : vecteurs, normes, produit scalaire et angle $\\widehat{PKM}$ avec $P(4 ; 0)$, $K(1 ; 0)$ et $M(x ; 3)$.",
+      "points": 4,
+      "minutes": 25,
+      "enBref": [
+        "$\\overrightarrow{KP}(3 ; 0)$ de norme 3, $\\overrightarrow{KM}(x - 1 ; 3)$ de norme $\\sqrt{(x-1)^2 + 9}$.",
+        "Avec les coordonnées, $\\overrightarrow{KP} \\cdot \\overrightarrow{KM} = 3(x-1) + 0 \\times 3 = 3x - 3$.",
+        "Avec les normes et l'angle, le même produit scalaire vaut $3 \\times \\sqrt{(x-1)^2+9} \\times \\frac{1}{2}$ : en égalant, on obtient $(E)$.",
+        "Pour $x = 1 + \\sqrt{3}$, les deux membres valent $2\\sqrt{3}$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Coordonnées et norme du vecteur $\\overrightarrow{KP}$.",
+          "blocs": [
+            { "type": "formule", "tex": "\\overrightarrow{KP}\\begin{pmatrix} 4 - 1 \\\\ 0 - 0 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 0 \\end{pmatrix} \\qquad \\|\\overrightarrow{KP}\\| = \\sqrt{3^2 + 0^2} = 3" },
+            { "type": "reponse", "texte": "$\\overrightarrow{KP}(3 ; 0)$ et $KP = 3$." },
+            { "type": "astuce", "texte": "Coordonnées d'un vecteur : « arrivée moins départ ». Pour $\\overrightarrow{KP}$, le départ est $K$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Coordonnées et norme du vecteur $\\overrightarrow{KM}$ en fonction de $x$.",
+          "blocs": [
+            { "type": "formule", "tex": "\\overrightarrow{KM}\\begin{pmatrix} x - 1 \\\\ 3 \\end{pmatrix} \\qquad \\|\\overrightarrow{KM}\\| = \\sqrt{(x-1)^2 + 3^2} = \\sqrt{(x-1)^2 + 9}" },
+            { "type": "reponse", "texte": "$\\overrightarrow{KM}(x - 1 ; 3)$ et $KM = \\sqrt{(x-1)^2 + 9}$." },
+            { "type": "piege", "texte": "Ne « simplifie » pas la racine en $(x - 1) + 3$ : la racine d'une somme n'est pas la somme des racines." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que $\\overrightarrow{KP} \\cdot \\overrightarrow{KM} = 3x - 3$.",
+          "blocs": [
+            { "type": "texte", "texte": "Dans un repère orthonormé, le produit scalaire de $\\vec{u}(a ; b)$ et $\\vec{v}(c ; d)$ vaut $ac + bd$." },
+            { "type": "formule", "tex": "\\overrightarrow{KP} \\cdot \\overrightarrow{KM} = 3 \\times (x - 1) + 0 \\times 3 = 3x - 3" },
+            { "type": "reponse", "texte": "$\\overrightarrow{KP} \\cdot \\overrightarrow{KM} = 3x - 3$." },
+            { "type": "attendu", "texte": "La formule analytique n'est valable qu'en repère ORTHONORMÉ : mentionne-le, l'énoncé te le donne." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Montrer que si $\\widehat{PKM} = \\frac{\\pi}{3}$, alors $x$ est solution de $(E) : \\sqrt{(x-1)^2 + 9} = 2x - 2$.",
+          "blocs": [
+            { "type": "texte", "texte": "On calcule le même produit scalaire d'une seconde façon, avec les normes et l'angle :" },
+            { "type": "formule", "tex": "\\overrightarrow{KP} \\cdot \\overrightarrow{KM} = KP \\times KM \\times \\cos\\left(\\widehat{PKM}\\right) = 3 \\times \\sqrt{(x-1)^2+9} \\times \\cos\\frac{\\pi}{3} = \\frac{3}{2}\\sqrt{(x-1)^2+9}" },
+            { "type": "texte", "texte": "Les deux expressions du même nombre sont égales : $\\frac{3}{2}\\sqrt{(x-1)^2+9} = 3x - 3$. On multiplie les deux membres par $\\frac{2}{3}$ :" },
+            { "type": "formule", "tex": "\\sqrt{(x-1)^2+9} = \\frac{2}{3}(3x - 3) = 2x - 2" },
+            { "type": "reponse", "texte": "Si $\\widehat{PKM} = \\frac{\\pi}{3}$, alors $x$ est solution de $(E)$." },
+            { "type": "astuce", "texte": "Quand un exercice te fait calculer un produit scalaire avec les coordonnées, puis te parle d'un angle, c'est presque toujours pour égaler les deux formules : coordonnées d'un côté, normes et cosinus de l'autre." },
+            { "type": "attendu", "texte": "La valeur $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$ doit être connue par cœur : l'épreuve est sans calculatrice." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Vérifier que $1 + \\sqrt{3}$ est solution de $(E)$.",
+          "blocs": [
+            { "type": "texte", "texte": "On remplace $x$ par $1 + \\sqrt{3}$ dans chaque membre, séparément." },
+            { "type": "formule", "tex": "\\text{À gauche : } \\sqrt{(\\sqrt{3})^2 + 9} = \\sqrt{3 + 9} = \\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}" },
+            { "type": "formule", "tex": "\\text{À droite : } 2(1 + \\sqrt{3}) - 2 = 2 + 2\\sqrt{3} - 2 = 2\\sqrt{3}" },
+            { "type": "reponse", "texte": "Les deux membres valent $2\\sqrt{3}$ : $1 + \\sqrt{3}$ est bien solution de $(E)$." },
+            { "type": "astuce", "texte": "« Vérifier qu'un nombre est solution » ne demande pas de résoudre : calcule chaque membre à part et constate qu'ils sont égaux. Simplifier $\\sqrt{12}$ en $2\\sqrt{3}$ est le seul point technique." }
+          ]
+        }
+      ]
+    }
+  ]
+}

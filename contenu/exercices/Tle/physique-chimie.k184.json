@@ -1,0 +1,3365 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "302b266f-547d-5e87-a642-e7e6f969fa1d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le vinaigre et l’ammoniaque",
+      "competence": "analyser-document",
+      "situation": "Dans la cuisine, on trouve du vinaigre (acide éthanoïque CH₃COOH) et, dans le placard à produits, de l’ammoniaque (NH₃ dissous). Voici les couples acide/base en jeu.",
+      "documents": [
+        {
+          "id": "couples",
+          "type": "tableau",
+          "titre": "Quatre couples acide/base",
+          "colonnes": [
+            "Couple",
+            "Demi-équation"
+          ],
+          "lignes": [
+            [
+              "CH₃COOH / CH₃COO⁻",
+              "CH₃COOH = CH₃COO⁻ + H⁺"
+            ],
+            [
+              "NH₄⁺ / NH₃",
+              "NH₄⁺ = NH₃ + H⁺"
+            ],
+            [
+              "H₃O⁺ / H₂O",
+              "H₃O⁺ = H₂O + H⁺"
+            ],
+            [
+              "H₂O / HO⁻",
+              "H₂O = HO⁻ + H⁺"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "couples",
+          "enonce": "Touche la demi-équation du couple de l’ion ammonium.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la ligne qui contient NH₄⁺.",
+          "explication": "La deuxième ligne : **NH₄⁺ = NH₃ + H⁺**. L’acide NH₄⁺ cède un proton et devient la base NH₃."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète : on mélange le vinaigre et l’ammoniaque.",
+          "texte": "Dans la réaction entre CH₃COOH et NH₃, CH₃COOH joue le rôle d’___ et NH₃ celui de ___.",
+          "reponses": [
+            [
+              "acide"
+            ],
+            [
+              "base"
+            ]
+          ],
+          "banque": [
+            "acide",
+            "base",
+            "catalyseur",
+            "solvant"
+          ],
+          "aide": "Dans chaque couple du tableau, l’acide est à gauche : celui qui cède H⁺.",
+          "explication": "CH₃COOH cède un proton : c’est l’**acide**. NH₃ capte ce proton pour devenir NH₄⁺ : c’est la **base**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand NH₃ capte un proton, il devient NH₄⁺. Combien d’atomes d’hydrogène compte cet ion ?",
+          "reponse": 4,
+          "unite": "atomes",
+          "aide": "NH₃ en a déjà 3 : ajoute le proton H⁺.",
+          "explication": "3 + 1 = **4** atomes d’hydrogène : NH₄⁺ est l’ion ammonium."
+        }
+      ]
+    },
+    {
+      "chapitre": "302b266f-547d-5e87-a642-e7e6f969fa1d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’ion hydrogénocarbonate, double jeu",
+      "competence": "analyser-document",
+      "situation": "L’ion hydrogénocarbonate HCO₃⁻ est présent dans les eaux minérales et dans le bicarbonate de soude. On l’étudie dans deux réactions, l’une avec un acide, l’autre avec une base.",
+      "documents": [
+        {
+          "id": "reactions",
+          "type": "tableau",
+          "titre": "Deux réactions de HCO₃⁻",
+          "colonnes": [
+            "Réaction",
+            "Réactifs",
+            "Produits"
+          ],
+          "lignes": [
+            [
+              "(1)",
+              "HCO₃⁻ + H₃O⁺",
+              "CO₂,H₂O + H₂O"
+            ],
+            [
+              "(2)",
+              "HCO₃⁻ + HO⁻",
+              "CO₃²⁻ + H₂O"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Réactions données dans le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "reactions",
+          "enonce": "Touche les produits de la réaction (2).",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Les produits sont à droite de la flèche, dans la dernière colonne.",
+          "explication": "La réaction (2) forme **CO₃²⁻ + H₂O** : HCO₃⁻ a perdu un proton."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque réaction au rôle de HCO₃⁻.",
+          "paires": [
+            [
+              "Réaction (1)",
+              "HCO₃⁻ capte un proton"
+            ],
+            [
+              "Réaction (2)",
+              "HCO₃⁻ cède un proton"
+            ]
+          ],
+          "aide": "Regarde si HCO₃⁻ devient CO₂,H₂O (plus de H) ou CO₃²⁻ (moins de H).",
+          "explication": "En (1), HCO₃⁻ gagne un H et devient CO₂,H₂O : il joue le rôle de **base**. En (2), il perd un H et devient CO₃²⁻ : il joue le rôle d’**acide**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelles espèces sont amphotères ? (Plusieurs réponses.)",
+          "options": [
+            "H₂O",
+            "HCO₃⁻",
+            "NH₄⁺",
+            "CH₃COO⁻"
+          ],
+          "reponse": [
+            0,
+            1
+          ],
+          "aide": "Une espèce amphotère appartient à deux couples : acide dans l’un, base dans l’autre.",
+          "explication": "**H₂O** (couples H₃O⁺/H₂O et H₂O/HO⁻) et **HCO₃⁻** sont amphotères. NH₄⁺ n’est qu’un acide, CH₃COO⁻ n’est qu’une base."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans la réaction (2), combien de charges négatives élémentaires portent, au total, les deux réactifs HCO₃⁻ et HO⁻ ?",
+          "reponse": 2,
+          "unite": "e",
+          "aide": "Chaque ion porte une charge négative.",
+          "explication": "HCO₃⁻ en porte 1, HO⁻ en porte 1 : **2** au total, comme CO₃²⁻ côté produits. La charge se conserve."
+        }
+      ]
+    },
+    {
+      "chapitre": "302b266f-547d-5e87-a642-e7e6f969fa1d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Écrire la réaction pas à pas",
+      "competence": "raisonner",
+      "situation": "Sur une étiquette de produit ménager, on lit : « ne jamais mélanger vinaigre et ammoniaque ». Pour comprendre ce qui se passe, on repère les couples puis on écrit l’équation.",
+      "documents": [
+        {
+          "id": "especes",
+          "type": "tableau",
+          "titre": "Les espèces et leurs couples",
+          "colonnes": [
+            "Espèce",
+            "Couple où elle est acide",
+            "Couple où elle est base"
+          ],
+          "lignes": [
+            [
+              "H₂O",
+              "H₂O / HO⁻",
+              "H₃O⁺ / H₂O"
+            ],
+            [
+              "HCO₃⁻",
+              "HCO₃⁻ / CO₃²⁻",
+              "CO₂,H₂O / HCO₃⁻"
+            ],
+            [
+              "NH₃",
+              "—",
+              "NH₄⁺ / NH₃"
+            ],
+            [
+              "CH₃COOH",
+              "CH₃COOH / CH₃COO⁻",
+              "—"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "melange",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "L’expérience",
+          "blocs": [
+            "On verse un peu de vinaigre (acide éthanoïque CH₃COOH) dans de l’ammoniaque (NH₃ dissous)."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "especes",
+          "enonce": "Touche les espèces amphotères du tableau. (Plusieurs réponses.)",
+          "reponse": [
+            "r0c0",
+            "r1c0"
+          ],
+          "multiple": true,
+          "aide": "Une espèce amphotère a un couple dans les DEUX colonnes.",
+          "explication": "**H₂O** et **HCO₃⁻** figurent dans les deux colonnes : elles sont amphotères. NH₃ n’est que base et CH₃COOH n’est qu’un acide."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes pour écrire l’équation d’une réaction acido-basique.",
+          "items": [
+            "Repérer les deux couples en jeu",
+            "Écrire la demi-équation de chaque couple",
+            "Faire passer H⁺ de l’acide à la base",
+            "Additionner les demi-équations",
+            "Vérifier la conservation des atomes et des charges"
+          ],
+          "aide": "On commence par les couples et on finit par une vérification.",
+          "explication": "On repère les couples, on écrit les demi-équations, on fait passer le proton de l’acide à la base, on additionne, puis on **vérifie** atomes et charges."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’équation de la réaction entre CH₃COOH et NH₃ ?",
+          "options": [
+            "CH₃COOH + NH₃ → CH₃COO⁻ + NH₄⁺ : l’acide éthanoïque cède son proton à l’ammoniac",
+            "CH₃COO⁻ + NH₄⁺ → CH₃COOH + NH₃ : c’est la réaction dans le sens inverse",
+            "CH₃COOH + NH₄⁺ → CH₃COO⁻ + NH₃ : les deux acides réagissent entre eux",
+            "CH₃COOH + NH₃ → CH₃COOH₂⁺ + NH₂⁻ : le proton reste sur l’acide"
+          ],
+          "reponse": 0,
+          "aide": "L’acide CH₃COOH cède H⁺ à la base NH₃. Regarde les formules à droite de la flèche.",
+          "explication": "**CH₃COOH + NH₃ → CH₃COO⁻ + NH₄⁺** : le proton passe de l’acide d’un couple à la base de l’autre. Atomes et charges sont conservés."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans l’eau pure, combien d’ions HO⁻ apparaissent pour chaque ion H₃O⁺ formé par l’autoprotolyse 2 H₂O = H₃O⁺ + HO⁻ ?",
+          "reponse": 1,
+          "unite": "ion",
+          "aide": "Lis les coefficients de l’équation.",
+          "explication": "Les coefficients sont 1 et 1 : pour chaque H₃O⁺ il apparaît **1** HO⁻. C’est pourquoi l’eau pure est neutre."
+        }
+      ]
+    },
+    {
+      "chapitre": "6e051370-fe80-5591-8f9e-2489eb3c9986",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du citron à la soude",
+      "competence": "lire-tableau",
+      "situation": "Un laboratoire a mesuré le pH de solutions que l’on croise à la maison. Un soda a un pH de 3,0.",
+      "documents": [
+        {
+          "id": "ph",
+          "type": "tableau",
+          "titre": "pH de quelques solutions",
+          "colonnes": [
+            "Solution",
+            "pH"
+          ],
+          "lignes": [
+            [
+              "Jus de citron",
+              "2,5"
+            ],
+            [
+              "Lait",
+              "6,5"
+            ],
+            [
+              "Eau pure",
+              "7,0"
+            ],
+            [
+              "Savon liquide",
+              "10,0"
+            ],
+            [
+              "Soude ménagère",
+              "13,0"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, mesures à 25 °C"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ph",
+          "enonce": "Touche le pH de la solution la plus acide.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Plus le pH est petit, plus la solution est acide.",
+          "explication": "Le **jus de citron** (pH 2,5) a le pH le plus bas : c’est la solution la plus acide."
+        },
+        {
+          "type": "zone",
+          "document": "ph",
+          "enonce": "Touche les pH des solutions basiques. (Plusieurs réponses.)",
+          "reponse": [
+            "r3c1",
+            "r4c1"
+          ],
+          "multiple": true,
+          "aide": "Une solution basique a un pH supérieur à 7 à 25 °C.",
+          "explication": "Le **savon liquide** (10,0) et la **soude** (13,0) sont basiques. Le lait (6,5) est très légèrement acide, l’eau pure (7,0) est neutre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le jus de citron et le lait diffèrent de 4 unités de pH. Par combien [H₃O⁺] est-elle multipliée du lait au citron ?",
+          "reponse": 10000,
+          "aide": "Chaque unité de pH correspond à un facteur 10.",
+          "explication": "4 unités de pH : 10⁴ = **10 000**. Le citron est dix mille fois plus concentré en H₃O⁺ que le lait."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la concentration en ions H₃O⁺ d’un soda de pH 3,0, en mmol·L⁻¹ ?",
+          "reponse": 1,
+          "unite": "mmol·L⁻¹",
+          "aide": "[H₃O⁺] = 10^(−pH) mol·L⁻¹, puis convertis en mmol·L⁻¹.",
+          "explication": "[H₃O⁺] = 10⁻³ mol·L⁻¹ = **1 mmol·L⁻¹**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6e051370-fe80-5591-8f9e-2489eb3c9986",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Dilue, dilue, dilue…",
+      "competence": "lire-graphique",
+      "situation": "Au laboratoire, on prélève de l’acide chlorhydrique de pH 2,0 et on le dilue de plus en plus, en mesurant le pH après chaque dilution.",
+      "documents": [
+        {
+          "id": "dilution",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "pH après dilution",
+          "categories": [
+            "×1",
+            "×10",
+            "×100",
+            "×1 000",
+            "×10 000"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Facteur de dilution"
+          },
+          "valeurs": false,
+          "source": "Acide fort, valeurs idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dilution",
+          "enonce": "Touche la dilution pour laquelle le pH vaut 5.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Lis l’axe vertical : cherche la hauteur 5.",
+          "explication": "Le pH vaut 5 après une dilution **×1 000**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est [H₃O⁺] après la dilution ×10 000 (pH = 6), en µmol·L⁻¹ ?",
+          "reponse": 1,
+          "unite": "µmol·L⁻¹",
+          "aide": "10⁻⁶ mol·L⁻¹ : convertis en micromoles.",
+          "explication": "[H₃O⁺] = 10⁻⁶ mol·L⁻¹ = **1 µmol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour passer de pH 2 à pH 4, on prélève 10 mL de solution. Quel volume final, en mL, doit contenir la fiole ?",
+          "reponse": 1000,
+          "unite": "mL",
+          "aide": "De pH 2 à pH 4, la solution est diluée 100 fois.",
+          "explication": "Deux unités de pH : facteur 10² = 100. Le volume final est 100 × 10 mL = **1 000 mL**, soit une fiole de 1,0 L."
+        },
+        {
+          "type": "choix",
+          "enonce": "On dilue 10⁶ fois une solution de pH 2. Quel pH obtient-on à peu près ?",
+          "options": [
+            "8",
+            "Exactement 7,0",
+            "Un peu moins de 7",
+            "−4"
+          ],
+          "reponse": 2,
+          "aide": "La dilution rapproche le pH de 7 sans jamais le franchir.",
+          "explication": "La solution reste acide : son pH tend vers 7 par valeurs **un peu inférieures à 7**. Une dilution ne rend jamais une solution acide basique."
+        }
+      ]
+    },
+    {
+      "chapitre": "6e051370-fe80-5591-8f9e-2489eb3c9986",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le 7 n’est pas magique",
+      "competence": "raisonner",
+      "situation": "Le pH de neutralité vaut 7,0 à 25 °C, mais Ke dépend de la température. On étudie l’eau à quatre températures ; à la neutralité, pH = pKe ÷ 2.",
+      "documents": [
+        {
+          "id": "pke",
+          "type": "tableau",
+          "titre": "pKe de l’eau selon la température",
+          "colonnes": [
+            "Température",
+            "pKe"
+          ],
+          "lignes": [
+            [
+              "0 °C",
+              "14,94"
+            ],
+            [
+              "25 °C",
+              "14,00"
+            ],
+            [
+              "50 °C",
+              "13,26"
+            ],
+            [
+              "100 °C",
+              "12,26"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pke",
+          "enonce": "Touche la température pour laquelle le pH de l’eau neutre est le plus bas.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "pH neutre = pKe ÷ 2 : cherche le plus petit pKe.",
+          "explication": "À **100 °C**, pKe = 12,26 est le plus petit : le pH neutre (6,13) y est le plus bas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le pH de l’eau neutre à 100 °C ? (Deux décimales.)",
+          "reponse": 6.13,
+          "tolerance": 0.005,
+          "aide": "Divise le pKe de 100 °C par 2.",
+          "explication": "pH = 12,26 ÷ 2 = **6,13**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À 100 °C, une solution a un pH de 6,5. Comment est-elle ?",
+          "options": [
+            "Acide",
+            "Neutre",
+            "Basique",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 2,
+          "aide": "Compare 6,5 au pH de neutralité à 100 °C, pas à 7.",
+          "explication": "À 100 °C la neutralité est à 6,13. Comme 6,5 > 6,13, la solution est **basique**, même si son pH est inférieur à 7."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 25 °C, une solution a un pH de 11. Quelle est sa concentration en HO⁻, en mmol·L⁻¹ ? (Ke = 1,0 × 10⁻¹⁴.)",
+          "reponse": 1,
+          "unite": "mmol·L⁻¹",
+          "aide": "[H₃O⁺] = 10⁻¹¹ mol·L⁻¹ ; [HO⁻] = Ke ÷ [H₃O⁺].",
+          "explication": "[HO⁻] = 10⁻¹⁴ ÷ 10⁻¹¹ = 10⁻³ mol·L⁻¹ = **1 mmol·L⁻¹**."
+        }
+      ]
+    },
+    {
+      "chapitre": "65fd6deb-d2a3-5627-947c-0eeb1fab352f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La part de chaque ion",
+      "competence": "lire-tableau",
+      "situation": "Une solution de chlorure de sodium (Na⁺ + Cl⁻) conduit le courant : chaque ion apporte sa part de conductivité. Pour calculer, les concentrations doivent être en mol·m⁻³ (1 mol·L⁻¹ = 1 000 mol·m⁻³).",
+      "documents": [
+        {
+          "id": "lambda",
+          "type": "tableau",
+          "titre": "Conductivités molaires ioniques",
+          "colonnes": [
+            "Ion",
+            "λ (mS·m²·mol⁻¹)"
+          ],
+          "lignes": [
+            [
+              "H₃O⁺",
+              "35,0"
+            ],
+            [
+              "HO⁻",
+              "19,9"
+            ],
+            [
+              "Cl⁻",
+              "7,6"
+            ],
+            [
+              "Na⁺",
+              "5,0"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs à 25 °C"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lambda",
+          "enonce": "Touche l’ion qui conduit le mieux le courant.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Cherche la plus grande valeur de λ.",
+          "explication": "**H₃O⁺** a le plus grand λ (35,0) : il conduit le mieux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une solution de NaCl contient 10 mol·m⁻³ de Na⁺ et 10 mol·m⁻³ de Cl⁻. Calcule sa conductivité σ.",
+          "reponse": 126,
+          "unite": "mS·m⁻¹",
+          "aide": "σ = λ(Na⁺)·[Na⁺] + λ(Cl⁻)·[Cl⁻].",
+          "explication": "σ = 5,0 × 10 + 7,6 × 10 = **126 mS·m⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une autre solution de NaCl est à 0,030 mol·L⁻¹. Calcule sa conductivité σ.",
+          "reponse": 378,
+          "unite": "mS·m⁻¹",
+          "aide": "Convertis d’abord 0,030 mol·L⁻¹ en mol·m⁻³.",
+          "explication": "0,030 mol·L⁻¹ = 30 mol·m⁻³. σ = (5,0 + 7,6) × 30 = **378 mS·m⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par combien la conductivité est-elle multipliée si on double la concentration en NaCl ?",
+          "reponse": 2,
+          "aide": "Dans la loi de Kohlrausch, σ est proportionnelle aux concentrations.",
+          "explication": "σ = Σ λ·[X] est proportionnelle à chaque concentration : elle est multipliée par **2**."
+        }
+      ]
+    },
+    {
+      "chapitre": "65fd6deb-d2a3-5627-947c-0eeb1fab352f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le titrage qui change de pente",
+      "competence": "lire-graphique",
+      "situation": "On dose 100 mL d’acide chlorhydrique par de la soude à 0,100 mol·L⁻¹, en suivant la conductivité σ. La dilution est corrigée : les segments sont des droites.",
+      "documents": [
+        {
+          "id": "titrage",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Conductivité au cours du titrage",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20"
+          ],
+          "series": [
+            {
+              "nom": "σ",
+              "valeurs": [
+                426,
+                366,
+                306,
+                246,
+                186,
+                126,
+                175.8,
+                225.6,
+                275.4,
+                325.2,
+                375
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "σ",
+            "unite": "mS·m⁻¹",
+            "min": 0,
+            "max": 450,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Volume de soude versé (mL)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis la conductivité de la solution avant tout ajout de soude.",
+          "reponse": 426,
+          "unite": "mS·m⁻¹",
+          "tolerance": 10,
+          "aide": "Regarde le premier point, à V = 0 mL.",
+          "explication": "Le premier point est à environ **426 mS·m⁻¹**."
+        },
+        {
+          "type": "zone",
+          "document": "titrage",
+          "enonce": "Touche le point de l’équivalence, à la rupture de pente.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "C’est là que la courbe cesse de descendre et se met à remonter.",
+          "explication": "La rupture de pente est au point **V = 10 mL** : c’est l’équivalence."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la concentration de l’acide dosé (volume 100 mL, soude à 0,100 mol·L⁻¹), en mmol·L⁻¹ ?",
+          "reponse": 10,
+          "unite": "mmol·L⁻¹",
+          "aide": "À l’équivalence, n(H₃O⁺) = n(HO⁻) versé. Lis d’abord V_E sur le graphique.",
+          "explication": "V_E = 10 mL : n(HO⁻) = 0,100 mol·L⁻¹ × 10 mL = 1,0 mmol. Elle réagit avec l’acide contenu dans 100 mL : c = 1,0 mmol ÷ 100 mL = **10 mmol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la conductivité à l’équivalence.",
+          "reponse": 126,
+          "unite": "mS·m⁻¹",
+          "tolerance": 6,
+          "aide": "Regarde la hauteur du point le plus bas.",
+          "explication": "À l’équivalence σ vaut environ **126 mS·m⁻¹** : il ne reste que Na⁺ et Cl⁻."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi σ diminue-t-elle avant l’équivalence ?",
+          "options": [
+            "Les ions H₃O⁺, très conducteurs, sont remplacés par des ions Na⁺ moins conducteurs",
+            "La solution se refroidit au cours du titrage, ce qui abaisse sa conductivité",
+            "Les ions Cl⁻ disparaissent de la solution, car ils réagissent avec la soude versée",
+            "La soude est un isolant électrique : plus on en verse, moins la solution conduit"
+          ],
+          "reponse": 0,
+          "aide": "Compare λ(H₃O⁺) et λ(Na⁺).",
+          "explication": "Chaque HO⁻ versé fait disparaître un H₃O⁺ (λ = 35,0) et Na⁺ (λ = 5,0) prend sa place : **σ baisse**."
+        }
+      ]
+    },
+    {
+      "chapitre": "65fd6deb-d2a3-5627-947c-0eeb1fab352f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La conductance de l’eau de source",
+      "competence": "modeliser",
+      "situation": "Une eau de source imaginaire ne contient, pour simplifier, que des ions sodium et chlorure. On veut prévoir ce que mesurerait un conductimètre dont la cellule a des électrodes de surface S et distantes de L. On rappelle G = σ × S / L (S et L en mètres).",
+      "documents": [
+        {
+          "id": "etiquette",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Eau de source imaginaire",
+          "sousTitre": "Minéralisation, en mg par litre",
+          "emoji": "💧",
+          "lignes": [
+            {
+              "texte": "Sodium Na⁺",
+              "valeur": "23,0 mg/L",
+              "id": "na"
+            },
+            {
+              "texte": "Chlorure Cl⁻",
+              "valeur": "35,5 mg/L",
+              "id": "cl"
+            }
+          ],
+          "pied": "Étiquette écrite pour l’exercice"
+        },
+        {
+          "id": "donnees",
+          "type": "tableau",
+          "titre": "Données",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Masse molaire de Na",
+              "23,0 g·mol⁻¹"
+            ],
+            [
+              "Masse molaire de Cl",
+              "35,5 g·mol⁻¹"
+            ],
+            [
+              "λ(Na⁺)",
+              "5,0 mS·m²·mol⁻¹"
+            ],
+            [
+              "λ(Cl⁻)",
+              "7,6 mS·m²·mol⁻¹"
+            ],
+            [
+              "Surface des électrodes S",
+              "2,0 cm²"
+            ],
+            [
+              "Distance L",
+              "1,0 cm"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etiquette",
+          "enonce": "Touche la ligne de l’étiquette qui donne la quantité d’ions sodium.",
+          "reponse": [
+            "na"
+          ],
+          "aide": "Le sodium a pour symbole Na.",
+          "explication": "La ligne **Sodium Na⁺** donne 23,0 mg par litre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la concentration en Na⁺, en mmol·L⁻¹ ? (Elle vaut aussi celle de Cl⁻.)",
+          "reponse": 1,
+          "unite": "mmol·L⁻¹",
+          "aide": "c = m ÷ M : 23,0 mg ÷ 23,0 g·mol⁻¹ donne des mmol.",
+          "explication": "c = 23,0 ÷ 23,0 = **1,0 mmol·L⁻¹**. Pour Cl⁻ : 35,5 ÷ 35,5 = 1,0 aussi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la conductivité de l’eau. (1 mmol·L⁻¹ = 1 mol·m⁻³.)",
+          "reponse": 12.6,
+          "unite": "mS·m⁻¹",
+          "tolerance": 0.05,
+          "aide": "σ = (λ(Na⁺) + λ(Cl⁻)) × 1,0 mol·m⁻³.",
+          "explication": "σ = (5,0 + 7,6) × 1,0 = **12,6 mS·m⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la conductance G de la cellule, en µS. (Convertis σ en S·m⁻¹, S en m² et L en m.)",
+          "reponse": 252,
+          "unite": "µS",
+          "tolerance": 1,
+          "aide": "σ = 12,6 × 10⁻³ S·m⁻¹ ; S = 2,0 × 10⁻⁴ m² ; L = 1,0 × 10⁻² m.",
+          "explication": "G = 12,6 × 10⁻³ × 2,0 × 10⁻⁴ ÷ 1,0 × 10⁻² = 2,52 × 10⁻⁴ S = **252 µS**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En déduire la résistance R = 1/G de la solution, en kΩ. (Deux décimales.)",
+          "reponse": 3.97,
+          "unite": "kΩ",
+          "tolerance": 0.02,
+          "aide": "R = 1 ÷ G, avec G en siemens.",
+          "explication": "R = 1 ÷ 2,52 × 10⁻⁴ ≈ 3 968 Ω ≈ **3,97 kΩ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On éloigne les électrodes : L passe à 2,0 cm. Que devient G, en µS ?",
+          "reponse": 126,
+          "unite": "µS",
+          "tolerance": 1,
+          "aide": "G est inversement proportionnelle à L.",
+          "explication": "L double : G est divisée par 2. **126 µS**. La conductivité σ, elle, ne change pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "e90ec12d-7651-5f83-8850-e76b7c62cf6b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le colorant sous la lumière",
+      "competence": "lire-graphique",
+      "situation": "Un colorant alimentaire bleu est en solution dans l’eau. Un spectrophotomètre mesure son absorbance A pour plusieurs longueurs d’onde.",
+      "documents": [
+        {
+          "id": "spectre",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Spectre d’absorption du colorant",
+          "categories": [
+            "400",
+            "450",
+            "500",
+            "550",
+            "600",
+            "650",
+            "700"
+          ],
+          "series": [
+            {
+              "nom": "A",
+              "valeurs": [
+                0.05,
+                0.08,
+                0.15,
+                0.4,
+                0.95,
+                1.2,
+                0.35
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Absorbance A",
+            "min": 0,
+            "max": 1.5,
+            "pas": 0.25
+          },
+          "axeX": {
+            "titre": "Longueur d’onde (nm)"
+          },
+          "valeurs": false,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche la longueur d’onde λ_max où l’absorbance est maximale.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche le sommet de la courbe.",
+          "explication": "Le maximum est à **650 nm** : on y règle le spectrophotomètre pour les mesures."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis l’absorbance à λ_max.",
+          "reponse": 1.2,
+          "tolerance": 0.05,
+          "aide": "Repère la hauteur du sommet.",
+          "explication": "A ≈ **1,20** à 650 nm. L’absorbance n’a pas d’unité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On dilue la solution 2 fois (c divisée par 2). Quelle absorbance mesure-t-on à λ_max ?",
+          "reponse": 0.6,
+          "tolerance": 0.03,
+          "aide": "A est proportionnelle à la concentration.",
+          "explication": "Loi de Beer-Lambert : A est divisée par 2, soit **0,60**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e90ec12d-7651-5f83-8850-e76b7c62cf6b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Doser un colorant par étalonnage",
+      "competence": "analyser-document",
+      "situation": "On prépare cinq solutions étalons du même colorant et on mesure leur absorbance à λ_max avec une cuve de largeur ℓ = 1,00 cm. On mesure aussi une solution inconnue, diluée 10 fois avant la mesure : A = 0,35.",
+      "documents": [
+        {
+          "id": "etalon",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Droite d’étalonnage",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "A",
+              "valeurs": [
+                0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Absorbance A",
+            "min": 0,
+            "max": 0.6,
+            "pas": 0.1
+          },
+          "axeX": {
+            "titre": "Concentration (µmol·L⁻¹)"
+          },
+          "valeurs": false,
+          "source": "Mesures écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etalon",
+          "enonce": "Touche la solution étalon de concentration 8 µmol·L⁻¹.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Les concentrations sont sur l’axe horizontal.",
+          "explication": "La solution à 8 µmol·L⁻¹ est le point **k4**, d’absorbance 0,40."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la concentration de la solution mesurée (A = 0,35) ?",
+          "reponse": 7,
+          "unite": "µmol·L⁻¹",
+          "tolerance": 0.1,
+          "aide": "La droite passe par (0 ; 0) et (10 ; 0,50) : A = 0,050 × c.",
+          "explication": "c = 0,35 ÷ 0,050 = **7,0 µmol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La solution inconnue avait été diluée 10 fois. Quelle est sa concentration d’origine ?",
+          "reponse": 70,
+          "unite": "µmol·L⁻¹",
+          "tolerance": 1,
+          "aide": "Multiplie par le facteur de dilution.",
+          "explication": "c d’origine = 10 × 7,0 = **70 µmol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule ε avec A = ε × ℓ × c (ℓ = 1,00 cm, c en mol·L⁻¹). Donne la valeur en 10⁴ L·mol⁻¹·cm⁻¹.",
+          "reponse": 5,
+          "unite": "10⁴ L·mol⁻¹·cm⁻¹",
+          "tolerance": 0.05,
+          "aide": "Prends le point (10 µmol·L⁻¹ ; 0,50) : c = 1,0 × 10⁻⁵ mol·L⁻¹.",
+          "explication": "ε = A ÷ (ℓ × c) = 0,50 ÷ (1,00 × 1,0 × 10⁻⁵) = 5,0 × 10⁴ L·mol⁻¹·cm⁻¹, soit **5,0** en 10⁴ L·mol⁻¹·cm⁻¹."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une solution donne A = 2,4, bien au-dessus du dernier étalon. Que faire ?",
+          "options": [
+            "Diluer la solution puis refaire la mesure",
+            "Prolonger la droite et lire la concentration",
+            "Changer de longueur d’onde pour avoir une valeur plus faible",
+            "Noter 2,4 et calculer quand même"
+          ],
+          "reponse": 0,
+          "aide": "La loi de Beer-Lambert ne vaut que pour les solutions diluées.",
+          "explication": "Au-delà de A ≈ 2 la loi n’est plus valable : il faut **diluer** puis refaire la mesure."
+        }
+      ]
+    },
+    {
+      "chapitre": "e90ec12d-7651-5f83-8850-e76b7c62cf6b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une molécule à identifier",
+      "competence": "analyser-document",
+      "situation": "Un composé inconnu a pour formule brute C₃H₆O₂. On dispose de son spectre infrarouge (bandes relevées) et de son spectre RMN du proton.",
+      "documents": [
+        {
+          "id": "ir",
+          "type": "tableau",
+          "titre": "Bandes du spectre IR",
+          "colonnes": [
+            "Bande (cm⁻¹)",
+            "Allure"
+          ],
+          "lignes": [
+            [
+              "2500 à 3200",
+              "Très large"
+            ],
+            [
+              "1710",
+              "Fine et intense"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Bandes relevées pour l’exercice"
+        },
+        {
+          "id": "rmn",
+          "type": "tableau",
+          "titre": "Signaux du spectre RMN",
+          "colonnes": [
+            "Signal",
+            "δ (ppm)",
+            "Intégration (H)",
+            "Multiplicité"
+          ],
+          "lignes": [
+            [
+              "A",
+              "1,1",
+              "3",
+              "triplet"
+            ],
+            [
+              "B",
+              "2,4",
+              "2",
+              "quadruplet"
+            ],
+            [
+              "C",
+              "11,5",
+              "1",
+              "singulet"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Signaux écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel groupe caractéristique l’infrarouge révèle-t-il ?",
+          "options": [
+            "Un alcool, avec une bande O–H large mais aucune bande C=O",
+            "Un acide carboxylique : une bande O–H large et une bande C=O",
+            "Une cétone, avec une bande C=O mais aucune bande O–H large",
+            "Un alcane, dont le spectre n’a que des bandes C–H et C–C"
+          ],
+          "reponse": 1,
+          "aide": "Une bande très large entre 2500 et 3200 cm⁻¹ s’ajoute à la bande C=O.",
+          "explication": "La bande **très large** (O—H) et la bande fine à 1710 cm⁻¹ (C=O) caractérisent un **acide carboxylique**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’hydrogène comptent les trois signaux réunis ?",
+          "reponse": 6,
+          "unite": "H",
+          "aide": "Additionne les valeurs de la colonne Intégration.",
+          "explication": "3 + 2 + 1 = **6** hydrogènes, en accord avec C₃H₆O₂."
+        },
+        {
+          "type": "zone",
+          "document": "rmn",
+          "enonce": "Touche le signal du groupe CH₃ de la molécule.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Un groupe CH₃ compte trois hydrogènes équivalents.",
+          "explication": "Le signal **A** (3 H) est celui de CH₃ ; son triplet indique 2 voisins, ceux du CH₂."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le signal B est un quadruplet. Combien d’hydrogènes voisins le groupe correspondant a-t-il ?",
+          "reponse": 3,
+          "unite": "H",
+          "aide": "n voisins donnent n + 1 pics.",
+          "explication": "Un quadruplet compte 4 pics : 4 − 1 = **3** voisins, ceux du CH₃."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle molécule convient ?",
+          "options": [
+            "CH₃CH₂COOH, acide propanoïque",
+            "CH₃COOCH₃, éthanoate de méthyle",
+            "HCOOCH₂CH₃, méthanoate d’éthyle",
+            "CH₃CH₂CH₂OH, propan-1-ol"
+          ],
+          "reponse": 0,
+          "aide": "Un acide carboxylique, un CH₃ voisin d’un CH₂, et un H très déblindé vers 11 ppm.",
+          "explication": "**CH₃CH₂COOH** : CH₃ (triplet), CH₂ (quadruplet) et O—H d’acide (singulet à 11,5 ppm). Les esters n’ont pas de bande O—H large."
+        }
+      ]
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les systèmes de la cuisine",
+      "competence": "lire-tableau",
+      "situation": "Pour décrire un système, on se demande d’abord ce qu’il échange avec l’extérieur. Voici quatre objets de la cuisine.",
+      "documents": [
+        {
+          "id": "objets",
+          "type": "tableau",
+          "titre": "Ce que chaque objet échange",
+          "colonnes": [
+            "Objet",
+            "Échange de matière ?",
+            "Échange d’énergie ?"
+          ],
+          "lignes": [
+            [
+              "Casserole sans couvercle",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Bouteille d’eau bouchée",
+              "Non",
+              "Oui"
+            ],
+            [
+              "Calorimètre idéal",
+              "Non",
+              "Non"
+            ],
+            [
+              "Bocal fermé au soleil",
+              "Non",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "objets",
+          "enonce": "Touche le seul objet qui est un système isolé.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Un système isolé n’échange ni matière ni énergie.",
+          "explication": "Le **calorimètre idéal** n’échange rien : c’est un système isolé."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque objet selon le type de système.",
+          "categories": [
+            "Ouvert",
+            "Fermé",
+            "Isolé"
+          ],
+          "items": [
+            [
+              "Casserole sans couvercle",
+              0
+            ],
+            [
+              "Bouteille d’eau bouchée",
+              1
+            ],
+            [
+              "Calorimètre idéal",
+              2
+            ],
+            [
+              "Bocal fermé au soleil",
+              1
+            ]
+          ],
+          "aide": "Ouvert : matière et énergie. Fermé : énergie seulement. Isolé : rien.",
+          "explication": "Casserole : **ouvert**. Bouteille bouchée et bocal fermé : **fermés**. Calorimètre idéal : **isolé**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La température du corps humain est de 37 °C. Convertis-la en kelvin, arrondi à l’unité.",
+          "reponse": 310,
+          "unite": "K",
+          "tolerance": 0.5,
+          "aide": "T(K) = θ(°C) + 273,15.",
+          "explication": "T = 37 + 273,15 = 310,15, soit **310 K**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un liquide passe de 20 °C à 45 °C. Quel est l’écart de température ΔT, en kelvin ?",
+          "reponse": 25,
+          "unite": "K",
+          "aide": "Un écart de 1 °C vaut un écart de 1 K.",
+          "explication": "ΔT = 45 − 20 = 25 °C, donc **25 K**."
+        }
+      ]
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Pourquoi la mer se refroidit si lentement",
+      "competence": "modeliser",
+      "situation": "La capacité thermique massique c mesure l’énergie à fournir à 1 kg d’un corps pour élever sa température de 1 K. La capacité thermique d’une masse m est C = m × c.",
+      "documents": [
+        {
+          "id": "cap",
+          "type": "tableau",
+          "titre": "Capacités thermiques massiques",
+          "colonnes": [
+            "Matériau",
+            "c (J·kg⁻¹·K⁻¹)"
+          ],
+          "lignes": [
+            [
+              "Eau liquide",
+              "4185"
+            ],
+            [
+              "Air",
+              "1000"
+            ],
+            [
+              "Fer",
+              "450"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs à température ambiante"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cap",
+          "enonce": "Touche le matériau qui s’échauffe le plus facilement pour une même énergie et une même masse.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Il s’échauffe le plus quand c est le plus petit.",
+          "explication": "Le **fer** a le plus petit c (450) : la même énergie l’échauffe le plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la capacité thermique C de 250 g d’eau liquide.",
+          "reponse": 1046,
+          "unite": "J·K⁻¹",
+          "tolerance": 1,
+          "aide": "C = m × c, avec m en kg.",
+          "explication": "C = 0,250 × 4185 = 1046,25, soit **1046 J·K⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie faut-il fournir pour échauffer ces 250 g d’eau de 40 K ? Réponds en kJ.",
+          "reponse": 41.85,
+          "unite": "kJ",
+          "tolerance": 0.05,
+          "aide": "ΔU = C × ΔT, puis divise par 1000.",
+          "explication": "ΔU = 1046,25 × 40 = 41 850 J = **41,85 kJ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec cette même énergie (41 850 J), de combien de kelvins échauffe-t-on 1,0 kg de fer ?",
+          "reponse": 93,
+          "unite": "K",
+          "tolerance": 0.5,
+          "aide": "ΔT = ΔU ÷ (m × c).",
+          "explication": "ΔT = 41 850 ÷ (1,0 × 450) = **93 K**, contre 10 K pour 1,0 kg d’eau."
+        },
+        {
+          "type": "choix",
+          "enonce": "La nuit, la mer se refroidit moins vite que la terre. Pourquoi ?",
+          "options": [
+            "L’eau a une grande capacité thermique : elle cède beaucoup d’énergie pour un faible écart",
+            "L’eau est un meilleur isolant thermique que le sable, donc elle garde mieux sa chaleur",
+            "La mer est toujours plus chaude que l’air au-dessus d’elle, donc elle se refroidit peu",
+            "L’eau ne perd jamais d’énergie la nuit, contrairement au sable qui la rayonne"
+          ],
+          "reponse": 0,
+          "aide": "Relie le sens de c à l’énergie nécessaire pour changer T.",
+          "explication": "Avec c = 4185, l’eau doit céder beaucoup d’énergie pour baisser de 1 K : la mer **adoucit** les climats côtiers."
+        }
+      ]
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La bouteille oubliée au soleil",
+      "competence": "raisonner",
+      "situation": "Une bouteille fermée, de volume fixe, contient de l’air. On la chauffe et on mesure la pression. À volume constant, la pression du gaz est proportionnelle à sa température en kelvin.",
+      "documents": [
+        {
+          "id": "pression",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Pression de l’air dans la bouteille",
+          "categories": [
+            "20",
+            "35",
+            "50",
+            "65",
+            "80"
+          ],
+          "series": [
+            {
+              "nom": "P",
+              "valeurs": [
+                1000,
+                1051.2,
+                1102.3,
+                1153.5,
+                1204.7
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Pression P",
+            "unite": "hPa",
+            "min": 950,
+            "max": 1250,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Température θ (°C)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la température, en kelvin, du gaz à 50 °C ?",
+          "reponse": 323,
+          "unite": "K",
+          "tolerance": 0.5,
+          "aide": "T(K) = θ(°C) + 273,15.",
+          "explication": "T = 50 + 273,15 = 323,15, soit **323 K**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la pression à 50 °C.",
+          "reponse": 1102,
+          "unite": "hPa",
+          "tolerance": 10,
+          "aide": "Repère la hauteur du point d’abscisse 50 °C.",
+          "explication": "P ≈ **1 102 hPa** à 50 °C."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la pression à 80 °C à partir de celle à 20 °C (1 000 hPa), avec P ÷ T constant et T en kelvin.",
+          "reponse": 1205,
+          "unite": "hPa",
+          "tolerance": 1,
+          "aide": "P₈₀ = 1 000 × T₈₀ ÷ T₂₀, températures en kelvin.",
+          "explication": "P₈₀ = 1 000 × 353,15 ÷ 293,15 ≈ **1 205 hPa**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 20 °C (293 K), la pression vaut 1 000 hPa. À quelle pression serait-elle si la température valait 586 K ?",
+          "reponse": 2000,
+          "unite": "hPa",
+          "tolerance": 1,
+          "aide": "586 K est le double de 293 K.",
+          "explication": "Le double en kelvin : la pression aussi. **2 000 hPa**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un élève affirme : « de 20 °C à 40 °C, la température double, donc la pression aussi ». Que lui répondre ?",
+          "options": [
+            "Faux : en kelvin on passe de 293 K à 313 K, soit environ +7 %",
+            "Vrai, car 40 = 2 × 20",
+            "Faux : la pression ne dépend pas de la température",
+            "Vrai, mais seulement pour un liquide"
+          ],
+          "reponse": 0,
+          "aide": "La proportionnalité n’est valable qu’avec la température en kelvin.",
+          "explication": "En kelvin : 293 → 313 K, soit +7 %. La pression augmente d’environ **7 %**, pas de 100 %. C’est l’erreur classique des °C."
+        }
+      ]
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La glace qui fond sur la plaque",
+      "competence": "lire-graphique",
+      "situation": "On chauffe un petit bloc de glace à puissance constante, en relevant sa température toutes les 2 minutes. Le schéma de la courbe est idéalisé.",
+      "documents": [
+        {
+          "id": "fusion",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Température au cours du chauffage",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14",
+            "16"
+          ],
+          "series": [
+            {
+              "nom": "T",
+              "valeurs": [
+                -10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                10,
+                15
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": -20,
+            "max": 20,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Courbe idéalisée"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "À quelle température se trouve le palier de la courbe ?",
+          "reponse": 0,
+          "unite": "°C",
+          "tolerance": 0.5,
+          "aide": "Le palier est la partie horizontale.",
+          "explication": "Le palier est à **0 °C** : c’est la température de fusion de la glace."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée du palier ? Il commence à 2 min et finit à 10 min.",
+          "reponse": 8,
+          "unite": "min",
+          "aide": "Soustrais les deux dates.",
+          "explication": "10 − 2 = **8 min**."
+        },
+        {
+          "type": "zone",
+          "document": "fusion",
+          "enonce": "Touche l’instant où le dernier morceau de glace vient de fondre.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "C’est la fin du palier, juste avant que la température ne remonte.",
+          "explication": "Le palier s’achève à **10 min** : toute la glace est fondue, la température peut remonter."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Après la fusion, de combien de degrés la température monte-t-elle par minute ?",
+          "reponse": 2.5,
+          "unite": "°C·min⁻¹",
+          "tolerance": 0.1,
+          "aide": "De 10 à 16 min, la température passe de 0 °C à 15 °C.",
+          "explication": "(15 − 0) ÷ (16 − 10) = **2,5 °C par minute**."
+        }
+      ]
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La bouilloire qui oublie de s’arrêter",
+      "competence": "modeliser",
+      "situation": "Inès remplit une bouilloire de 0,50 kg d’eau à 20 °C. La bouilloire fournit 2 000 W à l’eau et on néglige toutes les pertes. Elle est défectueuse : elle ne s’arrête pas à 100 °C.",
+      "documents": [
+        {
+          "id": "bouilloire",
+          "type": "tableau",
+          "titre": "Les données",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Masse d’eau",
+              "0,50 kg"
+            ],
+            [
+              "Température initiale",
+              "20 °C"
+            ],
+            [
+              "c de l’eau liquide",
+              "4185 J·kg⁻¹·K⁻¹"
+            ],
+            [
+              "L de vaporisation",
+              "2,26 × 10⁶ J·kg⁻¹"
+            ],
+            [
+              "Puissance fournie",
+              "2 000 W"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "bouilloire",
+          "enonce": "Touche la donnée qui sert à calculer l’énergie de vaporisation.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Une vaporisation est un changement d’état.",
+          "explication": "L’énergie de vaporisation se calcule avec **L de vaporisation** : Q = m × L."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie faut-il pour porter l’eau de 20 °C à 100 °C ? Réponds en kJ.",
+          "reponse": 167.4,
+          "unite": "kJ",
+          "tolerance": 0.1,
+          "aide": "ΔU = m × c × ΔT, avec ΔT = 80 K.",
+          "explication": "ΔU = 0,50 × 4185 × 80 = 167 400 J = **167,4 kJ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de temps la bouilloire met-elle à porter l’eau à 100 °C ?",
+          "reponse": 83.7,
+          "unite": "s",
+          "tolerance": 0.1,
+          "aide": "Durée = énergie ÷ puissance.",
+          "explication": "t = 167 400 ÷ 2 000 = **83,7 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie faut-il ensuite pour vaporiser toute l’eau à 100 °C ? Réponds en kJ.",
+          "reponse": 1130,
+          "unite": "kJ",
+          "tolerance": 1,
+          "aide": "Q = m × L.",
+          "explication": "Q = 0,50 × 2,26 × 10⁶ = 1,13 × 10⁶ J = **1 130 kJ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de temps faudrait-il pour vaporiser toute l’eau ?",
+          "reponse": 565,
+          "unite": "s",
+          "tolerance": 1,
+          "aide": "Durée = énergie ÷ puissance.",
+          "explication": "t = 1,13 × 10⁶ ÷ 2 000 = **565 s**, soit environ 9 min 25 s : près de sept fois plus que pour chauffer."
+        }
+      ]
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le glaçon dans le calorimètre",
+      "competence": "raisonner",
+      "situation": "Un glaçon de 20 g, à 0 °C, est plongé dans un calorimètre contenant 200 g d’eau à 20 °C. Le calorimètre est isolé, sa capacité est négligée : Q(eau du vase) + Q(glaçon) = 0.",
+      "documents": [
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Les mesures",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Eau du vase : masse",
+              "200 g"
+            ],
+            [
+              "Eau du vase : température initiale",
+              "20 °C"
+            ],
+            [
+              "Glaçon : masse",
+              "20 g"
+            ],
+            [
+              "Glaçon : température initiale",
+              "0 °C"
+            ],
+            [
+              "L de fusion",
+              "3,34 × 10⁵ J·kg⁻¹"
+            ],
+            [
+              "c de l’eau liquide",
+              "4185 J·kg⁻¹·K⁻¹"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        },
+        {
+          "id": "tranches",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "g",
+              "texte": "Glace à 0 °C"
+            },
+            {
+              "id": "e0",
+              "texte": "Eau à 0 °C"
+            },
+            {
+              "id": "ef",
+              "texte": "Eau à T_f"
+            }
+          ],
+          "liens": [
+            {
+              "de": "g",
+              "a": "e0",
+              "texte": "fusion"
+            },
+            {
+              "de": "e0",
+              "a": "ef",
+              "texte": "échauffement"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie faut-il pour faire fondre le glaçon ?",
+          "reponse": 6680,
+          "unite": "J",
+          "tolerance": 1,
+          "aide": "Q = m × L, avec m en kg.",
+          "explication": "Q = 0,020 × 3,34 × 10⁵ = **6 680 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si la température finale était 10 °C, quelle énergie l’eau du vase aurait-elle cédée en refroidissant de 20 °C à 10 °C ? (Valeur positive.)",
+          "reponse": 8370,
+          "unite": "J",
+          "tolerance": 1,
+          "aide": "Q = m × c × |ΔT| avec m = 0,200 kg.",
+          "explication": "Q = 0,200 × 4185 × 10 = **8 370 J**."
+        },
+        {
+          "type": "choix",
+          "enonce": "8 370 J sont disponibles, mais 6 680 J suffisent pour fondre la glace. Que peut-on en conclure ?",
+          "options": [
+            "Tout le glaçon fond et il reste de l’énergie pour échauffer l’eau de fusion",
+            "Le glaçon ne fond pas entièrement, car il manque de l’énergie pour le fondre",
+            "La température finale reste à 0 °C, car l’énergie sert seulement à fondre",
+            "Le calorimètre n’échange plus d’énergie, puisque la glace a fini de fondre"
+          ],
+          "reponse": 0,
+          "aide": "Compare l’énergie disponible à celle que demande la fusion.",
+          "explication": "L’énergie disponible dépasse celle de la fusion : **tout fond**, et le reste échauffe l’eau de fusion (glaçon fondu) de 0 °C à T_f."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la température finale T_f du mélange. (Arrondi au dixième.)",
+          "reponse": 10.9,
+          "unite": "°C",
+          "tolerance": 0.1,
+          "aide": "Écris : 0,200 × 4185 × (T_f − 20) + 0,020 × 3,34 × 10⁵ + 0,020 × 4185 × T_f = 0.",
+          "explication": "837 × (T_f − 20) + 6 680 + 83,7 × T_f = 0, soit 920,7 × T_f = 10 060. T_f ≈ **10,9 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le signe du transfert thermique Q reçu par l’eau du vase ?",
+          "options": [
+            "Négatif : elle cède de l’énergie",
+            "Positif : elle reçoit de l’énergie",
+            "Nul : sa température ne change pas",
+            "Cela dépend du choix de l’unité"
+          ],
+          "reponse": 0,
+          "aide": "L’eau du vase se refroidit de 20 °C à T_f.",
+          "explication": "L’eau du vase **cède** de l’énergie : d’après la convention, une énergie cédée est comptée **négativement**."
+        }
+      ]
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui gaspille le moins ?",
+      "competence": "lire-tableau",
+      "situation": "Le rendement d’un convertisseur est η = énergie utile ÷ énergie fournie. Voici trois appareils de la maison, pour une même durée de fonctionnement.",
+      "documents": [
+        {
+          "id": "appareils",
+          "type": "tableau",
+          "titre": "Bilan énergétique",
+          "colonnes": [
+            "Appareil",
+            "Énergie fournie (J)",
+            "Énergie utile (J)"
+          ],
+          "lignes": [
+            [
+              "Moteur électrique",
+              "500",
+              "400"
+            ],
+            [
+              "Lampe à incandescence",
+              "60",
+              "3"
+            ],
+            [
+              "Chaudière",
+              "1000",
+              "900"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "appareils",
+          "enonce": "Touche l’appareil qui a le meilleur rendement.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Calcule énergie utile ÷ énergie fournie pour chaque ligne.",
+          "explication": "Chaudière : 900 ÷ 1000 = 0,90. Moteur : 0,80. Lampe : 0,05. La **chaudière** gagne."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rendement du moteur électrique ?",
+          "reponse": 0.8,
+          "tolerance": 0.005,
+          "aide": "η = 400 ÷ 500.",
+          "explication": "η = 400 ÷ 500 = **0,80**, soit 80 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie la lampe perd-elle, en joules ?",
+          "reponse": 57,
+          "unite": "J",
+          "aide": "Pertes = énergie fournie − énergie utile.",
+          "explication": "60 − 3 = **57 J** perdus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sous quelle forme l’énergie perdue quitte-t-elle surtout ces appareils ?",
+          "options": [
+            "Surtout sous forme de transfert thermique vers l’extérieur de l’appareil",
+            "Elle disparaît : l’énergie perdue est simplement détruite par l’appareil",
+            "En matière : l’énergie perdue est transformée en masse dans l’appareil",
+            "En électricité stockée : elle est conservée dans l’appareil pour plus tard"
+          ],
+          "reponse": 0,
+          "aide": "Un appareil qui fonctionne chauffe.",
+          "explication": "L’énergie ne disparaît pas : elle part surtout en **transfert thermique** vers l’extérieur. C’est pourquoi une lampe à incandescence chauffe."
+        }
+      ]
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre façons de changer l’énergie interne",
+      "competence": "raisonner",
+      "situation": "Un système échange un travail W et un transfert thermique Q avec l’extérieur (positifs quand ils sont reçus). Voici quatre transformations, notées de A à D.",
+      "documents": [
+        {
+          "id": "transfos",
+          "type": "tableau",
+          "titre": "Travail et transfert thermique reçus",
+          "colonnes": [
+            "Transformation",
+            "W reçu (J)",
+            "Q reçu (J)"
+          ],
+          "lignes": [
+            [
+              "A",
+              "200",
+              "300"
+            ],
+            [
+              "B",
+              "−150",
+              "400"
+            ],
+            [
+              "C",
+              "500",
+              "−500"
+            ],
+            [
+              "D",
+              "120",
+              "0"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule ΔU pour la transformation A.",
+          "reponse": 500,
+          "unite": "J",
+          "aide": "ΔU = W + Q.",
+          "explication": "ΔU = 200 + 300 = **500 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule ΔU pour la transformation B.",
+          "reponse": 250,
+          "unite": "J",
+          "aide": "Attention au signe de W.",
+          "explication": "ΔU = −150 + 400 = **250 J**."
+        },
+        {
+          "type": "zone",
+          "document": "transfos",
+          "enonce": "Touche la transformation adiabatique.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Adiabatique : aucun transfert thermique, Q = 0.",
+          "explication": "Seule la transformation **D** a Q = 0 : elle est adiabatique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour la transformation C, que peut-on dire ?",
+          "options": [
+            "L’énergie interne ne varie pas : le travail W et le transfert Q se compensent",
+            "Le système est isolé, donc il n’échange ni travail ni transfert thermique",
+            "Le système a reçu de l’énergie au total, donc son énergie interne augmente",
+            "Le système a cédé de l’énergie au total, donc son énergie interne diminue"
+          ],
+          "reponse": 0,
+          "aide": "Calcule ΔU = 500 − 500.",
+          "explication": "ΔU = 500 + (−500) = 0 : **l’énergie interne n’a pas varié**. Le système n’est pas isolé pour autant, il a échangé W et Q."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans l’expérience de Joule, on agite 100 g d’eau (c = 4185 J·kg⁻¹·K⁻¹) avec W = 420 J, parois calorifugées. De combien de kelvins l’eau s’échauffe-t-elle ? (Arrondi au dixième.)",
+          "reponse": 1,
+          "unite": "K",
+          "tolerance": 0.05,
+          "aide": "Adiabatique : ΔU = W = m × c × ΔT.",
+          "explication": "ΔU = 420 J = 0,100 × 4185 × ΔT, donc ΔT = 420 ÷ 418,5 ≈ **1,0 K**."
+        }
+      ]
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le bilan d’un moteur thermique",
+      "competence": "modeliser",
+      "situation": "Un moteur thermique fonctionne par cycles, entre une source chaude et une source froide. Sur un cycle complet, il revient à son état initial : son énergie interne n’a donc pas varié.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Les transferts thermiques du moteur",
+          "noeuds": [
+            {
+              "id": "chaude",
+              "texte": "Source chaude",
+              "emoji": "🔥"
+            },
+            {
+              "id": "moteur",
+              "texte": "Moteur"
+            },
+            {
+              "id": "froide",
+              "texte": "Source froide",
+              "emoji": "❄️"
+            }
+          ],
+          "liens": [
+            {
+              "de": "chaude",
+              "a": "moteur",
+              "texte": "1 000 J"
+            },
+            {
+              "de": "moteur",
+              "a": "froide",
+              "texte": "700 J"
+            }
+          ]
+        },
+        {
+          "id": "cycle",
+          "type": "tableau",
+          "titre": "Bilan sur un cycle",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Transfert thermique reçu de la source chaude",
+              "1000 J"
+            ],
+            [
+              "Transfert thermique cédé à la source froide",
+              "700 J"
+            ],
+            [
+              "Variation ΔU sur un cycle",
+              "0 J"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche l’élément qui reçoit le transfert thermique perdu par le moteur.",
+          "reponse": [
+            "froide"
+          ],
+          "aide": "Suis la flèche de 700 J.",
+          "explication": "Les 700 J partent vers la **source froide**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel transfert thermique total Q le moteur reçoit-il sur un cycle ?",
+          "reponse": 300,
+          "unite": "J",
+          "aide": "Reçu − cédé.",
+          "explication": "Q = 1 000 − 700 = **300 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel travail le moteur fournit-il à l’extérieur sur un cycle ? (Valeur positive.)",
+          "reponse": 300,
+          "unite": "J",
+          "aide": "ΔU = W + Q = 0, donc W = −Q.",
+          "explication": "ΔU = 0 donne W = −300 J reçu, donc le moteur fournit **300 J** à l’extérieur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rendement du moteur ? (Deux décimales.)",
+          "reponse": 0.3,
+          "tolerance": 0.005,
+          "aide": "η = travail fourni ÷ énergie reçue de la source chaude.",
+          "explication": "η = 300 ÷ 1 000 = **0,30**, toujours inférieur à 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un meilleur moteur reçoit aussi 1 000 J mais a un rendement de 0,40. Quel transfert thermique cède-t-il à la source froide ?",
+          "reponse": 600,
+          "unite": "J",
+          "tolerance": 1,
+          "aide": "Il fournit 0,40 × 1 000 J de travail ; le reste part à la source froide.",
+          "explication": "Travail : 400 J. Le reste : 1 000 − 400 = **600 J** cédés à la source froide."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Pourquoi un pull nous garde au chaud",
+      "competence": "analyser-document",
+      "situation": "Un matériau conduit plus ou moins bien la chaleur : sa conductivité thermique λ le dit. Plus λ est petit, plus le matériau isole.",
+      "documents": [
+        {
+          "id": "lambda",
+          "type": "tableau",
+          "titre": "Conductivités thermiques",
+          "colonnes": [
+            "Matériau",
+            "λ (W·m⁻¹·K⁻¹)"
+          ],
+          "lignes": [
+            [
+              "Laine de verre",
+              "0,04"
+            ],
+            [
+              "Air immobile",
+              "0,026"
+            ],
+            [
+              "Verre",
+              "1"
+            ],
+            [
+              "Cuivre",
+              "390"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs à température ambiante"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lambda",
+          "enonce": "Touche le meilleur conducteur thermique.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Cherche la plus grande valeur de λ.",
+          "explication": "Le **cuivre** (λ = 390) est le meilleur conducteur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le cuivre conduit-il mieux la chaleur que le verre ?",
+          "reponse": 390,
+          "aide": "Divise λ du cuivre par λ du verre.",
+          "explication": "390 ÷ 1 = **390** fois mieux."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mode de transfert à son exemple.",
+          "paires": [
+            [
+              "Conduction",
+              "Une cuillère chauffe dans la soupe"
+            ],
+            [
+              "Convection",
+              "L’air chaud monte au-dessus d’un radiateur"
+            ],
+            [
+              "Rayonnement",
+              "Le Soleil chauffe la Terre à travers le vide"
+            ]
+          ],
+          "aide": "Un seul de ces modes se passe sans matière.",
+          "explication": "Conduction : de proche en proche. Convection : un fluide se déplace. Rayonnement : ondes, **sans support matériel**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un pull en laine garde-t-il chaud ?",
+          "options": [
+            "Il emprisonne de l’air immobile, très mauvais conducteur",
+            "La laine fabrique de la chaleur",
+            "La laine est un meilleur conducteur que la peau",
+            "Il empêche le Soleil d’atteindre le corps"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la valeur de λ de l’air immobile.",
+          "explication": "C’est l’**air immobile** piégé entre les fibres qui isole (λ = 0,026). Le pull freine le flux qui sort, il ne donne pas de chaleur."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le mur de la maison",
+      "competence": "modeliser",
+      "situation": "On isole un mur de 10 m² avec de la laine de verre de 20 cm d’épaisseur. À l’intérieur il fait 20 °C, à l’extérieur 5 °C. La résistance thermique vaut R_th = e ÷ (λ × S) et le flux Φ = ΔT ÷ R_th.",
+      "documents": [
+        {
+          "id": "mur",
+          "type": "schema",
+          "titre": "Coupe du mur",
+          "largeur": 340,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 50,
+              "l": 100,
+              "h": 100,
+              "teinte": "ambre",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 105,
+              "texte": "Laine de verre",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 55,
+              "y": 95,
+              "texte": "Intérieur",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 55,
+              "y": 115,
+              "texte": "20 °C",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 285,
+              "y": 95,
+              "texte": "Extérieur",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 285,
+              "y": 115,
+              "texte": "5 °C",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                36
+              ],
+              "a": [
+                220,
+                36
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 26,
+              "texte": "e = 20 cm",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                175
+              ],
+              "a": [
+                280,
+                175
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 192,
+              "texte": "Flux thermique Φ",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "donnees",
+          "type": "tableau",
+          "titre": "Données",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "λ de la laine de verre",
+              "0,04 W·m⁻¹·K⁻¹"
+            ],
+            [
+              "Surface S",
+              "10 m²"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la résistance thermique du mur. (Convertis e en mètres.)",
+          "reponse": 0.5,
+          "unite": "K·W⁻¹",
+          "tolerance": 0.005,
+          "aide": "e = 0,20 m ; R_th = e ÷ (λ × S).",
+          "explication": "R_th = 0,20 ÷ (0,04 × 10) = **0,50 K·W⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le flux thermique Φ à travers le mur ?",
+          "reponse": 30,
+          "unite": "W",
+          "tolerance": 0.5,
+          "aide": "ΔT = 20 − 5 = 15 K ; Φ = ΔT ÷ R_th.",
+          "explication": "Φ = 15 ÷ 0,50 = **30 W**, de l’intérieur vers l’extérieur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie est perdue en 1 heure ? Réponds en kJ.",
+          "reponse": 108,
+          "unite": "kJ",
+          "tolerance": 0.5,
+          "aide": "Q = Φ × Δt, avec Δt en secondes.",
+          "explication": "Q = 30 × 3 600 = 108 000 J = **108 kJ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On double l’épaisseur d’isolant (e = 40 cm). Quel devient le flux ?",
+          "reponse": 15,
+          "unite": "W",
+          "tolerance": 0.5,
+          "aide": "R_th est proportionnelle à e.",
+          "explication": "R_th passe à 1,0 K·W⁻¹ : Φ = 15 ÷ 1,0 = **15 W**, deux fois moins."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le café qui refroidit",
+      "competence": "lire-graphique",
+      "situation": "Un café à 80 °C est posé dans une pièce à 20 °C. On relève sa température toutes les 10 minutes. Le flux perdu est proportionnel à l’écart entre la température du café et celle de la pièce.",
+      "documents": [
+        {
+          "id": "cafe",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Température du café",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60"
+          ],
+          "series": [
+            {
+              "nom": "Température",
+              "valeurs": [
+                80,
+                56.4,
+                42.1,
+                33.4,
+                28.1,
+                24.9,
+                23
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 0,
+            "max": 90,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis la température du café après 20 minutes.",
+          "reponse": 42,
+          "unite": "°C",
+          "tolerance": 1,
+          "aide": "Repère le point d’abscisse 20.",
+          "explication": "Après 20 min, le café est à environ **42 °C**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est alors l’écart avec la température de la pièce (20 °C) ?",
+          "reponse": 22,
+          "unite": "°C",
+          "tolerance": 1,
+          "aide": "Soustrais 20 °C à la température lue.",
+          "explication": "42 − 20 = **22 °C** d’écart."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien le café refroidit-il entre 10 et 20 minutes ? (La température à 10 min vaut 56,4 °C.)",
+          "reponse": 14.3,
+          "unite": "°C",
+          "tolerance": 1,
+          "aide": "Température à 10 min moins température à 20 min.",
+          "explication": "56,4 − 42,1 = **14,3 °C**, contre 23,6 °C pendant les 10 premières minutes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le café perd-il moins de température pendant la deuxième dizaine de minutes ?",
+          "options": [
+            "Le flux est proportionnel à l’écart, qui a diminué",
+            "La pièce se réchauffe",
+            "Le café contient moins d’énergie à cause de la tasse",
+            "La tasse devient meilleure conductrice"
+          ],
+          "reponse": 0,
+          "aide": "Relie le flux à l’écart de température.",
+          "explication": "Φ = h × S × (T − T_ext) : l’écart diminue, donc le flux aussi. La décroissance est **exponentielle**."
+        },
+        {
+          "type": "zone",
+          "document": "cafe",
+          "enonce": "Touche le premier instant où le café est à moins de 5 °C de la température de la pièce.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche la première température inférieure à 25 °C.",
+          "explication": "À 50 min le café est à 24,9 °C, soit moins de 5 °C d’écart avec la pièce. À 40 min il est encore à 28,1 °C."
+        }
+      ]
+    },
+    {
+      "chapitre": "0e264b07-6b69-5074-9bb5-dc5a9adcb5ad",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un réactif qui s’épuise",
+      "competence": "lire-graphique",
+      "situation": "Au cours d’une transformation, on suit la concentration d’un réactif A au cours du temps.",
+      "documents": [
+        {
+          "id": "suivi",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Concentration du réactif A",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"
+          ],
+          "series": [
+            {
+              "nom": "[A]",
+              "valeurs": [
+                80,
+                56.57,
+                40,
+                28.28,
+                20,
+                14.14,
+                10,
+                7.07,
+                5
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "[A]",
+            "unite": "mmol·L⁻¹",
+            "min": 0,
+            "max": 90,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la concentration initiale [A]₀ ?",
+          "reponse": 80,
+          "unite": "mmol·L⁻¹",
+          "tolerance": 1,
+          "aide": "Regarde le premier point, à t = 0.",
+          "explication": "[A]₀ = **80 mmol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le temps de demi-réaction ? Cherche la date où [A] est la moitié de [A]₀.",
+          "reponse": 20,
+          "unite": "s",
+          "tolerance": 1,
+          "aide": "La moitié de 80 est 40 mmol·L⁻¹.",
+          "explication": "[A] = 40 mmol·L⁻¹ à **t = 20 s**."
+        },
+        {
+          "type": "zone",
+          "document": "suivi",
+          "enonce": "Touche le point où la vitesse de disparition de A est la plus grande.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "La vitesse est la pente de la tangente : cherche où la courbe est la plus raide.",
+          "explication": "La courbe est la plus raide au **début** : les réactifs y sont les plus concentrés."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la courbe s’aplatit-elle avec le temps ?",
+          "options": [
+            "Il reste moins de réactif",
+            "La réaction se fatigue",
+            "La température baisse forcément",
+            "Le catalyseur est consommé"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la concentration de A.",
+          "explication": "La vitesse baisse parce qu’**il reste moins de réactif**, pas parce que la réaction « se fatigue »."
+        }
+      ]
+    },
+    {
+      "chapitre": "0e264b07-6b69-5074-9bb5-dc5a9adcb5ad",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un produit qui apparaît de moins en moins vite",
+      "competence": "modeliser",
+      "situation": "On suit la réaction A + 2 B → 2 C. Pour cette équation, la vitesse volumique vaut v = (1/2) × d[C]/dt. Voici les concentrations mesurées du produit C.",
+      "documents": [
+        {
+          "id": "courbeC",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Concentration du produit C",
+          "categories": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "series": [
+            {
+              "nom": "[C]",
+              "valeurs": [
+                0,
+                20,
+                32,
+                40,
+                45,
+                48
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "[C]",
+            "unite": "mmol·L⁻¹",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures écrites pour l’exercice"
+        },
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Les mesures",
+          "colonnes": [
+            "t (min)",
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "lignes": [
+            [
+              "[C] (mmol·L⁻¹)",
+              0,
+              20,
+              32,
+              40,
+              45,
+              48
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "courbeC",
+          "enonce": "Touche l’instant où [C] atteint 40 mmol·L⁻¹.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la hauteur 40 sur l’axe vertical.",
+          "explication": "[C] vaut 40 mmol·L⁻¹ à **t = 15 min**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse moyenne entre 0 et 5 min avec v = (1/2) × Δ[C]/Δt.",
+          "reponse": 2,
+          "unite": "mmol·L⁻¹·min⁻¹",
+          "tolerance": 0.05,
+          "aide": "Δ[C] = 20 mmol·L⁻¹ en 5 min.",
+          "explication": "Δ[C]/Δt = 20 ÷ 5 = 4 ; v = 4 ÷ 2 = **2,0 mmol·L⁻¹·min⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse moyenne entre 10 et 15 min.",
+          "reponse": 0.8,
+          "unite": "mmol·L⁻¹·min⁻¹",
+          "tolerance": 0.05,
+          "aide": "Δ[C] = 40 − 32.",
+          "explication": "Δ[C]/Δt = 8 ÷ 5 = 1,6 ; v = 1,6 ÷ 2 = **0,8 mmol·L⁻¹·min⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre 0 et 10 min, quelle concentration de B a été consommée ? (B et C ont le même coefficient stœchiométrique.)",
+          "reponse": 32,
+          "unite": "mmol·L⁻¹",
+          "tolerance": 0.5,
+          "aide": "Dans A + 2 B → 2 C, 2 mol de B donnent 2 mol de C.",
+          "explication": "B et C ont le même coefficient : autant de B consommé que de C formé, soit **32 mmol·L⁻¹**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment évolue la vitesse au cours du temps ?",
+          "options": [
+            "Elle diminue, car la concentration des réactifs baisse au cours du temps",
+            "Elle augmente, car le produit C catalyse la réaction au fur et à mesure",
+            "Elle reste constante, car la quantité de C augmente de façon linéaire",
+            "Elle est nulle dès le début, car la réaction n’a pas encore commencé"
+          ],
+          "reponse": 0,
+          "aide": "Compare les vitesses des deux intervalles calculés.",
+          "explication": "De 2,0 à 0,8 mmol·L⁻¹·min⁻¹ : la vitesse **diminue**, parce que [A] et [B] baissent."
+        }
+      ]
+    },
+    {
+      "chapitre": "0e264b07-6b69-5074-9bb5-dc5a9adcb5ad",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Reconnaître l’ordre 1",
+      "competence": "raisonner",
+      "situation": "Trois expériences sont menées avec des concentrations initiales différentes du réactif A. Dans chacune, on relève le temps de demi-réaction, puis on cherche quelle méthode de suivi employer pour d’autres réactions.",
+      "documents": [
+        {
+          "id": "exp",
+          "type": "tableau",
+          "titre": "Trois expériences",
+          "colonnes": [
+            "Expérience",
+            "[A]₀ (mmol·L⁻¹)",
+            "t₁/₂ (s)"
+          ],
+          "lignes": [
+            [
+              "1",
+              "80",
+              "20"
+            ],
+            [
+              "2",
+              "40",
+              "20"
+            ],
+            [
+              "3",
+              "20",
+              "20"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        },
+        {
+          "id": "methodes",
+          "type": "tableau",
+          "titre": "Quatre réactions à suivre",
+          "colonnes": [
+            "Réaction",
+            "Ce qui change"
+          ],
+          "lignes": [
+            [
+              "Un colorant se décolore",
+              "La couleur"
+            ],
+            [
+              "Des molécules neutres donnent des ions",
+              "Les ions"
+            ],
+            [
+              "Un gaz se dégage dans un flacon fermé",
+              "La pression"
+            ],
+            [
+              "Un acide est consommé",
+              "Le pH"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Réactions écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que montre un t₁/₂ identique quand [A]₀ change ?",
+          "options": [
+            "La réaction est d’ordre 1",
+            "La vitesse est constante",
+            "La réaction est instantanée",
+            "Un catalyseur est présent"
+          ],
+          "reponse": 0,
+          "aide": "C’est la signature qu’on reconnaît sur les trois expériences.",
+          "explication": "Quand t₁/₂ ne dépend pas de la concentration initiale, l’**ordre est 1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la constante de vitesse k = ln 2 ÷ t₁/₂. (Trois décimales.)",
+          "reponse": 0.035,
+          "unite": "s⁻¹",
+          "tolerance": 0.0005,
+          "aide": "ln 2 ≈ 0,693.",
+          "explication": "k = 0,693 ÷ 20 ≈ 0,0347, soit **0,035 s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien de secondes la transformation est-elle pratiquement terminée ? (5 fois t₁/₂.)",
+          "reponse": 100,
+          "unite": "s",
+          "aide": "Multiplie t₁/₂ par 5.",
+          "explication": "5 × 20 = **100 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans l’expérience 1, quelle est [A] après 3 t₁/₂ ?",
+          "reponse": 10,
+          "unite": "mmol·L⁻¹",
+          "aide": "La concentration est divisée par 2 à chaque t₁/₂.",
+          "explication": "80 → 40 → 20 → **10 mmol·L⁻¹**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque réaction à la méthode de suivi adaptée.",
+          "paires": [
+            [
+              "Un colorant se décolore",
+              "Spectrophotométrie"
+            ],
+            [
+              "Des molécules neutres donnent des ions",
+              "Conductimétrie"
+            ],
+            [
+              "Un gaz se dégage dans un flacon fermé",
+              "Mesure de pression"
+            ],
+            [
+              "Un acide est consommé",
+              "pH-métrie"
+            ]
+          ],
+          "aide": "Regarde la colonne « Ce qui change ».",
+          "explication": "On suit la grandeur qui varie : couleur (spectrophotométrie), ions (conductimétrie), pression d’un gaz, pH."
+        }
+      ]
+    },
+    {
+      "chapitre": "a9d63826-4415-56b3-8e57-623aa4e8b122",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La décomposition de l’eau oxygénée",
+      "competence": "analyser-document",
+      "situation": "L’eau oxygénée H₂O₂ se décompose lentement. Avec des ions iodure I⁻, elle se décompose vite, en deux étapes.",
+      "documents": [
+        {
+          "id": "meca",
+          "type": "tableau",
+          "titre": "Le mécanisme en deux étapes",
+          "colonnes": [
+            "Étape",
+            "Acte élémentaire"
+          ],
+          "lignes": [
+            [
+              "1",
+              "H₂O₂ + I⁻ → H₂O + IO⁻"
+            ],
+            [
+              "2",
+              "H₂O₂ + IO⁻ → H₂O + O₂ + I⁻"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mécanisme du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque espèce selon son rôle.",
+          "categories": [
+            "Réactif du bilan",
+            "Produit du bilan",
+            "Intermédiaire réactionnel",
+            "Catalyseur"
+          ],
+          "items": [
+            [
+              "Eau oxygénée H₂O₂",
+              0
+            ],
+            [
+              "Dioxygène O₂",
+              1
+            ],
+            [
+              "Eau H₂O",
+              1
+            ],
+            [
+              "Ion hypoiodite IO⁻",
+              2
+            ],
+            [
+              "Ion iodure I⁻",
+              3
+            ]
+          ],
+          "aide": "Un intermédiaire est formé puis consommé ; un catalyseur est consommé puis régénéré.",
+          "explication": "H₂O₂ est consommé (**réactif**). O₂ et H₂O sont formés (**produits**). IO⁻ est formé puis consommé (**intermédiaire**). I⁻ est consommé en 1 puis régénéré en 2 (**catalyseur**)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’actes élémentaires compte ce mécanisme ?",
+          "reponse": 2,
+          "aide": "Compte les lignes du tableau.",
+          "explication": "Il y a **2** actes élémentaires."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de molécules H₂O₂ sont consommées au total, en additionnant les deux étapes ?",
+          "reponse": 2,
+          "unite": "molécules",
+          "aide": "Une molécule est consommée à chaque étape.",
+          "explication": "1 + 1 = **2** : le bilan est 2 H₂O₂ → 2 H₂O + O₂."
+        },
+        {
+          "type": "zone",
+          "document": "meca",
+          "enonce": "Touche l’étape où le catalyseur est régénéré.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche l’étape dont les produits contiennent I⁻.",
+          "explication": "À l’**étape 2**, IO⁻ réagit et redonne I⁻ : le catalyseur est régénéré."
+        }
+      ]
+    },
+    {
+      "chapitre": "a9d63826-4415-56b3-8e57-623aa4e8b122",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Où partent les électrons ?",
+      "competence": "observer-schema",
+      "situation": "Pour comprendre une étape, on repère les sites donneurs et accepteurs de doublets d’électrons. On étudie la réaction de l’ion HO⁻ avec le chlorométhane CH₃—Cl.",
+      "documents": [
+        {
+          "id": "sites",
+          "type": "tableau",
+          "titre": "Quatre sites",
+          "colonnes": [
+            "Site",
+            "Ce qui le caractérise"
+          ],
+          "lignes": [
+            [
+              "O de HO⁻",
+              "Charge négative, doublets non liants"
+            ],
+            [
+              "C de C—Cl",
+              "Lié à Cl, plus électronégatif : δ⁺"
+            ],
+            [
+              "H de H₃O⁺",
+              "Charge positive"
+            ],
+            [
+              "O de C=O",
+              "Plus électronégatif que C : δ⁻, doublets non liants"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Sites décrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sites",
+          "enonce": "Dans la réaction de HO⁻ avec CH₃—Cl, touche le site d’où part la flèche courbe.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "La flèche part du site qui a un doublet à donner.",
+          "explication": "La flèche part du **O de HO⁻** : c’est lui qui porte la charge négative et des doublets non liants."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque site.",
+          "categories": [
+            "Donneur",
+            "Accepteur"
+          ],
+          "items": [
+            [
+              "O de HO⁻",
+              0
+            ],
+            [
+              "C de C—Cl",
+              1
+            ],
+            [
+              "H de H₃O⁺",
+              1
+            ],
+            [
+              "O de C=O",
+              0
+            ]
+          ],
+          "aide": "Donneur : charge négative, δ⁻, doublet. Accepteur : charge positive, δ⁺.",
+          "explication": "**Donneurs** : O de HO⁻ et O de C=O (δ⁻). **Accepteurs** : C de C—Cl (δ⁺) et H de H₃O⁺ (charge +)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment se dessine la flèche courbe pour HO⁻ + CH₃—Cl ?",
+          "options": [
+            "Du O de HO⁻ vers le C de CH₃—Cl",
+            "Du C de CH₃—Cl vers le O de HO⁻",
+            "Du Cl vers le H",
+            "Elle suit le déplacement d’un atome entier"
+          ],
+          "reponse": 0,
+          "aide": "Elle part du donneur et pointe vers l’accepteur.",
+          "explication": "Elle va du donneur (**O de HO⁻**) à l’accepteur (**C de C—Cl**). Elle représente un doublet d’électrons, jamais un atome."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque facteur cinétique à ce qu’il augmente à l’échelle microscopique.",
+          "paires": [
+            [
+              "La concentration",
+              "Le nombre de chocs"
+            ],
+            [
+              "La température",
+              "La part de chocs assez énergétiques"
+            ]
+          ],
+          "aide": "L’un joue sur la quantité de chocs, l’autre sur leur qualité.",
+          "explication": "Plus de concentration : plus de chocs. Plus de température : une **plus grande part** de chocs efficaces."
+        },
+        {
+          "type": "categories",
+          "enonce": "Un catalyseur change-t-il ceci ?",
+          "categories": [
+            "Il le change",
+            "Il ne le change pas"
+          ],
+          "items": [
+            [
+              "La durée de la transformation",
+              0
+            ],
+            [
+              "Le chemin réactionnel",
+              0
+            ],
+            [
+              "L’état final",
+              1
+            ],
+            [
+              "La constante d’équilibre",
+              1
+            ]
+          ],
+          "aide": "Il ouvre un autre chemin, plus rapide.",
+          "explication": "Il change la **durée** et le **chemin**. Il ne change ni l’**état final** ni la **constante d’équilibre**."
+        }
+      ]
+    },
+    {
+      "chapitre": "a9d63826-4415-56b3-8e57-623aa4e8b122",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un mécanisme en trois étapes",
+      "competence": "raisonner",
+      "situation": "Un chimiste propose un mécanisme pour la transformation A + C → P. Une espèce B, qui n’est ni un réactif ni un produit du bilan, intervient.",
+      "documents": [
+        {
+          "id": "meca3",
+          "type": "tableau",
+          "titre": "Le mécanisme proposé",
+          "colonnes": [
+            "Étape",
+            "Acte élémentaire"
+          ],
+          "lignes": [
+            [
+              "1",
+              "A + B → I"
+            ],
+            [
+              "2",
+              "I → J"
+            ],
+            [
+              "3",
+              "J + C → P + B"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mécanisme écrit pour l’exercice"
+        },
+        {
+          "id": "hyp",
+          "type": "tableau",
+          "titre": "Une hypothèse concurrente",
+          "colonnes": [
+            "Hypothèse",
+            "Proposition"
+          ],
+          "lignes": [
+            [
+              "Un camarade propose",
+              "A + B + C → P + B en une seule étape"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Hypothèse écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque espèce à son rôle.",
+          "paires": [
+            [
+              "A",
+              "Réactif du bilan"
+            ],
+            [
+              "B",
+              "Catalyseur"
+            ],
+            [
+              "I",
+              "Intermédiaire réactionnel"
+            ],
+            [
+              "P",
+              "Produit du bilan"
+            ]
+          ],
+          "aide": "B est consommé puis régénéré. I est formé puis consommé.",
+          "explication": "A est consommé : **réactif**. B est consommé (1) puis régénéré (3) : **catalyseur**. I est formé (1) et consommé (2) : **intermédiaire**. P est formé : **produit**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le bilan de ce mécanisme ?",
+          "options": [
+            "A + C → P",
+            "A + B + C → P",
+            "A + B → P",
+            "I + J → P"
+          ],
+          "reponse": 0,
+          "aide": "Additionne les trois étapes et simplifie ce qui apparaît des deux côtés.",
+          "explication": "En additionnant : A + B + I + J + C → I + J + P + B. On simplifie B, I, J : **A + C → P**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’intermédiaires réactionnels contient ce mécanisme ?",
+          "reponse": 2,
+          "aide": "Cherche les espèces formées puis consommées.",
+          "explication": "I et J sont formés puis consommés : **2** intermédiaires."
+        },
+        {
+          "type": "zone",
+          "document": "meca3",
+          "enonce": "Touche l’étape où le catalyseur B est régénéré.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche l’étape qui produit B.",
+          "explication": "B réapparaît à droite de la flèche à l’**étape 3**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’hypothèse du camarade est-elle peu probable ?",
+          "options": [
+            "Elle demande la rencontre simultanée de trois entités, ce qui est très improbable",
+            "Elle ne conserve pas les atomes entre les réactifs et les produits",
+            "Elle fait disparaître le catalyseur, qui est alors consommé définitivement",
+            "Elle ne comporte aucun produit, donc elle ne peut pas être un acte élémentaire"
+          ],
+          "reponse": 0,
+          "aide": "Un acte élémentaire fait intervenir au plus deux entités.",
+          "explication": "Un acte élémentaire met en jeu au plus **deux entités** : un choc à trois est trop improbable."
+        }
+      ]
+    },
+    {
+      "chapitre": "5ab70a00-bc96-52ad-862a-dec275c3e28f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Carbone, azote, uranium : lire un noyau",
+      "competence": "lire-tableau",
+      "situation": "Un noyau se note ᴬ_Z X : Z est le nombre de protons et A le nombre de nucléons. Le nombre de neutrons vaut A − Z. Voici quelques noyaux.",
+      "documents": [
+        {
+          "id": "noyaux",
+          "type": "tableau",
+          "titre": "Quelques noyaux",
+          "colonnes": [
+            "Noyau",
+            "Z",
+            "A"
+          ],
+          "lignes": [
+            [
+              "Carbone 12",
+              "6",
+              "12"
+            ],
+            [
+              "Carbone 14",
+              "6",
+              "14"
+            ],
+            [
+              "Azote 14",
+              "7",
+              "14"
+            ],
+            [
+              "Uranium 235",
+              "92",
+              "235"
+            ],
+            [
+              "Uranium 238",
+              "92",
+              "238"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "noyaux",
+          "enonce": "Touche l’isotope du carbone 12.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Deux isotopes ont le même Z.",
+          "explication": "Le **carbone 14** a le même Z (6) que le carbone 12."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de neutrons contient un noyau de carbone 14 ?",
+          "reponse": 8,
+          "unite": "neutrons",
+          "aide": "Neutrons = A − Z.",
+          "explication": "14 − 6 = **8** neutrons."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de neutrons contient un noyau d’uranium 238 ?",
+          "reponse": 146,
+          "unite": "neutrons",
+          "aide": "Neutrons = A − Z.",
+          "explication": "238 − 92 = **146** neutrons."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le carbone 14 et l’azote 14 sont-ils des isotopes ?",
+          "options": [
+            "Non : leur numéro atomique Z diffère, ce sont deux éléments différents",
+            "Oui : ils ont le même nombre de masse A, donc ce sont des isotopes",
+            "Oui : ils ont le même nombre de neutrons, donc ce sont des isotopes",
+            "Non : ils n’ont pas de protons, seulement des neutrons dans leur noyau"
+          ],
+          "reponse": 0,
+          "aide": "Les isotopes ont le même Z.",
+          "explication": "Le carbone (Z = 6) et l’azote (Z = 7) sont deux **éléments** différents. Deux isotopes ont le même Z et des A différents."
+        }
+      ]
+    },
+    {
+      "chapitre": "5ab70a00-bc96-52ad-862a-dec275c3e28f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois désintégrations",
+      "competence": "analyser-document",
+      "situation": "Dans toute équation nucléaire, le nombre de nucléons A et la charge Z se conservent. Voici trois désintégrations.",
+      "documents": [
+        {
+          "id": "desint",
+          "type": "tableau",
+          "titre": "Trois équations",
+          "colonnes": [
+            "Type",
+            "Équation"
+          ],
+          "lignes": [
+            [
+              "α",
+              "²²²₈₆Rn → ²¹⁸₈₄Po + ⁴₂He"
+            ],
+            [
+              "β⁻",
+              "¹⁴₆C → ¹⁴₇N + ⁰₋₁e"
+            ],
+            [
+              "β⁺",
+              "²²₁₁Na → ²²₁₀Ne + ⁰₊₁e"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Équations du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "desint",
+          "enonce": "Touche l’équation dans laquelle un neutron se transforme en proton.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Un neutron qui devient proton fait monter Z de 1 et émet un électron.",
+          "explication": "En **β⁻**, un neutron devient un proton : Z augmente de 1 (6 → 7)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le radium 226 (Z = 88) émet une particule α. Quel est le numéro atomique Z du noyau fils ?",
+          "reponse": 86,
+          "aide": "La particule α emporte 2 protons.",
+          "explication": "Z = 88 − 2 = **86** : le noyau fils est le radon 222."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’uranium 238 émet une particule α. Quel est le nombre de nucléons A du noyau fils ?",
+          "reponse": 234,
+          "aide": "La particule α emporte 4 nucléons.",
+          "explication": "A = 238 − 4 = **234** : le noyau fils est le thorium 234."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un noyau fils est formé dans un état excité. Comment se désexcite-t-il ?",
+          "options": [
+            "Il émet un photon γ, sans changer son nombre A ni son nombre Z",
+            "Il émet une particule α pour retrouver son état de plus basse énergie",
+            "Il gagne un neutron, ce qui lui fait évacuer son excès d’énergie",
+            "Il change d’élément chimique pour retrouver son état fondamental"
+          ],
+          "reponse": 0,
+          "aide": "Le rayonnement γ n’est pas une désintégration.",
+          "explication": "Il émet un **photon γ** : ni A ni Z ne changent."
+        }
+      ]
+    },
+    {
+      "chapitre": "5ab70a00-bc96-52ad-862a-dec275c3e28f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La chaîne de l’uranium 238",
+      "competence": "raisonner",
+      "situation": "L’uranium 238 n’est pas stable : il se désintègre en une longue chaîne jusqu’au plomb 206. Voici le début de cette chaîne.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Début de la chaîne",
+          "noeuds": [
+            {
+              "id": "u238",
+              "texte": "²³⁸₉₂U"
+            },
+            {
+              "id": "th234",
+              "texte": "²³⁴₉₀Th"
+            },
+            {
+              "id": "inc",
+              "texte": "?"
+            },
+            {
+              "id": "u234",
+              "texte": "²³⁴₉₂U"
+            },
+            {
+              "id": "th230",
+              "texte": "²³⁰₉₀Th"
+            }
+          ],
+          "liens": [
+            {
+              "de": "u238",
+              "a": "th234",
+              "texte": "α"
+            },
+            {
+              "de": "th234",
+              "a": "inc",
+              "texte": "β⁻"
+            },
+            {
+              "de": "inc",
+              "a": "u234",
+              "texte": "β⁻"
+            },
+            {
+              "de": "u234",
+              "a": "th230",
+              "texte": "α"
+            }
+          ]
+        },
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Début et fin de la chaîne",
+          "colonnes": [
+            "Noyau",
+            "Z",
+            "A"
+          ],
+          "lignes": [
+            [
+              "Uranium 238",
+              "92",
+              "238"
+            ],
+            [
+              "Plomb 206",
+              "82",
+              "206"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le numéro atomique Z du noyau noté « ? » ?",
+          "reponse": 91,
+          "aide": "Une désintégration β⁻ fait monter Z de 1 à partir du thorium 234.",
+          "explication": "Th (Z = 90) émet un β⁻ : Z = 90 + 1 = **91**. C’est le protactinium 234."
+        },
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche l’isotope de l’uranium 238 dans cette chaîne.",
+          "reponse": [
+            "u234"
+          ],
+          "aide": "Un isotope garde le même Z (92) avec un autre A.",
+          "explication": "**²³⁴₉₂U** a Z = 92 comme ²³⁸₉₂U, mais A = 234."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De l’uranium 238 au plomb 206, combien de désintégrations α se produisent ?",
+          "reponse": 8,
+          "unite": "α",
+          "aide": "Seule une α change A : (238 − 206) ÷ 4.",
+          "explication": "(238 − 206) ÷ 4 = **8** désintégrations α."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et combien de désintégrations β⁻ ?",
+          "reponse": 6,
+          "unite": "β⁻",
+          "aide": "8 désintégrations α font baisser Z de 16 : compare avec Z du plomb.",
+          "explication": "8 α : Z passe de 92 à 92 − 16 = 76. Pour atteindre 82, il faut 82 − 76 = **6** désintégrations β⁻."
+        }
+      ]
+    }
+  ]
+}

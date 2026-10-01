@@ -1,0 +1,439 @@
+{
+  "id": "nsi-2025-asie-j1",
+  "matiere": "nsi",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2025,
+  "centre": "Asie",
+  "jour": 1,
+  "code": "25-NSIJ1JA1",
+  "titre": "Bac 2025 — NSI",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous obligatoires : décidabilité (6 points), arbres et compression de Huffman (6 points), SQL et dictionnaires Python (8 points). Calculatrice interdite.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Décidabilité, algorithmique et Python : peut-on écrire une fonction qui dit si n'importe quel programme s'arrête ?",
+      "points": 6,
+      "minutes": 60,
+      "enBref": [
+        "Après programme1, x vaut 0 et y vaut 20. Un programme est un texte : il peut être la donnée d'un autre programme.",
+        "programme3 et programme5 terminent ; programme4 et programme6 bouclent indéfiniment.",
+        "Exécuter le programme ne permet pas de conclure (on attend pour toujours s'il boucle), et chercher le mot while se trompe dans les deux sens.",
+        "Si `arret` existait, `terminaison_inverse(programme_paradoxal)` terminerait si et seulement s'il ne termine pas : contradiction.",
+        "Le problème de l'arrêt est indécidable (Turing, 1936) : c'est une limite de tout calcul, pas de Python."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Valeurs de x et y après programme1.",
+          "blocs": [
+            { "type": "texte", "texte": "La boucle tourne tant que x > 0 : x passe de 10 à 0, soit 10 tours. À chaque tour, y augmente de 1 : il passe de 10 à 20. La somme x + y reste d'ailleurs égale à 20 à chaque tour, ce que confirme `x + y` dans la console plus bas." },
+            { "type": "reponse", "texte": "x = 0 et y = 20." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Pourquoi tout programme Python peut être vu comme une chaîne de caractères.",
+          "blocs": [
+            { "type": "reponse", "texte": "Un programme Python est un **texte source** : une suite de caractères écrite dans un fichier. On peut donc le ranger dans une variable de type `str`, le lire, le modifier ou le donner en argument à un autre programme. Code et données sont de même nature, c'est ce que permet `exec` (et c'est l'idée de la machine universelle de Turing)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Lesquels des programmes 3 à 6 terminent ?",
+          "blocs": [
+            {
+              "type": "tableau",
+              "entetes": ["Programme", "Valeurs successives de x", "Termine ?"],
+              "lignes": [
+                ["programme3", "10, 8, 6, 4, 2, 0 : la condition x != 0 devient fausse", "Oui"],
+                ["programme4", "10, 12, 14… : x reste toujours > 0", "Non"],
+                ["programme5", "10 : la condition x < 0 est fausse dès le départ, on n'entre jamais dans la boucle", "Oui"],
+                ["programme6", "10, 6, 2, −2, −6… : x saute par-dessus 0 et ne vaut jamais 0", "Non"]
+              ]
+            },
+            { "type": "piege", "texte": "programme6 ressemble à programme3, mais 10 n'est pas un multiple de 4 : x n'atteint jamais exactement 0. Et en Python, les entiers ne débordent pas : x continue de décroître sans fin." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Ce que fait arret_essai1 et s'il répond au problème.",
+          "blocs": [
+            { "type": "texte", "texte": "`arret_essai1` exécute le programme, puis renvoie `True`. Si le programme termine, on obtient bien `True`. Mais s'il ne termine pas, `exec` ne rend jamais la main : `arret_essai1` ne renvoie jamais `False`, elle boucle avec lui." },
+            { "type": "reponse", "texte": "Non : la fonction `arret` doit s'arrêter dans tous les cas, or `arret_essai1(programme2)` ne s'arrête jamais." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Principe de l'algorithme de Boyer-Moore.",
+          "blocs": [
+            { "type": "liste", "ordonnee": true, "items": [
+              "On **prétraite le motif** : pour chaque caractère, on note sa dernière position dans le motif (hors dernier caractère), ce qui donne la table des décalages.",
+              "On aligne le motif sous le texte et on compare les caractères **de droite à gauche**, en partant de la fin du motif.",
+              "Si tout coïncide, le motif est trouvé.",
+              "Sinon, on **décale le motif vers la droite** d'après la table : si le caractère du texte n'apparaît pas dans le motif, on saute d'un coup toute la longueur du motif."
+            ] },
+            { "type": "texte", "texte": "Ces sauts évitent d'examiner la plupart des caractères du texte : en pratique, l'algorithme est d'autant plus rapide que le motif est long. Une version simplifiée (Boyer-Moore-Horspool) :" },
+            { "type": "code", "langage": "python", "code": "def recherche(mot, texte):\n    m, n = len(mot), len(texte)\n    decalage = {}\n    for k in range(m - 1):\n        decalage[mot[k]] = m - 1 - k\n    i = 0\n    while i <= n - m:\n        j = m - 1\n        while j >= 0 and texte[i + j] == mot[j]:\n            j = j - 1\n        if j < 0:\n            return True\n        i = i + decalage.get(texte[i + m - 1], m)\n    return False" },
+            { "type": "attendu", "texte": "Les deux idées clés : comparaison à partir de la fin du motif, et décalages précalculés qui permettent de sauter plusieurs positions." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Fonction arret_essai2.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def arret_essai2(programme):\n    return not recherche(\"while\", programme)" },
+            { "type": "texte", "texte": "Équivalent en Python pur : `return \"while\" not in programme`." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Montrer que arret_essai2 peut se tromper dans les deux sens.",
+          "blocs": [
+            { "type": "texte", "texte": "**Renvoie True alors que le programme ne s'arrête pas.** Une boucle `for` sur une suite sans fin, sans aucun `while` :" },
+            { "type": "code", "langage": "python", "code": "programme7 = \"\"\"\nimport itertools\nfor i in itertools.count():\n    pass\n\"\"\"" },
+            { "type": "texte", "texte": "Autre exemple, plus malicieux : `exec(\"wh\" + \"ile True: pass\")`. Le mot while n'est jamais écrit d'un bloc dans le texte, mais le programme exécuté est une boucle infinie." },
+            { "type": "texte", "texte": "**Renvoie False alors que le programme s'arrête.** programme1 ou programme3 contiennent `while` et terminent. Plus simplement encore, `x = \"while\"` contient le mot et s'arrête aussitôt." },
+            { "type": "reponse", "texte": "La présence du mot `while` n'est ni nécessaire ni suffisante pour qu'un programme boucle : la fonction se trompe dans les deux sens." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Fonction terminaison_inverse.",
+          "blocs": [
+            { "type": "texte", "texte": "On interroge `arret` (supposée exister) : si le programme termine, on part dans une boucle infinie ; sinon, on s'arrête tout de suite." },
+            { "type": "code", "langage": "python", "code": "def terminaison_inverse(programme):\n    if arret(programme):\n        boucle_infinie()\n    # sinon : on ne fait rien, la fonction se termine" },
+            { "type": "texte", "texte": "Cette fonction termine toujours dans le cas `False` : c'est pour cela qu'on a besoin d'`arret`, qui répond sans exécuter le programme." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Le programme paradoxal termine-t-il ?",
+          "blocs": [
+            { "type": "texte", "texte": "`exec(programme_paradoxal)` exécute `terminaison_inverse(programme_paradoxal)`, qui calcule `arret(programme_paradoxal)`. Deux cas seulement :" },
+            { "type": "liste", "items": [
+              "**Si `arret` répond True** (le programme paradoxal termine), `terminaison_inverse` appelle `boucle_infinie()` : le programme paradoxal ne termine pas. Contradiction.",
+              "**Si `arret` répond False** (il ne termine pas), `terminaison_inverse` s'arrête aussitôt : le programme paradoxal termine. Contradiction."
+            ] },
+            { "type": "reponse", "texte": "Aucun des deux cas n'est possible : le programme paradoxal termine si et seulement s'il ne termine pas. C'est un paradoxe." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "Conclusion sur la fonction arret.",
+          "blocs": [
+            { "type": "reponse", "texte": "L'hypothèse de départ est fausse : **aucune fonction `arret` ne peut exister**. On dit que le problème de l'arrêt est **indécidable** (Alan Turing, 1936) : aucun algorithme ne peut dire, pour tout programme, s'il termine." },
+            { "type": "texte", "texte": "C'est un raisonnement par l'absurde : on suppose l'existence, on en tire une contradiction, donc l'existence est impossible. Attention, cela n'empêche pas de prouver la terminaison de **certains** programmes (comme en question 3) : ce qui est impossible, c'est une méthode qui marche pour **tous**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Cette impossibilité vient-elle d'une limite de Python ?",
+          "blocs": [
+            { "type": "reponse", "texte": "Non. Le raisonnement n'utilise rien de propre à Python : seulement la possibilité de traiter un programme comme une donnée et d'écrire une boucle infinie. Il se transpose à tout langage de programmation assez expressif (C, Java, une machine de Turing…). L'indécidabilité est une limite de l'informatique elle-même, pas d'un langage ni d'un ordinateur." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Arbres et compression : coder « SIX ANANAS » en Latin-1, puis avec un code de Huffman.",
+      "points": 6,
+      "minutes": 60,
+      "enBref": [
+        "« SIX ANANAS » compte 10 caractères : 10 octets, soit 80 bits ; codage 53 49 58 20 41 4E 41 4E 41 53.",
+        "Occurrences : A 3, N 2, S 2, I 1, X 1, espace 1 ; leur somme (10) est la longueur du texte, et le poids de la racine de l'arbre.",
+        "L'arbre de Huffman donne par exemple A 11, N 00, S 01, X 100, espace 1010, I 1011 : les symboles fréquents ont les codes les plus courts.",
+        "Texte codé sur 25 bits au lieu de 80 : taux de compression de 68,75 %, bien dans la fourchette de 20 à 90 %."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : coder du texte" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Taille de txt en octets, puis en bits.",
+          "blocs": [
+            { "type": "texte", "texte": "« SIX ANANAS » : 3 lettres, 1 espace, 6 lettres, soit 10 caractères. En ISO 8859-1, chaque caractère occupe 1 octet." },
+            { "type": "reponse", "texte": "10 octets, soit 10 × 8 = 80 bits." },
+            { "type": "piege", "texte": "Ne pas oublier l'espace : c'est un caractère comme les autres, il a son code (SP)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Codage de txt.",
+          "blocs": [
+            { "type": "texte", "texte": "On lit la ligne puis la colonne de chaque caractère : S (5x, x3) = 53, I (4x, x9) = 49, X (5x, x8) = 58, espace SP (2x, x0) = 20, A = 41, N = 4E." },
+            { "type": "reponse", "texte": "53 49 58 20 41 4E 41 4E 41 53" }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : compression de Huffman" },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Tableau d'occurrences de txt.",
+          "blocs": [
+            {
+              "type": "tableau",
+              "entetes": ["Symbole", "S", "I", "X", "espace", "A", "N"],
+              "lignes": [
+                ["Nombre d'occurrences", "2", "1", "1", "1", "3", "2"]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "À quoi correspond la somme des occurrences ?",
+          "blocs": [
+            { "type": "reponse", "texte": "2 + 1 + 1 + 1 + 3 + 2 = 10 : c'est le nombre total de caractères du texte, sa longueur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Compléter la fonction occurrence.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def occurrence(texte):\n    dico = {}\n    for lettre in texte:\n        if lettre in dico:\n            dico[lettre] = dico[lettre] + 1\n        else:\n            dico[lettre] = 1\n    return dico" },
+            { "type": "texte", "texte": "`occurrence(\"SIX ANANAS\")` renvoie `{'S': 2, 'I': 1, 'X': 1, ' ': 1, 'A': 3, 'N': 2}`. Un seul parcours du texte, et chaque accès au dictionnaire est en temps constant : coût linéaire en la longueur du texte." },
+            { "type": "piege", "texte": "Dans le `else`, on crée la clé avec la valeur **1**, pas 0 : on vient de rencontrer la lettre une première fois." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Construire l'arbre de Huffman de txt.",
+          "blocs": [
+            { "type": "texte", "texte": "On applique la règle de la figure 2 : la file est rangée par poids croissant (le plus léger est prioritaire) ; on extrait les deux premiers arbres, le premier devient l'enfant **gauche**, le second l'enfant **droit** ; le nouvel arbre est inséré **avant** tous les arbres de poids supérieur ou égal au sien. Pour les égalités de départ, on range les symboles dans l'ordre de la table (l'espace, code 20, avant les lettres), comme la figure range A avant B." },
+            {
+              "type": "tableau",
+              "entetes": ["Étape", "On greffe", "File obtenue (poids)"],
+              "lignes": [
+                ["0", "—", "espace 1, I 1, X 1, N 2, S 2, A 3"],
+                ["1", "espace (1) et I (1) → T1 de poids 2", "X 1, T1 2, N 2, S 2, A 3"],
+                ["2", "X (1) et T1 (2) → T2 de poids 3", "N 2, S 2, T2 3, A 3"],
+                ["3", "N (2) et S (2) → T3 de poids 4", "T2 3, A 3, T3 4"],
+                ["4", "T2 (3) et A (3) → T4 de poids 6", "T3 4, T4 6"],
+                ["5", "T3 (4) et T4 (6) → racine de poids 10", "racine 10"]
+              ]
+            },
+            { "type": "code", "langage": "texte", "code": "                (10)\n             0 /    \\ 1\n            (4)      (6)\n          0 / \\ 1  0 / \\ 1\n          N   S   (3)   A\n                0 / \\ 1\n                 X   (2)\n                   0 / \\ 1\n                 espace  I" },
+            { "type": "astuce", "texte": "Avec un autre ordre pour les égalités, tu peux obtenir un arbre différent (par exemple espace et X échangés). Ce n'est pas une erreur : tous les arbres de Huffman d'un même texte donnent la **même longueur totale** codée, ici 25 bits. Indique simplement la convention que tu suis." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "À quoi correspond le poids de la racine ?",
+          "blocs": [
+            { "type": "reponse", "texte": "Chaque greffe additionne les poids : la racine porte la somme de toutes les occurrences, 10, c'est-à-dire le nombre de caractères du texte." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Parcours à utiliser pour construire la table de codage.",
+          "blocs": [
+            { "type": "texte", "texte": "Il faut connaître, pour chaque feuille, le chemin qui y mène depuis la racine. Un **parcours en profondeur** (par exemple préfixe) le fait naturellement : on descend en ajoutant 0 au code courant quand on va à gauche, 1 quand on va à droite, et on enregistre le code quand on atteint une feuille." },
+            { "type": "reponse", "texte": "Un parcours en profondeur (préfixe) de l'arbre, en mémorisant le chemin de bits de la racine à chaque feuille." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Table de codage de txt.",
+          "blocs": [
+            {
+              "type": "tableau",
+              "entetes": ["Symbole", "A", "N", "S", "X", "espace", "I"],
+              "lignes": [
+                ["Code", "11", "00", "01", "100", "1010", "1011"],
+                ["Longueur", "2", "2", "2", "3", "4", "4"]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "Pourquoi le code de Huffman est de longueur variable.",
+          "blocs": [
+            { "type": "reponse", "texte": "Les codes n'ont pas tous le même nombre de bits : 2 bits pour A, N, S, 3 pour X, 4 pour l'espace et I. La longueur d'un code est la profondeur de la feuille, et les symboles les plus fréquents sont greffés en dernier, donc placés près de la racine : ils reçoivent les codes les plus courts." },
+            { "type": "texte", "texte": "Aucun code n'est le début d'un autre (chaque symbole est une feuille, jamais un nœud interne) : c'est un **code préfixe**, qu'on peut décoder sans séparateur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Coder txt avec le code de Huffman.",
+          "blocs": [
+            { "type": "texte", "texte": "On remplace chaque caractère par son code : S 01, I 1011, X 100, espace 1010, A 11, N 00, A 11, N 00, A 11, S 01." },
+            { "type": "reponse", "texte": "01 1011 100 1010 11 00 11 00 11 01, soit 0110111001010110011001101 (25 bits)." },
+            { "type": "texte", "texte": "Vérification par les occurrences : 3 × 2 (A) + 2 × 2 (N) + 2 × 2 (S) + 1 × 3 (X) + 1 × 4 (espace) + 1 × 4 (I) = 25." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "12",
+          "intitule": "Taux de compression et vérification de l'assertion.",
+          "blocs": [
+            { "type": "formule", "tex": "\\tau = \\frac{80 - 25}{80} = \\frac{55}{80} = 0{,}6875" },
+            { "type": "reponse", "texte": "Taux de compression de 68,75 % : le texte occupe 25 bits au lieu de 80. Cette valeur est bien comprise entre 20 % et 90 %, l'assertion est vérifiée sur cet exemple." },
+            { "type": "piege", "texte": "Pour décoder, le destinataire doit aussi recevoir l'arbre (ou la table). Sur un texte aussi court, cette table coûte plus que le gain : la compression de Huffman n'est vraiment rentable que sur des textes longs." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Bases de données et dictionnaires en Python : la location de kimonos et les numéros de licence d'un club de judo.",
+      "points": 8,
+      "minutes": 90,
+      "enBref": [
+        "Un kimono est en cours de location quand `fin = ''` ; on compte avec `COUNT`, on joint adherent et location sur le numéro de licence.",
+        "Pour supprimer le kimono 25, il faut d'abord effacer ses locations, puis le kimono : l'ordre est imposé par la clé étrangère.",
+        "Licence d'Eddie Nirrer : 'M12102021NIRRE01' ; 'M23091974MARTI01' est un homme né le 23/09/1974, nommé par exemple MARTIN.",
+        "`nombre_adherents` est un compteur ; `adherent_plus_age` cherche l'année minimale puis garde tous les adhérents nés cette année-là.",
+        "`verification_licence` compare le sexe, la date 'JJMMAAAA' et les cinq premières lettres du nom aux morceaux extraits de la licence."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : SQL" },
+        { "type": "texte", "texte": "Les noms d'attributs du sujet contiennent des tirets (`numero-licence`). On les écrit comme le sujet ; dans un vrai SGBD, `numero-licence` serait lu comme une soustraction, il faudrait l'entourer de guillemets doubles ou utiliser des tirets bas." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Numéro des kimonos en cours de location.",
+          "blocs": [
+            { "type": "texte", "texte": "Une location en cours n'a pas encore de date de fin : `fin` vaut la chaîne vide." },
+            { "type": "code", "langage": "sql", "code": "SELECT id-kimono\nFROM location\nWHERE fin = '';" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Nombre de kimonos de taille 130 cm.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "SELECT COUNT(id-kimono)\nFROM kimono\nWHERE taille-kimono = 130;" },
+            { "type": "texte", "texte": "On interroge la relation `kimono` (tous les kimonos possédés), pas `location` : un kimono jamais loué compte aussi." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Nom et prénom de l'adhérent qui loue actuellement le kimono 42.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "SELECT adherent.nom, adherent.prenom\nFROM adherent\nJOIN location ON adherent.numero-licence = location.numero-licence\nWHERE location.id-kimono = 42 AND location.fin = '';" },
+            { "type": "piege", "texte": "Sans la condition `location.fin = ''`, la requête renverrait aussi tous les anciens locataires du kimono 42." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Ajouter 10 cm aux adhérents de moins de 160 cm.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "UPDATE adherent\nSET taille-adherent = taille-adherent + 10\nWHERE taille-adherent < 160;" },
+            { "type": "texte", "texte": "« Strictement moins de 160 cm » se traduit par `<` et non `<=` : un adhérent de 160 cm garde sa taille." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Supprimer le kimono 25 de la base.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "DELETE FROM location WHERE id-kimono = 25;\nDELETE FROM kimono WHERE id-kimono = 25;" },
+            { "type": "texte", "texte": "`location.id-kimono` est une clé étrangère vers `kimono`. Supprimer d'abord le kimono laisserait des locations qui pointent vers un kimono inexistant : le SGBD refuse (intégrité référentielle). On efface donc d'abord les locations de ce kimono, puis le kimono." },
+            { "type": "attendu", "texte": "Les **deux** requêtes, dans le bon ordre, avec leur justification : c'est pour cela que le sujet écrit « les requêtes »." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : les licences en Python" },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Numéro de licence possible pour Eddie Nirrer, né le 12/10/2021.",
+          "blocs": [
+            { "type": "texte", "texte": "M (masculin) + 12102021 (JJMMAAAA) + NIRRE (cinq premières lettres du nom, en majuscules) + 01 (premier numéro disponible)." },
+            { "type": "reponse", "texte": "'M12102021NIRRE01'" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Date de naissance et nom possible pour 'M23091974MARTI01'.",
+          "blocs": [
+            { "type": "texte", "texte": "On découpe : M | 23 09 1974 | MARTI | 01. C'est un homme, et son nom commence par MARTI." },
+            { "type": "reponse", "texte": "Né le 23 septembre 1974 ; nom possible : MARTIN (ou MARTINEZ, MARTINOT…)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Valeur de tab_adherents[1]['prenom'].",
+          "blocs": [
+            { "type": "reponse", "texte": "'STEPHANIE' (l'indice 1 désigne le **deuxième** dictionnaire du tableau)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Instruction donnant 'F03071997DUPON01'.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "tab_adherents[0]['numero-licence']" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "Fonction nombre_adherents.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def nombre_adherents(table, annee):\n    compteur = 0\n    for adherent in table:\n        if adherent['annee'] == annee:\n            compteur = compteur + 1\n    return compteur" },
+            { "type": "texte", "texte": "`annee` et `adherent['annee']` sont deux chaînes de 4 caractères : on les compare directement. Parcours unique de la table : coût linéaire en nombre d'adhérents." },
+            { "type": "piege", "texte": "Le `return` doit être au niveau du `for`, pas dans la boucle : sinon la fonction s'arrête dès le premier adhérent examiné." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Fonction adherent_plus_age.",
+          "blocs": [
+            { "type": "texte", "texte": "Deux temps : on cherche la plus petite année de naissance (l'adhérent le plus âgé), puis on garde tous les adhérents nés cette année-là. On part de '2025', supérieure à toutes les années possibles d'après le sujet." },
+            { "type": "code", "langage": "python", "code": "def adherent_plus_age(table):\n    annee_min = '2025'\n    for adherent in table:\n        if adherent['annee'] < annee_min:\n            annee_min = adherent['annee']\n    plus_ages = []\n    for adherent in table:\n        if adherent['annee'] == annee_min:\n            plus_ages.append(adherent)\n    return plus_ages" },
+            { "type": "texte", "texte": "Deux parcours successifs de la table : le coût reste linéaire. On aurait pu initialiser `annee_min` avec `table[0]['annee']`, puisque la table contient au moins un adhérent." },
+            { "type": "piege", "texte": "Renvoyer un seul dictionnaire au lieu d'une liste : plusieurs adhérents peuvent être nés la même année (les sœurs Dupond, par exemple)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "12",
+          "intitule": "Fonction verification_licence.",
+          "blocs": [
+            { "type": "texte", "texte": "Dans 'F03071997DUPON01', le sexe est entre les indices 0 et 1, la date entre 1 et 9, les lettres du nom entre 9 et 14. On compare chaque morceau à ce que donnent les autres champs du dictionnaire. La date d'un adhérent s'écrit `jour + mois + annee`, au format 'JJMMAAAA'." },
+            { "type": "code", "langage": "python", "code": "def verification_licence(adherent):\n    licence = adherent['numero-licence']\n    if len(licence) != 16:\n        return False\n    date = adherent['jour'] + adherent['mois'] + adherent['annee']\n    debut_nom = extraire(adherent['nom'], 0, 5).upper()\n    return (extraire(licence, 0, 1) == adherent['sexe']\n            and extraire(licence, 1, 9) == date\n            and extraire(licence, 9, 14) == debut_nom)" },
+            { "type": "texte", "texte": "Sur les deux adhérentes du sujet, la fonction renvoie `True`. Si on change le jour de naissance, le sexe ou le nom, elle renvoie `False`. Le test de longueur protège les appels à `extraire`, qui exigent `j <= len(s)`." },
+            { "type": "astuce", "texte": "Pour vérifier un identifiant composé, dessine-le avec ses indices au brouillon (F | 03071997 | DUPON | 01, positions 0, 1, 9, 14, 16) : les bornes des `extraire` se lisent alors directement." },
+            { "type": "attendu", "texte": "Les trois comparaisons (sexe, date dans l'ordre JJMMAAAA, cinq premières lettres du nom) et un booléen renvoyé. Les deux derniers chiffres ne dépendent pas de l'adhérent : ils n'ont pas à être vérifiés contre ses champs." }
+          ]
+        }
+      ]
+    }
+  ]
+}

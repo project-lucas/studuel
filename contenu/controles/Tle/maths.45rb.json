@@ -1,0 +1,411 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "difficulte": 1,
+      "titre": "Une solution unique entre 0 et 1",
+      "consigne": "Rédige la réponse comme au bac : chaque hypothèse du théorème doit apparaître.",
+      "enonce": "Soit f la fonction définie sur [0 ; 1] par f(x) = x³ + x − 1.\n\n1. Justifie que f est continue sur [0 ; 1] et calcule f′(x). Déduis-en le sens de variation de f.\n2. Calcule f(0) et f(1). Démontre que l’équation f(x) = 0 admet une unique solution α dans [0 ; 1].\n3. Calcule f(0,6) et f(0,7). Déduis-en un encadrement de α d’amplitude 0,1.",
+      "bareme": [
+        { "critere": "Continuité (polynôme) et f′(x) = 3x² + 1 > 0 : f strictement croissante", "points": 6 },
+        { "critere": "f(0) = −1, f(1) = 1, 0 compris entre les deux ; existence et unicité (bijection) rédigées", "points": 8 },
+        { "critere": "f(0,6) = −0,184 et f(0,7) = 0,043, donc 0,6 < α < 0,7", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f est un **polynôme**, donc continue sur [0 ; 1]. f′(x) = 3x² + 1 > 0 : f est **strictement croissante** sur [0 ; 1].\n2. f(0) = −1 et f(1) = 1 + 1 − 1 = 1. f est **continue** (existence) et **strictement croissante** (unicité) sur [0 ; 1], et **0 est compris entre f(0) = −1 et f(1) = 1** : d’après le théorème de la bijection (corollaire du théorème des valeurs intermédiaires), l’équation f(x) = 0 admet une **unique solution α** dans [0 ; 1].\n3. f(0,6) = 0,216 + 0,6 − 1 = **−0,184** < 0 et f(0,7) = 0,343 + 0,7 − 1 = **0,043** > 0. Comme f(α) = 0 est compris entre ces deux valeurs et f est strictement croissante : **0,6 < α < 0,7**."
+    },
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "difficulte": 2,
+      "titre": "Recoller, sauter, couper en deux",
+      "consigne": "Justifie chaque réponse.",
+      "enonce": "1. Soit a un réel et f la fonction définie sur ℝ par f(x) = x² + a si x ≤ 1, et f(x) = 3x − 1 si x > 1. Pour quelle valeur de a la fonction f est-elle continue en 1 ?\n2. On note E la fonction partie entière (E(x) est le plus grand entier inférieur ou égal à x). On a E(0) = 0 et E(1) = 1. L’équation E(x) = 0,5 a-t-elle une solution dans [0 ; 1] ? Pourquoi le théorème des valeurs intermédiaires ne s’applique-t-il pas ?\n3. Soit g(x) = x³ − 3x + 1 sur [0 ; 1]. On admet que l’équation g(x) = 0 y a une unique solution β. Sachant que g(0) = 1 et g(1) = −1, applique trois étapes de la méthode de dichotomie et donne l’encadrement de β obtenu.",
+      "bareme": [
+        { "critere": "Limite à droite en 1 égale à 2, f(1) = 1 + a, donc a = 1", "points": 5 },
+        { "critere": "E(x) = 0,5 sans solution (E ne prend que des entiers) ; E discontinue en 1", "points": 5 },
+        { "critere": "Valeurs g(0,5) = −0,375, g(0,25) ≈ 0,266, g(0,375) ≈ −0,072 justes", "points": 6 },
+        { "critere": "Choix des moitiés où le signe change et encadrement 0,25 < β < 0,375", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Pour x > 1, f(x) = 3x − 1, qui tend vers 3 × 1 − 1 = 2 quand x → 1. Pour x ≤ 1, x² + a tend vers 1 + a = f(1). f est continue en 1 si sa limite existe et vaut f(1) : 1 + a = 2, soit **a = 1**.\n2. E ne prend que des valeurs **entières** : E(x) = 0,5 n’a **aucune solution**, bien que 0,5 soit compris entre E(0) = 0 et E(1) = 1. Le théorème exige la **continuité** sur [0 ; 1] ; or E est discontinue en 1 (elle vaut 0 sur [0 ; 1[ et saute à 1) : elle « saute par-dessus » 0,5.\n3. g(0) = 1 > 0 et g(1) = −1 < 0.\n- Étape 1 : g(0,5) = 0,125 − 1,5 + 1 = **−0,375** < 0 : le signe change entre 0 et 0,5, on garde **[0 ; 0,5]**.\n- Étape 2 : g(0,25) = 0,015625 − 0,75 + 1 = **0,265625** > 0 : on garde **[0,25 ; 0,5]**.\n- Étape 3 : g(0,375) = 0,052734… − 1,125 + 1 ≈ **−0,0723** < 0 : on garde **[0,25 ; 0,375]**.\nDonc **0,25 < β < 0,375** (amplitude 0,125 = 1/8 : divisée par deux à chaque étape)."
+    },
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "difficulte": 3,
+      "titre": "L’équation x + eˣ = 0",
+      "consigne": "Nomme chaque théorème et vérifie chacune de ses hypothèses.",
+      "enonce": "Soit f la fonction définie sur ℝ par f(x) = x + eˣ.\n\n1. Étudie les variations de f et détermine ses limites en −∞ et en +∞ (on rappelle que eˣ tend vers 0 en −∞).\n2. Démontre que l’équation f(x) = 0 admet une unique solution α sur ℝ.\n3. On donne : f(−1) ≈ −0,632 ; f(0) = 1 ; f(−0,6) ≈ −0,051 ; f(−0,5) ≈ 0,107 ; f(−0,57) ≈ −0,004 ; f(−0,56) ≈ 0,011. Donne un encadrement de α d’amplitude 0,1, puis d’amplitude 0,01.\n4. En partant de l’intervalle [−1 ; 0], combien d’étapes de dichotomie faut-il au minimum pour obtenir un encadrement d’amplitude inférieure ou égale à 0,001 ?\n5. Déduis de ce qui précède le signe de f(x) selon les valeurs de x.",
+      "bareme": [
+        { "critere": "f′(x) = 1 + eˣ > 0, limites −∞ et +∞ justifiées", "points": 4 },
+        { "critere": "Bijection sur ℝ : continuité, stricte monotonie, 0 entre les limites (intervalle infini)", "points": 5 },
+        { "critere": "Encadrements −0,6 < α < −0,5 puis −0,57 < α < −0,56", "points": 4 },
+        { "critere": "Dichotomie : 1/2ⁿ ≤ 0,001 donc n = 10 (2¹⁰ = 1 024)", "points": 4 },
+        { "critere": "Signe : f(x) < 0 pour x < α, f(α) = 0, f(x) > 0 pour x > α", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f′(x) = 1 + eˣ > 0 : f est **strictement croissante** sur ℝ. En −∞ : x → −∞ et eˣ → 0, donc **f(x) → −∞**. En +∞ : x → +∞ et eˣ → +∞, donc **f(x) → +∞**.\n2. f est **continue** sur ℝ (somme de fonctions continues), **strictement croissante**, et 0 est compris entre les limites −∞ et +∞. Le théorème de la bijection, étendu à un intervalle infini en remplaçant les valeurs aux bornes par les limites, donne une **unique solution α** de f(x) = 0 sur ℝ.\n3. f(−0,6) < 0 < f(−0,5), f strictement croissante : **−0,6 < α < −0,5**. f(−0,57) < 0 < f(−0,56) : **−0,57 < α < −0,56** (α ≈ −0,567).\n4. Après n étapes, l’amplitude est 1/2ⁿ. Il faut 1/2ⁿ ≤ 0,001, soit 2ⁿ ≥ 1 000. 2⁹ = 512 ne suffit pas, 2¹⁰ = 1 024 convient : **10 étapes**.\n5. f est strictement croissante et f(α) = 0 : **f(x) < 0** pour x < α, **f(x) > 0** pour x > α."
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "difficulte": 1,
+      "titre": "Calculer avec ln",
+      "consigne": "Utilise les propriétés algébriques du logarithme et justifie chaque égalité.",
+      "enonce": "1. Écris plus simplement :\n a) A = ln 12 − ln 3\n b) B = ln(e³) + ln(1/e)\n c) C = ln(√e)\n2. Exprime ln 72 en fonction de ln 2 et de ln 3.\n3. Résous dans l’ensemble indiqué :\n a) ln(x) = 2, pour x > 0\n b) eˣ = 5, pour x réel",
+      "bareme": [
+        { "critere": "A = ln 4 = 2 ln 2 ; B = 2 ; C = 1/2", "points": 8 },
+        { "critere": "ln 72 = 3 ln 2 + 2 ln 3 (72 = 8 × 9)", "points": 5 },
+        { "critere": "x = e² et x = ln 5, avec la relation entre ln et exponentielle", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) A = ln(12/3) = ln 4 = ln(2²) = **2 ln 2**.\n b) ln(e³) = 3 et ln(1/e) = −ln e = −1, donc **B = 2**.\n c) ln(√e) = (1/2) ln e = **1/2**.\n2. 72 = 8 × 9 = 2³ × 3², donc ln 72 = ln(2³) + ln(3²) = **3 ln 2 + 2 ln 3**.\n3. a) ln(x) = 2 équivaut à x = e² (car e^(ln x) = x) : **x = e²** ≈ 7,39.\n b) eˣ = 5 équivaut à x = ln 5 (5 > 0) : **x = ln 5** ≈ 1,61."
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "difficulte": 2,
+      "titre": "Équations et placement de Noé",
+      "consigne": "Commence toujours par la condition d’existence des logarithmes.",
+      "enonce": "1. Résous l’équation ln(2x − 1) = ln(x + 3).\n2. Résous l’équation ln(x) + ln(x − 1) = ln 6.\n3. **Situation.** Noé place 2 000 € sur un livret à intérêts composés de 3 % par an : au bout de n années, son capital vaut 2 000 × 1,03ⁿ euros.\n a) À l’aide du logarithme, détermine à partir de combien d’années son capital aura doublé.\n b) Ce délai dépend-il de la somme placée au départ ? Justifie.",
+      "bareme": [
+        { "critere": "Équation 1 : domaine x > 1/2, solution x = 4 vérifiée", "points": 5 },
+        { "critere": "Équation 2 : domaine x > 1, x² − x − 6 = 0, seule x = 3 retenue", "points": 6 },
+        { "critere": "Doublement : 1,03ⁿ ≥ 2, n ≥ ln 2 / ln 1,03 ≈ 23,4, soit 24 ans", "points": 6 },
+        { "critere": "Délai indépendant du capital : 2 000 se simplifie", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Il faut 2x − 1 > 0 et x + 3 > 0, soit **x > 1/2**. Par stricte croissance de ln : 2x − 1 = x + 3, donc x = 4. Comme 4 > 1/2 : **S = {4}**.\n2. Il faut x > 0 et x − 1 > 0, soit **x > 1**. ln(x) + ln(x − 1) = ln(x(x − 1)), donc x(x − 1) = 6, soit x² − x − 6 = 0. Δ = 1 + 24 = 25, racines (1 + 5)/2 = 3 et (1 − 5)/2 = −2. Seule 3 > 1 convient : **S = {3}**.\n3. a) On veut 2 000 × 1,03ⁿ ≥ 4 000, soit 1,03ⁿ ≥ 2. ln est croissante : n ln 1,03 ≥ ln 2 ; ln 1,03 > 0, donc n ≥ ln 2 / ln 1,03 ≈ 0,6931/0,02956 ≈ 23,4. Le capital aura doublé au bout de **24 ans** (1,03²³ ≈ 1,974 < 2 et 1,03²⁴ ≈ 2,033).\n b) L’inéquation C₀ × 1,03ⁿ ≥ 2C₀ se ramène à 1,03ⁿ ≥ 2 : le capital initial **se simplifie**. Le temps de doublement ln 2 / ln(1 + t) ne dépend que du taux."
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "difficulte": 3,
+      "titre": "Le médicament qui s’élimine",
+      "consigne": "Justifie chaque transformation, en particulier le sens des inégalités.",
+      "enonce": "**Situation.** On injecte à Léna 500 mg d’un médicament. Chaque heure, son organisme en élimine 10 %. On note u(n) la quantité (en mg) restant dans le sang au bout de n heures : u(n) = 500 × 0,9ⁿ.\n\n1. Montre que la suite v définie par v(n) = ln(u(n)) est arithmétique ; précise sa raison et son premier terme.\n2. Le médicament n’est plus actif en dessous de 50 mg. Détermine à partir de combien d’heures il devient inactif. Explique pourquoi le sens de l’inégalité change à une étape.\n3. Au bout de combien de temps la quantité a-t-elle été divisée par deux ? Donne la valeur exacte puis une valeur approchée en heures.\n4. Chloé a écrit, pour calculer un total sur deux injections : ln(500 + 50) = ln 500 + ln 50. Corrige son erreur et donne la bonne transformation de ln 500 + ln 50.",
+      "bareme": [
+        { "critere": "v(n) = ln 500 + n ln 0,9 : arithmétique de raison ln 0,9, premier terme ln 500", "points": 4 },
+        { "critere": "0,9ⁿ < 0,1 puis n > ln 0,1 / ln 0,9 ≈ 21,85, soit n = 22 heures", "points": 5 },
+        { "critere": "Inégalité renversée car ln 0,9 < 0 (0,9 < 1) clairement justifiée", "points": 3 },
+        { "critere": "Demi-vie : n = ln 2 / ln(10/9) ≈ 6,6 h", "points": 4 },
+        { "critere": "ln(a + b) ≠ ln a + ln b ; ln 500 + ln 50 = ln 25 000", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. u(n) > 0, donc v(n) = ln(500 × 0,9ⁿ) = ln 500 + ln(0,9ⁿ) = **ln 500 + n ln 0,9**. v(n+1) − v(n) = ln 0,9 : v est **arithmétique** de raison **ln 0,9** (≈ −0,105) et de premier terme **v(0) = ln 500**.\n2. On veut 500 × 0,9ⁿ < 50, soit 0,9ⁿ < 0,1. ln est strictement croissante : n ln 0,9 < ln 0,1. Or **0,9 < 1, donc ln 0,9 < 0** : en divisant par ce nombre négatif, l’inégalité **change de sens** : n > ln 0,1 / ln 0,9 ≈ (−2,3026)/(−0,1054) ≈ 21,85. Le médicament devient inactif à partir de **22 heures** (u(21) ≈ 54,7 mg, u(22) ≈ 49,2 mg).\n3. 0,9ⁿ = 0,5 donne n ln 0,9 = ln 0,5, soit n = ln 0,5 / ln 0,9 = **ln 2 / ln(10/9)** ≈ 0,6931/0,1054 ≈ **6,6 heures**.\n4. **ln(a + b) n’est pas ln a + ln b** : ln(550) ≈ 6,31 alors que ln 500 + ln 50 ≈ 6,21 + 3,91 = 10,13. La propriété transforme un **produit** en somme : **ln 500 + ln 50 = ln(500 × 50) = ln 25 000**."
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "difficulte": 1,
+      "titre": "Étude de x − ln x",
+      "consigne": "Justifie chaque limite et chaque variation.",
+      "enonce": "Soit f la fonction définie sur ]0 ; +∞[ par f(x) = x − ln x.\n\n1. Détermine la limite de f en 0 (par valeurs positives).\n2. Détermine la limite de f en +∞ en factorisant par x.\n3. Calcule f′(x), étudie son signe et dresse le tableau de variations de f. Donne son minimum.",
+      "bareme": [
+        { "critere": "En 0⁺ : −ln x → +∞ donc f → +∞", "points": 5 },
+        { "critere": "En +∞ : f(x) = x(1 − ln x / x), croissances comparées, limite +∞", "points": 7 },
+        { "critere": "f′(x) = (x − 1)/x, décroissante puis croissante, minimum f(1) = 1", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. En 0⁺ : x → 0 et ln x → −∞, donc −ln x → +∞ : **f(x) → +∞**.\n2. En +∞, forme ∞ − ∞. f(x) = x(1 − ln x / x). Par **croissances comparées**, ln x / x → 0, donc la parenthèse tend vers 1 et **f(x) → +∞**.\n3. f′(x) = 1 − 1/x = **(x − 1)/x**. Sur ]0 ; +∞[, x > 0 : f′ a le signe de x − 1. f est **décroissante** sur ]0 ; 1] et **croissante** sur [1 ; +∞[.\n\n| x | 0 | | 1 | | +∞ |\n|---|---|---|---|---|---|\n| f′(x) | | − | 0 | + | |\n| f | +∞ | ↘ | 1 | ↗ | +∞ |\n\nMinimum : **f(1) = 1 − ln 1 = 1**."
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "difficulte": 2,
+      "titre": "Une fonction qui contient ln(3 − x)",
+      "consigne": "Suis la méthode d’étude du cours : domaine, limites, dérivée, variations.",
+      "enonce": "Soit f la fonction définie par f(x) = ln(3 − x) + x.\n\n1. Détermine l’ensemble de définition de f.\n2. Détermine la limite de f(x) quand x tend vers 3 (x < 3). Interprète graphiquement.\n3. Calcule f′(x) et montre que f′(x) = (2 − x)/(3 − x).\n4. Dresse le tableau de variations de f (sans la limite en −∞) et donne son maximum.\n5. Déduis-en que ln(3 − x) ≤ 2 − x pour tout x < 3.",
+      "bareme": [
+        { "critere": "Domaine ]−∞ ; 3[ (argument strictement positif)", "points": 3 },
+        { "critere": "Limite −∞ en 3⁻ et asymptote verticale x = 3", "points": 4 },
+        { "critere": "f′(x) = −1/(3 − x) + 1 = (2 − x)/(3 − x) avec (ln u)′ = u′/u", "points": 6 },
+        { "critere": "Croissante sur ]−∞ ; 2], décroissante sur [2 ; 3[, maximum f(2) = 2, inégalité déduite", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. ln(3 − x) existe si 3 − x > 0, soit x < 3 : **D = ]−∞ ; 3[**.\n2. Quand x → 3 avec x < 3 : 3 − x → 0⁺, donc ln(3 − x) → −∞, et x → 3. **f(x) → −∞** : la droite **x = 3** est asymptote verticale.\n3. u = 3 − x, u′ = −1 : (ln u)′ = u′/u = −1/(3 − x). f′(x) = −1/(3 − x) + 1 = (−1 + 3 − x)/(3 − x) = **(2 − x)/(3 − x)**.\n4. Sur ]−∞ ; 3[, 3 − x > 0 : f′ a le signe de 2 − x. f est **croissante** sur ]−∞ ; 2] et **décroissante** sur [2 ; 3[. Maximum : f(2) = ln 1 + 2 = **2**.\n5. Pour tout x < 3, f(x) ≤ 2, soit ln(3 − x) + x ≤ 2, donc **ln(3 − x) ≤ 2 − x**."
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "difficulte": 3,
+      "titre": "Qui est le plus grand, 3^π ou π³ ?",
+      "consigne": "Justifie chaque limite, chaque signe et chaque comparaison.",
+      "enonce": "Soit f la fonction définie sur ]0 ; +∞[ par f(x) = ln(x)/x. On rappelle que e ≈ 2,718 et π ≈ 3,142.\n\n1. Détermine les limites de f en 0 (par valeurs positives) et en +∞. Interprète graphiquement.\n2. Montre que f′(x) = (1 − ln x)/x², puis dresse le tableau de variations de f. Donne son maximum.\n3. Détermine une équation de la tangente à la courbe de f au point d’abscisse 1.\n4. a) Justifie que f(3) > f(π).\n b) Déduis-en, en transformant cette inégalité, lequel des deux nombres 3^π et π³ est le plus grand.",
+      "bareme": [
+        { "critere": "Limites : −∞ en 0⁺ (asymptote x = 0) et 0 en +∞ par croissances comparées (asymptote y = 0)", "points": 5 },
+        { "critere": "f′(x) = (1 − ln x)/x², croissante sur ]0 ; e], décroissante sur [e ; +∞[, max 1/e", "points": 5 },
+        { "critere": "Tangente en 1 : y = x − 1", "points": 3 },
+        { "critere": "f(3) > f(π) car e < 3 < π et f décroissante sur [e ; +∞[", "points": 3 },
+        { "critere": "π ln 3 > 3 ln π, puis 3^π > π³ par croissance de exp (ou de ln)", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. En 0⁺ : ln x → −∞ et 1/x → +∞, donc f(x) = ln x × (1/x) → **−∞** : asymptote verticale **x = 0**. En +∞ : par **croissances comparées**, ln(x)/x → **0** : asymptote horizontale **y = 0**.\n2. Dérivée d’un quotient : f′(x) = [(1/x) × x − ln x × 1]/x² = **(1 − ln x)/x²**. x² > 0, donc f′ a le signe de 1 − ln x, positif si ln x < 1, c’est-à-dire x < e. f est **croissante** sur ]0 ; e] et **décroissante** sur [e ; +∞[. Maximum : **f(e) = 1/e**.\n3. f(1) = 0 et f′(1) = (1 − 0)/1 = 1 : tangente **y = x − 1**.\n4. a) e < 3 < π, et f est **strictement décroissante** sur [e ; +∞[ : **f(3) > f(π)**.\n b) ln 3 / 3 > ln π / π ; en multipliant par 3π > 0 : π ln 3 > 3 ln π, soit ln(3^π) > ln(π³). ln est strictement croissante (ou on compose par exp) : **3^π > π³** (3^π ≈ 31,54 et π³ ≈ 31,01)."
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "difficulte": 1,
+      "titre": "Valeurs, dérivées et parité",
+      "consigne": "Donne des valeurs exactes et justifie.",
+      "enonce": "1. Donne les valeurs exactes de cos(π/3), de sin(π/6), puis, à l’aide des formules du cours, de cos(π/3 + π) et de sin(−π/4).\n2. Calcule la dérivée de f(x) = 3 cos(x) − 2 sin(x), puis celle de g(x) = sin(4x).\n3. Montre que la fonction h définie sur ℝ par h(x) = x sin(x) est paire. Que peut-on en déduire pour sa courbe ?",
+      "bareme": [
+        { "critere": "cos(π/3) = 1/2, sin(π/6) = 1/2, cos(π/3 + π) = −1/2, sin(−π/4) = −√2/2", "points": 7 },
+        { "critere": "f′(x) = −3 sin(x) − 2 cos(x) et g′(x) = 4 cos(4x)", "points": 7 },
+        { "critere": "h(−x) = (−x)(−sin x) = h(x) : paire, courbe symétrique par rapport à l’axe des ordonnées", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **cos(π/3) = 1/2** et **sin(π/6) = 1/2**. cos(x + π) = −cos x, donc **cos(π/3 + π) = −1/2**. sin est impaire : sin(−π/4) = −sin(π/4) = **−√2/2**.\n2. cos′ = −sin et sin′ = cos : **f′(x) = −3 sin(x) − 2 cos(x)**. Pour g, (sin u)′ = u′ cos u avec u = 4x : **g′(x) = 4 cos(4x)**.\n3. Pour tout réel x : h(−x) = (−x) × sin(−x) = (−x) × (−sin x) = x sin x = h(x). h est **paire** : sa courbe est **symétrique par rapport à l’axe des ordonnées**."
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "difficulte": 2,
+      "titre": "Équations et une période plus courte",
+      "consigne": "N’oublie pas la seconde famille de solutions.",
+      "enonce": "1. Résous dans ℝ l’équation cos(x) = 1/2, puis donne les solutions appartenant à ]−π ; π].\n2. Résous dans [0 ; 2π[ l’équation sin(x) = √2/2.\n3. Soit f la fonction définie sur ℝ par f(x) = cos(2x).\n a) Montre que f est paire et que f(x + π) = f(x) pour tout réel x. Que signifie cette seconde égalité ?\n b) Calcule f′(x) et étudie les variations de f sur [0 ; π].",
+      "bareme": [
+        { "critere": "cos x = cos(π/3) : x = π/3 + 2kπ ou −π/3 + 2kπ ; dans ]−π ; π] : −π/3 et π/3", "points": 5 },
+        { "critere": "sin x = sin(π/4) : π/4 et 3π/4 (famille π − a)", "points": 5 },
+        { "critere": "Parité et périodicité π justifiées (cos(2x + 2π) = cos 2x)", "points": 4 },
+        { "critere": "f′(x) = −2 sin(2x) ; décroissante sur [0 ; π/2] de 1 à −1, croissante sur [π/2 ; π]", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 1/2 = cos(π/3), donc cos x = cos(π/3) équivaut à **x = π/3 + 2kπ ou x = −π/3 + 2kπ**, k entier. Dans ]−π ; π] : **−π/3 et π/3**.\n2. √2/2 = sin(π/4) : x = π/4 + 2kπ ou x = π − π/4 + 2kπ = 3π/4 + 2kπ. Dans [0 ; 2π[ : **π/4 et 3π/4**.\n3. a) f(−x) = cos(−2x) = cos(2x) = f(x) (cos est paire) : f est **paire**. f(x + π) = cos(2x + 2π) = cos(2x) = f(x) : f est **périodique de période π** ; il suffit de l’étudier sur un intervalle de longueur π.\n b) (cos u)′ = −u′ sin u, avec u = 2x : **f′(x) = −2 sin(2x)**. Si x ∈ [0 ; π/2], 2x ∈ [0 ; π] donc sin(2x) ≥ 0 et f′(x) ≤ 0 : f est **décroissante** de f(0) = 1 à f(π/2) = cos π = −1. Si x ∈ [π/2 ; π], 2x ∈ [π ; 2π] donc sin(2x) ≤ 0 et f′(x) ≥ 0 : f est **croissante** de −1 à f(π) = cos 2π = 1."
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "difficulte": 3,
+      "titre": "Le ressort de Yasmine",
+      "consigne": "Justifie chaque résultat ; donne des valeurs exactes.",
+      "enonce": "**Situation.** Yasmine étudie un ressort. La position (en cm) de la masse à l’instant t (en s) est y(t) = 3 sin(2t + π/6), pour t ≥ 0.\n\n1. Montre que y(t + π) = y(t). Que représente π pour le mouvement ? Quelle est l’amplitude du mouvement ?\n2. Calcule y(0) et y′(0).\n3. Détermine les instants t de [0 ; π[ où la masse est à la position 1,5 cm.\n4. Détermine les instants t ≥ 0 où la position est maximale.\n5. a) Détermine la limite de y(t)/t quand t tend vers +∞.\n b) En utilisant la limite de sin(X)/X en 0, détermine la limite de sin(3x)/x quand x tend vers 0.",
+      "bareme": [
+        { "critere": "Périodicité π justifiée (2π ajouté à l’argument) et amplitude 3 cm", "points": 3 },
+        { "critere": "y(0) = 1,5 et y′(t) = 6 cos(2t + π/6), y′(0) = 3√3", "points": 4 },
+        { "critere": "sin(2t + π/6) = sin(π/6) : deux familles, t = kπ ou t = π/3 + kπ ; sur [0 ; π[ : 0 et π/3", "points": 5 },
+        { "critere": "Maximum 3 atteint pour t = π/6 + kπ, k entier naturel", "points": 3 },
+        { "critere": "Gendarmes : y(t)/t → 0 ; sin(3x)/x = 3 × sin(3x)/(3x) → 3", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. y(t + π) = 3 sin(2t + 2π + π/6) = 3 sin(2t + π/6) = y(t) : le mouvement se répète toutes les **π secondes** (période ≈ 3,14 s). sin varie entre −1 et 1 : y varie entre −3 et 3, l’**amplitude** est **3 cm**.\n2. y(0) = 3 sin(π/6) = 3 × 1/2 = **1,5 cm**. y′(t) = 3 × 2 cos(2t + π/6) = **6 cos(2t + π/6)**, donc y′(0) = 6 × √3/2 = **3√3** cm/s.\n3. y(t) = 1,5 équivaut à sin(2t + π/6) = 1/2 = sin(π/6). Première famille : 2t + π/6 = π/6 + 2kπ, soit **t = kπ**. Seconde famille : 2t + π/6 = π − π/6 + 2kπ = 5π/6 + 2kπ, soit 2t = 2π/3 + 2kπ, **t = π/3 + kπ**. Dans [0 ; π[ : **t = 0 et t = π/3**.\n4. y(t) = 3 quand sin(2t + π/6) = 1, soit 2t + π/6 = π/2 + 2kπ, 2t = π/3 + 2kπ : **t = π/6 + kπ**, k entier naturel.\n5. a) Pour t > 0 : −3/t ≤ y(t)/t ≤ 3/t, et ±3/t → 0. Par le **théorème des gendarmes**, **y(t)/t → 0**.\n b) Pour x ≠ 0 : sin(3x)/x = 3 × sin(3x)/(3x). Quand x → 0, X = 3x → 0 et sin(X)/X → 1 : **sin(3x)/x → 3**."
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "difficulte": 1,
+      "titre": "Trois primitives et une condition",
+      "consigne": "Vérifie chaque primitive en la dérivant.",
+      "enonce": "1. Détermine une primitive de chacune des fonctions suivantes :\n a) f(x) = 3x² − 4x + 1 sur ℝ\n b) g(x) = e^(2x) sur ℝ\n c) h(x) = cos(x) + 1/x sur ]0 ; +∞[\n2. Détermine la primitive F de f sur ℝ telle que F(1) = 2.",
+      "bareme": [
+        { "critere": "x³ − 2x² + x et (1/2) e^(2x) (facteur 1/2 justifié par u′ = 2)", "points": 8 },
+        { "critere": "sin(x) + ln(x) sur ]0 ; +∞[", "points": 5 },
+        { "critere": "F(x) = x³ − 2x² + x + C avec F(1) = C = 2", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) **x³ − 2x² + x** (dérivée : 3x² − 4x + 1 ✓).\n b) (e^(2x))′ = 2e^(2x) : il manque le facteur 2, d’où une primitive **(1/2) e^(2x)** (dérivée : (1/2) × 2e^(2x) = e^(2x) ✓).\n c) Une primitive de cos est sin, une primitive de 1/x sur ]0 ; +∞[ est ln : **sin(x) + ln(x)**.\n2. Les primitives de f sont F(x) = x³ − 2x² + x + C, C réel. F(1) = 1 − 2 + 1 + C = C. La condition F(1) = 2 donne C = 2 : **F(x) = x³ − 2x² + x + 2**. C’est la condition initiale qui fixe la constante."
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "difficulte": 2,
+      "titre": "Le chocolat chaud qui refroidit",
+      "consigne": "Justifie chaque étape de la résolution.",
+      "enonce": "**Situation.** Un chocolat chaud est servi à 80 °C dans une pièce à 20 °C. On modélise sa température (en °C) au bout de t minutes par une fonction θ solution de l’équation différentielle (E) : y′ = −0,1 y + 2, avec θ(0) = 80.\n\n1. Détermine la solution constante de (E).\n2. Donne les solutions de l’équation y′ = −0,1 y, puis toutes les solutions de (E).\n3. Détermine θ(t) à l’aide de la condition initiale.\n4. Au bout de combien de minutes le chocolat sera-t-il à 40 °C ? Vers quelle température tend-il à long terme ?",
+      "bareme": [
+        { "critere": "Solution constante : 0 = −0,1 y + 2, y = 20", "points": 4 },
+        { "critere": "Solutions de y′ = −0,1y : C e^(−0,1t) ; solutions de (E) : C e^(−0,1t) + 20", "points": 5 },
+        { "critere": "C = 60, θ(t) = 60 e^(−0,1t) + 20", "points": 5 },
+        { "critere": "t = 10 ln 3 ≈ 11 min ; limite 20 °C (température de la pièce)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Une solution constante vérifie y′ = 0, donc 0 = −0,1 y + 2, soit **y = 20** (c’est −b/a = −2/(−0,1)).\n2. Les solutions de y′ = −0,1 y sont **t ↦ C e^(−0,1 t)**, C réel. Celles de (E) : on ajoute la solution particulière constante : **y(t) = C e^(−0,1 t) + 20**.\n3. θ(0) = C + 20 = 80, donc C = 60 : **θ(t) = 60 e^(−0,1 t) + 20**.\n4. θ(t) = 40 équivaut à 60 e^(−0,1 t) = 20, soit e^(−0,1 t) = 1/3, donc −0,1 t = ln(1/3) = −ln 3 et **t = 10 ln 3 ≈ 11 minutes**. Quand t → +∞, e^(−0,1 t) → 0, donc θ(t) → **20 °C** : le chocolat se met à la température de la pièce."
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "difficulte": 3,
+      "titre": "Reconnaître u′ et résoudre",
+      "consigne": "Justifie chaque primitive en reconnaissant une forme du cours, et chaque étape de résolution.",
+      "enonce": "1. Montre que F(x) = (x − 1)eˣ est une primitive de f(x) = x eˣ sur ℝ.\n2. Détermine une primitive de chacune des fonctions suivantes sur ℝ :\n a) g(x) = x/(x² + 1)\n b) h(x) = x(x² + 1)³\n3. On considère l’équation différentielle (E) : y′ = −3y + 6.\n a) Détermine toutes les solutions de (E).\n b) Détermine la solution φ telle que φ(0) = 0, puis sa limite en +∞.\n4. Soit y₁ et y₂ deux solutions de (E). Montre que y₁ − y₂ est solution de y′ = −3y. Pourquoi dit-on qu’il n’existe pas « la » solution de (E) sans condition initiale ?",
+      "bareme": [
+        { "critere": "F′(x) = eˣ + (x − 1)eˣ = x eˣ", "points": 3 },
+        { "critere": "g : (1/2) ln(x² + 1) (forme u′/u, x² + 1 > 0) ; h : (1/8)(x² + 1)⁴ (forme u′uⁿ)", "points": 6 },
+        { "critere": "Solutions C e^(−3x) + 2 (solution constante 2 justifiée)", "points": 4 },
+        { "critere": "φ(x) = −2e^(−3x) + 2 et limite 2 en +∞", "points": 4 },
+        { "critere": "(y₁ − y₂)′ = −3(y₁ − y₂) démontré et rôle de la condition initiale expliqué", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. F′(x) = 1 × eˣ + (x − 1)eˣ = (1 + x − 1)eˣ = **x eˣ** = f(x) : F est une primitive de f.\n2. a) u = x² + 1, u′ = 2x : g(x) = (1/2) × u′/u. Comme u > 0, une primitive est **(1/2) ln(x² + 1)**.\n b) u = x² + 1, u′ = 2x : h(x) = (1/2) × u′u³. Une primitive de u′u³ est u⁴/4, donc une primitive de h est (1/2) × (x² + 1)⁴/4 = **(1/8)(x² + 1)⁴**.\n3. a) Solution constante : 0 = −3y + 6, y = 2. Solutions de y′ = −3y : C e^(−3x). Donc **y(x) = C e^(−3x) + 2**, C réel.\n b) φ(0) = C + 2 = 0, C = −2 : **φ(x) = −2e^(−3x) + 2**. En +∞, e^(−3x) → 0, donc **φ(x) → 2**.\n4. (y₁ − y₂)′ = y₁′ − y₂′ = (−3y₁ + 6) − (−3y₂ + 6) = −3(y₁ − y₂) : y₁ − y₂ est solution de **y′ = −3y**. L’équation admet une **famille infinie** de solutions (une par valeur de C) ; seule une **condition initiale** en sélectionne une."
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "difficulte": 1,
+      "titre": "Trois intégrales et une moyenne",
+      "consigne": "Donne une primitive, puis applique F(b) − F(a).",
+      "enonce": "Calcule les intégrales suivantes (valeurs exactes) :\n\n1. I = ∫ de 0 à 2 de (3x² + 1) dx\n2. J = ∫ de 1 à e de (1/x) dx\n3. K = ∫ de 0 à 1 de eˣ dx\n4. Déduis de la question 1 la valeur moyenne de la fonction x ↦ 3x² + 1 sur [0 ; 2].",
+      "bareme": [
+        { "critere": "I = [x³ + x] de 0 à 2 = 10", "points": 7 },
+        { "critere": "J = ln e − ln 1 = 1 et K = e − 1", "points": 7 },
+        { "critere": "Valeur moyenne 10/(2 − 0) = 5", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une primitive de 3x² + 1 est x³ + x. I = (2³ + 2) − (0 + 0) = **10**.\n2. Une primitive de 1/x sur ]0 ; +∞[ est ln x. J = ln e − ln 1 = 1 − 0 = **1**.\n3. K = e¹ − e⁰ = **e − 1** ≈ 1,72.\n4. Valeur moyenne : (1/(2 − 0)) × I = 10/2 = **5**. C’est la hauteur du rectangle de base [0 ; 2] ayant la même aire que le domaine sous la courbe."
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "difficulte": 2,
+      "titre": "L’aire entre une parabole et une droite",
+      "consigne": "Justifie la position des courbes avant tout calcul d’aire.",
+      "enonce": "1. On considère f(x) = x² et g(x) = 2x sur [0 ; 2].\n a) Étudie le signe de g(x) − f(x) sur [0 ; 2]. Quelle courbe est au-dessus ?\n b) Calcule l’aire, en unités d’aire, du domaine compris entre les deux courbes sur [0 ; 2]. Sur le graphique, l’unité vaut 2 cm sur chaque axe : donne cette aire en cm².\n2. Calcule ∫ de 0 à 2 de (x − 1) dx. Interprète ce résultat à l’aide d’aires.\n3. Calcule la valeur moyenne de la fonction sinus sur [0 ; π].",
+      "bareme": [
+        { "critere": "g(x) − f(x) = x(2 − x) ≥ 0 sur [0 ; 2] : la droite est au-dessus", "points": 4 },
+        { "critere": "Aire = [x² − x³/3] de 0 à 2 = 4/3 u.a., soit 16/3 ≈ 5,33 cm²", "points": 6 },
+        { "critere": "Intégrale nulle et interprétation (aires égales de part et d’autre de x = 1, aire algébrique)", "points": 5 },
+        { "critere": "∫ sin = [−cos] = 2, valeur moyenne 2/π ≈ 0,64", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a) g(x) − f(x) = 2x − x² = **x(2 − x)**, positif sur [0 ; 2] (x ≥ 0 et 2 − x ≥ 0) : la **droite y = 2x est au-dessus** de la parabole.\n b) Aire = ∫ de 0 à 2 de (2x − x²) dx = [x² − x³/3] de 0 à 2 = 4 − 8/3 = **4/3 u.a.** Une unité d’aire vaut 2 cm × 2 cm = 4 cm² : aire = (4/3) × 4 = **16/3 ≈ 5,33 cm²**.\n2. ∫ de 0 à 2 de (x − 1) dx = [x²/2 − x] de 0 à 2 = (2 − 2) − 0 = **0**. Sur [0 ; 1], x − 1 ≤ 0 : l’intégrale y vaut l’**opposé** d’une aire ; sur [1 ; 2], x − 1 ≥ 0. Les deux triangles ont la même aire (1/2 chacun) : ils se compensent. Une intégrale est une **aire algébrique**, pas une aire.\n3. ∫ de 0 à π de sin x dx = [−cos x] de 0 à π = −cos π + cos 0 = 1 + 1 = 2. Valeur moyenne : (1/π) × 2 = **2/π ≈ 0,64**."
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "difficulte": 3,
+      "titre": "Intégrer par parties",
+      "consigne": "Précise à chaque fois les choix de u′ et de v, et justifie les encadrements.",
+      "enonce": "1. À l’aide d’une intégration par parties, calcule I = ∫ de 0 à 1 de x eˣ dx.\n2. À l’aide d’une intégration par parties (en posant v(x) = ln x et u′(x) = 1), calcule J = ∫ de 1 à e de ln(x) dx.\n3. Déduis de J la valeur moyenne de la fonction ln sur [1 ; e] (valeur exacte et valeur approchée).\n4. a) Justifie que, pour tout x de [0 ; 1], 0 ≤ x eˣ ≤ e x.\n b) Déduis-en un encadrement de I sans utiliser la question 1, et vérifie qu’il est cohérent avec le résultat trouvé.",
+      "bareme": [
+        { "critere": "I : u′ = eˣ, v = x ; [x eˣ] − ∫ eˣ = e − (e − 1) = 1", "points": 5 },
+        { "critere": "J : u = x, v′ = 1/x ; [x ln x] − ∫ 1 = e − (e − 1) = 1", "points": 5 },
+        { "critere": "Valeur moyenne 1/(e − 1) ≈ 0,58", "points": 3 },
+        { "critere": "Encadrement 0 ≤ x eˣ ≤ e x justifié (eˣ ≤ e sur [0 ; 1], x ≥ 0)", "points": 3 },
+        { "critere": "Croissance de l’intégrale : 0 ≤ I ≤ e/2 ≈ 1,36, cohérent avec I = 1", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. On pose u′(x) = eˣ, u(x) = eˣ, et v(x) = x, v′(x) = 1 (le facteur x se simplifie en dérivant). I = [x eˣ] de 0 à 1 − ∫ de 0 à 1 de eˣ dx = (1 × e − 0) − (e − 1) = **1**.\n2. u′(x) = 1, u(x) = x ; v(x) = ln x, v′(x) = 1/x. J = [x ln x] de 1 à e − ∫ de 1 à e de x × (1/x) dx = (e × 1 − 1 × 0) − ∫ de 1 à e de 1 dx = e − (e − 1) = **1**.\n3. Valeur moyenne : (1/(e − 1)) × J = **1/(e − 1) ≈ 0,58**.\n4. a) Sur [0 ; 1], exp est croissante, donc 1 ≤ eˣ ≤ e. En multipliant par x ≥ 0 : x ≤ x eˣ ≤ e x, et x ≥ 0 donne **0 ≤ x eˣ ≤ e x**.\n b) Par **positivité et croissance** de l’intégrale (bornes 0 < 1) : 0 ≤ I ≤ ∫ de 0 à 1 de e x dx = e × [x²/2] de 0 à 1 = **e/2 ≈ 1,36**. On a bien **0 ≤ 1 ≤ 1,36** : cohérent."
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "difficulte": 1,
+      "titre": "Les lancers francs de Nora",
+      "consigne": "Justifie la loi utilisée avant de calculer. Arrondis au millième si nécessaire.",
+      "enonce": "**Situation.** Nora réussit chaque lancer franc avec une probabilité 0,7, indépendamment des autres. Elle tire 5 lancers francs. On note X le nombre de lancers réussis.\n\n1. Justifie que X suit une loi binomiale dont tu donneras les paramètres.\n2. Calcule la probabilité qu’elle réussisse les 5 lancers.\n3. Calcule P(X = 3).\n4. Calcule l’espérance de X et interprète-la.",
+      "bareme": [
+        { "critere": "Trois conditions (identiques, indépendantes, deux issues) et B(5 ; 0,7)", "points": 6 },
+        { "critere": "P(X = 5) = 0,7⁵ ≈ 0,168 et P(X = 3) = 10 × 0,7³ × 0,3² ≈ 0,309", "points": 9 },
+        { "critere": "E(X) = 3,5 et interprétation (moyenne sur un grand nombre de séries)", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. On répète **5 fois**, de façon **identique** et **indépendante**, une épreuve à **deux issues** (succès « réussi » de probabilité 0,7, échec de probabilité 0,3). X compte les succès : X suit la loi **B(5 ; 0,7)**.\n2. P(X = 5) = C(5,5) × 0,7⁵ × 0,3⁰ = 0,7⁵ = 0,16807 ≈ **0,168**.\n3. P(X = 3) = C(5,3) × 0,7³ × 0,3² = 10 × 0,343 × 0,09 = **0,3087** ≈ 0,309.\n4. E(X) = n p = 5 × 0,7 = **3,5**. Sur un grand nombre de séries de 5 lancers, Nora réussit **en moyenne 3,5 lancers** par série."
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "difficulte": 2,
+      "titre": "Le contrôle qualité",
+      "consigne": "Justifie le modèle, puis détaille chaque calcul (arrondis au millième).",
+      "enonce": "**Situation.** Une usine fabrique des milliers de pièces par jour ; chaque pièce est défectueuse avec une probabilité 0,05. Un contrôleur prélève 20 pièces au hasard dans la production. On note X le nombre de pièces défectueuses. On admet que les prélèvements sont assimilés à des tirages avec remise.\n\n1. Pourquoi cette assimilation est-elle raisonnable ? Quelle loi suit X ?\n2. Calcule P(X = 0), puis la probabilité qu’au moins une pièce soit défectueuse.\n3. Calcule P(X = 1), puis P(X ≥ 2).\n4. Calcule l’espérance, la variance et l’écart-type de X.",
+      "bareme": [
+        { "critere": "Population très grande devant l’échantillon : indépendance admise ; X suit B(20 ; 0,05)", "points": 4 },
+        { "critere": "P(X = 0) = 0,95²⁰ ≈ 0,358 et P(X ≥ 1) ≈ 0,642", "points": 5 },
+        { "critere": "P(X = 1) = 20 × 0,05 × 0,95¹⁹ ≈ 0,377 et P(X ≥ 2) = 1 − P(X ≤ 1) ≈ 0,264", "points": 6 },
+        { "critere": "E(X) = 1, V(X) = 0,95, σ ≈ 0,975", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Un tirage sans remise ne garantit pas l’indépendance, **sauf si la population est très grande devant l’échantillon** : c’est le cas (des milliers de pièces, 20 prélevées). On répète 20 épreuves identiques et indépendantes à deux issues (défectueuse avec p = 0,05) : X suit **B(20 ; 0,05)**.\n2. P(X = 0) = 0,95²⁰ ≈ **0,358**. P(X ≥ 1) = 1 − P(X = 0) ≈ 1 − 0,358 = **0,642**.\n3. P(X = 1) = C(20,1) × 0,05 × 0,95¹⁹ = 20 × 0,05 × 0,95¹⁹ = 0,95¹⁹ ≈ **0,377**. P(X ≥ 2) = 1 − P(X ≤ 1) = 1 − (0,358 + 0,377) ≈ **0,264** (plus précisément 1 − 0,7358 = 0,2642).\n4. E(X) = 20 × 0,05 = **1** ; V(X) = 20 × 0,05 × 0,95 = **0,95** ; σ(X) = √0,95 ≈ **0,975**."
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "difficulte": 3,
+      "titre": "Répondre au hasard à un QCM",
+      "consigne": "Justifie le modèle choisi à chaque question (binomiale ou arbre). Arrondis au millième.",
+      "enonce": "**Situation.** Un QCM comporte 10 questions ; chacune propose 4 réponses dont une seule est juste. Enzo répond à chaque question au hasard, indépendamment. On note X le nombre de bonnes réponses.\n\n1. Donne la loi de X, son espérance et sa variance.\n2. Calcule P(X = 0), puis la probabilité qu’Enzo ait au moins une bonne réponse.\n3. Calcule P(X = 5).\n4. Quelle est la probabilité que la **première** bonne réponse d’Enzo soit celle de la question 3 ? Pourquoi la loi binomiale ne suffit-elle pas ici ?\n5. Un QCM plus long compte n questions du même type. Détermine le plus petit n pour lequel la probabilité d’avoir au moins une bonne réponse dépasse 0,99.\n6. Dans une urne de 10 cartes dont 3 gagnantes, on tire successivement 3 cartes sans remise. Le nombre de cartes gagnantes suit-il une loi binomiale ? Justifie.",
+      "bareme": [
+        { "critere": "X suit B(10 ; 0,25), E = 2,5, V = 1,875 ; P(X = 0) ≈ 0,056 et P(X ≥ 1) ≈ 0,944", "points": 5 },
+        { "critere": "P(X = 5) = C(10,5) × 0,25⁵ × 0,75⁵ = 252 × … ≈ 0,058", "points": 4 },
+        { "critere": "Première bonne à la question 3 : 0,75² × 0,25 ≈ 0,141, l’ordre compte donc arbre", "points": 4 },
+        { "critere": "1 − 0,75ⁿ ≥ 0,99, n ≥ ln 0,01 / ln 0,75 ≈ 16,01, donc n = 17", "points": 4 },
+        { "critere": "Sans remise dans une petite urne : épreuves non indépendantes, pas binomiale", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 10 épreuves identiques et indépendantes à deux issues (bonne réponse : p = 1/4 = 0,25) : **X suit B(10 ; 0,25)**. E(X) = 10 × 0,25 = **2,5** ; V(X) = 10 × 0,25 × 0,75 = **1,875**.\n2. P(X = 0) = 0,75¹⁰ ≈ **0,056**. P(X ≥ 1) = 1 − 0,75¹⁰ ≈ **0,944**.\n3. C(10,5) = 252. P(X = 5) = 252 × 0,25⁵ × 0,75⁵ ≈ 252 × 0,000977 × 0,2373 ≈ **0,058**.\n4. Il faut : question 1 fausse, question 2 fausse, question 3 juste. Sur l’arbre, on multiplie les probabilités du chemin : 0,75 × 0,75 × 0,25 = **0,140625 ≈ 0,141**. La loi binomiale compte les succès **sans leur ordre** : ici l’ordre d’apparition compte, on revient à l’**arbre**.\n5. P(au moins une bonne) = 1 − 0,75ⁿ ≥ 0,99 équivaut à 0,75ⁿ ≤ 0,01, soit n ln 0,75 ≤ ln 0,01. Comme ln 0,75 < 0, l’inégalité change de sens : n ≥ ln 0,01 / ln 0,75 ≈ 16,008. Le plus petit entier est **n = 17** (0,75¹⁶ ≈ 0,0100 > 0,01 ; 0,75¹⁷ ≈ 0,0075).\n6. **Non** : après chaque tirage sans remise, la composition de l’urne change (par exemple 3/10 au premier tirage, puis 2/9 ou 3/9) : les épreuves **ne sont pas identiques ni indépendantes**, et la population (10 cartes) n’est pas grande devant l’échantillon."
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "difficulte": 1,
+      "titre": "La roue de la kermesse",
+      "consigne": "Détaille tes calculs.",
+      "enonce": "**Situation.** À la kermesse, une roue fait gagner X euros, avec la loi suivante :\n\n| x | 0 | 10 | 20 |\n|---|---|---|---|\n| P(X = x) | 0,5 | 0,3 | 0,2 |\n\n1. Calcule E(X).\n2. Calcule E(X²), puis V(X) et σ(X).\n3. L’organisateur décide de doubler les gains et d’ajouter 5 € de bonus : le gain devient Y = 2X + 5. Calcule E(Y) et V(Y) sans refaire le tableau.",
+      "bareme": [
+        { "critere": "E(X) = 7", "points": 5 },
+        { "critere": "E(X²) = 110, V(X) = 110 − 49 = 61, σ ≈ 7,81", "points": 7 },
+        { "critere": "E(Y) = 2 × 7 + 5 = 19 et V(Y) = 4 × 61 = 244 (le 5 disparaît)", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. E(X) = 0 × 0,5 + 10 × 0,3 + 20 × 0,2 = 0 + 3 + 4 = **7 €**.\n2. E(X²) = 0 × 0,5 + 100 × 0,3 + 400 × 0,2 = 30 + 80 = **110**. V(X) = E(X²) − E(X)² = 110 − 49 = **61**. σ(X) = √61 ≈ **7,81 €**.\n3. E(aX + b) = a E(X) + b : **E(Y) = 2 × 7 + 5 = 19 €**. V(aX + b) = a² V(X) : **V(Y) = 4 × 61 = 244**. Le bonus de 5 € décale les gains sans changer leur dispersion : il disparaît de la variance."
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "difficulte": 2,
+      "titre": "Le food-truck de Maël",
+      "consigne": "Justifie chaque formule utilisée, en précisant quand l’indépendance est nécessaire.",
+      "enonce": "**Situation.** Maël tient un food-truck de crêpes. Le nombre de crêpes vendues le matin est une variable X d’espérance 40 et d’écart-type 6 ; l’après-midi, c’est une variable Y d’espérance 55 et d’écart-type 8. On suppose X et Y indépendantes.\n\n1. On note S = X + Y le nombre de crêpes vendues dans la journée. Calcule E(S), V(S) et σ(S).\n2. Chaque crêpe rapporte 3 € et la journée coûte 50 € de frais fixes : le bénéfice est B = 3S − 50. Calcule E(B) et σ(B).\n3. Un jour de pluie, les ventes du matin et de l’après-midi baissent ensemble : X et Y ne sont plus indépendantes. Parmi E(S) et V(S), laquelle peut-on encore calculer comme en 1 ? Justifie.",
+      "bareme": [
+        { "critere": "E(S) = 95 (additivité toujours vraie)", "points": 4 },
+        { "critere": "V(S) = 36 + 64 = 100 grâce à l’indépendance, σ(S) = 10", "points": 6 },
+        { "critere": "E(B) = 235 € et σ(B) = 3 × 10 = 30 €", "points": 6 },
+        { "critere": "Sans indépendance : E(S) = 95 reste vraie, V(S) ne se calcule plus par la somme", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **E(S) = E(X) + E(Y) = 40 + 55 = 95** (toujours vrai). V(X) = 6² = 36 et V(Y) = 8² = 64 ; X et Y sont **indépendantes**, donc **V(S) = 36 + 64 = 100** et **σ(S) = 10** crêpes. (Les écarts-types, eux, ne s’additionnent pas : 6 + 8 = 14 ≠ 10.)\n2. E(B) = 3 E(S) − 50 = 285 − 50 = **235 €**. V(B) = 3² V(S) = 900, donc **σ(B) = 30 €**.\n3. **E(S) = 95 reste vraie** : l’espérance est additive **même sans indépendance**. En revanche, **V(S) ≠ V(X) + V(Y)** en général : l’additivité de la variance exige l’indépendance, on ne peut plus la calculer ainsi."
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "difficulte": 3,
+      "titre": "Cent lancers de dé",
+      "consigne": "Justifie chaque formule ; donne des valeurs exactes puis arrondies au centième.",
+      "enonce": "**Situation.** On lance un dé équilibré à six faces et on note X le résultat.\n\n1. Calcule E(X), E(X²), puis montre que V(X) = 35/12.\n2. On lance le dé 100 fois, de façon indépendante. On note S la somme des 100 résultats et M = S/100 leur moyenne. Calcule E(S), σ(S), E(M) et σ(M).\n3. Combien de lancers faudrait-il pour que l’écart-type de la moyenne soit divisé par 2 par rapport à la question 2 ? Justifie.\n4. On compte maintenant le nombre N de « 6 » obtenus sur les 100 lancers. Écris N comme une somme de variables de Bernoulli, puis retrouve E(N) et V(N) avec les formules de ce chapitre.\n5. Pourquoi dit-on que M est « sans biais » ?",
+      "bareme": [
+        { "critere": "E(X) = 3,5, E(X²) = 91/6, V(X) = 91/6 − 49/4 = 35/12", "points": 4 },
+        { "critere": "E(S) = 350, σ(S) = 10√(35/12) ≈ 17,08 ; E(M) = 3,5, σ(M) ≈ 0,17", "points": 5 },
+        { "critere": "σ(M) = σ/√n : diviser par 2 impose de quadrupler n, soit 400 lancers", "points": 4 },
+        { "critere": "N somme de 100 Bernoulli(1/6) indépendantes : E(N) = 100/6 ≈ 16,67, V(N) = 500/36 ≈ 13,89", "points": 4 },
+        { "critere": "Sans biais : E(M) = μ, pas d’erreur systématique", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. E(X) = (1 + 2 + 3 + 4 + 5 + 6)/6 = 21/6 = **3,5**. E(X²) = (1 + 4 + 9 + 16 + 25 + 36)/6 = **91/6**. V(X) = 91/6 − 3,5² = 182/12 − 147/12 = **35/12** ≈ 2,92.\n2. Les 100 lancers forment un échantillon (indépendants, même loi). **E(S) = 100 × 3,5 = 350** ; σ(S) = σ√n = √(35/12) × 10 ≈ 1,708 × 10 ≈ **17,08**. **E(M) = 3,5** ; σ(M) = σ/√n = 1,708/10 ≈ **0,17**.\n3. σ(M) = σ/√n. Pour diviser σ(M) par 2, il faut multiplier √n par 2, donc n par 4 : **400 lancers**.\n4. Pour le lancer i, on pose Bᵢ = 1 si on obtient 6, 0 sinon : Bᵢ suit une loi de Bernoulli de paramètre 1/6, et **N = B₁ + B₂ + … + B₁₀₀**. Par additivité de l’espérance : E(N) = 100 × 1/6 = **100/6 ≈ 16,67**. Les Bᵢ étant **indépendantes**, V(N) = 100 × (1/6)(5/6) = **500/36 ≈ 13,89**. On retrouve n p et n p (1 − p) : N suit B(100 ; 1/6).\n5. E(M) = μ = 3,5 : la moyenne empirique ne se trompe **pas systématiquement** ni vers le haut ni vers le bas ; seule sa dispersion diminue quand n grandit."
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "difficulte": 1,
+      "titre": "Markov et Bienaymé-Tchebychev",
+      "consigne": "Nomme l’inégalité utilisée et vérifie ses hypothèses.",
+      "enonce": "1. Le temps d’attente X (en minutes) au guichet d’une gare est une variable aléatoire positive, d’espérance 5. Majore la probabilité d’attendre au moins 20 minutes.\n2. Le nombre Y de clients servis dans une boulangerie un matin a pour espérance 50 et pour variance 16.\n a) Majore la probabilité que Y s’écarte de 50 d’au moins 10.\n b) Déduis-en une minoration de la probabilité que Y soit strictement compris entre 40 et 60.",
+      "bareme": [
+        { "critere": "Markov (X positive) : P(X ≥ 20) ≤ 5/20 = 0,25", "points": 7 },
+        { "critere": "Bienaymé-Tchebychev : P(|Y − 50| ≥ 10) ≤ 16/100 = 0,16", "points": 7 },
+        { "critere": "Événement contraire : P(40 < Y < 60) ≥ 0,84", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. X est **positive** : l’inégalité de **Markov** s’applique avec a = 20 > 0. P(X ≥ 20) ≤ E(X)/20 = 5/20 = **0,25**.\n2. a) Inégalité de **Bienaymé-Tchebychev** (valable pour toute loi) avec δ = 10 : P(|Y − 50| ≥ 10) ≤ V(Y)/δ² = 16/100 = **0,16**.\n b) L’événement « 40 < Y < 60 » est le **contraire** de « |Y − 50| ≥ 10 ». Donc P(40 < Y < 60) = 1 − P(|Y − 50| ≥ 10) ≥ 1 − 0,16 = **0,84**."
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "difficulte": 2,
+      "titre": "Mille lancers de pièce",
+      "consigne": "Justifie chaque résultat à l’aide de l’inégalité de concentration.",
+      "enonce": "**Situation.** Timéo lance n fois une pièce équilibrée. À chaque lancer, on associe une variable de Bernoulli valant 1 pour « pile » (p = 0,5). On note M la moyenne de ces n variables.\n\n1. Que représente M ? Donne son espérance μ et la variance σ² d’une des variables de Bernoulli.\n2. Pour n = 1 000, majore la probabilité que la fréquence de « pile » s’écarte de 0,5 d’au moins 0,05.\n3. Détermine une taille n suffisante pour que cette probabilité soit majorée par 0,05 (toujours avec un écart de 0,05).\n4. Après dix « pile » consécutifs, un camarade de Timéo affirme que « face » est désormais plus probable, « d’après la loi des grands nombres ». Réponds-lui.",
+      "bareme": [
+        { "critere": "M = fréquence observée de pile ; μ = 0,5 et σ² = 0,25", "points": 4 },
+        { "critere": "Majorant 0,25/(1 000 × 0,05²) = 0,1", "points": 6 },
+        { "critere": "0,25/(n × 0,0025) ≤ 0,05, soit n ≥ 2 000", "points": 5 },
+        { "critere": "Erreur du joueur : la probabilité reste 1/2, la loi porte sur la moyenne", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. M est la **fréquence observée** de « pile » sur les n lancers. μ = p = **0,5** ; σ² = p(1 − p) = 0,5 × 0,5 = **0,25**.\n2. Inégalité de concentration : P(|M − μ| ≥ δ) ≤ σ²/(n δ²). Avec n = 1 000 et δ = 0,05 : 0,25/(1 000 × 0,0025) = 0,25/2,5 = **0,1**.\n3. On veut 0,25/(n × 0,0025) ≤ 0,05, c’est-à-dire 100/n ≤ 0,05, soit n ≥ 100/0,05 = **2 000**. 2 000 lancers suffisent.\n4. Il a tort : la pièce **n’a pas de mémoire**, la probabilité de « face » au lancer suivant reste **1/2**. La loi des grands nombres dit que la **moyenne** se concentre autour de 0,5 quand n grandit ; elle ne dit **rien** d’un lancer particulier et ne suppose aucune compensation des écarts passés : c’est l’**erreur du joueur**."
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "difficulte": 3,
+      "titre": "Dimensionner un sondage",
+      "consigne": "Justifie chaque étape ; précise à chaque fois ce que la majoration garantit et ce qu’elle ne dit pas.",
+      "enonce": "**Situation.** Une association veut estimer la proportion p, inconnue, des lycéens d’une région favorables à la semaine de quatre jours. Elle interroge n lycéens choisis au hasard ; les réponses sont modélisées par n variables de Bernoulli indépendantes de paramètre p, et on note F la fréquence de réponses favorables.\n\n1. Montre que, pour tout réel p de [0 ; 1], p(1 − p) ≤ 1/4. (Indication : calcule 1/4 − p(1 − p).)\n2. Déduis de l’inégalité de concentration que P(|F − p| ≥ δ) ≤ 1/(4 n δ²), même sans connaître p.\n3. Quelle taille n suffit pour que P(|F − p| ≥ 0,02) ≤ 0,05 ?\n4. Si l’on veut une précision deux fois meilleure (δ = 0,01) avec le même risque, combien de personnes faut-il interroger ?\n5. Avec l’échantillon de la question 3, 5 200 lycéens se déclarent favorables. Calcule F et indique ce que l’on peut affirmer sur p, avec quel risque.\n6. Pourquoi dit-on que l’inégalité de Bienaymé-Tchebychev sert à garantir plutôt qu’à estimer finement ?",
+      "bareme": [
+        { "critere": "1/4 − p + p² = (p − 1/2)² ≥ 0, d’où p(1 − p) ≤ 1/4", "points": 4 },
+        { "critere": "σ² = p(1 − p) ≤ 1/4 dans σ²/(n δ²) : majorant 1/(4nδ²) indépendant de p", "points": 4 },
+        { "critere": "1/(4n × 0,0004) ≤ 0,05 donc n ≥ 12 500", "points": 4 },
+        { "critere": "δ divisé par 2 : n multiplié par 4, soit 50 000 ; F = 0,416 et p dans ]0,396 ; 0,436[ au risque 5 %", "points": 5 },
+        { "critere": "Majoration valable pour toute loi mais grossière : elle garantit un n suffisant", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 1/4 − p(1 − p) = 1/4 − p + p² = **(p − 1/2)² ≥ 0**, donc **p(1 − p) ≤ 1/4** pour tout p (égalité pour p = 1/2).\n2. F est la moyenne empirique de n variables de Bernoulli : μ = p et σ² = p(1 − p). L’inégalité de concentration donne P(|F − p| ≥ δ) ≤ p(1 − p)/(n δ²) ≤ **1/(4 n δ²)** : ce majorant **ne dépend pas de p**, on peut donc dimensionner le sondage **avant** l’enquête.\n3. On veut 1/(4n × 0,02²) ≤ 0,05, soit 1/(0,0016 n) ≤ 0,05, donc n ≥ 1/(0,0016 × 0,05) = 1/0,00008 = **12 500**.\n4. δ est au carré au dénominateur : diviser δ par 2 multiplie n par 4, soit **50 000** personnes (1/(4 × 0,0001 × 0,05) = 50 000).\n5. **F = 5 200/12 500 = 0,416**. La probabilité que F s’écarte de p d’au moins 0,02 est au plus 0,05 : on peut affirmer, **avec un risque d’au plus 5 %**, que p est compris entre 0,416 − 0,02 et 0,416 + 0,02, soit **]0,396 ; 0,436[**.\n6. Bienaymé-Tchebychev vaut **pour n’importe quelle loi** (sa force), mais le majorant dépasse souvent de loin la probabilité réelle (sa faiblesse) : il **garantit** qu’une taille d’échantillon suffit, sans dire que c’est la plus petite possible ni donner la probabilité exacte."
+    }
+  ]
+}

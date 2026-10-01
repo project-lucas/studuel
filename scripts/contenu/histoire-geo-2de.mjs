@@ -1181,7 +1181,7 @@ Or les colons n'ont aucun député à Westminster. Leur mot d'ordre : *no taxati
 ## L'indépendance et son modèle
 | La date | L'étape |
 | **1781** | La victoire de **Yorktown**, avec l'appui de la **France** — La Fayette, Rochambeau, la flotte de Grasse |
-| **1783** | Le traité de Versailles-Paris reconnaît les États-Unis |
+| **1783** | Le traité de Paris reconnaît les États-Unis |
 | **1787** | La **Constitution** : régime fédéral, présidentiel, fondé sur la séparation des pouvoirs |
 
 > C'est le premier grand régime écrit inspiré des Lumières. L'esclavage, lui, n'est pas aboli.`,
@@ -1611,7 +1611,7 @@ La déforestation cumulée dépasse **17 %** du massif.
 
 ## Les acteurs et les règles
 | L'acteur | Sa position |
-| Les **huit États riverains** — Russie, Canada, États-Unis, Danemark via le Groenland, Norvège, Islande, Suède, Finlande | Ils coopèrent au sein du **Conseil de l'Arctique** |
+| Les **huit États arctiques** — Russie, Canada, États-Unis, Danemark via le Groenland, Norvège, Islande, Suède, Finlande ; seuls les cinq premiers bordent l'océan Arctique | Ils coopèrent au sein du **Conseil de l'Arctique** |
 | Les peuples autochtones, dont les **Inuits** | Ils y sont représentés |
 | La **Chine** | Elle se déclare « État proche de l'Arctique » |
 
@@ -1624,7 +1624,7 @@ Les revendications sur les fonds marins s'arbitrent selon la convention de **Mon
             ['Qu’est-ce que le pergélisol ?', ['Un sol gelé en permanence', 'La banquise d’été', 'Un glacier de montagne', 'Une zone de toundra humide'], 0, 'Son dégel déstabilise le bâti et libère du méthane.'],
             ['Quelle route maritime longe les côtes russes ?', ['La route maritime du Nord', 'Le passage du Nord-Ouest', 'La route de Suez', 'Le passage de Drake'], 0, 'Elle raccourcit d’environ un tiers le trajet Europe-Asie orientale.'],
             ['Quelles ressources du sous-sol arctique sont convoitées ?', ['Hydrocarbures et minerais', 'Uniquement le charbon', 'Uniquement l’eau douce', 'Le sel et le soufre'], 0, 'Avec des zones de pêche qui migrent vers le nord.'],
-            ['Combien d’États riverains siègent au Conseil de l’Arctique ?', ['Huit', 'Cinq', 'Douze', 'Trois'], 0, 'Russie, Canada, États-Unis, Danemark, Norvège, Islande, Suède, Finlande.'],
+            ['Combien d’États membres siègent au Conseil de l’Arctique ?', ['Huit', 'Cinq', 'Douze', 'Trois'], 0, 'Russie, Canada, États-Unis, Danemark, Norvège, Islande, Suède, Finlande.'],
             ['Les peuples autochtones sont représentés au Conseil de l’Arctique.', ['Vrai', 'Faux'], 0, 'Les Inuits notamment y ont un statut de participant permanent.'],
             ['Pourquoi la navigation arctique reste-t-elle limitée ?', ['Saisonnalité, coût des assurances et besoin de brise-glaces', 'Interdiction internationale', 'Absence totale de ports', 'Profondeur insuffisante partout'], 0, 'L’ouverture est réelle mais encore contraignante.'],
             ['Quel pays non riverain se présente comme un État proche de l’Arctique ?', ['La Chine', 'Le Brésil', 'L’Inde', 'L’Australie'], 0, 'Elle investit dans les routes polaires et les ressources.'],
@@ -1692,7 +1692,7 @@ Les risques y sont majeurs : cyclones, séismes, volcanisme, submersion.
           rayon: 'geographie',
           lecon: {
             titre: 'Huit milliards d’humains, deux problèmes opposés',
-            cours: `La population mondiale approche 8 milliards d'habitants, mais elle ne croît pas partout au même rythme. Certains pays doivent scolariser une jeunesse nombreuse ; d'autres financer une vieillesse qui s'allonge.
+            cours: `La population mondiale dépasse 8 milliards d'habitants, mais elle ne croît pas partout au même rythme. Certains pays doivent scolariser une jeunesse nombreuse ; d'autres financer une vieillesse qui s'allonge.
 
 ## La transition démographique
 | Le régime | La natalité | La mortalité | La population |

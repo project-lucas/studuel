@@ -1,0 +1,4629 @@
+{
+  "niveau": "3e",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le sac du randonneur",
+      "competence": "calculer",
+      "situation": "Trois amis partent en randonnée en montagne. On s’intéresse à l’énergie de ce qui les entoure et à celle qu’ils gagnent en montant.",
+      "documents": [
+        {
+          "id": "sit",
+          "type": "tableau",
+          "titre": "Dans la vallée",
+          "colonnes": [
+            "Situation",
+            "Ce qu’on observe"
+          ],
+          "lignes": [
+            [
+              "Le lac de barrage",
+              "Une grande masse d’eau retenue à 2 000 m d’altitude"
+            ],
+            [
+              "Le skieur",
+              "Il descend la piste à grande vitesse"
+            ],
+            [
+              "La barre de céréales",
+              "Elle est dans le sac à dos"
+            ],
+            [
+              "La lampe frontale",
+              "Son boîtier chauffe après une heure"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situations imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque situation à la forme d’énergie qu’elle illustre.",
+          "paires": [
+            [
+              "Le lac de barrage",
+              "De position"
+            ],
+            [
+              "Le skieur",
+              "Cinétique"
+            ],
+            [
+              "La barre de céréales",
+              "Chimique"
+            ],
+            [
+              "Le boîtier de la lampe",
+              "Thermique"
+            ]
+          ],
+          "aide": "Pense à ce qui fait « agir » chaque objet : la hauteur, le mouvement, les aliments, la chaleur.",
+          "explication": "Le lac est en altitude : énergie **de position**. Le skieur est en mouvement : **cinétique**. La barre de céréales contient de l’énergie **chimique**. Un boîtier qui chauffe a de l’énergie **thermique**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un randonneur de 60 kg monte de 300 m. Calcule son gain d’énergie de position Epp = m × g × h, avec g = 10 N/kg.",
+          "reponse": 180000,
+          "unite": "J",
+          "aide": "Multiplie 60 kg par 10 N/kg, puis par 300 m.",
+          "explication": "Epp = 60 × 10 × 300 = **180 000 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime ce gain en kilojoules (1 kJ = 1 000 J).",
+          "reponse": 180,
+          "unite": "kJ",
+          "aide": "Divise par 1 000.",
+          "explication": "180 000 ÷ 1 000 = **180 kJ**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le pétrole est…",
+          "options": [
+            "une source d’énergie, qui contient de l’énergie chimique",
+            "une forme d’énergie renouvelable, produite par le Soleil",
+            "une source d’énergie renouvelable, qui ne s’épuise jamais",
+            "une forme d’énergie cinétique, liée à sa vitesse d’écoulement"
+          ],
+          "reponse": 0,
+          "aide": "Une source est ce d’où l’on tire l’énergie ; une forme est la manière dont elle se présente.",
+          "explication": "Le pétrole est une **source** d’énergie non renouvelable ; l’énergie qu’il contient est de l’énergie **chimique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La facture d’énergie de la famille Lopez",
+      "competence": "resoudre",
+      "situation": "La famille Lopez relève la consommation de ses appareils sur une semaine. Elle veut comprendre les unités et savoir d’où vient l’énergie qu’elle utilise.",
+      "documents": [
+        {
+          "id": "releve",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Relevé de la semaine",
+          "sousTitre": "Famille Lopez",
+          "emoji": "🔌",
+          "lignes": [
+            {
+              "texte": "Four électrique",
+              "valeur": "2,5 kWh",
+              "id": "four"
+            },
+            {
+              "texte": "Radiateur",
+              "valeur": "4 kWh",
+              "id": "radiateur"
+            },
+            {
+              "texte": "Lave-linge",
+              "valeur": "1,2 kWh",
+              "id": "lave"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Consommation relevée",
+              "valeur": "?",
+              "gras": true
+            }
+          ],
+          "pied": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "releve",
+          "enonce": "Touche la ligne de l’appareil qui a consommé le plus d’énergie.",
+          "reponse": [
+            "radiateur"
+          ],
+          "aide": "Compare les valeurs en kWh.",
+          "explication": "Le **radiateur** a consommé 4 kWh, plus que le four (2,5 kWh) et le lave-linge (1,2 kWh)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie totale la famille a-t-elle consommée ?",
+          "reponse": 7.7,
+          "unite": "kWh",
+          "aide": "Additionne les trois consommations.",
+          "explication": "2,5 + 4 + 1,2 = **7,7 kWh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le four a consommé 2,5 kWh. Exprime cette énergie en millions de joules (1 kWh = 3,6 × 10⁶ J).",
+          "reponse": 9,
+          "unite": "MJ",
+          "aide": "Multiplie 2,5 par 3,6.",
+          "explication": "2,5 × 3,6 = 9, donc **9 × 10⁶ J**, soit 9 millions de joules."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe ces sources d’énergie.",
+          "categories": [
+            "Renouvelables",
+            "Non renouvelables"
+          ],
+          "items": [
+            [
+              "Le vent",
+              0
+            ],
+            [
+              "Le soleil",
+              0
+            ],
+            [
+              "La géothermie",
+              0
+            ],
+            [
+              "Le charbon",
+              1
+            ],
+            [
+              "Le gaz",
+              1
+            ],
+            [
+              "L’uranium",
+              1
+            ]
+          ],
+          "aide": "Une source renouvelable se reconstitue à l’échelle humaine.",
+          "explication": "Vent, soleil et géothermie se renouvellent. Charbon, gaz et **uranium** ont des réserves limitées."
+        }
+      ]
+    },
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois randonneurs, une même montée",
+      "competence": "raisonner",
+      "situation": "Léa, Hugo et Sam gravissent chacun une côte différente. On compare leur énergie de position en haut, avec g = 10 N/kg.",
+      "documents": [
+        {
+          "id": "rando",
+          "type": "tableau",
+          "titre": "Les trois randonneurs",
+          "colonnes": [
+            "Randonneur",
+            "Masse",
+            "Hauteur gravie"
+          ],
+          "lignes": [
+            [
+              "Léa",
+              "50 kg",
+              "400 m"
+            ],
+            [
+              "Hugo",
+              "70 kg",
+              "300 m"
+            ],
+            [
+              "Sam",
+              "80 kg",
+              "250 m"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie de position gagnée par Léa (Epp = m × g × h).",
+          "reponse": 200000,
+          "unite": "J",
+          "aide": "50 × 10 × 400.",
+          "explication": "Epp = 50 × 10 × 400 = **200 000 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule celle de Hugo.",
+          "reponse": 210000,
+          "unite": "J",
+          "aide": "70 × 10 × 300.",
+          "explication": "Epp = 70 × 10 × 300 = **210 000 J**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui a gagné le plus d’énergie de position ?",
+          "options": [
+            "Léa, car elle monte le plus haut",
+            "Hugo",
+            "Sam, car il est le plus lourd",
+            "Les trois ont gagné la même énergie"
+          ],
+          "reponse": 1,
+          "aide": "Calcule aussi celle de Sam avant de comparer : 80 × 10 × 250.",
+          "explication": "Sam gagne 200 000 J, Léa 200 000 J, Hugo **210 000 J** : le plus haut ni le plus lourd ne gagne forcément le plus, il faut multiplier masse et hauteur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Hugo monte avec un sac de 10 kg en plus (masse totale 80 kg). Quelle est alors son énergie de position ?",
+          "reponse": 240000,
+          "unite": "J",
+          "aide": "Remplace 70 kg par 80 kg.",
+          "explication": "Epp = 80 × 10 × 300 = **240 000 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Léa monterait deux fois plus haut. Par combien son énergie de position serait-elle multipliée ?",
+          "reponse": 2,
+          "aide": "Epp est proportionnelle à h.",
+          "explication": "Epp = m × g × h est proportionnelle à h : doubler la hauteur **double** l’énergie."
+        }
+      ]
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La lampe de poche",
+      "competence": "observer-schema",
+      "situation": "Dans une lampe de poche, une pile alimente une ampoule. On schématise ce que devient l’énergie.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Chaîne énergétique d’une lampe de poche",
+          "noeuds": [
+            {
+              "id": "pile",
+              "texte": "Pile",
+              "emoji": "🔋"
+            },
+            {
+              "id": "lampe",
+              "texte": "Lampe",
+              "emoji": "💡"
+            },
+            {
+              "id": "lumiere",
+              "texte": "Lumière",
+              "emoji": "✨"
+            }
+          ],
+          "liens": [
+            {
+              "de": "pile",
+              "a": "lampe",
+              "texte": "énergie ?"
+            },
+            {
+              "de": "lampe",
+              "a": "lumiere"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche l’élément qui convertit l’énergie, le convertisseur.",
+          "reponse": [
+            "lampe"
+          ],
+          "aide": "Le convertisseur est l’appareil placé entre la source et l’utilisation.",
+          "explication": "La **lampe** change la forme de l’énergie : c’est le convertisseur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle forme d’énergie la pile stocke-t-elle ?",
+          "options": [
+            "Chimique",
+            "Cinétique",
+            "Thermique",
+            "De position"
+          ],
+          "reponse": 0,
+          "aide": "La pile contient des substances chimiques.",
+          "explication": "Une pile stocke de l’énergie **chimique**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conversion réalisée par la lampe.",
+          "texte": "Dans la lampe, l’énergie ___ est convertie en énergie utile ___ et en énergie perdue ___.",
+          "reponses": [
+            [
+              "électrique"
+            ],
+            [
+              "lumineuse"
+            ],
+            [
+              "thermique"
+            ]
+          ],
+          "banque": [
+            "électrique",
+            "lumineuse",
+            "thermique",
+            "chimique",
+            "cinétique",
+            "nucléaire"
+          ],
+          "aide": "La lampe brille et chauffe.",
+          "explication": "Énergie **électrique** → énergie utile **lumineuse**, avec des pertes **thermiques** : l’ampoule chauffe."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque convertisseur à sa conversion.",
+          "paires": [
+            [
+              "Panneau photovoltaïque",
+              "Lumineuse → électrique"
+            ],
+            [
+              "Alternateur",
+              "Cinétique → électrique"
+            ],
+            [
+              "Pile",
+              "Chimique → électrique"
+            ],
+            [
+              "Chaudière",
+              "Chimique → thermique"
+            ]
+          ],
+          "aide": "Regarde la forme d’énergie d’entrée et celle de sortie.",
+          "explication": "Le panneau reçoit de la lumière, l’alternateur un mouvement, la pile des réactifs chimiques, la chaudière un combustible."
+        }
+      ]
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un radiateur dans le salon",
+      "competence": "observer-schema",
+      "situation": "Un radiateur chauffe la pièce. L’air circule le long des murs, et l’énergie se transfère de trois façons différentes.",
+      "documents": [
+        {
+          "id": "piece",
+          "type": "schema",
+          "titre": "La pièce chauffée",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 280,
+              "h": 180,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 110,
+              "l": 26,
+              "h": 80,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 43,
+              "y": 215,
+              "texte": "Radiateur",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                180
+              ],
+              "a": [
+                80,
+                50
+              ],
+              "fleche": "fin",
+              "id": "haut",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                50
+              ],
+              "a": [
+                250,
+                180
+              ],
+              "fleche": "fin",
+              "id": "bas",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                190
+              ],
+              "a": [
+                90,
+                190
+              ],
+              "fleche": "fin",
+              "id": "sol",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 215,
+              "texte": "Fenêtre",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "piece",
+          "enonce": "Touche la flèche qui montre l’air chaud près du radiateur.",
+          "reponse": [
+            "haut"
+          ],
+          "aide": "L’air chaud s’élève.",
+          "explication": "L’air réchauffé par le radiateur **monte** : c’est la flèche orientée vers le haut, contre le radiateur."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque situation à son mode de transfert thermique.",
+          "paires": [
+            [
+              "Une cuillère chauffe dans la casserole",
+              "Conduction"
+            ],
+            [
+              "L’air chaud monte au-dessus du radiateur",
+              "Convection"
+            ],
+            [
+              "La chaleur du Soleil traverse le vide",
+              "Rayonnement"
+            ]
+          ],
+          "aide": "Solide, fluide en mouvement, vide : trois mécanismes.",
+          "explication": "La cuillère chauffe de proche en proche : **conduction**. L’air chaud se déplace : **convection**. Dans le vide il n’y a pas de matière : **rayonnement**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un pull en laine garde au chaud parce que la laine…",
+          "options": [
+            "est un isolant thermique, qui ralentit la perte de chaleur",
+            "produit elle-même de la chaleur en se frottant à la peau",
+            "ajoute de l’énergie au corps en lui transmettant la sienne",
+            "est un très bon conducteur thermique, qui évacue la chaleur"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux isolants : laine, air immobile, polystyrène.",
+          "explication": "La laine piège de l’air immobile et conduit mal la chaleur : c’est un **isolant thermique**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une boisson chaude refroidit dans une tasse. Où va la chaleur ?",
+          "options": [
+            "De la boisson vers l’air plus froid",
+            "De l’air vers la boisson",
+            "Elle reste dans la boisson",
+            "Elle passe dans les deux sens sans aucune perte"
+          ],
+          "reponse": 0,
+          "aide": "La chaleur ne va jamais spontanément du froid vers le chaud.",
+          "explication": "La chaleur va toujours du corps le plus chaud vers le plus froid : de la boisson **vers l’air**."
+        }
+      ]
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le moteur du monte-charge",
+      "competence": "modeliser",
+      "situation": "Un moteur électrique de monte-charge reçoit 3 000 J d’énergie électrique et fournit 2 400 J d’énergie cinétique utile. On compare aussi deux lampes.",
+      "documents": [
+        {
+          "id": "moteur",
+          "type": "schema",
+          "titre": "Le moteur électrique",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                15,
+                95
+              ],
+              "a": [
+                100,
+                95
+              ],
+              "fleche": "fin",
+              "id": "entree",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 58,
+              "y": 70,
+              "texte": "Électrique",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 58,
+              "y": 84,
+              "texte": "3 000 J",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 100,
+              "y": 65,
+              "l": 120,
+              "h": 60,
+              "teinte": "gris",
+              "motif": "clair",
+              "texte": "Moteur"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                95
+              ],
+              "a": [
+                325,
+                95
+              ],
+              "fleche": "fin",
+              "id": "utile",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 272,
+              "y": 70,
+              "texte": "Cinétique",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 272,
+              "y": 84,
+              "texte": "2 400 J",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                125
+              ],
+              "a": [
+                160,
+                195
+              ],
+              "fleche": "fin",
+              "id": "pertes",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 215,
+              "texte": "Énergie perdue ?",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        },
+        {
+          "id": "lampes",
+          "type": "tableau",
+          "titre": "Deux lampes pour 1 000 J reçus",
+          "colonnes": [
+            "Lampe",
+            "Énergie reçue",
+            "Énergie lumineuse"
+          ],
+          "lignes": [
+            [
+              "Incandescence",
+              "1 000 J",
+              "50 J"
+            ],
+            [
+              "LED",
+              "1 000 J",
+              "350 J"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "moteur",
+          "enonce": "Touche la flèche qui représente l’énergie perdue.",
+          "reponse": [
+            "pertes"
+          ],
+          "aide": "Les pertes partent de côté, sous le moteur.",
+          "explication": "La flèche **du bas** représente l’énergie perdue, presque toujours sous forme thermique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie est perdue par le moteur ?",
+          "reponse": 600,
+          "unite": "J",
+          "aide": "Énergie reçue − énergie utile.",
+          "explication": "3 000 − 2 400 = **600 J**, dissipés en chaleur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rendement du moteur, en pourcentage.",
+          "reponse": 80,
+          "unite": "%",
+          "aide": "Rendement = énergie utile ÷ énergie reçue.",
+          "explication": "2 400 ÷ 3 000 = 0,8, soit **80 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rendement lumineux de la LED, en pourcentage.",
+          "reponse": 35,
+          "unite": "%",
+          "aide": "350 ÷ 1 000.",
+          "explication": "350 ÷ 1 000 = 0,35, soit **35 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie la lampe à incandescence dissipe-t-elle pour 1 000 J reçus ?",
+          "reponse": 950,
+          "unite": "J",
+          "aide": "Énergie reçue − énergie lumineuse.",
+          "explication": "1 000 − 50 = **950 J**, presque tout part en chaleur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour la même énergie reçue, quelle lampe gaspille le plus d’énergie en chaleur ?",
+          "options": [
+            "La lampe à incandescence, qui chauffe beaucoup plus",
+            "La LED, dont le rendement est le plus faible",
+            "Les deux autant, car elles reçoivent la même énergie",
+            "Aucune des deux, car toute l’énergie devient lumière"
+          ],
+          "reponse": 0,
+          "aide": "Compare les énergies perdues : 950 J contre 650 J.",
+          "explication": "La LED perd 650 J, l’incandescence **950 J** : c’est elle qui chauffe le plus pour éclairer."
+        }
+      ]
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "À vélo vers l’école",
+      "competence": "calculer",
+      "situation": "Malo va au collège à vélo. Il note son trajet sur un tableau et veut calculer sa vitesse, puis son énergie cinétique.",
+      "documents": [
+        {
+          "id": "trajet",
+          "type": "tableau",
+          "titre": "Le trajet de Malo",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Distance parcourue",
+              "1 200 m"
+            ],
+            [
+              "Durée",
+              "4 min"
+            ],
+            [
+              "Masse de Malo et du vélo",
+              "60 kg"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée du trajet en secondes ?",
+          "reponse": 240,
+          "unite": "s",
+          "aide": "1 min = 60 s.",
+          "explication": "4 × 60 = **240 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse de Malo en m/s (v = d ÷ t).",
+          "reponse": 5,
+          "unite": "m/s",
+          "aide": "Divise 1 200 m par 240 s.",
+          "explication": "1 200 ÷ 240 = **5 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime cette vitesse en km/h.",
+          "reponse": 18,
+          "unite": "km/h",
+          "aide": "Pour passer de m/s à km/h, multiplie par 3,6.",
+          "explication": "5 × 3,6 = **18 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie cinétique de Malo et de son vélo (Ec = ½ × m × v²).",
+          "reponse": 750,
+          "unite": "J",
+          "aide": "Élève d’abord 5 au carré, puis multiplie par 60 et par 0,5.",
+          "explication": "Ec = 0,5 × 60 × 5² = 0,5 × 60 × 25 = **750 J**."
+        }
+      ]
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Freiner sur la route sèche",
+      "competence": "lire-graphique",
+      "situation": "Une association de sécurité routière publie la distance de freinage d’une voiture selon sa vitesse, sur route sèche.",
+      "documents": [
+        {
+          "id": "frein",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Distance de freinage sur route sèche",
+          "categories": [
+            "30 km/h",
+            "50 km/h",
+            "70 km/h",
+            "90 km/h",
+            "110 km/h"
+          ],
+          "series": [
+            {
+              "nom": "Distance de freinage",
+              "valeurs": [
+                9,
+                25,
+                49,
+                81,
+                121
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Distance de freinage",
+            "unite": "m",
+            "min": 0,
+            "max": 130,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Vitesse"
+          },
+          "valeurs": false,
+          "source": "Règle pratique, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frein",
+          "enonce": "Touche la barre de la distance de freinage à 90 km/h.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Lis les étiquettes sous les barres.",
+          "explication": "La quatrième barre correspond à **90 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la distance de freinage à 70 km/h.",
+          "reponse": 49,
+          "unite": "m",
+          "tolerance": 1,
+          "aide": "Repère la barre de 70 km/h et lis sa hauteur.",
+          "explication": "À 70 km/h, la voiture freine sur **49 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Entre 30 et 90 km/h, la vitesse est multipliée par 3 et la distance de freinage par 9. Pourquoi ?",
+          "options": [
+            "Parce qu’elle croît comme le carré de la vitesse",
+            "Parce qu’elle croît comme la vitesse",
+            "Parce qu’elle est multipliée par 6",
+            "Parce qu’elle ne dépend pas de la vitesse"
+          ],
+          "reponse": 0,
+          "aide": "3 × 3 = 9.",
+          "explication": "L’énergie cinétique à dissiper croît comme **v²** : la distance de freinage aussi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 90 km/h (25 m/s), quelle distance parcourt la voiture pendant 1 s de réaction ?",
+          "reponse": 25,
+          "unite": "m",
+          "aide": "d = v × t avec v = 25 m/s et t = 1 s.",
+          "explication": "25 × 1 = **25 m** avant même de freiner."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la distance d’arrêt à 90 km/h : réaction plus freinage.",
+          "reponse": 106,
+          "unite": "m",
+          "aide": "Additionne 25 m et la lecture du graphique.",
+          "explication": "25 + 81 = **106 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le camion et la voiture",
+      "competence": "raisonner",
+      "situation": "Sur une route départementale, une voiture et un camion roulent à la même vitesse. On compare l’énergie cinétique de chacun.",
+      "documents": [
+        {
+          "id": "vehicules",
+          "type": "tableau",
+          "titre": "Les deux véhicules",
+          "colonnes": [
+            "Véhicule",
+            "Masse",
+            "Vitesse"
+          ],
+          "lignes": [
+            [
+              "Voiture",
+              "1 200 kg",
+              "54 km/h"
+            ],
+            [
+              "Camion",
+              "12 000 kg",
+              "54 km/h"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Convertis 54 km/h en m/s.",
+          "reponse": 15,
+          "unite": "m/s",
+          "aide": "Divise par 3,6.",
+          "explication": "54 ÷ 3,6 = **15 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie cinétique de la voiture (Ec = ½ × m × v²).",
+          "reponse": 135000,
+          "unite": "J",
+          "aide": "0,5 × 1 200 × 15².",
+          "explication": "Ec = 0,5 × 1 200 × 225 = **135 000 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie cinétique du camion à la même vitesse.",
+          "reponse": 1350000,
+          "unite": "J",
+          "aide": "0,5 × 12 000 × 15².",
+          "explication": "Ec = 0,5 × 12 000 × 225 = **1 350 000 J**, dix fois celle de la voiture."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le camion ralentit à 27 km/h, soit 7,5 m/s. Calcule son énergie cinétique.",
+          "reponse": 337500,
+          "unite": "J",
+          "aide": "0,5 × 12 000 × 7,5².",
+          "explication": "Ec = 0,5 × 12 000 × 56,25 = **337 500 J**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel véhicule a la plus grande énergie cinétique : le camion à 27 km/h ou la voiture à 54 km/h ?",
+          "options": [
+            "Le camion à 27 km/h",
+            "La voiture à 54 km/h",
+            "Les deux ont la même",
+            "On ne peut pas comparer"
+          ],
+          "reponse": 0,
+          "aide": "Compare 337 500 J et 135 000 J.",
+          "explication": "337 500 J > 135 000 J : le **camion**, même deux fois plus lent, a encore plus d’énergie."
+        }
+      ]
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La bille qui tombe de cinq mètres",
+      "competence": "calculer",
+      "situation": "Une bille de 0,4 kg est lâchée sans vitesse d’une hauteur de 5 m. On néglige les frottements et on prend g = 10 N/kg.",
+      "documents": [
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Bilan d’énergie de la bille",
+          "colonnes": [
+            "Position",
+            "Epp (J)",
+            "Ec (J)",
+            "Em (J)"
+          ],
+          "lignes": [
+            [
+              "5 m (lâchée)",
+              "20",
+              "0",
+              "?"
+            ],
+            [
+              "2,5 m",
+              "10",
+              "?",
+              "?"
+            ],
+            [
+              "0 m (sol)",
+              "?",
+              "?",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Em = Epp + Ec"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’énergie mécanique Em de la bille au départ ?",
+          "reponse": 20,
+          "unite": "J",
+          "aide": "Em = Epp + Ec, avec Ec = 0 au départ.",
+          "explication": "Em = 20 + 0 = **20 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 2,5 m de hauteur, quelle est son énergie cinétique ?",
+          "reponse": 10,
+          "unite": "J",
+          "aide": "Em reste constante : Ec = Em − Epp.",
+          "explication": "Ec = 20 − 10 = **10 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Juste avant le sol, quelle est son énergie cinétique ?",
+          "reponse": 20,
+          "unite": "J",
+          "aide": "Toute l’énergie de position est devenue cinétique.",
+          "explication": "Au sol Epp = 0 J, donc Ec = **20 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule alors sa vitesse juste avant le sol, sachant que Ec = ½ × m × v².",
+          "reponse": 10,
+          "unite": "m/s",
+          "aide": "0,5 × 0,4 × v² = 20, donc v² = 100.",
+          "explication": "0,2 × v² = 20, v² = 100, v = **10 m/s**."
+        }
+      ]
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La balle qui rebondit",
+      "competence": "lire-graphique",
+      "situation": "Une balle de 0,06 kg est lâchée d’une hauteur de 1 m sur le sol de la cour. Le graphique donne la hauteur atteinte après chaque rebond. On prend g = 10 N/kg.",
+      "documents": [
+        {
+          "id": "rebonds",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Hauteur de la balle",
+          "categories": [
+            "Lâcher",
+            "Rebond 1",
+            "Rebond 2",
+            "Rebond 3"
+          ],
+          "series": [
+            {
+              "nom": "Hauteur",
+              "valeurs": [
+                1,
+                0.64,
+                0.41,
+                0.26
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Hauteur",
+            "unite": "m",
+            "min": 0,
+            "max": 1.2,
+            "pas": 0.2
+          },
+          "axeX": {
+            "titre": "Moment"
+          },
+          "valeurs": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rebonds",
+          "enonce": "Touche la barre de la hauteur atteinte après le deuxième rebond.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Compte : lâcher, rebond 1, rebond 2.",
+          "explication": "Le **rebond 2** est la troisième barre : 0,41 m."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie de position de la balle au moment du lâcher (Epp = m × g × h).",
+          "reponse": 0.6,
+          "unite": "J",
+          "tolerance": 0.001,
+          "aide": "0,06 × 10 × 1.",
+          "explication": "Epp = 0,06 × 10 × 1 = **0,6 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule son énergie de position au sommet après le rebond 1.",
+          "reponse": 0.384,
+          "unite": "J",
+          "tolerance": 0.001,
+          "aide": "Utilise la hauteur 0,64 m.",
+          "explication": "Epp = 0,06 × 10 × 0,64 = **0,384 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie a été convertie en énergie thermique pendant le premier rebond ?",
+          "reponse": 0.216,
+          "unite": "J",
+          "tolerance": 0.001,
+          "aide": "Différence entre les deux énergies de position.",
+          "explication": "0,6 − 0,384 = **0,216 J**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devient l’énergie « manquante » ?",
+          "options": [
+            "Elle devient thermique : la balle et le sol chauffent un peu",
+            "Elle disparaît : l’énergie peut être détruite par le choc",
+            "Elle se transforme en énergie nucléaire dans la balle et le sol",
+            "Elle reste stockée dans l’air sous forme d’énergie de hauteur"
+          ],
+          "reponse": 0,
+          "aide": "L’énergie ne disparaît jamais : elle change de forme.",
+          "explication": "L’énergie se **conserve** : la part perdue est dissipée sous forme thermique, à chaque choc."
+        }
+      ]
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Dans le skatepark",
+      "competence": "modeliser",
+      "situation": "Un skateur de 50 kg se laisse glisser depuis le haut d’une rampe, sans pousser. On prend g = 10 N/kg et on compare le calcul sans frottements avec une mesure.",
+      "documents": [
+        {
+          "id": "rampe",
+          "type": "schema",
+          "titre": "La rampe du skatepark",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 200,
+              "l": 290,
+              "h": 12,
+              "teinte": "brun",
+              "motif": "plein"
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  70,
+                  50
+                ],
+                [
+                  250,
+                  200
+                ],
+                [
+                  70,
+                  200
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                50
+              ],
+              "a": [
+                50,
+                200
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 26,
+              "y": 125,
+              "texte": "1,8 m",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 50,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "A",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 46,
+              "texte": "A",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 250,
+              "cy": 194,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "B",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 186,
+              "texte": "B",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "mesure",
+          "type": "tableau",
+          "titre": "Mesure au radar",
+          "colonnes": [
+            "Position",
+            "Vitesse mesurée"
+          ],
+          "lignes": [
+            [
+              "A (départ)",
+              "0 m/s"
+            ],
+            [
+              "B (bas de la rampe)",
+              "5 m/s"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesure imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rampe",
+          "enonce": "Touche le point où l’énergie de position du skateur est maximale.",
+          "reponse": [
+            "A"
+          ],
+          "aide": "L’énergie de position dépend de la hauteur.",
+          "explication": "En **A**, le skateur est au plus haut : son énergie de position est maximale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie de position du skateur en A.",
+          "reponse": 900,
+          "unite": "J",
+          "aide": "Epp = 50 × 10 × 1,8.",
+          "explication": "Epp = 50 × 10 × 1,8 = **900 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sans frottements, toute cette énergie devient cinétique en B. Calcule la vitesse en B.",
+          "reponse": 6,
+          "unite": "m/s",
+          "aide": "½ × 50 × v² = 900, donc v² = 36.",
+          "explication": "25 × v² = 900, v² = 36, v = **6 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La mesure donne 5 m/s en B. Calcule l’énergie cinétique réelle du skateur en B.",
+          "reponse": 625,
+          "unite": "J",
+          "aide": "Ec = ½ × 50 × 5².",
+          "explication": "Ec = 0,5 × 50 × 25 = **625 J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie a été dissipée entre A et B ?",
+          "reponse": 275,
+          "unite": "J",
+          "aide": "900 − 625.",
+          "explication": "900 − 625 = **275 J**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sous quelle forme cette énergie est-elle dissipée ?",
+          "options": [
+            "Thermique, par les frottements sur le sol et l’air",
+            "Chimique, par une réaction dans les roulements",
+            "Nucléaire, par la fission des atomes du sol",
+            "Elle a disparu, car le skateur s’est arrêté"
+          ],
+          "reponse": 0,
+          "aide": "Frottements des roues et de l’air.",
+          "explication": "Les frottements convertissent l’énergie mécanique en énergie **thermique** : elle n’a pas disparu."
+        }
+      ]
+    },
+    {
+      "chapitre": "e4840a3f-b14c-55a7-95e6-7077bc40fef0",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les planètes vues du Soleil",
+      "competence": "lire-graphique",
+      "situation": "Le graphique classe les huit planètes du Système solaire selon leur distance moyenne au Soleil. La lumière voyage à 300 000 km/s.",
+      "documents": [
+        {
+          "id": "dist",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Distance moyenne au Soleil",
+          "categories": [
+            "Mercure",
+            "Vénus",
+            "Terre",
+            "Mars",
+            "Jupiter",
+            "Saturne",
+            "Uranus",
+            "Neptune"
+          ],
+          "series": [
+            {
+              "nom": "Distance",
+              "valeurs": [
+                58,
+                108,
+                150,
+                228,
+                778,
+                1433,
+                2872,
+                4495
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Distance",
+            "unite": "millions de km",
+            "min": 0,
+            "max": 4500,
+            "pas": 500
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dist",
+          "enonce": "Touche la planète la plus proche du Soleil.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus courte.",
+          "explication": "**Mercure** est à 58 millions de km du Soleil : c’est la plus proche."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La Terre est à 150 millions de km du Soleil. Combien de secondes la lumière met-elle pour nous parvenir ? (t = d ÷ v)",
+          "reponse": 500,
+          "unite": "s",
+          "aide": "150 millions de km = 150 000 000 km ; divise par 300 000 km/s.",
+          "explication": "150 000 000 ÷ 300 000 = **500 s**, soit environ 8 minutes."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe ces planètes.",
+          "categories": [
+            "Telluriques, rocheuses",
+            "Gazeuses"
+          ],
+          "items": [
+            [
+              "Mercure",
+              0
+            ],
+            [
+              "Vénus",
+              0
+            ],
+            [
+              "Terre",
+              0
+            ],
+            [
+              "Mars",
+              0
+            ],
+            [
+              "Jupiter",
+              1
+            ],
+            [
+              "Saturne",
+              1
+            ],
+            [
+              "Uranus",
+              1
+            ],
+            [
+              "Neptune",
+              1
+            ]
+          ],
+          "aide": "Les planètes gazeuses sont les quatre plus éloignées.",
+          "explication": "Mercure, Vénus, Terre et Mars sont **telluriques** ; Jupiter, Saturne, Uranus et Neptune sont **gazeuses**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures la lumière met-elle pour aller du Soleil à Neptune ? Arrondis au dixième d’heure.",
+          "reponse": 4.2,
+          "unite": "h",
+          "tolerance": 0.05,
+          "aide": "Calcule d’abord en secondes, puis divise par 3 600.",
+          "explication": "4 495 000 000 ÷ 300 000 ≈ 14 983 s, soit 14 983 ÷ 3 600 ≈ **4,2 h**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e4840a3f-b14c-55a7-95e6-7077bc40fef0",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un message vers Mars",
+      "competence": "resoudre",
+      "situation": "Un signal radio voyage à la vitesse de la lumière, environ 300 000 km/s. Le tableau donne quelques distances.",
+      "documents": [
+        {
+          "id": "distances",
+          "type": "tableau",
+          "titre": "Quelques distances",
+          "colonnes": [
+            "Astre",
+            "Distance"
+          ],
+          "lignes": [
+            [
+              "La Lune",
+              "384 000 km"
+            ],
+            [
+              "Le Soleil",
+              "150 000 000 km"
+            ],
+            [
+              "Mars (distance moyenne)",
+              "225 000 000 km"
+            ],
+            [
+              "Proxima du Centaure",
+              "4,2 années-lumière"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de secondes le signal met-il pour atteindre la Lune ? Arrondis au dixième.",
+          "reponse": 1.3,
+          "unite": "s",
+          "tolerance": 0.05,
+          "aide": "t = d ÷ v.",
+          "explication": "384 000 ÷ 300 000 = 1,28 s, soit environ **1,3 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de secondes met-il pour atteindre Mars (distance moyenne) ?",
+          "reponse": 750,
+          "unite": "s",
+          "aide": "225 000 000 ÷ 300 000.",
+          "explication": "225 000 000 ÷ 300 000 = **750 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime cette durée en minutes.",
+          "reponse": 12.5,
+          "unite": "min",
+          "aide": "Divise par 60.",
+          "explication": "750 ÷ 60 = **12,5 min**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quand tu regardes le Soleil, tu le vois tel qu’il était…",
+          "options": [
+            "il y a environ 8 minutes",
+            "il y a environ 8 secondes",
+            "il y a environ 8 heures",
+            "à l’instant même"
+          ],
+          "reponse": 0,
+          "aide": "La lumière met 500 s à parvenir de lui jusqu’à nous.",
+          "explication": "La lumière met près de 8 minutes à venir du Soleil : regarder loin, c’est regarder **tôt**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Proxima est à 4,2 années-lumière. Sachant qu’une année-lumière vaut 9,5 × 10¹² km, exprime cette distance en milliers de milliards de km (1 unité = 10¹² km).",
+          "reponse": 39.9,
+          "unite": "× 10¹² km",
+          "tolerance": 0.1,
+          "aide": "Multiplie 4,2 par 9,5.",
+          "explication": "4,2 × 9,5 = 39,9, soit **39,9 × 10¹² km**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e4840a3f-b14c-55a7-95e6-7077bc40fef0",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La lumière d’Andromède",
+      "competence": "raisonner",
+      "situation": "Un club d’astronomie observe des astres lointains. La galaxie d’Andromède apparaît comme une tache pâle dans le ciel. On rappelle que la lumière parcourt 300 000 km/s.",
+      "documents": [
+        {
+          "id": "al",
+          "type": "tableau",
+          "titre": "Distances en années-lumière",
+          "colonnes": [
+            "Objet",
+            "Distance"
+          ],
+          "lignes": [
+            [
+              "Sirius, une étoile",
+              "8,6 années-lumière"
+            ],
+            [
+              "Diamètre de la Voie lactée",
+              "100 000 années-lumière"
+            ],
+            [
+              "Galaxie d’Andromède",
+              "2 500 000 années-lumière"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de secondes compte une année de 365 jours ?",
+          "reponse": 31536000,
+          "unite": "s",
+          "aide": "365 × 24 × 3 600.",
+          "explication": "365 × 24 × 3 600 = **31 536 000 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle distance la lumière parcourt-elle en une année ? Donne-la en milliers de milliards de km (1 unité = 10¹² km), arrondie au dixième.",
+          "reponse": 9.5,
+          "unite": "× 10¹² km",
+          "tolerance": 0.05,
+          "aide": "d = 300 000 km/s × 31 536 000 s.",
+          "explication": "300 000 × 31 536 000 ≈ 9,46 × 10¹² km, soit **9,5 × 10¹² km**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lumière de Sirius que tu vois ce soir est partie il y a combien d’années ?",
+          "reponse": 8.6,
+          "unite": "ans",
+          "aide": "Une année-lumière est une distance parcourue en un an.",
+          "explication": "Sirius est à 8,6 années-lumière : sa lumière a voyagé **8,6 ans**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lumière d’Andromède est partie il y a combien d’années ?",
+          "reponse": 2500000,
+          "unite": "ans",
+          "aide": "Même raisonnement que pour Sirius.",
+          "explication": "Andromède est à 2,5 millions d’années-lumière : **2 500 000 ans**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la distance d’Andromède en milliards de milliards de km (1 unité = 10¹⁹ km), arrondie au dixième ?",
+          "reponse": 2.4,
+          "unite": "× 10¹⁹ km",
+          "tolerance": 0.05,
+          "aide": "2,5 × 10⁶ années-lumière × 9,5 × 10¹² km.",
+          "explication": "2,5 × 10⁶ × 9,5 × 10¹² ≈ 2,4 × 10¹⁹ km, soit **2,4 × 10¹⁹ km**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire de ce que voit le club ce soir ?",
+          "options": [
+            "Andromède telle qu’elle était il y a 2,5 millions d’années",
+            "Andromède telle qu’elle est aujourd’hui, en direct de la nuit",
+            "Andromède telle qu’elle sera dans 2,5 millions d’années",
+            "Andromède telle qu’elle était il y a un an seulement"
+          ],
+          "reponse": 0,
+          "aide": "L’année-lumière est une distance, mais elle donne aussi la durée du voyage de la lumière.",
+          "explication": "Regarder loin, c’est regarder **tôt** : la lumière d’Andromède a voyagé 2,5 millions d’années."
+        }
+      ]
+    },
+    {
+      "chapitre": "3b7c5dd1-77be-54c7-8643-b95975de81b7",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "De quoi sont faites les étoiles ?",
+      "competence": "lire-graphique",
+      "situation": "Les astrophysiciens ont mesuré la composition de la matière ordinaire de l’Univers, en masse. Le graphique résume leurs résultats.",
+      "documents": [
+        {
+          "id": "compo",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Composition de la matière ordinaire, en masse",
+          "categories": [
+            "Hydrogène",
+            "Hélium",
+            "Autres éléments"
+          ],
+          "series": [
+            {
+              "nom": "Part",
+              "valeurs": [
+                75,
+                24,
+                1
+              ]
+            }
+          ],
+          "source": "Proportions arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "compo",
+          "enonce": "Touche le secteur de l’hélium.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Lis la légende du graphique.",
+          "explication": "Le secteur **hélium** représente environ 24 % de la masse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de la masse l’hydrogène et l’hélium représentent-ils ensemble, en pourcentage ?",
+          "reponse": 99,
+          "unite": "%",
+          "aide": "Additionne 75 et 24.",
+          "explication": "75 + 24 = **99 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Où ont été fabriqués les « autres éléments » comme le carbone, l’oxygène et le fer ?",
+          "options": [
+            "Au cœur des étoiles",
+            "Dans le vide entre les galaxies",
+            "Au cœur des planètes",
+            "Dans les comètes uniquement"
+          ],
+          "reponse": 0,
+          "aide": "Ils sont plus lourds que l’hélium.",
+          "explication": "Le carbone, l’oxygène et le fer ont été fabriqués **au cœur des étoiles**, puis dispersés lors de leur explosion."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les atomes d’une étoile lointaine sont-ils d’une nature différente de ceux de la Terre ?",
+          "options": [
+            "Non : ce sont les mêmes éléments, surtout de l’hydrogène et de l’hélium",
+            "Oui : ils n’existent nulle part ailleurs que dans les étoiles",
+            "Oui : ils n’ont pas de noyau, seulement des électrons libres",
+            "Non : les étoiles ne contiennent que de l’hélium, rien d’autre"
+          ],
+          "reponse": 0,
+          "aide": "La matière est la même partout dans l’Univers.",
+          "explication": "La matière est faite partout des **mêmes** éléments chimiques : seule leur proportion change."
+        }
+      ]
+    },
+    {
+      "chapitre": "3b7c5dd1-77be-54c7-8643-b95975de81b7",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du petit au grand",
+      "competence": "calculer",
+      "situation": "Un manuel de physique donne l’ordre de grandeur de plusieurs objets, rangés ici dans le désordre.",
+      "documents": [
+        {
+          "id": "tailles",
+          "type": "tableau",
+          "titre": "Ordres de grandeur",
+          "colonnes": [
+            "Objet",
+            "Taille"
+          ],
+          "lignes": [
+            [
+              "Planète Terre",
+              "10⁷ m"
+            ],
+            [
+              "Atome",
+              "10⁻¹⁰ m"
+            ],
+            [
+              "Univers observable",
+              "10²⁶ m"
+            ],
+            [
+              "Un élève",
+              "1 m"
+            ],
+            [
+              "Cellule",
+              "10⁻⁵ m"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Range ces objets du plus petit au plus grand.",
+          "items": [
+            "Atome",
+            "Cellule",
+            "Un élève",
+            "Planète Terre",
+            "Univers observable"
+          ],
+          "aide": "Compare les exposants de 10 : 10⁻¹⁰ est la plus petite longueur.",
+          "explication": "Du plus petit au plus grand : **atome** (10⁻¹⁰ m), **cellule** (10⁻⁵ m), **élève** (1 m), **planète Terre** (10⁷ m), **Univers observable** (10²⁶ m)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois une cellule est-elle plus grande qu’un atome ? (Écris le nombre en entier.)",
+          "reponse": 100000,
+          "aide": "10⁻⁵ ÷ 10⁻¹⁰ = 10⁻⁵⁺¹⁰.",
+          "explication": "10⁻⁵ ÷ 10⁻¹⁰ = 10⁵, soit **100 000** fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la Terre est-elle plus grande qu’un élève de 1 m ? (Écris le nombre en entier.)",
+          "reponse": 10000000,
+          "aide": "10⁷ ÷ 10⁰.",
+          "explication": "10⁷ ÷ 1 = 10⁷, soit **10 000 000** fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre un atome et l’Univers observable, de combien de puissances de 10 passe-t-on ?",
+          "reponse": 36,
+          "aide": "Soustrais les exposants : 26 − (−10).",
+          "explication": "26 − (−10) = **36** puissances de 10."
+        }
+      ]
+    },
+    {
+      "chapitre": "3b7c5dd1-77be-54c7-8643-b95975de81b7",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La signature d’une étoile",
+      "competence": "analyser-document",
+      "situation": "Un spectre est la décomposition de la lumière : chaque élément chimique y laisse des raies à des positions précises. On compare le spectre d’une étoile imaginaire à des spectres de référence.",
+      "documents": [
+        {
+          "id": "spectres",
+          "type": "schema",
+          "titre": "Spectres : étoile et références",
+          "largeur": 340,
+          "hauteur": 256,
+          "elements": [
+            {
+              "forme": "texte",
+              "x": 26,
+              "y": 16,
+              "texte": "Étoile étudiée",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 26,
+              "y": 22,
+              "l": 288,
+              "h": 32,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "s-etoile",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                53,
+                24
+              ],
+              "a": [
+                53,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                74.6,
+                24
+              ],
+              "a": [
+                74.6,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                86.3,
+                24
+              ],
+              "a": [
+                86.3,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                121.4,
+                24
+              ],
+              "a": [
+                121.4,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                135.8,
+                24
+              ],
+              "a": [
+                135.8,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                213.2,
+                24
+              ],
+              "a": [
+                213.2,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                274.4,
+                24
+              ],
+              "a": [
+                274.4,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                285.2,
+                24
+              ],
+              "a": [
+                285.2,
+                52
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 26,
+              "y": 72,
+              "texte": "Hydrogène",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 26,
+              "y": 78,
+              "l": 288,
+              "h": 32,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "s-h",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                53,
+                80
+              ],
+              "a": [
+                53,
+                108
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                74.6,
+                80
+              ],
+              "a": [
+                74.6,
+                108
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                121.4,
+                80
+              ],
+              "a": [
+                121.4,
+                108
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                274.4,
+                80
+              ],
+              "a": [
+                274.4,
+                108
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 26,
+              "y": 128,
+              "texte": "Hélium",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 26,
+              "y": 134,
+              "l": 288,
+              "h": 32,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "s-he",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                86.3,
+                136
+              ],
+              "a": [
+                86.3,
+                164
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                135.8,
+                136
+              ],
+              "a": [
+                135.8,
+                164
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                213.2,
+                136
+              ],
+              "a": [
+                213.2,
+                164
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                285.2,
+                136
+              ],
+              "a": [
+                285.2,
+                164
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 26,
+              "y": 184,
+              "texte": "Calcium",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 26,
+              "y": 190,
+              "l": 288,
+              "h": 32,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "s-ca",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37.7,
+                192
+              ],
+              "a": [
+                37.7,
+                220
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                41.3,
+                192
+              ],
+              "a": [
+                41.3,
+                220
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 44,
+              "y": 242,
+              "texte": "400 nm",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 134,
+              "y": 242,
+              "texte": "500 nm",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 224,
+              "y": 242,
+              "texte": "600 nm",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 314,
+              "y": 242,
+              "texte": "700 nm",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quels éléments chimiques cette étoile contient-elle ? (Plusieurs réponses.)",
+          "options": [
+            "Hydrogène",
+            "Hélium",
+            "Calcium"
+          ],
+          "reponse": [
+            0,
+            1
+          ],
+          "aide": "Chaque raie d’un spectre de référence doit se retrouver à la même position dans l’étoile.",
+          "explication": "Toutes les raies de l’**hydrogène** et de l’**hélium** se retrouvent dans l’étoile ; aucune raie du calcium n’y figure."
+        },
+        {
+          "type": "zone",
+          "document": "spectres",
+          "enonce": "Touche le spectre de référence dont aucune raie n’apparaît dans l’étoile.",
+          "reponse": [
+            "s-ca"
+          ],
+          "aide": "Compare les positions des raies avec celles de l’étoile.",
+          "explication": "Les raies du **calcium** (vers 393 et 397 nm) n’apparaissent pas dans le spectre de l’étoile."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de raies du spectre de l’étoile sont dues à l’hydrogène ?",
+          "reponse": 4,
+          "aide": "Compte les raies de l’hydrogène, toutes présentes dans l’étoile.",
+          "explication": "Le spectre de l’hydrogène compte **4** raies, toutes retrouvées dans l’étoile."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de raies compte le spectre de l’étoile en tout ?",
+          "reponse": 8,
+          "aide": "Additionne les raies de l’hydrogène et de l’hélium.",
+          "explication": "4 + 4 = **8** raies."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi peut-on connaître la composition d’une étoile sans y aller ?",
+          "options": [
+            "Chaque élément émet ou absorbe des couleurs précises, sa signature",
+            "On envoie une sonde qui prélève un morceau de l’étoile et le rapporte",
+            "On pèse l’étoile avec des instruments très précis depuis la Terre",
+            "On compte ses planètes et on en déduit les éléments qu’elle contient"
+          ],
+          "reponse": 0,
+          "aide": "Pense au rôle du spectre.",
+          "explication": "Le spectre de sa lumière porte la **signature** des éléments : c’est ainsi que l’hélium a été découvert dans le Soleil."
+        }
+      ]
+    },
+    {
+      "chapitre": "f73de21f-c23d-575d-8193-ac28dccc4d71",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un atome de carbone",
+      "competence": "observer-schema",
+      "situation": "Le schéma représente un atome de carbone, non à l’échelle. Le tableau donne le contenu de son noyau.",
+      "documents": [
+        {
+          "id": "atome",
+          "type": "schema",
+          "titre": "Un atome de carbone (schéma non à l’échelle)",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 115,
+              "rx": 100,
+              "ry": 80,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 115,
+              "r": 24,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "noyau",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 256,
+              "cy": 139,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 182,
+              "cy": 193,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 87,
+              "cy": 169,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 64,
+              "cy": 91,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e4",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 138,
+              "cy": 37,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e5",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 233,
+              "cy": 61,
+              "r": 7,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "e6",
+              "zone": true
+            }
+          ]
+        },
+        {
+          "id": "noyau",
+          "type": "tableau",
+          "titre": "Le contenu du noyau",
+          "colonnes": [
+            "Particule",
+            "Nombre"
+          ],
+          "lignes": [
+            [
+              "Protons",
+              "6"
+            ],
+            [
+              "Neutrons",
+              "6"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Atome de carbone"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "atome",
+          "enonce": "Touche le noyau de l’atome.",
+          "reponse": [
+            "noyau"
+          ],
+          "aide": "Le noyau est au centre.",
+          "explication": "Le **noyau** est la partie centrale, qui concentre presque toute la masse."
+        },
+        {
+          "type": "zone",
+          "document": "atome",
+          "enonce": "Touche tous les électrons.",
+          "reponse": [
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6"
+          ],
+          "aide": "Les électrons tournent autour du noyau.",
+          "explication": "Les **électrons** sont les six petites billes autour du noyau.",
+          "multiple": true
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de nucléons le noyau compte-t-il ?",
+          "reponse": 12,
+          "aide": "Les nucléons sont les protons et les neutrons.",
+          "explication": "6 + 6 = **12 nucléons**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la charge électrique du noyau ?",
+          "options": [
+            "Positive",
+            "Négative",
+            "Nulle",
+            "Tantôt positive, tantôt négative"
+          ],
+          "reponse": 0,
+          "aide": "Protons et neutrons : lequel est chargé ?",
+          "explication": "Les protons sont positifs et les neutrons neutres : le noyau est **positif**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f73de21f-c23d-575d-8193-ac28dccc4d71",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Atome ou ion ?",
+      "competence": "raisonner",
+      "situation": "Un laboratoire étudie cinq espèces chimiques. On connaît le nombre de protons et d’électrons de chacune.",
+      "documents": [
+        {
+          "id": "especes",
+          "type": "tableau",
+          "titre": "Cinq espèces chimiques",
+          "colonnes": [
+            "Espèce",
+            "Protons",
+            "Électrons"
+          ],
+          "lignes": [
+            [
+              "A",
+              "11",
+              "10"
+            ],
+            [
+              "B",
+              "17",
+              "17"
+            ],
+            [
+              "C",
+              "17",
+              "18"
+            ],
+            [
+              "D",
+              "8",
+              "8"
+            ],
+            [
+              "E",
+              "8",
+              "10"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "numeros",
+          "type": "tableau",
+          "titre": "Nombre de protons des éléments",
+          "colonnes": [
+            "Élément",
+            "Protons"
+          ],
+          "lignes": [
+            [
+              "Hydrogène",
+              "1"
+            ],
+            [
+              "Carbone",
+              "6"
+            ],
+            [
+              "Oxygène",
+              "8"
+            ],
+            [
+              "Sodium",
+              "11"
+            ],
+            [
+              "Chlore",
+              "17"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Extrait du tableau périodique"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelles espèces sont des ions ? (Plusieurs réponses.)",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "reponse": [
+            0,
+            2,
+            4
+          ],
+          "aide": "Un atome neutre a autant de protons que d’électrons.",
+          "explication": "Les espèces **A, C et E** n’ont pas autant d’électrons que de protons : ce sont des ions."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Un ion est un atome qui a gagné ou perdu des ___ ; son nombre de ___ ne change jamais.",
+          "reponses": [
+            [
+              "électrons"
+            ],
+            [
+              "protons"
+            ]
+          ],
+          "banque": [
+            "électrons",
+            "protons",
+            "neutrons",
+            "nucléons"
+          ],
+          "aide": "Seuls les électrons peuvent être échangés.",
+          "explication": "Devenir un ion, c’est perdre ou gagner des **électrons**, jamais des **protons**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’électrons l’espèce E a-t-elle gagnés par rapport à l’atome neutre ?",
+          "reponse": 2,
+          "aide": "Compare ses électrons à ses protons.",
+          "explication": "10 − 8 = **2 électrons** gagnés."
+        },
+        {
+          "type": "texte",
+          "enonce": "De quel élément chimique l’espèce A est-elle faite ?",
+          "reponse": [
+            "sodium",
+            "le sodium"
+          ],
+          "placeholder": "Nom de l’élément",
+          "aide": "Cherche 11 protons dans le deuxième tableau.",
+          "explication": "11 protons : c’est le **sodium**, qu’il soit atome ou ion."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la charge globale de l’espèce A ?",
+          "options": [
+            "Positive : il y a plus de protons que d’électrons",
+            "Négative : il y a plus de protons que d’électrons",
+            "Nulle : tout atome est neutre",
+            "Positive : il y a plus d’électrons que de protons"
+          ],
+          "reponse": 0,
+          "aide": "Compare 11 protons et 10 électrons.",
+          "explication": "Il y a un électron de moins que de protons : l’espèce A est **positive**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f73de21f-c23d-575d-8193-ac28dccc4d71",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une structure pleine de vide",
+      "competence": "modeliser",
+      "situation": "L’atome est presque entièrement vide : son noyau est minuscule. Le tableau donne des ordres de grandeur, et un second tableau quelques molécules.",
+      "documents": [
+        {
+          "id": "ordres",
+          "type": "tableau",
+          "titre": "Ordres de grandeur",
+          "colonnes": [
+            "Objet",
+            "Taille"
+          ],
+          "lignes": [
+            [
+              "Atome",
+              "10⁻¹⁰ m"
+            ],
+            [
+              "Noyau",
+              "10⁻¹⁵ m"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Ordres de grandeur"
+        },
+        {
+          "id": "molecules",
+          "type": "tableau",
+          "titre": "Trois molécules",
+          "colonnes": [
+            "Nom",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "Eau",
+              "H₂O"
+            ],
+            [
+              "Dioxyde de carbone",
+              "CO₂"
+            ],
+            [
+              "Glucose",
+              "C₆H₁₂O₆"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Formules usuelles"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois l’atome est-il plus grand que son noyau ? (Écris le nombre en entier.)",
+          "reponse": 100000,
+          "aide": "10⁻¹⁰ ÷ 10⁻¹⁵.",
+          "explication": "10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵, soit **100 000** fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si l’atome avait la taille d’un stade de 100 m, quelle serait la taille du noyau, en millimètres ?",
+          "reponse": 1,
+          "unite": "mm",
+          "aide": "100 m ÷ 100 000.",
+          "explication": "100 ÷ 100 000 = 0,001 m, soit **1 mm** : une bille au centre du stade."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un électron est environ 2 000 fois plus léger qu’un nucléon. Quelle est la masse des 6 électrons d’un atome de carbone, exprimée en nucléons ?",
+          "reponse": 0.003,
+          "unite": "nucléon",
+          "aide": "6 ÷ 2 000.",
+          "explication": "6 ÷ 2 000 = **0,003** nucléon, à comparer aux 12 nucléons du noyau."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle part de la masse de l’atome de carbone se trouve dans son noyau ?",
+          "options": [
+            "Plus de 99,9 %",
+            "Environ la moitié",
+            "Environ 10 %",
+            "Environ 90 %"
+          ],
+          "reponse": 0,
+          "aide": "Compare 12 nucléons et 0,003 nucléon.",
+          "explication": "12 sur 12,003 : le noyau concentre **plus de 99,9 %** de la masse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes au total compte une molécule de glucose ?",
+          "reponse": 24,
+          "unite": "atomes",
+          "aide": "Additionne les indices : 6 + 12 + 6.",
+          "explication": "6 + 12 + 6 = **24 atomes**."
+        }
+      ]
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le circuit qui reste éteint",
+      "competence": "observer-schema",
+      "situation": "Inès a monté un circuit avec une pile, une lampe et un interrupteur. La lampe reste éteinte. Elle compare avec un second circuit qui fonctionne.",
+      "documents": [
+        {
+          "id": "a",
+          "type": "circuit",
+          "titre": "Circuit A",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L",
+              "id": "lampeA"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "interrupteur-ouvert",
+              "id": "inter"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "type": "circuit",
+          "titre": "Circuit B",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pileB"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L",
+              "allume": true,
+              "id": "lampeB"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "interrupteur-ferme",
+              "id": "interB"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "a",
+          "enonce": "Dans le circuit A, touche l’interrupteur.",
+          "reponse": [
+            "inter"
+          ],
+          "aide": "C’est le composant qui s’ouvre et se ferme.",
+          "explication": "L’**interrupteur** est ouvert : le trait ne relie plus les deux fils."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la lampe du circuit A reste-t-elle éteinte ?",
+          "options": [
+            "La boucle est ouverte : le courant ne peut pas circuler",
+            "La pile est trop grosse pour alimenter cette petite lampe",
+            "Les fils sont trop courts pour transporter le courant",
+            "Un interrupteur fermé consomme tout le courant de la pile"
+          ],
+          "reponse": 0,
+          "aide": "Pour qu’un courant circule, le circuit doit former une boucle fermée.",
+          "explication": "L’interrupteur ouvert coupe la boucle : aucun courant ne circule, la lampe reste **éteinte**."
+        },
+        {
+          "type": "zone",
+          "document": "b",
+          "enonce": "Dans le circuit B, touche le générateur.",
+          "reponse": [
+            "pileB"
+          ],
+          "aide": "Le générateur fournit l’énergie au circuit.",
+          "explication": "La **pile** est le générateur : elle fournit l’énergie aux récepteurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "À l’extérieur de la pile, le courant conventionnel sort de la pile par la borne…",
+          "options": [
+            "plus (+)",
+            "moins (−)",
+            "qui touche l’interrupteur",
+            "qui touche la lampe"
+          ],
+          "reponse": 0,
+          "aide": "Le sens conventionnel va de la borne + vers la borne −.",
+          "explication": "Par convention, le courant sort du générateur par la borne **plus** et revient par la borne moins."
+        }
+      ]
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le testeur de conduction",
+      "competence": "experimenter",
+      "situation": "Pour savoir si un objet conduit le courant, Malik insère cet objet entre deux pinces dans un circuit en série avec une pile et une lampe.",
+      "documents": [
+        {
+          "id": "test",
+          "type": "circuit",
+          "titre": "Le circuit de test",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L",
+              "id": "lampe"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "interrupteur-ouvert",
+              "nom": "Objet testé",
+              "id": "objet"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "test",
+          "enonce": "Touche l’endroit où Malik place l’objet à tester.",
+          "reponse": [
+            "objet"
+          ],
+          "aide": "C’est l’endroit où le circuit est ouvert.",
+          "explication": "L’objet se place entre les deux pinces : à l’endroit **ouvert** du circuit, marqué « Objet testé »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle observation prouve que l’objet testé est conducteur ?",
+          "options": [
+            "La lampe brille",
+            "La lampe reste éteinte",
+            "La pile chauffe",
+            "Les fils se séparent"
+          ],
+          "reponse": 0,
+          "aide": "Le courant doit circuler dans toute la boucle.",
+          "explication": "Si la lampe **brille**, le courant passe dans l’objet : il est conducteur."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces objets.",
+          "categories": [
+            "Conducteurs",
+            "Isolants"
+          ],
+          "items": [
+            [
+              "Un clou en fer",
+              0
+            ],
+            [
+              "Une mine de crayon",
+              0
+            ],
+            [
+              "De l’eau salée",
+              0
+            ],
+            [
+              "Une règle en plastique",
+              1
+            ],
+            [
+              "Un morceau de verre",
+              1
+            ],
+            [
+              "Une gomme en caoutchouc",
+              1
+            ]
+          ],
+          "aide": "Les métaux, le graphite et les solutions ioniques conduisent.",
+          "explication": "Le fer, le graphite (mine de crayon) et l’eau salée conduisent. Plastique, verre et caoutchouc sont **isolants**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque milieu à ses porteurs de charge.",
+          "paires": [
+            [
+              "Un métal",
+              "Les électrons libres"
+            ],
+            [
+              "Une solution ionique",
+              "Les ions"
+            ]
+          ],
+          "aide": "Les porteurs ne sont pas les mêmes selon le milieu.",
+          "explication": "Dans un métal circulent des **électrons libres** ; dans une solution, des **ions**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ne faut-il jamais toucher un appareil électrique avec les mains mouillées ?",
+          "options": [
+            "Le corps humain est conducteur, et davantage s’il est humide",
+            "L’eau est un isolant parfait qui bloque le courant dans la main",
+            "L’eau fait griller les piles de l’appareil en les mouillant",
+            "Les mains mouillées chauffent la prise et la font fondre"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux conducteurs.",
+          "explication": "Le corps humain est **conducteur**, d’autant plus qu’il est humide : d’où les règles de sécurité."
+        }
+      ]
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La DEL dans le bon sens",
+      "competence": "raisonner",
+      "situation": "Une DEL ne laisse passer le courant que dans un seul sens. Deux élèves ont monté le même circuit, mais l’une a retourné la DEL.",
+      "documents": [
+        {
+          "id": "un",
+          "type": "circuit",
+          "titre": "Circuit 1",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pile"
+            },
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                4,
+                4
+              ]
+            },
+            {
+              "de": [
+                4,
+                4
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "resistance",
+              "nom": "R",
+              "id": "res"
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "del",
+              "nom": "D",
+              "allume": true,
+              "id": "del"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "deux",
+          "type": "circuit",
+          "titre": "Circuit 2",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pile"
+            },
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                4,
+                4
+              ]
+            },
+            {
+              "de": [
+                4,
+                4
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "resistance",
+              "nom": "R",
+              "id": "res"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "del",
+              "nom": "D",
+              "id": "del"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "un",
+          "enonce": "Dans le circuit 1, touche la DEL.",
+          "reponse": [
+            "del"
+          ],
+          "aide": "Le symbole ressemble à une diode avec des flèches.",
+          "explication": "La **DEL** est le composant marqué D."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la DEL du circuit 1 s’allume-t-elle ?",
+          "options": [
+            "Le courant la traverse dans son sens passant, le bon sens",
+            "La pile est plus puissante et fournit plus de tension",
+            "La résistance produit la lumière à la place de la DEL",
+            "Le circuit est ouvert, le courant passe par l’air"
+          ],
+          "reponse": 0,
+          "aide": "Une DEL laisse passer le courant dans un seul sens.",
+          "explication": "Le courant sort du **+** de la pile et traverse la DEL dans le bon sens : elle s’allume."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le circuit 2, la DEL s’allume.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Elle est retournée : le courant tente de la traverser à l’envers.",
+          "explication": "La DEL étant retournée, elle est **bloquée** : le courant ne passe pas, elle reste éteinte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le circuit 1, dans le fil du haut, les électrons circulent…",
+          "options": [
+            "de la borne − de la pile vers la DEL",
+            "de la DEL vers la borne − de la pile",
+            "dans les deux sens à la fois",
+            "ils ne circulent pas"
+          ],
+          "reponse": 0,
+          "aide": "Les électrons vont en sens inverse du courant conventionnel.",
+          "explication": "Le courant conventionnel revient vers la borne −, donc les électrons repartent de la borne − **vers la DEL**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Un fil qui relie directement les deux bornes d’une pile crée un ___ : l’intensité devient ___ et les fils ___.",
+          "reponses": [
+            [
+              "court-circuit"
+            ],
+            [
+              "énorme"
+            ],
+            [
+              "chauffent"
+            ]
+          ],
+          "banque": [
+            "court-circuit",
+            "énorme",
+            "chauffent",
+            "interrupteur",
+            "nulle",
+            "refroidissent"
+          ],
+          "aide": "Il n’y a plus de récepteur pour limiter le courant.",
+          "explication": "C’est un **court-circuit** : l’intensité devient **énorme** et les fils **chauffent**, avec un danger d’incendie."
+        }
+      ]
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Série ou dérivation ?",
+      "competence": "observer-schema",
+      "situation": "Deux montages alimentent chacun deux lampes avec la même pile. Tu dois les reconnaître et prévoir ce qui se passe si une lampe grille.",
+      "documents": [
+        {
+          "id": "sa",
+          "type": "circuit",
+          "titre": "Circuit A",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L1",
+              "allume": true
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L2",
+              "allume": true
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sb",
+          "type": "circuit",
+          "titre": "Circuit B",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ]
+            },
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                4,
+                4
+              ]
+            },
+            {
+              "de": [
+                4,
+                4
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                4,
+                4
+              ],
+              "composant": "lampe",
+              "nom": "L1",
+              "allume": true
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "lampe",
+              "nom": "L2",
+              "allume": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque circuit à son montage.",
+          "paires": [
+            [
+              "Circuit A",
+              "En série"
+            ],
+            [
+              "Circuit B",
+              "En dérivation"
+            ]
+          ],
+          "aide": "En série, le courant n’a qu’un seul chemin.",
+          "explication": "Le circuit A n’a **qu’une boucle** : série. Le circuit B a **deux branches** entre deux nœuds : dérivation."
+        },
+        {
+          "type": "choix",
+          "enonce": "La lampe L1 du circuit A grille. Que devient L2 ?",
+          "options": [
+            "Elle s’éteint",
+            "Elle continue de briller",
+            "Elle brille plus fort",
+            "Elle chauffe seulement"
+          ],
+          "reponse": 0,
+          "aide": "La boucle est coupée.",
+          "explication": "En série, si un dipôle grille, le courant ne circule plus : **tout s’éteint**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "En série, l’intensité est ___ partout ; en dérivation, la ___ est la même dans chaque branche.",
+          "reponses": [
+            [
+              "la même",
+              "pareille",
+              "identique"
+            ],
+            [
+              "tension"
+            ]
+          ],
+          "banque": [
+            "la même",
+            "tension",
+            "intensité",
+            "double",
+            "nulle"
+          ],
+          "aide": "Série et dérivation ont des lois opposées.",
+          "explication": "En série : **même intensité** partout. En dérivation : **même tension** aux bornes de chaque branche."
+        },
+        {
+          "type": "choix",
+          "enonce": "La lampe L1 du circuit B grille. Que devient L2 ?",
+          "options": [
+            "Elle continue de briller, car elle a sa propre branche",
+            "Elle s’éteint, car le courant ne circule plus nulle part",
+            "Elle grille aussi, car elle reçoit toute la tension",
+            "Elle brille moins, car elle reçoit une tension plus faible"
+          ],
+          "reponse": 0,
+          "aide": "Sa branche est indépendante.",
+          "explication": "En dérivation, chaque branche est **indépendante** : L2 reste allumée."
+        }
+      ]
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux lampes, deux ampèremètres",
+      "competence": "resoudre",
+      "situation": "Dans ce montage, une pile de 4,5 V alimente deux lampes. Deux ampèremètres sont insérés. L’un mesure le courant qui sort de la pile, l’autre celui de la lampe L1.",
+      "documents": [
+        {
+          "id": "der",
+          "type": "circuit",
+          "titre": "Le montage",
+          "branches": [
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile",
+              "id": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "amperemetre",
+              "nom": "A",
+              "id": "a0"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                4,
+                3
+              ],
+              "composant": "lampe",
+              "nom": "L1",
+              "allume": true,
+              "id": "l1"
+            },
+            {
+              "de": [
+                4,
+                3
+              ],
+              "a": [
+                4,
+                6
+              ],
+              "composant": "amperemetre",
+              "nom": "A1",
+              "id": "a1"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ]
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                6
+              ],
+              "composant": "lampe",
+              "nom": "L2",
+              "allume": true,
+              "id": "l2"
+            },
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                4,
+                6
+              ]
+            },
+            {
+              "de": [
+                4,
+                6
+              ],
+              "a": [
+                8,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lect",
+          "type": "tableau",
+          "titre": "Lectures des ampèremètres",
+          "colonnes": [
+            "Appareil",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "A (sortie de la pile)",
+              "0,75 A"
+            ],
+            [
+              "A1 (branche de L1)",
+              "0,30 A"
+            ],
+            [
+              "Tension de la pile",
+              "4,5 V"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "der",
+          "enonce": "Touche l’ampèremètre qui mesure l’intensité dans la lampe L1.",
+          "reponse": [
+            "a1"
+          ],
+          "aide": "Il est placé sur la branche de L1, en série avec elle.",
+          "explication": "L’ampèremètre **A1** est sur la branche de L1 : c’est lui qui mesure son intensité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment sont montées L1 et L2 ?",
+          "options": [
+            "En dérivation",
+            "En série",
+            "Une en série, une en dérivation",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Regarde si le courant peut se partager à un nœud.",
+          "explication": "Le courant se partage au nœud : les lampes sont **en dérivation**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’intensité qui traverse L2 (loi des nœuds).",
+          "reponse": 0.45,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "I = I1 + I2, donc I2 = I − I1.",
+          "explication": "I2 = 0,75 − 0,30 = **0,45 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On ajoute en dérivation une lampe L3 traversée par 0,20 A. Quelle est la nouvelle intensité indiquée par A ?",
+          "reponse": 0.95,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "Les intensités des branches s’additionnent.",
+          "explication": "0,75 + 0,20 = **0,95 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lampe L1 grille. Quelle intensité A indique-t-il alors (sans L3) ?",
+          "reponse": 0.45,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "Seule la branche de L2 reste parcourue par un courant.",
+          "explication": "Il ne reste que la branche de L2 : **0,45 A**."
+        }
+      ]
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La guirlande du réveillon",
+      "competence": "modeliser",
+      "situation": "Un circuit en série comprend une pile de 9,0 V, deux lampes et un moteur qui fait tourner un sapin. On mesure les tensions.",
+      "documents": [
+        {
+          "id": "serie",
+          "type": "circuit",
+          "titre": "Le montage en série",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L1",
+              "allume": true
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L2",
+              "allume": true
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "moteur",
+              "nom": "M",
+              "id": "m"
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tensions",
+          "type": "tableau",
+          "titre": "Les tensions mesurées",
+          "colonnes": [
+            "Dipôle",
+            "Tension"
+          ],
+          "lignes": [
+            [
+              "Pile",
+              "9,0 V"
+            ],
+            [
+              "Lampe L1",
+              "2,5 V"
+            ],
+            [
+              "Lampe L2",
+              "2,5 V"
+            ],
+            [
+              "Moteur",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "serie",
+          "enonce": "Touche le moteur.",
+          "reponse": [
+            "m"
+          ],
+          "aide": "Son symbole est un cercle avec la lettre M.",
+          "explication": "Le composant marqué **M** est le moteur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la tension aux bornes du moteur (loi d’additivité des tensions).",
+          "reponse": 4,
+          "unite": "V",
+          "tolerance": 0.01,
+          "aide": "U pile = U L1 + U L2 + U moteur.",
+          "explication": "U moteur = 9,0 − 2,5 − 2,5 = **4,0 V**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’intensité dans L1 vaut 0,20 A. Quelle est l’intensité dans L2 ?",
+          "reponse": 0.2,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "En série, l’intensité est la même partout.",
+          "explication": "En série, l’intensité est la même en tout point : **0,20 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On dévisse la lampe L1. Quelle intensité traverse alors le moteur ?",
+          "reponse": 0,
+          "unite": "A",
+          "aide": "La boucle est ouverte.",
+          "explication": "Le circuit est ouvert : plus aucun courant ne circule, l’intensité vaut **0 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "On ajoute une quatrième lampe identique en série. Les autres lampes brillent…",
+          "options": [
+            "moins",
+            "plus",
+            "pareil",
+            "seulement si le moteur s’arrête"
+          ],
+          "reponse": 0,
+          "aide": "Les tensions se partagent entre plus de dipôles.",
+          "explication": "En série, ajouter un dipôle fait baisser la tension de chacun : les lampes brillent **moins**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une guirlande de 10 ampoules identiques est branchée en série sur 230 V. Quelle tension reçoit chaque ampoule ?",
+          "reponse": 23,
+          "unite": "V",
+          "aide": "Les tensions s’additionnent : 230 ÷ 10.",
+          "explication": "230 ÷ 10 = **23 V** par ampoule."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Piles et batteries",
+      "competence": "lire-graphique",
+      "situation": "Le graphique donne la tension de quelques sources d’énergie électrique.",
+      "documents": [
+        {
+          "id": "sources",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Tension de quelques sources",
+          "categories": [
+            "Pile bâton",
+            "Pile plate",
+            "Pile 9 V",
+            "Batterie de voiture"
+          ],
+          "series": [
+            {
+              "nom": "Tension",
+              "valeurs": [
+                1.5,
+                4.5,
+                9,
+                12
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "valeurs": true,
+          "source": "Valeurs usuelles"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sources",
+          "enonce": "Touche la barre de la batterie de voiture.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "C’est la source qui a la plus haute tension.",
+          "explication": "La **batterie de voiture** fournit 12 V : c’est la plus haute barre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de piles bâton en série faut-il pour obtenir 9 V ?",
+          "reponse": 6,
+          "unite": "piles",
+          "aide": "Les tensions s’additionnent en série : 9 ÷ 1,5.",
+          "explication": "9 ÷ 1,5 = **6 piles**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le secteur domestique fournit 230 V. Le seuil de sécurité est d’environ 25 V. Que dire ?",
+          "options": [
+            "230 V est très au-dessus du seuil : danger grave, parfois mortel",
+            "230 V est inférieur au seuil de 25 V : il n’y a donc aucun danger",
+            "230 V est proche du seuil de 25 V : le danger reste très faible",
+            "Le danger ne dépend pas de la tension mais de la forme de la prise"
+          ],
+          "reponse": 0,
+          "aide": "Compare 230 V et 25 V.",
+          "explication": "230 V est près de dix fois le seuil de sécurité : le secteur est **mortel**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une pile neuve est posée sur une table, sans rien brancher. Quelle tension a-t-elle à ses bornes ?",
+          "options": [
+            "Sa tension nominale, par exemple 1,5 V",
+            "0 V, car aucun courant ne circule",
+            "Elle dépend de la table",
+            "Elle est négative"
+          ],
+          "reponse": 0,
+          "aide": "Une tension existe même sans courant.",
+          "explication": "Une tension existe même sans courant : la pile a bien **1,5 V** à ses bornes."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le voltmètre du moteur",
+      "competence": "experimenter",
+      "situation": "Dans un circuit en série, une pile de 4,5 V alimente une lampe et un moteur. Lina branche un voltmètre pour mesurer la tension du moteur : il indique 2,9 V.",
+      "documents": [
+        {
+          "id": "volt",
+          "type": "circuit",
+          "titre": "Mesurer la tension du moteur",
+          "branches": [
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                0,
+                2
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                2
+              ],
+              "a": [
+                4,
+                2
+              ],
+              "composant": "lampe",
+              "nom": "L",
+              "allume": true
+            },
+            {
+              "de": [
+                4,
+                2
+              ],
+              "a": [
+                8,
+                2
+              ],
+              "composant": "moteur",
+              "nom": "M"
+            },
+            {
+              "de": [
+                8,
+                2
+              ],
+              "a": [
+                8,
+                6
+              ]
+            },
+            {
+              "de": [
+                8,
+                6
+              ],
+              "a": [
+                0,
+                6
+              ]
+            },
+            {
+              "de": [
+                4,
+                2
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "voltmetre",
+              "nom": "V",
+              "id": "v"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "volt",
+          "enonce": "Touche le voltmètre.",
+          "reponse": [
+            "v"
+          ],
+          "aide": "Son symbole contient la lettre V.",
+          "explication": "Le composant marqué **V** est le voltmètre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment est branché le voltmètre par rapport au moteur ?",
+          "options": [
+            "En dérivation, relié directement aux bornes du moteur",
+            "En série avec le moteur, dans la même branche",
+            "En série avec la pile, à la sortie de son pôle +",
+            "Il n’est pas branché, il mesure à distance le moteur"
+          ],
+          "reponse": 0,
+          "aide": "Il est placé sur un fil parallèle au moteur.",
+          "explication": "Un voltmètre se branche **en dérivation**, aux bornes du dipôle mesuré."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la tension aux bornes de la lampe.",
+          "reponse": 1.6,
+          "unite": "V",
+          "tolerance": 0.01,
+          "aide": "U pile = U lampe + U moteur.",
+          "explication": "U lampe = 4,5 − 2,9 = **1,6 V**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On branche une seconde lampe L′ en dérivation sur L. Quelle tension a-t-elle à ses bornes ?",
+          "reponse": 1.6,
+          "unite": "V",
+          "tolerance": 0.01,
+          "aide": "En dérivation, les tensions sont égales.",
+          "explication": "En dérivation, L′ a la **même tension** que L : 1,6 V."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On ajoute en série un interrupteur ouvert. Quelle tension le voltmètre placé à ses bornes indiquerait-il ?",
+          "reponse": 4.5,
+          "unite": "V",
+          "tolerance": 0.01,
+          "aide": "Aucun courant ne circule, rien ne consomme.",
+          "explication": "Un interrupteur ouvert a à ses bornes **toute** la tension du générateur : 4,5 V."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le secteur à l’oscilloscope",
+      "competence": "lire-graphique",
+      "situation": "Un oscilloscope affiche la tension alternative du secteur, sur 20 millisecondes (ms). La courbe est périodique.",
+      "documents": [
+        {
+          "id": "secteur",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "La tension du secteur",
+          "categories": [
+            "0",
+            "2,5",
+            "5",
+            "7,5",
+            "10",
+            "12,5",
+            "15",
+            "17,5",
+            "20"
+          ],
+          "series": [
+            {
+              "nom": "Tension",
+              "valeurs": [
+                0,
+                230,
+                325,
+                230,
+                0,
+                -230,
+                -325,
+                -230,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": -400,
+            "max": 400,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Temps (ms)"
+          },
+          "valeurs": false,
+          "source": "Courbe idéalisée"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la période de cette tension, lue sur le graphique ?",
+          "reponse": 20,
+          "unite": "ms",
+          "aide": "Durée au bout de laquelle la courbe se répète.",
+          "explication": "La courbe revient à son point de départ après **20 ms**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En déduire la fréquence, en hertz (f = 1 ÷ T, avec T en secondes).",
+          "reponse": 50,
+          "unite": "Hz",
+          "aide": "20 ms = 0,02 s.",
+          "explication": "f = 1 ÷ 0,02 = **50 Hz**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la valeur maximale de la tension sur la courbe.",
+          "reponse": 325,
+          "unite": "V",
+          "tolerance": 5,
+          "aide": "Repère le sommet de la courbe.",
+          "explication": "Le sommet atteint environ **325 V**."
+        },
+        {
+          "type": "zone",
+          "document": "secteur",
+          "enonce": "Touche l’instant où la tension vaut −325 V.",
+          "reponse": [
+            "k6"
+          ],
+          "aide": "Cherche le point le plus bas de la courbe.",
+          "explication": "Le point le plus bas est à 15 ms : la tension y vaut **−325 V**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle valeur un voltmètre en mode alternatif affiche-t-il pour le secteur ?",
+          "options": [
+            "La valeur efficace, 230 V",
+            "La valeur maximale, 325 V",
+            "0 V, car la moyenne est nulle",
+            "La valeur négative, −325 V"
+          ],
+          "reponse": 0,
+          "aide": "230 V est la valeur « du secteur ».",
+          "explication": "Un voltmètre affiche la **valeur efficace** : 230 V."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois par seconde la tension change-t-elle de signe ?",
+          "reponse": 100,
+          "unite": "fois",
+          "aide": "Elle change de signe deux fois par période.",
+          "explication": "2 × 50 = **100 fois** par seconde."
+        }
+      ]
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’ampèremètre du circuit",
+      "competence": "experimenter",
+      "situation": "Romain veut mesurer l’intensité du courant qui traverse une lampe. Il a inséré un ampèremètre dans le circuit.",
+      "documents": [
+        {
+          "id": "amp",
+          "type": "circuit",
+          "titre": "Le circuit de Romain",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "lampe",
+              "nom": "L",
+              "allume": true
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "amperemetre",
+              "nom": "A",
+              "id": "am"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ]
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "amp",
+          "enonce": "Touche l’ampèremètre.",
+          "reponse": [
+            "am"
+          ],
+          "aide": "Son symbole contient la lettre A.",
+          "explication": "L’appareil marqué **A** est l’ampèremètre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment l’ampèremètre est-il branché ?",
+          "options": [
+            "En série",
+            "En dérivation aux bornes de la pile",
+            "En dérivation aux bornes de la lampe",
+            "Il n’est pas dans le circuit"
+          ],
+          "reponse": 0,
+          "aide": "Le courant doit traverser l’appareil.",
+          "explication": "Un ampèremètre se branche **en série** : le courant le traverse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lampe est traversée par 250 mA. Exprime cette intensité en ampères.",
+          "reponse": 0.25,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "1 mA = 0,001 A.",
+          "explication": "250 mA = 250 × 0,001 = **0,25 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur quel calibre faut-il commencer la mesure ?",
+          "options": [
+            "Le plus grand",
+            "Le plus petit",
+            "Celui du milieu",
+            "Peu importe"
+          ],
+          "reponse": 0,
+          "aide": "Il faut protéger l’appareil.",
+          "explication": "On commence par le **plus grand** calibre, puis on descend : un petit calibre risque d’abîmer l’appareil."
+        }
+      ]
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La multiprise de Zoé",
+      "competence": "resoudre",
+      "situation": "Zoé branche trois appareils sur une multiprise reliée à une prise protégée à 16 A. Le tableau donne l’intensité de chaque appareil.",
+      "documents": [
+        {
+          "id": "multi",
+          "type": "tableau",
+          "titre": "Sur la multiprise",
+          "colonnes": [
+            "Appareil",
+            "Intensité"
+          ],
+          "lignes": [
+            [
+              "Bouilloire",
+              "9,6 A"
+            ],
+            [
+              "Aspirateur",
+              "4,4 A"
+            ],
+            [
+              "Lampe",
+              "0,3 A"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’intensité totale dans la prise ?",
+          "reponse": 14.3,
+          "unite": "A",
+          "tolerance": 0.01,
+          "aide": "Les appareils sont en dérivation : les intensités s’additionnent.",
+          "explication": "9,6 + 4,4 + 0,3 = **14,3 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’installation supporte-t-elle cette intensité, sachant que la prise est protégée à 16 A ?",
+          "options": [
+            "Oui : 14,3 A est inférieur à 16 A",
+            "Non : 14,3 A dépasse 16 A",
+            "Non : la lampe consomme trop",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Compare 14,3 A et 16 A.",
+          "explication": "14,3 A est **inférieur** à 16 A : le disjoncteur ne coupe pas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle intensité supplémentaire Zoé peut-elle encore ajouter sans dépasser 16 A ?",
+          "reponse": 1.7,
+          "unite": "A",
+          "tolerance": 0.01,
+          "aide": "16 − 14,3.",
+          "explication": "16 − 14,3 = **1,7 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Zoé ajoute un fer à repasser de 4,3 A. Quelle est la nouvelle intensité totale ?",
+          "reponse": 18.6,
+          "unite": "A",
+          "tolerance": 0.01,
+          "aide": "Additionne 4,3 à l’intensité précédente.",
+          "explication": "14,3 + 4,3 = **18,6 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait alors le disjoncteur ?",
+          "options": [
+            "Il coupe le circuit, puis on peut le réarmer ensuite",
+            "Il fond comme un fusible et doit être remplacé",
+            "Il laisse passer le courant malgré la surintensité",
+            "Il augmente la tension pour compenser la surcharge"
+          ],
+          "reponse": 0,
+          "aide": "Ne confonds pas fusible et disjoncteur.",
+          "explication": "Un **disjoncteur** coupe le circuit, puis se réarme ; c’est le fusible qui fond et se remplace."
+        }
+      ]
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois lampes en dérivation",
+      "competence": "modeliser",
+      "situation": "Trois lampes sont branchées en dérivation sur une pile. On dispose de trois ampèremètres, mais la lampe L3 n’a pas le sien.",
+      "documents": [
+        {
+          "id": "tri",
+          "type": "circuit",
+          "titre": "Le montage à trois branches",
+          "branches": [
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ],
+              "composant": "amperemetre",
+              "nom": "A",
+              "id": "a0"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                4,
+                3
+              ],
+              "composant": "amperemetre",
+              "nom": "A1",
+              "id": "a1"
+            },
+            {
+              "de": [
+                4,
+                3
+              ],
+              "a": [
+                4,
+                6
+              ],
+              "composant": "lampe",
+              "nom": "L1",
+              "allume": true,
+              "id": "l1"
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ]
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                3
+              ],
+              "composant": "amperemetre",
+              "nom": "A2",
+              "id": "a2"
+            },
+            {
+              "de": [
+                8,
+                3
+              ],
+              "a": [
+                8,
+                6
+              ],
+              "composant": "lampe",
+              "nom": "L2",
+              "allume": true,
+              "id": "l2"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                12,
+                0
+              ]
+            },
+            {
+              "de": [
+                12,
+                0
+              ],
+              "a": [
+                12,
+                6
+              ],
+              "composant": "lampe",
+              "nom": "L3",
+              "allume": true,
+              "id": "l3"
+            },
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                4,
+                6
+              ]
+            },
+            {
+              "de": [
+                4,
+                6
+              ],
+              "a": [
+                8,
+                6
+              ]
+            },
+            {
+              "de": [
+                8,
+                6
+              ],
+              "a": [
+                12,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lect",
+          "type": "tableau",
+          "titre": "Lectures des ampèremètres",
+          "colonnes": [
+            "Appareil",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "A (sortie de la pile)",
+              "1,20 A"
+            ],
+            [
+              "A1 (branche de L1)",
+              "0,35 A"
+            ],
+            [
+              "A2 (branche de L2)",
+              "0,50 A"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tri",
+          "enonce": "Touche la lampe dont l’intensité n’est pas mesurée directement.",
+          "reponse": [
+            "l3"
+          ],
+          "aide": "Regarde quelle branche n’a pas d’ampèremètre.",
+          "explication": "La lampe **L3** est la seule dont la branche n’a pas d’ampèremètre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’intensité qui traverse L3 (loi des nœuds).",
+          "reponse": 0.35,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "I = I1 + I2 + I3.",
+          "explication": "I3 = 1,20 − 0,35 − 0,50 = **0,35 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime cette intensité en milliampères.",
+          "reponse": 350,
+          "unite": "mA",
+          "aide": "1 A = 1 000 mA.",
+          "explication": "0,35 × 1 000 = **350 mA**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lampe L2 grille. Quelle intensité l’ampèremètre A indique-t-il alors ?",
+          "reponse": 0.7,
+          "unite": "A",
+          "tolerance": 0.001,
+          "aide": "Il reste les branches de L1 et de L3.",
+          "explication": "0,35 + 0,35 = **0,70 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devient l’intensité dans L3 quand L2 grille ?",
+          "options": [
+            "Elle ne change pas",
+            "Elle double",
+            "Elle s’annule",
+            "Elle diminue de moitié"
+          ],
+          "reponse": 0,
+          "aide": "Les branches sont indépendantes.",
+          "explication": "Chaque branche est indépendante : l’intensité dans L3 reste **0,35 A**."
+        },
+        {
+          "type": "choix",
+          "enonce": "On ajoute une quatrième lampe en dérivation. L’intensité sortant de la pile…",
+          "options": [
+            "augmente",
+            "diminue",
+            "ne change pas",
+            "devient nulle"
+          ],
+          "reponse": 0,
+          "aide": "Les intensités des branches s’additionnent.",
+          "explication": "Une branche de plus fait circuler plus de courant : l’intensité totale **augmente**."
+        }
+      ]
+    }
+  ]
+}

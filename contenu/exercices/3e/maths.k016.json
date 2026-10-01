@@ -1,0 +1,4178 @@
+{
+  "niveau": "3e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le compteur de points de Maëlle",
+      "competence": "programmer",
+      "situation": "Maëlle programme un petit jeu sur Scratch. Au départ, son score vaut 2. Elle veut ensuite lui faire gagner 3 points à plusieurs reprises, puis afficher le résultat.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le script de Maëlle",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [x] à (2)",
+                "id": "init"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (5) fois",
+                "id": "boucle",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (3) à [x]",
+                    "id": "ajout"
+                  }
+                ]
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire (x)",
+                "id": "dire"
+              }
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui est **répété 5 fois**.",
+          "reponse": [
+            "ajout"
+          ],
+          "aide": "Les blocs à l’intérieur de la boucle sont ceux qui sont « enfermés » dans le crochet du « répéter ».",
+          "explication": "C’est **« ajouter 3 à x »** : il est placé à l’intérieur de la boucle, donc répété 5 fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle valeur de **x** le lutin dit-il à la fin du programme ?",
+          "reponse": 17,
+          "aide": "Pars de 2 et ajoute 3, cinq fois de suite. Tu peux écrire chaque tour sur ton brouillon.",
+          "explication": "x passe par 2, 5, 8, 11, 14, puis **17** : 2 + 5 × 3 = 17."
+        },
+        {
+          "type": "choix",
+          "enonce": "Combien de fois le bloc « dire x » est-il exécuté ?",
+          "options": [
+            "1 fois",
+            "5 fois",
+            "6 fois",
+            "17 fois"
+          ],
+          "reponse": 0,
+          "aide": "Regarde où se trouve le bloc « dire » : à l’intérieur ou après la boucle ?",
+          "explication": "Le bloc « dire » est placé **après** la boucle : il n’est exécuté qu’**une seule fois**, quand les 5 tours sont terminés."
+        }
+      ]
+    },
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le polygone du stylo",
+      "competence": "programmer",
+      "situation": "Yanis dessine des figures avec le stylo de Scratch. Il a écrit le script ci-dessous : le lutin avance de 40 pas, tourne, et recommence.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le script de Yanis",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "stylo",
+                "texte": "stylo en position d’écriture"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (6) fois",
+                "id": "boucle",
+                "interieur": [
+                  {
+                    "categorie": "mouvement",
+                    "texte": "avancer de (40) pas",
+                    "id": "av"
+                  },
+                  {
+                    "categorie": "mouvement",
+                    "texte": "tourner ↻ de (60) degrés",
+                    "id": "tr"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "id": "angles",
+          "type": "tableau",
+          "titre": "L’angle dont tourne le lutin",
+          "colonnes": [
+            "Figure",
+            "Nombre de côtés",
+            "Angle de rotation"
+          ],
+          "lignes": [
+            [
+              "Triangle équilatéral",
+              3,
+              "120°"
+            ],
+            [
+              "Carré",
+              4,
+              "90°"
+            ],
+            [
+              "Pentagone régulier",
+              5,
+              "?"
+            ],
+            [
+              "Hexagone régulier",
+              6,
+              "60°"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelle figure le script de Yanis dessine-t-il ?",
+          "options": [
+            "Un triangle équilatéral",
+            "Un carré",
+            "Un pentagone régulier",
+            "Un hexagone régulier"
+          ],
+          "reponse": 3,
+          "ordreFixe": true,
+          "aide": "Combien de fois la boucle est-elle répétée ? Autant de tours, autant de côtés.",
+          "explication": "La boucle se répète 6 fois : le lutin trace 6 côtés égaux avec un angle de 60°, c’est un **hexagone régulier**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle longueur totale le stylo a-t-il tracée, en pas ?",
+          "reponse": 240,
+          "unite": "pas",
+          "aide": "Chaque tour de boucle trace un côté de 40 pas.",
+          "explication": "6 côtés × 40 pas = **240 pas**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète le tableau : de quel angle le lutin tourne-t-il pour un **pentagone régulier** ?",
+          "reponse": 72,
+          "unite": "°",
+          "aide": "Regarde le carré : 360 ÷ 4 = 90. Même calcul avec 5 côtés.",
+          "explication": "360 ÷ 5 = **72°**. Pour un polygone régulier à n côtés, on tourne de 360 ÷ n."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour dessiner un **triangle équilatéral**, que doit changer Yanis dans son script ?",
+          "options": [
+            "répéter 3 fois et tourner de 120 degrés",
+            "répéter 3 fois et tourner de 60 degrés",
+            "répéter 6 fois et tourner de 120 degrés",
+            "répéter 3 fois et avancer de 120 pas"
+          ],
+          "reponse": 0,
+          "aide": "Un triangle a 3 côtés, et le tableau donne l’angle de rotation pour chaque figure.",
+          "explication": "Un triangle a **3 côtés** : la boucle tourne **3 fois**, et le lutin tourne de **120°** à chaque coin (3 × 120° = 360°, un tour complet)."
+        }
+      ]
+    },
+    {
+      "chapitre": "643f3e92-e3b3-51bf-8b15-f90682e4d012",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le compte à rebours de Lou",
+      "competence": "programmer",
+      "situation": "Lou programme un compte à rebours sur Scratch. La variable **n** part de 50 et diminue de 8 à chaque tour. La variable **tours** compte les tours de boucle. La boucle s’arrête dès que n devient plus petit que 10.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le script de Lou",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [n] à (50)",
+                "id": "initn"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [tours] à (0)",
+                "id": "initt"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter jusqu’à (n) < (10)",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (-8) à [n]",
+                    "id": "baisse"
+                  },
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (1) à [tours]",
+                    "id": "compte"
+                  }
+                ]
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire (tours)",
+                "id": "dire"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "suivi",
+          "type": "tableau",
+          "titre": "Le suivi de Lou",
+          "colonnes": [
+            "Tours effectués",
+            "Valeur de n"
+          ],
+          "lignes": [
+            [
+              "0",
+              "50"
+            ],
+            [
+              "1",
+              "42"
+            ],
+            [
+              "2",
+              "?"
+            ],
+            [
+              "3",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui fait **baisser n** à chaque tour.",
+          "reponse": [
+            "baisse"
+          ],
+          "aide": "Cherche le bloc qui modifie n et qui se trouve à l’intérieur de la boucle.",
+          "explication": "C’est **« ajouter −8 à n »** : ajouter −8, c’est enlever 8."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète le tableau : que vaut **n** après **2 tours** ?",
+          "reponse": 34,
+          "aide": "Pars de 42 et enlève 8.",
+          "explication": "Après 1 tour n vaut 42, après 2 tours **42 − 8 = 34**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **tours** la boucle fait-elle avant de s’arrêter ? C’est ce que dit le lutin.",
+          "reponse": 6,
+          "aide": "Continue la liste : 50, 42, 34, 26… et arrête-toi dès que n est plus petit que 10.",
+          "explication": "n prend les valeurs 50, 42, 34, 26, 18, 10, puis **2**. 10 n’est pas plus petit que 10 : il faut encore un tour. La boucle s’arrête après **6 tours**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur de **n** quand la boucle s’arrête ?",
+          "reponse": 2,
+          "aide": "C’est la première valeur de la liste plus petite que 10.",
+          "explication": "Après le 6ᵉ tour, n vaut 10 − 8 = **2**, et 2 < 10 : la boucle s’arrête."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lou remplace « ajouter −8 à n » par « ajouter −10 à n ». Que dit maintenant le lutin ?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "La boucle ne s’arrête jamais"
+          ],
+          "reponse": 1,
+          "aide": "Écris la nouvelle liste : 50, 40, 30…",
+          "explication": "n prend les valeurs 50, 40, 30, 20, 10, puis **0**, qui est plus petit que 10 : la boucle s’arrête après **5 tours**."
+        }
+      ]
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le ballon de hand",
+      "competence": "geometrie",
+      "situation": "Amel prépare le matériel du club de handball. Elle regarde la fiche technique d’un ballon : son diamètre est de 18 cm. On le modélise par une sphère.",
+      "documents": [
+        {
+          "id": "ballon",
+          "type": "schema",
+          "titre": "Le ballon en coupe",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 115,
+              "r": 85,
+              "teinte": "ambre",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "id": "diametre",
+              "zone": true,
+              "de": [
+                75,
+                115
+              ],
+              "a": [
+                245,
+                115
+              ],
+              "fleche": "deux",
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "rayon",
+              "zone": true,
+              "de": [
+                160,
+                115
+              ],
+              "a": [
+                160,
+                30
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 115,
+              "r": 3,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 131,
+              "texte": "O",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 205,
+              "y": 106,
+              "texte": "18 cm",
+              "gras": true,
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ballon",
+          "enonce": "Touche le **rayon** du ballon.",
+          "reponse": [
+            "rayon"
+          ],
+          "aide": "Le rayon part du centre O et va jusqu’à la surface.",
+          "explication": "Le rayon est le segment **du centre O à la surface**. Le diamètre, lui, traverse tout le ballon : c’est le diamètre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rayon du ballon ?",
+          "reponse": 9,
+          "unite": "cm",
+          "aide": "Le rayon est la moitié du diamètre.",
+          "explication": "18 ÷ 2 = **9 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’aire de la surface du ballon, **arrondie au dixième** de cm².",
+          "reponse": 1017.9,
+          "tolerance": 0.05,
+          "unite": "cm²",
+          "aide": "Aire de la sphère : A = 4 × π × R². Utilise le rayon, pas le diamètre !",
+          "explication": "A = 4 × π × 9² = 324π ≈ **1 017,9 cm²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du ping-pong à la pétanque",
+      "competence": "calculer",
+      "situation": "Au club de loisirs, Noa compare plusieurs boules : la bille, la balle de ping-pong et la boule de pétanque. Il a relevé leur diamètre, mais pas leur rayon.",
+      "documents": [
+        {
+          "id": "boules",
+          "type": "tableau",
+          "titre": "Les boules du club",
+          "colonnes": [
+            "Objet",
+            "Diamètre (cm)",
+            "Rayon (cm)"
+          ],
+          "lignes": [
+            [
+              "Bille",
+              3,
+              1.5
+            ],
+            [
+              "Balle de ping-pong",
+              4,
+              "?"
+            ],
+            [
+              "Boule de pétanque",
+              7.5,
+              3.75
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rayon de la balle de ping-pong (case « ? ») ?",
+          "reponse": 2,
+          "unite": "cm",
+          "aide": "Regarde comment on passe du diamètre au rayon pour la bille.",
+          "explication": "4 ÷ 2 = **2 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume de la balle de ping-pong, **arrondi au dixième** de cm³.",
+          "reponse": 33.5,
+          "tolerance": 0.05,
+          "unite": "cm³",
+          "aide": "Volume de la boule : V = (4/3) × π × R³. Attention au cube : R³ = R × R × R.",
+          "explication": "V = (4/3) × π × 2³ = (32/3)π ≈ **33,5 cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume de la boule de pétanque, **arrondi à l’unité** de cm³.",
+          "reponse": 221,
+          "tolerance": 0.5,
+          "unite": "cm³",
+          "aide": "Utilise le rayon 3,75 cm. 3,75³ = 52,734375.",
+          "explication": "V = (4/3) × π × 3,75³ ≈ 220,9, soit **221 cm³**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le diamètre de la boule de pétanque est environ 1,9 fois celui de la balle de ping-pong. Son volume est environ…",
+          "options": [
+            "1,9 fois plus grand",
+            "3,6 fois plus grand",
+            "6,6 fois plus grand",
+            "13 fois plus grand"
+          ],
+          "reponse": 2,
+          "ordreFixe": true,
+          "aide": "Quand les longueurs sont multipliées par k, les volumes sont multipliés par k³. Calcule 1,9³.",
+          "explication": "1,9³ ≈ 6,9, et le calcul exact donne 221 ÷ 33,5 ≈ **6,6 fois** : le volume croît beaucoup plus vite que le diamètre."
+        }
+      ]
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trancher la sphère",
+      "competence": "modeliser",
+      "situation": "Un globe en verre de rayon 13 cm est coupé par un plan situé à 5 cm de son centre O. La coupe fait apparaître un cercle, dont on veut connaître le rayon.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "La sphère coupée par un plan",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 120,
+              "r": 100,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 82,
+              "rx": 92,
+              "ry": 14,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "id": "distance",
+              "zone": true,
+              "de": [
+                160,
+                120
+              ],
+              "a": [
+                160,
+                82
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "rsphere",
+              "zone": true,
+              "de": [
+                160,
+                120
+              ],
+              "a": [
+                252,
+                82
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "rsection",
+              "zone": true,
+              "de": [
+                160,
+                82
+              ],
+              "a": [
+                252,
+                82
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 120,
+              "r": 3,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 138,
+              "texte": "O",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 155,
+              "y": 108,
+              "texte": "d = 5 cm",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 222,
+              "y": 122,
+              "texte": "R = 13 cm",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 208,
+              "y": 68,
+              "texte": "r = ?",
+              "taille": "petit",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche le segment qui représente la **distance d** entre le centre O et le plan de coupe.",
+          "reponse": [
+            "distance"
+          ],
+          "aide": "Cherche le segment vertical : il joint O au centre du cercle de section.",
+          "explication": "La distance d est le segment **vertical** : il est perpendiculaire au plan de coupe."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le triangle formé par d, r et R est rectangle. Calcule **r**.",
+          "reponse": 12,
+          "unite": "cm",
+          "aide": "L’hypoténuse est R (13 cm). Pythagore : r² = R² − d².",
+          "explication": "r² = 13² − 5² = 169 − 25 = 144, donc r = **12 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire du cercle de section, **arrondie au dixième** de cm² ?",
+          "reponse": 452.4,
+          "tolerance": 0.05,
+          "unite": "cm²",
+          "aide": "Aire d’un disque : π × r². Utilise r = 12.",
+          "explication": "A = π × 12² = 144π ≈ **452,4 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire de la surface du globe entier, **arrondie au dixième** de cm² ?",
+          "reponse": 2123.7,
+          "tolerance": 0.05,
+          "unite": "cm²",
+          "aide": "Pour la sphère, c’est R qui compte : A = 4 × π × R².",
+          "explication": "A = 4 × π × 13² = 676π ≈ **2 123,7 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On éloigne le plan jusqu’à d = 12 cm. Quel est alors le rayon du cercle de section ?",
+          "reponse": 5,
+          "unite": "cm",
+          "aide": "Même triangle rectangle, mais avec d = 12.",
+          "explication": "r² = 13² − 12² = 25, donc r = **5 cm** : plus le plan s’éloigne du centre, plus le cercle rétrécit."
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois coups de couteau",
+      "competence": "geometrie",
+      "situation": "Pour un atelier de cuisine, Sacha tranche une boîte de conserve (un cylindre) et un cône de pâte à modeler. Chaque coupe est représentée par un trait pointillé corail.",
+      "documents": [
+        {
+          "id": "solides",
+          "type": "schema",
+          "titre": "Les trois coupes",
+          "largeur": 330,
+          "hauteur": 170,
+          "elements": [
+            {
+              "forme": "rect",
+              "id": "cylA",
+              "zone": true,
+              "x": 25,
+              "y": 40,
+              "l": 60,
+              "h": 70,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 55,
+              "cy": 40,
+              "rx": 30,
+              "ry": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                15,
+                75
+              ],
+              "a": [
+                95,
+                75
+              ],
+              "style": "pointilles",
+              "teinte": "corail"
+            },
+            {
+              "forme": "texte",
+              "x": 55,
+              "y": 140,
+              "texte": "A",
+              "gras": true,
+              "taille": "grand"
+            },
+            {
+              "forme": "rect",
+              "id": "cylB",
+              "zone": true,
+              "x": 135,
+              "y": 40,
+              "l": 60,
+              "h": 70,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 165,
+              "cy": 40,
+              "rx": 30,
+              "ry": 10,
+              "teinte": "vert",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                165,
+                22
+              ],
+              "a": [
+                165,
+                122
+              ],
+              "style": "pointilles",
+              "teinte": "corail"
+            },
+            {
+              "forme": "texte",
+              "x": 165,
+              "y": 140,
+              "texte": "B",
+              "gras": true,
+              "taille": "grand"
+            },
+            {
+              "forme": "polygone",
+              "id": "conC",
+              "zone": true,
+              "points": [
+                [
+                  245,
+                  115
+                ],
+                [
+                  305,
+                  115
+                ],
+                [
+                  275,
+                  25
+                ]
+              ],
+              "teinte": "ambre",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                255,
+                82
+              ],
+              "a": [
+                295,
+                82
+              ],
+              "style": "pointilles",
+              "teinte": "corail"
+            },
+            {
+              "forme": "texte",
+              "x": 275,
+              "y": 140,
+              "texte": "C",
+              "gras": true,
+              "taille": "grand"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "solides",
+          "enonce": "Touche le solide dont la coupe fait apparaître un **rectangle**.",
+          "reponse": [
+            "cylB"
+          ],
+          "aide": "Un plan qui contient l’axe d’un cylindre le coupe de haut en bas.",
+          "explication": "C’est le **solide B** : le plan contient l’axe, la section est un rectangle (hauteur × diamètre)."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque coupe à la section obtenue.",
+          "paires": [
+            [
+              "A : cylindre coupé parallèlement à la base",
+              "Un disque de même rayon"
+            ],
+            [
+              "B : cylindre coupé par un plan contenant l’axe",
+              "Un rectangle"
+            ],
+            [
+              "C : cône coupé parallèlement à la base",
+              "Un disque plus petit que la base"
+            ]
+          ],
+          "aide": "Les coupes parallèles à la base donnent un disque ; celle qui contient l’axe donne un rectangle.",
+          "explication": "A donne un **disque de même rayon**, B un **rectangle**, C un **disque plus petit** que la base (c’est une réduction)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La boîte A a pour rayon 4 cm. Quelle est l’aire de la section de la coupe A, **arrondie au dixième** de cm² ?",
+          "reponse": 50.3,
+          "tolerance": 0.05,
+          "unite": "cm²",
+          "aide": "La section A est un disque de rayon 4 cm : aire = π × R².",
+          "explication": "π × 4² = 16π ≈ **50,3 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La boîte B mesure 10 cm de haut et a un rayon de 4 cm. Quelle est l’aire de sa section rectangulaire ?",
+          "reponse": 80,
+          "unite": "cm²",
+          "aide": "Le rectangle a pour côtés la hauteur et le diamètre (attention : pas le rayon).",
+          "explication": "Largeur = diamètre = 8 cm ; aire = 8 × 10 = **80 cm²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La pyramide de la maquette",
+      "competence": "modeliser",
+      "situation": "Pour une maquette, Hugo sculpte une pyramide à base carrée de 12 cm de côté et de hauteur 15 cm. Il la coupe par un plan parallèle à la base, à 6 cm du sommet, et garde le morceau du haut.",
+      "documents": [
+        {
+          "id": "pyr",
+          "type": "schema",
+          "titre": "La pyramide vue de face",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  160,
+                  20
+                ],
+                [
+                  50,
+                  190
+                ],
+                [
+                  270,
+                  190
+                ]
+              ],
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "polygone",
+              "id": "petite",
+              "zone": true,
+              "points": [
+                [
+                  160,
+                  20
+                ],
+                [
+                  116,
+                  88
+                ],
+                [
+                  204,
+                  88
+                ]
+              ],
+              "teinte": "violet",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                88
+              ],
+              "a": [
+                280,
+                88
+              ],
+              "style": "pointilles",
+              "teinte": "corail"
+            },
+            {
+              "forme": "ligne",
+              "id": "hpetit",
+              "zone": true,
+              "de": [
+                160,
+                20
+              ],
+              "a": [
+                160,
+                88
+              ],
+              "fleche": "deux",
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 58,
+              "texte": "6 cm",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 150,
+              "texte": "hauteur : 15 cm",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 210,
+              "texte": "base carrée de côté 12 cm",
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pyr",
+          "enonce": "Touche la hauteur de la **petite pyramide** (celle qu’on garde).",
+          "reponse": [
+            "hpetit"
+          ],
+          "aide": "Elle va du sommet jusqu’au plan de coupe.",
+          "explication": "C’est le segment de **6 cm**, entre le sommet et le plan de coupe."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le coefficient de réduction k (petite hauteur ÷ grande hauteur) ?",
+          "reponse": 0.4,
+          "aide": "k = 6 ÷ 15. Tu peux aussi répondre avec la fraction simplifiée.",
+          "explication": "k = 6 ÷ 15 = 2/5 = **0,4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le côté du carré de la section ?",
+          "reponse": 4.8,
+          "unite": "cm",
+          "aide": "Les longueurs sont multipliées par k.",
+          "explication": "12 × 0,4 = **4,8 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le volume de la grande pyramide est 720 cm³. Quel est le volume de la petite ?",
+          "reponse": 46.08,
+          "tolerance": 0.01,
+          "unite": "cm³",
+          "aide": "Les volumes sont multipliés par k³ = 0,4 × 0,4 × 0,4.",
+          "explication": "0,4³ = 0,064 et 720 × 0,064 = **46,08 cm³**. (Contrôle : (1/3) × 4,8² × 6 = 46,08.)"
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le verre conique",
+      "competence": "modeliser",
+      "situation": "Un verre a la forme d’un cône de 12 cm de hauteur, dont l’ouverture a un rayon de 5 cm, pointe en bas. Léa le remplit de sirop jusqu’au repère D (9 cm de hauteur de liquide). Le liquide forme un petit cône.",
+      "documents": [
+        {
+          "id": "verre",
+          "type": "schema",
+          "titre": "Le verre de Léa",
+          "largeur": 320,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  100,
+                  40
+                ],
+                [
+                  220,
+                  40
+                ],
+                [
+                  160,
+                  190
+                ]
+              ],
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "polygone",
+              "id": "liquide",
+              "zone": true,
+              "points": [
+                [
+                  115,
+                  77.5
+                ],
+                [
+                  205,
+                  77.5
+                ],
+                [
+                  160,
+                  190
+                ]
+              ],
+              "teinte": "rose",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                40
+              ],
+              "a": [
+                220,
+                40
+              ],
+              "fleche": "deux",
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 190,
+              "y": 30,
+              "texte": "5 cm",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 88,
+              "y": 120,
+              "texte": "12 cm",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 222,
+              "y": 140,
+              "texte": "9 cm",
+              "taille": "petit",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "reperes",
+          "type": "tableau",
+          "titre": "Les repères gravés sur le verre",
+          "colonnes": [
+            "Repère",
+            "A",
+            "B",
+            "C",
+            "D",
+            "Bord"
+          ],
+          "lignes": [
+            [
+              "Hauteur de liquide (cm)",
+              3,
+              6,
+              8,
+              9,
+              12
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "verre",
+          "enonce": "Touche le **petit cône** formé par le sirop.",
+          "reponse": [
+            "liquide"
+          ],
+          "aide": "C’est la partie colorée, qui part de la pointe du verre.",
+          "explication": "Le sirop occupe un **cône réduit** du verre, de même pointe et de même forme."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume du verre rempli à ras bord, **arrondi à l’unité** de cm³ ?",
+          "reponse": 314,
+          "tolerance": 0.5,
+          "unite": "cm³",
+          "aide": "Volume d’un cône : (1/3) × π × R² × h, avec R = 5 et h = 12.",
+          "explication": "V = (1/3) × π × 25 × 12 = 100π ≈ **314 cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le coefficient de réduction k du petit cône de sirop ?",
+          "reponse": 0.75,
+          "aide": "k = hauteur du sirop ÷ hauteur du verre = 9 ÷ 12.",
+          "explication": "k = 9 ÷ 12 = **0,75**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rayon de la surface du sirop ?",
+          "reponse": 3.75,
+          "unite": "cm",
+          "aide": "Les longueurs sont multipliées par k.",
+          "explication": "5 × 0,75 = **3,75 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume de sirop, **arrondi à l’unité** de cm³ ? (Garde la valeur exacte 100π du grand cône dans ton calcul.)",
+          "reponse": 133,
+          "tolerance": 0.5,
+          "unite": "cm³",
+          "aide": "Volume du petit cône = volume du grand × k³, avec k³ = 0,75³ = 0,421875.",
+          "explication": "100π × 0,421875 ≈ 132,5, soit **133 cm³** (environ 13 cl)."
+        },
+        {
+          "type": "zone",
+          "document": "reperes",
+          "enonce": "Quel repère correspond à un sirop à **un quart** de la hauteur du verre ?",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Un quart de 12 cm, c’est 12 ÷ 4.",
+          "explication": "12 ÷ 4 = 3 cm : c’est le **repère A**."
+        }
+      ]
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un triangle qui grandit",
+      "competence": "geometrie",
+      "situation": "Zoé agrandit un petit triangle ABC en appliquant l’homothétie de centre O et de rapport 2. Les images sont notées A′, B′ et C′. Un carreau mesure 1 cm ; le triangle ABC a pour aire 1 cm².",
+      "documents": [
+        {
+          "id": "fig",
+          "type": "figure",
+          "titre": "Le triangle et son agrandissement",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 9,
+            "ymin": 0,
+            "ymax": 7
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "O",
+              "x": 1,
+              "y": 1,
+              "nom": "O",
+              "position": "so"
+            },
+            {
+              "id": "A",
+              "x": 3,
+              "y": 1,
+              "nom": "A",
+              "position": "s"
+            },
+            {
+              "id": "B",
+              "x": 3,
+              "y": 3,
+              "nom": "B",
+              "position": "no"
+            },
+            {
+              "id": "C",
+              "x": 4,
+              "y": 1,
+              "nom": "C",
+              "position": "s"
+            },
+            {
+              "id": "A2",
+              "x": 5,
+              "y": 1,
+              "nom": "A′",
+              "position": "s"
+            },
+            {
+              "id": "B2",
+              "x": 5,
+              "y": 5,
+              "nom": "B′",
+              "position": "no"
+            },
+            {
+              "id": "C2",
+              "x": 7,
+              "y": 1,
+              "nom": "C′",
+              "position": "s"
+            }
+          ],
+          "segments": [
+            {
+              "de": "O",
+              "a": "C2",
+              "style": "pointilles",
+              "teinte": "gris"
+            },
+            {
+              "de": "O",
+              "a": "B2",
+              "style": "pointilles",
+              "teinte": "gris"
+            }
+          ],
+          "polygones": [
+            {
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "teinte": "violet",
+              "motif": "plein"
+            },
+            {
+              "sommets": [
+                "A2",
+                "B2",
+                "C2"
+              ],
+              "teinte": "jaune",
+              "motif": "clair"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "A",
+              "de": "C",
+              "a": "B",
+              "droit": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche le point **B′**, l’image de B.",
+          "reponse": [
+            "B2"
+          ],
+          "aide": "B′ est sur la demi-droite qui part de O et passe par B, deux fois plus loin de O.",
+          "explication": "B′ est le sommet du haut du grand triangle : il est sur la droite (OB), à une distance de O **double** de celle de B."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le côté [AB] mesure 2 cm. Combien mesure [A′B′] ?",
+          "reponse": 4,
+          "unite": "cm",
+          "aide": "Les longueurs sont multipliées par le rapport, ici 2.",
+          "explication": "2 × 2 = **4 cm**. Tu peux le vérifier en comptant les carreaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire du grand triangle A′B′C′ ?",
+          "reponse": 4,
+          "unite": "cm²",
+          "aide": "Les aires sont multipliées par k², pas par k.",
+          "explication": "k² = 2² = 4, donc 1 × 4 = **4 cm²**. Les longueurs doublent, l’aire est multipliée par 4."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’angle en A est droit. Que dire de l’angle en A′ ?",
+          "options": [
+            "Il mesure 90° : une homothétie conserve la mesure des angles",
+            "Il mesure 180° : l’homothétie double les angles",
+            "Il mesure 45° : l’homothétie divise les angles par deux",
+            "On ne peut pas le savoir : l’homothétie déforme les angles"
+          ],
+          "reponse": 0,
+          "aide": "Une homothétie agrandit sans déformer.",
+          "explication": "L’homothétie **conserve les angles** : l’angle en A′ mesure 90°, comme en A."
+        }
+      ]
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le rapport négatif",
+      "competence": "calculer",
+      "situation": "Sur une droite graduée, on applique l’homothétie de centre O (le point d’abscisse 0) et de rapport −1,5. Les points A (abscisse 2) et B (abscisse −4) sont déjà placés. Un petit triangle lié à la figure est décrit dans le tableau.",
+      "documents": [
+        {
+          "id": "droite",
+          "type": "droite",
+          "titre": "La droite graduée (centre O en 0)",
+          "min": -6,
+          "max": 6,
+          "pas": 1,
+          "division": 2,
+          "points": [
+            {
+              "id": "a",
+              "valeur": 2,
+              "nom": "A"
+            },
+            {
+              "id": "b",
+              "valeur": -4,
+              "nom": "B",
+              "teinte": "corail"
+            }
+          ],
+          "graduationsCliquables": true
+        },
+        {
+          "id": "tab",
+          "type": "tableau",
+          "titre": "Le triangle MNP avant et après",
+          "colonnes": [
+            "Grandeur",
+            "Avant",
+            "Après (rapport −1,5)"
+          ],
+          "lignes": [
+            [
+              "Côté [MN] (cm)",
+              4,
+              "?"
+            ],
+            [
+              "Aire (cm²)",
+              10,
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "droite",
+          "enonce": "Touche la graduation où se trouve l’image **A′** de A.",
+          "reponse": [
+            "v-3"
+          ],
+          "aide": "Multiplie l’abscisse de A par −1,5. Le signe moins envoie A de l’autre côté de O.",
+          "explication": "2 × (−1,5) = −3 : **A′ est en −3**, de l’autre côté de O."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’abscisse de l’image **B′** de B ?",
+          "reponse": 6,
+          "aide": "(−4) × (−1,5) : un moins par un moins donne un plus.",
+          "explication": "(−4) × (−1,5) = **6** : B était à gauche de O, B′ est à droite."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète le tableau : que vaut le côté [MN] après l’homothétie ?",
+          "reponse": 6,
+          "unite": "cm",
+          "aide": "Les longueurs sont multipliées par la valeur absolue du rapport, donc par 1,5.",
+          "explication": "4 × 1,5 = **6 cm** (une longueur n’est jamais négative)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète le tableau : que vaut l’aire après l’homothétie ?",
+          "reponse": 22.5,
+          "unite": "cm²",
+          "aide": "Les aires sont multipliées par k² = (−1,5)². Calcule ce carré d’abord.",
+          "explication": "(−1,5)² = 2,25 et 10 × 2,25 = **22,5 cm²**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque propriété : l’homothétie la conserve-t-elle, ou la multiplie-t-elle ?",
+          "categories": [
+            "Conservé",
+            "Multiplié"
+          ],
+          "items": [
+            [
+              "L’alignement des points",
+              0
+            ],
+            [
+              "Les longueurs",
+              1
+            ],
+            [
+              "Les angles",
+              0
+            ],
+            [
+              "Les aires",
+              1
+            ],
+            [
+              "Le parallélisme",
+              0
+            ]
+          ],
+          "aide": "Ce qui change, c’est la taille. La forme, elle, ne change pas.",
+          "explication": "Sont **conservés** : alignement, angles, parallélisme. Sont **multipliés** : longueurs (par |k|) et aires (par k²)."
+        }
+      ]
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Retrouver le rapport",
+      "competence": "raisonner",
+      "situation": "Un élève a tracé l’image A′B′C′ du triangle ABC par une homothétie de centre O, mais il a oublié de noter le rapport. Un carreau mesure 1 cm. On veut retrouver ce rapport, puis l’utiliser pour une statue réduite.",
+      "documents": [
+        {
+          "id": "fig",
+          "type": "figure",
+          "titre": "Le triangle ABC et son image",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 12,
+            "ymin": 0,
+            "ymax": 8
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "O",
+              "x": 6,
+              "y": 4,
+              "nom": "O",
+              "position": "ne"
+            },
+            {
+              "id": "A",
+              "x": 10,
+              "y": 4,
+              "nom": "A",
+              "position": "se"
+            },
+            {
+              "id": "B",
+              "x": 10,
+              "y": 6,
+              "nom": "B",
+              "position": "ne"
+            },
+            {
+              "id": "C",
+              "x": 8,
+              "y": 4,
+              "nom": "C",
+              "position": "s"
+            },
+            {
+              "id": "A2",
+              "x": 4,
+              "y": 4,
+              "nom": "A′",
+              "position": "no"
+            },
+            {
+              "id": "B2",
+              "x": 4,
+              "y": 3,
+              "nom": "B′",
+              "position": "so"
+            },
+            {
+              "id": "C2",
+              "x": 5,
+              "y": 4,
+              "nom": "C′",
+              "position": "s"
+            }
+          ],
+          "segments": [
+            {
+              "de": "A",
+              "a": "A2",
+              "style": "pointilles",
+              "teinte": "gris"
+            },
+            {
+              "de": "B",
+              "a": "B2",
+              "style": "pointilles",
+              "teinte": "gris"
+            }
+          ],
+          "polygones": [
+            {
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "teinte": "violet",
+              "motif": "plein"
+            },
+            {
+              "sommets": [
+                "A2",
+                "B2",
+                "C2"
+              ],
+              "teinte": "jaune",
+              "motif": "plein"
+            }
+          ]
+        },
+        {
+          "id": "statue",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Statuette « Le penseur »",
+          "sousTitre": "Maquette à l’échelle de la réduction",
+          "emoji": "🗿",
+          "teinte": "brun",
+          "lignes": [
+            {
+              "texte": "Volume de la statue d’origine",
+              "valeur": "40 000 cm³"
+            },
+            {
+              "texte": "Hauteur de la statue d’origine",
+              "valeur": "60 cm"
+            }
+          ],
+          "pied": "La maquette est une réduction de rapport 1/2 en valeur absolue."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **rapport k** de cette homothétie ? (Compare OA et OA′, et regarde de quel côté de O se trouve A′.)",
+          "reponse": -0.5,
+          "aide": "OA = 4 cm et OA′ = 2 cm. A′ et A sont-ils du même côté de O ?",
+          "explication": "OA′ ÷ OA = 2 ÷ 4 = 0,5, et A′ est de l’autre côté de O : **k = −0,5**."
+        },
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche le point **B′**, image de B.",
+          "reponse": [
+            "B2"
+          ],
+          "aide": "B′ est sur la droite (OB), de l’autre côté de O.",
+          "explication": "B′ est en (4 ; 3) : moitié moins loin de O que B, et de l’autre côté."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le triangle ABC a pour aire 2 cm². Quelle est l’aire de A′B′C′ ?",
+          "reponse": 0.5,
+          "unite": "cm²",
+          "aide": "Les aires sont multipliées par k², soit (−0,5)².",
+          "explication": "(−0,5)² = 0,25 et 2 × 0,25 = **0,5 cm²**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Avec le **même** centre O mais le rapport **+0,5**, quelle serait l’image A″ de A ?",
+          "options": [
+            "(8 ; 4)",
+            "(4 ; 4)",
+            "(2 ; 4)",
+            "(7 ; 4)"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Avec k positif, l’image est du même côté de O que A, deux fois plus près.",
+          "explication": "A est à 4 carreaux à droite de O : A″ est à 2 carreaux à droite de O, soit en **(8 ; 4)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La maquette est une réduction de rapport 1/2. Quel est son volume ?",
+          "reponse": 5000,
+          "unite": "cm³",
+          "aide": "Les volumes sont multipliés par k³ = (1/2)³.",
+          "explication": "(1/2)³ = 1/8 et 40 000 ÷ 8 = **5 000 cm³**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pan de toit",
+      "competence": "geometrie",
+      "situation": "Sur le plan d’une charpente, le triangle ABC est rectangle en A. Une poutre [MN] est posée parallèlement à [BC]. Un carreau mesure 1 cm.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "figure",
+          "titre": "Le plan de la charpente",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 10,
+            "ymin": 0,
+            "ymax": 8
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "A",
+              "x": 1,
+              "y": 1,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 9,
+              "y": 1,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 1,
+              "y": 7,
+              "nom": "C",
+              "position": "no"
+            },
+            {
+              "id": "M",
+              "x": 5,
+              "y": 1,
+              "nom": "M",
+              "position": "s"
+            },
+            {
+              "id": "N",
+              "x": 1,
+              "y": 4,
+              "nom": "N",
+              "position": "o"
+            }
+          ],
+          "segments": [
+            {
+              "de": "A",
+              "a": "M",
+              "longueur": "4 cm"
+            },
+            {
+              "de": "M",
+              "a": "B"
+            },
+            {
+              "de": "A",
+              "a": "N"
+            },
+            {
+              "de": "N",
+              "a": "C"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C",
+              "longueur": "10 cm"
+            },
+            {
+              "id": "mn",
+              "de": "M",
+              "a": "N"
+            }
+          ],
+          "textes": [
+            {
+              "x": 6.4,
+              "y": 0.4,
+              "texte": "AB = 8 cm"
+            },
+            {
+              "x": 2.1,
+              "y": 5.8,
+              "texte": "AC = 6 cm"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche le segment **parallèle à [BC]**.",
+          "reponse": [
+            "mn"
+          ],
+          "aide": "La poutre est posée parallèlement à [BC] : c’est le segment qui ne touche pas C ni B.",
+          "explication": "C’est **[MN]** : le théorème de Thalès peut s’appliquer car (MN) // (BC)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle égalité donne le théorème de Thalès dans cette figure ?",
+          "options": [
+            "AM/AB = AN/AC = MN/BC",
+            "AM/AB = AC/AN = BC/MN",
+            "AM/MB = AN/AC = MN/BC",
+            "AB/AM = AN/AC = MN/BC"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Chaque quotient part du sommet commun A et met le petit segment au-dessus du grand.",
+          "explication": "On écrit **AM/AB = AN/AC = MN/BC** : petit sur grand, en partant de A."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **AN**.",
+          "reponse": 3,
+          "unite": "cm",
+          "aide": "Utilise AM/AB = AN/AC, soit 4/8 = AN/6.",
+          "explication": "AN = 4 × 6 ÷ 8 = **3 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **MN**.",
+          "reponse": 5,
+          "unite": "cm",
+          "aide": "Utilise AM/AB = MN/BC, soit 4/8 = MN/10.",
+          "explication": "MN = 4 × 10 ÷ 8 = **5 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La largeur de l’étang",
+      "competence": "modeliser",
+      "situation": "Inès veut connaître la largeur AB d’un étang, qu’elle ne peut pas traverser. Elle plante un piquet en O, puis place C et D de l’autre côté pour que A, O, D soient alignés, que B, O, C soient alignés et que (AB) soit parallèle à (CD).",
+      "documents": [
+        {
+          "id": "etang",
+          "type": "figure",
+          "titre": "Le schéma de l’étang (pas à l’échelle des mesures)",
+          "cadre": {
+            "xmin": -1,
+            "xmax": 11,
+            "ymin": -1,
+            "ymax": 9
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 0,
+              "y": 0,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 0,
+              "y": 8,
+              "nom": "B",
+              "position": "no"
+            },
+            {
+              "id": "O",
+              "x": 8,
+              "y": 4,
+              "nom": "O",
+              "position": "n"
+            },
+            {
+              "id": "C",
+              "x": 10,
+              "y": 3,
+              "nom": "C",
+              "position": "se"
+            },
+            {
+              "id": "D",
+              "x": 10,
+              "y": 5,
+              "nom": "D",
+              "position": "ne"
+            }
+          ],
+          "segments": [
+            {
+              "de": "A",
+              "a": "O"
+            },
+            {
+              "de": "O",
+              "a": "D"
+            },
+            {
+              "de": "B",
+              "a": "O"
+            },
+            {
+              "de": "O",
+              "a": "C"
+            },
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B"
+            },
+            {
+              "id": "cd",
+              "de": "C",
+              "a": "D"
+            }
+          ],
+          "textes": [
+            {
+              "x": 3.4,
+              "y": 8.3,
+              "texte": "OA = 40 m  ·  OD = 10 m"
+            },
+            {
+              "x": 3.4,
+              "y": 7.6,
+              "texte": "OC = 7,5 m  ·  CD = 6 m"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etang",
+          "multiple": true,
+          "enonce": "Touche les **deux segments parallèles**.",
+          "reponse": [
+            "ab",
+            "cd"
+          ],
+          "aide": "Relis la situation : quelle droite est parallèle à (CD) ?",
+          "explication": "**[AB] et [CD]** sont parallèles : c’est l’hypothèse qui permet d’utiliser Thalès."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle cette configuration de Thalès, où A et D (comme B et C) sont de part et d’autre de O ?",
+          "options": [
+            "Le papillon",
+            "Le triangle emboîté",
+            "La pyramide",
+            "Le losange"
+          ],
+          "reponse": 0,
+          "aide": "Les deux triangles OAB et ODC se touchent par un sommet, comme les ailes d’un insecte.",
+          "explication": "C’est la configuration **papillon** : les triangles OAB et ODC ont le sommet O en commun, de part et d’autre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le quotient **OA ÷ OD**.",
+          "reponse": 4,
+          "aide": "OA = 40 m et OD = 10 m.",
+          "explication": "40 ÷ 10 = **4**. Ce sera le rapport commun des quotients."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **OB**.",
+          "reponse": 30,
+          "unite": "m",
+          "aide": "Thalès : OA/OD = OB/OC. Utilise OC = 7,5 m.",
+          "explication": "OB = OC × 4 = 7,5 × 4 = **30 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la largeur **AB** de l’étang.",
+          "reponse": 24,
+          "unite": "m",
+          "aide": "Thalès : OA/OD = AB/DC, avec DC = 6 m.",
+          "explication": "AB = 6 × 4 = **24 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les étagères sont-elles droites ?",
+      "competence": "raisonner",
+      "situation": "Jade monte trois étagères. Pour chacune, les points A, M, B sont alignés dans cet ordre, de même que A, N, C. Elle mesure les longueurs (en cm) et veut vérifier que sa planche [MN] est bien parallèle à [BC].",
+      "documents": [
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Les mesures de Jade (en cm)",
+          "colonnes": [
+            "Étagère",
+            "AM",
+            "AB",
+            "AN",
+            "AC"
+          ],
+          "lignes": [
+            [
+              "E1",
+              3,
+              5,
+              4.5,
+              7.5
+            ],
+            [
+              "E2",
+              2.4,
+              6,
+              3.5,
+              9
+            ],
+            [
+              "E3",
+              5,
+              8,
+              7.5,
+              12
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "fiche",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Étagère E3",
+          "sousTitre": "Notice de montage",
+          "emoji": "📏",
+          "teinte": "ambre",
+          "lignes": [
+            {
+              "texte": "Planche du bas [BC]",
+              "valeur": "20 cm",
+              "id": "bc"
+            },
+            {
+              "texte": "Planche du haut [MN]",
+              "valeur": "à calculer"
+            }
+          ],
+          "pied": "Si (MN) // (BC), on peut utiliser Thalès."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Pour E1, calcule le quotient **AM ÷ AB**.",
+          "reponse": 0.6,
+          "aide": "3 ÷ 5.",
+          "explication": "3 ÷ 5 = **0,6**. Et AN ÷ AC = 4,5 ÷ 7,5 = 0,6 aussi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour E2, calcule **AN ÷ AC**, arrondi au millième.",
+          "reponse": 0.389,
+          "tolerance": 0.0005,
+          "aide": "3,5 ÷ 9. (Pour comparer, AM ÷ AB = 2,4 ÷ 6 = 0,4.)",
+          "explication": "3,5 ÷ 9 ≈ **0,389**, alors que AM ÷ AB = 0,4 : les deux quotients sont différents."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque étagère : (MN) est-elle parallèle à (BC) ?",
+          "categories": [
+            "Parallèles",
+            "Pas parallèles"
+          ],
+          "items": [
+            [
+              "E1",
+              0
+            ],
+            [
+              "E2",
+              1
+            ],
+            [
+              "E3",
+              0
+            ]
+          ],
+          "aide": "E3 : calcule 5 ÷ 8 et 7,5 ÷ 12 (ou fais les produits en croix).",
+          "explication": "E1 : 0,6 = 0,6 ; E3 : 0,625 = 0,625, donc parallèles. E2 : 0,4 ≠ 0,389, donc **pas parallèles**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour E2, quelle propriété permet de conclure que (MN) n’est pas parallèle à (BC) ?",
+          "options": [
+            "La contraposée du théorème de Thalès",
+            "La réciproque du théorème de Thalès",
+            "Le théorème de Pythagore",
+            "La trigonométrie"
+          ],
+          "reponse": 0,
+          "aide": "Les quotients sont différents : que peut-on déduire pour les droites ?",
+          "explication": "Quand les quotients sont **différents**, la contraposée de Thalès prouve que les droites ne sont pas parallèles. La réciproque, elle, sert quand ils sont égaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour E3, (MN) // (BC). Calcule la longueur de la planche **MN**.",
+          "reponse": 12.5,
+          "unite": "cm",
+          "aide": "Thalès : AM/AB = MN/BC, soit 5/8 = MN/20.",
+          "explication": "MN = 5 × 20 ÷ 8 = **12,5 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le triangle de la charpente",
+      "competence": "geometrie",
+      "situation": "Sur un plan, Théo repère le triangle ABC rectangle en B. On regarde tout depuis l’angle en A. Un carreau mesure 1 cm.",
+      "documents": [
+        {
+          "id": "tri",
+          "type": "figure",
+          "titre": "Le triangle ABC rectangle en B",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 10,
+            "ymin": 0,
+            "ymax": 8
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "A",
+              "x": 1,
+              "y": 1,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 9,
+              "y": 1,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 9,
+              "y": 7,
+              "nom": "C",
+              "position": "ne"
+            }
+          ],
+          "segments": [
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B",
+              "longueur": "8 cm"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C",
+              "longueur": "6 cm"
+            },
+            {
+              "id": "ac",
+              "de": "A",
+              "a": "C",
+              "longueur": "10 cm"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "B",
+              "de": "A",
+              "a": "C",
+              "droit": true
+            },
+            {
+              "sommet": "A",
+              "de": "B",
+              "a": "C",
+              "mesure": "α"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tri",
+          "enonce": "Touche le côté **opposé à l’angle α** (en A).",
+          "reponse": [
+            "bc"
+          ],
+          "aide": "Le côté opposé fait face à l’angle : il ne touche pas le sommet A.",
+          "explication": "C’est **[BC]** : il fait face à l’angle en A. [AB] est l’adjacent et [AC] l’hypoténuse."
+        },
+        {
+          "type": "zone",
+          "document": "tri",
+          "enonce": "Touche l’**hypoténuse**.",
+          "reponse": [
+            "ac"
+          ],
+          "aide": "Elle est en face de l’angle droit, et c’est le plus long côté.",
+          "explication": "C’est **[AC]**, opposé à l’angle droit en B (10 cm)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **cos α** (adjacent ÷ hypoténuse).",
+          "reponse": 0.8,
+          "aide": "Le côté adjacent à α est [AB] (8 cm).",
+          "explication": "cos α = AB ÷ AC = 8 ÷ 10 = **0,8**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **tan α** (opposé ÷ adjacent).",
+          "reponse": 0.75,
+          "aide": "Opposé : 6 cm ; adjacent : 8 cm.",
+          "explication": "tan α = BC ÷ AB = 6 ÷ 8 = **0,75**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La rampe du gymnase",
+      "competence": "modeliser",
+      "situation": "Le gymnase installe une rampe d’accès de 5 m de long, inclinée de 6° par rapport au sol. Le règlement (imaginé pour l’exercice) limite la hauteur de la marche à franchir à 50 cm.",
+      "documents": [
+        {
+          "id": "rampe",
+          "type": "schema",
+          "titre": "La rampe vue de côté",
+          "largeur": 320,
+          "hauteur": 160,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  30,
+                  130
+                ],
+                [
+                  290,
+                  130
+                ],
+                [
+                  290,
+                  100
+                ]
+              ],
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "id": "longueur",
+              "zone": true,
+              "de": [
+                30,
+                130
+              ],
+              "a": [
+                290,
+                100
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "hauteur",
+              "zone": true,
+              "de": [
+                290,
+                130
+              ],
+              "a": [
+                290,
+                100
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "sol",
+              "zone": true,
+              "de": [
+                30,
+                130
+              ],
+              "a": [
+                290,
+                130
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 123,
+              "texte": "6°",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 100,
+              "texte": "5 m",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 280,
+              "y": 117,
+              "texte": "h ?",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 150,
+              "texte": "longueur au sol ?",
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rampe",
+          "enonce": "Touche le côté **opposé à l’angle de 6°**.",
+          "reponse": [
+            "hauteur"
+          ],
+          "aide": "Le côté opposé fait face à l’angle : c’est la hauteur à franchir.",
+          "explication": "Le côté opposé est la **hauteur h** : c’est elle que le règlement limite."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle formule permet de calculer h ?",
+          "options": [
+            "sin 6° = h ÷ 5",
+            "cos 6° = h ÷ 5",
+            "tan 6° = 5 ÷ h",
+            "sin 6° = 5 ÷ h"
+          ],
+          "reponse": 0,
+          "aide": "On connaît l’hypoténuse (5 m) et on cherche l’opposé : quel rapport relie les deux ?",
+          "explication": "Opposé et hypoténuse : c’est le **sinus**. sin 6° = h ÷ 5, donc h = 5 × sin 6°."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule h, **en cm et arrondi à l’unité** (calculatrice en degrés).",
+          "reponse": 52,
+          "tolerance": 0.5,
+          "unite": "cm",
+          "aide": "sin 6° ≈ 0,1045. Multiplie par 5 puis convertis les mètres en centimètres.",
+          "explication": "h = 5 × sin 6° ≈ 0,5226 m, soit **52 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur de la rampe **au sol**, arrondie au cm, **en mètres**.",
+          "reponse": 4.97,
+          "tolerance": 0.005,
+          "unite": "m",
+          "aide": "Le côté au sol est adjacent à l’angle : utilise le cosinus.",
+          "explication": "cos 6° = sol ÷ 5, donc sol = 5 × cos 6° ≈ **4,97 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La rampe respecte-t-elle le règlement (hauteur d’au plus 50 cm) ?",
+          "options": [
+            "Non : 52 cm est supérieur à 50 cm",
+            "Oui : 52 cm est inférieur à 50 cm",
+            "Oui : 6° est un petit angle",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Compare la hauteur calculée à la limite.",
+          "explication": "h ≈ 52 cm dépasse les 50 cm autorisés : la rampe **n’est pas conforme**, il faudrait un angle un peu plus petit."
+        }
+      ]
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le toit de l’abri",
+      "competence": "modeliser",
+      "situation": "Un abri de jardin a un toit à deux pans. Vu de face, chaque demi-toit est un triangle rectangle : la demi-largeur de l’abri vaut 4 m et la hauteur du faîtage 1,8 m. L’abri mesure 10 m de long.",
+      "documents": [
+        {
+          "id": "toit",
+          "type": "schema",
+          "titre": "Le demi-toit vu de face",
+          "largeur": 320,
+          "hauteur": 190,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  40,
+                  150
+                ],
+                [
+                  280,
+                  150
+                ],
+                [
+                  280,
+                  50
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "id": "rampant",
+              "zone": true,
+              "de": [
+                40,
+                150
+              ],
+              "a": [
+                280,
+                50
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "demi",
+              "zone": true,
+              "de": [
+                40,
+                150
+              ],
+              "a": [
+                280,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "id": "faitage",
+              "zone": true,
+              "de": [
+                280,
+                150
+              ],
+              "a": [
+                280,
+                50
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 170,
+              "texte": "4 m",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 105,
+              "texte": "1,8 m",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 142,
+              "texte": "α ?",
+              "taille": "petit",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 88,
+              "texte": "rampant ?",
+              "taille": "petit"
+            }
+          ]
+        },
+        {
+          "id": "devis",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Devis couverture",
+          "sousTitre": "Abri de jardin",
+          "emoji": "🏠",
+          "teinte": "ambre",
+          "lignes": [
+            {
+              "texte": "Longueur de l’abri",
+              "valeur": "10 m"
+            },
+            {
+              "texte": "Nombre de pans",
+              "valeur": "2"
+            },
+            {
+              "texte": "Tuiles",
+              "valeur": "pose comprise"
+            }
+          ],
+          "pied": "La surface d’un pan est un rectangle : rampant × longueur."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "toit",
+          "enonce": "Touche le **rampant** du toit, c’est-à-dire l’hypoténuse du triangle.",
+          "reponse": [
+            "rampant"
+          ],
+          "aide": "C’est le côté en face de l’angle droit, le plus long.",
+          "explication": "Le **rampant** est la pente du toit : c’est l’hypoténuse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour trouver l’angle α, on connaît le côté opposé (1,8 m) et le côté adjacent (4 m). Quel rapport utilise-t-on ?",
+          "options": [
+            "tan α = 1,8 ÷ 4",
+            "sin α = 1,8 ÷ 4",
+            "cos α = 1,8 ÷ 4",
+            "tan α = 4 ÷ 1,8"
+          ],
+          "reponse": 0,
+          "aide": "Opposé et adjacent : quel rapport relie ces deux côtés ? (CAH – SOH – TOA)",
+          "explication": "Avec l’opposé et l’adjacent, c’est la **tangente** : tan α = 1,8 ÷ 4 = 0,45."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule α, **arrondi au degré** (utilise tan⁻¹).",
+          "reponse": 24,
+          "tolerance": 0.5,
+          "unite": "°",
+          "aide": "α = tan⁻¹(0,45). Vérifie que la calculatrice est en degrés.",
+          "explication": "α = tan⁻¹(0,45) ≈ 24,2°, soit **24°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur du **rampant**, arrondie au centimètre, en mètres.",
+          "reponse": 4.39,
+          "tolerance": 0.005,
+          "unite": "m",
+          "aide": "Pythagore : rampant² = 4² + 1,8².",
+          "explication": "rampant² = 16 + 3,24 = 19,24, donc rampant ≈ **4,39 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la surface d’un pan de toit, **arrondie au dixième** de m² ? (Garde la valeur exacte du rampant dans ton calcul.)",
+          "reponse": 43.9,
+          "tolerance": 0.05,
+          "unite": "m²",
+          "aide": "Surface d’un pan = rampant × longueur de l’abri.",
+          "explication": "√19,24 × 10 ≈ 43,86, soit **43,9 m²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux triangles en carton",
+      "competence": "raisonner",
+      "situation": "Lina découpe deux triangles en carton, ABC et DEF. Elle mesure leurs angles, mais certaines valeurs sont encore inconnues. Elle se demande s’ils ont la même forme.",
+      "documents": [
+        {
+          "id": "angles",
+          "type": "tableau",
+          "titre": "Les angles des deux triangles (en degrés)",
+          "colonnes": [
+            "Triangle",
+            "Angle 1",
+            "Angle 2",
+            "Angle 3"
+          ],
+          "lignes": [
+            [
+              "ABC (en A, B, C)",
+              40,
+              65,
+              "?"
+            ],
+            [
+              "DEF (en D, E, F)",
+              "?",
+              65,
+              75
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la mesure de l’angle en **C** ?",
+          "reponse": 75,
+          "unite": "°",
+          "aide": "La somme des angles d’un triangle vaut 180°.",
+          "explication": "180 − (40 + 65) = **75°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la mesure de l’angle en **D** ?",
+          "reponse": 40,
+          "unite": "°",
+          "aide": "Même méthode : 180° moins les deux autres angles.",
+          "explication": "180 − (65 + 75) = **40°**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque sommet de ABC à son **sommet homologue** dans DEF (angles égaux).",
+          "paires": [
+            [
+              "A (40°)",
+              "D"
+            ],
+            [
+              "B (65°)",
+              "E"
+            ],
+            [
+              "C (75°)",
+              "F"
+            ]
+          ],
+          "aide": "Deux sommets sont homologues quand leurs angles sont égaux.",
+          "explication": "A et D valent 40°, B et E valent 65°, C et F valent 75° : **A↔D, B↔E, C↔F**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure ?",
+          "options": [
+            "ABC et DEF sont semblables : leurs angles sont deux à deux égaux",
+            "ABC et DEF sont égaux (superposables) : ils ont les mêmes angles",
+            "ABC et DEF ne sont pas semblables : leurs angles sont différents",
+            "On ne peut rien conclure sans connaître les longueurs des côtés"
+          ],
+          "reponse": 0,
+          "aide": "Des angles égaux deux à deux suffisent pour avoir la même forme. Et la taille ?",
+          "explication": "Les angles sont égaux deux à deux : les triangles sont **semblables**. Ils ne sont « égaux » que s’ils ont aussi la même taille (k = 1), ce qu’on ne sait pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La hauteur de l’immeuble",
+      "competence": "modeliser",
+      "situation": "Au même moment de la journée, Malik mesure l’ombre de l’immeuble de sa rue : 27 m. Sa sœur Sana, qui mesure 1,6 m, projette une ombre de 2,4 m. Les rayons du soleil sont parallèles.",
+      "documents": [
+        {
+          "id": "ombres",
+          "type": "schema",
+          "titre": "Le soleil, l’immeuble et Sana (pas à l’échelle)",
+          "largeur": 320,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                10,
+                190
+              ],
+              "a": [
+                310,
+                190
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 82,
+              "l": 30,
+              "h": 108,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                82
+              ],
+              "a": [
+                212,
+                190
+              ],
+              "style": "pointilles",
+              "teinte": "ambre"
+            },
+            {
+              "forme": "ligne",
+              "id": "ombreI",
+              "zone": true,
+              "de": [
+                50,
+                190
+              ],
+              "a": [
+                212,
+                190
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                180
+              ],
+              "a": [
+                254,
+                190
+              ],
+              "style": "pointilles",
+              "teinte": "ambre"
+            },
+            {
+              "forme": "ligne",
+              "id": "ombreS",
+              "zone": true,
+              "de": [
+                240,
+                190
+              ],
+              "a": [
+                254,
+                190
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                190
+              ],
+              "a": [
+                240,
+                180
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 35,
+              "y": 72,
+              "texte": "h ?",
+              "gras": true,
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 131,
+              "y": 207,
+              "texte": "27 m",
+              "gras": true,
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 247,
+              "y": 207,
+              "texte": "2,4 m",
+              "gras": true,
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 172,
+              "texte": "1,6 m",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "emoji",
+              "x": 285,
+              "y": 50,
+              "emoji": "☀️",
+              "taille": 28
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ombres",
+          "enonce": "Touche l’**ombre de l’immeuble**.",
+          "reponse": [
+            "ombreI"
+          ],
+          "aide": "C’est le segment le plus long, posé sur le sol.",
+          "explication": "C’est le segment **violet**, long de 27 m. Celui de Sana est bien plus court."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les deux triangles (objet, ombre, rayon) sont-ils semblables ?",
+          "options": [
+            "Chacun a un angle droit au sol et le même angle avec les rayons",
+            "Parce que les deux triangles ont la même aire et le même périmètre",
+            "Parce que l’immeuble et Sana ont exactement la même hauteur réelle",
+            "Parce que les deux ombres se touchent et se prolongent au sol"
+          ],
+          "reponse": 0,
+          "aide": "Deux angles égaux suffisent. Lesquels retrouve-t-on dans chaque triangle ?",
+          "explication": "Angle droit entre l’objet et le sol, et même angle entre les rayons (parallèles) et le sol : **deux angles égaux**, donc triangles semblables."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rapport de similitude k (ombre de l’immeuble ÷ ombre de Sana) ?",
+          "reponse": 11.25,
+          "aide": "27 ÷ 2,4.",
+          "explication": "27 ÷ 2,4 = **11,25**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la hauteur de l’immeuble ?",
+          "reponse": 18,
+          "unite": "m",
+          "aide": "Multiplie la taille de Sana par k.",
+          "explication": "1,6 × 11,25 = **18 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Leur cousin Amir mesure 1,2 m. Quelle est la longueur de son ombre au même moment ?",
+          "reponse": 1.8,
+          "unite": "m",
+          "aide": "Même rapport, en sens inverse : ombre = taille × (2,4 ÷ 1,6).",
+          "explication": "1,2 × 2,4 ÷ 1,6 = **1,8 m**. (Ombre ÷ taille = 1,5 à chaque fois.)"
+        }
+      ]
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux bougies de même forme",
+      "competence": "modeliser",
+      "situation": "Une chandlerie fabrique deux bougies en forme de pyramide, l’une petite et l’autre grande, semblables l’une à l’autre. Le tableau donne leurs caractéristiques, et l’étiquette la cire utilisée.",
+      "documents": [
+        {
+          "id": "bougies",
+          "type": "tableau",
+          "titre": "Les deux bougies",
+          "colonnes": [
+            "Bougie",
+            "Hauteur (cm)",
+            "Aire de la base (cm²)",
+            "Volume (cm³)"
+          ],
+          "lignes": [
+            [
+              "Petite",
+              6,
+              12,
+              24
+            ],
+            [
+              "Grande",
+              9,
+              "?",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "cire",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Cire de soja",
+          "sousTitre": "Fiche du fournisseur",
+          "emoji": "🕯️",
+          "teinte": "jaune",
+          "lignes": [
+            {
+              "texte": "Masse volumique",
+              "valeur": "0,9 g/cm³"
+            },
+            {
+              "texte": "Conditionnement",
+              "valeur": "sac de 5 kg"
+            }
+          ],
+          "pied": "1 cm³ de cire pèse 0,9 g."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "bougies",
+          "multiple": true,
+          "enonce": "Touche les deux hauteurs qui permettent de calculer le **rapport de similitude k**.",
+          "reponse": [
+            "r0c1",
+            "r1c1"
+          ],
+          "aide": "Il faut deux longueurs homologues : les deux hauteurs.",
+          "explication": "On compare **6 cm et 9 cm**, les deux hauteurs."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rapport k de la petite vers la grande bougie ?",
+          "reponse": 1.5,
+          "aide": "k = 9 ÷ 6.",
+          "explication": "k = 9 ÷ 6 = **1,5**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire de la base de la grande bougie ?",
+          "reponse": 27,
+          "unite": "cm²",
+          "aide": "Une aire est multipliée par k², pas par k.",
+          "explication": "12 × 1,5² = 12 × 2,25 = **27 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume de la grande bougie ?",
+          "reponse": 81,
+          "unite": "cm³",
+          "aide": "Un volume est multiplié par k³ = 1,5 × 1,5 × 1,5 = 3,375.",
+          "explication": "24 × 3,375 = **81 cm³**. (Contrôle : (1/3) × 27 × 9 = 81.)"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse de cire faut-il pour la grande bougie ?",
+          "reponse": 72.9,
+          "unite": "g",
+          "aide": "Masse = volume × 0,9 g par cm³.",
+          "explication": "81 × 0,9 = **72,9 g**. Elle contient 3,375 fois plus de cire que la petite, et non 1,5 fois !"
+        }
+      ]
+    },
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La diagonale de l’écran",
+      "competence": "geometrie",
+      "situation": "Samir veut connaître la diagonale de son écran d’ordinateur. Il mesure un rectangle de 32 cm de large sur 24 cm de haut, puis se souvient que le triangle ABC est rectangle en B.",
+      "documents": [
+        {
+          "id": "ecran",
+          "type": "figure",
+          "titre": "L’écran vu de face",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 10,
+            "ymin": 0,
+            "ymax": 8
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 1,
+              "y": 1,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 9,
+              "y": 1,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 9,
+              "y": 7,
+              "nom": "C",
+              "position": "ne"
+            },
+            {
+              "id": "D",
+              "x": 1,
+              "y": 7,
+              "nom": "D",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "de": "A",
+              "a": "B",
+              "longueur": "32 cm"
+            },
+            {
+              "de": "B",
+              "a": "C",
+              "longueur": "24 cm"
+            },
+            {
+              "de": "C",
+              "a": "D"
+            },
+            {
+              "de": "D",
+              "a": "A"
+            },
+            {
+              "id": "diag",
+              "de": "A",
+              "a": "C"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "B",
+              "de": "A",
+              "a": "C",
+              "droit": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ecran",
+          "enonce": "Touche l’**hypoténuse** du triangle ABC.",
+          "reponse": [
+            "diag"
+          ],
+          "aide": "C’est le côté opposé à l’angle droit, en B.",
+          "explication": "L’hypoténuse est **[AC]**, la diagonale de l’écran."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **AC²** (le carré de l’hypoténuse).",
+          "reponse": 1600,
+          "aide": "AC² = AB² + BC² = 32² + 24².",
+          "explication": "32² + 24² = 1 024 + 576 = **1 600**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur de la diagonale AC ?",
+          "reponse": 40,
+          "unite": "cm",
+          "aide": "Cherche le nombre dont le carré vaut 1 600.",
+          "explication": "√1 600 = **40 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un pouce mesure 2,54 cm. Quelle est la taille de l’écran en pouces, **arrondie au dixième** ?",
+          "reponse": 15.7,
+          "tolerance": 0.05,
+          "unite": "pouces",
+          "aide": "Divise la diagonale en centimètres par 2,54.",
+          "explication": "40 ÷ 2,54 ≈ **15,7 pouces**."
+        }
+      ]
+    },
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre terrains, quatre angles",
+      "competence": "raisonner",
+      "situation": "Pour tracer des terrains de sport, Lina vérifie avec une corde si les coins sont bien droits. Chaque terrain triangulaire a trois côtés mesurés en mètres, rangés du plus petit au plus grand dans le tableau.",
+      "documents": [
+        {
+          "id": "terrains",
+          "type": "tableau",
+          "titre": "Les côtés des quatre terrains (en m)",
+          "colonnes": [
+            "Terrain",
+            "Côté 1",
+            "Côté 2",
+            "Côté 3"
+          ],
+          "lignes": [
+            [
+              "T1",
+              9,
+              12,
+              15
+            ],
+            [
+              "T2",
+              7,
+              24,
+              25
+            ],
+            [
+              "T3",
+              8,
+              11,
+              14
+            ],
+            [
+              "T4",
+              10,
+              24,
+              26
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "terrains",
+          "enonce": "Pour le terrain T2, touche le **plus long côté** : c’est lui qui serait l’hypoténuse.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Pour la réciproque de Pythagore, on commence par le plus long côté.",
+          "explication": "Le plus long côté de T2 est **25 m** : c’est le candidat hypoténuse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour **T3**, calcule le carré du plus long côté (14²).",
+          "reponse": 196,
+          "aide": "14 × 14.",
+          "explication": "14² = **196**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour **T3**, calcule la somme des carrés des deux autres côtés (8² + 11²).",
+          "reponse": 185,
+          "aide": "8² = 64 et 11² = 121.",
+          "explication": "64 + 121 = **185**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclure pour T3 ?",
+          "options": [
+            "T3 n’est pas rectangle : 196 diffère de 185 (contraposée de Pythagore)",
+            "T3 est rectangle parce que 14 est le plus grand côté, donc l’hypoténuse",
+            "T3 est rectangle : 196 et 185 sont assez proches, l’écart est négligeable",
+            "On ne peut pas conclure avec les longueurs seules : il faut mesurer l’angle"
+          ],
+          "reponse": 0,
+          "aide": "Les deux nombres sont-ils égaux ? S’ils ne le sont pas, que dit la contraposée ?",
+          "explication": "196 ≠ 185 : d’après la contraposée du théorème de Pythagore, T3 **n’est pas rectangle**. Il faut une égalité exacte, pas « presque égal »."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque terrain : a-t-il un angle droit ?",
+          "categories": [
+            "Rectangle",
+            "Pas rectangle"
+          ],
+          "items": [
+            [
+              "T1",
+              0
+            ],
+            [
+              "T2",
+              0
+            ],
+            [
+              "T3",
+              1
+            ],
+            [
+              "T4",
+              0
+            ]
+          ],
+          "aide": "T1 : 81 + 144 ; T2 : 49 + 576 ; T4 : 100 + 576. Compare chaque résultat au carré du plus long côté.",
+          "explication": "T1 : 225 = 15². T2 : 625 = 25². T4 : 676 = 26². Ce sont des **triangles rectangles**. T3 n’en est pas un."
+        }
+      ]
+    },
+    {
+      "chapitre": "341af35c-f6ad-5123-91a2-fdc656c6a65c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La canne dans la boîte",
+      "competence": "modeliser",
+      "situation": "Emma veut ranger une canne à pêche télescopique de 1,10 m dans une boîte en forme de pavé droit. Elle se demande si la canne peut se placer en diagonale, du coin du fond au coin opposé du haut.",
+      "documents": [
+        {
+          "id": "boite",
+          "type": "solide",
+          "titre": "La boîte (dimensions en dm)",
+          "longueur": 8,
+          "largeur": 6,
+          "hauteur": 5,
+          "cotes": true,
+          "unite": "dm"
+        },
+        {
+          "id": "canne",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Canne télescopique",
+          "sousTitre": "Fiche technique",
+          "emoji": "🎣",
+          "teinte": "bleu",
+          "lignes": [
+            {
+              "texte": "Longueur déployée",
+              "valeur": "1,10 m",
+              "id": "longueur"
+            },
+            {
+              "texte": "Longueur repliée",
+              "valeur": "0,45 m"
+            }
+          ],
+          "pied": "1 m = 100 cm = 10 dm."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "La base de la boîte est un rectangle de 80 cm sur 60 cm. Calcule la **diagonale de la base**.",
+          "reponse": 100,
+          "unite": "cm",
+          "aide": "Pythagore dans le triangle rectangle formé par la longueur, la largeur et la diagonale.",
+          "explication": "80² + 60² = 6 400 + 3 600 = 10 000, donc la diagonale vaut **100 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La boîte mesure 50 cm de haut. Calcule la **grande diagonale** de la boîte, arrondie au millimètre, en cm.",
+          "reponse": 111.8,
+          "tolerance": 0.05,
+          "unite": "cm",
+          "aide": "Nouveau triangle rectangle : la diagonale de la base (100 cm) et la hauteur (50 cm).",
+          "explication": "100² + 50² = 12 500, donc la grande diagonale vaut √12 500 ≈ **111,8 cm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La canne déployée mesure 110 cm. Peut-elle se ranger en diagonale dans la boîte ?",
+          "options": [
+            "Oui : 110 cm est inférieur à 111,8 cm",
+            "Non : 110 cm est supérieur à 100 cm",
+            "Non : la canne est plus longue que la hauteur",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Compare la longueur de la canne à la grande diagonale.",
+          "explication": "La grande diagonale mesure environ 111,8 cm, la canne 110 cm : **elle rentre**, tout juste."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de centimètres reste-t-il de marge ? (arrondi au millimètre)",
+          "reponse": 1.8,
+          "tolerance": 0.05,
+          "unite": "cm",
+          "aide": "Soustrais la longueur de la canne à la grande diagonale.",
+          "explication": "111,8 − 110 = **1,8 cm** : une marge mince, mais suffisante."
+        }
+      ]
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le triangle qui glisse",
+      "competence": "geometrie",
+      "situation": "Sur un quadrillage, Kenza déplace le triangle ABC sans le tourner ni le retourner. Le triangle obtenu est A′B′C′. Les pointillés relient chaque point à son image.",
+      "documents": [
+        {
+          "id": "fig",
+          "type": "figure",
+          "titre": "Le triangle et son image",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 10,
+            "ymin": 0,
+            "ymax": 6
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "A",
+              "x": 1,
+              "y": 1,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 3,
+              "y": 1,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 1,
+              "y": 3,
+              "nom": "C",
+              "position": "no"
+            },
+            {
+              "id": "A2",
+              "x": 6,
+              "y": 2,
+              "nom": "A′",
+              "position": "so"
+            },
+            {
+              "id": "B2",
+              "x": 8,
+              "y": 2,
+              "nom": "B′",
+              "position": "se"
+            },
+            {
+              "id": "C2",
+              "x": 6,
+              "y": 4,
+              "nom": "C′",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "de": "A",
+              "a": "A2",
+              "style": "pointilles",
+              "teinte": "gris"
+            },
+            {
+              "de": "B",
+              "a": "B2",
+              "style": "pointilles",
+              "teinte": "gris"
+            },
+            {
+              "de": "C",
+              "a": "C2",
+              "style": "pointilles",
+              "teinte": "gris"
+            }
+          ],
+          "polygones": [
+            {
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "teinte": "violet",
+              "motif": "plein"
+            },
+            {
+              "sommets": [
+                "A2",
+                "B2",
+                "C2"
+              ],
+              "teinte": "jaune",
+              "motif": "plein"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelle transformation fait passer de ABC à A′B′C′ ?",
+          "options": [
+            "Une translation",
+            "Une symétrie axiale",
+            "Une symétrie centrale",
+            "Une rotation"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "La figure a seulement glissé : elle n’est ni retournée, ni tournée.",
+          "explication": "La figure a **glissé** sans tourner ni se retourner : c’est une **translation**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de carreaux A est-il déplacé **vers la droite** pour arriver en A′ ?",
+          "reponse": 5,
+          "unite": "carreaux",
+          "aide": "Compare l’abscisse de A (1) et celle de A′.",
+          "explication": "De l’abscisse 1 à l’abscisse 6 : **5 carreaux** vers la droite."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de carreaux A est-il déplacé **vers le haut** ?",
+          "reponse": 1,
+          "unite": "carreau",
+          "aide": "Compare l’ordonnée de A (1) et celle de A′.",
+          "explication": "De l’ordonnée 1 à l’ordonnée 2 : **1 carreau** vers le haut. C’est le même déplacement pour tous les points."
+        },
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche le point **B′**, image de B par cette translation.",
+          "reponse": [
+            "B2"
+          ],
+          "aide": "B′ est à 5 carreaux à droite et 1 carreau au-dessus de B.",
+          "explication": "B(3 ; 1) devient **B′(8 ; 2)**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre images d’un triangle",
+      "competence": "geometrie",
+      "situation": "Le triangle T (en violet) a quatre images t1, t2, t3 et t4 par des transformations différentes. La droite (d), le point O et le point P servent de repères.",
+      "documents": [
+        {
+          "id": "fig",
+          "type": "figure",
+          "titre": "Le triangle T et ses quatre images",
+          "cadre": {
+            "xmin": -2,
+            "xmax": 13,
+            "ymin": 0,
+            "ymax": 9
+          },
+          "quadrillage": true,
+          "points": [
+            {
+              "id": "P",
+              "x": 1,
+              "y": 1,
+              "nom": "P",
+              "position": "se"
+            },
+            {
+              "id": "Q",
+              "x": 4,
+              "y": 1,
+              "cache": true
+            },
+            {
+              "id": "R",
+              "x": 1,
+              "y": 3,
+              "cache": true
+            },
+            {
+              "id": "P1",
+              "x": 11,
+              "y": 1,
+              "cache": true
+            },
+            {
+              "id": "Q1",
+              "x": 8,
+              "y": 1,
+              "cache": true
+            },
+            {
+              "id": "R1",
+              "x": 11,
+              "y": 3,
+              "cache": true
+            },
+            {
+              "id": "P2",
+              "x": 1,
+              "y": 6,
+              "cache": true
+            },
+            {
+              "id": "Q2",
+              "x": 4,
+              "y": 6,
+              "cache": true
+            },
+            {
+              "id": "R2",
+              "x": 1,
+              "y": 8,
+              "cache": true
+            },
+            {
+              "id": "P3",
+              "x": 11,
+              "y": 7,
+              "cache": true
+            },
+            {
+              "id": "Q3",
+              "x": 8,
+              "y": 7,
+              "cache": true
+            },
+            {
+              "id": "R3",
+              "x": 11,
+              "y": 5,
+              "cache": true
+            },
+            {
+              "id": "Q4",
+              "x": 1,
+              "y": 4,
+              "cache": true
+            },
+            {
+              "id": "R4",
+              "x": -1,
+              "y": 1,
+              "cache": true
+            },
+            {
+              "id": "O",
+              "x": 6,
+              "y": 4,
+              "nom": "O",
+              "position": "e"
+            },
+            {
+              "id": "M",
+              "x": 6,
+              "y": 0,
+              "cache": true
+            },
+            {
+              "id": "N",
+              "x": 6,
+              "y": 9,
+              "cache": true
+            }
+          ],
+          "droites": [
+            {
+              "par": [
+                "M",
+                "N"
+              ],
+              "nom": "(d)",
+              "style": "axe"
+            }
+          ],
+          "polygones": [
+            {
+              "id": "t0",
+              "sommets": [
+                "P",
+                "Q",
+                "R"
+              ],
+              "teinte": "violet",
+              "motif": "plein"
+            },
+            {
+              "id": "t1",
+              "sommets": [
+                "P1",
+                "Q1",
+                "R1"
+              ],
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "id": "t2",
+              "sommets": [
+                "P2",
+                "Q2",
+                "R2"
+              ],
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "id": "t3",
+              "sommets": [
+                "P3",
+                "Q3",
+                "R3"
+              ],
+              "teinte": "ambre",
+              "motif": "clair"
+            },
+            {
+              "id": "t4",
+              "sommets": [
+                "P",
+                "Q4",
+                "R4"
+              ],
+              "teinte": "rose",
+              "motif": "clair"
+            }
+          ],
+          "textes": [
+            {
+              "x": 1.9,
+              "y": 1.3,
+              "texte": "T"
+            },
+            {
+              "x": 9.8,
+              "y": 1.4,
+              "texte": "t1"
+            },
+            {
+              "x": 1.9,
+              "y": 6.4,
+              "texte": "t2"
+            },
+            {
+              "x": 9.6,
+              "y": 6.3,
+              "texte": "t3"
+            },
+            {
+              "x": -0.4,
+              "y": 2,
+              "texte": "t4"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche l’image de T par la **symétrie d’axe (d)**.",
+          "reponse": [
+            "t1"
+          ],
+          "aide": "Une symétrie axiale retourne la figure comme dans un miroir, de l’autre côté de l’axe.",
+          "explication": "C’est **t1** : chaque point est à la même distance de (d) que son image, de l’autre côté, et la figure est retournée."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque transformation : conserve-t-elle l’orientation de la figure, ou la retourne-t-elle ?",
+          "categories": [
+            "Orientation conservée",
+            "Figure retournée"
+          ],
+          "items": [
+            [
+              "Translation",
+              0
+            ],
+            [
+              "Rotation",
+              0
+            ],
+            [
+              "Symétrie centrale",
+              0
+            ],
+            [
+              "Symétrie axiale",
+              1
+            ]
+          ],
+          "aide": "Une seule des quatre fonctionne comme un miroir.",
+          "explication": "Seule la **symétrie axiale** retourne la figure. Les trois autres peuvent se superposer par glissement et rotation sur la feuille."
+        },
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche l’image de T par la **symétrie de centre O**.",
+          "reponse": [
+            "t3"
+          ],
+          "aide": "Une symétrie centrale est un demi-tour autour de O : O est le milieu de chaque segment [point ; image].",
+          "explication": "C’est **t3** : P(1 ; 1) a pour image (11 ; 7) et O(6 ; 4) est bien leur milieu."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le triangle t4 est l’image de T par une rotation de centre P. Laquelle ?",
+          "options": [
+            "Un quart de tour dans le sens inverse des aiguilles d’une montre",
+            "Un quart de tour dans le sens des aiguilles d’une montre",
+            "Un demi-tour",
+            "Un huitième de tour"
+          ],
+          "reponse": 0,
+          "aide": "Le côté [PQ], horizontal vers la droite, devient vertical vers le haut : tourne-t-il comme une aiguille ?",
+          "explication": "Q(4 ; 1) a pour image Q4(1 ; 4) : [PQ] passe de « vers la droite » à « vers le haut », soit **90° dans le sens inverse des aiguilles d’une montre**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "T a pour aire 3 carreaux. Quelle est l’aire de t3 ?",
+          "reponse": 3,
+          "unite": "carreaux",
+          "aide": "Les symétries, translations et rotations sont des isométries.",
+          "explication": "Une isométrie conserve les aires : **3 carreaux**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fa20a270-4c53-59af-bd29-71a633743f11",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La rosace de Scratch",
+      "competence": "programmer",
+      "situation": "Zoé dessine une rosace sur Scratch : à chaque tour de boucle, le lutin (un pétale) laisse son empreinte, puis tourne sur lui-même autour du même centre. Elle note dans un tableau l’angle à utiliser selon le nombre de pétales.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le script de Zoé",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "stylo",
+                "texte": "effacer tout"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (6) fois",
+                "id": "boucle",
+                "interieur": [
+                  {
+                    "categorie": "stylo",
+                    "texte": "estampiller",
+                    "id": "est"
+                  },
+                  {
+                    "categorie": "mouvement",
+                    "texte": "tourner ↻ de (60) degrés",
+                    "id": "tr"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "id": "angles",
+          "type": "tableau",
+          "titre": "L’angle selon le nombre de pétales",
+          "colonnes": [
+            "Nombre de pétales",
+            "Angle de rotation"
+          ],
+          "lignes": [
+            [
+              "3",
+              "120°"
+            ],
+            [
+              "4",
+              "90°"
+            ],
+            [
+              "5",
+              "?"
+            ],
+            [
+              "6",
+              "60°"
+            ],
+            [
+              "10",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui réalise la **rotation** du motif.",
+          "reponse": [
+            "tr"
+          ],
+          "aide": "Cherche le bloc qui contient un angle en degrés.",
+          "explication": "C’est **« tourner de 60 degrés »** : chaque pétale est l’image du précédent par une rotation de centre le centre de la rosace."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour une rosace de **5 pétales**, quel angle faut-il écrire dans le tableau ?",
+          "reponse": 72,
+          "unite": "°",
+          "aide": "Les pétales se répartissent sur un tour complet, donc 360°.",
+          "explication": "360 ÷ 5 = **72°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour une rosace de **10 pétales**, quel angle faut-il ?",
+          "reponse": 36,
+          "unite": "°",
+          "aide": "Même calcul : 360 ÷ 10.",
+          "explication": "360 ÷ 10 = **36°**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans la rosace à 6 pétales, par quelle transformation passe-t-on du pétale n°1 au pétale n°4 (3 rotations de 60°) ?",
+          "options": [
+            "Une symétrie centrale",
+            "Une symétrie axiale",
+            "Une translation",
+            "Une homothétie de rapport 2"
+          ],
+          "reponse": 0,
+          "aide": "3 × 60° = 180°. Quel demi-tour connais-tu ?",
+          "explication": "Trois rotations de 60° font **180°** : une rotation de 180° est une **symétrie centrale**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Zoé remplace 60 par **90** sans toucher au reste (toujours 6 répétitions). Combien de pétales **différents** voit-on sur la scène ?",
+          "reponse": 4,
+          "aide": "Après 4 quarts de tour, le lutin est revenu à sa position de départ. Les empreintes suivantes se superposent.",
+          "explication": "Les empreintes sont à 0°, 90°, 180°, 270°, puis 0° et 90° de nouveau : seulement **4 pétales distincts**."
+        }
+      ]
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La chasse aux points",
+      "competence": "se-reperer-espace",
+      "situation": "Dans un jeu vidéo, quatre trésors A, B, C et D sont cachés dans un plan repéré. Le joueur doit donner leurs coordonnées, toujours en commençant par l’abscisse.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "figure",
+          "titre": "Le plan du jeu",
+          "cadre": {
+            "xmin": -5,
+            "xmax": 5,
+            "ymin": -4,
+            "ymax": 4
+          },
+          "quadrillage": true,
+          "axes": true,
+          "points": [
+            {
+              "id": "A",
+              "x": 3,
+              "y": 2,
+              "nom": "A",
+              "position": "ne"
+            },
+            {
+              "id": "B",
+              "x": -2,
+              "y": 3,
+              "nom": "B",
+              "position": "ne"
+            },
+            {
+              "id": "C",
+              "x": -4,
+              "y": -1,
+              "nom": "C",
+              "position": "so"
+            },
+            {
+              "id": "D",
+              "x": 2,
+              "y": -3,
+              "nom": "D",
+              "position": "se"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**abscisse** du point A ?",
+          "reponse": 3,
+          "aide": "L’abscisse se lit sur l’axe horizontal, de gauche à droite.",
+          "explication": "A est à 3 graduations à droite de l’origine : abscisse **3**, donc A(3 ; 2)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**ordonnée** du point C ?",
+          "reponse": -1,
+          "aide": "L’ordonnée se lit sur l’axe vertical. C est sous l’axe horizontal : le nombre est négatif.",
+          "explication": "C est 1 graduation **sous** l’axe des abscisses : ordonnée **−1**, donc C(−4 ; −1)."
+        },
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche le point de coordonnées **(−2 ; 3)**.",
+          "reponse": [
+            "B"
+          ],
+          "aide": "Va d’abord 2 graduations à gauche de l’origine, puis 3 vers le haut.",
+          "explication": "Le point **B** a pour abscisse −2 et pour ordonnée 3."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le symétrique du point A(3 ; 2) par rapport à **l’origine** ?",
+          "options": [
+            "Les deux coordonnées changent de signe : (−3 ; −2)",
+            "Seule l’abscisse change de signe : (−3 ; 2)",
+            "Seule l’ordonnée change de signe : (3 ; −2)",
+            "On échange les deux coordonnées : (2 ; 3)"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Une symétrie par rapport à l’origine change les deux signes.",
+          "explication": "On change le signe des deux coordonnées : **(−3 ; −2)**."
+        }
+      ]
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La boîte de rangement",
+      "competence": "se-reperer-espace",
+      "situation": "Un logiciel de rangement repère chaque sommet d’une boîte de 5 dm de long, 4 dm de large et 3 dm de haut par trois coordonnées (abscisse ; ordonnée ; altitude). Le sommet A est l’origine. Le sommet F est au-dessus de B, G est opposé à A et H est au-dessus de D.",
+      "documents": [
+        {
+          "id": "boite",
+          "type": "solide",
+          "titre": "La boîte (en dm)",
+          "longueur": 5,
+          "largeur": 4,
+          "hauteur": 3,
+          "cubes": true,
+          "cotes": true,
+          "unite": "dm"
+        },
+        {
+          "id": "coord",
+          "type": "tableau",
+          "titre": "Les sommets connus",
+          "colonnes": [
+            "Sommet",
+            "Abscisse",
+            "Ordonnée",
+            "Altitude"
+          ],
+          "lignes": [
+            [
+              "A",
+              0,
+              0,
+              0
+            ],
+            [
+              "B",
+              5,
+              0,
+              0
+            ],
+            [
+              "D",
+              0,
+              4,
+              0
+            ],
+            [
+              "E",
+              0,
+              0,
+              3
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**altitude** du sommet F, situé juste au-dessus de B ?",
+          "reponse": 3,
+          "unite": "dm",
+          "aide": "F est à la même hauteur que E, qui est au-dessus de A.",
+          "explication": "F est au sommet de l’arête verticale de 3 dm : altitude **3**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque sommet à ses coordonnées.",
+          "paires": [
+            [
+              "C (sur la base, opposé à A)",
+              "(5 ; 4 ; 0)"
+            ],
+            [
+              "F (au-dessus de B)",
+              "(5 ; 0 ; 3)"
+            ],
+            [
+              "G (opposé à A)",
+              "(5 ; 4 ; 3)"
+            ],
+            [
+              "H (au-dessus de D)",
+              "(0 ; 4 ; 3)"
+            ]
+          ],
+          "aide": "Additionne les arêtes parcourues depuis A, et mets 0 pour les directions non parcourues.",
+          "explication": "**C(5 ; 4 ; 0), F(5 ; 0 ; 3), G(5 ; 4 ; 3), H(0 ; 4 ; 3)**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelles sont les coordonnées du **milieu de [AG]** ?",
+          "options": [
+            "(2,5 ; 2 ; 1,5)",
+            "(5 ; 4 ; 3)",
+            "(2 ; 2 ; 2)",
+            "(1,5 ; 2 ; 2,5)"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Le milieu a pour coordonnées la moitié de celles de G (puisque A est l’origine).",
+          "explication": "La moitié de (5 ; 4 ; 3) est **(2,5 ; 2 ; 1,5)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur de la grande diagonale [AG], **arrondie au dixième** de dm ? (Pythagore deux fois.)",
+          "reponse": 7.1,
+          "tolerance": 0.05,
+          "unite": "dm",
+          "aide": "Diagonale de la base : 5² + 4² = 41. Puis 41 + 3².",
+          "explication": "AG² = 5² + 4² + 3² = 50, donc AG = √50 ≈ **7,1 dm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "52f85269-9c53-5d1c-b88e-ac19d7899fa9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Coordonnées du tour du monde",
+      "competence": "se-reperer-espace",
+      "situation": "Un navigateur note cinq villes de son tour du monde. La carte les marque par des lettres, le tableau donne leurs coordonnées géographiques (latitude, longitude, arrondies au degré) : à toi de croiser les deux.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Les escales",
+          "fond": "monde",
+          "reperes": true,
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "paris",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "b",
+              "lieu": "new-york",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "corail"
+            },
+            {
+              "id": "c",
+              "lieu": "sydney",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "vert"
+            },
+            {
+              "id": "d",
+              "lieu": "le-caire",
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "ambre"
+            },
+            {
+              "id": "e",
+              "lieu": "rio-de-janeiro",
+              "symbole": "lettre",
+              "lettre": "E",
+              "teinte": "bleu"
+            }
+          ]
+        },
+        {
+          "id": "coord",
+          "type": "tableau",
+          "titre": "Les coordonnées (arrondies au degré)",
+          "colonnes": [
+            "Lettre",
+            "Ville",
+            "Latitude",
+            "Longitude"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Paris",
+              "49° N",
+              "2° E"
+            ],
+            [
+              "B",
+              "New York",
+              "41° N",
+              "74° O"
+            ],
+            [
+              "C",
+              "Sydney",
+              "34° S",
+              "151° E"
+            ],
+            [
+              "D",
+              "Le Caire",
+              "30° N",
+              "31° E"
+            ],
+            [
+              "E",
+              "Rio de Janeiro",
+              "23° S",
+              "43° O"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville qui est dans l’**hémisphère Sud** et à l’**est** du méridien de Greenwich.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche dans le tableau une latitude Sud (S) ET une longitude Est (E).",
+          "explication": "**Sydney (C)** : 34° S, 151° E. Rio est au Sud mais à l’Ouest ; Paris et Le Caire sont à l’Est mais au Nord."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les villes selon leur hémisphère.",
+          "categories": [
+            "Hémisphère Nord",
+            "Hémisphère Sud"
+          ],
+          "items": [
+            [
+              "Paris",
+              0
+            ],
+            [
+              "New York",
+              0
+            ],
+            [
+              "Sydney",
+              1
+            ],
+            [
+              "Le Caire",
+              0
+            ],
+            [
+              "Rio de Janeiro",
+              1
+            ]
+          ],
+          "aide": "L’hémisphère se lit sur la latitude : N ou S.",
+          "explication": "**Nord** : Paris, New York, Le Caire (latitude N). **Sud** : Sydney, Rio de Janeiro (latitude S)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’**écart de latitude** entre Paris (A) et Le Caire (D) ?",
+          "reponse": 19,
+          "unite": "°",
+          "aide": "Les deux villes sont dans l’hémisphère Nord : on soustrait les latitudes.",
+          "explication": "49 − 30 = **19°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’**écart de longitude** entre Paris (2° E) et New York (74° O) ?",
+          "reponse": 76,
+          "unite": "°",
+          "aide": "Paris est à l’Est et New York à l’Ouest du méridien de Greenwich : les angles s’additionnent.",
+          "explication": "2 + 74 = **76°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart de longitude entre Sydney (151° E) et Rio (43° O) ? Attention : un écart ne dépasse jamais 180°.",
+          "reponse": 166,
+          "unite": "°",
+          "aide": "151 + 43 donne plus de 180° : il faut alors prendre l’autre sens, autour de la Terre.",
+          "explication": "151 + 43 = 194°, qui dépasse 180°. Dans l’autre sens : 360 − 194 = **166°**."
+        }
+      ]
+    }
+  ]
+}

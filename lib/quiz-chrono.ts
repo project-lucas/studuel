@@ -1,12 +1,14 @@
 // -----------------------------------------------------------------------------
-// LE CHRONO DES SUPPORTS — le quiz et les flashcards à la manière du duel.
+// LE CHRONO DU QUIZ — à la manière du duel.
 //
 // Lucas, 16/09/2026 : « je veux que quiz, flashcards… soient proches du modèle
 // PvP, avec le côté limite de temps ; si le temps atteint zéro, ça quitte —
 // comme ça pas de fausse session en route. Ainsi il s'entraîne à répondre vite
 // et bien et se prépare pour le mode PvP qui est basé là-dessus. »
+// (Les flashcards de chapitre, qui partageaient ce chrono, ont été retirées le
+// 01/10/2026 : elles rejouaient les questions du quiz.)
 //
-// Trois règles, communes aux deux supports :
+// Trois règles :
 //
 //   1. UN BUDGET pour toute la manche, proportionnel au paquet : 12 s par
 //      question, borné. Huit questions font 96 s — l'ordre de grandeur de la
@@ -31,7 +33,7 @@
 // correction à lire, le quiz en a une — la faire payer en secondes reviendrait
 // à pousser l'élève à ne pas la lire, l'inverse du but.
 //
-// Pur et testé. Les players (QuizPlayer, LessonFlashcards) ne font que lire.
+// Pur et testé. Le player (QuizPlayer) ne fait que lire.
 // -----------------------------------------------------------------------------
 
 /** Secondes accordées par question du paquet. */

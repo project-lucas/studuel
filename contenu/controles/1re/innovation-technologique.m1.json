@@ -1,0 +1,509 @@
+{
+  "niveau": "1re",
+  "matiere": "innovation-technologique",
+  "sujets": [
+    {
+      "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+      "difficulte": 1,
+      "titre": "Qui fait quoi dans le projet de la médiathèque ?",
+      "consigne": "Lis la situation et réponds en phrases complètes, avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Une commune veut construire une médiathèque. Le conseil municipal vote un budget de 3 millions d'euros et décrit ce qu'il attend : 500 m² de salles, un espace jeunesse, un bâtiment accessible. Un cabinet d'architectes dessine le bâtiment et dirige le chantier. Plusieurs entreprises réalisent la maçonnerie, l'électricité et la menuiserie. Un bureau de contrôle vérifie la sécurité et l'accessibilité.\n\n1. Qui est le maître d'ouvrage ? Qui est le maître d'œuvre ? Justifie.\n2. Quel est le rôle des entreprises et celui du bureau de contrôle ?\n3. Qu'est-ce qu'un jalon ? Que décide-t-on lors d'une revue de projet ?",
+      "bareme": [
+        { "critere": "Maître d'ouvrage (la commune) et maître d'œuvre (le cabinet d'architectes) identifiés et justifiés", "points": 8 },
+        { "critere": "Rôles des entreprises (réaliser) et du bureau de contrôle (vérifier conformité et sécurité)", "points": 6 },
+        { "critere": "Jalon défini, décisions possibles à la revue : continuer, corriger ou arrêter", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **maître d'ouvrage** est la **commune** : elle exprime le besoin (500 m², espace jeunesse, accessibilité), fixe le budget (3 M€) et recevra l'ouvrage. Le **maître d'œuvre** est le **cabinet d'architectes** : il conçoit la réponse et dirige sa réalisation. Le maître d'ouvrage dit **quoi** et **pour combien** ; le maître d'œuvre dit **comment**.\n\n2. Les **entreprises réalisent** (chantier). Le **bureau de contrôle vérifie** la conformité, la sécurité et le respect des règles, ici l'accessibilité.\n\n3. Un **jalon** est un point de décision qui clôt une phase. Lors de la **revue de projet**, on décide de **continuer**, de **corriger** ou d'**arrêter** le projet."
+    },
+    {
+      "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+      "difficulte": 2,
+      "titre": "Le planning de la lampe solaire",
+      "consigne": "Détaille ton raisonnement pour chaque chemin et justifie les résultats.",
+      "enonce": "**Situation.** Une équipe de STI2D planifie la réalisation d'une lampe solaire.\n\n| Tâche | Durée | Antériorité |\n| A : cahier des charges | 3 j | — |\n| B : recherche de solutions | 4 j | A |\n| C : choix des composants | 2 j | A |\n| D : prototype | 5 j | B et C |\n| E : essais | 2 j | D |\n\n1. Quels chemins mènent à la tâche D ? Calcule la durée de chacun. Quel jour D peut-elle démarrer au plus tôt ?\n2. Calcule la durée minimale du projet.\n3. Donne le chemin critique. Quelle est la marge de la tâche C ? Explique ce que cela signifie.\n4. Décris comment ces tâches apparaîtraient dans un diagramme de Gantt.",
+      "bareme": [
+        { "critere": "Chemins A → B (7 j) et A → C (5 j), D démarre au jour 7", "points": 5 },
+        { "critere": "Durée minimale : 7 + 5 + 2 = 14 jours", "points": 5 },
+        { "critere": "Chemin critique A → B → D → E et marge de C égale à 2 jours, expliquée", "points": 6 },
+        { "critere": "Diagramme de Gantt décrit : barres sur une échelle de temps selon durées et antériorités", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Deux chemins mènent à D : **A → B** : 3 + 4 = **7 j** ; **A → C** : 3 + 2 = **5 j**. D a besoin que B **et** C soient finies : elle démarre au plus tôt au **jour 7**.\n\n2. D se termine au jour 7 + 5 = 12, puis E au jour 12 + 2 = 14. Durée minimale : **14 jours**.\n\n3. Chemin critique : **A → B → D → E** (3 + 4 + 5 + 2 = 14 j) : le moindre retard sur l'une de ces tâches retarde tout le projet. La tâche C finit au jour 5 alors que D ne démarre qu'au jour 7 : sa **marge** est de **2 jours**. C peut glisser de 2 jours sans retarder la fin du projet.\n\n4. Dans le Gantt, chaque tâche est une barre placée sur une échelle de temps : A du jour 0 au jour 3, B du jour 3 au jour 7, C du jour 3 au jour 5, D du jour 7 au jour 12, E du jour 12 au jour 14. Les tâches B et C se déroulent en parallèle."
+    },
+    {
+      "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+      "difficulte": 3,
+      "titre": "Le projet de station de recharge en retard",
+      "consigne": "Analyse le planning, étudie les retards et relie le projet à ses phases. Justifie chaque réponse.",
+      "enonce": "**Situation.** Une petite entreprise développe une station de recharge solaire pour vélos.\n\n| Tâche | Durée | Antériorité |\n| A : expression du besoin | 2 j | — |\n| B : pré-conception | 5 j | A |\n| C : commande des composants | 7 j | A |\n| D : maquette numérique | 4 j | B |\n| E : prototype | 3 j | C et D |\n| F : essais | 2 j | E |\n\n1. Calcule la durée minimale du projet et donne le chemin critique.\n2. Calcule la marge de la tâche C.\n3. Le fournisseur annonce que la commande (C) prendra 3 jours de plus. Quelle est la nouvelle durée du projet ? Et si c'était la pré-conception (B) qui prenait 1 jour de plus ?\n4. Place chaque tâche dans l'une des phases d'un projet industriel.\n5. Le chef de projet veut attendre la fin des essais pour vérifier les normes de sécurité électrique. Qu'en penses-tu ?\n6. À quoi servira le bilan d'expérience en fin de projet ? Donne un exemple de leçon qu'on pourrait en tirer ici.",
+      "bareme": [
+        { "critere": "Durée minimale 16 jours, chemin critique A → B → D → E → F", "points": 4 },
+        { "critere": "Marge de C : 2 jours", "points": 3 },
+        { "critere": "Retards : C + 3 j donne 17 jours (+1 j) ; B + 1 j donne 17 jours", "points": 5 },
+        { "critere": "Tâches placées dans les phases du projet industriel", "points": 3 },
+        { "critere": "Réglementation prise en compte dès la conception et bilan d'expérience expliqué avec un exemple", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Chemins vers E : **A → B → D** : 2 + 5 + 4 = **11 j** ; **A → C** : 2 + 7 = **9 j**. E démarre au jour 11, finit au jour 14 ; F finit au jour **16**. Durée minimale : **16 jours**. Chemin critique : **A → B → D → E → F**.\n\n2. C finit au jour 9 et E ne démarre qu'au jour 11 : marge de C = **2 jours**.\n\n3. Si C prend 3 jours de plus, elle finit au jour 12 : E démarre au jour 12 au lieu de 11. Le projet dure **17 jours** : un retard de 3 jours sur C ne coûte qu'**1 jour**, car sa marge en absorbe 2 (et C devient critique). Si B prend 1 jour de plus, B est sur le chemin critique : tout décale d'1 jour, le projet dure aussi **17 jours**.\n\n4. A : **marketing et expression du besoin** ; B : **pré-conception** ; C, D, E : **conception détaillée et pré-industrialisation** (choix des composants, plans, prototype) ; F : fin de cette phase, avant l'**industrialisation**.\n\n5. C'est une erreur : le **contexte réglementaire** (normes, sécurité, environnement) **s'impose dès la conception**. Découvrir une non-conformité après les essais obligerait à refaire la conception et le prototype, avec un surcoût et un retard.\n\n6. Le **bilan d'expérience** sert à noter ce qui a marché et ce qui a coincé, pour **le prochain projet**. Exemple : « commander les composants plus tôt, car un retard fournisseur a rendu la tâche C critique », ou « intégrer les normes dès la pré-conception »."
+    },
+    {
+      "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+      "difficulte": 1,
+      "titre": "Le bon outil pour chaque interlocuteur",
+      "consigne": "Pour chaque situation, choisis un outil de communication et justifie en une phrase.",
+      "enonce": "**Situation.** L'équipe de Samir conçoit un distributeur de gel hydroalcoolique sans contact.\n\n1. Choisis l'outil le plus adapté pour chaque situation, et justifie :\n   a. En début de projet, l'équipe veut explorer toutes les idées autour du thème.\n   b. Samir veut montrer en quelques secondes une idée de forme à ses camarades.\n   c. Le programmeur doit connaître l'enchaînement « si une main est détectée, alors distribuer ».\n   d. Le jury veut voir l'aspect final du produit.\n2. De quelles deux choses dépend le choix d'un outil de communication technique ?\n3. Donne deux règles pour réussir un croquis.",
+      "bareme": [
+        { "critere": "Quatre outils adaptés et justifiés : carte mentale, croquis, organigramme, rendu ou maquette", "points": 10 },
+        { "critere": "Critères de choix : ce qu'on veut transmettre et à qui", "points": 5 },
+        { "critere": "Deux règles du croquis (grands volumes d'abord, perspective ou vue adaptée, annotations)", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Carte mentale** : elle organise les idées autour d'un thème central, pour ne rien oublier et voir des liens.\n   b. **Croquis à main levée** : il montre une forme ou un principe en quelques secondes.\n   c. **Organigramme** : il représente un enchaînement d'étapes ou de décisions, utile aux programmeurs.\n   d. **Maquette numérique avec rendu réaliste** (ou prototype) : elle montre l'aspect final, les volumes.\n\n2. Le choix dépend de **ce que l'on veut transmettre** et de **l'interlocuteur** à qui l'on s'adresse.\n\n3. Règles : commencer par les **grands volumes**, puis les détails ; utiliser la **perspective** pour un objet, la vue de face pour un mécanisme ; **annoter** (flèches, noms des pièces, cotes principales). Un croquis doit être **lisible**, pas forcément beau."
+    },
+    {
+      "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+      "difficulte": 2,
+      "titre": "Présenter l'abri à vélos connecté",
+      "consigne": "Réponds en justifiant chaque choix par le contenu à transmettre et par l'interlocuteur.",
+      "enonce": "**Situation.** L'équipe de Jade conçoit un abri à vélos connecté pour le lycée : panneau solaire sur le toit, batterie, cadenas électroniques ouverts avec la carte de cantine, écran indiquant les places libres.\n\n1. Jade construit une carte mentale au démarrage du projet. Propose le thème central et au moins quatre branches, avec un exemple d'idée pour chacune.\n2. Pour présenter le principe au proviseur, qui n'est pas technicien, Jade hésite entre le schéma électrique complet et un schéma simple. Que choisir ? Décris ce schéma.\n3. Les quatre membres de l'équipe modifient les mêmes fichiers depuis chez eux et s'y perdent entre les versions. Quel outil collaboratif proposes-tu ? Pourquoi ?\n4. Donne deux conseils pour les diapositives de la présentation orale.",
+      "bareme": [
+        { "critere": "Carte mentale : thème central et au moins quatre branches pertinentes avec exemples", "points": 6 },
+        { "critere": "Schéma simple choisi et justifié, décrit avec les flux principaux", "points": 6 },
+        { "critere": "Espace cloud partagé proposé et justifié (fichiers à jour pour tous)", "points": 4 },
+        { "critere": "Deux conseils de présentation conformes au cours", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Thème central : « **abri à vélos connecté** ». Branches possibles : **usagers** (élèves, personnels, visiteurs) ; **contraintes** (place disponible, budget, vandalisme) ; **énergie** (panneau solaire, batterie, autonomie la nuit) ; **matériaux** (acier, bois, toiture) ; **sécurité** (vol, éclairage, câbles) ; **information** (carte de cantine, écran des places).\n\n2. Pour un public non spécialiste, on choisit un **schéma simple, non normalisé**, avec les flux principaux : « panneau solaire → batterie → carte électronique → cadenas et écran », avec des flèches d'énergie, et une flèche d'information « carte de cantine → carte électronique → cadenas ». Le schéma électrique complet serait illisible pour lui.\n\n3. Un **espace cloud partagé** : tout le monde travaille sur **les mêmes fichiers, à jour pour tous**, ce qui évite les versions contradictoires.\n\n4. Conseils : **une idée par diapositive, un visuel par idée** ; **justifier ses choix** (« nous avons choisi… parce que… »)."
+    },
+    {
+      "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+      "difficulte": 3,
+      "titre": "Critiquer un plan de communication",
+      "consigne": "Analyse chaque choix de l'équipe, dis s'il est adapté et propose mieux quand il le faut. Argumente avec les notions du cours.",
+      "enonce": "**Situation.** Une équipe conçoit une lampe de lecture pour une personne malvoyante. Voici son plan de communication :\n\n> 1. En séance de créativité, chacun dessine au propre une idée sur logiciel de CAO, cotée au dixième de millimètre.\n> 2. Pour le programmeur, on lui envoie un rendu réaliste de la lampe.\n> 3. Pour le jury, on présente le schéma électrique complet et le listing du programme.\n> 4. Chaque membre garde ses fichiers sur son ordinateur et les envoie par courriel quand il les modifie.\n> 5. La présentation au partenaire anglais du projet se fera uniquement en français.\n\nPar ailleurs, l'entreprise partenaire, qui fabriquera la lampe en série, gère plusieurs centaines de plans et de nomenclatures de ses produits, et un architecte ami de l'équipe travaille sur une rénovation où architecte, ingénieurs et entreprises partagent une maquette 3D unique.\n\n1. Analyse les cinq choix de l'équipe : pour chacun, dis s'il est adapté et propose un meilleur outil ou une meilleure pratique.\n2. Quel outil utilise l'entreprise partenaire pour gérer ses plans, ses versions et ses nomenclatures ? Et l'architecte pour sa maquette partagée ? Explique la différence.\n3. Pourquoi une maquette physique serait-elle particulièrement utile pour ce produit ?",
+      "bareme": [
+        { "critere": "Choix 1 et 2 critiqués : croquis ou carte mentale en créativité, organigramme pour le programmeur", "points": 5 },
+        { "critere": "Choix 3 critiqué : schéma simple ou rendu, prototype, pour un jury", "points": 3 },
+        { "critere": "Choix 4 et 5 critiqués : espace cloud partagé, présentation en partie en langue étrangère", "points": 4 },
+        { "critere": "PLM pour l'industriel, BIM pour le bâtiment, différence expliquée", "points": 5 },
+        { "critere": "Intérêt de la maquette physique pour un utilisateur malvoyant (manipuler l'objet réel)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Analyse :\n- **Choix 1 : non adapté.** En créativité, il faut produire vite beaucoup d'idées : le **croquis à main levée** (lisible, pas forcément beau) ou la **carte mentale** conviennent. Une CAO cotée au dixième prend trop de temps.\n- **Choix 2 : non adapté.** Le programmeur a besoin de l'**enchaînement des étapes et décisions** : un **organigramme** (« si luminosité faible alors allumer »). Un rendu ne lui dit rien du fonctionnement.\n- **Choix 3 : non adapté.** Un jury veut comprendre le principe et voir le produit : un **schéma simple** avec les flux principaux, un **rendu** et surtout le **prototype** qui fonctionne. Le schéma complet et le listing sont trop détaillés.\n- **Choix 4 : non adapté.** Les envois par courriel créent des versions contradictoires : un **espace cloud partagé** garde des fichiers à jour pour tous.\n- **Choix 5 : non adapté.** Le programme demande de savoir présenter une démarche **en partie en langue étrangère** : il faut prévoir une partie en anglais.\n\n2. L'entreprise utilise un **PLM** (gestion du cycle de vie du produit) : il **centralise plans, versions et nomenclatures** d'un produit industriel. L'architecte utilise le **BIM** : une **maquette numérique 3D unique du bâtiment**, partagée entre architecte, ingénieurs et entreprises. Le PLM concerne les produits industriels et leur historique ; le BIM concerne le bâtiment et la collaboration autour d'une seule maquette.\n\n3. La **maquette physique** permet de **manipuler l'objet réel** et le fait comprendre à tous. Pour une personne malvoyante, qui perçoit mal une image ou un rendu à l'écran, toucher les commandes, sentir leur position et tester la lampe en vrai est bien plus parlant."
+    },
+    {
+      "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+      "difficulte": 1,
+      "titre": "Fonction utilitaire, fonction symbolique",
+      "consigne": "Réponds à chaque question en justifiant avec un exemple.",
+      "enonce": "**Situation.** Maëlle compare deux sacs à dos : l'un à 25 €, l'autre à 180 € d'une marque célèbre. Tous deux ont la même contenance et sont aussi solides.\n\n1. Définis la fonction utilitaire et la fonction symbolique d'un produit. Applique ces deux notions aux sacs à dos.\n2. Pourquoi deux produits qui rendent le même service peuvent-ils se vendre à des prix très différents ?\n3. Quel mouvement a popularisé l'idée que « la forme suit la fonction » ? À quelle période ? Que recherchait-il ?",
+      "bareme": [
+        { "critere": "Deux fonctions définies et appliquées aux sacs à dos", "points": 8 },
+        { "critere": "Écart de prix expliqué par la part symbolique", "points": 5 },
+        { "critere": "Bauhaus, 1919-1933, formes simples adaptées à la production en série", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **fonction utilitaire** est le **service rendu, mesurable** : pour les deux sacs, transporter ses affaires (même contenance, même solidité). La **fonction symbolique** (ou d'estime) est **ce que l'objet dit de son propriétaire** : le sac de marque exprime un style, une appartenance, une image.\n\n2. Le service rendu est le même ; la différence de prix vient de la **part symbolique** : le client paie aussi l'image associée à la marque.\n\n3. Le **Bauhaus** (**1919-1933**) : il recherchait des **formes simples**, adaptées à la **production en série**, résumées par « la forme suit la fonction »."
+    },
+    {
+      "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+      "difficulte": 2,
+      "titre": "Analyser la lampe « Pliée »",
+      "consigne": "Suis les quatre étapes de l'analyse d'un produit en designer, en t'appuyant sur le document.",
+      "enonce": "**Document — fiche d'un produit (fictif)**\n\n> La lampe de bureau « Pliée » est faite d'une seule tôle d'aluminium découpée puis pliée : le pied, le bras et l'abat-jour forment une seule pièce, sans vis. Une LED et son câble sont clipsés dans l'abat-jour. Vendue 35 €, elle vise les étudiants qui vivent dans de petits logements. Elle se range à plat dans un carton très fin. Ses angles vifs ont été arrondis pour ne pas blesser. En fin de vie, on déclipse la LED et le reste est une seule pièce d'aluminium, recyclable.\n\n1. **Contexte** : pour qui, à quel prix, quelle cible ?\n2. **Relation fonction – solution technique – forme** : la forme de la lampe est-elle imposée par la fonction, par le procédé, par l'image voulue ? Justifie avec deux éléments du document.\n3. **Usage** : relève deux éléments qui concernent la prise en main, le rangement ou la sécurité.\n4. **Environnement** : quels éléments du document favorisent une bonne fin de vie ?",
+      "bareme": [
+        { "critere": "Contexte identifié : étudiants, petits logements, 35 €", "points": 4 },
+        { "critere": "Forme reliée au procédé (tôle découpée et pliée, une seule pièce) et à la fonction, avec deux éléments du document", "points": 7 },
+        { "critere": "Deux éléments d'usage relevés (rangement à plat, angles arrondis)", "points": 4 },
+        { "critere": "Fin de vie analysée : matériau unique, démontage facile, recyclable", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Contexte** : la lampe vise les **étudiants** vivant dans de **petits logements** (la cible), avec un prix modéré de **35 €** (segment bon marché à moyen).\n\n2. La forme découle surtout du **procédé** : une **seule tôle découpée puis pliée** donne des faces planes et des plis, sans assemblage ni vis. Elle découle aussi de la **fonction** : le pied assure la stabilité, le bras oriente la lumière, l'abat-jour porte la LED. L'image voulue (objet simple et astucieux) est une conséquence de ces choix.\n\n3. **Usage** : elle **se range à plat** dans un carton très fin (adapté aux petits logements et au transport) ; ses **angles vifs ont été arrondis** pour la sécurité ; la LED est clipsée, donc facile à remplacer.\n\n4. **Environnement** : un **matériau unique** (aluminium), **aucune vis**, une LED **simplement clipsée** : le démontage est immédiat et la pièce d'aluminium est **recyclable**. L'emballage fin réduit aussi le transport."
+    },
+    {
+      "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+      "difficulte": 3,
+      "titre": "Deux grille-pain, deux époques",
+      "consigne": "Compare les deux produits en mobilisant l'histoire des formes, la relation fonction – forme et le rôle du designer et de l'ingénieur. Rédige des réponses argumentées.",
+      "enonce": "**Document 1 — Un grille-pain des années 1930 (description)**\n\n> Carrosserie en métal chromé aux lignes courbes et fuyantes, comme une locomotive ou une voiture de course. Des bandes horizontales soulignent l'impression de vitesse. L'objet reste pourtant posé sur un plan de travail.\n\n**Document 2 — Un grille-pain conçu dans les années 2020 (fiche fictive)**\n\n> Forme simple en boîte, peu de matériaux différents. Les vis sont standard : on ouvre l'appareil avec un tournevis ordinaire. Les pièces les plus fragiles (résistance, minuterie) sont vendues séparément pendant dix ans. Le fabricant annonce une durée de vie de quinze ans.\n\n1. À quel style rattaches-tu chacun des deux grille-pain ? Justifie avec des éléments des documents.\n2. Dans le grille-pain de 1930, la forme est-elle imposée par la fonction ? Qu'exprime-t-elle alors ?\n3. Explique en quoi chaque objet est le reflet des techniques et des valeurs de son époque.\n4. Pour le grille-pain de 2020, montre ce qu'ont apporté le designer et l'ingénieur.\n5. Le chrome et les courbes du modèle de 1930 lui donnent une forte fonction symbolique. Le modèle de 2020 en a-t-il une ? Laquelle ?",
+      "bareme": [
+        { "critere": "Streamline et éco-design identifiés et justifiés par les documents", "points": 5 },
+        { "critere": "Forme de 1930 non imposée par la fonction : elle exprime la vitesse et la modernité", "points": 4 },
+        { "critere": "Chaque objet relié aux techniques et aux valeurs de son époque", "points": 4 },
+        { "critere": "Apports distincts du designer (usage, perception) et de l'ingénieur (faisabilité, dimensionnement, coût)", "points": 4 },
+        { "critere": "Fonction symbolique du modèle de 2020 discutée (image d'un objet responsable, durable)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le grille-pain de 1930 relève du **Streamline** : **profils aérodynamiques** (lignes courbes et fuyantes, bandes de vitesse) **même sur un objet immobile**. Celui de 2020 relève de l'**éco-design** : **sobriété de matière** (forme simple, peu de matériaux), **réparabilité** (vis standard, pièces détachées) et **durée de vie** (quinze ans).\n\n2. Non : un grille-pain posé sur un plan de travail n'a aucun besoin d'être aérodynamique. La forme n'est pas dictée par la fonction utilitaire (griller du pain) : elle exprime la **vitesse**, la **modernité** et le progrès technique, très valorisés à cette époque.\n\n3. Chaque objet reflète **ses techniques, son économie et ses valeurs** : en 1930, le métal chromé et l'admiration pour les trains et les voitures rapides ; dans les années 2020, la préoccupation pour les **ressources limitées** et les déchets, qui pousse à des objets réparables et durables.\n\n4. Le **designer** apporte le regard sur l'**usage** et la **perception** : un objet simple, facile à ouvrir, dont on comprend qu'il est réparable. L'**ingénieur** apporte la **faisabilité**, le **dimensionnement** et le **coût** : choisir des vis standard, prévoir des pièces détachées pendant dix ans, garantir la tenue sur quinze ans.\n\n5. Oui : même sobre, il **dit quelque chose de son propriétaire** : l'image d'un consommateur **responsable**, qui achète durable et répare. La fonction symbolique existe toujours, mais elle ne passe plus par l'ornement."
+    },
+    {
+      "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+      "difficulte": 1,
+      "titre": "Les trois objectifs de l'ergonomie",
+      "consigne": "Réponds à chaque question avec un exemple concret.",
+      "enonce": "**Situation.** Nathan observe une perceuse de l'atelier et le distributeur de tickets de la cantine.\n\n1. Nomme les trois objectifs de l'ergonomie et donne, pour chacun, la question à se poser et un exemple.\n2. Un produit est dimensionné « du 5e au 95e centile ». Qu'est-ce que cela signifie ?\n3. Qu'est-ce qu'un persona ? À quoi sert-il ?",
+      "bareme": [
+        { "critere": "Confort, efficacité et sécurité, chacun avec sa question et un exemple", "points": 10 },
+        { "critere": "Centiles : 90 % de la population couverte, les 5 % extrêmes de chaque côté exclus", "points": 5 },
+        { "critere": "Persona : utilisateur type fictif mais réaliste, qui sert à concevoir pour un usager concret", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Confort** : l'usage est-il agréable, sans fatigue ? Exemple : la poignée de la perceuse adaptée à la main. **Efficacité** : l'utilisateur atteint-il son but vite et sans erreur ? Exemple : un seul bouton principal bien visible sur le distributeur de tickets. **Sécurité** : l'usage peut-il blesser ? Exemple : un arrêt d'urgence rouge facile d'accès sur la perceuse.\n\n2. Le produit convient à **90 % de la population** : seuls les **5 % les plus petits** et les **5 % les plus grands** sont hors de la plage (on utilise les tables d'**anthropométrie**).\n\n3. Un **persona** est un **utilisateur type, fictif mais réaliste** (âge, habitudes, besoins). Il sert à concevoir en pensant à une personne concrète plutôt qu'à un « utilisateur » abstrait."
+    },
+    {
+      "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+      "difficulte": 2,
+      "titre": "Les casiers connectés de la gare",
+      "consigne": "Analyse le test utilisateur, relie chaque problème à un principe du cours et propose une amélioration.",
+      "enonce": "**Situation.** Une gare installe des casiers à bagages connectés. Un test utilisateur est réalisé avec **Marcel, 72 ans**, qui voyage avec une grosse valise et un téléphone ancien.\n\n> Marcel cherche longtemps comment commencer : l'écran est éteint et aucun bouton n'est visible. Il finit par toucher l'écran. Il doit taper un code à 8 chiffres ; les touches sont petites. Quand il valide, rien ne se passe pendant 5 secondes : il appuie trois fois, ce qui annule sa réservation. Le casier choisi est en haut, à 1,90 m : il ne peut pas y soulever sa valise.\n\n1. Décris le persona et un scénario d'usage de Marcel, en quelques étapes.\n2. Relève au moins quatre problèmes, et relie chacun à un objectif de l'ergonomie ou à un principe du design d'interaction.\n3. Propose une amélioration pour chaque problème.\n4. Pourquoi ce test apprend-il plus qu'une réunion entre concepteurs ?",
+      "bareme": [
+        { "critere": "Persona et scénario d'usage cohérents avec la situation", "points": 4 },
+        { "critere": "Quatre problèmes reliés au bon principe ou objectif (visibilité, confort, retour d'information, prévention des erreurs, sécurité ou diversité)", "points": 8 },
+        { "critere": "Une amélioration pertinente par problème", "points": 5 },
+        { "critere": "Intérêt du test utilisateur expliqué", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Persona** : Marcel, 72 ans, voyageur occasionnel, grosse valise, téléphone ancien, vue et force moins bonnes. **Scénario** : il arrive devant les casiers, cherche comment commencer, choisit un casier, paie ou reçoit un code, dépose sa valise, ferme, repart ; au retour, il tape son code et récupère sa valise.\n\n2. et 3. Problèmes et améliorations :\n| Problème | Principe ou objectif | Amélioration |\n| Écran éteint, aucun bouton visible | **Visibilité** | Écran allumé en permanence avec « Touchez ici pour commencer » |\n| Touches petites | **Confort**, **efficacité**, diversité des utilisateurs | Touches plus grandes, bien contrastées |\n| Rien ne se passe pendant 5 s | **Retour d'information** | Message « Validation en cours », son ou voyant immédiat |\n| Trois appuis annulent la réservation | **Prévention des erreurs** | Ignorer les appuis répétés pendant le traitement |\n| Casier à 1,90 m, valise trop lourde à soulever | **Sécurité** et **confort**, anthropométrie | Attribuer d'abord les casiers bas aux gros bagages |\n\n4. Observer un **utilisateur réel** révèle des difficultés que les concepteurs, qui connaissent déjà le produit, ne voient pas : « observer un utilisateur réel apprend plus que dix réunions entre concepteurs »."
+    },
+    {
+      "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+      "difficulte": 3,
+      "titre": "L'interface du thermostat connecté",
+      "consigne": "Exploite le rapport de test et les données, puis argumente tes propositions avec les notions d'ergonomie et d'expérience utilisateur.",
+      "enonce": "**Document 1 — Rapport de test utilisateur (fictif)**\n\n> Cinq personnes ont testé un thermostat mural connecté. Sur l'écran, la flèche « haut » baisse la température dans le menu Chauffage, mais monte le volume dans le menu Réglages. Deux personnes ont éteint le chauffage par erreur en voulant régler l'heure : les deux boutons sont identiques et côte à côte. Personne n'a su si la consigne avait été enregistrée : aucun message n'apparaît. Trois personnes ont eu du mal à installer l'application : la notice ne décrit pas l'étape de connexion. Une personne en fauteuil roulant n'a pas pu lire l'écran, placé à 1,60 m du sol.\n\n**Document 2 — Données anthropométriques simplifiées (valeurs fictives)**\n\n| Mesure | 5e centile | 95e centile |\n| Hauteur des yeux, debout | 1,45 m | 1,80 m |\n| Hauteur des yeux, assis en fauteuil | 1,05 m | 1,30 m |\n\n1. Relève les problèmes du document 1 et relie chacun à un principe du design d'interaction (visibilité, retour d'information, cohérence, prévention des erreurs).\n2. Montre que l'expérience utilisateur ne se limite pas à l'usage de l'écran, en t'appuyant sur le document 1.\n3. À l'aide du document 2, discute la hauteur de 1,60 m. Propose une hauteur ou une solution qui prenne en compte la diversité des utilisateurs, et justifie.\n4. Propose un nouveau test utilisateur pour valider tes corrections : qui recruter, quel scénario, qu'observer ?",
+      "bareme": [
+        { "critere": "Problèmes reliés aux principes : cohérence, prévention des erreurs, retour d'information", "points": 5 },
+        { "critere": "Expérience utilisateur étendue au parcours complet (installation, notice)", "points": 4 },
+        { "critere": "Analyse chiffrée de la hauteur : 1,60 m au-dessus de 1,30 m, donc inadapté en fauteuil ; solution argumentée", "points": 5 },
+        { "critere": "Test utilisateur complet : personas variés, scénario, observations", "points": 4 },
+        { "critere": "Argumentation claire avec le vocabulaire du cours", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Problèmes :\n- la flèche « haut » baisse dans un menu et monte dans l'autre : défaut de **cohérence** (mêmes gestes pour mêmes effets) ;\n- boutons identiques et côte à côte, chauffage éteint par erreur : défaut de **prévention des erreurs** (il faut rendre la mauvaise manœuvre impossible ou difficile : boutons différents, éloignés, confirmation) ;\n- aucun message après l'enregistrement : défaut de **retour d'information** ;\n- écran illisible pour une personne en fauteuil : défaut de **visibilité** pour une partie des utilisateurs.\n\n2. L'**expérience utilisateur** englobe **tout le parcours** : découvrir, déballer, **installer**, utiliser, entretenir, se séparer du produit. Ici, trois personnes sur cinq ont eu du mal dès l'**installation de l'application**, à cause de la notice : le produit peut être bien conçu à l'écran et décevoir avant même la première utilisation.\n\n3. En fauteuil, la hauteur des yeux va de 1,05 m à 1,30 m : un écran à **1,60 m** est au-dessus de toute cette plage, il est mal lisible. Debout, 1,60 m est dans la plage (1,45 à 1,80 m). On conçoit pour la **diversité** des utilisateurs : placer l'écran vers **1,30 à 1,40 m** (lisible assis et encore lisible debout, en baissant les yeux), ou prévoir un écran **inclinable**, ou un **réglage à distance** par l'application. Toute proposition justifiée par les données est acceptée.\n\n4. Recruter des utilisateurs variés (personne âgée, personne en fauteuil, adolescent, personne peu à l'aise avec le numérique), à partir de **personas**. **Scénario** : installer le thermostat avec la notice, régler la température à 20 °C, régler l'heure. **Observer** : les hésitations, les erreurs, le temps passé, la compréhension des messages ; puis comparer aux résultats du premier test."
+    },
+    {
+      "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+      "difficulte": 1,
+      "titre": "Invention, innovation et types d'innovation",
+      "consigne": "Réponds à chaque question avec précision, en t'appuyant sur des exemples.",
+      "enonce": "**Situation.** Un magazine présente plusieurs nouveautés.\n\n1. Quelle différence y a-t-il entre une invention et une innovation ?\n2. Classe chaque nouveauté selon le type d'innovation (produit, procédé, marketing, organisation) :\n   a. un smartphone à écran pliable ;\n   b. une usine qui imprime ses pièces métalliques en 3D ;\n   c. des trottinettes proposées en location dans la rue ;\n   d. un chantier où tous les acteurs travaillent sur une maquette BIM commune.\n3. Distingue innovation incrémentale et innovation de rupture, avec un exemple de chaque.",
+      "bareme": [
+        { "critere": "Invention et innovation distinguées : adoption par le marché", "points": 5 },
+        { "critere": "Quatre nouveautés classées dans le bon type", "points": 8 },
+        { "critere": "Incrémentale et de rupture définies avec un exemple chacune", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une **invention** est une nouveauté technique ; elle devient **innovation** quand elle est **adoptée par le marché**, quand elle trouve ses utilisateurs.\n\n2. a. Innovation **de produit** (l'objet lui-même change). b. Innovation **de procédé** (la façon de fabriquer). c. Innovation **de marketing** (la façon de proposer le service). d. Innovation **d'organisation** (la façon de travailler).\n\n3. **Incrémentale** : amélioration progressive d'un produit existant (une batterie qui tient 10 % de plus). **De rupture** : changement radical qui rend l'ancien obsolète (l'ampoule LED face à l'incandescence)."
+    },
+    {
+      "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+      "difficulte": 2,
+      "titre": "Protéger le vélo « Plioz »",
+      "consigne": "Pour chaque élément, choisis le titre de protection adapté et justifie.",
+      "enonce": "**Situation.** Une jeune entreprise a conçu un vélo pliant. Il présente :\n\n- un **mécanisme de pliage** nouveau, qui plie le vélo en 5 secondes d'un seul geste ;\n- un **cadre en forme de vague**, de couleur turquoise, très reconnaissable ;\n- le **nom** « Plioz » et un logo.\n\n1. Pour chacun des trois éléments, indique le titre de protection adapté et sa durée maximale en France.\n2. Où l'entreprise dépose-t-elle ces titres ?\n3. Quelles conditions le mécanisme doit-il remplir pour être brevetable ?\n4. Un concurrent dit : « Le brevet sera publié, donc je pourrai copier le mécanisme. » A-t-il raison ? Explique.\n5. Avant de déposer, l'entreprise consulte les bases de brevets. Donne deux raisons de le faire.",
+      "bareme": [
+        { "critere": "Brevet (20 ans), dessin et modèle (25 ans par tranches de 5 ans), marque (10 ans renouvelable sans limite)", "points": 7 },
+        { "critere": "Dépôt à l'INPI", "points": 2 },
+        { "critere": "Conditions de brevetabilité : nouveau, inventif, applicable industriellement", "points": 3 },
+        { "critere": "Publication expliquée : lecture libre mais exploitation interdite sans licence", "points": 4 },
+        { "critere": "Deux raisons de consulter les bases de brevets", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Mécanisme de pliage** : **brevet d'invention** (solution technique), **20 ans** au plus. **Cadre en vague turquoise** : **dessin et modèle** (apparence : forme, couleur), **25 ans** au plus, par tranches de 5 ans. **Nom et logo** : **marque**, **10 ans**, renouvelable sans limite.\n\n2. En France, ces titres se déposent à l'**INPI**.\n\n3. La solution doit être **nouvelle**, **inventive** et **applicable industriellement**.\n\n4. Il a **tort**. En échange de la protection, le brevet est **publié** : tout le monde peut le **lire**, mais **personne ne peut l'exploiter sans licence** tant qu'il est en vigueur. Le copier serait une **contrefaçon**.\n\n5. Raisons : ne pas **réinventer** une solution qui existe déjà ; retracer l'**évolution technique** du produit ; vérifier qu'on ne **contrefait** pas un brevet en vigueur."
+    },
+    {
+      "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+      "difficulte": 3,
+      "titre": "L'histoire de la gourde Aquaclip",
+      "consigne": "Analyse le document, puis réponds en justifiant chaque réponse avec les notions du cours et les calculs de durée.",
+      "enonce": "**Document — L'aventure d'une start-up (histoire inventée)**\n\n> En 2026, trois étudiants créent une gourde qui filtre l'eau grâce à une cartouche clipsable. Pressés, ils lancent la fabrication sans consulter les bases de brevets. Six mois plus tard, une entreprise leur écrit : elle possède un brevet en vigueur, déposé en 2018, sur un système de cartouche clipsable très proche. Les étudiants modifient alors leur fixation et déposent un brevet sur la nouvelle solution. Ils déposent aussi la forme en goutte de la gourde et le nom de la marque. Plus tard, ils proposent un abonnement : une cartouche neuve livrée chaque mois. Ils font enfin tester leur gourde selon la norme européenne sur les matériaux au contact de l'eau potable, et obtiennent un label environnemental.\n\n1. Quelle erreur les étudiants ont-ils commise au départ ? Quel risque ont-ils couru ?\n2. Jusqu'à quelle année, au plus tard, le brevet de 2018 peut-il protéger son titulaire ?\n3. Pour les titres déposés par les étudiants en 2026 : jusqu'à quelle année au plus tard la forme peut-elle être protégée ? Et le nom de marque, s'ils renouvellent à chaque fois ?\n4. Classe les nouveautés de la start-up (la gourde filtrante, l'abonnement) par type d'innovation. Le passage de la première fixation à la seconde est-il une innovation incrémentale ou de rupture ?\n5. Explique la différence entre la norme et le label mentionnés, et ce que chacun apporte à l'entreprise.",
+      "bareme": [
+        { "critere": "Erreur identifiée (pas de recherche dans les bases de brevets) et risque de contrefaçon", "points": 4 },
+        { "critere": "Brevet de 2018 : 2038 au plus tard", "points": 3 },
+        { "critere": "Dessin et modèle : 2051 au plus tard ; marque : sans limite si renouvelée tous les 10 ans", "points": 4 },
+        { "critere": "Innovation de produit et de marketing, amélioration incrémentale justifiée", "points": 5 },
+        { "critere": "Norme (référence commune, souvent volontaire) et label (atteste une performance, valorise le produit) distingués", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Ils n'ont **pas consulté les bases de brevets** (INPI, Espacenet) avant de concevoir. Ils risquaient la **contrefaçon** d'un brevet en vigueur : exploiter sans licence une solution protégée.\n\n2. Un brevet dure **20 ans au plus** : 2018 + 20 = **2038** au plus tard.\n\n3. **Forme** (dessin et modèle) : 25 ans au plus : 2026 + 25 = **2051**. **Marque** : 10 ans, **renouvelable sans limite** : 2036, 2046… elle peut être protégée **sans fin**, tant qu'ils la renouvellent.\n\n4. La gourde filtrante est une innovation **de produit**. L'abonnement de cartouches livrées chaque mois est une innovation **de marketing** (la façon de vendre ou de proposer le service). Changer de fixation améliore un produit existant sans rendre l'ancien obsolète : innovation **incrémentale**.\n\n5. Une **norme** est un **document de référence**, souvent volontaire, qui fixe des **règles communes** (ici, des méthodes d'essai sur les matériaux au contact de l'eau) : la respecter prouve la sécurité et facilite la vente partout. Un **label** **atteste une performance** (ici environnementale) : il **valorise** le produit auprès des clients."
+    },
+    {
+      "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+      "difficulte": 1,
+      "titre": "Besoin réel, besoin induit et valeur",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** Lou veut une montre pour connaître l'heure en cours. Son ami lui conseille une montre connectée à 400 €, « parce que tout le monde en a une ».\n\n1. Définis le besoin réel et le besoin induit. Applique ces deux notions à la situation de Lou.\n2. Écris la relation qui définit la valeur d'un produit en analyse de la valeur.\n3. Cite les deux façons d'augmenter la valeur d'un produit.\n4. Pourquoi répondre au besoin réel plutôt qu'au besoin induit ?",
+      "bareme": [
+        { "critere": "Besoin réel et besoin induit définis et appliqués à Lou", "points": 7 },
+        { "critere": "Valeur = satisfaction du besoin / coût", "points": 4 },
+        { "critere": "Deux façons d'augmenter la valeur", "points": 5 },
+        { "critere": "Éviter de payer et de fabriquer des fonctions inutiles", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **besoin réel** est ce dont l'utilisateur a **vraiment besoin** : pour Lou, connaître l'heure en cours. Le **besoin induit** est **créé par la publicité ou la mode** : avoir une montre connectée « parce que tout le monde en a une ».\n\n2. **Valeur = satisfaction du besoin / coût**.\n\n3. **Mieux satisfaire le besoin à coût égal**, ou **garder la même satisfaction pour moins cher**.\n\n4. Répondre au besoin réel **évite de payer — et de fabriquer — des fonctions inutiles** : une montre simple suffit à Lou, pour un coût bien plus faible et moins de matière."
+    },
+    {
+      "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+      "difficulte": 2,
+      "titre": "L'analyse de la valeur du ventilateur",
+      "consigne": "Complète l'analyse en détaillant les calculs, puis argumente tes propositions.",
+      "enonce": "**Situation.** Un ventilateur de bureau coûte **50 €** à produire. L'équipe a estimé le coût et l'importance de chaque fonction :\n\n| Fonction | Coût | Importance pour l'utilisateur |\n| Brasser l'air | 15 € | 55 % |\n| Régler la vitesse | 10 € | 20 % |\n| S'orienter | 5 € | 10 % |\n| Plaire (aspect) | 20 € | 15 % |\n\n1. Calcule la part du coût (en %) de chaque fonction.\n2. Compare, pour chaque fonction, la part du coût et l'importance. Quelle fonction est trop chère pour ce qu'elle apporte ? Laquelle est sous-dotée ?\n3. Propose une action pour chacune de ces deux fonctions.\n4. Si l'on baisse le coût total à 42 € avec la même satisfaction, que devient la valeur ?",
+      "bareme": [
+        { "critere": "Parts du coût justes : 30 %, 20 %, 10 %, 40 %", "points": 5 },
+        { "critere": "Plaire trop chère (40 % pour 15 %), brasser l'air sous-dotée (30 % pour 55 %)", "points": 6 },
+        { "critere": "Deux actions pertinentes (simplifier l'aspect, améliorer l'hélice ou le moteur)", "points": 5 },
+        { "critere": "Valeur qui augmente, justifiée par le rapport satisfaction / coût", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Parts du coût (sur 50 €) : brasser l'air 15 / 50 = **30 %** ; régler la vitesse 10 / 50 = **20 %** ; s'orienter 5 / 50 = **10 %** ; plaire 20 / 50 = **40 %**.\n\n2. - Brasser l'air : 30 % du coût pour 55 % d'importance → **sous-dotée** ;\n- Régler la vitesse : 20 % pour 20 % → équilibrée ;\n- S'orienter : 10 % pour 10 % → équilibrée ;\n- Plaire : 40 % pour 15 % → **trop chère** pour ce qu'elle apporte.\n\n3. **Plaire** : chercher des économies (finition plus simple, moins de pièces décoratives). **Brasser l'air** : y consacrer plus de moyens (hélice mieux dessinée, moteur plus efficace), ce qui augmenterait la valeur.\n\n4. Valeur = satisfaction / coût : à satisfaction égale, si le coût passe de 50 € à 42 €, le dénominateur diminue, donc la **valeur augmente** (d'environ 50 / 42 ≈ 1,19, soit près de 19 %)."
+    },
+    {
+      "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+      "difficulte": 3,
+      "titre": "Deux lampes frontales à départager",
+      "consigne": "Compare les deux solutions à l'aide des trois relations du cours et de la notion de valeur, puis rends un avis argumenté.",
+      "enonce": "**Situation.** Une entreprise hésite entre deux lampes frontales de randonnée.\n\n| | Solution A | Solution B |\n| Coût de production | 40 € | 30 € |\n| Satisfaction du besoin (note d'un panel d'utilisateurs, sur 20) | 16 | 15 |\n| Fonctions | éclairer, régler l'intensité, connexion Bluetooth, écran d'autonomie | éclairer, régler l'intensité |\n| Nombre de pièces | 42 | 25 |\n| Boîtier | deux coques collées, piles soudées | une coque qui sert aussi de support de sangle, batterie clipsée remplaçable |\n\n1. Calcule la valeur de chaque solution (satisfaction / coût). Laquelle a la meilleure valeur ?\n2. La solution A a plus de fonctions. Pourquoi n'est-ce pas forcément un avantage ? Utilise la notion de complexité.\n3. Dans la solution B, repère un exemple d'intégration de fonctions. Que rapporte-t-elle ?\n4. Compare les deux solutions selon la relation fonction / impact environnemental.\n5. Rédige une recommandation argumentée pour l'entreprise.",
+      "bareme": [
+        { "critere": "Valeurs : A = 0,40 et B = 0,50 point par euro, B meilleure", "points": 4 },
+        { "critere": "Complexité de A expliquée : plus de pièces, de pannes possibles, d'énergie", "points": 4 },
+        { "critere": "Intégration de fonctions repérée (coque et support de sangle) et son intérêt", "points": 4 },
+        { "critere": "Comparaison environnementale : collage et soudure contre démontage et batterie remplaçable", "points": 4 },
+        { "critere": "Recommandation argumentée qui mobilise plusieurs relations", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Valeur A = 16 / 40 = **0,40** point par euro. Valeur B = 15 / 30 = **0,50** point par euro. **B** offre la meilleure valeur : presque la même satisfaction pour 25 % moins cher.\n\n2. Ajouter des fonctions (Bluetooth, écran) augmente la **complexité** : plus de pièces (42 contre 25), plus de **pannes** possibles, plus d'**énergie** consommée. Pour une lampe frontale, le **besoin réel** est d'éclairer longtemps et de façon fiable ; ces fonctions répondent plutôt à un besoin **induit** et n'ajoutent qu'un point de satisfaction pour 10 € de plus.\n\n3. Dans B, **la coque sert aussi de support de sangle** : une seule pièce assure deux fonctions. L'**intégration de fonctions** réduit souvent le **coût** et la **complexité** (moins de pièces à fabriquer et à assembler).\n\n4. Relation **fonction / impact environnemental** : A utilise des coques **collées** et des piles **soudées**, difficiles à démonter, et consomme plus de matière (plus de pièces) et d'énergie. B a moins de pièces et une **batterie clipsée remplaçable**, qui allonge la durée de vie et facilite la fin de vie.\n\n5. Recommandation : choisir la **solution B**. Sa **valeur** est meilleure (0,50 contre 0,40), elle répond au besoin réel sans fonctions superflues, elle est **plus simple** grâce à l'intégration de fonctions, et son **impact environnemental** est plus faible. On peut chercher à gagner le point de satisfaction manquant sur la fonction principale (éclairer mieux), plutôt qu'en ajoutant des gadgets."
+    },
+    {
+      "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+      "difficulte": 1,
+      "titre": "Diverger puis converger",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** La classe de Rayan organise une séance de créativité.\n\n1. Décris les deux phases d'une séance de créativité : ce qu'on y fait, et ce qui y est interdit.\n2. Pendant la première phase, Rayan dit à une camarade : « Ton idée est nulle, ça ne marchera jamais. » Quelle règle ne respecte-t-il pas ? Pourquoi est-ce grave ?\n3. Qu'est-ce que le biomimétisme ? Donne un exemple.\n4. Quelle règle prime dans un brainstorming ?",
+      "bareme": [
+        { "critere": "Divergence et convergence décrites avec ce qui est interdit dans chacune", "points": 7 },
+        { "critere": "Règle de non-jugement en divergence, et risque de tuer une idée fragile", "points": 5 },
+        { "critere": "Biomimétisme défini avec un exemple juste", "points": 4 },
+        { "critere": "La quantité d'idées prime", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Divergence** : produire le plus d'idées possible, même farfelues ; interdit de **critiquer, juger**. **Convergence** : trier, regrouper, évaluer, choisir ; interdit de **rouvrir sans fin la liste**.\n\n2. Il juge une idée pendant la **divergence**, où la critique est interdite. Juger trop tôt **tue les idées fragiles**, dont sortent souvent les meilleures, et décourage les autres de proposer.\n\n3. Le **biomimétisme** consiste à **s'inspirer du vivant**. Exemples : la bardane a inspiré le **velcro** ; le martin-pêcheur a inspiré le nez du TGV japonais.\n\n4. Dans un brainstorming, **la quantité prime** : on lance le plus d'idées possible et on rebondit sur celles des autres."
+    },
+    {
+      "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+      "difficulte": 2,
+      "titre": "Sécher son linge dans un studio",
+      "consigne": "Suis les étapes d'une séance de créativité et détaille le calcul du tableau multicritère.",
+      "enonce": "**Situation.** Des étudiants cherchent une solution pour faire sécher du linge sans électricité dans un studio de 18 m².\n\n1. Formule le problème sous forme de question ouverte. Pourquoi ne pas écrire directement « Comment fabriquer un étendoir pliant ? » ?\n2. Après le brainstorming, voici quelques idées notées : étendoir suspendu au plafond avec poulie, étendoir pliant contre le mur, cintres sur une tringle de fenêtre, étendoir escamotable dans un placard, séchoir tournant sur pied. Regroupe-les en familles.\n3. Trois pistes sont évaluées avec un tableau multicritère. Chaque note va de 1 à 5 (5 = très bien) ; on multiplie chaque note par le poids du critère, puis on additionne.\n\n| Critère (poids) | A : suspendu au plafond | B : pliant contre le mur | C : séchoir tournant |\n| Coût (×2) | 4 | 3 | 5 |\n| Encombrement (×3) | 2 | 5 | 3 |\n| Facilité d'usage (×1) | 5 | 3 | 2 |\n\nCalcule le total de chaque piste et indique laquelle retenir. Rédige une phrase de choix argumenté.",
+      "bareme": [
+        { "critere": "Question ouverte qui ne contient pas la solution, avec justification", "points": 5 },
+        { "critere": "Regroupement cohérent en familles (suspendre, plier, faire tourner…)", "points": 4 },
+        { "critere": "Totaux justes : A = 19, B = 24, C = 21", "points": 7 },
+        { "critere": "Choix de B argumenté par les critères", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Exemple : « **Comment faire sécher son linge sans électricité dans un studio de 18 m² ?** » Écrire « comment fabriquer un étendoir pliant » imposerait déjà une **solution** et fermerait la recherche : la question doit rester **ouverte**.\n\n2. Familles possibles : **suspendre** (étendoir au plafond avec poulie, cintres sur la tringle) ; **plier / escamoter** (étendoir pliant contre le mur, étendoir dans un placard) ; **faire tourner** (séchoir tournant sur pied).\n\n3. Totaux :\n- A : 4 × 2 + 2 × 3 + 5 × 1 = 8 + 6 + 5 = **19** ;\n- B : 3 × 2 + 5 × 3 + 3 × 1 = 6 + 15 + 3 = **24** ;\n- C : 5 × 2 + 3 × 3 + 2 × 1 = 10 + 9 + 2 = **21**.\nOn retient **B**. Phrase attendue : « Nous avons retenu l'étendoir pliant contre le mur, car il obtient le meilleur total (24) grâce à son très faible encombrement, le critère le plus important dans un studio, pour un coût correct. »"
+    },
+    {
+      "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+      "difficulte": 3,
+      "titre": "Un sac à dos solide mais léger",
+      "consigne": "Applique la démarche rationnelle du cours, puis mobilise les autres outils de créativité. Justifie chaque réponse.",
+      "enonce": "**Situation.** Une marque veut un sac à dos de randonnée pour enfants. Il doit être **solide** (il est traîné par terre, lancé, porté chargé) et **très léger** (un enfant de 8 ans le porte toute la journée). Le bureau d'études constate : « Pour le rendre solide, on épaissit la toile et on ajoute une armature, mais il devient trop lourd. »\n\n1. Formule la contradiction technique.\n2. Pourquoi la méthode TRIZ propose-t-elle des principes d'innovation ? D'où viennent-ils ?\n3. Applique au sac au moins deux principes d'innovation du cours (segmenter, structure alvéolaire, changer de matériau, rendre une pièce mobile…) : décris la solution obtenue.\n4. Cite deux lois d'évolution des systèmes techniques et montre comment un sac à dos pourrait évoluer selon elles.\n5. Propose un exemple d'intégration de fonctions et un exemple de transfert de technologie pour ce sac.\n6. Méthodes intuitives ou rationnelles : laquelle aurait-il fallu utiliser ? Discute.",
+      "bareme": [
+        { "critere": "Contradiction formulée : améliorer la solidité dégrade la légèreté", "points": 4 },
+        { "critere": "TRIZ expliquée : principes tirés de l'analyse de milliers de brevets", "points": 3 },
+        { "critere": "Deux principes appliqués de façon concrète et pertinente", "points": 5 },
+        { "critere": "Deux lois d'évolution citées et appliquées ; intégration de fonctions et transfert de technologie illustrés", "points": 5 },
+        { "critere": "Discussion sur la complémentarité des méthodes", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Contradiction** : on veut améliorer la **solidité** (toile épaisse, armature), mais cela **dégrade la légèreté** (masse) ; alléger dégrade la solidité.\n\n2. Les inventions suivent des **lois d'évolution** : la méthode TRIZ a analysé des **milliers de brevets** et en a tiré des **principes d'innovation** qui ont déjà permis de résoudre des contradictions semblables.\n\n3. Exemples :\n- **Structure alvéolaire** : un dos en mousse alvéolaire, rigide et léger, à la place d'une armature pleine (comme la coque fine sur mousse alvéolaire d'un casque) ;\n- **Segmenter** : renforcer seulement les zones qui frottent (fond, coins) avec une toile épaisse, et garder une toile fine ailleurs ;\n- **Changer de matériau** : une toile technique fine et résistante à la déchirure au lieu d'une toile épaisse ;\n- **Rendre une pièce mobile** : une armature amovible, qu'on ne met que pour les charges lourdes.\n\n4. Lois d'évolution : les systèmes deviennent plus **légers** (matériaux plus fins), plus **intégrés** (moins de pièces séparées), plus **automatisés**, plus **dynamiques** (pièces fixes qui deviennent réglables : bretelles et dos réglables qui grandissent avec l'enfant).\n\n5. **Intégration de fonctions** : la mousse du dos sert aussi de rembourrage, de renfort et de planche d'assise pour la pause. **Transfert de technologie** : reprendre des matériaux composites ou des toiles venues de l'aéronautique ou du sport de haut niveau, comme les composites de l'aéronautique passés dans les vélos.\n\n6. Les deux sont **complémentaires** : les méthodes **intuitives** (brainstorming, analogie, biomimétisme) produisent beaucoup d'idées ; la méthode **rationnelle** aide quand on bute sur une **contradiction** précise, comme ici. On peut d'abord identifier la contradiction, puis faire diverger le groupe sur chaque principe, et enfin converger avec un tableau multicritère."
+    },
+    {
+      "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+      "difficulte": 1,
+      "titre": "Les cinq phases du cycle de vie",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Zoé étudie le cycle de vie d'un tee-shirt en coton.\n\n1. Cite, dans l'ordre, les cinq phases du cycle de vie d'un produit.\n2. Associe à chaque phase un exemple pour le tee-shirt (ce qu'elle consomme ou rejette).\n3. Que signifie raisonner « du berceau au berceau » ?\n4. Environ quelle part de l'impact environnemental d'un produit est fixée dès sa conception ? Qu'en déduis-tu ?",
+      "bareme": [
+        { "critere": "Cinq phases dans l'ordre", "points": 5 },
+        { "critere": "Un exemple pertinent pour chaque phase", "points": 7 },
+        { "critere": "« Du berceau au berceau » : la matière en fin de vie devient celle d'un nouveau produit", "points": 4 },
+        { "critere": "Environ 80 % fixés à la conception, d'où l'éco-conception", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Extraction des matières premières → fabrication → transport et distribution → utilisation → fin de vie**.\n\n2. Exemples : **extraction** : culture du coton (eau, engrais, énergie) ; **fabrication** : filature, teinture, couture (énergie, eau, rejets de teinture, chutes) ; **transport** : carburant, emballages ; **utilisation** : lavages (eau, électricité, lessive), repassage ; **fin de vie** : déchets, réemploi, recyclage en chiffons ou en fibres.\n\n3. « Du berceau au berceau », c'est faire en sorte que **la matière d'un produit en fin de vie devienne celle d'un nouveau produit**, au lieu de finir en déchet (« du berceau à la tombe »).\n\n4. Environ **80 %** de l'impact est fixé dès la **conception** : il faut donc prendre en compte l'environnement **dès le premier croquis**, sur tout le cycle de vie. C'est l'**éco-conception**."
+    },
+    {
+      "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+      "difficulte": 2,
+      "titre": "L'ACV de l'aspirateur",
+      "consigne": "Exploite le tableau, puis justifie tes propositions à l'aide des leviers de l'éco-conception.",
+      "enonce": "**Situation.** Voici le résultat simplifié de l'analyse de cycle de vie d'un aspirateur traîneau (données fictives), pour le critère changement climatique :\n\n| Phase | Part de l'impact climatique |\n| Matières | 12 % |\n| Fabrication | 6 % |\n| Transport | 3 % |\n| Utilisation (électricité) | 75 % |\n| Fin de vie | 4 % |\n\n1. En quelle unité exprime-t-on l'impact sur le changement climatique ?\n2. Quelle phase pèse le plus ? Quelle est donc la meilleure piste d'amélioration ?\n3. Le service marketing propose de remplacer la coque par un plastique recyclé. Est-ce la priorité ? Justifie avec le tableau.\n4. Propose deux leviers d'éco-conception adaptés à cet aspirateur, dont un qui concerne la fin de vie.\n5. Pourquoi une ACV étudie-t-elle plusieurs critères, et pas seulement le climat ?",
+      "bareme": [
+        { "critere": "kg équivalent CO2", "points": 2 },
+        { "critere": "Utilisation (75 %) identifiée, piste : réduire la consommation électrique", "points": 5 },
+        { "critere": "Plastique recyclé : utile mais pas prioritaire, car les matières ne pèsent que 12 %", "points": 5 },
+        { "critere": "Deux leviers adaptés, dont un sur la fin de vie", "points": 5 },
+        { "critere": "Plusieurs critères pour éviter les transferts de pollution", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. En **kg équivalent CO2**.\n\n2. L'**utilisation** pèse **75 %** : c'est l'électricité consommée. La meilleure piste est un **usage économe** : un moteur à meilleure **efficacité énergétique**, une puissance adaptée au sol, une bonne étanchéité pour aspirer autant avec moins de puissance.\n\n3. Ce n'est **pas la priorité** : les matières ne représentent que **12 %** de l'impact. Même en réduisant fortement l'impact de la coque, le gain resterait faible devant les 75 % de l'utilisation. Il faut **d'abord repérer la phase qui pèse le plus, puis agir sur elle**.\n\n4. Leviers possibles : **usage économe** (moteur efficace, réglage de puissance) ; **durée de vie longue** (robustesse, pièces détachées : flexible, batterie, brosse) ; **fin de vie prévue** (démontage facile avec des vis, matériaux identifiés, peu de pièces collées).\n\n5. L'ACV mesure plusieurs critères (climat, eau, épuisement des ressources, pollution de l'air et de l'eau) pour éviter les **transferts de pollution** : réduire un impact en en aggravant un autre."
+    },
+    {
+      "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+      "difficulte": 3,
+      "titre": "Garder son téléphone plus longtemps",
+      "consigne": "Exploite les données, fais les calculs demandés et argumente tes conclusions avec les notions d'éco-conception.",
+      "enonce": "**Situation.** Voici l'impact climatique d'un smartphone sur une durée d'usage de **2 ans** (données simplifiées et fictives). Impact total : **60 kg équivalent CO2**.\n\n| Phase | Part de l'impact |\n| Extraction des matières | 45 % |\n| Fabrication | 30 % |\n| Transport | 5 % |\n| Utilisation (recharges pendant 2 ans) | 15 % |\n| Fin de vie | 5 % |\n\n1. Quelle phase pèse le plus ? En quoi le téléphone diffère-t-il de la bouilloire étudiée en cours ?\n2. Calcule l'impact, en kg équivalent CO2, de l'utilisation sur 2 ans, puis de toutes les autres phases réunies.\n3. On garde le téléphone **4 ans au lieu de 2**. L'impact de l'utilisation double, les autres phases ne changent pas. Calcule le nouvel impact total, puis l'impact **par année d'usage** dans les deux cas. Conclus.\n4. Un fabricant propose un téléphone plus fin dont la batterie est collée. Explique en quoi c'est un transfert de pollution possible.\n5. Propose trois leviers d'éco-conception adaptés au smartphone, en justifiant chacun avec le tableau.",
+      "bareme": [
+        { "critere": "Extraction et fabrication dominantes, contraste avec la bouilloire (utilisation dominante)", "points": 3 },
+        { "critere": "Utilisation = 9 kg ; autres phases = 51 kg", "points": 4 },
+        { "critere": "Nouveau total 69 kg ; 30 kg/an contre 17,25 kg/an ; conclusion sur la durée de vie", "points": 6 },
+        { "critere": "Transfert de pollution expliqué : gain possible en matière, perte en réparabilité et en fin de vie", "points": 3 },
+        { "critere": "Trois leviers adaptés et justifiés par le tableau", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. L'**extraction des matières** (45 %) pèse le plus, suivie de la **fabrication** (30 %) : 75 % de l'impact existe avant même le premier usage. Pour la bouilloire, c'était l'inverse : l'**utilisation** pesait 83 %. Il faut toujours repérer la phase qui pèse le plus avant d'agir.\n\n2. Utilisation : 60 × 0,15 = **9 kg éq. CO2** sur 2 ans. Autres phases : 60 − 9 = **51 kg éq. CO2** (45 + 30 + 5 + 5 = 85 % de 60).\n\n3. Sur 4 ans : utilisation 9 × 2 = 18 kg ; total = 51 + 18 = **69 kg éq. CO2**.\nPar année d'usage : 2 ans → 60 / 2 = **30 kg/an** ; 4 ans → 69 / 4 = **17,25 kg/an**.\nGarder le téléphone deux fois plus longtemps réduit l'impact annuel d'environ 42 % : **allonger la durée de vie** est le levier le plus efficace, car la part fixe (matières, fabrication) est répartie sur plus d'années.\n\n4. Un téléphone plus fin économise peut-être un peu de matière, mais une **batterie collée** rend la réparation et le démontage difficiles : on remplace le téléphone entier quand la batterie s'use, et le recyclage est plus compliqué. On réduit un impact en en **aggravant un autre** : c'est un **transfert de pollution**.\n\n5. Leviers : **durée de vie longue** (robustesse, réparabilité, pièces détachées disponibles), car la fabrication et les matières pèsent 75 % ; **matériaux mieux choisis** (métaux recyclés : l'aluminium recyclé demande environ 95 % d'énergie en moins), pour réduire les 45 % de l'extraction ; **fin de vie prévue** (démontage facile, batterie clipsée ou vissée, matériaux identifiés), pour récupérer la matière « du berceau au berceau »."
+    },
+    {
+      "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+      "difficulte": 1,
+      "titre": "De l'esquisse au volume",
+      "consigne": "Réponds à chaque question avec le vocabulaire de la CAO.",
+      "enonce": "**Situation.** Élise modélise des pièces pour un projet.\n\n1. Que signifie CAO ? Par quoi commence la modélisation d'une pièce ?\n2. Qu'est-ce qu'une esquisse totalement contrainte ? Cite un exemple de cote et un exemple de relation géométrique.\n3. Quelle fonction volumique utiliserais-tu pour obtenir :\n   a. une plaque de 4 mm d'épaisseur à partir d'un rectangle ;\n   b. un bol à partir de son profil, en le faisant tourner autour d'un axe ;\n   c. un trou dans la plaque ;\n   d. une arête arrondie ;\n   e. six trous identiques disposés en cercle ?",
+      "bareme": [
+        { "critere": "CAO définie, modélisation commencée par une esquisse 2D", "points": 4 },
+        { "critere": "Esquisse totalement contrainte définie, exemples de cote et de relation", "points": 6 },
+        { "critere": "Cinq fonctions justes : extrusion, révolution, enlèvement de matière, congé, répétition", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **CAO** : conception assistée par ordinateur. On commence par une **esquisse** : un dessin 2D sur un plan (rectangle, cercle, lignes).\n\n2. Une esquisse est **totalement contrainte** quand **plus rien ne peut bouger** : toutes ses dimensions et positions sont fixées. Cote : une longueur de 80 mm, un diamètre de 10 mm. Relation géométrique : parallèle, perpendiculaire, tangent, coïncident.\n\n3. a. **Extrusion**. b. **Révolution**. c. **Enlèvement de matière** (perçage). d. **Congé**. e. **Répétition** circulaire."
+    },
+    {
+      "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+      "difficulte": 2,
+      "titre": "Le support de casque audio",
+      "consigne": "Détaille les calculs et justifie chaque réponse.",
+      "enonce": "**Situation.** Une équipe modélise un support de casque audio à fixer sous un bureau. La pièce principale est une plaque de **100 × 50 mm**, extrudée de **5 mm**, avec un crochet. L'assemblage virtuel montre que l'arceau du casque, épais de **24 mm**, ne passe pas dans le crochet, dont l'ouverture est de **20 mm**.\n\n1. Calcule le volume de la plaque, en mm³ puis en cm³.\n2. Le logiciel donne la masse seulement si l'on a fait une opération : laquelle ? Calcule la masse de la plaque en PLA (masse volumique 1,24 g/cm³).\n3. Quelle fonction d'exploitation de la maquette a révélé le problème du crochet ?\n4. Quelle nouvelle cote proposes-tu pour l'ouverture ? Justifie. Explique pourquoi une seule modification suffit à tout mettre à jour.\n5. Une fois la pièce validée, que faut-il produire pour la fabrication par impression 3D, et pour un atelier qui l'usinerait ?",
+      "bareme": [
+        { "critere": "Volume : 25 000 mm³ = 25 cm³", "points": 4 },
+        { "critere": "Matériau à attribuer, masse 31 g", "points": 4 },
+        { "critere": "Détection d'interférences identifiée", "points": 3 },
+        { "critere": "Cote supérieure à 24 mm avec un jeu (par exemple 26 mm), conception paramétrée et arbre de construction expliqués", "points": 5 },
+        { "critere": "Export pour l'impression 3D, mise en plan cotée pour l'atelier", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. V = 100 × 50 × 5 = **25 000 mm³**. 1 cm³ = 1 000 mm³, donc V = **25 cm³**.\n\n2. Il faut **attribuer un matériau** à la pièce. Masse : m = 1,24 × 25 = **31 g**.\n\n3. La **détection d'interférences** (ou le test d'assemblage) : deux pièces qui se chevauchent signalent une erreur de conception.\n\n4. L'ouverture doit être **plus grande que 24 mm**, avec un **jeu** pour permettre l'insertion : par exemple **26 mm**. Grâce à l'**arbre de construction**, qui garde l'historique, modifier cette **seule cote** dans l'esquisse met à jour la pièce, l'assemblage et la mise en plan : c'est la **conception paramétrée**.\n\n5. Pour l'impression 3D : un **export** (fichier maillé) de la pièce. Pour l'atelier d'usinage : une **mise en plan**, c'est-à-dire un dessin 2D coté destiné à la fabrication."
+    },
+    {
+      "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+      "difficulte": 3,
+      "titre": "La boîte à charnière et son jumeau",
+      "consigne": "Décris ta démarche de modélisation, fais les calculs demandés et justifie tes réponses.",
+      "enonce": "**Situation.** Une équipe conçoit une petite boîte à bijoux : une base, un couvercle, et un axe métallique qui forme la charnière. Le couvercle doit pouvoir s'ouvrir en tournant autour de l'axe.\n\n**Données.** Axe cylindrique : diamètre **6 mm**, longueur **40 mm**, en acier de masse volumique **7,85 g/cm³**. Volume d'un cylindre : V = π × r² × h.\n\n1. Décris les étapes pour modéliser l'axe (esquisse, contraintes, fonction volumique). Propose deux façons de l'obtenir.\n2. Calcule le volume de l'axe (en mm³ puis en cm³) et sa masse.\n3. Pour l'assemblage, indique les contraintes d'assemblage entre l'axe et la base, puis entre l'axe et le couvercle. Pourquoi le couvercle doit-il rester mobile ?\n4. Lors de la simulation du mouvement, le couvercle traverse la base à l'ouverture. Quelle vérification l'a montré ? Quelle conséquence aurait eu cette erreur sans la maquette ?\n5. Le fabricant de la boîte veut suivre, sur un salon, une vitrine motorisée qui présente la boîte en rotation, avec un capteur qui compte les tours. Explique la différence entre la maquette numérique de la boîte et un jumeau numérique de cette vitrine.",
+      "bareme": [
+        { "critere": "Démarche décrite et deux façons d'obtenir l'axe (révolution d'un rectangle, extrusion d'un cercle)", "points": 4 },
+        { "critere": "Volume ≈ 1 131 mm³ ≈ 1,13 cm³ et masse ≈ 8,9 g", "points": 5 },
+        { "critere": "Contraintes de coaxialité (et de contact ou coïncidence) justes, mobilité du couvercle justifiée", "points": 4 },
+        { "critere": "Interférence détectée et coût évité (impression ratée)", "points": 3 },
+        { "critere": "Jumeau numérique : dynamique, reproduit le comportement réel, alimenté par les capteurs", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Démarche : une **esquisse** 2D sur un plan, des **contraintes** (cotes : diamètre 6 mm ou rayon 3 mm, longueur 40 mm ; relations : centré sur l'origine) jusqu'à ce qu'elle soit **totalement contrainte**, puis une **fonction volumique**. Deux façons : **extruder** un cercle de diamètre 6 mm sur 40 mm, ou faire une **révolution** d'un rectangle de 3 × 40 mm autour de son grand côté. On peut ajouter un **chanfrein** aux extrémités.\n\n2. r = 3 mm ; V = π × 3² × 40 = π × 360 ≈ **1 131 mm³**, soit **1,13 cm³**. Masse : 7,85 × 1,131 ≈ **8,9 g**.\n\n3. Axe / base : **coaxialité** entre l'axe et les trous de la base, et une **coïncidence** ou un contact plan pour le positionner en longueur. Axe / couvercle : **coaxialité** entre l'axe et les trous du couvercle. On ne bloque pas la rotation : le couvercle doit rester **mobile** pour pouvoir **simuler le mouvement** d'ouverture.\n\n4. C'est la **détection d'interférences** pendant la simulation du mouvement : deux pièces qui se chevauchent signalent une erreur de conception. Sans maquette, l'erreur n'aurait été vue qu'après fabrication : une **impression ratée**, du temps et de la matière perdus, au lieu d'une cote corrigée en quelques secondes.\n\n5. La **maquette numérique** est un modèle 3D qui représente les formes et permet de simuler le mouvement prévu. Le **jumeau numérique** va plus loin : c'est une représentation virtuelle **dynamique** d'un produit **réel**, qui **reproduit son comportement** et peut être **alimentée par ses capteurs** (ici le compteur de tours de la vitrine du salon)."
+    },
+    {
+      "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+      "difficulte": 1,
+      "titre": "Additif ou soustractif ?",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** Au fablab, Kylian découvre les machines.\n\n1. Classe ces procédés en additifs ou soustractifs : impression 3D par dépôt de fil, découpe laser, fraisage à commande numérique, impression 3D résine.\n2. Distingue la maquette d'aspect, la maquette fonctionnelle et le prototype : que sert à vérifier chacun ?\n3. Donne un atout et une limite de la découpe laser.\n4. Cite deux consignes de sécurité à respecter au fablab.",
+      "bareme": [
+        { "critere": "Quatre procédés classés correctement", "points": 6 },
+        { "critere": "Trois objets distingués par ce qu'ils vérifient", "points": 6 },
+        { "critere": "Atout et limite de la découpe laser", "points": 4 },
+        { "critere": "Deux consignes de sécurité", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Additifs** (on ajoute de la matière) : impression 3D par dépôt de fil, impression 3D résine. **Soustractifs** (on enlève de la matière) : découpe laser, fraisage à commande numérique.\n\n2. **Maquette d'aspect** : formes, proportions, couleurs, prise en main. **Maquette fonctionnelle** : un principe de fonctionnement, sans l'aspect final. **Prototype** : le produit presque complet, pour valider les performances.\n\n3. Découpe laser : **atout** : rapide et précise, sur bois, carton, acrylique ; **limite** : elle ne produit que des **pièces planes**, à assembler ensuite.\n\n4. Porter des **lunettes** ; garder le **capot fermé** sur la découpeuse laser ; assurer une bonne **ventilation** (et manipuler la résine avec précaution)."
+    },
+    {
+      "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+      "difficulte": 2,
+      "titre": "Imprimer les supports du club robotique",
+      "consigne": "Détaille chaque calcul et décris les étapes dans l'ordre.",
+      "enonce": "**Situation.** Le club robotique veut imprimer des supports de capteur en PLA. Chaque pièce a un volume de **40 cm³**. Masse volumique du PLA : **1,24 g/cm³**. Le fil coûte **25 € le kilo**. Avec **20 % de remplissage** et des parois pleines, le logiciel annonce une consommation de **22 g** de fil par pièce.\n\n1. Décris les étapes pour passer de la maquette numérique à la pièce imprimée.\n2. Calcule la masse d'une pièce pleine, et son coût matière.\n3. Calcule le coût matière d'une pièce à 20 % de remplissage. Combien économise-t-on par pièce ?\n4. La pièce a une partie en surplomb. Que faut-il prévoir ? Quelle hauteur de couche choisir pour une pièce plus fine en détails, et que cela change-t-il sur la durée ?",
+      "bareme": [
+        { "critere": "Étapes dans l'ordre : export STL, tranchage (G-code), réglages, impression et finition", "points": 5 },
+        { "critere": "Pièce pleine : 49,6 g, coût ≈ 1,24 €", "points": 5 },
+        { "critere": "Pièce à 20 % : 0,55 €, économie ≈ 0,69 €", "points": 5 },
+        { "critere": "Supports pour le surplomb, couche fine (0,1 mm) plus précise mais plus longue", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Exporter** la maquette au format maillé **STL** → **trancher** avec un logiciel qui découpe la pièce en couches et génère le parcours de la buse (**G-code**) → **régler** (hauteur de couche, remplissage, supports) → **imprimer**, puis retirer les supports et les défauts.\n\n2. Pièce pleine : m = 1,24 × 40 = **49,6 g**. Coût : 49,6 g = 0,0496 kg ; 0,0496 × 25 ≈ **1,24 €**.\n\n3. À 20 % : 22 g = 0,022 kg ; 0,022 × 25 = **0,55 €**. Économie : 1,24 − 0,55 ≈ **0,69 €** par pièce (et du temps d'impression en moins).\n\n4. Il faut des **supports** pour soutenir la partie en surplomb. Pour des détails plus fins, on choisit une couche fine, vers **0,1 mm** (la plage courante va de 0,1 à 0,3 mm) : la pièce est plus précise, mais il y a plus de couches, donc l'impression est **plus longue**."
+    },
+    {
+      "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+      "difficulte": 3,
+      "titre": "Prototyper une station météo",
+      "consigne": "Choisis et justifie les procédés, fais les calculs demandés, puis construis le protocole d'essai.",
+      "enonce": "**Situation.** Une équipe prototype une station météo pour le toit du lycée. Elle a besoin de :\n\n- **A.** un boîtier aux formes courbes, avec des nervures intérieures ;\n- **B.** une façade plane transparente, avec le logo gravé ;\n- **C.** une petite hélice d'anémomètre, très fine et très détaillée ;\n- **D.** dix boîtiers identiques pour équiper tous les bâtiments, à partir du boîtier A validé.\n\nImprimer un boîtier A en dépôt de fil consomme **60 g** de PLA (à **25 € le kilo**) et dure **4 h**.\n\nExigence du cahier des charges : « le boîtier ne doit laisser entrer aucune goutte d'eau sous une pluie battante de 10 minutes ».\n\n1. Choisis un procédé pour A, B, C et D, et justifie chacun par ses atouts et ses limites.\n2. Calcule le coût matière et la durée d'impression de dix boîtiers en dépôt de fil. Quel argument cela donne-t-il au choix fait pour D ?\n3. Un défaut connu des pièces imprimées par dépôt de fil risque de compromettre l'exigence d'étanchéité. Lequel ? Propose une parade.\n4. Rédige le protocole d'essai de l'exigence d'étanchéité (objectif, montage, conditions, mode opératoire, sécurité, traitement des résultats).",
+      "bareme": [
+        { "critere": "Procédés justifiés : dépôt de fil (A), découpe laser (B), résine (C), coulage en moule silicone (D)", "points": 6 },
+        { "critere": "Dix boîtiers : 15 € de matière et 40 h d'impression, argument pour le moulage", "points": 4 },
+        { "critere": "Défaut identifié (liaison entre les couches, porosité) et parade pertinente", "points": 3 },
+        { "critere": "Protocole complet dans l'ordre, avec une mesure et un critère de conformité", "points": 5 },
+        { "critere": "Consignes de sécurité adaptées", "points": 2 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. - **A : impression 3D par dépôt de fil** : peu coûteuse, elle réalise des **formes complexes** (courbes, nervures intérieures) ; limite : lente.\n- **B : découpe laser** d'une plaque acrylique : rapide, précise, pour une **pièce plane**, et elle sait **graver** le logo.\n- **C : impression 3D résine** (stéréolithographie) : **grande finesse de détail** pour l'hélice ; limite : résine à manipuler avec précaution.\n- **D : coulage en résine dans un moule silicone** à partir du boîtier A imprimé : il **reproduit une pièce en petite série** ; limite : préparation du moule.\n\n2. Matière : 10 × 60 = 600 g = 0,6 kg ; 0,6 × 25 = **15 €**. Durée : 10 × 4 = **40 h** d'impression. La matière reste bon marché, mais 40 h de machine est très long : le **moulage** permet d'obtenir plusieurs exemplaires plus vite une fois le moule prêt.\n\n3. Les pièces en dépôt de fil sont **moins résistantes entre les couches**, et la liaison entre couches peut laisser passer l'eau. Parades : parois plus épaisses ou pleines, joint d'étanchéité à la jonction, vernis ou traitement de surface, ou boîtiers moulés.\n\n4. Protocole :\n1. **Objectif** : vérifier qu'aucune goutte n'entre sous une pluie battante de 10 min.\n2. **Montage** : boîtier fermé, papier absorbant (ou papier indicateur d'humidité) à l'intérieur, arrosage par une pomme de douche fixée au-dessus.\n3. **Conditions** : débit d'arrosage fixé et noté, boîtier dans sa position de montage réelle, électronique retirée.\n4. **Mode opératoire** : arroser 10 min, sécher l'extérieur, ouvrir, observer le papier ; **répéter** l'essai trois fois.\n5. **Sécurité** : aucune tension dans le boîtier pendant l'essai, eau loin des prises, sol sec.\n6. **Traitement** : noter pour chaque essai la présence ou non de traces d'eau ; conclure « conforme » seulement si aucun essai ne laisse entrer d'eau ; sinon repérer l'endroit de la fuite et proposer une modification."
+    },
+    {
+      "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+      "difficulte": 1,
+      "titre": "Comment le projet est-il évalué ?",
+      "consigne": "Réponds à chaque question avec précision.",
+      "enonce": "**Situation.** Adam entre en première STI2D et se renseigne sur le projet de fin d'année.\n\n1. Quelle est la durée indicative du projet de fin de première ? Se fait-il seul ou en équipe ?\n2. Comment l'innovation technologique est-elle évaluée au baccalauréat, et avec quel coefficient ? Pourquoi ce mode d'évaluation ?\n3. Associe chaque objectif à ce qu'on attend de l'élève : O2, O4, O5, O7.\n4. Le jury évalue-t-il seulement l'objet fabriqué ? Explique.",
+      "bareme": [
+        { "critere": "Environ 36 heures, en équipe", "points": 4 },
+        { "critere": "Contrôle continu, coefficient 8, car l'enseignement s'arrête en fin de première", "points": 5 },
+        { "critere": "Quatre objectifs correctement décrits", "points": 7 },
+        { "critere": "Évaluation de la démarche et de la justification des choix", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le projet dure **environ 36 heures**, et il se mène **en équipe**.\n\n2. L'innovation technologique est évaluée en **contrôle continu**, avec un **coefficient 8**, car elle **s'arrête en fin de première** : elle fusionne ensuite avec I2D dans la spécialité 2I2D de terminale.\n\n3. **O2** : identifier les éléments qui influencent le développement d'un produit (cahier des charges, compétitivité). **O4** : communiquer une idée, un principe, une solution, y compris en langue étrangère. **O5** : imaginer une solution en menant une démarche de projet. **O7** : expérimenter et réaliser un prototype ou une maquette.\n\n4. Non : le jury évalue aussi la **démarche** et la capacité à **justifier ses choix**, ainsi que la maîtrise de l'expression orale."
+    },
+    {
+      "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+      "difficulte": 2,
+      "titre": "Reformuler, justifier, garder la trace",
+      "consigne": "Réponds en justifiant chaque correction avec les règles du cours.",
+      "enonce": "**Situation.** L'équipe de Clara prépare son projet sur le rangement des trottinettes au lycée.\n\n1. Sa problématique est : « Comment construire un rack en bois de 3 m avec des crochets ? » Explique ce qui ne va pas, puis propose une meilleure problématique.\n2. Réécris ces justifications pour qu'elles soient recevables :\n   a. « On a pris l'acier, c'est comme ça. »\n   b. « On a choisi la découpe laser parce que c'était plus joli. »\n3. Voici une entrée du carnet de bord : « Séance 4 : on a avancé. » Réécris-la correctement.\n4. À quel moment faut-il poser le planning du projet ? Que faut-il en faire ensuite ?",
+      "bareme": [
+        { "critere": "Défaut repéré (solution imposée, utilisateur absent) et problématique ouverte qui précise l'utilisateur et le besoin", "points": 6 },
+        { "critere": "Deux justifications réécrites avec « car » et des critères techniques", "points": 5 },
+        { "critere": "Entrée de carnet de bord complète : ce qui a été fait, par qui, décisions et raisons", "points": 5 },
+        { "critere": "Planning posé dès le début et tenu à jour", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La problématique **impose déjà la solution** (rack en bois de 3 m avec crochets) et ne dit **ni qui est l'utilisateur, ni quel est son besoin**. Meilleure version : « **Comment permettre aux élèves de ranger leur trottinette au lycée en sécurité, rapidement et sans encombrer les couloirs ?** » Elle précise l'utilisateur et le besoin, et laisse les solutions **ouvertes**.\n\n2. a. « Nous avons retenu l'acier **car** il est résistant aux chocs répétés et recyclable. »\n   b. « Nous avons choisi la découpe laser **car** elle découpe rapidement et précisément les plaques planes de notre rack. »\n\n3. Exemple : « Séance 4 (12 mars) : Inès a terminé la maquette numérique du crochet ; Tom a testé deux fixations au mur. Décision : fixation par deux vis écartées de 20 cm, car elle tient la charge sans jeu. À faire : imprimer le crochet. »\n\n4. Le planning (Gantt) se pose **dès le début** du projet, puis on le **tient à jour** à chaque séance, en comparant l'avancement au prévu."
+    },
+    {
+      "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+      "difficulte": 3,
+      "titre": "La revue de projet ratée de l'équipe Lumina",
+      "consigne": "Analyse la présentation, relève ses défauts avec les règles du cours, puis construis un meilleur plan d'oral. Argumente.",
+      "enonce": "**Document — Transcription de la revue de projet (inventée)**\n\n> **Hugo** : « Alors… on a d'abord programmé la carte Arduino, voilà le code (il projette 80 lignes). Ensuite on a fait le boîtier. »\n> **Jury** : « Quel était le besoin de départ ? »\n> **Hugo** : « C'est une lampe. Enfin, Sarah sait mieux. »\n> **Sarah** : « Le besoin, c'est que les personnes âgées ne tombent pas la nuit en se levant. »\n> **Jury** : « Pourquoi un capteur infrarouge ? »\n> **Sarah** : « Le prof nous l'a donné. »\n> **Jury** : « Le prototype fonctionne-t-il ? »\n> **Hugo** : « Il marchait hier. On ne l'a pas apporté parce que la lumière s'allumait parfois toute seule. »\n> **Jury** : « Avez-vous fait des mesures ? »\n> **Sarah** : « Non, mais ça s'allume vite. Voilà. »\n> **Le troisième membre, Yanis, n'a rien dit.**\n\n1. Relève au moins cinq défauts de cette présentation et relie chacun à une règle du cours.\n2. Formule la problématique de l'équipe en une phrase qui précise l'utilisateur et le besoin.\n3. Explique comment l'équipe aurait dû présenter le défaut « la lumière s'allume parfois toute seule ».\n4. Propose un plan d'oral en cinq ou six étapes pour la prochaine revue, avec la répartition de la parole entre les trois membres.\n5. Quels objectifs de l'évaluation (O2, O4, O5, O7) cette présentation a-t-elle mal montrés ? Justifie pour deux d'entre eux.",
+      "bareme": [
+        { "critere": "Cinq défauts relevés et reliés aux règles du cours (besoin non annoncé, choix non justifiés, prototype caché, pas de mesures, membre écarté…)", "points": 6 },
+        { "critere": "Problématique ouverte précisant l'utilisateur et le besoin", "points": 3 },
+        { "critere": "Défaut présenté, analysé, avec une amélioration proposée", "points": 4 },
+        { "critere": "Plan d'oral cohérent avec une répartition de la parole équilibrée", "points": 4 },
+        { "critere": "Deux objectifs mal montrés, justifiés", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Défauts :\n- l'équipe **commence par les détails techniques** (le code) au lieu d'**annoncer le besoin et la problématique en une phrase** ;\n- Hugo ne connaît pas le besoin : **chacun doit pouvoir expliquer l'ensemble du projet** ;\n- le choix du capteur n'est **pas justifié** (« le prof nous l'a donné ») : il faut dire « nous avons retenu…, car… » ;\n- le prototype n'est pas là : il faut **montrer le prototype et le faire fonctionner**, pas **cacher ce qui ne marche pas** ;\n- aucune mesure : « ça s'allume vite » est une **affirmation sans mesure** ; il faut présenter les résultats d'essais et les écarts ;\n- conclusion en « voilà » au lieu de **proposer des améliorations** ;\n- Yanis n'a rien dit : la **répartition des rôles** ne doit laisser personne de côté.\n\n2. « **Comment permettre à une personne âgée de se lever la nuit sans risque de chute, sans avoir à chercher un interrupteur ?** »\n\n3. Il fallait apporter le prototype et **présenter le défaut** : décrire quand il se produit, l'**analyser** (sensibilité du capteur trop forte, mouvement d'un rideau, chaleur d'un radiateur…), puis **proposer une amélioration** (réglage du seuil, orientation du capteur, temporisation) et, si possible, un essai qui la vérifie. Un prototype imparfait mais testé, analysé et amélioré vaut mieux qu'un bel objet jamais mesuré.\n\n4. Plan possible :\n1. **Sarah** : le besoin et la problématique en une phrase, l'utilisateur (personne âgée, la nuit).\n2. **Yanis** : la recherche d'existant et la séance de créativité, le tableau multicritère et le choix justifié du capteur.\n3. **Hugo** : la conception (croquis, maquette numérique, organigramme du programme).\n4. **Yanis** : démonstration du prototype.\n5. **Sarah** : les essais (temps d'allumage mesuré, comparaison au cahier des charges, écarts).\n6. **Hugo** : les défauts, leur analyse et les améliorations proposées.\n\n5. **O4** (communiquer une idée, une solution) : le principe n'a pas été expliqué clairement, la présentation a commencé par le code. **O7** (expérimenter et réaliser un prototype) : pas de prototype présenté, aucune mesure. On peut aussi citer **O5** (démarche de projet non montrée : le choix du capteur n'était pas le fruit d'une démarche) ou **O2** (le besoin et le cahier des charges n'ont pas guidé la présentation)."
+    }
+  ]
+}

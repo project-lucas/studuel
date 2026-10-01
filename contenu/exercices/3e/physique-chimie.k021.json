@@ -1,0 +1,3362 @@
+{
+  "niveau": "3e",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le son du diapason",
+      "competence": "lire-graphique",
+      "situation": "Un microphone relié à un oscilloscope enregistre le son d’un diapason. L’écran montre la tension électrique du microphone pendant 10 millisecondes (ms).",
+      "documents": [
+        {
+          "id": "osc",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Oscillogramme du diapason",
+          "categories": [
+            "0",
+            "1,25",
+            "2,5",
+            "3,75",
+            "5",
+            "6,25",
+            "7,5",
+            "8,75",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "Tension",
+              "valeurs": [
+                0,
+                2,
+                0,
+                -2,
+                0,
+                2,
+                0,
+                -2,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": -3,
+            "max": 3,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Temps (ms)"
+          },
+          "valeurs": false,
+          "source": "Enregistrement imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "osc",
+          "enonce": "Touche le premier sommet de la courbe, en partant de la gauche.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Un sommet est un point le plus haut de la courbe.",
+          "explication": "Le premier sommet est à **1,25 ms**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les deux premiers sommets sont à 1,25 ms et 6,25 ms. Quelle est la période T du signal ?",
+          "reponse": 5,
+          "unite": "ms",
+          "aide": "La période est la durée entre deux sommets consécutifs : 6,25 − 1,25.",
+          "explication": "T = 6,25 − 1,25 = **5 ms**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la fréquence f du son, en hertz (f = 1 ÷ T, avec T en secondes).",
+          "reponse": 200,
+          "unite": "Hz",
+          "aide": "Convertis d’abord : 5 ms = 0,005 s.",
+          "explication": "f = 1 ÷ 0,005 = **200 Hz**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ce son est-il audible par l’oreille humaine ?",
+          "options": [
+            "Oui : 200 Hz est compris entre 20 Hz et 20 000 Hz",
+            "Non : c’est un infrason",
+            "Non : c’est un ultrason",
+            "On ne peut pas le savoir sans connaître l’amplitude"
+          ],
+          "reponse": 0,
+          "aide": "Compare 200 Hz aux limites 20 Hz et 20 000 Hz.",
+          "explication": "Un son est audible entre 20 Hz et 20 000 Hz : 200 Hz l’est, donc **oui**."
+        }
+      ]
+    },
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui entend quoi ?",
+      "competence": "analyser-document",
+      "situation": "Trois sources et un sifflet émettent des sons de fréquences très différentes. Noa veut savoir lesquels elle peut entendre.",
+      "documents": [
+        {
+          "id": "freq",
+          "type": "tableau",
+          "titre": "Quelques sons émis",
+          "colonnes": [
+            "Source",
+            "Fréquence émise"
+          ],
+          "lignes": [
+            [
+              "Éléphant",
+              "10 Hz"
+            ],
+            [
+              "Voix grave d’homme",
+              "125 Hz"
+            ],
+            [
+              "Sifflet pour chien",
+              "25 000 Hz"
+            ],
+            [
+              "Chauve-souris",
+              "50 000 Hz"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque source dans la bonne catégorie (l’oreille humaine entend de 20 Hz à 20 000 Hz).",
+          "categories": [
+            "Infrasons",
+            "Sons audibles",
+            "Ultrasons"
+          ],
+          "items": [
+            [
+              "Éléphant",
+              0
+            ],
+            [
+              "Voix grave d’homme",
+              1
+            ],
+            [
+              "Sifflet pour chien",
+              2
+            ],
+            [
+              "Chauve-souris",
+              2
+            ]
+          ],
+          "aide": "Compare chaque fréquence à 20 Hz et à 20 000 Hz.",
+          "explication": "L’éléphant (10 Hz) émet un **infrason** ; la voix (125 Hz) est **audible** ; le sifflet et la chauve-souris dépassent 20 000 Hz : ce sont des **ultrasons**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la période du son de l’éléphant, en secondes (T = 1 ÷ f).",
+          "reponse": 0.1,
+          "unite": "s",
+          "aide": "f = 10 Hz, donc T = 1 ÷ 10.",
+          "explication": "T = 1 ÷ 10 = **0,1 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une chauve-souris émet un ultrason. L’écho renvoyé par un moustique revient après 0,02 s. Le son va à 340 m/s ; il fait l’aller-retour. À quelle distance est le moustique ?",
+          "reponse": 3.4,
+          "unite": "m",
+          "aide": "Distance aller-retour : 340 × 0,02. Le moustique est à la moitié.",
+          "explication": "Aller-retour : 340 × 0,02 = 6,8 m. Le moustique est à la moitié : **3,4 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle source émet le son le plus aigu ?",
+          "options": [
+            "La chauve-souris",
+            "L’éléphant",
+            "La voix grave d’homme",
+            "Le sifflet pour chien"
+          ],
+          "reponse": 0,
+          "aide": "Plus la fréquence est grande, plus le son est aigu.",
+          "explication": "La fréquence la plus grande est 50 000 Hz : c’est **la chauve-souris**."
+        }
+      ]
+    },
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux sons, deux écrans",
+      "competence": "lire-graphique",
+      "situation": "On enregistre deux sons, A et B, avec le même oscilloscope et les mêmes réglages : même échelle de temps, même échelle de tension.",
+      "documents": [
+        {
+          "id": "a",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Son A",
+          "categories": [
+            "0",
+            "0,5",
+            "1",
+            "1,5",
+            "2",
+            "2,5",
+            "3",
+            "3,5",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Son A",
+              "valeurs": [
+                0,
+                0.7,
+                1,
+                0.7,
+                0,
+                -0.7,
+                -1,
+                -0.7,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": -3,
+            "max": 3,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Temps (ms)"
+          },
+          "valeurs": false,
+          "source": "Enregistrement imaginé pour l’exercice"
+        },
+        {
+          "id": "b",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Son B",
+          "categories": [
+            "0",
+            "0,5",
+            "1",
+            "1,5",
+            "2",
+            "2,5",
+            "3",
+            "3,5",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Son B",
+              "valeurs": [
+                0,
+                2,
+                0,
+                -2,
+                0,
+                2,
+                0,
+                -2,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": -3,
+            "max": 3,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Temps (ms)"
+          },
+          "valeurs": false,
+          "source": "Enregistrement imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le son A décrit un seul motif complet sur les 4 ms. Quelle est sa fréquence, en hertz ?",
+          "reponse": 250,
+          "unite": "Hz",
+          "aide": "Un motif en 4 ms : T = 0,004 s. Puis f = 1 ÷ T.",
+          "explication": "T = 4 ms = 0,004 s ; f = 1 ÷ 0,004 = **250 Hz**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le son B décrit deux motifs complets sur 4 ms. Quelle est sa période, en millisecondes ?",
+          "reponse": 2,
+          "unite": "ms",
+          "aide": "Divise la durée totale par le nombre de motifs.",
+          "explication": "T = 4 ÷ 2 = **2 ms**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fréquence du son B, en hertz ?",
+          "reponse": 500,
+          "unite": "Hz",
+          "aide": "Convertis 2 ms en secondes avant de calculer.",
+          "explication": "f = 1 ÷ 0,002 = **500 Hz**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis l’amplitude du son B : la valeur maximale de sa tension.",
+          "reponse": 2,
+          "unite": "V",
+          "aide": "Repère le sommet de la courbe B sur l’axe des tensions.",
+          "explication": "Le sommet de B atteint **2 V** ; celui de A seulement 1 V."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comparé à A, le son B est…",
+          "options": [
+            "plus aigu et plus fort",
+            "plus aigu mais moins fort",
+            "plus grave et plus fort",
+            "plus grave mais moins fort"
+          ],
+          "reponse": 0,
+          "aide": "Fréquence : aigu ou grave. Amplitude : fort ou faible.",
+          "explication": "B a une fréquence plus grande (500 Hz contre 250 Hz) : il est **plus aigu** ; son amplitude est plus grande (2 V contre 1 V) : il est **plus fort**."
+        }
+      ]
+    },
+    {
+      "chapitre": "24fd5e35-74ff-539f-b7ae-b45d0dd88c95",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les atomes de l’eau",
+      "competence": "modeliser",
+      "situation": "On fait brûler du dihydrogène dans du dioxygène : il se forme de l’eau. L’équation est 2 H₂ + O₂ → 2 H₂O. On compte les atomes avant et après la réaction.",
+      "documents": [
+        {
+          "id": "atomes",
+          "type": "tableau",
+          "titre": "Compte des atomes",
+          "colonnes": [
+            "Sorte d’atome",
+            "2 H₂ (avant)",
+            "O₂ (avant)",
+            "2 H₂O (après)"
+          ],
+          "lignes": [
+            [
+              "Hydrogène (H)",
+              "?",
+              0,
+              "?"
+            ],
+            [
+              "Oxygène (O)",
+              0,
+              2,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Équation de la synthèse de l’eau"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’hydrogène contient 2 H₂ ?",
+          "reponse": 4,
+          "unite": "atomes",
+          "aide": "Le chiffre 2 devant multiplie la molécule H₂, qui a 2 atomes H.",
+          "explication": "2 × 2 = **4 atomes** d’hydrogène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’hydrogène contient 2 H₂O ?",
+          "reponse": 4,
+          "unite": "atomes",
+          "aide": "Chaque molécule H₂O a 2 atomes H ; il y a 2 molécules.",
+          "explication": "2 × 2 = **4 atomes** d’hydrogène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’oxygène contient 2 H₂O ?",
+          "reponse": 2,
+          "unite": "atomes",
+          "aide": "Chaque molécule H₂O a un seul atome O.",
+          "explication": "2 × 1 = **2 atomes** d’oxygène."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure de ce comptage ?",
+          "options": [
+            "L’équation est ajustée : on retrouve les mêmes atomes avant et après",
+            "L’équation est fausse : il manque des atomes d’oxygène à droite",
+            "Des atomes d’hydrogène ont été détruits pendant la transformation",
+            "Des atomes d’oxygène ont été créés à partir des atomes d’hydrogène"
+          ],
+          "reponse": 0,
+          "aide": "Compare les deux colonnes : H avant et après, O avant et après.",
+          "explication": "4 H et 2 O de chaque côté : l’équation est **ajustée**, les atomes se conservent."
+        }
+      ]
+    },
+    {
+      "chapitre": "24fd5e35-74ff-539f-b7ae-b45d0dd88c95",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le réchaud de camping",
+      "competence": "modeliser",
+      "situation": "Le propane (C₃H₈) brûle dans le dioxygène et donne du dioxyde de carbone et de l’eau. L’équation, pas encore ajustée, s’écrit : C₃H₈ + O₂ → CO₂ + H₂O.",
+      "documents": [
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Atomes dans l’équation non ajustée",
+          "colonnes": [
+            "Atomes",
+            "À gauche (C₃H₈ + O₂)",
+            "À droite (CO₂ + H₂O)"
+          ],
+          "lignes": [
+            [
+              "Carbone (C)",
+              3,
+              1
+            ],
+            [
+              "Hydrogène (H)",
+              8,
+              2
+            ],
+            [
+              "Oxygène (O)",
+              2,
+              3
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Comptage fait pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Pour avoir 3 atomes de carbone à droite, par quel nombre faut-il multiplier CO₂ ?",
+          "reponse": 3,
+          "aide": "Une molécule CO₂ contient 1 atome de carbone.",
+          "explication": "Il faut **3** CO₂ pour 3 atomes de carbone."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour avoir 8 atomes d’hydrogène à droite, par quel nombre faut-il multiplier H₂O ?",
+          "reponse": 4,
+          "aide": "Une molécule H₂O contient 2 atomes d’hydrogène : 8 ÷ 2.",
+          "explication": "8 ÷ 2 = **4** : il faut 4 H₂O."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec 3 CO₂ et 4 H₂O à droite, combien d’atomes d’oxygène compte-t-on à droite ?",
+          "reponse": 10,
+          "unite": "atomes",
+          "aide": "CO₂ contient 2 atomes O, H₂O en contient 1.",
+          "explication": "3 × 2 + 4 × 1 = **10 atomes** d’oxygène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par quel nombre faut-il alors multiplier O₂ pour avoir 10 atomes d’oxygène à gauche ?",
+          "reponse": 5,
+          "aide": "Une molécule O₂ contient 2 atomes d’oxygène.",
+          "explication": "10 ÷ 2 = **5** : il faut 5 O₂."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’équation ajustée de la combustion du propane ?",
+          "options": [
+            "C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O",
+            "C₃H₈ + 3 O₂ → 3 CO₂ + 4 H₂O",
+            "C₃H₈ + 5 O₂ → 3 CO₂ + 8 H₂O",
+            "3 C₃H₈ + 5 O₂ → CO₂ + 4 H₂O"
+          ],
+          "reponse": 0,
+          "aide": "Reprends les quatre nombres que tu viens de trouver.",
+          "explication": "Les nombres trouvés donnent **C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**."
+        }
+      ]
+    },
+    {
+      "chapitre": "24fd5e35-74ff-539f-b7ae-b45d0dd88c95",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le ruban qui brille",
+      "competence": "raisonner",
+      "situation": "Antoine enflamme un ruban de magnésium : il brûle avec une lumière blanche éclatante. On suppose que tout le magnésium et tout le dioxygène sont consommés. Les masses sont mesurées dans trois essais.",
+      "documents": [
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Masses mesurées",
+          "colonnes": [
+            "Essai",
+            "Magnésium consommé (g)",
+            "Dioxygène consommé (g)",
+            "Oxyde de magnésium formé (g)"
+          ],
+          "lignes": [
+            [
+              "Essai 1",
+              12,
+              8,
+              "?"
+            ],
+            [
+              "Essai 2",
+              6,
+              "?",
+              10
+            ],
+            [
+              "Essai 3",
+              "?",
+              16,
+              40
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        },
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le protocole",
+          "blocs": [
+            "Antoine pèse un ruban de magnésium, puis l’enflamme au-dessus d’une coupelle. Une poudre blanche, l’oxyde de magnésium, se dépose dans la coupelle.",
+            "Équation de la réaction : 2 Mg + O₂ → 2 MgO."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Essai 1 : quelle masse d’oxyde de magnésium se forme ?",
+          "reponse": 20,
+          "unite": "g",
+          "aide": "Masse des réactifs consommés = masse des produits formés.",
+          "explication": "12 + 8 = **20 g**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La poudre blanche pèse plus que le ruban de départ. Pourquoi ?",
+          "options": [
+            "Le magnésium s’est combiné avec du dioxygène de l’air",
+            "Des atomes de magnésium ont été créés",
+            "La poudre est plus tassée que le ruban",
+            "La balance s’est déréglée à cause de la chaleur"
+          ],
+          "reponse": 0,
+          "aide": "Un autre réactif que le ruban participe à la réaction.",
+          "explication": "Le ruban a capté du dioxygène de l’air : les atomes d’oxygène s’ajoutent, la masse du solide **augmente**, mais la masse totale se conserve."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Essai 2 : quelle masse de dioxygène est consommée ?",
+          "reponse": 4,
+          "unite": "g",
+          "aide": "Masse du produit moins masse de l’autre réactif.",
+          "explication": "10 − 6 = **4 g**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Essai 3 : quelle masse de magnésium est consommée ?",
+          "reponse": 24,
+          "unite": "g",
+          "aide": "Masse du produit moins masse du dioxygène.",
+          "explication": "40 − 16 = **24 g**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les masses sont proportionnelles d’un essai à l’autre. Quelle masse de dioxygène faut-il pour brûler 30 g de magnésium ?",
+          "reponse": 20,
+          "unite": "g",
+          "aide": "Essai 1 : 12 g de magnésium et 8 g de dioxygène. Essai 2 : 6 g et 4 g. Cherche le rapport.",
+          "explication": "Il faut 2 g de dioxygène pour 3 g de magnésium (12 et 8, ou 6 et 4) : 30 g de magnésium demandent **20 g** de dioxygène."
+        }
+      ]
+    },
+    {
+      "chapitre": "53e376f1-b60c-55bb-86dd-8eeef8d0c15f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois tubes, trois gaz",
+      "competence": "experimenter",
+      "situation": "Emma récupère un gaz dans chacun de trois tubes à essai et réalise un test différent sur chacun.",
+      "documents": [
+        {
+          "id": "tubes",
+          "type": "tableau",
+          "titre": "Les tests d’Emma",
+          "colonnes": [
+            "Tube",
+            "Test réalisé",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "Tube 1",
+              "On approche une flamme",
+              "Une petite détonation"
+            ],
+            [
+              "Tube 2",
+              "On introduit une bûchette incandescente",
+              "La bûchette se rallume"
+            ],
+            [
+              "Tube 3",
+              "On verse de l’eau de chaux et on agite",
+              "L’eau de chaux se trouble"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Expériences imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "Quel gaz contient le tube 1 ? Réponds par un mot.",
+          "reponse": [
+            "dihydrogène",
+            "le dihydrogène",
+            "hydrogène",
+            "l’hydrogène",
+            "H2"
+          ],
+          "placeholder": "Un mot",
+          "aide": "Une détonation à l’approche d’une flamme est la signature d’un gaz.",
+          "explication": "Le tube 1 contient du **dihydrogène** : il fait une détonation en présence d’une flamme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion rédige-t-on pour le tube 3 ?",
+          "options": [
+            "Le tube 3 contient du dioxyde de carbone.",
+            "L’eau de chaux est devenue trouble.",
+            "Le tube 3 contient de l’eau de chaux.",
+            "Le test est positif."
+          ],
+          "reponse": 0,
+          "aide": "On conclut toujours en nommant l’espèce chimique, pas l’observation.",
+          "explication": "Une conclusion nomme l’espèce : « le tube 3 contient du **dioxyde de carbone** »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un quatrième tube fait s’éteindre la bûchette incandescente. Peut-on dire qu’il contient du dioxyde de carbone ?",
+          "options": [
+            "Non : le dioxyde de carbone se teste avec l’eau de chaux",
+            "Oui : la bûchette s’éteint avec le dioxyde de carbone",
+            "Oui : la bûchette s’éteint seulement avec ce gaz",
+            "Non : le dioxyde de carbone fait une détonation"
+          ],
+          "reponse": 0,
+          "aide": "Relis le test du tube 3.",
+          "explication": "Seule l’**eau de chaux qui se trouble** identifie le dioxyde de carbone. Une bûchette qui s’éteint ne prouve rien."
+        }
+      ]
+    },
+    {
+      "chapitre": "53e376f1-b60c-55bb-86dd-8eeef8d0c15f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les trois flacons de Maëlle",
+      "competence": "analyser-document",
+      "situation": "Maëlle a trois flacons de solutions dont les étiquettes sont effacées. Elle prélève un peu de chaque solution dans deux tubes et réalise deux tests.",
+      "documents": [
+        {
+          "id": "flacons",
+          "type": "tableau",
+          "titre": "Résultats des tests",
+          "colonnes": [
+            "Solution",
+            "Avec de la soude",
+            "Avec du nitrate d’argent"
+          ],
+          "lignes": [
+            [
+              "Solution 1",
+              "Précipité bleu",
+              "Précipité blanc qui noircit à la lumière"
+            ],
+            [
+              "Solution 2",
+              "Précipité rouille",
+              "Aucun précipité"
+            ],
+            [
+              "Solution 3",
+              "Précipité blanc",
+              "Précipité blanc qui noircit à la lumière"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Résultats imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque solution à l’ion métallique que révèle le test à la soude.",
+          "paires": [
+            [
+              "Solution 1",
+              "Ions cuivre II"
+            ],
+            [
+              "Solution 2",
+              "Ions fer III"
+            ],
+            [
+              "Solution 3",
+              "Ions zinc"
+            ]
+          ],
+          "aide": "Précipité bleu, rouille ou blanc avec la soude : chaque couleur identifie un ion.",
+          "explication": "Avec la soude : bleu = **cuivre II**, rouille = **fer III**, blanc = **zinc**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions contiennent des ions chlorure ?",
+          "reponse": 2,
+          "aide": "Les ions chlorure donnent un précipité blanc qui noircit avec le nitrate d’argent.",
+          "explication": "Les solutions 1 et 3 donnent ce précipité : **2** solutions contiennent des ions chlorure."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel nom convient à la solution 3 ?",
+          "options": [
+            "Solution de chlorure de zinc",
+            "Solution de nitrate de zinc",
+            "Solution de chlorure de fer III",
+            "Solution de chlorure de cuivre II"
+          ],
+          "reponse": 0,
+          "aide": "Un ion métallique (soude) et un ion chlorure (nitrate d’argent).",
+          "explication": "Ions zinc **et** ions chlorure : c’est du **chlorure de zinc**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire de la solution 2 ?",
+          "options": [
+            "Elle contient des ions fer III mais pas d’ions chlorure",
+            "Elle contient des ions fer III et des ions chlorure",
+            "Elle contient des ions fer II",
+            "Elle ne contient aucun ion"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce qui se passe avec le nitrate d’argent.",
+          "explication": "Précipité rouille à la soude : ions **fer III**. Aucun précipité avec le nitrate d’argent : **pas** d’ions chlorure."
+        }
+      ]
+    },
+    {
+      "chapitre": "53e376f1-b60c-55bb-86dd-8eeef8d0c15f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’engrais mystère",
+      "competence": "analyser-document",
+      "situation": "Un jardinier a retrouvé un flacon d’engrais liquide sans étiquette. Un élève prélève un peu de solution S dans deux tubes et la teste. Il dispose du tableau de référence du cours.",
+      "documents": [
+        {
+          "id": "ref",
+          "type": "tableau",
+          "titre": "Tableau de référence",
+          "colonnes": [
+            "Ion recherché",
+            "Réactif",
+            "Précipité"
+          ],
+          "lignes": [
+            [
+              "Cuivre II",
+              "Soude",
+              "Bleu"
+            ],
+            [
+              "Fer II",
+              "Soude",
+              "Vert"
+            ],
+            [
+              "Fer III",
+              "Soude",
+              "Rouille"
+            ],
+            [
+              "Zinc",
+              "Soude",
+              "Blanc"
+            ],
+            [
+              "Chlorure",
+              "Nitrate d’argent",
+              "Blanc, qui noircit à la lumière"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau du cours"
+        },
+        {
+          "id": "tests",
+          "type": "tableau",
+          "titre": "Tests sur la solution S",
+          "colonnes": [
+            "Test",
+            "Réactif ajouté",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "Tube 1",
+              "Soude",
+              "Précipité rouille"
+            ],
+            [
+              "Tube 2",
+              "Nitrate d’argent",
+              "Précipité blanc qui noircit à la lumière"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Résultats imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que révèle le test du tube 1 ?",
+          "options": [
+            "Des ions fer III",
+            "Des ions fer II",
+            "Des ions zinc",
+            "Des ions cuivre II"
+          ],
+          "reponse": 0,
+          "aide": "Cherche la ligne « Soude » et « Rouille » dans le tableau de référence.",
+          "explication": "Soude et précipité rouille : **ions fer III**."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quels ions le test du tube 2 révèle-t-il ? Réponds par un mot.",
+          "reponse": [
+            "chlorure",
+            "ions chlorure",
+            "les ions chlorure",
+            "chlorures"
+          ],
+          "placeholder": "Un mot",
+          "aide": "Quel réactif a-t-on ajouté dans le tube 2 ?",
+          "explication": "Le nitrate d’argent donne un précipité blanc qui noircit : ce sont des **ions chlorure**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la nature de la solution S ?",
+          "options": [
+            "Une solution de chlorure de fer III",
+            "Une solution de chlorure de fer II",
+            "Une solution de chlorure de zinc",
+            "Une solution de nitrate de fer III"
+          ],
+          "reponse": 0,
+          "aide": "Combine l’ion métallique et l’ion négatif que tu as trouvés.",
+          "explication": "Ions fer III **et** ions chlorure : **chlorure de fer III**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le chlorure de fer III contient des ions Fe³⁺ et des ions Cl⁻. Pour que la solution soit neutre, combien d’ions Cl⁻ faut-il pour un ion Fe³⁺ ?",
+          "reponse": 3,
+          "unite": "ions",
+          "aide": "Il faut autant de charges négatives que de charges positives.",
+          "explication": "Fe³⁺ porte 3 charges positives : il faut **3** ions Cl⁻ (une charge chacun)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la rédaction de l’identification des ions chlorure.",
+          "texte": "On ajoute du ___ à un peu de solution : un précipité ___ qui noircit à la lumière apparaît, donc la solution contient des ions ___.",
+          "reponses": [
+            [
+              "nitrate d’argent"
+            ],
+            [
+              "blanc"
+            ],
+            [
+              "chlorure"
+            ]
+          ],
+          "banque": [
+            "nitrate d’argent",
+            "soude",
+            "blanc",
+            "bleu",
+            "chlorure",
+            "sodium"
+          ],
+          "aide": "Retrouve la ligne « Chlorure » du tableau de référence.",
+          "explication": "On ajoute du **nitrate d’argent** ; le précipité est **blanc** ; ce sont des ions **chlorure**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1bab53fb-6e76-5b50-8169-e95af8535634",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du sodium au sel de table",
+      "competence": "raisonner",
+      "situation": "Dans le sel de cuisine dissous dans l’eau, on trouve l’ion sodium Na⁺ et l’ion chlorure Cl⁻. Chacun vient d’un atome neutre qui a gagné ou perdu un électron.",
+      "documents": [
+        {
+          "id": "particules",
+          "type": "tableau",
+          "titre": "Protons et électrons",
+          "colonnes": [
+            "Particule",
+            "Protons",
+            "Électrons"
+          ],
+          "lignes": [
+            [
+              "Atome de sodium (Na)",
+              11,
+              11
+            ],
+            [
+              "Ion sodium (Na⁺)",
+              11,
+              "?"
+            ],
+            [
+              "Atome de chlore (Cl)",
+              17,
+              17
+            ],
+            [
+              "Ion chlorure (Cl⁻)",
+              17,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’électrons possède l’ion sodium Na⁺ ?",
+          "reponse": 10,
+          "unite": "électrons",
+          "aide": "Na⁺ a perdu un électron par rapport à l’atome.",
+          "explication": "11 − 1 = **10 électrons**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’électrons possède l’ion chlorure Cl⁻ ?",
+          "reponse": 18,
+          "unite": "électrons",
+          "aide": "Cl⁻ a gagné un électron par rapport à l’atome.",
+          "explication": "17 + 1 = **18 électrons**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’ion sodium Na⁺ est…",
+          "options": [
+            "un cation : il a perdu un électron",
+            "un anion : il a gagné un électron",
+            "un atome neutre",
+            "un cation : il a gagné un proton"
+          ],
+          "reponse": 0,
+          "aide": "Le signe + signifie un excès de charges positives.",
+          "explication": "Na⁺ a perdu un électron : c’est un **cation**. Son noyau n’a pas changé."
+        }
+      ]
+    },
+    {
+      "chapitre": "1bab53fb-6e76-5b50-8169-e95af8535634",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui conduit le courant ?",
+      "competence": "analyser-document",
+      "situation": "Léo plonge deux électrodes, reliées à un générateur et à un ampèremètre, dans quatre liquides. Le générateur garde la même tension pour les quatre mesures.",
+      "documents": [
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Intensités mesurées",
+          "colonnes": [
+            "Liquide",
+            "Intensité (mA)"
+          ],
+          "lignes": [
+            [
+              "Eau distillée",
+              0
+            ],
+            [
+              "Eau du robinet",
+              2
+            ],
+            [
+              "Eau salée",
+              36
+            ],
+            [
+              "Eau sucrée",
+              0
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Trie les liquides selon qu’ils laissent passer le courant ou non.",
+          "categories": [
+            "Laisse passer le courant",
+            "Ne laisse pas passer le courant"
+          ],
+          "items": [
+            [
+              "Eau distillée",
+              1
+            ],
+            [
+              "Eau du robinet",
+              0
+            ],
+            [
+              "Eau salée",
+              0
+            ],
+            [
+              "Eau sucrée",
+              1
+            ]
+          ],
+          "aide": "Un liquide conduit si l’ampèremètre indique un courant.",
+          "explication": "L’eau du robinet et l’eau salée ont un courant non nul : elles **conduisent**. L’eau distillée et l’eau sucrée : 0 mA."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’eau sucrée ne conduit-elle pas le courant ?",
+          "options": [
+            "Elle n’a pas d’ions : le sucre reste sous forme de molécules neutres",
+            "Elle contient trop d’électrons libres, qui gênent le passage du courant",
+            "Elle est trop chaude : le courant ne traverse pas un liquide chaud",
+            "Elle contient des ions, mais ils sont immobiles dans le liquide"
+          ],
+          "reponse": 0,
+          "aide": "Dans une solution, le courant est transporté par des particules chargées mobiles.",
+          "explication": "Le courant est porté par des **ions mobiles** ; le sucre dissous n’en donne pas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois l’intensité mesurée dans l’eau salée est-elle plus grande que dans l’eau du robinet ?",
+          "reponse": 18,
+          "unite": "fois",
+          "aide": "Divise 36 mA par 2 mA.",
+          "explication": "36 ÷ 2 = **18 fois**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’eau du robinet conduit-elle un peu plus que l’eau distillée ?",
+          "options": [
+            "Elle contient des ions dissous",
+            "Elle contient des électrons libres",
+            "Elle contient du sucre",
+            "Elle est plus chaude"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui transporte la charge dans une solution.",
+          "explication": "L’eau du robinet contient quelques **ions dissous**, l’eau distillée presque aucun."
+        }
+      ]
+    },
+    {
+      "chapitre": "1bab53fb-6e76-5b50-8169-e95af8535634",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Dans la goutte de cuivre",
+      "competence": "modeliser",
+      "situation": "Le schéma représente quelques ions d’une solution de chlorure de cuivre II. Chaque ion est dessiné par un disque avec sa formule. L’atome de cuivre possède 29 électrons.",
+      "documents": [
+        {
+          "id": "bocal",
+          "type": "schema",
+          "titre": "Les ions de la solution",
+          "largeur": 340,
+          "hauteur": 240,
+          "source": "Schéma simplifié, sans échelle",
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 15,
+              "y": 15,
+              "l": 310,
+              "h": 210,
+              "arrondi": 14,
+              "teinte": "ciel",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 65,
+              "r": 18,
+              "texte": "Cu²⁺",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cu1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 175,
+              "cy": 135,
+              "r": 18,
+              "texte": "Cu²⁺",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cu2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 70,
+              "r": 18,
+              "texte": "Cu²⁺",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cu3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 130,
+              "cy": 55,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 215,
+              "cy": 45,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 135,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 265,
+              "cy": 140,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl4",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 120,
+              "cy": 195,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl5",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 225,
+              "cy": 195,
+              "r": 15,
+              "texte": "Cl⁻",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cl6",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "bocal",
+          "enonce": "Touche les trois ions cuivre II.",
+          "reponse": [
+            "cu1",
+            "cu2",
+            "cu3"
+          ],
+          "multiple": true,
+          "aide": "Cherche la formule Cu²⁺ dans les disques.",
+          "explication": "Les trois disques **Cu²⁺** sont les ions cuivre II."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’ions chlorure Cl⁻ compte-t-on sur le schéma ?",
+          "reponse": 6,
+          "unite": "ions",
+          "aide": "Compte les disques marqués Cl⁻.",
+          "explication": "Il y a **6** ions Cl⁻."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire de la charge électrique totale de la solution ?",
+          "options": [
+            "Elle est nulle : les charges positives et négatives se compensent",
+            "Elle est positive à cause des ions cuivre présents dans l’eau",
+            "Elle est négative à cause des ions chlorure présents dans l’eau",
+            "Elle dépend de la taille du récipient et de la quantité d’eau"
+          ],
+          "reponse": 0,
+          "aide": "Compte les charges positives (3 ions Cu²⁺) puis les charges négatives.",
+          "explication": "3 × 2 = 6 charges positives et 6 × 1 = 6 négatives : la solution est **électriquement neutre**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une autre solution de chlorure de cuivre II contient 5 ions Cu²⁺. Combien d’ions Cl⁻ contient-elle ?",
+          "reponse": 10,
+          "unite": "ions",
+          "aide": "Il y a 2 ions Cl⁻ pour 1 ion Cu²⁺.",
+          "explication": "5 × 2 = **10 ions** Cl⁻."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’électrons possède l’ion Cu²⁺ ?",
+          "reponse": 27,
+          "unite": "électrons",
+          "aide": "Le cation a perdu 2 électrons par rapport à l’atome (29 électrons).",
+          "explication": "29 − 2 = **27 électrons**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7062dbca-cfd5-56f6-b0bb-f8561ca5227b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’échelle de la cuisine",
+      "competence": "lire-graphique",
+      "situation": "Cinq liquides de la maison sont placés sur l’échelle de pH : A, B, C, D et E. Le tableau dit qui est qui.",
+      "documents": [
+        {
+          "id": "echelle",
+          "type": "droite",
+          "titre": "Échelle de pH",
+          "min": 0,
+          "max": 14,
+          "pas": 1,
+          "division": 1,
+          "points": [
+            {
+              "id": "a",
+              "valeur": 2,
+              "nom": "A"
+            },
+            {
+              "id": "b",
+              "valeur": 3,
+              "nom": "B"
+            },
+            {
+              "id": "c",
+              "valeur": 7,
+              "nom": "C"
+            },
+            {
+              "id": "d",
+              "valeur": 9,
+              "nom": "D"
+            },
+            {
+              "id": "e",
+              "valeur": 13,
+              "nom": "E"
+            }
+          ],
+          "source": "Valeurs approchées"
+        },
+        {
+          "id": "qui",
+          "type": "tableau",
+          "titre": "Les liquides",
+          "colonnes": [
+            "Lettre",
+            "Liquide"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Jus de citron"
+            ],
+            [
+              "B",
+              "Vinaigre"
+            ],
+            [
+              "C",
+              "Eau pure"
+            ],
+            [
+              "D",
+              "Eau savonneuse"
+            ],
+            [
+              "E",
+              "Déboucheur"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Liste imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echelle",
+          "enonce": "Touche le point qui représente le vinaigre.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Cherche la lettre du vinaigre dans le tableau.",
+          "explication": "Le vinaigre est **B**, à un pH voisin de 3."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le pH du déboucheur ?",
+          "reponse": 13,
+          "tolerance": 0.5,
+          "aide": "Trouve sa lettre, puis lis la graduation sous le point.",
+          "explication": "Le déboucheur est **E**, de pH **13**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’eau savonneuse (pH voisin de 9) est…",
+          "options": [
+            "basique",
+            "acide",
+            "neutre",
+            "très acide"
+          ],
+          "reponse": 0,
+          "aide": "Compare 9 à 7.",
+          "explication": "Un pH supérieur à 7 est **basique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7062dbca-cfd5-56f6-b0bb-f8561ca5227b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une goutte d’acide dans l’océan",
+      "competence": "lire-graphique",
+      "situation": "Sofia dilue une solution acide en la mélangeant à de l’eau pure, puis mesure le pH avec un pH-mètre. À chaque étape, la solution est diluée 10 fois de plus.",
+      "documents": [
+        {
+          "id": "dilution",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "pH selon la dilution",
+          "categories": [
+            "×1",
+            "×10",
+            "×100",
+            "×1 000",
+            "×10 000"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Facteur de dilution"
+          },
+          "valeurs": false,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dilution",
+          "enonce": "Touche le point de la solution diluée 1 000 fois.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche l’étiquette « ×1 000 » sous l’axe.",
+          "explication": "Le point de la dilution ×1 000 est celui d’un pH de 5."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le pH de la solution diluée 100 fois ?",
+          "reponse": 4,
+          "aide": "Lis la valeur au-dessus de « ×100 ».",
+          "explication": "Sur la courbe, le pH vaut **4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien le pH augmente-t-il chaque fois qu’on dilue 10 fois ?",
+          "reponse": 1,
+          "unite": "unité",
+          "aide": "Regarde la différence entre deux points voisins.",
+          "explication": "Le pH passe de 2 à 3 à 4… : il augmente de **1** unité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Après une dilution ×10 000 (pH 6), la solution est…",
+          "options": [
+            "encore acide",
+            "neutre",
+            "basique",
+            "devenue de l’eau pure"
+          ],
+          "reponse": 0,
+          "aide": "Compare 6 à 7.",
+          "explication": "pH inférieur à 7 : elle est **encore acide**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Peut-on atteindre un pH de 8 en diluant encore et encore ?",
+          "options": [
+            "Non : la dilution rapproche de 7 sans jamais le dépasser",
+            "Oui : avec assez d’eau la solution devient basique",
+            "Oui : le pH augmente toujours de 1 à chaque dilution",
+            "Non : le pH ne change plus après ×10 000"
+          ],
+          "reponse": 0,
+          "aide": "Ajouter de l’eau ne peut pas fabriquer d’ions OH⁻ en excès.",
+          "explication": "Diluer rapproche le pH de 7 sans le dépasser : on n’obtient **jamais** de solution basique."
+        }
+      ]
+    },
+    {
+      "chapitre": "7062dbca-cfd5-56f6-b0bb-f8561ca5227b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Sous l’évier",
+      "competence": "analyser-document",
+      "situation": "Sous l’évier, Hugo trouve cinq liquides. Il mesure leur pH au pH-mètre et lit l’étiquette du déboucheur avant de le manipuler.",
+      "documents": [
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Mesures de pH",
+          "colonnes": [
+            "Produit",
+            "pH"
+          ],
+          "lignes": [
+            [
+              "Déboucheur",
+              13
+            ],
+            [
+              "Jus de citron",
+              2
+            ],
+            [
+              "Eau savonneuse",
+              9
+            ],
+            [
+              "Vinaigre blanc",
+              3
+            ],
+            [
+              "Eau pure",
+              7
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs approchées"
+        },
+        {
+          "id": "etiquette",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "DANGER",
+          "sousTitre": "Déboucheur pour canalisations",
+          "emoji": "⚠️",
+          "teinte": "corail",
+          "lignes": [
+            {
+              "texte": "Corrosif : provoque de graves brûlures de la peau et des yeux"
+            },
+            {
+              "texte": "Porter des gants et des lunettes de protection"
+            },
+            {
+              "texte": "Ne jamais mélanger avec un autre produit"
+            }
+          ],
+          "pied": "Étiquette imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Classe chaque produit : acide, neutre ou basique.",
+          "categories": [
+            "Acide",
+            "Neutre",
+            "Basique"
+          ],
+          "items": [
+            [
+              "Déboucheur",
+              2
+            ],
+            [
+              "Jus de citron",
+              0
+            ],
+            [
+              "Eau savonneuse",
+              2
+            ],
+            [
+              "Vinaigre blanc",
+              0
+            ],
+            [
+              "Eau pure",
+              1
+            ]
+          ],
+          "aide": "Acide sous 7, neutre à 7, basique au-dessus de 7.",
+          "explication": "Citron (2) et vinaigre (3) sont **acides** ; l’eau pure (7) est **neutre** ; l’eau savonneuse (9) et le déboucheur (13) sont **basiques**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les produits du plus acide au plus basique.",
+          "items": [
+            "Jus de citron",
+            "Vinaigre blanc",
+            "Eau pure",
+            "Eau savonneuse",
+            "Déboucheur"
+          ],
+          "aide": "Plus le pH est petit, plus la solution est acide.",
+          "explication": "Du plus petit pH au plus grand : citron (2), vinaigre (3), eau pure (7), eau savonneuse (9), déboucheur (13)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’unités de pH séparent le produit le plus acide du produit le plus basique ?",
+          "reponse": 11,
+          "unite": "unités",
+          "aide": "Soustrais le plus petit pH du plus grand.",
+          "explication": "13 − 2 = **11 unités**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Hugo dilue 10 fois le déboucheur. Son pH devient…",
+          "options": [
+            "plus petit que 13, mais toujours supérieur à 7 (basique)",
+            "plus grand que 13, car la base devient plus concentrée",
+            "inférieur à 7, car l’eau ajoutée rend la solution acide",
+            "exactement égal à 7, car l’eau ajoutée est neutre"
+          ],
+          "reponse": 0,
+          "aide": "Une dilution rapproche le pH de 7 sans le dépasser.",
+          "explication": "Le pH d’une solution basique **descend vers 7** sans le franchir : par exemple 12."
+        },
+        {
+          "type": "choix",
+          "enonce": "D’après l’étiquette, que doit porter Hugo pour manipuler le déboucheur ?",
+          "options": [
+            "Des gants et des lunettes de protection",
+            "Uniquement un masque de peinture",
+            "Rien, car le produit est liquide",
+            "Des gants seulement"
+          ],
+          "reponse": 0,
+          "aide": "Relis les lignes de l’étiquette.",
+          "explication": "L’étiquette impose des **gants et des lunettes**."
+        }
+      ]
+    },
+    {
+      "chapitre": "58ebdb9f-34de-5dc8-875e-60a114ed6c4e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le clou dans l’acide",
+      "competence": "observer-schema",
+      "situation": "Dans un tube à essai, on verse de l’acide chlorhydrique sur de la laine de fer. On observe des bulles qui montent et le fer qui disparaît peu à peu.",
+      "documents": [
+        {
+          "id": "tube",
+          "type": "schema",
+          "titre": "Fer et acide chlorhydrique",
+          "largeur": 340,
+          "hauteur": 240,
+          "source": "Schéma simplifié",
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 110,
+              "y": 20,
+              "l": 120,
+              "h": 190,
+              "arrondi": 40,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 112,
+              "y": 100,
+              "l": 116,
+              "h": 108,
+              "arrondi": 38,
+              "teinte": "ciel",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 140,
+              "y": 184,
+              "l": 60,
+              "h": 14,
+              "arrondi": 4,
+              "teinte": "brun",
+              "motif": "plein",
+              "id": "fer",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 160,
+              "r": 6,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "b1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 178,
+              "cy": 135,
+              "r": 6,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "b2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 112,
+              "r": 6,
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "b3",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 282,
+              "y": 70,
+              "texte": "Acide chlorhydrique",
+              "vers": [
+                228,
+                120
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 282,
+              "y": 205,
+              "texte": "Laine de fer",
+              "vers": [
+                200,
+                191
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tube",
+          "enonce": "Touche les trois bulles de gaz dans le tube.",
+          "reponse": [
+            "b1",
+            "b2",
+            "b3"
+          ],
+          "multiple": true,
+          "aide": "Ce sont les petits disques qui montent dans le liquide.",
+          "explication": "Les **trois bulles** sont du gaz qui se dégage : un produit apparaît."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans Fe + 2 H⁺ → Fe²⁺ + H₂, combien d’ions H⁺ réagissent avec un atome de fer ?",
+          "reponse": 2,
+          "unite": "ions",
+          "aide": "Regarde le nombre écrit devant H⁺.",
+          "explication": "Le nombre devant H⁺ est **2** : deux ions hydrogène par atome de fer."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui montre qu’il s’agit d’une transformation chimique ?",
+          "options": [
+            "Un réactif (le fer) disparaît et un gaz apparaît",
+            "Le liquide reste dans le tube tout au long de l’expérience",
+            "Le tube est en verre et résiste à l’acide utilisé",
+            "Le clou reste posé au fond du tube pendant l’expérience"
+          ],
+          "reponse": 0,
+          "aide": "Une transformation chimique fait disparaître des espèces et en fait apparaître d’autres.",
+          "explication": "Le fer **disparaît** et un gaz **apparaît** : des espèces ont été transformées."
+        }
+      ]
+    },
+    {
+      "chapitre": "58ebdb9f-34de-5dc8-875e-60a114ed6c4e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quels métaux résistent ?",
+      "competence": "analyser-document",
+      "situation": "Yanis plonge cinq morceaux de métal dans de l’acide chlorhydrique et note s’il y a un dégagement gazeux.",
+      "documents": [
+        {
+          "id": "metaux",
+          "type": "tableau",
+          "titre": "Action de l’acide chlorhydrique",
+          "colonnes": [
+            "Métal",
+            "Dégagement de gaz"
+          ],
+          "lignes": [
+            [
+              "Zinc",
+              "Oui, abondant"
+            ],
+            [
+              "Cuivre",
+              "Non"
+            ],
+            [
+              "Aluminium",
+              "Oui"
+            ],
+            [
+              "Argent",
+              "Non"
+            ],
+            [
+              "Fer",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Observations d’après le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Trie les métaux selon qu’ils réagissent ou non avec l’acide chlorhydrique.",
+          "categories": [
+            "Réagit avec l’acide",
+            "Ne réagit pas"
+          ],
+          "items": [
+            [
+              "Zinc",
+              0
+            ],
+            [
+              "Cuivre",
+              1
+            ],
+            [
+              "Aluminium",
+              0
+            ],
+            [
+              "Argent",
+              1
+            ],
+            [
+              "Fer",
+              0
+            ]
+          ],
+          "aide": "Un dégagement de gaz montre qu’il y a une réaction.",
+          "explication": "Zinc, aluminium et fer **réagissent** ; cuivre et argent **ne réagissent pas**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de métaux ont été attaqués par l’acide ?",
+          "reponse": 3,
+          "aide": "Compte les « Oui » du tableau.",
+          "explication": "Zinc, aluminium et fer : **3** métaux."
+        },
+        {
+          "type": "choix",
+          "enonce": "Peut-on conserver du vinaigre (acide) dans un bidon en zinc non protégé ?",
+          "options": [
+            "Non : le zinc réagit avec les acides",
+            "Oui : le zinc ne réagit jamais",
+            "Oui : seul le fer réagit",
+            "Non : le zinc fond dans le vinaigre"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne du zinc dans le tableau.",
+          "explication": "Le zinc réagit avec les acides : le vinaigre l’attaquerait. **Non.**"
+        },
+        {
+          "type": "choix",
+          "enonce": "Quand le zinc réagit avec l’acide, le pH de la solution…",
+          "options": [
+            "augmente, car les ions H⁺ sont consommés",
+            "diminue, car il se forme de l’acide",
+            "ne change pas",
+            "devient négatif"
+          ],
+          "reponse": 0,
+          "aide": "Quels ions de l’acide réagissent avec le métal ?",
+          "explication": "Les ions H⁺ **sont consommés** : le pH **augmente**."
+        }
+      ]
+    },
+    {
+      "chapitre": "58ebdb9f-34de-5dc8-875e-60a114ed6c4e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le gaz du plateau",
+      "competence": "lire-graphique",
+      "situation": "Zoé fait réagir un morceau de zinc avec un excès d’acide chlorhydrique. Elle recueille le dihydrogène dans une seringue et note son volume chaque minute. Elle teste aussi la solution obtenue.",
+      "documents": [
+        {
+          "id": "gaz",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Volume de dihydrogène recueilli",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "series": [
+            {
+              "nom": "Volume",
+              "valeurs": [
+                0,
+                24,
+                42,
+                54,
+                60,
+                60,
+                60
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Volume de gaz",
+            "unite": "mL",
+            "min": 0,
+            "max": 70,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures inventées pour l’exercice"
+        },
+        {
+          "id": "test",
+          "type": "tableau",
+          "titre": "Test de la solution finale",
+          "colonnes": [
+            "Réactif ajouté",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "Soude",
+              "Précipité blanc"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Observation inventée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel volume de gaz a été recueilli au bout de 3 minutes ?",
+          "reponse": 54,
+          "unite": "mL",
+          "aide": "Lis la valeur du point d’abscisse 3.",
+          "explication": "Au bout de 3 min, le volume est de **54 mL**."
+        },
+        {
+          "type": "zone",
+          "document": "gaz",
+          "enonce": "Touche le premier instant où le volume atteint 60 mL.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Le volume cesse d’augmenter à partir d’un certain point.",
+          "explication": "Le volume atteint 60 mL pour la première fois à **4 min**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie le palier, à partir de 4 minutes ?",
+          "options": [
+            "La réaction est finie : le zinc est entièrement consommé",
+            "Le dihydrogène est détruit par l’acide",
+            "L’acide est entièrement consommé alors que le zinc reste",
+            "Le volume ne peut plus être mesuré"
+          ],
+          "reponse": 0,
+          "aide": "L’acide est en excès : que reste-t-il comme réactif limitant ?",
+          "explication": "L’acide est en excès : c’est le **zinc** qui est entièrement consommé, la réaction s’arrête."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que révèle le test à la soude sur la solution finale ?",
+          "options": [
+            "La présence d’ions zinc",
+            "La présence d’ions fer III",
+            "La présence d’ions cuivre II",
+            "La présence d’ions chlorure"
+          ],
+          "reponse": 0,
+          "aide": "Dans le tableau du cours, le précipité blanc à la soude identifie un ion.",
+          "explication": "Précipité blanc avec la soude : ce sont des **ions zinc**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle équation traduit la réaction du zinc avec l’acide ?",
+          "options": [
+            "Zn + 2 H⁺ → Zn²⁺ + H₂",
+            "Zn + H₂ → Zn²⁺ + 2 H⁺",
+            "Zn + 2 Cl⁻ → ZnCl₂ + H₂",
+            "Zn + 2 H⁺ → ZnO + H₂"
+          ],
+          "reponse": 0,
+          "aide": "Compte les charges et les atomes de chaque côté de la flèche.",
+          "explication": "Un atome de zinc et 2 H⁺ donnent Zn²⁺ et H₂ : **Zn + 2 H⁺ → Zn²⁺ + H₂** (2 charges + de chaque côté)."
+        }
+      ]
+    },
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La balle photographiée",
+      "competence": "lire-graphique",
+      "situation": "Une balle roule sur une table. Une chronophotographie la montre toutes les 0,1 s : la première image est prise au départ, à la date t = 0 s.",
+      "documents": [
+        {
+          "id": "chrono",
+          "type": "schema",
+          "titre": "Chronophotographie de la balle",
+          "largeur": 340,
+          "hauteur": 180,
+          "source": "Schéma imaginé pour l’exercice",
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                15,
+                90
+              ],
+              "a": [
+                325,
+                90
+              ],
+              "teinte": "gris",
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 90,
+              "r": 11,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "p0",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 100,
+              "cy": 90,
+              "r": 11,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "p1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 90,
+              "r": 11,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "p2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 220,
+              "cy": 90,
+              "r": 11,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "p3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 280,
+              "cy": 90,
+              "r": 11,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "p4",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                52
+              ],
+              "a": [
+                100,
+                52
+              ],
+              "fleche": "deux",
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 44,
+              "texte": "0,5 m",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 40,
+              "y": 130,
+              "texte": "Départ",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 160,
+              "texte": "Une image toutes les 0,1 s",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chrono",
+          "enonce": "Touche la position de la balle à la date t = 0,3 s.",
+          "reponse": [
+            "p3"
+          ],
+          "aide": "Une image toutes les 0,1 s : compte à partir du départ.",
+          "explication": "Départ : 0 s ; puis 0,1 s ; 0,2 s ; **0,3 s** : c’est la quatrième position."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre deux images, la balle parcourt 0,5 m en 0,1 s. Quelle est sa vitesse, en m/s ?",
+          "reponse": 5,
+          "unite": "m/s",
+          "aide": "v = d ÷ t = 0,5 ÷ 0,1.",
+          "explication": "v = 0,5 ÷ 0,1 = **5 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Convertis cette vitesse en km/h.",
+          "reponse": 18,
+          "unite": "km/h",
+          "aide": "Pour passer des m/s aux km/h, on multiplie par 3,6.",
+          "explication": "5 × 3,6 = **18 km/h**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment qualifie-t-on le mouvement de la balle ?",
+          "options": [
+            "Uniforme : les positions sont régulièrement espacées",
+            "Accéléré : les positions s’écartent de plus en plus",
+            "Ralenti : les positions se rapprochent",
+            "Immobile"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’espacement entre les positions.",
+          "explication": "Espacement constant : le mouvement est **uniforme**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un trajet en TER",
+      "competence": "lire-graphique",
+      "situation": "Un TER relie deux villes. Le graphique donne la distance parcourue depuis le départ en fonction du temps. Il s’arrête quelques minutes dans une gare.",
+      "documents": [
+        {
+          "id": "train",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Distance parcourue par le train",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60"
+          ],
+          "series": [
+            {
+              "nom": "Distance",
+              "valeurs": [
+                0,
+                12,
+                24,
+                36,
+                36,
+                48,
+                60
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Distance parcourue",
+            "unite": "km",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Trajet imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle distance le train a-t-il parcourue au bout de 30 minutes ?",
+          "reponse": 36,
+          "unite": "km",
+          "tolerance": 1,
+          "aide": "Lis la valeur du point d’abscisse 30.",
+          "explication": "Au bout de 30 min, il a parcouru **36 km**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est sa vitesse moyenne sur ces 30 premières minutes, en km/h ? (30 min = 0,5 h)",
+          "reponse": 72,
+          "unite": "km/h",
+          "aide": "v = d ÷ t avec d = 36 km et t = 0,5 h.",
+          "explication": "v = 36 ÷ 0,5 = **72 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Convertis 72 km/h en m/s.",
+          "reponse": 20,
+          "unite": "m/s",
+          "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+          "explication": "72 ÷ 3,6 = **20 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la vitesse du train entre 30 et 40 minutes ?",
+          "reponse": 0,
+          "unite": "km/h",
+          "aide": "Que devient la distance pendant l’arrêt ?",
+          "explication": "La distance reste égale à 36 km : le train est à l’arrêt, sa vitesse est **0 km/h**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un voyageur est assis dans le train en marche. Par rapport au quai, il est…",
+          "options": [
+            "en mouvement : sa position change par rapport au quai",
+            "immobile, car il est assis",
+            "immobile dans tous les référentiels",
+            "en mouvement seulement si le train accélère"
+          ],
+          "reponse": 0,
+          "aide": "Le mouvement dépend du référentiel.",
+          "explication": "Dans le référentiel du quai, sa position change : il est **en mouvement**. Dans celui du train, il est immobile."
+        }
+      ]
+    },
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La balle qui tombe",
+      "competence": "analyser-document",
+      "situation": "On lâche une balle sans vitesse initiale. Une chronophotographie la montre toutes les 0,1 s le long d’une règle graduée ; la première image est prise au lâcher, à t = 0 s.",
+      "documents": [
+        {
+          "id": "chute",
+          "type": "schema",
+          "titre": "Chute d’une balle",
+          "largeur": 340,
+          "hauteur": 340,
+          "source": "Schéma imaginé pour l’exercice",
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                25
+              ],
+              "a": [
+                150,
+                313
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                25
+              ],
+              "a": [
+                156,
+                25
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 29,
+              "texte": "0 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                61
+              ],
+              "a": [
+                156,
+                61
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                97
+              ],
+              "a": [
+                156,
+                97
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 101,
+              "texte": "20 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                133
+              ],
+              "a": [
+                156,
+                133
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                169
+              ],
+              "a": [
+                156,
+                169
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 173,
+              "texte": "40 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                205
+              ],
+              "a": [
+                156,
+                205
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                241
+              ],
+              "a": [
+                156,
+                241
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 245,
+              "texte": "60 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                277
+              ],
+              "a": [
+                156,
+                277
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                144,
+                313
+              ],
+              "a": [
+                156,
+                313
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 317,
+              "texte": "80 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 25,
+              "r": 8,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "c0",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 43,
+              "r": 8,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "c1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 97,
+              "r": 8,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "c2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 187,
+              "r": 8,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "c3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 313,
+              "r": 8,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "c4",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 240,
+              "y": 170,
+              "texte": "Une image",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 240,
+              "y": 186,
+              "texte": "toutes les 0,1 s",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "debut"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Comment qualifie-t-on le mouvement de la balle ?",
+          "options": [
+            "Accéléré : les positions s’écartent de plus en plus",
+            "Uniforme : les positions sont régulièrement espacées",
+            "Ralenti : les positions se rapprochent",
+            "Immobile"
+          ],
+          "reponse": 0,
+          "aide": "Regarde comment l’espacement évolue de haut en bas.",
+          "explication": "L’espacement **augmente** : le mouvement est **accéléré**."
+        },
+        {
+          "type": "zone",
+          "document": "chute",
+          "enonce": "Touche la position de la balle à la date t = 0,3 s.",
+          "reponse": [
+            "c3"
+          ],
+          "aide": "Une image toutes les 0,1 s : la première est à t = 0 s.",
+          "explication": "À 0,3 s, c’est la **quatrième** image."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la règle les positions de la balle à t = 0,3 s (45 cm) et à t = 0,4 s (80 cm). Quelle distance a-t-elle parcourue entre ces deux images, en cm ?",
+          "reponse": 35,
+          "unite": "cm",
+          "tolerance": 0.5,
+          "aide": "Soustrais les deux positions.",
+          "explication": "80 − 45 = **35 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse moyenne de la balle entre 0,3 s et 0,4 s, en m/s. (35 cm = 0,35 m)",
+          "reponse": 3.5,
+          "unite": "m/s",
+          "tolerance": 0.05,
+          "aide": "v = d ÷ t avec d = 0,35 m et t = 0,1 s.",
+          "explication": "v = 0,35 ÷ 0,1 = **3,5 m/s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle interaction met la balle en mouvement et fait augmenter sa vitesse ?",
+          "options": [
+            "L’attraction de la Terre (son poids)",
+            "Le frottement de l’air vers le haut",
+            "Le magnétisme",
+            "Aucune : elle tombe toute seule sans force"
+          ],
+          "reponse": 0,
+          "aide": "Une force est nécessaire pour changer la vitesse.",
+          "explication": "Le **poids**, dû à l’attraction de la Terre, accélère la balle."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un livre sur la table",
+      "competence": "observer-schema",
+      "situation": "Un livre est posé sur une table. Il est immobile. Le schéma représente deux des forces qui s’exercent sur lui, à l’échelle : 1 cm pour 5 N.",
+      "documents": [
+        {
+          "id": "livre",
+          "type": "schema",
+          "titre": "Forces sur le livre",
+          "largeur": 340,
+          "hauteur": 240,
+          "source": "Schéma imaginé pour l’exercice",
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 152,
+              "l": 240,
+              "h": 16,
+              "teinte": "brun",
+              "motif": "plein"
+            },
+            {
+              "forme": "rect",
+              "x": 135,
+              "y": 112,
+              "l": 70,
+              "h": 40,
+              "arrondi": 3,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                132
+              ],
+              "a": [
+                170,
+                62
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "haut",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                132
+              ],
+              "a": [
+                170,
+                202
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "bas",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 184,
+              "y": 195,
+              "texte": "flèche de 2 cm",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 224,
+              "texte": "Échelle : 1 cm pour 5 N",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "livre",
+          "enonce": "Touche la flèche qui représente le poids du livre.",
+          "reponse": [
+            "bas"
+          ],
+          "aide": "Le poids est dirigé vers le centre de la Terre.",
+          "explication": "Le poids est **vertical, vers le bas**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La flèche du poids mesure 2 cm. Quelle est la valeur du poids du livre ?",
+          "reponse": 10,
+          "unite": "N",
+          "aide": "Multiplie la longueur par la valeur d’1 cm : 2 × 5.",
+          "explication": "2 × 5 = **10 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les deux flèches ont la même longueur. Quelle est la valeur de la force exercée par la table sur le livre ?",
+          "reponse": 10,
+          "unite": "N",
+          "aide": "Le livre est immobile : les deux forces se compensent.",
+          "explication": "Même longueur : **10 N**. Les forces se compensent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passerait-il si la table exerçait une force plus petite que le poids ?",
+          "options": [
+            "Le livre descendrait : sa vitesse changerait",
+            "Le livre resterait immobile",
+            "Le livre monterait",
+            "Le livre changerait de nature chimique"
+          ],
+          "reponse": 0,
+          "aide": "Des forces qui ne se compensent pas modifient le mouvement.",
+          "explication": "Sans compensation, le livre ne resterait plus immobile : il **descendrait**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le ballon de Mélina",
+      "competence": "observer-schema",
+      "situation": "Mélina frappe un ballon : à l’instant du tir, le ballon est en contact avec son pied, avec la pelouse et avec l’air. Le schéma est un diagramme objet-interaction : trait plein = contact, pointillé = à distance.",
+      "documents": [
+        {
+          "id": "diag",
+          "type": "schema",
+          "titre": "Diagramme objet-interaction du ballon",
+          "largeur": 340,
+          "hauteur": 250,
+          "source": "Schéma imaginé pour l’exercice",
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 115,
+              "r": 32,
+              "texte": "Ballon",
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 15,
+              "l": 90,
+              "h": 34,
+              "arrondi": 8,
+              "texte": "Terre",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "terre",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 230,
+              "y": 15,
+              "l": 90,
+              "h": 34,
+              "arrondi": 8,
+              "texte": "Air",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "air",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 180,
+              "l": 90,
+              "h": 34,
+              "arrondi": 8,
+              "texte": "Pied",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "pied",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 230,
+              "y": 180,
+              "l": 90,
+              "h": 34,
+              "arrondi": 8,
+              "texte": "Pelouse",
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "sol",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                49
+              ],
+              "a": [
+                146,
+                92
+              ],
+              "style": "pointilles",
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                260,
+                49
+              ],
+              "a": [
+                194,
+                92
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                180
+              ],
+              "a": [
+                146,
+                138
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                260,
+                180
+              ],
+              "a": [
+                194,
+                138
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 238,
+              "texte": "Trait plein : contact · Pointillé : à distance",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "diag",
+          "enonce": "Touche l’objet qui agit sur le ballon à distance.",
+          "reponse": [
+            "terre"
+          ],
+          "aide": "Une seule liaison du schéma est en pointillé.",
+          "explication": "La **Terre** attire le ballon sans le toucher : c’est une interaction à distance, son poids."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’objets agissent sur le ballon par contact ?",
+          "reponse": 3,
+          "aide": "Compte les liaisons en trait plein.",
+          "explication": "L’air, le pied et la pelouse : **3** interactions de contact."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le pied exerce une force sur le ballon. D’après le principe des actions réciproques, le ballon…",
+          "options": [
+            "exerce sur le pied une force de même valeur et de sens opposé",
+            "n’exerce aucune force sur le pied",
+            "exerce une force plus petite, car il est plus léger",
+            "exerce une force de même sens"
+          ],
+          "reponse": 0,
+          "aide": "Si A agit sur B, B agit sur A.",
+          "explication": "Le ballon exerce sur le pied une force de **même valeur, même direction et de sens opposé**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le ballon roule puis finit par s’arrêter. Pourquoi ?",
+          "options": [
+            "Les frottements de la pelouse et de l’air le ralentissent",
+            "Il n’a plus de force : sa force de départ s’est épuisée",
+            "La Terre cesse de l’attirer dès que le ballon roule vite",
+            "Le principe des actions réciproques l’arrête quand il est lent"
+          ],
+          "reponse": 0,
+          "aide": "Un objet change de vitesse parce que des forces agissent sur lui.",
+          "explication": "Il s’arrête à cause des **frottements** de la pelouse et de l’air, pas parce qu’il « n’a plus de force »."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La caisse qu’on tire",
+      "competence": "modeliser",
+      "situation": "Clara tire une caisse sur le sol horizontal avec une corde. Le tableau donne les forces qui s’exercent sur la caisse ; le schéma les représente à l’échelle : 1 cm pour 20 N.",
+      "documents": [
+        {
+          "id": "forces",
+          "type": "tableau",
+          "titre": "Les forces sur la caisse",
+          "colonnes": [
+            "Force",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Poids P",
+              "100 N"
+            ],
+            [
+              "Action du sol R",
+              "100 N"
+            ],
+            [
+              "Traction de la corde T",
+              "80 N"
+            ],
+            [
+              "Frottements f",
+              "40 N"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        },
+        {
+          "id": "caisse",
+          "type": "schema",
+          "titre": "Forces sur la caisse",
+          "largeur": 340,
+          "hauteur": 260,
+          "source": "Schéma à l’échelle 1 cm pour 20 N",
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                20,
+                142
+              ],
+              "a": [
+                320,
+                142
+              ],
+              "teinte": "brun"
+            },
+            {
+              "forme": "rect",
+              "x": 156,
+              "y": 118,
+              "l": 28,
+              "h": 24,
+              "arrondi": 2,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                130
+              ],
+              "a": [
+                170,
+                30
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "r",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                130
+              ],
+              "a": [
+                170,
+                230
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "p",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                130
+              ],
+              "a": [
+                250,
+                130
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "t",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                130
+              ],
+              "a": [
+                130,
+                130
+              ],
+              "fleche": "fin",
+              "teinte": "encre",
+              "id": "f",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 182,
+              "y": 36,
+              "texte": "R",
+              "taille": "normal",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 182,
+              "y": 226,
+              "texte": "P",
+              "taille": "normal",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 246,
+              "y": 122,
+              "texte": "T",
+              "taille": "normal",
+              "gras": true,
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 132,
+              "y": 122,
+              "texte": "f",
+              "taille": "normal",
+              "gras": true,
+              "ancre": "fin"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avec l’échelle 1 cm pour 20 N, quelle longueur a la flèche de la traction T, en cm ?",
+          "reponse": 4,
+          "unite": "cm",
+          "aide": "Divise 80 N par 20 N/cm.",
+          "explication": "80 ÷ 20 = **4 cm**."
+        },
+        {
+          "type": "zone",
+          "document": "caisse",
+          "enonce": "Touche la flèche des frottements f.",
+          "reponse": [
+            "f"
+          ],
+          "aide": "Les frottements s’opposent au mouvement : regarde la lettre près de la flèche.",
+          "explication": "La flèche **f**, dirigée vers l’arrière, représente les frottements."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur de la force totale horizontale, en newtons ? (T vers l’avant, f vers l’arrière)",
+          "reponse": 40,
+          "unite": "N",
+          "aide": "Soustrais la plus petite force de la plus grande.",
+          "explication": "80 − 40 = **40 N**, vers l’avant."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que va faire la vitesse de la caisse ?",
+          "options": [
+            "Elle va augmenter : les forces horizontales ne se compensent pas",
+            "Elle restera constante : les forces horizontales se compensent",
+            "Elle va diminuer : les frottements sont plus forts que la traction",
+            "La caisse restera immobile : la traction ne suffit pas à la bouger"
+          ],
+          "reponse": 0,
+          "aide": "Comparer T et f.",
+          "explication": "T est plus grande que f : les forces ne se compensent pas, la vitesse **augmente**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle valeur faudrait-il donner à T pour que la caisse avance à vitesse constante ?",
+          "reponse": 40,
+          "unite": "N",
+          "aide": "À vitesse constante, les forces horizontales se compensent.",
+          "explication": "T doit compenser f : T = **40 N**."
+        }
+      ]
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinq kilos sur trois astres",
+      "competence": "calculer",
+      "situation": "Un sac de 5 kg est pesé avec un dynamomètre sur la Terre, sur la Lune puis sur Mars. On utilise P = m × g.",
+      "documents": [
+        {
+          "id": "g",
+          "type": "tableau",
+          "titre": "Intensité de la pesanteur",
+          "colonnes": [
+            "Astre",
+            "g (N/kg)"
+          ],
+          "lignes": [
+            [
+              "Terre",
+              "9,8"
+            ],
+            [
+              "Lune",
+              "1,6"
+            ],
+            [
+              "Mars",
+              "3,7"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le poids du sac sur la Terre ?",
+          "reponse": 49,
+          "unite": "N",
+          "aide": "P = m × g = 5 × 9,8.",
+          "explication": "P = 5 × 9,8 = **49 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le poids du sac sur la Lune ?",
+          "reponse": 8,
+          "unite": "N",
+          "aide": "P = 5 × 1,6.",
+          "explication": "P = 5 × 1,6 = **8 N**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la masse du sac sur la Lune ?",
+          "options": [
+            "5 kg",
+            "8 kg",
+            "1,6 kg",
+            "0 kg"
+          ],
+          "reponse": 0,
+          "aide": "La masse ne dépend pas de l’astre.",
+          "explication": "La masse ne change pas : **5 kg**."
+        }
+      ]
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le robot explorateur",
+      "competence": "calculer",
+      "situation": "Un robot de 180 kg est envoyé sur Mars. Il rapporte un échantillon de roche de 500 g. Les ingénieurs comparent ses poids sur la Terre, sur Mars et sur Jupiter.",
+      "documents": [
+        {
+          "id": "g",
+          "type": "tableau",
+          "titre": "Intensité de la pesanteur",
+          "colonnes": [
+            "Astre",
+            "g (N/kg)"
+          ],
+          "lignes": [
+            [
+              "Terre",
+              "9,8"
+            ],
+            [
+              "Mars",
+              "3,7"
+            ],
+            [
+              "Jupiter",
+              "25"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies du cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le poids du robot sur la Terre ?",
+          "reponse": 1764,
+          "unite": "N",
+          "aide": "P = m × g avec m = 180 kg et g = 9,8 N/kg.",
+          "explication": "P = 180 × 9,8 = **1 764 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est son poids sur Mars ?",
+          "reponse": 666,
+          "unite": "N",
+          "aide": "Remplace g par la valeur de Mars.",
+          "explication": "P = 180 × 3,7 = **666 N**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la masse du robot sur Mars ?",
+          "options": [
+            "180 kg",
+            "666 kg",
+            "49 kg",
+            "3,7 kg"
+          ],
+          "reponse": 0,
+          "aide": "La masse est la quantité de matière : elle ne change pas d’astre.",
+          "explication": "Sa masse reste **180 kg**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le poids de l’échantillon de 500 g sur Mars ?",
+          "reponse": 1.85,
+          "unite": "N",
+          "aide": "Convertis 500 g en kilogrammes avant de calculer.",
+          "explication": "m = 0,5 kg ; P = 0,5 × 3,7 = **1,85 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel serait le poids du robot sur Jupiter ?",
+          "reponse": 4500,
+          "unite": "N",
+          "aide": "Utilise g = 25 N/kg.",
+          "explication": "P = 180 × 25 = **4 500 N**."
+        }
+      ]
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le dynamomètre de la planète inconnue",
+      "competence": "modeliser",
+      "situation": "Une sonde mesure le poids de masses marquées sur une planète imaginaire. Les points forment une droite qui passe par l’origine.",
+      "documents": [
+        {
+          "id": "etalonnage",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Poids en fonction de la masse",
+          "categories": [
+            "0",
+            "0,5",
+            "1",
+            "1,5",
+            "2"
+          ],
+          "series": [
+            {
+              "nom": "Poids",
+              "valeurs": [
+                0,
+                4,
+                8,
+                12,
+                16
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Poids",
+            "unite": "N",
+            "min": 0,
+            "max": 16,
+            "pas": 4
+          },
+          "axeX": {
+            "titre": "Masse (kg)"
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le poids d’un objet de 1,5 kg sur cette planète ?",
+          "reponse": 12,
+          "unite": "N",
+          "aide": "Lis la valeur du point d’abscisse 1,5.",
+          "explication": "Le poids vaut **12 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’intensité de la pesanteur g de cette planète, en N/kg ? (g = P ÷ m)",
+          "reponse": 8,
+          "unite": "N/kg",
+          "aide": "Choisis un point, par exemple 1 kg : P = 8 N.",
+          "explication": "g = 8 ÷ 1 = **8 N/kg**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les points sont-ils alignés avec l’origine ?",
+          "options": [
+            "Le poids est proportionnel à la masse",
+            "Le poids est égal à la masse",
+            "Le poids ne dépend pas de la masse",
+            "La masse diminue quand le poids augmente"
+          ],
+          "reponse": 0,
+          "aide": "P = m × g avec g constant.",
+          "explication": "P = m × g, avec g constant : le poids est **proportionnel** à la masse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel serait le poids d’un objet de 3 kg sur cette planète ?",
+          "reponse": 24,
+          "unite": "N",
+          "aide": "Utilise g = 8 N/kg.",
+          "explication": "P = 3 × 8 = **24 N**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Cette planète attire-t-elle plus fort que la Terre (g = 9,8 N/kg) ?",
+          "options": [
+            "Non : 8 N/kg est plus petit que 9,8 N/kg",
+            "Oui : 8 N/kg est supérieur à 1,6 N/kg",
+            "Oui : le poids augmente avec la masse",
+            "On ne peut pas comparer avec la Terre"
+          ],
+          "reponse": 0,
+          "aide": "Compare les valeurs de g.",
+          "explication": "g = 8 N/kg est **inférieur** à 9,8 N/kg : l’attraction y est un peu plus faible que sur Terre."
+        }
+      ]
+    }
+  ]
+}

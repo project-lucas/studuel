@@ -36,6 +36,17 @@ const POIDS_MAX_KO = 600
  */
 const PNG_AUTORISES = new Set(['icons/icon-192.png', 'icons/icon-512.png'])
 
+/**
+ * LES SUJETS D'ANNALES (public/annales/*.pdf, 25/09/2026) sont des DOCUMENTS
+ * SERVIS, pas des sources oubliées : le sujet officiel habillé par
+ * scripts/annales-sujets.mjs, que l'élève lit ou télécharge. Un sujet de
+ * physique-chimie à schémas pèse ~1 Mo sans rien de superflu. Ils ont donc leur
+ * propre budget, compté à part : 2 Mo par sujet, 25 Mo pour le dossier.
+ */
+const ANNALES = 'annales/'
+const ANNALE_MAX_KO = 2048
+const ANNALES_MAX_MO = 25
+
 type Fichier = { chemin: string; ko: number }
 
 function fichiersDe(dir: string, base = ''): Fichier[] {
@@ -50,7 +61,9 @@ function fichiersDe(dir: string, base = ''): Fichier[] {
 }
 
 describe('poids de public/', () => {
-  const fichiers = fichiersDe(PUBLIC)
+  const tous = fichiersDe(PUBLIC)
+  const annales = tous.filter((f) => f.chemin.startsWith(ANNALES) && f.chemin.endsWith('.pdf'))
+  const fichiers = tous.filter((f) => !annales.includes(f))
 
   it('ne sert aucun fichier de plus de 600 ko', () => {
     const lourds = fichiers
@@ -95,5 +108,12 @@ describe('poids de public/', () => {
       `public/ pèse ${totalMo.toFixed(1)} Mo. Ce dossier part en entier dans` +
         ` chaque déploiement : il ne doit contenir que ce qui est servi.`,
     ).toBeLessThanOrEqual(20)
+  })
+
+  it('garde chaque sujet d’annale sous 2 Mo, et le dossier sous 25 Mo', () => {
+    const lourds = annales.filter((f) => f.ko > ANNALE_MAX_KO).map((f) => `${f.chemin} (${f.ko} ko)`)
+    expect(lourds, 'Sujet trop lourd : recompresse ses images (voir scripts/annales-sujets.mjs).').toEqual([])
+    const totalMo = annales.reduce((s, f) => s + f.ko, 0) / 1024
+    expect(Math.round(totalMo)).toBeLessThanOrEqual(ANNALES_MAX_MO)
   })
 })

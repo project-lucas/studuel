@@ -1,0 +1,2254 @@
+{
+ "niveau": "Tle",
+ "matiere": "maths-complementaires",
+ "exercices": [
+  {
+   "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le forfait de la salle de sport",
+   "competence": "modeliser",
+   "situation": "Inès s’inscrit à une salle de sport : 30 € de frais d’inscription, puis 25 € par mois. Le tableau donne la somme totale payée après chaque mois.",
+   "documents": [
+    {
+     "id": "forfait",
+     "type": "tableau",
+     "titre": "Somme totale payée",
+     "colonnes": [
+      "Mois écoulés",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Total payé (€)",
+       30,
+       55,
+       80,
+       105,
+       130
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "forfait",
+     "enonce": "Touche la somme totale payée après 3 mois.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne « 3 » puis lis la case de la ligne du total.",
+     "explication": "Après 3 mois, Inès a payé **105 €** : 30 + 3 × 25."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la somme augmente-t-elle chaque mois ? Donne la raison r de la suite.",
+     "reponse": 25,
+     "unite": "€",
+     "aide": "Compare deux colonnes voisines.",
+     "explication": "Chaque mois on **ajoute** 25 € : la suite est arithmétique de raison **25**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la somme payée après 12 mois avec u(n) = 30 + 25 n.",
+     "reponse": 330,
+     "unite": "€",
+     "aide": "Remplace n par 12.",
+     "explication": "u(12) = 30 + 25 × 12 = 30 + 300 = **330 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce forfait est-il modélisé par une suite arithmétique et non géométrique ?",
+     "options": [
+      "Parce qu’on ajoute la même somme à chaque mois qui passe",
+      "Parce qu’on multiplie la somme payée par 25 chaque mois",
+      "Parce que la somme payée double régulièrement tous les mois",
+      "Parce que le pourcentage appliqué reste le même chaque mois"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui est constant : les différences ou les quotients ?",
+     "explication": "Les différences sont constantes (+25), pas les quotients : c’est une suite **arithmétique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le capital de Nadia",
+   "competence": "modeliser",
+   "situation": "Nadia place 2 500 € à intérêts composés au taux de 3 % par an. Le graphique montre son capital u(n) au bout de n années, arrondi à l’euro près.",
+   "documents": [
+    {
+     "id": "cap",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Capital en fonction du temps",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Capital",
+       "valeurs": [
+        2500,
+        2575,
+        2652,
+        2732,
+        2814,
+        2898
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Capital",
+      "unite": "€",
+      "min": 2400,
+      "max": 3000,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Années écoulées"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Par quel coefficient multiplicateur le capital est-il multiplié chaque année ?",
+     "reponse": 1.03,
+     "aide": "Une hausse de 3 % se traduit par 1 + 3/100.",
+     "explication": "Hausse de 3 % : coefficient **1,03**, donc u(n+1) = 1,03 × u(n)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(2) = 2 500 × 1,03², arrondi au centime.",
+     "reponse": 2652.25,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "1,03² = 1,0609.",
+     "explication": "u(2) = 2 500 × 1,0609 = **2 652,25 €**."
+    },
+    {
+     "type": "zone",
+     "document": "cap",
+     "enonce": "Touche la première année où le capital dépasse 2 800 €.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le premier point au-dessus de la graduation 2 800.",
+     "explication": "Le capital est de 2 732 € après 3 ans et de **2 814 €** après 4 ans : c’est la 4e année."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hausse globale du capital en 5 ans, en pourcentage, arrondie au dixième ?",
+     "reponse": 15.9,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Calcule 1,03⁵ puis retire 1.",
+     "explication": "1,03⁵ ≈ 1,1593 : la hausse globale est d’environ **15,9 %**, et non 5 × 3 = 15 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le lac et ses truites",
+   "competence": "modeliser",
+   "situation": "Dans un lac, 20 % des truites disparaissent chaque année et une association en réintroduit 60. On note u(n) le nombre de truites après n années, avec u(0) = 100 : u(n+1) = 0,8 u(n) + 60.",
+   "documents": [
+    {
+     "id": "truites",
+     "type": "tableau",
+     "titre": "Effectif des truites",
+     "colonnes": [
+      "Année n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       100,
+       140,
+       172,
+       197.6,
+       218.08
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "meth",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La méthode",
+     "blocs": [
+      "1. On cherche le point fixe L tel que L = 0,8 L + 60.",
+      "2. On pose v(n) = u(n) − L : c’est une suite géométrique de raison 0,8.",
+      "3. On en déduit v(n) puis u(n) = v(n) + L."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(5) à partir de u(4), arrondi au centième.",
+     "reponse": 234.46,
+     "tolerance": 0.01,
+     "aide": "u(5) = 0,8 × u(4) + 60, avec u(4) lu dans le tableau.",
+     "explication": "u(5) = 0,8 × 218,08 + 60 = **234,46**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous L = 0,8 L + 60 pour trouver le point fixe L.",
+     "reponse": 300,
+     "aide": "Regroupe : 0,2 L = 60.",
+     "explication": "0,2 L = 60 donc **L = 300**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule v(0) = u(0) − L.",
+     "reponse": -200,
+     "aide": "Utilise u(0) = 100 et L = 300.",
+     "explication": "v(0) = 100 − 300 = **−200**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule v(3) = v(0) × 0,8³, puis compare avec u(3) − 300 lu dans le tableau.",
+     "reponse": -102.4,
+     "tolerance": 0.01,
+     "aide": "0,8³ = 0,512.",
+     "explication": "v(3) = −200 × 0,512 = **−102,4**, et 197,6 − 300 = −102,4 : les deux méthodes concordent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Vers quelle valeur le nombre de truites se stabilise-t-il à long terme ?",
+     "options": [
+      "Vers 300 truites, le point fixe trouvé par la méthode",
+      "Vers 100 truites, le nombre présent dans le lac au départ",
+      "Vers 60 truites, le nombre réintroduit chaque année",
+      "Il augmente sans limite, sans jamais se stabiliser nulle part"
+     ],
+     "reponse": 0,
+     "aide": "La raison 0,8 est comprise entre −1 et 1 : v(n) tend vers 0.",
+     "explication": "v(n) tend vers 0, donc u(n) tend vers **300** : l’effectif se stabilise quelle que soit sa valeur de départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une ville qui grandit",
+   "competence": "modeliser",
+   "situation": "La ville de Marenne compte 12 000 habitants. Sa population augmente de 2 % par an. Le tableau donne les premiers termes de la suite u(n) (arrondis à l’unité).",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "Population de Marenne",
+     "colonnes": [
+      "Année n",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       12000,
+       12240,
+       12485
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de la suite géométrique u ?",
+     "reponse": 1.02,
+     "aide": "Une hausse de 2 % correspond à 1 + 2/100.",
+     "explication": "Hausse de 2 % : **q = 1,02**."
+    },
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la population de la 2e année.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "La ligne u(n), colonne « 2 ».",
+     "explication": "Après 2 ans : **12 485 habitants** (valeur arrondie)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(3) = 12 000 × 1,02³, arrondi à l’unité.",
+     "reponse": 12734,
+     "tolerance": 1,
+     "aide": "1,02³ ≈ 1,0612.",
+     "explication": "u(3) = 12 000 × 1,061208 ≈ **12 734 habitants**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment calculer u(40) sans calculer les 39 termes précédents ?",
+     "options": [
+      "En utilisant la forme explicite u(n) = 12 000 × 1,02^n",
+      "En ajoutant 40 fois 0,02 à la population de départ",
+      "En multipliant 12 000 par 1,02 puis par 40 seulement",
+      "En utilisant la forme u(n) = 12 000 × 0,02^n"
+     ],
+     "reponse": 0,
+     "aide": "Quel mode de définition donne n’importe quel terme directement ?",
+     "explication": "La forme **explicite** donne u(40) d’un seul calcul : 12 000 × 1,02⁴⁰."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien d’années pour doubler ?",
+   "competence": "programmer",
+   "situation": "Un capital de 500 € est placé à 6 % par an. Un algorithme cherche le nombre d’années après lequel le capital dépasse 1 000 €. Le graphique montre le capital, arrondi à l’euro.",
+   "documents": [
+    {
+     "id": "algo",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’algorithme",
+     "blocs": [
+      "n ← 0",
+      "u ← 500",
+      "Tant que u < 1000 :",
+      "    u ← u × 1,06",
+      "    n ← n + 1"
+     ]
+    },
+    {
+     "id": "capital",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Capital en fonction des années",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14"
+     ],
+     "series": [
+      {
+       "nom": "Capital",
+       "valeurs": [
+        500,
+        562,
+        631,
+        709,
+        797,
+        895,
+        1006,
+        1130
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Capital",
+      "unite": "€",
+      "min": 400,
+      "max": 1200,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Années écoulées"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que vaut u après le premier passage dans la boucle ?",
+     "reponse": 530,
+     "unite": "€",
+     "aide": "u devient 500 × 1,06.",
+     "explication": "u = 500 × 1,06 = **530**, et n vaut 1."
+    },
+    {
+     "type": "zone",
+     "document": "capital",
+     "enonce": "Touche la première date du graphique où le capital dépasse 1 000 €.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Cherche le premier point qui passe au-dessus de la graduation 1 000.",
+     "explication": "Après 10 ans le capital est de 895 € ; après **12 ans** il est de 1 006 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(11) = 500 × 1,06¹¹, arrondi au centime.",
+     "reponse": 949.15,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "1,06¹¹ ≈ 1,8983.",
+     "explication": "u(11) = 500 × 1,898299 ≈ **949,15 €** : pas encore 1 000 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur de n l’algorithme affiche-t-il à la fin ?",
+     "reponse": 12,
+     "aide": "Compare u(11) et u(12) à 1 000.",
+     "explication": "u(11) = 949,15 est inférieur à 1 000 et u(12) ≈ 1 006,10 le dépasse : l’algorithme affiche **n = 12**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une nappe qui se purifie",
+   "competence": "modeliser",
+   "situation": "Une nappe phréatique contient 50 mg de polluant par litre. Chaque année, 10 % du polluant est éliminé et une usine en rejette 2 mg/L : c(n+1) = 0,9 c(n) + 2. On admet que c(n) = 30 × 0,9^n + 20.",
+   "documents": [
+    {
+     "id": "nappe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Concentration en polluant",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25",
+      "30"
+     ],
+     "series": [
+      {
+       "nom": "Concentration",
+       "valeurs": [
+        50,
+        37.7,
+        30.5,
+        26.2,
+        23.6,
+        22.2,
+        21.3
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "mg/L",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Années écoulées"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "modele",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "Point fixe L : L = 0,9 L + 2.",
+      "v(n) = c(n) − L est géométrique de raison 0,9."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Résous L = 0,9 L + 2 pour trouver le point fixe L.",
+     "reponse": 20,
+     "unite": "mg/L",
+     "aide": "0,1 L = 2.",
+     "explication": "0,1 L = 2 donc **L = 20 mg/L**."
+    },
+    {
+     "type": "zone",
+     "document": "nappe",
+     "enonce": "Touche la première date où la concentration passe sous 30 mg/L.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Lis la hauteur de chaque point et cherche le premier sous la graduation 30.",
+     "explication": "À 10 ans la concentration est de 30,5 mg/L ; à **15 ans** elle est de 26,2 mg/L."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule c(10) = 30 × 0,9¹⁰ + 20, arrondi au centième.",
+     "reponse": 30.46,
+     "unite": "mg/L",
+     "tolerance": 0.01,
+     "aide": "0,9¹⁰ ≈ 0,3487.",
+     "explication": "c(10) = 30 × 0,348678 + 20 ≈ **30,46 mg/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la limite de c(n) sur la qualité de l’eau à très long terme ?",
+     "options": [
+      "La concentration se stabilise à 20 mg/L, niveau d’équilibre",
+      "La concentration finit par disparaître et l’eau devient pure",
+      "La concentration revient à sa valeur de départ, 50 mg/L",
+      "La concentration augmente sans limite, à cause de l’usine"
+     ],
+     "reponse": 0,
+     "aide": "La limite de 0,9^n est 0.",
+     "explication": "Comme 0,9^n tend vers 0, c(n) tend vers **20** : l’usine empêche l’eau de devenir pure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années faut-il au minimum pour que c(n) soit inférieur à 24 mg/L ? (30 × 0,9^n < 4)",
+     "reponse": 20,
+     "aide": "Utilise ln(4/30) ÷ ln(0,9) et arrondis dans le bon sens.",
+     "explication": "n > ln(4/30) ÷ ln(0,9) ≈ 19,12 : le plus petit entier est **n = 20**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bénéfice de la boulangerie",
+   "competence": "lire-graphique",
+   "situation": "Une boulangerie vend x centaines de viennoiseries par jour. Son bénéfice, en centaines d’euros, est B(x) = −x² + 8x − 7 pour x entre 1 et 7. Le graphique en donne quelques valeurs.",
+   "documents": [
+    {
+     "id": "benef",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Bénéfice selon la quantité",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "B(x)",
+       "valeurs": [
+        0,
+        5,
+        8,
+        9,
+        8,
+        5,
+        0
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Bénéfice",
+      "unite": "centaines d’euros",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Quantité vendue (centaines)"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "benef",
+     "enonce": "Touche la quantité qui donne le bénéfice le plus grand.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le bénéfice maximal est atteint pour **x = 4**, soit 400 viennoiseries."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La dérivée est B′(x) = −2x + 8. Calcule B′(1).",
+     "reponse": 6,
+     "aide": "Remplace x par 1.",
+     "explication": "B′(1) = −2 + 8 = **6** : le bénéfice augmente en x = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x la dérivée B′(x) = −2x + 8 s’annule-t-elle ?",
+     "reponse": 4,
+     "aide": "Résous −2x + 8 = 0.",
+     "explication": "−2x + 8 = 0 donne **x = 4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de B après x = 4 ?",
+     "options": [
+      "B′ est négative, donc B est décroissante sur [4 ; 7]",
+      "B′ est positive, donc B est croissante sur [4 ; 7]",
+      "B′ est nulle, donc B reste constante sur [4 ; 7]",
+      "B′ change de signe, donc B n’est pas définie sur [4 ; 7]"
+     ],
+     "reponse": 0,
+     "aide": "Calcule B′(5).",
+     "explication": "B′(5) = −2 < 0 : B **décroît** sur [4 ; 7]. Le maximum vaut B(4) = 9, soit 900 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’enclos contre le mur",
+   "competence": "modeliser",
+   "situation": "Yanis dispose de 40 m de grillage pour clôturer un enclos rectangulaire le long d’un mur (le mur remplace un côté). Il note x la largeur de l’enclos en mètres, avec 0 < x < 20. La longueur parallèle au mur vaut alors 40 − 2x.",
+   "documents": [
+    {
+     "id": "enclos",
+     "type": "schema",
+     "titre": "Plan de l’enclos",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        40
+       ],
+       "a": [
+        280,
+        40
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 28,
+       "texte": "Mur",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        40
+       ],
+       "a": [
+        70,
+        150
+       ],
+       "teinte": "encre",
+       "id": "gauche",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        40
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "teinte": "encre",
+       "id": "droite",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        150
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "teinte": "encre",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 52,
+       "y": 100,
+       "texte": "x",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 268,
+       "y": 100,
+       "texte": "x",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 172,
+       "texte": "40 − 2x",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "aire",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "Aire : A(x) = x × (40 − 2x) = −2x² + 40x.",
+      "Dérivée : A′(x) = −4x + 40."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enclos",
+     "enonce": "Touche le côté dont la longueur est 40 − 2x.",
+     "reponse": [
+      "bas"
+     ],
+     "aide": "Ce côté est celui qui fait face au mur.",
+     "explication": "Le côté parallèle au mur mesure **40 − 2x** : les deux autres mesurent x."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’aire de l’enclos pour x = 5 m.",
+     "reponse": 150,
+     "unite": "m²",
+     "aide": "A(5) = 5 × (40 − 10).",
+     "explication": "A(5) = 5 × 30 = **150 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous A′(x) = 0 pour trouver la largeur qui maximise l’aire.",
+     "reponse": 10,
+     "unite": "m",
+     "aide": "−4x + 40 = 0.",
+     "explication": "−4x + 40 = 0 donne **x = 10 m**. A′ est positive avant 10 et négative après."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’aire maximale, obtenue pour x = 10.",
+     "reponse": 200,
+     "unite": "m²",
+     "aide": "A(10) = 10 × (40 − 20).",
+     "explication": "A(10) = 10 × 20 = **200 m²**, pour un enclos de 10 m sur 20 m."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi x = 25 ne convient-il pas, même si le calcul le permet ?",
+     "options": [
+      "Parce que 40 − 2x serait négatif, ce qui est impossible",
+      "Parce que l’aire serait trop grande pour la clôture disponible",
+      "Parce que la dérivée A′(25) serait égale à zéro exactement",
+      "Parce que le mur deviendrait plus court que le grillage utilisé"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 40 − 2 × 25.",
+     "explication": "Pour x = 25, 40 − 2x = −10 m : une longueur négative n’a pas de sens. L’intervalle de validité est **0 < x < 20**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le coût moyen d’un atelier",
+   "competence": "modeliser",
+   "situation": "Un atelier fabrique x centaines de pièces (1 ≤ x ≤ 30). Son coût total, en centaines d’euros, est C(x) = x² + 4x + 100. Le coût moyen est M(x) = C(x) ÷ x = x + 4 + 100/x.",
+   "documents": [
+    {
+     "id": "formules",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les dérivées",
+     "blocs": [
+      "Coût marginal : C′(x) = 2x + 4.",
+      "Coût moyen : M′(x) = 1 − 100/x²."
+     ]
+    },
+    {
+     "id": "moyen",
+     "type": "tableau",
+     "titre": "Coût moyen selon la production",
+     "colonnes": [
+      "x (centaines)",
+      "2",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "lignes": [
+      [
+       "M(x)",
+       56,
+       29,
+       24,
+       25.67,
+       29
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moyen",
+     "enonce": "Touche le coût moyen le plus bas du tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Compare toutes les valeurs de la ligne M(x).",
+     "explication": "Le plus petit coût moyen du tableau est **24** pour x = 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule M′(2) avec M′(x) = 1 − 100/x².",
+     "reponse": -24,
+     "aide": "100 ÷ 4 = 25.",
+     "explication": "M′(2) = 1 − 25 = **−24** : le coût moyen baisse quand on produit plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x > 0 a-t-on M′(x) = 0 ? (x² = 100)",
+     "reponse": 10,
+     "aide": "Résous 1 = 100/x².",
+     "explication": "x² = 100 donc **x = 10**, soit 1 000 pièces."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coût marginal C′(10) = 2x + 4 pour x = 10.",
+     "reponse": 24,
+     "aide": "Remplace x par 10.",
+     "explication": "C′(10) = 24, **égal** à M(10) = 24."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remarque-t-on en x = 10, où le coût moyen est minimal ?",
+     "options": [
+      "Le coût marginal est égal au coût moyen : 24 dans les deux cas",
+      "Le coût marginal est nul, car la production ne coûte plus rien",
+      "Le coût moyen est égal au coût total, soit 24 centaines d’euros",
+      "Le coût marginal est deux fois plus grand que le coût moyen"
+     ],
+     "reponse": 0,
+     "aide": "Compare C′(10) et M(10).",
+     "explication": "Au minimum du coût moyen, le coût de la pièce supplémentaire (**24**) égale le coût moyen : c’est le signe de l’optimum."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plafond des bactéries",
+   "competence": "lire-graphique",
+   "situation": "Dans un milieu de culture, la population de bactéries (en millions) au bout de t heures est f(t) = (8t + 4) ÷ (t + 2). Le graphique en donne quelques valeurs.",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Population de bactéries",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "20",
+      "40",
+      "80"
+     ],
+     "series": [
+      {
+       "nom": "f(t)",
+       "valeurs": [
+        2,
+        6.29,
+        7,
+        7.45,
+        7.71,
+        7.85
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Population",
+      "unite": "millions",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps en heures"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche l’instant où la population vaut 7 millions.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Calcule f(10) ou cherche le point à la hauteur 7.",
+     "explication": "f(10) = 84 ÷ 12 = 7 : c’est à **10 heures**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En factorisant par t : f(t) = (8 + 4/t) ÷ (1 + 2/t). Quelle est la limite de f(t) quand t tend vers +∞ ?",
+     "reponse": 8,
+     "aide": "4/t et 2/t tendent vers 0.",
+     "explication": "Le quotient tend vers 8 ÷ 1 = **8** (millions)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie l’asymptote horizontale y = 8 pour cette culture ?",
+     "options": [
+      "La population se stabilise près de 8 millions à long terme",
+      "La population atteint exactement 8 millions après 80 heures",
+      "La population double toutes les 8 heures de façon régulière",
+      "La population disparaît complètement après un temps très long"
+     ],
+     "reponse": 0,
+     "aide": "Une asymptote horizontale est un niveau de saturation.",
+     "explication": "La courbe s’approche de y = 8 sans jamais la dépasser : la population **plafonne** vers 8 millions."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dépolluer jusqu’au bout",
+   "competence": "modeliser",
+   "situation": "Dépolluer un sol coûte, en milliers d’euros, C(x) = 50x ÷ (100 − x) pour retirer x % de la pollution (0 ≤ x < 100). Le tableau donne quelques coûts.",
+   "documents": [
+    {
+     "id": "depol",
+     "type": "tableau",
+     "titre": "Coût de dépollution",
+     "colonnes": [
+      "x (%)",
+      "0",
+      "50",
+      "80",
+      "90",
+      "95",
+      "99"
+     ],
+     "lignes": [
+      [
+       "C(x)",
+       0,
+       50,
+       200,
+       450,
+       950,
+       4950
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depol",
+     "enonce": "Touche le coût pour retirer 95 % de la pollution.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Colonne « 95 », ligne C(x).",
+     "explication": "Pour x = 95, le coût est de **950** milliers d’euros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule C(80) avec la formule.",
+     "reponse": 200,
+     "aide": "50 × 80 = 4 000 ; 100 − 80 = 20.",
+     "explication": "C(80) = 4 000 ÷ 20 = **200** milliers d’euros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le coût de 99 % est-il plus grand que celui de 90 % ?",
+     "reponse": 11,
+     "aide": "Divise 4 950 par 450.",
+     "explication": "4 950 ÷ 450 = **11** : les derniers pourcents coûtent très cher."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la limite de C(x) quand x tend vers 100 par valeurs inférieures ?",
+     "options": [
+      "Elle vaut +∞ : dépolluer totalement coûterait une somme infinie",
+      "Elle vaut 0 : dépolluer totalement ne coûterait plus rien",
+      "Elle vaut 100 : dépolluer totalement coûterait 100 milliers",
+      "Elle n’existe pas, car la fonction s’arrête au coût de 99 %"
+     ],
+     "reponse": 0,
+     "aide": "Le dénominateur tend vers 0 par valeurs positives, le numérateur vers 5 000.",
+     "explication": "Numérateur proche de 5 000, dénominateur proche de 0 positif : la limite est **+∞**. La droite x = 100 est une asymptote verticale : 100 % est une valeur interdite."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux plateformes, deux rythmes",
+   "competence": "raisonner",
+   "situation": "Le nombre d’abonnés (en centaines) de la plateforme A est f(t) = 50 t², celui de la plateforme B est g(t) = e^(0,5 t), où t est le temps en mois. B démarre très lentement. Le tableau compare les deux.",
+   "documents": [
+    {
+     "id": "abo",
+     "type": "tableau",
+     "titre": "Abonnés des deux plateformes",
+     "colonnes": [
+      "t (mois)",
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+     ],
+     "lignes": [
+      [
+       "f(t) — A",
+       0,
+       1250,
+       5000,
+       11250,
+       20000,
+       31250
+      ],
+      [
+       "g(t) — B",
+       1,
+       12.18,
+       148.41,
+       1808.04,
+       22026.47,
+       268337.29
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Croissances comparées",
+     "blocs": [
+      "e^x ÷ x^n tend vers +∞ quand x tend vers +∞, pour tout entier n."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abo",
+     "enonce": "Touche la première valeur de g(t) qui dépasse la valeur de f(t) dans la même colonne.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Compare les deux lignes colonne par colonne.",
+     "explication": "À t = 15, g = 1 808 est inférieur à f = 11 250 ; à **t = 20**, g = 22 026 dépasse f = 20 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule g(10) = e^5, arrondi au centième.",
+     "reponse": 148.41,
+     "tolerance": 0.01,
+     "aide": "e⁵ ≈ 148,4.",
+     "explication": "g(10) = e⁵ ≈ **148,41** centaines d’abonnés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À t = 25, combien de fois g(t) est-il plus grand que f(t) ? Arrondis au centième.",
+     "reponse": 8.59,
+     "tolerance": 0.01,
+     "aide": "Divise g(25) par f(25) lus dans le tableau.",
+     "explication": "268 337,29 ÷ 31 250 ≈ **8,59**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prévoit le théorème des croissances comparées pour le quotient g(t) ÷ f(t) à long terme ?",
+     "options": [
+      "Il tend vers +∞ : à long terme, B dépasse A de plus en plus",
+      "Il tend vers 0 : à long terme, A reste très largement devant B",
+      "Il se stabilise à 8,59 : B reste environ 8,59 fois plus grand",
+      "Il reste égal à 1 : les deux plateformes gardent la même taille"
+     ],
+     "reponse": 0,
+     "aide": "e^x l’emporte sur toute puissance de x.",
+     "explication": "Comme e^(0,5t) ÷ t² tend vers +∞, **B finit toujours par l’emporter** sur A, même si A est très en avance au départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tarif du colis",
+   "competence": "lire-graphique",
+   "situation": "La Poste imaginaire de Marenne fixe le prix d’un colis par tranche de poids, comme le montre le graphique.",
+   "documents": [
+    {
+     "id": "poste",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Prix selon le poids du colis",
+     "categories": [
+      "≤ 20 g",
+      "≤ 100 g",
+      "≤ 250 g",
+      "≤ 500 g",
+      "≤ 1 kg"
+     ],
+     "series": [
+      {
+       "nom": "Prix",
+       "valeurs": [
+        1.5,
+        3,
+        4.5,
+        6,
+        7.5
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 8,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Tranche de poids"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix d’un colis de 120 g ?",
+     "reponse": 4.5,
+     "unite": "€",
+     "aide": "Cherche la tranche qui contient 120 g.",
+     "explication": "120 g est dans la tranche « ≤ 250 g » : **4,50 €**."
+    },
+    {
+     "type": "zone",
+     "document": "poste",
+     "enonce": "Touche la tranche d’un colis de 100 g pile.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "100 g est la borne haute d’une tranche.",
+     "explication": "Un colis de 100 g est dans la tranche « ≤ 100 g » : **3 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le prix augmente-t-il quand un colis passe de 100 g à 101 g ?",
+     "reponse": 1.5,
+     "unite": "€",
+     "aide": "Compare les tranches « ≤ 100 g » et « ≤ 250 g ».",
+     "explication": "On passe de 3 € à 4,50 € : un saut de **1,50 €** pour un gramme de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce tarif ne se modélise-t-il pas par une fonction continue ?",
+     "options": [
+      "Parce que le prix fait un saut à chaque changement de tranche",
+      "Parce que le prix diminue quand le poids du colis augmente",
+      "Parce que le prix est proportionnel au poids du colis posté",
+      "Parce que le poids du colis ne peut pas dépasser un kilo"
+     ],
+     "reponse": 0,
+     "aide": "Peut-on tracer la courbe sans lever le crayon ?",
+     "explication": "Le prix passe brusquement de 3 € à 4,50 € : la courbe a des **sauts**, elle n’est pas continue."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le four qui chauffe",
+   "competence": "modeliser",
+   "situation": "La température d’un four (en °C) au bout de t minutes est T(t) = 20 + 200 (1 − e^(−0,1 t)). La fonction T est continue et strictement croissante sur [0 ; 20]. Le tableau donne quelques valeurs, arrondies au centième.",
+   "documents": [
+    {
+     "id": "four",
+     "type": "tableau",
+     "titre": "Température du four",
+     "colonnes": [
+      "t (min)",
+      "0",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "lignes": [
+      [
+       "T(t) en °C",
+       20,
+       98.69,
+       146.42,
+       175.37,
+       192.93
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "four",
+     "enonce": "Touche la température au bout de 10 minutes.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Colonne « 10 ».",
+     "explication": "À 10 minutes, le four est à **146,42 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le four atteint-il 150 °C entre 10 et 20 minutes ?",
+     "options": [
+      "Oui : T est continue et 150 est compris entre T(10) et T(20)",
+      "Non : T(10) est déjà plus grand que 150, donc c’est trop tard",
+      "Non : une température ne peut pas être une fonction continue",
+      "On ne peut pas savoir, car 150 n’apparaît pas dans le tableau"
+     ],
+     "reponse": 0,
+     "aide": "Encadre 150 entre deux valeurs du tableau.",
+     "explication": "T(10) = 146,42 est inférieur à 150 et T(20) = 192,93 lui est supérieur : le **théorème des valeurs intermédiaires** garantit une solution."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule T(11), arrondie au centième.",
+     "reponse": 153.43,
+     "unite": "°C",
+     "tolerance": 0.01,
+     "aide": "e^(−1,1) ≈ 0,3329.",
+     "explication": "T(11) = 20 + 200 × (1 − 0,33287) ≈ **153,43 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle minute entière le four dépasse-t-il pour la première fois 150 °C ?",
+     "reponse": 11,
+     "aide": "Compare T(10) et T(11) à 150.",
+     "explication": "T(10) ≈ 146,42 et T(11) ≈ 153,43 : la solution est entre 10 et 11, donc dès la minute **11**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété de T assure que ce moment est unique ?",
+     "options": [
+      "T est strictement croissante, donc elle atteint 150 une fois",
+      "T est continue, donc elle atteint chaque valeur une seule fois",
+      "T est dérivable, donc elle atteint chaque valeur une fois",
+      "T est positive, donc elle atteint chaque valeur une seule fois"
+     ],
+     "reponse": 0,
+     "aide": "La continuité donne l’existence. Qu’est-ce qui donne l’unicité ?",
+     "explication": "La **stricte monotonie** donne l’unicité ; la continuité ne donne que l’existence."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Piéger la solution par dichotomie",
+   "competence": "raisonner",
+   "situation": "Le bénéfice d’un atelier (en milliers d’euros) est f(x) = x³ + x − 5 pour x entre 1 et 2 (en centaines de pièces). On cherche x tel que f(x) = 0 en coupant l’intervalle en deux à chaque étape.",
+   "documents": [
+    {
+     "id": "dicho",
+     "type": "tableau",
+     "titre": "Suivi de la dichotomie",
+     "colonnes": [
+      "Étape",
+      "a",
+      "b",
+      "milieu m",
+      "f(m)"
+     ],
+     "lignes": [
+      [
+       "1",
+       1,
+       2,
+       1.5,
+       "?"
+      ],
+      [
+       "2",
+       1.5,
+       2,
+       1.75,
+       2.109
+      ],
+      [
+       "3",
+       1.5,
+       1.75,
+       1.625,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La règle",
+     "blocs": [
+      "On garde la moitié où f change de signe.",
+      "f′(x) = 3x² + 1."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dicho",
+     "enonce": "Touche la case f(m) de la première étape où la valeur est positive.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "La première case de f(m) est négative ; regarde la suivante.",
+     "explication": "À l’étape 2, f(1,75) ≈ **2,109** est positive : la solution est dans [1,5 ; 1,75]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(1,5) pour remplir la première case.",
+     "reponse": -0.125,
+     "tolerance": 0.001,
+     "aide": "1,5³ = 3,375.",
+     "explication": "f(1,5) = 3,375 + 1,5 − 5 = **−0,125**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(1,625) pour remplir la dernière case, arrondie au millième.",
+     "reponse": 0.916,
+     "tolerance": 0.001,
+     "aide": "1,625³ ≈ 4,291.",
+     "explication": "f(1,625) = 4,291 + 1,625 − 5 ≈ **0,916**, positive : la solution est dans [1,5 ; 1,625]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de l’intervalle [a ; b] après l’étape 3 ?",
+     "reponse": 0.125,
+     "tolerance": 0.0005,
+     "aide": "La longueur est divisée par 2 à chaque étape, à partir de 1.",
+     "explication": "1 → 0,5 → 0,25 → **0,125** : la précision double à chaque étape."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’équation f(x) = 0 a-t-elle une seule solution dans [1 ; 2] ?",
+     "options": [
+      "f est continue, et f′(x) = 3x² + 1 est positive donc f strictement croît",
+      "f est continue et prend des valeurs négatives puis positives, donc unique",
+      "f est un polynôme, et un polynôme s’annule toujours une seule fois",
+      "f(1,5) est très proche de 0, donc la solution est forcément unique"
+     ],
+     "reponse": 0,
+     "aide": "Il faut à la fois la continuité et la stricte monotonie.",
+     "explication": "f′ > 0 donc f est **strictement croissante** ; avec la continuité et f(1) < 0 < f(2), la solution existe et est unique."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand la ville aura-t-elle doublé ?",
+   "competence": "resoudre",
+   "situation": "La ville de Marenne croît de 5 % par an : sa population est multipliée par 1,05^n au bout de n années. Le tableau donne ce coefficient (arrondi au millième) pour quelques valeurs de n.",
+   "documents": [
+    {
+     "id": "coef",
+     "type": "tableau",
+     "titre": "Coefficient 1,05^n",
+     "colonnes": [
+      "n (années)",
+      "10",
+      "12",
+      "14",
+      "15"
+     ],
+     "lignes": [
+      [
+       "1,05^n",
+       1.629,
+       1.796,
+       1.98,
+       2.079
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coef",
+     "enonce": "Touche la première valeur du tableau qui dépasse 2.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Doubler, c’est atteindre un coefficient d’au moins 2.",
+     "explication": "À 14 ans, 1,05^n ≈ 1,980 : pas encore 2. À **15 ans**, 2,079 : c’est fait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule ln(2) ÷ ln(1,05), arrondi au centième.",
+     "reponse": 14.21,
+     "tolerance": 0.01,
+     "aide": "ln 2 ≈ 0,6931 et ln 1,05 ≈ 0,0488.",
+     "explication": "ln(2) ÷ ln(1,05) ≈ **14,21**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En combien d’années entières la population a-t-elle au moins doublé ?",
+     "reponse": 15,
+     "aide": "Arrondis dans le sens qui respecte l’inégalité.",
+     "explication": "n ≥ 14,21 : le plus petit entier qui convient est **15**, et non 14 (arrondi au plus proche)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi utilise-t-on le logarithme pour résoudre 1,05^n ≥ 2 ?",
+     "options": [
+      "Parce que l’inconnue n est en exposant et ln la fait descendre",
+      "Parce que le logarithme transforme la somme en produit partout",
+      "Parce que le logarithme est défini pour tous les réels n connus",
+      "Parce que 1,05 est proche de 1 et que ln(1) vaut exactement 0"
+     ],
+     "reponse": 0,
+     "aide": "ln(a^n) = n ln a.",
+     "explication": "ln(1,05^n) = n ln(1,05) : le logarithme fait **descendre l’exposant**, ce qui permet d’isoler n."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les données s’alignent-elles ?",
+   "competence": "modeliser",
+   "situation": "Un club de jeu en ligne relève son nombre d’inscrits u(n) chaque mois. Pour savoir si la croissance est exponentielle, Léo calcule aussi ln(u(n)) (arrondi au millième).",
+   "documents": [
+    {
+     "id": "inscrits",
+     "type": "tableau",
+     "titre": "Inscrits et logarithmes",
+     "colonnes": [
+      "Mois n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       100,
+       150,
+       225,
+       337.5,
+       506.25
+      ],
+      [
+       "ln(u(n))",
+       4.605,
+       5.011,
+       5.416,
+       5.822,
+       6.227
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inscrits",
+     "enonce": "Touche la valeur de ln(u(n)) pour le mois 3.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "Deuxième ligne, colonne « 3 ».",
+     "explication": "Pour n = 3, ln(u(3)) = ln 337,5 ≈ **5,822**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule ln(u(1)) − ln(u(0)) avec les valeurs du tableau, arrondi au centième.",
+     "reponse": 0.41,
+     "tolerance": 0.01,
+     "aide": "Soustrais 4,605 à 5,011.",
+     "explication": "5,011 − 4,605 ≈ **0,41**, et c’est aussi ln(1,5) ≈ 0,405."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le fait que les ln(u(n)) augmentent du même nombre à chaque mois ?",
+     "options": [
+      "Que u(n) est une suite géométrique, donc une croissance exponentielle",
+      "Que u(n) est une suite arithmétique, donc une croissance linéaire",
+      "Que u(n) est une suite constante, donc sans aucune croissance",
+      "Que u(n) est décroissante, donc le club perd des inscrits"
+     ],
+     "reponse": 0,
+     "aide": "ln(u(n)) = ln(u(0)) + n ln(q).",
+     "explication": "ln(u(n)) est une suite arithmétique : u(n) est **géométrique**, de raison q = e^0,405 = 1,5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de la suite u ?",
+     "reponse": 1.5,
+     "aide": "Divise u(1) par u(0).",
+     "explication": "150 ÷ 100 = **1,5** : +50 % d’inscrits chaque mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(6) = 100 × 1,5⁶, arrondi au centième.",
+     "reponse": 1139.06,
+     "tolerance": 0.01,
+     "aide": "1,5⁶ = 11,390625.",
+     "explication": "u(6) = 100 × 11,390625 = **1 139,06** inscrits."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le médicament qui s’élimine",
+   "competence": "resoudre",
+   "situation": "Chaque heure, le corps élimine 12 % du médicament restant : la quantité est multipliée par 0,88. Une nouvelle dose n’est possible que lorsqu’il reste moins de 5 % de la quantité initiale. Le tableau donne le pourcentage restant.",
+   "documents": [
+    {
+     "id": "reste",
+     "type": "tableau",
+     "titre": "Pourcentage restant",
+     "colonnes": [
+      "Heures n",
+      "0",
+      "10",
+      "20",
+      "25"
+     ],
+     "lignes": [
+      [
+       "Reste (%)",
+       100,
+       27.9,
+       7.8,
+       4.1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "meth",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La méthode",
+     "blocs": [
+      "On résout 0,88^n < 0,05.",
+      "On applique ln, croissante : n × ln(0,88) < ln(0,05).",
+      "ln(0,88) est négatif."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reste",
+     "enonce": "Touche la première colonne où il reste moins de 5 %.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Cherche la première valeur de la ligne sous 5.",
+     "explication": "À 20 heures il reste 7,8 % ; à **25 heures** 4,1 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient le sens de l’inégalité quand on divise par ln(0,88) ?",
+     "options": [
+      "Il s’inverse, car ln(0,88) est un nombre négatif",
+      "Il est conservé, car ln(0,88) est un nombre positif",
+      "Il est conservé, car on divise les deux membres",
+      "Il s’inverse, car ln(0,05) est un nombre positif"
+     ],
+     "reponse": 0,
+     "aide": "Signe de ln(0,88) : 0,88 est inférieur à 1.",
+     "explication": "ln(0,88) < 0 : diviser par un négatif **inverse** l’inégalité, d’où n > ln(0,05) ÷ ln(0,88)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule ln(0,05) ÷ ln(0,88), arrondi au centième.",
+     "reponse": 23.43,
+     "tolerance": 0.01,
+     "aide": "ln 0,05 ≈ −2,9957 et ln 0,88 ≈ −0,1278.",
+     "explication": "Le quotient vaut environ **23,43**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien d’heures entières peut-on donner une nouvelle dose ?",
+     "reponse": 24,
+     "aide": "n doit être strictement plus grand que 23,43.",
+     "explication": "n > 23,43 : le plus petit entier est **24 heures**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage reste-t-il après 24 heures ? Arrondis au centième.",
+     "reponse": 4.66,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Calcule 100 × 0,88²⁴.",
+     "explication": "0,88²⁴ ≈ 0,0466 : il reste **4,66 %**, sous la barre des 5 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vitesse de disparition",
+   "competence": "modeliser",
+   "situation": "La concentration d’un produit dans le sang (en mg/L) est c(t) = 12 e^(−0,2 t), avec t en heures. Sa dérivée est c′(t) = −2,4 e^(−0,2 t), car il faut multiplier par la dérivée −0,2 de l’exposant.",
+   "documents": [
+    {
+     "id": "conc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Concentration dans le sang",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "c(t)",
+       "valeurs": [
+        12,
+        9.82,
+        8.04,
+        6.59,
+        5.39,
+        4.41
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "mg/L",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps en heures"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule c′(0) avec c′(t) = −2,4 e^(−0,2 t).",
+     "reponse": -2.4,
+     "unite": "mg/L par h",
+     "aide": "e⁰ = 1.",
+     "explication": "c′(0) = −2,4 × 1 = **−2,4** mg/L par heure."
+    },
+    {
+     "type": "zone",
+     "document": "conc",
+     "enonce": "Touche la première heure où la concentration passe sous 6 mg/L.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le premier point sous la graduation 6.",
+     "explication": "À 3 heures c = 6,59 ; à **4 heures** c = 5,39 : c’est sous 6."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’équation de la tangente en 0 est y = c′(0)(t − 0) + c(0). Quelle valeur donne-t-elle pour t = 1 ?",
+     "reponse": 9.6,
+     "tolerance": 0.01,
+     "aide": "y = −2,4 t + 12.",
+     "explication": "y = −2,4 × 1 + 12 = **9,6**, proche de la vraie valeur c(1) ≈ 9,82."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le signe de c′(t) sur le phénomène ?",
+     "options": [
+      "c′ est négative : la concentration diminue à chaque instant",
+      "c′ est négative : la concentration augmente à chaque instant",
+      "c′ est positive : la concentration diminue à chaque instant",
+      "c′ est nulle : la concentration reste stable à chaque instant"
+     ],
+     "reponse": 0,
+     "aide": "e^(−0,2 t) est toujours positif.",
+     "explication": "Comme −2,4 e^(−0,2t) < 0, c est **décroissante** : le produit disparaît du sang."
+    }
+   ]
+  },
+  {
+   "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bon nombre de publicités",
+   "competence": "modeliser",
+   "situation": "Une marque diffuse x centaines de publicités. Son bénéfice, en milliers d’euros, est B(x) = 10 ln(x + 1) − 2x pour x ≥ 0. Pour ln(x + 1), la dérivée est 1/(x + 1) : B′(x) = 10/(x + 1) − 2.",
+   "documents": [
+    {
+     "id": "pub",
+     "type": "tableau",
+     "titre": "Bénéfice selon la diffusion",
+     "colonnes": [
+      "x (centaines)",
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "lignes": [
+      [
+       "B(x)",
+       0,
+       6.986,
+       8.094,
+       7.459,
+       5.972
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule B′(1) = 10/(1 + 1) − 2.",
+     "reponse": 3,
+     "aide": "10 ÷ 2 = 5.",
+     "explication": "B′(1) = 5 − 2 = **3** : le bénéfice augmente encore."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x a-t-on 10/(x + 1) = 2 ?",
+     "reponse": 4,
+     "aide": "Résous x + 1 = 5.",
+     "explication": "10 = 2(x + 1) donc x + 1 = 5 et **x = 4** : B′ s’annule en changeant de signe."
+    },
+    {
+     "type": "zone",
+     "document": "pub",
+     "enonce": "Touche le plus grand bénéfice du tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Compare toutes les valeurs de B(x).",
+     "explication": "Le maximum est **8,094** pour x = 4."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule B(4) = 10 ln 5 − 8, arrondi au centième.",
+     "reponse": 8.09,
+     "tolerance": 0.01,
+     "aide": "ln 5 ≈ 1,6094.",
+     "explication": "B(4) = 16,094 − 8 ≈ **8,09** milliers d’euros."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il pour le bénéfice quand x dépasse 4 ?",
+     "options": [
+      "Il diminue, car B′(x) devient négative : trop de publicités coûte",
+      "Il augmente encore, car B′(x) reste positive après x = 4",
+      "Il reste égal à 8,09 car B′(4) est égale à zéro",
+      "Il devient négatif immédiatement, car ln(x + 1) change de signe"
+     ],
+     "reponse": 0,
+     "aide": "Calcule B′(9) = 10/10 − 2.",
+     "explication": "B′(9) = −1 < 0 : au-delà de 400 publicités, **le bénéfice diminue**."
+    }
+   ]
+  },
+  {
+   "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pic de la dose",
+   "competence": "modeliser",
+   "situation": "La quantité de principe actif dans le sang (en mg) est f(t) = t e^(−0,5 t), où t est en heures. Avec u = t (u′ = 1) et v = e^(−0,5 t) (v′ = −0,5 e^(−0,5 t)), on obtient f′ = u′v + uv′.",
+   "documents": [
+    {
+     "id": "calcul",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le calcul de f′",
+     "blocs": [
+      "f′(t) = 1 × e^(−0,5 t) + t × (−0,5 e^(−0,5 t)) = (1 − 0,5 t) e^(−0,5 t).",
+      "e^(−0,5 t) est toujours positif."
+     ]
+    },
+    {
+     "id": "dose",
+     "type": "tableau",
+     "titre": "Quantité de principe actif",
+     "colonnes": [
+      "t (heures)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+     ],
+     "lignes": [
+      [
+       "f(t) en mg",
+       0,
+       0.6065,
+       0.7358,
+       0.6694,
+       0.5413,
+       0.2987
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(0) = (1 − 0) × e⁰.",
+     "reponse": 1,
+     "aide": "e⁰ = 1.",
+     "explication": "f′(0) = **1** : la quantité augmente au départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de t le facteur 1 − 0,5 t est-il nul ?",
+     "reponse": 2,
+     "aide": "Résous 1 − 0,5 t = 0.",
+     "explication": "0,5 t = 1 donc **t = 2 heures** : f′ s’annule en changeant de signe."
+    },
+    {
+     "type": "zone",
+     "document": "dose",
+     "enonce": "Touche la quantité maximale du tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Compare les valeurs de la ligne f(t).",
+     "explication": "Le maximum est **0,7358 mg** à t = 2 heures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(4) = (1 − 0,5 × 4) e^(−2), arrondi au centième.",
+     "reponse": -0.14,
+     "tolerance": 0.01,
+     "aide": "e^(−2) ≈ 0,1353.",
+     "explication": "f′(4) = (−1) × 0,1353 ≈ **−0,14** : la quantité décroît après le pic."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de f(t) = t e^(−0,5 t) ?",
+     "options": [
+      "(1 − 0,5 t) e^(−0,5 t), d’après la règle du produit",
+      "e^(−0,5 t) − 0,5 t, en dérivant chaque facteur seul",
+      "−0,5 t e^(−0,5 t), en ne dérivant que l’exponentielle",
+      "e^(−0,5 t), en ne dérivant que le facteur t seul"
+     ],
+     "reponse": 0,
+     "aide": "Règle du produit : u′v + uv′.",
+     "explication": "La règle du produit donne **(1 − 0,5 t) e^(−0,5 t)** ; les autres réponses oublient un terme."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe en S des abonnés",
+   "competence": "lire-graphique",
+   "situation": "Une application se diffuse dans un marché limité à 1 000 utilisateurs. Le nombre d’utilisateurs au bout de t mois suit une courbe en S : d’abord convexe, puis concave. Le graphique en donne quelques valeurs.",
+   "documents": [
+    {
+     "id": "appli",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Utilisateurs de l’application",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Utilisateurs",
+       "valeurs": [
+        2,
+        18,
+        119,
+        500,
+        881,
+        982,
+        998
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Utilisateurs",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Temps en mois"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appli",
+     "enonce": "Touche le mois du point d’inflexion, où la croissance est la plus rapide.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Le point d’inflexion est à mi-chemin du plafond de 1 000.",
+     "explication": "Au mois 6, il y a 500 utilisateurs, la moitié du plafond : c’est le **point d’inflexion**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’utilisateurs compte-t-on au point d’inflexion ?",
+     "reponse": 500,
+     "aide": "Lis la hauteur du point au mois 6.",
+     "explication": "Au mois 6 : **500** utilisateurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la courbe avant le point d’inflexion ?",
+     "options": [
+      "Elle est convexe : le nombre d’utilisateurs augmente de plus en plus vite",
+      "Elle est concave : le nombre d’utilisateurs augmente de moins en moins vite",
+      "Elle est convexe : le nombre d’utilisateurs diminue de plus en plus vite",
+      "Elle est concave : le nombre d’utilisateurs diminue de moins en moins vite"
+     ],
+     "reponse": 0,
+     "aide": "Les gains sont de plus en plus grands entre deux dates successives.",
+     "explication": "Avant le mois 6, les gains grandissent : la courbe est **convexe**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le coût qui change de courbure",
+   "competence": "modeliser",
+   "situation": "Le coût total d’un atelier (en milliers d’euros) est C(x) = 0,1 x³ − 1,5 x² + 8x pour x centaines de pièces. Sa dérivée est C′(x) = 0,3 x² − 3x + 8 et sa dérivée seconde C″(x) = 0,6 x − 3.",
+   "documents": [
+    {
+     "id": "seconde",
+     "type": "tableau",
+     "titre": "Valeurs de C″",
+     "colonnes": [
+      "x (centaines)",
+      "0",
+      "2",
+      "5",
+      "8",
+      "10"
+     ],
+     "lignes": [
+      [
+       "C″(x)",
+       -3,
+       -1.8,
+       0,
+       1.8,
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule C″(10) = 0,6 × 10 − 3.",
+     "reponse": 3,
+     "aide": "0,6 × 10 = 6.",
+     "explication": "C″(10) = 6 − 3 = **3**, positif : C est convexe près de x = 10."
+    },
+    {
+     "type": "zone",
+     "document": "seconde",
+     "enonce": "Touche la valeur de x pour laquelle C″ s’annule.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la colonne où C″ vaut 0.",
+     "explication": "C″(5) = **0**, avec un changement de signe : c’est le point d’inflexion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur [5 ; 10], la courbe de C est…",
+     "options": [
+      "Convexe, car C″ est positive et C′ est croissante",
+      "Concave, car C″ est positive et C′ est croissante",
+      "Convexe, car C″ est négative et C′ est décroissante",
+      "Concave, car C″ est négative et C′ est décroissante"
+     ],
+     "reponse": 0,
+     "aide": "Convexe signifie dérivée seconde positive.",
+     "explication": "C″ ≥ 0 sur [5 ; 10] : C est **convexe**, le coût augmente de plus en plus vite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coût marginal C′(5), valeur la plus basse de C′.",
+     "reponse": 0.5,
+     "tolerance": 0.01,
+     "aide": "0,3 × 25 = 7,5.",
+     "explication": "C′(5) = 7,5 − 15 + 8 = **0,5** : en x = 5, le coût marginal est minimal."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Monter, descendre, accélérer ?",
+   "competence": "raisonner",
+   "situation": "Un élève confond sens de variation et convexité. Le tableau décrit quatre phénomènes par les signes de f′ et de f″. Un second document montre la quantité de produit f(t) = 40 e^(−0,5 t), où f′(t) = −20 e^(−0,5 t) et f″(t) = 10 e^(−0,5 t).",
+   "documents": [
+    {
+     "id": "signes",
+     "type": "tableau",
+     "titre": "Quatre phénomènes",
+     "colonnes": [
+      "Phénomène",
+      "f′",
+      "f″"
+     ],
+     "lignes": [
+      [
+       "Ventes d’un jeu qui démarre",
+       "> 0",
+       "> 0"
+      ],
+      [
+       "Population qui approche d’un plafond",
+       "> 0",
+       "< 0"
+      ],
+      [
+       "Valeur d’un objet qui s’effondre",
+       "< 0",
+       "< 0"
+      ],
+      [
+       "Quantité de produit qui s’élimine",
+       "< 0",
+       "> 0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "produit",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantité de produit",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "f(t)",
+       "valeurs": [
+        40,
+        24.26,
+        14.72,
+        8.93,
+        5.41,
+        3.28
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité",
+      "unite": "mg",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps en heures"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque phénomène selon ce qu’il fait.",
+     "categories": [
+      "S’emballe",
+      "Ralentit vers un plafond",
+      "Baisse en accélérant",
+      "Baisse en ralentissant"
+     ],
+     "items": [
+      [
+       "Ventes d’un jeu qui démarre",
+       0
+      ],
+      [
+       "Population qui approche d’un plafond",
+       1
+      ],
+      [
+       "Valeur d’un objet qui s’effondre",
+       2
+      ],
+      [
+       "Quantité de produit qui s’élimine",
+       3
+      ]
+     ],
+     "aide": "Regarde d’abord le signe de f′ (monte ou baisse), puis celui de f″.",
+     "explication": "f′ > 0 et f″ > 0 : la grandeur s’emballe ; f′ > 0 et f″ < 0 : elle tend vers un plafond ; f′ < 0 et f″ < 0 : elle baisse en accélérant ; f′ < 0 et f″ > 0 : elle baisse **en ralentissant**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(0) = −20 e⁰ pour le produit.",
+     "reponse": -20,
+     "unite": "mg/h",
+     "aide": "e⁰ = 1.",
+     "explication": "f′(0) = **−20** mg par heure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f″(0) = 10 e⁰ pour le produit.",
+     "reponse": 10,
+     "aide": "e⁰ = 1.",
+     "explication": "f″(0) = **10**, positif : la fonction f est convexe."
+    },
+    {
+     "type": "zone",
+     "document": "produit",
+     "enonce": "Touche la première heure t telle que la perte entre t et t + 1 est inférieure à 5 mg.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare les écarts entre points voisins : 40 → 24,3 → 14,7…",
+     "explication": "Entre 2 h et 3 h on perd 5,8 mg ; entre **3 h** et 4 h on perd 3,5 mg : la baisse ralentit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment décrire le produit, avec f′ < 0 et f″ > 0 ?",
+     "options": [
+      "Il baisse en ralentissant : f est décroissante et convexe",
+      "Il baisse en accélérant : f est décroissante et concave",
+      "Il augmente en ralentissant : f est croissante et concave",
+      "Il augmente en accélérant : f est croissante et convexe"
+     ],
+     "reponse": 0,
+     "aide": "Les pertes par heure diminuent.",
+     "explication": "f′ < 0 : elle baisse ; f″ > 0 : convexe, donc les pertes **diminuent** d’une heure à l’autre."
+    }
+   ]
+  }
+ ]
+}

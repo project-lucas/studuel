@@ -1,0 +1,3071 @@
+{
+ "niveau": "Tle",
+ "matiere": "chimie-biologie-physiopathologie",
+ "exercices": [
+  {
+   "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet de l’ovocyte",
+   "competence": "observer-schema",
+   "situation": "Sur une planche d’anatomie, l’appareil génital féminin est dessiné de face, sans légende. À toi de reconnaître les organes.",
+   "documents": [
+    {
+     "id": "app",
+     "type": "schema",
+     "titre": "Appareil génital féminin, vu de face",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "polygone",
+       "points": [
+        [
+         130,
+         80
+        ],
+        [
+         210,
+         80
+        ],
+        [
+         196,
+         150
+        ],
+        [
+         180,
+         196
+        ],
+        [
+         160,
+         196
+        ],
+        [
+         144,
+         150
+        ]
+       ],
+       "id": "ut"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "rect",
+       "x": 160,
+       "y": 196,
+       "l": 20,
+       "h": 28,
+       "arrondi": 4,
+       "id": "col"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "rect",
+       "x": 62,
+       "y": 74,
+       "l": 70,
+       "h": 12,
+       "arrondi": 6,
+       "id": "tg"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "rect",
+       "x": 208,
+       "y": 74,
+       "l": 70,
+       "h": 12,
+       "arrondi": 6,
+       "id": "td"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "cercle",
+       "cx": 56,
+       "cy": 80,
+       "r": 13,
+       "id": "pg"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "cercle",
+       "cx": 284,
+       "cy": 80,
+       "r": 13,
+       "id": "pd"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "ellipse",
+       "cx": 52,
+       "cy": 120,
+       "rx": 24,
+       "ry": 17,
+       "id": "ovg"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "zone": true,
+       "forme": "ellipse",
+       "cx": 288,
+       "cy": 120,
+       "rx": 24,
+       "ry": 17,
+       "id": "ovd"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 242,
+       "texte": "Schéma simplifié, sans échelle",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "app",
+     "enonce": "Touche les deux ovaires.",
+     "reponse": [
+      "ovg",
+      "ovd"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux organes en forme d’ovale, placés de part et d’autre de l’utérus, tout au bout des trompes.",
+     "explication": "Les **ovaires** produisent les ovocytes et les hormones sexuelles féminines (œstrogènes et progestérone)."
+    },
+    {
+     "type": "zone",
+     "document": "app",
+     "enonce": "Touche l’organe dans lequel l’embryon s’implante.",
+     "reponse": [
+      "ut"
+     ],
+     "aide": "C’est le gros organe central, en forme de poire renversée, dont la muqueuse s’épaissit à chaque cycle.",
+     "explication": "La nidation se fait dans l’endomètre, la muqueuse de l’**utérus**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les lieux par lesquels passent l’ovocyte II puis la cellule-œuf, de l’ovulation jusqu’à la nidation.",
+     "items": [
+      "Ovaire (ovulation)",
+      "Pavillon de la trompe",
+      "Ampoule de la trompe (fécondation)",
+      "Utérus (nidation)"
+     ],
+     "aide": "L’ovocyte II est libéré par l’ovaire, puis capté par le bord de la trompe ; la fécondation a lieu dans la partie externe de la trompe.",
+     "explication": "Dans l’ordre : **ovaire, pavillon, ampoule de la trompe, utérus**. L’ovocyte est capté par le pavillon, la fécondation a lieu dans l’ampoule, puis la cellule-œuf migre vers l’utérus."
+    }
+   ]
+  },
+  {
+   "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de chromosomes ?",
+   "competence": "lire-tableau",
+   "situation": "Un laboratoire compare les stades de la formation des gamètes chez l’homme et chez la femme. La case violette est à compléter.",
+   "documents": [
+    {
+     "id": "gam",
+     "type": "tableau",
+     "titre": "Les stades de la gamétogenèse",
+     "colonnes": [
+      "Cellule",
+      "Sexe",
+      "Chromosomes"
+     ],
+     "lignes": [
+      [
+       "Spermatogonie",
+       "Homme",
+       "46"
+      ],
+      [
+       "Spermatocyte I",
+       "Homme",
+       "46"
+      ],
+      [
+       "Spermatocyte II",
+       "Homme",
+       "?"
+      ],
+      [
+       "Spermatozoïde",
+       "Homme",
+       "23"
+      ],
+      [
+       "Ovocyte I",
+       "Femme",
+       "46"
+      ],
+      [
+       "Ovocyte II",
+       "Femme",
+       "23"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case violette : combien de chromosomes contient un spermatocyte II ?",
+     "reponse": 23,
+     "aide": "Compare avec le spermatozoïde : la méiose a déjà réduit le nombre de chromosomes.",
+     "explication": "Un spermatocyte II est **haploïde (n = 23)** : la première division de méiose a déjà séparé les deux chromosomes de chaque paire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces cellules selon leur nombre de chromosomes.",
+     "categories": [
+      "2n = 46",
+      "n = 23"
+     ],
+     "items": [
+      [
+       "Ovogonie",
+       0
+      ],
+      [
+       "Spermatogonie",
+       0
+      ],
+      [
+       "Ovocyte I",
+       0
+      ],
+      [
+       "Spermatide",
+       1
+      ],
+      [
+       "Ovocyte II",
+       1
+      ],
+      [
+       "Spermatozoïde",
+       1
+      ]
+     ],
+     "aide": "Les gonies et les cellules de stade I sont diploïdes ; les cellules de stade II et les gamètes ont subi la méiose.",
+     "explication": "Ovogonie, spermatogonie et ovocyte I sont **diploïdes (2n = 46)**. Spermatide, ovocyte II et spermatozoïde sont **haploïdes (n = 23)**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À l’ovulation, l’ovocyte II est libéré, mais sa méiose est bloquée. Qu’est-ce qui lui permet de l’achever ?",
+     "options": [
+      "Le passage de l’ovocyte dans la cavité de l’utérus, après la trompe",
+      "La sécrétion de progestérone par le corps jaune de l’ovaire",
+      "La fécondation par un spermatozoïde qui entre dans l’ovocyte",
+      "La rupture du follicule mûr sous l’effet d’un pic de LH"
+     ],
+     "reponse": 2,
+     "aide": "Relis la ligne « Ovogenèse » du cours : la méiose ne s’achève que dans un cas précis.",
+     "explication": "Sans fécondation, l’ovocyte II dégénère. C’est **la fécondation** qui débloque la fin de la méiose : la cellule-œuf obtenue est diploïde (2n = 46)."
+    }
+   ]
+  },
+  {
+   "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le carnet de suivi de Léa",
+   "competence": "analyser-document",
+   "situation": "Léa attend un bébé. Son médecin date la grossesse en semaines d’aménorrhée (SA), comptées depuis le premier jour des dernières règles. Voici son carnet.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Carnet de suivi (dates imaginées)",
+     "colonnes": [
+      "Événement",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Premier jour des dernières règles",
+       "1er mars"
+      ],
+      [
+       "Prise de sang pour les sérologies",
+       "26 avril"
+      ],
+      [
+       "Échographie de datation",
+       "à 12 SA"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Exemple imaginé pour l’exercice"
+    },
+    {
+     "id": "sero",
+     "type": "tableau",
+     "titre": "Résultats de la prise de sang",
+     "colonnes": [
+      "Maladie",
+      "Anticorps recherchés",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Toxoplasmose",
+       "IgG",
+       "Négatif"
+      ],
+      [
+       "Rubéole",
+       "IgG",
+       "Positif"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le jour de la prise de sang, à combien de SA Léa en est-elle (en semaines entières) ? Mars compte 31 jours.",
+     "reponse": 8,
+     "unite": "SA",
+     "aide": "Compte les jours du 1er mars au 26 avril, puis divise par 7.",
+     "explication": "Du 1er mars au 26 avril, il s’écoule 56 jours : 56 ÷ 7 = **8 SA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’échographie de datation est prévue à 12 SA, soit 84 jours après le 1er mars. Quel jour de mai a-t-elle lieu ? Mars compte 31 jours et avril 30.",
+     "reponse": 24,
+     "unite": "mai",
+     "aide": "Du 1er mars au 1er mai, il y a 61 jours ; combien en reste-t-il jusqu’à 84 ?",
+     "explication": "Le 1er mars + 84 jours : 61 jours mènent au 1er mai, il reste 23 jours, donc le **24 mai**."
+    },
+    {
+     "type": "zone",
+     "document": "sero",
+     "enonce": "Touche le résultat qui montre que Léa n’a pas d’anticorps contre la toxoplasmose.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne « Toxoplasmose », puis la colonne des résultats.",
+     "explication": "Un résultat **négatif** aux IgG signifie que Léa n’a jamais rencontré le parasite : elle n’est pas protégée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conduite de prévention correspond à la situation de Léa pour la toxoplasmose ?",
+     "options": [
+      "Ne rien changer, car ce résultat prouve que Léa est protégée",
+      "Cuire la viande, laver les crudités et refaire la sérologie chaque mois",
+      "Faire une amniocentèse tout de suite pour chercher le parasite",
+      "Arrêter tous les contrôles, car le résultat est rassurant pour toujours"
+     ],
+     "reponse": 1,
+     "aide": "Un résultat négatif ne protège pas : que recommande le cours à une femme enceinte non immunisée ?",
+     "explication": "Non immunisée, Léa doit éviter toute contamination (**viande bien cuite, crudités lavées, pas de litière de chat**) et refaire une sérologie **chaque mois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les hormones d’un cycle",
+   "competence": "lire-graphique",
+   "situation": "Un cycle dure 28 jours. Le graphique donne, de trois jours en trois jours, les taux de deux hormones ovariennes (courbes schématiques).",
+   "documents": [
+    {
+     "id": "cyc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Taux hormonaux au cours d’un cycle",
+     "categories": [
+      "J2",
+      "J5",
+      "J8",
+      "J11",
+      "J14",
+      "J17",
+      "J20",
+      "J23",
+      "J26"
+     ],
+     "series": [
+      {
+       "nom": "Œstrogènes",
+       "valeurs": [
+        20,
+        30,
+        50,
+        80,
+        100,
+        60,
+        80,
+        75,
+        40
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Progestérone",
+       "valeurs": [
+        5,
+        5,
+        5,
+        5,
+        10,
+        40,
+        90,
+        100,
+        40
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Jour du cycle"
+     },
+     "valeurs": false,
+     "source": "Courbes schématiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cyc",
+     "enonce": "Touche le jour où le taux d’œstrogènes est le plus élevé.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le sommet de la courbe des œstrogènes.",
+     "explication": "Le pic d’**œstrogènes** a lieu vers **J14**. Il déclenche le pic de LH, puis l’ovulation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’unités le taux de progestérone augmente-t-il entre J14 et J20 ?",
+     "reponse": 80,
+     "unite": "unités",
+     "aide": "Lis la valeur à J14 et celle à J20, puis soustrais.",
+     "explication": "À J14 : 10 ; à J20 : 90. La progestérone augmente de 90 − 10 = **80 unités**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre J15 et J28, quelle structure de l’ovaire sécrète ces deux hormones ?",
+     "options": [
+      "Le follicule mûr, juste avant l’ovulation",
+      "L’ovocyte II, libéré dans la trompe",
+      "L’endomètre, épaissi dans l’utérus",
+      "Le corps jaune, issu du follicule rompu"
+     ],
+     "reponse": 3,
+     "aide": "Après l’ovulation, que devient le follicule qui s’est rompu ?",
+     "explication": "La phase lutéale est dominée par le **corps jaune**, qui sécrète progestérone et œstrogènes ; l’endomètre, lui, est une cible de ces hormones."
+    }
+   ]
+  },
+  {
+   "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un traitement à la testostérone",
+   "competence": "analyser-document",
+   "situation": "Dans une étude fictive, un homme adulte reçoit pendant trois mois de la testostérone en injections. Le schéma résume le contrôle de sa production naturelle ; le tableau donne ses dosages sanguins.",
+   "documents": [
+    {
+     "id": "boucle",
+     "type": "chaine",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "hypo",
+       "texte": "Hypothalamus"
+      },
+      {
+       "id": "hyph",
+       "texte": "Hypophyse"
+      },
+      {
+       "id": "testi",
+       "texte": "Testicules"
+      },
+      {
+       "id": "testo",
+       "texte": "Testostérone dans le sang"
+      }
+     ],
+     "liens": [
+      {
+       "de": "hypo",
+       "a": "hyph",
+       "texte": "GnRH"
+      },
+      {
+       "de": "hyph",
+       "a": "testi",
+       "texte": "LH et FSH"
+      },
+      {
+       "de": "testi",
+       "a": "testo",
+       "texte": "sécrètent"
+      },
+      {
+       "de": "testo",
+       "a": "hypo",
+       "texte": "freine"
+      }
+     ]
+    },
+    {
+     "id": "dosages",
+     "type": "tableau",
+     "titre": "Dosages sanguins",
+     "colonnes": [
+      "Dosage",
+      "Avant",
+      "Après 3 mois"
+     ],
+     "lignes": [
+      [
+       "Testostérone (nmol/L)",
+       "15",
+       "40"
+      ],
+      [
+       "LH (UI/L)",
+       "6",
+       "1,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boucle",
+     "enonce": "Touche l’organe qui fabrique la testostérone.",
+     "reponse": [
+      "testi"
+     ],
+     "aide": "Les gonades masculines sont les seules à la fabriquer.",
+     "explication": "La testostérone est sécrétée par les **testicules**, sous la commande de la LH."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel nombre la concentration de LH a-t-elle été divisée entre « Avant » et « Après 3 mois » ?",
+     "reponse": 4,
+     "aide": "Divise la valeur « Avant » par la valeur « Après ».",
+     "explication": "6 ÷ 1,5 = **4** : la LH est quatre fois plus faible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la LH baisse-t-elle alors que la testostérone injectée augmente dans le sang ?",
+     "options": [
+      "Plus de testostérone freine l’hypothalamus et l’hypophyse, donc elles sécrètent moins de LH",
+      "Plus de testostérone stimule l’hypophyse, qui sécrète donc davantage de LH",
+      "Plus de testostérone détruit l’hypophyse, qui ne sécrète donc plus aucune hormone",
+      "Plus de testostérone est détectée par les testicules, qui fabriquent alors de la LH"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la flèche « freine » sur le schéma.",
+     "explication": "C’est un **rétrocontrôle négatif** : la testostérone (naturelle ou injectée) freine l’hypothalamus et l’hypophyse, donc la LH diminue."
+    }
+   ]
+  },
+  {
+   "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un couple consulte",
+   "competence": "raisonner",
+   "situation": "Après 18 mois sans grossesse, un couple passe des examens. Le médecin doit choisir parmi plusieurs techniques d’aide médicale à la procréation.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan du couple",
+     "colonnes": [
+      "Examen",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Durée sans grossesse malgré des rapports réguliers",
+       "18 mois"
+      ],
+      [
+       "Ovulation de Mme (dosages hormonaux)",
+       "Normale"
+      ],
+      [
+       "Trompes de Mme (radiographie)",
+       "Les deux sont obstruées"
+      ],
+      [
+       "Spermogramme de M.",
+       "Normal"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginé pour l’exercice"
+    },
+    {
+     "id": "techs",
+     "type": "tableau",
+     "titre": "Les techniques d’AMP",
+     "colonnes": [
+      "Technique",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "Stimulation ovarienne",
+       "Médicaments qui déclenchent l’ovulation"
+      ],
+      [
+       "Insémination artificielle",
+       "Sperme déposé dans l’utérus"
+      ],
+      [
+       "FIV",
+       "Fécondation en laboratoire, puis transfert de l’embryon dans l’utérus"
+      ],
+      [
+       "ICSI",
+       "Un spermatozoïde injecté dans l’ovocyte"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "On parle d’infertilité après 12 mois sans grossesse. Combien de mois de plus que ce minimum le couple a-t-il attendus ?",
+     "reponse": 6,
+     "unite": "mois",
+     "aide": "Soustrais 12 à la durée relevée dans le bilan.",
+     "explication": "18 − 12 = **6 mois** de plus : l’infertilité est avérée."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le résultat qui explique l’infertilité du couple.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Les autres examens sont normaux : cherche le seul résultat anormal.",
+     "explication": "Ovulation et spermogramme sont normaux : la cause est l’**obstruction des deux trompes**, qui empêche la rencontre des gamètes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle technique est adaptée à ce couple ?",
+     "options": [
+      "La stimulation ovarienne, car l’ovulation est la difficulté de Mme",
+      "La fécondation in vitro, avec transfert de l’embryon dans l’utérus",
+      "L’ICSI, car le problème vient de la qualité des spermatozoïdes",
+      "L’insémination artificielle, car le sperme est déposé dans l’utérus"
+     ],
+     "reponse": 1,
+     "aide": "La fécondation doit avoir lieu hors des trompes.",
+     "explication": "Avec des trompes bouchées, la fécondation se fait **en laboratoire (FIV)**, puis l’embryon est transféré dans l’utérus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’insémination artificielle ne conviendrait-elle pas ici ?",
+     "options": [
+      "Le spermogramme de Monsieur est normal, donc toute technique est interdite au couple",
+      "L’ovulation est normale, donc le sperme ne peut plus être déposé",
+      "Les spermatozoïdes devraient franchir les trompes obstruées pour atteindre l’ovocyte",
+      "Les spermatozoïdes ne survivent jamais dans la cavité de l’utérus"
+     ],
+     "reponse": 2,
+     "aide": "Après le dépôt du sperme, où se passe la fécondation ?",
+     "explication": "Après l’insémination, la rencontre des gamètes se fait dans la **trompe** : si elle est obstruée, elle ne peut pas avoir lieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que les rayons X traversent",
+   "competence": "lire-graphique",
+   "situation": "Sur une radiographie du thorax, on distingue les côtes, les muscles et les poumons. Le graphique compare l’absorption des rayons X par trois milieux.",
+   "documents": [
+    {
+     "id": "abs",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Absorption des rayons X",
+     "categories": [
+      "Air des poumons",
+      "Muscle",
+      "Os"
+     ],
+     "series": [
+      {
+       "nom": "Absorption",
+       "valeurs": [
+        2,
+        30,
+        90
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorption",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Valeurs schématiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abs",
+     "enonce": "Touche le milieu qui absorbe le plus les rayons X.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "L’**os** absorbe le plus : il est dense et riche en calcium (Z = 20)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois l’os absorbe-t-il plus de rayons X que le muscle ?",
+     "reponse": 3,
+     "aide": "Divise l’absorption de l’os par celle du muscle.",
+     "explication": "90 ÷ 30 = **3** : l’os absorbe trois fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur le cliché, quelle zone apparaît en noir ?",
+     "options": [
+      "Les poumons, remplis d’air, qui laissent passer presque tous les rayons",
+      "Les côtes, qui laissent passer presque tous les rayons en raison de leur densité",
+      "Le cœur, dont la paroi laisse passer presque tous les rayons émis",
+      "Les muscles, qui absorbent davantage les rayons que les os voisins"
+     ],
+     "reponse": 0,
+     "aide": "Une zone noire est une zone où beaucoup de rayons arrivent sur le détecteur.",
+     "explication": "Les poumons absorbent très peu : presque tous les rayons X arrivent sur le détecteur et la zone est **noire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois échos dans les tissus",
+   "competence": "modeliser",
+   "situation": "Une sonde émet une brève impulsion d’ultrasons et enregistre trois échos, dans l’ordre où ils reviennent. Le schéma montre les trois interfaces rencontrées, de la plus proche à la plus éloignée.",
+   "documents": [
+    {
+     "id": "sonde",
+     "type": "schema",
+     "titre": "Sonde et interfaces (sans échelle)",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 8,
+       "l": 90,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Sonde",
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 40,
+       "l": 150,
+       "h": 195,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 80,
+       "l": 150,
+       "h": 8,
+       "arrondi": 0,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "ia",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 140,
+       "l": 150,
+       "h": 8,
+       "arrondi": 0,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "ib",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 200,
+       "l": 150,
+       "h": 8,
+       "arrondi": 0,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "ic",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 90,
+       "texte": "A",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 150,
+       "texte": "B",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 210,
+       "texte": "C",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        45
+       ],
+       "a": [
+        60,
+        228
+       ],
+       "teinte": "encre",
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 250,
+       "texte": "profondeur",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "echos",
+     "type": "tableau",
+     "titre": "Temps entre l’émission et le retour de l’écho",
+     "colonnes": [
+      "Écho",
+      "Durée (µs)"
+     ],
+     "lignes": [
+      [
+       "Écho n° 1",
+       "39"
+      ],
+      [
+       "Écho n° 2",
+       "130"
+      ],
+      [
+       "Écho n° 3",
+       "195"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Vitesse des ultrasons dans les tissus mous : 1 540 m/s"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sonde",
+     "enonce": "Touche l’interface qui a renvoyé l’écho n° 2.",
+     "reponse": [
+      "ib"
+     ],
+     "aide": "Plus une interface est profonde, plus son écho revient tard.",
+     "explication": "Les échos reviennent dans l’ordre de la profondeur : l’écho n° 2 vient de la **deuxième interface, B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle profondeur se trouve l’interface B ? Utilise d = v × Δt ÷ 2.",
+     "reponse": 10,
+     "unite": "cm",
+     "tolerance": 0.2,
+     "aide": "Convertis 130 µs en secondes (× 10⁻⁶), multiplie par 1 540 m/s, puis divise par 2 (aller et retour).",
+     "explication": "d = 1 540 × 130 × 10⁻⁶ ÷ 2 ≈ 0,100 m, soit **10 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’épaisseur de la couche située entre l’interface B et l’interface C ?",
+     "reponse": 5,
+     "unite": "cm",
+     "tolerance": 0.2,
+     "aide": "Calcule la profondeur de C avec son écho, puis soustrais celle de B.",
+     "explication": "C est à 1 540 × 195 × 10⁻⁶ ÷ 2 ≈ 15 cm ; 15 − 10 = **5 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une interface deux fois plus profonde que B renverrait son écho avec une durée :",
+     "options": [
+      "Deux fois plus courte, car l’onde s’affaiblit en route",
+      "Quatre fois plus longue, car la distance est élevée au carré",
+      "Deux fois plus longue, car l’aller-retour est deux fois plus long",
+      "Identique, car la vitesse des ultrasons est constante"
+     ],
+     "reponse": 2,
+     "aide": "Relis la formule d = v × Δt ÷ 2 : d et Δt sont-ils proportionnels ?",
+     "explication": "Comme d = v × Δt ÷ 2 avec v constante, **Δt est proportionnel à d** : deux fois plus profond, deux fois plus long."
+    }
+   ]
+  },
+  {
+   "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une TEP au fluor 18",
+   "competence": "modeliser",
+   "situation": "Pour une tomographie par émission de positons (TEP), un patient reçoit du fluor 18, émetteur β⁺ dont la période est de 110 minutes. Voici le protocole et la décroissance de l’activité d’un échantillon.",
+   "documents": [
+    {
+     "id": "proto",
+     "type": "tableau",
+     "titre": "Protocole d’examen",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse du patient",
+       "80 kg"
+      ],
+      [
+       "Activité prescrite",
+       "4 MBq par kg"
+      ],
+      [
+       "Injection du fluor 18",
+       "8 h 00"
+      ],
+      [
+       "Début de l’examen",
+       "9 h 50"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Protocole imaginé pour l’exercice"
+    },
+    {
+     "id": "decr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Décroissance d’un échantillon de fluor 18",
+     "categories": [
+      "0",
+      "110",
+      "220",
+      "330",
+      "440"
+     ],
+     "series": [
+      {
+       "nom": "Activité",
+       "valeurs": [
+        320,
+        160,
+        80,
+        40,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Activité",
+      "unite": "MBq",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps écoulé (min)"
+     },
+     "valeurs": false,
+     "source": "Échantillon de 320 MBq à l’instant 0"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle activité faut-il injecter à ce patient ?",
+     "reponse": 320,
+     "unite": "MBq",
+     "aide": "Multiplie l’activité par kilogramme par la masse du patient.",
+     "explication": "4 × 80 = **320 MBq**."
+    },
+    {
+     "type": "zone",
+     "document": "decr",
+     "enonce": "Touche l’instant où l’activité est divisée par deux pour la première fois.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la valeur égale à la moitié de 320 MBq.",
+     "explication": "L’activité passe de 320 à 160 MBq après **110 min** : c’est la période du fluor 18."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle activité reste-t-il dans le corps du patient au début de l’examen, à 9 h 50 ? On néglige l’élimination par l’organisme.",
+     "reponse": 160,
+     "unite": "MBq",
+     "tolerance": 5,
+     "aide": "Calcule le temps écoulé entre 8 h 00 et 9 h 50, puis compare-le à la période.",
+     "explication": "De 8 h 00 à 9 h 50, il s’écoule **110 min**, soit une période : l’activité est divisée par deux, il reste **160 MBq**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi choisit-on un noyau de période courte comme le fluor 18 pour un examen ?",
+     "options": [
+      "Son activité diminue vite, ce qui limite la durée de l’irradiation du patient",
+      "Son activité reste constante, ce qui garantit une image très stable",
+      "Son rayonnement ne traverse jamais les tissus et reste au même endroit",
+      "Sa période est de plusieurs mois, donc on peut refaire l’examen le lendemain"
+     ],
+     "reponse": 0,
+     "aide": "Une période courte veut dire que la source s’éteint rapidement.",
+     "explication": "Avec une période de 110 min, l’activité baisse vite : l’examen reste possible mais l’**irradiation est limitée dans le temps**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bilan sanguin de Malik",
+   "competence": "lire-tableau",
+   "situation": "Malik, 17 ans, reçoit les résultats d’une prise de sang faite à jeun. Ils sont comparés aux valeurs de référence d’un adulte. Un médecin les interprète toujours avec le contexte clinique.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Résultats d’analyse (imaginés)",
+     "colonnes": [
+      "Paramètre",
+      "Résultat",
+      "Valeurs de référence"
+     ],
+     "lignes": [
+      [
+       "Glycémie à jeun",
+       "0,86 g/L",
+       "0,70 à 1,10 g/L"
+      ],
+      [
+       "Natrémie",
+       "141 mmol/L",
+       "135 à 145 mmol/L"
+      ],
+      [
+       "Kaliémie",
+       "5,4 mmol/L",
+       "3,5 à 5,0 mmol/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le résultat situé en dehors des valeurs de référence.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare chaque résultat à l’intervalle de sa ligne.",
+     "explication": "La **kaliémie** (5,4 mmol/L) dépasse la limite haute de 5,0 mmol/L ; les deux autres résultats sont dans leur intervalle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la kaliémie dépasse-t-elle la limite haute des valeurs de référence ?",
+     "reponse": 0.4,
+     "unite": "mmol/L",
+     "tolerance": 0.01,
+     "aide": "Soustrais la limite haute (5,0) au résultat.",
+     "explication": "5,4 − 5,0 = **0,4 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La glycémie de Malik est de 0,86 g/L. Quelle est-elle en mmol/L, arrondie au dixième ? Masse molaire du glucose : 180 g/mol.",
+     "reponse": 4.8,
+     "unite": "mmol/L",
+     "tolerance": 0.05,
+     "aide": "C = Cm ÷ M, en mol/L ; multiplie ensuite par 1 000 pour passer en mmol/L.",
+     "explication": "C = 0,86 ÷ 180 ≈ 0,0048 mol/L, soit **4,8 mmol/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie un résultat hors des valeurs de référence ?",
+     "options": [
+      "Il prouve à lui seul l’existence d’une maladie précise chez le patient",
+      "Il n’a aucune importance, car les valeurs de référence sont approximatives",
+      "Il oriente le diagnostic, à confirmer par d’autres examens et le contexte clinique",
+      "Il impose de refaire toutes les analyses de sang dans la journée même"
+     ],
+     "reponse": 2,
+     "aide": "Relis la dernière phrase du cours sur les normes.",
+     "explication": "Un résultat anormal est un **signe d’orientation** : il se confirme par d’autres examens et se lit avec le contexte clinique."
+    }
+   ]
+  },
+  {
+   "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Doser le glucose par étalonnage",
+   "competence": "modeliser",
+   "situation": "Un laboratoire dose le glucose d’un échantillon de sang. Après une réaction enzymatique, il se forme une espèce colorée dont on mesure l’absorbance. Une gamme étalon a été préparée.",
+   "documents": [
+    {
+     "id": "etalon",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Droite d’étalonnage A = f(C)",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance A",
+       "valeurs": [
+        0,
+        0.2,
+        0.4,
+        0.6,
+        0.8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "unite": "sans unité",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Concentration en glucose (mmol/L)"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "ech",
+     "type": "tableau",
+     "titre": "Échantillon à doser",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Absorbance de l’échantillon",
+       "0,52"
+      ],
+      [
+       "Masse molaire du glucose",
+       "180 g/mol"
+      ],
+      [
+       "Valeurs de référence (à jeun)",
+       "0,70 à 1,10 g/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Échantillon imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etalon",
+     "enonce": "Touche la solution étalon dont l’absorbance est 0,40.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Repère 0,40 sur l’axe vertical, puis cherche le point de la droite.",
+     "explication": "L’absorbance 0,40 correspond à la solution étalon de **4 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La droite passe par l’origine : A est proportionnelle à C. Quelle concentration correspond à l’absorbance 0,52 ?",
+     "reponse": 5.2,
+     "unite": "mmol/L",
+     "tolerance": 0.1,
+     "aide": "Lis le coefficient : A vaut 0,10 fois C (en mmol/L).",
+     "explication": "A = 0,10 × C donc C = 0,52 ÷ 0,10 = **5,2 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette concentration en g/L, arrondie au centième.",
+     "reponse": 0.94,
+     "unite": "g/L",
+     "tolerance": 0.01,
+     "aide": "Cm = C × M : attention, C est en mmol/L, il faut passer en mol/L.",
+     "explication": "Cm = 5,2 × 10⁻³ × 180 ≈ **0,94 g/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment se situe ce résultat par rapport aux valeurs de référence ?",
+     "options": [
+      "Il est compris entre 0,70 et 1,10 g/L : il est dans les valeurs de référence",
+      "Il est inférieur à 0,70 g/L : il est au-dessous des valeurs de référence",
+      "Il est supérieur à 1,10 g/L : il est au-dessus des valeurs de référence",
+      "Il ne peut pas être comparé, car les unités des deux données sont différentes"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,94 à l’intervalle 0,70 à 1,10.",
+     "explication": "0,70 < 0,94 < 1,10 : le résultat est **dans les valeurs de référence**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’océan qui s’acidifie",
+   "competence": "analyser-document",
+   "situation": "L’océan absorbe une partie du CO₂ émis par les activités humaines. Deux documents illustrent les conséquences sur l’eau et sur les êtres vivants.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "tableau",
+     "titre": "pH de l’eau de surface des océans",
+     "colonnes": [
+      "Époque",
+      "pH moyen"
+     ],
+     "lignes": [
+      [
+       "Avant l’ère industrielle",
+       "8,2"
+      ],
+      [
+       "Aujourd’hui",
+       "8,1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "hg",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Mercure dans une chaîne alimentaire marine",
+     "categories": [
+      "Plancton",
+      "Petit poisson",
+      "Gros poisson"
+     ],
+     "series": [
+      {
+       "nom": "Mercure",
+       "valeurs": [
+        4,
+        20,
+        120
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Teneur en mercure",
+      "unite": "µg/kg",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Valeurs inventées pour l’exercice (ordre de grandeur)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le pH passe de 8,2 à 8,1. Sachant que [H⁺] = 10^(−pH), de quel pourcentage environ la concentration en ions H⁺ augmente-t-elle ? Donne un ordre de grandeur.",
+     "reponse": 27.5,
+     "unite": "%",
+     "tolerance": 2.5,
+     "aide": "Calcule 10^(−8,1) ÷ 10^(−8,2) = 10^0,1, puis exprime l’écart en pourcentage.",
+     "explication": "10^0,1 ≈ 1,26 : la concentration en H⁺ augmente d’environ **26 %** (entre 25 et 30 %), alors que le pH ne baisse que de 0,1."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de l’acidification des océans et de ses effets sur les coraux.",
+     "items": [
+      "Davantage de CO₂ se dissout dans l’eau de mer",
+      "Des ions H⁺ se forment et le pH baisse",
+      "Les ions carbonate captent ces H⁺ et deviennent rares",
+      "Les organismes à squelette calcaire peinent à le construire"
+     ],
+     "aide": "Pars de la cause (le CO₂) et termine par la conséquence sur les êtres vivants.",
+     "explication": "Dans l’ordre : **plus de CO₂ dissous, formation d’ions H⁺ et baisse du pH, raréfaction des ions carbonate, squelettes calcaires fragilisés**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la teneur en mercure du gros poisson dépasse-t-elle celle du plancton ?",
+     "reponse": 30,
+     "aide": "Divise la valeur de la dernière barre par celle de la première.",
+     "explication": "120 ÷ 4 = **30** : le mercure se concentre le long de la chaîne alimentaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel phénomène le graphique du mercure illustre-t-il ?",
+     "options": [
+      "L’élimination rapide d’une substance par l’organisme, qui en perd à chaque repas",
+      "La bioaccumulation d’une substance persistante, qui se concentre le long de la chaîne alimentaire",
+      "L’acidification des océans, qui détruit peu à peu les organismes du plancton",
+      "La dilution d’un polluant dans l’eau de mer, qui le rend plus faible en haut de chaîne"
+     ],
+     "reponse": 1,
+     "aide": "La teneur augmente à chaque étape de la chaîne : que dit le mot « accumulation » ?",
+     "explication": "La teneur croît à chaque maillon : c’est la **bioaccumulation** d’une substance persistante (mercure)."
+    }
+   ]
+  },
+  {
+   "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un acide aminé dessiné",
+   "competence": "observer-schema",
+   "situation": "Voici la formule développée simplifiée d’un acide α-aminé. Il porte, sur un même atome de carbone, plusieurs groupes caractéristiques.",
+   "documents": [
+    {
+     "id": "aa",
+     "type": "schema",
+     "titre": "Un acide α-aminé",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 14,
+       "y": 96,
+       "l": 70,
+       "h": 32,
+       "texte": "H₂N",
+       "id": "am",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        84,
+        112
+       ],
+       "a": [
+        148,
+        112
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 112,
+       "r": 22,
+       "texte": "C",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "calpha",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        192,
+        112
+       ],
+       "a": [
+        254,
+        112
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 254,
+       "y": 96,
+       "l": 72,
+       "h": 32,
+       "texte": "COOH",
+       "id": "co",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 52,
+       "texte": "H",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        62
+       ],
+       "a": [
+        170,
+        90
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        134
+       ],
+       "a": [
+        170,
+        162
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 136,
+       "y": 162,
+       "l": 68,
+       "h": 32,
+       "texte": "CH₃",
+       "id": "r",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aa",
+     "enonce": "Touche le groupe amine.",
+     "reponse": [
+      "am"
+     ],
+     "aide": "Le groupe amine contient de l’azote : cherche la lettre N.",
+     "explication": "Le groupe **amine** est –NH₂ (écrit H₂N– à gauche de l’atome de carbone)."
+    },
+    {
+     "type": "zone",
+     "document": "aa",
+     "enonce": "Touche le groupe carboxyle.",
+     "reponse": [
+      "co"
+     ],
+     "aide": "Le groupe carboxyle se termine par –OH et contient un atome de carbone lié à deux atomes d’oxygène.",
+     "explication": "Le groupe **carboxyle** est –COOH : c’est lui qui donne son caractère acide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes de carbone compte cet acide aminé en tout ?",
+     "reponse": 3,
+     "aide": "Compte le carbone α, celui du groupe carboxyle et celui de la chaîne latérale.",
+     "explication": "Un carbone central (Cα), un dans **COOH** et un dans **CH₃** : **3** atomes de carbone."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel acide aminé s’agit-il, sachant que sa chaîne latérale R est CH₃ ?",
+     "options": [
+      "L’alanine, dont la chaîne latérale est un groupe méthyle",
+      "La glycine, dont la chaîne latérale est un seul atome d’hydrogène",
+      "La sérine, dont la chaîne latérale est un groupe hydroxyméthyle",
+      "La cystéine, dont la chaîne latérale contient un atome de soufre"
+     ],
+     "reponse": 0,
+     "aide": "Le cours donne la chaîne latérale de deux acides aminés simples : R = H et R = CH₃.",
+     "explication": "Quand **R = CH₃**, l’acide aminé est l’**alanine** ; pour la glycine, R = H."
+    }
+   ]
+  },
+  {
+   "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Fabriquer un dipeptide",
+   "competence": "modeliser",
+   "situation": "Deux acides aminés se lient par condensation : le groupe carboxyle de l’un réagit avec le groupe amine de l’autre, avec élimination d’une molécule d’eau.",
+   "documents": [
+    {
+     "id": "aas",
+     "type": "tableau",
+     "titre": "Trois acides aminés",
+     "colonnes": [
+      "Acide aminé",
+      "Formule brute",
+      "Masse molaire (g/mol)"
+     ],
+     "lignes": [
+      [
+       "Glycine (Gly)",
+       "C₂H₅NO₂",
+       "75"
+      ],
+      [
+       "Alanine (Ala)",
+       "C₃H₇NO₂",
+       "89"
+      ],
+      [
+       "Sérine (Ser)",
+       "C₃H₇NO₃",
+       "105"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Masse molaire de l’eau : 18 g/mol"
+    },
+    {
+     "id": "dip",
+     "type": "schema",
+     "titre": "Le dipeptide Gly-Ala",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 20,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "H₂N",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 70,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "CH₂",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 120,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "CO",
+       "id": "co",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 170,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "NH",
+       "id": "nh",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 220,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "CH",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 270,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "COOH",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        95
+       ],
+       "a": [
+        70,
+        95
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        95
+       ],
+       "a": [
+        120,
+        95
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        95
+       ],
+       "a": [
+        170,
+        95
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        95
+       ],
+       "a": [
+        220,
+        95
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        95
+       ],
+       "a": [
+        270,
+        95
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        110
+       ],
+       "a": [
+        240,
+        138
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 220,
+       "y": 80,
+       "l": 40,
+       "h": 30,
+       "texte": "CH₃",
+       "id": "me",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 190,
+       "texte": "Gly (à gauche) – Ala (à droite)",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dip",
+     "enonce": "Touche les deux groupes qui forment la liaison peptidique.",
+     "reponse": [
+      "co",
+      "nh"
+     ],
+     "multiple": true,
+     "aide": "La liaison peptidique s’écrit –CO–NH– : cherche ces deux petits groupes côte à côte.",
+     "explication": "La liaison peptidique est le groupe **–CO–NH–** : le carboxyle de la glycine s’est lié à l’amine de l’alanine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la masse molaire du dipeptide Gly-Ala ? Additionne les deux acides aminés, puis retire l’eau éliminée.",
+     "reponse": 146,
+     "unite": "g/mol",
+     "aide": "M(Gly-Ala) = M(Gly) + M(Ala) − M(eau).",
+     "explication": "75 + 89 − 18 = **146 g/mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un tripeptide Gly-Ala-Ser se forme à partir des trois acides aminés du tableau. Quelle est sa masse molaire ? Deux molécules d’eau sont éliminées.",
+     "reponse": 233,
+     "unite": "g/mol",
+     "aide": "Additionne les trois masses molaires, puis retire deux fois la masse d’eau.",
+     "explication": "75 + 89 + 105 − 2 × 18 = **233 g/mol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Gly-Ala et Ala-Gly sont-ils le même dipeptide ?",
+     "options": [
+      "Oui : ils contiennent les mêmes acides aminés, donc la même molécule",
+      "Oui : la liaison peptidique est identique, donc l’ordre est sans effet",
+      "Non : l’ordre des acides aminés change la molécule obtenue",
+      "Non : ils ne contiennent pas les mêmes acides aminés au départ"
+     ],
+     "reponse": 2,
+     "aide": "Dans Gly-Ala, c’est la glycine qui garde son groupe amine libre. Et dans Ala-Gly ?",
+     "explication": "Les deux ont les mêmes constituants, mais l’extrémité amine libre n’est pas la même : **l’ordre compte**, ce sont deux dipeptides différents."
+    }
+   ]
+  },
+  {
+   "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fabriquer un savon",
+   "competence": "modeliser",
+   "situation": "Au laboratoire, on chauffe un triglycéride avec de la soude en excès : c’est une saponification, réaction totale. On pèse ensuite le savon obtenu.",
+   "documents": [
+    {
+     "id": "reac",
+     "type": "schema",
+     "titre": "La saponification",
+     "largeur": 340,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 14,
+       "y": 26,
+       "l": 118,
+       "h": 34,
+       "texte": "Triglycéride",
+       "id": "tri",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 14,
+       "y": 96,
+       "l": 118,
+       "h": 34,
+       "texte": "Soude (en excès)",
+       "id": "soude",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        142,
+        78
+       ],
+       "a": [
+        182,
+        78
+       ],
+       "teinte": "encre",
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 162,
+       "y": 66,
+       "texte": "chauffage",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 194,
+       "y": 26,
+       "l": 132,
+       "h": 34,
+       "texte": "Glycérol",
+       "id": "gly",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 194,
+       "y": 96,
+       "l": 132,
+       "h": 34,
+       "texte": "Savon",
+       "id": "savon",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "prot",
+     "type": "tableau",
+     "titre": "Protocole et données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse de triglycéride introduite",
+       "89,1 g"
+      ],
+      [
+       "Masse molaire du triglycéride",
+       "891 g/mol"
+      ],
+      [
+       "Masse molaire du savon",
+       "306 g/mol"
+      ],
+      [
+       "Masse de savon obtenue",
+       "73,4 g"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, protocole imaginé"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reac",
+     "enonce": "Touche le produit dont on obtient 3 mol pour 1 mol de triglycéride.",
+     "reponse": [
+      "savon"
+     ],
+     "aide": "Un triglycéride porte trois chaînes d’acide gras : combien de fois le savon apparaît-il ?",
+     "explication": "Chaque triglycéride libère **trois** groupes carboxylate (le savon) et **une seule** molécule de glycérol."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de triglycéride a-t-on introduite ?",
+     "reponse": 0.1,
+     "unite": "mol",
+     "tolerance": 0.002,
+     "aide": "n = m ÷ M.",
+     "explication": "n = 89,1 ÷ 891 = **0,100 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité maximale de savon peut-on attendre ?",
+     "reponse": 0.3,
+     "unite": "mol",
+     "tolerance": 0.005,
+     "aide": "Une mole de triglycéride donne trois moles de savon.",
+     "explication": "3 × 0,100 = **0,300 mol** de savon au maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement : masse de savon obtenue ÷ masse maximale attendue.",
+     "reponse": 80,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "Masse maximale = 0,300 mol × 306 g/mol ; divise ensuite 73,4 g par cette masse.",
+     "explication": "Masse maximale : 0,300 × 306 = 91,8 g ; rendement : 73,4 ÷ 91,8 ≈ **80 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La saponification étant une réaction totale, comment expliquer un rendement de 80 % ?",
+     "options": [
+      "La réaction est limitée : elle s’arrête avant la disparition des réactifs",
+      "Une partie du savon est perdue lors des séparations et des lavages",
+      "La soude en excès empêche une partie du triglycéride de réagir",
+      "Trois moles de savon ne se forment jamais à partir d’une seule mole"
+     ],
+     "reponse": 1,
+     "aide": "Une réaction totale consomme tout le réactif limitant ; où le savon a-t-il pu être perdu ensuite ?",
+     "explication": "La réaction est **totale** : le rendement inférieur à 100 % vient de **pertes** (filtration, lavage, transfert), pas d’un équilibre."
+    }
+   ]
+  },
+  {
+   "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que cache un « E » ?",
+   "competence": "analyser-document",
+   "situation": "Sur l’étiquette d’une crème dessert imaginée, plusieurs additifs portent un code européen commençant par « E ».",
+   "documents": [
+    {
+     "id": "etiq",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Crème dessert vanille",
+     "sousTitre": "Ingrédients (recette imaginée)",
+     "emoji": "🍮",
+     "lignes": [
+      {
+       "texte": "Lait écrémé, sucre, amidon"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "E100 curcumine",
+       "id": "e100"
+      },
+      {
+       "texte": "E202 sorbate de potassium",
+       "id": "e202"
+      },
+      {
+       "texte": "E300 acide ascorbique",
+       "id": "e300"
+      },
+      {
+       "texte": "E415 gomme xanthane",
+       "id": "e415"
+      }
+     ],
+     "pied": "À consommer de préférence avant la date indiquée.",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiq",
+     "enonce": "Touche l’additif dont le rôle est de limiter le développement des micro-organismes.",
+     "reponse": [
+      "e202"
+     ],
+     "aide": "Les conservateurs portent un numéro entre E200 et E299.",
+     "explication": "Le **E202** (sorbate de potassium) est un **conservateur** : les numéros E200 à E299 limitent le développement des micro-organismes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’additifs portant un code « E » figurent sur cette étiquette ?",
+     "reponse": 4,
+     "aide": "Compte les lignes qui commencent par la lettre E suivie de chiffres.",
+     "explication": "Les lignes E100, E202, E300 et E415 sont des additifs : **4**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque famille d’additifs à sa plage de numéros.",
+     "paires": [
+      [
+       "Colorants",
+       "E100 à E199"
+      ],
+      [
+       "Conservateurs",
+       "E200 à E299"
+      ],
+      [
+       "Antioxydants",
+       "E300 à E399"
+      ],
+      [
+       "Texturants",
+       "E400 à E499"
+      ]
+     ],
+     "aide": "Les numéros croissent : colorants d’abord, texturants en dernier.",
+     "explication": "Colorants **E100–E199**, conservateurs **E200–E299**, antioxydants **E300–E399**, texturants **E400–E499**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de vitamine C dans ce comprimé ?",
+   "competence": "experimenter",
+   "situation": "Un comprimé de vitamine C « 500 mg » est dissous dans une fiole de 100,0 mL. On en prélève 10,0 mL, qu’on titre avec une solution de diiode : le diiode réagit mole à mole avec l’acide ascorbique.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le titrage",
+     "largeur": 340,
+     "hauteur": 270,
+     "elements": [
+      {
+       "forme": "rect",
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 150,
+       "y": 14,
+       "l": 40,
+       "h": 104,
+       "id": "bur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 206,
+       "y": 60,
+       "texte": "Solution de diiode",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 206,
+       "y": 76,
+       "texte": "0,050 mol/L",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        118
+       ],
+       "a": [
+        170,
+        150
+       ],
+       "teinte": "encre",
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "arrondi": 12,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 100,
+       "y": 150,
+       "l": 140,
+       "h": 84,
+       "id": "bec",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 252,
+       "texte": "Solution de vitamine C (10,0 mL)",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 266,
+       "texte": "+ empois d’amidon",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "data",
+     "type": "tableau",
+     "titre": "Mesures et données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Volume de diiode versé à l’équivalence",
+       "5,6 mL"
+      ],
+      [
+       "Masse molaire de la vitamine C",
+       "176 g/mol"
+      ],
+      [
+       "Masse annoncée sur l’étiquette",
+       "500 mg"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche le récipient qui contient la solution à doser.",
+     "reponse": [
+      "bec"
+     ],
+     "aide": "La burette contient la solution dont la concentration est connue.",
+     "explication": "Le **bécher** contient la solution de vitamine C à doser ; la burette contient le diiode, de concentration connue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de diiode a-t-on versé à l’équivalence ? Réponds en mmol (mmol = mol/1 000 ; mol/L × mL = mmol).",
+     "reponse": 0.28,
+     "unite": "mmol",
+     "tolerance": 0.005,
+     "aide": "n = C × V : avec C en mol/L et V en mL, le résultat est en mmol.",
+     "explication": "n(I₂) = 0,050 × 5,6 = **0,28 mmol**. À l’équivalence, il y a autant de vitamine C dans le bécher."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de vitamine C contient le comprimé entier ? Arrondis au mg. Attention : on n’a titré que le dixième de la solution.",
+     "reponse": 493,
+     "unite": "mg",
+     "tolerance": 2,
+     "aide": "Multiplie 0,28 mmol par 10 (fiole entière), puis par 176 g/mol (= 176 mg/mmol).",
+     "explication": "0,28 × 10 = 2,8 mmol ; 2,8 × 176 ≈ **493 mg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce résultat est-il compatible avec les 500 mg annoncés, à 5 % près (soit ± 25 mg) ?",
+     "options": [
+      "Oui : 493 mg est compris entre 475 mg et 525 mg",
+      "Non : 493 mg est inférieur à 475 mg, l’écart est trop grand",
+      "Non : 493 mg est supérieur à 525 mg, l’écart est trop grand",
+      "On ne peut pas conclure, car le titrage ne donne pas de masse"
+     ],
+     "reponse": 0,
+     "aide": "Calcule l’intervalle 500 − 25 et 500 + 25, puis compare.",
+     "explication": "Écart : 500 − 493 = 7 mg, soit environ 1,4 %. Le résultat est **compatible** avec l’étiquette."
+    }
+   ]
+  },
+  {
+   "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux déshydratations, deux bilans",
+   "competence": "analyser-document",
+   "situation": "Mme Roux, 84 ans, n’a presque pas bu pendant une canicule. M. Petit, 35 ans, a eu une forte diarrhée. Le laboratoire compare leur ionogramme aux valeurs de référence. Ces cas sont imaginés.",
+   "documents": [
+    {
+     "id": "iono",
+     "type": "tableau",
+     "titre": "Ionogramme sanguin",
+     "colonnes": [
+      "Paramètre",
+      "Valeurs de référence",
+      "Mme Roux",
+      "M. Petit"
+     ],
+     "lignes": [
+      [
+       "Natrémie (mmol/L)",
+       "135 à 145",
+       "152",
+       "138"
+      ],
+      [
+       "Protides (g/L)",
+       "60 à 80",
+       "82",
+       "84"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "iono",
+     "enonce": "Touche le seul résultat de M. Petit situé en dehors des valeurs de référence.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Compare les deux résultats de la colonne « M. Petit » aux intervalles.",
+     "explication": "La natrémie de M. Petit (138) est normale ; ses **protides (84 g/L)** dépassent 80 g/L : son sang est concentré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la natrémie de Mme Roux dépasse-t-elle la limite haute de référence ?",
+     "reponse": 7,
+     "unite": "mmol/L",
+     "aide": "Soustrais la limite haute (145) à son résultat.",
+     "explication": "152 − 145 = **7 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en masse des ions sodium (M = 23 g/mol) du sang de Mme Roux, en g/L ? Arrondis au dixième.",
+     "reponse": 3.5,
+     "unite": "g/L",
+     "tolerance": 0.05,
+     "aide": "Cm = C × M, avec C en mol/L (152 mmol/L = 0,152 mol/L).",
+     "explication": "Cm = 0,152 × 23 ≈ **3,5 g/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la natrémie de M. Petit reste-t-elle normale malgré sa déshydratation ?",
+     "options": [
+      "Il a perdu de l’eau et du sel ensemble, donc le sodium ne se concentre pas",
+      "Il a perdu seulement de l’eau pure, donc le sodium ne change pas",
+      "Il a gagné du sodium, ce qui compense exactement la perte d’eau",
+      "Il n’est pas déshydraté, car ses protides sont dans les valeurs normales"
+     ],
+     "reponse": 0,
+     "aide": "Quelle perte provoque une hausse de la natrémie : eau pure, ou eau et sel ?",
+     "explication": "Une perte d’**eau et de sel** (diarrhée) concentre le sang (protides plus hauts) sans élever la natrémie ; une perte d’**eau pure** (soif non satisfaite) la fait monter, comme chez Mme Roux."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tube de l’éthylotest",
+   "competence": "observer-schema",
+   "situation": "Un conducteur souffle dans un éthylotest chimique. Les ions dichromate du tube, de couleur orange, réagissent avec l’éthanol de l’air expiré et deviennent des ions chrome III, de couleur verte.",
+   "documents": [
+    {
+     "id": "tube",
+     "type": "schema",
+     "titre": "Tube de l’éthylotest après le souffle",
+     "largeur": 340,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        12,
+        92
+       ],
+       "a": [
+        42,
+        92
+       ],
+       "teinte": "encre",
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 72,
+       "texte": "Air expiré",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 48,
+       "y": 70,
+       "l": 110,
+       "h": 44,
+       "arrondi": 4,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "reagi",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 158,
+       "y": 70,
+       "l": 150,
+       "h": 44,
+       "arrondi": 4,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "intact",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 103,
+       "y": 136,
+       "texte": "Entrée du tube",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 233,
+       "y": 136,
+       "texte": "Fond du tube",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "seuils",
+     "type": "tableau",
+     "titre": "Seuils légaux d’alcool (extrait du cours)",
+     "colonnes": [
+      "Conducteur",
+      "Dans le sang",
+      "Dans l’air expiré"
+     ],
+     "lignes": [
+      [
+       "Conducteur expérimenté",
+       "0,5 g/L",
+       "0,25 mg/L"
+      ],
+      [
+       "Jeune conducteur, transport en commun",
+       "0,2 g/L",
+       "0,10 mg/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche la partie du tube où l’éthanol de l’air expiré a déjà réagi.",
+     "reponse": [
+      "reagi"
+     ],
+     "aide": "Les ions dichromate sont orange et les ions chrome III verts : où la couleur a-t-elle changé ?",
+     "explication": "Les ions dichromate **Cr₂O₇²⁻** (orange) oxydent l’éthanol et deviennent des ions chrome III **Cr³⁺** (verts) : la zone qui a changé de couleur est celle qui a réagi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le seuil sanguin du conducteur expérimenté est-il plus grand que celui du jeune conducteur ?",
+     "reponse": 2.5,
+     "tolerance": 0.01,
+     "aide": "Divise 0,5 g/L par 0,2 g/L.",
+     "explication": "0,5 ÷ 0,2 = **2,5**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une jeune conductrice souffle et l’appareil affiche 0,15 mg/L d’alcool dans l’air expiré. Que dit la comparaison au seuil de sa catégorie ?",
+     "options": [
+      "Elle est sous le seuil de 0,25 mg/L de sa catégorie",
+      "Elle dépasse le seuil de 0,10 mg/L de sa catégorie",
+      "Elle est égale au seuil de 0,10 mg/L de sa catégorie",
+      "Elle est sous le seuil de 0,50 mg/L de sa catégorie"
+     ],
+     "reponse": 1,
+     "aide": "Repère la ligne du jeune conducteur et la colonne « Dans l’air expiré ».",
+     "explication": "Pour un jeune conducteur, le seuil dans l’air expiré est de 0,10 mg/L : 0,15 > 0,10, le seuil est **dépassé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Gonfler un coussin de sécurité",
+   "competence": "modeliser",
+   "situation": "Un coussin gonflable de passager doit contenir 108 L de diazote. Un fabricant a mesuré le volume de gaz libéré par la décomposition de différentes masses d’azoture de sodium NaN₃.",
+   "documents": [
+    {
+     "id": "vol",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Volume de diazote libéré",
+     "categories": [
+      "0",
+      "65",
+      "130",
+      "195",
+      "260"
+     ],
+     "series": [
+      {
+       "nom": "Volume de N₂",
+       "valeurs": [
+        0,
+        36,
+        72,
+        108,
+        144
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume de diazote",
+      "unite": "L",
+      "min": 0,
+      "max": 150,
+      "pas": 30
+     },
+     "axeX": {
+      "titre": "Masse d’azoture de sodium (g)"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Équation de la réaction",
+       "2 NaN₃ → 2 Na + 3 N₂"
+      ],
+      [
+       "Masse molaire de NaN₃",
+       "65 g/mol"
+      ],
+      [
+       "Volume molaire des gaz (20 °C)",
+       "24 L/mol"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vol",
+     "enonce": "Touche la masse d’azoture de sodium qui libère 108 L de diazote.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Repère 108 L sur l’axe vertical, puis lis la masse sous le point correspondant.",
+     "explication": "Le volume de 108 L est atteint pour **195 g** d’azoture de sodium."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifions par le calcul. Quelle quantité de diazote représente 108 L ?",
+     "reponse": 4.5,
+     "unite": "mol",
+     "tolerance": 0.05,
+     "aide": "n = V ÷ Vm, avec Vm = 24 L/mol.",
+     "explication": "n(N₂) = 108 ÷ 24 = **4,5 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après l’équation, quelle quantité d’azoture de sodium faut-il décomposer pour obtenir 4,5 mol de diazote ?",
+     "reponse": 3,
+     "unite": "mol",
+     "tolerance": 0.05,
+     "aide": "Dans l’équation, 2 mol de NaN₃ donnent 3 mol de N₂.",
+     "explication": "n(NaN₃) = 4,5 × 2 ÷ 3 = **3,0 mol**, soit 3,0 × 65 = 195 g : la lecture du graphique est confirmée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si l’on double la masse d’azoture de sodium décomposée, le volume de diazote libéré :",
+     "options": [
+      "Double aussi, car les deux grandeurs sont proportionnelles entre elles",
+      "Reste identique, car les coefficients de l’équation ne changent pas",
+      "Est multiplié par quatre, car la masse et le volume sont liés par un carré",
+      "Diminue de moitié, car le gaz se répartit dans un volume plus grand"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la forme de la courbe : droite passant par l’origine ou non ?",
+     "explication": "La courbe est une **droite passant par l’origine** : volume et masse sont proportionnels, donc le volume **double**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un lait qui s’acidifie",
+   "competence": "analyser-document",
+   "situation": "Un lait frais titre entre 15 et 18 °D. Un technicien suit l’acidité d’un lait laissé à température ambiante. Un autre document donne la dose journalière admissible d’un conservateur, le sorbate de potassium.",
+   "documents": [
+    {
+     "id": "lait",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Acidité d’un lait à température ambiante",
+     "categories": [
+      "0 h",
+      "6 h",
+      "12 h",
+      "18 h",
+      "24 h"
+     ],
+     "series": [
+      {
+       "nom": "Acidité",
+       "valeurs": [
+        16,
+        17,
+        20,
+        26,
+        40
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Acidité",
+      "unite": "°D",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "dja",
+     "type": "tableau",
+     "titre": "Dose journalière admissible (DJA)",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "DJA du sorbate de potassium",
+       "25 mg par kg et par jour"
+      ],
+      [
+       "Masse d’un enfant",
+       "30 kg"
+      ],
+      [
+       "Masse molaire de l’acide lactique",
+       "90 g/mol"
+      ],
+      [
+       "Relation utile",
+       "1 °D = 0,1 g d’acide lactique par litre"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lait",
+     "enonce": "Touche la première mesure où l’acidité dépasse 18 °D, limite haute d’un lait frais.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Parcours les barres de gauche à droite : cherche la première au-dessus de 18.",
+     "explication": "À 6 h l’acidité est de 17 °D ; à **12 h** elle atteint 20 °D : c’est la première mesure au-dessus de 18 °D."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 18 h, l’acidité est de 26 °D. Quelle masse d’acide lactique par litre cela représente-t-il ?",
+     "reponse": 2.6,
+     "unite": "g/L",
+     "tolerance": 0.05,
+     "aide": "1 °D correspond à 0,1 g/L : multiplie 26 par 0,1.",
+     "explication": "26 × 0,1 = **2,6 g/L** d’acide lactique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime cette concentration en mmol/L, arrondie au dixième (M = 90 g/mol).",
+     "reponse": 28.9,
+     "unite": "mmol/L",
+     "tolerance": 0.2,
+     "aide": "C = Cm ÷ M en mol/L ; multiplie ensuite par 1 000.",
+     "explication": "C = 2,6 ÷ 90 ≈ 0,0289 mol/L, soit **28,9 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de sorbate de potassium par jour correspond à la DJA d’un enfant de 30 kg ?",
+     "reponse": 750,
+     "unite": "mg",
+     "aide": "Multiplie la DJA (en mg par kg) par la masse de l’enfant.",
+     "explication": "25 × 30 = **750 mg** par jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un enfant atteint-il plus vite la DJA d’un additif qu’un adulte ?",
+     "options": [
+      "La DJA d’un enfant est fixée plus bas, parce qu’un enfant boit en général moins de lait",
+      "La DJA se calcule par litre de lait, et un enfant en consomme proportionnellement davantage",
+      "La DJA se calcule par kilogramme : à masse plus faible, la dose admise est plus petite",
+      "La DJA est la même pour tous, mais un enfant élimine les additifs bien plus lentement"
+     ],
+     "reponse": 2,
+     "aide": "Regarde l’unité de la DJA : mg par kg et par jour.",
+     "explication": "La DJA dépend de la **masse corporelle** : à 25 mg/kg/jour, 30 kg donnent 750 mg mais 60 kg donneraient 1 500 mg."
+    }
+   ]
+  },
+  {
+   "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De quoi est fait l’air ?",
+   "competence": "lire-graphique",
+   "situation": "L’air sec que l’on respire est un mélange de gaz. Le diagramme donne le pourcentage molaire de chacun.",
+   "documents": [
+    {
+     "id": "air",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Composition de l’air sec",
+     "categories": [
+      "Diazote",
+      "Dioxygène",
+      "Autres gaz"
+     ],
+     "series": [
+      {
+       "nom": "Part de l’air",
+       "valeurs": [
+        78,
+        21,
+        1
+       ],
+       "teinte": "ciel"
+      }
+     ],
+     "source": "Pourcentages molaires arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "air",
+     "enonce": "Touche le gaz le plus abondant de l’air.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Le **diazote** représente environ 78 % de l’air."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de moles de dioxygène contiennent 50 mol d’air sec ?",
+     "reponse": 10.5,
+     "unite": "mol",
+     "tolerance": 0.1,
+     "aide": "Calcule 21 % de 50 mol.",
+     "explication": "0,21 × 50 = **10,5 mol** de dioxygène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le dioxyde de carbone ne forme pas de secteur visible. Pourquoi ?",
+     "options": [
+      "Il ne représente qu’environ 0,04 % de l’air : il est compris dans les « autres gaz »",
+      "Il est absent de l’air, car le dioxyde de carbone est un gaz produit seulement par les voitures",
+      "Il est compris dans le dioxygène, car leurs molécules contiennent le même nombre d’atomes",
+      "Il représente environ 4 % de l’air : son secteur est caché derrière celui du diazote"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’ordre de grandeur de 0,04 % à celui d’un petit secteur.",
+     "explication": "Le CO₂ est présent à environ **0,04 %** : trop peu pour former un secteur lisible, il est compté parmi les « autres gaz » (avec l’argon)."
+    }
+   ]
+  },
+  {
+   "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les sulfates d’une eau",
+   "competence": "experimenter",
+   "situation": "Pour doser les ions sulfate d’une eau, on y verse peu à peu une solution de chlorure de baryum : Ba²⁺ + SO₄²⁻ → BaSO₄, précipité blanc. On mesure la conductivité σ après chaque ajout.",
+   "documents": [
+    {
+     "id": "cond",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Conductivité σ en fonction du volume versé",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Conductivité σ",
+       "valeurs": [
+        40,
+        41,
+        42,
+        43,
+        58,
+        73,
+        88
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Conductivité σ",
+      "unite": "mS/m",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Volume de solution de chlorure de baryum versé (mL)"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Concentration du chlorure de baryum",
+       "0,010 mol/L"
+      ],
+      [
+       "Volume d’eau dosée",
+       "50,0 mL"
+      ],
+      [
+       "Masse molaire des ions sulfate",
+       "96 g/mol"
+      ],
+      [
+       "Proportions de la réaction",
+       "1 Ba²⁺ pour 1 SO₄²⁻"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cond",
+     "enonce": "Touche le volume versé à l’équivalence.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "L’équivalence se lit au changement de pente de la courbe.",
+     "explication": "La pente change après le point d’abscisse **6 mL** : la conductivité ne varie presque pas avant, puis augmente nettement. L’équivalence est à **6 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ions baryum a-t-on versée à l’équivalence ? Réponds en mmol (mol/L × mL = mmol).",
+     "reponse": 0.06,
+     "unite": "mmol",
+     "tolerance": 0.002,
+     "aide": "n = C × V avec C = 0,010 mol/L et V = 6,0 mL.",
+     "explication": "n(Ba²⁺) = 0,010 × 6,0 = **0,060 mmol**. À l’équivalence, l’eau contenait autant d’ions sulfate."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en quantité de matière des ions sulfate dans l’eau dosée ?",
+     "reponse": 1.2,
+     "unite": "mmol/L",
+     "tolerance": 0.03,
+     "aide": "Divise la quantité de sulfate par le volume d’eau dosée (50,0 mL) : le résultat est en mmol/L.",
+     "explication": "C = 0,060 ÷ 50,0 = 0,0012 mol/L, soit **1,2 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis en concentration en masse, en mg/L, arrondie à l’unité.",
+     "reponse": 115,
+     "unite": "mg/L",
+     "tolerance": 1,
+     "aide": "Cm = C × M = 1,2 mmol/L × 96 g/mol ; 1 mmol × 96 g/mol = 96 mg.",
+     "explication": "Cm = 1,2 × 96 ≈ **115 mg/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la conductivité augmente-t-elle nettement après l’équivalence ?",
+     "options": [
+      "Les ions sulfate restants sont plus nombreux, car le précipité se redissout",
+      "Les ions baryum et chlorure versés ne réagissent plus et s’accumulent dans la solution",
+      "Le précipité de sulfate de baryum est un excellent conducteur du courant",
+      "L’eau devient plus pure, car elle perd ses ions au contact du précipité"
+     ],
+     "reponse": 1,
+     "aide": "Après l’équivalence, il n’y a plus d’ions sulfate à consommer : que deviennent les ions versés ?",
+     "explication": "Après l’équivalence, **Ba²⁺ et Cl⁻ s’accumulent** : plus d’ions mobiles, donc une conductivité qui monte."
+    }
+   ]
+  },
+  {
+   "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une bouteille d’oxygène médical",
+   "competence": "modeliser",
+   "situation": "Une bouteille d’oxygène médical est remplie de dioxygène comprimé. On veut savoir combien de dioxygène elle contient et combien de temps il dure pour un débit donné.",
+   "documents": [
+    {
+     "id": "bouteille",
+     "type": "schema",
+     "titre": "La bouteille et ses indications",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "arrondi": 30,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 120,
+       "y": 40,
+       "l": 100,
+       "h": 170
+      },
+      {
+       "forme": "rect",
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 155,
+       "y": 14,
+       "l": 30,
+       "h": 26
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 228,
+       "y": 96,
+       "l": 104,
+       "h": 32,
+       "texte": "P = 150 bar",
+       "id": "p",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 8,
+       "y": 66,
+       "l": 100,
+       "h": 32,
+       "texte": "V = 10 L",
+       "id": "v",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "x": 8,
+       "y": 126,
+       "l": 100,
+       "h": 32,
+       "texte": "T = 20 °C",
+       "id": "t",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Loi du gaz parfait",
+       "P × V = n × R × T"
+      ],
+      [
+       "Constante R",
+       "8,314 J/(mol·K)"
+      ],
+      [
+       "Volume molaire à la pression atmosphérique",
+       "24 L/mol"
+      ],
+      [
+       "Débit d’oxygène délivré",
+       "3,0 L/min"
+      ],
+      [
+       "Conversions",
+       "1 bar = 10⁵ Pa ; 1 L = 10⁻³ m³"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Bouteille et débit imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bouteille",
+     "enonce": "Touche la valeur qu’il faut convertir en pascals avant d’utiliser la loi du gaz parfait.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "La pression est la seule grandeur donnée en bar.",
+     "explication": "La pression doit s’exprimer en **pascals** : 150 bar = 150 × 10⁵ = 1,5 × 10⁷ Pa. Les autres grandeurs se convertissent en m³ et en kelvins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle température faut-il utiliser dans la loi P × V = n × R × T ?",
+     "options": [
+      "20 K, valeur lue telle quelle sur le schéma de la bouteille",
+      "293 K, obtenue en ajoutant 273 à la valeur en degrés Celsius",
+      "253 K, obtenue en retirant 20 à la valeur de 273 kelvins"
+     ],
+     "reponse": 1,
+     "aide": "La loi du gaz parfait demande la température absolue.",
+     "explication": "T(K) = 20 + 273 = **293 K**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de dioxygène contient la bouteille ? Utilise P = 1,5 × 10⁷ Pa, V = 10 × 10⁻³ m³ et T = 293 K.",
+     "reponse": 61.6,
+     "unite": "mol",
+     "tolerance": 0.3,
+     "aide": "n = (P × V) ÷ (R × T).",
+     "explication": "n = (1,5 × 10⁷ × 10 × 10⁻³) ÷ (8,314 × 293) ≈ **61,6 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de dioxygène cela représente-t-il à la pression atmosphérique ? Arrondis à la dizaine de litres.",
+     "reponse": 1480,
+     "unite": "L",
+     "tolerance": 10,
+     "aide": "V = n × Vm avec Vm = 24 L/mol.",
+     "explication": "V = 61,6 × 24 ≈ **1 480 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’heures la bouteille peut-elle fournir un débit de 3,0 L/min ? Arrondis au dixième.",
+     "reponse": 8.2,
+     "unite": "h",
+     "tolerance": 0.15,
+     "aide": "Divise le volume par le débit pour obtenir des minutes, puis passe en heures.",
+     "explication": "1 480 ÷ 3,0 ≈ 493 min, soit 493 ÷ 60 ≈ **8,2 h**."
+    }
+   ]
+  }
+ ]
+}

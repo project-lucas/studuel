@@ -1,0 +1,337 @@
+{
+  "id": "maths-anticipee-2026-generale-sans-spe-metropole",
+  "matiere": "maths",
+  "niveau": "1re",
+  "examen": "bac-anticipe",
+  "annee": 2026,
+  "centre": "Métropole · sans spécialité maths",
+  "jour": null,
+  "code": "26-MATGEME1",
+  "titre": "Épreuve anticipée de maths 2026",
+  "dureeMin": 120,
+  "coefficient": 2,
+  "consigne": "Voie générale, pour les élèves qui ne suivent pas la spécialité maths. Sans calculatrice : huit questions d'automatismes (6 points), puis deux exercices (14 points), tout est à traiter.",
+  "parties": [
+    {
+      "id": "automatismes",
+      "titre": "Automatismes",
+      "nature": "exercice",
+      "enonce": "Première partie : huit questions à choix multiples, sans justification. Une réponse fausse n'enlève rien.",
+      "points": 6,
+      "minutes": 25,
+      "enBref": [
+        "Les bonnes réponses : 1 c · 2 c · 3 b · 4 d · 5 a · 6 d · 7 b · 8 b.",
+        "Les pièges à retenir : une baisse de 10 % puis une hausse de 10 % ne ramènent PAS au prix de départ, et une médiane se cherche sur une série RANGÉE.",
+        "Une réponse fausse ne coûte rien : ne laisse jamais une case vide."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Le nombre $\\frac{2}{5}$ est égal à…",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** ramène le dénominateur à 10. $\\frac{2}{5} = \\frac{4}{10} = 0{,}4$." },
+            { "type": "reponse", "texte": "Réponse **c** : $0{,}4$." },
+            { "type": "piege", "texte": "$0{,}25$ est $\\frac{1}{4}$ et $0{,}2$ est $\\frac{1}{5}$ : ne confonds pas la fraction avec son dénominateur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "30 % de 150 est égal à…",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** 10 % d'un nombre, c'est le diviser par 10. 10 % de 150 font 15, donc 30 % font $3 \\times 15 = 45$." },
+            { "type": "reponse", "texte": "Réponse **c** : 45." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Sur la courbe de $f$, lequel de ces nombres est un antécédent de 3 ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** un antécédent de 3 est une ABSCISSE $x$ telle que $f(x) = 3$. On trace la droite horizontale $y = 3$ et on lit l'abscisse du point où elle touche la courbe." },
+            { "type": "texte", "texte": "La courbe atteint la hauteur 3 en son pic, à l'abscisse $x = 1$. Pour les autres propositions, on lit $f(0{,}5) \\approx 2$, $f(1{,}5) \\approx 2$ et $f(2) \\approx 1{,}5$." },
+            { "type": "reponse", "texte": "Réponse **b** : $1$, car $f(1) = 3$." },
+            { "type": "piege", "texte": "Image et antécédent sont souvent inversés : l'image se lit sur l'axe VERTICAL, l'antécédent sur l'axe HORIZONTAL. « Antécédent de 3 » : le 3 est en ordonnée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "La solution de l'équation $7x + 4 = 5x + 6$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** les $x$ d'un côté, les nombres de l'autre." },
+            { "type": "formule", "tex": "7x - 5x = 6 - 4 \\iff 2x = 2 \\iff x = 1" },
+            { "type": "reponse", "texte": "Réponse **d** : $x = 1$." },
+            { "type": "astuce", "texte": "Contrôle en dix secondes : $7 \\times 1 + 4 = 11$ et $5 \\times 1 + 6 = 11$. Les deux membres sont égaux, c'est bon." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Un article à 50 € baisse de 10 % puis augmente de 10 %. Son prix final ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** des évolutions successives se MULTIPLIENT, elles ne s'additionnent pas. Baisser de 10 %, c'est multiplier par $0{,}9$ ; augmenter de 10 %, par $1{,}1$." },
+            { "type": "formule", "tex": "50 \\times 0{,}9 \\times 1{,}1 = 45 \\times 1{,}1 = 49{,}5" },
+            { "type": "reponse", "texte": "Réponse **a** : $49{,}50$ €." },
+            { "type": "piege", "texte": "La réponse c (50 €) est le piège : la hausse de 10 % s'applique à 45 €, pas à 50 €. Elle rapporte donc 4,50 € seulement, moins que les 5 € perdus." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Le point d'abscisse $-1$ de la courbe d'équation $y = 2x^2 - x + 3$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** on remplace $x$ par $-1$, entre parenthèses." },
+            { "type": "formule", "tex": "y = 2 \\times (-1)^2 - (-1) + 3 = 2 + 1 + 3 = 6" },
+            { "type": "reponse", "texte": "Réponse **d** : $D(-1 ; 6)$." },
+            { "type": "piege", "texte": "$-x$ avec $x = -1$ donne $+1$. Oublier ce changement de signe mène à 4, la réponse c." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Le coefficient directeur de la droite passant par $A(-1 ; 2)$ et $B(-3 ; 4)$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** coefficient directeur $= \\dfrac{\\text{écart des } y}{\\text{écart des } x}$, dans le même ordre en haut et en bas." },
+            { "type": "formule", "tex": "m = \\frac{y_B - y_A}{x_B - x_A} = \\frac{4 - 2}{-3 - (-1)} = \\frac{2}{-2} = -1" },
+            { "type": "reponse", "texte": "Réponse **b** : $-1$." },
+            { "type": "astuce", "texte": "Contrôle par le bon sens : quand $x$ diminue (de $-1$ à $-3$), $y$ augmente (de 2 à 4). La droite descend, le coefficient est donc négatif." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "La médiane de la série $2 ; 3 ; 5 ; 4 ; 2 ; 3$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** on RANGE d'abord la série : $2 ; 2 ; 3 ; 3 ; 4 ; 5$. Il y a 6 valeurs, un nombre pair : la médiane est la moyenne des 3e et 4e valeurs." },
+            { "type": "formule", "tex": "\\text{Me} = \\frac{3 + 3}{2} = 3" },
+            { "type": "reponse", "texte": "Réponse **b** : 3." },
+            { "type": "piege", "texte": "Sur la série non rangée, les deux valeurs du milieu sont 5 et 4, ce qui donnerait 4,5 : c'est pour ça qu'on range toujours avant de chercher une médiane." }
+          ]
+        },
+        { "type": "attendu", "texte": "Sur la copie, le numéro de la question et la lettre suffisent : aucune justification n'est lue. Les huit questions se partagent les 6 points : une question sautée, c'est des points laissés sur la table." }
+      ]
+    },
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "120 sportifs de haut niveau, en section judo ou aquatique, de la seconde à la terminale : tableau croisé et probabilités.",
+      "points": 6,
+      "minutes": 40,
+      "enBref": [
+        "Tableau complété : judo 10 · 6 · 8 (24) ; aquatique 40 · 50 · 6 (96) ; total 50 · 56 · 14 (120).",
+        "$P(A \\cap S) = \\frac{40}{120} = \\frac{1}{3}$ et $P_S(A) = \\frac{40}{50} = \\frac{4}{5}$.",
+        "$P(J) = \\frac{24}{120} = \\frac{1}{5}$ mais $P_T(J) = \\frac{8}{14} = \\frac{4}{7}$.",
+        "$P_T(J) \\neq P(J)$ : $J$ et $T$ ne sont pas indépendants."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Reproduire et compléter le tableau.",
+          "blocs": [
+            { "type": "texte", "texte": "On complète case par case, en commençant toujours par une ligne ou une colonne à laquelle il ne manque qu'UNE valeur." },
+            {
+              "type": "liste",
+              "ordonnee": true,
+              "items": [
+                "Total aquatique : $120 - 24 = 96$.",
+                "Judo en seconde : $50 - 40 = 10$.",
+                "Aquatique en terminale : $14 - 8 = 6$.",
+                "Total première : $120 - 50 - 14 = 56$.",
+                "Judo en première : $24 - 10 - 8 = 6$.",
+                "Aquatique en première : $96 - 40 - 6 = 50$ (contrôle : $6 + 50 = 56$)."
+              ]
+            },
+            {
+              "type": "tableau",
+              "entetes": ["", "Seconde", "Première", "Terminale", "Total"],
+              "lignes": [
+                ["Section judo", "10", "6", "8", "24"],
+                ["Section aquatique", "40", "50", "6", "96"],
+                ["Total", "50", "56", "14", "120"]
+              ]
+            },
+            { "type": "astuce", "texte": "Termine toujours par un contrôle : chaque ligne et chaque colonne doit retomber sur son total. Une erreur ici fausse toutes les questions suivantes." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Décrire l'événement $A \\cap S$ par une phrase et calculer sa probabilité.",
+          "blocs": [
+            { "type": "texte", "texte": "$A \\cap S$ : « l'élève est en section aquatique ET en seconde ». Ils sont 40 sur 120, et l'élève est choisi au hasard (équiprobabilité)." },
+            { "type": "formule", "tex": "P(A \\cap S) = \\frac{40}{120} = \\frac{1}{3}" },
+            { "type": "reponse", "texte": "$P(A \\cap S) = \\dfrac{1}{3}$." },
+            { "type": "piege", "texte": "Le symbole $\\cap$ se lit « et » (les deux à la fois). Le symbole $\\cup$ se lit « ou ». Les confondre change toute la question." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Un élève de seconde est choisi : probabilité qu'il soit en section aquatique.",
+          "blocs": [
+            { "type": "texte", "texte": "Le choix se fait PARMI les élèves de seconde : c'est la probabilité de $A$ sachant $S$. On ne regarde plus que la colonne « Seconde », qui compte 50 élèves, dont 40 en section aquatique." },
+            { "type": "formule", "tex": "P_S(A) = \\frac{40}{50} = \\frac{4}{5}" },
+            { "type": "reponse", "texte": "$P_S(A) = \\dfrac{4}{5}$." },
+            { "type": "astuce", "texte": "Dans un tableau croisé, une probabilité conditionnelle se lit directement : la condition te dit dans quelle ligne ou colonne tu te places, et son total devient le dénominateur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Calculer $P(J)$.",
+          "blocs": [
+            { "type": "formule", "tex": "P(J) = \\frac{24}{120} = \\frac{1}{5}" },
+            { "type": "reponse", "texte": "$P(J) = \\dfrac{1}{5}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Calculer $P_T(J)$.",
+          "blocs": [
+            { "type": "texte", "texte": "Parmi les 14 élèves de terminale, 8 sont en section judo." },
+            { "type": "formule", "tex": "P_T(J) = \\frac{8}{14} = \\frac{4}{7}" },
+            { "type": "reponse", "texte": "$P_T(J) = \\dfrac{4}{7}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.c",
+          "intitule": "Les événements $J$ et $T$ sont-ils indépendants ?",
+          "blocs": [
+            { "type": "texte", "texte": "$J$ et $T$ sont indépendants si et seulement si $P_T(J) = P(J)$ : savoir que l'élève est en terminale ne changerait rien à la probabilité qu'il fasse du judo. Or $\\frac{4}{7} \\approx 0{,}57$ et $\\frac{1}{5} = 0{,}2$." },
+            { "type": "reponse", "texte": "$P_T(J) \\neq P(J)$ : les événements $J$ et $T$ ne sont **pas indépendants**. Le judo est bien plus fréquent en terminale que dans l'ensemble." },
+            { "type": "attendu", "texte": "Le correcteur veut voir le critère (égalité $P_T(J) = P(J)$, ou $P(J \\cap T) = P(J) \\times P(T)$) et la comparaison chiffrée, pas un simple « non »." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Emma et Pierre placent 20 000 € et visent 22 000 € : placement à intérêts fixes (+200 € par an) contre placement à 2 % par an.",
+      "points": 8,
+      "minutes": 50,
+      "enBref": [
+        "Placement A : suite arithmétique de raison 200, $a_n = 20\\,000 + 200n$ ; 22 000 € atteints en 2035.",
+        "Placement B : suite géométrique de raison $1{,}02$, $b_n = 20\\,000 \\times 1{,}02^n$ ; le tableur montre 22 000 € dépassés en 2030.",
+        "Bilan : le placement B permet le projet cinq ans plus tôt."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "A. Premier placement" },
+        {
+          "type": "question",
+          "numero": "A.1",
+          "intitule": "Calculer $a_1$ et $a_2$.",
+          "blocs": [
+            { "type": "formule", "tex": "a_1 = 20\\,000 + 200 = 20\\,200 \\qquad a_2 = 20\\,200 + 200 = 20\\,400" },
+            { "type": "reponse", "texte": "$a_1 = 20\\,200$ € et $a_2 = 20\\,400$ €." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2.a",
+          "intitule": "Exprimer $a_{n+1}$ en fonction de $a_n$.",
+          "blocs": [
+            { "type": "texte", "texte": "Chaque année, on AJOUTE 200 € au capital de l'année précédente." },
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $a_{n+1} = a_n + 200$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2.b",
+          "intitule": "Nature de la suite $(a_n)$ et raison.",
+          "blocs": [
+            { "type": "texte", "texte": "On passe d'un terme au suivant en ajoutant toujours le même nombre." },
+            { "type": "reponse", "texte": "$(a_n)$ est une suite **arithmétique** de raison $r = 200$ et de premier terme $a_0 = 20\\,000$." },
+            { "type": "astuce", "texte": "« On ajoute la même somme » : suite arithmétique. « On augmente du même pourcentage » : suite géométrique. Tout l'exercice repose sur cette différence." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.3",
+          "intitule": "Exprimer $a_n$ en fonction de $n$.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour une suite arithmétique, $a_n = a_0 + n \\times r$." },
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $a_n = 20\\,000 + 200n$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.4",
+          "intitule": "À partir de quelle année auront-ils la somme nécessaire ?",
+          "blocs": [
+            { "type": "texte", "texte": "On cherche le plus petit entier $n$ tel que $a_n \\geqslant 22\\,000$." },
+            { "type": "formule", "tex": "20\\,000 + 200n \\geqslant 22\\,000 \\iff 200n \\geqslant 2\\,000 \\iff n \\geqslant 10" },
+            { "type": "texte", "texte": "Le plus petit entier qui convient est $n = 10$, soit l'année $2025 + 10 = 2035$." },
+            { "type": "reponse", "texte": "Avec le placement A, ils auront 22 000 € à partir de **2035**." },
+            { "type": "piege", "texte": "Ne réponds pas « $n = 10$ » : la question demande une ANNÉE. $a_n$ correspond à l'année $2025 + n$." }
+          ]
+        },
+        { "type": "titre", "texte": "B. Second placement" },
+        {
+          "type": "question",
+          "numero": "B.1",
+          "intitule": "Détailler le calcul qui donne $b_1 = 20\\,400$.",
+          "blocs": [
+            { "type": "texte", "texte": "Augmenter de 2 %, c'est multiplier par $1 + \\frac{2}{100} = 1{,}02$." },
+            { "type": "formule", "tex": "b_1 = 20\\,000 \\times 1{,}02 = 20\\,000 + 20\\,000 \\times 0{,}02 = 20\\,000 + 400 = 20\\,400" },
+            { "type": "reponse", "texte": "$b_1 = 20\\,000 \\times 1{,}02 = 20\\,400$ €." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2.a",
+          "intitule": "Exprimer $b_{n+1}$ en fonction de $b_n$.",
+          "blocs": [
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $b_{n+1} = 1{,}02 \\times b_n$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2.b",
+          "intitule": "Nature de la suite $(b_n)$ et raison.",
+          "blocs": [
+            { "type": "texte", "texte": "On passe d'un terme au suivant en multipliant toujours par le même nombre." },
+            { "type": "reponse", "texte": "$(b_n)$ est une suite **géométrique** de raison $q = 1{,}02$ et de premier terme $b_0 = 20\\,000$." },
+            { "type": "piege", "texte": "La raison est $1{,}02$, pas $0{,}02$ ni $2$ : c'est le coefficient multiplicateur complet." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3",
+          "intitule": "Exprimer $b_n$ en fonction de $n$.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour une suite géométrique, $b_n = b_0 \\times q^n$." },
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $b_n = 20\\,000 \\times 1{,}02^n$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.4",
+          "intitule": "Avec l'extrait de tableur, à partir de quelle année auront-ils la somme nécessaire ?",
+          "blocs": [
+            { "type": "texte", "texte": "On lit dans le tableau : $b_4 \\approx 21\\,649 < 22\\,000$ et $b_5 \\approx 22\\,082 \\geqslant 22\\,000$. La suite étant croissante (raison supérieure à 1), le seuil reste dépassé ensuite." },
+            { "type": "reponse", "texte": "Le rang cherché est $n = 5$ : avec le placement B, ils auront la somme à partir de **2030**." }
+          ]
+        },
+        { "type": "titre", "texte": "C. Bilan" },
+        {
+          "type": "question",
+          "numero": "C",
+          "intitule": "Quel placement conseiller pour réaliser le projet le plus tôt possible ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le placement A atteint 22 000 € en 2035, le placement B dès 2030. Les intérêts du placement B sont calculés sur un capital qui grossit chaque année : dès la première année, 2 % de 20 000 € font déjà 400 €, le double des 200 € du placement A." },
+            { "type": "reponse", "texte": "Il faut conseiller le **placement B** : le projet est possible en 2030, cinq ans plus tôt qu'avec le placement A (2035)." },
+            { "type": "attendu", "texte": "La justification compare les deux années trouvées en A.4 et B.4. Une conclusion sans ces deux dates n'est pas justifiée." }
+          ]
+        }
+      ]
+    }
+  ]
+}

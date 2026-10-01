@@ -1,0 +1,454 @@
+{
+  "niveau": "Tle",
+  "matiere": "si",
+  "sujets": [
+    {
+      "chapitre": "ecaaa540-c2f2-58af-b69c-8e0eaf72c682",
+      "difficulte": 1,
+      "titre": "Le tambour du tapis de caisse",
+      "consigne": "Réponds à chaque question en écrivant la formule, puis l'application numérique avec l'unité.",
+      "enonce": "**Situation.** Le tapis d'une caisse de supermarché est entraîné par un tambour de rayon R = 0,05 m. Le tambour tourne à vitesse constante, à 60 tr/min.\n\n1. Calcule la vitesse angulaire ω du tambour en rad/s.\n2. Calcule la vitesse d'un point de la périphérie du tambour : c'est la vitesse de la bande.\n3. Un point du tambour situé à 0,025 m de l'axe a-t-il la même vitesse ? Calcule-la et explique la différence avec un mouvement de translation.\n4. Le tapis tourne pendant 20 s. Combien de tours fait le tambour ? Quel angle θ, en rad, cela représente-t-il ? Quelle longueur de bande est passée ?",
+      "bareme": [
+        { "critere": "Conversion juste : ω = 2π × 60 / 60 ≈ 6,28 rad/s", "points": 6 },
+        { "critere": "Vitesse de la bande (≈ 0,31 m/s) et vitesse du point à mi-rayon (≈ 0,16 m/s) avec explication rotation / translation", "points": 8 },
+        { "critere": "Nombre de tours, angle en rad et longueur de bande justes et justifiés", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ω = 2π × N / 60 = 2π × 60 / 60 = 2π ≈ **6,28 rad/s**.\n2. v = ω × R = 6,28 × 0,05 ≈ **0,314 m/s** : c'est la vitesse de la bande.\n3. v' = ω × 0,025 = 6,28 × 0,025 ≈ **0,157 m/s**, deux fois moins. En rotation, chaque point décrit un cercle centré sur l'axe et sa vitesse est proportionnelle à sa distance à l'axe ; en translation, au contraire, tous les points ont la même vitesse.\n4. À 60 tr/min, le tambour fait 1 tour par seconde, donc **20 tours** en 20 s. θ = 2π × 20 = 40π ≈ **125,7 rad**. La vitesse est constante : la longueur de bande est l'aire d'un rectangle sous v(t), soit 0,314 × 20 ≈ **6,28 m**."
+    },
+    {
+      "chapitre": "ecaaa540-c2f2-58af-b69c-8e0eaf72c682",
+      "difficulte": 2,
+      "titre": "Le chariot de l'imprimante 3D",
+      "consigne": "Trace l'allure du profil de vitesse, puis réponds en justifiant chaque calcul (formule, application numérique, unité).",
+      "enonce": "**Situation.** La tête d'une imprimante 3D est portée par un chariot qui doit parcourir **0,5 m** en ligne droite. Son profil de vitesse est un trapèze symétrique :\n- il passe de 0 à 0,2 m/s en 0,1 s ;\n- il roule à 0,2 m/s ;\n- il s'arrête en 0,1 s.\n\nLe chariot est tiré par une courroie enroulée sur une poulie de rayon **6 mm** : la courroie avance à la vitesse d'un point de la périphérie de la poulie.\n\n1. Calcule l'accélération du chariot pendant la première phase.\n2. Calcule la distance parcourue pendant l'accélération, puis pendant le freinage.\n3. Déduis-en la distance et la durée du palier, puis la durée totale du déplacement.\n4. Calcule la vitesse de rotation de la poulie pendant le palier, en rad/s puis en tr/min.",
+      "bareme": [
+        { "critere": "Accélération a = 0,2 / 0,1 = 2 m/s² justifiée", "points": 4 },
+        { "critere": "Distances d'accélération et de freinage (0,01 m chacune) calculées comme aires de triangles", "points": 5 },
+        { "critere": "Distance du palier (0,48 m), durée du palier (2,4 s) et durée totale (2,6 s)", "points": 6 },
+        { "critere": "Vitesse de la poulie : ω ≈ 33,3 rad/s, soit environ 318 tr/min", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a = Δv / Δt = 0,2 / 0,1 = **2 m/s²**.\n2. La distance est l'aire sous la courbe v(t). Pendant l'accélération : triangle, ½ × 0,1 × 0,2 = **0,01 m** (1 cm). Le freinage est symétrique : **0,01 m** aussi.\n3. Palier : 0,5 − 0,01 − 0,01 = **0,48 m**. À vitesse constante, t = 0,48 / 0,2 = **2,4 s**. Durée totale : 0,1 + 2,4 + 0,1 = **2,6 s**.\n4. v = ω × R, donc ω = v / R = 0,2 / 0,006 ≈ **33,3 rad/s**. En tours par minute : N = ω × 60 / (2π) = 33,3 × 60 / 6,28 ≈ **318 tr/min**.\n\nRemarque attendue : pendant le palier, l'accélération est nulle."
+    },
+    {
+      "chapitre": "ecaaa540-c2f2-58af-b69c-8e0eaf72c682",
+      "difficulte": 3,
+      "titre": "Le portique de l'entrepôt",
+      "consigne": "Justifie chaque résultat (formule, application numérique, unité) et conclus en comparant au cahier des charges.",
+      "enonce": "**Situation.** Dans un entrepôt, un portique déplace un bac de **3 m** en ligne droite. Le cahier des charges impose :\n\n| Exigence | Niveau |\n| Durée du déplacement | ≤ 5,5 s |\n| Vitesse maximale | 1 m/s |\n| Accélération et décélération | 0,5 m/s² au plus |\n\nLe portique roule sur un rail grâce à une roue motrice de rayon **0,1 m**, montée directement sur l'arbre du moteur ; on admet que la vitesse du portique est celle d'un point de la périphérie de la roue.\n\n1. Le profil retenu est un trapèze symétrique qui utilise l'accélération maximale jusqu'à 1 m/s. Calcule la durée et la distance de l'accélération, puis celles du palier. L'exigence de durée est-elle respectée ?\n2. Côté moteur, calcule la vitesse angulaire au palier (en rad/s et en tr/min) et l'accélération angulaire pendant le démarrage.\n3. Trace l'allure de ω(t) et calcule l'angle total θ parcouru par la roue par l'aire sous cette courbe. Combien de tours cela fait-il ?\n4. Le client veut désormais un déplacement en **4 s**, sans changer la vitesse maximale. Montre que c'est impossible avec 0,5 m/s², puis calcule l'accélération qu'il faudrait.",
+      "bareme": [
+        { "critere": "Profil : 2 s et 1 m en accélération, 1 m et 1 s au palier, durée 5 s", "points": 5 },
+        { "critere": "Conclusion sur l'exigence de durée (5 s ≤ 5,5 s, marge 0,5 s)", "points": 3 },
+        { "critere": "ω = 10 rad/s (≈ 95,5 tr/min) et α = 5 rad/s²", "points": 4 },
+        { "critere": "Angle θ = 30 rad par l'aire sous ω(t), soit environ 4,8 tours", "points": 4 },
+        { "critere": "Analyse de l'exigence à 4 s : impossibilité à 0,5 m/s² et accélération de 1 m/s² justifiée", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Durée d'accélération : t = v / a = 1 / 0,5 = **2 s** ; distance : ½ × 2 × 1 = **1 m**. Même chose au freinage : 2 s et 1 m. Palier : 3 − 1 − 1 = **1 m**, parcouru en 1 / 1 = **1 s**. Durée totale : 2 + 1 + 2 = **5 s**. 5 s ≤ 5,5 s : **l'exigence est respectée**, avec une marge de 0,5 s.\n2. ω = v / R = 1 / 0,1 = **10 rad/s**, soit N = 10 × 60 / (2π) ≈ **95,5 tr/min**. α = Δω / Δt = 10 / 2 = **5 rad/s²** (on retrouve a / R).\n3. ω(t) est un trapèze : 0 → 10 rad/s en 2 s, palier 1 s, 10 → 0 en 2 s. Aire : ½ × 2 × 10 + 10 × 1 + ½ × 2 × 10 = 10 + 10 + 10 = **30 rad**. Nombre de tours : 30 / (2π) ≈ **4,8 tours**.\n4. À 0,5 m/s², les deux rampes durent déjà 4 s et couvrent 2 m ; il resterait 1 m de palier, soit 5 s au total : **4 s est impossible**. Avec une accélération a, chaque rampe dure 1 / a et couvre ½ × (1 / a) × 1 = 1 / (2a). Durée totale : 2 × (1 / a) + (3 − 1 / a) / 1 = 3 + 1 / a. Pour 4 s : 1 / a = 1, donc **a = 1 m/s²**. Vérification : rampes de 1 s et 0,5 m chacune, palier de 2 m en 2 s, total 1 + 2 + 1 = 4 s."
+    },
+    {
+      "chapitre": "c39e4d0f-2c54-5ab1-93c2-e05f2a30ce66",
+      "difficulte": 1,
+      "titre": "Le chariot de manutention",
+      "consigne": "Applique le principe fondamental de la dynamique : écris l'équation, puis l'application numérique avec l'unité.",
+      "enonce": "**Situation.** Un opérateur pousse horizontalement un chariot de **120 kg** sur un sol plat.\n\n1. Sans frottement, quelle force horizontale faut-il pour lui donner une accélération de 0,5 m/s² ?\n2. En réalité, les roues opposent une force de frottement de **40 N**. Quelle force faut-il pour la même accélération ?\n3. Une fois lancé, le chariot roule à vitesse constante. Quelle force l'opérateur doit-il fournir ? Quel principe retrouve-t-on ?\n4. Dans la même usine, un volant d'inertie de moment d'inertie J = 0,8 kg·m² subit un couple net de 4 N·m. Calcule son accélération angulaire.",
+      "bareme": [
+        { "critere": "Forces en accélération justes : 60 N sans frottement, 100 N avec frottement", "points": 8 },
+        { "critere": "Vitesse constante : 40 N et lien avec le principe fondamental de la statique", "points": 5 },
+        { "critere": "Rotation : α = 4 / 0,8 = 5 rad/s²", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "On isole le chariot ; selon l'axe horizontal du mouvement : somme des forces = m × a.\n1. F = m × a = 120 × 0,5 = **60 N**.\n2. F − 40 = 120 × 0,5, donc F = 60 + 40 = **100 N**.\n3. À vitesse constante, a = 0 : F − 40 = 0, donc **F = 40 N**. Il suffit de vaincre le frottement. Avec une accélération nulle, on retrouve le **principe fondamental de la statique**.\n4. En rotation : somme des moments = J × α, donc α = 4 / 0,8 = **5 rad/s²**."
+    },
+    {
+      "chapitre": "c39e4d0f-2c54-5ab1-93c2-e05f2a30ce66",
+      "difficulte": 2,
+      "titre": "Le monte-charge du chantier",
+      "consigne": "Suis la méthode du cours : isoler, faire le bilan, projeter, résoudre, vérifier. Prends g = 9,81 m/s².",
+      "enonce": "**Situation.** Sur un chantier, un monte-charge (plateau et chargement) de masse **400 kg** est levé par un câble vertical. Son mouvement de montée comporte trois phases :\n- accélération de 0,8 m/s² ;\n- vitesse constante ;\n- décélération de 0,8 m/s² jusqu'à l'arrêt.\n\nLe câble choisi supporte au plus **5 000 N**.\n\n1. Isole le monte-charge et fais le bilan des actions extérieures. Écris le principe fondamental de la dynamique en projection sur l'axe vertical orienté vers le haut.\n2. Calcule la tension du câble dans chacune des trois phases.\n3. Quelle phase dimensionne le câble ? Le câble choisi convient-il ? Conclus.",
+      "bareme": [
+        { "critere": "Isolement, bilan (tension T vers le haut, poids m × g vers le bas) et équation T − m × g = m × a", "points": 5 },
+        { "critere": "Trois tensions justes : ≈ 4 244 N, 3 924 N et 3 604 N", "points": 10 },
+        { "critere": "Phase d'accélération identifiée comme dimensionnante et conclusion comparant à 5 000 N", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On isole le monte-charge. Actions extérieures : la tension **T** du câble, vers le haut ; le **poids** m × g, vers le bas. Sur l'axe vertical orienté vers le haut : **T − m × g = m × a**, donc T = m × (g + a).\n2. \n- Accélération (a = + 0,8 m/s²) : T = 400 × (9,81 + 0,8) = 400 × 10,61 ≈ **4 244 N**.\n- Vitesse constante (a = 0) : T = 400 × 9,81 ≈ **3 924 N**.\n- Décélération en montée (a = − 0,8 m/s²) : T = 400 × (9,81 − 0,8) = 400 × 9,01 ≈ **3 604 N**.\n3. C'est la **phase d'accélération** qui demande la plus forte tension : on dimensionne sur le pire moment. 4 244 N < 5 000 N : **le câble convient**. Ordre de grandeur cohérent : l'accélération ajoute environ 8 % à la tension à vitesse constante."
+    },
+    {
+      "chapitre": "c39e4d0f-2c54-5ab1-93c2-e05f2a30ce66",
+      "difficulte": 3,
+      "titre": "L'enrouleur de câble",
+      "consigne": "Applique le principe fondamental de la dynamique en rotation à chaque phase, puis analyse les résultats au regard du moteur disponible.",
+      "enonce": "**Situation.** Un enrouleur de câble est modélisé par un tambour de moment d'inertie **J = 0,4 kg·m²**, soumis à un couple de frottement constant de **2 N·m** qui s'oppose toujours au mouvement. Le cycle prévu :\n- démarrage de 0 à 60 rad/s en 1,5 s ;\n- palier à 60 rad/s ;\n- arrêt de 60 rad/s à 0 en 1 s.\n\nLe moteur disponible peut fournir au plus **20 N·m**, dans un sens comme dans l'autre.\n\n1. Calcule l'accélération angulaire de chaque phase (démarrage, palier, arrêt).\n2. Calcule le couple moteur nécessaire dans chaque phase. Interprète le signe obtenu à l'arrêt.\n3. Le moteur disponible convient-il pour tout le cycle ? Sinon, calcule la durée d'arrêt minimale compatible avec ce moteur.\n4. Si l'on coupait le moteur au palier (roue libre), en combien de temps le tambour s'arrêterait-il sous le seul effet du frottement ?",
+      "bareme": [
+        { "critere": "Accélérations angulaires : 40 rad/s², 0 et − 60 rad/s²", "points": 4 },
+        { "critere": "Couples : 18 N·m, 2 N·m et − 22 N·m, avec l'interprétation du signe négatif (couple de freinage)", "points": 7 },
+        { "critere": "Comparaison au moteur (22 > 20 N·m) et durée d'arrêt minimale d'environ 1,1 s", "points": 5 },
+        { "critere": "Roue libre : α = − 5 rad/s² et arrêt en 12 s", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "On isole le tambour ; somme des moments autour de l'axe : C_m − 2 = J × α (le tambour tourne toujours dans le sens positif, et le frottement s'oppose à cette rotation pendant tout le cycle).\n1. Démarrage : α = 60 / 1,5 = **40 rad/s²** ; palier : **α = 0** ; arrêt : α = (0 − 60) / 1 = **− 60 rad/s²**.\n2. \n- Démarrage : C_m = 2 + 0,4 × 40 = **18 N·m**.\n- Palier : C_m = **2 N·m** (le couple résistant seulement).\n- Arrêt : C_m = 2 + 0,4 × (− 60) = 2 − 24 = **− 22 N·m**. Le signe négatif signifie que le moteur doit **freiner** : le frottement seul ne suffit pas à arrêter le tambour aussi vite.\n3. Démarrage : 18 ≤ 20, c'est bon. Arrêt : il faudrait 22 N·m de freinage, plus que les 20 N·m disponibles : **le cycle n'est pas réalisable tel quel**. Avec C_m = − 20 N·m : − 20 − 2 = 0,4 × α, donc α = − 55 rad/s². Durée minimale : 60 / 55 ≈ **1,1 s**. Il faut allonger l'arrêt à 1,1 s au moins.\n4. Sans moteur : − 2 = 0,4 × α, donc α = **− 5 rad/s²**. Durée : 60 / 5 = **12 s**. Le frottement seul est très lent : c'est pourquoi un freinage actif est nécessaire."
+    },
+    {
+      "chapitre": "5e0e0ac8-0d5c-5183-b0bb-94642077c732",
+      "difficulte": 1,
+      "titre": "Disque ou anneau ?",
+      "consigne": "Calcule chaque moment d'inertie avec la formule du cours et l'unité kg·m².",
+      "enonce": "**Situation.** Pour une roue de démonstration, on compare deux pièces de même masse **8 kg** et de même rayon **0,25 m**, tournant autour de leur axe :\n- un disque plein ;\n- un anneau mince.\n\n1. Calcule le moment d'inertie du disque plein.\n2. Calcule le moment d'inertie de l'anneau. Laquelle des deux pièces est la plus difficile à mettre en rotation ? Explique pourquoi avec la répartition de la matière.\n3. On fabrique un anneau de même masse mais de rayon **0,5 m**. Calcule son inertie. Par combien a-t-elle été multipliée ? Justifie avec la formule.",
+      "bareme": [
+        { "critere": "Disque plein : J = ½ × 8 × 0,25² = 0,25 kg·m²", "points": 7 },
+        { "critere": "Anneau : J = 0,5 kg·m², comparaison expliquée par la matière placée loin de l'axe", "points": 6 },
+        { "critere": "Anneau de rayon double : J = 2 kg·m², soit quatre fois plus, car le rayon compte au carré", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Disque plein : J = ½ × m × R² = ½ × 8 × 0,25² = ½ × 8 × 0,0625 = **0,25 kg·m²**.\n2. Anneau mince : J = m × R² = 8 × 0,0625 = **0,5 kg·m²**, le double. L'anneau est plus difficile à mettre en rotation : toute sa masse est à la distance R de l'axe, alors que le disque a une partie de sa matière près de l'axe, où elle compte peu (chaque masse compte avec le **carré** de sa distance à l'axe).\n3. J = 8 × 0,5² = 8 × 0,25 = **2 kg·m²**. L'inertie est **multipliée par 4** : doubler le rayon multiplie R² par 2² = 4."
+    },
+    {
+      "chapitre": "5e0e0ac8-0d5c-5183-b0bb-94642077c732",
+      "difficulte": 2,
+      "titre": "La table tournante de l'atelier",
+      "consigne": "Suis la méthode du cours pour ramener les inerties sur l'arbre moteur. Donne chaque résultat avec son unité.",
+      "enonce": "**Situation.** Une table tournante est un plateau plein de **30 kg** et de rayon **0,5 m**. Elle est entraînée par un moteur à travers un réducteur de rapport **k = 1/15** (la table tourne 15 fois moins vite que le moteur). Le rotor du moteur a une inertie de **0,002 kg·m²**. On néglige l'inertie des engrenages.\n\n1. Calcule le moment d'inertie du plateau autour de son axe.\n2. Ramène cette inertie sur l'arbre du moteur.\n3. Calcule l'inertie équivalente totale vue par le moteur.\n4. Quel couple le moteur doit-il fournir pour accélérer à **300 rad/s²** (frottements non compris) ? Sans réducteur, le moteur ressentirait quelle inertie ? Commente.",
+      "bareme": [
+        { "critere": "Inertie du plateau : ½ × 30 × 0,5² = 3,75 kg·m²", "points": 5 },
+        { "critere": "Inertie ramenée : 3,75 × (1/15)² ≈ 0,0167 kg·m²", "points": 5 },
+        { "critere": "J_eq ≈ 0,0187 kg·m² en ajoutant le rotor", "points": 4 },
+        { "critere": "Couple ≈ 5,6 N·m et comparaison avec l'inertie sans réducteur (≈ 3,75 kg·m², 200 fois plus)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Plateau plein : J_c = ½ × m × R² = ½ × 30 × 0,25 = **3,75 kg·m²**.\n2. Ramené au moteur : J_c × k² = 3,75 × (1/15)² = 3,75 / 225 ≈ **0,0167 kg·m²**.\n3. J_eq = J_m + J_c × k² = 0,002 + 0,0167 ≈ **0,0187 kg·m²**.\n4. C = J_eq × α = 0,0187 × 300 ≈ **5,6 N·m**. Sans réducteur, le moteur ressentirait 3,75 + 0,002 ≈ **3,75 kg·m²**, environ **200 fois plus** : le réducteur divise l'inertie de la charge par k² = 225. C'est pourquoi on associe un petit moteur rapide à un réducteur."
+    },
+    {
+      "chapitre": "5e0e0ac8-0d5c-5183-b0bb-94642077c732",
+      "difficulte": 3,
+      "titre": "Le treuil de levage",
+      "consigne": "Calcule l'inertie équivalente ramenée sur l'arbre moteur, puis analyse le rôle de chaque élément et du réducteur.",
+      "enonce": "**Situation.** Un treuil lève une charge de **200 kg**. Le moteur (rotor : **0,003 kg·m²**) entraîne, à travers un réducteur de rapport **k = 1/20**, un tambour cylindrique plein de **10 kg** et de rayon **0,1 m**, sur lequel s'enroule le câble. La charge monte à la vitesse d'un point de la périphérie du tambour. On néglige l'inertie du réducteur et du câble.\n\n1. Calcule l'inertie du tambour et ramène-la sur l'arbre moteur.\n2. Exprime le rapport v / ω_m entre la vitesse de la charge et celle du moteur, puis calcule l'inertie de la charge ramenée sur l'arbre moteur.\n3. Calcule J_eq et la part de chaque élément (rotor, tambour, charge) en pourcentage.\n4. Calcule le couple nécessaire pour accélérer ces inerties à **150 rad/s²** côté moteur (poids et frottements non compris).\n5. Un technicien propose un réducteur de rapport **1/10**. Calcule la nouvelle inertie équivalente et conclus : que devient l'effort demandé au moteur pour accélérer ?",
+      "bareme": [
+        { "critere": "Tambour : 0,05 kg·m², ramené à 0,000 125 kg·m²", "points": 4 },
+        { "critere": "v / ω_m = k × R = 0,005 m et charge ramenée : 200 × 0,005² = 0,005 kg·m²", "points": 5 },
+        { "critere": "J_eq = 0,008 125 kg·m² et parts (≈ 37 % rotor, 1,5 % tambour, 61,5 % charge)", "points": 4 },
+        { "critere": "Couple d'accélération ≈ 1,22 N·m", "points": 3 },
+        { "critere": "Réducteur 1/10 : J_eq = 0,0235 kg·m² (≈ 2,9 fois plus) et conclusion argumentée", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Tambour plein : J_t = ½ × 10 × 0,1² = **0,05 kg·m²**. Ramené : 0,05 × (1/20)² = 0,05 / 400 = **0,000 125 kg·m²**.\n2. v = ω_t × R = k × ω_m × R, donc v / ω_m = k × R = 0,1 / 20 = **0,005 m**. Charge ramenée : m × (v / ω_m)² = 200 × 0,005² = 200 × 0,000 025 = **0,005 kg·m²**.\n3. J_eq = 0,003 + 0,000 125 + 0,005 = **0,008 125 kg·m²**. Parts : rotor 0,003 / 0,008 125 ≈ **37 %** ; tambour ≈ **1,5 %** ; charge ≈ **61,5 %**. Le rotor ne peut pas être négligé.\n4. C = J_eq × α = 0,008 125 × 150 ≈ **1,22 N·m** pour les seules inerties.\n5. Avec k = 1/10 : tambour 0,05 / 100 = 0,0005 kg·m² ; charge 200 × (0,1 / 10)² = 200 × 0,0001 = 0,02 kg·m² ; J_eq = 0,003 + 0,0005 + 0,02 = **0,0235 kg·m²**, environ **2,9 fois plus**. Pour la même accélération côté moteur, il faudrait environ 0,0235 × 150 ≈ 3,5 N·m. Conclusion : un rapport de réduction plus faible (1/20) divise davantage l'inertie ressentie (elle est multipliée par k²) ; la proposition du technicien augmente l'effort d'accélération demandé au moteur."
+    },
+    {
+      "chapitre": "73c232d6-34e5-560b-80ee-380a9e86b709",
+      "difficulte": 1,
+      "titre": "Scooter et volant d'inertie",
+      "consigne": "Calcule chaque grandeur avec la formule du cours, en joules ou en watts.",
+      "enonce": "**Situation.**\n\n1. Un scooter électrique et son conducteur ont une masse totale de **150 kg**. Calcule leur énergie cinétique à 10 m/s, puis à 20 m/s. Par combien a-t-elle été multipliée ? Explique.\n2. Un volant d'inertie de moment d'inertie **J = 0,5 kg·m²** tourne à **200 rad/s**. Calcule son énergie cinétique.\n3. Un moteur fournit un couple de **8 N·m** à **300 rad/s**. Calcule sa puissance mécanique.",
+      "bareme": [
+        { "critere": "Énergies du scooter : 7 500 J et 30 000 J, facteur 4 expliqué par la vitesse au carré", "points": 8 },
+        { "critere": "Volant : Ec = ½ × 0,5 × 200² = 10 000 J", "points": 6 },
+        { "critere": "Puissance : P = 8 × 300 = 2 400 W", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Ec = ½ × m × v². À 10 m/s : ½ × 150 × 10² = **7 500 J**. À 20 m/s : ½ × 150 × 20² = **30 000 J**. L'énergie est **multipliée par 4** : la vitesse compte au carré, et 2² = 4. Il faudra aussi dissiper quatre fois plus d'énergie au freinage.\n2. En rotation : Ec = ½ × J × ω² = ½ × 0,5 × 200² = ½ × 0,5 × 40 000 = **10 000 J** (10 kJ).\n3. P = C × ω = 8 × 300 = **2 400 W** (2,4 kW)."
+    },
+    {
+      "chapitre": "73c232d6-34e5-560b-80ee-380a9e86b709",
+      "difficulte": 2,
+      "titre": "La navette autonome",
+      "consigne": "Réponds en justifiant chaque calcul, puis conclus sur le choix du moteur. On néglige les frottements.",
+      "enonce": "**Situation.** Une navette autonome de **2 000 kg** passe de 0 à **10 m/s** en **10 s**, avec une accélération constante. Le bureau d'études a présélectionné un moteur de puissance maximale **15 kW**.\n\n1. Calcule l'énergie cinétique de la navette à 10 m/s.\n2. Calcule la puissance moyenne nécessaire pour la fournir en 10 s.\n3. Calcule l'accélération, la force motrice, puis la puissance instantanée en fin d'accélération.\n4. Le moteur présélectionné convient-il ? Justifie en disant quelle puissance dimensionne le moteur.",
+      "bareme": [
+        { "critere": "Ec = ½ × 2 000 × 10² = 100 000 J", "points": 5 },
+        { "critere": "Puissance moyenne : 100 000 / 10 = 10 kW", "points": 4 },
+        { "critere": "a = 1 m/s², F = 2 000 N et P = 2 000 × 10 = 20 kW en fin d'accélération", "points": 6 },
+        { "critere": "Conclusion : 15 kW couvre la moyenne mais pas la pointe de 20 kW, moteur refusé", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Ec = ½ × m × v² = ½ × 2 000 × 10² = **100 000 J** (100 kJ).\n2. P_moy = Ec / Δt = 100 000 / 10 = **10 000 W**, soit 10 kW.\n3. a = 10 / 10 = **1 m/s²**. Principe fondamental de la dynamique (sans frottement) : F = m × a = 2 000 × 1 = **2 000 N**. En fin d'accélération, v = 10 m/s : P = F × v = 2 000 × 10 = **20 000 W**, soit 20 kW, **le double** de la moyenne.\n4. Le moteur doit fournir la puissance instantanée maximale, pas seulement la moyenne. 15 kW < 20 kW : **le moteur ne convient pas**, la navette n'atteindrait pas le profil voulu. Il faut un moteur d'au moins 20 kW, avec une marge (ou accepter une accélération plus douce)."
+    },
+    {
+      "chapitre": "73c232d6-34e5-560b-80ee-380a9e86b709",
+      "difficulte": 3,
+      "titre": "Le freinage récupératif du bus",
+      "consigne": "Justifie chaque calcul et analyse les limites de la récupération. On néglige les frottements.",
+      "enonce": "**Situation.** Un bus électrique de **12 000 kg** roule à **15 m/s**. Il freine jusqu'à l'arrêt en **15 s**, avec une décélération constante. Sa machine électrique, réversible, peut renvoyer l'énergie de freinage vers la batterie, mais elle n'accepte pas plus de **100 kW**. Au-delà, le complément est assuré par les freins mécaniques.\n\n1. Calcule l'énergie cinétique du bus à 15 m/s, en J puis en kWh (1 kWh = 3 600 000 J).\n2. Calcule la puissance moyenne de freinage.\n3. Calcule la décélération, la force de freinage, puis la puissance de freinage au tout début du freinage.\n4. La machine peut-elle tout récupérer dès le début du freinage ? Calcule la vitesse en dessous de laquelle toute la puissance de freinage peut aller vers la batterie.\n5. Où part l'énergie qui n'est pas récupérée ? Pourquoi, à ton avis, est-il plus difficile de récupérer l'énergie d'un freinage brusque ?",
+      "bareme": [
+        { "critere": "Ec = 1 350 000 J, soit 0,375 kWh", "points": 4 },
+        { "critere": "Puissance moyenne de freinage : 90 kW", "points": 3 },
+        { "critere": "Décélération 1 m/s², force 12 000 N, puissance initiale 180 kW", "points": 5 },
+        { "critere": "Comparaison à 100 kW et vitesse seuil ≈ 8,3 m/s (≈ 30 km/h)", "points": 5 },
+        { "critere": "Énergie non récupérée dissipée en chaleur dans les freins ; freinage brusque = puissance plus forte", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Ec = ½ × 12 000 × 15² = ½ × 12 000 × 225 = **1 350 000 J** (1,35 MJ), soit 1 350 000 / 3 600 000 = **0,375 kWh**.\n2. P_moy = 1 350 000 / 15 = **90 000 W**, soit 90 kW.\n3. Décélération : 15 / 15 = **1 m/s²**. Force de freinage : F = m × a = 12 000 × 1 = **12 000 N**. Au début, v = 15 m/s : P = F × v = 12 000 × 15 = **180 000 W**, soit 180 kW, le double de la moyenne.\n4. 180 kW > 100 kW : **non**, au début du freinage la machine ne peut pas tout absorber. La puissance P = F × v diminue avec la vitesse ; elle passe sous 100 kW quand v ≤ 100 000 / 12 000 ≈ **8,3 m/s** (environ 30 km/h). En dessous, toute l'énergie de freinage peut être renvoyée vers la batterie.\n5. L'énergie non récupérée part en **chaleur dans les freins** mécaniques : elle est perdue. Un freinage brusque dissipe la même énergie en moins de temps : la puissance est plus forte et dépasse davantage ce que la machine accepte, donc une plus grande part part dans les freins."
+    },
+    {
+      "chapitre": "6495cb80-3de3-5d76-b8b5-7844be6c7094",
+      "difficulte": 1,
+      "titre": "Engrenage et vis-écrou",
+      "consigne": "Écris la loi entrée-sortie utilisée, puis l'application numérique avec l'unité.",
+      "enonce": "**Situation.**\n\n1. Un pignon moteur de **20 dents** tourne à **1 500 tr/min**. Il engrène extérieurement avec une roue de **60 dents**. Calcule la vitesse de la roue et précise son sens de rotation.\n2. Le moteur fournit **3 N·m** et l'engrenage a un rendement de **0,95**. Calcule le couple sur la roue.\n3. Une vis de pas **2 mm** tourne à **600 tr/min**. Calcule la vitesse de l'écrou en mm/min puis en mm/s.",
+      "bareme": [
+        { "critere": "Vitesse de la roue : 500 tr/min, sens inversé (contact extérieur)", "points": 7 },
+        { "critere": "Couple de sortie : C_s = 0,95 × 3 × 3 = 8,55 N·m", "points": 7 },
+        { "critere": "Vitesse de l'écrou : 1 200 mm/min, soit 20 mm/s", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ω2 / ω1 = Z1 / Z2 = 20 / 60 = 1/3. Vitesse de la roue : 1 500 / 3 = **500 tr/min**. En contact extérieur, la roue tourne **en sens inverse** du pignon.\n2. C_s = η × C_e / k avec k = 1/3 : C_s = 0,95 × 3 × 3 = **8,55 N·m**. La vitesse est divisée par 3, le couple presque multiplié par 3.\n3. L'écrou avance d'un pas par tour : v = 600 × 2 = **1 200 mm/min**, soit 1 200 / 60 = **20 mm/s**."
+    },
+    {
+      "chapitre": "6495cb80-3de3-5d76-b8b5-7844be6c7094",
+      "difficulte": 2,
+      "titre": "Le portail coulissant",
+      "consigne": "Suis la méthode du cours : lois entrée-sortie étage par étage, puis rendements. Conclus sur le cahier des charges.",
+      "enonce": "**Situation.** Un portail coulissant est entraîné par un moteur qui tourne à **1 400 tr/min** en fournissant **0,5 N·m**. La chaîne de transmission comporte :\n- un premier engrenage : pignon de 14 dents, roue de 56 dents (rendement 0,9) ;\n- un second engrenage : pignon de 12 dents, roue de 48 dents (rendement 0,9) ;\n- un pignon-crémaillère de rayon primitif **0,03 m** (rendement 0,95) fixé sur le portail.\n\nLe cahier des charges impose une vitesse du portail comprise entre **0,2 et 0,3 m/s**.\n\n1. Calcule le rapport de réduction du train d'engrenages et la vitesse de rotation du pignon de crémaillère, en tr/min puis en rad/s.\n2. Calcule la vitesse du portail. L'exigence est-elle respectée ?\n3. Calcule le rendement global de la chaîne.\n4. Calcule le couple disponible sur l'arbre du pignon de crémaillère.",
+      "bareme": [
+        { "critere": "Rapport du train : (14 × 12) / (56 × 48) = 1/16 ; 87,5 tr/min soit ≈ 9,16 rad/s", "points": 5 },
+        { "critere": "Vitesse du portail ≈ 0,275 m/s et conclusion sur l'exigence", "points": 5 },
+        { "critere": "Rendement global : 0,9 × 0,9 × 0,95 ≈ 0,77", "points": 4 },
+        { "critere": "Couple sur le pignon : 0,81 × 0,5 × 16 ≈ 6,5 N·m", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Rapport du train = produit des Z menants / produit des Z menés = (14 × 12) / (56 × 48) = 168 / 2 688 = **1/16**. Vitesse du pignon : 1 400 / 16 = **87,5 tr/min**, soit ω = 2π × 87,5 / 60 ≈ **9,16 rad/s**.\n2. Pignon-crémaillère : v = ω × R = 9,16 × 0,03 ≈ **0,275 m/s**. 0,2 ≤ 0,275 ≤ 0,3 : **l'exigence est respectée**.\n3. Les rendements se multiplient : η = 0,9 × 0,9 × 0,95 ≈ **0,77**.\n4. Sur l'arbre du pignon, seuls les deux engrenages ont travaillé : η = 0,9 × 0,9 = 0,81 et k = 1/16. C_s = η × C_e / k = 0,81 × 0,5 × 16 ≈ **6,5 N·m** (6,48 N·m). La vitesse a été divisée par 16, le couple multiplié par environ 13."
+    },
+    {
+      "chapitre": "6495cb80-3de3-5d76-b8b5-7844be6c7094",
+      "difficulte": 3,
+      "titre": "Le vérin électrique du hayon",
+      "consigne": "Calcule, puis analyse : chaque conclusion doit comparer un résultat à une exigence.",
+      "enonce": "**Situation.** Le hayon d'une voiture est ouvert par un vérin électrique. Un moteur tourne à **3 000 tr/min** en fournissant **0,2 N·m**. Il entraîne une poulie de diamètre **20 mm**, reliée par courroie à une poulie de **60 mm** (rendement 0,95), qui fait tourner une vis de pas **2 mm** (rendement de la vis-écrou 0,35). L'écrou pousse le hayon sur une course de **200 mm**.\n\nCahier des charges :\n\n| Exigence | Niveau |\n| Durée d'ouverture | ≤ 8 s |\n| Couple nécessaire sur la vis pour lever le hayon | 0,45 N·m |\n| Le hayon ne doit pas retomber si le moteur est coupé | — |\n\n1. Calcule la vitesse de la vis, puis la vitesse de l'écrou et la durée d'ouverture. Conclus.\n2. Calcule le couple disponible sur la vis. Conclus.\n3. Calcule le rendement global. Quel étage coûte le plus ?\n4. Pourquoi le constructeur accepte-t-il une vis-écrou de si faible rendement ? Utilise la notion de réversibilité.\n5. Pour ouvrir en 4 s, un technicien propose de remplacer la grande poulie par une poulie de **40 mm**. Calcule la nouvelle durée et le nouveau couple sur la vis. La proposition est-elle acceptable ?",
+      "bareme": [
+        { "critere": "Vis à 1 000 tr/min, écrou à ≈ 33,3 mm/s, ouverture en 6 s ≤ 8 s", "points": 5 },
+        { "critere": "Couple sur la vis 0,57 N·m ≥ 0,45 N·m, exigence respectée", "points": 4 },
+        { "critere": "Rendement global ≈ 0,33, étage vis-écrou identifié comme le plus coûteux", "points": 3 },
+        { "critere": "Non-réversibilité de la vis expliquée comme condition de sécurité", "points": 3 },
+        { "critere": "Poulie 40 mm : 4 s mais couple de 0,38 N·m < 0,45 N·m, proposition refusée et argumentée", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Poulies : ω2 / ω1 = d1 / d2 = 20 / 60 = 1/3, donc la vis tourne à **1 000 tr/min**. Écrou : 1 000 × 2 = 2 000 mm/min ≈ **33,3 mm/s**. Durée : 200 / 33,3 = **6 s**. 6 s ≤ 8 s : **exigence respectée**, marge de 2 s.\n2. C_vis = η × C_e / k = 0,95 × 0,2 × 3 = **0,57 N·m**. 0,57 ≥ 0,45 : **exigence respectée**.\n3. η global = 0,95 × 0,35 ≈ **0,33**. C'est la **vis-écrou** (0,35) qui coûte le plus.\n4. Une vis-écrou à pas fin est souvent **non réversible** : la charge (le poids du hayon) ne peut pas entraîner la vis en sens inverse. Si le moteur est coupé, le hayon reste en place : c'est un défaut pour le rendement mais une **qualité pour la sécurité**, qui répond à la troisième exigence.\n5. Avec d2 = 40 mm : rapport 20 / 40 = 1/2, vis à 1 500 tr/min, écrou à 3 000 mm/min = 50 mm/s, durée 200 / 50 = **4 s**. Mais C_vis = 0,95 × 0,2 × 2 = **0,38 N·m** < 0,45 N·m : le moteur ne pourrait plus lever le hayon. **Proposition refusée** : on ne gagne jamais sur les deux tableaux ; pour aller plus vite, il faudrait un moteur plus puissant."
+    },
+    {
+      "chapitre": "5abb438f-6511-5a49-b566-f04bfe4187da",
+      "difficulte": 1,
+      "titre": "Le petit moteur du ventilateur",
+      "consigne": "Utilise les trois équations du moteur à courant continu. Donne chaque résultat avec son unité.",
+      "enonce": "**Situation.** Un moteur à courant continu a une résistance d'induit **R = 2 Ω** et une constante **k = 0,04 N·m/A**. Alimenté sous **12 V** en régime permanent, il absorbe **0,5 A**.\n\n1. Calcule sa force contre-électromotrice E.\n2. Déduis-en sa vitesse de rotation Ω en rad/s.\n3. Calcule son couple électromagnétique.\n4. Quel courant absorberait-il au démarrage, sous 12 V ? Explique pourquoi il est si élevé.",
+      "bareme": [
+        { "critere": "E = 12 − 2 × 0,5 = 11 V et Ω = 11 / 0,04 = 275 rad/s", "points": 8 },
+        { "critere": "C_em = 0,04 × 0,5 = 0,02 N·m", "points": 5 },
+        { "critere": "Courant de démarrage 6 A expliqué par E = 0 à l'arrêt", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. U = E + R × I, donc E = 12 − 2 × 0,5 = **11 V**.\n2. E = k × Ω, donc Ω = 11 / 0,04 = **275 rad/s** (environ 2 600 tr/min).\n3. C_em = k × I = 0,04 × 0,5 = **0,02 N·m**.\n4. À l'arrêt, Ω = 0 donc **E = 0** : seule la résistance limite le courant. I = U / R = 12 / 2 = **6 A**, soit **12 fois** le courant en régime permanent."
+    },
+    {
+      "chapitre": "5abb438f-6511-5a49-b566-f04bfe4187da",
+      "difficulte": 2,
+      "titre": "Le moteur du robot tondeuse",
+      "consigne": "Suis la méthode du cours : courant, force contre-électromotrice, vitesse, puis bilan des puissances.",
+      "enonce": "**Situation.** Le moteur de lame d'un robot tondeuse a pour caractéristiques **R = 0,5 Ω** et **k = 0,06 N·m/A**. Il est alimenté sous **24 V**. En coupe, la lame demande un couple électromagnétique de **0,3 N·m**. Les pertes mécaniques valent **5 W**.\n\n1. Calcule le courant absorbé.\n2. Calcule la force contre-électromotrice, puis la vitesse de rotation en rad/s et en tr/min.\n3. Fais le bilan des puissances : puissance absorbée, pertes Joule, puissance électromagnétique (vérifie-la de deux façons), puissance utile.\n4. Calcule le rendement du moteur.",
+      "bareme": [
+        { "critere": "I = 0,3 / 0,06 = 5 A", "points": 4 },
+        { "critere": "E = 21,5 V et Ω ≈ 358 rad/s, soit ≈ 3 420 tr/min", "points": 5 },
+        { "critere": "Bilan : 120 W absorbés, 12,5 W Joule, 107,5 W électromagnétiques vérifiés par C × Ω, 102,5 W utiles", "points": 7 },
+        { "critere": "Rendement ≈ 85 %", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. C_em = k × I, donc I = 0,3 / 0,06 = **5 A**.\n2. E = U − R × I = 24 − 0,5 × 5 = **21,5 V**. Ω = E / k = 21,5 / 0,06 ≈ **358 rad/s**, soit N = 358 × 60 / (2π) ≈ **3 420 tr/min**.\n3. \n- P_abs = U × I = 24 × 5 = **120 W**.\n- P_J = R × I² = 0,5 × 25 = **12,5 W**.\n- P_em = E × I = 21,5 × 5 = **107,5 W** ; vérification : C_em × Ω = 0,3 × 358,3 ≈ 107,5 W.\n- P_u = P_em − pertes mécaniques = 107,5 − 5 = **102,5 W**.\n4. η = P_u / P_abs = 102,5 / 120 ≈ **0,85**, soit environ 85 %."
+    },
+    {
+      "chapitre": "5abb438f-6511-5a49-b566-f04bfe4187da",
+      "difficulte": 3,
+      "titre": "Démarrer sans griller le variateur",
+      "consigne": "Calcule, puis analyse le comportement du moteur dans chaque situation. Chaque réponse doit être justifiée par les équations du cours.",
+      "enonce": "**Situation.** Le moteur de traction d'un petit chariot autonome a pour caractéristiques **R = 0,4 Ω** et **k = 0,1 N·m/A**. Sa tension nominale est **48 V** et son courant nominal **10 A**. Le variateur qui l'alimente ne peut pas fournir plus de **25 A**.\n\n1. Calcule le courant si l'on applique directement 48 V au moteur à l'arrêt. Compare au courant nominal et au variateur.\n2. Quelle tension maximale peut-on appliquer au démarrage sans dépasser 25 A ? Quel couple de démarrage obtient-on alors ?\n3. Au point nominal (48 V, 10 A), calcule le couple, la vitesse et le rendement électrique P_em / P_abs.\n4. Le chariot monte une pente : le couple demandé passe à **2 N·m**, toujours sous 48 V. Calcule le nouveau courant et la nouvelle vitesse. Commente.\n5. En descente, le moteur est entraîné par le chariot à **400 rad/s**. Quelle tension produit-il ? Quel intérêt ?",
+      "bareme": [
+        { "critere": "Démarrage direct : 120 A, 12 fois le nominal, variateur dépassé", "points": 4 },
+        { "critere": "Tension de démarrage limitée à 10 V et couple de 2,5 N·m", "points": 4 },
+        { "critere": "Point nominal : 1 N·m, E = 44 V, Ω = 440 rad/s, rendement ≈ 92 %", "points": 5 },
+        { "critere": "Pente : I = 20 A, E = 40 V, Ω = 400 rad/s, baisse de vitesse et courant au-dessus du nominal commentés", "points": 4 },
+        { "critere": "Génératrice : E = 40 V, intérêt du freinage récupératif", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. À l'arrêt, E = 0 : I = U / R = 48 / 0,4 = **120 A**, soit **12 fois** le courant nominal et presque 5 fois ce que le variateur peut fournir : démarrage direct impossible.\n2. À l'arrêt, U = R × I : U_max = 0,4 × 25 = **10 V**. Couple de démarrage : C = k × I = 0,1 × 25 = **2,5 N·m**, un couple fort, obtenu en montant la tension progressivement.\n3. C_em = 0,1 × 10 = **1 N·m**. E = 48 − 0,4 × 10 = **44 V**, Ω = 44 / 0,1 = **440 rad/s** (≈ 4 200 tr/min). P_abs = 48 × 10 = 480 W ; P_em = 44 × 10 = 440 W ; rapport 440 / 480 ≈ **92 %**.\n4. I = 2 / 0,1 = **20 A** ; E = 48 − 0,4 × 20 = **40 V** ; Ω = 40 / 0,1 = **400 rad/s**. La vitesse **diminue un peu** (− 9 %) quand le couple résistant augmente : le courant fait le couple, la tension fait la vitesse. Mais 20 A, c'est le double du nominal : en montée prolongée, le moteur chaufferait.\n5. En génératrice : E = k × Ω = 0,1 × 400 = **40 V**. La machine est réversible : l'énergie de la descente peut être renvoyée vers la batterie (freinage récupératif) au lieu d'être perdue."
+    },
+    {
+      "chapitre": "d42efd5a-c8a5-53b8-9558-8af516436254",
+      "difficulte": 1,
+      "titre": "Le hacheur de la maquette",
+      "consigne": "Calcule chaque grandeur avec la définition du cours et son unité.",
+      "enonce": "**Situation.** Un hacheur série alimente un moteur sous **24 V**. Il découpe à **5 kHz** et son transistor reste fermé pendant **t_on = 150 µs** à chaque période.\n\n1. Calcule la période de découpage T.\n2. Calcule le rapport cyclique α et la tension moyenne aux bornes du moteur.\n3. On veut maintenant **6 V** moyens. Quel rapport cyclique et quelle durée t_on faut-il ?",
+      "bareme": [
+        { "critere": "T = 1 / 5 000 = 200 µs", "points": 5 },
+        { "critere": "α = 150 / 200 = 0,75 et U_moy = 18 V", "points": 8 },
+        { "critere": "Pour 6 V : α = 0,25 et t_on = 50 µs", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. T = 1 / f = 1 / 5 000 = 0,0002 s = **200 µs**.\n2. α = t_on / T = 150 / 200 = **0,75**. U_moy = α × U_alim = 0,75 × 24 = **18 V**.\n3. α = U_moy / U_alim = 6 / 24 = **0,25**. t_on = α × T = 0,25 × 200 = **50 µs**. La hauteur des créneaux (24 V) ne change pas : seule leur largeur change, c'est la MLI."
+    },
+    {
+      "chapitre": "d42efd5a-c8a5-53b8-9558-8af516436254",
+      "difficulte": 2,
+      "titre": "Le ventilateur piloté par la carte",
+      "consigne": "Réponds à chaque question en justifiant ; les calculs doivent faire apparaître la formule utilisée.",
+      "enonce": "**Situation.** Le ventilateur d'une serre est un petit moteur alimenté sous **12 V** par une sortie MLI d'une carte programmable. La consigne va de **0 à 255** (255 = transistor toujours fermé). La fréquence de découpage est **25 kHz**.\n\n1. Calcule la période de découpage. Pourquoi choisit-on une fréquence supérieure à 20 kHz ?\n2. La consigne vaut **64**. Calcule le rapport cyclique et la tension moyenne.\n3. On veut **8 V** moyens. Quelle consigne faut-il écrire ? Quelle durée t_on cela donne-t-il ?\n4. Un élève propose plutôt une résistance en série pour faire chuter la tension de 12 V à 8 V, le moteur absorbant alors **0,5 A**. Calcule la puissance perdue dans la résistance et le rendement de cette solution. Compare avec le hacheur.",
+      "bareme": [
+        { "critere": "T = 40 µs et fréquence au-dessus de ce que l'oreille perçoit", "points": 4 },
+        { "critere": "Consigne 64 : α ≈ 0,25 et U_moy ≈ 3 V", "points": 5 },
+        { "critere": "Pour 8 V : α ≈ 0,67, consigne 170, t_on ≈ 26,7 µs", "points": 6 },
+        { "critere": "Résistance : 2 W perdus, rendement ≈ 67 %, comparé aux plus de 90 % d'un hacheur (interrupteur qui ne dissipe presque rien)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. T = 1 / 25 000 = **40 µs**. Au-dessus de 20 kHz, le découpage n'est pas audible : le moteur ne **siffle** pas.\n2. α = 64 / 255 ≈ **0,25** ; U_moy = 0,25 × 12 ≈ **3 V**.\n3. α = 8 / 12 ≈ **0,67** ; consigne = 0,67 × 255 ≈ **170**. t_on = α × T = 0,67 × 40 ≈ **26,7 µs**.\n4. La résistance retient 12 − 8 = 4 V sous 0,5 A : elle dissipe 4 × 0,5 = **2 W** en chaleur. Le moteur reçoit 8 × 0,5 = 4 W sur 12 × 0,5 = 6 W fournis : rendement 4 / 6 ≈ **67 %**. Avec un hacheur, le transistor est soit ouvert (courant nul), soit fermé (tension presque nulle) : U × I ≈ 0, il ne dissipe presque rien et le rendement dépasse couramment **90 %**. Le hacheur est la bonne solution."
+    },
+    {
+      "chapitre": "d42efd5a-c8a5-53b8-9558-8af516436254",
+      "difficulte": 3,
+      "titre": "Le pont en H du chariot filoguidé",
+      "consigne": "Calcule, puis analyse le fonctionnement du convertisseur. Justifie chaque réponse avec les notions du cours.",
+      "enonce": "**Situation.** Le moteur d'un chariot filoguidé est commandé par un **pont en H** alimenté sous **24 V**, en MLI.\n\n1. Pour rouler à la vitesse de croisière, le moteur doit recevoir **15 V** moyens. Le pont découpe à **16 kHz**. Calcule α, T et t_on.\n2. Les opérateurs se plaignent d'un sifflement. Explique-le et propose une fréquence, puis recalcule T et t_on pour la même tension moyenne.\n3. Pour chacune des phases suivantes, donne le signe de la vitesse, le signe du couple et le quadrant de fonctionnement :\n   a. le chariot démarre en marche avant ;\n   b. il freine en marche avant ;\n   c. il recule ;\n   d. il freine en marche arrière.\n4. Dans quelles phases la machine fonctionne-t-elle en génératrice ? Quel intérêt présente un convertisseur qui travaille dans les quatre quadrants ?\n5. Explique le rôle de l'inductance du bobinage et celui des diodes de roue libre du pont. Que se passerait-il sans ces diodes ?",
+      "bareme": [
+        { "critere": "α = 0,625, T = 62,5 µs, t_on ≈ 39 µs", "points": 5 },
+        { "critere": "Sifflement expliqué (16 kHz audible), fréquence ≥ 20 kHz et nouveaux T et t_on justes", "points": 3 },
+        { "critere": "Quatre phases : signes et quadrants 1, 2, 3, 4 justes", "points": 5 },
+        { "critere": "Génératrice en freinage et renvoi de l'énergie vers la source", "points": 3 },
+        { "critere": "Inductance qui lisse le courant, diode qui lui offre un chemin, surtension destructrice sans elle", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. α = 15 / 24 = **0,625** ; T = 1 / 16 000 = **62,5 µs** ; t_on = 0,625 × 62,5 ≈ **39 µs**.\n2. 16 kHz est dans la plage que l'oreille perçoit : le découpage **s'entend**. On découpe au-dessus de 20 kHz, par exemple à **20 kHz** : T = 50 µs, t_on = 0,625 × 50 ≈ **31,3 µs** (α ne change pas, puisque la tension moyenne visée est la même).\n3. \n| Phase | Vitesse | Couple | Quadrant |\n| a. Démarrage avant | + | + | 1 (moteur) |\n| b. Freinage avant | + | − | 2 (génératrice) |\n| c. Marche arrière | − | − | 3 (moteur) |\n| d. Freinage arrière | − | + | 4 (génératrice) |\n4. La machine est **génératrice** dans les phases de **freinage** (quadrants 2 et 4) : le couple s'oppose à la vitesse. Un convertisseur quatre quadrants peut alors **renvoyer l'énergie de freinage vers la source** au lieu de la perdre.\n5. Le bobinage est une **inductance** : elle s'oppose aux variations brusques du courant et le **lisse** malgré le découpage. Quand un transistor s'ouvre, ce courant doit continuer à circuler : la **diode de roue libre** lui offre un chemin. Sans elle, l'inductance créerait une **surtension** qui détruirait le transistor."
+    },
+    {
+      "chapitre": "70c8c093-fe6c-5d98-9a87-ef98e15d130a",
+      "difficulte": 1,
+      "titre": "L'autonomie du robot aspirateur",
+      "consigne": "Suis la démarche du cours pour l'autonomie. Écris chaque formule et l'unité.",
+      "enonce": "**Situation.** Un robot aspirateur est équipé d'une batterie de **14,4 V** et **5 Ah**. On ne la décharge qu'à **80 %** pour préserver sa durée de vie. En fonctionnement, le robot consomme en moyenne **36 W**.\n\n1. Calcule l'énergie stockée dans la batterie.\n2. Calcule l'énergie utilisable.\n3. Calcule l'autonomie du robot, en heures puis en heures et minutes.\n4. Pourquoi compare-t-on deux batteries en Wh plutôt qu'en Ah ?",
+      "bareme": [
+        { "critere": "W = 14,4 × 5 = 72 Wh et énergie utilisable 57,6 Wh", "points": 8 },
+        { "critere": "Autonomie 57,6 / 36 = 1,6 h, soit 1 h 36 min", "points": 7 },
+        { "critere": "Explication : l'énergie dépend aussi de la tension (W = Q × U)", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. W = Q × U = 5 × 14,4 = **72 Wh**.\n2. Énergie utilisable : 0,8 × 72 = **57,6 Wh**.\n3. t = W_utile / P = 57,6 / 36 = **1,6 h**, soit 1 h + 0,6 × 60 min = **1 h 36 min**.\n4. La capacité en Ah ne dit que la quantité d'électricité débitée ; l'énergie vaut **W = Q × U**. Deux batteries de même capacité mais de tensions différentes ne stockent pas la même énergie, donc n'ont pas la même autonomie : on compare en **Wh**."
+    },
+    {
+      "chapitre": "70c8c093-fe6c-5d98-9a87-ef98e15d130a",
+      "difficulte": 2,
+      "titre": "Le pack de la trottinette",
+      "consigne": "Justifie chaque calcul et conclus en comparant au cahier des charges.",
+      "enonce": "**Situation.** Un fabricant conçoit le pack d'une trottinette électrique de **36 V** avec des cellules lithium-ion de **3,6 V** et **3 Ah**. Le premier prototype a une capacité de **12 Ah**. On ne décharge le pack qu'à **80 %**. La trottinette consomme en moyenne **15 Wh/km**. Le cahier des charges exige une autonomie d'au moins **25 km**.\n\n1. Combien de cellules faut-il en série ? Combien de branches en parallèle ? Écris la désignation du pack (du type « 10S4P ») et le nombre total de cellules.\n2. Calcule l'énergie du pack, l'énergie utilisable et l'autonomie. L'exigence est-elle respectée ?\n3. Propose une nouvelle association de cellules qui respecte l'exigence. Calcule sa désignation, son nombre de cellules et son autonomie.",
+      "bareme": [
+        { "critere": "10 cellules en série, 4 branches, pack 10S4P de 40 cellules", "points": 5 },
+        { "critere": "Énergie 432 Wh, utilisable 345,6 Wh, autonomie ≈ 23 km", "points": 6 },
+        { "critere": "Conclusion : 23 km < 25 km, exigence non respectée", "points": 3 },
+        { "critere": "Nouveau pack 10S5P (50 cellules, 15 Ah) et autonomie ≈ 28,8 km justifiée", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. En série, les tensions s'additionnent : 36 / 3,6 = **10 cellules** en série. En parallèle, les capacités s'additionnent : 12 / 3 = **4 branches**. Pack **10S4P**, soit 10 × 4 = **40 cellules**.\n2. W = Q × U = 12 × 36 = **432 Wh** ; utilisable : 0,8 × 432 = **345,6 Wh** ; autonomie : 345,6 / 15 ≈ **23 km**. 23 km < 25 km : **l'exigence n'est pas respectée**.\n3. Il faut 25 × 15 = 375 Wh utilisables, donc 375 / 0,8 ≈ 469 Wh au total, soit 469 / 36 ≈ 13 Ah. Avec des branches de 3 Ah, il faut **5 branches** (15 Ah) : pack **10S5P**, **50 cellules**. Énergie : 15 × 36 = 540 Wh ; utilisable : 432 Wh ; autonomie : 432 / 15 ≈ **28,8 km** ≥ 25 km : exigence respectée."
+    },
+    {
+      "chapitre": "70c8c093-fe6c-5d98-9a87-ef98e15d130a",
+      "difficulte": 3,
+      "titre": "Le drone de surveillance",
+      "consigne": "Calcule, puis analyse le choix de stockage : chaque conclusion doit s'appuyer sur un résultat chiffré.",
+      "enonce": "**Situation.** Un drone de surveillance de chantier emporte un pack de cellules lithium-ion de **3,6 V**, **5 Ah** et **70 g** chacune, assemblées en **6S2P**. En vol stationnaire, le drone consomme en moyenne **400 W**. On ne décharge le pack qu'à **80 %**. Le cahier des charges exige **25 min** de vol, y compris par temps froid, où la capacité disponible baisse de **20 %**.\n\n1. Calcule la tension, la capacité et l'énergie du pack, ainsi que sa masse et son énergie massique.\n2. Calcule l'autonomie par temps doux. L'exigence est-elle respectée ?\n3. Refais le calcul par temps froid et conclus.\n4. Calcule le courant moyen demandé au pack et exprime-le en « C ». Commente.\n5. Au décollage, le drone demande pendant quelques secondes des pics de puissance très forts. Un ingénieur propose d'ajouter un supercondensateur. Explique ce qu'il apporterait et pourquoi il ne peut pas remplacer la batterie.",
+      "bareme": [
+        { "critere": "Pack 21,6 V, 10 Ah, 216 Wh, 12 cellules pour 840 g, ≈ 257 Wh/kg", "points": 5 },
+        { "critere": "Autonomie ≈ 26 min par temps doux, exigence respectée de justesse", "points": 5 },
+        { "critere": "Autonomie ≈ 20,7 min par temps froid, exigence non respectée", "points": 4 },
+        { "critere": "Courant ≈ 18,5 A, soit ≈ 1,85 C, décharge en un peu plus d'une demi-heure", "points": 3 },
+        { "critere": "Supercondensateur : grande puissance et nombreux cycles, mais faible énergie stockée", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 6 cellules en série : U = 6 × 3,6 = **21,6 V**. 2 branches en parallèle : Q = 2 × 5 = **10 Ah**. W = 10 × 21,6 = **216 Wh**. Nombre de cellules : 6 × 2 = 12, masse 12 × 70 = **840 g**. Énergie massique : 216 / 0,84 ≈ **257 Wh/kg**.\n2. Utilisable : 0,8 × 216 = 172,8 Wh. t = 172,8 / 400 = 0,432 h ≈ **25,9 min**. 25,9 ≥ 25 min : **respectée, mais de justesse** (moins d'une minute de marge).\n3. Par temps froid : 172,8 × 0,8 = 138,24 Wh ; t = 138,24 / 400 = 0,346 h ≈ **20,7 min** < 25 min : **exigence non respectée**. Il faudrait plus de cellules en parallèle.\n4. I = P / U = 400 / 21,6 ≈ **18,5 A**. Rapporté à la capacité : 18,5 / 10 ≈ **1,85 C** ; un courant de 1 C décharge le pack en une heure environ, celui-ci en un peu plus d'une demi-heure, ce qui est cohérent avec l'autonomie calculée.\n5. Un supercondensateur fournit des **puissances très grandes** et supporte des centaines de milliers de **cycles** : il absorberait les pics du décollage et soulagerait la batterie. Mais il stocke **peu d'énergie** (W = ½ × C × U²) : il ne peut pas assurer l'autonomie, qui reste le rôle de la batterie."
+    },
+    {
+      "chapitre": "b27407cc-a16b-50b4-a6c0-9696d1e4e01a",
+      "difficulte": 1,
+      "titre": "La tige de suspension",
+      "consigne": "Calcule la contrainte et vérifie la condition de résistance du cours. Donne chaque résultat avec son unité.",
+      "enonce": "**Situation.** Une tige cylindrique en acier de diamètre **8 mm** suspend une charge : elle est tendue par un effort normal **N = 6 000 N**. L'acier a une limite élastique **Re = 235 MPa**. Le bureau d'études impose un coefficient de sécurité **s = 2**.\n\n1. Calcule la section de la tige en mm².\n2. Calcule la contrainte normale dans la tige.\n3. Calcule la contrainte admissible, puis conclus : la tige convient-elle ?",
+      "bareme": [
+        { "critere": "Section S = π × 4² ≈ 50,3 mm²", "points": 5 },
+        { "critere": "Contrainte σ = 6 000 / 50,3 ≈ 119 MPa", "points": 7 },
+        { "critere": "Contrainte admissible 117,5 MPa et conclusion : tige refusée de peu", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Rayon 4 mm : S = π × 4² ≈ **50,3 mm²**.\n2. σ = N / S = 6 000 / 50,3 ≈ **119 MPa** (1 MPa = 1 N/mm²).\n3. Contrainte admissible : Re / s = 235 / 2 = **117,5 MPa**. 119 MPa > 117,5 MPa : la condition σ ≤ Re / s **n'est pas respectée**, de peu. La tige ne casserait pas (119 < 235), mais la marge de sécurité exigée n'est pas atteinte : il faut un diamètre un peu plus grand."
+    },
+    {
+      "chapitre": "b27407cc-a16b-50b4-a6c0-9696d1e4e01a",
+      "difficulte": 2,
+      "titre": "Le tirant en aluminium",
+      "consigne": "Vérifie la résistance, puis la déformation. Conclus sur chaque exigence.",
+      "enonce": "**Situation.** Un tirant en alliage d'aluminium, de section rectangulaire **20 mm × 5 mm** et de longueur **1,5 m**, est tendu par **9 000 N**. Pour cet alliage : **Re = 180 MPa** et **E = 70 000 MPa**. Le cahier des charges impose un allongement d'au plus **1,5 mm**.\n\n1. Calcule la contrainte dans le tirant et le coefficient de sécurité obtenu.\n2. Calcule l'allongement relatif ε, puis l'allongement ΔL en mm.\n3. L'exigence d'allongement est-elle respectée ?\n4. Calcule la section minimale qui respecterait l'exigence d'allongement.",
+      "bareme": [
+        { "critere": "S = 100 mm², σ = 90 MPa, coefficient de sécurité 2", "points": 5 },
+        { "critere": "ε ≈ 0,001 29 et ΔL ≈ 1,93 mm par la loi de Hooke", "points": 6 },
+        { "critere": "Conclusion : 1,93 mm > 1,5 mm, exigence non respectée alors que la résistance l'est", "points": 4 },
+        { "critere": "Section minimale ≈ 129 mm² justifiée (σ ≤ 70 MPa)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. S = 20 × 5 = 100 mm² ; σ = N / S = 9 000 / 100 = **90 MPa**. Coefficient de sécurité : Re / σ = 180 / 90 = **2**.\n2. Loi de Hooke : ε = σ / E = 90 / 70 000 ≈ **0,001 29**. ΔL = ε × L0 = 0,001 29 × 1 500 ≈ **1,93 mm**.\n3. 1,93 mm > 1,5 mm : **l'exigence d'allongement n'est pas respectée**. Le tirant résiste, mais il se déforme trop : l'aluminium est trois fois moins raide que l'acier.\n4. ΔL ≤ 1,5 mm impose ε ≤ 1,5 / 1 500 = 0,001, donc σ ≤ E × ε = 70 000 × 0,001 = 70 MPa. S ≥ N / σ = 9 000 / 70 ≈ **129 mm²**."
+    },
+    {
+      "chapitre": "b27407cc-a16b-50b4-a6c0-9696d1e4e01a",
+      "difficulte": 3,
+      "titre": "Acier ou aluminium pour le tirant ?",
+      "consigne": "Dimensionne le tirant pour chaque matériau en vérifiant les deux critères, puis analyse lequel impose la section.",
+      "enonce": "**Situation.** Un tirant de **2 m** doit reprendre un effort de traction de **20 kN**. Le cahier des charges impose un coefficient de sécurité **s = 2** et un allongement d'au plus **1 mm**. On hésite entre deux matériaux :\n\n| Matériau | Re | E |\n| Acier | 235 MPa | 210 000 MPa |\n| Aluminium | 180 MPa | 70 000 MPa |\n\n1. Pour l'acier, calcule la section minimale imposée par la condition de résistance, puis celle imposée par l'allongement. Laquelle retient-on ?\n2. Déduis-en le diamètre minimal d'une tige en acier, puis vérifie le coefficient de sécurité obtenu avec cette section.\n3. Refais l'étape 1 pour l'aluminium.\n4. Compare les deux matériaux : quel critère dimensionne chacun d'eux ? Explique pourquoi avec leurs caractéristiques.",
+      "bareme": [
+        { "critere": "Acier, résistance : S ≥ 20 000 × 2 / 235 ≈ 170 mm²", "points": 4 },
+        { "critere": "Acier, allongement : σ ≤ 105 MPa, S ≥ 190,5 mm², critère retenu", "points": 5 },
+        { "critere": "Diamètre ≈ 15,6 mm et coefficient de sécurité ≈ 2,24", "points": 3 },
+        { "critere": "Aluminium : 222 mm² en résistance, 571 mm² en allongement", "points": 4 },
+        { "critere": "Analyse : la déformation dimensionne les deux, surtout l'aluminium, trois fois moins raide", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Acier, résistance** : σ ≤ Re / s = 117,5 MPa, donc S ≥ 20 000 / 117,5 ≈ **170 mm²**. **Allongement** : ε ≤ 1 / 2 000 = 0,0005, donc σ ≤ E × ε = 210 000 × 0,0005 = 105 MPa, et S ≥ 20 000 / 105 ≈ **190,5 mm²**. On retient la plus grande : **190,5 mm²**.\n2. S = π × d² / 4, donc d = 2 × √(190,5 / π) ≈ 2 × 7,79 ≈ **15,6 mm** (on prendra 16 mm). Avec 190,5 mm², σ = 105 MPa et s = 235 / 105 ≈ **2,24** ≥ 2 : résistance vérifiée avec une marge supplémentaire.\n3. **Aluminium, résistance** : Re / s = 90 MPa, S ≥ 20 000 / 90 ≈ **222 mm²**. **Allongement** : σ ≤ 70 000 × 0,0005 = 35 MPa, S ≥ 20 000 / 35 ≈ **571 mm²**.\n4. Pour les deux matériaux, c'est l'**allongement** qui impose la section. Pour l'aluminium, l'écart est énorme (571 contre 222 mm²) : son module d'Young est **trois fois plus faible** que celui de l'acier, il est bien moins raide. Il faut trois fois plus de section que l'acier pour le même allongement. Une pièce peut donc résister largement et être refusée parce qu'elle se déforme trop."
+    },
+    {
+      "chapitre": "74fd445d-b1c3-5842-82ff-ddbbb0e39568",
+      "difficulte": 1,
+      "titre": "La réglette à plat ou sur chant",
+      "consigne": "Calcule les moments quadratiques et explique le comportement de la poutre avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Une réglette de section rectangulaire **30 mm × 10 mm** est posée sur deux appuis et chargée en son milieu, vers le bas.\n\n1. Calcule son moment quadratique quand elle est posée **sur chant** (hauteur h = 30 mm), puis **à plat** (h = 10 mm).\n2. Par combien le moment quadratique est-il multiplié quand on passe de à plat à sur chant ? Relie ce résultat au rapport des dimensions.\n3. Dans la réglette fléchie, quelles fibres sont tendues, lesquelles sont comprimées, et où la contrainte est-elle nulle ?",
+      "bareme": [
+        { "critere": "I sur chant = 10 × 30³ / 12 = 22 500 mm⁴ et I à plat = 30 × 10³ / 12 = 2 500 mm⁴", "points": 8 },
+        { "critere": "Rapport 9 = (30 / 10)², expliqué par la hauteur au cube", "points": 6 },
+        { "critere": "Fibres du bas tendues, du haut comprimées, contrainte nulle sur la fibre neutre", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Sur chant : b = 10 mm, h = 30 mm, I = b × h³ / 12 = 10 × 27 000 / 12 = **22 500 mm⁴**. À plat : b = 30 mm, h = 10 mm, I = 30 × 1 000 / 12 = **2 500 mm⁴**.\n2. 22 500 / 2 500 = **9**. La hauteur compte au cube et la base à la puissance 1 : tourner la réglette multiplie I par le carré du rapport hauteur / largeur, (30 / 10)² = 9. Sur chant, elle pliera beaucoup moins.\n3. Pour une poutre sur deux appuis chargée vers le bas : **fibres du haut comprimées**, **fibres du bas tendues**, et **contrainte nulle sur la fibre neutre** ; elle est maximale sur les fibres extrêmes."
+    },
+    {
+      "chapitre": "74fd445d-b1c3-5842-82ff-ddbbb0e39568",
+      "difficulte": 2,
+      "titre": "L'étagère en console",
+      "consigne": "Suis la méthode du cours : moment fléchissant, section, résistance, puis flèche. Conclus sur chaque exigence.",
+      "enonce": "**Situation.** Une étagère d'atelier repose sur des consoles en acier encastrées dans le mur. Chaque console a une longueur **L = 400 mm** et une section rectangulaire **10 mm × 40 mm**, posée sur chant (h = 40 mm). Elle porte au bout une charge **F = 500 N**. Acier : **E = 210 000 MPa**, **Re = 235 MPa**, coefficient de sécurité **s = 2**. La flèche en bout ne doit pas dépasser **1 mm**.\n\n1. Calcule le moment fléchissant maximal.\n2. Calcule le moment quadratique et la distance v.\n3. Calcule la contrainte maximale et vérifie la résistance.\n4. Calcule la flèche en bout de console et vérifie l'exigence.",
+      "bareme": [
+        { "critere": "Mf max = F × L = 200 000 N·mm", "points": 4 },
+        { "critere": "I ≈ 53 333 mm⁴ et v = 20 mm", "points": 4 },
+        { "critere": "σ max = 75 MPa ≤ 117,5 MPa, résistance vérifiée", "points": 6 },
+        { "critere": "Flèche ≈ 0,95 mm ≤ 1 mm, exigence respectée de peu", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Console encastrée chargée au bout : Mf max = F × L = 500 × 400 = **200 000 N·mm**.\n2. I = b × h³ / 12 = 10 × 40³ / 12 = 640 000 / 12 ≈ **53 333 mm⁴** ; v = h / 2 = **20 mm**.\n3. σ max = Mf × v / I = 200 000 × 20 / 53 333 ≈ **75 MPa**. Contrainte admissible : 235 / 2 = 117,5 MPa. 75 ≤ 117,5 : **résistance vérifiée**.\n4. Flèche = F × L³ / (3 × E × I) = 500 × 400³ / (3 × 210 000 × 53 333) = 3,2 × 10¹⁰ / 3,36 × 10¹⁰ ≈ **0,95 mm**. 0,95 ≤ 1 mm : **exigence respectée, mais de justesse**."
+    },
+    {
+      "chapitre": "74fd445d-b1c3-5842-82ff-ddbbb0e39568",
+      "difficulte": 3,
+      "titre": "La passerelle de l'atelier",
+      "consigne": "Vérifie la résistance et la déformation dans chaque configuration, puis analyse les résultats.",
+      "enonce": "**Situation.** Une passerelle de service est portée par une poutre en aluminium posée sur deux appuis simples, de portée **L = 2 m**, chargée en son milieu par **F = 2 000 N**. Section rectangulaire **30 mm × 80 mm**. Aluminium : **E = 70 000 MPa**, **Re = 180 MPa**, coefficient de sécurité **s = 2**. La flèche ne doit pas dépasser **L / 500**.\n\n1. Calcule le moment fléchissant maximal.\n2. La poutre est posée sur chant (h = 80 mm). Calcule I, v, la contrainte maximale et la flèche. Conclus sur les deux exigences.\n3. Un monteur la pose à plat (h = 30 mm). Refais les calculs et conclus.\n4. On veut allonger la passerelle à **4 m** avec la même poutre sur chant et la même charge. Sans tout recalculer, que devient la flèche ? Conclus.",
+      "bareme": [
+        { "critere": "Mf max = F × L / 4 = 1 000 000 N·mm", "points": 3 },
+        { "critere": "Sur chant : I = 1 280 000 mm⁴, σ ≈ 31 MPa ≤ 90 MPa, flèche ≈ 3,7 mm ≤ 4 mm", "points": 6 },
+        { "critere": "À plat : I = 180 000 mm⁴, σ ≈ 83 MPa (résiste), flèche ≈ 26,5 mm (refusée)", "points": 5 },
+        { "critere": "Portée doublée : flèche × 8 ≈ 29,8 mm > 8 mm, refus justifié par le cube de la portée", "points": 4 },
+        { "critere": "Conclusion distinguant résistance et déformation", "points": 2 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Deux appuis, charge au milieu : Mf max = F × L / 4 = 2 000 × 2 000 / 4 = **1 000 000 N·mm**.\n2. **Sur chant** : I = 30 × 80³ / 12 = **1 280 000 mm⁴** ; v = 40 mm ; σ = 1 000 000 × 40 / 1 280 000 ≈ **31 MPa** ≤ 180 / 2 = 90 MPa : résistance vérifiée. Flèche = F × L³ / (48 × E × I) = 2 000 × 2 000³ / (48 × 70 000 × 1 280 000) = 1,6 × 10¹³ / 4,3 × 10¹² ≈ **3,7 mm** ≤ 2 000 / 500 = 4 mm : exigence respectée.\n3. **À plat** : I = 80 × 30³ / 12 = **180 000 mm⁴** ; v = 15 mm ; σ = 1 000 000 × 15 / 180 000 ≈ **83 MPa** ≤ 90 MPa : elle **résiste**. Flèche = 1,6 × 10¹³ / (48 × 70 000 × 180 000) ≈ **26,5 mm** ≫ 4 mm : **refusée**. Elle ne casse pas, mais elle plie beaucoup trop.\n4. La flèche croît comme le **cube de la portée** : doubler L la multiplie par 8, soit 3,7 × 8 ≈ **29,8 mm**, alors que la limite devient 4 000 / 500 = 8 mm : **refusé**. (La contrainte, elle, double seulement : environ 62,5 MPa, encore acceptable.)\n\nConclusion : une poutre peut résister sans rompre et être refusée à cause de sa flèche ; c'est la déformation qui décide ici."
+    }
+  ]
+}

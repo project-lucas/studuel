@@ -1,0 +1,2816 @@
+{
+ "niveau": "Tle",
+ "matiere": "histoire-geo-techno",
+ "exercices": [
+  {
+   "chapitre": "7cd54376-4d45-569b-a50b-811a607d4305",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois points d’appui de la France",
+   "competence": "lire-carte",
+   "situation": "Un élève prépare un exposé sur l’influence française. Il repère sur une carte trois lieux qui illustrent trois leviers : le militaire, le culturel et la diplomatie.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "De Paris au golfe Persique",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -15,
+      0,
+      70,
+      58
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "paris"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lon": 43.15,
+       "lat": 11.59
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lon": 54.37,
+       "lat": 24.45
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le lieu de la base militaire française installée à l’entrée de la mer Rouge, à Djibouti.",
+     "aide": "Djibouti est en Afrique de l’Est, sur le détroit qui ferme la mer Rouge.",
+     "explication": "La base de **Djibouti** est au bord du détroit de Bab-el-Mandeb, à l’entrée sud de la mer Rouge : c’est un appui militaire de la France."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la ville des Émirats arabes unis où le Louvre a ouvert un musée en 2017.",
+     "aide": "Les Émirats sont au bord du golfe Persique, à l’est de l’Arabie.",
+     "explication": "**Abou Dhabi** accueille le Louvre Abu Dhabi depuis 2017 : un exemple de rayonnement culturel."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la ville qui accueille le siège de l’UNESCO et de l’OCDE.",
+     "aide": "C’est la capitale de la France.",
+     "explication": "**Paris** accueille l’UNESCO et l’OCDE : les organisations internationales renforcent son attractivité."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Base de Djibouti",
+       "Levier militaire"
+      ],
+      [
+       "Louvre Abu Dhabi",
+       "Levier culturel"
+      ],
+      [
+       "Siège de l’UNESCO",
+       "Organisation accueillie à Paris"
+      ]
+     ],
+     "enonce": "Associe chaque lieu de la carte au levier ou à la fonction qu’il illustre.",
+     "aide": "Une base, un musée, un siège d’organisation : trois domaines différents.",
+     "explication": "Djibouti : **militaire** ; Louvre Abu Dhabi : **culturel** ; UNESCO : une **organisation internationale** accueillie à Paris."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cd54376-4d45-569b-a50b-811a607d4305",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Première destination du monde",
+   "competence": "lire-graphique",
+   "situation": "Un élève compare le nombre de touristes internationaux reçus par cinq pays en 2024, pour mesurer l’attractivité de la France.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Touristes internationaux en 2024",
+     "source": "Ordres de grandeur arrondis, 2024.",
+     "categories": [
+      "France",
+      "Espagne",
+      "États-Unis",
+      "Turquie",
+      "Italie"
+     ],
+     "series": [
+      {
+       "nom": "Touristes",
+       "valeurs": [
+        100,
+        94,
+        72,
+        61,
+        57
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Touristes internationaux",
+      "unite": "en millions",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Pays"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre du pays qui accueille le plus de touristes internationaux.",
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "La **France** arrive en tête, avec environ 100 millions de touristes internationaux."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "millions",
+     "tolerance": 1,
+     "enonce": "De combien de millions de touristes la France dépasse-t-elle l’Espagne ?",
+     "aide": "Soustrais la valeur de l’Espagne à celle de la France.",
+     "explication": "Environ 100 − 94 = **6 millions** : l’Espagne suit de près."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien de ces cinq pays sont membres de l’Union européenne ?",
+     "aide": "Écarte les États-Unis et la Turquie.",
+     "explication": "La France, l’Espagne et l’Italie : **3 pays** sur 5 sont membres de l’Union européenne."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La France est en tête, mais l’Espagne la suit de près",
+      "La France reçoit moins de visiteurs que l’Italie ou la Turquie",
+      "Les États-Unis accueillent deux fois plus de touristes que la France",
+      "Les cinq pays reçoivent à peu près autant de touristes chacun"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle phrase résume le mieux ce graphique ?",
+     "aide": "Compare la barre de la France à toutes les autres.",
+     "explication": "La France domine, mais l’Espagne est à **6 millions** seulement : la concurrence est vive."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cd54376-4d45-569b-a50b-811a607d4305",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une puissance de 1 % du monde",
+   "competence": "analyser-document",
+   "situation": "Un élève croise une note de synthèse et un tableau sur les zones économiques exclusives pour expliquer comment un pays de 1 % de la population mondiale pèse dans le monde.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les cinq plus grandes ZEE",
+     "source": "Ordres de grandeur arrondis à l’unité.",
+     "colonnes": [
+      "Pays",
+      "ZEE (millions de km²)"
+     ],
+     "lignes": [
+      [
+       "États-Unis",
+       11
+      ],
+      [
+       "France",
+       10
+      ],
+      [
+       "Australie",
+       8
+      ],
+      [
+       "Russie",
+       8
+      ],
+      [
+       "Royaume-Uni",
+       7
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de synthèse",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "La France ne compte qu’environ 1 % de la population mondiale. Pourtant, elle siège au Conseil de sécurité de l’ONU, sa langue est parlée par environ 320 millions de personnes et elle possède des territoires sur tous les océans.",
+      "Depuis 2022, son influence recule en Afrique de l’Ouest, mais elle s’appuie davantage sur l’[[u|Union]] européenne pour peser face aux autres puissances."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "unite": "%",
+     "tolerance": 1,
+     "enonce": "La France pèse quelle part, en %, de la ZEE cumulée de ces cinq pays (arrondi à l’unité) ?",
+     "aide": "Additionne d’abord les cinq valeurs, puis divise 10 par le total.",
+     "explication": "Le total est 11 + 10 + 8 + 8 + 7 = 44. Puis 10 ÷ 44 ≈ 0,23 : environ **23 %**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Ses territoires d’outre-mer, présents sur tous les océans",
+      "Sa métropole, plus vaste que celle des États-Unis eux-mêmes",
+      "Sa flotte de pêche, la plus importante de toute la planète",
+      "Ses fleuves, qui s’ouvrent sur plusieurs océans différents"
+     ],
+     "reponse": 0,
+     "enonce": "Qu’est-ce qui explique qu’un pays de 1 % de la population mondiale ait la 2e ZEE ?",
+     "aide": "Lis la note : où la France possède-t-elle des territoires ?",
+     "explication": "Grâce aux **outre-mer**, répartis dans l’Atlantique, le Pacifique et l’océan Indien, la France a une ZEE immense."
+    },
+    {
+     "type": "zone",
+     "document": "note",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le mot du texte qui désigne le cadre collectif renforçant l’influence de la France.",
+     "aide": "Cherche la fin de la note : un mot commence par une majuscule.",
+     "explication": "L’**Union** européenne démultiplie le poids de la France face aux autres puissances."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Rayonnement",
+      "Influence",
+      "Attractivité"
+     ],
+     "items": [
+      [
+       "Un lycée français à l’étranger accueille des élèves du pays",
+       0
+      ],
+      [
+       "Un étudiant étranger choisit de faire ses études à Lyon",
+       2
+      ],
+      [
+       "La France pèse sur le vote d’une résolution de l’ONU",
+       1
+      ],
+      [
+       "Les Instituts français font connaître la culture française",
+       0
+      ],
+      [
+       "Les Jeux de Paris 2024 attirent des millions de visiteurs",
+       2
+      ],
+      [
+       "Un accord international est orienté par la position française",
+       1
+      ]
+     ],
+     "enonce": "Range chaque exemple dans la notion qu’il illustre.",
+     "aide": "Faire connaître, orienter des décisions ou attirer sur son territoire ?",
+     "explication": "**Rayonnement** : se faire connaître (lycées, Instituts). **Influence** : orienter les décisions. **Attractivité** : attirer sur son territoire (étudiants, JO)."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e413b21-b150-543c-a667-353b798852b9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi tirer près de l’équateur ?",
+   "competence": "lire-carte",
+   "situation": "Un élève observe trois points sur une carte où l’équateur est tracé, pour comprendre pourquoi l’Europe lance ses fusées depuis la Guyane.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux, un équateur",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -65,
+      -12,
+      15,
+      56
+     ],
+     "reperes": true,
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "paris"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lieu": "kourou"
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "dakar"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le point le plus proche de l’équateur : c’est celui de Kourou, en Guyane.",
+     "aide": "Repère la ligne de l’équateur et cherche le point le plus proche.",
+     "explication": "**Kourou** est à environ 5° de latitude nord, tout près de l’équateur."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Vers l’est, au-dessus de l’océan Atlantique",
+      "Vers l’ouest, au-dessus de la forêt amazonienne",
+      "Vers le sud, au-dessus de la Guyane",
+      "Vers le nord, au-dessus des Caraïbes"
+     ],
+     "reponse": 0,
+     "enonce": "Dans quelle direction part une fusée tirée de Kourou pour profiter de la rotation de la Terre ?",
+     "aide": "Regarde la carte : que trouve-t-on à l’est de Kourou ?",
+     "explication": "Les fusées partent vers l’**est**, dans le sens de rotation de la Terre, et survolent l’Atlantique, loin des habitations."
+    },
+    {
+     "type": "trous",
+     "texte": "Le centre spatial de Kourou se trouve en ___, un territoire français d’Amérique du Sud, à environ 5° de latitude ___.",
+     "reponses": [
+      [
+       "Guyane"
+      ],
+      [
+       "nord"
+      ]
+     ],
+     "banque": [
+      "Guyane",
+      "Martinique",
+      "nord",
+      "sud"
+     ],
+     "enonce": "Complète la phrase avec les bons mots.",
+     "aide": "Kourou est au-dessus de l’équateur, sur la côte d’Amérique du Sud.",
+     "explication": "Kourou est en **Guyane**, à environ 5° de latitude **nord**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e413b21-b150-543c-a667-353b798852b9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Soixante ans de fusées",
+   "competence": "se-reperer-temps",
+   "situation": "Un élève place sur une frise les grandes étapes du centre spatial de Kourou, de 1964 à 2024, pour comprendre la place de la Russie et de l’Europe.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Kourou, de 1964 à 2024",
+     "source": "Dates exactes.",
+     "debut": 1960,
+     "fin": 2030,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "soyouz",
+       "debut": 2011,
+       "fin": 2022,
+       "nom": "Soyouz"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "site",
+       "date": 1964,
+       "nom": "Choix du site"
+      },
+      {
+       "id": "ariane1",
+       "date": 1979,
+       "nom": "Ariane 1"
+      },
+      {
+       "id": "ariane5",
+       "date": 1996,
+       "nom": "Ariane 5"
+      },
+      {
+       "id": "ariane6",
+       "date": 2024,
+       "nom": "Ariane 6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 15,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le choix du site de Kourou du premier vol d’Ariane 1 ?",
+     "aide": "Lis les deux dates sur la frise, puis soustrais.",
+     "explication": "Le site est choisi en 1964 et Ariane 1 vole en 1979 : **15 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "soyouz"
+     ],
+     "enonce": "Touche la période pendant laquelle des fusées russes Soyouz ont décollé de Kourou.",
+     "aide": "Cherche la bande qui s’étend sur plus d’une décennie.",
+     "explication": "Les **Soyouz** ont décollé de Kourou de 2011 à 2022."
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "unite": "ans",
+     "enonce": "Pendant combien d’années des Soyouz ont-ils décollé de Kourou ?",
+     "aide": "Soustrais l’année de début à l’année de fin de la période.",
+     "explication": "2022 − 2011 = **11 ans** de coopération avec la Russie."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La guerre en Ukraine met fin à la coopération avec la Russie",
+      "Le CNES interdit tous les lanceurs venus de l’étranger",
+      "Ariane 6 prend aussitôt la place des Soyouz à Kourou",
+      "La Guyane refuse désormais les lancements de fusées russes"
+     ],
+     "reponse": 0,
+     "enonce": "Comment s’explique la fin de la période Soyouz en 2022 ?",
+     "aide": "Pense à l’événement international de 2022 qui a rompu des coopérations.",
+     "explication": "La **guerre en Ukraine** a mis fin à la coopération. Ariane 6 n’a volé qu’en 2024 : il y a un intervalle."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e413b21-b150-543c-a667-353b798852b9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le spatial et la Guyane : deux réalités",
+   "competence": "analyser-document",
+   "situation": "Un élève croise un graphique sur la richesse de la Guyane et un reportage imaginé sur le mouvement social de 2017, pour comprendre les limites d’un moteur économique.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "D’où vient la richesse produite en Guyane ?",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "Spatial",
+      "Autres activités"
+     ],
+     "series": [
+      {
+       "nom": "Part de la richesse",
+       "valeurs": [
+        15,
+        85
+       ]
+      }
+     ]
+    },
+    {
+     "id": "repo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Reportage, mars 2017",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Dans les rues de Cayenne et de Kourou, des habitants bloquent les routes. Ils réclament plus d’écoles, d’hôpitaux et d’emplois, et dénoncent le chômage des jeunes.",
+      "Le mouvement gêne l’accès au centre spatial : un [[l|lancement]] d’Ariane est retardé."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 85,
+     "unite": "%",
+     "enonce": "Quelle part de la richesse de la Guyane, en %, ne vient pas du spatial ?",
+     "aide": "Le graphique est un camembert : les deux parts font 100 %.",
+     "explication": "100 − 15 = **85 %** : le spatial pèse beaucoup, mais il est loin de faire vivre tout le territoire."
+    },
+    {
+     "type": "zone",
+     "document": "repo",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot du reportage qui montre que le mouvement social a des effets sur le centre spatial.",
+     "aide": "Cherche ce que fait Ariane et qui est retardé.",
+     "explication": "Le **lancement** est retardé : les difficultés sociales de la Guyane pèsent sur la base."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le spatial est un moteur économique, mais il ne règle pas les difficultés sociales",
+      "Le spatial fait vivre toute la Guyane et supprime le chômage des jeunes",
+      "Le mouvement de 2017 n’a aucun lien avec le centre spatial guyanais",
+      "La Guyane produit plus de richesse avec la forêt qu’avec le spatial"
+     ],
+     "reponse": 0,
+     "enonce": "Que disent ensemble les deux documents ?",
+     "aide": "Un secteur peut peser lourd sans profiter à tout le monde.",
+     "explication": "Le spatial pèse environ 15 % de la richesse, mais la Guyane reste marquée par le chômage et le manque d’équipements."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Atouts de Kourou",
+      "Difficultés de la Guyane"
+     ],
+     "items": [
+      [
+       "Proximité de l’équateur",
+       0
+      ],
+      [
+       "Ouverture sur l’océan à l’est",
+       0
+      ],
+      [
+       "Chômage élevé",
+       1
+      ],
+      [
+       "Manque d’équipements publics",
+       1
+      ],
+      [
+       "Zone faiblement peuplée",
+       0
+      ],
+      [
+       "Blocage du territoire en 2017",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément dans la bonne colonne.",
+     "aide": "Un atout aide le lancement ; une difficulté pèse sur la vie des habitants.",
+     "explication": "**Atouts** : équateur, océan, peu d’habitants. **Difficultés** : chômage, équipements insuffisants, blocage de 2017."
+    }
+   ]
+  },
+  {
+   "chapitre": "7bae7608-1aca-518b-8afe-f32605c3e9fe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "À l’est de Paris",
+   "competence": "lire-carte",
+   "situation": "Un élève repère sur une carte de l’Île-de-France trois lieux pour situer Disneyland Paris par rapport à la capitale.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Autour de Paris",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "cadrage": [
+      0.8,
+      47.8,
+      4.4,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "paris"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lon": 2.78,
+       "lat": 48.87
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "versailles"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche Paris, première destination touristique du monde.",
+     "aide": "C’est la plus grande ville de la carte.",
+     "explication": "**Paris** attire des millions de touristes : cette renommée a aidé Disney à choisir la France."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le site de Disneyland Paris, en bordure de la ville nouvelle de Marne-la-Vallée.",
+     "aide": "Marne-la-Vallée est une ville nouvelle créée à la périphérie de la capitale.",
+     "explication": "**Disneyland Paris** est installé à Marne-la-Vallée, sur le site repéré par le point B."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "À l’est de la capitale, à une trentaine de kilomètres",
+      "À l’ouest de la capitale, près de Versailles, à 20 km",
+      "Au nord de la capitale, à côté de l’aéroport de Roissy",
+      "Au sud de la capitale, à proximité de l’aéroport d’Orly"
+     ],
+     "reponse": 0,
+     "enonce": "Où se trouve Disneyland Paris par rapport à Paris ?",
+     "aide": "Compare la position de B avec celle de A sur la carte.",
+     "explication": "Disneyland Paris est à l’**est** de Paris, à environ 30 km, le long de l’autoroute A4 et du RER A."
+    }
+   ]
+  },
+  {
+   "chapitre": "7bae7608-1aca-518b-8afe-f32605c3e9fe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi Disney choisit la France",
+   "competence": "analyser-document",
+   "situation": "Un élève lit une note sur le choix du site européen de Disney et la replace sur une frise.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de travail",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Au milieu des années 1980, Disney cherche un site pour son parc européen et hésite entre la France et l’Espagne. La région parisienne l’emporte : elle est au centre de l’Europe occidentale et Paris est la première destination touristique du monde.",
+      "En 1987, l’État signe un accord : il cède des terrains à prix avantageux et prolonge le [[t|RER]] et l’[[t|autoroute]] jusqu’au site."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du contrat à l’ouverture",
+     "source": "Dates exactes.",
+     "debut": 1985,
+     "fin": 2005,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "accord",
+       "date": 1987,
+       "nom": "Accord avec l’État"
+      },
+      {
+       "id": "ouv",
+       "date": 1992,
+       "nom": "Ouverture du parc"
+      },
+      {
+       "id": "tgv",
+       "date": 1994,
+       "nom": "Gare TGV"
+      },
+      {
+       "id": "p2",
+       "date": 2002,
+       "nom": "Second parc"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "note",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux moyens de transport que l’État s’engage à prolonger jusqu’au site.",
+     "aide": "Cherche dans le second paragraphe : un transport sur rails et une route.",
+     "explication": "Le **RER** et l’**autoroute** : l’accessibilité du site est un atout décisif."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’accord avec l’État de l’ouverture du parc ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "L’accord est de 1987 et le parc ouvre en 1992 : **5 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "tgv"
+     ],
+     "enonce": "Touche l’événement qui relie le site au réseau à grande vitesse européen.",
+     "aide": "Cherche le nom d’un train.",
+     "explication": "La **gare TGV** de Marne-la-Vallée-Chessy (1994) relie le site à Roissy et aux grandes villes."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’État cède des terrains à bon prix et prolonge le RER et l’autoroute",
+      "L’État finance seul le parc et en devient le propriétaire unique",
+      "Disney renonce à la France et choisit finalement l’Espagne voisine",
+      "L’État interdit aux visiteurs étrangers d’entrer dans le grand parc"
+     ],
+     "reponse": 0,
+     "enonce": "Que contient l’accord de 1987 d’après la note ?",
+     "aide": "Relis le second paragraphe de la note.",
+     "explication": "L’État apporte des **terrains avantageux** et des **transports** : c’est un aménagement mené avec une entreprise privée."
+    }
+   ]
+  },
+  {
+   "chapitre": "7bae7608-1aca-518b-8afe-f32605c3e9fe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un parc, deux avis",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent des effets de Disneyland Paris sur son territoire. Un élève croise leurs messages avec des chiffres arrondis.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Disneyland Paris en chiffres",
+     "source": "Ordres de grandeur arrondis, années 2020.",
+     "colonnes": [
+      "Donnée",
+      "Ordre de grandeur"
+     ],
+     "lignes": [
+      [
+       "Visites par an",
+       "environ 15 millions"
+      ],
+      [
+       "Salariés",
+       "environ 17 000"
+      ],
+      [
+       "Chambres dans les hôtels Disney",
+       "environ 6 000"
+      ],
+      [
+       "Parcs",
+       "2"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Le parc, c’est énorme : environ 17 000 personnes y travaillent !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Oui, mais beaucoup d’emplois sont précaires ou saisonniers."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Et il a fallu [[a|artificialiser]] des terres agricoles de la Brie pour le construire."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Mais tout un quartier s’est développé autour : Val d’Europe, commerces, logements."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 41000,
+     "unite": "visites",
+     "tolerance": 1000,
+     "enonce": "En moyenne, combien de visites par jour (année de 365 jours), arrondi au millier ?",
+     "aide": "Divise 15 millions par 365.",
+     "explication": "15 000 000 ÷ 365 ≈ 41 100 : environ **41 000 visites par jour**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Avantages",
+      "Limites"
+     ],
+     "items": [
+      [
+       "Environ 17 000 emplois",
+       0
+      ],
+      [
+       "Terres agricoles artificialisées",
+       1
+      ],
+      [
+       "Emplois précaires et saisonniers",
+       1
+      ],
+      [
+       "Quartier Val d’Europe aménagé autour du parc",
+       0
+      ],
+      [
+       "Recettes touristiques pour la France",
+       0
+      ],
+      [
+       "Pertes financières des années 1990",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément dans la bonne colonne.",
+     "aide": "Un avantage profite au territoire ; une limite est un coût ou une critique.",
+     "explication": "**Avantages** : emplois, Val d’Europe, recettes. **Limites** : terres artificialisées, précarité, débuts déficitaires."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui désigne la transformation de terres agricoles en terrains construits.",
+     "aide": "Cherche dans le message de Camille un verbe commençant par « a ».",
+     "explication": "**Artificialiser** des terres, c’est les recouvrir de bâtiments et de routes : c’est l’une des limites du projet."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Beaucoup de ces emplois sont précaires ou saisonniers",
+      "Ces emplois sont tous réservés à des travailleurs étrangers",
+      "Ces emplois sont peu nombreux par rapport aux visiteurs",
+      "Ces emplois ne sont pas rémunérés par le parc lui-même"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle limite Yanis oppose-t-il à l’enthousiasme de Camille sur l’emploi ?",
+     "aide": "Relis la première réponse de Yanis.",
+     "explication": "Yanis rappelle que les emplois sont souvent **précaires ou saisonniers** : le chiffre de 17 000 cache des situations inégales."
+    }
+   ]
+  },
+  {
+   "chapitre": "69790aaf-30a7-57fc-b2c6-08bfcbb5557b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre passages du commerce mondial",
+   "competence": "lire-carte",
+   "situation": "Un élève repère sur un planisphère quatre lieux où se concentre le commerce maritime.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Ports et passages",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -5,
+      140,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "rotterdam"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lon": 32.55,
+       "lat": 29.97
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "singapour"
+      },
+      {
+       "id": "d",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail",
+       "lon": -79.55,
+       "lat": 9
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche Singapour, port situé à l’extrémité sud-est du détroit de Malacca.",
+     "aide": "Singapour est en Asie du Sud-Est, au sud de la péninsule malaise.",
+     "explication": "**Singapour** surveille la sortie du détroit de Malacca : c’est l’un des plus grands ports du monde."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le canal de Suez, qui relie la Méditerranée à la mer Rouge.",
+     "aide": "Il est en Égypte, à l’extrémité nord de la mer Rouge.",
+     "explication": "Le **canal de Suez** évite le tour de l’Afrique sur la route Asie-Europe."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le canal de Panama, qui relie l’Atlantique au Pacifique.",
+     "aide": "Il traverse l’Amérique centrale, entre les deux océans.",
+     "explication": "Le **canal de Panama** relie l’Atlantique au Pacifique à travers l’Amérique centrale."
+    }
+   ]
+  },
+  {
+   "chapitre": "69790aaf-30a7-57fc-b2c6-08bfcbb5557b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les géants du conteneur",
+   "competence": "lire-graphique",
+   "situation": "Un élève lit le classement de six grands ports à conteneurs pour voir où se concentrent les flux maritimes.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Trafic de conteneurs en 2023",
+     "source": "Ordres de grandeur arrondis, 2023.",
+     "categories": [
+      "Shanghai",
+      "Singapour",
+      "Ningbo-Zhoushan",
+      "Shenzhen",
+      "Busan",
+      "Rotterdam"
+     ],
+     "series": [
+      {
+       "nom": "Conteneurs",
+       "valeurs": [
+        49,
+        39,
+        35,
+        30,
+        23,
+        13
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Conteneurs manutentionnés",
+      "unite": "en millions d’EVP",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Port"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 39,
+     "unite": "millions",
+     "tolerance": 1,
+     "enonce": "Combien de millions de conteneurs (EVP) Singapour a-t-il traités ?",
+     "aide": "Lis la longueur de la barre de Singapour sur l’axe.",
+     "explication": "Singapour traite environ **39 millions d’EVP**."
+    },
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k5"
+     ],
+     "enonce": "Touche le seul port européen de la liste.",
+     "aide": "Parmi les six ports, un seul est au bord de la mer du Nord.",
+     "explication": "**Rotterdam** est le seul port européen, loin derrière les grands ports asiatiques."
+    },
+    {
+     "type": "nombre",
+     "reponse": 36,
+     "unite": "millions",
+     "tolerance": 2,
+     "enonce": "De combien de millions d’EVP Shanghai dépasse-t-il Rotterdam ?",
+     "aide": "Soustrais la valeur de Rotterdam à celle de Shanghai.",
+     "explication": "49 − 13 = **36 millions d’EVP**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les flux sont concentrés dans quelques grands ports, surtout asiatiques",
+      "Les flux sont répartis également entre tous les ports du monde",
+      "Les ports européens dominent le trafic mondial de conteneurs",
+      "Les ports asiatiques traitent moins de conteneurs que Rotterdam"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre ce classement sur les échanges maritimes ?",
+     "aide": "Observe où se trouvent les barres les plus longues.",
+     "explication": "Quatre ports asiatiques sur six : les échanges sont **mondiaux mais concentrés** sur quelques façades."
+    }
+   ]
+  },
+  {
+   "chapitre": "69790aaf-30a7-57fc-b2c6-08bfcbb5557b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand un passage se bloque",
+   "competence": "analyser-document",
+   "situation": "Un élève croise un tableau sur les passages stratégiques et un récit de deux perturbations récentes pour comprendre la vulnérabilité du commerce maritime.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quatre passages stratégiques",
+     "source": "Ordres de grandeur arrondis.",
+     "colonnes": [
+      "Passage",
+      "Ce qui le rend stratégique"
+     ],
+     "lignes": [
+      [
+       "Détroit de Malacca",
+       "environ un tiers du commerce mondial"
+      ],
+      [
+       "Détroit d’Ormuz",
+       "environ un cinquième du pétrole mondial"
+      ],
+      [
+       "Canal de Suez",
+       "environ 12 % du commerce mondial"
+      ],
+      [
+       "Canal de Panama",
+       "relie l’Atlantique et le Pacifique"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux perturbations",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le 23 mars 2021, l’*Ever Given*, un porte-conteneurs géant, s’échoue en travers du canal de Suez. Six jours plus tard, le trafic reprend, mais des centaines de navires ont attendu.",
+      "Fin 2023 et en 2024, des attaques en mer Rouge poussent de nombreux armateurs à [[c|contourner]] l’Afrique par le cap de Bonne-Espérance : le trafic de Suez chute."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "reponse": [
+      "Ormuz",
+      "Détroit d’Ormuz",
+      "le détroit d’Ormuz"
+     ],
+     "enonce": "Quel détroit voit passer environ un cinquième du pétrole mondial ? Écris son nom.",
+     "aide": "Regarde la deuxième ligne du tableau.",
+     "explication": "Le détroit d’**Ormuz**, à la sortie du golfe Persique, voit passer environ un cinquième du pétrole mondial."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "jours",
+     "enonce": "Pendant combien de jours le canal de Suez est-il resté bloqué en mars 2021 ?",
+     "aide": "Lis le premier paragraphe du récit.",
+     "explication": "Le trafic reprend **six jours** plus tard."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit ce que font les armateurs pour éviter la mer Rouge.",
+     "aide": "Cherche un verbe qui signifie « passer par un autre chemin ».",
+     "explication": "Les armateurs **contournent** l’Afrique : un détour long et coûteux."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Canal de Suez, 2021",
+       "Un porte-conteneurs s’échoue et bloque le passage"
+      ],
+      [
+       "Mer Rouge, 2024",
+       "Des attaques poussent à contourner l’Afrique"
+      ],
+      [
+       "Canal de Panama, 2023",
+       "La sécheresse ralentit le passage des navires"
+      ]
+     ],
+     "enonce": "Associe chaque passage à la perturbation qu’il a connue.",
+     "aide": "Un accident, un conflit, une sécheresse : trois causes différentes.",
+     "explication": "Suez 2021 : un **accident**. Mer Rouge 2024 : des **attaques**. Panama 2023 : la **sécheresse**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les flux se concentrent sur quelques passages : en bloquer un se ressent partout",
+      "Les navires peuvent toujours éviter un passage sans coût ni retard notable",
+      "Les canaux ne portent qu’une très faible part des marchandises du monde",
+      "Seul le canal de Panama pose des difficultés au commerce maritime mondial"
+     ],
+     "reponse": 0,
+     "enonce": "Que montrent ensemble les deux documents ?",
+     "aide": "Reprends les chiffres du tableau et les conséquences racontées.",
+     "explication": "Comme les flux passent par peu de passages, une seule perturbation a des **effets mondiaux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b07bcb52-3f52-560c-8c1d-c1d18cc74252",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chemin des câbles",
+   "competence": "lire-carte",
+   "situation": "Un élève observe sur une carte quelques câbles et points d’atterrage du réseau mondial.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quelques liaisons sous-marines",
+     "source": "Schéma simplifié : tracés indicatifs.",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      -5,
+      115,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "ny",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "new-york"
+      },
+      {
+       "id": "lo",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lieu": "londres"
+      },
+      {
+       "id": "ma",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "marseille"
+      },
+      {
+       "id": "al",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail",
+       "lieu": "alexandrie"
+      },
+      {
+       "id": "si",
+       "symbole": "lettre",
+       "lettre": "E",
+       "teinte": "corail",
+       "lieu": "singapour"
+      }
+     ],
+     "traits": [
+      {
+       "id": "atl",
+       "points": [
+        "new-york",
+        "londres"
+       ],
+       "style": "ligne",
+       "teinte": "ambre"
+      },
+      {
+       "id": "med",
+       "points": [
+        "marseille",
+        "alexandrie"
+       ],
+       "style": "ligne",
+       "teinte": "ambre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "atl"
+     ],
+     "enonce": "Touche la liaison qui traverse l’océan Atlantique.",
+     "aide": "Elle relie l’Amérique du Nord et l’Europe.",
+     "explication": "La liaison **New York – Londres** traverse l’Atlantique : c’est le couloir le plus dense de câbles."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "ma"
+     ],
+     "enonce": "Touche Marseille, grand point d’atterrage français.",
+     "aide": "Elle est sur la côte méditerranéenne de la France.",
+     "explication": "**Marseille** est un carrefour de plus de quinze câbles entre Europe, Afrique, Moyen-Orient et Asie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "si"
+     ],
+     "enonce": "Touche Singapour, étape du câble vers l’Asie de l’Est.",
+     "aide": "Elle est au sud de la péninsule malaise.",
+     "explication": "**Singapour** est un point d’atterrage majeur entre l’océan Indien et l’Asie de l’Est."
+    }
+   ]
+  },
+  {
+   "chapitre": "b07bcb52-3f52-560c-8c1d-c1d18cc74252",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le trajet d’un message",
+   "competence": "observer-schema",
+   "situation": "Lina, à Brest, envoie une photo à un ami installé aux États-Unis. Un élève reconstitue le trajet du message et identifie les acteurs du réseau.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Du smartphone au serveur",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "tel",
+       "texte": "Smartphone de Lina",
+       "emoji": "📱"
+      },
+      {
+       "id": "terre",
+       "texte": "Réseau terrestre",
+       "emoji": "🏙️"
+      },
+      {
+       "id": "inc",
+       "texte": "?"
+      },
+      {
+       "id": "cable",
+       "texte": "Câble sous-marin",
+       "emoji": "🌊"
+      },
+      {
+       "id": "serv",
+       "texte": "Serveur américain",
+       "emoji": "🖥️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "tel",
+       "a": "terre"
+      },
+      {
+       "de": "terre",
+       "a": "inc"
+      },
+      {
+       "de": "inc",
+       "a": "cable"
+      },
+      {
+       "de": "cable",
+       "a": "serv"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les acteurs des câbles",
+     "source": "Exemples réels.",
+     "colonnes": [
+      "Type d’acteur",
+      "Exemples"
+     ],
+     "lignes": [
+      [
+       "Opérateurs de télécommunications",
+       "Orange, AT&T"
+      ],
+      [
+       "Géants du numérique",
+       "Google, Meta"
+      ],
+      [
+       "Poseurs de câbles",
+       "Alcatel Submarine Networks (France), SubCom (États-Unis), NEC (Japon)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "options": [
+      "Un point d’atterrage sur la côte",
+      "Un satellite en orbite géostationnaire",
+      "Une antenne-relais au sommet d’une tour",
+      "Un navire câblier en pleine mer"
+     ],
+     "reponse": 0,
+     "enonce": "Que faut-il mettre à la place du « ? » entre le réseau terrestre et le câble sous-marin ?",
+     "aide": "Quel lieu fait passer le réseau de la terre à la mer ?",
+     "explication": "Le **point d’atterrage** est l’endroit où le câble sort de la mer et rejoint le réseau terrestre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "pays",
+     "enonce": "Combien de pays différents sont représentés parmi les trois grands poseurs de câbles du tableau ?",
+     "aide": "Lis les pays entre parenthèses dans la dernière ligne.",
+     "explication": "France, États-Unis, Japon : **3 pays**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Alcatel Submarine Networks",
+       "Fabrique et pose des câbles"
+      ],
+      [
+       "Google ou Meta",
+       "Financent une grande part des nouveaux câbles"
+      ],
+      [
+       "Un navire câblier",
+       "Répare les câbles rompus en mer"
+      ]
+     ],
+     "enonce": "Associe chaque acteur à son rôle.",
+     "aide": "Fabriquer, financer, réparer : trois métiers du réseau.",
+     "explication": "**Alcatel** pose les câbles, les **géants du numérique** les financent, les **navires câbliers** les réparent."
+    }
+   ]
+  },
+  {
+   "chapitre": "b07bcb52-3f52-560c-8c1d-c1d18cc74252",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tonga coupée du monde",
+   "competence": "analyser-document",
+   "situation": "Un élève étudie une coupure réelle de câble et la compare à trois territoires imaginés pour comprendre pourquoi certains sont plus vulnérables.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Janvier 2022",
+     "auteur": "Texte écrit pour l’exercice, d’après des faits réels",
+     "blocs": [
+      "En janvier 2022, une éruption volcanique sous-marine sectionne le câble [[u|unique]] qui relie l’archipel des Tonga au reste du monde. Pendant plusieurs semaines, les habitants n’ont presque plus de communications avec l’extérieur."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Nombre de câbles par territoire",
+     "source": "Territoires imaginés pour l’exercice.",
+     "colonnes": [
+      "Territoire",
+      "Câbles sous-marins"
+     ],
+     "lignes": [
+      [
+       "Île d’Alba",
+       1
+      ],
+      [
+       "Pays de Brava",
+       4
+      ],
+      [
+       "Pays de Corsa",
+       12
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi la coupure isole totalement les Tonga.",
+     "aide": "Cherche un adjectif qui dit qu’il n’y en a qu’un.",
+     "explication": "Les Tonga n’avaient qu’un câble **unique** : une seule rupture suffit à les isoler."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’Île d’Alba, qui dépend d’un seul câble",
+      "Le Pays de Brava, qui en compte quatre",
+      "Le Pays de Corsa, qui en compte douze",
+      "Aucun, tant qu’il possède au moins un câble"
+     ],
+     "reponse": 0,
+     "enonce": "Quel territoire du tableau est le plus exposé à une coupure totale de ses communications ?",
+     "aide": "Plus un territoire a de câbles, plus il a de solutions de secours.",
+     "explication": "L’**Île d’Alba** n’a qu’un câble, comme les Tonga : si ce câble casse, plus aucune liaison."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Accident",
+      "Catastrophe naturelle",
+      "Malveillance"
+     ],
+     "items": [
+      [
+       "Une ancre traînée sur le fond",
+       0
+      ],
+      [
+       "Un séisme au large de Taïwan (2006)",
+       1
+      ],
+      [
+       "Une éruption sous-marine",
+       1
+      ],
+      [
+       "Un chalut de pêche arraché au fond",
+       0
+      ],
+      [
+       "Des écoutes par des services de renseignement",
+       2
+      ],
+      [
+       "Un acte de sabotage délibéré",
+       2
+      ]
+     ],
+     "enonce": "Range chaque cause dans la bonne catégorie.",
+     "aide": "Sans intention, par la nature, ou à dessein ?",
+     "explication": "**Accidents** : ancres et chaluts. **Catastrophes naturelles** : séismes, éruptions. **Malveillance** : écoutes et sabotages."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Multiplier les câbles et les atterrages pour ne plus dépendre d’un seul",
+      "Poser un câble plus épais sur un seul trajet très court, sans secours",
+      "Attendre que les satellites remplacent tous les câbles du monde",
+      "Interdire la pêche dans tous les océans et toutes les mers"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle solution réduit le mieux le risque d’isolement d’un territoire ?",
+     "aide": "Le tableau montre le rôle du nombre de câbles.",
+     "explication": "Avec **plusieurs câbles et plusieurs atterrages**, une rupture ne coupe plus tout : c’est la réponse des États et des entreprises."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ea7951-c83d-588c-a5cb-c4d8d2d230b1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du pétrole du Golfe à l’Asie de l’Est",
+   "competence": "observer-schema",
+   "situation": "Un élève suit le trajet d’un pétrolier du golfe Persique jusqu’à l’Asie de l’Est, puis lit quelques chiffres sur le passage étroit qu’il emprunte.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Le trajet d’un pétrolier",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "golfe",
+       "texte": "Golfe Persique",
+       "emoji": "🛢️"
+      },
+      {
+       "id": "indien",
+       "texte": "Océan Indien",
+       "emoji": "🌊"
+      },
+      {
+       "id": "inc",
+       "texte": "?"
+      },
+      {
+       "id": "chine",
+       "texte": "Mer de Chine méridionale",
+       "emoji": "🌊"
+      },
+      {
+       "id": "asie",
+       "texte": "Ports d’Asie de l’Est",
+       "emoji": "🏭"
+      }
+     ],
+     "liens": [
+      {
+       "de": "golfe",
+       "a": "indien"
+      },
+      {
+       "de": "indien",
+       "a": "inc"
+      },
+      {
+       "de": "inc",
+       "a": "chine"
+      },
+      {
+       "de": "chine",
+       "a": "asie"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Le détroit de Malacca",
+     "source": "Ordres de grandeur arrondis.",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Longueur",
+       "environ 800 km"
+      ],
+      [
+       "Largeur minimale",
+       "environ 2,8 km"
+      ],
+      [
+       "Navires par an",
+       "environ 90 000"
+      ],
+      [
+       "Part du commerce mondial",
+       "près d’un tiers"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "options": [
+      "Le détroit de Malacca",
+      "Le détroit de Gibraltar",
+      "Le canal de Panama",
+      "Le détroit du Bosphore"
+     ],
+     "reponse": 0,
+     "enonce": "Quel passage met-on à la place du « ? » entre l’océan Indien et la mer de Chine méridionale ?",
+     "aide": "Le nom du détroit est le titre du tableau.",
+     "explication": "C’est le **détroit de Malacca**, entre la péninsule malaise et Sumatra."
+    },
+    {
+     "type": "nombre",
+     "reponse": 250,
+     "unite": "navires",
+     "tolerance": 5,
+     "enonce": "Combien de navires passent en moyenne chaque jour (arrondi à la dizaine) ?",
+     "aide": "Divise 90 000 par 365 jours.",
+     "explication": "90 000 ÷ 365 ≈ 247 : environ **250 navires par jour**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 40,
+     "unite": "heures",
+     "enonce": "Un navire avance à 20 km/h. Combien d’heures lui faut-il pour parcourir le détroit sur toute sa longueur ?",
+     "aide": "Divise la longueur par la vitesse.",
+     "explication": "800 ÷ 20 = **40 heures**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ea7951-c83d-588c-a5cb-c4d8d2d230b1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Contourner, surveiller, patrouiller",
+   "competence": "lire-carte",
+   "situation": "Un élève repère sur une carte d’Asie quatre lieux liés aux stratégies des États autour du détroit de Malacca.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Autour de Malacca",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      55,
+      -12,
+      125,
+      35
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "singapour"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lon": 62.33,
+       "lat": 25.12
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lon": 93.55,
+       "lat": 19.43
+      },
+      {
+       "id": "d",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail",
+       "lon": 92.74,
+       "lat": 11.62
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche Gwadar, port du Pakistan où la Chine investit pour contourner Malacca.",
+     "aide": "Gwadar est sur la côte pakistanaise de la mer d’Arabie, à l’ouest de l’Inde.",
+     "explication": "**Gwadar**, au Pakistan, est un port où la Chine investit pour éviter de tout faire passer par Malacca."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le point de la côte birmane d’où part un oléoduc vers la Chine.",
+     "aide": "La Birmanie est au nord-ouest de la Thaïlande, sur le golfe du Bengale.",
+     "explication": "Un **oléoduc birman** permet à la Chine de recevoir du pétrole sans passer par Malacca."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’archipel d’Andaman-et-Nicobar, d’où l’Inde surveille l’entrée ouest du détroit.",
+     "aide": "Cherche des îles dans le golfe du Bengale, à l’ouest de la péninsule malaise.",
+     "explication": "L’Inde surveille l’**entrée ouest** du détroit depuis les îles Andaman-et-Nicobar."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Chine",
+       "Contourner Malacca par oléoducs et ports"
+      ],
+      [
+       "États-Unis",
+       "Présence navale avec la 7e flotte"
+      ],
+      [
+       "Inde",
+       "Surveillance depuis les îles Andaman"
+      ],
+      [
+       "Indonésie, Malaisie, Singapour",
+       "Patrouilles communes"
+      ]
+     ],
+     "enonce": "Associe chaque acteur à sa stratégie autour de Malacca.",
+     "aide": "Contourner, garantir la navigation, surveiller, patrouiller ensemble.",
+     "explication": "**Chine** : contourner. **États-Unis** : 7e flotte. **Inde** : Andaman. **Pays riverains** : patrouilles communes."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ea7951-c83d-588c-a5cb-c4d8d2d230b1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dilemme de Malacca",
+   "competence": "analyser-document",
+   "situation": "Un élève croise une note imaginée sur la stratégie chinoise et un tableau des grands ports de la région.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note stratégique",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "À Pékin, on s’inquiète : en cas de crise, une flotte adverse pourrait fermer le détroit de Malacca, par où passe une grande part du pétrole importé par la Chine. Cette crainte porte un nom : le [[d|dilemme]] de Malacca.",
+      "Pour y répondre, la Chine construit des oléoducs à travers la Birmanie et investit dans le port de Gwadar, au Pakistan. Les pays riverains, eux, préfèrent sécuriser le détroit : l’Indonésie, la Malaisie, Singapour et la Thaïlande organisent des patrouilles communes."
+     ]
+    },
+    {
+     "id": "ports",
+     "type": "tableau",
+     "titre": "Trois ports du détroit",
+     "source": "Exemples réels.",
+     "colonnes": [
+      "Port",
+      "Pays",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Singapour",
+       "Singapour",
+       "Grand port de transbordement et de soutage"
+      ],
+      [
+       "Port Klang",
+       "Malaisie",
+       "Grand port desservant Kuala Lumpur"
+      ],
+      [
+       "Tanjung Pelepas",
+       "Malaisie",
+       "Port de transbordement concurrent de Singapour"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "note",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui nomme la crainte chinoise d’un blocage du détroit.",
+     "aide": "Cherche le nom de la crainte, juste avant « de Malacca ».",
+     "explication": "Le **dilemme** de Malacca : la Chine craint qu’un blocage coupe ses approvisionnements."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Contourner le détroit",
+      "Sécuriser le passage"
+     ],
+     "items": [
+      [
+       "Oléoducs à travers la Birmanie",
+       0
+      ],
+      [
+       "Port de Gwadar au Pakistan",
+       0
+      ],
+      [
+       "Patrouilles communes contre la piraterie",
+       1
+      ],
+      [
+       "Échange d’informations par un accord régional",
+       1
+      ],
+      [
+       "Nouvelles routes de la soie",
+       0
+      ],
+      [
+       "Présence d’une flotte pour la liberté de navigation",
+       1
+      ]
+     ],
+     "enonce": "Range chaque mesure dans la stratégie à laquelle elle appartient.",
+     "aide": "Éviter le détroit ou le protéger ?",
+     "explication": "**Contourner** : oléoducs, Gwadar, routes de la soie. **Sécuriser** : patrouilles, échange d’informations, présence navale."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "pays",
+     "enonce": "Combien de pays participent aux patrouilles communes d’après la note ?",
+     "aide": "Compte les pays cités dans le second paragraphe.",
+     "explication": "Indonésie, Malaisie, Singapour et Thaïlande : **4 pays**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Tanjung Pelepas",
+      "Port Klang (Malaisie)",
+      "Kuala Lumpur (capitale)",
+      "Gwadar (Pakistan)"
+     ],
+     "reponse": 0,
+     "enonce": "Quel port malaisien fait concurrence à Singapour comme port de transbordement ?",
+     "aide": "Lis la colonne « Rôle » du tableau.",
+     "explication": "**Tanjung Pelepas** est le port de transbordement concurrent de Singapour ; Port Klang dessert surtout Kuala Lumpur."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f14272f-45c0-5000-b80b-d94658fcc9a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du chancelier à la capitulation",
+   "competence": "se-reperer-temps",
+   "situation": "Un élève place sur une frise quatre repères de l’Europe des années 1930-1940.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1933 à 1945",
+     "source": "Dates exactes.",
+     "debut": 1932,
+     "fin": 1946,
+     "pas": 2,
+     "periodes": [
+      {
+       "id": "guerre",
+       "debut": 1939,
+       "fin": 1945,
+       "nom": "Guerre en Europe"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "hitler",
+       "date": 1933,
+       "nom": "Hitler chancelier"
+      },
+      {
+       "id": "pologne",
+       "date": 1939,
+       "nom": "Invasion Pologne"
+      },
+      {
+       "id": "urss",
+       "date": 1941,
+       "nom": "Attaque URSS"
+      },
+      {
+       "id": "norm",
+       "date": 1944,
+       "nom": "Débarquement"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "hitler"
+     ],
+     "enonce": "Touche l’événement qui place Hitler à la tête du gouvernement allemand.",
+     "aide": "Cherche le premier événement de la frise.",
+     "explication": "Hitler est nommé **chancelier** le 30 janvier 1933."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "pologne"
+     ],
+     "enonce": "Touche l’événement qui déclenche la guerre en Europe, le 1er septembre 1939.",
+     "aide": "Il ouvre la période « Guerre en Europe ».",
+     "explication": "L’**invasion de la Pologne** déclenche la Seconde Guerre mondiale en Europe."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’arrivée de Hitler au pouvoir du début de la guerre en Europe ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1939 − 1933 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "L’Allemagne attaque l’URSS, ancienne partenaire de 1939",
+      "Le Japon attaque les États-Unis à Pearl Harbor en Asie",
+      "Les Alliés débarquent en Normandie pour libérer Paris",
+      "La France signe un armistice avec l’Allemagne nazie"
+     ],
+     "reponse": 0,
+     "enonce": "Que représente l’événement de 1941 sur la frise ?",
+     "aide": "Le nom de l’événement parle d’un pays de l’Est.",
+     "explication": "Le **22 juin 1941**, l’Allemagne attaque l’URSS : la guerre s’étend à l’Est."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f14272f-45c0-5000-b80b-d94658fcc9a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux régimes, des traits communs",
+   "competence": "analyser-document",
+   "situation": "Un élève compare l’URSS de Staline et l’Allemagne de Hitler avec un tableau, puis trie des caractéristiques.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux régimes totalitaires",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "URSS de Staline",
+      "Allemagne de Hitler"
+     ],
+     "lignes": [
+      [
+       "Arrivée au pouvoir",
+       "Staline s’impose après la mort de Lénine, en 1924",
+       "Hitler est nommé chancelier le 30 janvier 1933"
+      ],
+      [
+       "Idéologie",
+       "Communisme : une société sans classes",
+       "Nazisme : racisme, antisémitisme, « espace vital »"
+      ],
+      [
+       "Violences",
+       "Collectivisation, goulag, Grande Terreur",
+       "Camps, lois de Nuremberg, Nuit de cristal"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "URSS de Staline",
+      "Allemagne nazie",
+      "Les deux régimes"
+     ],
+     "items": [
+      [
+       "Famine en Ukraine (1932-1933)",
+       0
+      ],
+      [
+       "Dachau, premier camp de concentration",
+       1
+      ],
+      [
+       "Parti unique et culte du chef",
+       2
+      ],
+      [
+       "Encadrement de la jeunesse et propagande",
+       2
+      ],
+      [
+       "Lois de Nuremberg (1935)",
+       1
+      ],
+      [
+       "Grande Terreur (1937-1938)",
+       0
+      ]
+     ],
+     "enonce": "Range chaque caractéristique dans la bonne colonne.",
+     "aide": "Un fait propre à un régime, ou un trait qu’on retrouve des deux côtés ?",
+     "explication": "Famine d’Ukraine et Grande Terreur : **URSS**. Dachau et Nuremberg : **Allemagne**. Parti unique, culte du chef, propagande : **les deux**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 9,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la mort de Lénine de la nomination de Hitler comme chancelier ?",
+     "aide": "Lis la ligne « Arrivée au pouvoir » du tableau.",
+     "explication": "Lénine meurt en 1924 et Hitler arrive en 1933 : **9 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le nazisme, par le racisme et l’antisémitisme",
+      "Le communisme, par la société sans classes",
+      "Le nazisme, par la collectivisation des terres",
+      "Le communisme, par les lois de Nuremberg"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle idéologie du tableau fonde la persécution des Juifs ?",
+     "aide": "Regarde la ligne « Idéologie », colonne par colonne.",
+     "explication": "L’idéologie nazie fait du **racisme et de l’antisémitisme** un principe d’État."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f14272f-45c0-5000-b80b-d94658fcc9a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Londres, Vichy, Varsovie",
+   "competence": "analyser-document",
+   "situation": "Un élève croise une carte de l’Europe et un carnet imaginé pour comprendre comment la guerre a divisé la France en 1940.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe en guerre",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      40,
+      40,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "londres"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lieu": "vichy"
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "varsovie"
+      }
+     ]
+    },
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Carnet d’un professeur",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Au printemps 1940, l’armée allemande écrase l’armée française. En juin, le maréchal Pétain demande l’armistice ; en juillet, il s’installe à [[v|Vichy]].",
+      "De Gaulle refuse la défaite et appelle à continuer le combat depuis l’étranger."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la capitale de la Pologne, dont l’invasion déclenche la guerre en 1939.",
+     "aide": "Elle est à l’est de l’Allemagne.",
+     "explication": "**Varsovie** est la capitale de la Pologne : son invasion, le 1er septembre 1939, déclenche la guerre."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Invasion de la Pologne par l’Allemagne",
+      "Armistice entre la France et l’Allemagne",
+      "Attaque allemande contre l’URSS",
+      "Victoire soviétique à Stalingrad"
+     ],
+     "enonce": "Range ces événements dans l’ordre chronologique.",
+     "aide": "Pologne 1939, France 1940, puis l’Est : 1941, 1943.",
+     "explication": "Pologne (**1939**), armistice (**1940**), attaque de l’URSS (**1941**), Stalingrad (**1943**)."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche dans le carnet la ville où s’installe le régime du maréchal Pétain.",
+     "aide": "Cherche un nom de ville dans le premier paragraphe.",
+     "explication": "Le régime de Pétain s’installe à **Vichy** : il pratique la collaboration avec l’Allemagne."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la ville d’où de Gaulle lance son appel du 18 juin 1940.",
+     "aide": "Elle est à l’ouest de l’Europe continentale, sur une île.",
+     "explication": "De Gaulle parle depuis **Londres**, sur la BBC."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Deux choix opposés : collaborer ou continuer le combat",
+      "Deux capitales alliées qui combattent côte à côte en 1940",
+      "Deux villes occupées par l’armée soviétique dès 1940",
+      "Deux sièges d’une même organisation internationale"
+     ],
+     "reponse": 0,
+     "enonce": "Que représentent Vichy et Londres en 1940 ?",
+     "aide": "Relie chaque ville à l’homme qui s’y installe ou qui y parle.",
+     "explication": "**Vichy** : le régime de Pétain, qui collabore. **Londres** : de Gaulle, qui refuse la défaite."
+    }
+   ]
+  },
+  {
+   "chapitre": "6838bbf0-752d-56e7-ace1-ddc14e1f08b2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois lieux de l’Est",
+   "competence": "lire-carte",
+   "situation": "Un élève place sur une carte de l’Europe centrale et orientale trois lieux liés à la guerre d’anéantissement et au génocide des Juifs.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Pologne et Ukraine, 1941-1945",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "cadrage": [
+      10,
+      44,
+      42,
+      58
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lon": 19.2,
+       "lat": 50.03
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lieu": "kiev"
+      },
+      {
+       "id": "c",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail",
+       "lieu": "varsovie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche Auschwitz-Birkenau, plus grand centre de mise à mort nazi, en Pologne occupée.",
+     "aide": "Il est au sud de la Pologne, près de Cracovie.",
+     "explication": "**Auschwitz-Birkenau** est le plus grand centre de mise à mort : environ 1,1 million de morts."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la ville près de laquelle a lieu le massacre de Babi Yar, en septembre 1941.",
+     "aide": "C’est la capitale de l’Ukraine.",
+     "explication": "**Kiev** : à Babi Yar, plus de 33 000 Juifs sont fusillés en deux jours."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche Varsovie, ville du plus grand ghetto d’Europe.",
+     "aide": "C’est la capitale de la Pologne.",
+     "explication": "**Varsovie** abrite le plus grand ghetto : un soulèvement éclate en avril 1943."
+    }
+   ]
+  },
+  {
+   "chapitre": "6838bbf0-752d-56e7-ace1-ddc14e1f08b2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la fusillade à la « solution finale »",
+   "competence": "analyser-document",
+   "situation": "Un élève place des repères sur une frise, puis associe trois formes de la persécution à des lieux.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1941 à 1945",
+     "source": "Dates exactes.",
+     "debut": 1940,
+     "fin": 1946,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "barb",
+       "date": 1941,
+       "nom": "Barbarossa"
+      },
+      {
+       "id": "wann",
+       "date": 1942,
+       "nom": "Wannsee"
+      },
+      {
+       "id": "sou",
+       "date": 1943,
+       "nom": "Soulèvement du ghetto"
+      },
+      {
+       "id": "lib",
+       "date": 1945,
+       "nom": "Libération d’Auschwitz"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois formes de violence",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Forme",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Ghettos",
+       "Enfermement dans des quartiers clos, faim et épidémies"
+      ],
+      [
+       "Fusillades de masse",
+       "Tueries derrière le front par des unités mobiles"
+      ],
+      [
+       "Centres de mise à mort",
+       "Déportation, puis mort dans des chambres à gaz"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "wann"
+     ],
+     "enonce": "Touche l’événement du 20 janvier 1942 qui organise la déportation des Juifs d’Europe.",
+     "aide": "C’est un nom de lieu près de Berlin, et non un combat.",
+     "explication": "La conférence de **Wannsee** coordonne la « solution finale » : la déportation vers les centres de mise à mort."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le début de l’opération Barbarossa de la libération d’Auschwitz ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1945 − 1941 = **4 ans**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Ghetto",
+      "Fusillades de masse",
+      "Centre de mise à mort"
+     ],
+     "items": [
+      [
+       "Łódź",
+       0
+      ],
+      [
+       "Babi Yar",
+       1
+      ],
+      [
+       "Treblinka",
+       2
+      ],
+      [
+       "Varsovie (quartier fermé)",
+       0
+      ],
+      [
+       "Chełmno",
+       2
+      ],
+      [
+       "Massacre près de Kiev",
+       1
+      ]
+     ],
+     "enonce": "Range chaque lieu dans la forme de violence qui lui correspond.",
+     "aide": "Un quartier clos, une fusillade ou un centre équipé de chambres à gaz ?",
+     "explication": "**Ghettos** : Łódź, Varsovie. **Fusillades** : Babi Yar, près de Kiev. **Centres** : Treblinka, Chełmno."
+    }
+   ]
+  },
+  {
+   "chapitre": "6838bbf0-752d-56e7-ace1-ddc14e1f08b2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des chiffres qui racontent",
+   "competence": "lire-graphique",
+   "situation": "Un élève lit des bilans humains de la guerre à l’Est, puis les relie à une synthèse imaginée.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Quelques bilans humains",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "Juifs assassinés en Europe",
+      "Prisonniers soviétiques morts",
+      "Victimes d’Auschwitz-Birkenau",
+      "Civils morts à Leningrad"
+     ],
+     "series": [
+      {
+       "nom": "Victimes",
+       "valeurs": [
+        6,
+        3,
+        1.1,
+        1
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "titre": "Victimes",
+      "unite": "en millions",
+      "min": 0,
+      "max": 7,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Bilan"
+     }
+    },
+    {
+     "id": "synth",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Synthèse",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "À partir de 1941, l’invasion de l’URSS ouvre aux nazis des territoires peuplés de millions de Juifs. Les fusillades commencent avec l’armée. Puis, à la conférence de Wannsee, en [[m|janvier]] 1942, la déportation vers les centres de mise à mort est organisée."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "fois",
+     "enonce": "Combien de fois le nombre de Juifs assassinés dépasse-t-il celui des civils morts à Leningrad ?",
+     "aide": "Divise la plus grande barre par la plus petite.",
+     "explication": "6 ÷ 1 = **6 fois** plus."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "millions",
+     "tolerance": 0.2,
+     "enonce": "Combien de millions font, ensemble, les prisonniers soviétiques morts et les civils morts à Leningrad ?",
+     "aide": "Additionne les deux barres concernées.",
+     "explication": "3 + 1 = **4 millions** de morts pour ces deux bilans."
+    },
+    {
+     "type": "zone",
+     "document": "synth",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mois de la conférence de Wannsee indiqué dans la synthèse.",
+     "aide": "Cherche un nom de mois dans la dernière phrase.",
+     "explication": "La conférence de Wannsee a lieu en **janvier** 1942."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Auschwitz-Birkenau a fait un million de victimes juives sur les six millions",
+      "Auschwitz-Birkenau a fait plus de victimes que l’ensemble de la Shoah",
+      "Auschwitz-Birkenau a fait moins de victimes que le blocus de Leningrad",
+      "Auschwitz-Birkenau n’a touché que des prisonniers de guerre soviétiques"
+     ],
+     "reponse": 0,
+     "enonce": "Quel lien le graphique permet-il de faire entre Auschwitz-Birkenau et la Shoah ?",
+     "aide": "Compare la barre d’Auschwitz à celle de tous les Juifs assassinés.",
+     "explication": "Environ **1,1 million** de morts à Auschwitz-Birkenau, dont un million de Juifs : un lieu parmi d’autres d’un génocide de six millions de morts."
+    }
+   ]
+  },
+  {
+   "chapitre": "917494ee-d57d-500c-97bf-d7325d5757b5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre ans de combat",
+   "competence": "se-reperer-temps",
+   "situation": "Un élève place sur une frise quatre moments de la France libre, de l’appel du 18 juin 1940 à la libération de Paris.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La France libre, 1940-1944",
+     "source": "Dates exactes.",
+     "debut": 1940,
+     "fin": 1945,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "appel",
+       "date": 1940,
+       "nom": "Appel du 18 juin"
+      },
+      {
+       "id": "bir",
+       "date": 1942,
+       "nom": "Bir Hakeim"
+      },
+      {
+       "id": "cnr",
+       "date": 1943,
+       "nom": "Création du CNR"
+      },
+      {
+       "id": "paris",
+       "date": 1944,
+       "nom": "Libération de Paris"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "appel"
+     ],
+     "enonce": "Touche l’événement par lequel de Gaulle appelle à poursuivre le combat depuis Londres.",
+     "aide": "Il ouvre la frise.",
+     "explication": "L’**appel du 18 juin 1940** lance la France libre."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cnr"
+     ],
+     "enonce": "Touche l’événement qui unifie la Résistance intérieure autour de Jean Moulin.",
+     "aide": "Ses initiales commencent par « C ».",
+     "explication": "Le **Conseil national de la Résistance** se réunit le 27 mai 1943 sous l’impulsion de Jean Moulin."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’appel du 18 juin de la libération de Paris ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1944 − 1940 = **4 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La valeur militaire des Forces françaises libres face à Rommel",
+      "La supériorité écrasante de l’armée allemande en Libye",
+      "La fin de la France libre après une défaite totale",
+      "Le ralliement de l’Indochine à la France libre"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre la résistance de Bir Hakeim en 1942 ?",
+     "aide": "Cette bataille a eu lieu en Libye, contre l’armée de Rommel.",
+     "explication": "À **Bir Hakeim**, les FFL résistent deux semaines à Rommel : elles prouvent leur valeur militaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "917494ee-d57d-500c-97bf-d7325d5757b5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Londres à Alger",
+   "competence": "lire-carte",
+   "situation": "Un élève repère sur une carte les lieux clés de la France libre : la capitale de l’exil, le premier territoire rallié et le siège du comité de 1943.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe et l’Afrique, 1940-1943",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -25,
+      -12,
+      35,
+      56
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail",
+       "lieu": "londres"
+      },
+      {
+       "id": "b",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail",
+       "lieu": "alger"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la ville d’où de Gaulle lance l’appel du 18 juin 1940.",
+     "aide": "Elle est au nord-ouest de l’Europe, sur une île.",
+     "explication": "De Gaulle parle depuis **Londres**, sur la BBC."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "TCD"
+     ],
+     "enonce": "Touche le Tchad, premier territoire à se rallier à la France libre en août 1940.",
+     "aide": "Il est au cœur de l’Afrique, au sud de la Libye.",
+     "explication": "Le **Tchad** se rallie dès août 1940 grâce au gouverneur Félix Éboué."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la ville où est créé le Comité français de libération nationale en 1943.",
+     "aide": "Elle est sur la côte méditerranéenne de l’Afrique du Nord.",
+     "explication": "Le CFLN s’installe à **Alger** en 1943, puis devient le GPRF en juin 1944."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il lui donne des territoires, des soldats et des bases lointaines",
+      "Il lui donne le contrôle direct de la France occupée en 1940",
+      "Il lui permet de négocier avec Vichy dès 1940 sans condition",
+      "Il lui permet de remplacer les Alliés pour diriger la guerre"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi l’Empire colonial est-il précieux pour de Gaulle ?",
+     "aide": "Observe où se trouvent Alger et le Tchad par rapport à la France occupée.",
+     "explication": "L’**Empire** offre à la France libre des territoires, des soldats et des bases hors de portée de l’occupant."
+    }
+   ]
+  },
+  {
+   "chapitre": "917494ee-d57d-500c-97bf-d7325d5757b5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "S’imposer face aux Alliés",
+   "competence": "analyser-document",
+   "situation": "Un élève croise un tableau sur les institutions de la France libre et une note imaginée sur ses relations avec les Alliés.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les institutions de la France libre",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Comité français de libération nationale (CFLN)",
+       "Dirige la France libre à Alger"
+      ],
+      [
+       "Conseil de défense de l’Empire",
+       "Organise les territoires ralliés"
+      ],
+      [
+       "Gouvernement provisoire (GPRF)",
+       "Rétablit la République après la Libération"
+      ],
+      [
+       "Comité national français",
+       "Premier gouvernement de la France libre"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note sur les Alliés",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le 28 juin 1940, Churchill reconnaît de Gaulle comme chef des Français libres. Roosevelt, lui, se méfie de de Gaulle et traite d’abord avec l’amiral Darlan, puis avec le général Giraud.",
+      "Jean Moulin, envoyé en France, unifie les mouvements de la Résistance intérieure."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "Conseil de défense de l’Empire (1940)",
+      "Comité national français (1941)",
+      "CFLN à Alger (1943)",
+      "GPRF (juin 1944)"
+     ],
+     "enonce": "Range ces institutions dans l’ordre de leur création.",
+     "aide": "Elles se succèdent de 1940 à 1944.",
+     "explication": "Conseil de défense (**1940**), Comité national (**1941**), CFLN (**1943**), GPRF (**1944**)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "jours",
+     "enonce": "Combien de jours après l’appel du 18 juin Churchill reconnaît-il de Gaulle comme chef des Français libres ?",
+     "aide": "Compte entre le 18 juin et la date donnée dans la note.",
+     "explication": "Du 18 au 28 juin : **10 jours**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Churchill",
+       "Reconnaît de Gaulle dès juin 1940"
+      ],
+      [
+       "Roosevelt",
+       "Se méfie de de Gaulle"
+      ],
+      [
+       "Jean Moulin",
+       "Unifie la Résistance intérieure"
+      ]
+     ],
+     "enonce": "Associe chaque personnage à son rôle dans la note.",
+     "aide": "Un soutien, une méfiance, une mission d’unification.",
+     "explication": "**Churchill** reconnaît de Gaulle, **Roosevelt** s’en méfie, **Jean Moulin** unifie la Résistance."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les Américains préfèrent d’abord d’autres chefs et se méfient de lui",
+      "Les Britanniques refusent toute collaboration avec la France libre",
+      "Les Soviétiques occupent Alger avant l’arrivée de de Gaulle",
+      "Les Allemands ont déjà libéré la France avant son retour"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi de Gaulle doit-il s’imposer face à Darlan puis Giraud ?",
+     "aide": "Relis ce que dit la note sur Roosevelt.",
+     "explication": "Roosevelt traite d’abord avec **Darlan puis Giraud** : de Gaulle doit prouver qu’il représente la vraie France."
+    }
+   ]
+  }
+ ]
+}

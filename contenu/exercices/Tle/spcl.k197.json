@@ -1,0 +1,3313 @@
+{
+  "niveau": "Tle",
+  "matiere": "spcl",
+  "exercices": [
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le ressort et la bobine",
+      "competence": "calculer",
+      "situation": "Au laboratoire, on compare deux oscillateurs libres et non amortis : une masse accrochée à un ressort, et un circuit LC. Leurs caractéristiques sont relevées dans le tableau.",
+      "documents": [
+        {
+          "id": "oscillateurs",
+          "type": "tableau",
+          "titre": "Deux oscillateurs",
+          "colonnes": [
+            "Oscillateur",
+            "Caractéristiques"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Masse-ressort",
+              "m = 0,100 kg ; k = 40,0 N/m"
+            ],
+            [
+              "Circuit LC",
+              "L = 0,100 H ; C = 10,0 µF"
+            ]
+          ],
+          "source": "Valeurs choisies pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la période propre T₀ de l’oscillateur masse-ressort, en secondes. On donne T₀ = 2π √(m / k).",
+          "reponse": 0.314,
+          "tolerance": 0.005,
+          "unite": "s",
+          "aide": "Calcule d’abord m / k = 0,100 ÷ 40,0, puis la racine carrée.",
+          "explication": "m / k = 0,0025 s², donc T₀ = 2π × 0,05 ≈ **0,314 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la période propre du circuit LC, en millisecondes. On donne T₀ = 2π √(L × C). Attention : 10,0 µF = 10,0 × 10⁻⁶ F.",
+          "reponse": 6.28,
+          "tolerance": 0.05,
+          "unite": "ms",
+          "aide": "L × C = 0,100 × 10,0 × 10⁻⁶ = 1,00 × 10⁻⁶ s².",
+          "explication": "T₀ = 2π × 1,00 × 10⁻³ ≈ 6,28 × 10⁻³ s, soit **6,28 ms**."
+        },
+        {
+          "type": "zone",
+          "document": "oscillateurs",
+          "enonce": "Touche la case de l’oscillateur dont la période propre est la plus courte.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Compare les deux périodes que tu viens de calculer, après avoir mis la même unité.",
+          "explication": "Le circuit LC oscille en 6,28 ms, le masse-ressort en 314 ms : c’est le **circuit LC** qui a la période la plus courte."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque grandeur du système mécanique à son analogue dans le circuit électrique.",
+          "paires": [
+            [
+              "Masse m",
+              "Inductance L"
+            ],
+            [
+              "Raideur k",
+              "Inverse de la capacité, 1 / C"
+            ],
+            [
+              "Énergie cinétique",
+              "Énergie magnétique de la bobine"
+            ]
+          ],
+          "aide": "La masse se comporte comme l’inertie électrique du circuit : celle de la bobine.",
+          "explication": "Les deux oscillateurs suivent le même modèle : **masse ↔ inductance**, **raideur ↔ 1 / C**, **énergie cinétique ↔ énergie magnétique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le vibreur qui fait danser l’oscillateur",
+      "competence": "lire-graphique",
+      "situation": "Un vibreur impose sa fréquence à deux oscillateurs, A et B, qui ont la même fréquence propre mais des frottements différents. On note l’amplitude de leurs oscillations quand la fréquence du vibreur varie de 7 à 13 Hz.",
+      "documents": [
+        {
+          "id": "courbes",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Amplitude en fonction de la fréquence imposée",
+          "categories": [
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "series": [
+            {
+              "nom": "Oscillateur A",
+              "valeurs": [
+                1.6,
+                2.4,
+                4.5,
+                10,
+                4.5,
+                2.4,
+                1.6
+              ]
+            },
+            {
+              "nom": "Oscillateur B",
+              "valeurs": [
+                1.4,
+                1.8,
+                2.2,
+                2.5,
+                2.2,
+                1.8,
+                1.4
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Amplitude",
+            "unite": "cm",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Fréquence imposée (Hz)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "bande",
+          "type": "tableau",
+          "titre": "Largeur de la bande passante",
+          "colonnes": [
+            "Oscillateur",
+            "Largeur Δf (Hz)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Oscillateur A",
+              "1,0"
+            ],
+            [
+              "Oscillateur B",
+              "4,0"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "courbes",
+          "enonce": "Touche la fréquence de résonance des deux oscillateurs.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la fréquence où les deux amplitudes sont maximales.",
+          "explication": "Les deux courbes culminent à **10 Hz** : c’est la fréquence propre f₀, donc celle de la résonance."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le facteur de qualité de l’oscillateur A. On donne Q = f₀ / Δf.",
+          "reponse": 10,
+          "tolerance": 0.1,
+          "aide": "Prends f₀ sur le graphique et Δf dans le tableau.",
+          "explication": "Q = 10 ÷ 1,0 = **10**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le facteur de qualité de l’oscillateur B.",
+          "reponse": 2.5,
+          "tolerance": 0.05,
+          "aide": "Même calcul, avec la largeur de bande passante de B.",
+          "explication": "Q = 10 ÷ 4,0 = **2,5**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel oscillateur est le plus amorti, et comment le voit-on ?",
+          "options": [
+            "L’oscillateur B : son facteur de qualité est le plus faible et sa résonance la plus large",
+            "L’oscillateur A : son amplitude à la résonance est la plus grande, donc il dissipe le plus d’énergie",
+            "Aucun des deux n’est plus amorti, car ils ont la même fréquence propre de 10 Hz",
+            "L’oscillateur A : sa bande passante est la plus étroite, donc ses frottements sont les plus forts"
+          ],
+          "reponse": 0,
+          "aide": "Un oscillateur très amorti a une résonance peu marquée.",
+          "explication": "L’oscillateur **B** a Q = 2,5 et une courbe aplatie : ses frottements sont plus forts. A, très peu amorti, a une résonance aiguë."
+        }
+      ]
+    },
+    {
+      "chapitre": "0b76c6f9-d740-5ff8-9d51-0e08e7206d5d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le haut-parleur, la porte et le spectre",
+      "competence": "analyser-document",
+      "situation": "Un haut-parleur émet un son périodique de fréquence 2,0 kHz. Deux microphones alignés avec lui enregistrent le signal avec un retard (premier document), et on relève son spectre. L’onde traverse ensuite une porte ouverte de largeur a = 34 cm. Célérité attendue dans l’air : 340 m/s.",
+      "documents": [
+        {
+          "id": "retards",
+          "type": "tableau",
+          "titre": "Retard du signal selon la distance",
+          "colonnes": [
+            "Distance à la source (cm)",
+            "20",
+            "40",
+            "60"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Retard (ms)",
+              "0,59",
+              "1,18",
+              "1,76"
+            ]
+          ],
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "spectre",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Spectre du signal",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "series": [
+            {
+              "nom": "Amplitude",
+              "valeurs": [
+                0.4,
+                1,
+                0.6,
+                0.3,
+                0.1
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Amplitude",
+            "unite": "unité arbitraire",
+            "min": 0,
+            "max": 1.2,
+            "pas": 0.2
+          },
+          "axeX": {
+            "titre": "Fréquence (kHz)"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la célérité mesurée avec le microphone le plus éloigné (60 cm, retard 1,76 ms). On donne τ = d / v.",
+          "reponse": 340,
+          "tolerance": 5,
+          "unite": "m/s",
+          "aide": "Convertis 60 cm en mètres et 1,76 ms en secondes avant de diviser.",
+          "explication": "v = d / τ = 0,60 ÷ 1,76 × 10⁻³ ≈ **340 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur d’onde du son de 2,0 kHz, en centimètres ? On donne λ = v / f.",
+          "reponse": 17,
+          "tolerance": 0.5,
+          "unite": "cm",
+          "aide": "λ = 340 ÷ 2 000 donne des mètres.",
+          "explication": "λ = 340 ÷ 2 000 = 0,17 m = **17 cm**."
+        },
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche la raie du fondamental de ce signal.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Le fondamental a la fréquence du signal, 2,0 kHz.",
+          "explication": "Le fondamental est la raie à **2 kHz** ; les raies de 4, 6 et 8 kHz sont ses harmoniques (2f, 3f, 4f)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que traduit la raie située à 0 kHz ?",
+          "options": [
+            "Le signal a une valeur moyenne non nulle, autour de laquelle il oscille",
+            "Le signal contient un son très grave, audible mais inférieur à 20 Hz",
+            "Le signal ne transporte aucune énergie, car sa fréquence est nulle",
+            "Le microphone capte aussi le bruit du réseau électrique à 50 Hz"
+          ],
+          "reponse": 0,
+          "aide": "Une composante de fréquence nulle ne varie pas dans le temps.",
+          "explication": "La composante de fréquence nulle est la **valeur moyenne** du signal, ici non nulle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le demi-angle de la tache centrale de diffraction par la porte vaut θ ≈ λ / a. Calcule θ, en radians.",
+          "reponse": 0.5,
+          "tolerance": 0.02,
+          "unite": "rad",
+          "aide": "Utilise λ = 0,17 m et a = 0,34 m, dans la même unité.",
+          "explication": "θ ≈ 0,17 ÷ 0,34 = **0,50 rad** : le son s’étale largement derrière la porte, car λ est comparable à a."
+        }
+      ]
+    },
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La corde de guitare en deux fuseaux",
+      "competence": "observer-schema",
+      "situation": "Une corde de guitare de longueur L = 60 cm, fixée à ses deux extrémités, vibre sur son deuxième mode propre. Le schéma la montre figée à un instant. La célérité des ondes sur la corde est v = 240 m/s.",
+      "documents": [
+        {
+          "id": "corde",
+          "type": "schema",
+          "titre": "Corde en vibration",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                110
+              ],
+              "a": [
+                290,
+                110
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "chemin",
+              "d": "M30 110 Q95 50 160 110 Q225 170 290 110"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 96,
+              "l": 8,
+              "h": 28
+            },
+            {
+              "forme": "rect",
+              "x": 292,
+              "y": 96,
+              "l": 8,
+              "h": 28
+            },
+            {
+              "forme": "cercle",
+              "cx": 30,
+              "cy": 110,
+              "r": 7,
+              "id": "nd0",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 110,
+              "r": 7,
+              "id": "nd1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 290,
+              "cy": 110,
+              "r": 7,
+              "id": "nd2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 95,
+              "cy": 80,
+              "r": 7,
+              "id": "vt1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 225,
+              "cy": 140,
+              "r": 7,
+              "id": "vt2",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                185
+              ],
+              "a": [
+                290,
+                185
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 208,
+              "texte": "L = 60 cm",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "corde",
+          "enonce": "Touche les trois nœuds de vibration de la corde, c’est-à-dire les points qui ne bougent jamais.",
+          "reponse": [
+            "nd0",
+            "nd1",
+            "nd2"
+          ],
+          "multiple": true,
+          "aide": "Un nœud est sur la position de repos de la corde, en pointillés.",
+          "explication": "Les **trois nœuds** sont aux deux extrémités fixes et au milieu de la corde. Les deux ventres sont les sommets des fuseaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien mesure la longueur d’onde λ, en mètres ? Pour n fuseaux, L = n × λ / 2.",
+          "reponse": 0.6,
+          "tolerance": 0.01,
+          "unite": "m",
+          "aide": "Ici n = 2 : λ = 2L ÷ 2.",
+          "explication": "λ = 2L / n = 2 × 0,60 ÷ 2 = **0,60 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fréquence de cette vibration, en hertz ? On donne f = v / λ.",
+          "reponse": 400,
+          "tolerance": 5,
+          "unite": "Hz",
+          "aide": "Divise la célérité par la longueur d’onde que tu viens de trouver.",
+          "explication": "f₂ = 240 ÷ 0,60 = **400 Hz**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle serait la fréquence du fondamental de cette corde, en hertz ? On donne fₙ = n × v / (2L).",
+          "reponse": 200,
+          "tolerance": 3,
+          "unite": "Hz",
+          "aide": "Le fondamental correspond à n = 1.",
+          "explication": "f₁ = 240 ÷ (2 × 0,60) = **200 Hz**, moitié de f₂."
+        }
+      ]
+    },
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’atelier de menuiserie",
+      "competence": "lire-tableau",
+      "situation": "Un élève mesure l’intensité sonore de trois sources de son lycée. Le niveau d’intensité sonore se calcule par L = 10 × log (I / I₀) avec I₀ = 1,0 × 10⁻¹² W/m². Au-delà de 85 dB, une exposition prolongée abîme l’oreille.",
+      "documents": [
+        {
+          "id": "sources",
+          "type": "tableau",
+          "titre": "Intensités sonores relevées",
+          "colonnes": [
+            "Source",
+            "Intensité I (W/m²)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Conversation",
+              "1,0 × 10⁻⁶"
+            ],
+            [
+              "Aspirateur",
+              "1,0 × 10⁻⁵"
+            ],
+            [
+              "Atelier de menuiserie",
+              "1,0 × 10⁻³"
+            ]
+          ],
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le niveau d’intensité sonore de l’atelier de menuiserie, en décibels.",
+          "reponse": 90,
+          "tolerance": 0.5,
+          "unite": "dB",
+          "aide": "I / I₀ = 1,0 × 10⁻³ ÷ 1,0 × 10⁻¹² = 10⁹ : cherche log (10⁹).",
+          "explication": "L = 10 × log (10⁹) = **90 dB**."
+        },
+        {
+          "type": "zone",
+          "document": "sources",
+          "enonce": "Touche la source dont le niveau dépasse 85 dB.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Calcule le niveau de chaque source : il grimpe de 10 dB chaque fois que I est multipliée par 10.",
+          "explication": "La conversation fait 60 dB, l’aspirateur 70 dB, l’**atelier** 90 dB : lui seul dépasse 85 dB."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On allume deux aspirateurs identiques. Quel niveau sonore atteint-on, en décibels ? (Le niveau d’un seul est 70 dB.)",
+          "reponse": 73,
+          "tolerance": 0.5,
+          "unite": "dB",
+          "aide": "Deux sources identiques doublent l’intensité, pas le niveau.",
+          "explication": "I = 2 × 1,0 × 10⁻⁵ W/m², donc L = 10 × log (2 × 10⁷) ≈ **73 dB**. Doubler l’intensité ajoute 3 dB."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un élève affirme : « Deux aspirateurs de 70 dB font 140 dB. » Pourquoi est-ce faux ?",
+          "options": [
+            "Ce sont les intensités qui s’ajoutent, pas les décibels : doubler l’intensité ajoute seulement 3 dB",
+            "Le niveau en décibels s’additionne seulement quand les deux sources sont très éloignées l’une de l’autre",
+            "Le décibel est une unité linéaire mais l’oreille ne perçoit plus rien au-delà de 120 dB",
+            "Deux sources identiques s’annulent en partie, donc le niveau reste le même que pour une seule source"
+          ],
+          "reponse": 0,
+          "aide": "Le niveau utilise un logarithme : les décibels ne s’additionnent pas.",
+          "explication": "Le logarithme transforme un **doublement d’intensité en +3 dB** : 70 dB + 70 dB donnent environ 73 dB."
+        }
+      ]
+    },
+    {
+      "chapitre": "2a4b0a15-a0ef-5340-bf76-4fd766fa655e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Flûte ouverte ou bourdon fermé ?",
+      "competence": "experimenter",
+      "situation": "Deux tuyaux d’orgue de même longueur, L = 0,85 m, sont enregistrés un par un : l’un est ouvert aux deux bouts, l’autre est fermé à une extrémité. Un micro relève les fréquences des trois premiers pics de chaque enregistrement. Célérité du son : v = 340 m/s.",
+      "documents": [
+        {
+          "id": "tuyaux",
+          "type": "schema",
+          "titre": "Les deux tuyaux",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                40
+              ],
+              "a": [
+                40,
+                190
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                40
+              ],
+              "a": [
+                80,
+                190
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                40
+              ],
+              "a": [
+                80,
+                40
+              ],
+              "style": "pointilles",
+              "id": "ouv1h",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                190
+              ],
+              "a": [
+                80,
+                190
+              ],
+              "style": "pointilles",
+              "id": "ouv1b",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                140,
+                40
+              ],
+              "a": [
+                140,
+                190
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                180,
+                40
+              ],
+              "a": [
+                180,
+                190
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                140,
+                40
+              ],
+              "a": [
+                180,
+                40
+              ],
+              "style": "pointilles",
+              "id": "ouv2h",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 138,
+              "y": 188,
+              "l": 44,
+              "h": 8,
+              "id": "ferme2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 218,
+              "texte": "Tuyau 1",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 218,
+              "texte": "Tuyau 2",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                225,
+                40
+              ],
+              "a": [
+                225,
+                190
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 238,
+              "y": 120,
+              "texte": "L = 0,85 m",
+              "ancre": "debut"
+            }
+          ]
+        },
+        {
+          "id": "enregistrements",
+          "type": "tableau",
+          "titre": "Fréquences des trois premiers pics",
+          "colonnes": [
+            "Enregistrement",
+            "Fréquences (Hz)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Enregistrement 1",
+              "200 ; 400 ; 600"
+            ],
+            [
+              "Enregistrement 2",
+              "100 ; 300 ; 500"
+            ]
+          ],
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tuyaux",
+          "enonce": "Touche l’extrémité fermée du tuyau 2.",
+          "reponse": [
+            "ferme2"
+          ],
+          "aide": "Cherche la paroi pleine qui bouche le bas du tuyau.",
+          "explication": "L’extrémité fermée est le **fond plein** du tuyau 2 : c’est là que se trouve un nœud de vibration."
+        },
+        {
+          "type": "zone",
+          "document": "enregistrements",
+          "enonce": "Touche l’enregistrement qui correspond au tuyau fermé.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Un tuyau fermé à un bout ne produit que les harmoniques impairs.",
+          "explication": "Les pics **100 ; 300 ; 500 Hz** sont les multiples impairs du fondamental : c’est le tuyau fermé (enregistrement 2)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le fondamental attendu du tuyau fermé, en hertz. On donne fₙ = (2n − 1) × v / (4L), avec n = 1.",
+          "reponse": 100,
+          "tolerance": 2,
+          "unite": "Hz",
+          "aide": "Pour n = 1, le facteur (2n − 1) vaut 1.",
+          "explication": "f₁ = 340 ÷ (4 × 0,85) = **100 Hz**, ce qu’on lit sur l’enregistrement 2."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un autre tuyau fermé doit avoir un fondamental de 170 Hz. Quelle longueur, en mètres, lui donner ?",
+          "reponse": 0.5,
+          "tolerance": 0.01,
+          "unite": "m",
+          "aide": "Isole L dans f₁ = v / (4L).",
+          "explication": "L = v / (4 f₁) = 340 ÷ (4 × 170) = **0,50 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le fondamental du tuyau fermé est plus grave que celui du tuyau ouvert de même longueur. De combien ?",
+          "options": [
+            "Une octave : sa fréquence est deux fois plus petite",
+            "Un tiers de plus : sa fréquence est divisée par un facteur 1,5",
+            "Il n’y a aucune différence, car seule la longueur du tuyau compte",
+            "Deux octaves : sa fréquence est quatre fois plus petite"
+          ],
+          "reponse": 0,
+          "aide": "Compare 100 Hz et 200 Hz.",
+          "explication": "100 Hz est la moitié de 200 Hz : le tuyau fermé sonne **une octave plus grave**."
+        }
+      ]
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’échelle des ondes électromagnétiques",
+      "competence": "observer-schema",
+      "situation": "On range les ondes électromagnétiques par longueur d’onde, des plus longues aux plus courtes. Célérité de la lumière dans le vide : c = 3,00 × 10⁸ m/s ; constante de Planck : h = 6,63 × 10⁻³⁴ J·s.",
+      "documents": [
+        {
+          "id": "spectre",
+          "type": "schema",
+          "titre": "Les domaines du spectre",
+          "largeur": 320,
+          "hauteur": 232,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 10,
+              "l": 300,
+              "h": 36,
+              "arrondi": 6,
+              "texte": "Ondes radio · plus de 1 mm",
+              "id": "radio",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 54,
+              "l": 300,
+              "h": 36,
+              "arrondi": 6,
+              "texte": "Infrarouge · 800 nm à 1 mm",
+              "id": "ir",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 98,
+              "l": 300,
+              "h": 36,
+              "arrondi": 6,
+              "texte": "Visible · 400 nm à 800 nm",
+              "id": "visible",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 142,
+              "l": 300,
+              "h": 36,
+              "arrondi": 6,
+              "texte": "Ultraviolet · 10 nm à 400 nm",
+              "id": "uv",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 186,
+              "l": 300,
+              "h": 36,
+              "arrondi": 6,
+              "texte": "Rayons X et gamma · moins de 10 nm",
+              "id": "x",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche le domaine qui contient une radiation de longueur d’onde 550 nm.",
+          "reponse": [
+            "visible"
+          ],
+          "aide": "Compare 550 nm aux bornes de chaque domaine.",
+          "explication": "550 nm est entre 400 nm et 800 nm : c’est de la **lumière visible**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fréquence d’une radiation de longueur d’onde 600 nm, en unités de 10¹⁴ Hz ? On donne f = c / λ.",
+          "reponse": 5,
+          "tolerance": 0.05,
+          "unite": "× 10¹⁴ Hz",
+          "aide": "Convertis 600 nm en mètres : 600 × 10⁻⁹ m.",
+          "explication": "f = 3,00 × 10⁸ ÷ 600 × 10⁻⁹ = 5,0 × 10¹⁴ Hz, soit **5,0** dans l’unité demandée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’énergie d’un photon de cette radiation, en unités de 10⁻¹⁹ J ? On donne E = h × f.",
+          "reponse": 3.3,
+          "tolerance": 0.05,
+          "unite": "× 10⁻¹⁹ J",
+          "aide": "Utilise f = 5,0 × 10¹⁴ Hz.",
+          "explication": "E = 6,63 × 10⁻³⁴ × 5,0 × 10¹⁴ ≈ 3,3 × 10⁻¹⁹ J, soit **3,3** dans l’unité demandée."
+        },
+        {
+          "type": "zone",
+          "document": "spectre",
+          "enonce": "Touche le domaine dont les photons sont les plus énergétiques.",
+          "reponse": [
+            "x"
+          ],
+          "aide": "E = h × c / λ : l’énergie grandit quand λ diminue.",
+          "explication": "Les **rayons X et gamma** ont les plus courtes longueurs d’onde, donc les photons les plus énergétiques."
+        }
+      ]
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Soleil, ampoule et LED",
+      "competence": "lire-tableau",
+      "situation": "La loi de Wien donne la longueur d’onde du maximum d’émission d’un corps chaud : λ_max × T = 2,90 × 10⁻³ m·K. On compare d’abord trois sources, puis trois lampes.",
+      "documents": [
+        {
+          "id": "temperatures",
+          "type": "tableau",
+          "titre": "Trois sources de rayonnement",
+          "colonnes": [
+            "Source",
+            "Température (K)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Surface du Soleil",
+              "5 800"
+            ],
+            [
+              "Filament d’une ampoule à incandescence",
+              "2 900"
+            ],
+            [
+              "Corps humain",
+              "310"
+            ]
+          ]
+        },
+        {
+          "id": "lampes",
+          "type": "tableau",
+          "titre": "Trois lampes",
+          "colonnes": [
+            "Lampe",
+            "Puissance (W)",
+            "Flux lumineux (lm)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "LED",
+              "10",
+              "1 000"
+            ],
+            [
+              "Incandescente",
+              "60",
+              "600"
+            ],
+            [
+              "Fluocompacte",
+              "15",
+              "900"
+            ]
+          ],
+          "source": "Valeurs simplifiées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur d’onde du maximum d’émission du filament, en nanomètres.",
+          "reponse": 1000,
+          "tolerance": 10,
+          "unite": "nm",
+          "aide": "λ_max = 2,90 × 10⁻³ ÷ 2 900, en mètres ; 1 m = 10⁹ nm.",
+          "explication": "λ_max = 2,90 × 10⁻³ ÷ 2 900 = 1,0 × 10⁻⁶ m = **1 000 nm** : dans l’infrarouge, d’où une lampe qui chauffe beaucoup."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le corps humain (310 K) a un maximum d’émission vers 9 µm. Dans quel domaine émet-il surtout ?",
+          "options": [
+            "Dans l’infrarouge, domaine des longueurs d’onde de 800 nm à 1 mm",
+            "Dans le visible, domaine des longueurs d’onde de 400 nm à 800 nm",
+            "Dans l’ultraviolet, domaine des longueurs d’onde de 10 nm à 400 nm",
+            "Dans les rayons X, domaine des longueurs d’onde inférieures à 10 nm"
+          ],
+          "reponse": 0,
+          "aide": "Convertis 9 µm en nanomètres et compare aux bornes des domaines.",
+          "explication": "9 µm = 9 000 nm, entre 800 nm et 1 mm : le corps humain émet dans l’**infrarouge**, ce que voient les caméras thermiques."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’efficacité lumineuse de la LED, en lm/W.",
+          "reponse": 100,
+          "tolerance": 1,
+          "unite": "lm/W",
+          "aide": "Efficacité = flux lumineux ÷ puissance.",
+          "explication": "1 000 ÷ 10 = **100 lm/W**."
+        },
+        {
+          "type": "zone",
+          "document": "lampes",
+          "enonce": "Touche la lampe la moins efficace.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Calcule le flux par watt de chaque lampe.",
+          "explication": "LED 100 lm/W, fluocompacte 60 lm/W, **incandescente** 10 lm/W : c’est elle qui gaspille le plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance faut-il à la LED pour fournir 900 lm, comme la fluocompacte ? Réponds en watts.",
+          "reponse": 9,
+          "tolerance": 0.1,
+          "unite": "W",
+          "aide": "Divise le flux voulu par l’efficacité de la LED.",
+          "explication": "P = 900 ÷ 100 = **9 W**, contre 15 W pour la fluocompacte."
+        }
+      ]
+    },
+    {
+      "chapitre": "55da8528-30d5-546e-b1f8-73f54d09aced",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une liaison par fibre optique",
+      "competence": "modeliser",
+      "situation": "Un laser injecte une puissance de 2,0 mW dans une fibre optique de 80 km qui le relie à un récepteur. L’atténuation de la fibre est de 0,25 dB/km. On rappelle que A (dB) = 10 × log (P_entrée / P_sortie).",
+      "documents": [
+        {
+          "id": "liaison",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "laser",
+              "texte": "Laser"
+            },
+            {
+              "id": "fibre",
+              "texte": "Fibre de 80 km"
+            },
+            {
+              "id": "photodiode",
+              "texte": "Photodiode"
+            }
+          ],
+          "liens": [
+            {
+              "de": "laser",
+              "a": "fibre"
+            },
+            {
+              "de": "fibre",
+              "a": "photodiode"
+            }
+          ]
+        },
+        {
+          "id": "canaux",
+          "type": "tableau",
+          "titre": "Deux canaux possibles",
+          "colonnes": [
+            "Canal",
+            "Atténuation (dB/km)",
+            "Débit (Mbit/s)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Fibre optique",
+              "0,25",
+              "10 000"
+            ],
+            [
+              "Câble coaxial",
+              "20",
+              "1 000"
+            ]
+          ],
+          "source": "Valeurs simplifiées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "liaison",
+          "enonce": "Touche l’élément de la chaîne qui joue le rôle de canal de transmission.",
+          "reponse": [
+            "fibre"
+          ],
+          "aide": "Le canal est ce qui relie l’émetteur au récepteur.",
+          "explication": "Le **canal** est la fibre : l’émetteur est le laser, le récepteur la photodiode."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’atténuation totale de la liaison, en décibels ?",
+          "reponse": 20,
+          "tolerance": 0.2,
+          "unite": "dB",
+          "aide": "Multiplie l’atténuation par kilomètre par la longueur.",
+          "explication": "A = 0,25 × 80 = **20 dB**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance reçoit la photodiode, en microwatts ? (1 mW = 1 000 µW)",
+          "reponse": 20,
+          "tolerance": 0.5,
+          "unite": "µW",
+          "aide": "Utilise P_sortie = P_entrée ÷ 10^(A / 10).",
+          "explication": "P_sortie = P_entrée ÷ 10^(20/10) = 2,0 mW ÷ 100 = 0,020 mW = **20 µW**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On envoie un fichier de 4,0 Go par la fibre (1 Go = 10⁹ octets, 1 octet = 8 bits). Combien de temps dure l’envoi, en secondes ?",
+          "reponse": 3.2,
+          "tolerance": 0.05,
+          "unite": "s",
+          "aide": "Convertis les octets en bits, puis divise par le débit en bit/s.",
+          "explication": "4,0 × 10⁹ × 8 = 3,2 × 10¹⁰ bits ; le débit est 10 000 Mbit/s = 10¹⁰ bit/s : **3,2 s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur 1 km, quel canal garde une atténuation inférieure à 10 dB ?",
+          "options": [
+            "La fibre seulement : 0,25 dB pour 1 km, contre 20 dB pour le câble coaxial",
+            "Le câble coaxial seulement : 20 dB pour 1 km, contre 0,25 dB pour la fibre optique",
+            "Les deux, car leur atténuation est faible tant que le débit ne dépasse pas 10 000 Mbit/s",
+            "Aucun des deux, car l’atténuation sur 1 km dépasse toujours 10 dB quel que soit le canal"
+          ],
+          "reponse": 0,
+          "aide": "Multiplie chaque atténuation par 1 km et compare à 10 dB.",
+          "explication": "Fibre : 0,25 dB. Coaxial : 20 dB. Seule la **fibre** reste sous 10 dB, d’où son usage sur les longues distances."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un rayon qui entre dans le verre",
+      "competence": "observer-schema",
+      "situation": "Un rayon de lumière arrive sur la face plane d’un bloc de verre d’indice n = 1,50, avec un angle d’incidence i₁ = 45° mesuré depuis la normale. Plus loin, la lumière naturelle traverse le montage du second document.",
+      "documents": [
+        {
+          "id": "refraction",
+          "type": "schema",
+          "titre": "Passage de l’air au verre",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 120,
+              "l": 280,
+              "h": 100,
+              "teinte": "ciel",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                20,
+                120
+              ],
+              "a": [
+                300,
+                120
+              ],
+              "id": "surface",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                20
+              ],
+              "a": [
+                160,
+                220
+              ],
+              "style": "pointilles",
+              "id": "normale",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                89,
+                49
+              ],
+              "a": [
+                160,
+                120
+              ],
+              "fleche": "fin",
+              "id": "incident",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                120
+              ],
+              "a": [
+                207,
+                208
+              ],
+              "fleche": "fin",
+              "id": "refracte",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 40,
+              "texte": "Air (n = 1,00)",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 30,
+              "y": 212,
+              "texte": "Verre (n = 1,50)",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 122,
+              "y": 98,
+              "texte": "i₁"
+            },
+            {
+              "forme": "texte",
+              "x": 195,
+              "y": 160,
+              "texte": "i₂",
+              "ancre": "debut"
+            }
+          ]
+        },
+        {
+          "id": "polarisation",
+          "type": "chaine",
+          "titre": "Montage de polarisation",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "lumiere",
+              "texte": "Lumière naturelle"
+            },
+            {
+              "id": "polariseur",
+              "texte": "Polariseur"
+            },
+            {
+              "id": "solution",
+              "texte": "Solution de saccharose"
+            },
+            {
+              "id": "analyseur",
+              "texte": "Analyseur"
+            },
+            {
+              "id": "detecteur",
+              "texte": "Détecteur"
+            }
+          ],
+          "liens": [
+            {
+              "de": "lumiere",
+              "a": "polariseur"
+            },
+            {
+              "de": "polariseur",
+              "a": "solution"
+            },
+            {
+              "de": "solution",
+              "a": "analyseur"
+            },
+            {
+              "de": "analyseur",
+              "a": "detecteur"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "refraction",
+          "enonce": "Touche la normale à la surface du verre.",
+          "reponse": [
+            "normale"
+          ],
+          "aide": "La normale est perpendiculaire à la surface, tracée en pointillés.",
+          "explication": "La **normale** est la droite en pointillés, perpendiculaire à la surface : les angles se mesurent à partir d’elle, pas à partir de la surface."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’angle de réfraction i₂, en degrés. Utilise n₁ × sin i₁ = n₂ × sin i₂ avec n₁ = 1,00.",
+          "reponse": 28,
+          "tolerance": 0.5,
+          "unite": "°",
+          "aide": "sin i₂ = sin 45° ÷ 1,50 ≈ 0,471 ; utilise ensuite la touche sin⁻¹ de la calculatrice en degrés.",
+          "explication": "sin i₂ = 0,707 ÷ 1,50 = 0,471, donc i₂ ≈ **28°** : le rayon se rapproche de la normale dans le milieu plus réfringent."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans l’autre sens, du verre vers l’air, il n’y a plus de rayon réfracté au-delà d’un angle limite. Calcule-le, en degrés. On donne sin i_lim = n₂ / n₁.",
+          "reponse": 41.8,
+          "tolerance": 0.5,
+          "unite": "°",
+          "aide": "Ici n₁ = 1,50 (verre) et n₂ = 1,00 (air) : sin i_lim = 1,00 ÷ 1,50.",
+          "explication": "sin i_lim = 1,00 ÷ 1,50 = 0,667, donc i_lim ≈ **41,8°**. Au-delà, la réflexion est totale."
+        },
+        {
+          "type": "zone",
+          "document": "polarisation",
+          "enonce": "Touche l’élément du montage qui ne laisse passer qu’une seule direction de vibration de la lumière.",
+          "reponse": [
+            "polariseur"
+          ],
+          "aide": "La lumière naturelle vibre dans toutes les directions avant de le traverser.",
+          "explication": "Le **polariseur** ne laisse passer qu’une direction ; l’analyseur, placé après, sert à repérer la rotation de cette direction."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’épaisseur d’un fil au laser",
+      "competence": "experimenter",
+      "situation": "Un laser de longueur d’onde 532 nm éclaire successivement deux fils fins ; l’écran est à D = 2,00 m. On mesure la largeur ℓ de la tache centrale de diffraction (tableau). On remplace ensuite le fil par un réseau de pas a = 2,0 µm.",
+      "documents": [
+        {
+          "id": "montage",
+          "type": "schema",
+          "titre": "Montage vu de dessus",
+          "largeur": 320,
+          "hauteur": 190,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 70,
+              "l": 50,
+              "h": 30,
+              "arrondi": 4,
+              "id": "laser",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 35,
+              "y": 125,
+              "texte": "Laser",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                85
+              ],
+              "a": [
+                160,
+                85
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                50
+              ],
+              "a": [
+                170,
+                120
+              ],
+              "id": "fil",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 140,
+              "texte": "Fil",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                180,
+                85
+              ],
+              "a": [
+                290,
+                85
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                295,
+                20
+              ],
+              "a": [
+                295,
+                170
+              ],
+              "id": "ecran",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 291,
+              "y": 65,
+              "l": 8,
+              "h": 40,
+              "arrondi": 3,
+              "id": "tache",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 295,
+              "y": 185,
+              "texte": "Écran",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                160
+              ],
+              "a": [
+                295,
+                160
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 152,
+              "texte": "D = 2,00 m",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Largeur de la tache centrale",
+          "colonnes": [
+            "Fil",
+            "ℓ (cm)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Fil A",
+              "1,6"
+            ],
+            [
+              "Fil B",
+              "3,2"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "montage",
+          "enonce": "Touche la tache centrale de diffraction.",
+          "reponse": [
+            "tache"
+          ],
+          "aide": "C’est la zone lumineuse et étalée sur l’écran.",
+          "explication": "La **tache centrale** est la zone lumineuse étalée sur l’écran, de largeur ℓ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la largeur a du fil A, en micromètres. Le demi-angle vaut θ = (ℓ / 2) ÷ D, puis a = λ ÷ θ.",
+          "reponse": 133,
+          "tolerance": 2,
+          "unite": "µm",
+          "aide": "θ = 0,008 ÷ 2,00 = 4,0 × 10⁻³ rad ; a = 532 × 10⁻⁹ ÷ θ.",
+          "explication": "θ = 4,0 × 10⁻³ rad, donc a = 532 × 10⁻⁹ ÷ 4,0 × 10⁻³ ≈ 1,33 × 10⁻⁴ m = **133 µm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel fil est le plus fin, et pourquoi ?",
+          "options": [
+            "Le fil B : sa tache est plus large, donc a = λ ÷ θ est plus petit",
+            "Le fil A : sa tache est plus étroite, donc a = λ ÷ θ est plus petit",
+            "Le fil B : sa tache est plus large, donc il arrête plus de lumière",
+            "Les deux fils ont la même largeur, car la longueur d’onde est la même"
+          ],
+          "reponse": 0,
+          "aide": "Plus l’obstacle est petit, plus la diffraction est marquée.",
+          "explication": "Plus un fil est fin, plus la tache s’élargit. B a une tache deux fois plus large : il est **deux fois plus fin** (66,5 µm)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le réseau de pas a = 2,0 µm donne des maxima tels que sin θ = k × λ ÷ a. Calcule sin θ pour k = 1.",
+          "reponse": 0.266,
+          "tolerance": 0.003,
+          "aide": "Convertis 2,0 µm en mètres : 2,0 × 10⁻⁶ m.",
+          "explication": "sin θ₁ = 532 × 10⁻⁹ ÷ 2,0 × 10⁻⁶ = **0,266**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis-en l’angle θ₁ du premier maximum, en degrés.",
+          "reponse": 15.4,
+          "tolerance": 0.3,
+          "unite": "°",
+          "aide": "Utilise sin⁻¹ (0,266) sur la calculatrice en degrés.",
+          "explication": "θ₁ = sin⁻¹ (0,266) ≈ **15,4°**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe5e37bf-f00c-5b08-9992-580fb53763e9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Haut-parleurs synchrones et sonde Doppler",
+      "competence": "analyser-document",
+      "situation": "Deux haut-parleurs synchrones émettent un son pur de 500 Hz (célérité 340 m/s). On relève les distances de quatre points M à chaque haut-parleur. Dans un second temps, une sonde Doppler de fréquence 5,0 MHz explore deux vaisseaux sanguins (célérité des ultrasons : 1 540 m/s).",
+      "documents": [
+        {
+          "id": "points",
+          "type": "tableau",
+          "titre": "Distances aux deux haut-parleurs",
+          "colonnes": [
+            "Point",
+            "d₁ (m)",
+            "d₂ (m)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "M1",
+              "3,00",
+              "3,68"
+            ],
+            [
+              "M2",
+              "3,00",
+              "3,34"
+            ],
+            [
+              "M3",
+              "3,00",
+              "4,02"
+            ],
+            [
+              "M4",
+              "3,00",
+              "4,36"
+            ]
+          ],
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "doppler",
+          "type": "tableau",
+          "titre": "Décalage Doppler mesuré",
+          "colonnes": [
+            "Vaisseau",
+            "f reçue − f émise (Hz)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Vaisseau 1",
+              "+ 1 300"
+            ],
+            [
+              "Vaisseau 2",
+              "− 3 250"
+            ]
+          ],
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur d’onde du son, en mètres. On donne λ = v / f.",
+          "reponse": 0.68,
+          "tolerance": 0.01,
+          "unite": "m",
+          "aide": "λ = 340 ÷ 500.",
+          "explication": "λ = 340 ÷ 500 = **0,68 m**."
+        },
+        {
+          "type": "zone",
+          "document": "points",
+          "enonce": "Touche les deux points où le son est minimal (interférences destructives).",
+          "reponse": [
+            "r1c0",
+            "r2c0"
+          ],
+          "multiple": true,
+          "aide": "Calcule δ = d₂ − d₁ puis compare-le à k × λ et à (k + ½) × λ.",
+          "explication": "δ vaut 0,68 m en M1 (1 λ), 0,34 m en M2 (½ λ), 1,02 m en M3 (1,5 λ), 1,36 m en M4 (2 λ). Les minima sont en **M2 et M3**, où δ = (k + ½) × λ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse du sang dans le vaisseau 1, en m/s. Pour une sonde, Δf ≈ 2 × f × v ÷ c : le décalage est doublé.",
+          "reponse": 0.2,
+          "tolerance": 0.01,
+          "unite": "m/s",
+          "aide": "v = Δf × c ÷ (2 × f), avec f = 5,0 × 10⁶ Hz.",
+          "explication": "v = 1 300 × 1 540 ÷ (2 × 5,0 × 10⁶) ≈ **0,20 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse du sang dans le vaisseau 2, en m/s (valeur positive).",
+          "reponse": 0.5,
+          "tolerance": 0.01,
+          "unite": "m/s",
+          "aide": "Même formule, avec la valeur absolue du décalage.",
+          "explication": "v = 3 250 × 1 540 ÷ (2 × 5,0 × 10⁶) ≈ **0,50 m/s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le vaisseau 2, la fréquence reçue est plus petite que la fréquence émise. Que fait le sang ?",
+          "options": [
+            "Il s’éloigne de la sonde : quand la source et le récepteur s’éloignent, la fréquence baisse",
+            "Il se rapproche de la sonde : quand la source et le récepteur se rapprochent, la fréquence baisse",
+            "Il est immobile : le décalage vient alors seulement du réglage de la sonde Doppler",
+            "Il s’éloigne de la sonde : quand la source et le récepteur s’éloignent, la fréquence monte"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la sirène d’une ambulance qui s’éloigne.",
+          "explication": "Une fréquence plus petite signifie un **éloignement** : le sang du vaisseau 2 s’éloigne de la sonde."
+        }
+      ]
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les échos de la sonde",
+      "competence": "lire-tableau",
+      "situation": "Une sonde d’échographie envoie une brève salve d’ultrasons dans les tissus mous (célérité v = 1 540 m/s) et mesure la durée Δt de l’aller-retour de chaque écho. Le tableau donne trois interfaces rencontrées.",
+      "documents": [
+        {
+          "id": "echos",
+          "type": "tableau",
+          "titre": "Échos reçus",
+          "colonnes": [
+            "Interface",
+            "Durée de l’aller-retour Δt (µs)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Peau – graisse",
+              "26"
+            ],
+            [
+              "Graisse – muscle",
+              "65"
+            ],
+            [
+              "Muscle – os",
+              "130"
+            ]
+          ],
+          "source": "Valeurs idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echos",
+          "enonce": "Touche l’interface la plus profonde.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Plus l’écho revient tard, plus l’interface est loin de la sonde.",
+          "explication": "L’écho le plus tardif, 130 µs, vient de l’interface **muscle – os**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle profondeur se trouve l’interface peau – graisse, en centimètres ? On donne d = v × Δt / 2.",
+          "reponse": 2,
+          "tolerance": 0.05,
+          "unite": "cm",
+          "aide": "Convertis 26 µs en secondes : 26 × 10⁻⁶ s. N’oublie pas le « / 2 ».",
+          "explication": "d = 1 540 × 26 × 10⁻⁶ ÷ 2 ≈ 0,020 m = **2,0 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’épaisseur de la couche située entre l’interface peau – graisse et l’interface muscle – os, en centimètres ?",
+          "reponse": 8,
+          "tolerance": 0.2,
+          "unite": "cm",
+          "aide": "Calcule la profondeur de l’interface muscle – os, puis soustrais 2,0 cm.",
+          "explication": "Muscle – os : d = 1 540 × 130 × 10⁻⁶ ÷ 2 ≈ 10,0 cm. Épaisseur : 10,0 − 2,0 = **8,0 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un quatrième écho revient au bout de 39 µs. À quelle profondeur est l’interface, en centimètres ?",
+          "reponse": 3,
+          "tolerance": 0.1,
+          "unite": "cm",
+          "aide": "Même calcul : v × Δt ÷ 2.",
+          "explication": "d = 1 540 × 39 × 10⁻⁶ ÷ 2 ≈ **3,0 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Sous le microscope",
+      "competence": "observer-schema",
+      "situation": "Un élève observe des cellules avec un microscope. Le tube contient deux lentilles convergentes : une près de l’échantillon, l’autre près de l’œil. L’oculaire a une distance focale f’ = 2,0 cm. Le tableau donne les objectifs disponibles.",
+      "documents": [
+        {
+          "id": "microscope",
+          "type": "schema",
+          "titre": "Le microscope",
+          "largeur": 320,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "emoji",
+              "x": 160,
+              "y": 22,
+              "emoji": "👁",
+              "taille": 26
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                130,
+                45
+              ],
+              "a": [
+                130,
+                195
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190,
+                45
+              ],
+              "a": [
+                190,
+                195
+              ]
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 62,
+              "rx": 30,
+              "ry": 7,
+              "id": "oculaire",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 180,
+              "rx": 22,
+              "ry": 6,
+              "id": "objectif",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 110,
+              "y": 222,
+              "l": 100,
+              "h": 6,
+              "id": "lamelle",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 248,
+              "texte": "Échantillon",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "objectifs",
+          "type": "tableau",
+          "titre": "Objectifs disponibles",
+          "colonnes": [
+            "Objectif",
+            "Grandissement |γ|"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Objectif A",
+              "× 10"
+            ],
+            [
+              "Objectif B",
+              "× 20"
+            ],
+            [
+              "Objectif C",
+              "× 40"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "microscope",
+          "enonce": "Touche l’objectif, la lentille qui donne une image réelle agrandie de l’échantillon.",
+          "reponse": [
+            "objectif"
+          ],
+          "aide": "L’objectif est la lentille la plus proche de l’échantillon.",
+          "explication": "L’**objectif** est tout près de l’échantillon ; l’oculaire, près de l’œil, agit comme une loupe sur l’image qu’il a formée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le grossissement commercial de l’oculaire. On donne G_c = 0,25 ÷ f’ (f’ en mètres).",
+          "reponse": 12.5,
+          "tolerance": 0.1,
+          "aide": "Convertis 2,0 cm en mètres : 0,020 m.",
+          "explication": "G_c = 0,25 ÷ 0,020 = **12,5**."
+        },
+        {
+          "type": "zone",
+          "document": "objectifs",
+          "enonce": "Touche l’objectif qui donne un grossissement total de 250 avec cet oculaire. On donne G = |γ| × G_c(oculaire).",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Divise 250 par le grossissement de l’oculaire.",
+          "explication": "250 ÷ 12,5 = 20 : c’est l’**objectif B** (× 20)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour séparer deux détails très proches, limités par la diffraction, que faut-il faire ?",
+          "options": [
+            "Utiliser une lumière de longueur d’onde plus courte et un objectif d’ouverture numérique plus grande",
+            "Changer l’oculaire pour un modèle de focale plus courte, ce qui suffit à séparer tout détail",
+            "Éclairer avec une lumière rouge, de longueur d’onde plus grande, pour réduire la diffraction",
+            "Augmenter seulement le grossissement de l’oculaire, sans rien changer d’autre au microscope"
+          ],
+          "reponse": 0,
+          "aide": "La résolution s’améliore quand λ diminue et quand l’ouverture numérique augmente.",
+          "explication": "La résolution est limitée par la diffraction : elle s’améliore avec un **λ plus court** et une **ouverture numérique plus grande**. Grossir davantage ne crée pas de détail."
+        }
+      ]
+    },
+    {
+      "chapitre": "82b4de1b-b61d-5add-8100-816c07b8661f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Séparer deux étoiles avec une lunette",
+      "competence": "modeliser",
+      "situation": "Une lunette astronomique réglée à l’infini sert à séparer deux étoiles très proches, observées à la longueur d’onde 550 nm. L’œil nu ne sépare pas deux points vus sous un angle inférieur à 3 × 10⁻⁴ rad. On compare ensuite la lunette à un télescope de Newton.",
+      "documents": [
+        {
+          "id": "lunette",
+          "type": "tableau",
+          "titre": "La lunette",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Focale de l’objectif f’₁",
+              "120 cm"
+            ],
+            [
+              "Focale de l’oculaire f’₂",
+              "2,0 cm"
+            ],
+            [
+              "Diamètre de l’objectif D",
+              "8,0 cm"
+            ]
+          ]
+        },
+        {
+          "id": "newton",
+          "type": "schema",
+          "titre": "Télescope de Newton",
+          "largeur": 320,
+          "hauteur": 210,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 90,
+              "l": 200,
+              "h": 80
+            },
+            {
+              "forme": "chemin",
+              "d": "M52 96 Q28 130 52 164",
+              "id": "primaire",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                192,
+                150
+              ],
+              "a": [
+                224,
+                118
+              ],
+              "id": "plan",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 208,
+              "cy": 78,
+              "rx": 16,
+              "ry": 6,
+              "id": "oculaire",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                105
+              ],
+              "a": [
+                245,
+                105
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                158
+              ],
+              "a": [
+                245,
+                158
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 80,
+              "texte": "Lumière",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le grossissement de la lunette. On donne G = f’₁ ÷ f’₂.",
+          "reponse": 60,
+          "tolerance": 1,
+          "aide": "Garde les deux focales dans la même unité.",
+          "explication": "G = 120 ÷ 2,0 = **60**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La lunette est afocale : les foyers de l’objectif et de l’oculaire sont confondus. Quelle distance sépare les deux lentilles, en centimètres ?",
+          "reponse": 122,
+          "tolerance": 1,
+          "unite": "cm",
+          "aide": "La distance est la somme des deux focales.",
+          "explication": "La distance vaut f’₁ + f’₂ = 120 + 2,0 = **122 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la plus petite séparation angulaire que l’objectif permet de distinguer, en microradians (1 µrad = 10⁻⁶ rad). On donne θ_min ≈ 1,22 × λ ÷ D.",
+          "reponse": 8.4,
+          "tolerance": 0.1,
+          "unite": "µrad",
+          "aide": "Convertis D = 8,0 cm en mètres : 0,080 m.",
+          "explication": "θ_min = 1,22 × 550 × 10⁻⁹ ÷ 0,080 ≈ 8,4 × 10⁻⁶ rad, soit **8,4 µrad**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel grossissement minimal faut-il pour que l’œil sépare deux étoiles écartées de θ_min ? (Angle minimal de l’œil : 3 × 10⁻⁴ rad.)",
+          "reponse": 36,
+          "tolerance": 1,
+          "aide": "Divise 3 × 10⁻⁴ par θ_min, dans la même unité.",
+          "explication": "G_min = 3 × 10⁻⁴ ÷ 8,4 × 10⁻⁶ ≈ **36** : la lunette de grossissement 60 convient."
+        },
+        {
+          "type": "zone",
+          "document": "newton",
+          "enonce": "Touche le miroir concave qui joue le rôle de l’objectif de la lunette.",
+          "reponse": [
+            "primaire"
+          ],
+          "aide": "Il est au fond du tube, à l’opposé de l’entrée de la lumière.",
+          "explication": "Le **miroir concave** du fond remplace l’objectif ; le petit miroir plan incliné renvoie l’image sur le côté, vers l’oculaire."
+        }
+      ]
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du capteur au nombre",
+      "competence": "observer-schema",
+      "situation": "Un thermomètre électronique suit la chaîne d’information ci-dessous. Son capteur fournit 10 mV par degré Celsius. Le convertisseur analogique-numérique (CAN) a 12 bits et une plage de 0 à 4,096 V. Le conditionneur et le filtre ne changent pas la valeur de la tension.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "titre": "Chaîne d’information",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "capteur",
+              "texte": "Capteur"
+            },
+            {
+              "id": "conditionneur",
+              "texte": "Conditionneur"
+            },
+            {
+              "id": "filtre",
+              "texte": "Filtre"
+            },
+            {
+              "id": "can",
+              "texte": "CAN"
+            },
+            {
+              "id": "micro",
+              "texte": "Micro-contrôleur"
+            }
+          ],
+          "liens": [
+            {
+              "de": "capteur",
+              "a": "conditionneur"
+            },
+            {
+              "de": "conditionneur",
+              "a": "filtre"
+            },
+            {
+              "de": "filtre",
+              "a": "can"
+            },
+            {
+              "de": "can",
+              "a": "micro"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche le bloc qui transforme la tension analogique en un nombre que le micro-contrôleur peut lire.",
+          "reponse": [
+            "can"
+          ],
+          "aide": "Le signal devient numérique à cet endroit de la chaîne.",
+          "explication": "C’est le **CAN** qui convertit la tension en nombre ; avant lui, le signal est analogique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la résolution (le quantum) du CAN, en millivolts ? On donne q = plage de tension ÷ 2ⁿ.",
+          "reponse": 1,
+          "tolerance": 0.02,
+          "unite": "mV",
+          "aide": "Ici n = 12, donc 2¹² = 4 096.",
+          "explication": "q = 4,096 ÷ 4 096 = 0,001 V = **1,0 mV**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le CAN affiche le nombre 235. Quelle tension cela représente-t-il, en millivolts ?",
+          "reponse": 235,
+          "tolerance": 1,
+          "unite": "mV",
+          "aide": "Chaque unité du nombre vaut un quantum.",
+          "explication": "U = 235 × 1,0 mV = **235 mV**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle température mesure le thermomètre, en degrés Celsius ?",
+          "reponse": 23.5,
+          "tolerance": 0.1,
+          "unite": "°C",
+          "aide": "Le capteur donne 10 mV par degré : divise la tension par 10 mV.",
+          "explication": "T = 235 mV ÷ 10 mV/°C = **23,5 °C**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Filtrer le bruit, guider la lumière",
+      "competence": "lire-graphique",
+      "situation": "Un capteur de pression délivre un signal utile lent, pollué par un bruit de fréquence 10 kHz. On le filtre avec un filtre passe-bas dont on a relevé l’atténuation. Le signal est ensuite envoyé dans une fibre optique à saut d’indice.",
+      "documents": [
+        {
+          "id": "filtre",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Atténuation du filtre",
+          "categories": [
+            "0,1",
+            "0,5",
+            "1",
+            "2",
+            "5",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "Atténuation",
+              "valeurs": [
+                0,
+                1,
+                3,
+                7,
+                14.1,
+                20
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Atténuation",
+            "unite": "dB",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Fréquence (kHz)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "fibre",
+          "type": "tableau",
+          "titre": "La fibre optique",
+          "colonnes": [
+            "Partie",
+            "Indice de réfraction"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Cœur n₁",
+              "1,48"
+            ],
+            [
+              "Gaine n₂",
+              "1,46"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "filtre",
+          "enonce": "Touche la fréquence de coupure du filtre, celle où l’atténuation atteint 3 dB.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "La fréquence de coupure correspond à une chute de 3 dB par rapport au gain maximal.",
+          "explication": "L’atténuation vaut 3 dB à **1 kHz** : c’est la fréquence de coupure."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le bruit de 10 kHz a une amplitude de 50 mV avant le filtre. Quelle amplitude a-t-il après, en millivolts ? On donne G = 20 × log (U_sortie ÷ U_entrée).",
+          "reponse": 5,
+          "tolerance": 0.1,
+          "unite": "mV",
+          "aide": "Lis l’atténuation à 10 kHz : le gain est −20 dB, donc U_s ÷ U_e = 10⁻¹.",
+          "explication": "Gain = −20 dB, donc U_s ÷ U_e = 10^(−1) = 0,10 : U_s = 50 × 0,10 = **5,0 mV**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’ouverture numérique de la fibre. On donne ON = √(n₁² − n₂²).",
+          "reponse": 0.24,
+          "tolerance": 0.005,
+          "aide": "n₁² − n₂² = 2,1904 − 2,1316.",
+          "explication": "ON = √(2,1904 − 2,1316) = √0,0588 ≈ **0,24**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis-en l’angle d’acceptance maximal θ_max de la fibre, en degrés. On donne sin θ_max = ON.",
+          "reponse": 14,
+          "tolerance": 0.3,
+          "unite": "°",
+          "aide": "Utilise sin⁻¹ (0,2425) sur la calculatrice en degrés.",
+          "explication": "θ_max = sin⁻¹ (0,2425) ≈ **14°** : un rayon plus incliné que cela n’est pas guidé."
+        }
+      ]
+    },
+    {
+      "chapitre": "2b79d30e-d725-5262-b5e6-b685eb86f0f5",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Réguler un chauffe-eau",
+      "competence": "analyser-document",
+      "situation": "Un chauffe-eau doit passer de 20 °C à une consigne de 60 °C. On compare une correction proportionnelle (P) et une correction proportionnelle intégrale (PI). Une vanne de gaz est ensuite ouverte par un moteur pas à pas dont le tableau donne les caractéristiques.",
+      "documents": [
+        {
+          "id": "courbe-reponse",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Température de l’eau après l’échelon de consigne",
+          "categories": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30"
+          ],
+          "series": [
+            {
+              "nom": "Correction P",
+              "valeurs": [
+                20,
+                38,
+                48,
+                53,
+                55.5,
+                56.7,
+                57
+              ]
+            },
+            {
+              "nom": "Correction PI",
+              "valeurs": [
+                20,
+                40,
+                55,
+                63,
+                61,
+                60.4,
+                60
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 0,
+            "max": 70,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "moteur",
+          "type": "tableau",
+          "titre": "Moteur pas à pas de la vanne",
+          "colonnes": [
+            "Caractéristique",
+            "Valeur"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Nombre de pas par tour",
+              "48"
+            ],
+            [
+              "Tours pour ouvrir la vanne",
+              "6"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart statique de la correction P, en degrés Celsius ?",
+          "reponse": 3,
+          "tolerance": 0.1,
+          "unite": "°C",
+          "aide": "L’écart statique est la différence finale entre la consigne et la température.",
+          "explication": "La température se stabilise à 57 °C : écart statique = 60 − 57 = **3 °C**."
+        },
+        {
+          "type": "zone",
+          "document": "courbe-reponse",
+          "enonce": "Touche l’instant où la correction PI dépasse le plus la consigne.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le point le plus haut de la courbe de la correction PI.",
+          "explication": "À **15 min**, la température atteint 63 °C : c’est le premier dépassement, avant le retour à 60 °C."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le temps de réponse à 5 % de la correction PI, en minutes ? La variation totale est de 40 °C : la température doit rester à ± 5 % de cette variation autour de 60 °C.",
+          "reponse": 20,
+          "tolerance": 0.5,
+          "unite": "min",
+          "aide": "5 % de 40 °C valent 2 °C : la température doit rester entre 58 °C et 62 °C.",
+          "explication": "± 5 % de 40 °C donnent ± 2 °C. À 15 min la température (63 °C) est encore dehors ; à **20 min** (61 °C) elle est entrée dans la bande et n’en sort plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De quel angle tourne le moteur à chaque pas, en degrés ?",
+          "reponse": 7.5,
+          "tolerance": 0.1,
+          "unite": "°",
+          "aide": "Un tour complet fait 360°.",
+          "explication": "Angle par pas = 360° ÷ 48 = **7,5°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’impulsions faut-il envoyer au moteur pour ouvrir complètement la vanne ?",
+          "reponse": 288,
+          "tolerance": 1,
+          "aide": "Multiplie le nombre de pas par tour par le nombre de tours.",
+          "explication": "48 × 6 = **288 impulsions**."
+        }
+      ]
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois façons de chauffer une maison",
+      "competence": "lire-tableau",
+      "situation": "En hiver, la chaleur circule dans la maison de trois façons différentes, qu’on repère dans le premier tableau. On étudie ensuite un mur par lequel elle s’échappe. On donne R_th = e ÷ (λ × S) et Φ = (T_chaude − T_froide) ÷ R_th.",
+      "documents": [
+        {
+          "id": "situations",
+          "type": "tableau",
+          "titre": "Trois situations",
+          "colonnes": [
+            "Repère",
+            "Situation"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "A",
+              "Le manche métallique d’une casserole chauffe peu à peu"
+            ],
+            [
+              "B",
+              "L’air circule au-dessus d’un radiateur"
+            ],
+            [
+              "C",
+              "Le Soleil chauffe le visage à travers une vitre"
+            ]
+          ]
+        },
+        {
+          "id": "mur",
+          "type": "tableau",
+          "titre": "Le mur",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Épaisseur e",
+              "0,20 m"
+            ],
+            [
+              "Surface S",
+              "10 m²"
+            ],
+            [
+              "Conductivité λ",
+              "1,0 W·m⁻¹·K⁻¹"
+            ],
+            [
+              "Température intérieure",
+              "20 °C"
+            ],
+            [
+              "Température extérieure",
+              "0 °C"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque situation à son mode de transfert thermique.",
+          "paires": [
+            [
+              "Le manche de la casserole",
+              "Conduction"
+            ],
+            [
+              "L’air au-dessus du radiateur",
+              "Convection"
+            ],
+            [
+              "Le Soleil sur le visage",
+              "Rayonnement"
+            ]
+          ],
+          "aide": "Demande-toi : la chaleur passe-t-elle de proche en proche, par un fluide en mouvement, ou par des ondes ?",
+          "explication": "Le manche chauffe **par conduction**, l’air du radiateur **par convection**, le visage **par rayonnement**."
+        },
+        {
+          "type": "zone",
+          "document": "situations",
+          "enonce": "Touche la situation où le transfert n’a besoin d’aucun milieu matériel.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Un seul mode de transfert traverse le vide.",
+          "explication": "Le **rayonnement** se propage même dans le vide : c’est la situation C."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la résistance thermique du mur, en K/W.",
+          "reponse": 0.02,
+          "tolerance": 0.001,
+          "unite": "K/W",
+          "aide": "R_th = 0,20 ÷ (1,0 × 10).",
+          "explication": "R_th = 0,20 ÷ (1,0 × 10) = **0,020 K/W**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le flux thermique perdu à travers le mur, en watts.",
+          "reponse": 1000,
+          "tolerance": 10,
+          "unite": "W",
+          "aide": "L’écart de température est 20 − 0 = 20 K.",
+          "explication": "Φ = 20 ÷ 0,020 = **1 000 W**."
+        }
+      ]
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’échangeur à contre-courant",
+      "competence": "observer-schema",
+      "situation": "Dans un échangeur, de l’eau chaude (0,40 kg/s) entre à 90 °C et sort à 60 °C. Elle réchauffe de l’eau froide, qui entre à 20 °C et sort à 70 °C. On prend c = 4 180 J·kg⁻¹·K⁻¹ et on néglige les pertes vers l’extérieur.",
+      "documents": [
+        {
+          "id": "echangeur",
+          "type": "schema",
+          "titre": "Schéma de l’échangeur",
+          "largeur": 320,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 60,
+              "l": 240,
+              "h": 80
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                100
+              ],
+              "a": [
+                280,
+                100
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                10,
+                80
+              ],
+              "a": [
+                310,
+                80
+              ],
+              "fleche": "fin",
+              "id": "chaud",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                310,
+                120
+              ],
+              "a": [
+                10,
+                120
+              ],
+              "fleche": "fin",
+              "id": "froid",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 42,
+              "texte": "Eau chaude",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 10,
+              "y": 55,
+              "texte": "90 °C",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 310,
+              "y": 55,
+              "texte": "60 °C",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 168,
+              "texte": "Eau froide",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 10,
+              "y": 160,
+              "texte": "70 °C",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 310,
+              "y": 160,
+              "texte": "20 °C",
+              "ancre": "fin"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echangeur",
+          "enonce": "Touche la flèche qui indique la circulation de l’eau qui se réchauffe.",
+          "reponse": [
+            "froid"
+          ],
+          "aide": "Regarde les températures écrites aux deux bouts de chaque flèche : laquelle monte ?",
+          "explication": "L’eau froide entre à 20 °C et sort à 70 °C : c’est la flèche du **bas**, qui va de droite à gauche."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel flux thermique l’eau chaude cède-t-elle, en kilowatts ? On donne Φ = q_m × c × ΔT.",
+          "reponse": 50.2,
+          "tolerance": 0.3,
+          "unite": "kW",
+          "aide": "ΔT = 90 − 60 = 30 K ; divise par 1 000 pour passer des watts aux kilowatts.",
+          "explication": "Φ = 0,40 × 4 180 × 30 ≈ 50 160 W, soit **50,2 kW**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le débit massique de l’eau froide, en kg/s ? Elle reçoit tout le flux cédé par l’eau chaude.",
+          "reponse": 0.24,
+          "tolerance": 0.005,
+          "unite": "kg/s",
+          "aide": "Φ = q_m × c × ΔT avec ΔT = 70 − 20 = 50 K.",
+          "explication": "q_m = 50 160 ÷ (4 180 × 50) = **0,24 kg/s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’eau froide sort à 70 °C, donc plus chaude que l’eau chaude à sa sortie (60 °C). Pourquoi est-ce possible ?",
+          "options": [
+            "Les deux fluides circulent en sens opposés : la sortie froide côtoie l’entrée chaude à 90 °C",
+            "Les deux fluides circulent dans le même sens, ce qui égalise peu à peu leurs températures",
+            "La paroi de l’échangeur crée de l’énergie thermique et la transmet à l’eau froide",
+            "Le débit de l’eau froide est plus petit, ce qui la fait chauffer au-delà de l’eau chaude"
+          ],
+          "reponse": 0,
+          "aide": "Regarde en face de quelle température de l’eau chaude se trouve la sortie de l’eau froide.",
+          "explication": "En **contre-courant**, l’eau froide sortante est en face de l’eau chaude entrante (90 °C) : elle peut dépasser la température de sortie de l’eau chaude, ce qu’un co-courant interdit."
+        }
+      ]
+    },
+    {
+      "chapitre": "13559c26-0e01-500d-81c8-2da32170eefe",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La pompe à chaleur du plancher chauffant",
+      "competence": "modeliser",
+      "situation": "Une pompe à chaleur chauffe l’eau d’un plancher chauffant : 0,30 kg/s d’eau passent de 30 °C à 40 °C (c = 4 180 J·kg⁻¹·K⁻¹). Son COP annoncé est 4,0. On compare avec une chaudière au propane, de pouvoir calorifique 46 MJ/kg, qui fournirait la même chaleur pendant une heure.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "titre": "Circuit du fluide frigorigène",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "evaporateur",
+              "texte": "Évaporateur"
+            },
+            {
+              "id": "compresseur",
+              "texte": "Compresseur"
+            },
+            {
+              "id": "condenseur",
+              "texte": "Condenseur"
+            },
+            {
+              "id": "detendeur",
+              "texte": "Détendeur"
+            }
+          ],
+          "liens": [
+            {
+              "de": "evaporateur",
+              "a": "compresseur"
+            },
+            {
+              "de": "compresseur",
+              "a": "condenseur"
+            },
+            {
+              "de": "condenseur",
+              "a": "detendeur"
+            },
+            {
+              "de": "detendeur",
+              "a": "evaporateur"
+            }
+          ]
+        },
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Eau du plancher chauffant",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Débit massique",
+              "0,30 kg/s"
+            ],
+            [
+              "Température d’entrée",
+              "30 °C"
+            ],
+            [
+              "Température de sortie",
+              "40 °C"
+            ],
+            [
+              "COP annoncé",
+              "4,0"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche l’organe où le fluide prélève de l’énergie à l’air extérieur.",
+          "reponse": [
+            "evaporateur"
+          ],
+          "aide": "Le fluide y est très froid : il prend de l’énergie à l’extérieur en changeant d’état.",
+          "explication": "L’**évaporateur** est le côté froid : le fluide s’y évapore et y prélève l’énergie Q_f à l’extérieur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance thermique Q_c reçoit l’eau du plancher, en kilowatts ?",
+          "reponse": 12.5,
+          "tolerance": 0.1,
+          "unite": "kW",
+          "aide": "Q_c = q_m × c × ΔT avec ΔT = 10 K.",
+          "explication": "Q_c = 0,30 × 4 180 × 10 = 12 540 W, soit **12,5 kW**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance électrique W le compresseur consomme-t-il, en kilowatts ? On donne COP = Q_c ÷ W.",
+          "reponse": 3.1,
+          "tolerance": 0.05,
+          "unite": "kW",
+          "aide": "W = Q_c ÷ COP.",
+          "explication": "W = 12,54 ÷ 4,0 ≈ **3,1 kW**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance Q_f la pompe prélève-t-elle à l’extérieur, en kilowatts ? Utilise Q_c = W + Q_f.",
+          "reponse": 9.4,
+          "tolerance": 0.1,
+          "unite": "kW",
+          "aide": "Q_f = Q_c − W.",
+          "explication": "Q_f = 12,54 − 3,135 ≈ **9,4 kW** : les trois quarts de la chaleur viennent de l’extérieur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse de propane la chaudière brûlerait-elle en une heure pour fournir cette même chaleur, en kilogrammes ?",
+          "reponse": 0.98,
+          "tolerance": 0.02,
+          "unite": "kg",
+          "aide": "Énergie en une heure : Q_c × 3 600 s, en joules ; puis masse = énergie ÷ PC.",
+          "explication": "E = 12 540 × 3 600 ≈ 45,1 MJ ; m = 45,1 ÷ 46 ≈ **0,98 kg**."
+        }
+      ]
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le tuyau qui se rétrécit",
+      "competence": "observer-schema",
+      "situation": "Dans une canalisation, de l’eau (ρ = 1 000 kg/m³) circule à v₁ = 0,50 m/s dans une section S₁ = 12 cm², puis traverse un rétrécissement de section S₂ = 3,0 cm². On néglige la différence de hauteur entre les deux sections.",
+      "documents": [
+        {
+          "id": "tuyau",
+          "type": "schema",
+          "titre": "Canalisation avec rétrécissement",
+          "largeur": 320,
+          "hauteur": 190,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 40,
+              "l": 130,
+              "h": 120,
+              "id": "large",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  150,
+                  40
+                ],
+                [
+                  190,
+                  80
+                ],
+                [
+                  190,
+                  120
+                ],
+                [
+                  150,
+                  160
+                ]
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 190,
+              "y": 80,
+              "l": 110,
+              "h": 40,
+              "id": "etroit",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                35,
+                90
+              ],
+              "a": [
+                110,
+                90
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                200,
+                100
+              ],
+              "a": [
+                290,
+                100
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 85,
+              "y": 140,
+              "texte": "S₁ = 12 cm²",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 245,
+              "y": 145,
+              "texte": "S₂ = 3,0 cm²",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tuyau",
+          "enonce": "Touche la partie du tuyau où l’eau va le plus vite.",
+          "reponse": [
+            "etroit"
+          ],
+          "aide": "Le débit se conserve : que devient la vitesse quand la section diminue ?",
+          "explication": "Le débit se conserve, donc l’eau **accélère dans la partie étroite**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le débit volumique, en litres par seconde ? On donne Q_v = S × v ; 1 m³ = 1 000 L.",
+          "reponse": 0.6,
+          "tolerance": 0.01,
+          "unite": "L/s",
+          "aide": "Convertis S₁ = 12 cm² en m² : 12 × 10⁻⁴ m².",
+          "explication": "Q_v = 12 × 10⁻⁴ × 0,50 = 6,0 × 10⁻⁴ m³/s = **0,60 L/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la vitesse de l’eau dans la section étroite, en m/s ?",
+          "reponse": 2,
+          "tolerance": 0.05,
+          "unite": "m/s",
+          "aide": "Le débit est le même : S₁ × v₁ = S₂ × v₂.",
+          "explication": "v₂ = 0,50 × 12 ÷ 3,0 = **2,0 m/s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la pression baisse-t-elle entre les deux sections, en pascals ? Bernoulli : p + ½ × ρ × v² = constante.",
+          "reponse": 1875,
+          "tolerance": 25,
+          "unite": "Pa",
+          "aide": "p₁ − p₂ = ½ × ρ × (v₂² − v₁²).",
+          "explication": "p₁ − p₂ = ½ × 1 000 × (2,0² − 0,50²) = **1 875 Pa** : la pression chute là où l’eau accélère."
+        }
+      ]
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La pompe de l’atelier",
+      "competence": "modeliser",
+      "situation": "Une pompe monte de l’eau (ρ = 1 000 kg/m³, g = 9,81 N/kg) dans une cuve située 5,0 m plus haut. Elle fournit Δp = 1,5 bar (1 bar = 10⁵ Pa) pour un débit de 2,0 × 10⁻³ m³/s et absorbe 500 W. Un capteur au fond de la cuve haute indique 1,39 bar ; la pression atmosphérique est 1,00 bar.",
+      "documents": [
+        {
+          "id": "installation",
+          "type": "schema",
+          "titre": "Installation",
+          "largeur": 320,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 180,
+              "l": 70,
+              "h": 70,
+              "texte": "Cuve basse"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                215
+              ],
+              "a": [
+                94,
+                215
+              ]
+            },
+            {
+              "forme": "cercle",
+              "cx": 110,
+              "cy": 215,
+              "r": 16,
+              "id": "pompe",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 110,
+              "y": 245,
+              "texte": "Pompe",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                126,
+                215
+              ],
+              "a": [
+                150,
+                215
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                215
+              ],
+              "a": [
+                150,
+                90
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 143,
+              "y": 140,
+              "l": 14,
+              "h": 16,
+              "id": "vanne",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 135,
+              "y": 152,
+              "texte": "Vanne",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                90
+              ],
+              "a": [
+                230,
+                90
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 230,
+              "y": 40,
+              "l": 80,
+              "h": 90,
+              "texte": "Cuve haute"
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 118,
+              "r": 7,
+              "id": "capteur",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 152,
+              "texte": "Capteur",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                205,
+                100
+              ],
+              "a": [
+                205,
+                215
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 213,
+              "y": 165,
+              "texte": "5,0 m",
+              "ancre": "debut"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "installation",
+          "enonce": "Touche la pompe.",
+          "reponse": [
+            "pompe"
+          ],
+          "aide": "C’est l’élément rond placé entre la cuve basse et la vanne.",
+          "explication": "La **pompe** est entre la cuve basse et la vanne : elle apporte de l’énergie au fluide."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la hauteur d’eau dans la cuve haute, en mètres ? On donne p − p_atm = ρ × g × h.",
+          "reponse": 4,
+          "tolerance": 0.1,
+          "unite": "m",
+          "aide": "Différence de pression : (1,39 − 1,00) × 10⁵ Pa.",
+          "explication": "h = 0,39 × 10⁵ ÷ (1 000 × 9,81) ≈ **4,0 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de Δp compense les pertes de charge, en bar ? La pompe doit d’abord vaincre la pression ρ × g × H du dénivelé H = 5,0 m.",
+          "reponse": 1,
+          "tolerance": 0.03,
+          "unite": "bar",
+          "aide": "ρ × g × H = 1 000 × 9,81 × 5,0 ≈ 49 000 Pa ≈ 0,49 bar.",
+          "explication": "Le dénivelé demande environ 0,49 bar ; le reste de 1,5 bar, soit **environ 1,0 bar**, sert à vaincre les pertes de charge de la vanne, des coudes et du tuyau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle puissance hydraulique utile fournit la pompe, en watts ? On donne P_h = Q_v × Δp.",
+          "reponse": 300,
+          "tolerance": 3,
+          "unite": "W",
+          "aide": "Convertis Δp = 1,5 bar en pascals.",
+          "explication": "P_h = 2,0 × 10⁻³ × 1,5 × 10⁵ = **300 W**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rendement de la pompe ? On donne η = P_h ÷ P_absorbée. Réponds par un nombre entre 0 et 1.",
+          "reponse": 0.6,
+          "tolerance": 0.01,
+          "aide": "La pompe absorbe 500 W.",
+          "explication": "η = 300 ÷ 500 = **0,60**, soit 60 %."
+        }
+      ]
+    },
+    {
+      "chapitre": "43cc26be-bbc9-5ee4-97e5-ca28772421b1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Distiller un mélange de deux liquides",
+      "competence": "lire-graphique",
+      "situation": "Un mélange de 3,0 mol d’un liquide A (le plus volatil, qui bout à 60 °C) et de 2,0 mol d’un liquide B (qui bout à 100 °C) est distillé sous pression atmosphérique. Le diagramme isobare est donné en fonction de la fraction molaire x_A ; la colonne du montage est schématisée à côté.",
+      "documents": [
+        {
+          "id": "diagramme",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Diagramme binaire liquide-vapeur",
+          "categories": [
+            "0",
+            "0,2",
+            "0,4",
+            "0,6",
+            "0,8",
+            "1"
+          ],
+          "series": [
+            {
+              "nom": "Courbe d’ébullition",
+              "valeurs": [
+                100,
+                88,
+                79,
+                71,
+                65,
+                60
+              ]
+            },
+            {
+              "nom": "Courbe de rosée",
+              "valeurs": [
+                100,
+                96,
+                91,
+                84,
+                74,
+                60
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 50,
+            "max": 110,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Fraction molaire x_A"
+          },
+          "valeurs": false,
+          "source": "Diagramme idéalisé pour l’exercice"
+        },
+        {
+          "id": "colonne",
+          "type": "schema",
+          "titre": "Distillation fractionnée",
+          "largeur": 320,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 90,
+              "cy": 215,
+              "rx": 45,
+              "ry": 30,
+              "id": "bouilleur",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 70,
+              "y": 50,
+              "l": 40,
+              "h": 140
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                80
+              ],
+              "a": [
+                110,
+                80
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                110
+              ],
+              "a": [
+                110,
+                110
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                140
+              ],
+              "a": [
+                110,
+                140
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                170
+              ],
+              "a": [
+                110,
+                170
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                60
+              ],
+              "a": [
+                150,
+                50
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 150,
+              "y": 35,
+              "l": 60,
+              "h": 24,
+              "arrondi": 4,
+              "id": "condenseur",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                47
+              ],
+              "a": [
+                255,
+                47
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                255,
+                47
+              ],
+              "a": [
+                255,
+                110
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 230,
+              "y": 115,
+              "l": 50,
+              "h": 60,
+              "arrondi": 6,
+              "id": "recipient",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 255,
+              "texte": "Chauffage",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fraction molaire x_A du mélange de départ ? On donne x_A = n_A ÷ (n_A + n_B).",
+          "reponse": 0.6,
+          "tolerance": 0.01,
+          "aide": "Quantité totale : 3,0 + 2,0 = 5,0 mol.",
+          "explication": "x_A = 3,0 ÷ 5,0 = **0,60**."
+        },
+        {
+          "type": "zone",
+          "document": "diagramme",
+          "enonce": "Touche, sur le diagramme, la composition du mélange de départ.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche x_A = 0,6 sur l’axe horizontal.",
+          "explication": "x_A = 0,6 correspond à la **quatrième graduation** de l’axe horizontal."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle température apparaît la première bulle quand on chauffe ce mélange, en degrés Celsius ?",
+          "reponse": 71,
+          "tolerance": 1,
+          "unite": "°C",
+          "aide": "La première bulle se lit sur la courbe d’ébullition, celle du bas.",
+          "explication": "Sur la courbe d’ébullition, pour x_A = 0,6 : **71 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment est la première vapeur par rapport au liquide de départ ?",
+          "options": [
+            "Plus riche en A, le constituant le plus volatil, que le liquide de départ",
+            "Plus riche en B, parce que B a la température d’ébullition la plus élevée des deux",
+            "De même composition que le liquide de départ, avec x_A égal à 0,60 exactement",
+            "Faite uniquement de B, qui serait le premier des deux liquides à s’évaporer"
+          ],
+          "reponse": 0,
+          "aide": "La vapeur est plus riche en constituant le plus volatil.",
+          "explication": "A bout à la température la plus basse : la vapeur est **plus riche en A** que le liquide. C’est ce qui permet la séparation par distillation."
+        },
+        {
+          "type": "zone",
+          "document": "colonne",
+          "enonce": "Touche le récipient qui recueille le distillat, riche en constituant le plus volatil.",
+          "reponse": [
+            "recipient"
+          ],
+          "aide": "Le distillat sort en tête de colonne, après le condenseur.",
+          "explication": "Le distillat, riche en A, est recueilli dans le **récipient** placé après le condenseur ; le constituant le moins volatil reste dans le bouilleur."
+        }
+      ]
+    }
+  ]
+}

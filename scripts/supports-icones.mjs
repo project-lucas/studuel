@@ -64,19 +64,24 @@ const SIZE = 256
  * emprunté à un autre lot.
  */
 const ORIGINAUX = {
-  cours: 'cours',
-  quiz: 'quizz',
-  flashcards: 'flashcard',
+  // LE LOT DU 25/09/2026 (Lucas) : Cours, Quiz, Exercice, Moi vs IA, cartes
+  // mémoire et « À revoir » redessinés dans le style de la Fiche du Marché,
+  // la seule gardée. Les fichiers portent un « 2 » : les anciens originaux
+  // (cours.png, quizz.png, flashcard.png, erreur.png, defi.png) restent à côté.
+  cours: 'cours (2)',
+  quiz: 'quizz 2',
+  // Plus de `flashcards` (01/10/2026) : la tuile est partie du chapitre, elle
+  // rejouait le quiz. L'original « carte mémoire 2 » reste dans les sources.
+  exercice: 'exercice 2',
   // LA FICHE EST CELLE DU MARCHÉ (Lucas, 24/09/2026 : « cette illustration
   // par défaut, partout ») : la feuille surlignée et son surligneur rose, qui
   // vendait déjà la « Fiche de révision » dans la Boutique. Même objet, même
   // dessin, de la Boutique à la tuile du chapitre et à la bibliothèque. La
   // feuille à trombone d'avant (`supports/fiches.png`) n'est plus servie.
   carte: 'boutique-marche/fiche',
-  // `ia` (« Moi vs IA ») porte le bouclier qui était celui du Défi solo de
-  // leçon, retiré le 16/09/2026 : même dessin, même original, nouvelle clé.
-  ia: 'defi',
-  erreurs: 'erreur',
+  // `ia` (« Moi vs IA ») : le bouclier mi-crayon, mi-circuit.
+  ia: 'moi vs ia 2',
+  erreurs: 'à revoir 2',
   // LES ONGLETS DE « MA BIBLIOTHÈQUE » (24/09/2026). Ce ne sont pas des supports
   // de chapitre, mais ils s'affichent à côté de la Fiche (Dossiers · Capsules ·
   // Fiches) : ils passent par la MÊME trame, sinon l'un des trois onglets
@@ -90,10 +95,8 @@ const ORIGINAUX = {
   // sur ce bouton, qui garde son pictogramme en trait (components/carnet/
   // CarnetButton). L'original reste là si un écran la montre un jour en grand.
 }
-// `exercice` n'est PAS produit ici : c'est le parchemin à coches de l'arène
-// (public/images/defi/icones/quetes-v2.webp), repris tel quel dans
-// public/images/supports/exercice.webp — même atelier, même palette. Le jour
-// où un original dédié existe, l'ajouter à ORIGINAUX suffit.
+// `exercice` a eu longtemps le parchemin à coches de l'arène (quetes-v2) ;
+// depuis le 25/09/2026 il a son dessin, le porte-bloc « Exercice ».
 
 /** L'original d'un support : même nom, quelle que soit son extension. */
 async function source(nom) {

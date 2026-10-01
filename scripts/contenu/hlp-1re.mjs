@@ -855,7 +855,7 @@ Le tableau est traité comme une **fenêtre** ouverte sur l'espace.
 
 | La règle | Son effet |
 | Les parallèles perpendiculaires au plan du tableau **convergent** | Vers un unique **point de fuite**, sur la ligne d'horizon |
-| La taille décroît avec l'éloignement | Proportionnellement à la distance |
+| La taille décroît avec l'éloignement | Inversement proportionnelle à la distance |
 
 ## Ce qui change avec elle
 | Avant | Après |

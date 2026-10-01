@@ -1,0 +1,139 @@
+{
+  "niveau": "Tle",
+  "matiere": "si",
+  "sujets": [
+    {
+      "chapitre": "058be8da-c9a1-5085-b2a2-ed47911c81a7",
+      "difficulte": 1,
+      "titre": "Le four de la boulangerie",
+      "consigne": "Réponds à chaque question par des phrases complètes, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Dans la boulangerie de Sofiane, deux fours cuisent le pain.\n- Four 1 : il chauffe pendant une durée réglée à 40 min, puis s’arrête.\n- Four 2 : une sonde mesure la température intérieure et la chauffe est ajustée pour maintenir 220 °C.\n\n1. Lequel des deux fours fonctionne en boucle ouverte ? en boucle fermée ? Justifie.\n2. Le boulanger ouvre souvent la porte pendant la cuisson. Explique ce qui se passe pour chacun des deux fours face à cette perturbation.\n3. À un instant, la sonde du four 2 mesure 205 °C. Nomme l’organe qui calcule l’erreur et calcule sa valeur.",
+      "bareme": [
+        { "critere": "Four 1 en boucle ouverte, four 2 en boucle fermée, justification par la présence du capteur", "points": 7 },
+        { "critere": "Effet de la perturbation : non corrigée en boucle ouverte, mesurée et corrigée en boucle fermée", "points": 7 },
+        { "critere": "Comparateur nommé, erreur = consigne − mesure = 15 °C", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **four 1** est en **boucle ouverte** : la commande (durée de chauffe) part sans vérification du résultat, aucun capteur ne mesure la température. Le **four 2** est en **boucle fermée** : un **capteur** (la sonde) mesure la sortie et la commande est ajustée en fonction de cette mesure.\n\n2. Ouvrir la porte fait chuter la température. Dans le **four 1**, rien ne le détecte : le résultat est **faussé** (pain moins cuit). Dans le **four 2**, la sonde **mesure** la baisse, l’erreur augmente et la chauffe est **corrigée** pour revenir à 220 °C.\n\n3. C’est le **comparateur** qui calcule l’erreur : erreur = consigne − mesure = 220 − 205 = **15 °C**. Le correcteur agit à partir de cette erreur."
+    },
+    {
+      "chapitre": "058be8da-c9a1-5085-b2a2-ed47911c81a7",
+      "difficulte": 2,
+      "titre": "Le vérin d’un bras robotisé",
+      "consigne": "Exploite le relevé de la réponse indicielle et justifie chaque résultat par un calcul.",
+      "enonce": "**Situation.** Le vérin d’un bras robotisé est asservi en position par un correcteur **proportionnel seul**. On lui applique un échelon de consigne de 100 mm. Relevé de la position :\n\n| t (s) | 0 | 0,2 | 0,4 | 0,6 | 0,8 | 1,0 | 1,2 | 1,5 | 2,0 |\n| Position (mm) | 0 | 60 | 92 | 110 | 101 | 94 | 95,5 | 96 | 96 |\n\n**Cahier des charges** : temps de réponse à 5 % ≤ 1,5 s ; dépassement ≤ 10 % ; erreur statique nulle.\n\n1. Relève la valeur finale et calcule l’erreur statique.\n2. Calcule le dépassement, en pourcentage de la valeur finale.\n3. Détermine la bande à ±5 % de la valeur finale, puis estime le temps de réponse à 5 %.\n4. Le cahier des charges est-il respecté ? Quel diagnostic poses-tu sur le correcteur, et quelle action proposes-tu d’ajouter ?",
+      "bareme": [
+        { "critere": "Valeur finale 96 mm et erreur statique 4 mm (4 % de la consigne)", "points": 4 },
+        { "critere": "Dépassement (110 − 96)/96 ≈ 14,6 %", "points": 5 },
+        { "critere": "Bande [91,2 ; 100,8] mm et temps de réponse à 5 % d’environ 1,0 s justifié par le relevé", "points": 5 },
+        { "critere": "Comparaison au cahier des charges et proposition argumentée d’une action intégrale", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La position se stabilise à **96 mm** (valeur finale). Erreur statique = consigne − valeur finale = 100 − 96 = **4 mm**, soit 4 % de la consigne.\n\n2. Le maximum est 110 mm. Dépassement = (110 − 96) / 96 = 14 / 96 ≈ **0,146, soit environ 14,6 %** de la valeur finale.\n\n3. 5 % de 96 mm = 4,8 mm : la bande va de **91,2 mm à 100,8 mm**. À 0,8 s la position (101 mm) est encore hors de la bande ; à partir de 1,0 s (94 ; 95,5 ; 96 mm) elle y reste définitivement. Le temps de réponse à 5 % est donc compris entre 0,8 et 1,0 s : on retient **environ 1,0 s**.\n\n4. - Rapidité : 1,0 s ≤ 1,5 s → **respectée**.\n- Dépassement : 14,6 % > 10 % → **non respecté**.\n- Erreur statique : 4 mm ≠ 0 → **non respectée**.\n**Diagnostic** : une erreur statique persistante est la signature d’un **correcteur purement proportionnel** (l’action P laisse une erreur statique). Il faut ajouter une **action intégrale (I)**, qui accumule l’erreur passée et **annule l’erreur statique**. Comme l’intégrale ralentit et peut déstabiliser, et que le dépassement est déjà trop fort, on peut ajouter une **action dérivée (D)** pour amortir les oscillations : correcteur PID, à régler par compromis."
+    },
+    {
+      "chapitre": "058be8da-c9a1-5085-b2a2-ed47911c81a7",
+      "difficulte": 3,
+      "titre": "Choisir le réglage d’une caméra motorisée",
+      "consigne": "Analyse les essais, choisis un réglage et justifie ton choix en t’appuyant sur les actions P, I et D et sur les performances d’un asservissement.",
+      "enonce": "**Situation.** Une caméra de surveillance motorisée doit s’orienter vers une cible. Son orientation est asservie. L’équipe de Léna a testé quatre réglages sur un échelon de consigne :\n\n| Réglage | Correcteur | Temps de réponse à 5 % | Dépassement | Erreur statique |\n| R1 | P, gain faible | 2,5 s | 0 % | 8 % |\n| R2 | P, gain fort | 0,9 s | 25 % | 3 % |\n| R3 | PI | 1,6 s | 18 % | 0 % |\n| R4 | PID | 1,2 s | 6 % | 0 % |\n\n**Cahier des charges** : temps de réponse à 5 % ≤ 1,5 s ; dépassement ≤ 10 % ; erreur statique nulle.\n\n1. Nomme les trois performances d’un asservissement et indique, pour chacune, la colonne du tableau qui la mesure.\n2. Compare R1 et R2. Un camarade affirme : « Il suffit d’augmenter le gain proportionnel pour tout améliorer. » Réfute-le à partir des mesures.\n3. Explique pourquoi l’erreur statique disparaît avec R3, et pourquoi R3 reste insuffisant.\n4. Quel réglage retiens-tu ? Vérifie chaque exigence du cahier des charges.\n5. Le capteur d’angle de la caméra est très bruité. Quel risque présente alors le réglage retenu, et pourquoi ?",
+      "bareme": [
+        { "critere": "Stabilité (dépassement), précision (erreur statique), rapidité (temps de réponse) associées au tableau", "points": 3 },
+        { "critere": "R1/R2 comparés : gain fort plus rapide et plus précis mais moins stable ; performances antagonistes", "points": 5 },
+        { "critere": "Rôle de l’action intégrale et limites de R3 (lenteur, dépassement) expliqués", "points": 4 },
+        { "critere": "Choix de R4 vérifié exigence par exigence", "points": 4 },
+        { "critere": "Risque de l’action dérivée qui amplifie le bruit du capteur", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Stabilité** : le système converge au lieu d’osciller → colonne **dépassement**. **Précision** : erreur statique faible → colonne **erreur statique**. **Rapidité** : temps de réponse court → colonne **temps de réponse à 5 %**.\n\n2. En passant de R1 à R2 (gain P plus fort), la **rapidité** s’améliore (2,5 s → 0,9 s) et l’erreur statique diminue (8 % → 3 %), mais le **dépassement** passe de 0 % à 25 % : la **stabilité se dégrade**. Augmenter le gain n’améliore donc pas tout. Les trois performances sont **antagonistes** : régler un asservissement, c’est **arbitrer**, pas optimiser. De plus, avec un correcteur P seul, l’erreur statique ne s’annule pas (3 %).\n\n3. L’**action intégrale** agit sur l’**erreur passée accumulée** : tant qu’il reste une erreur, sa contribution grandit, ce qui **annule l’erreur statique** (0 %). Mais elle **ralentit** et **déstabilise** : R3 met 1,6 s (> 1,5 s) et dépasse de 18 % (> 10 %). Il échoue sur deux exigences.\n\n4. On retient **R4 (PID)** : temps de réponse 1,2 s ≤ 1,5 s ✔ ; dépassement 6 % ≤ 10 % ✔ ; erreur statique 0 % ✔. L’action I annule l’erreur statique et l’action **D**, qui agit sur la **variation de l’erreur**, **amortit les oscillations**, d’où un faible dépassement.\n\n5. L’action **dérivée** réagit à la variation de l’erreur, donc aussi aux variations rapides dues au bruit de mesure : elle **amplifie le bruit**. Avec un capteur très bruité, la commande du moteur risque de s’agiter (vibrations de la caméra, usure). Il faudrait limiter l’action D ou améliorer la mesure : là encore, c’est un compromis."
+    },
+    {
+      "chapitre": "53c3e01d-7151-5161-a68b-aa7e40c5ced9",
+      "difficulte": 1,
+      "titre": "À chaque question son diagramme",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Élodie conçoit un portail automatique et prépare son dossier.\n\n1. Donne la définition d’un modèle. Pourquoi dit-on qu’un modèle n’est jamais « vrai » ?\n2. Associe à chacun de ses besoins le diagramme SysML adapté :\n   a) lister ce que le portail doit faire (s’ouvrir en moins de 15 s, s’arrêter devant un obstacle) ;\n   b) décrire de quoi le portail est fait (moteur, carte de commande, capteurs, vantaux) ;\n   c) montrer comment la carte de commande et le moteur échangent énergie et informations ;\n   d) décrire les états « fermé », « en ouverture », « ouvert », « en fermeture » ;\n   e) décrire le déroulement dans le temps d’une ouverture depuis la télécommande.",
+      "bareme": [
+        { "critere": "Définition du modèle : représentation simplifiée pour une question précise, valide dans un domaine", "points": 8 },
+        { "critere": "Les cinq diagrammes SysML correctement associés", "points": 12 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un modèle est une **représentation simplifiée** d’un système, construite pour **répondre à une question précise**. Il n’est jamais « vrai » car il repose sur des simplifications : il est seulement **valide dans un domaine**. Par exemple, un modèle de frottement sec suffit pour dimensionner un frein mais pas pour prévoir son usure. Devant un modèle, on se demande donc « pour quelle question a-t-il été construit ? ».\n\n2. a) **Diagramme des exigences** : ce que le système doit faire.\nb) **Diagramme de définition de blocs** : de quoi il est fait.\nc) **Diagramme de blocs internes** : comment les blocs échangent.\nd) **Diagramme d’états** : les états dans lesquels il peut se trouver.\ne) **Diagramme de séquence** : son comportement dans le temps."
+    },
+    {
+      "chapitre": "53c3e01d-7151-5161-a68b-aa7e40c5ced9",
+      "difficulte": 2,
+      "titre": "Simulation contre mesure : le moteur d’un drone",
+      "consigne": "Exploite les résultats, calcule les écarts demandés et justifie chaque hypothèse avec le cours.",
+      "enonce": "**Situation.** Théo a simulé le démarrage d’un moteur de drone, puis l’a mesuré au banc d’essai.\n\n| Grandeur | Simulation | Mesure |\n| Vitesse stabilisée | 3 000 tr/min | 2 850 tr/min |\n| Temps pour atteindre la vitesse stabilisée | 0,20 s | 0,35 s |\n| Début de la réaction après l’ordre | immédiat | 0,05 s après |\n\n1. Calcule l’écart relatif sur la vitesse stabilisée, en pourcentage de la valeur simulée.\n2. Théo veut jeter son modèle. A-t-il raison ? Explique la démarche de validation.\n3. Pour chacun des trois écarts, propose l’hypothèse négligée qui l’explique.",
+      "bareme": [
+        { "critere": "Écart relatif (3 000 − 2 850)/3 000 = 5 %", "points": 4 },
+        { "critere": "Un écart n’invalide pas forcément le modèle : chercher l’hypothèse écartée", "points": 6 },
+        { "critere": "Trois écarts associés à la bonne hypothèse : frottements, inertie ou jeu, temps de réponse du capteur", "points": 10 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Écart relatif = (3 000 − 2 850) / 3 000 = 150 / 3 000 = **0,05, soit 5 %**.\n\n2. **Non.** Valider un modèle consiste à **comparer la simulation aux mesures expérimentales**. Un écart **n’invalide pas nécessairement** le modèle : il faut d’abord chercher l’**hypothèse écartée** qui l’explique, puis décider si elle doit être ajoutée au modèle selon la question posée. Un écart de 5 % peut être acceptable si le modèle sert à un pré-dimensionnement.\n\n3. - **Amplitude plus faible** (vitesse de 2 850 au lieu de 3 000 tr/min) : des **frottements** ont été négligés.\n- **Réponse plus lente** (0,35 s au lieu de 0,20 s) : l’**inertie** ou un **jeu mécanique** ont été négligés.\n- **Retard constant** de 0,05 s : le **temps de réponse du capteur** n’a pas été pris en compte.\nEn intégrant ces hypothèses, Théo peut affiner son modèle au lieu de le rejeter."
+    },
+    {
+      "chapitre": "53c3e01d-7151-5161-a68b-aa7e40c5ced9",
+      "difficulte": 3,
+      "titre": "La trottinette qui ralentit dans la côte",
+      "consigne": "Analyse la situation en mobilisant les notions de modèle, de domaine de validité, de modèle multiphysique et de validation. Justifie chaque réponse.",
+      "enonce": "**Situation.** Un bureau d’études a modélisé une trottinette électrique en couplant seulement les domaines **mécanique** et **électrique**. Le modèle prévoit une vitesse constante de 20 km/h dans une côte régulière.\n\nEssai réel dans une longue côte :\n\n| Temps de montée | 2 min | 5 min | 10 min |\n| Vitesse mesurée | 20 km/h | 18 km/h | 16 km/h |\n| Température du moteur | 45 °C | 70 °C | 95 °C |\n\n1. Calcule l’écart relatif entre la vitesse prévue et la vitesse mesurée à 10 min.\n2. Pendant les deux premières minutes, le modèle est-il valide ? Que dire au-delà ? Utilise la notion de domaine de validité.\n3. Quel domaine physique manque au modèle ? Décris la chaîne de couplages qui explique la baisse de vitesse.\n4. L’équipe veut ajouter une loi de commande qui augmente le courant quand la vitesse baisse. À quel domaine appartient-elle, et à quelle nouvelle surprise de couplage faut-il s’attendre ?\n5. Quel diagramme SysML permettrait de représenter les échanges entre la batterie, le moteur et la carte de commande ?",
+      "bareme": [
+        { "critere": "Écart relatif (20 − 16)/20 = 20 %", "points": 3 },
+        { "critere": "Modèle valide sur les trajets courts, hors domaine de validité sur une longue montée", "points": 5 },
+        { "critere": "Domaine thermique manquant et chaîne courant → échauffement → baisse du couple → baisse de vitesse", "points": 5 },
+        { "critere": "Commande (domaine informatique) et risque d’échauffement accru par le courant supplémentaire", "points": 4 },
+        { "critere": "Diagramme de blocs internes identifié", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Écart relatif = (20 − 16) / 20 = 4 / 20 = **0,20, soit 20 %**.\n\n2. Pendant les deux premières minutes, la vitesse mesurée (20 km/h) correspond à la prévision : le modèle est **valide dans ce domaine** (trajets courts, moteur peu chaud). Au-delà, l’écart grandit : on sort de son **domaine de validité**. Le modèle n’est pas « faux » ; il n’a pas été construit pour répondre à la question d’une longue montée.\n\n3. Il manque le domaine **thermique**. Chaîne de couplages : dans la côte, le moteur absorbe un fort **courant** (électrique) → il **s’échauffe** (thermique : de 45 à 95 °C) → l’échauffement **dégrade le couple** disponible sur l’arbre (mécanique) → la trottinette **ralentit**. C’est ce **couplage** entre domaines qui produit la surprise.\n\n4. Une loi de commande relève du domaine **informatique** (le correcteur compense la dérive). Mais augmenter le courant pour compenser la perte de vitesse **accentue l’échauffement**, qui dégrade encore le couple : la commande risque d’aggraver la cause qu’elle compense. Il faut donc modéliser les quatre domaines **couplés** avant de valider cette solution par la simulation puis la mesure.\n\n5. Le **diagramme de blocs internes**, qui décrit comment les blocs **échangent** (énergie, informations) entre eux."
+    },
+    {
+      "chapitre": "8b4250fa-6727-5ed7-ad52-5eccb2afd3cf",
+      "difficulte": 1,
+      "titre": "Remettre le projet dans l’ordre",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Le groupe d’Awa conçoit un distributeur automatique de croquettes pour chat. Leurs étapes ont été notées dans le désordre :\n\n> Réaliser le prototype · Valider · Analyser le besoin · Concevoir en détail · Essayer selon un protocole · Choisir une solution · Rechercher des solutions\n\n1. Remets les sept étapes dans l’ordre de la démarche d’ingénieur.\n2. Que doit produire chaque étape, et sur quoi doit reposer chaque choix ?\n3. À quelle question répond l’étape de validation ?\n4. Cite les cinq phases de l’analyse du cycle de vie.",
+      "bareme": [
+        { "critere": "Les sept étapes dans le bon ordre", "points": 7 },
+        { "critere": "Un livrable par étape, chaque choix justifié par un critère du cahier des charges", "points": 5 },
+        { "critere": "Validation : le besoin de départ est-il satisfait ?", "points": 3 },
+        { "critere": "Les cinq phases de l’ACV", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Ordre : **1. Analyser le besoin** → **2. Rechercher des solutions** (plusieurs, vraiment différentes) → **3. Choisir une solution** → **4. Concevoir en détail** (dimensionnement, matériaux, interfaces) → **5. Réaliser le prototype** → **6. Essayer selon un protocole** écrit à l’avance → **7. Valider**.\n\n2. Chaque étape produit un **livrable**, et chaque choix se justifie par un **critère du cahier des charges** (et non par l’avis du groupe ou la disponibilité en magasin).\n\n3. La validation vérifie que **le besoin identifié à l’étape 1 est satisfait** : le distributeur répond-il bien à ce qu’on attendait de lui ? Elle vient après les essais.\n\n4. Les cinq phases : **extraction** des matières, **fabrication**, **transport**, **usage**, **fin de vie**."
+    },
+    {
+      "chapitre": "8b4250fa-6727-5ed7-ad52-5eccb2afd3cf",
+      "difficulte": 2,
+      "titre": "Trois arrosages automatiques en concurrence",
+      "consigne": "Calcule les scores pondérés, puis réponds aux questions en argumentant.",
+      "enonce": "**Situation.** Le groupe de Maxime compare trois solutions pour un arrosage automatique de balcon. Chaque solution est notée de 1 à 5 sur chaque critère ; chaque critère a un poids.\n\n| Critère | Poids | Solution A | Solution B | Solution C |\n| Autonomie | 5 | 2 | 4 | 3 |\n| Masse | 3 | 4 | 2 | 3 |\n| Coût | 2 | 3 | 4 | 2 |\n\n1. Calcule le score pondéré de chaque solution. Laquelle est retenue ?\n2. Un membre du groupe propose de donner le poids 5 à la masse et le poids 3 à l’autonomie. Recalcule les scores. Que constates-tu ?\n3. Quel est alors le véritable intérêt de ce tableau ? Explique ce qu’il faut conserver dans le dossier.",
+      "bareme": [
+        { "critere": "Scores A = 28, B = 34, C = 28 et choix de B", "points": 6 },
+        { "critere": "Nouveaux scores A = 32, B = 30, C = 28 : le classement change", "points": 6 },
+        { "critere": "Intérêt du tableau : traçabilité des critères et des pondérations, pas le score", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Score = somme (poids × note).\n- A : 5×2 + 3×4 + 2×3 = 10 + 12 + 6 = **28**\n- B : 5×4 + 3×2 + 2×4 = 20 + 6 + 8 = **34**\n- C : 5×3 + 3×3 + 2×2 = 15 + 9 + 4 = **28**\nLa **solution B** est retenue.\n\n2. Avec autonomie 3, masse 5, coût 2 :\n- A : 3×2 + 5×4 + 2×3 = 6 + 20 + 6 = **32**\n- B : 3×4 + 5×2 + 2×4 = 12 + 10 + 8 = **30**\n- C : 3×3 + 5×3 + 2×2 = 9 + 15 + 4 = **28**\nC’est maintenant **A** qui l’emporte : le résultat dépend entièrement des **pondérations** choisies. On peut faire dire au score ce qu’on veut.\n\n3. L’intérêt du tableau n’est pas le score final mais la **traçabilité** : il garde la trace des critères, de leurs poids et des notes, donc de **pourquoi** une solution a été écartée. Il faut conserver dans le dossier les critères issus du **cahier des charges** et la **justification des pondérations** (par exemple : l’autonomie compte le plus car le besoin est d’arroser pendant les vacances), pour qu’on sache, six mois plus tard, ce qui a guidé la décision."
+    },
+    {
+      "chapitre": "8b4250fa-6727-5ed7-ad52-5eccb2afd3cf",
+      "difficulte": 3,
+      "titre": "Valider une lampe solaire, sur tout son cycle",
+      "consigne": "Traite les deux parties en justifiant tes calculs et tes conclusions avec les notions du cours.",
+      "enonce": "**Partie A — L’essai.** Le cahier des charges d’une lampe solaire de jardin exige une autonomie d’au moins 4 h. Le groupe de Jade a mesuré l’autonomie une seule fois : 4,6 h. Puis, sur l’insistance du professeur, quatre autres fois. Les cinq mesures : 4,6 h ; 4,2 h ; 4,4 h ; 4,1 h ; 4,2 h.\n\n1. Pourquoi la première mesure ne suffisait-elle pas à valider la lampe ?\n2. Calcule la moyenne des cinq mesures et indique leur étendue (plus petite et plus grande valeur). L’exigence est-elle satisfaite ?\n3. Rédige les quatre éléments que le protocole d’essai aurait dû préciser, en les appliquant à cette lampe.\n\n**Partie B — Le bilan environnemental.** Deux versions de la lampe sont comparées, en kg équivalent CO₂ :\n\n| | Fabrication (avec extraction et transport) | Usage, par an |\n| Version X | 120 | 5 |\n| Version Y | 40 | 12 |\n\n4. Calcule l’impact total de chaque version pour 5 ans puis pour 10 ans d’utilisation.\n5. Au bout de combien d’années les deux versions ont-elles le même impact ? Que conclus-tu sur l’affirmation « la version la plus économe à l’usage est forcément la meilleure » ?",
+      "bareme": [
+        { "critere": "Une mesure unique ne prouve rien : besoin de répétitions et d’incertitude", "points": 3 },
+        { "critere": "Moyenne 4,3 h, étendue 4,1 à 4,6 h, exigence satisfaite avec justification", "points": 4 },
+        { "critere": "Quatre éléments du protocole (grandeur, moyen de mesure, conditions, répétitions) appliqués", "points": 5 },
+        { "critere": "Totaux X = 145 et Y = 100 à 5 ans, X = 170 et Y = 160 à 10 ans", "points": 4 },
+        { "critere": "Égalité vers 11,4 ans et raisonnement sur tout le cycle de vie", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "**Partie A**\n1. **Une mesure unique ne prouve rien** : elle peut être due à des conditions favorables ou à une erreur. Sans répétitions ni incertitude annoncée, 4,6 h n’est qu’un chiffre, pas un résultat exploitable.\n\n2. Moyenne = (4,6 + 4,2 + 4,4 + 4,1 + 4,2) / 5 = 21,5 / 5 = **4,3 h**. Étendue : de **4,1 h à 4,6 h**. Toutes les mesures sont supérieures à 4 h et la moyenne aussi : l’exigence est **satisfaite** dans les conditions de l’essai. On note que la première mesure (4,6 h) était la plus favorable.\n\n3. Le protocole doit préciser :\n- la **grandeur mesurée** : la durée d’éclairage, depuis l’allumage jusqu’à l’extinction, après une charge complète ;\n- le **moyen de mesure** : par exemple un chronomètre ou un enregistreur, qui porte sa propre incertitude ;\n- les **conditions** : température, ensoleillement ou durée de charge, état de la batterie ;\n- le **nombre de répétitions** : plusieurs essais (ici cinq) dans les mêmes conditions.\n\n**Partie B**\n4. Impact = fabrication + usage × durée.\n- 5 ans : X = 120 + 5×5 = **145** ; Y = 40 + 12×5 = **100**.\n- 10 ans : X = 120 + 5×10 = **170** ; Y = 40 + 12×10 = **160**.\n\n5. Égalité : 120 + 5t = 40 + 12t, donc 80 = 7t, soit t = 80 / 7 ≈ **11,4 ans**. Avant environ 11 ans, la version Y (moins économe à l’usage) a le **meilleur bilan global**, car sa fabrication est bien moins coûteuse. L’affirmation est donc **fausse** : un système économe à l’usage mais coûteux à produire peut avoir un bilan défavorable. L’ingénieur raisonne sur **tout le cycle de vie** (extraction, fabrication, transport, usage, fin de vie), et pas seulement sur la phase visible par l’utilisateur ; la durée de vie réelle de la lampe devient ici un critère décisif."
+    }
+  ]
+}

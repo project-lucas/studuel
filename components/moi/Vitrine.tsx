@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { ChevronRight, Crown } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import CouronneArt from '@/components/moi/CouronneArt'
+import EnTeteBloc from '@/components/moi/EnTeteBloc'
 import {
   chapitresPourTier,
   phraseProchaineCouronne,
@@ -80,15 +81,7 @@ export default function Vitrine({
 
   return (
     <section aria-label="Tes couronnes" className="carte p-4">
-      <div className="flex items-center gap-2.5">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
-          <Crown className="size-5" strokeWidth={2.4} aria-hidden="true" />
-        </span>
-        <div className="min-w-0 flex-1">
-          <h2 className="titre-section">Tes couronnes</h2>
-          <p className="surtitre mt-0.5">{sousTitre}</p>
-        </div>
-      </div>
+      <EnTeteBloc titre="Tes couronnes" sousTitre={sousTitre} />
       <ul role="list" className="mt-3 grid grid-cols-4 gap-x-2 gap-y-3">
         {liste.map((c) => (
           <Medaille key={c.subjectId} c={c} prochaine={prochaine?.subjectId === c.subjectId} />

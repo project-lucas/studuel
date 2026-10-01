@@ -171,6 +171,28 @@ export default function Joueur({
 
   const active = statuts.findIndex((st) => !st.fini)
 
+  // UN SEUL EXEMPLAIRE DE CHAQUE DOCUMENT (30/09/2026 : la copie dans la carte
+  // de la question faisait croire à deux scripts). Quand la question active se
+  // répond en touchant un document, c'est le document du haut qui devient
+  // touchable : la question y dessine sa version par un portail. Une fois
+  // vérifiée, elle le garde (sa correction reste visible) jusqu'à ce qu'une
+  // autre question touche le même document.
+  const questionsVisibles = phase.nom !== 'demarrage' && phase.nom !== 'erreur'
+  const proprietaire: Record<string, number> = {}
+  if (questionsVisibles) {
+    const fin = active === -1 ? contenu.questions.length - 1 : active
+    for (let i = 0; i <= fin; i++) {
+      const q = contenu.questions[i]
+      if (q.type === 'zone' && (i === active || statuts[i].fini)) proprietaire[q.document] = i
+    }
+  }
+  const [emplacements, setEmplacements] = useState<Record<string, HTMLElement | null>>({})
+  // Une fonction de ref STABLE par document : recréée à chaque rendu, React la
+  // rappellerait (null puis l'élément) à chaque fois, et l'état bouclerait.
+  const refsEmplacement = useRef<Record<string, (el: HTMLElement | null) => void>>({})
+  const emplacement = (id: string) =>
+    (refsEmplacement.current[id] ??= (el) => setEmplacements((x) => (x[id] === el ? x : { ...x, [id]: el })))
+
   return (
     <div className={cn(s.manuel, 'mx-auto flex w-full max-w-xl flex-col gap-4')}>
       {/* La barre du haut : fermer, et une pastille par question. */}
@@ -209,9 +231,18 @@ export default function Joueur({
         </p>
       </div>
 
-      {contenu.documents.map((d, i) => (
-        <DocumentVue key={d.id} doc={d} numero={i + 1} id={`doc-${d.id}`} />
-      ))}
+      {contenu.documents.map((d, i) =>
+        proprietaire[d.id] !== undefined ? (
+          <div
+            key={d.id}
+            id={`doc-${d.id}`}
+            ref={emplacement(d.id)}
+            className={cn('scroll-mt-24', proprietaire[d.id] === active && s.docATouche)}
+          />
+        ) : (
+          <DocumentVue key={d.id} doc={d} numero={i + 1} id={`doc-${d.id}`} />
+        ),
+      )}
 
       {phase.nom === 'demarrage' ? (
         <div className="flex items-center justify-center gap-2 py-6 text-sm font-semibold text-[var(--muted-foreground)]">
@@ -231,6 +262,7 @@ export default function Joueur({
               statut={statuts[i]}
               enCours={enCours === i}
               active={i === active}
+              cibleDocument={q.type === 'zone' && proprietaire[q.document] === i ? (emplacements[q.document] ?? null) : undefined}
               onVerifier={(r) => verifier(i, r)}
             />
           ))}

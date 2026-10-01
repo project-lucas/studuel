@@ -1,0 +1,502 @@
+{
+  "niveau": "1re",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+      "difficulte": 1,
+      "titre": "Deux suites, deux définitions",
+      "consigne": "Réponds à chaque question en détaillant tes calculs.",
+      "enonce": "On considère deux suites :\n- la suite (u) définie pour tout entier naturel n par u(n) = 3n − 2 ;\n- la suite (v) définie par v(0) = 5 et, pour tout entier naturel n, v(n+1) = 2 v(n) + 1.\n\n1. Calcule u(0), u(1), u(2) puis u(100).\n2. Calcule v(1), v(2) et v(3).\n3. Pour calculer v(100), peux-tu procéder comme pour u(100) ? Explique la différence entre les deux façons de définir une suite.\n4. Calcule u(n+1) − u(n) et déduis-en le sens de variation de la suite (u).",
+      "bareme": [
+        { "critere": "Termes de (u) justes : u(0) = −2, u(1) = 1, u(2) = 4, u(100) = 298", "points": 6 },
+        { "critere": "Termes de (v) justes : 11, 23, 47, et distinction explicite / récurrence expliquée", "points": 7 },
+        { "critere": "Différence u(n+1) − u(n) = 3 calculée et suite déclarée croissante", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. u(0) = 3 × 0 − 2 = **−2** ; u(1) = 3 − 2 = **1** ; u(2) = 6 − 2 = **4** ; u(100) = 300 − 2 = **298**.\n2. v(1) = 2 × 5 + 1 = **11** ; v(2) = 2 × 11 + 1 = **23** ; v(3) = 2 × 23 + 1 = **47**.\n3. Non. (u) est définie de façon **explicite** : u(n) est donné en fonction de n, on calcule u(100) directement, **sans** les termes précédents. (v) est définie **par récurrence** : on connaît le premier terme et une relation entre v(n+1) et v(n) ; pour obtenir v(100), il faut calculer tous les termes de proche en proche (v(1), v(2), …, v(99)).\n4. u(n+1) − u(n) = [3(n+1) − 2] − [3n − 2] = 3n + 3 − 2 − 3n + 2 = **3**. Cette différence est positive pour tout n, donc u(n+1) ≥ u(n) : la suite (u) est **croissante**."
+    },
+    {
+      "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+      "difficulte": 2,
+      "titre": "Les spectateurs du club de Yanis",
+      "consigne": "Lis la situation, puis réponds aux questions en justifiant chaque réponse.",
+      "enonce": "**Situation.** Yanis modélise le nombre de spectateurs (en centaines) venus au match numéro n de son club de handball par la suite définie pour tout entier naturel n par :\n\nu(n) = n² − 4n + 10\n\n1. Calcule u(0), u(1), u(2), u(3) et u(4). Comment représenter ces valeurs dans un repère ? Peut-on relier les points par une courbe ? Justifie.\n2. Montre que, pour tout entier naturel n, u(n+1) − u(n) = 2n − 3.\n3. Déduis-en le sens de variation de la suite : pour quels rangs diminue-t-elle, à partir de quel rang augmente-t-elle ?\n4. Vérifie que u(n) = (n − 2)² + 6 pour tout n. La suite est-elle minorée ? Par quel nombre ? Quel est le plus petit nombre de spectateurs prévu par le modèle ?",
+      "bareme": [
+        { "critere": "Les cinq termes justes (10 ; 7 ; 6 ; 7 ; 10) et représentation par des points isolés justifiée", "points": 5 },
+        { "critere": "Calcul développé de u(n+1) − u(n) aboutissant à 2n − 3", "points": 5 },
+        { "critere": "Étude du signe de 2n − 3 : décroissance de u(0) à u(2), croissance à partir du rang 2", "points": 5 },
+        { "critere": "Égalité vérifiée, suite minorée par 6, minimum de 600 spectateurs au match 2", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. u(0) = 10 ; u(1) = 1 − 4 + 10 = **7** ; u(2) = 4 − 8 + 10 = **6** ; u(3) = 9 − 12 + 10 = **7** ; u(4) = 16 − 16 + 10 = **10**. On place les **points isolés** (n ; u(n)). On ne les relie pas : n ne prend que des valeurs entières, une suite ne se représente jamais par une courbe continue.\n2. u(n+1) = (n+1)² − 4(n+1) + 10 = n² + 2n + 1 − 4n − 4 + 10 = n² − 2n + 7.\nDonc u(n+1) − u(n) = n² − 2n + 7 − n² + 4n − 10 = **2n − 3**.\n3. 2n − 3 < 0 pour n = 0 et n = 1 (valeurs −3 et −1) : u(1) < u(0) et u(2) < u(1), la suite **diminue de u(0) à u(2)**. Pour n ≥ 2, 2n − 3 ≥ 1 > 0 : u(n+1) > u(n), la suite est **croissante à partir du rang 2**. Elle n'est donc ni croissante ni décroissante sur tout ℕ.\n4. (n − 2)² + 6 = n² − 4n + 4 + 6 = n² − 4n + 10 = u(n). Un carré est positif ou nul, donc u(n) ≥ 6 pour tout n : la suite est **minorée par 6**, et u(2) = 6 est atteint. Le modèle prévoit au minimum **600 spectateurs**, au match numéro 2."
+    },
+    {
+      "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+      "difficulte": 3,
+      "titre": "Choisir la bonne méthode de variation",
+      "consigne": "Traite les deux parties en justifiant le choix de chaque méthode et chaque calcul.",
+      "enonce": "**Partie A.** Soit la suite (u) définie pour tout entier naturel n par u(n) = (2n + 1) / (n + 1).\n\n1. Calcule u(0), u(1), u(2) et u(3) (valeurs exactes).\n2. Montre que u(n+1) − u(n) = 1 / [(n + 1)(n + 2)]. Déduis-en le sens de variation de (u).\n3. Vérifie que u(n) = 2 − 1 / (n + 1). Déduis-en que la suite est bornée : donne un minorant et un majorant, en justifiant.\n\n**Partie B.** Soit la suite (w) définie pour tout entier n ≥ 1 par w(n) = n / 2ⁿ.\n\n4. Pourquoi la méthode du quotient est-elle ici autorisée ?\n5. Montre que w(n+1) / w(n) = (n + 1) / (2n), puis compare ce quotient à 1 pour n ≥ 1.\n6. Conclus sur le sens de variation de (w). Calcule w(1), w(2) et w(3) pour contrôler.",
+      "bareme": [
+        { "critere": "Termes exacts de (u) : 1 ; 3/2 ; 5/3 ; 7/4", "points": 3 },
+        { "critere": "Différence réduite au même dénominateur, égale à 1/[(n+1)(n+2)], et (u) croissante", "points": 5 },
+        { "critere": "Égalité vérifiée et encadrement 1 ≤ u(n) < 2 justifié (croissance et 1/(n+1) > 0)", "points": 4 },
+        { "critere": "Quotient autorisé car termes strictement positifs, calcul de (n+1)/(2n) et comparaison à 1", "points": 5 },
+        { "critere": "Conclusion : (w) décroissante pour n ≥ 1, contrôle w(1) = w(2) = 1/2, w(3) = 3/8", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A**\n1. u(0) = 1/1 = **1** ; u(1) = **3/2** ; u(2) = **5/3** ; u(3) = **7/4**.\n2. u(n+1) = (2n + 3)/(n + 2). On réduit au même dénominateur :\nu(n+1) − u(n) = [(2n + 3)(n + 1) − (2n + 1)(n + 2)] / [(n + 1)(n + 2)]\n= [2n² + 5n + 3 − (2n² + 5n + 2)] / [(n + 1)(n + 2)] = **1 / [(n + 1)(n + 2)]**.\nCe quotient est strictement positif pour tout n : (u) est **croissante** (méthode de la différence, toujours possible).\n3. 2 − 1/(n + 1) = (2n + 2 − 1)/(n + 1) = (2n + 1)/(n + 1) = u(n). Comme 1/(n + 1) > 0, u(n) < 2 : (u) est **majorée par 2**. Comme (u) est croissante, u(n) ≥ u(0) = 1 : elle est **minorée par 1**. La suite est donc **bornée** : 1 ≤ u(n) < 2.\n\n**Partie B**\n4. Pour n ≥ 1, n > 0 et 2ⁿ > 0 : tous les termes sont **strictement positifs**, condition nécessaire pour comparer un quotient à 1.\n5. w(n+1)/w(n) = [(n + 1)/2ⁿ⁺¹] × [2ⁿ/n] = (n + 1)/(2n).\n(n + 1)/(2n) ≤ 1 ⇔ n + 1 ≤ 2n (car 2n > 0) ⇔ n ≥ 1. Donc pour tout n ≥ 1, le quotient est **inférieur ou égal à 1** (égal à 1 seulement pour n = 1).\n6. Les termes étant positifs, w(n+1) ≤ w(n) : (w) est **décroissante** pour n ≥ 1 (strictement à partir du rang 2). Contrôle : w(1) = 1/2, w(2) = 2/4 = 1/2, w(3) = 3/8 < 1/2. Cohérent : w(2) = w(1) puis la suite diminue."
+    },
+    {
+      "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+      "difficulte": 1,
+      "titre": "Arithmétique ou géométrique ?",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Les listes suivantes sont les premiers termes de deux suites. Pour chacune, dis si elle semble arithmétique ou géométrique et donne sa raison :\n   a. 5 ; 8 ; 11 ; 14 ; 17\n   b. 2 ; 6 ; 18 ; 54 ; 162\n2. (u) est arithmétique de premier terme u(0) = 7 et de raison r = 4. Donne sa forme explicite et calcule u(20).\n3. (v) est géométrique de premier terme v(0) = 3 et de raison q = 2. Donne sa forme explicite et calcule v(5).\n4. Calcule la somme S = 1 + 2 + 3 + … + 50.",
+      "bareme": [
+        { "critere": "Nature des deux listes reconnue (différence constante 3, quotient constant 3)", "points": 6 },
+        { "critere": "Formes explicites justes et u(20) = 87, v(5) = 96", "points": 9 },
+        { "critere": "Somme calculée avec la formule n(n+1)/2 : S = 1 275", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. 8 − 5 = 11 − 8 = 14 − 11 = 17 − 14 = 3 : la **différence** est constante, suite **arithmétique de raison 3**.\n   b. 6/2 = 18/6 = 54/18 = 162/54 = 3 : le **quotient** est constant, suite **géométrique de raison 3**.\n2. u(n) = u(0) + n × r = **7 + 4n**, donc u(20) = 7 + 80 = **87**.\n3. v(n) = v(0) × qⁿ = **3 × 2ⁿ**, donc v(5) = 3 × 32 = **96**.\n4. Avec 1 + 2 + … + n = n(n + 1)/2 et n = 50 : S = 50 × 51 / 2 = **1 275**."
+    },
+    {
+      "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+      "difficulte": 2,
+      "titre": "Le livret d'Inès contre la tirelire de Karim",
+      "consigne": "Lis la situation, puis réponds en justifiant. La calculatrice est autorisée ; arrondis les montants au centime.",
+      "enonce": "**Situation.** Inès et Karim disposent chacun de 2 000 € le 1er janvier 2026.\n- Inès place son argent à **3 % par an** : chaque année, son capital augmente de 3 %.\n- Karim met son argent dans une tirelire et y ajoute **70 €** chaque année.\n\nOn note I(n) et K(n) le capital de chacun au bout de n années (I(0) = K(0) = 2 000).\n\n1. Quelle est la nature de chaque suite ? Donne sa raison et sa forme explicite.\n2. Calcule I(5) et K(5). Qui possède le plus au bout de 5 ans ?\n3. Calcule I(11), K(11), I(12) et K(12). À partir de combien d'années Inès possède-t-elle plus que Karim ?\n4. Quel résultat du cours ce classement illustre-t-il ?",
+      "bareme": [
+        { "critere": "(I) géométrique de raison 1,03, I(n) = 2000 × 1,03ⁿ ; (K) arithmétique de raison 70, K(n) = 2000 + 70n", "points": 6 },
+        { "critere": "I(5) ≈ 2 318,55 € et K(5) = 2 350 €, comparaison juste", "points": 4 },
+        { "critere": "Valeurs pour 11 et 12 ans justes et réponse : à partir de 12 ans", "points": 6 },
+        { "critere": "Lien avec la croissance exponentielle qui dépasse toujours une croissance linéaire", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Une hausse de 3 % revient à multiplier par le coefficient 1 + 3/100 = 1,03 : (I) est **géométrique de raison 1,03**, I(n) = **2 000 × 1,03ⁿ**. Karim ajoute 70 € chaque année : (K) est **arithmétique de raison 70**, K(n) = **2 000 + 70n**.\n2. I(5) = 2 000 × 1,03⁵ ≈ 2 000 × 1,159 274 ≈ **2 318,55 €** ; K(5) = 2 000 + 350 = **2 350 €**. Au bout de 5 ans, **Karim** possède le plus.\n3. I(11) = 2 000 × 1,03¹¹ ≈ **2 768,47 €** et K(11) = 2 000 + 770 = **2 770 €** : Karim est encore devant (de 1,53 €).\nI(12) = 2 000 × 1,03¹² ≈ **2 851,52 €** et K(12) = 2 000 + 840 = **2 840 €** : Inès passe devant.\nComme l'écart ne fait ensuite que se creuser en faveur d'Inès, elle possède plus que Karim **à partir de 12 ans** (1er janvier 2038).\n4. (K) a une croissance **linéaire** (points alignés), (I) une croissance **exponentielle** : le cours affirme que la croissance exponentielle finit toujours par dépasser n'importe quelle croissance linéaire, même si elle part plus lentement."
+    },
+    {
+      "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+      "difficulte": 3,
+      "titre": "Le défi lecture de Léo et Emma",
+      "consigne": "Réponds à chaque question en justifiant avec les formules du cours. Calculatrice autorisée, arrondis à l'unité.",
+      "enonce": "**Situation.** Pendant 30 jours, Léo et Emma se lancent un défi lecture. On note u(n) et v(n) le nombre de pages lues le jour n + 1 (ainsi u(0) et v(0) correspondent au premier jour).\n- Léo lit 10 pages le premier jour, puis **5 pages de plus** chaque jour que la veille.\n- Emma lit 2 pages le premier jour, puis **20 % de pages de plus** chaque jour que la veille.\n\n1. Donne la nature, la raison et la forme explicite de (u) et de (v).\n2. Combien de pages chacun lit-il le 30e jour, c'est-à-dire u(29) et v(29) ?\n3. Calcule le nombre total de pages lues par Léo en 30 jours, en utilisant la somme 1 + 2 + … + n.\n4. Calcule le nombre total de pages lues par Emma en 30 jours, en utilisant la somme 1 + q + q² + … + qⁿ.\n5. Qui gagne le défi ? Commente en comparant avec la question 2.\n6. Emma affirme : « En lisant 20 % de plus chaque jour, en deux jours j'augmente de 40 %. » Vérifie son affirmation.",
+      "bareme": [
+        { "critere": "Nature et forme explicite : u(n) = 10 + 5n, v(n) = 2 × 1,2ⁿ", "points": 4 },
+        { "critere": "u(29) = 155 et v(29) ≈ 396", "points": 3 },
+        { "critere": "Somme de Léo décomposée et calculée : 2 475 pages", "points": 5 },
+        { "critere": "Somme d'Emma par la formule des puissances : 10 × (1,2³⁰ − 1) ≈ 2 364 pages", "points": 5 },
+        { "critere": "Conclusion commentée et affirmation corrigée (+44 % et non +40 %)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Léo ajoute 5 pages chaque jour : (u) est **arithmétique de raison 5**, u(n) = **10 + 5n**. Emma augmente de 20 %, donc multiplie par 1,2 : (v) est **géométrique de raison 1,2**, v(n) = **2 × 1,2ⁿ**.\n2. u(29) = 10 + 5 × 29 = **155 pages** ; v(29) = 2 × 1,2²⁹ ≈ 2 × 197,81 ≈ **396 pages**.\n3. Total de Léo : u(0) + … + u(29) = 30 × 10 + 5 × (0 + 1 + … + 29). Or 1 + 2 + … + 29 = 29 × 30 / 2 = 435. Total = 300 + 5 × 435 = 300 + 2 175 = **2 475 pages**.\n4. Total d'Emma : 2 × (1 + 1,2 + … + 1,2²⁹) = 2 × (1 − 1,2³⁰)/(1 − 1,2) = 2 × (1,2³⁰ − 1)/0,2 = 10 × (1,2³⁰ − 1). Avec 1,2³⁰ ≈ 237,38 : total ≈ 10 × 236,38 ≈ **2 364 pages**.\n5. **Léo gagne** le défi (2 475 contre environ 2 364 pages), alors qu'Emma lit bien plus que lui les derniers jours (396 pages contre 155 le 30e jour). La croissance exponentielle part très lentement (2 pages le premier jour) : elle dépasse la croissance linéaire, mais trop tard pour rattraper le total sur 30 jours.\n6. Deux hausses de 20 % reviennent à multiplier par 1,2 × 1,2 = **1,44**, soit une hausse de **44 %** et non de 40 %. Les pourcentages successifs ne s'additionnent pas, ils se multiplient par leurs coefficients."
+    },
+    {
+      "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+      "difficulte": 1,
+      "titre": "Racines et signe d'un trinôme",
+      "consigne": "Réponds en détaillant chaque calcul.",
+      "enonce": "Soit f(x) = 2x² − 3x − 2, définie pour tout réel x.\n\n1. Sa courbe est-elle une parabole tournée vers le haut ou vers le bas ? Justifie.\n2. Calcule le discriminant Δ, puis les racines de f.\n3. Donne la forme factorisée de f(x).\n4. Dresse le tableau de signes de f(x) sur l'ensemble des réels.",
+      "bareme": [
+        { "critere": "Orientation vers le haut justifiée par a = 2 > 0", "points": 3 },
+        { "critere": "Δ = 25 et racines −1/2 et 2 justes", "points": 8 },
+        { "critere": "Forme factorisée 2(x + 1/2)(x − 2)", "points": 4 },
+        { "critere": "Signe : positif hors des racines, négatif strictement entre −1/2 et 2", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a = 2 > 0 : la parabole est **tournée vers le haut**.\n2. Δ = b² − 4ac = (−3)² − 4 × 2 × (−2) = 9 + 16 = **25** > 0 : deux racines.\nx1 = (3 − 5)/4 = **−1/2** et x2 = (3 + 5)/4 = **2**.\n3. f(x) = **2(x + 1/2)(x − 2)** (ou encore (2x + 1)(x − 2)).\n4. Le trinôme est du signe de a (positif) sauf entre les racines :\n- f(x) > 0 sur ]−∞ ; −1/2[ et sur ]2 ; +∞[ ;\n- f(x) = 0 en −1/2 et en 2 ;\n- f(x) < 0 sur ]−1/2 ; 2[."
+    },
+    {
+      "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+      "difficulte": 2,
+      "titre": "L'enclos des poules de Mathis",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque étape.",
+      "enonce": "**Situation.** Mathis dispose de **20 m de grillage** pour construire un enclos rectangulaire contre le mur de son jardin : le mur forme un côté, le grillage les trois autres. On note x la longueur (en m) de chacun des deux côtés perpendiculaires au mur, avec 0 < x < 10.\n\n1. Exprime la longueur du côté parallèle au mur en fonction de x, puis montre que l'aire de l'enclos vaut A(x) = −2x² + 20x.\n2. Pour quelle valeur de x l'aire est-elle maximale ? Quelle est cette aire maximale ? Justifie qu'il s'agit bien d'un maximum.\n3. Mathis veut une aire d'au moins 42 m². Résous l'inéquation A(x) ≥ 42 et donne les valeurs de x possibles.",
+      "bareme": [
+        { "critere": "Côté parallèle 20 − 2x et expression de l'aire établie", "points": 4 },
+        { "critere": "Sommet α = −b/(2a) = 5, aire maximale 50 m², maximum justifié par a < 0", "points": 6 },
+        { "critere": "Inéquation ramenée à −2x² + 20x − 42 ≥ 0, Δ = 64 et racines 3 et 7", "points": 6 },
+        { "critere": "Signe du trinôme et réponse x ∈ [3 ; 7]", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Les deux côtés perpendiculaires au mur utilisent 2x mètres de grillage ; il reste **20 − 2x** pour le côté parallèle. A(x) = x(20 − 2x) = **−2x² + 20x**.\n2. a = −2 < 0 : la parabole est tournée vers le bas, la fonction admet un **maximum** en α = −b/(2a) = −20/(−4) = **5**. A(5) = −50 + 100 = **50 m²**. L'enclos optimal mesure 5 m × 10 m.\n3. A(x) ≥ 42 ⇔ −2x² + 20x − 42 ≥ 0.\nΔ = 20² − 4 × (−2) × (−42) = 400 − 336 = **64**, √Δ = 8.\nx1 = (−20 − 8)/(−4) = **7** et x2 = (−20 + 8)/(−4) = **3**.\nLe trinôme est du signe de a (négatif) sauf entre les racines, où il est positif : −2x² + 20x − 42 ≥ 0 pour **x ∈ [3 ; 7]**, intervalle bien compris dans ]0 ; 10[.\nMathis doit choisir x entre **3 m et 7 m**."
+    },
+    {
+      "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+      "difficulte": 3,
+      "titre": "Une parabole et une droite",
+      "consigne": "Traite toutes les questions en choisissant la forme du trinôme la plus adaptée et en justifiant.",
+      "enonce": "Soit f(x) = −x² + 4x + 5 et g(x) = x + 1, définies sur l'ensemble des réels. On note P la courbe de f et D la droite représentant g.\n\n1. Montre que f(x) = −(x − 2)² + 9. Déduis-en les coordonnées du sommet de P, la nature de l'extremum et l'axe de symétrie de P.\n2. Calcule les racines de f, puis écris f sous forme factorisée.\n3. Détermine les abscisses des points d'intersection de P et de D, puis leurs coordonnées.\n4. Contrôle ta réponse de la question 3 avec la somme et le produit des racines.\n5. Sur quel intervalle la parabole P est-elle au-dessus de la droite D ? Justifie par une étude de signe.",
+      "bareme": [
+        { "critere": "Forme canonique vérifiée, sommet (2 ; 9), maximum car a < 0, axe x = 2", "points": 4 },
+        { "critere": "Δ = 36, racines −1 et 5, forme factorisée −(x + 1)(x − 5)", "points": 4 },
+        { "critere": "Équation x² − 3x − 4 = 0 résolue : points (−1 ; 0) et (4 ; 5)", "points": 5 },
+        { "critere": "Contrôle par somme 3 et produit −4", "points": 3 },
+        { "critere": "Signe de f(x) − g(x) : P au-dessus de D sur ]−1 ; 4[", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. −(x − 2)² + 9 = −(x² − 4x + 4) + 9 = −x² + 4x + 5 = f(x). Forme canonique a(x − α)² + β avec α = 2, β = 9 : sommet **(2 ; 9)**. a = −1 < 0 : c'est un **maximum**. P est symétrique par rapport à la droite **x = 2**.\n2. Δ = 4² − 4 × (−1) × 5 = 16 + 20 = **36**, √Δ = 6. x1 = (−4 − 6)/(−2) = **5**, x2 = (−4 + 6)/(−2) = **−1**. f(x) = **−(x + 1)(x − 5)**.\n3. f(x) = g(x) ⇔ −x² + 4x + 5 = x + 1 ⇔ −x² + 3x + 4 = 0 ⇔ x² − 3x − 4 = 0.\nΔ = 9 + 16 = 25, x = (3 − 5)/2 = **−1** ou x = (3 + 5)/2 = **4**.\ng(−1) = 0 et g(4) = 5 : points d'intersection **(−1 ; 0)** et **(4 ; 5)**.\n4. Pour x² − 3x − 4 : somme des racines −b/a = 3 et produit c/a = −4. On a bien −1 + 4 = 3 et (−1) × 4 = −4. ✓\n5. f(x) − g(x) = −x² + 3x + 4, trinôme de coefficient a = −1 < 0 et de racines −1 et 4. Il est du signe opposé à a, donc **positif**, strictement entre les racines : f(x) > g(x) sur **]−1 ; 4[**. P est au-dessus de D sur cet intervalle, en dessous ailleurs, et les deux se coupent en −1 et 4."
+    },
+    {
+      "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+      "difficulte": 1,
+      "titre": "Dérivées et une tangente",
+      "consigne": "Donne chaque dérivée en citant la formule utilisée.",
+      "enonce": "1. Calcule la dérivée de chacune des fonctions suivantes :\n   a. f(x) = 3x² − 5x + 2 (sur les réels)\n   b. g(x) = x³ + 1/x (pour x différent de 0)\n   c. h(x) = 4√x (pour x > 0)\n2. Détermine l'équation de la tangente à la courbe de f au point d'abscisse 1.\n3. Que représente géométriquement le nombre f'(1) ?",
+      "bareme": [
+        { "critere": "Les trois dérivées justes : 6x − 5 ; 3x² − 1/x² ; 2/√x", "points": 9 },
+        { "critere": "f(1) = 0, f'(1) = 1 et tangente y = x − 1", "points": 8 },
+        { "critere": "f'(1) identifié comme coefficient directeur de la tangente", "points": 3 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. a. (x²)' = 2x, (x)' = 1, constante → 0 : f'(x) = **6x − 5**.\n   b. (x³)' = 3x², (1/x)' = −1/x² : g'(x) = **3x² − 1/x²**.\n   c. (k × u)' = k × u' et (√x)' = 1/(2√x) : h'(x) = 4/(2√x) = **2/√x**.\n2. f(1) = 3 − 5 + 2 = **0** et f'(1) = 6 − 5 = **1**.\nTangente : y = f'(1)(x − 1) + f(1) = 1 × (x − 1) + 0, soit **y = x − 1**.\n3. f'(1) est le **coefficient directeur de la tangente** à la courbe de f au point d'abscisse 1 (la pente de la courbe en ce point)."
+    },
+    {
+      "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+      "difficulte": 2,
+      "titre": "Produit, quotient et tangente",
+      "consigne": "Détaille l'application des formules de dérivation et justifie tes conclusions.",
+      "enonce": "1. Soit f(x) = (2x + 1)(x² − 3) sur les réels. Calcule f'(x) avec la formule du produit, puis développe et réduis.\n2. Soit g(x) = (x + 1)/(x − 2), définie pour x différent de 2.\n   a. Montre que g'(x) = −3/(x − 2)².\n   b. Déduis-en le sens de variation de g sur ]−∞ ; 2[ et sur ]2 ; +∞[.\n   c. Détermine l'équation de la tangente à la courbe de g au point d'abscisse 3.\n3. Un camarade affirme : « la dérivée de (2x + 1)(x² − 3), c'est 2 × 2x = 4x ». Explique son erreur.",
+      "bareme": [
+        { "critere": "f'(x) = 2(x² − 3) + (2x + 1)(2x) = 6x² + 2x − 6", "points": 5 },
+        { "critere": "Formule du quotient appliquée dans le bon ordre et g'(x) = −3/(x − 2)²", "points": 5 },
+        { "critere": "g décroissante sur chacun des deux intervalles, justifiée par le signe de g'", "points": 4 },
+        { "critere": "Tangente y = −3x + 13 et erreur du camarade expliquée (produit des dérivées)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. u = 2x + 1, u' = 2 ; v = x² − 3, v' = 2x. f' = u'v + uv' = 2(x² − 3) + (2x + 1)(2x) = 2x² − 6 + 4x² + 2x = **6x² + 2x − 6**.\n2. a. u = x + 1, u' = 1 ; v = x − 2, v' = 1.\ng'(x) = (u'v − uv')/v² = [1 × (x − 2) − (x + 1) × 1]/(x − 2)² = (x − 2 − x − 1)/(x − 2)² = **−3/(x − 2)²**.\n   b. (x − 2)² > 0 pour x ≠ 2, donc g'(x) < 0 : g est **décroissante sur ]−∞ ; 2[** et **décroissante sur ]2 ; +∞[** (séparément, car 2 est interdit).\n   c. g(3) = 4/1 = 4 et g'(3) = −3/1 = −3. Tangente : y = −3(x − 3) + 4, soit **y = −3x + 13**.\n3. Il a dérivé chaque facteur et multiplié les dérivées : (2)(2x) = 4x. Or **la dérivée d'un produit n'est pas le produit des dérivées** : il faut appliquer u'v + uv', ce qui donne 6x² + 2x − 6."
+    },
+    {
+      "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+      "difficulte": 3,
+      "titre": "De la dérivée aux variations",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque étape.",
+      "enonce": "Soit f(x) = x³ − 3x² − 9x + 1, définie sur les réels.\n\n1. Calcule f'(x) et vérifie que f'(x) = 3(x + 1)(x − 3).\n2. Étudie le signe de f'(x) sur les réels.\n3. Déduis-en le sens de variation de f et dresse son tableau de variations, en y portant les valeurs de f en −1 et en 3.\n4. En quels points la courbe admet-elle une tangente horizontale ? Nature de ces points ?\n5. Donne l'équation de la tangente au point d'abscisse 0.\n6. Léna affirme : « Si f'(a) = 0, alors f admet forcément un extremum en a. » Montre avec la fonction k(x) = x³ en 0 que c'est faux.",
+      "bareme": [
+        { "critere": "f'(x) = 3x² − 6x − 9 et factorisation vérifiée", "points": 3 },
+        { "critere": "Signe de f' : positif hors de [−1 ; 3], négatif entre −1 et 3", "points": 4 },
+        { "critere": "Tableau de variations juste avec f(−1) = 6 et f(3) = −26", "points": 5 },
+        { "critere": "Tangentes horizontales en −1 (maximum local) et 3 (minimum local), tangente en 0 : y = −9x + 1", "points": 4 },
+        { "critere": "Contre-exemple x³ : dérivée nulle en 0 sans changement de signe, fonction croissante", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. f'(x) = 3x² − 6x − 9. Et 3(x + 1)(x − 3) = 3(x² − 3x + x − 3) = 3(x² − 2x − 3) = 3x² − 6x − 9. ✓\n2. f'(x) est un trinôme de coefficient 3 > 0 et de racines −1 et 3 : il est **positif sur ]−∞ ; −1[ et ]3 ; +∞[**, **négatif sur ]−1 ; 3[**, nul en −1 et 3.\n3. f est **croissante sur ]−∞ ; −1]**, **décroissante sur [−1 ; 3]**, **croissante sur [3 ; +∞[**.\nf(−1) = −1 − 3 + 9 + 1 = **6** ; f(3) = 27 − 27 − 27 + 1 = **−26**.\nTableau : ↗ jusqu'à 6 (en −1), ↘ jusqu'à −26 (en 3), puis ↗.\n4. Tangente horizontale là où f'(x) = 0 : aux points **(−1 ; 6)** et **(3 ; −26)**. f' s'y annule **en changeant de signe** : **maximum local** 6 en −1, **minimum local** −26 en 3.\n5. f(0) = 1 et f'(0) = −9 : **y = −9x + 1**.\n6. k'(x) = 3x², donc k'(0) = 0 : tangente horizontale en 0. Mais 3x² ≥ 0 pour tout x : k' **ne change pas de signe**, k est croissante sur les réels et n'a **pas d'extremum** en 0 (k(−1) = −1 < 0 < 1 = k(1)). La réciproque est fausse : il faut que f' s'annule **en changeant de signe**."
+    },
+    {
+      "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+      "difficulte": 1,
+      "titre": "Domaine et parité",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "1. Détermine l'ensemble de définition de chacune des fonctions :\n   a. f(x) = 1/(x − 3)\n   b. g(x) = √(x + 2)\n2. On considère h(x) = x³ − 4x et k(x) = x² + 1, définies sur les réels.\n   a. Calcule h(−x) et k(−x).\n   b. Dis si chaque fonction est paire, impaire ou ni l'une ni l'autre, et donne la symétrie de sa courbe.\n3. À quoi sert, dans l'étude d'une fonction, de savoir qu'elle est paire ou impaire ?",
+      "bareme": [
+        { "critere": "Ensembles de définition : réels sauf 3 ; [−2 ; +∞[, avec la raison de l'interdiction", "points": 6 },
+        { "critere": "h impaire (symétrie par rapport à l'origine), k paire (symétrie par rapport à l'axe des ordonnées), calculs à l'appui", "points": 10 },
+        { "critere": "Intérêt : n'étudier que la moitié du domaine", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. On ne peut pas diviser par zéro : x − 3 ≠ 0, donc f est définie sur **ℝ privé de 3**, soit ]−∞ ; 3[ ∪ ]3 ; +∞[.\n   b. On ne peut pas prendre la racine d'un négatif : x + 2 ≥ 0, soit x ≥ −2. g est définie sur **[−2 ; +∞[**.\n2. a. h(−x) = (−x)³ − 4(−x) = −x³ + 4x = −(x³ − 4x) = **−h(x)** ; k(−x) = (−x)² + 1 = x² + 1 = **k(x)**.\n   b. h est **impaire** : sa courbe est symétrique par rapport à l'**origine**. k est **paire** : sa courbe est symétrique par rapport à l'**axe des ordonnées**.\n3. Repérer la parité permet de **n'étudier que la moitié du domaine** (par exemple x ≥ 0), puis de compléter la courbe par symétrie."
+    },
+    {
+      "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+      "difficulte": 2,
+      "titre": "Le périmètre le plus court",
+      "consigne": "Suis la méthode d'étude d'une fonction en justifiant chaque étape.",
+      "enonce": "**Situation.** Sofia doit délimiter une parcelle rectangulaire d'aire 4 m². Si l'un des côtés mesure x mètres (x > 0), l'autre mesure 4/x mètres, et le demi-périmètre vaut :\n\ng(x) = x + 4/x, pour x dans ]0 ; +∞[.\n\n1. Calcule g'(x) et montre que g'(x) = (x² − 4)/x².\n2. Étudie le signe de g'(x) sur ]0 ; +∞[ et dresse le tableau de variations de g.\n3. g admet-elle un minimum ? Est-il local ou global sur ]0 ; +∞[ ? Quelle forme a la parcelle au périmètre le plus court ?\n4. Résous l'équation g(x) = 5 et interprète les solutions.",
+      "bareme": [
+        { "critere": "Dérivée 1 − 4/x² mise au même dénominateur", "points": 4 },
+        { "critere": "Signe de g' : négatif sur ]0 ; 2[, positif sur ]2 ; +∞[, tableau avec g(2) = 4", "points": 6 },
+        { "critere": "Minimum global 4 en x = 2, parcelle carrée de 2 m de côté", "points": 5 },
+        { "critere": "Équation ramenée à x² − 5x + 4 = 0, solutions 1 et 4 interprétées", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. g'(x) = 1 − 4/x² = (x² − 4)/x².\n2. x² > 0 sur ]0 ; +∞[, donc g'(x) a le signe de x² − 4 = (x − 2)(x + 2). Pour x > 0, x + 2 > 0 : g'(x) a le signe de x − 2. g'(x) < 0 sur ]0 ; 2[, g'(2) = 0, g'(x) > 0 sur ]2 ; +∞[.\ng est **décroissante sur ]0 ; 2]** et **croissante sur [2 ; +∞[**, avec g(2) = 2 + 2 = **4**.\n3. g' s'annule en 2 en changeant de signe : g admet un minimum 4 en x = 2. Comme g décroît avant 2 et croît après sur tout l'ensemble de définition, ce minimum est **global** : g(x) ≥ 4 pour tout x > 0. Le demi-périmètre minimal est 4 m (périmètre 8 m) pour x = 2 et 4/x = 2 : la parcelle est un **carré de 2 m de côté**.\n4. g(x) = 5 ⇔ x + 4/x = 5 ⇔ x² + 4 = 5x (en multipliant par x > 0) ⇔ x² − 5x + 4 = 0. Δ = 25 − 16 = 9, x = (5 − 3)/2 = **1** ou x = (5 + 3)/2 = **4**. Deux solutions : la parcelle 1 m × 4 m et la parcelle 4 m × 1 m (la même, tournée) ont un demi-périmètre de 5 m."
+    },
+    {
+      "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+      "difficulte": 3,
+      "titre": "Combien de solutions ?",
+      "consigne": "Traite les questions dans l'ordre. Calculatrice autorisée pour le balayage.",
+      "enonce": "Soit f(x) = x³ − 12x + 1, étudiée sur l'intervalle [−3 ; 5].\n\n1. Calcule f'(x) et étudie son signe sur [−3 ; 5].\n2. Dresse le tableau de variations de f sur [−3 ; 5], avec les valeurs de f aux bornes et aux extremums.\n3. Donne les extremums locaux de f, puis son maximum et son minimum sur [−3 ; 5]. Le maximum local est-il un maximum global ? Justifie.\n4. Combien l'équation f(x) = 0 a-t-elle de solutions dans [−3 ; 5] ? Justifie avec le théorème des valeurs intermédiaires, intervalle par intervalle.\n5. On note α la solution située dans [2 ; 5]. Par balayage, donne un encadrement de α d'amplitude 0,1, puis 0,01.",
+      "bareme": [
+        { "critere": "f'(x) = 3x² − 12 = 3(x − 2)(x + 2) et signe juste", "points": 3 },
+        { "critere": "Tableau juste : f(−3) = 10, f(−2) = 17, f(2) = −15, f(5) = 66", "points": 4 },
+        { "critere": "Distinction local / global : maximum local 17 non global (66 en 5), minimum global −15", "points": 4 },
+        { "critere": "Deux solutions, avec continuité, stricte monotonie et changement de signe sur chaque intervalle", "points": 5 },
+        { "critere": "Encadrements 3,4 < α < 3,5 puis 3,42 < α < 3,43 justifiés par des valeurs de f", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f'(x) = 3x² − 12 = 3(x² − 4) = 3(x − 2)(x + 2). Trinôme de coefficient positif, racines −2 et 2 : f' > 0 sur [−3 ; −2[ et ]2 ; 5], f' < 0 sur ]−2 ; 2[.\n2. f(−3) = −27 + 36 + 1 = **10** ; f(−2) = −8 + 24 + 1 = **17** ; f(2) = 8 − 24 + 1 = **−15** ; f(5) = 125 − 60 + 1 = **66**.\nf croît de 10 à 17 sur [−3 ; −2], décroît de 17 à −15 sur [−2 ; 2], croît de −15 à 66 sur [2 ; 5].\n3. Maximum local **17** en −2, minimum local **−15** en 2. Sur [−3 ; 5], le maximum est **66** (en 5) : le maximum local 17 **n'est pas global**. Le minimum sur [−3 ; 5] est **−15** (car f(−3) = 10 > −15) : ici le minimum local est aussi global.\n4. Sur [−3 ; −2], f va de 10 à 17 : f(x) ≥ 10 > 0, **aucune** solution. Sur [−2 ; 2], f est continue et strictement décroissante, et 0 est compris entre 17 et −15 : **une unique** solution. Sur [2 ; 5], f est continue et strictement croissante, et 0 est compris entre −15 et 66 : **une unique** solution α. Au total, **deux solutions**.\n5. f(3) = 27 − 36 + 1 = −8 < 0 et f(4) = 64 − 48 + 1 = 17 > 0. f(3,4) = 39,304 − 40,8 + 1 = −0,496 < 0 et f(3,5) = 42,875 − 42 + 1 = 1,875 > 0 : **3,4 < α < 3,5**.\nf(3,42) = 40,001688 − 41,04 + 1 ≈ −0,038 < 0 et f(3,43) = 40,353607 − 41,16 + 1 ≈ 0,194 > 0 : **3,42 < α < 3,43**."
+    },
+    {
+      "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+      "difficulte": 1,
+      "titre": "Calculer avec l'exponentielle",
+      "consigne": "Justifie chaque transformation par une propriété du cours.",
+      "enonce": "Dans tout l'exercice, on écrit eˣ pour « e puissance x ».\n\n1. Simplifie sous la forme d'une seule exponentielle (ou d'un nombre) :\n   a. A = e²ˣ × e³⁻ˣ\n   b. B = (eˣ)³ / e²ˣ\n   c. C = e⁻ˣ × eˣ⁺¹\n2. Calcule la dérivée de f(x) = e⁵ˣ et de g(x) = 3e⁻ˣ.\n3. Résous l'équation e²ˣ⁻¹ = eˣ⁺³.",
+      "bareme": [
+        { "critere": "Simplifications justes : A = eˣ⁺³, B = eˣ, C = e", "points": 9 },
+        { "critere": "Dérivées avec le facteur u' : f'(x) = 5e⁵ˣ, g'(x) = −3e⁻ˣ", "points": 6 },
+        { "critere": "Équation résolue par égalité des exposants : x = 4", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. e^a × e^b = e^(a+b) : A = e^(2x + 3 − x) = **eˣ⁺³**.\n   b. (eˣ)³ = e³ˣ et e^a / e^b = e^(a−b) : B = e^(3x − 2x) = **eˣ**.\n   c. C = e^(−x + x + 1) = e¹ = **e**.\n2. (e^u)' = u' × e^u.\n- f(x) = e⁵ˣ : u = 5x, u' = 5, donc f'(x) = **5e⁵ˣ**.\n- g(x) = 3e⁻ˣ : u = −x, u' = −1, donc g'(x) = 3 × (−e⁻ˣ) = **−3e⁻ˣ**.\n3. e^a = e^b équivaut à a = b : 2x − 1 = x + 3, donc **x = 4**."
+    },
+    {
+      "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+      "difficulte": 2,
+      "titre": "Étude de (x − 1)eˣ",
+      "consigne": "Réponds en justifiant chaque étape par le cours.",
+      "enonce": "Soit f(x) = (x − 1)eˣ, définie sur les réels (eˣ désigne e puissance x).\n\n1. Résous l'équation f(x) = 0. Pourquoi l'exponentielle n'intervient-elle pas dans la réponse ?\n2. Montre que f'(x) = x eˣ.\n3. Étudie le signe de f'(x), puis dresse le tableau de variations de f. Donne son extremum.\n4. Résous l'inéquation e³ˣ > eˣ⁺⁴.",
+      "bareme": [
+        { "critere": "f(x) = 0 ⇔ x = 1, justifié par eˣ > 0 qui ne s'annule jamais", "points": 5 },
+        { "critere": "Dérivée d'un produit : eˣ + (x − 1)eˣ = x eˣ", "points": 5 },
+        { "critere": "Signe de f' donné par celui de x, f décroissante puis croissante, minimum −1 en 0", "points": 6 },
+        { "critere": "Inéquation ramenée à 3x > x + 4 : x > 2", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. eˣ est **strictement positive** pour tout x, elle ne s'annule jamais : f(x) = 0 ⇔ x − 1 = 0 ⇔ **x = 1**.\n2. Produit u × v avec u = x − 1, u' = 1 et v = eˣ, v' = eˣ : f'(x) = 1 × eˣ + (x − 1)eˣ = eˣ(1 + x − 1) = **x eˣ**.\n3. eˣ > 0, donc f'(x) a le signe de x : f'(x) < 0 sur ]−∞ ; 0[, f'(0) = 0, f'(x) > 0 sur ]0 ; +∞[.\nf est **décroissante sur ]−∞ ; 0]** et **croissante sur [0 ; +∞[**. f(0) = (0 − 1) × 1 = **−1** : minimum de f, atteint en 0.\n4. L'exponentielle étant strictement croissante, e^a < e^b équivaut à a < b : e³ˣ > eˣ⁺⁴ ⇔ 3x > x + 4 ⇔ 2x > 4 ⇔ **x > 2**. Solutions : ]2 ; +∞[."
+    },
+    {
+      "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+      "difficulte": 3,
+      "titre": "Le chocolat chaud de Clara",
+      "consigne": "Réponds à chaque question en justifiant avec les propriétés de l'exponentielle. Calculatrice autorisée, arrondis au dixième.",
+      "enonce": "**Situation.** Clara se sert un chocolat chaud dans une pièce à 20 °C. La température du chocolat (en °C) au bout de t minutes est modélisée par :\n\nT(t) = 20 + 70e^(−0,1t), pour t ≥ 0.\n\n1. Calcule T(0) et T(10). Interprète.\n2. Calcule T'(t). Déduis-en le sens de variation de T.\n3. Donne l'équation de la tangente à la courbe de T au point d'abscisse 0.\n4. Le chocolat peut-il descendre sous 20 °C ? Justifie. Que devient T(t) quand t devient très grand ?\n5. Montre que, pour tout t ≥ 0, T(t + 10) − 20 = e⁻¹ × [T(t) − 20]. Traduis cette égalité par une phrase sur l'écart entre la température du chocolat et celle de la pièce.",
+      "bareme": [
+        { "critere": "T(0) = 90 °C et T(10) ≈ 45,8 °C, interprétés", "points": 3 },
+        { "critere": "T'(t) = −7e^(−0,1t) avec le facteur u', T strictement décroissante", "points": 5 },
+        { "critere": "Tangente en 0 : y = −7t + 90", "points": 3 },
+        { "critere": "T(t) > 20 car l'exponentielle est strictement positive, limite 20 °C justifiée", "points": 4 },
+        { "critere": "Égalité démontrée par e^(a+b) = e^a × e^b et interprétée (écart multiplié par environ 0,37 toutes les 10 min)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. T(0) = 20 + 70 × e⁰ = 20 + 70 = **90 °C** : température du chocolat servi. T(10) = 20 + 70e⁻¹ ≈ 20 + 70 × 0,3679 ≈ **45,8 °C** au bout de 10 minutes.\n2. (e^u)' = u' e^u avec u = −0,1t, u' = −0,1 : T'(t) = 70 × (−0,1)e^(−0,1t) = **−7e^(−0,1t)**. L'exponentielle est strictement positive, donc T'(t) < 0 : T est **strictement décroissante**, le chocolat refroidit sans cesse.\n3. T(0) = 90 et T'(0) = −7 : tangente **y = −7t + 90** (au départ, le chocolat perd environ 7 °C par minute).\n4. 70e^(−0,1t) > 0 pour tout t, donc **T(t) > 20** : le chocolat ne descend jamais sous 20 °C. Quand t devient très grand, −0,1t tend vers moins l'infini, et e puissance un nombre qui tend vers moins l'infini tend vers 0 : T(t) se rapproche de **20 °C**, la température de la pièce.\n5. T(t + 10) − 20 = 70e^(−0,1(t + 10)) = 70e^(−0,1t − 1) = 70e^(−0,1t) × e⁻¹ = e⁻¹ × [T(t) − 20]. L'exponentielle transforme la somme des exposants en produit.\nInterprétation : toutes les 10 minutes, l'**écart** entre la température du chocolat et celle de la pièce est **multiplié par e⁻¹ ≈ 0,37** (il perd environ 63 %). Exemple : écart de 70 °C au départ, environ 25,8 °C après 10 min."
+    },
+    {
+      "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+      "difficulte": 1,
+      "titre": "Radians et valeurs remarquables",
+      "consigne": "Réponds à chaque question ; justifie les deux dernières avec le cercle trigonométrique.",
+      "enonce": "1. Convertis 120° en radians, puis π/5 et 3π/4 en degrés.\n2. Donne la valeur exacte de cos(π/6), sin(π/4) et cos(π/2).\n3. À l'aide des angles associés, calcule :\n   a. cos(5π/6), en remarquant que 5π/6 = π − π/6 ;\n   b. sin(7π/6), en remarquant que 7π/6 = π + π/6.",
+      "bareme": [
+        { "critere": "Conversions justes : 2π/3 ; 36° ; 135°", "points": 6 },
+        { "critere": "Valeurs remarquables : √3/2 ; √2/2 ; 0", "points": 6 },
+        { "critere": "Angles associés : cos(5π/6) = −√3/2 et sin(7π/6) = −1/2, avec la formule utilisée", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. π rad = 180°, donc 120° = 120 × π/180 = **2π/3** ; π/5 = 180/5 = **36°** ; 3π/4 = 3 × 45 = **135°**.\n2. cos(π/6) = **√3/2** ; sin(π/4) = **√2/2** ; cos(π/2) = **0**.\n3. a. cos(π − x) = −cos x : cos(5π/6) = −cos(π/6) = **−√3/2**.\n   b. sin(π + x) = −sin x : sin(7π/6) = −sin(π/6) = **−1/2**.\nSur le cercle, le point associé à 5π/6 est le symétrique de celui de π/6 par rapport à l'axe des ordonnées (abscisse opposée), celui de 7π/6 le symétrique par rapport à l'origine (les deux coordonnées opposées)."
+    },
+    {
+      "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+      "difficulte": 2,
+      "titre": "Retrouver le cosinus à partir du sinus",
+      "consigne": "Justifie chaque réponse par une propriété du cours ou une lecture du cercle.",
+      "enonce": "1. Soit x un réel de l'intervalle [π/2 ; π] tel que sin x = 3/5.\n   a. À l'aide de la relation fondamentale, calcule cos² x.\n   b. Déduis-en cos x, en justifiant son signe.\n   c. Calcule cos(π − x), sin(π + x) et cos(−x).\n2. Résous dans l'intervalle [0 ; 2π[ l'équation cos x = 1/2. Explique comment la parité du cosinus et sa période permettent de trouver la seconde solution.",
+      "bareme": [
+        { "critere": "cos² x = 16/25 par cos² x + sin² x = 1", "points": 4 },
+        { "critere": "cos x = −4/5, signe justifié par la position du point sur le cercle", "points": 5 },
+        { "critere": "Angles associés : 4/5 ; −3/5 ; −4/5", "points": 5 },
+        { "critere": "Solutions π/3 et 5π/3 justifiées par la parité et la période 2π", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. a. cos² x + sin² x = 1, donc cos² x = 1 − 9/25 = **16/25**.\n   b. cos x = 4/5 ou cos x = −4/5. Pour x dans [π/2 ; π], le point M est dans le quart de cercle en haut à gauche : son abscisse est négative ou nulle. Donc **cos x = −4/5**.\n   c. cos(π − x) = −cos x = **4/5** ; sin(π + x) = −sin x = **−3/5** ; cos(−x) = cos x = **−4/5** (cosinus pair).\n2. On sait que cos(π/3) = 1/2 : **x = π/3** est solution. Le cosinus est **pair** : cos(−π/3) = 1/2 aussi. −π/3 n'est pas dans [0 ; 2π[, mais le cosinus est **périodique de période 2π** : cos(−π/3 + 2π) = cos(5π/3) = 1/2. Sur le cercle, deux points seulement ont pour abscisse 1/2 (symétriques par rapport à l'axe des abscisses). Solutions : **π/3 et 5π/3**."
+    },
+    {
+      "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+      "difficulte": 3,
+      "titre": "Étude de x − 2 sin x",
+      "consigne": "Traite les questions dans l'ordre en justifiant par le cours et par la lecture du cercle. Calculatrice autorisée pour les valeurs approchées.",
+      "enonce": "Soit f la fonction définie sur les réels par f(x) = x − 2 sin x.\n\n1. Calcule f(−x) en fonction de f(x). Que peut-on dire de f et de sa courbe ?\n2. Calcule f'(x).\n3. En t'aidant du cercle trigonométrique, résous sur [0 ; π] l'inéquation cos x < 1/2, puis l'équation cos x = 1/2.\n4. Déduis-en le signe de f'(x) sur [0 ; π] et dresse le tableau de variations de f sur [0 ; π].\n5. Donne la valeur exacte, puis une valeur approchée au centième, du minimum de f sur [0 ; π].\n6. Comment obtient-on les variations de f sur [−π ; 0] sans nouveau calcul ?",
+      "bareme": [
+        { "critere": "f(−x) = −f(x) : f impaire, courbe symétrique par rapport à l'origine", "points": 4 },
+        { "critere": "f'(x) = 1 − 2cos x", "points": 3 },
+        { "critere": "Résolution sur [0 ; π] : cos x = 1/2 pour π/3, cos x < 1/2 sur ]π/3 ; π]", "points": 4 },
+        { "critere": "Signe de f' et variations : décroissante sur [0 ; π/3], croissante sur [π/3 ; π], valeurs f(0) = 0 et f(π) = π", "points": 5 },
+        { "critere": "Minimum π/3 − √3 ≈ −0,68 et symétrie utilisée pour [−π ; 0]", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f(−x) = −x − 2 sin(−x) = −x + 2 sin x = −(x − 2 sin x) = **−f(x)**, car le sinus est impair. f est **impaire** : sa courbe est symétrique par rapport à l'**origine**.\n2. (sin x)' = cos x, donc f'(x) = **1 − 2cos x**.\n3. Sur [0 ; π], le point du cercle parcourt le demi-cercle supérieur de (1 ; 0) à (−1 ; 0) : son abscisse cos x **décroît** de 1 à −1. cos x = 1/2 pour **x = π/3** seulement ; cos x < 1/2 pour **x ∈ ]π/3 ; π]**.\n4. f'(x) < 0 ⇔ cos x > 1/2 ⇔ x ∈ [0 ; π/3[ ; f'(π/3) = 0 ; f'(x) > 0 sur ]π/3 ; π].\nf est **décroissante sur [0 ; π/3]** et **croissante sur [π/3 ; π]**.\nf(0) = 0 − 0 = **0** ; f(π) = π − 2 × 0 = **π** ≈ 3,14.\n5. Minimum en π/3 : f(π/3) = π/3 − 2 × √3/2 = **π/3 − √3** ≈ 1,047 − 1,732 ≈ **−0,68**.\n6. f est impaire : sa courbe sur [−π ; 0] est la symétrique par rapport à l'origine de celle sur [0 ; π]. Une symétrie centrale conserve le sens de variation : f est **croissante sur [−π ; −π/3]** (de f(−π) = −π à f(−π/3) = √3 − π/3 ≈ 0,68) et **décroissante sur [−π/3 ; 0]** (jusqu'à f(0) = 0). Maximum local ≈ 0,68 en −π/3."
+    },
+    {
+      "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+      "difficulte": 1,
+      "titre": "Produits scalaires en coordonnées",
+      "consigne": "Le repère est orthonormé. Donne chaque calcul et la formule utilisée.",
+      "enonce": "On donne les vecteurs u(3 ; −2), v(4 ; 6) et w(1 ; 2).\n\n1. Calcule u · v et u · w.\n2. Les vecteurs u et v sont-ils orthogonaux ? Et u et w ? Justifie.\n3. Calcule u · u et déduis-en la norme de u.\n4. Deux vecteurs a et b ont pour normes 4 et 5 et forment un angle de 60°. Calcule a · b.",
+      "bareme": [
+        { "critere": "u · v = 0 et u · w = −1 par la formule x x' + y y'", "points": 6 },
+        { "critere": "Conclusions d'orthogonalité justifiées par le critère du produit scalaire nul", "points": 5 },
+        { "critere": "u · u = 13 et norme √13", "points": 4 },
+        { "critere": "a · b = 4 × 5 × cos 60° = 10", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. u · v = 3 × 4 + (−2) × 6 = 12 − 12 = **0** ; u · w = 3 × 1 + (−2) × 2 = 3 − 4 = **−1**.\n2. u et v sont non nuls et u · v = 0 : ils sont **orthogonaux**. u · w = −1 ≠ 0 : u et w **ne sont pas orthogonaux**.\n3. u · u = 3² + (−2)² = 9 + 4 = **13**. Or u · u est le carré de la norme de u, donc la norme de u vaut **√13**.\n4. a · b = norme de a × norme de b × cos θ = 4 × 5 × cos 60° = 20 × 1/2 = **10**."
+    },
+    {
+      "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+      "difficulte": 2,
+      "titre": "Un angle dans un triangle repéré",
+      "consigne": "Le repère est orthonormé. Justifie chaque calcul ; calculatrice autorisée, arrondis au dixième de degré.",
+      "enonce": "On donne les points A(1 ; 2), B(5 ; 4) et C(3 ; 7).\n\n1. Calcule les coordonnées des vecteurs AB et AC, puis le produit scalaire AB · AC.\n2. Calcule les normes de AB et de AC.\n3. En utilisant deux expressions du produit scalaire, calcule cos(BAC), puis une mesure de l'angle BAC.\n4. Le triangle ABC est-il rectangle en B ? Justifie par un calcul.",
+      "bareme": [
+        { "critere": "AB(4 ; 2), AC(2 ; 5) et AB · AC = 18", "points": 5 },
+        { "critere": "Normes √20 et √29", "points": 4 },
+        { "critere": "cos(BAC) = 18/(√20 × √29) ≈ 0,747 et angle ≈ 41,6°", "points": 6 },
+        { "critere": "BA · BC = 2 ≠ 0 : pas rectangle en B", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. AB(5 − 1 ; 4 − 2) = **(4 ; 2)** et AC(3 − 1 ; 7 − 2) = **(2 ; 5)**. AB · AC = 4 × 2 + 2 × 5 = **18**.\n2. Norme de AB = √(16 + 4) = **√20** ; norme de AC = √(4 + 25) = **√29**.\n3. AB · AC = norme de AB × norme de AC × cos(BAC), donc cos(BAC) = 18/(√20 × √29) = 18/√580 ≈ 18/24,08 ≈ **0,747**. Avec la calculatrice : angle BAC ≈ **41,6°**.\n4. BA(−4 ; −2) et BC(3 − 5 ; 7 − 4) = (−2 ; 3). BA · BC = (−4)(−2) + (−2)(3) = 8 − 6 = **2 ≠ 0** : les vecteurs ne sont pas orthogonaux, le triangle **n'est pas rectangle en B**."
+    },
+    {
+      "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+      "difficulte": 3,
+      "titre": "Al-Kashi dans le triangle de Jade",
+      "consigne": "Justifie chaque calcul par une propriété ou un théorème du cours. Calculatrice autorisée, angles arrondis au dixième de degré.",
+      "enonce": "Jade étudie un triangle ABC tel que AB = 5 cm, AC = 8 cm et l'angle BAC mesure 60°.\n\n1. Calcule le produit scalaire AB · AC.\n2. À l'aide du théorème d'Al-Kashi, calcule la longueur BC.\n3. Applique à nouveau Al-Kashi pour calculer cos(ABC), puis une mesure de l'angle ABC. Déduis-en l'angle ACB.\n4. En utilisant la bilinéarité et le carré scalaire, calcule (AB + AC) · AC.\n5. Que devient la formule d'Al-Kashi si l'angle BAC mesure 90° ? Explique.",
+      "bareme": [
+        { "critere": "AB · AC = 5 × 8 × cos 60° = 20", "points": 3 },
+        { "critere": "BC² = 25 + 64 − 40 = 49, BC = 7 cm", "points": 5 },
+        { "critere": "cos(ABC) = 1/7, angle ABC ≈ 81,8° et angle ACB ≈ 38,2°", "points": 5 },
+        { "critere": "(AB + AC) · AC = AB · AC + AC · AC = 20 + 64 = 84", "points": 4 },
+        { "critere": "Cas de l'angle droit : cos 90° = 0, on retrouve Pythagore", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. AB · AC = AB × AC × cos(BAC) = 5 × 8 × cos 60° = 40 × 1/2 = **20**.\n2. Al-Kashi : BC² = AB² + AC² − 2 × AB × AC × cos(BAC) = 25 + 64 − 2 × 5 × 8 × 1/2 = 89 − 40 = **49**, donc **BC = 7 cm**.\n3. Al-Kashi pour l'angle en B : AC² = BA² + BC² − 2 × BA × BC × cos(ABC), soit 64 = 25 + 49 − 70 cos(ABC), d'où 70 cos(ABC) = 10 et **cos(ABC) = 1/7** ≈ 0,143. Angle ABC ≈ **81,8°**.\nSomme des angles : ACB ≈ 180 − 60 − 81,8 = **38,2°**.\n4. Bilinéarité : (AB + AC) · AC = AB · AC + AC · AC. Carré scalaire : AC · AC = AC² = 64. Donc (AB + AC) · AC = 20 + 64 = **84**.\n5. Si l'angle BAC vaut 90°, cos 90° = 0 : la formule devient BC² = AB² + AC², c'est le **théorème de Pythagore**. Al-Kashi le généralise à un triangle quelconque."
+    },
+    {
+      "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+      "difficulte": 1,
+      "titre": "Milieu, distance et droite",
+      "consigne": "Le repère est orthonormé. Donne chaque formule utilisée.",
+      "enonce": "On donne les points A(1 ; 3) et B(5 ; −1).\n\n1. Calcule les coordonnées du milieu I de [AB].\n2. Calcule la distance AB.\n3. Calcule le coefficient directeur de la droite (AB), puis donne son équation réduite.\n4. Soit la droite d d'équation cartésienne 2x − 3y + 6 = 0. Donne un vecteur directeur et un vecteur normal de d.",
+      "bareme": [
+        { "critere": "Milieu I(3 ; 1) et distance AB = √32 = 4√2", "points": 7 },
+        { "critere": "Coefficient directeur −1 et équation réduite y = −x + 4", "points": 7 },
+        { "critere": "Vecteur directeur (3 ; 2) et vecteur normal (2 ; −3)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. I((1 + 5)/2 ; (3 + (−1))/2) = **I(3 ; 1)**.\n2. AB = √((5 − 1)² + (−1 − 3)²) = √(16 + 16) = **√32 = 4√2** ≈ 5,66.\n3. m = (−1 − 3)/(5 − 1) = −4/4 = **−1**. y = −x + p ; A appartient à la droite : 3 = −1 + p, donc p = 4. Équation réduite : **y = −x + 4** (contrôle avec B : −5 + 4 = −1 ✓).\n4. Pour ax + by + c = 0 avec a = 2 et b = −3 : vecteur directeur u(−b ; a) = **u(3 ; 2)** ; vecteur normal n(a ; b) = **n(2 ; −3)**."
+    },
+    {
+      "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+      "difficulte": 2,
+      "titre": "Parallèle, perpendiculaire et intersection",
+      "consigne": "Le repère est orthonormé. Justifie chaque équation obtenue.",
+      "enonce": "Soit d la droite d'équation y = 2x − 1, A(0 ; 4) et B(1 ; 5).\n\n1. Donne l'équation réduite de la droite d1 parallèle à d passant par B.\n2. Donne l'équation réduite de la droite d2 perpendiculaire à d passant par A.\n3. Calcule les coordonnées du point d'intersection H de d et d2.\n4. Écris une équation cartésienne de d, puis vérifie par un produit scalaire que le vecteur directeur de d et celui de d2 sont orthogonaux.",
+      "bareme": [
+        { "critere": "d1 : même coefficient directeur 2, y = 2x + 3", "points": 5 },
+        { "critere": "d2 : coefficient −1/2 (produit égal à −1), y = −x/2 + 4", "points": 5 },
+        { "critere": "Système résolu : H(2 ; 3)", "points": 5 },
+        { "critere": "Équation 2x − y − 1 = 0 et produit scalaire nul entre (1 ; 2) et (2 ; −1)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Parallèles ⇔ même coefficient directeur : d1 : y = 2x + p, avec 5 = 2 + p, p = 3. **d1 : y = 2x + 3**.\n2. Perpendiculaires ⇔ m × m' = −1 : m' = −1/2. d2 passe par A(0 ; 4), donc p = 4 : **d2 : y = −x/2 + 4**.\n3. 2x − 1 = −x/2 + 4 ⇔ 2x + x/2 = 5 ⇔ (5/2)x = 5 ⇔ x = 2, puis y = 2 × 2 − 1 = 3. **H(2 ; 3)** (contrôle dans d2 : −1 + 4 = 3 ✓).\n4. y = 2x − 1 ⇔ **2x − y − 1 = 0** (a = 2, b = −1). Vecteur directeur de d : u(−b ; a) = u(1 ; 2). d2 a pour coefficient −1/2, un vecteur directeur est v(2 ; −1). u · v = 1 × 2 + 2 × (−1) = **0** : ils sont orthogonaux, d et d2 sont bien perpendiculaires."
+    },
+    {
+      "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+      "difficulte": 3,
+      "titre": "Un cercle et son diamètre",
+      "consigne": "Le repère est orthonormé. Traite les questions dans l'ordre en justifiant.",
+      "enonce": "Soit l'ensemble C des points M(x ; y) tels que x² + y² − 4x + 6y − 12 = 0.\n\n1. En complétant les carrés, montre que C est un cercle ; donne son centre Ω et son rayon.\n2. Vérifie que A(5 ; 1) et B(−1 ; −7) appartiennent à C.\n3. Calcule le milieu de [AB] et la longueur AB. Que peut-on dire du segment [AB] ?\n4. Vérifie que C(−2 ; 0) appartient au cercle, puis calcule le produit scalaire des vecteurs CA et CB. Quelle est la nature du triangle ABC ? Relie ce résultat à une propriété du cours.\n5. L'ensemble des points tels que x² + y² − 2x + 4y + 10 = 0 est-il un cercle ? Justifie.",
+      "bareme": [
+        { "critere": "Forme (x − 2)² + (y + 3)² = 25 : centre Ω(2 ; −3), rayon 5", "points": 5 },
+        { "critere": "Appartenance de A et B vérifiée par le calcul", "points": 3 },
+        { "critere": "Milieu Ω et AB = 10 : [AB] est un diamètre", "points": 4 },
+        { "critere": "C sur le cercle, CA · CB = 0, triangle rectangle en C, lien avec le cercle de diamètre [AB]", "points": 5 },
+        { "critere": "Second ensemble : (x − 1)² + (y + 2)² = −5, ensemble vide", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. x² − 4x = (x − 2)² − 4 et y² + 6y = (y + 3)² − 9. L'équation devient (x − 2)² − 4 + (y + 3)² − 9 − 12 = 0, soit **(x − 2)² + (y + 3)² = 25**. Le membre de droite est strictement positif : C est le **cercle de centre Ω(2 ; −3) et de rayon 5**.\n2. A : (5 − 2)² + (1 + 3)² = 9 + 16 = 25 ✓. B : (−1 − 2)² + (−7 + 3)² = 9 + 16 = 25 ✓.\n3. Milieu de [AB] : ((5 − 1)/2 ; (1 − 7)/2) = **(2 ; −3) = Ω**. AB = √((−6)² + (−8)²) = √100 = **10** = 2 × rayon. [AB] est un **diamètre** du cercle.\n4. C : (−2 − 2)² + (0 + 3)² = 16 + 9 = 25 ✓. CA(7 ; 1) et CB(1 ; −7) : CA · CB = 7 × 1 + 1 × (−7) = **0**. Les vecteurs sont orthogonaux : le triangle ABC est **rectangle en C**. C'est la caractérisation du cours : le cercle de diamètre [AB] est l'ensemble des points M tels que MA · MB = 0 (l'angle en M est droit).\n5. x² − 2x = (x − 1)² − 1 et y² + 4y = (y + 2)² − 4 : l'équation devient (x − 1)² + (y + 2)² = 1 + 4 − 10 = **−5**. Une somme de carrés ne peut pas être négative : c'est l'**ensemble vide**, pas un cercle."
+    },
+    {
+      "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+      "difficulte": 1,
+      "titre": "Lire un arbre pondéré",
+      "consigne": "Construis l'arbre et justifie chaque calcul par une règle de l'arbre.",
+      "enonce": "On considère deux événements A et B tels que P(A) = 0,3, P(A)(B) = 0,6 et P(A barre)(B) = 0,2 (P(A)(B) désigne la probabilité de B sachant A).\n\n1. Construis l'arbre pondéré complet de la situation.\n2. Calcule P(A)(B barre).\n3. Calcule P(A inter B).\n4. Calcule P(B) avec la formule des probabilités totales.",
+      "bareme": [
+        { "critere": "Arbre complet avec P(A barre) = 0,7 et les branches conditionnelles complémentaires (0,4 et 0,8)", "points": 7 },
+        { "critere": "P(A)(B barre) = 0,4 et P(A inter B) = 0,18", "points": 6 },
+        { "critere": "P(B) = 0,18 + 0,14 = 0,32", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Premier niveau : A (0,3) et A barre (1 − 0,3 = **0,7**). Deuxième niveau (probabilités conditionnelles) : après A, B (0,6) et B barre (**0,4**) ; après A barre, B (0,2) et B barre (**0,8**). Les branches issues d'un même nœud ont une somme égale à 1.\n2. P(A)(B barre) = 1 − 0,6 = **0,4**.\n3. P(A inter B) = P(A) × P(A)(B) = 0,3 × 0,6 = **0,18** (produit des branches du chemin).\n4. P(B) = P(A) × P(A)(B) + P(A barre) × P(A barre)(B) = 0,18 + 0,7 × 0,2 = 0,18 + 0,14 = **0,32**."
+    },
+    {
+      "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+      "difficulte": 2,
+      "titre": "Un test positif, et alors ?",
+      "consigne": "Lis la situation, construis un arbre et justifie chaque calcul. Donne les résultats à 0,001 près.",
+      "enonce": "**Situation.** Dans une population, **2 %** des personnes sont atteintes d'une maladie. Un test de dépistage donne :\n- un résultat positif pour **95 %** des personnes malades ;\n- un résultat positif pour **4 %** des personnes non malades.\n\nOn choisit une personne au hasard. On note M l'événement « la personne est malade » et T l'événement « le test est positif ».\n\n1. Construis l'arbre pondéré de la situation.\n2. Calcule P(M inter T).\n3. Calcule P(T).\n4. La personne a un test positif. Quelle est la probabilité qu'elle soit malade ? Commente ce résultat.",
+      "bareme": [
+        { "critere": "Arbre juste : 0,02 / 0,98 puis branches conditionnelles 0,95 / 0,05 et 0,04 / 0,96", "points": 5 },
+        { "critere": "P(M inter T) = 0,019", "points": 4 },
+        { "critere": "P(T) = 0,0582 par les probabilités totales", "points": 5 },
+        { "critere": "P(T)(M) = 0,019 / 0,0582 ≈ 0,326 et commentaire sur les faux positifs", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Premier niveau : M (0,02) et M barre (0,98). Après M : T (0,95), T barre (0,05). Après M barre : T (0,04), T barre (0,96).\n2. P(M inter T) = P(M) × P(M)(T) = 0,02 × 0,95 = **0,019**.\n3. P(T) = P(M) × P(M)(T) + P(M barre) × P(M barre)(T) = 0,019 + 0,98 × 0,04 = 0,019 + 0,0392 = **0,0582**.\n4. On cherche P(T)(M) = P(M inter T)/P(T) = 0,019/0,0582 ≈ **0,326**.\nCommentaire : alors que le test détecte 95 % des malades, une personne positive n'a qu'environ **une chance sur trois** d'être malade. La maladie est rare : les 4 % de faux positifs parmi les 98 % de non-malades (0,0392) sont plus nombreux que les vrais positifs (0,019). Il ne faut pas confondre P(M)(T) et P(T)(M)."
+    },
+    {
+      "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+      "difficulte": 3,
+      "titre": "Cantine et sport au lycée",
+      "consigne": "Justifie chaque réponse par un calcul et une règle du cours. Résultats exacts ou à 0,001 près.",
+      "enonce": "**Situation.** Dans un lycée, **60 %** des élèves sont demi-pensionnaires (événement D). Parmi les demi-pensionnaires, **50 %** pratiquent un sport en club (événement S) ; parmi les autres élèves, **30 %** pratiquent un sport en club.\n\n1. Construis l'arbre pondéré et calcule P(D inter S) puis P(S).\n2. Les événements D et S sont-ils indépendants ? Justifie par un calcul.\n3. Théo affirme : « D et S ne sont pas indépendants, donc ils sont incompatibles. » Réfute son affirmation.\n4. On interroge un élève qui pratique un sport en club. Quelle est la probabilité qu'il soit demi-pensionnaire ?\n5. On interroge deux élèves choisis au hasard, de façon indépendante. Quelle est la probabilité que les deux pratiquent un sport en club ?",
+      "bareme": [
+        { "critere": "Arbre juste, P(D inter S) = 0,3 et P(S) = 0,42", "points": 5 },
+        { "critere": "Indépendance testée : 0,3 ≠ 0,6 × 0,42 = 0,252, donc non indépendants", "points": 4 },
+        { "critere": "Distinction indépendants / incompatibles : P(D inter S) ≠ 0", "points": 3 },
+        { "critere": "Inversion : P(S)(D) = 0,3/0,42 = 5/7 ≈ 0,714", "points": 5 },
+        { "critere": "Deux élèves indépendants : 0,42² = 0,1764", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Premier niveau : D (0,6), D barre (0,4). Après D : S (0,5), S barre (0,5). Après D barre : S (0,3), S barre (0,7).\nP(D inter S) = 0,6 × 0,5 = **0,3**. P(S) = 0,3 + 0,4 × 0,3 = 0,3 + 0,12 = **0,42**.\n2. P(D) × P(S) = 0,6 × 0,42 = 0,252 ≠ 0,3 = P(D inter S) : D et S **ne sont pas indépendants**. (Autre justification : P(D)(S) = 0,5 ≠ P(S) = 0,42 ; savoir qu'un élève est demi-pensionnaire change la probabilité qu'il fasse du sport.)\n3. Incompatibles signifierait qu'ils ne peuvent pas se réaliser ensemble : P(D inter S) = 0. Or P(D inter S) = 0,3 ≠ 0. D et S ne sont **ni indépendants ni incompatibles** : ce sont deux notions différentes, l'une ne découle pas de la négation de l'autre.\n4. P(S)(D) = P(D inter S)/P(S) = 0,3/0,42 = **5/7 ≈ 0,714**.\n5. Les deux choix étant indépendants, on multiplie : P = 0,42 × 0,42 = **0,1764**."
+    },
+    {
+      "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+      "difficulte": 1,
+      "titre": "Une loi à compléter",
+      "consigne": "Justifie chaque calcul par une formule du cours.",
+      "enonce": "Une variable aléatoire X a la loi suivante :\n\n| Valeur x(i) | −2 | 0 | 5 |\n| P(X = x(i)) | 0,5 | 0,3 | p |\n\n1. Détermine p.\n2. Calcule l'espérance E(X). Si X représente le gain algébrique (en euros) d'un joueur, comment qualifier ce jeu ?\n3. Calcule la variance V(X) puis l'écart type σ(X) (arrondi au centième).",
+      "bareme": [
+        { "critere": "p = 0,2 car la somme des probabilités vaut 1", "points": 5 },
+        { "critere": "E(X) = 0 et jeu qualifié d'équitable", "points": 7 },
+        { "critere": "V(X) = 7 et σ(X) = √7 ≈ 2,65", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La somme des probabilités vaut 1 : 0,5 + 0,3 + p = 1, donc **p = 0,2**.\n2. E(X) = (−2) × 0,5 + 0 × 0,3 + 5 × 0,2 = −1 + 0 + 1 = **0**. Espérance de gain nulle : le jeu est **équitable**.\n3. V(X) = somme des x(i)² × P(X = x(i)) − [E(X)]² = 4 × 0,5 + 0 × 0,3 + 25 × 0,2 − 0² = 2 + 0 + 5 = **7**. σ(X) = **√7 ≈ 2,65**."
+    },
+    {
+      "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+      "difficulte": 2,
+      "titre": "Le stand de la kermesse",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque calcul.",
+      "enonce": "**Situation.** À la kermesse du collège, Nadia tient un stand. Chaque partie coûte **2 €**. Le joueur lance un dé équilibré à six faces :\n- s'il obtient 6, il reçoit **10 €** ;\n- s'il obtient 4 ou 5, il reçoit **3 €** ;\n- sinon, il ne reçoit rien.\n\nOn note G le gain algébrique du joueur (ce qu'il reçoit moins sa mise).\n\n1. Donne les valeurs possibles de G et la loi de probabilité de G. Vérifie la somme des probabilités.\n2. Calcule E(G). Le jeu est-il favorable au joueur ou à Nadia ?\n3. Nadia veut rendre le jeu équitable en changeant seulement la somme x (en euros) reçue pour un 6. Quelle valeur doit-elle choisir ?",
+      "bareme": [
+        { "critere": "Valeurs 8, 1, −2 avec les probabilités 1/6, 2/6, 3/6 et somme égale à 1", "points": 6 },
+        { "critere": "E(G) = 2/3 ≈ 0,67 € et jeu favorable au joueur", "points": 6 },
+        { "critere": "Équation (x − 6)/6 = 0 posée et résolue : x = 6 €", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Avec un 6 : 10 − 2 = **8 €** ; avec 4 ou 5 : 3 − 2 = **1 €** ; avec 1, 2 ou 3 : **−2 €**.\nLoi : P(G = 8) = **1/6** ; P(G = 1) = **2/6** ; P(G = −2) = **3/6**. Somme : 1/6 + 2/6 + 3/6 = 1 ✓.\n2. E(G) = 8 × 1/6 + 1 × 2/6 + (−2) × 3/6 = (8 + 2 − 6)/6 = 4/6 = **2/3 ≈ 0,67 €**. L'espérance est positive : le jeu est **favorable au joueur** (en moyenne, Nadia perd environ 0,67 € par partie).\n3. Avec x € pour un 6, le gain vaut x − 2 : E(G) = [(x − 2) × 1 + 1 × 2 + (−2) × 3]/6 = (x − 2 + 2 − 6)/6 = (x − 6)/6. Le jeu est équitable si E(G) = 0, soit **x = 6 €**."
+    },
+    {
+      "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+      "difficulte": 3,
+      "titre": "Deux placements, même moyenne",
+      "consigne": "Justifie chaque calcul et appuie tes interprétations sur les notions du cours.",
+      "enonce": "**Situation.** Adam hésite entre deux jeux d'investissement virtuels. X et Y désignent le gain (en euros) obtenu pour une partie.\n\n| Valeur de X | −10 | 5 | 20 |\n| Probabilité | 0,2 | 0,5 | 0,3 |\n\n| Valeur de Y | 5 | 8 |\n| Probabilité | 0,5 | 0,5 |\n\n1. Calcule E(X) et E(Y). Que remarques-tu ?\n2. Calcule V(X), σ(X), V(Y) et σ(Y).\n3. Adam n'aime pas le risque. Quel jeu lui conseilles-tu ? Justifie avec l'indicateur adapté et explique pourquoi l'espérance ne suffit pas.\n4. Une offre spéciale transforme le gain X en Z = 2X + 3. Calcule E(Z), V(Z) et σ(Z) sans refaire de tableau.\n5. Adam joue 1 000 parties du jeu Y. Vers quelle valeur la moyenne de ses gains devrait-elle se rapprocher ? Quel résultat du cours l'affirme ?",
+      "bareme": [
+        { "critere": "E(X) = E(Y) = 6,5", "points": 3 },
+        { "critere": "V(X) = 110,25, σ(X) = 10,5 ; V(Y) = 2,25, σ(Y) = 1,5", "points": 6 },
+        { "critere": "Conseil du jeu Y justifié par l'écart type (même espérance, dispersion plus faible)", "points": 4 },
+        { "critere": "E(Z) = 16, V(Z) = 441, σ(Z) = 21 par les propriétés de aX + b", "points": 4 },
+        { "critere": "Moyenne proche de 6,5 € par la loi des grands nombres", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. E(X) = −10 × 0,2 + 5 × 0,5 + 20 × 0,3 = −2 + 2,5 + 6 = **6,5** ; E(Y) = 5 × 0,5 + 8 × 0,5 = **6,5**. Les deux jeux ont la **même espérance**.\n2. V(X) = 100 × 0,2 + 25 × 0,5 + 400 × 0,3 − 6,5² = 20 + 12,5 + 120 − 42,25 = **110,25**, σ(X) = √110,25 = **10,5**.\nV(Y) = 25 × 0,5 + 64 × 0,5 − 42,25 = 12,5 + 32 − 42,25 = **2,25**, σ(Y) = **1,5**.\n3. Conseil : le **jeu Y**. La même espérance ne dit rien du risque : l'écart type, exprimé en euros, mesure la dispersion des gains autour de 6,5. Celui de X (10,5 €) est sept fois celui de Y (1,5 €) : avec X, Adam peut perdre 10 € ; avec Y, il gagne toujours entre 5 et 8 €.\n4. E(2X + 3) = 2E(X) + 3 = 13 + 3 = **16** ; V(2X + 3) = 2² × V(X) = 4 × 110,25 = **441** (le 3 disparaît : une translation ne change pas la dispersion) ; σ(Z) = √441 = **21**.\n5. D'après la **loi des grands nombres**, sur un grand nombre de répétitions indépendantes, la moyenne des gains se rapproche de l'espérance : environ **6,5 €** par partie."
+    }
+  ]
+}

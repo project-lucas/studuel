@@ -1,0 +1,1305 @@
+{
+  "niveau": "1re",
+  "matiere": "spcl",
+  "sujets": [
+    {
+      "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+      "difficulte": 1,
+      "titre": "La pipette de Maëlys et les deux groupes",
+      "consigne": "Réponds à chaque question en justifiant. Donne les résultats avec leur unité.",
+      "enonce": "**Situation.** En TP, Maëlys prélève un volume de solution avec une pipette jaugée de 20,00 mL. Le fabricant indique une tolérance de ± 0,03 mL.\n\nDeux autres groupes mesurent la même concentration, dont la valeur de référence est 5,00 mmol·L⁻¹ :\n\n| Groupe | Mesures (mmol·L⁻¹) |\n|---|---|\n| A | 5,21 ; 5,22 ; 5,20 ; 5,21 |\n| B | 4,80 ; 5,25 ; 4,95 ; 5,10 |\n\n1. Définis la fidélité et la justesse d'une série de mesures.\n2. Pour chaque groupe, dis si la série est fidèle et si elle est juste. Justifie (tu peux calculer la moyenne de chaque série).\n3. Maëlys ne fait qu'une seule mesure. Calcule l'incertitude-type u(V) sur le volume prélevé, puis écris le résultat de la mesure.",
+      "bareme": [
+        {
+          "critere": "Définitions justes : fidélité = mesures proches entre elles ; justesse = moyenne proche de la référence",
+          "points": 6
+        },
+        {
+          "critere": "Groupe A fidèle mais pas juste, groupe B juste en moyenne mais peu fidèle, avec moyennes ou écarts cités",
+          "points": 8
+        },
+        {
+          "critere": "u(V) = 0,03/√3 ≈ 0,017 mL et résultat écrit avec valeur, incertitude et unité, arrondis cohérents",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une série est **fidèle** si les mesures répétées sont **proches les unes des autres** (faible dispersion, peu d'erreurs aléatoires). Elle est **juste** si sa **moyenne est proche de la valeur de référence** (pas de décalage, pas d'erreur systématique).\n\n2. **Groupe A** : moyenne = (5,21 + 5,22 + 5,20 + 5,21) / 4 = **5,21 mmol·L⁻¹**. Les valeurs ne s'écartent que de 0,02 au plus : la série est **fidèle**. Mais la moyenne est décalée de 0,21 par rapport à 5,00 : elle **n'est pas juste** (erreur systématique probable). Image de la cible : impacts groupés loin du centre.\n**Groupe B** : moyenne = 20,10 / 4 ≈ **5,03 mmol·L⁻¹**, très proche de 5,00 : la série est **juste en moyenne**. Mais les valeurs vont de 4,80 à 5,25 : elle est **peu fidèle** (grande dispersion). Impacts éparpillés autour du centre.\n\n3. Mesure unique avec une tolérance ± Δ (évaluation de type B) : u(V) = Δ / √3 = 0,03 / √3 ≈ **0,017 mL**.\nRésultat : **V = 20,000 mL avec u(V) = 0,017 mL** (ou, avec un seul chiffre significatif, V = 20,00 mL avec u(V) = 0,02 mL). La valeur est arrondie au même rang que l'incertitude."
+    },
+    {
+      "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+      "difficulte": 2,
+      "titre": "Six titrages pour un volume équivalent",
+      "consigne": "Réponds en détaillant tes calculs. Arrondis l'incertitude-type à un ou deux chiffres significatifs.",
+      "enonce": "**Situation.** Six binômes titrent la même solution et relèvent le volume à l'équivalence V_E (en mL) :\n\n| Binôme | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|\n| V_E (mL) | 12,4 | 12,6 | 12,5 | 12,7 | 12,3 | 12,5 |\n\nLa calculatrice donne l'écart-type de la série : s = 0,141 mL.\nLe professeur, qui connaît la concentration exacte, attend V_réf = 12,60 mL.\n\n1. Calcule la moyenne des six mesures.\n2. De quel type d'évaluation s'agit-il ? Calcule l'incertitude-type u sur la moyenne.\n3. Écris le résultat de la mesure de V_E.\n4. Le résultat est-il compatible avec la valeur attendue ? Justifie par un calcul.",
+      "bareme": [
+        {
+          "critere": "Moyenne juste : 12,50 mL",
+          "points": 4
+        },
+        {
+          "critere": "Évaluation de type A identifiée et u = s/√n ≈ 0,058 mL calculée",
+          "points": 6
+        },
+        {
+          "critere": "Résultat écrit : V_E = 12,50 mL avec u = 0,06 mL (ou 0,058 mL), unité présente",
+          "points": 3
+        },
+        {
+          "critere": "z = |12,50 − 12,60| / u ≈ 1,7, comparé à 2 : résultat compatible",
+          "points": 7
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Somme : 12,4 + 12,6 + 12,5 + 12,7 + 12,3 + 12,5 = 75,0 mL. Moyenne : 75,0 / 6 = **12,50 mL**.\n\n2. On exploite statistiquement une **série de mesures répétées** : c'est une **évaluation de type A**. L'incertitude-type sur la moyenne vaut u = s / √n = 0,141 / √6 = 0,141 / 2,449 ≈ **0,058 mL** (ou 0,06 mL avec un chiffre significatif).\n\n3. **V_E = 12,50 mL avec u(V_E) = 0,06 mL** (ou 12,500 mL avec u = 0,058 mL : la valeur est arrondie au rang de l'incertitude).\n\n4. On calcule l'écart en nombre d'incertitudes-types : z = |12,50 − 12,60| / 0,058 = 0,10 / 0,058 ≈ **1,7**.\nComme z ≤ 2, le résultat est **compatible** avec la valeur attendue : l'écart s'explique par la variabilité normale des mesures, il n'est pas nécessaire de chercher une erreur systématique."
+    },
+    {
+      "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+      "difficulte": 3,
+      "titre": "Masse volumique de l'eau : qui a raison ?",
+      "consigne": "Analyse les deux démarches. Chaque réponse doit être justifiée par un calcul ou par une notion du cours.",
+      "enonce": "**Situation.** Deux élèves mesurent la masse volumique ρ de l'eau distillée à 20 °C. Valeur de référence : ρ_réf = 0,998 g·mL⁻¹.\n\n**Inès** pèse cinq fois un volume prélevé avec la même pipette et obtient (en g·mL⁻¹) : 1,012 ; 1,010 ; 1,013 ; 1,011 ; 1,014. La calculatrice donne s ≈ 0,0016 g·mL⁻¹.\n\n**Tom** fait une seule mesure : ρ = 0,995 g·mL⁻¹. D'après les données des instruments, sa mesure est connue à ± 0,005 g·mL⁻¹ près.\n\n1. Calcule la moyenne d'Inès et l'incertitude-type sur cette moyenne. Précise le type d'évaluation.\n2. Calcule l'incertitude-type de Tom. Précise le type d'évaluation.\n3. Pour chaque élève, calcule z et conclus sur la compatibilité avec la référence.\n4. Qualifie la série d'Inès en termes de fidélité et de justesse. Pourquoi refaire encore dix mesures avec le même matériel ne corrigerait-il pas son résultat ?\n5. Propose deux sources d'erreur possibles pour Inès, en les classant (instrument, opérateur, méthode, conditions).",
+      "bareme": [
+        {
+          "critere": "Moyenne 1,012 g·mL⁻¹ et u = s/√5 ≈ 0,0007 g·mL⁻¹, type A",
+          "points": 4
+        },
+        {
+          "critere": "u = 0,005/√3 ≈ 0,003 g·mL⁻¹, type B",
+          "points": 3
+        },
+        {
+          "critere": "z ≈ 20 pour Inès (incompatible), z ≈ 1 pour Tom (compatible), comparaison à 2",
+          "points": 5
+        },
+        {
+          "critere": "Inès fidèle mais pas juste ; répéter réduit l'effet des erreurs aléatoires mais pas une erreur systématique",
+          "points": 5
+        },
+        {
+          "critere": "Deux sources d'erreur systématique plausibles, correctement classées",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Moyenne d'Inès : (1,012 + 1,010 + 1,013 + 1,011 + 1,014) / 5 = 5,060 / 5 = **1,012 g·mL⁻¹**. Série de mesures répétées : **type A**. u = s / √n = 0,0016 / √5 = 0,0016 / 2,236 ≈ **0,0007 g·mL⁻¹**.\nRésultat : ρ = 1,0120 g·mL⁻¹ avec u = 0,0007 g·mL⁻¹.\n\n2. Mesure unique, tolérance ± Δ : **type B**. u = Δ / √3 = 0,005 / 1,732 ≈ **0,003 g·mL⁻¹**.\n\n3. Inès : z = |1,012 − 0,998| / 0,0007 = 0,014 / 0,0007 ≈ **20** : z > 2, résultat **incompatible** avec la référence.\nTom : z = |0,995 − 0,998| / 0,003 = 0,003 / 0,003 = **1** (≈ 1,0) : z ≤ 2, résultat **compatible**.\n\n4. La série d'Inès est **fidèle** (valeurs très proches, s faible) mais **pas juste** (moyenne décalée de 0,014 par rapport à la référence) : c'est la cible aux impacts groupés loin du centre. Ce décalage traduit une **erreur systématique** : elle affecte toutes les mesures de la même façon. Répéter les mesures réduit l'incertitude liée aux erreurs aléatoires (u diminue avec √n), mais **ne détecte ni ne corrige** une erreur systématique : la moyenne resterait décalée.\n\n5. Exemples attendus (deux suffisent) :\n- **instrument** : balance mal tarée ou mal étalonnée, pipette dont le volume réel diffère du volume annoncé ;\n- **opérateur** : lecture du ménisque toujours faite au-dessus du trait de jauge ;\n- **méthode** : récipient de pesée humide ou non taré avec le bon contenant ;\n- **conditions** : eau à une température différente de 20 °C.\nConclusion : la mesure de Tom est moins précise mais compatible ; celle d'Inès est précise mais fausse. Il faut chercher et supprimer la cause du décalage (par exemple vérifier la balance avec une masse étalon)."
+    },
+    {
+      "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+      "difficulte": 1,
+      "titre": "Lire les pictogrammes du laboratoire",
+      "consigne": "Réponds aux questions à l'aide de tes connaissances du règlement CLP.",
+      "enonce": "**Situation.** Nathan range la réserve du laboratoire. Il relève cinq pictogrammes sur les flacons :\n\n- a) une flamme ;\n- b) une flamme au-dessus d'un cercle ;\n- c) une main et une surface rongées par un liquide ;\n- d) une silhouette avec une étoile sur la poitrine ;\n- e) un arbre et un poisson.\n\n1. Donne la signification de chacun des cinq pictogrammes.\n2. Quelle est la différence entre une phrase H et une phrase P ? Illustre avec un exemple de chaque.\n3. Entre les mentions « Danger » et « Attention », laquelle signale les dangers les plus graves ?\n4. Cite deux règles de base de sécurité à respecter avant de manipuler.",
+      "bareme": [
+        {
+          "critere": "Les cinq pictogrammes correctement interprétés",
+          "points": 10
+        },
+        {
+          "critere": "H = nature du danger, P = conseil de prudence, avec un exemple juste de chaque",
+          "points": 6
+        },
+        {
+          "critere": "« Danger » identifiée comme la plus grave et deux règles de base correctes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) Flamme : produit **inflammable** (ex. éthanol, acétone).\nb) Flamme sur un cercle : produit **comburant** (ex. dioxygène, permanganate).\nc) Corrosion : produit **corrosif** (ex. soude, acide chlorhydrique concentré).\nd) Silhouette avec étoile : **danger grave pour la santé** (cancérogène, mutagène… ex. dichlorométhane).\ne) Arbre et poisson : **dangereux pour le milieu aquatique** (ex. sulfate de cuivre).\n\n2. Une **phrase H** (*hazard*, mention de danger) décrit la **nature du danger** : H225 « liquide et vapeurs très inflammables », ou H314 « provoque des brûlures de la peau et des lésions oculaires graves ». Une **phrase P** (*precaution*, conseil de prudence) dit **quoi faire** : P280 « porter des gants de protection, un équipement de protection des yeux », ou P210 « tenir à l'écart de la chaleur et des flammes ».\n\n3. La mention **« Danger »** signale les dangers les plus graves ; « Attention » est moins grave.\n\n4. Deux règles parmi : blouse en coton fermée, lunettes de protection, gants adaptés, cheveux attachés, ne jamais manger ni boire, ne jamais pipeter à la bouche, travailler sous hotte pour les produits volatils toxiques ou inflammables, repérer le rince-œil, la douche et l'extincteur, lire la FDS avant la manipulation."
+    },
+    {
+      "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+      "difficulte": 2,
+      "titre": "L'étiquette de l'acétone",
+      "consigne": "Exploite l'étiquette pour répondre. Chaque mesure de protection doit être reliée à une information de l'étiquette.",
+      "enonce": "**Document – Étiquette d'un flacon d'acétone**\n\n> Pictogrammes : flamme ; point d'exclamation.\n> Mention d'avertissement : **Danger**.\n> H225 : liquide et vapeurs très inflammables.\n> H319 : provoque une sévère irritation des yeux.\n> H336 : peut provoquer somnolence ou vertiges.\n> P210 : tenir à l'écart de la chaleur et des flammes.\n\n**Situation.** Chloé doit utiliser 50 mL d'acétone pour nettoyer de la verrerie. Sur la paillasse voisine, un camarade chauffe de l'eau avec un bec Bunsen.\n\n1. Identifie les dangers de l'acétone à partir des pictogrammes et des phrases H.\n2. Indique les équipements de protection individuelle nécessaires et justifie-les.\n3. Où Chloé doit-elle manipuler ? Justifie à l'aide de deux phrases de l'étiquette.\n4. Où ranger le flacon après usage, et à côté de quelle famille de produits ne faut-il surtout pas le placer ?\n5. Quel document Chloé devrait-elle consulter pour savoir quoi faire en cas de projection dans les yeux, et à quel moment ?",
+      "bareme": [
+        {
+          "critere": "Dangers identifiés : très inflammable, irritant pour les yeux, somnolence ou vertiges (vapeurs)",
+          "points": 5
+        },
+        {
+          "critere": "Lunettes, gants, blouse justifiés par l'étiquette (H319, contact)",
+          "points": 4
+        },
+        {
+          "critere": "Manipulation sous hotte et loin du bec Bunsen, justifiée par H225/P210 et H336",
+          "points": 5
+        },
+        {
+          "critere": "Stockage en armoire ventilée des inflammables, loin des oxydants (comburants)",
+          "points": 3
+        },
+        {
+          "critere": "FDS citée (rubrique premiers secours), lue avant la manipulation",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La **flamme** et H225 : l'acétone est un liquide **très inflammable**, ses vapeurs aussi. Le **point d'exclamation**, H319 et H336 : elle est **irritante pour les yeux** et ses **vapeurs** peuvent provoquer **somnolence ou vertiges**. La mention « Danger » indique un niveau de danger élevé.\n\n2. **Lunettes de protection** (H319 : irritation sévère des yeux), **gants** adaptés et **blouse en coton fermée** (éviter tout contact avec la peau et les vêtements), cheveux attachés.\n\n3. Chloé doit manipuler **sous la hotte** : les vapeurs peuvent provoquer somnolence ou vertiges (H336) et elles sont très inflammables (H225). Elle doit être **loin de toute flamme** : le bec Bunsen voisin doit être éteint ou éloigné, conformément à P210 (« tenir à l'écart de la chaleur et des flammes »).\n\n4. On range l'acétone dans l'**armoire ventilée des produits inflammables**, avec des produits compatibles. Il ne faut **jamais** la placer à côté d'un **oxydant** (produit comburant, comme le permanganate) : un oxydant à côté d'un inflammable est interdit.\n\n5. La **fiche de données de sécurité (FDS)**, fournie par le fabricant : sa rubrique **premiers secours** indique la conduite à tenir. On la lit **avant** la manipulation, pas après l'accident (en cas de projection, on utilise le rince-œil)."
+    },
+    {
+      "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+      "difficulte": 3,
+      "titre": "Préparer une séance de TP en sécurité",
+      "consigne": "Tu es chargé de la sécurité d'une séance. Analyse les étiquettes et rédige des réponses argumentées.",
+      "enonce": "**Situation.** Pour une séance de TP, le technicien sort trois flacons :\n\n| Produit | Pictogrammes | Mention | Phrases H |\n|---|---|---|---|\n| Éthanol | flamme, point d'exclamation | Danger | H225, H319 |\n| Permanganate de potassium (solide) | flamme sur un cercle, point d'exclamation, arbre et poisson | Danger | H272 (peut aggraver un incendie ; comburant), H302 (nocif en cas d'ingestion), H410 (très toxique pour les organismes aquatiques) |\n| Acide chlorhydrique à 37 % | corrosion, point d'exclamation | Danger | H290, H314, H335 |\n\nPour gagner de la place, un élève propose de ranger les trois flacons sur la même étagère, puis de nettoyer une flaque d'acide chlorhydrique avec de l'eau de Javel. En fin de séance, un autre veut vider les restes de solution de permanganate dans l'évier.\n\n1. Pour chaque produit, indique la nature du danger principal.\n2. La proposition de rangement est-elle acceptable ? Explique quels produits doivent être séparés et pourquoi.\n3. Pourquoi l'idée d'utiliser l'eau de Javel sur la flaque d'acide est-elle dangereuse ?\n4. Faut-il vider la solution de permanganate dans l'évier ? Justifie avec l'étiquette.\n5. Rédige la liste des protections et des conditions de travail pour manipuler l'acide chlorhydrique à 37 %, en justifiant chaque point.",
+      "bareme": [
+        {
+          "critere": "Dangers principaux : éthanol inflammable, permanganate comburant et dangereux pour le milieu aquatique, acide corrosif",
+          "points": 4
+        },
+        {
+          "critere": "Rangement refusé : oxydant séparé de l'inflammable ; acide stocké avec les acides, loin des bases et de l'eau de Javel",
+          "points": 5
+        },
+        {
+          "critere": "Acide + eau de Javel : dégagement de dichlore toxique",
+          "points": 3
+        },
+        {
+          "critere": "Pas d'évier : pictogramme environnement et H410, collecte comme déchet",
+          "points": 3
+        },
+        {
+          "critere": "Protections et hotte justifiées par H314 et H335 (lunettes, gants, blouse, hotte)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Éthanol** : liquide **inflammable** (flamme, H225), irritant pour les yeux (H319).\n**Permanganate de potassium** : **comburant** (flamme sur un cercle, H272 : il peut aggraver un incendie), nocif (H302) et **dangereux pour le milieu aquatique** (arbre et poisson, H410).\n**Acide chlorhydrique à 37 %** : **corrosif** (H314 : brûlures de la peau et lésions oculaires graves), irritant pour les voies respiratoires (H335).\n\n2. **Non.** On stocke par **familles compatibles** : jamais un **oxydant à côté d'un inflammable**. Le permanganate (comburant) et l'éthanol (inflammable) doivent être séparés : en cas de fuite ou de feu, le comburant aggraverait l'incendie. L'éthanol va dans l'armoire ventilée des inflammables. L'acide chlorhydrique se range avec les **acides**, loin des bases et de l'eau de Javel.\n\n3. Mélanger de l'acide chlorhydrique et de l'**eau de Javel** libère du **dichlore**, un gaz **toxique**. Il ne faut jamais les mettre en contact (une flaque d'acide se traite selon les indications de la FDS, rubrique mesures en cas de dispersion).\n\n4. **Non.** Le pictogramme arbre et poisson et la phrase H410 indiquent que le permanganate est très toxique pour les organismes aquatiques : l'évier mène aux eaux usées. La solution est récupérée comme **déchet** dans un bidon adapté.\n\n5. Pour l'acide chlorhydrique à 37 % :\n- **lunettes de protection** et **gants** adaptés, **blouse en coton fermée** : H314, le produit brûle la peau et les yeux (conseil de type P280) ;\n- manipulation **sous la hotte** : H335, les vapeurs irritent les voies respiratoires ;\n- ne jamais pipeter à la bouche, cheveux attachés ;\n- repérer le **rince-œil** et la **douche** avant de commencer ;\n- avoir lu la **FDS** avant (premiers secours, conduite en cas de dispersion) ;\n- tenir le flacon loin des bases et de l'eau de Javel."
+    },
+    {
+      "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+      "difficulte": 1,
+      "titre": "Reconnaître les principes de la chimie verte",
+      "consigne": "Réponds en citant le principe de la chimie verte concerné et en justifiant brièvement.",
+      "enonce": "**Situation.** Une entreprise modifie cinq de ses procédés :\n\n- a) elle remplace le dichlorométhane, solvant dangereux, par de l'eau ;\n- b) elle fabrique un plastique à partir d'amidon de maïs au lieu du pétrole ;\n- c) elle utilise un catalyseur au lieu d'un réactif en large excès ;\n- d) elle mène une réaction à 25 °C au lieu de 150 °C ;\n- e) elle conçoit un emballage qui se décompose en compost au lieu de persister des années.\n\n1. Associe chaque modification à un principe de la chimie verte.\n2. Quelle est l'idée du premier principe de la chimie verte ?\n3. Un industriel affirme : « Mon procédé a un rendement de 95 %, il est donc vert. » Explique pourquoi ce raisonnement est insuffisant.",
+      "bareme": [
+        {
+          "critere": "Les cinq modifications associées au bon principe (solvants, renouvelables, catalyse, énergie, dégradabilité)",
+          "points": 10
+        },
+        {
+          "critere": "Premier principe : prévenir les déchets plutôt que les traiter",
+          "points": 4
+        },
+        {
+          "critere": "Le rendement ne suffit pas : économie d'atomes, toxicité des solvants et énergie comptent aussi",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) **Solvants et auxiliaires** : éviter les solvants dangereux ou choisir les plus sûrs, comme l'eau.\nb) **Matières premières renouvelables** : la biomasse (maïs) plutôt que le pétrole.\nc) **Catalyse** : un catalyseur n'est pas consommé, il remplace un réactif en excès et réduit les déchets.\nd) **Énergie** : travailler à température et pression ambiantes économise l'énergie.\ne) **Dégradabilité** : concevoir des produits qui se décomposent sans persister dans l'environnement.\n\n2. **Prévenir les déchets** : mieux vaut ne pas produire de déchet que d'avoir à le traiter ensuite.\n\n3. Le rendement ne dit que la part du produit maximal effectivement obtenue. Un procédé à 95 % de rendement peut rester très polluant : il peut avoir une faible **économie d'atomes** (beaucoup d'atomes des réactifs partent en sous-produits), utiliser des **solvants toxiques**, consommer beaucoup d'**énergie**. Un procédé se juge aussi sur ses impacts environnemental, économique et social."
+    },
+    {
+      "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+      "difficulte": 2,
+      "titre": "L'économie d'atomes de l'arôme de banane",
+      "consigne": "Détaille tes calculs. Donne les pourcentages arrondis à l'unité.",
+      "enonce": "**Situation.** L'acétate d'isoamyle (arôme de banane) est synthétisé selon l'équation :\n\nalcool isoamylique + acide éthanoïque → acétate d'isoamyle + eau\n\n**Données** (masses molaires en g·mol⁻¹) : alcool isoamylique 88 ; acide éthanoïque 60 ; acétate d'isoamyle 130 ; eau 18 ; éthène 28.\n\n1. Calcule l'économie d'atomes de cette synthèse.\n2. Quels atomes sont « perdus » ? Ce sous-produit est-il gênant pour l'environnement ?\n3. L'éthanol (46 g·mol⁻¹) peut être fabriqué par addition d'eau sur l'éthène : éthène + eau → éthanol. Calcule l'économie d'atomes de cette réaction et commente.\n4. Le protocole de la synthèse de l'ester utilise du dichlorométhane pour l'extraction. Propose une amélioration et nomme le principe concerné.",
+      "bareme": [
+        {
+          "critere": "Économie d'atomes de l'estérification : 130 / 148 ≈ 88 %",
+          "points": 6
+        },
+        {
+          "critere": "Sous-produit identifié : l'eau, sans danger",
+          "points": 4
+        },
+        {
+          "critere": "Addition : 46 / 46 = 100 %, justifiée par le fait que tous les atomes se retrouvent dans le produit",
+          "points": 6
+        },
+        {
+          "critere": "Remplacement du dichlorométhane par un solvant plus sûr, principe des solvants cité",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Économie d'atomes = M(produit voulu) / somme des M des réactifs = 130 / (88 + 60) = 130 / 148 ≈ 0,878, soit **environ 88 %**.\n\n2. Les atomes perdus forment le sous-produit, l'**eau** (18 g·mol⁻¹ ; on vérifie : 148 − 130 = 18). L'eau n'est **ni toxique ni polluante** : cette perte est peu gênante. C'est une réaction économe en atomes même si elle n'atteint pas 100 %.\n\n3. Somme des réactifs : 28 + 18 = 46 g·mol⁻¹. Économie d'atomes = 46 / 46 = **100 %**. C'est une **addition** : tous les atomes des réactifs se retrouvent dans le produit, il n'y a aucun sous-produit.\n\n4. Remplacer le **dichlorométhane** (danger grave pour la santé) par un solvant plus sûr, ou supprimer cette étape si possible (par exemple séparer l'ester par décantation après relargage à l'eau salée). Principe : **solvants et auxiliaires** (les éviter ou choisir les plus sûrs) ; on peut aussi citer « réduire les dangers »."
+    },
+    {
+      "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+      "difficulte": 3,
+      "titre": "Trois chemins vers l'éthanol",
+      "consigne": "Exploite le document pour comparer les procédés. Tes calculs et ton argumentation doivent s'appuyer sur les principes de la chimie verte et sur le triple impact.",
+      "enonce": "**Document – Trois voies de fabrication de l'éthanol** (masses molaires en g·mol⁻¹ : bromoéthane 109 ; hydroxyde de sodium 40 ; éthanol 46 ; bromure de sodium 103 ; éthène 28 ; eau 18 ; glucose 180 ; dioxyde de carbone 44)\n\n| Voie | Équation | Conditions |\n|---|---|---|\n| A | bromoéthane + hydroxyde de sodium → éthanol + bromure de sodium | 80 °C, solvant organique, réactifs issus du pétrole |\n| B | éthène + eau → éthanol | environ 300 °C et 60 à 70 bar, catalyseur acide ; éthène issu du pétrole |\n| C | glucose → 2 éthanol + 2 dioxyde de carbone | fermentation par des levures, vers 30 °C, dans l'eau ; glucose issu de betterave ou de maïs |\n\n1. Calcule l'économie d'atomes des voies A, B et C (pour C, tiens compte des deux molécules d'éthanol).\n2. Quel type de réaction est la voie B ? Relie-le à ton résultat.\n3. Pour chaque voie, cite un avantage et un inconvénient au regard des principes de la chimie verte.\n4. Un industriel doit choisir une voie. Rédige un paragraphe argumenté qui compare au moins deux voies sur les trois plans (environnemental, économique, social) et conclut.",
+      "bareme": [
+        {
+          "critere": "Économies d'atomes justes : A ≈ 31 %, B = 100 %, C ≈ 51 %",
+          "points": 6
+        },
+        {
+          "critere": "Voie B reconnue comme une addition, ce qui explique les 100 %",
+          "points": 2
+        },
+        {
+          "critere": "Un avantage et un inconvénient pertinents par voie, reliés à un principe",
+          "points": 6
+        },
+        {
+          "critere": "Paragraphe comparant au moins deux voies sur les trois plans, avec une conclusion nuancée",
+          "points": 6
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Voie A** : 46 / (109 + 40) = 46 / 149 ≈ **31 %**.\n**Voie B** : 46 / (28 + 18) = 46 / 46 = **100 %**.\n**Voie C** : produit voulu = 2 éthanol = 2 × 46 = 92 g·mol⁻¹ ; 92 / 180 ≈ **51 %** (le reste part en CO₂ : 2 × 44 = 88 ; 92 + 88 = 180).\n\n2. La voie B est une **addition** : deux molécules s'unissent, la double liaison de l'éthène devient simple. Tous les atomes des réactifs se retrouvent dans le produit, d'où **100 %**.\n\n3. Exemples attendus :\n- **A** : avantage, température modérée (80 °C). Inconvénients : économie d'atomes faible (près de 70 % de la masse des réactifs finit en bromure de sodium), solvant organique, réactifs issus du pétrole.\n- **B** : avantage, économie d'atomes maximale, pas de sous-produit ; utilisation d'un catalyseur. Inconvénients : forte consommation d'**énergie** (300 °C, 60 à 70 bar), matière première **fossile**, risques liés aux hautes pressions.\n- **C** : avantages, matière première **renouvelable** (biomasse), réaction à température proche de l'ambiante (économie d'énergie), dans l'eau. Inconvénient : économie d'atomes moyenne (51 %), rejet de CO₂ ; utilise des terres agricoles.\n\n4. Exemple de paragraphe : sur le plan **environnemental**, la voie A est la moins satisfaisante : faible économie d'atomes, solvant organique, pétrole. La voie B ne produit aucun déchet mais consomme beaucoup d'énergie et dépend du pétrole ; la voie C utilise une ressource renouvelable, de l'eau et peu d'énergie, mais rejette du CO₂. Sur le plan **économique**, B demande des installations coûteuses (haute pression, chauffage) mais aucun traitement de sous-produit ; C demande peu d'énergie mais dépend du prix des récoltes ; A paie des réactifs perdus et le traitement du bromure de sodium. Sur le plan **social**, B expose les salariés aux risques des hautes pressions ; C crée des emplois agricoles. **Conclusion** : aucune voie n'est parfaite ; A est à écarter ; le choix entre B et C dépend du critère prioritaire (économie d'atomes et absence de déchet pour B, ressource renouvelable et énergie pour C). Toute conclusion argumentée est acceptée si elle ne se fonde pas sur un seul critère."
+    },
+    {
+      "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+      "difficulte": 1,
+      "titre": "Le montage à reflux",
+      "consigne": "Réponds en phrases courtes et précises.",
+      "enonce": "**Situation.** Pour synthétiser un ester, Samir réalise un chauffage à reflux. Son montage comporte : un ballon contenant les réactifs et quelques grains de pierre ponce, un chauffe-ballon posé sur un support élévateur, et un réfrigérant à boules vertical relié au robinet.\n\n1. Quelles sont les trois étapes d'une synthèse organique, avant l'analyse du produit ?\n2. Pourquoi chauffe-t-on le mélange ? Pourquoi ne chauffe-t-on pas simplement dans un ballon ouvert ?\n3. Quel est le rôle du réfrigérant ? Par où l'eau doit-elle entrer ?\n4. Donne le rôle de la pierre ponce et celui du support élévateur.",
+      "bareme": [
+        {
+          "critere": "Transformation, isolement, purification cités dans l'ordre",
+          "points": 4
+        },
+        {
+          "critere": "Chauffer accélère la réaction ; sans reflux, les espèces volatiles s'échapperaient",
+          "points": 6
+        },
+        {
+          "critere": "Réfrigérant : condense les vapeurs qui retombent dans le ballon ; eau entrant par le bas",
+          "points": 6
+        },
+        {
+          "critere": "Pierre ponce : régulariser l'ébullition ; support élévateur : retirer vite le chauffage",
+          "points": 4
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Transformation** (on fait réagir), **isolement** (on sépare le produit du milieu réactionnel), **purification** (on élimine les impuretés restantes). L'analyse vient ensuite.\n\n2. Chauffer **accélère la réaction**. Mais dans un ballon ouvert, les espèces **volatiles** (réactifs, produit, solvant) s'échapperaient sous forme de vapeur : on perdrait de la matière.\n\n3. Dans le **réfrigérant**, les vapeurs se **condensent** et **retombent** dans le ballon : on peut chauffer longtemps sans perte de matière. L'eau entre **par le bas** et sort par le haut.\n\n4. La **pierre ponce** régularise l'ébullition. Le **support élévateur** permet de **retirer rapidement** le chauffe-ballon (en cas d'emballement ou pour arrêter le chauffage)."
+    },
+    {
+      "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+      "difficulte": 2,
+      "titre": "Choisir le bon solvant extracteur",
+      "consigne": "Exploite le tableau de données et justifie chacun de tes choix.",
+      "enonce": "**Situation.** Julie doit extraire le limonène (molécule odorante) d'un mélange aqueux, à l'aide d'une ampoule à décanter.\n\n**Données**\n\n| Espèce | Densité | Miscibilité avec l'eau | Solubilité du limonène | Pictogrammes |\n|---|---|---|---|---|\n| Eau | 1,00 | — | très faible | aucun |\n| Éthanol | 0,79 | miscible | très grande | flamme, point d'exclamation |\n| Cyclohexane | 0,78 | non miscible | très grande | flamme, point d'exclamation, arbre et poisson |\n| Dichlorométhane | 1,33 | non miscible | très grande | point d'exclamation, silhouette avec étoile |\n\n1. Rappelle les trois qualités d'un bon solvant extracteur.\n2. Pourquoi l'éthanol ne convient-il pas ?\n3. Entre le cyclohexane et le dichlorométhane, lequel Julie doit-elle choisir ? Justifie.\n4. Avec le solvant choisi, la phase contenant le limonène sera-t-elle en haut ou en bas de l'ampoule ? Justifie.\n5. Pourquoi faut-il dégazer régulièrement l'ampoule pendant l'agitation ?",
+      "bareme": [
+        {
+          "critere": "Trois qualités : non miscible, dissout mieux l'espèce, peu dangereux (et facile à éliminer)",
+          "points": 5
+        },
+        {
+          "critere": "Éthanol rejeté car miscible à l'eau : pas de deux phases",
+          "points": 4
+        },
+        {
+          "critere": "Cyclohexane choisi : danger moindre que le dichlorométhane (danger grave pour la santé)",
+          "points": 5
+        },
+        {
+          "critere": "Phase organique en haut car densité 0,78 < 1,00",
+          "points": 4
+        },
+        {
+          "critere": "Dégazage : évacuer la surpression des vapeurs",
+          "points": 2
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Un bon solvant extracteur doit : **ne pas être miscible** avec le premier solvant (ici l'eau) ; **mieux dissoudre** l'espèce à extraire ; être **peu dangereux** et, si possible, facile à éliminer (volatil).\n\n2. L'éthanol est **miscible** avec l'eau : il ne formerait pas deux phases, on ne pourrait pas séparer par décantation.\n\n3. Les deux sont non miscibles et dissolvent très bien le limonène. Le **dichlorométhane** porte la silhouette avec étoile : **danger grave pour la santé** (cancérogène, mutagène…). Le **cyclohexane** est inflammable, irritant et dangereux pour le milieu aquatique, mais c'est le **moins dangereux pour l'opérateur** : Julie choisit le **cyclohexane** (en travaillant loin de toute flamme, sous hotte, et en récupérant les déchets).\n\n4. La phase la plus **dense** est en bas. Le cyclohexane a une densité de 0,78, inférieure à celle de l'eau (1,00) : la phase organique, qui contient le limonène, est **en haut**.\n\n5. L'agitation fait passer des vapeurs de solvant dans l'ampoule fermée : la pression augmente. On **dégaze** pour évacuer cette **surpression** et éviter que le bouchon saute."
+    },
+    {
+      "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+      "difficulte": 3,
+      "titre": "Synthèse de l'arôme d'ananas",
+      "consigne": "Analyse le protocole étape par étape. Chaque réponse doit être justifiée par une donnée ou une notion du cours.",
+      "enonce": "**Protocole – Synthèse du butanoate d'éthyle (arôme d'ananas)**\n\n1. Dans un ballon de 100 mL, introduire 20 mL d'acide butanoïque, 25 mL d'éthanol (en excès), 1 mL d'acide sulfurique concentré et quelques grains de pierre ponce. Chauffer à reflux 30 minutes.\n2. Refroidir, verser le mélange dans une ampoule à décanter contenant 50 mL d'eau salée. Agiter, décanter, éliminer la phase aqueuse.\n3. Laver la phase organique avec une solution d'hydrogénocarbonate de sodium, en dégazant souvent. Décanter.\n4. Sécher la phase organique sur sulfate de magnésium anhydre, filtrer.\n5. Distiller.\n\n**Données**\n\n| Espèce | Densité | Température d'ébullition | Solubilité dans l'eau salée |\n|---|---|---|---|\n| Butanoate d'éthyle | 0,88 | 121 °C | très faible |\n| Éthanol | 0,79 | 78 °C | grande |\n| Acide butanoïque | 0,96 | 164 °C | grande |\n| Eau salée | 1,2 | — | — |\n\n1. Classe les étapes 1 à 5 en transformation, isolement et purification.\n2. Quel est le rôle de l'acide sulfurique ? Justifie le choix d'un ballon de 100 mL et le matériel pour mesurer les 25 mL d'éthanol.\n3. Étape 2 : pourquoi utiliser de l'eau salée plutôt que de l'eau pure ? Dans quelle phase se trouve l'ester ?\n4. Étape 3 : quelle espèce le lavage élimine-t-il ? Pourquoi faut-il dégazer ?\n5. Étape 5 : la distillation simple est-elle adaptée pour séparer l'ester de l'éthanol restant ? Quelle espèce est recueillie en premier ?",
+      "bareme": [
+        {
+          "critere": "Étapes classées : 1 transformation ; 2 isolement ; 3, 4 et 5 purification",
+          "points": 3
+        },
+        {
+          "critere": "Catalyseur ; ballon rempli au plus à moitié (environ 46 mL) ; éprouvette pour un réactif en excès",
+          "points": 4
+        },
+        {
+          "critere": "Relargage : le sel diminue la solubilité de l'ester ; ester dans la phase du haut (0,88 < 1,2)",
+          "points": 5
+        },
+        {
+          "critere": "Lavage : élimine l'acide restant ; dégazage à cause du CO₂ formé",
+          "points": 4
+        },
+        {
+          "critere": "Distillation adaptée (121 °C et 78 °C très différents) ; éthanol recueilli en premier",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Étape 1 : **transformation** (chauffage à reflux). Étape 2 : **isolement** (extraction, décantation). Étapes 3, 4 et 5 : **purification** (lavage, séchage, distillation).\n\n2. L'acide sulfurique est un **catalyseur** : il accélère la réaction sans être consommé. Le volume total est d'environ 20 + 25 + 1 = 46 mL : un ballon de **100 mL** est **rempli au plus à moitié**, comme le veut la règle. L'éthanol est en **excès** : son volume n'a pas besoin d'être précis, on le mesure à l'**éprouvette**.\n\n3. Le sel **diminue la solubilité de l'ester dans l'eau** : c'est le **relargage**, qui améliore la séparation. L'ester a une densité de 0,88, inférieure à celle de l'eau salée (1,2) : il est dans la **phase du haut** (phase organique). L'éthanol et l'acide restants, solubles dans l'eau salée, passent en grande partie dans la phase aqueuse.\n\n4. La solution d'hydrogénocarbonate de sodium élimine l'**acide restant** (acide butanoïque et acide sulfurique). Cette réaction produit du **dioxyde de carbone** gazeux : la pression monte dans l'ampoule, il faut **dégazer** souvent.\n\n5. **Oui** : la distillation simple sépare des liquides de températures d'ébullition **très différentes** ; ici 78 °C pour l'éthanol et 121 °C pour l'ester. Le plus **volatil**, l'**éthanol**, se vaporise, se condense et est recueilli **en premier** ; on recueille ensuite l'ester vers 121 °C."
+    },
+    {
+      "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+      "difficulte": 1,
+      "titre": "Le rendement de l'aspirine",
+      "consigne": "Détaille tes calculs et donne le rendement en pourcentage.",
+      "enonce": "**Situation.** Léo synthétise l'aspirine selon l'équation :\n\nacide salicylique + anhydride éthanoïque → aspirine + acide éthanoïque\n\nIl introduit 0,050 mol d'acide salicylique et 0,080 mol d'anhydride éthanoïque. Il récupère 6,3 g d'aspirine pure. Masse molaire de l'aspirine : M = 180 g·mol⁻¹.\n\nIl réalise ensuite une CCM : il dépose l'acide salicylique (dépôt 1), son produit (dépôt 2) et de l'aspirine pure du commerce (dépôt 3). Le dépôt 2 donne **une seule tache**, à la même hauteur que le dépôt 3 ; aucune tache au niveau du dépôt 1.\n\n1. Quel est le réactif limitant ? Justifie.\n2. Calcule la masse maximale d'aspirine m_max.\n3. Calcule le rendement de la synthèse.\n4. Que peut conclure Léo de sa CCM ?",
+      "bareme": [
+        {
+          "critere": "Réactif limitant : l'acide salicylique (0,050 < 0,080, coefficients 1)",
+          "points": 4
+        },
+        {
+          "critere": "m_max = 0,050 × 180 = 9,0 g",
+          "points": 5
+        },
+        {
+          "critere": "η = 6,3 / 9,0 = 70 %",
+          "points": 5
+        },
+        {
+          "critere": "CCM : produit identique à la référence, pur, sans réactif restant",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les coefficients sont tous égaux à 1 : x_max est la plus petite des quantités initiales. 0,050 mol < 0,080 mol : l'**acide salicylique** est le **réactif limitant** (l'anhydride est en excès).\n\n2. On obtient au plus n_max = 0,050 mol d'aspirine, soit m_max = n × M = 0,050 × 180 = **9,0 g**.\n\n3. η = m obtenue / m_max = 6,3 / 9,0 = 0,70, soit **70 %**. (Il est inférieur à 100 % : pertes lors des transferts et de la purification.)\n\n4. Le produit donne **une seule tache**, au même niveau que l'**aspirine de référence** : c'est bien de l'aspirine, et elle est **pure** (dans la limite de détection). Aucune tache au niveau de l'acide salicylique : il ne reste **pas de réactif** dans le produit."
+    },
+    {
+      "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+      "difficulte": 2,
+      "titre": "Estérification : du volume au rendement",
+      "consigne": "Détaille chaque calcul avec sa formule et son unité.",
+      "enonce": "**Situation.** Pour préparer l'acétate d'isoamyle, Emma mélange 15,0 mL d'alcool isoamylique et 20,0 mL d'acide éthanoïque. L'équation est :\n\nalcool isoamylique + acide éthanoïque → acétate d'isoamyle + eau\n\n**Données**\n\n| Espèce | Masse volumique (g·mL⁻¹) | Masse molaire (g·mol⁻¹) |\n|---|---|---|\n| Alcool isoamylique | 0,81 | 88 |\n| Acide éthanoïque | 1,05 | 60 |\n| Acétate d'isoamyle | 0,87 | 130 |\n\nAprès purification, Emma récupère 12,6 g d'ester.\n\n1. Calcule les quantités de matière initiales des deux réactifs.\n2. Détermine le réactif limitant.\n3. Calcule la masse maximale d'ester.\n4. Calcule le rendement.\n5. Pourquoi a-t-on intérêt à mettre l'acide éthanoïque en excès ? Pourquoi le rendement reste-t-il inférieur à 100 % ?",
+      "bareme": [
+        {
+          "critere": "n = ρV/M : n(alcool) ≈ 0,138 mol et n(acide) = 0,350 mol",
+          "points": 6
+        },
+        {
+          "critere": "Alcool isoamylique identifié comme réactif limitant",
+          "points": 3
+        },
+        {
+          "critere": "m_max = 0,138 × 130 ≈ 18,0 g",
+          "points": 4
+        },
+        {
+          "critere": "η = 12,6 / 18,0 ≈ 70 %",
+          "points": 3
+        },
+        {
+          "critere": "Excès : consommer totalement le réactif précieux ; pertes (transferts, extraction, purification) et réaction limitée",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. n = ρ × V / M.\nAlcool isoamylique : n = 0,81 × 15,0 / 88 = 12,15 / 88 ≈ **0,138 mol**.\nAcide éthanoïque : n = 1,05 × 20,0 / 60 = 21,0 / 60 = **0,350 mol**.\n\n2. Coefficients égaux à 1 : x_max est la plus petite quantité, 0,138 mol. Le **réactif limitant est l'alcool isoamylique**.\n\n3. n_max(ester) = 0,138 mol ; m_max = 0,138 × 130 ≈ **18,0 g** (17,9 à 18,0 g selon les arrondis).\n\n4. η = 12,6 / 18,0 = 0,70, soit **70 %** (avec 17,95 g on trouve aussi 70 %).\n\n5. On met en **excès** le réactif le moins cher ou le plus facile à éliminer (l'acide, qu'on élimine au lavage) pour **consommer totalement** le réactif le plus précieux (l'alcool) et améliorer le rendement. Le rendement reste inférieur à 100 % car la **réaction est limitée** et qu'on **perd du produit** lors des transferts, de l'extraction et de la purification."
+    },
+    {
+      "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+      "difficulte": 3,
+      "titre": "Aspirine brute ou purifiée ?",
+      "consigne": "Exploite toutes les données. Tes conclusions doivent s'appuyer sur les calculs et sur les contrôles de pureté.",
+      "enonce": "**Situation.** Rayan synthétise de l'aspirine :\n\nacide salicylique + anhydride éthanoïque → aspirine + acide éthanoïque\n\n**Données** : acide salicylique, M = 138 g·mol⁻¹ ; anhydride éthanoïque, M = 102 g·mol⁻¹, ρ = 1,08 g·mL⁻¹ ; aspirine, M = 180 g·mol⁻¹, température de fusion tabulée 135 °C.\n\n**Réactifs** : 5,52 g d'acide salicylique et 10,0 mL d'anhydride éthanoïque.\n\n**Résultats**\n\n| | Masse | Banc Kofler | CCM |\n|---|---|---|---|\n| Produit brut | 6,80 g | fond de 128 à 132 °C | deux taches : une au niveau de l'aspirine pure, une au niveau de l'acide salicylique |\n| Après recristallisation | 5,40 g | fond nettement à 135 °C | une seule tache, au niveau de l'aspirine pure |\n\n1. Calcule les quantités de matière initiales et détermine le réactif limitant.\n2. Calcule la masse maximale d'aspirine.\n3. Rayan annonce un rendement de 94 % avec le produit brut. Vérifie son calcul et explique pourquoi ce résultat n'a pas de sens.\n4. Analyse les contrôles de pureté du produit brut puis du produit recristallisé.\n5. Calcule le rendement réel de la synthèse. Comment le banc Kofler doit-il être préparé pour que la mesure soit fiable ?",
+      "bareme": [
+        {
+          "critere": "n(acide salicylique) = 0,0400 mol, n(anhydride) ≈ 0,106 mol, acide salicylique limitant",
+          "points": 5
+        },
+        {
+          "critere": "m_max = 0,0400 × 180 = 7,20 g",
+          "points": 3
+        },
+        {
+          "critere": "6,80 / 7,20 ≈ 94 % vérifié, mais produit brut impur : masse surestimée",
+          "points": 4
+        },
+        {
+          "critere": "Brut : fusion basse et sur un intervalle, tache de réactif ; recristallisé : fusion nette à 135 °C, une seule tache",
+          "points": 5
+        },
+        {
+          "critere": "Rendement réel 5,40 / 7,20 = 75 % ; banc étalonné avec des substances de fusion connue",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. n(acide salicylique) = m / M = 5,52 / 138 = **0,0400 mol**.\nn(anhydride) = ρ × V / M = 1,08 × 10,0 / 102 = 10,8 / 102 ≈ **0,106 mol**.\nCoefficients égaux à 1 : x_max = 0,0400 mol ; l'**acide salicylique est limitant**, l'anhydride est en excès.\n\n2. m_max = 0,0400 × 180 = **7,20 g**.\n\n3. 6,80 / 7,20 ≈ 0,944 : le calcul donne bien 94 %. Mais le rendement doit porter sur le produit **pur** : le produit brut contient encore des impuretés (dont de l'acide salicylique, visible en CCM). Sa masse est donc **surestimée** et ce rendement n'a pas de sens.\n\n4. **Produit brut** : il fond **plus bas** que 135 °C et **sur un intervalle** (128 à 132 °C) : c'est le signe d'un solide **impur**. La CCM montre une tache au niveau de l'acide salicylique : il reste du **réactif** non transformé ou non éliminé.\n**Produit recristallisé** : fusion **nette à 135 °C**, égale à la valeur tabulée ; **une seule tache** au niveau de l'aspirine de référence : le produit est de l'**aspirine pure** (dans la limite de détection). La recristallisation a éliminé les impuretés, restées dissoutes dans le solvant froid.\n\n5. η = 5,40 / 7,20 = **0,75, soit 75 %**. Le banc Kofler doit être **étalonné** avec des substances de température de fusion connue, de valeur proche de celle attendue."
+    },
+    {
+      "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+      "difficulte": 1,
+      "titre": "Quatre réactions à classer",
+      "consigne": "Nomme le type de chaque réaction et justifie en comparant réactifs et produits.",
+      "enonce": "**Situation.** Voici quatre réactions :\n\n- a) CH₃–CH=CH₂ + H₂ → CH₃–CH₂–CH₃\n- b) CH₃–CH₂–Cl + HO⁻ → CH₃–CH₂–OH + Cl⁻\n- c) CH₃–CH(OH)–CH₃ → CH₃–CH=CH₂ + H₂O\n- d) CH₃–COOH + HO⁻ → CH₃–COO⁻ + H₂O\n\n1. Donne le type de chaque réaction (substitution, addition, élimination ou acide-base) et justifie.\n2. Définis un site nucléophile et un site électrophile, avec un exemple de chaque.\n3. Que représente une flèche courbe, et d'où part-elle toujours ?",
+      "bareme": [
+        {
+          "critere": "Quatre types justes et justifiés : a addition, b substitution, c élimination, d acide-base",
+          "points": 10
+        },
+        {
+          "critere": "Définitions justes des sites nucléophile et électrophile, avec un exemple chacun",
+          "points": 6
+        },
+        {
+          "critere": "Flèche courbe : mouvement d'un doublet d'électrons, part toujours d'un doublet",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a) **Addition** : deux molécules s'unissent et la double liaison C=C devient simple (hydrogénation d'un alcène).\nb) **Substitution** : l'atome de chlore est **remplacé** par le groupe OH.\nc) **Élimination** : l'alcool perd une petite molécule (H₂O) et une **double liaison apparaît** (déshydratation).\nd) **Acide-base** : transfert d'un ion **H⁺** de l'acide éthanoïque vers l'ion hydroxyde.\n\n2. Un **site nucléophile** est **riche en électrons** (doublet non liant, charge négative, charge partielle δ−, liaison multiple) : par exemple l'oxygène de HO⁻. Un **site électrophile** est **pauvre en électrons** (charge positive ou partielle δ+) : par exemple le carbone lié au chlore dans R–Cl, ou le carbone de C=O.\n\n3. Une flèche courbe représente le **mouvement d'un doublet d'électrons**. Elle part **toujours d'un doublet** (non liant ou liant) et pointe vers l'atome qui le reçoit ou vers la liaison qui va se former."
+    },
+    {
+      "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+      "difficulte": 2,
+      "titre": "Le chloroéthane rencontre l'ion hydroxyde",
+      "consigne": "Utilise les électronégativités fournies pour justifier tes réponses. Les flèches courbes sont à décrire en mots.",
+      "enonce": "**Données** – électronégativités : O (3,4) ; Cl (3,2) ; C (2,6) ; H (2,2).\n\n**Réaction étudiée** : CH₃–CH₂–Cl + HO⁻ → CH₃–CH₂–OH + Cl⁻\n\n1. Quel est le type de cette réaction ?\n2. Indique les charges partielles portées par les atomes de la liaison C–Cl. Justifie.\n3. Dans cette réaction, quel réactif apporte le site nucléophile, et quel atome est le site électrophile ? Justifie.\n4. Décris les deux flèches courbes qui modélisent la réaction : pour chacune, d'où elle part et où elle arrive.\n5. Dans la molécule de propanal CH₃–CH₂–CHO, repère un site électrophile. Justifie.",
+      "bareme": [
+        {
+          "critere": "Substitution identifiée",
+          "points": 2
+        },
+        {
+          "critere": "Cl δ− et C δ+ justifiés par l'électronégativité (3,2 > 2,6)",
+          "points": 4
+        },
+        {
+          "critere": "HO⁻ nucléophile (doublets non liants, charge négative) et carbone lié au chlore électrophile",
+          "points": 5
+        },
+        {
+          "critere": "Flèche 1 : doublet non liant de O vers le carbone δ+ ; flèche 2 : doublet de C–Cl vers Cl",
+          "points": 6
+        },
+        {
+          "critere": "Carbone du C=O du propanal électrophile (δ+, O plus électronégatif)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Le chlore est remplacé par OH : c'est une **substitution**.\n\n2. Le chlore (3,2) est plus électronégatif que le carbone (2,6) : il attire le doublet de la liaison. Le chlore porte une charge partielle **δ−**, le carbone une charge partielle **δ+**.\n\n3. L'ion **HO⁻** apporte le **site nucléophile** : son oxygène porte une charge négative et des doublets non liants, il est riche en électrons. Le **carbone lié au chlore** (δ+) est le **site électrophile**, pauvre en électrons. La réaction se fait entre ces deux sites : le nucléophile donne un doublet, l'électrophile le reçoit.\n\n4. **Flèche 1** : elle part d'un **doublet non liant de l'oxygène** de HO⁻ et pointe vers le **carbone δ+** : c'est la nouvelle liaison C–O qui se forme.\n**Flèche 2** : elle part du **doublet de la liaison C–Cl** et pointe vers l'**atome de chlore**, qui part sous forme d'ion **Cl⁻** en emportant ce doublet.\n\n5. Dans le groupe C=O du propanal, l'oxygène (3,4) est plus électronégatif que le carbone (2,6) : le **carbone du C=O** porte une charge δ+, c'est un **site électrophile** (l'oxygène, δ− et porteur de doublets non liants, est un site nucléophile)."
+    },
+    {
+      "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+      "difficulte": 3,
+      "titre": "De la propanone au propène",
+      "consigne": "Écris les formules semi-développées, nomme les produits et justifie chaque type de réaction.",
+      "enonce": "**Situation.** Au laboratoire, on enchaîne trois transformations à partir de la propanone CH₃–CO–CH₃.\n\n- **Étape 1** : la propanone réagit avec le dihydrogène H₂ (catalyseur métallique) et donne un produit P.\n- **Étape 2** : P est chauffé en milieu acide ; il se forme un produit gazeux Q et de l'eau.\n- **Étape 3** : dans une autre expérience, P est placé en milieu très basique : l'ion hydroxyde HO⁻ réagit avec P.\n\nDonnées – électronégativités : O (3,4) ; C (2,6) ; H (2,2).\n\n1. Écris l'équation de l'étape 1, nomme P et donne le type de réaction. À quelle famille appartient P ?\n2. Écris l'équation de l'étape 2, nomme Q et donne le type de réaction.\n3. Étape 3 : quel hydrogène de P est arraché ? Écris l'équation et donne le type de réaction.\n4. Explique pourquoi cet hydrogène est labile, alors que les hydrogènes liés aux carbones ne le sont pas.\n5. Décris les deux flèches courbes de l'étape 3.",
+      "bareme": [
+        {
+          "critere": "Étape 1 : CH₃–CO–CH₃ + H₂ → CH₃–CH(OH)–CH₃, propan-2-ol, addition, alcool secondaire",
+          "points": 5
+        },
+        {
+          "critere": "Étape 2 : propan-2-ol → CH₂=CH–CH₃ + H₂O, propène, élimination",
+          "points": 4
+        },
+        {
+          "critere": "Étape 3 : H lié à O arraché, formation de l'ion alcoolate et de l'eau, réaction acide-base",
+          "points": 4
+        },
+        {
+          "critere": "Labilité expliquée par la polarisation de O–H (3,4 > 2,2) ; C–H peu polarisée",
+          "points": 3
+        },
+        {
+          "critere": "Flèches : doublet de HO⁻ vers H ; doublet de O–H vers O",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. CH₃–CO–CH₃ + H₂ → CH₃–CH(OH)–CH₃. P est le **propan-2-ol**. C'est une **addition** (hydrogénation d'une cétone : la double liaison C=O devient simple). P est un **alcool secondaire**.\n\n2. CH₃–CH(OH)–CH₃ → CH₂=CH–CH₃ + H₂O. Q est le **propène**. C'est une **élimination** (déshydratation d'un alcool : la molécule perd H₂O et une double liaison C=C apparaît).\n\n3. L'hydrogène arraché est celui **lié à l'oxygène** : CH₃–CH(OH)–CH₃ + HO⁻ → CH₃–CH(O⁻)–CH₃ + H₂O. Il se forme un **ion alcoolate**. C'est une réaction **acide-base** (transfert d'un ion H⁺).\n\n4. L'oxygène (3,4) est bien plus électronégatif que l'hydrogène (2,2) : la liaison O–H est **polarisée**, l'hydrogène porte une charge δ+ et une base forte peut l'arracher sous forme de H⁺ : il est **labile**. Entre C (2,6) et H (2,2), l'écart est faible : la liaison C–H est peu polarisée, ces hydrogènes ne sont pas labiles.\n\n5. **Flèche 1** : d'un **doublet non liant de l'oxygène de HO⁻** vers l'**hydrogène** lié à l'oxygène de l'alcool (formation de la liaison O–H de l'eau).\n**Flèche 2** : du **doublet de la liaison O–H de l'alcool** vers l'**oxygène de l'alcool**, qui garde ce doublet et devient l'ion alcoolate R–O⁻."
+    },
+    {
+      "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+      "difficulte": 1,
+      "titre": "Tests d'ions et bandes infrarouges",
+      "consigne": "Réponds en t'appuyant sur les tableaux du cours.",
+      "enonce": "**Situation.** Zoé analyse plusieurs solutions et deux spectres.\n\n1. Elle ajoute quelques gouttes de soude à trois solutions. Elle observe : un précipité bleu (solution 1), un précipité rouille (solution 2), un précipité vert (solution 3). Quel ion contient chaque solution ?\n2. Quel réactif doit-elle utiliser pour mettre en évidence les ions chlorure ? Qu'observera-t-elle ?\n3. À quoi sert un témoin dans un test d'identification ?\n4. Sur un spectre infrarouge, elle observe une bande large vers 3 300 cm⁻¹. Sur un autre, une bande intense et fine vers 1 720 cm⁻¹. Quelle liaison révèle chaque bande ?\n5. Que renseigne la spectroscopie infrarouge sur une molécule ?",
+      "bareme": [
+        {
+          "critere": "Ions Cu²⁺, Fe³⁺ et Fe²⁺ correctement associés",
+          "points": 6
+        },
+        {
+          "critere": "Nitrate d'argent : précipité blanc qui noircit à la lumière",
+          "points": 4
+        },
+        {
+          "critere": "Témoin : comparer le résultat à une référence connue",
+          "points": 3
+        },
+        {
+          "critere": "O–H d'un alcool (large, 3 300) et C=O (intense, fine, 1 720)",
+          "points": 5
+        },
+        {
+          "critere": "L'IR renseigne sur les liaisons et groupes caractéristiques",
+          "points": 2
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Solution 1 : précipité **bleu** → ions **Cu²⁺**. Solution 2 : précipité **rouille** → ions **Fe³⁺**. Solution 3 : précipité **vert** → ions **Fe²⁺**.\n\n2. Elle utilise le **nitrate d'argent** : en présence d'ions chlorure, il se forme un **précipité blanc qui noircit à la lumière**.\n\n3. Le **témoin** permet de **comparer** le résultat obtenu à une **référence connue** (par exemple le même test sur une solution qui contient l'ion, ou sur de l'eau distillée) : on s'assure ainsi que l'observation vient bien de l'ion recherché.\n\n4. Bande **large** vers 3 300 cm⁻¹ : liaison **O–H d'un alcool** (élargie par les liaisons hydrogène). Bande **intense et fine** vers 1 720 cm⁻¹ : liaison **C=O**.\n\n5. La spectroscopie infrarouge excite les **vibrations des liaisons** : elle renseigne sur les **liaisons et les groupes caractéristiques** présents dans la molécule."
+    },
+    {
+      "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+      "difficulte": 2,
+      "titre": "Trois flacons sans étiquette",
+      "consigne": "Attribue chaque spectre à un flacon en justifiant par les bandes observées.",
+      "enonce": "**Situation.** Trois flacons ont perdu leur étiquette. On sait qu'ils contiennent de l'éthanol (un alcool), de l'acide éthanoïque (un acide carboxylique) et de l'éthanoate d'éthyle (un ester). On enregistre leurs spectres infrarouges :\n\n| Spectre | Bandes observées au-dessus de 1 500 cm⁻¹ |\n|---|---|\n| 1 | bande large et intense vers 3 300 cm⁻¹ ; bandes fines vers 2 900 cm⁻¹ ; rien entre 1 650 et 1 750 cm⁻¹ |\n| 2 | bandes fines vers 2 950 cm⁻¹ ; bande intense et fine à 1 740 cm⁻¹ ; aucune bande large au-dessus de 3 000 cm⁻¹ |\n| 3 | bande très large de 2 500 à 3 200 cm⁻¹ ; bande intense et fine à 1 710 cm⁻¹ |\n\n1. Quelle liaison est responsable des bandes fines vers 2 900 cm⁻¹, présentes dans les trois spectres ?\n2. Attribue chaque spectre à un flacon. Justifie.\n3. Calcule la longueur d'onde λ, en µm, correspondant au nombre d'onde σ = 1 740 cm⁻¹. Vérifie qu'elle appartient au domaine infrarouge.\n4. Pourquoi lit-on d'abord la zone au-dessus de 1 500 cm⁻¹ ?",
+      "bareme": [
+        {
+          "critere": "Bandes fines vers 2 900 cm⁻¹ attribuées aux liaisons C–H",
+          "points": 3
+        },
+        {
+          "critere": "Spectre 1 = éthanol, justifié par O–H d'alcool sans C=O",
+          "points": 4
+        },
+        {
+          "critere": "Spectre 2 = ester (C=O sans O–H) ; spectre 3 = acide (C=O et O–H très large)",
+          "points": 6
+        },
+        {
+          "critere": "λ = 1/σ ≈ 5,75 × 10⁻⁴ cm = 5,75 µm, dans le domaine 2,5 à 25 µm",
+          "points": 5
+        },
+        {
+          "critere": "Zone au-dessus de 1 500 cm⁻¹ : identifie les groupes caractéristiques",
+          "points": 2
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les bandes fines entre 2 850 et 3 100 cm⁻¹ sont dues aux liaisons **C–H**, présentes dans les trois molécules.\n\n2. **Spectre 1 → éthanol** : bande **large** vers 3 300 cm⁻¹ = **O–H d'un alcool**, et aucune bande C=O.\n**Spectre 2 → éthanoate d'éthyle (ester)** : bande intense et fine à **1 740 cm⁻¹** = **C=O**, et **aucune bande O–H** : c'est un ester.\n**Spectre 3 → acide éthanoïque** : bande intense à 1 710 cm⁻¹ = **C=O**, et bande **très large** de 2 500 à 3 200 cm⁻¹ = **O–H d'un acide carboxylique**.\n\n3. σ = 1/λ, donc λ = 1/σ = 1 / 1 740 cm⁻¹ ≈ 5,75 × 10⁻⁴ cm = 5,75 × 10⁻⁶ m = **5,75 µm**. Cette valeur est comprise entre **2,5 et 25 µm** : c'est bien le domaine de l'**infrarouge**.\n\n4. La zone au-dessus de 1 500 cm⁻¹ permet d'**identifier les groupes caractéristiques** (O–H, C=O, N–H…). La zone en dessous (empreinte digitale) sert surtout à comparer avec un spectre de référence."
+    },
+    {
+      "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+      "difficulte": 3,
+      "titre": "Enquête sur un rejet coloré",
+      "consigne": "Mène l'enquête en exploitant chaque résultat. Justifie tes conclusions et signale ce qui reste incertain.",
+      "enonce": "**Situation.** Un laboratoire d'analyses reçoit un échantillon d'eau bleue prélevé près d'un atelier de traitement de surface. On réalise plusieurs analyses.\n\n**Résultats**\n\n| Analyse | Observation |\n|---|---|\n| Soude | précipité bleu |\n| Chlorure de baryum | précipité blanc |\n| Nitrate d'argent | aucun précipité |\n| Spectre UV-visible | absorption maximale dans le rouge |\n| Phase organique extraite, spectre IR | bande intense et fine à 1 715 cm⁻¹ ; bandes fines vers 2 950 cm⁻¹ ; aucune bande entre 2 500 et 3 500 cm⁻¹ en dehors des C–H |\n\nChaque test a été réalisé en parallèle sur de l'eau distillée : aucun précipité.\n\n1. Quels ions sont présents dans l'échantillon ? Lequel est absent ? Justifie.\n2. Explique pourquoi la solution paraît bleue, à l'aide du spectre UV-visible. Ce résultat est-il cohérent avec les tests ?\n3. Quel rôle ont joué les essais sur l'eau distillée ?\n4. Quel groupe de liaisons révèle le spectre IR de la phase organique ? Que peut-on exclure ?\n5. Pourquoi la spectroscopie UV-visible et la spectroscopie IR donnent-elles des informations différentes ?",
+      "bareme": [
+        {
+          "critere": "Cu²⁺ et SO₄²⁻ présents, Cl⁻ absent, chaque conclusion reliée au test",
+          "points": 6
+        },
+        {
+          "critere": "Absorbe le rouge donc paraît bleu-vert (couleur complémentaire), cohérent avec Cu²⁺",
+          "points": 4
+        },
+        {
+          "critere": "Témoin : les précipités viennent de l'échantillon, pas des réactifs ou de l'eau",
+          "points": 2
+        },
+        {
+          "critere": "Liaison C=O présente ; pas de O–H d'alcool ou d'acide, ni de N–H",
+          "points": 5
+        },
+        {
+          "critere": "UV-visible : électrons (couleur) ; IR : vibrations des liaisons",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Cu²⁺ présent** : la soude donne un précipité **bleu**. **SO₄²⁻ présent** : le chlorure de baryum donne un précipité **blanc**. **Cl⁻ absent** : le nitrate d'argent ne donne **aucun précipité** (il en donnerait un blanc noircissant à la lumière). L'eau contient donc probablement du **sulfate de cuivre**.\n\n2. La solution **absorbe le rouge** : elle prend la **couleur complémentaire**, le **bleu-vert** ; on la voit bleue. C'est **cohérent** avec la présence d'ions Cu²⁺ détectés par la soude, qui colorent les solutions en bleu.\n\n3. Ce sont des **témoins** : sur l'eau distillée, aucun précipité. Les précipités observés viennent donc bien des **ions de l'échantillon**, et non des réactifs ou de l'eau elle-même.\n\n4. La bande intense et fine à 1 715 cm⁻¹ révèle une liaison **C=O** ; les bandes vers 2 950 cm⁻¹ sont des **C–H**. Il n'y a **aucune bande O–H** (ni la bande large vers 3 300 d'un alcool, ni la bande très large de 2 500 à 3 200 d'un acide carboxylique) et **aucune bande N–H** : on exclut un alcool, un acide carboxylique et une amine. La molécule possède un groupe C=O sans O–H. Pour l'identifier exactement, il faudrait comparer toute la zone d'empreinte digitale avec des spectres de référence.\n\n5. L'**UV-visible** (200 à 800 nm) excite les **électrons** des molécules : elle renseigne sur la couleur et les liaisons conjuguées. L'**IR** (2,5 à 25 µm) excite les **vibrations des liaisons** : elle renseigne sur les groupes caractéristiques. Les deux sont complémentaires."
+    },
+    {
+      "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+      "difficulte": 1,
+      "titre": "Une droite d'étalonnage",
+      "consigne": "Détaille tes calculs et donne le résultat avec son unité.",
+      "enonce": "**Situation.** Pour doser le bleu patenté dans une boisson, Hugo prépare une gamme de solutions étalons et mesure leur absorbance à λmax :\n\n| c (× 10⁻⁵ mol·L⁻¹) | 1,0 | 2,0 | 3,0 | 4,0 |\n|---|---|---|---|---|\n| A | 0,13 | 0,26 | 0,39 | 0,52 |\n\nLa boisson donne une absorbance A = 0,34.\n\n1. Écris la loi de Beer-Lambert et nomme chaque grandeur avec son unité.\n2. Montre que A est proportionnelle à c et calcule le coefficient directeur k de la droite.\n3. Calcule la concentration en colorant de la boisson.\n4. Pourquoi règle-t-on le spectrophotomètre à λmax, et pourquoi fait-on d'abord le « zéro » avec le solvant ?",
+      "bareme": [
+        {
+          "critere": "A = ε × ℓ × c avec les quatre grandeurs et leurs unités",
+          "points": 5
+        },
+        {
+          "critere": "Rapport A/c constant, k = 1,3 × 10⁴ L·mol⁻¹",
+          "points": 6
+        },
+        {
+          "critere": "c = 0,34 / 13 000 ≈ 2,6 × 10⁻⁵ mol·L⁻¹",
+          "points": 5
+        },
+        {
+          "critere": "λmax : absorption maximale (mesure plus sensible) ; zéro : ne mesurer que l'absorption de l'espèce",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **A = ε × ℓ × c** : A est l'absorbance (sans unité), ε le coefficient d'absorption molaire (L·mol⁻¹·cm⁻¹), ℓ la longueur de la cuve (cm), c la concentration (mol·L⁻¹).\n\n2. A / c = 0,13 / 1,0 × 10⁻⁵ = 0,26 / 2,0 × 10⁻⁵ = 0,39 / 3,0 × 10⁻⁵ = 0,52 / 4,0 × 10⁻⁵ = **1,3 × 10⁴ L·mol⁻¹** : le rapport est constant, A est **proportionnelle** à c (droite passant par l'origine). k = 13 000 L·mol⁻¹.\n\n3. c = A / k = 0,34 / 13 000 ≈ **2,6 × 10⁻⁵ mol·L⁻¹**. Cette valeur est bien comprise dans la gamme étalon.\n\n4. À **λmax**, l'absorbance est la plus grande : la mesure est la plus **sensible** et la plus précise. Le **zéro** avec le solvant permet de ne mesurer que l'absorption due à l'espèce dosée, pas celle du solvant ou de la cuve."
+    },
+    {
+      "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+      "difficulte": 2,
+      "titre": "Le vinaigre est-il conforme ?",
+      "consigne": "Détaille chaque étape du calcul. Donne les résultats avec trois chiffres significatifs.",
+      "enonce": "**Situation.** L'étiquette d'un vinaigre annonce une concentration en masse d'acide éthanoïque d'environ 84 g·L⁻¹. Lina dilue le vinaigre **10 fois**, puis titre V_A = 10,0 mL de la solution diluée par une solution d'hydroxyde de sodium de concentration C_B = 0,100 mol·L⁻¹, avec un suivi pH-métrique.\n\nÉquation de la réaction support : CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O\n\nLe saut de pH permet de lire V_E = 14,2 mL. Masse molaire de l'acide éthanoïque : M = 60,0 g·mol⁻¹.\n\n1. Quelles conditions doit remplir une réaction support de titrage ?\n2. Définis l'équivalence. Quel réactif est limitant avant l'équivalence ?\n3. Comment Lina a-t-elle pu repérer précisément V_E sur la courbe pH = f(V) ?\n4. Calcule la concentration en acide éthanoïque de la solution diluée, puis du vinaigre.\n5. Calcule la concentration en masse du vinaigre et compare à l'étiquette.",
+      "bareme": [
+        {
+          "critere": "Réaction totale, rapide et unique",
+          "points": 3
+        },
+        {
+          "critere": "Équivalence : proportions stœchiométriques, changement de réactif limitant ; titrant limitant avant",
+          "points": 4
+        },
+        {
+          "critere": "Méthode des tangentes ou maximum de la dérivée dpH/dV",
+          "points": 3
+        },
+        {
+          "critere": "C_dil = 0,142 mol·L⁻¹ puis C = 1,42 mol·L⁻¹",
+          "points": 6
+        },
+        {
+          "critere": "Cm = 85,2 g·L⁻¹, proche des 84 g·L⁻¹ annoncés",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La réaction support doit être **totale**, **rapide** et **unique**.\n\n2. À l'**équivalence**, les réactifs ont été introduits dans les **proportions stœchiométriques** : il y a changement de réactif limitant. **Avant** l'équivalence, le réactif limitant est le **titrant versé** (les ions HO⁻) ; après, c'est l'acide titré qui est épuisé.\n\n3. On repère le **saut de pH** et on lit V_E par la **méthode des tangentes** ou au **maximum de la dérivée** dpH/dV.\n\n4. Coefficients 1 et 1 : C_A × V_A = C_B × V_E, donc C_A = C_B × V_E / V_A = 0,100 × 14,2 / 10,0 = **0,142 mol·L⁻¹** (solution diluée).\nLe vinaigre a été dilué 10 fois : C(vinaigre) = 10 × 0,142 = **1,42 mol·L⁻¹**.\n\n5. Cm = C × M = 1,42 × 60,0 = **85,2 g·L⁻¹**. L'étiquette annonce environ 84 g·L⁻¹ : l'écart est de 1,2 g·L⁻¹, soit environ 1,4 % : le résultat est **cohérent** avec l'étiquette."
+    },
+    {
+      "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+      "difficulte": 3,
+      "titre": "Deux méthodes pour un même flacon de permanganate",
+      "consigne": "Mène les deux dosages puis compare-les de façon argumentée.",
+      "enonce": "**Situation.** On veut connaître la concentration C d'une solution de permanganate de potassium (ions MnO₄⁻, violets).\n\n**Méthode 1 – Étalonnage.** La solution est diluée **20 fois**. Une gamme d'étalons donne une droite A = k × c avec k = 2 300 L·mol⁻¹ à 525 nm. La solution diluée donne A = 0,46.\n\n**Méthode 2 – Titrage.** On place la solution de permanganate dans la burette. Dans le bécher : 10,0 mL d'une solution d'ions Fe²⁺ de concentration 2,00 × 10⁻² mol·L⁻¹, acidifiée. La teinte violette persiste à partir de V_E = 10,1 mL.\n\nÉquation : MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O\n\n1. Méthode 1 : calcule la concentration de la solution diluée, puis C. Pourquoi a-t-il fallu diluer la solution avant la mesure ?\n2. Méthode 2 : pourquoi la teinte violette qui persiste signale-t-elle l'équivalence ?\n3. Écris la relation à l'équivalence, puis calcule C.\n4. Les deux résultats sont-ils cohérents ?\n5. Compare les deux méthodes : espèce consommée ou non, condition nécessaire, point fort de chacune.",
+      "bareme": [
+        {
+          "critere": "c_dil = 2,0 × 10⁻⁴ mol·L⁻¹ puis C = 4,0 × 10⁻³ mol·L⁻¹ ; dilution car Beer-Lambert valable en solution assez diluée",
+          "points": 5
+        },
+        {
+          "critere": "Avant l'équivalence MnO₄⁻ est consommé et disparaît ; après, il est en excès et colore le milieu",
+          "points": 3
+        },
+        {
+          "critere": "n(Fe²⁺) = 5 n(MnO₄⁻) et C = 3,96 × 10⁻³ mol·L⁻¹",
+          "points": 6
+        },
+        {
+          "critere": "Résultats cohérents (écart d'environ 1 %)",
+          "points": 2
+        },
+        {
+          "critere": "Comparaison correcte des deux méthodes (espèce consommée ou non, condition, point fort)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. c_dil = A / k = 0,46 / 2 300 = **2,0 × 10⁻⁴ mol·L⁻¹**. La solution a été diluée 20 fois : C = 20 × 2,0 × 10⁻⁴ = **4,0 × 10⁻³ mol·L⁻¹**. On dilue parce que la loi de Beer-Lambert (A proportionnelle à c) n'est valable que pour des solutions **assez diluées** ; la solution mère, très colorée, absorberait trop.\n\n2. Avant l'équivalence, les ions MnO₄⁻ versés sont **consommés** aussitôt par les ions Fe²⁺ (ils sont limitants) : la couleur violette disparaît. Après l'équivalence, les ions Fe²⁺ sont épuisés : MnO₄⁻ est en **excès** et colore le milieu en violet. Le permanganate sert lui-même d'indicateur de fin de titrage.\n\n3. À l'équivalence : n(Fe²⁺) / 5 = n(MnO₄⁻ versé), soit n(Fe²⁺) = 5 × C × V_E.\nn(Fe²⁺) = 2,00 × 10⁻² × 10,0 × 10⁻³ = 2,00 × 10⁻⁴ mol.\nn(MnO₄⁻) = 2,00 × 10⁻⁴ / 5 = 4,00 × 10⁻⁵ mol.\nC = 4,00 × 10⁻⁵ / 10,1 × 10⁻³ ≈ **3,96 × 10⁻³ mol·L⁻¹**.\n\n4. 4,0 × 10⁻³ et 3,96 × 10⁻³ mol·L⁻¹ : l'écart est d'environ 1 %. Les deux résultats sont **cohérents**.\n\n5. **Étalonnage** : l'espèce n'est **pas consommée** ; il faut une propriété mesurable **proportionnelle à c** (ici l'absorbance) et une gamme d'étalons ; point fort : rapide, adapté aux faibles concentrations. **Titrage** : l'espèce est **consommée** ; il faut une réaction support **totale, rapide et unique** ; point fort : exact, sans gamme à préparer."
+    },
+    {
+      "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+      "difficulte": 1,
+      "titre": "De la chambre noire à la rétine",
+      "consigne": "Réponds à chaque question par des phrases courtes et précises.",
+      "enonce": "**Situation.** Pour un exposé sur l'histoire de la photographie, Manon a noté quatre événements dans le désordre :\n\n- a) invention du capteur CCD ;\n- b) première image photographique durable, par Nicéphore Niépce ;\n- c) les frères Lumière commercialisent l'autochrome ;\n- d) le daguerréotype de Louis Daguerre est rendu public.\n\n1. Range ces quatre événements dans l'ordre chronologique et associe à chacun sa date.\n2. Recopie et complète le modèle optique de l'œil : iris et pupille → … ; cristallin (avec la cornée) → … ; rétine → … .\n3. Où doit se former l'image pour que l'œil voie net ? Comment l'œil fait-il pour voir de près ?\n4. Compare les cônes et les bâtonnets de la rétine : rôle et conditions d'éclairage.",
+      "bareme": [
+        {
+          "critere": "Ordre b (1826), d (1839), c (1907), a (1969) avec les dates justes",
+          "points": 6
+        },
+        {
+          "critere": "Modèle : diaphragme, lentille convergente, écran",
+          "points": 6
+        },
+        {
+          "critere": "Image sur la rétine ; accommodation : le cristallin se bombe",
+          "points": 4
+        },
+        {
+          "critere": "Cônes : couleurs, trois types ; bâtonnets : faible lumière, pas de couleurs",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. b) **1826** : Niépce fixe la première image photographique durable ; d) **1839** : le daguerréotype est rendu public ; c) **1907** : les frères Lumière commercialisent l'autochrome, premier procédé couleur ; a) **1969** : invention du capteur CCD, base de la photographie numérique.\n\n2. Iris et pupille → **diaphragme** (règle la quantité de lumière) ; cristallin avec la cornée → **lentille convergente** de vergence variable ; rétine → **écran** sur lequel se forme l'image.\n\n3. L'image doit se former **sur la rétine**. Pour voir de près, l'œil **accommode** : le cristallin se **bombe**, il devient plus convergent.\n\n4. Les **cônes** (environ 6 millions, concentrés dans la fovéa) permettent la **vision des couleurs** ; il en existe **trois types**, sensibles au bleu, au vert et au rouge ; ils ont besoin de lumière. Les **bâtonnets** (environ 120 millions) sont très sensibles et fonctionnent en **faible lumière**, mais ne distinguent **pas les couleurs**."
+    },
+    {
+      "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+      "difficulte": 2,
+      "titre": "Lumières de scène",
+      "consigne": "Justifie chaque réponse en précisant le type de synthèse des couleurs mis en jeu.",
+      "enonce": "**Situation.** Pour la fête du lycée, Enzo règle l'éclairage de la scène. Il dispose de trois projecteurs, rouge, vert et bleu, qu'il dirige sur un grand écran blanc. Il a aussi un projecteur de lumière blanche devant lequel il peut placer des filtres.\n\n1. Quelle couleur voit-on sur l'écran blanc éclairé par les projecteurs rouge et vert ? Par les trois projecteurs à la fois ? De quelle synthèse s'agit-il ?\n2. Enzo place un filtre jaune devant le projecteur blanc. Quelle(s) lumière(s) le filtre transmet-il, et laquelle absorbe-t-il ?\n3. Une danseuse porte une robe rouge. Quelle couleur a sa robe éclairée : a) en lumière blanche ? b) par le seul projecteur bleu ? Justifie.\n4. Sur l'affiche de la fête, imprimée, on superpose des encres. Quelles sont les couleurs primaires utilisées et que donne la superposition des trois ?",
+      "bareme": [
+        {
+          "critere": "Rouge + vert = jaune ; les trois = blanc ; synthèse additive",
+          "points": 5
+        },
+        {
+          "critere": "Filtre jaune : transmet rouge et vert, absorbe le bleu",
+          "points": 4
+        },
+        {
+          "critere": "Robe rouge : rouge en lumière blanche, noire en lumière bleue, justifié par la diffusion",
+          "points": 6
+        },
+        {
+          "critere": "Synthèse soustractive : cyan, magenta, jaune ; superposition noire",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. On **ajoute** des lumières : c'est la **synthèse additive**. Rouge + vert = **jaune**. Rouge + vert + bleu = **blanc**.\n\n2. Un filtre transmet sa propre couleur et absorbe les autres. Jaune = rouge + vert : le filtre **transmet le rouge et le vert** et **absorbe le bleu**. On voit une lumière jaune.\n\n3. a) En lumière blanche, la robe **diffuse le rouge** et absorbe les autres couleurs : elle paraît **rouge**.\nb) Éclairée en lumière bleue seulement, la robe absorbe le bleu et n'a **plus de rouge à diffuser** : elle paraît **noire**.\n\n4. L'impression utilise la **synthèse soustractive** : des pigments retirent des lumières. Les couleurs primaires sont le **cyan**, le **magenta** et le **jaune**. Leur superposition donne du **noir**."
+    },
+    {
+      "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+      "difficulte": 3,
+      "titre": "Aya au concert",
+      "consigne": "Réponds de façon argumentée en mobilisant l'optique de l'œil, la couleur des objets et le droit de l'image.",
+      "enonce": "**Situation.** Aya est myope. Au concert du lycée, elle a oublié ses lunettes : la chanteuse, au fond de la salle, lui paraît floue. La scène est éclairée uniquement par un projecteur rouge et un projecteur bleu. La chanteuse porte une chemise blanche et un chapeau vert.\n\nAvec son téléphone, Aya photographie son ami Jules dans le public, puis enregistre une photo de la chanteuse publiée par un photographe professionnel. Le soir, elle veut publier les deux photos sur son compte public.\n\n1. Explique pourquoi Aya voit flou la chanteuse : où se forme l'image, et pour quelle raison ? Quel type de lentille corrige ce défaut ?\n2. Quelle couleur Aya voit-elle pour la chemise ? Pour le chapeau ? Justifie.\n3. Quels types de cônes de la rétine d'Aya sont surtout stimulés par la lumière diffusée par la chemise ?\n4. À la fin du concert, les projecteurs baissent jusqu'à une très faible lumière. Aya distingue encore les formes mais plus les couleurs. Explique.\n5. Aya peut-elle publier les deux photos ? Explique en distinguant les deux droits en jeu.",
+      "bareme": [
+        {
+          "critere": "Myopie : œil trop convergent, image avant la rétine, correction par lentille divergente",
+          "points": 4
+        },
+        {
+          "critere": "Chemise magenta (rouge + bleu diffusés), chapeau noir (pas de vert à diffuser)",
+          "points": 5
+        },
+        {
+          "critere": "Cônes sensibles au rouge et au bleu",
+          "points": 3
+        },
+        {
+          "critere": "Faible lumière : seuls les bâtonnets fonctionnent, ils ne distinguent pas les couleurs",
+          "points": 3
+        },
+        {
+          "critere": "Droit à l'image (accord de Jules) et droit d'auteur (autorisation du photographe) distingués",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'œil myope est **trop convergent** : l'image d'un objet éloigné se forme **avant la rétine**, pas sur elle, d'où le flou. On corrige la myopie avec une lentille **divergente**.\n\n2. La **chemise blanche** diffuse toutes les couleurs qu'elle reçoit ; elle ne reçoit que du rouge et du bleu : elle diffuse rouge + bleu, elle paraît **magenta** (synthèse additive). Le **chapeau vert** ne diffuse que le vert ; il ne reçoit pas de vert : il absorbe le rouge et le bleu et paraît **noir**.\n\n3. La lumière diffusée par la chemise contient du rouge et du bleu : ce sont surtout les **cônes sensibles au rouge** et les **cônes sensibles au bleu** qui sont stimulés. Le cerveau reconstruit la couleur magenta à partir de leurs réponses.\n\n4. En très faible lumière, les cônes ne fonctionnent plus ; seuls les **bâtonnets**, très sensibles, permettent de voir. Or ils **ne distinguent pas les couleurs** : Aya voit les formes, en nuances de gris.\n\n5. **Photo de Jules** : le **droit à l'image** protège la personne photographiée ; Jules est reconnaissable, Aya doit obtenir **son accord** avant de publier. **Photo du photographe** : le **droit d'auteur** protège le créateur d'une photographie originale ; Aya ne peut pas la diffuser sans son **autorisation** (sauf exception, comme une courte citation avec mention de l'auteur, ce qui n'est pas le cas d'une republication). En l'état, elle ne peut publier aucune des deux photos sans accord."
+    },
+    {
+      "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+      "difficulte": 1,
+      "titre": "L'image d'une bougie",
+      "consigne": "Utilise des mesures algébriques. Détaille tes calculs.",
+      "enonce": "**Situation.** Une bougie AB de hauteur 4,0 cm est placée à 60 cm avant une lentille mince convergente de distance focale f' = 20 cm. A est sur l'axe optique.\n\n1. Calcule la vergence V de la lentille, avec son unité.\n2. Donne la valeur algébrique de OA.\n3. Utilise la relation de conjugaison pour calculer OA'. L'image est-elle réelle ou virtuelle ?\n4. Calcule le grandissement γ et la taille A'B' de l'image. Décris l'image.\n5. Cite les trois rayons particuliers qui permettent de construire l'image.",
+      "bareme": [
+        {
+          "critere": "V = 1 / 0,20 = 5,0 δ",
+          "points": 3
+        },
+        {
+          "critere": "OA = −60 cm",
+          "points": 2
+        },
+        {
+          "critere": "OA' = 30 cm par la relation de conjugaison, image réelle",
+          "points": 6
+        },
+        {
+          "critere": "γ = −0,5, A'B' = −2,0 cm : image renversée, deux fois plus petite",
+          "points": 5
+        },
+        {
+          "critere": "Trois rayons particuliers justes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. V = 1 / f' avec f' en mètres : V = 1 / 0,20 = **5,0 δ** (dioptries).\n\n2. L'objet est réel, avant la lentille : **OA = −60 cm**.\n\n3. 1/OA' − 1/OA = 1/f', donc 1/OA' = 1/f' + 1/OA = 1/20 − 1/60 = 3/60 − 1/60 = 2/60 = 1/30. **OA' = 30 cm**. OA' > 0 : l'image se forme après la lentille, elle est **réelle** (on peut la recueillir sur un écran).\n\n4. γ = OA' / OA = 30 / (−60) = **−0,5**. A'B' = γ × AB = −0,5 × 4,0 = **−2,0 cm**. γ < 0 : l'image est **renversée** ; |γ| < 1 : elle est **deux fois plus petite** que l'objet.\n\n5. Un rayon passant par le **centre optique O** n'est pas dévié ; un rayon **parallèle à l'axe** ressort en passant par le **foyer image F'** ; un rayon passant par le **foyer objet F** ressort **parallèle à l'axe**."
+    },
+    {
+      "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+      "difficulte": 2,
+      "titre": "Le projecteur de diapositives",
+      "consigne": "Modélise l'objectif par une lentille mince convergente. Justifie chaque résultat par un calcul.",
+      "enonce": "**Situation.** Le club photo projette de vieilles diapositives de format 24 mm × 36 mm. L'objectif du projecteur est modélisé par une lentille convergente de distance focale f' = 10,0 cm. La diapositive est placée à 10,5 cm avant la lentille.\n\n1. Calcule la vergence de l'objectif.\n2. À quelle distance de la lentille faut-il placer l'écran pour obtenir une image nette ?\n3. Calcule le grandissement, puis les dimensions de l'image sur l'écran.\n4. Les diapositives sont glissées « à l'envers » dans le projecteur. Explique pourquoi.\n5. Pourquoi l'image obtenue ici n'est-elle pas une image de loupe ?",
+      "bareme": [
+        {
+          "critere": "V = 10 δ",
+          "points": 2
+        },
+        {
+          "critere": "OA = −10,5 cm et OA' = 210 cm (2,10 m) par la relation de conjugaison",
+          "points": 7
+        },
+        {
+          "critere": "γ = −20 et image de 48 cm × 72 cm",
+          "points": 6
+        },
+        {
+          "critere": "γ < 0 : image renversée, d'où la diapositive retournée",
+          "points": 3
+        },
+        {
+          "critere": "Objet au-delà de F : image réelle ; la loupe exige un objet entre F et O",
+          "points": 2
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. V = 1 / f' = 1 / 0,100 = **10 δ**.\n\n2. OA = −10,5 cm. 1/OA' = 1/f' + 1/OA = 1/10,0 − 1/10,5 = 0,1000 − 0,0952 = 0,00476 cm⁻¹ (valeur exacte 1/210). **OA' = 210 cm** : l'écran doit être à **2,10 m** de la lentille.\n\n3. γ = OA' / OA = 210 / (−10,5) = **−20**. Dimensions : 24 mm × 20 = 480 mm = **48 cm** ; 36 mm × 20 = 720 mm = **72 cm**. L'image mesure **48 cm × 72 cm**.\n\n4. γ < 0 : l'image est **renversée** par rapport à l'objet. Pour que les spectateurs voient l'image à l'endroit, on place la diapositive à l'envers.\n\n5. La diapositive est placée **au-delà du foyer objet** (10,5 cm > 10,0 cm) : l'image est **réelle**, recueillie sur l'écran. L'effet loupe n'existe que si l'objet est **entre F et O** : l'image est alors virtuelle, droite, et ne peut pas être projetée."
+    },
+    {
+      "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+      "difficulte": 3,
+      "titre": "Focométrie et loupe",
+      "consigne": "Exploite les mesures. Donne le résultat final avec son incertitude-type et justifie chaque conclusion.",
+      "enonce": "**Situation.** Pour vérifier la distance focale d'une lentille annoncée à f' = 12,5 cm, Noah forme sur un écran l'image nette d'un objet lumineux pour quatre positions. Il relève :\n\n| Mesure | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| OA (cm) | −20,0 | −25,0 | −30,0 | −40,0 |\n| OA' (cm) | 33,5 | 25,2 | 21,3 | 18,1 |\n| f' calculée (cm) | ? | 12,55 | 12,46 | 12,46 |\n\nL'écart-type des quatre valeurs de f' vaut s = 0,045 cm.\n\n1. Calcule f' pour la mesure 1 à l'aide de la relation de conjugaison.\n2. Calcule la moyenne des quatre valeurs de f' et l'incertitude-type sur cette moyenne. Écris le résultat.\n3. Le résultat est-il compatible avec la valeur annoncée ? Justifie par un calcul.\n4. Noah utilise ensuite cette lentille comme loupe : il place un timbre à 8,0 cm de la lentille. Calcule la position de l'image et le grandissement.\n5. Décris cette image et explique pourquoi elle ne peut pas être recueillie sur un écran.",
+      "bareme": [
+        {
+          "critere": "f'₁ = 1 / (1/33,5 + 1/20,0) ≈ 12,52 cm",
+          "points": 4
+        },
+        {
+          "critere": "Moyenne ≈ 12,50 cm, u = s/√4 ≈ 0,02 cm, résultat écrit",
+          "points": 5
+        },
+        {
+          "critere": "z = |12,50 − 12,5| / 0,02 ≈ 0 ≤ 2 : compatible",
+          "points": 3
+        },
+        {
+          "critere": "OA' ≈ −22,2 cm et γ ≈ 2,8",
+          "points": 5
+        },
+        {
+          "critere": "Image virtuelle, droite, agrandie, du même côté que l'objet : les rayons ressortent divergents",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 1/f' = 1/OA' − 1/OA = 1/33,5 − 1/(−20,0) = 0,02985 + 0,05000 = 0,07985 cm⁻¹. **f'₁ ≈ 12,52 cm**.\n\n2. Moyenne : (12,52 + 12,55 + 12,46 + 12,46) / 4 = 49,99 / 4 ≈ **12,50 cm**. Évaluation de type A : u = s / √n = 0,045 / √4 = 0,045 / 2 ≈ **0,02 cm** (0,023 cm). Résultat : **f' = 12,50 cm avec u(f') = 0,02 cm**.\n\n3. z = |12,50 − 12,5| / 0,02 ≈ **0** (bien inférieur à 2) : le résultat est **compatible** avec la valeur annoncée.\n\n4. OA = −8,0 cm (objet entre F et O, car 8,0 cm < 12,5 cm). 1/OA' = 1/f' + 1/OA = 1/12,5 − 1/8,0 = 0,080 − 0,125 = −0,045 cm⁻¹. **OA' ≈ −22,2 cm**. γ = OA' / OA = (−22,2) / (−8,0) ≈ **2,8**.\n\n5. OA' < 0 : l'image est du **même côté que l'objet**, elle est **virtuelle**. γ > 0 : elle est **droite** ; |γ| > 1 : elle est **agrandie** (environ 2,8 fois). Les rayons ressortent de la lentille **divergents** : ils ne se croisent pas après la lentille, aucune image ne se forme sur un écran ; seul l'œil qui regarde à travers la lentille voit l'image : c'est le principe de la **loupe**."
+    },
+    {
+      "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+      "difficulte": 1,
+      "titre": "Le nombre d'ouverture",
+      "consigne": "Réponds en justifiant par un calcul ou par le modèle de l'appareil photographique.",
+      "enonce": "**Situation.** Lou découvre l'appareil photo numérique de sa grand-mère.\n\n1. Associe chaque élément réel à son modèle : objectif, diaphragme, capteur (lentille convergente, écran, ouverture circulaire de diamètre D).\n2. L'objectif a une focale f' = 50 mm et le diamètre de l'ouverture vaut D = 25 mm. Calcule le nombre d'ouverture N.\n3. Avec un téléobjectif de focale 200 mm réglé à f/4, quel est le diamètre de l'ouverture ?\n4. Entre les réglages f/2 et f/8, lequel laisse entrer le plus de lumière ? Justifie.\n5. Qu'appelle-t-on la mise au point ?",
+      "bareme": [
+        {
+          "critere": "Objectif = lentille convergente, diaphragme = ouverture de diamètre D, capteur = écran",
+          "points": 4
+        },
+        {
+          "critere": "N = 50 / 25 = 2 (f/2)",
+          "points": 4
+        },
+        {
+          "critere": "D = f'/N = 200 / 4 = 50 mm",
+          "points": 4
+        },
+        {
+          "critere": "f/2 : petit N, grande ouverture, plus de lumière",
+          "points": 4
+        },
+        {
+          "critere": "Mise au point : placer le capteur là où se forme l'image nette",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Objectif** → lentille convergente de focale f' (forme l'image) ; **diaphragme** → ouverture circulaire de diamètre D (dose la lumière) ; **capteur** → écran (reçoit l'image).\n\n2. N = f' / D = 50 / 25 = **2**, noté f/2.\n\n3. N = f' / D donc D = f' / N = 200 / 4 = **50 mm**.\n\n4. **f/2** : un **petit** nombre d'ouverture correspond à une **grande** ouverture, donc beaucoup de lumière. À f/8, le diamètre de l'ouverture est 4 fois plus petit (pour une même focale) : beaucoup moins de lumière.\n\n5. La **mise au point** consiste à placer le **capteur** là où se forme l'**image nette** : on déplace l'objectif selon la distance du sujet (relation de conjugaison)."
+    },
+    {
+      "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+      "difficulte": 2,
+      "titre": "Même exposition, autre réglage",
+      "consigne": "Justifie chaque réponse par le lien entre ouverture, temps de pose et quantité de lumière reçue.",
+      "enonce": "**Situation.** Karim photographie un match de handball. L'appareil propose une exposition correcte avec le réglage **f/8 et 1/125 s**.\n\nSérie des nombres d'ouverture : f/2 ; f/2,8 ; f/4 ; f/5,6 ; f/8 ; f/11 ; f/16.\n\n1. Karim passe à f/4. Par combien la lumière reçue par le capteur est-elle multipliée ? Justifie de deux façons (crans de la série, et variation en 1/N²).\n2. Quel temps de pose doit-il choisir pour garder la même exposition ? Quel est l'intérêt de ce réglage pour un match ?\n3. Son amie propose au contraire f/16. Quel temps de pose faut-il alors ? Quel risque cela présente-t-il ?\n4. Lequel des deux réglages (f/4 ou f/16) donne la plus grande profondeur de champ ?",
+      "bareme": [
+        {
+          "critere": "f/8 → f/4 : deux crans, lumière × 4, confirmé par (8/4)² = 4",
+          "points": 6
+        },
+        {
+          "critere": "Temps de pose 1/500 s, qui fige le mouvement",
+          "points": 5
+        },
+        {
+          "critere": "f/16 : lumière ÷ 4, temps 1/30 s environ, risque de flou de bougé",
+          "points": 6
+        },
+        {
+          "critere": "f/16 donne la plus grande profondeur de champ (N plus grand)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. De f/8 à f/5,6 puis à f/4 : **deux crans**. Chaque cran vers un nombre plus petit double la surface de l'ouverture, donc la lumière : × 2 × 2 = **× 4**. Avec l'éclairement qui varie comme 1/N² : (8 / 4)² = **4**.\n\n2. L'énergie reçue est proportionnelle à l'éclairement × le temps de pose. La lumière est multipliée par 4 : il faut **diviser le temps de pose par 4** : 1/125 ÷ 4 = **1/500 s**. Un temps de pose **court** **fige le mouvement** des joueurs.\n\n3. De f/8 à f/16 : deux crans vers la fermeture, la lumière est **divisée par 4** ((16/8)² = 4). Il faut **multiplier** le temps de pose par 4 : 4/125 s = 1/31,25 s, soit environ **1/30 s**. Temps long : risque de **flou de bougé** (les joueurs bougent, et l'appareil tenu à la main aussi).\n\n4. La profondeur de champ **augmente** quand le nombre d'ouverture augmente : **f/16** donne la plus grande profondeur de champ."
+    },
+    {
+      "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+      "difficulte": 3,
+      "titre": "Trois photos, trois réglages",
+      "consigne": "Choisis et justifie les réglages à l'aide du modèle de l'appareil. Tous les calculs doivent être détaillés.",
+      "enonce": "**Situation.** Élise a un appareil dont le capteur compte 6 000 × 4 000 pixels. Elle dispose d'un objectif de focale 50 mm (ouvrant jusqu'à f/2) et d'un zoom qui va de 24 mm à 200 mm.\n\n**Photo 1 – Portrait** de son frère à 2,00 m, arrière-plan flou.\n**Photo 2 – Paysage** de montagne, net du premier plan à l'horizon.\n**Photo 3 – Oiseau** posé sur une branche lointaine, dans la pénombre du soir.\n\n1. Calcule le nombre de pixels du capteur.\n2. Photo 1 : avec l'objectif de 50 mm, à quelle distance de la lentille doit se trouver le capteur ? De combien l'objectif doit-il avancer par rapport à la mise au point sur un objet très lointain ?\n3. Photo 1 : quel nombre d'ouverture choisir ? Justifie.\n4. Photo 2 : quelle focale et quelle ouverture choisir ? Justifie.\n5. Photo 3 : quelle focale choisir, et pourquoi ? Pour compenser la faible lumière, Élise peut augmenter la sensibilité ISO : quel en est l'inconvénient ?",
+      "bareme": [
+        {
+          "critere": "24 millions de pixels",
+          "points": 2
+        },
+        {
+          "critere": "OA' = 1 / (1/50 − 1/2000) ≈ 51,3 mm ; avance d'environ 1,3 mm par rapport au plan focal",
+          "points": 6
+        },
+        {
+          "critere": "Portrait : grande ouverture (f/2), faible profondeur de champ",
+          "points": 4
+        },
+        {
+          "critere": "Paysage : courte focale (grand-angle) et grand N (f/11) pour une grande profondeur de champ",
+          "points": 4
+        },
+        {
+          "critere": "Oiseau : longue focale (200 mm), petit angle de champ ; ISO élevé = bruit plus visible",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 6 000 × 4 000 = 24 000 000, soit **24 millions de pixels**.\n\n2. OA = −2,00 m = −2 000 mm ; f' = 50 mm. 1/OA' = 1/f' + 1/OA = 1/50 − 1/2 000 = 40/2 000 − 1/2 000 = 39/2 000. **OA' = 2 000 / 39 ≈ 51,3 mm**. Pour un objet très lointain, l'image se forme dans le plan focal image, à 50 mm. L'objectif doit donc être éloigné du capteur d'environ **1,3 mm** de plus.\n\n3. Pour isoler le sujet sur un arrière-plan flou, il faut une **faible profondeur de champ** : on choisit une **grande ouverture**, donc un **petit nombre d'ouverture**, par exemple **f/2**.\n\n4. Pour un paysage net du premier plan à l'horizon, il faut une **grande profondeur de champ** : **grand nombre d'ouverture** (f/11 par exemple) et **focale courte** (24 mm, grand-angle), qui augmente aussi la profondeur de champ et donne un **grand angle de champ** pour voir large. Le temps de pose sera plus long, ce qui ne gêne pas pour un paysage immobile (appareil stable).\n\n5. **Longue focale** (200 mm, téléobjectif) : l'angle de champ **diminue** quand la focale augmente, on voit un détail lointain en grand. Augmenter la **sensibilité ISO** amplifie le signal et permet de photographier dans la pénombre, mais au prix d'un **bruit** (grain) plus visible sur l'image."
+    },
+    {
+      "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+      "difficulte": 1,
+      "titre": "Le poids d'une image Full HD",
+      "consigne": "Détaille tes calculs et précise les unités.",
+      "enonce": "**Situation.** Une image d'écran « Full HD » compte 1 920 × 1 080 pixels, codée en RVB 24 bits.\n\n1. Sur combien de bits est codée chaque composante ? Combien de valeurs peut-elle prendre ?\n2. Calcule le nombre de pixels de l'image, puis sa taille en octets et en Mo, sans compression.\n3. Quelle serait sa taille en niveaux de gris sur 8 bits ?\n4. Quelle couleur correspond à chacun des codes suivants : (255, 0, 255) ; (0, 255, 255) ; (0, 0, 0) ; (128, 128, 128) ?",
+      "bareme": [
+        {
+          "critere": "8 bits par composante, 256 valeurs (0 à 255)",
+          "points": 4
+        },
+        {
+          "critere": "2 073 600 pixels ; 6 220 800 octets ≈ 6,2 Mo",
+          "points": 7
+        },
+        {
+          "critere": "Niveaux de gris : 2 073 600 octets ≈ 2,1 Mo",
+          "points": 3
+        },
+        {
+          "critere": "Magenta, cyan, noir, gris moyen",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. En RVB 24 bits, chaque composante est codée sur **8 bits** : elle prend 2⁸ = **256 valeurs**, de 0 à 255.\n\n2. Nombre de pixels : 1 920 × 1 080 = **2 073 600 pixels**. Chaque pixel occupe 24 bits = 3 octets. Taille : 2 073 600 × 3 = **6 220 800 octets ≈ 6,2 Mo** (1 Mo = 10⁶ octets).\n\n3. En niveaux de gris sur 8 bits : 1 octet par pixel, soit 2 073 600 octets ≈ **2,1 Mo**, trois fois moins.\n\n4. (255, 0, 255) : rouge + bleu = **magenta**. (0, 255, 255) : vert + bleu = **cyan**. (0, 0, 0) : **noir**. (128, 128, 128) : **gris moyen**."
+    },
+    {
+      "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+      "difficulte": 2,
+      "titre": "Envoyer les photos du voyage",
+      "consigne": "Détaille tes calculs et fais attention aux unités (octets et bits).",
+      "enonce": "**Situation.** Au retour d'un voyage scolaire, Ambre veut envoyer 20 photos à la classe. Son appareil a un capteur de 6 000 × 4 000 pixels et enregistre en RVB 24 bits. Sa connexion a un débit de 100 Mbit·s⁻¹.\n\n1. Calcule la taille d'une photo non compressée, puis celle des 20 photos, en octets.\n2. Calcule la durée de transmission des 20 photos non compressées. Exprime-la en minutes et secondes.\n3. En JPEG, chaque photo ne pèse plus que 6,0 Mo. Calcule la nouvelle durée de transmission.\n4. Quel est l'intérêt de la compression JPEG, et quelle peut être sa contrepartie ?\n5. Recopie dans l'ordre les maillons de la chaîne de transmission : récepteur, codage, canal, source, affichage, émetteur, décodage.",
+      "bareme": [
+        {
+          "critere": "72 Mo par photo, 1,44 × 10⁹ octets pour les 20",
+          "points": 4
+        },
+        {
+          "critere": "Conversion en bits (× 8) et durée ≈ 115 s, soit 1 min 55 s",
+          "points": 6
+        },
+        {
+          "critere": "JPEG : 120 Mo = 9,6 × 10⁸ bits, durée 9,6 s",
+          "points": 4
+        },
+        {
+          "critere": "Compression : fichier plus léger, parfois perte de qualité",
+          "points": 3
+        },
+        {
+          "critere": "Ordre : source, codage, émetteur, canal, récepteur, décodage, affichage",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Nombre de pixels : 6 000 × 4 000 = 24 × 10⁶. Taille d'une photo : 24 × 10⁶ × 3 = **72 × 10⁶ octets = 72 Mo**. Pour 20 photos : 20 × 72 × 10⁶ = **1,44 × 10⁹ octets** (1,44 Go).\n\n2. Taille en bits : 1,44 × 10⁹ × 8 = 1,152 × 10¹⁰ bits. Débit : 100 Mbit·s⁻¹ = 1,00 × 10⁸ bit·s⁻¹. Durée = taille / débit = 1,152 × 10¹⁰ / 1,00 × 10⁸ = **115,2 s**, soit **1 min 55 s** environ.\n\n3. 20 × 6,0 Mo = 120 Mo = 1,2 × 10⁸ octets = 9,6 × 10⁸ bits. Durée = 9,6 × 10⁸ / 1,00 × 10⁸ = **9,6 s**.\n\n4. La compression JPEG **réduit fortement la taille** du fichier (ici 12 fois) : stockage et transmission plus rapides. Contrepartie : une **perte de qualité** possible.\n\n5. **Source** (fichier) → **codage** → **émetteur** → **canal** → **récepteur** → **décodage** → **affichage**."
+    },
+    {
+      "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+      "difficulte": 3,
+      "titre": "Du capteur à l'affiche",
+      "consigne": "Mène chaque calcul jusqu'au bout et conclus pour chaque question par une phrase. Donnée : 1 pouce = 2,54 cm.",
+      "enonce": "**Situation.** Le lycée organise une exposition photo. Tiago a pris une photo de 4 000 × 3 000 pixels, en RVB 24 bits. L'imprimeur demande un fichier imprimé à **300 ppp** (pixels par pouce) pour une bonne qualité.\n\n1. Calcule la définition de l'image en millions de pixels et sa taille non compressée en Mo.\n2. Avec quelles dimensions, en cm, la photo peut-elle être imprimée à 300 ppp ?\n3. Le comité veut une affiche de 60 cm de large. Quelle résolution d'impression, en ppp, obtiendrait-on avec cette photo ? Est-ce conforme à la demande de l'imprimeur ?\n4. Tiago envoie le fichier non compressé depuis son téléphone, avec un débit de 20 Mbit·s⁻¹. Calcule la durée de l'envoi.\n5. Il hésite entre l'envoyer en niveaux de gris (8 bits) ou en JPEG compressé 10 fois. Calcule la taille dans chaque cas et conseille-le, en tenant compte de l'exposition.",
+      "bareme": [
+        {
+          "critere": "12 millions de pixels ; 36 × 10⁶ octets = 36 Mo",
+          "points": 3
+        },
+        {
+          "critere": "13,3 pouces ≈ 33,9 cm par 10 pouces = 25,4 cm",
+          "points": 5
+        },
+        {
+          "critere": "60 cm ≈ 23,6 pouces ; 4 000 / 23,6 ≈ 169 ppp, inférieur à 300 : non conforme",
+          "points": 4
+        },
+        {
+          "critere": "36 Mo = 2,88 × 10⁸ bits ; durée 14,4 s",
+          "points": 4
+        },
+        {
+          "critere": "Gris 12 Mo, JPEG 3,6 Mo ; conseil argumenté (garder la couleur, compresser)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Définition : 4 000 × 3 000 = **12 × 10⁶ pixels** (12 millions). Taille : 12 × 10⁶ × 3 = **36 × 10⁶ octets = 36 Mo**.\n\n2. Largeur : 4 000 / 300 ≈ 13,3 pouces, soit 13,3 × 2,54 ≈ **33,9 cm**. Hauteur : 3 000 / 300 = 10 pouces, soit **25,4 cm**. La photo s'imprime en environ **34 cm × 25 cm**.\n\n3. 60 cm / 2,54 ≈ 23,6 pouces. Résolution : 4 000 / 23,6 ≈ **169 ppp**. C'est **inférieur aux 300 ppp** demandés : l'affiche serait moins fine que la qualité exigée. Pour 60 cm à 300 ppp, il faudrait environ 23,6 × 300 ≈ 7 090 pixels de large.\n\n4. 36 × 10⁶ octets × 8 = 2,88 × 10⁸ bits. Durée = 2,88 × 10⁸ / 2,0 × 10⁷ = **14,4 s**.\n\n5. Niveaux de gris : 1 octet par pixel, soit **12 Mo** (trois fois moins). JPEG compressé 10 fois : 36 / 10 = **3,6 Mo** (envoi en 3,6 × 10⁶ × 8 / 2,0 × 10⁷ = 1,44 s). Conseil : pour une exposition photo, perdre toutes les couleurs change l'œuvre ; mieux vaut garder la couleur et **compresser** (fichier le plus léger), en gardant une compression modérée pour limiter la perte de qualité, ou envoyer l'original non compressé si la durée de 14 s n'est pas un problème. Toute réponse argumentée avec les tailles justes est acceptée."
+    },
+    {
+      "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+      "difficulte": 1,
+      "titre": "Les maillons d'un thermomètre numérique",
+      "consigne": "Réponds en justifiant. Détaille les calculs.",
+      "enonce": "**Situation.** Un thermomètre numérique de laboratoire est construit avec une thermistance CTN, un pont diviseur de tension, un convertisseur analogique-numérique (CAN) et un afficheur.\n\n1. Donne l'ordre des maillons de la chaîne de mesure et le rôle de chacun.\n2. Comment varie la résistance d'une thermistance CTN quand la température augmente ?\n3. Le CAN est un CAN de 8 bits, de plage 0 – 5 V. Combien de niveaux distingue-t-il ? Calcule son quantum.\n4. Même question pour un CAN de 10 bits sur la même plage. Lequel est le plus fin ?\n5. Définis la sensibilité d'un capteur.",
+      "bareme": [
+        {
+          "critere": "Grandeur → capteur → conditionneur → CAN → affichage, rôles justes",
+          "points": 6
+        },
+        {
+          "critere": "CTN : résistance qui diminue quand T augmente",
+          "points": 2
+        },
+        {
+          "critere": "8 bits : 256 niveaux, q ≈ 19,5 mV",
+          "points": 4
+        },
+        {
+          "critere": "10 bits : 1 024 niveaux, q ≈ 4,9 mV, plus fin",
+          "points": 4
+        },
+        {
+          "critere": "Sensibilité : variation de la sortie pour une variation unité de l'entrée",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Grandeur physique (température) → **capteur** (thermistance : convertit la température en grandeur électrique, sa résistance) → **conditionneur** (pont diviseur : transforme ce signal en **tension** exploitable) → **CAN** (convertit la tension analogique en **nombre binaire**) → **traitement et affichage**.\n\n2. La résistance d'une thermistance **CTN diminue** quand la température augmente.\n\n3. 2⁸ = **256 niveaux**. q = plage / 2ⁿ = 5 / 256 ≈ 0,0195 V = **19,5 mV**.\n\n4. 2¹⁰ = **1 024 niveaux** ; q = 5 / 1 024 ≈ **4,9 mV**. Le CAN de 10 bits a un quantum plus petit : il distingue des écarts de tension plus faibles, il est **plus fin**.\n\n5. La **sensibilité** d'un capteur est la **variation de sa sortie pour une variation unité de l'entrée** (par exemple 10 mV·°C⁻¹) : c'est le coefficient k de la caractéristique de transfert."
+    },
+    {
+      "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+      "difficulte": 2,
+      "titre": "Lire la température sur une carte d'acquisition",
+      "consigne": "Détaille chaque conversion avec son unité.",
+      "enonce": "**Situation.** Un capteur de température délivre une tension U proportionnelle à la température : U = k × T, avec k = 10 mV·°C⁻¹ (T en °C). Il est relié au CAN d'un microcontrôleur, de **10 bits** et de plage **0 – 5 V**. Le programme lit un nombre N et calcule U = N × q.\n\n1. Calcule le quantum q du CAN.\n2. Le programme lit N = 51. Calcule la tension U, puis la température T.\n3. Quelle est la plus petite variation de température que cette chaîne peut distinguer ?\n4. Le cahier des charges impose de distinguer 0,2 °C. La chaîne convient-elle ? On remplace le CAN par un CAN de 12 bits sur 0 – 5 V : la chaîne convient-elle alors ? Justifie par un calcul.",
+      "bareme": [
+        {
+          "critere": "q = 5 / 1 024 ≈ 4,88 mV",
+          "points": 4
+        },
+        {
+          "critere": "U = 51 × 4,88 ≈ 249 mV et T ≈ 24,9 °C",
+          "points": 6
+        },
+        {
+          "critere": "Résolution ≈ 4,88 / 10 ≈ 0,49 °C, fixée par le maillon le plus grossier",
+          "points": 4
+        },
+        {
+          "critere": "10 bits insuffisant ; 12 bits : q ≈ 1,22 mV soit ≈ 0,12 °C, conforme",
+          "points": 6
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. q = plage / 2ⁿ = 5 / 2¹⁰ = 5 / 1 024 ≈ 4,88 × 10⁻³ V = **4,88 mV**.\n\n2. U = N × q = 51 × 4,88 mV ≈ **249 mV** = 0,249 V. T = U / k = 249 mV / 10 mV·°C⁻¹ ≈ **24,9 °C**.\n\n3. Le CAN ne distingue pas des tensions plus proches que q = 4,88 mV. Avec 10 mV par °C, cela correspond à 4,88 / 10 ≈ **0,49 °C** : la chaîne ne distingue qu'environ un demi-degré. La résolution de la chaîne est fixée par son **maillon le plus grossier**, ici le CAN.\n\n4. 0,49 °C > 0,2 °C : la chaîne **ne convient pas**.\nAvec un CAN de 12 bits : q = 5 / 4 096 ≈ **1,22 mV**, soit 1,22 / 10 ≈ **0,12 °C**. 0,12 °C < 0,2 °C : la chaîne **convient** (si le capteur lui-même est assez fin)."
+    },
+    {
+      "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+      "difficulte": 3,
+      "titre": "Étalonner un thermomètre à thermistance",
+      "consigne": "Exploite l'étalonnage, puis évalue la chaîne de mesure au regard du cahier des charges. Justifie chaque conclusion.",
+      "enonce": "**Situation.** Des élèves construisent un thermomètre pour un bain-marie : thermistance CTN, pont diviseur alimenté en 5 V, CAN de 10 bits (0 – 5 V) d'un microcontrôleur.\n\n**Cahier des charges** : mesurer entre 20 °C et 80 °C ; distinguer des variations de 0,5 °C.\n\n**Étalonnage** : on plonge la thermistance dans de l'eau à différentes températures, mesurées par un thermomètre de référence (tolérance ± 0,5 °C). Sur cette plage, la tension de sortie du pont est :\n\n| T (°C) | 20 | 40 | 60 | 80 |\n|---|---|---|---|---|\n| U (V) | 1,20 | 1,60 | 2,00 | 2,40 |\n\n1. Pourquoi s'agit-il d'une mesure par étalonnage ? Quel est le rôle du pont diviseur ?\n2. Montre que la caractéristique de transfert est une droite U = k × T + U₀ et détermine k et U₀. Que représente k ?\n3. Le microcontrôleur mesure U = 1,85 V. Calcule la température du bain.\n4. Calcule le quantum du CAN et la plus petite variation de température détectable. Le cahier des charges est-il respecté ?\n5. Calcule l'incertitude-type apportée par le thermomètre de référence. Pourquoi limite-t-elle l'exactitude du thermomètre fabriqué ?",
+      "bareme": [
+        {
+          "critere": "Mesure d'une tension liée à T, relation établie par étalons ; pont = conditionneur (résistance → tension)",
+          "points": 3
+        },
+        {
+          "critere": "k = 0,020 V·°C⁻¹ (20 mV·°C⁻¹), U₀ = 0,80 V ; k = sensibilité",
+          "points": 5
+        },
+        {
+          "critere": "T = (1,85 − 0,80) / 0,020 = 52,5 °C",
+          "points": 4
+        },
+        {
+          "critere": "q ≈ 4,88 mV, soit ≈ 0,24 °C ≤ 0,5 °C : conforme ; étendue 20-80 °C couverte",
+          "points": 5
+        },
+        {
+          "critere": "u = 0,5/√3 ≈ 0,29 °C ; l'étalonnage hérite de l'incertitude de la référence",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. On ne lit pas directement la température : on mesure une **tension** qui dépend de la température, et la relation entre les deux est établie à l'aide d'**étalons** (eau à des températures connues). C'est une **mesure par étalonnage**. Le pont diviseur est le **conditionneur** : il transforme la variation de **résistance** de la thermistance en **tension** exploitable par le CAN.\n\n2. Entre deux points successifs, ΔU = 0,40 V pour ΔT = 20 °C : la pente est constante, les points sont **alignés** : c'est une droite. k = 0,40 / 20 = **0,020 V·°C⁻¹ = 20 mV·°C⁻¹**. U₀ = U − k × T = 1,20 − 0,020 × 20 = **0,80 V** (vérification : 0,80 + 0,020 × 80 = 2,40 V). k est la **sensibilité** de la chaîne capteur + conditionneur.\n\n3. T = (U − U₀) / k = (1,85 − 0,80) / 0,020 = 1,05 / 0,020 = **52,5 °C**.\n\n4. q = 5 / 1 024 ≈ **4,88 mV**. Plus petite variation détectable : 4,88 / 20 ≈ **0,24 °C**. 0,24 °C < 0,5 °C et la plage 20-80 °C est couverte par l'étalonnage : le cahier des charges est **respecté** sur ces deux points.\n\n5. Tolérance ± 0,5 °C, mesure unique : u = Δ / √3 = 0,5 / 1,732 ≈ **0,29 °C**. Toute la caractéristique de transfert a été construite à partir des indications de ce thermomètre : l'incertitude de la référence se **reporte** sur le thermomètre fabriqué. Même si le CAN distingue 0,24 °C, la température affichée n'est pas plus exacte que la référence utilisée pour l'étalonner (à laquelle s'ajoute l'incertitude de numérisation, de l'ordre du quantum)."
+    },
+    {
+      "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+      "difficulte": 1,
+      "titre": "L'alarme du congélateur",
+      "consigne": "Lis le programme et réponds aux questions.",
+      "enonce": "**Situation.** Une alarme de congélateur fonctionne avec un capteur de température relié à un microcontrôleur. Voici son programme :\n\n| Ligne | Code |\n|---|---|\n| 1 | lire la tension du capteur sur la broche A0 |\n| 2 | convertir en température |\n| 3 | si température > −12 alors allumer l'alarme |\n| 4 | sinon éteindre l'alarme |\n| 5 | attendre 10 s, puis recommencer |\n\n1. Pourquoi parle-t-on de mesure « en tout ou rien » ? Combien d'états la sortie peut-elle prendre ?\n2. Que se passe-t-il si la température mesurée vaut −15 °C ? −10 °C ?\n3. On veut que l'alarme se déclenche au-dessus de −15 °C, et que la mesure soit faite toutes les 5 s. Réécris les lignes à modifier.\n4. Donne un autre exemple de dispositif d'alerte en tout ou rien.",
+      "bareme": [
+        {
+          "critere": "Tout ou rien : dépassement d'un seuil, deux états seulement",
+          "points": 5
+        },
+        {
+          "critere": "−15 °C : alarme éteinte ; −10 °C : alarme allumée",
+          "points": 5
+        },
+        {
+          "critere": "Lignes 3 et 5 correctement réécrites (seuil −15, attente 5 s)",
+          "points": 7
+        },
+        {
+          "critere": "Exemple pertinent de dispositif d'alerte",
+          "points": 3
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. On ne cherche pas la valeur précise de la température, seulement à savoir si elle **dépasse un seuil**. La sortie ne prend que **deux états** : alarme allumée ou éteinte (1 ou 0, vrai ou faux).\n\n2. −15 °C n'est pas supérieur à −12 °C : la condition de la ligne 3 est fausse, la ligne 4 s'exécute, l'**alarme est éteinte**. −10 °C > −12 °C : la condition est vraie, l'**alarme s'allume**.\n\n3. Ligne 3 : « si température > −15 alors allumer l'alarme ». Ligne 5 : « attendre 5 s, puis recommencer ». Les autres lignes restent identiques.\n\n4. Exemples : détecteur de niveau d'eau, capteur de CO₂ dans une salle qui signale un air trop chargé, alarme de température d'un aquarium…"
+    },
+    {
+      "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+      "difficulte": 2,
+      "titre": "L'enregistrement de l'incubateur",
+      "consigne": "Exploite l'enregistrement. Justifie chaque réponse par une valeur lue ou calculée.",
+      "enonce": "**Situation.** Un incubateur doit maintenir des cultures à 37 °C. Sa régulation tout ou rien allume le chauffage sous 36,5 °C et l'éteint au-dessus de 37,5 °C.\n\n**Enregistrement.** Après la montée initiale, la température passe par des maximums de 37,8 °C aux instants t = 12 min, 30 min et 48 min, et par des minimums de 36,3 °C aux instants t = 21 min et 39 min.\n\n1. Quelle est la consigne ? Quelle est l'hystérésis (écart entre les deux seuils) ?\n2. Calcule la période des oscillations.\n3. Calcule l'écart entre la température maximale et la température minimale. Pourquoi est-il plus grand que l'écart entre les seuils ?\n4. Décris ce que fait le chauffage entre t = 12 min et t = 21 min, puis juste après t = 21 min.\n5. Pourquoi n'a-t-on pas réglé les deux seuils à 37,0 °C ?",
+      "bareme": [
+        {
+          "critere": "Consigne 37 °C, hystérésis 1,0 °C",
+          "points": 3
+        },
+        {
+          "critere": "Période 18 min",
+          "points": 4
+        },
+        {
+          "critere": "Écart 1,5 °C, supérieur à 1,0 °C à cause de l'inertie (dépassements 0,3 et 0,2 °C)",
+          "points": 6
+        },
+        {
+          "critere": "Chauffage éteint pendant la baisse, rallumé quand T passe sous 36,5 °C",
+          "points": 4
+        },
+        {
+          "critere": "Seuils identiques : commutations incessantes, usure du relais",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Consigne : **37 °C**. Hystérésis : 37,5 − 36,5 = **1,0 °C**.\n\n2. La période est la durée entre deux maximums successifs : 30 − 12 = 48 − 30 = **18 min** (on vérifie avec les minimums : 39 − 21 = 18 min).\n\n3. Écart : 37,8 − 36,3 = **1,5 °C**, plus grand que 1,0 °C. À cause de l'**inertie** du système : après l'arrêt de la résistance, elle restitue encore de la chaleur et la température dépasse 37,5 °C de 0,3 °C ; après le rallumage, il faut du temps pour que la chaleur arrive, et la température descend encore de 0,2 °C sous 36,5 °C.\n\n4. Juste avant t = 12 min, la température a dépassé 37,5 °C : le chauffage s'est **éteint**. Entre 12 et 21 min, il reste **éteint** et la température baisse. Elle passe sous 36,5 °C juste avant t = 21 min : le chauffage s'**allume** ; la température finit de descendre jusqu'à 36,3 °C puis remonte.\n\n5. Avec deux seuils identiques, le chauffage basculerait **sans cesse** autour de la consigne : des commutations incessantes qui **usent le relais**. Deux seuils donnent des oscillations un peu plus larges mais beaucoup moins de commutations."
+    },
+    {
+      "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+      "difficulte": 3,
+      "titre": "Régler la couveuse du lycée",
+      "consigne": "Compare les réglages au cahier des charges, propose une solution et écris le programme correspondant.",
+      "enonce": "**Situation.** La section agricole du lycée veut faire éclore des œufs dans une couveuse régulée en tout ou rien.\n\n**Cahier des charges** : la température doit rester **entre 36,0 °C et 38,0 °C** ; le relais du chauffage ne doit pas commuter **plus de 20 fois par heure**.\n\nDeux réglages ont été essayés pendant une heure :\n\n| Réglage | Seuil d'allumage | Seuil d'extinction | Température mesurée | Commutations par heure |\n|---|---|---|---|---|\n| A | 36,9 °C | 37,1 °C | de 36,8 à 37,3 °C | 40 |\n| B | 36,0 °C | 38,0 °C | de 35,8 à 38,3 °C | 6 |\n\n1. Calcule l'hystérésis de chaque réglage.\n2. Vérifie chacun des deux critères du cahier des charges pour les réglages A et B. Conclus.\n3. Explique le lien entre l'hystérésis, l'amplitude des oscillations et le nombre de commutations, à l'aide des deux essais.\n4. Pourquoi la température du réglage B sort-elle de l'intervalle fixé par ses seuils ?\n5. Propose un réglage C, justifie-le, et écris en langage naturel le programme de régulation (lecture du capteur, conversion, comparaisons aux deux seuils, attente).",
+      "bareme": [
+        {
+          "critere": "Hystérésis : A = 0,2 °C, B = 2,0 °C",
+          "points": 2
+        },
+        {
+          "critere": "A : température conforme mais 40 > 20 commutations ; B : commutations conformes mais sort de 36-38 °C",
+          "points": 6
+        },
+        {
+          "critere": "Petite hystérésis : faible amplitude et commutations fréquentes ; grande : l'inverse",
+          "points": 4
+        },
+        {
+          "critere": "Dépassements dus à l'inertie du système",
+          "points": 3
+        },
+        {
+          "critere": "Réglage C intermédiaire justifié et programme à deux seuils correct",
+          "points": 5
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. A : 37,1 − 36,9 = **0,2 °C**. B : 38,0 − 36,0 = **2,0 °C**.\n\n2. **Réglage A** : la température reste entre 36,8 et 37,3 °C, donc dans 36,0-38,0 °C : **conforme** ; mais 40 commutations par heure > 20 : **non conforme** (usure du relais). **Réglage B** : 6 commutations par heure ≤ 20 : **conforme** ; mais la température descend à 35,8 °C et monte à 38,3 °C : elle **sort** de l'intervalle : **non conforme**. Aucun des deux réglages ne respecte tout le cahier des charges.\n\n3. Une **faible hystérésis** (A) donne des oscillations de **faible amplitude** mais des commutations **très fréquentes** ; une **grande hystérésis** (B) donne des oscillations **larges** mais des commutations **rares**.\n\n4. Le système a de l'**inertie** : après l'extinction, la résistance restitue encore de la chaleur et la température dépasse 38,0 °C ; après l'allumage, la chaleur met du temps à arriver et la température descend encore sous 36,0 °C.\n\n5. Il faut un réglage **intermédiaire**, avec des seuils placés à l'intérieur de 36,0-38,0 °C en gardant une marge pour les dépassements dus à l'inertie (environ 0,3 °C d'après B), par exemple **allumage sous 36,5 °C, extinction au-dessus de 37,5 °C** (hystérésis 1,0 °C) : les oscillations devraient rester entre environ 36,2 et 37,8 °C, avec bien moins de commutations que A. Il faudra le vérifier par un enregistrement.\nProgramme :\n1. lire la tension du capteur ;\n2. convertir en température ;\n3. si température < 36,5 alors allumer le chauffage ;\n4. si température > 37,5 alors éteindre le chauffage ;\n5. (entre les deux seuils, ne rien changer) ;\n6. attendre quelques secondes, puis recommencer."
+    },
+    {
+      "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+      "difficulte": 1,
+      "titre": "Les étapes d'un projet",
+      "consigne": "Réponds en phrases courtes et justifie tes choix.",
+      "enonce": "**Situation.** Une équipe de 1re STL prépare un mini-projet. Leur fiche de travail mélange les phases :\n\n- a) rédiger une note concise et présenter à l'oral ;\n- b) mesurer en suivant le protocole et noter dans le cahier de laboratoire ;\n- c) chercher des informations et énoncer une problématique ;\n- d) estimer les incertitudes et confronter les résultats aux objectifs ;\n- e) formuler des hypothèses, choisir un protocole et planifier.\n\n1. Remets les phases dans l'ordre et nomme chacune (s'approprier, analyser, réaliser, valider, communiquer).\n2. L'équipe a pour sujet « L'eau du robinet ». Est-ce une problématique ? Justifie et propose une formulation précise et mesurable.\n3. Donne deux règles de tenue du cahier de laboratoire.",
+      "bareme": [
+        {
+          "critere": "Ordre c, e, b, d, a avec les cinq noms de phases",
+          "points": 8
+        },
+        {
+          "critere": "« L'eau du robinet » est un thème ; problématique précise et mesurable proposée",
+          "points": 7
+        },
+        {
+          "critere": "Deux règles justes du cahier de laboratoire",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. c) **S'approprier** : rechercher des informations, énoncer une problématique.\ne) **Analyser** : hypothèses, protocole, planification.\nb) **Réaliser** : mettre en œuvre le protocole en sécurité, mesurer, tout noter.\nd) **Valider** : analyser avec esprit critique, estimer les incertitudes, confronter aux objectifs.\na) **Communiquer** : note concise, présentation orale, réponses aux questions.\n\n2. « L'eau du robinet » est un **thème**, pas une problématique : ce n'est pas une question, rien n'y est mesurable. Une problématique est une question **précise et mesurable**, par exemple : « La conductivité de l'eau du robinet du lycée varie-t-elle de plus de 10 % entre le matin et le soir ? » (toute question précise, qui porte sur une grandeur mesurable avec un critère, est acceptée).\n\n3. Deux règles parmi : les pages sont **datées** ; on y note les protocoles, les réglages, les incidents et les idées ; les **mesures brutes** sont notées **au moment où on les fait**, jamais recopiées au propre après coup ; on ne supprime pas les mesures gênantes. C'est la mémoire du projet et la preuve de ce qui a été fait."
+    },
+    {
+      "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+      "difficulte": 2,
+      "titre": "Lancer le projet « jus d'orange »",
+      "consigne": "Rédige les éléments demandés comme si tu préparais le projet de ton équipe.",
+      "enonce": "**Situation.** Trois élèves, Yanis, Clara et Mehdi, veulent vérifier si un jus d'orange du commerce contient autant de vitamine C que l'annonce l'étiquette. Ils disposent de trois séances de deux heures, du matériel habituel du laboratoire du lycée et d'un budget de 20 €. Clara est à l'aise avec les calculs, Mehdi avec les manipulations, Yanis avec la présentation orale.\n\n1. Formule une problématique précise et mesurable.\n2. Formule une hypothèse. À quelle condition une hypothèse est-elle acceptable ?\n3. Rédige le cahier des charges du projet : grandeur à mesurer, exactitude attendue, contraintes.\n4. Propose une planification sur les trois séances et une répartition des rôles, en respectant les règles du travail en équipe.",
+      "bareme": [
+        {
+          "critere": "Problématique sous forme de question précise, avec une grandeur et un critère chiffré",
+          "points": 5
+        },
+        {
+          "critere": "Hypothèse testable par une expérience",
+          "points": 4
+        },
+        {
+          "critere": "Cahier des charges : grandeur, exactitude, contraintes (temps, matériel, coût, sécurité)",
+          "points": 6
+        },
+        {
+          "critere": "Planification cohérente sur trois séances, rôles répartis sans exclure personne, points d'étape",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Exemple : « La concentration en vitamine C du jus d'orange X est-elle égale, à 10 % près, à la valeur annoncée sur l'étiquette ? » La question porte sur une **grandeur mesurable** (concentration en vitamine C) et fixe un **critère** (10 %).\n\n2. Exemple : « Le jus contient moins de vitamine C qu'annoncé, car elle se dégrade après l'ouverture de la bouteille. » Une hypothèse doit être **testable par une expérience** (ici : doser un jus fraîchement ouvert et un jus ouvert depuis plusieurs jours).\n\n3. Cahier des charges :\n- **grandeur à mesurer** : concentration en vitamine C du jus (en mg·L⁻¹ par exemple) ;\n- **exactitude attendue** : incertitude suffisante pour conclure à 10 % près ;\n- **contraintes** : trois séances de deux heures, matériel du laboratoire du lycée, budget de 20 €, règles de sécurité, gestion des déchets.\nChaque choix du projet devra se justifier par rapport à ce cahier des charges.\n\n4. Exemple de planification :\n- **séance 1** : recherche d'informations, choix et essai du protocole, liste du matériel ;\n- **séance 2** : mesures répétées, notées brutes dans le cahier de laboratoire ;\n- **séance 3** : calculs, incertitudes, confrontation à l'étiquette, préparation de la note et de l'oral.\nRôles selon les compétences : Mehdi responsable des manipulations, Clara des calculs et des incertitudes, Yanis de la présentation ; **chacun participe à toutes les étapes**, personne n'est laissé de côté ; un **point d'étape** à la fin de chaque séance et un document partagé pour garder la trace."
+    },
+    {
+      "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+      "difficulte": 3,
+      "titre": "Critiquer la fin d'un projet",
+      "consigne": "Analyse la démarche de l'équipe avec esprit critique. Chaque critique doit être justifiée et accompagnée d'une amélioration.",
+      "enonce": "**Situation.** Une équipe a mené le projet suivant.\n\n**Problématique** : « Un colorimètre fabriqué avec une LED et un microcontrôleur permet-il de doser le colorant bleu d'un sirop avec un écart inférieur à 5 % par rapport au spectrophotomètre du laboratoire ? »\n\n**Extraits du compte rendu**\n\n> « Nous avons fait six mesures avec notre colorimètre. La cinquième nous semblait bizarre, nous l'avons supprimée. Nous avons recopié les mesures au propre dans le cahier à la fin du projet. »\n> « Résultats : colorimètre, c = 2,45 × 10⁻⁵ mol·L⁻¹ ; spectrophotomètre, c = 2,60 × 10⁻⁵ mol·L⁻¹. »\n> « Conclusion : notre colorimètre fonctionne parfaitement. »\n\n**Présentation orale** : cinq diapositives couvertes de texte, lues par un seul élève ; le graphique n'a pas d'unités ; la présentation se termine par « voilà ».\n\n1. Calcule l'écart relatif entre les deux résultats. Le cahier des charges est-il respecté ? La conclusion de l'équipe est-elle acceptable ?\n2. Relève deux erreurs dans la tenue des mesures et du cahier de laboratoire. Explique pourquoi ce sont des erreurs.\n3. Relève trois défauts de la présentation orale et propose pour chacun une amélioration.\n4. Rédige une conclusion honnête et utile pour la note concise, qui répond à la problématique et propose une piste d'amélioration.",
+      "bareme": [
+        {
+          "critere": "Écart = 0,15 / 2,60 ≈ 5,8 % > 5 % : cahier des charges non respecté, conclusion à rejeter",
+          "points": 5
+        },
+        {
+          "critere": "Deux erreurs justifiées : mesure supprimée sans raison, mesures recopiées au propre après coup",
+          "points": 4
+        },
+        {
+          "critere": "Trois défauts de l'oral et trois améliorations pertinentes",
+          "points": 6
+        },
+        {
+          "critere": "Conclusion qui répond à la question, admet le résultat décevant et propose une amélioration",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Écart relatif : |2,45 − 2,60| / 2,60 = 0,15 / 2,60 ≈ **0,058, soit 5,8 %**. C'est **supérieur à 5 %** : le cahier des charges **n'est pas respecté**. La conclusion « fonctionne parfaitement » est **inacceptable** : elle ne répond pas à la question posée et cache un résultat décevant. (On pourrait aussi estimer les incertitudes des deux mesures pour juger si l'écart est significatif.)\n\n2. **Mesure supprimée** parce qu'elle « semblait bizarre » : valider, c'est analyser les résultats avec esprit critique, pas supprimer les mesures gênantes ; il fallait la garder, la signaler et chercher une cause (incident noté ou non). **Mesures recopiées au propre à la fin** : les mesures brutes doivent être notées **au moment où on les fait** ; recopier après coup fait perdre la trace fidèle de ce qui a été fait, et le cahier n'est plus une preuve.\n\n3. Défauts et améliorations :\n- **diapositives surchargées de texte** → peu de texte, des mots-clés, des schémas ;\n- **lecture des notes par un seul élève** → parler sans lire, répartir la parole entre tous les membres ;\n- **graphique sans unités** → graphique lisible, avec grandeurs, unités et incertitudes ;\n- **fin sur « voilà »** → conclure en répondant à la problématique ;\n- (accepté aussi : problématique à annoncer dès le début, résultat décevant à montrer et expliquer).\n\n4. Exemple : « Notre colorimètre donne 2,45 × 10⁻⁵ mol·L⁻¹ contre 2,60 × 10⁻⁵ mol·L⁻¹ au spectrophotomètre, soit un écart de 5,8 %. Il ne permet donc pas, dans sa version actuelle, de doser le colorant avec un écart inférieur à 5 %. L'écart pourrait venir de la LED, dont la couleur ne correspond peut-être pas au maximum d'absorption du colorant, ou d'un étalonnage fait avec trop peu d'étalons. Nous proposons de choisir une LED adaptée, de refaire l'étalonnage avec plus d'étalons et de répéter les mesures pour estimer l'incertitude. »"
+    }
+  ]
+}

@@ -14,7 +14,6 @@ import {
 } from '@/lib/subject-template'
 import coursIcone from '@/public/images/supports/cours.webp'
 import quizIcone from '@/public/images/supports/quiz.webp'
-import flashcardsIcone from '@/public/images/supports/flashcards.webp'
 import carteIcone from '@/public/images/supports/carte.webp'
 import exerciceIcone from '@/public/images/supports/exercice.webp'
 import iaIcone from '@/public/images/supports/ia.webp'
@@ -50,7 +49,6 @@ import erreursIcone from '@/public/images/supports/erreurs.webp'
 const ICONES: Record<SupportKind, StaticImageData> = {
   cours: coursIcone,
   quiz: quizIcone,
-  flashcards: flashcardsIcone,
   // `carte` est le support « Fiche » (SUPPORT_LABELS) ; son dessin est une
   // fiche — c'est le nom qu'il a porté, et l'illustration n'a pas été refaite
   // quand il a repris celui de sa page.
@@ -84,10 +82,9 @@ const VERROUILLE = 'opacity-45 grayscale'
  *
  * Rendu à TROIS endroits, avec la même règle de choix (`buildChapterSupports`) :
  * - `layout="grid"` sur l'écran de chapitre et en pied de cours — des tuiles
- *   CARRÉES, en grille centrée, RANGÉES SOUS TROIS VERBES : Apprendre ·
- *   Mémoriser · Se tester (`groupSupports`). C'est l'écran de choix, et les
- *   titres de groupe sont ce qui dit à l'élève la différence entre trois tuiles
- *   qui, sans eux, jouaient le même contenu ;
+ *   CARRÉES, en grille centrée, RANGÉES SOUS DEUX VERBES : Apprendre ·
+ *   Se tester (`groupSupports`). C'est l'écran de choix, et les titres de
+ *   groupe disent à l'élève ce que chaque tuile lui apporte ;
  * - `layout="row"` : des pastilles compactes en ligne, sans groupes ;
  * - `layout="fiche"` sous une fiche dépliée du programme : les supports sur UNE
  *   rangée horizontale, le cours en premier (cf. `FicheSupports`).
@@ -124,7 +121,7 @@ export default function SupportChips({
 }
 
 /**
- * LA GRILLE EN TROIS GROUPES. Un titre par verbe, une grille de deux colonnes
+ * LA GRILLE EN GROUPES. Un titre par verbe, une grille de deux colonnes
  * dessous. Les titres sont petits et en capitales : ce sont des étiquettes de
  * rayon, pas des titres de page — l'écran a déjà le sien (« Par quoi tu
  * commences ? »).
@@ -147,7 +144,7 @@ function GrilleGroupee({
         const centerLast = groupe.chips.length % 2 === 1
         return (
           <section key={groupe.groupe} aria-labelledby={`groupe-${groupe.groupe}`}>
-            {/* Les trois verbes sont des titres de section : casse de phrase,
+            {/* Les verbes sont des titres de section : casse de phrase,
                 plus de petites capitales (audit du 23/09/2026). Le filet à
                 droite reste. */}
             <h3
@@ -402,8 +399,8 @@ function Raccourci({ chip }: { chip: SupportChip }) {
       </span>
 
       {/* LE CHIFFRE D'AVANCEMENT — seulement pour les supports qui portent un
-          NOMBRE : le quiz (« 7/10 », « --/8 »), l'exercice (« 14/20 »), les
-          flashcards (« 4 à revoir ») et les erreurs. Le cours et la fiche n'en
+          NOMBRE : le quiz (« 7/10 », « --/8 »), l'exercice (« 14/20 ») et les
+          erreurs (« 4 à revoir »). Le cours et la fiche n'en
           ont pas — leur état tient dans la coche du coin. Un support
           VERROUILLÉ n'affiche rien non plus : le coin dit déjà « débloquer ». */}
       {chip.badge && !chip.locked ? (

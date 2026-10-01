@@ -1,0 +1,443 @@
+{
+  "niveau": "Tle",
+  "matiere": "nsi",
+  "sujets": [
+    {
+      "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+      "difficulte": 1,
+      "titre": "Du circuit à l'application",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Donne le rôle du **processeur**, de la **mémoire vive** et du **stockage**. Que devient le contenu de la mémoire vive quand on éteint l'appareil ?\n2. Cite, dans l'ordre, les **quatre couches** du modèle TCP/IP et donne pour chacune un protocole ou une technologie en exemple.\n3. Qu'est-ce qu'un **processus** ? Quelle fonction du système d'exploitation donne à l'utilisateur l'illusion que plusieurs programmes tournent en même temps ?",
+      "bareme": [
+        { "critere": "Rôles du processeur, de la mémoire vive et du stockage ; mémoire vive effacée à l'extinction", "points": 6 },
+        { "critere": "Quatre couches dans l'ordre, chacune avec un exemple correct", "points": 8 },
+        { "critere": "Processus = programme en cours d'exécution avec sa mémoire propre ; ordonnancement cité", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **processeur** exécute les instructions ; la **mémoire vive** contient ce qui est en cours d'exécution ; le **stockage** conserve les données de façon persistante. À l'extinction, le contenu de la mémoire vive **disparaît** (le stockage, lui, est conservé).\n2. De haut en bas : **Application** (HTTP, DNS, SMTP) ; **Transport** (TCP, UDP) ; **Internet** (IP : adressage et routage) ; **Accès réseau** (Ethernet, Wi-Fi). On accepte l'ordre inverse s'il est cohérent et numéroté.\n3. Un **processus** est un programme en cours d'exécution, avec son propre espace mémoire. C'est l'**ordonnancement** qui donne à chaque processus son tour de processeur, à tour de rôle et très vite : d'où l'illusion du parallélisme."
+    },
+    {
+      "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+      "difficulte": 2,
+      "titre": "Un match en direct et un courriel",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque choix par le cours.",
+      "enonce": "**Situation.** Sur son ordinateur, Inès regarde un match de handball **en direct** dans une application vidéo. Pendant la mi-temps, elle envoie un **courriel** avec une pièce jointe à son entraîneur (protocole SMTP). L'ordinateur n'a qu'un seul processeur.\n\n1. Pour la vidéo en direct et pour l'envoi du courriel, indique si le protocole de transport adapté est **TCP** ou **UDP**. Justifie chaque choix en expliquant ce qui se passe quand un paquet se perd.\n2. Le courriel descend les couches du modèle TCP/IP avant de partir sur le Wi-Fi. Explique ce que fait chaque couche aux données reçues de la couche du dessus, puis ce qui se passe à l'arrivée chez le destinataire.\n3. Les deux applications tournent « en même temps ». Nomme la fonction du système d'exploitation qui le permet, puis celle qui empêche l'application vidéo d'écrire dans la mémoire du logiciel de courriel.",
+      "bareme": [
+        { "critere": "Vidéo en direct : UDP (perte ignorée, pas de retard) ; courriel : TCP (perte détectée et retransmise, ordre rétabli)", "points": 7 },
+        { "critere": "Encapsulation : chaque couche ajoute son en-tête ; en-têtes retirés dans l'ordre inverse à l'arrivée", "points": 6 },
+        { "critere": "Ordonnancement pour le partage du processeur ; gestion de la mémoire qui isole les processus", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Vidéo en direct → UDP** : une image perdue est simplement ignorée ; la retransmettre arriverait trop tard et figerait l'image. **Courriel → TCP** : aucune partie du message ni de la pièce jointe ne doit manquer ; TCP établit une connexion, **détecte les pertes et les retransmet**, et **rétablit l'ordre** des données. Le critère de choix est ce qui se passe quand un paquet se perd.\n2. Le message SMTP (couche Application) est confié à la couche Transport (TCP), qui l'**encapsule** en y ajoutant son en-tête ; la couche Internet ajoute l'en-tête IP (adresses, routage) ; la couche Accès réseau ajoute le sien pour la transmission sur le Wi-Fi. Chaque couche ne connaît que sa voisine. À l'arrivée, les en-têtes sont **retirés dans l'ordre inverse**, de la couche Accès réseau jusqu'à l'application.\n3. L'**ordonnancement** donne tour à tour le processeur à chaque processus : l'alternance rapide donne l'illusion du parallélisme. La **gestion de la mémoire** alloue et **isole** les processus : l'un ne peut pas écrire dans l'espace mémoire de l'autre."
+    },
+    {
+      "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+      "difficulte": 3,
+      "titre": "RIP contre OSPF sur le réseau du lycée",
+      "consigne": "Analyse le document, fais les calculs demandés et justifie chaque réponse avec le cours.",
+      "enonce": "**Document.** Cinq routeurs A, B, C, D et E sont reliés par les liaisons suivantes (ce sont les seules). Le coût OSPF de chaque liaison est d'autant plus élevé que son débit est faible.\n\n| Liaison | Débit | Coût OSPF |\n| A – B | lent | 10 |\n| B – E | lent | 10 |\n| A – C | rapide | 1 |\n| C – D | rapide | 1 |\n| D – E | rapide | 1 |\n\n1. Énumère les routes possibles de A vers E, sans passer deux fois par le même routeur. Pour chacune, donne le **nombre de sauts** et le **coût OSPF total**.\n2. Quelle route choisit le protocole **RIP** ? Quelle route choisit **OSPF** ? Justifie par le critère de chaque protocole.\n3. Explique pourquoi les deux protocoles ne font pas le même choix et lequel est ici le plus pertinent.\n4. À quelle couche du modèle TCP/IP le routage appartient-il ?\n5. Sur l'ordinateur de l'administrateur, le processus P1 détient l'imprimante et attend un fichier ; le processus P2 détient ce fichier et attend l'imprimante. Nomme et explique cette situation.",
+      "bareme": [
+        { "critere": "Deux routes trouvées : A-B-E (2 sauts, coût 20) et A-C-D-E (3 sauts, coût 3)", "points": 5 },
+        { "critere": "RIP choisit A-B-E (moins de sauts) ; OSPF choisit A-C-D-E (plus petit coût total, calculé par Dijkstra)", "points": 5 },
+        { "critere": "RIP aveugle au débit : il emprunte les liaisons lentes ; OSPF plus pertinent ici", "points": 4 },
+        { "critere": "Routage rattaché à la couche Internet (IP)", "points": 2 },
+        { "critere": "Interblocage nommé : chacun détient la ressource que l'autre attend, aucun n'avance", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Deux routes seulement :\n- **A → B → E** : 2 sauts, coût 10 + 10 = **20** ;\n- **A → C → D → E** : 3 sauts, coût 1 + 1 + 1 = **3**.\n2. **RIP** retient le plus petit **nombre de sauts** : il choisit **A → B → E** (2 sauts contre 3). **OSPF** retient le plus petit **coût total**, calculé par l'algorithme de **Dijkstra** : il choisit **A → C → D → E** (coût 3 contre 20).\n3. RIP est **aveugle au débit** : il ne compte que les routeurs traversés, et fait donc passer le trafic par deux liaisons lentes. OSPF attribue un coût à chaque lien selon son débit : la route un peu plus longue en sauts est bien plus rapide. Ici, **OSPF** fait le choix pertinent (au prix d'un protocole plus complexe).\n4. Le routage relève de la couche **Internet** (protocole IP), chargée de l'adressage et du routage.\n5. C'est un **interblocage** : P1 détient l'imprimante que P2 demande, P2 détient le fichier que P1 demande ; chacun attend l'autre, aucun ne peut avancer indéfiniment."
+    },
+    {
+      "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+      "difficulte": 1,
+      "titre": "Les trois garanties de la sécurité",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Cite les **trois garanties** que doit assurer un échange sécurisé. Pour chacune, dis ce qu'elle promet et quel outil l'assure.\n2. Compare le chiffrement **symétrique** (AES) et **asymétrique** (RSA) : nombre de clés, vitesse, et problème que pose le symétrique.\n3. Donne les **deux propriétés** d'une fonction de hachage comme SHA-256 et la conséquence de chacune.",
+      "bareme": [
+        { "critere": "Confidentialité / chiffrement, intégrité / hachage, authenticité / signature et certificat", "points": 8 },
+        { "critere": "Symétrique : une clé partagée, rapide, clé à transmettre ; asymétrique : paire de clés, plus lent", "points": 6 },
+        { "critere": "Sens unique (impossible de remonter au message) et effet d'avalanche (empreinte entièrement changée)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Confidentialité** : personne d'autre ne lit le message — assurée par le **chiffrement**. **Intégrité** : rien n'a été modifié — assurée par le **hachage**. **Authenticité** : l'interlocuteur est bien celui qu'il prétend être — assurée par la **signature** et le **certificat**.\n2. **Symétrique** : **une seule clé**, partagée par les deux interlocuteurs ; **rapide**, adapté aux gros volumes ; problème : comment **transmettre la clé** sans qu'elle soit interceptée. **Asymétrique** : une **paire** de clés (publique et privée) ; **bien plus lent** ; le problème de la transmission est résolu car la clé publique peut se diffuser.\n3. **À sens unique** : impossible de remonter de l'empreinte au message. **Effet d'avalanche** : la moindre modification du message change **entièrement** l'empreinte (ce qui permet de vérifier l'intégrité). L'empreinte a toujours une taille fixe."
+    },
+    {
+      "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+      "difficulte": 2,
+      "titre": "Le message d'Alice et le communiqué de Bob",
+      "consigne": "Lis la situation et réponds en précisant à chaque fois quelle clé est utilisée et par qui.",
+      "enonce": "**Situation.** Alice et Bob possèdent chacun une paire de clés RSA (une publique, une privée). Toutes les clés publiques sont connues de tous.\n\n1. Alice veut envoyer à Bob un message que **lui seul** pourra lire. Avec quelle clé chiffre-t-elle ? Qui peut déchiffrer, et pourquoi ?\n2. Bob publie un communiqué à destination de tout le club et veut que chacun puisse vérifier qu'il vient bien de lui et n'a pas été modifié. Quelle clé utilise-t-il ? Que garantit ce procédé ? Le communiqué est-il pour autant confidentiel ?\n3. Le site du club utilise HTTPS. Explique pourquoi HTTPS n'utilise pas RSA pour chiffrer tous les échanges, et comment il combine les deux types de chiffrement.",
+      "bareme": [
+        { "critere": "Chiffrement avec la clé publique de Bob ; seul Bob, qui détient la clé privée, peut déchiffrer", "points": 6 },
+        { "critere": "Signature avec la clé privée de Bob ; origine et intégrité prouvées ; aucune confidentialité", "points": 7 },
+        { "critere": "Asymétrique trop lent : il sert à échanger une clé de session, le reste est chiffré en symétrique", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Alice chiffre avec la **clé publique de Bob**. Seul Bob peut déchiffrer, avec sa **clé privée**, qu'il est le seul à détenir. C'est la **confidentialité**.\n2. Bob **signe** avec sa **propre clé privée**. Tout le monde peut vérifier la signature avec la clé publique de Bob : cela prouve l'**origine** (le communiqué vient de Bob) et l'**intégrité** (il n'a pas été modifié). Mais la signature ne protège rien du regard : le communiqué **n'est pas confidentiel**, n'importe qui peut le lire.\n3. Le chiffrement asymétrique est **bien plus lent** que le symétrique, inadapté aux gros volumes. Le symétrique est rapide, mais il faut transmettre la clé sans qu'elle soit interceptée. HTTPS combine donc les deux : l'asymétrique sert à **échanger une clé de session** symétrique, puis **toute la suite** de la communication est chiffrée en **symétrique** avec cette clé. Cela se refait à chaque connexion."
+    },
+    {
+      "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+      "difficulte": 3,
+      "titre": "Rapport d'incident d'une boutique en ligne",
+      "consigne": "Analyse le rapport, puis rédige des réponses argumentées en t'appuyant sur le cours.",
+      "enonce": "**Document — extrait du rapport d'incident d'une petite boutique en ligne (fictive).**\n\n> 1. Un employé a reçu un courriel lui demandant de « confirmer ses identifiants » sur une page qui imitait l'interface d'administration. Il y a saisi son mot de passe.\n> 2. Sur le formulaire de recherche du site, un visiteur a tapé un texte qui a modifié la requête envoyée à la base de données et affiché la liste des clients.\n> 3. Les mots de passe des clients sont enregistrés **chiffrés** avec une clé AES, stockée sur le même serveur, pour pouvoir les « renvoyer au client en cas d'oubli ».\n> 4. Deux clients utilisent le même mot de passe, « soleil2026 ».\n\n1. Nomme l'attaque décrite au point 1 et celle décrite au point 2.\n2. Critique le stockage des mots de passe (point 3) et décris la méthode correcte. Justifie-la par les propriétés du hachage.\n3. Avec la méthode correcte **sans sel**, que verrait un attaquant qui lit la base à propos des deux clients du point 4 ? Qu'apporte le **sel** aléatoire ?\n4. Propose **deux** protections vues en cours et explique contre quelle faiblesse du rapport chacune agit.",
+      "bareme": [
+        { "critere": "Point 1 : hameçonnage ; point 2 : injection SQL", "points": 4 },
+        { "critere": "Stockage chiffré et déchiffrable critiqué ; hachage à sens unique proposé et justifié", "points": 6 },
+        { "critere": "Sans sel, empreintes identiques ; sel aléatoire : empreintes différentes, dictionnaire précalculé inutile", "points": 5 },
+        { "critere": "Deux protections du cours pertinentes et reliées à une faiblesse précise (ex. authentification à plusieurs facteurs)", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Point 1 : **hameçonnage** (obtenir des identifiants par une fausse page). Point 2 : **injection SQL** (détourner une requête par les données saisies).\n2. Un mot de passe ne doit **jamais** être stocké de façon **déchiffrable** : la clé étant sur le même serveur, un attaquant qui entre récupère la clé et **tous** les mots de passe en clair. Il faut stocker l'**empreinte** du mot de passe obtenue par une **fonction de hachage** (type SHA-256) avec un **sel**. Le hachage est **à sens unique** : on ne peut pas remonter de l'empreinte au mot de passe. Pour vérifier une connexion, on hache le mot de passe saisi et on compare les empreintes. Conséquence : le site ne peut plus « renvoyer » un mot de passe oublié, il doit en faire choisir un nouveau.\n3. Sans sel, deux mots de passe identiques donnent **la même empreinte** : l'attaquant voit que les deux clients partagent le même mot de passe, et peut le retrouver par une table d'empreintes **précalculée** (dictionnaire). Avec un **sel aléatoire** propre à chaque compte, ajouté avant le hachage, les deux empreintes sont **différentes** et les tables précalculées ne servent plus.\n4. Exemples attendus (deux suffisent) :\n- **Authentification à plusieurs facteurs** : même avec le mot de passe volé par hameçonnage, l'attaquant ne peut pas se connecter sans le second facteur ;\n- **Mises à jour** des logiciels : elles corrigent les failles connues ;\n- **Pare-feu** : il filtre les ports et limite ce qui est accessible depuis l'extérieur ;\n- **Segmentation** du réseau : une intrusion dans une partie ne donne pas accès à tout.\nOn valorise la remarque du cours : le maillon le plus faible reste l'utilisateur, l'intrusion commence ici par un **courriel**."
+    },
+    {
+      "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+      "difficulte": 1,
+      "titre": "Pile, file et liste chaînée",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Explique la différence entre un **type abstrait** et son **implémentation**, en prenant l'exemple de la pile.\n2. Donne la règle de fonctionnement d'une **pile** et celle d'une **file**, puis un usage de chacune.\n3. Compare le coût de deux opérations pour un **tableau** (liste Python) et pour une **liste chaînée** : l'accès au i-ième élément, puis l'insertion en tête. Justifie en une phrase pour la liste chaînée.",
+      "bareme": [
+        { "critere": "Type abstrait = opérations promises ; implémentation = façon de les réaliser (tableau ou liste chaînée)", "points": 6 },
+        { "critere": "Pile LIFO et file FIFO, avec un usage correct pour chacune", "points": 7 },
+        { "critere": "Accès : constant / linéaire ; insertion en tête : coûteuse / constante ; justification par les maillons", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **type abstrait** définit un jeu d'**opérations** et leur comportement : une pile promet d'empiler, de dépiler et de tester si elle est vide. L'**implémentation** est la façon dont la promesse est tenue (avec un tableau ou une liste chaînée), connue seulement de l'auteur de la structure. C'est l'encapsulation appliquée aux données.\n2. **Pile (LIFO)** : dernier entré, premier sorti ; usages : parenthésage, historique, pile d'appels d'un programme récursif. **File (FIFO)** : premier entré, premier sorti ; usages : file d'attente, tampon d'impression, parcours en largeur.\n3. Accès au i-ième élément : **constant** pour le tableau, **linéaire** pour la liste chaînée. Insertion en tête : **coûteuse** pour le tableau (il faut tout décaler), **constante** pour la liste chaînée. Dans une liste chaînée, chaque maillon contient une valeur et une référence vers le suivant : pour atteindre le i-ième il faut suivre la chaîne, mais pour insérer en tête il suffit de créer un maillon qui pointe vers l'ancien premier."
+    },
+    {
+      "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+      "difficulte": 2,
+      "titre": "Suivre une pile et une file pas à pas",
+      "consigne": "Suis les opérations une par une en donnant l'état de la structure après chacune.",
+      "enonce": "**Situation.** Karim teste deux structures, initialement vides.\n\n**Structure 1 : une pile P.** Opérations, dans l'ordre : empiler 3, empiler 7, empiler 2, dépiler, empiler 5.\n\n**Structure 2 : une file F.** Opérations, dans l'ordre : enfiler 3, enfiler 7, enfiler 2, défiler, enfiler 5.\n\n1. Donne l'état de P après chaque opération, la valeur renvoyée par « dépiler », puis l'élément au sommet à la fin.\n2. Donne l'état de F après chaque opération, la valeur renvoyée par « défiler », puis l'ordre dans lequel sortiraient les éléments restants si l'on défilait jusqu'à ce que F soit vide.\n3. Dans un logiciel de dessin, le bouton « Annuler » doit défaire la **dernière** action effectuée, puis l'avant-dernière, etc. Quelle structure choisir ? Justifie.",
+      "bareme": [
+        { "critere": "États successifs de la pile justes ; dépiler renvoie 2 ; sommet final 5", "points": 7 },
+        { "critere": "États successifs de la file justes ; défiler renvoie 3 ; sortie finale 7, 2, 5", "points": 7 },
+        { "critere": "Pile choisie pour l'historique d'annulation, justifiée par la règle LIFO", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Pile (sommet à droite) : [3] → [3, 7] → [3, 7, 2] → **dépiler renvoie 2** → [3, 7] → [3, 7, 5]. Le sommet est **5**. (Si l'on dépilait tout : 5, 7, 3.)\n2. File (tête à gauche) : [3] → [3, 7] → [3, 7, 2] → **défiler renvoie 3** → [7, 2] → [7, 2, 5]. En défilant jusqu'au vide : **7, puis 2, puis 5**.\n3. Une **pile** : chaque action est empilée au moment où elle est faite ; « Annuler » dépile la plus récente. La règle « dernier entré, premier sorti » correspond exactement au besoin (c'est l'usage « historique » du cours). Une file annulerait au contraire la plus ancienne action."
+    },
+    {
+      "chapitre": "20337651-a8d3-56d3-a827-2d1fca032227",
+      "difficulte": 3,
+      "titre": "Les structures de la médiathèque",
+      "consigne": "Choisis et justifie chaque structure, puis déroule l'algorithme demandé étape par étape.",
+      "enonce": "**Situation.** Chloé programme le logiciel d'une médiathèque.\n\n1. Pour chaque besoin, choisis la structure la plus adaptée (tableau, liste chaînée, pile, file, dictionnaire, arbre, graphe) et justifie par l'opération dominante :\n   a. retrouver la fiche d'un adhérent à partir de son numéro de carte ;\n   b. servir les réservations d'un livre dans l'ordre où elles ont été faites ;\n   c. mémoriser les pages consultées pour le bouton « Retour » ;\n   d. le classement des ouvrages en rayons, sous-rayons et sous-sous-rayons ;\n   e. accéder très souvent à la place n° i d'un catalogue qui ne change pas.\n2. Pour vérifier les formules saisies, on utilise une pile : on lit les caractères de gauche à droite ; une parenthèse ouvrante est empilée ; une fermante dépile, et si la pile est vide à ce moment, l'expression est incorrecte ; à la fin, l'expression est correcte si et seulement si la pile est vide. Déroule l'algorithme sur **(a+b))** puis sur **((a+b)*c** en donnant la conclusion.\n3. Le premier prototype cherchait un adhérent en parcourant une liste Python de 50 000 adhérents. Le programme était-il faux ? Qu'apporte le bon choix ?",
+      "bareme": [
+        { "critere": "Cinq choix justes et justifiés : dictionnaire, file, pile, arbre, tableau (2 points chacun)", "points": 10 },
+        { "critere": "Déroulement correct des deux expressions et conclusions : incorrecte (pile vide) et incorrecte (pile non vide)", "points": 6 },
+        { "critere": "Programme juste mais lent : recherche linéaire contre temps constant en moyenne avec le dictionnaire", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. a. **Dictionnaire** : on cherche « la valeur associée à » un identifiant ; recherche en temps constant en moyenne grâce au hachage.\nb. **File** : premier entré, premier servi.\nc. **Pile** : le bouton Retour ramène à la page la plus récente (dernier entré, premier sorti).\nd. **Arbre** : relation hiérarchique.\ne. **Tableau** : accès par indice en temps constant.\n2. **(a+b))** : « ( » empilée → pile [(] ; « a+b » ignorés ; « ) » dépile → pile vide ; second « ) » : la pile est **vide**, on ne peut pas dépiler → expression **incorrecte** (une fermante de trop).\n**((a+b)*c** : « ( » → [(] ; « ( » → [(, (] ; « ) » dépile → [(] ; fin de lecture : la pile contient encore une parenthèse → expression **incorrecte** (une ouvrante jamais fermée).\n3. Le programme n'était **pas faux** : il trouvait le bon adhérent. Mais il était **lent** : la recherche dans une liste est **linéaire** (jusqu'à 50 000 comparaisons), alors qu'un dictionnaire répond en temps **constant en moyenne**. Une structure mal choisie rend un programme lent, et sur des données réelles c'est la même chose qu'un programme faux."
+    },
+    {
+      "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+      "difficulte": 1,
+      "titre": "Classe, instance et self",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Explique la différence entre une **classe** et une **instance**, avec l'exemple d'un compte bancaire.\n2. Dans une méthode Python, que désigne le paramètre **self** ? Que se passe-t-il si l'on écrit `solde = 0` au lieu de `self.solde = 0` dans le constructeur ?\n3. Différencie un **attribut d'instance** et un **attribut de classe**, et donne un exemple d'attribut de classe.",
+      "bareme": [
+        { "critere": "Classe = modèle (attributs et méthodes) ; instance = objet construit, valeurs concrètes ; exemple du compte", "points": 7 },
+        { "critere": "self désigne l'instance sur laquelle la méthode est appelée ; sans self, variable locale perdue", "points": 6 },
+        { "critere": "Attribut d'instance propre à un objet, attribut de classe partagé ; exemple (compteur d'instances, constante)", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **classe** est un **modèle** : elle décrit des attributs (données) et des méthodes (fonctions), par exemple ce qu'est un compte bancaire (titulaire, solde, déposer, retirer). Une **instance** est un objet construit sur ce modèle, avec des valeurs concrètes : **mon** compte, au nom de Léo, avec 120 € de solde.\n2. **self** désigne l'**instance en cours**, celle sur laquelle la méthode est appelée : il permet de lire et de modifier ses attributs. Écrire `solde = 0` sans self crée une **variable locale**, qui disparaît à la fin de la méthode : l'objet n'a pas d'attribut solde (c'est l'erreur la plus fréquente du chapitre).\n3. Un **attribut d'instance** appartient à **un** objet (le solde de chaque compte). Un **attribut de classe** est **partagé par tous** les objets de la classe : un compteur du nombre de comptes créés, ou une constante comme un taux commun."
+    },
+    {
+      "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+      "difficulte": 2,
+      "titre": "Les comptes de Yanis et Maëlle",
+      "consigne": "Lis le programme, exécute-le à la main et justifie chaque réponse.",
+      "enonce": "```python\nclass Compte:\n    nb_comptes = 0\n\n    def __init__(self, titulaire, solde):\n        self.titulaire = titulaire\n        self.solde = solde\n        Compte.nb_comptes = Compte.nb_comptes + 1\n\n    def deposer(self, montant):\n        self.solde = self.solde + montant\n\n    def retirer(self, montant):\n        if montant <= self.solde:\n            self.solde = self.solde - montant\n            return True\n        return False\n\na = Compte('Yanis', 100)\nb = Compte('Maëlle', 50)\na.deposer(30)\nok = b.retirer(80)\nb.retirer(20)\nprint(a.solde, b.solde, ok, Compte.nb_comptes)\n```\n\n1. Relève l'attribut de classe et les attributs d'instance. Combien d'instances sont créées ?\n2. Qu'affiche la dernière ligne ? Détaille l'effet de chaque appel.\n3. Un élève réécrit `deposer` avec la ligne `solde = self.solde + montant`. Qu'afficherait alors `a.solde` ? Explique.",
+      "bareme": [
+        { "critere": "nb_comptes attribut de classe ; titulaire et solde attributs d'instance ; deux instances", "points": 5 },
+        { "critere": "Affichage exact 130 30 False 2, chaque appel expliqué", "points": 9 },
+        { "critere": "a.solde resterait 100 : variable locale sans self, attribut non modifié", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. `nb_comptes` est un **attribut de classe** (partagé par tous les comptes) ; `titulaire` et `solde` sont des **attributs d'instance**. Deux instances sont créées, `a` et `b`.\n2. Création de `a` : solde 100, nb_comptes passe à 1. Création de `b` : solde 50, nb_comptes passe à 2. `a.deposer(30)` : solde de a = 130. `b.retirer(80)` : 80 ≤ 50 est faux, rien n'est retiré et la méthode renvoie **False**, donc `ok = False`. `b.retirer(20)` : 20 ≤ 50, solde de b = 30 (la valeur renvoyée True n'est pas conservée). Affichage : **130 30 False 2**.\n3. `solde = self.solde + montant` crée une **variable locale** `solde` qui vaut 130, puis disparaît à la fin de la méthode : l'attribut `self.solde` n'est **pas modifié**. `a.solde` vaudrait donc **100**. Il faut écrire `self.solde = …` pour modifier l'objet."
+    },
+    {
+      "chapitre": "66e94014-c500-5c5e-b628-b549408a4962",
+      "difficulte": 3,
+      "titre": "Formes, héritage et polymorphisme",
+      "consigne": "Analyse le programme, prévois son affichage et complète-le en respectant l'encapsulation.",
+      "enonce": "Dans ce programme, l'aire du disque est approchée avec π ≈ 3.\n\n```python\nclass Forme:\n    def nom(self):\n        return 'forme'\n    def aire(self):\n        return 0\n    def decrire(self):\n        return self.nom() + ' : ' + str(self.aire())\n\nclass Rectangle(Forme):\n    def __init__(self, largeur, hauteur):\n        self._largeur = largeur\n        self._hauteur = hauteur\n    def nom(self):\n        return 'rectangle'\n    def aire(self):\n        return self._largeur * self._hauteur\n\nclass Disque(Forme):\n    def __init__(self, rayon):\n        self._rayon = rayon\n    def nom(self):\n        return 'disque'\n    def aire(self):\n        return 3 * self._rayon * self._rayon\n\nformes = [Rectangle(2, 5), Disque(2)]\nfor f in formes:\n    print(f.decrire())\n```\n\n1. Quelle relation lie `Rectangle` et `Forme` ? Une classe `Dessin` possède un attribut `formes`, liste d'objets `Forme` : quelle relation lie `Dessin` et `Forme` ?\n2. Qu'affiche la boucle ? Explique pourquoi `decrire`, écrite une seule fois dans `Forme`, donne deux résultats différents.\n3. Écris dans `Rectangle` une méthode `modifier_largeur(self, valeur)` qui refuse (sans rien changer) une valeur négative ou nulle.\n4. Que signale le souligné de `_largeur` ? Python empêche-t-il d'écrire `r._largeur = -4` depuis l'extérieur ? Quel est l'intérêt de passer par une méthode ?",
+      "bareme": [
+        { "critere": "Héritage (« est un ») pour Rectangle/Forme ; composition (« a un ») pour Dessin/Forme", "points": 4 },
+        { "critere": "Affichage exact « rectangle : 10 » puis « disque : 12 » et polymorphisme expliqué (méthodes redéfinies, type réel)", "points": 6 },
+        { "critere": "Méthode de modification correcte qui vérifie la validité avant d'écrire self._largeur", "points": 5 },
+        { "critere": "Souligné = convention, non imposée ; intérêt : vérifier et pouvoir changer la représentation interne", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Un rectangle **est une** forme : c'est l'**héritage** (Rectangle reprend decrire et redéfinit nom et aire). Un dessin **a des** formes : c'est la **composition** (un attribut qui contient des objets).\n2. Affichage :\n```\nrectangle : 10\ndisque : 12\n```\nRectangle : 2 × 5 = 10 ; disque : 3 × 2 × 2 = 12. `decrire` appelle `self.nom()` et `self.aire()` : c'est la méthode du **type réel** de l'objet qui s'exécute. C'est le **polymorphisme** : un traitement unique pour une collection d'objets hétérogènes.\n3. Par exemple :\n```python\n    def modifier_largeur(self, valeur):\n        if valeur > 0:\n            self._largeur = valeur\n```\n(on accepte une version qui renvoie True/False ou affiche un message, pourvu que la valeur invalide ne soit pas écrite).\n4. Le souligné signale par **convention** que l'attribut est **interne**. Python **ne l'interdit pas** : `r._largeur = -4` fonctionne ; la discipline vient du programmeur. Passer par une méthode permet de **vérifier la validité** de ce qu'on écrit et de **changer la représentation interne** de la classe sans casser le code qui l'utilise."
+    },
+    {
+      "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+      "difficulte": 1,
+      "titre": "Le vocabulaire d'un petit arbre",
+      "consigne": "Réponds en utilisant le vocabulaire du cours ; justifie la dernière réponse.",
+      "enonce": "**L'arbre étudié.** La racine porte **8**. Ses enfants sont **3** (à gauche) et **10** (à droite). Le nœud 3 a deux enfants : **1** (à gauche) et **6** (à droite). Le nœud 10 n'a qu'un enfant, **14**, à droite. Les nœuds 1, 6 et 14 n'ont pas d'enfant.\n\nOn rappelle que la hauteur d'un arbre réduit à sa racine vaut 0.\n\n1. Quelle est la **racine** ? Quelles sont les **feuilles** ?\n2. Donne la **taille** et la **hauteur** de cet arbre.\n3. Cet arbre est-il un **arbre binaire de recherche** ? Justifie en vérifiant la contrainte d'ordre.",
+      "bareme": [
+        { "critere": "Racine 8 ; feuilles 1, 6 et 14", "points": 6 },
+        { "critere": "Taille 6 ; hauteur 2 (chemin 8-3-1 par exemple)", "points": 6 },
+        { "critere": "ABR justifié : pour chaque nœud, sous-arbre gauche inférieur et sous-arbre droit supérieur", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **racine** est 8 (le seul nœud sans parent). Les **feuilles** (nœuds sans enfant) sont **1, 6 et 14**.\n2. **Taille** = nombre de nœuds = 6 (8, 3, 10, 1, 6, 14). **Hauteur** = plus long chemin racine-feuille, compté en arêtes : 8 → 3 → 1 (ou 8 → 3 → 6, ou 8 → 10 → 14) : **2**.\n3. **Oui**. Pour 8 : tout le sous-arbre gauche (3, 1, 6) est inférieur à 8, tout le sous-arbre droit (10, 14) est supérieur. Pour 3 : 1 < 3 à gauche et 6 > 3 à droite. Pour 10 : 14 > 10 à droite. La contrainte d'ordre est vérifiée pour **tous** les nœuds : c'est un arbre binaire de recherche."
+    },
+    {
+      "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+      "difficulte": 2,
+      "titre": "Construire et parcourir un ABR",
+      "consigne": "Construis l'arbre étape par étape, puis donne chaque parcours sans justification supplémentaire.",
+      "enonce": "**Situation.** Maya insère, dans cet ordre, les valeurs suivantes dans un arbre binaire de recherche initialement vide : **15, 8, 20, 4, 11, 17, 25**. Chaque valeur est insérée en descendant depuis la racine : à gauche si elle est plus petite que le nœud, à droite si elle est plus grande.\n\n1. Dessine (ou décris nœud par nœud) l'arbre obtenu, et donne sa hauteur (un arbre réduit à sa racine a une hauteur 0).\n2. Donne la liste des valeurs dans l'ordre des parcours **infixe**, **préfixe** et **suffixe**. Quel parcours donne les valeurs triées ?\n3. Maya recherche la valeur 17. Indique les nœuds comparés, dans l'ordre, et le nombre de comparaisons.",
+      "bareme": [
+        { "critere": "Arbre correct (15 racine ; 8 et 20 ; 4, 11 sous 8 ; 17, 25 sous 20) et hauteur 2", "points": 6 },
+        { "critere": "Infixe 4 8 11 15 17 20 25 (valeurs triées), préfixe 15 8 4 11 20 17 25, suffixe 4 11 8 17 25 20 15", "points": 9 },
+        { "critere": "Recherche de 17 : comparaisons avec 15, 20, puis 17 trouvé — 3 comparaisons", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 15 est la racine. 8 < 15 : à gauche de 15. 20 > 15 : à droite. 4 : gauche de 15, puis gauche de 8. 11 : gauche de 15, puis droite de 8. 17 : droite de 15, puis gauche de 20. 25 : droite de 15, puis droite de 20.\n```\n        15\n      /    \\\n     8      20\n    / \\    /  \\\n   4  11  17  25\n```\nL'arbre est complet, de **hauteur 2**.\n2. **Infixe** (gauche, nœud, droite) : **4 8 11 15 17 20 25** — ce sont les valeurs **triées**, propriété du parcours infixe sur un ABR.\n**Préfixe** (nœud, gauche, droite) : **15 8 4 11 20 17 25**.\n**Suffixe** (gauche, droite, nœud) : **4 11 8 17 25 20 15**.\n3. On compare 17 à **15** : plus grand, on descend à droite ; à **20** : plus petit, on descend à gauche ; à **17** : trouvé. **3 comparaisons**, soit la hauteur + 1 : on n'a jamais examiné le sous-arbre gauche de 15."
+    },
+    {
+      "chapitre": "6f0243f4-f23c-5a77-8bbb-f7b42d2d6a49",
+      "difficulte": 3,
+      "titre": "Le piège du peigne",
+      "consigne": "Compare les deux arbres, fais les calculs demandés et écris la fonction récursive.",
+      "enonce": "On rappelle : la hauteur d'un arbre réduit à sa racine vaut 0, celle d'un arbre vide vaut −1 ; un arbre binaire de hauteur h contient au plus 2^(h+1) − 1 nœuds.\n\n**Situation.** Nathan insère les entiers de 1 à 7 dans un ABR vide, dans l'ordre **1, 2, 3, 4, 5, 6, 7**. Sa camarade Lou insère les mêmes valeurs dans l'ordre **4, 2, 6, 1, 3, 5, 7**.\n\n1. Décris l'arbre de Nathan et celui de Lou, et donne la hauteur de chacun.\n2. Combien de comparaisons faut-il, dans chaque arbre, pour trouver la valeur 7 ? Relie ce résultat au coût d'une recherche dans un ABR.\n3. En utilisant la relation rappelée, montre qu'un arbre binaire de hauteur 2 ne peut pas contenir plus de 7 nœuds, puis détermine la **hauteur minimale** d'un arbre binaire de 1 000 000 de nœuds (on donne 2^19 = 524 288 et 2^20 = 1 048 576).\n4. Un arbre est représenté par `None` s'il est vide, sinon par un triplet `(gauche, valeur, droit)`. Écris une fonction **récursive** `hauteur(arbre)` qui renvoie sa hauteur.",
+      "bareme": [
+        { "critere": "Arbre de Nathan en peigne (hauteur 6) ; arbre de Lou équilibré et complet (hauteur 2)", "points": 4 },
+        { "critere": "7 comparaisons contre 3 ; coût linéaire pour le peigne, logarithmique pour l'arbre équilibré", "points": 5 },
+        { "critere": "2^3 − 1 = 7 ; hauteur minimale 19 pour un million de nœuds, calcul justifié", "points": 5 },
+        { "critere": "Fonction récursive correcte : −1 pour None, sinon 1 + max des hauteurs des deux sous-arbres", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Nathan** : chaque valeur est plus grande que toutes les précédentes, elle va toujours à droite : 1 → 2 → 3 → … → 7, un **peigne** de **hauteur 6**. **Lou** : 4 à la racine, 2 et 6 ses enfants, 1 et 3 sous 2, 5 et 7 sous 6 : arbre **équilibré** et complet de **hauteur 2**.\n2. Trouver 7 : Nathan compare 1, 2, 3, 4, 5, 6, 7 → **7 comparaisons** ; Lou compare 4, 6, 7 → **3 comparaisons**. La recherche descend un chemin : son coût est la hauteur (+ 1). Dans un peigne, la hauteur vaut environ n : recherche **linéaire**, tout l'intérêt de l'ABR disparaît (c'est le cas des valeurs insérées déjà triées). Équilibré, la hauteur vaut environ log₂(n) : recherche **logarithmique**.\n3. Pour h = 2 : 2^(2+1) − 1 = 8 − 1 = **7** nœuds au plus. Pour n = 1 000 000, il faut 2^(h+1) − 1 ≥ 1 000 000, soit 2^(h+1) ≥ 1 000 001. Or 2^19 = 524 288 est trop petit et 2^20 = 1 048 576 suffit : h + 1 ≥ 20, donc **h ≥ 19**. Un million de nœuds tiennent dans un arbre de hauteur 19 : une vingtaine de comparaisons suffisent si l'arbre est équilibré.\n4.\n```python\ndef hauteur(arbre):\n    if arbre is None:\n        return -1\n    gauche, valeur, droit = arbre\n    return 1 + max(hauteur(gauche), hauteur(droit))\n```\nVérification : une feuille `(None, 5, None)` donne 1 + max(−1, −1) = 0, conforme à la convention. On accepte `arbre == None` et l'accès par indices `arbre[0]`, `arbre[2]`."
+    },
+    {
+      "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+      "difficulte": 1,
+      "titre": "Degré, cycle et matrice",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "**Le graphe étudié**, non orienté et non pondéré : quatre sommets A, B, C, D et quatre arêtes **A–B**, **A–C**, **B–C** et **C–D**.\n\n1. Donne le **degré** de chaque sommet.\n2. Ce graphe contient-il un **cycle** ? Si oui, donne-le.\n3. Ce graphe est-il **connexe** ? Justifie.\n4. Écris sa **matrice d'adjacence**, les sommets étant rangés dans l'ordre A, B, C, D.",
+      "bareme": [
+        { "critere": "Degrés : A 2, B 2, C 3, D 1", "points": 5 },
+        { "critere": "Cycle A-B-C-A identifié", "points": 4 },
+        { "critere": "Connexe, justifié : chaque sommet est atteignable depuis tout autre", "points": 3 },
+        { "critere": "Matrice 4 × 4 symétrique exacte", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Degré = nombre de voisins : **A : 2** (B, C) ; **B : 2** (A, C) ; **C : 3** (A, B, D) ; **D : 1** (C).\n2. **Oui** : A → B → C → A est un chemin qui revient à son départ.\n3. **Oui**, le graphe est connexe : depuis A on atteint B et C directement, et D en passant par C ; tout sommet est donc atteignable depuis tout autre.\n4. La case (i, j) vaut 1 s'il y a une arête entre i et j (matrice symétrique, graphe non orienté) :\n\n| | A | B | C | D |\n| A | 0 | 1 | 1 | 0 |\n| B | 1 | 0 | 1 | 0 |\n| C | 1 | 1 | 0 | 1 |\n| D | 0 | 0 | 1 | 0 |"
+    },
+    {
+      "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+      "difficulte": 2,
+      "titre": "Le plus court trajet dans le quartier",
+      "consigne": "Déroule le parcours en indiquant le contenu de la file à chaque étape, puis réponds aux questions.",
+      "enonce": "**Situation.** Six arrêts de bus A à F sont reliés sans sens unique. Le graphe est donné par ses listes d'adjacence :\n\n```python\nG = {'A': ['B', 'C'],\n     'B': ['A', 'D'],\n     'C': ['A', 'D', 'E'],\n     'D': ['B', 'C', 'F'],\n     'E': ['C', 'F'],\n     'F': ['D', 'E']}\n```\n\n1. Effectue un **parcours en largeur** depuis A : les voisins sont examinés dans l'ordre des listes, et un sommet est marqué dès qu'il entre dans la file. Donne l'ordre de visite et le contenu de la file à chaque étape.\n2. Déduis-en le nombre minimal d'arêtes pour aller de A à chaque arrêt, et un plus court chemin de A à F.\n3. Pourquoi faut-il marquer les sommets visités ? Que se passerait-il ici sans marquage ?\n4. Combien de cases occuperait la matrice d'adjacence de ce graphe ? Combien d'entrées contiennent les listes d'adjacence ? Laquelle des deux représentations choisir pour un réseau de 10 000 arrêts où chacun a 2 à 4 voisins ?",
+      "bareme": [
+        { "critere": "Parcours en largeur juste : ordre A, B, C, D, E, F avec l'évolution de la file", "points": 7 },
+        { "critere": "Distances A 0, B 1, C 1, D 2, E 2, F 3 et un chemin de 3 arêtes vers F", "points": 5 },
+        { "critere": "Marquage justifié par les cycles (ex. A-B-D-C-A) qui feraient boucler le parcours", "points": 4 },
+        { "critere": "36 cases contre 14 entrées ; liste d'adjacence pour un grand graphe creux", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. File (tête à gauche) :\n- départ : file [A], A marqué ;\n- on défile **A** : B et C enfilés → [B, C] ;\n- on défile **B** : A déjà marqué, D enfilé → [C, D] ;\n- on défile **C** : A et D déjà marqués, E enfilé → [D, E] ;\n- on défile **D** : B et C marqués, F enfilé → [E, F] ;\n- on défile **E** : C et F marqués → [F] ;\n- on défile **F** : rien de neuf → file vide.\nOrdre de visite : **A, B, C, D, E, F**.\n2. Le parcours en largeur visite par niveaux : **A : 0 ; B : 1 ; C : 1 ; D : 2 ; E : 2 ; F : 3**. Un plus court chemin de A à F : **A → B → D → F** (3 arêtes ; A → C → D → F et A → C → E → F conviennent aussi).\n3. Le graphe contient des **cycles** (A-B-D-C-A, C-D-F-E-C). Sans marquage, A enfilerait B, B renfilerait A, et ainsi de suite : le programme **bouclerait indéfiniment**. Le marquage garantit que chaque sommet n'est traité qu'une fois.\n4. Matrice : 6 × 6 = **36** cases. Listes : 2 + 2 + 3 + 3 + 2 + 2 = **14** entrées (deux par arête, 7 arêtes). Pour 10 000 arrêts, la matrice aurait 100 000 000 de cases presque toutes à 0 : on choisit la **liste d'adjacence**, dont la mémoire est proportionnelle au nombre d'arêtes (graphe grand et creux)."
+    },
+    {
+      "chapitre": "3d703ba2-2d27-507d-bd31-d34d6f65c70c",
+      "difficulte": 3,
+      "titre": "Dijkstra entre cinq villages",
+      "consigne": "Déroule l'algorithme dans un tableau, compare avec le parcours en largeur, puis écris le code demandé.",
+      "enonce": "**Situation.** Cinq villages A, B, C, D, E sont reliés par des routes à double sens ; le poids est la durée du trajet en minutes.\n\n| Route | A–B | A–C | C–B | B–D | C–D | D–E | C–E |\n| Durée | 4 | 1 | 2 | 1 | 5 | 3 | 8 |\n\n1. Applique l'**algorithme de Dijkstra** depuis A : à chaque étape, indique le sommet traité (le non traité le plus proche) et les distances provisoires de tous les sommets.\n2. Donne la durée minimale de A à E et le trajet correspondant.\n3. Un parcours en largeur donnerait un chemin de A à E avec le moins d'arêtes possible. Lequel ? Quelle est sa durée ? Conclus.\n4. Une route aurait une durée négative (impossible ici, mais imaginons-le) : quelle condition de l'algorithme ne serait plus respectée ?\n5. Le graphe non pondéré est stocké dans un dictionnaire de listes d'adjacence `graphe`. Écris une fonction récursive `profondeur(graphe, s, visites)` qui ajoute à la liste `visites` tous les sommets atteignables depuis `s` (parcours en profondeur) et la renvoie.",
+      "bareme": [
+        { "critere": "Déroulement de Dijkstra exact : ordre A, C, B, D, E et distances mises à jour à chaque étape", "points": 7 },
+        { "critere": "Durée minimale 7 min par A-C-B-D-E", "points": 4 },
+        { "critere": "BFS : A-C-E (2 arêtes, 9 min) ; le plus court en arêtes n'est pas le plus rapide", "points": 4 },
+        { "critere": "Condition : poids positifs", "points": 2 },
+        { "critere": "Parcours en profondeur récursif correct avec marquage des sommets visités", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Distances provisoires (∞ = inconnue) :\n\n| Étape | Sommet traité | A | B | C | D | E |\n| 0 | — | 0 | ∞ | ∞ | ∞ | ∞ |\n| 1 | A (0) | 0 | 4 | 1 | ∞ | ∞ |\n| 2 | C (1) | 0 | min(4, 1+2) = 3 | 1 | 1+5 = 6 | 1+8 = 9 |\n| 3 | B (3) | 0 | 3 | 1 | min(6, 3+1) = 4 | 9 |\n| 4 | D (4) | 0 | 3 | 1 | 4 | min(9, 4+3) = 7 |\n| 5 | E (7) | 0 | 3 | 1 | 4 | 7 |\n\n2. Durée minimale de A à E : **7 minutes**, par **A → C → B → D → E** (1 + 2 + 1 + 3).\n3. Le parcours en largeur trouve **A → C → E** : 2 arêtes seulement, mais 1 + 8 = **9 minutes**. Dès que les arêtes portent des poids, le plus court chemin en nombre d'arêtes n'est plus le plus court en durée : **BFS ne suffit plus**, il faut Dijkstra.\n4. Dijkstra exige que **tous les poids soient positifs** : il considère comme définitive la distance du sommet le plus proche, ce qui n'est plus valable si une arête négative peut raccourcir un chemin plus tard.\n5.\n```python\ndef profondeur(graphe, s, visites):\n    visites.append(s)\n    for v in graphe[s]:\n        if v not in visites:\n            profondeur(graphe, v, visites)\n    return visites\n```\nAppel : `profondeur(graphe, 'A', [])`. Le test `v not in visites` est le **marquage** qui empêche de boucler sur un cycle ; la récursivité joue le rôle de la pile."
+    },
+    {
+      "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+      "difficulte": 1,
+      "titre": "Les clés d'une base de données",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "On considère le schéma relationnel suivant (le gras marque la clé primaire, le dièse une clé étrangère) :\n\nclasse(**id**, nom, salle)\n\neleve(**id**, nom, prenom, #classe_id)\n\n1. Définis une **clé primaire** et une **clé étrangère**, en t'appuyant sur ce schéma.\n2. Qu'impose l'**intégrité référentielle** ? Donne un exemple d'insertion qu'elle refuserait ici.\n3. Une classe contient plusieurs élèves, un élève appartient à une seule classe. Explique pourquoi la clé étrangère est placée dans la table eleve et non dans la table classe.",
+      "bareme": [
+        { "critere": "Clé primaire : identifie chaque enregistrement de façon unique, ni nulle ni dupliquée ; clé étrangère : référence la clé primaire d'une autre table", "points": 7 },
+        { "critere": "Intégrité référentielle expliquée avec un exemple (classe_id qui ne correspond à aucune classe)", "points": 6 },
+        { "critere": "Relation un à plusieurs : clé étrangère du côté « plusieurs », justifiée", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une **clé primaire** identifie **de façon unique** chaque enregistrement ; elle ne peut être ni nulle ni dupliquée : `id` dans classe et `id` dans eleve. Une **clé étrangère** **référence** la clé primaire d'une autre table : `classe_id` dans eleve référence `classe.id` ; c'est elle qui relie les deux tables.\n2. L'**intégrité référentielle** impose qu'une clé étrangère pointe vers un enregistrement **existant**. Exemple : insérer un élève avec `classe_id = 12` alors qu'aucune classe n'a l'identifiant 12 serait refusé.\n3. C'est une relation **un à plusieurs** : la clé étrangère se place du côté « **plusieurs** ». Chaque élève porte l'identifiant de **sa** classe (une seule valeur). À l'inverse, une classe devrait porter les identifiants de **tous** ses élèves, ce qu'un attribut à valeur unique ne peut pas faire."
+    },
+    {
+      "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+      "difficulte": 2,
+      "titre": "Le grand tableau des inscriptions",
+      "consigne": "Analyse la table, repère ses défauts, puis propose un schéma relationnel correct.",
+      "enonce": "**Situation.** Le secrétariat d'un collège range tout dans une seule table :\n\n| nom | prenom | classe | salle | prof_principal |\n| Martin | Léa | 3eA | B12 | M. Roux |\n| Diallo | Sami | 3eA | B12 | M. Roux |\n| Petit | Jade | 3eB | C04 | Mme Leroy |\n| Nguyen | Tom | 3eA | B12 | M. Roux |\n\n1. Quelle information est **redondante** ? Montre-le sur la table.\n2. Donne un exemple concret, tiré de cette situation, d'**anomalie de mise à jour**, d'**anomalie d'insertion** et d'**anomalie de suppression**.\n3. Propose un **schéma relationnel** en deux tables, en marquant les clés primaires (en gras) et la clé étrangère (#). Précise le type de relation entre les deux tables.",
+      "bareme": [
+        { "critere": "Redondance : salle et professeur principal répétés à chaque élève de la même classe", "points": 3 },
+        { "critere": "Trois anomalies illustrées sur la situation (mise à jour, insertion, suppression)", "points": 9 },
+        { "critere": "Schéma classe(id, nom, salle, prof_principal) et eleve(id, nom, prenom, #classe_id), relation un à plusieurs", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La salle **B12** et le professeur principal **M. Roux** sont répétés sur les trois lignes des élèves de 3eA : l'information sur la classe est écrite autant de fois qu'il y a d'élèves.\n2. **Mise à jour** : si la 3eA change de salle, il faut corriger B12 sur **toutes** ses lignes ; en oublier une rend la base incohérente (deux salles pour la même classe). **Insertion** : on ne peut pas enregistrer une nouvelle classe 3eC, sa salle et son professeur principal tant qu'elle n'a **aucun élève**. **Suppression** : si Jade Petit quitte le collège, effacer sa ligne efface aussi la seule trace de la 3eB, de sa salle C04 et de Mme Leroy.\n3. Schéma :\n\nclasse(**id**, nom, salle, prof_principal)\n\neleve(**id**, nom, prenom, #classe_id)\n\n`classe_id` référence `classe.id`. Relation **un à plusieurs** : une classe a plusieurs élèves, un élève a une classe ; la clé étrangère est du côté « plusieurs ». Chaque information n'est plus écrite **qu'une seule fois**. (On accepte une clé primaire `nom` pour la classe si elle est justifiée comme unique.)"
+    },
+    {
+      "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+      "difficulte": 3,
+      "titre": "La base du club omnisport",
+      "consigne": "Modélise la situation par un schéma relationnel complet et justifie chaque choix.",
+      "enonce": "**Situation.** Un club omnisport veut une base de données. Voici ce que dit sa présidente :\n\n> « Chaque adhérent a un nom, un prénom et une adresse électronique ; deux adhérents ne peuvent pas avoir la même adresse. Nous proposons des activités : chacune a un libellé, un jour de la semaine et un tarif annuel, jamais négatif. Chaque activité est encadrée par **un seul** entraîneur, mais un entraîneur peut encadrer **plusieurs** activités. Un adhérent peut s'inscrire à **plusieurs** activités, et une activité accueille **plusieurs** adhérents ; on veut garder la date de chaque inscription. »\n\n1. Identifie les entités et les relations entre elles, en précisant leur cardinalité.\n2. Écris le **schéma relationnel** complet (clés primaires en gras, clés étrangères précédées de #).\n3. Explique pourquoi la relation adhérent–activité ne peut pas être réalisée par une simple clé étrangère dans l'une des deux tables.\n4. Relève dans le texte **deux contraintes** autres que les clés, et nomme leur type.",
+      "bareme": [
+        { "critere": "Entités adhérent, activité, entraîneur ; entraîneur–activité un à plusieurs ; adhérent–activité plusieurs à plusieurs", "points": 5 },
+        { "critere": "Schéma complet et cohérent, clés primaires et étrangères bien placées (#entraineur_id dans activite)", "points": 6 },
+        { "critere": "Table de jonction inscription avec les deux clés étrangères et la date, justifiée", "points": 5 },
+        { "critere": "Unicité de l'adresse électronique ; contrainte de domaine sur le tarif (≥ 0)", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Trois entités : **adhérent**, **activité**, **entraîneur**. Entraîneur–activité : **un à plusieurs** (un entraîneur encadre plusieurs activités, une activité a un entraîneur). Adhérent–activité : **plusieurs à plusieurs**, avec une information propre à chaque inscription (la date).\n2. Schéma :\n\nadherent(**id**, nom, prenom, email)\n\nentraineur(**id**, nom, prenom)\n\nactivite(**id**, libelle, jour, tarif, #entraineur_id)\n\ninscription(**id**, #adherent_id, #activite_id, date_inscription)\n\n`entraineur_id` est placé du côté « plusieurs » (l'activité). La table inscription référence adherent.id et activite.id. (On accepte comme clé primaire de inscription le couple adherent_id, activite_id.)\n3. Un adhérent suit **plusieurs** activités **et** une activité accueille **plusieurs** adhérents : une clé étrangère dans adherent ne pourrait désigner qu'une activité, et une clé étrangère dans activite qu'un adhérent. Aucune des deux tables ne peut porter la clé de l'autre : il faut une **table de jonction** (inscription) portant les deux clés étrangères — c'est aussi là que se range naturellement la date d'inscription.\n4. **Unicité** : deux adhérents ne partagent pas la même adresse électronique (email UNIQUE). **Contrainte de domaine** : le tarif est un nombre supérieur ou égal à 0. On peut aussi citer le jour, limité aux jours de la semaine (domaine)."
+    },
+    {
+      "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+      "difficulte": 1,
+      "titre": "Types, NULL et contraintes",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "Une table `adherent` doit contenir : un âge, une cotisation en euros avec centimes, un nom, une date d'inscription, et l'information « a payé ou non ».\n\n1. Propose un **type SQL** pour chacune de ces cinq colonnes.\n2. Que signifie **NULL** ? Est-ce la même chose que 0 ou la chaîne vide ? Comment teste-t-on qu'une colonne est vide, et pourquoi pas avec `= NULL` ?\n3. Explique ce qu'imposent les mots-clés **NOT NULL** et **UNIQUE**, avec un exemple de colonne pour chacun.",
+      "bareme": [
+        { "critere": "Types adaptés : INTEGER, REAL, TEXT, DATE, BOOLEAN", "points": 6 },
+        { "critere": "NULL = absence de valeur, ni 0 ni chaîne vide ; IS NULL, car toute comparaison avec NULL renvoie « inconnu »", "points": 8 },
+        { "critere": "NOT NULL = valeur obligatoire ; UNIQUE = pas deux fois la même valeur ; exemples pertinents", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Âge : **INTEGER** ; cotisation : **REAL** (ou FLOAT) ; nom : **TEXT** (ou VARCHAR) ; date d'inscription : **DATE** ; a payé : **BOOLEAN**.\n2. **NULL** est l'**absence de valeur** : ce n'est **ni zéro ni la chaîne vide** (0 € de cotisation est une valeur connue, NULL signifie qu'on ne sait pas). Toute comparaison avec NULL renvoie « inconnu », y compris NULL = NULL : un test `= NULL` ne sélectionne donc jamais rien. On teste avec **IS NULL** (ou IS NOT NULL).\n3. **NOT NULL** : la valeur est **obligatoire** (par exemple le nom de l'adhérent). **UNIQUE** : deux lignes ne peuvent pas avoir la même valeur dans cette colonne (par exemple une adresse électronique ou un numéro de licence)."
+    },
+    {
+      "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+      "difficulte": 2,
+      "titre": "Créer la table des livres",
+      "consigne": "Écris les requêtes demandées et justifie chaque contrainte choisie.",
+      "enonce": "**Situation.** Le CDI crée sa base. La table `auteur(id, nom)` existe déjà. Il faut créer la table `livre` avec :\n- un identifiant entier, clé primaire ;\n- un titre, obligatoire ;\n- un code ISBN (texte) : deux livres ne peuvent pas avoir le même ;\n- un nombre de pages, entier strictement positif ;\n- un booléen `disponible`, qui vaut vrai si rien n'est précisé ;\n- l'identifiant de l'auteur, qui doit correspondre à un auteur existant.\n\n1. Écris la requête **CREATE TABLE** correspondante.\n2. Pour lister les livres dont l'ISBN n'a pas été saisi, Hugo écrit : `SELECT titre FROM livre WHERE isbn = NULL`. La requête ne renvoie jamais rien. Explique pourquoi et corrige-la.",
+      "bareme": [
+        { "critere": "CREATE TABLE avec types corrects, PRIMARY KEY et NOT NULL sur le titre", "points": 4 },
+        { "critere": "UNIQUE sur l'ISBN, CHECK sur le nombre de pages, DEFAULT sur disponible", "points": 5 },
+        { "critere": "Clé étrangère REFERENCES auteur(id) sur l'auteur", "points": 3 },
+        { "critere": "Explication : comparaison avec NULL = inconnu ; correction avec IS NULL", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Par exemple :\n```sql\nCREATE TABLE livre (\n  id INTEGER PRIMARY KEY,\n  titre TEXT NOT NULL,\n  isbn TEXT UNIQUE,\n  nb_pages INTEGER CHECK (nb_pages > 0),\n  disponible BOOLEAN DEFAULT TRUE,\n  auteur_id INTEGER REFERENCES auteur(id)\n)\n```\n- **PRIMARY KEY** : identifiant unique, jamais nul ;\n- **NOT NULL** : le titre est obligatoire ;\n- **UNIQUE** : pas deux fois le même ISBN ;\n- **CHECK** : la condition nb_pages > 0 doit être respectée ;\n- **DEFAULT** : valeur par défaut si rien n'est fourni ;\n- **REFERENCES** : clé étrangère, l'auteur doit exister.\n2. NULL est l'absence de valeur ; **toute comparaison avec NULL renvoie « inconnu »**, jamais « vrai », même pour une ligne dont l'ISBN est NULL : le WHERE ne retient donc aucune ligne. Correction : `SELECT titre FROM livre WHERE isbn IS NULL`."
+    },
+    {
+      "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+      "difficulte": 3,
+      "titre": "Deux millions de notes",
+      "consigne": "Analyse la situation et argumente chaque décision technique avec le cours.",
+      "enonce": "**Situation.** Le logiciel de vie scolaire d'un lycée stocke les notes dans une table :\n\nnote(id INTEGER PRIMARY KEY, eleve_id INTEGER, matiere TEXT, valeur REAL, date DATE)\n\nElle contient 2 millions de lignes. L'application cherche **à chaque connexion** les notes d'un élève (`WHERE eleve_id = …`). Chaque soir, 5 000 notes sont insérées.\n\n1. Faut-il créer un **index** sur `eleve_id` ? Explique ce qu'il apporte et ce qu'il coûte. Faut-il aussi indexer `id` ? Toutes les colonnes ?\n2. Une application destinée aux parents ne doit voir que les colonnes eleve_id, matiere, valeur et date, et ne doit jamais rien modifier. Propose une solution avec une **vue** et les **droits**, en nommant le principe appliqué.\n3. Un stagiaire propose d'ajouter à la table note les colonnes `nom_eleve` et `classe_eleve`. Qu'en penses-tu ?\n4. Une note saisie à 25 a été enregistrée. Quelle contrainte aurait dû l'empêcher ? Écris-la.",
+      "bareme": [
+        { "critere": "Index sur eleve_id justifié (recherche linéaire → logarithmique) ; coût : espace et insertions ralenties ; id déjà indexé ; pas toutes les colonnes", "points": 7 },
+        { "critere": "Vue limitée aux colonnes utiles + GRANT SELECT seulement ; principe de moindre privilège", "points": 6 },
+        { "critere": "Refus justifié par la normalisation : information de l'élève stockée une seule fois, dans sa table", "points": 4 },
+        { "critere": "Contrainte CHECK (valeur BETWEEN 0 AND 20) ou équivalent", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Oui**. La colonne `eleve_id` est **très souvent interrogée** : sans index, chaque recherche parcourt les 2 millions de lignes (coût **linéaire**) ; avec un index (souvent un arbre équilibré), elle devient **logarithmique**. Contreparties : de l'**espace disque** et un **ralentissement des insertions** (l'index est mis à jour à chaque nouvelle note), acceptable ici : 5 000 insertions par soir contre une recherche à chaque connexion. Inutile d'indexer `id` : la **clé primaire est indexée automatiquement**. On n'indexe pas toutes les colonnes : chaque index coûte, on réserve cela aux colonnes très interrogées.\n2. On crée une **vue**, requête enregistrée sous un nom et utilisable comme une table, qui ne montre que les colonnes eleve_id, matiere, valeur et date. On donne à l'application parents seulement le droit de lecture sur cette vue (**GRANT SELECT**), sans INSERT, UPDATE ni DELETE ; on peut retirer un droit avec REVOKE. C'est le principe de **moindre privilège** : une application qui ne fait que lire n'a que le droit de lecture.\n3. C'est une mauvaise idée : le nom et la classe de l'élève seraient **répétés** sur chacune de ses notes (redondance, anomalies de mise à jour). La **normalisation** impose que chaque information soit stockée **une seule fois** et que chaque table décrive **une seule entité** : ces informations restent dans la table des élèves, atteinte par `eleve_id`.\n4. Une **contrainte de domaine** avec **CHECK** : `valeur REAL CHECK (valeur >= 0 AND valeur <= 20)` (ou `BETWEEN 0 AND 20`). Le SGBD aurait refusé la note de 25."
+    },
+    {
+      "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+      "difficulte": 1,
+      "titre": "Le SGBD et ses transactions",
+      "consigne": "Réponds à chaque question en quelques lignes, avec le vocabulaire du cours.",
+      "enonce": "1. Qu'est-ce qu'un **SGBD** ? Cite **trois** fonctions qu'il prend en charge.\n2. Qu'est-ce qu'une **transaction** ? À quoi servent **COMMIT** et **ROLLBACK** ?\n3. Donne la signification des quatre lettres **ACID** et, pour chacune, ce qu'elle promet en une phrase.",
+      "bareme": [
+        { "critere": "SGBD = programme qui contrôle tous les accès à la base ; trois fonctions justes", "points": 6 },
+        { "critere": "Transaction = tout indivisible ; COMMIT valide, ROLLBACK annule", "points": 6 },
+        { "critere": "Atomicité, Cohérence, Isolation, Durabilité correctement expliquées", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le **SGBD** (système de gestion de bases de données) est le **programme qui contrôle tous les accès** à la base. Il prend en charge l'exécution et l'optimisation des requêtes, le contrôle des accès concurrents, la gestion des droits, la persistance et la reprise après panne, et le respect des contraintes (trois suffisent).\n2. Une **transaction** est un ensemble d'opérations traitées comme un **tout indivisible** (exemple : le virement). On l'ouvre, puis **COMMIT** la **valide** et **ROLLBACK** l'**annule** (aucune de ses opérations n'est conservée).\n3. **Atomicité** : tout ou rien. **Cohérence** : la base passe d'un état valide à un autre état valide. **Isolation** : deux transactions simultanées se déroulent comme si elles étaient successives. **Durabilité** : une transaction validée survit à une panne, grâce au journal écrit avant les données."
+    },
+    {
+      "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+      "difficulte": 2,
+      "titre": "Le virement interrompu",
+      "consigne": "Suis la situation pas à pas et justifie chaque réponse par une propriété ACID.",
+      "enonce": "**Situation.** Une banque (fictive) exécute un virement de 200 € du compte 1 (solde 500 €) vers le compte 2 (solde 100 €) par deux requêtes :\n\n```sql\nUPDATE compte SET solde = solde - 200 WHERE id = 1;\nUPDATE compte SET solde = solde + 200 WHERE id = 2;\n```\n\n1. Les deux requêtes sont exécutées **sans transaction**. Une panne de courant survient juste après la première. Quels sont les soldes au redémarrage ? Quel est le problème ?\n2. On place les deux requêtes dans une **transaction**. La même panne survient avant le COMMIT. Quels sont les soldes au redémarrage ? Quelle propriété ACID est en jeu ?\n3. Cette fois, le COMMIT a eu lieu, puis le serveur tombe en panne une seconde plus tard, avant d'avoir recopié les nouveaux soldes sur le disque. Le virement est-il perdu ? Quel mécanisme l'empêche, et quelle propriété garantit-il ?",
+      "bareme": [
+        { "critere": "Sans transaction : 300 € et 100 €, 200 € disparus, base incohérente", "points": 6 },
+        { "critere": "Transaction non validée annulée : 500 € et 100 € ; atomicité (tout ou rien)", "points": 7 },
+        { "critere": "Après COMMIT : virement conservé grâce au journal écrit avant les données ; durabilité", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Seule la première requête a été exécutée : compte 1 = **300 €**, compte 2 = **100 €**. **200 € ont disparu** : la base est dans un état **incohérent** (le total n'est plus le même).\n2. La transaction n'a pas été validée : au redémarrage, elle est **annulée** (comme par ROLLBACK). Les soldes sont ceux d'avant : **500 €** et **100 €**. C'est l'**atomicité** : tout ou rien — débiter et créditer réussissent ensemble ou échouent ensemble. La base passe ainsi d'un état valide à un autre état valide (**cohérence**).\n3. **Non**, le virement n'est pas perdu. C'est la **durabilité** : une transaction validée survit à une panne. Le mécanisme est le **journal des transactions**, écrit **avant** les données : au redémarrage, le SGBD le relit et rejoue les modifications validées."
+    },
+    {
+      "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+      "difficulte": 3,
+      "titre": "La dernière place du concert",
+      "consigne": "Analyse chaque scénario et argumente avec le cours ; les réponses doivent être rédigées.",
+      "enonce": "**Situation.** Une salle de concert vend ses billets depuis deux guichets et un site web, tous reliés à la même base, qui contient la ligne `spectacle(id = 7, places_libres = 1)`.\n\n> Au même instant, le guichet A et le guichet B lisent places_libres = 1. Chacun vend donc la place, puis écrit places_libres = 0.\n\n1. Qu'est-ce qui s'est mal passé ? Quelle propriété ACID aurait dû l'éviter, et par quels mécanismes le SGBD l'assure-t-il ?\n2. Une transaction T1 verrouille le siège 12 puis demande le siège 13 ; au même moment, T2 a verrouillé le siège 13 et demande le 12. Nomme la situation et explique comment le SGBD la résout.\n3. Le développeur du site web a ajouté dans son programme un test « si places_libres > 0 alors vendre ». Le directeur propose plutôt une contrainte `CHECK (places_libres >= 0)` dans la base. Qui a raison ? Pense à l'application mobile prévue l'an prochain.\n4. La salle hésite entre **SQLite** et **PostgreSQL** pour cette base partagée. Que conseilles-tu ? Cite une contrepartie de l'architecture client-serveur.",
+      "bareme": [
+        { "critere": "Deux lectures puis deux écritures : la place est vendue deux fois, une mise à jour écrase l'autre", "points": 5 },
+        { "critere": "Isolation ; verrous ou versions", "points": 4 },
+        { "critere": "Interblocage nommé et expliqué ; le SGBD le détecte et annule l'une des transactions", "points": 4 },
+        { "critere": "Contrainte dans le SGBD : s'applique à tous les clients, présents et futurs", "points": 4 },
+        { "critere": "PostgreSQL (serveur multi-utilisateurs) ; contrepartie : point de défaillance unique ou cible", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Les deux guichets ont **lu** la même valeur avant que l'un d'eux n'**écrive** : chacun a cru la place libre, la place a été **vendue deux fois**, et la seconde écriture a **écrasé** la première. C'est ce que doit empêcher l'**isolation** : deux transactions simultanées doivent se dérouler comme si elles étaient **successives** (la seconde aurait lu 0 et refusé la vente). Le SGBD l'assure par des **verrous** ou par un mécanisme de **versions**.\n2. C'est un **interblocage** : chaque transaction détient la ressource que l'autre attend, aucune ne peut avancer. Le SGBD le **détecte** et le résout en **annulant l'une des deux** transactions, l'autre peut alors se terminer.\n3. Le **directeur**. Le test dans le programme du site ne protège **que le site** : l'application mobile, ou un autre client, pourrait l'oublier. Une contrainte écrite dans le **SGBD** s'applique à **tous les clients**, présents et futurs, et aucune application ne peut la contourner. (Garder aussi le test dans l'application pour afficher un message clair n'est pas une erreur.)\n4. **PostgreSQL** : c'est un SGBD **serveur, multi-utilisateurs**, adapté à plusieurs guichets et à un site qui écrivent en même temps sur une donnée centralisée. SQLite est **embarqué, sans serveur**, pensé pour une application locale (téléphone, navigateur). Contrepartie du client-serveur : le serveur est un **point de défaillance unique** (s'il tombe, plus aucune vente) et une **cible** pour les attaquants."
+    },
+    {
+      "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+      "difficulte": 1,
+      "titre": "Premières requêtes sur les élèves",
+      "consigne": "Écris chaque requête SQL demandée ; réponds à la dernière question par une phrase.",
+      "enonce": "On dispose de la table `eleve(id, nom, classe_id, moyenne)`.\n\n1. Écris la requête qui affiche le **nom** et la **moyenne** des élèves dont la moyenne est **supérieure ou égale à 12**, du meilleur au moins bon.\n2. Écris la requête qui ajoute l'élève Rayan, de la classe 2, avec une moyenne de 13,5 (l'identifiant est attribué automatiquement).\n3. Écris la requête qui fixe à 15 la moyenne de l'élève d'identifiant 7.\n4. Écris la requête qui supprime l'élève d'identifiant 9. Que se passerait-il si l'on oubliait la clause WHERE ?",
+      "bareme": [
+        { "critere": "SELECT nom, moyenne FROM eleve WHERE moyenne >= 12 ORDER BY moyenne DESC", "points": 6 },
+        { "critere": "INSERT INTO eleve (nom, classe_id, moyenne) VALUES ('Rayan', 2, 13.5)", "points": 4 },
+        { "critere": "UPDATE eleve SET moyenne = 15 WHERE id = 7", "points": 4 },
+        { "critere": "DELETE FROM eleve WHERE id = 9 ; sans WHERE, toutes les lignes supprimées", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. `SELECT nom, moyenne FROM eleve WHERE moyenne >= 12 ORDER BY moyenne DESC` — WHERE filtre les lignes, ORDER BY … DESC trie par ordre décroissant.\n2. `INSERT INTO eleve (nom, classe_id, moyenne) VALUES ('Rayan', 2, 13.5)` — le décimal s'écrit avec un point.\n3. `UPDATE eleve SET moyenne = 15 WHERE id = 7`\n4. `DELETE FROM eleve WHERE id = 9`. Sans WHERE, `DELETE FROM eleve` s'appliquerait à **toutes les lignes** : la table entière serait vidée. C'est l'erreur la plus coûteuse du langage (même chose pour UPDATE sans WHERE, qui modifierait toutes les moyennes)."
+    },
+    {
+      "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+      "difficulte": 2,
+      "titre": "Jointures sur les classes",
+      "consigne": "Écris chaque requête et donne le résultat exact qu'elle renvoie sur les données fournies.",
+      "enonce": "**Données.**\n\nTable `classe` :\n\n| id | niveau |\n| 1 | 2nde A |\n| 2 | 1re B |\n\nTable `eleve` :\n\n| id | nom | classe_id | moyenne |\n| 1 | Amine | 1 | 14 |\n| 2 | Bérénice | 1 | 10 |\n| 3 | Chloé | 2 | 16 |\n| 4 | Dylan | NULL | 12 |\n\n1. Écris une requête qui affiche le nom de chaque élève et le niveau de sa classe, avec une **jointure** (JOIN). Donne le résultat.\n2. On veut aussi voir apparaître les élèves **sans classe**. Modifie la requête et donne le résultat.\n3. Écris une requête qui affiche, pour chaque niveau, la **moyenne des moyennes** de ses élèves. Donne le résultat.\n4. Combien de lignes renverrait la requête 1 si l'on oubliait la condition ON ? Comment s'appelle ce résultat ?",
+      "bareme": [
+        { "critere": "JOIN … ON eleve.classe_id = classe.id et résultat de 3 lignes (Dylan absent)", "points": 5 },
+        { "critere": "LEFT JOIN et résultat de 4 lignes, Dylan avec NULL", "points": 5 },
+        { "critere": "AVG avec GROUP BY sur le niveau : 2nde A → 12, 1re B → 16", "points": 6 },
+        { "critere": "Produit cartésien : 4 × 2 = 8 lignes", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. `SELECT eleve.nom, classe.niveau FROM eleve JOIN classe ON eleve.classe_id = classe.id`\nRésultat : Amine | 2nde A ; Bérénice | 2nde A ; Chloé | 1re B. **Dylan n'apparaît pas** : la jointure interne ne garde que les lignes ayant une correspondance des deux côtés.\n2. `SELECT eleve.nom, classe.niveau FROM eleve LEFT JOIN classe ON eleve.classe_id = classe.id`\nRésultat : les trois lignes précédentes **et** Dylan | NULL. LEFT JOIN garde toutes les lignes de la table de gauche, complétées par NULL.\n3. `SELECT classe.niveau, AVG(eleve.moyenne) FROM eleve JOIN classe ON eleve.classe_id = classe.id GROUP BY classe.niveau`\nRésultat : 2nde A | 12 (car (14 + 10) / 2 = 12) ; 1re B | 16. (L'ordre des lignes n'est pas garanti sans ORDER BY.)\n4. Sans condition ON, chaque ligne de eleve est combinée à chaque ligne de classe : **4 × 2 = 8 lignes**. C'est un **produit cartésien**."
+    },
+    {
+      "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+      "difficulte": 3,
+      "titre": "HAVING, WHERE et une faille de connexion",
+      "consigne": "Écris les requêtes, calcule leurs résultats, puis analyse la faille de sécurité.",
+      "enonce": "**Données.** Table `eleve(id, nom, classe_id, moyenne)` :\n\n| id | nom | classe_id | moyenne |\n| 1 | Amine | 1 | 14 |\n| 2 | Bérénice | 1 | 9 |\n| 3 | Chloé | 2 | 16 |\n| 4 | Dylan | 2 | 11 |\n| 5 | Emma | 2 | 8 |\n| 6 | Farid | 3 | 17 |\n\n1. Écris une requête qui affiche l'identifiant et la moyenne des moyennes des classes dont cette moyenne **dépasse 13**. Donne le résultat.\n2. Un camarade écrit `WHERE AVG(moyenne) > 13`. Explique, à l'aide de l'ordre logique d'exécution des clauses, pourquoi c'est impossible.\n3. Écris une requête qui affiche, pour chaque classe, le **nombre d'élèves ayant au moins 10**, en ne gardant que les classes où ce nombre vaut **au moins 2**. Donne le résultat.\n4. Le site du lycée construit ainsi la requête de connexion, en Python :\n\n```python\nrequete = \"SELECT * FROM compte WHERE login = '\" + saisie + \"'\"\n```\n\nUn visiteur saisit : `' OR '1'='1`. Écris la requête obtenue, explique son effet, nomme l'attaque et donne la parade efficace. Pourquoi supprimer les apostrophes dans le navigateur ne suffit-il pas ?",
+      "bareme": [
+        { "critere": "GROUP BY classe_id HAVING AVG(moyenne) > 13 ; résultat : classe 3, 17", "points": 5 },
+        { "critere": "Ordre FROM, WHERE, GROUP BY, HAVING : WHERE agit sur les lignes avant le regroupement", "points": 4 },
+        { "critere": "WHERE moyenne >= 10 GROUP BY classe_id HAVING COUNT(*) >= 2 ; résultat : classe 2, 2", "points": 5 },
+        { "critere": "Requête injectée écrite, condition toujours vraie, injection SQL nommée, requêtes paramétrées comme parade", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. `SELECT classe_id, AVG(moyenne) FROM eleve GROUP BY classe_id HAVING AVG(moyenne) > 13`\nMoyennes : classe 1 : (14 + 9) / 2 = 11,5 ; classe 2 : (16 + 11 + 8) / 3 = 35 / 3 ≈ 11,67 ; classe 3 : 17. Résultat : **3 | 17**.\n2. Ordre logique : **FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY**. WHERE filtre les **lignes avant** le regroupement : au moment où il agit, les groupes n'existent pas encore et il n'y a pas de moyenne par classe à tester. Un filtre sur un agrégat va dans **HAVING**, qui porte sur les **groupes après** le regroupement.\n3. `SELECT classe_id, COUNT(*) FROM eleve WHERE moyenne >= 10 GROUP BY classe_id HAVING COUNT(*) >= 2`\nLignes gardées par WHERE : Amine (1), Chloé (2), Dylan (2), Farid (3). Comptes : classe 1 → 1, classe 2 → 2, classe 3 → 1. Résultat : **2 | 2**. Ici WHERE et HAVING se complètent : l'un filtre les élèves, l'autre les classes.\n4. Requête obtenue : `SELECT * FROM compte WHERE login = '' OR '1'='1'`. La condition `'1'='1'` est **toujours vraie** : la requête renvoie **tous les comptes**, et le visiteur peut être connecté sans connaître d'identifiant. C'est une **injection SQL** : la saisie, **concaténée** à la requête, en modifie le sens. La parade efficace est la **requête paramétrée**, où la valeur saisie ne peut jamais être interprétée comme du code. Le filtrage des apostrophes et la vérification côté navigateur ne suffisent pas : l'attaquant peut envoyer sa requête sans passer par la page, et un filtrage oublie toujours un cas."
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "niveau": "3e",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "difficulte": 1,
+      "titre": "Les règles des puissances",
+      "consigne": "Réponds à chaque question en montrant la règle utilisée.",
+      "enonce": "**Questions de cours et d'application.**\n\n1. Écris chaque expression sous la forme d'une seule puissance :\n   - A = 5³ × 5⁴\n   - B = 7⁸ ÷ 7³\n   - C = (2³)⁵\n   - D = 10⁻² × 10⁵\n2. Donne l'écriture scientifique de 3 200 000 et de 0,000 045.\n3. Calcule 2⁰ + 10⁻¹ et donne le résultat sous forme décimale.",
+      "bareme": [
+        { "critere": "Les quatre expressions A, B, C, D écrites en une seule puissance avec la bonne règle", "points": 8 },
+        { "critere": "Les deux écritures scientifiques justes, avec 1 ≤ a < 10", "points": 8 },
+        { "critere": "2⁰ = 1 et 10⁻¹ = 0,1, résultat 1,1", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. On applique les règles entre puissances de même base :\n   - A = 5³⁺⁴ = **5⁷** (on additionne les exposants).\n   - B = 7⁸⁻³ = **7⁵** (on les soustrait).\n   - C = 2³ˣ⁵ = **2¹⁵** (on les multiplie).\n   - D = 10⁻²⁺⁵ = **10³**.\n\n2. 3 200 000 = **3,2 × 10⁶** (la virgule recule de 6 rangs vers la gauche, exposant positif).\n   0,000 045 = **4,5 × 10⁻⁵** (la virgule avance de 5 rangs vers la droite, exposant négatif).\n\n3. 2⁰ = 1 (tout nombre non nul à la puissance 0 vaut 1) et 10⁻¹ = 1/10 = 0,1. Donc 2⁰ + 10⁻¹ = **1,1**."
+    },
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "difficulte": 2,
+      "titre": "Le disque dur de Malik",
+      "consigne": "Réponds aux questions en détaillant tes calculs avec les puissances de 10. Donne les résultats en écriture scientifique quand c'est demandé.",
+      "enonce": "**Situation.** Malik vient d'acheter un disque dur d'une capacité de **2 × 10¹² octets**. Un film occupe environ **4 × 10⁹ octets** et une photo environ **5 × 10⁶ octets**.\n\n1. Combien de films Malik peut-il stocker au maximum sur son disque vide ?\n2. Combien de photos occupent la même place qu'un seul film ?\n3. Malik a déjà rempli **3,5 × 10¹¹ octets**. Calcule l'espace encore libre et donne-le en écriture scientifique.",
+      "bareme": [
+        { "critere": "Nombre de films : quotient des puissances de 10 posé et calculé, 500 films", "points": 7 },
+        { "critere": "Nombre de photos : 800, avec le calcul justifié", "points": 6 },
+        { "critere": "Espace libre : mise à la même puissance de 10 et résultat 1,65 × 10¹² octets", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. (2 × 10¹²) ÷ (4 × 10⁹) = (2 ÷ 4) × 10¹²⁻⁹ = 0,5 × 10³ = **500 films**.\n\n2. (4 × 10⁹) ÷ (5 × 10⁶) = (4 ÷ 5) × 10⁹⁻⁶ = 0,8 × 10³ = **800 photos**.\n\n3. On écrit les deux nombres avec la même puissance de 10 : 2 × 10¹² = 20 × 10¹¹.\n   Espace libre : 20 × 10¹¹ − 3,5 × 10¹¹ = 16,5 × 10¹¹ octets.\n   En écriture scientifique (1 ≤ a < 10) : **1,65 × 10¹² octets**.\n\nPoint d'attention : on ne soustrait pas les exposants dans une soustraction ; les règles des puissances ne valent que pour les produits et les quotients."
+    },
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "difficulte": 3,
+      "titre": "La lumière, du Soleil aux étoiles",
+      "consigne": "Réponds en justifiant chaque calcul. Donne les résultats en écriture scientifique, arrondis au centième quand c'est nécessaire.",
+      "enonce": "**Données.**\n- Distance Terre-Soleil : **1,5 × 10⁸ km**.\n- Vitesse de la lumière : **3 × 10⁵ km/s**.\n- Une année compte 365 jours.\n\n1. Calcule le temps, en secondes, que met la lumière du Soleil pour atteindre la Terre. Convertis-le en minutes et secondes.\n2. Une **année-lumière** est la distance parcourue par la lumière en un an. Montre qu'une année compte 3,1536 × 10⁷ secondes, puis calcule une année-lumière en km, en écriture scientifique.\n3. L'étoile Proxima du Centaure est à environ **4,2 années-lumière**. Donne cette distance en km, en écriture scientifique.\n4. Calcule, sans calculatrice, E = (3 × 10⁵ × 4 × 10⁻²) ÷ (6 × 10⁻³) et donne le résultat en écriture scientifique.",
+      "bareme": [
+        { "critere": "Temps Soleil-Terre : 500 s, soit 8 min 20 s, avec le quotient justifié", "points": 5 },
+        { "critere": "Nombre de secondes dans une année et année-lumière ≈ 9,46 × 10¹² km", "points": 6 },
+        { "critere": "Distance de Proxima ≈ 3,97 × 10¹³ km, écriture scientifique correcte", "points": 4 },
+        { "critere": "Calcul de E mené avec les règles des puissances : 2 × 10⁶", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. t = distance ÷ vitesse = (1,5 × 10⁸) ÷ (3 × 10⁵) = 0,5 × 10³ = **500 s**. 500 s = 8 × 60 + 20, soit **8 min 20 s**.\n\n2. 365 × 24 × 3 600 = 31 536 000 s = **3,1536 × 10⁷ s**.\n   Année-lumière : 3 × 10⁵ × 3,1536 × 10⁷ = 9,4608 × 10¹² km, soit **≈ 9,46 × 10¹² km**.\n\n3. 4,2 × 9,4608 × 10¹² ≈ 39,735 × 10¹² km. En écriture scientifique : **≈ 3,97 × 10¹³ km** (on décale la virgule d'un rang et on ajoute 1 à l'exposant).\n\n4. Numérateur : 3 × 4 = 12 et 10⁵ × 10⁻² = 10³, donc 12 × 10³.\n   E = (12 × 10³) ÷ (6 × 10⁻³) = 2 × 10³⁻⁽⁻³⁾ = **2 × 10⁶**.\n\nErreurs fréquentes à pénaliser : exposant mal soustrait (10³⁻³ au lieu de 10³⁺³), écriture 39,7 × 10¹² laissée telle quelle (ce n'est pas une écriture scientifique)."
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "difficulte": 1,
+      "titre": "Premier ou pas ?",
+      "consigne": "Réponds à chaque question en justifiant avec un critère de divisibilité ou une décomposition.",
+      "enonce": "**Questions.**\n\n1. Parmi les nombres **21 ; 29 ; 51 ; 57 ; 61**, lesquels sont premiers ? Justifie pour chacun.\n2. Décompose **84** en produit de facteurs premiers.\n3. Rends la fraction **84/126** irréductible en utilisant les décompositions en facteurs premiers.",
+      "bareme": [
+        { "critere": "29 et 61 premiers ; 21, 51 et 57 non premiers, avec un diviseur donné pour chacun", "points": 8 },
+        { "critere": "84 = 2² × 3 × 7 obtenu par divisions successives", "points": 5 },
+        { "critere": "126 = 2 × 3² × 7, simplification par 42 et résultat 2/3", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. - 21 = 3 × 7 : **pas premier**.\n   - 29 : non divisible par 2, 3, 5 (et 7 × 7 = 49 > 29) : **premier**.\n   - 51 : somme des chiffres 6, divisible par 3 ; 51 = 3 × 17 : **pas premier**.\n   - 57 : somme des chiffres 12, divisible par 3 ; 57 = 3 × 19 : **pas premier**.\n   - 61 : non divisible par 2, 3, 5, 7 (et 8 × 8 = 64 > 61) : **premier**.\n\n2. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7, donc **84 = 2² × 3 × 7**.\n\n3. 126 = 2 × 63 = 2 × 3 × 21 = 2 × 3 × 3 × 7 = **2 × 3² × 7**.\n   Facteurs communs : 2 × 3 × 7 = 42.\n   84/126 = (84 ÷ 42)/(126 ÷ 42) = **2/3**, irréductible car 2 et 3 n'ont que 1 comme diviseur commun."
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "difficulte": 2,
+      "titre": "Les sachets de Chloé",
+      "consigne": "Lis la situation et réponds en justifiant par des décompositions en facteurs premiers.",
+      "enonce": "**Situation.** Pour la kermesse du collège, Chloé dispose de **252 bonbons** et de **180 chocolats**. Elle veut préparer des sachets **tous identiques** (même nombre de bonbons et même nombre de chocolats dans chacun), en utilisant **tous** les bonbons et **tous** les chocolats.\n\n1. Décompose 252 et 180 en produits de facteurs premiers.\n2. Quel est le **plus grand** nombre de sachets qu'elle peut préparer ? Justifie.\n3. Combien y aura-t-il alors de bonbons et de chocolats dans chaque sachet ?\n4. Son amie propose de faire 24 sachets. Est-ce possible ? Justifie.",
+      "bareme": [
+        { "critere": "Décompositions justes : 252 = 2² × 3² × 7 et 180 = 2² × 3² × 5", "points": 6 },
+        { "critere": "Plus grand nombre de sachets : produit des facteurs communs, 36 sachets", "points": 6 },
+        { "critere": "Contenu d'un sachet : 7 bonbons et 5 chocolats", "points": 4 },
+        { "critere": "24 sachets impossible : 180 n'est pas divisible par 24 (ou 24 contient 2³)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 252 = 2 × 126 = 2 × 2 × 63 = 2 × 2 × 3 × 21 = 2 × 2 × 3 × 3 × 7, donc **252 = 2² × 3² × 7**.\n   180 = 2 × 90 = 2 × 2 × 45 = 2 × 2 × 3 × 15 = 2 × 2 × 3 × 3 × 5, donc **180 = 2² × 3² × 5**.\n\n2. Le nombre de sachets doit diviser 252 **et** 180. Le plus grand diviseur commun est le produit des facteurs premiers communs : 2² × 3² = **36 sachets**.\n\n3. 252 ÷ 36 = **7 bonbons** et 180 ÷ 36 = **5 chocolats** par sachet. (7 et 5 n'ont plus de facteur commun : on ne peut pas faire mieux.)\n\n4. 180 ÷ 24 = 7,5 : ce n'est pas un entier, donc **24 sachets sont impossibles**. Autre justification acceptée : 24 = 2³ × 3 et 180 ne contient que 2², donc 24 ne divise pas 180."
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "difficulte": 3,
+      "titre": "Grands nombres et formule trompeuse",
+      "consigne": "Réponds à chaque question en rédigeant tes justifications.",
+      "enonce": "**Partie A.**\n\n1. Décompose **1 540** et **858** en produits de facteurs premiers.\n2. Déduis-en la forme irréductible de la fraction **858/1 540**. Justifie qu'elle est bien irréductible.\n3. Sans poser de division, dis si 1 540 est divisible par 9. Justifie.\n\n**Partie B.**\n\nLéo affirme : « Quand on remplace n par un entier positif dans l'expression **n² + n + 41**, on obtient toujours un nombre premier. »\n\n4. Calcule l'expression pour n = 1 et n = 2 et vérifie que les résultats sont premiers.\n5. Calcule l'expression pour n = 40. Que peux-tu en conclure sur l'affirmation de Léo ?",
+      "bareme": [
+        { "critere": "Décompositions : 1 540 = 2² × 5 × 7 × 11 et 858 = 2 × 3 × 11 × 13", "points": 6 },
+        { "critere": "Fraction irréductible 39/70, simplification par 22 et irréductibilité justifiée", "points": 5 },
+        { "critere": "Critère de divisibilité par 9 appliqué : somme des chiffres 10, non divisible", "points": 3 },
+        { "critere": "Valeurs 43 et 47 premières, puis 1 681 = 41 × 41 : affirmation fausse par contre-exemple", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A.**\n\n1. 1 540 = 2 × 770 = 2 × 2 × 385 = 2 × 2 × 5 × 77 = **2² × 5 × 7 × 11**.\n   858 = 2 × 429 = 2 × 3 × 143 = **2 × 3 × 11 × 13**.\n\n2. Facteurs communs : 2 × 11 = 22. 858 ÷ 22 = 39 et 1 540 ÷ 22 = 70, donc 858/1 540 = **39/70**. Elle est irréductible car 39 = 3 × 13 et 70 = 2 × 5 × 7 n'ont aucun facteur premier commun.\n\n3. Somme des chiffres de 1 540 : 1 + 5 + 4 + 0 = 10, qui n'est pas divisible par 9 : **1 540 n'est pas divisible par 9**.\n\n**Partie B.**\n\n4. n = 1 : 1 + 1 + 41 = **43** ; n = 2 : 4 + 2 + 41 = **47**. Ni 43 ni 47 ne sont divisibles par 2, 3 ou 5 (et 7 × 7 = 49 dépasse), ils sont premiers.\n\n5. n = 40 : 1 600 + 40 + 41 = **1 681 = 41 × 41 = 41²**. 1 681 a donc au moins trois diviseurs (1, 41 et 1 681) : il **n'est pas premier**.\n   Conclusion : l'affirmation de Léo est **fausse**. Un seul contre-exemple suffit pour démontrer qu'une affirmation générale est fausse, même si elle marche pour beaucoup de valeurs."
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "difficulte": 1,
+      "titre": "Développer, factoriser, résoudre",
+      "consigne": "Réponds à chaque question en écrivant les étapes de calcul.",
+      "enonce": "**Questions.**\n\n1. Développe et réduis :\n   - A = 3(2x − 5)\n   - B = (x + 4)(x − 2)\n   - C = (x + 5)²\n2. Factorise :\n   - D = 7x + 21\n   - E = x² − 25\n3. Résous l'équation **5x − 7 = 18** et vérifie ta solution.",
+      "bareme": [
+        { "critere": "Développements justes : A = 6x − 15, B = x² + 2x − 8, C = x² + 10x + 25", "points": 9 },
+        { "critere": "Factorisations justes : D = 7(x + 3) et E = (x + 5)(x − 5)", "points": 6 },
+        { "critere": "Équation résolue par étapes, x = 5, et vérification écrite", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. - A = 3 × 2x − 3 × 5 = **6x − 15** (simple distributivité).\n   - B = x² − 2x + 4x − 8 = **x² + 2x − 8** (double distributivité).\n   - C = x² + 2 × x × 5 + 5² = **x² + 10x + 25** (identité (a + b)², ne pas oublier le double produit).\n\n2. - D = 7 × x + 7 × 3 = **7(x + 3)** (facteur commun 7).\n   - E = x² − 5² = **(x + 5)(x − 5)** (identité a² − b²).\n\n3. 5x − 7 = 18\n   5x = 25 (on ajoute 7 des deux côtés)\n   **x = 5** (on divise par 5).\n   Vérification : 5 × 5 − 7 = 25 − 7 = 18. ✓"
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "difficulte": 2,
+      "titre": "Le programme de calcul de Sofia",
+      "consigne": "Lis le programme de calcul et réponds aux questions en justifiant.",
+      "enonce": "**Programme de calcul de Sofia.**\n\n> - Choisir un nombre.\n> - Lui ajouter 3.\n> - Élever le résultat au carré.\n> - Soustraire le carré du nombre de départ.\n\n1. Applique le programme au nombre **2**, puis au nombre **−1**.\n2. On appelle x le nombre de départ. Écris le résultat en fonction de x, puis montre qu'il est égal à **6x + 9**.\n3. Quel nombre faut-il choisir au départ pour obtenir **45** ? Vérifie avec le programme.",
+      "bareme": [
+        { "critere": "Programme appliqué : 21 pour 2 et 3 pour −1", "points": 5 },
+        { "critere": "Expression (x + 3)² − x² écrite", "points": 4 },
+        { "critere": "Développement avec l'identité remarquable et réduction à 6x + 9", "points": 6 },
+        { "critere": "Équation 6x + 9 = 45 résolue, x = 6, et vérification", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Avec 2 : 2 + 3 = 5 ; 5² = 25 ; 25 − 2² = 25 − 4 = **21**.\n   Avec −1 : −1 + 3 = 2 ; 2² = 4 ; 4 − (−1)² = 4 − 1 = **3**.\n\n2. Le résultat s'écrit **(x + 3)² − x²**.\n   (x + 3)² = x² + 6x + 9 (identité (a + b)²).\n   Donc (x + 3)² − x² = x² + 6x + 9 − x² = **6x + 9**.\n   Contrôle : pour x = 2, 6 × 2 + 9 = 21 ✓.\n\n3. On résout 6x + 9 = 45 : 6x = 36, donc **x = 6**.\n   Vérification avec le programme : 6 + 3 = 9 ; 9² = 81 ; 81 − 36 = 45 ✓."
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "difficulte": 3,
+      "titre": "Une expression sous toutes ses formes",
+      "consigne": "Réponds aux questions dans l'ordre ; chaque réponse doit être justifiée par un calcul.",
+      "enonce": "**On considère l'expression E = (3x − 1)² − 16.**\n\n1. Développe et réduis E.\n2. Factorise E en remarquant que 16 = 4², puis montre que E = 3(3x − 5)(x + 1).\n3. Résous l'équation **E = 0**.\n4. Calcule E pour x = 0 en choisissant la forme la plus pratique. Vérifie avec une autre forme.\n5. Pour x = 5/3, que vaut E ? Justifie sans calcul long.",
+      "bareme": [
+        { "critere": "Développement : 9x² − 6x − 15, identité (a − b)² bien appliquée", "points": 4 },
+        { "critere": "Factorisation par a² − b² : (3x − 5)(3x + 3), puis mise en facteur de 3", "points": 5 },
+        { "critere": "Équation produit nul : solutions 5/3 et −1", "points": 5 },
+        { "critere": "E(0) = −15 obtenu et vérifié avec une seconde forme", "points": 3 },
+        { "critere": "E(5/3) = 0 justifié car 5/3 est solution de E = 0", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (3x − 1)² = 9x² − 6x + 1. Donc E = 9x² − 6x + 1 − 16 = **9x² − 6x − 15**.\n\n2. E = (3x − 1)² − 4² est de la forme a² − b² avec a = 3x − 1 et b = 4 :\n   E = (3x − 1 − 4)(3x − 1 + 4) = (3x − 5)(3x + 3).\n   Or 3x + 3 = 3(x + 1), donc **E = 3(3x − 5)(x + 1)**.\n\n3. E = 0 ⇔ 3(3x − 5)(x + 1) = 0. Un produit est nul si l'un de ses facteurs est nul (3 ≠ 0) :\n   3x − 5 = 0, soit **x = 5/3** ; ou x + 1 = 0, soit **x = −1**.\n\n4. Avec la forme développée : E = 9 × 0 − 6 × 0 − 15 = **−15**.\n   Vérification avec la forme factorisée : 3 × (−5) × 1 = −15 ✓ (ou forme de départ : (−1)² − 16 = −15 ✓).\n\n5. 5/3 est une solution de E = 0 (question 3), donc **E = 0** pour x = 5/3, sans refaire le calcul."
+    },
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "difficulte": 1,
+      "titre": "Les trajets du matin",
+      "consigne": "Calcule les indicateurs demandés en détaillant ta méthode.",
+      "enonce": "**Situation.** Sept élèves ont noté la durée, en minutes, de leur trajet jusqu'au collège :\n\n> 12 ; 25 ; 8 ; 15 ; 20 ; 15 ; 10\n\n1. Calcule la **moyenne** de cette série.\n2. Détermine la **médiane** de cette série. Explique ta méthode.\n3. Calcule l'**étendue** de cette série.",
+      "bareme": [
+        { "critere": "Moyenne : somme 105 divisée par 7, résultat 15 min", "points": 7 },
+        { "critere": "Médiane : série rangée, valeur du milieu (4e), 15 min", "points": 8 },
+        { "critere": "Étendue : 25 − 8 = 17 min", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Somme : 12 + 25 + 8 + 15 + 20 + 15 + 10 = 105. Moyenne : 105 ÷ 7 = **15 min**.\n\n2. On range d'abord la série dans l'ordre croissant : 8 ; 10 ; 12 ; **15** ; 15 ; 20 ; 25.\n   L'effectif est 7 (impair) : la médiane est la valeur du milieu, la 4e. **Médiane = 15 min** : au moins la moitié des élèves mettent 15 min ou moins.\n\n3. Étendue = plus grande valeur − plus petite valeur = 25 − 8 = **17 min**."
+    },
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "difficulte": 2,
+      "titre": "Les notes du contrôle de 3e B",
+      "consigne": "Utilise le tableau pour répondre ; détaille tes calculs.",
+      "enonce": "**Document.** Notes sur 20 obtenues par les élèves de 3e B à un contrôle :\n\n| Note | 8 | 10 | 12 | 14 | 16 | 18 |\n| Effectif | 3 | 5 | 7 | 4 | 4 | 2 |\n\n1. Combien d'élèves ont passé le contrôle ?\n2. Calcule la **moyenne** de la classe (moyenne pondérée).\n3. Détermine la **médiane** et interprète-la.\n4. Quelle est la **fréquence**, en pourcentage, des élèves ayant eu au moins 14 ?",
+      "bareme": [
+        { "critere": "Effectif total : 25 élèves", "points": 3 },
+        { "critere": "Moyenne pondérée : 314 ÷ 25 = 12,56", "points": 7 },
+        { "critere": "Médiane : 13e valeur, 12, repérée grâce aux effectifs cumulés, et interprétée", "points": 6 },
+        { "critere": "Fréquence des notes ≥ 14 : 10/25 = 40 %", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 3 + 5 + 7 + 4 + 4 + 2 = **25 élèves**.\n\n2. Moyenne pondérée : (8 × 3 + 10 × 5 + 12 × 7 + 14 × 4 + 16 × 4 + 18 × 2) ÷ 25\n   = (24 + 50 + 84 + 56 + 64 + 36) ÷ 25 = 314 ÷ 25 = **12,56**.\n\n3. L'effectif est 25 (impair) : la médiane est la 13e valeur de la série rangée.\n   Effectifs cumulés : 3 (note 8), 8 (note 10), 15 (note 12)… La 13e valeur est donc **12**.\n   Interprétation : au moins la moitié des élèves ont eu 12 ou moins, et au moins la moitié 12 ou plus.\n\n4. Notes ≥ 14 : 4 + 4 + 2 = 10 élèves. Fréquence : 10 ÷ 25 = 0,4, soit **40 %**."
+    },
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "difficulte": 3,
+      "titre": "Quelle joueuse sélectionner ?",
+      "consigne": "Compare les deux séries à l'aide des indicateurs du cours et rédige une conclusion argumentée.",
+      "enonce": "**Situation.** L'entraîneuse d'un club de basket doit choisir une joueuse pour le match décisif. Elle a relevé les points marqués par Awa et par Nina lors des 8 derniers matchs :\n\n| Match | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n| Awa | 12 | 14 | 13 | 15 | 12 | 14 | 13 | 11 |\n| Nina | 4 | 22 | 6 | 25 | 5 | 20 | 8 | 14 |\n\n1. Calcule la moyenne de chaque joueuse. Que constates-tu ?\n2. Calcule la médiane et l'étendue de chaque série.\n3. L'entraîneuse veut une joueuse **régulière**. Laquelle doit-elle choisir ? Justifie avec un indicateur.\n4. Au match suivant, Nina marque 45 points. Calcule sa nouvelle moyenne (arrondie au dixième) et sa nouvelle médiane. Quel indicateur a le plus bougé ? Explique pourquoi.",
+      "bareme": [
+        { "critere": "Moyennes égales : 13 points pour chacune (somme 104 ÷ 8)", "points": 5 },
+        { "critere": "Médianes (13 et 11) et étendues (4 et 21) justes, séries rangées", "points": 6 },
+        { "critere": "Choix d'Awa justifié par l'étendue (dispersion)", "points": 4 },
+        { "critere": "Nouvelle moyenne ≈ 16,6 et médiane 14 ; la moyenne est sensible aux valeurs extrêmes", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Awa : 12 + 14 + 13 + 15 + 12 + 14 + 13 + 11 = 104 ; 104 ÷ 8 = **13**.\n   Nina : 4 + 22 + 6 + 25 + 5 + 20 + 8 + 14 = 104 ; 104 ÷ 8 = **13**.\n   Les deux joueuses ont **la même moyenne** : la moyenne seule ne permet pas de les départager.\n\n2. Awa rangée : 11 ; 12 ; 12 ; 13 ; 13 ; 14 ; 14 ; 15. Effectif pair : médiane = (13 + 13) ÷ 2 = **13**. Étendue : 15 − 11 = **4**.\n   Nina rangée : 4 ; 5 ; 6 ; 8 ; 14 ; 20 ; 22 ; 25. Médiane = (8 + 14) ÷ 2 = **11**. Étendue : 25 − 4 = **21**.\n\n3. L'étendue mesure la dispersion : celle d'Awa (4) est bien plus faible que celle de Nina (21). **Awa est la plus régulière** : c'est elle qu'il faut choisir.\n\n4. Nouvelle moyenne de Nina : (104 + 45) ÷ 9 = 149 ÷ 9 ≈ **16,6**.\n   Série rangée : 4 ; 5 ; 6 ; 8 ; **14** ; 20 ; 22 ; 25 ; 45. Effectif 9 : médiane = 5e valeur = **14**.\n   La moyenne passe de 13 à 16,6 alors que la médiane passe de 11 à 14 seulement (elle se décale d'un rang). La **moyenne** a le plus bougé : elle est tirée par une seule valeur extrême, alors que la médiane y résiste."
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "difficulte": 1,
+      "titre": "L'urne aux boules de couleur",
+      "consigne": "Donne chaque probabilité sous forme de fraction irréductible et justifie.",
+      "enonce": "**Situation.** Une urne contient **5 boules rouges**, **3 boules bleues** et **2 boules vertes**, indiscernables au toucher. On tire une boule au hasard.\n\n1. Quelle est la probabilité de tirer une boule rouge ?\n2. Quelle est la probabilité de ne **pas** tirer une boule bleue ? Utilise l'événement contraire.\n3. Quelle est la probabilité de tirer une boule jaune ? Comment appelle-t-on cet événement ?",
+      "bareme": [
+        { "critere": "P(rouge) = 5/10 = 1/2 avec issues favorables sur issues possibles", "points": 7 },
+        { "critere": "P(non bleue) = 1 − 3/10 = 7/10 par l'événement contraire", "points": 8 },
+        { "critere": "P(jaune) = 0, événement impossible", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "Il y a 5 + 3 + 2 = 10 boules, et chacune a la même chance d'être tirée (situation d'équiprobabilité).\n\n1. P(rouge) = nombre d'issues favorables ÷ nombre d'issues possibles = 5/10 = **1/2**.\n\n2. P(bleue) = 3/10. L'événement « ne pas tirer une boule bleue » est le contraire de « tirer une boule bleue » :\n   P(non bleue) = 1 − 3/10 = **7/10**. (Contrôle : 5 rouges + 2 vertes = 7 boules sur 10.)\n\n3. Il n'y a aucune boule jaune : P(jaune) = 0/10 = **0**. C'est un **événement impossible**."
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "difficulte": 2,
+      "titre": "Le jeu des deux dés à la kermesse",
+      "consigne": "Construis le tableau demandé, puis réponds en justifiant chaque probabilité.",
+      "enonce": "**Situation.** À la kermesse, Théo propose un jeu : on lance **deux dés équilibrés à six faces** et on **additionne** les deux nombres obtenus.\n\n1. Construis un tableau à double entrée donnant toutes les sommes possibles. Combien y a-t-il d'issues ?\n2. Quelle est la probabilité d'obtenir une somme égale à **7** ?\n3. Quelle est la probabilité d'obtenir une somme **supérieure ou égale à 10** ?\n4. Théo annonce : « On gagne si la somme vaut 7 **ou** si les deux dés montrent le même nombre. » Calcule la probabilité de gagner.",
+      "bareme": [
+        { "critere": "Tableau à double entrée complet, 36 issues équiprobables", "points": 5 },
+        { "critere": "P(somme = 7) = 6/36 = 1/6", "points": 5 },
+        { "critere": "P(somme ≥ 10) = 6/36 = 1/6, cases dénombrées", "points": 5 },
+        { "critere": "P(gagner) = 12/36 = 1/3, en remarquant qu'aucun double ne donne 7", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Tableau : en ligne le dé 1 (1 à 6), en colonne le dé 2 (1 à 6), chaque case contient la somme (de 2 à 12). Il y a 6 × 6 = **36 issues**, toutes équiprobables.\n\n2. Somme 7 : (1;6), (2;5), (3;4), (4;3), (5;2), (6;1), soit 6 cases. P = 6/36 = **1/6**.\n\n3. Somme 10 : (4;6), (5;5), (6;4) → 3 cases ; somme 11 : (5;6), (6;5) → 2 cases ; somme 12 : (6;6) → 1 case. Total 6 cases. P = 6/36 = **1/6**.\n\n4. Les doubles : (1;1), (2;2), … (6;6), soit 6 cases. Un double donne une somme paire, donc jamais 7 : les deux listes n'ont aucune case commune.\n   Cases gagnantes : 6 + 6 = 12. P(gagner) = 12/36 = **1/3**."
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "difficulte": 3,
+      "titre": "Deux tirages avec remise",
+      "consigne": "Construis un arbre de probabilités et utilise-le pour répondre ; rédige les justifications.",
+      "enonce": "**Situation.** Un sac contient **3 jetons rouges (R)** et **2 jetons bleus (B)**. On tire un jeton au hasard, on note sa couleur, on le **remet** dans le sac, puis on tire un second jeton.\n\n1. Construis l'arbre de probabilités de cette expérience.\n2. Calcule la probabilité d'obtenir **deux jetons rouges**.\n3. Calcule la probabilité d'obtenir **au moins un jeton bleu**. Utilise l'événement contraire.\n4. Calcule la probabilité d'obtenir **deux jetons de couleurs différentes**.\n5. Inès a tiré 5 fois de suite un jeton rouge (avec remise). Elle pense qu'au 6e tirage, un bleu est « plus probable ». A-t-elle raison ? Que dit la loi des grands nombres ?",
+      "bareme": [
+        { "critere": "Arbre complet à deux niveaux avec les probabilités 3/5 et 2/5 sur chaque branche", "points": 4 },
+        { "critere": "P(RR) = 3/5 × 3/5 = 9/25 en multipliant le long de la branche", "points": 4 },
+        { "critere": "P(au moins un bleu) = 1 − 9/25 = 16/25", "points": 4 },
+        { "critere": "P(couleurs différentes) = 6/25 + 6/25 = 12/25", "points": 4 },
+        { "critere": "Réponse à Inès : probabilité inchangée 3/5 pour rouge, loi des grands nombres correctement énoncée", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Premier niveau : R (3/5) et B (2/5). Après chaque branche, comme le jeton est remis, le second niveau est identique : R (3/5) et B (2/5). Quatre issues : RR, RB, BR, BB.\n\n2. On multiplie le long de la branche : P(RR) = 3/5 × 3/5 = **9/25**.\n\n3. « Au moins un bleu » est le contraire de « aucun bleu », c'est-à-dire RR.\n   P(au moins un bleu) = 1 − 9/25 = **16/25**.\n   (Contrôle : RB + BR + BB = 6/25 + 6/25 + 4/25 = 16/25.)\n\n4. Deux branches conviennent : P(RB) = 3/5 × 2/5 = 6/25 et P(BR) = 2/5 × 3/5 = 6/25. On additionne : **12/25**.\n\n5. **Non.** Le jeton est remis : le contenu du sac est le même à chaque tirage, les tirages ne gardent aucune mémoire. Au 6e tirage, P(bleu) = 2/5 et P(rouge) = 3/5, comme toujours.\n   La loi des grands nombres dit que, sur un **très grand nombre** de tirages, la fréquence observée des bleus se rapproche de 2/5 ; elle ne prédit rien sur le prochain tirage."
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "difficulte": 1,
+      "titre": "Images et antécédents",
+      "consigne": "Réponds en écrivant les calculs et le vocabulaire exact (image, antécédent).",
+      "enonce": "**On considère la fonction f définie par f(x) = x² − 3.**\n\n1. Calcule l'image de 4, l'image de −2 et l'image de 0 par f.\n2. Trouve **tous** les antécédents de 6 par f.\n3. Le point A de coordonnées (2 ; 1) appartient-il à la courbe représentative de f ? Justifie.",
+      "bareme": [
+        { "critere": "Images justes : f(4) = 13, f(−2) = 1, f(0) = −3", "points": 8 },
+        { "critere": "Antécédents de 6 : 3 et −3, obtenus par l'équation x² − 3 = 6", "points": 7 },
+        { "critere": "A sur la courbe car f(2) = 1", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Pour calculer une image, on remplace x par sa valeur :\n   - f(4) = 4² − 3 = 16 − 3 = **13** ;\n   - f(−2) = (−2)² − 3 = 4 − 3 = **1** ;\n   - f(0) = 0² − 3 = **−3**.\n\n2. On cherche x tel que f(x) = 6 : x² − 3 = 6, donc x² = 9. Deux nombres ont pour carré 9 : **3 et −3**. 6 a donc **deux antécédents** (un nombre peut avoir plusieurs antécédents, mais une seule image).\n\n3. Un point (x ; y) est sur la courbe si y = f(x). Ici f(2) = 2² − 3 = 1, qui est bien l'ordonnée de A : **A appartient à la courbe**."
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "difficulte": 2,
+      "titre": "Lire un tableau de valeurs",
+      "consigne": "Utilise le tableau de valeurs pour répondre. Justifie avec le vocabulaire du cours.",
+      "enonce": "**Document.** Tableau de valeurs d'une fonction g :\n\n| x | −2 | −1 | 0 | 1 | 2 | 3 | 4 |\n| g(x) | 5 | 0 | −3 | −4 | −3 | 0 | 5 |\n\n1. Quelle est l'image de 1 par g ?\n2. Donne tous les antécédents de 0, puis tous les antécédents de 5 lisibles dans le tableau.\n3. Traduis l'égalité **g(3) = 0** par une phrase avec le mot « image », puis par une phrase avec le mot « antécédent ».\n4. Un élève écrit : « L'antécédent de −3 est 0. » Pourquoi cette phrase est-elle maladroite ?",
+      "bareme": [
+        { "critere": "Image de 1 : −4", "points": 4 },
+        { "critere": "Antécédents de 0 : −1 et 3 ; antécédents de 5 : −2 et 4", "points": 6 },
+        { "critere": "g(3) = 0 traduit correctement avec « image » et avec « antécédent »", "points": 5 },
+        { "critere": "−3 a deux antécédents lisibles (0 et 2) : on doit dire « un antécédent »", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Dans la colonne x = 1, on lit g(1) = −4 : **l'image de 1 est −4**.\n\n2. On cherche 0 dans la ligne du bas : il apparaît sous −1 et sous 3. **Les antécédents de 0 sont −1 et 3.**\n   5 apparaît sous −2 et sous 4 : **−2 et 4 sont des antécédents de 5**.\n\n3. « L'**image** de 3 par g est 0. » et « 3 est **un antécédent** de 0 par g. »\n\n4. −3 apparaît deux fois dans la ligne du bas, sous 0 et sous 2 : −3 a (au moins) **deux antécédents**. Dire « l'antécédent » laisse croire qu'il est unique ; il faut écrire « **un** antécédent de −3 est 0 » ou « les antécédents de −3 sont 0 et 2 ». Seule l'image est unique."
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "difficulte": 3,
+      "titre": "L'enclos des chèvres",
+      "consigne": "Réponds aux questions en justifiant ; utilise le vocabulaire des fonctions.",
+      "enonce": "**Situation.** Hugo dispose de **20 m de grillage** pour construire un enclos rectangulaire pour ses chèvres. Il utilise tout le grillage. On note x la longueur d'un côté, en mètres (0 < x < 10).\n\n1. Montre que l'autre côté mesure 10 − x, puis que l'aire de l'enclos est A(x) = x(10 − x).\n2. Calcule A(3) et A(5). Interprète A(5) dans la situation.\n3. Vérifie que 3 et 7 sont deux antécédents de 21 par A. Que représentent-ils pour l'enclos ?\n4. Complète le tableau de valeurs suivant :\n\n| x | 1 | 2 | 4 | 5 | 6 | 8 | 9 |\n| A(x) | | | | | | | |\n\n5. D'après le tableau, pour quelle valeur de x l'aire semble-t-elle la plus grande ? Quelle est alors la forme de l'enclos ?",
+      "bareme": [
+        { "critere": "Demi-périmètre 10 m, autre côté 10 − x et formule de l'aire justifiés", "points": 4 },
+        { "critere": "A(3) = 21 et A(5) = 25, avec interprétation en m²", "points": 4 },
+        { "critere": "Vérification A(3) = A(7) = 21 et interprétation : deux enclos de même aire (3 × 7)", "points": 4 },
+        { "critere": "Tableau juste : 9 ; 16 ; 24 ; 25 ; 24 ; 16 ; 9", "points": 4 },
+        { "critere": "Maximum pour x = 5 : enclos carré de 5 m de côté, 25 m²", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le périmètre vaut 20 m, donc longueur + largeur = 20 ÷ 2 = 10 m. Si un côté mesure x, l'autre mesure **10 − x**. Aire d'un rectangle = longueur × largeur : **A(x) = x(10 − x)**.\n\n2. A(3) = 3 × 7 = **21** ; A(5) = 5 × 5 = **25**. Un enclos de 5 m sur 5 m a une aire de **25 m²**.\n\n3. A(3) = 3 × (10 − 3) = 21 et A(7) = 7 × (10 − 7) = 21 : **3 et 7 sont deux antécédents de 21**. Ils correspondent au même enclos de 3 m sur 7 m, pris dans un sens ou dans l'autre : 21 m².\n\n4. A(1) = 9 ; A(2) = 16 ; A(4) = 24 ; A(5) = 25 ; A(6) = 24 ; A(8) = 16 ; A(9) = 9.\n\n5. La plus grande valeur du tableau est **25 m², pour x = 5**. L'autre côté vaut alors 10 − 5 = 5 m : l'enclos est un **carré** de 5 m de côté. On remarque aussi la symétrie du tableau : A(x) = A(10 − x)."
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "difficulte": 1,
+      "titre": "Deux fonctions linéaires",
+      "consigne": "Réponds en justifiant chaque calcul.",
+      "enonce": "**Partie 1.** On considère la fonction linéaire f définie par **f(x) = 2,5x**.\n\n1. Calcule f(4) et f(−2).\n2. Calcule l'antécédent de 15 par f.\n\n**Partie 2.** g est une fonction linéaire telle que **g(5) = −15**.\n\n3. Détermine le coefficient de g, puis l'expression de g(x).\n4. Sa représentation graphique monte-t-elle ou descend-elle ? Par quel point passe-t-elle forcément ?",
+      "bareme": [
+        { "critere": "f(4) = 10 et f(−2) = −5", "points": 5 },
+        { "critere": "Antécédent de 15 : équation 2,5x = 15, x = 6", "points": 5 },
+        { "critere": "Coefficient a = −15 ÷ 5 = −3, g(x) = −3x", "points": 6 },
+        { "critere": "Droite qui descend (a < 0) et passe par l'origine", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. f(4) = 2,5 × 4 = **10** ; f(−2) = 2,5 × (−2) = **−5**.\n\n2. On résout 2,5x = 15 : x = 15 ÷ 2,5 = **6**. Vérification : 2,5 × 6 = 15 ✓.\n\n3. Pour une fonction linéaire, a = g(x) ÷ x pour x non nul : a = −15 ÷ 5 = **−3**. Donc **g(x) = −3x**.\n\n4. Le coefficient est négatif : la droite **descend**. Comme toute fonction linéaire, elle passe par l'**origine** (0 ; 0), car g(0) = 0."
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "difficulte": 2,
+      "titre": "Les soldes de janvier",
+      "consigne": "Lis la situation et réponds en utilisant une fonction linéaire.",
+      "enonce": "**Situation.** Pendant les soldes, un magasin de sport applique une réduction de **25 %** sur tous les articles. On note x le prix affiché avant réduction (en €) et p(x) le prix payé.\n\n1. Par quel coefficient multiplie-t-on un prix pour le diminuer de 25 % ? Écris p(x).\n2. Explique pourquoi p est une fonction linéaire.\n3. Quel est le prix payé pour un pull affiché **40 €** ?\n4. Lucie a payé une paire de baskets **45 €**. Quel était le prix avant réduction ?",
+      "bareme": [
+        { "critere": "Coefficient 0,75 et p(x) = 0,75x", "points": 5 },
+        { "critere": "Fonction linéaire : forme ax sans terme constant (proportionnalité)", "points": 4 },
+        { "critere": "Prix du pull : 30 €", "points": 5 },
+        { "critere": "Prix initial des baskets : 0,75x = 45, soit 60 €", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Diminuer de 25 %, c'est garder 100 % − 25 % = 75 % du prix : on multiplie par **0,75**. Donc **p(x) = 0,75x**.\n\n2. p est de la forme x ↦ ax avec a = 0,75, **sans terme constant** : c'est une fonction linéaire. Le prix payé est proportionnel au prix affiché.\n\n3. p(40) = 0,75 × 40 = **30 €**.\n\n4. On cherche l'antécédent de 45 : 0,75x = 45, donc x = 45 ÷ 0,75 = **60 €**. Vérification : 0,75 × 60 = 45 ✓.\n\nErreur fréquente : ajouter 25 % à 45 € (45 × 1,25 = 56,25 €) ; c'est faux, car les 25 % portent sur le prix de départ, pas sur le prix soldé."
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "difficulte": 3,
+      "titre": "Deux offres de réduction",
+      "consigne": "Compare les offres en utilisant les coefficients multiplicateurs ; rédige une conclusion.",
+      "enonce": "**Situation.** Deux magasins d'électroménager font une promotion.\n\n- **Magasin A** : « −30 % sur tout le magasin ».\n- **Magasin B** : « −15 %, puis encore −15 % sur le prix déjà réduit ».\n\nNadia pense que les deux offres reviennent au même.\n\n1. Écris la fonction linéaire a(x) qui donne le prix payé dans le magasin A pour un article affiché x euros.\n2. Montre que, dans le magasin B, le prix payé est b(x) = 0,7225x. Quelle réduction globale cela représente-t-il ?\n3. Nadia a-t-elle raison ? Calcule le prix payé pour un aspirateur affiché **80 €** dans chaque magasin.\n4. Dans le magasin A, Yann a payé **42 €**. Quel était le prix affiché ?\n5. Une action en bourse baisse de 20 % puis remonte de 20 %. Revient-elle à son prix de départ ? Justifie.",
+      "bareme": [
+        { "critere": "a(x) = 0,7x avec le coefficient justifié", "points": 3 },
+        { "critere": "b(x) = 0,85 × 0,85 x = 0,7225x, soit −27,75 %", "points": 5 },
+        { "critere": "Conclusion : Nadia a tort, 56 € en A contre 57,80 € en B", "points": 4 },
+        { "critere": "Prix affiché de l'article de Yann : 60 €", "points": 4 },
+        { "critere": "0,8 × 1,2 = 0,96 : baisse de 4 %, pas de retour au départ", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. −30 % : on garde 70 % du prix, donc **a(x) = 0,7x**.\n\n2. Chaque baisse de 15 % multiplie le prix par 0,85. Deux baisses successives : b(x) = 0,85 × 0,85 × x = **0,7225x**. On garde 72,25 % du prix : la réduction globale est de 100 − 72,25 = **27,75 %**, et non 30 %.\n\n3. **Nadia a tort** : les pourcentages ne s'additionnent pas, les coefficients se multiplient.\n   a(80) = 0,7 × 80 = **56 €** ; b(80) = 0,7225 × 80 = **57,80 €**. Le magasin A est plus avantageux.\n\n4. On résout 0,7x = 42 : x = 42 ÷ 0,7 = **60 €**.\n\n5. 0,8 × 1,2 = 0,96 : l'action vaut 96 % de son prix de départ. Elle a **baissé de 4 %** et ne revient pas à son prix initial, car la hausse de 20 % s'applique à un prix déjà diminué."
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "difficulte": 1,
+      "titre": "Une fonction affine",
+      "consigne": "Réponds en justifiant tes calculs et en utilisant le vocabulaire du cours.",
+      "enonce": "**On considère la fonction affine f définie par f(x) = −2x + 7.**\n\n1. Donne son coefficient directeur et son ordonnée à l'origine.\n2. Calcule f(3) et f(0).\n3. Calcule l'antécédent de −1 par f.\n4. Sa représentation graphique monte-t-elle ou descend-elle ? Justifie. En quel point coupe-t-elle l'axe des ordonnées ?",
+      "bareme": [
+        { "critere": "a = −2 et b = 7 correctement nommés", "points": 4 },
+        { "critere": "f(3) = 1 et f(0) = 7", "points": 5 },
+        { "critere": "Antécédent de −1 : −2x + 7 = −1, x = 4", "points": 6 },
+        { "critere": "Droite qui descend car a < 0 ; point (0 ; 7)", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f(x) = ax + b avec **a = −2** (coefficient directeur) et **b = 7** (ordonnée à l'origine).\n\n2. f(3) = −2 × 3 + 7 = −6 + 7 = **1** ; f(0) = **7** (c'est b).\n\n3. On résout −2x + 7 = −1 : −2x = −8, donc **x = 4**. Vérification : −2 × 4 + 7 = −1 ✓.\n\n4. Le coefficient directeur a = −2 est **négatif** : la droite **descend**. Elle coupe l'axe des ordonnées au point **(0 ; 7)**, car f(0) = b = 7."
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "difficulte": 2,
+      "titre": "Retrouver une fonction affine",
+      "consigne": "Détermine la fonction à partir des données puis exploite-la. Justifie chaque étape.",
+      "enonce": "**Données.** g est une fonction affine telle que **g(2) = 1** et **g(6) = 13**.\n\n1. Calcule le coefficient directeur a de g.\n2. Calcule l'ordonnée à l'origine b, puis écris l'expression de g(x). Vérifie avec g(6).\n3. Calcule g(10) et l'antécédent de 40 par g.\n4. Le point M(−1 ; −8) appartient-il à la droite représentant g ? Justifie.",
+      "bareme": [
+        { "critere": "a = (13 − 1) ÷ (6 − 2) = 3", "points": 5 },
+        { "critere": "b = −5, g(x) = 3x − 5 et vérification avec g(6) = 13", "points": 5 },
+        { "critere": "g(10) = 25 et antécédent de 40 : x = 15", "points": 6 },
+        { "critere": "M sur la droite car g(−1) = −8", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. a = (g(6) − g(2)) ÷ (6 − 2) = (13 − 1) ÷ 4 = 12 ÷ 4 = **3**.\n\n2. g(x) = 3x + b. Avec g(2) = 1 : 3 × 2 + b = 1, donc b = 1 − 6 = **−5**. Ainsi **g(x) = 3x − 5**.\n   Vérification : g(6) = 18 − 5 = 13 ✓.\n\n3. g(10) = 30 − 5 = **25**.\n   Antécédent de 40 : 3x − 5 = 40, 3x = 45, **x = 15**.\n\n4. g(−1) = 3 × (−1) − 5 = −8, qui est bien l'ordonnée de M : **M appartient à la droite**."
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "difficulte": 3,
+      "titre": "Trois tarifs pour la salle d'escalade",
+      "consigne": "Modélise chaque tarif par une fonction, puis compare-les en justifiant par des calculs et des équations.",
+      "enonce": "**Situation.** Une salle d'escalade propose trois tarifs :\n\n- **Tarif A** : 8 € la séance.\n- **Tarif B** : un abonnement de 45 € pour l'année, puis 3,50 € la séance.\n- **Tarif C** : un forfait annuel de 200 €, séances illimitées.\n\nOn note x le nombre de séances dans l'année.\n\n1. Exprime le prix A(x) payé avec le tarif A et le prix B(x) payé avec le tarif B.\n2. Laquelle de ces deux fonctions est linéaire ? Laquelle est affine sans être linéaire ? Justifie.\n3. Calcule le prix payé pour 8 séances avec les tarifs A et B.\n4. Pour combien de séances les tarifs A et B coûtent-ils le même prix ? Justifie par une équation.\n5. Zoé grimpe très souvent. À partir de combien de séances le tarif C devient-il plus avantageux que le tarif B ?",
+      "bareme": [
+        { "critere": "A(x) = 8x et B(x) = 3,5x + 45", "points": 4 },
+        { "critere": "A linéaire (proportionnalité), B affine avec b = 45 ≠ 0", "points": 3 },
+        { "critere": "Pour 8 séances : 64 € (A) et 73 € (B)", "points": 3 },
+        { "critere": "Équation 8x = 3,5x + 45 résolue : 10 séances, même prix de 80 €", "points": 5 },
+        { "critere": "C plus avantageux que B à partir de 45 séances, justifié par calcul", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **A(x) = 8x** et **B(x) = 3,5x + 45**.\n\n2. A est de la forme ax sans terme constant : elle est **linéaire** (le prix est proportionnel au nombre de séances). B est de la forme ax + b avec b = 45 ≠ 0 : elle est **affine mais pas linéaire** (le prix ne double pas quand le nombre de séances double, à cause de l'abonnement).\n\n3. A(8) = 8 × 8 = **64 €** ; B(8) = 3,5 × 8 + 45 = 28 + 45 = **73 €**. Pour 8 séances, A est moins cher.\n\n4. On résout 8x = 3,5x + 45 : 4,5x = 45, donc **x = 10**. Pour 10 séances, les deux tarifs coûtent 80 € (8 × 10 = 80 et 35 + 45 = 80). Graphiquement, c'est l'abscisse du point d'intersection des deux droites. Au-delà de 10 séances, B devient moins cher que A.\n\n5. C est plus avantageux que B quand 3,5x + 45 > 200, soit 3,5x > 155, soit x > 155 ÷ 3,5 ≈ 44,3.\n   Vérification : B(44) = 154 + 45 = 199 € (< 200) et B(45) = 157,5 + 45 = 202,50 € (> 200).\n   Le tarif C devient plus avantageux **à partir de 45 séances**."
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "difficulte": 1,
+      "titre": "Le ballon de handball",
+      "consigne": "Réponds en écrivant la formule utilisée, puis le calcul. Arrondis au dixième.",
+      "enonce": "**Situation.** Un ballon de handball est assimilé à une sphère de **rayon 9 cm**.\n\n1. Explique la différence entre une **sphère** et une **boule**, en prenant l'exemple du ballon.\n2. Calcule l'aire de la surface du ballon (valeur exacte en fonction de π, puis arrondi au dixième de cm²).\n3. Calcule le volume d'air contenu dans le ballon (valeur exacte, puis arrondi au dixième de cm³).",
+      "bareme": [
+        { "critere": "Sphère = surface (l'enveloppe), boule = solide plein (tout l'intérieur)", "points": 5 },
+        { "critere": "Aire : 4 × π × 9² = 324π ≈ 1 017,9 cm²", "points": 7 },
+        { "critere": "Volume : (4/3) × π × 9³ = 972π ≈ 3 053,6 cm³", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La **sphère** est la surface : l'ensemble des points situés à 9 cm du centre, c'est-à-dire l'enveloppe du ballon. La **boule** est le solide plein : tout l'intérieur du ballon, l'air compris.\n\n2. A = 4 × π × R² = 4 × π × 9² = 4 × 81 × π = **324π ≈ 1 017,9 cm²**.\n\n3. V = (4/3) × π × R³ = (4/3) × π × 729 = **972π ≈ 3 053,6 cm³** (environ 3,05 L).\n\nAttention aux unités : une aire en cm², un volume en cm³."
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "difficulte": 2,
+      "titre": "Le bac de glace de Jules",
+      "consigne": "Réponds aux questions en justifiant ; attention aux données (rayon ou diamètre).",
+      "enonce": "**Situation.** Jules sert des boules de glace avec une cuillère qui forme des boules de **6 cm de diamètre**. Son bac contient **1 litre** de glace.\n\n1. Calcule le volume d'une boule de glace (valeur exacte, puis arrondi au dixième de cm³).\n2. Rappel : 1 L = 1 dm³ = 1 000 cm³. Combien de boules **complètes** Jules peut-il servir avec son bac ?\n3. Jules coupe une boule en deux par un plan passant par son centre. Quelle est la nature de la section ? Calcule son aire.",
+      "bareme": [
+        { "critere": "Rayon 3 cm (diamètre divisé par 2) et volume 36π ≈ 113,1 cm³", "points": 8 },
+        { "critere": "1 000 ÷ 113,1 ≈ 8,8 : 8 boules complètes", "points": 6 },
+        { "critere": "Section : grand cercle (disque) de rayon 3 cm, aire 9π ≈ 28,3 cm²", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le diamètre vaut 6 cm, donc le **rayon vaut 3 cm**.\n   V = (4/3) × π × 3³ = (4/3) × 27 × π = **36π ≈ 113,1 cm³**.\n\n2. 1 L = 1 000 cm³. 1 000 ÷ 113,1 ≈ 8,84. Jules peut servir **8 boules complètes** (il reste un peu de glace, pas assez pour une 9e boule).\n\n3. Le plan passe par le centre : la section est un **grand cercle**, de même rayon que la boule, soit 3 cm. Le disque obtenu a pour aire π × 3² = **9π ≈ 28,3 cm²**.\n\nErreur à pénaliser : utiliser 6 cm comme rayon (on trouverait 288π ≈ 904,8 cm³, soit une seule boule par bac)."
+    },
+    {
+      "chapitre": "874b9cb5-7eb0-57c0-a140-dccf3249037d",
+      "difficulte": 3,
+      "titre": "La Terre et la Lune",
+      "consigne": "Réponds en justifiant ; donne les résultats en écriture scientifique arrondie au centième quand c'est demandé.",
+      "enonce": "**Données.** On assimile la Terre à une boule de rayon **6 371 km** et la Lune à une boule de rayon **1 737 km**.\n\n1. Calcule l'aire de la surface de la Terre en km². Donne le résultat en écriture scientifique arrondie au centième.\n2. Les océans couvrent environ **71 %** de la surface terrestre. Calcule leur superficie approximative.\n3. Calcule le rapport k = rayon de la Terre ÷ rayon de la Lune (arrondi au centième).\n4. Sans calculer les deux volumes, estime combien de fois le volume de la Terre est plus grand que celui de la Lune. Justifie la règle utilisée.\n5. Un élève affirme : « Si on doublait le rayon de la Lune, son volume doublerait. » Corrige cette affirmation.",
+      "bareme": [
+        { "critere": "Aire de la Terre : 4 × π × 6 371² ≈ 5,10 × 10⁸ km²", "points": 5 },
+        { "critere": "Superficie des océans ≈ 3,62 × 10⁸ km²", "points": 3 },
+        { "critere": "k ≈ 3,67 calculé", "points": 3 },
+        { "critere": "Rapport des volumes k³ ≈ 49, règle de l'agrandissement (volumes × k³) citée", "points": 5 },
+        { "critere": "Rayon doublé : volume multiplié par 2³ = 8, pas par 2", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. A = 4 × π × 6 371² = 4 × π × 40 589 641 ≈ 510 064 472 km², soit **≈ 5,10 × 10⁸ km²**.\n\n2. 0,71 × 5,10 × 10⁸ ≈ **3,62 × 10⁸ km²** (environ 362 millions de km²).\n\n3. k = 6 371 ÷ 1 737 ≈ **3,67**.\n\n4. La Terre est un agrandissement de la Lune de rapport k (les deux sont des boules). Quand les longueurs sont multipliées par k, les volumes sont multipliés par **k³**.\n   k³ ≈ 3,67³ ≈ 49,4. Le volume de la Terre est environ **49 fois** celui de la Lune.\n\n5. L'affirmation est **fausse**. Doubler le rayon, c'est un agrandissement de rapport 2 : le volume est multiplié par 2³ = **8** (et l'aire par 2² = 4)."
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "difficulte": 1,
+      "titre": "Trancher un cylindre",
+      "consigne": "Donne la nature de chaque section et ses dimensions, puis effectue les calculs demandés.",
+      "enonce": "**Situation.** Une boîte de conserve est un cylindre de **rayon 5 cm** et de **hauteur 12 cm**.\n\n1. On coupe la boîte par un plan **parallèle à la base**. Quelle est la nature de la section ? Donne ses dimensions et calcule son aire (arrondie au dixième).\n2. On la coupe par un plan **contenant son axe**. Quelle est la nature de la section ? Donne ses dimensions et son aire.\n3. Calcule le volume de la boîte (valeur exacte puis arrondi au dixième de cm³).",
+      "bareme": [
+        { "critere": "Section parallèle à la base : disque de rayon 5 cm, aire 25π ≈ 78,5 cm²", "points": 7 },
+        { "critere": "Section contenant l'axe : rectangle 10 cm × 12 cm, aire 120 cm²", "points": 7 },
+        { "critere": "Volume : π × 5² × 12 = 300π ≈ 942,5 cm³", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La section est un **disque de même rayon que la base**, 5 cm. Aire : π × 5² = **25π ≈ 78,5 cm²**.\n\n2. La section est un **rectangle** dont les côtés sont la hauteur (12 cm) et le diamètre (2 × 5 = 10 cm). Aire : 10 × 12 = **120 cm²**.\n\n3. V = π × R² × h = π × 25 × 12 = **300π ≈ 942,5 cm³** (soit environ 0,94 L)."
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "difficulte": 2,
+      "titre": "La pyramide de verre",
+      "consigne": "Justifie chaque étape en utilisant les propriétés des sections et des réductions.",
+      "enonce": "**Situation.** Une décoration en verre a la forme d'une pyramide SABCD à base carrée de **côté 6 cm** et de **hauteur 9 cm**. On la coupe par un plan **parallèle à la base**, à **3 cm du sommet S**. On obtient une petite pyramide au sommet.\n\n1. Quelle est la nature de la section ? Justifie.\n2. Calcule le coefficient de réduction k, puis le côté de la section et son aire.\n3. Calcule le volume de la grande pyramide.\n4. Déduis-en le volume de la petite pyramide, en utilisant k.",
+      "bareme": [
+        { "critere": "Section : carré, réduction de la base (plan parallèle à la base)", "points": 4 },
+        { "critere": "k = 3/9 = 1/3, côté 2 cm, aire 4 cm²", "points": 6 },
+        { "critere": "Volume de la grande pyramide : (1/3) × 36 × 9 = 108 cm³", "points": 5 },
+        { "critere": "Volume de la petite pyramide : 108 × (1/3)³ = 4 cm³", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Une section de pyramide par un plan parallèle à la base est un polygone **de même forme que la base** : c'est un **carré**, réduction de la base.\n\n2. k = hauteur de la petite pyramide ÷ hauteur de la grande = 3 ÷ 9 = **1/3**.\n   Côté de la section : 6 × 1/3 = **2 cm** ; aire : 2² = **4 cm²** (contrôle : 36 × k² = 36 × 1/9 = 4 ✓).\n\n3. V = (1/3) × aire de la base × hauteur = (1/3) × 6² × 9 = (1/3) × 36 × 9 = **108 cm³**.\n\n4. Les volumes sont multipliés par k³ = (1/3)³ = 1/27 : 108 × 1/27 = **4 cm³**.\n   Contrôle direct : (1/3) × 4 × 3 = 4 cm³ ✓.\n\nErreur fréquente : oublier le 1/3 de la formule du volume de la pyramide."
+    },
+    {
+      "chapitre": "c3f57585-0ce4-5223-9fef-6f00e4a3703e",
+      "difficulte": 3,
+      "titre": "Le verre à pied conique",
+      "consigne": "Réponds en justifiant par les propriétés de la réduction ; arrondis les volumes au dixième de cm³.",
+      "enonce": "**Situation.** La partie haute d'un verre à pied est un **cône** de révolution, pointe en bas, de **rayon 4 cm** (à l'ouverture) et de **hauteur 12 cm**. Maëlle y verse du jus jusqu'à **6 cm** de hauteur, mesurés depuis la pointe.\n\n1. Calcule le volume total du verre (valeur exacte, puis arrondi).\n2. Le jus forme un petit cône, réduction du grand. Calcule le coefficient k de réduction.\n3. Calcule le rayon de la surface du jus et l'aire de cette surface.\n4. Calcule le volume de jus. Quelle fraction du verre est remplie ?\n5. Maëlle pensait que le verre serait « à moitié plein ». Explique son erreur. Jusqu'à quelle hauteur faudrait-il verser pour remplir les **27/64** du verre ?",
+      "bareme": [
+        { "critere": "Volume du verre : (1/3) × π × 4² × 12 = 64π ≈ 201,1 cm³", "points": 4 },
+        { "critere": "k = 6/12 = 1/2", "points": 3 },
+        { "critere": "Surface du jus : disque de rayon 2 cm, aire 4π ≈ 12,6 cm²", "points": 3 },
+        { "critere": "Volume de jus : 64π × (1/2)³ = 8π ≈ 25,1 cm³, soit 1/8 du verre", "points": 5 },
+        { "critere": "Erreur expliquée par k³ ; 27/64 = (3/4)³, hauteur 9 cm", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. V = (1/3) × π × R² × h = (1/3) × π × 16 × 12 = **64π ≈ 201,1 cm³**.\n\n2. k = hauteur du jus ÷ hauteur du verre = 6 ÷ 12 = **1/2**.\n\n3. La surface du jus est la section du cône par un plan parallèle à la base : un **disque** de rayon 4 × 1/2 = **2 cm**. Aire : π × 2² = **4π ≈ 12,6 cm²**.\n\n4. Les volumes sont multipliés par k³ = (1/2)³ = 1/8 : V(jus) = 64π ÷ 8 = **8π ≈ 25,1 cm³**. Le verre est rempli au **1/8** (12,5 %).\n\n5. Maëlle confond la hauteur et le volume : à mi-hauteur, les longueurs sont divisées par 2 mais le volume est divisé par 2³ = 8, car le cône est bien plus étroit en bas.\n   27/64 = (3/4)³, donc k = 3/4 et la hauteur vaut 12 × 3/4 = **9 cm**."
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "difficulte": 1,
+      "titre": "Agrandir un triangle",
+      "consigne": "Réponds en citant les propriétés de l'homothétie utilisées.",
+      "enonce": "**Situation.** Le triangle ABC est rectangle en A, avec **AB = 3 cm**, **AC = 4 cm** et **BC = 5 cm**. Son aire vaut 6 cm². On construit son image A′B′C′ par l'homothétie de centre O et de **rapport 3**.\n\n1. S'agit-il d'un agrandissement ou d'une réduction ? Justifie.\n2. Donne les longueurs A′B′, A′C′ et B′C′.\n3. Le triangle A′B′C′ est-il rectangle ? Justifie.\n4. Calcule l'aire du triangle A′B′C′.",
+      "bareme": [
+        { "critere": "Agrandissement car le rapport 3 est supérieur à 1", "points": 3 },
+        { "critere": "Longueurs multipliées par 3 : 9 cm, 12 cm et 15 cm", "points": 6 },
+        { "critere": "Rectangle en A′ car l'homothétie conserve les angles", "points": 5 },
+        { "critere": "Aire multipliée par 3² = 9 : 54 cm²", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le rapport vaut 3, supérieur à 1 : c'est un **agrandissement**.\n\n2. Une homothétie de rapport 3 multiplie les longueurs par 3 : A′B′ = **9 cm**, A′C′ = **12 cm**, B′C′ = **15 cm**.\n\n3. **Oui** : une homothétie **conserve les angles**. L'angle en A est droit, donc l'angle en A′ est droit : A′B′C′ est rectangle en A′.\n\n4. Les aires sont multipliées par k² = 3² = 9 : 6 × 9 = **54 cm²**. (Contrôle : 9 × 12 ÷ 2 = 54 ✓.) Erreur classique : multiplier l'aire par 3 (on trouverait 18 cm²)."
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "difficulte": 2,
+      "titre": "Le logo du club",
+      "consigne": "Réponds en justifiant par les propriétés de l'homothétie.",
+      "enonce": "**Situation.** Pour une affiche, Ilyes agrandit le logo rectangulaire de son club, qui mesure **4 cm sur 2 cm**, par une homothétie de centre O et de **rapport 2,5**.\n\n1. Quelles sont les dimensions du logo agrandi ?\n2. Calcule l'aire du logo de départ et celle du logo agrandi. Par combien l'aire a-t-elle été multipliée ?\n3. Un point M du logo est à **3 cm** du centre O. À quelle distance de O se trouve son image M′ ? M′ est-il du même côté de O que M ?\n4. Ilyes essaie ensuite une homothétie de même centre et de **rapport −0,5**. Décris la figure obtenue (taille, position) et donne la distance OM′ dans ce cas.",
+      "bareme": [
+        { "critere": "Dimensions : 10 cm × 5 cm", "points": 4 },
+        { "critere": "Aires 8 cm² et 50 cm², coefficient 6,25 = 2,5²", "points": 6 },
+        { "critere": "OM′ = 7,5 cm, même côté car k > 0", "points": 4 },
+        { "critere": "Rapport −0,5 : réduction retournée, de l'autre côté de O, OM′ = 1,5 cm", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les longueurs sont multipliées par 2,5 : 4 × 2,5 = **10 cm** et 2 × 2,5 = **5 cm**.\n\n2. Aire de départ : 4 × 2 = **8 cm²** ; aire agrandie : 10 × 5 = **50 cm²**. 50 ÷ 8 = **6,25 = 2,5²** : les aires sont multipliées par k².\n\n3. OM′ = 2,5 × OM = 2,5 × 3 = **7,5 cm**. Le rapport est positif : M′ est **du même côté** de O que M, sur la droite (OM).\n\n4. La valeur absolue de −0,5 est inférieure à 1 : c'est une **réduction** (longueurs divisées par 2, logo de 2 cm × 1 cm). Le rapport est négatif : l'image est **de l'autre côté de O**, la figure est retournée. OM′ = 0,5 × 3 = **1,5 cm**."
+    },
+    {
+      "chapitre": "652268d5-7b5d-58fa-8a8b-879865addc52",
+      "difficulte": 3,
+      "titre": "Retrouver le rapport d'une homothétie",
+      "consigne": "Réponds en justifiant chaque étape ; rédige les propriétés utilisées.",
+      "enonce": "**Situation.** Le triangle A′B′C′ est l'image du triangle ABC par une homothétie de centre O. Les points O, A, A′ sont alignés dans cet ordre, avec **OA = 4 cm** et **OA′ = 10 cm**. Le triangle ABC est rectangle en A, avec **AB = 3 cm** et **AC = 4 cm**.\n\n1. Calcule le rapport k de l'homothétie. Est-il positif ou négatif ? Justifie.\n2. Calcule BC, puis les longueurs A′B′, A′C′ et B′C′.\n3. Calcule l'aire de ABC, puis celle de A′B′C′ à l'aide de k.\n4. Que peut-on dire des droites (AB) et (A′B′) ? Quel théorème du programme décrit la même configuration ?\n5. Un solide de volume **40 cm³** subit la même homothétie. Quel est le volume de son image ?",
+      "bareme": [
+        { "critere": "k = 10/4 = 2,5, positif car A et A′ sont du même côté de O", "points": 4 },
+        { "critere": "BC = 5 cm par Pythagore ; images 7,5 cm, 10 cm, 12,5 cm", "points": 4 },
+        { "critere": "Aires : 6 cm² et 6 × 6,25 = 37,5 cm²", "points": 4 },
+        { "critere": "(AB) et (A′B′) parallèles ; lien avec le théorème de Thalès", "points": 4 },
+        { "critere": "Volume de l'image : 40 × 2,5³ = 625 cm³", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. OA′ = k × OA, donc k = 10 ÷ 4 = **2,5**. O, A, A′ sont alignés dans cet ordre : A′ est du même côté de O que A, donc **k est positif**.\n\n2. ABC est rectangle en A : BC² = 3² + 4² = 25, donc **BC = 5 cm**.\n   Longueurs multipliées par 2,5 : A′B′ = **7,5 cm**, A′C′ = **10 cm**, B′C′ = **12,5 cm**.\n\n3. Aire(ABC) = 3 × 4 ÷ 2 = **6 cm²**. Les aires sont multipliées par k² = 6,25 : aire(A′B′C′) = 6 × 6,25 = **37,5 cm²**. (Contrôle : 7,5 × 10 ÷ 2 = 37,5 ✓.)\n\n4. Une homothétie transforme une droite en une droite **parallèle** : **(AB) // (A′B′)**. C'est la configuration du **théorème de Thalès** (triangle emboîté de sommet O) : OA/OA′ = OB/OB′ = AB/A′B′ = 1/2,5.\n\n5. Les volumes sont multipliés par k³ = 2,5³ = 15,625 : 40 × 15,625 = **625 cm³**."
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "difficulte": 1,
+      "titre": "Calculer deux longueurs",
+      "consigne": "Rédige la démonstration complète : hypothèses, théorème, égalité des quotients, calcul.",
+      "enonce": "**Figure décrite.** Les points A, M, B sont alignés dans cet ordre, ainsi que les points A, N, C. Les droites **(MN) et (BC) sont parallèles**.\n\nOn donne : **AM = 3 cm**, **AB = 5 cm**, **AC = 7 cm**, **BC = 6 cm**.\n\n1. Écris l'égalité des trois quotients donnée par le théorème de Thalès.\n2. Calcule la longueur AN.\n3. Calcule la longueur MN.",
+      "bareme": [
+        { "critere": "Hypothèses citées (alignements, parallélisme) et égalité AM/AB = AN/AC = MN/BC", "points": 6 },
+        { "critere": "AN = 3 × 7 ÷ 5 = 4,2 cm par produit en croix", "points": 7 },
+        { "critere": "MN = 3 × 6 ÷ 5 = 3,6 cm", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les points A, M, B d'une part et A, N, C d'autre part sont alignés, et les droites (MN) et (BC) sont parallèles. D'après le **théorème de Thalès** :\n   **AM/AB = AN/AC = MN/BC**, soit 3/5 = AN/7 = MN/6.\n\n2. 3/5 = AN/7, donc AN = 3 × 7 ÷ 5 = 21 ÷ 5 = **4,2 cm**.\n\n3. 3/5 = MN/6, donc MN = 3 × 6 ÷ 5 = 18 ÷ 5 = **3,6 cm**.\n\nContrôle de cohérence : AN < AC et MN < BC, ce qui est normal pour un triangle emboîté (réduction de rapport 3/5)."
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "difficulte": 2,
+      "titre": "La hauteur du lampadaire",
+      "consigne": "Modélise la situation par une figure, puis rédige la démonstration avec le théorème de Thalès.",
+      "enonce": "**Situation.** Le soir, Emma, qui mesure **1,60 m**, se tient debout sur un trottoir horizontal. Son ombre, créée par un lampadaire, mesure **2 m**. Le pied du lampadaire est à **6 m** des pieds d'Emma. L'extrémité de l'ombre, les pieds d'Emma et le pied du lampadaire sont alignés, ainsi que l'extrémité de l'ombre, le sommet de la tête d'Emma et l'ampoule.\n\nOn note : A l'extrémité de l'ombre, M les pieds d'Emma, N le sommet de sa tête, B le pied du lampadaire et C l'ampoule.\n\n1. Donne les longueurs AM et AB.\n2. Justifie que les droites (MN) et (BC) sont parallèles.\n3. Calcule la hauteur BC du lampadaire.",
+      "bareme": [
+        { "critere": "AM = 2 m et AB = 2 + 6 = 8 m", "points": 5 },
+        { "critere": "Parallélisme justifié : Emma et le lampadaire sont tous deux perpendiculaires au sol", "points": 6 },
+        { "critere": "Thalès appliqué : AM/AB = MN/BC et BC = 6,4 m", "points": 9 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. AM = longueur de l'ombre = **2 m** ; AB = AM + MB = 2 + 6 = **8 m**.\n\n2. Emma et le lampadaire sont verticaux, donc tous deux **perpendiculaires au sol**. Deux droites perpendiculaires à une même droite sont parallèles : **(MN) // (BC)**.\n\n3. Les points A, M, B sont alignés, ainsi que A, N, C, et (MN) // (BC). D'après le théorème de Thalès :\n   AM/AB = AN/AC = MN/BC, soit 2/8 = 1,6/BC.\n   Produit en croix : BC = 1,6 × 8 ÷ 2 = **6,4 m**.\n   Le lampadaire mesure 6,40 m."
+    },
+    {
+      "chapitre": "9cd8e46c-40a0-5394-b760-147c1e8dcf54",
+      "difficulte": 3,
+      "titre": "Papillon, réciproque et contraposée",
+      "consigne": "Rédige chaque démonstration complètement ; précise quel énoncé (théorème, réciproque, contraposée) tu utilises.",
+      "enonce": "**Partie A — configuration papillon.** Les droites (EF) et (GH) se coupent en A. Les points E, A, F sont alignés dans cet ordre, ainsi que G, A, H.\nOn donne : **AE = 4 cm**, **AF = 6 cm**, **AG = 5 cm**, **AH = 7,5 cm**, **EG = 3 cm**.\n\n1. Démontre que les droites (EG) et (FH) sont parallèles.\n2. Calcule la longueur FH.\n\n**Partie B — un triangle.** Dans un triangle ABC, U est sur [AB] et V est sur [AC], avec **AU = 2,8 cm**, **AB = 7 cm**, **AV = 3,5 cm**, **AC = 9 cm**.\n\n3. Les droites (UV) et (BC) sont-elles parallèles ? Justifie.",
+      "bareme": [
+        { "critere": "Quotients AE/AF et AG/AH calculés et égaux à 2/3", "points": 5 },
+        { "critere": "Conclusion par la réciproque, en citant l'alignement dans le même ordre", "points": 4 },
+        { "critere": "FH = 4,5 cm par le théorème de Thalès", "points": 5 },
+        { "critere": "Partie B : AU/AB = 0,4 et AV/AC ≈ 0,389 différents, droites non parallèles par la contraposée", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A.**\n\n1. AE/AF = 4/6 = 2/3 et AG/AH = 5/7,5 = 2/3 (car 7,5 × 2 = 15 = 5 × 3).\n   Les quotients sont **égaux**, et les points E, A, F et G, A, H sont alignés **dans le même ordre**. D'après la **réciproque du théorème de Thalès**, **(EG) // (FH)**.\n\n2. Maintenant que (EG) // (FH), le théorème de Thalès donne AE/AF = AG/AH = EG/FH, soit 2/3 = 3/FH.\n   FH = 3 × 3 ÷ 2 = **4,5 cm**.\n\n**Partie B.**\n\n3. AU/AB = 2,8/7 = **0,4** et AV/AC = 3,5/9 ≈ **0,389**.\n   Les deux quotients sont **différents**. Si (UV) et (BC) étaient parallèles, ils seraient égaux d'après le théorème de Thalès. D'après la **contraposée** du théorème, les droites (UV) et (BC) **ne sont pas parallèles**.\n\nErreur à pénaliser : conclure au parallélisme parce que les valeurs « se ressemblent » ; il faut une égalité exacte."
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "difficulte": 1,
+      "titre": "Deux côtés à trouver",
+      "consigne": "Nomme les côtés par rapport à l'angle connu, choisis la bonne formule et arrondis au dixième.",
+      "enonce": "**Figure décrite.** Le triangle ABC est **rectangle en A**. On donne l'angle **ABC = 35°** et l'hypoténuse **BC = 10 cm**.\n\n1. Par rapport à l'angle ABC, nomme l'hypoténuse, le côté adjacent et le côté opposé.\n2. Calcule la longueur AB, arrondie au dixième.\n3. Calcule la longueur AC, arrondie au dixième.\n4. Quel réglage de la calculatrice dois-tu vérifier avant ces calculs ?",
+      "bareme": [
+        { "critere": "Hypoténuse [BC], adjacent [AB], opposé [AC]", "points": 5 },
+        { "critere": "AB = 10 × cos 35° ≈ 8,2 cm avec la formule du cosinus", "points": 6 },
+        { "critere": "AC = 10 × sin 35° ≈ 5,7 cm avec la formule du sinus", "points": 6 },
+        { "critere": "Mode degrés (DEG)", "points": 3 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Par rapport à l'angle ABC : l'**hypoténuse** est [BC] (face à l'angle droit), le côté **adjacent** est [AB] (il touche l'angle), le côté **opposé** est [AC] (il lui fait face).\n\n2. cos(ABC) = adjacent ÷ hypoténuse = AB/BC, donc AB = BC × cos 35° = 10 × cos 35° ≈ **8,2 cm**.\n\n3. sin(ABC) = opposé ÷ hypoténuse = AC/BC, donc AC = 10 × sin 35° ≈ **5,7 cm**.\n   Contrôle possible avec Pythagore : 8,19² + 5,74² ≈ 100 ✓.\n\n4. La calculatrice doit être en **mode degrés (DEG)** ; en radians, les résultats seraient faux sans avertissement."
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "difficulte": 2,
+      "titre": "L'échelle de Paul est-elle sûre ?",
+      "consigne": "Modélise la situation par un triangle rectangle et justifie tes calculs.",
+      "enonce": "**Situation.** Paul pose une échelle de **4 m** contre un mur vertical. Le pied de l'échelle est posé sur le sol horizontal, à **1,20 m** du pied du mur.\n\nLa notice de l'échelle indique : « Pour être stable, l'échelle doit faire avec le sol un angle compris entre **65° et 75°**. »\n\n1. Fais un schéma et explique pourquoi on obtient un triangle rectangle.\n2. Calcule l'angle formé par l'échelle et le sol, arrondi au dixième de degré.\n3. L'échelle est-elle posée de façon sûre ? Justifie.\n4. À quelle hauteur l'échelle touche-t-elle le mur ? Arrondis au centimètre.",
+      "bareme": [
+        { "critere": "Triangle rectangle justifié (mur perpendiculaire au sol), échelle = hypoténuse", "points": 4 },
+        { "critere": "cos(angle) = 1,2/4 = 0,3 et angle ≈ 72,5° avec cos⁻¹", "points": 6 },
+        { "critere": "Conclusion : 72,5° est entre 65° et 75°, l'échelle est sûre", "points": 4 },
+        { "critere": "Hauteur ≈ 3,82 m (Pythagore ou sinus)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le mur est vertical et le sol horizontal : ils sont **perpendiculaires**. Le mur, le sol et l'échelle forment un triangle rectangle au pied du mur ; l'échelle (4 m) est l'**hypoténuse**.\n\n2. Pour l'angle au sol, le côté adjacent est la distance au mur (1,20 m) : cos(angle) = 1,2 ÷ 4 = 0,3. Avec la touche cos⁻¹ : angle ≈ **72,5°**.\n\n3. 65° ≤ 72,5° ≤ 75° : l'échelle est **posée de façon sûre**.\n\n4. Par Pythagore : h² = 4² − 1,2² = 16 − 1,44 = 14,56, donc h = √14,56 ≈ **3,82 m**.\n   (Avec le sinus : 4 × sin 72,5° ≈ 3,81 m à cause de l'arrondi de l'angle ; les deux méthodes sont acceptées.)"
+    },
+    {
+      "chapitre": "6a7e8e43-8668-50c1-aa2c-7e9a00374724",
+      "difficulte": 3,
+      "titre": "La hauteur du grand chêne",
+      "consigne": "Rédige chaque calcul en précisant le triangle rectangle utilisé et la formule choisie. Arrondis au centimètre ou au dixième de mètre.",
+      "enonce": "**Situation.** Pour mesurer la hauteur d'un chêne, Samir se place à **25 m** du pied de l'arbre, sur un sol horizontal. Ses yeux sont à **1,60 m** du sol. Il vise le sommet de l'arbre : l'angle entre l'horizontale de ses yeux et la direction du sommet mesure **32°**.\n\nOn note O l'œil de Samir, H le point du tronc à la hauteur de ses yeux (OH = 25 m, OH horizontal) et S le sommet de l'arbre.\n\n1. Justifie que le triangle OHS est rectangle en H.\n2. Calcule HS, puis la hauteur totale de l'arbre, au centimètre près.\n3. Calcule la distance OS entre l'œil de Samir et le sommet, arrondie au dixième de mètre.\n4. Sa sœur Lina, dont les yeux sont aussi à 1,60 m du sol, recule sur la même ligne jusqu'à voir le sommet sous un angle de **20°**. À quelle distance du pied de l'arbre se trouve-t-elle ? De combien a-t-elle reculé par rapport à Samir ?",
+      "bareme": [
+        { "critere": "Triangle rectangle en H justifié (tronc vertical, visée horizontale)", "points": 3 },
+        { "critere": "HS = 25 × tan 32° ≈ 15,62 m et hauteur ≈ 17,22 m", "points": 6 },
+        { "critere": "OS = 25 ÷ cos 32° ≈ 29,5 m (ou Pythagore)", "points": 5 },
+        { "critere": "Distance de Lina = 15,62 ÷ tan 20° ≈ 42,9 m, recul ≈ 17,9 m", "points": 6 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Le tronc est vertical et la ligne de visée OH est horizontale : elles sont **perpendiculaires**, donc OHS est rectangle en H.\n\n2. Pour l'angle en O (32°), [HS] est le côté opposé et [OH] le côté adjacent : tan 32° = HS/OH.\n   HS = 25 × tan 32° ≈ 25 × 0,6249 ≈ **15,62 m**.\n   Hauteur de l'arbre = HS + 1,60 ≈ 15,62 + 1,60 = **17,22 m**.\n\n3. [OS] est l'hypoténuse : cos 32° = OH/OS, donc OS = 25 ÷ cos 32° ≈ **29,5 m**.\n   Contrôle par Pythagore : √(25² + 15,62²) = √(625 + 244) ≈ 29,5 m ✓.\n\n4. Dans le nouveau triangle rectangle (même HS ≈ 15,62 m) : tan 20° = HS/d, donc d = 15,62 ÷ tan 20° ≈ 15,62 ÷ 0,364 ≈ **42,9 m**.\n   Lina a reculé de 42,9 − 25 ≈ **17,9 m**.\n\nErreurs à pénaliser : oublier d'ajouter la hauteur des yeux ; utiliser le sinus avec 25 m comme hypoténuse."
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "difficulte": 1,
+      "titre": "Deux triangles, mêmes angles",
+      "consigne": "Justifie chaque réponse avec les propriétés du cours.",
+      "enonce": "**Données.**\n- Dans le triangle ABC : l'angle en **A mesure 50°** et l'angle en **B mesure 70°**.\n- Dans le triangle DEF : l'angle en **D mesure 50°** et l'angle en **F mesure 60°**.\n\n1. Calcule l'angle en C et l'angle en E.\n2. Démontre que les triangles ABC et DEF sont semblables.\n3. Donne les sommets homologues.\n4. On donne AB = 4 cm et DE = 6 cm. Calcule le rapport de similitude pour passer de ABC à DEF.",
+      "bareme": [
+        { "critere": "C = 60° et E = 70° par la somme des angles (180°)", "points": 5 },
+        { "critere": "Semblables car deux angles (en fait trois) deux à deux égaux", "points": 6 },
+        { "critere": "Homologues A ↔ D, B ↔ E, C ↔ F", "points": 4 },
+        { "critere": "k = DE/AB = 6/4 = 1,5", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La somme des angles d'un triangle vaut 180° :\n   C = 180 − 50 − 70 = **60°** ; E = 180 − 50 − 60 = **70°**.\n\n2. Les triangles ABC et DEF ont leurs angles deux à deux égaux : 50° et 50°, 70° et 70°, 60° et 60°. Deux angles égaux suffisent : **ABC et DEF sont semblables**.\n\n3. On associe les sommets qui portent le même angle : **A ↔ D** (50°), **B ↔ E** (70°), **C ↔ F** (60°).\n\n4. [AB] et [DE] sont homologues : k = DE/AB = 6/4 = **1,5**. DEF est un agrandissement de ABC de rapport 1,5."
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "difficulte": 2,
+      "titre": "L'arbre et le bâton",
+      "consigne": "Démontre que les triangles sont semblables, puis utilise la proportionnalité des côtés.",
+      "enonce": "**Situation.** Au même instant d'une journée ensoleillée, Jade plante verticalement un bâton de **1,50 m** dans un sol horizontal : son ombre mesure **2 m**. L'ombre d'un arbre, lui aussi vertical, mesure **12 m**. Les rayons du soleil sont considérés comme parallèles.\n\n1. Décris les deux triangles formés (bâton, ombre, rayon) et (arbre, ombre, rayon).\n2. Démontre que ces deux triangles sont semblables.\n3. Calcule la hauteur de l'arbre.",
+      "bareme": [
+        { "critere": "Deux triangles rectangles décrits (objet vertical, ombre au sol, rayon)", "points": 4 },
+        { "critere": "Semblables : angle droit commun et même angle des rayons avec le sol", "points": 7 },
+        { "critere": "Rapport 12/2 = 6 et hauteur de l'arbre 9 m", "points": 9 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Chaque triangle a pour côtés l'objet vertical, son ombre au sol et le rayon de soleil qui passe par le sommet de l'objet.\n\n2. - L'objet est vertical et le sol horizontal : chaque triangle a un **angle droit** au pied de l'objet.\n   - Les rayons sont parallèles et le sol est le même : ils font **le même angle** avec le sol dans les deux triangles.\n   Les deux triangles ont **deux angles deux à deux égaux** : ils sont **semblables**.\n\n3. Les côtés homologues sont proportionnels : hauteur de l'arbre / hauteur du bâton = ombre de l'arbre / ombre du bâton.\n   k = 12 ÷ 2 = 6, donc hauteur de l'arbre = 1,50 × 6 = **9 m**."
+    },
+    {
+      "chapitre": "00b01cb3-82db-5f4b-80f6-335002a5bffc",
+      "difficulte": 3,
+      "titre": "Des côtés proportionnels",
+      "consigne": "Rédige chaque démonstration en citant les propriétés utilisées.",
+      "enonce": "**Données.** Le triangle ABC a pour côtés **AB = 6 cm**, **AC = 8 cm**, **BC = 10 cm**. Le triangle DEF a pour côtés **DE = 9 cm**, **DF = 12 cm**, **EF = 15 cm**.\n\n1. Démontre que ABC et DEF sont semblables. Donne les sommets homologues et le rapport de similitude k (de ABC vers DEF).\n2. Démontre que ABC est rectangle. Déduis-en, sans calcul, que DEF est rectangle, et précise en quel sommet.\n3. Calcule l'aire de ABC, puis celle de DEF à l'aide de k.\n4. Un triangle GHI est semblable à ABC et son aire vaut **96 cm²**. Calcule le rapport de similitude de ABC vers GHI, puis les longueurs de ses côtés.",
+      "bareme": [
+        { "critere": "Quotients 9/6 = 12/8 = 15/10 = 1,5 ; homologues A ↔ D, B ↔ E, C ↔ F", "points": 5 },
+        { "critere": "ABC rectangle en A (6² + 8² = 10²) ; DEF rectangle en D car les angles sont conservés", "points": 5 },
+        { "critere": "Aires : 24 cm² et 24 × 1,5² = 54 cm²", "points": 5 },
+        { "critere": "k² = 96/24 = 4, k = 2 ; côtés 12 cm, 16 cm, 20 cm", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On range les côtés du plus petit au plus grand et on compare : 9/6 = 1,5 ; 12/8 = 1,5 ; 15/10 = 1,5. Les côtés sont **proportionnels** : **ABC et DEF sont semblables**, de rapport **k = 1,5**.\n   Homologues : [AB] ↔ [DE], [AC] ↔ [DF], [BC] ↔ [EF], donc **A ↔ D, B ↔ E, C ↔ F**.\n\n2. Le plus grand côté est [BC] : BC² = 100 et AB² + AC² = 36 + 64 = 100. D'après la réciproque du théorème de Pythagore, **ABC est rectangle en A**.\n   Deux triangles semblables ont les mêmes angles : l'angle en D (homologue de A) est droit. **DEF est rectangle en D**.\n\n3. Aire(ABC) = 6 × 8 ÷ 2 = **24 cm²**. Les aires sont multipliées par k² = 2,25 : aire(DEF) = 24 × 2,25 = **54 cm²** (contrôle : 9 × 12 ÷ 2 = 54 ✓).\n\n4. Rapport des aires : 96 ÷ 24 = 4 = k², donc **k = 2**. Côtés de GHI : 6 × 2 = **12 cm**, 8 × 2 = **16 cm**, 10 × 2 = **20 cm**."
+    }
+  ]
+}

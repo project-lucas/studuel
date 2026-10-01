@@ -1,0 +1,3848 @@
+{
+  "niveau": "5e",
+  "matiere": "technologie",
+  "exercices": [
+    {
+      "chapitre": "a433ef1c-1939-5770-92fd-e7a7682ce4ed",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre objets, quatre mécanismes",
+      "competence": "analyser-document",
+      "situation": "Lors d’une visite de l’atelier, Léa relève le mécanisme qui équipe quatre objets du quotidien.",
+      "documents": [
+        {
+          "id": "objets",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Les objets de la visite",
+          "sousTitre": "Objet et mécanisme",
+          "emoji": "🔧",
+          "lignes": [
+            {
+              "texte": "Portail coulissant",
+              "valeur": "Pignon-crémaillère",
+              "id": "portail"
+            },
+            {
+              "texte": "Vélo",
+              "valeur": "Pignons-chaîne",
+              "id": "velo"
+            },
+            {
+              "texte": "Étau d’établi",
+              "valeur": "Vis-écrou",
+              "id": "etau"
+            },
+            {
+              "texte": "Moteur de voiture",
+              "valeur": "Bielle-manivelle",
+              "id": "moteur"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "objets",
+          "enonce": "Touche l’objet dont le mécanisme transmet un mouvement sans changer sa nature.",
+          "aide": "Sur un vélo, le pédalier tourne et la roue arrière tourne aussi.",
+          "explication": "Sur le **vélo**, la rotation du pédalier devient une rotation de la roue : le mouvement est **transmis**, sa nature ne change pas.",
+          "reponse": [
+            "velo"
+          ]
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque mécanisme : transmet-il ou transforme-t-il le mouvement ?",
+          "aide": "Un mécanisme qui transforme change une rotation en translation.",
+          "explication": "**Transmettre** : engrenages, poulies-courroie, pignons-chaîne (la rotation reste une rotation). **Transformer** : pignon-crémaillère, vis-écrou, bielle-manivelle (la nature du mouvement change).",
+          "categories": [
+            "Transmettre",
+            "Transformer"
+          ],
+          "items": [
+            [
+              "Pignons-chaîne",
+              0
+            ],
+            [
+              "Engrenages",
+              0
+            ],
+            [
+              "Poulies-courroie",
+              0
+            ],
+            [
+              "Pignon-crémaillère",
+              1
+            ],
+            [
+              "Vis-écrou",
+              1
+            ],
+            [
+              "Bielle-manivelle",
+              1
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Le pignon tourne et le portail glisse le long de son rail. Quel est le mouvement de sortie ?",
+          "aide": "Le portail avance en ligne droite, sans tourner sur lui-même.",
+          "explication": "Le portail se déplace sans tourner : c’est une **translation**. Le pignon-crémaillère transforme la rotation en translation.",
+          "options": [
+            "Une translation : le portail se déplace en ligne droite sans tourner",
+            "Une rotation autour d’un axe, comme le ferait une porte sur ses gonds",
+            "Une rotation à vitesse réduite, comme celle du pignon mais plus lente",
+            "Aucun mouvement : le portail reste fixe pendant que le pignon tourne"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "a433ef1c-1939-5770-92fd-e7a7682ce4ed",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les vitesses du VTT de Noa",
+      "competence": "calculer",
+      "situation": "Noa change de vitesse sur son VTT. Le plateau du pédalier a toujours 32 dents ; seul le pignon de la roue arrière change.",
+      "documents": [
+        {
+          "id": "vit",
+          "type": "tableau",
+          "titre": "Les trois vitesses du VTT",
+          "colonnes": [
+            "Vitesse",
+            "Dents du plateau (entrée)",
+            "Dents du pignon arrière (sortie)"
+          ],
+          "lignes": [
+            [
+              "1",
+              32,
+              40
+            ],
+            [
+              "2",
+              32,
+              32
+            ],
+            [
+              "3",
+              32,
+              16
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rapport de transmission r de la vitesse 1 (dents de l’entrée ÷ dents de la sortie).",
+          "aide": "Divise 32 par 40.",
+          "explication": "r = 32 ÷ 40 = **0,8**. Comme r < 1, c’est un réducteur.",
+          "reponse": 0.8
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les trois vitesses de la plus adaptée à une côte à la moins adaptée.",
+          "aide": "Dans une côte on veut de la force : cherche le plus petit r.",
+          "explication": "Vitesse 1 : r = 0,8 ; vitesse 2 : r = 1 ; vitesse 3 : r = 2. Plus r est **petit**, plus on gagne en force : **1, 2, 3**.",
+          "items": [
+            "Vitesse 1",
+            "Vitesse 2",
+            "Vitesse 3"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "En vitesse 3, le pédalier tourne à 60 tours par minute. À quelle vitesse tourne la roue arrière ?",
+          "aide": "Calcule d’abord r pour la vitesse 3, puis multiplie par 60.",
+          "explication": "r = 32 ÷ 16 = 2, donc la roue tourne à 60 × 2 = **120 tr/min** : c’est un multiplicateur.",
+          "reponse": 120,
+          "unite": "tr/min"
+        },
+        {
+          "type": "choix",
+          "enonce": "En vitesse 2, que peut-on dire du mécanisme ?",
+          "aide": "Calcule r pour la vitesse 2.",
+          "explication": "r = 32 ÷ 32 = **1** : la roue tourne aussi vite que le pédalier. Ce n’est ni un réducteur ni un multiplicateur.",
+          "options": [
+            "Il ne change pas la vitesse : r = 1",
+            "C’est un réducteur",
+            "C’est un multiplicateur",
+            "Il ne transmet pas le mouvement"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "a433ef1c-1939-5770-92fd-e7a7682ce4ed",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le portail qui coulisse tout seul",
+      "competence": "raisonner",
+      "situation": "Un portail de résidence est entraîné par un moteur. Un premier étage réduit la vitesse, puis un second étage déplace le portail.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "titre": "La transmission du portail",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "moteur",
+              "texte": "Moteur",
+              "emoji": "⚙️"
+            },
+            {
+              "id": "chaine1",
+              "texte": "Pignons-chaîne",
+              "emoji": "⛓️"
+            },
+            {
+              "id": "crem",
+              "texte": "Pignon-crémaillère",
+              "emoji": "🔩"
+            },
+            {
+              "id": "portail",
+              "texte": "Portail",
+              "emoji": "🚪"
+            }
+          ],
+          "liens": [
+            {
+              "de": "moteur",
+              "a": "chaine1"
+            },
+            {
+              "de": "chaine1",
+              "a": "crem"
+            },
+            {
+              "de": "crem",
+              "a": "portail"
+            }
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "fichetech",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Fiche technique",
+          "sousTitre": "Motorisation",
+          "emoji": "📋",
+          "lignes": [
+            {
+              "texte": "Vitesse du moteur",
+              "valeur": "1 200 tr/min"
+            },
+            {
+              "texte": "Pignon moteur",
+              "valeur": "12 dents"
+            },
+            {
+              "texte": "Pignon récepteur",
+              "valeur": "48 dents"
+            },
+            {
+              "texte": "Transmission",
+              "valeur": "Par chaîne"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche le mécanisme qui transforme la rotation en translation.",
+          "aide": "Le portail avance en ligne droite.",
+          "explication": "Le **pignon-crémaillère** change la rotation du pignon en translation de la crémaillère fixée au portail.",
+          "reponse": [
+            "crem"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rapport de transmission r du premier étage (dents de l’entrée ÷ dents de la sortie).",
+          "aide": "L’entrée est le pignon moteur.",
+          "explication": "r = 12 ÷ 48 = **0,25**.",
+          "reponse": 0.25
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle vitesse tourne le pignon récepteur ?",
+          "aide": "Multiplie la vitesse du moteur par r.",
+          "explication": "1 200 × 0,25 = **300 tr/min**.",
+          "reponse": 300,
+          "unite": "tr/min"
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dire du premier étage ?",
+          "aide": "Compare r à 1.",
+          "explication": "r < 1 : c’est un **réducteur**. Le portail est lourd, il faut de la force plutôt que de la vitesse.",
+          "options": [
+            "C’est un réducteur : la vitesse de rotation baisse et la force augmente",
+            "C’est un multiplicateur : la vitesse de rotation augmente et la force baisse",
+            "Il change la rotation en translation, comme le ferait une crémaillère",
+            "Il ne change ni la vitesse ni la force, il transmet seulement le mouvement"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "choix",
+          "enonce": "Le pignon moteur tourne dans le sens des aiguilles d’une montre. Dans quel sens tourne le pignon récepteur ?",
+          "aide": "Pense au vélo.",
+          "explication": "Avec une **chaîne**, les deux pignons tournent dans le **même sens**.",
+          "options": [
+            "Dans le même sens",
+            "En sens inverse",
+            "Il ne tourne pas",
+            "Cela dépend du nombre de dents"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "86f0c251-3a05-5a35-b4e7-8741c482bde4",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’atelier de Sacha",
+      "competence": "analyser-document",
+      "situation": "Sacha range l’atelier et étiquette cinq objets avec leur matériau.",
+      "documents": [
+        {
+          "id": "objets",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Étiquettes de l’atelier",
+          "sousTitre": "Objet et matériau",
+          "emoji": "🏷️",
+          "lignes": [
+            {
+              "texte": "Fourchette",
+              "valeur": "Acier",
+              "id": "fourchette"
+            },
+            {
+              "texte": "Règle",
+              "valeur": "Plastique",
+              "id": "regle"
+            },
+            {
+              "texte": "Mug",
+              "valeur": "Porcelaine",
+              "id": "mug"
+            },
+            {
+              "texte": "Clé",
+              "valeur": "Laiton",
+              "id": "cle"
+            },
+            {
+              "texte": "Raquette",
+              "valeur": "Fibre de carbone",
+              "id": "raquette"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "objets",
+          "enonce": "Touche les deux objets en matériau métallique.",
+          "aide": "L’acier et le laiton sont des alliages de métaux.",
+          "explication": "L’**acier** et le **laiton** sont métalliques. La règle est en plastique, le mug en céramique, la raquette en composite.",
+          "reponse": [
+            "fourchette",
+            "cle"
+          ],
+          "multiple": true
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque matériau à son atout principal.",
+          "aide": "Pense à la famille de chaque matériau.",
+          "explication": "Métal : résistant et recyclable. Plastique (organique) : léger, facile à façonner. Céramique : dure mais **fragile**. Composite : **cumule** les qualités.",
+          "paires": [
+            [
+              "Acier",
+              "Résistant et recyclable"
+            ],
+            [
+              "Plastique",
+              "Léger et facile à mettre en forme"
+            ],
+            [
+              "Porcelaine",
+              "Très dure mais fragile"
+            ],
+            [
+              "Fibre de carbone",
+              "Cumule les qualités de deux matériaux"
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi une raquette est-elle en fibre de carbone ?",
+          "aide": "La raquette doit être légère et ne pas plier.",
+          "explication": "La fibre de carbone est un **composite** : elle cumule la légèreté et la résistance de ses deux constituants.",
+          "options": [
+            "C’est un composite : il associe légèreté et grande résistance mécanique",
+            "C’est un métal très conducteur, choisi pour sa légèreté et sa solidité",
+            "C’est une céramique très dure, choisie pour sa légèreté et sa solidité",
+            "C’est un plastique simple recyclable indéfiniment, sans perte de qualité"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "86f0c251-3a05-5a35-b4e7-8741c482bde4",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le cadre du vélo d’Anaïs",
+      "competence": "calculer",
+      "situation": "Anaïs veut un cadre léger, recyclable et pas trop cher. Elle compare quatre matériaux.",
+      "documents": [
+        {
+          "id": "masse",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Masse volumique",
+          "categories": [
+            "Acier",
+            "Aluminium",
+            "Fibre de carbone",
+            "ABS (plastique)"
+          ],
+          "series": [
+            {
+              "nom": "Masse volumique",
+              "valeurs": [
+                7.8,
+                2.7,
+                1.6,
+                1.05
+              ],
+              "teinte": "gris"
+            }
+          ],
+          "axeY": {
+            "titre": "Masse volumique",
+            "unite": "g/cm³",
+            "min": 0,
+            "max": 8,
+            "pas": 2
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "prix",
+          "type": "tableau",
+          "titre": "Prix et recyclage",
+          "colonnes": [
+            "Matériau",
+            "Prix (€/kg)",
+            "Se recycle ?"
+          ],
+          "lignes": [
+            [
+              "Acier",
+              1,
+              "Bien"
+            ],
+            [
+              "Aluminium",
+              3,
+              "Bien"
+            ],
+            [
+              "Fibre de carbone",
+              25,
+              "Non"
+            ],
+            [
+              "ABS (plastique)",
+              2,
+              "Difficilement"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, ordres de grandeur"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "masse",
+          "enonce": "Touche le matériau le plus léger de la liste.",
+          "aide": "Plus la masse volumique est petite, plus le matériau est léger.",
+          "explication": "L’**ABS** a la plus petite masse volumique (1,05 g/cm³) : c’est le plus léger.",
+          "reponse": [
+            "k3"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le cadre a un volume de 500 cm³. Quelle serait sa masse en aluminium ?",
+          "aide": "Masse = masse volumique × volume.",
+          "explication": "2,7 × 500 = **1 350 g**, soit 1,35 kg.",
+          "reponse": 1350,
+          "unite": "g"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un cadre en fibre de carbone de 1,2 kg. Quel est le coût de la matière ?",
+          "aide": "Multiplie le prix au kilo par la masse.",
+          "explication": "25 × 1,2 = **30 €**.",
+          "reponse": 30,
+          "unite": "€"
+        },
+        {
+          "type": "choix",
+          "enonce": "Anaïs veut un cadre léger, recyclable et peu cher. Quel matériau choisir ?",
+          "aide": "Élimine ceux qui ne se recyclent pas bien ou qui sont trop lourds.",
+          "explication": "L’acier est lourd, la fibre de carbone est chère et ne se recycle pas, l’ABS se recycle difficilement. L’**aluminium** est léger, recyclable et abordable.",
+          "options": [
+            "L’aluminium",
+            "L’acier",
+            "La fibre de carbone",
+            "L’ABS"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "86f0c251-3a05-5a35-b4e7-8741c482bde4",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La coque du casque de chantier",
+      "competence": "raisonner",
+      "situation": "Une entreprise fabrique des casques de chantier en grande série. Le bureau d’études vérifie le matériau et le procédé.",
+      "documents": [
+        {
+          "id": "casque",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Casque de chantier",
+          "sousTitre": "Fiche produit",
+          "emoji": "⛑️",
+          "lignes": [
+            {
+              "texte": "Matériau de la coque",
+              "valeur": "ABS (thermoplastique)"
+            },
+            {
+              "texte": "Procédé de fabrication",
+              "valeur": "Injection dans un moule",
+              "id": "proc"
+            },
+            {
+              "texte": "Masse de la coque",
+              "valeur": "350 g"
+            },
+            {
+              "texte": "Masse maximale exigée",
+              "valeur": "400 g"
+            },
+            {
+              "texte": "Prix de revient",
+              "valeur": "6 € la pièce"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "procedes",
+          "type": "tableau",
+          "titre": "Matériaux et procédés",
+          "colonnes": [
+            "Matériau",
+            "Procédés possibles"
+          ],
+          "lignes": [
+            [
+              "Thermoplastiques",
+              "Injection, extrusion, thermoformage, impression 3D"
+            ],
+            [
+              "Métaux",
+              "Usinage, pliage, moulage, soudage, découpe laser"
+            ],
+            [
+              "Bois",
+              "Sciage, ponçage, collage, assemblage"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "D’après le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "casque",
+          "enonce": "Touche la ligne qui indique comment la coque est fabriquée.",
+          "aide": "Cherche le mot « procédé ».",
+          "explication": "Le procédé est l’**injection dans un moule**.",
+          "reponse": [
+            "proc"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de grammes la masse de la coque est-elle inférieure à la masse maximale exigée ?",
+          "aide": "Soustrais la masse de la coque à la masse maximale.",
+          "explication": "400 − 350 = **50 g** de marge.",
+          "reponse": 50,
+          "unite": "g"
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque pièce à son procédé de fabrication.",
+          "aide": "Regarde le tableau des procédés.",
+          "explication": "Thermoplastique en série : **injection**. Bois : **sciage**. Métal : **soudage**. Une pièce unique en plastique : **impression 3D**.",
+          "paires": [
+            [
+              "Coque de casque en ABS, produite en série",
+              "Injection"
+            ],
+            [
+              "Charpente en chêne",
+              "Sciage et assemblage"
+            ],
+            [
+              "Cadre en acier",
+              "Soudage"
+            ],
+            [
+              "Pièce plastique unique, prototype",
+              "Impression 3D"
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Un élève propose une coque en fibre de carbone. Quel est son inconvénient environnemental ?",
+          "aide": "C’est un matériau composite.",
+          "explication": "Un composite associe deux matériaux quasi **impossibles à séparer** : son recyclage est très difficile.",
+          "options": [
+            "Les deux matériaux associés sont très difficiles à séparer pour le recyclage",
+            "Elle consomme beaucoup plus d’électricité qu’un casque en ABS pendant son usage",
+            "Elle se dégrade naturellement en quelques semaines dans les sols et l’eau",
+            "Elle est impossible à fabriquer avec les machines d’un atelier de collège"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "56818234-bc89-53fb-89f2-a0fc31419086",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le thermomètre d’Inès",
+      "competence": "analyser-document",
+      "situation": "Inès a construit un thermomètre électronique avec une carte programmable. Elle note le rôle de chaque composant.",
+      "documents": [
+        {
+          "id": "thermo",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Le thermomètre d’Inès",
+          "sousTitre": "Composants et rôles",
+          "emoji": "🌡️",
+          "lignes": [
+            {
+              "texte": "Thermistance",
+              "valeur": "Mesure la température",
+              "id": "therm"
+            },
+            {
+              "texte": "Bouton-poussoir",
+              "valeur": "Change l’unité °C / °F",
+              "id": "bouton"
+            },
+            {
+              "texte": "Carte programmable",
+              "valeur": "Exécute le programme",
+              "id": "carte"
+            },
+            {
+              "texte": "Écran",
+              "valeur": "Affiche la valeur",
+              "id": "ecran"
+            },
+            {
+              "texte": "Buzzer",
+              "valeur": "Sonne au-dessus de 30 °C",
+              "id": "buzzer"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "thermo",
+          "enonce": "Touche les deux composants qui prennent une information : ce sont les capteurs.",
+          "aide": "Un capteur recueille une information ; il ne la décide pas et ne l’affiche pas.",
+          "explication": "La **thermistance** prend la température et le **bouton-poussoir** prend l’action de l’utilisateur : ce sont les deux capteurs.",
+          "reponse": [
+            "therm",
+            "bouton"
+          ],
+          "multiple": true
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range dans l’ordre le trajet de l’information quand la température monte.",
+          "aide": "On mesure, on décide, puis on signale.",
+          "explication": "**Acquérir** (thermistance), **traiter** (carte), **communiquer** (buzzer).",
+          "items": [
+            "La thermistance mesure la température",
+            "La carte compare la mesure à 30 °C",
+            "Le buzzer sonne"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Le buzzer sonne quand il fait plus de 30 °C. À quelle fonction de la chaîne d’information correspond-il ?",
+          "aide": "Il prévient l’utilisateur.",
+          "explication": "Le buzzer avertit l’utilisateur : il assure la fonction **communiquer**.",
+          "options": [
+            "Communiquer l’information",
+            "Acquérir l’information",
+            "Traiter l’information reçue",
+            "Mesurer la température"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "56818234-bc89-53fb-89f2-a0fc31419086",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La serre qui arrose",
+      "competence": "analyser-document",
+      "situation": "Une serre est équipée d’un arrosage automatique. Elle envoie aussi un message sur le téléphone du jardinier.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "titre": "La chaîne d’information de la serre",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "hum",
+              "texte": "Capteur d’humidité",
+              "emoji": "💧"
+            },
+            {
+              "id": "uc",
+              "texte": "?"
+            },
+            {
+              "id": "wifi",
+              "texte": "Envoi Wi-Fi vers le téléphone",
+              "emoji": "📱"
+            }
+          ],
+          "liens": [
+            {
+              "de": "hum",
+              "a": "uc"
+            },
+            {
+              "de": "uc",
+              "a": "wifi"
+            }
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "releves",
+          "type": "tableau",
+          "titre": "Relevés de la journée",
+          "colonnes": [
+            "Heure",
+            "8 h",
+            "12 h",
+            "16 h"
+          ],
+          "lignes": [
+            [
+              "Humidité du sol (%)",
+              62,
+              38,
+              25
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Le programme déclenche l’arrosage quand l’humidité passe sous 30 %."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche l’élément qui communique l’information au jardinier.",
+          "aide": "Il transmet l’information vers l’extérieur du système.",
+          "explication": "L’envoi **Wi-Fi** transmet l’information au téléphone : c’est la fonction communiquer.",
+          "reponse": [
+            "wifi"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel composant faut-il placer à la place du « ? » pour décider d’arroser ?",
+          "aide": "C’est la fonction « traiter » : il exécute un programme.",
+          "explication": "Le **microcontrôleur** compare l’humidité au seuil et décide : c’est la partie commande.",
+          "options": [
+            "Un microcontrôleur",
+            "Un moteur",
+            "Une lampe",
+            "Un bouton-poussoir"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle heure l’arrosage se déclenche-t-il pour la première fois ? (réponds en heures, ex. 8)",
+          "aide": "Cherche la première mesure sous 30 %.",
+          "explication": "À 8 h (62 %) et 12 h (38 %) le sol est assez humide. À **16 h** il n’y a plus que 25 % : l’arrosage démarre.",
+          "reponse": 16,
+          "unite": "h"
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque capteur à la grandeur qu’il mesure.",
+          "aide": "Le nom du capteur donne souvent un indice.",
+          "explication": "Photorésistance : **lumière**. Ultrasons : **distance**. Thermistance : **température**. Fin de course : **position**.",
+          "paires": [
+            [
+              "Photorésistance",
+              "La lumière"
+            ],
+            [
+              "Capteur à ultrasons",
+              "La distance"
+            ],
+            [
+              "Thermistance",
+              "La température"
+            ],
+            [
+              "Fin de course",
+              "La position"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "56818234-bc89-53fb-89f2-a0fc31419086",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le lampadaire intelligent",
+      "competence": "raisonner",
+      "situation": "Un lampadaire s’allume seulement s’il fait nuit ET si quelqu’un passe. Le technicien vérifie cinq situations.",
+      "documents": [
+        {
+          "id": "schema",
+          "type": "schema",
+          "titre": "Le lampadaire",
+          "largeur": 340,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "texte",
+              "x": 10,
+              "y": 18,
+              "texte": "Chaîne d’information",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 28,
+              "l": 110,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Photorésistance"
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 72,
+              "l": 110,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Capteur présence"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                45
+              ],
+              "a": [
+                145,
+                58
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                89
+              ],
+              "a": [
+                145,
+                76
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 145,
+              "y": 48,
+              "l": 80,
+              "h": 38,
+              "arrondi": 6,
+              "texte": "Carte",
+              "id": "carte",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                185,
+                86
+              ],
+              "a": [
+                185,
+                150
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "etiquette",
+              "x": 280,
+              "y": 118,
+              "texte": "Ordre",
+              "vers": [
+                188,
+                118
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 10,
+              "y": 142,
+              "texte": "Chaîne d’énergie",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 150,
+              "l": 104,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Réseau 230 V"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                114,
+                167
+              ],
+              "a": [
+                145,
+                167
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 145,
+              "y": 150,
+              "l": 80,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Relais"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                225,
+                167
+              ],
+              "a": [
+                251,
+                167
+              ],
+              "fleche": "fin",
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 251,
+              "y": 150,
+              "l": 70,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Lampe"
+            }
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Cinq situations",
+          "colonnes": [
+            "Situation",
+            "Lumière (lux)",
+            "Présence"
+          ],
+          "lignes": [
+            [
+              "A",
+              10,
+              "Oui"
+            ],
+            [
+              "B",
+              10,
+              "Non"
+            ],
+            [
+              "C",
+              400,
+              "Oui"
+            ],
+            [
+              "D",
+              400,
+              "Non"
+            ],
+            [
+              "E",
+              30,
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Il fait nuit quand la lumière est inférieure à 50 lux."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "schema",
+          "enonce": "Touche le composant qui décide d’envoyer l’ordre au relais.",
+          "aide": "Il traite les informations des deux capteurs.",
+          "explication": "La **carte** exécute le programme : elle reçoit les mesures et décide d’envoyer l’ordre.",
+          "reponse": [
+            "carte"
+          ]
+        },
+        {
+          "type": "categories",
+          "enonce": "Dans chaque situation, la lampe est-elle allumée ? (nuit ET présence)",
+          "aide": "Il faut que les deux conditions soient vraies en même temps.",
+          "explication": "Il fait nuit en **A** (10 lux) et en **E** (30 lux), et il y a de la présence : la lampe s’allume. Dans les trois autres cas, une des deux conditions manque.",
+          "categories": [
+            "Lampe allumée",
+            "Lampe éteinte"
+          ],
+          "items": [
+            [
+              "A : 10 lux, présence",
+              0
+            ],
+            [
+              "B : 10 lux, pas de présence",
+              1
+            ],
+            [
+              "C : 400 lux, présence",
+              1
+            ],
+            [
+              "D : 400 lux, pas de présence",
+              1
+            ],
+            [
+              "E : 30 lux, présence",
+              0
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sans la photorésistance, la lampe s’allumerait dès qu’il y a une présence. Dans combien de situations sur les cinq s’allumerait-elle ?",
+          "aide": "Compte les situations où la présence est « Oui ».",
+          "explication": "Présence « Oui » en A, C et E : **3** situations. Sans photorésistance, elle s’allumerait même en plein jour (C).",
+          "reponse": 3
+        },
+        {
+          "type": "choix",
+          "enonce": "Le technicien remplace la photorésistance par un capteur de température. Que se passe-t-il ?",
+          "aide": "Regarde ce que mesure chaque capteur.",
+          "explication": "Le capteur de température ne mesure pas la lumière : la carte ne peut plus savoir s’il fait **nuit**. La chaîne d’information ne répond plus au besoin.",
+          "options": [
+            "La lampe réagit à la chaleur et non à la nuit : le besoin n’est plus respecté",
+            "La lampe fonctionne exactement comme avant, car la carte traite tout pareil",
+            "La carte ne reçoit plus aucune information, car le capteur n’est pas compatible",
+            "Le relais ne laisse plus passer le courant, car il ne reconnaît plus le capteur"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "5c46493b-4169-5cf3-bbad-5cedd26fa82b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La bouilloire et son entourage",
+      "competence": "observer-schema",
+      "situation": "Une bouilloire électrique n’existe pas seule : elle est entourée d’éléments avec lesquels elle est en relation.",
+      "documents": [
+        {
+          "id": "diag",
+          "type": "schema",
+          "titre": "Diagramme des interacteurs",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                36
+              ],
+              "a": [
+                145,
+                100
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                36
+              ],
+              "a": [
+                195,
+                100
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                120,
+                214
+              ],
+              "a": [
+                145,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                214
+              ],
+              "a": [
+                195,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 130,
+              "y": 100,
+              "l": 80,
+              "h": 50,
+              "arrondi": 6,
+              "texte": "Bouilloire"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 100,
+              "h": 32,
+              "arrondi": 6,
+              "texte": "Utilisateur",
+              "id": "user",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 220,
+              "y": 20,
+              "l": 100,
+              "h": 32,
+              "arrondi": 6,
+              "texte": "Eau",
+              "id": "eau",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 198,
+              "l": 100,
+              "h": 32,
+              "arrondi": 6,
+              "texte": "Prise 230 V",
+              "id": "prise",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 220,
+              "y": 198,
+              "l": 100,
+              "h": 32,
+              "arrondi": 6,
+              "texte": "Cuisine",
+              "id": "milieu",
+              "zone": true
+            }
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "diag",
+          "enonce": "Touche l’interacteur sur lequel la bouilloire agit : la matière d’œuvre.",
+          "aide": "C’est ce que l’objet transforme : ici, on le chauffe.",
+          "explication": "La bouilloire chauffe l’**eau** : c’est sa matière d’œuvre.",
+          "reponse": [
+            "eau"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque interacteur à son rôle.",
+          "aide": "Regarde le schéma.",
+          "explication": "L’utilisateur s’en sert, l’eau est la matière d’œuvre, la prise fournit l’énergie, la cuisine est le milieu.",
+          "paires": [
+            [
+              "Utilisateur",
+              "Celui qui s’en sert"
+            ],
+            [
+              "Eau",
+              "Ce sur quoi l’objet agit"
+            ],
+            [
+              "Prise 230 V",
+              "L’énergie dont l’objet a besoin"
+            ],
+            [
+              "Cuisine",
+              "Le milieu dans lequel il est utilisé"
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase décrit la fonction principale de la bouilloire ?",
+          "aide": "Elle relie deux interacteurs à travers l’objet.",
+          "explication": "La fonction principale relie l’**utilisateur** et l’**eau** à travers la bouilloire. Les trois autres phrases sont des contraintes : elles ne relient qu’un seul interacteur.",
+          "options": [
+            "Permettre à l’utilisateur de chauffer de l’eau pour ses boissons",
+            "Résister à l’humidité de la cuisine où la bouilloire est utilisée",
+            "Se brancher sur une prise de 230 V du réseau électrique domestique",
+            "Coûter moins de 30 euros pour rester accessible à tous les budgets"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "5c46493b-4169-5cf3-bbad-5cedd26fa82b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le distributeur de gel",
+      "competence": "analyser-document",
+      "situation": "Le collège installe un distributeur de gel hydroalcoolique à l’entrée. L’enseignant a listé ses fonctions.",
+      "documents": [
+        {
+          "id": "fonctions",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Le distributeur de gel",
+          "sousTitre": "Fonctions à assurer",
+          "emoji": "🧴",
+          "lignes": [
+            {
+              "texte": "Verser du gel dans la main de l’utilisateur",
+              "id": "verser"
+            },
+            {
+              "texte": "Se fixer solidement au mur",
+              "id": "mur"
+            },
+            {
+              "texte": "Résister aux produits de nettoyage",
+              "id": "nettoyage"
+            },
+            {
+              "texte": "Coûter moins de 40 euros",
+              "id": "prix"
+            },
+            {
+              "texte": "Fonctionner avec deux piles",
+              "id": "piles"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fonctions",
+          "enonce": "Touche la fonction principale du distributeur.",
+          "aide": "C’est celle qui relie l’utilisateur au gel.",
+          "explication": "La fonction principale relie l’utilisateur et le gel : **verser du gel** dans sa main.",
+          "reponse": [
+            "verser"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque contrainte à l’interacteur qui l’impose.",
+          "aide": "Chaque contrainte vient d’un interacteur différent.",
+          "explication": "Le mur impose la fixation, le milieu (produits, humidité) la résistance, le budget le prix, l’énergie les piles.",
+          "paires": [
+            [
+              "Se fixer solidement au mur",
+              "Le mur"
+            ],
+            [
+              "Résister aux produits de nettoyage",
+              "Le milieu"
+            ],
+            [
+              "Coûter moins de 40 euros",
+              "Le budget"
+            ],
+            [
+              "Fonctionner avec deux piles",
+              "L’énergie"
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fonctions contraintes cette liste comporte-t-elle ?",
+          "aide": "Une seule fonction est principale.",
+          "explication": "Il y a une fonction principale et **4** fonctions contraintes.",
+          "reponse": 4
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel interacteur n’apparaît dans aucune des cinq fonctions de la liste ?",
+          "aide": "Regarde ce que chaque fonction impose.",
+          "explication": "Le budget, l’énergie et le mur sont présents. Les **normes** ne sont pas citées : le cahier des charges devra les ajouter.",
+          "options": [
+            "Les normes (produits autorisés, règles de sécurité et d’hygiène)",
+            "Le budget (prix d’achat et coût d’entretien du distributeur de gel)",
+            "L’énergie (pile ou secteur qui alimente le distributeur de gel)",
+            "Le mur (support sur lequel le distributeur est fixé dans le couloir)"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "5c46493b-4169-5cf3-bbad-5cedd26fa82b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La trottinette électrique",
+      "competence": "raisonner",
+      "situation": "Un bureau d’études prépare le cahier des charges d’une trottinette électrique. Un prototype est testé.",
+      "documents": [
+        {
+          "id": "cdc",
+          "type": "tableau",
+          "titre": "Cahier des charges",
+          "colonnes": [
+            "Fonction",
+            "Critère",
+            "Niveau",
+            "Flexibilité"
+          ],
+          "lignes": [
+            [
+              "Rouler sur la route",
+              "Vitesse maximale",
+              "25 km/h au plus",
+              "F0"
+            ],
+            [
+              "S’alimenter",
+              "Autonomie",
+              "20 km au moins",
+              "F1"
+            ],
+            [
+              "Résister à la pluie",
+              "Tenue sous pluie simulée",
+              "30 min",
+              "F0"
+            ],
+            [
+              "Se transporter facilement",
+              "Masse",
+              "12 kg au plus",
+              "F2"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "F0 : impératif · F1 : peu négociable · F2 : négociable"
+        },
+        {
+          "id": "essais",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Mesures sur le prototype",
+          "sousTitre": "Résultats des essais",
+          "emoji": "🛴",
+          "lignes": [
+            {
+              "texte": "Vitesse maximale mesurée",
+              "valeur": "27 km/h",
+              "id": "v"
+            },
+            {
+              "texte": "Autonomie mesurée",
+              "valeur": "18 km",
+              "id": "a"
+            },
+            {
+              "texte": "Tenue sous pluie simulée",
+              "valeur": "30 min",
+              "id": "p"
+            },
+            {
+              "texte": "Masse mesurée",
+              "valeur": "12,8 kg",
+              "id": "m"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "essais",
+          "enonce": "Touche la mesure qui ne respecte pas une exigence impérative (F0).",
+          "aide": "Compare chaque mesure au niveau exigé des lignes F0.",
+          "explication": "La vitesse est limitée à 25 km/h (**F0**) : les **27 km/h** mesurés dépassent le niveau exigé.",
+          "reponse": [
+            "v"
+          ]
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque mesure : respecte-t-elle l’exigence ?",
+          "aide": "Compare à « au plus » et « au moins ».",
+          "explication": "Conforme : la pluie (30 min). Non conformes : vitesse (27 > 25), autonomie (18 < 20) et masse (12,8 > 12).",
+          "categories": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "items": [
+            [
+              "Vitesse : 27 km/h",
+              1
+            ],
+            [
+              "Autonomie : 18 km",
+              1
+            ],
+            [
+              "Tenue sous pluie : 30 min",
+              0
+            ],
+            [
+              "Masse : 12,8 kg",
+              1
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de kilomètres d’autonomie manque-t-il par rapport à l’exigence ?",
+          "aide": "Soustrais 18 à 20.",
+          "explication": "20 − 18 = **2 km**.",
+          "reponse": 2,
+          "unite": "km"
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle exigence non respectée est la plus facile à négocier ?",
+          "aide": "Regarde la colonne « Flexibilité ».",
+          "explication": "**F2** veut dire négociable : c’est la masse qu’on accepte le plus facilement de revoir.",
+          "options": [
+            "La masse, en F2",
+            "La vitesse, en F0",
+            "La tenue à la pluie, en F0",
+            "L’autonomie, en F1"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "choix",
+          "enonce": "Le prototype peut-il être validé ?",
+          "aide": "Une exigence F0 ne se négocie pas.",
+          "explication": "Une exigence **F0** est impérative : le prototype n’est pas validé, on retourne à la conception (limiter la vitesse du moteur).",
+          "options": [
+            "Non : la vitesse dépasse une exigence impérative, il faut revenir à la conception",
+            "Oui : trois exigences sur quatre sont proches du niveau exigé, ce qui suffit",
+            "Oui : il suffit de modifier le cahier des charges pour que l’essai soit conforme",
+            "Non : il faut refaire exactement le même essai jusqu’à obtenir un résultat conforme"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "0a6a5859-d7d3-5432-be55-cfd39576856a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le casque de vélo",
+      "competence": "analyser-document",
+      "situation": "Une entreprise prépare un casque de vélo pour enfants. Le cahier des charges contient cinq exigences.",
+      "documents": [
+        {
+          "id": "cdc",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Le casque de vélo",
+          "sousTitre": "Exigences du cahier des charges",
+          "emoji": "🚲",
+          "lignes": [
+            {
+              "texte": "Masse inférieure à 300 g",
+              "id": "masse"
+            },
+            {
+              "texte": "Marquage CE obligatoire",
+              "id": "ce"
+            },
+            {
+              "texte": "Prix de vente inférieur à 40 €",
+              "id": "prix"
+            },
+            {
+              "texte": "Attache réglable d’une seule main",
+              "id": "attache"
+            },
+            {
+              "texte": "Coloris au choix de l’enfant",
+              "id": "coloris"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cdc",
+          "enonce": "Touche l’exigence qui vient de la réglementation.",
+          "aide": "Cherche une obligation imposée par une norme.",
+          "explication": "Le **marquage CE** est une obligation réglementaire.",
+          "reponse": [
+            "ce"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque exigence à sa famille de contraintes.",
+          "aide": "Demande-toi ce que chaque exigence protège ou facilite.",
+          "explication": "CE : **réglementaire**. Prix : **économique**. Attache d’une main : facilité d’usage, donc **ergonomique**. Coloris : **esthétique**.",
+          "paires": [
+            [
+              "Marquage CE obligatoire",
+              "Réglementaire"
+            ],
+            [
+              "Prix de vente inférieur à 40 €",
+              "Économique"
+            ],
+            [
+              "Attache réglable d’une seule main",
+              "Ergonomique"
+            ],
+            [
+              "Coloris au choix de l’enfant",
+              "Esthétique"
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment rendre mesurable l’exigence « Le casque doit être solide » ?",
+          "aide": "Une bonne exigence contient un critère et un niveau chiffré.",
+          "explication": "Une exigence mesurable donne un **critère** (la charge supportée) et un **niveau** chiffré (500 N). Les autres phrases ne se mesurent pas.",
+          "options": [
+            "Supporte une charge de 500 N sans se rompre ni se fissurer",
+            "Le casque est très solide et résiste bien aux chocs",
+            "Le casque est solide comme un roc, vraiment costaud",
+            "Solidité maximale sans compromis, quel que soit le choc"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "0a6a5859-d7d3-5432-be55-cfd39576856a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le cartable neuf",
+      "competence": "calculer",
+      "situation": "Emma choisit un cartable. Elle compare trois modèles avec le cahier des charges de sa famille.",
+      "documents": [
+        {
+          "id": "modeles",
+          "type": "tableau",
+          "titre": "Trois cartables",
+          "colonnes": [
+            "Modèle",
+            "Masse (kg)",
+            "Prix (€)",
+            "Charge supportée (kg)"
+          ],
+          "lignes": [
+            [
+              "Toile fine",
+              0.6,
+              25,
+              6
+            ],
+            [
+              "Toile renforcée",
+              0.9,
+              35,
+              12
+            ],
+            [
+              "Cuir",
+              1.4,
+              90,
+              15
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "cdc",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Cahier des charges",
+          "sousTitre": "Exigences et flexibilité",
+          "emoji": "🎒",
+          "lignes": [
+            {
+              "texte": "Charge supportée d’au moins 10 kg",
+              "valeur": "F0 · impératif",
+              "id": "charge"
+            },
+            {
+              "texte": "Masse d’au plus 1 kg",
+              "valeur": "F2 · négociable"
+            },
+            {
+              "texte": "Prix d’au plus 40 €",
+              "valeur": "F1 · peu négociable"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cdc",
+          "enonce": "Touche l’exigence impérative : celle qui ne se négocie pas.",
+          "aide": "Cherche F0.",
+          "explication": "**F0** signifie impératif : la charge d’au moins 10 kg doit être respectée.",
+          "reponse": [
+            "charge"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel modèle respecte les trois exigences ?",
+          "aide": "Vérifie la charge, la masse et le prix de chaque modèle.",
+          "explication": "La toile fine ne supporte que 6 kg, le cuir pèse 1,4 kg et coûte 90 €. La **toile renforcée** (12 kg, 0,9 kg, 35 €) respecte tout.",
+          "options": [
+            "La toile renforcée",
+            "La toile fine",
+            "Le cuir",
+            "Aucun des trois"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien d’euros le cartable en cuir dépasse-t-il le budget ?",
+          "aide": "Soustrais 40 au prix du cuir.",
+          "explication": "90 − 40 = **50 €**.",
+          "reponse": 50,
+          "unite": "€"
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque amélioration à ce qu’elle coûte le plus souvent.",
+          "aide": "Les contraintes s’opposent : on ne gagne jamais sur tous les tableaux.",
+          "explication": "Alléger : moins de résistance ou plus cher. Plus sûr : plus **lourd**. Moins cher : moins de **performance** ou de durabilité. Concevoir, c’est **arbitrer**.",
+          "paires": [
+            [
+              "Alléger l’objet",
+              "Moins de résistance, ou plus cher"
+            ],
+            [
+              "Le rendre plus sûr",
+              "Plus lourd"
+            ],
+            [
+              "Baisser son prix",
+              "Moins de performance ou de durabilité"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "0a6a5859-d7d3-5432-be55-cfd39576856a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le robot aspirateur",
+      "competence": "raisonner",
+      "situation": "Un club de robotique teste trois prototypes d’aspirateur. Le cahier des charges fixe l’autonomie, la masse et le prix.",
+      "documents": [
+        {
+          "id": "cdc",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Cahier des charges",
+          "sousTitre": "Exigences",
+          "emoji": "🤖",
+          "lignes": [
+            {
+              "texte": "Autonomie",
+              "valeur": "80 minutes au moins"
+            },
+            {
+              "texte": "Masse",
+              "valeur": "3,2 kg au plus"
+            },
+            {
+              "texte": "Prix de revient",
+              "valeur": "250 € au plus"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "auto",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Autonomie mesurée",
+          "categories": [
+            "Prototype 1",
+            "Prototype 2",
+            "Prototype 3"
+          ],
+          "series": [
+            {
+              "nom": "Autonomie",
+              "valeurs": [
+                60,
+                90,
+                120
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Autonomie",
+            "unite": "minutes",
+            "min": 0,
+            "max": 140,
+            "pas": 20
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        },
+        {
+          "id": "proto",
+          "type": "tableau",
+          "titre": "Masse et prix",
+          "colonnes": [
+            "Prototype",
+            "Masse de la batterie (g)",
+            "Masse totale (kg)",
+            "Prix (€)"
+          ],
+          "lignes": [
+            [
+              "Prototype 1",
+              200,
+              3,
+              180
+            ],
+            [
+              "Prototype 2",
+              300,
+              3.1,
+              210
+            ],
+            [
+              "Prototype 3",
+              450,
+              3.25,
+              260
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "auto",
+          "enonce": "Touche le prototype dont l’autonomie ne respecte pas l’exigence.",
+          "aide": "Compare chaque barre à 80 minutes.",
+          "explication": "Le **prototype 1** ne dure que 60 minutes : c’est moins que les 80 minutes exigées.",
+          "reponse": [
+            "k0"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien d’euros le prototype 3 dépasse-t-il le prix maximal ?",
+          "aide": "Soustrais 250 à son prix.",
+          "explication": "260 − 250 = **10 €**.",
+          "reponse": 10,
+          "unite": "€"
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque prototype : respecte-t-il les trois exigences ?",
+          "aide": "Vérifie l’autonomie, la masse et le prix.",
+          "explication": "Le 1 manque d’autonomie. Le 3 dépasse la masse (3,25 kg) et le prix. Le **prototype 2** respecte les trois exigences.",
+          "categories": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "items": [
+            [
+              "Prototype 1",
+              1
+            ],
+            [
+              "Prototype 2",
+              0
+            ],
+            [
+              "Prototype 3",
+              1
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les prototypes qui durent plus longtemps sont-ils plus lourds et plus chers ?",
+          "aide": "Regarde comment la masse de la batterie évolue avec l’autonomie.",
+          "explication": "Les contraintes **s’opposent** : plus d’autonomie demande une batterie plus grosse, donc plus lourde et plus chère. Il faut **arbitrer**.",
+          "options": [
+            "Parce que l’autonomie demande une plus grande batterie, lourde et coûteuse",
+            "Parce que le cahier des charges impose d’alourdir les prototypes durables",
+            "Parce qu’ils ont plus de capteurs, qui pèsent plus lourd et coûtent plus cher",
+            "Parce que le prix est fixé avant les essais, puis répercuté sur le poids"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "13f7c8d0-9c16-510d-b3a0-05f64790e4bb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quelle ampoule pour le couloir ?",
+      "competence": "lire-graphique",
+      "situation": "La famille de Yasmine hésite entre une ampoule à filament et une ampoule LED pour le couloir.",
+      "documents": [
+        {
+          "id": "conso",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Puissance consommée",
+          "categories": [
+            "À filament",
+            "LED"
+          ],
+          "series": [
+            {
+              "nom": "Puissance",
+              "valeurs": [
+                60,
+                9
+              ],
+              "teinte": "jaune"
+            }
+          ],
+          "axeY": {
+            "titre": "Puissance",
+            "unite": "W",
+            "min": 0,
+            "max": 70,
+            "pas": 10
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "comparaison",
+          "type": "tableau",
+          "titre": "Les deux ampoules",
+          "colonnes": [
+            "Critère",
+            "À filament",
+            "LED"
+          ],
+          "lignes": [
+            [
+              "Prix d’achat (€)",
+              1,
+              4
+            ],
+            [
+              "Durée de vie (h)",
+              1000,
+              20000
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "conso",
+          "enonce": "Touche l’ampoule qui consomme le plus d’énergie.",
+          "aide": "Regarde la barre la plus haute.",
+          "explication": "L’ampoule **à filament** consomme 60 W contre 9 W pour la LED.",
+          "reponse": [
+            "k0"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la durée de vie de la LED est-elle plus longue que celle de l’ampoule à filament ?",
+          "aide": "Divise 20 000 par 1 000.",
+          "explication": "20 000 ÷ 1 000 = **20** fois.",
+          "reponse": 20
+        },
+        {
+          "type": "choix",
+          "enonce": "La LED coûte plus cher à l’achat. Pourquoi peut-elle être la moins chère sur la durée ?",
+          "aide": "Le coût global ne se limite pas au prix d’achat.",
+          "explication": "Le **coût global** ajoute l’achat, la consommation et le remplacement. La LED consomme peu et n’est changée que rarement.",
+          "options": [
+            "Elle consomme peu et dure longtemps : son coût global est plus faible",
+            "Elle est plus jolie que les autres ampoules, donc elle vaut son prix",
+            "Elle n’a jamais besoin d’électricité, donc elle ne coûte rien à utiliser",
+            "Son prix d’achat baisse avec le temps, jusqu’à devenir inférieur au reste"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "13f7c8d0-9c16-510d-b3a0-05f64790e4bb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quel vélo pour aller au collège ?",
+      "competence": "calculer",
+      "situation": "Lina compare trois vélos avec un tableau multicritère. Les notes sont sur 5 et les critères importants ont un coefficient.",
+      "documents": [
+        {
+          "id": "multi",
+          "type": "tableau",
+          "titre": "Tableau multicritère",
+          "colonnes": [
+            "Critère",
+            "Coefficient",
+            "Vélo A",
+            "Vélo B",
+            "Vélo C"
+          ],
+          "lignes": [
+            [
+              "Prix (5 = peu cher)",
+              3,
+              4,
+              3,
+              1
+            ],
+            [
+              "Fiabilité",
+              2,
+              2,
+              4,
+              5
+            ],
+            [
+              "Réparabilité",
+              2,
+              3,
+              4,
+              3
+            ],
+            [
+              "Encombrement",
+              1,
+              5,
+              3,
+              2
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le total pondéré du vélo A (note × coefficient, puis addition).",
+          "aide": "4 × 3 + 2 × 2 + 3 × 2 + 5 × 1.",
+          "explication": "12 + 4 + 6 + 5 = **27**.",
+          "reponse": 27
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le total pondéré du vélo B.",
+          "aide": "3 × 3 + 4 × 2 + 4 × 2 + 3 × 1.",
+          "explication": "9 + 8 + 8 + 3 = **28**.",
+          "reponse": 28
+        },
+        {
+          "type": "choix",
+          "enonce": "Le vélo C a un total de 21. Quel vélo Lina choisit-elle ?",
+          "aide": "Retiens le total pondéré le plus élevé.",
+          "explication": "B : 28, A : 27, C : 21. Le **vélo B** arrive en tête.",
+          "options": [
+            "Le vélo B",
+            "Le vélo A",
+            "Le vélo C",
+            "A et B sans distinction"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "choix",
+          "enonce": "Sans coefficients, en additionnant simplement les notes, que deviennent A et B ?",
+          "aide": "Additionne les quatre notes de chaque vélo.",
+          "explication": "A : 4 + 2 + 3 + 5 = 14. B : 3 + 4 + 4 + 3 = 14. Égalité ! Ce sont les **coefficients** qui font entrer les priorités et départagent.",
+          "options": [
+            "Ils sont à égalité à 14 points",
+            "A gagne avec 14 contre 13",
+            "B gagne avec 15 contre 14",
+            "C passe devant"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "13f7c8d0-9c16-510d-b3a0-05f64790e4bb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux tablettes pour le CDI",
+      "competence": "raisonner",
+      "situation": "Le CDI doit acheter des tablettes. Le professeur compare deux modèles sur six ans.",
+      "documents": [
+        {
+          "id": "modeles",
+          "type": "tableau",
+          "titre": "Les deux modèles",
+          "colonnes": [
+            "Critère",
+            "Modèle X",
+            "Modèle Y"
+          ],
+          "lignes": [
+            [
+              "Prix d’achat (€)",
+              150,
+              90
+            ],
+            [
+              "Durée de vie (ans)",
+              6,
+              2
+            ],
+            [
+              "Entretien (€ par an)",
+              10,
+              0
+            ],
+            [
+              "Réparable ?",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Masse (g)",
+              480,
+              450
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "cdc",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Cahier des charges",
+          "sousTitre": "Exigences du CDI",
+          "emoji": "📚",
+          "lignes": [
+            {
+              "texte": "Durée d’usage",
+              "valeur": "6 ans"
+            },
+            {
+              "texte": "Budget annuel",
+              "valeur": "40 € par an au plus"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le coût global du modèle X sur six ans : achat + six années d’entretien.",
+          "aide": "150 + 6 × 10.",
+          "explication": "150 + 60 = **210 €**.",
+          "reponse": 210,
+          "unite": "€"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Il faut racheter le modèle Y quand il est usé. Quel est son coût global sur six ans ?",
+          "aide": "Combien de modèles Y faut-il pour six ans ?",
+          "explication": "6 ÷ 2 = 3 modèles, soit 3 × 90 = **270 €**.",
+          "reponse": 270,
+          "unite": "€"
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque critère du tableau : à quel modèle donne-t-il l’avantage ?",
+          "aide": "Regarde quel modèle est le meilleur pour chaque critère.",
+          "explication": "X gagne sur la durée de vie et la réparabilité. Y gagne sur le prix d’achat, l’entretien et la masse (plus léger).",
+          "categories": [
+            "Avantage au modèle X",
+            "Avantage au modèle Y"
+          ],
+          "items": [
+            [
+              "Prix d’achat",
+              1
+            ],
+            [
+              "Durée de vie",
+              0
+            ],
+            [
+              "Réparabilité",
+              0
+            ],
+            [
+              "Entretien",
+              1
+            ],
+            [
+              "Masse",
+              1
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase justifie correctement le choix ?",
+          "aide": "Justifier, c’est confronter le choix au cahier des charges.",
+          "explication": "X coûte 210 ÷ 6 = 35 € par an, sous la limite de 40 €. Y revient à 45 € par an. Le choix est justifié par les **exigences**, pas par un goût.",
+          "options": [
+            "X : 210 € contre 270 € sur six ans, soit 35 € par an, dans le budget",
+            "X, parce que c’est le modèle le plus récent, donc le plus performant",
+            "Y, parce que son prix d’achat est le plus bas, donc le moins cher au total",
+            "Y, parce qu’il est plus léger et plus facile à transporter dans un sac"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "0febf99b-f42f-5c05-9795-f4dae37bd993",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le lutin qui avance",
+      "competence": "programmer",
+      "situation": "Un lutin exécute un programme Scratch tout simple : les blocs s’exécutent l’un après l’autre.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "mouvement",
+                "texte": "avancer de (30) pas",
+                "id": "av1"
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire [Halte !] pendant (2) secondes"
+              },
+              {
+                "categorie": "mouvement",
+                "texte": "avancer de (20) pas",
+                "id": "av2"
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire [Arrivé !] pendant (2) secondes"
+              }
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de pas le lutin a-t-il fait en tout à la fin du programme ?",
+          "aide": "Additionne les deux blocs qui font avancer.",
+          "explication": "30 + 20 = **50 pas**.",
+          "reponse": 50,
+          "unite": "pas"
+        },
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui fait avancer le lutin de 20 pas.",
+          "aide": "Regarde le nombre dans le bloc.",
+          "explication": "C’est le bloc **avancer de 20 pas**, le deuxième bloc de mouvement.",
+          "reponse": [
+            "av2"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit le lutin en dernier ?",
+          "aide": "Les blocs s’exécutent de haut en bas.",
+          "explication": "Les blocs s’exécutent dans l’ordre : le dernier message est « **Arrivé !** ».",
+          "options": [
+            "Arrivé !",
+            "Halte !",
+            "Bonjour",
+            "Rien"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque situation à la structure de programmation qui convient.",
+          "aide": "Une structure répète, une autre teste, une autre mémorise, une autre enchaîne.",
+          "explication": "**Boucle** : répéter. **Condition** : agir seulement si un test est vrai. **Variable** : stocker une valeur. **Séquence** : l’une après l’autre.",
+          "paires": [
+            [
+              "Faire dix fois les mêmes pas",
+              "La boucle"
+            ],
+            [
+              "Allumer le ventilateur si la température dépasse 25 °C",
+              "La condition"
+            ],
+            [
+              "Retenir le score du joueur",
+              "La variable"
+            ],
+            [
+              "Exécuter les instructions dans l’ordre écrit",
+              "La séquence"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "0febf99b-f42f-5c05-9795-f4dae37bd993",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le compteur de Malo",
+      "competence": "programmer",
+      "situation": "Malo programme un lutin qui compte de trois en trois. La variable n stocke le résultat.",
+      "documents": [
+        {
+          "id": "compteur",
+          "type": "scratch",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [n] à (0)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (4) fois",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (3) à [n]",
+                    "id": "aj"
+                  }
+                ]
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire (n)"
+              }
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "compteur",
+          "enonce": "Touche le bloc qui fait augmenter n.",
+          "aide": "Cherche le bloc qui contient « ajouter ».",
+          "explication": "Le bloc **ajouter 3 à n** fait augmenter la variable à chaque tour.",
+          "reponse": [
+            "aj"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Que vaut n après le deuxième tour de boucle ?",
+          "aide": "n part de 0 et gagne 3 à chaque tour.",
+          "explication": "Tour 1 : n = 3. Tour 2 : n = **6**.",
+          "reponse": 6
+        },
+        {
+          "type": "nombre",
+          "enonce": "Que dit le lutin à la fin du programme ?",
+          "aide": "Combien de tours ? Quel gain par tour ?",
+          "explication": "4 tours × 3 = **12**.",
+          "reponse": 12
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il changer pour que le lutin dise 18 ?",
+          "aide": "Essaie chaque proposition : 18 = combien de fois 3 ?",
+          "explication": "18 ÷ 3 = 6 tours : **répéter 6 fois**. Les autres modifications donnent 20, 15 et 15.",
+          "options": [
+            "Remplacer « répéter 4 fois » par « répéter 6 fois »",
+            "Remplacer « ajouter 3 » par « ajouter 5 »",
+            "Remplacer « mettre n à 0 » par « mettre n à 3 »",
+            "Remplacer « répéter 4 fois » par « répéter 5 fois »"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "0febf99b-f42f-5c05-9795-f4dae37bd993",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le ventilateur intelligent",
+      "competence": "raisonner",
+      "situation": "Un ventilateur est piloté par une carte programmable. Le programme lit la température et la présence cinq fois de suite.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le programme du ventilateur",
+          "auteur": "Programme écrit pour l’exercice",
+          "blocs": [
+            "répéter 5 fois",
+            "   lire la température",
+            "   lire la présence",
+            "   si température > 25 et présence = oui",
+            "      allumer le ventilateur",
+            "   sinon",
+            "      éteindre le ventilateur"
+          ]
+        },
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Les cinq mesures",
+          "colonnes": [
+            "Mesure",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "lignes": [
+            [
+              "Température (°C)",
+              24,
+              27,
+              28,
+              26,
+              22
+            ],
+            [
+              "Présence",
+              "Oui",
+              "Oui",
+              "Non",
+              "Oui",
+              "Non"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément : entrée ou sortie du programme ?",
+          "aide": "Une entrée est lue, une sortie est commandée.",
+          "explication": "Les capteurs sont des **entrées** (le programme les lit). Le ventilateur est une **sortie** (le programme le commande).",
+          "categories": [
+            "Entrée",
+            "Sortie"
+          ],
+          "items": [
+            [
+              "Capteur de température",
+              0
+            ],
+            [
+              "Capteur de présence",
+              0
+            ],
+            [
+              "Ventilateur",
+              1
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur les cinq mesures, combien de fois le ventilateur est-il allumé ?",
+          "aide": "Il faut que les deux conditions soient vraies.",
+          "explication": "Mesure 2 (27 °C, oui) et mesure 4 (26 °C, oui) : **2** fois.",
+          "reponse": 2
+        },
+        {
+          "type": "choix",
+          "enonce": "À la mesure 3 (28 °C), le ventilateur reste éteint. Pourquoi ?",
+          "aide": "Relis les deux conditions reliées par « et ».",
+          "explication": "28 > 25 est vrai, mais « présence = oui » est faux. Avec « **et** », les deux conditions doivent être vraies.",
+          "options": [
+            "Parce que « et » exige aussi la présence, et il n’y a personne",
+            "Parce que 28 est inférieur à 25, donc la température est trop basse",
+            "Parce que le programme ne lit pas la mesure 3, le capteur étant coupé",
+            "Parce que la boucle s’est arrêtée avant d’arriver à la mesure 3"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "nombre",
+          "enonce": "On remplace « et » par « ou ». Sur les cinq mesures, combien de fois le ventilateur est-il allumé ?",
+          "aide": "Avec « ou », une seule condition vraie suffit.",
+          "explication": "Mesures 1, 2, 4 (présence oui) et 3 (28 > 25) : 4 allumages. Seule la mesure 5 (22 °C, personne) n’allume pas : **4**.",
+          "reponse": 4
+        }
+      ]
+    },
+    {
+      "chapitre": "07b14ffb-7d09-5954-81c4-3509dfa4d528",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les mêmes instructions, deux langages",
+      "competence": "programmer",
+      "situation": "Yanis a écrit un programme en blocs, puis son frère l’a traduit en Python.",
+      "documents": [
+        {
+          "id": "blocs",
+          "type": "scratch",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [ventilateur] à (0)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "si (température) > (25) alors",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "mettre [ventilateur] à (1)"
+                  }
+                ],
+                "sinon": [
+                  {
+                    "categorie": "variable",
+                    "texte": "mettre [ventilateur] à (0)"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "id": "python",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le même programme en Python",
+          "auteur": "Programme écrit pour l’exercice",
+          "blocs": [
+            "temperature = 30",
+            "if temperature > 25 :",
+            "    ventilateur = 1",
+            "else :",
+            "    ventilateur = 0"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque bloc à sa ligne en Python.",
+          "aide": "La condition s’écrit avec « if », l’autre cas avec « else ».",
+          "explication": "« si » devient **if**, « sinon » devient **else**, et les blocs « mettre … à » deviennent des lignes avec un signe égal. L’algorithme est le même.",
+          "paires": [
+            [
+              "si (température) > (25) alors",
+              "if temperature > 25 :"
+            ],
+            [
+              "sinon",
+              "else :"
+            ],
+            [
+              "mettre [ventilateur] à (1)",
+              "ventilateur = 1"
+            ],
+            [
+              "mettre [ventilateur] à (0)",
+              "ventilateur = 0"
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "La température vaut 30. Que vaut ventilateur à la fin ?",
+          "aide": "30 est-il supérieur à 25 ?",
+          "explication": "30 > 25 : la condition est vraie, donc ventilateur vaut **1**.",
+          "reponse": 1
+        },
+        {
+          "type": "choix",
+          "enonce": "La température vaut 20. Que vaut ventilateur à la fin ?",
+          "aide": "Regarde ce qui se passe quand la condition est fausse.",
+          "explication": "20 > 25 est faux : on passe au « sinon », donc ventilateur vaut **0**.",
+          "options": [
+            "0",
+            "1",
+            "25",
+            "20"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "07b14ffb-7d09-5954-81c4-3509dfa4d528",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le programme qui refuse de démarrer",
+      "competence": "analyser-document",
+      "situation": "Anaïs a écrit en Python le programme qui correspond à ses blocs. Il ne s’exécute pas : quelque chose cloche dans le texte.",
+      "documents": [
+        {
+          "id": "blocs",
+          "type": "scratch",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [prix] à (12)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "si (prix) > (10) alors",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire [Cher]"
+                  }
+                ],
+                "sinon": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire [Acheté]"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "id": "python",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le programme d’Anaïs",
+          "auteur": "Programme écrit pour l’exercice",
+          "blocs": [
+            "prix = 12",
+            "if prix > 10 :",
+            "[[i|print(\"Cher\")]]",
+            "else :",
+            "print(\"Acheté\")"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que dit le lutin quand on lance le programme en blocs ?",
+          "aide": "Compare 12 à 10.",
+          "explication": "12 > 10 est vrai : le lutin dit « **Cher** ».",
+          "options": [
+            "Cher",
+            "Acheté",
+            "Rien",
+            "Cher, puis Acheté"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "zone",
+          "document": "python",
+          "enonce": "Touche l’instruction qui devrait être décalée vers la droite, sous le « if ».",
+          "aide": "Ce qui appartient au bloc doit être indenté.",
+          "explication": "L’instruction **print(\"Cher\")** appartient au « if » : elle doit être **indentée**. Ici elle ne l’est pas.",
+          "reponse": [
+            "i"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque ligne du programme en Python à son bloc.",
+          "aide": "Cherche ce que fait chaque ligne.",
+          "explication": "**=** devient « mettre à », **if** devient « si », **else** devient « sinon », **print** devient « dire ».",
+          "paires": [
+            [
+              "prix = 12",
+              "mettre [prix] à (12)"
+            ],
+            [
+              "if prix > 10 :",
+              "si (prix) > (10) alors"
+            ],
+            [
+              "else :",
+              "sinon"
+            ],
+            [
+              "print(\"Cher\")",
+              "dire [Cher]"
+            ]
+          ]
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase pour corriger le programme.",
+          "aide": "En Python, la position dans la ligne compte.",
+          "explication": "Il faut **indenter** : en Python, l’indentation indique ce qui appartient au bloc.",
+          "texte": "Pour corriger le programme, il faut ___ les instructions placées sous le « if » et sous le « else ».",
+          "reponses": [
+            [
+              "indenter",
+              "décaler"
+            ]
+          ],
+          "banque": [
+            "indenter",
+            "supprimer",
+            "effacer",
+            "souligner"
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "07b14ffb-7d09-5954-81c4-3509dfa4d528",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le tarif du musée",
+      "competence": "raisonner",
+      "situation": "Un musée applique un tarif réduit aux enfants de moins de 11 ans. Le programme est écrit en blocs et en Python.",
+      "documents": [
+        {
+          "id": "blocs",
+          "type": "scratch",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [age] à (11)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "si (age) < (11) alors",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "mettre [prix] à (4)"
+                  }
+                ],
+                "sinon": [
+                  {
+                    "categorie": "variable",
+                    "texte": "mettre [prix] à (8)"
+                  }
+                ]
+              },
+              {
+                "categorie": "apparence",
+                "texte": "dire (prix)"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "python",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le même programme en Python",
+          "auteur": "Programme écrit pour l’exercice",
+          "blocs": [
+            "age = 11",
+            "if age < 11 :",
+            "    prix = 4",
+            "else :",
+            "    prix = 8",
+            "print(prix)"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le programme est lancé tel quel avec age = 11. Quel prix s’affiche ?",
+          "aide": "11 est-il strictement inférieur à 11 ?",
+          "explication": "11 < 11 est faux : on passe au « sinon », le prix est **8 €**.",
+          "reponse": 8,
+          "unite": "€"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et avec age = 10 ?",
+          "aide": "10 est-il inférieur à 11 ?",
+          "explication": "10 < 11 est vrai : le prix est **4 €**.",
+          "reponse": 4,
+          "unite": "€"
+        },
+        {
+          "type": "choix",
+          "enonce": "Le musée décide que les enfants de 11 ans ont aussi le tarif réduit. Quelle modification faut-il faire ?",
+          "aide": "Il faut que 11 passe dans la condition.",
+          "explication": "Avec **≤** (en Python : <=), 11 ≤ 11 est vrai : les enfants de 11 ans ont le tarif réduit.",
+          "options": [
+            "Remplacer < par ≤ dans la condition",
+            "Remplacer 4 par 8",
+            "Remplacer « sinon » par « si »",
+            "Remplacer age = 11 par age = 10"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque bloc à sa ligne en Python.",
+          "aide": "Compare la structure des deux programmes.",
+          "explication": "Les deux programmes ont la **même logique** : seule l’écriture change.",
+          "paires": [
+            [
+              "mettre [age] à (11)",
+              "age = 11"
+            ],
+            [
+              "si (age) < (11) alors",
+              "if age < 11 :"
+            ],
+            [
+              "mettre [prix] à (4)",
+              "prix = 4"
+            ],
+            [
+              "dire (prix)",
+              "print(prix)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "6c4ba05a-7f94-5c30-8380-84d31fcfe770",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les cinq étapes de Samia",
+      "competence": "analyser-document",
+      "situation": "Samia veut un programme qui fait sonner un buzzer quand la porte reste ouverte. Elle suit la démarche du cours.",
+      "documents": [
+        {
+          "id": "etapes",
+          "type": "chaine",
+          "titre": "La démarche",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "analyser",
+              "texte": "Analyser le besoin"
+            },
+            {
+              "id": "algo",
+              "texte": "Écrire l’algorithme"
+            },
+            {
+              "id": "trad",
+              "texte": "?"
+            },
+            {
+              "id": "tester",
+              "texte": "Tester"
+            },
+            {
+              "id": "corriger",
+              "texte": "Corriger"
+            }
+          ],
+          "liens": [
+            {
+              "de": "analyser",
+              "a": "algo"
+            },
+            {
+              "de": "algo",
+              "a": "trad"
+            },
+            {
+              "de": "trad",
+              "a": "tester"
+            },
+            {
+              "de": "tester",
+              "a": "corriger"
+            }
+          ],
+          "source": "D’après le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelle étape manque à la place du « ? »",
+          "aide": "Après l’algorithme, il faut écrire le programme lui-même.",
+          "explication": "On écrit d’abord l’algorithme, puis on le **traduit** dans le langage choisi, avant de tester.",
+          "options": [
+            "Traduire l’algorithme dans un langage",
+            "Acheter la carte programmable",
+            "Choisir les couleurs",
+            "Montrer le programme au professeur"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "zone",
+          "document": "etapes",
+          "enonce": "Touche l’étape qui consiste à chercher puis corriger les erreurs : le débogage.",
+          "aide": "On passe à cette étape quand le test a montré un écart.",
+          "explication": "Le **débogage** est l’étape « Corriger » : on retouche le programme puis on retest.",
+          "reponse": [
+            "corriger"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque action de Samia à son étape.",
+          "aide": "Une étape prépare, une étape écrit, une étape vérifie.",
+          "explication": "Repérer entrées et sorties : **analyser**. Écrire en français : **algorithme**. Vérifier en ouvrant la porte : **tester**.",
+          "paires": [
+            [
+              "Elle note que l’entrée est un capteur de porte et la sortie un buzzer",
+              "Analyser le besoin"
+            ],
+            [
+              "Elle écrit en français : si la porte reste ouverte 10 s, sonner",
+              "Écrire l’algorithme"
+            ],
+            [
+              "Elle ouvre la porte 12 s et vérifie que le buzzer sonne",
+              "Tester"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "6c4ba05a-7f94-5c30-8380-84d31fcfe770",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois messages, trois erreurs",
+      "competence": "analyser-document",
+      "situation": "Dans le club de programmation, trois élèves décrivent ce qui leur arrive.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Léo",
+              "emoji": "🧒",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Lina",
+              "emoji": "👧",
+              "cote": "droite"
+            },
+            {
+              "nom": "Malik",
+              "emoji": "👦",
+              "cote": "gauche"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Léo",
+              "texte": "Mon programme ne démarre pas : l’écran affiche « erreur ligne 4 »."
+            },
+            {
+              "qui": "Lina",
+              "texte": "Le mien démarre, mais le robot tourne à gauche au lieu de droite et il n’y a [[a|aucun]] message."
+            },
+            {
+              "qui": "Malik",
+              "texte": "Le mien s’arrête au bout de 3 secondes : « division par zéro »."
+            }
+          ],
+          "source": "Messages écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot qui montre que l’erreur de Lina n’est pas une erreur de syntaxe.",
+          "aide": "Une erreur de syntaxe s’accompagne toujours d’un message.",
+          "explication": "Quand le programme démarre et se comporte mal **sans aucun message**, l’erreur est de logique.",
+          "reponse": [
+            "a"
+          ]
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque élève à son type d’erreur.",
+          "aide": "Le programme démarre-t-il ? S’arrête-t-il en route ?",
+          "explication": "Léo : le programme ne démarre pas, c’est la **syntaxe**. Lina : il fait autre chose que prévu, c’est la **logique**. Malik : il s’arrête en cours de route, c’est l’**exécution**.",
+          "paires": [
+            [
+              "Léo",
+              "Erreur de syntaxe"
+            ],
+            [
+              "Lina",
+              "Erreur de logique"
+            ],
+            [
+              "Malik",
+              "Erreur d’exécution"
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour trouver l’erreur de Lina, que faire en premier ?",
+          "aide": "Il n’y a aucun message pour guider Lina.",
+          "explication": "Sans message, on **affiche les valeurs intermédiaires** ou on exécute pas à pas pour voir où le comportement dévie.",
+          "options": [
+            "Afficher les valeurs intermédiaires pour voir où le comportement dévie",
+            "Relire le message d’erreur de l’éditeur pour trouver la ligne fautive",
+            "Changer de carte programmable pour éliminer un défaut du matériel",
+            "Recommencer tout le programme à zéro pour repartir d’une base propre"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque technique à ce qu’elle apporte.",
+          "aide": "Chaque technique répond à un besoin différent.",
+          "explication": "Par morceaux : une fonction à la fois. Afficher les valeurs : voir où ça dévie. Jeu d’essai : plusieurs cas préparés d’avance.",
+          "paires": [
+            [
+              "Tester par morceaux",
+              "Valider une fonction à la fois"
+            ],
+            [
+              "Afficher les valeurs intermédiaires",
+              "Voir où le comportement dévie"
+            ],
+            [
+              "Préparer des jeux d’essai",
+              "Un cas normal, un cas limite, un cas interdit"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "6c4ba05a-7f94-5c30-8380-84d31fcfe770",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le portillon du bus",
+      "competence": "raisonner",
+      "situation": "Un portillon doit s’ouvrir quand le solde de la carte couvre le ticket, qui coûte 2 €. L’élève qui l’a programmé fait un jeu d’essai.",
+      "documents": [
+        {
+          "id": "jeu",
+          "type": "tableau",
+          "titre": "Jeu d’essai du portillon",
+          "colonnes": [
+            "Cas",
+            "Solde (€)",
+            "Attendu",
+            "Obtenu"
+          ],
+          "lignes": [
+            [
+              "A",
+              5,
+              "Ouvert",
+              "Ouvert"
+            ],
+            [
+              "B",
+              2,
+              "Ouvert",
+              "Fermé"
+            ],
+            [
+              "C",
+              -1,
+              "Fermé",
+              "Fermé"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "prog",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le programme du portillon",
+          "auteur": "Programme écrit pour l’exercice",
+          "blocs": [
+            "si le solde est [[o|supérieur]] à 2 €",
+            "   ouvrir le portillon",
+            "sinon",
+            "   garder le portillon fermé"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque essai : cas normal, cas limite ou cas interdit ?",
+          "aide": "Le cas limite est à la frontière exacte du seuil.",
+          "explication": "5 € est un cas **normal**. 2 € est **limite** : exactement le prix du ticket. −1 € est **interdit** : la carte est à découvert.",
+          "categories": [
+            "Cas normal",
+            "Cas limite",
+            "Cas interdit"
+          ],
+          "items": [
+            [
+              "Solde de 5 €",
+              0
+            ],
+            [
+              "Solde de 2 €",
+              1
+            ],
+            [
+              "Solde de −1 €",
+              2
+            ]
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel essai révèle le défaut du programme ?",
+          "aide": "Compare « Attendu » et « Obtenu ».",
+          "explication": "Seul le cas **B** a un résultat différent de l’attendu : le cas limite révèle le défaut.",
+          "options": [
+            "Le cas B : le portillon reste fermé alors qu’il devrait s’ouvrir",
+            "Le cas A : il s’ouvre, conformément à ce que l’on attend de lui",
+            "Le cas C : il reste fermé, comme le prévoit le cahier des charges",
+            "Aucun : les trois essais donnent le résultat attendu par le programme"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le mot de la condition qu’il faut corriger.",
+          "aide": "Le solde de 2 € devrait suffire.",
+          "explication": "Le mot **supérieur** exclut 2 € : il faut « supérieur ou égal » (≥).",
+          "reponse": [
+            "o"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "De quel type d’erreur s’agit-il ?",
+          "aide": "Un message d’erreur a-t-il été affiché ?",
+          "explication": "Le programme s’exécute sans message mais se comporte mal dans un cas : c’est une erreur de **logique**, la plus difficile à trouver.",
+          "options": [
+            "Une erreur de logique : le programme démarre mais fait autre chose que prévu",
+            "Une erreur de syntaxe : le programme refuse de démarrer à cause d’une faute d’écriture",
+            "Une erreur d’exécution : le programme plante brutalement en cours de route",
+            "Une erreur de câblage : un fil est mal branché entre la carte et le portillon"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "c17fb4af-df34-59cb-9f67-1612fe1f55ec",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pont en spaghettis",
+      "competence": "lire-graphique",
+      "situation": "Trois élèves construisent un pont en spaghettis. On le pose sur deux appuis et on le charge en son milieu jusqu’à ce qu’il casse. Le cahier des charges exige de supporter au moins 2 kg.",
+      "documents": [
+        {
+          "id": "ponts",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Charge supportée avant rupture",
+          "categories": [
+            "Pont A",
+            "Pont B",
+            "Pont C"
+          ],
+          "series": [
+            {
+              "nom": "Charge",
+              "valeurs": [
+                1.2,
+                2.5,
+                1.8
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Charge",
+            "unite": "kg",
+            "min": 0,
+            "max": 3,
+            "pas": 0.5
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ponts",
+          "enonce": "Touche le pont qui a supporté la plus grande charge.",
+          "aide": "Regarde la barre la plus haute.",
+          "explication": "Le **pont B** a supporté 2,5 kg avant de casser.",
+          "reponse": [
+            "k1"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de ponts respectent l’exigence de 2 kg au moins ?",
+          "aide": "Compare chaque charge à 2 kg.",
+          "explication": "Seul le pont B (2,5 kg) dépasse 2 kg : **1** pont est conforme.",
+          "reponse": 1
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel essai les élèves réalisent-ils ?",
+          "aide": "Le pont est appuyé aux extrémités et chargé au milieu.",
+          "explication": "Une pièce appuyée à ses extrémités et chargée en son milieu subit un essai de **flexion**.",
+          "options": [
+            "Un essai de flexion",
+            "Un essai de traction",
+            "Un essai de torsion",
+            "Un essai de fatigue"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "c17fb4af-df34-59cb-9f67-1612fe1f55ec",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La lampe torche du club",
+      "competence": "calculer",
+      "situation": "Le club teste l’autonomie d’une lampe torche. Il rédige un protocole puis mesure trois fois.",
+      "documents": [
+        {
+          "id": "protocole",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Protocole d’essai",
+          "sousTitre": "Autonomie d’une lampe torche",
+          "emoji": "🔦",
+          "lignes": [
+            {
+              "texte": "Grandeur mesurée",
+              "valeur": "Durée d’éclairage"
+            },
+            {
+              "texte": "Instrument",
+              "valeur": "Chronomètre",
+              "id": "instr"
+            },
+            {
+              "texte": "Conditions",
+              "valeur": "Piles neuves, 20 °C"
+            },
+            {
+              "texte": "Mode opératoire",
+              "valeur": "Allumer, lancer le chrono, noter l’instant où la lumière s’éteint"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "resultats",
+          "type": "tableau",
+          "titre": "Trois essais",
+          "colonnes": [
+            "Essai",
+            "1",
+            "2",
+            "3"
+          ],
+          "lignes": [
+            [
+              "Durée (min)",
+              250,
+              245,
+              240
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Exigence du cahier des charges : au moins 4 h"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "protocole",
+          "enonce": "Touche la ligne qui indique avec quoi on mesure.",
+          "aide": "Cherche l’objet qui mesure le temps.",
+          "explication": "L’**instrument** est le chronomètre.",
+          "reponse": [
+            "instr"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la durée moyenne des trois essais.",
+          "aide": "Additionne les trois durées puis divise par 3.",
+          "explication": "(250 + 245 + 240) ÷ 3 = **245 min**.",
+          "reponse": 245,
+          "unite": "min"
+        },
+        {
+          "type": "choix",
+          "enonce": "L’exigence est de 4 h. La lampe est-elle conforme ?",
+          "aide": "Convertis d’abord 4 h en minutes.",
+          "explication": "4 h = 240 min. Les mesures (250, 245, 240) sont toutes ≥ 240 : la lampe est **conforme**.",
+          "options": [
+            "Oui : 4 h valent 240 min, et les trois mesures sont au moins égales",
+            "Non : 245 min dépassent les 4 h exigées, donc l’exigence est violée",
+            "Non : il faudrait un quatrième essai avant de pouvoir conclure sur la lampe",
+            "On ne peut pas conclure tant qu’on ne connaît pas le prix de la lampe"
+          ],
+          "reponse": 0
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque élément du protocole à sa raison d’être.",
+          "aide": "Un résultat n’a de sens qu’avec sa méthode.",
+          "explication": "Sans les **conditions**, un résultat ne veut rien dire. Le **mode opératoire** permet de refaire l’essai. L’**instrument** rend la mesure reproductible.",
+          "paires": [
+            [
+              "Les conditions de l’essai",
+              "Savoir dans quelles circonstances le résultat est valable"
+            ],
+            [
+              "Le mode opératoire",
+              "Pouvoir refaire l’essai à l’identique"
+            ],
+            [
+              "L’instrument",
+              "Rendre la mesure reproductible"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "chapitre": "c17fb4af-df34-59cb-9f67-1612fe1f55ec",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le porte-vélo",
+      "competence": "raisonner",
+      "situation": "Un porte-vélo doit porter deux vélos de 15 kg, soit 30 kg. Il subit un essai de flexion et un essai de fatigue avant d’être validé.",
+      "documents": [
+        {
+          "id": "cdc",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Cahier des charges",
+          "sousTitre": "Exigences",
+          "emoji": "📋",
+          "lignes": [
+            {
+              "texte": "Flèche sous 30 kg",
+              "valeur": "7 mm au plus"
+            },
+            {
+              "texte": "Fatigue",
+              "valeur": "5 000 cycles au moins sans rupture"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        },
+        {
+          "id": "fleche",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Flèche sous charge",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40"
+          ],
+          "series": [
+            {
+              "nom": "Flèche",
+              "valeurs": [
+                0,
+                2,
+                4,
+                6,
+                8
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Flèche",
+            "unite": "mm",
+            "min": 0,
+            "max": 10,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Charge (kg)"
+          },
+          "source": "Mesures imaginées pour l’exercice"
+        },
+        {
+          "id": "fatigue",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Cycles avant rupture",
+          "categories": [
+            "Pièce 1",
+            "Pièce 2",
+            "Pièce 3"
+          ],
+          "series": [
+            {
+              "nom": "Cycles",
+              "valeurs": [
+                3200,
+                6500,
+                5400
+              ],
+              "teinte": "gris"
+            }
+          ],
+          "axeY": {
+            "titre": "Cycles",
+            "unite": "",
+            "min": 0,
+            "max": 7000,
+            "pas": 1000
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la courbe la flèche sous une charge de 30 kg.",
+          "aide": "Repère 30 kg sur l’axe horizontal.",
+          "explication": "Sous 30 kg, la flèche est de **6 mm**, sous les 7 mm exigés : l’essai de flexion est conforme.",
+          "reponse": 6,
+          "unite": "mm"
+        },
+        {
+          "type": "zone",
+          "document": "fatigue",
+          "enonce": "Touche la pièce qui ne respecte pas l’exigence de fatigue.",
+          "aide": "Compare chaque barre à 5 000 cycles.",
+          "explication": "La **pièce 1** casse à 3 200 cycles : moins que les 5 000 exigés.",
+          "reponse": [
+            "k0"
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de cycles manque-t-il à la pièce 1 pour atteindre l’exigence ?",
+          "aide": "Soustrais 3 200 à 5 000.",
+          "explication": "5 000 − 3 200 = **1 800 cycles**.",
+          "reponse": 1800,
+          "unite": "cycles"
+        },
+        {
+          "type": "choix",
+          "enonce": "La flexion est réussie. Le porte-vélo peut-il être validé ?",
+          "aide": "Chaque exigence doit être respectée.",
+          "explication": "Il faut que **chaque** exigence soit respectée. La pièce 1 casse par répétition : le verdict est non conforme et on retourne à la conception.",
+          "options": [
+            "Non : la pièce 1 échoue à l’essai de fatigue, il faut revenir à la conception",
+            "Oui : un seul essai réussi suffit pour valider le porte-vélo sans autre contrôle",
+            "Oui : on retire la pièce 1 du résultat, puisqu’elle est la seule à échouer",
+            "Non : on refait l’essai de flexion jusqu’à obtenir un résultat différent"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "9fcbf317-2789-5bf1-877f-cf6d20ef1929",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Maquette ou prototype ?",
+      "competence": "analyser-document",
+      "situation": "Dans l’atelier, trois objets sont posés sur l’établi. Chacun sert à valider quelque chose de différent.",
+      "documents": [
+        {
+          "id": "objets",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Les trois objets de l’atelier",
+          "sousTitre": "Descriptions",
+          "emoji": "🧰",
+          "lignes": [
+            {
+              "texte": "Objet A",
+              "valeur": "Modèle en carton plume à l’échelle 1/5, il ne fonctionne pas",
+              "id": "a"
+            },
+            {
+              "texte": "Objet B",
+              "valeur": "Exemplaire qui fonctionne, imprimé en plastique 3D",
+              "id": "b"
+            },
+            {
+              "texte": "Objet C",
+              "valeur": "Petite série fabriquée avec les matériaux et le procédé du produit final",
+              "id": "c"
+            }
+          ],
+          "pied": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque objet à son degré de prototype.",
+          "aide": "Regarde si l’objet fonctionne et avec quels matériaux il est fait.",
+          "explication": "A : **maquette** (forme). B : **prototype fonctionnel** (fonctionnement, autres matériaux). C : **présérie** (matériaux et procédé finaux).",
+          "paires": [
+            [
+              "Objet A",
+              "Maquette"
+            ],
+            [
+              "Objet B",
+              "Prototype fonctionnel"
+            ],
+            [
+              "Objet C",
+              "Présérie"
+            ]
+          ]
+        },
+        {
+          "type": "zone",
+          "document": "objets",
+          "enonce": "Touche l’objet qui valide le procédé de fabrication autant que l’objet.",
+          "aide": "Il est fait avec les matériaux et le procédé du produit final.",
+          "explication": "La **présérie** (objet C) valide le procédé en plus de l’objet.",
+          "reponse": [
+            "c"
+          ]
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi sert la maquette en carton plume ?",
+          "aide": "Elle ne fonctionne pas.",
+          "explication": "Une maquette est **non fonctionnelle** : elle sert à vérifier la forme et l’encombrement.",
+          "options": [
+            "À vérifier la forme et l’encombrement",
+            "À mesurer l’autonomie de l’objet",
+            "À tester la tenue à la corrosion",
+            "À vérifier que le moteur tourne"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "9fcbf317-2789-5bf1-877f-cf6d20ef1929",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le porte-clés de Louna",
+      "competence": "raisonner",
+      "situation": "Louna imprime un porte-clés en 3D. Elle enchaîne les versions jusqu’à respecter le cahier des charges : masse au plus 13 g, charge avant rupture au moins 50 N.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "titre": "La démarche itérative",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "proto",
+              "texte": "Prototype"
+            },
+            {
+              "id": "test",
+              "texte": "Test"
+            },
+            {
+              "id": "analyse",
+              "texte": "Analyse"
+            },
+            {
+              "id": "modif",
+              "texte": "Modification"
+            }
+          ],
+          "liens": [
+            {
+              "de": "proto",
+              "a": "test"
+            },
+            {
+              "de": "test",
+              "a": "analyse"
+            },
+            {
+              "de": "analyse",
+              "a": "modif"
+            },
+            {
+              "de": "modif",
+              "a": "proto"
+            }
+          ],
+          "source": "D’après le cours"
+        },
+        {
+          "id": "versions",
+          "type": "tableau",
+          "titre": "Les quatre versions",
+          "colonnes": [
+            "Version",
+            "Masse (g)",
+            "Charge avant rupture (N)"
+          ],
+          "lignes": [
+            [
+              "V1",
+              18,
+              60
+            ],
+            [
+              "V2",
+              15,
+              55
+            ],
+            [
+              "V3",
+              12,
+              40
+            ],
+            [
+              "V4",
+              13,
+              55
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche l’étape où Louna change le dessin pour corriger un défaut.",
+          "aide": "Après l’analyse, on agit.",
+          "explication": "La **modification** change le dessin avant de fabriquer le nouveau prototype.",
+          "reponse": [
+            "modif"
+          ]
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque version : respecte-t-elle les deux exigences ?",
+          "aide": "Il faut respecter la masse ET la charge.",
+          "explication": "V1 et V2 sont trop lourdes, V3 casse à 40 N. Seule la **V4** respecte les deux exigences.",
+          "categories": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "items": [
+            [
+              "V1",
+              1
+            ],
+            [
+              "V2",
+              1
+            ],
+            [
+              "V3",
+              1
+            ],
+            [
+              "V4",
+              0
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de grammes Louna a-t-elle gagné entre V1 et V4 ?",
+          "aide": "Soustrais la masse de V4 à celle de V1.",
+          "explication": "18 − 13 = **5 g**.",
+          "reponse": 5,
+          "unite": "g"
+        },
+        {
+          "type": "choix",
+          "enonce": "La V3 est non conforme. Quelle phrase est juste ?",
+          "aide": "Un prototype raté est un test qui a donné son résultat.",
+          "explication": "Un prototype non conforme **apprend** quelque chose : ici, qu’on ne peut pas alléger sans limite. C’est le principe de l’itération.",
+          "options": [
+            "Ce n’est pas un échec : elle a appris à Louna que trop alléger fragilise la pièce",
+            "C’est un échec : il faut abandonner le projet, une V3 non conforme ne sert à rien",
+            "Il faut modifier le cahier des charges afin de pouvoir valider la V3 telle quelle",
+            "Elle prouve que l’impression 3D ne convient pas pour fabriquer ce genre de porte-clés"
+          ],
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "chapitre": "9fcbf317-2789-5bf1-877f-cf6d20ef1929",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le bras robotisé du club",
+      "competence": "raisonner",
+      "situation": "Le club de robotique prépare un bras robotisé. Il dispose de 12 heures de fabrication et de 40 € de matière.",
+      "documents": [
+        {
+          "id": "moyens",
+          "type": "tableau",
+          "titre": "Les moyens de prototypage",
+          "colonnes": [
+            "Moyen",
+            "Durée d’une pièce",
+            "Coût de matière (€)"
+          ],
+          "lignes": [
+            [
+              "Carton plume (maquette)",
+              "1 h",
+              2
+            ],
+            [
+              "Impression 3D",
+              "6 h",
+              5
+            ],
+            [
+              "Découpe laser (contreplaqué)",
+              "1 h",
+              8
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque besoin du club au moyen le plus adapté.",
+          "aide": "Chaque moyen a son usage.",
+          "explication": "Forme et encombrement : **carton plume**. Forme complexe : **impression 3D**. Plaques : **découpe laser**.",
+          "paires": [
+            [
+              "Vérifier rapidement l’encombrement du bras",
+              "Carton plume"
+            ],
+            [
+              "Fabriquer une pièce de forme complexe",
+              "Impression 3D"
+            ],
+            [
+              "Obtenir des plaques découpées avec précision",
+              "Découpe laser"
+            ]
+          ]
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de pièces imprimées en 3D le club peut-il fabriquer en 12 h, une à la fois ?",
+          "aide": "Divise 12 h par la durée d’une pièce.",
+          "explication": "12 ÷ 6 = **2** pièces.",
+          "reponse": 2
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec 40 € et 5 € par pièce, combien de pièces imprimées en 3D peut-il payer ?",
+          "aide": "Divise 40 par 5.",
+          "explication": "40 ÷ 5 = **8** pièces.",
+          "reponse": 8
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle limite arrive la première pour l’impression 3D ?",
+          "aide": "Compare 2 pièces et 8 pièces.",
+          "explication": "Le temps permet 2 pièces, le budget 8 : c’est le **temps** qui limite. Une maquette en carton plume d’abord fera gagner des heures.",
+          "options": [
+            "Le temps : 2 pièces seulement en 12 h",
+            "Le budget : 2 pièces seulement",
+            "Aucune : le club peut imprimer 8 pièces",
+            "Les deux en même temps"
+          ],
+          "reponse": 0
+        }
+      ]
+    }
+  ]
+}

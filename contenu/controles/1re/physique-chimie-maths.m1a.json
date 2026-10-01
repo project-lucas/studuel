@@ -1,0 +1,654 @@
+{
+  "niveau": "1re",
+  "matiere": "physique-chimie-maths",
+  "sujets": [
+    {
+      "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+      "difficulte": 1,
+      "titre": "Écrire proprement une mesure",
+      "consigne": "Réponds à chaque question en une ou deux phrases, en utilisant le vocabulaire du cours.",
+      "enonce": "1. Donne l'unité SI (nom et symbole) de l'intensité électrique, de la température et de la quantité de matière.\n2. Explique la différence entre une **erreur aléatoire** et une **erreur systématique**, avec un exemple de chaque.\n3. Un élève écrit son résultat ainsi : **L = 12,3476 ± 0,04 cm**. Explique ce qui ne va pas, puis réécris correctement ce résultat.",
+      "bareme": [
+        {
+          "critere": "Les trois unités SI exactes : ampère (A), kelvin (K), mole (mol)",
+          "points": 6
+        },
+        {
+          "critere": "Erreur aléatoire et erreur systématique définies, avec un exemple pertinent chacune",
+          "points": 7
+        },
+        {
+          "critere": "Défaut repéré (trop de chiffres dans la valeur) et écriture corrigée L = 12,35 ± 0,04 cm",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Intensité électrique : **ampère (A)** ; température : **kelvin (K)** ; quantité de matière : **mole (mol)**.\n2. Une **erreur aléatoire** vient de fluctuations (lecture, conditions qui varient) : les mesures répétées se **dispersent** autour d'une valeur. Exemple : déclencher un chronomètre un peu trop tôt ou trop tard selon les essais. Une **erreur systématique** décale **toutes** les mesures **dans le même sens** : elle vient d'un appareil mal étalonné ou d'une méthode biaisée. Exemple : une balance qui affiche 2 g de trop à vide.\n3. La valeur a **trop de chiffres** : elle doit s'arrêter à la **même décimale** que l'incertitude (ici le centième). L'incertitude 0,04 cm a bien 1 chiffre significatif. Écriture correcte : **L = 12,35 ± 0,04 cm**."
+    },
+    {
+      "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+      "difficulte": 2,
+      "titre": "La période du pendule de Chloé",
+      "consigne": "Détaille chaque calcul et arrondis tes résultats selon les règles du cours.",
+      "enonce": "**Situation.** Chloé mesure quatre fois la période d'un pendule avec un chronomètre :\n\n| Essai | 1 | 2 | 3 | 4 |\n| T (s) | 2,01 | 2,05 | 1,98 | 2,04 |\n\nSa calculatrice donne l'écart-type de la série : **s ≈ 0,032 s**.\n\n1. Calcule la moyenne des quatre mesures.\n2. Calcule l'incertitude-type sur la moyenne, puis écris le résultat de la mesure sous la forme T = … ± … s.\n3. La notice du pendule annonce une période de référence de **2,00 s**. Calcule z et conclus : la mesure est-elle compatible avec la référence ?",
+      "bareme": [
+        {
+          "critere": "Moyenne calculée : 8,08 / 4 = 2,02 s",
+          "points": 5
+        },
+        {
+          "critere": "u = s / √n = 0,032 / 2 = 0,016 s, arrondie à 0,02 s",
+          "points": 6
+        },
+        {
+          "critere": "Résultat écrit correctement : T = 2,02 ± 0,02 s",
+          "points": 3
+        },
+        {
+          "critere": "z ≈ 1,3 (ou 1 avec u arrondie), inférieur à 2 : mesure compatible",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Somme : 2,01 + 2,05 + 1,98 + 2,04 = 8,08 s. Moyenne : m = 8,08 / 4 = **2,02 s**.\n2. Il y a n = 4 mesures, donc √n = 2. u = s / √n = 0,032 / 2 = **0,016 s**, que l'on arrondit à 1 chiffre significatif : **0,02 s**. La valeur s'arrondit à la même décimale (le centième) : **T = 2,02 ± 0,02 s**.\n3. z = |valeur mesurée − valeur de référence| / u = |2,02 − 2,00| / 0,016 = 0,02 / 0,016 ≈ **1,3** (avec u arrondie à 0,02 s, on trouve z = 1 ; les deux sont acceptés). z est **inférieur à 2** : la mesure de Chloé est **compatible** avec la période de référence."
+    },
+    {
+      "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+      "difficulte": 3,
+      "titre": "Deux groupes mesurent g",
+      "consigne": "Analyse les deux séries de mesures en justifiant chaque réponse par un calcul ou une notion du cours.",
+      "enonce": "**Situation.** Deux groupes de TP mesurent l'intensité de la pesanteur g en chronométrant la chute d'une bille. Chacun fait **6 mesures**. Valeur de référence : **g = 9,81 m/s²**.\n\n| Groupe | Moyenne (m/s²) | Écart-type s (m/s²) |\n| A | 9,62 | 0,12 |\n| B | 9,75 | 0,30 |\n\nDonnée : √6 ≈ 2,45.\n\n1. Calcule l'incertitude-type sur la moyenne pour chaque groupe et écris chaque résultat correctement.\n2. Calcule z pour chaque groupe. Quel résultat est compatible avec la référence ?\n3. Quel groupe a les mesures les plus **fidèles** ? Le résultat du groupe A est-il **juste** ? Utilise ces deux mots pour décrire chaque groupe.\n4. Le groupe A propose de refaire 30 mesures pour « se rapprocher de 9,81 ». Est-ce une bonne idée ? Que doit-il plutôt chercher ?\n5. Montre que l'unité m/s² correspond bien à une grandeur que l'on peut ramener aux unités de base du SI, et cite une unité dérivée du cours qui la contient.",
+      "bareme": [
+        {
+          "critere": "uA = 0,12 / 2,45 ≈ 0,05 et uB = 0,30 / 2,45 ≈ 0,12 ; résultats gA = 9,62 ± 0,05 et gB = 9,75 ± 0,12 m/s²",
+          "points": 5
+        },
+        {
+          "critere": "zA ≈ 3,9 (incompatible) et zB ≈ 0,5 (compatible), conclusions justifiées par le seuil de 2",
+          "points": 5
+        },
+        {
+          "critere": "A plus fidèle (s plus petit) mais pas juste ; B moins fidèle mais compatible",
+          "points": 4
+        },
+        {
+          "critere": "Répéter ne corrige pas une erreur systématique : chercher sa cause (frottements, mesure de hauteur, déclenchement)",
+          "points": 4
+        },
+        {
+          "critere": "m/s² formé du mètre et de la seconde ; lien avec le newton kg·m/s²",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. u = s / √n avec n = 6.\n- Groupe A : uA = 0,12 / 2,45 ≈ **0,049 m/s²**, arrondie à 0,05 : **gA = 9,62 ± 0,05 m/s²**.\n- Groupe B : uB = 0,30 / 2,45 ≈ **0,12 m/s²** : **gB = 9,75 ± 0,12 m/s²**.\n2. z = |g mesuré − 9,81| / u.\n- A : z = 0,19 / 0,049 ≈ **3,9** : bien au-delà de 2, résultat **non compatible** avec la référence.\n- B : z = 0,06 / 0,12 = **0,5** : inférieur à 2, résultat **compatible**.\n3. Les mesures du groupe A sont les plus **fidèles** : leur écart-type (0,12) est plus petit, elles sont peu dispersées. Mais leur moyenne est loin de la vraie valeur : A est **fidèle mais pas juste** (comme des flèches groupées loin du centre). Le groupe B est **moins fidèle** (mesures plus dispersées), mais sa moyenne est proche de la référence compte tenu de son incertitude.\n4. Ce n'est pas une bonne idée : répéter les mesures réduit l'effet des **erreurs aléatoires** (u diminue), mais **ne supprime pas une erreur systématique**. La moyenne resterait vers 9,62 et z augmenterait même. Le groupe A doit chercher une **cause de décalage** : frottements de l'air, hauteur de chute mal mesurée, appareil mal étalonné, déclenchement du chronomètre toujours en retard.\n5. Le m/s² s'écrit avec le **mètre** et la **seconde**, deux unités de base du SI. On la retrouve dans le **newton** : 1 N = 1 kg·m/s²."
+    },
+    {
+      "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+      "difficulte": 1,
+      "titre": "La bouilloire de Yanis",
+      "consigne": "Réponds à chaque question en détaillant tes calculs et en précisant les unités.",
+      "enonce": "**Situation.** La bouilloire de Yanis a une puissance de **2 000 W**. Il la fait fonctionner pendant **4 minutes**.\n\n1. Calcule l'énergie électrique reçue par la bouilloire, en joules puis en kilowattheures.\n2. Que mesure la puissance d'un appareil ?\n3. Classe ces ressources en renouvelables et non renouvelables : charbon, vent, uranium, biomasse, gaz naturel, soleil.",
+      "bareme": [
+        {
+          "critere": "E = P × Δt avec Δt = 240 s : E = 480 000 J, soit ≈ 0,13 kWh",
+          "points": 12
+        },
+        {
+          "critere": "Puissance = rapidité du transfert d'énergie",
+          "points": 3
+        },
+        {
+          "critere": "Classement correct des six ressources",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Δt = 4 × 60 = 240 s. E = P × Δt = 2 000 × 240 = **480 000 J** (480 kJ). En kWh : E = 2 kW × (4/60) h ≈ **0,13 kWh** (ou 480 000 / 3,6 × 10⁶ ≈ 0,133 kWh).\n2. La puissance mesure la **rapidité** du transfert d'énergie : à durée égale, un appareil plus puissant transfère plus d'énergie.\n3. **Renouvelables** : vent, biomasse, soleil. **Non renouvelables** : charbon, uranium, gaz naturel."
+    },
+    {
+      "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+      "difficulte": 2,
+      "titre": "Le vélo électrique d'Inès",
+      "consigne": "Construis la chaîne énergétique puis réponds aux questions en détaillant les calculs.",
+      "enonce": "**Situation.** Le vélo électrique d'Inès possède une batterie qui stocke **500 Wh**. En roulant, le moteur reçoit une puissance électrique de **250 W** et fournit une puissance mécanique de **200 W**.\n\n1. Représente la chaîne énergétique du moteur (réservoir, convertisseur, énergie utile, pertes). Sous quelle forme la batterie stocke-t-elle l'énergie ?\n2. Calcule le rendement du moteur et la puissance perdue. Sous quelle forme cette énergie est-elle perdue ?\n3. Estime l'autonomie du vélo en heures, puis l'énergie perdue pendant ce trajet, en Wh puis en joules.",
+      "bareme": [
+        {
+          "critere": "Chaîne juste : batterie (chimique) → énergie électrique → moteur → mécanique utile + thermique perdue",
+          "points": 5
+        },
+        {
+          "critere": "η = 200 / 250 = 0,80 soit 80 % ; pertes 50 W sous forme thermique",
+          "points": 6
+        },
+        {
+          "critere": "Autonomie 500 / 250 = 2 h",
+          "points": 4
+        },
+        {
+          "critere": "Énergie perdue 50 × 2 = 100 Wh = 360 000 J",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La batterie stocke l'énergie sous forme **chimique**. Chaîne : batterie (réservoir, énergie chimique) → **énergie électrique** → moteur (convertisseur) → **énergie mécanique** (utile) + **énergie thermique** (pertes).\n2. η = P utile / P reçue = 200 / 250 = **0,80**, soit **80 %**. Puissance perdue : 250 − 200 = **50 W**, dissipés surtout en **chaleur** (énergie thermique).\n3. Autonomie : Δt = E / P = 500 Wh / 250 W = **2 h**. Énergie perdue : 50 W × 2 h = **100 Wh** = 100 × 3 600 = **360 000 J** (360 kJ). Vérification par la conservation : 500 Wh reçus = 400 Wh utiles + 100 Wh perdus."
+    },
+    {
+      "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+      "difficulte": 3,
+      "titre": "Une éolienne pour le village",
+      "consigne": "Exploite les données, fais les calculs demandés puis rédige une conclusion argumentée.",
+      "enonce": "**Situation.** Une commune étudie l'installation d'une éolienne.\n\n> **Fiche technique.** Puissance reçue du vent au régime nominal : 4,0 MW. Puissance électrique fournie : 1,6 MW. Sur une année, l'éolienne produit autant que si elle tournait **2 000 heures** à pleine puissance.\n> **Consommation.** Un foyer de la commune consomme en moyenne **4 800 kWh** d'électricité par an.\n\n1. Dessine la chaîne énergétique de l'éolienne et calcule son rendement.\n2. Calcule l'énergie électrique produite en un an, en MWh puis en kWh.\n3. Combien de foyers cette éolienne peut-elle alimenter sur l'année ?\n4. Le vent est intermittent. Propose deux moyens de stockage vus en cours pour disposer d'électricité quand le vent tombe, en précisant sous quelle forme l'énergie y est stockée.\n5. Explique en quelques lignes pourquoi remplacer une centrale au charbon par des éoliennes répond aux deux enjeux énergétiques du cours.",
+      "bareme": [
+        {
+          "critere": "Chaîne : énergie cinétique du vent → éolienne → électrique utile + thermique perdue ; η = 1,6 / 4,0 = 0,40",
+          "points": 4
+        },
+        {
+          "critere": "E = 1,6 MW × 2 000 h = 3 200 MWh = 3 200 000 kWh",
+          "points": 5
+        },
+        {
+          "critere": "3 200 000 / 4 800 ≈ 666 foyers (arrondi à l'entier inférieur accepté vers 667)",
+          "points": 4
+        },
+        {
+          "critere": "Deux stockages adaptés avec leur forme : batterie (chimique), STEP (potentielle de pesanteur)…",
+          "points": 3
+        },
+        {
+          "critere": "Deux enjeux expliqués : ressources (charbon épuisable, vent renouvelable) et climat (CO2)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Chaîne : vent (**énergie cinétique**) → éolienne (convertisseur) → **énergie électrique** (utile) + **énergie thermique** (pertes : frottements, échauffement). Rendement : η = P utile / P reçue = 1,6 / 4,0 = **0,40**, soit **40 %**.\n2. E = P × Δt = 1,6 MW × 2 000 h = **3 200 MWh** = **3 200 000 kWh**.\n3. Nombre de foyers : 3 200 000 / 4 800 ≈ **666,7**, soit environ **666 foyers** entièrement alimentés sur l'année (on accepte « environ 670 »).\n4. Exemples : une **batterie** stocke l'énergie sous forme **chimique** ; une **STEP** (station de pompage) remonte de l'eau en hauteur et la stocke sous forme **potentielle de pesanteur** ; un **ballon d'eau chaude** la stocke sous forme **thermique**. Deux exemples justes suffisent.\n5. Enjeu de **ressources** : le charbon est une ressource fossile en **stock limité**, alors que le vent est un **flux inépuisable** à notre échelle. Enjeu **climatique** : brûler du charbon émet du **CO2**, gaz à effet de serre ; l'éolienne n'en émet pas en fonctionnant. Limite à mentionner : la production est **intermittente**, d'où le besoin de stockage."
+    },
+    {
+      "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+      "difficulte": 1,
+      "titre": "Brûler du butane",
+      "consigne": "Réponds à chaque question en justifiant avec le cours.",
+      "enonce": "Le butane a pour formule **C4H10**.\n\n1. À quelle famille de combustibles organiques appartient-il ? Justifie avec la formule générale de cette famille.\n2. Écris et ajuste l'équation de sa combustion complète dans le dioxygène.\n3. Cette transformation est-elle exothermique ou endothermique ? Définis le mot choisi.",
+      "bareme": [
+        {
+          "critere": "Alcane justifié : CnH2n+2 avec n = 4 donne 10 atomes H",
+          "points": 5
+        },
+        {
+          "critere": "Produits CO2 et H2O et équation ajustée 2 C4H10 + 13 O2 → 8 CO2 + 10 H2O",
+          "points": 10
+        },
+        {
+          "critere": "Exothermique : le système libère de l'énergie, le milieu se réchauffe",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le butane est un **alcane** : la formule générale des alcanes est CnH2n+2 ; avec n = 4, on obtient 2 × 4 + 2 = **10** atomes d'hydrogène, soit C4H10.\n2. Combustion complète : le butane réagit avec le dioxygène et ne forme que **CO2** et **H2O**. Ajustement (C, puis H, puis O) : C4H10 + O2 → 4 CO2 + 5 H2O demande 13/2 O2 ; on double tout :\n**2 C4H10 + 13 O2 → 8 CO2 + 10 H2O**.\nVérification : C 8 = 8 ; H 20 = 20 ; O 26 = 16 + 10.\n3. Elle est **exothermique** : le système **libère** de l'énergie (thermique), le milieu extérieur se réchauffe."
+    },
+    {
+      "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+      "difficulte": 2,
+      "titre": "Le poêle à bois de la famille Martin",
+      "consigne": "Fais les calculs demandés en détaillant, puis réponds aux questions de sécurité en phrases complètes.",
+      "enonce": "**Situation.** La famille Martin brûle **15 kg** de bois sec dans son poêle au cours d'une journée d'hiver. Le poêle a un rendement de **80 %**.\n\nDonnées : pouvoir calorifique du bois sec PC = 18 MJ/kg ; 1 kWh = 3,6 × 10⁶ J.\n\n1. Calcule l'énergie libérée par la combustion du bois, en MJ puis en kWh.\n2. Quelle énergie chauffe réellement la maison ?\n3. Le poêle est mal réglé et l'arrivée d'air est presque fermée. Quelle combustion se produit ? Quel gaz dangereux peut se former et pourquoi est-il mortel ?\n4. Cite deux mesures de prévention obligatoires ou conseillées.",
+      "bareme": [
+        {
+          "critere": "Q = m × PC = 15 × 18 = 270 MJ = 75 kWh",
+          "points": 6
+        },
+        {
+          "critere": "Énergie utile : 0,80 × 75 = 60 kWh (ou 216 MJ)",
+          "points": 4
+        },
+        {
+          "critere": "Combustion incomplète, monoxyde de carbone CO incolore, inodore, qui prend la place du dioxygène dans le sang",
+          "points": 6
+        },
+        {
+          "critere": "Deux mesures : détecteur de CO, entretien annuel, ventilation",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Q = m × PC = 15 × 18 = **270 MJ**. En kWh : 270 × 10⁶ / 3,6 × 10⁶ = **75 kWh**.\n2. Avec un rendement de 80 % : E utile = 0,80 × 75 = **60 kWh** (soit 216 MJ). Le reste part surtout avec les fumées.\n3. Le dioxygène manque : la combustion est **incomplète**. Il se forme aussi du **monoxyde de carbone CO** et des suies. Le CO est **incolore et inodore** (on ne le sent pas venir) et il **prend la place du dioxygène dans le sang** : il est mortel.\n4. Installer un **détecteur de CO**, faire **entretenir** l'appareil (et ramoner) chaque année, **ventiler** la pièce et ne jamais boucher les aérations."
+    },
+    {
+      "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+      "difficulte": 3,
+      "titre": "Quel combustible pour le chauffe-eau ?",
+      "consigne": "Exploite les données, écris les équations demandées et argumente ton choix.",
+      "enonce": "**Situation.** Un gîte a besoin chaque année de **3 000 kWh** d'énergie pour chauffer son eau. La chaudière a un rendement de **90 %**. Le propriétaire compare trois combustibles.\n\n| Combustible | Formule | PC (MJ/kg) |\n| Méthane | CH4 | 50 |\n| Éthanol | C2H5OH | 27 |\n| Bois sec | — | 18 |\n\nDonnée : 1 kWh = 3,6 MJ.\n\n1. Quelle énergie la combustion doit-elle libérer chaque année ? Donne-la en kWh puis en MJ.\n2. Calcule la masse de chaque combustible nécessaire.\n3. Écris l'équation ajustée de la combustion complète du méthane et celle de l'éthanol. À quelle famille appartient l'éthanol ?\n4. Un autre fournisseur propose du dihydrogène H2 (PC = 120 MJ/kg). Quelle masse faudrait-il ? Explique, à partir de sa formule, pourquoi sa combustion ne produit pas de dioxyde de carbone.\n5. La chaudière est installée dans un local fermé. À l'aide du triangle du feu, explique ce qui se passe si l'air vient à manquer, et le danger qui en résulte.",
+      "bareme": [
+        {
+          "critere": "E reçue = 3 000 / 0,90 ≈ 3 333 kWh ≈ 12 000 MJ",
+          "points": 4
+        },
+        {
+          "critere": "Masses : méthane 240 kg, éthanol ≈ 444 kg, bois ≈ 667 kg",
+          "points": 5
+        },
+        {
+          "critere": "CH4 + 2 O2 → CO2 + 2 H2O et C2H5OH + 3 O2 → 2 CO2 + 3 H2O ; éthanol = alcool",
+          "points": 5
+        },
+        {
+          "critere": "Masse de H2 = 100 kg ; pas d'atome de carbone donc pas de CO2",
+          "points": 3
+        },
+        {
+          "critere": "Manque de comburant : combustion incomplète, formation de CO mortel",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. η = E utile / E reçue, donc E reçue = 3 000 / 0,90 ≈ **3 333 kWh**, soit 3 333 × 3,6 ≈ **12 000 MJ**.\n2. m = Q / PC :\n- méthane : 12 000 / 50 = **240 kg** ;\n- éthanol : 12 000 / 27 ≈ **444 kg** ;\n- bois sec : 12 000 / 18 ≈ **667 kg**.\n3. Méthane : **CH4 + 2 O2 → CO2 + 2 H2O**.\nÉthanol : **C2H5OH + 3 O2 → 2 CO2 + 3 H2O** (C : 2 = 2 ; H : 6 = 6 ; O : 1 + 6 = 4 + 3 = 7). L'éthanol appartient à la famille des **alcools** (groupe –OH) ; c'est un agrocarburant.\n4. m = 12 000 / 120 = **100 kg** de dihydrogène. Sa formule H2 ne contient **aucun atome de carbone** : sa combustion ne peut former que de l'**eau**, pas de CO2.\n5. Le triangle du feu réunit combustible, **comburant (dioxygène)** et énergie d'activation. Si l'air manque, la combustion devient **incomplète** : il se forme du **monoxyde de carbone CO** (et des suies), gaz incolore, inodore et **mortel** car il prend la place du dioxygène dans le sang. Le local doit être ventilé, équipé d'un détecteur, et la chaudière entretenue chaque année. (Si le dioxygène disparaît complètement, un côté du triangle manque et le feu s'éteint.)"
+    },
+    {
+      "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+      "difficulte": 1,
+      "titre": "Une résistance et le secteur",
+      "consigne": "Détaille chaque calcul avec la formule utilisée et les unités.",
+      "enonce": "1. Une résistance de **47 Ω** est branchée sous une tension continue de **12 V**. Calcule l'intensité du courant qui la traverse, puis la puissance qu'elle reçoit.\n2. Dans la convention récepteur, comment sont fléchés la tension et le courant ? Une batterie de téléphone en charge est-elle générateur ou récepteur ?\n3. Le secteur a une tension efficace de 230 V et une fréquence de 50 Hz. Calcule sa tension maximale et sa période.",
+      "bareme": [
+        {
+          "critere": "I = U / R ≈ 0,26 A et P = U × I ≈ 3,1 W",
+          "points": 8
+        },
+        {
+          "critere": "Convention récepteur : flèches en sens opposés ; batterie en charge = récepteur",
+          "points": 5
+        },
+        {
+          "critere": "U max = 230 × √2 ≈ 325 V et T = 1 / 50 = 0,02 s = 20 ms",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Loi d'Ohm : I = U / R = 12 / 47 ≈ **0,26 A**. Puissance : P = U × I = 12 × 0,255 ≈ **3,1 W** (on trouve la même chose avec R × I² = 47 × 0,255² ≈ 3,1 W).\n2. En convention récepteur, la tension et le courant sont fléchés en **sens opposés**. Une batterie en charge **reçoit** de l'énergie : c'est un **récepteur**.\n3. U max = U eff × √2 = 230 × √2 ≈ **325 V**. T = 1 / f = 1 / 50 = **0,02 s**, soit **20 ms**."
+    },
+    {
+      "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+      "difficulte": 2,
+      "titre": "Deux résistances en série",
+      "consigne": "Utilise les lois des circuits du cours en nommant chaque loi employée.",
+      "enonce": "**Situation.** Un générateur de tension continue **U = 12 V** alimente deux conducteurs ohmiques branchés **en série** : R1 = 100 Ω et R2 = 200 Ω.\n\n1. Quelle grandeur est la même dans tout le circuit ? En utilisant la loi des mailles et la loi d'Ohm, montre que 12 = 300 × I, puis calcule I.\n2. Calcule les tensions U1 et U2 aux bornes de chaque résistance et vérifie la loi des mailles.\n3. Calcule la puissance reçue par chaque résistance, puis compare leur somme à la puissance fournie par le générateur.",
+      "bareme": [
+        {
+          "critere": "Même courant en série ; U = R1 I + R2 I = 300 I, donc I = 0,04 A",
+          "points": 7
+        },
+        {
+          "critere": "U1 = 4 V, U2 = 8 V, U1 + U2 = 12 V",
+          "points": 5
+        },
+        {
+          "critere": "P1 = 0,16 W, P2 = 0,32 W, total 0,48 W",
+          "points": 5
+        },
+        {
+          "critere": "Égalité avec P générateur = 12 × 0,04 = 0,48 W commentée (conservation)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. En série, le **courant** est le même partout. Loi des mailles : U = U1 + U2. Loi d'Ohm : U1 = R1 × I et U2 = R2 × I. Donc 12 = 100 I + 200 I = **300 I**, d'où I = 12 / 300 = **0,04 A** (40 mA).\n2. U1 = 100 × 0,04 = **4 V** ; U2 = 200 × 0,04 = **8 V**. Vérification : 4 + 8 = 12 V, la loi des mailles est respectée.\n3. P1 = U1 × I = 4 × 0,04 = **0,16 W** ; P2 = 8 × 0,04 = **0,32 W**. Somme : **0,48 W**. Le générateur fournit P = U × I = 12 × 0,04 = **0,48 W** : toute l'énergie fournie est reçue par les résistances, où elle est dissipée par effet Joule."
+    },
+    {
+      "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+      "difficulte": 3,
+      "titre": "Le disjoncteur de la cuisine saute",
+      "consigne": "Analyse la situation avec les lois du cours, fais les calculs et rédige des explications claires.",
+      "enonce": "**Situation.** Dans la cuisine d'Hugo, trois appareils sont branchés **en dérivation** sur le même circuit, protégé par un disjoncteur de **16 A**. Tension efficace : 230 V (on raisonne en valeurs efficaces, avec P = U × I).\n\n| Appareil | Puissance |\n| Bouilloire | 2 000 W |\n| Grille-pain | 900 W |\n| Four à micro-ondes | 1 200 W |\n\n1. Quelle est la tension aux bornes de chaque appareil ? Justifie.\n2. Calcule l'intensité du courant dans chaque appareil.\n3. Avec la loi des nœuds, calcule l'intensité dans le câble principal quand les trois fonctionnent. Explique pourquoi le disjoncteur coupe. Peut-on utiliser la bouilloire et le micro-ondes ensemble ?\n4. Les deux fils du câble principal ont ensemble une résistance de **0,10 Ω**. Calcule la puissance perdue par effet Joule dans ce câble quand les trois appareils fonctionnent. Pourquoi est-ce gênant ?\n5. Le disjoncteur de 16 A protège-t-il Hugo s'il touche un fil dénudé ? Quel dispositif le protège, et pourquoi ?",
+      "bareme": [
+        {
+          "critere": "En dérivation, même tension : 230 V pour chaque appareil",
+          "points": 2
+        },
+        {
+          "critere": "Intensités : ≈ 8,7 A ; 3,9 A ; 5,2 A",
+          "points": 5
+        },
+        {
+          "critere": "Loi des nœuds : I ≈ 17,8 A > 16 A, le disjoncteur coupe ; bouilloire + micro-ondes ≈ 13,9 A possible",
+          "points": 5
+        },
+        {
+          "critere": "P = R × I² = 0,10 × 17,8² ≈ 32 W ; échauffement du câble",
+          "points": 4
+        },
+        {
+          "critere": "Danger dès quelques dizaines de mA ; disjoncteur différentiel 30 mA détecte les fuites",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. En **dérivation**, la tension est la même aux bornes de chaque branche : **230 V** pour chaque appareil.\n2. I = P / U :\n- bouilloire : 2 000 / 230 ≈ **8,7 A** ;\n- grille-pain : 900 / 230 ≈ **3,9 A** ;\n- micro-ondes : 1 200 / 230 ≈ **5,2 A**.\n3. Loi des nœuds : le courant du câble principal est la somme des courants des branches : I ≈ 8,70 + 3,91 + 5,22 ≈ **17,8 A**. C'est **plus que 16 A** : le disjoncteur détecte la surintensité et coupe pour protéger l'installation. Bouilloire + micro-ondes : 8,7 + 5,2 ≈ **13,9 A** < 16 A : c'est possible.\n4. Effet Joule : P = R × I² = 0,10 × 17,8² ≈ 0,10 × 318 ≈ **32 W**. Cette puissance **chauffe le câble** : énergie perdue, et un câble trop chaud peut abîmer son isolant et provoquer un incendie — c'est pour cela qu'on limite le courant.\n5. Non : le corps humain est en danger dès **quelques dizaines de mA**, bien en dessous de 16 A ; le disjoncteur ne réagirait pas. C'est le **disjoncteur différentiel 30 mA** qui protège les personnes : il coupe dès qu'une **fuite de courant** (courant qui passe par le corps ou par la terre) dépasse 30 mA. La **prise de terre** évacue aussi un courant de défaut."
+    },
+    {
+      "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+      "difficulte": 1,
+      "titre": "Chaleur, température et transferts",
+      "consigne": "Réponds en phrases complètes ; détaille le calcul de la question 1.",
+      "enonce": "1. Convertis en kelvins une température de 37 °C (arrondis à l'unité).\n2. Un élève affirme : « la chaleur et la température, c'est pareil ». Corrige-le en définissant chaque mot.\n3. Nomme le mode de transfert thermique à l'œuvre dans chaque cas :\n   a. la poignée d'une casserole en métal chauffe ;\n   b. l'air chaud monte au-dessus d'un radiateur ;\n   c. on sent la chaleur d'un feu de cheminée à distance.\n4. Dans quel sens se fait spontanément un transfert thermique ?",
+      "bareme": [
+        {
+          "critere": "T = 37 + 273,15 ≈ 310 K",
+          "points": 4
+        },
+        {
+          "critere": "Température = propriété (agitation des particules) ; chaleur = énergie transférée d'un corps à un autre",
+          "points": 6
+        },
+        {
+          "critere": "Conduction, convection, rayonnement bien attribués ; transfert spontané du chaud vers le froid",
+          "points": 10
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. T(K) = θ(°C) + 273,15 = 37 + 273,15 = 310,15, soit **310 K**.\n2. La **température** est une **propriété** d'un corps : elle mesure l'agitation de ses particules. La **chaleur** (transfert thermique Q) est une **énergie qui passe** d'un corps à un autre. Ce ne sont donc pas des synonymes.\n3. a. **Conduction** (de proche en proche dans le métal) ; b. **convection** (déplacement de l'air) ; c. **rayonnement** (ondes électromagnétiques, infrarouge).\n4. Spontanément, du **corps chaud vers le corps froid**."
+    },
+    {
+      "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+      "difficulte": 2,
+      "titre": "Le chauffe-eau de l'appartement",
+      "consigne": "Détaille chaque calcul et justifie tes réponses avec le cours.",
+      "enonce": "**Situation.** Le chauffe-eau électrique de Lou contient **150 L** d'eau (soit 150 kg). Il la fait passer de **15 °C à 60 °C**. Sa résistance a une puissance de **2 000 W** ; on suppose que toute cette puissance chauffe l'eau.\n\nDonnées : c(eau) = 4 180 J/(kg·°C) ; 1 kWh = 3,6 × 10⁶ J.\n\n1. Calcule l'énergie nécessaire pour chauffer l'eau, en joules puis en kWh.\n2. Calcule la durée de chauffe, en secondes puis en heures.\n3. Pourquoi utilise-t-on de l'eau pour stocker de l'énergie thermique ?\n4. Le ballon est entouré d'une mousse isolante. Explique pourquoi ce matériau isole bien.",
+      "bareme": [
+        {
+          "critere": "Q = m × c × Δθ = 150 × 4 180 × 45 ≈ 2,82 × 10⁷ J ≈ 7,8 kWh",
+          "points": 7
+        },
+        {
+          "critere": "Δt = Q / P ≈ 14 100 s ≈ 3,9 h",
+          "points": 5
+        },
+        {
+          "critere": "Capacité thermique massique de l'eau très élevée",
+          "points": 4
+        },
+        {
+          "critere": "Mousse = air immobile, mauvais conducteur thermique, limite la conduction",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Δθ = 60 − 15 = 45 °C. Q = m × c × Δθ = 150 × 4 180 × 45 = **28 215 000 J** ≈ 2,82 × 10⁷ J. En kWh : 28 215 000 / 3,6 × 10⁶ ≈ **7,8 kWh**.\n2. Δt = Q / P = 28 215 000 / 2 000 ≈ **14 100 s**, soit 14 100 / 3 600 ≈ **3,9 h** (environ 3 h 55 min).\n3. L'eau a une **capacité thermique massique très élevée** (4 180 J/(kg·°C)) : pour une même masse et une même élévation de température, elle stocke beaucoup d'énergie.\n4. La mousse contient de l'**air immobile**, qui conduit très mal la chaleur : c'est un **mauvais conducteur thermique**, elle freine les pertes par **conduction** (et, l'air ne circulant pas, par convection)."
+    },
+    {
+      "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+      "difficulte": 3,
+      "titre": "Des glaçons dans la casserole",
+      "consigne": "Découpe le problème en étapes, détaille chaque calcul et justifie les phénomènes avec le cours.",
+      "enonce": "**Situation.** Maël pose sur une plaque électrique une casserole en **aluminium** de **0,50 kg** contenant **0,20 kg de glace à 0 °C**. Il veut obtenir de l'eau liquide à **20 °C** (la casserole passe elle aussi de 0 °C à 20 °C). La plaque consomme **1 500 W** avec un rendement de **60 %**.\n\nDonnées : c(eau) = 4 180 J/(kg·°C) ; c(aluminium) = 900 J/(kg·°C) ; énergie massique de fusion de l'eau L = 334 kJ/kg.\n\n1. Pendant la fusion de la glace, que fait la température ? La glace reçoit-elle ou cède-t-elle de l'énergie ?\n2. Calcule l'énergie nécessaire pour : a. faire fondre la glace ; b. chauffer l'eau obtenue de 0 à 20 °C ; c. chauffer la casserole de 0 à 20 °C. Déduis-en l'énergie totale.\n3. Calcule la puissance utile de la plaque, puis la durée de l'opération.\n4. Nomme le mode de transfert de la plaque vers la casserole, puis celui qui brasse l'eau liquide dans la casserole.\n5. Maël remarque que la fusion demande beaucoup plus d'énergie que le chauffage de l'eau. Compare les deux valeurs et commente.",
+      "bareme": [
+        {
+          "critere": "Température constante pendant la fusion d'un corps pur ; la glace reçoit de l'énergie",
+          "points": 3
+        },
+        {
+          "critere": "Q1 = 66 800 J ; Q2 = 16 720 J ; Q3 = 9 000 J ; total 92 520 J",
+          "points": 7
+        },
+        {
+          "critere": "P utile = 900 W ; Δt ≈ 103 s (environ 1 min 43 s)",
+          "points": 4
+        },
+        {
+          "critere": "Conduction (plaque → casserole), convection (dans l'eau)",
+          "points": 3
+        },
+        {
+          "critere": "Comparaison : la fusion coûte environ 4 fois plus que le chauffage de 20 °C",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Pendant le changement d'état d'un corps pur, la température **reste constante** (0 °C). La fusion est un changement d'état où le corps **reçoit** de l'énergie.\n2. a. Q1 = m × L = 0,20 × 334 000 = **66 800 J**.\nb. Q2 = m × c × Δθ = 0,20 × 4 180 × 20 = **16 720 J**.\nc. Q3 = 0,50 × 900 × 20 = **9 000 J**.\nTotal : Q = 66 800 + 16 720 + 9 000 = **92 520 J** (environ 92,5 kJ).\n3. P utile = 0,60 × 1 500 = **900 W**. Δt = Q / P utile = 92 520 / 900 ≈ **103 s**, soit environ **1 min 43 s**.\n4. De la plaque à la casserole : **conduction** (contact, de proche en proche). Dans l'eau liquide : **convection** (l'eau chauffée au fond monte et se mélange).\n5. Q1 / Q2 = 66 800 / 16 720 ≈ **4** : faire fondre la glace demande environ quatre fois plus d'énergie que de réchauffer ensuite l'eau de 20 °C. Un changement d'état consomme beaucoup d'énergie sans élever la température : c'est pour cela que des glaçons refroidissent si bien une boisson."
+    },
+    {
+      "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+      "difficulte": 1,
+      "titre": "L'énergie d'une voiture",
+      "consigne": "Détaille chaque calcul en précisant la formule et les unités.",
+      "enonce": "**Situation.** Une voiture de **1 200 kg** roule à **90 km/h** sur une route horizontale. On prend g = 9,81 N/kg.\n\n1. Convertis sa vitesse en m/s.\n2. Calcule son énergie cinétique.\n3. Si la voiture roulait deux fois plus vite, par combien son énergie cinétique serait-elle multipliée ? Justifie.\n4. Calcule son poids et donne sa direction et son sens.",
+      "bareme": [
+        {
+          "critere": "v = 90 / 3,6 = 25 m/s et Ec = ½ × 1 200 × 25² = 375 000 J",
+          "points": 11
+        },
+        {
+          "critere": "Multipliée par 4 car Ec dépend de v²",
+          "points": 4
+        },
+        {
+          "critere": "P = m × g ≈ 11 800 N, vertical vers le bas",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. v = 90 / 3,6 = **25 m/s**.\n2. Ec = ½ × m × v² = 0,5 × 1 200 × 25² = 0,5 × 1 200 × 625 = **375 000 J** (375 kJ).\n3. Ec est proportionnelle à **v²** : si v double, v² est multiplié par 2² = 4. L'énergie cinétique est **multipliée par 4** (1 500 000 J à 180 km/h).\n4. P = m × g = 1 200 × 9,81 = **11 772 N** (environ 11 800 N), **vertical, vers le bas**."
+    },
+    {
+      "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+      "difficulte": 2,
+      "titre": "La descente de Jade à ski",
+      "consigne": "Suis les étapes, détaille les calculs et interprète tes résultats.",
+      "enonce": "**Situation.** Jade (70 kg avec son équipement) part **sans vitesse** du haut d'une piste. Elle descend un dénivelé de **20 m**. On prend g = 9,81 N/kg et l'altitude z = 0 au bas de la piste.\n\n1. Calcule son énergie potentielle de pesanteur en haut de la piste.\n2. En supposant qu'il n'y a pas de frottement, que devient l'énergie mécanique ? Déduis-en sa vitesse en bas de la piste.\n3. En réalité, on mesure **15 m/s** en bas. Calcule son énergie cinétique réelle, puis l'énergie dissipée. Sous quelle forme cette énergie est-elle perdue ?",
+      "bareme": [
+        {
+          "critere": "Epp = 70 × 9,81 × 20 ≈ 13 734 J",
+          "points": 5
+        },
+        {
+          "critere": "Conservation de Em sans frottement et v = √(2 × 13 734 / 70) ≈ 19,8 m/s",
+          "points": 6
+        },
+        {
+          "critere": "Ec réelle = ½ × 70 × 15² = 7 875 J",
+          "points": 4
+        },
+        {
+          "critere": "Énergie dissipée ≈ 5 860 J, transformée en énergie thermique par les frottements",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Epp = m × g × z = 70 × 9,81 × 20 = **13 734 J** (environ 13,7 kJ). En haut, Ec = 0, donc Em = 13 734 J.\n2. Sans frottement, l'énergie mécanique **se conserve** : en bas, Epp = 0, donc Ec = 13 734 J. v = √(2 × Ec / m) = √(2 × 13 734 / 70) = √392,4 ≈ **19,8 m/s** (environ 71 km/h).\n3. Ec réelle = ½ × 70 × 15² = 0,5 × 70 × 225 = **7 875 J**. Énergie dissipée : 13 734 − 7 875 = **5 859 J** (environ 5,9 kJ). Avec les frottements, l'énergie mécanique diminue : l'énergie perdue devient de l'**énergie thermique** (neige et skis qui chauffent, air)."
+    },
+    {
+      "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+      "difficulte": 3,
+      "titre": "Au dépôt : monte-charge et chariot",
+      "consigne": "Traite les deux parties en nommant les lois et formules utilisées ; justifie le signe de chaque travail.",
+      "enonce": "On prend g = 9,81 N/kg ; cos 30° ≈ 0,866.\n\n**Partie A — Le monte-charge.** Un monte-charge soulève une palette de **300 kg** de **12 m** en **15 s**, à vitesse constante.\n1. Calcule le travail du poids de la palette pendant la montée. Est-il moteur ou résistant ? Justifie.\n2. De combien augmente l'énergie potentielle de pesanteur de la palette ? Déduis-en la puissance moyenne minimale que doit fournir le moteur.\n\n**Partie B — Le chariot.** Sur un sol horizontal, Sofiane tire un chariot de **50 kg**, initialement immobile, avec une force constante de **200 N** inclinée de **30°** par rapport au sol, sur **15 m**. En fin de parcours, le chariot roule à **4,0 m/s**.\n3. Calcule le travail de la force de Sofiane. Que vaut le travail du poids du chariot ? Justifie.\n4. Calcule la variation d'énergie cinétique du chariot.\n5. À l'aide du théorème de l'énergie cinétique, calcule le travail des frottements (on admet que la réaction du sol est perpendiculaire au sol). Interprète son signe.",
+      "bareme": [
+        {
+          "critere": "W(poids) = −m g h ≈ −35 300 J, résistant car opposé au déplacement vers le haut",
+          "points": 4
+        },
+        {
+          "critere": "ΔEpp ≈ 35 300 J et P ≈ 35 316 / 15 ≈ 2 350 W",
+          "points": 4
+        },
+        {
+          "critere": "W(F) = 200 × 15 × cos 30° ≈ 2 600 J ; W(poids) = 0 car perpendiculaire au déplacement",
+          "points": 4
+        },
+        {
+          "critere": "ΔEc = ½ × 50 × 4² − 0 = 400 J",
+          "points": 3
+        },
+        {
+          "critere": "W(frottements) = 400 − 2 598 ≈ −2 200 J, résistant, énergie dissipée en chaleur",
+          "points": 5
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "**Partie A**\n1. Le poids (vertical vers le bas) et le déplacement (vers le haut) font un angle de 180° : W = P × h × cos 180° = −m × g × h = −300 × 9,81 × 12 = **−35 316 J** (environ −35,3 kJ). Il est **résistant** : il s'oppose au mouvement.\n2. ΔEpp = m × g × h = **35 316 J**. Le moteur doit fournir au moins cette énergie en 15 s : P = W / Δt = 35 316 / 15 ≈ **2 354 W** (environ 2,4 kW).\n\n**Partie B**\n3. W(F) = F × AB × cos α = 200 × 15 × 0,866 ≈ **2 598 J** (moteur). Le poids est vertical et le déplacement horizontal : ils sont **perpendiculaires**, donc **W(poids) = 0**. (De même pour la réaction du sol.)\n4. ΔEc = ½ × 50 × 4,0² − 0 = 0,5 × 50 × 16 = **400 J**.\n5. Théorème de l'énergie cinétique : ΔEc = somme des travaux = W(F) + W(poids) + W(réaction) + W(frottements). Donc 400 = 2 598 + 0 + 0 + W(frottements), d'où **W(frottements) ≈ −2 198 J** (environ −2,2 kJ). Il est **négatif** : les frottements sont **résistants**, ils s'opposent au mouvement. Cette énergie est dissipée en **énergie thermique** ; seule une petite part du travail de Sofiane sert à lancer le chariot."
+    },
+    {
+      "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+      "difficulte": 1,
+      "titre": "Irradiance et laser",
+      "consigne": "Réponds à chaque question ; détaille le calcul de la question 1.",
+      "enonce": "1. Un panneau solaire de **1,6 m²** est placé perpendiculairement aux rayons du Soleil, qui fournit une irradiance de **1 000 W/m²**. Calcule la puissance lumineuse qu'il reçoit.\n2. Cite les trois propriétés de la lumière d'un laser et donne la conséquence de chacune.\n3. Donne deux règles de sécurité à respecter quand on utilise un laser.",
+      "bareme": [
+        {
+          "critere": "P = E × S = 1 000 × 1,6 = 1 600 W",
+          "points": 6
+        },
+        {
+          "critere": "Monochromatique, directive, intense, chacune avec sa conséquence",
+          "points": 9
+        },
+        {
+          "critere": "Deux règles de sécurité correctes",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. E = P / S, donc P = E × S = 1 000 × 1,6 = **1 600 W**.\n2. - **Monochromatique** (une seule longueur d'onde) : couleur pure, pas de dispersion.\n- **Directive** (faisceau très peu divergent) : l'énergie reste concentrée sur une petite surface.\n- **Intense** : l'irradiance sur la surface éclairée est énorme.\n3. Deux règles parmi : ne **jamais regarder** le faisceau ni ses **réflexions** sur une surface brillante ; porter des **lunettes adaptées** à la longueur d'onde ; signaler la zone et capoter les machines ; respecter la **classe** du laser (1 sans danger à 4 très dangereux)."
+    },
+    {
+      "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+      "difficulte": 2,
+      "titre": "Le panneau solaire du camping-car",
+      "consigne": "Détaille chaque calcul et interprète les résultats.",
+      "enonce": "**Situation.** Sur le toit du camping-car de Nathan, un panneau photovoltaïque de **1,8 m²** reçoit une irradiance de **900 W/m²**. Il délivre une tension de **30 V** et un courant de **10 A**.\n\n1. Écris la chaîne énergétique du panneau.\n2. Calcule la puissance lumineuse reçue et la puissance électrique fournie.\n3. Calcule le rendement du panneau. Est-il dans l'ordre de grandeur du cours ?\n4. Dans ces conditions, quelle énergie électrique le panneau fournit-il en **5 h**, en kWh ? Que devient l'énergie lumineuse non convertie, et quelle conséquence cela a-t-il sur le rendement ?",
+      "bareme": [
+        {
+          "critere": "Chaîne : lumineuse → cellule → électrique (utile) + thermique (pertes)",
+          "points": 4
+        },
+        {
+          "critere": "P lumineuse = 1 620 W et P électrique = 300 W",
+          "points": 6
+        },
+        {
+          "critere": "η = 300 / 1 620 ≈ 0,19, soit 19 %, conforme aux 15 à 22 %",
+          "points": 5
+        },
+        {
+          "critere": "E = 0,300 kW × 5 h = 1,5 kWh ; pertes en chaleur, panneau chaud moins efficace",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Énergie **lumineuse** → cellule photovoltaïque → énergie **électrique** (utile) + énergie **thermique** (pertes).\n2. P lumineuse = E × S = 900 × 1,8 = **1 620 W**. P électrique = U × I = 30 × 10 = **300 W**.\n3. η = 300 / 1 620 ≈ **0,185**, soit environ **19 %**. C'est conforme à l'ordre de grandeur d'un panneau au silicium (15 à 22 %).\n4. E = P × Δt = 0,300 kW × 5 h = **1,5 kWh**. L'énergie non convertie (environ 81 %) devient surtout de la **chaleur** : le panneau chauffe, et un panneau chaud a un **rendement plus faible**."
+    },
+    {
+      "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+      "difficulte": 3,
+      "titre": "Un toit solaire, et un pointeur dangereux",
+      "consigne": "Traite les deux parties en détaillant les calculs, puis argumente en t'appuyant sur le cours.",
+      "enonce": "**Partie A — Le toit de la famille Diallo.** La famille installe **10 panneaux** de **1,7 m²** chacun, de rendement **20 %**. En moyenne sur l'année, l'irradiance sur les panneaux vaut **600 W/m²** pendant **6 h** par jour. La famille consomme **10 kWh** d'électricité par jour.\n1. Calcule la puissance lumineuse reçue par l'installation, puis la puissance électrique produite.\n2. Calcule l'énergie électrique produite par jour. Couvre-t-elle la consommation de la famille ?\n3. L'installateur hésite entre poser les panneaux à plat ou inclinés face au Soleil. Que conseilles-tu ? Justifie avec la notion d'irradiance.\n\n**Partie B — Le pointeur laser.** Un pointeur laser de **5 mW** concentre son faisceau sur une tache de **1 mm²** (1 × 10⁻⁶ m²).\n4. Calcule l'irradiance de cette tache et compare-la à celle du Soleil au sol par beau temps.\n5. Explique pourquoi ce faible pointeur peut pourtant abîmer la rétine.",
+      "bareme": [
+        {
+          "critere": "S = 17 m² ; P lumineuse = 10 200 W ; P électrique = 2 040 W",
+          "points": 5
+        },
+        {
+          "critere": "E = 2,04 kW × 6 h ≈ 12,2 kWh par jour, qui couvre les 10 kWh",
+          "points": 4
+        },
+        {
+          "critere": "Panneaux perpendiculaires aux rayons : surface vue par la lumière maximale",
+          "points": 3
+        },
+        {
+          "critere": "Irradiance = 5 × 10⁻³ / 10⁻⁶ = 5 000 W/m², soit 5 fois celle du Soleil (1 000 W/m²)",
+          "points": 5
+        },
+        {
+          "critere": "Faisceau directif et l'œil le concentre encore sur la rétine",
+          "points": 3
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "**Partie A**\n1. Surface totale : S = 10 × 1,7 = **17 m²**. P lumineuse = E × S = 600 × 17 = **10 200 W**. P électrique = η × P lumineuse = 0,20 × 10 200 = **2 040 W**.\n2. E = 2,04 kW × 6 h ≈ **12,2 kWh** par jour. C'est plus que les **10 kWh** consommés : en moyenne, la production couvre la consommation (mais pas la nuit ni les jours couverts : il faut stocker ou acheter au réseau).\n3. Il vaut mieux **incliner les panneaux face au Soleil** : un panneau **perpendiculaire aux rayons** reçoit le maximum ; à plat, la surface « vue » par la lumière diminue, donc la puissance reçue aussi.\n\n**Partie B**\n4. E = P / S = 5 × 10⁻³ / 1 × 10⁻⁶ = **5 000 W/m²**, soit **5 fois** l'irradiance du Soleil au sol (environ 1 000 W/m²).\n5. Le faisceau est **directif** : son énergie reste concentrée sur une toute petite surface. En entrant dans l'œil, il est **encore concentré** sur un point minuscule de la rétine, où l'irradiance devient bien plus grande : la rétine peut être brûlée. On ne regarde donc jamais un laser, même de faible puissance."
+    },
+    {
+      "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+      "difficulte": 1,
+      "titre": "Familles de matériaux et molécules",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Classe chaque objet dans sa famille de matériaux (métallique, organique, minéral, composite) : un fil électrique en cuivre, une assiette en porcelaine, une bouteille en plastique, un cadre de vélo en fibres de carbone et résine.\n2. Pourquoi le cuivre conduit-il l'électricité, alors que le plastique ne la conduit pas ?\n3. Dessine le schéma de Lewis de la molécule d'eau H2O et indique le nombre de doublets non liants de l'atome d'oxygène.",
+      "bareme": [
+        {
+          "critere": "Classement juste : cuivre métallique, porcelaine minéral, plastique organique, fibres + résine composite",
+          "points": 8
+        },
+        {
+          "critere": "Électrons mobiles dans le métal ; polymère isolant",
+          "points": 5
+        },
+        {
+          "critere": "Schéma H–O–H avec 2 doublets non liants sur O",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Fil en cuivre : **métallique**. Assiette en porcelaine : **minéral** (céramique). Bouteille en plastique : **organique** (polymère). Cadre en fibres de carbone et résine : **composite** (fibres + matrice).\n2. Dans un métal, les atomes sont liés par des électrons mis en commun et **mobiles** : ils peuvent se déplacer et transporter le courant. Le plastique est un **polymère** (macromolécules) sans électrons mobiles : c'est un **isolant**.\n3. Schéma de Lewis : **H–O–H**, l'oxygène au centre forme 2 liaisons covalentes et porte **2 doublets non liants** ; chaque hydrogène forme 1 liaison."
+    },
+    {
+      "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+      "difficulte": 2,
+      "titre": "Préparer une solution de glucose",
+      "consigne": "Détaille chaque calcul en précisant les formules et les unités.",
+      "enonce": "**Situation.** Au laboratoire, Sarah dissout **4,5 g** de glucose C6H12O6 dans de l'eau pour obtenir **200 mL** de solution.\n\nDonnées : M(H) = 1,0 g/mol ; M(C) = 12,0 g/mol ; M(O) = 16,0 g/mol.\n\n1. Calcule la masse molaire du glucose.\n2. Calcule la quantité de matière de glucose dissoute.\n3. Calcule la concentration molaire puis la concentration massique de la solution.\n4. Sarah doit ensuite utiliser de l'éthanol, dont l'étiquette porte le pictogramme « flamme ». Que signifie-t-il et à quel moment faut-il lire les pictogrammes ?",
+      "bareme": [
+        {
+          "critere": "M = 6 × 12,0 + 12 × 1,0 + 6 × 16,0 = 180 g/mol",
+          "points": 5
+        },
+        {
+          "critere": "n = 4,5 / 180 = 0,025 mol",
+          "points": 4
+        },
+        {
+          "critere": "C = 0,025 / 0,200 = 0,125 mol/L et Cm = 4,5 / 0,200 = 22,5 g/L (volume converti en L)",
+          "points": 7
+        },
+        {
+          "critere": "Flamme = inflammable ; lire les pictogrammes avant toute manipulation (règlement CLP)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. M(C6H12O6) = 6 × 12,0 + 12 × 1,0 + 6 × 16,0 = 72,0 + 12,0 + 96,0 = **180 g/mol**.\n2. n = m / M = 4,5 / 180 = **0,025 mol**.\n3. V = 200 mL = **0,200 L**. C = n / V = 0,025 / 0,200 = **0,125 mol/L**. Cm = m / V = 4,5 / 0,200 = **22,5 g/L**.\n4. Le pictogramme « flamme » du règlement **CLP** signale un produit **inflammable** : pas de flamme ni d'étincelle à proximité. Les pictogrammes se lisent **avant** toute manipulation."
+    },
+    {
+      "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+      "difficulte": 3,
+      "titre": "Du câble électrique au polyéthylène",
+      "consigne": "Réponds en justifiant chaque choix par la structure des matériaux ; détaille les calculs.",
+      "enonce": "**Situation.** Un fabricant conçoit un câble électrique : une **âme** qui transporte le courant, entourée d'une **gaine** en polyéthylène.\n\nDonnées : M(H) = 1,0 g/mol ; M(C) = 12,0 g/mol.\n\n1. Pour l'âme, il hésite entre le cuivre et la porcelaine ; pour la gaine, entre le polyéthylène et l'aluminium. Fais les deux choix en justifiant par la structure et les propriétés de chaque famille.\n2. Le polyéthylène répète le motif **–CH2–CH2–**, obtenu à partir de l'éthène C2H4. Dessine le schéma de Lewis de l'éthène, sachant qu'il contient une double liaison C=C, et vérifie que chaque atome respecte son nombre de liaisons habituel.\n3. Explique ce qu'est un polymère en utilisant les mots « macromolécule », « motif » et « monomère ».\n4. Calcule la masse molaire du motif –CH2–CH2–. Une chaîne de polyéthylène a une masse molaire de **28 000 g/mol** : combien de motifs contient-elle environ ?\n5. Cite deux étapes du cycle de vie de ce câble et une raison de séparer le cuivre de la gaine en fin de vie.",
+      "bareme": [
+        {
+          "critere": "Âme en cuivre (électrons mobiles, conducteur) ; gaine en polyéthylène (polymère isolant)",
+          "points": 5
+        },
+        {
+          "critere": "Lewis de l'éthène : C=C, deux H sur chaque C, 4 liaisons par C et 1 par H",
+          "points": 5
+        },
+        {
+          "critere": "Polymère = macromolécule formée par la répétition d'un motif issu d'un monomère",
+          "points": 3
+        },
+        {
+          "critere": "M(motif) = 28,0 g/mol ; 28 000 / 28 = 1 000 motifs",
+          "points": 4
+        },
+        {
+          "critere": "Deux étapes du cycle de vie et intérêt du tri pour le recyclage",
+          "points": 3
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. **Âme : cuivre**. Métal dont les électrons sont **mobiles**, il conduit l'électricité ; la porcelaine (minéral) est isolante et fragile. **Gaine : polyéthylène**. Polymère (organique) **isolant**, léger et facile à mettre en forme : il protège des contacts ; l'aluminium est un métal conducteur, il ne protégerait pas.\n2. Éthène : **H2C=CH2**. Chaque carbone porte une double liaison avec l'autre carbone (2 liaisons) et deux liaisons simples avec des hydrogènes : 2 + 2 = **4 liaisons**, conforme. Chaque hydrogène forme **1 liaison**. Aucun doublet non liant.\n3. Un **polymère** est une **macromolécule** (très longue molécule) formée par la répétition d'un même **motif** ; ce motif provient d'une petite molécule, le **monomère** (ici l'éthène).\n4. M(–CH2–CH2–) = 2 × 12,0 + 4 × 1,0 = **28,0 g/mol**. Nombre de motifs : 28 000 / 28,0 = **1 000 motifs** environ.\n5. Le cycle de vie va de l'**extraction** des matières premières (minerai de cuivre, pétrole) à la **fabrication**, à l'**utilisation** puis au **recyclage**. Séparer le cuivre de la gaine permet de **recycler chaque matériau** dans sa filière (le cuivre se refond, le polymère se traite à part) et d'économiser la ressource en cuivre."
+    }
+  ]
+}

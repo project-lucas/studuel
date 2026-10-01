@@ -25,12 +25,12 @@ import { toDayKey, computeStreak } from '@/lib/streak'
 import { fetchJoursActifs } from '@/lib/jours-actifs'
 import {
   getGradeChaptersCached,
-  getLessonChapterPairsCached,
-  getQuizLessonPairsCached,
   getSubjectsCached,
 } from '@/lib/catalog'
-import { matieresRevisees } from '@/lib/moi/matieres-revisees'
-import { lireRevisionsParQuiz } from '@/lib/moi/matieres-revisees-server'
+import type { AmiClasse } from '@/lib/moi/classement-amis'
+import { resoudreClassementAmis } from '@/lib/moi/classement-amis-server'
+import { avatarAffiche } from '@/lib/avatar-affiche'
+import { lundiUTC } from '@/lib/ligue'
 import { chapterState } from '@/lib/mastery'
 import { getChapterMastery } from '@/lib/mastery-server'
 import { getChapitresVus } from '@/lib/chapitres-vus'
@@ -237,9 +237,7 @@ export default async function OngletMoi() {
     subjects,
     mastery,
     chapitresVus,
-    revisions,
-    quizLeconPaires,
-    leconChapitrePaires,
+    classementAmisBrut,
     gems,
     gelsSerie,
   ] = await Promise.all([
@@ -293,11 +291,9 @@ export default async function OngletMoi() {
     getSubjectsCached(),
     getChapterMastery(supabase, user.id),
     getChapitresVus(supabase, user.id),
-    // Les matières que je révise le plus (381) : les questions travaillées par
-    // quiz, et la charpente (en cache) qui rattache chaque quiz à sa matière.
-    lireRevisionsParQuiz(supabase, user.id),
-    getQuizLessonPairsCached(),
-    getLessonChapterPairsCached(),
+    // Moi et mes amis, aux trophées et au temps de travail (465). Tolérant :
+    // sans la fonction, le bloc ne montre que ma colonne.
+    supabase.rpc('classement_amis'),
     // Les gemmes, dans leur lecture tolérante (lib/gems-access) : la carte
     // porte désormais les deux monnaies en haut à droite, là où le bandeau les
     // met sur les autres onglets — cet onglet n'a pas de bandeau.
@@ -403,19 +399,27 @@ export default async function OngletMoi() {
   }
   const listeCouronnes = couronnes([...parMatiere.values()])
 
-  // --- Les matières révisées ------------------------------------------------
-  // Même périmètre que les couronnes : les chapitres du niveau, dans les
-  // matières suivies.
-  const matieres = matieresRevisees({
-    revisions,
-    quizLecon: new Map(quizLeconPaires),
-    leconChapitre: new Map(leconChapitrePaires),
-    chapitreMatiere: new Map(
-      levelChapters.flatMap((c) => (parId.has(c.subject_id) ? [[c.id, c.subject_id] as [string, string]] : [])),
-    ),
-    matieres: suivies,
-  })
   const bilan = bilanCouronnes(listeCouronnes)
+
+  // --- Toi et tes amis ------------------------------------------------------
+  // Ma ligne de repli, avec ce que la page sait déjà de moi : elle sert tant
+  // que `classement_amis()` (465) n'est pas en base. Le temps de la semaine
+  // part du lundi UTC, comme la ligue.
+  const lundi = lundiUTC(new Date())
+  const avatarBrut = profile?.avatar as { portrait?: unknown } | null | undefined
+  const maLigne: AmiClasse = {
+    id: user.id,
+    nom: (profilJeu?.displayName ?? profile?.full_name ?? 'Toi').trim().split(/\s+/)[0] || 'Toi',
+    portrait: typeof avatarBrut?.portrait === 'string' ? avatarBrut.portrait : '',
+    moi: true,
+    trophees: profilJeu?.summary.trophies ?? 0,
+    tropheesSemaine: 0,
+    secondesSemaine: (workDays ?? [])
+      .filter((j) => j.day >= lundi)
+      .reduce((somme, j) => somme + (Number(j.seconds) || 0), 0),
+    secondes: secondesTotal,
+  }
+  const amis = resoudreClassementAmis(classementAmisBrut, maLigne)
 
   // ⚠️ LA CARTE « MES HABITUDES » A QUITTÉ CET ONGLET, et avec elle les deux
   // calculs qui ne servaient qu'à son affichage : les LEVIERS du jour (fait /
@@ -505,7 +509,11 @@ export default async function OngletMoi() {
             : null,
         }}
         couronnes={{ liste: listeCouronnes, bilan }}
-        matieres={matieres}
+        amis={{
+          joueurs: amis.joueurs,
+          complet: amis.complet,
+          monAvatar: profile ? avatarAffiche(profile.avatar, 96) : null,
+        }}
         rythme={
           rythmeDisponible
             ? { semaines, phrase: phraseRythme(semaines) }

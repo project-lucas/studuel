@@ -820,7 +820,7 @@ export const PERSONNAGES_XIXE_POLITIQUE: Personnage[] = [
       {
         titre: '1881, l’année des libertés',
         texte:
-          'L’école n’est pas seule. Le même été, les républicains font voter deux lois qui tiennent encore : la **liberté de réunion** (30 juin 1881), qui supprime l’autorisation préalable, et la **liberté de la presse** (29 juillet 1881), qui abolit la censure et la plupart des délits d’opinion — c’est aujourd’hui encore le texte de référence du droit de la presse en France. Pendant son second gouvernement viennent la **loi Waldeck-Rousseau** du 21 mars 1884, qui autorise les **syndicats**, la loi municipale d’avril 1884, qui fait élire les maires par les conseils municipaux, et la **loi Naquet** de juillet 1884, qui rétablit le **divorce**, supprimé en 1816. En cinq ans, la IIIᵉ République a donné à la France l’essentiel de ses libertés publiques.',
+          'L’école n’est pas seule. Le même été, les républicains font voter deux lois qui tiennent encore : la **liberté de réunion** (30 juin 1881), qui supprime l’autorisation préalable, et la **liberté de la presse** (29 juillet 1881), qui abolit la censure et la plupart des délits d’opinion — c’est aujourd’hui encore le texte de référence du droit de la presse en France. Pendant son second gouvernement viennent la **loi Waldeck-Rousseau** du 21 mars 1884, qui autorise les **syndicats**, la loi municipale d’avril 1884, qui confirme l’élection des maires par les conseils municipaux (acquise en 1882), et la **loi Naquet** de juillet 1884, qui rétablit le **divorce**, supprimé en 1816. En cinq ans, la IIIᵉ République a donné à la France l’essentiel de ses libertés publiques.',
       },
       {
         titre: 'L’empire colonial, et le discours de 1885',

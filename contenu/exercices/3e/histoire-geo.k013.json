@@ -1,0 +1,2864 @@
+{
+  "niveau": "3e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "6583dbde-d239-5bcb-a891-6ab8836842bd",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "De Sarajevo à Versailles",
+      "competence": "se-reperer-temps",
+      "situation": "Yanis prépare sa fiche de révision sur la Grande Guerre. Il replace les grands repères sur une frise.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La Grande Guerre, 1914-1919",
+          "debut": 1914,
+          "fin": 1919,
+          "pas": 1,
+          "periodes": [
+            {
+              "id": "guerre",
+              "debut": 1914,
+              "fin": 1918,
+              "nom": "La guerre",
+              "teinte": "corail"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "sarajevo",
+              "date": 1914,
+              "nom": "Attentat de Sarajevo"
+            },
+            {
+              "id": "verdun",
+              "date": 1916,
+              "nom": "Bataille de Verdun"
+            },
+            {
+              "id": "usa",
+              "date": 1917,
+              "nom": "Entrée des É.-U."
+            },
+            {
+              "id": "armistice",
+              "date": 1918,
+              "nom": "Armistice"
+            },
+            {
+              "id": "versailles",
+              "date": 1919,
+              "nom": "Traité de Versailles"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’année de la **bataille de Verdun**.",
+          "reponse": [
+            "verdun"
+          ],
+          "aide": "Verdun est la grande bataille de 1916, l’année qui suit 1915.",
+          "explication": "La bataille de **Verdun** se déroule en **1916** : elle devient le symbole de l’enfer des tranchées françaises."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+          "items": [
+            "Attentat de Sarajevo",
+            "Bataille de Verdun",
+            "Entrée en guerre des États-Unis",
+            "Traité de Versailles"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "**1914 → 1916 → 1917 → 1919** : la guerre éclate, s’enlise à Verdun, bascule avec les Américains, puis la paix est signée à Versailles."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent l’attentat de Sarajevo de l’armistice ?",
+          "reponse": 4,
+          "unite": "ans",
+          "aide": "Soustrais 1914 à 1918.",
+          "explication": "1918 − 1914 = **4 ans** : la guerre devait être courte, elle dure plus de quatre ans."
+        }
+      ]
+    },
+    {
+      "chapitre": "6583dbde-d239-5bcb-a891-6ab8836842bd",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le prix du sang",
+      "competence": "lire-tableau",
+      "situation": "Dans son manuel, Inès trouve un tableau qui compte les soldats morts dans cinq pays. Elle veut comprendre ce que dit ce bilan de la guerre totale.",
+      "documents": [
+        {
+          "id": "morts",
+          "type": "tableau",
+          "titre": "Soldats morts pendant la guerre (estimations arrondies)",
+          "source": "Ordres de grandeur arrondis, en millions d’hommes. Les historiens donnent des fourchettes.",
+          "colonnes": [
+            "Pays",
+            "Camp",
+            "Morts (millions)"
+          ],
+          "lignes": [
+            [
+              "France",
+              "Entente",
+              "1,4"
+            ],
+            [
+              "Russie",
+              "Entente",
+              "1,8"
+            ],
+            [
+              "Royaume-Uni",
+              "Entente",
+              "0,9"
+            ],
+            [
+              "Allemagne",
+              "Empires centraux",
+              "2,0"
+            ],
+            [
+              "Autriche-Hongrie",
+              "Empires centraux",
+              "1,1"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "morts",
+          "enonce": "Touche **les deux pays** qui appartiennent aux Empires centraux.",
+          "reponse": [
+            "r3c0",
+            "r4c0"
+          ],
+          "multiple": true,
+          "aide": "Regarde la colonne « Camp ».",
+          "explication": "L’**Allemagne** et l’**Autriche-Hongrie** forment, avec l’Empire ottoman, le camp des Empires centraux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Additionne les morts des trois pays de l’Entente du tableau. Réponds en millions.",
+          "reponse": 4.1,
+          "unite": "millions",
+          "aide": "Calcule 1,4 + 1,8 + 0,9.",
+          "explication": "1,4 + 1,8 + 0,9 = **4,1 millions** de morts pour ces trois pays de l’Entente."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce tableau sur la nature de cette guerre ?",
+          "options": [
+            "Elle a mobilisé des armées de masse et fait des millions de morts",
+            "Elle n’a touché que la France et l’Allemagne, sans autre pays",
+            "Elle a fait peu de victimes car elle a été très courte et limitée",
+            "Elle a surtout tué des civils, et presque aucun soldat sur le front"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’ordre de grandeur de chaque nombre : ce sont des millions.",
+          "explication": "Des **millions de morts** dans chaque grand pays : c’est la marque d’une guerre totale, où tout le pays est mobilisé. Les civils, eux, ne figurent pas dans ces chiffres."
+        }
+      ]
+    },
+    {
+      "chapitre": "6583dbde-d239-5bcb-a891-6ab8836842bd",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Lettre du front, affiche de l’arrière",
+      "competence": "analyser-document",
+      "situation": "Une lettre de poilu et une affiche de l’arrière : deux documents pour comprendre pourquoi on parle de « guerre totale ».",
+      "documents": [
+        {
+          "id": "lettre",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Lettre d’un soldat, automne 1916",
+          "source": "Texte écrit pour l’exercice, inspiré des lettres de poilus.",
+          "blocs": [
+            "Chère Jeanne, nous sommes toujours près de Verdun. Il pleut sans cesse et la [[v|boue]] nous monte jusqu’aux genoux. La nuit, les [[v|rats]] passent sur nos couvertures et les [[v|poux]] ne nous laissent aucun repos.",
+            "Les obus tombent chaque jour sur la tranchée. Dans les journaux qu’on nous envoie, tout paraît facile, mais ici nous savons bien que ce n’est pas vrai. Je ne peux pas tout écrire : le courrier est ouvert par la censure.",
+            "Embrasse les enfants pour moi. Dis-leur que leur père pense à eux. Ton Louis."
+          ]
+        },
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Souscrivez à l’emprunt national !",
+          "sousTitre": "Affiche écrite pour l’exercice",
+          "emoji": "🪙",
+          "lignes": [
+            {
+              "texte": "Chaque pièce d’or que vous donnez aide nos soldats.",
+              "id": "slogan"
+            },
+            {
+              "texte": "Échangez votre or contre des titres de l’emprunt.",
+              "id": "or"
+            }
+          ],
+          "pied": "Pour la patrie, pour la victoire",
+          "teinte": "bleu"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lettre",
+          "enonce": "Touche **les trois mots** de la lettre qui décrivent les conditions de vie dans la tranchée.",
+          "reponse": [
+            "v"
+          ],
+          "aide": "Cherche ce qui est sale, humide ou nuisible.",
+          "explication": "**Boue, rats, poux** : voilà le quotidien des soldats dans les tranchées, loin des récits des journaux."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quel domaine de la guerre totale l’affiche correspond-elle ?",
+          "options": [
+            "Le domaine économique : on finance la guerre",
+            "Le domaine scientifique : on invente des armes",
+            "Le domaine militaire : on recrute des soldats",
+            "Le domaine moral : on censure le courrier"
+          ],
+          "reponse": 0,
+          "aide": "L’affiche demande de l’argent et de l’or.",
+          "explication": "L’affiche demande de financer la guerre par un **emprunt de guerre** : c’est la mobilisation **économique** des civils."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Louis écrit-il « je ne peux pas tout écrire » ?",
+          "options": [
+            "Parce que la censure ouvre le courrier",
+            "Parce qu’il ne sait pas écrire longuement",
+            "Parce qu’il n’a plus de papier",
+            "Parce que les obus détruisent les lettres"
+          ],
+          "reponse": 0,
+          "aide": "Relis la fin du deuxième paragraphe.",
+          "explication": "Le courrier des soldats est lu par la **censure** : elle fait partie du contrôle moral de l’opinion, comme la propagande et le « bourrage de crâne »."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces exemples selon le domaine de la guerre totale qu’ils illustrent.",
+          "categories": [
+            "Domaine économique",
+            "Domaine scientifique",
+            "Domaine moral"
+          ],
+          "items": [
+            [
+              "Les femmes remplacent les hommes à l’usine",
+              0
+            ],
+            [
+              "Les gaz de combat et les chars apparaissent",
+              1
+            ],
+            [
+              "Le « bourrage de crâne » dans les journaux",
+              2
+            ],
+            [
+              "Les emprunts de guerre",
+              0
+            ],
+            [
+              "L’aviation et les sous-marins",
+              1
+            ]
+          ],
+          "aide": "La guerre totale mobilise l’économie, la science et les esprits.",
+          "explication": "Usines et emprunts relèvent de l’**économie** ; gaz, chars, avions et sous-marins de la **science** ; bourrage de crâne et censure du **moral**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7a8b009c-6876-5432-bbd4-573d70718708",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois chefs, trois régimes",
+      "competence": "lire-tableau",
+      "situation": "Sarah compare les trois régimes totalitaires des années 1930 dans un tableau de synthèse.",
+      "documents": [
+        {
+          "id": "reg",
+          "type": "tableau",
+          "titre": "Les trois régimes",
+          "colonnes": [
+            "Pays",
+            "Chef",
+            "Arrivée au pouvoir",
+            "Parti unique"
+          ],
+          "lignes": [
+            [
+              "URSS",
+              "Staline",
+              "1924",
+              "Parti communiste"
+            ],
+            [
+              "Italie",
+              "Mussolini",
+              "1922",
+              "Parti fasciste"
+            ],
+            [
+              "Allemagne",
+              "Hitler",
+              "1933",
+              "Parti nazi"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "reg",
+          "enonce": "Touche la case qui donne l’année d’arrivée au pouvoir d’**Hitler**.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Hitler dirige l’Allemagne : repère sa ligne, puis la colonne des dates.",
+          "explication": "Hitler devient chancelier le **30 janvier 1933** : c’est la case de l’Allemagne, colonne « Arrivée au pouvoir »."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent l’arrivée au pouvoir de Mussolini de celle d’Hitler ?",
+          "reponse": 11,
+          "unite": "ans",
+          "aide": "Soustrais 1922 à 1933.",
+          "explication": "1933 − 1922 = **11 ans**. Mussolini ouvre la voie : le fascisme italien naît avant le nazisme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel trait commun aux trois régimes le tableau montre-t-il ?",
+          "options": [
+            "Un parti unique",
+            "Des élections libres",
+            "Une presse indépendante",
+            "Plusieurs partis qui se partagent le pouvoir"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la dernière colonne.",
+          "explication": "Les trois régimes reposent sur un **parti unique** : c’est l’un des traits communs des régimes totalitaires."
+        }
+      ]
+    },
+    {
+      "chapitre": "7a8b009c-6876-5432-bbd4-573d70718708",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une affiche pour la jeunesse",
+      "competence": "analyser-document",
+      "situation": "Une affiche imaginée pour l’exercice ressemble à celles des régimes totalitaires. Elle invite la jeunesse à rejoindre le mouvement du chef.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Jeunesse, rejoins-nous !",
+          "sousTitre": "Affiche imaginée pour l’exercice",
+          "emoji": "📣",
+          "lignes": [
+            {
+              "texte": "Un seul peuple, un seul parti, un seul chef.",
+              "id": "unique"
+            },
+            {
+              "texte": "Le chef voit plus loin que tous : fais-lui confiance.",
+              "id": "chef"
+            },
+            {
+              "texte": "Inscris-toi dès 10 ans dans l’organisation de la jeunesse.",
+              "id": "jeunesse"
+            },
+            {
+              "texte": "Celui qui critique sera dénoncé.",
+              "id": "terreur"
+            }
+          ],
+          "pied": "Obéir, c’est servir",
+          "teinte": "corail"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche la phrase qui montre le **culte du chef**.",
+          "reponse": [
+            "chef"
+          ],
+          "aide": "Cherche la phrase qui présente le chef comme infaillible.",
+          "explication": "« Le chef voit plus loin que tous » : c’est le **culte de la personnalité**, où le chef est au-dessus des lois et jamais critiqué."
+        },
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche la phrase qui relève de l’**embrigadement de la jeunesse**.",
+          "reponse": [
+            "jeunesse"
+          ],
+          "aide": "Cherche la phrase qui s’adresse à des enfants.",
+          "explication": "Inscrire les enfants dès 10 ans dans une organisation : c’est l’**embrigadement de la jeunesse**, marque des régimes totalitaires."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces moyens du régime dans la bonne catégorie.",
+          "categories": [
+            "Propagande",
+            "Terreur"
+          ],
+          "items": [
+            [
+              "Affiches, défilés et radio à la gloire du chef",
+              0
+            ],
+            [
+              "Police politique et procès truqués",
+              1
+            ],
+            [
+              "Camps pour les opposants",
+              1
+            ],
+            [
+              "Films qui vantent le régime",
+              0
+            ]
+          ],
+          "aide": "L’une convainc, l’autre fait peur.",
+          "explication": "La **propagande** cherche à convaincre (affiches, films, défilés) ; la **terreur** réprime (police politique, camps, procès truqués)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce document est-il une source de propagande ?",
+          "options": [
+            "Il cherche à convaincre et à faire obéir",
+            "Il décrit objectivement la situation du pays",
+            "Il donne des chiffres vérifiables",
+            "Il critique le pouvoir en place"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le ton et le but de l’affiche.",
+          "explication": "L’affiche ne décrit rien : elle veut **convaincre** et **faire obéir**. C’est ce qui fait d’elle un outil de propagande."
+        }
+      ]
+    },
+    {
+      "chapitre": "7a8b009c-6876-5432-bbd4-573d70718708",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les buts s’opposent",
+      "competence": "raisonner",
+      "situation": "Dans un dossier sur la jeunesse hitlérienne, Noa lit un graphique, puis le compare aux buts du nazisme et du communisme stalinien.",
+      "documents": [
+        {
+          "id": "jeunesse",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Membres de la jeunesse hitlérienne",
+          "source": "Ordres de grandeur arrondis, en millions de jeunes.",
+          "categories": [
+            "1932",
+            "1933",
+            "1934",
+            "1936",
+            "1938"
+          ],
+          "series": [
+            {
+              "nom": "Jeunes membres",
+              "valeurs": [
+                0.1,
+                2.3,
+                3.6,
+                5.4,
+                7
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Membres",
+            "unite": "en millions",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "buts",
+          "type": "tableau",
+          "titre": "Deux régimes, deux buts",
+          "colonnes": [
+            "Régime",
+            "But affiché"
+          ],
+          "lignes": [
+            [
+              "Communisme stalinien",
+              "Une société sans classes, par la lutte des classes"
+            ],
+            [
+              "Nazisme",
+              "La race et la conquête d’un « espace vital »"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jeunesse",
+          "enonce": "Touche l’année où il y a le **plus** de jeunes membres.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "En **1938**, la jeunesse hitlérienne compte environ 7 millions de jeunes : la barre la plus haute."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Environ combien de millions de membres en plus en 1938 qu’en 1933 ? Utilise les valeurs arrondies du graphique.",
+          "reponse": 4.7,
+          "unite": "millions",
+          "tolerance": 0.3,
+          "aide": "Lis 1933 (2,3) et 1938 (7,0), puis soustrais.",
+          "explication": "7,0 − 2,3 = **4,7 millions** de jeunes en plus en cinq ans : le régime a embrigadé toute une génération."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui explique le mieux cette hausse ?",
+          "options": [
+            "L’embrigadement de la jeunesse devient obligatoire et organisé",
+            "Les jeunes quittent l’école plus tôt pour aller travailler",
+            "Les lois de Nuremberg créent un diplôme obligatoire pour tous",
+            "Les jeunes Allemands sont attirés par la hausse des salaires"
+          ],
+          "reponse": 0,
+          "aide": "Relis la liste des traits communs : quel trait concerne la jeunesse ?",
+          "explication": "Le régime nazi organise et rend obligatoire l’**embrigadement de la jeunesse** : les enfants sont formés très tôt à obéir au chef."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément dans le bon régime.",
+          "categories": [
+            "Communisme stalinien",
+            "Nazisme"
+          ],
+          "items": [
+            [
+              "La lutte des classes",
+              0
+            ],
+            [
+              "Le racisme et l’antisémitisme",
+              1
+            ],
+            [
+              "La collectivisation des terres",
+              0
+            ],
+            [
+              "Les lois de Nuremberg",
+              1
+            ],
+            [
+              "Les plans quinquennaux",
+              0
+            ]
+          ],
+          "aide": "Regarde le tableau des buts.",
+          "explication": "La **lutte des classes**, la **collectivisation** et les **plans quinquennaux** relèvent du stalinisme ; le **racisme** et les **lois de Nuremberg** du nazisme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion le cours en tire-t-il ?",
+          "options": [
+            "Les moyens se ressemblent, les buts s’opposent",
+            "Les deux régimes ont exactement les mêmes buts",
+            "Seul le nazisme utilise la propagande",
+            "Aucun des deux ne recourt à la terreur"
+          ],
+          "reponse": 0,
+          "aide": "Compare les moyens, puis les buts.",
+          "explication": "Propagande, terreur, parti unique : les **moyens se ressemblent**. Mais le communisme vise une société sans classes et le nazisme la race : les **buts s’opposent**."
+        }
+      ]
+    },
+    {
+      "chapitre": "4901829b-81f4-559d-a2d7-6b3b4b9ba763",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vingt ans d’entre-deux-guerres",
+      "competence": "se-reperer-temps",
+      "situation": "Maël place sur une frise les grandes dates de la France entre 1918 et 1938.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La France de 1918 à 1938",
+          "debut": 1918,
+          "fin": 1938,
+          "pas": 2,
+          "periodes": [
+            {
+              "id": "fp",
+              "debut": 1936,
+              "fin": 1938,
+              "nom": "Front populaire",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "armistice",
+              "date": 1918,
+              "nom": "Armistice"
+            },
+            {
+              "id": "locarno",
+              "date": 1925,
+              "nom": "Accords de Locarno"
+            },
+            {
+              "id": "crise",
+              "date": 1931,
+              "nom": "Crise en France"
+            },
+            {
+              "id": "fevrier",
+              "date": 1934,
+              "nom": "6 février 1934"
+            },
+            {
+              "id": "matignon",
+              "date": 1936,
+              "nom": "Accords Matignon"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’année des **accords de Locarno**.",
+          "reponse": [
+            "locarno"
+          ],
+          "aide": "Ils nourrissent l’espoir d’une paix durable dans les années 1920.",
+          "explication": "Les accords de **Locarno** datent de **1925** : pendant les années 1920, la France espère une paix durable."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Les accords de Locarno",
+            "L’arrivée de la crise en France",
+            "Les ligues manifestent le 6 février",
+            "Les accords Matignon"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "**1925 → 1931 → 1934 → 1936** : paix espérée, crise, peur du fascisme, puis Front populaire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les accords de Locarno du 6 février 1934 ?",
+          "reponse": 9,
+          "unite": "ans",
+          "aide": "Soustrais 1925 à 1934.",
+          "explication": "1934 − 1925 = **9 ans** : en quelques années, l’espoir de paix laisse place à la crise politique."
+        }
+      ]
+    },
+    {
+      "chapitre": "4901829b-81f4-559d-a2d7-6b3b4b9ba763",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les vacances de Louise",
+      "competence": "analyser-texte",
+      "situation": "En 1936, Louise travaille en usine. Son récit, écrit pour l’exercice, raconte sa première semaine après les accords Matignon.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le récit de Louise, été 1936",
+          "source": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "Louise travaille dans une usine de Saint-Denis. Avant 1936, elle faisait 48 heures par semaine et gagnait 800 francs par mois. Après les grèves de mai et les accords Matignon, on lui annonce de grands changements.",
+            "Son salaire augmente d’environ 12 %. Sa semaine passe à 40 heures. Surtout, elle a droit pour la première fois à deux semaines de [[c|congés]] [[c|payés]] : elle part voir la mer avec sa sœur."
+          ]
+        },
+        {
+          "id": "matignon",
+          "type": "tableau",
+          "titre": "Les accords Matignon (7 juin 1936)",
+          "colonnes": [
+            "Mesure",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "Salaires",
+              "Hausse d’environ 12 %"
+            ],
+            [
+              "Temps de travail",
+              "Semaine de 40 heures"
+            ],
+            [
+              "Congés payés",
+              "Deux semaines"
+            ],
+            [
+              "Conventions collectives",
+              "Délégués du personnel reconnus"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche **les deux mots** qui désignent la mesure qui lui permet de partir en vacances.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche ce qui lui donne du temps libre payé.",
+          "explication": "Les **congés payés** : pour la première fois, des millions d’ouvriers peuvent partir en vacances."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Louise gagnait 800 francs par mois. Quel est son salaire après une hausse de 12 % ? Réponds en francs.",
+          "reponse": 896,
+          "unite": "francs",
+          "aide": "Calcule 800 × 12 ÷ 100 = 96 puis ajoute-le à 800.",
+          "explication": "800 × 12 % = 96, donc 800 + 96 = **896 francs** par mois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien d’heures sa semaine de travail diminue-t-elle ?",
+          "reponse": 8,
+          "unite": "heures",
+          "aide": "Compare 48 heures et 40 heures.",
+          "explication": "48 − 40 = **8 heures** de travail en moins par semaine."
+        },
+        {
+          "type": "zone",
+          "document": "matignon",
+          "enonce": "Touche la case du tableau qui donne la durée des congés payés.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne « Congés payés ».",
+          "explication": "La case « **Deux semaines** » : c’est la durée des congés payés obtenue en 1936."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel gouvernement signe ces accords ?",
+          "options": [
+            "Le gouvernement du Front populaire, dirigé par Léon Blum",
+            "Le gouvernement de Vichy, dirigé par le maréchal Pétain",
+            "Le gouvernement des ligues, dirigé par le colonel de La Rocque",
+            "La Société des Nations, réunie à Genève en assemblée"
+          ],
+          "reponse": 0,
+          "aide": "Les accords suivent la victoire électorale de mai 1936.",
+          "explication": "Les accords Matignon sont signés sous le **Front populaire**, dirigé par **Léon Blum**."
+        }
+      ]
+    },
+    {
+      "chapitre": "4901829b-81f4-559d-a2d7-6b3b4b9ba763",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Du 6 février au Front populaire",
+      "competence": "raisonner",
+      "situation": "Deux lectures opposées du 6 février 1934, puis une chaîne pour comprendre comment cet événement mène à la victoire de la gauche.",
+      "documents": [
+        {
+          "id": "lectures",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Deux lectures du 6 février 1934",
+          "source": "Textes écrits pour l’exercice, qui résument deux points de vue de l’époque.",
+          "blocs": [
+            "Lecture de gauche : le 6 février, des ligues d’extrême droite tentent un coup de force contre le Parlement. Il faut s’unir pour défendre la République menacée par le fascisme.",
+            "Lecture des ligues : le 6 février, nous manifestons contre un pouvoir affaibli et contre l’instabilité des gouvernements. Nous ne cherchons pas la violence, mais un changement."
+          ]
+        },
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "fev",
+              "texte": "6 février 1934",
+              "emoji": "🏛️"
+            },
+            {
+              "id": "union",
+              "texte": "?"
+            },
+            {
+              "id": "victoire",
+              "texte": "Victoire de mai 1936",
+              "emoji": "🗳️"
+            },
+            {
+              "id": "reformes",
+              "texte": "Accords Matignon",
+              "emoji": "🤝"
+            }
+          ],
+          "liens": [
+            {
+              "de": "fev",
+              "a": "union",
+              "texte": "provoque"
+            },
+            {
+              "de": "union",
+              "a": "victoire"
+            },
+            {
+              "de": "victoire",
+              "a": "reformes"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel est le sujet commun des deux textes ?",
+          "options": [
+            "Une manifestation devant la Chambre des députés",
+            "Une grève avec occupation d’usines et de magasins",
+            "Un traité de paix signé entre plusieurs pays",
+            "Une élection présidentielle au suffrage universel"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la date citée dans les deux lectures.",
+          "explication": "Les deux textes parlent de la manifestation des **ligues d’extrême droite** devant la Chambre des députés, le **6 février 1934**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle lecture parle d’une tentative de coup de force antiparlementaire ?",
+          "options": [
+            "La lecture de gauche",
+            "La lecture des ligues",
+            "Les deux lectures",
+            "Aucune des deux"
+          ],
+          "reponse": 0,
+          "aide": "Quel camp craint pour la République ?",
+          "explication": "La **gauche** y voit une tentative de coup de force contre le Parlement : c’est ce qui la pousse à s’unir."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la chaîne.",
+          "texte": "Le 6 février provoque la naissance du ___, coalition de la SFIO, des radicaux et des ___.",
+          "reponses": [
+            [
+              "Front populaire"
+            ],
+            [
+              "communistes"
+            ]
+          ],
+          "banque": [
+            "Front populaire",
+            "communistes",
+            "fascistes",
+            "Reichstag"
+          ],
+          "aide": "Trois partis s’allient : SFIO, radicaux et…",
+          "explication": "Le 6 février provoque la naissance du **Front populaire**, coalition de la SFIO, des radicaux et des **communistes**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque nom à son rôle.",
+          "paires": [
+            [
+              "Léon Blum",
+              "Chef du gouvernement en 1936"
+            ],
+            [
+              "Croix-de-Feu",
+              "Ligue d’extrême droite"
+            ],
+            [
+              "SFIO",
+              "Parti socialiste du Front populaire"
+            ],
+            [
+              "Accords Matignon",
+              "Hausse des salaires et 40 heures"
+            ]
+          ],
+          "aide": "Pense aux acteurs du Front populaire, puis à ceux de 1934.",
+          "explication": "**Blum** dirige le gouvernement, les **Croix-de-Feu** sont une ligue, la **SFIO** est le parti socialiste et les **accords Matignon** apportent les réformes sociales."
+        }
+      ]
+    },
+    {
+      "chapitre": "b0de9d40-355e-5c3e-b17d-9d2f5aa87a43",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sur les routes de la guerre",
+      "competence": "lire-carte",
+      "situation": "Une carte de l’Europe en guerre : Samia repère quatre lieux qu’elle doit savoir situer pour le brevet.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quelques lieux de la Seconde Guerre mondiale",
+          "fond": "europe",
+          "cadrage": [
+            -12,
+            43,
+            50,
+            60
+          ],
+          "lieux": [
+            {
+              "id": "londres",
+              "lieu": "londres",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "caen",
+              "lieu": "caen",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "stalingrad",
+              "lon": 44.5,
+              "lat": 48.7,
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "violet"
+            },
+            {
+              "id": "auschwitz",
+              "lon": 19.2,
+              "lat": 50.03,
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "violet"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la lettre qui repère **Stalingrad**, la ville du tournant sur le front de l’Est.",
+          "reponse": [
+            "stalingrad"
+          ],
+          "aide": "Stalingrad est très à l’est, sur la Volga, en URSS.",
+          "explication": "**Stalingrad** (lettre C) est sur la Volga, à l’extrême est de la carte : la victoire soviétique de 1942-1943 marque le tournant du front de l’Est."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la lettre qui se trouve près des plages du **débarquement de Normandie**.",
+          "reponse": [
+            "caen"
+          ],
+          "aide": "Les plages sont sur la côte nord de la France.",
+          "explication": "Caen (lettre B) est tout près des plages du **6 juin 1944** : les Alliés débarquent en Normandie."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre à son lieu.",
+          "paires": [
+            [
+              "A",
+              "Londres"
+            ],
+            [
+              "B",
+              "Caen"
+            ],
+            [
+              "C",
+              "Stalingrad"
+            ],
+            [
+              "D",
+              "Auschwitz"
+            ]
+          ],
+          "aide": "Londres est la capitale britannique, à l’ouest.",
+          "explication": "**A** Londres, **B** Caen (Normandie), **C** Stalingrad, **D** Auschwitz, en Pologne occupée."
+        }
+      ]
+    },
+    {
+      "chapitre": "b0de9d40-355e-5c3e-b17d-9d2f5aa87a43",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le poids des victimes",
+      "competence": "lire-graphique",
+      "situation": "Un graphique donne l’ordre de grandeur des morts dans six pays. Yanis en tire ce que signifie « guerre d’anéantissement ».",
+      "documents": [
+        {
+          "id": "morts",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Morts de la Seconde Guerre mondiale par pays",
+          "source": "Estimations arrondies, en millions de morts, civils et militaires. Les historiens donnent des fourchettes.",
+          "categories": [
+            "URSS",
+            "Chine",
+            "Allemagne",
+            "Pologne",
+            "Japon",
+            "France"
+          ],
+          "series": [
+            {
+              "nom": "Morts",
+              "valeurs": [
+                27,
+                15,
+                7,
+                6,
+                3,
+                0.6
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Morts",
+            "unite": "en millions",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Pays"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "morts",
+          "enonce": "Touche le pays qui compte le **plus de morts**.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "L’**URSS** compte le plus de morts, environ 27 millions : l’est de l’Europe a subi une guerre d’anéantissement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Environ combien de millions de morts de plus en URSS qu’en Chine ? Utilise les valeurs arrondies.",
+          "reponse": 12,
+          "unite": "millions",
+          "tolerance": 2,
+          "aide": "Soustrais 15 à 27.",
+          "explication": "27 − 15 = **12 millions** de morts de plus en URSS qu’en Chine, selon ces estimations."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce graphique sur la guerre ?",
+          "options": [
+            "Elle a touché l’Europe et l’Asie, avec des bilans énormes",
+            "Elle n’a touché que l’Europe",
+            "Elle a fait moins de victimes que 1914-1918",
+            "Elle a été très meurtrière seulement pour les soldats"
+          ],
+          "reponse": 0,
+          "aide": "Observe les pays des barres.",
+          "explication": "La guerre est **mondiale** : Europe et Asie figurent parmi les plus touchées. Au total, elle fait **50 à 60 millions** de morts, en majorité des civils."
+        }
+      ]
+    },
+    {
+      "chapitre": "b0de9d40-355e-5c3e-b17d-9d2f5aa87a43",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un crime à l’échelle de l’Europe",
+      "competence": "se-reperer-temps",
+      "situation": "Noa prépare un dossier sur le génocide des Juifs d’Europe. Elle replace les étapes et distingue deux types de camps.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Le génocide des Juifs d’Europe",
+          "debut": 1941,
+          "fin": 1945,
+          "pas": 1,
+          "periodes": [
+            {
+              "id": "camps",
+              "debut": 1942,
+              "fin": 1944,
+              "nom": "Camps d’extermination",
+              "teinte": "corail"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "balles",
+              "date": 1941,
+              "nom": "Shoah par balles"
+            },
+            {
+              "id": "wannsee",
+              "date": 1942,
+              "nom": "Conférence de Wannsee"
+            },
+            {
+              "id": "capitulation",
+              "date": 1945,
+              "nom": "Capitulation allemande"
+            }
+          ]
+        },
+        {
+          "id": "camps",
+          "type": "tableau",
+          "titre": "Deux types de camps",
+          "colonnes": [
+            "Camp",
+            "Fonctionnement"
+          ],
+          "lignes": [
+            [
+              "Camp A",
+              "On enferme les détenus et on les fait travailler jusqu’à la mort."
+            ],
+            [
+              "Camp B",
+              "Les déportés sont tués dès leur arrivée."
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la **conférence de Wannsee**.",
+          "reponse": [
+            "wannsee"
+          ],
+          "aide": "Elle organise la déportation, en janvier 1942.",
+          "explication": "La conférence de **Wannsee** a lieu en janvier **1942** : elle organise la déportation des Juifs vers les camps d’extermination."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le début de la « Shoah par balles » de la capitulation allemande ?",
+          "reponse": 4,
+          "unite": "ans",
+          "aide": "Soustrais 1941 à 1945.",
+          "explication": "1945 − 1941 = **4 ans** : le génocide commence dès 1941 à l’Est et s’étend avec les camps d’extermination."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel camp du tableau est un camp d’extermination ?",
+          "options": [
+            "Le camp B",
+            "Le camp A",
+            "Les deux",
+            "Aucun"
+          ],
+          "reponse": 0,
+          "aide": "Un camp d’extermination est conçu pour tuer dès l’arrivée.",
+          "explication": "Le **camp B** est un camp d’extermination : on y tue dès l’arrivée. Le camp A est un camp de concentration."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque camp selon son type.",
+          "categories": [
+            "Camp de concentration",
+            "Camp d’extermination"
+          ],
+          "items": [
+            [
+              "Dachau",
+              0
+            ],
+            [
+              "Treblinka",
+              1
+            ],
+            [
+              "Sobibor",
+              1
+            ]
+          ],
+          "aide": "Dachau est l’un des premiers camps, ouvert dès 1933.",
+          "explication": "**Dachau**, ouvert dès 1933, est un camp de concentration ; **Treblinka** et **Sobibor** sont des camps d’extermination."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la distinction entre les deux types de camps est-elle essentielle ?",
+          "options": [
+            "Parce qu’elle distingue le travail forcé de l’assassinat organisé",
+            "Parce qu’elle sépare les camps allemands des camps polonais",
+            "Parce qu’elle sépare les camps de prisonniers de guerre des autres",
+            "Parce qu’elle n’a aucune importance"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que chaque camp cherche à faire.",
+          "explication": "Dans un camp de concentration, on enferme et on fait travailler ; dans un camp d’extermination, on **assassine** dès l’arrivée : c’est le cœur du génocide."
+        }
+      ]
+    },
+    {
+      "chapitre": "12f21afe-be64-544d-9d90-6558e3384b6f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre années sous Vichy",
+      "competence": "se-reperer-temps",
+      "situation": "Timéo place sur une frise les grands repères de la France de 1940 à 1944.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La France de 1940 à 1944",
+          "debut": 1940,
+          "fin": 1944,
+          "pas": 1,
+          "periodes": [
+            {
+              "id": "vichy",
+              "debut": 1940,
+              "fin": 1944,
+              "nom": "État français",
+              "teinte": "brun"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "pleins",
+              "date": 1940,
+              "nom": "Pleins pouvoirs"
+            },
+            {
+              "id": "statut",
+              "date": 1941,
+              "nom": "Statut aggravé"
+            },
+            {
+              "id": "vel",
+              "date": 1942,
+              "nom": "Rafle du Vél’ d’Hiv’"
+            },
+            {
+              "id": "cnr",
+              "date": 1943,
+              "nom": "Création du CNR"
+            },
+            {
+              "id": "liberation",
+              "date": 1944,
+              "nom": "Libération de Paris"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’année de la **rafle du Vél’ d’Hiv’**.",
+          "reponse": [
+            "vel"
+          ],
+          "aide": "C’est l’été 1942.",
+          "explication": "La rafle du Vél’ d’Hiv’ a lieu les 16 et 17 juillet **1942** : elle est menée par la police française."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les pleins pouvoirs à Pétain de la libération de Paris ?",
+          "reponse": 4,
+          "unite": "ans",
+          "aide": "Soustrais 1940 à 1944.",
+          "explication": "1944 − 1940 = **4 ans** : c’est la durée de l’État français de Vichy."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle organisation de la Résistance est créée en 1943 ?",
+          "options": [
+            "Le Conseil national de la Résistance",
+            "Le Service du travail obligatoire",
+            "La Milice française",
+            "La Société des Nations"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la frise autour de 1943.",
+          "explication": "Le **Conseil national de la Résistance**, créé par Jean Moulin le 27 mai 1943, unifie les mouvements de résistance."
+        }
+      ]
+    },
+    {
+      "chapitre": "12f21afe-be64-544d-9d90-6558e3384b6f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une devise qui en remplace une autre",
+      "competence": "analyser-document",
+      "situation": "Une affiche imaginée pour l’exercice reprend les slogans de Vichy. Zoé la compare aux mesures du régime.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Travail, Famille, Patrie",
+          "sousTitre": "Affiche imaginée pour l’exercice",
+          "emoji": "🇫🇷",
+          "lignes": [
+            {
+              "texte": "Le Maréchal veille sur vous.",
+              "id": "marechal"
+            },
+            {
+              "texte": "Revenez à la terre, au travail, à la famille.",
+              "id": "terre"
+            },
+            {
+              "texte": "Faites confiance au chef de l’État.",
+              "id": "chef"
+            }
+          ],
+          "pied": "Révolution nationale",
+          "teinte": "bleu"
+        },
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Quelques mesures de Vichy",
+          "colonnes": [
+            "Mesure",
+            "Date"
+          ],
+          "lignes": [
+            [
+              "Statut des Juifs",
+              "3 octobre 1940"
+            ],
+            [
+              "Entrevue de Montoire",
+              "24 octobre 1940"
+            ],
+            [
+              "Rafle du Vél’ d’Hiv’",
+              "16-17 juillet 1942"
+            ],
+            [
+              "STO",
+              "1943"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche la phrase qui montre le **culte du Maréchal**.",
+          "reponse": [
+            "marechal"
+          ],
+          "aide": "Cherche la phrase qui parle de Pétain.",
+          "explication": "« Le Maréchal veille sur vous » : c’est le **culte du Maréchal**, organisé par le régime."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle devise de la République cette affiche remplace-t-elle ?",
+          "options": [
+            "Liberté, Égalité, Fraternité",
+            "Union, Force, Patrie",
+            "Honneur, Travail, Ordre",
+            "Paix, Justice, Loi"
+          ],
+          "reponse": 0,
+          "aide": "Vichy remplace la devise républicaine.",
+          "explication": "« **Travail, Famille, Patrie** » remplace « **Liberté, Égalité, Fraternité** » : la République laisse place à l’État français."
+        },
+        {
+          "type": "zone",
+          "document": "mesures",
+          "enonce": "Touche la **date** de la rafle du Vél’ d’Hiv’.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne de la rafle.",
+          "explication": "La rafle du Vél’ d’Hiv’ a lieu les **16-17 juillet 1942** : c’est la case de la ligne correspondante."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces mesures selon leur nature.",
+          "categories": [
+            "Antisémitisme d’État",
+            "Collaboration"
+          ],
+          "items": [
+            [
+              "Le statut des Juifs",
+              0
+            ],
+            [
+              "La rafle du Vél’ d’Hiv’",
+              0
+            ],
+            [
+              "L’entrevue de Montoire",
+              1
+            ],
+            [
+              "Le service du travail obligatoire (STO)",
+              1
+            ]
+          ],
+          "aide": "Une mesure vise les Juifs, l’autre coopère avec l’Allemagne.",
+          "explication": "Le **statut des Juifs** et la **rafle** relèvent de l’antisémitisme d’État ; **Montoire** et le **STO** de la collaboration avec l’Allemagne."
+        }
+      ]
+    },
+    {
+      "chapitre": "12f21afe-be64-544d-9d90-6558e3384b6f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Résister, collaborer, libérer",
+      "competence": "lire-carte",
+      "situation": "Quatre lieux qui racontent les années 1940-1944, et un journal clandestin imaginé pour l’exercice.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre lieux de la France de Vichy",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "vichy",
+              "lon": 3.43,
+              "lat": 46.12,
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "montoire",
+              "lon": 0.87,
+              "lat": 47.75,
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "violet"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "violet"
+            }
+          ]
+        },
+        {
+          "id": "journal",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Un journal clandestin, 1943",
+          "source": "Texte écrit pour l’exercice, inspiré des journaux de la Résistance.",
+          "blocs": [
+            "Des hommes et des femmes de toutes opinions refusent la défaite. Les [[r|résistants]] impriment des journaux clandestins, renseignent les Alliés et organisent des sabotages.",
+            "Au printemps, Jean Moulin réunit les mouvements dans un même conseil, le Conseil national de la Résistance."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville qui est la capitale de l’**État français**.",
+          "reponse": [
+            "vichy"
+          ],
+          "aide": "C’est une petite ville d’eau, au cœur de la France.",
+          "explication": "**Vichy** est la capitale de l’État français, dirigé par Pétain : on parle donc du « régime de Vichy »."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le lieu de l’**entrevue de Montoire**, symbole de la collaboration politique.",
+          "reponse": [
+            "montoire"
+          ],
+          "aide": "Montoire est dans la vallée du Loir, au sud-ouest de Paris.",
+          "explication": "**Montoire**, le 24 octobre 1940 : Pétain y rencontre Hitler. C’est le symbole de la collaboration politique."
+        },
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche **le mot** qui désigne ceux qui refusent la défaite.",
+          "reponse": [
+            "r"
+          ],
+          "aide": "Cherche le nom des hommes et des femmes qui agissent dans l’ombre.",
+          "explication": "Les **résistants** refusent la défaite : ils impriment des journaux, renseignent les Alliés et sabotent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel rôle joue Jean Moulin d’après le texte ?",
+          "options": [
+            "Il unifie les mouvements de résistance",
+            "Il dirige le gouvernement de Vichy",
+            "Il négocie l’armistice",
+            "Il commande la Milice"
+          ],
+          "reponse": 0,
+          "aide": "Relis le second paragraphe.",
+          "explication": "Jean Moulin réunit les mouvements au sein du **Conseil national de la Résistance**, le 27 mai 1943."
+        }
+      ]
+    },
+    {
+      "chapitre": "470832dc-e0a6-54b4-b10d-8a22ce95e228",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sept décennies d’Europe",
+      "competence": "se-reperer-temps",
+      "situation": "Mathis place sur une frise les grandes étapes de la construction européenne.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La construction européenne",
+          "debut": 1950,
+          "fin": 2020,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "ceca",
+              "date": 1951,
+              "nom": "CECA"
+            },
+            {
+              "id": "rome",
+              "date": 1957,
+              "nom": "Traité de Rome"
+            },
+            {
+              "id": "maastricht",
+              "date": 1992,
+              "nom": "Maastricht"
+            },
+            {
+              "id": "euro",
+              "date": 2002,
+              "nom": "Euro en circulation"
+            },
+            {
+              "id": "brexit",
+              "date": 2020,
+              "nom": "Brexit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’année du **traité de Rome**, qui crée le marché commun.",
+          "reponse": [
+            "rome"
+          ],
+          "aide": "C’est la fin des années 1950.",
+          "explication": "Le traité de Rome date de **1957** : il crée la CEE, un marché commun à six pays."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces étapes du plus ancien au plus récent.",
+          "items": [
+            "La CECA",
+            "Le traité de Maastricht",
+            "L’euro en circulation",
+            "Le Brexit"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "**1951 → 1992 → 2002 → 2020** : du charbon et de l’acier à la monnaie unique, puis au départ du Royaume-Uni."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le traité de Rome du traité de Maastricht ?",
+          "reponse": 35,
+          "unite": "ans",
+          "aide": "Soustrais 1957 à 1992.",
+          "explication": "1992 − 1957 = **35 ans** : le marché commun devient l’Union européenne."
+        }
+      ]
+    },
+    {
+      "chapitre": "470832dc-e0a6-54b4-b10d-8a22ce95e228",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "De six à vingt-sept",
+      "competence": "lire-graphique",
+      "situation": "Jade lit un graphique qui compte les États membres de l’Union européenne au fil des années.",
+      "documents": [
+        {
+          "id": "membres",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Nombre d’États membres",
+          "source": "Données arrondies au nombre d’États.",
+          "categories": [
+            "1957",
+            "1973",
+            "1986",
+            "1995",
+            "2004",
+            "2013",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "États membres",
+              "valeurs": [
+                6,
+                9,
+                12,
+                15,
+                25,
+                28,
+                27
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "États membres",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "membres",
+          "enonce": "Touche l’année du **grand élargissement à l’Est**.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Dix pays entrent d’un coup, au début des années 2000.",
+          "explication": "Le grand élargissement a lieu en **2004** : dix pays entrent d’un coup, et l’Union passe de 15 à 25 États."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’États l’Union gagne-t-elle entre 1995 et 2004 ?",
+          "reponse": 10,
+          "unite": "États",
+          "aide": "Soustrais 15 à 25.",
+          "explication": "25 − 15 = **10 États** : c’est le grand élargissement de 2004."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le nombre d’États passe-t-il de 28 à 27 en 2020 ?",
+          "options": [
+            "Le Royaume-Uni quitte l’Union (Brexit)",
+            "La France quitte l’Union",
+            "Deux États fusionnent",
+            "Le traité de Maastricht est annulé"
+          ],
+          "reponse": 0,
+          "aide": "Un État important quitte l’Union en 2020.",
+          "explication": "En 2020, le **Brexit** fait passer l’Union de 28 à **27** États."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel mouvement le graphique illustre-t-il surtout ?",
+          "options": [
+            "S’élargir : accueillir de nouveaux États",
+            "S’approfondir : mettre en commun plus de compétences",
+            "Se dissoudre",
+            "Se replier sur six pays"
+          ],
+          "reponse": 0,
+          "aide": "Le graphique compte des États, pas des politiques.",
+          "explication": "Le graphique illustre **l’élargissement** : on accueille de nouveaux États. S’approfondir, c’est mettre en commun plus de politiques."
+        }
+      ]
+    },
+    {
+      "chapitre": "470832dc-e0a6-54b4-b10d-8a22ce95e228",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Où bat le cœur de l’Europe ?",
+      "competence": "lire-carte",
+      "situation": "Lina repère sur une carte les États membres et les sièges des institutions. Elle relie le territoire à la façon dont l’Union décide.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "L’Europe occidentale",
+          "fond": "europe",
+          "cadrage": [
+            -11,
+            41,
+            20,
+            58
+          ],
+          "regions": [
+            {
+              "code": "FRA",
+              "teinte": "ciel"
+            },
+            {
+              "code": "DEU",
+              "teinte": "ciel"
+            },
+            {
+              "code": "ITA",
+              "teinte": "ciel"
+            },
+            {
+              "code": "BEL",
+              "teinte": "ciel"
+            },
+            {
+              "code": "NLD",
+              "teinte": "ciel"
+            },
+            {
+              "code": "LUX",
+              "teinte": "ciel"
+            },
+            {
+              "code": "ESP",
+              "teinte": "ciel"
+            },
+            {
+              "code": "PRT",
+              "teinte": "ciel"
+            },
+            {
+              "code": "IRL",
+              "teinte": "ciel"
+            },
+            {
+              "code": "DNK",
+              "teinte": "ciel"
+            },
+            {
+              "code": "AUT",
+              "teinte": "ciel"
+            },
+            {
+              "code": "POL",
+              "teinte": "ciel"
+            }
+          ],
+          "regionsCliquables": true
+        },
+        {
+          "id": "inst",
+          "type": "tableau",
+          "titre": "Trois institutions",
+          "colonnes": [
+            "Institution",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "Parlement européen",
+              "Élu au suffrage universel direct tous les cinq ans"
+            ],
+            [
+              "Commission européenne",
+              "Propose les lois et fait appliquer les traités"
+            ],
+            [
+              "Conseil de l’Union",
+              "Les États membres y siègent"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les trois pays fondateurs** qui bordent la France au nord et à l’est : Belgique, Luxembourg et Allemagne.",
+          "reponse": [
+            "BEL",
+            "LUX",
+            "DEU"
+          ],
+          "multiple": true,
+          "aide": "Ce sont parmi les six pays de la CECA, avec la France, l’Italie et les Pays-Bas.",
+          "explication": "La **Belgique**, le **Luxembourg** et l’**Allemagne** font partie des six fondateurs de 1951, avec la France, l’Italie et les Pays-Bas."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le pays qui a quitté l’Union européenne en 2020.",
+          "reponse": [
+            "GBR"
+          ],
+          "aide": "C’est une île à l’ouest de la France.",
+          "explication": "Le **Royaume-Uni** a quitté l’Union en 2020 : c’est le Brexit."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le pays où siège le **Parlement européen**.",
+          "reponse": [
+            "FRA"
+          ],
+          "aide": "Il siège à Strasbourg.",
+          "explication": "Le Parlement européen siège à **Strasbourg**, en **France**. La Commission siège à Bruxelles."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque institution à son rôle.",
+          "paires": [
+            [
+              "Parlement européen",
+              "Élu au suffrage universel direct"
+            ],
+            [
+              "Commission européenne",
+              "Propose les lois"
+            ],
+            [
+              "Conseil de l’Union",
+              "Réunit les États membres"
+            ]
+          ],
+          "aide": "Relis le tableau.",
+          "explication": "Le **Parlement** est élu, la **Commission** propose les lois, le **Conseil** réunit les États."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment qualifier l’Union européenne ?",
+          "options": [
+            "Ni un État, ni une simple alliance",
+            "Un État fédéral comme les États-Unis",
+            "Une simple alliance militaire",
+            "Une organisation sans pouvoir"
+          ],
+          "reponse": 0,
+          "aide": "Les États lui ont transféré une part de leur souveraineté.",
+          "explication": "L’Union n’est **ni un État, ni une simple alliance** : les États lui ont transféré une part de leur souveraineté et gardent le reste."
+        }
+      ]
+    },
+    {
+      "chapitre": "b330d15a-2c67-5816-8f56-bca0736238c2",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La dorsale de l’Europe",
+      "competence": "lire-carte",
+      "situation": "Romane repère sur une carte la dorsale urbaine et industrielle qui va de Londres à Milan.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "De Londres à Milan",
+          "fond": "europe",
+          "cadrage": [
+            -10,
+            37,
+            18,
+            57
+          ],
+          "lieux": [
+            {
+              "id": "londres",
+              "lieu": "londres",
+              "symbole": "point",
+              "nom": "Londres"
+            },
+            {
+              "id": "rotterdam",
+              "lieu": "rotterdam",
+              "symbole": "point",
+              "nom": "Rotterdam"
+            },
+            {
+              "id": "anvers",
+              "lieu": "anvers",
+              "symbole": "point",
+              "nom": "Anvers"
+            },
+            {
+              "id": "francfort",
+              "lieu": "francfort",
+              "symbole": "point",
+              "nom": "Francfort"
+            },
+            {
+              "id": "milan",
+              "lieu": "milan",
+              "symbole": "point",
+              "nom": "Milan"
+            },
+            {
+              "id": "lisbonne",
+              "lieu": "lisbonne",
+              "symbole": "point",
+              "nom": "Lisbonne"
+            }
+          ],
+          "traits": [
+            {
+              "points": [
+                "londres",
+                "rotterdam",
+                "francfort",
+                "milan"
+              ],
+              "style": "fleche",
+              "teinte": "ambre",
+              "etiquette": "Dorsale"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville située à l’extrémité nord-ouest de la dorsale.",
+          "reponse": [
+            "londres"
+          ],
+          "aide": "La dorsale va de Londres à Milan.",
+          "explication": "La dorsale commence à **Londres** et finit à Milan : c’est la mégalopole européenne."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche les deux grands **ports** de la mégalopole.",
+          "reponse": [
+            "rotterdam",
+            "anvers"
+          ],
+          "multiple": true,
+          "aide": "Cherche les villes au bord de la mer du Nord.",
+          "explication": "**Rotterdam** et **Anvers** sont deux des plus grands ports de la dorsale : ils ouvrent l’Europe sur le monde."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville qui est une grande place **financière** de la dorsale.",
+          "reponse": [
+            "francfort"
+          ],
+          "aide": "Elle est sur le Main, en Allemagne.",
+          "explication": "**Francfort** est l’une des grandes places financières de l’Europe."
+        }
+      ]
+    },
+    {
+      "chapitre": "b330d15a-2c67-5816-8f56-bca0736238c2",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des richesses très inégales",
+      "competence": "lire-graphique",
+      "situation": "Enzo lit un graphique de la richesse par habitant dans sept pays de l’Union, avec l’indice 100 pour la moyenne européenne.",
+      "documents": [
+        {
+          "id": "pib",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Richesse par habitant",
+          "source": "Indice arrondi, moyenne européenne = 100. Ordres de grandeur.",
+          "categories": [
+            "Luxembourg",
+            "Allemagne",
+            "France",
+            "Espagne",
+            "Pologne",
+            "Grèce",
+            "Bulgarie"
+          ],
+          "series": [
+            {
+              "nom": "Indice",
+              "valeurs": [
+                250,
+                120,
+                105,
+                85,
+                80,
+                70,
+                60
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Indice",
+            "min": 0,
+            "max": 260,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Pays"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pib",
+          "enonce": "Touche le pays le **plus riche** par habitant.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "Le **Luxembourg** est le plus riche par habitant, avec un indice d’environ 250."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart entre le Luxembourg et la Bulgarie ? Utilise les valeurs arrondies.",
+          "reponse": 190,
+          "unite": "points",
+          "aide": "Soustrais 60 à 250.",
+          "explication": "250 − 60 = **190 points** : les écarts sont très importants au sein de l’Union."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces pays selon leur position géographique.",
+          "categories": [
+            "Périphérie méridionale",
+            "Périphérie orientale"
+          ],
+          "items": [
+            [
+              "Grèce",
+              0
+            ],
+            [
+              "Bulgarie",
+              1
+            ],
+            [
+              "Pologne",
+              1
+            ],
+            [
+              "Espagne",
+              0
+            ]
+          ],
+          "aide": "La Grèce et l’Espagne sont au sud, la Bulgarie et la Pologne à l’est.",
+          "explication": "La **Grèce** et l’**Espagne** sont dans la périphérie méridionale ; la **Bulgarie** et la **Pologne** dans la périphérie orientale, entrée dans l’Union après 2004."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion tirer du graphique ?",
+          "options": [
+            "Les écarts de richesse restent importants entre pays",
+            "Tous les pays européens ont désormais la même richesse",
+            "Les pays de l’Est sont les plus riches de toute l’Union",
+            "Les écarts de richesse ont disparu entre les pays"
+          ],
+          "reponse": 0,
+          "aide": "Compare la barre la plus longue et la plus courte.",
+          "explication": "Les écarts de richesse entre pays restent **importants**. La politique de cohésion cherche à les réduire."
+        }
+      ]
+    },
+    {
+      "chapitre": "b330d15a-2c67-5816-8f56-bca0736238c2",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La frontière, une ressource",
+      "competence": "analyser-document",
+      "situation": "Trois portraits de travailleurs transfrontaliers, écrits pour l’exercice, et une carte de France pour situer leurs frontières.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Trois régions frontalières",
+          "fond": "france",
+          "regions": [
+            {
+              "code": "HDF",
+              "teinte": "ciel"
+            },
+            {
+              "code": "GES",
+              "teinte": "ciel"
+            },
+            {
+              "code": "ARA",
+              "teinte": "ciel"
+            }
+          ],
+          "regionsCliquables": true,
+          "lieux": [
+            {
+              "id": "lille",
+              "lieu": "lille",
+              "symbole": "point",
+              "nom": "Lille"
+            },
+            {
+              "id": "strasbourg",
+              "lieu": "strasbourg",
+              "symbole": "point",
+              "nom": "Strasbourg"
+            },
+            {
+              "id": "geneve",
+              "lieu": "geneve",
+              "symbole": "point",
+              "nom": "Genève"
+            }
+          ]
+        },
+        {
+          "id": "portraits",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Trois vies de part et d’autre de la frontière",
+          "source": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "Louis habite près de Lille et travaille chaque jour en Belgique. Margot vit en Alsace et travaille en Allemagne. Élisa habite en Haute-Savoie et travaille à Genève, en Suisse.",
+            "Tous trois profitent de programmes Interreg et d’eurorégions qui font coopérer les régions voisines. Pour eux, la frontière n’est plus une barrière : c’est une [[r|ressource]]."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la région où vit Margot : elle travaille en **Allemagne**.",
+          "reponse": [
+            "GES"
+          ],
+          "aide": "C’est la région de Strasbourg.",
+          "explication": "Margot vit dans le **Grand Est** (l’Alsace), région frontalière de l’Allemagne."
+        },
+        {
+          "type": "zone",
+          "document": "portraits",
+          "enonce": "Touche **le mot** qui montre que la frontière est devenue un atout.",
+          "reponse": [
+            "r"
+          ],
+          "aide": "Cherche ce que la frontière est devenue.",
+          "explication": "La frontière est devenue une **ressource** : on y travaille, on y échange, on y coopère."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque région française à son pays voisin.",
+          "paires": [
+            [
+              "Hauts-de-France",
+              "Belgique"
+            ],
+            [
+              "Grand Est",
+              "Allemagne"
+            ],
+            [
+              "Auvergne-Rhône-Alpes",
+              "Suisse"
+            ]
+          ],
+          "aide": "Lille est proche de la Belgique.",
+          "explication": "Les **Hauts-de-France** bordent la Belgique, le **Grand Est** l’Allemagne, **Auvergne-Rhône-Alpes** la Suisse."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi servent les eurorégions et Interreg ?",
+          "options": [
+            "À faire coopérer des régions voisines de deux pays",
+            "À fermer les frontières entre les régions voisines",
+            "À financer uniquement les capitales des États membres",
+            "À choisir les nouveaux États membres de l’Union"
+          ],
+          "reponse": 0,
+          "aide": "Relis le deuxième paragraphe.",
+          "explication": "**Interreg** et les eurorégions font **coopérer** des régions voisines de part et d’autre d’une frontière."
+        }
+      ]
+    },
+    {
+      "chapitre": "53f85f17-1b08-543a-8e26-c9b9568ded36",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un géant économique",
+      "competence": "lire-graphique",
+      "situation": "Sacha lit un graphique qui répartit la richesse mondiale entre quatre ensembles.",
+      "documents": [
+        {
+          "id": "pib",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Part du PIB mondial",
+          "source": "Ordres de grandeur arrondis, en %.",
+          "categories": [
+            "États-Unis",
+            "Chine",
+            "Union européenne",
+            "Japon",
+            "Autres"
+          ],
+          "series": [
+            {
+              "nom": "Part du PIB mondial",
+              "valeurs": [
+                25,
+                18,
+                17,
+                4,
+                36
+              ]
+            }
+          ],
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pib",
+          "enonce": "Touche la part de l’**Union européenne**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le secteur de l’Union européenne.",
+          "explication": "L’**Union européenne** représente environ **17 %** du PIB mondial."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la part cumulée des États-Unis et de l’Union européenne ?",
+          "reponse": 42,
+          "unite": "%",
+          "aide": "Additionne 25 et 17.",
+          "explication": "25 + 17 = **42 %** de la richesse mondiale pour ces deux ensembles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce graphique ?",
+          "options": [
+            "L’Union pèse lourd dans l’économie mondiale",
+            "L’Union est la première puissance militaire",
+            "L’Union n’a aucun poids économique",
+            "L’Union est le seul géant économique"
+          ],
+          "reponse": 0,
+          "aide": "Observe la taille du secteur de l’Union.",
+          "explication": "L’Union est un **géant économique**, avec environ 17 % du PIB mondial. Sa puissance politique reste plus faible."
+        }
+      ]
+    },
+    {
+      "chapitre": "53f85f17-1b08-543a-8e26-c9b9568ded36",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Forces et faiblesses",
+      "competence": "analyser-document",
+      "situation": "Une fiche d’identité de l’Union européenne réunit des atouts et des limites. Zoé doit les trier.",
+      "documents": [
+        {
+          "id": "fiche",
+          "type": "tableau",
+          "titre": "L’Union européenne en quelques faits",
+          "colonnes": [
+            "Domaine",
+            "Fait"
+          ],
+          "lignes": [
+            [
+              "Commerce",
+              "Première puissance commerciale du monde"
+            ],
+            [
+              "Monnaie",
+              "L’euro, deuxième monnaie de réserve"
+            ],
+            [
+              "Défense",
+              "Pas d’armée commune"
+            ],
+            [
+              "Diplomatie",
+              "Décisions souvent prises à l’unanimité"
+            ],
+            [
+              "Normes",
+              "Le RGPD s’impose aux entreprises étrangères"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fiche",
+          "enonce": "Touche la case qui montre une faiblesse de l’Union dans le domaine de la **défense**.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne « Défense ».",
+          "explication": "« Pas d’**armée commune** » : la défense repose sur l’OTAN et les armées nationales."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces faits dans la bonne catégorie.",
+          "categories": [
+            "Atout économique",
+            "Faiblesse politique"
+          ],
+          "items": [
+            [
+              "Première puissance commerciale",
+              0
+            ],
+            [
+              "L’euro, deuxième monnaie de réserve",
+              0
+            ],
+            [
+              "Pas d’armée commune",
+              1
+            ],
+            [
+              "La règle de l’unanimité en diplomatie",
+              1
+            ],
+            [
+              "Les normes européennes, comme le RGPD",
+              0
+            ]
+          ],
+          "aide": "L’unanimité peut bloquer les décisions.",
+          "explication": "Commerce, euro et normes sont des **atouts économiques** ; l’absence d’armée commune et l’unanimité sont des **faiblesses politiques**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’exemple du RGPD ?",
+          "options": [
+            "Les normes européennes s’imposent aux entreprises étrangères",
+            "L’Union possède une armée commune qui défend ses données",
+            "L’Union fixe les prix mondiaux des données personnelles",
+            "L’Union interdit tout commerce avec les pays étrangers"
+          ],
+          "reponse": 0,
+          "aide": "Lis la ligne « Normes ».",
+          "explication": "Le **RGPD** montre que l’Union pèse par ses **normes** : toute entreprise qui veut vendre en Europe doit les respecter."
+        }
+      ]
+    },
+    {
+      "chapitre": "53f85f17-1b08-543a-8e26-c9b9568ded36",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Vers une Europe plus autonome",
+      "competence": "raisonner",
+      "situation": "Un article écrit pour l’exercice et un tableau montrent pourquoi l’Union cherche plus d’autonomie.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Dépendances et autonomie",
+          "source": "Article écrit pour l’exercice.",
+          "blocs": [
+            "Depuis 2022, l’invasion de l’Ukraine par la Russie a montré les limites de l’Union : elle dépendait du gaz russe pour une part de son énergie.",
+            "L’Union veut donc gagner en [[a|autonomie]] dans plusieurs domaines stratégiques. Elle garde pourtant une influence forte grâce à ses normes et à son marché unique."
+          ]
+        },
+        {
+          "id": "domaines",
+          "type": "tableau",
+          "titre": "Quatre domaines stratégiques",
+          "colonnes": [
+            "Domaine",
+            "Exemple de dépendance"
+          ],
+          "lignes": [
+            [
+              "Énergie",
+              "Importation de gaz"
+            ],
+            [
+              "Santé",
+              "Production de vaccins"
+            ],
+            [
+              "Numérique",
+              "Semi-conducteurs"
+            ],
+            [
+              "Sécurité",
+              "Armement"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche **le mot** qui désigne l’objectif de l’Union après 2022.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "C’est la capacité d’agir seul.",
+          "explication": "L’objectif est l’**autonomie** : moins dépendre des autres dans les domaines stratégiques."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque domaine à son exemple de dépendance.",
+          "paires": [
+            [
+              "Énergie",
+              "Importation de gaz"
+            ],
+            [
+              "Santé",
+              "Production de vaccins"
+            ],
+            [
+              "Numérique",
+              "Semi-conducteurs"
+            ],
+            [
+              "Sécurité",
+              "Armement"
+            ]
+          ],
+          "aide": "Relis le tableau.",
+          "explication": "**Énergie** : le gaz ; **santé** : les vaccins ; **numérique** : les semi-conducteurs ; **sécurité** : l’armement."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’Union européenne dispose-t-elle d’une armée commune ?",
+          "options": [
+            "Non, sa défense repose sur l’OTAN et les armées nationales",
+            "Oui, une armée européenne unique placée sous un seul chef",
+            "Oui, mais uniquement en mer et pour des missions de paix",
+            "Non, elle n’a aucune défense et aucune alliance militaire"
+          ],
+          "reponse": 0,
+          "aide": "Rappelle-toi la faiblesse politique de l’Union.",
+          "explication": "Non : pas d’armée commune. La défense repose sur l’**OTAN** et les **armées nationales**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le constat.",
+          "texte": "L’Union est une puissance ___ et culturelle, mais son poids ___ et militaire reste limité.",
+          "reponses": [
+            [
+              "économique"
+            ],
+            [
+              "politique"
+            ]
+          ],
+          "banque": [
+            "économique",
+            "politique",
+            "sportive",
+            "agricole"
+          ],
+          "aide": "Elle pèse par ses marchés et ses normes.",
+          "explication": "L’Union est une puissance **économique** et culturelle, mais son poids **politique** reste limité."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d06202f-144f-56d7-a58b-526573dc5c78",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux villes, deux institutions",
+      "competence": "lire-carte",
+      "situation": "Hugo situe sur une carte les villes qui accueillent les principales institutions européennes.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Villes européennes",
+          "fond": "europe",
+          "cadrage": [
+            -5,
+            42,
+            12,
+            54
+          ],
+          "lieux": [
+            {
+              "id": "strasbourg",
+              "lieu": "strasbourg",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "bruxelles",
+              "lieu": "bruxelles",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "violet"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville où siège le **Parlement européen**.",
+          "reponse": [
+            "strasbourg"
+          ],
+          "aide": "C’est une ville française, près de l’Allemagne.",
+          "explication": "Le Parlement européen siège à **Strasbourg**, en France."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville où siège la **Commission européenne**.",
+          "reponse": [
+            "bruxelles"
+          ],
+          "aide": "C’est la capitale de la Belgique.",
+          "explication": "La Commission européenne siège à **Bruxelles**, en Belgique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle place occupe la France dans l’Union ?",
+          "options": [
+            "État fondateur, deuxième économie",
+            "État entré en 1992",
+            "Plus petit État",
+            "État qui n’utilise pas l’euro"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la CECA de 1951.",
+          "explication": "La France est l’un des **six États fondateurs** et la **deuxième économie** de l’Union."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d06202f-144f-56d7-a58b-526573dc5c78",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La France, un carrefour",
+      "competence": "lire-carte",
+      "situation": "Une carte des axes de circulation qui traversent la France et la relient à l’Europe et au monde.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Axes de circulation",
+          "fond": "europe",
+          "cadrage": [
+            -6,
+            38,
+            14,
+            54
+          ],
+          "lieux": [
+            {
+              "id": "londres",
+              "lieu": "londres",
+              "symbole": "point",
+              "nom": "Londres"
+            },
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "point",
+              "nom": "Paris"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "marseille",
+              "lieu": "marseille",
+              "symbole": "point",
+              "nom": "Marseille"
+            },
+            {
+              "id": "havre",
+              "lieu": "le-havre",
+              "symbole": "point",
+              "nom": "Le Havre"
+            },
+            {
+              "id": "barcelone",
+              "lieu": "barcelone",
+              "symbole": "point",
+              "nom": "Barcelone"
+            },
+            {
+              "id": "turin",
+              "lieu": "turin",
+              "symbole": "point",
+              "nom": "Turin"
+            }
+          ],
+          "traits": [
+            {
+              "points": [
+                "londres",
+                "paris",
+                "lyon",
+                "marseille",
+                "barcelone"
+              ],
+              "style": "fleche",
+              "teinte": "ambre",
+              "etiquette": "LGV"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche les **deux grands ports** français de la carte.",
+          "reponse": [
+            "havre",
+            "marseille"
+          ],
+          "multiple": true,
+          "aide": "Cherche la Manche et la Méditerranée.",
+          "explication": "Le **Havre** et **Marseille** ouvrent la France sur le monde."
+        },
+        {
+          "type": "choix",
+          "enonce": "Entre quelles régions d’Europe la France est-elle située ?",
+          "options": [
+            "Entre l’Europe du Nord et la péninsule Ibérique",
+            "Entre l’Amérique du Nord et l’Asie de l’Est",
+            "Entre la Russie et la Chine, au cœur de l’Asie",
+            "Entre l’Europe centrale et les rives de la mer Noire"
+          ],
+          "reponse": 0,
+          "aide": "Observe la position de la France.",
+          "explication": "La France est à la fois **entre l’Europe du Nord et la péninsule Ibérique**, entre l’Atlantique et la Méditerranée."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville reliée à Paris par une LGV qui mène au **Royaume-Uni**.",
+          "reponse": [
+            "londres"
+          ],
+          "aide": "Paris-Londres passe par le tunnel sous la Manche.",
+          "explication": "Paris et **Londres** sont reliées par une LGV, via le tunnel sous la Manche."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel atout la position de carrefour donne-t-elle à la France ?",
+          "options": [
+            "Elle relie le Nord et le Sud, l’Est et l’Ouest",
+            "Elle l’isole des autres pays voisins de l’Europe",
+            "Elle réduit son influence dans le reste du monde",
+            "Elle supprime toutes ses frontières avec ses voisins"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les traits sur la carte.",
+          "explication": "Par ses axes (LGV, autoroutes, ports), la France est un **carrefour** entre le Nord, le Sud, l’Est et l’Ouest de l’Europe."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d06202f-144f-56d7-a58b-526573dc5c78",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Seule ou à vingt-sept ?",
+      "competence": "raisonner",
+      "situation": "Dans un dossier, Clara trie les domaines où la France agit seule et ceux où elle agit avec l’Union.",
+      "documents": [
+        {
+          "id": "atouts",
+          "type": "tableau",
+          "titre": "Les atouts de la France",
+          "colonnes": [
+            "Atout",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "Siège à l’ONU",
+              "Membre permanent du Conseil de sécurité, droit de veto"
+            ],
+            [
+              "Dissuasion nucléaire",
+              "Une armée projetable"
+            ],
+            [
+              "Réseau diplomatique",
+              "Le deuxième du monde"
+            ],
+            [
+              "Soft power",
+              "Francophonie, tourisme, instituts culturels"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "domaines",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Une France à deux échelles",
+          "blocs": [
+            "La France agit à deux échelles : seule quand il s’agit de son siège à l’ONU ou de sa défense ; à 27 quand il s’agit de commerce, de climat ou de normes."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "atouts",
+          "enonce": "Touche la case qui montre le **droit de veto** de la France.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Cherche la ligne du siège à l’ONU.",
+          "explication": "Le droit de veto est lié au **siège permanent** de la France au Conseil de sécurité."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces domaines selon l’échelle d’action de la France.",
+          "categories": [
+            "Seule",
+            "À 27, avec l’Union"
+          ],
+          "items": [
+            [
+              "Siège à l’ONU",
+              0
+            ],
+            [
+              "Dissuasion nucléaire",
+              0
+            ],
+            [
+              "Commerce",
+              1
+            ],
+            [
+              "Climat",
+              1
+            ],
+            [
+              "Normes",
+              1
+            ]
+          ],
+          "aide": "Relis la consigne.",
+          "explication": "**Seule** : ONU et dissuasion ; **à 27** : commerce, climat et normes."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque atout à son domaine.",
+          "paires": [
+            [
+              "Siège à l’ONU",
+              "Diplomatie"
+            ],
+            [
+              "Dissuasion nucléaire",
+              "Défense"
+            ],
+            [
+              "Francophonie",
+              "Influence culturelle"
+            ]
+          ],
+          "aide": "Pense au type de puissance.",
+          "explication": "Le **siège à l’ONU** relève de la diplomatie, la **dissuasion** de la défense, la **francophonie** de l’influence culturelle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la place du réseau diplomatique français dans le monde ?",
+          "options": [
+            "Le deuxième",
+            "Le premier",
+            "Le dixième",
+            "Le vingtième"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le tableau.",
+          "explication": "Le réseau diplomatique français est le **deuxième** du monde."
+        }
+      ]
+    }
+  ]
+}

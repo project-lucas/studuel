@@ -7,6 +7,8 @@ import { toDayKey } from '@/lib/streak'
 import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import { trimestreOf } from '@/lib/notes'
 import { GRADE_LEVELS } from '@/lib/types'
+import { getSubjectsCached } from '@/lib/catalog'
+import { selectionPourClasse } from '@/lib/welcome'
 
 /** Un identifiant du catalogue d'habitudes est un UUID, jamais autre chose. */
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
@@ -25,9 +27,32 @@ export async function saveGradeLevel(grade: string): Promise<void> {
   if (!userId) return
   if (!GRADE_LEVELS.includes(grade as (typeof GRADE_LEVELS)[number])) return
 
+  // Nouvelle classe, nouveau programme : les matières suivies repartent des
+  // obligatoires de la classe, en gardant les choix qu'elle propose encore
+  // (lib/welcome → selectionPourClasse). Même classe : on ne touche à rien.
+  const [{ data: profil }, subjects] = await Promise.all([
+    supabase
+      .from('profiles')
+      .select('grade_level, selected_subjects')
+      .eq('id', userId)
+      .maybeSingle<{ grade_level: string | null; selected_subjects: unknown }>(),
+    getSubjectsCached(),
+  ])
+  const ancienne = Array.isArray(profil?.selected_subjects)
+    ? (profil.selected_subjects as string[])
+    : []
+  const changeDeClasse = profil?.grade_level !== grade
+
   const { error } = await supabase
     .from('profiles')
-    .update({ grade_level: grade })
+    .update(
+      changeDeClasse
+        ? {
+            grade_level: grade,
+            selected_subjects: selectionPourClasse(subjects, grade, ancienne),
+          }
+        : { grade_level: grade },
+    )
     .eq('id', userId)
   if (error) console.error('[moi] classe non enregistrée:', error.message)
   // Le niveau conditionne le contenu de tous les onglets : on rafraîchit tout.

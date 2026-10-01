@@ -11,7 +11,58 @@ cycle terminal, la grammaire y est la même. Réaligné le 04/09/2026 sur le cod
 (plus de numéro de chapitre, carte d'entrée, quiz du chapitre, jauge à la
 moyenne).
 
-## Ce que l'élève voit
+## Depuis le 01/10/2026 : la grille des thèmes
+
+Un programme rangé en **au moins deux thèmes** ne s'affiche plus en plaques
+violettes empilées mais en **grille de tuiles** (`components/reviser/ProgrammeMondes.tsx`,
+logique pure `lib/reviser/programme.ts`) — la maquette « B · Les mondes »,
+choisie par Lucas contre trois autres :
+
+```
+┌──────────────────────────────────────────────┐
+│  [médaillon] Maths                           │   même en-tête (EnTetePage)
+│              Programme de 3e · 10/28 fiches  │   compte EXACT
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░  │   barre sur la courbe d'encouragement
+│  ( Programme )  ( 🎮 Mode de jeu )  ( Annales )│
+│  ┌────────────────────────────────────────┐  │
+│  │ REPRENDRE · FICHE 4 · ~6 MIN         → │  │   la SEULE plaque violette
+│  │ Fonction linéaire et proportionnalité  │  │   (CarteReprendre)
+│  │ (⚡ +100 XP à gagner)                  │  │   l'XP qui reste, éclair jaune
+│  └────────────────────────────────────────┘  │
+│  ┌──────────────────┐  ┌──────────────────┐  │
+│  │ (dans 3 jours) ★ │  │               ☆  │  │   ruban : contrôle annoncé, ou
+│  │      (△)         │  │      (▦)👑       │  │   « En cours » ; étoile = favori
+│  │ Espace et        │  │ Nombres et       │  │   pictogramme + anneau
+│  │ géométrie        │  │ calculs          │  │
+│  │ 6 fiches         │  │ 3/3 · Terminé    │  │
+│  └──────────────────┘  └──────────────────┘  │
+│                    …                    (🔍) │   loupe flottante, puis Marcel
+└──────────────────────────────────────────────┘
+```
+
+- **Une tuile par thème**, dans l'ordre du programme, **les favoris en tête**
+  (`ordonnerMondes`). Un thème où un contrôle est annoncé est favori d'office ;
+  l'étoile reste libre dans les deux sens. Les choix vivent dans le navigateur
+  (`lib/reviser/favoris.ts`).
+- **Toucher une tuile ouvre le thème** : ses fiches (les mêmes lignes
+  `ChapterItem`, dépliables sur place) et le quiz du chapitre, qui dit en clair
+  ce qui manque tant qu'il est fermé. Le thème ouvert vit dans l'URL
+  (`?theme=`) : le retour du téléphone le referme.
+- **La loupe flottante** cherche dans toutes les fiches de la matière et range
+  les trouvailles sous leur thème.
+- **Les jauges encouragent** (`progressionAffichee`) : la barre de l'en-tête et
+  les anneaux se remplissent dès le premier cours lu ; tout nombre écrit reste
+  exact.
+- **Le pictogramme d'un thème se déduit de son titre**
+  (`lib/reviser/icone-theme.ts`). Un thème nouveau reçoit le pictogramme de sa
+  matière tant qu'aucune règle ne le reconnaît : ajouter la règle, et un cas
+  dans `icone-theme.test.ts`.
+
+Ce qui suit décrit **la liste** (`ChapterList`), qui reste l'écran d'une matière
+sans thème (liste à plat) ou à un seul bloc (le rayon des fiches de lecture), et
+les lignes de fiche, communes aux deux écrans.
+
+## Ce que l'élève voit (la liste)
 
 ```
 ┌──────────────────────────────────────────────┐

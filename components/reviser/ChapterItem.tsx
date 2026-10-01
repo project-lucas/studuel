@@ -39,6 +39,7 @@ export default function ChapterItem({
   chapter,
   resumeLabel = null,
   rank = null,
+  numerote = true,
   open = false,
   supports = null,
   loading = false,
@@ -47,6 +48,8 @@ export default function ChapterItem({
   chapter: ChapterRow
   resumeLabel?: string | null
   rank?: number | null
+  /** Faux en philosophie : ses notions n'ont pas d'ordre, pas de numéro. */
+  numerote?: boolean
   /** La fiche est dépliée : ses supports sont montrés dessous. */
   open?: boolean
   /** Les supports chargés, ou null tant qu'on ne les a jamais demandés. */
@@ -108,7 +111,7 @@ export default function ChapterItem({
         >
           <Check className="size-5.5" strokeWidth={3} />
         </span>
-      ) : (
+      ) : !numerote ? null : (
         <span
           className={cn(
             'font-heading flex shrink-0 items-center justify-center rounded-xl bg-primary/10 font-extrabold text-primary',

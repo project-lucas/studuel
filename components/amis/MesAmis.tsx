@@ -2,36 +2,57 @@
 
 import { useState, useTransition } from 'react'
 import Image from 'next/image'
-import { Check, Crown, Pencil, Swords, X } from 'lucide-react'
+import { Check, Crown, Pencil, Plus, Swords, UserPlus, UserRound, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import FriendAddButton from '@/components/FriendAddButton'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import { FenetreAjouterAmi } from '@/components/FriendAddButton'
 import PortraitJoueur from '@/components/amis/PortraitJoueur'
 import CompteXp from '@/components/amis/ligue/CompteXp'
-import CoffreEquipe from '@/components/amis/ligue/CoffreEquipe'
+import CoffreLigne from '@/components/amis/ligue/CoffreLigne'
 import { useDuelLaunch } from '@/components/amis/useDuelLaunch'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import { renameSquad } from '@/app/amis/actions'
-import { classerAmis, echelon, type CoffrePret, type CoffreSemaine, type JoueurAmi } from '@/lib/ligue'
+import {
+  AMIS_MAX,
+  LIBELLE_BONUS_AMI,
+  classerAmis,
+  echelon,
+  libelleMultiplicateur,
+  multiplicateurXp,
+  placesAmis,
+  type CoffrePret,
+  type CoffreSemaine,
+  type JoueurAmi,
+} from '@/lib/ligue'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
-import type { ReferralSummary } from '@/lib/gems'
+import { REFERRAL_GEM_REWARD, type ReferralSummary } from '@/lib/gems'
 import { DUEL_XP_BONUS } from '@/lib/social'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
-import plaques from '@/components/amis/PlaquesAmis.module.css'
 
 // -----------------------------------------------------------------------------
-// MES AMIS — UN SEUL BLOC (Lucas, 24/09/2026 : « assemble les deux blocs et
-// condense le tout pour rendre clair cette mécanique »). La carte du bonus
-// d'amis et le classement des amis n'en font plus qu'une, qui se lit de haut
-// en bas comme la mécanique elle-même :
+// MES AMIS — LES DIX PLACES (maquette « A », validée par Lucas le 01/10/2026 :
+// « le but est le coffre qui augmente en fonction du nombre d'amis, mais aussi
+// que plus il ajoute ses amis, plus son multiplicateur global d'expérience
+// augmente »). Le bloc se lit de haut en bas comme la mécanique elle-même :
 //
 //   1. le nom du groupe (renommé par le n°1 de la semaine) ;
-//   2. LE COFFRE D'ÉQUIPE — l'XP de mes amis et la mienne, ses cinq niveaux ;
-//   3. mes amis, classés à l'XP de la semaine, blason de ligue et épée ;
-//   4. « AJOUTER UN AMI » (+30 gemmes pour vous deux), compacté dans l'angle
-//      haut-droit, sur la ligne du titre (Lucas, 24/09/2026).
+//   2. LE MULTIPLICATEUR D'XP, en grand : « ×1,3 » — toute l'XP gagnée ;
+//   3. LES DIX PLACES : un ami = une place = +0,1. Une place vide est un bouton
+//      d'invitation — sans ami, le bloc ENTIER est l'invitation ;
+//   4. « AJOUTER UN AMI » (+30 gemmes pour vous deux), le gros bouton ;
+//   5. LE COFFRE D'ÉQUIPE, en ligne : sa barre en deux parts, moi et mes amis ;
+//   6. mes amis, classés à l'XP de la semaine, blason de ligue et épée.
 //
-// Coffre, lignes et « Ajouter un ami » sont des PLAQUES façon Clash Royale
-// (cerne, épaisseur, chiffres cernés) : components/amis/PlaquesAmis.module.css.
+// Avant, le coffre était une plaque bleue qui prenait tout le bloc, le
+// multiplicateur n'y figurait pas (il ne se lisait que dans le bandeau), et
+// « Ajouter un ami » était un rond dans l'angle : rien ne disait POURQUOI
+// inviter. Le bloc parle la langue de Réviser : une `.carte` blanche, des
+// boutons `Button` violets, l'or pour ce qui se gagne.
+//
+// ⚠️ Le multiplicateur porte sur l'XP (migration 380). Les gemmes n'en
+// profitent qu'indirectement, par les niveaux gagnés plus vite : le bloc dit
+// donc « XP », jamais « gemmes ».
 // -----------------------------------------------------------------------------
 
 const NOM_PAR_DEFAUT = 'Mes amis'
@@ -40,19 +61,19 @@ const NOM_PAR_DEFAUT = 'Mes amis'
 function BoutonDefi({ id, nom, onBlocked }: { id: string; nom: string; onBlocked: () => void }) {
   const { launch, launching } = useDuelLaunch(onBlocked)
   return (
-    <button
+    <Button
       type="button"
+      size="icon-sm"
       aria-label={`Défier ${nom} (+${DUEL_XP_BONUS} XP)`}
       disabled={launching}
       onClick={() => launch(id)}
-      className={cn('grid size-9 shrink-0 cursor-pointer place-items-center text-primary-foreground disabled:opacity-60', plaques.defi)}
     >
       {launching ? (
         <Check className="size-4" aria-hidden="true" />
       ) : (
         <Swords className="size-4" strokeWidth={2.6} aria-hidden="true" />
       )}
-    </button>
+    </Button>
   )
 }
 
@@ -136,6 +157,79 @@ function NomDuGroupe({ squadName, canRename }: { squadName: string | null; canRe
   )
 }
 
+/**
+ * LES DIX PLACES. Une place occupée montre l'ami et ce qu'il rapporte (+0,1) ;
+ * une place vide est un bouton d'invitation — la première est mise en avant :
+ * c'est la prochaine marche.
+ */
+function Places({
+  amis,
+  nbAmis,
+  onInviter,
+}: {
+  amis: (JoueurAmi & { rang: number })[]
+  /** Le nombre d'amis compté par le serveur (celui du multiplicateur). */
+  nbAmis: number
+  onInviter: () => void
+}) {
+  const { occupees, anonymes, libres } = placesAmis(amis, nbAmis)
+  const bonus = (
+    <span className="font-heading absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-highlight px-1.5 text-[10.5px] leading-[18px] font-extrabold whitespace-nowrap text-foreground ring-2 ring-card">
+      {LIBELLE_BONUS_AMI}
+    </span>
+  )
+  return (
+    <ul
+      aria-label={`Tes ${AMIS_MAX} places d’amis`}
+      className="grid grid-cols-5 justify-items-center gap-x-1.5 gap-y-4"
+    >
+      {occupees.map((ami) => (
+        <li key={ami.id} className="relative">
+          <PortraitJoueur
+            id={ami.id}
+            portrait={ami.portrait}
+            className="size-[54px] ring-[3px] ring-primary"
+          />
+          <span className="sr-only">{ami.nom}, </span>
+          {bonus}
+        </li>
+      ))}
+      {/* Un ami compté par le serveur dont la liste ne porte pas le portrait :
+          sa place est prise quand même. */}
+      {Array.from({ length: anonymes }, (_, i) => (
+        <li key={`anonyme-${i}`} className="relative">
+          <span className="grid size-[54px] place-items-center rounded-full bg-secondary text-primary ring-[3px] ring-primary">
+            <UserRound className="size-6" strokeWidth={2.4} aria-hidden="true" />
+          </span>
+          <span className="sr-only">Un ami, </span>
+          {bonus}
+        </li>
+      ))}
+      {Array.from({ length: libres }, (_, i) => (
+        <li key={`libre-${i}`}>
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              onInviter()
+            }}
+            aria-haspopup="dialog"
+            aria-label={`Place libre : ajouter un ami (${LIBELLE_BONUS_AMI})`}
+            className={cn(
+              'grid size-[54px] cursor-pointer place-items-center rounded-full border-[2.5px] border-dashed transition-transform active:scale-90',
+              i === 0
+                ? 'border-primary bg-secondary text-primary'
+                : 'border-primary/30 text-primary/45',
+            )}
+          >
+            <Plus className="size-5" strokeWidth={3} aria-hidden="true" />
+          </button>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export default function MesAmis({
   joueurs,
   coffre,
@@ -167,21 +261,93 @@ export default function MesAmis({
   monAvatar?: AvatarAffiche | null
 }) {
   const [duelNotice, setDuelNotice] = useState(false)
+  const [ajout, setAjout] = useState(false)
+  useFermeAuMasquage(setAjout, false)
+
   const lignes = classerAmis(joueurs)
-  const aDesAmis = lignes.some((l) => !l.moi)
+  const amis = lignes.filter((l) => !l.moi)
   const enLigne = new Set(onlineFriendIds)
 
+  // Le nombre d'amis qui COMPTE est celui du serveur (le coffre) ; la liste
+  // affichée peut en porter davantage ou, hors ligue, tenir lieu de compte.
+  const nbAmis = Math.max(coffre.nbAmis, amis.length)
+  // Le multiplicateur et les mots suivent ce COMPTE ; seule la liste classée
+  // dépend des amis dont on a la ligne (`amis.length`).
+  const aDesAmis = nbAmis > 0
+  const { enPlus } = placesAmis(amis, nbAmis)
+  const complet = nbAmis >= AMIS_MAX
+  const multiplicateur = libelleMultiplicateur(multiplicateurXp(nbAmis, false))
+  const sommet = libelleMultiplicateur(multiplicateurXp(AMIS_MAX, false))
+
   return (
-    <section aria-label="Mes amis" className="carte flex flex-col gap-4 p-3 text-foreground">
-      {/* Le titre du groupe, et « Ajouter un ami » dans l'angle. */}
-      <div className="flex items-center justify-between gap-2">
-        <div className="min-w-0 flex-1">
-          <NomDuGroupe squadName={squadName} canRename={canRenameSquad} />
+    <section aria-label="Mes amis" className="carte flex flex-col gap-4 p-3.5 text-foreground">
+      <NomDuGroupe squadName={squadName} canRename={canRenameSquad} />
+
+      {/* LE MULTIPLICATEUR, en grand : c'est lui que les amis font monter. */}
+      <div className="flex items-center gap-3.5">
+        <p
+          className={cn(
+            'font-heading text-[54px] leading-[0.9] font-extrabold tracking-tight tabular-nums',
+            aDesAmis ? 'text-primary' : 'text-primary/35',
+          )}
+        >
+          <span className="sr-only">Ton multiplicateur d’XP : </span>
+          {multiplicateur}
+        </p>
+        <div className="min-w-0">
+          <p aria-hidden="true" className="font-heading text-base leading-tight font-extrabold">
+            Ton multiplicateur d’XP
+          </p>
+          <p className="mt-0.5 text-xs leading-snug font-semibold text-muted-foreground">
+            {complet
+              ? 'Le maximum : toute l’XP que tu gagnes compte double.'
+              : aDesAmis
+                ? `Toute l’XP que tu gagnes est multipliée. Chaque ami ajoute ${LIBELLE_BONUS_AMI}.`
+                : `Chaque ami ajoute ${LIBELLE_BONUS_AMI} à toute l’XP que tu gagnes, jusqu’à ${sommet}.`}
+          </p>
         </div>
-        <FriendAddButton variant="coin" myFriendCode={myFriendCode} referral={referral} />
       </div>
 
-      <CoffreEquipe
+      <Places amis={amis} nbAmis={nbAmis} onInviter={() => setAjout(true)} />
+
+      <p className="-mb-1 text-center text-xs font-semibold text-muted-foreground">
+        {complet ? (
+          <>
+            <strong className="font-extrabold text-foreground">
+              {AMIS_MAX} amis sur {AMIS_MAX}
+            </strong>
+            {enPlus > 0
+              ? ` · ${enPlus} de plus, qui remplissent aussi le coffre`
+              : ' · tu es au sommet'}
+          </>
+        ) : (
+          <>
+            <strong className="font-extrabold text-foreground">
+              {nbAmis} ami{nbAmis > 1 ? 's' : ''} sur {AMIS_MAX}
+            </strong>
+            {` · à ${AMIS_MAX} amis, tu passes à `}
+            <strong className="font-extrabold text-foreground">{sommet}</strong>
+          </>
+        )}
+      </p>
+
+      <Button
+        type="button"
+        size="xl"
+        onClick={() => setAjout(true)}
+        aria-haspopup="dialog"
+        className="w-full"
+      >
+        <UserPlus strokeWidth={2.8} aria-hidden="true" />
+        {aDesAmis ? 'Ajouter un ami' : 'Ajouter mon premier ami'}
+        <span className="font-heading ml-1 inline-flex items-center gap-0.5 rounded-full bg-highlight py-0.5 pr-1 pl-2 text-xs leading-none font-extrabold text-foreground">
+          +{REFERRAL_GEM_REWARD}
+          <CristalIcon className="-my-1 size-4" />
+          <span className="sr-only"> gemmes chacun</span>
+        </span>
+      </Button>
+
+      <CoffreLigne
         coffre={coffre}
         prets={coffresPrets}
         ouvrable={coffreOuvrable}
@@ -189,8 +355,8 @@ export default function MesAmis({
         maintenantIso={maintenantIso}
       />
 
-      {aDesAmis ? (
-        <ol aria-label="Mes amis, classés à l’XP de la semaine" className="flex flex-col gap-2">
+      {amis.length > 0 ? (
+        <ol aria-label="Mes amis, classés à l’XP de la semaine" className="flex flex-col gap-0.5">
           {lignes.map((l) => {
             const division = echelon(l.echelon)
             const connecte = !l.moi && enLigne.has(l.id)
@@ -198,7 +364,7 @@ export default function MesAmis({
               <li
                 key={l.id}
                 data-moi={l.moi || undefined}
-                className={cn('flex items-center gap-2 p-2', plaques.ligneAmi)}
+                className={cn('flex items-center gap-2 rounded-2xl px-2 py-1.5', l.moi && 'bg-primary/10 ring-2 ring-primary/50')}
               >
                 <span className="font-heading w-4 shrink-0 text-center text-sm font-extrabold text-muted-foreground tabular-nums">
                   {l.rang}
@@ -252,6 +418,12 @@ export default function MesAmis({
         </p>
       ) : null}
 
+      <FenetreAjouterAmi
+        open={ajout}
+        onClose={() => setAjout(false)}
+        myFriendCode={myFriendCode}
+        referral={referral}
+      />
     </section>
   )
 }

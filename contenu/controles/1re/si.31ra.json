@@ -1,0 +1,585 @@
+{
+  "niveau": "1re",
+  "matiere": "si",
+  "sujets": [
+    {
+      "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+      "difficulte": 1,
+      "titre": "Le robot du club de Maëlle",
+      "consigne": "Réponds à chaque question par des phrases complètes, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Le club de robotique du lycée de Maëlle doit construire un robot pour une compétition qui a lieu en mars. Le lycée lui accorde un budget de 400 €. Le règlement impose que le robot ramasse au moins 10 balles en 2 minutes.\n\n1. Définis ce qu'est un projet. En quoi la construction de ce robot est-elle un projet et non une activité de production ?\n2. Nomme les trois contraintes du triangle du projet. Pour chacune, dis ce qu'elle mesure et donne la valeur qui lui correspond dans la situation.\n3. Cite dans l'ordre les quatre phases du cycle de vie d'un projet, en indiquant ce que chacune produit. Qu'est-ce qu'un jalon, et quelles décisions peut-on y prendre ?",
+      "bareme": [
+        { "critere": "Définition du projet (mené une seule fois, objectif, délai, budget) et opposition à la production répétée", "points": 5 },
+        { "critere": "Coût, délai, qualité nommés, expliqués et reliés à 400 €, mars et 10 balles en 2 min", "points": 7 },
+        { "critere": "Quatre phases dans l'ordre avec leur production, jalon défini avec ses trois décisions", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un **projet** est un ensemble d'activités coordonnées, **mené une seule fois**, pour atteindre un **objectif défini** dans un **délai** et un **budget** donnés. Le robot est construit une seule fois pour une compétition précise, avec un budget et une date : c'est un projet. Une activité de **production**, elle, se **répète à l'identique** (fabriquer 500 robots identiques en série).\n\n2. **Coût** : le budget engagé, ici **400 €**. **Délai** : le temps disponible, ici jusqu'à la compétition de **mars**. **Qualité** (ou périmètre) : ce que le produit doit faire, ici **ramasser au moins 10 balles en 2 minutes**. On ne peut en améliorer une sans peser sur les deux autres.\n\n3. **Conception** (des solutions techniques comparées) → **Planification** (un ordonnancement des tâches) → **Réalisation** (le produit) → **Terminaison** (la livraison et le retour d'expérience). Chaque phase se clôt par un **jalon** : un point de décision où l'on choisit de **poursuivre**, de **corriger** ou d'**arrêter**."
+    },
+    {
+      "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+      "difficulte": 2,
+      "titre": "Le cahier des charges de l'étagère de Hugo",
+      "consigne": "Lis le brouillon de cahier des charges, puis réponds en justifiant chaque classement.",
+      "enonce": "**Situation.** Hugo, étudiant, veut une étagère murale au-dessus de son bureau pour y ranger ses livres. Son ami rédige ce brouillon de cahier des charges :\n\n| Ligne | Texte |\n|---|---|\n| a | L'étagère doit être solide. |\n| b | Utiliser des équerres en acier. |\n| c | Supporter une charge de 20 kg, tolérance ± 10 %. |\n| d | Tenir dans une niche de 80 cm de large au maximum. |\n| e | Permettre de ranger des livres au-dessus du bureau. |\n\n1. Réponds aux trois questions de l'analyse du besoin pour cette étagère.\n2. Laquelle des lignes exprime la fonction principale ? Laquelle exprime une fonction contrainte ? Justifie.\n3. Deux lignes sont des fautes dans un cahier des charges. Identifie-les et explique la faute de chacune.\n4. Pour la ligne c, donne le critère, le niveau et la flexibilité, puis la plus petite et la plus grande charge acceptables.",
+      "bareme": [
+        { "critere": "Les trois questions du besoin (à qui, sur quoi, dans quel but) correctement renseignées", "points": 4 },
+        { "critere": "Ligne e identifiée comme fonction principale, ligne d comme contrainte (encombrement), avec justification", "points": 5 },
+        { "critere": "Lignes a (non exploitable, pas de critère chiffré) et b (solution imposée) identifiées et expliquées", "points": 6 },
+        { "critere": "Critère, niveau, flexibilité de la ligne c et bornes 18 kg et 22 kg", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **À qui** rend-il service ? À **Hugo**, l'utilisateur. **Sur quoi** agit-il ? Sur **les livres**. **Dans quel but** ? Les **ranger au-dessus du bureau** (libérer le plan de travail tout en les gardant à portée).\n\n2. La **fonction principale** est la ligne **e** : c'est ce qui justifie l'existence de l'étagère. La ligne **d** est une **fonction contrainte** : c'est une limite imposée par le milieu extérieur (l'**encombrement** de la niche).\n\n3. La ligne **a** « être solide » n'est **pas exploitable** : il n'y a ni critère ni niveau chiffré, on ne pourra ni la vérifier ni la contester. La ligne **b** est une **solution** : le cahier des charges dit **ce qu'il faut faire, jamais comment** ; imposer des équerres en acier interdit d'avance toute autre piste (fixation cachée, tasseaux…).\n\n4. **Critère** : la charge supportée. **Niveau** : 20 kg. **Flexibilité** : ± 10 %. 10 % de 20 kg = 2 kg, donc la charge acceptable va de **18 kg** à **22 kg**."
+    },
+    {
+      "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+      "difficulte": 3,
+      "titre": "La trottinette pliante de la jeune entreprise",
+      "consigne": "Analyse la situation en t'appuyant sur le triangle du projet, les exigences du cahier des charges et les trois écarts. Justifie chaque conclusion.",
+      "enonce": "**Situation.** Une jeune entreprise conçoit une trottinette électrique pliante. Le projet était prévu en 12 mois ; la direction demande de le finir en 9 mois, sans augmenter le budget.\n\nExtrait du cahier des charges :\n\n| Fonction | Critère | Niveau | Flexibilité |\n|---|---|---|---|\n| Se plier rapidement | Durée de pliage | 10 s | + 2 s au plus |\n| Rouler sans recharge | Autonomie | 30 km | ± 2 km |\n\nRésultats obtenus :\n- pliage : prototype A en 11,5 s, prototype B en 12,8 s ;\n- autonomie : la simulation (le modèle) annonce 31 km, l'essai sur piste mesure 26 km.\n\n1. À l'aide du triangle du projet, explique ce que risque le projet si le délai passe à 9 mois sans budget supplémentaire. Propose deux façons d'arbitrer.\n2. Les prototypes A et B respectent-ils l'exigence de pliage ? Justifie par un calcul.\n3. Pour l'autonomie, identifie les trois écarts (entre quoi et quoi) et conclus sur chacun avec les valeurs.\n4. Le projet arrive à un jalon. Rappelle les trois décisions possibles et dis laquelle tu recommandes pour l'autonomie, en justifiant.",
+      "bareme": [
+        { "critere": "Conséquence sur la qualité expliquée par le triangle et deux arbitrages cohérents proposés", "points": 5 },
+        { "critere": "Borne de 12 s calculée, A conforme et B non conforme", "points": 4 },
+        { "critere": "Écarts 1, 2 et 3 nommés, chiffrés (28-32 km, 31 km, 26 km) et interprétés", "points": 7 },
+        { "critere": "Trois décisions de jalon citées et choix de corriger argumenté à partir des écarts", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Les trois contraintes sont liées : réduire le **délai** sans toucher au **coût** dégrade la **qualité** (moins d'essais, fonctions retirées, produit moins abouti). Arbitrages possibles : **augmenter le budget** (plus de personnes, sous-traitance) pour tenir 9 mois ; **réduire le périmètre** (sortir une première version sans certaines fonctions) ; ou **négocier le délai**.\n\n2. Niveau 10 s, flexibilité + 2 s : la durée maximale acceptable est **12 s**. A : 11,5 s ≤ 12 s → **conforme**. B : 12,8 s > 12 s → **non conforme**.\n\n3. Niveau acceptable : 30 ± 2 km, soit de **28 à 32 km**.\n- **Écart 1** (cahier des charges / modèle) : 31 km est dans [28 ; 32] → le modèle est **pertinent** au regard du besoin.\n- **Écart 2** (modèle / réel) : 31 − 26 = **5 km** → la simulation **prédit mal** : ses hypothèses ne sont pas justes.\n- **Écart 3** (réel / cahier des charges) : 26 km < 28 km → le produit **n'est pas conforme**.\n\n4. À un jalon on peut **poursuivre**, **corriger** ou **arrêter**. On recommande de **corriger** : le produit ne répond pas au besoin (écart 3), et comme le modèle prédit mal (écart 2), il faut d'abord revoir ses hypothèses pour pouvoir s'en servir afin de dimensionner la correction. Poursuivre reviendrait à livrer un produit non conforme ; arrêter serait prématuré, puisque le pliage de A est déjà conforme."
+    },
+    {
+      "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+      "difficulte": 1,
+      "titre": "Les deux chaînes du vélo à assistance",
+      "consigne": "Classe les composants puis explique le rôle de chaque chaîne.",
+      "enonce": "**Situation.** Un vélo à assistance électrique comporte les composants suivants : batterie, variateur, moteur, réducteur, roue arrière, capteur de pédalage, microcontrôleur, écran sur le guidon.\n\n1. Recopie et complète ce tableau en plaçant chaque composant dans sa chaîne et en face du maillon qu'il réalise.\n\n| Chaîne | Maillon | Composant |\n|---|---|---|\n| Énergie | Alimenter | ? |\n| Énergie | Distribuer | ? |\n| Énergie | Convertir | ? |\n| Énergie | Transmettre | ? |\n| Énergie | Agir | ? |\n| Information | Acquérir | ? |\n| Information | Traiter | ? |\n| Information | Communiquer | ? |\n\n2. Quel est le rôle de chacune des deux chaînes ? Explique en quoi c'est leur boucle, et non leur simple juxtaposition, qui fait un système.",
+      "bareme": [
+        { "critere": "Les huit composants placés au bon maillon de la bonne chaîne", "points": 12 },
+        { "critere": "Information qui décide, énergie qui exécute, boucle expliquée (l'information commande l'énergie, les capteurs renvoient l'information)", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Chaîne d'**énergie** : alimenter → **batterie** ; distribuer → **variateur** ; convertir → **moteur** ; transmettre → **réducteur** ; agir → **roue arrière**.\nChaîne d'**information** : acquérir → **capteur de pédalage** ; traiter → **microcontrôleur** ; communiquer → **écran**.\n\n2. La chaîne d'information **décide** (elle acquiert, traite, communique) ; la chaîne d'énergie **exécute** (elle alimente, distribue, convertit, transmet, agit). Elles se croisent : l'**information commande l'énergie** (le microcontrôleur pilote le variateur selon le pédalage), et l'énergie renvoie de l'information par les **capteurs** (le capteur mesure le pédalage qui résulte du mouvement). C'est cette **boucle** qui fait un système : deux chaînes posées côte à côte, sans échange, ne constitueraient pas un vélo à assistance."
+    },
+    {
+      "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+      "difficulte": 2,
+      "titre": "L'autonomie de la trottinette du lycée",
+      "consigne": "Réponds à chaque question en justifiant ; montre tes calculs de bornes.",
+      "enonce": "**Situation.** Pour une trottinette destinée aux lycéens, le premier brouillon du cahier des charges indique : « Permettre de se déplacer longtemps ».\n\n1. Explique pourquoi cette phrase n'est pas une exigence.\n2. Réécris cette fonction de service sous forme d'un tableau (fonction, critère, niveau, flexibilité) en prenant une autonomie de 25 km avec une tolérance de 3 km.\n3. Trois prototypes sont essayés. Autonomies mesurées : A = 23 km, B = 21 km, C = 27,5 km. Lesquels respectent l'exigence ? Justifie.\n4. La comparaison de la question 3 correspond à quel écart de la démarche SI ? Quelle question pose-t-il ?",
+      "bareme": [
+        { "critere": "Absence de critère chiffré : intention ni validable ni contestable", "points": 4 },
+        { "critere": "Tableau complet : fonction, autonomie, 25 km, ± 3 km", "points": 6 },
+        { "critere": "Intervalle 22 à 28 km, A et C conformes, B non conforme", "points": 6 },
+        { "critere": "Écart 3 (réel / cahier des charges) et sa question : le produit répond-il au besoin ?", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. « Longtemps » n'est ni mesuré ni chiffré : il manque le **critère**, le **niveau** et la **flexibilité**. Une fonction sans critère chiffré est une **intention**, pas une exigence : elle ne pourra ni être **validée**, ni être **contestée**.\n\n2.\n| Fonction | Critère | Niveau | Flexibilité |\n|---|---|---|---|\n| Permettre le déplacement d'un lycéen | Autonomie | 25 km | ± 3 km |\n\n3. Intervalle accepté : 25 − 3 = **22 km** à 25 + 3 = **28 km**.\n- A : 23 km → dans l'intervalle, **conforme**.\n- B : 21 km < 22 km → **non conforme**.\n- C : 27,5 km ≤ 28 km → **conforme**.\n\n4. On compare le **réel** mesuré au **cahier des charges** : c'est l'**écart 3**. Il pose la question : **le produit répond-il au besoin ?**"
+    },
+    {
+      "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+      "difficulte": 3,
+      "titre": "La serre automatisée du lycée agricole",
+      "consigne": "Analyse le système en t'appuyant sur les deux chaînes et les trois écarts. Chaque conclusion doit être justifiée par les données.",
+      "enonce": "**Situation.** Une serre est équipée d'une sonde de température, d'un microcontrôleur, d'un afficheur, d'une alimentation 12 V, d'un relais, d'un moteur de ventilateur, d'une courroie et d'un ventilateur à pales.\n\nCahier des charges : « Maintenir l'air de la serre sous 28 °C, flexibilité + 1 °C », par une journée de plein soleil.\n\nRésultats par journée de plein soleil :\n- la simulation (le modèle) prévoit une température maximale de 27,2 °C ;\n- la mesure dans la serre réelle donne 29,5 °C.\n\n1. Décris la chaîne d'information et la chaîne d'énergie de la serre, maillon par maillon, en plaçant chaque composant.\n2. Explique comment les deux chaînes forment une boucle dans ce système.\n3. Analyse les trois écarts : pour chacun, dis entre quoi et quoi il se mesure, calcule-le si possible, donne la question qu'il pose et ta conclusion.\n4. L'équipe veut tester des corrections par simulation avant de modifier la serre. Quel écart doit-elle traiter en premier ? Justifie.",
+      "bareme": [
+        { "critere": "Deux chaînes décrites avec leurs maillons et les huit composants correctement placés", "points": 6 },
+        { "critere": "Boucle expliquée : la sonde renseigne, le microcontrôleur commande le relais, l'effet revient au capteur", "points": 4 },
+        { "critere": "Écarts 1, 2 (2,3 °C) et 3 analysés avec la borne de 29 °C et conclusion juste pour chacun", "points": 6 },
+        { "critere": "Choix de l'écart 2 justifié : un modèle qui prédit mal ne peut pas servir à tester des corrections", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Chaîne d'**information** : acquérir → **sonde de température** ; traiter → **microcontrôleur** ; communiquer → **afficheur** (et l'ordre envoyé au relais).\nChaîne d'**énergie** : alimenter → **alimentation 12 V** ; distribuer → **relais** ; convertir → **moteur** ; transmettre → **courroie** ; agir → **ventilateur à pales** (il brasse et renouvelle l'air).\n\n2. L'**information commande l'énergie** : selon la température mesurée, le microcontrôleur ferme ou ouvre le relais qui alimente le moteur. L'énergie **renvoie de l'information** : l'air refroidi fait varier la température que mesure la sonde. C'est cette boucle qui fait un système.\n\n3. Borne acceptable : 28 + 1 = **29 °C** au maximum.\n- **Écart 1** (cahier des charges / modèle) : 27,2 °C ≤ 29 °C → l'hypothèse retenue est **valable** : la solution modélisée répond au besoin.\n- **Écart 2** (modèle / réel) : 29,5 − 27,2 = **2,3 °C** → la simulation **prédit mal** le comportement réel.\n- **Écart 3** (réel / cahier des charges) : 29,5 °C > 29 °C → le produit **ne répond pas au besoin**.\n\n4. Il faut traiter d'abord l'**écart 2** : tant que le modèle sous-estime la température de 2,3 °C, une correction qui paraît suffisante en simulation pourrait encore échouer dans la serre réelle. Il faut revoir le modèle jusqu'à ce qu'il prédise bien, puis s'en servir pour tester les corrections et réduire l'écart 3."
+    },
+    {
+      "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+      "difficulte": 1,
+      "titre": "La lampe de bureau de Chloé",
+      "consigne": "Classe les éléments proposés, puis réponds à la question de cours.",
+      "enonce": "**Situation.** Chloé conçoit une lampe de bureau. Elle a noté en vrac :\n\n- A : « Éclairer le plan de travail de l'utilisateur »\n- B : « Convertir l'énergie électrique en lumière »\n- C : « Une LED de 5 W »\n- D : « Orienter le faisceau lumineux »\n- E : « Un bras articulé à rotule »\n- F : « Permettre à l'utilisateur de régler la lumière »\n\n1. Rappelle ce que décrivent une fonction de service, une fonction technique et une solution constructive. Classe ensuite A à F dans ces trois niveaux.\n2. Pour trouver des solutions, l'équipe de Chloé organise un brainstorming. Décris les deux temps de la recherche de solutions : ce qu'on fait et ce qui est interdit dans chacun. Pourquoi l'interdit du premier temps est-il important ?",
+      "bareme": [
+        { "critere": "Trois niveaux définis et A à F correctement classés", "points": 10 },
+        { "critere": "Divergence et convergence décrites avec leurs interdits, rôle des idées fragiles expliqué", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Fonction de service** : ce que le produit doit rendre à l'utilisateur → **A** et **F**.\n**Fonction technique** : comment le système s'y prend → **B** et **D**.\n**Solution constructive** : la pièce, le composant retenu → **C** et **E**.\n\n2. **Divergence** : on produit le **plus d'idées possible** (brainstorming, analogies, combinaisons) ; il est **interdit de juger**.\n**Convergence** : on **évalue et on retient** ; il est interdit de **rouvrir la liste**.\nJuger pendant la divergence **tue les idées fragiles**, alors que c'est souvent d'elles que sortent les meilleures solutions : un même besoin admet toujours plusieurs solutions, et la phase de conception doit les faire apparaître."
+    },
+    {
+      "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+      "difficulte": 2,
+      "titre": "Le support de téléphone pour vélo",
+      "consigne": "Complète le tableau multicritère en détaillant tes calculs, puis réponds aux questions.",
+      "enonce": "**Situation.** Jules compare trois solutions de fixation d'un support de téléphone sur un guidon. Chaque critère reçoit un poids, chaque solution une note sur 5.\n\n| Critère | Poids | Solution A (collier vissé) | Solution B (sangle en silicone) | Solution C (bride en aluminium) |\n|---|---|---|---|---|\n| Solidité | 3 | 4 | 3 | 5 |\n| Coût | 2 | 2 | 4 | 1 |\n| Rapidité de montage | 1 | 3 | 4 | 2 |\n\n1. Calcule le total pondéré de chaque solution et donne le classement.\n2. Un coéquipier estime que la solidité doit peser 5 au lieu de 3. Recalcule les totaux et le nouveau classement.\n3. Que montre la comparaison des questions 1 et 2 sur l'outil « tableau multicritère » ?\n4. Avant de s'engager, quel outil de la phase de conception permettrait d'éprouver la solution retenue ? Pourquoi est-ce le bon moment ?",
+      "bareme": [
+        { "critere": "Totaux A = 19, B = 21, C = 19 et classement B en tête", "points": 6 },
+        { "critere": "Totaux recalculés A = 27, B = 27, C = 29 et C en tête", "points": 6 },
+        { "critere": "Outil qui rend le choix explicite et discutable, pas un oracle : les poids changent le classement", "points": 5 },
+        { "critere": "Prototypage rapide cité et intérêt justifié (coût décidé en conception)", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. A : 4 × 3 + 2 × 2 + 3 × 1 = 12 + 4 + 3 = **19**.\nB : 3 × 3 + 4 × 2 + 4 × 1 = 9 + 8 + 4 = **21**.\nC : 5 × 3 + 1 × 2 + 2 × 1 = 15 + 2 + 2 = **19**.\nClassement : **B** (21), puis A et C à égalité (19).\n\n2. Avec un poids 5 pour la solidité :\nA : 4 × 5 + 4 + 3 = 20 + 4 + 3 = **27**.\nB : 3 × 5 + 8 + 4 = 15 + 8 + 4 = **27**.\nC : 5 × 5 + 2 + 2 = 25 + 2 + 2 = **29**.\nClassement : **C** (29), puis A et B à égalité (27).\n\n3. Le tableau multicritère **n'est pas un oracle** : il ne donne pas la solution « objectivement » optimale. Il rend le choix **explicite et discutable** : changer les poids change le classement, et il faut savoir le montrer pour que l'équipe discute des priorités.\n\n4. Le **prototypage rapide** : il éprouve la solution **avant de s'engager**. C'est en conception que l'essentiel du coût final se décide alors que presque rien n'a été dépensé : un essai à ce moment coûte peu et évite une erreur coûteuse ensuite."
+    },
+    {
+      "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+      "difficulte": 3,
+      "titre": "Le distributeur de croquettes connecté",
+      "consigne": "Analyse la démarche de l'équipe et justifie chacune de tes critiques avec le cours.",
+      "enonce": "**Situation.** Une équipe de lycéens conçoit un distributeur de croquettes connecté pour chat. Voici des extraits de leur carnet de bord.\n\n> **Réunion 1.** Besoin : « Nourrir le chat à heures fixes en l'absence du maître ». Idées proposées : vis sans fin, trappe basculante, tambour rotatif… À chaque idée, Tom répond : « Ça ne marchera jamais », et on passe à la suivante. On retient la vis sans fin au bout de 10 minutes.\n\n> **Réunion 2.** Rapport de simulation : « Le moteur tiendra la charge : la simulation l'a montré. »\n\n> **Réunion 3.** Deux questions restent : la trappe risque-t-elle de toucher le bol ? Le moteur va-t-il trop chauffer ?\n\n1. Décline le besoin en une fonction de service, deux fonctions techniques et une solution constructive pour chaque fonction technique.\n2. Critique le déroulement de la réunion 1.\n3. Critique la phrase du rapport de la réunion 2 et cite trois hypothèses simplificatrices qu'il aurait fallu nommer.\n4. Pour chacune des deux questions de la réunion 3, indique l'outil de modélisation adapté et ce qu'il vérifie.\n5. Pourquoi est-il si important de bien mener cette phase de conception ?",
+      "bareme": [
+        { "critere": "Hiérarchie cohérente fonction de service, fonctions techniques, solutions constructives", "points": 4 },
+        { "critere": "Jugement pendant la divergence dénoncé, idées fragiles perdues, convergence trop rapide", "points": 4 },
+        { "critere": "Résultat sans hypothèses sans valeur ; trois hypothèses du cours citées", "points": 5 },
+        { "critere": "Maquette numérique pour l'interférence, simulation pour l'échauffement", "points": 4 },
+        { "critere": "L'essentiel du coût final se décide en conception alors que peu a été dépensé", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Exemple attendu :\n- Fonction de service : **nourrir le chat à heures fixes** en l'absence du maître.\n- Fonction technique 1 : **doser et faire tomber les croquettes** → solution constructive : une **vis sans fin** entraînée par un moteur.\n- Fonction technique 2 : **déclencher la distribution à l'heure prévue** → solution constructive : un **microcontrôleur avec horloge** (ou un programme sur carte).\n(Toute déclinaison cohérente est acceptée.)\n\n2. Tom **juge pendant la divergence** : c'est précisément ce qui est interdit. Il tue les idées fragiles, dont sortent souvent les meilleures solutions. L'équipe passe aussi trop vite à la **convergence** (10 minutes) sans avoir produit beaucoup d'idées ni les avoir comparées (tableau multicritère, par exemple).\n\n3. Un résultat de simulation n'a de sens **que dans le cadre de ses hypothèses** ; sans elles, il **n'a aucune valeur**. Il fallait nommer, par exemple : **solide indéformable**, **frottements négligés**, **régime permanent**.\n\n4. Contact entre la trappe et le bol : **maquette numérique (CAO)**, qui vérifie l'**encombrement**, les **interférences entre pièces** et les montages. Échauffement du moteur : **simulation**, qui vérifie l'**échauffement** (ainsi que la résistance mécanique ou la consommation).\n\n5. La conception transforme le besoin en solutions : c'est là que **l'essentiel du coût final se décide**, alors que **presque rien n'a encore été dépensé**. Une erreur de choix à ce stade se paie très cher ensuite."
+    },
+    {
+      "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+      "difficulte": 1,
+      "titre": "Le moteur du robot de Yanis",
+      "consigne": "Donne chaque formule utilisée, puis le calcul et le résultat avec son unité.",
+      "enonce": "**Situation.** Le moteur du robot de Yanis est alimenté sous une tension U = 12 V et absorbe un courant I = 2,5 A. Sur son arbre, on mesure un couple C = 0,15 N·m à la vitesse angulaire ω = 160 rad/s.\n\n1. Calcule la puissance électrique absorbée par le moteur.\n2. Calcule la puissance mécanique utile sur l'arbre.\n3. Calcule le rendement du moteur. Où sont passées les pertes ?\n4. Calcule l'énergie absorbée par le moteur s'il fonctionne 10 minutes.",
+      "bareme": [
+        { "critere": "P absorbée = U × I = 30 W", "points": 5 },
+        { "critere": "P utile = C × ω = 24 W", "points": 5 },
+        { "critere": "Rendement 0,8 et pertes citées (chaleur par effet Joule, frottements, bruit)", "points": 5 },
+        { "critere": "E = P × t = 18 000 J avec t converti en secondes", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. P(absorbée) = U × I = 12 × 2,5 = **30 W**.\n\n2. P(utile) = C × ω = 0,15 × 160 = **24 W**.\n\n3. η = P(utile) / P(absorbée) = 24 / 30 = **0,8** (80 %). Il est bien inférieur à 1 : les 6 W perdus partent en **chaleur** (effet Joule), en **frottements** et en **bruit**.\n\n4. t = 10 min = 600 s. E = P × t = 30 × 600 = **18 000 J**."
+    },
+    {
+      "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+      "difficulte": 2,
+      "titre": "Le treuil du chantier",
+      "consigne": "Détaille chaque calcul ; arrondis les puissances au dixième de watt.",
+      "enonce": "**Situation.** Sur un chantier, un treuil électrique hisse des charges. Sa chaîne comporte trois éléments en cascade :\n\n| Élément | Rendement |\n|---|---|\n| Moteur | 0,85 |\n| Réducteur | 0,90 |\n| Tambour et câble | 0,95 |\n\nLa puissance utile nécessaire pour hisser la charge vaut 400 W. Le treuil est alimenté par une batterie de 24 V.\n\n1. Calcule le rendement global de la chaîne.\n2. Calcule la puissance que la batterie doit fournir, puis la puissance perdue.\n3. Calcule l'intensité du courant fourni par la batterie.\n4. Un technicien affirme : « Chaque élément a un bon rendement, donc la chaîne perd au plus 15 % ». Réponds-lui.",
+      "bareme": [
+        { "critere": "Rendement global par produit : 0,85 × 0,90 × 0,95 ≈ 0,727", "points": 6 },
+        { "critere": "P absorbée ≈ 550,4 W et pertes ≈ 150,4 W", "points": 6 },
+        { "critere": "I = P / U ≈ 22,9 A", "points": 4 },
+        { "critere": "Réfutation : les rendements se multiplient, pertes d'environ 27 %", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les rendements se **multiplient** : η = 0,85 × 0,90 × 0,95 = 0,765 × 0,95 = **0,72675 ≈ 0,727**.\n\n2. P(absorbée) = P(utile) / η = 400 / 0,72675 ≈ **550,4 W**. Pertes = 550,4 − 400 ≈ **150,4 W**.\n\n3. P = U × I donc I = P / U = 550,4 / 24 ≈ **22,9 A**.\n\n4. C'est faux : les rendements ne se comparent pas au plus mauvais maillon, ils se **multiplient** en cascade. Le rendement global vaut 0,727 : la chaîne perd environ **27 %** de la puissance absorbée, bien plus que 15 %."
+    },
+    {
+      "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+      "difficulte": 3,
+      "titre": "Le portail coulissant motorisé",
+      "consigne": "Détaille chaque calcul et justifie les raisonnements. Arrondis au centième si nécessaire.",
+      "enonce": "**Situation.** Le portail coulissant d'une maison est motorisé.\n\n- Le moteur électrique est alimenté sous 24 V et absorbe 7,5 A. Son rendement vaut 0,8. Son arbre tourne à ω = 160 rad/s.\n- Un réducteur divise la vitesse de rotation par 12 ; son rendement vaut 0,9.\n- Une transmission, qu'on ne détaille pas ici, transforme ensuite la rotation en translation du portail.\n- Le portail a une masse de 200 kg. Au démarrage, il accélère à 0,15 m/s². Une ouverture complète dure 12 s.\n\n1. Calcule la puissance absorbée par le moteur, sa puissance mécanique utile et le couple sur son arbre.\n2. Calcule la vitesse angulaire, la puissance et le couple en sortie du réducteur. Pourquoi le couple n'est-il pas exactement multiplié par 12 ?\n3. Calcule le rendement global moteur + réducteur de deux façons.\n4. Au démarrage, quelle force résultante s'exerce sur le portail ? Quelle énergie le moteur absorbe-t-il pour une ouverture complète (on suppose qu'il absorbe 180 W pendant toute l'ouverture) ?\n5. Un installateur dit : « Le réducteur fabrique de la force. » Corrige sa phrase.",
+      "bareme": [
+        { "critere": "P absorbée 180 W, P utile 144 W, couple moteur 0,9 N·m", "points": 5 },
+        { "critere": "Sortie : ω ≈ 13,33 rad/s, P = 129,6 W, C ≈ 9,72 N·m, rôle des pertes", "points": 5 },
+        { "critere": "Rendement global 0,72 par produit et par rapport des puissances", "points": 3 },
+        { "critere": "Force résultante 30 N (ΣF = m × a) et énergie 2 160 J", "points": 4 },
+        { "critere": "Le réducteur échange de la vitesse contre du couple, P = C × ω conservée aux pertes près", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. P(absorbée) = U × I = 24 × 7,5 = **180 W**.\nP(utile moteur) = 0,8 × 180 = **144 W**.\nC(moteur) = P / ω = 144 / 160 = **0,9 N·m**.\n\n2. ω(sortie) = 160 / 12 ≈ **13,33 rad/s**.\nP(sortie) = 0,9 × 144 = **129,6 W**.\nC(sortie) = P / ω = 129,6 / 13,33 ≈ **9,72 N·m** (soit 0,9 × 12 × 0,9 N·m).\nSans pertes, le couple serait 12 × 0,9 = 10,8 N·m ; comme le réducteur perd 10 % de la puissance, le couple de sortie vaut seulement 90 % de cette valeur.\n\n3. Par produit : η = 0,8 × 0,9 = **0,72**. Par les puissances : 129,6 / 180 = **0,72**. Les deux méthodes concordent.\n\n4. Dynamique : ΣF = m × a = 200 × 0,15 = **30 N**.\nÉnergie : E = P × t = 180 × 12 = **2 160 J**.\n\n5. Un réducteur **ne crée pas de force** : il **échange de la vitesse contre du couple**. Le produit P = C × ω se conserve, **aux pertes près** : la vitesse est divisée par 12, le couple est multiplié par un peu moins de 12."
+    },
+    {
+      "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+      "difficulte": 1,
+      "titre": "Les capteurs de la maquette de Lucie",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "**Situation.** Lucie équipe une maquette de maison connectée des capteurs suivants :\n\n- a : un fin de course qui détecte que la porte du garage est fermée ;\n- b : une sonde de température qui délivre une tension continue proportionnelle à la température ;\n- c : un capteur d'humidité qui transmet sa valeur codée sur un bus I2C ;\n- d : un bouton poussoir de sonnette ;\n- e : une photorésistance montée pour délivrer une tension qui varie avec la luminosité.\n\n1. Classe chaque capteur dans l'un des trois types du cours (TOR, analogique, numérique) en justifiant.\n2. La tension de la sonde b est convertie par un convertisseur analogique-numérique. Combien de niveaux offre une conversion sur 8 bits, sur 10 bits, sur 12 bits ? Quel est l'intérêt d'augmenter le nombre de bits ?\n3. Le programme de la maquette tourne dans une boucle infinie. Écris ses quatre étapes dans l'ordre.",
+      "bareme": [
+        { "critere": "a et d en TOR, b et e en analogique, c en numérique, avec justification", "points": 8 },
+        { "critere": "256, 1 024 et 4 096 niveaux, et quantification plus fine avec plus de bits", "points": 6 },
+        { "critere": "Lire les entrées, calculer, écrire les sorties, recommencer", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **TOR** (deux états seulement) : **a** (porte fermée ou non) et **d** (appuyé ou non).\n**Analogique** (une tension continue) : **b** et **e**.\n**Numérique** (une valeur codée sur un bus) : **c** (bus I2C).\n\n2. 8 bits → **256** niveaux ; 10 bits → **1 024** niveaux ; 12 bits → **4 096** niveaux. Le CAN **quantifie** l'amplitude : plus il y a de niveaux, plus chaque échantillon est arrondi finement, donc la valeur numérique est plus proche de la tension réelle.\n\n3. 1. **Lire** les entrées (capteurs) ; 2. **Calculer** l'action à mener ; 3. **Écrire** les sorties (actionneurs) ; 4. **Recommencer**."
+    },
+    {
+      "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+      "difficulte": 2,
+      "titre": "La station météo du lycée",
+      "consigne": "Détaille tes calculs et justifie tes réponses avec le cours.",
+      "enonce": "**Situation.** La station météo du lycée comporte une sonde de température qui délivre une tension de 0 à 5 V, et un anémomètre (vitesse du vent) dont le signal contient des fréquences jusqu'à 40 Hz.\n\nOn rappelle que l'écart de tension entre deux niveaux voisins d'un CAN vaut l'étendue de mesure divisée par le nombre de niveaux.\n\n1. La sonde est convertie sur 10 bits. Calcule le nombre de niveaux et l'écart de tension entre deux niveaux voisins (en mV).\n2. Même question avec un CAN de 12 bits.\n3. Pour l'anémomètre, Enzo propose d'échantillonner à 50 Hz. Est-ce acceptable ? Quelle fréquence minimale faut-il ? Que se passerait-il avec 50 Hz ?\n4. L'anémomètre doit servir à orienter une éolienne qui réagit en une fraction de seconde. Le capteur choisi est très précis mais a un temps de réponse de 2 s. Est-ce un bon choix ? Justifie.",
+      "bareme": [
+        { "critere": "1 024 niveaux et écart ≈ 4,88 mV", "points": 5 },
+        { "critere": "4 096 niveaux et écart ≈ 1,22 mV", "points": 5 },
+        { "critere": "50 Hz refusé, minimum 80 Hz (Shannon), signal irrémédiablement déformé", "points": 5 },
+        { "critere": "Capteur trop lent : il fausse un asservissement rapide malgré sa précision", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 10 bits → 2 puissance 10 = **1 024** niveaux. Écart = 5 / 1 024 ≈ 0,00488 V ≈ **4,88 mV**.\n\n2. 12 bits → **4 096** niveaux. Écart = 5 / 4 096 ≈ 0,00122 V ≈ **1,22 mV**. La mesure est quatre fois plus fine.\n\n3. Le théorème de **Shannon** impose une fréquence d'échantillonnage **au moins double** de la fréquence maximale du signal : 2 × 40 = **80 Hz** au minimum. 50 Hz < 80 Hz : **non acceptable**. Le signal ne serait pas seulement dégradé, il serait **irrémédiablement déformé**, et aucun traitement ultérieur ne le récupérerait.\n\n4. Non. Le **temps de réponse** compte autant que la précision : un capteur trop lent **fausse un asservissement rapide même s'il est parfaitement précis**. L'éolienne réagirait à un vent vieux de 2 s. Il faut un capteur au temps de réponse adapté à la rapidité du système."
+    },
+    {
+      "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+      "difficulte": 3,
+      "titre": "Le portail automatique de la résidence",
+      "consigne": "Modélise le fonctionnement du portail et justifie tes choix avec le cours.",
+      "enonce": "**Situation.** Le portail d'une résidence est commandé par un microcontrôleur. Il dispose de :\n\n- T : un bouton de télécommande (appuyé ou non) ;\n- FCO : un fin de course « portail ouvert » ;\n- FCF : un fin de course « portail fermé » ;\n- P : une cellule qui détecte une présence dans le passage ;\n- deux sorties : moteur en sens ouverture, moteur en sens fermeture.\n\nFonctionnement voulu : portail fermé, un appui sur T lance l'ouverture jusqu'au fin de course FCO ; portail ouvert, un appui sur T lance la fermeture jusqu'au fin de course FCF. Si une présence est détectée pendant la fermeture, le portail se rouvre immédiatement.\n\n1. De quel type sont les quatre capteurs ? Justifie.\n2. Donne les quatre états du portail, puis toutes les transitions sous forme de tableau (état de départ, condition, état d'arrivée).\n3. Écris en pseudo-code la boucle infinie du programme, en reprenant ses quatre étapes.\n4. Pourquoi le diagramme d'états est-il l'outil le plus adapté ici ? Pourquoi décrire l'algorithme avant de le coder ?",
+      "bareme": [
+        { "critere": "Quatre capteurs identifiés TOR avec justification", "points": 3 },
+        { "critere": "Quatre états et cinq transitions justes, dont la réouverture sur présence", "points": 7 },
+        { "critere": "Pseudo-code en boucle : lire les entrées, calculer l'état, écrire les sorties, recommencer", "points": 6 },
+        { "critere": "Système séquentiel justifiant le diagramme d'états ; intérêt de décrire avant de coder", "points": 4 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Les quatre capteurs sont **TOR** : ils ne rendent que **deux états** (appuyé/relâché, atteint/non atteint, présence/absence).\n\n2. États : **Fermé**, **En ouverture**, **Ouvert**, **En fermeture**.\n\n| État de départ | Condition | État d'arrivée |\n|---|---|---|\n| Fermé | T appuyé | En ouverture |\n| En ouverture | FCO = 1 | Ouvert |\n| Ouvert | T appuyé | En fermeture |\n| En fermeture | FCF = 1 | Fermé |\n| En fermeture | P = 1 | En ouverture |\n\n3. Exemple :\n```\nétat ← Fermé\nrépéter indéfiniment\n  lire T, FCO, FCF, P\n  si état = Fermé et T alors état ← En ouverture\n  sinon si état = En ouverture et FCO alors état ← Ouvert\n  sinon si état = Ouvert et T alors état ← En fermeture\n  sinon si état = En fermeture et P alors état ← En ouverture\n  sinon si état = En fermeture et FCF alors état ← Fermé\n  moteur_ouverture ← (état = En ouverture)\n  moteur_fermeture ← (état = En fermeture)\nfin répéter\n```\nOn doit y retrouver : **lire** les entrées, **calculer** l'action, **écrire** les sorties, **recommencer**. La présence est testée avant FCF pour que la sécurité passe en priorité.\n\n4. Le portail est un **système séquentiel** : ce qu'il fait dépend de l'état où il se trouve (un appui sur T ne produit pas le même effet portail ouvert ou fermé). Le diagramme d'états, avec ses **états**, ses **transitions** et leurs **conditions de franchissement**, est l'outil le plus adapté. On décrit l'algorithme **avant** de le coder pour vérifier la logique (aucune transition oubliée, sécurité prévue) indépendamment du langage."
+    },
+    {
+      "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+      "difficulte": 1,
+      "titre": "Planifier la sortie scolaire",
+      "consigne": "Réponds à chaque question en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Le professeur de Sofiane lui confie la planification d'un projet de sortie scolaire : réserver le car, obtenir les autorisations des familles, préparer le programme de visite, etc.\n\n1. Planifier répond à trois questions. Lesquelles ? Donne les trois caractères qui décrivent chaque tâche élémentaire.\n2. Compare le diagramme de Gantt et le réseau PERT : forme de chacun et usage principal.\n3. Définis la marge d'une tâche et le chemin critique. Sofiane veut aller plus vite en réduisant la durée d'une tâche qui a de la marge : le projet sera-t-il plus court ? Explique.",
+      "bareme": [
+        { "critere": "Quelles tâches, dans quel ordre, avec quelles ressources ; durée, ressources, antériorités", "points": 6 },
+        { "critere": "Gantt (rectangles proportionnels, suivre) et PERT (réseau, calculer dates et marges)", "points": 6 },
+        { "critere": "Marge et chemin critique définis ; aucun gain en accélérant une tâche non critique", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Planifier, c'est répondre à : **quelles tâches**, **dans quel ordre**, **avec quelles ressources**. Chaque tâche est caractérisée par sa **durée**, ses **ressources** (machines, opérateurs, matière) et ses **antériorités** (les tâches à terminer avant qu'elle commence).\n\n2. **Diagramme de Gantt** : un rectangle horizontal par tâche, de longueur proportionnelle à sa durée ; il sert à **suivre** le projet, il montre les tâches simultanées. **Réseau PERT** : un réseau de tâches et d'enchaînements ; il sert à **calculer** les dates au plus tôt, au plus tard et les marges.\n\n3. La **marge** d'une tâche est la différence entre sa date au plus tard et sa date au plus tôt. Le **chemin critique** est la suite des tâches de **marge nulle** ; sa longueur donne la **durée minimale** du projet. Accélérer une tâche qui a de la marge (hors du chemin critique) ne fait gagner **aucun jour** : la durée du projet reste fixée par le chemin critique."
+    },
+    {
+      "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+      "difficulte": 2,
+      "titre": "Le stand des portes ouvertes",
+      "consigne": "Calcule les dates en jours, en partant du jour 0. Présente tes résultats dans un tableau.",
+      "enonce": "**Situation.** Léna organise le stand SI des portes ouvertes du lycée.\n\n| Tâche | Désignation | Durée (jours) | Antériorités |\n|---|---|---|---|\n| A | Concevoir le stand | 3 | — |\n| B | Commander le matériel | 2 | A |\n| C | Réaliser les affiches | 3 | A |\n| D | Monter le stand | 2 | B |\n| E | Installer les affiches | 1 | C et D |\n\n1. Calcule la date de début et de fin au plus tôt de chaque tâche. Quelle est la durée minimale du projet ?\n2. Calcule la date de début au plus tard de chaque tâche, puis sa marge.\n3. Donne le chemin critique.\n4. Léna propose de réaliser les affiches en 2 jours au lieu de 3, en y mettant deux élèves. Combien de jours le projet gagne-t-il ? Justifie.",
+      "bareme": [
+        { "critere": "Dates au plus tôt justes et durée minimale de 8 jours", "points": 5 },
+        { "critere": "Dates au plus tard obtenues de la fin vers le début et marges justes (C = 1 jour)", "points": 5 },
+        { "critere": "Chemin critique A-B-D-E", "points": 5 },
+        { "critere": "Aucun gain : C n'est pas critique", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Du début vers la fin :\n| Tâche | Début au plus tôt | Fin au plus tôt |\n|---|---|---|\n| A | 0 | 3 |\n| B | 3 | 5 |\n| C | 3 | 6 |\n| D | 5 | 7 |\n| E | max(6 ; 7) = 7 | 8 |\nDurée minimale : **8 jours**.\n\n2. De la fin vers le début : E doit commencer au plus tard le jour 7. C doit finir au plus tard à 7 → début au plus tard 7 − 3 = 4. D doit finir à 7 → début 5. B doit finir à 5 → début 3. A doit finir au plus tard à min(3 ; 4) = 3 → début 0.\n| Tâche | Au plus tôt | Au plus tard | Marge |\n|---|---|---|---|\n| A | 0 | 0 | 0 |\n| B | 3 | 3 | 0 |\n| C | 3 | 4 | **1** |\n| D | 5 | 5 | 0 |\n| E | 7 | 7 | 0 |\n\n3. Chemin critique (marge nulle) : **A → B → D → E**, soit 3 + 2 + 2 + 1 = 8 jours.\n\n4. **Aucun jour** : C n'est pas sur le chemin critique (marge de 1 jour). Raccourcir C porte sa marge à 2 jours, mais E attend toujours la fin de D au jour 7. Le projet dure toujours 8 jours ; on ne renforce que ce qui est critique."
+    },
+    {
+      "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+      "difficulte": 3,
+      "titre": "Le robot suiveur de ligne",
+      "consigne": "Mène l'étude complète du planning : calcule, analyse, puis propose des décisions justifiées.",
+      "enonce": "**Situation.** Une équipe de Première réalise le prototype d'un robot suiveur de ligne.\n\n| Tâche | Désignation | Durée (jours) | Antériorités |\n|---|---|---|---|\n| A | Rédiger le cahier des charges | 2 | — |\n| B | Concevoir la mécanique | 5 | A |\n| C | Concevoir l'électronique | 4 | A |\n| D | Écrire le programme | 6 | A |\n| E | Fabriquer le châssis | 3 | B |\n| F | Câbler la carte | 2 | C |\n| G | Intégrer et essayer | 3 | D, E et F |\n\n1. Calcule les dates au plus tôt de chaque tâche et la durée minimale du projet.\n2. Calcule les dates de début au plus tard et les marges.\n3. Donne le chemin critique et vérifie sa longueur.\n4. En cours de projet, deux retards sont annoncés : C prend 1 jour de plus, E prend 2 jours de plus. Quelle est la conséquence de chacun sur la date de fin ?\n5. Face à ces retards, quelles décisions l'équipe peut-elle prendre ? Et que permet le lissage des ressources dans ce projet ?",
+      "bareme": [
+        { "critere": "Dates au plus tôt justes et durée minimale de 13 jours", "points": 5 },
+        { "critere": "Dates au plus tard et marges justes (C, D, F : 2 jours ; autres : 0)", "points": 5 },
+        { "critere": "Chemin critique A-B-E-G de 13 jours", "points": 3 },
+        { "critere": "Retard de C absorbé par sa marge ; retard de E : fin au jour 15", "points": 4 },
+        { "critere": "Arbitrage (moyens, périmètre, décalage) et lissage des tâches à marge expliqués", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Au plus tôt (début → fin) : A 0 → 2 ; B 2 → 7 ; C 2 → 6 ; D 2 → 8 ; E 7 → 10 ; F 6 → 8 ; G commence à max(10 ; 8 ; 8) = 10 et finit à **13**. Durée minimale : **13 jours**.\n\n2. Au plus tard (fin → début) : G début 10. E doit finir à 10 → début 7. F doit finir à 10 → début 8. D doit finir à 10 → début 4. B doit finir à 7 → début 2. C doit finir à 8 → début 4. A doit finir à min(2 ; 4 ; 4) = 2 → début 0.\n| Tâche | Début au plus tôt | Début au plus tard | Marge |\n|---|---|---|---|\n| A | 0 | 0 | 0 |\n| B | 2 | 2 | 0 |\n| C | 2 | 4 | 2 |\n| D | 2 | 4 | 2 |\n| E | 7 | 7 | 0 |\n| F | 6 | 8 | 2 |\n| G | 10 | 10 | 0 |\n\n3. Chemin critique : **A → B → E → G**, soit 2 + 5 + 3 + 3 = **13 jours**.\n\n4. **C** a une marge de 2 jours (partagée avec F sur le chemin A-C-F-G) : 1 jour de retard **se résorbe**, la fin reste au jour 13. **E** est **critique** : 2 jours de retard retardent tout le projet de 2 jours, fin au **jour 15**.\n\n5. Un retard sur une tâche critique impose un **arbitrage** : **ajouter des moyens** sur E (une personne de plus, une machine), **réduire le périmètre** (un châssis simplifié), ou **accepter le décalage** à 15 jours. Le **lissage** consiste à décaler les tâches qui ont une marge (C, D, F) pour éviter les pics de charge : par exemple, si une même personne doit câbler et programmer, on peut décaler F dans sa marge (début entre le jour 6 et le jour 8) sans retarder le projet."
+    },
+    {
+      "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+      "difficulte": 1,
+      "titre": "Vérifier ou valider ?",
+      "consigne": "Réponds à chaque question avec précision.",
+      "enonce": "**Situation.** Une entreprise termine la réalisation d'un fauteuil roulant électrique léger.\n\n1. Explique la différence entre vérifier et valider : quelle question pose chacun, et par rapport à quel référentiel ?\n2. Classe chacune de ces actions en vérification ou en validation :\n   - a : on mesure que la batterie a bien la capacité inscrite dans les spécifications ;\n   - b : on fait utiliser le fauteuil pendant une semaine à des personnes à mobilité réduite pour savoir s'il leur convient ;\n   - c : on contrôle que la largeur du fauteuil est bien de 62 cm comme prévu sur le plan ;\n   - d : on demande à des aides-soignants si le fauteuil leur permet vraiment de transférer un patient seul.\n3. Cite les quatre étapes de la phase de terminaison. Pourquoi le retour d'expérience est-il si souvent sacrifié ?",
+      "bareme": [
+        { "critere": "Vérifier : bien construit, spécifications ; valider : bon produit, besoin réel", "points": 6 },
+        { "critere": "a et c en vérification, b et d en validation", "points": 6 },
+        { "critere": "Livraison-recette, documentation, bilan, clôture ; bénéfice qui va aux projets suivants", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Vérifier** : a-t-on **bien construit** le produit ? Le référentiel est constitué des **spécifications**. **Valider** : a-t-on construit le **bon** produit ? Le référentiel est le **besoin réel** de l'utilisateur. Un produit peut être parfaitement vérifié et rester invalide si la spécification traduisait mal le besoin.\n\n2. a : **vérification** (conformité à une spécification). b : **validation** (réponse au besoin réel des utilisateurs). c : **vérification** (cote du plan). d : **validation** (besoin réel des utilisateurs).\n\n3. **Livraison et recette** (réception avec le client), **documentation** (notice, plan de maintenance, dossier technique), **bilan** (écarts de coût et de délai, difficultés, retour d'expérience), **clôture** (dissolution de l'équipe, archivage). Le retour d'expérience est sacrifié parce que c'est la seule étape dont le bénéfice ne va **pas au projet en cours mais aux suivants** ; pourtant, sans lui, chaque projet recommence les erreurs du précédent."
+    },
+    {
+      "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+      "difficulte": 2,
+      "titre": "L'essai de la gourde isotherme",
+      "consigne": "Analyse l'essai en suivant la démarche du cours ; justifie chaque réponse.",
+      "enonce": "**Situation.** Une entreprise développe une gourde isotherme. Cahier des charges : « Maintenir l'eau au-dessus de 60 °C pendant 6 h, flexibilité − 30 min ».\n\nCompte rendu d'essai :\n\n> Gourde remplie d'eau à 90 °C, placée dans l'atelier. Température de la pièce : 12 °C (le protocole prévoit 20 °C). L'eau passe sous 60 °C au bout de 5 h 10 min.\n\n1. Calcule la durée minimale acceptable. Le résultat de l'essai est-il conforme ?\n2. Un écart entre performance mesurée et cahier des charges peut avoir trois origines. Cite-les et, pour chacune, dis ce qu'il faudrait examiner sur cette gourde.\n3. Quelle origine le compte rendu désigne-t-il en priorité ? Que faut-il faire avant toute conclusion ?\n4. En cours de réalisation, le client demande d'ajouter une paille intégrée. Comment cette modification doit-elle être gérée, et pourquoi ?",
+      "bareme": [
+        { "critere": "Durée minimale 5 h 30 et résultat non conforme en l'état", "points": 4 },
+        { "critere": "Trois origines (produit, protocole de mesure, hypothèse du modèle) appliquées à la gourde", "points": 6 },
+        { "critere": "Protocole non respecté (12 °C au lieu de 20 °C) : refaire l'essai dans les conditions prévues", "points": 5 },
+        { "critere": "Modification tracée, chiffrée et validée, pour éviter que le projet dérive", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 6 h − 30 min = **5 h 30 min**. Mesure : 5 h 10 min < 5 h 30 min → en l'état, le résultat est **non conforme**.\n\n2. **Le produit** : une fabrication non conforme (défaut du vide entre les parois, joint du bouchon mal posé). **Le protocole de mesure** : l'instrument (thermomètre mal étalonné) ou les conditions d'essai. **Une hypothèse du modèle** : trop grossière (par exemple des pertes par le bouchon négligées dans le calcul).\n\n3. Le compte rendu désigne d'abord le **protocole de mesure** : la pièce était à **12 °C** au lieu des **20 °C** prévus ; la gourde s'y refroidit plus vite. Avant de conclure sur le produit, il faut **refaire l'essai dans les conditions du protocole**. Si l'écart persiste, on examinera le produit puis les hypothèses du modèle.\n\n4. Toute évolution du besoin doit être **tracée, chiffrée et validée** (gestion des modifications), et intégrée à la traçabilité (versions, pièces, essais). Sans cela, le projet **dérive sans qu'on sache pourquoi** : coût, délai et performances changent sans décision explicite."
+    },
+    {
+      "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+      "difficulte": 3,
+      "titre": "Le parc à vélos connecté du lycée",
+      "consigne": "Analyse la fin de ce projet et rédige les éléments demandés en justifiant avec le cours.",
+      "enonce": "**Situation.** Un lycée a fait installer un parc à vélos à déverrouillage automatique. Spécification : « Déverrouiller un vélo en moins de 5 s après présentation de la carte du lycée ». Lors de la recette, le déverrouillage prend 3 s.\n\nTrois mois plus tard, le parc est peu utilisé : les élèves expliquent qu'ils oublient souvent leur carte et qu'ils ont toujours leur téléphone sur eux.\n\nBilan financier et calendaire :\n\n| | Prévu | Réel |\n|---|---|---|\n| Coût | 12 000 € | 13 800 € |\n| Délai | 10 semaines | 12 semaines |\n\n1. Le produit est-il vérifié ? Est-il validé ? Justifie.\n2. D'où vient le problème ? À quel moment aurait-il fallu le détecter ?\n3. Calcule les écarts de coût et de délai, en valeur et en pourcentage du prévu.\n4. Rédige trois éléments de retour d'expérience utiles au prochain projet du lycée.\n5. Pourquoi la phase de terminaison est-elle souvent bâclée, et pourquoi est-ce une erreur ?",
+      "bareme": [
+        { "critere": "Vérifié (3 s < 5 s) mais non validé (le besoin réel n'est pas satisfait)", "points": 4 },
+        { "critere": "Spécification qui traduisait mal le besoin, à détecter dès l'analyse du besoin ou la validation", "points": 4 },
+        { "critere": "Écarts + 1 800 € (+ 15 %) et + 2 semaines (+ 20 %)", "points": 4 },
+        { "critere": "Trois retours d'expérience pertinents, tirés de la situation", "points": 5 },
+        { "critere": "Bénéfice pour les projets suivants, erreurs répétées sans retour d'expérience", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Vérifié** : oui, le déverrouillage prend 3 s < 5 s, conformément à la spécification (on a **bien construit** le produit). **Validé** : non, le produit ne répond pas au **besoin réel** des élèves (ils n'ont pas leur carte) : on n'a pas construit le **bon** produit.\n\n2. La **spécification traduisait mal le besoin** : elle imposait la carte du lycée sans vérifier comment les élèves voulaient s'identifier. Il fallait le détecter dès l'**analyse du besoin** (à qui, sur quoi, dans quel but), puis par une **validation** avec de vrais utilisateurs avant la livraison.\n\n3. Coût : 13 800 − 12 000 = **+ 1 800 €**, soit 1 800 / 12 000 = **+ 15 %**. Délai : 12 − 10 = **+ 2 semaines**, soit 2 / 10 = **+ 20 %**.\n\n4. Exemples :\n- interroger les futurs utilisateurs sur leurs habitudes avant d'écrire la spécification ;\n- prévoir une phase de validation en conditions réelles avant la recette définitive ;\n- analyser les causes du dépassement de 15 % et de 2 semaines (modifications non chiffrées, tâches critiques sous-estimées) pour mieux estimer le prochain planning.\n(Tout retour d'expérience tiré de la situation est accepté.)\n\n5. La terminaison est la seule phase dont le bénéfice **ne va pas au projet en cours mais aux suivants** : sous la pression, on la sacrifie. C'est une erreur, car **sans retour d'expérience, chaque nouveau projet recommence les erreurs du précédent**."
+    },
+    {
+      "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+      "difficulte": 1,
+      "titre": "Quel diagramme SysML ?",
+      "consigne": "Choisis le bon diagramme pour chaque question, puis complète les chaînes.",
+      "enonce": "**Situation.** Une équipe décrit en SysML une imprimante 3D.\n\n1. Pour chacune des questions suivantes, indique le diagramme SysML qui y répond et la famille à laquelle il appartient (besoin, structure ou comportement) :\n   - a : Quelles exigences, chacune identifiée et vérifiable, l'imprimante doit-elle respecter ?\n   - b : Quels acteurs extérieurs utilisent l'imprimante, et pour quels services ?\n   - c : De quels blocs l'imprimante est-elle composée ?\n   - d : Quels flux de matière, d'énergie et d'information circulent entre ces blocs ?\n   - e : Par quels états passe l'imprimante (en attente, en chauffe, en impression…) ?\n   - f : Dans quel ordre l'ordinateur et l'imprimante échangent-ils leurs messages au cours du temps ?\n2. Écris les maillons de la chaîne d'information et de la chaîne d'énergie, en indiquant le composant type de chaque maillon quand le cours le donne.",
+      "bareme": [
+        { "critere": "Six diagrammes et leur famille correctement associés", "points": 12 },
+        { "critere": "Maillons des deux chaînes dans l'ordre avec capteur, calculateur, préactionneur, actionneur, réducteur", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a : diagramme des **exigences** (besoin). b : diagramme de **cas d'utilisation** (besoin). c : diagramme de **définition de blocs** (structure). d : diagramme de **blocs internes** (structure). e : diagramme d'**états** (comportement). f : diagramme de **séquence** (comportement).\n\n2. Chaîne d'**information** : acquérir (**capteur**) → traiter (**calculateur**) → communiquer.\nChaîne d'**énergie** : alimenter → distribuer (**préactionneur**) → convertir (**actionneur**) → transmettre (**réducteur, courroie**) → agir."
+    },
+    {
+      "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+      "difficulte": 2,
+      "titre": "Le robot aspirateur de Nora",
+      "consigne": "Réponds en utilisant le vocabulaire SysML et celui des chaînes fonctionnelles.",
+      "enonce": "**Situation.** Nora décrit en SysML un robot aspirateur. Il est programmé depuis une application de téléphone par son utilisateur ; il se recharge seul sur sa base. Il comporte : une batterie, une carte de commande des moteurs, deux moteurs de roues, des engrenages, des roues et une brosse, des capteurs de choc, un calculateur, un module Wi-Fi.\n\n1. Dans un diagramme de cas d'utilisation, qui sont les acteurs ? Donne deux services rendus par le robot.\n2. Une exigence est rédigée ainsi : « Le robot doit bien aspirer ». Pourquoi n'est-elle pas acceptable dans un diagramme des exigences ? Propose une formulation correcte.\n3. Place chaque composant sur son maillon de la chaîne d'information ou de la chaîne d'énergie.\n4. Quel diagramme montre que la batterie alimente les moteurs à travers la carte de commande ? Justifie.",
+      "bareme": [
+        { "critere": "Acteurs extérieurs (utilisateur, base de recharge) et deux services cohérents", "points": 5 },
+        { "critere": "Exigence non vérifiable repérée et reformulée avec une valeur mesurable", "points": 5 },
+        { "critere": "Composants placés sur les bons maillons des deux chaînes", "points": 6 },
+        { "critere": "Diagramme de blocs internes : il montre les flux et leurs ports", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Acteurs extérieurs : l'**utilisateur** (via son téléphone) et la **base de recharge** (on accepte aussi le sol ou la pièce à nettoyer). Services : **nettoyer le sol** d'une pièce ; **se laisser programmer** à distance ; **se recharger** seul.\n\n2. « Bien aspirer » n'est **pas vérifiable** : une exigence doit être identifiée, formulée et **vérifiable**. Formulation possible : « Exig. 1 — Le robot doit ramasser au moins 90 % d'une masse de poussière déposée sur 10 m² de carrelage en un passage. » (Toute valeur mesurable est acceptée.)\n\n3. **Information** : acquérir → **capteurs de choc** ; traiter → **calculateur** ; communiquer → **module Wi-Fi**.\n**Énergie** : alimenter → **batterie** ; distribuer → **carte de commande des moteurs** (préactionneur) ; convertir → **moteurs** (actionneurs) ; transmettre → **engrenages** ; agir → **roues et brosse**.\n\n4. Le diagramme de **blocs internes** : il montre les **flux** échangés (ici l'énergie électrique) entre les blocs, et leurs **ports**. Le diagramme de définition de blocs ne montrerait que la décomposition, pas les flux."
+    },
+    {
+      "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+      "difficulte": 3,
+      "titre": "Le volet roulant automatisé",
+      "consigne": "Modélise le système avec les outils du SysML et justifie chacun de tes choix.",
+      "enonce": "**Situation.** Un volet roulant motorisé est piloté depuis une application. Description de son fonctionnement :\n\n> Au repos, le volet est ouvert ou fermé. Un ordre « descendre » reçu de l'application le fait passer en descente, mais seulement si le capteur de vent indique un vent inférieur à 50 km/h. En descente, il s'arrête et devient fermé quand le capteur de position indique la position basse. Un ordre « monter » fait passer le volet fermé en montée ; il devient ouvert à la position haute. En descente, la détection d'un obstacle le fait remonter.\n\nLe capteur de position mesure en permanence la hauteur du volet ; le calculateur s'en sert pour arrêter le moteur à la position demandée.\n\n1. Établis le diagramme d'états sous forme de tableau (état de départ, événement, garde éventuelle, état d'arrivée). Distingue clairement événement et garde.\n2. L'équipe veut représenter l'ordre dans lequel l'application, la box domotique et le moteur échangent leurs messages. Quel diagramme choisir ? À quelle famille appartient-il ?\n3. Explique pourquoi ce volet est un système asservi, en utilisant les deux chaînes.\n4. L'équipe a un modèle thermique de la maison et un modèle mécanique du volet. Est-ce une incohérence ? Justifie.",
+      "bareme": [
+        { "critere": "Quatre états et cinq transitions justes, événements et garde sur le vent bien distingués", "points": 6 },
+        { "critere": "Diagramme de séquence, famille comportement", "points": 3 },
+        { "critere": "Bouclage expliqué : l'information commande l'énergie, la mesure revient par le capteur", "points": 6 },
+        { "critere": "Un modèle n'est jamais la réalité ; un système reçoit plusieurs modèles selon la question", "points": 5 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1.\n| État de départ | Événement | Garde | État d'arrivée |\n|---|---|---|---|\n| Ouvert | ordre « descendre » | [vent < 50 km/h] | En descente |\n| En descente | position basse atteinte | — | Fermé |\n| Fermé | ordre « monter » | — | En montée |\n| En montée | position haute atteinte | — | Ouvert |\n| En descente | obstacle détecté | — | En montée |\nL'**événement** déclenche la transition ; la **garde** est une condition qui doit être vraie pour qu'elle soit franchie (ici, le vent faible).\n\n2. Le diagramme de **séquence** : il montre les échanges de messages **dans le temps**. Il appartient à la famille du **comportement** (que fait le système ?).\n\n3. La chaîne d'**information** (capteur de position → calculateur → ordre au préactionneur) **commande** la chaîne d'**énergie** (alimentation → préactionneur → moteur → transmission → volet). La **mesure** de la position **revient** au calculateur par le capteur, qui arrête le moteur à la position demandée : c'est le **bouclage**, la structure du système asservi.\n\n4. Ce n'est pas une incohérence. Un modèle **n'est jamais la réalité** : il retient ce qui est utile à la question posée. Pour prévoir la température de la maison et pour prévoir les efforts dans le volet, on ne retient pas les mêmes grandeurs : un même système reçoit donc **plusieurs modèles**."
+    },
+    {
+      "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+      "difficulte": 1,
+      "titre": "Les forces sur la luge de Timéo",
+      "consigne": "Donne chaque formule, le calcul et le résultat avec son unité. Arrondis au dixième.",
+      "enonce": "**Situation.** Timéo tire une luge. On étudie les forces dans un repère orthonormé direct (O ; x, y).\n\n1. Donne les quatre caractéristiques d'un vecteur force et ce que chacune précise.\n2. Une force F1 a pour coordonnées (30 ; 40) en newtons. Calcule sa norme. Donne les coordonnées et la norme de 2 × F1, puis de − F1. Que change le signe « moins » ?\n3. La corde exerce une force F de norme 200 N qui fait un angle de 30° avec l'axe x. Calcule sa composante sur l'axe x et sa composante perpendiculaire. (cos 30° ≈ 0,866 ; sin 30° = 0,5)",
+      "bareme": [
+        { "critere": "Point d'application, direction, sens, norme et leur signification", "points": 6 },
+        { "critere": "Norme 50 N ; 2 × F1 = (60 ; 80) de norme 100 N ; − F1 = (− 30 ; − 40), sens inversé", "points": 6 },
+        { "critere": "Composantes 173,2 N (cosinus) et 100 N (sinus) sans inversion", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Point d'application** : où la force s'exerce. **Direction** : la droite qui la porte. **Sens** : vers où elle pousse. **Norme** : son intensité, en newtons.\n\n2. Norme de F1 = √(30² + 40²) = √(900 + 1 600) = √2 500 = **50 N**.\n2 × F1 = (60 ; 80), norme 2 × 50 = **100 N**.\n− F1 = (− 30 ; − 40), norme **50 N**. Multiplier par un réel négatif **inverse le sens** ; la direction et la norme (ici × 1) sont conservées.\n\n3. Composante **le long** de l'axe x : F × cos α = 200 × 0,866 ≈ **173,2 N**.\nComposante perpendiculaire : F × sin α = 200 × 0,5 = **100 N**.\nContrôle : la composante le long de l'axe fait intervenir le **cosinus** de l'angle avec cet axe."
+    },
+    {
+      "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+      "difficulte": 2,
+      "titre": "Deux câbles sur un anneau",
+      "consigne": "Détaille chaque calcul ; arrondis au dixième.",
+      "enonce": "**Situation.** Un anneau est tiré par deux câbles, dans le plan d'un repère orthonormé (O ; x, y).\n\n- F1 : norme 120 N, dirigée selon l'axe x, dans le sens positif.\n- F2 : norme 80 N, faisant un angle de 60° avec l'axe x, vers le haut.\n\nDonnées : cos 60° = 0,5 ; sin 60° ≈ 0,866.\n\n1. Donne les coordonnées de F1 et de F2.\n2. Calcule les coordonnées de la somme S = F1 + F2.\n3. Calcule la norme de S. Pourquoi n'est-elle pas égale à 120 + 80 = 200 N ?\n4. Calcule le produit scalaire F1 · F2. Que vaudrait le produit scalaire de F1 avec une force F3 = (0 ; 50) N ? Pourquoi ?",
+      "bareme": [
+        { "critere": "F1 = (120 ; 0) et F2 = (40 ; 69,3)", "points": 5 },
+        { "critere": "S = (160 ; 69,3) par somme composante par composante", "points": 5 },
+        { "critere": "Norme ≈ 174,4 N et explication (forces non alignées)", "points": 5 },
+        { "critere": "F1 · F2 = 4 800 et F1 · F3 = 0 (vecteurs perpendiculaires)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. F1 = (**120 ; 0**) N.\nF2 : composante sur x = 80 × cos 60° = 80 × 0,5 = 40 N ; composante sur y = 80 × sin 60° ≈ 80 × 0,866 ≈ 69,3 N. F2 = (**40 ; 69,3**) N.\n\n2. En coordonnées, on additionne composante par composante : S = (120 + 40 ; 0 + 69,3) = (**160 ; 69,3**) N.\n\n3. Norme de S = √(160² + 69,3²) = √(25 600 + 4 800) = √30 400 ≈ **174,4 N**. (69,3² ≈ 4 800 car (80 × sin 60°)² = 6 400 × 0,75 = 4 800.)\nLes normes ne s'additionnent que si les vecteurs ont même direction et même sens. Ici les deux forces ne sont pas alignées : la somme se construit par la relation de Chasles ou le parallélogramme, et sa norme est inférieure à 200 N.\n\n4. F1 · F2 = norme de F1 × norme de F2 × cos 60° = 120 × 80 × 0,5 = **4 800** (N²). C'est un **nombre**, pas un vecteur.\nF1 · F3 = **0** : F3 est portée par l'axe y, **perpendiculaire** à F1 ; le produit scalaire de deux vecteurs perpendiculaires est nul (cos 90° = 0)."
+    },
+    {
+      "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+      "difficulte": 3,
+      "titre": "La caisse sur la rampe de chargement",
+      "consigne": "Justifie le choix du repère et chaque projection ; arrondis au dixième.",
+      "enonce": "**Situation.** Une caisse de poids P = 500 N repose sur une rampe inclinée de 20° par rapport à l'horizontale. On étudie le poids dans deux repères :\n\n- repère R1 : axe x horizontal, axe y vertical vers le haut ;\n- repère R2 : axe x' le long de la rampe, vers le haut de la pente ; axe y' perpendiculaire à la rampe, vers le haut.\n\nDonnées : cos 20° ≈ 0,940 ; sin 20° ≈ 0,342 ; cos 70° ≈ 0,342 ; sin 70° ≈ 0,940 ; cos 30° ≈ 0,866 ; sin 30° = 0,5.\n\n1. Donne les coordonnées du poids dans R1.\n2. Quel angle le poids fait-il avec l'axe x' ? Avec l'axe y' ? Déduis-en les coordonnées du poids dans R2 (attention aux signes).\n3. Vérifie que la norme calculée à partir des coordonnées dans R2 redonne 500 N. Pourquoi est-ce normal ?\n4. Pourquoi choisit-on en général le repère R2 pour étudier la caisse sur la rampe ?\n5. Au point A, une force de 150 N s'exerce ; le vecteur OA a une norme de 0,3 m et fait un angle de 30° avec la force. Calcule la norme du produit vectoriel OA ∧ F. À quoi sert ce produit en mécanique ?",
+      "bareme": [
+        { "critere": "Coordonnées (0 ; − 500) dans R1", "points": 3 },
+        { "critere": "Angles 70° et 20° justifiés, coordonnées (− 171 ; − 470) dans R2 sans inversion", "points": 7 },
+        { "critere": "Norme retrouvée ≈ 500 N et même vecteur dans deux repères expliqué", "points": 4 },
+        { "critere": "Choix du repère qui simplifie le calcul (axe le long de la rampe)", "points": 3 },
+        { "critere": "Norme du produit vectoriel 22,5 et usage pour les moments", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Dans R1, le poids est vertical, vers le bas : P = (**0 ; − 500**) N.\n\n2. La rampe fait 20° avec l'horizontale ; le poids est vertical, donc il fait **90° − 20° = 70°** avec la direction de la rampe (axe x'), et **20°** avec la perpendiculaire à la rampe (axe y').\nComposante sur x' : 500 × cos 70° ≈ 500 × 0,342 = 171 N, orientée **vers le bas** de la pente → **− 171 N**.\nComposante sur y' : 500 × cos 20° ≈ 500 × 0,940 = 470 N, orientée vers la rampe → **− 470 N** (469,8 N avec cos 20° plus précis).\nDans R2 : P ≈ (**− 171 ; − 470**) N. L'erreur classique est d'intervertir sinus et cosinus : ici la composante **le long** de la rampe utilise le cosinus de l'angle **avec cet axe** (70°), soit le sinus de 20°.\n\n3. √(171² + 470²) = √(29 241 + 220 900) = √250 141 ≈ **500 N**. C'est normal : un même vecteur a des **coordonnées différentes** dans deux repères, mais c'est **le même vecteur** ; changer de repère ne change pas la physique.\n\n4. On choisit le repère qui **simplifie le calcul** : avec un axe le long de la rampe, le mouvement éventuel et l'action de la rampe (perpendiculaire) sont portés par les axes ; seul le poids est à projeter.\n\n5. Norme = norme de OA × norme de F × sin α = 0,3 × 150 × 0,5 = **22,5** (N·m). Le produit vectoriel sert au calcul des **moments**."
+    },
+    {
+      "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+      "difficulte": 1,
+      "titre": "La clé et le carton",
+      "consigne": "Donne chaque formule, le calcul et le résultat avec son unité.",
+      "enonce": "**Situation.** Dans l'atelier, Rayan déplace un carton et serre un écrou. On prend g = 9,81 N/kg.\n\n1. Le carton a une masse de 12 kg. Calcule son poids. De quelle famille d'action mécanique s'agit-il, et où le poids s'applique-t-il ?\n2. Pour serrer l'écrou, Rayan exerce une force de 80 N, perpendiculaire à la clé, à 25 cm de l'axe de l'écrou. Calcule le moment de cette force par rapport à l'axe. Que se passerait-il s'il poussait selon une direction passant par l'axe de l'écrou ?\n3. Recopie et complète le tableau des liaisons.\n\n| Liaison | Nombre de degrés de liberté | Mouvements autorisés |\n|---|---|---|\n| Encastrement | ? | ? |\n| Pivot | ? | ? |\n| Glissière | ? | ? |\n| Ponctuelle | ? | ? |",
+      "bareme": [
+        { "critere": "P ≈ 117,7 N, action à distance appliquée au centre de gravité", "points": 6 },
+        { "critere": "M = 80 × 0,25 = 20 N·m et moment nul si la droite d'action passe par l'axe", "points": 6 },
+        { "critere": "Tableau complet : 0, 1 rotation, 1 translation, 5", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. P = m × g = 12 × 9,81 ≈ **117,7 N**. C'est une action **à distance** (sans contact), appliquée au **centre de gravité** du carton.\n\n2. d = 25 cm = 0,25 m. M = F × d = 80 × 0,25 = **20 N·m**. Si la droite d'action passe par l'axe, le bras de levier est nul : le moment est **nul**, quelle que soit l'intensité, et l'écrou ne tourne pas.\n\n3.\n| Liaison | Degrés de liberté | Mouvements autorisés |\n|---|---|---|\n| Encastrement | **0** | Aucun |\n| Pivot | **1** | Une rotation |\n| Glissière | **1** | Une translation |\n| Ponctuelle | **5** | Tout sauf la translation perpendiculaire au contact |"
+    },
+    {
+      "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+      "difficulte": 2,
+      "titre": "La porte du hangar",
+      "consigne": "Détaille chaque calcul de moment en précisant son signe.",
+      "enonce": "**Situation.** On étudie la rotation d'une porte de hangar autour de l'axe de ses gonds. On compte positivement les moments qui font tourner la porte dans le sens d'ouverture (sens direct). Toutes les forces sont perpendiculaires à la porte.\n\n1. Mathis pousse la porte dans le sens d'ouverture avec une force de 40 N, à 0,8 m des gonds. Calcule le moment de sa force.\n2. Il pousse maintenant avec la même force, mais à 0,2 m des gonds. Calcule le nouveau moment. Quelle force faudrait-il à 0,2 m pour obtenir le même moment qu'à la question 1 ?\n3. Mathis pousse à 0,8 m avec 40 N dans le sens d'ouverture, pendant que le vent pousse dans l'autre sens avec 30 N à 0,5 m des gonds. Calcule la somme des moments. Dans quel sens la porte tend-elle à tourner ?\n4. Un élève affirme : « Plus la force est grande, plus elle fait tourner. » Nuance cette phrase à l'aide du cours.",
+      "bareme": [
+        { "critere": "M = 32 N·m, positif", "points": 5 },
+        { "critere": "M = 8 N·m à 0,2 m et force de 160 N pour retrouver 32 N·m", "points": 5 },
+        { "critere": "Moment du vent − 15 N·m, somme + 17 N·m, sens d'ouverture", "points": 5 },
+        { "critere": "Le moment dépend aussi du bras de levier ; moment nul si la droite passe par l'axe", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. M = F × d = 40 × 0,8 = **+ 32 N·m** (sens d'ouverture, positif).\n\n2. M = 40 × 0,2 = **+ 8 N·m**. Pour retrouver 32 N·m à 0,2 m : F = M / d = 32 / 0,2 = **160 N**, soit quatre fois plus de force pour un bras de levier quatre fois plus court.\n\n3. Moment du vent : 30 × 0,5 = 15 N·m, dans l'autre sens → **− 15 N·m**. Somme : 32 − 15 = **+ 17 N·m**. La somme est positive : la porte tend à tourner dans le **sens d'ouverture**.\n\n4. Le moment, qui mesure l'aptitude à faire tourner, vaut **F × d** : il dépend autant du **bras de levier** que de l'intensité. Une petite force loin de l'axe peut faire tourner davantage qu'une grande force près de l'axe (la clé, le levier, la brouette). Et une force dont la droite d'action **passe par l'axe** ne fait pas tourner du tout, quelle que soit son intensité."
+    },
+    {
+      "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+      "difficulte": 3,
+      "titre": "La brouette de sable",
+      "consigne": "Modélise les actions puis mène les calculs ; justifie chaque hypothèse. On prend g = 9,81 N/kg.",
+      "enonce": "**Situation.** Inès soulève une brouette chargée de sable pour la faire rouler. On étudie la brouette dans le plan vertical, les poignées levées et la caisse horizontale.\n\n- La brouette et le sable ont une masse totale de 60 kg ; le centre de gravité de l'ensemble est à 0,5 m (horizontalement) de l'axe de la roue.\n- Les mains d'Inès soulèvent les poignées avec une force verticale, à 1,4 m (horizontalement) de l'axe de la roue.\n- La roue tourne autour d'un axe fixé au châssis, et elle touche le sol en un point.\n\n1. Fais la liste des actions mécaniques qui s'exercent sur la brouette. Classe-les en actions à distance et actions de contact.\n2. Le sable pèse sur tout le fond de la caisse. Comment peut-on modéliser cette action répartie ?\n3. Calcule le poids de l'ensemble, puis son moment par rapport à l'axe de la roue. Quelle force verticale Inès doit-elle exercer pour que son moment compense exactement celui du poids ? Précise les signes des deux moments.\n4. Modélise la liaison entre la roue et le châssis, et le contact entre la roue et le sol : nom de la liaison, degrés de liberté, ce qu'elle transmet. Quelle hypothèse fait-on en les supposant parfaites ?",
+      "bareme": [
+        { "critere": "Poids (à distance) ; mains, sol sur la roue (contact) correctement listés", "points": 4 },
+        { "critere": "Action répartie remplacée par une force unique équivalente au point d'équilibre de la répartition", "points": 4 },
+        { "critere": "P ≈ 588,6 N, moment ≈ 294,3 N·m, force ≈ 210,2 N, signes opposés", "points": 7 },
+        { "critere": "Pivot (1 rotation), ponctuelle (5, une force perpendiculaire), hypothèse sans jeu ni frottement", "points": 5 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Action **à distance** : le **poids** de l'ensemble brouette + sable, appliqué au centre de gravité. Actions **de contact** : la **force des mains** sur les poignées ; l'**action du sol** sur la roue.\n\n2. Une action **répartie** sur une surface peut être remplacée par une **force unique équivalente**, appliquée au point où la répartition s'équilibre. Pour le poids du sable, on l'intègre au poids total appliqué au centre de gravité de l'ensemble.\n\n3. P = m × g = 60 × 9,81 = **588,6 N**.\nMoment du poids par rapport à l'axe de la roue : 588,6 × 0,5 = **294,3 N·m**. Le poids tend à faire basculer la caisse vers le bas : moment compté par exemple **négatif**.\nForce des mains : F × 1,4 = 294,3 → F = 294,3 / 1,4 ≈ **210,2 N**, avec un moment **positif** (il tend à relever la caisse).\nLe bras de levier des mains (1,4 m) étant près de trois fois plus long, Inès soulève la charge avec une force bien inférieure au poids.\n\n4. Roue / châssis : liaison **pivot**, **1 degré de liberté** (une rotation autour de l'axe). Roue / sol : liaison **ponctuelle**, **5 degrés de liberté** ; elle transmet **une seule force, perpendiculaire au contact**. En les supposant **parfaites**, on les suppose **sans jeu et sans frottement** : c'est une **hypothèse de modélisation**, à nommer comme telle."
+    },
+    {
+      "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+      "difficulte": 1,
+      "titre": "Le livre sur l'étagère",
+      "consigne": "Réponds en suivant la méthode du cours. On prend g = 9,81 N/kg.",
+      "enonce": "**Situation.** Un livre de masse 1,2 kg est posé, immobile, sur une étagère horizontale.\n\n1. Que signifie « isoler un solide » ? Isole le livre.\n2. Fais le bilan des actions extérieures qui s'exercent sur le livre, sous forme de tableau (action, point d'application, direction, sens, intensité), en précisant ce qui est connu et ce qui est inconnu au départ.\n3. Le livre est en équilibre sous l'action de deux forces. Que peux-tu en déduire sur l'action de l'étagère ? Complète ton tableau.\n4. Combien de composantes la représentation complète d'une action mécanique comporte-t-elle dans un problème plan ? Dans l'espace ?",
+      "bareme": [
+        { "critere": "Définition d'isoler (séparer par la pensée, remplacer chaque élément retiré par son action)", "points": 4 },
+        { "critere": "Bilan : poids (G, verticale, vers le bas, 11,8 N) et action de l'étagère, connus et inconnus distingués", "points": 6 },
+        { "critere": "Deux forces : même droite, sens opposés, même intensité, soit 11,8 N vers le haut", "points": 6 },
+        { "critere": "3 composantes dans le plan, 6 dans l'espace", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Isoler un solide, c'est le **séparer par la pensée** de tout ce qui l'entoure, et **remplacer chaque élément retiré par l'action** qu'il exerçait sur lui. Ici on isole le livre : on retire la Terre (remplacée par le poids) et l'étagère (remplacée par son action).\n\n2. Poids : P = m × g = 1,2 × 9,81 ≈ 11,8 N.\n| Action | Point d'application | Direction | Sens | Intensité |\n|---|---|---|---|---|\n| Poids (Terre → livre) | G, centre de gravité (connu) | Verticale (connue) | Vers le bas (connu) | 11,8 N (connue) |\n| Étagère → livre | Sur la surface de contact (inconnu au départ) | Inconnue | Inconnu | Inconnue |\n\n3. Un solide en équilibre sous **deux forces** : elles ont **même droite d'action**, des **sens opposés** et **même intensité**. L'action de l'étagère est donc **verticale, vers le haut, de 11,8 N**, portée par la verticale passant par G.\n\n4. Dans le **plan** : **3** composantes (deux de force, une de moment). Dans l'**espace** : **6** (trois de force, trois de moment)."
+    },
+    {
+      "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+      "difficulte": 2,
+      "titre": "L'enseigne de la boulangerie",
+      "consigne": "Justifie chaque réponse avec une propriété du cours.",
+      "enonce": "**Situation.** Une enseigne de boulangerie, de poids 150 N, est suspendue à un seul câble vertical accroché en un point A de son cadre. L'enseigne est faite d'un cadre et d'un panneau assemblés par des vis.\n\n1. On isole l'ensemble cadre + panneau. Les efforts dans les vis qui assemblent le cadre et le panneau figurent-ils dans le bilan ? Justifie.\n2. Fais le bilan des actions extérieures et déduis-en l'action du câble sur l'enseigne (point, direction, sens, intensité). Où se trouve nécessairement le centre de gravité de l'enseigne ?\n3. On transporte le torseur de l'action du câble du point A à un point B situé à 0,3 m de A, horizontalement. La résultante change-t-elle ? Le moment change-t-il ? Calcule le moment de l'action du câble en A puis en B.\n4. Sur son brouillon, Axel a tracé l'action du câble vers le bas ; son calcul lui donne − 150 N. Sa solution est-elle fausse ? Explique.",
+      "bareme": [
+        { "critere": "Actions intérieures exclues du bilan : elles ne traversent pas la frontière", "points": 5 },
+        { "critere": "Câble : en A, verticale, vers le haut, 150 N ; G sur la verticale de A", "points": 5 },
+        { "critere": "Résultante inchangée, moment nul en A et 45 N·m en B", "points": 5 },
+        { "critere": "Sens supposé : valeur négative, sens réel opposé, solution juste", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Non** : les efforts dans les vis sont des actions **intérieures** au solide isolé (le cadre et le panneau sont tous deux dans l'ensemble isolé). On ne compte que ce qui **traverse la frontière** de l'isolement.\n\n2. Actions extérieures : le **poids** (150 N, vertical, vers le bas, appliqué en G) et l'**action du câble** en A. L'enseigne est en équilibre sous **deux forces** : même droite d'action, sens opposés, même intensité. L'action du câble est donc appliquée en **A**, **verticale**, **vers le haut**, de **150 N**. Comme les deux forces ont la même droite d'action, **G est sur la verticale passant par A**.\n\n3. Quand on transporte un torseur, la **résultante ne change pas** (toujours 150 N vers le haut) ; le **moment**, lui, **change**, car le bras de levier change.\nEn A : la force passe par A, bras de levier nul → moment **0 N·m**.\nEn B : bras de levier 0,3 m (distance perpendiculaire à la droite d'action verticale) → 150 × 0,3 = **45 N·m**.\n\n4. Non. Les inconnues sont tracées avec un sens **supposé**. Un résultat **négatif** signifie simplement que le **sens réel est l'inverse** : l'action du câble est bien de 150 N **vers le haut**. La solution n'en est pas fausse."
+    },
+    {
+      "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+      "difficulte": 3,
+      "titre": "La potence de l'atelier",
+      "consigne": "Résous d'abord graphiquement (géométrie), puis par le calcul ; justifie chaque propriété utilisée.",
+      "enonce": "**Situation.** Une poutre horizontale AB, de longueur 2 m, est articulée au mur en A et retenue en B par un câble fixé au mur au point C, situé 2 m au-dessus de A. Le poids de la poutre, 400 N, s'applique en son milieu G. Le poids du câble est négligé.\n\nRepère : origine A, axe x horizontal vers B, axe y vertical vers le haut. Coordonnées : A (0 ; 0), G (1 ; 0), B (2 ; 0), C (0 ; 2), en mètres. Donnée : √2 ≈ 1,414.\n\n1. Isole la poutre et fais le bilan des actions extérieures (point, direction, sens, intensité connus ou non).\n2. Le câble est rectiligne de B à C. La poutre est soumise à trois forces non parallèles : quelle propriété s'applique ? Trouve le point de concours I et déduis-en la direction de l'action du mur en A.\n3. Écris que la somme vectorielle des trois forces est nulle, en projetant sur x et sur y, et calcule la tension du câble et l'intensité de l'action en A.\n4. Élise a supposé l'action en A dirigée vers le bas à gauche et trouve − 282,8 N. Qu'en conclus-tu ?",
+      "bareme": [
+        { "critere": "Bilan des trois actions avec connus et inconnus corrects", "points": 5 },
+        { "critere": "Droites concourantes, I (1 ; 1), action en A dirigée selon AI (45°)", "points": 4 },
+        { "critere": "Projections justes, T ≈ 282,8 N et action en A ≈ 282,8 N", "points": 7 },
+        { "critere": "Sens réel opposé au sens supposé, résultat juste", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On isole la poutre AB. Bilan :\n| Action | Point | Direction | Sens | Intensité |\n|---|---|---|---|---|\n| Poids | G (1 ; 0) | Verticale | Vers le bas | 400 N |\n| Câble → poutre | B | Droite BC | De B vers C (un câble tire) | T inconnue |\n| Mur → poutre | A | Inconnue | Inconnu | R inconnue |\n\n2. Trois forces non parallèles en équilibre : leurs droites d'action sont **concourantes** et leur **somme vectorielle est nulle** (le triangle des forces se ferme). Le poids est porté par la verticale x = 1 ; le câble par la droite BC, d'équation x + y = 2. Elles se coupent en **I (1 ; 1)**. L'action en A passe donc par A et I : elle est dirigée selon **AI**, à **45°** au-dessus de l'horizontale, vers la droite et le haut.\n\n3. Directions unitaires : câble, de B vers C : (− 1 ; 1) / √2 ; action en A, de A vers I : (1 ; 1) / √2.\nSur x : − T / √2 + R / √2 = 0 → **R = T**.\nSur y : − 400 + T / √2 + R / √2 = 0 → 2T / √2 = 400 → T = 400 / √2 ≈ 400 / 1,414 ≈ **282,8 N**.\nDonc **T ≈ 282,8 N** et **R ≈ 282,8 N**. En composantes : câble (− 200 ; 200) N, action en A (200 ; 200) N, poids (0 ; − 400) N : la somme est bien nulle.\n\n4. L'inconnue a été tracée avec un sens **supposé** ; la valeur négative indique que le **sens réel est l'inverse** : l'action en A est dirigée vers le haut à droite, d'intensité 282,8 N. Le résultat d'Élise **n'est pas faux**."
+    },
+    {
+      "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+      "difficulte": 1,
+      "titre": "Les conditions d'équilibre",
+      "consigne": "Réponds avec précision ; détaille le calcul de la question 3.",
+      "enonce": "**Situation.** Un technicien vérifie la stabilité de plusieurs pièces dans un atelier.\n\n1. Énonce les deux conditions du principe fondamental de la statique et ce que chacune interdit. Un volant est soumis à deux forces de 50 N, égales et opposées, appliquées en deux points opposés de sa jante et non alignées : est-il en équilibre ? Justifie.\n2. Combien d'équations scalaires ce principe donne-t-il dans un problème plan ? Écris-les. Qu'appelle-t-on un problème hyperstatique ?\n3. Une pièce est posée sur un établi. L'action de contact a une composante normale N = 200 N ; le coefficient de frottement vaut f = 0,3. Une force tend à la faire glisser, et la composante tangentielle nécessaire à l'équilibre vaut T = 45 N. La pièce glisse-t-elle ? Justifie par un calcul.",
+      "bareme": [
+        { "critere": "Somme des forces nulle (translation) et somme des moments nulle (rotation) ; couple qui fait tourner", "points": 8 },
+        { "critere": "Trois équations (x, y, moments) et hyperstatique : plus de trois inconnues", "points": 5 },
+        { "critere": "f × N = 60 N, T = 45 N ≤ 60 N : pas de glissement", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Un solide est en équilibre si, et seulement si : la **somme vectorielle** des actions extérieures est nulle (elle interdit la **translation**) **et** la **somme des moments**, calculés en un même point, est nulle (elle interdit la **rotation**). Le volant **n'est pas en équilibre** : la somme des deux forces est nulle, mais, non alignées, elles forment un **couple** qui le fait tourner. Les deux conditions sont nécessaires.\n\n2. **Trois** équations : somme des composantes sur x = 0 ; somme des composantes sur y = 0 ; somme des moments en un point = 0. Un problème est **hyperstatique** s'il comporte **plus de trois inconnues** : il exige des hypothèses supplémentaires.\n\n3. Condition de non-glissement : T ≤ f × N. f × N = 0,3 × 200 = **60 N**. T = 45 N ≤ 60 N : la composante tangentielle s'ajuste, **la pièce ne glisse pas** (adhérence)."
+    },
+    {
+      "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+      "difficulte": 2,
+      "titre": "La passerelle du jardin",
+      "consigne": "Applique la méthode du cours dans l'ordre ; détaille chaque équation.",
+      "enonce": "**Situation.** Une passerelle horizontale de 4 m repose sur deux appuis : A à son extrémité gauche et B à son extrémité droite. Les actions des appuis sont verticales, vers le haut. Le poids propre de la passerelle, 200 N, s'applique en son milieu. Une personne de poids 600 N se tient à 1 m de A.\n\nRepère : origine A, axe x horizontal vers B, axe y vertical vers le haut. Moments comptés positivement dans le sens direct (trigonométrique).\n\n1. Isole la passerelle et fais le bilan des actions extérieures. Combien y a-t-il d'inconnues ? Le problème est-il résoluble ?\n2. En quel point as-tu intérêt à calculer les moments ? Pourquoi ?\n3. Écris l'équation des moments en ce point et calcule l'action de l'appui B.\n4. Écris l'équation de projection sur y et calcule l'action de l'appui A. Vérifie ton résultat en écrivant l'équation des moments en B.",
+      "bareme": [
+        { "critere": "Bilan des quatre actions, deux inconnues, problème résoluble ; point A choisi et justifié", "points": 6 },
+        { "critere": "Équation des moments en A et B = 250 N", "points": 6 },
+        { "critere": "Projection sur y et A = 550 N", "points": 4 },
+        { "critere": "Vérification par les moments en B", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On isole la passerelle. Bilan : poids propre 200 N en x = 2 m (vers le bas) ; poids de la personne 600 N en x = 1 m (vers le bas) ; action de A verticale vers le haut, intensité A inconnue ; action de B en x = 4 m, verticale vers le haut, intensité B inconnue. **Deux inconnues** ≤ 3 : le problème est **résoluble**.\n\n2. On calcule les moments en **A** : l'action inconnue en A y a un moment nul (sa droite d'action passe par A), il ne reste qu'une inconnue, B, dans l'équation. C'est le choix du point qui rend l'exercice simple.\n\n3. Moments en A : B × 4 − 600 × 1 − 200 × 2 = 0 → 4B = 600 + 400 = 1 000 → **B = 250 N**.\n\n4. Projection sur y : A + B − 600 − 200 = 0 → A = 800 − 250 = **550 N**.\nVérification, moments en B (l'action de A, vers le haut à 4 m à gauche de B, fait tourner dans le sens horaire : négatif ; les poids, vers le bas à gauche de B, dans le sens direct : positifs) :− A × 4 + 600 × 3 + 200 × 2 = 0 → 4A = 1 800 + 400 = 2 200 → A = 550 N. Les deux résultats concordent ; ils sont vraisemblables : l'appui A, plus proche de la personne, porte davantage."
+    },
+    {
+      "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+      "difficulte": 3,
+      "titre": "La caisse sur la rampe du camion",
+      "consigne": "Mène l'étude complète en suivant la méthode ; justifie le choix du repère. On prend g = 9,81 N/kg.",
+      "enonce": "**Situation.** Des déménageurs posent une caisse de 50 kg sur une rampe inclinée de 25° par rapport à l'horizontale. Le coefficient de frottement entre la caisse et la rampe vaut f = 0,4.\n\nDonnées : sin 25° ≈ 0,423 ; cos 25° ≈ 0,906.\n\n1. Isole la caisse et fais le bilan des actions extérieures. Choisis un repère et justifie ton choix.\n2. Calcule le poids, puis ses composantes le long de la rampe et perpendiculairement à la rampe.\n3. Sans aide, quelle composante tangentielle T faudrait-il pour que la caisse reste immobile ? Quelle est la valeur maximale possible de T ? Conclus : la caisse glisse-t-elle ?\n4. Un déménageur retient la caisse par une force parallèle à la rampe, vers le haut de la pente. Quelle force minimale doit-il exercer pour qu'elle ne glisse pas ?\n5. Explique la différence entre adhérence et frottement. Comment comparer l'angle de la rampe et l'angle d'adhérence dans ce cas ?",
+      "bareme": [
+        { "critere": "Bilan (poids, action de la rampe N et T) et repère le long de la rampe justifié", "points": 4 },
+        { "critere": "P = 490,5 N, composantes ≈ 207,5 N et ≈ 444,4 N", "points": 5 },
+        { "critere": "T nécessaire ≈ 207,5 N > f × N ≈ 177,8 N : la caisse glisse", "points": 5 },
+        { "critere": "Force minimale ≈ 29,7 N par l'équation le long de la rampe", "points": 4 },
+        { "critere": "Adhérence et frottement distingués ; angle de la rampe supérieur à l'angle d'adhérence", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On isole la caisse. Actions extérieures : le **poids** (en G, vertical, vers le bas) ; l'**action de la rampe**, décomposée en une composante **normale N** (perpendiculaire à la rampe) et une composante **tangentielle T** (le long de la rampe, vers le haut, elle s'oppose au glissement). Repère : un axe **le long de la rampe**, un axe perpendiculaire : N et T sont portés par les axes, seul le poids est à projeter.\n\n2. P = m × g = 50 × 9,81 = **490,5 N**.\nLe long de la rampe (vers le bas) : P × sin 25° ≈ 490,5 × 0,423 ≈ **207,5 N**.\nPerpendiculairement : P × cos 25° ≈ 490,5 × 0,906 ≈ **444,4 N**.\n\n3. Équilibre sur l'axe perpendiculaire : N = **444,4 N**. Équilibre le long de la rampe : T = **207,5 N**.\nValeur maximale : f × N = 0,4 × 444,4 ≈ **177,8 N**.\n207,5 N > 177,8 N : la condition T ≤ f × N n'est pas satisfaite, **la caisse glisse**.\n\n4. Le long de la rampe : F + T = 207,5 N, avec T ≤ 177,8 N. Donc F ≥ 207,5 − 177,8 ≈ **29,7 N**.\n\n5. L'**adhérence** est ce qui **empêche** le glissement ; le **frottement** s'oppose à un glissement **en cours**. Une pièce reste immobile tant que l'angle du plan reste **inférieur à l'angle d'adhérence** : ici la caisse glisse, donc l'angle de la rampe (25°) est **supérieur** à l'angle d'adhérence."
+    },
+    {
+      "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+      "difficulte": 1,
+      "titre": "Le moteur de la ponceuse",
+      "consigne": "Donne chaque formule, le calcul et le résultat avec son unité. Arrondis au dixième.",
+      "enonce": "**Situation.** Le moteur d'une ponceuse tourne à N = 1 500 tr/min en fournissant un couple C = 2 N·m.\n\n1. Convertis la vitesse de rotation en radians par seconde.\n2. Calcule la puissance mécanique fournie par le moteur.\n3. La ponceuse fonctionne 2 heures. Calcule l'énergie mécanique fournie, en joules puis en kilowattheures (1 kWh = 3,6 × 10⁶ J).\n4. Un autre appareil pousse une pièce avec une force de 250 N à la vitesse de 1,2 m/s. Calcule sa puissance mécanique.",
+      "bareme": [
+        { "critere": "ω = 2π × 1 500 / 60 ≈ 157,1 rad/s", "points": 5 },
+        { "critere": "P = C × ω ≈ 314,2 W", "points": 5 },
+        { "critere": "E ≈ 2,26 × 10⁶ J et ≈ 0,63 kWh", "points": 5 },
+        { "critere": "P = F × v = 300 W", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ω = 2π × N / 60 = 2π × 1 500 / 60 = 50π ≈ **157,1 rad/s**.\n\n2. P = C × ω = 2 × 157,1 ≈ **314,2 W**.\n\n3. Δt = 2 h = 7 200 s. E = P × Δt = 314,2 × 7 200 ≈ **2,26 × 10⁶ J**. En kWh : 2,26 × 10⁶ / 3,6 × 10⁶ ≈ **0,63 kWh** (ou 0,3142 kW × 2 h ≈ 0,63 kWh).\n\n4. En translation : P = F × v = 250 × 1,2 = **300 W**."
+    },
+    {
+      "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+      "difficulte": 2,
+      "titre": "La chaîne d'énergie du kart électrique",
+      "consigne": "Détaille chaque calcul et arrondis au dixième ; justifie la question 4.",
+      "enonce": "**Situation.** Le kart électrique du club de Sacha comporte une chaîne d'énergie en quatre maillons : batterie 36 V → variateur → moteur → réducteur → roues.\n\n| Maillon | Rendement |\n|---|---|\n| Variateur | 0,95 |\n| Moteur | 0,85 |\n| Réducteur | 0,90 |\n\nEn ligne droite, les roues doivent fournir une force de propulsion de 60 N à la vitesse de 5 m/s.\n\n1. Calcule la puissance utile aux roues.\n2. Calcule le rendement global de la chaîne (du variateur au réducteur).\n3. Calcule la puissance fournie par la batterie, l'intensité du courant qu'elle débite et la puissance perdue.\n4. Le club veut améliorer le rendement global. Sur quel maillon doit-il agir en priorité ? Donne un autre levier de conception cité par le cours.",
+      "bareme": [
+        { "critere": "P utile = F × v = 300 W", "points": 4 },
+        { "critere": "η = 0,95 × 0,85 × 0,90 ≈ 0,727", "points": 5 },
+        { "critere": "P batterie ≈ 412,8 W, I ≈ 11,5 A, pertes ≈ 112,8 W", "points": 6 },
+        { "critere": "Maillon le plus mauvais (moteur) et réduction du nombre de conversions", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. P(utile) = F × v = 60 × 5 = **300 W**.\n\n2. Les rendements se **multiplient** : η = 0,95 × 0,85 × 0,90 = 0,8075 × 0,90 ≈ **0,727**.\n\n3. P(batterie) = P(utile) / η = 300 / 0,72675 ≈ **412,8 W**.\nI = P / U = 412,8 / 36 ≈ **11,5 A**.\nPertes = 412,8 − 300 ≈ **112,8 W** (effet Joule, frottements, échauffement, bruit).\n\n4. Il faut agir d'abord sur le **maillon le plus mauvais**, ici le **moteur** (0,85) : il plafonne tout le reste. Autre levier : **réduire le nombre de conversions**, puisque chaque maillon multiplie par un facteur inférieur à 1 (par exemple un moteur-roue qui supprime le réducteur)."
+    },
+    {
+      "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+      "difficulte": 3,
+      "titre": "Le monte-charge de l'entrepôt",
+      "consigne": "Mène l'étude énergétique complète en détaillant chaque calcul. On prend g = 9,81 N/kg ; arrondis au dixième.",
+      "enonce": "**Situation.** Un monte-charge hisse une charge de 300 kg sur une hauteur de 12 m en 20 s, à vitesse constante. À vitesse constante, la force exercée par le câble est égale au poids de la charge.\n\nChaîne d'énergie : réseau électrique → moteur (rendement 0,90) → réducteur (rendement 0,80) → tambour et câble (rendement 0,95) → charge. Le moteur tourne à 1 450 tr/min.\n\n1. Calcule la vitesse de la charge, la force du câble et la puissance utile.\n2. Calcule le rendement global et la puissance absorbée sur le réseau.\n3. Calcule l'énergie absorbée pour une montée, en joules puis en kilowattheures (1 kWh = 3,6 × 10⁶ J).\n4. Calcule la puissance mécanique fournie par le moteur et le couple sur son arbre.\n5. On remplace le réducteur par un modèle de rendement 0,95. Calcule le nouveau rendement global et la puissance absorbée économisée. Explique pourquoi ce choix était le bon levier.",
+      "bareme": [
+        { "critere": "v = 0,6 m/s, F = 2 943 N, P utile ≈ 1 765,8 W", "points": 4 },
+        { "critere": "η = 0,684 et P absorbée ≈ 2 581,6 W", "points": 5 },
+        { "critere": "E ≈ 51 632 J ≈ 0,014 kWh", "points": 3 },
+        { "critere": "P moteur ≈ 2 323,4 W, ω ≈ 151,8 rad/s, C ≈ 15,3 N·m", "points": 4 },
+        { "critere": "η ≈ 0,812, P ≈ 2 174 W, gain ≈ 408 W, maillon le plus mauvais", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. v = 12 / 20 = **0,6 m/s**. F = m × g = 300 × 9,81 = **2 943 N**. P(utile) = F × v = 2 943 × 0,6 = **1 765,8 W**.\n\n2. η = 0,90 × 0,80 × 0,95 = 0,72 × 0,95 = **0,684**. P(absorbée) = 1 765,8 / 0,684 ≈ **2 581,6 W**.\n\n3. E = P × Δt = 2 581,6 × 20 ≈ **51 632 J**, soit 51 632 / 3,6 × 10⁶ ≈ **0,014 kWh**.\n\n4. P(moteur) = 0,90 × 2 581,6 ≈ **2 323,4 W**.\nω = 2π × 1 450 / 60 ≈ **151,8 rad/s**.\nC = P / ω = 2 323,4 / 151,8 ≈ **15,3 N·m**.\n\n5. η' = 0,90 × 0,95 × 0,95 = 0,855 × 0,95 ≈ **0,812**. P'(absorbée) = 1 765,8 / 0,81225 ≈ **2 174 W**. Économie : 2 581,6 − 2 174 ≈ **408 W**, soit environ 16 % de moins.\nLe réducteur (0,80) était le **maillon le plus mauvais** : il plafonnait tout le reste. Améliorer un maillon déjà bon aurait rapporté bien moins, puisque les rendements se multiplient."
+    }
+  ]
+}

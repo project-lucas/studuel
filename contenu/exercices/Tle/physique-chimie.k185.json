@@ -1,0 +1,3780 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "544b8892-3512-5ca9-b1d4-552967e43510",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le comptage de l’iode 131",
+      "competence": "lire-graphique",
+      "situation": "Un service de médecine nucléaire suit l’activité d’un échantillon d’iode 131 pendant un mois. L’activité A, en kBq, est relevée tous les 4 jours.",
+      "documents": [
+        {
+          "id": "iode",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Activité de l’échantillon d’iode 131",
+          "categories": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16",
+            "20",
+            "24",
+            "28",
+            "32"
+          ],
+          "series": [
+            {
+              "nom": "A",
+              "valeurs": [
+                800,
+                565.7,
+                400,
+                282.8,
+                200,
+                141.4,
+                100,
+                70.7,
+                50
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Activité A",
+            "unite": "kBq",
+            "min": 0,
+            "max": 900,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Temps (jours)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis l’activité de l’échantillon à l’instant initial.",
+          "reponse": 800,
+          "unite": "kBq",
+          "tolerance": 10,
+          "aide": "Regarde le premier point, à t = 0.",
+          "explication": "Le premier point est à **800 kBq**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien de jours l’activité est-elle divisée par 2 ?",
+          "reponse": 8,
+          "unite": "jours",
+          "tolerance": 0.5,
+          "aide": "Cherche la date où A vaut la moitié de 800 kBq.",
+          "explication": "A = 400 kBq à **8 jours** : c’est la demi-vie de l’iode 131."
+        },
+        {
+          "type": "zone",
+          "document": "iode",
+          "enonce": "Touche le point où il ne reste que le quart de l’activité initiale.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Un quart de 800 kBq, c’est 200 kBq.",
+          "explication": "Le quart de 800 kBq est **200 kBq**, atteint à 16 jours : deux demi-vies de 8 jours."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle sera l’activité après 3 demi-vies ?",
+          "reponse": 100,
+          "unite": "kBq",
+          "tolerance": 1,
+          "aide": "Divise 800 kBq par 2, trois fois de suite.",
+          "explication": "800 → 400 → 200 → **100 kBq**, soit N₀/8, à 24 jours."
+        }
+      ]
+    },
+    {
+      "chapitre": "544b8892-3512-5ca9-b1d4-552967e43510",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le charbon de bois de la grotte",
+      "competence": "calculer",
+      "situation": "Des archéologues datent un charbon de bois trouvé dans une grotte grâce au carbone 14, de demi-vie 5 730 ans. Ils comparent son activité à celle d’un bois vivant.",
+      "documents": [
+        {
+          "id": "mesures",
+          "type": "tableau",
+          "titre": "Mesures au compteur",
+          "colonnes": [
+            "Échantillon",
+            "Activité A (Bq par gramme de carbone)"
+          ],
+          "lignes": [
+            [
+              "Bois vivant (A₀)",
+              0.23
+            ],
+            [
+              "Charbon de la grotte (A)",
+              0.092
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs idéalisées"
+        },
+        {
+          "id": "decroit",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Activité d’un bois mort depuis t années",
+          "categories": [
+            "0",
+            "2000",
+            "4000",
+            "6000",
+            "8000",
+            "10000",
+            "12000",
+            "14000",
+            "16000",
+            "18000",
+            "20000"
+          ],
+          "series": [
+            {
+              "nom": "A",
+              "valeurs": [
+                0.23,
+                0.1806,
+                0.1418,
+                0.1113,
+                0.0874,
+                0.0686,
+                0.0539,
+                0.0423,
+                0.0332,
+                0.0261,
+                0.0205
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Activité",
+            "unite": "Bq·g⁻¹",
+            "min": 0,
+            "max": 0.25,
+            "pas": 0.05
+          },
+          "axeX": {
+            "titre": "Temps écoulé depuis la mort (années)"
+          },
+          "valeurs": false,
+          "source": "Calculée à partir de A₀ = 0,230 Bq·g⁻¹"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la constante radioactive λ du carbone 14 avec λ = ln 2 / t₁/₂, en 10⁻⁴ an⁻¹.",
+          "reponse": 1.21,
+          "unite": "×10⁻⁴ an⁻¹",
+          "tolerance": 0.01,
+          "aide": "Divise 0,693 par 5 730.",
+          "explication": "λ = 0,693 ÷ 5 730 ≈ **1,21 × 10⁻⁴ an⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rapport A/A₀ pour le charbon.",
+          "reponse": 0.4,
+          "tolerance": 0.005,
+          "aide": "Divise la valeur du charbon par celle du bois vivant.",
+          "explication": "0,092 ÷ 0,230 = **0,40** : il reste 40 % de l’activité d’origine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’âge du charbon avec t = (1/λ) × ln(A₀/A), à 100 ans près.",
+          "reponse": 7575,
+          "unite": "ans",
+          "tolerance": 100,
+          "aide": "A₀/A = 1/0,40 = 2,5 ; utilise le λ de la première question.",
+          "explication": "t = ln 2,5 ÷ (1,21 × 10⁻⁴) ≈ **7 570 ans** : entre une et deux demi-vies, comme A/A₀ = 0,40 entre 0,5 et 0,25."
+        },
+        {
+          "type": "zone",
+          "document": "decroit",
+          "enonce": "Sur le graphique, touche le point dont l’activité est la plus proche de celle du charbon.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche une activité voisine de 0,092 Bq·g⁻¹.",
+          "explication": "À 8 000 ans l’activité vaut environ 0,088 Bq·g⁻¹ : c’est le point le plus proche de 0,092, cohérent avec un âge de **7 570 ans**."
+        }
+      ]
+    },
+    {
+      "chapitre": "544b8892-3512-5ca9-b1d4-552967e43510",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une dose de technétium à l’hôpital",
+      "competence": "modeliser",
+      "situation": "Un hôpital prépare à 8 h une dose de technétium 99m (demi-vie 6,0 h) d’activité 600 MBq. Le patient reçoit l’injection à 14 h. Le graphique suit l’activité de la dose depuis 8 h.",
+      "documents": [
+        {
+          "id": "dose",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Activité de la dose",
+          "categories": [
+            "0",
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18",
+            "21",
+            "24"
+          ],
+          "series": [
+            {
+              "nom": "A",
+              "valeurs": [
+                600,
+                424.3,
+                300,
+                212.1,
+                150,
+                106.1,
+                75,
+                53,
+                37.5
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Activité A",
+            "unite": "MBq",
+            "min": 0,
+            "max": 650,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Temps écoulé depuis 8 h (heures)"
+          },
+          "valeurs": false,
+          "source": "Courbe idéalisée"
+        },
+        {
+          "id": "donnees",
+          "type": "tableau",
+          "titre": "Données",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Demi-vie t₁/₂",
+              "6,0 h"
+            ],
+            [
+              "Activité à 8 h",
+              "600 MBq"
+            ],
+            [
+              "Heure de l’injection",
+              "14 h"
+            ],
+            [
+              "ln 2",
+              "0,693"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’activité de la dose au moment de l’injection, à 14 h ?",
+          "reponse": 300,
+          "unite": "MBq",
+          "tolerance": 10,
+          "aide": "14 h, c’est 6 h après la préparation.",
+          "explication": "Après une demi-vie, l’activité est divisée par 2 : **300 MBq**."
+        },
+        {
+          "type": "zone",
+          "document": "dose",
+          "enonce": "Touche le premier point du graphique où l’activité est passée sous 100 MBq.",
+          "reponse": [
+            "k6"
+          ],
+          "aide": "Parcours les points : cherche le premier qui est sous la barre des 100 MBq.",
+          "explication": "À 15 h l’activité vaut encore environ 106 MBq ; à 18 h elle est de **75 MBq** : c’est le premier point sous 100 MBq."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la constante radioactive λ en h⁻¹ (λ = ln 2 / t₁/₂).",
+          "reponse": 0.1155,
+          "unite": "h⁻¹",
+          "tolerance": 0.002,
+          "aide": "Divise 0,693 par 6,0 h.",
+          "explication": "λ = 0,693 ÷ 6,0 ≈ **0,116 h⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de noyaux de technétium 99m contient la dose à l’injection ? Utilise A = λ N avec λ en s⁻¹. Réponds en 10¹² noyaux.",
+          "reponse": 9.35,
+          "unite": "×10¹² noyaux",
+          "tolerance": 0.05,
+          "aide": "Convertis 300 MBq en Bq et λ en s⁻¹ (1 h = 3 600 s).",
+          "explication": "λ = 0,693 ÷ 21 600 s ≈ 3,21 × 10⁻⁵ s⁻¹ ; N = A/λ = 3,00 × 10⁸ ÷ 3,21 × 10⁻⁵ ≈ **9,35 × 10¹² noyaux**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures après l’injection l’activité tombera-t-elle à 10 MBq ? Au dixième d’heure.",
+          "reponse": 29.4,
+          "unite": "h",
+          "tolerance": 0.2,
+          "aide": "De 300 à 10 MBq, l’activité est divisée par 30 : cherche combien de demi-vies donnent 30.",
+          "explication": "A/A₀ = 1/30 = 2⁻ⁿ avec n = ln 30 / ln 2 ≈ 4,9 demi-vies, soit **29,4 h**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le chariot sur le rail",
+      "competence": "lire-tableau",
+      "situation": "Un chariot descend un rail incliné. Un pointage vidéo relève sa position x toutes les 0,10 s.",
+      "documents": [
+        {
+          "id": "pointage",
+          "type": "tableau",
+          "titre": "Pointage vidéo",
+          "colonnes": [
+            "Instant t (s)",
+            "Position x (cm)"
+          ],
+          "lignes": [
+            [
+              0,
+              0
+            ],
+            [
+              0.1,
+              0.5
+            ],
+            [
+              0.2,
+              2
+            ],
+            [
+              0.3,
+              4.5
+            ],
+            [
+              0.4,
+              8
+            ],
+            [
+              0.5,
+              12.5
+            ],
+            [
+              0.6,
+              18
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pointage",
+          "enonce": "Pour calculer la vitesse à t = 0,20 s, touche les deux positions voisines utilisées dans la différence finie centrée.",
+          "reponse": [
+            "r1c1",
+            "r3c1"
+          ],
+          "multiple": true,
+          "aide": "Il faut la position juste avant et la position juste après l’instant 0,20 s.",
+          "explication": "On utilise les positions à **t = 0,10 s** et **t = 0,30 s**, de part et d’autre de 0,20 s."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse à t = 0,20 s avec v ≈ (x(0,30) − x(0,10)) / (2τ), en cm·s⁻¹.",
+          "reponse": 20,
+          "unite": "cm·s⁻¹",
+          "tolerance": 0.5,
+          "aide": "τ = 0,10 s, donc 2τ = 0,20 s.",
+          "explication": "(4,5 − 0,5) ÷ 0,20 = **20 cm·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule de la même façon la vitesse à t = 0,40 s, en cm·s⁻¹.",
+          "reponse": 40,
+          "unite": "cm·s⁻¹",
+          "tolerance": 0.5,
+          "aide": "Utilise les positions à 0,30 s et 0,50 s.",
+          "explication": "(12,5 − 4,5) ÷ 0,20 = **40 cm·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis l’accélération moyenne entre 0,20 s et 0,40 s, en m·s⁻².",
+          "reponse": 1,
+          "unite": "m·s⁻²",
+          "tolerance": 0.05,
+          "aide": "a = Δv / Δt ; attention aux unités : 100 cm = 1 m.",
+          "explication": "Δv = 40 − 20 = 20 cm·s⁻¹ en 0,20 s : a = 100 cm·s⁻² = **1,0 m·s⁻²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le plateau tournant",
+      "competence": "observer-schema",
+      "situation": "Un point M du bord d’un plateau de rayon R = 0,50 m fait un tour en T = 2,0 s, à vitesse de valeur constante, dans le sens inverse des aiguilles d’une montre. Le schéma montre le plateau vu de dessus, avec quatre flèches issues de M.",
+      "documents": [
+        {
+          "id": "plateau",
+          "type": "schema",
+          "titre": "Plateau vu de dessus",
+          "largeur": 340,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 130,
+              "r": 90,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 130,
+              "r": 3,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 150,
+              "y": 150,
+              "texte": "O",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                130
+              ],
+              "a": [
+                240,
+                60
+              ],
+              "fleche": "fin",
+              "id": "f1",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 58,
+              "texte": "1",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                130
+              ],
+              "a": [
+                170,
+                130
+              ],
+              "fleche": "fin",
+              "id": "f2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 195,
+              "y": 120,
+              "texte": "2",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                130
+              ],
+              "a": [
+                240,
+                200
+              ],
+              "fleche": "fin",
+              "id": "f3",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 208,
+              "texte": "3",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                240,
+                130
+              ],
+              "a": [
+                310,
+                130
+              ],
+              "fleche": "fin",
+              "id": "f4",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 316,
+              "y": 122,
+              "texte": "4",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 240,
+              "cy": 130,
+              "r": 5,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 228,
+              "y": 150,
+              "texte": "M",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plateau",
+          "enonce": "Touche la flèche qui représente le vecteur vitesse de M.",
+          "reponse": [
+            "f1"
+          ],
+          "aide": "Le vecteur vitesse est tangent à la trajectoire, dans le sens du mouvement.",
+          "explication": "La vitesse est tangente au cercle ; le plateau tourne dans le sens inverse des aiguilles d’une montre : c’est la **flèche 1**."
+        },
+        {
+          "type": "zone",
+          "document": "plateau",
+          "enonce": "Touche la flèche qui représente le vecteur accélération de M.",
+          "reponse": [
+            "f2"
+          ],
+          "aide": "Sur une trajectoire courbe, l’accélération est dirigée vers l’intérieur de la courbure.",
+          "explication": "Dans un mouvement circulaire uniforme, l’accélération est centripète : la **flèche 2** pointe vers le centre O."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la valeur de la vitesse v = 2πR / T, en m·s⁻¹.",
+          "reponse": 1.57,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.01,
+          "aide": "Le point parcourt un périmètre 2πR en une période T.",
+          "explication": "v = 2π × 0,50 ÷ 2,0 ≈ **1,57 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la valeur de l’accélération a = v²/R, en m·s⁻².",
+          "reponse": 4.93,
+          "unite": "m·s⁻²",
+          "tolerance": 0.03,
+          "aide": "Utilise la valeur de v de la question précédente.",
+          "explication": "a = 1,57² ÷ 0,50 ≈ **4,93 m·s⁻²**, bien que la valeur de la vitesse soit constante : c’est la direction qui change."
+        }
+      ]
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le virage ralenti",
+      "competence": "raisonner",
+      "situation": "Une voiture freine régulièrement dans un virage dont la trajectoire est un arc de cercle. Le graphique donne la valeur de sa vitesse, relevée au compteur chaque seconde.",
+      "documents": [
+        {
+          "id": "compteur",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Valeur de la vitesse au cours du freinage",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "v",
+              "valeurs": [
+                15,
+                13,
+                11,
+                9,
+                7
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Vitesse v",
+            "unite": "m·s⁻¹",
+            "min": 0,
+            "max": 16,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "valeurs": false,
+          "source": "Relevés idéalisés"
+        },
+        {
+          "id": "virage",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Virage serré",
+          "sousTitre": "Trajectoire circulaire",
+          "emoji": "🚗",
+          "lignes": [
+            {
+              "texte": "Rayon de courbure R",
+              "valeur": "50 m"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Freinage",
+              "valeur": "régulier"
+            }
+          ],
+          "pied": "Repère de Frenet : tangente et normale"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Déduis du graphique la composante tangentielle aₜ = dv/dt, en m·s⁻² (valeur algébrique).",
+          "reponse": -2,
+          "unite": "m·s⁻²",
+          "tolerance": 0.1,
+          "aide": "La vitesse baisse de la même quantité chaque seconde : calcule Δv/Δt.",
+          "explication": "v passe de 15 à 13 m·s⁻¹ en 1 s : aₜ = **−2,0 m·s⁻²** (le signe moins traduit le ralentissement)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la composante normale aₙ = v²/R à t = 0, en m·s⁻².",
+          "reponse": 4.5,
+          "unite": "m·s⁻²",
+          "tolerance": 0.05,
+          "aide": "Lis v à t = 0 sur le graphique ; R = 50 m.",
+          "explication": "aₙ = 15² ÷ 50 = **4,5 m·s⁻²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la valeur de l’accélération totale à t = 0 : a = √(aₜ² + aₙ²), en m·s⁻².",
+          "reponse": 4.92,
+          "unite": "m·s⁻²",
+          "tolerance": 0.05,
+          "aide": "Les composantes tangentielle et normale sont perpendiculaires.",
+          "explication": "a = √(2,0² + 4,5²) = √24,25 ≈ **4,92 m·s⁻²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la composante normale à t = 4 s, en m·s⁻².",
+          "reponse": 0.98,
+          "unite": "m·s⁻²",
+          "tolerance": 0.02,
+          "aide": "Lis d’abord la vitesse à t = 4 s.",
+          "explication": "v = 7 m·s⁻¹ : aₙ = 49 ÷ 50 = **0,98 m·s⁻²**."
+        },
+        {
+          "type": "zone",
+          "document": "compteur",
+          "enonce": "Touche l’instant où la composante normale de l’accélération est la plus faible.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "aₙ = v²/R : elle est faible quand v est faible.",
+          "explication": "aₙ dépend de v² : elle est minimale quand la vitesse est minimale, à **t = 4 s**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La caisse sur la table",
+      "competence": "observer-schema",
+      "situation": "Une caisse de 12 kg est posée, immobile, sur une table horizontale. On étudie la caisse (g = 9,81 N·kg⁻¹). Le schéma montre trois flèches notées A, B et C.",
+      "documents": [
+        {
+          "id": "caisse",
+          "type": "schema",
+          "titre": "Caisse sur une table",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                140
+              ],
+              "a": [
+                290,
+                140
+              ],
+              "teinte": "brun"
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 80,
+              "l": 80,
+              "h": 60,
+              "teinte": "gris",
+              "motif": "clair",
+              "texte": "caisse"
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 108,
+              "r": 3,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                108
+              ],
+              "a": [
+                160,
+                175
+              ],
+              "fleche": "fin",
+              "id": "fa",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 178,
+              "texte": "A",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                188,
+                140
+              ],
+              "a": [
+                188,
+                70
+              ],
+              "fleche": "fin",
+              "id": "fb",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 72,
+              "texte": "B",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                132,
+                140
+              ],
+              "a": [
+                132,
+                205
+              ],
+              "fleche": "fin",
+              "id": "fc",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 120,
+              "y": 214,
+              "texte": "C",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 290,
+              "y": 158,
+              "texte": "table",
+              "ancre": "fin",
+              "italique": true,
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "caisse",
+          "enonce": "Touche la flèche qui représente le poids de la caisse.",
+          "reponse": [
+            "fa"
+          ],
+          "aide": "Le poids est vertical, dirigé vers le bas, appliqué au centre de la caisse.",
+          "explication": "Le poids est la force exercée par la Terre sur la caisse : la **flèche A**, vers le bas."
+        },
+        {
+          "type": "zone",
+          "document": "caisse",
+          "enonce": "Touche la flèche qui représente la réaction de la table sur la caisse.",
+          "reponse": [
+            "fb"
+          ],
+          "aide": "La table pousse la caisse vers le haut.",
+          "explication": "La réaction du support est perpendiculaire à la table et dirigée vers le haut : la **flèche B**."
+        },
+        {
+          "type": "zone",
+          "document": "caisse",
+          "enonce": "Une seule de ces flèches n’est pas une force exercée sur la caisse : touche-la.",
+          "reponse": [
+            "fc"
+          ],
+          "aide": "Une force du bilan s’applique sur le système étudié. Cherche celle qui s’applique sur autre chose.",
+          "explication": "La **flèche C** est la force de la caisse sur la table (3ᵉ loi, opposée à B) : elle s’applique sur la table, donc elle n’est pas dans le bilan des forces sur la caisse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La caisse est immobile : calcule la valeur de la réaction R de la table, en N, au dixième.",
+          "reponse": 117.7,
+          "unite": "N",
+          "tolerance": 0.1,
+          "aide": "Si ΣF = 0, R compense exactement le poids : P = m g.",
+          "explication": "ΣF = 0 donne R = P = 12 × 9,81 = **117,7 N**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le caddie poussé",
+      "competence": "calculer",
+      "situation": "Une élève pousse un caddie de 20 kg, initialement immobile, sur un sol horizontal. On étudie le caddie. Un capteur relève sa vitesse au cours du mouvement.",
+      "documents": [
+        {
+          "id": "forces",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Forces horizontales",
+          "sousTitre": "Caddie de 20 kg",
+          "emoji": "🛒",
+          "lignes": [
+            {
+              "texte": "Poussée de l’élève",
+              "valeur": "50 N"
+            },
+            {
+              "texte": "Frottement du sol",
+              "valeur": "10 N"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Masse du caddie",
+              "valeur": "20 kg"
+            }
+          ]
+        },
+        {
+          "id": "capteur",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Vitesse du caddie",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "v",
+              "valeurs": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Vitesse v",
+            "unite": "m·s⁻¹",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la valeur de la somme des forces horizontales ΣF, en N.",
+          "reponse": 40,
+          "unite": "N",
+          "tolerance": 0.5,
+          "aide": "La poussée et le frottement sont opposés.",
+          "explication": "ΣF = 50 − 10 = **40 N**, dans le sens de la poussée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Applique ΣF = m a pour trouver l’accélération du caddie, en m·s⁻².",
+          "reponse": 2,
+          "unite": "m·s⁻²",
+          "tolerance": 0.05,
+          "aide": "a = ΣF / m.",
+          "explication": "a = 40 ÷ 20 = **2,0 m·s⁻²**."
+        },
+        {
+          "type": "zone",
+          "document": "capteur",
+          "enonce": "Touche le point où le capteur indique que le caddie atteint 8 m·s⁻¹.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la hauteur 8 sur l’axe des vitesses.",
+          "explication": "La vitesse vaut 8 m·s⁻¹ à **t = 4 s** : 2,0 × 4 = 8, le graphique confirme le calcul de l’accélération."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la distance parcourue pendant les 4 premières secondes avec x = ½ a t², en m.",
+          "reponse": 16,
+          "unite": "m",
+          "tolerance": 0.1,
+          "aide": "Pars de l’arrêt : v₀ = 0 et x₀ = 0.",
+          "explication": "x = ½ × 2,0 × 4² = **16 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La bille qui tombe dans l’huile",
+      "competence": "modeliser",
+      "situation": "Une bille tombe dans de l’huile. La deuxième loi de Newton donne dv/dt = g − 0,50 v, avec g = 10 m·s⁻², v en m·s⁻¹ et t en s. On résout cette équation pas à pas par la méthode d’Euler, avec un pas Δt = 1,0 s.",
+      "documents": [
+        {
+          "id": "euler",
+          "type": "tableau",
+          "titre": "Tableau de calcul d’Euler",
+          "colonnes": [
+            "t (s)",
+            "v (m·s⁻¹)",
+            "a = 10 − 0,50 v (m·s⁻²)"
+          ],
+          "lignes": [
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              1,
+              10,
+              5
+            ],
+            [
+              2,
+              "?",
+              "?"
+            ],
+            [
+              3,
+              "?",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "v(t + Δt) = v(t) + a(t) × Δt"
+        },
+        {
+          "id": "prog",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le programme Python de l’élève",
+          "blocs": [
+            "g = 10",
+            "k = 0.5",
+            "dt = 1.0",
+            "v = 0.0",
+            "for i in range(4):",
+            "    a = g - k * v",
+            "    v = v + a * dt",
+            "print(v)"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète le tableau : que vaut v à t = 2 s, en m·s⁻¹ ?",
+          "reponse": 15,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.05,
+          "aide": "v(2) = v(1) + a(1) × Δt.",
+          "explication": "v(2) = 10 + 5 × 1,0 = **15 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Que vaut alors l’accélération à t = 2 s, en m·s⁻² ?",
+          "reponse": 2.5,
+          "unite": "m·s⁻²",
+          "tolerance": 0.05,
+          "aide": "Utilise a = 10 − 0,50 v avec v(2).",
+          "explication": "a(2) = 10 − 0,50 × 15 = **2,5 m·s⁻²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À la fin de la boucle, le programme affiche v. Quelle valeur, au centième ?",
+          "reponse": 18.75,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.01,
+          "aide": "La boucle répète quatre fois le calcul du tableau : t va de 0 à 4 s.",
+          "explication": "v(3) = 15 + 2,5 = 17,5 ; v(4) = 17,5 + 1,25 = **18,75 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse limite en posant a = 0 dans l’équation, en m·s⁻¹.",
+          "reponse": 20,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.1,
+          "aide": "Résous 10 − 0,50 v = 0, sans Euler.",
+          "explication": "10 = 0,50 v donne v = **20 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À t = 4 s, de combien la vitesse calculée reste-t-elle en dessous de la vitesse limite, en m·s⁻¹ ?",
+          "reponse": 1.25,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.02,
+          "aide": "Soustrais la valeur du programme à la vitesse limite.",
+          "explication": "20 − 18,75 = **1,25 m·s⁻¹** : la bille tend vers sa vitesse limite sans l’atteindre."
+        }
+      ]
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le dégagement du gardien",
+      "competence": "lire-graphique",
+      "situation": "Un gardien dégage le ballon depuis le sol avec v₀ = 10 m·s⁻¹ et un angle α = 45° ; on prend g = 10 m·s⁻² et on néglige les frottements. Le graphique donne l’altitude y du ballon en fonction de sa distance horizontale x.",
+      "documents": [
+        {
+          "id": "trajet",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Trajectoire du ballon",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "y",
+              "valeurs": [
+                0,
+                0.9,
+                1.6,
+                2.1,
+                2.4,
+                2.5,
+                2.4,
+                2.1,
+                1.6,
+                0.9,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Altitude y",
+            "unite": "m",
+            "min": 0,
+            "max": 3,
+            "pas": 0.5
+          },
+          "axeX": {
+            "titre": "Distance horizontale x (m)"
+          },
+          "valeurs": false,
+          "source": "Trajectoire calculée sans frottement"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "trajet",
+          "enonce": "Touche le point le plus haut de la trajectoire.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "C’est le sommet de la parabole.",
+          "explication": "Le sommet est à **x = 5 m**, à mi-chemin de la portée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’altitude maximale du ballon (la flèche) ?",
+          "reponse": 2.5,
+          "unite": "m",
+          "tolerance": 0.1,
+          "aide": "Lis la hauteur du sommet sur l’axe vertical.",
+          "explication": "Le sommet est à **2,5 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la portée du tir ?",
+          "reponse": 10,
+          "unite": "m",
+          "tolerance": 0.2,
+          "aide": "C’est la distance où le ballon retouche le sol (y = 0).",
+          "explication": "Le ballon retouche le sol à **10 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de quelle durée la flèche est-elle atteinte ? Utilise v_y = −g t + v₀ sin α = 0, avec sin 45° ≈ 0,707.",
+          "reponse": 0.707,
+          "unite": "s",
+          "tolerance": 0.02,
+          "aide": "Résous −10 t + 10 × 0,707 = 0.",
+          "explication": "t = v₀ sin α ÷ g = 7,07 ÷ 10 ≈ **0,71 s**."
+        }
+      ]
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’électron entre deux plaques",
+      "competence": "observer-schema",
+      "situation": "Un électron pénètre entre deux plaques horizontales parallèles distantes de d = 4,0 cm, sous une tension U = 200 V ; la plaque du haut est la plaque +. On donne e = 1,60 × 10⁻¹⁹ C, m = 9,11 × 10⁻³¹ kg et g = 9,81 m·s⁻².",
+      "documents": [
+        {
+          "id": "plaques",
+          "type": "schema",
+          "titre": "Électron entre deux plaques",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 30,
+              "l": 260,
+              "h": 12,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 22,
+              "texte": "Plaque + (haut)",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 178,
+              "l": 260,
+              "h": 12,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 210,
+              "texte": "Plaque − (bas)",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                50
+              ],
+              "a": [
+                220,
+                168
+              ],
+              "fleche": "fin",
+              "teinte": "gris"
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 112,
+              "texte": "E",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 80,
+              "cy": 110,
+              "r": 7,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 58,
+              "y": 114,
+              "texte": "e⁻",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                101
+              ],
+              "a": [
+                80,
+                55
+              ],
+              "fleche": "fin",
+              "id": "f1",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 92,
+              "y": 58,
+              "texte": "1",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                119
+              ],
+              "a": [
+                80,
+                165
+              ],
+              "fleche": "fin",
+              "id": "f2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 92,
+              "y": 164,
+              "texte": "2",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la valeur du champ électrique E = U / d entre les plaques, en V·m⁻¹.",
+          "reponse": 5000,
+          "unite": "V·m⁻¹",
+          "tolerance": 1,
+          "aide": "Convertis d en mètres : 4,0 cm = 0,040 m.",
+          "explication": "E = 200 ÷ 0,040 = **5 000 V·m⁻¹**."
+        },
+        {
+          "type": "zone",
+          "document": "plaques",
+          "enonce": "Touche la flèche qui représente la force électrique exercée sur l’électron.",
+          "reponse": [
+            "f1"
+          ],
+          "aide": "E va du + vers le −. La charge de l’électron est négative : la force a un sens particulier par rapport à E.",
+          "explication": "Le champ E est dirigé du + vers le −, vers le bas. Pour une charge négative, la force est de sens opposé : vers le haut, la **flèche 1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’accélération a = eE/m de l’électron, en 10¹⁴ m·s⁻².",
+          "reponse": 8.78,
+          "unite": "×10¹⁴ m·s⁻²",
+          "tolerance": 0.02,
+          "aide": "F = eE, puis a = F/m.",
+          "explication": "F = 1,60 × 10⁻¹⁹ × 5 000 = 8,00 × 10⁻¹⁶ N ; a = F/m ≈ **8,78 × 10¹⁴ m·s⁻²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Compare la force électrique au poids de l’électron : calcule F/P, en 10¹³.",
+          "reponse": 8.95,
+          "unite": "×10¹³",
+          "tolerance": 0.05,
+          "aide": "P = m g = 9,11 × 10⁻³¹ × 9,81.",
+          "explication": "P ≈ 8,94 × 10⁻³⁰ N, donc F/P ≈ **8,95 × 10¹³** : le poids est totalement négligeable."
+        }
+      ]
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La déviation de l’électron",
+      "competence": "modeliser",
+      "situation": "Un électron entre horizontalement, à la vitesse v₀ = 3,0 × 10⁷ m·s⁻¹, entre deux plaques de longueur L = 5,0 cm distantes de d = 5,0 cm, sous une tension U = 300 V. On néglige son poids. Le graphique donne sa déviation verticale y.",
+      "documents": [
+        {
+          "id": "donnees",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Données",
+          "sousTitre": "Électron dans un champ uniforme",
+          "emoji": "⚡",
+          "lignes": [
+            {
+              "texte": "Charge élémentaire e",
+              "valeur": "1,60 × 10⁻¹⁹ C"
+            },
+            {
+              "texte": "Masse de l’électron m",
+              "valeur": "9,11 × 10⁻³¹ kg"
+            },
+            {
+              "texte": "Vitesse initiale v₀",
+              "valeur": "3,0 × 10⁷ m·s⁻¹"
+            }
+          ]
+        },
+        {
+          "id": "parab",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Déviation de l’électron entre les plaques",
+          "categories": [
+            "0",
+            "0,5",
+            "1",
+            "1,5",
+            "2",
+            "2,5",
+            "3",
+            "3,5",
+            "4",
+            "4,5",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "y",
+              "valeurs": [
+                0,
+                0.015,
+                0.059,
+                0.132,
+                0.234,
+                0.366,
+                0.527,
+                0.717,
+                0.937,
+                1.186,
+                1.464
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Déviation y",
+            "unite": "mm",
+            "min": 0,
+            "max": 1.6,
+            "pas": 0.2
+          },
+          "axeX": {
+            "titre": "Abscisse x dans les plaques (cm)"
+          },
+          "valeurs": false,
+          "source": "Parabole calculée"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’accélération a = eU/(m d) de l’électron, en 10¹⁵ m·s⁻².",
+          "reponse": 1.05,
+          "unite": "×10¹⁵ m·s⁻²",
+          "tolerance": 0.01,
+          "aide": "E = U/d = 6 000 V·m⁻¹ ; puis a = eE/m.",
+          "explication": "E = 300 ÷ 0,050 = 6 000 V·m⁻¹ ; a = 1,60 × 10⁻¹⁹ × 6 000 ÷ 9,11 × 10⁻³¹ ≈ **1,05 × 10¹⁵ m·s⁻²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la durée de traversée des plaques t = L / v₀ (mouvement uniforme à l’horizontale), en ns.",
+          "reponse": 1.67,
+          "unite": "ns",
+          "tolerance": 0.02,
+          "aide": "Convertis L en mètres. 1 ns = 10⁻⁹ s.",
+          "explication": "t = 0,050 ÷ 3,0 × 10⁷ ≈ 1,67 × 10⁻⁹ s = **1,67 ns**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la déviation à la sortie y = ½ a t², en mm.",
+          "reponse": 1.46,
+          "unite": "mm",
+          "tolerance": 0.03,
+          "aide": "Utilise les valeurs de a et de t des deux questions précédentes, en unités SI.",
+          "explication": "y = ½ × 1,05 × 10¹⁵ × (1,67 × 10⁻⁹)² ≈ 1,46 × 10⁻³ m = **1,46 mm**."
+        },
+        {
+          "type": "zone",
+          "document": "parab",
+          "enonce": "Touche sur la courbe le point qui correspond à la sortie des plaques.",
+          "reponse": [
+            "k10"
+          ],
+          "aide": "La sortie est à x = L.",
+          "explication": "La sortie est à x = L = 5,0 cm, dernier point de la courbe : y ≈ **1,46 mm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "On double la tension U, tout le reste étant inchangé. Que devient la déviation à la sortie ?",
+          "options": [
+            "Elle est doublée",
+            "Elle est quadruplée",
+            "Elle reste inchangée",
+            "Elle est divisée par deux"
+          ],
+          "reponse": 0,
+          "aide": "Regarde comment a dépend de U, puis comment y dépend de a.",
+          "explication": "a = eU/(m d) est proportionnelle à U, et y = ½ a t² est proportionnelle à a (t ne change pas) : la déviation est **doublée**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois satellites, trois vitesses",
+      "competence": "lire-tableau",
+      "situation": "Un satellite de la Terre décrit une orbite circulaire. On donne G = 6,67 × 10⁻¹¹ N·m²·kg⁻², M_T = 5,97 × 10²⁴ kg et R_T = 6 370 km.",
+      "documents": [
+        {
+          "id": "orbites",
+          "type": "tableau",
+          "titre": "Trois orbites terrestres",
+          "colonnes": [
+            "Satellite",
+            "Altitude (km)",
+            "Rayon de l’orbite r (10⁶ m)"
+          ],
+          "lignes": [
+            [
+              "Station spatiale",
+              "400",
+              "6,77"
+            ],
+            [
+              "Satellite de navigation",
+              "20 200",
+              "26,57"
+            ],
+            [
+              "Satellite géostationnaire",
+              "35 786",
+              "42,16"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "orbites",
+          "enonce": "Touche le rayon d’orbite du satellite qui va le plus vite.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Pour un satellite, v = √(GM/r) : regarde comment v varie avec r.",
+          "explication": "v diminue quand r augmente : le plus rapide est sur l’orbite la plus basse, celle de la **station spatiale** (6,77 × 10⁶ m)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse de la station spatiale avec v = √(GM/r), en km·s⁻¹.",
+          "reponse": 7.67,
+          "unite": "km·s⁻¹",
+          "tolerance": 0.02,
+          "aide": "GM = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ ≈ 3,98 × 10¹⁴ ; r = 6,77 × 10⁶ m.",
+          "explication": "v = √(3,98 × 10¹⁴ ÷ 6,77 × 10⁶) ≈ 7 670 m·s⁻¹ = **7,67 km·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule de même la vitesse du satellite de navigation, en km·s⁻¹.",
+          "reponse": 3.87,
+          "unite": "km·s⁻¹",
+          "tolerance": 0.02,
+          "aide": "Garde la valeur de GM ; r = 26,57 × 10⁶ m.",
+          "explication": "v = √(3,98 × 10¹⁴ ÷ 2,657 × 10⁷) ≈ 3 870 m·s⁻¹ = **3,87 km·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la période de révolution de la station, T = 2πr / v, en minutes.",
+          "reponse": 92.4,
+          "unite": "min",
+          "tolerance": 0.3,
+          "aide": "Un tour, c’est 2πr à la vitesse v. Convertis les secondes en minutes.",
+          "explication": "T = 2π × 6,77 × 10⁶ ÷ 7 670 ≈ 5 550 s ≈ **92,4 min**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Peser Jupiter avec ses lunes",
+      "competence": "calculer",
+      "situation": "Un astronome relève le rayon d’orbite r et la période T de quatre lunes de Jupiter, dont les orbites sont quasi circulaires. On donne G = 6,67 × 10⁻¹¹ N·m²·kg⁻² et 1 jour = 86 400 s.",
+      "documents": [
+        {
+          "id": "lunes",
+          "type": "tableau",
+          "titre": "Les lunes de Jupiter",
+          "colonnes": [
+            "Lune",
+            "Rayon r (10⁸ m)",
+            "Période T (jours)"
+          ],
+          "lignes": [
+            [
+              "Io",
+              4.22,
+              1.77
+            ],
+            [
+              "Europe",
+              6.71,
+              3.55
+            ],
+            [
+              "Ganymède",
+              10.7,
+              7.15
+            ],
+            [
+              "Callisto",
+              18.8,
+              16.7
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lunes",
+          "enonce": "Touche la lune dont le mouvement est le plus lent.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "La lune la plus lente est celle qui met le plus de temps pour un tour.",
+          "explication": "Callisto a la plus grande période (**16,7 jours**) : c’est la plus lente."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la période d’Io en secondes.",
+          "reponse": 152928,
+          "unite": "s",
+          "tolerance": 1000,
+          "aide": "Multiplie les jours par 86 400.",
+          "explication": "T = 1,77 × 86 400 ≈ **152 900 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule T²/r³ pour Io, en 10⁻¹⁶ s²·m⁻³ (r en mètres).",
+          "reponse": 3.11,
+          "unite": "×10⁻¹⁶ s²·m⁻³",
+          "tolerance": 0.03,
+          "aide": "r = 4,22 × 10⁸ m ; élève T et r à la bonne puissance.",
+          "explication": "T² = 2,34 × 10¹⁰ s², r³ = 7,52 × 10²⁵ m³ : T²/r³ ≈ **3,11 × 10⁻¹⁶ s²·m⁻³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis la masse de Jupiter avec M = 4π² / (G × T²/r³), en 10²⁷ kg.",
+          "reponse": 1.9,
+          "unite": "×10²⁷ kg",
+          "tolerance": 0.03,
+          "aide": "Remplace G et le rapport par leurs valeurs en unités SI.",
+          "explication": "M = 39,5 ÷ (6,67 × 10⁻¹¹ × 3,11 × 10⁻¹⁶) ≈ **1,90 × 10²⁷ kg**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le même calcul pour Europe, Ganymède et Callisto donne 3,11 ; 3,12 et 3,13 (× 10⁻¹⁶ s²·m⁻³). Que confirme ce résultat ?",
+          "options": [
+            "Ce rapport ne dépend que de Jupiter, et pas de la lune qui tourne autour",
+            "Ce rapport dépend de la masse de chaque lune, qui le modifie à chaque fois",
+            "Toutes les lunes ont la même période, ce qui explique l’égalité du rapport",
+            "Les orbites des lunes sont des ellipses très aplaties, d’où cette égalité"
+          ],
+          "reponse": 0,
+          "aide": "Le rapport est (presque) le même pour les quatre lunes, pourtant très différentes.",
+          "explication": "Un rapport identique pour toutes les lunes illustre la **3ᵉ loi de Kepler** : T²/r³ = 4π²/(GM) ne dépend que de la masse de l’astre attracteur."
+        }
+      ]
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le satellite qui ne bouge pas",
+      "competence": "modeliser",
+      "situation": "Un opérateur place un satellite géostationnaire autour de la Terre. On donne G = 6,67 × 10⁻¹¹ N·m²·kg⁻², M_T = 5,97 × 10²⁴ kg, R_T = 6 370 km et la période de rotation de la Terre, T = 86 164 s (jour sidéral, soit 23,93 h).",
+      "documents": [
+        {
+          "id": "periode",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Période d’un satellite en fonction de son altitude",
+          "categories": [
+            "0",
+            "5000",
+            "10000",
+            "15000",
+            "20000",
+            "25000",
+            "30000",
+            "35000",
+            "40000"
+          ],
+          "series": [
+            {
+              "nom": "T",
+              "valeurs": [
+                1.41,
+                3.35,
+                5.79,
+                8.64,
+                11.84,
+                15.37,
+                19.18,
+                23.27,
+                27.62
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Période T",
+            "unite": "h",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Altitude (km)"
+          },
+          "valeurs": false,
+          "source": "Calculée avec la 3ᵉ loi de Kepler"
+        },
+        {
+          "id": "orbites3",
+          "type": "tableau",
+          "titre": "Deux satellites en service",
+          "colonnes": [
+            "Satellite",
+            "Rayon de l’orbite r (m)",
+            "Période T (h)"
+          ],
+          "lignes": [
+            [
+              "Navigation",
+              "2,657 × 10⁷",
+              "11,98"
+            ],
+            [
+              "Station spatiale",
+              "6,77 × 10⁶",
+              "1,54"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "periode",
+          "enonce": "Sur le graphique, touche le point dont la période est la plus proche d’un jour sidéral (23,93 h).",
+          "reponse": [
+            "k7"
+          ],
+          "aide": "Cherche la hauteur 24 h sur l’axe des périodes.",
+          "explication": "À 35 000 km la période est d’environ 23,3 h : c’est le point le plus proche de 23,93 h, à quelques centaines de km de l’altitude géostationnaire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec le satellite de navigation du tableau, calcule T²/r³ en 10⁻¹⁴ s²·m⁻³ (T en secondes).",
+          "reponse": 9.92,
+          "unite": "×10⁻¹⁴ s²·m⁻³",
+          "tolerance": 0.05,
+          "aide": "T = 11,98 h × 3 600 s·h⁻¹ ; r = 2,657 × 10⁷ m.",
+          "explication": "T = 43 130 s : T²/r³ ≈ **9,91 × 10⁻¹⁴ s²·m⁻³**, soit 4π²/(GM) : la 3ᵉ loi de Kepler est vérifiée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rayon de l’orbite géostationnaire r = (G M T² / 4π²)^(1/3), en 10⁷ m.",
+          "reponse": 4.215,
+          "unite": "×10⁷ m",
+          "tolerance": 0.01,
+          "aide": "Calcule G M T² / 4π², puis prends la racine cubique.",
+          "explication": "r³ = 3,98 × 10¹⁴ × 86 164² ÷ 39,5 ≈ 7,49 × 10²² m³ ; r ≈ **4,215 × 10⁷ m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis l’altitude du satellite géostationnaire, à 100 km près.",
+          "reponse": 35800,
+          "unite": "km",
+          "tolerance": 100,
+          "aide": "Altitude = r − R_T ; attention aux unités (km).",
+          "explication": "h = 42 150 − 6 370 ≈ **35 800 km** au-dessus de l’équateur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule sa vitesse v = 2πr / T, en km·s⁻¹.",
+          "reponse": 3.07,
+          "unite": "km·s⁻¹",
+          "tolerance": 0.02,
+          "aide": "Un tour, c’est 2πr en une période T.",
+          "explication": "v = 2π × 4,215 × 10⁷ ÷ 86 164 ≈ 3 070 m·s⁻¹ = **3,07 km·s⁻¹**, moins que la station spatiale, car l’orbite est plus haute."
+        }
+      ]
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le tuyau d’arrosage",
+      "competence": "observer-schema",
+      "situation": "De l’eau circule à 1,0 m·s⁻¹ dans un tuyau d’arrosage de diamètre 16 mm, puis traverse un embout rétréci de diamètre 8,0 mm. On suppose l’eau incompressible et l’écoulement stationnaire.",
+      "documents": [
+        {
+          "id": "tuyau",
+          "type": "schema",
+          "titre": "Tuyau et embout",
+          "largeur": 340,
+          "hauteur": 160,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 50,
+              "l": 150,
+              "h": 64,
+              "teinte": "bleu",
+              "motif": "clair",
+              "texte": "tuyau Ø 16 mm",
+              "id": "large",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 170,
+              "y": 66,
+              "l": 130,
+              "h": 32,
+              "teinte": "bleu",
+              "motif": "clair",
+              "texte": "embout Ø 8,0 mm",
+              "id": "etroit",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                28
+              ],
+              "a": [
+                300,
+                28
+              ],
+              "fleche": "fin",
+              "teinte": "gris"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 20,
+              "texte": "sens de l’écoulement",
+              "ancre": "milieu",
+              "taille": "petit",
+              "italique": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tuyau",
+          "enonce": "Touche la partie où l’eau circule le plus vite.",
+          "reponse": [
+            "etroit"
+          ],
+          "aide": "Le débit est le même partout : que se passe-t-il quand la section diminue ?",
+          "explication": "Dv = S v est constant : là où la section est la plus petite, la vitesse est la plus grande, donc dans l’**embout**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le débit volumique Dv = S v dans le tuyau (S = πr²), en L·s⁻¹.",
+          "reponse": 0.201,
+          "unite": "L·s⁻¹",
+          "tolerance": 0.003,
+          "aide": "r = 8,0 mm = 0,0080 m ; 1 m³ = 1 000 L.",
+          "explication": "S = π × 0,0080² ≈ 2,01 × 10⁻⁴ m² ; Dv = S × 1,0 ≈ 2,01 × 10⁻⁴ m³·s⁻¹ = **0,201 L·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la vitesse de l’eau dans l’embout, en m·s⁻¹ ?",
+          "reponse": 4,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.1,
+          "aide": "S₁ v₁ = S₂ v₂ : compare les rapports des sections (diamètre divisé par 2).",
+          "explication": "Le diamètre est divisé par 2, donc la section par 4 : v₂ = 4 × v₁ = **4,0 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel volume d’eau sort en 1 min, en L ?",
+          "reponse": 12.1,
+          "unite": "L",
+          "tolerance": 0.2,
+          "aide": "Volume = Dv × durée, avec la durée en secondes.",
+          "explication": "V = 0,201 × 60 ≈ **12,1 L**."
+        }
+      ]
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le tube de Venturi",
+      "competence": "observer-schema",
+      "situation": "Dans un tube de Venturi horizontal, l’eau (ρ = 1 000 kg·m⁻³) circule à 0,50 m·s⁻¹ dans la partie large, de section S₁ = 20 cm². Deux tubes verticaux A et B, ouverts à l’air libre, indiquent la pression. On donne g = 9,81 m·s⁻². Le schéma n’est pas à l’échelle.",
+      "documents": [
+        {
+          "id": "venturi",
+          "type": "schema",
+          "titre": "Tube de Venturi et deux manomètres",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  20,
+                  130
+                ],
+                [
+                  110,
+                  130
+                ],
+                [
+                  150,
+                  147
+                ],
+                [
+                  210,
+                  147
+                ],
+                [
+                  250,
+                  130
+                ],
+                [
+                  320,
+                  130
+                ],
+                [
+                  320,
+                  190
+                ],
+                [
+                  250,
+                  190
+                ],
+                [
+                  210,
+                  173
+                ],
+                [
+                  150,
+                  173
+                ],
+                [
+                  110,
+                  190
+                ],
+                [
+                  20,
+                  190
+                ]
+              ],
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 55,
+              "y": 50,
+              "l": 14,
+              "h": 80,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 55,
+              "y": 85,
+              "l": 14,
+              "h": 45,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "mA",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 175,
+              "y": 50,
+              "l": 14,
+              "h": 97,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 175,
+              "y": 115,
+              "l": 14,
+              "h": 32,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "mB",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 62,
+              "y": 40,
+              "texte": "A",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 182,
+              "y": 40,
+              "texte": "B",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                55,
+                85
+              ],
+              "a": [
+                205,
+                85
+              ],
+              "style": "pointilles",
+              "teinte": "gris"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                200,
+                88
+              ],
+              "a": [
+                200,
+                112
+              ],
+              "fleche": "deux",
+              "teinte": "gris"
+            },
+            {
+              "forme": "texte",
+              "x": 214,
+              "y": 104,
+              "texte": "Δh",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 65,
+              "y": 214,
+              "texte": "S₁",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 180,
+              "y": 214,
+              "texte": "S₂",
+              "ancre": "milieu",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "venturi",
+          "enonce": "Touche la colonne d’eau du tube où la pression est la plus faible.",
+          "reponse": [
+            "mB"
+          ],
+          "aide": "Plus la pression est grande, plus l’eau monte haut dans le tube.",
+          "explication": "L’eau monte moins haut en B, dans le rétrécissement : c’est là que la pression est la plus faible (**effet Venturi**)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La partie étroite a une section S₂ = 5,0 cm². Calcule la vitesse v₂ dans cette partie, en m·s⁻¹.",
+          "reponse": 2,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.05,
+          "aide": "S₁ v₁ = S₂ v₂.",
+          "explication": "v₂ = v₁ × S₁/S₂ = 0,50 × 20 ÷ 5,0 = **2,0 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la différence de pression P₁ − P₂ = ½ρ(v₂² − v₁²), en Pa.",
+          "reponse": 1875,
+          "unite": "Pa",
+          "tolerance": 5,
+          "aide": "Le tube est horizontal : le terme ρgz est le même en A et en B.",
+          "explication": "P₁ − P₂ = ½ × 1 000 × (2,0² − 0,50²) = 500 × 3,75 = **1 875 Pa**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis la différence de hauteur Δh entre les deux colonnes, Δh = (P₁ − P₂)/(ρ g), en cm.",
+          "reponse": 19.1,
+          "unite": "cm",
+          "tolerance": 0.2,
+          "aide": "Calcule d’abord Δh en mètres.",
+          "explication": "Δh = 1 875 ÷ (1 000 × 9,81) ≈ 0,191 m = **19,1 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La conduite qui monte",
+      "competence": "raisonner",
+      "situation": "Une conduite d’eau (ρ = 1 000 kg·m⁻³, g = 9,81 m·s⁻²) monte d’un point A à un point B situé 5,0 m plus haut, en se rétrécissant. L’écoulement est stationnaire. On compare la relation de Bernoulli aux pressions mesurées.",
+      "documents": [
+        {
+          "id": "points",
+          "type": "tableau",
+          "titre": "Les deux points de la conduite",
+          "colonnes": [
+            "",
+            "Point A",
+            "Point B"
+          ],
+          "lignes": [
+            [
+              "Altitude z (m)",
+              0,
+              5
+            ],
+            [
+              "Diamètre (cm)",
+              10,
+              5
+            ],
+            [
+              "Vitesse v (m·s⁻¹)",
+              1,
+              "?"
+            ],
+            [
+              "Pression statique P (kPa)",
+              300,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "P est la pression donnée par un manomètre en A ; en B, c’est la valeur à calculer"
+        },
+        {
+          "id": "mesures",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Pressions mesurées aux manomètres",
+          "categories": [
+            "Point A",
+            "Point B"
+          ],
+          "series": [
+            {
+              "nom": "P mesurée",
+              "valeurs": [
+                300,
+                230
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Pression P",
+            "unite": "kPa",
+            "min": 0,
+            "max": 350,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Point de mesure"
+          },
+          "valeurs": true,
+          "source": "Mesures au manomètre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse v_B en B avec S_A v_A = S_B v_B, en m·s⁻¹.",
+          "reponse": 4,
+          "unite": "m·s⁻¹",
+          "tolerance": 0.05,
+          "aide": "Le diamètre est divisé par 2 : que devient la section ?",
+          "explication": "La section est divisée par 4 : v_B = 1,0 × 4 = **4,0 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la pression P_B donnée par la relation de Bernoulli, en kPa (arrondie à l’unité).",
+          "reponse": 243,
+          "unite": "kPa",
+          "tolerance": 1,
+          "aide": "P_A + ½ρv_A² + ρg z_A = P_B + ½ρv_B² + ρg z_B. Travaille en pascals.",
+          "explication": "P_B = 300 000 + 500 × (1² − 4²) − 1 000 × 9,81 × 5 = 300 000 − 7 500 − 49 050 ≈ 243 450 Pa, soit **243 kPa**."
+        },
+        {
+          "type": "zone",
+          "document": "mesures",
+          "enonce": "Touche la mesure qui est inférieure à la pression prévue par Bernoulli en B.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Compare chaque barre à la valeur que tu viens de calculer.",
+          "explication": "La mesure en B (**230 kPa**) est inférieure aux 243 kPa prévus ; celle de A correspond à un autre point de la conduite."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel écart y a-t-il entre la pression prévue en B et la pression mesurée en B, en kPa ?",
+          "reponse": 13.45,
+          "unite": "kPa",
+          "tolerance": 0.6,
+          "aide": "Soustrais la valeur mesurée à la valeur calculée.",
+          "explication": "243,45 − 230 ≈ **13,5 kPa** de pression perdue en plus de ce que prévoit Bernoulli."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment expliquer cette perte de pression supplémentaire ?",
+          "options": [
+            "Les frottements dus à la viscosité de l’eau",
+            "L’eau est devenue compressible",
+            "La relation de Bernoulli ne s’applique jamais à l’eau",
+            "Le diamètre de la conduite diminue"
+          ],
+          "reponse": 0,
+          "aide": "Quelle hypothèse de Bernoulli n’est pas respectée dans une conduite réelle ?",
+          "explication": "Bernoulli suppose un fluide **sans viscosité** ; dans une conduite réelle les frottements dissipent de l’énergie et la pression chute. C’est pourquoi il faut des pompes."
+        }
+      ]
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les bruits de la journée",
+      "competence": "lire-tableau",
+      "situation": "Une élève compare l’intensité sonore de quatre lieux. On donne l’intensité de référence I₀ = 1,0 × 10⁻¹² W·m⁻² et la relation L = 10 × log(I / I₀).",
+      "documents": [
+        {
+          "id": "lieux",
+          "type": "tableau",
+          "titre": "Intensités sonores mesurées",
+          "colonnes": [
+            "Lieu",
+            "Intensité I (W·m⁻²)"
+          ],
+          "lignes": [
+            [
+              "Bibliothèque",
+              "1,0 × 10⁻⁹"
+            ],
+            [
+              "Salle de classe",
+              "1,0 × 10⁻⁷"
+            ],
+            [
+              "Chantier",
+              "1,0 × 10⁻³"
+            ],
+            [
+              "Concert",
+              "1,0 × 10⁻¹"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le niveau d’intensité sonore de la bibliothèque, en dB.",
+          "reponse": 30,
+          "unite": "dB",
+          "tolerance": 0.5,
+          "aide": "I/I₀ = 10⁻⁹ ÷ 10⁻¹² = 10³ ; log(10³) = 3.",
+          "explication": "L = 10 × log(10³) = **30 dB**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule celui de la salle de classe, en dB.",
+          "reponse": 50,
+          "unite": "dB",
+          "tolerance": 0.5,
+          "aide": "I/I₀ = 10⁻⁷ ÷ 10⁻¹².",
+          "explication": "L = 10 × log(10⁵) = **50 dB**."
+        },
+        {
+          "type": "zone",
+          "document": "lieux",
+          "enonce": "Une exposition prolongée au-dessus de 85 dB abîme l’audition. Touche les intensités des lieux concernés.",
+          "reponse": [
+            "r2c1",
+            "r3c1"
+          ],
+          "multiple": true,
+          "aide": "Calcule le niveau de chaque lieu, ou cherche quelles intensités dépassent 10⁻³,⁵ W·m⁻².",
+          "explication": "Le chantier (**90 dB**) et le concert (**110 dB**) dépassent 85 dB ; la bibliothèque et la classe restent très en dessous."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle intensité correspond à un niveau de 100 dB ? Réponds en 10⁻² W·m⁻².",
+          "reponse": 1,
+          "unite": "×10⁻² W·m⁻²",
+          "tolerance": 0.05,
+          "aide": "Inverse la relation : I = I₀ × 10^(L/10).",
+          "explication": "I = 10⁻¹² × 10¹⁰ = 10⁻² W·m⁻² = **1,0 × 10⁻² W·m⁻²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "S’éloigner de la source",
+      "competence": "modeliser",
+      "situation": "Un haut-parleur de concert se comporte comme une source ponctuelle : à 1,0 m, le niveau est de 90 dB. On admet L(d) = L(1 m) − 20 × log d (d en m), sans absorption. Le graphique donne le niveau aux distances 1, 2, 4, 8 et 16 m.",
+      "documents": [
+        {
+          "id": "niveau",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Niveau sonore selon la distance",
+          "categories": [
+            "1",
+            "2",
+            "4",
+            "8",
+            "16"
+          ],
+          "series": [
+            {
+              "nom": "L",
+              "valeurs": [
+                90,
+                83.98,
+                77.96,
+                71.94,
+                65.92
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Niveau L",
+            "unite": "dB",
+            "min": 60,
+            "max": 95,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Distance d à la source (m)"
+          },
+          "valeurs": false,
+          "source": "Calculé sans absorption"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis sur le graphique le niveau sonore à 4 m.",
+          "reponse": 78,
+          "unite": "dB",
+          "tolerance": 0.5,
+          "aide": "Repère le point d’abscisse 4.",
+          "explication": "À 4 m le niveau est d’environ **78 dB**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le niveau à 10 m avec L(d) = 90 − 20 log d, en dB.",
+          "reponse": 70,
+          "unite": "dB",
+          "tolerance": 0.2,
+          "aide": "log 10 = 1.",
+          "explication": "L(10) = 90 − 20 × 1 = **70 dB**."
+        },
+        {
+          "type": "zone",
+          "document": "niveau",
+          "enonce": "Le niveau doit passer sous 70 dB. Touche le premier point du graphique qui respecte cette limite.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "À 8 m, le niveau vaut environ 72 dB.",
+          "explication": "À 8 m le niveau est encore d’environ 72 dB ; à **16 m** il tombe à environ 66 dB."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 8 m, deux haut-parleurs identiques jouent ensemble. Quel est le niveau total, en dB ? (Doubler l’intensité ajoute 10 log 2 ≈ 3,0 dB.)",
+          "reponse": 74.95,
+          "unite": "dB",
+          "tolerance": 0.3,
+          "aide": "Lis ou calcule le niveau d’un seul haut-parleur à 8 m, puis ajoute 3 dB.",
+          "explication": "Un seul : environ 71,9 dB ; deux : 71,9 + 3,0 ≈ **75 dB** et non 144 dB."
+        }
+      ]
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’atelier bruyant",
+      "competence": "raisonner",
+      "situation": "Dans un atelier, trois machines fonctionnent près d’un poste de travail. Mesurées séparément à ce poste, elles produisent 82 dB (A), 78 dB (B) et 75 dB (C). On donne I₀ = 1,0 × 10⁻¹² W·m⁻². Les intensités s’ajoutent, pas les niveaux.",
+      "documents": [
+        {
+          "id": "machines",
+          "type": "tableau",
+          "titre": "Niveaux mesurés machine par machine",
+          "colonnes": [
+            "Machine",
+            "Niveau seul (dB)"
+          ],
+          "lignes": [
+            [
+              "A",
+              82
+            ],
+            [
+              "B",
+              78
+            ],
+            [
+              "C",
+              75
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures au poste de travail"
+        },
+        {
+          "id": "duree",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Durée d’exposition quotidienne maximale",
+          "categories": [
+            "85 dB",
+            "88 dB",
+            "91 dB",
+            "94 dB",
+            "97 dB"
+          ],
+          "series": [
+            {
+              "nom": "Durée",
+              "valeurs": [
+                8,
+                4,
+                2,
+                1,
+                0.5
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Durée maximale",
+            "unite": "h",
+            "min": 0,
+            "max": 9,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Niveau sonore"
+          },
+          "valeurs": false,
+          "source": "Repères simplifiés : chaque hausse de 3 dB divise la durée par 2"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le niveau quand A et B fonctionnent ensemble, en dB. Additionne les intensités : I = I₀ × 10^(L/10).",
+          "reponse": 83.5,
+          "unite": "dB",
+          "tolerance": 0.1,
+          "aide": "I_A = I₀ × 10^8,2 et I_B = I₀ × 10^7,8 ; additionne, puis L = 10 log(I/I₀).",
+          "explication": "I/I₀ = 1,58 × 10⁸ + 0,63 × 10⁸ = 2,22 × 10⁸ ; L = **83,5 dB**, à peine plus que la machine A seule."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le niveau quand les trois machines fonctionnent ensemble, en dB.",
+          "reponse": 84,
+          "unite": "dB",
+          "tolerance": 0.1,
+          "aide": "Ajoute aussi 10^7,5 (en unités de I₀).",
+          "explication": "I/I₀ = 1,58 × 10⁸ + 0,63 × 10⁸ + 0,32 × 10⁸ = 2,53 × 10⁸ ; L = **84,0 dB**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On arrête la machine A. Quel est alors le niveau des machines B et C, en dB ?",
+          "reponse": 79.8,
+          "unite": "dB",
+          "tolerance": 0.1,
+          "aide": "Additionne seulement les intensités de B et de C.",
+          "explication": "I/I₀ = 0,63 × 10⁸ + 0,32 × 10⁸ = 0,95 × 10⁸ ; L = **79,8 dB** : arrêter la plus bruyante fait gagner plus de 4 dB."
+        },
+        {
+          "type": "zone",
+          "document": "duree",
+          "enonce": "Un meuleur travaille à 94 dB. Touche la durée maximale d’exposition qui lui est autorisée.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Repère le niveau 94 dB sur l’axe horizontal.",
+          "explication": "À 94 dB, la durée maximale est de **1 h** par jour."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de décibels faut-il au minimum baisser un niveau de 94 dB pour pouvoir travailler 8 h par jour ?",
+          "reponse": 9,
+          "unite": "dB",
+          "tolerance": 0.5,
+          "aide": "Cherche le niveau qui autorise 8 h sur le graphique.",
+          "explication": "8 h correspondent à 85 dB : il faut baisser de 94 − 85 = **9 dB**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’ambulance qui passe",
+      "competence": "lire-graphique",
+      "situation": "Une ambulance roule à 20 m·s⁻¹ et émet une note de fréquence f_e = 700 Hz. Un micro au bord de la route enregistre la fréquence reçue pendant que l’ambulance passe devant lui. On donne la célérité du son c = 340 m·s⁻¹.",
+      "documents": [
+        {
+          "id": "micro",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Fréquence reçue par le micro",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "f",
+              "valeurs": [
+                743.8,
+                743.8,
+                743.8,
+                743.8,
+                743.8,
+                700,
+                661.1,
+                661.1,
+                661.1,
+                661.1,
+                661.1
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Fréquence reçue",
+            "unite": "Hz",
+            "min": 600,
+            "max": 800,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "valeurs": false,
+          "source": "Enregistrement idéalisé"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis la fréquence reçue pendant que l’ambulance approche.",
+          "reponse": 744,
+          "unite": "Hz",
+          "tolerance": 4,
+          "aide": "Regarde le palier avant le passage.",
+          "explication": "Pendant l’approche, le micro reçoit environ **744 Hz**, plus aigu que la note émise."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la fréquence reçue pendant que l’ambulance s’éloigne.",
+          "reponse": 661,
+          "unite": "Hz",
+          "tolerance": 4,
+          "aide": "Regarde le palier après le passage.",
+          "explication": "Après le passage, le micro reçoit environ **661 Hz**, plus grave que la note émise."
+        },
+        {
+          "type": "zone",
+          "document": "micro",
+          "enonce": "Touche l’instant où l’ambulance passe devant le micro : la fréquence reçue est alors égale à la fréquence émise.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche le point à 700 Hz, la valeur émise.",
+          "explication": "À **t = 5 s**, la vitesse est perpendiculaire à la ligne de visée : la composante radiale est nulle et f_r = f_e = 700 Hz."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Vérifie par le calcul la fréquence reçue à l’approche avec f_r = f_e × c / (c − v), en Hz.",
+          "reponse": 743.75,
+          "unite": "Hz",
+          "tolerance": 0.5,
+          "aide": "c − v = 340 − 20.",
+          "explication": "f_r = 700 × 340 ÷ 320 = **743,75 Hz** : le graphique est cohérent."
+        }
+      ]
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le radar du gendarme",
+      "competence": "calculer",
+      "situation": "Un radar routier émet une onde de fréquence f_e = 24,125 GHz et mesure le décalage Doppler Δf du signal réfléchi par trois véhicules qui s’approchent. On donne c = 3,00 × 10⁸ m·s⁻¹ et Δf / f_e = 2v / c.",
+      "documents": [
+        {
+          "id": "radar",
+          "type": "tableau",
+          "titre": "Décalages mesurés par le radar",
+          "colonnes": [
+            "Véhicule",
+            "Décalage Δf (Hz)"
+          ],
+          "lignes": [
+            [
+              "Véhicule 1",
+              "3 215"
+            ],
+            [
+              "Véhicule 2",
+              "4 020"
+            ],
+            [
+              "Véhicule 3",
+              "2 680"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse du véhicule 1 avec v = Δf × c / (2 f_e), puis convertis-la en km·h⁻¹.",
+          "reponse": 72,
+          "unite": "km·h⁻¹",
+          "tolerance": 0.5,
+          "aide": "Calcule v en m·s⁻¹, puis multiplie par 3,6.",
+          "explication": "v = 3 215 × 3,00 × 10⁸ ÷ (2 × 24,125 × 10⁹) ≈ 20 m·s⁻¹ = **72 km·h⁻¹**."
+        },
+        {
+          "type": "zone",
+          "document": "radar",
+          "enonce": "La limitation est de 80 km·h⁻¹. Touche le décalage du véhicule en excès de vitesse.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Plus Δf est grand, plus la vitesse est grande : calcule la vitesse du véhicule 2.",
+          "explication": "Le véhicule 2 roule à 4 020 × 3,00 × 10⁸ ÷ (2 × 24,125 × 10⁹) ≈ 25 m·s⁻¹ = **90 km·h⁻¹** ; le véhicule 3 roule à 60 km·h⁻¹."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un radar mal réglé oublierait le facteur 2 (Δf / f_e = v / c). Quelle vitesse afficherait-il pour le véhicule 1, en km·h⁻¹ ?",
+          "reponse": 144,
+          "unite": "km·h⁻¹",
+          "tolerance": 1,
+          "aide": "Sans le facteur 2, la vitesse calculée est multipliée par 2.",
+          "explication": "Sans le facteur 2, v serait doublée : 2 × 72 = **144 km·h⁻¹**. Le facteur 2 vient du fait que le véhicule reçoit puis réémet l’onde."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel décalage Δf le radar mesure-t-il pour un véhicule à 110 km·h⁻¹ ? Réponds en Hz, à 20 Hz près.",
+          "reponse": 4914,
+          "unite": "Hz",
+          "tolerance": 20,
+          "aide": "110 km·h⁻¹ = 110 ÷ 3,6 m·s⁻¹. Puis Δf = 2 v f_e / c.",
+          "explication": "v = 30,6 m·s⁻¹ ; Δf = 2 × 30,6 × 24,125 × 10⁹ ÷ 3,00 × 10⁸ ≈ **4 910 Hz**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’étoile qui tangue",
+      "competence": "raisonner",
+      "situation": "Une étoile est suivie pendant 4 jours. Par effet Doppler sur la raie Hα, de longueur d’onde λ = 656,3 nm au repos, on mesure sa vitesse radiale v_r, comptée positive quand l’étoile s’éloigne de nous. On donne c = 3,00 × 10⁸ m·s⁻¹.",
+      "documents": [
+        {
+          "id": "radiale",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Vitesse radiale de l’étoile",
+          "categories": [
+            "0",
+            "0,5",
+            "1",
+            "1,5",
+            "2",
+            "2,5",
+            "3",
+            "3,5",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "v_r",
+              "valeurs": [
+                0,
+                35.4,
+                50,
+                35.4,
+                0,
+                -35.4,
+                -50,
+                -35.4,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Vitesse radiale",
+            "unite": "m·s⁻¹",
+            "min": -60,
+            "max": 60,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Temps (jours)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "etoiles",
+          "type": "tableau",
+          "titre": "Deux autres étoiles observées",
+          "colonnes": [
+            "Étoile",
+            "Orbite vue depuis la Terre",
+            "Vitesse radiale mesurée"
+          ],
+          "lignes": [
+            [
+              "Étoile 1",
+              "de profil (le plan contient la ligne de visée)",
+              "± 50 m·s⁻¹"
+            ],
+            [
+              "Étoile 2",
+              "de face (le plan est perpendiculaire à la ligne de visée)",
+              "≈ 0 m·s⁻¹"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis l’amplitude de l’oscillation de la vitesse radiale, en m·s⁻¹.",
+          "reponse": 50,
+          "unite": "m·s⁻¹",
+          "tolerance": 2,
+          "aide": "Regarde la valeur maximale atteinte par la courbe.",
+          "explication": "La vitesse radiale oscille entre −50 et +50 m·s⁻¹ : l’amplitude est de **50 m·s⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la période de l’oscillation, en jours ?",
+          "reponse": 4,
+          "unite": "jours",
+          "tolerance": 0.2,
+          "aide": "Mesure la durée d’une oscillation complète.",
+          "explication": "La courbe revient à son point de départ après **4 jours**."
+        },
+        {
+          "type": "zone",
+          "document": "radiale",
+          "enonce": "Touche l’instant où l’étoile s’éloigne de nous le plus vite.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "v_r est positive quand l’étoile s’éloigne : cherche son maximum.",
+          "explication": "Le maximum positif est atteint à **t = 1 jour**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À cet instant, de combien la raie Hα est-elle décalée ? Δλ = λ × v / c, en 10⁻⁴ nm.",
+          "reponse": 1.09,
+          "unite": "×10⁻⁴ nm",
+          "tolerance": 0.01,
+          "aide": "Utilise v = 50 m·s⁻¹ et λ = 656,3 nm.",
+          "explication": "Δλ = 656,3 × 50 ÷ 3,00 × 10⁸ ≈ 1,09 × 10⁻⁴ nm : un décalage minuscule, d’où des spectrographes très précis."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la méthode ne détecte-t-elle pas une planète autour de l’étoile 2 ?",
+          "options": [
+            "Sa vitesse est perpendiculaire à la ligne de visée : la composante radiale est nulle",
+            "L’étoile 2 n’a forcément pas de planète, puisqu’aucun décalage Doppler n’est mesuré",
+            "La raie Hα disparaît pour les étoiles vues de face, quelle que soit leur vitesse",
+            "L’effet Doppler ne fonctionne qu’avec des ondes sonores, pas avec la lumière"
+          ],
+          "reponse": 0,
+          "aide": "Seule la composante de la vitesse le long de la ligne de visée compte.",
+          "explication": "L’effet Doppler ne voit que la composante **radiale** de la vitesse. Pour une orbite vue de face, elle est nulle : l’étoile 2 peut très bien avoir une planète."
+        }
+      ]
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre fentes, quatre taches",
+      "competence": "lire-graphique",
+      "situation": "Un laser de longueur d’onde λ = 633 nm éclaire successivement quatre fentes de largeurs a différentes. L’écran est à D = 2,00 m. Le graphique donne la largeur L de la tache centrale de diffraction.",
+      "documents": [
+        {
+          "id": "taches",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Largeur de la tache centrale",
+          "categories": [
+            "a = 25 µm",
+            "a = 50 µm",
+            "a = 100 µm",
+            "a = 200 µm"
+          ],
+          "series": [
+            {
+              "nom": "L",
+              "valeurs": [
+                101.3,
+                50.6,
+                25.3,
+                12.7
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Largeur L",
+            "unite": "mm",
+            "min": 0,
+            "max": 110,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Largeur de la fente"
+          },
+          "valeurs": false,
+          "source": "Valeurs calculées avec L = 2λD/a"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "taches",
+          "enonce": "Touche la fente qui donne la tache la plus étalée.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Plus la fente est étroite, plus la lumière s’étale.",
+          "explication": "La fente de **25 µm**, la plus étroite, donne la tache la plus large : la plus petite ouverture diffracte le plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis sur le graphique la largeur de la tache pour la fente de 100 µm.",
+          "reponse": 25,
+          "unite": "mm",
+          "tolerance": 1.5,
+          "aide": "Repère la troisième barre.",
+          "explication": "La barre de a = 100 µm atteint environ **25 mm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par quel facteur la largeur L est-elle divisée quand on passe de a = 50 µm à a = 100 µm ?",
+          "reponse": 2,
+          "tolerance": 0.1,
+          "aide": "Compare les deux barres, ou utilise L = 2λD/a.",
+          "explication": "L est inversement proportionnelle à a : a double, donc L est divisée par **2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule L = 2λD/a pour a = 100 µm, en mm.",
+          "reponse": 25.3,
+          "unite": "mm",
+          "tolerance": 0.2,
+          "aide": "Convertis λ et a en mètres avant de calculer.",
+          "explication": "L = 2 × 633 × 10⁻⁹ × 2,00 ÷ 100 × 10⁻⁶ ≈ 0,0253 m = **25,3 mm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le diamètre d’un cheveu",
+      "competence": "calculer",
+      "situation": "Un laser de longueur d’onde λ = 650 nm éclaire un cheveu tendu : la figure de diffraction est celle d’une fente dont la largeur a est le diamètre du cheveu. On mesure la largeur L de la tache centrale pour quatre distances D cheveu-écran.",
+      "documents": [
+        {
+          "id": "cheveu",
+          "type": "tableau",
+          "titre": "Mesures de la tache centrale",
+          "colonnes": [
+            "D (m)",
+            "L (cm)"
+          ],
+          "lignes": [
+            [
+              1.5,
+              2.17
+            ],
+            [
+              2,
+              2.89
+            ],
+            [
+              2.5,
+              3.61
+            ],
+            [
+              3,
+              4.33
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avec la mesure D = 2,00 m, calcule le diamètre du cheveu a = 2λD/L, en µm.",
+          "reponse": 90,
+          "unite": "µm",
+          "tolerance": 1,
+          "aide": "Convertis L en mètres : 2,89 cm = 0,0289 m.",
+          "explication": "a = 2 × 650 × 10⁻⁹ × 2,00 ÷ 0,0289 ≈ 9,0 × 10⁻⁵ m = **90 µm**."
+        },
+        {
+          "type": "zone",
+          "document": "cheveu",
+          "enonce": "Touche la mesure de L pour la plus grande distance D.",
+          "reponse": [
+            "r3c1"
+          ],
+          "aide": "Plus l’écran est loin, plus la tache est large.",
+          "explication": "L est proportionnelle à D : la plus grande distance (3,00 m) donne la tache la plus large, **4,33 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Prévois la largeur L pour D = 4,00 m, en cm.",
+          "reponse": 5.78,
+          "unite": "cm",
+          "tolerance": 0.05,
+          "aide": "L est proportionnelle à D. Compare avec la mesure à 2,00 m.",
+          "explication": "D double par rapport à 2,00 m, donc L aussi : 2 × 2,89 = **5,78 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On remplace le cheveu par un cheveu plus fin, de 60 µm. Quelle est la largeur L à D = 2,00 m, en cm ?",
+          "reponse": 4.33,
+          "unite": "cm",
+          "tolerance": 0.05,
+          "aide": "L = 2λD/a : a est divisé par 1,5 par rapport à 90 µm.",
+          "explication": "L = 2 × 650 × 10⁻⁹ × 2,00 ÷ 60 × 10⁻⁶ ≈ 0,0433 m = **4,33 cm** : un cheveu plus fin étale davantage la lumière."
+        }
+      ]
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La droite de la diffraction",
+      "competence": "experimenter",
+      "situation": "Un élève éclaire des fentes de largeurs a variées avec un laser dont il cherche la longueur d’onde. L’écran est à D = 2,00 m. Il mesure la largeur L de la tache centrale et trace L en fonction de 1/a.",
+      "documents": [
+        {
+          "id": "fentes",
+          "type": "tableau",
+          "titre": "Mesures",
+          "colonnes": [
+            "a (mm)",
+            "1/a (mm⁻¹)",
+            "L (mm)"
+          ],
+          "lignes": [
+            [
+              0.05,
+              20,
+              42.56
+            ],
+            [
+              0.1,
+              10,
+              21.28
+            ],
+            [
+              0.2,
+              5,
+              10.64
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "droite",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "L en fonction de 1/a",
+          "categories": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "series": [
+            {
+              "nom": "L",
+              "valeurs": [
+                0,
+                10.64,
+                21.28,
+                31.92,
+                42.56,
+                53.2
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "L",
+            "unite": "mm",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "1/a (mm⁻¹)"
+          },
+          "valeurs": false,
+          "source": "Droite passant par l’origine"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule 1/a pour une fente de largeur a = 0,040 mm, en mm⁻¹.",
+          "reponse": 25,
+          "unite": "mm⁻¹",
+          "tolerance": 0.1,
+          "aide": "1/0,040 = ?",
+          "explication": "1 ÷ 0,040 = **25 mm⁻¹**."
+        },
+        {
+          "type": "zone",
+          "document": "droite",
+          "enonce": "Touche le point de la droite qui correspond à la fente de a = 0,100 mm.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Calcule d’abord 1/a pour cette fente.",
+          "explication": "Pour a = 0,100 mm, 1/a = 10 mm⁻¹ : c’est le **troisième point**, avec L ≈ 21,3 mm, comme dans le tableau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le coefficient directeur de la droite, en mm² (L en mm, 1/a en mm⁻¹).",
+          "reponse": 2.13,
+          "unite": "mm²",
+          "tolerance": 0.03,
+          "aide": "Prends le dernier point : 53,2 mm pour 1/a = 25 mm⁻¹ (la droite passe par l’origine).",
+          "explication": "Coefficient = 53,2 ÷ 25 ≈ **2,13 mm²**, soit 2,13 × 10⁻⁶ m²."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Ce coefficient vaut 2λD. Déduis la longueur d’onde λ du laser, en nm.",
+          "reponse": 532,
+          "unite": "nm",
+          "tolerance": 5,
+          "aide": "Convertis le coefficient en m², divise par 2D, puis convertis en nm.",
+          "explication": "λ = 2,13 × 10⁻⁶ ÷ (2 × 2,00) ≈ 5,32 × 10⁻⁷ m = **532 nm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel laser l’élève a-t-il utilisé ?",
+          "options": [
+            "Un laser vert de 532 nm",
+            "Un laser rouge de 650 nm",
+            "Un laser bleu de 450 nm",
+            "Un laser infrarouge de 980 nm"
+          ],
+          "reponse": 0,
+          "aide": "Compare ta valeur de λ aux longueurs d’onde proposées.",
+          "explication": "λ ≈ 532 nm correspond à un laser **vert**."
+        }
+      ]
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les franges de la salle de TP",
+      "competence": "lire-graphique",
+      "situation": "Un laser éclaire deux fentes d’Young distantes de b = 0,30 mm. L’écran est à D = 2,00 m. Le graphique donne l’éclairement relatif le long de l’écran (x = 0 au centre).",
+      "documents": [
+        {
+          "id": "franges",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Éclairement relatif sur l’écran",
+          "categories": [
+            "-7",
+            "-6",
+            "-5",
+            "-4",
+            "-3",
+            "-2",
+            "-1",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "series": [
+            {
+              "nom": "I",
+              "valeurs": [
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                0,
+                0.5
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Éclairement",
+            "unite": "relatif",
+            "min": 0,
+            "max": 1,
+            "pas": 0.25
+          },
+          "axeX": {
+            "titre": "Position x sur l’écran (mm)"
+          },
+          "valeurs": false,
+          "source": "Profil idéalisé"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis l’interfrange i, distance entre deux franges brillantes voisines, en mm.",
+          "reponse": 4,
+          "unite": "mm",
+          "tolerance": 0.2,
+          "aide": "Repère deux maxima consécutifs et soustrais leurs positions.",
+          "explication": "Les maxima sont en x = 0 et x = 4 mm : i = **4,0 mm**."
+        },
+        {
+          "type": "zone",
+          "document": "franges",
+          "enonce": "Touche la frange brillante centrale.",
+          "reponse": [
+            "k7"
+          ],
+          "aide": "Elle est au centre de l’écran, en x = 0.",
+          "explication": "La frange centrale est en **x = 0** (δ = 0 : interférences constructives)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur d’onde du laser avec λ = i × b / D, en nm.",
+          "reponse": 600,
+          "unite": "nm",
+          "tolerance": 5,
+          "aide": "Convertis i et b en mètres.",
+          "explication": "λ = 4,0 × 10⁻³ × 0,30 × 10⁻³ ÷ 2,00 = 6,0 × 10⁻⁷ m = **600 nm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On recule l’écran à D = 3,00 m. Quel est le nouvel interfrange, en mm ?",
+          "reponse": 6,
+          "unite": "mm",
+          "tolerance": 0.1,
+          "aide": "i est proportionnel à D.",
+          "explication": "i = λD/b : D est multipliée par 1,5, donc i aussi : 4,0 × 1,5 = **6,0 mm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Brillant ou sombre ?",
+      "competence": "calculer",
+      "situation": "Un laser de longueur d’onde λ = 500 nm éclaire deux fentes d’Young. En six points de l’écran, on a calculé la différence de marche δ. Les interférences sont constructives si δ = kλ et destructives si δ = (k + ½)λ, avec k entier.",
+      "documents": [
+        {
+          "id": "marche",
+          "type": "tableau",
+          "titre": "Différence de marche aux six points",
+          "colonnes": [
+            "Point",
+            "δ (nm)"
+          ],
+          "lignes": [
+            [
+              "M1",
+              250
+            ],
+            [
+              "M2",
+              500
+            ],
+            [
+              "M3",
+              750
+            ],
+            [
+              "M4",
+              1000
+            ],
+            [
+              "M5",
+              1250
+            ],
+            [
+              "M6",
+              1750
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs calculées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "marche",
+          "enonce": "Touche les valeurs de δ pour lesquelles on observe une frange brillante.",
+          "reponse": [
+            "r1c1",
+            "r3c1"
+          ],
+          "multiple": true,
+          "aide": "Cherche les δ qui sont un nombre entier de fois 500 nm.",
+          "explication": "500 nm = 1 λ et 1 000 nm = 2 λ : les points **M2 et M4** sont sur des franges brillantes. Les autres valeurs sont des multiples impairs de λ/2 : franges sombres."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule δ/λ pour le point M6.",
+          "reponse": 3.5,
+          "tolerance": 0.02,
+          "aide": "Divise 1 750 nm par 500 nm.",
+          "explication": "1 750 ÷ 500 = **3,5** = 3 + ½ : interférences destructives, frange sombre."
+        },
+        {
+          "type": "choix",
+          "enonce": "On remplace le laser par un laser de 650 nm. Le point où δ = 1 300 nm est…",
+          "options": [
+            "Sur une frange brillante, car δ = 2 λ",
+            "Sur une frange sombre, car δ = 2,5 λ",
+            "Sur une frange sombre, car δ = 2 λ",
+            "Sur une frange brillante, car δ = 1,5 λ"
+          ],
+          "reponse": 0,
+          "aide": "Calcule 1 300 ÷ 650.",
+          "explication": "1 300 ÷ 650 = 2 : δ est un nombre entier de λ, donc la frange est **brillante**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec ce laser de 650 nm, quelle est la plus petite différence de marche non nulle donnant une frange sombre ? Réponds en nm.",
+          "reponse": 325,
+          "unite": "nm",
+          "tolerance": 1,
+          "aide": "La condition est δ = (k + ½) λ avec k = 0.",
+          "explication": "δ = ½ λ = 650 ÷ 2 = **325 nm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le silence entre deux haut-parleurs",
+      "competence": "experimenter",
+      "situation": "Deux haut-parleurs branchés sur le même générateur émettent en phase un son pur de fréquence f = 1 700 Hz. Un micro est placé en six points M1 à M6 ; on relève ses distances d₁ et d₂ aux deux haut-parleurs. La célérité du son est c = 340 m·s⁻¹.",
+      "documents": [
+        {
+          "id": "distances",
+          "type": "tableau",
+          "titre": "Distances aux deux haut-parleurs",
+          "colonnes": [
+            "Point",
+            "d₁ (m)",
+            "d₂ (m)"
+          ],
+          "lignes": [
+            [
+              "M1",
+              2.5,
+              2.5
+            ],
+            [
+              "M2",
+              2.5,
+              2.6
+            ],
+            [
+              "M3",
+              3,
+              3.2
+            ],
+            [
+              "M4",
+              2.8,
+              3.1
+            ],
+            [
+              "M5",
+              3.1,
+              3.5
+            ],
+            [
+              "M6",
+              3.2,
+              3.7
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "niveaux",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Niveau sonore mesuré en chaque point",
+          "categories": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6"
+          ],
+          "series": [
+            {
+              "nom": "L",
+              "valeurs": [
+                72,
+                36,
+                72,
+                38,
+                71,
+                40
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Niveau L",
+            "unite": "dB",
+            "min": 0,
+            "max": 80,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Point de mesure"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur d’onde λ = c / f du son, en m.",
+          "reponse": 0.2,
+          "unite": "m",
+          "tolerance": 0.005,
+          "aide": "Divise la célérité par la fréquence.",
+          "explication": "λ = 340 ÷ 1 700 = **0,200 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la différence de marche δ = |d₂ − d₁| au point M4, en m.",
+          "reponse": 0.3,
+          "unite": "m",
+          "tolerance": 0.005,
+          "aide": "Soustrais les deux distances de la ligne M4.",
+          "explication": "δ = 3,10 − 2,80 = **0,30 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule δ/λ au point M6.",
+          "reponse": 2.5,
+          "tolerance": 0.02,
+          "aide": "δ = 3,70 − 3,20, puis divise par λ.",
+          "explication": "δ = 0,50 m ; δ/λ = 0,50 ÷ 0,20 = **2,5** : c’est un demi-entier."
+        },
+        {
+          "type": "zone",
+          "document": "distances",
+          "enonce": "Touche les points où les interférences sont destructives, c’est-à-dire où δ = (k + ½) λ.",
+          "reponse": [
+            "r1c0",
+            "r3c0",
+            "r5c0"
+          ],
+          "multiple": true,
+          "aide": "Calcule δ pour chaque point, puis δ/λ : cherche les demi-entiers (0,5 ; 1,5 ; 2,5).",
+          "explication": "δ/λ = 0,5 en M2, 1,5 en M4 et 2,5 en M6 : ce sont les trois points de **silence** prévu. Les autres donnent 0, 1 et 2 : interférences constructives."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur le graphique, le niveau en M2 n’est pas nul (36 dB). Que faut-il en conclure ?",
+          "options": [
+            "Les ondes ne s’annulent pas tout à fait : amplitudes un peu inégales, réflexions du son",
+            "L’énergie sonore est détruite et le reste du son vient d’ailleurs, d’une autre source",
+            "Le calcul de la différence de marche δ est faux, car il n’y a pas de silence en M2",
+            "Les deux haut-parleurs ne sont pas cohérents, donc ils n’interfèrent pas du tout"
+          ],
+          "reponse": 0,
+          "aide": "Le son des deux haut-parleurs est cohérent. Que peut-on dire de leurs amplitudes au niveau du micro ?",
+          "explication": "Le niveau chute de plus de 30 dB entre M1 et M2 : l’interférence destructive est bien là. Elle n’est pas parfaite car les amplitudes en M2 sont légèrement inégales et la salle réfléchit un peu de son."
+        }
+      ]
+    },
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les oculaires de la lunette",
+      "competence": "lire-tableau",
+      "situation": "Une lunette astronomique afocale a un objectif de distance focale f′₁ = 1 000 mm. Un astronome dispose de trois oculaires de focales différentes.",
+      "documents": [
+        {
+          "id": "oculaires",
+          "type": "tableau",
+          "titre": "Les trois oculaires",
+          "colonnes": [
+            "Oculaire",
+            "Distance focale f′₂ (mm)"
+          ],
+          "lignes": [
+            [
+              "Oculaire A",
+              25
+            ],
+            [
+              "Oculaire B",
+              10
+            ],
+            [
+              "Oculaire C",
+              5
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs du catalogue imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le grossissement G = f′₁ / f′₂ avec l’oculaire A.",
+          "reponse": 40,
+          "tolerance": 0.5,
+          "aide": "Divise la focale de l’objectif par celle de l’oculaire.",
+          "explication": "G = 1 000 ÷ 25 = **40**."
+        },
+        {
+          "type": "zone",
+          "document": "oculaires",
+          "enonce": "Touche l’oculaire qui donne le plus fort grossissement.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "G = f′₁ / f′₂ : quel f′₂ rend G le plus grand ?",
+          "explication": "G est le plus grand pour la focale d’oculaire la plus courte : l’**oculaire C** (5 mm) donne G = 200."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec l’oculaire A, quelle est la distance entre l’objectif et l’oculaire (montage afocal : F′₁ = F₂), en mm ?",
+          "reponse": 1025,
+          "unite": "mm",
+          "tolerance": 1,
+          "aide": "Les deux lentilles sont séparées de f′₁ + f′₂.",
+          "explication": "Le foyer image de l’objectif coïncide avec le foyer objet de l’oculaire : distance = 1 000 + 25 = **1 025 mm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La Lune est vue sous le diamètre apparent θ = 9,3 × 10⁻³ rad. Quel est le diamètre de son image A₁B₁ dans le plan focal de l’objectif (A₁B₁ = f′₁ × θ), en mm ?",
+          "reponse": 9.3,
+          "unite": "mm",
+          "tolerance": 0.1,
+          "aide": "Exprime f′₁ en mm et garde θ en radians.",
+          "explication": "A₁B₁ = 1 000 × 9,3 × 10⁻³ = **9,3 mm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le banc d’optique",
+      "competence": "experimenter",
+      "situation": "Sur un banc d’optique, on place un objet AB de 2,0 cm de hauteur devant une lentille mince convergente et on relève la position OA′ de l’image nette pour quatre positions OA de l’objet. Les mesures sont algébriques, en cm.",
+      "documents": [
+        {
+          "id": "banc",
+          "type": "tableau",
+          "titre": "Positions de l’objet et de l’image",
+          "colonnes": [
+            "OA (cm)",
+            "OA′ (cm)"
+          ],
+          "lignes": [
+            [
+              "−25",
+              100
+            ],
+            [
+              "−30",
+              60
+            ],
+            [
+              "−40",
+              40
+            ],
+            [
+              "−60",
+              30
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "banc",
+          "enonce": "Touche la valeur de OA′ pour laquelle l’image a la même taille que l’objet (|OA′| = |OA|).",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne où les deux nombres ont la même valeur absolue.",
+          "explication": "Pour OA = −40 cm, on a OA′ = 40 cm : |γ| = 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec cette ligne, calcule la distance focale f′ avec 1/f′ = 1/OA′ − 1/OA, en cm.",
+          "reponse": 20,
+          "unite": "cm",
+          "tolerance": 0.2,
+          "aide": "OA = −40 cm et OA′ = 40 cm : 1/40 − (−1/40).",
+          "explication": "1/f′ = 1/40 + 1/40 = 1/20 : f′ = **20 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vergence V = 1/f′ de la lentille, en dioptries (f′ en mètres).",
+          "reponse": 5,
+          "unite": "δ",
+          "tolerance": 0.05,
+          "aide": "20 cm = 0,20 m.",
+          "explication": "V = 1 ÷ 0,20 = **5,0 δ**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le grandissement γ = OA′/OA pour la ligne OA = −25 cm.",
+          "reponse": -4,
+          "tolerance": 0.05,
+          "aide": "OA′ = 100 cm pour cette ligne.",
+          "explication": "γ = 100 ÷ (−25) = **−4,0** : l’image est renversée et quatre fois plus grande."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la hauteur algébrique A′B′ de l’image de AB = 2,0 cm pour cette ligne, en cm ?",
+          "reponse": -8,
+          "unite": "cm",
+          "tolerance": 0.1,
+          "aide": "A′B′ = γ × AB.",
+          "explication": "A′B′ = −4,0 × 2,0 = **−8,0 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Jupiter dans la lunette",
+      "competence": "raisonner",
+      "situation": "Un amateur observe Jupiter avec une lunette afocale : objectif de focale f′₁ = 1 200 mm et de diamètre D = 100 mm. Jupiter est vue sous le diamètre apparent θ = 2,2 × 10⁻⁴ rad. On prend λ = 550 nm et la limite de diffraction θ_lim = λ / D.",
+      "documents": [
+        {
+          "id": "grossissement",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Grossissement selon l’oculaire",
+          "categories": [
+            "40",
+            "30",
+            "25",
+            "20",
+            "15",
+            "10",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "G",
+              "valeurs": [
+                30,
+                40,
+                48,
+                60,
+                80,
+                120,
+                240
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Grossissement G",
+            "unite": "",
+            "min": 0,
+            "max": 250,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Focale de l’oculaire f′₂ (mm)"
+          },
+          "valeurs": false,
+          "source": "G = f′₁ / f′₂"
+        },
+        {
+          "id": "doubles",
+          "type": "tableau",
+          "titre": "Deux étoiles doubles",
+          "colonnes": [
+            "Système",
+            "Écart angulaire entre les deux étoiles"
+          ],
+          "lignes": [
+            [
+              "Double A",
+              "2,0 µrad"
+            ],
+            [
+              "Double B",
+              "9,0 µrad"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "grossissement",
+          "enonce": "Touche l’oculaire qui donne un grossissement de 60.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "G = 1 200 ÷ f′₂ : cherche la focale qui donne 60.",
+          "explication": "G = 1 200 ÷ 20 = 60 : c’est l’oculaire de **20 mm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec l’oculaire de 15 mm, calcule le diamètre apparent θ′ de Jupiter vue dans la lunette (θ′ = G θ), en 10⁻² rad.",
+          "reponse": 1.76,
+          "unite": "×10⁻² rad",
+          "tolerance": 0.01,
+          "aide": "G = 1 200 ÷ 15 = 80.",
+          "explication": "θ′ = 80 × 2,2 × 10⁻⁴ = **1,76 × 10⁻² rad**, soit environ 1°."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le diamètre de l’image intermédiaire A₁B₁ de Jupiter dans le plan focal de l’objectif (A₁B₁ = f′₁ × θ), en mm ?",
+          "reponse": 0.264,
+          "unite": "mm",
+          "tolerance": 0.005,
+          "aide": "Garde f′₁ en mm et θ en radians.",
+          "explication": "A₁B₁ = 1 200 × 2,2 × 10⁻⁴ = **0,264 mm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la limite de diffraction θ_lim = λ / D de l’objectif, en µrad (1 µrad = 10⁻⁶ rad).",
+          "reponse": 5.5,
+          "unite": "µrad",
+          "tolerance": 0.05,
+          "aide": "Mets D = 100 mm en mètres.",
+          "explication": "θ_lim = 550 × 10⁻⁹ ÷ 0,100 = 5,5 × 10⁻⁶ rad = **5,5 µrad**."
+        },
+        {
+          "type": "zone",
+          "document": "doubles",
+          "enonce": "Touche le système d’étoiles doubles que cette lunette peut séparer, quel que soit l’oculaire.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Il faut que l’écart angulaire soit supérieur à la limite de diffraction.",
+          "explication": "Seul l’écart de 9,0 µrad (**Double B**) dépasse 5,5 µrad. Pour la double A, changer d’oculaire ne fait qu’agrandir une image floue : c’est le « grossissement vide »."
+        }
+      ]
+    }
+  ]
+}

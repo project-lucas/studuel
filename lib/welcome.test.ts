@@ -12,6 +12,8 @@ import {
   destinationApresPlan,
   gradeReassurance,
   isDailyGoalMinutes,
+  heuresParMois,
+  DAILY_GOALS,
   isWelcomeStep,
   makePlacement,
   minutesToSessions,
@@ -26,6 +28,8 @@ import {
   serializeAnswers,
   stepProgress,
   subjectsForGrade,
+  sectionsMatieres,
+  selectionPourClasse,
   type OnboardingAnswers,
   type WelcomeStep,
 } from '@/lib/welcome'
@@ -75,6 +79,85 @@ describe('subjectsForGrade', () => {
 describe('defaultSelectedForGrade', () => {
   it('coche toutes les matières du niveau', () => {
     expect(defaultSelectedForGrade(SUBJECTS, '6e')).toEqual(['maths', 'francais'])
+  })
+})
+
+describe('matières selon le programme officiel', () => {
+  const LYCEE: Subject[] = [
+    subject('francais', ['1re']),
+    subject('anglais', ['1re', 'Tle']),
+    subject('maths', ['1re', 'Tle']),
+    subject('grand-oral', ['1re', 'Tle']),
+    subject('arts-plastiques', ['Tle']),
+    subject('philosophie', ['Tle']),
+  ]
+
+  it('ne propose pas une matière hors programme, même avec du contenu', () => {
+    // Le Grand oral a du contenu en 1re, mais c'est une épreuve de Tle.
+    expect(subjectsForGrade(LYCEE, '1re').map((s) => s.slug)).toEqual([
+      'francais',
+      'anglais',
+      'maths',
+    ])
+  })
+
+  it('coche les obligatoires, laisse les spécialités et options à choisir', () => {
+    expect(defaultSelectedForGrade(LYCEE, 'Tle')).toEqual([
+      'anglais',
+      'grand-oral',
+      'philosophie',
+    ])
+    const sections = sectionsMatieres(LYCEE, 'Tle')
+    expect(sections.obligatoires.map((s) => s.slug)).toEqual([
+      'anglais',
+      'grand-oral',
+      'philosophie',
+    ])
+    // Les arts plastiques s'arrêtent au collège : même rattachés à la Tle en
+    // base, ils ne sont pas proposés.
+    expect(sections.aChoisir.map((s) => s.slug)).toEqual(['maths'])
+  })
+
+  it('refait la sélection au changement de classe, en gardant les choix encore valables', () => {
+    const avant = ['francais', 'anglais', 'maths', 'arts-plastiques', 'technologie']
+    // En Tle : les obligatoires de la Tle, plus Maths (spécialité déjà
+    // choisie) ; ni Français, ni Technologie, ni Arts plastiques.
+    expect(selectionPourClasse(LYCEE, 'Tle', avant)).toEqual([
+      'anglais',
+      'grand-oral',
+      'philosophie',
+      'maths',
+    ])
+    expect(selectionPourClasse(LYCEE, 'Tle', [])).toEqual([
+      'anglais',
+      'grand-oral',
+      'philosophie',
+    ])
+  })
+
+  it('compte les obligatoires dans la réassurance', () => {
+    expect(gradeReassurance(LYCEE, 'Tle')).toMatch(/^3 matières/)
+  })
+})
+
+describe('matières de culture générale', () => {
+  // Économie, fiscalité, entrepreneuriat… se débloquent plus tard dans
+  // l'app : l'onboarding ne fait valider que les matières de la classe.
+  const AVEC_CULTURE: Subject[] = [
+    ...SUBJECTS,
+    { ...subject('fiscalite', ['6e', '4e', '3e']), category: 'culture' },
+  ]
+
+  it('ne sont ni proposées ni cochées', () => {
+    expect(subjectsForGrade(AVEC_CULTURE, '3e').map((s) => s.slug)).toEqual([
+      'maths',
+      'francais',
+    ])
+    expect(defaultSelectedForGrade(AVEC_CULTURE, '6e')).toEqual(['maths', 'francais'])
+  })
+
+  it('ne comptent pas dans la réassurance', () => {
+    expect(gradeReassurance(AVEC_CULTURE, '4e')).toMatch(/^2 matières/)
   })
 })
 
@@ -135,6 +218,28 @@ describe('minutesToSessions', () => {
     expect(minutesToSessions(10)).toBe(1)
     expect(minutesToSessions(15)).toBe(2)
     expect(minutesToSessions(30)).toBe(3)
+  })
+})
+
+describe('heuresParMois', () => {
+  it("convertit l'objectif du jour en heures sur trente jours", () => {
+    expect(heuresParMois(3)).toBe('1 h 30')
+    expect(heuresParMois(10)).toBe('5 h')
+    expect(heuresParMois(15)).toBe('7 h 30')
+    expect(heuresParMois(30)).toBe('15 h')
+  })
+})
+
+describe('DAILY_GOALS', () => {
+  it('conseille UN seul rythme, le régulier', () => {
+    expect(DAILY_GOALS.filter((g) => g.conseille).map((g) => g.minutes)).toEqual([10])
+  })
+
+  it('donne à chaque rythme sa flamme et sa phrase', () => {
+    for (const g of DAILY_GOALS) {
+      expect(g.flamme).toMatch(/^\/images\/mascotte\/flamme-.+\.webp$/)
+      expect(g.pitch.length).toBeGreaterThan(10)
+    }
   })
 })
 
@@ -468,7 +573,9 @@ describe('gradeReassurance', () => {
     // Le libellé court porte l'exposant du design (« 4ᵉ ») : on ne le
     // recopie pas ici, on vérifie le compte et l'accord.
     expect(gradeReassurance(SUBJECTS, '4e')).toMatch(/^2 matières · tout le programme de 4/)
-    expect(gradeReassurance(SUBJECTS, 'Tle')).toMatch(/^1 matière · tout le programme de T/)
+    // En Tle, la SES est une spécialité : seule la philosophie compte.
+    const tle = [...SUBJECTS, subject('philosophie', ['Tle'])]
+    expect(gradeReassurance(tle, 'Tle')).toMatch(/^1 matière · tout le programme de T/)
   })
 
   it('se tait sans classe ou sans matière', () => {

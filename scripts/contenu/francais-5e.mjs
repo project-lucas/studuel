@@ -188,7 +188,7 @@ Le voyageur décrit toujours **depuis** sa propre culture.
 
 = « Heureux qui, comme Ulysse, a fait un beau voyage… »
 
-Du Bellay préfère « le séjour qu’ont bâti mes aïeux » aux palais romains. **Rimbaud**, lui, part vraiment — à dix-sept ans — et n’écrira plus.
+Du Bellay préfère « le séjour qu’ont bâti mes aïeux » aux palais romains. **Rimbaud**, lui, part vraiment : il fugue dès quinze ans, cesse d’écrire vers vingt ans et finit par partir jusqu’en Afrique.
 
 ## L’exotisme
 = L’exotisme, c’est l’ailleurs comme promesse

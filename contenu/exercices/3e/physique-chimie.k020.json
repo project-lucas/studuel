@@ -1,0 +1,4030 @@
+{
+  "niveau": "3e",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La courbe d’un conducteur ohmique",
+      "competence": "lire-graphique",
+      "situation": "Noa relie un conducteur ohmique à un générateur réglable. Pour plusieurs intensités, elle relève la tension à ses bornes.",
+      "documents": [
+        {
+          "id": "uI",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Tension en fonction de l’intensité",
+          "categories": [
+            "0",
+            "0,05",
+            "0,10",
+            "0,15",
+            "0,20"
+          ],
+          "series": [
+            {
+              "nom": "Tension",
+              "valeurs": [
+                0,
+                5,
+                10,
+                15,
+                20
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Tension",
+            "unite": "V",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Intensité (A)"
+          },
+          "valeurs": false,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "uI",
+          "enonce": "Touche la mesure faite avec une intensité de 0,15 A.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Repère 0,15 sur l’axe horizontal.",
+          "explication": "La mesure à 0,15 A est la quatrième : la tension y vaut **15 V**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle tension lit-on pour cette intensité de 0,15 A ?",
+          "reponse": 15,
+          "unite": "V",
+          "aide": "Regarde la hauteur du point sur l’axe vertical.",
+          "explication": "Le point est à la hauteur **15 V**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la résistance du conducteur (R = U ÷ I).",
+          "reponse": 100,
+          "unite": "Ω",
+          "aide": "R = 15 ÷ 0,15.",
+          "explication": "R = 15 ÷ 0,15 = **100 Ω**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La droite est prolongée : quelle tension obtiendrait-on avec 0,30 A ?",
+          "reponse": 30,
+          "unite": "V",
+          "aide": "U = R × I, avec R = 100 Ω.",
+          "explication": "U = 100 × 0,30 = **30 V**. La tension est proportionnelle à l’intensité."
+        }
+      ]
+    },
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux appareils, un conducteur ohmique",
+      "competence": "calculer",
+      "situation": "Dans le circuit ci-dessous, Léo branche un voltmètre et un ampèremètre pour mesurer la résistance R d’un conducteur ohmique.",
+      "documents": [
+        {
+          "id": "circ",
+          "type": "circuit",
+          "titre": "Mesure de R par la méthode voltampèremétrique",
+          "branches": [
+            {
+              "de": [
+                0,
+                6
+              ],
+              "a": [
+                0,
+                2
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                2
+              ],
+              "a": [
+                2,
+                2
+              ]
+            },
+            {
+              "de": [
+                2,
+                2
+              ],
+              "a": [
+                8,
+                2
+              ],
+              "composant": "resistance",
+              "nom": "R",
+              "id": "r"
+            },
+            {
+              "de": [
+                8,
+                2
+              ],
+              "a": [
+                10,
+                2
+              ]
+            },
+            {
+              "de": [
+                10,
+                2
+              ],
+              "a": [
+                10,
+                6
+              ]
+            },
+            {
+              "de": [
+                10,
+                6
+              ],
+              "a": [
+                6,
+                6
+              ],
+              "composant": "amperemetre",
+              "nom": "A",
+              "id": "a"
+            },
+            {
+              "de": [
+                6,
+                6
+              ],
+              "a": [
+                0,
+                6
+              ]
+            },
+            {
+              "de": [
+                2,
+                2
+              ],
+              "a": [
+                2,
+                0
+              ]
+            },
+            {
+              "de": [
+                2,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ],
+              "composant": "voltmetre",
+              "nom": "V",
+              "id": "v"
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aff",
+          "type": "tableau",
+          "titre": "Ce qu’affichent les appareils",
+          "colonnes": [
+            "Appareil",
+            "Affichage"
+          ],
+          "lignes": [
+            [
+              "Voltmètre",
+              "4,5 V"
+            ],
+            [
+              "Ampèremètre",
+              "30 mA"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "circ",
+          "enonce": "Touche le voltmètre.",
+          "reponse": [
+            "v"
+          ],
+          "aide": "Cherche le symbole marqué V.",
+          "explication": "Le voltmètre est le dipôle **V**, branché en dérivation aux bornes de R."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Convertis l’intensité affichée en ampères.",
+          "reponse": 0.03,
+          "unite": "A",
+          "aide": "1 mA = 0,001 A.",
+          "explication": "30 mA = 30 × 0,001 = **0,03 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la résistance R du conducteur ohmique.",
+          "reponse": 150,
+          "unite": "Ω",
+          "aide": "R = U ÷ I, avec I en ampères.",
+          "explication": "R = 4,5 ÷ 0,03 = **150 Ω**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On remplace R par un conducteur de 300 Ω, sous la même tension de 4,5 V. Quelle intensité le traverse, en milliampères ?",
+          "reponse": 15,
+          "unite": "mA",
+          "aide": "I = U ÷ R, puis convertis en mA.",
+          "explication": "I = 4,5 ÷ 300 = 0,015 A = **15 mA** : deux fois plus de résistance, deux fois moins de courant."
+        }
+      ]
+    },
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Protéger une DEL",
+      "competence": "resoudre",
+      "situation": "Une DEL supporte au plus 20 mA. Yanis la branche sur une pile de 9 V avec une résistance de protection. Quand elle est traversée par le courant, la DEL a 2 V à ses bornes.",
+      "documents": [
+        {
+          "id": "led",
+          "type": "circuit",
+          "titre": "DEL et résistance en série",
+          "branches": [
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ]
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "del",
+              "allume": true,
+              "id": "d"
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                4,
+                4
+              ],
+              "composant": "resistance",
+              "nom": "R",
+              "id": "r"
+            },
+            {
+              "de": [
+                4,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ]
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                0,
+                4
+              ],
+              "composant": "pile"
+            }
+          ]
+        },
+        {
+          "id": "stock",
+          "type": "tableau",
+          "titre": "Résistances disponibles",
+          "colonnes": [
+            "R1",
+            "R2",
+            "R3",
+            "R4",
+            "R5"
+          ],
+          "lignes": [
+            [
+              "100 Ω",
+              "220 Ω",
+              "330 Ω",
+              "470 Ω",
+              "1 000 Ω"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Dans le tiroir de Yanis"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "led",
+          "enonce": "Touche la résistance de protection.",
+          "reponse": [
+            "r"
+          ],
+          "aide": "C’est le rectangle placé en série avec la DEL.",
+          "explication": "La résistance **R** est le rectangle : elle limite l’intensité qui traverse la DEL."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle tension y a-t-il aux bornes de la résistance ? (Les tensions en série s’additionnent : 9 V au total.)",
+          "reponse": 7,
+          "unite": "V",
+          "aide": "9 V moins ce que prend la DEL.",
+          "explication": "U(R) = 9 − 2 = **7 V**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle valeur minimale de R faut-il pour que l’intensité ne dépasse pas 0,020 A ?",
+          "reponse": 350,
+          "unite": "Ω",
+          "aide": "R = U ÷ I avec U = 7 V et I = 0,020 A.",
+          "explication": "R = 7 ÷ 0,020 = **350 Ω**. En dessous, le courant dépasse 20 mA."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la plus petite résistance disponible qui protège la DEL ?",
+          "options": [
+            "100 Ω",
+            "220 Ω",
+            "330 Ω",
+            "470 Ω",
+            "1 000 Ω"
+          ],
+          "reponse": 3,
+          "aide": "Il faut une valeur au moins égale à 350 Ω.",
+          "explication": "100, 220 et 330 Ω sont inférieures à 350 Ω (330 Ω laisserait passer 21 mA). La plus petite valeur suffisante est **470 Ω**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec la résistance de 470 Ω, quelle intensité traverse la DEL ? (en mA, arrondie au dixième)",
+          "reponse": 14.9,
+          "unite": "mA",
+          "tolerance": 0.1,
+          "aide": "I = 7 ÷ 470, puis mA.",
+          "explication": "I = 7 ÷ 470 ≈ 0,0149 A, soit **14,9 mA** : c’est bien sous 20 mA."
+        }
+      ]
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La bouilloire de la colocation",
+      "competence": "calculer",
+      "situation": "Sur la plaque de la bouilloire, Mia lit les caractéristiques. Elle veut savoir quel courant l’appareil appelle et ce qu’il consomme.",
+      "documents": [
+        {
+          "id": "plaque",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Plaque signalétique — bouilloire",
+          "emoji": "🫖",
+          "lignes": [
+            {
+              "texte": "Tension nominale",
+              "valeur": "230 V",
+              "id": "tension"
+            },
+            {
+              "texte": "Puissance",
+              "valeur": "1 840 W",
+              "id": "puissance"
+            },
+            {
+              "texte": "Fréquence",
+              "valeur": "50 Hz",
+              "id": "freq"
+            },
+            {
+              "texte": "Capacité",
+              "valeur": "1,7 L"
+            }
+          ],
+          "source": "Plaque imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plaque",
+          "enonce": "Touche la ligne qui donne la puissance de la bouilloire.",
+          "reponse": [
+            "puissance"
+          ],
+          "aide": "La puissance s’exprime en watts.",
+          "explication": "La puissance nominale est **1 840 W**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle intensité appelle la bouilloire sous 230 V ? (P = U × I)",
+          "reponse": 8,
+          "unite": "A",
+          "aide": "I = P ÷ U.",
+          "explication": "I = 1 840 ÷ 230 = **8 A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Mia la fait fonctionner 30 minutes. Quelle énergie consomme-t-elle, en kWh ?",
+          "reponse": 0.92,
+          "unite": "kWh",
+          "aide": "Mets P en kW (1,84 kW) et t en heures (0,5 h).",
+          "explication": "E = 1,84 × 0,5 = **0,92 kWh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le kWh coûte 0,25 €. Combien coûtent ces 30 minutes ? (en euros)",
+          "reponse": 0.23,
+          "unite": "€",
+          "aide": "Multiplie 0,92 kWh par 0,25 €.",
+          "explication": "0,92 × 0,25 = **0,23 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui consomme le plus ?",
+      "competence": "lire-graphique",
+      "situation": "Éva compare quatre appareils de la maison : leur puissance et le temps pendant lequel ils fonctionnent chaque jour.",
+      "documents": [
+        {
+          "id": "pw",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Puissance de chaque appareil",
+          "categories": [
+            "Four",
+            "Console",
+            "Télévision",
+            "Ordinateur"
+          ],
+          "series": [
+            {
+              "nom": "Puissance",
+              "valeurs": [
+                2000,
+                150,
+                100,
+                60
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Puissance",
+            "unite": "W",
+            "min": 0,
+            "max": 2500,
+            "pas": 500
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "dur",
+          "type": "tableau",
+          "titre": "Durée d’utilisation par jour",
+          "colonnes": [
+            "Appareil",
+            "Durée"
+          ],
+          "lignes": [
+            [
+              "Four",
+              "12 min"
+            ],
+            [
+              "Console",
+              "3 h"
+            ],
+            [
+              "Télévision",
+              "3 h"
+            ],
+            [
+              "Ordinateur",
+              "5 h"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Relevé imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pw",
+          "enonce": "Touche l’appareil de plus grande puissance.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "C’est la barre la plus haute.",
+          "explication": "Le **four** a la plus grande puissance : 2 000 W."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie le four consomme-t-il par jour, en kWh ? (12 min = 0,2 h)",
+          "reponse": 0.4,
+          "unite": "kWh",
+          "aide": "Puissance en kW : 2 kW.",
+          "explication": "E = 2 × 0,2 = **0,4 kWh**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel appareil consomme le plus d’énergie par jour ?",
+          "options": [
+            "Le four",
+            "La console",
+            "La télévision",
+            "L’ordinateur"
+          ],
+          "reponse": 1,
+          "aide": "Calcule E = P × t pour chacun, en kWh.",
+          "explication": "Four 0,4 kWh ; console 0,15 × 3 = **0,45 kWh** ; télévision 0,3 kWh ; ordinateur 0,06 × 5 = 0,3 kWh. Le plus puissant n’est pas celui qui consomme le plus : la durée compte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le kWh coûte 0,20 €. Combien coûte la console sur 30 jours ? (en euros)",
+          "reponse": 2.7,
+          "unite": "€",
+          "aide": "0,45 kWh par jour pendant 30 jours.",
+          "explication": "0,45 × 30 = 13,5 kWh ; 13,5 × 0,20 = **2,70 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "LED contre filament",
+      "competence": "resoudre",
+      "situation": "La famille Martin hésite à remplacer une ampoule à filament par une ampoule LED dans le salon. Elle allume l’ampoule 3 h par jour toute l’année.",
+      "documents": [
+        {
+          "id": "amp",
+          "type": "tableau",
+          "titre": "Les deux ampoules",
+          "colonnes": [
+            "Ampoule",
+            "Puissance",
+            "Prix d’achat"
+          ],
+          "lignes": [
+            [
+              "À filament",
+              "60 W",
+              "1 €"
+            ],
+            [
+              "LED",
+              "8 W",
+              "5 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, inventées pour l’exercice"
+        },
+        {
+          "id": "tarif",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Contrat d’électricité",
+          "emoji": "🧾",
+          "lignes": [
+            {
+              "texte": "Prix du kWh",
+              "valeur": "0,20 €"
+            },
+            {
+              "texte": "Éclairage du salon",
+              "valeur": "3 h par jour"
+            },
+            {
+              "texte": "Durée du calcul",
+              "valeur": "365 jours"
+            }
+          ],
+          "source": "Document imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie l’ampoule à filament consomme-t-elle en 365 jours ? (en kWh)",
+          "reponse": 65.7,
+          "unite": "kWh",
+          "tolerance": 0.05,
+          "aide": "Durée totale : 3 × 365 = 1 095 h ; puissance : 0,06 kW.",
+          "explication": "E = 0,06 × 1 095 = **65,7 kWh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie la LED consomme-t-elle sur la même durée ? (en kWh)",
+          "reponse": 8.76,
+          "unite": "kWh",
+          "tolerance": 0.05,
+          "aide": "Même durée, puissance 0,008 kW.",
+          "explication": "E = 0,008 × 1 095 = **8,76 kWh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle économie d’énergie la LED fait-elle en un an ? (en kWh)",
+          "reponse": 56.94,
+          "unite": "kWh",
+          "tolerance": 0.05,
+          "aide": "Soustrais les deux consommations.",
+          "explication": "65,7 − 8,76 = **56,94 kWh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle économie cela représente-t-il en euros ? (arrondi au centime)",
+          "reponse": 11.39,
+          "unite": "€",
+          "tolerance": 0.02,
+          "aide": "Multiplie par le prix du kWh.",
+          "explication": "56,94 × 0,20 = 11,388 ≈ **11,39 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La LED coûte 4 € de plus à l’achat. Au bout de combien de temps ce surcoût est-il compensé ?",
+          "options": [
+            "Environ 10 jours d’utilisation",
+            "Un peu plus de 4 mois d’utilisation",
+            "Environ 2 ans d’utilisation",
+            "Jamais, le surcoût ne sera pas compensé"
+          ],
+          "reponse": 1,
+          "aide": "Divise le surcoût par l’économie d’un mois (11,39 ÷ 12).",
+          "explication": "L’économie vaut environ 0,95 € par mois : 4 ÷ 0,95 ≈ 4,2 mois, soit **un peu plus de 4 mois**."
+        }
+      ]
+    },
+    {
+      "chapitre": "3aacaf01-3572-52e7-9ce8-44f95f590b6e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Des échantillons à classer",
+      "competence": "analyser-document",
+      "situation": "Noé a préparé cinq échantillons pour le cours de physique-chimie et note ce qu’il observe à l’œil nu.",
+      "documents": [
+        {
+          "id": "ech",
+          "type": "tableau",
+          "titre": "Les cinq échantillons",
+          "colonnes": [
+            "Échantillon",
+            "Ce qu’on observe"
+          ],
+          "lignes": [
+            [
+              "Eau distillée",
+              "Limpide, un seul constituant"
+            ],
+            [
+              "Eau et sable",
+              "Des grains au fond"
+            ],
+            [
+              "Eau salée",
+              "Limpide, le sel est dissous"
+            ],
+            [
+              "Eau et huile",
+              "Deux couches bien séparées"
+            ],
+            [
+              "Vinaigre",
+              "Limpide, plusieurs espèces dissoutes"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Observations imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Classe chaque échantillon.",
+          "categories": [
+            "Corps pur",
+            "Mélange homogène",
+            "Mélange hétérogène"
+          ],
+          "items": [
+            [
+              "Eau distillée",
+              0
+            ],
+            [
+              "Eau et sable",
+              2
+            ],
+            [
+              "Eau salée",
+              1
+            ],
+            [
+              "Eau et huile",
+              2
+            ],
+            [
+              "Vinaigre",
+              1
+            ]
+          ],
+          "aide": "Un mélange homogène ne laisse voir qu’une seule phase.",
+          "explication": "**Eau distillée** : corps pur. **Eau salée** et **vinaigre** : mélanges homogènes (un seul aspect). **Eau et sable**, **eau et huile** : mélanges hétérogènes (on voit deux constituants)."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque mélange à la technique adaptée.",
+          "paires": [
+            [
+              "Eau et sable",
+              "La filtration"
+            ],
+            [
+              "Eau et huile",
+              "La décantation"
+            ],
+            [
+              "Eau salée",
+              "La distillation"
+            ]
+          ],
+          "aide": "Le sel dissous traverse un filtre ; l’huile remonte d’elle-même.",
+          "explication": "Le sable est retenu par le **filtre** ; l’huile, moins dense, se sépare par **décantation** ; le sel dissous ne se sépare que par **distillation**."
+        },
+        {
+          "type": "texte",
+          "enonce": "Comment s’appelle le liquide qui traverse le filtre ?",
+          "reponse": [
+            "filtrat",
+            "le filtrat"
+          ],
+          "aide": "Ce n’est pas le distillat.",
+          "explication": "Le liquide qui a traversé le filtre est le **filtrat**."
+        }
+      ]
+    },
+    {
+      "chapitre": "3aacaf01-3572-52e7-9ce8-44f95f590b6e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux liquides sur le réchaud",
+      "competence": "lire-graphique",
+      "situation": "Sam chauffe deux liquides, A et B, dans des ballons identiques. Il relève la température toutes les 2 minutes.",
+      "documents": [
+        {
+          "id": "chauf",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Chauffage des liquides A et B",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "series": [
+            {
+              "nom": "Liquide A",
+              "valeurs": [
+                20,
+                40,
+                60,
+                80,
+                80,
+                80,
+                80
+              ],
+              "teinte": "corail"
+            },
+            {
+              "nom": "Liquide B",
+              "valeurs": [
+                20,
+                38,
+                56,
+                70,
+                79,
+                86,
+                92
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chauf",
+          "enonce": "Touche l’instant où le liquide A commence à bouillir.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche où la courbe de A devient horizontale.",
+          "explication": "Le liquide A atteint son palier à **6 minutes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la température du palier du liquide A ?",
+          "reponse": 80,
+          "unite": "°C",
+          "aide": "Lis la hauteur de la partie horizontale.",
+          "explication": "Le palier est à **80 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lequel des deux est un corps pur ?",
+          "options": [
+            "Le liquide A : sa température reste constante pendant l’ébullition",
+            "Le liquide B : sa température monte sans cesse pendant l’ébullition",
+            "Les deux, car les deux liquides finissent par bouillir et se vaporiser",
+            "Aucun des deux, car un liquide qui bout n’est jamais un corps pur"
+          ],
+          "reponse": 0,
+          "aide": "Un corps pur garde une température constante pendant le changement d’état.",
+          "explication": "**A** montre un palier : c’est la signature d’un corps pur. B n’a pas de palier : c’est un mélange."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le liquide A est-il de l’eau pure ?",
+          "options": [
+            "Oui, car il bout : c’est ce que fait l’eau pure à 80 °C",
+            "Non : l’eau pure bout à 100 °C, et ici le palier est à 80 °C",
+            "Oui, car il a un palier de température, comme l’eau pure",
+            "On ne peut rien dire sans connaître sa masse et son volume"
+          ],
+          "reponse": 1,
+          "aide": "Compare le palier avec la température d’ébullition de l’eau.",
+          "explication": "Le palier est à 80 °C, alors que l’eau pure bout à 100 °C sous pression normale : **ce n’est pas de l’eau**."
+        }
+      ]
+    },
+    {
+      "chapitre": "3aacaf01-3572-52e7-9ce8-44f95f590b6e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Eau boueuse et salée : que faire ?",
+      "competence": "observer-schema",
+      "situation": "Pour obtenir de l’eau pure à partir d’une eau boueuse et salée, Inès décante, filtre, puis distille le filtrat avec le montage ci-dessous.",
+      "documents": [
+        {
+          "id": "montage",
+          "type": "schema",
+          "titre": "Montage de distillation",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 150,
+              "r": 36,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "ballon",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 154,
+              "texte": "Filtrat",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "rect",
+              "x": 62,
+              "y": 80,
+              "l": 16,
+              "h": 36,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                80
+              ],
+              "a": [
+                70,
+                66
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                66
+              ],
+              "a": [
+                125,
+                66
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 125,
+              "y": 52,
+              "l": 120,
+              "h": 28,
+              "arrondi": 6,
+              "teinte": "ciel",
+              "motif": "clair",
+              "id": "refrigerant",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                245,
+                66
+              ],
+              "a": [
+                275,
+                66
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                275,
+                66
+              ],
+              "a": [
+                275,
+                118
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  263,
+                  122
+                ],
+                [
+                  287,
+                  122
+                ],
+                [
+                  287,
+                  150
+                ],
+                [
+                  312,
+                  200
+                ],
+                [
+                  238,
+                  200
+                ],
+                [
+                  263,
+                  150
+                ]
+              ],
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "recipient",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 192,
+              "l": 80,
+              "h": 20,
+              "arrondi": 4,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 70,
+              "y": 228,
+              "texte": "Chauffe-ballon",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "tests",
+          "type": "tableau",
+          "titre": "Les tests réalisés",
+          "colonnes": [
+            "Test",
+            "Sur le filtrat",
+            "Sur le distillat"
+          ],
+          "lignes": [
+            [
+              "Sulfate de cuivre anhydre",
+              "Devient bleu",
+              "Devient bleu"
+            ],
+            [
+              "Évaporation d’une goutte",
+              "Dépôt blanc",
+              "Aucun résidu"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Observations imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes dans l’ordre.",
+          "items": [
+            "Décanter : la terre tombe au fond",
+            "Filtrer : le filtre retient les petites particules",
+            "Distiller : la vapeur d’eau est refroidie et recueillie",
+            "Vérifier : le distillat bleuit le sulfate de cuivre anhydre"
+          ],
+          "aide": "On retire d’abord ce qui se voit, puis ce qui est dissous.",
+          "explication": "On **décante**, on **filtre**, on **distille**, puis on **vérifie** l’eau obtenue."
+        },
+        {
+          "type": "zone",
+          "document": "montage",
+          "enonce": "Touche le réfrigérant.",
+          "reponse": [
+            "refrigerant"
+          ],
+          "aide": "C’est là que la vapeur redevient liquide.",
+          "explication": "Le **réfrigérant** refroidit la vapeur d’eau pour la liquéfier."
+        },
+        {
+          "type": "zone",
+          "document": "montage",
+          "enonce": "Touche l’endroit où le sel reste à la fin.",
+          "reponse": [
+            "ballon"
+          ],
+          "aide": "Le sel ne s’évapore pas.",
+          "explication": "Le sel reste dans le **ballon** : seule l’eau s’évapore."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle observation prouve que le distillat ne contient plus de sel ?",
+          "options": [
+            "Il bleuit le sulfate de cuivre anhydre",
+            "Une goutte évaporée ne laisse aucun résidu",
+            "Il est limpide",
+            "Il est tiède"
+          ],
+          "reponse": 1,
+          "aide": "Regarde le tableau : quel test distingue le filtrat du distillat ?",
+          "explication": "Le sulfate de cuivre bleuit dans les deux cas : il montre seulement la présence d’eau. C’est **l’absence de résidu** après évaporation qui prouve qu’il n’y a plus de sel."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le filtrat bleuit le sulfate de cuivre anhydre. Peut-on en conclure que c’est de l’eau pure ?",
+          "options": [
+            "Oui : le test prouve que le filtrat est de l’eau pure",
+            "Non : cela montre seulement qu’il contient de l’eau",
+            "Oui, car il est limpide et sans aucune particule visible",
+            "Non, car il ne contient pas d’eau : le test est trompeur"
+          ],
+          "reponse": 1,
+          "aide": "Regarde le dépôt blanc laissé par le filtrat.",
+          "explication": "Le test montre la **présence** d’eau, pas sa pureté : le dépôt blanc prouve que le filtrat contient encore du sel."
+        }
+      ]
+    },
+    {
+      "chapitre": "4fbcbb69-b6b8-5672-b604-3540b15d38cb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois récipients, trois états",
+      "competence": "observer-schema",
+      "situation": "Chaque récipient contient la même substance, dessinée à l’échelle des molécules, dans un état différent.",
+      "documents": [
+        {
+          "id": "recs",
+          "type": "schema",
+          "titre": "La matière à l’échelle des molécules",
+          "largeur": 340,
+          "hauteur": 190,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 40,
+              "l": 90,
+              "h": 100,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "A",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 125,
+              "y": 40,
+              "l": 90,
+              "h": 100,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "B",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 230,
+              "y": 40,
+              "l": 90,
+              "h": 100,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "C",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 38,
+              "cy": 58,
+              "r": 8,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 88,
+              "cy": 70,
+              "r": 8,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 55,
+              "cy": 100,
+              "r": 8,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 95,
+              "cy": 122,
+              "r": 8,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 143,
+              "cy": 62,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 143,
+              "cy": 89,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 143,
+              "cy": 116,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 62,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 89,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 116,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 197,
+              "cy": 62,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 197,
+              "cy": 89,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 197,
+              "cy": 116,
+              "r": 10,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 248,
+              "cy": 122,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 124,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 292,
+              "cy": 121,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 311,
+              "cy": 123,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 258,
+              "cy": 103,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 281,
+              "cy": 104,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 302,
+              "cy": 100,
+              "r": 9,
+              "teinte": "bleu",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 65,
+              "y": 165,
+              "texte": "A",
+              "taille": "grand",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 165,
+              "texte": "B",
+              "taille": "grand",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 275,
+              "y": 165,
+              "texte": "C",
+              "taille": "grand",
+              "gras": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recs",
+          "enonce": "Touche le récipient où les molécules sont rangées en ordre.",
+          "reponse": [
+            "B"
+          ],
+          "aide": "Cherche les molécules alignées en rangées.",
+          "explication": "Dans le récipient **B**, les molécules sont serrées et ordonnées : c’est un solide cristallin."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque état à sa propriété.",
+          "paires": [
+            [
+              "Solide",
+              "A une forme propre"
+            ],
+            [
+              "Liquide",
+              "Prend la forme du récipient, garde son volume"
+            ],
+            [
+              "Gaz",
+              "Occupe tout le volume offert"
+            ]
+          ],
+          "aide": "Pense aux mots « forme » et « volume ».",
+          "explication": "Un **solide** garde sa forme ; un **liquide** épouse son récipient mais garde son volume ; un **gaz** occupe tout l’espace disponible."
+        },
+        {
+          "type": "zone",
+          "document": "recs",
+          "enonce": "Touche le récipient qui contient un gaz.",
+          "reponse": [
+            "A"
+          ],
+          "aide": "Cherche les molécules très éloignées les unes des autres.",
+          "explication": "Dans le récipient **A**, les molécules sont très éloignées et désordonnées : c’est un gaz."
+        }
+      ]
+    },
+    {
+      "chapitre": "4fbcbb69-b6b8-5672-b604-3540b15d38cb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Seringues sous pression",
+      "competence": "experimenter",
+      "situation": "Inès bouche deux seringues de 50 mL, l’une remplie d’air, l’autre d’eau, puis appuie sur le piston. Elle pèse chaque seringue avant et après.",
+      "documents": [
+        {
+          "id": "seringues",
+          "type": "tableau",
+          "titre": "Les mesures d’Inès",
+          "colonnes": [
+            "Seringue bouchée",
+            "Volume avant",
+            "Volume après",
+            "Masse avant",
+            "Masse après"
+          ],
+          "lignes": [
+            [
+              "Air",
+              "50 mL",
+              "20 mL",
+              "38,4 g",
+              "?"
+            ],
+            [
+              "Eau",
+              "50 mL",
+              "50 mL",
+              "88,0 g",
+              "88,0 g"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse Inès lit-elle après avoir comprimé l’air ?",
+          "reponse": 38.4,
+          "unite": "g",
+          "aide": "Comprimer ne fait ni entrer ni sortir de matière.",
+          "explication": "La masse se conserve : **38,4 g**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millilitres le volume de l’air a-t-il diminué ?",
+          "reponse": 30,
+          "unite": "mL",
+          "aide": "Soustrais le volume après au volume avant.",
+          "explication": "50 − 20 = **30 mL**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la ligne de l’eau ?",
+          "options": [
+            "L’eau ne se comprime presque pas : ses molécules sont déjà très proches",
+            "L’eau s’est transformée en gaz quand on a poussé le piston",
+            "L’eau a perdu de la masse en se comprimant dans la seringue",
+            "L’eau se comprime autant que l’air : leurs molécules sont aussi espacées"
+          ],
+          "reponse": 0,
+          "aide": "Compare les volumes avant et après.",
+          "explication": "Le volume de l’eau ne change pas : ses molécules sont **déjà serrées**, il n’y a pas de vide à réduire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle fraction du volume initial l’air occupe-t-il après compression ? (en fraction décimale ou simple)",
+          "reponse": 0.4,
+          "aide": "Divise 20 par 50.",
+          "explication": "20 ÷ 50 = **0,4**, soit 2/5 du volume de départ."
+        }
+      ]
+    },
+    {
+      "chapitre": "4fbcbb69-b6b8-5672-b604-3540b15d38cb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La bouteille oubliée au congélateur",
+      "competence": "raisonner",
+      "situation": "Lina remplit à ras bord une bouteille de 1,5 L, la bouche et l’oublie au congélateur. Le lendemain, elle est fendue. Elle cherche à comprendre.",
+      "documents": [
+        {
+          "id": "art",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le récit de Lina",
+          "blocs": [
+            "Une bouteille de 1,5 L est pleine d’eau liquide : elle contient 1,5 kg d’eau, soit 1 500 cm³.",
+            "Au congélateur, toute l’eau se change en glace. Rien n’entre dans la bouteille et rien n’en sort, mais la bouteille est fendue."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "vol",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Volume occupé par 1 kg d’eau",
+          "categories": [
+            "Eau liquide",
+            "Glace"
+          ],
+          "series": [
+            {
+              "nom": "Volume",
+              "valeurs": [
+                1000,
+                1090
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "cm³",
+            "min": 0,
+            "max": 1200,
+            "pas": 200
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "vol",
+          "enonce": "Touche la barre qui représente la glace.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Regarde les noms sous les barres.",
+          "explication": "La deuxième barre est celle de la **glace** : 1 kg occupe 1 090 cm³."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que vaut la masse de la glace obtenue dans la bouteille ?",
+          "options": [
+            "1,5 kg : la masse se conserve lors du changement d’état",
+            "Plus de 1,5 kg : la glace est plus volumineuse",
+            "Moins de 1,5 kg : des molécules d’eau ont disparu",
+            "0 kg : la glace est solide donc elle ne pèse plus"
+          ],
+          "reponse": 0,
+          "aide": "Rien n’entre ni ne sort de la bouteille.",
+          "explication": "Lors d’un changement d’état, la masse **se conserve** : 1,5 kg."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel volume la glace occupe-t-elle ? (en cm³)",
+          "reponse": 1635,
+          "unite": "cm³",
+          "aide": "1,5 kg de glace, sachant que 1 kg occupe 1 090 cm³.",
+          "explication": "1,5 × 1 090 = **1 635 cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de cm³ ce volume dépasse-t-il celui de la bouteille ?",
+          "reponse": 135,
+          "unite": "cm³",
+          "aide": "Compare avec les 1 500 cm³ de la bouteille.",
+          "explication": "1 635 − 1 500 = **135 cm³** de trop : la bouteille se fend."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment expliquer que la bouteille se fende ?",
+          "options": [
+            "La glace occupe plus de place que l’eau liquide",
+            "La masse de l’eau a augmenté au moment de geler",
+            "L’eau a perdu beaucoup de ses molécules en gelant",
+            "Le plastique a fondu au contact de la glace"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les deux barres du graphique.",
+          "explication": "L’eau fait exception : en gelant, son volume **augmente** d’environ 9 %."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd5b0d6e-a1a1-52a8-9dbc-04ae7d799563",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le voyage d’une goutte",
+      "competence": "analyser-document",
+      "situation": "Une goutte d’eau change d’état quand on la chauffe : glace, puis eau liquide, puis vapeur d’eau.",
+      "documents": [
+        {
+          "id": "etats",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "glace",
+              "texte": "Glace",
+              "emoji": "🧊"
+            },
+            {
+              "id": "liquide",
+              "texte": "Eau liquide",
+              "emoji": "💧"
+            },
+            {
+              "id": "gaz",
+              "texte": "Vapeur d’eau"
+            }
+          ],
+          "liens": [
+            {
+              "de": "glace",
+              "a": "liquide",
+              "texte": "on chauffe"
+            },
+            {
+              "de": "liquide",
+              "a": "gaz",
+              "texte": "on chauffe"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etats",
+          "enonce": "Touche l’état dans lequel l’eau n’a ni forme ni volume propres.",
+          "reponse": [
+            "gaz"
+          ],
+          "aide": "Quel état occupe tout l’espace disponible ?",
+          "explication": "La **vapeur d’eau** (état gazeux) n’a ni forme ni volume propres."
+        },
+        {
+          "type": "texte",
+          "enonce": "Comment s’appelle le passage de la glace à l’eau liquide ?",
+          "reponse": [
+            "fusion",
+            "la fusion"
+          ],
+          "aide": "Les glaçons dans un verre font cela.",
+          "explication": "Le passage solide → liquide est la **fusion**."
+        },
+        {
+          "type": "texte",
+          "enonce": "Comment s’appelle le passage de l’eau liquide à la vapeur d’eau ?",
+          "reponse": [
+            "vaporisation",
+            "la vaporisation"
+          ],
+          "aide": "Ce changement se fait en chauffant.",
+          "explication": "Le passage liquide → gaz est la **vaporisation**."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque phénomène au changement d’état.",
+          "paires": [
+            [
+              "La rosée du matin",
+              "Liquéfaction"
+            ],
+            [
+              "Le givre sur une vitre",
+              "Condensation solide"
+            ],
+            [
+              "Un glaçon qui fond",
+              "Fusion"
+            ],
+            [
+              "Le linge qui sèche",
+              "Vaporisation"
+            ]
+          ],
+          "aide": "Pense à l’état de départ et à l’état d’arrivée.",
+          "explication": "**Rosée** : gaz → liquide (liquéfaction) ; **givre** : gaz → solide ; **glaçon** : solide → liquide ; **linge** : liquide → gaz."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd5b0d6e-a1a1-52a8-9dbc-04ae7d799563",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le palier d’un refroidissement",
+      "competence": "lire-graphique",
+      "situation": "Yasmine place un liquide transparent dans un congélateur et relève sa température toutes les 2 minutes.",
+      "documents": [
+        {
+          "id": "refr",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Refroidissement d’un liquide",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "series": [
+            {
+              "nom": "Température",
+              "valeurs": [
+                16,
+                8,
+                0,
+                0,
+                0,
+                0,
+                -6,
+                -12
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": -15,
+            "max": 20,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "refr",
+          "enonce": "Touche l’instant où la température atteint 0 °C pour la première fois.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche où la courbe touche le niveau 0 °C.",
+          "explication": "La température atteint 0 °C à **4 minutes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée du palier ? (en minutes)",
+          "reponse": 6,
+          "unite": "min",
+          "aide": "Le palier commence à 4 min et finit à 10 min.",
+          "explication": "Le palier va de 4 min à 10 min : **6 minutes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il dans le liquide à 6 minutes ?",
+          "options": [
+            "Il se solidifie : liquide et glace sont présents ensemble",
+            "Il est entièrement liquide : rien n’a encore commencé à geler",
+            "Il est entièrement solide : tout le liquide a déjà gelé",
+            "Il se vaporise : le liquide devient un gaz en refroidissant"
+          ],
+          "reponse": 0,
+          "aide": "Pendant un palier, le changement d’état est en cours.",
+          "explication": "Pendant le palier, l’eau **se solidifie** : les deux états coexistent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclut-on du palier à 0 °C ?",
+          "options": [
+            "Le liquide est probablement de l’eau pure, qui gèle à 0 °C",
+            "Le liquide est de l’eau salée, qui gèle aussi à 0 °C",
+            "Le liquide est un mélange, car sa température est fixe",
+            "On ne peut rien dire sans mesurer sa masse"
+          ],
+          "reponse": 0,
+          "aide": "Un palier net signe un corps pur ; 0 °C est la température de fusion de l’eau.",
+          "explication": "Un palier net à 0 °C : c’est très probablement de **l’eau pure**. Un mélange n’aurait pas de palier."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd5b0d6e-a1a1-52a8-9dbc-04ae7d799563",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Salage et altitude",
+      "competence": "raisonner",
+      "situation": "Une commune prévoit de saler les routes l’hiver, et un randonneur se demande pourquoi ses pâtes cuisent mal au sommet du mont Blanc. Les deux cas modifient les températures de changement d’état de l’eau.",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "tableau",
+          "titre": "Températures de changement d’état",
+          "colonnes": [
+            "Situation",
+            "Température"
+          ],
+          "lignes": [
+            [
+              "Eau pure, niveau de la mer : fusion",
+              "0 °C"
+            ],
+            [
+              "Eau pure, niveau de la mer : ébullition",
+              "100 °C"
+            ],
+            [
+              "Eau pure, sommet du mont Blanc : ébullition",
+              "85 °C"
+            ],
+            [
+              "Eau salée (10 % de sel) : fusion",
+              "−6 °C"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "nuits",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Température minimale de la nuit",
+          "categories": [
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi"
+          ],
+          "series": [
+            {
+              "nom": "Température",
+              "valeurs": [
+                -2,
+                -5,
+                -9,
+                -1,
+                -4
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": -10,
+            "max": 0,
+            "pas": 2
+          },
+          "valeurs": false,
+          "source": "Relevé imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "nuits",
+          "enonce": "Touche la nuit où le salage ne suffira pas à faire fondre la glace.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Le sel abaisse la température de fusion jusqu’à −6 °C.",
+          "explication": "Le mercredi, il fait −9 °C : c’est **plus froid que −6 °C**, le sel ne suffit plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pendant combien de nuits la température reste-t-elle au-dessus de −6 °C ?",
+          "reponse": 4,
+          "unite": "nuits",
+          "aide": "Compte les nuits où la température minimale est supérieure à −6 °C.",
+          "explication": "Lundi, mardi, jeudi et vendredi : **4 nuits**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de degrés l’eau bout-elle plus bas au mont Blanc qu’au niveau de la mer ?",
+          "reponse": 15,
+          "unite": "°C",
+          "aide": "Soustrais les deux températures d’ébullition.",
+          "explication": "100 − 85 = **15 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le randonneur chauffe plus fort son eau qui bout au sommet. Quelle température atteint-elle ?",
+          "options": [
+            "Elle reste à 85 °C : l’eau s’évapore plus vite sans chauffer plus",
+            "Elle monte jusqu’à 100 °C, comme au niveau de la mer",
+            "Elle monte jusqu’à 120 °C, car la flamme est plus forte",
+            "Elle descend à 0 °C, car l’air est plus froid en altitude"
+          ],
+          "reponse": 0,
+          "aide": "Pendant l’ébullition d’un corps pur, la température est constante.",
+          "explication": "Pendant l’ébullition la température **reste constante**, à 85 °C ici. Chauffer plus fort fait seulement bouillir plus vite."
+        }
+      ]
+    },
+    {
+      "chapitre": "faa13b54-f4f1-5d0b-9ebb-f9bb000bc0fb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois tubes à essai",
+      "competence": "observer-schema",
+      "situation": "Mathis verse de l’eau dans trois tubes à essai, puis ajoute un second liquide dans chacun d’eux. Il agite et laisse reposer.",
+      "documents": [
+        {
+          "id": "tubes",
+          "type": "schema",
+          "titre": "Après repos",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 25,
+              "y": 70,
+              "l": 70,
+              "h": 90,
+              "teinte": "ciel",
+              "motif": "clair",
+              "id": "tA",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 135,
+              "y": 110,
+              "l": 70,
+              "h": 50,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "eauB",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 135,
+              "y": 70,
+              "l": 70,
+              "h": 40,
+              "teinte": "jaune",
+              "motif": "clair",
+              "id": "huile",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 245,
+              "y": 110,
+              "l": 70,
+              "h": 50,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "eauC",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 245,
+              "y": 70,
+              "l": 70,
+              "h": 40,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cyclo",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 25,
+              "y": 40,
+              "l": 70,
+              "h": 120,
+              "arrondi": 8,
+              "teinte": "encre",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 135,
+              "y": 40,
+              "l": 70,
+              "h": 120,
+              "arrondi": 8,
+              "teinte": "encre",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 245,
+              "y": 40,
+              "l": 70,
+              "h": 120,
+              "arrondi": 8,
+              "teinte": "encre",
+              "motif": "aucun"
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 185,
+              "texte": "Eau + alcool",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 185,
+              "texte": "Eau + huile",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 280,
+              "y": 185,
+              "texte": "Eau + cyclohexane",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tubes",
+          "enonce": "Touche le tube où les deux liquides sont miscibles.",
+          "reponse": [
+            "tA"
+          ],
+          "aide": "Cherche le tube qui ne montre qu’une seule phase.",
+          "explication": "Dans le tube **eau + alcool**, on ne voit qu’une phase : les deux liquides sont miscibles."
+        },
+        {
+          "type": "zone",
+          "document": "tubes",
+          "enonce": "Touche la couche d’huile.",
+          "reponse": [
+            "huile"
+          ],
+          "aide": "Elle est au-dessus de l’eau.",
+          "explication": "La couche d’**huile** flotte au-dessus de l’eau."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’huile reste-t-elle au-dessus de l’eau ?",
+          "options": [
+            "Elle est moins dense que l’eau",
+            "Elle est plus dense que l’eau",
+            "Elle est plus chaude que l’eau",
+            "Elle est plus transparente que l’eau"
+          ],
+          "reponse": 0,
+          "aide": "Le liquide du dessus est le moins dense.",
+          "explication": "L’huile est **moins dense** que l’eau : elle surnage."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel instrument de verrerie permet de séparer l’eau et l’huile ?",
+          "reponse": [
+            "ampoule à décanter",
+            "une ampoule à décanter",
+            "l’ampoule à décanter"
+          ],
+          "aide": "Il a un robinet en bas.",
+          "explication": "On sépare les deux phases avec une **ampoule à décanter**."
+        }
+      ]
+    },
+    {
+      "chapitre": "faa13b54-f4f1-5d0b-9ebb-f9bb000bc0fb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le bicarbonate de Kenza",
+      "competence": "calculer",
+      "situation": "Kenza verse 30 g de bicarbonate de soude dans 250 mL d’eau à 20 °C, remue longtemps, et voit encore de la poudre au fond du verre.",
+      "documents": [
+        {
+          "id": "solub",
+          "type": "tableau",
+          "titre": "Solubilité dans l’eau à 20 °C",
+          "colonnes": [
+            "Soluté",
+            "Solubilité"
+          ],
+          "lignes": [
+            [
+              "Sel de cuisine",
+              "360 g/L"
+            ],
+            [
+              "Sucre",
+              "2 000 g/L"
+            ],
+            [
+              "Bicarbonate de soude",
+              "96 g/L"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume d’eau, en litres ?",
+          "reponse": 0.25,
+          "unite": "L",
+          "aide": "1 L = 1 000 mL.",
+          "explication": "250 mL = **0,25 L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse maximale de bicarbonate peut-on dissoudre dans ce volume ?",
+          "reponse": 24,
+          "unite": "g",
+          "aide": "Multiplie la solubilité par le volume en litres.",
+          "explication": "96 × 0,25 = **24 g**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse de bicarbonate reste au fond du verre ?",
+          "reponse": 6,
+          "unite": "g",
+          "aide": "Compare 30 g versés et la masse maximale dissoute.",
+          "explication": "30 − 24 = **6 g** restent non dissous."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment qualifie-t-on la solution obtenue ?",
+          "options": [
+            "Saturée",
+            "Diluée",
+            "Ratée",
+            "Non miscible"
+          ],
+          "reponse": 0,
+          "aide": "Elle ne peut plus dissoudre de soluté.",
+          "explication": "La solution a atteint sa limite : elle est **saturée**."
+        }
+      ]
+    },
+    {
+      "chapitre": "faa13b54-f4f1-5d0b-9ebb-f9bb000bc0fb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’étang de l’été",
+      "competence": "modeliser",
+      "situation": "Dans un étang, l’eau passe de 10 °C au printemps à 30 °C en plein été. Les truites y vivent si l’eau contient au moins 8 mg de dioxygène dissous par litre.",
+      "documents": [
+        {
+          "id": "o2",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Dioxygène dissous dans l’eau selon la température",
+          "categories": [
+            "0 °C",
+            "10 °C",
+            "20 °C",
+            "30 °C",
+            "40 °C"
+          ],
+          "series": [
+            {
+              "nom": "Dioxygène dissous",
+              "valeurs": [
+                14.6,
+                11.3,
+                9.1,
+                7.6,
+                6.5
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Dioxygène dissous",
+            "unite": "mg/L",
+            "min": 0,
+            "max": 16,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Température de l’eau"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "etang",
+          "type": "texte",
+          "genre": "article",
+          "titre": "L’étang",
+          "blocs": [
+            "Une association surveille un étang. Au printemps l’eau est à 10 °C, en plein été elle atteint 30 °C. Les truites ont besoin d’au moins 8 mg de dioxygène dissous par litre."
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "o2",
+          "enonce": "Touche la mesure faite à 20 °C.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Repère 20 °C sous l’axe horizontal.",
+          "explication": "La mesure à 20 °C est la troisième : **9,1 mg/L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité de dioxygène dissous contient l’eau à 30 °C ? (en mg/L)",
+          "reponse": 7.6,
+          "unite": "mg/L",
+          "tolerance": 0.2,
+          "aide": "Lis la valeur du point à 30 °C.",
+          "explication": "À 30 °C : **7,6 mg/L**."
+        },
+        {
+          "type": "choix",
+          "enonce": "En plein été, à 30 °C, les truites ont-elles assez de dioxygène ?",
+          "options": [
+            "Non : 7,6 mg/L est inférieur aux 8 mg/L nécessaires",
+            "Oui : l’eau chaude dissout plus de dioxygène",
+            "Oui : 7,6 est proche de 8",
+            "On ne peut pas le savoir"
+          ],
+          "reponse": 0,
+          "aide": "Compare 7,6 mg/L avec le seuil de 8 mg/L.",
+          "explication": "Le dioxygène dissous **diminue** quand l’eau se réchauffe : 7,6 < 8, les truites manquent de dioxygène."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la quantité de dioxygène dissous baisse-t-elle entre 10 °C et 30 °C ? (en mg/L)",
+          "reponse": 3.7,
+          "unite": "mg/L",
+          "tolerance": 0.1,
+          "aide": "Soustrais les deux valeurs lues.",
+          "explication": "11,3 − 7,6 = **3,7 mg/L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un aquarium de 50 L à 20 °C contient quelle masse de dioxygène dissous ? (en mg)",
+          "reponse": 455,
+          "unite": "mg",
+          "tolerance": 5,
+          "aide": "Multiplie la valeur à 20 °C par le volume.",
+          "explication": "9,1 × 50 = **455 mg**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ef3ffe6-c34f-51ba-8179-a30b4cd5999e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le camembert de l’air",
+      "competence": "lire-graphique",
+      "situation": "Alix représente la composition de l’air, en volume, par un diagramme circulaire.",
+      "documents": [
+        {
+          "id": "air",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Composition de l’air (en % du volume)",
+          "categories": [
+            "Diazote",
+            "Dioxygène",
+            "Autres gaz"
+          ],
+          "series": [
+            {
+              "nom": "Air",
+              "valeurs": [
+                78,
+                21,
+                1
+              ]
+            }
+          ],
+          "source": "Proportions arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "air",
+          "enonce": "Touche la part du diazote.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "C’est le plus grand secteur.",
+          "explication": "Le **diazote** occupe environ 78 % de l’air."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage du volume de l’air le dioxygène occupe-t-il ?",
+          "reponse": 21,
+          "unite": "%",
+          "aide": "Regarde la deuxième part.",
+          "explication": "Le dioxygène occupe environ **21 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle fraction simple donne le mieux la part du diazote ?",
+          "options": [
+            "4/5",
+            "1/5",
+            "1/2",
+            "3/4"
+          ],
+          "reponse": 0,
+          "aide": "78 % est proche de 80 %.",
+          "explication": "78 % est proche de 80 % = **4/5** de l’air."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel volume de dioxygène trouve-t-on dans 200 L d’air ? (en litres)",
+          "reponse": 42,
+          "unite": "L",
+          "aide": "21 % de 200 L.",
+          "explication": "0,21 × 200 = **42 L**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ef3ffe6-c34f-51ba-8179-a30b4cd5999e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’air de la salle de classe",
+      "competence": "resoudre",
+      "situation": "Romane veut connaître la masse de l’air contenu dans sa salle de classe, qui a la forme d’un pavé droit.",
+      "documents": [
+        {
+          "id": "salle",
+          "type": "solide",
+          "longueur": 6,
+          "largeur": 5,
+          "hauteur": 3,
+          "cubes": false,
+          "cotes": true,
+          "unite": "m"
+        },
+        {
+          "id": "donnees",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Données utiles",
+          "emoji": "📋",
+          "lignes": [
+            {
+              "texte": "1 m³",
+              "valeur": "1 000 L"
+            },
+            {
+              "texte": "1 L d’air",
+              "valeur": "1,2 g"
+            },
+            {
+              "texte": "Dioxygène dans l’air",
+              "valeur": "21 %"
+            }
+          ],
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume de la salle, en m³ ?",
+          "reponse": 90,
+          "unite": "m³",
+          "aide": "Volume = longueur × largeur × hauteur.",
+          "explication": "6 × 5 × 3 = **90 m³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la masse de l’air de la salle, en kilogrammes ?",
+          "reponse": 108,
+          "unite": "kg",
+          "aide": "Convertis d’abord le volume en litres.",
+          "explication": "90 m³ = 90 000 L ; 90 000 × 1,2 = 108 000 g = **108 kg**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel volume de dioxygène contient la salle, en m³ ?",
+          "reponse": 18.9,
+          "unite": "m³",
+          "tolerance": 0.05,
+          "aide": "21 % de 90 m³.",
+          "explication": "0,21 × 90 = **18,9 m³**."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque gaz à son test.",
+          "paires": [
+            [
+              "Dioxygène",
+              "La bûchette incandescente se rallume"
+            ],
+            [
+              "Dioxyde de carbone",
+              "L’eau de chaux se trouble"
+            ],
+            [
+              "Vapeur d’eau",
+              "Le sulfate de cuivre anhydre devient bleu"
+            ]
+          ],
+          "aide": "Chaque gaz a un test différent.",
+          "explication": "**Dioxygène** : la bûchette se rallume ; **dioxyde de carbone** : l’eau de chaux se trouble ; **vapeur d’eau** : le sulfate de cuivre bleuit."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ef3ffe6-c34f-51ba-8179-a30b4cd5999e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’air selon l’altitude et le siècle",
+      "competence": "analyser-document",
+      "situation": "La pression de l’air diminue quand on monte, et sa composition change au fil des décennies. Deux documents pour le comprendre.",
+      "documents": [
+        {
+          "id": "alt",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Pression atmosphérique selon l’altitude",
+          "categories": [
+            "0",
+            "1 000",
+            "2 000",
+            "3 000",
+            "4 000",
+            "5 000"
+          ],
+          "series": [
+            {
+              "nom": "Pression",
+              "valeurs": [
+                1013,
+                899,
+                795,
+                701,
+                616,
+                540
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Pression",
+            "unite": "hPa",
+            "min": 0,
+            "max": 1200,
+            "pas": 200
+          },
+          "axeX": {
+            "titre": "Altitude (m)"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "co2",
+          "type": "tableau",
+          "titre": "Dioxyde de carbone dans l’air",
+          "colonnes": [
+            "Année",
+            "1960",
+            "1980",
+            "2000",
+            "2020"
+          ],
+          "lignes": [
+            [
+              "CO₂ (ppm)",
+              317,
+              339,
+              370,
+              414
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, 1 ppm = 1 millionième du volume de l’air"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle pression lit-on à 3 000 m d’altitude ? (en hPa)",
+          "reponse": 701,
+          "unite": "hPa",
+          "tolerance": 10,
+          "aide": "Lis la hauteur du point à 3 000 m.",
+          "explication": "À 3 000 m : environ **701 hPa**."
+        },
+        {
+          "type": "zone",
+          "document": "alt",
+          "enonce": "Touche l’altitude où la pression vaut environ 540 hPa.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche le point le plus bas.",
+          "explication": "La pression vaut environ 540 hPa à **5 000 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la pression baisse-t-elle entre 0 et 2 000 m ? (en hPa)",
+          "reponse": 218,
+          "unite": "hPa",
+          "tolerance": 10,
+          "aide": "Lis les deux points puis soustrais.",
+          "explication": "1 013 − 795 = **218 hPa**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la teneur en CO₂ a-t-elle augmenté entre 1960 et 2020 ? (en ppm)",
+          "reponse": 97,
+          "unite": "ppm",
+          "aide": "Soustrais les deux valeurs du tableau.",
+          "explication": "414 − 317 = **97 ppm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment interpréter l’évolution de la teneur en CO₂ ?",
+          "options": [
+            "Elle augmente, surtout à cause de la combustion des énergies fossiles",
+            "Elle diminue avec les années, grâce au développement des forêts",
+            "Elle reste constante depuis 1960, car les océans l’absorbent toute",
+            "Elle dépend surtout de l’altitude du lieu de mesure, pas du siècle"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le sens de la variation dans le tableau.",
+          "explication": "Le CO₂ **augmente** : c’est un gaz à effet de serre issu de la combustion des énergies fossiles."
+        }
+      ]
+    },
+    {
+      "chapitre": "0256e25d-48df-5bb6-9ea2-46b84224f4ba",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le métal mystère de Lila",
+      "competence": "resoudre",
+      "situation": "Lila trouve un petit objet métallique. Sa balance indique 27 g ; en le plongeant dans une éprouvette, elle mesure un volume de 10 cm³.",
+      "documents": [
+        {
+          "id": "rho",
+          "type": "tableau",
+          "titre": "Masses volumiques de quelques matériaux",
+          "colonnes": [
+            "Matériau",
+            "Masse volumique (g/cm³)"
+          ],
+          "lignes": [
+            [
+              "Eau",
+              "1,00"
+            ],
+            [
+              "Huile",
+              "0,92"
+            ],
+            [
+              "Aluminium",
+              "2,7"
+            ],
+            [
+              "Fer",
+              "7,9"
+            ],
+            [
+              "Cuivre",
+              "8,9"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la masse volumique de l’objet (ρ = m ÷ V).",
+          "reponse": 2.7,
+          "unite": "g/cm³",
+          "aide": "ρ = 27 ÷ 10.",
+          "explication": "ρ = 27 ÷ 10 = **2,7 g/cm³**."
+        },
+        {
+          "type": "choix",
+          "enonce": "De quel matériau l’objet est-il probablement fait ?",
+          "options": [
+            "De l’aluminium",
+            "Du fer doux",
+            "Du cuivre rouge",
+            "De l’eau gelée"
+          ],
+          "reponse": 0,
+          "aide": "Cherche la valeur du tableau égale à ρ.",
+          "explication": "2,7 g/cm³ est la masse volumique de l’**aluminium**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle serait la masse d’une plaque de 20 cm³ du même matériau ?",
+          "reponse": 54,
+          "unite": "g",
+          "aide": "m = ρ × V.",
+          "explication": "m = 2,7 × 20 = **54 g**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Cet objet flotte-t-il dans l’eau ?",
+          "options": [
+            "Non, il coule car sa masse volumique 2,7 est supérieure à 1",
+            "Oui, car c’est un métal plus léger que les autres",
+            "Oui, car 2,7 est supérieur à 1 (masse volumique de l’eau)",
+            "On ne peut pas savoir sans le peser avec une balance"
+          ],
+          "reponse": 0,
+          "aide": "Compare ρ de l’objet avec celle de l’eau.",
+          "explication": "ρ de l’objet est **supérieure** à celle de l’eau : il coule."
+        }
+      ]
+    },
+    {
+      "chapitre": "0256e25d-48df-5bb6-9ea2-46b84224f4ba",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le volume par déplacement d’eau",
+      "competence": "observer-schema",
+      "situation": "Pour trouver le volume d’un objet de forme irrégulière, on le plonge dans une éprouvette graduée et on compare les niveaux d’eau.",
+      "documents": [
+        {
+          "id": "eprouv",
+          "type": "schema",
+          "titre": "Mesure du volume d’un objet",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 120,
+              "l": 50,
+              "h": 80,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 200,
+              "y": 91,
+              "l": 50,
+              "h": 109,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 225,
+              "cy": 182,
+              "r": 14,
+              "teinte": "brun",
+              "motif": "plein",
+              "id": "objet",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 40,
+              "l": 50,
+              "h": 160,
+              "arrondi": 4,
+              "teinte": "encre",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 200,
+              "y": 40,
+              "l": 50,
+              "h": 160,
+              "arrondi": 4,
+              "teinte": "encre",
+              "motif": "aucun"
+            },
+            {
+              "forme": "texte",
+              "x": 98,
+              "y": 124,
+              "texte": "50 mL",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 258,
+              "y": 95,
+              "texte": "68 mL",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 65,
+              "y": 25,
+              "texte": "Avant",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 225,
+              "y": 25,
+              "texte": "Après",
+              "gras": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 225,
+              "texte": "Masse de l’objet : 142,2 g",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "metaux",
+          "type": "tableau",
+          "titre": "Masses volumiques de quelques métaux",
+          "colonnes": [
+            "Métal",
+            "ρ (g/cm³)"
+          ],
+          "lignes": [
+            [
+              "Aluminium",
+              "2,7"
+            ],
+            [
+              "Fer",
+              "7,9"
+            ],
+            [
+              "Cuivre",
+              "8,9"
+            ],
+            [
+              "Plomb",
+              "11,3"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "eprouv",
+          "enonce": "Touche l’objet dont on cherche le volume.",
+          "reponse": [
+            "objet"
+          ],
+          "aide": "C’est le disque plongé dans la seconde éprouvette.",
+          "explication": "L’**objet** est plongé dans l’éprouvette de droite : il fait monter le niveau de l’eau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume de l’objet ? (en cm³, sachant que 1 mL = 1 cm³)",
+          "reponse": 18,
+          "unite": "cm³",
+          "aide": "Soustrais le niveau avant au niveau après.",
+          "explication": "68 − 50 = 18 mL = **18 cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la masse volumique de l’objet. (en g/cm³, arrondie au dixième)",
+          "reponse": 7.9,
+          "unite": "g/cm³",
+          "tolerance": 0.05,
+          "aide": "ρ = 142,2 ÷ 18.",
+          "explication": "ρ = 142,2 ÷ 18 = **7,9 g/cm³**."
+        },
+        {
+          "type": "choix",
+          "enonce": "De quel métal l’objet est-il probablement fait ?",
+          "options": [
+            "Aluminium",
+            "Fer",
+            "Cuivre",
+            "Plomb"
+          ],
+          "reponse": 1,
+          "aide": "Compare ρ avec la colonne du tableau.",
+          "explication": "7,9 g/cm³ est la masse volumique du **fer**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0256e25d-48df-5bb6-9ea2-46b84224f4ba",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Flotte ou coule ?",
+      "competence": "raisonner",
+      "situation": "Théo a trois billes de même volume. Il les plonge tour à tour dans l’eau, puis dans l’huile.",
+      "documents": [
+        {
+          "id": "liq",
+          "type": "tableau",
+          "titre": "Les deux liquides",
+          "colonnes": [
+            "Liquide",
+            "Masse volumique (g/cm³)"
+          ],
+          "lignes": [
+            [
+              "Eau",
+              "1,00"
+            ],
+            [
+              "Huile",
+              "0,92"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "billes",
+          "type": "tableau",
+          "titre": "Les trois billes",
+          "colonnes": [
+            "Bille",
+            "Masse",
+            "Volume"
+          ],
+          "lignes": [
+            [
+              "A",
+              "40 g",
+              "50 cm³"
+            ],
+            [
+              "B",
+              "47,5 g",
+              "50 cm³"
+            ],
+            [
+              "C",
+              "65 g",
+              "50 cm³"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la masse volumique de la bille A.",
+          "reponse": 0.8,
+          "unite": "g/cm³",
+          "aide": "ρ = m ÷ V.",
+          "explication": "ρ = 40 ÷ 50 = **0,8 g/cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la masse volumique de la bille B.",
+          "reponse": 0.95,
+          "unite": "g/cm³",
+          "aide": "ρ = 47,5 ÷ 50.",
+          "explication": "ρ = 47,5 ÷ 50 = **0,95 g/cm³**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Dans l’eau (1,00 g/cm³), chaque bille flotte-t-elle ou coule-t-elle ?",
+          "categories": [
+            "Flotte",
+            "Coule"
+          ],
+          "items": [
+            [
+              "Bille A",
+              0
+            ],
+            [
+              "Bille B",
+              0
+            ],
+            [
+              "Bille C",
+              1
+            ]
+          ],
+          "aide": "Une bille flotte si sa masse volumique est inférieure à celle du liquide.",
+          "explication": "**A** (0,8) et **B** (0,95) sont moins denses que l’eau : elles flottent ; **C** (1,3) coule."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle bille flotte dans l’eau mais coule dans l’huile ?",
+          "options": [
+            "La bille A",
+            "La bille B",
+            "La bille C",
+            "Aucune"
+          ],
+          "reponse": 1,
+          "aide": "Il faut ρ < 1,00 et ρ > 0,92.",
+          "explication": "**B** : 0,95 est inférieure à 1,00 (elle flotte dans l’eau) mais supérieure à 0,92 (elle coule dans l’huile)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la masse de 200 cm³ d’huile ? (en g)",
+          "reponse": 184,
+          "unite": "g",
+          "aide": "m = ρ × V.",
+          "explication": "m = 0,92 × 200 = **184 g**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "De la télécommande au téléviseur",
+      "competence": "analyser-document",
+      "situation": "Quand Jade appuie sur sa télécommande, la chaîne de la télévision change. Un signal lumineux invisible circule entre les deux objets.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "emetteur",
+              "texte": "Télécommande"
+            },
+            {
+              "id": "milieu",
+              "texte": "Lumière infrarouge (dans l’air)"
+            },
+            {
+              "id": "recepteur",
+              "texte": "Téléviseur",
+              "emoji": "📺"
+            }
+          ],
+          "liens": [
+            {
+              "de": "emetteur",
+              "a": "milieu",
+              "texte": "envoie"
+            },
+            {
+              "de": "milieu",
+              "a": "recepteur",
+              "texte": "arrive à"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche l’émetteur.",
+          "reponse": [
+            "emetteur"
+          ],
+          "aide": "C’est l’objet qui envoie le signal.",
+          "explication": "L’**émetteur** est la télécommande."
+        },
+        {
+          "type": "zone",
+          "document": "chaine",
+          "enonce": "Touche le milieu de propagation.",
+          "reponse": [
+            "milieu"
+          ],
+          "aide": "C’est ce que traverse le signal entre les deux objets.",
+          "explication": "Le signal traverse l’**air** sous forme de lumière infrarouge."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que transporte le signal de la télécommande au téléviseur ?",
+          "options": [
+            "De l’information, sans aucun transport de matière",
+            "De la matière, sous forme de très petites particules",
+            "De l’air, poussé de la télécommande vers le téléviseur",
+            "Des objets très petits, éjectés par la télécommande"
+          ],
+          "reponse": 0,
+          "aide": "Un signal ne déplace pas de matière.",
+          "explication": "Un signal transporte une **information** (et de l’énergie), jamais de la matière."
+        }
+      ]
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Combien de temps met un signal ?",
+      "competence": "calculer",
+      "situation": "Un signal radio se propage à 300 000 km/s dans le vide. Gabriel calcule le temps qu’il met pour atteindre quelques astres et satellites.",
+      "documents": [
+        {
+          "id": "dist",
+          "type": "tableau",
+          "titre": "Distances à la Terre",
+          "colonnes": [
+            "Destination",
+            "Distance"
+          ],
+          "lignes": [
+            [
+              "Satellite géostationnaire",
+              "36 000 km"
+            ],
+            [
+              "Lune",
+              "384 000 km"
+            ],
+            [
+              "Soleil",
+              "150 000 000 km"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée d’un aller-retour pour le signal radio vers le satellite ? (en s)",
+          "reponse": 0.24,
+          "unite": "s",
+          "tolerance": 0.005,
+          "aide": "Double la durée d’un aller : t = d ÷ v.",
+          "explication": "Aller : 36 000 ÷ 300 000 = 0,12 s ; aller-retour : **0,24 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de temps met le signal pour aller de la Terre à la Lune ? (en s)",
+          "reponse": 1.28,
+          "unite": "s",
+          "tolerance": 0.005,
+          "aide": "t = d ÷ v.",
+          "explication": "t = 384 000 ÷ 300 000 = **1,28 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de temps met la lumière du Soleil pour nous parvenir ? (en s)",
+          "reponse": 500,
+          "unite": "s",
+          "aide": "150 000 000 ÷ 300 000.",
+          "explication": "t = 150 000 000 ÷ 300 000 = **500 s**, soit un peu plus de 8 minutes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un astronaute pourrait-il entendre un signal sonore envoyé depuis la Terre à travers l’espace ?",
+          "options": [
+            "Non : le son a besoin d’un milieu matériel",
+            "Oui, le son va aussi vite que la lumière",
+            "Oui, mais avec un retard de 1 s",
+            "Oui, si le son est assez fort"
+          ],
+          "reponse": 0,
+          "aide": "Dans l’espace entre la Terre et la Lune, il n’y a presque rien.",
+          "explication": "Le son **ne se propage pas dans le vide** : seules les ondes électromagnétiques le peuvent."
+        }
+      ]
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une photo dans la poche",
+      "competence": "modeliser",
+      "situation": "Un éclairage automatique allume une lampe quand il fait sombre. Par ailleurs, Anaïs stocke ses photos numériques sur une clé. 1 octet = 8 bits ; 1 Mo = 10⁶ octets ; 1 Go = 10⁹ octets.",
+      "documents": [
+        {
+          "id": "objet",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "capteur",
+              "texte": "Capteur de luminosité"
+            },
+            {
+              "id": "micro",
+              "texte": "Microcontrôleur"
+            },
+            {
+              "id": "lampe",
+              "texte": "Lampe",
+              "emoji": "💡"
+            }
+          ],
+          "liens": [
+            {
+              "de": "capteur",
+              "a": "micro",
+              "texte": "signal électrique"
+            },
+            {
+              "de": "micro",
+              "a": "lampe",
+              "texte": "ordre"
+            }
+          ]
+        },
+        {
+          "id": "fich",
+          "type": "tableau",
+          "titre": "Les fichiers",
+          "colonnes": [
+            "Fichier",
+            "Taille"
+          ],
+          "lignes": [
+            [
+              "Une photo",
+              "3 Mo"
+            ],
+            [
+              "La clé",
+              "16 Go"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "objet",
+          "enonce": "Touche l’actionneur.",
+          "reponse": [
+            "lampe"
+          ],
+          "aide": "C’est l’élément qui agit.",
+          "explication": "L’**actionneur** est la lampe : elle agit en s’allumant."
+        },
+        {
+          "type": "zone",
+          "document": "objet",
+          "enonce": "Touche le capteur.",
+          "reponse": [
+            "capteur"
+          ],
+          "aide": "C’est lui qui mesure une grandeur physique.",
+          "explication": "Le **capteur de luminosité** transforme la lumière en signal électrique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de bits contient une photo de 3 Mo ?",
+          "reponse": 24000000,
+          "unite": "bits",
+          "aide": "Convertis en octets, puis multiplie par 8.",
+          "explication": "3 × 10⁶ octets × 8 = **24 000 000 bits** (2,4 × 10⁷)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de photos complètes de 3 Mo la clé de 16 Go peut-elle contenir ?",
+          "reponse": 5333,
+          "unite": "photos",
+          "aide": "16 Go = 16 000 Mo ; divise par 3 et garde la partie entière.",
+          "explication": "16 000 ÷ 3 ≈ 5 333,3 : **5 333 photos** complètes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un signal numérique se copie-t-il sans perte ?",
+          "options": [
+            "C’est une suite de 0 et de 1 qu’on peut recopier exactement",
+            "Il n’a aucune énergie, donc rien ne peut s’en perdre à la copie",
+            "Il est toujours plus rapide qu’un signal analogique, donc intact",
+            "Il ne passe jamais par un fil, donc rien ne vient le perturber"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la forme du signal : des bits.",
+          "explication": "Une suite de **0 et de 1** se recopie à l’identique, alors qu’un signal analogique se dégrade à chaque copie."
+        }
+      ]
+    },
+    {
+      "chapitre": "b439cf86-8bfb-572e-9335-36cc2379df48",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une nuit d’éclipse",
+      "competence": "observer-schema",
+      "situation": "Le schéma ci-dessous représente le Soleil, la Terre et la Lune au moment d’une éclipse, vus de dessus (sans respecter les échelles).",
+      "documents": [
+        {
+          "id": "eclipse",
+          "type": "schema",
+          "titre": "Soleil, Terre et Lune alignés",
+          "largeur": 340,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  165,
+                  78
+                ],
+                [
+                  165,
+                  122
+                ],
+                [
+                  300,
+                  100
+                ]
+              ],
+              "teinte": "gris",
+              "motif": "hachures",
+              "id": "ombre",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 100,
+              "r": 28,
+              "teinte": "jaune",
+              "motif": "plein",
+              "id": "soleil",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 100,
+              "r": 22,
+              "teinte": "bleu",
+              "motif": "plein",
+              "id": "terre",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 100,
+              "r": 8,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "lune",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                76,
+                88
+              ],
+              "a": [
+                130,
+                88
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                76,
+                112
+              ],
+              "a": [
+                130,
+                112
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 40,
+              "y": 150,
+              "texte": "Soleil",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 150,
+              "texte": "Terre",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 230,
+              "y": 130,
+              "texte": "Lune",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "eclipse",
+          "enonce": "Touche la source primaire de lumière.",
+          "reponse": [
+            "soleil"
+          ],
+          "aide": "Quel astre produit sa propre lumière ?",
+          "explication": "Le **Soleil** produit sa propre lumière : c’est une source primaire. La Lune ne fait que diffuser celle qu’elle reçoit."
+        },
+        {
+          "type": "zone",
+          "document": "eclipse",
+          "enonce": "Touche le cône d’ombre de la Terre.",
+          "reponse": [
+            "ombre"
+          ],
+          "aide": "C’est la zone derrière la Terre, privée de lumière.",
+          "explication": "Le **cône d’ombre** est la zone située derrière la Terre, où la lumière du Soleil n’arrive pas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle éclipse observe-t-on ici ?",
+          "options": [
+            "Une éclipse de Lune",
+            "Une éclipse de Soleil",
+            "Une phase de Lune en croissant",
+            "Aucune éclipse"
+          ],
+          "reponse": 0,
+          "aide": "Dans quelle ombre la Lune se trouve-t-elle ?",
+          "explication": "La Lune est dans le cône d’ombre de la Terre : c’est une **éclipse de Lune**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b439cf86-8bfb-572e-9335-36cc2379df48",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quelle couleur sous quelle lumière ?",
+      "competence": "analyser-document",
+      "situation": "Chloé éclaire différents objets avec des lampes qui produisent une seule couleur. Elle note ce qu’elle voit dans un tableau.",
+      "documents": [
+        {
+          "id": "coul",
+          "type": "tableau",
+          "titre": "Couleurs apparentes",
+          "colonnes": [
+            "Objet en lumière blanche",
+            "En lumière rouge",
+            "En lumière verte",
+            "En lumière bleue"
+          ],
+          "lignes": [
+            [
+              "Tissu rouge",
+              "rouge",
+              "?",
+              "noir"
+            ],
+            [
+              "Balle jaune",
+              "rouge",
+              "vert",
+              "?"
+            ],
+            [
+              "Ballon blanc",
+              "rouge",
+              "?",
+              "bleu"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Objets idéalisés, couleurs pures"
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "De quelle couleur paraît le tissu rouge éclairé en lumière verte ?",
+          "reponse": [
+            "noir",
+            "noire",
+            "le noir"
+          ],
+          "aide": "Le tissu diffuse uniquement la lumière rouge.",
+          "explication": "Le tissu ne renvoie que la lumière rouge : éclairé en lumière verte, il n’a rien à diffuser et paraît **noir**."
+        },
+        {
+          "type": "choix",
+          "enonce": "De quelle couleur paraît la balle jaune éclairée en lumière bleue ?",
+          "options": [
+            "Noire",
+            "Bleue",
+            "Jaune",
+            "Verte"
+          ],
+          "reponse": 0,
+          "aide": "La balle jaune diffuse la lumière rouge et la lumière verte.",
+          "explication": "La balle jaune diffuse la lumière rouge et la lumière verte mais **aucun bleu** : elle paraît noire."
+        },
+        {
+          "type": "texte",
+          "enonce": "De quelle couleur paraît le ballon blanc éclairé en lumière verte ?",
+          "reponse": [
+            "vert",
+            "verte",
+            "le vert"
+          ],
+          "aide": "Un objet blanc diffuse toutes les couleurs qu’il reçoit.",
+          "explication": "Un objet blanc diffuse tout ce qu’il reçoit : il paraît **vert**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Sous une lumière verte, que voit-on ?",
+          "categories": [
+            "Paraît noir",
+            "Paraît vert"
+          ],
+          "items": [
+            [
+              "Tissu rouge",
+              0
+            ],
+            [
+              "Balle jaune",
+              1
+            ],
+            [
+              "Ballon blanc",
+              1
+            ],
+            [
+              "Chaussette noire",
+              0
+            ],
+            [
+              "Feuille verte",
+              1
+            ]
+          ],
+          "aide": "Un objet paraît noir s’il ne diffuse aucune couleur présente dans la lumière.",
+          "explication": "**Noir** : le tissu rouge et la chaussette noire. **Vert** : la balle jaune (elle diffuse du vert), le ballon blanc et la feuille verte."
+        }
+      ]
+    },
+    {
+      "chapitre": "b439cf86-8bfb-572e-9335-36cc2379df48",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les pixels d’un écran",
+      "competence": "modeliser",
+      "situation": "Lina et Malo étudient comment un écran fabrique les couleurs. Chaque pixel contient trois sous-pixels : rouge, vert et bleu. Un « 1 » veut dire allumé, un « 0 » éteint.",
+      "documents": [
+        {
+          "id": "pix",
+          "type": "tableau",
+          "titre": "Cinq pixels",
+          "colonnes": [
+            "Pixel",
+            "Rouge",
+            "Vert",
+            "Bleu"
+          ],
+          "lignes": [
+            [
+              "A",
+              1,
+              1,
+              0
+            ],
+            [
+              "B",
+              1,
+              0,
+              1
+            ],
+            [
+              "C",
+              0,
+              1,
+              1
+            ],
+            [
+              "D",
+              1,
+              1,
+              1
+            ],
+            [
+              "E",
+              0,
+              0,
+              0
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Lina",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Malo",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Lina",
+              "texte": "Sur l’écran, les trois sous-pixels du pixel D sont allumés !"
+            },
+            {
+              "qui": "Malo",
+              "texte": "Ça s’appelle la synthèse additive, non ?"
+            },
+            {
+              "qui": "Lina",
+              "texte": "Oui. Mais en peinture, on mélange des pigments : c’est autre chose."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque pixel à la couleur qu’il affiche.",
+          "paires": [
+            [
+              "Pixel A",
+              "Jaune"
+            ],
+            [
+              "Pixel B",
+              "Magenta"
+            ],
+            [
+              "Pixel C",
+              "Cyan"
+            ],
+            [
+              "Pixel D",
+              "Blanc"
+            ]
+          ],
+          "aide": "Rouge + vert, rouge + bleu, vert + bleu, les trois.",
+          "explication": "**A** : rouge + vert = jaune ; **B** : rouge + bleu = magenta ; **C** : vert + bleu = cyan ; **D** : les trois = blanc."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quelle couleur affiche le pixel E ?",
+          "reponse": [
+            "noir",
+            "noire",
+            "le noir"
+          ],
+          "aide": "Tous ses sous-pixels sont éteints.",
+          "explication": "Aucune lumière n’est émise : le pixel est **noir**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un écran de 1 920 × 1 080 pixels compte combien de sous-pixels ?",
+          "reponse": 6220800,
+          "unite": "sous-pixels",
+          "aide": "Nombre de pixels, puis multiplie par 3.",
+          "explication": "1 920 × 1 080 = 2 073 600 pixels ; × 3 = **6 220 800 sous-pixels**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la synthèse des pigments de peinture est-elle dite soustractive ?",
+          "options": [
+            "Chaque pigment retire des couleurs à la lumière blanche",
+            "Chaque pigment ajoute sa propre lumière à la lumière blanche",
+            "Les pigments produisent leur propre lumière dans l’obscurité",
+            "Les pigments ne dépendent pas de la lumière qui les éclaire"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la lumière que le pigment absorbe.",
+          "explication": "Un pigment **absorbe** une partie des couleurs de la lumière blanche : chaque mélange en retire un peu plus."
+        }
+      ]
+    },
+    {
+      "chapitre": "93f1e98b-7daf-5ddd-98ed-554c1bc23193",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La vitesse du son",
+      "competence": "lire-graphique",
+      "situation": "Victor compare la vitesse du son dans trois milieux, puis s’en sert pour calculer quelques durées et distances.",
+      "documents": [
+        {
+          "id": "vit",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Vitesse du son",
+          "categories": [
+            "Air",
+            "Eau",
+            "Acier"
+          ],
+          "series": [
+            {
+              "nom": "Vitesse",
+              "valeurs": [
+                340,
+                1500,
+                5000
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Vitesse",
+            "unite": "m/s",
+            "min": 0,
+            "max": 5000,
+            "pas": 1000
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "vit",
+          "enonce": "Touche le milieu dans lequel le son va le plus vite.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "Le son va le plus vite dans l’**acier** : environ 5 000 m/s."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle distance le son parcourt-il dans l’air en 3 s ? (en m)",
+          "reponse": 1020,
+          "unite": "m",
+          "aide": "d = v × t.",
+          "explication": "d = 340 × 3 = **1 020 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de temps met le son pour parcourir 3 000 m dans l’eau ? (en s)",
+          "reponse": 2,
+          "unite": "s",
+          "aide": "t = d ÷ v.",
+          "explication": "t = 3 000 ÷ 1 500 = **2 s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le son peut-il se propager dans le vide ?",
+          "options": [
+            "Non : il a besoin d’un milieu matériel",
+            "Oui, comme la lumière",
+            "Oui, mais plus lentement",
+            "Oui, mais seulement les sons graves"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la cloche à vide.",
+          "explication": "Le son **ne se propage pas dans le vide** : il lui faut de l’air, de l’eau, un solide…"
+        }
+      ]
+    },
+    {
+      "chapitre": "93f1e98b-7daf-5ddd-98ed-554c1bc23193",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le sonar du bateau",
+      "competence": "resoudre",
+      "situation": "Un bateau de pêche envoie une impulsion sonore vers le fond de la mer. Le signal revient 0,4 s plus tard. Le son va à 1 500 m/s dans l’eau.",
+      "documents": [
+        {
+          "id": "sonar",
+          "type": "schema",
+          "titre": "Mesure de la profondeur",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 50,
+              "l": 300,
+              "h": 140,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "mer",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 190,
+              "l": 300,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "plein",
+              "id": "fond",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  130,
+                  36
+                ],
+                [
+                  190,
+                  36
+                ],
+                [
+                  180,
+                  54
+                ],
+                [
+                  140,
+                  54
+                ]
+              ],
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "bateau",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                58
+              ],
+              "a": [
+                150,
+                186
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                186
+              ],
+              "a": [
+                170,
+                58
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 142,
+              "y": 125,
+              "texte": "Aller",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 125,
+              "texte": "Retour",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 20,
+              "texte": "Durée de l’aller-retour : 0,4 s",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sonar",
+          "enonce": "Touche le fond marin.",
+          "reponse": [
+            "fond"
+          ],
+          "aide": "C’est ce qui renvoie le signal.",
+          "explication": "Le signal se réfléchit sur le **fond marin**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle distance le signal parcourt-il pendant l’aller-retour ? (en m)",
+          "reponse": 600,
+          "unite": "m",
+          "aide": "d = v × t, avec t = 0,4 s.",
+          "explication": "d = 1 500 × 0,4 = **600 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la profondeur de la mer ? (en m)",
+          "reponse": 300,
+          "unite": "m",
+          "aide": "Le signal a fait un aller et un retour.",
+          "explication": "Profondeur = 600 ÷ 2 = **300 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un autre signal revient après 0,6 s. Quelle est alors la profondeur ? (en m)",
+          "reponse": 450,
+          "unite": "m",
+          "aide": "Calcule 1 500 × 0,6, puis divise par 2.",
+          "explication": "1 500 × 0,6 = 900 m ; 900 ÷ 2 = **450 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "93f1e98b-7daf-5ddd-98ed-554c1bc23193",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’orage qui approche",
+      "competence": "raisonner",
+      "situation": "Pendant une soirée d’orage, Sarah mesure chaque minute le délai entre l’éclair et le tonnerre. Elle prend 340 m/s pour la vitesse du son et considère que la lumière de l’éclair arrive instantanément.",
+      "documents": [
+        {
+          "id": "orage",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Délai entre l’éclair et le tonnerre",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Délai",
+              "valeurs": [
+                15,
+                12,
+                9,
+                6,
+                3
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Délai",
+            "unite": "s",
+            "min": 0,
+            "max": 18,
+            "pas": 3
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures imaginées pour l’exercice"
+        },
+        {
+          "id": "db",
+          "type": "tableau",
+          "titre": "Niveaux sonores",
+          "colonnes": [
+            "Son",
+            "Niveau"
+          ],
+          "lignes": [
+            [
+              "Conversation",
+              "60 dB"
+            ],
+            [
+              "Circulation",
+              "80 dB"
+            ],
+            [
+              "Concert",
+              "110 dB"
+            ],
+            [
+              "Tonnerre proche",
+              "120 dB"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "À quelle distance est l’orage à la minute 0 ? (en m)",
+          "reponse": 5100,
+          "unite": "m",
+          "aide": "d = v × t, avec t = 15 s.",
+          "explication": "d = 340 × 15 = **5 100 m**."
+        },
+        {
+          "type": "zone",
+          "document": "orage",
+          "enonce": "Touche la mesure où l’orage est à 2 040 m.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le délai qui donne 340 × t = 2 040.",
+          "explication": "2 040 ÷ 340 = 6 s : c’est la mesure de la minute **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres par minute l’orage se rapproche-t-il ?",
+          "reponse": 1020,
+          "unite": "m/min",
+          "aide": "Compare la distance entre deux minutes consécutives.",
+          "explication": "Le délai baisse de 3 s par minute : 3 × 340 = **1 020 m** par minute."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quels sons du tableau dépassent le seuil de danger de 85 dB ?",
+          "options": [
+            "Conversation",
+            "Circulation",
+            "Concert",
+            "Tonnerre proche"
+          ],
+          "reponse": [
+            2,
+            3
+          ],
+          "aide": "Au-delà de 85 dB, une exposition prolongée abîme l’oreille.",
+          "explication": "Le **concert** (110 dB) et le **tonnerre proche** (120 dB) dépassent 85 dB."
+        }
+      ]
+    }
+  ]
+}

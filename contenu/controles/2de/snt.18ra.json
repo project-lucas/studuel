@@ -1,0 +1,630 @@
+{
+  "niveau": "2de",
+  "matiere": "snt",
+  "sujets": [
+    {
+      "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+      "difficulte": 1,
+      "titre": "Ce qu'est vraiment Internet",
+      "consigne": "Réponds à chaque question par des phrases complètes, avec le vocabulaire du cours.",
+      "enonce": "1. Donne une définition d'Internet. Explique pourquoi ce n'est ni une entreprise ni un ordinateur géant.\n2. Que s'est-il passé en **1969** ? Et en **1983** ?\n3. Décris les **trois étapes** de la commutation de paquets.",
+      "bareme": [
+        { "critere": "Définition : un réseau de réseaux qui parlent la même langue (protocoles communs), sans centre ni propriétaire", "points": 7 },
+        { "critere": "1969 : ARPANET relie quatre sites de recherche ; 1983 : TCP/IP devient la règle commune", "points": 6 },
+        { "critere": "Les trois étapes dans l'ordre : découpage en paquets, voyage indépendant, réassemblage à l'arrivée", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Internet est un **réseau de réseaux** : des millions de réseaux locaux reliés entre eux, qui acceptent de parler la même langue, c'est-à-dire d'utiliser les mêmes **protocoles**. Ce n'est pas une entreprise (personne ne le possède) ni un ordinateur géant : il **n'a pas de centre**.\n2. En **1969**, **ARPANET** relie quatre sites américains (trois universités et un institut de recherche), avec l'objectif de faire circuler l'information même si une partie du réseau tombe. En **1983**, la famille de protocoles **TCP/IP** devient la règle commune : c'est la naissance d'Internet tel qu'on le connaît.\n3. (1) Le message est **découpé en paquets** ; (2) chaque paquet voyage **indépendamment**, par le chemin disponible ; (3) les paquets sont **réassemblés** à l'arrivée."
+    },
+    {
+      "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+      "difficulte": 2,
+      "titre": "La photo de Yanis",
+      "consigne": "Lis la situation, puis réponds en justifiant avec le cours.",
+      "enonce": "**Situation.** Yanis, à Lille, envoie à sa cousine de Marseille une photo de **6 000 octets**. Le réseau la découpe en paquets de **1 500 octets** chacun.\n\n1. En combien de paquets la photo est-elle découpée ? Montre ton calcul.\n2. Pendant l'envoi, juste après le passage des deux premiers paquets, un lien du réseau tombe en panne. Que deviennent les paquets suivants ?\n3. La cousine reçoit-elle la photo complète ? Explique ce que doit faire sa machine à l'arrivée.\n4. Quel mot du cours désigne cette capacité du réseau à continuer de fonctionner malgré la panne ?",
+      "bareme": [
+        { "critere": "Calcul juste : 6 000 / 1 500 = 4 paquets", "points": 4 },
+        { "critere": "Les paquets suivants empruntent un autre chemin disponible, car chacun voyage indépendamment", "points": 6 },
+        { "critere": "Oui, la photo arrive : les paquets, arrivés par des chemins différents, sont réassemblés", "points": 6 },
+        { "critere": "Le mot « résilient » (résilience) employé et relié à l'absence de centre", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 6 000 / 1 500 = **4 paquets**.\n2. Les paquets suivants (le 3e et le 4e) ne sont pas bloqués : comme chaque paquet voyage **indépendamment**, ils **passent ailleurs**, par un autre chemin disponible, sans qu'aucune autorité centrale ait à décider quoi que ce soit.\n3. Oui, la cousine reçoit la photo complète. Les paquets ont pu arriver par des chemins différents ; sa machine les **réassemble** pour reconstituer la photo.\n4. On dit que le réseau est **résilient** : si un lien tombe, les paquets suivants passent ailleurs. Cette résilience vient de la commutation de paquets et du fait qu'**Internet n'a pas de centre**."
+    },
+    {
+      "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+      "difficulte": 3,
+      "titre": "Couches, Web et courrier",
+      "consigne": "Réponds à chaque question en justifiant. La dernière question demande un court paragraphe argumenté.",
+      "enonce": "**Situation.** Léa, dans sa chambre reliée à la box par la **fibre**, envoie un **courrier électronique** (protocole SMTP) à son professeur, puis ouvre une **page web** (protocole HTTP). Ses données sont acheminées par **TCP** et adressées grâce à **IP**.\n\n1. Range chacun des éléments suivants dans l'une des quatre couches du modèle TCP/IP : la fibre, IP, TCP, SMTP, HTTP.\n2. Parmi les deux actions de Léa, laquelle utilise le Web ? Laquelle utilise Internet sans passer par le Web ? Justifie en distinguant infrastructure et application.\n3. Qui a inventé le Web, où et en quelle année ?\n4. En quelques lignes, explique pourquoi le fait qu'Internet n'ait pas de centre est à la fois un choix technique et ce qui le rend difficile à couper.",
+      "bareme": [
+        { "critere": "Classement juste : fibre en accès réseau, IP en couche Internet, TCP en transport, SMTP et HTTP en application", "points": 5 },
+        { "critere": "La page web utilise le Web ; le courrier utilise Internet sans le Web ; Internet = infrastructure, Web = une application parmi d'autres", "points": 6 },
+        { "critere": "Tim Berners-Lee, au CERN, en 1989", "points": 3 },
+        { "critere": "Paragraphe : pas de centre, paquets indépendants qui contournent une panne, donc aucun point unique à couper", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Accès réseau** : la fibre (le support physique). **Internet** : IP (l'adressage). **Transport** : TCP (l'acheminement). **Application** : SMTP et HTTP (ce que voit l'utilisateur). Chaque couche ignore les détails des autres.\n2. L'ouverture de la **page web** (HTTP) utilise le **Web**. Le **courrier électronique** utilise Internet **sans passer par le Web** : c'est une autre application, indépendante. Internet est l'**infrastructure** ; le Web n'est qu'**une application parmi d'autres** qui l'utilise, comme le courrier ou la messagerie instantanée.\n3. Le Web a été inventé par **Tim Berners-Lee**, au **CERN**, en **1989**.\n4. Internet a été conçu sans centre : ARPANET devait faire circuler l'information même si une partie du réseau tombait. Grâce à la **commutation de paquets**, chaque paquet voyage indépendamment ; si un lien tombe, les suivants passent ailleurs. Il n'existe donc **aucun point unique** dont la coupure arrêterait tout : c'est un choix technique (la résilience), et c'est aussi ce qui rend Internet **si difficile à couper**."
+    },
+    {
+      "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+      "difficulte": 1,
+      "titre": "IP, TCP et DNS",
+      "consigne": "Réponds à chaque question en une ou deux phrases précises.",
+      "enonce": "1. De quoi se charge le protocole **IP** ? Qu'est-ce qu'il ne fait pas ?\n2. De quoi se charge le protocole **TCP** ? Qu'est-ce qu'il ne fait pas ?\n3. Compare **IPv4** et **IPv6** : taille des adresses et état actuel.\n4. À quoi sert le **DNS** ?",
+      "bareme": [
+        { "critere": "IP achemine les paquets grâce aux adresses mais ne garantit pas leur arrivée ; TCP vérifie, remet dans l'ordre, redemande, mais ne choisit pas la route", "points": 10 },
+        { "critere": "IPv4 : 32 bits, environ 4,3 milliards, épuisées ; IPv6 : 128 bits, pratiquement illimité, en déploiement", "points": 6 },
+        { "critere": "Le DNS traduit un nom de domaine en adresse IP (l'annuaire d'Internet)", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **IP** achemine les paquets grâce aux **adresses**. Il ne **garantit pas** qu'ils arrivent.\n2. **TCP** **vérifie** l'arrivée, **remet dans l'ordre** et **redemande les paquets manquants**. Il ne **choisit pas la route**. Ensemble, ils forment la pile TCP/IP.\n3. **IPv4** : adresses de **32 bits** (ex. 192.168.1.1), environ **4,3 milliards** d'adresses, aujourd'hui **épuisées**. **IPv6** : adresses de **128 bits**, nombre pratiquement **illimité**, **en déploiement**.\n4. Le **DNS** traduit un **nom de domaine** lisible en **adresse IP** : c'est l'annuaire d'Internet."
+    },
+    {
+      "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+      "difficulte": 2,
+      "titre": "Qui fait quoi dans le réseau ?",
+      "consigne": "Pour chaque situation, nomme l'élément ou le protocole responsable et justifie.",
+      "enonce": "**Situation.** Sofia regarde le site de son club de basket depuis son téléphone.\n\n1. Elle tape le nom du site dans la barre d'adresse. Quel service trouve l'adresse IP correspondante ?\n2. Sur le trajet, chaque équipement rencontré choisit seulement le **prochain saut** vers la destination. Comment s'appelle cet équipement ? Connaît-il le chemin complet ?\n3. Le troisième paquet de la page n'est jamais arrivé. Quel protocole s'en aperçoit et que fait-il ?\n4. Le cours dit que la pile TCP/IP sépare **deux responsabilités**. Lesquelles, et quel avantage cette séparation apporte-t-elle ?",
+      "bareme": [
+        { "critere": "Le DNS traduit le nom de domaine en adresse IP", "points": 4 },
+        { "critere": "Le routeur ; il ne connaît pas le chemin complet, seulement le prochain saut", "points": 5 },
+        { "critere": "TCP détecte le paquet manquant et le redemande, puis remet les paquets dans l'ordre", "points": 5 },
+        { "critere": "IP achemine, TCP fiabilise ; on peut faire évoluer l'un sans toucher à l'autre", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. C'est le **DNS** : il traduit le nom de domaine lisible en **adresse IP**.\n2. C'est le **routeur**. Il **ne connaît pas le chemin complet** : il choisit seulement le **prochain saut** vers la destination. Deux paquets d'un même message peuvent donc suivre des chemins différents.\n3. C'est **TCP** : il vérifie l'arrivée, constate que le troisième paquet manque, le **redemande** et **remet les paquets dans l'ordre** avant de livrer la page.\n4. **IP** se charge d'**acheminer** les paquets grâce aux adresses (sans garantir leur arrivée) ; **TCP** se charge de **vérifier, remettre dans l'ordre et redemander** (sans choisir la route). Séparer les deux responsabilités permet de **faire évoluer l'une sans toucher à l'autre** : par exemple passer d'IPv4 à IPv6 sans changer TCP."
+    },
+    {
+      "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+      "difficulte": 3,
+      "titre": "Trois idées reçues sur Internet",
+      "consigne": "Pour chaque affirmation, dis si elle est juste ou fausse et argumente avec le cours.",
+      "enonce": "**Document.** Dans un exposé, Nathan affirme :\n\n> A. « Internet fonctionne parce qu'une grande machine centrale dirige tous les paquets. »\n> B. « Les paquets d'un même message suivent forcément le même chemin, sinon ils arriveraient mélangés. »\n> C. « On aurait pu garder IPv4 pour toujours : 4,3 milliards d'adresses, c'est largement assez. »\n\nOn suppose en outre que **10 milliards d'appareils** veulent chacun une adresse sur le réseau.\n\n1. Discute l'affirmation A.\n2. Discute l'affirmation B : explique comment les paquets peuvent arriver dans le désordre sans que le message soit perdu.\n3. Discute l'affirmation C à l'aide de la donnée ci-dessus.\n4. Le cours présente le DNS comme « le point de fragilité le plus exploité ». Explique pourquoi une panne du DNS gênerait tous les internautes, alors que les routeurs fonctionnent encore.",
+      "bareme": [
+        { "critere": "A fausse : aucune machine ne dirige Internet, réseau de réseaux sans centre, ce qui le rend robuste", "points": 4 },
+        { "critere": "B fausse : chemins différents possibles (prochain saut) ; TCP remet dans l'ordre et redemande les manquants", "points": 6 },
+        { "critere": "C fausse : 10 milliards > 4,3 milliards, adresses IPv4 épuisées ; IPv6 sur 128 bits offre un nombre pratiquement illimité", "points": 5 },
+        { "critere": "Sans DNS, les noms ne sont plus traduits en adresses IP : les sites deviennent injoignables par leur nom", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **A est fausse.** Internet est un **réseau de réseaux** : **aucune machine ne le dirige**. C'est précisément cette absence de centre qui le rend **robuste** : si un lien tombe, les paquets suivants passent ailleurs sans décision centrale.\n2. **B est fausse.** Le message est découpé en **paquets indépendants**, qui peuvent prendre des **chemins différents**, car chaque **routeur** ne choisit que le **prochain saut**. Ils peuvent donc arriver dans le désordre, mais **TCP** les **remet dans l'ordre**, vérifie qu'ils sont tous là et **redemande les manquants** : le message est reconstitué entier.\n3. **C est fausse.** IPv4 code les adresses sur 32 bits, soit environ **4,3 milliards** d'adresses. Avec 10 milliards d'appareils, il en manquerait plus de 5 milliards : les adresses IPv4 sont d'ailleurs **épuisées**. **IPv6**, sur **128 bits**, offre un nombre d'adresses **pratiquement illimité**, d'où son déploiement.\n4. Le **DNS** traduit les **noms de domaine** en **adresses IP**. Les internautes tapent des noms, pas des adresses. Si le DNS tombe, les routeurs savent toujours acheminer les paquets vers une adresse IP, mais **plus personne ne peut trouver l'adresse** qui correspond au nom : les sites deviennent injoignables par leur nom. C'est pourquoi il est un point de fragilité, et une cible."
+    },
+    {
+      "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+      "difficulte": 1,
+      "titre": "Des adresses valides ou non",
+      "consigne": "Justifie chaque réponse à l'aide des règles d'écriture vues en cours.",
+      "enonce": "Voici quatre écritures proposées comme adresses IPv4 :\n\n| Écriture |\n|---|\n| 192.168.0.12 |\n| 10.4.300.2 |\n| 81.56.120.7 |\n| 192.168.1 |\n\n1. Rappelle comment s'écrit une adresse IPv4 et sur combien de bits elle est codée.\n2. Pour chacune des quatre écritures, dis si c'est une adresse IPv4 valide. Justifie.\n3. Parmi les adresses valides, lesquelles sont des adresses **privées** d'après le cours ? Où circulent-elles ?",
+      "bareme": [
+        { "critere": "Règle : quatre nombres de 0 à 255 séparés par des points, 32 bits", "points": 5 },
+        { "critere": "Validité juste et justifiée : 192.168.0.12 et 81.56.120.7 valides ; 10.4.300.2 (300 > 255) et 192.168.1 (trois nombres) invalides", "points": 9 },
+        { "critere": "192.168.0.12 est privée (commence par 192.168) et ne circule que dans le réseau local", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une adresse IPv4 s'écrit avec **quatre nombres de 0 à 255**, séparés par des **points** ; elle est codée sur **32 bits**.\n2. **192.168.0.12** : valide (quatre nombres entre 0 et 255). **10.4.300.2** : **invalide**, car 300 dépasse 255. **81.56.120.7** : valide. **192.168.1** : **invalide**, il n'y a que trois nombres.\n3. **192.168.0.12** est une adresse **privée**, car elle commence par 192.168. Une adresse privée ne circule **que dans le réseau local** ; sur Internet, c'est l'adresse **publique** (portée par la box) qui est utilisée. 81.56.120.7 ne commence ni par 192.168 ni par 10 : ce n'est pas une adresse privée au sens du cours."
+    },
+    {
+      "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+      "difficulte": 2,
+      "titre": "La box de la famille Martin",
+      "consigne": "Lis la situation et réponds en utilisant les mots du cours (DHCP, NAT, partie réseau, partie hôte).",
+      "enonce": "**Situation.** Chez les Martin, la box a donné ces adresses :\n\n| Appareil | Adresse |\n|---|---|\n| Ordinateur | 192.168.1.10 |\n| Téléphone | 192.168.1.11 |\n| Tablette | 192.168.1.12 |\n\nDans ce réseau, le masque de sous-réseau indique que les **trois premiers nombres** forment la partie réseau. L'adresse **publique** de la box est 88.170.12.45.\n\n1. Quel mécanisme a attribué automatiquement ces adresses ?\n2. Pour l'ordinateur, écris la partie réseau et la partie hôte de son adresse. Laquelle est commune aux trois appareils ?\n3. On branche une console. Propose une adresse possible pour elle, et justifie.\n4. Le téléphone consulte un site. Quelle adresse le site voit-il ? Quel mécanisme le permet ?",
+      "bareme": [
+        { "critere": "Le DHCP de la box attribue les adresses privées", "points": 4 },
+        { "critere": "Partie réseau 192.168.1 commune aux trois ; partie hôte 10 propre à l'ordinateur", "points": 6 },
+        { "critere": "Adresse proposée en 192.168.1.x, x non déjà pris et entre 0 et 255, justifiée par la partie réseau commune", "points": 4 },
+        { "critere": "Le site voit l'adresse publique 88.170.12.45 ; le NAT traduit l'adresse privée en adresse publique", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. C'est le **DHCP** : la box attribue automatiquement les adresses privées aux appareils qui se connectent.\n2. Pour 192.168.1.10 : partie **réseau** = **192.168.1**, partie **hôte** = **10**. La partie réseau 192.168.1 est **commune** aux trois appareils du même réseau local ; la partie hôte (10, 11, 12) est propre à chacun.\n3. Par exemple **192.168.1.13** : la console appartient au même réseau local, elle garde donc la partie réseau 192.168.1, avec une partie hôte qui n'est pas encore utilisée (ni 10, ni 11, ni 12) et qui reste entre 0 et 255.\n4. Le site voit l'adresse **publique** de la box, **88.170.12.45**, et non 192.168.1.11 : les adresses privées ne circulent que dans le réseau local. C'est le **NAT** qui traduit l'adresse privée vers l'unique adresse publique du foyer."
+    },
+    {
+      "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+      "difficulte": 3,
+      "titre": "« Grâce à son adresse IP, on sait qui c'est »",
+      "consigne": "Réponds en argumentant : chaque réponse doit s'appuyer sur une notion précise du cours.",
+      "enonce": "**Document.** Sur un forum, un message insultant a été posté. Un utilisateur écrit :\n\n> « J'ai relevé l'adresse IP de l'auteur : 88.170.12.45. Donc c'est forcément Tom, 16 ans, qui habite à cette adresse. »\n\nOn sait que cette adresse est l'adresse publique d'une box familiale, derrière laquelle sont connectés quatre appareils (ceux de Tom, de sa sœur et de ses parents).\n\n1. Qu'identifie réellement une adresse IP ? Cite la phrase du cours qui le résume.\n2. Explique, à l'aide du NAT, pourquoi les quatre appareils de la famille apparaissent sur Internet sous la même adresse.\n3. Deux foyers voisins ont chacun un ordinateur à l'adresse 192.168.1.10. Est-ce un problème ? Justifie.\n4. Conclus : l'affirmation du document est-elle fondée ?",
+      "bareme": [
+        { "critere": "Une adresse IP désigne où joindre une machine à un instant donné, pas une personne", "points": 5 },
+        { "critere": "Le NAT traduit les adresses privées vers l'unique adresse publique de la box, partagée par tout le foyer", "points": 5 },
+        { "critere": "Pas de conflit : adresses privées qui ne circulent que dans chaque réseau local", "points": 5 },
+        { "critere": "Conclusion argumentée : affirmation non fondée, l'adresse ne désigne ni un appareil unique ni une personne", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Une adresse IP identifie **une machine**, ou plus exactement un **accès**, à **un instant donné**. Le cours le résume ainsi : « Une adresse IP ne dit pas qui vous êtes : elle dit où joindre la machine que vous utilisez, à cet instant. »\n2. Chez eux, chaque appareil a une adresse **privée** (attribuée par le DHCP de la box), qui ne circule que dans le réseau local. Pour sortir sur Internet, le **NAT** traduit ces adresses privées vers l'**unique adresse publique** du foyer, portée par la box. Vu de l'extérieur, les quatre appareils ont donc tous l'adresse **88.170.12.45**.\n3. **Non**, ce n'est pas un problème : 192.168.1.10 est une adresse **privée**, qui ne circule que **dans chaque réseau local**. Sur Internet, chaque foyer apparaît sous sa propre adresse publique ; les deux 192.168.1.10 ne se rencontrent jamais.\n4. L'affirmation **n'est pas fondée** : l'adresse 88.170.12.45 désigne l'accès d'un foyer entier à un instant donné. Le message peut venir de n'importe lequel des quatre appareils, et même d'une personne de passage utilisant le wifi. Une adresse IP ne désigne pas une personne."
+    },
+    {
+      "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+      "difficulte": 1,
+      "titre": "Les briques du Web",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "1. Le cours dit que « confondre Internet et le Web, c'est confondre la route et les voitures ». Explique cette phrase.\n2. Qui a inventé le Web, et où ?\n3. Cite les **trois briques** inventées pour le Web et donne le rôle de chacune.\n4. Quelle est la différence entre **HTML** et **CSS** ?",
+      "bareme": [
+        { "critere": "Internet = infrastructure (la route) ; le Web = une application qui l'utilise (les voitures)", "points": 5 },
+        { "critere": "Tim Berners-Lee, au CERN", "points": 3 },
+        { "critere": "HTML décrit une page, URL donne une adresse unique à chaque ressource, HTTP transfère la ressource", "points": 7 },
+        { "critere": "HTML = structure du contenu ; CSS = présentation", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Internet** est l'**infrastructure** qui relie les machines : c'est la route. Le **Web** est une **application** qui circule sur cette infrastructure, comme les voitures sur la route. Le Web n'est pas Internet lui-même.\n2. Le Web a été inventé par **Tim Berners-Lee**, au **CERN** (entre 1989 et 1991).\n3. **HTML** : un langage pour **décrire une page**. **URL** : une **adresse unique** pour chaque ressource. **HTTP** : un **protocole pour transférer** la ressource entre le serveur et le navigateur.\n4. **HTML** décrit la **structure** du contenu (titres, paragraphes, liens, images) ; **CSS** décrit la **présentation** (couleurs, polices, mise en page)."
+    },
+    {
+      "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+      "difficulte": 2,
+      "titre": "Le site de recettes d'Inès",
+      "consigne": "Lis la situation et réponds en justifiant à l'aide du cours.",
+      "enonce": "**Situation.** Inès consulte un site de recettes depuis le wifi d'un café.\n\n1. Pour chaque élément, dis s'il relève du **HTML** ou du **CSS** : a) la liste des ingrédients ; b) la couleur rose des titres ; c) la photo du gâteau ; d) la police d'écriture choisie.\n2. Qui joue le rôle de **client** et qui joue le rôle de **serveur** quand Inès affiche la recette ?\n3. Le site utilise **HTTP** et non **HTTPS**. Inès s'y connecte avec un mot de passe. Quel risque court-elle sur ce wifi ?\n4. Le créateur du site veut changer entièrement son apparence sans réécrire les recettes. Est-ce possible ? Pourquoi ?",
+      "bareme": [
+        { "critere": "a et c : HTML (structure, contenu) ; b et d : CSS (présentation)", "points": 6 },
+        { "critere": "Le navigateur d'Inès est le client qui demande ; le serveur renvoie la page", "points": 4 },
+        { "critere": "Sans HTTPS, pas de chiffrement : tout circule en clair et le mot de passe peut être lu par un intermédiaire", "points": 5 },
+        { "critere": "Oui : HTML et CSS séparés, on change la feuille de style sans toucher au contenu", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. a) La liste des ingrédients : **HTML** (structure du contenu). b) La couleur rose des titres : **CSS** (présentation). c) La photo : **HTML** (les images font partie du contenu). d) La police : **CSS**.\n2. Le **navigateur** d'Inès est le **client** : il demande la page. Le **serveur** du site la **renvoie**.\n3. Sans **HTTPS**, les échanges ne sont **pas chiffrés** : tout le contenu, y compris son **mot de passe**, circule **en clair** et peut être lu par **n'importe quel intermédiaire** du réseau, par exemple quelqu'un sur le même wifi du café.\n4. **Oui**. Comme la **structure** (HTML) et la **présentation** (CSS) sont séparées, on peut changer entièrement l'apparence du site en modifiant le CSS, **sans toucher à une ligne du contenu**."
+    },
+    {
+      "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+      "difficulte": 3,
+      "titre": "Quatre pages et un classement",
+      "consigne": "Réponds aux questions, puis rédige un court paragraphe argumenté pour la dernière.",
+      "enonce": "**Document.** Un tout petit Web compte quatre pages, reliées par ces liens :\n\n| Page de départ | Pointe vers |\n|---|---|\n| B | A |\n| C | A |\n| D | A et C |\n| A | B |\n\n1. Décris les **trois étapes** du fonctionnement d'un moteur de recherche.\n2. Pour chaque page, compte le nombre de liens qui pointent **vers** elle.\n3. D'après le principe du **PageRank**, quelle page semble la plus importante ? Pourquoi le seul nombre de liens ne suffit-il pas toujours ?\n4. En quelques lignes, explique la phrase du cours : « La première page de résultats est un choix, pas un fait. »",
+      "bareme": [
+        { "critere": "Crawling (robots de lien en lien), indexation (stockage en mots-clés), classement par un algorithme", "points": 5 },
+        { "critere": "Liens entrants justes : A 3, B 1, C 1, D 0", "points": 4 },
+        { "critere": "A la plus importante ; une page est importante si des pages importantes la citent, la qualité des liens compte", "points": 5 },
+        { "critere": "Paragraphe : classement produit d'un algorithme et d'un modèle économique, jamais neutre", "points": 6 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. **Crawling** : des robots parcourent le Web de lien en lien. **Indexation** : le contenu est stocké et découpé en mots-clés. **Classement** : un algorithme ordonne les résultats.\n2. Liens entrants : **A : 3** (de B, C et D) ; **B : 1** (de A) ; **C : 1** (de D) ; **D : 0**.\n3. **A** semble la plus importante : c'est la page vers laquelle pointent le plus de pages. Mais le PageRank ne compte pas seulement les liens : **une page est importante si des pages importantes la citent**. Un seul lien venant d'une page très importante peut peser plus que plusieurs liens venant de pages que personne ne cite. Ici, B n'a qu'un lien, mais il vient de A, la page la plus citée.\n4. Le classement **n'est jamais neutre** : il est le **produit d'un algorithme**, dont les critères ont été choisis par l'entreprise, et d'un **modèle économique**. Ce qui apparaît en premier n'est donc pas « la vérité » ni forcément la meilleure réponse : c'est le résultat d'un **choix**, qu'il faut garder en tête avant de faire confiance au premier lien."
+    },
+    {
+      "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+      "difficulte": 1,
+      "titre": "Routeurs et TCP",
+      "consigne": "Réponds à chaque question par des phrases complètes.",
+      "enonce": "1. Quel est le rôle d'un **routeur** ? Qu'est-ce qu'une **table de routage** ?\n2. Cite deux critères qui peuvent servir à calculer le coût d'une route.\n3. Cite les **quatre** actions de TCP et ce que chacune garantit.\n4. Donne un usage de **UDP** et explique pourquoi on le préfère à TCP dans ce cas.",
+      "bareme": [
+        { "critere": "Le routeur relie deux réseaux et choisit pour chaque paquet le voisin vers qui l'envoyer ; la table associe destinations et directions", "points": 5 },
+        { "critere": "Deux critères parmi : nombre de sauts, débit, latence", "points": 3 },
+        { "critere": "Numérotation (ordre), accusés de réception (arrivée), redemande (intégralité), ajustement du débit (congestion)", "points": 8 },
+        { "critere": "Usage d'UDP (visio, jeu, streaming) : une image perdue vaut mieux qu'une image en retard", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un **routeur** relie deux réseaux et décide, **pour chaque paquet**, vers quel **voisin** l'envoyer. La **table de routage** associe des **destinations** à des **directions**.\n2. Le **nombre de sauts** (routeurs traversés), le **débit** disponible (capacité du lien), la **latence** (le délai).\n3. TCP **numérote** les paquets (remise dans l'ordre) ; il attend des **accusés de réception** (certitude de l'arrivée) ; il **redemande** les manquants (intégralité du message) ; il **ajuste le débit** (éviter la congestion).\n4. UDP sert à la **visioconférence**, au **jeu en ligne** ou au **streaming**. Il n'offre aucune garantie et n'attend pas d'accusé, donc il est plus rapide : en visioconférence, **une image perdue vaut mieux qu'une image en retard**."
+    },
+    {
+      "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+      "difficulte": 2,
+      "titre": "La table du routeur R1",
+      "consigne": "Utilise le document pour répondre, en justifiant chaque choix.",
+      "enonce": "**Document 1 — table de routage du routeur R1**\n\n| Destination | Envoyer vers |\n|---|---|\n| Réseau A | Routeur R2 |\n| Réseau B | Routeur R3 |\n| Toute autre destination | Routeur R4 |\n\n**Document 2 — deux routes possibles entre deux villes**\n\n| Route | Nombre de sauts |\n|---|---|\n| Route 1 | 3 |\n| Route 2 | 5 |\n\n1. R1 reçoit trois paquets destinés respectivement au réseau B, au réseau A et au réseau C. Vers quel routeur envoie-t-il chacun ?\n2. Si le coût d'une route est le nombre de sauts, laquelle des deux routes du document 2 est choisie ? Pourquoi ?\n3. Quelle commande permet de visualiser les routeurs réellement traversés par des paquets ?\n4. Explique la phrase : « Le réseau optimise ses coûts, pas la carte. »",
+      "bareme": [
+        { "critere": "B vers R3, A vers R2, C vers R4 (autre destination)", "points": 6 },
+        { "critere": "Route 1 choisie : 3 sauts, coût le plus faible", "points": 4 },
+        { "critere": "La commande traceroute", "points": 3 },
+        { "critere": "Explication : le chemin choisi minimise un coût (sauts, débit, latence), pas la distance géographique ; exemple Lille-Lyon via Francfort", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Paquet pour le **réseau B** : vers **R3**. Paquet pour le **réseau A** : vers **R2**. Paquet pour le **réseau C** : C n'est pas dans la table, c'est une « autre destination », donc vers **R4**.\n2. La **route 1** : avec 3 sauts contre 5, elle a le **coût le plus faible** quand le coût est le nombre de routeurs traversés.\n3. La commande **traceroute**.\n4. Le routage ne cherche pas le trajet le plus court sur une carte : il choisit la route dont le **coût** (nombre de sauts, débit disponible, latence) est le plus faible. Une route géographiquement plus longue peut être moins coûteuse. C'est pourquoi **un message envoyé de Lille à Lyon peut passer par Francfort**."
+    },
+    {
+      "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+      "difficulte": 3,
+      "titre": "TCP ou UDP ?",
+      "consigne": "Justifie chaque choix à partir des garanties de chaque protocole. La dernière question demande une explication pas à pas.",
+      "enonce": "**Situation.** Malik utilise son ordinateur pour quatre activités :\n\n| Activité |\n|---|\n| a) Télécharger un fichier de cours |\n| b) Appeler sa grand-mère en visioconférence |\n| c) Afficher une page web |\n| d) Jouer à un jeu en ligne |\n\n1. Pour chaque activité, choisis TCP ou UDP et justifie par les garanties (ou l'absence de garanties) du protocole.\n2. Pendant le téléchargement, les paquets 1, 2, 4 et 5 arrivent, mais pas le 3. Décris pas à pas ce que fait TCP jusqu'à la remise du fichier complet.\n3. Pourquoi dit-on que TCP « rend fiable un réseau qui, lui, ne l'est pas » ?",
+      "bareme": [
+        { "critere": "a et c : TCP (ordre, intégralité, retransmission indispensables)", "points": 4 },
+        { "critere": "b et d : UDP (pas d'attente d'accusé ; une donnée perdue vaut mieux qu'une donnée en retard)", "points": 4 },
+        { "critere": "Étapes : numéros, absence d'accusé pour le 3, redemande, réception, remise dans l'ordre 1 à 5", "points": 7 },
+        { "critere": "Le réseau perd ou désordonne des paquets ; TCP compense par numérotation, accusés, retransmission", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. a) **TCP** : un fichier doit arriver **entier et dans l'ordre**, sinon il est inutilisable. b) **UDP** : en visioconférence, **une image perdue vaut mieux qu'une image en retard** ; attendre une retransmission créerait des décalages. c) **TCP** : c'est l'usage du Web, la page doit être complète. d) **UDP** : le jeu en ligne a besoin de rapidité, une information arrivée en retard ne sert plus à rien.\n2. TCP a **numéroté** les paquets à l'envoi. À la réception de 1, 2, 4 et 5, il constate qu'il manque le **numéro 3** : aucun **accusé de réception** n'est envoyé pour lui. Il **redemande** le paquet 3 à l'expéditeur, qui le renvoie. Une fois le 3 arrivé, TCP **remet les paquets dans l'ordre** (1, 2, 3, 4, 5) et livre le fichier **intégral** au logiciel de Malik.\n3. Le réseau lui-même ne garantit rien : les paquets suivent des chemins différents, certains se perdent, d'autres arrivent dans le désordre. TCP compense ces défauts grâce à la **numérotation**, aux **accusés de réception**, à la **retransmission** et à l'**ajustement du débit** : l'utilisateur reçoit un message complet et ordonné, **comme si** le réseau était fiable."
+    },
+    {
+      "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+      "difficulte": 1,
+      "titre": "Graphe social et gratuité",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "1. Dans le graphe d'un réseau social, que représentent les **sommets** ? Les **arêtes** ?\n2. Définis le **degré** d'un sommet et le **diamètre** d'un graphe.\n3. Comment un réseau social gratuit se finance-t-il ? Pourquoi le **temps passé** devient-il l'objectif de conception ?",
+      "bareme": [
+        { "critere": "Sommets = utilisateurs ; arêtes = relations", "points": 5 },
+        { "critere": "Degré = nombre de relations d'un sommet ; diamètre = plus longue distance minimale entre deux sommets", "points": 7 },
+        { "critere": "Publicité ciblée ; plus l'utilisateur reste et est connu, plus l'espace publicitaire se vend cher", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Les **sommets** sont les **utilisateurs** ; les **arêtes** sont les **relations** entre eux.\n2. Le **degré** d'un sommet est son **nombre de relations**. Le **diamètre** d'un graphe est la **plus longue des distances minimales** entre deux sommets.\n3. La gratuité est financée par la **publicité ciblée** : plus le service **connaît** l'utilisateur, plus l'espace publicitaire se **vend cher**. Le produit, c'est donc l'**attention** des utilisateurs. Le **temps passé** devient l'objectif de conception, avant même la qualité du service rendu : ce n'est pas un dérapage, c'est ce que le modèle économique demande."
+    },
+    {
+      "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+      "difficulte": 2,
+      "titre": "Le groupe de Chloé",
+      "consigne": "Utilise le graphe pour répondre. Montre les chemins que tu utilises.",
+      "enonce": "**Document.** Sur un réseau social, cinq amis sont reliés ainsi (une ligne = une relation) :\n\n| Relation |\n|---|\n| Alice — Bilal |\n| Alice — Chloé |\n| Bilal — Chloé |\n| Chloé — Dan |\n| Dan — Emma |\n\n1. Donne le **degré** de chaque personne.\n2. Quelle est la **distance** entre Alice et Emma ? Écris le chemin le plus court.\n3. Quel est le **diamètre** de ce graphe ? Justifie.\n4. Quelle personne a la plus forte **centralité** ? Explique ce que cela signifie ici.",
+      "bareme": [
+        { "critere": "Degrés justes : Alice 2, Bilal 2, Chloé 3, Dan 2, Emma 1", "points": 5 },
+        { "critere": "Distance Alice-Emma = 3 par Alice-Chloé-Dan-Emma", "points": 5 },
+        { "critere": "Diamètre = 3 (Alice-Emma ou Bilal-Emma), aucune distance plus grande", "points": 5 },
+        { "critere": "Chloé : passage obligé entre Alice/Bilal et Dan/Emma", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Alice : 2** (Bilal, Chloé) ; **Bilal : 2** (Alice, Chloé) ; **Chloé : 3** (Alice, Bilal, Dan) ; **Dan : 2** (Chloé, Emma) ; **Emma : 1** (Dan).\n2. Le chemin le plus court est **Alice — Chloé — Dan — Emma** : la distance est de **3**.\n3. Les plus grandes distances minimales sont Alice-Emma = 3 et Bilal-Emma = 3 (Bilal — Chloé — Dan — Emma). Toutes les autres paires sont plus proches (par exemple Alice-Dan = 2, Bilal-Dan = 2, Chloé-Emma = 2). Le **diamètre** vaut donc **3**.\n4. **Chloé** : tout chemin entre Alice ou Bilal d'un côté et Dan ou Emma de l'autre **passe obligatoirement par elle**. C'est la **centralité** : elle est un passage obligé ; si elle quittait le réseau, le groupe serait coupé en deux."
+    },
+    {
+      "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+      "difficulte": 3,
+      "titre": "« Si c'est gratuit, c'est toi le produit »",
+      "consigne": "Rédige une réponse argumentée, en plusieurs paragraphes, en t'appuyant sur les notions du cours.",
+      "enonce": "**Document.**\n\n> « Si c'est gratuit, c'est toi le produit. » (formule souvent citée à propos des réseaux sociaux)\n\n1. Explique cette formule à l'aide du **modèle économique** des réseaux sociaux.\n2. Montre comment ce modèle influence les **algorithmes de recommandation** : que cherchent-ils à optimiser, et quelles en sont les conséquences (bulles de filtre, contenus clivants) ?\n3. Cite **deux risques** liés aux réseaux sociaux et le texte ou la mesure qui encadre chacun.",
+      "bareme": [
+        { "critere": "Gratuité financée par la publicité ciblée ; le produit vendu est l'attention et la connaissance de l'utilisateur", "points": 6 },
+        { "critere": "Algorithmes optimisés sur l'engagement : ils favorisent ce qui fait réagir", "points": 5 },
+        { "critere": "Conséquences expliquées : bulles de filtre, viralité des contenus clivants plus que nuancés", "points": 4 },
+        { "critere": "Deux risques avec leur encadrement juste (RGPD 2018, DSA 2023, délit de cyberharcèlement, âge minimal)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le réseau social ne fait pas payer l'utilisateur : il est financé par la **publicité ciblée**. Plus il connaît l'utilisateur, plus l'espace publicitaire se vend cher. Ce qui est vendu, ce n'est pas le service : ce sont l'**attention** et les **données** de l'utilisateur, proposées aux annonceurs. D'où la formule : l'utilisateur est le produit. Le **temps passé** devient l'objectif de conception.\n2. Les **algorithmes de recommandation** choisissent ce qui apparaît dans le fil. Ils sont optimisés sur l'**engagement** : ils favorisent ce qui **fait réagir**. Conséquences : les **bulles de filtre** (on voit surtout des contenus conformes à ses opinions) et la **viralité des contenus clivants**, qui suscitent plus de réactions que les contenus nuancés.\n3. Deux risques parmi : les **données personnelles**, encadrées par le **RGPD** (2018) ; la **modération et la transparence**, encadrées par le **DSA** européen (2023) ; le **cyberharcèlement**, délit aggravé au code pénal ; l'**exposition des mineurs**, encadrée par un âge minimal et le contrôle parental."
+    },
+    {
+      "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+      "difficulte": 1,
+      "titre": "De la donnée à la connaissance",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "1. Le nombre **12** apparaît dans un fichier. À partir de cet exemple, explique la différence entre une **donnée**, une **information** et une **connaissance** (invente le contexte et l'interprétation).\n2. Dans une table, que représente une **ligne** ? Une **colonne** ?\n3. Cite trois **types** d'attributs et explique pourquoi le type d'un attribut est important.",
+      "bareme": [
+        { "critere": "Donnée brute, information = donnée + contexte, connaissance = interprétation, avec un exemple cohérent", "points": 8 },
+        { "critere": "Ligne = un enregistrement (une entité décrite) ; colonne = un attribut", "points": 6 },
+        { "critere": "Trois types parmi entier, flottant, chaîne, booléen, date ; le type autorise ou interdit un traitement", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Donnée** : 12, brut, sans rien d'autre. **Information** : on ajoute le **contexte**, par exemple « 12 sur 20, note de Léo en maths ». **Connaissance** : on ajoute l'**interprétation**, par exemple « c'est une note au-dessus de la moyenne ». La donnée devient information grâce au contexte, puis connaissance grâce à l'interprétation.\n2. Une **ligne** est un **enregistrement** : une entité décrite (par exemple un élève). Une **colonne** est un **attribut** (par exemple la classe ou la note).\n3. Types possibles : **entier**, **flottant**, **chaîne**, **booléen**, **date**. Le type **autorise ou interdit un traitement** : on peut faire la moyenne d'une colonne de flottants, mais **on ne fait pas la moyenne d'une chaîne**."
+    },
+    {
+      "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+      "difficulte": 2,
+      "titre": "Les notes de la seconde",
+      "consigne": "Utilise la table pour appliquer les traitements demandés. Montre tes calculs.",
+      "enonce": "**Document — fichier CSV `notes`**\n\n| Nom | Classe | Age | Moyenne |\n|---|---|---|---|\n| Léo | 2B | 15 | 12,5 |\n| Maya | 2A | 16 | 14 |\n| Sami | 2B | 15 | 9,5 |\n| Jade | 2B | 16 | 15 |\n| Hugo | 2A | 15 | 11 |\n\n1. Donne le **type** de chacun des quatre attributs.\n2. **Filtre** la table pour ne garder que les élèves de la 2B.\n3. **Trie** ces élèves de la 2B par moyenne décroissante.\n4. **Agrège** : calcule la moyenne des moyennes des élèves de la 2B (arrondie au centième).",
+      "bareme": [
+        { "critere": "Types : Nom et Classe chaînes, Age entier, Moyenne flottant", "points": 4 },
+        { "critere": "Filtre juste : Léo, Sami, Jade", "points": 4 },
+        { "critere": "Tri décroissant juste : Jade 15, Léo 12,5, Sami 9,5", "points": 5 },
+        { "critere": "Agrégation juste : (12,5 + 9,5 + 15) / 3 = 37 / 3 ≈ 12,33", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Nom** : chaîne ; **Classe** : chaîne ; **Age** : entier ; **Moyenne** : flottant.\n2. Filtrer (ne garder que les lignes qui vérifient Classe = 2B) : **Léo, Sami, Jade**.\n3. Trier par moyenne décroissante : **Jade (15)**, **Léo (12,5)**, **Sami (9,5)**.\n4. Agréger (moyenner) : (12,5 + 9,5 + 15) / 3 = 37 / 3 ≈ **12,33**. La moyenne des élèves de la 2B est d'environ 12,33. Ce calcul n'est possible que parce que l'attribut Moyenne est d'un type numérique (flottant)."
+    },
+    {
+      "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+      "difficulte": 3,
+      "titre": "Fusionner et choisir un format",
+      "consigne": "Réponds à chaque question en justifiant. La dernière demande un court paragraphe argumenté.",
+      "enonce": "**Document 1 — table `eleves`**\n\n| Nom | Classe |\n|---|---|\n| Léo | 2B |\n| Maya | 2A |\n| Jade | 2B |\n\n**Document 2 — table `classes`**\n\n| Classe | Professeur principal |\n|---|---|\n| 2A | Mme Roux |\n| 2B | M. Diallo |\n\n1. Quel traitement permet d'obtenir, pour chaque élève, le nom de son professeur principal ? Sur quel attribut se fait-il ? Écris la table obtenue.\n2. Le lycée veut enregistrer, pour chaque élève, la **liste** de toutes ses notes. Le format **CSV** convient-il ? Quel format choisir ? Justifie.\n3. Le lycée hésite entre un format **ouvert** et le format **propriétaire** d'un logiciel payant. Argumente en faveur d'un choix.\n4. Cite les **3 V** du big data.",
+      "bareme": [
+        { "critere": "Fusion (jointure) sur l'attribut commun Classe ; table juste : Léo-2B-M. Diallo, Maya-2A-Mme Roux, Jade-2B-M. Diallo", "points": 6 },
+        { "critere": "CSV ne convient pas (pas d'imbrication ni de type) ; JSON permet une liste imbriquée et typée", "points": 5 },
+        { "critere": "Format ouvert : interopérabilité et pérennité, contre la dépendance à un logiciel qui peut disparaître", "points": 6 },
+        { "critere": "Volume, vitesse, variété", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Il faut **fusionner** (joindre) les deux tables sur l'**attribut commun Classe**. Table obtenue :\n\n| Nom | Classe | Professeur principal |\n|---|---|---|\n| Léo | 2B | M. Diallo |\n| Maya | 2A | Mme Roux |\n| Jade | 2B | M. Diallo |\n\n2. **CSV ne convient pas** : c'est du texte simple, une ligne par enregistrement, **sans type ni imbrication** ; on ne peut pas y ranger proprement une liste de notes à l'intérieur d'un élève. Il faut choisir **JSON**, qui permet l'**imbrication** (une liste de notes dans chaque élève) et les **types**. Sa limite : il est plus verbeux.\n3. Le lycée devrait choisir un **format ouvert**. Il garantit l'**interopérabilité** (n'importe quel logiciel peut lire le fichier) et la **pérennité** : un fichier propriétaire dépend d'un logiciel qui peut disparaître, alors qu'un format ouvert **se relit dans vingt ans**.\n4. **Volume, vitesse, variété**."
+    },
+    {
+      "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+      "difficulte": 1,
+      "titre": "Client-serveur ou pair-à-pair",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Décris le principe du modèle **client-serveur**, puis celui du modèle **pair-à-pair**.\n2. Où se trouve le contenu dans chacun des deux modèles ?\n3. Donne le **point faible** de chaque modèle.\n4. Donne un usage de chaque modèle.",
+      "bareme": [
+        { "critere": "Client-serveur : un serveur répond, un client demande ; pair-à-pair : chaque machine est client et serveur", "points": 6 },
+        { "critere": "Contenu centralisé sur le serveur / réparti entre les participants", "points": 4 },
+        { "critere": "Point unique de défaillance / contrôle des contenus difficile", "points": 6 },
+        { "critere": "Un usage juste pour chaque modèle", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Client-serveur** : un **serveur** attend des requêtes et y **répond** ; le **client** **demande**. **Pair-à-pair** : chaque machine est à la fois **client et serveur**.\n2. En client-serveur, le contenu est **centralisé sur le serveur** ; en pair-à-pair, il est **réparti entre les participants**.\n3. Le client-serveur a un **point unique de défaillance** : si le serveur tombe, plus rien ne fonctionne. Le pair-à-pair rend le **contrôle des contenus difficile**.\n4. Client-serveur : le **Web**, le courrier, les applications mobiles. Pair-à-pair : le **partage de fichiers**, les mises à jour de jeux, les crypto-monnaies, les messageries décentralisées."
+    },
+    {
+      "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+      "difficulte": 2,
+      "titre": "La mise à jour du jeu Galaxie",
+      "consigne": "Lis la situation et compare les deux modèles en justifiant.",
+      "enonce": "**Situation.** Le studio qui édite le jeu **Galaxie** publie une grosse mise à jour. Le jour de sa sortie, **un million de joueurs** veulent la télécharger en même temps.\n\n1. Si la mise à jour est distribuée par un **serveur unique**, que se passe-t-il quand la demande augmente ? Quel risque court le studio si ce serveur tombe ?\n2. Si elle est distribuée en **pair-à-pair**, que se passe-t-il quand le nombre de joueurs augmente ? Explique pourquoi.\n3. Le studio garde un modèle client-serveur. Propose une **parade** pour chacun de ces trois risques : la panne, la saturation, l'éloignement géographique des joueurs.",
+      "bareme": [
+        { "critere": "Serveur unique : il ralentit ; s'il tombe, plus personne ne télécharge (point unique de défaillance)", "points": 6 },
+        { "critere": "Pair-à-pair : le réseau accélère, car chaque joueur qui a reçu des morceaux les fournit aux autres", "points": 6 },
+        { "critere": "Parades justes : réplication, fermes de serveurs, réseaux de distribution de contenu", "points": 8 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Avec un serveur unique, plus la demande augmente, plus le serveur **ralentit** : il doit répondre seul à un million de requêtes. S'il tombe, **plus personne ne peut télécharger** : c'est un **point unique de défaillance**.\n2. En pair-à-pair, chaque joueur est à la fois **client et serveur** : dès qu'il a reçu une partie de la mise à jour, il la **fournit aux autres**. Plus il y a de joueurs, plus il y a de sources : le réseau **accélère** au lieu de ralentir. Il **monte en charge naturellement**.\n3. Contre la **panne** : la **réplication** sur plusieurs machines. Contre la **saturation** (et le **déni de service**) : les **fermes de serveurs**. Contre l'**éloignement géographique** : les **réseaux de distribution de contenu**."
+    },
+    {
+      "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+      "difficulte": 3,
+      "titre": "Parlo, un service mixte",
+      "consigne": "Analyse la situation en t'appuyant sur les forces et les faiblesses de chaque modèle.",
+      "enonce": "**Document.** Présentation de Parlo, un service de visioconférence imaginaire :\n\n> « Pour utiliser Parlo, vous créez un compte. Nos serveurs vérifient votre identité et tiennent l'annuaire de vos contacts. Une fois l'appel lancé, la vidéo passe directement d'un ordinateur à l'autre, sans transiter par nos serveurs. »\n\n1. Quelles parties de Parlo relèvent du modèle **client-serveur** ? Laquelle relève du **pair-à-pair** ?\n2. Pourquoi est-il intéressant de faire passer la vidéo en pair-à-pair plutôt que par les serveurs de Parlo ?\n3. Un groupe malveillant envoie un flot énorme de requêtes vers les serveurs de connexion de Parlo. Comment s'appelle cette attaque ? Quelle partie du service est touchée, et pourquoi ?\n4. Le cours dit que le pair-à-pair **résiste à la censure**. Explique cette force et sa contrepartie.",
+      "bareme": [
+        { "critere": "Client-serveur : authentification et annuaire ; pair-à-pair : transfert de la vidéo", "points": 5 },
+        { "critere": "Le transfert lourd ne sature pas un serveur central et monte en charge naturellement", "points": 4 },
+        { "critere": "Déni de service ; les serveurs d'authentification et d'annuaire, point unique de défaillance, empêchent de lancer des appels", "points": 5 },
+        { "critere": "Contenu réparti, aucune autorité ne peut le retirer ; contrepartie : retrait d'un contenu illicite difficile", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Client-serveur** : la **vérification d'identité** (authentification) et l'**annuaire** des contacts, tenus par les serveurs de Parlo. **Pair-à-pair** : le **transfert de la vidéo**, qui passe directement d'un ordinateur à l'autre. C'est un modèle **mixte**, comme beaucoup de services de visioconférence.\n2. La vidéo est le **transfert lourd**. En pair-à-pair, elle ne passe pas par les serveurs de Parlo, qui ne risquent donc pas d'être **saturés** quand le nombre d'appels augmente : le service **monte en charge naturellement**.\n3. C'est une attaque par **déni de service** : une saturation volontaire d'un serveur par un flot de requêtes. Elle touche la partie **client-serveur** : si les serveurs de connexion et d'annuaire sont saturés, plus personne ne peut se connecter ni trouver ses contacts, donc **plus aucun appel ne peut démarrer**, même si la vidéo, elle, ne passe pas par eux. Le serveur est un **point unique de défaillance**.\n4. En pair-à-pair, le contenu est **réparti** entre les participants : aucun point central ne permet de le faire disparaître, d'où sa **résistance à la censure**. La contrepartie : le **retrait d'un contenu illicite est difficile**, et aucune autorité ne garantit la qualité ; c'est ce qui explique son usage massif pour le partage illégal d'œuvres protégées."
+    },
+    {
+      "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+      "difficulte": 1,
+      "titre": "L'idée de l'hypertexte",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Qu'est-ce que l'**hypertexte** ?\n2. Associe chaque date à son nom et à son apport : **1945**, **1965**, **1989** — Vannevar Bush, Ted Nelson, Tim Berners-Lee.\n3. Cite les **trois inventions fondatrices** du Web et le rôle de chacune.",
+      "bareme": [
+        { "critere": "Texte dont certains mots renvoient à d'autres documents atteignables d'un clic", "points": 5 },
+        { "critere": "1945 Bush et le Memex ; 1965 Nelson invente le mot ; 1989 Berners-Lee au CERN et le Web", "points": 8 },
+        { "critere": "URL (adresse unique), HTTP (demander la ressource), HTML (décrire la page et ses liens)", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'**hypertexte** est un texte dont certains mots **renvoient à d'autres documents**, atteignables d'un **simple clic**. C'est l'idée qui distingue le Web de ce qui existait avant.\n2. **1945** : **Vannevar Bush** imagine le **Memex**, une machine reliant des documents par associations. **1965** : **Ted Nelson** invente le mot **hypertexte**. **1989** : **Tim Berners-Lee**, au CERN, crée un système reliant les documents de laboratoires du monde entier : le **Web**.\n3. L'**URL** donne une **adresse unique** à chaque ressource ; le **HTTP** est le protocole qui permet de la **demander** ; le **HTML** est le langage qui **décrit** la page et ses liens."
+    },
+    {
+      "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+      "difficulte": 2,
+      "titre": "Décortiquer une URL",
+      "consigne": "Découpe l'adresse et justifie avec le cours.",
+      "enonce": "**Document.** Au CDI, Clara ouvre cette adresse :\n\n> https://cdi.lycee-voltaire.fr/livres/recherche.html?auteur=hugo\n\n1. Découpe cette URL : donne le **protocole**, le **nom de domaine**, le **chemin** et les **paramètres**.\n2. Le nom de domaine se lit de droite à gauche. Identifie l'**extension**, le **domaine** et le **sous-domaine**.\n3. À quoi sert, selon toi, le paramètre auteur=hugo dans cette adresse ?\n4. Le cours dit qu'un lien hypertexte est une « adresse exécutable ». Explique la différence avec un renvoi de bas de page dans un livre.",
+      "bareme": [
+        { "critere": "Protocole https, domaine cdi.lycee-voltaire.fr, chemin /livres/recherche.html, paramètres après le ?", "points": 6 },
+        { "critere": "Extension fr, domaine lycee-voltaire, sous-domaine cdi", "points": 5 },
+        { "critere": "Paramètre : donnée transmise à la page (rechercher les livres de l'auteur Hugo)", "points": 4 },
+        { "critere": "Un clic mène directement au document, alors qu'un renvoi oblige le lecteur à aller le chercher", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Protocole** : https. **Nom de domaine** : cdi.lycee-voltaire.fr. **Chemin** : /livres/recherche.html (la page visée). **Paramètres** : auteur=hugo, après le point d'interrogation.\n2. De droite à gauche : l'**extension** est **fr**, le **domaine** est **lycee-voltaire**, le **sous-domaine** est **cdi**.\n3. Les paramètres sont des **données transmises à la page** : ici, on demande à la page de recherche d'afficher les livres dont l'auteur est **Hugo**.\n4. Un renvoi de bas de page indique où se trouve un autre document, mais le lecteur doit aller le chercher lui-même. Un lien hypertexte est une **adresse exécutable** : un simple **clic** suffit pour que le navigateur demande et affiche le document visé. C'est ce qui change tout."
+    },
+    {
+      "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+      "difficulte": 3,
+      "titre": "Le graphe du site du lycée",
+      "consigne": "Utilise le document pour répondre, puis rédige un court paragraphe argumenté.",
+      "enonce": "**Document.** Le site d'un lycée compte cinq pages. Voici leurs liens :\n\n| La page… | …contient des liens vers |\n|---|---|\n| Accueil | Horaires, Cantine, Clubs |\n| Horaires | Accueil |\n| Cantine | Accueil, Horaires |\n| Clubs | Accueil, Horaires |\n| Archives | Clubs |\n\n1. Explique pourquoi l'ensemble de ces pages forme un **graphe**. Que sont les sommets, que sont les liens ?\n2. Compte, pour chaque page, le nombre de liens qui pointent **vers** elle.\n3. D'après le principe du PageRank, quelles pages semblent les plus importantes ? Quelle page ne serait jamais trouvée par un robot qui partirait de l'Accueil ? Pourquoi ?\n4. Explique, en quelques lignes, la phrase : « Sans hypertexte, pas de PageRank. »",
+      "bareme": [
+        { "critere": "Graphe : pages = sommets, liens hypertextes = liaisons orientées entre elles", "points": 4 },
+        { "critere": "Comptage juste : Accueil 3, Horaires 3, Cantine 1, Clubs 2, Archives 0", "points": 5 },
+        { "critere": "Accueil et Horaires les plus importantes ; Archives inaccessible car aucune page ne pointe vers elle", "points": 5 },
+        { "critere": "Le PageRank mesure la popularité par le nombre et la qualité des liens entrants : sans liens, rien à mesurer", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Les pages sont les **sommets** du graphe et les **liens hypertextes** relient ces sommets entre eux (dans un sens donné : de la page qui contient le lien vers la page visée). Le Web entier forme ainsi un immense **graphe** de pages reliées.\n2. Liens entrants : **Accueil : 3** (Horaires, Cantine, Clubs) ; **Horaires : 3** (Accueil, Cantine, Clubs) ; **Cantine : 1** (Accueil) ; **Clubs : 2** (Accueil, Archives) ; **Archives : 0**.\n3. **Accueil** et **Horaires** reçoivent le plus de liens : elles semblent les plus importantes (le PageRank tient aussi compte de la qualité des pages qui pointent). **Archives** ne serait jamais trouvée par un robot parti de l'Accueil : il avance de lien en lien, et **aucune page ne pointe vers Archives**.\n4. Le PageRank mesure la **popularité** d'une page par le **nombre et la qualité des liens qui pointent vers elle**. Cette mesure n'est possible que parce que les pages sont reliées par des liens hypertextes : sans eux, il n'y aurait ni graphe, ni liens entrants à compter, et les robots ne pourraient pas parcourir le Web. D'où la phrase du cours : sans hypertexte, pas de PageRank, et probablement pas de moteur de recherche efficace."
+    },
+    {
+      "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+      "difficulte": 1,
+      "titre": "GPS et pixels",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Comment un récepteur GPS calcule-t-il sa distance à un satellite ? Comment s'appelle cette méthode ?\n2. Combien faut-il de satellites au minimum ? À quoi sert chacun ?\n3. Combien d'octets pèse un pixel codé en RVB ? Combien de couleurs cela permet-il ?\n4. Quelle est la différence entre la **définition** et la **résolution** d'une image ?",
+      "bareme": [
+        { "critere": "Distance par le temps de trajet du signal ; trilatération", "points": 5 },
+        { "critere": "4 satellites : 3 pour la position, 1 de plus pour corriger l'horloge du récepteur", "points": 5 },
+        { "critere": "3 octets, environ 16,7 millions de couleurs", "points": 5 },
+        { "critere": "Définition = nombre total de pixels ; résolution = leur densité en points par pouce", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les satellites émettent en permanence l'**heure exacte** et leur **position**. Le récepteur calcule sa distance à chaque satellite grâce au **temps de trajet du signal**. C'est la **trilatération**.\n2. **4** satellites : **3** pour déterminer la position, **1 de plus** pour **corriger l'horloge du récepteur**.\n3. Un pixel RVB pèse **3 octets** (trois composantes de 0 à 255), soit environ **16,7 millions** de couleurs possibles.\n4. La **définition** est le **nombre total de pixels** de l'image ; la **résolution** est leur **densité**, en points par pouce."
+    },
+    {
+      "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+      "difficulte": 2,
+      "titre": "La photo du jardin d'Emma",
+      "consigne": "Montre tes calculs, puis réponds en justifiant.",
+      "enonce": "**Situation.** Emma prend avec son téléphone une photo de **4 000 × 3 000 pixels**, en couleurs RVB, dans le jardin de sa maison. Elle veut la publier sur un réseau social.\n\n1. Calcule la **définition** de cette image.\n2. Calcule son **poids brut**, en octets, puis en mégaoctets (1 Mo = 1 000 000 octets).\n3. Quelles informations les **métadonnées EXIF** de cette photo peuvent-elles contenir ?\n4. Quel risque Emma prend-elle en publiant cette photo telle quelle ?",
+      "bareme": [
+        { "critere": "Définition : 4 000 × 3 000 = 12 000 000 pixels", "points": 4 },
+        { "critere": "Poids brut : 12 000 000 × 3 = 36 000 000 octets = 36 Mo", "points": 6 },
+        { "critere": "EXIF : date, modèle d'appareil, réglages et souvent position GPS", "points": 5 },
+        { "critere": "Risque : la position GPS révèle l'endroit où elle habite", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Définition : 4 000 × 3 000 = **12 000 000 pixels** (12 millions de pixels).\n2. Chaque pixel RVB pèse 3 octets : 12 000 000 × 3 = **36 000 000 octets**, soit **36 Mo**.\n3. Les **métadonnées EXIF** enregistrent la **date**, le **modèle d'appareil**, les **réglages** et souvent la **position GPS** du lieu de prise de vue.\n4. La photo a été prise dans son jardin : si la position GPS est enregistrée, **publier la photo, c'est publier l'endroit où elle habite**. La plupart des gens l'ignorent, et aucun réseau social ne le rappelle au moment de l'envoi. Emma devrait retirer la position avant de publier."
+    },
+    {
+      "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+      "difficulte": 3,
+      "titre": "Le quatrième satellite",
+      "consigne": "Réponds en montrant ton raisonnement.",
+      "enonce": "**Donnée.** D'après le cours, une erreur d'**un millionième de seconde** sur l'horloge du récepteur fausse la position de **300 mètres**.\n\n1. Explique pourquoi une petite erreur sur le **temps** produit une erreur sur la **distance**.\n2. Quelle erreur de position produirait une erreur de **deux millionièmes** de seconde ? Et de **cinq millionièmes** ?\n3. Le cours dit que le quatrième satellite « n'est pas un supplément de précision ». Explique cette phrase.\n4. Lou utilise **OpenStreetMap** sur son téléphone. Explique ce qu'est cette carte et ce que sont les **couches** d'une carte numérique.\n5. Le GPS du téléphone de Lou émet-il des signaux vers les satellites ? Justifie.",
+      "bareme": [
+        { "critere": "La distance est calculée à partir du temps de trajet : une erreur de temps fausse la distance", "points": 4 },
+        { "critere": "Proportionnalité juste : 600 m et 1 500 m", "points": 4 },
+        { "critere": "Le 4e satellite sert à corriger l'horloge du récepteur ; sans lui, la position serait fausse", "points": 5 },
+        { "critere": "OpenStreetMap carte libre alimentée par des contributeurs ; couches superposées (relief, routes, bâtiments) activées séparément", "points": 4 },
+        { "critere": "Non : les satellites émettent, le récepteur se contente de recevoir et calculer", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Le récepteur calcule sa distance à chaque satellite par le **temps de trajet du signal**. Si son horloge est décalée, il se trompe sur ce temps, donc sur la **distance**, donc sur la position.\n2. L'erreur est proportionnelle : 1 millionième de seconde → 300 m, donc **2 millionièmes → 2 × 300 = 600 m**, et **5 millionièmes → 5 × 300 = 1 500 m**.\n3. Trois satellites suffisent en théorie pour la position, mais seulement si l'horloge du récepteur est exacte. Le **quatrième** sert à **corriger l'horloge du récepteur** : sans lui, une erreur minuscule fausserait la position de centaines de mètres. Il n'améliore pas un résultat déjà bon : il est **indispensable** pour obtenir un résultat juste.\n4. **OpenStreetMap** est une **carte libre**, alimentée par ses **contributeurs**. Les cartes numériques superposent des **couches** (relief, routes, bâtiments) que l'on **active séparément**.\n5. **Non**. Ce sont les satellites qui émettent en permanence l'heure et leur position ; le récepteur se contente de **recevoir** ces signaux et de **calculer** sa position."
+    },
+    {
+      "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+      "difficulte": 1,
+      "titre": "Codes HTTP, HTML et CSS",
+      "consigne": "Réponds à chaque question en une ou deux phrases.",
+      "enonce": "1. Comment fonctionne le protocole **HTTP** ?\n2. Donne la signification des codes de réponse **200**, **301**, **404** et **500**.\n3. Qu'ajoute **HTTPS** ?\n4. Complète la phrase du cours : « HTML dit … ; CSS dit … ».",
+      "bareme": [
+        { "critere": "HTTP fonctionne par requête du client et réponse du serveur", "points": 3 },
+        { "critere": "200 succès, 301 redirection, 404 introuvable, 500 erreur du serveur", "points": 8 },
+        { "critere": "HTTPS : chiffrement TLS et authentification du site par un certificat", "points": 5 },
+        { "critere": "HTML dit ce que sont les choses ; CSS dit à quoi elles ressemblent", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. HTTP fonctionne par **requête** (le navigateur demande une ressource) et **réponse** (le serveur la renvoie, avec un code).\n2. **200** : succès. **301** : redirection. **404** : introuvable. **500** : erreur du serveur.\n3. **HTTPS** ajoute le **chiffrement TLS** : le contenu devient illisible pour un tiers, et l'**identité du site** est authentifiée par un **certificat**.\n4. « HTML dit **ce que sont** les choses ; CSS dit **à quoi elles ressemblent**. »"
+    },
+    {
+      "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+      "difficulte": 2,
+      "titre": "La page du club d'échecs",
+      "consigne": "Lis la situation et réponds en utilisant les balises et notions du cours.",
+      "enonce": "**Situation.** Karim crée la page web du club d'échecs de son lycée. Il veut y mettre : le titre principal « Club d'échecs » ; un paragraphe de présentation ; la liste des trois horaires d'entraînement ; un lien vers le site de la fédération ; la photo du tournoi de l'an dernier.\n\n1. Pour chaque élément, donne la **balise HTML** qui convient.\n2. Karim veut que tous les titres soient bleus et que la page s'adapte aux écrans de téléphone. Quel langage utilise-t-il ? Comment s'appelle une page qui s'adapte à la taille de l'écran ?\n3. Un visiteur clique sur un lien vers une page que Karim a supprimée. Quel code HTTP le serveur renvoie-t-il ?\n4. Pourquoi une page bien structurée est-elle utile aux personnes qui utilisent un **lecteur d'écran** ?",
+      "bareme": [
+        { "critere": "Balises : h1, p, ul et li, a, img", "points": 7 },
+        { "critere": "CSS ; page responsive grâce aux requêtes de média", "points": 5 },
+        { "critere": "Code 404 (introuvable)", "points": 3 },
+        { "critere": "La structure permet au lecteur d'écran de repérer titres, paragraphes, listes ; aussi mieux comprise par les moteurs", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Titre principal : **h1** ; paragraphe : **p** ; liste des horaires : **ul** avec un **li** par horaire ; lien : **a** ; photo : **img**.\n2. Il utilise le **CSS**, qui applique des règles de style (couleur, taille, police, marges, disposition). Adapter l'affichage à la taille de l'écran grâce aux **requêtes de média**, c'est rendre la page **responsive**.\n3. Le serveur renvoie le code **404** : la ressource demandée est **introuvable**.\n4. Une page bien structurée (vrais titres, paragraphes, listes) est **lisible par un lecteur d'écran**, qui peut annoncer les titres et permettre de naviguer de l'un à l'autre. Elle est aussi **mieux comprise par un moteur de recherche**."
+    },
+    {
+      "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+      "difficulte": 3,
+      "titre": "Ce qui se passe à l'affichage",
+      "consigne": "Réponds aux questions en justifiant. La question 3 demande un court paragraphe.",
+      "enonce": "**Document.** Les étapes de l'affichage d'une page, dans le désordre :\n\n| Étape |\n|---|\n| A. Il télécharge feuilles de style, images et scripts. |\n| B. JavaScript modifie la page sans la recharger. |\n| C. Le navigateur télécharge le HTML. |\n| D. Il dessine le résultat. |\n| E. Il construit une représentation de la page. |\n\n1. Remets ces étapes dans l'ordre.\n2. Un site de vente affiche un panier qui se met à jour quand on ajoute un article, sans recharger la page. Quel langage le permet ?\n3. Le cours dit que « mélanger HTML et CSS est la première erreur du débutant ». Explique pourquoi, en t'appuyant sur l'avantage d'une seule feuille de style.\n4. Sur ce site de vente, un client s'apprête à saisir son numéro de carte. Explique ce que HTTPS apporte et pourquoi le certificat compte.",
+      "bareme": [
+        { "critere": "Ordre juste : C, E, A, D, B", "points": 5 },
+        { "critere": "JavaScript rend la page interactive sans rechargement", "points": 3 },
+        { "critere": "Séparer contenu et présentation : une seule feuille habille des milliers de pages, on change le style sans toucher au contenu", "points": 6 },
+        { "critere": "HTTPS : chiffrement TLS, données illisibles pour un tiers ; certificat qui authentifie l'identité du site", "points": 6 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Ordre : **C** (télécharger le HTML), **E** (construire une représentation de la page), **A** (télécharger feuilles de style, images, scripts), **D** (dessiner le résultat), **B** (JavaScript modifie la page sans la recharger).\n2. **JavaScript** : il peut modifier la page **sans la recharger**, c'est ce qui la rend **interactive**.\n3. HTML décrit **ce que sont** les choses (la structure), CSS **à quoi elles ressemblent** (la présentation). Si on mélange les deux, chaque page porte son propre style et il faut les modifier une à une. En les séparant, **une seule feuille de style peut habiller des milliers de pages** : on change toute l'apparence d'un site en modifiant un seul fichier, sans toucher au contenu.\n4. **HTTPS** ajoute le **chiffrement TLS** : le numéro de carte devient **illisible pour un tiers** qui intercepterait les échanges. Le **certificat** **authentifie l'identité du site** : le client a la garantie de parler au vrai site de vente, et pas à un imitateur."
+    },
+    {
+      "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+      "difficulte": 1,
+      "titre": "Ce que fait un navigateur",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Cite, dans l'ordre, les étapes par lesquelles un navigateur affiche une page.\n2. Quelle est la différence entre un cookie **propre au site** et un cookie **tiers** ?\n3. Qu'impose le **RGPD** depuis 2018 pour les cookies non nécessaires ?",
+      "bareme": [
+        { "critere": "Résoudre le DNS, envoyer une requête HTTP, télécharger les ressources, exécuter le JavaScript, dessiner la page", "points": 8 },
+        { "critere": "Propre au site : se souvenir de vous (panier, connexion, préférences) ; tiers : suivre la navigation d'un site à l'autre", "points": 8 },
+        { "critere": "Consentement libre et éclairé", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Le navigateur **résout le DNS** (trouve l'adresse IP du site), **envoie une requête HTTP** (demande la page), **télécharge les ressources** (images, styles, scripts), **exécute le JavaScript** (rend la page interactive), puis **dessine la page**.\n2. Un cookie **propre au site** sert à **se souvenir de vous** : panier, connexion, préférences. Un cookie **tiers**, déposé par une régie publicitaire, sert à **suivre votre navigation d'un site à l'autre**.\n3. Le **RGPD** impose depuis 2018 le **consentement libre et éclairé** de l'utilisateur pour les cookies non nécessaires."
+    },
+    {
+      "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+      "difficulte": 2,
+      "titre": "Un message trop pressé",
+      "consigne": "Analyse le document et réponds en justifiant.",
+      "enonce": "**Document.** Rayan reçoit ce message :\n\n> « Votre compte bancaire sera bloqué dans 24 h. Pour l'éviter, connectez-vous immédiatement ici : http://banque-verif-securite.com et saisissez votre identifiant et votre mot de passe. »\n\n1. De quelle menace s'agit-il ? Quel est son mécanisme ?\n2. Relève deux indices qui doivent alerter Rayan.\n3. Quels **réflexes** Rayan doit-il avoir avant toute saisie de mot de passe ?\n4. Si Rayan s'est déjà fait piéger, quelle protection aurait limité les dégâts, même avec son mot de passe volé ? Explique.",
+      "bareme": [
+        { "critere": "Hameçonnage : imiter un site de confiance pour voler des identifiants", "points": 5 },
+        { "critere": "Deux indices : urgence, adresse qui n'est pas celle de la banque, absence de HTTPS", "points": 5 },
+        { "critere": "Vérifier l'adresse exacte et le cadenas HTTPS avant toute saisie", "points": 5 },
+        { "critere": "Double authentification : le mot de passe seul ne suffit plus", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. C'est du **hameçonnage** : on **imite un site de confiance** (ici une banque) pour **voler des identifiants**.\n2. Indices : l'**urgence** (« bloqué dans 24 h ») qui pousse à agir sans réfléchir ; l'**adresse** banque-verif-securite.com, qui n'est pas celle de la banque ; le lien en **http**, **sans HTTPS** ; la demande de saisir identifiant et mot de passe via un lien reçu.\n3. **Vérifier l'adresse exacte du site** et la présence du **cadenas HTTPS** **avant toute saisie** de mot de passe ; en cas de doute, ne pas cliquer et aller sur le site de la banque par son adresse habituelle.\n4. La **double authentification** : elle ajoute une seconde preuve d'identité. Avec elle, **le mot de passe seul ne suffit plus** à entrer dans le compte. Et des **mots de passe différents** pour chaque site font qu'une fuite n'en compromet qu'un."
+    },
+    {
+      "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+      "difficulte": 3,
+      "titre": "Les habitudes de Lina",
+      "consigne": "Pour chaque habitude, explique le risque puis propose le bon réflexe. Termine par une phrase de conclusion.",
+      "enonce": "**Situation.** Lina décrit ses habitudes :\n\n> A. « J'utilise le même mot de passe court pour tous mes comptes, c'est plus simple. »\n> B. « Je repousse toujours les mises à jour de mon navigateur. »\n> C. « J'ai installé douze extensions, elles sont toutes gratuites. »\n> D. « Quand je veux être anonyme, j'ouvre une fenêtre de navigation privée. »\n> E. « Je consulte mes comptes sur le wifi public non chiffré de la gare. »\n\n1. Analyse chacune des cinq habitudes : quel risque, quel réflexe ?\n2. Explique pourquoi les services en ligne que Lina utilise sont gratuits, selon le cours.",
+      "bareme": [
+        { "critere": "A : une fuite compromet tous les comptes ; mots de passe longs et différents, gestionnaire", "points": 4 },
+        { "critere": "B : failles connues non corrigées ; mettre à jour navigateur et système", "points": 3 },
+        { "critere": "C : chaque extension voit tout ce qu'on fait ; limiter les extensions", "points": 3 },
+        { "critere": "D : la navigation privée n'efface la trace que sur la machine, pas chez le FAI ni le site ; E : échanges exposés sur wifi non chiffré", "points": 6 },
+        { "critere": "Gratuité : l'attention et les données sont le produit (modèle économique)", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **A.** Avec un seul mot de passe court, **une fuite** sur un site **compromet tous les comptes**. Réflexe : des **mots de passe longs et différents**, gérés par un **gestionnaire**, et la **double authentification**.\n**B.** Sans mise à jour, les **failles connues** restent ouvertes. Réflexe : **mettre à jour** navigateur et système, car les mises à jour corrigent ces failles.\n**C.** **Chaque extension voit tout ce que l'on fait** dans le navigateur. Réflexe : **limiter les extensions** au strict nécessaire.\n**D.** La navigation privée **n'efface la trace que sur la machine** : ni chez le **fournisseur d'accès**, ni chez le **site visité**. Elle ne rend pas anonyme.\n**E.** Sur un **wifi public non chiffré**, les **échanges sont exposés**. Réflexe : éviter d'y consulter ses comptes, et vérifier au minimum le **cadenas HTTPS**.\n2. Selon le cours, le service est gratuit parce que **l'attention et les données sont le produit** : ce n'est pas un slogan, c'est un **modèle économique** (les cookies tiers des régies publicitaires en sont l'outil)."
+    },
+    {
+      "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+      "difficulte": 1,
+      "titre": "Les trois étapes d'un moteur",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Un moteur de recherche parcourt-il le Web au moment où tu tapes ta requête ? Explique.\n2. Décris les **trois étapes** du fonctionnement d'un moteur de recherche.\n3. Qu'est-ce qu'un **index inversé** ?\n4. Cite les deux critères de classement vus en cours.",
+      "bareme": [
+        { "critere": "Non : il a déjà tout lu et rangé, il interroge son propre index", "points": 4 },
+        { "critere": "Exploration par des crawlers, indexation, interrogation et classement", "points": 7 },
+        { "critere": "Index inversé : à chaque mot, la liste des pages où il figure", "points": 5 },
+        { "critere": "Pertinence et popularité (liens entrants)", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Non**. Le moteur a **déjà tout lu et tout rangé** : au moment de la requête, il **interroge son propre index**.\n2. **Exploration** : des robots, les **crawlers**, suivent les liens de page en page et téléchargent leur contenu. **Indexation** : chaque page est analysée et rangée dans un **index inversé**. **Interrogation** : à la requête, le moteur consulte l'index et **classe** les résultats.\n3. Un **index inversé** associe **à chaque mot la liste des pages où il figure**.\n4. La **pertinence** (les mots de la requête figurent-ils dans la page, le titre, les liens ?) et la **popularité** (le nombre et la qualité des liens entrants)."
+    },
+    {
+      "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+      "difficulte": 2,
+      "titre": "Construire un index inversé",
+      "consigne": "Construis l'index à partir du document, puis réponds aux questions.",
+      "enonce": "**Document.** Trois pages, réduites à leurs mots-clés :\n\n| Page | Mots-clés |\n|---|---|\n| P1 | volcan, éruption, Islande |\n| P2 | volcan, Auvergne, randonnée |\n| P3 | randonnée, Islande, glacier |\n\n1. Construis l'**index inversé** de ces trois pages (un mot par ligne, avec la liste des pages).\n2. Quelles pages contiennent le mot « randonnée » ?\n3. Un utilisateur cherche les pages qui contiennent **à la fois** « volcan » et « Islande ». Lesquelles l'index donne-t-il ? Explique comment tu les trouves.\n4. Pourquoi cette organisation permet-elle de répondre très vite, sans relire toutes les pages ?",
+      "bareme": [
+        { "critere": "Index juste : volcan P1 P2, éruption P1, Islande P1 P3, Auvergne P2, randonnée P2 P3, glacier P3", "points": 7 },
+        { "critere": "randonnée : P2 et P3", "points": 3 },
+        { "critere": "volcan (P1, P2) et Islande (P1, P3) : pages communes, soit P1", "points": 5 },
+        { "critere": "On lit directement la ligne du mot dans l'index déjà construit, au lieu de parcourir les pages", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Index inversé :\n\n| Mot | Pages |\n|---|---|\n| volcan | P1, P2 |\n| éruption | P1 |\n| Islande | P1, P3 |\n| Auvergne | P2 |\n| randonnée | P2, P3 |\n| glacier | P3 |\n\n2. « randonnée » : **P2 et P3**.\n3. On lit la ligne de « volcan » (P1, P2) et celle d'« Islande » (P1, P3), puis on garde les pages présentes dans les deux listes : **P1**.\n4. L'index a été construit **à l'avance**, lors de l'indexation. À la requête, le moteur **lit directement la ligne de chaque mot** au lieu de relire toutes les pages : il n'interroge que son propre index. Il ne reste ensuite qu'à **classer** les pages trouvées."
+    },
+    {
+      "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+      "difficulte": 3,
+      "titre": "Deux élèves, deux pages de résultats",
+      "consigne": "Réponds en argumentant avec le cours ; la question 3 demande une méthode détaillée.",
+      "enonce": "**Situation.** Pour un exposé, Anaïs et Paul tapent exactement la même requête sur le même moteur, chacun sur son téléphone. Ils n'obtiennent pas la même page de résultats. Paul dit : « Je prends le premier lien, c'est forcément le plus fiable. »\n\n1. Explique pourquoi Anaïs et Paul n'obtiennent pas les mêmes résultats. Cite au moins deux facteurs.\n2. Discute l'affirmation de Paul.\n3. Anaïs cherche la phrase exacte d'un discours, uniquement sur le site d'un musée, publiée ces derniers mois. Indique les **techniques** qu'elle doit utiliser.\n4. Avant de citer une information dans l'exposé, que doivent-ils vérifier ?",
+      "bareme": [
+        { "critere": "Facteurs : personnalisation (historique, localisation), liens sponsorisés, référencement", "points": 5 },
+        { "critere": "Premier résultat = le mieux classé par un algorithme aux critères privés, pas la vérité", "points": 5 },
+        { "critere": "Guillemets pour l'expression exacte, restriction au site, filtre par date, mots précis", "points": 5 },
+        { "critere": "Recouper : auteur, date, source, et croiser avec une autre origine", "points": 5 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Les résultats sont **personnalisés** selon l'**historique** et la **localisation** de chacun. S'y ajoutent les **liens sponsorisés** (signalés comme publicité) et le **référencement**, c'est-à-dire l'optimisation faite par les sites eux-mêmes. Deux personnes tapant la même requête n'obtiennent donc pas nécessairement la même page.\n2. Paul a tort : **le premier résultat n'est pas la vérité**, c'est la réponse **la mieux classée par un algorithme dont les critères sont privés** (pertinence, popularité, personnalisation), et ce peut même être un lien sponsorisé. Être bien classé ne prouve pas être fiable.\n3. Anaïs doit mettre la phrase **entre guillemets** (expression exacte), **restreindre la recherche au site** du musée, utiliser le **filtre par date** pour l'information récente, et choisir des **mots précis** pour réduire le bruit.\n4. Ils doivent **recouper** : vérifier l'**auteur**, la **date**, la **source**, et **croiser avec une autre origine** avant de citer."
+    },
+    {
+      "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+      "difficulte": 1,
+      "titre": "Du Web lu au Web écrit",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Qu'est-ce que le **web 2.0** ? À partir de quand apparaît-il ?\n2. Cite trois services du web 2.0 et ce que chacun permet.\n3. Qu'est-ce qui change vraiment avec le web 2.0 : la technique ou autre chose ?\n4. Qu'est-ce que le **contenu généré par les utilisateurs** ?",
+      "bareme": [
+        { "critere": "Un Web où chacun publie sans savoir programmer, à partir des années 2000", "points": 5 },
+        { "critere": "Trois services justes avec leur usage (blogs, wikis, réseaux sociaux, avis, cartes collaboratives)", "points": 6 },
+        { "critere": "Les techniques existaient ; ce qui change, c'est l'interface", "points": 4 },
+        { "critere": "Contenu publié par les internautes eux-mêmes, devenu majoritaire", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Le **web 2.0** est un Web où **chacun peut publier sans savoir programmer** : le premier Web se lisait, celui-ci s'écrit. Il apparaît à partir des **années 2000**.\n2. Par exemple : les **blogs** et forums (publier un texte sans savoir coder) ; les **wikis** (écrire à plusieurs sur la même page) ; les **réseaux sociaux** et plateformes vidéo (diffuser à un large public) ; les commentaires, avis, cartes collaboratives (enrichir le contenu des autres).\n3. Les **techniques existaient déjà** : ce qui change, c'est l'**interface**, qui rend la publication accessible à tous.\n4. C'est le contenu **publié par les internautes eux-mêmes** ; il devient **majoritaire** sur le Web."
+    },
+    {
+      "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+      "difficulte": 2,
+      "titre": "Pourquoi Zoé ne change pas d'appli",
+      "consigne": "Lis la situation et explique-la avec les notions du cours.",
+      "enonce": "**Situation.** Zoé utilise la messagerie **Kiwi**, où se trouvent ses 50 amis. Une nouvelle application, **Pomme**, est plus rapide et plus respectueuse de la vie privée, mais aucun de ses amis n'y est inscrit.\n\n1. Pourquoi Zoé a-t-elle du mal à quitter Kiwi, alors que Pomme est meilleure ? Utilise la notion d'**effet de réseau**.\n2. Qu'est-ce que le **coût de sortie** ? Quelle conséquence a-t-il sur le marché des plateformes ?\n3. Le cours dit que c'est « un mécanisme économique, pas seulement technique ». Explique à partir de la situation de Zoé.",
+      "bareme": [
+        { "critere": "Effet de réseau : la valeur de Kiwi croît avec le nombre d'utilisateurs ; ses amis y sont, pas sur Pomme", "points": 7 },
+        { "critere": "Coût de sortie : ce qu'on perd en partant ; il favorise la concentration en quelques très grands acteurs", "points": 7 },
+        { "critere": "Ce n'est pas la qualité technique qui décide mais le nombre d'utilisateurs, d'où un mécanisme économique", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Kiwi bénéficie d'un **effet de réseau** : **sa valeur croît avec le nombre de ses utilisateurs**. Pour Zoé, Kiwi vaut beaucoup parce que ses 50 amis y sont ; Pomme, même meilleure techniquement, ne lui permet de parler à personne.\n2. Le **coût de sortie** est ce que l'on perd en quittant le service : ici, le contact avec ses amis. **Plus il y a de monde, plus il est coûteux de partir.** Ce coût favorise la **concentration** du marché en **quelques très grands acteurs** : les utilisateurs restent là où sont déjà les autres.\n3. Ce qui décide du choix de Zoé n'est pas la qualité technique (Pomme est meilleure) mais le **nombre d'utilisateurs** déjà présents. C'est un **mécanisme économique** : la position de Kiwi se renforce d'elle-même, parce qu'elle est déjà la plus grande."
+    },
+    {
+      "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+      "difficulte": 3,
+      "titre": "L'intelligence collective a-t-elle des limites ?",
+      "consigne": "Réponds à chaque question, puis rédige une conclusion argumentée de quelques lignes.",
+      "enonce": "**Document.**\n\n> « Une encyclopédie écrite par des inconnus a fini par battre celles écrites par des spécialistes payés. Personne ne l'avait prévu. » (extrait du cours)\n\n1. De quelle encyclopédie s'agit-il ? Cite deux autres exemples réussis d'intelligence collective.\n2. Pour chacun des trois exemples, donne sa **condition de réussite**.\n3. Que produit la contribution ouverte **sans** ces règles ?\n4. Sami publie ses dessins sur une plateforme. Quelles licences lui permettent d'autoriser certains usages de ses œuvres ? Que devient ce qu'il publie, selon le cours ?\n5. Conclus : la contribution ouverte suffit-elle à garantir la qualité ?",
+      "bareme": [
+        { "critere": "Wikipédia ; OpenStreetMap et les logiciels libres", "points": 4 },
+        { "critere": "Conditions : règles, vérification, contributeurs réguliers ; communauté qui corrige ; gouvernance du projet", "points": 5 },
+        { "critere": "Sans règles : vandalisme, désinformation, harcèlement", "points": 3 },
+        { "critere": "Licences Creative Commons ; publications = traces et source de données monétisées", "points": 4 },
+        { "critere": "Conclusion argumentée : non, la qualité dépend des règles et de la communauté", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Il s'agit de **Wikipédia**. Autres exemples : **OpenStreetMap** et les **logiciels libres**.\n2. **Wikipédia** : des **règles**, une **vérification**, des **contributeurs réguliers**. **OpenStreetMap** : une **communauté qui corrige**. **Logiciels libres** : une **gouvernance** du projet.\n3. Sans ces règles, la contribution ouverte produit **vandalisme**, **désinformation** et **harcèlement**.\n4. Les licences **Creative Commons** permettent à un auteur d'autoriser certains usages de son œuvre. Ce que Sami publie laisse des **traces**, pose la question de ses **données personnelles**, et fait de lui **une source de données monétisées** : le contributeur n'est jamais seulement un lecteur.\n5. **Non** : la contribution ouverte peut produire une œuvre remarquable, comme Wikipédia, mais seulement quand elle est encadrée par des **règles**, une **vérification** et une **communauté** qui corrige. Le nombre de contributeurs ne suffit pas ; c'est l'organisation qui fait la qualité."
+    }
+  ]
+}

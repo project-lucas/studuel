@@ -1,0 +1,437 @@
+{
+  "id": "physique-chimie-2023-metropole-j1",
+  "matiere": "physique-chimie",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2023,
+  "centre": "Métropole",
+  "jour": 1,
+  "code": "23-PYCJ1ME1",
+  "titre": "Bac 2023 — Physique-chimie",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous à traiter (11 + 5 + 4 points). L'annexe de l'exercice 1 est à rendre avec la copie.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "À la découverte de Saturne : la lunette de Huygens, la diffraction et le mouvement de Titan.",
+      "points": 11,
+      "minutes": 115,
+      "enBref": [
+        "Une lunette afocale : le foyer image de l'objectif est confondu avec le foyer objet de l'oculaire, et on vérifie que $f'_1 + f'_2 = 336 \\text{ cm}$ correspond bien à la longueur utile du tube.",
+        "Le grossissement vaut $G = \\frac{\\theta'}{\\theta} = \\frac{f'_1}{f'_2} \\approx 47$ : l'espace entre Saturne et son anneau, vu sous $2{,}2 \\times 10^{-5} \\text{ rad}$ à l'œil nu, est vu sous $1{,}0 \\times 10^{-3} \\text{ rad}$ dans la lunette, au-dessus du pouvoir séparateur de l'œil.",
+        "La diffraction limite la lunette : $\\theta_{\\text{diff}} = 1{,}22\\,\\lambda / a$ vaut $2{,}3 \\times 10^{-5} \\text{ rad}$ pour Galilée (trop grand) et $1{,}3 \\times 10^{-5} \\text{ rad}$ pour Huygens (assez petit).",
+        "Pour Titan, la deuxième loi de Newton donne un mouvement circulaire uniforme de vitesse $v = \\sqrt{G M_S / R}$ et une période de $1{,}38 \\times 10^{6} \\text{ s}$, soit environ 15,9 jours, en accord avec la mesure de Huygens."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "1. Observation de Saturne par Huygens" },
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Préciser le sens du terme « afocal ».",
+          "blocs": [
+            { "type": "texte", "texte": "Un système optique est **afocal** quand il n'a pas de foyer : l'image d'un objet situé à l'infini est elle-même rejetée à l'infini. Un faisceau de rayons parallèles qui entre dans la lunette en ressort parallèle." },
+            { "type": "texte", "texte": "Pour une lunette formée de deux lentilles, cela impose que le **foyer image $F'_1$ de l'objectif soit confondu avec le foyer objet $F_2$ de l'oculaire**." },
+            { "type": "reponse", "texte": "Afocal : un objet à l'infini donne une image à l'infini ; ici $F'_1 = F_2$." },
+            { "type": "astuce", "texte": "L'intérêt pour l'observateur : l'image finale étant à l'infini, son œil observe sans accommoder, donc sans fatigue." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Placer les foyers $F_2$ et $F'_2$ de l'oculaire sur la figure A1.",
+          "blocs": [
+            { "type": "texte", "texte": "La lunette étant afocale, le **foyer objet $F_2$ est placé exactement sur $F'_1$**, déjà marqué sur l'annexe (à gauche de $O_2$)." },
+            { "type": "texte", "texte": "Le **foyer image $F'_2$** est le symétrique de $F_2$ par rapport au centre optique $O_2$ : on le place à droite de $O_2$, à la même distance $O_2F'_2 = F_2O_2 = f'_2$." },
+            { "type": "reponse", "texte": "$F_2$ confondu avec $F'_1$ ; $F'_2$ symétrique de $F_2$ par rapport à $O_2$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Construire la marche des deux rayons issus de B et l'image intermédiaire $A_1B_1$.",
+          "blocs": [
+            { "type": "liste", "ordonnee": true, "items": [
+              "**Image intermédiaire.** B est à l'infini : son image $B_1$ par l'objectif est dans le plan focal image de $L_1$. Le rayon qui passe par $O_1$ n'est pas dévié ; on le prolonge jusqu'au plan vertical passant par $F'_1$ : l'intersection est $B_1$. $A$ étant sur l'axe, $A_1$ est en $F'_1$. On trace $A_1B_1$ (sous l'axe).",
+              "**Second rayon.** Il est parallèle au premier : après $L_1$, il converge lui aussi vers $B_1$.",
+              "**Traversée de l'oculaire.** $B_1$ est dans le plan focal objet de $L_2$ (car $F_2 = F'_1$). Les rayons issus d'un même point du plan focal objet ressortent **parallèles entre eux**, parallèles au rayon $B_1O_2$ qui, lui, n'est pas dévié. On trace donc la droite $B_1O_2$ (en pointillés si besoin), puis les deux rayons émergents parallèles à elle."
+            ] },
+            { "type": "reponse", "texte": "$A_1B_1$ est dans le plan focal commun ($A_1 = F'_1 = F_2$) ; les deux rayons émergent de $L_2$ parallèles à la droite $(B_1O_2)$." },
+            { "type": "piege", "texte": "Ne fais pas converger les rayons après l'oculaire : l'image finale est à l'infini, les rayons émergents doivent être rigoureusement parallèles entre eux." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Vérifier que la lunette de Huygens peut être considérée comme afocale.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour une lunette afocale, $F'_1 = F_2$, donc la distance entre les deux lentilles vaut :" },
+            { "type": "formule", "tex": "O_1O_2 = f'_1 + f'_2 = 329 + 7{,}0 = 336 \\text{ cm}" },
+            { "type": "texte", "texte": "D'après la figure 4, l'oculaire est à une extrémité du tube et l'objectif est enfoncé de $\\ell = 36 \\text{ cm}$ à l'autre extrémité :" },
+            { "type": "formule", "tex": "O_1O_2 = L - \\ell = 372 - 36 = 336 \\text{ cm}" },
+            { "type": "reponse", "texte": "Les deux distances sont égales (336 cm) : la lunette de Huygens est bien afocale." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Placer l'angle $\\theta'$ sur la figure A1.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\theta'$ est l'angle sous lequel l'observateur voit l'image finale $A'B'$ : c'est l'angle entre l'axe optique (direction de $A'$) et les rayons émergents issus de B (direction de $B'$)." },
+            { "type": "reponse", "texte": "On marque $\\theta'$ en $O_2$, entre l'axe optique et la droite $(B_1O_2)$ prolongée vers la droite, parallèle aux rayons émergents." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "Expression du grossissement $G_{\\text{Huy}}$ en fonction de $\\theta$ et $\\theta'$.",
+          "blocs": [
+            { "type": "texte", "texte": "Le grossissement compare l'angle sous lequel on voit l'objet à travers l'instrument à l'angle sous lequel on le voit à l'œil nu." },
+            { "type": "reponse", "texte": "$G_{\\text{Huy}} = \\dfrac{\\theta'}{\\theta}$ (sans unité)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q7",
+          "intitule": "Montrer que $G_{\\text{Huy}} = \\frac{f'_1}{f'_2}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Dans le triangle $O_1A_1B_1$**, rectangle en $A_1$ (avec $A_1 = F'_1$) : l'angle en $O_1$ est $\\theta$, car le rayon passant par $O_1$ n'est pas dévié." },
+            { "type": "formule", "tex": "\\tan\\theta = \\frac{A_1B_1}{O_1F'_1} = \\frac{A_1B_1}{f'_1} \\quad\\Rightarrow\\quad \\theta \\approx \\frac{A_1B_1}{f'_1}" },
+            { "type": "texte", "texte": "**Dans le triangle $O_2A_1B_1$**, rectangle en $A_1$ (avec $A_1 = F_2$) : l'angle en $O_2$ est $\\theta'$." },
+            { "type": "formule", "tex": "\\tan\\theta' = \\frac{A_1B_1}{F_2O_2} = \\frac{A_1B_1}{f'_2} \\quad\\Rightarrow\\quad \\theta' \\approx \\frac{A_1B_1}{f'_2}" },
+            { "type": "texte", "texte": "On utilise l'approximation des petits angles ($\\tan\\theta \\approx \\theta$), puis on fait le rapport :" },
+            { "type": "formule", "tex": "G_{\\text{Huy}} = \\frac{\\theta'}{\\theta} = \\frac{A_1B_1 / f'_2}{A_1B_1 / f'_1} = \\frac{f'_1}{f'_2}" },
+            { "type": "reponse", "texte": "$G_{\\text{Huy}} = \\dfrac{f'_1}{f'_2}$" },
+            { "type": "attendu", "texte": "Les deux triangles rectangles nommés, l'approximation des petits angles citée, et la simplification par $A_1B_1$ : c'est ce qui rapporte les points, pas seulement le résultat." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q8",
+          "intitule": "Calculer $G_{\\text{Huy}}$.",
+          "blocs": [
+            { "type": "formule", "tex": "G_{\\text{Huy}} = \\frac{329 \\text{ cm}}{7{,}0 \\text{ cm}} = 47" },
+            { "type": "reponse", "texte": "$G_{\\text{Huy}} = 47$, plus de trois fois le grossissement de la lunette de Galilée ($G_{\\text{Gal}} = 14$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q9",
+          "intitule": "Huygens pouvait-il distinguer la surface de Saturne de son premier anneau ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Angle à l'œil nu** (figure 5, petits angles) :" },
+            { "type": "formule", "tex": "\\theta = \\frac{D_{A\\text{-}B}}{D_{T\\text{-}S}} = \\frac{3{,}17 \\times 10^{4} \\text{ km}}{1{,}42 \\times 10^{9} \\text{ km}} = 2{,}23 \\times 10^{-5} \\text{ rad}" },
+            { "type": "texte", "texte": "C'est bien inférieur à $3{,}0 \\times 10^{-4} \\text{ rad}$ : à l'œil nu, impossible de séparer l'anneau de la planète." },
+            { "type": "texte", "texte": "**Angle à travers la lunette** :" },
+            { "type": "formule", "tex": "\\theta' = G_{\\text{Huy}} \\times \\theta = 47 \\times 2{,}23 \\times 10^{-5} = 1{,}0 \\times 10^{-3} \\text{ rad}" },
+            { "type": "reponse", "texte": "$\\theta' = 1{,}0 \\times 10^{-3} \\text{ rad} > 3{,}0 \\times 10^{-4} \\text{ rad}$ : avec sa lunette, Huygens pouvait distinguer l'anneau de la surface de Saturne." },
+            { "type": "piege", "texte": "Garde les deux distances dans la même unité (ici le km) avant de faire le rapport : un angle en radians est un rapport de longueurs, sans unité." }
+          ]
+        },
+        { "type": "titre", "texte": "2. Prise en compte de la diffraction" },
+        {
+          "type": "question",
+          "numero": "Q10",
+          "intitule": "Expliquer quantitativement pourquoi la diffraction a empêché Galilée d'observer les anneaux, contrairement à Huygens.",
+          "blocs": [
+            { "type": "texte", "texte": "**La démarche.** Deux points ne sont séparés par la lunette que si leur écart angulaire $\\theta$ vu depuis la Terre vérifie $\\theta \\geq \\theta_{\\text{diff}}$. On a déjà $\\theta = 2{,}23 \\times 10^{-5} \\text{ rad}$ (Q9). On calcule $\\theta_{\\text{diff}} = 1{,}22\\,\\lambda / a$ pour chaque lunette, avec $\\lambda = 550 \\text{ nm}$." },
+            { "type": "texte", "texte": "**Lunette de Galilée** ($a = 29{,}0 \\text{ mm}$) :" },
+            { "type": "formule", "tex": "\\theta_{\\text{diff,Gal}} = 1{,}22 \\times \\frac{550 \\times 10^{-9} \\text{ m}}{29{,}0 \\times 10^{-3} \\text{ m}} = 2{,}31 \\times 10^{-5} \\text{ rad}" },
+            { "type": "texte", "texte": "**Lunette de Huygens** ($a = 51{,}0 \\text{ mm}$) :" },
+            { "type": "formule", "tex": "\\theta_{\\text{diff,Huy}} = 1{,}22 \\times \\frac{550 \\times 10^{-9} \\text{ m}}{51{,}0 \\times 10^{-3} \\text{ m}} = 1{,}32 \\times 10^{-5} \\text{ rad}" },
+            { "type": "tableau", "entetes": ["Lunette", "$\\theta_{\\text{diff}}$ (rad)", "$\\theta$ (rad)", "Conclusion"], "lignes": [
+              ["Galilée", "$2{,}31 \\times 10^{-5}$", "$2{,}23 \\times 10^{-5}$", "$\\theta < \\theta_{\\text{diff}}$ : taches d'Airy superposées"],
+              ["Huygens", "$1{,}32 \\times 10^{-5}$", "$2{,}23 \\times 10^{-5}$", "$\\theta > \\theta_{\\text{diff}}$ : points séparés"]
+            ] },
+            { "type": "texte", "texte": "Pour Galilée, l'objectif trop étroit produit des taches de diffraction trop larges : la tache de la planète et celle du bord de l'anneau se recouvrent, et aucun grossissement ne peut séparer ce que l'objectif a déjà mélangé. C'est cohérent avec son dessin (figure 1) : deux « oreilles » collées à la planète. L'objectif de Huygens, presque deux fois plus large, diffracte moins." },
+            { "type": "reponse", "texte": "Galilée : $\\theta = 2{,}23 \\times 10^{-5} \\text{ rad} < \\theta_{\\text{diff}} = 2{,}31 \\times 10^{-5} \\text{ rad}$, anneau non résolu. Huygens : $\\theta > \\theta_{\\text{diff}} = 1{,}32 \\times 10^{-5} \\text{ rad}$, anneau résolu." },
+            { "type": "astuce", "texte": "Dans une question « à prise d'initiative », annonce d'abord le critère (ici $\\theta \\geq \\theta_{\\text{diff}}$), fais les calculs, puis conclus en revenant à la question posée. Un tableau de comparaison rend la conclusion lisible en un coup d'œil." },
+            { "type": "texte", "texte": "Remarque utile : même sans diffraction, la lunette de Galilée ne donnait que $\\theta' = 14 \\times 2{,}23 \\times 10^{-5} = 3{,}1 \\times 10^{-4} \\text{ rad}$, à peine au seuil de l'œil. Mais c'est bien la diffraction, limite physique de l'objectif, qui interdisait de voir l'anneau." }
+          ]
+        },
+        { "type": "titre", "texte": "3. Découverte de Titan par Huygens" },
+        {
+          "type": "question",
+          "numero": "Q11",
+          "intitule": "Justifier le choix de diviser la trajectoire de Titan en 16 parties.",
+          "blocs": [
+            { "type": "texte", "texte": "Huygens retrouve Titan à la même position à 16 jours d'intervalle : du 25 mars au 10 avril (6 jours restants en mars + 10 en avril = 16 jours), du 3 au 19 avril, du 13 au 29 avril. La période de révolution est donc proche de **16 jours**." },
+            { "type": "texte", "texte": "En divisant l'orbite en 16 parties, chaque division correspond à **environ un jour** : c'est ce qu'il vérifie avec le 25 mars près du 12, le 26 près du 13, le 27 près du 14." },
+            { "type": "reponse", "texte": "La période observée est d'environ 16 jours : 16 divisions = une division par jour d'observation." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q12",
+          "intitule": "Expression vectorielle de la force gravitationnelle exercée par Saturne sur Titan.",
+          "blocs": [
+            { "type": "texte", "texte": "D'après la **loi de la gravitation universelle de Newton**, la force est attractive, dirigée de Titan vers le centre S de Saturne, c'est-à-dire selon $\\vec{u}_n$ (figure 7)." },
+            { "type": "formule", "tex": "\\vec{F}_{S/T} = G\\,\\frac{M_S\\,M_T}{R^2}\\,\\vec{u}_n" },
+            { "type": "reponse", "texte": "$\\vec{F}_{S/T} = \\dfrac{G\\,M_S\\,M_T}{R^2}\\,\\vec{u}_n$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q13",
+          "intitule": "Montrer que le mouvement circulaire est uniforme et que $v = \\sqrt{\\frac{G M_S}{R}}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Système** : Titan ; **référentiel** saturnocentrique supposé galiléen ; seule force : $\\vec{F}_{S/T}$. La **deuxième loi de Newton** donne :" },
+            { "type": "formule", "tex": "M_T\\,\\vec{a} = \\vec{F}_{S/T} \\quad\\Rightarrow\\quad \\vec{a} = \\frac{G\\,M_S}{R^2}\\,\\vec{u}_n" },
+            { "type": "texte", "texte": "Dans le repère de Frenet, pour un mouvement circulaire : $\\vec{a} = \\frac{dv}{dt}\\,\\vec{u}_t + \\frac{v^2}{R}\\,\\vec{u}_n$. On identifie composante par composante." },
+            { "type": "liste", "items": [
+              "Selon $\\vec{u}_t$ : $\\frac{dv}{dt} = 0$, donc $v$ est constante : le mouvement est **uniforme**.",
+              "Selon $\\vec{u}_n$ : $\\frac{v^2}{R} = \\frac{G\\,M_S}{R^2}$, donc $v^2 = \\frac{G\\,M_S}{R}$."
+            ] },
+            { "type": "reponse", "texte": "Mouvement circulaire uniforme, avec $v = \\sqrt{\\dfrac{G\\,M_S}{R}}$, indépendante de la masse de Titan." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q14",
+          "intitule": "Expression et valeur de la période $T_{\\text{Kep}}$ de Titan. Commenter.",
+          "blocs": [
+            { "type": "texte", "texte": "En un tour, Titan parcourt la circonférence $2\\pi R$ à vitesse constante :" },
+            { "type": "formule", "tex": "T_{\\text{Kep}} = \\frac{2\\pi R}{v} = 2\\pi\\sqrt{\\frac{R^3}{G\\,M_S}}" },
+            { "type": "texte", "texte": "Application numérique avec $R = 1{,}22 \\times 10^{9} \\text{ m}$ (attention : la donnée est en km) :" },
+            { "type": "formule", "tex": "T_{\\text{Kep}} = 2\\pi\\sqrt{\\frac{(1{,}22 \\times 10^{9})^3}{6{,}67 \\times 10^{-11} \\times 5{,}68 \\times 10^{26}}} = 1{,}38 \\times 10^{6} \\text{ s}" },
+            { "type": "texte", "texte": "Soit $\\frac{1{,}38 \\times 10^{6}}{86\\,400} \\approx 15{,}9 \\text{ jours}$, environ 15 jours et 22 heures. Huygens donne 15 j 23 h 13 min, soit $1{,}380 \\times 10^{6} \\text{ s}$ ou 15,97 jours." },
+            { "type": "formule", "tex": "\\frac{|T_{\\text{Kep}} - T_{\\text{Huy}}|}{T_{\\text{Huy}}} \\approx 0{,}3\\ \\%" },
+            { "type": "reponse", "texte": "$T_{\\text{Kep}} = 2\\pi\\sqrt{R^3/(G M_S)} = 1{,}38 \\times 10^{6} \\text{ s} \\approx 15{,}9 \\text{ jours}$ : écart d'environ 0,3 % avec la valeur de Huygens, remarquable pour des observations à la lunette en 1655." },
+            { "type": "piege", "texte": "L'erreur la plus fréquente : laisser $R$ en km. Avec $R$ en km, on trouve une période $10^{4{,}5}$ fois trop petite, sans même s'en apercevoir si on ne la convertit pas en jours." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Synthèse de l'arôme de banane : l'éthanoate de 3-méthylbutyle, trois protocoles comparés.",
+      "points": 5,
+      "minutes": 55,
+      "enBref": [
+        "L'alcool (3-méthylbutan-1-ol) et l'acide carboxylique (acide éthanoïque) donnent un ester et de l'eau : c'est une estérification.",
+        "En infrarouge, l'acide se reconnaît à sa large bande O–H ; l'ester n'en a pas et garde une bande C=O fine vers 1 740 cm⁻¹.",
+        "Dans le protocole A, l'alcool est le réactif limitant (0,202 mol contre 0,263 mol) et le rendement vaut 75 %.",
+        "Le micro-ondes (B) consomme 17 fois moins d'énergie, donne le meilleur rendement et se passe de cyclohexane : c'est le protocole le plus conforme à la chimie verte."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "1. Identification des espèces mises en jeu" },
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Formules topologiques des réactifs et de l'ester ; groupes caractéristiques et familles.",
+          "blocs": [
+            { "type": "texte", "texte": "En formule topologique, on ne dessine ni les C ni les H liés aux C : chaque sommet ou extrémité de segment est un carbone. On écrit en revanche O et H du groupe OH." },
+            { "type": "tableau", "entetes": ["Espèce", "Comment la dessiner", "Groupe à entourer", "Famille"], "lignes": [
+              ["3-méthylbutan-1-ol", "Chaîne en zigzag de 4 carbones, une ramification sur le 3e carbone, OH au bout de la chaîne (carbone 1)", "–OH (hydroxyle)", "Alcool"],
+              ["Acide éthanoïque", "Un segment (CH₃–C), sur le second carbone un double trait vers O et un simple trait vers OH", "–COOH (carboxyle)", "Acide carboxylique"],
+              ["Éthanoate de 3-méthylbutyle", "Le motif C(=O)–O de l'acide, relié par l'O à la chaîne ramifiée de l'alcool", "–COO– (ester)", "Ester"]
+            ] },
+            { "type": "reponse", "texte": "Alcool (hydroxyle), acide carboxylique (carboxyle), ester (groupe ester $-\\mathrm{COO}-$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Justifier que le produit P est de l'eau.",
+          "blocs": [
+            { "type": "texte", "texte": "On applique la **conservation des éléments** (et des charges) dans l'équation. Formules brutes :" },
+            { "type": "liste", "items": [
+              "3-méthylbutan-1-ol : $\\mathrm{C_5H_{12}O}$ ; acide éthanoïque : $\\mathrm{C_2H_4O_2}$. Total des réactifs : $\\mathrm{C_7H_{16}O_3}$.",
+              "Éthanoate de 3-méthylbutyle : $\\mathrm{C_7H_{14}O_2}$."
+            ] },
+            { "type": "texte", "texte": "Il manque côté produits 2 H et 1 O, et aucune charge : P a pour formule $\\mathrm{H_2O}$." },
+            { "type": "reponse", "texte": "$\\mathrm{C_7H_{16}O_3} - \\mathrm{C_7H_{14}O_2} = \\mathrm{H_2O}$ : P est l'eau." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Attribuer les spectres A et B à l'acide éthanoïque et à l'ester.",
+          "blocs": [
+            { "type": "texte", "texte": "La différence décisive entre les deux molécules : l'acide possède une liaison O–H, l'ester n'en a pas. Les deux ont une liaison C=O." },
+            { "type": "liste", "items": [
+              "**Spectre A** : très large bande forte entre 2 500 et 3 300 cm⁻¹ (O–H d'un acide carboxylique, élargie et décalée vers les bas nombres d'onde par les liaisons hydrogène), et bande forte et fine vers 1 710 cm⁻¹ (C=O). C'est l'**acide éthanoïque**.",
+              "**Spectre B** : aucune bande large au-dessus de 3 000 cm⁻¹, donc pas de O–H ; bandes C–H fortes vers 2 950 cm⁻¹ et bande C=O forte et fine vers 1 740 cm⁻¹. C'est l'**éthanoate de 3-méthylbutyle**."
+            ] },
+            { "type": "reponse", "texte": "Spectre A : acide éthanoïque (bande O–H large + C=O). Spectre B : ester (C=O sans bande O–H)." },
+            { "type": "piege", "texte": "La table donne O–H entre 3 200 et 3 700 cm⁻¹ : c'est la valeur d'un alcool. Pour un acide carboxylique, la bande O–H est beaucoup plus large et descend jusqu'à 2 500 cm⁻¹. Ne conclus pas « pas de O–H » parce que le creux commence sous 3 200 cm⁻¹." }
+          ]
+        },
+        { "type": "titre", "texte": "2. Comparaison de protocoles de synthèse" },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Nommer les étapes 2 et 3 du protocole A.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "**Étape 2** : la **transformation** (la synthèse proprement dite), réalisée par chauffage à reflux.",
+              "**Étape 3** : l'**isolement** du produit : lavages (extraction liquide-liquide des impuretés solubles dans l'eau) puis séchage de la phase organique."
+            ] },
+            { "type": "reponse", "texte": "Étape 2 : transformation (chauffage à reflux). Étape 3 : isolement (lavage et séchage)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Sens du mot catalyseur.",
+          "blocs": [
+            { "type": "reponse", "texte": "Un catalyseur est une espèce chimique qui **accélère** une transformation sans en modifier l'état final ; il est consommé puis régénéré, et n'apparaît donc pas dans l'équation de la réaction." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "Utilité du chauffage à reflux.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "**Chauffer** : la température est un facteur cinétique ; la transformation, lente à température ambiante, est accélérée.",
+              "**À reflux** : les vapeurs se condensent dans le réfrigérant et retombent dans le ballon ; on ne perd ni réactifs ni produits, et on évite de libérer des vapeurs inflammables."
+            ] },
+            { "type": "reponse", "texte": "Accélérer la réaction en chauffant, sans perte de matière grâce à la condensation des vapeurs." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q7",
+          "intitule": "Expliquer le dégagement gazeux lors du lavage à l'hydrogénocarbonate ; utilité de cette étape.",
+          "blocs": [
+            { "type": "texte", "texte": "La phase organique contient encore de l'acide éthanoïque (introduit en excès) et des traces d'acide sulfurique. L'ion hydrogénocarbonate, amphotère, réagit ici comme **base** du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ :" },
+            { "type": "formule", "tex": "\\mathrm{CH_3COOH(aq)} + \\mathrm{HCO_3^-(aq)} \\longrightarrow \\mathrm{CH_3COO^-(aq)} + \\mathrm{CO_2(g)} + \\mathrm{H_2O(l)}" },
+            { "type": "texte", "texte": "Le gaz qui se dégage est le **dioxyde de carbone**." },
+            { "type": "reponse", "texte": "Dégagement de $\\mathrm{CO_2}$. Cette étape élimine les acides restants : ils passent sous forme d'ions (très solubles dans l'eau) dans la phase aqueuse, ce qui purifie l'ester." },
+            { "type": "astuce", "texte": "Au laboratoire, c'est pour ce gaz qu'on dégaze régulièrement l'ampoule à décanter en l'agitant." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q8",
+          "intitule": "Réactif limitant et rendement du protocole A.",
+          "blocs": [
+            { "type": "texte", "texte": "Quantités initiales, avec $m = \\rho V = d \\times \\rho_{\\text{eau}} \\times V$ et $\\rho_{\\text{eau}} = 1{,}00 \\text{ g·mL}^{-1}$ :" },
+            { "type": "formule", "tex": "n_{\\text{alcool}} = \\frac{0{,}81 \\times 22}{88{,}2} = 0{,}20 \\text{ mol} \\qquad n_{\\text{acide}} = \\frac{1{,}05 \\times 15}{60{,}0} = 0{,}26 \\text{ mol}" },
+            { "type": "texte", "texte": "Les nombres stœchiométriques valent tous 1 : le réactif en plus petite quantité, l'**alcool**, est limitant. D'où $x_{\\max} = 0{,}202 \\text{ mol}$ et $n_{\\text{ester,max}} = 0{,}202 \\text{ mol}$." },
+            { "type": "formule", "tex": "n_{\\text{ester,obtenu}} = \\frac{19{,}7}{130{,}2} = 0{,}151 \\text{ mol}" },
+            { "type": "formule", "tex": "\\eta = \\frac{n_{\\text{obtenu}}}{n_{\\max}} = \\frac{0{,}151}{0{,}202} = 0{,}75" },
+            { "type": "reponse", "texte": "Réactif limitant : le 3-méthylbutan-1-ol. Rendement $\\eta \\approx 75\\ \\%$." },
+            { "type": "piege", "texte": "La densité n'est pas une masse volumique : $\\rho = d \\times \\rho_{\\text{eau}}$. Avec $\\rho_{\\text{eau}} = 1{,}00 \\text{ g·mL}^{-1}$, le nombre est le même, mais écris l'étape." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q9",
+          "intitule": "Énergie utilisée dans le protocole B ; commenter.",
+          "blocs": [
+            { "type": "formule", "tex": "E_B = P \\times \\Delta t = 800 \\text{ W} \\times 30 \\text{ s} = 2{,}4 \\times 10^{4} \\text{ J}" },
+            { "type": "formule", "tex": "\\frac{E_{A}}{E_B} = \\frac{4{,}1 \\times 10^{5}}{2{,}4 \\times 10^{4}} \\approx 17" },
+            { "type": "reponse", "texte": "$E_B = 2{,}4 \\times 10^{4} \\text{ J}$, environ 17 fois moins que le chauffe-ballon des protocoles A et C, pour un rendement meilleur (87 % contre 75 %)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q10",
+          "intitule": "Quel protocole répond le mieux à la chimie verte ?",
+          "blocs": [
+            { "type": "liste", "items": [
+              "**Dépenses énergétiques** : B consomme 17 fois moins que A et C.",
+              "**Solvants polluants** : C utilise du cyclohexane (inflammable, nocif, dangereux pour l'environnement d'après ses pictogrammes) ; A et B n'ajoutent aucun solvant.",
+              "**Procédés catalytiques** : les trois utilisent l'acide sulfurique comme catalyseur, ce critère ne les départage pas.",
+              "**Efficacité** : B a le meilleur rendement (87 %), donc moins de réactifs gaspillés."
+            ] },
+            { "type": "reponse", "texte": "Le protocole B (micro-ondes) : moins d'énergie, pas de solvant toxique, meilleur rendement." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Une formulation de l'aspirine : acétylsalicylate de DL-lysine et dosage par étalonnage.",
+      "points": 4,
+      "minutes": 40,
+      "enBref": [
+        "À pH 5,0, supérieur au pKa de 3,5, l'aspirine est sous forme d'ion acétylsalicylate ; la lysine porte deux groupes NH₃⁺ et un COO⁻.",
+        "Un titrage par un acide fort doserait ensemble les deux bases présentes : il ne donnerait pas l'acétylsalicylate seul.",
+        "L'espèce B absorbe au maximum vers 530 nm (vert) : sa solution est rouge-violacé.",
+        "Par la droite d'étalonnage et les dilutions, on trouve environ 470 mg d'acide acétylsalicylique, à environ une incertitude-type des 500 mg annoncés : c'est en accord."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Formule semi-développée de l'ion acétylsalicylate.",
+          "blocs": [
+            { "type": "texte", "texte": "L'ion acétylsalicylate est la base conjuguée de l'acide acétylsalicylique : le groupe carboxyle –COOH perd son H⁺ et devient –COO⁻. Le groupe ester –O–CO–CH₃ n'est pas modifié." },
+            { "type": "texte", "texte": "On dessine le cycle benzénique (hexagone), puis sur deux carbones voisins : d'un côté le groupe $\\mathrm{-C(=O)-O^-}$ (C relié à un O par une double liaison et à un O⁻), de l'autre le groupe $\\mathrm{-O-C(=O)-CH_3}$." },
+            { "type": "reponse", "texte": "$\\mathrm{C_6H_4}$ portant en position voisine $\\mathrm{-COO^-}$ et $\\mathrm{-O-CO-CH_3}$ : les liaisons C–H, C–O et C=O des groupes sont toutes écrites." },
+            { "type": "piege", "texte": "Dans une formule semi-développée, toutes les liaisons sauf celles avec les H sont dessinées : n'écris pas « COO⁻ » en bloc, développe le C, son O doublement lié et son O⁻." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Pourquoi la DL-lysine est-elle un acide aminé ?",
+          "blocs": [
+            { "type": "reponse", "texte": "Sa molécule possède à la fois un groupe **carboxyle** –COOH (fonction acide carboxylique) et des groupes **amino** –NH₂ (fonction amine), dont un sur le carbone voisin du carboxyle : c'est la définition d'un acide α-aminé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Formes prédominantes à pH = 5,0.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "**Aspirine** : pH = 5,0 > pKa = 3,5, donc la base prédomine : **ion acétylsalicylate** (et même $[\\mathrm{A^-}]/[\\mathrm{AH}] = 10^{1{,}5} \\approx 32$).",
+              "**Lysine** : 2,2 < 5,0 < 9,2, donc d'après le diagramme de prédominance la forme $\\mathrm{H_3N^+-(CH_2)_4-CH(NH_3^+)-COO^-}$, deux groupes ammonium et un carboxylate."
+            ] },
+            { "type": "reponse", "texte": "Ion acétylsalicylate ; lysine sous la forme à deux $\\mathrm{NH_3^+}$ et un $\\mathrm{COO^-}$ (charge globale +1)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Pourquoi un titrage par un acide fort ne donne-t-il pas directement la quantité d'ion acétylsalicylate ?",
+          "blocs": [
+            { "type": "texte", "texte": "La solution contient deux bases susceptibles de réagir avec les ions oxonium apportés : l'ion acétylsalicylate (pKa 3,5) et le groupe carboxylate de la lysine (pKa 2,2)." },
+            { "type": "texte", "texte": "Les deux pKa ne diffèrent que de 1,3 unité : les deux réactions se font en même temps et les sauts de pH se confondent. Le volume équivalent mesuré correspondrait à l'ensemble des deux bases, pas à l'acétylsalicylate seul." },
+            { "type": "reponse", "texte": "L'acide fort réagit aussi avec la lysine (forme carboxylate) : on ne peut pas isoler l'équivalence propre à l'ion acétylsalicylate." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Longueur d'onde du dosage et couleur de la solution de B.",
+          "blocs": [
+            { "type": "texte", "texte": "On se place au **maximum d'absorption** (figure 2), là où la mesure est la plus sensible et la moins affectée par un petit décalage de réglage : $\\lambda_{\\max} \\approx 530 \\text{ nm}$." },
+            { "type": "texte", "texte": "530 nm est dans le vert. La couleur perçue est la **couleur complémentaire** de la couleur absorbée, diamétralement opposée sur le cercle chromatique." },
+            { "type": "reponse", "texte": "$\\lambda \\approx 530 \\text{ nm}$ ; B absorbe le vert, sa solution paraît rouge-violacé (magenta)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "La masse d'acide acétylsalicylique mesurée est-elle en accord avec la notice ?",
+          "blocs": [
+            { "type": "texte", "texte": "**1. Concentration de B dans S.** Les points de la figure 3 sont alignés sur une droite passant par l'origine : la **loi de Beer-Lambert** $A = k\\,C$ s'applique. Avec le point (2,90 mmol·L⁻¹ ; 2,20), et en vérifiant sur les autres points :" },
+            { "type": "formule", "tex": "k \\approx \\frac{2{,}20}{2{,}90} \\approx 0{,}77 \\text{ L·mmol}^{-1} \\qquad C_S = \\frac{A}{k} = \\frac{0{,}80}{0{,}77} = 1{,}04 \\text{ mmol·L}^{-1}" },
+            { "type": "texte", "texte": "(Graphiquement : l'abscisse du point d'ordonnée 0,80 sur la droite tracée donne la même valeur.)" },
+            { "type": "texte", "texte": "**2. Remonter la dilution.** Toutes les réactions ont des nombres stœchiométriques égaux à 1 : une mole d'acide acétylsalicylique donne une mole d'ion salicylate puis une mole de B. L'étape 2 dilue 5,0 mL dans 50,0 mL, soit un facteur 10 :" },
+            { "type": "formule", "tex": "C_1 = 10 \\times C_S = 10{,}4 \\text{ mmol·L}^{-1}" },
+            { "type": "texte", "texte": "**3. Quantité et masse dans le sachet** (fiole de 250 mL) :" },
+            { "type": "formule", "tex": "n = C_1 \\times V_1 = 10{,}4 \\times 10^{-3} \\times 0{,}250 = 2{,}6 \\times 10^{-3} \\text{ mol}" },
+            { "type": "formule", "tex": "m_{\\exp} = n \\times M = 2{,}6 \\times 10^{-3} \\times 180{,}2 = 0{,}47 \\text{ g} = 4{,}7 \\times 10^{2} \\text{ mg}" },
+            { "type": "texte", "texte": "**4. Comparaison à la notice** (quotient d'écart) :" },
+            { "type": "formule", "tex": "\\frac{|m_{\\exp} - m_{\\text{ref}}|}{u(m)} = \\frac{|470 - 500|}{30} \\approx 1{,}0" },
+            { "type": "reponse", "texte": "$m_{\\exp} \\approx 4{,}7 \\times 10^{2} \\text{ mg}$ ; le quotient vaut environ 1, inférieur à 2 : la mesure est en accord avec les 500 mg annoncés." },
+            { "type": "attendu", "texte": "Le correcteur suit la chaîne : loi de Beer-Lambert et lecture de $C_S$, facteur de dilution, volume de la fiole mère, stœchiométrie 1:1, masse molaire de l'acide (et non de l'acétylsalicylate de lysine), puis le quotient comparé à 2." },
+            { "type": "piege", "texte": "Ne compare pas à 900 mg : la notice dit que 900 mg de sel de lysine « équivalent » à 500 mg d'acide. C'est bien la masse d'acide acétylsalicylique, $M = 180{,}2 \\text{ g·mol}^{-1}$, qu'on calcule." }
+          ]
+        }
+      ]
+    }
+  ]
+}

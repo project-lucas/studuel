@@ -1,0 +1,3529 @@
+{
+ "niveau": "Tle",
+ "matiere": "ses",
+ "exercices": [
+  {
+   "chapitre": "ffa19091-0143-57a4-a0cd-186b6ebbde50",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un pré pour tous les troupeaux",
+   "competence": "raisonner",
+   "situation": "Dans un village imaginé, cinq éleveurs font paître leurs moutons sur le même pré communal. Plus il y a de bêtes, moins chacune trouve d’herbe et donne de laine.",
+   "documents": [
+    {
+     "id": "pre",
+     "type": "tableau",
+     "titre": "Le pré communal",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Moutons sur le pré",
+      "20",
+      "40",
+      "60",
+      "80"
+     ],
+     "lignes": [
+      [
+       "Laine par mouton (kg)",
+       6,
+       5,
+       3,
+       1
+      ],
+      [
+       "Laine totale du village (kg)",
+       120,
+       200,
+       180,
+       80
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pre",
+     "enonce": "Touche la case de la production totale de laine la plus élevée.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Regarde la ligne « Laine totale », pas celle de la laine par mouton.",
+     "explication": "Avec 40 moutons, le village récolte **200 kg** : c’est le maximum. Au-delà, le pré s’épuise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de kilos de laine le village perd-il en passant de 40 à 80 moutons ?",
+     "reponse": 120,
+     "unite": "kg",
+     "aide": "Soustrais la laine totale de la colonne 80 à celle de la colonne 40.",
+     "explication": "200 − 80 = **120 kg** perdus : plus de bêtes, moins de laine pour tout le monde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi chaque éleveur est-il pourtant tenté d’ajouter un mouton ?",
+     "options": [
+      "Le gain d’une bête de plus lui revient entièrement, alors que l’herbe perdue est supportée par tous les éleveurs",
+      "Il ne voit pas que le pré se dégrade, car aucun éleveur n’a jamais mesuré la quantité d’herbe",
+      "Le village l’oblige à augmenter son troupeau chaque année pour financer les dépenses communes",
+      "Plus il a de moutons, plus l’herbe repousse vite sur le pré qu’il partage avec les autres"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que gagne l’éleveur seul et ce que perd le groupe.",
+     "explication": "Le gain est **privé**, le coût est **partagé** : c’est ce qui rend l’addition de choix rationnels destructrice."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement.",
+     "texte": "La destruction d’une ressource commune par l’addition de comportements individuellement ___ s’appelle la tragédie des ___ (Hardin).",
+     "reponses": [
+      [
+       "rationnels"
+      ],
+      [
+       "communs"
+      ]
+     ],
+     "banque": [
+      "rationnels",
+      "communs",
+      "irrationnels",
+      "biens",
+      "États"
+     ],
+     "aide": "Chaque éleveur agit dans son intérêt.",
+     "explication": "Chaque éleveur est **rationnel**, et pourtant la ressource disparaît : c’est la tragédie des **communs** décrite par Garrett Hardin."
+    }
+   ]
+  },
+  {
+   "chapitre": "ffa19091-0143-57a4-a0cd-186b6ebbde50",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Kyoto, puis Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Les États négocient depuis 1992 pour agir ensemble sur le climat. Deux textes marquent cette histoire : le protocole de Kyoto et l’accord de Paris.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre étapes de la négociation climatique",
+     "source": "Dates des textes internationaux.",
+     "debut": 1990,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Sommet Rio"
+      },
+      {
+       "id": "kyoto",
+       "date": 1997,
+       "nom": "Kyoto adopté"
+      },
+      {
+       "id": "vigueur",
+       "date": 2005,
+       "nom": "Kyoto en vigueur"
+      },
+      {
+       "id": "paris",
+       "date": 2015,
+       "nom": "Accord de Paris"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui rend enfin le protocole de Kyoto applicable.",
+     "reponse": [
+      "vigueur"
+     ],
+     "aide": "Adopter un texte et le mettre en vigueur sont deux dates différentes.",
+     "explication": "Kyoto est adopté en 1997 mais n’entre en vigueur qu’en **2005**, une fois assez de pays ayant ratifié."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’adoption de Kyoto de celle de l’accord de Paris ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2015 − 1997 = **18 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique selon le texte auquel elle se rapporte.",
+     "categories": [
+      "Protocole de Kyoto",
+      "Accord de Paris"
+     ],
+     "items": [
+      [
+       "Des objectifs chiffrés imposés aux seuls pays développés",
+       0
+      ],
+      [
+       "Des engagements nationaux et volontaires",
+       1
+      ],
+      [
+       "Tous les pays s’engagent, riches ou non",
+       1
+      ],
+      [
+       "Des cibles de réduction contraignantes",
+       0
+      ],
+      [
+       "Le levier principal est la transparence et la pression des pairs",
+       1
+      ],
+      [
+       "Les États-Unis n’ont pas ratifié ce texte",
+       0
+      ]
+     ],
+     "aide": "Pense à qui est concerné et à la force de l’engagement.",
+     "explication": "**Kyoto** : contraignant, limité aux pays développés. **Paris** : universel, volontaire, appuyé sur la transparence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’accord de Paris repose-t-il sur des engagements volontaires ?",
+     "options": [
+      "Pour obtenir la participation de tous les pays, y compris ceux qui refusaient des objectifs imposés de l’extérieur",
+      "Parce que les scientifiques jugent les objectifs chiffrés inutiles pour limiter le réchauffement mondial",
+      "Parce que les pays développés n’ont jamais émis de gaz à effet de serre et n’ont donc aucun effort à faire",
+      "Parce que l’ONU dispose déjà d’un pouvoir de sanction suffisant contre les États qui émettent trop"
+     ],
+     "reponse": 0,
+     "aide": "Kyoto n’avait obtenu ni les États-Unis ni les grands pays émergents.",
+     "explication": "On a échangé de la **contrainte** contre de l’**universalité** : tous les pays participent, mais chacun fixe sa contribution."
+    }
+   ]
+  },
+  {
+   "chapitre": "ffa19091-0143-57a4-a0cd-186b6ebbde50",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une taxe carbone juste ?",
+   "competence": "analyser-document",
+   "situation": "Un gouvernement imaginaire augmente de 10 % le prix des carburants pour réduire les émissions. Il redistribue les recettes par un chèque identique pour chaque ménage.",
+   "documents": [
+    {
+     "id": "menages",
+     "type": "tableau",
+     "titre": "Trois ménages face à la taxe",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ménage",
+      "Revenu mensuel (€)",
+      "Dépense de carburant (€ par mois)",
+      "Surcoût dû à la taxe (€ par mois)"
+     ],
+     "lignes": [
+      [
+       "Ménage urbain aisé",
+       4000,
+       100,
+       10
+      ],
+      [
+       "Ménage rural modeste",
+       1600,
+       160,
+       "?"
+      ],
+      [
+       "Ménage urbain modeste",
+       1600,
+       40,
+       4
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chq",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le dividende carbone",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les recettes de la taxe sont reversées à parts égales : chaque ménage reçoit un chèque de 120 € par an, quel que soit son revenu."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le surcoût mensuel du ménage rural modeste, en euros ?",
+     "reponse": 16,
+     "unite": "€",
+     "aide": "La taxe augmente sa dépense de carburant de 10 %.",
+     "explication": "10 % de 160 € = **16 €** par mois."
+    },
+    {
+     "type": "zone",
+     "document": "menages",
+     "enonce": "Touche le ménage pour qui la taxe pèse le plus lourd en part du revenu.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare le surcoût au revenu de chaque ménage.",
+     "explication": "Le ménage **rural modeste** paie 16 € sur 1 600 € (1 %), contre 0,25 % pour chacun des deux autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le chèque de 120 € par an représente combien d’euros par mois ?",
+     "reponse": 10,
+     "unite": "€",
+     "aide": "Divise par 12.",
+     "explication": "120 ÷ 12 = **10 €** par mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après le chèque, que perd le ménage rural modeste chaque mois, en euros ? (surcoût − chèque)",
+     "reponse": 6,
+     "unite": "€",
+     "aide": "Son surcoût est de 16 €, le chèque lui rend 10 €.",
+     "explication": "16 − 10 = **6 €** de perte nette, alors que le ménage urbain modeste gagne 6 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce cas sur la taxe carbone ?",
+     "options": [
+      "Le chèque réduit son caractère régressif, mais pénalise encore celui qui n’a pas d’alternative à la voiture",
+      "Le chèque supprime toute inégalité entre ménages, quelle que soit leur dépendance à la voiture",
+      "La taxe pèse davantage sur les ménages aisés, qui dépensent plus en carburant en valeur absolue",
+      "La taxe n’a aucun effet sur les comportements, puisque tous les ménages reçoivent le même chèque"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le ménage rural : a-t-il un moyen d’éviter la taxe ?",
+     "explication": "Une politique efficace mais perçue comme **injuste** est politiquement intenable : d’où l’enjeu des compensations ciblées."
+    }
+   ]
+  },
+  {
+   "chapitre": "6960c07c-e083-5dab-befa-538cfcd12ca8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois usines, une taxe",
+   "competence": "raisonner",
+   "situation": "Une ville imaginaire compte trois usines qui émettent du CO₂. Réduire une tonne coûte plus ou moins cher selon l’usine. La mairie décide de taxer chaque tonne émise.",
+   "documents": [
+    {
+     "id": "usines",
+     "type": "tableau",
+     "titre": "Coût pour réduire une tonne",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Usine",
+      "Coût de réduction d’une tonne (€)"
+     ],
+     "lignes": [
+      [
+       "Usine A",
+       20
+      ],
+      [
+       "Usine B",
+       50
+      ],
+      [
+       "Usine C",
+       80
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "usines",
+     "enonce": "La taxe est de 40 € par tonne émise. Touche l’usine qui a intérêt à réduire ses émissions.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Réduire est rentable si cela coûte moins que la taxe.",
+     "explication": "Seule l’**usine A** réduit : 20 € < 40 €. Les autres préfèrent payer la taxe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La taxe passe à 60 € par tonne. Combien d’usines ont désormais intérêt à réduire ?",
+     "reponse": 2,
+     "unite": "usines",
+     "aide": "Compare 60 € au coût de chaque usine.",
+     "explication": "A (20 €) et B (50 €) ont un coût inférieur à 60 € : **2 usines**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La taxe passe à 100 € par tonne. Combien d’usines ont intérêt à réduire ?",
+     "reponse": 3,
+     "unite": "usines",
+     "aide": "Compare 100 € au coût de l’usine la plus coûteuse.",
+     "explication": "Même l’usine C (80 €) réduit : **3 usines**. Plus la taxe est haute, plus l’effort est général."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement.",
+     "texte": "La taxe fixe le ___ de l’émission et laisse la quantité s’ajuster ; le marché de quotas fixe la ___ totale et laisse le prix s’ajuster.",
+     "reponses": [
+      [
+       "prix"
+      ],
+      [
+       "quantité"
+      ]
+     ],
+     "banque": [
+      "prix",
+      "quantité",
+      "norme",
+      "durée",
+      "coût"
+     ],
+     "aide": "L’un fixe ce que l’autre laisse libre.",
+     "explication": "La taxe fixe le **prix**, le marché de quotas fixe la **quantité** : c’est la différence de principe entre les deux instruments."
+    }
+   ]
+  },
+  {
+   "chapitre": "6960c07c-e083-5dab-befa-538cfcd12ca8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Échanger des quotas",
+   "competence": "modeliser",
+   "situation": "Un marché de quotas plafonne les émissions de trois usines à 60 tonnes chacune. Les usines peuvent s’échanger des quotas. Chacune émettait 100 tonnes et doit donc réduire de 40 tonnes si personne n’échange.",
+   "documents": [
+    {
+     "id": "quotas",
+     "type": "tableau",
+     "titre": "Les trois usines",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Usine",
+      "Émissions avant (t)",
+      "Quotas reçus (t)",
+      "Coût de réduction d’une tonne (€)"
+     ],
+     "lignes": [
+      [
+       "Usine A",
+       100,
+       60,
+       20
+      ],
+      [
+       "Usine B",
+       100,
+       60,
+       50
+      ],
+      [
+       "Usine C",
+       100,
+       60,
+       80
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quotas",
+     "enonce": "Touche l’usine qui a le plus intérêt à réduire davantage pour vendre des quotas.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Elle réduit à moindre coût.",
+     "explication": "L’**usine A** réduit une tonne pour 20 € seulement : elle peut revendre ses quotas plus cher que ce que lui coûte l’effort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans échange, chaque usine réduit de 40 tonnes. Quel est le coût total des réductions, en euros ?",
+     "reponse": 6000,
+     "unite": "€",
+     "aide": "Calcule 40 × 20 + 40 × 50 + 40 × 80.",
+     "explication": "800 + 2 000 + 3 200 = **6 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec échange : A réduit de 80 t, B de 40 t, C ne réduit pas. Quel est le coût total, en euros ?",
+     "reponse": 3600,
+     "unite": "€",
+     "aide": "Calcule 80 × 20 + 40 × 50.",
+     "explication": "1 600 + 2 000 = **3 600 €**. Les émissions totales restent de 180 t (20 + 60 + 100)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la baisse du coût alors que les émissions totales sont inchangées ?",
+     "options": [
+      "La réduction est réalisée par ceux à qui elle coûte le moins, pour une quantité totale garantie par le plafond",
+      "Le plafond est devenu inutile, puisque les usines s’accordent sans aucune règle commune",
+      "Les usines les plus polluantes ont été exemptées de tout effort de réduction par les autorités",
+      "Le marché a fait baisser les émissions totales bien en dessous du plafond initial fixé"
+     ],
+     "reponse": 0,
+     "aide": "Compare qui réduit, et de combien, dans les deux cas.",
+     "explication": "Le marché fait porter l’effort par les usines **au moindre coût** tout en gardant la quantité totale fixée."
+    }
+   ]
+  },
+  {
+   "chapitre": "6960c07c-e083-5dab-befa-538cfcd12ca8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un plafond trop haut",
+   "competence": "analyser-document",
+   "situation": "Dans un marché de quotas imaginaire, l’autorité distribue chaque année 220 millions de quotas (1 quota = 1 tonne). Puis l’activité économique ralentit.",
+   "documents": [
+    {
+     "id": "barres",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Quotas distribués et émissions réelles",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "2017",
+      "2018",
+      "2019",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Quotas distribués (Mt)",
+       "valeurs": [
+        220,
+        220,
+        220,
+        220
+       ],
+       "teinte": "gris"
+      },
+      {
+       "nom": "Émissions réelles (Mt)",
+       "valeurs": [
+        210,
+        200,
+        185,
+        180
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Millions de tonnes",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "prix",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Prix du quota (€ la tonne)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "2017",
+      "2018",
+      "2019",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Prix du quota",
+       "valeurs": [
+        40,
+        25,
+        12,
+        6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "en €",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "barres",
+     "enonce": "Touche l’année où l’écart entre quotas distribués et émissions est le plus grand.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la paire de barres la plus éloignée.",
+     "explication": "En 2020 l’écart atteint **40 Mt** : c’est l’année où il reste le plus de quotas inutilisés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de quotas restent en trop en 2020 ?",
+     "reponse": 40,
+     "unite": "Mt",
+     "aide": "Soustrais les émissions au nombre de quotas distribués.",
+     "explication": "220 − 180 = **40 Mt**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le prix du quota a-t-il évolué entre 2017 et 2020 ? Donne un nombre négatif.",
+     "reponse": -85,
+     "unite": "%",
+     "aide": "(6 − 40) ÷ 40 × 100.",
+     "explication": "(6 − 40) ÷ 40 = − 0,85, soit **− 85 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer cet effondrement du prix ?",
+     "options": [
+      "Les quotas en surplus dépassent la demande des usines : plus personne n’a besoin d’en acheter",
+      "Les usines ont émis davantage que prévu et se disputent désormais chaque quota encore disponible",
+      "Les autorités ont supprimé le plafond, si bien que les quotas ne servent plus à rien pour émettre",
+      "La taxe carbone a remplacé le marché, ce qui a fait disparaître l’intérêt d’échanger des quotas"
+     ],
+     "reponse": 0,
+     "aide": "Quand l’offre dépasse la demande, que devient un prix ?",
+     "explication": "Un plafond trop haut crée un **surplus** de quotas et fait chuter le prix : le signal-prix disparaît."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse corrige ce défaut du marché ?",
+     "options": [
+      "Retirer des quotas du marché ou resserrer le plafond, comme le fait la réserve de stabilité européenne",
+      "Distribuer encore davantage de quotas gratuits pour soutenir l’activité des usines concernées",
+      "Supprimer les échanges de quotas entre usines pour revenir à une interdiction générale",
+      "Fixer un prix plancher de 0 € pour que les usines puissent acheter sans limite"
+     ],
+     "reponse": 0,
+     "aide": "Il faut rendre le quota de nouveau rare.",
+     "explication": "En rendant les quotas **rares**, on rétablit un prix qui incite à réduire : c’est le rôle de la réserve de stabilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f2e795-433c-5a20-a828-25c14ef6018b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du bac rare au bac courant",
+   "competence": "lire-graphique",
+   "situation": "Au milieu du XXe siècle, le baccalauréat concernait très peu de jeunes. Un graphique suit la part d’une génération qui l’obtient.",
+   "documents": [
+    {
+     "id": "bac",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Part d’une génération titulaire du baccalauréat (%)",
+     "source": "Ordres de grandeur arrondis, France.",
+     "categories": [
+      "1950",
+      "1970",
+      "1985",
+      "1995",
+      "2019"
+     ],
+     "series": [
+      {
+       "nom": "Bacheliers",
+       "valeurs": [
+        5,
+        20,
+        30,
+        60,
+        80
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part d’une génération",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bac",
+     "enonce": "Touche l’année qui clôt la période de hausse la plus rapide du graphique.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare les hausses entre deux dates, en tenant compte du temps écoulé.",
+     "explication": "Entre 1985 et 1995, la part passe de 30 à 60 % : **+30 points en dix ans**, la hausse la plus rapide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien la part de bacheliers a-t-elle été multipliée entre 1950 et 2019 ?",
+     "reponse": 16,
+     "aide": "Divise la valeur de 2019 par celle de 1950.",
+     "explication": "80 ÷ 5 = **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points de pourcentage la part de bacheliers a-t-elle gagnés entre 1985 et 2019 ?",
+     "reponse": 50,
+     "unite": "points",
+     "aide": "Soustrais 30 à 80.",
+     "explication": "80 − 30 = **50 points** de pourcentage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce graphique illustre-t-il une massification ou une démocratisation ?",
+     "options": [
+      "Une massification : il compte plus de bacheliers, sans dire si les écarts entre milieux sociaux se réduisent",
+      "Une démocratisation : la hausse du nombre de bacheliers prouve que les inégalités sociales ont disparu",
+      "Une inflation scolaire : il montre que les diplômes perdent de la valeur sur le marché du travail",
+      "Un déclassement : il montre que les bacheliers occupent des emplois de niveau inférieur à leur diplôme"
+     ],
+     "reponse": 0,
+     "aide": "Le graphique donne-t-il des informations sur l’origine sociale ?",
+     "explication": "Il mesure une évolution **quantitative**. La démocratisation, elle, se mesure par la réduction des **écarts entre milieux sociaux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f2e795-433c-5a20-a828-25c14ef6018b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Tous bacheliers, pas tous au même endroit",
+   "competence": "analyser-document",
+   "situation": "Dans une académie imaginaire, on a relevé le type de baccalauréat obtenu par 100 bacheliers enfants de cadres et 100 bacheliers enfants d’ouvriers.",
+   "documents": [
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Type de baccalauréat obtenu (pour 100 bacheliers de chaque origine)",
+     "source": "Chiffres imaginés pour l’exercice, dans le sens des écarts observés.",
+     "colonnes": [
+      "Origine sociale",
+      "Bac général",
+      "Bac technologique",
+      "Bac professionnel"
+     ],
+     "lignes": [
+      [
+       "Enfants de cadres",
+       75,
+       15,
+       10
+      ],
+      [
+       "Enfants d’ouvriers",
+       40,
+       22,
+       38
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "types",
+     "enonce": "Touche la case de la part d’enfants d’ouvriers qui obtiennent un bac professionnel.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Repère la ligne « ouvriers » puis la colonne « professionnel ».",
+     "explication": "**38 bacheliers** d’ouvriers sur 100 ont un bac professionnel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage la part du bac général diffère-t-elle entre enfants de cadres et enfants d’ouvriers ?",
+     "reponse": 35,
+     "unite": "points",
+     "aide": "Soustrais les deux parts de la colonne « Bac général ».",
+     "explication": "75 − 40 = **35 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle interprétation est correcte ?",
+     "options": [
+      "Tous accèdent au bac, mais les enfants de cadres se dirigent davantage vers les filières les plus valorisées",
+      "Les enfants d’ouvriers échouent plus souvent au bac que les enfants de cadres dans toutes les séries",
+      "Le bac professionnel est devenu la filière la plus prestigieuse pour les enfants de cadres",
+      "L’origine sociale n’a plus aucune influence sur le type de baccalauréat obtenu en fin de lycée"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau compte les bacheliers, pas les échecs.",
+     "explication": "C’est la **démocratisation ségrégative** (Merle) : l’accès augmente pour tous, mais les filières se hiérarchisent selon l’origine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la notion qu’elle illustre.",
+     "paires": [
+      [
+       "Le nombre de bacheliers a été multiplié par seize",
+       "Massification"
+      ],
+      [
+       "L’écart d’accès au supérieur entre milieux sociaux se réduit",
+       "Démocratisation"
+      ],
+      [
+       "Un master est demandé pour un poste qui exigeait un bac",
+       "Inflation scolaire"
+      ],
+      [
+       "Une diplômée occupe un emploi sous son niveau d’études",
+       "Déclassement"
+      ]
+     ],
+     "aide": "Quatre notions, à ne pas confondre.",
+     "explication": "**Quatre notions distinctes** : on les manie séparément en copie. Les confondre est l’erreur la plus sanctionnée du chapitre."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f2e795-433c-5a20-a828-25c14ef6018b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plus diplômée que son père",
+   "competence": "analyser-document",
+   "situation": "Chloé, 24 ans, est la première de sa famille à avoir un master. Son père, titulaire d’un CAP, est devenu contremaître. Un tableau imaginaire montre comment le marché a évolué.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "tableau",
+     "titre": "Jeunes diplômés du supérieur et emplois qualifiés proposés, par an (milliers)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "1990",
+      "2020"
+     ],
+     "lignes": [
+      [
+       "Jeunes diplômés du supérieur",
+       100,
+       250
+      ],
+      [
+       "Emplois qualifiés proposés aux jeunes",
+       100,
+       150
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "Tu as un master, ton père avait un CAP. Tu es bien mieux placée que lui !"
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Pas vraiment : je suis conseillère clientèle, et lui est devenu contremaître à 30 ans."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flux",
+     "enonce": "Touche la case du nombre d’emplois qualifiés proposés en 2020.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Choisis la ligne des emplois, puis la colonne 2020.",
+     "explication": "**150 000** emplois qualifiés sont proposés en 2020."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le nombre de jeunes diplômés a-t-il augmenté entre 1990 et 2020 ?",
+     "reponse": 150,
+     "unite": "%",
+     "aide": "(250 − 100) ÷ 100 × 100.",
+     "explication": "(250 − 100) ÷ 100 = 1,5, soit **+ 150 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2020, combien de jeunes diplômés (en milliers) n’ont pas d’emploi qualifié proposé à leur niveau ?",
+     "reponse": 100,
+     "unite": "milliers",
+     "aide": "Soustrais les emplois aux diplômés.",
+     "explication": "250 − 150 = **100 milliers** : c’est le terreau de l’inflation scolaire et du déclassement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle notion le dialogue illustre-t-il le mieux ?",
+     "options": [
+      "Le paradoxe d’Anderson : être plus diplômé que son père ne garantit plus une meilleure position",
+      "La démocratisation : Chloé a profité de l’ouverture des filières à tous les milieux sociaux",
+      "La moyennisation : Chloé et son père appartiennent désormais à la même classe moyenne",
+      "La solidarité organique : Chloé complète désormais les fonctions exercées par son père"
+     ],
+     "reponse": 0,
+     "aide": "Compare le diplôme et la position de Chloé avec ceux de son père.",
+     "explication": "Le niveau de référence a monté pour tous : le diplôme de Chloé est plus élevé, sa position ne l’est pas. C’est le **paradoxe d’Anderson**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7349bb1e-7118-559f-b8ec-bfdbdd4d70f3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Même niveau, autre orientation",
+   "competence": "analyser-document",
+   "situation": "À la fin de la 3e, des élèves imaginaires de même niveau scolaire demandent ou non la seconde générale et technologique. On compare leur origine sociale.",
+   "documents": [
+    {
+     "id": "orient",
+     "type": "tableau",
+     "titre": "Demandes de seconde générale et technologique (élèves de même niveau)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Origine",
+      "Élèves",
+      "Demandent une 2de générale et technologique"
+     ],
+     "lignes": [
+      [
+       "Enfants de cadres",
+       100,
+       90
+      ],
+      [
+       "Enfants d’ouvriers",
+       100,
+       60
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "orient",
+     "enonce": "Touche la case qui donne la demande de 2de générale des enfants d’ouvriers.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne « ouvriers ».",
+     "explication": "**60 élèves** sur 100 demandent une 2de générale chez les enfants d’ouvriers."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage l’écart de demande entre les deux origines s’élève-t-il ?",
+     "reponse": 30,
+     "unite": "points",
+     "aide": "Soustrais 60 à 90.",
+     "explication": "90 − 60 = **30 points**, à niveau scolaire identique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement.",
+     "texte": "À résultats identiques, la famille compare le ___, le risque d’échec et le bénéfice attendu des études longues. Ces termes pèsent plus lourd en milieu ___.",
+     "reponses": [
+      [
+       "coût"
+      ],
+      [
+       "modeste"
+      ]
+     ],
+     "banque": [
+      "coût",
+      "modeste",
+      "favorisé",
+      "profit",
+      "public"
+     ],
+     "aide": "Pense à la logique de Boudon.",
+     "explication": "Selon Boudon, le **coût** et le risque d’échec pèsent plus lourd en milieu **modeste** : les choix diffèrent à niveau égal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce tableau compare des élèves de même niveau. Quelle explication s’applique le mieux ?",
+     "options": [
+      "Les stratégies familiales : à résultats égaux, le coût et le risque des études longues ne pèsent pas pareil",
+      "Le capital culturel : les élèves favorisés ont de meilleures notes grâce à la culture de leur famille",
+      "L’effet Pygmalion : les enseignants attendent moins des élèves d’origine modeste et les notent plus durement",
+      "La carte scolaire : les enfants d’ouvriers sont tous scolarisés dans des établissements plus difficiles"
+     ],
+     "reponse": 0,
+     "aide": "Le niveau scolaire étant identique, ce ne sont pas les notes qui diffèrent.",
+     "explication": "Boudon explique pourquoi, à **armes égales**, les familles ne font pas les mêmes choix. Bourdieu, lui, explique pourquoi les élèves n’ont pas les mêmes armes."
+    }
+   ]
+  },
+  {
+   "chapitre": "7349bb1e-7118-559f-b8ec-bfdbdd4d70f3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans la bibliothèque de Léa",
+   "competence": "analyser-texte",
+   "situation": "Léa, élève de terminale imaginée, vient d’un milieu favorisé. Un court portrait décrit ce qu’elle a hérité de sa famille sans même s’en rendre compte.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Portrait de Léa",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Léa a grandi entre les [[o|livres]] de la bibliothèque familiale. À 17 ans, elle sait [[i|parler]] sans timidité à un professeur et rédige avec aisance.",
+      "Sa mère est titulaire d’un doctorat et son père a fait une grande école. Personne ne lui a jamais expliqué ces codes : elle les a appris en vivant chez elle."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portrait",
+     "enonce": "Touche le mot qui renvoie au capital culturel objectivé (possédé sous forme d’objets).",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Cherche ce qu’on peut poser sur une étagère.",
+     "explication": "Les **livres** sont une forme **objectivée** du capital culturel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon la forme de capital culturel qu’il illustre.",
+     "categories": [
+      "Incorporé",
+      "Objectivé",
+      "Institutionnalisé"
+     ],
+     "items": [
+      [
+       "Elle s’exprime avec aisance devant un adulte",
+       0
+      ],
+      [
+       "Ses parents possèdent des tableaux et un piano",
+       1
+      ],
+      [
+       "Sa mère est titulaire d’un doctorat",
+       2
+      ],
+      [
+       "Elle joue du piano depuis l’âge de cinq ans",
+       0
+      ],
+      [
+       "Son père a le diplôme d’une grande école",
+       2
+      ],
+      [
+       "La bibliothèque familiale compte deux mille livres",
+       1
+      ]
+     ],
+     "aide": "Incorporé : dans le corps ; objectivé : dans les objets ; institutionnalisé : dans les diplômes.",
+     "explication": "**Incorporé** : dispositions et langage ; **objectivé** : objets culturels ; **institutionnalisé** : diplômes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Malik, enfant d’ouvrier, reçoit 9/20 et pense : « Je ne suis pas fait pour ces études. » Que décrit ce cas ?",
+     "options": [
+      "La violence symbolique : il adhère au verdict scolaire et l’intériorise comme un jugement sur ses capacités",
+      "L’effet Pygmalion : son enseignant attend peu de lui et le lui fait comprendre par son attitude en classe",
+      "Le déclassement : il occupe déjà un emploi en dessous de son niveau de diplôme",
+      "La moyennisation : il se sent appartenir à la même classe que ses camarades mieux dotés"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que Malik fait du verdict de l’école.",
+     "explication": "Les dominés **adhèrent** au verdict scolaire et le prennent pour un jugement sur eux : c’est la **violence symbolique** de Bourdieu et Passeron."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à ce qu’elle explique.",
+     "paires": [
+      [
+       "Capital culturel (Bourdieu)",
+       "Les élèves n’ont pas les mêmes armes"
+      ],
+      [
+       "Stratégies familiales (Boudon)",
+       "À armes égales, les choix d’orientation diffèrent"
+      ],
+      [
+       "Effet Pygmalion",
+       "Les attentes de l’enseignant influencent les résultats"
+      ],
+      [
+       "Évitement scolaire",
+       "Les familles informées contournent la carte scolaire"
+      ]
+     ],
+     "aide": "Chaque notion éclaire un mécanisme différent.",
+     "explication": "Quatre mécanismes **complémentaires** : les trois familles d’explications du chapitre ne se contredisent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "7349bb1e-7118-559f-b8ec-bfdbdd4d70f3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’éducation prioritaire fait-elle effet ?",
+   "competence": "analyser-document",
+   "situation": "Dans une académie imaginaire, on suit la part d’élèves de CP qui lisent correctement des mots, en éducation prioritaire renforcée (REP+) et ailleurs, avant et après le dédoublement des classes.",
+   "documents": [
+    {
+     "id": "lecture",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Élèves de CP qui lisent correctement des mots (%)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "2017",
+      "2021"
+     ],
+     "series": [
+      {
+       "nom": "REP+",
+       "valeurs": [
+        70,
+        76
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Hors éducation prioritaire",
+       "valeurs": [
+        90,
+        91
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des élèves",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lecture",
+     "enonce": "Touche l’année où l’écart entre REP+ et hors éducation prioritaire est le plus faible.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare la distance entre les deux barres de chaque année.",
+     "explication": "En **2021**, l’écart est de 15 points contre 20 en 2017."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel était l’écart entre les deux groupes en 2017, en points de pourcentage ?",
+     "reponse": 20,
+     "unite": "points",
+     "aide": "Soustrais 70 à 90.",
+     "explication": "90 − 70 = **20 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’écart s’est-il réduit entre 2017 et 2021 ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Écart 2021 : 91 − 76. Puis (20 − 15) ÷ 20 × 100.",
+     "explication": "Écart 2021 : 15 points. (20 − 15) ÷ 20 = 0,25, soit **25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de ces données ?",
+     "options": [
+      "Les effets sont réels mais modestes : l’écart se réduit sans disparaître",
+      "Les inégalités de réussite ont été totalement effacées par la politique menée",
+      "La politique d’éducation prioritaire n’a eu aucun effet sur les résultats des élèves",
+      "L’écart s’est creusé, preuve que l’éducation prioritaire aggrave les inégalités"
+     ],
+     "reponse": 0,
+     "aide": "L’écart est-il nul en 2021 ?",
+     "explication": "Les évaluations montrent des effets **réels mais modestes** : 25 % de l’écart comblé, il en reste les trois quarts."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dispositif à son principe.",
+     "paires": [
+      [
+       "Éducation prioritaire (ZEP, 1981)",
+       "Des moyens supplémentaires ciblés sur des territoires"
+      ],
+      [
+       "Dédoublement des CP et CE1",
+       "Des classes à effectif réduit en éducation prioritaire"
+      ],
+      [
+       "Cordées de la réussite",
+       "Un accompagnement vers les études supérieures"
+      ],
+      [
+       "Quotas de boursiers",
+       "Des places réservées à des élèves boursiers dans certaines formations"
+      ]
+     ],
+     "aide": "Ciblage territorial ou ciblage individuel ?",
+     "explication": "Tous ces dispositifs pratiquent une **discrimination positive** : traiter différemment pour réduire les écarts."
+    }
+   ]
+  },
+  {
+   "chapitre": "b6b98482-2799-52eb-ad88-5de9a5e8e4bd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un désavantage qui s’enchaîne",
+   "competence": "analyser-document",
+   "situation": "Les inégalités ne s’additionnent pas au hasard : elles s’enchaînent. Un schéma imaginaire suit un parcours où chaque désavantage en produit un autre.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Faible capital culturel"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Emploi moins qualifié"
+      },
+      {
+       "id": "n4",
+       "texte": "Revenu plus faible"
+      },
+      {
+       "id": "n5",
+       "texte": "Santé dégradée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "vie",
+     "type": "tableau",
+     "titre": "Espérance de vie à 35 ans, hommes",
+     "source": "Ordres de grandeur arrondis, d’après les études de l’INSEE.",
+     "colonnes": [
+      "Catégorie",
+      "Années restant à vivre"
+     ],
+     "lignes": [
+      [
+       "Cadres",
+       49
+      ],
+      [
+       "Ouvriers",
+       43
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel maillon manque entre le capital culturel et l’emploi ?",
+     "options": [
+      "Un diplôme plus court",
+      "Une expérience plus longue",
+      "Un patrimoine plus important",
+      "Un logement en centre-ville"
+     ],
+     "reponse": 0,
+     "aide": "Le capital culturel influence d’abord le parcours scolaire.",
+     "explication": "Un faible capital culturel conduit à un **diplôme plus court**, donc à un emploi moins qualifié."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart d’espérance de vie à 35 ans entre un cadre et un ouvrier, en années ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 43 à 49.",
+     "explication": "49 − 43 = **6 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque inégalité selon sa nature.",
+     "categories": [
+      "Inégalité économique",
+      "Inégalité sociale"
+     ],
+     "items": [
+      [
+       "Revenu d’activité",
+       0
+      ],
+      [
+       "Patrimoine",
+       0
+      ],
+      [
+       "Espérance de vie",
+       1
+      ],
+      [
+       "Surface du logement",
+       1
+      ],
+      [
+       "Pratiques culturelles les plus valorisées",
+       1
+      ],
+      [
+       "Revenu disponible",
+       0
+      ]
+     ],
+     "aide": "Économique : revenus et patrimoine. Sociale : santé, logement, loisirs…",
+     "explication": "Les inégalités de **revenu et de patrimoine** sont économiques ; santé, logement, culture sont **sociales** : elles se cumulent."
+    }
+   ]
+  },
+  {
+   "chapitre": "b6b98482-2799-52eb-ad88-5de9a5e8e4bd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Moyenne, médiane et patrimoine",
+   "competence": "lire-graphique",
+   "situation": "Le patrimoine est bien plus concentré que le revenu. Un graphique compare les deux, puis un petit échantillon montre pourquoi on préfère la médiane.",
+   "documents": [
+    {
+     "id": "parts",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part détenue par chaque groupe (%)",
+     "source": "Ordres de grandeur arrondis, France.",
+     "categories": [
+      "10 % les mieux dotés",
+      "50 % les moins dotés"
+     ],
+     "series": [
+      {
+       "nom": "Patrimoine",
+       "valeurs": [
+        50,
+        8
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Niveau de vie",
+       "valeurs": [
+        25,
+        30
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du total",
+      "unite": "en %",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Groupe"
+     }
+    },
+    {
+     "id": "ech",
+     "type": "tableau",
+     "titre": "Cinq niveaux de vie mensuels imaginaires (€)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "lignes": [
+      [
+       "Niveau de vie",
+       1200,
+       1400,
+       1600,
+       1800,
+       10000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parts",
+     "enonce": "Touche le groupe qui détient environ la moitié du patrimoine.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre de patrimoine la plus haute.",
+     "explication": "Les **10 % les mieux dotés** détiennent environ la moitié du patrimoine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les 10 % les mieux dotés détiennent combien de fois plus de patrimoine que les 50 % les moins dotés ? Utilise 50 % et 8 %.",
+     "reponse": 6.25,
+     "unite": "fois",
+     "tolerance": 0.05,
+     "aide": "Divise 50 par 8.",
+     "explication": "50 ÷ 8 = **6,25** : le patrimoine est très concentré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des cinq niveaux de vie, en euros ?",
+     "reponse": 3200,
+     "unite": "€",
+     "aide": "Additionne les cinq valeurs puis divise par cinq.",
+     "explication": "(1 200 + 1 400 + 1 600 + 1 800 + 10 000) ÷ 5 = **3 200 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la médiane de ces cinq niveaux de vie, en euros ?",
+     "reponse": 1600,
+     "unite": "€",
+     "aide": "Ordonne les valeurs : la médiane est celle du milieu.",
+     "explication": "La valeur du milieu est **1 600 €** : la moitié de l’échantillon est en dessous."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le seuil de pauvreté est fixé à 60 % de la médiane. Quel est-il, en euros ?",
+     "reponse": 960,
+     "unite": "€",
+     "aide": "Calcule 0,6 × 1 600.",
+     "explication": "0,6 × 1 600 = **960 €**. Avec la moyenne (3 200 €), on aurait trouvé 1 920 € : la moyenne est tirée vers le haut par une valeur extrême."
+    }
+   ]
+  },
+  {
+   "chapitre": "b6b98482-2799-52eb-ad88-5de9a5e8e4bd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Moins de pauvreté, plus d’inégalités",
+   "competence": "raisonner",
+   "situation": "Dans un pays imaginaire, on compare l’an 2000 et l’an 2020. La situation des plus modestes s’améliore, mais celle des plus aisés s’améliore encore plus vite.",
+   "documents": [
+    {
+     "id": "pauv",
+     "type": "tableau",
+     "titre": "Deux mesures de la pauvreté",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "2000",
+      "2020"
+     ],
+     "lignes": [
+      [
+       "Niveau de vie médian (€ par mois)",
+       1500,
+       1800
+      ],
+      [
+       "Seuil de pauvreté à 60 % de la médiane (€)",
+       900,
+       "?"
+      ],
+      [
+       "Part des habitants sous un panier de biens vital",
+       "6 %",
+       "2 %"
+      ],
+      [
+       "Part des habitants sous le seuil à 60 %",
+       "14 %",
+       "15 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dec",
+     "type": "tableau",
+     "titre": "Premier et dernier déciles (€ par mois)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Décile",
+      "2000",
+      "2020"
+     ],
+     "lignes": [
+      [
+       "D1",
+       800,
+       900
+      ],
+      [
+       "D9",
+       3200,
+       4500
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le seuil de pauvreté à 60 % de la médiane en 2020, en euros ?",
+     "reponse": 1080,
+     "unite": "€",
+     "aide": "Calcule 0,6 × 1 800.",
+     "explication": "0,6 × 1 800 = **1 080 €**."
+    },
+    {
+     "type": "zone",
+     "document": "pauv",
+     "enonce": "Touche la case qui montre la pauvreté absolue en 2020.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La pauvreté absolue se mesure par rapport à un panier de biens vital.",
+     "explication": "**2 %** des habitants sont sous le panier vital en 2020 : la pauvreté absolue recule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport D9/D1 en 2020 ?",
+     "reponse": 5,
+     "aide": "Divise 4 500 par 900.",
+     "explication": "4 500 ÷ 900 = **5**, contre 4 en 2000 (3 200 ÷ 800) : les inégalités ont augmenté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure selon le type de pauvreté qu’elle décrit.",
+     "categories": [
+      "Pauvreté absolue",
+      "Pauvreté relative"
+     ],
+     "items": [
+      [
+       "Part sous un panier de biens vital",
+       0
+      ],
+      [
+       "Part sous 60 % du niveau de vie médian",
+       1
+      ],
+      [
+       "Ne pas pouvoir couvrir ses besoins essentiels, quel que soit le pays",
+       0
+      ],
+      [
+       "Vivre bien en dessous du niveau habituel de sa société",
+       1
+      ]
+     ],
+     "aide": "Absolue : un panier fixe. Relative : on se compare à la société.",
+     "explication": "La pauvreté **absolue** se mesure par un panier fixe ; la **relative** se mesure par rapport au niveau habituel de la société : c’est celle retenue en Europe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de l’ensemble ?",
+     "options": [
+      "La pauvreté absolue recule alors que les inégalités augmentent : les deux phénomènes sont distincts",
+      "La pauvreté a augmenté dans tous les sens du terme, puisque la part sous le seuil à 60 % a augmenté",
+      "Les inégalités ont diminué, puisque le niveau de vie médian a progressé entre 2000 et 2020",
+      "Les inégalités ont disparu, puisque la part des habitants sous le panier vital est passée sous les 5 %"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’évolution du bas de la distribution et le rapport D9/D1.",
+     "explication": "Une société peut **réduire la pauvreté** et voir les **inégalités augmenter**, si le haut progresse plus vite que le bas."
+    }
+   ]
+  },
+  {
+   "chapitre": "673af4e1-3f0b-56bf-8501-64cd73d12ebf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire les déciles",
+   "competence": "lire-tableau",
+   "situation": "Dans un pays imaginaire, on a classé la population par niveau de vie croissant et relevé les neuf seuils qui la partagent en dix groupes égaux.",
+   "documents": [
+    {
+     "id": "deciles",
+     "type": "tableau",
+     "titre": "Les neuf déciles du niveau de vie (€ par mois)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Décile",
+      "Seuil (€ par mois)"
+     ],
+     "lignes": [
+      [
+       "D1",
+       900
+      ],
+      [
+       "D2",
+       1100
+      ],
+      [
+       "D3",
+       1300
+      ],
+      [
+       "D4",
+       1500
+      ],
+      [
+       "D5",
+       1700
+      ],
+      [
+       "D6",
+       1900
+      ],
+      [
+       "D7",
+       2200
+      ],
+      [
+       "D8",
+       2600
+      ],
+      [
+       "D9",
+       3150
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deciles",
+     "enonce": "Touche la médiane de cette distribution (le décile qui partage la population en deux moitiés).",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "La médiane sépare 50 % de la population des 50 % restants.",
+     "explication": "**D5** est la médiane : 50 % de la population vit en dessous de 1 700 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport interdécile D9/D1 ? (un chiffre après la virgule)",
+     "reponse": 3.5,
+     "tolerance": 0.05,
+     "aide": "Divise le seuil D9 par le seuil D1.",
+     "explication": "3 150 ÷ 900 = **3,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le seuil de pauvreté est fixé à 60 % de la médiane. Quel est-il, en euros ?",
+     "reponse": 1020,
+     "unite": "€",
+     "aide": "Calcule 0,6 × 1 700.",
+     "explication": "0,6 × 1 700 = **1 020 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie D9 = 3 150 € ?",
+     "options": [
+      "10 % de la population a un niveau de vie supérieur à 3 150 € par mois",
+      "Les 10 % les plus aisés gagnent chacun exactement 3 150 € par mois",
+      "Les 10 % les plus aisés détiennent 3 150 € de patrimoine moyen chacun",
+      "90 % de la population a un niveau de vie supérieur à 3 150 € par mois"
+     ],
+     "reponse": 0,
+     "aide": "D9 est un seuil, pas une moyenne.",
+     "explication": "D9 est un **seuil** : au-dessus se trouvent les 10 % les plus aisés. Ce n’est pas « le revenu des 10 % les plus riches »."
+    }
+   ]
+  },
+  {
+   "chapitre": "673af4e1-3f0b-56bf-8501-64cd73d12ebf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe de Lorenz",
+   "competence": "lire-graphique",
+   "situation": "Deux pays imaginaires, A et B, ont chacun classé leur population du plus modeste au plus aisé. Un graphique montre la part du revenu détenue par la part cumulée de la population.",
+   "documents": [
+    {
+     "id": "lorenz",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courbes de Lorenz (part cumulée du revenu, %)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "Égalité parfaite",
+       "valeurs": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100
+       ],
+       "teinte": "gris"
+      },
+      {
+       "nom": "Pays A",
+       "valeurs": [
+        0,
+        6,
+        16,
+        32,
+        56,
+        100
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Pays B",
+       "valeurs": [
+        0,
+        10,
+        25,
+        44,
+        68,
+        100
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Part cumulée du revenu",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Part cumulée de la population (%)"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans le pays A, quelle part du revenu les 40 % les plus modestes détiennent-ils ? (lecture approchée)",
+     "reponse": 16,
+     "unite": "%",
+     "tolerance": 2,
+     "aide": "Lis la courbe du pays A au niveau de 40 % de la population.",
+     "explication": "Les 40 % les plus modestes détiennent environ **16 %** du revenu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le pays A, quelle part du revenu les 20 % les plus aisés détiennent-ils ? (lecture approchée)",
+     "reponse": 44,
+     "unite": "%",
+     "tolerance": 2,
+     "aide": "Les 80 % les plus modestes en détiennent 56 %.",
+     "explication": "100 − 56 = **44 %** du revenu pour les 20 % les plus aisés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel pays est le plus inégalitaire ?",
+     "options": [
+      "Le pays A, dont la courbe s’écarte davantage de la droite d’égalité parfaite",
+      "Le pays B, dont la courbe est plus proche de l’axe horizontal de départ",
+      "Les deux pays à égalité, puisque les deux courbes arrivent à 100 % en fin de parcours",
+      "Aucun des deux, puisque leurs courbes se situent toutes deux sous la diagonale"
+     ],
+     "reponse": 0,
+     "aide": "Plus la courbe s’éloigne de la diagonale, plus la distribution est inégale.",
+     "explication": "La courbe du pays **A** est la plus éloignée de la diagonale : son indice de Gini est plus élevé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle serait la courbe d’un pays où une seule personne détiendrait tout le revenu ?",
+     "options": [
+      "Collée à l’axe horizontal presque jusqu’au bout, puis remontant brutalement à 100 %",
+      "Confondue avec la diagonale d’égalité parfaite sur tout son parcours, de 0 à 100 %",
+      "Située juste sous la diagonale, avec un léger écart visible dans toute sa partie centrale",
+      "Horizontale à 100 % dès le départ, car la première personne détiendrait déjà tout"
+     ],
+     "reponse": 0,
+     "aide": "Celui qui détient tout est tout en haut de la classe des revenus.",
+     "explication": "La courbe reste à **0** pour presque tous, puis saute à 100 % : le Gini vaut alors presque **1**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement.",
+     "texte": "Plus la courbe de Lorenz s’écarte de la ___, plus l’indice de ___ est proche de 1.",
+     "reponses": [
+      [
+       "diagonale"
+      ],
+      [
+       "Gini"
+      ]
+     ],
+     "banque": [
+      "diagonale",
+      "Gini",
+      "médiane",
+      "Lorenz",
+      "horizontale"
+     ],
+     "aide": "L’égalité parfaite est représentée par une droite.",
+     "explication": "Plus la courbe s’écarte de la **diagonale**, plus l’indice de **Gini** est proche de 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "673af4e1-3f0b-56bf-8501-64cd73d12ebf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Avant et après redistribution",
+   "competence": "modeliser",
+   "situation": "Deux ménages imaginaires, A et B, reçoivent des revenus d’activité très différents. L’impôt et les prestations modifient l’écart entre eux.",
+   "documents": [
+    {
+     "id": "menages",
+     "type": "tableau",
+     "titre": "Du revenu primaire au revenu disponible (€ par mois)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Ménage A",
+      "Ménage B"
+     ],
+     "lignes": [
+      [
+       "Revenus d’activité",
+       1000,
+       3000
+      ],
+      [
+       "Prestations reçues",
+       600,
+       100
+      ],
+      [
+       "Prélèvements payés (impôts, cotisations)",
+       200,
+       900
+      ],
+      [
+       "Revenu disponible",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menages",
+     "enonce": "Touche la ligne qui montre ce que la collectivité verse aux ménages.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Les prélèvements sont payés ; que sont les prestations ?",
+     "explication": "Les **prestations reçues** sont versées par la collectivité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le revenu disponible du ménage A, en euros ?",
+     "reponse": 1400,
+     "unite": "€",
+     "aide": "Revenus d’activité + prestations − prélèvements.",
+     "explication": "1 000 + 600 − 200 = **1 400 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le revenu disponible du ménage B, en euros ?",
+     "reponse": 2200,
+     "unite": "€",
+     "aide": "3 000 + 100 − 900.",
+     "explication": "3 000 + 100 − 900 = **2 200 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le rapport des revenus de B à A était de 3 avant redistribution. Quel est-il après, au centième près ?",
+     "reponse": 1.57,
+     "tolerance": 0.01,
+     "aide": "Divise le revenu disponible de B par celui de A.",
+     "explication": "2 200 ÷ 1 400 ≈ **1,57** : la redistribution réduit fortement l’écart."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que ne dit pas ce type de calcul sur les inégalités ?",
+     "options": [
+      "Il ne dit rien du patrimoine, de la mobilité entre positions, ni des inégalités non monétaires",
+      "Il ne dit rien du niveau des revenus, puisque seul leur rapport est calculé ici",
+      "Il ne dit rien de la redistribution, puisqu’il ignore les prestations et les prélèvements",
+      "Il ne dit rien de l’écart entre les deux ménages, puisqu’il ne donne qu’un seul chiffre"
+     ],
+     "reponse": 0,
+     "aide": "Un indicateur ne parle que de ce qu’il mesure.",
+     "explication": "Choisir un indicateur, c’est choisir **ce dont on veut parler** : revenu, pas patrimoine, pas mobilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "775fcb8d-e304-51b1-badb-a9dbe8f35df2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois mesures, trois égalités",
+   "competence": "analyser-document",
+   "situation": "Une ville imaginaire étudie trois mesures pour lutter contre les inégalités. Chacune repose sur une conception différente de l’égalité.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Trois mesures envisagées",
+     "source": "Mesures imaginées pour l’exercice.",
+     "colonnes": [
+      "Mesure",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Mesure 1",
+       "Interdire à un employeur de refuser un CV à cause du nom du candidat"
+      ],
+      [
+       "Mesure 2",
+       "Offrir du soutien scolaire gratuit aux élèves des quartiers défavorisés"
+      ],
+      [
+       "Mesure 3",
+       "Verser une aide plus élevée aux ménages modestes pour réduire l’écart des niveaux de vie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à la conception de l’égalité qu’elle met en œuvre.",
+     "paires": [
+      [
+       "Interdire de refuser un CV à cause du nom",
+       "Égalité des droits"
+      ],
+      [
+       "Soutien scolaire gratuit en quartier défavorisé",
+       "Égalité des chances"
+      ],
+      [
+       "Aide plus élevée pour réduire l’écart des niveaux de vie",
+       "Égalité des situations"
+      ]
+     ],
+     "aide": "Droits : mêmes règles. Chances : mêmes possibilités au départ. Situations : réduire l’écart lui-même.",
+     "explication": "**Droits** : les mêmes règles pour tous. **Chances** : les mêmes possibilités au départ. **Situations** : réduire l’écart lui-même."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la mesure qui traite différemment certains élèves pour leur donner les mêmes possibilités.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Qui bénéficie du soutien gratuit ?",
+     "explication": "La **mesure 2** réserve un soutien à certains élèves : c’est un traitement différencié au service de l’égalité des chances."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’égalité des chances peut-elle heurter l’égalité stricte des droits ?",
+     "options": [
+      "Elle suppose de traiter différemment des personnes pour leur donner des possibilités comparables",
+      "Elle interdit à l’État de mener toute politique de redistribution des revenus",
+      "Elle exige que tous les individus obtiennent exactement le même revenu à la fin",
+      "Elle refuse que des règles soient appliquées de la même façon aux élèves et aux adultes"
+     ],
+     "reponse": 0,
+     "aide": "Traiter tout le monde pareil donne-t-il les mêmes possibilités ?",
+     "explication": "Donner les mêmes possibilités suppose des traitements **différenciés** (discrimination positive) : cela heurte l’égalité stricte des droits."
+    }
+   ]
+  },
+  {
+   "chapitre": "775fcb8d-e304-51b1-badb-a9dbe8f35df2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre juges d’une même réforme",
+   "competence": "argumenter",
+   "situation": "Dans une société imaginaire de deux ménages, une réforme augmente les revenus de tous, mais pas dans les mêmes proportions. Quatre conceptions de la justice la jugent.",
+   "documents": [
+    {
+     "id": "reforme",
+     "type": "tableau",
+     "titre": "Revenus avant et après la réforme (€ par mois)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ménage",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Ménage modeste",
+       1000,
+       1100
+      ],
+      [
+       "Ménage aisé",
+       4000,
+       4500
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reforme",
+     "enonce": "Touche la case qui donne le revenu du ménage le plus défavorisé après la réforme.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Le plus défavorisé est le ménage modeste.",
+     "explication": "Le ménage modeste passe à **1 100 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de revenu entre les deux ménages après la réforme, en euros ?",
+     "reponse": 3400,
+     "unite": "€",
+     "aide": "Soustrais 1 100 à 4 500.",
+     "explication": "4 500 − 1 100 = **3 400 €**, contre 3 000 € avant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le revenu total des deux ménages a-t-il augmenté, en euros ?",
+     "reponse": 600,
+     "unite": "€",
+     "aide": "Additionne les deux gains : 100 € et 500 €.",
+     "explication": "100 + 500 = **600 €** de revenu total en plus."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque conception de la justice à son verdict sur la réforme.",
+     "paires": [
+      [
+       "Rawls (principe de différence)",
+       "Juste : les plus modestes y gagnent 100 €"
+      ],
+      [
+       "Bentham (utilitarisme)",
+       "Juste : le revenu total augmente de 600 €"
+      ],
+      [
+       "Égalité des situations",
+       "Injuste : l’écart passe de 3 000 à 3 400 €"
+      ],
+      [
+       "Nozick (libertarisme)",
+       "Juste si ces revenus viennent d’échanges libres et légitimes"
+      ]
+     ],
+     "aide": "Chaque auteur a son critère : plus défavorisés, total, écart, processus.",
+     "explication": "Une même donnée appelle des conclusions **opposées** selon la conception retenue : il faut les distinguer **avant** de juger."
+    }
+   ]
+  },
+  {
+   "chapitre": "775fcb8d-e304-51b1-badb-a9dbe8f35df2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ceux qui ne demandent pas",
+   "competence": "analyser-document",
+   "situation": "Une prestation imaginaire, destinée aux ménages modestes, est versée sur demande. Un article s’interroge : pourquoi tant d’ayants droit ne la demandent-ils pas ?",
+   "documents": [
+    {
+     "id": "presta",
+     "type": "tableau",
+     "titre": "La prestation X",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Personnes qui y ont droit",
+       "10 000"
+      ],
+      [
+       "Personnes qui la perçoivent",
+       "6 500"
+      ],
+      [
+       "Montant moyen versé par personne",
+       "300 € par mois"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une aide qui n’arrive pas",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Beaucoup d’ayants droit disent ne pas connaître la prestation. D’autres renoncent devant des [[f|formulaires]] trop longs ou redoutent d’être stigmatisés.",
+      "Le non-recours reste un angle mort : une aide existe sur le papier, mais elle ne touche qu’une partie de ceux qu’elle vise."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de non-recours à cette prestation, en % des ayants droit ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Calcule la part de ceux qui ont droit mais ne la perçoivent pas.",
+     "explication": "(10 000 − 6 500) ÷ 10 000 = **35 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel montant n’est pas versé en un an, en millions d’euros ? (3 500 personnes × 300 € × 12 mois)",
+     "reponse": 12.6,
+     "unite": "millions €",
+     "tolerance": 0.05,
+     "aide": "Calcule 3 500 × 300 × 12, puis divise par un million.",
+     "explication": "3 500 × 300 × 12 = 12 600 000, soit **12,6 millions d’euros** par an."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche le mot qui désigne un obstacle administratif cité dans l’article.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cherche un document à remplir.",
+     "explication": "Les **formulaires** trop longs découragent : c’est la complexité des droits."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque dispositif selon sa logique de protection.",
+     "categories": [
+      "Assurance",
+      "Assistance"
+     ],
+     "items": [
+      [
+       "Allocation chômage financée par cotisations",
+       0
+      ],
+      [
+       "Revenu de solidarité active (RSA)",
+       1
+      ],
+      [
+       "Pension de retraite",
+       0
+      ],
+      [
+       "Minimum vieillesse",
+       1
+      ],
+      [
+       "Remboursement des soins par l’assurance maladie",
+       0
+      ]
+     ],
+     "aide": "L’assurance est liée aux cotisations ; l’assistance à un besoin.",
+     "explication": "L’**assurance** repose sur des cotisations ; l’**assistance** sur un besoin constaté, sans cotisation préalable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le non-recours pose-t-il un problème de justice sociale ?",
+     "options": [
+      "Des personnes ayant droit à l’aide ne la reçoivent pas : l’objectif de la prestation n’est pas atteint",
+      "Les personnes qui perçoivent la prestation sont trop nombreuses pour le budget prévu",
+      "La prestation fait perdre l’envie de travailler à ceux qui en bénéficient et la perçoivent",
+      "La prestation est versée à des personnes qui n’y ont pas droit en raison de contrôles insuffisants"
+     ],
+     "reponse": 0,
+     "aide": "Une aide prévue mais non reçue atteint-elle son but ?",
+     "explication": "Le **non-recours** laisse une part des ayants droit sans aide : la justice sociale visée n’est pas atteinte."
+    }
+   ]
+  },
+  {
+   "chapitre": "9e114fd7-8be1-5f21-9f50-8ae7bc9344cc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le CDI, norme ou ticket d’entrée ?",
+   "competence": "lire-graphique",
+   "situation": "Le CDI reste la forme d’emploi la plus répandue. Mais regarde-t-on la même chose quand on compte les emplois existants et quand on compte les embauches ?",
+   "documents": [
+    {
+     "id": "cdi",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le CDI dans l’emploi et dans les embauches (%)",
+     "source": "Ordres de grandeur arrondis, France.",
+     "categories": [
+      "Part de l’emploi total",
+      "Part des embauches"
+     ],
+     "series": [
+      {
+       "nom": "CDI",
+       "valeurs": [
+        75,
+        13
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Autres formes particulières",
+       "valeurs": [
+        13,
+        87
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Part",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Type de mesure"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cdi",
+     "enonce": "Touche la mesure pour laquelle le CDI est le moins présent.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare la hauteur de la barre de CDI dans chaque groupe.",
+     "explication": "Dans les **embauches**, le CDI ne représente qu’environ 13 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 1 000 embauches, combien sont des CDI, environ ? (utilise 13 %)",
+     "reponse": 130,
+     "unite": "embauches",
+     "aide": "Calcule 13 % de 1 000.",
+     "explication": "13 % de 1 000 = **130** CDI."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment concilier les deux barres ?",
+     "options": [
+      "Le CDI domine parmi les emplois existants mais n’est plus la porte d’entrée dans l’emploi",
+      "Le CDI a disparu du marché du travail : il ne représente plus qu’un emploi sur huit",
+      "Les formes particulières dominent parmi les emplois existants comme parmi les embauches",
+      "Les embauches en CDI sont plus nombreuses que les embauches en contrat court, selon le graphique"
+     ],
+     "reponse": 0,
+     "aide": "Un stock et un flux ne se comptent pas de la même façon.",
+     "explication": "Le CDI est majoritaire dans le **stock** des emplois mais minoritaire dans le **flux** des embauches."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement.",
+     "texte": "Le CDI est devenu une position à ___ , non un point de ___.",
+     "reponses": [
+      [
+       "atteindre"
+      ],
+      [
+       "départ"
+      ]
+     ],
+     "banque": [
+      "atteindre",
+      "départ",
+      "quitter",
+      "arrivée",
+      "fuir"
+     ],
+     "aide": "Pense à ce que l’on obtient après plusieurs contrats courts.",
+     "explication": "Le CDI est une position à **atteindre**, non un point de **départ** : c’est le chiffre qui fait la différence en copie."
+    }
+   ]
+  },
+  {
+   "chapitre": "9e114fd7-8be1-5f21-9f50-8ae7bc9344cc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un sablier de qualifications",
+   "competence": "analyser-document",
+   "situation": "Dans un pays imaginaire, on répartit les emplois en trois groupes selon la qualification. Le tableau compare 1990 et 2020.",
+   "documents": [
+    {
+     "id": "pola",
+     "type": "tableau",
+     "titre": "Répartition des emplois (% du total)",
+     "source": "Chiffres imaginés pour l’exercice, dans le sens des évolutions observées.",
+     "colonnes": [
+      "Groupe d’emplois",
+      "1990",
+      "2020"
+     ],
+     "lignes": [
+      [
+       "Très qualifiés",
+       25,
+       33
+      ],
+      [
+       "Qualification intermédiaire",
+       50,
+       37
+      ],
+      [
+       "Peu qualifiés (services)",
+       25,
+       30
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pola",
+     "enonce": "Touche la ligne du groupe dont la part recule.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le groupe dont le pourcentage diminue.",
+     "explication": "Seule la part des emplois de **qualification intermédiaire** recule, de 50 à 37 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage la part des emplois intermédiaires a-t-elle évolué ? Donne un nombre négatif.",
+     "reponse": -13,
+     "unite": "points",
+     "aide": "Soustrais 50 à 37.",
+     "explication": "37 − 50 = **− 13 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, la part des emplois très qualifiés a-t-elle augmenté ?",
+     "reponse": 32,
+     "unite": "%",
+     "aide": "(33 − 25) ÷ 25 × 100.",
+     "explication": "(33 − 25) ÷ 25 = 0,32, soit **+ 32 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque emploi selon sa place dans la polarisation.",
+     "categories": [
+      "En haut",
+      "Au milieu",
+      "En bas"
+     ],
+     "items": [
+      [
+       "Ingénieure en intelligence artificielle",
+       0
+      ],
+      [
+       "Médecin hospitalier",
+       0
+      ],
+      [
+       "Employée de saisie comptable",
+       1
+      ],
+      [
+       "Technicien de maintenance en usine",
+       1
+      ],
+      [
+       "Aide à domicile",
+       2
+      ],
+      [
+       "Livreur à vélo",
+       2
+      ]
+     ],
+     "aide": "Au milieu : emplois routiniers, exposés à l’automatisation.",
+     "explication": "**En haut** : très qualifiés ; **au milieu** : routiniers, exposés à l’automatisation ; **en bas** : services difficilement automatisables."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les emplois peu qualifiés de services progressent-ils ?",
+     "options": [
+      "Ils sont difficilement automatisables et répondent à une demande locale en hausse",
+      "Ils sont très bien rémunérés, ce qui attire de plus en plus de diplômés du supérieur",
+      "Ils ont été créés pour remplacer les emplois qualifiés supprimés dans les bureaux",
+      "Ils bénéficient d’un contrat de travail plus protecteur que les emplois intermédiaires"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’un robot ne sait pas faire.",
+     "explication": "Aide à domicile, livraison, nettoyage : des tâches **peu automatisables** et toujours demandées."
+    }
+   ]
+  },
+  {
+   "chapitre": "9e114fd7-8be1-5f21-9f50-8ae7bc9344cc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Indépendant sur le papier",
+   "competence": "analyser-document",
+   "situation": "Sami livre des repas pour une plateforme. Il est inscrit comme travailleur indépendant. Il raconte son quotidien, puis on calcule ce qu’il gagne.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Sami",
+       "emoji": "🚴",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "Tu es ton propre patron, non ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Je choisis mes horaires, mais l’appli fixe le prix des courses et me [[s|désactive]] si j’en refuse trop."
+      }
+     ]
+    },
+    {
+     "id": "revenu",
+     "type": "tableau",
+     "titre": "Une semaine de Sami",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Heures de travail",
+       40
+      ],
+      [
+       "Courses par heure",
+       2
+      ],
+      [
+       "Prix d’une course (€)",
+       5
+      ],
+      [
+       "Cotisations et frais de la plateforme (% du chiffre d’affaires)",
+       "30 %"
+      ],
+      [
+       "Carburant et entretien (€ par heure)",
+       1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui montre que la plateforme sanctionne le livreur.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche ce que fait l’appli quand il refuse des courses.",
+     "explication": "« **désactive** » : la plateforme exerce un pouvoir de sanction, signe de subordination."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le chiffre d’affaires de Sami sur la semaine, en euros ?",
+     "reponse": 400,
+     "unite": "€",
+     "aide": "Heures × courses par heure × prix d’une course.",
+     "explication": "40 × 2 × 5 = **400 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après les cotisations (30 %) et le carburant (1 € par heure), quel est son revenu net par heure, en euros ?",
+     "reponse": 6,
+     "unite": "€",
+     "aide": "400 − 120 − 40, puis divise par 40.",
+     "explication": "(400 − 120 − 40) ÷ 40 = **6 € par heure**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon ce qu’il indique.",
+     "categories": [
+      "Signe d’indépendance",
+      "Signe de subordination économique"
+     ],
+     "items": [
+      [
+       "Il choisit ses horaires de connexion",
+       0
+      ],
+      [
+       "Le prix de la course est fixé par l’appli",
+       1
+      ],
+      [
+       "Il possède son propre vélo",
+       0
+      ],
+      [
+       "L’appli le désactive s’il refuse des courses",
+       1
+      ],
+      [
+       "Il est noté par les clients, ce qui conditionne ses commandes",
+       1
+      ]
+     ],
+     "aide": "Indépendance : liberté de décider. Subordination : décisions imposées.",
+     "explication": "Le livreur est **juridiquement indépendant** mais **économiquement subordonné** : tarifs, sanctions et notation sont imposés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que risque la plateforme devant un tribunal ?",
+     "options": [
+      "Une requalification de la relation en contrat de travail, si la subordination est établie",
+      "Une interdiction définitive de proposer des livraisons à tous les livreurs indépendants",
+      "Une obligation de faire signer un CDI à tous les livreurs de moins de 25 ans",
+      "Une suppression automatique de la note donnée par les clients à chaque livreur"
+     ],
+     "reponse": 0,
+     "aide": "Plusieurs décisions de justice se sont déjà prononcées sur ce point.",
+     "explication": "Plusieurs décisions de justice ont **requalifié** ces relations en contrat de travail quand la subordination était établie."
+    }
+   ]
+  },
+  {
+   "chapitre": "15c2d400-26d0-572b-99a7-60d260fb2102",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Décomposer un geste, à la Taylor",
+   "competence": "modeliser",
+   "situation": "Dans un atelier imaginaire, un ouvrier monte un boîtier en cinq gestes. On chronomètre chaque geste pour organiser le travail comme le propose Taylor.",
+   "documents": [
+    {
+     "id": "gestes",
+     "type": "tableau",
+     "titre": "Le montage d’un boîtier",
+     "source": "Chronométrage imaginé pour l’exercice.",
+     "colonnes": [
+      "Geste",
+      "Durée (s)"
+     ],
+     "lignes": [
+      [
+       "Saisir le boîtier",
+       12
+      ],
+      [
+       "Poser la carte",
+       8
+      ],
+      [
+       "Visser (4 vis)",
+       15
+      ],
+      [
+       "Clipser le couvercle",
+       5
+      ],
+      [
+       "Coller l’étiquette",
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gestes",
+     "enonce": "Touche le geste qui fixe la cadence d’une chaîne où chaque ouvrier répète un seul geste.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Sur une chaîne, on avance au rythme du poste le plus lent.",
+     "explication": "« Visser » dure **15 s** : c’est le geste le plus long, il impose le rythme à la chaîne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de boîtiers un ouvrier qui fait les cinq gestes monte-t-il en une heure ?",
+     "reponse": 72,
+     "unite": "boîtiers",
+     "aide": "Additionne les durées, puis divise 3 600 s par le total.",
+     "explication": "Un boîtier demande 50 s : 3 600 ÷ 50 = **72 boîtiers**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur une chaîne de cinq ouvriers, un geste chacun, combien de boîtiers sortent en une heure ? (un boîtier toutes les 15 s)",
+     "reponse": 240,
+     "unite": "boîtiers",
+     "aide": "Divise 3 600 s par 15 s.",
+     "explication": "3 600 ÷ 15 = **240 boîtiers** : la productivité est multipliée par plus de trois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Découper le montage en gestes simples est un exemple de…",
+     "options": [
+      "Division horizontale du travail, en tâches élémentaires, répétitives et chronométrées",
+      "Division verticale du travail, entre ceux qui conçoivent et ceux qui exécutent",
+      "Juste-à-temps, où l’on produit seulement ce que les clients ont commandé",
+      "Kaizen, où les suggestions des opérateurs améliorent peu à peu la production"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit de découper les tâches, pas de séparer concevoir et exécuter.",
+     "explication": "C’est la **division horizontale** de Taylor. La division **verticale**, elle, sépare la conception (bureau des méthodes) de l’exécution."
+    }
+   ]
+  },
+  {
+   "chapitre": "15c2d400-26d0-572b-99a7-60d260fb2102",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux usines, deux modèles",
+   "competence": "analyser-document",
+   "situation": "Deux usines imaginaires fabriquent le même appareil. L’une est organisée selon le modèle taylorien-fordiste, l’autre selon le modèle toyotiste. Un tableau les compare.",
+   "documents": [
+    {
+     "id": "usines",
+     "type": "tableau",
+     "titre": "Usine A et usine B",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Critère",
+      "Usine A",
+      "Usine B"
+     ],
+     "lignes": [
+      [
+       "Stock moyen de pièces",
+       "21 jours",
+       "1 jour"
+      ],
+      [
+       "Contrôle de la qualité",
+       "En fin de chaîne, par des contrôleurs",
+       "À son poste, par l’opérateur"
+      ],
+      [
+       "Postes tenus par un ouvrier",
+       "1",
+       "4"
+      ],
+      [
+       "Suggestions d’amélioration par ouvrier et par an",
+       "0",
+       "12"
+      ],
+      [
+       "Produits",
+       "Un seul modèle",
+       "Dix variantes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le stock de l’usine A représente combien de fois celui de l’usine B ?",
+     "reponse": 21,
+     "unite": "fois",
+     "aide": "Divise 21 jours par 1 jour.",
+     "explication": "21 ÷ 1 = **21 fois** : l’usine B produit presque à la commande."
+    },
+    {
+     "type": "zone",
+     "document": "usines",
+     "enonce": "Touche la case qui renvoie au kaizen (amélioration continue par les opérateurs).",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Le kaizen repose sur les idées venues des opérateurs.",
+     "explication": "Les **12 suggestions** par ouvrier et par an de l’usine B illustrent le kaizen."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces deux usines produit à la commande, et à quoi le voit-on ?",
+     "options": [
+      "L’usine B : un stock d’un jour seulement signifie qu’elle produit au fil des commandes",
+      "L’usine A : un stock de 21 jours prouve qu’elle ajuste sa production à chaque commande",
+      "L’usine B : ses dix variantes prouvent qu’elle fabrique sans jamais regarder la demande",
+      "L’usine A : un seul modèle signifie qu’elle ne produit que sur commande précise"
+     ],
+     "reponse": 0,
+     "aide": "Un gros stock signifie qu’on produit avant d’avoir vendu.",
+     "explication": "Le **juste-à-temps** se reconnaît à un stock très réduit : on produit ce qui est demandé, quand c’est demandé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organisation à sa marque de fabrique.",
+     "paires": [
+      [
+       "Taylor",
+       "Un bureau des méthodes qui conçoit, des ouvriers qui exécutent"
+      ],
+      [
+       "Ford",
+       "La chaîne de montage et le five dollars day"
+      ],
+      [
+       "Ohno (Toyota)",
+       "Le juste-à-temps et le kaizen"
+      ],
+      [
+       "Usine A du tableau",
+       "Contrôle en bout de chaîne et poste unique"
+      ]
+     ],
+     "aide": "Chaque modèle a ses inventeurs et ses pratiques.",
+     "explication": "Aucun modèle n’a remplacé le précédent : une même entreprise peut combiner **taylorisme**, **toyotisme** et **management par objectifs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "15c2d400-26d0-572b-99a7-60d260fb2102",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Forte demande, faible latitude",
+   "competence": "raisonner",
+   "situation": "Un entrepôt imaginaire passe au juste-à-temps et à un suivi chronométré des préparateurs de commandes. La direction se félicite : la productivité monte. Le médecin du travail s’inquiète.",
+   "documents": [
+    {
+     "id": "postes",
+     "type": "tableau",
+     "titre": "Trois postes imaginaires",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Demande psychologique",
+      "Latitude décisionnelle"
+     ],
+     "lignes": [
+      [
+       "Préparateur de commandes chronométré",
+       "Forte",
+       "Faible"
+      ],
+      [
+       "Conceptrice d’outils internes",
+       "Forte",
+       "Forte"
+      ],
+      [
+       "Gardienne d’un site peu fréquenté",
+       "Faible",
+       "Faible"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "ent",
+     "type": "tableau",
+     "titre": "Avant et après le juste-à-temps",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Colis préparés par heure",
+       30,
+       40
+      ],
+      [
+       "Temps d’attente entre deux colis (s)",
+       40,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "postes",
+     "enonce": "Touche le poste où le modèle de Karasek prévoit le risque de souffrance le plus élevé.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "La souffrance naît d’une forte demande et d’une faible latitude.",
+     "explication": "Le **préparateur chronométré** cumule forte demande et faible latitude : c’est la situation de tension de Karasek."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le nombre de colis par heure a-t-il augmenté ? (arrondi à l’unité)",
+     "reponse": 33,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "(40 − 30) ÷ 30 × 100.",
+     "explication": "(40 − 30) ÷ 30 ≈ 0,33, soit **+ 33 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes disposent désormais les préparateurs pour chaque colis ?",
+     "reponse": 90,
+     "unite": "s",
+     "aide": "Divise 3 600 s par 40 colis.",
+     "explication": "3 600 ÷ 40 = **90 s** par colis, contre 120 s avant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la baisse du temps d’attente entre deux colis, de 40 s à 10 s ?",
+     "options": [
+      "Les temps morts qui servaient de respiration ont disparu : le travail est plus intense",
+      "Le travail est devenu moins intense, puisque les colis sont préparés plus vite",
+      "Le travail est devenu plus autonome, puisque les préparateurs choisissent leur rythme",
+      "Le travail est redevenu taylorien, puisque chaque geste a été décomposé en gestes simples"
+     ],
+     "reponse": 0,
+     "aide": "Que devient la pause quand on supprime les temps d’attente ?",
+     "explication": "Le juste-à-temps supprime les **temps morts** : le travail devient plus varié **et** plus intense."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de copie est la plus rigoureuse ?",
+     "options": [
+      "Le gain de productivité se paie d’une intensité accrue, d’où un risque pour la santé sans marge de décision",
+      "Le gain de productivité est sans conséquence sur la santé, tant que le salaire augmente",
+      "Le juste-à-temps améliore toujours la santé au travail, car il supprime la fatigue liée aux stocks",
+      "Le modèle de Karasek ne s’applique pas aux entrepôts, seulement aux bureaux d’études"
+     ],
+     "reponse": 0,
+     "aide": "Relie productivité, intensité et latitude.",
+     "explication": "Forte demande et faible latitude : les **risques psychosociaux** progressent, première cause d’inquiétude des médecins du travail."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe7bacb2-6584-59ec-be90-866c78b5ce8c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que le travail apporte à Farid",
+   "competence": "analyser-texte",
+   "situation": "Farid est boulanger. Un court texte raconte sa journée, où l’on retrouve les trois canaux par lesquels le travail intègre : économique, social, symbolique.",
+   "documents": [
+    {
+     "id": "farid",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une journée de Farid",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chaque fin de mois, son [[e|salaire]] arrive sur son compte. Dès quatre heures, il retrouve son [[s|équipe]] au fournil.",
+      "Quand on lui demande son métier, il répond, [[y|fier]] : « Boulanger ! »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "farid",
+     "enonce": "Touche le mot qui illustre le canal économique de l’intégration.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Le canal économique, c’est l’argent qui rentre.",
+     "explication": "Le **salaire** donne un revenu, donc une autonomie : c’est le canal économique."
+    },
+    {
+     "type": "zone",
+     "document": "farid",
+     "enonce": "Touche le mot qui renvoie à la reconnaissance et à l’identité.",
+     "reponse": [
+      "y"
+     ],
+     "aide": "Quel mot dit que son métier lui donne une place ?",
+     "explication": "Être **fier** de dire son métier, c’est le canal **symbolique** : un statut, une identité."
+    },
+    {
+     "type": "categories",
+     "enonce": "Farid perd son emploi. Range chaque perte selon le canal touché.",
+     "categories": [
+      "Économique",
+      "Social",
+      "Symbolique"
+     ],
+     "items": [
+      [
+       "Il n’a plus de fiche de paie",
+       0
+      ],
+      [
+       "Il ne retrouve plus ses collègues au fournil",
+       1
+      ],
+      [
+       "Il ne sait plus quoi répondre à « que fais-tu dans la vie ? »",
+       2
+      ],
+      [
+       "Il doit renoncer à ses loisirs faute de budget",
+       0
+      ],
+      [
+       "Ses amis de travail cessent de lui écrire",
+       1
+      ],
+      [
+       "Il a perdu la fierté de son savoir-faire",
+       2
+      ]
+     ],
+     "aide": "Revenu, relations, reconnaissance : trois canaux distincts.",
+     "explication": "Le chômage de longue durée atteint les **trois canaux à la fois** : Schnapper a montré la désorganisation du temps et de l’identité."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe7bacb2-6584-59ec-be90-866c78b5ce8c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux villes, deux solidarités",
+   "competence": "analyser-document",
+   "situation": "Durkheim oppose deux formes de solidarité. Un tableau imaginaire compare un village de 1850 et une ville de 2020.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "tableau",
+     "titre": "Saint-Aubin (1850) et Corbeil (2020)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Saint-Aubin (1850)",
+      "Corbeil (2020)"
+     ],
+     "lignes": [
+      [
+       "Part des habitants qui vivent de l’agriculture",
+       "90 %",
+       "2 %"
+      ],
+      [
+       "Nombre de métiers différents recensés",
+       8,
+       310
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche la case qui montre la division du travail la plus poussée.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Plus il y a de métiers différents, plus le travail est divisé.",
+     "explication": "**310 métiers** à Corbeil : la division du travail y est beaucoup plus poussée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois plus de métiers y a-t-il à Corbeil qu’à Saint-Aubin ? (arrondi à l’unité)",
+     "reponse": 39,
+     "unite": "fois",
+     "tolerance": 0.5,
+     "aide": "Divise 310 par 8.",
+     "explication": "310 ÷ 8 ≈ 38,75, soit environ **39 fois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle solidarité domine à Corbeil ?",
+     "options": [
+      "La solidarité organique : les habitants dépendent les uns des autres pour des fonctions complémentaires",
+      "La solidarité mécanique : les habitants se ressemblent par leur métier et leurs croyances communes",
+      "Aucune solidarité : la division du travail a détruit tout lien entre les habitants",
+      "La solidarité mécanique, parce que l’agriculture y reste le seul métier indispensable"
+     ],
+     "reponse": 0,
+     "aide": "Quand les métiers se multiplient, sur quoi repose l’unité ?",
+     "explication": "La **complémentarité** des fonctions fonde la solidarité **organique** des sociétés modernes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel cas la solidarité organique ne se construit-elle pas ?",
+     "options": [
+      "Quand la division du travail est anomique, sans règles reconnues qui l’encadrent",
+      "Quand les métiers sont trop nombreux pour que les habitants puissent se connaître",
+      "Quand la ville compte moins d’habitants que n’en comptait le village d’origine",
+      "Quand les habitants exercent des métiers trop différents de ceux de leurs parents"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux règles qui encadrent la division du travail.",
+     "explication": "Elle suppose une division du travail **non anomique**, encadrée par des règles reconnues."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque auteur à son apport.",
+     "paires": [
+      [
+       "Durkheim",
+       "Solidarité mécanique et organique"
+      ],
+      [
+       "Castel",
+       "Désaffiliation, un continuum"
+      ],
+      [
+       "Schnapper",
+       "Le chômage désorganise le temps et l’identité"
+      ]
+     ],
+     "aide": "Trois auteurs, trois notions du chapitre.",
+     "explication": "Durkheim pense l’**intégration** par la division du travail ; Castel et Schnapper en décrivent la **rupture**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe7bacb2-6584-59ec-be90-866c78b5ce8c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le basculement de Noé",
+   "competence": "analyser-document",
+   "situation": "Noé a été intégré, puis vulnérable, puis a perdu ses repères. Un tableau imaginaire suit son parcours entre 2016 et 2024 : le travail et les relations.",
+   "documents": [
+    {
+     "id": "noe",
+     "type": "tableau",
+     "titre": "Le parcours de Noé",
+     "source": "Parcours imaginé pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Travail",
+      "Relations"
+     ],
+     "lignes": [
+      [
+       "2016",
+       "CDI",
+       "Famille, collègues, amis"
+      ],
+      [
+       "2018",
+       "CDD renouvelé",
+       "Collègues perdus, amis gardés"
+      ],
+      [
+       "2020",
+       "Intérim, missions de deux semaines",
+       "Famille et quelques amis"
+      ],
+      [
+       "2022",
+       "Sans emploi",
+       "Famille seulement"
+      ],
+      [
+       "2024",
+       "Sans emploi depuis deux ans",
+       "Plus de contacts réguliers"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "noe",
+     "enonce": "Touche l’année où Noé quitte pour la première fois la zone d’intégration.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Il est intégré tant qu’il a un emploi stable et des relations solides.",
+     "explication": "En **2018**, son travail devient précaire et ses relations s’étiolent : il entre en vulnérabilité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le CDI de Noé de sa situation de 2024 ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Soustrais les années lues dans le tableau.",
+     "explication": "2024 − 2016 = **8 ans** : le basculement est progressif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personne selon sa position dans le continuum de Castel.",
+     "categories": [
+      "Intégration",
+      "Vulnérabilité",
+      "Désaffiliation"
+     ],
+     "items": [
+      [
+       "Hélène : CDI depuis dix ans, famille et amis proches",
+       0
+      ],
+      [
+       "Karim : missions d’intérim, famille présente mais collègues perdus",
+       1
+      ],
+      [
+       "Paul : sans emploi depuis quatre ans, ne voit plus personne",
+       2
+      ],
+      [
+       "Sofia : CDD renouvelé, bon réseau d’amis",
+       1
+      ]
+     ],
+     "aide": "Regarde à la fois le travail et les relations.",
+     "explication": "Castel décrit un **continuum** : intégration (travail stable, relations solides), vulnérabilité (précaire, fragile), désaffiliation (aucun, rompues)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le basculement vers la désaffiliation reste-t-il longtemps invisible ?",
+     "options": [
+      "Il est progressif : chaque étape ressemble à la précédente et rien ne le signale nettement",
+      "Il est brutal et intervient du jour au lendemain, sans que personne ne puisse l’anticiper",
+      "Il concerne uniquement des personnes qui refusent volontairement tout contact avec autrui",
+      "Il est masqué par l’administration, qui cache volontairement les statistiques des situations concernées"
+     ],
+     "reponse": 0,
+     "aide": "Regarde comment évoluent les lignes du tableau de 2016 à 2024.",
+     "explication": "Le basculement est **progressif** : c’est ce qui le rend longtemps invisible, y compris pour la personne concernée."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c91cb13-9674-55e6-bfe9-4bb286ffba0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les marches de l’intégration",
+   "competence": "se-reperer-temps",
+   "situation": "L’Union européenne s’est construite par étapes, chacune retirant un instrument de politique économique aux États. La frise en donne les grandes dates.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq étapes vers l’euro",
+     "source": "Dates des traités et décisions européens.",
+     "debut": 1955,
+     "fin": 2005,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cee",
+       "date": 1957,
+       "nom": "Traité de Rome"
+      },
+      {
+       "id": "douane",
+       "date": 1968,
+       "nom": "Union douanière"
+      },
+      {
+       "id": "unique",
+       "date": 1986,
+       "nom": "Acte unique"
+      },
+      {
+       "id": "maastricht",
+       "date": 1992,
+       "nom": "Maastricht"
+      },
+      {
+       "id": "euro",
+       "date": 1999,
+       "nom": "Euro"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui instaure un tarif extérieur commun.",
+     "reponse": [
+      "douane"
+     ],
+     "aide": "Ce degré suit la zone de libre-échange dans la classification de Balassa.",
+     "explication": "L’**union douanière** (1968) applique un même tarif aux produits venus de l’extérieur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le traité de Rome de la mise en place de l’euro ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Soustrais 1957 à 1999.",
+     "explication": "1999 − 1957 = **42 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les degrés d’intégration de Balassa, du plus faible au plus poussé.",
+     "items": [
+      "Zone de libre-échange",
+      "Union douanière",
+      "Marché commun",
+      "Union économique",
+      "Union monétaire"
+     ],
+     "aide": "Chaque degré ajoute quelque chose au précédent.",
+     "explication": "Zone de libre-échange, union douanière, marché commun, union économique, **union monétaire** : l’Union les a franchis dans cet ordre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Des pays suppriment les droits de douane entre eux, mais chacun garde ses propres droits sur les produits des pays tiers. De quel degré s’agit-il ?",
+     "options": [
+      "D’une zone de libre-échange",
+      "D’une union douanière complète",
+      "D’un marché commun intégral",
+      "D’une union monétaire totale"
+     ],
+     "reponse": 0,
+     "aide": "Y a-t-il un tarif commun vis-à-vis de l’extérieur ?",
+     "explication": "Sans **tarif extérieur commun**, on reste au premier degré : la zone de libre-échange."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c91cb13-9674-55e6-bfe9-4bb286ffba0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que coûte l’euro",
+   "competence": "modeliser",
+   "situation": "Le pays A (imaginaire) a perdu en compétitivité : son produit vedette coûte 110 unités alors que celui du pays B en coûte 100. Avant l’euro, A pouvait dévaluer sa monnaie. Avec l’euro, ce n’est plus possible.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Le même produit dans deux pays",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Pays A",
+      "Pays B"
+     ],
+     "lignes": [
+      [
+       "Prix du produit (monnaie nationale)",
+       110,
+       100
+      ],
+      [
+       "Taux de change avant dévaluation",
+       "1 a = 1 b",
+       "—"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "criteres",
+     "type": "tableau",
+     "titre": "Quatre pays face aux critères de Maastricht",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Déficit (% du PIB)",
+      "Dette (% du PIB)"
+     ],
+     "lignes": [
+      [
+       "Aldora",
+       "2,5",
+       "55"
+      ],
+      [
+       "Bretia",
+       "4,1",
+       "52"
+      ],
+      [
+       "Corvie",
+       "2,8",
+       "78"
+      ],
+      [
+       "Dorsa",
+       "3,4",
+       "82"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "A dévalue de 10 % : 1 unité a vaut alors 0,9 unité b. Quel est le prix du produit de A en unités b ?",
+     "reponse": 99,
+     "unite": "b",
+     "aide": "Multiplie 110 par 0,9.",
+     "explication": "110 × 0,9 = **99 b** : le produit de A devient moins cher que celui de B (100 b)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un pays de la zone euro ne peut-il plus utiliser la dévaluation ?",
+     "options": [
+      "La monnaie est commune : son taux de change ne peut plus être ajusté par un seul pays",
+      "La Commission européenne interdit à un pays de modifier le prix de ses produits",
+      "La BCE fixe les prix des produits exportés par chacun des pays membres de la zone",
+      "La dévaluation est devenue inutile, puisque tous les pays ont désormais la même productivité"
+     ],
+     "reponse": 0,
+     "aide": "Que dévaluer quand la monnaie est celle de tous ?",
+     "explication": "La **politique monétaire** est transférée à la BCE : la **dévaluation**, qui restaurait la compétitivité, n’existe plus."
+    },
+    {
+     "type": "zone",
+     "document": "criteres",
+     "enonce": "Le pacte de stabilité impose un déficit sous 3 % du PIB et une dette sous 60 %. Touche le pays qui respecte les deux critères.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Compare les deux colonnes aux deux seuils.",
+     "explication": "**Aldora** : 2,5 % < 3 % et 55 % < 60 %. Les trois autres dépassent au moins un seuil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de PIB le déficit de Bretia dépasse-t-il le plafond de 3 % ?",
+     "reponse": 1.1,
+     "unite": "points",
+     "tolerance": 0.05,
+     "aide": "Soustrais 3 à 4,1.",
+     "explication": "4,1 − 3 = **1,1 point**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c91cb13-9674-55e6-bfe9-4bb286ffba0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mundell et la zone euro",
+   "competence": "analyser-document",
+   "situation": "Emma et Hugo discutent d’un choc qui ferait exploser le chômage dans un pays de la zone euro sans toucher les autres. Un graphique compare le budget commun de l’Union à celui des États-Unis.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Budget commun (% du PIB)",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "Union européenne",
+      "États-Unis (budget fédéral)"
+     ],
+     "series": [
+      {
+       "nom": "Budget commun",
+       "valeurs": [
+        1,
+        20
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du PIB",
+      "unite": "en %",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Ensemble"
+     }
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Si l’emploi s’effondre dans un pays, les chômeurs n’ont qu’à aller travailler ailleurs en Europe."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Facile à dire : il faut apprendre une langue, faire reconnaître ses diplômes, trouver un [[h|logement]]…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche l’ensemble dont le budget commun est le plus faible.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus petite.",
+     "explication": "Le budget de l’**Union européenne** représente environ 1 % de son PIB."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le budget fédéral américain représente combien de fois celui de l’Union, en part du PIB ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise 20 par 1.",
+     "explication": "20 ÷ 1 = **20 fois** : l’amortisseur budgétaire européen est minuscule."
+    },
+    {
+     "type": "zone",
+     "document": "dial",
+     "enonce": "Touche le mot qui désigne un obstacle matériel à la mobilité du travail.",
+     "reponse": [
+      "h"
+     ],
+     "aide": "Que faut-il trouver en arrivant dans une nouvelle ville ?",
+     "explication": "Le **logement** fait partie des obstacles à la mobilité, avec la langue et la reconnaissance des diplômes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque condition de Mundell à la situation de la zone euro.",
+     "paires": [
+      [
+       "Mobilité du travail",
+       "Faible : langues, diplômes, logement"
+      ],
+      [
+       "Budget commun amortisseur",
+       "Minuscule : environ 1 % du PIB"
+      ],
+      [
+       "Flexibilité des prix et salaires",
+       "Partielle"
+      ],
+      [
+       "Cycles économiques synchronisés",
+       "Imparfaitement synchronisés"
+      ]
+     ],
+     "aide": "Relis les deux documents pour les deux premières.",
+     "explication": "Plusieurs conditions d’une **zone monétaire optimale** sont mal remplies : c’est tout le débat depuis la crise de 2010."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un choc touchant un seul pays est-il difficile à absorber dans la zone euro ?",
+     "options": [
+      "Ni la monnaie, ni la mobilité du travail, ni un budget commun ne peuvent amortir le choc",
+      "Parce que les autres pays de la zone refusent de commercer avec le pays en difficulté",
+      "Parce que la BCE ajuste ses taux uniquement en fonction de la situation du pays le plus petit",
+      "Parce que le pacte de stabilité interdit à tout pays de dépenser moins qu’il ne recevait"
+     ],
+     "reponse": 0,
+     "aide": "Quels amortisseurs restent disponibles ?",
+     "explication": "Sans **dévaluation**, sans **mobilité** suffisante et sans **budget commun** important, l’ajustement repose sur l’emploi et les salaires."
+    }
+   ]
+  }
+ ]
+}

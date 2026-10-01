@@ -11,6 +11,7 @@ import { modeImage, modeScene, GAME_MODES } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 import { SCENES_VIVANTES, fichiersDeScene } from '@/lib/arena-vivante'
 import { SCENES_CAPSULES, scenesCapsule } from '@/lib/capsules-scenes'
+import { BADGES_ILLUSTRES, OBJETS_ILLUSTRES, imageBadge, imageObjet } from '@/lib/illustrations'
 
 // Garde des ASSETS DÉCLARÉS.
 //
@@ -217,6 +218,26 @@ describe('scènes des capsules', () => {
 
   it('une capsule sans scène n’en annonce aucune', () => {
     expect(scenesCapsule('capsule-inconnue')).toEqual([])
+  })
+})
+
+describe('illustrations famille nav (badges, objets de profil)', () => {
+  it('chaque illustration déclarée existe sur le disque', () => {
+    // Fabriquées par `node scripts/illustrations-famille.mjs` depuis
+    // assets-sources/famille/<dossier>/.
+    for (const slug of BADGES_ILLUSTRES) {
+      const src = imageBadge(slug)
+      expect(src && assetExists(src), `badge ${slug} : ${src} absent`).toBe(true)
+    }
+    for (const id of OBJETS_ILLUSTRES) {
+      const src = imageObjet(id)
+      expect(src && assetExists(src), `objet ${id} : ${src} absent`).toBe(true)
+    }
+  })
+
+  it('un badge ou un objet non livré garde son repli', () => {
+    expect(imageBadge('badge-inconnu')).toBeNull()
+    expect(imageObjet('objet-inconnu')).toBeNull()
   })
 })
 

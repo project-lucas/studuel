@@ -1,0 +1,3031 @@
+{
+  "niveau": "3e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "2a360b9e-58d4-5d2c-99aa-1ed25cbbb4c8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quelles communes entrent dans la couronne ?",
+      "competence": "lire-tableau",
+      "situation": "Autour de Valmont, une ville imaginée pour l’exercice, l’INSEE étudie quatre communes voisines. Pour chacune, il a compté les actifs qui partent travailler dans le pôle urbain.",
+      "documents": [
+        {
+          "id": "communes",
+          "type": "tableau",
+          "titre": "Les actifs de quatre communes voisines",
+          "source": "Chiffres écrits pour l’exercice.",
+          "colonnes": [
+            "Commune",
+            "Habitants",
+            "Actifs",
+            "Actifs qui travaillent dans le pôle"
+          ],
+          "lignes": [
+            [
+              "Champlan",
+              "3 400",
+              "1 500",
+              "62 %"
+            ],
+            [
+              "Les Hauts-Bois",
+              "900",
+              "400",
+              "38 %"
+            ],
+            [
+              "Saint-Aubin",
+              "2 100",
+              "1 000",
+              "47 %"
+            ],
+            [
+              "Marcouville",
+              "600",
+              "250",
+              "12 %"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "communes",
+          "enonce": "Touche la part d’actifs des **deux communes** qui font partie de la couronne périurbaine de Valmont.",
+          "reponse": [
+            "r0c3",
+            "r2c3"
+          ],
+          "multiple": true,
+          "aide": "Une commune entre dans la couronne si au moins 40 % de ses actifs travaillent dans le pôle.",
+          "explication": "Champlan (**62 %**) et Saint-Aubin (**47 %**) dépassent le seuil de 40 %. Les Hauts-Bois (38 %) le frôlent sans l’atteindre, Marcouville (12 %) en est loin."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’actifs de **Saint-Aubin** partent travailler dans le pôle de Valmont ?",
+          "reponse": 470,
+          "unite": "actifs",
+          "aide": "Calcule 47 % de 1 000 actifs : 1 000 × 47 ÷ 100.",
+          "explication": "47 % de 1 000 = **470 actifs**. Chaque matin, près d’un actif sur deux quitte la commune pour le pôle : ce sont des mobilités pendulaires."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire des **Hauts-Bois** ?",
+          "options": [
+            "Ils n’appartiennent pas à la couronne, car 38 % est inférieur à 40 %.",
+            "Ils appartiennent à la couronne, car 38 % est proche de 40 %.",
+            "Ils appartiennent au pôle urbain, car ils comptent 400 actifs.",
+            "Ils sont une ville-centre, car leur part est supérieure à 10 %."
+          ],
+          "reponse": 0,
+          "aide": "Compare 38 % au seuil de 40 %.",
+          "explication": "Le seuil est strict : **38 % < 40 %**, donc la commune reste hors de la couronne. Elle n’est pourtant pas indifférente à la ville : plus d’un actif sur trois y travaille."
+        }
+      ]
+    },
+    {
+      "chapitre": "2a360b9e-58d4-5d2c-99aa-1ed25cbbb4c8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Paris et les autres : un palmarès très inégal",
+      "competence": "lire-graphique",
+      "situation": "Clara compare les plus grandes aires urbaines de France. Elle place les villes sur une carte et lit les populations sur un graphique.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Cinq grandes villes françaises",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "point",
+              "nom": "Paris"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "marseille",
+              "lieu": "marseille",
+              "symbole": "point",
+              "nom": "Marseille"
+            },
+            {
+              "id": "lille",
+              "lieu": "lille",
+              "symbole": "point",
+              "nom": "Lille"
+            },
+            {
+              "id": "toulouse",
+              "lieu": "toulouse",
+              "symbole": "point",
+              "nom": "Toulouse"
+            }
+          ]
+        },
+        {
+          "id": "pop",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Population des aires urbaines",
+          "source": "Chiffres arrondis, ordre de grandeur, d’après l’INSEE.",
+          "categories": [
+            "Paris",
+            "Lyon",
+            "Marseille",
+            "Lille",
+            "Toulouse"
+          ],
+          "series": [
+            {
+              "nom": "Population",
+              "valeurs": [
+                13,
+                2.3,
+                1.9,
+                1.5,
+                1.4
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Habitants",
+            "unite": "en millions",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Sur la carte, touche la ville dont l’aire urbaine est la **plus peuplée** du pays (regarde le graphique).",
+          "reponse": [
+            "paris"
+          ],
+          "aide": "Cherche la barre la plus longue du graphique, puis retrouve cette ville sur la carte.",
+          "explication": "C’est **Paris**, avec environ 13 millions d’habitants : environ un Français sur cinq vit dans son aire urbaine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Paris compte environ combien de fois plus d’habitants que Lyon, la deuxième ? Arrondis à l’unité.",
+          "reponse": 6,
+          "unite": "fois",
+          "tolerance": 0.5,
+          "aide": "Divise la population de Paris par celle de Lyon : 13 ÷ 2,3.",
+          "explication": "13 ÷ 2,3 ≈ 5,7, soit **6 fois** plus environ. La hiérarchie urbaine française est très inégale : Paris écrase les métropoles régionales."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque ville à sa région.",
+          "paires": [
+            [
+              "Lyon",
+              "Auvergne-Rhône-Alpes"
+            ],
+            [
+              "Lille",
+              "Hauts-de-France"
+            ],
+            [
+              "Toulouse",
+              "Occitanie"
+            ],
+            [
+              "Marseille",
+              "Provence-Alpes-Côte d’Azur"
+            ]
+          ],
+          "aide": "Lille est dans le nord du pays, Marseille au bord de la Méditerranée.",
+          "explication": "Lyon est dans **Auvergne-Rhône-Alpes**, Lille dans les **Hauts-de-France**, Toulouse en **Occitanie**, Marseille en **Provence-Alpes-Côte d’Azur**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce graphique sur la hiérarchie urbaine française ?",
+          "options": [
+            "Une seule ville domine très largement les autres.",
+            "Les cinq villes ont des populations voisines.",
+            "Les métropoles régionales dépassent Paris.",
+            "Toulouse est plus peuplée que Lyon."
+          ],
+          "reponse": 0,
+          "aide": "Compare la barre de Paris à toutes les autres.",
+          "explication": "Paris (13 millions) est loin devant : **une seule ville domine**, les métropoles régionales sont « loin derrière », comme le dit le cours."
+        }
+      ]
+    },
+    {
+      "chapitre": "2a360b9e-58d4-5d2c-99aa-1ed25cbbb4c8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Camille et les 35 kilomètres",
+      "competence": "analyser-texte",
+      "situation": "Camille a quitté la ville pour un village en couronne périurbaine. Son récit, écrit pour l’exercice, raconte ce que ce choix change pour elle… et pour le territoire.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le récit de Camille",
+          "auteur": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "Depuis trois ans, Camille habite à Saint-Aubin, un village de 2 100 habitants. Elle y a acheté une maison avec jardin : en ville, le même budget ne lui offrait qu’un petit appartement.",
+            "Mais Camille travaille dans le [[p|pôle]] urbain, à 35 km de chez elle. Chaque matin, elle prend sa [[v|voiture]] ; chaque soir, elle rentre après une heure de bouchons.",
+            "Le lotissement de Camille a été construit sur d’anciens [[c|champs]] de blé, et deux autres sont en projet. Le maire se demande comment accueillir de nouveaux habitants sans grignoter les terres agricoles."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche le mot qui désigne la ville où Camille travaille, celle dont dépend son village.",
+          "reponse": [
+            "p"
+          ],
+          "aide": "Dans une aire urbaine, la ville-centre et sa banlieue forment… un quoi ?",
+          "explication": "Le **pôle** urbain est le cœur de l’aire urbaine ; Saint-Aubin, d’où l’on part travailler vers lui, appartient à sa couronne périurbaine."
+        },
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche le mot qui montre que le lotissement a pris la place de terres agricoles.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Que cultivait-on avant les maisons ?",
+          "explication": "Le lotissement est sur d’anciens **champs** : c’est l’**artificialisation** des sols. Deux lotissements de plus, et les terres agricoles reculent : c’est le mitage des campagnes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Camille fait 35 km pour aller travailler et 35 km pour rentrer, cinq jours par semaine. Combien de kilomètres parcourt-elle en une semaine ?",
+          "reponse": 350,
+          "unite": "km",
+          "aide": "Un aller-retour, puis cinq jours : 35 × 2 × 5.",
+          "explication": "35 × 2 = 70 km par jour, et 70 × 5 = **350 km par semaine** : ce sont des mobilités pendulaires longues, typiques de la périurbanisation."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces quatre étapes dans l’ordre où elles s’enchaînent pour Camille.",
+          "items": [
+            "Le logement en ville est trop cher",
+            "Camille s’installe en couronne périurbaine",
+            "Elle fait de longues navettes en voiture",
+            "Les terres agricoles reculent sous les lotissements"
+          ],
+          "aide": "Commence par la raison du départ, finis par la conséquence sur le territoire.",
+          "explication": "Prix du logement → installation en couronne → navettes plus longues → terres artificialisées : c’est la chaîne de l’**étalement urbain**."
+        }
+      ]
+    },
+    {
+      "chapitre": "174488ca-afc4-5157-984c-e59610dde149",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinquante ans d’usines en moins",
+      "competence": "lire-graphique",
+      "situation": "Dans un dossier sur l’industrie française, Hugo trouve un graphique sur les emplois de l’industrie manufacturière depuis 1974.",
+      "documents": [
+        {
+          "id": "emplois",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Emplois de l’industrie manufacturière en France",
+          "source": "Chiffres arrondis, ordre de grandeur, d’après l’INSEE.",
+          "categories": [
+            "1974",
+            "1990",
+            "2000",
+            "2010",
+            "2019"
+          ],
+          "series": [
+            {
+              "nom": "Emplois",
+              "valeurs": [
+                5.2,
+                4.4,
+                3.9,
+                3.1,
+                2.7
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Emplois",
+            "unite": "en millions",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "emplois",
+          "enonce": "Touche l’année où l’industrie employait le **plus** de monde.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "C’est **1974** : environ 5,2 millions d’emplois industriels. Ensuite, chaque barre est plus basse que la précédente."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’emplois industriels ont disparu entre 1974 et 2019 ? Réponds en millions.",
+          "reponse": 2.5,
+          "unite": "millions",
+          "tolerance": 0.1,
+          "aide": "Soustrais la dernière valeur à la première : 5,2 − 2,7.",
+          "explication": "5,2 − 2,7 = **2,5 millions** d’emplois en moins, soit près de la moitié : c’est la **désindustrialisation**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel mot désigne cette perte massive d’emplois industriels depuis les années 1970 ?",
+          "options": [
+            "La désindustrialisation du pays",
+            "La métropolisation du territoire",
+            "La littoralisation des activités",
+            "La tertiarisation de l’économie"
+          ],
+          "reponse": 0,
+          "aide": "Le préfixe « dés- » exprime un mouvement de recul.",
+          "explication": "C’est la **désindustrialisation** : l’industrie a perdu environ la moitié de ses emplois depuis les années 1970."
+        }
+      ]
+    },
+    {
+      "chapitre": "174488ca-afc4-5157-984c-e59610dde149",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La carte de l’industrie qui a changé de lieu",
+      "competence": "lire-carte",
+      "situation": "Léa prépare une carte de l’industrie française : d’un côté des zones industrialo-portuaires, de l’autre des espaces en difficulté ou en réussite.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quelques lieux de l’industrie",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "dunkerque",
+              "lieu": "dunkerque",
+              "symbole": "point",
+              "nom": "Dunkerque"
+            },
+            {
+              "id": "havre",
+              "lieu": "le-havre",
+              "symbole": "point",
+              "nom": "Le Havre"
+            },
+            {
+              "id": "fos",
+              "lon": 4.94,
+              "lat": 43.44,
+              "symbole": "point",
+              "nom": "Marseille-Fos"
+            },
+            {
+              "id": "toulouse",
+              "lieu": "toulouse",
+              "symbole": "point",
+              "nom": "Toulouse"
+            },
+            {
+              "id": "sophia",
+              "lon": 7.05,
+              "lat": 43.62,
+              "symbole": "point",
+              "nom": "Sophia Antipolis"
+            },
+            {
+              "id": "metz",
+              "lieu": "metz",
+              "symbole": "point",
+              "nom": "Lorraine (Metz)"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les trois** grandes zones industrialo-portuaires de la carte.",
+          "reponse": [
+            "dunkerque",
+            "havre",
+            "fos"
+          ],
+          "multiple": true,
+          "aide": "Ces zones sont au contact de la mer : Mer du Nord, Manche, Méditerranée.",
+          "explication": "Les trois ZIP sont **Dunkerque**, **Le Havre** et **Marseille-Fos** : les industries lourdes s’installent près des ports qui reçoivent les matières premières importées."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque zone industrialo-portuaire à son littoral.",
+          "paires": [
+            [
+              "Dunkerque",
+              "Mer du Nord"
+            ],
+            [
+              "Le Havre",
+              "Manche"
+            ],
+            [
+              "Marseille-Fos",
+              "Méditerranée"
+            ]
+          ],
+          "aide": "Dunkerque est tout au nord, près de la Belgique.",
+          "explication": "**Dunkerque** borde la mer du Nord, **Le Havre** la Manche, **Marseille-Fos** la Méditerranée. Le littoral est une interface avec le monde."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque lieu : l’industrie y recule ou y progresse ?",
+          "categories": [
+            "Espace qui perd des emplois industriels",
+            "Espace industriel qui gagne"
+          ],
+          "items": [
+            [
+              "Les anciennes mines et sidérurgies de Lorraine",
+              0
+            ],
+            [
+              "Les friches industrielles du Nord",
+              0
+            ],
+            [
+              "Sophia Antipolis, technopôle",
+              1
+            ],
+            [
+              "L’Aerospace Valley autour de Toulouse",
+              1
+            ],
+            [
+              "La zone industrialo-portuaire du Havre",
+              1
+            ]
+          ],
+          "aide": "Pense aux friches d’un côté, aux technopôles et aux ports de l’autre.",
+          "explication": "Le Nord et la Lorraine gardent des **friches industrielles**. Les technopôles, l’Aerospace Valley et les ZIP gagnent : l’industrie ne disparaît pas, ses lieux se déplacent."
+        }
+      ]
+    },
+    {
+      "chapitre": "174488ca-afc4-5157-984c-e59610dde149",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La fermeture de l’usine Valmy",
+      "competence": "analyser-document",
+      "situation": "Le journal de la ville imaginée de Valmy raconte la fermeture de l’usine de moteurs. Le texte et le tableau ont été écrits pour l’exercice.",
+      "documents": [
+        {
+          "id": "note",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Note du comité d’entreprise",
+          "auteur": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "En 1990, l’usine de Valmy fabrique des moteurs avec 800 ouvriers. Dans les années 2000, la direction installe des [[a|robots]] : on produit autant avec moins de monde.",
+            "En 2012, une partie de la production est déplacée dans un pays où les salaires sont plus bas : c’est une [[d|délocalisation]]. Il ne reste que 320 salariés. L’usine aujourd’hui ne fabrique plus que des pièces de haute technologie."
+          ]
+        },
+        {
+          "id": "emplois",
+          "type": "tableau",
+          "titre": "Les emplois de l’usine",
+          "source": "Chiffres écrits pour l’exercice.",
+          "colonnes": [
+            "Année",
+            "1990",
+            "2005",
+            "2012",
+            "2020"
+          ],
+          "lignes": [
+            [
+              "Salariés",
+              "800",
+              "600",
+              "320",
+              "320"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "note",
+          "enonce": "Touche le mot qui désigne le transfert d’une production vers un pays où les salaires sont plus bas.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Ce mot commence par « dé- » et contient « lieu ».",
+          "explication": "C’est la **délocalisation** : produire ailleurs, là où la main-d’œuvre coûte moins cher."
+        },
+        {
+          "type": "zone",
+          "document": "note",
+          "enonce": "Touche le mot qui explique qu’on produise autant avec moins d’ouvriers.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Quelles machines remplacent des gestes humains ?",
+          "explication": "Ce sont les **robots** : l’automatisation permet de produire autant avec moins d’ouvriers, une autre cause de la désindustrialisation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre 1990 et 2020, de combien de pour cent les emplois de l’usine ont-ils baissé ?",
+          "reponse": 60,
+          "unite": "%",
+          "aide": "Calcule la perte : 800 − 320 = 480, puis 480 ÷ 800.",
+          "explication": "800 − 320 = 480 emplois perdus ; 480 ÷ 800 = 0,6, soit une baisse de **60 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit cet exemple sur l’industrie française ?",
+          "options": [
+            "Elle perd des emplois, mais l’usine se spécialise dans la haute technologie.",
+            "Elle a entièrement disparu de la ville depuis les années 1990.",
+            "Elle a recruté beaucoup plus d’ouvriers qu’en 1990 dans cette usine.",
+            "Elle ne fabrique plus rien en France depuis la fermeture de 2012."
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière phrase du texte.",
+          "explication": "L’usine garde **320 salariés** et fabrique des pièces de haute technologie : l’industrie ne disparaît pas, elle se transforme et ses lieux se déplacent."
+        }
+      ]
+    },
+    {
+      "chapitre": "d0b9a0a7-1354-5e70-b8a7-ca9d337f0a05",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La carte des grandes productions",
+      "competence": "lire-carte",
+      "situation": "Nina colorie une carte des spécialisations agricoles de la France : chaque symbole marque un paysage et une production.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quelques grandes productions agricoles",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "beauce",
+              "lon": 1.6,
+              "lat": 48.2,
+              "symbole": "carre",
+              "teinte": "ambre",
+              "nom": "Beauce"
+            },
+            {
+              "id": "bretagne",
+              "lon": -3,
+              "lat": 48.2,
+              "symbole": "triangle",
+              "teinte": "vert",
+              "nom": "Bretagne"
+            },
+            {
+              "id": "bordeaux",
+              "lieu": "bordeaux",
+              "symbole": "etoile",
+              "teinte": "rose",
+              "nom": "Bordeaux"
+            },
+            {
+              "id": "reims",
+              "lieu": "reims",
+              "symbole": "etoile",
+              "teinte": "rose",
+              "nom": "Champagne"
+            }
+          ],
+          "legende": [
+            {
+              "teinte": "ambre",
+              "texte": "Grandes cultures céréalières"
+            },
+            {
+              "teinte": "vert",
+              "texte": "Élevage, dont hors-sol"
+            },
+            {
+              "teinte": "rose",
+              "texte": "Vignobles"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les deux** repères qui marquent des régions de vignobles.",
+          "reponse": [
+            "bordeaux",
+            "reims"
+          ],
+          "multiple": true,
+          "aide": "Regarde la légende : quel symbole marque les vignobles ?",
+          "explication": "**Bordeaux** et la **Champagne** sont des régions de vignobles. La viticulture est l’une des grandes spécialisations régionales de la France."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel paysage domine en Beauce, région de grandes cultures céréalières ?",
+          "options": [
+            "L’openfield, de vastes champs ouverts sans haies",
+            "Le bocage, avec des haies et de petits champs",
+            "La vigne, plantée en terrasses sur des coteaux",
+            "La forêt de conifères, épaisse et continue"
+          ],
+          "reponse": 0,
+          "aide": "Pense à de très grandes parcelles sans clôture ni haies.",
+          "explication": "En Beauce, on trouve l’**openfield** : de vastes champs ouverts, adaptés à la mécanisation des céréales. Le bocage appartient plutôt à l’Ouest."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque région à sa spécialisation.",
+          "paires": [
+            [
+              "Beauce",
+              "Grandes cultures céréalières"
+            ],
+            [
+              "Bretagne",
+              "Élevage hors-sol de porcs et de volailles"
+            ],
+            [
+              "Bordeaux",
+              "Viticulture"
+            ],
+            [
+              "Midi méditerranéen",
+              "Fruits et légumes irrigués"
+            ]
+          ],
+          "aide": "Le hors-sol, c’est l’élevage en bâtiment : pense aux porcs.",
+          "explication": "Chaque région se **spécialise** : céréales en Beauce, élevage hors-sol en Bretagne, vignes à Bordeaux, fruits et légumes irrigués dans le Midi."
+        }
+      ]
+    },
+    {
+      "chapitre": "d0b9a0a7-1354-5e70-b8a7-ca9d337f0a05",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Moins de fermes, mais plus grandes",
+      "competence": "lire-graphique",
+      "situation": "Dans un dossier sur les campagnes, Samy compare le nombre d’exploitations agricoles françaises et leur taille moyenne depuis 1970.",
+      "documents": [
+        {
+          "id": "nombre",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Nombre d’exploitations agricoles",
+          "source": "Chiffres arrondis, d’après les recensements agricoles.",
+          "categories": [
+            "1970",
+            "1988",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Exploitations",
+              "valeurs": [
+                1588,
+                1017,
+                664,
+                490,
+                390
+              ],
+              "teinte": "vert"
+            }
+          ],
+          "axeY": {
+            "titre": "Exploitations",
+            "unite": "en milliers",
+            "min": 0,
+            "max": 1800,
+            "pas": 200
+          },
+          "valeurs": false
+        },
+        {
+          "id": "taille",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Taille moyenne d’une exploitation",
+          "source": "Chiffres arrondis, d’après les recensements agricoles.",
+          "categories": [
+            "1970",
+            "1988",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Surface moyenne",
+              "valeurs": [
+                19,
+                28,
+                42,
+                55,
+                69
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Surface",
+            "unite": "en hectares",
+            "min": 0,
+            "max": 80,
+            "pas": 10
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "nombre",
+          "enonce": "Touche l’année où la France comptait le **moins** d’exploitations.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre la plus basse du premier graphique.",
+          "explication": "C’est **2020** : environ 390 000 exploitations, contre près de 1,6 million en 1970."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’exploitations ont disparu entre 1970 et 2020 ? Réponds en milliers.",
+          "reponse": 1198,
+          "unite": "milliers",
+          "tolerance": 10,
+          "aide": "Soustrais 390 à 1 588.",
+          "explication": "1 588 − 390 = **1 198 milliers**, soit près de 1,2 million d’exploitations en moins en cinquante ans."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion.",
+          "texte": "Il y a de ___ d’exploitations, mais elles sont de plus en plus ___.",
+          "reponses": [
+            [
+              "moins en moins",
+              "moins"
+            ],
+            [
+              "grandes"
+            ]
+          ],
+          "banque": [
+            "moins en moins",
+            "plus en plus",
+            "grandes",
+            "petites"
+          ],
+          "aide": "Compare les deux graphiques : l’un baisse, l’autre monte.",
+          "explication": "Le nombre d’exploitations baisse (**de moins en moins**), la surface moyenne passe de 19 à 69 hectares (**grandes**) : la mécanisation agrandit les exploitations."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle agriculture explique cette évolution ?",
+          "options": [
+            "Une agriculture productiviste, mécanisée et spécialisée",
+            "Une agriculture uniquement tournée vers le bio",
+            "Une agriculture qui n’utilise plus aucune machine",
+            "Une agriculture réservée à la consommation familiale"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux tracteurs, aux intrants et à la recherche du rendement.",
+          "explication": "Mécanisation, intrants et spécialisation sont les leviers de l’agriculture **productiviste** : elle demande de plus grandes surfaces pour des exploitations moins nombreuses."
+        }
+      ]
+    },
+    {
+      "chapitre": "d0b9a0a7-1354-5e70-b8a7-ca9d337f0a05",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Produire plus ou produire mieux ?",
+      "competence": "argumenter",
+      "situation": "Lors d’une sortie sur une ferme bretonne, Lisa (une élève) discute avec Erwan, éleveur de porcs. Leur échange a été écrit pour l’exercice.",
+      "documents": [
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "modele": "bulles",
+          "titre": "Conversation à la ferme",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            {
+              "nom": "Lisa",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Erwan",
+              "emoji": "👨‍🌾",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Lisa",
+              "texte": "J’ai lu que les [[n|nitrates]] de l’élevage favorisent les algues vertes sur le littoral breton."
+            },
+            {
+              "qui": "Erwan",
+              "texte": "C’est vrai. Mais la grande distribution nous impose des prix très bas : je dois produire beaucoup pour vivre."
+            },
+            {
+              "qui": "Lisa",
+              "texte": "Certains vendent en [[s|circuits]] courts, ou passent en [[b|bio]]. Et il y a les labels comme l’AOP."
+            },
+            {
+              "qui": "Erwan",
+              "texte": "Oui, mais il faut des clients prêts à payer plus cher. Je n’ai pas encore choisi."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dialogue",
+          "enonce": "Touche le mot qui désigne la pollution des eaux liée à l’élevage intensif.",
+          "reponse": [
+            "n"
+          ],
+          "aide": "Ce mot est lié aux algues vertes, dès la première réplique.",
+          "explication": "Ce sont les **nitrates**, issus des déjections animales et des engrais : ils nourrissent les algues vertes sur les plages bretonnes."
+        },
+        {
+          "type": "zone",
+          "document": "dialogue",
+          "enonce": "Touche **les deux** mots qui désignent des alternatives à l’élevage intensif.",
+          "reponse": [
+            "s",
+            "b"
+          ],
+          "multiple": true,
+          "aide": "Lisa propose des solutions dans sa deuxième réplique.",
+          "explication": "Les **circuits courts** et le **bio** sont deux alternatives en progression. Les labels (AOP, AOC, Label rouge) en sont une troisième."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Erwan dit-il devoir produire beaucoup ?",
+          "options": [
+            "Parce que la grande distribution impose des prix bas.",
+            "Parce que la PAC interdit les petits élevages.",
+            "Parce que les clients refusent tout label.",
+            "Parce que l’élevage hors-sol n’existe plus."
+          ],
+          "reponse": 0,
+          "aide": "Relis la réponse d’Erwan : qui impose quoi ?",
+          "explication": "Erwan le dit lui-même : les **prix** imposés par la grande distribution étranglent les revenus, donc il faut produire beaucoup. C’est l’une des tensions du monde agricole."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque pratique : produire plus ou produire mieux ?",
+          "categories": [
+            "Produire plus",
+            "Produire mieux"
+          ],
+          "items": [
+            [
+              "Agrandir l’exploitation et acheter un tracteur plus puissant",
+              0
+            ],
+            [
+              "Utiliser beaucoup d’engrais pour augmenter le rendement",
+              0
+            ],
+            [
+              "Élever des porcs en bâtiment, sans pâturage",
+              0
+            ],
+            [
+              "Passer en agriculture biologique",
+              1
+            ],
+            [
+              "Obtenir un label AOP",
+              1
+            ],
+            [
+              "Vendre sa production directement aux habitants",
+              1
+            ]
+          ],
+          "aide": "Le bio, les labels et les circuits courts cherchent la qualité et l’origine.",
+          "explication": "Mécanisation, intrants et hors-sol cherchent le **rendement**. Bio, labels et circuits courts cherchent la **qualité**, l’origine et un lien avec les consommateurs."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cacb155-eb80-5424-8bdb-844960d264cd",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Où travaillent les Français ?",
+      "competence": "lire-graphique",
+      "situation": "Dans un manuel, Inès trouve un graphique sur la répartition des emplois en France entre les trois grands secteurs.",
+      "documents": [
+        {
+          "id": "secteurs",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Répartition des emplois en France",
+          "source": "Chiffres arrondis, ordre de grandeur, d’après l’INSEE.",
+          "categories": [
+            "Agriculture",
+            "Industrie et construction",
+            "Services"
+          ],
+          "series": [
+            {
+              "nom": "Emplois",
+              "valeurs": [
+                3,
+                17,
+                80
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "secteurs",
+          "enonce": "Touche la part du **secteur qui emploie le plus de monde**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la plus grande part du graphique.",
+          "explication": "Ce sont les **services**, avec environ 80 % des emplois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur 1 000 actifs, combien travaillent dans les services ?",
+          "reponse": 800,
+          "unite": "actifs",
+          "aide": "80 % de 1 000.",
+          "explication": "80 % de 1 000 = **800 actifs**. Les services emploient près de quatre actifs sur cinq."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle la place croissante des services dans l’économie ?",
+          "options": [
+            "La tertiarisation",
+            "La désindustrialisation",
+            "La périurbanisation",
+            "La mondialisation"
+          ],
+          "reponse": 0,
+          "aide": "Le secteur des services s’appelle aussi le secteur tertiaire.",
+          "explication": "C’est la **tertiarisation** : le secteur tertiaire (les services) emploie désormais près de 80 % des actifs français."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cacb155-eb80-5424-8bdb-844960d264cd",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les services du centre de Valbonne",
+      "competence": "analyser-document",
+      "situation": "Sacha dessine le centre de Valbonne, une petite ville imaginée pour l’exercice, avec ses services. Sa prof lui demande de les classer selon leur financement.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "schema",
+          "titre": "Le centre de Valbonne",
+          "source": "Plan imaginé pour l’exercice.",
+          "largeur": 320,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "ecole",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 64,
+              "y": 50,
+              "emoji": "🏫",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 64,
+              "y": 80,
+              "texte": "École publique",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 116,
+              "y": 20,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "banque",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 160,
+              "y": 50,
+              "emoji": "🏦",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 80,
+              "texte": "Banque",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 212,
+              "y": 20,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "hopital",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 256,
+              "y": 50,
+              "emoji": "🏥",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 256,
+              "y": 80,
+              "texte": "Hôpital public",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 110,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "super",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 64,
+              "y": 140,
+              "emoji": "🛒",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 64,
+              "y": 170,
+              "texte": "Supermarché",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 116,
+              "y": 110,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "tribunal",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 160,
+              "y": 140,
+              "emoji": "⚖️",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 170,
+              "texte": "Tribunal",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 212,
+              "y": 110,
+              "l": 88,
+              "h": 70,
+              "arrondi": 10,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "cinema",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 256,
+              "y": 140,
+              "emoji": "🎬",
+              "taille": 28
+            },
+            {
+              "forme": "texte",
+              "x": 256,
+              "y": 170,
+              "texte": "Cinéma",
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche **les trois** services non marchands du plan, financés par l’impôt.",
+          "reponse": [
+            "ecole",
+            "hopital",
+            "tribunal"
+          ],
+          "multiple": true,
+          "aide": "Un service non marchand ne se vend pas : on ne paie pas chaque passage en caisse.",
+          "explication": "L’**école publique**, l’**hôpital public** et le **tribunal** sont des services non marchands : l’impôt les finance. Banque, supermarché et cinéma vivent de leurs ventes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui finance un service non marchand ?",
+          "options": [
+            "L’impôt",
+            "Le prix payé par chaque client",
+            "Les publicités",
+            "Les seuls dons des habitants"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’école publique : les familles ne paient pas chaque cours.",
+          "explication": "Les services non marchands sont financés par l’**impôt** ; les services marchands, par la **vente**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète : ce plan montre que Valbonne propose des services ___ et des services ___.",
+          "texte": "Valbonne propose des services ___ (banque, cinéma) et des services ___ (école, hôpital).",
+          "reponses": [
+            [
+              "marchands"
+            ],
+            [
+              "non marchands"
+            ]
+          ],
+          "banque": [
+            "marchands",
+            "non marchands",
+            "industriels",
+            "agricoles"
+          ],
+          "aide": "Les uns vivent de la vente, les autres de l’impôt.",
+          "explication": "La banque et le cinéma sont des services **marchands** ; l’école et l’hôpital publics sont des services **non marchands**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cacb155-eb80-5424-8bdb-844960d264cd",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Tourisme : des lieux qui vivent et des lieux qui souffrent",
+      "competence": "analyser-document",
+      "situation": "Noa prépare un exposé sur le tourisme en France. Il place quelques lieux sur une carte et lit le reportage, écrit pour l’exercice, d’une station balnéaire imaginée.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre types de tourisme",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "carre",
+              "teinte": "bleu",
+              "nom": "Paris"
+            },
+            {
+              "id": "chambord",
+              "lon": 1.52,
+              "lat": 47.62,
+              "symbole": "carre",
+              "teinte": "bleu",
+              "nom": "Chambord"
+            },
+            {
+              "id": "labaule",
+              "lon": -2.39,
+              "lat": 47.29,
+              "symbole": "triangle",
+              "teinte": "ambre",
+              "nom": "La Baule"
+            },
+            {
+              "id": "nice",
+              "lieu": "nice",
+              "symbole": "triangle",
+              "teinte": "ambre",
+              "nom": "Nice"
+            },
+            {
+              "id": "chamonix",
+              "lon": 6.87,
+              "lat": 45.92,
+              "symbole": "etoile",
+              "teinte": "violet",
+              "nom": "Chamonix"
+            },
+            {
+              "id": "valdisere",
+              "lon": 6.98,
+              "lat": 45.45,
+              "symbole": "etoile",
+              "teinte": "violet",
+              "nom": "Val d’Isère"
+            }
+          ],
+          "legende": [
+            {
+              "teinte": "bleu",
+              "texte": "Urbain et culturel"
+            },
+            {
+              "teinte": "ambre",
+              "texte": "Balnéaire"
+            },
+            {
+              "teinte": "violet",
+              "texte": "De montagne"
+            }
+          ]
+        },
+        {
+          "id": "reportage",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Reportage à Anse-du-Levant",
+          "auteur": "Texte écrit pour l’exercice (station imaginée).",
+          "blocs": [
+            "Anse-du-Levant compte 400 habitants toute l’année, mais 9 000 personnes en août. Au fil des années, les immeubles ont [[b|bétonné]] la côte.",
+            "Les emplois y sont surtout [[s|saisonniers]] : cafés, hôtels et locations ferment presque tous dès octobre."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche **les deux** lieux de tourisme de montagne de la carte.",
+          "reponse": [
+            "chamonix",
+            "valdisere"
+          ],
+          "multiple": true,
+          "aide": "Quel symbole marque les lieux « de montagne » dans la légende ?",
+          "explication": "**Chamonix** et **Val d’Isère**, dans les Alpes, illustrent le tourisme de montagne. La Baule et Nice sont balnéaires ; Paris et Chambord, urbains et culturels."
+        },
+        {
+          "type": "zone",
+          "document": "reportage",
+          "enonce": "Touche le mot qui dit que la côte a été couverte de constructions.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Le béton est le matériau des immeubles.",
+          "explication": "Le **bétonnage** des littoraux est l’un des revers des aménagements touristiques : les stations recouvrent la côte d’immeubles."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le tourisme pèse près de 8 % du PIB. Si le PIB français est de 2 500 milliards d’euros (valeur arrondie pour l’exercice), combien le tourisme représente-t-il ? Réponds en milliards.",
+          "reponse": 200,
+          "unite": "milliards",
+          "tolerance": 5,
+          "aide": "8 % de 2 500 : 2 500 × 8 ÷ 100.",
+          "explication": "2 500 × 8 ÷ 100 = **200 milliards d’euros** : le tourisme fait vivre des territoires entiers."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel problème le reportage met-il en évidence ?",
+          "options": [
+            "Des emplois souvent saisonniers et une côte bétonnée",
+            "Un manque total de touristes en août",
+            "Des emplois stables et à l’année pour tous",
+            "Un territoire sans aucune construction"
+          ],
+          "reponse": 0,
+          "aide": "Relis chaque paragraphe : ce sont les deux limites du tourisme.",
+          "explication": "Le tourisme a un **revers** : le bétonnage du littoral et des emplois **saisonniers**, précaires. Il fait vivre un territoire tout en menaçant ce qui le rend attirant."
+        }
+      ]
+    },
+    {
+      "chapitre": "2222b08d-0800-5557-8246-9c0ac13b4a44",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La diagonale du vide ?",
+      "competence": "lire-carte",
+      "situation": "Jade étudie la carte de la diagonale des faibles densités, cette bande de territoire qui va des Ardennes aux Landes. Elle compare aussi trois cantons de l’Ouest.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "La diagonale des faibles densités",
+          "source": "Contour simplifié, pour l’exercice.",
+          "fond": "france",
+          "aires": [
+            {
+              "contour": [
+                [
+                  4,
+                  50
+                ],
+                [
+                  5.2,
+                  49.4
+                ],
+                [
+                  4.6,
+                  47.8
+                ],
+                [
+                  4,
+                  46
+                ],
+                [
+                  3.6,
+                  44.5
+                ],
+                [
+                  1,
+                  42.8
+                ],
+                [
+                  -1,
+                  43.3
+                ],
+                [
+                  -1.2,
+                  44.3
+                ],
+                [
+                  0.5,
+                  45.6
+                ],
+                [
+                  2.2,
+                  46.6
+                ],
+                [
+                  3.2,
+                  48.2
+                ],
+                [
+                  3.5,
+                  49.6
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "hachures",
+              "etiquette": "Faible densité"
+            }
+          ],
+          "lieux": [
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "point",
+              "nom": "Paris"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "aurillac",
+              "lieu": "aurillac",
+              "symbole": "point",
+              "nom": "Aurillac"
+            },
+            {
+              "id": "nantes",
+              "lieu": "nantes",
+              "symbole": "point",
+              "nom": "Nantes"
+            }
+          ]
+        },
+        {
+          "id": "cantons",
+          "type": "tableau",
+          "titre": "Trois cantons",
+          "source": "Chiffres écrits pour l’exercice.",
+          "colonnes": [
+            "Canton",
+            "Habitants",
+            "Superficie (km²)"
+          ],
+          "lignes": [
+            [
+              "Haut-Pays",
+              "4 500",
+              "300"
+            ],
+            [
+              "Val-Clair",
+              "26 000",
+              "130"
+            ],
+            [
+              "Les Monts",
+              "9 000",
+              "450"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville qui se trouve **dans** la diagonale des faibles densités.",
+          "reponse": [
+            "aurillac"
+          ],
+          "aide": "La bande part des Ardennes et traverse le Massif central.",
+          "explication": "**Aurillac**, dans le Massif central, est au cœur de la diagonale. Paris, Lyon et Nantes en sont éloignées : ce sont des espaces de fortes densités."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la densité du canton du Haut-Pays, en habitants par km² ?",
+          "reponse": 15,
+          "unite": "hab./km²",
+          "aide": "Densité = nombre d’habitants ÷ superficie : 4 500 ÷ 300.",
+          "explication": "4 500 ÷ 300 = **15 habitants par km²**, bien en dessous du seuil de 30 : c’est un espace de faible densité."
+        },
+        {
+          "type": "zone",
+          "document": "cantons",
+          "enonce": "Touche **les deux cantons** de faible densité (moins de 30 habitants par km²).",
+          "reponse": [
+            "r0c0",
+            "r2c0"
+          ],
+          "multiple": true,
+          "aide": "Calcule la densité de chaque canton : habitants ÷ superficie.",
+          "explication": "Haut-Pays : 4 500 ÷ 300 = **15** ; Les Monts : 9 000 ÷ 450 = **20**. Val-Clair : 26 000 ÷ 130 = 200, loin du seuil."
+        }
+      ]
+    },
+    {
+      "chapitre": "2222b08d-0800-5557-8246-9c0ac13b4a44",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un village qui se repeuple",
+      "competence": "lire-graphique",
+      "situation": "Saint-Martin-des-Monts, une commune imaginée du Massif central, a perdu des habitants pendant un siècle… puis en a regagné. La mairie a aussi demandé aux nouveaux arrivants pourquoi ils étaient venus.",
+      "documents": [
+        {
+          "id": "pop",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Population de Saint-Martin-des-Monts",
+          "source": "Chiffres écrits pour l’exercice.",
+          "categories": [
+            "1921",
+            "1962",
+            "1990",
+            "2008",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Habitants",
+              "valeurs": [
+                1200,
+                720,
+                480,
+                410,
+                450
+              ],
+              "teinte": "brun"
+            }
+          ],
+          "axeY": {
+            "titre": "Habitants",
+            "unite": "habitants",
+            "min": 0,
+            "max": 1400,
+            "pas": 200
+          },
+          "valeurs": false
+        },
+        {
+          "id": "motifs",
+          "type": "tableau",
+          "titre": "Pourquoi ils sont venus",
+          "source": "Enquête imaginée pour l’exercice.",
+          "colonnes": [
+            "Motif cité",
+            "Part des nouveaux habitants"
+          ],
+          "lignes": [
+            [
+              "Le cadre de vie",
+              "45 %"
+            ],
+            [
+              "Le télétravail",
+              "25 %"
+            ],
+            [
+              "Le prix des maisons",
+              "20 %"
+            ],
+            [
+              "Un emploi sur place",
+              "10 %"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pop",
+          "enonce": "Touche l’année où la commune comptait le **moins** d’habitants.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le point le plus bas de la courbe.",
+          "explication": "C’est **2008**, avec 410 habitants. Après cette date, la courbe remonte : la commune regagne des habitants."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’habitants la commune a-t-elle perdus entre 1921 et 2008 ?",
+          "reponse": 790,
+          "unite": "habitants",
+          "aide": "Soustrais 410 à 1 200.",
+          "explication": "1 200 − 410 = **790 habitants** perdus : c’est l’exode rural, puis la déprise."
+        },
+        {
+          "type": "zone",
+          "document": "motifs",
+          "enonce": "Touche le **motif le plus cité** par les nouveaux habitants.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Cherche le pourcentage le plus élevé.",
+          "explication": "Le **cadre de vie** arrive en tête avec 45 %. Les néoruraux cherchent des espaces calmes, le télétravail (25 %) rend l’installation possible."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui explique le regain de population depuis 2008 ?",
+          "options": [
+            "L’arrivée de néoruraux, aidée par le télétravail",
+            "La fermeture de l’école, de la poste et des commerces",
+            "Le départ des jeunes habitants vers les grandes villes",
+            "La baisse du nombre de naissances dans la commune"
+          ],
+          "reponse": 0,
+          "aide": "Le tableau de droite donne les motifs des nouveaux venus.",
+          "explication": "Le **cadre de vie** et le **télétravail** attirent des néoruraux : tous les espaces de faible densité ne perdent pas d’habitants, certains en regagnent."
+        }
+      ]
+    },
+    {
+      "chapitre": "2222b08d-0800-5557-8246-9c0ac13b4a44",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quand l’école ferme, le village s’éteint",
+      "competence": "raisonner",
+      "situation": "Adam vit dans un village isolé de moyenne montagne (imaginé). Il compare les temps d’accès aux services avec ceux d’un habitant de ville et cherche à comprendre un cercle vicieux.",
+      "documents": [
+        {
+          "id": "temps",
+          "type": "tableau",
+          "titre": "Temps d’accès en voiture",
+          "source": "Chiffres écrits pour l’exercice.",
+          "colonnes": [
+            "Service",
+            "En ville (min)",
+            "Village isolé (min)"
+          ],
+          "lignes": [
+            [
+              "Médecin généraliste",
+              "3",
+              "22"
+            ],
+            [
+              "Supermarché",
+              "5",
+              "25"
+            ],
+            [
+              "Lycée",
+              "10",
+              "35"
+            ],
+            [
+              "Urgences hospitalières",
+              "8",
+              "45"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "titre": "Le cercle de la déprise",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "partent",
+              "texte": "Des habitants partent"
+            },
+            {
+              "id": "ecole",
+              "texte": "L’école ferme"
+            },
+            {
+              "id": "inconnu",
+              "texte": "?"
+            },
+            {
+              "id": "baisse",
+              "texte": "La population baisse encore"
+            }
+          ],
+          "liens": [
+            {
+              "de": "partent",
+              "a": "ecole"
+            },
+            {
+              "de": "ecole",
+              "a": "inconnu"
+            },
+            {
+              "de": "inconnu",
+              "a": "baisse"
+            },
+            {
+              "de": "baisse",
+              "a": "partent"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "temps",
+          "enonce": "Touche le **service le plus éloigné** pour un habitant du village isolé.",
+          "reponse": [
+            "r3c2"
+          ],
+          "aide": "Cherche le temps le plus long dans la dernière colonne.",
+          "explication": "Les **urgences hospitalières** sont à 45 minutes. C’est l’une des manifestations des déserts médicaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Adam doit aller au lycée tous les jours : combien de minutes passe-t-il dans le trajet aller-retour ?",
+          "reponse": 70,
+          "unite": "minutes",
+          "aide": "Un aller-retour, c’est deux fois le temps d’un trajet (35 minutes).",
+          "explication": "35 × 2 = **70 minutes** par jour en voiture. La dépendance à la voiture est une difficulté réelle des espaces de faible densité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle étape manque (?) dans le cercle de la déprise ?",
+          "options": [
+            "Les familles avec enfants s’installent ailleurs",
+            "Des néoruraux arrivent en nombre",
+            "On construit une nouvelle école",
+            "Le télétravail fait revenir les familles"
+          ],
+          "reponse": 0,
+          "aide": "Après la fermeture de l’école, que font les familles avec enfants ?",
+          "explication": "Sans école, les **familles avec enfants** s’installent ailleurs, donc la population baisse encore : c’est un cercle vicieux qui alimente la déprise."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément : difficulté ou atout pour ces espaces ?",
+          "categories": [
+            "Une difficulté",
+            "Un atout"
+          ],
+          "items": [
+            [
+              "Le désert médical",
+              0
+            ],
+            [
+              "La fermeture de l’école",
+              0
+            ],
+            [
+              "Le vieillissement de la population",
+              0
+            ],
+            [
+              "Les éoliennes et la production d’énergie",
+              1
+            ],
+            [
+              "L’AOP fromagère",
+              1
+            ],
+            [
+              "Le tourisme vert",
+              1
+            ]
+          ],
+          "aide": "Les énergies renouvelables, les labels et le tourisme vert sont des ressources.",
+          "explication": "Déserts médicaux, fermetures et vieillissement sont des **difficultés**. Énergies renouvelables, AOP et tourisme vert sont des **atouts** : la faible densité n’est pas le vide."
+        }
+      ]
+    },
+    {
+      "chapitre": "d47a1340-11ae-5fcc-8d34-f0b41d7e2e36",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre années pour refonder la République",
+      "competence": "se-reperer-temps",
+      "situation": "Pour un exposé sur la Libération, Maëlle place sur une frise les grandes décisions de 1944 à 1946.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "De 1944 à 1946",
+          "debut": 1944,
+          "fin": 1947,
+          "pas": 1,
+          "evenements": [
+            {
+              "id": "cnr",
+              "date": 1944.2,
+              "nom": "Programme du CNR"
+            },
+            {
+              "id": "vote",
+              "date": 1945.3,
+              "nom": "Vote des femmes"
+            },
+            {
+              "id": "secu",
+              "date": 1945.8,
+              "nom": "Sécurité sociale"
+            },
+            {
+              "id": "demission",
+              "date": 1946.05,
+              "nom": "Départ de de Gaulle"
+            },
+            {
+              "id": "constitution",
+              "date": 1946.8,
+              "nom": "Constitution 1946"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui marque la **création de la Sécurité sociale**.",
+          "reponse": [
+            "secu"
+          ],
+          "aide": "Elle est créée par des ordonnances d’octobre 1945.",
+          "explication": "La **Sécurité sociale** naît en octobre 1945, par ordonnances, pour protéger chacun contre la maladie, les accidents du travail, la vieillesse et les charges de famille."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+          "items": [
+            "Programme du CNR",
+            "Premier vote des femmes",
+            "Création de la Sécurité sociale",
+            "Constitution de la IVe République"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "Mars 1944, avril 1945, octobre 1945, octobre 1946 : le **programme du CNR** prépare la refondation, la **Constitution** la couronne."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de mois séparent la création de la Sécurité sociale (octobre 1945) du départ de de Gaulle (janvier 1946) ?",
+          "reponse": 3,
+          "unite": "mois",
+          "aide": "Compte de octobre à janvier : novembre, décembre, janvier.",
+          "explication": "D’octobre à janvier, il s’écoule **3 mois**. De Gaulle quitte la tête du gouvernement dès janvier 1946, hostile au futur régime."
+        }
+      ]
+    },
+    {
+      "chapitre": "d47a1340-11ae-5fcc-8d34-f0b41d7e2e36",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les Françaises deviennent électrices",
+      "competence": "analyser-texte",
+      "situation": "En 1944, un texte de loi donne le droit de vote aux Françaises. Élise compare ce texte à la situation dans d’autres pays.",
+      "documents": [
+        {
+          "id": "texte",
+          "type": "texte",
+          "genre": "source",
+          "titre": "L’ordonnance du 21 avril 1944",
+          "auteur": "D’après l’ordonnance du 21 avril 1944 — texte adapté.",
+          "blocs": [
+            "Le Comité français de libération nationale, qui siège à Alger, décide que les [[e|femmes]] sont électrices et éligibles dans les mêmes conditions que les hommes.",
+            "Elles pourront voter dès les prochaines élections organisées après la Libération."
+          ]
+        },
+        {
+          "id": "pays",
+          "type": "tableau",
+          "titre": "Premier droit de vote national des femmes",
+          "source": "Dates arrondies au niveau national, d’après des repères historiques.",
+          "colonnes": [
+            "Pays",
+            "Année"
+          ],
+          "lignes": [
+            [
+              "Nouvelle-Zélande",
+              "1893"
+            ],
+            [
+              "Allemagne",
+              "1918"
+            ],
+            [
+              "États-Unis",
+              "1920"
+            ],
+            [
+              "France",
+              "1944"
+            ],
+            [
+              "Suisse",
+              "1971"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "texte",
+          "enonce": "Touche le mot qui désigne les personnes à qui l’ordonnance accorde le droit de vote.",
+          "reponse": [
+            "e"
+          ],
+          "aide": "Relis la première phrase du texte.",
+          "explication": "Ce sont les **femmes** : elles deviennent électrices et éligibles, comme les hommes. Elles voteront pour la première fois en avril 1945."
+        },
+        {
+          "type": "zone",
+          "document": "pays",
+          "enonce": "Touche le pays du tableau où les femmes ont voté **en dernier**.",
+          "reponse": [
+            "r4c0"
+          ],
+          "aide": "Cherche l’année la plus récente.",
+          "explication": "C’est la **Suisse** (1971). La France (1944) est en retard sur la Nouvelle-Zélande, l’Allemagne et les États-Unis."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le vote des Allemandes (1918) de celui des Françaises (1944) ?",
+          "reponse": 26,
+          "unite": "ans",
+          "aide": "Soustrais 1918 à 1944.",
+          "explication": "1944 − 1918 = **26 ans**. Le vote des femmes en France est tardif, rendu possible par la Libération."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel événement permet à cette réforme d’aboutir en 1944 ?",
+          "options": [
+            "La Libération et la refondation de la République",
+            "La guerre d’Algérie et la fin de l’Empire colonial",
+            "La chute du mur de Berlin et la fin du communisme",
+            "Les grandes grèves et les manifestations de Mai 1968"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la date de l’ordonnance : avril 1944.",
+          "explication": "La **Libération** ouvre une période de refondation : on ne rétablit pas l’ordre d’avant-guerre, on étend la démocratie, notamment aux femmes."
+        }
+      ]
+    },
+    {
+      "chapitre": "d47a1340-11ae-5fcc-8d34-f0b41d7e2e36",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Du programme des « Jours heureux » aux réformes",
+      "competence": "argumenter",
+      "situation": "Théo compare les demandes du Conseil national de la Résistance (mars 1944) avec ce que la République a réellement fait entre 1944 et 1946.",
+      "documents": [
+        {
+          "id": "cnr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Les demandes du programme du CNR (mars 1944)",
+          "auteur": "Extrait très adapté, en langage d’aujourd’hui.",
+          "blocs": [
+            "Le programme réclame un plan complet de [[s|sécurité]] sociale, pour garantir à tous des moyens d’existence quand ils ne peuvent plus travailler.",
+            "Il demande aussi le retour à la [[n|nation]] des grands moyens de production : charbon, électricité, gaz.",
+            "Enfin, il veut permettre aux enfants doués de poursuivre leurs études, quelle que soit la fortune de leurs parents."
+          ]
+        },
+        {
+          "id": "realisations",
+          "type": "tableau",
+          "titre": "Ce qui a été réalisé",
+          "source": "Repères de cours.",
+          "colonnes": [
+            "Date",
+            "Réforme"
+          ],
+          "lignes": [
+            [
+              "1944",
+              "Droit de vote des femmes"
+            ],
+            [
+              "Octobre 1945",
+              "Ordonnances créant la Sécurité sociale"
+            ],
+            [
+              "1945-1946",
+              "Nationalisations (Renault, charbonnages, EDF-GDF…)"
+            ],
+            [
+              "Octobre 1946",
+              "Préambule de la Constitution : droit à l’instruction"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cnr",
+          "enonce": "Touche le mot qui correspond aux **nationalisations** : les entreprises reviennent à la…",
+          "reponse": [
+            "n"
+          ],
+          "aide": "Une nationalisation rend une entreprise à la communauté.",
+          "explication": "Les grandes entreprises reviennent à la **nation** : l’État les contrôle. Renault, les charbonnages et EDF-GDF sont nationalisés à la Libération."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque demande du programme à sa réalisation.",
+          "paires": [
+            [
+              "Un plan complet de sécurité sociale",
+              "Les ordonnances d’octobre 1945"
+            ],
+            [
+              "Le retour à la nation des grands moyens de production",
+              "Les nationalisations de 1945-1946"
+            ],
+            [
+              "Des études ouvertes à tous, quelle que soit la fortune",
+              "Le droit à l’instruction dans le préambule de 1946"
+            ]
+          ],
+          "aide": "Cherche, dans le tableau, la ligne qui reprend chaque idée.",
+          "explication": "Chaque demande de 1944 trouve sa **réalisation** : Sécurité sociale en 1945, nationalisations en 1945-1946, droit à l’instruction dans le préambule de 1946."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le cœur de ce modèle social.",
+          "texte": "Les réformes de 1944-1946 protègent chacun par la ___ nationale plutôt que par la ___.",
+          "reponses": [
+            [
+              "solidarité"
+            ],
+            [
+              "charité"
+            ]
+          ],
+          "banque": [
+            "solidarité",
+            "charité",
+            "concurrence",
+            "guerre"
+          ],
+          "aide": "Le cours parle d’une protection contre les risques de l’existence.",
+          "explication": "L’idée directrice est la **solidarité** nationale plutôt que la **charité** : la protection devient un droit, pas un secours."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi dit-on que ces réformes forment un « socle » ?",
+          "options": [
+            "Parce que le modèle social français en est encore l’héritier",
+            "Parce que la IVe République a duré vingt ans",
+            "Parce qu’elles ont été supprimées en 1958",
+            "Parce qu’elles ne concernent que les entreprises"
+          ],
+          "reponse": 0,
+          "aide": "La Sécurité sociale existe encore aujourd’hui.",
+          "explication": "Sécurité sociale, nationalisations et préambule de 1946 forment le **socle du modèle social français**, encore discuté aujourd’hui."
+        }
+      ]
+    },
+    {
+      "chapitre": "a6a17bba-64cd-5ff0-b38c-324ae198fc0d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Dix ans d’une République nouvelle",
+      "competence": "se-reperer-temps",
+      "situation": "Sur la frise des années de Gaulle, Romain replace les grandes décisions d’un président qui veut rendre à la France son indépendance.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les années de Gaulle",
+          "debut": 1958,
+          "fin": 1970,
+          "pas": 2,
+          "periodes": [
+            {
+              "id": "presidence",
+              "debut": 1959,
+              "fin": 1969,
+              "nom": "Présidence de de Gaulle",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "cinquieme",
+              "date": 1958,
+              "nom": "Ve République"
+            },
+            {
+              "id": "atome",
+              "date": 1960,
+              "nom": "Essai nucléaire"
+            },
+            {
+              "id": "algerie",
+              "date": 1962,
+              "nom": "Indép. algérienne"
+            },
+            {
+              "id": "elysee",
+              "date": 1963,
+              "nom": "Traité de l’Élysée"
+            },
+            {
+              "id": "otan",
+              "date": 1966,
+              "nom": "Sortie de l’OTAN"
+            },
+            {
+              "id": "mai",
+              "date": 1968,
+              "nom": "Mai 1968"
+            },
+            {
+              "id": "depart",
+              "date": 1969,
+              "nom": "Départ de de Gaulle"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la date de l’**indépendance de l’Algérie**.",
+          "reponse": [
+            "algerie"
+          ],
+          "aide": "Les accords d’Évian sont signés en mars, l’indépendance est proclamée en juillet.",
+          "explication": "L’Algérie devient indépendante le **5 juillet 1962**, après les accords d’Évian de mars 1962."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Premier essai nucléaire français",
+            "Traité de l’Élysée avec l’Allemagne",
+            "Sortie du commandement intégré de l’OTAN",
+            "Démission de de Gaulle"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "**1960 → 1963 → 1966 → 1969** : de Gaulle construit l’indépendance nationale de la France, puis démissionne."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la naissance de la Ve République (1958) du départ de de Gaulle (1969) ?",
+          "reponse": 11,
+          "unite": "ans",
+          "aide": "Soustrais 1958 à 1969.",
+          "explication": "1969 − 1958 = **11 ans**. La Ve République survit à son fondateur : elle a été conçue pour un homme et pour une crise, mais elle a duré."
+        }
+      ]
+    },
+    {
+      "chapitre": "a6a17bba-64cd-5ff0-b38c-324ae198fc0d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les référendums du général",
+      "competence": "lire-graphique",
+      "situation": "De Gaulle utilise volontiers le référendum. Clémence lit les résultats de cinq consultations organisées sous son autorité.",
+      "documents": [
+        {
+          "id": "referendums",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Part de « oui » aux référendums",
+          "source": "Résultats arrondis à l’unité.",
+          "categories": [
+            "1958 Constitution",
+            "1961 Autodétermination",
+            "1962 Évian",
+            "1962 Président élu",
+            "1969 Régionalisation"
+          ],
+          "series": [
+            {
+              "nom": "Part de oui",
+              "valeurs": [
+                83,
+                75,
+                91,
+                62,
+                48
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Oui",
+            "unite": "en %",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "referendums",
+          "enonce": "Touche le référendum où le « oui » **n’a pas obtenu la majorité**.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Une majorité, c’est plus de 50 %.",
+          "explication": "En **1969**, le « oui » ne recueille que 48 % : de Gaulle perd le référendum sur la régionalisation et le Sénat."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel écart, en points, sépare le « oui » de 1958 (Constitution) de celui de 1969 ?",
+          "reponse": 35,
+          "unite": "points",
+          "aide": "Soustrais 48 à 83.",
+          "explication": "83 − 48 = **35 points**. La légitimité du général s’est érodée en dix ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi de Gaulle démissionne-t-il après le référendum de 1969 ?",
+          "options": [
+            "Il a mis sa propre légitimité en jeu et a perdu",
+            "Le Parlement l’a renversé par une motion de censure",
+            "Il était atteint par la limite d’âge",
+            "Les accords de Grenelle l’y ont contraint"
+          ],
+          "reponse": 0,
+          "aide": "Pour de Gaulle, un référendum est un test de confiance personnel.",
+          "explication": "Le référendum est l’instrument privilégié du général : il **engage sa légitimité** à chaque consultation. Il perd en 1969 et démissionne le lendemain."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque pouvoir : appartient-il au président ou au Parlement dans la Ve République ?",
+          "categories": [
+            "Le président",
+            "Le Parlement"
+          ],
+          "items": [
+            [
+              "Dissoudre l’Assemblée nationale",
+              0
+            ],
+            [
+              "Soumettre un texte au référendum (article 11)",
+              0
+            ],
+            [
+              "Nommer le Premier ministre",
+              0
+            ],
+            [
+              "Voter la loi dans son domaine délimité",
+              1
+            ],
+            [
+              "Contrôler le gouvernement",
+              1
+            ]
+          ],
+          "aide": "Le président peut dissoudre et consulter le peuple.",
+          "explication": "La Constitution de 1958 **renverse l’équilibre** : le président dissout, consulte par référendum et nomme le Premier ministre, tandis que le domaine du Parlement est délimité."
+        }
+      ]
+    },
+    {
+      "chapitre": "a6a17bba-64cd-5ff0-b38c-324ae198fc0d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La France de de Gaulle dans le monde",
+      "competence": "lire-carte",
+      "situation": "Mathis trace la carte des gestes par lesquels de Gaulle affirme l’indépendance de la France, ni alignée sur les États-Unis ni sur l’URSS.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre lieux de la politique d’indépendance",
+          "fond": "monde",
+          "cadrage": [
+            -15,
+            0,
+            125,
+            58
+          ],
+          "lieux": [
+            {
+              "id": "reggane",
+              "lon": 0.17,
+              "lat": 26.7,
+              "symbole": "point",
+              "nom": "Reggane (Sahara)"
+            },
+            {
+              "id": "bonn",
+              "lon": 7.1,
+              "lat": 50.73,
+              "symbole": "point",
+              "nom": "Bonn"
+            },
+            {
+              "id": "pekin",
+              "lon": 116.4,
+              "lat": 39.9,
+              "symbole": "point",
+              "nom": "Pékin"
+            },
+            {
+              "id": "phnom",
+              "lon": 104.9,
+              "lat": 11.56,
+              "symbole": "point",
+              "nom": "Phnom Penh"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la capitale dont le régime est reconnu par la France en **1964** : la Chine populaire.",
+          "reponse": [
+            "pekin"
+          ],
+          "aide": "Pékin est située tout à l’est de la carte, en Asie.",
+          "explication": "En **1964**, la France reconnaît la Chine populaire, à **Pékin**, en se démarquant des États-Unis."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque date à l’acte de de Gaulle.",
+          "paires": [
+            [
+              "1960",
+              "Premier essai nucléaire français"
+            ],
+            [
+              "1963",
+              "Traité de l’Élysée avec l’Allemagne"
+            ],
+            [
+              "1964",
+              "Reconnaissance de la Chine populaire"
+            ],
+            [
+              "1966",
+              "Discours de Phnom Penh contre la guerre du Vietnam"
+            ]
+          ],
+          "aide": "L’essai nucléaire se passe dans le Sahara, en Algérie, alors française.",
+          "explication": "**1960** : essai nucléaire ; **1963** : traité de l’Élysée ; **1964** : Chine ; **1966** : discours de Phnom Penh et sortie de l’OTAN. Ce sont les étapes d’une même politique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le premier essai nucléaire (1960) du discours de Phnom Penh (1966) ?",
+          "reponse": 6,
+          "unite": "ans",
+          "aide": "Soustrais 1960 à 1966.",
+          "explication": "1966 − 1960 = **6 ans**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel fil conducteur relie tous ces gestes ?",
+          "options": [
+            "L’indépendance nationale, hors des blocs",
+            "L’alignement sur les États-Unis",
+            "L’adhésion au pacte de Varsovie",
+            "Le retrait de toute politique étrangère"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce que la France refuse : dépendre d’un seul camp.",
+          "explication": "De Gaulle veut une France **indépendante** : arme nucléaire nationale, réconciliation avec l’Allemagne, dialogue avec la Chine, critique de la guerre du Vietnam, sortie de l’OTAN intégrée."
+        }
+      ]
+    },
+    {
+      "chapitre": "23f482c1-6c94-510f-9a71-dc22f6c9ebea",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le frigo et la télé entrent dans les foyers",
+      "competence": "lire-graphique",
+      "situation": "Anaïs lit un graphique sur l’équipement des ménages français : les années de croissance changent le quotidien.",
+      "documents": [
+        {
+          "id": "equipement",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Ménages équipés",
+          "source": "Valeurs arrondies, ordre de grandeur, d’après l’INSEE.",
+          "categories": [
+            "1954",
+            "1960",
+            "1965",
+            "1970",
+            "1975"
+          ],
+          "series": [
+            {
+              "nom": "Réfrigérateur",
+              "valeurs": [
+                8,
+                26,
+                55,
+                82,
+                91
+              ],
+              "teinte": "bleu"
+            },
+            {
+              "nom": "Télévision",
+              "valeurs": [
+                1,
+                13,
+                41,
+                70,
+                86
+              ],
+              "teinte": "rose"
+            }
+          ],
+          "axeY": {
+            "titre": "Ménages équipés",
+            "unite": "en %",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "equipement",
+          "enonce": "Touche l’année où **plus de la moitié** des ménages ont un réfrigérateur pour la première fois.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le premier point de la courbe du réfrigérateur au-dessus de 50 %.",
+          "explication": "En **1965**, 55 % des ménages ont un réfrigérateur. En 1960, ils n’étaient que 26 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En 1970, quelle part des ménages possède une télévision ?",
+          "reponse": 70,
+          "unite": "%",
+          "tolerance": 2,
+          "aide": "Lis la courbe de la télévision au-dessus de 1970.",
+          "explication": "En 1970, **70 %** des ménages ont une télévision, contre 1 % en 1954 : c’est la société de consommation."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce graphique sur la France des Trente Glorieuses ?",
+          "options": [
+            "Une société de consommation qui s’équipe rapidement",
+            "Une société qui refuse les objets nouveaux",
+            "Une société où le pouvoir d’achat baisse",
+            "Une société sans croissance"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la forme des courbes : elles montent vite.",
+          "explication": "Le **pouvoir d’achat double**, le crédit se répand : les ménages s’équipent en appareils ménagers et en télévision en une génération."
+        }
+      ]
+    },
+    {
+      "chapitre": "23f482c1-6c94-510f-9a71-dc22f6c9ebea",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’exode rural et la ville qui grandit",
+      "competence": "lire-graphique",
+      "situation": "Bastien compare la répartition des emplois en France en 1954 et en 1975. Le monde du travail a beaucoup changé.",
+      "documents": [
+        {
+          "id": "emplois",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Répartition des emplois",
+          "source": "Valeurs arrondies, ordre de grandeur, d’après l’INSEE.",
+          "categories": [
+            "Agriculture",
+            "Industrie",
+            "Services"
+          ],
+          "series": [
+            {
+              "nom": "1954",
+              "valeurs": [
+                27,
+                36,
+                37
+              ],
+              "teinte": "sable"
+            },
+            {
+              "nom": "1975",
+              "valeurs": [
+                10,
+                38,
+                52
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des emplois",
+            "unite": "en %",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "emplois",
+          "enonce": "Touche le secteur dont la part **baisse le plus** entre 1954 et 1975.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Compare les deux barres de chaque secteur.",
+          "explication": "L’**agriculture** passe de 27 % à 10 % : c’est l’exode rural."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points la part de l’agriculture baisse-t-elle entre 1954 et 1975 ?",
+          "reponse": 17,
+          "unite": "points",
+          "aide": "Soustrais 10 à 27.",
+          "explication": "27 − 10 = **17 points**. La chute de la population agricole alimente l’exode rural."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque terme à sa définition.",
+          "paires": [
+            [
+              "Exode rural",
+              "Départ des campagnards vers les villes"
+            ],
+            [
+              "Grands ensembles",
+              "Vastes quartiers de logements construits vite"
+            ],
+            [
+              "Baby-boom",
+              "Forte hausse des naissances après 1945"
+            ],
+            [
+              "Tertiaire",
+              "Secteur des services"
+            ]
+          ],
+          "aide": "Un grand ensemble, c’est un quartier d’immeubles.",
+          "explication": "L’**exode rural** nourrit les villes, où l’on construit des **grands ensembles** ; le **baby-boom** fournit une main-d’œuvre nombreuse, le **tertiaire** progresse."
+        }
+      ]
+    },
+    {
+      "chapitre": "23f482c1-6c94-510f-9a71-dc22f6c9ebea",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Jeanne et la banque",
+      "competence": "analyser-document",
+      "situation": "Pour un exposé sur les conquêtes des femmes, Zoé lit une lettre imaginée, datée de 1963, et la replace sur une frise.",
+      "documents": [
+        {
+          "id": "lettre",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "La lettre de Jeanne (1963)",
+          "auteur": "Lettre écrite pour l’exercice.",
+          "blocs": [
+            "« Chère Mathilde, je travaille depuis quatre ans, mais je ne peux toujours pas ouvrir un [[c|compte]] à la banque sans la signature de mon mari. »",
+            "« Je gagne mon salaire et pourtant, pour la loi, c’est lui qui décide. Je ne suis pas la seule dans ce cas. »"
+          ]
+        },
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les conquêtes des femmes",
+          "debut": 1960,
+          "fin": 1980,
+          "pas": 5,
+          "periodes": [
+            {
+              "id": "fin",
+              "debut": 1973,
+              "fin": 1975,
+              "nom": "Fin des Trente Glorieuses",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "banque",
+              "date": 1965,
+              "nom": "Compte bancaire"
+            },
+            {
+              "id": "neuwirth",
+              "date": 1967,
+              "nom": "Loi Neuwirth"
+            },
+            {
+              "id": "choc",
+              "date": 1973,
+              "nom": "Choc pétrolier"
+            },
+            {
+              "id": "veil",
+              "date": 1975,
+              "nom": "Loi Veil"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lettre",
+          "enonce": "Touche le mot qui désigne ce que Jeanne ne peut pas ouvrir sans l’accord de son mari.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Elle écrit à propos de la banque.",
+          "explication": "C’est un **compte** bancaire. En 1963, la loi exige encore l’accord du mari."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’année où la loi permet enfin à une femme d’ouvrir un compte **sans l’accord de son mari**.",
+          "reponse": [
+            "banque"
+          ],
+          "aide": "La réforme arrive deux ans après la lettre de Jeanne.",
+          "explication": "C’est en **1965** : les femmes mariées peuvent ouvrir un compte bancaire et travailler sans l’autorisation de leur mari."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la loi de 1965 sur le compte bancaire de la loi Veil (1975) ?",
+          "reponse": 10,
+          "unite": "ans",
+          "aide": "Soustrais 1965 à 1975.",
+          "explication": "1975 − 1965 = **10 ans** : en dix ans, les femmes gagnent l’autonomie bancaire, la contraception (1967) puis l’IVG (1975)."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces trois conquêtes dans l’ordre chronologique.",
+          "items": [
+            "Compte bancaire sans l’accord du mari",
+            "Loi Neuwirth sur la contraception",
+            "Loi Veil sur l’IVG"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "**1965 → 1967 → 1975** : la croissance ne fait pas que produire des biens, elle change aussi les familles et la place des femmes."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5a2da3-153c-58c8-a59b-04f04d792b1c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinq présidents, cinquante ans",
+      "competence": "se-reperer-temps",
+      "situation": "Sur une frise, Amandine place les présidents de la Ve République de 1969 à 2012.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les présidents de 1969 à 2012",
+          "debut": 1965,
+          "fin": 2015,
+          "pas": 5,
+          "periodes": [
+            {
+              "id": "pompidou",
+              "debut": 1969,
+              "fin": 1974,
+              "nom": "Pompidou",
+              "teinte": "ambre"
+            },
+            {
+              "id": "giscard",
+              "debut": 1974,
+              "fin": 1981,
+              "nom": "Giscard d’Estaing",
+              "teinte": "bleu"
+            },
+            {
+              "id": "mitterrand",
+              "debut": 1981,
+              "fin": 1995,
+              "nom": "Mitterrand",
+              "teinte": "ambre"
+            },
+            {
+              "id": "chirac",
+              "debut": 1995,
+              "fin": 2007,
+              "nom": "Chirac",
+              "teinte": "bleu"
+            },
+            {
+              "id": "sarkozy",
+              "debut": 2007,
+              "fin": 2012,
+              "nom": "Sarkozy",
+              "teinte": "ambre"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "alternance",
+              "date": 1981,
+              "nom": "Alternance"
+            },
+            {
+              "id": "quinquennat",
+              "date": 2000,
+              "nom": "Quinquennat"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la présidence **pendant laquelle le quinquennat est adopté** (2000).",
+          "reponse": [
+            "chirac"
+          ],
+          "aide": "Repère l’événement « Quinquennat » et vois quelle période le recouvre.",
+          "explication": "Le quinquennat est voté en **2000**, sous la présidence de **Jacques Chirac** (1995-2007)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années François Mitterrand a-t-il été président ?",
+          "reponse": 14,
+          "unite": "ans",
+          "aide": "Soustrais 1981 à 1995.",
+          "explication": "1995 − 1981 = **14 ans**. Élu en 1981, il incarne la première alternance de gauche de la Ve République."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces quatre présidents dans l’ordre.",
+          "items": [
+            "Georges Pompidou",
+            "Valéry Giscard d’Estaing",
+            "François Mitterrand",
+            "Jacques Chirac"
+          ],
+          "aide": "Lis la frise de gauche à droite.",
+          "explication": "Pompidou (1969), Giscard d’Estaing (1974), Mitterrand (1981), Chirac (1995) : la Ve République **résiste** au départ de son fondateur et à l’alternance."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5a2da3-153c-58c8-a59b-04f04d792b1c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand le président et le gouvernement ne sont pas du même camp",
+      "competence": "analyser-document",
+      "situation": "Un manuel présente les trois cohabitations de la Ve République. Lina doit comprendre qui décide de quoi quand le président et le Premier ministre s’opposent.",
+      "documents": [
+        {
+          "id": "cohabitations",
+          "type": "tableau",
+          "titre": "Les trois cohabitations",
+          "source": "Repères de cours.",
+          "colonnes": [
+            "Période",
+            "Président",
+            "Premier ministre"
+          ],
+          "lignes": [
+            [
+              "1986-1988",
+              "Mitterrand",
+              "Chirac"
+            ],
+            [
+              "1993-1995",
+              "Mitterrand",
+              "Balladur"
+            ],
+            [
+              "1997-2002",
+              "Chirac",
+              "Jospin"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cohabitations",
+          "enonce": "Touche le **Premier ministre** de la cohabitation de 1997-2002.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Regarde la dernière ligne, colonne « Premier ministre ».",
+          "explication": "C’est **Lionel Jospin**, Premier ministre de 1997 à 2002 sous la présidence de Jacques Chirac."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années de cohabitation la Ve République a-t-elle connues au total ?",
+          "reponse": 9,
+          "unite": "ans",
+          "aide": "Additionne les durées : 2 + 2 + 5.",
+          "explication": "2 + 2 + 5 = **9 ans** : 1986-1988 (2 ans), 1993-1995 (2 ans), 1997-2002 (5 ans)."
+        },
+        {
+          "type": "categories",
+          "enonce": "Pendant une cohabitation, qui décide de quoi ?",
+          "categories": [
+            "Le président",
+            "Le gouvernement"
+          ],
+          "items": [
+            [
+              "La défense",
+              0
+            ],
+            [
+              "Les affaires étrangères",
+              0
+            ],
+            [
+              "La politique économique",
+              1
+            ],
+            [
+              "L’éducation",
+              1
+            ],
+            [
+              "Le budget",
+              1
+            ]
+          ],
+          "aide": "Le président garde deux domaines traditionnellement réservés.",
+          "explication": "Le président garde la **défense** et les **affaires étrangères** ; le gouvernement conduit la politique **intérieure** : économie, éducation, budget."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le quinquennat (2000) rend-il la cohabitation moins probable ?",
+          "options": [
+            "Président et députés sont élus presque en même temps pour la même durée",
+            "Le Premier ministre est désormais élu directement par tous les citoyens",
+            "Le Parlement n’a plus le droit de voter la loi depuis cette réforme",
+            "Le président ne peut plus dissoudre l’Assemblée nationale après 2000"
+          ],
+          "reponse": 0,
+          "aide": "Le calendrier électoral a été inversé : présidentielle d’abord, législatives ensuite.",
+          "explication": "Avec le **quinquennat** et l’inversion du calendrier, les législatives suivent de peu la présidentielle : les électeurs donnent en général une majorité au président."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5a2da3-153c-58c8-a59b-04f04d792b1c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La République devient décentralisée",
+      "competence": "analyser-document",
+      "situation": "Yanis compare qui gère les écoles, les collèges et les lycées, puis il replace les grandes réformes des institutions sur une frise.",
+      "documents": [
+        {
+          "id": "competences",
+          "type": "tableau",
+          "titre": "Qui s’occupe de quoi ?",
+          "source": "Repères de cours.",
+          "colonnes": [
+            "Établissement ou service",
+            "Collectivité"
+          ],
+          "lignes": [
+            [
+              "École primaire",
+              "Commune"
+            ],
+            [
+              "Collège",
+              "Département"
+            ],
+            [
+              "Lycée",
+              "Région"
+            ],
+            [
+              "Routes départementales",
+              "Département"
+            ],
+            [
+              "Trains régionaux (TER)",
+              "Région"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Des institutions qui évoluent",
+          "debut": 1970,
+          "fin": 2010,
+          "pas": 5,
+          "evenements": [
+            {
+              "id": "saisine",
+              "date": 1974,
+              "nom": "Saisine du Conseil"
+            },
+            {
+              "id": "defferre",
+              "date": 1982,
+              "nom": "Lois Defferre"
+            },
+            {
+              "id": "quinquennat",
+              "date": 2000,
+              "nom": "Quinquennat"
+            },
+            {
+              "id": "decentralisee",
+              "date": 2003,
+              "nom": "Décentralisation"
+            },
+            {
+              "id": "qpc",
+              "date": 2008,
+              "nom": "QPC"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "competences",
+          "enonce": "Touche la collectivité qui s’occupe des **lycées**.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Commune, département ou région : lequel est le plus grand ?",
+          "explication": "Ce sont les **régions** qui gèrent les lycées. Les départements s’occupent des collèges, les communes des écoles primaires."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la date des **lois Defferre**, qui transfèrent des compétences aux communes, départements et régions.",
+          "reponse": [
+            "defferre"
+          ],
+          "aide": "Ces lois sont adoptées au début du premier septennat de Mitterrand.",
+          "explication": "Les lois **Defferre** datent de **1982**. Elles lancent la décentralisation en transférant des compétences de l’État aux collectivités locales."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les lois Defferre (1982) de l’inscription de la décentralisation dans la Constitution (2003) ?",
+          "reponse": 21,
+          "unite": "ans",
+          "aide": "Soustrais 1982 à 2003.",
+          "explication": "2003 − 1982 = **21 ans**. La réforme constitutionnelle de 2003 déclare la République « à l’organisation décentralisée »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que permet la question prioritaire de constitutionnalité (QPC, 2008) ?",
+          "options": [
+            "À un citoyen, en procès, de contester une loi au nom de la Constitution",
+            "À un ministre, lors d’un procès, de supprimer le Conseil constitutionnel",
+            "Au président, lors d’une crise, de dissoudre l’Assemblée nationale",
+            "À un conseil régional, lors d’une session, de voter le budget de la région"
+          ],
+          "reponse": 0,
+          "aide": "La QPC est liée au Conseil constitutionnel, gardien de la Constitution.",
+          "explication": "Depuis **2008**, un justiciable peut demander au Conseil constitutionnel de juger si une loi respecte la Constitution : les droits des citoyens sont mieux protégés."
+        }
+      ]
+    }
+  ]
+}

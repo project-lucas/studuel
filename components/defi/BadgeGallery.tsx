@@ -3,6 +3,7 @@
 import { Lock, Check } from 'lucide-react'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
 import { cn } from '@/lib/utils'
+import BadgeIcone from '@/components/BadgeIcone'
 
 // La galerie des badges : catalogue complet, acquis en couleur, verrouillés
 // grisés avec leur condition en indice. En mode édition, un tap sur un badge
@@ -59,12 +60,11 @@ export default function BadgeGallery({
                   equipped && 'ring-2 ring-highlight',
                 )}
               >
-                <span
-                  aria-hidden="true"
+                <BadgeIcone
+                  slug={b.slug}
+                  icon={b.icon}
                   className={cn('text-2xl', !b.earned && 'opacity-30 grayscale')}
-                >
-                  {b.icon}
-                </span>
+                />
                 {!b.earned ? (
                   <Lock
                     className="absolute right-1 top-1 size-3 text-white/40"

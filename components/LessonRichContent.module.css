@@ -1,0 +1,54 @@
+/*
+ * L'INDICE DE DÉFILEMENT D'UN TABLEAU TROP LARGE (01/10/2026).
+ *
+ * 317 tableaux de cours (3e → Tle) ont quatre colonnes ou plus : sur un
+ * téléphone ils défilent de côté dans leur cadre — la seule façon honnête de
+ * les poser —, mais rien ne le disait, et la dernière colonne avait l'air
+ * coupée. Un fondu au bord droit dit « il y a une suite » et s'efface à mesure
+ * qu'on la découvre.
+ *
+ * Sans JavaScript : l'opacité du fondu est pilotée par le défilement du cadre
+ * (scroll-timeline). Un tableau qui tient dans la largeur n'a pas de course de
+ * défilement, donc pas de ligne de temps active : l'animation ne s'applique
+ * pas et le fondu reste à son opacité de base, zéro. Un navigateur qui ne
+ * connaît pas ces propriétés ne montre rien non plus — le tableau défile comme
+ * avant. Opacité seule, valeurs littérales (règle des animations de l'app).
+ */
+.cadre {
+  position: relative;
+  timeline-scope: --tableau-cours;
+}
+
+.defile {
+  scroll-timeline: --tableau-cours inline;
+}
+
+.indice {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 2.5rem;
+  border-radius: 0 1rem 1rem 0;
+  background: linear-gradient(to left, var(--background) 15%, transparent);
+  pointer-events: none;
+  opacity: 0;
+}
+
+@supports (animation-timeline: scroll()) {
+  .indice {
+    animation: tableau-indice linear both;
+    animation-timeline: --tableau-cours;
+  }
+}
+
+@keyframes tableau-indice {
+  from {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

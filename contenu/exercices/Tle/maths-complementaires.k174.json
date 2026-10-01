@@ -1,0 +1,2022 @@
+{
+ "niveau": "Tle",
+ "matiere": "maths-complementaires",
+ "exercices": [
+  {
+   "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le skateur sur la rampe",
+   "competence": "modeliser",
+   "situation": "Sur une rampe, la vitesse d’un skateur (en m/s) est v(t) = 2t, où t est le temps en secondes. Sa position x(t) sur la rampe est une primitive de v, avec x(0) = 0.",
+   "documents": [
+    {
+     "id": "rampe",
+     "type": "tableau",
+     "titre": "Vitesse et position du skateur",
+     "colonnes": [
+      "t (s)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "v(t) en m/s",
+       0,
+       2,
+       4,
+       6,
+       8
+      ],
+      [
+       "x(t) en m",
+       0,
+       1,
+       4,
+       9,
+       16
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rampe",
+     "enonce": "Touche la position du skateur à l’instant t = 3 s.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "La position est sur la deuxième ligne.",
+     "explication": "À t = 3 s, le skateur est à **9 m** du départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une primitive de v(t) = 2t est x(t) = t². Calcule la position à t = 5 s.",
+     "reponse": 25,
+     "unite": "m",
+     "aide": "Remplace t par 5 dans t².",
+     "explication": "x(5) = 5² = **25 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le skateur part en réalité de x(0) = 3 m. Quelle est alors sa position x(t) ?",
+     "options": [
+      "x(t) = t² + 3, car la constante vaut la position de départ",
+      "x(t) = t² + 3t, car il faut multiplier la constante par t",
+      "x(t) = 2t² + 3, car on dérive la vitesse avant de conclure",
+      "x(t) = 3t², car la position de départ se multiplie à t²"
+     ],
+     "reponse": 0,
+     "aide": "Deux primitives de v diffèrent d’une constante.",
+     "explication": "Les primitives de 2t sont t² + C ; x(0) = 3 donne C = 3, soit **x(t) = t² + 3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec x(0) = 3 m, calcule la position à t = 4 s.",
+     "reponse": 19,
+     "unite": "m",
+     "aide": "x(4) = 4² + 3.",
+     "explication": "x(4) = 16 + 3 = **19 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le médicament qui s’élimine",
+   "competence": "modeliser",
+   "situation": "Après une injection, la quantité y(t) de médicament dans le sang (en mg) vérifie y′ = −0,2 y, où t est en heures. À l’instant t = 0, on a y(0) = 50 mg.",
+   "documents": [
+    {
+     "id": "elim",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantité de médicament dans le sang",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "y(t)",
+       "valeurs": [
+        50,
+        33.5,
+        22.5,
+        15.1,
+        10.1,
+        6.8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité",
+      "unite": "mg",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (heures)"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "modele",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "Les solutions de y′ = a y sont y(t) = C e^(a t).",
+      "Ici a = −0,2 et C = y(0) = 50."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "elim",
+     "enonce": "Touche le premier point où la quantité passe sous 12 mg.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Lis les points de gauche à droite : cherche le premier sous 12 mg.",
+     "explication": "À t = 8 h, la quantité vaut environ **10,1 mg** : c’est le premier point sous 12 mg."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule y′(0) = −0,2 × y(0), la vitesse d’évolution au départ.",
+     "reponse": -10,
+     "unite": "mg/h",
+     "aide": "Multiplie −0,2 par 50.",
+     "explication": "y′(0) = −0,2 × 50 = **−10 mg/h** : la quantité baisse de 10 mg par heure au départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec y(t) = 50 e^(−0,2 t), calcule y(5), arrondi au centième.",
+     "reponse": 18.39,
+     "unite": "mg",
+     "tolerance": 0.01,
+     "aide": "Pour t = 5, l’exposant vaut −1.",
+     "explication": "y(5) = 50 × e^(−1) ≈ 50 × 0,3679 ≈ **18,39 mg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fonction est solution de y′ = −0,2 y avec y(0) = 50 ?",
+     "options": [
+      "y(t) = 50 e^(−0,2 t), car sa dérivée vaut −0,2 y(t)",
+      "y(t) = 50 − 0,2 t, car elle baisse de 0,2 par heure",
+      "y(t) = −0,2 e^(50 t), car 50 se place dans l’exposant",
+      "y(t) = 50 ln(0,2 t), car la quantité baisse lentement"
+     ],
+     "reponse": 0,
+     "aide": "Les solutions de y′ = a y s’écrivent C e^(a t).",
+     "explication": "La forme C e^(a t) avec a = −0,2 et C = 50 donne **y(t) = 50 e^(−0,2 t)**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le thé qui refroidit",
+   "competence": "modeliser",
+   "situation": "Un thé à 90 °C est posé dans une pièce à 20 °C. Sa température T(t) (en °C, t en minutes) vérifie T′ = −0,1 T + 2.",
+   "documents": [
+    {
+     "id": "the",
+     "type": "tableau",
+     "titre": "Température relevée",
+     "colonnes": [
+      "t (min)",
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "30"
+     ],
+     "lignes": [
+      [
+       "T(t) en °C",
+       90,
+       62.5,
+       45.8,
+       35.6,
+       29.5,
+       23.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "meth",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La méthode",
+     "blocs": [
+      "Solutions de y′ = a y + b : y(t) = C e^(a t) − b/a.",
+      "On détermine C avec la condition initiale T(0) = 90."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Ici a = −0,1 et b = 2. Calcule −b/a, la température d’équilibre.",
+     "reponse": 20,
+     "unite": "°C",
+     "aide": "Divise −2 par −0,1.",
+     "explication": "−b/a = −2 / (−0,1) = **20 °C** : c’est la température de la pièce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "T(t) = C e^(−0,1 t) + 20. Avec T(0) = 90, que vaut C ?",
+     "reponse": 70,
+     "aide": "À t = 0, e⁰ = 1 : C + 20 = 90.",
+     "explication": "T(0) = C + 20 = 90 donne **C = 70**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule T(10) = 70 e^(−1) + 20, arrondi au dixième.",
+     "reponse": 45.8,
+     "unite": "°C",
+     "tolerance": 0.06,
+     "aide": "e^(−1) ≈ 0,3679.",
+     "explication": "T(10) = 70 × 0,3679 + 20 ≈ **45,8 °C**."
+    },
+    {
+     "type": "zone",
+     "document": "the",
+     "enonce": "Touche la température relevée la plus proche de la température d’équilibre.",
+     "reponse": [
+      "r0c6"
+     ],
+     "aide": "Cherche la valeur la plus proche de 20 °C.",
+     "explication": "À 30 min, le thé est à **23,5 °C** : proche de 20 °C, mais jamais égale."
+    },
+    {
+     "type": "choix",
+     "enonce": "La pièce passe à 15 °C. Que devient la température d’équilibre du thé ?",
+     "options": [
+      "Elle vaut 15 °C, car T′ = −0,1 T + 1,5 s’annule pour T = 15",
+      "Elle reste 20 °C, car la température de départ ne change pas",
+      "Elle vaut 90 °C, car le thé garde sa chaleur de départ",
+      "Elle vaut 75 °C, car on retranche 15 à la température initiale"
+     ],
+     "reponse": 0,
+     "aide": "Le refroidissement se fait vers la température ambiante.",
+     "explication": "L’équilibre est la température ambiante : **15 °C**, avec b = 0,1 × 15 = 1,5 et −b/a = 15."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La sortie à vélo",
+   "competence": "lire-graphique",
+   "situation": "Léa note sa vitesse moyenne à chaque heure d’une sortie à vélo de 4 heures. Chaque barre a pour largeur 1 heure.",
+   "documents": [
+    {
+     "id": "velo",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Vitesse de Léa",
+     "categories": [
+      "1re h",
+      "2e h",
+      "3e h",
+      "4e h"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        12,
+        18,
+        24,
+        15
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "km/h",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Heure de la sortie"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "velo",
+     "enonce": "Touche l’heure où Léa roule le plus vite.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La 3e heure : **24 km/h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance Léa parcourt-elle pendant la 2e heure ?",
+     "reponse": 18,
+     "unite": "km",
+     "aide": "Vitesse × durée d’une heure.",
+     "explication": "18 km/h × 1 h = **18 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance totale parcourt-elle en 4 heures ?",
+     "reponse": 69,
+     "unite": "km",
+     "aide": "Additionne les distances de chaque heure.",
+     "explication": "12 + 18 + 24 + 15 = **69 km**, c’est l’aire des quatre barres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle unité s’exprime l’aire sous le graphique des vitesses ?",
+     "options": [
+      "En kilomètres, car on multiplie des km/h par des heures",
+      "En km/h, car on lit l’axe vertical du graphique",
+      "En heures, car on lit l’axe horizontal du graphique",
+      "En km/h², car la vitesse est une grandeur qui varie"
+     ],
+     "reponse": 0,
+     "aide": "L’unité d’une aire est le produit des unités des deux axes.",
+     "explication": "km/h × h = **km** : l’aire est une distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les panneaux solaires du gymnase",
+   "competence": "modeliser",
+   "situation": "La puissance produite (en kW) par les panneaux du gymnase entre 9 h et 15 h est f(t) = 6t − t², où t est le nombre d’heures écoulées depuis 9 h. Une primitive de f est F(t) = 3t² − t³/3.",
+   "documents": [
+    {
+     "id": "puiss",
+     "type": "tableau",
+     "titre": "Puissance produite",
+     "colonnes": [
+      "t (h)",
+      "0",
+      "1,5",
+      "3",
+      "4,5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "f(t) en kW",
+       0,
+       6.75,
+       9,
+       6.75,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "puiss",
+     "enonce": "Touche la puissance maximale produite.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la plus grande valeur de la ligne.",
+     "explication": "Le maximum est **9 kW**, à t = 3 h, soit à midi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie produite entre t = 0 et t = 3 : F(3) − F(0).",
+     "reponse": 18,
+     "unite": "kWh",
+     "aide": "F(3) = 3 × 9 − 27/3.",
+     "explication": "F(3) = 27 − 9 = 18 et F(0) = 0 : **18 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie produite entre 9 h et 15 h : F(6) − F(0).",
+     "reponse": 36,
+     "unite": "kWh",
+     "aide": "F(6) = 3 × 36 − 216/3.",
+     "explication": "F(6) = 108 − 72 = 36 et F(0) = 0 : **36 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la puissance moyenne sur ces 6 heures ?",
+     "reponse": 6,
+     "unite": "kW",
+     "aide": "Divise l’énergie totale par la durée.",
+     "explication": "36 / 6 = **6 kW**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la puissance moyenne n’est-elle pas (f(0) + f(6)) / 2 ?",
+     "options": [
+      "Parce que la puissance varie et n’est pas affine sur l’intervalle",
+      "Parce que f(0) et f(6) sont des valeurs exprimées en heures",
+      "Parce que l’énergie se calcule toujours avec la médiane",
+      "Parce que la moyenne d’une fonction n’existe jamais ici"
+     ],
+     "reponse": 0,
+     "aide": "Que donnerait cette formule avec f(0) = f(6) = 0 ?",
+     "explication": "Elle donnerait 0 kW alors que les panneaux produisent : elle n’est valable que pour une fonction **affine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le thermostat intelligent",
+   "competence": "analyser-document",
+   "situation": "Un lycée compare sa consommation de chauffage entre 8 h et 14 h (t en heures depuis 8 h). Sans programmation, elle vaut f(t) = 4 kW. Avec un thermostat programmé, elle vaut g(t) = (6t − t²)/3 kW, de primitive G(t) = (3t² − t³/3)/3.",
+   "documents": [
+    {
+     "id": "conso",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Consommation avec et sans thermostat",
+     "categories": [
+      "0",
+      "1.5",
+      "3",
+      "4.5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Sans thermostat f(t)",
+       "valeurs": [
+        4,
+        4,
+        4,
+        4,
+        4
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Avec thermostat g(t)",
+       "valeurs": [
+        0,
+        2.25,
+        3,
+        2.25,
+        0
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "kW",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps t (heures)"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conso",
+     "enonce": "Touche l’instant où l’écart entre les deux consommations est le plus petit.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare l’écart vertical entre les deux courbes.",
+     "explication": "À t = 3 h, g(3) = 3 kW : l’écart n’est que de **1 kW**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie consommée sans thermostat sur [0 ; 6] : l’intégrale de la constante 4.",
+     "reponse": 24,
+     "unite": "kWh",
+     "aide": "Constante × durée.",
+     "explication": "4 × 6 = **24 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie consommée avec thermostat : G(6) − G(0).",
+     "reponse": 12,
+     "unite": "kWh",
+     "aide": "G(6) = (108 − 72)/3.",
+     "explication": "G(6) = 36/3 = 12 et G(0) = 0 : **12 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le thermostat économise-t-il sur la matinée ?",
+     "reponse": 12,
+     "unite": "kWh",
+     "aide": "C’est l’intégrale de (f − g), l’écart cumulé.",
+     "explication": "24 − 12 = **12 kWh** économisés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle intégrale représente l’économie réalisée sur [0 ; 6] ?",
+     "options": [
+      "L’intégrale de f(t) − g(t), car f est au-dessus de g",
+      "L’intégrale de g(t) − f(t), car g est la plus récente",
+      "L’intégrale de f(t) × g(t), car on combine les deux",
+      "L’intégrale de f(t) + g(t), car on cumule les deux"
+     ],
+     "reponse": 0,
+     "aide": "L’aire entre deux courbes se calcule avec la courbe du haut moins celle du bas.",
+     "explication": "**f − g** est positive sur tout l’intervalle : son intégrale est l’écart cumulé."
+    }
+   ]
+  },
+  {
+   "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le stand de glaces",
+   "competence": "lire-tableau",
+   "situation": "Un glacier relève les 200 clients d’un après-midi : adultes ou enfants, avec ou sans glace.",
+   "documents": [
+    {
+     "id": "glaces",
+     "type": "tableau",
+     "titre": "Clients du stand",
+     "colonnes": [
+      "",
+      "Avec glace",
+      "Sans glace",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Adultes",
+       30,
+       90,
+       120
+      ],
+      [
+       "Enfants",
+       60,
+       20,
+       80
+      ],
+      [
+       "Total",
+       90,
+       110,
+       200
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "glaces",
+     "enonce": "Touche le nombre d’enfants qui ont pris une glace.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Croise la ligne des enfants et la colonne des glaces.",
+     "explication": "**60 enfants** ont pris une glace."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On choisit un enfant au hasard. Quelle est la probabilité qu’il ait pris une glace ?",
+     "reponse": 0.75,
+     "aide": "Divise par le nombre d’enfants seulement.",
+     "explication": "Sachant que c’est un enfant : 60 / 80 = **0,75**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On choisit un client qui a pris une glace. Quelle est la probabilité que ce soit un enfant ? Arrondi au centième.",
+     "reponse": 0.67,
+     "tolerance": 0.005,
+     "aide": "Cette fois, on divise par le nombre de clients avec glace.",
+     "explication": "Sachant qu’il a pris une glace : 60 / 90 ≈ **0,67**. Ce n’est pas la même probabilité que 0,75."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase traduit « la probabilité d’avoir une glace sachant que le client est un enfant » ?",
+     "options": [
+      "Parmi les enfants, la part de ceux qui ont une glace",
+      "Parmi les clients avec glace, la part qui sont enfants",
+      "La part des clients qui sont des enfants avec glace",
+      "La part des enfants parmi les 200 clients du stand"
+     ],
+     "reponse": 0,
+     "aide": "Le « sachant que » désigne la population de départ.",
+     "explication": "Conditionner par « enfant », c’est se limiter aux **enfants** : 60 sur 80."
+    }
+   ]
+  },
+  {
+   "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux machines, un défaut",
+   "competence": "modeliser",
+   "situation": "Une usine produit des vis avec deux machines : A fabrique 60 % de la production, B les 40 % restants. 2 % des vis de A et 5 % des vis de B sont défectueuses (D). On prend une vis au hasard.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre pondéré",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 22,
+       "cy": 110,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        22,
+        110
+       ],
+       "a": [
+        120,
+        60
+       ],
+       "teinte": "encre",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        22,
+        110
+       ],
+       "a": [
+        120,
+        160
+       ],
+       "teinte": "encre",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        60
+       ],
+       "a": [
+        240,
+        30
+       ],
+       "teinte": "encre",
+       "id": "a-d",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        60
+       ],
+       "a": [
+        240,
+        85
+       ],
+       "teinte": "encre",
+       "id": "a-nd",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        160
+       ],
+       "a": [
+        240,
+        135
+       ],
+       "teinte": "encre",
+       "id": "b-d",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        160
+       ],
+       "a": [
+        240,
+        190
+       ],
+       "teinte": "encre",
+       "id": "b-nd",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 48,
+       "y": 68,
+       "texte": "0,6",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 48,
+       "y": 158,
+       "texte": "0,4",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 168,
+       "y": 34,
+       "texte": "0,02",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 168,
+       "y": 92,
+       "texte": "0,98",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 168,
+       "y": 138,
+       "texte": "0,05",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 168,
+       "y": 193,
+       "texte": "0,95",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 50,
+       "texte": "A",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 181,
+       "texte": "B",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 34,
+       "texte": "D",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 89,
+       "texte": "non D",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 139,
+       "texte": "D",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 194,
+       "texte": "non D",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche la branche qui représente « la vis vient de B et est défectueuse » : celle qui mène de B à D.",
+     "reponse": [
+      "b-d"
+     ],
+     "aide": "Pars du nœud B et suis la branche vers D.",
+     "explication": "La branche **B → D** porte 0,05 : 5 % des vis de B sont défectueuses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(A ∩ D) = 0,6 × 0,02.",
+     "reponse": 0.012,
+     "aide": "On multiplie les branches du chemin.",
+     "explication": "P(A ∩ D) = **0,012**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(D) avec la formule des probabilités totales.",
+     "reponse": 0.032,
+     "aide": "Additionne les chemins qui mènent à D : 0,012 + 0,4 × 0,05.",
+     "explication": "P(D) = 0,012 + 0,020 = **0,032**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une vis est défectueuse. Quelle est la probabilité qu’elle vienne de A ?",
+     "reponse": 0.375,
+     "aide": "Divise P(A ∩ D) par P(D).",
+     "explication": "P_D(A) = 0,012 / 0,032 = **0,375**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la machine B produit-elle plus de défauts que A malgré sa plus petite production ?",
+     "options": [
+      "Son taux de défaut de 5 % pèse 0,020 contre 0,012 pour A",
+      "Sa production de 40 % pèse plus que celle de A en tout",
+      "Son taux de 0,05 s’ajoute à celui de A avant le calcul",
+      "Les vis défectueuses de B sont comptées deux fois ici"
+     ],
+     "reponse": 0,
+     "aide": "Compare P(A ∩ D) et P(B ∩ D).",
+     "explication": "B produit 0,4 × 0,05 = **0,020** de vis défectueuses contre 0,012 pour A."
+    }
+   ]
+  },
+  {
+   "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le test positif",
+   "competence": "analyser-document",
+   "situation": "Une maladie touche 2 % d’une population. Un test la détecte chez 95 % des malades (positif), mais donne un résultat positif à tort chez 10 % des personnes saines. Sur 10 000 personnes, on complète le tableau.",
+   "documents": [
+    {
+     "id": "test",
+     "type": "tableau",
+     "titre": "Résultats sur 10 000 personnes",
+     "colonnes": [
+      "",
+      "Malades",
+      "Bien portants",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Population",
+       200,
+       9800,
+       10000
+      ],
+      [
+       "Test positif",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs calculés à partir des pourcentages de l’énoncé"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de malades ont un test positif ? (95 % de 200)",
+     "reponse": 190,
+     "aide": "200 × 0,95.",
+     "explication": "200 × 0,95 = **190 malades**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes saines ont un test positif à tort ? (10 % de 9 800)",
+     "reponse": 980,
+     "aide": "9 800 × 0,10.",
+     "explication": "9 800 × 0,1 = **980 faux positifs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes ont un test positif en tout ?",
+     "reponse": 1170,
+     "aide": "Additionne vrais et faux positifs.",
+     "explication": "190 + 980 = **1 170** tests positifs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un test est positif. Quelle est la probabilité que la personne soit malade ? Arrondi au centième.",
+     "reponse": 0.16,
+     "tolerance": 0.005,
+     "aide": "Divise les malades positifs par tous les positifs.",
+     "explication": "190 / 1 170 ≈ **0,16**. Seuls 16 % des positifs sont malades."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire d’un résultat positif dans ce modèle ?",
+     "options": [
+      "Environ un positif sur six est réellement malade",
+      "Presque tous les positifs sont réellement malades",
+      "Environ un positif sur deux est réellement malade",
+      "Aucun des positifs n’est réellement malade"
+     ],
+     "reponse": 0,
+     "aide": "Compare 190 à 1 170.",
+     "explication": "1 170 / 190 ≈ 6,2 : environ **1 positif sur 6** est malade, car les bien portants sont bien plus nombreux."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sondage de la mairie",
+   "competence": "lire-tableau",
+   "situation": "Avant un vote, un institut interroge 400 personnes choisies au hasard : 184 disent qu’elles voteront pour la liste Horizon. Pour une fréquence f observée sur n personnes, un intervalle de confiance à 95 % est [f − 1/√n ; f + 1/√n].",
+   "documents": [
+    {
+     "id": "sond",
+     "type": "tableau",
+     "titre": "Résultat du sondage",
+     "colonnes": [
+      "Personnes interrogées",
+      "Favorables à Horizon",
+      "Fréquence f"
+     ],
+     "lignes": [
+      [
+       "400",
+       "184",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence f de personnes favorables, en pourcentage.",
+     "reponse": 46,
+     "unite": "%",
+     "aide": "Divise 184 par 400.",
+     "explication": "184 / 400 = 0,46, soit **46 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la marge d’erreur 1/√400, en points de pourcentage.",
+     "reponse": 5,
+     "unite": "points",
+     "aide": "√400 = 20.",
+     "explication": "1/√400 = 1/20 = 0,05, soit **5 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la borne haute de l’intervalle de confiance, en pourcentage ?",
+     "reponse": 51,
+     "unite": "%",
+     "aide": "Ajoute la marge à 46 %.",
+     "explication": "46 + 5 = **51 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Peut-on affirmer que la liste Horizon a moins de 50 % des voix ?",
+     "options": [
+      "Non : 50 % est dans l’intervalle, qui va de 41 % à 51 %",
+      "Oui : la fréquence observée de 46 % est inférieure à 50 %",
+      "Oui : la borne basse de 41 % est inférieure à 50 % au total",
+      "Non : 184 est plus grand que la moitié des 400 personnes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où se place 50 % par rapport aux deux bornes.",
+     "explication": "L’intervalle [41 % ; 51 %] contient 50 % : le sondage **ne permet pas de conclure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de personnes interroger ?",
+   "competence": "lire-graphique",
+   "situation": "Un institut de sondage étudie comment la marge d’erreur 1/√n baisse quand on interroge plus de monde. Le graphique donne la marge (en points de pourcentage) selon la taille n de l’échantillon.",
+   "documents": [
+    {
+     "id": "marge",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Marge d’erreur selon la taille de l’échantillon",
+     "categories": [
+      "100",
+      "400",
+      "900",
+      "1600",
+      "2500",
+      "10000"
+     ],
+     "series": [
+      {
+       "nom": "Marge",
+       "valeurs": [
+        10,
+        5,
+        3.3,
+        2.5,
+        2,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Marge d’erreur",
+      "unite": "points",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Personnes interrogées n"
+     },
+     "valeurs": false,
+     "source": "Marges arrondies à 0,1 point près"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "marge",
+     "enonce": "Touche l’échantillon qui donne une marge de 2,5 points.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre à 2,5 sur l’axe vertical.",
+     "explication": "Avec **1 600 personnes**, la marge est de 2,5 points."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la marge d’erreur pour n = 900, arrondie au dixième de point.",
+     "reponse": 3.3,
+     "unite": "points",
+     "tolerance": 0.05,
+     "aide": "√900 = 30.",
+     "explication": "1/30 ≈ 0,033, soit **3,3 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle taille d’échantillon donne une marge de 0,02, soit 2 points ?",
+     "reponse": 2500,
+     "aide": "Résous 1/√n = 0,02 : √n = 50.",
+     "explication": "√n = 1/0,02 = 50, donc n = 50² = **2 500**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On passe de 400 à 1 600 personnes interrogées. Que devient la marge ?",
+     "options": [
+      "Elle est divisée par 2, car 1/√1600 = 1/40",
+      "Elle est divisée par 4, car on interroge 4 fois plus",
+      "Elle reste identique, car la proportion ne change pas",
+      "Elle est divisée par 16, car on élève au carré"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1/√400 et 1/√1600.",
+     "explication": "La marge passe de 5 à 2,5 points : **divisée par 2**, alors que l’échantillon est multiplié par 4."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces échantillons du moins précis au plus précis.",
+     "items": [
+      "100 personnes",
+      "400 personnes",
+      "1 600 personnes",
+      "10 000 personnes"
+     ],
+     "aide": "Plus n est grand, plus la marge est petite.",
+     "explication": "Les marges passent de 10 à 5, 2,5 puis 1 point : **100, 400, 1 600, 10 000**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux classes, une même moyenne",
+   "competence": "analyser-document",
+   "situation": "Deux classes de 5 élèves passent le même contrôle noté sur 20. Les deux professeurs annoncent la même moyenne. On veut savoir si les deux séries se ressemblent.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Notes des deux classes",
+     "colonnes": [
+      "Élève",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Classe A",
+       9,
+       10,
+       10,
+       10,
+       11
+      ],
+      [
+       "Classe B",
+       4,
+       8,
+       10,
+       12,
+       16
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappels",
+     "blocs": [
+      "Variance : moyenne des carrés des écarts à la moyenne.",
+      "Écart-type : racine carrée de la variance."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne de la classe B.",
+     "reponse": 10,
+     "aide": "Additionne les 5 notes puis divise par 5.",
+     "explication": "(4 + 8 + 10 + 12 + 16) / 5 = 50 / 5 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la variance de la classe B. Les écarts à 10 sont −6, −2, 0, 2, 6.",
+     "reponse": 16,
+     "aide": "Élève les écarts au carré : 36, 4, 0, 4, 36.",
+     "explication": "(36 + 4 + 0 + 4 + 36) / 5 = 80 / 5 = **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’écart-type de la classe B.",
+     "reponse": 4,
+     "unite": "points",
+     "aide": "Racine carrée de la variance.",
+     "explication": "√16 = **4 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La variance de la classe A vaut 0,4. Calcule son écart-type, arrondi au centième.",
+     "reponse": 0.63,
+     "unite": "point",
+     "tolerance": 0.005,
+     "aide": "√0,4 ≈ 0,632.",
+     "explication": "√0,4 ≈ **0,63 point** : les notes sont très resserrées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure en comparant les deux classes ?",
+     "options": [
+      "Même moyenne, mais la classe B est bien plus dispersée",
+      "Les deux classes ont des notes qui se ressemblent beaucoup",
+      "La classe A est moins bonne car son écart-type est plus petit",
+      "La classe B est meilleure car son écart-type est plus grand"
+     ],
+     "reponse": 0,
+     "aide": "La moyenne ne dit rien de la dispersion.",
+     "explication": "Écarts-types de 0,63 et 4 : **même centre, dispersion très différente**."
+    }
+   ]
+  },
+  {
+   "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La loterie de la kermesse",
+   "competence": "lire-tableau",
+   "situation": "À la kermesse, on mise 2 € pour tirer un ticket. Le gain net X (en €, mise déduite) suit la loi donnée dans le tableau. Une probabilité est masquée.",
+   "documents": [
+    {
+     "id": "loterie",
+     "type": "tableau",
+     "titre": "Loi du gain net X",
+     "colonnes": [
+      "Gain X (€)",
+      "−2",
+      "0",
+      "3",
+      "10"
+     ],
+     "lignes": [
+      [
+       "P(X = x)",
+       0.7,
+       "?",
+       0.08,
+       0.02
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "La somme des probabilités vaut 1. Quelle est P(X = 0) ?",
+     "reponse": 0.2,
+     "aide": "1 − 0,7 − 0,08 − 0,02.",
+     "explication": "1 − 0,80 = **0,2**."
+    },
+    {
+     "type": "zone",
+     "document": "loterie",
+     "enonce": "Touche la probabilité de gagner 10 € net.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Cherche la colonne du gain 10.",
+     "explication": "P(X = 10) = **0,02** : 2 tickets sur 100."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance E(X) = −2 × 0,7 + 0 × 0,2 + 3 × 0,08 + 10 × 0,02.",
+     "reponse": -0.96,
+     "unite": "€",
+     "aide": "Calcule chaque produit puis additionne.",
+     "explication": "−1,4 + 0 + 0,24 + 0,2 = **−0,96 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie E(X) = −0,96 € pour un joueur qui joue très souvent ?",
+     "options": [
+      "Il perd en moyenne 0,96 € par ticket joué",
+      "Il gagne en moyenne 0,96 € par ticket joué",
+      "Il perd exactement 0,96 € à chaque ticket joué",
+      "Il gagne 0,96 € au bout de 100 tickets joués"
+     ],
+     "reponse": 0,
+     "aide": "L’espérance est une moyenne sur un grand nombre de parties.",
+     "explication": "Le jeu n’est pas équitable : en moyenne, le joueur **perd 0,96 €** par ticket."
+    }
+   ]
+  },
+  {
+   "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le lot de pièces",
+   "competence": "modeliser",
+   "situation": "Un atelier livre des lots de 10 pièces. Chaque pièce est défectueuse avec la probabilité 0,05, indépendamment des autres. Soit X le nombre de pièces défectueuses d’un lot : X suit la loi binomiale B(10 ; 0,05).",
+   "documents": [
+    {
+     "id": "lot",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Loi de X : probabilité de k pièces défectueuses",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "series": [
+      {
+       "nom": "P(X = k)",
+       "valeurs": [
+        0.5987,
+        0.3151,
+        0.0746,
+        0.0105
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Probabilité",
+      "min": 0,
+      "max": 0.7,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Nombre k de pièces défectueuses"
+     },
+     "valeurs": false,
+     "source": "Probabilités arrondies au dix-millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lot",
+     "enonce": "Touche la valeur de k la plus probable.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le lot le plus probable ne contient **aucune pièce défectueuse** (0,5987)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule E(X) = n × p.",
+     "reponse": 0.5,
+     "aide": "Multiplie 10 par 0,05.",
+     "explication": "E(X) = 10 × 0,05 = **0,5** pièce défectueuse par lot en moyenne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la variance V(X) = n p (1 − p).",
+     "reponse": 0.475,
+     "aide": "10 × 0,05 × 0,95.",
+     "explication": "V(X) = 10 × 0,05 × 0,95 = **0,475**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(X ≥ 2) = 1 − P(X = 0) − P(X = 1), arrondi au millième.",
+     "reponse": 0.086,
+     "tolerance": 0.001,
+     "aide": "Utilise les valeurs des deux premières barres.",
+     "explication": "P(X ≥ 2) = 1 − 0,5987 − 0,3151 ≈ **0,086**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle condition rend la loi binomiale appropriée ici ?",
+     "options": [
+      "Les 10 pièces sont indépendantes, avec la même probabilité de défaut",
+      "Les 10 pièces sont tirées sans remise dans un petit stock",
+      "Le nombre de pièces défectueuses est toujours un entier pair",
+      "Chaque pièce peut avoir trois états : bon, moyen ou mauvais"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux trois conditions : identiques, indépendantes, deux issues.",
+     "explication": "Épreuves **identiques et indépendantes**, à deux issues (défectueuse ou non) : la loi binomiale s’applique."
+    }
+   ]
+  },
+  {
+   "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jeu de la fête foraine",
+   "competence": "raisonner",
+   "situation": "Un forain propose un jeu à 2 € la partie. Le gain brut X (en €, avant déduction de la mise) suit la loi du tableau. Le forain se demande à quel prix le jeu serait équitable, et comment varie le résultat.",
+   "documents": [
+    {
+     "id": "forain",
+     "type": "tableau",
+     "titre": "Loi du gain brut X",
+     "colonnes": [
+      "Gain X (€)",
+      "0",
+      "2",
+      "10"
+     ],
+     "lignes": [
+      [
+       "P(X = x)",
+       0.6,
+       0.3,
+       0.1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappels",
+     "blocs": [
+      "V(X) = E(X²) − E(X)².",
+      "E(aX + b) = a E(X) + b et V(aX + b) = a² V(X)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance du gain brut E(X).",
+     "reponse": 1.6,
+     "unite": "€",
+     "aide": "0 × 0,6 + 2 × 0,3 + 10 × 0,1.",
+     "explication": "0 + 0,6 + 1 = **1,6 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle mise le jeu serait-il équitable ?",
+     "reponse": 1.6,
+     "unite": "€",
+     "aide": "Un jeu équitable a une espérance de gain net nulle.",
+     "explication": "Le gain net est X − mise : nul en moyenne si la mise vaut **1,6 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule E(X²) = 0² × 0,6 + 2² × 0,3 + 10² × 0,1.",
+     "reponse": 11.2,
+     "aide": "Élève chaque gain au carré avant de multiplier.",
+     "explication": "0 + 1,2 + 10 = **11,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En déduire V(X) = E(X²) − E(X)².",
+     "reponse": 8.64,
+     "aide": "1,6² = 2,56.",
+     "explication": "11,2 − 2,56 = **8,64**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le forain remplace le gain par Y = 3X + 1. Calcule V(Y).",
+     "reponse": 77.76,
+     "aide": "Multiplie V(X) par 3².",
+     "explication": "V(3X + 1) = 3² × 8,64 = **77,76**. Le « + 1 » ne change pas la dispersion."
+    }
+   ]
+  },
+  {
+   "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bus de 7 h 40",
+   "competence": "modeliser",
+   "situation": "Un bus passe toutes les 15 minutes. Arrivé à l’arrêt sans regarder l’horaire, Sacha attend un temps X (en minutes) qui suit la loi uniforme sur [0 ; 15], de densité constante 1/15.",
+   "documents": [
+    {
+     "id": "attente",
+     "type": "droite",
+     "min": 0,
+     "max": 15,
+     "pas": 5,
+     "division": 2,
+     "graduationsCliquables": true,
+     "points": []
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La règle",
+     "blocs": [
+      "P(c ≤ X ≤ d) = (d − c) / 15.",
+      "Espérance de la loi uniforme : (a + b) / 2."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(0 ≤ X ≤ 5), la probabilité d’attendre au plus 5 minutes. Arrondi au centième.",
+     "reponse": 0.33,
+     "tolerance": 0.005,
+     "aide": "Longueur 5 sur longueur totale 15.",
+     "explication": "P = 5/15 = 1/3 ≈ **0,33**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(10 ≤ X ≤ 15), la probabilité d’attendre au moins 10 minutes. Arrondi au centième.",
+     "reponse": 0.33,
+     "tolerance": 0.005,
+     "aide": "Longueur 5 sur 15 aussi.",
+     "explication": "P = (15 − 10)/15 ≈ **0,33**."
+    },
+    {
+     "type": "zone",
+     "document": "attente",
+     "enonce": "Touche sur la droite graduée le temps d’attente moyen.",
+     "reponse": [
+      "v7.5"
+     ],
+     "aide": "Espérance : (a + b) / 2, avec a = 0 et b = 15.",
+     "explication": "E(X) = (0 + 15)/2 = **7,5 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vaut P(X = 7) pour cette variable continue ?",
+     "options": [
+      "0, car l’intégrale de la densité en un point est nulle",
+      "1/15, car la densité vaut 1/15 en chaque point",
+      "7/15, car 7 minutes se sont déjà écoulées ici",
+      "0,5, car 7 est proche de la moitié de 15 environ"
+     ],
+     "reponse": 0,
+     "aide": "Une aire sous la courbe sur un intervalle de longueur nulle.",
+     "explication": "Pour une loi à densité, **P(X = c) = 0** : seule une plage de valeurs a une probabilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La durée de vie d’une LED",
+   "competence": "modeliser",
+   "situation": "La durée de vie X (en heures) d’une ampoule LED suit la loi exponentielle de paramètre λ = 0,001. On rappelle que P(X > t) = e^(−λ t) et que l’espérance vaut 1/λ.",
+   "documents": [
+    {
+     "id": "led",
+     "type": "tableau",
+     "titre": "Probabilité de durer plus de t heures",
+     "colonnes": [
+      "t (heures)",
+      "0",
+      "500",
+      "1 000",
+      "2 000"
+     ],
+     "lignes": [
+      [
+       "P(X > t)",
+       1,
+       0.6065,
+       0.3679,
+       0.1353
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au dix-millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "led",
+     "enonce": "Touche la probabilité que l’ampoule dure plus de 1 000 heures.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la colonne t = 1 000.",
+     "explication": "P(X > 1000) = e^(−1) ≈ **0,3679**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la durée de vie moyenne 1/λ.",
+     "reponse": 1000,
+     "unite": "h",
+     "aide": "Divise 1 par 0,001.",
+     "explication": "1/0,001 = **1 000 heures**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(X ≤ 2000) = 1 − P(X > 2000), arrondi au centième.",
+     "reponse": 0.86,
+     "tolerance": 0.005,
+     "aide": "Utilise la dernière colonne du tableau.",
+     "explication": "1 − 0,1353 = 0,8647, soit environ **0,86**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une ampoule a déjà duré 1 000 heures. Quelle est la probabilité qu’elle dure encore 500 heures de plus ? Arrondi au dix-millième.",
+     "reponse": 0.6065,
+     "tolerance": 0.0005,
+     "aide": "La loi exponentielle n’a pas de mémoire.",
+     "explication": "Sans mémoire : c’est P(X > 500) = e^(−0,5) ≈ **0,6065**, comme pour une ampoule neuve."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la loi exponentielle convient-elle mieux à une LED qu’à un pneu ?",
+     "options": [
+      "Une LED ne s’use pas, alors qu’un pneu vieillit",
+      "Une LED dure en moyenne plus longtemps qu’un pneu",
+      "Un pneu est une grandeur continue, une LED est discrète",
+      "Une LED a une durée dont la densité est constante"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’absence de mémoire : la durée déjà vécue ne compte pas.",
+     "explication": "L’absence de mémoire convient à l’électronique, **pas à ce qui s’use** comme un pneu."
+    }
+   ]
+  },
+  {
+   "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les paquets de farine",
+   "competence": "raisonner",
+   "situation": "Une machine remplit des paquets de farine. Leur masse X (en g) suit la loi normale de moyenne μ = 500 et d’écart-type σ = 10. Une production compte 1 000 paquets.",
+   "documents": [
+    {
+     "id": "repere",
+     "type": "tableau",
+     "titre": "Les trois repères de la loi normale",
+     "colonnes": [
+      "Intervalle",
+      "Part des valeurs"
+     ],
+     "lignes": [
+      [
+       "μ ± σ",
+       "environ 68 %"
+      ],
+      [
+       "μ ± 2σ",
+       "environ 95 %"
+      ],
+      [
+       "μ ± 3σ",
+       "environ 99,7 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la borne basse de l’intervalle μ ± 2σ, en grammes ?",
+     "reponse": 480,
+     "unite": "g",
+     "aide": "500 − 2 × 10.",
+     "explication": "500 − 20 = **480 g** ; la borne haute est 520 g."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de paquets pèsent entre 490 g et 510 g, soit μ ± σ ?",
+     "reponse": 680,
+     "unite": "paquets",
+     "aide": "68 % de 1 000.",
+     "explication": "Environ 68 % de 1 000 = **680 paquets**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de paquets pèse moins de 480 g ? Les deux extrémités se partagent les 5 % restants.",
+     "reponse": 2.5,
+     "unite": "%",
+     "aide": "100 % − 95 % = 5 %, à partager.",
+     "explication": "Hors de μ ± 2σ : 5 %, à moitié de chaque côté, soit **2,5 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de paquets environ pèsent moins de 470 g ou plus de 530 g, soit hors de μ ± 3σ ?",
+     "reponse": 3,
+     "unite": "paquets",
+     "aide": "100 % − 99,7 % = 0,3 % de 1 000.",
+     "explication": "0,3 % de 1 000 = **3 paquets**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque intervalle de masse à la part des paquets qu’il contient.",
+     "paires": [
+      [
+       "De 490 g à 510 g",
+       "environ 68 %"
+      ],
+      [
+       "De 480 g à 520 g",
+       "environ 95 %"
+      ],
+      [
+       "De 470 g à 530 g",
+       "environ 99,7 %"
+      ]
+     ],
+     "aide": "Écris chaque intervalle sous la forme μ ± kσ.",
+     "explication": "490 à 510 est μ ± σ ; 480 à 520 est μ ± 2σ ; 470 à 530 est μ ± 3σ."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les ventes de la boulangerie",
+   "competence": "lire-graphique",
+   "situation": "Depuis l’ouverture, une boulangerie note ses ventes annuelles y (en milliers d’€) selon le rang x de l’année (x = 0 pour l’ouverture). Le nuage est presque aligné.",
+   "documents": [
+    {
+     "id": "ventes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Ventes annuelles",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Ventes",
+       "valeurs": [
+        12,
+        15,
+        19,
+        22,
+        24,
+        28
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Ventes",
+      "unite": "milliers d’€",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Rang de l’année x"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "droite",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La droite de régression",
+     "blocs": [
+      "Par les moindres carrés : y = 3,14 x + 12,14 (coefficients arrondis au centième)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’abscisse x du point moyen G : la moyenne de 0, 1, 2, 3, 4, 5.",
+     "reponse": 2.5,
+     "aide": "Additionne puis divise par 6.",
+     "explication": "(0 + 1 + 2 + 3 + 4 + 5) / 6 = **2,5**."
+    },
+    {
+     "type": "zone",
+     "document": "ventes",
+     "enonce": "Touche le point de l’année où les ventes ont été les plus fortes.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point le plus haut.",
+     "explication": "En année 5, les ventes atteignent **28 milliers d’€**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime les ventes de l’année 6 avec y = 3,14 x + 12,14, arrondi à l’unité.",
+     "reponse": 31,
+     "unite": "milliers d’€",
+     "tolerance": 0.5,
+     "aide": "Remplace x par 6.",
+     "explication": "3,14 × 6 + 12,14 = 30,98 ≈ **31 milliers d’€**. C’est une extrapolation : à prendre avec prudence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’estimation pour l’année 6 demande-t-elle une réserve ?",
+     "options": [
+      "L’année 6 est hors de la plage observée : c’est une extrapolation",
+      "L’année 6 se situe entre deux années déjà observées ici",
+      "La droite de régression ne passe pas par le point moyen G",
+      "Le coefficient de corrélation est forcément égal à 1 ici"
+     ],
+     "reponse": 0,
+     "aide": "Compare x = 6 aux années observées, de 0 à 5.",
+     "explication": "x = 6 est **au-delà** des données : une extrapolation est beaucoup plus risquée qu’une interpolation."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Glaces et coups de soleil",
+   "competence": "raisonner",
+   "situation": "Une station balnéaire relève, chaque mois, la température moyenne x (en °C) et le nombre de glaces vendues y (en milliers). Le coefficient de corrélation linéaire est r ≈ 0,99.",
+   "documents": [
+    {
+     "id": "stat",
+     "type": "tableau",
+     "titre": "Six mois de relevés",
+     "colonnes": [
+      "Température x (°C)",
+      "10",
+      "14",
+      "18",
+      "22",
+      "26",
+      "30"
+     ],
+     "lignes": [
+      [
+       "Glaces y (milliers)",
+       2,
+       3,
+       5,
+       7,
+       8,
+       11
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des températures x.",
+     "reponse": 20,
+     "unite": "°C",
+     "aide": "Additionne les six températures.",
+     "explication": "(10 + 14 + 18 + 22 + 26 + 30) / 6 = **20 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des ventes de glaces y.",
+     "reponse": 6,
+     "unite": "milliers",
+     "aide": "Additionne 2, 3, 5, 7, 8 et 11.",
+     "explication": "36 / 6 = **6 milliers** de glaces."
+    },
+    {
+     "type": "zone",
+     "document": "stat",
+     "enonce": "Touche le mois où l’on vend le plus de glaces.",
+     "reponse": [
+      "r0c6"
+     ],
+     "aide": "Cherche la plus grande valeur de la ligne des glaces.",
+     "explication": "**11 milliers** de glaces à 30 °C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les coups de soleil augmentent aussi avec les glaces vendues. Quelle conclusion est correcte ?",
+     "options": [
+      "La chaleur peut expliquer à la fois les glaces et les coups de soleil",
+      "Manger des glaces provoque des coups de soleil, car r est proche de 1",
+      "Les coups de soleil font vendre des glaces, car r est proche de 1",
+      "La corrélation de 0,99 prouve que les deux phénomènes se causent"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un facteur commun aux deux phénomènes.",
+     "explication": "Une forte corrélation ne prouve **aucune causalité** : ici, un facteur commun, la chaleur, explique les deux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les réflexes dans le bon ordre pour exploiter ces données.",
+     "items": [
+      "Regarder le nuage de points",
+      "Calculer r et la droite de régression",
+      "Estimer à l’intérieur de la plage observée",
+      "Ajouter une réserve pour toute extrapolation"
+     ],
+     "aide": "On regarde avant de calculer.",
+     "explication": "Regarder, calculer, estimer, puis **assortir d’une réserve** toute extrapolation."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La culture de bactéries",
+   "competence": "modeliser",
+   "situation": "Dans un laboratoire, on compte les bactéries d’une culture (en milliers) toutes les heures. Le nuage (x ; y) est courbe. On le redresse en posant z = ln(y), puis on ajuste z = a x + b par une droite.",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "tableau",
+     "titre": "Comptages et changement de variable",
+     "colonnes": [
+      "Heure x",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Bactéries y (milliers)",
+       100,
+       160,
+       250,
+       410,
+       650
+      ],
+      [
+       "z = ln(y)",
+       4.61,
+       5.08,
+       5.52,
+       "?",
+       6.48
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice ; z arrondi au centième"
+    },
+    {
+     "id": "ajust",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’ajustement",
+     "blocs": [
+      "Par les moindres carrés sur (x ; z) : z = 0,47 x + 4,60 (coefficients arrondis au centième)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule z = ln(410) pour remplir la case manquante, arrondi au centième.",
+     "reponse": 6.02,
+     "tolerance": 0.005,
+     "aide": "Utilise la touche ln de la calculatrice.",
+     "explication": "ln(410) ≈ **6,02**."
+    },
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche le nombre de bactéries comptées à l’heure 2.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Colonne « 2 » de la ligne des bactéries.",
+     "explication": "À l’heure 2, on compte **250 milliers** de bactéries."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec z = 0,47 x + 4,60, calcule z pour x = 5, l’heure suivante.",
+     "reponse": 6.95,
+     "tolerance": 0.005,
+     "aide": "0,47 × 5 = 2,35.",
+     "explication": "z = 2,35 + 4,60 = **6,95**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Revenu à y : y = e^z. Estime le nombre de bactéries (en milliers) à l’heure 5, arrondi à la dizaine.",
+     "reponse": 1040,
+     "unite": "milliers",
+     "tolerance": 15,
+     "aide": "Calcule e^6,95.",
+     "explication": "e^6,95 ≈ 1 043, soit environ **1 040 milliers**. C’est une extrapolation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi poser z = ln(y) redresse-t-il le nuage ?",
+     "options": [
+      "Un modèle exponentiel devient affine après passage au logarithme",
+      "Un modèle exponentiel devient constant après passage au logarithme",
+      "Le logarithme rend toutes les valeurs de y égales entre elles",
+      "Le logarithme transforme le nuage en un point unique de la droite"
+     ],
+     "reponse": 0,
+     "aide": "Si y = A e^(k x), que vaut ln(y) ?",
+     "explication": "ln(A e^(k x)) = ln A + k x : **affine en x**, on peut donc ajuster une droite."
+    }
+   ]
+  }
+ ]
+}

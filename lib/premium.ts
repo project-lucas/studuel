@@ -70,7 +70,7 @@ export const PLANS: readonly Plan[] = [
       'Ton avatar dessiné par Marcel, à ton idée',
       'Toutes les fiches de chapitre, sans gemme',
       'Toutes les fiches de révision',
-      'Tous les quiz & flashcards premium',
+      'Tous les quiz premium',
       'Les exercices de chapitre, corrigés et notés par l’IA',
       'Tous les paquets de cartes du Studio',
     ],

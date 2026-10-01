@@ -1,0 +1,3261 @@
+{
+ "niveau": "Tle",
+ "matiere": "nsi",
+ "exercices": [
+  {
+   "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le compte à rebours du four",
+   "competence": "programmer",
+   "situation": "Nolan programme la minuterie d’un four de cuisine. Sa fonction s’appelle elle-même jusqu’à ce que le compteur tombe à zéro.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La minuterie",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def compte(n):",
+      "    if n == 0:",
+      "        print(\"top\")",
+      "    else:",
+      "        print(n)",
+      "        compte(n - 1)",
+      "compte(3)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les lignes affichées par le programme.",
+     "items": [
+      "3",
+      "2",
+      "1",
+      "top"
+     ],
+     "aide": "Suis les appels : compte(3), puis compte(2)…",
+     "explication": "compte(3) affiche **3**, puis rappelle compte(2) qui affiche **2**, puis **1**, et compte(0) affiche enfin **top**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la fonction compte est-elle appelée au total, l’appel compte(3) du bas compris ?",
+     "reponse": 4,
+     "aide": "Compte les valeurs de n : 3, 2, 1, et la dernière.",
+     "explication": "Les appels se font avec n = 3, 2, 1 et 0 : **4 appels**. Le dernier, compte(0), est le cas de base."
+    },
+    {
+     "type": "choix",
+     "enonce": "On écrit compte(-1) au lieu de compte(3). Que se passe-t-il ?",
+     "options": [
+      "La fonction ne s’arrête pas d’elle-même : Python finit par signaler une erreur de récursion",
+      "La fonction affiche top puis s’arrête, car -1 est plus petit que zéro et qu’il suffit",
+      "La fonction affiche -1 puis s’arrête, car elle ne traite qu’une seule valeur à la fois",
+      "La fonction affiche les nombres de -1 à 0 puis top, avant de s’arrêter normalement"
+     ],
+     "reponse": 0,
+     "aide": "Le n vaut -1, puis -2… atteint-il un jour 0 ?",
+     "explication": "n descend : -1, -2, -3… et **n ne vaut jamais 0**. Le cas de base n’est jamais atteint : la récursion est infinie et la pile déborde."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les appels de la factorielle",
+   "competence": "raisonner",
+   "situation": "Louise calcule la factorielle de 4 avec une fonction récursive. Elle note, appel par appel, ce que chacun renvoie, du plus profond au plus superficiel.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La factorielle",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def fact(n):",
+      "    if n <= 1:",
+      "        return 1",
+      "    return n * fact(n - 1)",
+      "print(fact(4))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les appels empilés",
+     "colonnes": [
+      "Appel",
+      "Il renvoie"
+     ],
+     "lignes": [
+      [
+       "fact(1)",
+       1
+      ],
+      [
+       "fact(2)",
+       "?"
+      ],
+      [
+       "fact(3)",
+       "?"
+      ],
+      [
+       "fact(4)",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau de suivi écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche dans le tableau l’appel qui n’en déclenche aucun autre : le cas de base.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Quel appel renvoie 1 sans rappeler fact ?",
+     "explication": "fact(1) renvoie **1** directement, sans rappeler la fonction : c’est le cas de base."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que renvoie fact(2) ?",
+     "reponse": 2,
+     "aide": "fact(2) = 2 multiplié par le résultat de fact(1).",
+     "explication": "fact(2) = 2 × fact(1) = 2 × 1 = **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que renvoie fact(3) ?",
+     "reponse": 6,
+     "aide": "Réutilise la valeur de fact(2) que tu viens de trouver.",
+     "explication": "fact(3) = 3 × fact(2) = 3 × 2 = **6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il à l’écran quand on lance le programme ?",
+     "options": [
+      "24",
+      "10",
+      "16",
+      "12"
+     ],
+     "reponse": 0,
+     "aide": "fact(4) = 4 × fact(3).",
+     "explication": "fact(4) = 4 × fact(3) = 4 × 6 = **24**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bc0c332-62ea-52fc-bbcd-521818b0deb5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’arbre qui recalcule tout",
+   "competence": "analyser-document",
+   "situation": "Yanis teste une fonction qui calcule la suite de Fibonacci. Il dessine l’arbre de tous les appels déclenchés par f(4) : chaque nœud est un appel, ses deux enfants sont les appels qu’il lance.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction f",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def f(n):",
+      "    if n < 2:",
+      "        return n",
+      "    return f(n - 1) + f(n - 2)"
+     ]
+    },
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "L’arbre des appels de f(4)",
+     "largeur": 330,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        42
+       ],
+       "a": [
+        100,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        42
+       ],
+       "a": [
+        240,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        102
+       ],
+       "a": [
+        60,
+        138
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        102
+       ],
+       "a": [
+        140,
+        138
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        102
+       ],
+       "a": [
+        210,
+        138
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        102
+       ],
+       "a": [
+        270,
+        138
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        162
+       ],
+       "a": [
+        35,
+        198
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        162
+       ],
+       "a": [
+        90,
+        198
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 147,
+       "y": 18,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(4)",
+       "id": "f4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 77,
+       "y": 78,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(3)",
+       "id": "f3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 217,
+       "y": 78,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(2)",
+       "id": "f2b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 37,
+       "y": 138,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(2)",
+       "id": "f2a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 117,
+       "y": 138,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(1)",
+       "id": "f1a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 187,
+       "y": 138,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(1)",
+       "id": "f1b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 247,
+       "y": 138,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(0)",
+       "id": "f0b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 12,
+       "y": 198,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(1)",
+       "id": "f1c",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 67,
+       "y": 198,
+       "l": 46,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "f(0)",
+       "id": "f0a",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche les deux appels f(2) de l’arbre.",
+     "reponse": [
+      "f2a",
+      "f2b"
+     ],
+     "aide": "Cherche les nœuds qui portent exactement f(2).",
+     "explication": "Le même calcul **f(2)** apparaît deux fois : à gauche sous f(3), et à droite directement sous f(4).",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’appels de f l’arbre contient-il au total, f(4) compris ?",
+     "reponse": 9,
+     "aide": "Compte les nœuds, niveau par niveau : 1, puis 2, puis 4…",
+     "explication": "L’arbre a 1 + 2 + 4 + 2 = **9 nœuds**, donc 9 appels pour calculer f(4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois l’appel f(1) est-il lancé ?",
+     "reponse": 3,
+     "aide": "Regarde les feuilles de l’arbre.",
+     "explication": "f(1) apparaît **3 fois** dans l’arbre : c’est un même calcul refait trois fois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que renvoie f(4) ?",
+     "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+     ],
+     "reponse": 0,
+     "aide": "f(4) = f(3) + f(2), avec f(0) = 0 et f(1) = 1.",
+     "explication": "f(2) = 1, f(3) = f(2) + f(1) = 2, donc f(4) = f(3) + f(2) = 2 + 1 = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le nombre d’appels suit la même règle : appels(n) = 1 + appels(n − 1) + appels(n − 2). Sachant qu’il y en a 5 pour f(3) et 9 pour f(4), combien y en a-t-il pour f(5) ?",
+     "reponse": 15,
+     "aide": "Additionne 1, 9 et 5.",
+     "explication": "appels(5) = 1 + 9 + 5 = **15**. Le nombre d’appels grandit presque de moitié à chaque rang : c’est une croissance exponentielle."
+    }
+   ]
+  },
+  {
+   "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cherche 35 dans le tableau trié",
+   "competence": "raisonner",
+   "situation": "Ilyès cherche la valeur 35 dans un tableau de six notes de jeu déjà rangées dans l’ordre croissant. Il applique la recherche dichotomique : à chaque tour, il regarde la case du milieu de la zone restante.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Un tableau trié (l’indice est en en-tête)",
+     "colonnes": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       4,
+       9,
+       15,
+       22,
+       28,
+       35
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Valeurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la première case examinée : le milieu des indices 0 à 5, c’est-à-dire l’indice (0 + 5) // 2.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Le quotient entier de 5 par 2 vaut 2.",
+     "explication": "Le milieu de 0 à 5 est l’indice (0 + 5) // 2 = **2**, donc la case qui contient 15."
+    },
+    {
+     "type": "choix",
+     "enonce": "35 est plus grand que 15. Quelle partie du tableau garde-t-on ?",
+     "options": [
+      "Les indices 3 à 5, à droite de la case examinée",
+      "Les indices 0 à 1, à gauche de la case examinée",
+      "Les indices 0 à 5, le tableau en entier encore une fois",
+      "Les indices 2 à 3, deux cases autour de la case examinée"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau est trié : où se trouvent les valeurs plus grandes que 15 ?",
+     "explication": "Le tableau est trié : tout ce qui est à gauche est ≤ 15. Il reste donc la **partie droite**, indices 3 à 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans la zone des indices 3 à 5, quel indice examine-t-on au deuxième tour ? (3 + 5) // 2 = ?",
+     "reponse": 4,
+     "aide": "Additionne 3 et 5, puis divise par 2.",
+     "explication": "(3 + 5) // 2 = **4** : la case qui contient 28."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases examine-t-on en tout avant de trouver 35 ?",
+     "reponse": 3,
+     "aide": "Les indices examinés sont 2, puis 4, puis un troisième.",
+     "explication": "On examine les indices 2, 4 puis 5 : **3 cases**, là où une recherche séquentielle en aurait lu 6."
+    }
+   ]
+  },
+  {
+   "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fusion de deux piles de cartes",
+   "competence": "programmer",
+   "situation": "Dans un tri fusion, la dernière étape consiste à fusionner deux listes déjà triées. Sacha écrit la fonction et suit son exécution avec A = [2, 7, 9] et B = [3, 4, 10].",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction fusion",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def fusion(A, B):",
+      "    R = []",
+      "    i = 0",
+      "    j = 0",
+      "    while i < len(A) and j < len(B):",
+      "        if A[i] <= B[j]:",
+      "            R.append(A[i])",
+      "            i = i + 1",
+      "        else:",
+      "            R.append(B[j])",
+      "            j = j + 1",
+      "    return R + A[i:] + B[j:]",
+      "print(fusion([2, 7, 9], [3, 4, 10]))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Suivi des trois premiers tours",
+     "colonnes": [
+      "Tour",
+      "i",
+      "j",
+      "Valeur ajoutée à R"
+     ],
+     "lignes": [
+      [
+       1,
+       0,
+       0,
+       2
+      ],
+      [
+       2,
+       1,
+       0,
+       3
+      ],
+      [
+       3,
+       1,
+       1,
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau de suivi écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur est ajoutée à R au tour 3 ? (On compare A[1] et B[1].)",
+     "reponse": 4,
+     "aide": "Compare 7 et 4 : lequel est le plus petit ?",
+     "explication": "Au tour 3, i = 1 et j = 1 : on compare A[1] = 7 et B[1] = 4. **4** est plus petit, c’est lui qui est ajouté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tours la boucle while fait-elle en tout ?",
+     "reponse": 5,
+     "aide": "Continue le tableau : à chaque tour, i ou j augmente de 1.",
+     "explication": "Tour 4 : 7 est ajouté ; tour 5 : 9 est ajouté. Alors i vaut 3 et la boucle s’arrête : **5 tours**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quand la boucle s’arrête, combien de valeurs reste-t-il à recopier avec A[i:] + B[j:] ?",
+     "reponse": 1,
+     "aide": "Regarde où en sont i et j : une des deux listes est épuisée.",
+     "explication": "i vaut 3 (A est épuisée) et j vaut 2 : il reste B[2:] = [10], soit **1 valeur**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il à l’écran ?",
+     "options": [
+      "[2, 3, 4, 7, 9, 10]",
+      "[2, 3, 4, 7, 10, 9]",
+      "[2, 3, 7, 4, 9, 10]",
+      "[2, 7, 9, 3, 4, 10]"
+     ],
+     "reponse": 0,
+     "aide": "La fusion de deux listes triées est elle-même triée.",
+     "explication": "Les valeurs sortent dans l’ordre 2, 3, 4, 7, 9 puis 10 (recopié à la fin) : **[2, 3, 4, 7, 9, 10]**."
+    }
+   ]
+  },
+  {
+   "chapitre": "de0e2799-f5d2-5807-b9fa-436674669227",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Élever au carré plutôt que multiplier",
+   "competence": "calculer",
+   "situation": "Pour calculer 3 puissance n, Maëlle refuse de faire n multiplications. Sa fonction calcule d’abord la puissance pour n // 2, puis élève le résultat au carré : c’est l’exponentiation rapide.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction puiss",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def puiss(x, n):",
+      "    if n == 0:",
+      "        return 1",
+      "    z = puiss(x, n // 2)",
+      "    z = z * z",
+      "    if n % 2 == 1:",
+      "        z = x * z",
+      "    return z",
+      "print(puiss(3, 5))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Ce que renvoie chaque appel",
+     "colonnes": [
+      "Appel",
+      "Il renvoie"
+     ],
+     "lignes": [
+      [
+       "puiss(3, 0)",
+       1
+      ],
+      [
+       "puiss(3, 1)",
+       "?"
+      ],
+      [
+       "puiss(3, 2)",
+       "?"
+      ],
+      [
+       "puiss(3, 5)",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau de suivi écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’appels puiss(3, 5) lance-t-elle au total, le premier compris ? (Les valeurs de n sont 5, 2, 1, 0.)",
+     "reponse": 4,
+     "aide": "À chaque appel, n est divisé par 2 (quotient entier).",
+     "explication": "Les valeurs de n successives sont 5, 2, 1, 0 : **4 appels**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que renvoie puiss(3, 1) ? (Ici z = puiss(3, 0) = 1.)",
+     "reponse": 3,
+     "aide": "z devient 1 × 1, puis n est impair : z est multiplié par x.",
+     "explication": "z = 1 × 1 = 1 ; comme 1 est impair, z = 3 × 1 = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que renvoie puiss(3, 2) ? (Ici z = puiss(3, 1) = 3.)",
+     "reponse": 9,
+     "aide": "z devient 3 × 3 ; n = 2 est pair.",
+     "explication": "z = 3 × 3 = **9**, et comme n est pair, on s’arrête là : 3² = 9."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il pour puiss(3, 5) ?",
+     "options": [
+      "243",
+      "125",
+      "81",
+      "15"
+     ],
+     "reponse": 0,
+     "aide": "z = 9 × 9 = 81, puis n = 5 est impair.",
+     "explication": "z = 9 × 9 = 81, puis n est impair : z = 3 × 81 = **243**, c’est bien 3⁵."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 1024, n est divisé par 2 à chaque appel : 1024, 512, 256… jusqu’à 0. Combien d’appels puiss(3, 1024) lance-t-elle ?",
+     "reponse": 12,
+     "aide": "Combien de fois peut-on diviser 1024 par 2 pour arriver à 1 ? Ajoute ensuite l’appel de n = 0.",
+     "explication": "1024 = 2¹⁰ : les valeurs sont 1024, 512, …, 2, 1 (**11** valeurs) puis 0. Soit **12 appels**, contre 1 023 multiplications en naïf."
+    }
+   ]
+  },
+  {
+   "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Fibonacci avec un carnet",
+   "competence": "programmer",
+   "situation": "Camille veut éviter de refaire les mêmes calculs. Elle ajoute à sa fonction un dictionnaire memo, où elle note chaque résultat dès qu’elle l’a trouvé.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Fibonacci mémoïsé",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "memo = {}",
+      "def fib(n):",
+      "    if n < 2:",
+      "        return n",
+      "    if n in memo:",
+      "        return memo[n]",
+      "    memo[n] = fib(n - 1) + fib(n - 2)",
+      "    return memo[n]",
+      "print(fib(6))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les premiers termes",
+     "colonnes": [
+      "n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "fib(n)",
+       0,
+       1,
+       1,
+       2,
+       "?",
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur manque dans le tableau, pour n = 4 ?",
+     "reponse": 3,
+     "aide": "Chaque terme est la somme des deux précédents.",
+     "explication": "fib(4) = fib(3) + fib(2) = 2 + 1 = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il quand on lance le programme ?",
+     "reponse": 8,
+     "aide": "fib(6) = fib(5) + fib(4).",
+     "explication": "fib(6) = 5 + 3 = **8**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la ligne « if n in memo » suivie de « return memo[n] » ?",
+     "options": [
+      "Elle renvoie tout de suite le résultat déjà noté, au lieu de refaire le calcul",
+      "Elle efface le carnet pour recommencer chaque calcul depuis le début à chaque fois",
+      "Elle arrête le programme dès que n a déjà été utilisé une fois dans un appel",
+      "Elle vérifie que n est bien un nombre entier positif avant de faire le calcul"
+     ],
+     "reponse": 0,
+     "aide": "Que contient memo quand n a déjà été calculé ?",
+     "explication": "Si n est déjà une clé de memo, la réponse est **déjà connue** : on la renvoie sans relancer les deux appels récursifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Rendre la monnaie avec 1, 3 et 4",
+   "competence": "modeliser",
+   "situation": "Un distributeur ne possède que des pièces de 1, 3 et 4 centimes. Yara remplit un tableau T : T[s] est le plus petit nombre de pièces pour rendre s centimes.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le remplissage du tableau",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "pieces = [1, 3, 4]",
+      "T = [0]",
+      "for s in range(1, 8):",
+      "    T.append(1 + min(T[s - p] for p in pieces if p <= s))",
+      "print(T)"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les trois premières cases",
+     "colonnes": [
+      "s",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "T[s]",
+       1,
+       2,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que vaut T[4] ? (Pour s = 4, on regarde T[3], T[1] et T[0].)",
+     "reponse": 1,
+     "aide": "Le minimum de T[3], T[1], T[0] vaut 0.",
+     "explication": "T[4] = 1 + min(T[3], T[1], T[0]) = 1 + 0 = **1** : une seule pièce de 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour calculer T[5], quelles cases le programme lit-il ?",
+     "options": [
+      "T[4], T[2] et T[1]",
+      "T[5], T[3] et T[2]",
+      "T[4], T[3] et T[1]",
+      "T[3], T[2] et T[0]"
+     ],
+     "reponse": 0,
+     "aide": "Il lit T[5 - p] pour chaque pièce p : 1, 3 et 4.",
+     "explication": "Pour s = 5 : 5 − 1 = 4, 5 − 3 = 2, 5 − 4 = 1. Il lit donc **T[4], T[2] et T[1]**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut T[5] ?",
+     "reponse": 2,
+     "aide": "T[5] = 1 + min(T[4], T[2], T[1]) = 1 + min(1, 2, 1).",
+     "explication": "T[5] = 1 + min(1, 2, 1) = **2** (par exemple 4 + 1)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le programme remplit les cases jusqu’à s = 7. Combien de pièces au minimum pour rendre 7 centimes ? (On sait que T[6] = 2.)",
+     "reponse": 2,
+     "aide": "Regarde T[6], T[4] et T[3].",
+     "explication": "T[7] = 1 + min(T[6], T[4], T[3]) = 1 + min(2, 1, 1) = **2** : une pièce de 3 et une de 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "59c810ed-0027-5c5e-8c5c-725ccf3d3000",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les chemins de la grille",
+   "competence": "modeliser",
+   "situation": "Une fourmi part du coin d’une grille et ne peut aller que vers la droite ou vers le bas. On note chemins(i, j) le nombre de chemins pour atteindre la case située i lignes plus bas et j colonnes plus à droite.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction chemins",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def chemins(i, j):",
+      "    if i == 0 or j == 0:",
+      "        return 1",
+      "    return chemins(i - 1, j) + chemins(i, j - 1)"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le tableau des valeurs",
+     "colonnes": [
+      "",
+      "j = 0",
+      "j = 1",
+      "j = 2",
+      "j = 3"
+     ],
+     "lignes": [
+      [
+       "i = 0",
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       "i = 1",
+       1,
+       2,
+       3,
+       4
+      ],
+      [
+       "i = 2",
+       1,
+       3,
+       "?",
+       10
+      ],
+      [
+       "i = 3",
+       1,
+       4,
+       10,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que vaut chemins(2, 2), la case manquante de la ligne i = 2 ?",
+     "reponse": 6,
+     "aide": "Additionne la case juste au-dessus et la case juste à gauche.",
+     "explication": "chemins(2, 2) = chemins(1, 2) + chemins(2, 1) = 3 + 3 = **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut chemins(3, 3), la dernière case du tableau ?",
+     "reponse": 20,
+     "aide": "Additionne 10 (au-dessus) et 10 (à gauche).",
+     "explication": "chemins(3, 3) = chemins(2, 3) + chemins(3, 2) = 10 + 10 = **20**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans mémoriser, combien d’appels de chemins le calcul de chemins(2, 2) lance-t-il, le premier compris ? (Il y en a 5 pour chemins(1, 2) et pour chemins(2, 1).)",
+     "reponse": 11,
+     "aide": "Compte 1 pour l’appel lui-même, plus les deux sous-arbres.",
+     "explication": "1 + 5 + 5 = **11 appels**, alors que le tableau ne contient que quelques cases."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec un dictionnaire qui retient les résultats, chaque case n’est calculée qu’une fois. Combien de cases différentes chemins(2, 2) demande-t-il (la case (0, 0) n’est jamais appelée) ?",
+     "reponse": 8,
+     "aide": "Le tableau 3 × 3 contient 9 cases : laquelle n’est jamais utilisée ?",
+     "explication": "Les cases (i, j) avec i et j de 0 à 2, sauf (0, 0) : **8 cases**, contre 11 appels sans mémoire."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "CAD dans ABRACADABRA",
+   "competence": "programmer",
+   "situation": "Bastien cherche le motif « CAD » dans le mot ABRACADABRA. Sa fonction essaie chaque position, une par une, en comparant des morceaux de texte.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La recherche naïve",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def cherche(texte, motif):",
+      "    n = len(texte)",
+      "    m = len(motif)",
+      "    for i in range(n - m + 1):",
+      "        if texte[i:i + m] == motif:",
+      "            return i",
+      "    return -1",
+      "print(cherche(\"ABRACADABRA\", \"CAD\"))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les premiers alignements",
+     "colonnes": [
+      "i",
+      "Morceau lu",
+      "Égal à CAD ?"
+     ],
+     "lignes": [
+      [
+       0,
+       "ABR",
+       "non"
+      ],
+      [
+       1,
+       "BRA",
+       "non"
+      ],
+      [
+       2,
+       "RAC",
+       "non"
+      ],
+      [
+       3,
+       "ACA",
+       "non"
+      ],
+      [
+       4,
+       "CAD",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il ?",
+     "reponse": 4,
+     "aide": "La fonction renvoie la première position où le morceau est égal au motif.",
+     "explication": "Le morceau de la position 4 est CAD : la fonction renvoie **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le texte fait 11 lettres et le motif 3. Combien de positions la boucle peut-elle essayer au maximum ? (range(n - m + 1))",
+     "reponse": 9,
+     "aide": "Calcule 11 − 3 + 1.",
+     "explication": "11 − 3 + 1 = **9** positions, de i = 0 à i = 8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que renvoie cherche(\"ABRACADABRA\", \"ABRA\") ?",
+     "options": [
+      "0",
+      "7",
+      "-1",
+      "4"
+     ],
+     "reponse": 0,
+     "aide": "La fonction s’arrête à la première occurrence.",
+     "explication": "ABRA apparaît en position 0 et en position 7, mais la fonction s’arrête au premier succès : elle renvoie **0**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sauter plutôt que décaler",
+   "competence": "raisonner",
+   "situation": "Nora cherche ABRI dans « LE LAC ABRITE » avec l’algorithme de Horspool : elle regarde la dernière lettre de la fenêtre de 4 lettres, et la table lui dit de combien avancer.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le texte et le motif",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "Texte : LE LAC ABRITE (les espaces comptent)",
+      "Motif : ABRI"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "La table de décalage",
+     "colonnes": [
+      "Lettre lue",
+      "A",
+      "B",
+      "R",
+      "I ou autre"
+     ],
+     "lignes": [
+      [
+       "Décalage",
+       3,
+       2,
+       1,
+       4
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Table construite pour le motif ABRI"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Au premier alignement (i = 0), la fenêtre est « LE L » : sa dernière lettre est L. De combien avance-t-on ?",
+     "reponse": 4,
+     "aide": "La lettre L n’est pas dans le motif : regarde la colonne « autre ».",
+     "explication": "L n’apparaît pas dans ABRI : on avance de la longueur entière du motif, **4** positions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle position commence la deuxième fenêtre, « AC A » ? Sa dernière lettre est A, et le décalage est 3. On part de i = 4.",
+     "reponse": 7,
+     "aide": "Additionne 4 et 3.",
+     "explication": "i = 4 + 3 = **7**, et la fenêtre « ABRI » correspond au motif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien d’alignements Horspool essaie-t-il en tout, le dernier réussi compris ?",
+     "options": [
+      "3",
+      "8",
+      "4",
+      "11"
+     ],
+     "reponse": 0,
+     "aide": "Ses positions successives sont 0, 4 et 7.",
+     "explication": "Horspool essaie les positions 0, 4 et 7 : **3 alignements**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’algorithme naïf avance d’un cran à chaque échec. Combien d’alignements essaierait-il pour trouver ABRI en position 7 (positions 0 à 7) ?",
+     "reponse": 8,
+     "aide": "Compte les positions 0, 1, 2… jusqu’à 7.",
+     "explication": "Les positions 0 à 7 font **8 alignements**, contre 3 pour Horspool."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a014766-7f54-5f3d-a80f-8cec79ecd48c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La table de Knuth-Morris-Pratt",
+   "competence": "analyser-document",
+   "situation": "Pour ne jamais revenir en arrière dans le texte, l’algorithme de Knuth-Morris-Pratt prépare une table à partir du motif ABABAC : pour chaque préfixe du motif, la longueur du plus long bout qui est à la fois début et fin de ce préfixe.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le calcul de la table",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def prefixes(m):",
+      "    P = [0]",
+      "    k = 0",
+      "    for i in range(1, len(m)):",
+      "        while k > 0 and m[i] != m[k]:",
+      "            k = P[k - 1]",
+      "        if m[i] == m[k]:",
+      "            k = k + 1",
+      "        P.append(k)",
+      "    return P",
+      "print(prefixes(\"ABABAC\"))"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "La table du motif ABABAC",
+     "colonnes": [
+      "Motif",
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "C"
+     ],
+     "lignes": [
+      [
+       "Préfixe lu",
+       "A",
+       "AB",
+       "ABA",
+       "ABAB",
+       "ABABA",
+       "ABABAC"
+      ],
+      [
+       "Longueur k",
+       0,
+       0,
+       1,
+       2,
+       "?",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur manque pour le préfixe ABABA ? (Son plus long début qui est aussi une fin est ABA.)",
+     "reponse": 3,
+     "aide": "Compte les lettres de ABA.",
+     "explication": "Pour ABABA, le plus long bout à la fois début et fin est ABA, de longueur **3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie la valeur 2 pour le préfixe ABAB ?",
+     "options": [
+      "Le plus long début de ABAB qui est aussi une fin de ABAB est AB, de longueur 2",
+      "Le préfixe ABAB contient exactement deux lettres A et deux lettres B à la suite",
+      "Le préfixe ABAB apparaît deux fois dans le texte que l’on est en train de lire",
+      "Le motif ABABAC est décalé de deux positions dès qu’une lettre du texte diffère"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un début et une fin identiques dans ABAB.",
+     "explication": "ABAB commence par **AB** et finit par **AB** : c’est le plus long bout commun au début et à la fin, de longueur 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On a reconnu ABAB (4 lettres) dans le texte, puis la lettre suivante ne convient pas. Combien de lettres du motif reste-t-il reconnues en repartant ? (Lis la table pour le préfixe ABAB.)",
+     "reponse": 2,
+     "aide": "Regarde la valeur k du préfixe ABAB.",
+     "explication": "La table donne **2** pour ABAB : on repart avec AB déjà reconnu, sans revenir en arrière dans le texte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que renvoie prefixes(\"AABA\") ?",
+     "options": [
+      "[0, 1, 0, 1]",
+      "[0, 1, 2, 3]",
+      "[0, 0, 1, 0]",
+      "[0, 1, 1, 2]"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la valeur pour A, AA, AAB puis AABA.",
+     "explication": "A : 0 ; AA : 1 (A) ; AAB : 0 ; AABA : 1 (A). Le programme renvoie **[0, 1, 0, 1]**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet d’une page web",
+   "competence": "observer-schema",
+   "situation": "Quand Zoé ouvre une page web, son message traverse les quatre couches du modèle TCP/IP de son ordinateur, de l’application jusqu’au câble ou à la Wi-Fi.",
+   "documents": [
+    {
+     "id": "pile",
+     "type": "schema",
+     "titre": "Les quatre couches TCP/IP",
+     "largeur": 320,
+     "hauteur": 260,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 18,
+       "l": 180,
+       "h": 44,
+       "arrondi": 6,
+       "texte": "Application",
+       "id": "app",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 78,
+       "l": 180,
+       "h": 44,
+       "arrondi": 6,
+       "texte": "Transport",
+       "id": "trans",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 138,
+       "l": 180,
+       "h": 44,
+       "arrondi": 6,
+       "texte": "Internet",
+       "id": "inter",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 198,
+       "l": 180,
+       "h": 44,
+       "arrondi": 6,
+       "texte": "Accès réseau",
+       "id": "acces",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        36,
+        30
+       ],
+       "a": [
+        36,
+        232
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 36,
+       "y": 252,
+       "texte": "Envoi",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche la couche chargée de l’adressage et du routage des paquets.",
+     "reponse": [
+      "inter"
+     ],
+     "aide": "C’est la couche où travaille le protocole IP.",
+     "explication": "L’**adressage** et le **routage** relèvent de la couche Internet, avec le protocole IP."
+    },
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche la couche où travaille le protocole TCP, qui assure la remise entre applications.",
+     "reponse": [
+      "trans"
+     ],
+     "aide": "Elle se trouve entre l’application et l’adressage.",
+     "explication": "TCP et UDP sont des protocoles de la couche **Transport**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque protocole à sa couche.",
+     "paires": [
+      [
+       "HTTP",
+       "Application"
+      ],
+      [
+       "TCP",
+       "Transport"
+      ],
+      [
+       "IP",
+       "Internet"
+      ],
+      [
+       "Wi-Fi",
+       "Accès réseau"
+      ]
+     ],
+     "aide": "HTTP est le service rendu à l’utilisateur ; Wi-Fi est la transmission locale.",
+     "explication": "HTTP : **Application** ; TCP : **Transport** ; IP : **Internet** ; Wi-Fi : **Accès réseau**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À l’arrivée sur le serveur, dans quel ordre retire-t-on les en-têtes ajoutés à l’envoi ?",
+     "options": [
+      "De la couche Accès réseau jusqu’à la couche Application, dans l’ordre inverse de l’envoi",
+      "De la couche Application jusqu’à la couche Accès réseau, dans le même ordre que l’envoi",
+      "Dans un ordre quelconque, car chaque couche ajoute un en-tête indépendant des autres",
+      "Seule la couche Internet retire un en-tête, les trois autres ne faisant que transmettre"
+     ],
+     "reponse": 0,
+     "aide": "Le dernier en-tête ajouté à l’envoi est le premier visible.",
+     "explication": "Chaque couche **encapsule** le message en ajoutant son en-tête ; à l’arrivée, on les retire dans l’**ordre inverse**, en remontant de l’accès réseau jusqu’à l’application."
+    }
+   ]
+  },
+  {
+   "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois programmes, un processeur",
+   "competence": "raisonner",
+   "situation": "Un ordinateur n’a qu’un processeur, mais trois programmes doivent avancer. Le système d’exploitation les sert à tour de rôle : c’est l’ordonnancement, ici avec des tranches de 2 unités de temps.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La règle du tourniquet",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "Les trois processus arrivent au temps 0, dans l’ordre A, B, C.",
+      "Chacun reçoit le processeur 2 unités au plus.",
+      "S’il n’a pas fini, il repart à la fin de la file."
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le travail à faire",
+     "colonnes": [
+      "Processus",
+      "Durée totale (unités)"
+     ],
+     "lignes": [
+      [
+       "A",
+       5
+      ],
+      [
+       "B",
+       2
+      ],
+      [
+       "C",
+       3
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel processus termine en premier ?",
+     "options": [
+      "Le processus B, qui n’a besoin que d’une seule tranche",
+      "Le processus A, qui passe en tout premier sur le processeur",
+      "Le processus C, qui a une durée moyenne parmi les trois",
+      "Les trois en même temps, puisque le processeur les sert à tour de rôle"
+     ],
+     "reponse": 0,
+     "aide": "Qui n’a besoin que de 2 unités ?",
+     "explication": "B n’a besoin que de 2 unités : il termine à la fin de sa première tranche, au temps **4**, avant A et C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant le processus C termine-t-il ? (Ordre des tranches : A, B, C, A, puis C…)",
+     "reponse": 9,
+     "aide": "Tranches : A de 0 à 2, B de 2 à 4, C de 4 à 6, A de 6 à 8, puis C.",
+     "explication": "C a reçu 2 unités (de 4 à 6), il lui en reste 1 : la tranche suivante va de 8 à 9. Il termine au temps **9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant le processus A termine-t-il ?",
+     "reponse": 10,
+     "aide": "Il reçoit 2 + 2 unités, puis la dernière.",
+     "explication": "A reçoit 2 unités (0 à 2), 2 unités (6 à 8), puis 1 unité (9 à 10) : il termine au temps **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tranches de processeur sont attribuées en tout avant que tout soit fini ?",
+     "reponse": 6,
+     "aide": "Ordre : A, B, C, A, C, A.",
+     "explication": "L’ordre est A, B, C, A, C, A : **6 tranches**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9397d4ae-39aa-58c3-8fab-537718401328",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chemin le plus court n’est pas le plus rapide",
+   "competence": "analyser-document",
+   "situation": "Sacha envoie un message du routeur R1 au routeur R5. Sur le schéma, chaque nombre est le coût d’un lien : plus il est grand, plus le lien est lent. Le protocole RIP compte les sauts, le protocole OSPF additionne les coûts.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "schema",
+     "titre": "Un réseau de cinq routeurs (coût de chaque lien)",
+     "largeur": 330,
+     "hauteur": 240,
+     "source": "Réseau imaginé pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        115
+       ],
+       "a": [
+        165,
+        40
+       ],
+       "id": "l12",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        165,
+        40
+       ],
+       "a": [
+        285,
+        115
+       ],
+       "id": "l25",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        115
+       ],
+       "a": [
+        105,
+        200
+       ],
+       "id": "l13",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        200
+       ],
+       "a": [
+        225,
+        200
+       ],
+       "id": "l34",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        200
+       ],
+       "a": [
+        285,
+        115
+       ],
+       "id": "l45",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 23,
+       "y": 102,
+       "l": 44,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "R1",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 143,
+       "y": 27,
+       "l": 44,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "R2",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 263,
+       "y": 102,
+       "l": 44,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "R5",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 83,
+       "y": 187,
+       "l": 44,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "R3",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 203,
+       "y": 187,
+       "l": 44,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "R4",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 72,
+       "texte": "1",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 66,
+       "texte": "10",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 160,
+       "texte": "2",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 186,
+       "texte": "2",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 160,
+       "texte": "2",
+       "ancre": "milieu",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de sauts (liens traversés) le chemin de RIP compte-t-il de R1 à R5 ? RIP choisit le chemin qui en compte le moins.",
+     "reponse": 2,
+     "aide": "Compare R1 – R2 – R5 avec R1 – R3 – R4 – R5.",
+     "explication": "R1 – R2 – R5 compte **2 sauts**, contre 3 pour R1 – R3 – R4 – R5 : RIP choisit le premier."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche le lien de coût 10.",
+     "reponse": [
+      "l25"
+     ],
+     "aide": "Regarde le nombre écrit à côté de chaque lien.",
+     "explication": "Le lien entre R2 et R5 a un coût de **10** : c’est le lien le plus lent du réseau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total du chemin choisi par RIP ?",
+     "reponse": 11,
+     "aide": "Additionne les coûts des deux liens du chemin R1 – R2 – R5.",
+     "explication": "Le chemin R1 – R2 – R5 coûte 1 + 10 = **11**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total du chemin que choisit OSPF, celui de plus petit coût ?",
+     "reponse": 6,
+     "aide": "Essaie R1 – R3 – R4 – R5.",
+     "explication": "R1 – R3 – R4 – R5 coûte 2 + 2 + 2 = **6**, bien moins que 11 : c’est le chemin d’OSPF."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi RIP choisit-il ici un chemin plus lent que celui d’OSPF ?",
+     "options": [
+      "Il ne compte que les sauts et ignore le coût de chaque lien traversé par les paquets",
+      "Il additionne les coûts mais se trompe d’un lien quand le réseau contient cinq routeurs",
+      "Il refuse tout chemin de plus de deux sauts, qu’il juge trop long pour les paquets",
+      "Il choisit toujours le chemin passant par le routeur qui porte le plus petit numéro"
+     ],
+     "reponse": 0,
+     "aide": "Quel critère RIP utilise-t-il ?",
+     "explication": "RIP est **aveugle au débit** : il ne voit que le nombre de sauts. OSPF tient compte du coût de chaque lien."
+    }
+   ]
+  },
+  {
+   "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois inquiétudes, trois garanties",
+   "competence": "analyser-document",
+   "situation": "Trois élèves racontent ce qui leur est arrivé en ligne. Chacun a perdu une garantie de sécurité différente : confidentialité, intégrité ou authenticité.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Ce qui s’est passé",
+     "colonnes": [
+      "Cas",
+      "Récit"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Un inconnu lit le message que Lina envoie depuis le Wi-Fi d’un café."
+      ],
+      [
+       "B",
+       "Le montant d’un virement est modifié pendant son transfert."
+      ],
+      [
+       "C",
+       "Le site ressemble à celui d’une banque, mais ce n’en est pas un."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situations imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche le cas où c’est l’authenticité qui n’est pas garantie.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Avec qui parle-t-on vraiment ?",
+     "explication": "Dans le cas C, l’interlocuteur n’est **pas celui qu’il prétend être** : c’est l’authenticité qui est perdue."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cas à la garantie perdue.",
+     "paires": [
+      [
+       "Cas A",
+       "Confidentialité"
+      ],
+      [
+       "Cas B",
+       "Intégrité"
+      ],
+      [
+       "Cas C",
+       "Authenticité"
+      ]
+     ],
+     "aide": "A : qui lit ? B : qui a modifié ? C : qui parle ?",
+     "explication": "A : personne d’autre ne devait lire (**confidentialité**). B : le message a été modifié (**intégrité**). C : l’interlocuteur est faux (**authenticité**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel outil permet de détecter que le montant du cas B a été modifié ?",
+     "options": [
+      "Une empreinte du message, calculée avec une fonction de hachage comme SHA-256",
+      "Un mot de passe plus long pour protéger la connexion au site de la banque",
+      "Un pare-feu qui filtre les connexions arrivant sur l’ordinateur de Lina",
+      "Un VPN qui masque l’adresse du réseau depuis lequel Lina est connectée"
+     ],
+     "reponse": 0,
+     "aide": "Quelle fonction change entièrement si le message change ?",
+     "explication": "L’empreinte SHA-256 change **entièrement** à la moindre modification du message : le destinataire la recalcule et compare."
+    }
+   ]
+  },
+  {
+   "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a la clé ?",
+   "competence": "raisonner",
+   "situation": "Alice écrit à Bob. Éve, sur le réseau, intercepte tout ce qui passe. Alice et Bob utilisent le chiffrement asymétrique : chacun possède une clé publique, que tout le monde connaît, et une clé privée, gardée secrète.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet du message",
+     "source": "Schéma écrit pour l’exercice",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Alice",
+       "emoji": "👩"
+      },
+      {
+       "id": "m",
+       "texte": "Message chiffré",
+       "emoji": "✉️"
+      },
+      {
+       "id": "b",
+       "texte": "Bob",
+       "emoji": "👨"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "m",
+       "texte": "envoie"
+      },
+      {
+       "de": "m",
+       "a": "b",
+       "texte": "reçoit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque opération à la clé utilisée.",
+     "paires": [
+      [
+       "Chiffrer un message pour Bob",
+       "Clé publique de Bob"
+      ],
+      [
+       "Déchiffrer ce message",
+       "Clé privée de Bob"
+      ],
+      [
+       "Signer un message",
+       "Clé privée de l’émetteur"
+      ],
+      [
+       "Vérifier une signature",
+       "Clé publique de l’émetteur"
+      ]
+     ],
+     "aide": "La clé publique se diffuse à tous ; la clé privée ne sert qu’à son propriétaire.",
+     "explication": "On chiffre avec la clé **publique** du destinataire ; lui seul déchiffre avec sa clé **privée**. On signe avec sa clé privée ; tous vérifient avec la clé publique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Éve intercepte le message chiffré. Pourquoi ne peut-elle pas le lire ?",
+     "options": [
+      "Elle ne possède pas la clé privée de Bob, seule capable de déchiffrer ce message",
+      "Elle ne connaît pas la clé publique de Bob, qui reste secrète pour tout le monde",
+      "Le message ne passe jamais par le réseau, il est remis directement à Bob en main",
+      "Elle n’a pas de certificat, ce qui lui interdit d’ouvrir n’importe quel message"
+     ],
+     "reponse": 0,
+     "aide": "Quelle clé permet de déchiffrer un message chiffré avec la clé publique de Bob ?",
+     "explication": "Le message est chiffré avec la clé publique de Bob : seule sa **clé privée** peut le déchiffrer, et Éve ne l’a pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les étapes d’une connexion HTTPS.",
+     "items": [
+      "Le navigateur vérifie le certificat du serveur",
+      "Navigateur et serveur s’accordent sur une clé de session grâce au chiffrement asymétrique",
+      "Les données échangées ensuite sont chiffrées avec cette clé de session symétrique"
+     ],
+     "aide": "D’abord on vérifie qui on a en face, puis on partage un secret, puis on l’utilise.",
+     "explication": "On vérifie d’abord le **certificat**, on échange ensuite une **clé de session** (asymétrique), puis tout le reste est chiffré en **symétrique**, bien plus rapide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour envoyer un film de 2 Go à Bob, que chiffre-t-on avec le chiffrement asymétrique (RSA) ?",
+     "options": [
+      "Seulement la clé de session, le film étant chiffré avec cette clé en symétrique",
+      "Le film en entier, car le chiffrement asymétrique est le plus rapide des deux",
+      "Seulement l’empreinte du film, car le chiffrement ne protège que l’intégrité",
+      "Rien du tout, car un film de cette taille ne peut pas être chiffré sur le réseau"
+     ],
+     "reponse": 0,
+     "aide": "Lequel des deux chiffrements est le plus rapide pour de gros volumes ?",
+     "explication": "Le chiffrement asymétrique est **bien plus lent** : on ne s’en sert que pour échanger la clé de session ; le film est ensuite chiffré en symétrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "b27cf8d8-353f-5f48-9f92-be3f9bedac5d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La base de mots de passe volée",
+   "competence": "analyser-document",
+   "situation": "Un site stocke les mots de passe de ses membres sous forme d’empreintes SHA-256 (tronquées ici à 8 caractères pour la lecture). Un pirate vient de copier la table. Le site a d’abord stocké les empreintes sans sel, puis avec un sel différent pour chaque membre.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Extrait de la table volée",
+     "colonnes": [
+      "Membre",
+      "Sel",
+      "Empreinte sans sel",
+      "Empreinte avec sel"
+     ],
+     "lignes": [
+      [
+       "Ana",
+       "k7",
+       "e93e24c1",
+       "30fbe823"
+      ],
+      [
+       "Ben",
+       "m2",
+       "e93e24c1",
+       "7b34c8ee"
+      ],
+      [
+       "Cléo",
+       "p9",
+       "f2d81a26",
+       "ee3add85"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Empreintes SHA-256 tronquées, membres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche les deux empreintes sans sel qui sont identiques.",
+     "reponse": [
+      "r0c2",
+      "r1c2"
+     ],
+     "aide": "Compare les valeurs de la colonne « Empreinte sans sel ».",
+     "explication": "Ana et Ben ont la **même empreinte sans sel** : une même entrée donne toujours la même empreinte.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut déduire le pirate en lisant seulement la colonne « sans sel » ?",
+     "options": [
+      "Que deux membres ont choisi le même mot de passe, sans même le connaître",
+      "Que les deux membres sont une seule personne qui possède deux comptes",
+      "Que les deux membres ont demandé le changement de leur mot de passe",
+      "Que le mot de passe de ces deux membres est le premier de sa liste"
+     ],
+     "reponse": 0,
+     "aide": "Une fonction de hachage donne-t-elle toujours la même empreinte pour la même entrée ?",
+     "explication": "Deux mots de passe identiques donnent deux empreintes identiques : le pirate **repère les mots de passe partagés**, et un seul craqué en révèle plusieurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec le sel, les empreintes d’Ana et de Ben sont différentes alors que leur mot de passe est le même. Pourquoi ?",
+     "options": [
+      "Le sel est différent, donc le texte qui passe dans la fonction de hachage l’est aussi",
+      "Le sel change le mot de passe lui-même, qui n’est donc plus le même pour les deux",
+      "La fonction de hachage est aléatoire et donne un résultat différent à chaque appel",
+      "Le sel chiffre l’empreinte avec une clé, qui est différente pour chaque membre"
+     ],
+     "reponse": 0,
+     "aide": "Que hache-t-on : le mot de passe seul, ou le sel suivi du mot de passe ?",
+     "explication": "On hache « sel + mot de passe » : les textes sont différents, donc les empreintes aussi. Une table d’empreintes **précalculée** devient inutilisable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une empreinte SHA-256 complète compte 256 bits, et un caractère hexadécimal en représente 4. Combien de caractères hexadécimaux fait-elle ?",
+     "reponse": 64,
+     "aide": "Divise 256 par 4.",
+     "explication": "256 ÷ 4 = **64 caractères** hexadécimaux, quelle que soit la taille du message haché."
+    }
+   ]
+  },
+  {
+   "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le grand tableau de la médiathèque",
+   "competence": "analyser-document",
+   "situation": "La médiathèque de Marine note tous ses prêts dans un seul grand tableau. Elle remarque vite que certaines informations sont recopiées à chaque ligne.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le registre des prêts",
+     "colonnes": [
+      "N°",
+      "Lecteur",
+      "Adresse",
+      "Livre emprunté"
+     ],
+     "lignes": [
+      [
+       1,
+       "Lina Roy",
+       "12 rue des Lilas",
+       "Dune"
+      ],
+      [
+       2,
+       "Lina Roy",
+       "12 rue des Lilas",
+       "Emma"
+      ],
+      [
+       3,
+       "Omar Diallo",
+       "4 allée du Parc",
+       "Dune"
+      ],
+      [
+       4,
+       "Lina Roy",
+       "12 rue des Lilas",
+       "Germinal"
+      ],
+      [
+       5,
+       "Omar Diallo",
+       "4 allée du Parc",
+       "Candide"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche les trois cases qui recopient l’adresse de Lina Roy.",
+     "reponse": [
+      "r0c2",
+      "r1c2",
+      "r3c2"
+     ],
+     "aide": "Cherche « 12 rue des Lilas ».",
+     "explication": "L’adresse de Lina est écrite **3 fois** : c’est une redondance.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lina déménage. Combien de lignes du tableau faut-il corriger pour que sa nouvelle adresse soit partout la même ?",
+     "reponse": 3,
+     "aide": "Compte les lignes qui concernent Lina.",
+     "explication": "Il faut corriger les lignes 1, 2 et 4 : **3 lignes**. Un oubli rendrait la base incohérente (anomalie de mise à jour)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Omar rend ses livres et on efface ses deux lignes (3 et 5). Que se passe-t-il ?",
+     "options": [
+      "On perd aussi son adresse, qui n’existait nulle part ailleurs : anomalie de suppression",
+      "On perd seulement les titres des livres, l’adresse d’Omar étant conservée ailleurs",
+      "On ne perd rien, car le tableau garde une copie de chaque ligne effacée pour cela",
+      "On perd l’adresse de Lina Roy, car les deux lecteurs partageaient la même adresse"
+     ],
+     "reponse": 0,
+     "aide": "Où l’adresse d’Omar est-elle écrite ailleurs ?",
+     "explication": "L’adresse d’Omar n’était écrite que dans ces deux lignes : les effacer la **supprime aussi**. C’est l’anomalie de suppression."
+    }
+   ]
+  },
+  {
+   "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois tables pour la médiathèque",
+   "competence": "modeliser",
+   "situation": "Marine sépare son grand tableau en trois tables : lecteur, livre et emprunt. Un lecteur peut emprunter plusieurs livres, et un livre est emprunté par plusieurs lecteurs au fil du temps.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le schéma relationnel (# marque une clé étrangère)",
+     "colonnes": [
+      "Table",
+      "Attributs"
+     ],
+     "lignes": [
+      [
+       "lecteur",
+       "id (clé primaire), nom, adresse"
+      ],
+      [
+       "livre",
+       "id (clé primaire), titre, auteur"
+      ],
+      [
+       "emprunt",
+       "#lecteur_id, #livre_id, date_emprunt"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche le nom de la table qui relie les lecteurs et les livres.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la table qui ne contient que des clés étrangères et une date.",
+     "explication": "La table **emprunt** relie lecteurs et livres : c’est la table de jonction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de clés étrangères la table emprunt contient-elle ?",
+     "reponse": 2,
+     "aide": "Compte les attributs précédés de #.",
+     "explication": "Elle contient **2** clés étrangères : #lecteur_id et #livre_id."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la cardinalité entre lecteur et livre ?",
+     "options": [
+      "Plusieurs à plusieurs : un lecteur emprunte plusieurs livres et inversement",
+      "Un à plusieurs : un lecteur emprunte plusieurs livres, mais un livre un seul lecteur",
+      "Un à un : chaque lecteur emprunte un seul livre, qui n’est emprunté que par lui",
+      "Plusieurs à un : plusieurs lecteurs partagent un seul livre, emprunté par tous"
+     ],
+     "reponse": 0,
+     "aide": "Une table peut-elle porter seule la clé de l’autre ?",
+     "explication": "Un lecteur emprunte plusieurs livres **et** un livre est emprunté par plusieurs lecteurs : c’est **plusieurs à plusieurs**, qui exige une table de jonction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un emprunt est enregistré avec livre_id = 99, alors qu’aucun livre n’a cet identifiant. Quelle contrainte est violée ?",
+     "options": [
+      "L’intégrité référentielle : une clé étrangère doit viser un enregistrement existant",
+      "L’unicité : deux emprunts ne peuvent pas avoir la même valeur de clé étrangère",
+      "La contrainte de domaine : un identifiant de livre doit être un nombre entier",
+      "La clé primaire : l’identifiant 99 est déjà utilisé par le lecteur de la table"
+     ],
+     "reponse": 0,
+     "aide": "La clé étrangère pointe vers quoi ?",
+     "explication": "Une clé étrangère doit **référencer un enregistrement existant** : c’est l’intégrité référentielle."
+    }
+   ]
+  },
+  {
+   "chapitre": "897a1e61-6e4d-5956-ad5b-0a61efec0a8f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le club de sport",
+   "competence": "modeliser",
+   "situation": "Un club gère des entraîneurs, des cours et des adhérents. Un entraîneur dirige plusieurs cours, mais un cours a un seul entraîneur. Un adhérent suit plusieurs cours, et un cours accueille plusieurs adhérents.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "schema",
+     "titre": "Les trois entités et leurs relations",
+     "largeur": 320,
+     "hauteur": 230,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 15,
+       "l": 130,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Entraîneur",
+       "id": "ent",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 95,
+       "l": 130,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Cours",
+       "id": "cours",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 175,
+       "l": 130,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Adhérent",
+       "id": "adh",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        55
+       ],
+       "a": [
+        160,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        135
+       ],
+       "a": [
+        160,
+        175
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 146,
+       "y": 68,
+       "texte": "1",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 146,
+       "y": 90,
+       "texte": "n",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 146,
+       "y": 148,
+       "texte": "n",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 146,
+       "y": 170,
+       "texte": "n",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 79,
+       "texte": "dirige",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 159,
+       "texte": "suit",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "enonce": "Touche la table qui doit porter la clé étrangère vers l’entraîneur.",
+     "reponse": [
+      "cours"
+     ],
+     "aide": "La clé étrangère se place du côté « plusieurs ».",
+     "explication": "Un entraîneur dirige plusieurs cours : la clé étrangère **#entraineur_id** se place du côté « plusieurs », dans la table **cours**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour la relation « suit » entre adhérent et cours, que faut-il créer ?",
+     "options": [
+      "Une table de jonction portant les deux clés étrangères",
+      "Une clé étrangère dans la table adhérent seulement",
+      "Une clé étrangère dans la table cours seulement",
+      "Une seule table qui fusionne adhérents et cours"
+     ],
+     "reponse": 0,
+     "aide": "Ni l’adhérent ni le cours ne peuvent porter seuls la clé de l’autre.",
+     "explication": "La relation « suit » est **plusieurs à plusieurs** : on crée une table de jonction (par exemple inscription) avec #adherent_id et #cours_id."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tables contient le schéma final, table de jonction comprise ?",
+     "reponse": 4,
+     "aide": "Trois tables d’entités, plus la table de jonction.",
+     "explication": "entraineur, cours, adherent et inscription : **4 tables**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle clé primaire convient à la table inscription(#adherent_id, #cours_id, date_inscription) ?",
+     "options": [
+      "Le couple (adherent_id, cours_id), qui identifie chaque inscription",
+      "La seule colonne date_inscription, qui change à chaque inscription",
+      "La seule colonne adherent_id, qui est propre à chaque adhérent",
+      "Aucune : une table de jonction n’a pas besoin de clé primaire"
+     ],
+     "reponse": 0,
+     "aide": "Un même adhérent peut suivre plusieurs cours : une colonne seule suffit-elle ?",
+     "explication": "Un adhérent suit plusieurs cours et un cours a plusieurs adhérents : seul le **couple** (adherent_id, cours_id) est unique pour chaque inscription."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Créer la table des livres",
+   "competence": "analyser-document",
+   "situation": "Le club de lecture de Tom veut enregistrer ses livres dans une base de données. Il écrit l’ordre qui crée la table, avec les contraintes qu’il souhaite.",
+   "documents": [
+    {
+     "id": "sql",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La création de la table",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "CREATE TABLE livre (",
+      "    id INTEGER PRIMARY KEY,",
+      "    isbn TEXT UNIQUE,",
+      "    annee INTEGER,",
+      "    titre TEXT [[n|NOT]] [[n|NULL]]",
+      ")"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sql",
+     "enonce": "Touche les mots qui rendent le titre obligatoire.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Ils forment une expression de deux mots, à la fin de la ligne du titre.",
+     "explication": "**NOT NULL** impose une valeur : une ligne sans titre est refusée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de colonnes la table livre contient-elle ?",
+     "reponse": 4,
+     "aide": "Compte les lignes entre les parenthèses.",
+     "explication": "id, isbn, annee et titre : **4 colonnes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Tom écrit : INSERT INTO livre (id, annee) VALUES (1, 1999). Que répond la base ?",
+     "options": [
+      "Un refus : la colonne titre est obligatoire et n’a pas de valeur",
+      "Une acceptation : seuls l’identifiant et l’année sont indispensables",
+      "Un refus : l’année 1999 n’est pas valide pour une colonne de type entier",
+      "Une acceptation : la base complète le titre avec une chaîne vide toute seule"
+     ],
+     "reponse": 0,
+     "aide": "Quelle colonne a la contrainte NOT NULL ?",
+     "explication": "Le titre est **NOT NULL** et l’insertion ne le fournit pas : la base **refuse** la ligne."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège des cases vides",
+   "competence": "raisonner",
+   "situation": "Une professeure a saisi les notes d’un devoir : deux élèves absents n’ont pas de note. Dans la base, une note absente vaut NULL, qui n’est ni zéro ni une chaîne vide.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "La table eleve",
+     "colonnes": [
+      "nom",
+      "note"
+     ],
+     "lignes": [
+      [
+       "Ana",
+       12
+      ],
+      [
+       "Bo",
+       "NULL"
+      ],
+      [
+       "Cy",
+       8
+      ],
+      [
+       "Di",
+       15
+      ],
+      [
+       "Eli",
+       "NULL"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Quatre requêtes",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT COUNT(*) FROM eleve",
+      "SELECT COUNT(note) FROM eleve",
+      "SELECT AVG(note) FROM eleve",
+      "SELECT nom FROM eleve WHERE note = NULL"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre renvoie la première requête, SELECT COUNT(*) ?",
+     "reponse": 5,
+     "aide": "COUNT(*) compte toutes les lignes.",
+     "explication": "COUNT(*) compte les **5 lignes**, NULL ou non."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre renvoie la deuxième requête, SELECT COUNT(note) ?",
+     "reponse": 3,
+     "aide": "COUNT(colonne) ne compte que les valeurs renseignées.",
+     "explication": "COUNT(note) ignore les NULL : elle compte **3** notes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que renvoie la troisième requête, SELECT AVG(note) ?",
+     "options": [
+      "Environ 11,67 : les valeurs NULL sont ignorées dans le calcul",
+      "Exactement 7 : les valeurs NULL comptent pour zéro dans le calcul",
+      "NULL : une seule valeur NULL rend la moyenne entière inconnue",
+      "Environ 8,75 : les NULL et la meilleure note sont écartées"
+     ],
+     "reponse": 0,
+     "aide": "Les NULL entrent-ils dans la somme et dans le nombre de valeurs ?",
+     "explication": "AVG ignore les NULL : (12 + 8 + 15) ÷ 3 ≈ **11,67**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes la quatrième requête, WHERE note = NULL, renvoie-t-elle ?",
+     "reponse": 0,
+     "aide": "Une comparaison avec NULL renvoie « inconnu », même NULL = NULL.",
+     "explication": "Toute comparaison avec NULL est « inconnue » : **0 ligne**. Il faut écrire IS NULL pour retrouver les deux absents."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6cbec5f-3b81-5309-82ac-890fb4bfafbf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un index et une vue",
+   "competence": "raisonner",
+   "situation": "L’association sportive d’un lycée garde 1 000 000 d’inscriptions dans une table. Elle ajoute un index sur la colonne interrogée tous les jours, et crée une vue pour le secrétariat, qui ne doit pas voir les moyennes des élèves.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Nombre de lectures au maximum pour une recherche",
+     "colonnes": [
+      "Lignes de la table",
+      "Sans index",
+      "Avec index"
+     ],
+     "lignes": [
+      [
+       "1 000",
+       "1 000",
+       10
+      ],
+      [
+       "1 000 000",
+       "1 000 000",
+       20
+      ],
+      [
+       "1 000 000 000",
+       "1 000 000 000",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Ordres de grandeur, index en arbre équilibré"
+    },
+    {
+     "id": "sql",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La vue et le droit",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "CREATE VIEW eleve_public AS",
+      "    SELECT nom, classe_id FROM eleve",
+      "[[g|GRANT]] SELECT ON eleve_public TO secretariat"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de lectures, à peu près, pour une recherche avec index sur un milliard de lignes ? (Le nombre double à peu près quand la table est multipliée par 1 000, en ajoutant 10.)",
+     "reponse": 30,
+     "aide": "Regarde comment passent les valeurs de la colonne « Avec index » : +10 à chaque fois.",
+     "explication": "La recherche avec un index est **logarithmique** : environ log₂(10⁹) ≈ **30** lectures, contre un milliard sans index.",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne crée-t-on pas un index sur toutes les colonnes ?",
+     "options": [
+      "Chaque index ralentit les insertions et occupe de la place sur le disque",
+      "Un index rend les recherches plus lentes quand il y en a plusieurs",
+      "Les colonnes de type texte ne peuvent jamais être indexées par la base",
+      "La base refuse de créer un index sur une colonne qui n’est pas une clé"
+     ],
+     "reponse": 0,
+     "aide": "Que doit faire la base à chaque insertion ?",
+     "explication": "Chaque index doit être **tenu à jour** à chaque insertion et occupe de l’espace : on n’indexe que les colonnes très souvent interrogées."
+    },
+    {
+     "type": "zone",
+     "document": "sql",
+     "enonce": "Touche le mot qui donne un droit au secrétariat.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Le mot est au début de la dernière ligne.",
+     "explication": "**GRANT** attribue un droit : ici, le droit de lire la vue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle information du secrétariat reste hors de sa portée, dans la table eleve(id, nom, classe_id, moyenne) ?",
+     "options": [
+      "La moyenne des élèves, absente de la vue eleve_public",
+      "Le nom des élèves, absent de la vue eleve_public",
+      "La classe des élèves, absente de la vue eleve_public",
+      "Aucune : une vue donne accès à toute la table d’origine"
+     ],
+     "reponse": 0,
+     "aide": "Compare les colonnes de la table et celles de la vue.",
+     "explication": "La vue ne montre que **nom** et **classe_id** : la **moyenne** reste invisible. C’est l’intérêt d’une vue : restreindre l’accès."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le virement en deux temps",
+   "competence": "raisonner",
+   "situation": "Paul vire 50 € du compte 1 vers le compte 2. La banque regroupe les deux opérations dans une transaction, pour qu’elles réussissent ensemble ou échouent ensemble.",
+   "documents": [
+    {
+     "id": "sql",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La transaction",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "BEGIN",
+      "UPDATE compte SET solde = solde - 50 WHERE id = 1",
+      "UPDATE compte SET solde = solde + 50 WHERE id = 2",
+      "[[c|COMMIT]]"
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les soldes avant le virement",
+     "colonnes": [
+      "Compte",
+      "Solde (€)"
+     ],
+     "lignes": [
+      [
+       1,
+       200
+      ],
+      [
+       2,
+       100
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Comptes imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sql",
+     "enonce": "Touche le mot qui valide définitivement la transaction.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est la dernière ligne.",
+     "explication": "**COMMIT** valide la transaction : ses effets deviennent définitifs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde du compte 1 après le COMMIT, en euros ?",
+     "reponse": 150,
+     "aide": "Retire 50 € à 200 €.",
+     "explication": "200 − 50 = **150 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une coupure de courant arrive entre les deux UPDATE, avant le COMMIT. Quel est le solde du compte 1 quand le serveur redémarre, en euros ?",
+     "reponse": 200,
+     "aide": "La transaction est tout ou rien.",
+     "explication": "La transaction n’a pas été validée : tout est annulé, le compte 1 garde ses **200 €**. C’est l’atomicité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété ACID garantit que le virement se fait en entier ou pas du tout ?",
+     "options": [
+      "L’atomicité",
+      "La durabilité",
+      "L’isolation",
+      "La cohérence"
+     ],
+     "reponse": 0,
+     "aide": "Tout ou rien.",
+     "explication": "L’**atomicité** garantit « tout ou rien » : le débit et le crédit réussissent ensemble ou échouent ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le dernier billet",
+   "competence": "analyser-document",
+   "situation": "Une billetterie en ligne garde un stock de 10 billets. Deux clients achètent un billet presque au même instant. Le tableau suit ce que chacun lit et écrit dans la base.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le déroulement",
+     "colonnes": [
+      "Étape",
+      "Client 1",
+      "Client 2",
+      "Stock en base"
+     ],
+     "lignes": [
+      [
+       1,
+       "lit le stock : 10",
+       "—",
+       10
+      ],
+      [
+       2,
+       "—",
+       "lit le stock : 10",
+       10
+      ],
+      [
+       3,
+       "écrit 9",
+       "—",
+       9
+      ],
+      [
+       4,
+       "—",
+       "écrit 9",
+       9
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche l’étape où le client 2 écrase le travail du client 1.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "C’est la dernière écriture.",
+     "explication": "À l’étape 4, le client 2 écrit **9** alors que le stock était déjà tombé à 9 : il écrase l’achat du client 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de billets devrait-il rester après les deux achats ?",
+     "reponse": 8,
+     "aide": "Deux billets ont été vendus.",
+     "explication": "10 − 2 = **8 billets**, mais la base en affiche 9 : un achat a été perdu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété ACID n’est pas respectée ici ?",
+     "options": [
+      "L’isolation : les deux transactions se sont mélangées",
+      "L’atomicité : une des deux transactions n’a pas fini",
+      "La durabilité : la base a perdu une écriture après une panne",
+      "La cohérence : le stock est devenu négatif pendant les calculs"
+     ],
+     "reponse": 0,
+     "aide": "Les deux transactions auraient dû se dérouler comme si elles étaient successives.",
+     "explication": "Deux transactions simultanées doivent donner le même résultat que deux transactions **successives** : c’est l’**isolation**, ici non respectée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait le SGBD pour éviter cette perte ?",
+     "options": [
+      "Il verrouille la ligne du stock : le client 2 attend la fin du client 1",
+      "Il refuse tout achat tant qu’un autre client a lu le stock avant lui",
+      "Il supprime le stock et recommence avec un nouveau de 10 billets",
+      "Il attribue le même billet aux deux clients et prévient le vendeur"
+     ],
+     "reponse": 0,
+     "aide": "Comment faire attendre le second client ?",
+     "explication": "Un **verrou** (ou un mécanisme de versions) oblige le client 2 à attendre que le client 1 ait terminé : il lit alors 9 et écrit 8."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d5c9ba0-28e9-5b11-a1ad-06876a0996a3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Chacun attend l’autre",
+   "competence": "observer-schema",
+   "situation": "Deux transactions T1 et T2 modifient deux lignes A et B. T1 a verrouillé A et demande B. T2 a verrouillé B et demande A. Le schéma montre qui détient et qui attend.",
+   "documents": [
+    {
+     "id": "verrous",
+     "type": "schema",
+     "titre": "Verrous détenus et demandés",
+     "largeur": 330,
+     "hauteur": 240,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 80,
+       "cy": 50,
+       "r": 26,
+       "texte": "T1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 50,
+       "r": 26,
+       "texte": "T2"
+      },
+      {
+       "forme": "rect",
+       "x": 35,
+       "y": 152,
+       "l": 90,
+       "h": 36,
+       "arrondi": 6,
+       "texte": "Ligne A",
+       "id": "ra",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 152,
+       "l": 90,
+       "h": 36,
+       "arrondi": 6,
+       "texte": "Ligne B",
+       "id": "rb",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        152
+       ],
+       "a": [
+        80,
+        77
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        152
+       ],
+       "a": [
+        250,
+        77
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        102,
+        66
+       ],
+       "a": [
+        226,
+        154
+       ],
+       "fleche": "fin",
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        228,
+        66
+       ],
+       "a": [
+        104,
+        154
+       ],
+       "fleche": "fin",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 118,
+       "texte": "détient",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 282,
+       "y": 118,
+       "texte": "détient",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 226,
+       "texte": "Trait plein : détient le verrou · pointillés : attend",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verrous",
+     "enonce": "Touche la ligne dont T1 a besoin pour continuer.",
+     "reponse": [
+      "rb"
+     ],
+     "aide": "T1 détient déjà A.",
+     "explication": "T1 détient A et attend **B**, que T2 détient : il ne peut pas avancer."
+    },
+    {
+     "type": "zone",
+     "document": "verrous",
+     "enonce": "Touche la ligne dont T2 a besoin pour continuer.",
+     "reponse": [
+      "ra"
+     ],
+     "aide": "T2 détient déjà B.",
+     "explication": "T2 détient B et attend **A**, que T1 détient : il ne peut pas avancer non plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de transactions sont bloquées ?",
+     "reponse": 2,
+     "aide": "Chacune attend une ligne détenue par l’autre.",
+     "explication": "T1 et T2 s’attendent mutuellement : **2 transactions** bloquées, c’est un interblocage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le SGBD sort-il de cette situation ?",
+     "options": [
+      "Il détecte l’interblocage et annule l’une des deux transactions",
+      "Il attend indéfiniment que l’une des deux transactions finisse",
+      "Il valide les deux transactions d’office en ignorant les verrous",
+      "Il supprime les deux lignes A et B pour libérer les verrous posés"
+     ],
+     "reponse": 0,
+     "aide": "Aucune des deux ne peut avancer seule.",
+     "explication": "Le SGBD **détecte** le cycle et **annule** l’une des transactions (ROLLBACK) : l’autre peut alors se terminer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment les développeurs peuvent-ils éviter ce genre d’interblocage ?",
+     "options": [
+      "En demandant toujours les verrous dans le même ordre, A puis B",
+      "En lançant les deux transactions sur deux ordinateurs différents",
+      "En ajoutant une troisième ligne C que personne n’aurait à verrouiller",
+      "En supprimant l’instruction COMMIT de chacune des deux transactions"
+     ],
+     "reponse": 0,
+     "aide": "Le cycle vient d’ordres opposés.",
+     "explication": "Si T1 et T2 demandent toujours **A puis B**, aucun cycle ne peut se former : la seconde attend la première."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui passe le seuil ?",
+   "competence": "lire-tableau",
+   "situation": "Le professeur principal de la classe de Jade interroge la table des élèves pour préparer les félicitations du trimestre : il veut les élèves dont la moyenne atteint au moins 12, du meilleur au moins bon.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "La table eleve",
+     "colonnes": [
+      "nom",
+      "classe",
+      "moyenne"
+     ],
+     "lignes": [
+      [
+       "Ana",
+       "3A",
+       14.5
+      ],
+      [
+       "Bilal",
+       "3B",
+       9
+      ],
+      [
+       "Clara",
+       "3A",
+       17
+      ],
+      [
+       "David",
+       "3C",
+       12
+      ],
+      [
+       "Emma",
+       "3B",
+       15.5
+      ],
+      [
+       "Farid",
+       "3A",
+       8
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La requête",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT nom",
+      "FROM eleve",
+      "WHERE moyenne >= 12",
+      "ORDER BY moyenne DESC"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la moyenne de l’élève qui s’affichera en premier.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "DESC trie du plus grand au plus petit.",
+     "explication": "Le tri décroissant place la plus grande moyenne en premier : **17**, celle de Clara."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes la requête renvoie-t-elle ?",
+     "reponse": 4,
+     "aide": "WHERE garde les moyennes supérieures ou égales à 12.",
+     "explication": "Ana (14,5), Clara (17), David (12) et Emma (15,5) : **4 lignes**. Le seuil 12 est inclus grâce à >=."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les noms dans l’ordre où la requête les affiche.",
+     "items": [
+      "Clara",
+      "Emma",
+      "Ana",
+      "David"
+     ],
+     "aide": "Trie les moyennes 17, 15,5, 14,5 et 12.",
+     "explication": "Clara (17), Emma (15,5), Ana (14,5) puis David (12)."
+    },
+    {
+     "type": "choix",
+     "enonce": "On remplace DESC par ASC. Quel nom s’affiche en premier ?",
+     "options": [
+      "David",
+      "Clara",
+      "Farid",
+      "Bilal"
+     ],
+     "reponse": 0,
+     "aide": "ASC trie du plus petit au plus grand, parmi les élèves gardés par WHERE.",
+     "explication": "Avec ASC, la plus petite moyenne gardée vient en premier : **David** (12). Farid et Bilal sont déjà écartés par le WHERE."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Clara n’a pas de classe",
+   "competence": "raisonner",
+   "situation": "Le secrétariat relie les élèves à leur classe avec une jointure. Mais Clara vient d’arriver au lycée et sa classe n’est pas encore renseignée.",
+   "documents": [
+    {
+     "id": "t1",
+     "type": "tableau",
+     "titre": "La table eleve",
+     "colonnes": [
+      "id",
+      "nom",
+      "classe_id"
+     ],
+     "lignes": [
+      [
+       1,
+       "Ana",
+       1
+      ],
+      [
+       2,
+       "Bilal",
+       2
+      ],
+      [
+       3,
+       "Clara",
+       "NULL"
+      ],
+      [
+       4,
+       "David",
+       1
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "t2",
+     "type": "tableau",
+     "titre": "La table classe",
+     "colonnes": [
+      "id",
+      "nom"
+     ],
+     "lignes": [
+      [
+       1,
+       "3A"
+      ],
+      [
+       2,
+       "3B"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les requêtes",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "SELECT eleve.nom, classe.nom",
+      "FROM eleve JOIN classe",
+      "ON eleve.classe_id = classe.id"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes cette jointure JOIN renvoie-t-elle ?",
+     "reponse": 3,
+     "aide": "JOIN ne garde que les élèves qui ont une correspondance dans classe.",
+     "explication": "Clara n’a aucune correspondance : seuls Ana, Bilal et David sont gardés, soit **3 lignes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On remplace JOIN par LEFT JOIN. Combien de lignes la requête renvoie-t-elle ?",
+     "reponse": 4,
+     "aide": "LEFT JOIN garde toutes les lignes de la table de gauche, eleve.",
+     "explication": "LEFT JOIN garde **toutes** les lignes de eleve : **4 lignes**, dont celle de Clara."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec LEFT JOIN, que vaut classe.nom sur la ligne de Clara ?",
+     "options": [
+      "NULL",
+      "3A",
+      "une chaîne vide",
+      "0"
+     ],
+     "reponse": 0,
+     "aide": "Aucune ligne de classe ne correspond à Clara.",
+     "explication": "Sans correspondance, la jointure complète par **NULL** les colonnes de la table de droite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On oublie la condition ON : FROM eleve, classe. Combien de lignes renvoie-t-elle ?",
+     "reponse": 8,
+     "aide": "Chaque ligne de eleve est associée à chaque ligne de classe : 4 × 2.",
+     "explication": "C’est un **produit cartésien** : 4 × 2 = **8 lignes**, presque toutes fausses."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a6a401e-ab19-5fef-bf93-70b308c48489",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "WHERE ou HAVING ?",
+   "competence": "raisonner",
+   "situation": "Une boutique de jeux vidéo note chaque achat dans une table. Léo écrit deux requêtes qui ressemblent beaucoup, et s’étonne d’obtenir des résultats différents.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "La table achat",
+     "colonnes": [
+      "client",
+      "montant (€)"
+     ],
+     "lignes": [
+      [
+       "Ana",
+       20
+      ],
+      [
+       "Ana",
+       35
+      ],
+      [
+       "Bo",
+       10
+      ],
+      [
+       "Cy",
+       50
+      ],
+      [
+       "Cy",
+       5
+      ],
+      [
+       "Cy",
+       15
+      ],
+      [
+       "Di",
+       40
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux requêtes",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "Requête 1",
+      "SELECT client, SUM(montant) FROM achat",
+      "GROUP BY client HAVING SUM(montant) > 30",
+      "Requête 2",
+      "SELECT client, SUM(montant) FROM achat",
+      "WHERE montant > 30 GROUP BY client"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes la requête 1 renvoie-t-elle ? (HAVING garde les groupes dont la somme dépasse 30.)",
+     "reponse": 3,
+     "aide": "Calcule la somme par client : Ana, Bo, Cy, Di.",
+     "explication": "Ana : 55, Bo : 10, Cy : 70, Di : 40. Seul Bo est écarté : **3 lignes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme la requête 1 affiche-t-elle pour Cy, en euros ?",
+     "reponse": 70,
+     "aide": "Additionne tous les achats de Cy.",
+     "explication": "50 + 5 + 15 = **70 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme la requête 2 affiche-t-elle pour Cy, en euros ? (WHERE filtre les lignes avant le regroupement.)",
+     "reponse": 50,
+     "aide": "Seuls les achats de plus de 30 € comptent.",
+     "explication": "Seul l’achat de 50 € dépasse 30 € : la somme de Cy vaut **50 €**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dans quel ordre le SGBD traite-t-il les clauses d’une requête ?",
+     "items": [
+      "FROM",
+      "WHERE",
+      "GROUP BY",
+      "HAVING",
+      "SELECT",
+      "ORDER BY"
+     ],
+     "aide": "On choisit d’abord les lignes, puis on regroupe, puis on affiche.",
+     "explication": "L’ordre logique est **FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY**. Voilà pourquoi HAVING voit les groupes et WHERE seulement les lignes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi WHERE SUM(montant) > 30 est-il refusé par le SGBD ?",
+     "options": [
+      "WHERE agit sur les lignes avant le regroupement, donc la somme n’existe pas encore",
+      "WHERE ne sait comparer que des textes, jamais des nombres calculés",
+      "WHERE ne fonctionne qu’avec la clause ORDER BY placée juste derrière",
+      "WHERE est réservé aux colonnes qui sont des clés primaires de la table"
+     ],
+     "reponse": 0,
+     "aide": "Quelle clause traite les groupes ?",
+     "explication": "WHERE s’applique **avant** GROUP BY : la somme d’un groupe n’existe pas encore. C’est le rôle de **HAVING**, après le regroupement."
+    }
+   ]
+  }
+ ]
+}

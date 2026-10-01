@@ -1,10 +1,10 @@
 'use client'
 
-import { useCallback, useMemo, useState, useTransition } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { Search, X } from 'lucide-react'
 import ChapterItem from '@/components/reviser/ChapterItem'
 import ChapitreEntete, { ROBES, etatChapitre } from '@/components/reviser/ChapitreEntete'
-import { chapterSupports } from '@/app/reviser/[subject]/supports-actions'
+import { useSupportsDeFiche } from '@/components/reviser/useSupportsDeFiche'
 import { cn } from '@/lib/utils'
 import { GRID_PATTERN } from '@/lib/subject-style'
 import {
@@ -13,13 +13,13 @@ import {
   chapterGroupProgress,
   chapterQuizHref,
   chapterUnit,
+  fichesNumerotees,
   groupChaptersByTheme,
   hasChapterQuiz,
   matchChapters,
   openGroupIndex,
   type ChapterRow,
   type ResumeCta,
-  type SupportChip,
 } from '@/lib/subject-template'
 
 // Liste des chapitres de la matière, rangée par axe du programme quand la base
@@ -77,30 +77,8 @@ export default function ChapterList({
   // page à rallonge où l'on perdrait la ligne qu'on vient d'ouvrir. Ouvrir une
   // fiche referme la précédente — c'est aussi ce qui rend le geste réversible
   // sans y penser.
-  const [fiche, setFiche] = useState<string | null>(null)
-  // Les supports déjà chargés, gardés pour la session : replier puis rouvrir
-  // une fiche ne redemande rien au serveur.
-  const [supports, setSupports] = useState<Record<string, SupportChip[]>>({})
-  const [chargement, setChargement] = useState<string | null>(null)
-  const [, startTransition] = useTransition()
-
-  const basculer = useCallback(
-    (id: string) => {
-      if (fiche === id) {
-        setFiche(null)
-        return
-      }
-      setFiche(id)
-      if (supports[id]) return
-      setChargement(id)
-      startTransition(async () => {
-        const chips = await chapterSupports(subjectSlug, id)
-        setSupports((s) => ({ ...s, [id]: chips }))
-        setChargement((c) => (c === id ? null : c))
-      })
-    },
-    [fiche, supports, subjectSlug],
-  )
+  // L'état vit dans `useSupportsDeFiche`, partagé avec la grille des thèmes.
+  const { fiche, supports, chargement, basculer } = useSupportsDeFiche(subjectSlug)
 
   // Plier / déplier un chapitre. Déplier le met SOUS LE PROJECTEUR (les autres
   // blocs reculent) ; le replier rend la page à tout le monde.
@@ -217,6 +195,7 @@ export default function ChapterList({
           <ChapterItem
             chapter={chapter}
             rank={ranged ? (reperes.rangParFiche.get(chapter.id) ?? null) : null}
+            numerote={fichesNumerotees(subjectSlug)}
             resumeLabel={resume?.chapterId === chapter.id ? resume.label : null}
             open={fiche === chapter.id}
             supports={supports[chapter.id] ?? null}

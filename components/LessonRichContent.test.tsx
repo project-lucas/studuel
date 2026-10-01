@@ -77,6 +77,33 @@ describe('LessonRichContent — les blocs du collège', () => {
     expect(formule?.className).toContain('text-center')
   })
 
+  it('garde un bloc de code tel quel, indentation comprise', () => {
+    // Un programme Python perd son sens sans son indentation, et ses lignes
+    // (« - 1 », « 1. », « | ») ne doivent pas devenir des puces ou un tableau.
+    const { container } = render(
+      <LessonRichContent
+        content={[
+          'Voici la fonction :',
+          '```python',
+          'def somme(t):',
+          '    s = 0',
+          '    for x in t:',
+          '        s = s + x',
+          '',
+          '    return s  # - pas une puce',
+          '```',
+          'Et après.',
+        ].join('\n')}
+      />,
+    )
+    const code = container.querySelector('pre.code')
+    expect(code?.textContent).toBe(
+      'def somme(t):\n    s = 0\n    for x in t:\n        s = s + x\n\n    return s  # - pas une puce',
+    )
+    expect(container.querySelectorAll('ul')).toHaveLength(0)
+    expect(container.querySelectorAll('p')).toHaveLength(2)
+  })
+
   it('rend encore les blocs d’origine — tableau, étapes, puces, titres', () => {
     // Les quatre marqueurs neufs s'insèrent dans une chaîne de `else if` : une
     // erreur d'ordre y ferait disparaître un bloc ancien sans bruit.
@@ -101,5 +128,61 @@ describe('LessonRichContent — les blocs du collège', () => {
     const gras = [...container.querySelectorAll('strong')].map((e) => e.textContent)
     expect(gras).toEqual(['kein', 'fort'])
     expect(container.querySelector('em')?.textContent).toBe('gras')
+  })
+})
+
+describe('LessonRichContent — les emphases imbriquées', () => {
+  // Relevé du 29/09/2026 sur les 2 969 leçons : 31 lignes, dans 27 cours,
+  // imbriquent le gras et l'italique (un titre d'œuvre en gras, un mot anglais
+  // dans une règle en gras). Le rendu d'une seule passe les affichait avec des
+  // astérisques parasites : « **querelle du *Cid*** » sortait « querelle du *Cid* ».
+  const rendu = (texte: string) => render(<LessonRichContent content={texte} />).container
+
+  it('rend ***x*** en gras italique, sans astérisque', () => {
+    const c = rendu('Le mot ***homework*** est indénombrable.')
+    expect(c.textContent).not.toContain('*')
+    expect(c.querySelector('strong em, em strong')?.textContent).toBe('homework')
+  })
+
+  it('garde l’italique à l’intérieur d’un gras qui finit par lui', () => {
+    const c = rendu('après la **querelle du *Cid*** (1637)')
+    expect(c.textContent).toBe('après la querelle du Cid (1637)')
+    expect(c.querySelector('strong')?.textContent).toBe('querelle du Cid')
+    expect(c.querySelector('strong em')?.textContent).toBe('Cid')
+  })
+
+  it('garde le gras à l’intérieur d’un italique qui finit par lui', () => {
+    const c = rendu('*I can **swim*** — jamais « can to swim »')
+    expect(c.textContent).toBe('I can swim — jamais « can to swim »')
+    expect(c.querySelector('em strong')?.textContent).toBe('swim')
+  })
+
+  it('lit plusieurs italiques dans un même gras', () => {
+    const c = rendu('**Jamais de *will* ni de *would* après *if***.')
+    expect(c.textContent).toBe('Jamais de will ni de would après if.')
+    expect([...c.querySelectorAll('strong em')].map((e) => e.textContent)).toEqual(['will', 'would', 'if'])
+  })
+
+  it('laisse une astérisque isolée telle quelle', () => {
+    const c = rendu('On tape =250+15*A2 dans la cellule.')
+    expect(c.textContent).toBe('On tape =250+15*A2 dans la cellule.')
+    expect(c.querySelector('em, strong')).toBeNull()
+  })
+})
+
+describe('LessonRichContent — la typographie française', () => {
+  it('interdit la coupure avant les deux-points, dans un titre comme dans le texte', () => {
+    const c = render(<LessonRichContent content={'## Le bonheur : but de la vie\n\nLa Pax Romana (« paix romaine ») dure **deux siècles** : un âge d’or.'} />).container
+    expect(c.querySelector('h3')?.textContent).toContain('bonheur : but')
+    expect(c.querySelector('p')?.textContent).toContain('« paix romaine »')
+    expect(c.querySelector('p')?.textContent).toContain('siècles : un')
+  })
+})
+
+describe('LessonRichContent — le titre de troisième rang', () => {
+  it('rend « ### » en intertitre, sans les dièses', () => {
+    const c = render(<LessonRichContent content={'## La méthode\n\n### L’équivalence\n\nUn paragraphe.'} />).container
+    expect(c.textContent).not.toContain('#')
+    expect(c.querySelector('h4')?.textContent).toContain('L’équivalence')
   })
 })

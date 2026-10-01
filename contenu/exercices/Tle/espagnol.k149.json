@@ -1,0 +1,4008 @@
+{
+  "niveau": "Tle",
+  "matiere": "espagnol",
+  "exercices": [
+    {
+      "chapitre": "c033cd1a-45a2-5ecf-9daa-00196389b5b2",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un bulo dans le groupe de la famille",
+      "competence": "comprendre-langue",
+      "situation": "Carmen, la grand-mère de Lucía, vient de recevoir un message alarmant sur son téléphone. Lis leur conversation : que fait Lucía avant de le transférer ?",
+      "documents": [
+        {
+          "id": "sms1",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Mensajes de la familia",
+          "participants": [
+            {
+              "nom": "Carmen",
+              "emoji": "👵",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Lucía",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Carmen",
+              "texte": "¡Importante! Dicen que mañana cortarán internet tres días en todo el país. ¡Reenvíalo a toda la familia!"
+            },
+            {
+              "qui": "Lucía",
+              "texte": "Abuela, eso suena a bulo. Antes de reenviarlo, voy a contrastarlo en Maldita.es."
+            },
+            {
+              "qui": "Lucía",
+              "texte": "Ya está: lo han desmentido. No hay ningún corte previsto."
+            },
+            {
+              "qui": "Carmen",
+              "texte": "¡Menos mal! ¿Y cómo lo sabías?"
+            },
+            {
+              "qui": "Lucía",
+              "texte": "Nadie [[s|firma]] el mensaje, no cita ninguna [[s|fuente]] y te mete [[s|prisa]] para reenviarlo."
+            }
+          ],
+          "source": "SMS écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que fait Lucía avant de transférer le message de sa grand-mère ?",
+          "options": [
+            "Elle vérifie l’information sur un site de vérification des faits",
+            "Elle transmet aussitôt le message à toute sa famille",
+            "Elle supprime l’application de messagerie de sa grand-mère",
+            "Elle demande à un journaliste d’écrire un article sur le sujet"
+          ],
+          "reponse": 0,
+          "aide": "Relis la deuxième réplique de Lucía : que va-t-elle faire « antes de reenviarlo » ?",
+          "explication": "Lucía va **contrastar** le message sur Maldita.es, un site de vérification : on vérifie avant de partager."
+        },
+        {
+          "type": "zone",
+          "document": "sms1",
+          "multiple": true,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Dans la dernière réplique de Lucía, touche les trois mots qui révèlent un bulo : l’auteur absent, la preuve absente et la pression exercée.",
+          "aide": "Cherche ce que personne ne fait (signer), ce que le message ne donne pas (sa source) et ce qu’il impose (aller vite).",
+          "explication": "Les trois signes : personne ne **firma** (pas d’auteur), aucune **fuente** (pas de preuve), et on te met **prisa** (la pression pour réenvoyer vite)."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot espagnol du document à son équivalent français.",
+          "paires": [
+            [
+              "el bulo",
+              "la fausse nouvelle"
+            ],
+            [
+              "contrastar",
+              "recouper, vérifier"
+            ],
+            [
+              "desmentir",
+              "démentir"
+            ],
+            [
+              "reenviar",
+              "transférer"
+            ]
+          ],
+          "aide": "« Reenviar » contient le préfixe re- : on envoie de nouveau.",
+          "explication": "**Bulo** = fausse nouvelle ; **contrastar** = recouper ; **desmentir** = démentir ; **reenviar** = transférer un message."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase avec un verbe du vocabulaire du cours.",
+          "texte": "Maldita.es sirve para ___ las noticias dudosas.",
+          "reponses": [
+            [
+              "verificar",
+              "contrastar"
+            ]
+          ],
+          "banque": [
+            "verificar",
+            "contrastar",
+            "inventar",
+            "reenviar"
+          ],
+          "aide": "Un site de vérification ne fabrique pas et ne propage pas les fausses nouvelles.",
+          "explication": "Maldita.es sert à **verificar** ou **contrastar** les informations douteuses, pas à les inventer ni à les réenvoyer."
+        }
+      ]
+    },
+    {
+      "chapitre": "c033cd1a-45a2-5ecf-9daa-00196389b5b2",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du tuit à la place : quatre mouvements",
+      "competence": "analyser-texte",
+      "situation": "Un journaliste résume le rôle des réseaux sociaux dans quatre mobilisations du monde hispanique, puis nuance son propos. Lis son reportage jusqu’au bout.",
+      "documents": [
+        {
+          "id": "rep",
+          "type": "texte",
+          "genre": "article",
+          "titre": "¿Basta un clic?",
+          "blocs": [
+            "Las redes sociales han cambiado la manera de protestar. En España, el 15-M de 2011 se convocó sobre todo por internet y miles de «indignados» ocuparon la Puerta del Sol, en Madrid.",
+            "Cuatro años después, un solo tuit bastó en Argentina para lanzar #NiUnaMenos, y el movimiento cruzó el continente.",
+            "Antes, en 2012, unos estudiantes mexicanos habían difundido un vídeo: así nació Yo Soy 132. Y en 2019, en Chile, la subida del billete del metro encendió un estallido social que acabó en un proceso constituyente.",
+            "[[c|Pero]] un clic no basta. Convocar es fácil; mantener el compromiso, organizarse y negociar exige mucho más. Por una parte, las redes aceleran la movilización; por otra, no sustituyen el trabajo en la calle."
+          ],
+          "source": "Reportaje imaginado pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Remets ces quatre mobilisations dans l’ordre chronologique, de la plus ancienne à la plus récente.",
+          "items": [
+            "15-M à Madrid",
+            "Yo Soy 132 au Mexique",
+            "#NiUnaMenos en Argentine",
+            "Estallido social au Chili"
+          ],
+          "aide": "Cherche l’année de chacune dans le reportage : 2011, 2012, 2015, 2019.",
+          "explication": "Ordre : **15-M (2011)**, **Yo Soy 132 (2012)**, **#NiUnaMenos (2015)**, **estallido social (2019)**. Attention : le reportage ne suit pas l’ordre des dates."
+        },
+        {
+          "type": "zone",
+          "document": "rep",
+          "multiple": false,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Dans le dernier paragraphe, touche le mot qui annonce la nuance apportée par le journaliste.",
+          "aide": "C’est le tout premier mot du paragraphe : il oppose ce qui précède à « un clic no basta ».",
+          "explication": "**Pero** introduit la nuance : les réseaux aident à convoquer, mais cela ne suffit pas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle idée défend le dernier paragraphe du reportage ?",
+          "options": [
+            "Les réseaux accélèrent la mobilisation sans remplacer l’action collective durable",
+            "Les réseaux rendent désormais inutile tout rassemblement dans la rue",
+            "Les réseaux ne servent qu’à diffuser de fausses informations sur les manifestants",
+            "La mobilisation en ligne garantit toujours des résultats politiques durables"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière phrase : « por una parte… por otra… ».",
+          "explication": "Le journaliste oppose deux faces : les réseaux **accélèrent** la mobilisation, mais ne **remplacent pas** le travail dans la rue."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase de conclusion, avec une tournure utile en expression orale.",
+          "texte": "Conviene ___ esta idea: las redes ayudan a convocar, pero no bastan.",
+          "reponses": [
+            [
+              "matizar"
+            ]
+          ],
+          "banque": [
+            "matizar",
+            "matizo",
+            "matiza",
+            "matizamos"
+          ],
+          "aide": "Après « conviene », on attend un infinitif.",
+          "explication": "« **Conviene matizar** esta idea » : après *conviene*, le verbe reste à l’infinitif."
+        }
+      ]
+    },
+    {
+      "chapitre": "c033cd1a-45a2-5ecf-9daa-00196389b5b2",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La escuela digital de Valentina",
+      "competence": "analyser-document",
+      "situation": "Pendant la pandémie de 2020, Valentina a suivi les cours en ligne depuis son village. Croise son témoignage avec les mesures présentées dans le tableau.",
+      "documents": [
+        {
+          "id": "valentina",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Testimonio de Valentina",
+          "blocs": [
+            "Me llamo Valentina y tengo diecisiete años. Vivo en un pueblo de montaña, lejos de la ciudad.",
+            "Cuando cerraron el instituto en 2020, los profesores nos mandaron las tareas por internet. En mi casa solo hay un [[b|móvil]] para tres hermanos, y la [[b|conexión]] se corta cada vez que llueve.",
+            "Mi amiga Clara, que vive en la capital, seguía las clases por vídeo sin problemas. Yo, en cambio, llegaba tarde a todas y perdía el hilo.",
+            "Sin embargo, no todo fue negativo: descubrí cursos gratuitos en línea y aprendí a organizarme sola. Ahora pienso que la escuela digital puede ayudar, siempre y cuando todos tengamos los mismos medios."
+          ],
+          "source": "Témoignage imaginé pour l’exercice"
+        },
+        {
+          "id": "medidas",
+          "type": "tableau",
+          "titre": "Tres respuestas al reto digital",
+          "colonnes": [
+            "Medida",
+            "En qué consiste"
+          ],
+          "lignes": [
+            [
+              "Plan Ceibal (Uruguay, 2007)",
+              "Un ordenador portátil para cada alumno de la escuela pública"
+            ],
+            [
+              "Cursos MOOC en español",
+              "Cursos gratuitos de universidades de España y América Latina"
+            ],
+            [
+              "Enseñanza a distancia de 2020",
+              "Clases en línea durante el cierre de los centros"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "valentina",
+          "multiple": true,
+          "reponse": [
+            "b"
+          ],
+          "enonce": "Dans le témoignage, touche les deux mots qui désignent le matériel et le réseau dont Valentina manque.",
+          "aide": "Un appareil pour trois frères et sœurs, et ce qui se coupe quand il pleut.",
+          "explication": "Le **móvil** unique et la **conexión** instable montrent la *brecha digital* : Valentina n’a pas les mêmes moyens que Clara."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces éléments du témoignage : avantage ou limite de l’école en ligne ?",
+          "categories": [
+            "Avantage",
+            "Limite"
+          ],
+          "items": [
+            [
+              "Descubrió cursos gratuitos en línea",
+              0
+            ],
+            [
+              "La conexión se corta cuando llueve",
+              1
+            ],
+            [
+              "Aprendió a organizarse sola",
+              0
+            ],
+            [
+              "Hay un solo móvil para tres hermanos",
+              1
+            ],
+            [
+              "Llegaba tarde a las clases y perdía el hilo",
+              1
+            ]
+          ],
+          "aide": "Demande-toi si l’élément l’aide à apprendre ou la gêne.",
+          "explication": "Les cours gratuits et l’autonomie sont des **avantages** ; la connexion qui coupe, le téléphone partagé et le retard pris sont des **limites**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle mesure du tableau s’attaque directement au manque d’ordinateur dont souffre Valentina ?",
+          "options": [
+            "Le Plan Ceibal : un ordinateur portable pour chaque élève du public",
+            "Les cours MOOC : des cours gratuits d’universités hispanophones",
+            "L’enseignement à distance de 2020 pendant la fermeture des lycées",
+            "Une aide pour vérifier les informations douteuses sur les réseaux"
+          ],
+          "reponse": 0,
+          "aide": "Quel dispositif distribue du matériel aux élèves ?",
+          "explication": "Le **Plan Ceibal** (Uruguay, 2007) donne un ordinateur à chaque élève du public : il répond au manque de matériel."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de Valentina.",
+          "texte": "La escuela digital es una oportunidad siempre y cuando todos los alumnos ___ acceso a internet.",
+          "reponses": [
+            [
+              "tengan"
+            ]
+          ],
+          "banque": [
+            "tengan",
+            "tienen",
+            "tendrán",
+            "tuvieran"
+          ],
+          "aide": "Après « siempre y cuando », on emploie le subjonctif ; le verbe principal est au présent.",
+          "explication": "« Siempre y cuando » exige le subjonctif présent : **tengan**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2696904f-f570-5986-8c33-4539028b36a8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une chanteuse qui revient pour une bière",
+      "competence": "analyser-document",
+      "situation": "Une marque de bière a choisi de faire « revivre » une chanteuse célèbre dans sa publicité. Observe la fiche d’analyse de l’annonce.",
+      "documents": [
+        {
+          "id": "anuncio",
+          "type": "tableau",
+          "titre": "Análisis del anuncio «Con mucho acento»",
+          "colonnes": [
+            "Elemento",
+            "En el anuncio"
+          ],
+          "lignes": [
+            [
+              "Marca",
+              "Cruzcampo"
+            ],
+            [
+              "Año",
+              "2021"
+            ],
+            [
+              "Personaje",
+              "Lola Flores, cantante fallecida, recreada con inteligencia artificial"
+            ],
+            [
+              "Valor que se vende",
+              "El orgullo de los acentos andaluces"
+            ],
+            [
+              "Emoción principal",
+              "La nostalgia"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Fiche d’analyse écrite pour l’exercice, d’après la publicité Cruzcampo de 2021"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "anuncio",
+          "multiple": false,
+          "reponse": [
+            "r3c1"
+          ],
+          "enonce": "Touche la case qui indique la valeur que la marque cherche à vendre, au-delà de la bière.",
+          "aide": "La marque ne vend pas seulement un produit : elle vend une fierté.",
+          "explication": "La case **« El orgullo de los acentos andaluces »** donne la valeur vendue : la publicité associe la bière à une identité régionale."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment cette publicité cherche-t-elle à séduire son public ?",
+          "options": [
+            "En jouant sur la nostalgie et la fierté régionale grâce à une star disparue",
+            "En comparant les prix de plusieurs marques de bière sur un tableau",
+            "En interdisant l’accent andalou dans toutes les publicités du pays",
+            "En présentant un scientifique qui explique la recette de la bière"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les lignes « Personaje » et « Emoción principal ».",
+          "explication": "L’annonce fait appel à l’**émotion** (nostalgie) et à une **identité** (l’accent andalou) grâce à Lola Flores recréée."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot de la publicité à sa traduction.",
+          "paires": [
+            [
+              "el anuncio",
+              "la publicité"
+            ],
+            [
+              "el eslogan",
+              "le slogan"
+            ],
+            [
+              "el público objetivo",
+              "la cible"
+            ],
+            [
+              "seducir",
+              "séduire"
+            ]
+          ],
+          "aide": "« Público objetivo » n’est pas « le public objectif ».",
+          "explication": "**Anuncio** = publicité ; **eslogan** = slogan ; **público objetivo** = cible ; **seducir** = séduire."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète l’analyse avec le verbe du cours.",
+          "texte": "El anuncio ___ a la nostalgia de los espectadores.",
+          "reponses": [
+            [
+              "apela"
+            ]
+          ],
+          "banque": [
+            "apela",
+            "apelan",
+            "apelar",
+            "apelaba"
+          ],
+          "aide": "Le sujet est « el anuncio » (3e personne du singulier, présent).",
+          "explication": "On dit « El anuncio **apela** a… » pour montrer sur quoi une publicité joue."
+        }
+      ]
+    },
+    {
+      "chapitre": "2696904f-f570-5986-8c33-4539028b36a8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Ce qui se perd dans la traduction",
+      "competence": "manier-langue",
+      "situation": "Camille, une amie française de Nuria, utilise un traducteur automatique pour lui écrire. Le résultat est plein de surprises.",
+      "documents": [
+        {
+          "id": "sms2",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Mensajes entre amigas",
+          "participants": [
+            {
+              "nom": "Camille",
+              "emoji": "👩",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Nuria",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Camille",
+              "texte": "Hola Nuria. Ayer, en la cena con tus padres, estaba muy [[f|embarazada]] por mi acento."
+            },
+            {
+              "qui": "Nuria",
+              "texte": "¿Cómo? Querrás decir que te daba vergüenza 😄"
+            },
+            {
+              "qui": "Camille",
+              "texte": "El traductor automático me lo propuso. ¿Y en el museo? Pregunté por el [[f|éxito]] y nadie me entendía."
+            },
+            {
+              "qui": "Nuria",
+              "texte": "Son dos falsos amigos: el primero significa «enceinte» y el segundo, «succès»."
+            },
+            {
+              "qui": "Camille",
+              "texte": "¡Qué vergüenza! Desde hoy contrasto cada palabra en el diccionario."
+            },
+            {
+              "qui": "Nuria",
+              "texte": "Bien hecho: la máquina traduce rápido, pero no entiende el humor ni la cultura."
+            }
+          ],
+          "source": "SMS écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms2",
+          "multiple": true,
+          "reponse": [
+            "f"
+          ],
+          "enonce": "Touche les deux faux amis que Camille emploie à tort dans ses messages.",
+          "aide": "Ils ressemblent à des mots français mais n’ont pas le même sens.",
+          "explication": "**Embarazada** veut dire enceinte (elle voulait dire gênée) et **éxito** veut dire succès (elle cherchait la sortie)."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot à son sens réel en français.",
+          "paires": [
+            [
+              "embarazada",
+              "enceinte"
+            ],
+            [
+              "avergonzada",
+              "gênée, honteuse"
+            ],
+            [
+              "éxito",
+              "succès"
+            ],
+            [
+              "salida",
+              "sortie"
+            ]
+          ],
+          "aide": "Camille voulait dire « gênée » et « sortie ».",
+          "explication": "**Embarazada** = enceinte, **avergonzada** = gênée ; **éxito** = succès, **salida** = sortie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Selon Nuria, que comprend mal une traduction automatique ?",
+          "options": [
+            "L’humour et les références culturelles",
+            "Les chiffres et les dates de naissance",
+            "Les noms propres des villes espagnoles",
+            "Les mots très courts comme les articles"
+          ],
+          "reponse": 0,
+          "aide": "Relis sa dernière réplique.",
+          "explication": "Nuria le dit : la machine « no entiende el **humor** ni la **cultura** »."
+        },
+        {
+          "type": "trous",
+          "enonce": "Aide Camille à poser la bonne question dans le musée.",
+          "texte": "¿Dónde está la ___ del museo?",
+          "reponses": [
+            [
+              "salida"
+            ]
+          ],
+          "banque": [
+            "salida",
+            "éxito",
+            "entrada",
+            "vergüenza"
+          ],
+          "aide": "Camille cherchait le contraire de « l’entrée ».",
+          "explication": "Pour demander la sortie, on dit **la salida** ; *éxito* signifie succès."
+        }
+      ]
+    },
+    {
+      "chapitre": "2696904f-f570-5986-8c33-4539028b36a8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Colomb, Allende, Calle 13 et une bière",
+      "competence": "analyser-document",
+      "situation": "Quatre textes, quatre formes de discours : compare leur destinataire et leur but, puis formule une critique en espagnol.",
+      "documents": [
+        {
+          "id": "formas",
+          "type": "tableau",
+          "titre": "Cuatro maneras de convencer",
+          "colonnes": [
+            "Texto",
+            "Forma",
+            "Destinatario",
+            "Objetivo"
+          ],
+          "lignes": [
+            [
+              "Último discurso de Allende (1973)",
+              "Discurso por radio",
+              "El pueblo chileno",
+              "Hablar para la historia"
+            ],
+            [
+              "Anuncio de Cruzcampo (2021)",
+              "Publicidad",
+              "Los consumidores",
+              "Asociar la cerveza al orgullo andaluz"
+            ],
+            [
+              "Carta de Colón (1493)",
+              "Carta",
+              "Los Reyes Católicos",
+              "Anunciar el descubrimiento y obtener más apoyo"
+            ],
+            [
+              "«Latinoamérica» (2011)",
+              "Canción de rap",
+              "El público joven",
+              "Expresar la identidad de un continente"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "formas",
+          "multiple": false,
+          "reponse": [
+            "r0c2"
+          ],
+          "enonce": "Touche la case qui donne le destinataire du discours prononcé à la radio.",
+          "aide": "Repère la ligne du discours par radio, puis la colonne « Destinatario ».",
+          "explication": "Allende s’adresse à **el pueblo chileno**, à la radio, le 11 septembre 1973."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets ces quatre textes dans l’ordre chronologique, du plus ancien au plus récent.",
+          "items": [
+            "Carta de Colón",
+            "Último discurso de Allende",
+            "«Latinoamérica»",
+            "Anuncio de Cruzcampo"
+          ],
+          "aide": "Les années sont dans la première colonne.",
+          "explication": "**Colón (1493)**, **Allende (1973)**, **« Latinoamérica » (2011)**, **Cruzcampo (2021)**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel point commun y a-t-il entre la lettre de Colomb et la publicité de Cruzcampo ?",
+          "options": [
+            "Les deux visent à convaincre un destinataire précis en appuyant sur ses attentes",
+            "Les deux s’adressent au même peuple et ont été écrites la même année",
+            "Les deux sont des chansons qui expriment l’identité d’un continent entier",
+            "Les deux ont été écrites pour informer sans chercher à convaincre personne"
+          ],
+          "reponse": 0,
+          "aide": "Compare les colonnes « Destinatario » et « Objetivo » de ces deux lignes.",
+          "explication": "Colomb veut **obtenir des fonds** des Rois catholiques ; la marque veut **vendre** en touchant les consommateurs : chaque texte vise un destinataire."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la critique de la publicité Cruzcampo.",
+          "texte": "Sin embargo, cabe ___ el uso de la imagen de una persona fallecida.",
+          "reponses": [
+            [
+              "cuestionar"
+            ]
+          ],
+          "banque": [
+            "cuestionar",
+            "cuestiona",
+            "cuestionado",
+            "cuestionaba"
+          ],
+          "aide": "Après « cabe », on emploie l’infinitif.",
+          "explication": "« Cabe **cuestionar** » : formule pour critiquer, suivie de l’infinitif."
+        }
+      ]
+    },
+    {
+      "chapitre": "90bcf716-5469-5c24-8928-a7192ddd4a29",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un siècle de droits conquis",
+      "competence": "se-reperer-temps",
+      "situation": "Cette frise montre des étapes de l’histoire des femmes en Espagne et en Argentine. Lis-la avec attention.",
+      "documents": [
+        {
+          "id": "frise3",
+          "type": "frise",
+          "titre": "Conquistas y combates",
+          "debut": 1930,
+          "fin": 2020,
+          "pas": 10,
+          "periodes": [
+            {
+              "id": "permiso",
+              "debut": 1939,
+              "fin": 1975,
+              "nom": "Permiso marital",
+              "teinte": "gris"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "voto",
+              "date": 1931,
+              "nom": "Voto femenino"
+            },
+            {
+              "id": "ley",
+              "date": 2004,
+              "nom": "Ley de género"
+            },
+            {
+              "id": "niunamenos",
+              "date": 2015,
+              "nom": "Ni una menos"
+            },
+            {
+              "id": "huelga",
+              "date": 2018,
+              "nom": "Huelga del 8-M"
+            },
+            {
+              "id": "aborto",
+              "date": 2020,
+              "nom": "Aborto legal"
+            }
+          ],
+          "source": "Frise écrite pour l’exercice (Espagne, sauf mention)"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise3",
+          "multiple": false,
+          "reponse": [
+            "permiso"
+          ],
+          "enonce": "Touche la période pendant laquelle la femme mariée avait besoin de l’autorisation de son mari.",
+          "aide": "Cherche la barre qui s’étend sur près de quarante ans.",
+          "explication": "Le **permiso marital** a duré de 1939 à 1975, sous Franco."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années cette période a-t-elle duré, de 1939 à 1975 ?",
+          "reponse": 36,
+          "unite": "ans",
+          "aide": "Soustrais les deux années.",
+          "explication": "1975 − 1939 = **36** ans."
+        },
+        {
+          "type": "zone",
+          "document": "frise3",
+          "multiple": true,
+          "reponse": [
+            "niunamenos",
+            "aborto"
+          ],
+          "enonce": "Touche les deux événements de la frise qui se sont produits en Argentine.",
+          "aide": "Pense au mouvement né d’un tweet et à une loi de 2020.",
+          "explication": "**Ni una menos** (2015) et la légalisation de l’**avortement** (2020) sont argentins ; les autres événements sont espagnols."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot espagnol à sa traduction.",
+          "paires": [
+            [
+              "la igualdad",
+              "l’égalité"
+            ],
+            [
+              "reivindicar",
+              "revendiquer"
+            ],
+            [
+              "el feminicidio",
+              "le féminicide"
+            ],
+            [
+              "la violencia de género",
+              "les violences faites aux femmes"
+            ]
+          ],
+          "aide": "Le préfixe « reivin- » est proche de « revendi- ».",
+          "explication": "**Igualdad** = égalité ; **reivindicar** = revendiquer ; **feminicidio** = féminicide ; **violencia de género** = violences faites aux femmes."
+        }
+      ]
+    },
+    {
+      "chapitre": "90bcf716-5469-5c24-8928-a7192ddd4a29",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Peñalta, le village qui se vide",
+      "competence": "analyser-texte",
+      "situation": "Un reportage imaginé raconte la vie d’un village de l’intérieur de l’Espagne. Lis-le, puis travaille sur sa construction.",
+      "documents": [
+        {
+          "id": "penalta",
+          "type": "texte",
+          "genre": "article",
+          "titre": "El pueblo que se vacía",
+          "blocs": [
+            "La plaza mayor de Peñalta, un pueblo imaginario del interior de Teruel, ya no se llena los domingos. Desde hace veinte años, los jóvenes se marchan a la ciudad en busca de [[c|trabajo]] y de [[c|estudios]], y la escuela cerró.",
+            "Sin embargo, en 2019 la candidatura Teruel Existe entró en el Parlamento y llevó el problema de la España vaciada al debate nacional.",
+            "Hoy algunos vecinos vuelven gracias al teletrabajo. Reclaman mejores carreteras, médicos y conexión a internet. Es imprescindible que el Gobierno garantice estos servicios, dicen, para que el campo no muera."
+          ],
+          "source": "Reportaje imaginado pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "penalta",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche les deux mots qui expliquent pourquoi les jeunes quittent le village.",
+          "aide": "Que vont chercher les jeunes en ville ?",
+          "explication": "Les jeunes partent en quête de **trabajo** et de **estudios** : c’est la cause de la *despoblación*."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que provoque l’entrée de Teruel Existe au Parlement, d’après le reportage ?",
+          "options": [
+            "Le problème des régions qui se vident entre dans le débat national",
+            "La fermeture définitive de toutes les écoles rurales du pays",
+            "Le retour immédiat de tous les jeunes dans leur village natal",
+            "L’interdiction du télétravail dans les petites communes"
+          ],
+          "reponse": 0,
+          "aide": "Relis le deuxième paragraphe : que « lleva » la candidatura au débat national ?",
+          "explication": "La liste **porte le problème de la España vaciada au débat national** : c’est tout ce que dit le texte."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète l’exigence des habitants.",
+          "texte": "Es imprescindible que el Gobierno ___ estos servicios.",
+          "reponses": [
+            [
+              "garantice"
+            ]
+          ],
+          "banque": [
+            "garantice",
+            "garantiza",
+            "garantizará",
+            "garantizara"
+          ],
+          "aide": "Après « es imprescindible que », le subjonctif présent s’impose.",
+          "explication": "« Es imprescindible que » + subjonctif présent : **garantice**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les morceaux dans l’ordre pour former la formule qui concède puis réfute.",
+          "items": [
+            "Si bien es cierto que",
+            "el pueblo se ha vaciado,",
+            "no es menos cierto que",
+            "sus vecinos siguen luchando."
+          ],
+          "aide": "La concession vient d’abord, la réfutation ensuite.",
+          "explication": "**Si bien es cierto que** el pueblo se ha vaciado, **no es menos cierto que** sus vecinos siguen luchando."
+        }
+      ]
+    },
+    {
+      "chapitre": "90bcf716-5469-5c24-8928-a7192ddd4a29",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Tu intimidad, tus reglas",
+      "competence": "argumenter",
+      "situation": "Une campagne imaginaire contre le cyberharcèlement s’appuie sur le témoignage de Marta, 16 ans. Croise l’affiche et le témoignage.",
+      "documents": [
+        {
+          "id": "cartel",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Tu intimidad, tus reglas",
+          "sousTitre": "Campaña contra el ciberacoso",
+          "emoji": "📱",
+          "lignes": [
+            {
+              "texte": "Antes de compartir una foto, pregunta: ¿tiene su permiso?",
+              "id": "l1"
+            },
+            {
+              "texte": "Si te acosan en línea, guarda las pruebas y habla con un adulto.",
+              "id": "l2"
+            },
+            {
+              "texte": "Reenviar una imagen íntima también es acoso.",
+              "id": "l3"
+            },
+            {
+              "texte": "Es imprescindible que los adultos escuchen sin juzgar.",
+              "id": "l4"
+            }
+          ],
+          "pied": "Campagne imaginée pour l’exercice",
+          "teinte": "violet"
+        },
+        {
+          "id": "marta",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Testimonio de Marta",
+          "blocs": [
+            "Un compañero reenvió una foto mía sin mi permiso. En menos de una hora, la vio medio instituto. Al principio me callé porque me daba vergüenza. Luego se lo conté a mi madre y fuimos juntas al instituto.",
+            "[[a|Aunque]] el chico pidió perdón, la foto seguía circulando. Lo peor no fue la foto, sino sentir que mi intimidad ya no me pertenecía."
+          ],
+          "source": "Témoignage imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cartel",
+          "multiple": false,
+          "reponse": [
+            "l3"
+          ],
+          "enonce": "Touche le message de l’affiche qui s’adresse à celui qui a retransmis la photo de Marta.",
+          "aide": "Quel message parle de « reenviar » ?",
+          "explication": "La ligne **« Reenviar una imagen íntima también es acoso »** vise exactement le geste du camarade de Marta."
+        },
+        {
+          "type": "zone",
+          "document": "marta",
+          "multiple": false,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Dans le témoignage, touche la conjonction qui introduit une concession.",
+          "aide": "Elle signifie « bien que » ou « même si ».",
+          "explication": "**Aunque** concède un fait réel (le garçon s’est excusé) avant de montrer qu’il ne suffit pas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la dernière phrase du témoignage ?",
+          "options": [
+            "Le vrai dommage est d’avoir perdu la maîtrise de sa vie privée",
+            "Le vrai dommage est la qualité médiocre de la photo diffusée",
+            "Le vrai dommage est que sa mère l’ait accompagnée au lycée",
+            "Le vrai dommage est que le garçon ne se soit jamais excusé"
+          ],
+          "reponse": 0,
+          "aide": "Relis « Lo peor no fue la foto, sino… ».",
+          "explication": "Marta dit que le pire est de sentir que son **intimidad** ne lui appartient plus : on touche à la frontière entre public et privé."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces gestes selon ce qu’ils produisent.",
+          "categories": [
+            "Gestes qui protègent",
+            "Gestes qui blessent"
+          ],
+          "items": [
+            [
+              "Pedir permiso antes de publicar una foto ajena",
+              0
+            ],
+            [
+              "Reenviar una imagen íntima por curiosidad",
+              1
+            ],
+            [
+              "Guardar las pruebas del acoso",
+              0
+            ],
+            [
+              "Burlarse de la víctima en el grupo",
+              1
+            ],
+            [
+              "Hablar con un adulto de confianza",
+              0
+            ]
+          ],
+          "aide": "Pense à l’affiche et à ce qu’a vécu Marta.",
+          "explication": "Demander la permission, garder les preuves et en parler protègent ; retransmettre une image intime ou se moquer blessent."
+        }
+      ]
+    },
+    {
+      "chapitre": "15cc4725-69bf-510e-a7d1-e0b678507369",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La carte d’identité d’un roman culte",
+      "competence": "analyser-document",
+      "situation": "Voici la fiche d’un roman qui a fait du réalisme magique un mouvement mondial. Lis-la puis réponds.",
+      "documents": [
+        {
+          "id": "fichacien",
+          "type": "tableau",
+          "titre": "Cien años de soledad",
+          "colonnes": [
+            "Dato",
+            "Información"
+          ],
+          "lignes": [
+            [
+              "Autor",
+              "Gabriel García Márquez"
+            ],
+            [
+              "Año de publicación",
+              "1967"
+            ],
+            [
+              "Pueblo de la novela",
+              "Macondo"
+            ],
+            [
+              "Familia protagonista",
+              "Los Buendía"
+            ],
+            [
+              "Premio Nobel del autor",
+              "1982"
+            ],
+            [
+              "Estilo",
+              "Realismo mágico"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Fiche écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fichacien",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la case qui donne le nom du village imaginaire du roman.",
+          "aide": "Cherche la ligne « Pueblo ».",
+          "explication": "Le village s’appelle **Macondo**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la publication du roman (1967) du prix Nobel de l’auteur (1982) ?",
+          "reponse": 15,
+          "unite": "ans",
+          "aide": "Soustrais 1967 de 1982.",
+          "explication": "1982 − 1967 = **15** ans."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque auteur à son œuvre.",
+          "paires": [
+            [
+              "Goya",
+              "El 3 de mayo de 1808"
+            ],
+            [
+              "Borges",
+              "Ficciones"
+            ],
+            [
+              "Juan Rulfo",
+              "Pedro Páramo"
+            ],
+            [
+              "Isabel Allende",
+              "La casa de los espíritus"
+            ]
+          ],
+          "aide": "Goya est peintre, les autres sont écrivains.",
+          "explication": "Goya peint **El 3 de mayo de 1808**, Borges écrit **Ficciones**, Rulfo **Pedro Páramo**, Isabel Allende **La casa de los espíritus**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la définition.",
+          "texte": "Un relato ___ es un relato que parece posible, creíble.",
+          "reponses": [
+            [
+              "verosímil"
+            ]
+          ],
+          "banque": [
+            "verosímil",
+            "veraz",
+            "verdadero",
+            "verificado"
+          ],
+          "aide": "Le mot ressemble à « vraisemblable ».",
+          "explication": "Un récit **verosímil** est vraisemblable."
+        }
+      ]
+    },
+    {
+      "chapitre": "15cc4725-69bf-510e-a7d1-e0b678507369",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Goya, Capa, Cuarón : témoigner autrement",
+      "competence": "analyser-document",
+      "situation": "Une peinture, une photographie et un film témoignent d’événements réels. Compare-les à l’aide du tableau.",
+      "documents": [
+        {
+          "id": "obras",
+          "type": "tableau",
+          "titre": "Tres maneras de testimoniar",
+          "colonnes": [
+            "Obra",
+            "Soporte",
+            "Hecho evocado"
+          ],
+          "lignes": [
+            [
+              "Muerte de un miliciano (Capa, 1936)",
+              "Fotografía",
+              "Un republicano alcanzado por una bala; se discute su autenticidad"
+            ],
+            [
+              "Roma (Cuarón, 2018)",
+              "Película",
+              "La masacre de estudiantes del 10 de junio de 1971 en México"
+            ],
+            [
+              "El 3 de mayo de 1808 (Goya, 1814)",
+              "Pintura",
+              "La ejecución de madrileños por los soldados de Napoleón"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "obras",
+          "multiple": false,
+          "reponse": [
+            "r0c2"
+          ],
+          "enonce": "Touche la case qui décrit l’œuvre dont l’authenticité fait débat.",
+          "aide": "Le mot clé est « autenticidad ».",
+          "explication": "C’est la photographie de Capa : **« se discute su autenticidad »**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le tableau de Goya (1814) de la photographie de Capa (1936) ?",
+          "reponse": 122,
+          "unite": "ans",
+          "aide": "Soustrais 1814 de 1936.",
+          "explication": "1936 − 1814 = **122** ans."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces trois œuvres de la plus ancienne à la plus récente.",
+          "items": [
+            "El 3 de mayo de 1808",
+            "Muerte de un miliciano",
+            "Roma"
+          ],
+          "aide": "Les dates entre parenthèses donnent la réponse.",
+          "explication": "**Goya (1814)**, **Capa (1936)**, **Cuarón (2018)**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase d’analyse.",
+          "texte": "Conviene ___ entre un testimonio y una obra de ficción.",
+          "reponses": [
+            [
+              "distinguir"
+            ]
+          ],
+          "banque": [
+            "distinguir",
+            "distingue",
+            "distinguido",
+            "distinguiendo"
+          ],
+          "aide": "Après « conviene », on emploie l’infinitif.",
+          "explication": "« Conviene **distinguir** entre… y… » : formule pour séparer témoignage et fiction."
+        }
+      ]
+    },
+    {
+      "chapitre": "15cc4725-69bf-510e-a7d1-e0b678507369",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Altamira, où la pluie de papillons ne surprend personne",
+      "competence": "analyser-texte",
+      "situation": "Voici un court récit écrit pour l’exercice, à la manière du réalisme magique, et un tableau d’œuvres réelles qui mêlent fiction et histoire.",
+      "documents": [
+        {
+          "id": "altamira",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "La lluvia de mariposas",
+          "blocs": [
+            "En Altamira, el día en que el ejército disparó contra los trabajadores, una lluvia de [[m|mariposas]] amarillas cubrió la plaza. Por la mañana, los vecinos barrieron las mariposas y la sangre con la misma escoba, y nadie volvió a hablar del asunto.",
+            "Cuando un periodista preguntó, el alcalde respondió que allí nunca había pasado nada. La abuela Inés, que tenía [[m|trescientos]] años, sonrió y siguió bordando."
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière du réalisme magique"
+        },
+        {
+          "id": "hechos",
+          "type": "tableau",
+          "titre": "Cuando la ficción toca la historia",
+          "colonnes": [
+            "Obra",
+            "Hecho histórico"
+          ],
+          "lignes": [
+            [
+              "Cien años de soledad (1967)",
+              "Masacre de los obreros de las bananeras en Colombia (1928)"
+            ],
+            [
+              "La fiesta del Chivo (2000)",
+              "Dictadura de Trujillo y su asesinato (1961)"
+            ],
+            [
+              "La casa de los espíritus (1982)",
+              "Golpe de Estado de 1973 en Chile"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "altamira",
+          "multiple": true,
+          "reponse": [
+            "m"
+          ],
+          "enonce": "Touche les deux détails extraordinaires que le récit raconte comme s’ils étaient ordinaires.",
+          "aide": "Cherche ce qui tombe du ciel et l’âge d’une grand-mère.",
+          "explication": "La pluie de **mariposas** et les **trescientos** años d’Inés sont extraordinaires, mais personne ne s’en étonne : c’est le réalisme magique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que critique l’oubli collectif des habitants d’Altamira ?",
+          "options": [
+            "Une histoire officielle qui efface un massacre",
+            "Un pouvoir local qui se souvient de chaque victime",
+            "Un village entier qui refuse de croire aux miracles",
+            "Une presse qui enquête sans relâche sur les faits"
+          ],
+          "reponse": 0,
+          "aide": "Que font les vecinos après la fusillade, et que répond le maire ?",
+          "explication": "Le silence des habitants et la réponse du maire montrent une **histoire officielle qui efface** un massacre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle œuvre du tableau ressemble le plus au récit d’Altamira par son sujet ?",
+          "options": [
+            "Cien años de soledad : un massacre de travailleurs que la mémoire officielle oublie",
+            "La fiesta del Chivo : une dictature racontée par un romancier péruvien",
+            "La casa de los espíritus : une saga familiale qui finit par un coup d’État",
+            "Aucune : ces trois œuvres ne parlent jamais de faits historiques réels"
+          ],
+          "reponse": 0,
+          "aide": "Cherche un massacre de travailleurs.",
+          "explication": "Altamira rappelle **Cien años de soledad** et le massacre des bananeras de 1928, que la ville oublie."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le massacre des bananeras (1928) de la publication du roman (1967) ?",
+          "reponse": 39,
+          "unite": "ans",
+          "aide": "Soustrais 1928 de 1967.",
+          "explication": "1967 − 1928 = **39** ans."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la réflexion sur la fiction et l’histoire.",
+          "texte": "Si el autor hubiera contado solo los hechos, la obra ___ perdido su fuerza.",
+          "reponses": [
+            [
+              "habría",
+              "hubiera"
+            ]
+          ],
+          "banque": [
+            "habría",
+            "había",
+            "hubiera",
+            "habrá"
+          ],
+          "aide": "C’est une hypothèse irréelle au passé : la conséquence est au conditionnel passé.",
+          "explication": "Irréel du passé : **habría perdido** (ou *hubiera perdido*)."
+        }
+      ]
+    },
+    {
+      "chapitre": "abe51052-7010-5640-b921-6570ba0fde00",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Six phrases à corriger",
+      "competence": "manier-langue",
+      "situation": "Tu corriges des phrases hypothétiques écrites par des élèves. Trois sont justes, trois contiennent une faute après « si ».",
+      "documents": [
+        {
+          "id": "frases5",
+          "type": "tableau",
+          "titre": "Seis frases de una redacción",
+          "colonnes": [
+            "N.º",
+            "Frase"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Si tendría tiempo, viajaría a Chile."
+            ],
+            [
+              "2",
+              "Si llueve, me quedo en casa."
+            ],
+            [
+              "3",
+              "Si hubiera sabido la verdad, habría llamado."
+            ],
+            [
+              "4",
+              "Si tenga dinero, compraré un billete."
+            ],
+            [
+              "5",
+              "Si tuviera más tiempo, iría al concierto."
+            ],
+            [
+              "6",
+              "Si iré a Cusco, visitaré Machu Picchu."
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frases5",
+          "multiple": true,
+          "reponse": [
+            "r0c1",
+            "r3c1",
+            "r5c1"
+          ],
+          "enonce": "Touche les trois phrases qui contiennent une faute après « si ».",
+          "aide": "Après « si » hypothétique : ni futur, ni conditionnel, ni présent du subjonctif.",
+          "explication": "Les phrases **1** (*tendría*), **4** (*tenga*) et **6** (*iré*) sont fautives : après *si* hypothétique, on n’emploie jamais ces formes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle correction faut-il apporter à la phrase 4 ?",
+          "options": [
+            "Après « si », il faut le présent de l’indicatif : « Si tengo dinero »",
+            "Après « si », il faut le conditionnel : « Si tendría dinero »",
+            "Après « si », il faut le futur : « Si tendré dinero »",
+            "Il faut le plus-que-parfait du subjonctif : « Si hubiera tenido dinero »"
+          ],
+          "reponse": 0,
+          "aide": "La principale est au futur : l’hypothèse est réalisable.",
+          "explication": "Hypothèse réalisable : **si + présent de l’indicatif**, puis un futur dans la principale."
+        },
+        {
+          "type": "trous",
+          "enonce": "Corrige la phrase 6 en irréel du présent : le rêve est peu probable.",
+          "texte": "Si ___ a Cusco, visitaría Machu Picchu.",
+          "reponses": [
+            [
+              "fuera",
+              "fuese"
+            ]
+          ],
+          "banque": [
+            "fuera",
+            "iría",
+            "iré",
+            "vaya"
+          ],
+          "aide": "La principale est au conditionnel : après « si », il faut l’imparfait du subjonctif.",
+          "explication": "Irréel du présent : **si + imparfait du subjonctif** (*fuera*), puis conditionnel (*visitaría*)."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les morceaux dans l’ordre pour former une phrase d’irréel du passé.",
+          "items": [
+            "Si hubiéramos",
+            "salido",
+            "antes,",
+            "habríamos",
+            "llegado",
+            "a tiempo."
+          ],
+          "aide": "La condition vient avant le résultat.",
+          "explication": "**Si hubiéramos salido antes, habríamos llegado a tiempo.** : plus-que-parfait du subjonctif, puis conditionnel passé."
+        }
+      ]
+    },
+    {
+      "chapitre": "abe51052-7010-5640-b921-6570ba0fde00",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La veille de l’examen",
+      "competence": "analyser-document",
+      "situation": "Dani a un examen demain. Ana tente de le rassurer. Lis leurs messages, puis classe les hypothèses qu’ils formulent.",
+      "documents": [
+        {
+          "id": "sms5",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Mensajes de la víspera",
+          "participants": [
+            {
+              "nom": "Dani",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Ana",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Dani",
+              "texte": "Mañana tengo el examen y estoy fatal. Si hubiera estudiado más, ahora estaría tranquilo."
+            },
+            {
+              "qui": "Ana",
+              "texte": "Si hubieras venido ayer al repaso, habrías entendido el tema."
+            },
+            {
+              "qui": "Dani",
+              "texte": "Si tuviera dinero, me iría de viaje y me olvidaría de todo."
+            },
+            {
+              "qui": "Ana",
+              "texte": "Hablas [[c|como]] [[c|si]] ya hubieras suspendido. Si apruebas, te invito a cenar. Y llévate un jersey por si hace frío en la sala."
+            },
+            {
+              "qui": "Dani",
+              "texte": "Trato hecho. Como no me ayudes esta noche, suspenderé seguro."
+            }
+          ],
+          "source": "SMS écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range ces hypothèses tirées des messages selon leur type.",
+          "categories": [
+            "Réalisable",
+            "Irréel du présent",
+            "Irréel du passé",
+            "Époques mélangées"
+          ],
+          "items": [
+            [
+              "Si apruebas, te invito a cenar.",
+              0
+            ],
+            [
+              "Si tuviera dinero, me iría de viaje.",
+              1
+            ],
+            [
+              "Si hubieras venido ayer, habrías entendido el tema.",
+              2
+            ],
+            [
+              "Si hubiera estudiado más, ahora estaría tranquilo.",
+              3
+            ]
+          ],
+          "aide": "Regarde le temps après « si », puis celui de la principale.",
+          "explication": "Présent + présent : **réalisable** ; imparfait + conditionnel : **irréel du présent** ; plus-que-parfait + conditionnel passé : **irréel du passé** ; plus-que-parfait + conditionnel présent : **époques mélangées**."
+        },
+        {
+          "type": "zone",
+          "document": "sms5",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Dans le message d’Ana qui commence par « Hablas », touche les deux mots qui signifient « comme si ».",
+          "aide": "Ils se suivent, juste après « Hablas ».",
+          "explication": "**Como si** + plus-que-parfait du subjonctif : *como si ya hubieras suspendido*."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans « Llévate un jersey por si hace frío », quel mode suit « por si » ?",
+          "options": [
+            "L’indicatif : « hace »",
+            "Le subjonctif présent : « haga »",
+            "L’imparfait du subjonctif : « hiciera »",
+            "Le conditionnel : « haría »"
+          ],
+          "reponse": 0,
+          "aide": "« Por si » (au cas où) ne suit pas la règle de « en caso de que ».",
+          "explication": "**Por si** (au cas où) se construit avec l’**indicatif** : *por si hace frío*."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la menace avec le bon mode.",
+          "texte": "Como no ___, suspenderás.",
+          "reponses": [
+            [
+              "estudies"
+            ]
+          ],
+          "banque": [
+            "estudies",
+            "estudias",
+            "estudiarás",
+            "estudiaras"
+          ],
+          "aide": "« Como + subjonctif » exprime une menace ou une condition.",
+          "explication": "« Como no **estudies**, suspenderás » : *como* + subjonctif présent exprime la menace."
+        }
+      ]
+    },
+    {
+      "chapitre": "abe51052-7010-5640-b921-6570ba0fde00",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une lettre depuis Cusco",
+      "competence": "analyser-texte",
+      "situation": "Álvaro voyage au Pérou et écrit à son amie Laura. Sa lettre mêle hypothèses réelles, irréelles et interrogation indirecte.",
+      "documents": [
+        {
+          "id": "carta5",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Carta de Álvaro",
+          "blocs": [
+            "Querida Laura:",
+            "Te escribo desde Cusco. Si hubiera tenido más dinero, habría dado la vuelta a América Latina; y si lo tuviera ahora, me iría mañana mismo.",
+            "De haberlo sabido, te habría avisado antes de salir. Me preguntas [[s|si]] volveré este año: no lo sé todavía. Un abrazo fuerte, Álvaro."
+          ],
+          "source": "Lettre écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carta5",
+          "multiple": false,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Dans le dernier paragraphe, touche le « si » qui n’introduit pas une hypothèse.",
+          "aide": "Celui qui signifie « est-ce que ».",
+          "explication": "Dans « Me preguntas **si** volveré », *si* signifie « est-ce que » (interrogation indirecte) : il accepte le futur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase a le même sens que « De haberlo sabido, te habría avisado antes de salir » ?",
+          "options": [
+            "Si lo hubiera sabido, te habría avisado antes de salir",
+            "Si lo supiera, te avisaría antes de salir",
+            "Si lo sé, te aviso antes de salir",
+            "Si lo habría sabido, te habría avisado antes de salir"
+          ],
+          "reponse": 0,
+          "aide": "« De + infinitif passé » équivaut à l’irréel du passé.",
+          "explication": "**De haberlo sabido** = *si lo hubiera sabido*. La dernière option est une faute : jamais de conditionnel après *si*."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit Álvaro dans « Si hubiera tenido más dinero, habría dado la vuelta a América Latina » ?",
+          "options": [
+            "Il n’avait pas assez d’argent et n’a donc pas fait ce grand tour",
+            "Il a fait le tour de l’Amérique latine parce qu’il avait de l’argent",
+            "Il fera peut-être le tour de l’Amérique latine s’il gagne de l’argent",
+            "Il ne veut pas faire le tour de l’Amérique latine faute de temps"
+          ],
+          "reponse": 0,
+          "aide": "L’irréel du passé parle de ce qui ne s’est PAS produit.",
+          "explication": "L’irréel du passé exprime un **regret** : la condition n’a pas été remplie, l’action n’a pas eu lieu."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase d’irréel du passé.",
+          "texte": "Si ___ tenido un billete, me ___ ido contigo.",
+          "reponses": [
+            [
+              "hubiera",
+              "hubiese"
+            ],
+            [
+              "habría",
+              "hubiera"
+            ]
+          ],
+          "banque": [
+            "hubiera",
+            "habría",
+            "había",
+            "hube"
+          ],
+          "aide": "Plus-que-parfait du subjonctif après « si », conditionnel passé dans la principale.",
+          "explication": "**Si hubiera tenido un billete, me habría ido contigo.** (*me hubiera ido* est aussi correct.)"
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les morceaux dans l’ordre pour former la comparaison.",
+          "items": [
+            "Habla",
+            "como si",
+            "hubiera vivido",
+            "allí."
+          ],
+          "aide": "« Como si » est suivi du plus-que-parfait du subjonctif pour un fait passé.",
+          "explication": "**Habla como si hubiera vivido allí.**"
+        }
+      ]
+    },
+    {
+      "chapitre": "983509a5-1bda-5cd3-b3db-317d663322c6",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Dispute sur la sortie de classe",
+      "competence": "comprendre-langue",
+      "situation": "Inés et Marcos préparent la sortie de fin d’année. Leur discussion est pleine de concessions et d’oppositions.",
+      "documents": [
+        {
+          "id": "disputa",
+          "type": "dialogue",
+          "modele": "bulles",
+          "titre": "Una discusión",
+          "participants": [
+            {
+              "nom": "Inés",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Marcos",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inés",
+              "texte": "[[c|Aunque]] hace frío, vamos a la playa."
+            },
+            {
+              "qui": "Marcos",
+              "texte": "Yo quería ir a la montaña, [[c|pero]] ya hemos votado."
+            },
+            {
+              "qui": "Inés",
+              "texte": "No es una excursión aburrida, [[c|sino]] una actividad sobre el mar."
+            },
+            {
+              "qui": "Marcos",
+              "texte": "Unos estudiantes prefieren la playa, [[c|mientras]] que otros eligen el museo."
+            }
+          ],
+          "source": "Dialogue écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "disputa",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche les quatre mots qui marquent une concession ou une opposition.",
+          "aide": "Cherche : « bien que », « mais », « mais plutôt », « alors que ».",
+          "explication": "**Aunque** concède, **pero** et **sino** opposent, **mientras** (que) met deux groupes en contraste."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque connecteur à son sens.",
+          "paires": [
+            [
+              "aunque",
+              "bien que, même si"
+            ],
+            [
+              "pero",
+              "mais, simple opposition"
+            ],
+            [
+              "sino",
+              "mais, pour rectifier"
+            ],
+            [
+              "mientras que",
+              "alors que"
+            ]
+          ],
+          "aide": "« Sino » rectifie ce qui vient d’être nié.",
+          "explication": "**Aunque** = bien que ; **pero** = mais ; **sino** = mais (après négation) ; **mientras que** = alors que."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Inés emploie-t-elle « sino » et non « pero » dans sa deuxième réplique ?",
+          "options": [
+            "Parce que la première partie est négative et qu’elle rectifie",
+            "Parce que la phrase parle d’une activité sur le bord de la mer",
+            "Parce que « pero » ne s’emploie jamais avec le verbe « ser »",
+            "Parce que « sino » est plus poli que « pero » à l’oral"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce qui précède « sino » : « No es… ».",
+          "explication": "**Sino** s’emploie après une négation, pour **rectifier** : *no es aburrida, sino una actividad…*"
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le connecteur.",
+          "texte": "Es caro; ___, lo compro.",
+          "reponses": [
+            [
+              "sin embargo",
+              "no obstante"
+            ]
+          ],
+          "banque": [
+            "sin embargo",
+            "no obstante",
+            "por eso",
+            "sino"
+          ],
+          "aide": "Il faut un connecteur qui signifie « cependant ».",
+          "explication": "**Sin embargo** (ou *no obstante*) = cependant. *Por eso* exprime la conséquence, *sino* suit une négation."
+        }
+      ]
+    },
+    {
+      "chapitre": "983509a5-1bda-5cd3-b3db-317d663322c6",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Courir malgré la chaleur",
+      "competence": "manier-langue",
+      "situation": "Six phrases d’un blog de sport permettent de comparer les façons d’exprimer la concession en espagnol.",
+      "documents": [
+        {
+          "id": "frases6",
+          "type": "tableau",
+          "titre": "Seis frases de un blog de corredores",
+          "colonnes": [
+            "N.º",
+            "Frase"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Aunque hace mucho calor, salimos a correr."
+            ],
+            [
+              "2",
+              "Aunque haga mucho calor, saldremos a correr."
+            ],
+            [
+              "3",
+              "Aunque tuviera más tiempo, no iría al gimnasio."
+            ],
+            [
+              "4",
+              "Por mucho que insistas, no cambiaré de opinión."
+            ],
+            [
+              "5",
+              "Por muy difícil que sea, lo intentaré."
+            ],
+            [
+              "6",
+              "A pesar del calor, seguimos corriendo."
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frases6",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la phrase qui exprime une hypothèse irréelle.",
+          "aide": "Cherche l’imparfait du subjonctif suivi d’un conditionnel.",
+          "explication": "La phrase 3 (*tuviera… iría*) est irréelle : même avec plus de temps, il n’irait pas."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de phrases du tableau contiennent un verbe au subjonctif ?",
+          "reponse": 4,
+          "aide": "Regarde « haga », « tuviera », « insistas », « sea ».",
+          "explication": "Les phrases **2, 3, 4 et 5** : **4** phrases. La 1 est à l’indicatif (fait réel) et la 6 n’a pas de verbe conjugué après *a pesar de*."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la traduction de la phrase 2 ?",
+          "options": [
+            "Même s’il fait très chaud, nous irons courir",
+            "Bien qu’il fasse très chaud, nous sommes sortis courir",
+            "S’il faisait très chaud, nous irions nous reposer",
+            "Puisqu’il fait très chaud, nous irons au gymnase"
+          ],
+          "reponse": 0,
+          "aide": "Le subjonctif présent après « aunque » exprime un fait possible.",
+          "explication": "**Aunque** + subjonctif présent = « même si » : un fait possible, non encore réalisé."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Por muy cansado que ___ mañana, terminaré la carrera.",
+          "reponses": [
+            [
+              "esté"
+            ]
+          ],
+          "banque": [
+            "esté",
+            "está",
+            "estaba",
+            "estaría"
+          ],
+          "aide": "« Por muy + adjectif + que » exige le subjonctif.",
+          "explication": "« Por muy cansado que **esté** » : le subjonctif présent est obligatoire après *por muy… que*."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque tournure à sa traduction.",
+          "paires": [
+            [
+              "a pesar de",
+              "malgré"
+            ],
+            [
+              "sin embargo",
+              "cependant"
+            ],
+            [
+              "en cambio",
+              "en revanche"
+            ],
+            [
+              "mientras que",
+              "alors que"
+            ]
+          ],
+          "aide": "« A pesar de » s’emploie avec un nom ou un infinitif.",
+          "explication": "**A pesar de** = malgré ; **sin embargo** = cependant ; **en cambio** = en revanche ; **mientras que** = alors que."
+        }
+      ]
+    },
+    {
+      "chapitre": "983509a5-1bda-5cd3-b3db-317d663322c6",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Turismo : dos caras",
+      "competence": "argumenter",
+      "situation": "Un éditorial pèse les avantages et les dégâts du tourisme sur la côte. Observe comment l’auteur enchaîne concession et opposition.",
+      "documents": [
+        {
+          "id": "turismo",
+          "type": "texte",
+          "genre": "article",
+          "titre": "El turismo, ¿bendición o condena?",
+          "blocs": [
+            "El turismo crea empleo, y nadie lo niega. Aunque los hoteles emplean a miles de personas, la costa se llena de cemento.",
+            "A pesar de los avisos de los científicos, el ayuntamiento siguió concediendo licencias. Aun sabiéndolo, nadie quiso frenar el negocio.",
+            "Los turistas, en cambio, quieren playas limpias; sin embargo, no siempre respetan el entorno.",
+            "[[o|Mientras]] que unos vecinos alquilan sus casas, otros no encuentran ninguna vivienda asequible."
+          ],
+          "source": "Éditorial imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "turismo",
+          "multiple": false,
+          "reponse": [
+            "o"
+          ],
+          "enonce": "Dans le dernier paragraphe, touche le connecteur qui oppose deux groupes de voisins.",
+          "aide": "Il signifie « alors que ».",
+          "explication": "**Mientras** (que) oppose ceux qui louent et ceux qui ne trouvent pas à se loger."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces expressions du texte selon leur fonction.",
+          "categories": [
+            "Concession",
+            "Opposition"
+          ],
+          "items": [
+            [
+              "Aunque",
+              0
+            ],
+            [
+              "A pesar de",
+              0
+            ],
+            [
+              "Aun sabiéndolo",
+              0
+            ],
+            [
+              "Sin embargo",
+              1
+            ],
+            [
+              "En cambio",
+              1
+            ]
+          ],
+          "aide": "La concession reconnaît un obstacle mais agit quand même ; l’opposition contraste deux idées.",
+          "explication": "*Aunque*, *a pesar de* et *aun + gérondif* expriment la **concession** ; *sin embargo* et *en cambio* marquent l’**opposition**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie « Aun sabiéndolo, nadie quiso frenar el negocio » ?",
+          "options": [
+            "Même en le sachant, personne n’a voulu freiner l’activité",
+            "Parce qu’on le savait, personne n’a voulu freiner l’activité",
+            "Dès qu’on l’a su, tout le monde a voulu freiner l’activité",
+            "Sans le savoir, personne n’a pu freiner l’activité du secteur"
+          ],
+          "reponse": 0,
+          "aide": "« Aun + gérondif » se traduit par « même en + participe présent ».",
+          "explication": "**Aun sabiéndolo** = « même en le sachant » : une concession."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase d’insistance.",
+          "texte": "Por mucho que los hoteles ___ beneficios, los vecinos siguen perdiendo su barrio.",
+          "reponses": [
+            [
+              "generen"
+            ]
+          ],
+          "banque": [
+            "generen",
+            "generan",
+            "generarán",
+            "generaran"
+          ],
+          "aide": "« Por mucho que » + subjonctif présent pour un fait présent.",
+          "explication": "« Por mucho que los hoteles **generen** beneficios » : *por mucho que* + subjonctif."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les morceaux dans l’ordre pour former la concession soutenue.",
+          "items": [
+            "Si bien es cierto que",
+            "el turismo crea empleo,",
+            "no es menos cierto que",
+            "destruye las costas."
+          ],
+          "aide": "La concession vient d’abord, la réfutation ensuite.",
+          "explication": "**Si bien es cierto que** el turismo crea empleo, **no es menos cierto que** destruye las costas."
+        }
+      ]
+    },
+    {
+      "chapitre": "bccc3ca4-002f-50b5-a188-049789ae9bab",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le vélo de Dani",
+      "competence": "manier-langue",
+      "situation": "Sofía a besoin de se rendre au centre-ville. Dani lui prête son vélo, mais à certaines conditions.",
+      "documents": [
+        {
+          "id": "sms7",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Mensajes entre hermanos",
+          "participants": [
+            {
+              "nom": "Sofía",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Dani",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Sofía",
+              "texte": "Voy al centro para comprar un regalo para mamá."
+            },
+            {
+              "qui": "Dani",
+              "texte": "Te presto mi bici para que [[s|llegues]] antes."
+            },
+            {
+              "qui": "Sofía",
+              "texte": "Gracias. Te la devuelvo esta noche, siempre que no [[s|llueva]]."
+            },
+            {
+              "qui": "Dani",
+              "texte": "Vale. Llámame al llegar, a no ser que no [[s|tengas]] batería."
+            }
+          ],
+          "source": "SMS écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms7",
+          "multiple": true,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Touche les trois verbes qui sont au subjonctif présent.",
+          "aide": "Ils suivent « para que », « siempre que » et « a no ser que ».",
+          "explication": "**Llegues**, **llueva** et **tengas** sont au subjonctif présent : but et condition exigent le subjonctif."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Sofía écrit-elle « para comprar » mais Dani « para que llegues » ?",
+          "options": [
+            "Le sujet est le même dans le premier cas, différent dans le second",
+            "Le premier est au passé et le second est au futur",
+            "Le premier parle d’un objet et le second d’une personne",
+            "Le premier est un ordre et le second une question"
+          ],
+          "reponse": 0,
+          "aide": "Qui achète ? Qui arrive ? Et qui parle ?",
+          "explication": "Même sujet (Sofía) : **infinitif** ; sujets différents (Dani prête, Sofía arrive) : **para que + subjonctif**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque conjonction à son sens.",
+          "paires": [
+            [
+              "siempre que",
+              "à condition que"
+            ],
+            [
+              "a no ser que",
+              "à moins que"
+            ],
+            [
+              "para que",
+              "pour que"
+            ],
+            [
+              "sin que",
+              "sans que"
+            ]
+          ],
+          "aide": "« A no ser que » exprime une exception.",
+          "explication": "**Siempre que** = à condition que ; **a no ser que** = à moins que ; **para que** = pour que ; **sin que** = sans que."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase de but.",
+          "texte": "Te llamo para que me ___ la dirección.",
+          "reponses": [
+            [
+              "digas"
+            ]
+          ],
+          "banque": [
+            "digas",
+            "dices",
+            "dirás",
+            "dijeras"
+          ],
+          "aide": "Sujets différents : subjonctif présent.",
+          "explication": "« Para que » + subjonctif présent : **digas**."
+        }
+      ]
+    },
+    {
+      "chapitre": "bccc3ca4-002f-50b5-a188-049789ae9bab",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une bibliothèque ouverte la nuit",
+      "competence": "analyser-texte",
+      "situation": "Un article imaginaire raconte l’initiative d’une commune pour aider les lycéens à réviser. Observe les constructions de but et de condition, au passé.",
+      "documents": [
+        {
+          "id": "biblio",
+          "type": "texte",
+          "genre": "article",
+          "titre": "La biblioteca de medianoche",
+          "blocs": [
+            "El ayuntamiento de Ríosol abrió el año pasado una biblioteca nocturna para que los estudiantes pudieran preparar los exámenes.",
+            "La sala se abría todas las noches, [[c|siempre]] que hubiera al menos diez alumnos, y se cerraba sin que nadie tuviera que pedirlo.",
+            "Con el objetivo de ayudar a más jóvenes, la alcaldesa pidió que los institutos divulgaran la iniciativa. A fin de que no hubiera problemas de ruido, los alumnos debían hablar en voz baja."
+          ],
+          "source": "Article imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range ces tournures selon ce qu’elles expriment.",
+          "categories": [
+            "But",
+            "Condition"
+          ],
+          "items": [
+            [
+              "para que",
+              0
+            ],
+            [
+              "a fin de que",
+              0
+            ],
+            [
+              "con el objetivo de",
+              0
+            ],
+            [
+              "siempre que",
+              1
+            ],
+            [
+              "a no ser que",
+              1
+            ]
+          ],
+          "aide": "Le but répond à « pour quoi faire ? », la condition à « à quelle condition ? ».",
+          "explication": "*Para que*, *a fin de que* et *con el objetivo de* expriment le **but** ; *siempre que* et *a no ser que* la **condition**."
+        },
+        {
+          "type": "zone",
+          "document": "biblio",
+          "multiple": false,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche le mot qui, avec « que », introduit la condition « pourvu qu’il y ait au moins dix élèves ».",
+          "aide": "C’est le mot qui précède « que hubiera ».",
+          "explication": "**Siempre** (que) + subjonctif = à condition que."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves faut-il au minimum pour que la salle ouvre ?",
+          "reponse": 10,
+          "unite": "élèves",
+          "aide": "Cherche « al menos » dans le deuxième paragraphe.",
+          "explication": "La salle ouvre « siempre que hubiera al menos **diez** alumnos »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’article écrit-il « pudieran » et non « puedan » ?",
+          "options": [
+            "Parce que le verbe principal « abrió » est au passé",
+            "Parce que les étudiants sont plusieurs personnes",
+            "Parce que « pudieran » est plus poli que « puedan »",
+            "Parce que « para que » exige toujours l’imparfait"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le temps du verbe qui précède « para que ».",
+          "explication": "Le verbe principal (*abrió*) est au passé : le subjonctif s’accorde à l’**imparfait** (*pudieran*)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase en respectant la concordance.",
+          "texte": "Compró libros para que los alumnos los ___ en casa.",
+          "reponses": [
+            [
+              "leyeran",
+              "leyesen"
+            ]
+          ],
+          "banque": [
+            "leyeran",
+            "lean",
+            "leen",
+            "leerían"
+          ],
+          "aide": "« Compró » est au passé simple.",
+          "explication": "**Leyeran** : après un verbe au passé, *para que* est suivi de l’imparfait du subjonctif."
+        }
+      ]
+    },
+    {
+      "chapitre": "bccc3ca4-002f-50b5-a188-049789ae9bab",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une lettre de candidature",
+      "competence": "argumenter",
+      "situation": "Clara écrit à la directrice de son lycée pour partir étudier au Chili. Sa lettre est formelle : elle utilise le registre soutenu du but et de la condition.",
+      "documents": [
+        {
+          "id": "correo",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Correo de candidatura",
+          "blocs": [
+            "Estimada señora directora:",
+            "Le escribo a fin de que [[s|considere]] mi candidatura al programa de intercambio con Chile. Con el objetivo de mejorar mi nivel de español, quisiera pasar un trimestre en Santiago.",
+            "Me comprometo a cumplir todas las normas, siempre y cuando [[s|pueda]] conservar mi beca actual. Además, traeré los documentos necesarios sin que nadie me los [[s|pida]].",
+            "Agradezco de antemano su atención. Atentamente, Clara Ruiz."
+          ],
+          "source": "Lettre écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "correo",
+          "multiple": true,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Touche les trois verbes au subjonctif présent dans la lettre.",
+          "aide": "Ils suivent « a fin de que », « siempre y cuando » et « sin que ».",
+          "explication": "**Considere**, **pueda** et **pida** sont au subjonctif présent : but et condition l’exigent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Clara écrit-elle « con el objetivo de mejorar » et non « con el objetivo de que mejore » ?",
+          "options": [
+            "Parce que le sujet est le même : c’est Clara qui écrit et qui progressera",
+            "Parce que « con el objetivo de » ne se construit jamais avec « que »",
+            "Parce que l’infinitif est toujours plus poli dans une lettre",
+            "Parce que le verbe principal est au conditionnel dans la phrase"
+          ],
+          "reponse": 0,
+          "aide": "Qui veut améliorer son espagnol ? Qui écrit ?",
+          "explication": "Même sujet : on utilise l’**infinitif**. Avec des sujets différents (*a fin de que considere*), il faudrait le subjonctif."
+        },
+        {
+          "type": "trous",
+          "enonce": "Transpose au passé en respectant la concordance.",
+          "texte": "Clara escribió a fin de que la directora ___ su candidatura, siempre que ___ conservar su beca.",
+          "reponses": [
+            [
+              "considerara",
+              "considerase"
+            ],
+            [
+              "pudiera",
+              "pudiese"
+            ]
+          ],
+          "banque": [
+            "considerara",
+            "considere",
+            "pudiera",
+            "pueda",
+            "consideraría",
+            "podría"
+          ],
+          "aide": "Le verbe principal est au passé simple : imparfait du subjonctif.",
+          "explication": "**Considerara** et **pudiera** : après *escribió* (passé), le subjonctif est à l’imparfait."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque conjonction à sa traduction.",
+          "paires": [
+            [
+              "con tal de que",
+              "pourvu que"
+            ],
+            [
+              "a no ser que",
+              "à moins que"
+            ],
+            [
+              "en caso de que",
+              "au cas où"
+            ],
+            [
+              "a fin de que",
+              "afin que"
+            ]
+          ],
+          "aide": "« En caso de que » et « a no ser que » s’opposent.",
+          "explication": "**Con tal de que** = pourvu que ; **a no ser que** = à moins que ; **en caso de que** = au cas où ; **a fin de que** = afin que."
+        }
+      ]
+    },
+    {
+      "chapitre": "505687ed-6733-5e10-9634-1680248a65fc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Ce que Carla a dit",
+      "competence": "manier-langue",
+      "situation": "Carla envoie plusieurs messages à Mateo. Il doit ensuite les rapporter à un ami, au passé.",
+      "documents": [
+        {
+          "id": "sms8",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Mensajes de Carla",
+          "participants": [
+            {
+              "nom": "Carla",
+              "emoji": "👩",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Mateo",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Carla",
+              "texte": "Estoy cansada."
+            },
+            {
+              "qui": "Carla",
+              "texte": "He terminado el trabajo."
+            },
+            {
+              "qui": "Carla",
+              "texte": "[[t|Mañana]] iré a la biblioteca."
+            },
+            {
+              "qui": "Carla",
+              "texte": "¿Vienes conmigo?"
+            },
+            {
+              "qui": "Mateo",
+              "texte": "Vale, te cuento luego."
+            }
+          ],
+          "source": "SMS écrits pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque phrase de Carla à sa version rapportée au passé.",
+          "paires": [
+            [
+              "«Estoy cansada»",
+              "Dijo que estaba cansada"
+            ],
+            [
+              "«He terminado el trabajo»",
+              "Dijo que había terminado el trabajo"
+            ],
+            [
+              "«Mañana iré a la biblioteca»",
+              "Dijo que al día siguiente iría a la biblioteca"
+            ],
+            [
+              "«¿Vienes conmigo?»",
+              "Preguntó si iba con ella"
+            ]
+          ],
+          "aide": "Présent → imparfait ; passé composé → plus-que-parfait ; futur → conditionnel.",
+          "explication": "Présent → **imparfait**, passé composé → **plus-que-parfait**, futur → **conditionnel**, *mañana* → **al día siguiente**."
+        },
+        {
+          "type": "zone",
+          "document": "sms8",
+          "multiple": false,
+          "reponse": [
+            "t"
+          ],
+          "enonce": "Touche le repère de temps qui devient « al día siguiente » au style indirect.",
+          "aide": "C’est un adverbe de temps qui parle du lendemain.",
+          "explication": "**Mañana** devient **al día siguiente** quand le verbe introducteur est au passé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment rapporter « ¿Vienes conmigo? » au passé ?",
+          "options": [
+            "Preguntó si iba con ella",
+            "Preguntó que iba con ella",
+            "Preguntó si vienes conmigo",
+            "Preguntó si fuera con ella"
+          ],
+          "reponse": 0,
+          "aide": "Une question totale se rapporte avec « si » + indicatif.",
+          "explication": "Question totale : **si** + indicatif à l’imparfait, et les personnes changent : *Preguntó si iba con ella.*"
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase rapportée.",
+          "texte": "Carla dijo que había ___ el trabajo.",
+          "reponses": [
+            [
+              "terminado"
+            ]
+          ],
+          "banque": [
+            "terminado",
+            "termina",
+            "terminó",
+            "terminaba"
+          ],
+          "aide": "Après « había », on met un participe passé.",
+          "explication": "Plus-que-parfait : **había terminado**."
+        }
+      ]
+    },
+    {
+      "chapitre": "505687ed-6733-5e10-9634-1680248a65fc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La déclaration de la maire",
+      "competence": "manier-langue",
+      "situation": "Une maire annonce plusieurs mesures. À toi de les rapporter au passé en transposant personnes, temps et repères. Le tableau t’aide pour les repères.",
+      "documents": [
+        {
+          "id": "alcaldesa",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Declaración de la alcaldesa",
+          "blocs": [
+            "La alcaldesa declaró: «Hoy inauguramos esta biblioteca. Mañana abriremos el comedor. ¿Queréis un barrio más vivo? Participad en las reuniones. No tiréis basura aquí.»"
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "reperes",
+          "type": "tableau",
+          "titre": "Cambios de referencias",
+          "colonnes": [
+            "Estilo directo",
+            "Estilo indirecto (en pasado)"
+          ],
+          "lignes": [
+            [
+              "hoy",
+              "aquel día"
+            ],
+            [
+              "mañana",
+              "al día siguiente"
+            ],
+            [
+              "ayer",
+              "el día anterior"
+            ],
+            [
+              "aquí",
+              "allí"
+            ],
+            [
+              "esta",
+              "aquella"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Transpose les deux premières phrases au style indirect.",
+          "texte": "La alcaldesa declaró que aquel día ___ aquella biblioteca y que al día siguiente ___ el comedor.",
+          "reponses": [
+            [
+              "inauguraban"
+            ],
+            [
+              "abrirían"
+            ]
+          ],
+          "banque": [
+            "inauguraban",
+            "inauguramos",
+            "inaugurarían",
+            "abrirían",
+            "abriremos",
+            "abrían"
+          ],
+          "aide": "Présent → imparfait ; futur → conditionnel.",
+          "explication": "**Inauguraban** (présent → imparfait) et **abrirían** (futur → conditionnel)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment rapporter « ¿Queréis un barrio más vivo? » ?",
+          "options": [
+            "Preguntó si querían un barrio más vivo",
+            "Preguntó que querían un barrio más vivo",
+            "Preguntó si queréis un barrio más vivo",
+            "Preguntó cómo querían un barrio más vivo"
+          ],
+          "reponse": 0,
+          "aide": "Question totale : « si » + imparfait.",
+          "explication": "Question totale : **si** + indicatif à l’imparfait : *preguntó si querían…*"
+        },
+        {
+          "type": "ordre",
+          "enonce": "Transpose « No tiréis basura aquí » : remets les morceaux dans l’ordre.",
+          "items": [
+            "Les pidió",
+            "que no",
+            "tiraran",
+            "basura",
+            "allí."
+          ],
+          "aide": "Un ordre devient « que + subjonctif » ; « aquí » devient « allí ».",
+          "explication": "**Les pidió que no tiraran basura allí.** : impératif → *que* + imparfait du subjonctif, *aquí* → *allí*."
+        },
+        {
+          "type": "zone",
+          "document": "reperes",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la case qui donne le repère à employer pour « ayer » au style indirect.",
+          "aide": "Repère la ligne « ayer », puis la colonne de droite.",
+          "explication": "« Ayer » devient **el día anterior** au style indirect passé."
+        }
+      ]
+    },
+    {
+      "chapitre": "505687ed-6733-5e10-9634-1680248a65fc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un résumé plein de fautes",
+      "competence": "analyser-document",
+      "situation": "Une journaliste interroge une chanteuse, puis un élève rédige un compte rendu. Il a fait plusieurs erreurs de transposition : retrouve-les.",
+      "documents": [
+        {
+          "id": "entrevista",
+          "type": "dialogue",
+          "modele": "bulles",
+          "titre": "Entrevista",
+          "participants": [
+            {
+              "nom": "Periodista",
+              "emoji": "🎙️",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Cantante",
+              "emoji": "🎤",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Periodista",
+              "texte": "¿Cuándo saldrá su nuevo disco?"
+            },
+            {
+              "qui": "Cantante",
+              "texte": "Saldrá mañana. He trabajado en él durante dos años."
+            },
+            {
+              "qui": "Periodista",
+              "texte": "¿Dónde lo presentará?"
+            },
+            {
+              "qui": "Cantante",
+              "texte": "Lo presentaré aquí, en este teatro. Venid todos."
+            }
+          ],
+          "source": "Entretien imaginé pour l’exercice"
+        },
+        {
+          "id": "resumen",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Resumen de un alumno",
+          "blocs": [
+            "La periodista le preguntó cuándo [[e|saldrá]] su nuevo disco. La cantante respondió que saldría al día siguiente y que [[e|trabajaba]] en él durante dos años. Después, la periodista le preguntó [[e|donde]] lo presentaría. La cantante contestó que lo presentaría allí, en aquel teatro, y pidió a todos que [[e|vengan]]."
+          ],
+          "source": "Compte rendu écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "resumen",
+          "multiple": true,
+          "reponse": [
+            "e"
+          ],
+          "enonce": "Touche les quatre erreurs de transposition du résumé.",
+          "aide": "Vérifie le temps des verbes, l’accent de l’interrogatif et le mode après « pidió que ».",
+          "explication": "**Saldrá** → *saldría* ; **trabajaba** → *había trabajado* ; **donde** → *dónde* (l’interrogatif garde son accent) ; **vengan** → *vinieran* (concordance)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Corrige la deuxième erreur.",
+          "texte": "La cantante respondió que había ___ en él durante dos años.",
+          "reponses": [
+            [
+              "trabajado"
+            ]
+          ],
+          "banque": [
+            "trabajado",
+            "trabajaba",
+            "trabajó",
+            "trabajé"
+          ],
+          "aide": "Passé composé du discours direct → plus-que-parfait.",
+          "explication": "« He trabajado » devient **había trabajado** au style indirect passé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le résumé écrit-il « allí » et « aquel teatro » ?",
+          "options": [
+            "Parce qu’au style indirect passé, « aquí » et « este » deviennent « allí » et « aquel »",
+            "Parce que la chanteuse a quitté le premier théâtre pour en rejoindre un autre",
+            "Parce que « aquí » est un mot familier qu’on évite de nos jours à l’écrit",
+            "Parce que l’élève évoque un théâtre plus éloigné que celui de la première fois"
+          ],
+          "reponse": 0,
+          "aide": "Le lieu et le moment de la parole ne sont plus les mêmes.",
+          "explication": "Au style indirect passé, les repères s’éloignent : *aquí* → **allí**, *este* → **aquel**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces transformations selon ce qui change.",
+          "categories": [
+            "Le temps du verbe",
+            "Le repère de lieu ou de moment"
+          ],
+          "items": [
+            [
+              "saldrá → saldría",
+              0
+            ],
+            [
+              "mañana → al día siguiente",
+              1
+            ],
+            [
+              "he trabajado → había trabajado",
+              0
+            ],
+            [
+              "aquí → allí",
+              1
+            ],
+            [
+              "este teatro → aquel teatro",
+              1
+            ],
+            [
+              "presentaré → presentaría",
+              0
+            ]
+          ],
+          "aide": "Un verbe change de temps ; un adverbe ou démonstratif change de repère.",
+          "explication": "Les trois verbes changent de **temps** ; *mañana*, *aquí* et *este* changent de **repère**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7fbbdf-6e98-5aff-84bf-56916f62a57f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le Guernica sur la pancarte du musée",
+      "competence": "manier-langue",
+      "situation": "Un panneau de musée présente un célèbre tableau. Tu vas mettre en relief chacune de ses informations avec « ser ».",
+      "documents": [
+        {
+          "id": "panel",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Guernica",
+          "sousTitre": "Museo Reina Sofía, Madrid",
+          "emoji": "🖼️",
+          "lignes": [
+            {
+              "texte": "Autor",
+              "valeur": "Pablo Picasso",
+              "id": "autor"
+            },
+            {
+              "texte": "Lugar de creación",
+              "valeur": "París",
+              "id": "lugar"
+            },
+            {
+              "texte": "Año",
+              "valeur": "1937",
+              "id": "anio"
+            }
+          ],
+          "pied": "Panneau écrit pour l’exercice",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "panel",
+          "multiple": false,
+          "reponse": [
+            "lugar"
+          ],
+          "enonce": "Touche la ligne du panneau qu’on met en relief avec le relatif « donde ».",
+          "aide": "« Donde » s’emploie pour un lieu.",
+          "explication": "Le lieu se met en relief avec **donde** : *Fue en París donde Picasso pintó el Guernica.*"
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète les trois mises en relief avec le bon relatif.",
+          "texte": "Fue Picasso ___ pintó el Guernica; fue en París ___ lo hizo, y fue en 1937 ___ lo terminó.",
+          "reponses": [
+            [
+              "quien"
+            ],
+            [
+              "donde"
+            ],
+            [
+              "cuando"
+            ]
+          ],
+          "banque": [
+            "quien",
+            "donde",
+            "cuando",
+            "como"
+          ],
+          "aide": "Personne → quien ; lieu → donde ; moment → cuando.",
+          "explication": "**Quien** (personne), **donde** (lieu), **cuando** (moment) : le relatif s’accorde avec le type d’élément mis en relief."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase est correcte pour mettre en relief le lieu ?",
+          "options": [
+            "Fue en París donde Picasso pintó el Guernica",
+            "Fue en París que Picasso pintó el Guernica",
+            "Era en París donde Picasso pintó el Guernica",
+            "Es en París cuando Picasso pintó el Guernica"
+          ],
+          "reponse": 0,
+          "aide": "Le lieu appelle « donde », et « ser » se met au passé.",
+          "explication": "**Fue en París donde…** : *que* est un calque du français, et *ser* se met au temps de l’action (*fue*)."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les mots dans l’ordre pour mettre la date en relief.",
+          "items": [
+            "Fue",
+            "en 1937",
+            "cuando",
+            "Picasso",
+            "pintó",
+            "el Guernica."
+          ],
+          "aide": "Ser + date + cuando + sujet + verbe.",
+          "explication": "**Fue en 1937 cuando Picasso pintó el Guernica.**"
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7fbbdf-6e98-5aff-84bf-56916f62a57f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Six phrases en relief à corriger",
+      "competence": "manier-langue",
+      "situation": "Un correcteur relit six phrases de mise en relief écrites par des élèves. Trois sont fautives. À toi de les retrouver.",
+      "documents": [
+        {
+          "id": "frases9",
+          "type": "tableau",
+          "titre": "Seis frases con ser",
+          "colonnes": [
+            "N.º",
+            "Frase"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Es aquí que nací."
+            ],
+            [
+              "2",
+              "Fueron ellas quienes llamaron."
+            ],
+            [
+              "3",
+              "Es ayer cuando lo vi."
+            ],
+            [
+              "4",
+              "Soy yo quien lo dice."
+            ],
+            [
+              "5",
+              "Fuimos nosotros quien ganamos."
+            ],
+            [
+              "6",
+              "Será mañana cuando lo sepamos."
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frases9",
+          "multiple": true,
+          "reponse": [
+            "r0c1",
+            "r2c1",
+            "r4c1"
+          ],
+          "enonce": "Touche les trois phrases fautives.",
+          "aide": "Vérifie le relatif, le temps de « ser » et l’accord en nombre.",
+          "explication": "Fautes : **1** (*que* au lieu de *donde*), **3** (*es* au lieu de *fue*) et **5** (*quien* au lieu de *quienes*)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle faute contient la phrase 3 ?",
+          "options": [
+            "« Ser » doit être au passé, comme l’action : « Fue ayer cuando… »",
+            "Il faut remplacer « cuando » par « donde » après une date",
+            "Il faut supprimer « ser » et garder « Ayer lo vi »",
+            "Il faut mettre « ser » au pluriel : « Son ayer cuando… »"
+          ],
+          "reponse": 0,
+          "aide": "L’action se passe hier.",
+          "explication": "**Ser se met au temps de l’action** : *Fue ayer cuando lo vi.*"
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la forme correcte de la phrase 5 ?",
+          "options": [
+            "Fuimos nosotros quienes ganamos",
+            "Fuimos nosotros quien ganamos",
+            "Fueron nosotros quienes ganamos",
+            "Fuimos nosotros quienes ganaron"
+          ],
+          "reponse": 0,
+          "aide": "« Nosotros » est au pluriel et à la première personne.",
+          "explication": "**Fuimos nosotros quienes ganamos** : *ser* s’accorde avec « nosotros », et *quienes* est au pluriel."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète les deux phrases.",
+          "texte": "Es aquí ___ nací. No imaginas lo ___ que están mis hermanas.",
+          "reponses": [
+            [
+              "donde"
+            ],
+            [
+              "contentas"
+            ]
+          ],
+          "banque": [
+            "donde",
+            "cuando",
+            "contentas",
+            "contentos",
+            "contento",
+            "contenta"
+          ],
+          "aide": "Lieu → donde ; dans « lo + adjectif + que », l’adjectif s’accorde avec le nom.",
+          "explication": "**Es aquí donde nací** ; **lo contentas que están mis hermanas** : l’adjectif s’accorde au féminin pluriel."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7fbbdf-6e98-5aff-84bf-56916f62a57f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois dates, trois lieux, trois personnes",
+      "competence": "analyser-document",
+      "situation": "Ce tableau présente trois événements de l’histoire culturelle hispanique. Mets-les en relief de plusieurs façons.",
+      "documents": [
+        {
+          "id": "hitos",
+          "type": "tableau",
+          "titre": "Tres hitos culturales",
+          "colonnes": [
+            "Persona",
+            "Acción",
+            "Lugar",
+            "Fecha"
+          ],
+          "lignes": [
+            [
+              "Cervantes",
+              "publicó la primera parte del Quijote",
+              "Madrid",
+              "1605"
+            ],
+            [
+              "Nebrija",
+              "publicó la primera gramática del castellano",
+              "Salamanca",
+              "1492"
+            ],
+            [
+              "García Márquez",
+              "recibió el Nobel de Literatura",
+              "Estocolmo",
+              "1982"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "hitos",
+          "multiple": false,
+          "reponse": [
+            "r0c2"
+          ],
+          "enonce": "Touche la ville où Cervantes a publié la première partie du Quijote.",
+          "aide": "Repère la ligne « Cervantes », puis la colonne « Lugar ».",
+          "explication": "La première partie du Quijote a été publiée à **Madrid**, en 1605."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment mettre en relief le lieu pour Nebrija ?",
+          "options": [
+            "Fue en Salamanca donde Nebrija publicó la primera gramática del castellano",
+            "Fue en Salamanca que Nebrija publicó la primera gramática del castellano",
+            "Fue en 1492 donde Nebrija publicó la primera gramática del castellano",
+            "Fue en Salamanca cuando Nebrija publicó la primera gramática del castellano"
+          ],
+          "reponse": 0,
+          "aide": "Un lieu se met en relief avec « donde ».",
+          "explication": "**Fue en Salamanca donde…** : *donde* pour le lieu ; *cuando* est réservé à la date."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la double mise en relief.",
+          "texte": "Fue García Márquez ___ recibió el Nobel, y fue en 1982 ___ lo hizo.",
+          "reponses": [
+            [
+              "quien"
+            ],
+            [
+              "cuando"
+            ]
+          ],
+          "banque": [
+            "quien",
+            "cuando",
+            "donde",
+            "como"
+          ],
+          "aide": "Personne → quien ; date → cuando.",
+          "explication": "**Fue García Márquez quien recibió el Nobel, y fue en 1982 cuando lo hizo.**"
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les mots dans l’ordre pour mettre en relief la date de Cervantes.",
+          "items": [
+            "Fue",
+            "en 1605",
+            "cuando",
+            "Cervantes",
+            "publicó",
+            "el Quijote."
+          ],
+          "aide": "Ser + date + cuando + sujet + verbe.",
+          "explication": "**Fue en 1605 cuando Cervantes publicó el Quijote.**"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la grammaire de Nebrija de la publication du Quijote ?",
+          "reponse": 113,
+          "unite": "ans",
+          "aide": "Soustrais 1492 de 1605.",
+          "explication": "1605 − 1492 = **113** ans."
+        }
+      ]
+    },
+    {
+      "chapitre": "fd373bed-2fac-5b6d-a69f-33dc522d90cf",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Des mots qui ont voyagé",
+      "competence": "comprendre-langue",
+      "situation": "L’espagnol a emprunté des mots à de nombreuses langues. Ce tableau en montre quelques-uns.",
+      "documents": [
+        {
+          "id": "prestamos",
+          "type": "tableau",
+          "titre": "Palabras de muchos orígenes",
+          "colonnes": [
+            "Origen",
+            "Ejemplos"
+          ],
+          "lignes": [
+            [
+              "Árabe",
+              "aceite, azúcar, ojalá"
+            ],
+            [
+              "Náhuatl",
+              "chocolate, tomate, aguacate"
+            ],
+            [
+              "Taíno",
+              "huracán, canoa, hamaca"
+            ],
+            [
+              "Quechua",
+              "papa, cóndor, llama"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prestamos",
+          "multiple": false,
+          "reponse": [
+            "r3c1"
+          ],
+          "enonce": "Touche la case qui donne des mots venus du quechua.",
+          "aide": "Cherche la ligne « Quechua ».",
+          "explication": "Les mots **papa, cóndor, llama** viennent du quechua, langue des Andes."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot espagnol à sa langue d’origine.",
+          "paires": [
+            [
+              "aceite",
+              "arabe"
+            ],
+            [
+              "chocolate",
+              "nahuatl"
+            ],
+            [
+              "huracán",
+              "taïno"
+            ],
+            [
+              "papa",
+              "quechua"
+            ]
+          ],
+          "aide": "Le nahuatl est la langue des Aztèques ; le taïno celle des Caraïbes.",
+          "explication": "**Aceite** vient de l’arabe, **chocolate** du nahuatl, **huracán** du taïno, **papa** du quechua."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce tableau sur la langue espagnole ?",
+          "options": [
+            "Qu’elle s’est enrichie de mots venus de plusieurs langues et continents",
+            "Qu’elle n’a jamais emprunté un seul mot à une autre langue",
+            "Qu’elle vient uniquement des langues d’Amérique du Sud",
+            "Qu’elle a été inventée d’un coup par une seule institution"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la diversité de la colonne « Origen ».",
+          "explication": "L’espagnol est une langue **métissée** : arabe, nahuatl, taïno, quechua l’ont enrichi."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la définition.",
+          "texte": "Un ___ lingüístico es una palabra que una lengua toma de otra.",
+          "reponses": [
+            [
+              "préstamo"
+            ]
+          ],
+          "banque": [
+            "préstamo",
+            "bulo",
+            "eslogan",
+            "matiz"
+          ],
+          "aide": "C’est l’équivalent de « emprunt ».",
+          "explication": "Un **préstamo** lingüístico est un emprunt."
+        }
+      ]
+    },
+    {
+      "chapitre": "fd373bed-2fac-5b6d-a69f-33dc522d90cf",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Día de Muertos et autres rencontres",
+      "competence": "analyser-document",
+      "situation": "Un court reportage sur une fête mexicaine et un tableau sur trois figures du syncrétisme religieux.",
+      "documents": [
+        {
+          "id": "altar",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Un altar en Oaxaca",
+          "blocs": [
+            "En Oaxaca, a principios de noviembre, la familia de Rosa prepara un altar: velas, flores de cempasúchil, pan de muerto y la foto de su abuela. Los pueblos [[m|prehispánicos]] ya honraban a sus antepasados con ofrendas de comida.",
+            "Hoy esta tradición coincide con la fiesta [[m|católica]] de Todos los Santos, y las dos se mezclan en el cementerio: misa por la mañana, música y comida por la tarde."
+          ],
+          "source": "Reportage écrit pour l’exercice"
+        },
+        {
+          "id": "sincretismo",
+          "type": "tableau",
+          "titre": "Tres lugares, una mezcla",
+          "colonnes": [
+            "Lugar",
+            "Tradición de origen",
+            "Figura católica"
+          ],
+          "lignes": [
+            [
+              "México (colina del Tepeyac)",
+              "Culto a la diosa Tonantzin",
+              "?"
+            ],
+            [
+              "Cuba (santería)",
+              "Yemayá, divinidad yoruba",
+              "?"
+            ],
+            [
+              "Potosí (Bolivia)",
+              "La Pachamama, la Tierra madre",
+              "?"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "altar",
+          "multiple": true,
+          "reponse": [
+            "m"
+          ],
+          "enonce": "Touche les deux adjectifs qui désignent les deux traditions qui se mêlent dans la fête.",
+          "aide": "Une tradition d’avant la conquête et une tradition chrétienne.",
+          "explication": "**Prehispánicos** et **católica** : le Día de Muertos mêle rites d’avant la conquête et fête de la Toussaint."
+        },
+        {
+          "type": "zone",
+          "document": "sincretismo",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la case du tableau qui cite une divinité andine.",
+          "aide": "Cherche la Terre mère des Andes.",
+          "explication": "La **Pachamama**, la Terre mère, est une divinité andine."
+        },
+        {
+          "type": "association",
+          "enonce": "Complète les cases « ? » : associe chaque figure d’origine à la figure catholique qui lui répond.",
+          "paires": [
+            [
+              "Tonantzin",
+              "la Vierge de Guadalupe"
+            ],
+            [
+              "Yemayá",
+              "la Vierge de Regla"
+            ],
+            [
+              "Pachamama",
+              "la Virgen del Cerro"
+            ],
+            [
+              "Changó",
+              "sainte Barbe"
+            ]
+          ],
+          "aide": "Chaque divinité d’origine a un « double » catholique.",
+          "explication": "**Tonantzin** → Guadalupe ; **Yemayá** → Vierge de Regla ; **Pachamama** → Virgen del Cerro ; **Changó** → sainte Barbe : c’est le syncrétisme."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion.",
+          "texte": "Lejos de ___ la cultura mexicana, el mestizaje la ha enriquecido.",
+          "reponses": [
+            [
+              "empobrecer"
+            ]
+          ],
+          "banque": [
+            "empobrecer",
+            "enriquecer",
+            "olvidar",
+            "separar"
+          ],
+          "aide": "La phrase oppose « lejos de » à « ha enriquecido ».",
+          "explication": "« **Lejos de empobrecer**… el mestizaje la ha enriquecido » : *lejos de* + infinitif nie l’idée contraire."
+        }
+      ]
+    },
+    {
+      "chapitre": "fd373bed-2fac-5b6d-a69f-33dc522d90cf",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Huit siècles de rencontres",
+      "competence": "se-reperer-temps",
+      "situation": "Une frise rassemble des repères du métissage hispanique. Un texte d’élève nuance ensuite l’image d’un métissage « heureux ».",
+      "documents": [
+        {
+          "id": "frise10",
+          "type": "frise",
+          "titre": "Encuentros de culturas",
+          "debut": 700,
+          "fin": 2020,
+          "pas": 100,
+          "periodes": [
+            {
+              "id": "andalus",
+              "debut": 711,
+              "fin": 1492,
+              "nom": "Al-Andalus",
+              "teinte": "ambre"
+            },
+            {
+              "id": "garcilaso",
+              "debut": 1539,
+              "fin": 1616,
+              "nom": "Garcilaso",
+              "teinte": "turquoise"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "tolede",
+              "date": 1200,
+              "nom": "Escuela de Toledo"
+            },
+            {
+              "id": "nebrija",
+              "date": 1492,
+              "nom": "Gramática Nebrija"
+            },
+            {
+              "id": "guadalupe",
+              "date": 1531,
+              "nom": "Guadalupe"
+            },
+            {
+              "id": "comentarios",
+              "date": 1609,
+              "nom": "Comentarios reales"
+            },
+            {
+              "id": "raza",
+              "date": 1925,
+              "nom": "La raza cósmica"
+            }
+          ],
+          "source": "Frise écrite pour l’exercice"
+        },
+        {
+          "id": "opinion",
+          "type": "texte",
+          "genre": "article",
+          "titre": "¿Una mezcla feliz?",
+          "blocs": [
+            "Se suele decir que el mestizaje es una mezcla feliz de culturas. No hay que olvidar que este mestizaje nació de la conquista. Sin embargo, lejos de empobrecer a los pueblos de América, creó culturas nuevas: la Virgen de Guadalupe, la santería o la cocina nikkei no existirían sin encuentros, a veces violentos, entre mundos distintos."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise10",
+          "multiple": false,
+          "reponse": [
+            "andalus"
+          ],
+          "enonce": "Touche la période de présence musulmane dans la péninsule ibérique.",
+          "aide": "Cherche la plus longue barre de la frise.",
+          "explication": "**Al-Andalus** couvre les années 711 à 1492."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent 711 de 1492, dates qui bornent al-Andalus ?",
+          "reponse": 781,
+          "unite": "ans",
+          "aide": "Soustrais 711 de 1492.",
+          "explication": "1492 − 711 = **781** ans : près de huit siècles."
+        },
+        {
+          "type": "zone",
+          "document": "frise10",
+          "multiple": true,
+          "reponse": [
+            "tolede",
+            "garcilaso"
+          ],
+          "enonce": "Touche le repère où des savants chrétiens, juifs et musulmans traduisent ensemble, puis la période de vie du premier grand écrivain métis.",
+          "aide": "Le premier est au XIIe-XIIIe siècle ; le second est le fils d’un conquistador et d’une princesse inca.",
+          "explication": "L’**École de Tolède** réunit savants de trois religions ; l’**Inca Garcilaso** (1539-1616), fils d’un conquistador et d’une princesse inca, est le premier grand écrivain métis."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase nuance une vision idéale du métissage ?",
+          "options": [
+            "No hay que olvidar que este mestizaje nació de la conquista.",
+            "El mestizaje es siempre una mezcla feliz y pacífica de culturas.",
+            "Las culturas nuevas han desaparecido por culpa del mestizaje.",
+            "La santería y la cocina nikkei no tienen nada que ver con él."
+          ],
+          "reponse": 0,
+          "aide": "Cherche la formule qui rappelle un fait historique dérangeant.",
+          "explication": "**No hay que olvidar que…** rappelle que le métissage est né de la conquête : c’est la nuance du texte."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Las tradiciones prehispánicas y católicas ___ en el Día de Muertos.",
+          "reponses": [
+            [
+              "se funden",
+              "confluyen"
+            ]
+          ],
+          "banque": [
+            "se funden",
+            "confluyen",
+            "se funde",
+            "confluye"
+          ],
+          "aide": "Le sujet est pluriel : « tradiciones ».",
+          "explication": "**Se funden** ou **confluyen** : deux verbes du cours pour dire que des cultures fusionnent."
+        }
+      ]
+    },
+    {
+      "chapitre": "8af7ce13-c622-571b-890c-e294cf385c46",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quelle concordance ?",
+      "competence": "manier-langue",
+      "situation": "Un correcteur relit six phrases d’élèves. Trois enfreignent la concordance des temps du subjonctif.",
+      "documents": [
+        {
+          "id": "frases11",
+          "type": "tableau",
+          "titre": "Seis frases de un examen",
+          "colonnes": [
+            "N.º",
+            "Frase"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Quería que vengas conmigo."
+            ],
+            [
+              "2",
+              "Le he pedido que venga."
+            ],
+            [
+              "3",
+              "Me gustaría que vinieras."
+            ],
+            [
+              "4",
+              "Te pedí que me ayudes."
+            ],
+            [
+              "5",
+              "Espero que tengas suerte."
+            ],
+            [
+              "6",
+              "Buscaba a alguien que hable ruso."
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frases11",
+          "multiple": true,
+          "reponse": [
+            "r0c1",
+            "r3c1",
+            "r5c1"
+          ],
+          "enonce": "Touche les trois phrases où le subjonctif ne s’accorde pas au temps du verbe principal.",
+          "aide": "Cherche un verbe principal à l’imparfait ou au passé simple suivi d’un subjonctif présent.",
+          "explication": "Les phrases **1** (*quería… vengas*), **4** (*pedí… ayudes*) et **6** (*buscaba… hable*) sont fautives : verbe principal au passé, subjonctif à l’imparfait."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle correction faut-il apporter à la phrase 1 ?",
+          "options": [
+            "Mettre l’imparfait du subjonctif : « Quería que vinieras conmigo »",
+            "Mettre le futur : « Quería que vendrás conmigo »",
+            "Mettre l’indicatif : « Quería que vienes conmigo »",
+            "Mettre le conditionnel : « Quería que vendrías conmigo »"
+          ],
+          "reponse": 0,
+          "aide": "Verbe principal à l’imparfait : la subordonnée se met à l’imparfait du subjonctif.",
+          "explication": "**Quería que vinieras** : principale au passé ou au conditionnel → **imparfait du subjonctif**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Mi madre quería que yo ___ medicina.",
+          "reponses": [
+            [
+              "estudiara",
+              "estudiase"
+            ]
+          ],
+          "banque": [
+            "estudiara",
+            "estudie",
+            "estudio",
+            "estudiaba"
+          ],
+          "aide": "« Quería » est à l’imparfait.",
+          "explication": "**Estudiara** : après *quería*, l’imparfait du subjonctif."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les morceaux dans l’ordre pour former la phrase.",
+          "items": [
+            "Le he pedido",
+            "que",
+            "venga",
+            "pronto."
+          ],
+          "aide": "Le passé composé est un temps du présent : subjonctif présent.",
+          "explication": "**Le he pedido que venga pronto.** : passé composé + subjonctif présent."
+        }
+      ]
+    },
+    {
+      "chapitre": "8af7ce13-c622-571b-890c-e294cf385c46",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les règles du voyage, hier et aujourd’hui",
+      "competence": "manier-langue",
+      "situation": "Les règles du voyage de fin d’année sont données au présent. L’an dernier, la directrice avait dit la même chose. Transpose au passé.",
+      "documents": [
+        {
+          "id": "normas",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Normas del viaje",
+          "blocs": [
+            "La directora pide que todos lleguen puntuales, que nadie se aleje del grupo y que los alumnos usen el móvil solo cuando ella lo [[s|permita]]."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "normas",
+          "multiple": false,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Touche le verbe qui est au subjonctif après « cuando » et qui parle d’une action à venir.",
+          "aide": "Cherche le verbe à la fin de la phrase.",
+          "explication": "**Permita** est au subjonctif présent après *cuando* : action future."
+        },
+        {
+          "type": "trous",
+          "enonce": "Transpose la phrase au passé en respectant la concordance.",
+          "texte": "El año pasado la directora pidió que todos ___ puntuales, que nadie se ___ del grupo y que usaran el móvil solo cuando ella lo ___.",
+          "reponses": [
+            [
+              "llegaran",
+              "llegasen"
+            ],
+            [
+              "alejara",
+              "alejase"
+            ],
+            [
+              "permitiera",
+              "permitiese"
+            ]
+          ],
+          "banque": [
+            "llegaran",
+            "lleguen",
+            "alejara",
+            "aleje",
+            "permitiera",
+            "permita",
+            "llegarían",
+            "alejaría"
+          ],
+          "aide": "Verbe principal au passé simple : imparfait du subjonctif partout.",
+          "explication": "**Llegaran**, **alejara**, **permitiera** : après *pidió*, tous les subjonctifs passent à l’imparfait."
+        },
+        {
+          "type": "choix",
+          "enonce": "Je ne crois pas que Marta l’ait fait hier. Quelle phrase l’exprime ?",
+          "options": [
+            "No creo que Marta lo hiciera",
+            "No creo que Marta lo haga ayer",
+            "No creo que Marta lo hizo",
+            "No creo que Marta lo haría"
+          ],
+          "reponse": 0,
+          "aide": "Un verbe au présent peut commander l’imparfait du subjonctif si l’action est passée.",
+          "explication": "**No creo que Marta lo hiciera** : la subordonnée parle du **passé**, donc l’imparfait du subjonctif."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces débuts de phrase selon le temps du subjonctif qu’ils commandent.",
+          "categories": [
+            "Subjonctif présent",
+            "Imparfait du subjonctif"
+          ],
+          "items": [
+            [
+              "Quiero que…",
+              0
+            ],
+            [
+              "Le he dicho que…",
+              0
+            ],
+            [
+              "Te pediré que…",
+              0
+            ],
+            [
+              "Me gustaría que…",
+              1
+            ],
+            [
+              "Pidió que…",
+              1
+            ],
+            [
+              "Habíamos deseado que…",
+              1
+            ]
+          ],
+          "aide": "Présent, futur, passé composé → présent ; passé, conditionnel → imparfait.",
+          "explication": "Principale au présent, au futur ou au passé composé → **présent**. Principale au passé simple, au conditionnel ou au plus-que-parfait → **imparfait**."
+        }
+      ]
+    },
+    {
+      "chapitre": "8af7ce13-c622-571b-890c-e294cf385c46",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La lettre de la grand-mère",
+      "competence": "analyser-texte",
+      "situation": "Une grand-mère écrit à son petit-fils. Sa lettre contient plusieurs subordonnées qui illustrent tous les cas de concordance.",
+      "documents": [
+        {
+          "id": "abuela",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Carta de la abuela Rosa",
+          "blocs": [
+            "Querido Tomás:",
+            "Me alegro mucho de que [[p|hayas]] aprobado el examen. Ayer, por teléfono, hablabas como si ya hubieras suspendido, y me preocupé.",
+            "Cuando eras pequeño, quería que aprendieras a tocar la guitarra, pero no encontré a nadie que te enseñara. Hoy busco a alguien que me enseñe a usar el móvil. Te llamaré cuando llegues a casa.",
+            "Un beso, la abuela Rosa."
+          ],
+          "source": "Lettre écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "abuela",
+          "multiple": false,
+          "reponse": [
+            "p"
+          ],
+          "enonce": "Touche l’auxiliaire qui montre que l’action d’avoir réussi l’examen est antérieure au moment où parle la grand-mère.",
+          "aide": "C’est la première forme du verbe « haber » du texte.",
+          "explication": "**Hayas aprobado** est un subjonctif passé : action antérieure à « me alegro »."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète pour dire que l’action était terminée avant.",
+          "texte": "Me alegré de que ___ venido.",
+          "reponses": [
+            [
+              "hubieras",
+              "hubieses"
+            ]
+          ],
+          "banque": [
+            "hubieras",
+            "hayas",
+            "habías",
+            "habrías"
+          ],
+          "aide": "Verbe principal au passé + action antérieure : plus-que-parfait du subjonctif.",
+          "explication": "**Me alegré de que hubieras venido** : principale au passé + antériorité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la grand-mère écrit-elle « quería que aprendieras » ?",
+          "options": [
+            "Le verbe principal « quería » est à l’imparfait",
+            "Le verbe « aprender » exige toujours l’imparfait",
+            "Parce que Tomás est un enfant dans le souvenir",
+            "Parce que le subjonctif présent n’existe pas ici"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le temps du verbe principal.",
+          "explication": "**Quería** est à l’imparfait : le subjonctif est à l’**imparfait** (*aprendieras*)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète avec « como si ».",
+          "texte": "Habla como si ___ vivido siempre aquí.",
+          "reponses": [
+            [
+              "hubiera",
+              "hubiese"
+            ]
+          ],
+          "banque": [
+            "hubiera",
+            "había",
+            "ha",
+            "haya"
+          ],
+          "aide": "Après « como si » : imparfait ou plus-que-parfait du subjonctif.",
+          "explication": "**Como si hubiera vivido** : plus-que-parfait du subjonctif pour un fait passé irréel."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment mettre « Busco a alguien que me enseñe » au passé ?",
+          "options": [
+            "Buscaba a alguien que me enseñara",
+            "Buscaba a alguien que me enseñe",
+            "Buscaba a alguien que me enseñaría",
+            "Buscaba a alguien que me enseña"
+          ],
+          "reponse": 0,
+          "aide": "Relative + verbe principal au passé : imparfait du subjonctif.",
+          "explication": "**Buscaba a alguien que me enseñara** : la concordance vaut aussi pour les relatives."
+        }
+      ]
+    },
+    {
+      "chapitre": "01489fad-4780-5d1f-9498-b695c4e2adee",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux lois pour se souvenir",
+      "competence": "se-reperer-temps",
+      "situation": "Cette frise rappelle des repères de la mémoire historique en Espagne. Lis-la avec attention.",
+      "documents": [
+        {
+          "id": "frise12",
+          "type": "frise",
+          "titre": "Memoria de España",
+          "debut": 1930,
+          "fin": 2030,
+          "pas": 10,
+          "periodes": [
+            {
+              "id": "franco",
+              "debut": 1939,
+              "fin": 1975,
+              "nom": "Dictadura de Franco",
+              "teinte": "gris"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "guerra",
+              "date": 1936,
+              "nom": "Guerra civil"
+            },
+            {
+              "id": "amnistia",
+              "date": 1977,
+              "nom": "Ley de amnistía"
+            },
+            {
+              "id": "memhist",
+              "date": 2007,
+              "nom": "Memoria histórica"
+            },
+            {
+              "id": "restos",
+              "date": 2019,
+              "nom": "Restos de Franco"
+            },
+            {
+              "id": "memdem",
+              "date": 2022,
+              "nom": "Memoria democrática"
+            }
+          ],
+          "source": "Frise écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise12",
+          "multiple": true,
+          "reponse": [
+            "memhist",
+            "memdem"
+          ],
+          "enonce": "Touche les deux lois de la frise qui portent sur la mémoire historique.",
+          "aide": "Cherche les mots « Memoria » dans les noms.",
+          "explication": "Les lois de **2007** (mémoire historique) et de **2022** (mémoire démocratique)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la loi d’amnistie de 1977 de la loi de mémoire démocratique de 2022 ?",
+          "reponse": 45,
+          "unite": "ans",
+          "aide": "Soustrais 1977 de 2022.",
+          "explication": "2022 − 1977 = **45** ans."
+        },
+        {
+          "type": "zone",
+          "document": "frise12",
+          "multiple": false,
+          "reponse": [
+            "franco"
+          ],
+          "enonce": "Touche la période de la dictature de Franco.",
+          "aide": "Cherche la barre qui court de 1939 à 1975.",
+          "explication": "La **dictature de Franco** s’étend de 1939 à 1975."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot espagnol à sa traduction.",
+          "paires": [
+            [
+              "la fosa común",
+              "la fosse commune"
+            ],
+            [
+              "exhumar",
+              "exhumer"
+            ],
+            [
+              "los desaparecidos",
+              "les disparus"
+            ],
+            [
+              "el olvido",
+              "l’oubli"
+            ]
+          ],
+          "aide": "« Exhumar » contient « humus », la terre.",
+          "explication": "**Fosa común** = fosse commune ; **exhumar** = exhumer ; **desaparecidos** = disparus ; **olvido** = oubli."
+        }
+      ]
+    },
+    {
+      "chapitre": "01489fad-4780-5d1f-9498-b695c4e2adee",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Dictatures et lieux de mémoire",
+      "competence": "analyser-document",
+      "situation": "Ce tableau compare trois pays d’Amérique latine marqués par la violence politique.",
+      "documents": [
+        {
+          "id": "paises",
+          "type": "tableau",
+          "titre": "Tres países, tres memorias",
+          "colonnes": [
+            "País",
+            "Periodo",
+            "Lugar o hecho de memoria"
+          ],
+          "lignes": [
+            [
+              "Argentina",
+              "Dictadura de 1976 a 1983",
+              "ESMA, antigua escuela de mecánica de la Marina, hoy lugar de memoria"
+            ],
+            [
+              "Chile",
+              "Dictadura de 1973 a 1990",
+              "Museo de la Memoria y los Derechos Humanos, abierto en Santiago en 2010"
+            ],
+            [
+              "Guatemala",
+              "Guerra civil de 1960 a 1996",
+              "Masacres de aldeas mayas durante el conflicto"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années la dictature de Pinochet a-t-elle duré, de 1973 à 1990 ?",
+          "reponse": 17,
+          "unite": "ans",
+          "aide": "Soustrais 1973 de 1990.",
+          "explication": "1990 − 1973 = **17** ans."
+        },
+        {
+          "type": "zone",
+          "document": "paises",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la case de la guerre civile qui a duré le plus longtemps.",
+          "aide": "Calcule la durée de chaque période du tableau.",
+          "explication": "La guerre civile du Guatemala (1960-1996) a duré **36** ans, bien plus que les deux dictatures."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces éléments par pays.",
+          "categories": [
+            "Argentine",
+            "Chili",
+            "Espagne"
+          ],
+          "items": [
+            [
+              "ESMA",
+              0
+            ],
+            [
+              "Musée de la Mémoire et des Droits de l’Homme",
+              1
+            ],
+            [
+              "Loi de mémoire démocratique de 2022",
+              2
+            ],
+            [
+              "Film Argentina, 1985",
+              0
+            ],
+            [
+              "Dictature de Pinochet",
+              1
+            ],
+            [
+              "Valle de los Caídos",
+              2
+            ]
+          ],
+          "aide": "Utilise le tableau et le cours.",
+          "explication": "L’ESMA et le film *Argentina, 1985* : **Argentine** ; le musée de 2010 et Pinochet : **Chili** ; la loi de 2022 et le Valle de los Caídos : **Espagne**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la formule de débat.",
+          "texte": "Mientras que unos defienden el olvido, otros ___ que hay que recordar.",
+          "reponses": [
+            [
+              "sostienen"
+            ]
+          ],
+          "banque": [
+            "sostienen",
+            "sostiene",
+            "sostener",
+            "sostenían"
+          ],
+          "aide": "Le sujet est « otros », pluriel, au présent.",
+          "explication": "« Mientras que unos defienden…, otros **sostienen** que… » : formule pour présenter deux positions."
+        }
+      ]
+    },
+    {
+      "chapitre": "01489fad-4780-5d1f-9498-b695c4e2adee",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le village sous l’eau et les œuvres contre l’oubli",
+      "competence": "analyser-document",
+      "situation": "Un court article imaginé sur un village englouti et un tableau d’œuvres qui luttent contre l’oubli : croise les deux.",
+      "documents": [
+        {
+          "id": "valdeagua",
+          "type": "texte",
+          "genre": "article",
+          "titre": "El pueblo bajo el agua",
+          "blocs": [
+            "Cuando se llenó el embalse, el pueblo de Valdeagua desapareció bajo el agua. Los vecinos perdieron su [[p|tierra]] y, con ella, su [[p|memoria]].",
+            "Cada verano, cuando baja el nivel del agua, reaparece el campanario. Los descendientes vuelven a verlo: para ellos, es mucho más que una ruina. Cabe plantearse si el progreso justifica este olvido."
+          ],
+          "source": "Article imaginé pour l’exercice"
+        },
+        {
+          "id": "obras12",
+          "type": "tableau",
+          "titre": "Obras contra el olvido",
+          "colonnes": [
+            "Obra",
+            "Tipo",
+            "Cómo trabaja la memoria"
+          ],
+          "lignes": [
+            [
+              "Madres paralelas (2021)",
+              "Película",
+              "Termina con la apertura de una fosa común"
+            ],
+            [
+              "Soldados de Salamina (2001)",
+              "Novela",
+              "Relato real sobre un episodio de la guerra civil"
+            ],
+            [
+              "Fragmentos (2018)",
+              "Instalación artística",
+              "Un suelo hecho con armas fundidas de las FARC"
+            ],
+            [
+              "El laberinto del fauno (2006)",
+              "Película",
+              "Cuento fantástico en la España de 1944"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "valdeagua",
+          "multiple": true,
+          "reponse": [
+            "p"
+          ],
+          "enonce": "Touche les deux mots qui désignent ce que les habitants ont perdu.",
+          "aide": "Ils sont dans la deuxième phrase, l’un matériel, l’autre immatériel.",
+          "explication": "Les habitants ont perdu leur **tierra** et leur **memoria**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie « Cabe plantearse si el progreso justifica este olvido » ?",
+          "options": [
+            "Il faut se demander si le progrès justifie cet oubli",
+            "Il est certain que le progrès justifie cet oubli",
+            "Il est interdit de se demander si le progrès est utile",
+            "Il suffit de se souvenir pour que le progrès continue"
+          ],
+          "reponse": 0,
+          "aide": "« Cabe + infinitif » ouvre une réflexion, une question à se poser.",
+          "explication": "**Cabe plantearse si…** = « il faut se demander si… » : une formule pour poser un débat."
+        },
+        {
+          "type": "zone",
+          "document": "obras12",
+          "multiple": false,
+          "reponse": [
+            "r2c2"
+          ],
+          "enonce": "Touche la case qui décrit une œuvre faite avec des armes fondues.",
+          "aide": "Cherche « armas fundidas » dans la dernière colonne.",
+          "explication": "**Fragmentos** de Doris Salcedo a un sol fait avec les armes fondues des FARC."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces œuvres de la plus ancienne à la plus récente.",
+          "items": [
+            "Soldados de Salamina",
+            "El laberinto del fauno",
+            "Fragmentos",
+            "Madres paralelas"
+          ],
+          "aide": "Les années sont entre parenthèses.",
+          "explication": "**Soldados de Salamina (2001)**, **El laberinto del fauno (2006)**, **Fragmentos (2018)**, **Madres paralelas (2021)**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion nuancée.",
+          "texte": "A fin de ___, no se trata de reabrir heridas, sino de cerrarlas con verdad.",
+          "reponses": [
+            [
+              "cuentas"
+            ]
+          ],
+          "banque": [
+            "cuentas",
+            "cuento",
+            "contar",
+            "cuenta"
+          ],
+          "aide": "Expression figée qui signifie « en fin de compte ».",
+          "explication": "« **A fin de cuentas**, no se trata de… sino de… » : conclusion nuancée."
+        }
+      ]
+    }
+  ]
+}

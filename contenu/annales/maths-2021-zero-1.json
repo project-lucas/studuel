@@ -1,0 +1,526 @@
+{
+  "id": "maths-2021-zero-1",
+  "matiere": "maths",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2021,
+  "centre": "Sujet zéro",
+  "jour": null,
+  "code": "",
+  "titre": "Bac 2021 — Mathématiques (spécialité), sujet zéro",
+  "dureeMin": 240,
+  "coefficient": 16,
+  "consigne": "Quatre exercices de 5 points : les exercices 1, 2 et 3 sont communs à tous, puis un seul exercice au choix, A ou B. Calculatrice en mode examen autorisée.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "QCM de cinq questions : suites encadrées, dérivée de $x\\mathrm{e}^{x^2}$, limite d'une fraction rationnelle, théorème des valeurs intermédiaires, lecture de la courbe d'une dérivée.",
+      "points": 5,
+      "minutes": 40,
+      "enBref": [
+        "Cinq questions indépendantes qui balaient l'analyse du programme ; aucune justification demandée.",
+        "Réponses : 1. b ; 2. c ; 3. c ; 4. c ; 5. c.",
+        "La question 5 est la plus piégeuse : la courbe donnée est celle de $g'$, pas celle de $g$. Le signe de $g'$ donne les variations de $g$, et les variations de $g'$ donnent la convexité de $g$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Suites $u_n = 1 - \\left(\\frac{1}{4}\\right)^n$, $v_n = 1 + \\left(\\frac{1}{4}\\right)^n$ et $u_n \\leqslant w_n \\leqslant v_n$ : que peut-on affirmer ?",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "Comme $-1 < \\frac{1}{4} < 1$, $\\lim \\left(\\frac{1}{4}\\right)^n = 0$, donc $\\lim u_n = \\lim v_n = 1$. Puisque $u_n \\leqslant w_n \\leqslant v_n$ pour tout $n$, le théorème des gendarmes donne $\\lim w_n = 1$." },
+            { "type": "texte", "texte": "Les autres propositions sont fausses : $u_0 = 0$, $u_1 = \\frac{3}{4}$, $u_2 = \\frac{15}{16}$ ; le rapport $\\frac{u_2}{u_1} = \\frac{5}{4}$ n'est pas $\\frac{u_1}{u_0}$ (qui n'existe même pas), donc $(u_n)$ n'est pas géométrique (a) ; $u_n < 1$ pour tout $n \\geqslant 1$, donc elle n'est pas minorée par 1 (c) ; rien n'oblige $(w_n)$ à être croissante, par exemple $w_n = v_n$ est décroissante (d)." },
+            { "type": "reponse", "texte": "Réponse **b** : la suite $(w_n)$ converge vers 1." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Dérivée de $f(x) = x\\mathrm{e}^{x^2}$.",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "$f = uv$ avec $u(x) = x$, $v(x) = \\mathrm{e}^{x^2}$ ; $u'(x) = 1$ et $v'(x) = 2x\\mathrm{e}^{x^2}$ (dérivée de $\\mathrm{e}^{w}$ : $w'\\mathrm{e}^{w}$)." },
+            { "type": "formule", "tex": "f'(x) = 1 \\times \\mathrm{e}^{x^2} + x \\times 2x\\mathrm{e}^{x^2} = (1 + 2x^2)\\,\\mathrm{e}^{x^2}" },
+            { "type": "reponse", "texte": "Réponse **c** : $f'(x) = (1 + 2x^2)\\mathrm{e}^{x^2}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Que vaut $\\lim_{x \\to +\\infty} \\frac{x^2 - 1}{2x^2 - 2x + 1}$ ?",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "Forme indéterminée $\\frac{\\infty}{\\infty}$ : on factorise par $x^2$ au numérateur et au dénominateur (pour $x \\neq 0$)." },
+            { "type": "formule", "tex": "\\frac{x^2 - 1}{2x^2 - 2x + 1} = \\frac{1 - \\frac{1}{x^2}}{2 - \\frac{2}{x} + \\frac{1}{x^2}} \\xrightarrow[x \\to +\\infty]{} \\frac{1}{2}" },
+            { "type": "reponse", "texte": "Réponse **c** : la limite vaut $\\frac{1}{2}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "$h$ continue sur $[-1\\,;1]$ avec $h(-1) = 0$, $h(0) = 2$, $h(1) = 0$ : que peut-on affirmer ?",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "$h$ est continue sur $[0\\,;1]$, $h(1) = 0$ et $h(0) = 2$ ; $1$ est compris entre $0$ et $2$. D'après le théorème des valeurs intermédiaires, il existe au moins un réel $a \\in [0\\,;1]$ tel que $h(a) = 1$." },
+            { "type": "texte", "texte": "Les autres propositions ne sont pas garanties : on ne connaît que trois valeurs de $h$, qui peut osciller entre elles (être négative par endroits, ne pas être monotone, prendre la valeur 1 plus de deux fois)." },
+            { "type": "reponse", "texte": "Réponse **c**." },
+            { "type": "piege", "texte": "Le théorème des valeurs intermédiaires garantit l'EXISTENCE d'une solution, jamais un nombre exact de solutions (la d) : il faudrait en plus la stricte monotonie." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "À partir de la courbe de $g'$ sur $[-4\\,;4]$ : que peut-on affirmer sur $g$ ?",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "Lecture de la courbe de $g'$ : $g' \\geqslant 0$ sur $[-4\\,;0]$, $g' \\leqslant 0$ sur $[0\\,;2]$, $g' \\geqslant 0$ sur $[2\\,;4]$ ; $g'$ décroît sur $[-2\\,;1]$ et croît sur $[1\\,;3{,}5]$ environ." },
+            { "type": "liste", "items": [
+              "a. Faux : $g'$ ne change pas de signe en $-2$ ($g'(-2) = 3$) ; $g$ y est croissante. C'est $g'$ qui a un maximum en $-2$.",
+              "b. Faux : $g' < 0$ sur $]1\\,;2[$, donc $g$ est décroissante sur $[1\\,;2]$.",
+              "c. Vrai : $g'$ est croissante sur $[1\\,;2]$, donc $g$ est convexe sur cet intervalle.",
+              "d. Faux : en $0$, $g'$ passe du positif au négatif, $g$ y admet un MAXIMUM local."
+            ] },
+            { "type": "reponse", "texte": "Réponse **c** : $g$ est convexe sur $[1\\,;2]$." },
+            { "type": "astuce", "texte": "Face à la courbe d'une dérivée $g'$, deux lectures seulement : le SIGNE de $g'$ (au-dessus ou au-dessous de l'axe) donne les variations de $g$ ; le SENS DE VARIATION de $g'$ (ça monte ou ça descend) donne la convexité de $g$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Géométrie dans l'espace : cube $ABCDEFGH$ de côté 1, $I$ milieu de $[EF]$, $J$ symétrique de $E$ par rapport à $F$. Plan $(BGI)$, projeté orthogonal de $F$, volume de la pyramide $FBGI$ et aire du triangle $BGI$.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$I\\left(\\frac{1}{2}\\,;0\\,;1\\right)$, $J(2\\,;0\\,;1)$ ; $\\overrightarrow{DJ}(2\\,;-1\\,;1)$ est orthogonal à $\\overrightarrow{BI}$ et $\\overrightarrow{BG}$, donc normal au plan $(BGI)$ : $2x - y + z - 2 = 0$.",
+        "La droite $d$ passant par $F$ et dirigée par $\\overrightarrow{DJ}$ coupe le plan en $L\\left(\\frac{2}{3}\\,;\\frac{1}{6}\\,;\\frac{5}{6}\\right)$, obtenu pour $t = -\\frac{1}{6}$.",
+        "Volume de $FBGI$ en prenant la base $FBI$ (sur la face $ABFE$) et la hauteur $FG = 1$ : $V = \\frac{1}{12}$.",
+        "Avec la base $BGI$ et la hauteur $FL = \\frac{\\sqrt{6}}{6}$ : aire de $BGI = \\frac{\\sqrt{6}}{4}$. L'idée clé : calculer le même volume de deux façons."
+      ],
+      "blocs": [
+        { "type": "texte", "texte": "Dans le repère $(A\\,;\\overrightarrow{AB}, \\overrightarrow{AD}, \\overrightarrow{AE})$ : $A(0\\,;0\\,;0)$, $B(1\\,;0\\,;0)$, $D(0\\,;1\\,;0)$, $E(0\\,;0\\,;1)$, $F(1\\,;0\\,;1)$, $G(1\\,;1\\,;1)$." },
+        {
+          "type": "question",
+          "numero": "1.a",
+          "intitule": "Coordonnées de $I$ et $J$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$I$ est le milieu de $[EF]$ ; $F$ est le milieu de $[EJ]$, donc $J = F + \\overrightarrow{EF}$, avec $\\overrightarrow{EF} = \\overrightarrow{AB}$." },
+            { "type": "reponse", "texte": "$I\\left(\\frac{1}{2}\\,;0\\,;1\\right)$ et $J(2\\,;0\\,;1)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.b",
+          "intitule": "Coordonnées de $\\overrightarrow{DJ}$, $\\overrightarrow{BI}$ et $\\overrightarrow{BG}$.",
+          "points": null,
+          "blocs": [
+            { "type": "reponse", "texte": "$\\overrightarrow{DJ}(2\\,;-1\\,;1)$, $\\overrightarrow{BI}\\left(-\\frac{1}{2}\\,;0\\,;1\\right)$, $\\overrightarrow{BG}(0\\,;1\\,;1)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.c",
+          "intitule": "Montrer que $\\overrightarrow{DJ}$ est normal au plan $(BGI)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$\\overrightarrow{BI}$ et $\\overrightarrow{BG}$ ne sont pas colinéaires (la première coordonnée de $\\overrightarrow{BG}$ est nulle, pas celle de $\\overrightarrow{BI}$) : ils dirigent le plan $(BGI)$. Dans le repère orthonormé :" },
+            { "type": "formule", "tex": "\\overrightarrow{DJ} \\cdot \\overrightarrow{BI} = 2 \\times \\left(-\\tfrac{1}{2}\\right) + (-1) \\times 0 + 1 \\times 1 = 0 \\qquad \\overrightarrow{DJ} \\cdot \\overrightarrow{BG} = 0 - 1 + 1 = 0" },
+            { "type": "reponse", "texte": "$\\overrightarrow{DJ}$ est orthogonal à deux vecteurs non colinéaires du plan $(BGI)$ : c'est un vecteur normal à ce plan." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.d",
+          "intitule": "Montrer que $2x - y + z - 2 = 0$ est une équation de $(BGI)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Le vecteur normal $\\overrightarrow{DJ}(2\\,;-1\\,;1)$ donne une équation de la forme $2x - y + z + d = 0$. Le plan passe par $B(1\\,;0\\,;0)$ : $2 + d = 0$, donc $d = -2$." },
+            { "type": "texte", "texte": "Contrôle : $G$ donne $2 - 1 + 1 - 2 = 0$ et $I$ donne $1 - 0 + 1 - 2 = 0$." },
+            { "type": "reponse", "texte": "Une équation cartésienne du plan $(BGI)$ est $2x - y + z - 2 = 0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.a",
+          "intitule": "Représentation paramétrique de la droite $d$ passant par $F$ et orthogonale à $(BGI)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$d$ est orthogonale au plan, donc dirigée par le vecteur normal $\\overrightarrow{DJ}(2\\,;-1\\,;1)$, et passe par $F(1\\,;0\\,;1)$." },
+            { "type": "formule", "tex": "d : \\begin{cases} x = 1 + 2t \\\\ y = -t \\\\ z = 1 + t \\end{cases} \\quad t \\in \\mathbb{R}" },
+            { "type": "reponse", "texte": "$d$ : $x = 1 + 2t$, $y = -t$, $z = 1 + t$, avec $t \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.b",
+          "intitule": "Montrer que $L\\left(\\frac{2}{3}\\,;\\frac{1}{6}\\,;\\frac{5}{6}\\right)$ est le point d'intersection de $d$ et de $(BGI)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**$L$ est sur $d$** : pour $t = -\\frac{1}{6}$, on obtient $x = 1 - \\frac{1}{3} = \\frac{2}{3}$, $y = \\frac{1}{6}$, $z = 1 - \\frac{1}{6} = \\frac{5}{6}$." },
+            { "type": "texte", "texte": "**$L$ est dans le plan** :" },
+            { "type": "formule", "tex": "2 \\times \\tfrac{2}{3} - \\tfrac{1}{6} + \\tfrac{5}{6} - 2 = \\tfrac{8}{6} - \\tfrac{1}{6} + \\tfrac{5}{6} - \\tfrac{12}{6} = 0" },
+            { "type": "texte", "texte": "Une droite orthogonale à un plan le coupe en un seul point." },
+            { "type": "reponse", "texte": "$L$ appartient à la fois à $d$ et à $(BGI)$ : c'est leur point d'intersection, c'est-à-dire le projeté orthogonal de $F$ sur $(BGI)$." },
+            { "type": "attendu", "texte": "Les DEUX vérifications sont exigées : appartenance à la droite (avec la valeur du paramètre) et appartenance au plan. Une seule ne prouve pas que $L$ est l'intersection." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.a",
+          "intitule": "Volume de la pyramide $FBGI$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "On choisit une base commode : le triangle $FBI$, contenu dans la face $ABFE$. Il est rectangle en $F$ (les arêtes $[FE]$ et $[FB]$ sont perpendiculaires), avec $FI = \\frac{1}{2}$ et $FB = 1$ : son aire est $\\frac{1}{2} \\times \\frac{1}{2} \\times 1 = \\frac{1}{4}$." },
+            { "type": "texte", "texte": "L'arête $[FG]$ est orthogonale à la face $ABFE$ : la hauteur associée à cette base est $FG = 1$." },
+            { "type": "formule", "tex": "V = \\frac{1}{3} \\times \\frac{1}{4} \\times 1 = \\frac{1}{12}" },
+            { "type": "reponse", "texte": "Le volume de la pyramide $FBGI$ est $\\dfrac{1}{12}$ (unité de volume)." },
+            { "type": "astuce", "texte": "Dans un cube, cherche toujours une base posée sur une face : la hauteur est alors une arête, de longueur connue. Le triangle $BGI$, lui, n'est sur aucune face : c'est pour cela que la question suivante le calcule à rebours." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.b",
+          "intitule": "En déduire l'aire du triangle $BGI$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Prenons maintenant $BGI$ comme base. La hauteur associée est la distance de $F$ au plan $(BGI)$, soit $FL$ ($L$ est le projeté orthogonal de $F$). Or $\\overrightarrow{FL} = -\\frac{1}{6}\\,\\overrightarrow{DJ}$, donc :" },
+            { "type": "formule", "tex": "FL = \\frac{1}{6} \\times \\sqrt{2^2 + (-1)^2 + 1^2} = \\frac{\\sqrt{6}}{6}" },
+            { "type": "texte", "texte": "Le volume est le même quelle que soit la base choisie :" },
+            { "type": "formule", "tex": "\\frac{1}{3} \\times \\mathcal{A}_{BGI} \\times \\frac{\\sqrt{6}}{6} = \\frac{1}{12} \\iff \\mathcal{A}_{BGI} = \\frac{3}{12} \\times \\frac{6}{\\sqrt{6}} = \\frac{3}{2\\sqrt{6}} = \\frac{\\sqrt{6}}{4}" },
+            { "type": "reponse", "texte": "L'aire du triangle $BGI$ est $\\dfrac{\\sqrt{6}}{4} \\approx 0{,}61$ (unité d'aire)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Probabilités : 300 candidats reçus au permis, formation avec conduite accompagnée ou traditionnelle, nombre de présentations avant la réussite ; arbre, probabilités conditionnelles, loi et espérance, puis tirages répétés et algorithme de seuil.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "L'arbre part de $A$ ($\\frac{1}{4}$) et $\\overline{A}$ ($\\frac{3}{4}$), puis se ramifie en $R_1$, $R_2$ (et $R_3$ seulement après $\\overline{A}$).",
+        "$p(A \\cap R_2) = \\frac{1}{12}$, $p(R_2) = \\frac{1}{3}$, $p_{R_2}(A) = \\frac{1}{4}$.",
+        "Loi de $X$ : $\\frac{1}{2}$, $\\frac{1}{3}$, $\\frac{1}{6}$ pour 1, 2, 3 présentations ; $E(X) = \\frac{5}{3} \\approx 1{,}67$.",
+        "$1 - \\left(\\frac{5}{6}\\right)^n$ est la probabilité qu'au moins une des $n$ personnes ait réussi à la 3e présentation ; `seuil(0.9)` renvoie $13$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Modéliser la situation par un arbre pondéré.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Premier niveau : $p(A) = \\frac{75}{300} = \\frac{1}{4}$ et $p(\\overline{A}) = \\frac{225}{300} = \\frac{3}{4}$. Second niveau (probabilités conditionnelles, calculées dans chaque sous-groupe) :" },
+            {
+              "type": "tableau",
+              "entetes": ["Branche", "$R_1$", "$R_2$", "$R_3$"],
+              "lignes": [
+                ["après $A$ ($\\frac{1}{4}$)", "$p_A(R_1) = \\frac{50}{75} = \\frac{2}{3}$", "$p_A(R_2) = \\frac{25}{75} = \\frac{1}{3}$", "$0$ (pas de branche)"],
+                ["après $\\overline{A}$ ($\\frac{3}{4}$)", "$p_{\\overline{A}}(R_1) = \\frac{100}{225} = \\frac{4}{9}$", "$p_{\\overline{A}}(R_2) = \\frac{75}{225} = \\frac{1}{3}$", "$p_{\\overline{A}}(R_3) = \\frac{50}{225} = \\frac{2}{9}$"]
+              ]
+            },
+            { "type": "reponse", "texte": "L'arbre a deux branches issues de la racine ($A$ : $\\frac{1}{4}$, $\\overline{A}$ : $\\frac{3}{4}$), puis deux branches après $A$ ($R_1$ : $\\frac{2}{3}$, $R_2$ : $\\frac{1}{3}$) et trois après $\\overline{A}$ ($R_1$ : $\\frac{4}{9}$, $R_2$ : $\\frac{1}{3}$, $R_3$ : $\\frac{2}{9}$)." },
+            { "type": "attendu", "texte": "Un arbre lisible où la somme des probabilités issues de chaque nœud vaut 1. Sous $A$, personne n'a eu besoin d'une troisième présentation : deux branches suffisent." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.a",
+          "intitule": "Probabilité d'avoir suivi la conduite accompagnée et réussi à la 2e présentation.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "p(A \\cap R_2) = p(A) \\times p_A(R_2) = \\frac{1}{4} \\times \\frac{1}{3} = \\frac{1}{12}" },
+            { "type": "reponse", "texte": "$p(A \\cap R_2) = \\dfrac{1}{12}$ (contrôle : $\\frac{25}{300} = \\frac{1}{12}$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.b",
+          "intitule": "Montrer que $p(R_2) = \\frac{1}{3}$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$A$ et $\\overline{A}$ forment une partition de l'univers ; d'après la formule des probabilités totales :" },
+            { "type": "formule", "tex": "p(R_2) = p(A \\cap R_2) + p(\\overline{A} \\cap R_2) = \\frac{1}{12} + \\frac{3}{4} \\times \\frac{1}{3} = \\frac{1}{12} + \\frac{3}{12} = \\frac{1}{3}" },
+            { "type": "reponse", "texte": "$p(R_2) = \\dfrac{1}{3}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.c",
+          "intitule": "Sachant $R_2$, probabilité d'avoir suivi la conduite accompagnée.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "p_{R_2}(A) = \\frac{p(A \\cap R_2)}{p(R_2)} = \\frac{\\frac{1}{12}}{\\frac{1}{3}} = \\frac{3}{12} = \\frac{1}{4}" },
+            { "type": "reponse", "texte": "$p_{R_2}(A) = \\dfrac{1}{4}$." },
+            { "type": "astuce", "texte": "On « remonte » l'arbre : l'information connue ($R_2$) est au second niveau, on cherche le premier. C'est toujours $\\frac{p(\\text{les deux})}{p(\\text{ce qu'on sait})}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.a",
+          "intitule": "Loi de probabilité de $X$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$X$ prend les valeurs 1, 2 et 3. $p(X = 2) = p(R_2) = \\frac{1}{3}$ (question 2.b). $p(X = 3) = p(R_3) = p(\\overline{A} \\cap R_3) = \\frac{3}{4} \\times \\frac{2}{9} = \\frac{1}{6}$. $p(X = 1) = p(R_1) = \\frac{1}{4} \\times \\frac{2}{3} + \\frac{3}{4} \\times \\frac{4}{9} = \\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$." },
+            {
+              "type": "tableau",
+              "entetes": ["$k$", "$1$", "$2$", "$3$"],
+              "lignes": [["$p(X = k)$", "$\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{6}$"]]
+            },
+            { "type": "reponse", "texte": "$p(X = 1) = \\frac{1}{2}$, $p(X = 2) = \\frac{1}{3}$, $p(X = 3) = \\frac{1}{6}$ ; la somme vaut bien 1." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.b",
+          "intitule": "Espérance de $X$ et interprétation.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "E(X) = 1 \\times \\frac{1}{2} + 2 \\times \\frac{1}{3} + 3 \\times \\frac{1}{6} = \\frac{3}{6} + \\frac{4}{6} + \\frac{3}{6} = \\frac{5}{3}" },
+            { "type": "reponse", "texte": "$E(X) = \\dfrac{5}{3} \\approx 1{,}67$ : en moyenne, une personne de ce groupe s'est présentée environ 1,67 fois à l'examen avant de l'obtenir." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Un événement de probabilité $1 - \\left(\\frac{5}{6}\\right)^n$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Soit $Y$ le nombre de personnes, parmi les $n$ choisies, qui ont réussi à la troisième présentation. On répète $n$ fois, de façon indépendante (tirage avec remise), une épreuve de Bernoulli dont le succès « la personne a réussi à la 3e présentation » a pour probabilité $\\frac{1}{6}$ : $Y$ suit la loi binomiale $\\mathcal{B}\\left(n\\,;\\frac{1}{6}\\right)$." },
+            { "type": "formule", "tex": "p(Y \\geqslant 1) = 1 - p(Y = 0) = 1 - \\left(\\frac{5}{6}\\right)^n" },
+            { "type": "reponse", "texte": "$1 - \\left(\\frac{5}{6}\\right)^n$ est la probabilité qu'**au moins une** des $n$ personnes choisies ait réussi l'examen à sa troisième présentation." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Valeur renvoyée par `seuil(0.9)` et interprétation.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "La boucle s'arrête au premier $n$ tel que $1 - \\left(\\frac{5}{6}\\right)^n > 0{,}9$. On résout :" },
+            { "type": "formule", "tex": "1 - \\left(\\tfrac{5}{6}\\right)^n > 0{,}9 \\iff \\left(\\tfrac{5}{6}\\right)^n < 0{,}1 \\iff n \\ln\\left(\\tfrac{5}{6}\\right) < \\ln(0{,}1) \\iff n > \\frac{\\ln(0{,}1)}{\\ln\\left(\\frac{5}{6}\\right)}" },
+            { "type": "texte", "texte": "(stricte croissance de $\\ln$, puis division par $\\ln\\frac{5}{6} < 0$). Or $\\frac{\\ln 0{,}1}{\\ln(5/6)} \\approx 12{,}63$. Vérification : $1 - \\left(\\frac{5}{6}\\right)^{12} \\approx 0{,}888$ et $1 - \\left(\\frac{5}{6}\\right)^{13} \\approx 0{,}907$." },
+            { "type": "reponse", "texte": "`seuil(0.9)` renvoie $13$ : il faut interroger au moins 13 personnes pour que la probabilité qu'au moins l'une d'elles ait réussi à la troisième présentation dépasse $0{,}9$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-a",
+      "titre": "Exercice A (au choix)",
+      "nature": "exercice",
+      "enonce": "Au choix : lecture graphique de tangentes, puis étude de $f(x) = \\frac{2 + \\ln x}{x}$ sur $]0\\,;+\\infty[$ (limites, dérivée, variations, convexité).",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "Partie I : $f'\\left(\\frac{1}{\\mathrm{e}}\\right) = 0$ (tangente horizontale), $f'(1) = -1$, et $T_B : y = -x + 3$.",
+        "Partie II : la courbe coupe l'axe des abscisses en $\\mathrm{e}^{-2}$ ; $\\lim_{0^+} f = -\\infty$, $\\lim_{+\\infty} f = 0$.",
+        "$f'(x) = \\frac{-1 - \\ln x}{x^2}$ : $f$ croît sur $\\left]0\\,;\\frac{1}{\\mathrm{e}}\\right]$, décroît ensuite, maximum $\\mathrm{e}$.",
+        "$f$ est convexe sur $\\left[\\mathrm{e}^{-1/2}\\,;+\\infty\\right[$, soit $\\left[\\frac{1}{\\sqrt{\\mathrm{e}}}\\,;+\\infty\\right[$."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie I : lecture graphique" },
+        {
+          "type": "question",
+          "numero": "I.1",
+          "intitule": "Déterminer graphiquement $f'\\left(\\frac{1}{\\mathrm{e}}\\right)$ et $f'(1)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$f'(a)$ est le coefficient directeur de la tangente au point d'abscisse $a$. $T_A$ est parallèle à l'axe des abscisses : son coefficient directeur est nul. $T_B$ passe par $(3\\,;0)$ et $(0\\,;3)$ : son coefficient directeur est $\\frac{0 - 3}{3 - 0} = -1$." },
+            { "type": "reponse", "texte": "$f'\\left(\\frac{1}{\\mathrm{e}}\\right) = 0$ et $f'(1) = -1$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "I.2",
+          "intitule": "En déduire une équation de $T_B$.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "T_B : y = f'(1)(x - 1) + f(1) = -1 \\times (x - 1) + 2 = -x + 3" },
+            { "type": "reponse", "texte": "$T_B : y = -x + 3$ (cohérent : elle passe bien par $(0\\,;3)$ et $(3\\,;0)$)." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie II : étude de $f(x) = \\frac{2 + \\ln x}{x}$" },
+        {
+          "type": "question",
+          "numero": "II.1",
+          "intitule": "Montrer que $\\mathcal{C}_f$ passe par $A$ et $B$, et qu'elle coupe l'axe des abscisses en un point unique.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "f\\left(\\tfrac{1}{\\mathrm{e}}\\right) = \\frac{2 + \\ln(\\mathrm{e}^{-1})}{\\mathrm{e}^{-1}} = \\frac{2 - 1}{\\mathrm{e}^{-1}} = \\mathrm{e} \\qquad f(1) = \\frac{2 + 0}{1} = 2" },
+            { "type": "texte", "texte": "Donc $A\\left(\\frac{1}{\\mathrm{e}}\\,;\\mathrm{e}\\right)$ et $B(1\\,;2)$ sont sur $\\mathcal{C}_f$. Pour l'axe des abscisses, on résout $f(x) = 0$ sur $]0\\,;+\\infty[$ ; comme $x > 0$ :" },
+            { "type": "formule", "tex": "f(x) = 0 \\iff 2 + \\ln x = 0 \\iff \\ln x = -2 \\iff x = \\mathrm{e}^{-2}" },
+            { "type": "reponse", "texte": "$\\mathcal{C}_f$ passe par $A$ et $B$, et coupe l'axe des abscisses en un unique point, de coordonnées $\\left(\\mathrm{e}^{-2}\\,;0\\right)$, avec $\\mathrm{e}^{-2} \\approx 0{,}14$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "II.2",
+          "intitule": "Limites de $f$ en $0^+$ et en $+\\infty$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**En $0^+$** : $\\lim \\ln x = -\\infty$ donc $\\lim (2 + \\ln x) = -\\infty$, et $\\lim \\frac{1}{x} = +\\infty$. Par produit, $\\lim_{x \\to 0^+} f(x) = -\\infty$ (ce n'est pas une forme indéterminée)." },
+            { "type": "texte", "texte": "**En $+\\infty$** : on écrit $f(x) = \\frac{2}{x} + \\frac{\\ln x}{x}$. On a $\\lim \\frac{2}{x} = 0$ et, par croissances comparées, $\\lim \\frac{\\ln x}{x} = 0$." },
+            { "type": "reponse", "texte": "$\\displaystyle\\lim_{x \\to 0^+} f(x) = -\\infty$ (asymptote verticale d'équation $x = 0$) et $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 0$ (asymptote horizontale d'équation $y = 0$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "II.3",
+          "intitule": "Montrer que $f'(x) = \\frac{-1 - \\ln x}{x^2}$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$f = \\frac{u}{v}$ avec $u(x) = 2 + \\ln x$, $u'(x) = \\frac{1}{x}$, $v(x) = x$, $v'(x) = 1$ :" },
+            { "type": "formule", "tex": "f'(x) = \\frac{\\frac{1}{x} \\times x - (2 + \\ln x) \\times 1}{x^2} = \\frac{1 - 2 - \\ln x}{x^2} = \\frac{-1 - \\ln x}{x^2}" },
+            { "type": "reponse", "texte": "Pour tout $x > 0$, $f'(x) = \\dfrac{-1 - \\ln x}{x^2}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "II.4",
+          "intitule": "Tableau de variations de $f$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$x^2 > 0$, donc $f'(x)$ a le signe de $-1 - \\ln x$. Or $-1 - \\ln x > 0 \\iff \\ln x < -1 \\iff x < \\mathrm{e}^{-1}$ (stricte croissance de la fonction exponentielle). Donc $f' > 0$ sur $\\left]0\\,;\\frac{1}{\\mathrm{e}}\\right[$, $f'\\left(\\frac{1}{\\mathrm{e}}\\right) = 0$, $f' < 0$ sur $\\left]\\frac{1}{\\mathrm{e}}\\,;+\\infty\\right[$." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$0$", "", "$\\frac{1}{\\mathrm{e}}$", "", "$+\\infty$"],
+              "lignes": [
+                ["signe de $f'(x)$", "", "$+$", "$0$", "$-$", ""],
+                ["variations de $f$", "$-\\infty$", "croissante", "$\\mathrm{e}$", "décroissante", "$0$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$f$ est strictement croissante sur $\\left]0\\,;\\frac{1}{\\mathrm{e}}\\right]$, strictement décroissante sur $\\left[\\frac{1}{\\mathrm{e}}\\,;+\\infty\\right[$, et admet un maximum égal à $\\mathrm{e}$ en $\\frac{1}{\\mathrm{e}}$." },
+            { "type": "astuce", "texte": "Relie tes résultats à la partie I : la tangente horizontale en $A$ correspond au $f'\\left(\\frac{1}{\\mathrm{e}}\\right) = 0$ du tableau. Et $f'(1) = \\frac{-1 - 0}{1} = -1$ confirme la lecture graphique." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "II.5",
+          "intitule": "Avec $f''(x) = \\frac{1 + 2\\ln x}{x^3}$, plus grand intervalle sur lequel $f$ est convexe.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$f$ est convexe sur un intervalle où $f'' \\geqslant 0$. Sur $]0\\,;+\\infty[$, $x^3 > 0$, donc $f''(x)$ a le signe de $1 + 2\\ln x$ :" },
+            { "type": "formule", "tex": "1 + 2\\ln x \\geqslant 0 \\iff \\ln x \\geqslant -\\frac{1}{2} \\iff x \\geqslant \\mathrm{e}^{-1/2} = \\frac{1}{\\sqrt{\\mathrm{e}}}" },
+            { "type": "reponse", "texte": "$f$ est convexe sur $\\left[\\mathrm{e}^{-1/2}\\,;+\\infty\\right[$ (et concave sur $\\left]0\\,;\\mathrm{e}^{-1/2}\\right]$) ; le point d'abscisse $\\mathrm{e}^{-1/2} \\approx 0{,}61$ est un point d'inflexion." },
+            { "type": "piege", "texte": "Ne confonds pas les signes : c'est $f''$ (et non $f'$) qui décide de la convexité. Le maximum de $f$ en $\\frac{1}{\\mathrm{e}} \\approx 0{,}37$ se trouve d'ailleurs dans la zone concave, comme il se doit." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-b",
+      "titre": "Exercice B (au choix)",
+      "nature": "exercice",
+      "enonce": "Au choix : refroidissement d'une baguette modélisé par l'équation différentielle $y' + 6y = 150$, temps d'attente avant la mise en rayon, puis suite des baisses de température minute par minute.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$f(0) = 225$ ; les solutions de $y' + 6y = 150$ sont $y = C\\mathrm{e}^{-6t} + 25$ ; la condition initiale donne $f(t) = 200\\mathrm{e}^{-6t} + 25$.",
+        "Le modèle est cohérent : $f$ décroît et tend vers 25 °C, la température ambiante.",
+        "$f(t) = 40$ a une seule solution, $T_0 = \\frac{\\ln(40/3)}{6} \\approx 0{,}43$ h, soit environ 26 minutes.",
+        "$D_0 \\approx 19$ °C ; $(D_n)$ est géométrique de raison $\\mathrm{e}^{-0{,}1}$ : elle décroît vers 0, la baguette refroidit de moins en moins vite."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1.a",
+          "intitule": "Valeur de $f(0)$.",
+          "points": null,
+          "blocs": [
+            { "type": "reponse", "texte": "À la sortie du four ($t = 0$), la température est de 225 °C : $f(0) = 225$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.b",
+          "intitule": "Résoudre $y' + 6y = 150$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "L'équation s'écrit $y' = -6y + 150$, de la forme $y' = ay + b$ avec $a = -6$ et $b = 150$." },
+            { "type": "texte", "texte": "**Solution particulière constante** : $y = k$ donne $0 = -6k + 150$, soit $k = 25$." },
+            { "type": "texte", "texte": "**Équation homogène** $y' = -6y$ : ses solutions sont $t \\mapsto C\\mathrm{e}^{-6t}$, $C \\in \\mathbb{R}$." },
+            { "type": "reponse", "texte": "Les solutions de $y' + 6y = 150$ sur $[0\\,;+\\infty[$ sont les fonctions $t \\mapsto C\\mathrm{e}^{-6t} + 25$, où $C$ est un réel quelconque." },
+            { "type": "astuce", "texte": "Pour $y' = ay + b$ : solution générale = solution de l'équation homogène + une solution particulière, et la solution constante $-\\frac{b}{a}$ se trouve en posant $y' = 0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.c",
+          "intitule": "En déduire $f(t) = 200\\mathrm{e}^{-6t} + 25$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$f$ est solution, donc il existe $C$ tel que $f(t) = C\\mathrm{e}^{-6t} + 25$. Avec $f(0) = 225$ : $C + 25 = 225$, donc $C = 200$." },
+            { "type": "reponse", "texte": "Pour tout $t \\geqslant 0$, $f(t) = 200\\mathrm{e}^{-6t} + 25$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Le modèle est-il en accord avec les observations (décroissance, stabilisation à la température ambiante) ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**Décroissance** : $f'(t) = 200 \\times (-6)\\mathrm{e}^{-6t} = -1200\\mathrm{e}^{-6t} < 0$, donc $f$ est strictement décroissante sur $[0\\,;+\\infty[$." },
+            { "type": "texte", "texte": "**Limite** : $\\lim_{t \\to +\\infty} -6t = -\\infty$ et $\\lim_{X \\to -\\infty} \\mathrm{e}^X = 0$, donc par composition $\\lim \\mathrm{e}^{-6t} = 0$ et $\\lim_{t \\to +\\infty} f(t) = 25$." },
+            { "type": "reponse", "texte": "Oui : selon le modèle, la température décroît et tend vers 25 °C, la température ambiante de la boulangerie." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que $f(t) = 40$ admet une unique solution dans $[0\\,;+\\infty[$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$f$ est continue (dérivable) et strictement décroissante sur $[0\\,;+\\infty[$, avec $f(0) = 225$ et $\\lim_{+\\infty} f = 25$. Comme $40 \\in\\, ]25\\,;225]$, le corollaire du théorème des valeurs intermédiaires assure que $f(t) = 40$ a une unique solution sur $[0\\,;+\\infty[$." },
+            { "type": "texte", "texte": "On peut même la calculer :" },
+            { "type": "formule", "tex": "200\\mathrm{e}^{-6t} + 25 = 40 \\iff \\mathrm{e}^{-6t} = \\frac{15}{200} = \\frac{3}{40} \\iff -6t = \\ln\\frac{3}{40} \\iff t = \\frac{\\ln(40/3)}{6} \\approx 0{,}432" },
+            { "type": "reponse", "texte": "L'équation $f(t) = 40$ admet une unique solution sur $[0\\,;+\\infty[$, $t = \\dfrac{\\ln(40/3)}{6} \\approx 0{,}43$ h." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Lire $T_0$ sur le graphique, en nombre entier de minutes.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "On trace la droite horizontale $y = 40$ : elle coupe la courbe en un point d'abscisse proche de $0{,}43$ h. Comme $f$ est décroissante, $f(t) \\leqslant 40$ dès que $t \\geqslant T_0$. En minutes : $0{,}43 \\times 60 \\approx 26$." },
+            { "type": "reponse", "texte": "$T_0 \\approx 26$ minutes : le boulanger doit attendre environ 26 minutes avant de mettre les baguettes en rayon (le calcul exact donne $25{,}9$ min, une lecture entre 25 et 27 minutes est acceptée)." },
+            { "type": "piege", "texte": "L'axe des abscisses est gradué en HEURES : lire « 0,43 » et répondre « 43 minutes » est l'erreur classique. Multiplie par 60." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.a",
+          "intitule": "Vérifier que $D_0 \\approx 19$ à $0{,}1$ près et interpréter.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "D_0 = f(0) - f\\left(\\tfrac{1}{60}\\right) = 225 - \\left(200\\mathrm{e}^{-6/60} + 25\\right) = 200\\left(1 - \\mathrm{e}^{-0{,}1}\\right) \\approx 19{,}03" },
+            { "type": "reponse", "texte": "$D_0 \\approx 19{,}0$ : pendant la première minute après la sortie du four, la baguette perd environ 19 °C." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.b",
+          "intitule": "Vérifier que $D_n = 200\\mathrm{e}^{-0{,}1n}(1 - \\mathrm{e}^{-0{,}1})$ ; sens de variation et limite de $(D_n)$ ; était-ce prévisible ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Pour tout entier $n$, avec $6 \\times \\frac{n}{60} = 0{,}1n$ :" },
+            { "type": "formule", "tex": "D_n = \\left(200\\mathrm{e}^{-0{,}1n} + 25\\right) - \\left(200\\mathrm{e}^{-0{,}1(n+1)} + 25\\right) = 200\\mathrm{e}^{-0{,}1n} - 200\\mathrm{e}^{-0{,}1n}\\mathrm{e}^{-0{,}1} = 200\\mathrm{e}^{-0{,}1n}\\left(1 - \\mathrm{e}^{-0{,}1}\\right)" },
+            { "type": "texte", "texte": "**Sens de variation.** $D_{n+1} = \\mathrm{e}^{-0{,}1} D_n$ : $(D_n)$ est géométrique de raison $q = \\mathrm{e}^{-0{,}1}$ et de premier terme $D_0 = 200(1 - \\mathrm{e}^{-0{,}1}) > 0$. Comme $0 < q < 1$ et $D_0 > 0$, la suite est strictement décroissante (tous ses termes sont positifs et $D_{n+1} < D_n$)." },
+            { "type": "texte", "texte": "**Limite.** $0 < q < 1$ donne $\\lim q^n = 0$, donc $\\lim_{n \\to +\\infty} D_n = 0$." },
+            { "type": "reponse", "texte": "$(D_n)$ est strictement décroissante et converge vers 0. C'était prévisible : la température se stabilise à 25 °C (question 2), donc les baisses minute après minute deviennent de plus en plus petites et finissent par être négligeables." },
+            { "type": "attendu", "texte": "Trois éléments distincts : le calcul de $D_n$, le sens de variation justifié (raison entre 0 et 1 ET premier terme positif), et une phrase qui relie la limite nulle à la stabilisation de la température." }
+          ]
+        }
+      ]
+    }
+  ]
+}

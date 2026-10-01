@@ -221,14 +221,14 @@ S'y ajoutent des gestes **volontaires** — don du sang, dons aux associations, 
 | La **redistribution** — impôts progressifs, prestations | Elle réduit d'environ un **tiers** les écarts de revenus avant transferts |
 | Les **minima sociaux** et la **prime d'activité** | Ils soutiennent les bas revenus |
 | La **politique de la ville** et l'**ANCT** (2020) | Elles agissent sur les inégalités **territoriales** : quartiers prioritaires, ruralité, services publics |
-| La **loi SRU** (2000) | Un quota de **logements sociaux** — 25 % en zone tendue : un outil de **mixité sociale** |
+| La **loi SRU** (2000) | Un quota de **logements sociaux** — 20 %, porté à 25 % en 2013 (hors zones peu tendues) : un outil de **mixité sociale** |
 
 > Nuance attendue dans une copie : réduire les inégalités n'est pas supprimer les différences. La République garantit l'**égalité des droits**, et cherche à corriger les inégalités qui empêchent d'en user réellement.`,
           },
           questions: [
             ['À quel seuil la pauvreté monétaire est-elle mesurée en France ?', ['60 % du niveau de vie médian', '50 % du revenu moyen', 'Le montant du RSA', 'Le SMIC net'], 0, 'C’est la définition retenue au niveau européen.'],
             ['Que crée l’État en 2020 pour lutter contre les inégalités territoriales ?', ['L’Agence nationale de la cohésion des territoires', 'Le Défenseur des droits', 'La DILCRAH', 'Le Conseil économique et social'], 0, 'L’ANCT appuie les collectivités : quartiers prioritaires, ruralité, services publics.'],
-            ['Que vise la loi SRU de 2000 ?', ['Imposer un quota de logements sociaux aux communes', 'Créer le RSA', 'Fixer le SMIC', 'Interdire les discriminations à l’embauche'], 0, 'Jusqu’à 25 % dans les zones tendues : un levier de mixité sociale.'],
+            ['Que vise la loi SRU de 2000 ?', ['Imposer un quota de logements sociaux aux communes', 'Créer le RSA', 'Fixer le SMIC', 'Interdire les discriminations à l’embauche'], 0, '20 % en 2000, porté à 25 % en 2013 dans les zones tendues : un levier de mixité sociale.'],
             ['Le niveau de vie médian et le revenu moyen désignent la même chose.', ['Vrai', 'Faux'], 1, 'Le médian partage la population en deux moitiés ; la moyenne est tirée par les hauts revenus.'],
             ['Quel effet la redistribution a-t-elle sur les écarts de revenus ?', ['Elle les réduit d’environ un tiers', 'Elle les supprime', 'Elle les augmente', 'Elle est sans effet mesurable'], 0, 'Impôts progressifs et prestations sociales agissent ensemble.'],
             ['Pourquoi les inégalités menacent-elles la démocratie ?', ['Elles minent la confiance et creusent l’écart de participation', 'Elles empêchent d’organiser des élections', 'Elles suppriment le droit de vote', 'Elles rendent la Constitution caduque'], 0, 'L’abstention est plus forte dans les milieux populaires, ce qui déforme la représentation.'],
@@ -584,7 +584,7 @@ L'ajout de « décentralisée » à l'article 1er date de la révision de **2003
 ## Comment devient-on français
 | La voie | Sa condition |
 | **Droit du sang** | Au moins un **parent français**, où que l'enfant naisse |
-| **Droit du sol** | Né en France de parents étrangers, français **à 18 ans** s'il y réside depuis ses 11 ans (5 ans au moins) ; anticipation possible à 16 ou 13 ans |
+| **Droit du sol** | Né en France de parents étrangers, français **à 18 ans** s'il y réside et y a résidé au moins cinq ans depuis l'âge de 11 ans ; anticipation possible à 16 ou 13 ans |
 | **Double droit du sol** | Né en France d'un parent lui-même né en France : français **dès la naissance** |
 | **Naturalisation** | Par décret, après en principe **5 ans** de résidence régulière, sous conditions d'intégration : langue, droits et devoirs, valeurs de la République |
 | **Par mariage** | Par déclaration, après **4 ans** de vie commune |
@@ -605,7 +605,7 @@ Instituée par le traité de **Maastricht** (1992), elle **complète** la citoye
           },
           questions: [
             ['Sur quoi repose le droit du sang ?', ['La nationalité d’au moins un parent', 'Le lieu de naissance', 'La durée de résidence', 'Le mariage'], 0, 'L’enfant est français où qu’il naisse.'],
-            ['À quel âge l’enfant né en France de parents étrangers devient-il français de plein droit ?', ['À 18 ans, sous condition de résidence', 'À la naissance', 'À 13 ans', 'Jamais sans naturalisation'], 0, 'Il doit résider en France depuis l’âge de 11 ans, au moins 5 ans.'],
+            ['À quel âge l’enfant né en France de parents étrangers devient-il français de plein droit ?', ['À 18 ans, sous condition de résidence', 'À la naissance', 'À 13 ans', 'Jamais sans naturalisation'], 0, 'Il doit résider en France et y avoir résidé au moins cinq ans depuis l’âge de 11 ans.'],
             ['Après combien d’années de résidence régulière peut-on en principe demander la naturalisation ?', ['5 ans', '2 ans', '10 ans', '15 ans'], 0, 'Des réductions existent, notamment pour les diplômés d’un établissement français.'],
             ['Quel traité institue la citoyenneté européenne ?', ['Le traité de Maastricht (1992)', 'Le traité de Rome (1957)', 'Le traité de Lisbonne (2007)', 'L’Acte unique (1986)'], 0, 'Elle complète la citoyenneté nationale sans la remplacer.'],
             ['Un citoyen européen résidant en France peut voter aux élections présidentielles françaises.', ['Vrai', 'Faux'], 1, 'Il vote aux municipales et aux européennes, pas aux élections nationales.'],

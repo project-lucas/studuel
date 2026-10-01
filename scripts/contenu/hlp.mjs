@@ -165,7 +165,7 @@ Une bonne copie se reconnaît à ce que sa troisième partie **ne pouvait pas** 
 ## L’écriture de soi
 | Œuvre | Ce qu’elle inaugure |
 | Les *Confessions* de saint **Augustin** | L’aveu comme chemin vers la vérité |
-| Les *Confessions* de **Rousseau** | L’autobiographie moderne, sans instance divine |
+| Les *Confessions* de **Rousseau** | L’autobiographie moderne : le moi raconté devant les hommes, même si le préambule invoque l’« Être éternel » |
 | Le journal, le mémoire | Le moi écrit au présent, sans recul |
 
 Se raconter, c’est aussi se construire : le récit **sélectionne**, ordonne, justifie. D’où la question du chapitre — l’autobiographie dit-elle le moi, ou le fabrique-t-elle ?

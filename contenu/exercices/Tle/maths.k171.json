@@ -1,0 +1,3310 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le digicode du local à vélos",
+      "competence": "resoudre",
+      "situation": "Le local à vélos du lycée s’ouvre avec un code de 3 lettres, affiché sur le panneau de la porte. Zoé se demande combien de codes existent.",
+      "documents": [
+        {
+          "id": "panneau",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Local à vélos",
+          "sousTitre": "Digicode",
+          "emoji": "🔐",
+          "lignes": [
+            {
+              "texte": "Code : 3 lettres",
+              "id": "lettres",
+              "gras": true
+            },
+            {
+              "texte": "Lettres autorisées : A B C D E",
+              "id": "alpha"
+            },
+            {
+              "texte": "Une même lettre peut servir plusieurs fois",
+              "id": "rep"
+            }
+          ],
+          "pied": "Panneau imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "panneau",
+          "enonce": "Touche la ligne qui dit si l’on peut répéter une lettre.",
+          "reponse": [
+            "rep"
+          ],
+          "aide": "Cherche la ligne qui parle d’« une même lettre ».",
+          "explication": "La ligne **« Une même lettre peut servir plusieurs fois »** : on tire avec répétition, c’est un k-uplet."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de codes différents existe-t-il ?",
+          "reponse": 125,
+          "aide": "Pour chacune des 3 positions, il y a 5 lettres possibles.",
+          "explication": "Ordre important, répétition permise : 5 × 5 × 5 = 5³ = **125** codes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si le code devait avoir **trois lettres toutes différentes**, combien y en aurait-il ?",
+          "reponse": 60,
+          "aide": "Première lettre : 5 choix. Deuxième : il en reste 4. Troisième : il en reste 3.",
+          "explication": "5 × 4 × 3 = **60** codes : c’est un arrangement de 3 parmi 5."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Parmi les 125 codes avec répétition, combien **commencent par A** ?",
+          "reponse": 25,
+          "aide": "Le A est imposé en première position : il reste deux positions libres.",
+          "explication": "Il reste 5 × 5 = 5² = **25** codes."
+        }
+      ]
+    },
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Bureau ou comité ?",
+      "competence": "raisonner",
+      "situation": "Le conseil de vie lycéenne compte 8 élèves volontaires. On veut en choisir 3, mais la façon de les choisir change tout.",
+      "documents": [
+        {
+          "id": "situations",
+          "type": "tableau",
+          "titre": "Trois façons de choisir",
+          "colonnes": [
+            "Situation",
+            "L’ordre compte ?",
+            "Répétition ?"
+          ],
+          "lignes": [
+            [
+              "Bureau : un président, un secrétaire, un trésorier (parmi les 8)",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Comité de 3 élèves, tous au même rang (parmi les 8)",
+              "Non",
+              "Non"
+            ],
+            [
+              "Code de 3 chiffres (de 0 à 9)",
+              "Oui",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situations imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque situation à la formule qui la dénombre.",
+          "paires": [
+            [
+              "Le bureau de 3 élèves",
+              "Arrangement : 8 × 7 × 6"
+            ],
+            [
+              "Le comité de 3 élèves",
+              "Combinaison : C(8 ; 3)"
+            ],
+            [
+              "Le code de 3 chiffres",
+              "k-uplet : 10³"
+            ]
+          ],
+          "aide": "Regarde les deux colonnes du tableau : l’ordre compte-t-il, peut-on répéter ?",
+          "explication": "Ordre **sans** répétition : arrangement. **Ni** ordre **ni** répétition : combinaison. Ordre **avec** répétition : k-uplet."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de bureaux différents peut-on former ?",
+          "reponse": 336,
+          "aide": "Président : 8 choix, puis secrétaire : 7, puis trésorier : 6.",
+          "explication": "8 × 7 × 6 = **336** bureaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de comités différents peut-on former ? C(8 ; 3) = 8 × 7 × 6 ÷ (3 × 2 × 1).",
+          "reponse": 56,
+          "aide": "Divise le nombre de bureaux par le nombre de façons de ranger 3 élèves.",
+          "explication": "336 ÷ 6 = **56** comités."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un même comité de 3 élèves donne combien de bureaux différents ?",
+          "reponse": 6,
+          "aide": "C’est le nombre de façons d’ordonner 3 élèves : 3!.",
+          "explication": "On peut ordonner 3 élèves de 3! = 3 × 2 × 1 = **6** façons : d’où 336 = 56 × 6."
+        }
+      ]
+    },
+    {
+      "chapitre": "f20dac2d-fbed-5fd9-b5e8-5c7f81516210",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le triangle et le jeton marqué",
+      "competence": "modeliser",
+      "situation": "Hugo remplit le triangle de Pascal : la case de la ligne n et de la colonne k contient C(n ; k). Il lui manque deux cases de la ligne 5.",
+      "documents": [
+        {
+          "id": "pascal",
+          "type": "tableau",
+          "titre": "Extrait du triangle de Pascal",
+          "colonnes": [
+            "n",
+            "k = 0",
+            "k = 1",
+            "k = 2",
+            "k = 3",
+            "k = 4",
+            "k = 5"
+          ],
+          "lignes": [
+            [
+              "3",
+              1,
+              3,
+              3,
+              1,
+              "–",
+              "–"
+            ],
+            [
+              "4",
+              1,
+              4,
+              6,
+              4,
+              1,
+              "–"
+            ],
+            [
+              "5",
+              1,
+              5,
+              "?",
+              "?",
+              5,
+              1
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Les tirets marquent des cases qui n’existent pas"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » de la ligne 5, colonne k = 2 : C(5 ; 2) = C(4 ; 1) + C(4 ; 2).",
+          "reponse": 10,
+          "aide": "Additionne les deux cases de la ligne 4 situées juste au-dessus : celle de k = 1 et celle de k = 2.",
+          "explication": "C(5 ; 2) = 4 + 6 = **10** (relation de Pascal)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un sac contient 6 jetons dont **un jeton marqué**. Combien de choix de 3 jetons **contiennent le jeton marqué** ? (Il reste à choisir 2 jetons parmi les 5 autres.)",
+          "reponse": 10,
+          "aide": "Le jeton marqué est déjà pris : choisis 2 jetons parmi 5.",
+          "explication": "C(5 ; 2) = **10**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et combien de choix de 3 jetons **ne contiennent pas** le jeton marqué ?",
+          "reponse": 10,
+          "aide": "Choisis 3 jetons parmi les 5 autres jetons.",
+          "explication": "C(5 ; 3) = **10**, par symétrie avec C(5 ; 2)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au total, combien de choix de 3 jetons parmi les 6 ? Additionne les deux cas.",
+          "reponse": 20,
+          "aide": "Un choix contient le jeton marqué, ou ne le contient pas.",
+          "explication": "10 + 10 = **20** = C(6 ; 3) : c’est la relation de Pascal C(6 ; 3) = C(5 ; 2) + C(5 ; 3)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la somme des nombres de la **ligne 5** du triangle (1, 5, 10, 10, 5, 1) ?",
+          "reponse": 32,
+          "aide": "Additionne les six nombres.",
+          "explication": "1 + 5 + 10 + 10 + 5 + 1 = **32** = 2⁵ : c’est le nombre de parties d’un ensemble à 5 éléments."
+        }
+      ]
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le cube du hall",
+      "competence": "geometrie",
+      "situation": "Une sculpture en forme de cube d’arête 4 m est posée dans un hall. On place un repère d’origine A, avec les vecteurs AB, AD et AE (un repère orthonormé, l’unité est le mètre).",
+      "documents": [
+        {
+          "id": "cube",
+          "type": "schema",
+          "titre": "Le cube ABCDEFGH (le dessin est en perspective)",
+          "largeur": 290,
+          "hauteur": 270,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                235
+              ],
+              "a": [
+                170,
+                235
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                235
+              ],
+              "a": [
+                170,
+                115
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                115
+              ],
+              "a": [
+                50,
+                115
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                115
+              ],
+              "a": [
+                50,
+                235
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                115
+              ],
+              "a": [
+                110,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                115
+              ],
+              "a": [
+                230,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                235
+              ],
+              "a": [
+                230,
+                195
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                75
+              ],
+              "a": [
+                230,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                230,
+                75
+              ],
+              "a": [
+                230,
+                195
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                235
+              ],
+              "a": [
+                110,
+                195
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                195
+              ],
+              "a": [
+                230,
+                195
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                195
+              ],
+              "a": [
+                110,
+                75
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 50,
+              "cy": 235,
+              "r": 11,
+              "motif": "clair",
+              "id": "A",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 235,
+              "r": 11,
+              "motif": "clair",
+              "id": "B",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 115,
+              "r": 11,
+              "motif": "clair",
+              "id": "F",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 50,
+              "cy": 115,
+              "r": 11,
+              "motif": "clair",
+              "id": "E",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 110,
+              "cy": 195,
+              "r": 11,
+              "motif": "clair",
+              "id": "D",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 195,
+              "r": 11,
+              "motif": "clair",
+              "id": "C",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 75,
+              "r": 11,
+              "motif": "clair",
+              "id": "G",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 110,
+              "cy": 75,
+              "r": 11,
+              "motif": "clair",
+              "id": "H",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 34,
+              "y": 254,
+              "texte": "A",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 186,
+              "y": 254,
+              "texte": "B",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 188,
+              "y": 112,
+              "texte": "F",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 112,
+              "texte": "E",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 94,
+              "y": 206,
+              "texte": "D",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 248,
+              "y": 206,
+              "texte": "C",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 248,
+              "y": 72,
+              "texte": "G",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 94,
+              "y": 72,
+              "texte": "H",
+              "ancre": "milieu",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "reper",
+          "type": "tableau",
+          "titre": "Coordonnées de quatre sommets",
+          "colonnes": [
+            "Point",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "A",
+              0,
+              0,
+              0
+            ],
+            [
+              "B",
+              4,
+              0,
+              0
+            ],
+            [
+              "D",
+              0,
+              4,
+              0
+            ],
+            [
+              "E",
+              0,
+              0,
+              4
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cube",
+          "enonce": "Touche le sommet **F**.",
+          "reponse": [
+            "F"
+          ],
+          "aide": "F est juste au-dessus de B.",
+          "explication": "F est au-dessus de B : c’est le sommet de la face avant, en haut à droite."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **cote** (z) du point H ? (H est au-dessus de D.)",
+          "reponse": 4,
+          "aide": "H a les mêmes x et y que D, mais il est monté de 4.",
+          "explication": "H(0 ; 4 ; 4) : sa cote est **4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**ordonnée** du milieu de [BG] ? (B(4 ; 0 ; 0) et G(4 ; 4 ; 4)).",
+          "reponse": 2,
+          "aide": "Fais la moyenne des ordonnées de B et de G.",
+          "explication": "Milieu : (4 ; 2 ; 2). L’ordonnée est **2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur de la grande diagonale AG, arrondie au centième de mètre : √(4² + 4² + 4²).",
+          "reponse": 6.93,
+          "unite": "m",
+          "tolerance": 0.01,
+          "aide": "AG = 4√3.",
+          "explication": "AG = √48 = 4√3 ≈ **6,93 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois vecteurs dans un même plan ?",
+      "competence": "raisonner",
+      "situation": "Un drone reçoit trois consignes de déplacement, notées u, v et w. On veut savoir si w se décompose sur u et v, c’est-à-dire si les trois vecteurs sont coplanaires.",
+      "documents": [
+        {
+          "id": "vect",
+          "type": "tableau",
+          "titre": "Les déplacements (repère orthonormé)",
+          "colonnes": [
+            "Vecteur",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "u",
+              1,
+              0,
+              2
+            ],
+            [
+              "v",
+              0,
+              1,
+              1
+            ],
+            [
+              "w",
+              3,
+              2,
+              8
+            ],
+            [
+              "t",
+              3,
+              2,
+              9
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "On cherche a et b tels que w = a u + b v. Quelle est la valeur de **a** ? (Regarde la coordonnée x.)",
+          "reponse": 3,
+          "aide": "Seul u a une abscisse non nulle : x(w) = a × x(u).",
+          "explication": "x : 3 = a × 1 + b × 0, donc a = **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur de **b** ? (Regarde la coordonnée y.)",
+          "reponse": 2,
+          "aide": "Seul v a une ordonnée non nulle.",
+          "explication": "y : 2 = a × 0 + b × 1, donc b = **2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec a = 3 et b = 2, quelle cote z obtient-on pour a u + b v ?",
+          "reponse": 8,
+          "aide": "z = a × 2 + b × 1.",
+          "explication": "z = 3 × 2 + 2 × 1 = **8**, comme la cote de w : u, v et w sont coplanaires."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le vecteur t a les mêmes x et y que w, mais sa cote est 9. Que dire de u, v et t ?",
+          "options": [
+            "Ils sont non coplanaires : la décomposition donnerait une cote de 8, pas de 9",
+            "Ils sont coplanaires, car leurs abscisses et leurs ordonnées sont positives",
+            "Ils sont coplanaires, car t est très proche de w : seule sa cote diffère",
+            "Ils sont colinéaires, car 9 est un multiple de 3 : les cotes sont proportionnelles"
+          ],
+          "reponse": 0,
+          "aide": "Refais la décomposition : les valeurs de a et b sont imposées par x et y.",
+          "explication": "Pour t, x et y imposent a = 3 et b = 2, donc z devrait valoir 8. Comme z = 9, t **ne se décompose pas** sur u et v : les trois vecteurs ne sont pas coplanaires."
+        }
+      ]
+    },
+    {
+      "chapitre": "72d62d94-88e8-56e3-9b16-a7fef50e3e55",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le parallélogramme dans l’espace",
+      "competence": "geometrie",
+      "situation": "Trois points A, B et C sont donnés dans un repère orthonormé. On cherche un quatrième point D pour que ABCD soit un parallélogramme, puis on contrôle que les quatre points sont dans un même plan.",
+      "documents": [
+        {
+          "id": "pts",
+          "type": "tableau",
+          "titre": "Les points",
+          "colonnes": [
+            "Point",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "A",
+              1,
+              0,
+              2
+            ],
+            [
+              "B",
+              3,
+              1,
+              0
+            ],
+            [
+              "C",
+              4,
+              3,
+              1
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Coordonnées imaginées pour l’exercice"
+        },
+        {
+          "id": "meth",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Rappel",
+          "blocs": [
+            "ABCD est un parallélogramme si et seulement si AB = DC (mêmes coordonnées).",
+            "Le milieu de [AC] est alors aussi le milieu de [BD]."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **cote** du vecteur AB ? (AB = B − A.)",
+          "reponse": -2,
+          "aide": "Cote de B moins cote de A : 0 − 2.",
+          "explication": "AB(2 ; 1 ; −2) : la cote est **−2**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Détermine D pour que AB = DC. On a D = A + C − B. Complète les coordonnées de D.",
+          "texte": "D ( ___ ; ___ ; ___ )",
+          "reponses": [
+            [
+              "2"
+            ],
+            [
+              "2"
+            ],
+            [
+              "3"
+            ]
+          ],
+          "aide": "Abscisse : 1 + 4 − 3. Puis fais de même pour y et z.",
+          "explication": "x : 1 + 4 − 3 = 2 ; y : 0 + 3 − 1 = 2 ; z : 2 + 1 − 0 = 3. Donc D(**2 ; 2 ; 3**)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la longueur AB, en unités du repère.",
+          "reponse": 3,
+          "aide": "Le repère est orthonormé : √(2² + 1² + (−2)²).",
+          "explication": "AB = √(4 + 1 + 4) = √9 = **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**ordonnée** du milieu de [AC] ? (Elle doit être celle du milieu de [BD].)",
+          "reponse": 1.5,
+          "aide": "Moyenne des ordonnées de A et de C.",
+          "explication": "(0 + 3) ÷ 2 = **1,5**. Pour [BD] : (1 + 2) ÷ 2 = 1,5 aussi."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les points A, B, C, D sont-ils dans un même plan ?",
+          "options": [
+            "Oui : AD = BC, donc AD se décompose sur AB et BC",
+            "Non : dans l’espace, quatre points ne sont jamais coplanaires",
+            "Non : D n’a pas les mêmes coordonnées que A",
+            "On ne peut pas le savoir sans faire un dessin"
+          ],
+          "reponse": 0,
+          "aide": "Si ABCD est un parallélogramme, AD = BC.",
+          "explication": "Comme AB = DC, on a AD = BC. Le vecteur AD est combinaison de AB et BC : les trois vecteurs sont **coplanaires**, donc A, B, C, D aussi."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois câbles tendus",
+      "competence": "geometrie",
+      "situation": "Trois câbles rectilignes d1, d2 et d3 sont tendus dans une salle. Pour chacun, on connaît un point et un vecteur directeur dans un repère orthonormé.",
+      "documents": [
+        {
+          "id": "cables",
+          "type": "tableau",
+          "titre": "Les trois droites",
+          "colonnes": [
+            "Droite",
+            "Un point",
+            "Vecteur directeur"
+          ],
+          "lignes": [
+            [
+              "d1",
+              "A(0 ; 0 ; 0)",
+              "(1 ; 2 ; 3)"
+            ],
+            [
+              "d2",
+              "B(1 ; 1 ; 1)",
+              "(2 ; 4 ; 6)"
+            ],
+            [
+              "d3",
+              "C(0 ; 0 ; 1)",
+              "(1 ; 0 ; 1)"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le vecteur directeur de d2 est égal à k fois celui de d1. Quelle est la valeur de k ?",
+          "reponse": 2,
+          "aide": "Compare (2 ; 4 ; 6) et (1 ; 2 ; 3).",
+          "explication": "(2 ; 4 ; 6) = 2 × (1 ; 2 ; 3) : k = **2**. Les droites d1 et d2 sont parallèles ou confondues."
+        },
+        {
+          "type": "choix",
+          "enonce": "B(1 ; 1 ; 1) appartient-il à d1 ? Que dire de d1 et d2 ?",
+          "options": [
+            "B n’est pas sur d1 (t = 1 donne x = 1 mais y = 2) : elles sont strictement parallèles",
+            "B est sur d1 (le point obtenu pour t = 1 est bien B) : elles sont donc confondues",
+            "B n’est pas sur d1 (t = 1 donne y = 2) : elles sont donc sécantes en un point",
+            "B est sur d1, car ses coordonnées sont toutes égales à 1 : elles sont sécantes"
+          ],
+          "reponse": 0,
+          "aide": "Un point de d1 s’écrit (t ; 2t ; 3t). Cherche t avec x = 1.",
+          "explication": "Avec x = 1, t = 1 donne (1 ; 2 ; 3), pas (1 ; 1 ; 1). Directeurs colinéaires et B hors de d1 : d1 et d2 sont **strictement parallèles**."
+        },
+        {
+          "type": "zone",
+          "document": "cables",
+          "enonce": "Touche la droite dont le vecteur directeur **n’est pas colinéaire** à celui de d1.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Cherche un vecteur qui n’est pas un multiple de (1 ; 2 ; 3).",
+          "explication": "(1 ; 0 ; 1) n’est pas un multiple de (1 ; 2 ; 3) : c’est **d3**. Elle est alors sécante à d1 ou non coplanaire avec elle : il faudrait résoudre un système."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La droite qui perce le plan",
+      "competence": "resoudre",
+      "situation": "Un plan P d’équation x + y − z = 2 et trois droites d1, d2, d3 sont donnés dans un repère orthonormé. Pour chaque droite, on cherche combien de points elle a en commun avec P.",
+      "documents": [
+        {
+          "id": "droites",
+          "type": "tableau",
+          "titre": "Trois droites (t décrit l’ensemble des réels)",
+          "colonnes": [
+            "Droite",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "d1",
+              "1 + t",
+              "t",
+              "2t"
+            ],
+            [
+              "d2",
+              "t",
+              "1 + t",
+              "2t − 1"
+            ],
+            [
+              "d3",
+              "2t",
+              "1",
+              "t"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Droites imaginées pour l’exercice"
+        },
+        {
+          "id": "plan",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le plan",
+          "blocs": [
+            "P : x + y − z = 2.",
+            "Vecteur normal : n(1 ; 1 ; −1)."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le produit scalaire de n(1 ; 1 ; −1) avec le vecteur directeur de **d1**, (1 ; 1 ; 2).",
+          "reponse": 0,
+          "aide": "Produit scalaire : 1 × 1 + 1 × 1 + (−1) × 2.",
+          "explication": "1 + 1 − 2 = **0** : d1 est parallèle à P (incluse ou strictement parallèle)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour **d3**, remplace x, y, z dans l’équation du plan : 2t + 1 − t = 2. Quelle valeur de t obtiens-tu ?",
+          "reponse": 1,
+          "aide": "L’équation devient t + 1 = 2.",
+          "explication": "t + 1 = 2, donc t = **1** : d3 coupe le plan en un seul point."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **cote** du point d’intersection de d3 et de P ? (Remplace t par 1.)",
+          "reponse": 1,
+          "aide": "z = t.",
+          "explication": "Pour t = 1 : (2 ; 1 ; 1). La cote est **1**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque droite au résultat de la substitution dans l’équation du plan, puis à sa position.",
+          "paires": [
+            [
+              "d1 : on obtient 1 = 2",
+              "strictement parallèle au plan"
+            ],
+            [
+              "d2 : on obtient 2 = 2",
+              "incluse dans le plan"
+            ],
+            [
+              "d3 : on obtient t = 1",
+              "sécante au plan"
+            ]
+          ],
+          "aide": "Une égalité fausse : aucun point. Une égalité toujours vraie : tous les points. Une valeur de t : un seul point.",
+          "explication": "**1 = 2** : aucun point commun. **2 = 2** : vrai pour tout t, la droite est incluse. **t = 1** : un seul point commun."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b5567c9-0b32-5d26-a4fa-d7917c98e09d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le prisme des trois plans",
+      "competence": "raisonner",
+      "situation": "Trois plans P1, P2, P3 sont donnés par leurs équations. On cherche leurs points communs, puis on remplace P3 par un plan voisin P3′.",
+      "documents": [
+        {
+          "id": "plans",
+          "type": "tableau",
+          "titre": "Les plans",
+          "colonnes": [
+            "Plan",
+            "Équation",
+            "Vecteur normal"
+          ],
+          "lignes": [
+            [
+              "P1",
+              "x + y = 1",
+              "(1 ; 1 ; 0)"
+            ],
+            [
+              "P2",
+              "y + z = 1",
+              "(0 ; 1 ; 1)"
+            ],
+            [
+              "P3",
+              "x − z = 1",
+              "(1 ; 0 ; −1)"
+            ],
+            [
+              "P3′",
+              "x − z = 0",
+              "(1 ; 0 ; −1)"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Plans imaginés pour l’exercice"
+        },
+        {
+          "id": "astuce",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Indice",
+          "blocs": [
+            "On peut retrancher deux équations pour éliminer une inconnue."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "En retranchant P2 à P1, on obtient une équation en x et z : x − z = …. Quel est le second membre ?",
+          "reponse": 0,
+          "aide": "P1 − P2 : (x + y) − (y + z) = 1 − 1.",
+          "explication": "(x + y) − (y + z) = x − z, et 1 − 1 = **0** : x − z = 0."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points communs ont les trois plans P1, P2 et P3 ?",
+          "reponse": 0,
+          "aide": "Tout point commun à P1 et P2 vérifie x − z = 0. Compare avec P3.",
+          "explication": "P3 demande x − z = 1, ce qui contredit x − z = 0 : il y a **0** point commun."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les trois plans n’ont aucun point commun, mais deux à deux ils se coupent. Quelle est cette configuration ?",
+          "options": [
+            "Le prisme : les trois droites d’intersection sont parallèles et distinctes",
+            "Trois plans strictement parallèles, sans aucune intersection deux à deux",
+            "Trois plans qui se coupent en un seul point, comme les faces d’un coin",
+            "Trois plans qui ont une droite commune, comme les pages d’un livre"
+          ],
+          "reponse": 0,
+          "aide": "Observe les vecteurs normaux : n3 = n1 − n2, ils sont coplanaires.",
+          "explication": "Les normaux sont coplanaires (n3 = n1 − n2) sans que le système ait de solution : les plans se coupent deux à deux selon trois droites parallèles, c’est le **prisme**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec P3′ (x − z = 0) à la place de P3, les trois plans ont une droite commune : x = t, y = 1 − t, z = t. Quelle est l’**ordonnée** de son point d’abscisse 2 ?",
+          "reponse": -1,
+          "aide": "y = 1 − x.",
+          "explication": "x = t = 2 donne y = 1 − 2 = **−1**. Et on retrouve z = 2."
+        }
+      ]
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois vecteurs et leurs produits",
+      "competence": "calculer",
+      "situation": "En repère orthonormé, on étudie trois vecteurs de l’espace. On calcule des produits scalaires pour repérer une orthogonalité.",
+      "documents": [
+        {
+          "id": "vecs",
+          "type": "tableau",
+          "titre": "Les vecteurs",
+          "colonnes": [
+            "Vecteur",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "u",
+              2,
+              -1,
+              3
+            ],
+            [
+              "v",
+              1,
+              4,
+              2
+            ],
+            [
+              "w",
+              2,
+              1,
+              -1
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le produit scalaire u · v.",
+          "reponse": 4,
+          "aide": "x x′ + y y′ + z z′ = 2 × 1 + (−1) × 4 + 3 × 2.",
+          "explication": "u · v = 2 − 4 + 6 = **4**."
+        },
+        {
+          "type": "zone",
+          "document": "vecs",
+          "enonce": "Touche le vecteur **orthogonal à u**.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Calcule u · v puis u · w : cherche celui qui donne 0.",
+          "explication": "u · w = 2 × 2 + (−1) × 1 + 3 × (−1) = 4 − 1 − 3 = **0** : w est orthogonal à u (alors que u · v = 4 ≠ 0)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule ‖w‖², c’est-à-dire w · w.",
+          "reponse": 6,
+          "aide": "Additionne les carrés des coordonnées de w.",
+          "explication": "w · w = 2² + 1² + (−1)² = 4 + 1 + 1 = **6**."
+        }
+      ]
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La distance au plan",
+      "competence": "modeliser",
+      "situation": "Dans un repère orthonormé, un panneau solaire est modélisé par le plan P : 2x − 2y + z + 3 = 0. Un capteur est placé en M(3 ; 1 ; 2). On veut sa distance au panneau, puis son projeté H.",
+      "documents": [
+        {
+          "id": "sch",
+          "type": "schema",
+          "titre": "M, son projeté H et le plan P (schéma non à l’échelle)",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  50,
+                  200
+                ],
+                [
+                  250,
+                  200
+                ],
+                [
+                  310,
+                  150
+                ],
+                [
+                  110,
+                  150
+                ]
+              ],
+              "motif": "clair",
+              "id": "plan",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 280,
+              "y": 190,
+              "texte": "P",
+              "gras": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190,
+                50
+              ],
+              "a": [
+                190,
+                175
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 190,
+              "cy": 50,
+              "r": 10,
+              "motif": "clair",
+              "id": "M",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 190,
+              "cy": 175,
+              "r": 10,
+              "motif": "clair",
+              "id": "H",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 168,
+              "y": 54,
+              "texte": "M",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 210,
+              "y": 178,
+              "texte": "H",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "don",
+          "type": "tableau",
+          "titre": "Les données",
+          "colonnes": [
+            "Objet",
+            "Donnée"
+          ],
+          "lignes": [
+            [
+              "Plan P",
+              "2x − 2y + z + 3 = 0"
+            ],
+            [
+              "Capteur M",
+              "M(3 ; 1 ; 2)"
+            ],
+            [
+              "Zone de portée",
+              "Sphère de centre M et de rayon 4"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sch",
+          "enonce": "Touche le **projeté orthogonal** de M sur le plan.",
+          "reponse": [
+            "H"
+          ],
+          "aide": "C’est le point du plan le plus proche de M.",
+          "explication": "Le projeté orthogonal est le point **H** du plan, tel que (MH) soit perpendiculaire à P."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la norme du vecteur normal n(2 ; −2 ; 1) ?",
+          "reponse": 3,
+          "aide": "√(2² + (−2)² + 1²).",
+          "explication": "√(4 + 4 + 1) = √9 = **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la distance de M à P : |2 × 3 − 2 × 1 + 2 + 3| ÷ 3.",
+          "reponse": 3,
+          "tolerance": 0.001,
+          "aide": "Le numérateur vaut |6 − 2 + 2 + 3|.",
+          "explication": "|9| ÷ 3 = **3**."
+        },
+        {
+          "type": "trous",
+          "enonce": "H = M − (9 ÷ 9) × n. Complète les coordonnées du projeté H.",
+          "texte": "H ( ___ ; ___ ; ___ )",
+          "reponses": [
+            [
+              "1"
+            ],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "aide": "H = (3 ; 1 ; 2) − 1 × (2 ; −2 ; 1).",
+          "explication": "H = (3 − 2 ; 1 + 2 ; 2 − 1) = (**1 ; 3 ; 1**). Contrôle : 2 − 6 + 1 + 3 = 0, donc H est bien dans P."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La sphère de centre M et de rayon 4 coupe P selon un cercle. Quel est son rayon, arrondi au centième ? (r = √(4² − 3²))",
+          "reponse": 2.65,
+          "tolerance": 0.01,
+          "aide": "Distance 3, rayon 4 : √(16 − 9).",
+          "explication": "r = √7 ≈ **2,65**."
+        }
+      ]
+    },
+    {
+      "chapitre": "93c682d4-75de-5757-a8c6-0e5b811a1676",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une diagonale normale à un plan",
+      "competence": "geometrie",
+      "situation": "Dans le cube ABCDEFGH d’arête 1, le repère est (A ; AB, AD, AE), orthonormé. On montre que la diagonale (AG) est perpendiculaire au plan (BDE), puis on calcule une distance.",
+      "documents": [
+        {
+          "id": "cube",
+          "type": "schema",
+          "titre": "Le cube ABCDEFGH",
+          "largeur": 290,
+          "hauteur": 270,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                235
+              ],
+              "a": [
+                170,
+                235
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                235
+              ],
+              "a": [
+                170,
+                115
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                115
+              ],
+              "a": [
+                50,
+                115
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                115
+              ],
+              "a": [
+                50,
+                235
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                115
+              ],
+              "a": [
+                110,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                115
+              ],
+              "a": [
+                230,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                235
+              ],
+              "a": [
+                230,
+                195
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                75
+              ],
+              "a": [
+                230,
+                75
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                230,
+                75
+              ],
+              "a": [
+                230,
+                195
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                235
+              ],
+              "a": [
+                110,
+                195
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                195
+              ],
+              "a": [
+                230,
+                195
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                195
+              ],
+              "a": [
+                110,
+                75
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 50,
+              "cy": 235,
+              "r": 11,
+              "motif": "clair",
+              "id": "A",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 235,
+              "r": 11,
+              "motif": "clair",
+              "id": "B",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 115,
+              "r": 11,
+              "motif": "clair",
+              "id": "F",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 50,
+              "cy": 115,
+              "r": 11,
+              "motif": "clair",
+              "id": "E",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 110,
+              "cy": 195,
+              "r": 11,
+              "motif": "clair",
+              "id": "D",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 195,
+              "r": 11,
+              "motif": "clair",
+              "id": "C",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 230,
+              "cy": 75,
+              "r": 11,
+              "motif": "clair",
+              "id": "G",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 110,
+              "cy": 75,
+              "r": 11,
+              "motif": "clair",
+              "id": "H",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 34,
+              "y": 254,
+              "texte": "A",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 186,
+              "y": 254,
+              "texte": "B",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 188,
+              "y": 112,
+              "texte": "F",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 112,
+              "texte": "E",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 94,
+              "y": 206,
+              "texte": "D",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 248,
+              "y": 206,
+              "texte": "C",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 248,
+              "y": 72,
+              "texte": "G",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 94,
+              "y": 72,
+              "texte": "H",
+              "ancre": "milieu",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "coord",
+          "type": "tableau",
+          "titre": "Les sommets",
+          "colonnes": [
+            "Point",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "A",
+              0,
+              0,
+              0
+            ],
+            [
+              "B",
+              1,
+              0,
+              0
+            ],
+            [
+              "D",
+              0,
+              1,
+              0
+            ],
+            [
+              "E",
+              0,
+              0,
+              1
+            ],
+            [
+              "G",
+              1,
+              1,
+              1
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule AG · BD, avec AG(1 ; 1 ; 1) et BD(−1 ; 1 ; 0).",
+          "reponse": 0,
+          "aide": "1 × (−1) + 1 × 1 + 1 × 0.",
+          "explication": "−1 + 1 + 0 = **0**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule AG · BE, avec BE(−1 ; 0 ; 1).",
+          "reponse": 0,
+          "aide": "1 × (−1) + 1 × 0 + 1 × 1.",
+          "explication": "−1 + 0 + 1 = **0**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure pour la droite (AG) et le plan (BDE) ?",
+          "options": [
+            "(AG) est orthogonale à deux vecteurs non colinéaires de (BDE) : elle lui est perpendiculaire",
+            "(AG) est parallèle à (BDE), car son produit scalaire avec deux vecteurs du plan est nul",
+            "(AG) est incluse dans (BDE), car son produit scalaire avec deux de ses vecteurs est nul",
+            "On ne peut rien conclure avec seulement deux produits scalaires, il en faudrait au moins trois"
+          ],
+          "reponse": 0,
+          "aide": "BD et BE ne sont pas colinéaires.",
+          "explication": "AG est orthogonal à BD et BE, deux vecteurs directeurs non colinéaires du plan : **AG est normal à (BDE)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le plan (BDE) a pour équation x + y + z + d = 0 (vecteur normal AG). Quelle est la valeur de d ? (B(1 ; 0 ; 0) est dans le plan.)",
+          "reponse": -1,
+          "aide": "Remplace x, y, z par les coordonnées de B.",
+          "explication": "1 + 0 + 0 + d = 0, donc d = **−1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la distance de A au plan (BDE), arrondie au centième : |0 + 0 + 0 − 1| ÷ √3.",
+          "reponse": 0.58,
+          "tolerance": 0.01,
+          "aide": "Divise 1 par √3 ≈ 1,732.",
+          "explication": "1 ÷ √3 ≈ **0,58**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La trajectoire du drone",
+      "competence": "modeliser",
+      "situation": "Un drone se déplace en ligne droite. À l’instant t (en secondes), sa position est donnée par x = 2 + t, y = 1 − 2t, z = 3 + 3t, dans un repère orthonormé.",
+      "documents": [
+        {
+          "id": "pos",
+          "type": "tableau",
+          "titre": "Position du drone",
+          "colonnes": [
+            "t",
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "lignes": [
+            [
+              "x",
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              "y",
+              1,
+              -1,
+              -3,
+              -5
+            ],
+            [
+              "z",
+              3,
+              6,
+              9,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs calculées à partir des équations"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : quelle est la cote z du drone à t = 3 ?",
+          "reponse": 12,
+          "aide": "z = 3 + 3t.",
+          "explication": "z = 3 + 3 × 3 = **12**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est un vecteur directeur de la trajectoire ?",
+          "options": [
+            "(1 ; −2 ; 3)",
+            "(2 ; 1 ; 3)",
+            "(2 ; 1 ; 0)",
+            "(3 ; −1 ; 6)"
+          ],
+          "reponse": 0,
+          "aide": "Ce sont les coefficients de t dans x, y, z.",
+          "explication": "Les coefficients de t sont 1, −2 et 3 : le vecteur directeur est **(1 ; −2 ; 3)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avant le départ, le drone était en t = −1. Quelle était sa cote z ?",
+          "reponse": 0,
+          "aide": "Remplace t par −1 dans z = 3 + 3t.",
+          "explication": "z = 3 − 3 = **0** : il était au sol, en (1 ; 3 ; 0)."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le plan du toit et la corde",
+      "competence": "resoudre",
+      "situation": "Un toit plan passe par A(1 ; 1 ; 2) et a pour vecteur normal n(2 ; 1 ; −1). Une corde rectiligne d le traverse. On cherche l’équation du toit, puis le point de contact.",
+      "documents": [
+        {
+          "id": "points",
+          "type": "tableau",
+          "titre": "Quelques points à tester",
+          "colonnes": [
+            "Point",
+            "x",
+            "y",
+            "z"
+          ],
+          "lignes": [
+            [
+              "B",
+              2,
+              0,
+              3
+            ],
+            [
+              "C",
+              0,
+              3,
+              1
+            ],
+            [
+              "D",
+              1,
+              -1,
+              0
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Coordonnées imaginées pour l’exercice"
+        },
+        {
+          "id": "corde",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La corde d",
+          "blocs": [
+            "x = 1 + t",
+            "y = 2t",
+            "z = −t"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le plan a pour équation 2x + y − z + d = 0. Quelle est la valeur de d ? (A est dans le plan.)",
+          "reponse": -1,
+          "aide": "Remplace x, y, z par 1, 1, 2.",
+          "explication": "2 + 1 − 2 + d = 0, donc d = **−1**."
+        },
+        {
+          "type": "zone",
+          "document": "points",
+          "enonce": "Touche **tous** les points qui appartiennent au toit.",
+          "reponse": [
+            "r0c0",
+            "r2c0"
+          ],
+          "multiple": true,
+          "aide": "Remplace les coordonnées dans 2x + y − z − 1 : il faut obtenir 0.",
+          "explication": "B : 4 + 0 − 3 − 1 = 0 ✓. C : 0 + 3 − 1 − 1 = 1 ✗. D : 2 − 1 − 0 − 1 = 0 ✓. Ce sont **B et D**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Remplace x, y, z de la corde dans 2x + y − z − 1 = 0 : 1 + 5t = 0. Quelle est la valeur de t ?",
+          "reponse": -0.2,
+          "aide": "5t = −1.",
+          "explication": "t = −1 ÷ 5 = **−0,2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’**abscisse** du point de contact ? (Remplace t dans x = 1 + t.)",
+          "reponse": 0.8,
+          "aide": "1 + (−0,2).",
+          "explication": "x = 1 − 0,2 = **0,8**. Le point de contact est (0,8 ; −0,4 ; 0,2)."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c1482bb-6fae-5c91-afbf-f084d8967ecf",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’intersection de deux plans",
+      "competence": "modeliser",
+      "situation": "Deux plans P : x + y + z = 3 et Q : 2x − y + z = 3 se coupent selon une droite d. On cherche une représentation paramétrique de d, puis on la confronte à un troisième plan.",
+      "documents": [
+        {
+          "id": "plans",
+          "type": "tableau",
+          "titre": "Les plans",
+          "colonnes": [
+            "Plan",
+            "Équation"
+          ],
+          "lignes": [
+            [
+              "P",
+              "x + y + z = 3"
+            ],
+            [
+              "Q",
+              "2x − y + z = 3"
+            ],
+            [
+              "R",
+              "x + y − z = 0"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Plans imaginés pour l’exercice"
+        },
+        {
+          "id": "meth",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Méthode",
+          "blocs": [
+            "On additionne P et Q pour éliminer y : 3x + 2z = 6.",
+            "On pose z = 3t : alors x = 2 − 2t, puis on reporte dans P pour trouver y."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "En posant z = 3t et x = 2 − 2t, on trouve y = 1 − t. Complète les équations de d.",
+          "texte": "x = 2 − ___ t ; y = 1 − ___ t ; z = ___ t",
+          "reponses": [
+            [
+              "2"
+            ],
+            [
+              "1"
+            ],
+            [
+              "3"
+            ]
+          ],
+          "aide": "Lis le coefficient de t dans chaque coordonnée : x = 2 − 2t, y = 1 − t, z = 3t.",
+          "explication": "x = 2 − **2**t, y = 1 − **1**t, z = **3**t : vecteur directeur (−2 ; −1 ; 3)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Prends le point de d obtenu pour t = 2 : (−2 ; −1 ; 6). Calcule 2x − y + z pour ce point.",
+          "reponse": 3,
+          "aide": "2 × (−2) − (−1) + 6.",
+          "explication": "−4 + 1 + 6 = **3** : le point vérifie bien l’équation de Q (et x + y + z = 3 pour P)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour trouver où d perce le plan R : x + y − z = 0, remplace par (2 − 2t) + (1 − t) − 3t = 3 − 6t = 0. Quelle est la valeur de t ?",
+          "reponse": 0.5,
+          "aide": "6t = 3.",
+          "explication": "t = 3 ÷ 6 = **0,5** : un seul point, d est sécante à R."
+        },
+        {
+          "type": "choix",
+          "enonce": "La droite d′ : x = 2 + 4s, y = 1 + 2s, z = −6s est-elle la même droite que d ?",
+          "options": [
+            "Oui : (4 ; 2 ; −6) est colinéaire au vecteur directeur de d, et (2 ; 1 ; 0) est sur d",
+            "Non : les paramètres portent des noms différents, donc ce sont deux droites distinctes",
+            "Non : leurs vecteurs directeurs ont des coordonnées différentes, donc les droites diffèrent",
+            "Oui : elles passent toutes les deux par l’origine du repère, donc elles sont confondues"
+          ],
+          "reponse": 0,
+          "aide": "Deux étapes : colinéarité des directeurs, puis un point de l’une sur l’autre.",
+          "explication": "(4 ; 2 ; −6) = −2 × (−2 ; −1 ; 3), et (2 ; 1 ; 0) est sur d pour t = 0 : c’est **la même droite**."
+        }
+      ]
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La suite qui double",
+      "competence": "raisonner",
+      "situation": "Une suite est définie par u₀ = 0 et, pour tout entier n, u(n+1) = 2 u(n) + 1. Emma calcule les premiers termes et cherche une formule.",
+      "documents": [
+        {
+          "id": "suite",
+          "type": "tableau",
+          "titre": "Les premiers termes",
+          "colonnes": [
+            "n",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "lignes": [
+            [
+              "u(n)",
+              0,
+              1,
+              3,
+              7,
+              15,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Calculés avec u(n+1) = 2 u(n) + 1"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : quelle est la valeur de u₅ ?",
+          "reponse": 31,
+          "aide": "u₅ = 2 × u₄ + 1.",
+          "explication": "u₅ = 2 × 15 + 1 = **31**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle formule explicite semble convenir ? (Teste-la sur les termes du tableau.)",
+          "options": [
+            "Deux puissance n, moins un",
+            "Deux fois n, moins un",
+            "n au carré, moins un",
+            "n plus un, moins un"
+          ],
+          "reponse": 0,
+          "aide": "Essaie 2⁰ − 1, 2¹ − 1, 2² − 1 : retrouves-tu 0, 1, 3 ?",
+          "explication": "2⁰ − 1 = 0, 2¹ − 1 = 1, 2² − 1 = 3, 2³ − 1 = 7 : la formule est **u(n) = 2ⁿ − 1**. C’est une conjecture, à démontrer par récurrence."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes de la démonstration par récurrence de « u(n) = 2ⁿ − 1 ».",
+          "items": [
+            "Initialisation : u₀ = 0 = 2⁰ − 1, la propriété est vraie au rang 0",
+            "Hérédité : on suppose u(n) = 2ⁿ − 1 pour un entier n fixé",
+            "On calcule u(n+1) = 2 u(n) + 1 = 2 (2ⁿ − 1) + 1 = 2ⁿ⁺¹ − 1",
+            "Conclusion : par récurrence, u(n) = 2ⁿ − 1 pour tout entier n"
+          ],
+          "aide": "On vérifie d’abord le premier rang, puis on suppose, on démontre, et on conclut.",
+          "explication": "**Initialisation, hypothèse, calcul du rang suivant, conclusion** : c’est l’ordre d’une rédaction de récurrence."
+        }
+      ]
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand 2ⁿ dépasse n²",
+      "competence": "raisonner",
+      "situation": "Lina veut démontrer par récurrence que 2ⁿ > n² pour tous les entiers n à partir d’un certain rang. Elle commence par comparer les deux quantités dans un tableau.",
+      "documents": [
+        {
+          "id": "vals",
+          "type": "tableau",
+          "titre": "Comparaison de 2ⁿ et de n²",
+          "colonnes": [
+            "n",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "lignes": [
+            [
+              "2ⁿ",
+              2,
+              4,
+              8,
+              16,
+              32,
+              64
+            ],
+            [
+              "n²",
+              1,
+              4,
+              9,
+              16,
+              25,
+              36
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "À partir de quel entier n₀ la propriété 2ⁿ > n² devient-elle vraie et le reste-t-elle sur le tableau ? (Regarde les colonnes 2, 3, 4, 5.)",
+          "reponse": 5,
+          "aide": "Elle est fausse pour n = 2, 3 et 4.",
+          "explication": "Pour n = 2, 3, 4 : 4 = 4, 8 < 9, 16 = 16. À partir de n = 5 : 32 > 25, 64 > 36 : **n₀ = 5**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Initialisation : calcule 2⁵ − 5² pour n = 5.",
+          "reponse": 7,
+          "aide": "2⁵ = 32 et 5² = 25.",
+          "explication": "32 − 25 = **7**, qui est positif : P(5) est vraie."
+        },
+        {
+          "type": "trous",
+          "enonce": "Hérédité : on suppose 2ⁿ > n² avec n ≥ 5. Complète le début de la démonstration.",
+          "texte": "2ⁿ⁺¹ = 2 × 2ⁿ > 2 × ___, puis on montre que 2n² ≥ (___)².",
+          "reponses": [
+            [
+              "n²"
+            ],
+            [
+              "n+1"
+            ]
+          ],
+          "banque": [
+            "n²",
+            "n",
+            "n+1",
+            "n−1",
+            "2n²"
+          ],
+          "aide": "On applique l’hypothèse de récurrence, puis on veut retrouver le carré du rang n+1.",
+          "explication": "2ⁿ⁺¹ > 2 × **n²**, et il reste à prouver 2n² ≥ (**n+1**)². L’hypothèse de récurrence a bien servi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "2n² ≥ (n+1)² équivaut à n² − 2n − 1 ≥ 0. Quel est le plus petit entier n ≥ 1 qui le vérifie ?",
+          "reponse": 3,
+          "aide": "Teste n = 1, 2, 3.",
+          "explication": "n = 1 : −2 ; n = 2 : −1 ; n = 3 : 9 − 6 − 1 = 2 ≥ 0. Donc dès **n = 3**, donc a fortiori pour tout n ≥ 5."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ne peut-on pas commencer la récurrence à n = 2 ?",
+          "options": [
+            "Parce que P(2) est fausse : 4 > 4 est faux",
+            "Parce que 2 est un nombre pair",
+            "Parce que l’hérédité est fausse pour n = 2",
+            "Parce qu’il faut toujours commencer à 5"
+          ],
+          "reponse": 0,
+          "aide": "L’initialisation doit être une vraie égalité ou inégalité.",
+          "explication": "L’initialisation exige que P(n₀) soit **vraie**. Or P(2) s’écrit 4 > 4, ce qui est faux."
+        }
+      ]
+    },
+    {
+      "chapitre": "3faa7e32-0960-5c88-99af-42ab86d5497c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une suite qui reste sous 2",
+      "competence": "modeliser",
+      "situation": "Une suite est définie par u₀ = 1 et u(n+1) = √(2 + u(n)). On veut montrer que tous ses termes restent inférieurs ou égaux à 2, puis trouver sa limite.",
+      "documents": [
+        {
+          "id": "termes",
+          "type": "tableau",
+          "titre": "Les premiers termes (arrondis au millième)",
+          "colonnes": [
+            "n",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "lignes": [
+            [
+              "u(n)",
+              1,
+              1.732,
+              1.932,
+              1.983,
+              1.996
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Calculés avec u(n+1) = √(2 + u(n))"
+        },
+        {
+          "id": "plan",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les étapes du raisonnement",
+          "blocs": [
+            "1. Par récurrence : u(n) ≤ 2 pour tout n.",
+            "2. Si la suite converge vers ℓ, alors ℓ = √(2 + ℓ)."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "termes",
+          "enonce": "Touche le **premier terme** strictement supérieur à 1,99.",
+          "reponse": [
+            "r0c5"
+          ],
+          "aide": "Cherche, de gauche à droite, le premier nombre plus grand que 1,99.",
+          "explication": "u₃ = 1,983 < 1,99 et u₄ = 1,996 > 1,99 : c’est **u₄**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range l’hérédité de « u(n) ≤ 2 ».",
+          "items": [
+            "On suppose que u(n) ≤ 2",
+            "On ajoute 2 : 2 + u(n) ≤ 4",
+            "La racine carrée est croissante : √(2 + u(n)) ≤ √4",
+            "Donc u(n+1) ≤ 2"
+          ],
+          "aide": "Pars de l’hypothèse et avance vers u(n+1) en appliquant la même opération aux deux membres.",
+          "explication": "Hypothèse, ajout de 2, passage à la racine carrée (croissante), conclusion : **u(n+1) ≤ 2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si u(n) tend vers ℓ, alors ℓ = √(2 + ℓ), donc ℓ² = ℓ + 2. Quelle est la solution **positive** de cette équation ?",
+          "reponse": 2,
+          "aide": "Teste ℓ = 1, puis ℓ = 2.",
+          "explication": "ℓ² − ℓ − 2 = 0 a pour solutions −1 et **2** : la limite positive est 2. Elle colle aux valeurs du tableau."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi faut-il démontrer d’abord que la suite converge avant de résoudre ℓ = √(2 + ℓ) ?",
+          "options": [
+            "Parce que l’équation ne donne la limite que si elle existe : on prouve l’existence avant",
+            "Parce que l’équation n’a aucune solution réelle, donc on ne peut pas calculer la limite",
+            "Parce que la récurrence donne directement la limite, sans rien avoir à démontrer avant",
+            "Parce qu’une suite bornée converge toujours, donc il suffit de prouver qu’elle est bornée"
+          ],
+          "reponse": 0,
+          "aide": "Et si la suite n’avait pas de limite ?",
+          "explication": "Résoudre ℓ = f(ℓ) suppose que ℓ **existe**. On le garantit avant (croissance et majoration), puis on calcule."
+        }
+      ]
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une suite qui se rapproche de 3",
+      "competence": "lire-graphique",
+      "situation": "Soit la suite u(n) = 3 + 2 ÷ n. Le graphique donne quelques-uns de ses termes.",
+      "documents": [
+        {
+          "id": "g",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Quelques termes de u(n)",
+          "categories": [
+            "n = 1",
+            "n = 2",
+            "n = 4",
+            "n = 5",
+            "n = 10"
+          ],
+          "series": [
+            {
+              "nom": "u(n)",
+              "valeurs": [
+                5,
+                4,
+                3.5,
+                3.4,
+                3.2
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "u(n)",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Rang n"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "g",
+          "enonce": "Touche le terme le **plus petit** du graphique.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre la plus basse.",
+          "explication": "La barre la plus basse est celle de **n = 10** : u(10) = 3,2. La suite décroît."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Vers quelle valeur la suite tend-elle quand n devient très grand ?",
+          "reponse": 3,
+          "aide": "2 ÷ n devient aussi petit qu’on veut.",
+          "explication": "Quand n grandit, 2 ÷ n tend vers 0, donc u(n) tend vers **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À partir de quel rang n a-t-on u(n) < 3,25 ? (Il faut 2 ÷ n < 0,25.)",
+          "reponse": 9,
+          "aide": "Teste n = 8 puis n = 9 : 2 ÷ 8 = 0,25.",
+          "explication": "u(8) = 3,25 (pas strictement inférieur), u(9) ≈ 3,22 : dès **n = 9**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La voiture qui se déprécie",
+      "competence": "modeliser",
+      "situation": "Une voiture neuve vaut 15 000 euros et perd 20 % de sa valeur chaque année : sa valeur après n années est 15 000 × 0,8ⁿ. Le tableau compare plusieurs suites géométriques.",
+      "documents": [
+        {
+          "id": "q",
+          "type": "tableau",
+          "titre": "Premiers termes de qⁿ",
+          "colonnes": [
+            "Raison q",
+            "q⁰",
+            "q¹",
+            "q²",
+            "q³"
+          ],
+          "lignes": [
+            [
+              "1,5",
+              1,
+              1.5,
+              2.25,
+              3.375
+            ],
+            [
+              "0,6",
+              1,
+              0.6,
+              0.36,
+              0.216
+            ],
+            [
+              "−1,2",
+              1,
+              -1.2,
+              1.44,
+              -1.728
+            ],
+            [
+              "1",
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque raison au comportement de qⁿ quand n tend vers +∞.",
+          "paires": [
+            [
+              "q = 1,5",
+              "tend vers +∞"
+            ],
+            [
+              "q = 0,6",
+              "tend vers 0"
+            ],
+            [
+              "q = −1,2",
+              "n’a pas de limite"
+            ],
+            [
+              "q = 1",
+              "est constante"
+            ]
+          ],
+          "aide": "Compare q à −1 et à 1 : plus grand que 1, entre −1 et 1, ou inférieur ou égal à −1 ?",
+          "explication": "**q > 1 : +∞** ; **−1 < q < 1 : 0** ; **q ≤ −1 : pas de limite** (signes alternés qui grossissent) ; **q = 1 : constante**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur de la voiture après 3 ans, en euros ? (15 000 × 0,8³)",
+          "reponse": 7680,
+          "unite": "€",
+          "aide": "0,8³ = 0,512.",
+          "explication": "15 000 × 0,512 = **7 680 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien d’années la voiture vaut-elle pour la première fois **moins de 2 000 €** ? (0,8⁹ ≈ 0,134 ; 0,8¹⁰ ≈ 0,107)",
+          "reponse": 10,
+          "aide": "Calcule 15 000 × 0,8⁹ puis 15 000 × 0,8¹⁰.",
+          "explication": "15 000 × 0,8⁹ ≈ 2 013 €, encore au-dessus. 15 000 × 0,8¹⁰ ≈ 1 611 € : dès la **10e année**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devient la valeur de la voiture à très long terme ?",
+          "options": [
+            "Elle tend vers 0 sans jamais l’atteindre, tout en restant positive",
+            "Elle finit par devenir négative au bout d’un nombre d’années suffisant",
+            "Elle tend vers +∞ quand le nombre d’années devient très grand",
+            "Elle se stabilise à 2 000 € quand le nombre d’années devient grand"
+          ],
+          "reponse": 0,
+          "aide": "La raison 0,8 est entre −1 et 1.",
+          "explication": "Comme 0,8 est entre −1 et 1, 0,8ⁿ **tend vers 0** tout en restant strictement positif."
+        }
+      ]
+    },
+    {
+      "chapitre": "9799d754-7a7f-5d34-b6cb-2305991e635c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le théorème des gendarmes à l’œuvre",
+      "competence": "raisonner",
+      "situation": "Soit la suite u(n) = 2 + (−1)ⁿ ÷ n : elle oscille un peu autour de 2. On veut déterminer son comportement, puis celui d’une suite voisine.",
+      "documents": [
+        {
+          "id": "u",
+          "type": "tableau",
+          "titre": "Les premiers termes de u(n)",
+          "colonnes": [
+            "n",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "lignes": [
+            [
+              "u(n)",
+              1,
+              2.5,
+              "?",
+              2.25,
+              1.8
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "u(3) est à calculer"
+        },
+        {
+          "id": "v",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Une suite voisine",
+          "blocs": [
+            "v(n) = n + (−1)ⁿ.",
+            "Comme (−1)ⁿ ≥ −1, on a v(n) ≥ n − 1."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule u(3), arrondi au centième. (u(3) = 2 − 1 ÷ 3)",
+          "reponse": 1.67,
+          "tolerance": 0.01,
+          "aide": "(−1)³ = −1.",
+          "explication": "u(3) = 2 − 1/3 ≈ **1,67**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel encadrement est vrai pour tout n ≥ 1 ?",
+          "options": [
+            "Pour tout n ≥ 1 : 2 − 1/n ≤ u(n) ≤ 2 + 1/n, donc u(n) tend vers 2",
+            "Pour tout n ≥ 1 : 2 ≤ u(n) ≤ 2 + 1/n, donc u(n) reste au-dessus de 2",
+            "Pour tout n ≥ 1 : u(n) ≤ 2 − 1/n, donc la suite reste sous 2",
+            "Pour tout n ≥ 1 : 1/n ≤ u(n) ≤ 2, donc u(n) reste dans [0 ; 2]"
+          ],
+          "reponse": 0,
+          "aide": "Comme (−1)ⁿ vaut 1 ou −1, (−1)ⁿ/n est entre −1/n et 1/n.",
+          "explication": "Comme −1 ≤ (−1)ⁿ ≤ 1, on a −1/n ≤ (−1)ⁿ/n ≤ 1/n, donc **2 − 1/n ≤ u(n) ≤ 2 + 1/n**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la limite commune de 2 − 1/n et de 2 + 1/n quand n tend vers +∞ ?",
+          "reponse": 2,
+          "aide": "1/n tend vers 0.",
+          "explication": "1/n tend vers 0, donc les deux suites tendent vers **2**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclut-on pour u(n) ?",
+          "options": [
+            "Elle converge vers 2 (théorème des gendarmes)",
+            "Elle n’a pas de limite, car (−1)ⁿ n’en a pas",
+            "Elle diverge, car elle oscille",
+            "Elle converge vers 0"
+          ],
+          "reponse": 0,
+          "aide": "Les deux bornes ont la même limite.",
+          "explication": "Encadrée par deux suites qui tendent vers 2, u(n) **converge vers 2** : (−1)ⁿ/n tend vers 0 malgré l’oscillation de (−1)ⁿ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour v(n) ≥ n − 1, à partir de quel rang n est-on certain d’avoir v(n) ≥ 1 000 ?",
+          "reponse": 1001,
+          "aide": "Il suffit que n − 1 ≥ 1 000.",
+          "explication": "n − 1 ≥ 1 000 équivaut à n ≥ **1 001**. Par minoration, v(n) tend vers +∞."
+        }
+      ]
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une courbe qui se pose",
+      "competence": "lire-graphique",
+      "situation": "On étudie la fonction f définie pour x > 0 par f(x) = 2 + 3 ÷ x. Le graphique donne quelques valeurs.",
+      "documents": [
+        {
+          "id": "c",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Courbe de f",
+          "categories": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "series": [
+            {
+              "nom": "f(x)",
+              "valeurs": [
+                5,
+                3.5,
+                3,
+                2.75,
+                2.6,
+                2.5
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "f(x)",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "x"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la courbe la valeur de f(2).",
+          "reponse": 3.5,
+          "tolerance": 0.1,
+          "aide": "Repère l’abscisse 2 puis lis l’ordonnée.",
+          "explication": "f(2) = 2 + 3/2 = **3,5**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Vers quelle valeur f(x) tend-elle quand x tend vers +∞ ? (Le graphique suggère une asymptote horizontale.)",
+          "reponse": 2,
+          "aide": "3 ÷ x tend vers 0.",
+          "explication": "3/x tend vers 0, donc f(x) tend vers **2** : la droite y = 2 est asymptote horizontale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour x > 0, à partir de quelle valeur entière de x a-t-on f(x) < 2,1 ? (Il faut 3 ÷ x < 0,1.)",
+          "reponse": 31,
+          "aide": "x > 3 ÷ 0,1 = 30.",
+          "explication": "x > 30, donc le premier entier est **31** : f(31) = 2 + 3/31 ≈ 2,097."
+        }
+      ]
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Asymptote verticale, asymptote horizontale",
+      "competence": "analyser-document",
+      "situation": "On étudie f(x) = (2x + 1) ÷ (x − 3). La fonction n’est pas définie en 3. Le tableau donne des valeurs autour de 3 et très loin.",
+      "documents": [
+        {
+          "id": "vals",
+          "type": "tableau",
+          "titre": "Valeurs de f",
+          "colonnes": [
+            "x",
+            "3,1",
+            "3,01",
+            "3,001",
+            "100",
+            "1 000"
+          ],
+          "lignes": [
+            [
+              "f(x)",
+              72,
+              702,
+              7002,
+              2.072,
+              2.007
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies à 10⁻³"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule f(3,01), d’après la formule (numérateur 7,02 ; dénominateur 0,01).",
+          "reponse": 702,
+          "aide": "7,02 ÷ 0,01.",
+          "explication": "7,02 ÷ 0,01 = **702**, comme dans le tableau."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la limite de f(x) quand x tend vers 3 par valeurs **supérieures** à 3 ?",
+          "options": [
+            "Plus l’infini",
+            "Moins l’infini",
+            "Deux",
+            "Elle n’existe pas"
+          ],
+          "reponse": 0,
+          "aide": "Numérateur proche de 7, dénominateur positif et proche de 0.",
+          "explication": "Le numérateur tend vers 7 > 0 et le dénominateur vers 0 par valeurs positives : le quotient tend vers **+∞**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la limite de f(x) quand x tend vers +∞ ?",
+          "reponse": 2,
+          "aide": "Quotient des termes de plus haut degré : 2x ÷ x.",
+          "explication": "2x ÷ x = **2**. Le tableau le confirme : 2,072 puis 2,007."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque droite à son rôle pour la courbe de f.",
+          "paires": [
+            [
+              "La droite x = 3",
+              "asymptote verticale"
+            ],
+            [
+              "La droite y = 2",
+              "asymptote horizontale"
+            ]
+          ],
+          "aide": "Une limite infinie en 3 donne une asymptote verticale ; une limite finie en +∞ une asymptote horizontale.",
+          "explication": "f tend vers ±∞ en 3 : **x = 3 est asymptote verticale**. f tend vers 2 en +∞ : **y = 2 est asymptote horizontale**."
+        }
+      ]
+    },
+    {
+      "chapitre": "af251c40-2b54-507c-80d7-7c0f8f05b1f3",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une asymptote oblique",
+      "competence": "raisonner",
+      "situation": "Soit f(x) = (x² + x + 1) ÷ x = x + 1 + 1 ÷ x pour x > 0. On compare la courbe de f à la droite d : y = x + 1.",
+      "documents": [
+        {
+          "id": "ecart",
+          "type": "tableau",
+          "titre": "Écart entre f(x) et x + 1",
+          "colonnes": [
+            "x",
+            "10",
+            "100",
+            "1 000"
+          ],
+          "lignes": [
+            [
+              "f(x)",
+              11.1,
+              101.01,
+              1001.001
+            ],
+            [
+              "x + 1",
+              11,
+              101,
+              1001
+            ],
+            [
+              "f(x) − (x + 1)",
+              0.1,
+              "?",
+              0.001
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs exactes"
+        },
+        {
+          "id": "meth",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Rappel",
+          "blocs": [
+            "d : y = ax + b est asymptote oblique si f(x) − (ax + b) tend vers 0 en +∞."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : quel est l’écart f(100) − 101 ?",
+          "reponse": 0.01,
+          "aide": "101,01 − 101.",
+          "explication": "101,01 − 101 = **0,01**. L’écart vaut 1 ÷ x."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la limite de f(x) ÷ x quand x tend vers +∞ ? (f(x) ÷ x = 1 + 1/x + 1/x².)",
+          "reponse": 1,
+          "aide": "1/x et 1/x² tendent vers 0.",
+          "explication": "f(x) ÷ x tend vers **1** : le coefficient directeur de l’asymptote est 1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’équation de l’asymptote oblique de la courbe en +∞ ?",
+          "options": [
+            "y = x + 1",
+            "y = x",
+            "y = 1",
+            "y = x + 2"
+          ],
+          "reponse": 0,
+          "aide": "f(x) − (x + 1) = 1/x tend vers 0.",
+          "explication": "f(x) − (x + 1) = 1/x tend vers 0 : l’asymptote est **y = x + 1**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour x > 0, la courbe est-elle au-dessus ou au-dessous de cette asymptote ?",
+          "options": [
+            "Au-dessus, car pour x > 0 la différence f(x) − (x + 1) = 1/x est positive",
+            "Au-dessous, car la différence 1/x est très petite et tend vers 0 quand x grandit",
+            "Elle la coupe en x = 1, puisque c’est là que 1/x atteint la valeur 1",
+            "Elle est confondue avec elle, puisque 1/x tend vers 0 quand x grandit"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le signe de f(x) − (x + 1).",
+          "explication": "f(x) − (x + 1) = 1/x > 0 pour x > 0 : la courbe est **au-dessus** de l’asymptote."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que vaut la limite de f(x) quand x tend vers 0 par valeurs positives ?",
+          "options": [
+            "Plus l’infini",
+            "Moins l’infini",
+            "Un",
+            "Zéro"
+          ],
+          "reponse": 0,
+          "aide": "Le terme 1/x devient énorme et positif.",
+          "explication": "Quand x tend vers 0⁺, 1/x tend vers +∞ et le reste vers 1 : f tend vers **+∞**. La droite x = 0 est asymptote verticale."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Reconnaître u et u′",
+      "competence": "calculer",
+      "situation": "Pour dériver une composée, on repère d’abord la fonction intérieure u, puis on calcule u′. Le tableau donne quatre fonctions avec leur u et leur u′.",
+      "documents": [
+        {
+          "id": "u",
+          "type": "tableau",
+          "titre": "Fonctions, u et u′",
+          "colonnes": [
+            "Fonction",
+            "u(x)",
+            "u′(x)"
+          ],
+          "lignes": [
+            [
+              "e^(3x)",
+              "3x",
+              "3"
+            ],
+            [
+              "ln(2x + 1)",
+              "2x + 1",
+              "2"
+            ],
+            [
+              "(x² + 1)³",
+              "x² + 1",
+              "2x"
+            ],
+            [
+              "√(x + 1)",
+              "x + 1",
+              "1"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque fonction à sa dérivée.",
+          "paires": [
+            [
+              "Exponentielle de 3x",
+              "3 e^(3x)"
+            ],
+            [
+              "Logarithme de 2x + 1",
+              "2 / (2x + 1)"
+            ],
+            [
+              "Cube de x² + 1",
+              "6x (x² + 1)²"
+            ],
+            [
+              "Racine de x + 1",
+              "1 / (2√(x + 1))"
+            ]
+          ],
+          "aide": "Formules : (e^u)′ = u′ e^u ; (ln u)′ = u′/u ; (uⁿ)′ = n u′ uⁿ⁻¹ ; (√u)′ = u′/(2√u).",
+          "explication": "On applique u′ e^u, u′/u, n u′ uⁿ⁻¹ et u′/(2√u) avec les u et u′ du tableau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Soit f(x) = e^(2x + 1). Calcule f′(0), arrondi au centième.",
+          "reponse": 5.44,
+          "tolerance": 0.01,
+          "aide": "f′(x) = 2 e^(2x + 1) ; e ≈ 2,718.",
+          "explication": "f′(0) = 2 e ≈ **5,44**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Élise écrit (e^(3x))′ = e^(3x). Quelle est son erreur ?",
+          "options": [
+            "Elle oublie de multiplier par u′ = 3",
+            "Elle oublie de prendre le logarithme",
+            "Elle dérive la mauvaise fonction extérieure",
+            "Il n’y a pas d’erreur"
+          ],
+          "reponse": 0,
+          "aide": "Dérivée d’une composée : on multiplie par la dérivée de l’intérieur.",
+          "explication": "La dérivée de e^u est u′ e^u. Ici u′ = 3 : (e^(3x))′ = **3 e^(3x)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Soit h(x) = (x² + 1)³. Calcule h′(1).",
+          "reponse": 24,
+          "aide": "h′(x) = 6x (x² + 1)².",
+          "explication": "h′(1) = 6 × 1 × 2² = **24**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La cloche qui se déforme",
+      "competence": "lire-graphique",
+      "situation": "Une fonction en forme de cloche est définie sur ℝ par f(x) = e^(−x²). On l’étudie en dérivant une composée.",
+      "documents": [
+        {
+          "id": "cloche",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Valeurs de f(x) = e^(−x²)",
+          "categories": [
+            "−2",
+            "−1",
+            "0",
+            "1",
+            "2"
+          ],
+          "series": [
+            {
+              "nom": "f(x)",
+              "valeurs": [
+                0.02,
+                0.37,
+                1,
+                0.37,
+                0.02
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "f(x)",
+            "min": 0,
+            "max": 1,
+            "pas": 0.25
+          },
+          "axeX": {
+            "titre": "x"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cloche",
+          "enonce": "Touche le **sommet** de la courbe, là où f est maximale.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le point le plus haut.",
+          "explication": "Le sommet est en **x = 0**, où f(0) = 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Ici u(x) = −x², donc u′(x) = −2x et f′(x) = −2x e^(−x²). Calcule f′(1), arrondi au centième.",
+          "reponse": -0.74,
+          "tolerance": 0.01,
+          "aide": "f′(1) = −2 e^(−1) ; e^(−1) ≈ 0,368.",
+          "explication": "f′(1) = −2 e^(−1) ≈ **−0,74**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le signe de f′(x) pour x < 0, et que dit-il de f ?",
+          "options": [
+            "f′ est positive : f est croissante",
+            "f′ est négative : f est croissante",
+            "f′ est positive : f est décroissante",
+            "f′ est négative : f est décroissante"
+          ],
+          "reponse": 0,
+          "aide": "e^(−x²) est toujours positif. Que vaut −2x quand x est négatif ?",
+          "explication": "Pour x < 0, −2x > 0 et e^(−x²) > 0 : **f′(x) > 0**, donc f est croissante sur ]−∞ ; 0] (le graphique monte jusqu’au sommet)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La tangente en x = 1 coupe l’axe des ordonnées en f(1) − f′(1) × 1. Calcule cette ordonnée à l’origine, arrondie au centième.",
+          "reponse": 1.1,
+          "tolerance": 0.01,
+          "aide": "f(1) ≈ 0,368 et f′(1) ≈ −0,736.",
+          "explication": "f(1) − f′(1) = e^(−1) + 2 e^(−1) = 3 e^(−1) ≈ **1,10**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f922e32-65ad-534e-ae45-353336ec22f6",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le logarithme d’une parabole",
+      "competence": "analyser-document",
+      "situation": "Soit f(x) = ln(x² − 4x + 5), définie sur ℝ. Comme x² − 4x + 5 = (x − 2)² + 1 est toujours ≥ 1, le logarithme est bien défini. On étudie ses variations.",
+      "documents": [
+        {
+          "id": "f",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Quelques valeurs de f",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "f(x)",
+              "valeurs": [
+                1.61,
+                0.69,
+                0,
+                0.69,
+                1.61
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "f(x)",
+            "min": 0,
+            "max": 2,
+            "pas": 0.5
+          },
+          "axeX": {
+            "titre": "x"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "meth",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Méthode",
+          "blocs": [
+            "u(x) = x² − 4x + 5 et u′(x) = 2x − 4.",
+            "f′(x) = u′(x) ÷ u(x) = (2x − 4) ÷ (x² − 4x + 5)."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "f",
+          "enonce": "Touche le **point le plus bas** de la courbe.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la plus petite valeur de f.",
+          "explication": "Le point le plus bas est en **x = 2**, où f(2) = ln 1 = 0."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule f′(3).",
+          "reponse": 1,
+          "aide": "Numérateur : 2 × 3 − 4. Dénominateur : 9 − 12 + 5.",
+          "explication": "f′(3) = 2 ÷ 2 = **1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule f′(0).",
+          "reponse": -0.8,
+          "aide": "Numérateur : −4. Dénominateur : 5.",
+          "explication": "f′(0) = −4 ÷ 5 = **−0,8**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit le signe de f′ autour de x = 2 ?",
+          "options": [
+            "f′ passe de négatif à positif : f admet un minimum en 2",
+            "f′ passe de positif à négatif : f admet un maximum en 2",
+            "f′ ne change pas de signe : pas d’extremum",
+            "f′ est nul partout"
+          ],
+          "reponse": 0,
+          "aide": "Le dénominateur est toujours positif : le signe est celui de 2x − 4.",
+          "explication": "2x − 4 est négatif avant 2 et positif après : f décroît puis croît, avec un **minimum** f(2) = 0."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La tangente en x = 3 a pour équation y = f′(3)(x − 3) + f(3), avec f(3) = ln 2. Quelle est son ordonnée à l’origine, arrondie au centième ?",
+          "reponse": -2.31,
+          "tolerance": 0.01,
+          "aide": "Ordonnée à l’origine : f(3) − 3 × f′(3) = ln 2 − 3.",
+          "explication": "ln 2 − 3 ≈ 0,693 − 3 ≈ **−2,31**."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La parabole tient l’eau",
+      "competence": "lire-graphique",
+      "situation": "On étudie la fonction carré f(x) = x². Le graphique donne ses valeurs, le tableau celles de sa dérivée f′(x) = 2x.",
+      "documents": [
+        {
+          "id": "g",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Courbe de f(x) = x²",
+          "categories": [
+            "−2",
+            "−1",
+            "0",
+            "1",
+            "2"
+          ],
+          "series": [
+            {
+              "nom": "f(x)",
+              "valeurs": [
+                4,
+                1,
+                0,
+                1,
+                4
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "f(x)",
+            "min": 0,
+            "max": 4,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "x"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "d",
+          "type": "tableau",
+          "titre": "Valeurs de f′",
+          "colonnes": [
+            "x",
+            "−2",
+            "−1",
+            "0",
+            "1",
+            "2"
+          ],
+          "lignes": [
+            [
+              "f′(x)",
+              -4,
+              -2,
+              0,
+              2,
+              4
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "g",
+          "enonce": "Touche le point où la courbe est **le plus bas**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la plus petite ordonnée.",
+          "explication": "Le point le plus bas est en **x = 0**, où f(0) = 0."
+        },
+        {
+          "type": "choix",
+          "enonce": "Cette courbe est-elle convexe ou concave ?",
+          "options": [
+            "Convexe : elle est au-dessus de ses tangentes",
+            "Concave : elle est au-dessous de ses tangentes",
+            "Ni convexe ni concave",
+            "Convexe : elle est au-dessous de ses tangentes"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le tableau : f′ croît-elle quand x augmente ?",
+          "explication": "f′ passe de −4 à 4 : elle est **croissante**, donc f est convexe. La courbe « tient l’eau », au-dessus de ses tangentes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien f′ augmente-t-elle quand x augmente de 1 ? C’est la valeur de f″.",
+          "reponse": 2,
+          "aide": "Regarde la ligne f′ : −4, −2, 0, 2, 4.",
+          "explication": "f′ augmente de **2** à chaque pas, donc f″(x) = 2 > 0 : f est convexe."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le point où la courbe change de sens",
+      "competence": "analyser-document",
+      "situation": "Soit f(x) = x³ − 6x² + 9x. Sa dérivée seconde est f″(x) = 6x − 12. On cherche où la courbe change de convexité.",
+      "documents": [
+        {
+          "id": "g",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Courbe de f",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "f(x)",
+              "valeurs": [
+                0,
+                4,
+                2,
+                0,
+                4
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "f(x)",
+            "min": 0,
+            "max": 5,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "x"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule f″(1).",
+          "reponse": -6,
+          "aide": "f″(x) = 6x − 12 : remplace x par 1.",
+          "explication": "f″(1) = 6 − 12 = **−6** : la courbe est concave en x = 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour quelle valeur de x la dérivée seconde s’annule-t-elle en changeant de signe ?",
+          "reponse": 2,
+          "aide": "Résous 6x − 12 = 0.",
+          "explication": "6x = 12 donne x = **2** ; f″ est négative avant et positive après."
+        },
+        {
+          "type": "zone",
+          "document": "g",
+          "enonce": "Touche le point d’inflexion de la courbe.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Il est à l’abscisse où f″ change de signe.",
+          "explication": "Le point d’inflexion est en **x = 2**, de coordonnées (2 ; 2)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur quel intervalle f est-elle convexe ?",
+          "options": [
+            "Pour x supérieur ou égal à 2",
+            "Pour x inférieur ou égal à 2",
+            "Sur tout l’ensemble des réels",
+            "Sur aucun intervalle"
+          ],
+          "reponse": 0,
+          "aide": "f est convexe quand f″ est positive.",
+          "explication": "f″(x) = 6x − 12 ≥ 0 pour x ≥ 2 : f est convexe sur **[2 ; +∞[** et concave sur ]−∞ ; 2]."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a2758f1-804f-5ea6-942d-8008272ef774",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Encadrer l’exponentielle",
+      "competence": "modeliser",
+      "situation": "La convexité permet de comparer e^x à sa tangente en 0. Le tableau donne quelques valeurs de e^x et de x + 1.",
+      "documents": [
+        {
+          "id": "v",
+          "type": "tableau",
+          "titre": "Comparaison de e^x et de x + 1",
+          "colonnes": [
+            "x",
+            "−1",
+            "0",
+            "1",
+            "2"
+          ],
+          "lignes": [
+            [
+              "e^x",
+              0.37,
+              1,
+              2.72,
+              7.39
+            ],
+            [
+              "x + 1",
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              "e^x − (x + 1)",
+              0.37,
+              0,
+              "?",
+              4.39
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies au centième"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : calcule e^1 − 2, arrondi au centième.",
+          "reponse": 0.72,
+          "tolerance": 0.01,
+          "aide": "e ≈ 2,718.",
+          "explication": "e − 2 ≈ **0,72**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi e^x ≥ x + 1 pour tout réel x ?",
+          "options": [
+            "e^x est convexe : sa courbe est au-dessus de sa tangente en 0, d’équation y = x + 1",
+            "e^x est concave : sa courbe reste au-dessous de sa tangente en 0, qui passe par (0 ; 1)",
+            "e^x est croissante, donc sa courbe est toujours au-dessus de la droite y = x + 1",
+            "e^x est toujours positive, donc toujours supérieure à x + 1 pour tout réel x"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne e^x − (x + 1) : elle reste positive.",
+          "explication": "Comme (e^x)″ = e^x > 0, e^x est convexe : sa courbe est **au-dessus de ses tangentes**, en particulier de celle en 0."
+        },
+        {
+          "type": "trous",
+          "enonce": "Écris l’équation de la tangente en 0 à e^x : y = f′(0)(x − 0) + f(0).",
+          "texte": "y = ___ x + ___",
+          "reponses": [
+            [
+              "1"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "aide": "f(x) = e^x donc f′(0) = f(0) = e⁰.",
+          "explication": "f′(0) = e⁰ = 1 et f(0) = 1 : la tangente est **y = 1 x + 1**, c’est-à-dire y = x + 1."
+        },
+        {
+          "type": "choix",
+          "enonce": "La fonction ln est concave. Quelle inégalité en découle pour x > 0 ?",
+          "options": [
+            "ln(x) est inférieur ou égal à x moins un",
+            "ln(x) est supérieur ou égal à x moins un",
+            "ln(x) est supérieur ou égal à x plus un",
+            "ln(x) est toujours égal à x moins un"
+          ],
+          "reponse": 0,
+          "aide": "Concave : courbe au-dessous de ses tangentes. La tangente en 1 a pour équation y = x − 1.",
+          "explication": "ln est concave, donc au-dessous de sa tangente en 1, d’équation y = x − 1 : **ln(x) ≤ x − 1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec e^x ≥ x + 1, e^0,1 est supérieur ou égal à quel nombre ?",
+          "reponse": 1.1,
+          "tolerance": 0.001,
+          "aide": "Prends x = 0,1.",
+          "explication": "e^0,1 ≥ 0,1 + 1 = **1,1**."
+        }
+      ]
+    }
+  ]
+}

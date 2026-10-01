@@ -19,6 +19,7 @@ export default function SubjectHeader({
   subject,
   grade,
   progress,
+  jauge,
   standing = null,
   gardien = null,
   unit = 'chapitre',
@@ -28,6 +29,14 @@ export default function SubjectHeader({
   subject: { slug: string; name: string; color: string }
   grade: string
   progress: SubjectProgress
+  /**
+   * Le REMPLISSAGE de la barre (0 → 100), sur la courbe d'encouragement
+   * (lib/reviser/programme.jaugeDesFiches) : il avance dès le premier cours lu,
+   * là où le pourcentage réel laissait onze pixels pour une fiche sur
+   * vingt-huit. Le compte écrit (« 3/28 fiches ») et l'`aria-valuenow` restent
+   * les chiffres exacts. Absent : la barre suit le pourcentage réel.
+   */
+  jauge?: number
   /**
    * Place de l'élève dans cette matière parmi son niveau (« Top 8 % des 3e »).
    * `null` tant qu'il n'a pas passé assez de quiz pour être classé, ou que la
@@ -84,7 +93,7 @@ export default function SubjectHeader({
       >
         <div
           className="bar-fill h-full rounded-full bg-highlight transition-all"
-          style={{ width: `${progress.pct}%` }}
+          style={{ width: `${jauge ?? progress.pct}%` }}
         />
       </div>
 

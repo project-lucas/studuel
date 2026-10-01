@@ -1,0 +1,498 @@
+{
+  "id": "maths-2025-amerique-nord-j1",
+  "matiere": "maths",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2025,
+  "centre": "Amérique du Nord",
+  "jour": 1,
+  "code": "25-MATJ1AN1",
+  "titre": "Bac 2025 — Mathématiques",
+  "dureeMin": 240,
+  "coefficient": 16,
+  "consigne": "Quatre exercices indépendants (6, 5, 4 et 5 points), tous à traiter.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Connexions stables via trois serveurs : arbre pondéré, probabilités totales, loi binomiale et inégalité de Bienaymé-Tchebychev.",
+      "points": 6,
+      "minutes": 70,
+      "enBref": [
+        "Arbre : $P(A) = 0{,}25$, $P(B) = 0{,}15$, $P(C) = 0{,}6$ ; puis $0{,}9$, $0{,}8$ et $0{,}85$ vers $S$.",
+        "$P(B \\cap S) = 0{,}12$, $P(C \\cap \\overline{S}) = 0{,}09$, $P(S) = 0{,}855$ et $P_S(B) \\approx 0{,}140$.",
+        "$X \\sim \\mathcal{B}(50 ; 0{,}145)$ et $P(X \\leqslant 8) \\approx 0{,}704$.",
+        "$p_n = 1 - 0{,}855^n$ dépasse $0{,}99$ à partir de $n = 30$.",
+        "$E(F_n) = 0{,}145$ ; Bienaymé-Tchebychev borne l'écart par $\\frac{12{,}5}{n}$ : observer $F_{1000} = 0{,}3$ a moins de 1,25 % de chances, le soupçon est fondé."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A" },
+        {
+          "type": "question",
+          "numero": "A.1",
+          "intitule": "Compléter l'arbre pondéré.",
+          "blocs": [
+            { "type": "texte", "texte": "Premier niveau : $P(A) = 0{,}25$, $P(B) = 0{,}15$ et $P(C) = 1 - 0{,}25 - 0{,}15 = 0{,}6$. Second niveau : les pourcentages de connexions stables sont des probabilités **conditionnelles** ; les branches vers $\\overline{S}$ s'obtiennent par complément à 1." },
+            {
+              "type": "tableau",
+              "entetes": ["Serveur", "Probabilité", "vers $S$", "vers $\\overline{S}$"],
+              "lignes": [
+                ["$A$", "$0{,}25$", "$P_A(S) = 0{,}9$", "$P_A(\\overline{S}) = 0{,}1$"],
+                ["$B$", "$0{,}15$", "$P_B(S) = 0{,}8$", "$P_B(\\overline{S}) = 0{,}2$"],
+                ["$C$", "$0{,}6$", "$P_C(S) = 0{,}85$", "$P_C(\\overline{S}) = 0{,}15$"]
+              ]
+            },
+            { "type": "reponse", "texte": "Branches : $0{,}25$ ; $0{,}15$ ; $0{,}6$, puis $0{,}9 / 0{,}1$ après $A$, $0{,}8 / 0{,}2$ après $B$, $0{,}85 / 0{,}15$ après $C$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2",
+          "intitule": "Montrer que $P(B \\cap S) = 0{,}12$.",
+          "blocs": [
+            { "type": "formule", "tex": "P(B \\cap S) = P(B) \\times P_B(S) = 0{,}15 \\times 0{,}8 = 0{,}12" },
+            { "type": "reponse", "texte": "La probabilité que la connexion passe par $B$ et soit stable est bien $0{,}12$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.3",
+          "intitule": "Calculer $P(C \\cap \\overline{S})$ et l'interpréter.",
+          "blocs": [
+            { "type": "formule", "tex": "P(C \\cap \\overline{S}) = P(C) \\times P_C(\\overline{S}) = 0{,}6 \\times 0{,}15 = 0{,}09" },
+            { "type": "reponse", "texte": "$P(C \\cap \\overline{S}) = 0{,}09$ : 9 % de l'ensemble des connexions passent par le serveur C **et** sont instables." },
+            { "type": "piege", "texte": "L'interprétation porte sur toutes les connexions, pas sur celles du serveur C : « 9 % des connexions de C sont instables » serait faux (c'est 15 %)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.4",
+          "intitule": "Démontrer que $P(S) = 0{,}855$.",
+          "blocs": [
+            { "type": "texte", "texte": "$A$, $B$ et $C$ forment une partition de l'univers (chaque connexion passe par un et un seul serveur). Par la formule des probabilités totales :" },
+            { "type": "formule", "tex": "P(S) = P(A \\cap S) + P(B \\cap S) + P(C \\cap S) = 0{,}25 \\times 0{,}9 + 0{,}12 + 0{,}6 \\times 0{,}85 = 0{,}225 + 0{,}12 + 0{,}51" },
+            { "type": "reponse", "texte": "$P(S) = 0{,}855$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.5",
+          "intitule": "Sachant la connexion stable, probabilité qu'elle soit passée par $B$ (au millième).",
+          "blocs": [
+            { "type": "formule", "tex": "P_S(B) = \\frac{P(B \\cap S)}{P(S)} = \\frac{0{,}12}{0{,}855} \\approx 0{,}14035" },
+            { "type": "reponse", "texte": "$P_S(B) \\approx 0{,}140$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B" },
+        {
+          "type": "question",
+          "numero": "B.1.a",
+          "intitule": "Paramètres de la loi binomiale suivie par $X$.",
+          "blocs": [
+            { "type": "texte", "texte": "On répète 50 fois, de façon indépendante (tirage assimilé à un tirage avec remise), la même épreuve de Bernoulli dont le succès « la connexion est instable » a pour probabilité $1 - 0{,}855 = 0{,}145$. $X$ compte les succès." },
+            { "type": "reponse", "texte": "$X$ suit la loi binomiale $\\mathcal{B}(50 ; 0{,}145)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.1.b",
+          "intitule": "Probabilité qu'au plus huit connexions soient instables (au millième).",
+          "blocs": [
+            { "type": "texte", "texte": "On cherche $P(X \\leqslant 8)$, donnée par la fonction de répartition de la loi binomiale à la calculatrice (par exemple `binomFRép(50, 0.145, 8)`)." },
+            { "type": "reponse", "texte": "$P(X \\leqslant 8) \\approx 0{,}704$." },
+            { "type": "piege", "texte": "« Au plus huit » signifie $X \\leqslant 8$, soit la probabilité cumulée, et non $P(X = 8)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2.a",
+          "intitule": "Expression de $p_n$, probabilité qu'au moins une connexion soit instable.",
+          "blocs": [
+            { "type": "texte", "texte": "L'événement contraire de « au moins une connexion instable » est « aucune connexion instable », c'est-à-dire $X_n = 0$." },
+            { "type": "formule", "tex": "p_n = P(X_n \\geqslant 1) = 1 - P(X_n = 0) = 1 - \\binom{n}{0} 0{,}145^0 \\times 0{,}855^n" },
+            { "type": "reponse", "texte": "$p_n = 1 - 0{,}855^n$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2.b",
+          "intitule": "Plus petit $n$ tel que $p_n \\geqslant 0{,}99$.",
+          "blocs": [
+            { "type": "formule", "tex": "1 - 0{,}855^n \\geqslant 0{,}99 \\iff 0{,}855^n \\leqslant 0{,}01 \\iff n\\ln(0{,}855) \\leqslant \\ln(0{,}01) \\iff n \\geqslant \\frac{\\ln(0{,}01)}{\\ln(0{,}855)}" },
+            { "type": "texte", "texte": "La fonction $\\ln$ est strictement croissante, ce qui justifie le passage au logarithme. Le sens de la dernière inégalité change parce qu'on divise par $\\ln(0{,}855) < 0$. Or $\\frac{\\ln(0{,}01)}{\\ln(0{,}855)} \\approx 29{,}4$." },
+            { "type": "reponse", "texte": "La plus petite valeur est $n = 30$ (contrôle : $p_{29} \\approx 0{,}9894$ et $p_{30} \\approx 0{,}9909$)." },
+            { "type": "piege", "texte": "$\\ln(0{,}855)$ est négatif : diviser par ce nombre **retourne** l'inégalité. C'est l'erreur qui fait écrire $n \\leqslant 29{,}4$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3.a",
+          "intitule": "Calculer $E(F_n)$.",
+          "blocs": [
+            { "type": "texte", "texte": "$X_n$ suit $\\mathcal{B}(n ; 0{,}145)$, donc $E(X_n) = 0{,}145n$. Par linéarité de l'espérance :" },
+            { "type": "formule", "tex": "E(F_n) = E\\left(\\frac{X_n}{n}\\right) = \\frac{1}{n}E(X_n) = \\frac{0{,}145n}{n}" },
+            { "type": "reponse", "texte": "$E(F_n) = 0{,}145$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3.b",
+          "intitule": "Vérifier que $P(|F_n - 0{,}145| \\geqslant 0{,}1) \\leqslant \\frac{12{,}5}{n}$.",
+          "blocs": [
+            { "type": "texte", "texte": "L'inégalité de Bienaymé-Tchebychev, appliquée à $F_n$ d'espérance $0{,}145$ avec $\\delta = 0{,}1 > 0$, donne :" },
+            { "type": "formule", "tex": "P\\left(|F_n - 0{,}145| \\geqslant 0{,}1\\right) \\leqslant \\frac{V(F_n)}{0{,}1^2} = \\frac{0{,}123975}{0{,}01\\,n} = \\frac{12{,}3975}{n}" },
+            { "type": "texte", "texte": "Et comme $12{,}3975 \\leqslant 12{,}5$, on a $\\frac{12{,}3975}{n} \\leqslant \\frac{12{,}5}{n}$." },
+            { "type": "reponse", "texte": "Pour tout $n \\geqslant 1$, $P(|F_n - 0{,}145| \\geqslant 0{,}1) \\leqslant \\frac{12{,}5}{n}$." },
+            { "type": "attendu", "texte": "Nomme l'inégalité utilisée et écris-la avec ses hypothèses ($\\delta > 0$, espérance et variance de $F_n$) avant de remplacer les valeurs." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3.c",
+          "intitule": "$F_{1000} = 0{,}3$ : le soupçon de dysfonctionnement est-il fondé ?",
+          "blocs": [
+            { "type": "texte", "texte": "Pour $n = 1000$, la question précédente donne, en fonctionnement normal : $P(|F_{1000} - 0{,}145| \\geqslant 0{,}1) \\leqslant \\frac{12{,}5}{1000} = 0{,}0125$." },
+            { "type": "texte", "texte": "Or l'échantillon observé donne $|0{,}3 - 0{,}145| = 0{,}155 \\geqslant 0{,}1$. Si les serveurs fonctionnaient normalement, un tel écart se produirait avec une probabilité d'au plus 1,25 %." },
+            { "type": "reponse", "texte": "Oui : un écart aussi grand est très improbable en fonctionnement normal (au plus 1,25 % de chances). Le responsable a de bonnes raisons de soupçonner un dysfonctionnement — c'est une forte présomption, pas une certitude." },
+            { "type": "astuce", "texte": "Bienaymé-Tchebychev ne dit jamais « c'est impossible » : il majore une probabilité. Conclus toujours en termes de risque (« moins de 1,25 % de chances »), jamais en termes de preuve absolue." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Suite $u_{n+1} = \\frac{2u_n + 1}{u_n + 2}$ étudiée grâce à la suite auxiliaire $a_n = \\frac{u_n}{u_n - 1}$, puis un algorithme de seuil.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$u_1 = \\frac{5}{4}$, $a_0 = 2$ et $a_1 = 5$.",
+        "La suite auxiliaire vérifie $a_{n+1} = 3a_n - 1$ et, par récurrence, $a_n \\geqslant 3n - 1$ : elle tend vers $+\\infty$.",
+        "On inverse la relation : $u_n = \\frac{a_n}{a_n - 1} = 1 + \\frac{1}{a_n - 1}$, donc $u_n \\to 1$.",
+        "`algo(p)` renvoie le premier rang $n$ où $u_n - 1 \\leqslant p$, et ce terme $u_n$ ; pour $p = 0{,}001$, $n = 6$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Calculer $u_1$.",
+          "blocs": [
+            { "type": "formule", "tex": "u_1 = \\frac{2u_0 + 1}{u_0 + 2} = \\frac{2 \\times 2 + 1}{2 + 2} = \\frac{5}{4}" },
+            { "type": "reponse", "texte": "$u_1 = \\frac{5}{4} = 1{,}25$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.a",
+          "intitule": "Calculer $a_0$ et $a_1$.",
+          "blocs": [
+            { "type": "formule", "tex": "a_0 = \\frac{u_0}{u_0 - 1} = \\frac{2}{1} = 2 \\qquad a_1 = \\frac{u_1}{u_1 - 1} = \\frac{5/4}{1/4} = 5" },
+            { "type": "reponse", "texte": "$a_0 = 2$ et $a_1 = 5$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.b",
+          "intitule": "Démontrer que $a_{n+1} = 3a_n - 1$.",
+          "blocs": [
+            { "type": "texte", "texte": "Calculons d'abord le dénominateur de $a_{n+1}$ :" },
+            { "type": "formule", "tex": "u_{n+1} - 1 = \\frac{2u_n + 1}{u_n + 2} - \\frac{u_n + 2}{u_n + 2} = \\frac{u_n - 1}{u_n + 2}" },
+            { "type": "texte", "texte": "D'où, en simplifiant par $u_n + 2$ :" },
+            { "type": "formule", "tex": "a_{n+1} = \\frac{u_{n+1}}{u_{n+1} - 1} = \\frac{2u_n + 1}{u_n + 2} \\times \\frac{u_n + 2}{u_n - 1} = \\frac{2u_n + 1}{u_n - 1}" },
+            { "type": "texte", "texte": "Par ailleurs, en partant de l'autre membre :" },
+            { "type": "formule", "tex": "3a_n - 1 = \\frac{3u_n}{u_n - 1} - \\frac{u_n - 1}{u_n - 1} = \\frac{2u_n + 1}{u_n - 1}" },
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $a_{n+1} = 3a_n - 1$." },
+            { "type": "astuce", "texte": "Quand on te demande de prouver une égalité entre deux expressions compliquées, calcule chaque membre de son côté jusqu'à tomber sur la même forme. Tu évites de te perdre dans une seule longue ligne." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.c",
+          "intitule": "Démontrer par récurrence que $a_n \\geqslant 3n - 1$ pour $n \\geqslant 1$.",
+          "blocs": [
+            { "type": "texte", "texte": "On note $P(n)$ : « $a_n \\geqslant 3n - 1$ »." },
+            { "type": "texte", "texte": "**Initialisation** ($n = 1$). $a_1 = 5$ et $3 \\times 1 - 1 = 2$ : $5 \\geqslant 2$, donc $P(1)$ est vraie." },
+            { "type": "texte", "texte": "**Hérédité.** Soit $n \\geqslant 1$ tel que $a_n \\geqslant 3n - 1$. En multipliant par $3 > 0$ puis en retranchant 1 :" },
+            { "type": "formule", "tex": "a_{n+1} = 3a_n - 1 \\geqslant 3(3n - 1) - 1 = 9n - 4" },
+            { "type": "texte", "texte": "Il reste à comparer $9n - 4$ et $3(n+1) - 1 = 3n + 2$ : $(9n - 4) - (3n + 2) = 6n - 6 = 6(n - 1) \\geqslant 0$ puisque $n \\geqslant 1$. Donc $a_{n+1} \\geqslant 9n - 4 \\geqslant 3(n+1) - 1$ : $P(n+1)$ est vraie." },
+            { "type": "texte", "texte": "**Conclusion.** $P(1)$ est vraie et $P$ est héréditaire à partir du rang 1, donc $P(n)$ est vraie pour tout $n \\geqslant 1$." },
+            { "type": "reponse", "texte": "Pour tout entier $n \\geqslant 1$, $a_n \\geqslant 3n - 1$." },
+            { "type": "piege", "texte": "L'initialisation se fait au rang **1**, pas 0 : l'énoncé dit « $n$ supérieur ou égal à 1 », et l'hérédité utilise justement $n \\geqslant 1$ pour conclure." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.d",
+          "intitule": "Limite de $(a_n)$.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\lim\\limits_{n \\to +\\infty} (3n - 1) = +\\infty$ et $a_n \\geqslant 3n - 1$ pour tout $n \\geqslant 1$. Par le théorème de comparaison :" },
+            { "type": "reponse", "texte": "$\\lim\\limits_{n \\to +\\infty} a_n = +\\infty$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.a",
+          "intitule": "Démontrer que $u_n = \\frac{a_n}{a_n - 1}$.",
+          "blocs": [
+            { "type": "texte", "texte": "On part de la définition $a_n = \\frac{u_n}{u_n - 1}$ et on isole $u_n$ :" },
+            { "type": "formule", "tex": "a_n(u_n - 1) = u_n \\iff a_n u_n - u_n = a_n \\iff u_n(a_n - 1) = a_n" },
+            { "type": "texte", "texte": "On peut diviser par $a_n - 1$ : il n'est jamais nul, car $a_n - 1 = \\frac{u_n - (u_n - 1)}{u_n - 1} = \\frac{1}{u_n - 1} \\neq 0$." },
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $u_n = \\dfrac{a_n}{a_n - 1}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.b",
+          "intitule": "En déduire la limite de $(u_n)$.",
+          "blocs": [
+            { "type": "texte", "texte": "La formule $\\frac{a_n}{a_n - 1}$ donne une forme indéterminée $\\frac{\\infty}{\\infty}$. On la lève en écrivant $u_n = \\frac{(a_n - 1) + 1}{a_n - 1} = 1 + \\frac{1}{a_n - 1}$." },
+            { "type": "texte", "texte": "Comme $a_n \\to +\\infty$, on a $a_n - 1 \\to +\\infty$ puis $\\frac{1}{a_n - 1} \\to 0$." },
+            { "type": "reponse", "texte": "$\\lim\\limits_{n \\to +\\infty} u_n = 1$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Interpréter les valeurs `n` et `u` renvoyées par `algo(p)`.",
+          "blocs": [
+            { "type": "texte", "texte": "La boucle calcule les termes successifs $u_0, u_1, u_2, \\dots$ et s'arrête dès que $u_n - 1 \\leqslant p$. La suite décroît vers 1 et $u_n - 1 = \\frac{1}{a_n - 1} > 0$ : $u_n - 1$ est l'écart entre $u_n$ et sa limite." },
+            { "type": "reponse", "texte": "`n` est le plus petit rang à partir duquel $u_n$ est à une distance au plus $p$ de sa limite 1 (i.e. $1 < u_n \\leqslant 1 + p$), et `u` est la valeur de ce terme $u_n$. La décroissance garantit que tous les termes suivants restent aussi proches de 1." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Valeur de `n` pour `p = 0.001`.",
+          "blocs": [
+            { "type": "texte", "texte": "À la calculatrice : $u_5 \\approx 1{,}00275$ et $u_6 \\approx 1{,}00091$. Le premier terme vérifiant $u_n - 1 \\leqslant 0{,}001$ est $u_6$." },
+            { "type": "reponse", "texte": "$n = 6$." },
+            { "type": "astuce", "texte": "Pour aller plus loin : $b_n = a_n - \\frac{1}{2}$ est géométrique de raison 3, donc $a_n = \\frac{3}{2} \\times 3^n + \\frac{1}{2}$ et $u_n - 1 = \\frac{1}{\\frac{3}{2} \\times 3^n - \\frac{1}{2}}$. On retrouve $n = 6$ car $3^6 = 729$ est la première puissance de 3 qui dépasse $667$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Vrai ou faux justifié : une droite de l'espace, un plan orthogonal, un angle géométrique et un projeté orthogonal.",
+      "points": 4,
+      "minutes": 45,
+      "enBref": [
+        "Affirmation 1 : **vraie**. $(d)$ et l'axe des ordonnées ne sont ni parallèles ni sécants.",
+        "Affirmation 2 : **vraie**. $\\vec{u}(-2 ; 0 ; -6)$ est colinéaire à $(1 ; 0 ; 3)$, et $A$ vérifie $x + 3z + 3 = 0$.",
+        "Affirmation 3 : **fausse**. $C(2 ; -1 ; -1)$, $\\cos\\widehat{BAC} = -\\frac{1}{2}$, donc l'angle mesure $\\frac{2\\pi}{3}$.",
+        "Affirmation 4 : **vraie**. $H\\left(\\frac{11}{2} ; -4 ; \\frac{1}{2}\\right)$ et $BH = \\frac{\\sqrt{10}}{2}$."
+      ],
+      "blocs": [
+        { "type": "texte", "texte": "La droite $(d)$ passe par le point $M_0(3 ; -1 ; 2)$ (paramètre $t = 0$) et a pour vecteur directeur $\\vec{u}(-2 ; 0 ; -6)$." },
+        {
+          "type": "question",
+          "numero": "Affirmation 1",
+          "intitule": "$(d)$ et l'axe des ordonnées sont non coplanaires.",
+          "blocs": [
+            { "type": "texte", "texte": "L'axe des ordonnées passe par $O$ et est dirigé par $\\vec{j}(0 ; 1 ; 0)$ : ses points sont de la forme $(0 ; k ; 0)$. Deux droites sont non coplanaires si et seulement si elles ne sont ni parallèles ni sécantes." },
+            { "type": "texte", "texte": "**Parallélisme.** $\\vec{u}(-2 ; 0 ; -6)$ et $\\vec{j}(0 ; 1 ; 0)$ ne sont pas colinéaires (la deuxième coordonnée de $\\vec{u}$ est nulle mais pas celle de $\\vec{j}$) : les droites ne sont pas parallèles." },
+            { "type": "texte", "texte": "**Point commun.** Il faudrait $3 - 2t = 0$ et $2 - 6t = 0$, soit $t = \\frac{3}{2}$ et $t = \\frac{1}{3}$ en même temps : impossible. Les droites ne sont pas sécantes." },
+            { "type": "reponse", "texte": "**Vraie.** $(d)$ et l'axe des ordonnées ne sont ni parallèles ni sécants : elles sont non coplanaires." },
+            { "type": "piege", "texte": "Montrer seulement que les droites ne sont pas sécantes ne suffit pas : deux droites parallèles distinctes n'ont pas de point commun et sont pourtant coplanaires. Il faut les deux vérifications." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Affirmation 2",
+          "intitule": "Le plan passant par $A$ et orthogonal à $(d)$ a pour équation $x + 3z + 3 = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "Un plan orthogonal à $(d)$ admet $\\vec{u}$ comme vecteur normal, ou tout vecteur colinéaire, par exemple $-\\frac{1}{2}\\vec{u} = (1 ; 0 ; 3)$. Le plan $x + 3z + 3 = 0$ a justement pour vecteur normal $(1 ; 0 ; 3)$." },
+            { "type": "texte", "texte": "Il reste à vérifier qu'il contient $A(3 ; -3 ; -2)$ : $3 + 3 \\times (-2) + 3 = 0$. C'est le cas." },
+            { "type": "reponse", "texte": "**Vraie.** Le plan d'équation $x + 3z + 3 = 0$ est orthogonal à $(d)$ et passe par $A$ ; un tel plan est unique." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Affirmation 3",
+          "intitule": "Une mesure de l'angle géométrique $\\widehat{BAC}$ est $\\frac{\\pi}{6}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Le point $C$ a pour abscisse 2 : $3 - 2t = 2$ donne $t = \\frac{1}{2}$, d'où $C(2 ; -1 ; -1)$. On a alors $\\overrightarrow{AB}(2 ; -1 ; 1)$ et $\\overrightarrow{AC}(-1 ; 2 ; 1)$." },
+            { "type": "formule", "tex": "\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = -2 - 2 + 1 = -3 \\qquad AB = AC = \\sqrt{4 + 1 + 1} = \\sqrt{6}" },
+            { "type": "formule", "tex": "\\cos\\widehat{BAC} = \\frac{\\overrightarrow{AB} \\cdot \\overrightarrow{AC}}{AB \\times AC} = \\frac{-3}{6} = -\\frac{1}{2}" },
+            { "type": "reponse", "texte": "**Fausse.** $\\cos\\widehat{BAC} = -\\frac{1}{2}$ et l'angle géométrique est dans $[0 ; \\pi]$, donc $\\widehat{BAC} = \\frac{2\\pi}{3}$, et non $\\frac{\\pi}{6}$." },
+            { "type": "astuce", "texte": "Un produit scalaire négatif suffit déjà à conclure : l'angle est obtus, donc il ne peut pas valoir $\\frac{\\pi}{6}$. Donne quand même la vraie mesure, c'est plus convaincant." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Affirmation 4",
+          "intitule": "La distance $BH$ est égale à $\\frac{\\sqrt{10}}{2}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Le plan $\\mathcal{P}$ : $x + 3z - 7 = 0$ a pour vecteur normal $\\vec{n}(1 ; 0 ; 3)$. $H$ est sur la droite passant par $B(5 ; -4 ; -1)$ dirigée par $\\vec{n}$, de représentation $x = 5 + k$, $y = -4$, $z = -1 + 3k$. On l'intersecte avec $\\mathcal{P}$ :" },
+            { "type": "formule", "tex": "(5 + k) + 3(-1 + 3k) - 7 = 0 \\iff 10k - 5 = 0 \\iff k = \\frac{1}{2}" },
+            { "type": "texte", "texte": "D'où $H\\left(\\frac{11}{2} ; -4 ; \\frac{1}{2}\\right)$ et $\\overrightarrow{BH} = \\frac{1}{2}\\vec{n} = \\left(\\frac{1}{2} ; 0 ; \\frac{3}{2}\\right)$." },
+            { "type": "formule", "tex": "BH = \\sqrt{\\frac{1}{4} + 0 + \\frac{9}{4}} = \\sqrt{\\frac{10}{4}} = \\frac{\\sqrt{10}}{2}" },
+            { "type": "reponse", "texte": "**Vraie.** $BH = \\frac{\\sqrt{10}}{2}$." },
+            { "type": "attendu", "texte": "Dans un vrai-faux, la justification est tout : un « vrai » sans calcul vaut zéro. Pour la distance, le correcteur attend la construction de $H$ (droite orthogonale au plan passant par $B$) puis le calcul de $BH$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Lecture graphique de $g$ et $g'$, équation différentielle $y + y' = (2x + 3)\\mathrm{e}^{-x}$, puis étude de $f(x) = (x^2 + 3x + 2)\\mathrm{e}^{-x}$ et d'une aire.",
+      "points": 5,
+      "minutes": 65,
+      "enBref": [
+        "$\\mathcal{C}_1$ représente $g$ et $\\mathcal{C}_2$ représente $g'$ ; la tangente en 0 est $y = 2x + 1$.",
+        "Les solutions de $(E)$ sont $x \\mapsto (x^2 + 3x + K)\\mathrm{e}^{-x}$ ; avec $g(0) = 1$, $g(x) = (x^2 + 3x + 1)\\mathrm{e}^{-x}$.",
+        "$y'' = (x^2 - x - 4 + K)\\mathrm{e}^{-x}$ : exactement deux points d'inflexion si et seulement si $K < \\frac{17}{4}$.",
+        "$f$ décroît, croît puis décroît, avec des changements en $\\frac{-1 \\pm \\sqrt{5}}{2}$ ; elle tend vers 0 en $+\\infty$ et reste positive sur $[0 ; +\\infty[$.",
+        "$\\mathcal{A}(\\alpha) = 7 - (\\alpha^2 + 5\\alpha + 7)\\mathrm{e}^{-\\alpha}$ unités d'aire."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A" },
+        {
+          "type": "question",
+          "numero": "A.1",
+          "intitule": "Associer $g$ et $g'$ à leur courbe, en justifiant.",
+          "blocs": [
+            { "type": "texte", "texte": "Le signe de la dérivée donne les variations de la fonction. Or $\\mathcal{C}_2$ s'annule en $-2$ et en $1$, est positive sur $]-2 ; 1[$ et négative ailleurs (sur la partie visible). De son côté, $\\mathcal{C}_1$ atteint un minimum en $x = -2$ et un maximum en $x = 1$ ; elle est croissante sur $[-2 ; 1]$ et décroissante ailleurs. Les variations de la fonction de $\\mathcal{C}_1$ correspondent exactement au signe de celle de $\\mathcal{C}_2$." },
+            { "type": "texte", "texte": "L'inverse est impossible : sur $[0 ; 1]$, la fonction de $\\mathcal{C}_2$ décroît alors que $\\mathcal{C}_1$ y est positive (elle vaut 1 en 0)." },
+            { "type": "reponse", "texte": "$\\mathcal{C}_1$ est la courbe de $g$ et $\\mathcal{C}_2$ celle de $g'$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2",
+          "intitule": "La tangente à la courbe de $g$ en 0 a pour équation $y = 2x + 1$.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\mathcal{C}_1$ passe par $(0 ; 1)$, donc $g(0) = 1$. $\\mathcal{C}_2$ passe par $(0 ; 2)$, donc $g'(0) = 2$." },
+            { "type": "formule", "tex": "y = g'(0)(x - 0) + g(0) = 2x + 1" },
+            { "type": "reponse", "texte": "La tangente en 0 a pour équation réduite $y = 2x + 1$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B" },
+        {
+          "type": "question",
+          "numero": "B.1",
+          "intitule": "$f_0(x) = (x^2 + 3x)\\mathrm{e}^{-x}$ est solution particulière de $(E)$.",
+          "blocs": [
+            { "type": "texte", "texte": "Par dérivation d'un produit : $f_0'(x) = (2x + 3)\\mathrm{e}^{-x} - (x^2 + 3x)\\mathrm{e}^{-x}$." },
+            { "type": "formule", "tex": "f_0(x) + f_0'(x) = (x^2 + 3x)\\mathrm{e}^{-x} + (2x + 3)\\mathrm{e}^{-x} - (x^2 + 3x)\\mathrm{e}^{-x} = (2x + 3)\\mathrm{e}^{-x}" },
+            { "type": "reponse", "texte": "Pour tout réel $x$, $f_0(x) + f_0'(x) = (2x + 3)\\mathrm{e}^{-x}$ : $f_0$ est solution de $(E)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2",
+          "intitule": "Résoudre $(E_0)$ : $y + y' = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "$(E_0)$ s'écrit $y' = -y$, de la forme $y' = ay$ avec $a = -1$." },
+            { "type": "reponse", "texte": "Les solutions de $(E_0)$ sont les fonctions $x \\mapsto K\\mathrm{e}^{-x}$, $K \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3",
+          "intitule": "Solutions de $(E)$.",
+          "blocs": [
+            { "type": "texte", "texte": "Les solutions de $(E)$ sont les sommes d'une solution particulière et des solutions de l'équation homogène $(E_0)$ : $y = f_0 + K\\mathrm{e}^{-x}$." },
+            { "type": "reponse", "texte": "Les solutions de $(E)$ sont les fonctions $x \\mapsto (x^2 + 3x + K)\\mathrm{e}^{-x}$, $K \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.4",
+          "intitule": "Expression de $g$.",
+          "blocs": [
+            { "type": "texte", "texte": "$g$ est solution de $(E)$, donc $g(x) = (x^2 + 3x + K)\\mathrm{e}^{-x}$. D'après la partie A, $g(0) = 1$, et $g(0) = K$ : donc $K = 1$." },
+            { "type": "reponse", "texte": "$g(x) = (x^2 + 3x + 1)\\mathrm{e}^{-x}$." },
+            { "type": "astuce", "texte": "Vérifie ton résultat avec les autres données du graphique : $g'(x) = (-x^2 - x + 2)\\mathrm{e}^{-x}$ vaut bien 2 en 0 et s'annule en $-2$ et en $1$, comme $\\mathcal{C}_2$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.5",
+          "intitule": "Solutions de $(E)$ dont la courbe a exactement deux points d'inflexion.",
+          "blocs": [
+            { "type": "texte", "texte": "Soit $y_K(x) = (x^2 + 3x + K)\\mathrm{e}^{-x}$. On dérive deux fois :" },
+            { "type": "formule", "tex": "y_K'(x) = (2x + 3 - x^2 - 3x - K)\\mathrm{e}^{-x} = (-x^2 - x + 3 - K)\\mathrm{e}^{-x}" },
+            { "type": "formule", "tex": "y_K''(x) = \\left(-2x - 1 + x^2 + x - 3 + K\\right)\\mathrm{e}^{-x} = (x^2 - x - 4 + K)\\mathrm{e}^{-x}" },
+            { "type": "texte", "texte": "La courbe a un point d'inflexion là où $y_K''$ s'annule **en changeant de signe**. Comme $\\mathrm{e}^{-x} > 0$, $y_K''$ a le signe du trinôme $x^2 - x + (K - 4)$, de discriminant $\\Delta = 1 - 4(K - 4) = 17 - 4K$." },
+            {
+              "type": "liste",
+              "items": [
+                "Si $\\Delta > 0$ : deux racines distinctes, le trinôme change de signe en chacune, donc exactement deux points d'inflexion.",
+                "Si $\\Delta = 0$ : une racine double, le trinôme ne change pas de signe, donc aucun point d'inflexion.",
+                "Si $\\Delta < 0$ : le trinôme est de signe constant, aucun point d'inflexion."
+              ]
+            },
+            { "type": "reponse", "texte": "Ce sont les fonctions $x \\mapsto (x^2 + 3x + K)\\mathrm{e}^{-x}$ avec $K < \\frac{17}{4}$." },
+            { "type": "piege", "texte": "« $y'' = 0$ » ne suffit pas pour un point d'inflexion : il faut un changement de signe. C'est exactement pourquoi le cas $\\Delta = 0$ est exclu." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie C" },
+        {
+          "type": "question",
+          "numero": "C.1",
+          "intitule": "Démontrer que $\\lim\\limits_{x \\to +\\infty} f(x) = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "On développe : $f(x) = x^2\\mathrm{e}^{-x} + 3x\\mathrm{e}^{-x} + 2\\mathrm{e}^{-x}$. Par croissances comparées, $\\lim\\limits_{x \\to +\\infty} x^2\\mathrm{e}^{-x} = \\lim\\limits_{x \\to +\\infty} \\frac{x^2}{\\mathrm{e}^x} = 0$ et de même $\\lim\\limits_{x \\to +\\infty} x\\mathrm{e}^{-x} = 0$ ; enfin $\\lim\\limits_{x \\to +\\infty} \\mathrm{e}^{-x} = 0$." },
+            { "type": "reponse", "texte": "Par somme, $\\lim\\limits_{x \\to +\\infty} f(x) = 0$." },
+            { "type": "piege", "texte": "Écrit tel quel, $(x^2 + 3x + 2)\\mathrm{e}^{-x}$ donne « $+\\infty \\times 0$ », une forme indéterminée : il faut développer (ou factoriser) pour faire apparaître les croissances comparées." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.2.a",
+          "intitule": "Vérifier que $f'(x) = (-x^2 - x + 1)\\mathrm{e}^{-x}$.",
+          "blocs": [
+            { "type": "formule", "tex": "f'(x) = (2x + 3)\\mathrm{e}^{-x} - (x^2 + 3x + 2)\\mathrm{e}^{-x} = (-x^2 - x + 1)\\mathrm{e}^{-x}" },
+            { "type": "reponse", "texte": "Pour tout réel $x$, $f'(x) = (-x^2 - x + 1)\\mathrm{e}^{-x}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.2.b",
+          "intitule": "Signe de $f'$ et variations de $f$.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\mathrm{e}^{-x} > 0$, donc $f'(x)$ a le signe de $-x^2 - x + 1$. Discriminant : $\\Delta = 1 + 4 = 5 > 0$. Les racines sont $x_1 = \\frac{-1 - \\sqrt{5}}{2} \\approx -1{,}62$ et $x_2 = \\frac{-1 + \\sqrt{5}}{2} \\approx 0{,}62$. Le coefficient de $x^2$ est négatif : le trinôme est positif entre les racines, négatif à l'extérieur." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$-\\infty$", "", "$x_1$", "", "$x_2$", "", "$+\\infty$"],
+              "lignes": [
+                ["signe de $f'(x)$", "", "$-$", "$0$", "$+$", "$0$", "$-$", ""],
+                ["variations de $f$", "$+\\infty$", "décroissante", "$f(x_1)$", "croissante", "$f(x_2)$", "décroissante", "$0$"]
+              ]
+            },
+            { "type": "texte", "texte": "Pour information, $f(x_1) = (2 - \\sqrt{5})\\mathrm{e}^{\\frac{1 + \\sqrt{5}}{2}} \\approx -1{,}19$ et $f(x_2) = (2 + \\sqrt{5})\\mathrm{e}^{\\frac{1 - \\sqrt{5}}{2}} \\approx 2{,}28$." },
+            { "type": "reponse", "texte": "$f$ est décroissante sur $\\left]-\\infty ; \\frac{-1-\\sqrt{5}}{2}\\right]$, croissante sur $\\left[\\frac{-1-\\sqrt{5}}{2} ; \\frac{-1+\\sqrt{5}}{2}\\right]$ et décroissante sur $\\left[\\frac{-1+\\sqrt{5}}{2} ; +\\infty\\right[$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.3",
+          "intitule": "Pourquoi $f$ est-elle positive sur $[0 ; +\\infty[$ ?",
+          "blocs": [
+            { "type": "texte", "texte": "Pour $x \\geqslant 0$ : $x^2 \\geqslant 0$, $3x \\geqslant 0$, donc $x^2 + 3x + 2 \\geqslant 2 > 0$ ; et $\\mathrm{e}^{-x} > 0$. (On peut aussi remarquer que $x^2 + 3x + 2 = (x + 1)(x + 2)$, dont les racines $-1$ et $-2$ sont négatives.)" },
+            { "type": "reponse", "texte": "$f$ est un produit de deux facteurs strictement positifs sur $[0 ; +\\infty[$ : elle y est positive (et même strictement)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.4",
+          "intitule": "Aire $\\mathcal{A}(\\alpha)$ du domaine entre $\\mathcal{C}_f$, l'axe des abscisses, $x = 0$ et $x = \\alpha$.",
+          "blocs": [
+            { "type": "texte", "texte": "$f$ est continue et positive sur $[0 ; \\alpha]$ (question 3), donc l'aire cherchée est l'intégrale de $f$ entre $0$ et $\\alpha$, que l'on calcule avec la primitive $F$ donnée :" },
+            { "type": "formule", "tex": "\\mathcal{A}(\\alpha) = \\int_0^{\\alpha} f(x)\\,\\mathrm{d}x = F(\\alpha) - F(0) = (-\\alpha^2 - 5\\alpha - 7)\\mathrm{e}^{-\\alpha} - (-7)\\mathrm{e}^{0}" },
+            { "type": "reponse", "texte": "$\\mathcal{A}(\\alpha) = 7 - (\\alpha^2 + 5\\alpha + 7)\\mathrm{e}^{-\\alpha}$ unités d'aire." },
+            { "type": "attendu", "texte": "Le correcteur veut voir l'argument « $f$ continue et **positive** sur $[0 ; \\alpha]$ » avant d'écrire l'aire comme une intégrale : c'est pour cela que la question 3 vient juste avant." },
+            { "type": "astuce", "texte": "Contrôle rapide : $\\mathcal{A}(0) = 7 - 7 = 0$, et quand $\\alpha \\to +\\infty$ l'aire tend vers 7 par croissances comparées. Un résultat qui ne s'annule pas en $\\alpha = 0$ trahit une erreur de signe." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "id": "physique-chimie-brevet-2025-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2025,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "25GENSCMEAG1",
+  "titre": "Brevet 2025 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la physique-chimie (30 minutes, 25 points), corrigée ici, et la SVT (30 minutes, 25 points), corrigée dans le dossier SVT.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "Thomas Pesquet et la station spatiale internationale (ISS) : mousses de protection, recyclage de l'eau, matériaux des parois et « 16 levers de Soleil ».",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : les nouvelles mousses sont réutilisables, biodégradables ou comestibles, et ne sont pas issues du pétrole ; il suffit d'en citer deux avantages.",
+        "Question 2 : le dioxygène $\\text{O}_2$ est une molécule (deux atomes d'oxygène liés) ; la masse se conserve, donc 2 kg d'eau donnent 2 kg de gaz en tout : c'est la proposition P2 ($0{,}22 + 1{,}78 = 2$ kg).",
+        "Question 3 : ordre B, E, A, C, D ; le volume du cylindre vaut $65 - 50 = 15$ mL et $\\rho = 40{,}5 \\div 15 = 2{,}7$ g/mL : c'est bien de l'aluminium, le plus léger des trois métaux du tableau.",
+        "Question 4 : le mouvement de l'ISS est circulaire et uniforme ; un tour dure $42\\,700 \\div 28\\,000 \\approx 1{,}5$ h, donc en 24 h l'ISS fait environ 16 tours : 16 levers de Soleil par jour."
+      ],
+      "blocs": [
+        {
+          "type": "astuce",
+          "texte": "Au brevet, chaque calcul se présente en trois temps : **la formule en lettres**, puis **les valeurs remplacées avec leurs unités**, puis **le résultat avec son unité**. Même si tu te trompes de calculatrice, la formule et la démarche rapportent des points."
+        },
+        { "type": "titre", "texte": "Des mousses de protection innovantes" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Citer deux avantages des matériaux innovants présentés.",
+          "points": 2,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Le texte d'introduction** présente les expériences Renewable Foam et Edible Foam : des mousses de protection **réutilisables**, **biodégradables** ou **comestibles**, qui remplacent les mousses **pétrosourcées** (issues du pétrole) devenues inutiles une fois à bord."
+            },
+            {
+              "type": "reponse",
+              "texte": "Deux avantages au choix : ces matériaux peuvent être **réutilisés** (ils ne deviennent pas des déchets inutiles à bord) ; ils sont **biodégradables** ou même **comestibles** ; ils ne sont **pas fabriqués à partir du pétrole**, une ressource non renouvelable."
+            }
+          ]
+        },
+        { "type": "titre", "texte": "Le recyclage de l'eau dans l'ISS" },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "Indiquer, en donnant un argument, si le dioxygène est un atome ou une molécule.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "Sa formule, donnée dans l'équation de la question 2b, est $\\text{O}_2$ : le chiffre 2 en indice signifie qu'il contient **deux atomes d'oxygène** liés entre eux. Un assemblage de plusieurs atomes liés est une molécule. Le préfixe « di » du nom (di-oxygène) le dit aussi : deux atomes d'oxygène."
+            },
+            {
+              "type": "reponse",
+              "texte": "Le dioxygène est une **molécule**, car il est formé de deux atomes d'oxygène liés (formule $\\text{O}_2$)."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "L'équation de l'électrolyse de l'eau est $2\\,\\text{H}_2\\text{O} \\rightarrow 2\\,\\text{H}_2 + \\text{O}_2$. Choisir la proposition correcte parmi P1, P2 et P3 et justifier.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Ce qu'on sait :** lors d'une transformation chimique, les atomes se réarrangent mais ne disparaissent pas et n'apparaissent pas. La **masse totale se conserve** : la masse des réactifs consommés est égale à la masse des produits formés. Ici, le réactif est l'eau (à gauche de la flèche), les produits sont le dihydrogène et le dioxygène (à droite)."
+            },
+            {
+              "type": "tableau",
+              "entetes": ["Proposition", "Sens de la réaction", "Masse avant", "Masse après", "Verdict"],
+              "lignes": [
+                ["P1", "eau → gaz (correct)", "2 kg", "2 + 1 = 3 kg", "Faux : 3 kg ≠ 2 kg"],
+                ["P2", "eau → gaz (correct)", "2 kg", "0,22 + 1,78 = 2 kg", "Juste : la masse se conserve"],
+                ["P3", "gaz → eau (inversé)", "2 + 1 = 3 kg", "2 kg", "Faux : sens inversé et 3 kg ≠ 2 kg"]
+              ]
+            },
+            {
+              "type": "texte",
+              "texte": "On vérifie P2 deux fois : $0{,}22 + 1{,}78 = 2{,}00$ kg, et dans l'autre sens $2 - 1{,}78 = 0{,}22$ kg. La somme des masses des produits est bien égale aux 2 kg d'eau consommés."
+            },
+            {
+              "type": "piege",
+              "texte": "Les nombres devant les formules (le 2 de $2\\,\\text{H}_2$) comptent des **molécules**, pas des kilogrammes. P1 recopie ces coefficients comme s'il s'agissait de masses : c'est l'erreur à éviter. Une molécule de dioxygène est beaucoup plus lourde qu'une molécule de dihydrogène (un atome d'oxygène est environ 16 fois plus lourd qu'un atome d'hydrogène), d'où 1,78 kg de dioxygène pour seulement 0,22 kg de dihydrogène."
+            },
+            {
+              "type": "reponse",
+              "texte": "**P2 est correcte** : 2 kg d'eau forment 0,22 kg de dihydrogène et 1,78 kg de dioxygène, car $0{,}22 + 1{,}78 = 2$ kg : la masse totale se conserve au cours de la transformation chimique. P1 (3 kg formés) et P3 (sens inversé, 3 kg donnant 2 kg) ne respectent pas cette conservation."
+            }
+          ]
+        },
+        { "type": "titre", "texte": "Les matériaux dans l'ISS" },
+        {
+          "type": "question",
+          "numero": "3a",
+          "intitule": "Classer dans l'ordre les cinq étapes A, B, C, D, E de la démarche pour vérifier la masse volumique du cylindre d'aluminium.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Le schéma de l'expérience** montre trois temps : le cylindre pesé sur la balance ($m = 40{,}5$ g), l'éprouvette avec l'eau seule ($V_1 = 50$ mL), puis l'éprouvette avec le cylindre plongé dedans ($V_2 = 65$ mL). On pèse le cylindre en premier, tant qu'il est sec : une fois sorti de l'eau, il serait mouillé et la balance afficherait une masse trop grande."
+            },
+            {
+              "type": "liste",
+              "ordonnee": true,
+              "items": [
+                "**B** : mesurer la masse $m$ du cylindre à la balance.",
+                "**E** : remplir l'éprouvette graduée avec $V_1 = 50$ mL d'eau.",
+                "**A** : plonger délicatement le cylindre dans l'eau.",
+                "**C** : mesurer le volume $V_2$ de l'ensemble cylindre et eau.",
+                "**D** : calculer le volume du solide, $V = V_2 - V_1$."
+              ]
+            },
+            {
+              "type": "reponse",
+              "texte": "**B → E → A → C → D.**"
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3b",
+          "intitule": "En utilisant les mesures de l'expérience, vérifier que la masse volumique $\\rho$ du cylindre est bien celle de l'aluminium. Détailler les calculs.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Étape 1 : le volume du cylindre.** Le schéma donne $V_1 = 50$ mL et $V_2 = 65$ mL. Le cylindre a fait monter l'eau de :"
+            },
+            { "type": "formule", "tex": "V = V_2 - V_1 = 65\\text{ mL} - 50\\text{ mL} = 15\\text{ mL}" },
+            {
+              "type": "texte",
+              "texte": "**Étape 2 : la masse volumique.** La balance indique $m = 40{,}5$ g. La masse volumique est la masse d'un corps divisée par son volume :"
+            },
+            { "type": "formule", "tex": "\\rho = \\frac{m}{V} = \\frac{40{,}5\\text{ g}}{15\\text{ mL}} = 2{,}7\\text{ g/mL}" },
+            {
+              "type": "texte",
+              "texte": "**Vérification du calcul :** $15 \\times 2{,}7 = 15 \\times 2 + 15 \\times 0{,}7 = 30 + 10{,}5 = 40{,}5$ g. On retrouve bien la masse mesurée."
+            },
+            {
+              "type": "texte",
+              "texte": "**Comparaison avec le tableau** « Masse volumique de différents matériaux » : l'aluminium a une masse volumique de 2,7 g/mL, l'acier 7,9 g/mL et le titane 4,5 g/mL. La valeur trouvée correspond à l'aluminium."
+            },
+            {
+              "type": "reponse",
+              "texte": "$V = 65 - 50 = 15$ mL et $\\rho = \\dfrac{m}{V} = \\dfrac{40{,}5}{15} = 2{,}7$ g/mL : c'est exactement la masse volumique de l'aluminium donnée dans le tableau. Le cylindre est bien en aluminium."
+            },
+            {
+              "type": "piege",
+              "texte": "Ne divise pas la masse par $V_2 = 65$ mL : ce volume est celui de l'eau ET du cylindre. On obtiendrait $40{,}5 \\div 65 \\approx 0{,}62$ g/mL, une valeur qui ne correspond à aucun métal du tableau. Le volume du solide seul, c'est la différence $V_2 - V_1$."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3c",
+          "intitule": "En comparant les données du tableau des masses volumiques, expliquer le choix de l'aluminium pour les parois des modules de l'ISS.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Le tableau** donne : aluminium 2,7 g/mL, titane 4,5 g/mL, acier 7,9 g/mL. L'aluminium a la plus petite masse volumique : pour un même volume de paroi, il est le plus léger. Par exemple, 1 L (1 000 mL) de paroi pèse 2,7 kg en aluminium, 4,5 kg en titane et 7,9 kg en acier, soit presque trois fois plus ($7{,}9 \\div 2{,}7 \\approx 2{,}9$)."
+            },
+            {
+              "type": "texte",
+              "texte": "Or tout ce qui part dans l'espace doit être lancé par une fusée : plus la charge est lourde, plus il faut de carburant et plus le lancement coûte cher. Des parois légères sont donc un grand avantage."
+            },
+            {
+              "type": "reponse",
+              "texte": "L'aluminium a la plus faible masse volumique des trois matériaux (2,7 g/mL contre 4,5 g/mL pour le titane et 7,9 g/mL pour l'acier). À volume égal, les parois en aluminium sont donc les plus légères, ce qui facilite et rend moins coûteux leur envoi dans l'espace par une fusée."
+            }
+          ]
+        },
+        { "type": "titre", "texte": "« 16 levers de Soleil »" },
+        {
+          "type": "question",
+          "numero": "4a",
+          "intitule": "Choisir deux adjectifs parmi « rectiligne, circulaire, accéléré, uniforme, ralenti » et rédiger une phrase pour caractériser le mouvement de l'ISS autour de la Terre. Justifier.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**La trajectoire.** Le schéma montre la trajectoire de l'ISS en pointillés : c'est un **cercle** autour de la Terre. Le mouvement n'est donc pas rectiligne (une ligne droite) : il est **circulaire**."
+            },
+            {
+              "type": "texte",
+              "texte": "**La vitesse.** Le texte indique que l'ISS se déplace « à une vitesse dont la valeur est constante et égale à 28 000 km/h ». Une vitesse qui ne change pas, ni plus rapide ni plus lente, correspond à un mouvement **uniforme** (ni accéléré, ni ralenti)."
+            },
+            {
+              "type": "reponse",
+              "texte": "Par rapport à la Terre, le mouvement de l'ISS est **circulaire et uniforme** : circulaire car sa trajectoire est un cercle autour de la Terre (schéma), uniforme car la valeur de sa vitesse reste constante, égale à 28 000 km/h (texte)."
+            },
+            {
+              "type": "attendu",
+              "texte": "Deux adjectifs, une phrase, et une justification pour CHACUN : la forme de la trajectoire pour « circulaire », la valeur constante de la vitesse pour « uniforme ». Préciser « par rapport à la Terre » (le référentiel) est un plus apprécié."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4b",
+          "intitule": "Expliquer, grâce à un raisonnement et des calculs, la signification du titre du documentaire « 16 levers de Soleil ». Détailler les calculs.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**L'idée.** Sur Terre, on voit un lever de Soleil par jour, car la Terre fait un tour sur elle-même en 24 h. Dans l'ISS, on voit un lever de Soleil à **chaque tour de la Terre** : à chaque tour, la station passe de la face à l'ombre (la nuit) à la face éclairée par le Soleil (le jour), comme le montre le schéma. Il faut donc compter combien de tours l'ISS fait en 24 h."
+            },
+            {
+              "type": "texte",
+              "texte": "**Étape 1 : la durée d'un tour.** Le texte donne la distance d'un tour, $d = 42\\,700$ km, et la vitesse, $v = 28\\,000$ km/h. De $v = \\dfrac{d}{t}$, on tire :"
+            },
+            { "type": "formule", "tex": "t = \\frac{d}{v} = \\frac{42\\,700\\text{ km}}{28\\,000\\text{ km/h}} \\approx 1{,}525\\text{ h}" },
+            {
+              "type": "texte",
+              "texte": "Soit environ 1 h 32 min ($0{,}525 \\times 60 \\approx 31{,}5$ min). **Vérification :** $28\\,000 \\times 1{,}525 = 42\\,700$ km, on retrouve bien la distance d'un tour."
+            },
+            {
+              "type": "texte",
+              "texte": "**Étape 2 : le nombre de tours en 24 h.**"
+            },
+            { "type": "formule", "tex": "N = \\frac{24\\text{ h}}{1{,}525\\text{ h}} \\approx 15{,}7 \\approx 16\\text{ tours}" },
+            {
+              "type": "texte",
+              "texte": "**Deuxième méthode, pour contrôler.** En 24 h, l'ISS parcourt $d = v \\times t = 28\\,000 \\times 24 = 672\\,000$ km. Cela fait $672\\,000 \\div 42\\,700 \\approx 15{,}7$ tours. Les deux méthodes donnent le même résultat : environ 16 tours par jour."
+            },
+            {
+              "type": "reponse",
+              "texte": "L'ISS fait le tour de la Terre en environ 1,5 h ($42\\,700 \\div 28\\,000 \\approx 1{,}525$ h). En 24 h, elle fait donc environ $24 \\div 1{,}525 \\approx 16$ tours. À chaque tour, elle passe de l'ombre à la lumière du Soleil : les astronautes voient environ **16 levers de Soleil par jour**, d'où le titre du documentaire."
+            },
+            {
+              "type": "piege",
+              "texte": "Garde les mêmes unités partout : la distance en km et la vitesse en km/h donnent une durée en heures, qu'on compare directement aux 24 h d'une journée. Et ne confonds pas 1,525 h avec 1 h 52 min : 0,525 h, c'est $0{,}525 \\times 60 \\approx 31{,}5$ minutes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

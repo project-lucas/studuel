@@ -1,0 +1,2171 @@
+{
+ "niveau": "Tle",
+ "matiere": "maths-techno",
+ "exercices": [
+  {
+   "chapitre": "2621d897-2476-5718-b461-221c60223891",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tirelire de Mila",
+   "competence": "calculer",
+   "situation": "Mila a 50 € dans sa tirelire et y ajoute 15 € au début de chaque mois. Elle relève la somme qu’elle possède à la fin de chaque mois écoulé.",
+   "documents": [
+    {
+     "id": "tire",
+     "type": "tableau",
+     "titre": "La somme de Mila, mois après mois",
+     "colonnes": [
+      "Mois",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Somme (€)",
+       50,
+       65,
+       80,
+       95,
+       110,
+       125
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tire",
+     "enonce": "Touche la somme que possède Mila au bout de 3 mois.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne « 3 » dans la ligne de la somme.",
+     "explication": "Au mois 3, Mila possède **95 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La somme suit u(n) = 50 + 15n. Calcule la somme au bout de 12 mois.",
+     "reponse": 230,
+     "unite": "€",
+     "aide": "Remplace n par 12 : 50 + 15 × 12.",
+     "explication": "u(12) = 50 + 15 × 12 = 50 + 180 = **230 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de mois Mila atteint-elle exactement 200 € ?",
+     "reponse": 10,
+     "unite": "mois",
+     "aide": "Résous 50 + 15n = 200.",
+     "explication": "15n = 150, donc n = **10 mois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle suite modélise la somme de Mila, et pourquoi ?",
+     "options": [
+      "Arithmétique, car la somme augmente de 15 € chaque mois",
+      "Géométrique, car la somme augmente de 15 € chaque mois",
+      "Arithmétique, car la somme est multipliée par 15 chaque mois",
+      "Géométrique, car la somme est multipliée par 15 chaque mois"
+     ],
+     "reponse": 0,
+     "aide": "On passe d’un mois au suivant en ajoutant ou en multipliant ?",
+     "explication": "On **ajoute** toujours 15 € : c’est une suite arithmétique de raison 15."
+    }
+   ]
+  },
+  {
+   "chapitre": "2621d897-2476-5718-b461-221c60223891",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les gradins du stade",
+   "competence": "modeliser",
+   "situation": "Un petit stade compte 25 rangées de gradins. La rangée 1 (la plus proche du terrain) a 20 places et chaque rangée suivante en compte 3 de plus que la précédente.",
+   "documents": [
+    {
+     "id": "rangs",
+     "type": "tableau",
+     "titre": "Les cinq premières rangées",
+     "colonnes": [
+      "Rangée",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Places",
+       20,
+       23,
+       26,
+       29,
+       32
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappel",
+     "blocs": [
+      "Terme général : u(n) = u(1) + (n − 1) × r.",
+      "Somme : nombre de termes × (premier + dernier) ÷ 2."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rangs",
+     "enonce": "Touche la rangée qui compte 32 places.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Lis la ligne des places de gauche à droite.",
+     "explication": "La rangée 5 compte **32 places**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre de places de la rangée 25.",
+     "reponse": 92,
+     "unite": "places",
+     "aide": "Entre la rangée 1 et la rangée 25, on ajoute 3 places 24 fois.",
+     "explication": "u(25) = 20 + 24 × 3 = **92 places**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre total de places du stade (rangées 1 à 25).",
+     "reponse": 1400,
+     "unite": "places",
+     "aide": "Nombre de termes × (premier + dernier) ÷ 2.",
+     "explication": "25 × (20 + 92) ÷ 2 = 25 × 56 = **1 400 places**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une rangée compte 59 places. Quel est son numéro ?",
+     "reponse": 14,
+     "aide": "Résous 20 + 3(n − 1) = 59.",
+     "explication": "3(n − 1) = 39, donc n − 1 = 13 et n = **14**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on u(25) = 20 + 24 × 3 et non 20 + 25 × 3 ?",
+     "options": [
+      "Entre la rangée 1 et la rangée 25, on ajoute 3 places 24 fois",
+      "Entre la rangée 1 et la rangée 25, on ajoute 3 places 25 fois",
+      "Il y a 25 rangées donc on ajoute 3 places pour chacune d’elles",
+      "La rangée 1 compte pour zéro, donc on ajoute 3 places 25 fois"
+     ],
+     "reponse": 0,
+     "aide": "Combien de « sauts » séparent la rangée 1 de la rangée 25 ?",
+     "explication": "Il y a **24 sauts** entre la rangée 1 et la rangée 25 : le terme de départ est déjà la rangée 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "2621d897-2476-5718-b461-221c60223891",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux contrats, dix ans",
+   "competence": "raisonner",
+   "situation": "Lina hésite entre deux contrats pour ses dix premières années de travail. Le contrat A démarre plus haut, mais le contrat B prévoit des augmentations annuelles plus fortes. Les salaires sont annuels et bruts.",
+   "documents": [
+    {
+     "id": "contrats",
+     "type": "tableau",
+     "titre": "Salaires annuels proposés",
+     "colonnes": [
+      "Année",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Contrat A (€)",
+       21600,
+       22320,
+       23040,
+       23760,
+       24480,
+       25200
+      ],
+      [
+       "Contrat B (€)",
+       20400,
+       21480,
+       22560,
+       23640,
+       24720,
+       25800
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "regles",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux contrats",
+     "blocs": [
+      "A : 21 600 € la 1re année, puis + 720 € chaque année.",
+      "B : 20 400 € la 1re année, puis + 1 080 € chaque année.",
+      "Somme de termes consécutifs : nombre de termes × (premier + dernier) ÷ 2."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contrats",
+     "enonce": "Touche le salaire du contrat B à la première année où il dépasse celui du contrat A.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Compare A et B colonne par colonne, de gauche à droite.",
+     "explication": "À l’année 5, B vaut 24 720 € contre 24 480 € pour A : c’est **la première année** où B passe devant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le salaire du contrat B à l’année 10.",
+     "reponse": 30120,
+     "unite": "€",
+     "aide": "u(10) = 20 400 + 9 × 1 080.",
+     "explication": "B(10) = 20 400 + 9 × 1 080 = **30 120 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la différence entre le total perçu avec B et le total perçu avec A sur les 10 ans.",
+     "reponse": 4200,
+     "unite": "€",
+     "aide": "Calcule A(10) puis les deux sommes de 10 termes.",
+     "explication": "A(10) = 28 080. Total A : 10 × (21 600 + 28 080) ÷ 2 = 248 400. Total B : 10 × (20 400 + 30 120) ÷ 2 = 252 600. Écart : **4 200 €** en faveur de B."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur dix ans, quel contrat Lina a-t-elle intérêt à choisir ?",
+     "options": [
+      "B, car sa raison plus grande finit par compenser son départ plus bas",
+      "A, car son salaire de départ plus élevé l’emporte sur toute la durée",
+      "Les deux se valent, car les deux salaires augmentent chaque année",
+      "B, car son salaire de départ est plus élevé que celui du contrat A"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le total cumulé sur dix ans, pas seulement la première année.",
+     "explication": "B rapporte **4 200 € de plus** sur dix ans : son augmentation annuelle plus forte rattrape, puis dépasse, son départ plus bas."
+    }
+   ]
+  },
+  {
+   "chapitre": "207ce93d-e48a-5960-9908-dcf0d9b98020",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La levure qui gonfle",
+   "competence": "modeliser",
+   "situation": "Dans un laboratoire de boulangerie, une culture de levure compte 200 cellules (en milliers) au départ et augmente de 10 % chaque heure.",
+   "documents": [
+    {
+     "id": "levure",
+     "type": "tableau",
+     "titre": "Comptage de la levure",
+     "colonnes": [
+      "Heure",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Cellules (milliers)",
+       200,
+       220,
+       242,
+       266.2,
+       292.82
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "levure",
+     "enonce": "Touche le nombre de cellules à l’heure 2.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Colonne « 2 » de la ligne des cellules.",
+     "explication": "À l’heure 2, on compte **242 milliers** de cellules."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel nombre multiplie-t-on le nombre de cellules d’une heure à la suivante ?",
+     "reponse": 1.1,
+     "aide": "Une hausse de 10 % donne un coefficient 1 + 0,10.",
+     "explication": "Le coefficient multiplicateur est **1,1** : c’est la raison de la suite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec u(n) = 200 × 1,1^n, calcule u(5), arrondi au dixième.",
+     "reponse": 322.1,
+     "unite": "milliers",
+     "tolerance": 0.05,
+     "aide": "Calcule 1,1^5 puis multiplie par 200.",
+     "explication": "u(5) = 200 × 1,1^5 ≈ 200 × 1,6105 = **322,1 milliers** de cellules."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette suite est-elle géométrique et non arithmétique ?",
+     "options": [
+      "Les écarts 20 ; 22 ; 24,2 changent, mais le rapport reste égal à 1,1",
+      "Les écarts 20 ; 22 ; 24,2 restent constants, donc la suite est arithmétique",
+      "Le rapport 1,1 change à chaque heure, donc la suite est arithmétique",
+      "Les écarts restent tous égaux à 20, donc la suite est géométrique"
+     ],
+     "reponse": 0,
+     "aide": "Calcule les écarts, puis les rapports entre deux termes voisins.",
+     "explication": "Les écarts varient (20 ; 22 ; 24,2) mais 220 ÷ 200 = 242 ÷ 220 = **1,1** : suite géométrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "207ce93d-e48a-5960-9908-dcf0d9b98020",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La balle qui rebondit",
+   "competence": "lire-graphique",
+   "situation": "Une balle est lâchée d’une hauteur de 2 m. À chaque rebond, elle remonte aux 80 % de la hauteur de sa chute précédente. On note u(n) la hauteur atteinte après le n-ième rebond, avec u(1) = 1,6 m.",
+   "documents": [
+    {
+     "id": "rebonds",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Hauteur après chaque rebond",
+     "categories": [
+      "1er",
+      "2e",
+      "3e",
+      "4e",
+      "5e"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur",
+       "valeurs": [
+        1.6,
+        1.28,
+        1.02,
+        0.82,
+        0.66
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "en m",
+      "min": 0,
+      "max": 2,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Rebond"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies au centième, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rebonds",
+     "enonce": "Touche le premier rebond après lequel la balle remonte à moins de 1 m.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Lis les barres de gauche à droite et compare chacune à 1 m.",
+     "explication": "Après le 4e rebond, la balle remonte à **0,82 m** : c’est la première hauteur sous 1 m (le 3e rebond donne 1,02 m)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec u(n) = 1,6 × 0,8^(n − 1), calcule la hauteur après le 6e rebond, arrondie au centième.",
+     "reponse": 0.52,
+     "unite": "m",
+     "tolerance": 0.005,
+     "aide": "Pour n = 6, l’exposant vaut 5.",
+     "explication": "u(6) = 1,6 × 0,8^5 = 1,6 × 0,32768 ≈ **0,52 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la somme des hauteurs atteintes après les 4 premiers rebonds, arrondie au centième.",
+     "reponse": 4.72,
+     "unite": "m",
+     "tolerance": 0.005,
+     "aide": "Premier terme × (1 − q^4) ÷ (1 − q), avec q = 0,8.",
+     "explication": "1,6 × (1 − 0,8^4) ÷ (1 − 0,8) = 1,6 × 0,5904 ÷ 0,2 ≈ **4,72 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment varie la suite des hauteurs ?",
+     "options": [
+      "Décroissante, car la raison 0,8 est comprise entre 0 et 1",
+      "Croissante, car la raison 0,8 est comprise entre 0 et 1",
+      "Décroissante, car la raison 0,8 est supérieure à 1",
+      "Constante, car on multiplie toujours par le même nombre"
+     ],
+     "reponse": 0,
+     "aide": "Compare la raison à 1.",
+     "explication": "Comme **0 < q < 1** et que les termes sont positifs, la suite est décroissante : chaque rebond est plus bas."
+    }
+   ]
+  },
+  {
+   "chapitre": "207ce93d-e48a-5960-9908-dcf0d9b98020",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux plans d’entraînement",
+   "competence": "raisonner",
+   "situation": "Kylian prépare un défi de pompes. Le plan A ajoute 5 pompes chaque jour ; le plan B augmente de 20 % chaque jour. Les deux plans commencent à 10 pompes le jour 1.",
+   "documents": [
+    {
+     "id": "plans",
+     "type": "tableau",
+     "titre": "Pompes par séance (plan B arrondi au dixième)",
+     "colonnes": [
+      "Jour",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Plan A",
+       10,
+       15,
+       20,
+       25,
+       30,
+       35
+      ],
+      [
+       "Plan B",
+       10,
+       12,
+       14.4,
+       17.3,
+       20.7,
+       24.9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "formules",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les formules",
+     "blocs": [
+      "Plan A : suite arithmétique de raison 5 ; somme = nombre de termes × (premier + dernier) ÷ 2.",
+      "Plan B : suite géométrique de raison 1,2 ; somme = premier terme × (1 − 1,2^n) ÷ (1 − 1,2), n termes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plans",
+     "enonce": "Touche la première séance où le plan B atteint au moins 20 pompes.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Parcours la ligne du plan B et cherche la première valeur supérieure ou égale à 20.",
+     "explication": "Au jour 5, le plan B demande **20,7 pompes** : c’est la première valeur à dépasser 20."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total de pompes des 6 premiers jours avec le plan A.",
+     "reponse": 135,
+     "unite": "pompes",
+     "aide": "Nombre de termes × (premier + dernier) ÷ 2.",
+     "explication": "6 × (10 + 35) ÷ 2 = **135 pompes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total de pompes des 6 premiers jours avec le plan B, arrondi au dixième.",
+     "reponse": 99.3,
+     "unite": "pompes",
+     "tolerance": 0.05,
+     "aide": "Utilise 10 × (1 − 1,2^6) ÷ (1 − 1,2).",
+     "explication": "10 × (1 − 2,98598) ÷ (−0,2) ≈ **99,3 pompes** : le plan A est plus fort sur 6 jours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre de pompes du plan B au jour 11, arrondi au dixième (le plan A donne 60 ce jour-là).",
+     "reponse": 61.9,
+     "unite": "pompes",
+     "tolerance": 0.05,
+     "aide": "Le jour 11 correspond à 1,2 à la puissance 10.",
+     "explication": "B(11) = 10 × 1,2^10 ≈ **61,9 pompes**, contre 60 pour A."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure pour un défi qui dure plus de 11 jours ?",
+     "options": [
+      "B dépasse A dès le 11e jour, car sa croissance finit par l’emporter",
+      "A reste devant B, car il ajoute 5 pompes de plus chaque jour",
+      "A et B restent égaux, car ils commencent tous deux à 10 pompes",
+      "B reste derrière A, car il ajoute moins de pompes au début"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux plans au jour 11.",
+     "explication": "Au jour 11, B (61,9) passe devant A (60) : une croissance **à pourcentage constant** finit toujours par dépasser une croissance par ajouts constants."
+    }
+   ]
+  },
+  {
+   "chapitre": "734d4e2e-589a-5134-8166-9c05ddb94c86",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux livrets, un même taux",
+   "competence": "lire-tableau",
+   "situation": "Sacha place 2 000 € à 4 % par an, à intérêts simples. Sa sœur Lou place aussi 2 000 € à 4 % par an, mais à intérêts composés. Le tableau donne leur capital au fil des années.",
+   "documents": [
+    {
+     "id": "livrets",
+     "type": "tableau",
+     "titre": "Capital de Sacha et de Lou",
+     "colonnes": [
+      "Année",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "Sacha, intérêts simples (€)",
+       2000,
+       2080,
+       2160,
+       2240
+      ],
+      [
+       "Lou, intérêts composés (€)",
+       2000,
+       2080,
+       2163.2,
+       2249.73
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centime, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livrets",
+     "enonce": "Touche le capital de Lou au bout de 3 ans.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "Prends la ligne de Lou et la colonne « 3 ».",
+     "explication": "Au bout de 3 ans, Lou possède **2 249,73 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel intérêt Sacha reçoit-elle chaque année ?",
+     "reponse": 80,
+     "unite": "€",
+     "aide": "4 % de 2 000 €.",
+     "explication": "4 % de 2 000 = **80 €** par an, toujours calculés sur le capital de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le capital de Lou dépasse-t-il celui de Sacha au bout de 3 ans ?",
+     "reponse": 9.73,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Soustrais les deux valeurs de la colonne « 3 ».",
+     "explication": "2 249,73 − 2 240 = **9,73 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lou gagne-t-elle plus que Sacha dès la 2e année ?",
+     "options": [
+      "Les intérêts gagnés rapportent eux-mêmes des intérêts les années suivantes",
+      "Son taux est plus élevé, car il dépasse 4 % chaque année qui passe",
+      "Son capital de départ est plus grand, car elle ajoute une somme chaque année",
+      "Ses intérêts sont calculés sur le capital de départ seulement, chaque année"
+     ],
+     "reponse": 0,
+     "aide": "Regarde sur quelle somme porte le calcul de l’intérêt de la 2e année.",
+     "explication": "En intérêts composés, l’intérêt de l’année 1 est ajouté au capital : il **produit à son tour des intérêts**."
+    }
+   ]
+  },
+  {
+   "chapitre": "734d4e2e-589a-5134-8166-9c05ddb94c86",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’épargne pour le permis",
+   "competence": "calculer",
+   "situation": "Alex verse 600 € chaque 1er janvier sur un livret à 3 % par an (intérêts composés) pour financer son permis. On cherche la valeur acquise juste après le 4e versement.",
+   "documents": [
+    {
+     "id": "versements",
+     "type": "tableau",
+     "titre": "Valeur de chaque versement juste après le 4e",
+     "colonnes": [
+      "Versement",
+      "1er",
+      "2e",
+      "3e",
+      "4e"
+     ],
+     "lignes": [
+      [
+       "Durée du placement (ans)",
+       3,
+       2,
+       1,
+       0
+      ],
+      [
+       "Valeur acquise (€)",
+       655.64,
+       "?",
+       618,
+       600
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centime, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "versements",
+     "enonce": "Touche la valeur du versement qui a été placé le plus longtemps.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la durée de placement la plus grande.",
+     "explication": "Le 1er versement est placé 3 ans : il vaut **655,64 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur du 2e versement : 600 × 1,03², arrondie au centime.",
+     "reponse": 636.54,
+     "unite": "€",
+     "tolerance": 0.005,
+     "aide": "Calcule 1,03² puis multiplie par 600.",
+     "explication": "600 × 1,03² = 600 × 1,0609 = **636,54 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la formule 600 × (1,03⁴ − 1) ÷ 0,03, calcule la valeur acquise totale, arrondie au centime.",
+     "reponse": 2510.18,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Calcule 1,03⁴ ≈ 1,125509.",
+     "explication": "600 × 0,125509 ÷ 0,03 ≈ **2 510,18 €**, la somme des quatre valeurs du tableau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel total d’intérêts Alex a-t-il gagné ? (Il a versé 4 × 600 €.)",
+     "reponse": 110.18,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Valeur acquise moins somme versée.",
+     "explication": "2 510,18 − 2 400 = **110,18 €** d’intérêts."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle écriture donne la valeur acquise après 4 versements ?",
+     "options": [
+      "600 × (1,03⁴ − 1) ÷ 0,03, somme géométrique de raison 1,03",
+      "600 × 4 × 1,03, car chaque versement gagne 3 % une seule fois",
+      "600 × 1,03⁴, car tous les versements restent placés quatre ans",
+      "600 + 600 × 0,03 × 4, car les intérêts sont simples ici"
+     ],
+     "reponse": 0,
+     "aide": "Chaque versement a une durée de placement différente.",
+     "explication": "Les valeurs 600 ; 600 × 1,03 ; 600 × 1,03² ; 600 × 1,03³ forment une **somme géométrique de raison 1,03**."
+    }
+   ]
+  },
+  {
+   "chapitre": "734d4e2e-589a-5134-8166-9c05ddb94c86",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Objectif 10 000 €",
+   "competence": "modeliser",
+   "situation": "Inès veut disposer de 10 000 € juste après son 8e versement annuel, sur un placement à 2 % par an. Elle simule d’abord des versements de 1 000 € dans un tableur, puis cherche le versement qui convient.",
+   "documents": [
+    {
+     "id": "tableur",
+     "type": "tableau",
+     "titre": "Valeur acquise juste après chaque versement de 1 000 €",
+     "colonnes": [
+      "Versement n°",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Valeur acquise (€)",
+       1000,
+       2020,
+       3060.4,
+       4121.61,
+       5204.04,
+       6308.12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centime, imaginées pour l’exercice"
+    },
+    {
+     "id": "modele",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "Récurrence : v(n + 1) = 1,02 × v(n) + 1 000.",
+      "Formule : V × ((1 + t)^n − 1) ÷ t, avec t = 0,02."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tableur",
+     "enonce": "Touche la valeur acquise juste après le 4e versement.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Prends la colonne « 4 ».",
+     "explication": "Après le 4e versement, la valeur acquise est de **4 121,61 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la récurrence, calcule la valeur acquise après le 7e versement (à partir de 6 308,12 €), arrondie au centime.",
+     "reponse": 7434.28,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Multiplie 6 308,12 par 1,02 puis ajoute 1 000.",
+     "explication": "v(7) = 1,02 × 6 308,12 + 1 000 ≈ **7 434,28 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la formule, calcule la valeur acquise après 8 versements de 1 000 €, arrondie au centime.",
+     "reponse": 8582.97,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Calcule 1,02⁸ ≈ 1,171659.",
+     "explication": "1 000 × (1,02⁸ − 1) ÷ 0,02 ≈ 1 000 × 8,58297 = **8 582,97 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel versement annuel V donne 10 000 € après 8 versements ? Arrondis au centime.",
+     "reponse": 1165.1,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "V × 8,58297 = 10 000 : divise.",
+     "explication": "V = 10 000 ÷ 8,58297 ≈ **1 165,10 €** par an."
+    },
+    {
+     "type": "choix",
+     "enonce": "Inès verse 1 000 € par an. Atteint-elle son objectif ?",
+     "options": [
+      "Non : après 8 versements de 1 000 €, la valeur acquise est 8 582,97 €",
+      "Oui : 8 versements de 1 000 € font déjà 8 000 €, plus les intérêts",
+      "Oui : avec des intérêts à 2 %, la valeur acquise dépasse 10 000 €",
+      "Non : les intérêts sont retirés chaque année, donc on reste à 8 000 €"
+     ],
+     "reponse": 0,
+     "aide": "Compare la valeur acquise à 10 000 €.",
+     "explication": "Avec 1 000 € par an, elle obtient **8 582,97 €** : il lui faut verser plus (environ 1 165,10 €)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b212ef10-b8f2-517a-9f09-426c427d0345",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’appli qui se répand",
+   "competence": "modeliser",
+   "situation": "Une nouvelle application compte 2 000 utilisateurs au lancement. Son nombre d’utilisateurs est modélisé par U(t) = 2 000 × 1,5^t, où t est le temps écoulé en mois.",
+   "documents": [
+    {
+     "id": "appli",
+     "type": "tableau",
+     "titre": "Utilisateurs au fil des mois",
+     "colonnes": [
+      "t (mois)",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "U(t)",
+       2000,
+       3000,
+       4500,
+       6750
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appli",
+     "enonce": "Touche le nombre d’utilisateurs au bout de 2 mois.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Prends la colonne « 2 ».",
+     "explication": "Au bout de 2 mois, l’application compte **4 500 utilisateurs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule U(4) avec la formule.",
+     "reponse": 10125,
+     "aide": "1,5^4 = 5,0625.",
+     "explication": "U(4) = 2 000 × 5,0625 = **10 125 utilisateurs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule U(0,5), le nombre d’utilisateurs au bout d’un demi-mois. Arrondi à l’unité.",
+     "reponse": 2449,
+     "tolerance": 0.5,
+     "aide": "U(0,5) = 2 000 × √1,5.",
+     "explication": "U(0,5) = 2 000 × 1,5^(0,5) ≈ 2 000 × 1,2247 ≈ **2 449 utilisateurs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fonction t ↦ 2 000 × 1,5^t est-elle croissante ?",
+     "options": [
+      "Sa base 1,5 est supérieure à 1, donc les puissances augmentent",
+      "Sa base 1,5 est comprise entre 0 et 1, donc les puissances augmentent",
+      "Sa base 1,5 est inférieure à 2, donc les puissances augmentent lentement",
+      "Sa base 1,5 est positive, donc toute puissance de 1,5 augmente"
+     ],
+     "reponse": 0,
+     "aide": "Compare la base à 1.",
+     "explication": "Pour **a > 1** et k > 0, la fonction k × a^t est strictement croissante."
+    }
+   ]
+  },
+  {
+   "chapitre": "b212ef10-b8f2-517a-9f09-426c427d0345",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La voiture qui se déprécie",
+   "competence": "lire-graphique",
+   "situation": "Une voiture neuve vaut 18 000 €. Chaque année, sa valeur baisse de 15 %. Sa valeur au bout de t années est V(t) = 18 000 × 0,85^t.",
+   "documents": [
+    {
+     "id": "cote",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Valeur de la voiture",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "V(t)",
+       "valeurs": [
+        18000,
+        15300,
+        13005,
+        11054,
+        9396,
+        7987
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Valeur",
+      "unite": "en €",
+      "min": 0,
+      "max": 20000,
+      "pas": 5000
+     },
+     "axeX": {
+      "titre": "Temps t (années)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies à l’euro, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cote",
+     "enonce": "Touche le premier point où la valeur passe sous 10 000 €.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Parcours la courbe de gauche à droite.",
+     "explication": "Au bout de 4 ans, la voiture vaut environ **9 396 €** : c’est le premier point sous 10 000 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule V(3), arrondie à l’euro.",
+     "reponse": 11054,
+     "unite": "€",
+     "tolerance": 0.5,
+     "aide": "0,85³ ≈ 0,614125.",
+     "explication": "V(3) = 18 000 × 0,85³ ≈ **11 054 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur au bout de 2,5 ans (2 ans et demi), arrondie à l’euro.",
+     "reponse": 11990,
+     "unite": "€",
+     "tolerance": 1,
+     "aide": "Utilise la touche puissance avec l’exposant 2,5.",
+     "explication": "V(2,5) = 18 000 × 0,85^(2,5) ≈ 18 000 × 0,6661 ≈ **11 990 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire du sens de variation de V ?",
+     "options": [
+      "V est décroissante, car sa base 0,85 est comprise entre 0 et 1",
+      "V est croissante, car sa base 0,85 est comprise entre 0 et 1",
+      "V est décroissante, car sa base 0,85 est supérieure à 1",
+      "V est constante, car le pourcentage de baisse est constant"
+     ],
+     "reponse": 0,
+     "aide": "Compare la base 0,85 à 1.",
+     "explication": "Avec **0 < a < 1**, la fonction a^t est strictement décroissante, et 18 000 est positif : V décroît."
+    }
+   ]
+  },
+  {
+   "chapitre": "b212ef10-b8f2-517a-9f09-426c427d0345",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le médicament qui s’élimine",
+   "competence": "modeliser",
+   "situation": "Après une prise de médicament, la concentration dans le sang (en mg/L) est C(t) = 8 × 0,6^t, où t est le temps en heures. Le médicament n’agit plus sous 1 mg/L.",
+   "documents": [
+    {
+     "id": "conc",
+     "type": "tableau",
+     "titre": "Concentration au fil des heures",
+     "colonnes": [
+      "t (h)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "C(t) (mg/L)",
+       8,
+       4.8,
+       2.88,
+       1.73,
+       1.04,
+       0.62
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centième, imaginées pour l’exercice"
+    },
+    {
+     "id": "regles",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Règles utiles",
+     "blocs": [
+      "a^(x + y) = a^x × a^y.",
+      "Pour a > 0, a^x est toujours strictement positif."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conc",
+     "enonce": "Touche la première valeur de concentration qui passe sous 1 mg/L.",
+     "reponse": [
+      "r0c6"
+     ],
+     "aide": "Lis la ligne de gauche à droite et cherche la première valeur inférieure à 1.",
+     "explication": "À t = 5 h, la concentration vaut **0,62 mg/L** : c’est la première valeur sous 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule C(2,5), la concentration au bout de 2 h 30, arrondie au centième.",
+     "reponse": 2.23,
+     "unite": "mg/L",
+     "tolerance": 0.005,
+     "aide": "C(2,5) = 8 × 0,6^(2,5).",
+     "explication": "C(2,5) = 8 × 0,6^(2,5) ≈ 8 × 0,2789 ≈ **2,23 mg/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule C(3) ÷ C(1) à partir de la formule.",
+     "reponse": 0.36,
+     "tolerance": 0.001,
+     "aide": "Les 8 se simplifient ; il reste 0,6³ ÷ 0,6.",
+     "explication": "C(3) ÷ C(1) = 0,6³ ÷ 0,6¹ = 0,6² = **0,36**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage la concentration baisse-t-elle chaque heure ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Un coefficient 0,6 correspond à 1 − 0,4.",
+     "explication": "Coefficient 0,6 = 1 − 0,4 : baisse de **40 %** par heure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la concentration n’atteint-elle jamais zéro ?",
+     "options": [
+      "Une puissance de 0,6 est toujours strictement positive, même très petite",
+      "La concentration remonte après 5 heures, car 0,6 est positif",
+      "On arrête les mesures à 5 heures, donc elle ne peut plus baisser",
+      "La base 0,6 est supérieure à 1, donc la valeur ne diminue pas"
+     ],
+     "reponse": 0,
+     "aide": "Que dit la règle sur le signe de a^x ?",
+     "explication": "Comme **0,6^t > 0** pour tout t, la concentration se rapproche de 0 sans jamais l’atteindre."
+    }
+   ]
+  },
+  {
+   "chapitre": "08c0214d-5006-583d-96c8-da970e78d49b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les abonnés de la chaîne",
+   "competence": "calculer",
+   "situation": "Une chaîne vidéo comptait 1 000 abonnés en 2021 et en compte 1 728 en 2024. Ses responsables veulent connaître la hausse annuelle moyenne sur ces trois années.",
+   "documents": [
+    {
+     "id": "abos",
+     "type": "tableau",
+     "titre": "Nombre d’abonnés",
+     "colonnes": [
+      "Année",
+      "2021",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Abonnés",
+       1000,
+       1728
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abos",
+     "enonce": "Touche le nombre d’abonnés en 2024.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "C’est la valeur finale.",
+     "explication": "En 2024, la chaîne compte **1 728 abonnés**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient multiplicateur global entre 2021 et 2024.",
+     "reponse": 1.728,
+     "aide": "Valeur finale ÷ valeur initiale.",
+     "explication": "1 728 ÷ 1 000 = **1,728**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sachant que 1,2³ = 1,728, quel est le taux d’évolution annuel moyen, en pourcentage ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Le coefficient moyen vérifie c³ = 1,728.",
+     "explication": "Le coefficient moyen est **1,2** : une hausse de 20 % par an."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne divise-t-on pas les 72,8 % de hausse globale par 3 ?",
+     "options": [
+      "Chaque hausse annuelle s’applique à un nombre d’abonnés déjà augmenté",
+      "Les hausses annuelles s’additionnent, donc on divise bien par trois",
+      "Le nombre d’abonnés baisse chaque année, donc la division est fausse",
+      "72,8 % est trop grand, donc on l’arrondit à 70 % avant de diviser"
+     ],
+     "reponse": 0,
+     "aide": "Chaque année repart de la valeur de l’année précédente.",
+     "explication": "72,8 ÷ 3 ≈ 24,3 % ne redonne pas 1,728 : les hausses **se multiplient**, elles ne s’additionnent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "08c0214d-5006-583d-96c8-da970e78d49b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La boulangerie et ses recettes",
+   "competence": "lire-graphique",
+   "situation": "Le chiffre d’affaires (CA) d’une boulangerie artisanale est relevé chaque année. Le gérant veut connaître sa croissance annuelle moyenne entre 2020 et 2024, soit sur 4 évolutions successives.",
+   "documents": [
+    {
+     "id": "ca",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Chiffre d’affaires annuel",
+     "categories": [
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "CA",
+       "valeurs": [
+        150,
+        156,
+        165,
+        172,
+        184
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "CA",
+      "unite": "en k€",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ca",
+     "enonce": "Touche l’année où la hausse par rapport à l’année précédente est la plus forte en valeur.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Calcule l’écart entre chaque barre et la précédente.",
+     "explication": "Les hausses sont 6 ; 9 ; 7 et **12 k€** : la plus forte est celle de 2024."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux d’évolution global entre 2020 et 2024, en pourcentage arrondi au centième.",
+     "reponse": 22.67,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Coefficient : 184 ÷ 150, puis retire 1.",
+     "explication": "184 ÷ 150 ≈ 1,2267 : hausse de **22,67 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux d’évolution annuel moyen, en pourcentage arrondi au centième.",
+     "reponse": 5.24,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Coefficient moyen : (184 ÷ 150)^(1/4).",
+     "explication": "(184 ÷ 150)^(1/4) ≈ 1,0524 : hausse moyenne de **5,24 % par an**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au même rythme moyen pendant 2 années de plus, quel serait le CA en 2026 ? Arrondi à l’unité, en k€.",
+     "reponse": 204,
+     "unite": "k€",
+     "tolerance": 0.6,
+     "aide": "Multiplie 184 par le coefficient moyen, deux fois.",
+     "explication": "184 × 1,0524² ≈ **204 k€**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le taux moyen est inférieur à 22,67 ÷ 4 ≈ 5,67 %. Pourquoi ?",
+     "options": [
+      "Les hausses s’appliquent chaque année à un CA de plus en plus grand",
+      "Les hausses s’additionnent, donc il suffit de diviser le taux global",
+      "La division par quatre ne convient pas car 2020 est une année de crise",
+      "Les hausses successives se compensent, donc le taux moyen vaut zéro"
+     ],
+     "reponse": 0,
+     "aide": "Sur quelle valeur porte chaque hausse annuelle ?",
+     "explication": "Chaque hausse porte sur un CA déjà augmenté : un taux plus petit suffit. Les évolutions **se multiplient**."
+    }
+   ]
+  },
+  {
+   "chapitre": "08c0214d-5006-583d-96c8-da970e78d49b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du prix au livret",
+   "competence": "raisonner",
+   "situation": "Le prix d’un abonnement a connu trois évolutions annuelles successives, données ci-dessous. Par ailleurs, un livret rapporte 6 % par an : on cherche le taux mensuel qui donne le même résultat sur un an.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Évolution du prix de l’abonnement",
+     "colonnes": [
+      "",
+      "Année 1",
+      "Année 2",
+      "Année 3"
+     ],
+     "lignes": [
+      [
+       "Évolution",
+       "+ 10 %",
+       "+ 20 %",
+       "− 5 %"
+      ],
+      [
+       "Coefficient multiplicateur",
+       "1,1",
+       "1,2",
+       "0,95"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "meth",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La méthode",
+     "blocs": [
+      "Coefficient global : on multiplie les coefficients.",
+      "Taux moyen sur n périodes : C^(1/n) − 1.",
+      "Taux mensuel équivalent : (1 + t)^12 = coefficient annuel."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche l’évolution de l’année où le prix baisse.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère le signe de chaque évolution.",
+     "explication": "À l’année 3, l’évolution est de **− 5 %** : c’est la seule baisse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient multiplicateur global des trois années.",
+     "reponse": 1.254,
+     "tolerance": 0.0005,
+     "aide": "Multiplie 1,1 × 1,2 × 0,95.",
+     "explication": "1,1 × 1,2 × 0,95 = **1,254**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux d’évolution annuel moyen sur les trois années, en pourcentage arrondi au centième.",
+     "reponse": 7.84,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Coefficient moyen : 1,254^(1/3).",
+     "explication": "1,254^(1/3) ≈ 1,0784 : **+ 7,84 % par an** en moyenne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le taux moyen (7,84 %) diffère-t-il de la moyenne des pourcentages (8,33 %) ?",
+     "options": [
+      "Les évolutions se composent par multiplication et non par addition",
+      "Le taux moyen ignore la baisse de 5 % de la troisième année",
+      "La moyenne des pourcentages oublie la première année du tableau",
+      "Le taux moyen se calcule en divisant le taux global par trois"
+     ],
+     "reponse": 0,
+     "aide": "Un pourcentage s’applique à la valeur de l’année précédente.",
+     "explication": "On ne peut pas additionner des pourcentages qui portent sur des bases différentes : les coefficients **se multiplient**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux mensuel équivalent à 6 % par an, en pourcentage arrondi au centième ?",
+     "reponse": 0.49,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Calcule 1,06^(1/12) puis retire 1.",
+     "explication": "1,06^(1/12) ≈ 1,00487 : **0,49 % par mois**, un peu moins que 6 ÷ 12 = 0,5 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2e23011-e7b4-5a93-986e-cde80b643ed4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’échelle des pH",
+   "competence": "lire-tableau",
+   "situation": "En chimie, le pH d’une solution se calcule avec le logarithme décimal : pH = −log [H₃O⁺], où [H₃O⁺] est la concentration en ions oxonium, en mol/L. Plus le pH est petit, plus la solution est acide.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "tableau",
+     "titre": "Trois solutions du quotidien",
+     "colonnes": [
+      "Solution",
+      "Citron",
+      "Café",
+      "Eau pure"
+     ],
+     "lignes": [
+      [
+       "[H₃O⁺] (mol/L)",
+       "10^(−2)",
+       "10^(−5)",
+       "10^(−7)"
+      ],
+      [
+       "pH",
+       2,
+       5,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, à titre d’exemple"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case « ? » : quel est le pH de l’eau pure ?",
+     "reponse": 7,
+     "aide": "log(10^(−7)) = −7, donc pH = −(−7).",
+     "explication": "pH = −log(10^(−7)) = −(−7) = **7**."
+    },
+    {
+     "type": "zone",
+     "document": "ph",
+     "enonce": "Touche le pH de la solution la plus acide.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Plus le pH est petit, plus la solution est acide.",
+     "explication": "Le citron a le pH le plus petit (**2**) : c’est la solution la plus acide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration [H₃O⁺] d’une solution de pH 4 ? Écris-la en décimal (mol/L).",
+     "reponse": 0.0001,
+     "unite": "mol/L",
+     "aide": "pH = 4 signifie log[H₃O⁺] = −4, soit [H₃O⁺] = 10^(−4).",
+     "explication": "[H₃O⁺] = 10^(−4) = **0,0001 mol/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La concentration [H₃O⁺] est multipliée par 100. Que devient le pH ?",
+     "options": [
+      "Il diminue de 2 points, car le logarithme de 100 vaut 2",
+      "Il augmente de 2 points, car le logarithme de 100 vaut 2",
+      "Il est multiplié par 100, car le pH est proportionnel à [H₃O⁺]",
+      "Il est divisé par 100, car le pH est proportionnel à [H₃O⁺]"
+     ],
+     "reponse": 0,
+     "aide": "Utilise log(100 × a) = log(100) + log(a).",
+     "explication": "log(100 × a) = 2 + log(a) : le logarithme gagne 2, donc le pH = −log **perd 2 points**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2e23011-e7b4-5a93-986e-cde80b643ed4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de chiffres ?",
+   "competence": "calculer",
+   "situation": "Une calculatrice affiche « Erreur » pour 3^50, trop grand pour son écran. Un élève veut savoir combien de chiffres compte ce nombre, en s’aidant du tableau de valeurs du logarithme décimal.",
+   "documents": [
+    {
+     "id": "logs",
+     "type": "tableau",
+     "titre": "Quelques logarithmes décimaux (arrondis au millième)",
+     "colonnes": [
+      "a",
+      "2",
+      "3",
+      "5",
+      "7"
+     ],
+     "lignes": [
+      [
+       "log(a)",
+       0.301,
+       0.477,
+       "?",
+       0.845
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au millième"
+    },
+    {
+     "id": "regles",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Règles",
+     "blocs": [
+      "log(a × b) = log(a) + log(b).",
+      "log(a^n) = n × log(a).",
+      "Un entier N compte k chiffres si k − 1 ≤ log(N) < k."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case « ? » : calcule log(5) sachant que 5 = 10 ÷ 2.",
+     "reponse": 0.699,
+     "tolerance": 0.001,
+     "aide": "log(10 ÷ 2) = log(10) − log(2) = 1 − log(2).",
+     "explication": "log(5) = 1 − 0,301 = **0,699**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule log(6) à partir du tableau, sachant que 6 = 2 × 3.",
+     "reponse": 0.778,
+     "tolerance": 0.001,
+     "aide": "Additionne log(2) et log(3).",
+     "explication": "log(6) = 0,301 + 0,477 = **0,778**."
+    },
+    {
+     "type": "zone",
+     "document": "logs",
+     "enonce": "Touche le nombre a dont le logarithme est le plus proche de 0,5.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Compare 0,301 ; 0,477 ; 0,699 et 0,845 à 0,5.",
+     "explication": "log(3) = 0,477 est le plus proche de 0,5 : c’est le nombre **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule log(3^50) avec la règle log(a^n) = n × log(a).",
+     "reponse": 23.85,
+     "tolerance": 0.02,
+     "aide": "Multiplie log(3) par 50.",
+     "explication": "log(3^50) = 50 × 0,477 = **23,85**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chiffres compte 3^50 ?",
+     "reponse": 24,
+     "aide": "Un nombre compte k chiffres si k − 1 ≤ log(N) < k.",
+     "explication": "23 ≤ 23,85 < 24 donc k = **24 chiffres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2e23011-e7b4-5a93-986e-cde80b643ed4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le laboratoire en échelle log",
+   "competence": "modeliser",
+   "situation": "Dans une culture, le nombre de bactéries double chaque heure : N(t) = 100 × 2^t, avec t en heures. Un biologiste reporte aussi log N(t), ce qui aligne les points et simplifie les calculs.",
+   "documents": [
+    {
+     "id": "bacts",
+     "type": "tableau",
+     "titre": "Population et son logarithme",
+     "colonnes": [
+      "t (h)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "N(t)",
+       100,
+       200,
+       400,
+       800,
+       1600,
+       3200
+      ],
+      [
+       "log N(t)",
+       2,
+       2.301,
+       2.602,
+       "?",
+       3.204,
+       3.505
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Logarithmes arrondis au millième"
+    },
+    {
+     "id": "regles",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Règles",
+     "blocs": [
+      "log(a × b) = log(a) + log(b) ; log(a^n) = n × log(a).",
+      "log(2) ≈ 0,301."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case « ? » : calcule log N(3) = log(800).",
+     "reponse": 2.903,
+     "tolerance": 0.001,
+     "aide": "log(800) = log(8) + log(100) = 3 × 0,301 + 2.",
+     "explication": "log(800) = 2 + 3 × 0,301 = **2,903**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien log N(t) augmente-t-il à chaque heure ?",
+     "reponse": 0.301,
+     "tolerance": 0.001,
+     "aide": "Comparer deux colonnes voisines de la ligne log N(t).",
+     "explication": "Chaque heure, N est multiplié par 2, donc log N augmente de **log(2) ≈ 0,301**."
+    },
+    {
+     "type": "zone",
+     "document": "bacts",
+     "enonce": "Touche la première population qui dépasse 1 000 bactéries.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Parcours la ligne N(t) de gauche à droite.",
+     "explication": "À t = 4 h, N = **1 600** : c’est la première valeur au-dessus de 1 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On a log N(t) = 2 + 0,301 t. Pour N = 10 000, log N vaut 4 : calcule t, arrondi au dixième.",
+     "reponse": 6.6,
+     "unite": "h",
+     "tolerance": 0.05,
+     "aide": "Résous 2 + 0,301 t = 4.",
+     "explication": "0,301 t = 2 donc t = 2 ÷ 0,301 ≈ **6,6 heures**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les points (t ; log N) sont-ils alignés ?",
+     "options": [
+      "Chaque heure, N est multiplié par 2, donc log N augmente de log 2",
+      "Chaque heure, N augmente de 100, donc log N augmente de 100",
+      "Chaque heure, N est multiplié par 2, donc log N est multiplié par 2",
+      "Chaque heure, N augmente de 2, donc log N augmente de log 2"
+     ],
+     "reponse": 0,
+     "aide": "Utilise log(2 × N) = log(2) + log(N).",
+     "explication": "log(2 × N) = log 2 + log N : **on ajoute toujours la même quantité**, les points sont alignés."
+    }
+   ]
+  },
+  {
+   "chapitre": "c76410fa-a5a4-5e1d-9bbd-d11ce2ee7274",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le livret qui double",
+   "competence": "resoudre",
+   "situation": "Un capital de 1 000 € est placé à 4 % par an. Au bout de n années, il vaut C(n) = 1 000 × 1,04^n. On cherche quand il aura doublé.",
+   "documents": [
+    {
+     "id": "livret",
+     "type": "tableau",
+     "titre": "Capital au fil des années",
+     "colonnes": [
+      "Année",
+      "0",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "lignes": [
+      [
+       "Capital (€)",
+       1000,
+       1216.65,
+       1480.24,
+       1800.94,
+       2191.12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centime, imaginées pour l’exercice"
+    },
+    {
+     "id": "logs",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Valeurs utiles",
+     "blocs": [
+      "log(2) ≈ 0,3010 et log(1,04) ≈ 0,0170.",
+      "a^n ≥ b équivaut à n × log(a) ≥ log(b)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livret",
+     "enonce": "Touche le premier capital qui dépasse 2 000 €.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Parcours la ligne de gauche à droite.",
+     "explication": "À l’année 20, le capital vaut **2 191,12 €** : c’est le premier au-dessus de 2 000 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 1,04^n ≥ 2 : calcule log(2) ÷ log(1,04), arrondi au dixième.",
+     "reponse": 17.7,
+     "tolerance": 0.05,
+     "aide": "Divise 0,3010 par 0,0170.",
+     "explication": "n ≥ 0,3010 ÷ 0,0170 ≈ **17,7**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien d’années entières le capital a-t-il doublé ?",
+     "reponse": 18,
+     "aide": "n doit être un entier supérieur ou égal à 17,7.",
+     "explication": "Le premier entier qui convient est **18 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi garde-t-on le même sens d’inégalité en divisant par log(1,04) ?",
+     "options": [
+      "Car log(1,04) est positif, puisque 1,04 est supérieur à 1",
+      "Car log(1,04) est négatif, puisque 1,04 est supérieur à 1",
+      "Car log(1,04) est nul, puisque 1,04 est proche de 1",
+      "Car log(1,04) est positif, puisque 1,04 est inférieur à 1"
+     ],
+     "reponse": 0,
+     "aide": "Quel est le signe de log(b) quand b > 1 ?",
+     "explication": "Pour **b > 1**, log(b) > 0 : diviser par un nombre positif ne change pas le sens."
+    }
+   ]
+  },
+  {
+   "chapitre": "c76410fa-a5a4-5e1d-9bbd-d11ce2ee7274",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le stock qui fond",
+   "competence": "resoudre",
+   "situation": "Une pharmacie a 5 000 boîtes en stock et en vend 10 % du stock restant chaque semaine, sans réapprovisionner. Le stock après n semaines est S(n) = 5 000 × 0,9^n. La pharmacie commande de nouveau quand il reste moins de 1 000 boîtes.",
+   "documents": [
+    {
+     "id": "stock",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Stock restant",
+     "categories": [
+      "0",
+      "4",
+      "8",
+      "12",
+      "16",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "S(n)",
+       "valeurs": [
+        5000,
+        3281,
+        2152,
+        1412,
+        927,
+        608
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Stock",
+      "unite": "en boîtes",
+      "min": 0,
+      "max": 5000,
+      "pas": 1000
+     },
+     "axeX": {
+      "titre": "Semaines n"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies à l’unité, imaginées pour l’exercice"
+    },
+    {
+     "id": "logs",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Valeurs utiles",
+     "blocs": [
+      "log(0,2) ≈ −0,699 et log(0,9) ≈ −0,0458.",
+      "S(n) < 1 000 équivaut à 0,9^n < 0,2."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stock",
+     "enonce": "Touche le premier point où le stock passe sous 1 000 boîtes.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Parcours la courbe de gauche à droite.",
+     "explication": "À n = 16, le stock vaut environ **926 boîtes** : c’est le premier point sous 1 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 0,9^n < 0,2 : calcule log(0,2) ÷ log(0,9), arrondi au dixième.",
+     "reponse": 15.3,
+     "tolerance": 0.05,
+     "aide": "Divise −0,699 par −0,0458.",
+     "explication": "n > (−0,699) ÷ (−0,0458) ≈ **15,3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quelle semaine entière le stock est-il inférieur à 1 000 boîtes ?",
+     "reponse": 16,
+     "aide": "n doit être un entier strictement supérieur à 15,3.",
+     "explication": "Le premier entier qui convient est la **semaine 16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie : calcule S(15), le stock après 15 semaines, arrondi à l’unité.",
+     "reponse": 1029,
+     "unite": "boîtes",
+     "tolerance": 0.5,
+     "aide": "0,9^15 ≈ 0,2059.",
+     "explication": "S(15) = 5 000 × 0,9^15 ≈ **1 029 boîtes** : c’est encore au-dessus de 1 000."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient le sens de l’inégalité quand on divise par log(0,9) ?",
+     "options": [
+      "Il change de sens, car on divise les deux membres par un nombre négatif",
+      "Il reste le même, car on divise les deux membres par un nombre négatif",
+      "Il change de sens, car on divise les deux membres par un nombre positif",
+      "Il reste le même, car 0,9 est un nombre positif, donc log(0,9) aussi"
+     ],
+     "reponse": 0,
+     "aide": "Quel est le signe de log(0,9), sachant que 0,9 < 1 ?",
+     "explication": "Pour **0 < b < 1**, log(b) < 0 : on divise par un négatif, l’inégalité change de sens."
+    }
+   ]
+  },
+  {
+   "chapitre": "c76410fa-a5a4-5e1d-9bbd-d11ce2ee7274",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le taux à trouver, puis la durée",
+   "competence": "modeliser",
+   "situation": "Un placement de 8 000 € est devenu 10 000 € au bout de 4 ans. Bastien veut d’abord connaître son taux annuel constant, puis savoir combien d’années il faut à ce taux pour doubler un capital de 8 000 € (16 000 €).",
+   "documents": [
+    {
+     "id": "plc",
+     "type": "tableau",
+     "titre": "Le placement",
+     "colonnes": [
+      "",
+      "Capital initial",
+      "Capital final",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Placement",
+       "8 000 €",
+       "10 000 €",
+       "4 ans"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "meth",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux équations",
+     "blocs": [
+      "Inconnue dans la base : (1 + t)^4 = 1,25 donne 1 + t = 1,25^(1/4).",
+      "Inconnue dans l’exposant : a^n ≥ b donne n ≥ log(b) ÷ log(a).",
+      "log(2) ≈ 0,3010 et log(1,25) ≈ 0,0969."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plc",
+     "enonce": "Touche le capital final du placement.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Le capital final est celui obtenu au bout de 4 ans.",
+     "explication": "Le capital final est de **10 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient multiplicateur global sur les 4 ans.",
+     "reponse": 1.25,
+     "aide": "Capital final ÷ capital initial.",
+     "explication": "10 000 ÷ 8 000 = **1,25**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux annuel constant, en pourcentage arrondi au centième.",
+     "reponse": 5.74,
+     "unite": "%",
+     "tolerance": 0.01,
+     "aide": "Coefficient annuel : 1,25^(1/4).",
+     "explication": "1,25^(1/4) ≈ 1,0574 : taux annuel de **5,74 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À ce taux, 1,0574^n ≥ 2 donne n ≥ log(2) ÷ log(1,0574), avec log(1,0574) ≈ 0,0969 ÷ 4. Calcule n, arrondi au dixième.",
+     "reponse": 12.4,
+     "tolerance": 0.05,
+     "aide": "log(1,0574) ≈ 0,0242.",
+     "explication": "n ≥ 0,3010 ÷ 0,0242 ≈ **12,4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En combien d’années entières le capital de 8 000 € dépasse-t-il 16 000 € ?",
+     "reponse": 13,
+     "aide": "n doit être un entier supérieur ou égal à 12,4.",
+     "explication": "Le premier entier qui convient est **13 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi calcule-t-on le taux avec une puissance 1/4 et la durée avec un logarithme ?",
+     "options": [
+      "Le taux est dans la base de la puissance, la durée dans son exposant",
+      "Le taux est dans l’exposant de la puissance, la durée dans sa base",
+      "Les deux inconnues sont dans l’exposant, mais les calculs diffèrent",
+      "Les deux inconnues sont dans la base, mais les calculs diffèrent"
+     ],
+     "reponse": 0,
+     "aide": "Où se trouve l’inconnue dans (1 + t)^4 ? Et dans a^n ?",
+     "explication": "Inconnue dans la **base** : exposant 1/4. Inconnue dans l’**exposant** : logarithme."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b8f67c6-66fe-5484-9eb3-ef51b7d5a537",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre-vingt-dix minutes ou presque",
+   "competence": "lire-tableau",
+   "situation": "Un trajet de 120 km est effectué à vitesse constante v (en km/h). La durée du trajet est t = 120 ÷ v, en heures. Le tableau donne quelques cas.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "tableau",
+     "titre": "Durée du trajet selon la vitesse",
+     "colonnes": [
+      "v (km/h)",
+      "30",
+      "40",
+      "60",
+      "80",
+      "120"
+     ],
+     "lignes": [
+      [
+       "t (h)",
+       4,
+       3,
+       2,
+       1.5,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche la durée du trajet à 60 km/h.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Prends la colonne « 60 ».",
+     "explication": "À 60 km/h, le trajet dure **2 h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la durée du trajet à 100 km/h.",
+     "reponse": 1.2,
+     "unite": "h",
+     "aide": "Divise 120 par 100.",
+     "explication": "t = 120 ÷ 100 = **1,2 h**, soit 1 h 12 min."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle vitesse faut-il rouler pour que le trajet dure 6 h ?",
+     "reponse": 20,
+     "unite": "km/h",
+     "aide": "Résous 120 ÷ v = 6.",
+     "explication": "v = 120 ÷ 6 = **20 km/h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La durée peut-elle devenir nulle si on roule de plus en plus vite ?",
+     "options": [
+      "Non : 120 ÷ v se rapproche de 0 sans jamais l’atteindre",
+      "Oui : à partir de 120 km/h, la durée vaut exactement 0 h",
+      "Oui : à très grande vitesse, la durée devient égale à 0 h",
+      "Non : la durée reste égale à 1 h dès que v dépasse 120"
+     ],
+     "reponse": 0,
+     "aide": "Un quotient de 120 par un nombre positif est-il jamais nul ?",
+     "explication": "Un quotient 120 ÷ v est **toujours strictement positif** : il se rapproche de 0 sans l’atteindre."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b8f67c6-66fe-5484-9eb3-ef51b7d5a537",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix de revient d’un mug",
+   "competence": "lire-graphique",
+   "situation": "Un atelier fabrique des mugs personnalisés. Il supporte 1 200 € de frais fixes, plus 4 € de matière par mug. Le coût moyen d’un mug est M(q) = 4 + 1 200 ÷ q pour q mugs fabriqués.",
+   "documents": [
+    {
+     "id": "cm",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût moyen d’un mug",
+     "categories": [
+      "50",
+      "100",
+      "200",
+      "300",
+      "400",
+      "600"
+     ],
+     "series": [
+      {
+       "nom": "M(q)",
+       "valeurs": [
+        28,
+        16,
+        10,
+        8,
+        7,
+        6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Coût moyen",
+      "unite": "en €",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Mugs fabriqués q"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cm",
+     "enonce": "Touche le point où le coût moyen d’un mug vaut 10 €.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la hauteur 10 sur l’axe vertical.",
+     "explication": "Pour 200 mugs, le coût moyen est de **10 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coût moyen d’un mug pour 240 mugs fabriqués.",
+     "reponse": 9,
+     "unite": "€",
+     "aide": "1 200 ÷ 240 = 5.",
+     "explication": "M(240) = 4 + 1 200 ÷ 240 = 4 + 5 = **9 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mugs faut-il fabriquer pour que le coût moyen soit de 5 € ?",
+     "reponse": 1200,
+     "unite": "mugs",
+     "aide": "Résous 4 + 1 200 ÷ q = 5.",
+     "explication": "1 200 ÷ q = 1, donc q = **1 200 mugs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand q devient très grand, vers quelle valeur se rapproche le coût moyen ?",
+     "options": [
+      "Il se rapproche de 4 €, le coût variable d’un mug, sans l’atteindre",
+      "Il se rapproche de 0 €, car 1 200 ÷ q devient très petit",
+      "Il se rapproche de 1 200 €, car les frais fixes restent les mêmes",
+      "Il devient négatif, car les frais fixes sont divisés par q"
+     ],
+     "reponse": 0,
+     "aide": "Que devient 1 200 ÷ q quand q est énorme ?",
+     "explication": "1 200 ÷ q se rapproche de 0, donc M(q) se rapproche de **4 €** sans jamais l’atteindre."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b8f67c6-66fe-5484-9eb3-ef51b7d5a537",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La tangente du coût moyen",
+   "competence": "modeliser",
+   "situation": "Une fabrique de bougies modélise son coût moyen par CM(q) = 2 + 8 ÷ q, où q est le nombre de bougies produites en centaines et CM(q) un coût en euros. On étudie sa variation et sa tangente au point d’abscisse 4.",
+   "documents": [
+    {
+     "id": "coutm",
+     "type": "tableau",
+     "titre": "Coût moyen selon la production",
+     "colonnes": [
+      "q (centaines)",
+      "1",
+      "2",
+      "4",
+      "8"
+     ],
+     "lignes": [
+      [
+       "CM(q) (€)",
+       10,
+       6,
+       4,
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "deriv",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappels",
+     "blocs": [
+      "(1 ÷ x)′ = −1 ÷ x², donc CM′(q) = −8 ÷ q².",
+      "Tangente en a : y = CM′(a) × (x − a) + CM(a)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coutm",
+     "enonce": "Touche le coût moyen qui vaut 4 €.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Lis la ligne CM(q).",
+     "explication": "Pour 4 centaines de bougies, le coût moyen est de **4 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule CM′(2).",
+     "reponse": -2,
+     "aide": "CM′(2) = −8 ÷ 2².",
+     "explication": "CM′(2) = −8 ÷ 4 = **−2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule CM′(4), le coefficient directeur de la tangente en 4.",
+     "reponse": -0.5,
+     "aide": "CM′(4) = −8 ÷ 4².",
+     "explication": "CM′(4) = −8 ÷ 16 = **−0,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La tangente en 4 s’écrit y = −0,5 × (x − 4) + 4. Quelle est son ordonnée à l’origine ?",
+     "reponse": 6,
+     "aide": "Développe, puis regarde la valeur de y quand x = 0.",
+     "explication": "y = −0,5x + 2 + 4 = −0,5x + **6** : l’ordonnée à l’origine est 6."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le signe de CM′(q) sur la variation de CM ?",
+     "options": [
+      "CM′(q) = −8 ÷ q² est négatif pour tout q > 0, donc CM est décroissante",
+      "CM′(q) = −8 ÷ q² est négatif pour tout q > 0, donc CM est croissante",
+      "CM′(q) = 8 ÷ q² est positif pour tout q > 0, donc CM est décroissante",
+      "CM′(q) = 8 ÷ q² est positif pour tout q > 0, donc CM est croissante"
+     ],
+     "reponse": 0,
+     "aide": "Un nombre dérivé négatif correspond à une fonction qui descend.",
+     "explication": "CM′ est **négative** sur ]0 ; +∞[ : le coût moyen diminue quand la production augmente, ce que montre le tableau."
+    }
+   ]
+  }
+ ]
+}

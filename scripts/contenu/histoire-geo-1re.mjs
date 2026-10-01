@@ -237,7 +237,7 @@ La campagne de **Russie** (1812) brise l’armée ; **1814** puis **Waterloo** (
 Le **congrès de Vienne** (1814-1815) redessine la carte au nom de la **légitimité** et de l’**équilibre**.
 
 | Décision | Sa portée |
-| La France revient à ses frontières de **1792** | La Révolution est effacée de la carte |
+| La France revient à ses frontières de **1790** (second traité de Paris, 1815) | La Révolution est effacée de la carte |
 | La **Sainte-Alliance** (Russie, Prusse, Autriche) | Elle s’engage à **écraser toute révolution** |
 | **Metternich**, chancelier autrichien | L’architecte du système |
 
@@ -609,7 +609,7 @@ Mac-Mahon renvoie un gouvernement républicain et **dissout** la Chambre ; les �
 | Le président « se soumet », puis démissionne en **1879** | La légitimité passe aux Chambres |
 | Le droit de **dissolution** n’est plus utilisé | Le régime devient un **parlementarisme** dominé par les Chambres |
 
-> Cette renonciation durera jusqu’en **1958**. C’est la crise de 1877 qui fixe la pratique de la Troisième République.`,
+> Plus aucune Chambre ne sera dissoute jusqu’en 1940 ; la dissolution ne reparaît qu’en **1955**, sous la IVe République (Edgar Faure). C’est la crise de 1877 qui fixe la pratique de la Troisième République.`,
           },
           questions: [
             ['Quand la Troisième République est-elle proclamée ?', ['Le 4 septembre 1870', 'Le 18 mars 1871', 'Le 30 janvier 1875', 'Le 16 mai 1877'], 0, 'La proclamation suit immédiatement la capitulation de Sedan.'],
@@ -632,7 +632,7 @@ Mac-Mahon renvoie un gouvernement républicain et **dissout** la Chambre ; les �
 ## Les grandes lois de liberté
 | Date | La liberté |
 | **1881** | La **presse** et la **réunion** |
-| **1884** | La liberté **syndicale** (loi Waldeck-Rousseau) ; l’élection des **maires** par les conseils municipaux |
+| **1884** | La liberté **syndicale** (loi Waldeck-Rousseau) ; la loi municipale, qui confirme l’élection des **maires** par les conseils municipaux (acquise en 1882) |
 | **1901** | L’**association** |
 
 > Ces lois font de la République un régime de **libertés concrètes**, pas seulement un mot.
@@ -1383,7 +1383,7 @@ LGV, aéroports, métropoles instituées, pôles de compétitivité, contrats de
 | **MAPTAM** | 2014 | Le statut de métropole |
 | **NOTRe** | 2015 | Le renforcement des compétences |
 
-**21 métropoles** exercent des compétences élargies : transports, développement économique, logement, déchets, aménagement.
+**21 métropoles**, plus la **Métropole de Lyon**, exercent des compétences élargies : transports, développement économique, logement, déchets, aménagement.
 
 > La **Métropole du Grand Paris** et celles de **Lyon** et **Marseille** ont des régimes **particuliers**.
 
@@ -1413,7 +1413,7 @@ La politique de la ville, la rénovation urbaine (**ANRU**) et les transports ch
           },
           questions: [
             ['Quelle loi de 2014 crée le statut de métropole en France ?', ['La loi MAPTAM', 'La loi NOTRe seule', 'La loi SRU', 'La loi Chevènement'], 0, 'La loi NOTRe (2015) complète ensuite la répartition des compétences.'],
-            ['Combien de métropoles compte aujourd’hui la France ?', ['21', '5', '12', '40'], 0, 'Trois d’entre elles (Paris, Lyon, Marseille) ont un statut particulier.'],
+            ['Combien de métropoles compte aujourd’hui la France ?', ['22', '5', '12', '40'], 0, 'Vingt et une, plus la Métropole de Lyon, collectivité à part ; trois d’entre elles (Paris, Lyon, Marseille) ont un statut particulier.'],
             ['Quel quartier d’affaires se situe à Lyon ?', ['La Part-Dieu', 'La Défense', 'Euralille', 'Confluence uniquement'], 0, 'C’est le deuxième quartier d’affaires français par sa surface de bureaux.'],
             ['Qu’est-ce que l’ANRU ?', ['L’agence chargée de la rénovation urbaine des quartiers prioritaires', 'Une agence de transport', 'Un office du logement étudiant', 'Un opérateur foncier agricole'], 0, 'Elle finance démolitions, reconstructions et requalifications.'],
             ['Le tramway a disparu des villes françaises depuis les années 1960.', ['Vrai', 'Faux'], 1, 'Il est revenu depuis les années 1980 dans une vingtaine d’agglomérations.'],

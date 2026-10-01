@@ -1,0 +1,280 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths-expertes",
+  "sujets": [
+    {
+      "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+      "difficulte": 1,
+      "titre": "Calculer dans ℂ",
+      "consigne": "Donne chaque résultat sous forme algébrique a + ib en détaillant les calculs.",
+      "enonce": "On pose z₁ = 2 + 3i et z₂ = 1 − i.\n\n1. Calcule z₁ + z₂ et z₁ × z₂.\n2. Donne le conjugué de z₁, puis calcule z₁ × z̄₁. Quelle est la nature de ce nombre ?\n3. Calcule le quotient z₁ / z₂ sous forme algébrique.\n4. Calcule le module de z₁ et celui de z₂.",
+      "bareme": [
+        { "critere": "Somme 3 + 2i et produit 5 + i justes (i² remplacé par −1)", "points": 6 },
+        { "critere": "Conjugué 2 − 3i et z₁ z̄₁ = 13, réel positif", "points": 4 },
+        { "critere": "Quotient par le conjugué du dénominateur : −1/2 + (5/2)i", "points": 6 },
+        { "critere": "Modules √13 et √2", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. z₁ + z₂ = (2 + 1) + i(3 − 1) = **3 + 2i**.\nz₁ z₂ = (2 + 3i)(1 − i) = 2 − 2i + 3i − 3i² = 2 + i + 3 = **5 + i**.\n2. z̄₁ = **2 − 3i** ; z₁ z̄₁ = 2² + 3² = **13** : c'est un **réel positif** (a² + b²).\n3. On multiplie numérateur et dénominateur par le conjugué du dénominateur, 1 + i :\nz₁/z₂ = (2 + 3i)(1 + i) / [(1 − i)(1 + i)] = (2 + 2i + 3i + 3i²)/2 = (−1 + 5i)/2 = **−1/2 + (5/2)i**.\n4. |z₁| = √(4 + 9) = **√13** ; |z₂| = √(1 + 1) = **√2**."
+    },
+    {
+      "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+      "difficulte": 2,
+      "titre": "Une équation avec le conjugué",
+      "consigne": "Justifie chaque étape ; pense à identifier parties réelles et imaginaires.",
+      "enonce": "1. On cherche les complexes z tels que 2z + i z̄ = 3 − 3i. On pose z = x + iy avec x et y réels.\n   a. Exprime 2z + i z̄ en fonction de x et y sous forme algébrique.\n   b. Déduis-en un système de deux équations réelles, puis résous-le.\n   c. Vérifie ta solution.\n2. Soit a un réel et w = (a + i)(2 − i).\n   a. Écris w sous forme algébrique.\n   b. Pour quelle valeur de a le nombre w est-il réel ? imaginaire pur ?\n3. Sans développer, calcule le module de (1 + 2i)(3 − 4i). Justifie.",
+      "bareme": [
+        { "critere": "Écriture (2x + y) + i(x + 2y) et système obtenu par identification", "points": 6 },
+        { "critere": "Solution z = 3 − 3i et vérification", "points": 5 },
+        { "critere": "w = (2a + 1) + i(2 − a) ; réel pour a = 2, imaginaire pur pour a = −1/2", "points": 5 },
+        { "critere": "Module du produit égal au produit des modules : √5 × 5 = 5√5", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a. z̄ = x − iy, donc i z̄ = ix − i²y = y + ix. Ainsi 2z + i z̄ = 2x + 2iy + y + ix = **(2x + y) + i(x + 2y)**.\n   b. Deux complexes sont égaux si et seulement si leurs parties réelles et imaginaires le sont :\n2x + y = 3 et x + 2y = −3.\nDe la première, y = 3 − 2x ; dans la seconde : x + 6 − 4x = −3, soit −3x = −9, **x = 3**, puis **y = −3**. Donc **z = 3 − 3i**.\n   c. 2z = 6 − 6i ; z̄ = 3 + 3i ; i z̄ = 3i + 3i² = −3 + 3i. Somme : 3 − 3i ✓.\n2. a. w = 2a − ai + 2i − i² = **(2a + 1) + i(2 − a)**.\n   b. w réel ⇔ Im(w) = 0 ⇔ **a = 2** (alors w = 5). w imaginaire pur ⇔ Re(w) = 0 ⇔ **a = −1/2** (alors w = (5/2)i).\n3. Le module d'un produit est le produit des modules : |1 + 2i| = √5 et |3 − 4i| = √(9 + 16) = 5, donc |(1 + 2i)(3 − 4i)| = **5√5**."
+    },
+    {
+      "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+      "difficulte": 3,
+      "titre": "Quand un quotient est-il réel ?",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque calcul par le cours.",
+      "enonce": "Pour tout complexe z différent de −1, on pose Z = (z − i)/(z + 1). On écrit z = x + iy, avec x et y réels.\n\n1. Calcule Z pour z = 2i, sous forme algébrique.\n2. Montre que Z = [x² + x + y² − y + i(y − x − 1)] / [(x + 1)² + y²].\n3. Vérifie la formule avec z = 2i.\n4. Déduis-en une condition nécessaire et suffisante sur x et y pour que Z soit réel, puis pour que Z soit imaginaire pur.\n5. En utilisant les propriétés du module, montre que |Z| = 1 si et seulement si |z − i| = |z + 1|, puis traduis cette condition par une relation entre x et y.\n6. Un élève écrit : « pour z = 0, Z = −i, donc Z < 1 ». Commente.",
+      "bareme": [
+        { "critere": "Z(2i) = 2/5 + i/5 par le conjugué du dénominateur", "points": 3 },
+        { "critere": "Forme algébrique générale de Z établie en multipliant par le conjugué de (x + 1) + iy", "points": 6 },
+        { "critere": "Z réel ⇔ y = x + 1 ; Z imaginaire pur ⇔ x² + x + y² − y = 0 (z ≠ −1)", "points": 4 },
+        { "critere": "Module d'un quotient et équivalence avec y = −x", "points": 4 },
+        { "critere": "ℂ n'est pas ordonné : on ne peut comparer que des modules", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Z = (2i − i)/(2i + 1) = i/(1 + 2i) = i(1 − 2i)/[(1 + 2i)(1 − 2i)] = (i + 2)/5 = **2/5 + (1/5)i**.\n2. z − i = x + i(y − 1) et z + 1 = (x + 1) + iy. On multiplie par le conjugué (x + 1) − iy ; le dénominateur devient (x + 1)² + y², réel strictement positif pour z ≠ −1.\nNumérateur : [x + i(y − 1)][(x + 1) − iy] = x(x + 1) − ixy + i(y − 1)(x + 1) − i²y(y − 1)\n= x² + x + y² − y + i[(y − 1)(x + 1) − xy] = x² + x + y² − y + i(xy + y − x − 1 − xy) = **x² + x + y² − y + i(y − x − 1)**.\n3. x = 0, y = 2 : dénominateur 1 + 4 = 5 ; partie réelle 0 + 0 + 4 − 2 = 2 ; partie imaginaire 2 − 0 − 1 = 1. Z = 2/5 + i/5 ✓.\n4. Le dénominateur étant un réel non nul : **Z réel ⇔ y − x − 1 = 0 ⇔ y = x + 1** (avec z ≠ −1). **Z imaginaire pur ⇔ x² + x + y² − y = 0** (avec z ≠ −1).\n5. Le module d'un quotient est le quotient des modules : |Z| = |z − i| / |z + 1|. Donc |Z| = 1 ⇔ **|z − i| = |z + 1|**. En élevant au carré (modules positifs) : x² + (y − 1)² = (x + 1)² + y² ⇔ −2y + 1 = 2x + 1 ⇔ **y = −x**.\n6. Z = (0 − i)/(0 + 1) = −i : c'est juste. Mais **ℂ n'est pas ordonné** : écrire Z < 1 n'a aucun sens pour un complexe non réel. On peut seulement comparer des modules : |Z| = 1, donc |Z| = 1 (et non < 1)."
+    },
+    {
+      "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+      "difficulte": 1,
+      "titre": "Module, argument, forme trigonométrique",
+      "consigne": "Justifie chaque argument par les deux équations cos θ = a/r et sin θ = b/r.",
+      "enonce": "1. Soit z = 1 + i√3. Calcule son module r, puis détermine un argument θ. Écris z sous forme trigonométrique.\n2. Même question pour z′ = −2 + 2i.\n3. Sans calcul algébrique, donne le module et un argument de z × z′.\n4. On considère les points A et B d'affixes 1 + 2i et 4 + 6i. Calcule la distance AB et l'affixe du milieu de [AB].",
+      "bareme": [
+        { "critere": "z : r = 2, θ = π/3, forme 2(cos π/3 + i sin π/3), avec les deux équations", "points": 6 },
+        { "critere": "z′ : r = 2√2, θ = 3π/4", "points": 5 },
+        { "critere": "Produit : module 4√2, argument 13π/12 (ou −11π/12) modulo 2π", "points": 5 },
+        { "critere": "AB = 5 et milieu d'affixe 5/2 + 4i", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. r = √(1 + 3) = **2**. cos θ = 1/2 et sin θ = √3/2, donc **θ = π/3** (modulo 2π). z = **2(cos π/3 + i sin π/3)**.\n2. r′ = √(4 + 4) = **2√2**. cos θ′ = −2/(2√2) = −√2/2 et sin θ′ = 2/(2√2) = √2/2, donc **θ′ = 3π/4**. z′ = 2√2(cos 3π/4 + i sin 3π/4). (Le cosinus seul aurait laissé −3π/4 possible : il faut les deux équations.)\n3. Module du produit = produit des modules : 2 × 2√2 = **4√2**. Argument du produit = somme des arguments : π/3 + 3π/4 = **13π/12**, soit −11π/12 modulo 2π.\n4. z(B) − z(A) = 3 + 4i, donc AB = |3 + 4i| = √(9 + 16) = **5**. Milieu : (z(A) + z(B))/2 = (5 + 8i)/2 = **5/2 + 4i**."
+    },
+    {
+      "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+      "difficulte": 2,
+      "titre": "Lire une figure sur un quotient",
+      "consigne": "Traduis chaque question en calcul complexe et justifie tes conclusions.",
+      "enonce": "Dans le plan complexe, on considère les points A, B, C et D d'affixes :\nz(A) = 1, z(B) = 3 + 2i, z(C) = −1 + 2i, z(D) = 5 + 4i.\n\n1. Calcule Z = (z(C) − z(A))/(z(B) − z(A)) sous forme algébrique. Que peut-on en déduire pour les droites (AB) et (AC) ?\n2. Calcule les distances AB et AC. Quelle est la nature du triangle ABC ?\n3. Les points A, B et D sont-ils alignés ? Justifie par un quotient.\n4. Décris l'ensemble des points M d'affixe z tels que |z − 1| = 2√2. Les points B et C lui appartiennent-ils ?",
+      "bareme": [
+        { "critere": "Z = i, imaginaire pur : (AB) et (AC) perpendiculaires", "points": 6 },
+        { "critere": "AB = AC = 2√2 : triangle rectangle isocèle en A", "points": 5 },
+        { "critere": "Quotient (z(D) − z(A))/(z(B) − z(A)) = 2, réel : points alignés", "points": 5 },
+        { "critere": "Cercle de centre A et de rayon 2√2, passant par B et C", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. z(C) − z(A) = −2 + 2i et z(B) − z(A) = 2 + 2i.\nZ = (−2 + 2i)/(2 + 2i) = (−2 + 2i)(2 − 2i)/8 = (−4 + 4i + 4i − 4i²)/8 = (−4 + 8i + 4)/8 = **i**.\nZ est **imaginaire pur** : les droites (AB) et (AC) sont **perpendiculaires**.\n2. AB = |2 + 2i| = √8 = **2√2** ; AC = |−2 + 2i| = √8 = **2√2**. Le triangle ABC est **rectangle isocèle en A**.\n3. (z(D) − z(A))/(z(B) − z(A)) = (4 + 4i)/(2 + 2i) = **2**, réel : A, B et D sont **alignés**.\n4. |z − 1| = |z − z(A)| = 2√2 : c'est le **cercle de centre A et de rayon 2√2**. D'après la question 2, AB = AC = 2√2 : **B et C appartiennent** à ce cercle."
+    },
+    {
+      "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+      "difficulte": 3,
+      "titre": "Puissances et un cosinus inattendu",
+      "consigne": "Utilise les propriétés du module et des arguments ; justifie chaque étape.",
+      "enonce": "On pose z₁ = 1 + i et z₂ = √3 − i.\n\n1. Donne le module et un argument de z₁ et de z₂, puis leur forme trigonométrique.\n2. Déduis-en le module et un argument de z₁⁵, puis sa forme algébrique. Vérifie en calculant z₁² puis z₁⁴ algébriquement.\n3. Donne le module et un argument du quotient q = z₁/z₂.\n4. Calcule q sous forme algébrique.\n5. En comparant les deux écritures de q, déduis-en la valeur exacte de cos(5π/12) et de sin(5π/12).\n6. Décris l'ensemble des points M d'affixe z tels que |z − 1| = |z − i|.",
+      "bareme": [
+        { "critere": "z₁ : √2 et π/4 ; z₂ : 2 et −π/6, avec les deux équations", "points": 4 },
+        { "critere": "z₁⁵ : module 4√2, argument 5π/4, forme −4 − 4i, et vérification algébrique", "points": 4 },
+        { "critere": "q : module √2/2 et argument π/4 + π/6 = 5π/12", "points": 4 },
+        { "critere": "Forme algébrique [(√3 − 1) + i(√3 + 1)]/4 et cos(5π/12) = (√6 − √2)/4, sin(5π/12) = (√6 + √2)/4", "points": 5 },
+        { "critere": "Médiatrice du segment joignant les points d'affixes 1 et i (droite y = x)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. |z₁| = √2, cos θ₁ = sin θ₁ = √2/2, donc **θ₁ = π/4** : z₁ = √2(cos π/4 + i sin π/4).\n|z₂| = √(3 + 1) = 2, cos θ₂ = √3/2 et sin θ₂ = −1/2, donc **θ₂ = −π/6** : z₂ = 2(cos(−π/6) + i sin(−π/6)).\n2. Module de la puissance = puissance du module : (√2)⁵ = **4√2**. Argument : 5 × π/4 = **5π/4**. z₁⁵ = 4√2(cos 5π/4 + i sin 5π/4) = 4√2(−√2/2 − i√2/2) = **−4 − 4i**.\nVérification : z₁² = 1 + 2i + i² = 2i ; z₁⁴ = (2i)² = −4 ; z₁⁵ = −4(1 + i) = −4 − 4i ✓.\n3. |q| = √2/2 ; arg q = arg z₁ − arg z₂ = π/4 − (−π/6) = **5π/12**.\n4. q = (1 + i)(√3 + i)/[(√3 − i)(√3 + i)] = (√3 + i + i√3 + i²)/4 = **[(√3 − 1) + i(√3 + 1)]/4**.\n5. q = (√2/2)(cos 5π/12 + i sin 5π/12). En identifiant les parties réelles et imaginaires :\ncos(5π/12) = [(√3 − 1)/4] / (√2/2) = (√3 − 1)/(2√2) = **(√6 − √2)/4** ;\nsin(5π/12) = (√3 + 1)/(2√2) = **(√6 + √2)/4**.\n6. En notant A et B les points d'affixes 1 et i : |z − 1| = |z − i| ⇔ MA = MB. C'est la **médiatrice de [AB]**, c'est-à-dire la droite d'équation **y = x** (x² − 2x + 1 + y² = x² + y² − 2y + 1 ⇔ x = y)."
+    },
+    {
+      "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+      "difficulte": 1,
+      "titre": "Passer en forme exponentielle",
+      "consigne": "Donne chaque réponse sous la forme demandée en citant la règle utilisée.",
+      "enonce": "1. Écris sous forme exponentielle z₁ = 2i, z₂ = −3 et z₃ = 1 − i.\n2. Calcule, sous forme exponentielle, z₁ × z₃ et le conjugué de z₃.\n3. À l'aide de la formule de Moivre, calcule (1 − i)⁶ ; donne le résultat sous forme algébrique.\n4. Que vaut e^(iπ) + 1 ? Justifie.",
+      "bareme": [
+        { "critere": "Formes 2e^(iπ/2), 3e^(iπ) et √2 e^(−iπ/4)", "points": 7 },
+        { "critere": "Produit 2√2 e^(iπ/4) et conjugué √2 e^(iπ/4)", "points": 5 },
+        { "critere": "Moivre : 8 e^(−3iπ/2) = 8i", "points": 5 },
+        { "critere": "e^(iπ) = −1 donc e^(iπ) + 1 = 0", "points": 3 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 2i : module 2, argument π/2 : **z₁ = 2e^(iπ/2)**. −3 : module 3, argument π : **z₂ = 3e^(iπ)**. 1 − i : module √2, cos θ = √2/2 et sin θ = −√2/2, donc θ = −π/4 : **z₃ = √2 e^(−iπ/4)**.\n2. z₁ z₃ = 2 × √2 × e^(i(π/2 − π/4)) = **2√2 e^(iπ/4)** (on multiplie les modules, on additionne les arguments). Conjugué : **√2 e^(iπ/4)**.\n3. (1 − i)⁶ = (√2)⁶ e^(−6iπ/4) = 8 e^(−3iπ/2). Or e^(−3iπ/2) = cos(−3π/2) + i sin(−3π/2) = 0 + i × 1 = i. Donc **(1 − i)⁶ = 8i**.\n4. e^(iπ) = cos π + i sin π = −1, donc **e^(iπ) + 1 = 0**."
+    },
+    {
+      "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+      "difficulte": 2,
+      "titre": "Retrouver les formules de trigonométrie",
+      "consigne": "Démontre chaque formule à partir de la notation exponentielle ; détaille les calculs.",
+      "enonce": "1. En écrivant e^(2iθ) = (e^(iθ))² et en développant (cos θ + i sin θ)², retrouve les expressions de cos 2θ et de sin 2θ.\n2. À l'aide de la formule d'Euler pour cos θ, montre que cos²θ = (1 + cos 2θ)/2.\n3. Résous l'équation z³ = 1. Donne les solutions sous forme exponentielle, puis sous forme algébrique.\n4. Vérifie que la somme de ces trois solutions est nulle. Quelle figure forment leurs images ?",
+      "bareme": [
+        { "critere": "Duplication : cos 2θ = cos²θ − sin²θ et sin 2θ = 2 sin θ cos θ par identification", "points": 6 },
+        { "critere": "Linéarisation de cos²θ par la formule d'Euler", "points": 5 },
+        { "critere": "Racines cubiques de l'unité : 1, e^(2iπ/3), e^(4iπ/3) et formes algébriques", "points": 6 },
+        { "critere": "Somme nulle vérifiée et triangle équilatéral inscrit dans le cercle unité", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. e^(2iθ) = cos 2θ + i sin 2θ. Et (e^(iθ))² = (cos θ + i sin θ)² = cos²θ + 2i sin θ cos θ + i² sin²θ = (cos²θ − sin²θ) + i(2 sin θ cos θ). En identifiant parties réelles et imaginaires : **cos 2θ = cos²θ − sin²θ** et **sin 2θ = 2 sin θ cos θ**.\n2. cos θ = (e^(iθ) + e^(−iθ))/2, donc cos²θ = (e^(2iθ) + 2 + e^(−2iθ))/4. Or e^(2iθ) + e^(−2iθ) = 2 cos 2θ (Euler avec 2θ). Donc cos²θ = (2 cos 2θ + 2)/4 = **(1 + cos 2θ)/2**.\n3. Les solutions de zⁿ = 1 sont e^(2ikπ/n), k de 0 à n − 1. Pour n = 3 : **1**, **e^(2iπ/3) = −1/2 + i√3/2**, **e^(4iπ/3) = −1/2 − i√3/2**.\n4. Somme : 1 + (−1/2 + i√3/2) + (−1/2 − i√3/2) = **0** ✓ (conforme au cours pour n ≥ 2). Leurs images forment un **triangle équilatéral** (polygone régulier à 3 côtés) inscrit dans le cercle unité."
+    },
+    {
+      "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+      "difficulte": 3,
+      "titre": "Linéariser et factoriser",
+      "consigne": "Traite les trois parties en justifiant par les formules d'Euler et les règles de calcul exponentiel.",
+      "enonce": "**Partie A – Addition.** En développant e^(i(a+b)) = e^(ia) × e^(ib), retrouve les formules de cos(a + b) et de sin(a + b).\n\n**Partie B – Linéarisation.**\n1. À l'aide de la formule d'Euler pour le sinus, montre que (2i sin θ)³ = e^(3iθ) − 3e^(iθ) + 3e^(−iθ) − e^(−3iθ).\n2. Déduis-en que sin³θ = (3 sin θ − sin 3θ)/4.\n3. Vérifie la formule pour θ = π/2.\n\n**Partie C – Angle moyen.** Soit θ un réel de l'intervalle ]−π ; π[.\n1. En mettant e^(iθ/2) en facteur, montre que 1 + e^(iθ) = 2 cos(θ/2) e^(iθ/2).\n2. Déduis-en le module et un argument de 1 + e^(iθ). Pourquoi faut-il l'hypothèse θ ∈ ]−π ; π[ ?\n3. Application : module et argument de 1 + e^(iπ/3).",
+      "bareme": [
+        { "critere": "Formules d'addition obtenues par identification des parties réelles et imaginaires", "points": 4 },
+        { "critere": "Développement du cube (binôme) et regroupement en 2i sin 3θ − 6i sin θ", "points": 5 },
+        { "critere": "Division par (2i)³ = −8i : sin³θ = (3 sin θ − sin 3θ)/4, vérifiée en π/2", "points": 4 },
+        { "critere": "Factorisation par l'angle moyen et formule d'Euler pour cos(θ/2)", "points": 4 },
+        { "critere": "Module 2cos(θ/2) positif sur ]−π ; π[, argument θ/2 ; application : √3 et π/6", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "**Partie A.** e^(i(a+b)) = cos(a + b) + i sin(a + b). Et e^(ia) e^(ib) = (cos a + i sin a)(cos b + i sin b) = (cos a cos b − sin a sin b) + i(sin a cos b + cos a sin b). Par identification : **cos(a + b) = cos a cos b − sin a sin b** et **sin(a + b) = sin a cos b + cos a sin b**.\n\n**Partie B.**\n1. 2i sin θ = e^(iθ) − e^(−iθ). Avec (u − v)³ = u³ − 3u²v + 3uv² − v³ et e^(iθ) e^(−iθ) = 1 : (e^(iθ) − e^(−iθ))³ = e^(3iθ) − 3e^(iθ) + 3e^(−iθ) − e^(−3iθ) ✓.\n2. Or e^(3iθ) − e^(−3iθ) = 2i sin 3θ et e^(iθ) − e^(−iθ) = 2i sin θ. Donc (2i)³ sin³θ = 2i sin 3θ − 6i sin θ. Comme (2i)³ = 8i³ = −8i : sin³θ = (2i sin 3θ − 6i sin θ)/(−8i) = (6 sin θ − 2 sin 3θ)/8 = **(3 sin θ − sin 3θ)/4**.\n3. θ = π/2 : sin³(π/2) = 1 ; (3 × 1 − sin(3π/2))/4 = (3 + 1)/4 = 1 ✓.\n\n**Partie C.**\n1. 1 + e^(iθ) = e^(iθ/2)(e^(−iθ/2) + e^(iθ/2)) = e^(iθ/2) × 2 cos(θ/2) par la formule d'Euler.\n2. Pour θ ∈ ]−π ; π[, θ/2 ∈ ]−π/2 ; π/2[, donc **cos(θ/2) > 0** : 2cos(θ/2) est un réel strictement positif, c'est le **module**, et **θ/2** est un argument. Si cos(θ/2) était négatif, le module serait −2cos(θ/2) et l'argument θ/2 + π : l'hypothèse garantit la forme r e^(iφ) avec r > 0.\n3. θ = π/3 : module 2 cos(π/6) = 2 × √3/2 = **√3** ; argument **π/6**. (Contrôle : 1 + 1/2 + i√3/2 = 3/2 + i√3/2, de module √(9/4 + 3/4) = √3.)"
+    },
+    {
+      "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+      "difficulte": 1,
+      "titre": "Second degré dans ℂ",
+      "consigne": "Résous chaque équation dans ℂ en justifiant.",
+      "enonce": "1. Résous dans ℂ l'équation z² − 4z + 13 = 0.\n2. Vérifie ton résultat à l'aide de la somme et du produit des racines.\n3. Résous dans ℂ l'équation z² = −9.\n4. Un élève écrit : « √(−9) = 3i, et comme Δ < 0 l'équation x² + 1 = 0 n'a pas de solution. » Relève ses deux erreurs.",
+      "bareme": [
+        { "critere": "Δ = −36 et solutions conjuguées 2 + 3i et 2 − 3i", "points": 8 },
+        { "critere": "Contrôle : somme 4 = −b/a et produit 13 = c/a", "points": 4 },
+        { "critere": "z² = −9 : solutions 3i et −3i", "points": 4 },
+        { "critere": "Deux erreurs relevées : racine non définie sur les négatifs, Δ < 0 donne deux solutions conjuguées", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Δ = (−4)² − 4 × 1 × 13 = 16 − 52 = **−36** < 0 : deux solutions complexes conjuguées (−b ± i√(−Δ))/(2a) = (4 ± 6i)/2, soit **z₁ = 2 + 3i** et **z₂ = 2 − 3i**.\n2. z₁ + z₂ = 4 = −b/a ✓ ; z₁ z₂ = 2² + 3² = 13 = c/a ✓.\n3. z² = −9 ⇔ z² + 9 = 0 ; Δ = −36, solutions ±6i/2 : **z = 3i ou z = −3i** (on a bien (3i)² = 9i² = −9).\n4. - Le symbole √ n'est **pas défini** sur les négatifs : il faut écrire que −9 = (3i)², ou passer par i√9, sans écrire √(−9).\n- « Δ < 0 donc pas de solution » est faux dans ℂ : x² + 1 = 0 a **deux solutions conjuguées**, i et −i."
+    },
+    {
+      "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+      "difficulte": 2,
+      "titre": "Une équation de degré 3",
+      "consigne": "Suis la méthode du cours : racine évidente, factorisation par identification, second degré.",
+      "enonce": "Soit P(z) = z³ − 3z² + 4z − 2, pour z complexe.\n\n1. Vérifie que 1 est une racine de P.\n2. Détermine les réels a et b tels que, pour tout z, P(z) = (z − 1)(z² + az + b). Justifie par identification des coefficients.\n3. Résous dans ℂ l'équation P(z) = 0.\n4. Quelle propriété des polynômes à coefficients réels retrouve-t-on dans les solutions ? Pourquoi était-on sûr, avant tout calcul, que P avait au moins une racine réelle ?",
+      "bareme": [
+        { "critere": "P(1) = 0 vérifié", "points": 3 },
+        { "critere": "Développement et identification : a = −2, b = 2", "points": 6 },
+        { "critere": "Δ = −4, solutions 1, 1 + i et 1 − i", "points": 7 },
+        { "critere": "Racines conjuguées par paires ; degré impair à coefficients réels donc une racine réelle", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. P(1) = 1 − 3 + 4 − 2 = **0** : 1 est racine.\n2. (z − 1)(z² + az + b) = z³ + az² + bz − z² − az − b = z³ + (a − 1)z² + (b − a)z − b.\nIdentification avec z³ − 3z² + 4z − 2 : a − 1 = −3, b − a = 4, −b = −2. D'où **a = −2** et **b = 2** (et b − a = 2 + 2 = 4 ✓).\n3. P(z) = 0 ⇔ z = 1 ou z² − 2z + 2 = 0. Δ = 4 − 8 = −4, solutions (2 ± 2i)/2. Solutions : **1, 1 + i, 1 − i**.\n4. P est à coefficients **réels** : ses racines non réelles vont **par paires conjuguées** (1 + i et 1 − i). P est de **degré impair** (3) à coefficients réels : il admet au moins une racine réelle, conséquence du même résultat (les racines non réelles allant par deux, il en reste au moins une réelle parmi les trois)."
+    },
+    {
+      "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+      "difficulte": 3,
+      "titre": "Racines cubiques et polynôme reconstruit",
+      "consigne": "Traite les deux parties en justifiant chaque étape par le cours.",
+      "enonce": "**Partie A.** On veut résoudre dans ℂ l'équation z³ = 8i.\n1. Écris 8i sous forme exponentielle.\n2. En posant z = ρ e^(iφ), traduis l'équation par une condition sur ρ et une condition sur φ.\n3. Déduis-en les trois solutions sous forme exponentielle, puis sous forme algébrique.\n4. Vérifie l'une des solutions par le calcul, et décris la figure formée par leurs images.\n\n**Partie B.** Un polynôme Q de degré 4, à coefficients réels et de coefficient dominant 1, admet pour racines 2 + i et 3i.\n5. Quelles sont ses deux autres racines ? Justifie.\n6. Écris Q comme produit de deux trinômes à coefficients réels, puis sous forme développée.",
+      "bareme": [
+        { "critere": "8i = 8e^(iπ/2) ; ρ³ = 8 et 3φ = π/2 + 2kπ", "points": 4 },
+        { "critere": "Trois solutions 2e^(iπ/6), 2e^(5iπ/6), 2e^(3iπ/2) et formes √3 + i, −√3 + i, −2i", "points": 6 },
+        { "critere": "Vérification (par exemple (−2i)³ = 8i) et triangle équilatéral inscrit dans le cercle de rayon 2", "points": 3 },
+        { "critere": "Racines conjuguées 2 − i et −3i justifiées par les coefficients réels", "points": 3 },
+        { "critere": "Q = (z² − 4z + 5)(z² + 9) = z⁴ − 4z³ + 14z² − 36z + 45", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "**Partie A.**\n1. 8i a pour module 8 et pour argument π/2 : **8i = 8e^(iπ/2)**.\n2. z³ = ρ³ e^(3iφ). L'équation équivaut à **ρ³ = 8** et **3φ = π/2 + 2kπ**, k entier.\n3. ρ = 2 et φ = π/6 + 2kπ/3, avec k = 0, 1, 2 :\n- k = 0 : 2e^(iπ/6) = 2(√3/2 + i/2) = **√3 + i** ;\n- k = 1 : 2e^(5iπ/6) = 2(−√3/2 + i/2) = **−√3 + i** ;\n- k = 2 : 2e^(3iπ/2) = **−2i**.\n4. (−2i)³ = −8i³ = −8 × (−i) = 8i ✓. Les trois images forment un **triangle équilatéral** (polygone régulier à 3 côtés) inscrit dans le cercle de centre O et de rayon 2.\n\n**Partie B.**\n5. Q est à coefficients **réels** : si z est racine, z̄ aussi. Les deux autres racines sont **2 − i** et **−3i**. Un polynôme de degré 4 a exactement 4 racines (comptées avec multiplicité) : ce sont les seules.\n6. (z − (2 + i))(z − (2 − i)) = z² − 4z + 5 (somme 4, produit 4 + 1 = 5) ; (z − 3i)(z + 3i) = z² + 9.\n**Q(z) = (z² − 4z + 5)(z² + 9)** = z⁴ + 9z² − 4z³ − 36z + 5z² + 45 = **z⁴ − 4z³ + 14z² − 36z + 45**."
+    },
+    {
+      "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+      "difficulte": 1,
+      "titre": "Reconnaître une transformation",
+      "consigne": "Identifie chaque transformation avec ses éléments caractéristiques et justifie par le dictionnaire du cours.",
+      "enonce": "1. Donne la nature et les éléments caractéristiques des transformations d'écriture complexe :\n   a. z′ = z + 2 − i\n   b. z′ = iz\n   c. z′ = 3z\n   d. z′ = −z\n2. Calcule l'affixe de l'image du point A d'affixe 1 + 2i par chacune des transformations b et c.",
+      "bareme": [
+        { "critere": "Translation de vecteur d'affixe 2 − i et rotation de centre O d'angle π/2", "points": 8 },
+        { "critere": "Homothétie de centre O de rapport 3 et rotation d'angle π (symétrie centrale) de centre O", "points": 6 },
+        { "critere": "Images justes : −2 + i et 3 + 6i", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. z′ = z + b avec b = 2 − i : **translation de vecteur d'affixe 2 − i**.\n   b. z′ = iz = e^(iπ/2) z : multiplication par un complexe de module 1, **rotation de centre O et d'angle +π/2**.\n   c. z′ = 3z : multiplication par un réel, **homothétie de centre O et de rapport 3**.\n   d. z′ = −z = e^(iπ) z : **rotation de centre O et d'angle π**, c'est-à-dire la symétrie par rapport à l'origine.\n2. Par b : i(1 + 2i) = i + 2i² = **−2 + i**. Par c : 3(1 + 2i) = **3 + 6i**."
+    },
+    {
+      "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+      "difficulte": 2,
+      "titre": "Rotation autour d'un point",
+      "consigne": "Traduis en affixes, calcule, interprète, conclus.",
+      "enonce": "On considère les points Ω, A d'affixes z(Ω) = 1 + i et z(A) = 3 + i.\n\n1. Écris l'expression complexe de la rotation r de centre Ω et d'angle π/2, puis calcule l'affixe du point A′ image de A par r.\n2. Calcule le quotient (z(A′) − z(Ω))/(z(A) − z(Ω)). Interprète son module et son argument, puis donne la nature du triangle ΩAA′.\n3. Calcule l'affixe du point A″ image de A par l'homothétie h de centre Ω et de rapport −2.\n4. Décris l'ensemble des points M d'affixe z tels que arg(z − (1 + i)) = π/2 modulo 2π.",
+      "bareme": [
+        { "critere": "Écriture z′ − (1 + i) = i(z − (1 + i)) et A′ d'affixe 1 + 3i", "points": 6 },
+        { "critere": "Quotient égal à i : module 1 (ΩA = ΩA′), argument π/2 ; triangle rectangle isocèle en Ω", "points": 6 },
+        { "critere": "Homothétie : A″ d'affixe −3 + i", "points": 4 },
+        { "critere": "Demi-droite verticale d'origine Ω, dirigée vers le haut (Ω exclu)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Rotation de centre Ω et d'angle π/2 : **z′ − (1 + i) = e^(iπ/2)(z − (1 + i)) = i(z − 1 − i)**. Pour A : z′ − (1 + i) = i(3 + i − 1 − i) = 2i, donc **z(A′) = 1 + 3i**.\n2. (z(A′) − z(Ω))/(z(A) − z(Ω)) = 2i/2 = **i**. Module 1 : **ΩA′ = ΩA** ; argument π/2 : l'angle orienté entre les vecteurs ΩA et ΩA′ vaut π/2, ils sont **perpendiculaires**. Le triangle ΩAA′ est **rectangle isocèle en Ω**.\n3. Homothétie : z″ − (1 + i) = −2(z(A) − (1 + i)) = −2 × 2 = −4, donc **z(A″) = −3 + i**.\n4. arg(z − z(Ω)) = π/2 : le vecteur ΩM a la direction et le sens du vecteur d'affixe i. C'est la **demi-droite d'origine Ω** (Ω exclu, car 0 n'a pas d'argument), **parallèle à l'axe des ordonnées et dirigée vers le haut** : les points d'affixe 1 + iy avec y > 1."
+    },
+    {
+      "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+      "difficulte": 3,
+      "titre": "Construire un carré par le calcul",
+      "consigne": "Suis la méthode du cours : traduire, calculer, interpréter, conclure. Justifie chaque étape.",
+      "enonce": "On considère les points A et B d'affixes z(A) = 1 + i et z(B) = 4 + 2i.\n\n1. Le point D est l'image de B par la rotation de centre A et d'angle π/2. Calcule z(D).\n2. Calcule le quotient (z(D) − z(A))/(z(B) − z(A)) et interprète son module et son argument.\n3. Soit C le point d'affixe z(B) + z(D) − z(A). Calcule z(C) et montre que ABCD est un parallélogramme, puis que c'est un carré.\n4. Calcule l'affixe du centre I du carré, puis vérifie par des modules que I appartient à la médiatrice de [AB].\n5. On applique au carré la transformation f : z ↦ (1 + i)z. Donne sa nature et ses éléments caractéristiques. Quelle est la longueur du côté du carré image ? Justifie.",
+      "bareme": [
+        { "critere": "z(D) − z(A) = i(z(B) − z(A)) et z(D) = 4i", "points": 4 },
+        { "critere": "Quotient i : AB = AD et angle droit en A", "points": 3 },
+        { "critere": "z(C) = 3 + 5i, parallélogramme (milieux des diagonales ou vecteurs égaux) puis carré", "points": 5 },
+        { "critere": "Centre I d'affixe 2 + 3i et égalité |z(I) − z(A)| = |z(I) − z(B)| = √5", "points": 4 },
+        { "critere": "Similitude directe de centre O, rapport √2, angle π/4 ; côté √2 × √10 = 2√5", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. z(D) − z(A) = e^(iπ/2)(z(B) − z(A)) = i(3 + i) = 3i + i² = −1 + 3i, donc **z(D) = 1 + i − 1 + 3i = 4i**.\n2. (z(D) − z(A))/(z(B) − z(A)) = **i**. Module 1 : **AD = AB** ; argument π/2 : **(AB) ⊥ (AD)**, angle droit direct en A.\n3. z(C) = 4 + 2i + 4i − (1 + i) = **3 + 5i**. Vecteur AB : 3 + i ; vecteur DC : z(C) − z(D) = 3 + i. Les vecteurs AB et DC sont égaux : **ABCD est un parallélogramme**. Il a un angle droit en A et deux côtés consécutifs égaux (AB = AD) : c'est un **carré**. AB = |3 + i| = √10.\n4. I est le milieu de [AC] : z(I) = (1 + i + 3 + 5i)/2 = **2 + 3i**. |z(I) − z(A)| = |1 + 2i| = √5 et |z(I) − z(B)| = |−2 + i| = √5 : IA = IB, donc I est sur la **médiatrice de [AB]** ✓.\n5. f : z ↦ az avec a = 1 + i = √2 e^(iπ/4), non réel et de module différent de 1 : c'est une **similitude directe de centre O, de rapport √2 et d'angle π/4**. Elle multiplie les longueurs par √2 et conserve les angles : l'image est un carré de côté √2 × √10 = √20 = **2√5**."
+    },
+    {
+      "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+      "difficulte": 1,
+      "titre": "Divisions euclidiennes et congruences",
+      "consigne": "Justifie chaque réponse par une égalité ou une propriété du cours.",
+      "enonce": "1. Effectue la division euclidienne de 247 par 12, puis celle de −25 par 7. Écris chaque résultat sous la forme a = bq + r.\n2. Détermine le reste de 58 modulo 9 de deux façons : par la division, puis par la somme des chiffres. Pourquoi la seconde méthode est-elle valable ?\n3. Le nombre 918 082 est-il divisible par 11 ? Utilise le critère de la somme alternée.",
+      "bareme": [
+        { "critere": "247 = 12 × 20 + 7 et −25 = 7 × (−4) + 3 avec 0 ≤ r < b", "points": 8 },
+        { "critere": "58 ≡ 4 [9] par les deux méthodes, justification par 10 ≡ 1 [9]", "points": 6 },
+        { "critere": "Somme alternée −22 ≡ 0 [11] : divisible par 11", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **247 = 12 × 20 + 7** (0 ≤ 7 < 12) : q = 20, r = 7.\n**−25 = 7 × (−4) + 3** (0 ≤ 3 < 7) : q = −4, r = 3. (Et non q = −3, r = −4 : le reste doit être positif.)\n2. 58 = 9 × 6 + 4 : reste **4**. Somme des chiffres : 5 + 8 = 13 ≡ 4 [9] ✓. Valable car **10 ≡ 1 [9]** : chaque puissance de 10 est congrue à 1, donc un nombre est congru à la somme de ses chiffres modulo 9.\n3. 10 ≡ −1 [11] : on alterne les signes en partant des unités. Chiffres de 918 082 depuis la droite : 2 − 8 + 0 − 8 + 1 − 9 = **−22 ≡ 0 [11]**. Donc **918 082 est divisible par 11** (918 082 = 11 × 83 462)."
+    },
+    {
+      "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+      "difficulte": 2,
+      "titre": "Restes de grandes puissances",
+      "consigne": "Utilise la méthode de la périodicité et justifie par les règles de calcul sur les congruences.",
+      "enonce": "1. a. Calcule les restes modulo 7 de 5¹, 5², …, 5⁶. Quelle est la période ?\n   b. Déduis-en le reste de la division euclidienne de 5²⁰²⁷ par 7.\n   c. Montre que, pour tout entier naturel n, 5⁶ⁿ − 1 est divisible par 7.\n2. a. Calcule les restes modulo 5 des premières puissances de 2 et donne leur période.\n   b. Détermine les entiers naturels n tels que 2ⁿ + 1 soit divisible par 5.",
+      "bareme": [
+        { "critere": "Restes 5, 4, 6, 2, 3, 1 et période 6", "points": 5 },
+        { "critere": "2027 = 6 × 337 + 5 et 5²⁰²⁷ ≡ 3 [7]", "points": 5 },
+        { "critere": "5⁶ⁿ = (5⁶)ⁿ ≡ 1 [7] justifié par la compatibilité avec les puissances", "points": 4 },
+        { "critere": "Restes 2, 4, 3, 1 (période 4) et condition n ≡ 2 [4]", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a. 5 ≡ 5 ; 5² = 25 ≡ 4 ; 5³ ≡ 4 × 5 = 20 ≡ 6 ; 5⁴ ≡ 6 × 5 = 30 ≡ 2 ; 5⁵ ≡ 2 × 5 = 10 ≡ 3 ; 5⁶ ≡ 3 × 5 = 15 ≡ 1 [7]. Les restes sont **5, 4, 6, 2, 3, 1**, puis le cycle recommence : **période 6**.\n   b. 2027 = 6 × 337 + 5, donc 5²⁰²⁷ = (5⁶)³³⁷ × 5⁵ ≡ 1 × 3 [7]. Reste : **3**.\n   c. 5⁶ ≡ 1 [7] et les congruences sont compatibles avec les puissances : 5⁶ⁿ = (5⁶)ⁿ ≡ 1ⁿ = 1 [7]. Donc 5⁶ⁿ − 1 ≡ 0 [7] : **7 divise 5⁶ⁿ − 1**.\n2. a. 2¹ ≡ 2 ; 2² ≡ 4 ; 2³ = 8 ≡ 3 ; 2⁴ = 16 ≡ 1 [5]. **Période 4** : restes 2, 4, 3, 1.\n   b. 2ⁿ + 1 ≡ 0 [5] ⇔ 2ⁿ ≡ −1 ≡ 4 [5]. D'après le cycle, cela se produit exactement quand le reste de n modulo 4 vaut 2 : **n ≡ 2 [4]**, soit n = 4k + 2 (n = 2, 6, 10…). Contrôle : 2² + 1 = 5 ✓, 2⁶ + 1 = 65 = 5 × 13 ✓."
+    },
+    {
+      "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+      "difficulte": 3,
+      "titre": "Choisir le bon modulo",
+      "consigne": "Traite les quatre questions indépendantes en justifiant chaque étape par les propriétés des congruences.",
+      "enonce": "1. **Le critère par 11.** Montre que 10 ≡ −1 [11], puis que 10ᵏ ≡ (−1)ᵏ [11] pour tout entier naturel k. Explique pourquoi un nombre est divisible par 11 si et seulement si la somme alternée de ses chiffres (en partant des unités) l'est. Applique à 7 392.\n2. **Une puissance géante.** Détermine le reste de 2026²⁰²⁶ dans la division par 9.\n3. **Un résultat pour tout n.** À l'aide d'un tableau des restes modulo 3, démontre que pour tout entier n, n³ − n est divisible par 3.\n4. **Une équation.** Montre que 3 × 5 ≡ 1 [7]. En multipliant les deux membres par 5, résous 3x ≡ 5 [7]. Pourquoi ne peut-on pas, en général, « diviser » une congruence ? Donne l'exemple du cours.",
+      "bareme": [
+        { "critere": "10ᵏ ≡ (−1)ᵏ [11] justifié par la compatibilité avec les puissances, critère expliqué, 7 392 divisible par 11", "points": 6 },
+        { "critere": "2026 ≡ 1 [9] (somme des chiffres) donc 2026²⁰²⁶ ≡ 1 [9]", "points": 4 },
+        { "critere": "Tableau des trois cas n ≡ 0, 1, 2 [3] avec n³ − n ≡ 0 dans chaque cas", "points": 4 },
+        { "critere": "Équation résolue : x ≡ 4 [7], vérification", "points": 4 },
+        { "critere": "Division non compatible : 6 ≡ 12 [6] mais 3 n'est pas congru à 6 modulo 6", "points": 2 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 10 = 11 − 1, donc **10 ≡ −1 [11]** ; par compatibilité avec les puissances, **10ᵏ ≡ (−1)ᵏ [11]**. Un nombre s'écrit a₀ + a₁ × 10 + a₂ × 10² + … ; par compatibilité avec l'addition et la multiplication, il est congru à a₀ − a₁ + a₂ − … modulo 11. Il a donc le même reste que sa somme alternée : il est divisible par 11 si et seulement si elle l'est.\n7 392 : 2 − 9 + 3 − 7 = **−11 ≡ 0 [11]** : 7 392 est divisible par 11 (7 392 = 11 × 672).\n2. 2 + 0 + 2 + 6 = 10 ≡ 1 [9], donc 2026 ≡ 1 [9] et 2026²⁰²⁶ ≡ 1²⁰²⁶ = 1 [9]. Reste : **1**.\n3. Tableau :\n| n ≡ … [3] | 0 | 1 | 2 |\n| n³ ≡ … | 0 | 1 | 8 ≡ 2 |\n| n³ − n ≡ … | 0 | 0 | 0 |\nDans tous les cas n³ − n ≡ 0 [3] : **3 divise n³ − n** pour tout entier n.\n4. 3 × 5 = 15 = 2 × 7 + 1 ≡ 1 [7]. Si 3x ≡ 5 [7], alors en multipliant par 5 (la multiplication est compatible) : 15x ≡ 25 [7], soit x ≡ 25 ≡ 4 [7]. Réciproquement, si x ≡ 4, 3x ≡ 12 ≡ 5 [7] ✓. Solutions : **x ≡ 4 [7]**, soit x = 7k + 4.\nOn ne peut pas diviser : **6 ≡ 12 [6]** est vrai, mais en divisant par 2 on obtiendrait 3 ≡ 6 [6], qui est **faux**. Simplifier exige des précautions liées au PGCD ; multiplier par un nombre bien choisi est, lui, toujours permis."
+    }
+  ]
+}

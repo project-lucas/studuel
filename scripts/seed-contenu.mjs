@@ -89,6 +89,11 @@ function verifie(module) {
       // (cf. lib/mind-map-auto) : on l'exige, sinon la tuile « Carte » manque.
       if (!/^#{2,4}\s+/m.test(ch.lecon?.cours ?? ''))
         p(`cours sans section ## (carte mentale non dérivable) : ${ch.titre}`)
+      // Le rendu des cours (components/LessonRichContent) ne connaît ni le
+      // LaTeX ni les blocs de code : un `$x^2$` ou un bloc ``` s'afficheraient
+      // tels quels, symboles compris. Les formules s'écrivent en texte (x², √).
+      if (/```/.test(ch.lecon?.cours ?? '') || /\$[^$\n]+\$/.test(ch.lecon?.cours ?? ''))
+        p(`cours avec du LaTeX ou un bloc de code (non rendus par l’app) : ${ch.titre}`)
       if ((ch.questions ?? []).length < 6)
         p(`moins de 6 questions : ${ch.titre} (${ch.questions?.length ?? 0})`)
 

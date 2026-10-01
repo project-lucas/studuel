@@ -1,0 +1,2884 @@
+{
+ "niveau": "Tle",
+ "matiere": "physique-chimie-maths",
+ "exercices": [
+  {
+   "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mur de la véranda",
+   "competence": "calculer",
+   "situation": "Lina isole un mur de véranda de 10 m². Elle hésite entre trois matériaux, chacun sur 10 cm d’épaisseur. Il fait 20 °C dedans et 0 °C dehors, en régime permanent.",
+   "documents": [
+    {
+     "id": "mat",
+     "type": "tableau",
+     "titre": "Conductivité thermique des matériaux",
+     "colonnes": [
+      "Matériau",
+      "λ (W/(m·K))"
+     ],
+     "lignes": [
+      [
+       "Bois",
+       "0,15"
+      ],
+      [
+       "Béton",
+       "1,75"
+      ],
+      [
+       "Laine de verre",
+       "0,04"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mat",
+     "enonce": "Touche le matériau qui isole le mieux.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Plus λ est petit, moins le matériau laisse passer la chaleur.",
+     "explication": "La **laine de verre** a la plus petite conductivité (0,04) : elle laisse passer le moins de chaleur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique Rth de 10 cm de bois sur 10 m², arrondie au millième.",
+     "reponse": 0.067,
+     "unite": "K/W",
+     "tolerance": 0.001,
+     "aide": "Rth = e / (λ × S), avec e en mètres.",
+     "explication": "Rth = 0,10 / (0,15 × 10) ≈ **0,067 K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le flux thermique Φ qui traverse le mur en bois, en W (arrondi à l’unité).",
+     "reponse": 300,
+     "unite": "W",
+     "tolerance": 3,
+     "aide": "Φ = ΔT / Rth, avec ΔT = 20 K.",
+     "explication": "Φ = 20 / 0,0667 ≈ **300 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le flux thermique avec 10 cm de laine de verre sur le même mur, en W.",
+     "reponse": 80,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Calcule d’abord Rth de la laine : 0,10 / (0,04 × 10).",
+     "explication": "Rth = 0,10 / 0,4 = 0,25 K/W ; Φ = 20 / 0,25 = **80 W**, près de quatre fois moins qu’avec le bois."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les trois couches du mur",
+   "competence": "calculer",
+   "situation": "Un mur de 12 m² est fait de trois couches traversées l’une après l’autre. Il fait 19 °C dedans et 1 °C dehors.",
+   "documents": [
+    {
+     "id": "mur",
+     "type": "schema",
+     "titre": "Coupe du mur (pas à l’échelle)",
+     "largeur": 350,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 60,
+       "texte": "Dedans",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 78,
+       "texte": "19 °C",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 40,
+       "l": 40,
+       "h": 90,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "pl",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 40,
+       "l": 80,
+       "h": 90,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "la",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 40,
+       "l": 100,
+       "h": 90,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "be",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 30,
+       "texte": "Plâtre",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 30,
+       "texte": "Laine",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 30,
+       "texte": "Béton",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 325,
+       "y": 60,
+       "texte": "Dehors",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 325,
+       "y": 78,
+       "texte": "1 °C",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    },
+    {
+     "id": "couches",
+     "type": "tableau",
+     "titre": "Les couches",
+     "colonnes": [
+      "Couche",
+      "Épaisseur (cm)",
+      "λ (W/(m·K))"
+     ],
+     "lignes": [
+      [
+       "Plâtre",
+       "1,3",
+       "0,35"
+      ],
+      [
+       "Laine de verre",
+       "12",
+       "0,04"
+      ],
+      [
+       "Béton",
+       "20",
+       "1,75"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mur",
+     "enonce": "Touche la couche dont la résistance thermique est la plus grande.",
+     "reponse": [
+      "la"
+     ],
+     "aide": "Calcule e / (λ × S) pour chaque couche ; la plus grande est celle qui freine le plus.",
+     "explication": "La **laine** a Rth = 0,12 / (0,04 × 12) = 0,25 K/W, contre 0,003 (plâtre) et 0,010 (béton)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique totale du mur, en K/W, arrondie au millième.",
+     "reponse": 0.263,
+     "unite": "K/W",
+     "tolerance": 0.001,
+     "aide": "Les résistances de couches traversées l’une après l’autre s’additionnent.",
+     "explication": "Rth = 0,0031 + 0,25 + 0,0095 ≈ **0,263 K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le flux thermique qui traverse le mur, en W, arrondi au dixième.",
+     "reponse": 68.5,
+     "unite": "W",
+     "tolerance": 0.3,
+     "aide": "Φ = ΔT / Rth, avec ΔT = 18 K.",
+     "explication": "Φ = 18 / 0,2626 ≈ **68,5 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans la laine de verre, le flux serait combien de fois plus grand ? Arrondis au dixième.",
+     "reponse": 20.8,
+     "tolerance": 0.1,
+     "aide": "ΔT ne change pas : compare les deux résistances totales.",
+     "explication": "Sans laine, Rth ≈ 0,0126 K/W ; le rapport des flux vaut 0,2626 / 0,0126 ≈ **20,8**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le double vitrage : l’air qui isole",
+   "competence": "modeliser",
+   "situation": "Pour 1 m² de fenêtre, on compare un simple vitrage (un verre de 4 mm) et un double vitrage 4-16-4. On se place dans le modèle de la fiche : on ne compte que les couches, pas l’air sur les faces. Écart de température : 15 °C.",
+   "documents": [
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Analogie électrique du double vitrage",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "generateur",
+       "nom": "ΔT"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "Verre"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "Lame",
+       "id": "air"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "Verre"
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        12,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        4,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        6
+       ],
+       "a": [
+        0,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "vit",
+     "type": "tableau",
+     "titre": "Les couches du vitrage 4-16-4",
+     "colonnes": [
+      "Couche",
+      "Épaisseur (mm)",
+      "λ (W/(m·K))"
+     ],
+     "lignes": [
+      [
+       "Verre",
+       "4",
+       "1,0"
+      ],
+      [
+       "Lame d’air immobile",
+       "16",
+       "0,025"
+      ],
+      [
+       "Verre",
+       "4",
+       "1,0"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche la résistance qui représente la lame d’air.",
+     "reponse": [
+      "air"
+     ],
+     "aide": "Dans le circuit, chaque couche du vitrage devient une résistance ; celle du milieu est entre les deux verres.",
+     "explication": "La lame d’air est entre les deux verres : c’est la **résistance du milieu**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique de la lame d’air sur 1 m², en K/W.",
+     "reponse": 0.64,
+     "unite": "K/W",
+     "tolerance": 0.01,
+     "aide": "Rth = e / (λ × S), avec e = 0,016 m.",
+     "explication": "Rth = 0,016 / (0,025 × 1) = **0,64 K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique totale du double vitrage, en K/W, arrondie au millième.",
+     "reponse": 0.648,
+     "unite": "K/W",
+     "tolerance": 0.001,
+     "aide": "Chaque verre vaut 0,004 / (1,0 × 1) ; additionne les trois couches.",
+     "explication": "Rth = 0,004 + 0,64 + 0,004 = **0,648 K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le flux thermique à travers le double vitrage, en W, arrondi au dixième.",
+     "reponse": 23.1,
+     "unite": "W",
+     "tolerance": 0.1,
+     "aide": "Φ = ΔT / Rth, avec ΔT = 15 K.",
+     "explication": "Φ = 15 / 0,648 ≈ **23,1 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le simple vitrage laisse passer combien de fois plus de flux que le double vitrage ?",
+     "reponse": 162,
+     "tolerance": 0.5,
+     "aide": "Il n’a qu’une couche de verre : Rth = 0,004 K/W. À écart égal, le flux est inversement proportionnel à Rth.",
+     "explication": "Rapport = 0,648 / 0,004 = **162** : c’est l’air immobile qui isole, pas le verre."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le démarrage du scooter électrique",
+   "competence": "lire-graphique",
+   "situation": "Un scooter électrique de masse totale 200 kg (avec son pilote) démarre en ligne droite. Le graphique donne sa vitesse pendant les cinq premières secondes.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du scooter",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        0,
+        1.5,
+        3,
+        4.5,
+        6,
+        7.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "m/s",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis sur le graphique la vitesse du scooter à t = 4 s.",
+     "reponse": 6,
+     "unite": "m/s",
+     "tolerance": 0.1,
+     "aide": "Repère 4 s sur l’axe horizontal et monte jusqu’à la courbe.",
+     "explication": "À t = 4 s, la courbe est à **6 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’accélération du scooter, en m/s². La vitesse augmente de la même façon chaque seconde.",
+     "reponse": 1.5,
+     "unite": "m/s²",
+     "tolerance": 0.05,
+     "aide": "a = variation de vitesse / durée : de 0 à 7,5 m/s en 5 s.",
+     "explication": "a = 7,5 / 5 = **1,5 m/s²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la somme des forces qui s’exercent sur le scooter, en N.",
+     "reponse": 300,
+     "unite": "N",
+     "tolerance": 2,
+     "aide": "Principe fondamental : ΣF = m × a.",
+     "explication": "ΣF = 200 × 1,5 = **300 N**, dans le sens du mouvement."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le fourgon sur l’autoroute",
+   "competence": "calculer",
+   "situation": "Un fourgon roule à vitesse constante en ligne droite : la force motrice compense exactement la traînée de l’air. Comparons deux allures.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Traînée de l’air",
+     "sousTitre": "Données et lois",
+     "emoji": "🚐",
+     "lignes": [
+      {
+       "texte": "F = ½ × ρ × S × Cx × v²",
+       "valeur": "en N",
+       "gras": true
+      },
+      {
+       "texte": "P = F × v",
+       "valeur": "en W",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "ρ (air)",
+       "valeur": "1,2 kg/m³"
+      },
+      {
+       "texte": "S × Cx",
+       "valeur": "1,2 m²"
+      },
+      {
+       "texte": "v",
+       "valeur": "en m/s"
+      }
+     ]
+    },
+    {
+     "id": "all",
+     "type": "tableau",
+     "titre": "Les deux allures",
+     "colonnes": [
+      "Allure",
+      "Vitesse (km/h)"
+     ],
+     "lignes": [
+      [
+       "Nationale",
+       "90"
+      ],
+      [
+       "Autoroute",
+       "126"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse sur autoroute en m/s.",
+     "reponse": 35,
+     "unite": "m/s",
+     "tolerance": 0.05,
+     "aide": "Divise une vitesse en km/h par 3,6.",
+     "explication": "126 / 3,6 = **35 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la traînée à 35 m/s, en N, arrondie à l’unité.",
+     "reponse": 882,
+     "unite": "N",
+     "tolerance": 1,
+     "aide": "F = 0,5 × 1,2 × 1,2 × v².",
+     "explication": "F = 0,72 × 35² = 0,72 × 1 225 = **882 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance nécessaire pour vaincre cette traînée à 35 m/s, en kW, arrondie au dixième.",
+     "reponse": 30.9,
+     "unite": "kW",
+     "tolerance": 0.1,
+     "aide": "P = F × v, en watts ; divise par 1 000 pour les kW.",
+     "explication": "P = 882 × 35 = 30 870 W ≈ **30,9 kW**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 90 km/h, le fourgon doit fournir 11,25 kW. La puissance à 126 km/h est combien de fois plus grande ? Arrondis au centième.",
+     "reponse": 2.74,
+     "tolerance": 0.02,
+     "aide": "Convertis 90 km/h en m/s (25 m/s), calcule la puissance à cette allure et fais le rapport.",
+     "explication": "À 25 m/s, F = 450 N et P = 11 250 W ; 30 870 / 11 250 ≈ **2,74**. La puissance varie comme v³."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La caisse poussée sur le sol",
+   "competence": "modeliser",
+   "situation": "Dans un entrepôt, un ouvrier pousse une caisse initialement immobile sur un sol horizontal. F est la force de poussée, f la force de frottement (constante), P le poids et R la réaction du sol.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Forces sur la caisse",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        170
+       ],
+       "a": [
+        320,
+        170
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 110,
+       "l": 100,
+       "h": 60,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "25 kg"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        135
+       ],
+       "a": [
+        280,
+        135
+       ],
+       "fleche": "fin",
+       "id": "aF",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 139,
+       "texte": "F",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        155
+       ],
+       "a": [
+        50,
+        155
+       ],
+       "fleche": "fin",
+       "id": "af",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 34,
+       "y": 159,
+       "texte": "f",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        110
+       ],
+       "a": [
+        160,
+        55
+       ],
+       "fleche": "fin",
+       "id": "aR",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 60,
+       "texte": "R",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        170
+       ],
+       "a": [
+        160,
+        225
+       ],
+       "fleche": "fin",
+       "id": "aP",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 225,
+       "texte": "P",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les mesures",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse de la caisse",
+       "25 kg"
+      ],
+      [
+       "Force de poussée F",
+       "120 N"
+      ],
+      [
+       "Distance poussée",
+       "5,0 m"
+      ],
+      [
+       "Vitesse atteinte après 5,0 m",
+       "4,0 m/s"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche les deux forces dont le travail est nul pendant le déplacement.",
+     "reponse": [
+      "aP",
+      "aR"
+     ],
+     "multiple": true,
+     "aide": "Le travail est nul quand la force est perpendiculaire au déplacement.",
+     "explication": "Le déplacement est horizontal : le **poids** et la **réaction** du sol, verticaux, ne travaillent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie cinétique de la caisse après 5,0 m, en J.",
+     "reponse": 200,
+     "unite": "J",
+     "tolerance": 1,
+     "aide": "Ec = ½ × m × v².",
+     "explication": "Ec = 0,5 × 25 × 4² = **200 J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le théorème de l’énergie cinétique, calcule la force de frottement f, en N.",
+     "reponse": 80,
+     "unite": "N",
+     "tolerance": 0.5,
+     "aide": "Δ Ec = (F − f) × d, car F et f travaillent, avec la même distance.",
+     "explication": "200 = (120 − f) × 5, donc 120 − f = 40 et f = **80 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’ouvrier lâche la caisse à 4,0 m/s. Sur quelle distance glisse-t-elle avant de s’arrêter, en m ?",
+     "reponse": 2.5,
+     "unite": "m",
+     "tolerance": 0.05,
+     "aide": "Seul le frottement travaille : 0 − 200 = −f × d’.",
+     "explication": "d’ = 200 / 80 = **2,5 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La clé sur l’écrou",
+   "competence": "observer-schema",
+   "situation": "Sacha serre un écrou avec une clé de 40 cm. Il pousse avec une force F de 50 N, perpendiculaire à la clé, à 30 cm de l’axe de l’écrou.",
+   "documents": [
+    {
+     "id": "cle",
+     "type": "schema",
+     "titre": "La clé vue de dessus",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 100,
+       "l": 240,
+       "h": 20,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 6
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 110,
+       "r": 24,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        50
+       ],
+       "a": [
+        240,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 70,
+       "texte": "F = 50 N",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        120
+       ],
+       "a": [
+        240,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        134
+       ],
+       "a": [
+        60,
+        190
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        150
+       ],
+       "a": [
+        240,
+        150
+       ],
+       "fleche": "deux",
+       "id": "lev",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 142,
+       "texte": "0,30 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        185
+       ],
+       "a": [
+        300,
+        185
+       ],
+       "fleche": "deux",
+       "id": "lon",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 177,
+       "texte": "0,40 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cle",
+     "enonce": "Touche la longueur qui est le bras de levier de la force F.",
+     "reponse": [
+      "lev"
+     ],
+     "aide": "Le bras de levier va de l’axe jusqu’à la droite d’action de la force.",
+     "explication": "Le bras de levier est la distance de l’axe à la droite d’action de F : **0,30 m**, pas la longueur totale de la clé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le moment de la force F par rapport à l’axe de l’écrou, en N·m.",
+     "reponse": 15,
+     "unite": "N·m",
+     "tolerance": 0.1,
+     "aide": "M = F × d, avec d en mètres.",
+     "explication": "M = 50 × 0,30 = **15 N·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sacha pousse maintenant à l’extrémité de la clé (0,40 m). Quelle force suffit pour le même moment, en N ?",
+     "reponse": 37.5,
+     "unite": "N",
+     "tolerance": 0.2,
+     "aide": "F = M / d avec d = 0,40 m.",
+     "explication": "F = 15 / 0,40 = **37,5 N** : plus loin de l’axe, il faut moins de force."
+    }
+   ]
+  },
+  {
+   "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le point de fonctionnement de la pompe",
+   "competence": "lire-graphique",
+   "situation": "Un moteur électrique entraîne une pompe. Le graphique donne, selon la vitesse angulaire ω, le couple fourni par le moteur et le couple résistant de la pompe. En régime permanent, les deux couples sont égaux.",
+   "documents": [
+    {
+     "id": "car",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Caractéristiques mécaniques",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Couple du moteur",
+       "valeurs": [
+        30,
+        27.2,
+        24.4,
+        21.6,
+        18.8,
+        16,
+        13.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Couple de la pompe",
+       "valeurs": [
+        2,
+        2.56,
+        4.24,
+        7.04,
+        10.96,
+        16,
+        22.16
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Couple",
+      "unite": "N·m",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Vitesse angulaire ω (rad/s)"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "car",
+     "enonce": "Touche la vitesse angulaire du point de fonctionnement.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "C’est là que les deux courbes se croisent.",
+     "explication": "Les deux courbes se croisent à **100 rad/s** : le couple du moteur égale celui de la pompe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis le couple au point de fonctionnement, en N·m.",
+     "reponse": 16,
+     "unite": "N·m",
+     "tolerance": 0.5,
+     "aide": "Lis l’ordonnée du point où les deux courbes se croisent.",
+     "explication": "Au croisement, le couple vaut **16 N·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance mécanique fournie à la pompe, en W.",
+     "reponse": 1600,
+     "unite": "W",
+     "tolerance": 30,
+     "aide": "P = C × ω, avec ω en rad/s.",
+     "explication": "P = 16 × 100 = **1 600 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis ω = 100 rad/s en tours par minute, arrondi à l’unité.",
+     "reponse": 955,
+     "unite": "tr/min",
+     "tolerance": 1,
+     "aide": "ω = 2π × N / 60, donc N = 60 × ω / (2π).",
+     "explication": "N = 60 × 100 / (2π) ≈ **955 tr/min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le hublot de l’épave",
+   "competence": "modeliser",
+   "situation": "Un robot sous-marin inspecte une épave. Son hublot circulaire, de 20 cm de diamètre, est au point B, à 12 m sous la surface. À l’intérieur du robot, l’air est à la pression atmosphérique.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "La mer et quatre points",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 70,
+       "l": 280,
+       "h": 160,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        70
+       ],
+       "a": [
+        320,
+        70
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        22,
+        70
+       ],
+       "a": [
+        22,
+        150
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 115,
+       "texte": "12 m",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 150,
+       "r": 11,
+       "teinte": "encre",
+       "motif": "aucun",
+       "texte": "B",
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 150,
+       "r": 11,
+       "teinte": "encre",
+       "motif": "aucun",
+       "texte": "C",
+       "id": "C",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 105,
+       "r": 11,
+       "teinte": "encre",
+       "motif": "aucun",
+       "texte": "D",
+       "id": "D",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 200,
+       "r": 11,
+       "teinte": "encre",
+       "motif": "aucun",
+       "texte": "E",
+       "id": "E",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Données",
+     "sousTitre": "Pour cet exercice",
+     "emoji": "🌊",
+     "lignes": [
+      {
+       "texte": "ρ (eau de mer)",
+       "valeur": "1 000 kg/m³"
+      },
+      {
+       "texte": "g",
+       "valeur": "9,81 N/kg"
+      },
+      {
+       "texte": "Pression atmosphérique",
+       "valeur": "1,0 bar"
+      },
+      {
+       "texte": "1 bar",
+       "valeur": "10⁵ Pa"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche le point où la pression est la même qu’en B.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Dans un liquide au repos, la pression ne dépend que de la profondeur.",
+     "explication": "C est à la **même profondeur** que B : même pression, même à l’autre bout du schéma."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’augmentation de pression entre la surface et B, en bars, arrondie au centième.",
+     "reponse": 1.18,
+     "unite": "bar",
+     "tolerance": 0.01,
+     "aide": "Δp = ρ × g × h, en pascals ; 1 bar = 10⁵ Pa.",
+     "explication": "Δp = 1 000 × 9,81 × 12 = 117 720 Pa ≈ **1,18 bar**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la pression absolue en B, en bars, arrondie au centième.",
+     "reponse": 2.18,
+     "unite": "bar",
+     "tolerance": 0.01,
+     "aide": "Pression absolue = pression atmosphérique + Δp.",
+     "explication": "p = 1,0 + 1,18 = **2,18 bars**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle force résultante le hublot subit-il, en N, arrondie à l’unité ? Il faut retrancher la pression de l’air intérieur.",
+     "reponse": 3698,
+     "unite": "N",
+     "tolerance": 5,
+     "aide": "F = (p extérieure − p intérieure) × S, avec S = π × r² et r = 0,10 m.",
+     "explication": "S = π × 0,10² ≈ 0,0314 m² ; F = 117 720 × 0,0314 ≈ **3 698 N**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les DEL de la guirlande",
+   "competence": "calculer",
+   "situation": "Une guirlande compte des DEL rouges, vertes et bleues. Chaque DEL émet des photons d’une seule longueur d’onde.",
+   "documents": [
+    {
+     "id": "del",
+     "type": "tableau",
+     "titre": "Les trois DEL",
+     "colonnes": [
+      "Couleur",
+      "Longueur d’onde λ (nm)"
+     ],
+     "lignes": [
+      [
+       "Rouge",
+       "650"
+      ],
+      [
+       "Verte",
+       "530"
+      ],
+      [
+       "Bleue",
+       "470"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "cst",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Constantes",
+     "sousTitre": "À utiliser",
+     "emoji": "💡",
+     "lignes": [
+      {
+       "texte": "E = h × f = h × c / λ",
+       "valeur": "",
+       "gras": true
+      },
+      {
+       "texte": "h",
+       "valeur": "6,63 × 10⁻³⁴ J·s"
+      },
+      {
+       "texte": "c",
+       "valeur": "3,00 × 10⁸ m/s"
+      },
+      {
+       "texte": "1 eV",
+       "valeur": "1,60 × 10⁻¹⁹ J"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "del",
+     "enonce": "Touche la DEL dont les photons sont les plus énergétiques.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "L’énergie d’un photon augmente quand la longueur d’onde diminue.",
+     "explication": "E = h × c / λ : la **bleue** a la plus petite longueur d’onde, donc les photons les plus énergétiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence des photons de la DEL rouge, en 10¹⁴ Hz, arrondie au centième.",
+     "reponse": 4.62,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.01,
+     "aide": "f = c / λ, avec λ = 650 × 10⁻⁹ m.",
+     "explication": "f = 3,00 × 10⁸ / 650 × 10⁻⁹ ≈ **4,62 × 10¹⁴ Hz**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie d’un photon rouge, en eV, arrondie au centième.",
+     "reponse": 1.91,
+     "unite": "eV",
+     "tolerance": 0.01,
+     "aide": "E = h × f en joules, puis divise par 1,60 × 10⁻¹⁹.",
+     "explication": "E = 6,63 × 10⁻³⁴ × 4,615 × 10¹⁴ ≈ 3,06 × 10⁻¹⁹ J, soit **1,91 eV**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie d’un photon bleu, en eV, arrondie au centième.",
+     "reponse": 2.64,
+     "unite": "eV",
+     "tolerance": 0.02,
+     "aide": "Utilise λ = 470 nm.",
+     "explication": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / 470 × 10⁻⁹ ≈ 4,23 × 10⁻¹⁹ J, soit **2,64 eV**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le panneau de la serre",
+   "competence": "lire-graphique",
+   "situation": "Un panneau photovoltaïque de 1,0 m² alimente l’éclairage d’une serre. Il reçoit un éclairement de 1 000 W/m². Le graphique donne l’intensité I qu’il débite selon la tension U à ses bornes.",
+   "documents": [
+    {
+     "id": "car",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Caractéristique I = f(U) du panneau",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35"
+     ],
+     "series": [
+      {
+       "nom": "Intensité",
+       "valeurs": [
+        9.5,
+        9.4,
+        9.3,
+        9.1,
+        8.8,
+        7.6,
+        5.2,
+        1.5
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Intensité I",
+      "unite": "A",
+      "min": 0,
+      "max": 10,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Tension U (V)"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis sur le graphique le courant de court-circuit Icc du panneau, en A.",
+     "reponse": 9.5,
+     "unite": "A",
+     "tolerance": 0.2,
+     "aide": "Le court-circuit correspond à U = 0 V.",
+     "explication": "Pour U = 0 V, la courbe part de **9,5 A**."
+    },
+    {
+     "type": "zone",
+     "document": "car",
+     "enonce": "Touche la tension pour laquelle la puissance U × I est maximale.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Calcule U × I en plusieurs points, autour du coude de la courbe.",
+     "explication": "À 25 V : 25 × 7,6 = 190 W ; à 20 V : 176 W ; à 30 V : 156 W. Le maximum est à **25 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule cette puissance électrique maximale, en W.",
+     "reponse": 190,
+     "unite": "W",
+     "tolerance": 4,
+     "aide": "P = U × I au point trouvé.",
+     "explication": "P = 25 × 7,6 = **190 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement du panneau à ce point de fonctionnement, en %, arrondi à l’unité.",
+     "reponse": 19,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Rendement = puissance électrique / puissance lumineuse reçue (1 000 W/m² × 1,0 m²).",
+     "explication": "η = 190 / 1 000 = 0,19, soit **19 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chauffe-eau solaire de la maison",
+   "competence": "modeliser",
+   "situation": "Une maison est équipée d’un chauffe-eau solaire : des capteurs transforment le rayonnement en chaleur, transmise à l’eau d’un ballon.",
+   "documents": [
+    {
+     "id": "cha",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "sol",
+       "texte": "Rayonnement solaire",
+       "emoji": "☀️"
+      },
+      {
+       "id": "cap",
+       "texte": "Capteurs",
+       "emoji": "🟦"
+      },
+      {
+       "id": "bal",
+       "texte": "Eau du ballon",
+       "emoji": "🚿"
+      }
+     ],
+     "liens": [
+      {
+       "de": "sol",
+       "a": "cap"
+      },
+      {
+       "de": "cap",
+       "a": "bal"
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Les données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Surface des capteurs",
+       "4,0 m²"
+      ],
+      [
+       "Éclairement",
+       "800 W/m²"
+      ],
+      [
+       "Rendement photothermique",
+       "60 %"
+      ],
+      [
+       "Volume du ballon",
+       "150 L (soit 150 kg)"
+      ],
+      [
+       "Température de l’eau",
+       "de 15 °C à 45 °C"
+      ],
+      [
+       "Capacité thermique de l’eau",
+       "4 180 J/(kg·°C)"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cha",
+     "enonce": "Touche l’élément où l’énergie lumineuse devient de l’énergie thermique.",
+     "reponse": [
+      "cap"
+     ],
+     "aide": "Le rayonnement solaire arrive ; l’eau reçoit déjà de la chaleur.",
+     "explication": "Dans les **capteurs**, la lumière absorbée est convertie en chaleur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance lumineuse reçue par les capteurs, en W.",
+     "reponse": 3200,
+     "unite": "W",
+     "tolerance": 10,
+     "aide": "P = éclairement × surface.",
+     "explication": "P = 800 × 4,0 = **3 200 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance thermique utile transmise à l’eau, en W.",
+     "reponse": 1920,
+     "unite": "W",
+     "tolerance": 10,
+     "aide": "Utile = rendement × puissance reçue.",
+     "explication": "P utile = 0,60 × 3 200 = **1 920 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie nécessaire pour chauffer le ballon de 15 °C à 45 °C, en MJ, arrondie au dixième.",
+     "reponse": 18.8,
+     "unite": "MJ",
+     "tolerance": 0.1,
+     "aide": "Q = m × c × ΔT, en joules ; 1 MJ = 10⁶ J.",
+     "explication": "Q = 150 × 4 180 × 30 = 18 810 000 J ≈ **18,8 MJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la durée du chauffage, en heures, arrondie au centième.",
+     "reponse": 2.72,
+     "unite": "h",
+     "tolerance": 0.02,
+     "aide": "Durée = Q / puissance utile, en secondes, puis divise par 3 600.",
+     "explication": "t = 18 810 000 / 1 920 ≈ 9 797 s, soit environ **2,72 h** (2 h 43)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fluor 18 de l’hôpital",
+   "competence": "lire-tableau",
+   "situation": "Pour un examen d’imagerie médicale, un service de médecine nucléaire prépare du fluor 18, radioactif. Un technicien relève l’activité de la dose au cours du temps.",
+   "documents": [
+    {
+     "id": "act",
+     "type": "tableau",
+     "titre": "Activité d’une dose de fluor 18",
+     "colonnes": [
+      "Temps (min)",
+      "0",
+      "110",
+      "220",
+      "330",
+      "440"
+     ],
+     "lignes": [
+      [
+       "Activité (MBq)",
+       "400",
+       "200",
+       "100",
+       "?",
+       "25"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "act",
+     "enonce": "Touche l’activité qui vaut le quart de l’activité initiale.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Le quart de 400 MBq : divise 400 par 4.",
+     "explication": "400 / 4 = 100 MBq : c’est la case de **220 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Déduis du tableau la demi-vie du fluor 18, en minutes.",
+     "reponse": 110,
+     "unite": "min",
+     "tolerance": 1,
+     "aide": "La demi-vie est la durée pour que l’activité soit divisée par 2.",
+     "explication": "L’activité passe de 400 à 200 MBq en 110 min : la demi-vie est de **110 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète la case « ? » : quelle est l’activité à 330 min, en MBq ?",
+     "reponse": 50,
+     "unite": "MBq",
+     "tolerance": 0.5,
+     "aide": "Entre 220 min et 330 min, combien de demi-vies passent-elles ?",
+     "explication": "Encore une demi-vie : 100 / 2 = **50 MBq**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de l’activité initiale reste-t-il à 440 min ? Arrondis au centième.",
+     "reponse": 6.25,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Divise l’activité à 440 min par l’activité initiale.",
+     "explication": "25 / 400 = 0,0625, soit **6,25 %** : 440 min, c’est quatre demi-vies."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Compléter les équations nucléaires",
+   "competence": "analyser-document",
+   "situation": "Un manuel de physique présente trois désintégrations. Dans chaque équation, le nombre de nucléons A et la charge Z se conservent.",
+   "documents": [
+    {
+     "id": "part",
+     "type": "tableau",
+     "titre": "Les particules émises",
+     "colonnes": [
+      "Type",
+      "Particule émise",
+      "A",
+      "Z"
+     ],
+     "lignes": [
+      [
+       "α",
+       "Noyau d’hélium",
+       "4",
+       "2"
+      ],
+      [
+       "β⁻",
+       "Électron",
+       "0",
+       "−1"
+      ],
+      [
+       "β⁺",
+       "Positon",
+       "0",
+       "+1"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "des",
+     "type": "tableau",
+     "titre": "Trois désintégrations",
+     "colonnes": [
+      "Noyau père",
+      "Type",
+      "Noyau fils"
+     ],
+     "lignes": [
+      [
+       "Uranium 238 (A = 238, Z = 92)",
+       "α",
+       "Thorium (A = ?, Z = 90)"
+      ],
+      [
+       "Carbone 14 (A = 14, Z = 6)",
+       "β⁻",
+       "Azote (A = 14, Z = ?)"
+      ],
+      [
+       "Fluor 18 (A = 18, Z = 9)",
+       "β⁺",
+       "Oxygène (A = 18, Z = ?)"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "part",
+     "enonce": "Touche les deux types de rayonnement qui n’emportent aucun nucléon (A = 0).",
+     "reponse": [
+      "r1c0",
+      "r2c0"
+     ],
+     "multiple": true,
+     "aide": "Regarde la colonne A du tableau des particules.",
+     "explication": "Les **β⁻ et β⁺** ont A = 0 : électron et positon ne sont pas des nucléons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de masse A du thorium formé ?",
+     "reponse": 234,
+     "tolerance": 0,
+     "aide": "A se conserve : 238 = A + 4.",
+     "explication": "A = 238 − 4 = **234**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le numéro atomique Z de l’azote formé ?",
+     "reponse": 7,
+     "tolerance": 0,
+     "aide": "La charge se conserve : 6 = Z + (−1).",
+     "explication": "Z = 6 + 1 = **7** : un électron emporte une charge −1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le numéro atomique Z de l’oxygène formé ?",
+     "reponse": 8,
+     "tolerance": 0,
+     "aide": "La charge se conserve : 9 = Z + (+1).",
+     "explication": "Z = 9 − 1 = **8** : le positon emporte une charge +1."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’iode 131 de la thyroïde",
+   "competence": "modeliser",
+   "situation": "Un patient reçoit de l’iode 131 pour soigner sa thyroïde. Le graphique montre la part des noyaux radioactifs restants ; la fiche donne la loi de décroissance.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Noyaux d’iode 131 restants",
+     "categories": [
+      "0",
+      "8",
+      "16",
+      "24",
+      "32",
+      "40"
+     ],
+     "series": [
+      {
+       "nom": "Part restante",
+       "valeurs": [
+        100,
+        50,
+        25,
+        12.5,
+        6.25,
+        3.125
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Noyaux restants",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (jours)"
+     }
+    },
+    {
+     "id": "loi",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Décroissance radioactive",
+     "sousTitre": "Loi à utiliser",
+     "emoji": "☢️",
+     "lignes": [
+      {
+       "texte": "N(t) = N0 × e^(−λ × t)",
+       "valeur": "",
+       "gras": true
+      },
+      {
+       "texte": "λ = ln 2 / t½",
+       "valeur": "",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "t½ (iode 131)",
+       "valeur": "8,0 jours"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "enonce": "Touche l’instant où il reste 12,5 % des noyaux.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point de la courbe à 12,5 %.",
+     "explication": "À **24 jours**, il reste 12,5 % des noyaux : c’est trois demi-vies."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la constante radioactive λ de l’iode 131, en jour⁻¹, arrondie au dix-millième.",
+     "reponse": 0.0866,
+     "unite": "jour⁻¹",
+     "tolerance": 0.0005,
+     "aide": "λ = ln 2 / t½, avec t½ = 8,0 jours.",
+     "explication": "λ = 0,693 / 8,0 ≈ **0,0866 jour⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des noyaux reste-t-il au bout de 30 jours ? Arrondis au dixième.",
+     "reponse": 7.4,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "N / N0 = e^(−λ × t), avec t = 30 jours.",
+     "explication": "N / N0 = e^(−0,0866 × 30) ≈ 0,074, soit **7,4 %** : entre 6,25 % (32 j) et 12,5 % (24 j), comme le graphique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de jours reste-t-il 1 % des noyaux ? Arrondis au dixième.",
+     "reponse": 53.2,
+     "unite": "jours",
+     "tolerance": 0.3,
+     "aide": "Résous e^(−λ × t) = 0,01, donc t = ln 100 / λ.",
+     "explication": "t = ln 100 / 0,0866 ≈ **53,2 jours**, soit un peu plus de six demi-vies."
+    }
+   ]
+  },
+  {
+   "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le diagramme de l’eau",
+   "competence": "observer-schema",
+   "situation": "Le diagramme (P, T) de l’eau partage le plan en trois domaines, numérotés 1, 2 et 3, et porte deux points particuliers, A et B.",
+   "documents": [
+    {
+     "id": "dia",
+     "type": "schema",
+     "titre": "Diagramme (P, T) de l’eau (schématique)",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         50,
+         200
+        ],
+        [
+         110,
+         160
+        ],
+        [
+         100,
+         30
+        ],
+        [
+         50,
+         30
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "d1",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         110,
+         160
+        ],
+        [
+         190,
+         130
+        ],
+        [
+         280,
+         50
+        ],
+        [
+         280,
+         30
+        ],
+        [
+         100,
+         30
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "d2",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         50,
+         200
+        ],
+        [
+         110,
+         160
+        ],
+        [
+         190,
+         130
+        ],
+        [
+         280,
+         50
+        ],
+        [
+         320,
+         50
+        ],
+        [
+         320,
+         200
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "d3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        215
+       ],
+       "a": [
+        325,
+        215
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        35,
+        200
+       ],
+       "a": [
+        35,
+        20
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 232,
+       "texte": "Température",
+       "ancre": "fin",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 12,
+       "texte": "Pression",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 110,
+       "texte": "1",
+       "gras": true,
+       "taille": "grand",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 80,
+       "texte": "2",
+       "gras": true,
+       "taille": "grand",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 165,
+       "texte": "3",
+       "gras": true,
+       "taille": "grand",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 160,
+       "r": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "texte": "A",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 50,
+       "r": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "texte": "B",
+       "id": "B",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Énergies de changement d’état de l’eau",
+     "sousTitre": "Par kilogramme",
+     "emoji": "💧",
+     "lignes": [
+      {
+       "texte": "Fusion",
+       "valeur": "334 kJ/kg"
+      },
+      {
+       "texte": "Vaporisation",
+       "valeur": "2 260 kJ/kg"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche le domaine où l’eau est liquide.",
+     "reponse": [
+      "d2"
+     ],
+     "aide": "Dans un diagramme (P, T), le liquide est entre le solide (froid) et le gaz (basse pression).",
+     "explication": "Le domaine **2** est celui du liquide : il est entre le solide à gauche et le gaz en bas à droite."
+    },
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche le point triple, où les trois états coexistent.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Le point triple est l’endroit où les trois domaines se rejoignent.",
+     "explication": "Le point **A** est celui où les trois domaines se touchent. B est le point critique, où liquide et gaz ne se distinguent plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie nécessaire pour vaporiser 0,5 kg d’eau déjà à 100 °C, en kJ.",
+     "reponse": 1130,
+     "unite": "kJ",
+     "tolerance": 1,
+     "aide": "Q = m × énergie de vaporisation par kilogramme.",
+     "explication": "Q = 0,5 × 2 260 = **1 130 kJ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du glaçon à l’eau tiède",
+   "competence": "calculer",
+   "situation": "Dans un laboratoire, on chauffe 0,30 kg de glace prise à −20 °C jusqu’à obtenir de l’eau liquide à 50 °C. Le tableau détaille les trois étapes ; la première est déjà calculée.",
+   "documents": [
+    {
+     "id": "eta",
+     "type": "tableau",
+     "titre": "Les trois étapes du chauffage",
+     "colonnes": [
+      "Étape",
+      "Calcul",
+      "Énergie (kJ)"
+     ],
+     "lignes": [
+      [
+       "Glace de −20 °C à 0 °C",
+       "m × c glace × 20",
+       "12,6"
+      ],
+      [
+       "Fusion à 0 °C",
+       "m × L fusion",
+       "?"
+      ],
+      [
+       "Eau de 0 °C à 50 °C",
+       "m × c eau × 50",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "cst",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Données",
+     "sousTitre": "Pour cet exercice",
+     "emoji": "🧊",
+     "lignes": [
+      {
+       "texte": "c glace",
+       "valeur": "2 100 J/(kg·°C)"
+      },
+      {
+       "texte": "c eau",
+       "valeur": "4 180 J/(kg·°C)"
+      },
+      {
+       "texte": "L fusion",
+       "valeur": "334 kJ/kg"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eta",
+     "enonce": "Touche l’étape pendant laquelle la température ne change pas.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Pendant un changement d’état, l’énergie sert à rompre des liaisons, pas à chauffer.",
+     "explication": "Pendant la **fusion**, la température reste à 0 °C : l’énergie sert à rompre des liaisons hydrogène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie de la fusion de 0,30 kg de glace, en kJ.",
+     "reponse": 100.2,
+     "unite": "kJ",
+     "tolerance": 0.1,
+     "aide": "Q = m × L fusion, avec L = 334 kJ/kg.",
+     "explication": "Q = 0,30 × 334 = **100,2 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie pour chauffer l’eau de 0 °C à 50 °C, en kJ, arrondie au dixième.",
+     "reponse": 62.7,
+     "unite": "kJ",
+     "tolerance": 0.1,
+     "aide": "Q = m × c eau × ΔT en joules, puis divise par 1 000.",
+     "explication": "Q = 0,30 × 4 180 × 50 = 62 700 J = **62,7 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie totale à fournir, en kJ.",
+     "reponse": 175.5,
+     "unite": "kJ",
+     "tolerance": 0.2,
+     "aide": "Additionne les trois étapes.",
+     "explication": "Q = 12,6 + 100,2 + 62,7 = **175,5 kJ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Chauffer avec du gaz ou du fioul",
+   "competence": "modeliser",
+   "situation": "Pour fournir 10 kWh de chaleur (1 kWh = 3,6 MJ), une chaudière brûle soit du méthane, soit de l’octane (composant de l’essence, pris ici comme modèle d’un combustible liquide). On donne M(CO₂) = 44 g/mol.",
+   "documents": [
+    {
+     "id": "pac",
+     "type": "chaine",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "evap",
+       "texte": "Évaporateur"
+      },
+      {
+       "id": "comp",
+       "texte": "Compresseur"
+      },
+      {
+       "id": "cond",
+       "texte": "Condenseur"
+      },
+      {
+       "id": "det",
+       "texte": "Détendeur"
+      }
+     ],
+     "liens": [
+      {
+       "de": "evap",
+       "a": "comp"
+      },
+      {
+       "de": "comp",
+       "a": "cond"
+      },
+      {
+       "de": "cond",
+       "a": "det"
+      },
+      {
+       "de": "det",
+       "a": "evap"
+      }
+     ]
+    },
+    {
+     "id": "comb",
+     "type": "tableau",
+     "titre": "Les deux combustibles",
+     "colonnes": [
+      "Combustible",
+      "Équation de combustion",
+      "CO₂ par mole brûlée",
+      "Énergie molaire (kJ/mol)"
+     ],
+     "lignes": [
+      [
+       "Méthane",
+       "CH₄ + 2 O₂ → CO₂ + 2 H₂O",
+       "1",
+       "800"
+      ],
+      [
+       "Octane",
+       "2 C₈H₁₈ + 25 O₂ → 16 CO₂ + 18 H₂O",
+       "8",
+       "5 470"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pac",
+     "enonce": "Une pompe à chaleur est une autre solution. Touche l’organe où le fluide se liquéfie en cédant de l’énergie.",
+     "reponse": [
+      "cond"
+     ],
+     "aide": "Se liquéfier, c’est se condenser.",
+     "explication": "Le fluide se liquéfie dans le **condenseur** et cède l’énergie à la maison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de moles de méthane faut-il brûler pour obtenir 10 kWh ?",
+     "reponse": 45,
+     "unite": "mol",
+     "tolerance": 0.5,
+     "aide": "10 kWh = 36 MJ = 36 000 kJ ; divise par l’énergie molaire.",
+     "explication": "n = 36 000 / 800 = **45 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de CO₂ le méthane rejette-t-il pour ces 10 kWh, en kg, arrondie au centième ?",
+     "reponse": 1.98,
+     "unite": "kg",
+     "tolerance": 0.02,
+     "aide": "Une mole de CO₂ par mole de méthane, de masse 44 g.",
+     "explication": "n(CO₂) = 45 mol ; m = 45 × 44 = 1 980 g = **1,98 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de CO₂ l’octane rejette-t-il pour les mêmes 10 kWh, en kg, arrondie au centième ?",
+     "reponse": 2.32,
+     "unite": "kg",
+     "tolerance": 0.02,
+     "aide": "n(octane) = 36 000 / 5 470, puis 8 moles de CO₂ par mole brûlée.",
+     "explication": "n(octane) ≈ 6,58 mol ; n(CO₂) ≈ 52,7 mol ; m ≈ 2 317 g ≈ **2,32 kg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour la même chaleur, quelle conclusion tire-t-on ?",
+     "options": [
+      "Le méthane rejette moins de CO₂ que l’octane",
+      "L’octane rejette moins de CO₂ que le méthane",
+      "Les deux rejettent exactement autant de CO₂",
+      "Aucun des deux ne rejette de CO₂ du tout"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux masses de CO₂ calculées.",
+     "explication": "**Le méthane** rejette environ 1,98 kg contre 2,32 kg pour l’octane, pour la même énergie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’échelle de pH de la maison",
+   "competence": "lire-graphique",
+   "situation": "Sur une droite graduée, on a placé le pH de quatre produits de la maison, à 25 °C.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "droite",
+     "min": 0,
+     "max": 14,
+     "pas": 1,
+     "division": 1,
+     "points": [
+      {
+       "id": "cit",
+       "valeur": 2,
+       "nom": "Jus de citron"
+      },
+      {
+       "id": "caf",
+       "valeur": 5,
+       "nom": "Café noir"
+      },
+      {
+       "id": "eau",
+       "valeur": 7,
+       "nom": "Eau pure"
+      },
+      {
+       "id": "sav",
+       "valeur": 10,
+       "nom": "Savon liquide"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ph",
+     "enonce": "Touche le produit qui contient le plus d’ions H₃O⁺.",
+     "reponse": [
+      "cit"
+     ],
+     "aide": "Plus le pH est bas, plus la solution est acide.",
+     "explication": "Le **jus de citron** a le pH le plus bas : c’est lui qui contient le plus d’ions H₃O⁺."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en H₃O⁺ du jus de citron, en mol/L.",
+     "reponse": 0.01,
+     "unite": "mol/L",
+     "tolerance": 0.0001,
+     "aide": "[H₃O⁺] = 10^(−pH).",
+     "explication": "[H₃O⁺] = 10⁻² = **0,010 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le jus de citron contient combien de fois plus d’ions H₃O⁺ que le café noir ?",
+     "reponse": 1000,
+     "tolerance": 1,
+     "aide": "Compare les pH : chaque unité de pH correspond à un facteur 10.",
+     "explication": "L’écart est de 3 unités de pH : 10³ = **1 000** fois plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans une piscine, un test donne [H₃O⁺] = 2,5 × 10⁻⁸ mol/L. Calcule son pH, arrondi au dixième.",
+     "reponse": 7.6,
+     "tolerance": 0.05,
+     "aide": "pH = −log [H₃O⁺].",
+     "explication": "pH = −log(2,5 × 10⁻⁸) ≈ **7,6** : un peu trop élevé pour la zone 7,2 – 7,4 recommandée."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Préparer une solution étalon",
+   "competence": "experimenter",
+   "situation": "En travaux pratiques, Amel veut préparer 250 mL d’une solution d’acide chlorhydrique (acide fort) à 0,020 mol/L, à partir d’une solution mère à 0,50 mol/L.",
+   "documents": [
+    {
+     "id": "verre",
+     "type": "tableau",
+     "titre": "La verrerie du laboratoire",
+     "colonnes": [
+      "Verrerie",
+      "Rôle",
+      "Précision"
+     ],
+     "lignes": [
+      [
+       "Bécher",
+       "Contenir, mélanger",
+       "Faible"
+      ],
+      [
+       "Éprouvette graduée",
+       "Mesurer un volume",
+       "Moyenne"
+      ],
+      [
+       "Pipette jaugée",
+       "Prélever un volume précis",
+       "Très bonne"
+      ],
+      [
+       "Fiole jaugée",
+       "Préparer un volume précis de solution",
+       "Très bonne"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verre",
+     "enonce": "Touche la verrerie qui sert à prélever exactement le volume de solution mère.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche le rôle « prélever un volume précis ».",
+     "explication": "La **pipette jaugée** prélève un volume précis ; la fiole jaugée sert ensuite à préparer la solution fille."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le volume de solution mère à prélever, en mL.",
+     "reponse": 10,
+     "unite": "mL",
+     "tolerance": 0.1,
+     "aide": "C mère × V mère = C fille × V fille.",
+     "explication": "V = 0,020 × 250 / 0,50 = **10 mL**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du protocole dans le bon ordre.",
+     "items": [
+      "Prélever 10 mL de solution mère avec la pipette jaugée",
+      "Verser ce volume dans la fiole jaugée de 250 mL",
+      "Compléter avec de l’eau distillée jusqu’au trait de jauge",
+      "Boucher la fiole et homogénéiser"
+     ],
+     "aide": "On prélève, on verse, on complète, puis on mélange.",
+     "explication": "On **prélève, verse, complète jusqu’au trait, puis on bouche et on homogénéise**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour un acide fort, [H₃O⁺] = C. Calcule le pH de la solution fille, arrondi au dixième.",
+     "reponse": 1.7,
+     "tolerance": 0.05,
+     "aide": "pH = −log(0,020).",
+     "explication": "pH = −log(0,020) ≈ **1,7**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Neutraliser un rejet d’usine",
+   "competence": "resoudre",
+   "situation": "Trois bassins d’une usine reçoivent des rejets acides. Avant de les évacuer, on neutralise le plus acide avec de la soude concentrée (réaction H₃O⁺ + HO⁻ → 2 H₂O). Le bassin B contient 500 L.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "pH des trois bassins",
+     "categories": [
+      "Bassin A",
+      "Bassin B",
+      "Bassin C"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        3,
+        2,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "valeurs": true
+    },
+    {
+     "id": "don",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Données",
+     "sousTitre": "Neutralisation",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Volume du bassin B",
+       "valeur": "500 L"
+      },
+      {
+       "texte": "Soude utilisée",
+       "valeur": "2,0 mol/L"
+      },
+      {
+       "texte": "H₃O⁺ + HO⁻",
+       "valeur": "→ 2 H₂O"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "enonce": "Touche le bassin le plus acide.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Le plus acide est celui dont le pH est le plus bas.",
+     "explication": "Le **bassin B** (pH 2) est le plus acide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en H₃O⁺ du bassin B, en mol/L.",
+     "reponse": 0.01,
+     "unite": "mol/L",
+     "tolerance": 0.0001,
+     "aide": "[H₃O⁺] = 10^(−pH).",
+     "explication": "[H₃O⁺] = 10⁻² = **0,010 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité d’ions H₃O⁺ dans les 500 L du bassin B, en mol.",
+     "reponse": 5,
+     "unite": "mol",
+     "tolerance": 0.05,
+     "aide": "n = concentration × volume (en litres).",
+     "explication": "n = 0,010 × 500 = **5,0 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un ion HO⁻ neutralise un ion H₃O⁺. Quel volume de soude à 2,0 mol/L faut-il, en L ?",
+     "reponse": 2.5,
+     "unite": "L",
+     "tolerance": 0.05,
+     "aide": "Il faut 5,0 mol de HO⁻ ; V = n / C.",
+     "explication": "V = 5,0 / 2,0 = **2,5 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le bassin B contient combien de fois plus d’ions H₃O⁺ par litre que le bassin C ?",
+     "reponse": 100,
+     "tolerance": 1,
+     "aide": "Compare leurs pH : 2 unités d’écart.",
+     "explication": "Deux unités de pH : 10² = **100** fois plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le spectre d’un signal carré",
+   "competence": "lire-graphique",
+   "situation": "Un technicien analyse le signal d’un microcontrôleur. L’analyseur affiche son spectre d’amplitude : chaque barre est une composante du signal.",
+   "documents": [
+    {
+     "id": "sp",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Spectre d’amplitude",
+     "categories": [
+      "0",
+      "200",
+      "400",
+      "600",
+      "800",
+      "1000"
+     ],
+     "series": [
+      {
+       "nom": "Amplitude",
+       "valeurs": [
+        2,
+        5,
+        0,
+        1.7,
+        0,
+        1
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Amplitude",
+      "unite": "V",
+      "min": 0,
+      "max": 6,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Fréquence (Hz)"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sp",
+     "enonce": "Touche la raie du fondamental.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Le fondamental est la première raie après la composante continue.",
+     "explication": "Le fondamental est la raie à **200 Hz**, la plus basse fréquence non nulle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la composante continue du signal, en V ?",
+     "reponse": 2,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "La composante continue est la raie à 0 Hz.",
+     "explication": "La raie à 0 Hz mesure **2 V** : c’est la valeur moyenne du signal."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rang de l’harmonique situé à 1 000 Hz ?",
+     "reponse": 5,
+     "tolerance": 0,
+     "aide": "rang = fréquence de la raie / fréquence du fondamental.",
+     "explication": "1 000 / 200 = rang **5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’amplitude de l’harmonique de rang 3, en V ?",
+     "reponse": 1.7,
+     "unite": "V",
+     "tolerance": 0.1,
+     "aide": "Le rang 3 est à 3 × 200 Hz.",
+     "explication": "Le rang 3 est à 600 Hz : la barre mesure **1,7 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La répétition dans le garage",
+   "competence": "modeliser",
+   "situation": "Un groupe répète dans un garage voisin d’un appartement. Le niveau sonore se calcule par L = 10 × log(I / I₀), avec I₀ = 10⁻¹² W/m². Le mur mitoyen divise l’intensité acoustique par 10 000.",
+   "documents": [
+    {
+     "id": "src",
+     "type": "tableau",
+     "titre": "Niveaux mesurés à 1 m",
+     "colonnes": [
+      "Source",
+      "Niveau sonore (dB)"
+     ],
+     "lignes": [
+      [
+       "Batterie",
+       "95"
+      ],
+      [
+       "Amplificateur",
+       "95"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "rep",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Repères de niveau sonore",
+     "sousTitre": "En décibels",
+     "emoji": "🔊",
+     "lignes": [
+      {
+       "texte": "Seuil d’audibilité",
+       "valeur": "0 dB",
+       "id": "s0"
+      },
+      {
+       "texte": "Conversation",
+       "valeur": "60 dB",
+       "id": "s60"
+      },
+      {
+       "texte": "Seuil de danger",
+       "valeur": "85 dB",
+       "id": "s85"
+      },
+      {
+       "texte": "Seuil de douleur",
+       "valeur": "120 dB",
+       "id": "s120"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rep",
+     "enonce": "La batterie seule produit 95 dB. Touche tous les repères que ce niveau dépasse.",
+     "reponse": [
+      "s0",
+      "s60",
+      "s85"
+     ],
+     "multiple": true,
+     "aide": "Compare 95 dB à chaque repère.",
+     "explication": "95 dB dépasse l’**audibilité, la conversation et le seuil de danger**, mais pas le seuil de douleur (120 dB)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité acoustique de la batterie, en 10⁻³ W/m², arrondie au centième.",
+     "reponse": 3.16,
+     "unite": "× 10⁻³ W/m²",
+     "tolerance": 0.01,
+     "aide": "I = I₀ × 10^(L/10).",
+     "explication": "I = 10⁻¹² × 10^9,5 ≈ 3,16 × 10⁻³ W/m², soit **3,16** en unités de 10⁻³ W/m²."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel niveau sonore atteint la batterie derrière le mur, en dB ?",
+     "reponse": 55,
+     "unite": "dB",
+     "tolerance": 0.1,
+     "aide": "Diviser I par 10 000 retranche 10 × log(10 000) dB.",
+     "explication": "L diminue de 10 × log(10⁴) = 40 dB : 95 − 40 = **55 dB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Batterie et amplificateur jouent ensemble, chacun à 95 dB. Calcule le niveau total, en dB, arrondi au dixième.",
+     "reponse": 98,
+     "unite": "dB",
+     "tolerance": 0.1,
+     "aide": "Additionne les intensités, pas les niveaux : deux sources identiques, donc 2 × I.",
+     "explication": "I double, donc L augmente de 10 × log 2 ≈ 3 dB : 95 + 3 = **98,0 dB**."
+    }
+   ]
+  },
+  {
+   "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Antennes et fibre : quelle taille, quelle fréquence ?",
+   "competence": "calculer",
+   "situation": "Un opérateur compare plusieurs supports de télécommunication. Pour les ondes radio, on utilise une antenne dont la longueur vaut le quart de la longueur d’onde.",
+   "documents": [
+    {
+     "id": "serv",
+     "type": "tableau",
+     "titre": "Quatre supports",
+     "colonnes": [
+      "Support",
+      "Fréquence f",
+      "Longueur d’onde λ"
+     ],
+     "lignes": [
+      [
+       "Radio FM",
+       "1,00 × 10⁸ Hz",
+       "3,00 m"
+      ],
+      [
+       "Mobile 4G",
+       "8,00 × 10⁸ Hz",
+       "?"
+      ],
+      [
+       "Wi-Fi",
+       "5,0 × 10⁹ Hz",
+       "6,0 cm"
+      ],
+      [
+       "Fibre optique",
+       "?",
+       "1,55 µm"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "lois",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "À savoir",
+     "sousTitre": "Ondes électromagnétiques",
+     "emoji": "📡",
+     "lignes": [
+      {
+       "texte": "c = λ × f",
+       "valeur": "",
+       "gras": true
+      },
+      {
+       "texte": "c",
+       "valeur": "3,00 × 10⁸ m/s"
+      },
+      {
+       "texte": "Antenne quart d’onde",
+       "valeur": "λ / 4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serv",
+     "enonce": "Parmi les trois ondes radio, touche celle dont l’antenne est la plus courte.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "L’antenne est proportionnelle à λ : cherche la plus petite longueur d’onde.",
+     "explication": "Le **Wi-Fi** a la plus petite longueur d’onde (6,0 cm), donc l’antenne la plus courte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde du mobile 4G, en cm, arrondie au dixième.",
+     "reponse": 37.5,
+     "unite": "cm",
+     "tolerance": 0.1,
+     "aide": "λ = c / f, en mètres ; multiplie par 100 pour les cm.",
+     "explication": "λ = 3,00 × 10⁸ / 8,00 × 10⁸ = 0,375 m = **37,5 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’une antenne quart d’onde pour la radio FM, en cm.",
+     "reponse": 75,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Longueur = λ / 4, avec λ = 3,00 m.",
+     "explication": "L = 3,00 / 4 = 0,75 m = **75 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’antenne de la radio FM est combien de fois plus longue que celle du Wi-Fi ?",
+     "reponse": 50,
+     "tolerance": 0.5,
+     "aide": "Les antennes sont dans le même rapport que les longueurs d’onde : 3,00 m et 6,0 cm.",
+     "explication": "Le rapport est 3,00 / 0,060 = **50**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence de la lumière infrarouge de la fibre, en 10¹⁴ Hz, arrondie au centième.",
+     "reponse": 1.94,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.01,
+     "aide": "f = c / λ, avec λ = 1,55 × 10⁻⁶ m.",
+     "explication": "f = 3,00 × 10⁸ / 1,55 × 10⁻⁶ ≈ **1,94 × 10¹⁴ Hz**."
+    }
+   ]
+  }
+ ]
+}

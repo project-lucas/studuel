@@ -183,6 +183,40 @@ export function libelleMultiplicateur(multiplicateur: number): string {
   return `×${(Math.round(multiplicateur * 10) / 10).toFixed(1).replace('.', ',')}`
 }
 
+/** « +0,1 » — ce qu'un ami ajoute au multiplicateur, écrit à la française. */
+export const LIBELLE_BONUS_AMI = `+${BONUS_PAR_AMI.toFixed(1).replace('.', ',')}`
+
+/**
+ * LES DIX PLACES du bloc « Mes amis » (maquette « A », validée par Lucas le
+ * 01/10/2026) : un ami = une place = +0,1. Au-delà de dix, les amis restent
+ * des amis, mais n'ajoutent plus rien au multiplicateur — ils sont comptés à
+ * part (`enPlus`) pour que l'écran le dise au lieu de les cacher.
+ */
+export function placesAmis<T>(
+  amis: readonly T[],
+  /**
+   * Le nombre d'amis que le SERVEUR compte (celui du multiplicateur). Il peut
+   * dépasser la liste reçue, qui ne porte parfois que ceux qui ont joué : les
+   * places sont alors occupées quand même, sans portrait (`anonymes`).
+   */
+  nbAmis: number = amis.length,
+): {
+  occupees: T[]
+  anonymes: number
+  libres: number
+  enPlus: number
+} {
+  const total = Math.max(amis.length, Math.max(0, Math.trunc(nbAmis || 0)))
+  const prises = Math.min(AMIS_MAX, total)
+  const occupees = amis.slice(0, prises)
+  return {
+    occupees,
+    anonymes: prises - occupees.length,
+    libres: AMIS_MAX - prises,
+    enPlus: Math.max(0, total - AMIS_MAX),
+  }
+}
+
 /**
  * Ce que rapporte vraiment une XP gagnée (miroir exact de `xp_avec_bonus`) :
  * arrondie après les amis, puis doublée par la potion.
@@ -507,15 +541,23 @@ export function progressionCoffre(points: number): ProgressionCoffre {
 }
 
 /**
- * Part de chaque tronçon de la jauge du coffre (un tronçon par niveau, de 0 au
- * seuil du niveau 1, puis de seuil en seuil) : pleine, entamée ou vide.
+ * LA BARRE DU COFFRE EN DEUX PARTS : la mienne et celle de mes amis, en % du
+ * chemin vers le niveau SUIVANT (« 310 / 450 XP » : 27 % pour moi, 42 % pour
+ * eux). C'est ce qui montre, sans une phrase, que les amis remplissent le
+ * coffre. Au sommet, la barre est pleine et se partage entre les deux.
  */
-export function tronconsCoffre(points: number): number[] {
-  const p = Math.max(0, Math.trunc(points || 0))
-  return COFFRE_NIVEAUX.map((n, i) => {
-    const depart = i === 0 ? 0 : COFFRE_NIVEAUX[i - 1].seuil
-    return Math.min(1, Math.max(0, (p - depart) / (n.seuil - depart)))
-  })
+export function partsCoffre(coffre: { xpMoi: number; partAmis: number }): {
+  moi: number
+  amis: number
+} {
+  const xpMoi = Math.max(0, Math.trunc(coffre.xpMoi || 0))
+  const xpAmis = Math.max(0, Math.trunc(coffre.partAmis || 0))
+  const points = xpMoi + xpAmis
+  const plafond = progressionCoffre(points).suivant?.seuil ?? points
+  if (plafond <= 0) return { moi: 0, amis: 0 }
+  const arrondi = (part: number) => Math.round(part * 1000) / 10
+  const moi = Math.min(100, arrondi(xpMoi / plafond))
+  return { moi, amis: Math.min(100 - moi, arrondi(xpAmis / plafond)) }
 }
 
 /**

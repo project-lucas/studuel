@@ -1,0 +1,2532 @@
+{
+ "niveau": "Tle",
+ "matiere": "spcl",
+ "exercices": [
+  {
+   "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre tubes, un précipité ?",
+   "competence": "lire-tableau",
+   "situation": "En salle de TP, Inès mélange des solutions de nitrate d’argent et de chlorure de sodium à 25 °C. Pour le chlorure d’argent AgCl, Ks = 1,8 × 10⁻¹⁰. Elle veut savoir dans quels tubes un solide blanc apparaît.",
+   "documents": [
+    {
+     "id": "melanges",
+     "type": "tableau",
+     "titre": "Concentrations juste après mélange",
+     "colonnes": [
+      "Tube",
+      "[Ag⁺] (×10⁻⁵ mol/L)",
+      "[Cl⁻] (×10⁻⁵ mol/L)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1,0",
+       "1,0"
+      ],
+      [
+       "B",
+       "2,0",
+       "2,0"
+      ],
+      [
+       "C",
+       "10",
+       "0,010"
+      ],
+      [
+       "D",
+       "5,0",
+       "1,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le quotient de réaction Qr du tube B, en unités de 10⁻¹⁰ (Qr = [Ag⁺] × [Cl⁻]).",
+     "reponse": 4,
+     "unite": "× 10⁻¹⁰",
+     "aide": "Multiplie les deux concentrations : 2,0 × 10⁻⁵ × 2,0 × 10⁻⁵.",
+     "explication": "Qr = 2,0 × 2,0 = **4,0 × 10⁻¹⁰**. Les deux puissances de dix donnent 10⁻¹⁰."
+    },
+    {
+     "type": "zone",
+     "document": "melanges",
+     "enonce": "Touche les deux tubes où un précipité de AgCl se forme.",
+     "reponse": [
+      "r1c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Il se forme un solide quand Qr dépasse Ks, soit 1,8 × 10⁻¹⁰. Calcule Qr pour chaque tube.",
+     "explication": "Qr vaut 1,0 (A), 4,0 (B), 0,10 (C) et 5,0 (D) × 10⁻¹⁰. Seuls **B et D** dépassent Ks = 1,8 × 10⁻¹⁰."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il dans le tube A ?",
+     "options": [
+      "Qr < Ks : la solution n’est pas saturée et aucun précipité ne se forme",
+      "Qr > Ks : la solution est sursaturée et le précipité se forme aussitôt",
+      "Qr = Ks : la solution est exactement saturée, avec du solide déposé",
+      "Qr < Ks : la solution est saturée et le solide commence à se former"
+     ],
+     "reponse": 0,
+     "aide": "Compare Qr = 1,0 × 10⁻¹⁰ à Ks = 1,8 × 10⁻¹⁰.",
+     "explication": "Qr = 1,0 × 10⁻¹⁰ est inférieur à Ks : **la solution n’est pas saturée**, le solide ne peut pas se former."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Solubilité de AgCl dans l’eau pure : s = √Ks. Donnée : M(AgCl) = 143,3 g/mol. Donne s en mg/L (arrondi au dixième).",
+     "reponse": 1.9,
+     "tolerance": 0.1,
+     "unite": "mg/L",
+     "aide": "Calcule d’abord s en mol/L, puis multiplie par la masse molaire et par 1 000.",
+     "explication": "s = √(1,8 × 10⁻¹⁰) ≈ 1,34 × 10⁻⁵ mol/L ; 1,34 × 10⁻⁵ × 143,3 × 1 000 ≈ **1,9 mg/L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Étalonner pour doser une saumure",
+   "competence": "lire-graphique",
+   "situation": "Pour doser une solution de chlorure de sodium, Malo trace une droite d’étalonnage σ = f(c) avec des solutions étalons. Il dilue 10 fois la solution à doser, puis mesure sa conductivité : σ = 88,2 mS·m⁻¹.",
+   "documents": [
+    {
+     "id": "etalon",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Droite d’étalonnage à 25 °C",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "σ",
+       "valeurs": [
+        0,
+        25.2,
+        50.4,
+        75.6,
+        100.8,
+        126
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "σ",
+      "unite": "mS·m⁻¹",
+      "min": 0,
+      "max": 140,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Concentration c (mmol/L)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etalon",
+     "enonce": "Touche le point de la droite qui correspond à la solution étalon à 6 mmol/L.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche l’abscisse 6 sur l’axe horizontal.",
+     "explication": "Le point d’abscisse 6 mmol/L est à σ ≈ **75,6 mS·m⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la droite, en mS·m⁻¹ par mmol/L ?",
+     "reponse": 12.6,
+     "tolerance": 0.3,
+     "unite": "mS·m⁻¹/(mmol/L)",
+     "aide": "Divise σ par c pour un point quelconque, par exemple σ = 126 pour c = 10.",
+     "explication": "126 ÷ 10 = **12,6 mS·m⁻¹ par mmol/L** : σ est proportionnelle à c."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de la solution diluée, en mmol/L ?",
+     "reponse": 7,
+     "tolerance": 0.2,
+     "unite": "mmol/L",
+     "aide": "Lis c en face de σ = 88,2, ou divise 88,2 par le coefficient directeur.",
+     "explication": "c = 88,2 ÷ 12,6 = **7,0 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La solution initiale était diluée 10 fois. Quelle est sa concentration massique, en g/L ? M(NaCl) = 58,5 g/mol.",
+     "reponse": 4.1,
+     "tolerance": 0.05,
+     "unite": "g/L",
+     "aide": "Multiplie d’abord la concentration par 10, puis par la masse molaire (mmol → mol).",
+     "explication": "c₀ = 10 × 7,0 = 70 mmol/L = 0,070 mol/L ; 0,070 × 58,5 ≈ **4,1 g/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle verrerie permet de diluer 10 fois avec le plus de précision ?",
+     "options": [
+      "Une pipette jaugée de 10,0 mL et une fiole jaugée de 100,0 mL",
+      "Une éprouvette graduée de 10 mL et un bécher gradué de 100 mL",
+      "Une burette graduée de 10 mL et un erlenmeyer gradué de 100 mL",
+      "Une pipette jaugée de 10,0 mL et une fiole jaugée de 50,0 mL"
+     ],
+     "reponse": 0,
+     "aide": "Il faut de la verrerie jaugée pour les deux volumes, et un rapport de 10 entre eux.",
+     "explication": "10,0 mL prélevés à la pipette jaugée et complétés à 100,0 mL en fiole jaugée donnent un facteur **10**. La fiole de 50,0 mL ne donnerait que 5."
+    }
+   ]
+  },
+  {
+   "chapitre": "8e1625d4-f0aa-5b2b-8db3-7050fa72ddbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les chlorures d’une eau de source",
+   "competence": "modeliser",
+   "situation": "On titre les ions chlorure d’une eau par une solution de nitrate d’argent à 0,0100 mol/L, en suivant la conductivité. La prise d’essai est de 20,0 mL et la conductivité est corrigée de la dilution.",
+   "documents": [
+    {
+     "id": "titrage",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Conductivité au cours du titrage",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16"
+     ],
+     "series": [
+      {
+       "nom": "σ",
+       "valeurs": [
+        50,
+        46,
+        42,
+        38,
+        34,
+        46,
+        58,
+        70,
+        82
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "σ",
+      "unite": "mS·m⁻¹",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Volume de nitrate d’argent versé (mL)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "titrage",
+     "enonce": "Touche le point de l’équivalence.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point où la pente de la courbe change.",
+     "explication": "Les deux segments de droite se coupent à **V = 8 mL** : c’est l’équivalence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume équivalent V_E, en mL ?",
+     "reponse": 8,
+     "tolerance": 0.2,
+     "unite": "mL",
+     "aide": "Lis l’abscisse du point de rupture de pente.",
+     "explication": "V_E = **8,0 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en ions chlorure de l’eau, en mmol/L. On utilise c(Cl⁻) × V₀ = c(Ag⁺) × V_E.",
+     "reponse": 4,
+     "tolerance": 0.1,
+     "unite": "mmol/L",
+     "aide": "c(Cl⁻) = 0,0100 × 8,0 ÷ 20,0, puis convertis en mmol/L.",
+     "explication": "c(Cl⁻) = 0,0100 × 8,0 ÷ 20,0 = 4,0 × 10⁻³ mol/L = **4,0 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime cette concentration en mg/L d’ions chlorure. M(Cl) = 35,5 g/mol.",
+     "reponse": 142,
+     "tolerance": 2,
+     "unite": "mg/L",
+     "aide": "Multiplie les mmol/L par la masse molaire en g/mol : on obtient des mg/L.",
+     "explication": "4,0 mmol/L × 35,5 g/mol = **142 mg/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi σ augmente-t-elle nettement après l’équivalence ?",
+     "options": [
+      "Les ions Ag⁺ et NO₃⁻ versés ne réagissent plus et s’accumulent dans la solution",
+      "Les ions Cl⁻ se reforment, car le précipité se redissout peu à peu dans l’eau",
+      "Le précipité de AgCl conduit mieux le courant que les ions qu’il a remplacés",
+      "La température de la solution monte, ce qui fait augmenter la conductivité"
+     ],
+     "reponse": 0,
+     "aide": "Après l’équivalence, plus aucun Cl⁻ ne peut précipiter.",
+     "explication": "Sans Cl⁻ à faire précipiter, **Ag⁺ et NO₃⁻ s’accumulent** : la conductivité monte vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel acide est le plus fort ?",
+   "competence": "lire-graphique",
+   "situation": "Au laboratoire, quatre couples acide/base sont rangés sur l’étagère. Inès compare leurs pKa pour choisir l’acide le plus fort et préparer un tampon.",
+   "documents": [
+    {
+     "id": "pka",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "pKa à 25 °C",
+     "categories": [
+      "CH₃COOH / CH₃COO⁻",
+      "NH₄⁺ / NH₃",
+      "HCOOH / HCOO⁻",
+      "C₆H₅COOH / C₆H₅COO⁻"
+     ],
+     "series": [
+      {
+       "nom": "pKa",
+       "valeurs": [
+        4.8,
+        9.2,
+        3.8,
+        4.2
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "pKa",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pka",
+     "enonce": "Touche le couple dont l’acide est le plus fort.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Plus le pKa est petit, plus l’acide est fort.",
+     "explication": "Le plus petit pKa est 3,8 : **HCOOH / HCOO⁻** est le couple de l’acide le plus fort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une solution d’acide éthanoïque a un pH de 5,8. Que vaut le rapport [CH₃COO⁻] / [CH₃COOH] ?",
+     "reponse": 10,
+     "tolerance": 0.3,
+     "aide": "pH − pKa = log([A⁻] / [AH]). Ici pH − pKa = 1.",
+     "explication": "log([A⁻]/[AH]) = 5,8 − 4,8 = 1, donc le rapport vaut **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un tampon contient 0,10 mol/L de CH₃COOH et 0,20 mol/L de CH₃COO⁻. Quel est son pH (arrondi au dixième) ?",
+     "reponse": 5.1,
+     "tolerance": 0.05,
+     "aide": "pH = pKa + log(0,20 / 0,10). log 2 ≈ 0,30.",
+     "explication": "pH = 4,8 + log 2 ≈ 4,8 + 0,30 = **5,1**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie chaque situation selon l’espèce qui prédomine.",
+     "categories": [
+      "Forme acide AH",
+      "Forme basique A⁻",
+      "Égalité [AH] = [A⁻]"
+     ],
+     "items": [
+      [
+       "HCOOH / HCOO⁻ à pH 5,0",
+       1
+      ],
+      [
+       "NH₄⁺ / NH₃ à pH 7,0",
+       0
+      ],
+      [
+       "CH₃COOH / CH₃COO⁻ à pH 4,8",
+       2
+      ],
+      [
+       "C₆H₅COOH / C₆H₅COO⁻ à pH 3,0",
+       0
+      ],
+      [
+       "CH₃COOH / CH₃COO⁻ à pH 6,0",
+       1
+      ]
+     ],
+     "aide": "Compare le pH au pKa du couple : pH < pKa, pH = pKa ou pH > pKa.",
+     "explication": "Sous le pKa, la forme acide domine ; au pKa, égalité ; au-dessus, la forme basique. Ici : 5,0 > 3,8 ; 7,0 < 9,2 ; 4,8 = 4,8 ; 3,0 < 4,2 ; 6,0 > 4,8."
+    }
+   ]
+  },
+  {
+   "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe d’un acide de cuisine",
+   "competence": "lire-graphique",
+   "situation": "On titre 10,0 mL d’un acide faible inconnu par de la soude à 0,100 mol/L, en relevant le pH tous les 2,5 mL. Le saut de pH se produit entre 12,5 mL et 17,5 mL.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "pH en fonction du volume de soude versé",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20",
+      "22,5",
+      "25"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        2.81,
+        4.1,
+        4.5,
+        4.8,
+        5.1,
+        5.5,
+        8.79,
+        11.96,
+        12.22,
+        12.36,
+        12.46
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Volume de soude versé (mL)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche le point de l’équivalence, au milieu du saut de pH.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Le saut de pH est la zone où la courbe monte presque à la verticale.",
+     "explication": "Le milieu du saut est le point à **V = 15 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration de l’acide dosé, en mol/L.",
+     "reponse": 0.15,
+     "tolerance": 0.005,
+     "unite": "mol/L",
+     "aide": "À l’équivalence : c(acide) × 10,0 = 0,100 × V_E.",
+     "explication": "c = 0,100 × 15,0 ÷ 10,0 = **0,150 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis le pH à la demi-équivalence (V = V_E ÷ 2).",
+     "reponse": 4.8,
+     "tolerance": 0.1,
+     "aide": "V_E ÷ 2 = 7,5 mL : repère ce volume sur l’axe horizontal.",
+     "explication": "À 7,5 mL, le pH vaut **4,8** : c’est le pKa du couple."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel couple l’acide dosé appartient-il ?",
+     "options": [
+      "CH₃COOH / CH₃COO⁻, pKa = 4,8",
+      "HCOOH / HCOO⁻, pKa = 3,8",
+      "C₆H₅COOH / C₆H₅COO⁻, pKa = 4,2",
+      "NH₄⁺ / NH₃, pKa = 9,2"
+     ],
+     "reponse": 0,
+     "aide": "À la demi-équivalence, pH = pKa. Compare avec la valeur lue.",
+     "explication": "pKa = 4,8 : c’est l’**acide éthanoïque**, le vinaigre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis le pH de la solution avant tout ajout de soude (arrondi au dixième).",
+     "reponse": 2.8,
+     "tolerance": 0.1,
+     "aide": "Regarde le premier point de la courbe.",
+     "explication": "Le pH initial est d’environ **2,8** : l’acide faible n’est que peu dissocié."
+    }
+   ]
+  },
+  {
+   "chapitre": "39d6b899-958c-5a26-9b2a-21517fdf1c6f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le comprimé antiacide : un titrage indirect",
+   "competence": "experimenter",
+   "situation": "Un comprimé annonce 300 mg de carbonate de calcium. On l’écrase dans un erlenmeyer, puis on ajoute 50,0 mL d’acide chlorhydrique à 0,200 mol/L : CaCO₃ + 2 H₃O⁺ → Ca²⁺ + CO₂ + 3 H₂O. L’acide en excès est ensuite titré par de la soude à 0,200 mol/L : V_E = 20,0 mL.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Titrage de l’acide restant",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 10,
+       "l": 16,
+       "h": 120,
+       "arrondi": 4,
+       "id": "burette",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        130
+       ],
+       "a": [
+        158,
+        150
+       ]
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         146,
+         158
+        ],
+        [
+         170,
+         158
+        ],
+        [
+         212,
+         222
+        ],
+        [
+         104,
+         222
+        ]
+       ],
+       "id": "erlen",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         124,
+         196
+        ],
+        [
+         192,
+         196
+        ],
+        [
+         212,
+         222
+        ],
+        [
+         104,
+         222
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 214,
+       "l": 24,
+       "h": 6,
+       "id": "barreau",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 226,
+       "l": 148,
+       "h": 16,
+       "arrondi": 4,
+       "id": "plaque",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 268,
+       "y": 30,
+       "texte": "NaOH 0,200 mol/L",
+       "vers": [
+        166,
+        50
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 268,
+       "y": 130,
+       "texte": "HCl restant",
+       "vers": [
+        196,
+        180
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche le récipient qui contient l’acide chlorhydrique restant à titrer.",
+     "reponse": [
+      "erlen"
+     ],
+     "aide": "C’est le récipient posé sur l’agitateur, sous la burette.",
+     "explication": "L’acide restant est dans l’**erlenmeyer**. La burette contient la soude."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du protocole dans l’ordre.",
+     "items": [
+      "Peser le comprimé écrasé et le placer dans l’erlenmeyer",
+      "Ajouter exactement 50,0 mL d’acide chlorhydrique",
+      "Attendre la fin du dégagement gazeux",
+      "Titrer l’acide restant par la soude en suivant le pH",
+      "Repérer le volume équivalent au saut de pH"
+     ],
+     "aide": "L’acide en excès doit d’abord avoir réagi avec le carbonate, avant le titrage.",
+     "explication": "On fait réagir le comprimé avec l’acide en excès, puis on titre **ce qui reste** : c’est un titrage indirect."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’acide reste-t-il dans l’erlenmeyer, en mmol ?",
+     "reponse": 4,
+     "tolerance": 0.05,
+     "unite": "mmol",
+     "aide": "À l’équivalence, n(H₃O⁺ restant) = n(HO⁻) versé = 0,200 × 20,0.",
+     "explication": "n restant = 0,200 × 20,0 = **4,00 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’acide le carbonate a-t-il consommée, en mmol ? (Acide introduit : 0,200 × 50,0.)",
+     "reponse": 6,
+     "tolerance": 0.05,
+     "unite": "mmol",
+     "aide": "Quantité introduite moins quantité restante.",
+     "explication": "Introduit : 10,0 mmol ; restant : 4,00 mmol ; consommé : **6,00 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de CaCO₃ contient le comprimé, en mg ? M(CaCO₃) = 100 g/mol.",
+     "reponse": 300,
+     "tolerance": 3,
+     "unite": "mg",
+     "aide": "D’après l’équation, 1 CaCO₃ consomme 2 H₃O⁺ : divise par 2.",
+     "explication": "n(CaCO₃) = 6,00 ÷ 2 = 3,00 mmol ; m = 3,00 × 100 = **300 mg** : le comprimé tient sa promesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une lame de cuivre dans le nitrate d’argent",
+   "competence": "raisonner",
+   "situation": "Mia plonge une lame de cuivre dans une solution de nitrate d’argent. Un dépôt gris apparaît sur la lame et la solution bleuit peu à peu. Elle consulte la table des potentiels standard.",
+   "documents": [
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "Potentiels standard à 25 °C",
+     "colonnes": [
+      "Couple Ox / Red",
+      "E° (V)"
+     ],
+     "lignes": [
+      [
+       "Ag⁺ / Ag",
+       "0,80"
+      ],
+      [
+       "Cu²⁺ / Cu",
+       "0,34"
+      ],
+      [
+       "Zn²⁺ / Zn",
+       "−0,76"
+      ],
+      [
+       "Fe²⁺ / Fe",
+       "−0,44"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "table",
+     "enonce": "Touche le couple dont l’oxydant est le plus fort.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "L’oxydant le plus fort est celui du couple de plus haut potentiel.",
+     "explication": "Le plus haut potentiel est 0,80 V : c’est **Ag⁺ / Ag**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle équation décrit une réaction spontanée ?",
+     "options": [
+      "Cu + 2 Ag⁺ → Cu²⁺ + 2 Ag",
+      "2 Ag + Cu²⁺ → 2 Ag⁺ + Cu",
+      "Zn²⁺ + Cu → Zn + Cu²⁺",
+      "Fe²⁺ + 2 Ag → Fe + 2 Ag⁺"
+     ],
+     "reponse": 0,
+     "aide": "L’oxydant du couple de plus haut potentiel réagit avec le réducteur du couple de plus bas potentiel.",
+     "explication": "Ag⁺ (0,80 V) oxyde Cu (0,34 V) : **Cu + 2 Ag⁺ → Cu²⁺ + 2 Ag**. Les trois autres équations vont dans le sens inverse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule E°(Ag⁺/Ag) − E°(Zn²⁺/Zn), en volts.",
+     "reponse": 1.56,
+     "tolerance": 0.005,
+     "unite": "V",
+     "aide": "Attention au signe : on soustrait −0,76.",
+     "explication": "0,80 − (−0,76) = **1,56 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour Cu + 2 Ag⁺ → Cu²⁺ + 2 Ag (n = 2), calcule log K = n × (E°₁ − E°₂) ÷ 0,059, arrondi au dixième.",
+     "reponse": 15.6,
+     "tolerance": 0.2,
+     "aide": "E°₁ est celui du couple de l’oxydant qui réagit, Ag⁺ / Ag.",
+     "explication": "log K = 2 × (0,80 − 0,34) ÷ 0,059 ≈ **15,6** : la réaction est quasi totale."
+    }
+   ]
+  },
+  {
+   "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le potentiel suit le rapport",
+   "competence": "lire-graphique",
+   "situation": "On mesure le potentiel d’une solution contenant les ions Fe³⁺ et Fe²⁺ avec un voltmètre et une électrode de référence. Pour le couple Fe³⁺ / Fe²⁺, E° = 0,77 V. La courbe donne E en fonction de log([Fe³⁺] / [Fe²⁺]).",
+   "documents": [
+    {
+     "id": "nernst",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Potentiel du couple Fe³⁺ / Fe²⁺",
+     "categories": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "E",
+       "valeurs": [
+        0.652,
+        0.711,
+        0.77,
+        0.829,
+        0.888
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "E",
+      "unite": "V",
+      "min": 0.6,
+      "max": 0.95,
+      "pas": 0.05
+     },
+     "axeX": {
+      "titre": "log([Fe³⁺] / [Fe²⁺])"
+     },
+     "valeurs": false,
+     "source": "Relation de Nernst à 25 °C"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nernst",
+     "enonce": "Touche le point où [Fe³⁺] = [Fe²⁺].",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Si les deux concentrations sont égales, leur rapport vaut 1 et son logarithme 0.",
+     "explication": "Pour un rapport égal à 1, log = 0 : c’est le point **du milieu**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis le potentiel en ce point.",
+     "reponse": 0.77,
+     "tolerance": 0.01,
+     "unite": "V",
+     "aide": "Quand [Ox] = [Red], E = E°.",
+     "explication": "E = E° = **0,77 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le potentiel augmente-t-il quand le rapport [Fe³⁺] / [Fe²⁺] est multiplié par 10 ?",
+     "reponse": 0.059,
+     "tolerance": 0.003,
+     "unite": "V",
+     "aide": "Regarde l’écart entre deux points voisins de la courbe.",
+     "explication": "Multiplier par 10 ajoute 1 à log : E augmente de **0,059 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On a [Fe³⁺] = 0,010 mol/L et [Fe²⁺] = 1,0 mol/L. Quel est E, arrondi au centième ?",
+     "reponse": 0.65,
+     "tolerance": 0.005,
+     "unite": "V",
+     "aide": "Le rapport vaut 0,010 : quel est son logarithme ?",
+     "explication": "log(0,010) = −2 : E = 0,77 − 2 × 0,059 = **0,65 V**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On dilue les deux ions en [Fe³⁺] = [Fe²⁺] = 0,0010 mol/L. Comment évolue E ?",
+     "options": [
+      "Il reste égal à 0,77 V, car seul le rapport [Ox] / [Red] intervient",
+      "Il baisse, car les deux concentrations sont plus faibles qu’à 1 mol/L",
+      "Il monte, car une solution diluée est moins chargée en ions et réagit mieux",
+      "Il s’annule, car il n’y a presque plus d’ions présents dans la solution"
+     ],
+     "reponse": 0,
+     "aide": "Que devient le rapport des deux concentrations ?",
+     "explication": "Le rapport vaut toujours 1 : **E = E° = 0,77 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "efa0658d-b769-54c3-86a2-3ed9e0a9e77a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cuivrer une pièce : quel rendement ?",
+   "competence": "calculer",
+   "situation": "Pour déposer du cuivre sur une pièce, on électrolyse une solution de sulfate de cuivre (II) : Cu²⁺ + 2 e⁻ → Cu. On impose I = 0,80 A pendant 25 min. Après séchage, la pièce a gagné 0,36 g.",
+   "documents": [
+    {
+     "id": "cuve",
+     "type": "schema",
+     "titre": "Cuve d’électrolyse",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 105,
+       "l": 220,
+       "h": 110,
+       "arrondi": 6
+      },
+      {
+       "forme": "rect",
+       "x": 52,
+       "y": 125,
+       "l": 216,
+       "h": 88,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 14,
+       "l": 100,
+       "h": 34,
+       "arrondi": 6,
+       "texte": "Générateur"
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 44,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 222,
+       "y": 44,
+       "texte": "+",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        31
+       ],
+       "a": [
+        88,
+        31
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        88,
+        31
+       ],
+       "a": [
+        88,
+        72
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        31
+       ],
+       "a": [
+        232,
+        31
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        232,
+        31
+       ],
+       "a": [
+        232,
+        72
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 82,
+       "y": 72,
+       "l": 12,
+       "h": 92,
+       "id": "gauche",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 226,
+       "y": 72,
+       "l": 12,
+       "h": 92,
+       "id": "droite",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 200,
+       "texte": "Cu²⁺ (aq) + SO₄²⁻ (aq)",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Intensité I",
+       "0,80 A"
+      ],
+      [
+       "Durée Δt",
+       "25 min"
+      ],
+      [
+       "Masse déposée mesurée",
+       "0,36 g"
+      ],
+      [
+       "M(Cu)",
+       "63,5 g/mol"
+      ],
+      [
+       "Constante de Faraday F",
+       "96 500 C/mol"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cuve",
+     "enonce": "Touche l’électrode sur laquelle se dépose le cuivre.",
+     "reponse": [
+      "gauche"
+     ],
+     "aide": "Le dépôt de cuivre est une réduction : elle a lieu à la cathode, reliée au pôle −.",
+     "explication": "Cu²⁺ est réduit à la **cathode**, l’électrode reliée au pôle − du générateur (à gauche)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la charge Q = I × Δt qui a circulé, en coulombs.",
+     "reponse": 1200,
+     "unite": "C",
+     "aide": "Convertis 25 min en secondes avant de multiplier.",
+     "explication": "Q = 0,80 × 1 500 = **1 200 C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’électrons a circulé, en mmol ? n(e⁻) = Q ÷ F.",
+     "reponse": 12.4,
+     "tolerance": 0.1,
+     "unite": "mmol",
+     "aide": "Divise 1 200 par 96 500, puis passe des mol aux mmol.",
+     "explication": "n(e⁻) = 1 200 ÷ 96 500 ≈ 1,24 × 10⁻² mol = **12,4 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de cuivre la charge aurait-elle dû déposer, en g ? Il faut 2 électrons par atome de cuivre.",
+     "reponse": 0.395,
+     "tolerance": 0.005,
+     "unite": "g",
+     "aide": "n(Cu) = n(e⁻) ÷ 2, puis m = n × M.",
+     "explication": "n(Cu) = 6,22 mmol ; m = 6,22 × 10⁻³ × 63,5 ≈ **0,395 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement faradique, en %.",
+     "reponse": 91,
+     "tolerance": 1,
+     "unite": "%",
+     "aide": "Rendement = masse obtenue ÷ masse attendue.",
+     "explication": "0,36 ÷ 0,395 ≈ 0,91, soit un rendement de **91 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq flacons, cinq transformations",
+   "competence": "analyser-document",
+   "situation": "Le professeur a préparé cinq expériences d’oxydation, d’estérification et d’hydrolyse. Les réactifs sont notés dans le tableau du cahier de laboratoire.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "tableau",
+     "titre": "Cahier de laboratoire",
+     "colonnes": [
+      "Expérience",
+      "Mélange"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Butan-2-ol + oxydant"
+      ],
+      [
+       "2",
+       "Éthanol + oxydant en excès"
+      ],
+      [
+       "3",
+       "Acide éthanoïque + éthanol, acide sulfurique, chauffage"
+      ],
+      [
+       "4",
+       "Éthanoate d’éthyle + ions hydroxyde"
+      ],
+      [
+       "5",
+       "2-méthylpropan-2-ol + oxydant"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque mélange au produit formé.",
+     "paires": [
+      [
+       "Butan-2-ol + oxydant",
+       "Butanone, une cétone"
+      ],
+      [
+       "Éthanol + oxydant en excès",
+       "Acide éthanoïque"
+      ],
+      [
+       "Acide éthanoïque + éthanol",
+       "Éthanoate d’éthyle et eau"
+      ],
+      [
+       "Éthanoate d’éthyle + HO⁻",
+       "Ion éthanoate et éthanol"
+      ]
+     ],
+     "aide": "Un alcool secondaire donne une cétone ; un alcool primaire, un aldéhyde puis un acide.",
+     "explication": "Alcool secondaire → cétone ; alcool primaire en excès d’oxydant → acide ; acide + alcool → ester + eau ; ester + HO⁻ → carboxylate + alcool."
+    },
+    {
+     "type": "zone",
+     "document": "cahier",
+     "enonce": "Touche l’expérience où l’alcool ne s’oxyde pas.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Regarde la classe de chaque alcool : primaire, secondaire ou tertiaire.",
+     "explication": "Le 2-méthylpropan-2-ol est un alcool **tertiaire** : il ne s’oxyde pas dans ces conditions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’expérience 3 part de 0,15 mol d’acide et 0,15 mol d’alcool, et donne 0,10 mol d’ester. Quel est le rendement, arrondi à l’unité ?",
+     "reponse": 67,
+     "tolerance": 1,
+     "unite": "%",
+     "aide": "Les réactifs sont équimolaires : n(ester) maximal = 0,15 mol.",
+     "explication": "Rendement = 0,10 ÷ 0,15 ≈ **67 %**, valeur typique d’une estérification équimolaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces expériences est totale, sans aucun équilibre ?",
+     "options": [
+      "L’expérience 4 : l’ion carboxylate formé ne réagit plus avec l’alcool",
+      "L’expérience 3 : l’acide sulfurique rend la réaction totale en quelques minutes",
+      "L’expérience 3 : un chauffage prolongé suffit à rendre la réaction complète",
+      "L’expérience 4 : toute hydrolyse d’ester est totale, même en milieu acide"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la réaction dont un produit ne peut plus repartir en sens inverse.",
+     "explication": "La **saponification** (expérience 4) est totale, car l’ion carboxylate ne réagit plus avec l’alcool."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Fabriquer puis isoler un ester",
+   "competence": "experimenter",
+   "situation": "Léo synthétise de l’éthanoate d’éthyle à partir de 6,00 g d’acide éthanoïque (M = 60,0 g/mol) et de 0,30 mol d’éthanol, avec un catalyseur acide. Il obtient 7,20 g d’ester (M = 88,0 g/mol), qu’il veut extraire du mélange aqueux.",
+   "documents": [
+    {
+     "id": "solvants",
+     "type": "tableau",
+     "titre": "Solvants d’extraction disponibles",
+     "colonnes": [
+      "Solvant",
+      "Miscible à l’eau",
+      "Densité"
+     ],
+     "lignes": [
+      [
+       "Éthanol",
+       "oui",
+       "0,79"
+      ],
+      [
+       "Cyclohexane",
+       "non",
+       "0,78"
+      ],
+      [
+       "Dichlorométhane",
+       "non",
+       "1,33"
+      ],
+      [
+       "Acétone",
+       "oui",
+       "0,79"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Densité de l’eau : 1,00"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "solvants",
+     "enonce": "Touche le solvant non miscible à l’eau qui formera la phase supérieure dans l’ampoule à décanter.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Il faut un solvant non miscible ET moins dense que l’eau.",
+     "explication": "Le **cyclohexane** ne se mélange pas à l’eau et sa densité (0,78) est inférieure à 1 : il surnage."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de l’extraction liquide-liquide.",
+     "items": [
+      "Verser le mélange dans l’ampoule à décanter",
+      "Ajouter le solvant, boucher et agiter en dégazant",
+      "Laisser décanter jusqu’à deux phases nettes",
+      "Soutirer la phase inférieure par le robinet",
+      "Sécher la phase organique avec un sel anhydre"
+     ],
+     "aide": "On mélange d’abord, on laisse les phases se séparer, puis on les sépare.",
+     "explication": "Mélange, agitation avec dégazage, décantation, séparation des phases, puis séchage de la phase organique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité d’acide éthanoïque introduite, en mol.",
+     "reponse": 0.1,
+     "tolerance": 0.001,
+     "unite": "mol",
+     "aide": "n = m ÷ M.",
+     "explication": "n = 6,00 ÷ 60,0 = **0,100 mol**. L’éthanol est en excès : l’acide est le réactif limitant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de la synthèse, en %, arrondi à l’unité.",
+     "reponse": 82,
+     "tolerance": 1,
+     "unite": "%",
+     "aide": "n(ester) obtenu = 7,20 ÷ 88,0 ; n(ester) maximal = n(acide).",
+     "explication": "n(ester) = 7,20 ÷ 88,0 ≈ 0,0818 mol ; rendement = 0,0818 ÷ 0,100 ≈ **82 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Léo met-il l’éthanol en excès ?",
+     "options": [
+      "Il déplace l’équilibre vers l’ester, et l’éthanol coûte peu cher",
+      "Il joue le rôle de catalyseur et rend la réaction totale et rapide",
+      "Il accélère la réaction sans changer la composition finale du système",
+      "Il empêche l’acide éthanoïque de réagir avec l’eau en solution aqueuse"
+     ],
+     "reponse": 0,
+     "aide": "L’estérification est limitée par un équilibre ; que fait un excès de réactif ?",
+     "explication": "Un réactif en excès **déplace l’équilibre** vers les produits. On choisit le moins cher."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf844c3f-f9bb-54e4-bfd5-7beaf4dcd353",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois protocoles pour un même ester",
+   "competence": "analyser-document",
+   "situation": "Une équipe compare trois protocoles pour fabriquer de l’éthanoate d’éthyle (M = 88,0 g/mol). Elle veut un bon rendement, mais aussi peu de déchets. Masses molaires : acide éthanoïque 60, éthanol 46, anhydride éthanoïque 102 (en g/mol).",
+   "documents": [
+    {
+     "id": "protocoles",
+     "type": "tableau",
+     "titre": "Les trois protocoles",
+     "colonnes": [
+      "Protocole",
+      "Conditions",
+      "Rendement",
+      "Sous-produit"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Acide + éthanol, reflux 2 h",
+       "67 %",
+       "eau"
+      ],
+      [
+       "B",
+       "Anhydride + éthanol, 20 °C, 15 min",
+       "95 %",
+       "acide éthanoïque"
+      ],
+      [
+       "C",
+       "Acide + éthanol, Dean-Stark, reflux 4 h",
+       "92 %",
+       "eau"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "protocoles",
+     "enonce": "Touche le protocole le plus rapide.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare les durées indiquées dans la colonne des conditions.",
+     "explication": "Le protocole **B** dure 15 min, contre 2 h et 4 h."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec 0,200 mol d’ester attendu au maximum, quelle masse d’ester obtient-on avec le protocole B, en g ?",
+     "reponse": 16.7,
+     "tolerance": 0.1,
+     "unite": "g",
+     "aide": "n(ester) = 0,200 × rendement, puis m = n × M.",
+     "explication": "n = 0,200 × 0,95 = 0,190 mol ; m = 0,190 × 88,0 ≈ **16,7 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Économie d’atomes du protocole B : M(ester) ÷ (M(anhydride) + M(éthanol)), en %, arrondie à l’unité.",
+     "reponse": 59.5,
+     "tolerance": 0.6,
+     "unite": "%",
+     "aide": "Au numérateur, 88 ; au dénominateur, 102 + 46.",
+     "explication": "88 ÷ (102 + 46) ≈ 0,595 : économie d’atomes de **59 %**, contre 83 % pour le protocole A."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le principal inconvénient du protocole B malgré son rendement ?",
+     "options": [
+      "Il forme autant d’acide éthanoïque que d’ester, d’où une économie d’atomes médiocre",
+      "Son rendement est plus faible que celui du protocole A malgré l’anhydride",
+      "Il exige un chauffage à reflux pendant plusieurs heures, donc beaucoup d’énergie",
+      "C’est une réaction équilibrée qui ne dépasse jamais 67 % de rendement"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « Sous-produit » et pense aux principes de la chimie verte.",
+     "explication": "Chaque ester formé libère une molécule d’**acide éthanoïque** : beaucoup de déchets, donc une économie d’atomes faible."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque action selon son effet principal.",
+     "categories": [
+      "Accélère la réaction",
+      "Augmente le rendement"
+     ],
+     "items": [
+      [
+       "Chauffer à reflux",
+       0
+      ],
+      [
+       "Ajouter un catalyseur acide",
+       0
+      ],
+      [
+       "Augmenter les concentrations",
+       0
+      ],
+      [
+       "Mettre l’alcool en excès",
+       1
+      ],
+      [
+       "Retirer l’eau avec un Dean-Stark",
+       1
+      ],
+      [
+       "Remplacer l’acide par l’anhydride",
+       1
+      ]
+     ],
+     "aide": "Un catalyseur et la température modifient la vitesse ; un excès ou l’élimination d’un produit modifient l’état final.",
+     "explication": "Température, catalyseur et concentrations jouent sur la **vitesse**. Excès de réactif, élimination de l’eau ou anhydride jouent sur le **rendement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le spectre de l’éthanol",
+   "competence": "lire-tableau",
+   "situation": "Un flacon porte la formule brute C₂H₆O et l’étiquette « éthanol » : CH₃–CH₂–OH. On relève le spectre RMN du proton de ce liquide.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "tableau",
+     "titre": "Signaux du spectre RMN",
+     "colonnes": [
+      "Signal",
+      "δ (ppm)",
+      "Intégration (H)",
+      "Multiplicité"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1,2",
+       "3",
+       "triplet"
+      ],
+      [
+       "B",
+       "2,6",
+       "1",
+       "singulet"
+      ],
+      [
+       "C",
+       "3,7",
+       "2",
+       "quadruplet"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Signaux écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche le signal du groupe CH₂.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un groupe CH₂ compte deux hydrogènes équivalents.",
+     "explication": "Le signal **C** (2 H) est celui du CH₂ : c’est un quadruplet, car il a 3 voisins, ceux du CH₃."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’hydrogène comptent les trois signaux réunis ?",
+     "reponse": 6,
+     "unite": "H",
+     "aide": "Additionne la colonne Intégration.",
+     "explication": "3 + 1 + 2 = **6** hydrogènes, en accord avec C₂H₆O."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le CH₂ a-t-il un déplacement chimique plus élevé que le CH₃ ?",
+     "options": [
+      "Il est lié à l’atome d’oxygène, électronégatif, qui le déblinde",
+      "Il a trois protons voisins, ce qui augmente son déplacement chimique",
+      "Il est plus éloigné de l’oxygène que le CH₃, donc plus déblindé",
+      "Il compte deux protons, donc plus que le CH₃ dont le signal est mesuré"
+     ],
+     "reponse": 0,
+     "aide": "Un atome électronégatif proche augmente δ.",
+     "explication": "Le CH₂ est lié à **l’oxygène** : un atome électronégatif voisin augmente δ (3,3 à 4,3 ppm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le méthoxyméthane CH₃–O–CH₃ a la même formule brute. Combien de signaux donnerait-il ?",
+     "reponse": 1,
+     "unite": "signal",
+     "aide": "Compte les groupes de protons équivalents : les deux CH₃ sont-ils équivalents ?",
+     "explication": "Les six H sont équivalents : **un seul signal**, un singulet. Le spectre à trois signaux distingue donc l’éthanol."
+    }
+   ]
+  },
+  {
+   "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois isomères, un seul spectre",
+   "competence": "analyser-document",
+   "situation": "Un composé de formule brute C₃H₈O est soit le propan-1-ol CH₃CH₂CH₂OH, soit le propan-2-ol (CH₃)₂CHOH, soit le méthoxyéthane CH₃OCH₂CH₃. Son spectre RMN du proton est décrit ci-dessous.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "tableau",
+     "titre": "Signaux du spectre RMN",
+     "colonnes": [
+      "Signal",
+      "δ (ppm)",
+      "Intégration (H)",
+      "Multiplicité"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1,2",
+       "6",
+       "doublet"
+      ],
+      [
+       "B",
+       "4,0",
+       "1",
+       "septuplet"
+      ],
+      [
+       "C",
+       "2,5",
+       "1",
+       "singulet"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Signaux écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’hydrogène comptent les trois signaux réunis ?",
+     "reponse": 8,
+     "unite": "H",
+     "aide": "Additionne la colonne Intégration.",
+     "explication": "6 + 1 + 1 = **8** hydrogènes, en accord avec C₃H₈O."
+    },
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche le signal du groupe de six hydrogènes équivalents.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche la ligne dont l’intégration vaut 6.",
+     "explication": "Le signal **A** regroupe 6 H équivalents : deux CH₃ identiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le signal B est un septuplet. Combien d’hydrogènes voisins le groupe correspondant a-t-il ?",
+     "reponse": 6,
+     "unite": "H",
+     "aide": "Un septuplet compte 7 pics, et n voisins donnent n + 1 pics.",
+     "explication": "7 − 1 = **6** voisins : les hydrogènes des deux CH₃."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de signaux le propan-1-ol CH₃CH₂CH₂OH donnerait-il ?",
+     "reponse": 4,
+     "unite": "signaux",
+     "aide": "Compte les groupes d’hydrogènes différents : CH₃, deux CH₂ différents, et OH.",
+     "explication": "CH₃, CH₂ du milieu, CH₂ lié à O et OH : **quatre signaux**. Ce n’est pas le spectre observé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle molécule correspond au spectre ?",
+     "options": [
+      "Propan-2-ol, (CH₃)₂CH–OH",
+      "Propan-1-ol, CH₃CH₂CH₂–OH",
+      "Méthoxyéthane, CH₃–O–CH₂CH₃",
+      "Propan-2-amine, (CH₃)₂CH–NH₂"
+     ],
+     "reponse": 0,
+     "aide": "Quelle molécule a deux CH₃ équivalents voisins d’un seul H ?",
+     "explication": "Seul le **propan-2-ol** donne un doublet de 6 H et un septuplet de 1 H. Le méthoxyéthane donnerait un singulet de 3 H, un quadruplet et un triplet."
+    }
+   ]
+  },
+  {
+   "chapitre": "333b5dd5-52e0-5cbb-a157-0221fac6e4a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un ester à identifier",
+   "competence": "analyser-document",
+   "situation": "Un composé de formule brute C₄H₈O₂ est analysé. Son spectre infrarouge montre une bande fine et intense à 1 740 cm⁻¹, et aucune bande large entre 2 500 et 3 300 cm⁻¹. Les hauteurs d’intégration de son spectre RMN sont relatives.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "tableau",
+     "titre": "Signaux du spectre RMN",
+     "colonnes": [
+      "Signal",
+      "δ (ppm)",
+      "Intégration",
+      "Multiplicité"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1,1",
+       "1,5",
+       "triplet"
+      ],
+      [
+       "B",
+       "2,3",
+       "1,0",
+       "quadruplet"
+      ],
+      [
+       "C",
+       "3,7",
+       "1,5",
+       "singulet"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Signaux écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que révèle le spectre infrarouge ?",
+     "options": [
+      "Un ester : bande C=O présente, aucune bande O–H large",
+      "Un acide carboxylique : bande C=O et bande O–H large",
+      "Un alcool : bande O–H large et aucune bande C=O",
+      "Un aldéhyde : bande C=O et bande O–H large vers 3 300 cm⁻¹"
+     ],
+     "reponse": 0,
+     "aide": "Une bande à 1 740 cm⁻¹ indique C=O ; l’absence de bande large exclut O–H.",
+     "explication": "C=O sans O–H large : un **ester**. Un acide carboxylique montrerait aussi une bande O–H très large."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La molécule compte 8 H au total. Combien d’hydrogènes correspondent au signal A (hauteur 1,5 sur un total de 4,0) ?",
+     "reponse": 3,
+     "unite": "H",
+     "aide": "Proportion : 1,5 ÷ 4,0 de 8 hydrogènes.",
+     "explication": "1,5 ÷ 4,0 × 8 = **3** hydrogènes : un CH₃. Le signal B en compte 2, le signal C 3."
+    },
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche le signal d’un CH₃ qui n’a aucun hydrogène voisin.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Aucun voisin donne un singulet.",
+     "explication": "Le signal **C**, un singulet de 3 H, est un CH₃ isolé. Sa position à 3,7 ppm indique qu’il est lié à O."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le signal B est un quadruplet. Combien d’hydrogènes voisins le groupe correspondant a-t-il ?",
+     "reponse": 3,
+     "unite": "H",
+     "aide": "n voisins donnent n + 1 pics.",
+     "explication": "4 − 1 = **3** voisins : les hydrogènes du CH₃ du signal A."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle molécule convient ?",
+     "options": [
+      "Propanoate de méthyle, CH₃CH₂–CO–O–CH₃",
+      "Éthanoate d’éthyle, CH₃–CO–O–CH₂CH₃",
+      "Méthanoate de propyle, H–CO–O–CH₂CH₂CH₃",
+      "Acide butanoïque, CH₃CH₂CH₂–COOH"
+     ],
+     "reponse": 0,
+     "aide": "Un CH₃ isolé lié à O, et un éthyle CH₃CH₂ lié à C=O.",
+     "explication": "Le **propanoate de méthyle** a un triplet, un quadruplet et un singulet. L’éthanoate d’éthyle donnerait un singulet de 3 H vers 2,0 ppm et un quadruplet vers 4,1 ppm."
+    }
+   ]
+  },
+  {
+   "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où est le carbone asymétrique ?",
+   "competence": "analyser-document",
+   "situation": "Dans un yaourt, l’acide lactique existe sous deux formes qui ne se superposent pas. Noé repère d’abord quelles molécules du laboratoire peuvent avoir ce genre de forme.",
+   "documents": [
+    {
+     "id": "formules",
+     "type": "tableau",
+     "titre": "Quatre molécules",
+     "colonnes": [
+      "Nom",
+      "Formule semi-développée"
+     ],
+     "lignes": [
+      [
+       "Éthanol",
+       "CH₃–CH₂–OH"
+      ],
+      [
+       "Propan-2-ol",
+       "CH₃–CH(OH)–CH₃"
+      ],
+      [
+       "Acide lactique",
+       "CH₃–CH(OH)–COOH"
+      ],
+      [
+       "Propanone",
+       "CH₃–CO–CH₃"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Formules du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formules",
+     "enonce": "Touche la molécule qui possède un carbone asymétrique.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche un carbone lié à quatre groupes tous différents.",
+     "explication": "Dans l’**acide lactique**, le carbone central porte H, OH, CH₃ et COOH : quatre groupes différents. Dans le propan-2-ol, deux de ses groupes sont des CH₃ identiques."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description du carbone asymétrique de l’acide lactique.",
+     "texte": "Il porte un atome d’hydrogène, un groupe méthyle, un groupe ___ (–OH) et un groupe ___ (–COOH).",
+     "reponses": [
+      [
+       "hydroxyle"
+      ],
+      [
+       "carboxyle"
+      ]
+     ],
+     "banque": [
+      "hydroxyle",
+      "carboxyle",
+      "carbonyle",
+      "éthyle"
+     ],
+     "aide": "OH est le groupe caractéristique des alcools ; COOH celui des acides carboxyliques.",
+     "explication": "Le carbone asymétrique porte H, CH₃, **hydroxyle** (–OH) et **carboxyle** (–COOH)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de stéréoisomères de configuration l’acide lactique possède-t-il, avec un seul carbone asymétrique ?",
+     "reponse": 2,
+     "aide": "Un carbone asymétrique donne une molécule et son image dans un miroir.",
+     "explication": "Une molécule et son image miroir non superposable : **2** stéréoisomères, deux énantiomères."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à sa définition.",
+     "paires": [
+      [
+       "Énantiomères",
+       "Images l’un de l’autre dans un miroir, non superposables"
+      ],
+      [
+       "Diastéréoisomères",
+       "Stéréoisomères qui ne sont pas images l’un de l’autre"
+      ],
+      [
+       "Mélange racémique",
+       "Mélange à parts égales des deux énantiomères"
+      ],
+      [
+       "Carbone asymétrique",
+       "Carbone lié à quatre groupes différents"
+      ]
+     ],
+     "aide": "Relis chaque définition : image miroir, pas image miroir, mélange, ou atome.",
+     "explication": "Les énantiomères sont images miroir ; les diastéréoisomères ne le sont pas ; le racémique mélange les deux à 50/50 ; le carbone asymétrique est l’origine de la chiralité."
+    }
+   ]
+  },
+  {
+   "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le polarimètre et le sucre",
+   "competence": "lire-graphique",
+   "situation": "Un polarimètre mesure l’angle α dont une solution de saccharose fait tourner la lumière polarisée. Le saccharose a un pouvoir rotatoire spécifique [α] = + 66,5 °·dm⁻¹·g⁻¹·mL. La courbe est tracée avec un tube de longueur ℓ = 2,0 dm.",
+   "documents": [
+    {
+     "id": "biot",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Angle mesuré selon la concentration",
+     "categories": [
+      "0",
+      "0,02",
+      "0,04",
+      "0,06",
+      "0,08",
+      "0,1"
+     ],
+     "series": [
+      {
+       "nom": "α",
+       "valeurs": [
+        0,
+        2.66,
+        5.32,
+        7.98,
+        10.64,
+        13.3
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "α",
+      "unite": "°",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Concentration c (g/mL)"
+     },
+     "valeurs": false,
+     "source": "Loi de Biot"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "biot",
+     "enonce": "Touche le point de la droite qui correspond à une concentration de 0,08 g/mL.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Repère l’abscisse 0,08 sur l’axe horizontal.",
+     "explication": "Le point d’abscisse 0,08 g/mL est à α ≈ **10,6°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’angle α pour c = 0,06 g/mL.",
+     "reponse": 8,
+     "tolerance": 0.3,
+     "unite": "°",
+     "aide": "Regarde la hauteur du point d’abscisse 0,06.",
+     "explication": "α = 66,5 × 2,0 × 0,06 ≈ **8,0°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut le produit [α] × ℓ, en °·mL·g⁻¹ ? C’est le coefficient directeur de la droite.",
+     "reponse": 133,
+     "tolerance": 2,
+     "unite": "°·mL·g⁻¹",
+     "aide": "Multiplie 66,5 par 2,0, ou divise α par c pour un point.",
+     "explication": "66,5 × 2,0 = **133 °·mL·g⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le même tube, une boisson sucrée donne α = + 3,99°. Quelle est sa concentration en saccharose, en g/L ?",
+     "reponse": 30,
+     "tolerance": 0.5,
+     "unite": "g/L",
+     "aide": "c = α ÷ 133 en g/mL ; multiplie par 1 000 pour obtenir des g/L.",
+     "explication": "c = 3,99 ÷ 133 = 0,030 g/mL = **30 g/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On refait la mesure de la même boisson avec un tube de 1,0 dm. Que devient α ?",
+     "options": [
+      "Il est divisé par deux, car α est proportionnelle à la longueur ℓ",
+      "Il reste identique, car α ne dépend que de la concentration",
+      "Il est multiplié par deux, car un tube plus court concentre la solution",
+      "Il devient nul, car la lumière traverse trop peu de solution"
+     ],
+     "reponse": 0,
+     "aide": "Relis la loi : α = [α] × ℓ × c.",
+     "explication": "α = [α] × ℓ × c : pour c fixé, **diviser ℓ par 2 divise α par 2**, soit 2,0°."
+    }
+   ]
+  },
+  {
+   "chapitre": "f12e38d2-1bbb-58a3-9054-034ff1d1fda1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel énantiomère domine ?",
+   "competence": "calculer",
+   "situation": "Une chimiste prépare trois mélanges de deux énantiomères (+) et (−), tous à la même concentration totale. L’énantiomère (+) pur donne α = + 20,0°. On mesure l’angle de chaque mélange dans le même tube.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Angles mesurés",
+     "colonnes": [
+      "Mélange",
+      "α mesuré (°)"
+     ],
+     "lignes": [
+      [
+       "M1",
+       "+ 15,0"
+      ],
+      [
+       "M2",
+       "0,0"
+      ],
+      [
+       "M3",
+       "− 5,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche le mélange racémique.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Un racémique a deux énantiomères en parts égales : leurs effets s’annulent.",
+     "explication": "Le mélange **M2** ne dévie pas la lumière : c’est un racémique, d’excès énantiomérique 0 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’excès énantiomérique de M1, en %.",
+     "reponse": 75,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "ee = |α(mélange) ÷ α(pur)| × 100.",
+     "explication": "ee = 15,0 ÷ 20,0 × 100 = **75 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de M1 est l’énantiomère (+) ?",
+     "reponse": 87.5,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "Si ee = 75 %, la moitié des 25 % restants s’ajoute aux 75 %, en valeur relative : (100 + ee) ÷ 2.",
+     "explication": "(100 + 75) ÷ 2 = **87,5 %** de (+) et 12,5 % de (−)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel énantiomère est majoritaire dans M3 ?",
+     "options": [
+      "L’énantiomère (−), car α est négatif et le mélange dévie dans le sens de (−)",
+      "L’énantiomère (+), car α a la même valeur absolue que celle d’un racémique",
+      "Aucun, car un angle négatif indique un mélange racémique sans excès",
+      "L’énantiomère (+), car le pur (+) donne un angle plus grand que M3"
+     ],
+     "reponse": 0,
+     "aide": "Le signe de α donne le sens de la déviation du mélange.",
+     "explication": "α = −5,0° : le mélange dévie comme (−), donc **(−) est majoritaire**, avec ee = 25 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de M3 est l’énantiomère (−) ?",
+     "reponse": 62.5,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "ee = 25 % : le majoritaire représente (100 + ee) ÷ 2.",
+     "explication": "(100 + 25) ÷ 2 = **62,5 %** de (−) et 37,5 % de (+)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ta convocation en SPCL",
+   "competence": "lire-tableau",
+   "situation": "Inès reçoit la convocation de l’épreuve de spécialité SPCL du bac STL. Elle veut comprendre comment ses deux parties se combinent.",
+   "documents": [
+    {
+     "id": "convocation",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Épreuve de SPCL",
+     "sousTitre": "Bac STL — session 2027",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "Partie écrite · 3 h",
+       "valeur": "coeff. 7",
+       "id": "ecrit"
+      },
+      {
+       "texte": "Partie pratique (ECE) · 3 h",
+       "valeur": "coeff. 9",
+       "id": "ece"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Total",
+       "valeur": "coeff. 16",
+       "gras": true
+      }
+     ],
+     "pied": "Notes sur 20 pour chaque partie",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "convocation",
+     "enonce": "Touche la partie qui a le plus grand coefficient.",
+     "reponse": [
+      "ece"
+     ],
+     "aide": "Compare les deux coefficients.",
+     "explication": "L’**ECE** pèse 9, contre 7 pour l’écrit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’épreuve représente l’ECE, en % du coefficient total, arrondie à l’unité ?",
+     "reponse": 56,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "Divise 9 par 16.",
+     "explication": "9 ÷ 16 = 0,5625, soit environ **56 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Inès a 12/20 à l’écrit et 15/20 à l’ECE. Quelle est sa note sur 20 à l’épreuve, arrondie au centième ?",
+     "reponse": 13.69,
+     "tolerance": 0.02,
+     "unite": "/20",
+     "aide": "Moyenne pondérée : (12 × 7 + 15 × 9) ÷ 16.",
+     "explication": "(84 + 135) ÷ 16 = 219 ÷ 16 ≈ **13,69 / 20**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range, dans l’ordre, les réflexes du jour de l’ECE.",
+     "items": [
+      "Lire le sujet en entier avant de toucher au matériel",
+      "Repérer les appels à l’examinateur",
+      "Mettre blouse et lunettes selon les pictogrammes",
+      "Noter les mesures au fur et à mesure avec leurs unités",
+      "Conclure par un résultat avec son incertitude"
+     ],
+     "aide": "On lit avant de manipuler, on se protège avant de toucher aux produits, on conclut à la fin.",
+     "explication": "Lecture, repérage des appels, protection, mesures notées au fil de l’eau, puis **résultat avec incertitude**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet de bord de Léa",
+   "competence": "analyser-document",
+   "situation": "Léa passe l’ECE : dosage spectrophotométrique du colorant d’une boisson. Son examinateur relève ses gestes. Elle doit aussi manipuler de l’acide sulfurique concentré, dont le flacon porte le pictogramme SGH05.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Carnet de bord",
+     "colonnes": [
+      "Heure",
+      "Geste observé"
+     ],
+     "lignes": [
+      [
+       "9 h 05",
+       "Elle lit la fiche technique du spectrophotomètre"
+      ],
+      [
+       "9 h 20",
+       "Elle justifie la longueur d’onde de travail"
+      ],
+      [
+       "9 h 40",
+       "Elle prépare les étalons, blouse et lunettes mises"
+      ],
+      [
+       "10 h 30",
+       "Elle estime l’incertitude et la compare à la référence"
+      ],
+      [
+       "10 h 50",
+       "Elle présente ses choix à l’examinateur"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque compétence de l’ECE à un geste de Léa.",
+     "paires": [
+      [
+       "S’approprier",
+       "Lire la fiche technique du matériel"
+      ],
+      [
+       "Analyser",
+       "Justifier la longueur d’onde de travail"
+      ],
+      [
+       "Réaliser",
+       "Préparer les étalons en sécurité"
+      ],
+      [
+       "Valider",
+       "Estimer l’incertitude et la comparer à la référence"
+      ],
+      [
+       "Communiquer",
+       "Présenter ses choix à l’examinateur"
+      ]
+     ],
+     "aide": "Relie le verbe de chaque compétence à l’action concrète qui lui ressemble.",
+     "explication": "S’approprier : lire la documentation ; analyser : justifier ; réaliser : manipuler en sécurité ; valider : incertitude et cohérence ; communiquer : expliquer."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche l’heure à laquelle Léa valide son résultat.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Valider, c’est estimer l’incertitude et juger la cohérence.",
+     "explication": "À **10 h 30**, elle estime l’incertitude et compare à la référence : c’est valider."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle protection ajouter à la blouse pour manipuler l’acide sulfurique concentré (SGH05) ?",
+     "options": [
+      "Des gants et des lunettes de protection, car le produit est corrosif",
+      "Un masque filtrant, car le produit est inflammable et émet des vapeurs",
+      "Rien de plus, car SGH05 signale seulement un danger pour l’environnement",
+      "Des gants seulement, car une projection dans l’œil n’a pas de gravité"
+     ],
+     "reponse": 0,
+     "aide": "SGH05 est le pictogramme de la corrosion : il attaque la peau et les yeux.",
+     "explication": "SGH05 signale un produit **corrosif** : gants et lunettes en plus de la blouse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’épreuve dure 3 h et a commencé à 9 h 00. Il est 10 h 50 : combien de minutes restent-ils à Léa ?",
+     "reponse": 70,
+     "unite": "min",
+     "aide": "L’épreuve finit à 12 h 00.",
+     "explication": "De 10 h 50 à 12 h 00 : **70 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1649d3d5-db11-5f66-8fe6-21f1f3cb2f9d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un projet qui prend du retard",
+   "competence": "modeliser",
+   "situation": "Une équipe de trois élèves mène son projet de SPCL sur 36 semaines : 40 h en tout, dont 60 % consacrées à l’expérimentation. Un capteur tombe en panne à la semaine 16 et il faut attendre trois semaines pour en recevoir un autre.",
+   "documents": [
+    {
+     "id": "planning",
+     "type": "frise",
+     "titre": "Planning du projet (en semaines)",
+     "debut": 0,
+     "fin": 36,
+     "pas": 4,
+     "periodes": [
+      {
+       "id": "doc",
+       "debut": 0,
+       "fin": 6,
+       "nom": "Documentation"
+      },
+      {
+       "id": "strat",
+       "debut": 6,
+       "fin": 10,
+       "nom": "Stratégie"
+      },
+      {
+       "id": "exp",
+       "debut": 10,
+       "fin": 24,
+       "nom": "Expérimentation"
+      },
+      {
+       "id": "ana",
+       "debut": 24,
+       "fin": 28,
+       "nom": "Analyse"
+      },
+      {
+       "id": "red",
+       "debut": 28,
+       "fin": 32,
+       "nom": "Rédaction"
+      },
+      {
+       "id": "oral",
+       "debut": 32,
+       "fin": 36,
+       "nom": "Oral"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "visite",
+       "date": 3,
+       "nom": "Visite d’un labo"
+      },
+      {
+       "id": "panne",
+       "date": 16,
+       "nom": "Panne du capteur"
+      },
+      {
+       "id": "rapport",
+       "date": 32,
+       "nom": "Remise du rapport"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "planning",
+     "enonce": "Touche la période pendant laquelle la panne du capteur se produit.",
+     "reponse": [
+      "exp"
+     ],
+     "aide": "Repère la semaine 16 et regarde quelle période la contient.",
+     "explication": "La semaine 16 est dans la période d’**expérimentation** (semaines 10 à 24)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de semaines dure l’expérimentation prévue ?",
+     "reponse": 14,
+     "unite": "semaines",
+     "aide": "Fin moins début de la période.",
+     "explication": "24 − 10 = **14 semaines**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de semaines restent pour mesurer après la remise en route du capteur, avant la fin prévue de l’expérimentation ?",
+     "reponse": 5,
+     "unite": "semaines",
+     "aide": "De la semaine 16 à la semaine 24, retire les trois semaines d’attente.",
+     "explication": "24 − 16 = 8 semaines, moins 3 d’attente : **5 semaines** de mesures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les mesures occupent 60 % des 40 h, réparties sur les 14 semaines prévues. Combien d’heures par semaine en moyenne, arrondi au dixième ?",
+     "reponse": 1.7,
+     "tolerance": 0.05,
+     "unite": "h",
+     "aide": "60 % de 40 h, puis divise par 14.",
+     "explication": "0,60 × 40 = 24 h ; 24 ÷ 14 ≈ **1,7 h par semaine**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la meilleure réaction de l’équipe face à la panne ?",
+     "options": [
+      "Replanifier en réduisant le nombre de séries de mesures et justifier ce choix dans le rapport",
+      "Attendre le nouveau capteur sans rien changer, en décalant l’oral de trois semaines",
+      "Reprendre des mesures anciennes pour boucher le trou, sans le signaler dans le rapport",
+      "Abandonner l’expérimentation et rédiger le rapport uniquement avec la documentation"
+     ],
+     "reponse": 0,
+     "aide": "Le projet demande de planifier, puis d’adapter ; et d’expliquer ses choix.",
+     "explication": "**Adapter** le plan et le justifier fait partie de la démarche de projet. On ne cache pas un incident, on le gère."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle verrerie choisir ?",
+   "competence": "lire-tableau",
+   "situation": "Pour préparer une solution, Clara hésite entre plusieurs verreries. Chaque verrerie porte une tolérance ± Δ. Pour une seule mesure, l’incertitude-type de type B vaut u = Δ ÷ √3.",
+   "documents": [
+    {
+     "id": "verrerie",
+     "type": "tableau",
+     "titre": "Tolérances des verreries",
+     "colonnes": [
+      "Verrerie",
+      "Volume",
+      "Tolérance ± Δ"
+     ],
+     "lignes": [
+      [
+       "Pipette jaugée",
+       "10,00 mL",
+       "0,02 mL"
+      ],
+      [
+       "Éprouvette graduée",
+       "25 mL",
+       "0,5 mL"
+      ],
+      [
+       "Fiole jaugée",
+       "100,0 mL",
+       "0,08 mL"
+      ],
+      [
+       "Burette graduée",
+       "25,00 mL",
+       "0,05 mL"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs usuelles arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’incertitude-type u de la pipette jaugée, en mL (arrondie à trois décimales).",
+     "reponse": 0.012,
+     "tolerance": 0.001,
+     "unite": "mL",
+     "aide": "u = 0,02 ÷ √3, avec √3 ≈ 1,73.",
+     "explication": "u = 0,02 ÷ 1,73 ≈ **0,012 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’incertitude-type relative de l’éprouvette graduée, en % (arrondie au dixième).",
+     "reponse": 1.2,
+     "tolerance": 0.05,
+     "unite": "%",
+     "aide": "u = 0,5 ÷ √3, puis divise par 25 et multiplie par 100.",
+     "explication": "u ≈ 0,29 mL ; 0,29 ÷ 25 ≈ 0,0116, soit **1,2 %**."
+    },
+    {
+     "type": "zone",
+     "document": "verrerie",
+     "enonce": "Touche la verrerie dont la tolérance relative Δ ÷ volume est la plus petite.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Calcule Δ ÷ volume pour chaque ligne : 0,2 %, 2 %, ?, 0,2 %.",
+     "explication": "Fiole jaugée : 0,08 ÷ 100 = 0,08 %, contre 0,2 %, 2 % et 0,2 % : c’est la plus précise en valeur relative."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un prélèvement à l’éprouvette dégrade-t-il le résultat d’un titrage ?",
+     "options": [
+      "Son incertitude relative est beaucoup plus grande que celle des autres sources, elle domine",
+      "Son incertitude relative est nulle, donc les autres sources deviennent dominantes",
+      "Elle ajoute une erreur aléatoire qui disparaît dès qu’on répète trois fois la mesure",
+      "Elle modifie la concentration du titrant, ce qui décale le volume équivalent"
+     ],
+     "reponse": 0,
+     "aide": "On additionne les carrés des incertitudes relatives : la plus grande domine.",
+     "explication": "Avec 1,2 % contre 0,1 % pour les autres sources, l’éprouvette **domine** l’incertitude finale."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq titrages, une incertitude",
+   "competence": "calculer",
+   "situation": "Nolan répète cinq fois le même titrage et note le volume équivalent. Il veut exprimer son résultat avec une incertitude de type A : u = s ÷ √n, où s est l’écart-type des mesures.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Volumes équivalents mesurés",
+     "colonnes": [
+      "Essai",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "V_E (mL)",
+       "12,3",
+       "12,4",
+       "12,5",
+       "12,4",
+       "12,9"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche la mesure qui s’écarte le plus des autres.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Compare les cinq valeurs : laquelle est isolée ?",
+     "explication": "Le 5ᵉ essai, **12,9 mL**, s’écarte de 0,4 mL de la moyenne, contre 0,2 mL au plus pour les autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq volumes, en mL.",
+     "reponse": 12.5,
+     "tolerance": 0.01,
+     "unite": "mL",
+     "aide": "Additionne les cinq valeurs et divise par 5.",
+     "explication": "(12,3 + 12,4 + 12,5 + 12,4 + 12,9) ÷ 5 = **12,5 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’écart-type vaut s = √(Σ(xᵢ − x̄)² ÷ 4). Donne s en mL, arrondi au centième.",
+     "reponse": 0.23,
+     "tolerance": 0.005,
+     "unite": "mL",
+     "aide": "Les écarts à la moyenne valent −0,2 ; −0,1 ; 0 ; −0,1 ; +0,4. Élève-les au carré, additionne, divise par 4.",
+     "explication": "Somme des carrés = 0,22 ; s = √(0,22 ÷ 4) ≈ **0,23 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’incertitude-type de type A, u = s ÷ √5, en mL, arrondie au centième.",
+     "reponse": 0.1,
+     "tolerance": 0.005,
+     "unite": "mL",
+     "aide": "Divise 0,2345 par √5, soit environ 2,24.",
+     "explication": "u = 0,2345 ÷ 2,236 ≈ **0,10 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La valeur de référence est 12,6 mL. Calcule z = |x − x_réf| ÷ u, arrondi au dixième.",
+     "reponse": 1,
+     "tolerance": 0.1,
+     "aide": "x = 12,5 mL et u ≈ 0,10 mL.",
+     "explication": "z = 0,1 ÷ 0,10 ≈ **1,0** : z ≤ 2, le résultat est compatible avec la référence."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b6b2048-27f4-5cdc-8c4d-f4264c9cb325",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle source d’erreur attaquer ?",
+   "competence": "modeliser",
+   "situation": "Un titrage donne c = c₁ × V_E ÷ V₀. Pour améliorer son protocole, Sacha dresse l’inventaire des incertitudes-types de chaque grandeur, puis les combine avec u(c) ÷ c = √[(u(c₁)÷c₁)² + (u(V_E)÷V_E)² + (u(V₀)÷V₀)²].",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Les trois sources",
+     "colonnes": [
+      "Grandeur",
+      "Valeur",
+      "Incertitude-type"
+     ],
+     "lignes": [
+      [
+       "c₁ (titrant)",
+       "0,200 mol/L",
+       "0,001 mol/L"
+      ],
+      [
+       "V_E (volume équivalent)",
+       "15,2 mL",
+       "0,10 mL"
+      ],
+      [
+       "V₀ (prise d’essai)",
+       "20,00 mL",
+       "0,03 mL"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration c de la solution titrée, en mol/L.",
+     "reponse": 0.152,
+     "tolerance": 0.001,
+     "unite": "mol/L",
+     "aide": "c = 0,200 × 15,2 ÷ 20,00.",
+     "explication": "c = 0,200 × 15,2 ÷ 20,00 = **0,152 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’incertitude relative de V_E, en % (arrondie au centième).",
+     "reponse": 0.66,
+     "tolerance": 0.01,
+     "unite": "%",
+     "aide": "u(V_E) ÷ V_E = 0,10 ÷ 15,2.",
+     "explication": "0,10 ÷ 15,2 ≈ 0,0066, soit **0,66 %**. Celle de c₁ vaut 0,50 % et celle de V₀ 0,15 %."
+    },
+    {
+     "type": "zone",
+     "document": "sources",
+     "enonce": "Touche la grandeur dont l’incertitude relative est la plus grande.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Calcule u ÷ valeur pour chaque ligne : 0,50 % pour c₁ et 0,15 % pour V₀.",
+     "explication": "Le volume équivalent, à 0,66 %, domine : c₁ est à 0,50 % et V₀ à 0,15 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combine les trois incertitudes relatives 0,50 % ; 0,66 % ; 0,15 % et donne u(c) ÷ c en %, arrondi au centième.",
+     "reponse": 0.84,
+     "tolerance": 0.01,
+     "unite": "%",
+     "aide": "Additionne les carrés 0,25 ; 0,433 ; 0,0225 puis prends la racine carrée.",
+     "explication": "√(0,25 + 0,433 + 0,0225) ≈ 0,84 : **0,84 %**. On n’additionne jamais directement les incertitudes relatives."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne l’incertitude-type u(c) en mol/L, arrondie à quatre décimales.",
+     "reponse": 0.0013,
+     "tolerance": 0.0001,
+     "unite": "mol/L",
+     "aide": "u(c) = c × 0,0084.",
+     "explication": "u(c) = 0,152 × 0,0084 ≈ **0,0013 mol/L** : c = 0,1520 ± 0,0013 mol/L."
+    }
+   ]
+  }
+ ]
+}

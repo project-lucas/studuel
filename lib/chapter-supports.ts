@@ -1,6 +1,6 @@
-// Les supports d'un chapitre — Cours · Fiche · Flashcards · Quiz · Exercice ·
-// Moi vs IA, plus « Mes erreurs » les jours où il y en a — choisis et étiquetés
-// au même endroit pour les TROIS écrans qui les proposent :
+// Les supports d'un chapitre — Cours · Fiche · Quiz · Exercice · Moi vs IA,
+// plus « Mes erreurs » les jours où il y en a — choisis et étiquetés au même
+// endroit pour les TROIS écrans qui les proposent :
 //
 //  1. l'écran de chapitre, où l'élève choisit par quoi il commence (rien n'est
 //     encore lu : chaque support pointe le premier de son genre) ;
@@ -23,8 +23,6 @@ import {
   erreursMeta,
   exerciceBadge,
   exerciceMeta,
-  flashcardsBadge,
-  flashcardsMeta,
   quizBadge,
   quizMeta,
   type SupportChip,
@@ -35,14 +33,12 @@ export type SupportLesson = {
   /** Titre de la leçon — l'état affiché sous la pastille « Cours ». */
   title: string
   /**
-   * Quiz qui alimente les supports de la leçon : le sien, ou celui emprunté au
-   * chapitre (la base compte 564 leçons pour 295 quiz — cf. lib/lesson-quiz).
+   * Quiz rattaché à la leçon : le sien, ou à défaut le premier du chapitre
+   * (seul un quiz PROPRE est proposé en tuile, cf. `ownQuiz`).
    */
   quizId: string | null
-  /** Nombre de questions du quiz retenu — 0 = aucun support jouable. */
+  /** Nombre de questions du quiz retenu — 0 = aucun quiz jouable. */
   questionCount: number
-  /** Items de la file SRS du jour rattachés à ce quiz. */
-  dueCount: number
   /** Meilleur essai du quiz PROPRE à la leçon, `null` s'il n'a jamais été joué. */
   best: { score: number; total: number; ratio: number } | null
   /** Le quiz est-il celui de la leçon (`false` = emprunté au chapitre) ? */
@@ -85,11 +81,12 @@ export type ChapterSupportsInput = {
 }
 
 /**
- * Les supports du chapitre, dans l'ordre des trois groupes : APPRENDRE (cours,
- * fiche), MÉMORISER (flashcards, mes erreurs s'il y en a), SE TESTER (quiz,
- * exercice, moi vs IA). C'est `groupSupports` qui les range à l'écran ; ici
- * on les émet déjà dans cet ordre pour que les rendus en ligne (fiche dépliée)
- * le suivent sans rien savoir des groupes.
+ * Les supports du chapitre, dans l'ordre des deux groupes : APPRENDRE (cours,
+ * fiche), SE TESTER (quiz, exercice, mes erreurs s'il y en a, moi vs IA). Les
+ * flashcards n'en font plus partie (01/10/2026) : elles rejouaient les
+ * questions du quiz sans leurs propositions. C'est `groupSupports` qui les
+ * range à l'écran ; ici on les émet déjà dans cet ordre pour que les rendus en
+ * ligne (fiche dépliée) le suivent sans rien savoir des groupes.
  *
  * `focusLessonId` (pied de cours) épingle la leçon que l'élève vient de lire :
  * ses supports à elle, pas ceux d'une autre. Sans lui (onglet « Mode de jeu »),
@@ -138,42 +135,6 @@ export function buildChapterSupports(
     })
   }
 
-  // Flashcards : la leçon lue si elle a des cartes, sinon la première qui en a.
-  const cardsLesson =
-    (focus && focus.questionCount > 0 ? focus : null) ??
-    lessons.find((l) => l.questionCount > 0) ??
-    null
-  if (cardsLesson) {
-    chips.push({
-      kind: 'flashcards',
-      label: SUPPORT_LABELS.flashcards,
-      meta: flashcardsMeta(cardsLesson.questionCount, cardsLesson.dueCount),
-      badge: flashcardsBadge(cardsLesson.questionCount, cardsLesson.dueCount),
-      href: `/reviser/${subjectSlug}/${chapterId}/${cardsLesson.id}/flashcards`,
-      // ⚠️ JAMAIS « FAIT », ET C'EST VOLONTAIRE. On serait tenté de cocher
-      // quand plus rien n'est dû (`dueCount === 0`) — mais un paquet JAMAIS
-      // OUVERT ne doit rien non plus, et les deux se ressemblent d'ici. Cocher
-      // sur cette base afficherait « à jour » sur des cartes qu'on n'a jamais
-      // vues. Le badge, lui, dit l'état sans mentir : « 12 cartes » quand rien
-      // n'est dû, « 4 à revoir » sinon.
-      done: false,
-    })
-  }
-
-  // Mes erreurs : la tuile n'apparaît QUE s'il y a des notions à corriger.
-  // Une tuile « 0 à revoir » occuperait une place pour ne rien proposer — et
-  // c'est le seul support qui puisse légitimement ne pas exister ce jour-là.
-  if (erreurs > 0) {
-    chips.push({
-      kind: 'erreurs',
-      label: SUPPORT_LABELS.erreurs,
-      meta: erreursMeta(erreurs),
-      badge: erreursBadge(erreurs),
-      href: `/reviser/revoir?matiere=${subjectSlug}&chapitre=${chapterId}`,
-      done: false,
-    })
-  }
-
   // Quiz : celui de la leçon lue, sinon le premier du chapitre qui n'est pas
   // déjà acquis — reprendre un quiz à 10/10 n'apprend plus rien.
   const quizLesson =
@@ -214,6 +175,21 @@ export function buildChapterSupports(
     premium: true,
     locked: !exercice.premium,
   })
+
+  // Mes erreurs : la tuile n'apparaît QUE s'il y a des notions à corriger.
+  // Une tuile « 0 à revoir » occuperait une place pour ne rien proposer — et
+  // c'est le seul support qui puisse légitimement ne pas exister ce jour-là.
+  // Elle suit le quiz et l'exercice : on y rejoue ce qu'on a raté en se testant.
+  if (erreurs > 0) {
+    chips.push({
+      kind: 'erreurs',
+      label: SUPPORT_LABELS.erreurs,
+      meta: erreursMeta(erreurs),
+      badge: erreursBadge(erreurs),
+      href: `/reviser/revoir?matiere=${subjectSlug}&chapitre=${chapterId}`,
+      done: false,
+    })
+  }
 
   // Moi vs IA : le BLOC RÉSERVÉ. Pas de page derrière — la tuile dit
   // « Bientôt » et ne mène nulle part. Elle tient sa place dans « Se tester »

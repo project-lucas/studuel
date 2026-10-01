@@ -1,5 +1,6 @@
 import type { Subject } from '@/lib/types'
 import { GRADE_LEVELS } from '@/lib/types'
+import { programmeDeClasse } from '@/lib/programme-classes'
 import { GRADE_SHORT_LABELS } from '@/lib/grades'
 import { isPortraitKey, type PortraitKey } from '@/lib/portraits'
 
@@ -386,16 +387,56 @@ export function destinationApresPlan(answers: OnboardingAnswers): string {
   return premiereMission(answers).destination
 }
 
+// Les quatre rythmes de l'écran « objectif quotidien ». Chacun a SA flamme
+// (la mascotte de la série, qui grandit avec l'effort) et SA phrase, dite par
+// la flamme dans une bulle : on ne choisit pas un nombre de minutes, on
+// choisit à quoi ressemblera sa semaine. Un seul rythme est conseillé.
 export const DAILY_GOALS: {
   minutes: DailyGoalMinutes
   label: string
   hint: string
+  flamme: string
+  pitch: string
+  conseille?: boolean
 }[] = [
-  { minutes: 3, label: 'Détente', hint: '3 min / jour' },
-  { minutes: 10, label: 'Régulier', hint: '10 min / jour' },
-  { minutes: 15, label: 'Sérieux', hint: '15 min / jour' },
-  { minutes: 30, label: 'Intense', hint: '30 min / jour' },
+  {
+    minutes: 3,
+    label: 'Détente',
+    hint: '3 min / jour',
+    flamme: '/images/mascotte/flamme-1-etincelle.webp',
+    pitch: 'Une partie dans le bus, et ta série reste allumée.',
+  },
+  {
+    minutes: 10,
+    label: 'Régulier',
+    hint: '10 min / jour',
+    flamme: '/images/mascotte/flamme-2-vive.webp',
+    pitch: 'Assez pour progresser, assez court pour tenir. Le bon rythme !',
+    conseille: true,
+  },
+  {
+    minutes: 15,
+    label: 'Sérieux',
+    hint: '15 min / jour',
+    flamme: '/images/mascotte/flamme-3-rayonnante.webp',
+    pitch: 'Un chapitre bouclé chaque semaine. Tes notes vont le sentir.',
+  },
+  {
+    minutes: 30,
+    label: 'Intense',
+    hint: '30 min / jour',
+    flamme: '/images/mascotte/flamme-4-brasier.webp',
+    pitch: 'Mode examen. Parfait avant le brevet ou le bac.',
+  },
 ]
+
+/** L'objectif du jour tenu trente jours, en heures lisibles (« 7 h 30 »). */
+export function heuresParMois(minutesParJour: number): string {
+  const total = minutesParJour * 30
+  const heures = Math.floor(total / 60)
+  const minutes = total % 60
+  return minutes === 0 ? `${heures} h` : `${heures} h ${minutes}`
+}
 
 const DAILY_GOAL_MINUTES: DailyGoalMinutes[] = [3, 10, 15, 30]
 
@@ -502,21 +543,70 @@ export function placementFeedback(placement: PlacementResult): PlacementFeedback
 
 // --- Matières ---------------------------------------------------------------
 
-// Matières proposées pour un niveau donné.
+// Les matières d'une classe, en deux sections : celles que l'élève a
+// forcément (cochées d'office) et celles qui dépendent de ses choix —
+// deuxième langue, spécialités, options (proposées, décochées). Une matière
+// n'apparaît que si le programme officiel de la classe la prévoit
+// (lib/programme-classes) ET que l'app a du contenu à ce niveau
+// (`levels`). La culture générale n'est jamais proposée : elle se débloque
+// plus tard dans l'app.
+export function sectionsMatieres(
+  subjects: Subject[],
+  grade: string | null,
+): { obligatoires: Subject[]; aChoisir: Subject[] } {
+  const programme = programmeDeClasse(grade)
+  if (!grade || !programme) return { obligatoires: [], aChoisir: [] }
+  const duNiveau = subjects.filter(
+    (s) => s.category !== 'culture' && s.levels.includes(grade),
+  )
+  return {
+    obligatoires: duNiveau.filter((s) => programme.obligatoires.includes(s.slug)),
+    // Dans l'ordre du programme : les spécialités d'abord, puis langues et
+    // options — et non l'ordre alphabétique, qui mêlait Allemand et Maths.
+    aChoisir: duNiveau
+      .filter((s) => programme.aChoisir.includes(s.slug))
+      .sort(
+        (a, b) =>
+          programme.aChoisir.indexOf(a.slug) - programme.aChoisir.indexOf(b.slug),
+      ),
+  }
+}
+
+// Matières proposées pour un niveau donné (obligatoires puis à choisir, dans
+// l'ordre du catalogue).
 export function subjectsForGrade(
   subjects: Subject[],
   grade: string | null,
 ): Subject[] {
-  if (!grade) return []
-  return subjects.filter((s) => s.levels.includes(grade))
+  const { obligatoires, aChoisir } = sectionsMatieres(subjects, grade)
+  const proposees = new Set([...obligatoires, ...aChoisir])
+  return subjects.filter((s) => proposees.has(s))
 }
 
-// Nouvelle classe → tout coché par défaut (l'élève décoche ses options).
+// Nouvelle classe → seules les matières obligatoires sont cochées ; l'élève
+// coche lui-même sa LV2, ses spécialités et ses options.
 export function defaultSelectedForGrade(
   subjects: Subject[],
   grade: string,
 ): string[] {
-  return subjectsForGrade(subjects, grade).map((s) => s.slug)
+  return sectionsMatieres(subjects, grade).obligatoires.map((s) => s.slug)
+}
+
+// Changement de classe : la sélection repart des obligatoires de la NOUVELLE
+// classe, et ne garde des anciens choix que ceux qu'elle propose encore
+// (une spécialité conservée de 1re en Tle, une LV2). Sans cela, un élève
+// passé de 4e en Terminale gardait Technologie et Français, et n'avait ni
+// Philosophie ni Grand oral.
+export function selectionPourClasse(
+  subjects: Subject[],
+  grade: string,
+  ancienne: readonly string[],
+): string[] {
+  const { obligatoires, aChoisir } = sectionsMatieres(subjects, grade)
+  return [
+    ...obligatoires.map((s) => s.slug),
+    ...aChoisir.filter((s) => ancienne.includes(s.slug)).map((s) => s.slug),
+  ]
 }
 
 // La ligne de réassurance sous la grille des classes (« 8 matières · tout le
@@ -527,7 +617,7 @@ export function gradeReassurance(
   grade: string | null,
 ): string | null {
   if (!grade) return null
-  const n = subjectsForGrade(subjects, grade).length
+  const n = sectionsMatieres(subjects, grade).obligatoires.length
   if (n === 0) return null
   const label = GRADE_SHORT_LABELS[grade as keyof typeof GRADE_SHORT_LABELS] ?? grade
   return `${n} matière${n > 1 ? 's' : ''} · tout le programme de ${label}`

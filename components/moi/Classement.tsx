@@ -17,6 +17,7 @@ import {
 } from '@/lib/moi/classement'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
+import EnTeteBloc from '@/components/moi/EnTeteBloc'
 
 // -----------------------------------------------------------------------------
 // « TON CLASSEMENT » — LE bloc de l'onglet Moi.
@@ -70,7 +71,7 @@ export default function Classement({
 
   return (
     <section aria-label="Ton classement" className="carte p-4">
-      <h2 className="titre-section">Ton classement</h2>
+      <EnTeteBloc titre="Ton classement" />
 
       <div
         role="group"

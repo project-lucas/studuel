@@ -5,7 +5,7 @@
 //   • les gemmes 💎 (ici) déverrouillent les SUPPORTS ÉCRITS d'un chapitre —
 //     sa carte mentale et les fiches de révision de ses leçons — à vie.
 //
-// Ce que la gemme n'ouvre PAS, volontairement : les quiz et flashcards premium.
+// Ce que la gemme n'ouvre PAS, volontairement : les quiz premium.
 // Ils restent la contrepartie de l'abonnement, et ils sont gatés au niveau RLS
 // (`quiz_questions_select_gated`). Les ouvrir à une monnaie qui se gagne
 // gratuitement en invitant des amis reviendrait à distribuer Studuel+ — la

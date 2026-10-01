@@ -1,0 +1,2873 @@
+{
+ "niveau": "Tle",
+ "matiere": "chimie-biologie-physiopathologie",
+ "exercices": [
+  {
+   "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire le message d’un gène",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire étudie un court fragment de gène. Il donne le brin transcrit de l’ADN et un extrait du code génétique pour retrouver la protéine fabriquée.",
+   "documents": [
+    {
+     "id": "adn",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fragment de gène étudié",
+     "sousTitre": "Brin transcrit, lu de gauche à droite",
+     "emoji": "🧬",
+     "lignes": [
+      {
+       "texte": "TAC  CTT  AAA  ATT",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Quatre triplets de bases"
+      }
+     ],
+     "pied": "Fragment imaginé pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "code",
+     "type": "tableau",
+     "titre": "Extrait du code génétique",
+     "colonnes": [
+      "Codon d’ARNm",
+      "Signification"
+     ],
+     "lignes": [
+      [
+       "AUG",
+       "Méthionine (début de lecture)"
+      ],
+      [
+       "GAA",
+       "Acide glutamique"
+      ],
+      [
+       "UUU",
+       "Phénylalanine"
+      ],
+      [
+       "GUA",
+       "Valine"
+      ],
+      [
+       "UAA",
+       "Codon stop"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extrait simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "code",
+     "enonce": "Touche la case qui indique le codon stop, celui qui met fin à la traduction.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Un codon stop ne code aucun acide aminé : repère la ligne qui le dit.",
+     "explication": "Le codon **UAA** est un codon stop : la traduction s’arrête et aucun acide aminé n’est ajouté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris l’ARNm obtenu par transcription du brin donné, triplet après triplet.",
+     "texte": "___  ___  ___  ___",
+     "reponses": [
+      [
+       "AUG"
+      ],
+      [
+       "GAA"
+      ],
+      [
+       "UUU"
+      ],
+      [
+       "UAA"
+      ]
+     ],
+     "banque": [
+      "AUG",
+      "GAA",
+      "UUU",
+      "UAA",
+      "TAC",
+      "CTT",
+      "GUA"
+     ],
+     "aide": "Dans l’ARN, la thymine T est remplacée par l’uracile U, et chaque base est complémentaire : T donne A, A donne U, C donne G.",
+     "explication": "TAC donne **AUG**, CTT donne **GAA**, AAA donne **UUU**, ATT donne **UAA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’acides aminés la protéine fabriquée à partir de cet ARNm comporte-t-elle ?",
+     "reponse": 3,
+     "unite": "acides aminés",
+     "aide": "Lis les quatre codons un par un : l’un d’eux ne code aucun acide aminé.",
+     "explication": "Les codons AUG, GAA et UUU donnent **3** acides aminés (méthionine, acide glutamique, phénylalanine) ; UAA arrête la lecture."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un seul acide aminé change",
+   "competence": "raisonner",
+   "situation": "Dans la drépanocytose, une petite modification du gène de la bêta-globine déforme les globules rouges. Le tableau compare l’allèle normal et l’allèle muté au même endroit du gène.",
+   "documents": [
+    {
+     "id": "mut",
+     "type": "tableau",
+     "titre": "Même endroit du gène, deux allèles",
+     "colonnes": [
+      "",
+      "Allèle normal",
+      "Allèle muté"
+     ],
+     "lignes": [
+      [
+       "Brin d’ADN transcrit",
+       "CTC",
+       "CAC"
+      ],
+      [
+       "ARNm",
+       "GAG",
+       "GUG"
+      ],
+      [
+       "Acide aminé",
+       "Acide glutamique",
+       "Valine"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extrait simplifié du gène de la bêta-globine"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de bases différencient le triplet normal du triplet muté sur le brin d’ADN ?",
+     "reponse": 1,
+     "unite": "base",
+     "aide": "Compare les deux triplets lettre par lettre.",
+     "explication": "CTC et CAC ne diffèrent que par la lettre du milieu : **1** base est changée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle ce type de mutation, qui change une base sans décaler la lecture ?",
+     "options": [
+      "Une substitution, qui remplace une base par une autre",
+      "Une insertion, qui ajoute une base dans le gène",
+      "Une délétion, qui retire une base du gène",
+      "Une duplication, qui recopie tout le gène"
+     ],
+     "reponse": 0,
+     "aide": "Le nombre de bases du triplet reste le même : une base en remplace une autre.",
+     "explication": "C’est une **substitution** : une base en remplace une autre. Comme le nombre de bases ne change pas, les codons suivants restent intacts."
+    },
+    {
+     "type": "zone",
+     "document": "mut",
+     "enonce": "Touche la case qui montre la conséquence de la mutation sur la protéine chez la personne malade.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La conséquence se lit dans la ligne des acides aminés, pas dans celle des bases.",
+     "explication": "Dans la ligne « Acide aminé », l’allèle muté donne de la **valine** à la place de l’acide glutamique : la bêta-globine est modifiée, donc l’hémoglobine aussi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette mutation change un seul acide aminé, pourtant elle a des conséquences graves. Pourquoi ?",
+     "options": [
+      "Parce que la forme de la protéine change et que l’hémoglobine déforme les globules rouges",
+      "Parce que tous les codons suivants sont décalés et que la protéine est raccourcie",
+      "Parce que la mutation supprime complètement la synthèse de toute autre protéine",
+      "Parce que la mutation modifie le nombre de chromosomes de toutes les cellules"
+     ],
+     "reponse": 0,
+     "aide": "Une protéine agit grâce à sa forme, qui dépend de ses acides aminés.",
+     "explication": "Un acide aminé différent modifie la forme de la protéine : l’hémoglobine anormale **déforme les globules rouges en faucille**. Il n’y a ni décalage ni perte de chromosome."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une maladie qui saute une génération",
+   "competence": "modeliser",
+   "situation": "Dans une famille, deux parents en bonne santé ont un enfant atteint de mucoviscidose. Un arbre généalogique et un échiquier de croisement permettent de comprendre ce qui s’est passé.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre généalogique de la famille",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 58,
+       "texte": "I",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 152,
+       "texte": "II",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        103,
+        53
+       ],
+       "a": [
+        217,
+        53
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        53
+       ],
+       "a": [
+        160,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        100
+       ],
+       "a": [
+        250,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        100
+       ],
+       "a": [
+        70,
+        135
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        100
+       ],
+       "a": [
+        160,
+        135
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        100
+       ],
+       "a": [
+        250,
+        135
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 77,
+       "y": 40,
+       "l": 26,
+       "h": 26,
+       "id": "pere",
+       "zone": true,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 53,
+       "r": 13,
+       "id": "mere",
+       "zone": true,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 148,
+       "r": 13,
+       "id": "fille1",
+       "zone": true,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 147,
+       "y": 135,
+       "l": 26,
+       "h": 26,
+       "id": "fils",
+       "zone": true,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 148,
+       "r": 13,
+       "id": "fille2",
+       "zone": true,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 200,
+       "texte": "Carré : garçon ou homme · rond : fille ou femme",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 216,
+       "texte": "Figure pleine : personne atteinte",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "ech",
+     "type": "tableau",
+     "titre": "Échiquier de croisement : père N//m × mère N//m",
+     "colonnes": [
+      "Gamètes",
+      "Père : N",
+      "Père : m"
+     ],
+     "lignes": [
+      [
+       "Mère : N",
+       "N//N",
+       "N//m"
+      ],
+      [
+       "Mère : m",
+       "N//m",
+       "m//m"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "N : allèle normal, m : allèle de la maladie"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche la personne atteinte de la maladie.",
+     "reponse": [
+      "fille1"
+     ],
+     "aide": "Une figure pleine représente une personne malade.",
+     "explication": "La **fille de la génération II** dont la figure est pleine est la seule personne atteinte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on déduire de l’allèle responsable de la maladie ?",
+     "options": [
+      "Il est récessif : il ne s’exprime qu’à deux exemplaires",
+      "Il est dominant : un seul exemplaire suffit à rendre malade",
+      "Il est porté uniquement par le chromosome Y des hommes",
+      "Il est apparu chez l’enfant sans être présent chez les parents"
+     ],
+     "reponse": 0,
+     "aide": "Des parents sains ont un enfant malade : l’allèle était présent chez eux sans s’exprimer.",
+     "explication": "Deux parents sains qui ont un enfant malade portent chacun l’allèle de la maladie sans être atteints : cet allèle est **récessif**."
+    },
+    {
+     "type": "zone",
+     "document": "ech",
+     "enonce": "Touche la case de l’échiquier qui correspond à un enfant malade.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Un enfant malade possède deux allèles de la maladie.",
+     "explication": "Seul le génotype **m//m**, à deux allèles de la maladie, donne un enfant atteint."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité, en pourcentage, qu’un troisième enfant de ce couple soit porteur sain, c’est-à-dire N//m ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Compte les cases N//m de l’échiquier, puis divise par le nombre total de cases.",
+     "explication": "Deux cases sur quatre sont N//m : la probabilité est 2 ÷ 4 = 1/2, soit **50 %**. Elle est la même à chaque grossesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux tumeurs, deux comptes rendus",
+   "competence": "analyser-document",
+   "situation": "Deux patients ont chacun une tumeur. Les comptes rendus (imaginés) de leur examen au microscope sont résumés dans un tableau.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "tableau",
+     "titre": "Comptes rendus anatomopathologiques",
+     "colonnes": [
+      "Observation",
+      "Tumeur A",
+      "Tumeur B"
+     ],
+     "lignes": [
+      [
+       "Limites",
+       "Nettes, entourée d’une capsule",
+       "Floues, tissu voisin envahi"
+      ],
+      [
+       "Croissance",
+       "Lente",
+       "Rapide"
+      ],
+      [
+       "Cellules",
+       "Proches des cellules normales",
+       "Anormales, nombreuses divisions"
+      ],
+      [
+       "Ganglion voisin",
+       "Sans cellule tumorale",
+       "Cellules tumorales présentes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comptes rendus imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cr",
+     "enonce": "Touche la case qui montre que des cellules tumorales se sont déjà propagées hors de la tumeur.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Cherche la ligne qui parle d’un ganglion situé à côté de la tumeur.",
+     "explication": "Des cellules tumorales dans le **ganglion voisin** montrent que des cellules ont quitté la tumeur : c’est le début d’une dissémination."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces deux tumeurs est maligne ?",
+     "options": [
+      "La tumeur B, qui envahit les tissus voisins et se propage",
+      "La tumeur A, parce que sa croissance lente la rend durable",
+      "Les deux, parce que toute tumeur est maligne par nature",
+      "Aucune des deux, parce qu’un compte rendu ne le permet pas"
+     ],
+     "reponse": 0,
+     "aide": "Une tumeur maligne n’a pas de limites nettes et peut envahir ce qui l’entoure.",
+     "explication": "La **tumeur B** est maligne : limites floues, invasion du tissu voisin, cellules anormales très actives. La tumeur A est bénigne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes qui mènent d’une cellule modifiée à une métastase.",
+     "items": [
+      "Une cellule accumule des mutations",
+      "Elle se divise sans contrôle",
+      "Une tumeur se forme et attire des vaisseaux",
+      "Des cellules passent dans le sang ou la lymphe",
+      "Une tumeur secondaire apparaît à distance"
+     ],
+     "aide": "Une métastase est la toute dernière étape : des cellules doivent d’abord voyager.",
+     "explication": "Mutations, division sans contrôle, tumeur vascularisée, passage dans le sang ou la lymphe, puis **métastase** : une tumeur secondaire à distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cancer et l’âge",
+   "competence": "lire-graphique",
+   "situation": "Le graphique donne, de façon schématique, le nombre de nouveaux cas d’un cancer pour 100 000 personnes selon la tranche d’âge.",
+   "documents": [
+    {
+     "id": "age",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Nouveaux cas pour 100 000 personnes",
+     "categories": [
+      "20-29",
+      "30-39",
+      "40-49",
+      "50-59",
+      "60-69",
+      "70-79"
+     ],
+     "series": [
+      {
+       "nom": "Nouveaux cas",
+       "valeurs": [
+        10,
+        40,
+        120,
+        300,
+        600,
+        900
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Cas pour 100 000",
+      "unite": "personnes",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Tranche d’âge (ans)"
+     },
+     "valeurs": false,
+     "source": "Valeurs schématiques, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "age",
+     "enonce": "Touche la tranche d’âge où il y a le plus de nouveaux cas.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute est celle des **70-79 ans**, avec environ 900 cas pour 100 000 personnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois y a-t-il plus de nouveaux cas chez les 60-69 ans que chez les 40-49 ans ?",
+     "reponse": 5,
+     "unite": "fois",
+     "aide": "Lis les deux valeurs puis divise la plus grande par la plus petite.",
+     "explication": "Chez les 60-69 ans, environ 600 cas ; chez les 40-49 ans, environ 120 : 600 ÷ 120 = **5** fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle explication permet de comprendre cette augmentation avec l’âge ?",
+     "options": [
+      "Il faut en général accumuler plusieurs mutations, ce qui prend du temps",
+      "Les cellules âgées cessent de se diviser et se transforment en cancer",
+      "Le cancer se transmet d’une personne âgée à l’autre par contagion",
+      "L’ADN des personnes âgées est plus riche en gènes freinant la division"
+     ],
+     "reponse": 0,
+     "aide": "Une seule mutation ne suffit généralement pas à faire un cancer.",
+     "explication": "Un cancer demande en général **plusieurs mutations** successives dans la même cellule : plus on vieillit, plus elles ont eu le temps de s’accumuler."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le parcours de Madame L.",
+   "competence": "analyser-texte",
+   "situation": "Le parcours de soins ci-dessous est imaginé. Il illustre les étapes de dépistage, de diagnostic et de traitement d’un cancer du sein.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Dossier de Madame L., 58 ans (cas imaginé)",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Madame L. participe au dépistage organisé : une [[m|mammographie]] montre une petite opacité dans le sein droit.",
+      "Une échographie confirme l’anomalie. Une biopsie est réalisée ; l’examen [[d|anatomopathologique]] du fragment conclut à un cancer.",
+      "Le dosage d’un marqueur tumoral sanguin revient normal. Un scanner ne trouve aucune métastase.",
+      "L’équipe propose une tumorectomie, suivie de séances de radiothérapie."
+     ]
+    },
+    {
+     "id": "traitements",
+     "type": "tableau",
+     "titre": "Quelques traitements et leur principe",
+     "colonnes": [
+      "Traitement",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "Chirurgie",
+       "Retirer la tumeur"
+      ],
+      [
+       "Radiothérapie",
+       "Rayonnements ionisants sur la zone tumorale"
+      ],
+      [
+       "Chimiothérapie",
+       "Médicaments qui bloquent la division cellulaire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche le mot qui désigne l’examen du tissu au microscope, celui qui a affirmé le diagnostic.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Un fragment de tissu est regardé au microscope : c’est cet examen qui tranche.",
+     "explication": "Seul l’examen **anatomopathologique** du tissu prélevé par biopsie affirme le cancer ; l’imagerie le fait seulement suspecter."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le marqueur tumoral de Madame L. est normal. Que peut-on en conclure ?",
+     "options": [
+      "Cela n’exclut pas un cancer : il ne sert pas à poser le diagnostic",
+      "Cela prouve qu’il n’y a pas de cancer, donc la biopsie était inutile",
+      "Cela prouve que la tumeur est bénigne et ne donnera pas de métastases",
+      "Cela montre que le dépistage organisé par mammographie n’a aucun intérêt"
+     ],
+     "reponse": 0,
+     "aide": "Relis comment le diagnostic a été réellement établi dans le dossier.",
+     "explication": "Un marqueur normal **n’exclut pas** un cancer et un marqueur élevé ne le prouve pas : le diagnostic repose sur l’examen anatomopathologique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la chimiothérapie provoque-t-elle la chute des cheveux ?",
+     "options": [
+      "Elle frappe aussi les cellules saines qui se divisent vite, comme celles des follicules pileux",
+      "Elle est appliquée directement sur le crâne, où elle détruit les racines des cheveux",
+      "Elle déclenche une allergie cutanée qui entraîne la perte de tous les cheveux",
+      "Elle agit uniquement sur les cellules cancéreuses, donc les cheveux tombent par âge"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le principe du traitement dans le tableau : que bloque-t-il ?",
+     "explication": "La chimiothérapie bloque la division cellulaire. Les cellules **saines à renouvellement rapide** (follicules pileux, muqueuses, sang) sont touchées aussi."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche le mot qui désigne l’examen d’imagerie du dépistage organisé.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cet examen est une radiographie du sein.",
+     "explication": "La **mammographie** est l’examen d’imagerie du dépistage organisé, proposé aux femmes de 50 à 74 ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Décoder les mots de la médecine",
+   "competence": "comprendre-langue",
+   "situation": "Un compte rendu d’hôpital (imaginé) contient des mots savants. Chacun se découpe en morceaux qu’on sait traduire.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Extrait d’un compte rendu (imaginé)",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le patient présente une [[n|néphrite]] et une [[p|polyurie]].",
+      "L’examen note une [[h|hépatomégalie]] ainsi qu’une [[b|bradycardie]].",
+      "Aucune [[d|dysphagie]] n’est signalée."
+     ]
+    },
+    {
+     "id": "morceaux",
+     "type": "tableau",
+     "titre": "Les morceaux à connaître",
+     "colonnes": [
+      "Morceau",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "néphro-",
+       "Rein"
+      ],
+      [
+       "hépato-",
+       "Foie"
+      ],
+      [
+       "poly-",
+       "Beaucoup"
+      ],
+      [
+       "brady-",
+       "Lent"
+      ],
+      [
+       "dys-",
+       "Difficulté, anomalie"
+      ],
+      [
+       "-ite",
+       "Inflammation"
+      ],
+      [
+       "-urie",
+       "Présence dans l’urine, urine"
+      ],
+      [
+       "-mégalie",
+       "Augmentation de volume"
+      ],
+      [
+       "-phagie",
+       "Action de manger, avaler"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cr",
+     "enonce": "Touche le mot qui désigne une inflammation du rein.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Cherche un mot qui commence par le morceau « rein » et finit par celui de l’inflammation.",
+     "explication": "**Néphrite** = néphro- (rein) + -ite (inflammation) : une inflammation du rein."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à son sens.",
+     "paires": [
+      [
+       "Polyurie",
+       "Urines très abondantes"
+      ],
+      [
+       "Hépatomégalie",
+       "Foie augmenté de volume"
+      ],
+      [
+       "Bradycardie",
+       "Cœur lent"
+      ],
+      [
+       "Dysphagie",
+       "Difficulté à avaler"
+      ]
+     ],
+     "aide": "Découpe chaque mot en deux morceaux et traduis-les avec le tableau.",
+     "explication": "**Polyurie** : beaucoup d’urine ; **hépatomégalie** : foie augmenté de volume ; **bradycardie** : cœur lent ; **dysphagie** : difficulté à avaler."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une « cardiomégalie » est l’augmentation de volume de quel organe ?",
+     "options": [
+      "Du cœur",
+      "Du foie",
+      "Du rein",
+      "De la rate"
+     ],
+     "reponse": 0,
+     "aide": "Le morceau « cardio- » se retrouve dans « bradycardie » : quel organe bat ?",
+     "explication": "Cardio- désigne le cœur et -mégalie une augmentation de volume : une **cardiomégalie** est un cœur augmenté de volume."
+    }
+   ]
+  },
+  {
+   "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le calcul du comprimé",
+   "competence": "calculer",
+   "situation": "Un comprimé imaginé contient 500 mg de paracétamol, de formule C₈H₉NO₂. On veut savoir combien de moles cela représente, en appliquant les réflexes de l’épreuve de chimie.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse de paracétamol dans un comprimé",
+       "500 mg"
+      ],
+      [
+       "Formule du paracétamol",
+       "C₈H₉NO₂"
+      ],
+      [
+       "M(C)",
+       "12 g/mol"
+      ],
+      [
+       "M(H)",
+       "1 g/mol"
+      ],
+      [
+       "M(N)",
+       "14 g/mol"
+      ],
+      [
+       "M(O)",
+       "16 g/mol"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comprimé imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Convertis d’abord la masse du comprimé en grammes.",
+     "reponse": 0.5,
+     "unite": "g",
+     "aide": "Il y a 1 000 mg dans 1 g.",
+     "explication": "500 mg ÷ 1 000 = **0,5 g**. On convertit toujours les unités avant de calculer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire M du paracétamol C₈H₉NO₂.",
+     "reponse": 151,
+     "unite": "g/mol",
+     "aide": "Additionne la masse de chaque atome : 8 fois M(C), 9 fois M(H), 1 fois M(N), 2 fois M(O).",
+     "explication": "M = 8 × 12 + 9 × 1 + 14 + 2 × 16 = 96 + 9 + 14 + 32 = **151 g/mol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avant de remplacer par les valeurs, on écrit la formule littérale. Comment obtient-on la quantité de matière n ?",
+     "options": [
+      "La masse divisée par la masse molaire",
+      "La masse multipliée par la masse molaire",
+      "La masse molaire divisée par la masse",
+      "La masse additionnée à la masse molaire"
+     ],
+     "reponse": 0,
+     "aide": "La quantité de matière est le nombre de fois que la masse molaire « rentre » dans la masse.",
+     "explication": "La quantité de matière est **n = m ÷ M**, avec m en grammes et M en g/mol."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité de matière de paracétamol dans un comprimé, en millimoles (mmol), arrondie au centième.",
+     "reponse": 3.31,
+     "unite": "mmol",
+     "tolerance": 0.02,
+     "aide": "n = m ÷ M, avec m en grammes ; 1 mol = 1 000 mmol.",
+     "explication": "n = 0,5 ÷ 151 ≈ 3,31 × 10⁻³ mol, soit **3,31 mmol**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Décrire, puis interpréter",
+   "competence": "analyser-document",
+   "situation": "Un patient de 34 ans (cas imaginé) consulte pour de la fièvre, des frissons et une toux. Les résultats de sa prise de sang sont donnés avec les valeurs de référence.",
+   "documents": [
+    {
+     "id": "nfs",
+     "type": "tableau",
+     "titre": "Résultats d’analyse du patient",
+     "colonnes": [
+      "Examen",
+      "Résultat",
+      "Valeurs de référence"
+     ],
+     "lignes": [
+      [
+       "Leucocytes",
+       "15 500 /mm³",
+       "4 000 à 10 000 /mm³"
+      ],
+      [
+       "Polynucléaires neutrophiles",
+       "12 800 /mm³",
+       "1 800 à 7 000 /mm³"
+      ],
+      [
+       "Lymphocytes",
+       "1 900 /mm³",
+       "1 500 à 4 000 /mm³"
+      ],
+      [
+       "Protéine C réactive (CRP)",
+       "96 mg/L",
+       "Moins de 5 mg/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginé, valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Trie ces éléments : signes cliniques (ressentis ou constatés à l’examen) ou signes paracliniques (résultats d’examens complémentaires).",
+     "categories": [
+      "Signes cliniques",
+      "Signes paracliniques"
+     ],
+     "items": [
+      [
+       "Frissons",
+       0
+      ],
+      [
+       "Toux",
+       0
+      ],
+      [
+       "Fièvre mesurée au cabinet",
+       0
+      ],
+      [
+       "CRP à 96 mg/L",
+       1
+      ],
+      [
+       "Leucocytes à 15 500 /mm³",
+       1
+      ],
+      [
+       "Polynucléaires à 12 800 /mm³",
+       1
+      ]
+     ],
+     "aide": "Un signe paraclinique sort d’un laboratoire ou d’une imagerie.",
+     "explication": "Les **signes cliniques** (frissons, toux, fièvre) se ressentent ou s’observent ; les **signes paracliniques** (CRP, leucocytes, polynucléaires) sont des résultats d’examens."
+    },
+    {
+     "type": "zone",
+     "document": "nfs",
+     "enonce": "Touche la seule ligne dont le résultat reste dans les valeurs de référence.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare chaque résultat à sa fourchette de référence.",
+     "explication": "Les **lymphocytes** (1 900 /mm³) sont dans la fourchette de 1 500 à 4 000 /mm³ ; les autres résultats la dépassent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase interprète correctement le document, au lieu de simplement le décrire ?",
+     "options": [
+      "Les polynucléaires neutrophiles augmentent et la CRP monte : cela oriente vers une infection bactérienne",
+      "Les leucocytes valent 15 500 par mm³ et la référence va de 4 000 à 10 000 par mm³",
+      "Les résultats sont élevés et les valeurs de référence sont plus basses que celles du patient",
+      "Le patient a de la fièvre, des frissons et une toux depuis quelques jours seulement"
+     ],
+     "reponse": 0,
+     "aide": "Interpréter, c’est relier un constat à une connaissance pour en tirer une conclusion.",
+     "explication": "Les trois autres phrases ne font que **décrire**. La bonne relie le constat (neutrophiles et CRP élevés) à une connaissance : cela **oriente vers une infection bactérienne**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la démarche attendue devant un cas clinique.",
+     "items": [
+      "Relever les signes cliniques",
+      "Relever les signes paracliniques et les comparer aux valeurs de référence",
+      "Relier les signes au mécanisme de la maladie",
+      "Nommer la pathologie et expliquer le diagnostic",
+      "Présenter et justifier le traitement et la prévention"
+     ],
+     "aide": "On va du constat vers la conclusion, et le traitement vient en dernier.",
+     "explication": "D’abord relever les signes, puis les **interpréter** par le mécanisme, nommer la pathologie, et enfin traiter et prévenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet de l’urine",
+   "competence": "observer-schema",
+   "situation": "Sur une planche d’anatomie, l’appareil urinaire est dessiné de face, sans légende. À toi de reconnaître les organes.",
+   "documents": [
+    {
+     "id": "urin",
+     "type": "schema",
+     "titre": "Appareil urinaire, vu de face",
+     "largeur": 320,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 60,
+       "rx": 26,
+       "ry": 40,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "reing",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 225,
+       "cy": 60,
+       "rx": 26,
+       "ry": 40,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "reind",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        95
+       ],
+       "a": [
+        140,
+        170
+       ],
+       "id": "uretg",
+       "zone": true,
+       "teinte": "rose"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        208,
+        95
+       ],
+       "a": [
+        180,
+        170
+       ],
+       "id": "uretd",
+       "zone": true,
+       "teinte": "rose"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 190,
+       "rx": 36,
+       "ry": 26,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "vessie",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        216
+       ],
+       "a": [
+        160,
+        248
+       ],
+       "id": "uretre",
+       "zone": true,
+       "teinte": "rose"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 12,
+       "texte": "Schéma simplifié, sans échelle",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "urin",
+     "enonce": "Touche l’organe qui stocke l’urine entre deux mictions.",
+     "reponse": [
+      "vessie"
+     ],
+     "aide": "C’est l’organe en forme de poche, situé en bas du schéma.",
+     "explication": "La **vessie** stocke l’urine avant son évacuation par l’urètre."
+    },
+    {
+     "type": "zone",
+     "document": "urin",
+     "enonce": "Touche les deux organes qui fabriquent l’urine.",
+     "reponse": [
+      "reing",
+      "reind"
+     ],
+     "multiple": true,
+     "aide": "Ils contiennent chacun environ un million de néphrons.",
+     "explication": "Les deux **reins** fabriquent l’urine : ils filtrent le plasma puis modifient sa composition."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les organes dans l’ordre où l’urine les traverse.",
+     "items": [
+      "Rein",
+      "Uretère",
+      "Vessie",
+      "Urètre"
+     ],
+     "aide": "L’urine est fabriquée d’abord, évacuée en dernier.",
+     "explication": "Rein, **uretère**, vessie, urètre : l’urine est fabriquée, transportée, stockée puis évacuée."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que le rein garde et ce qu’il jette",
+   "competence": "calculer",
+   "situation": "Chaque jour, les reins filtrent environ 180 L de plasma et l’organisme émet environ 1,5 L d’urine. Le tableau compare trois liquides.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Composition (en g/L)",
+     "colonnes": [
+      "Constituant",
+      "Plasma",
+      "Urine primitive",
+      "Urine définitive"
+     ],
+     "lignes": [
+      [
+       "Protéines",
+       "70",
+       "0",
+       "0"
+      ],
+      [
+       "Glucose",
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "Urée",
+       "0,3",
+       "0,3",
+       "20"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs moyennes arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose les reins filtrent-ils par jour, sachant que l’urine primitive en contient 1 g/L ?",
+     "reponse": 180,
+     "unite": "g",
+     "aide": "Multiplie le volume filtré par jour par la concentration.",
+     "explication": "180 L × 1 g/L = **180 g** de glucose filtrés par jour, que le rein réabsorbe normalement en totalité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’urine définitive ne contient-elle plus de glucose ?",
+     "options": [
+      "Il est entièrement réabsorbé dans le sang le long du tube du néphron",
+      "Il est détruit dans la vessie par les enzymes de l’urine",
+      "Il n’est jamais filtré, car ses molécules sont trop grosses",
+      "Il est sécrété dans le tube puis transformé en urée par le rein"
+     ],
+     "reponse": 0,
+     "aide": "Compare le glucose dans l’urine primitive et dans l’urine définitive.",
+     "explication": "Le glucose passe dans l’urine primitive (il est filtré) puis **retourne dans le sang** par réabsorption tubulaire : il n’apparaît plus dans l’urine définitive."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse d’urée est éliminée par jour dans 1,5 L d’urine définitive à 20 g/L ?",
+     "reponse": 30,
+     "unite": "g",
+     "aide": "Volume d’urine par jour multiplié par la concentration en urée.",
+     "explication": "1,5 L × 20 g/L = **30 g** d’urée éliminés par jour, alors que 180 L × 0,3 g/L = 54 g ont été filtrés : le tube en réabsorbe une partie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de l’eau filtrée retourne dans le sang ? Arrondis au dixième.",
+     "reponse": 99.2,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Eau réabsorbée = eau filtrée − urine émise ; divise par l’eau filtrée.",
+     "explication": "(180 − 1,5) ÷ 180 × 100 ≈ **99,2 %** : plus de 99 % de l’eau filtrée est réabsorbée."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le devenir d’un médicament",
+   "competence": "lire-graphique",
+   "situation": "Un médicament imaginé est pris par la bouche à l’instant 0. Le graphique montre sa concentration dans le plasma au cours du temps (courbe schématique).",
+   "documents": [
+    {
+     "id": "med",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Concentration plasmatique du médicament",
+     "categories": [
+      "0 h",
+      "2 h",
+      "4 h",
+      "6 h",
+      "8 h",
+      "10 h"
+     ],
+     "series": [
+      {
+       "nom": "Concentration",
+       "valeurs": [
+        0,
+        10,
+        5,
+        2.5,
+        1.25,
+        0.6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "mg/L",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps après la prise"
+     },
+     "valeurs": false,
+     "source": "Courbe schématique, médicament imaginé"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "med",
+     "enonce": "Touche le moment où la concentration dans le plasma est maximale.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le maximum est atteint **2 h** après la prise : le médicament a été absorbé puis distribué par le sang."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Entre 2 h et 4 h, la concentration est divisée par 2. Au bout de combien d’heures après le pic atteint-elle le quart de sa valeur maximale ?",
+     "reponse": 4,
+     "unite": "h",
+     "aide": "Le quart de 10 mg/L vaut 2,5 mg/L : trouve quand la courbe y arrive, puis compte depuis le pic.",
+     "explication": "Le quart de 10 mg/L est 2,5 mg/L, atteint à 6 h, donc **4 h** après le pic (2 h pour diviser par 2, encore 2 h pour diviser par 2 à nouveau)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après le pic, la concentration diminue. Quels organes sont les principaux responsables de cette baisse ?",
+     "options": [
+      "Le foie, qui transforme la substance, et les reins, qui l’éliminent dans l’urine",
+      "Le cœur, qui détruit le médicament, et les poumons, qui le stockent",
+      "L’estomac, qui le reprend, et la vessie, qui le transforme en glucose",
+      "La rate, qui le fabrique, et la peau, qui le garde sous forme de graisse"
+     ],
+     "reponse": 0,
+     "aide": "Un xénobiotique est transformé par un organe puis éliminé par un autre.",
+     "explication": "Le médicament est surtout **métabolisé par le foie** puis éliminé, en grande partie, par les **reins** dans l’urine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si les reins éliminaient moins bien ce médicament, comment la courbe évoluerait-elle après le pic ?",
+     "options": [
+      "Elle descendrait plus lentement : la substance resterait plus longtemps dans le sang",
+      "Elle descendrait plus vite : la substance serait éliminée par un autre organe",
+      "Elle resterait nulle : la substance ne passerait plus du tout dans le plasma",
+      "Elle monterait sans fin : la substance serait fabriquée par l’organisme lui-même"
+     ],
+     "reponse": 0,
+     "aide": "Une élimination plus faible laisse la substance plus longtemps en circulation.",
+     "explication": "Avec une élimination rénale réduite, la concentration **diminue plus lentement** : c’est pourquoi le devenir d’un médicament explique ses doses et ses intervalles de prise."
+    }
+   ]
+  },
+  {
+   "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La glycémie après un repas",
+   "competence": "lire-graphique",
+   "situation": "Une personne en bonne santé mange à l’instant 0. On mesure sa glycémie toutes les 30 minutes (courbe schématique).",
+   "documents": [
+    {
+     "id": "gly",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glycémie après un repas",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120",
+      "150"
+     ],
+     "series": [
+      {
+       "nom": "Glycémie",
+       "valeurs": [
+        0.9,
+        1.4,
+        1.2,
+        1.05,
+        0.95,
+        0.9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g/L",
+      "min": 0.6,
+      "max": 1.6,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Minutes après le repas"
+     },
+     "valeurs": false,
+     "source": "Courbe schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gly",
+     "enonce": "Touche le moment où la glycémie est la plus élevée.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le maximum, environ 1,4 g/L, est atteint **30 minutes** après le repas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie augmente-t-elle entre le début du repas et le maximum ?",
+     "reponse": 0.5,
+     "unite": "g/L",
+     "tolerance": 0.05,
+     "aide": "Soustrais la valeur de départ à la valeur maximale.",
+     "explication": "1,4 − 0,9 = **0,5 g/L** : le glucose des aliments passe dans le sang."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après le maximum, la glycémie baisse. Que font alors les muscles et le tissu adipeux ?",
+     "options": [
+      "Ils absorbent du glucose du sang sous l’action de l’insuline",
+      "Ils libèrent du glucose dans le sang sous l’action du glucagon",
+      "Ils transforment le glucose en urée avant de l’envoyer au rein",
+      "Ils cessent d’utiliser le glucose pour laisser la place aux graisses"
+     ],
+     "reponse": 0,
+     "aide": "La glycémie baisse : le glucose sort du sang pour entrer dans des cellules.",
+     "explication": "L’insuline fait **absorber le glucose** par les muscles et le tissu adipeux ; le foie et les muscles le stockent aussi sous forme de glycogène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Deux heures après le repas, la glycémie est revenue près de sa valeur de départ. Que montre ce retour ?",
+     "options": [
+      "Que la glycémie est régulée autour d’une valeur de consigne",
+      "Que l’organisme a cessé d’utiliser du glucose pour se nourrir",
+      "Que le repas n’a apporté aucun sucre à l’organisme du tout",
+      "Que l’insuline est sécrétée en permanence à la même dose"
+     ],
+     "reponse": 0,
+     "aide": "Le mot à retrouver décrit un milieu intérieur maintenu constant.",
+     "explication": "C’est l’**homéostasie** : la glycémie oscille autour d’une valeur de consigne, autour de 1 g/L."
+    }
+   ]
+  },
+  {
+   "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux patients, deux diabètes",
+   "competence": "analyser-document",
+   "situation": "Deux personnes (cas imaginés) découvrent un diabète. Le tableau résume ce que l’on sait d’elles.",
+   "documents": [
+    {
+     "id": "pat",
+     "type": "tableau",
+     "titre": "Deux dossiers",
+     "colonnes": [
+      "Critère",
+      "Patient A",
+      "Patient B"
+     ],
+     "lignes": [
+      [
+       "Âge",
+       "14 ans",
+       "58 ans"
+      ],
+      [
+       "Début",
+       "Brutal en trois semaines : soif, urines abondantes, amaigrissement",
+       "Progressif, découvert lors d’une prise de sang"
+      ],
+      [
+       "Glycémie à jeun (deux dosages)",
+       "2,6 g/L et 2,4 g/L",
+       "1,42 g/L et 1,38 g/L"
+      ],
+      [
+       "Poids",
+       "Perte de 5 kg en un mois",
+       "Indice de masse corporelle de 32"
+      ],
+      [
+       "Anticorps contre les îlots de Langerhans",
+       "Présents",
+       "Absents"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pat",
+     "enonce": "Touche le résultat qui permet d’affirmer un diabète chez le patient B.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Le diabète se définit par une glycémie à jeun élevée, mesurée deux fois.",
+     "explication": "Deux glycémies à jeun **supérieures à 1,26 g/L** définissent un diabète : 1,42 g/L et 1,38 g/L."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque patient à son type de diabète et à son mécanisme.",
+     "paires": [
+      [
+       "Patient A",
+       "Type 1 : les cellules β sont détruites"
+      ],
+      [
+       "Patient B",
+       "Type 2 : les cellules répondent mal à l’insuline"
+      ]
+     ],
+     "aide": "Regarde l’âge, le début et la présence d’anticorps contre les îlots.",
+     "explication": "Le patient A a un **type 1** (maladie auto-immune, anticorps présents, début brutal) ; le patient B un **type 2** (insulinorésistance, surpoids, début silencieux)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces éléments du dossier du patient A : signes cliniques ou signes paracliniques.",
+     "categories": [
+      "Signes cliniques",
+      "Signes paracliniques"
+     ],
+     "items": [
+      [
+       "Soif intense",
+       0
+      ],
+      [
+       "Amaigrissement",
+       0
+      ],
+      [
+       "Glycémie à jeun à 2,6 g/L",
+       1
+      ],
+      [
+       "Anticorps contre les îlots",
+       1
+      ],
+      [
+       "Urines abondantes",
+       0
+      ]
+     ],
+     "aide": "Un signe paraclinique vient d’une analyse de laboratoire.",
+     "explication": "Soif, amaigrissement et urines abondantes sont **cliniques** ; la glycémie et les anticorps sont des résultats d’examens, donc **paracliniques**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le patient A ne peut-il pas se passer d’insuline ?",
+     "options": [
+      "Ses cellules β sont détruites, il ne fabrique presque plus d’insuline",
+      "Ses cellules β fabriquent trop d’insuline qui s’épuise vite",
+      "Son foie dégrade l’insuline avant qu’elle ne soit utilisée",
+      "Son rein élimine l’insuline en même temps que le glucose"
+     ],
+     "reponse": 0,
+     "aide": "Le type 1 est une maladie auto-immune qui vise certaines cellules du pancréas.",
+     "explication": "Dans le diabète de type 1, le système immunitaire **détruit les cellules β** : il n’y a plus d’insuline, il faut donc en apporter."
+    }
+   ]
+  },
+  {
+   "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du sucre dans les urines",
+   "competence": "modeliser",
+   "situation": "Quand la glycémie devient très élevée, du glucose apparaît dans l’urine. Le graphique donne la quantité de glucose dans les urines pour plusieurs glycémies (valeurs schématiques).",
+   "documents": [
+    {
+     "id": "gsu",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Glucose dans l’urine selon la glycémie",
+     "categories": [
+      "1,0",
+      "1,4",
+      "1,8",
+      "2,2",
+      "2,6",
+      "3,0"
+     ],
+     "series": [
+      {
+       "nom": "Glucose urinaire",
+       "valeurs": [
+        0,
+        0,
+        0,
+        4,
+        11,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Glucose dans l’urine",
+      "unite": "g/L",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Glycémie (g/L)"
+     },
+     "valeurs": false,
+     "source": "Valeurs schématiques, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gsu",
+     "enonce": "Touche la glycémie la plus élevée pour laquelle l’urine ne contient pas de glucose.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la dernière barre vide avant les barres qui montent.",
+     "explication": "Jusqu’à **1,8 g/L**, le rein réabsorbe tout le glucose filtré ; au-delà, l’urine en contient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi du glucose apparaît-il dans l’urine au-delà de ce seuil ?",
+     "options": [
+      "Le rein ne parvient plus à réabsorber tout le glucose filtré",
+      "Le rein se met à fabriquer du glucose à partir de l’eau",
+      "Le glomérule cesse de filtrer le glucose du plasma",
+      "L’insuline transforme le glucose en une molécule éliminée"
+     ],
+     "reponse": 0,
+     "aide": "Le glucose est filtré puis réabsorbé par le tube du néphron : qu’est-ce qui peut saturer ?",
+     "explication": "Au-dessus d’environ 1,8 g/L, la réabsorption **atteint sa limite** : le glucose en excès reste dans le tube et part dans l’urine."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces signes dans l’ordre où l’hyperglycémie les provoque.",
+     "items": [
+      "Hyperglycémie",
+      "Glycosurie",
+      "Polyurie",
+      "Déshydratation",
+      "Polydipsie"
+     ],
+     "aide": "Le glucose dans l’urine entraîne de l’eau avec lui ; la soif arrive en dernier.",
+     "explication": "Hyperglycémie, glycosurie, **polyurie** (le glucose entraîne l’eau), déshydratation, puis polydipsie : une soif intense."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle la soif intense qui suit la perte d’eau dans les urines ?",
+     "options": [
+      "La polydipsie",
+      "La polyurie",
+      "La glycosurie",
+      "La diurèse"
+     ],
+     "reponse": 0,
+     "aide": "Le préfixe « poly- » veut dire beaucoup, et « dipsie » parle de la soif.",
+     "explication": "La **polydipsie** est une soif excessive, conséquence de la déshydratation provoquée par la polyurie."
+    }
+   ]
+  },
+  {
+   "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Anatomie d’une bactérie",
+   "competence": "observer-schema",
+   "situation": "Une bactérie vue de très près est dessinée sans légende. Reconnais ses éléments.",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "schema",
+     "titre": "Une bactérie, schéma simplifié",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 105,
+       "rx": 135,
+       "ry": 75,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "paroi",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 105,
+       "rx": 112,
+       "ry": 54,
+       "teinte": "turquoise",
+       "motif": "aucun",
+       "id": "cyto",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 145,
+       "cy": 105,
+       "r": 26,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "adn",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 92,
+       "r": 9,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "plasmide",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 125,
+       "r": 3,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 232,
+       "cy": 120,
+       "r": 3,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 80,
+       "r": 3,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 138,
+       "r": 3,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 75,
+       "r": 3,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 202,
+       "texte": "Schéma simplifié, sans échelle",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche l’ADN principal de la bactérie, la grande boucle libre dans le cytoplasme.",
+     "reponse": [
+      "adn"
+     ],
+     "aide": "Une bactérie n’a pas de noyau : son ADN baigne directement dans le cytoplasme.",
+     "explication": "L’**ADN** de la bactérie est libre dans le cytoplasme : c’est une cellule procaryote, sans noyau."
+    },
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche la petite boucle d’ADN qui peut passer d’une bactérie à une autre et transmettre une résistance.",
+     "reponse": [
+      "plasmide"
+     ],
+     "aide": "C’est la plus petite boucle d’ADN du dessin.",
+     "explication": "Le **plasmide** est une petite boucle d’ADN ; les transferts de gènes de résistance passent souvent par lui."
+    },
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche l’enveloppe extérieure que les pénicillines empêchent de se construire.",
+     "reponse": [
+      "paroi"
+     ],
+     "aide": "Elle entoure toute la bactérie, à l’extérieur.",
+     "explication": "Les pénicillines ciblent la **paroi** bactérienne : structure absente des cellules humaines, elle permet de tuer la bactérie sans abîmer nos cellules."
+    }
+   ]
+  },
+  {
+   "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire un antibiogramme",
+   "competence": "analyser-document",
+   "situation": "Une bactérie prélevée chez un patient est étalée sur une gélose. Quatre disques imprégnés d’antibiotiques différents (A, B, C, D) sont posés, puis la boîte est incubée. Autour d’un disque, une zone claire sans bactérie peut apparaître.",
+   "documents": [
+    {
+     "id": "gel",
+     "type": "schema",
+     "titre": "La boîte après incubation",
+     "largeur": 320,
+     "hauteur": 262,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 122,
+       "r": 112,
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 115,
+       "cy": 84,
+       "r": 24,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 84,
+       "r": 9.6,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 115,
+       "cy": 160,
+       "r": 17.6,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 160,
+       "r": 13.6,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 115,
+       "cy": 84,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "A",
+       "id": "disqueA",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 84,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "B",
+       "id": "disqueB",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 115,
+       "cy": 160,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "C",
+       "id": "disqueC",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 160,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "D",
+       "id": "disqueD",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 250,
+       "texte": "Gélose vue de dessus, schéma simplifié",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "crit",
+     "type": "tableau",
+     "titre": "Diamètres mesurés et critères",
+     "colonnes": [
+      "Antibiotique",
+      "Diamètre de la zone",
+      "Classement"
+     ],
+     "lignes": [
+      [
+       "A",
+       "30 mm",
+       "Sensible"
+      ],
+      [
+       "B",
+       "12 mm",
+       "Résistante"
+      ],
+      [
+       "C",
+       "22 mm",
+       "Sensible"
+      ],
+      [
+       "D",
+       "17 mm",
+       "Intermédiaire"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Critères imaginés : sensible à partir de 20 mm, résistante sous 15 mm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gel",
+     "enonce": "Touche le disque autour duquel la bactérie est la plus sensible, c’est-à-dire la plus grande zone claire.",
+     "reponse": [
+      "disqueA"
+     ],
+     "aide": "Plus la zone sans bactérie est grande, plus l’antibiotique est efficace.",
+     "explication": "La plus grande zone d’inhibition entoure le disque **A** (30 mm) : la bactérie y est la plus sensible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour combien d’antibiotiques testés la bactérie est-elle classée sensible ?",
+     "reponse": 2,
+     "unite": "antibiotiques",
+     "aide": "Compte les lignes « Sensible » de la dernière colonne.",
+     "explication": "Les antibiotiques **A et C** la classent sensible, donc **2**. B la classe résistante, D intermédiaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie une petite zone de 12 mm autour du disque B ?",
+     "options": [
+      "La bactérie résiste à cet antibiotique, qui est peu efficace contre elle",
+      "La bactérie est très sensible à cet antibiotique, qui la détruit vite",
+      "L’antibiotique B est périmé, donc il faut refaire toute l’analyse",
+      "La bactérie est un virus sur lequel l’antibiotique n’a aucune prise"
+     ],
+     "reponse": 0,
+     "aide": "Compare 12 mm aux critères de la dernière colonne.",
+     "explication": "Une zone étroite (sous 15 mm) signifie une **résistance** : l’antibiotique B n’arrête pas la multiplication de cette bactérie."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert cet examen, l’antibiogramme ?",
+     "options": [
+      "À choisir l’antibiotique le plus efficace contre la bactérie du patient",
+      "À compter le nombre de globules blancs présents dans le sang",
+      "À savoir si l’infection est due à un virus ou à un parasite",
+      "À mesurer la vitesse de multiplication de la bactérie chez le patient"
+     ],
+     "reponse": 0,
+     "aide": "Il compare plusieurs antibiotiques sur la même bactérie.",
+     "explication": "L’antibiogramme guide le **choix du traitement** en montrant auxquels la souche est sensible ou résistante."
+    }
+   ]
+  },
+  {
+   "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Comment naît une population résistante",
+   "competence": "raisonner",
+   "situation": "Dans une expérience imaginée, on fait pousser des bactéries dans un milieu où l’on ajoute un antibiotique à 4 h. Quelques bactéries résistantes étaient présentes dès le début. Le tableau donne les effectifs (unités arbitraires).",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "Effectifs de bactéries",
+     "colonnes": [
+      "Temps",
+      "0 h",
+      "2 h",
+      "4 h",
+      "6 h",
+      "8 h",
+      "10 h"
+     ],
+     "lignes": [
+      [
+       "Bactéries sensibles",
+       "1 000",
+       "2 000",
+       "4 000",
+       "400",
+       "40",
+       "4"
+      ],
+      [
+       "Bactéries résistantes",
+       "1",
+       "2",
+       "4",
+       "8",
+       "16",
+       "32"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Expérience imaginée, antibiotique ajouté à 4 h"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de bactéries y a-t-il au total à 10 h ?",
+     "reponse": 36,
+     "unite": "bactéries",
+     "aide": "Additionne les sensibles et les résistantes de la dernière colonne.",
+     "explication": "4 sensibles + 32 résistantes = **36** bactéries."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 10 h, quel pourcentage des bactéries est résistant ? Arrondis à l’unité.",
+     "reponse": 89,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise les résistantes par le total, puis multiplie par 100.",
+     "explication": "32 ÷ 36 × 100 ≈ **89 %**, alors qu’à 0 h, les résistantes représentaient environ 0,1 % de la population."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes qui expliquent ce résultat.",
+     "items": [
+      "Un antibiotique est ajouté au milieu",
+      "Les bactéries sensibles meurent",
+      "Les rares bactéries résistantes survivent et se multiplient",
+      "La population devient en grande partie résistante"
+     ],
+     "aide": "Le traitement ne crée pas la résistance : il trie les bactéries.",
+     "explication": "L’antibiotique **sélectionne** : les sensibles meurent, les résistantes restent, se multiplient et deviennent majoritaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette expérience sur l’usage des antibiotiques ?",
+     "options": [
+      "Chaque usage inutile favorise la sélection de souches résistantes",
+      "Un antibiotique rend toutes les bactéries résistantes en quelques heures",
+      "Les bactéries résistantes naissent de l’antibiotique lui-même",
+      "Les bactéries résistantes ne se reproduisent plus après l’antibiotique"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, que deviennent les bactéries résistantes quand les autres disparaissent ?",
+     "explication": "Chaque antibiotique pris sans nécessité **sélectionne** les bactéries résistantes déjà présentes : c’est pourquoi il ne faut pas en prendre pour rien, ni interrompre un traitement prescrit."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une prise de sang pendant la grippe",
+   "competence": "lire-tableau",
+   "situation": "Un patient de 29 ans (cas imaginé) a de la fièvre et des courbatures depuis deux jours. Sa numération sanguine est comparée aux valeurs de référence.",
+   "documents": [
+    {
+     "id": "nfs",
+     "type": "tableau",
+     "titre": "Numération sanguine",
+     "colonnes": [
+      "Élément du sang",
+      "Résultat",
+      "Valeurs de référence"
+     ],
+     "lignes": [
+      [
+       "Hématies",
+       "4,9 millions /mm³",
+       "4 à 5,5 millions /mm³"
+      ],
+      [
+       "Leucocytes",
+       "13 500 /mm³",
+       "4 000 à 10 000 /mm³"
+      ],
+      [
+       "Plaquettes",
+       "240 000 /mm³",
+       "150 000 à 400 000 /mm³"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nfs",
+     "enonce": "Touche le résultat qui sort des valeurs de référence.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare chaque résultat à la fourchette de sa ligne.",
+     "explication": "Les **leucocytes** (13 500 /mm³) dépassent la limite haute de 10 000 /mm³ ; hématies et plaquettes sont dans la norme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le nombre de leucocytes dépasse-t-il la limite haute de référence ?",
+     "reponse": 3500,
+     "unite": "/mm³",
+     "aide": "Soustrais la limite haute au résultat.",
+     "explication": "13 500 − 10 000 = **3 500** leucocytes par mm³ de plus que la limite haute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles cellules les leucocytes désignent-ils ?",
+     "options": [
+      "Les globules blancs, cellules de défense de l’organisme",
+      "Les globules rouges, cellules qui transportent le dioxygène",
+      "Les plaquettes, fragments de cellules qui bouchent les plaies",
+      "Les plasmocytes, cellules qui ne fabriquent que des hormones"
+     ],
+     "reponse": 0,
+     "aide": "Leuco- veut dire blanc.",
+     "explication": "Les **leucocytes** sont les globules blancs : ils assurent la défense. Leur augmentation accompagne ici la réaction de défense."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le phagocyte en trois images",
+   "competence": "observer-schema",
+   "situation": "Trois images montrent un phagocyte (le gros rond) face à une bactérie. Elles sont rangées dans un ordre qui n’est pas celui du déroulement.",
+   "documents": [
+    {
+     "id": "phago",
+     "type": "schema",
+     "titre": "La phagocytose, trois moments",
+     "largeur": 340,
+     "hauteur": 175,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 28,
+       "l": 100,
+       "h": 120,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "aucun",
+       "id": "iA",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 28,
+       "l": 100,
+       "h": 120,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "aucun",
+       "id": "iB",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 28,
+       "l": 100,
+       "h": 120,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "aucun",
+       "id": "iC",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 20,
+       "texte": "Image A",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 20,
+       "texte": "Image B",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 20,
+       "texte": "Image C",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 92,
+       "r": 32,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 92,
+       "r": 13,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 60,
+       "cy": 92,
+       "rx": 7,
+       "ry": 4,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 92,
+       "r": 32,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 204,
+       "cy": 92,
+       "rx": 10,
+       "ry": 5,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 92,
+       "r": 32,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 92,
+       "r": 13,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 84,
+       "r": 6,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 100,
+       "r": 6,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 70,
+       "r": 5,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 168,
+       "texte": "Schéma simplifié, sans échelle",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phago",
+     "enonce": "Touche l’image où le phagocyte vient de s’accrocher à la bactérie, sans l’avoir encore avalée.",
+     "reponse": [
+      "iB"
+     ],
+     "aide": "Cherche l’image où la bactérie est encore à l’extérieur du gros rond.",
+     "explication": "Sur l’**image B**, la bactérie est collée au phagocyte mais reste à l’extérieur : c’est l’adhésion."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les images dans l’ordre du déroulement de la phagocytose.",
+     "items": [
+      "Image B",
+      "Image A",
+      "Image C"
+     ],
+     "aide": "Adhésion, puis ingestion dans une vésicule, puis digestion par les enzymes.",
+     "explication": "**B** (adhésion), **A** (la bactérie est enfermée dans une vésicule), **C** (les lysosomes déversent leurs enzymes et digèrent)."
+    },
+    {
+     "type": "choix",
+     "enonce": "À la fin de la phagocytose, que fait le macrophage de certains fragments de la bactérie ?",
+     "options": [
+      "Il les présente à des lymphocytes pour déclencher la réponse adaptative",
+      "Il les fabrique de nouveau pour reconstituer une bactérie entière",
+      "Il les transforme en anticorps qu’il libère directement dans le sang",
+      "Il les garde définitivement sans jamais prévenir les autres cellules"
+     ],
+     "reponse": 0,
+     "aide": "Le macrophage fait le lien avec l’immunité adaptative.",
+     "explication": "Le macrophage **présente des fragments d’antigène** aux lymphocytes : c’est le passage de l’immunité innée à l’immunité adaptative."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fièvre qui repart",
+   "competence": "raisonner",
+   "situation": "Un adulte (cas imaginé) a la grippe. Sa température est relevée chaque jour. Au septième jour, une prise de sang est faite car la fièvre est revenue.",
+   "documents": [
+    {
+     "id": "temp",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température au fil des jours",
+     "categories": [
+      "J1",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        37,
+        39.2,
+        39.8,
+        39,
+        38,
+        37.4,
+        38.8,
+        39
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 37,
+      "max": 40,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Jour"
+     },
+     "valeurs": false,
+     "source": "Courbe imaginée pour l’exercice"
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Prise de sang au jour 7",
+     "colonnes": [
+      "Examen",
+      "Résultat",
+      "Référence"
+     ],
+     "lignes": [
+      [
+       "Polynucléaires neutrophiles",
+       "11 000 /mm³",
+       "1 800 à 7 000 /mm³"
+      ],
+      [
+       "Protéine C réactive (CRP)",
+       "120 mg/L",
+       "Moins de 5 mg/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginé, valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temp",
+     "enonce": "Touche le jour où la fièvre repart à la hausse après une amélioration.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Repère le creux de la courbe, puis le jour qui suit.",
+     "explication": "Après une baisse jusqu’à J6, la température **remonte à J7** : cette reprise de fièvre est anormale dans l’évolution d’une grippe simple."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le nombre de polynucléaires neutrophiles dépasse-t-il la limite haute de référence ?",
+     "reponse": 4000,
+     "unite": "/mm³",
+     "aide": "Soustrais la limite haute au résultat.",
+     "explication": "11 000 − 7 000 = **4 000** polynucléaires neutrophiles par mm³ de plus que la limite haute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle hypothèse ces résultats permettent-ils de formuler ?",
+     "options": [
+      "Une infection bactérienne venue s’ajouter à la grippe, appelée surinfection",
+      "Une nouvelle grippe, provoquée par le même virus, qui guérit seule",
+      "Une allergie, parce que les éosinophiles sont très élevés ici",
+      "Une carence en plaquettes, responsable de la reprise de la fièvre"
+     ],
+     "reponse": 0,
+     "aide": "Les polynucléaires neutrophiles et la CRP orientent vers un type précis d’infection.",
+     "explication": "Des neutrophiles et une CRP élevés orientent vers une **infection bactérienne** : une **surinfection** qui compliquerait la grippe virale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un antibiotique ne traite-t-il pas la grippe elle-même ?",
+     "options": [
+      "Le virus de la grippe n’a ni paroi ni ribosome sur lesquels il agirait",
+      "Le virus de la grippe est détruit par le foie avant toute action",
+      "Le virus de la grippe se cache dans les os où il est inaccessible",
+      "Le virus de la grippe modifie chaque semaine son propre ADN"
+     ],
+     "reponse": 0,
+     "aide": "Un antibiotique vise des structures propres aux bactéries.",
+     "explication": "Un antibiotique n’a **aucune prise** sur un virus, qui n’a ni paroi ni ribosome. Il ne sert qu’en cas de surinfection bactérienne, sur décision médicale."
+    }
+   ]
+  },
+  {
+   "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un anticorps en Y",
+   "competence": "observer-schema",
+   "situation": "Un anticorps de type IgG est dessiné sans légende. Sa forme en Y est la clé de son fonctionnement.",
+   "documents": [
+    {
+     "id": "igg",
+     "type": "schema",
+     "titre": "Une immunoglobuline G, schéma simplifié",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         150,
+         130
+        ],
+        [
+         170,
+         130
+        ],
+        [
+         170,
+         205
+        ],
+        [
+         150,
+         205
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "pied",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         150,
+         136
+        ],
+        [
+         168,
+         136
+        ],
+        [
+         128,
+         62
+        ],
+        [
+         108,
+         72
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         152,
+         136
+        ],
+        [
+         170,
+         136
+        ],
+        [
+         212,
+         72
+        ],
+        [
+         192,
+         62
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 118,
+       "cy": 67,
+       "r": 13,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "parag",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 202,
+       "cy": 67,
+       "r": 13,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "parad",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 222,
+       "texte": "Schéma simplifié, sans échelle",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "igg",
+     "enonce": "Touche les deux extrémités des bras, qui reconnaissent l’antigène.",
+     "reponse": [
+      "parag",
+      "parad"
+     ],
+     "multiple": true,
+     "aide": "Les deux sites qui se fixent sur l’antigène sont identiques et placés au bout des bras.",
+     "explication": "Les deux **paratopes**, à l’extrémité des bras, se fixent sur l’épitope de l’antigène."
+    },
+    {
+     "type": "zone",
+     "document": "igg",
+     "enonce": "Touche la partie où s’accrochent les phagocytes et les protéines du complément.",
+     "reponse": [
+      "pied"
+     ],
+     "aide": "C’est la partie constante, à la base du Y.",
+     "explication": "Le **pied** de l’anticorps (fragment constant) fixe les phagocytes et le complément."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque conséquence de la fixation d’un anticorps à son mécanisme.",
+     "paires": [
+      [
+       "Neutralisation",
+       "Le virus ou la toxine ne peut plus agir"
+      ],
+      [
+       "Opsonisation",
+       "La phagocytose est facilitée"
+      ],
+      [
+       "Activation du complément",
+       "La membrane de la cible est perforée"
+      ]
+     ],
+     "aide": "Chaque mot décrit ce que devient la cible une fois l’anticorps fixé.",
+     "explication": "**Neutralisation** : le complexe immun bloque l’antigène ; **opsonisation** : le phagocyte s’accroche au pied ; **complément** : des protéines perforent la membrane."
+    }
+   ]
+  },
+  {
+   "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Premier contact, rappel",
+   "competence": "lire-graphique",
+   "situation": "Une personne rencontre un antigène à la semaine 0, puis le même antigène une seconde fois à la semaine 5. On suit le taux d’anticorps spécifiques dans son sang (courbe schématique).",
+   "documents": [
+    {
+     "id": "ac",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Taux d’anticorps spécifiques",
+     "categories": [
+      "S0",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+     ],
+     "series": [
+      {
+       "nom": "Anticorps",
+       "valeurs": [
+        0,
+        0,
+        2,
+        4,
+        3,
+        2,
+        35,
+        80,
+        70
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Taux d’anticorps",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Semaine"
+     },
+     "valeurs": false,
+     "source": "Courbe schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ac",
+     "enonce": "Touche le moment où le taux d’anticorps est le plus élevé.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "Cherche le sommet de toute la courbe.",
+     "explication": "Le taux maximal, environ 80 unités, est atteint à la **semaine 7**, après le second contact."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le pic de la réponse secondaire est-il plus élevé que celui de la réponse primaire ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Lis les deux sommets (S3 puis S7) et divise le plus grand par le plus petit.",
+     "explication": "Réponse primaire : pic de 4 ; réponse secondaire : pic de 80. 80 ÷ 4 = **20** fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles cellules expliquent que la réponse au second contact soit plus rapide et plus forte ?",
+     "options": [
+      "Les lymphocytes B mémoire formés lors du premier contact",
+      "Les hématies formées pendant la première semaine de l’infection",
+      "Les plaquettes qui gardent la trace de l’antigène rencontré",
+      "Les polynucléaires neutrophiles qui reconnaissent chaque antigène"
+     ],
+     "reponse": 0,
+     "aide": "Quelque chose a été gardé en mémoire après la première rencontre.",
+     "explication": "Les **lymphocytes B mémoire** réagissent vite et en grand nombre lors du second contact : la réponse secondaire est plus rapide, plus forte et plus durable."
+    },
+    {
+     "type": "choix",
+     "enonce": "À la semaine 5, la personne rencontre un antigène différent au lieu du même. À quoi ressemblerait la courbe des anticorps contre ce nouvel antigène ?",
+     "options": [
+      "À la réponse primaire : lente, faible, sans mémoire préalable",
+      "À la réponse secondaire : rapide, forte, grâce aux cellules mémoire",
+      "À une courbe plate, parce que le nouvel antigène n’est jamais reconnu",
+      "À une courbe qui suit exactement celle de l’antigène de la semaine 0"
+     ],
+     "reponse": 0,
+     "aide": "La mémoire immunitaire est spécifique d’un seul antigène.",
+     "explication": "La mémoire est **spécifique** : contre un nouvel antigène, aucune cellule mémoire n’existe, la réponse serait donc primaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Que disent les anticorps ?",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire recherche, chez trois personnes (cas imaginés), des anticorps dirigés contre un même agent infectieux. Un second document présente la numération des lymphocytes T4 d’un patient.",
+   "documents": [
+    {
+     "id": "sero",
+     "type": "tableau",
+     "titre": "Sérodiagnostic",
+     "colonnes": [
+      "Personne",
+      "IgM spécifiques",
+      "IgG spécifiques"
+     ],
+     "lignes": [
+      [
+       "Léa",
+       "Absentes",
+       "Absentes"
+      ],
+      [
+       "Karim",
+       "Absentes",
+       "Présentes"
+      ],
+      [
+       "Élodie",
+       "Présentes",
+       "Absentes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    },
+    {
+     "id": "lt4",
+     "type": "tableau",
+     "titre": "Numération des lymphocytes T4 (autre patient)",
+     "colonnes": [
+      "Résultat",
+      "Valeurs de référence"
+     ],
+     "lignes": [
+      [
+       "180 /mm³",
+       "500 à 1 500 /mm³"
+      ]
+     ],
+     "source": "Cas imaginé, valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sero",
+     "enonce": "Touche le résultat qui indique une infection récente.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un type d’anticorps apparaît le premier dans une infection récente.",
+     "explication": "Des **IgM** spécifiques présentes signent une infection récente : Élodie est concernée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à l’interprétation de ses résultats.",
+     "paires": [
+      [
+       "Léa",
+       "Aucune trace de contact avec l’agent"
+      ],
+      [
+       "Karim",
+       "Infection ancienne ou vaccination"
+      ],
+      [
+       "Élodie",
+       "Infection récente"
+      ]
+     ],
+     "aide": "Des IgG seules signent un contact ancien ; des IgM, un contact récent.",
+     "explication": "**Léa** n’a aucun anticorps ; **Karim** a des IgG seules (infection ancienne ou vaccin) ; **Élodie** a des IgM, marque d’une infection récente."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un patient dont les LT4 sont effondrés répond-il mal à la fois par anticorps et par cytolyse ?",
+     "options": [
+      "Les LT4 activent les lymphocytes B et les lymphocytes T8",
+      "Les LT4 fabriquent directement tous les anticorps du sang",
+      "Les LT4 percent eux-mêmes la membrane des cellules infectées",
+      "Les LT4 transportent le dioxygène vers les organes lymphoïdes"
+     ],
+     "reponse": 0,
+     "aide": "Les LT4 sont les chefs d’orchestre : ils envoient des messages aux autres lymphocytes.",
+     "explication": "Les LT4 sécrètent des **interleukines** qui activent les lymphocytes B (anticorps) et les lymphocytes T8 (cytolyse). Sans eux, les deux réponses sont affaiblies, comme dans l’infection par le VIH."
+    },
+    {
+     "type": "choix",
+     "enonce": "La valeur de 180 LT4 par mm³ se compare à la référence de 500 à 1 500. Que peut-on en dire ?",
+     "options": [
+      "Elle est inférieure à la limite basse : les défenses sont affaiblies",
+      "Elle est dans les valeurs de référence : les défenses sont intactes",
+      "Elle est supérieure à la limite haute : les défenses sont suractivées",
+      "Elle ne se compare à rien : les LT4 ne sont jamais comptés"
+     ],
+     "reponse": 0,
+     "aide": "Compare 180 à la limite basse de 500.",
+     "explication": "180 est **bien en dessous de 500** : les LT4 sont en nombre insuffisant, donc les défenses sont affaiblies."
+    }
+   ]
+  }
+ ]
+}

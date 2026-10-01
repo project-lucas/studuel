@@ -1,0 +1,432 @@
+{
+  "id": "maths-2024-centres-etrangers-j1",
+  "matiere": "maths",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2024,
+  "centre": "Centres étrangers",
+  "jour": 1,
+  "code": "24-MATJ1G11",
+  "titre": "Bac 2024 — Mathématiques",
+  "dureeMin": 240,
+  "coefficient": 16,
+  "consigne": "Quatre exercices indépendants de 5 points chacun, tous à traiter.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Fonction homographique et fiabilité d'un test antidopage : probabilités conditionnelles et valeur prédictive positive.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "Partie A : $f'(x) = \\frac{0{,}0288}{(0{,}93x+0{,}03)^2} > 0$, donc $f$ est strictement croissante sur $[0 ; 1]$.",
+        "Partie B : $P(D \\cap T) = 0{,}96x$ et, par les probabilités totales, $P(T) = 0{,}93x + 0{,}03$.",
+        "La valeur prédictive positive $P_T(D)$ vaut exactement $f(x)$ : pour 5 % de dopés, $f(0{,}05) \\approx 0{,}63$.",
+        "$f(x) \\geqslant 0{,}9$ dès que $x \\geqslant \\frac{0{,}027}{0{,}123} \\approx 0{,}22$.",
+        "Cibler les sportifs les plus suspects augmente $x$, donc, $f$ étant croissante, augmente la valeur prédictive positive."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A" },
+        {
+          "type": "question",
+          "numero": "A.1",
+          "intitule": "Démontrer que $f'(x) = \\frac{0{,}0288}{(0{,}93x+0{,}03)^2}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur $[0 ; 1]$, le dénominateur $0{,}93x + 0{,}03$ est supérieur ou égal à $0{,}03$, donc jamais nul : $f$ est dérivable comme quotient de fonctions dérivables. On pose $u(x) = 0{,}96x$ et $v(x) = 0{,}93x + 0{,}03$, d'où $u'(x) = 0{,}96$ et $v'(x) = 0{,}93$." },
+            { "type": "formule", "tex": "f'(x) = \\frac{u'v - uv'}{v^2} = \\frac{0{,}96(0{,}93x + 0{,}03) - 0{,}96x \\times 0{,}93}{(0{,}93x+0{,}03)^2}" },
+            { "type": "texte", "texte": "Au numérateur, les termes en $x$ s'annulent : $0{,}96 \\times 0{,}93x - 0{,}96 \\times 0{,}93x = 0$. Il reste $0{,}96 \\times 0{,}03 = 0{,}0288$." },
+            { "type": "reponse", "texte": "Pour tout $x \\in [0 ; 1]$, $f'(x) = \\dfrac{0{,}0288}{(0{,}93x+0{,}03)^2}$." },
+            { "type": "astuce", "texte": "Avant de dériver un quotient, vérifie en une ligne que le dénominateur ne s'annule pas sur l'intervalle : c'est ce qui justifie la dérivabilité, et le correcteur le regarde." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2",
+          "intitule": "Sens de variation de $f$ sur $[0 ; 1]$.",
+          "blocs": [
+            { "type": "texte", "texte": "Le numérateur $0{,}0288$ est strictement positif et un carré non nul est strictement positif : $f'(x) > 0$ pour tout $x \\in [0 ; 1]$." },
+            { "type": "reponse", "texte": "$f$ est strictement croissante sur $[0 ; 1]$, de $f(0) = 0$ à $f(1) = \\frac{0{,}96}{0{,}96} = 1$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B" },
+        {
+          "type": "question",
+          "numero": "B.1",
+          "intitule": "Compléter l'arbre de probabilité.",
+          "blocs": [
+            { "type": "texte", "texte": "Les deux données de l'énoncé sont des probabilités conditionnelles : $P_D(T) = 0{,}96$ et $P_{\\overline{D}}(T) = 0{,}03$. Chaque paire de branches issues d'un même nœud a une somme égale à 1." },
+            {
+              "type": "tableau",
+              "entetes": ["Premier niveau", "Second niveau", "Probabilité de la branche"],
+              "lignes": [
+                ["$D$ : $x$", "$T$", "$P_D(T) = 0{,}96$"],
+                ["$D$ : $x$", "$\\overline{T}$", "$P_D(\\overline{T}) = 0{,}04$"],
+                ["$\\overline{D}$ : $1 - x$", "$T$", "$P_{\\overline{D}}(T) = 0{,}03$"],
+                ["$\\overline{D}$ : $1 - x$", "$\\overline{T}$", "$P_{\\overline{D}}(\\overline{T}) = 0{,}97$"]
+              ]
+            },
+            { "type": "reponse", "texte": "Branches du second niveau : $0{,}96$ et $0{,}04$ après $D$ ; $0{,}03$ et $0{,}97$ après $\\overline{D}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2",
+          "intitule": "Probabilité qu'un sportif soit dopé et ait un test positif.",
+          "blocs": [
+            { "type": "formule", "tex": "P(D \\cap T) = P(D) \\times P_D(T) = x \\times 0{,}96" },
+            { "type": "reponse", "texte": "$P(D \\cap T) = 0{,}96x$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3",
+          "intitule": "Démontrer que $P(T) = 0{,}93x + 0{,}03$.",
+          "blocs": [
+            { "type": "texte", "texte": "$D$ et $\\overline{D}$ forment une partition de l'univers. D'après la formule des probabilités totales :" },
+            { "type": "formule", "tex": "P(T) = P(D \\cap T) + P(\\overline{D} \\cap T) = 0{,}96x + (1 - x) \\times 0{,}03 = 0{,}96x + 0{,}03 - 0{,}03x" },
+            { "type": "reponse", "texte": "$P(T) = 0{,}93x + 0{,}03$." },
+            { "type": "attendu", "texte": "Le correcteur attend le nom de la propriété (« formule des probabilités totales ») et la mention de la partition $\\{D, \\overline{D}\\}$, pas seulement le calcul." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.4",
+          "intitule": "Avec 50 dopés sur 1 000, montrer que $P_T(D) = f(0{,}05)$ et en donner un arrondi.",
+          "blocs": [
+            { "type": "texte", "texte": "La proportion de sportifs dopés est $x = \\frac{50}{1000} = 0{,}05$. Par définition d'une probabilité conditionnelle, et avec les questions 2 et 3 :" },
+            { "type": "formule", "tex": "P_T(D) = \\frac{P(D \\cap T)}{P(T)} = \\frac{0{,}96x}{0{,}93x + 0{,}03} = f(x)" },
+            { "type": "texte", "texte": "Pour $x = 0{,}05$ : $f(0{,}05) = \\frac{0{,}048}{0{,}0465 + 0{,}03} = \\frac{0{,}048}{0{,}0765} \\approx 0{,}6275$." },
+            { "type": "reponse", "texte": "$P_T(D) = f(0{,}05) \\approx 0{,}63$." },
+            { "type": "piege", "texte": "Ne confonds pas $P_T(D)$ (dopé sachant positif, ce qu'on cherche) et $P_D(T) = 0{,}96$ (positif sachant dopé, une donnée). Ici, un test positif ne désigne un vrai dopé qu'environ 63 fois sur 100, alors que le test « détecte » 96 % des dopés." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.5.a",
+          "intitule": "À partir de quelle valeur de $x$ la valeur prédictive positive est-elle au moins égale à $0{,}9$ ?",
+          "blocs": [
+            { "type": "texte", "texte": "La valeur prédictive positive est $P_T(D) = f(x)$. Comme $0{,}93x + 0{,}03 > 0$, on peut multiplier par ce dénominateur sans changer le sens de l'inégalité :" },
+            { "type": "formule", "tex": "f(x) \\geqslant 0{,}9 \\iff 0{,}96x \\geqslant 0{,}9(0{,}93x + 0{,}03) \\iff 0{,}96x - 0{,}837x \\geqslant 0{,}027 \\iff 0{,}123x \\geqslant 0{,}027" },
+            { "type": "texte", "texte": "Soit $x \\geqslant \\frac{0{,}027}{0{,}123} = \\frac{9}{41} \\approx 0{,}2195$." },
+            { "type": "reponse", "texte": "La valeur prédictive positive est supérieure ou égale à $0{,}9$ dès que $x \\geqslant \\frac{9}{41}$, soit environ $x \\geqslant 0{,}22$ : il faut au moins 22 % de sportifs dopés dans la population testée." },
+            { "type": "astuce", "texte": "Tu pouvais aussi t'appuyer sur la partie A : $f$ étant continue et strictement croissante, $f(x) \\geqslant 0{,}9$ équivaut à $x \\geqslant x_0$ où $f(x_0) = 0{,}9$. La résolution algébrique ci-dessus donne directement $x_0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.5.b",
+          "intitule": "Conséquence d'un contrôle ciblé sur les sportifs les plus performants.",
+          "blocs": [
+            { "type": "texte", "texte": "En ciblant des sportifs supposés plus fréquemment dopés, la proportion $x$ de dopés parmi les sportifs testés augmente. Or la valeur prédictive positive vaut $f(x)$ et, d'après la partie A, $f$ est strictement croissante sur $[0 ; 1]$." },
+            { "type": "reponse", "texte": "Quand $x$ augmente, $f(x)$ augmente : la valeur prédictive positive du test augmente. Un test positif devient plus fiable dans une population ciblée." },
+            { "type": "attendu", "texte": "L'énoncé demande d'argumenter « en utilisant un résultat de la partie A » : cite explicitement la croissance de $f$, sinon la réponse, même juste, perd des points." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Étude de $f(x) = 2x\\mathrm{e}^{-x}$ sur $[0 ; 1]$ et de la suite $u_{n+1} = f(u_n)$ qui converge vers $\\ln 2$.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$f(x) = x$ a deux solutions dans $[0 ; 1]$ : $0$ et $\\ln 2$.",
+        "$f'(x) = 2(1-x)\\mathrm{e}^{-x} \\geqslant 0$ : $f$ est croissante de $0$ à $\\frac{2}{\\mathrm{e}}$.",
+        "Par récurrence, $0 \\leqslant u_n < u_{n+1} \\leqslant 1$ : la suite est croissante et majorée, donc convergente.",
+        "Sa limite $\\ell$ vérifie $f(\\ell) = \\ell$ et $\\ell \\geqslant 0{,}1$, donc $\\ell = \\ln 2$.",
+        "Le script tourne tant que $\\ln 2 - u > 0{,}0001$ avec `u = 2*u*exp(-u)`, et renvoie $n = 11$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1.a",
+          "intitule": "Résoudre $f(x) = x$ sur $[0 ; 1]$.",
+          "blocs": [
+            { "type": "formule", "tex": "2x\\mathrm{e}^{-x} = x \\iff 2x\\mathrm{e}^{-x} - x = 0 \\iff x\\left(2\\mathrm{e}^{-x} - 1\\right) = 0" },
+            { "type": "texte", "texte": "Un produit est nul si et seulement si l'un de ses facteurs est nul : $x = 0$, ou $\\mathrm{e}^{-x} = \\frac{1}{2}$, c'est-à-dire $-x = \\ln\\frac{1}{2} = -\\ln 2$, soit $x = \\ln 2 \\approx 0{,}693$, qui appartient bien à $[0 ; 1]$." },
+            { "type": "reponse", "texte": "$S = \\{0 ; \\ln 2\\}$." },
+            { "type": "piege", "texte": "Ne divise pas les deux membres par $x$ : tu perdrais la solution $x = 0$. On factorise toujours." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.b",
+          "intitule": "Démontrer que $f'(x) = 2(1-x)\\mathrm{e}^{-x}$.",
+          "blocs": [
+            { "type": "texte", "texte": "$f = uv$ avec $u(x) = 2x$, $u'(x) = 2$, et $v(x) = \\mathrm{e}^{-x}$, $v'(x) = -\\mathrm{e}^{-x}$." },
+            { "type": "formule", "tex": "f'(x) = 2\\mathrm{e}^{-x} + 2x \\times \\left(-\\mathrm{e}^{-x}\\right) = 2\\mathrm{e}^{-x}(1 - x)" },
+            { "type": "reponse", "texte": "Pour tout $x \\in [0 ; 1]$, $f'(x) = 2(1-x)\\mathrm{e}^{-x}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.c",
+          "intitule": "Tableau de variations de $f$ sur $[0 ; 1]$.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur $[0 ; 1]$, $1 - x \\geqslant 0$ (nul seulement en $x = 1$) et $2\\mathrm{e}^{-x} > 0$. Donc $f'(x) \\geqslant 0$, avec égalité seulement en $1$ : $f$ est strictement croissante. $f(0) = 0$ et $f(1) = 2\\mathrm{e}^{-1} = \\frac{2}{\\mathrm{e}} \\approx 0{,}74$." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$0$", "", "$1$"],
+              "lignes": [
+                ["signe de $f'(x)$", "$+$", "$+$", "$0$"],
+                ["variations de $f$", "$0$", "croissante", "$\\frac{2}{\\mathrm{e}}$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$f$ est strictement croissante sur $[0 ; 1]$, de $0$ à $\\frac{2}{\\mathrm{e}}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.a",
+          "intitule": "Démontrer par récurrence que $0 \\leqslant u_n < u_{n+1} \\leqslant 1$.",
+          "blocs": [
+            { "type": "texte", "texte": "On note $P(n)$ : « $0 \\leqslant u_n < u_{n+1} \\leqslant 1$ »." },
+            { "type": "texte", "texte": "**Initialisation.** $u_0 = 0{,}1$ et $u_1 = f(0{,}1) = 0{,}2\\mathrm{e}^{-0{,}1} \\approx 0{,}181$. On a bien $0 \\leqslant 0{,}1 < 0{,}181 \\leqslant 1$ : $P(0)$ est vraie." },
+            { "type": "texte", "texte": "**Hérédité.** Soit $n$ un entier naturel tel que $P(n)$ est vraie : $0 \\leqslant u_n < u_{n+1} \\leqslant 1$. Tous ces nombres sont dans $[0 ; 1]$, où $f$ est strictement croissante (question 1.c) ; appliquer $f$ conserve donc l'ordre, strict compris :" },
+            { "type": "formule", "tex": "f(0) \\leqslant f(u_n) < f(u_{n+1}) \\leqslant f(1), \\quad \\text{soit} \\quad 0 \\leqslant u_{n+1} < u_{n+2} \\leqslant \\frac{2}{\\mathrm{e}}" },
+            { "type": "texte", "texte": "Comme $\\frac{2}{\\mathrm{e}} \\approx 0{,}74 \\leqslant 1$, on obtient $0 \\leqslant u_{n+1} < u_{n+2} \\leqslant 1$ : $P(n+1)$ est vraie." },
+            { "type": "texte", "texte": "**Conclusion.** $P(0)$ est vraie et $P$ est héréditaire, donc $P(n)$ est vraie pour tout entier naturel $n$." },
+            { "type": "reponse", "texte": "Pour tout $n \\in \\mathbb{N}$, $0 \\leqslant u_n < u_{n+1} \\leqslant 1$." },
+            { "type": "attendu", "texte": "Les trois étapes nommées (initialisation, hérédité, conclusion), et dans l'hérédité l'argument clé : « $f$ est croissante sur $[0 ; 1]$ », avec la vérification que les nombres comparés sont bien dans cet intervalle." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.b",
+          "intitule": "En déduire que $(u_n)$ converge.",
+          "blocs": [
+            { "type": "texte", "texte": "D'après 2.a, $u_n < u_{n+1}$ pour tout $n$ : la suite est croissante. Et $u_n \\leqslant 1$ : elle est majorée par 1." },
+            { "type": "reponse", "texte": "Toute suite croissante et majorée converge (théorème de convergence monotone) : $(u_n)$ converge vers une limite $\\ell \\leqslant 1$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Démontrer que la limite de $(u_n)$ est $\\ln 2$.",
+          "blocs": [
+            { "type": "texte", "texte": "La suite converge vers $\\ell$ et $u_{n+1} = f(u_n)$ avec $f$ continue sur $[0 ; 1]$. En passant à la limite des deux côtés, $\\ell = f(\\ell)$ (théorème du point fixe). De plus $0 \\leqslant u_n \\leqslant 1$ donne $\\ell \\in [0 ; 1]$." },
+            { "type": "texte", "texte": "D'après 1.a, $\\ell = 0$ ou $\\ell = \\ln 2$. Mais la suite est croissante et $u_0 = 0{,}1$ : pour tout $n$, $u_n \\geqslant 0{,}1$, donc $\\ell \\geqslant 0{,}1$, ce qui exclut $0$." },
+            { "type": "reponse", "texte": "$\\lim\\limits_{n \\to +\\infty} u_n = \\ln 2$." },
+            { "type": "piege", "texte": "Beaucoup s'arrêtent à « $\\ell = 0$ ou $\\ell = \\ln 2$ ». Il faut éliminer $0$ par un argument : ici la croissance de la suite à partir de $0{,}1$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Justifier que $\\ln 2 - u_n \\geqslant 0$ pour tout $n$.",
+          "blocs": [
+            { "type": "texte", "texte": "La suite $(u_n)$ est croissante et converge vers $\\ln 2$. Une suite croissante convergente est majorée par sa limite : pour tout $n$, $u_n \\leqslant \\ln 2$." },
+            { "type": "texte", "texte": "Autre démonstration possible, par récurrence : $u_0 = 0{,}1 \\leqslant \\ln 2$, et si $u_n \\leqslant \\ln 2$, la croissance de $f$ donne $u_{n+1} = f(u_n) \\leqslant f(\\ln 2) = \\ln 2$." },
+            { "type": "reponse", "texte": "Pour tout $n \\in \\mathbb{N}$, $\\ln 2 - u_n \\geqslant 0$ : $u_n$ est une valeur approchée **par défaut** de $\\ln 2$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Compléter le script `seuil()`.",
+          "blocs": [
+            { "type": "texte", "texte": "On veut s'arrêter dès que $0 \\leqslant \\ln 2 - u_n \\leqslant 10^{-4}$. On continue donc tant que l'écart dépasse $10^{-4}$, et à chaque tour on calcule le terme suivant $u_{n+1} = 2u_n\\mathrm{e}^{-u_n}$." },
+            { "type": "code", "langage": "python", "code": "from math import log as ln, exp\n\ndef seuil():\n    n = 0\n    u = 0.1\n    while ln(2) - u > 0.0001:\n        n = n + 1\n        u = 2 * u * exp(-u)\n    return (u, n)" },
+            { "type": "reponse", "texte": "Les deux trous : `while ln(2) - u > 0.0001:` et `u = 2*u*exp(-u)`." },
+            { "type": "piege", "texte": "Pas de valeur absolue nécessaire : on sait depuis 4.a que $\\ln 2 - u_n \\geqslant 0$. Et la condition d'un `while` est celle pour **continuer**, c'est-à-dire le contraire de la condition d'arrêt." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.c",
+          "intitule": "Valeur de `n` renvoyée par `seuil()`.",
+          "blocs": [
+            { "type": "texte", "texte": "À la calculatrice (ou en exécutant le script) : $\\ln 2 - u_{10} \\approx 1{,}5 \\times 10^{-4} > 10^{-4}$ et $\\ln 2 - u_{11} \\approx 4{,}6 \\times 10^{-5} \\leqslant 10^{-4}$." },
+            { "type": "reponse", "texte": "La fonction renvoie $n = 11$ (avec $u_{11} \\approx 0{,}69310$)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Équations différentielles $y' = y$ et $y' = y - \\cos x - 3\\sin x$, puis un calcul d'intégrale.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "Les solutions de $(E_0)$ : $y' = y$ sont les fonctions $x \\mapsto C\\mathrm{e}^x$, $C \\in \\mathbb{R}$ ; la seule constante est la fonction nulle.",
+        "$h(x) = 2\\cos x + \\sin x$ est une solution particulière de $(E)$.",
+        "$f$ est solution de $(E)$ si et seulement si $f - h$ est solution de $(E_0)$ : les solutions de $(E)$ sont $x \\mapsto C\\mathrm{e}^x + 2\\cos x + \\sin x$.",
+        "Avec $g(0) = 0$ : $g(x) = -2\\mathrm{e}^x + 2\\cos x + \\sin x$.",
+        "$\\int_0^{\\pi/2} g(x)\\,\\mathrm{d}x = 5 - 2\\mathrm{e}^{\\pi/2} \\approx -4{,}62$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "La seule fonction constante solution de $(E_0)$ est la fonction nulle.",
+          "blocs": [
+            { "type": "texte", "texte": "Soit $y$ la fonction constante égale à $k$. Alors $y' = 0$, et $y$ est solution de $(E_0)$ si et seulement si $0 = k$." },
+            { "type": "reponse", "texte": "La seule fonction constante solution de $(E_0)$ est la fonction nulle." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Toutes les solutions de $(E_0)$.",
+          "blocs": [
+            { "type": "texte", "texte": "$(E_0)$ est de la forme $y' = ay$ avec $a = 1$. D'après le cours, ses solutions sont les fonctions $x \\mapsto C\\mathrm{e}^{ax}$ avec $C$ réel." },
+            { "type": "reponse", "texte": "Les solutions de $(E_0)$ sont les fonctions $x \\mapsto C\\mathrm{e}^{x}$, $C \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "$h(x) = 2\\cos x + \\sin x$ est solution de $(E)$.",
+          "blocs": [
+            { "type": "texte", "texte": "D'une part, $h'(x) = -2\\sin x + \\cos x$. D'autre part :" },
+            { "type": "formule", "tex": "h(x) - \\cos x - 3\\sin x = 2\\cos x + \\sin x - \\cos x - 3\\sin x = \\cos x - 2\\sin x" },
+            { "type": "reponse", "texte": "Pour tout réel $x$, $h'(x) = h(x) - \\cos x - 3\\sin x$ : $h$ est solution de $(E)$." },
+            { "type": "astuce", "texte": "Pour vérifier qu'une fonction est solution, calcule séparément les deux membres et montre qu'ils sont égaux. C'est plus lisible qu'une seule ligne où tout se mélange." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "« $f$ solution de $(E)$ » équivaut à « $f - h$ solution de $(E_0)$ ».",
+          "blocs": [
+            { "type": "texte", "texte": "Comme $h$ est solution de $(E)$, pour tout réel $x$ : $h'(x) = h(x) - \\cos x - 3\\sin x$, donc $\\cos x + 3\\sin x = h(x) - h'(x)$. Pour $f$ dérivable sur $\\mathbb{R}$ :" },
+            { "type": "formule", "tex": "f' = f - \\cos - 3\\sin \\iff f' = f - (h - h') \\iff f' - h' = f - h \\iff (f - h)' = f - h" },
+            { "type": "reponse", "texte": "$f$ est solution de $(E)$ si et seulement si $f - h$ est solution de $(E_0)$." },
+            { "type": "attendu", "texte": "On demande une **équivalence** : écris une chaîne de « $\\iff$ » (ou démontre les deux sens). Un seul sens ne rapporte que la moitié des points." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Toutes les solutions de $(E)$.",
+          "blocs": [
+            { "type": "texte", "texte": "D'après 4 puis 2 : $f$ est solution de $(E)$ $\\iff$ $f - h$ est solution de $(E_0)$ $\\iff$ il existe $C \\in \\mathbb{R}$ tel que, pour tout $x$, $f(x) - h(x) = C\\mathrm{e}^x$." },
+            { "type": "reponse", "texte": "Les solutions de $(E)$ sont les fonctions $x \\mapsto C\\mathrm{e}^x + 2\\cos x + \\sin x$, $C \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "L'unique solution $g$ de $(E)$ telle que $g(0) = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "$g(x) = C\\mathrm{e}^x + 2\\cos x + \\sin x$, donc $g(0) = C + 2 + 0 = C + 2$. La condition $g(0) = 0$ impose $C = -2$." },
+            { "type": "reponse", "texte": "$g(x) = -2\\mathrm{e}^x + 2\\cos x + \\sin x$ pour tout réel $x$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Calculer $\\int_0^{\\pi/2} \\left(-2\\mathrm{e}^x + \\sin x + 2\\cos x\\right)\\mathrm{d}x$.",
+          "blocs": [
+            { "type": "texte", "texte": "La fonction intégrée est exactement $g$. Une primitive terme à terme : $-2\\mathrm{e}^x$ a pour primitive $-2\\mathrm{e}^x$, $\\sin x$ a pour primitive $-\\cos x$, $2\\cos x$ a pour primitive $2\\sin x$. Donc $G(x) = -2\\mathrm{e}^x - \\cos x + 2\\sin x$." },
+            { "type": "formule", "tex": "\\int_0^{\\frac{\\pi}{2}} g(x)\\,\\mathrm{d}x = G\\left(\\tfrac{\\pi}{2}\\right) - G(0) = \\left(-2\\mathrm{e}^{\\frac{\\pi}{2}} - 0 + 2\\right) - (-2 - 1 + 0)" },
+            { "type": "reponse", "texte": "$\\displaystyle\\int_0^{\\frac{\\pi}{2}} \\left(-2\\mathrm{e}^x + \\sin x + 2\\cos x\\right)\\mathrm{d}x = 5 - 2\\mathrm{e}^{\\frac{\\pi}{2}} \\approx -4{,}62$." },
+            { "type": "piege", "texte": "La primitive de $\\sin$ est $-\\cos$ (et non $\\cos$) : c'est l'erreur de signe la plus fréquente ici. Et $\\cos(0) = 1$ donne bien $G(0) = -3$." },
+            { "type": "astuce", "texte": "Contrôle de vraisemblance : l'intégrale est négative, ce qui est cohérent car $-2\\mathrm{e}^x$ domine ($\\mathrm{e}^{\\pi/2} \\approx 4{,}8$) alors que $\\sin x + 2\\cos x$ ne dépasse pas $\\sqrt{5}$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Géométrie dans l'espace : le tétraèdre $ABCD$, un vecteur normal, deux hauteurs et la distance d'un point à un plan.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$\\overrightarrow{AB}(1 ; 3 ; -2)$ et $\\overrightarrow{AC}(3 ; -1 ; 0)$ ne sont pas colinéaires : $A$, $B$, $C$ définissent un plan.",
+        "$\\vec{n}(1 ; 3 ; 5)$ est orthogonal à ces deux vecteurs, d'où $(ABC)$ : $x + 3y + 5z - 8 = 0$ ; $D$ n'y est pas.",
+        "$\\mathcal{D}_1$ passe par $D$ et est dirigée par $\\vec{n}$ : c'est la hauteur issue de $D$.",
+        "$\\mathcal{D}_1$ et $\\mathcal{D}_2$ se coupent en $\\left(\\frac{1}{7} ; \\frac{3}{7} ; \\frac{26}{7}\\right)$.",
+        "$H\\left(-\\frac{1}{5} ; -\\frac{3}{5} ; 2\\right)$ et $DH = \\frac{\\sqrt{35}}{5} \\approx 1{,}18$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "$A$, $B$ et $C$ ne sont pas alignés.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\overrightarrow{AB}\\begin{pmatrix} 1 \\\\ 3 \\\\ -2 \\end{pmatrix}$ et $\\overrightarrow{AC}\\begin{pmatrix} 3 \\\\ -1 \\\\ 0 \\end{pmatrix}$. S'il existait $k$ tel que $\\overrightarrow{AC} = k\\overrightarrow{AB}$, la première coordonnée donnerait $k = 3$, et la deuxième $-1 = 3k = 9$ : c'est impossible." },
+            { "type": "reponse", "texte": "$\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ ne sont pas colinéaires, donc $A$, $B$ et $C$ ne sont pas alignés." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.a",
+          "intitule": "$\\vec{n}(1 ; 3 ; 5)$ est orthogonal au plan $(ABC)$.",
+          "blocs": [
+            { "type": "formule", "tex": "\\vec{n} \\cdot \\overrightarrow{AB} = 1 \\times 1 + 3 \\times 3 + 5 \\times (-2) = 0 \\qquad \\vec{n} \\cdot \\overrightarrow{AC} = 1 \\times 3 + 3 \\times (-1) + 5 \\times 0 = 0" },
+            { "type": "reponse", "texte": "$\\vec{n}$ est orthogonal à deux vecteurs non colinéaires du plan $(ABC)$ (question 1), donc il est orthogonal au plan $(ABC)$." },
+            { "type": "attendu", "texte": "La mention « deux vecteurs **non colinéaires** du plan » est indispensable : un vecteur orthogonal à un seul vecteur du plan, ou à deux vecteurs colinéaires, ne lui est pas forcément normal." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.b",
+          "intitule": "Une équation de $(ABC)$ est $x + 3y + 5z - 8 = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "$\\vec{n}(1 ; 3 ; 5)$ étant normal à $(ABC)$, ce plan a une équation de la forme $x + 3y + 5z + d = 0$. Il passe par $A(-2 ; 0 ; 2)$ : $-2 + 0 + 10 + d = 0$, donc $d = -8$." },
+            { "type": "reponse", "texte": "$(ABC)$ : $x + 3y + 5z - 8 = 0$." },
+            { "type": "astuce", "texte": "Vérifie avec les deux autres points : $B$ donne $-1 + 9 + 0 - 8 = 0$ et $C$ donne $1 - 3 + 10 - 8 = 0$. Dix secondes pour être sûr de ton équation avant de t'en servir dans toute la suite." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2.c",
+          "intitule": "$A$, $B$, $C$ et $D$ ne sont pas coplanaires.",
+          "blocs": [
+            { "type": "texte", "texte": "Avec $D(0 ; 0 ; 3)$ : $0 + 0 + 15 - 8 = 7 \\neq 0$, donc $D \\notin (ABC)$." },
+            { "type": "reponse", "texte": "$D$ n'appartient pas au plan $(ABC)$ : les quatre points ne sont pas coplanaires, et $ABCD$ est bien un tétraèdre." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.a",
+          "intitule": "$\\mathcal{D}_1$ est la hauteur du tétraèdre issue de $D$.",
+          "blocs": [
+            { "type": "texte", "texte": "La hauteur issue de $D$ est la droite passant par $D$ et orthogonale au plan de la face opposée $(ABC)$. Pour $t = 0$, la représentation de $\\mathcal{D}_1$ donne le point $(0 ; 0 ; 3)$, c'est-à-dire $D$. Un vecteur directeur de $\\mathcal{D}_1$ est $(1 ; 3 ; 5) = \\vec{n}$, normal à $(ABC)$." },
+            { "type": "reponse", "texte": "$\\mathcal{D}_1$ passe par $D$ et est orthogonale à $(ABC)$ : c'est la hauteur de $ABCD$ issue de $D$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.b",
+          "intitule": "$\\mathcal{D}_1$ et $\\mathcal{D}_2$ sont sécantes ; coordonnées du point d'intersection.",
+          "blocs": [
+            { "type": "texte", "texte": "On cherche $t$ et $s$ tels que les deux représentations donnent le même point :" },
+            { "type": "formule", "tex": "\\begin{cases} t = 1 + 3s \\\\ 3t = -1 - 5s \\\\ 3 + 5t = 2 - 6s \\end{cases}" },
+            { "type": "texte", "texte": "En remplaçant $t$ dans la deuxième équation : $3 + 9s = -1 - 5s$, d'où $14s = -4$ et $s = -\\frac{2}{7}$, puis $t = 1 - \\frac{6}{7} = \\frac{1}{7}$. Vérification dans la troisième : $3 + \\frac{5}{7} = \\frac{26}{7}$ et $2 + \\frac{12}{7} = \\frac{26}{7}$. Le système a une solution, donc les droites ont un point commun ; leurs vecteurs directeurs $(1 ; 3 ; 5)$ et $(3 ; -5 ; -6)$ ne sont pas colinéaires, donc elles ne sont pas confondues." },
+            { "type": "reponse", "texte": "$\\mathcal{D}_1$ et $\\mathcal{D}_2$ sont sécantes au point de coordonnées $\\left(\\frac{1}{7} ; \\frac{3}{7} ; \\frac{26}{7}\\right)$." },
+            { "type": "piege", "texte": "Deux paramètres différents ($t$ et $s$) : ne les appelle jamais tous les deux $t$. Et n'oublie pas de vérifier la troisième équation : c'est elle qui prouve que les droites se coupent vraiment." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Coordonnées du projeté orthogonal $H$ de $D$ sur $(ABC)$.",
+          "blocs": [
+            { "type": "texte", "texte": "$H$ est l'intersection de $(ABC)$ avec la droite passant par $D$ et orthogonale à ce plan, c'est-à-dire $\\mathcal{D}_1$. On injecte la représentation de $\\mathcal{D}_1$ dans l'équation du plan :" },
+            { "type": "formule", "tex": "t + 3(3t) + 5(3 + 5t) - 8 = 0 \\iff 35t + 7 = 0 \\iff t = -\\frac{1}{5}" },
+            { "type": "reponse", "texte": "$H\\left(-\\frac{1}{5} ; -\\frac{3}{5} ; 2\\right)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Distance de $D$ au plan $(ABC)$, arrondie au centième.",
+          "blocs": [
+            { "type": "texte", "texte": "La distance de $D$ au plan est $DH$, avec $\\overrightarrow{DH}\\left(-\\frac{1}{5} ; -\\frac{3}{5} ; -1\\right) = -\\frac{1}{5}\\vec{n}$." },
+            { "type": "formule", "tex": "DH = \\sqrt{\\frac{1}{25} + \\frac{9}{25} + \\frac{25}{25}} = \\sqrt{\\frac{35}{25}} = \\frac{\\sqrt{35}}{5}" },
+            { "type": "reponse", "texte": "$d(D, (ABC)) = \\frac{\\sqrt{35}}{5} \\approx 1{,}18$." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -34,12 +34,15 @@ import {
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 import { EXAM_PAPER_COLUMNS, parseExamPapers } from '@/lib/exam-papers'
+import { ANNALES_CORRIGEES } from '@/lib/annales-corrigees/registre'
+import { annalesParAnnee } from '@/lib/annales-corrigees/apercu'
 import {
   DERNIERE_SESSION_LABEL,
   derniereSession,
   tracesDeLaMatiere,
 } from '@/lib/derniere-session'
 import { getReviewItems } from '@/lib/srs'
+import { xpRestantFiche } from '@/lib/reviser/programme'
 import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -479,6 +482,12 @@ export default async function SubjectPage({
       const quizId = l.quizzes[0]?.id
       return Boolean(quizId && bestByQuiz.has(quizId))
     }),
+    // Ce que la fiche peut encore rapporter (carte « Reprendre ») : les leçons
+    // pas encore lues et les couronnes pas encore décrochées, au barème de base.
+    xpRestant: xpRestantFiche({
+      leconsALire: chapter.lessons.filter((l) => !completed.has(l.id)).length,
+      couronnes: crowns(values[i]),
+    }),
   }))
 
   const progress = subjectProgress(values)
@@ -551,6 +560,7 @@ export default async function SubjectPage({
     bossPool,
     gardien,
     papers: parseExamPapers(paperRows),
+    annalesCorrigees: annalesParAnnee(ANNALES_CORRIGEES, subject.slug, level),
   }
 
   // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu,

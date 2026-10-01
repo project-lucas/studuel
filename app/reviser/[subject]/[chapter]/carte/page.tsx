@@ -57,7 +57,7 @@ export default async function MindMapPage({
 
   // Carte rédigée à la main d'abord. À défaut — c'est le cas de la quasi-
   // totalité des chapitres — on la DÉRIVE du cours : le chapitre au centre, une
-  // branche par leçon, un rameau par titre de section (cf. lib/mind-map-auto).
+  // branche par section du cours, ses mots-clés pour rameaux (cf. lib/mind-map-auto).
   // Une carte mentale n'est rien d'autre que la structure du cours, et cette
   // structure existe déjà : mieux vaut la montrer que promettre « bientôt ».
   //

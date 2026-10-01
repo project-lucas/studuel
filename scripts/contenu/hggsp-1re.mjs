@@ -367,7 +367,7 @@ La dictature de l'**Estado Novo**, fondée par **Salazar** en 1933 et poursuivie
 | La date | L'événement |
 | **25 avril 1974** | Un mouvement d'officiers renverse le régime presque sans effusion de sang ; la population glisse des **œillets** dans les canons |
 | 1974-1975 | Décolonisation rapide, nationalisations, tensions entre courants |
-| **1976** | Constitution, élection de Mário Soares |
+| **1976** | Constitution ; Mário Soares devient Premier ministre |
 | **1986** | Entrée dans la CEE |
 
 ## L'Espagne : la transition négociée
@@ -763,7 +763,7 @@ Un État n'existe pleinement qu'une fois **reconnu**. La reconnaissance est un a
 
 ## Dépasser les frontières
 | Le procédé | Ce qu'il fait |
-| L'**intégration régionale** | **Schengen** supprime les contrôles intérieurs de 27 pays, avec le marché unique et la libre circulation |
+| L'**intégration régionale** | **Schengen** supprime les contrôles intérieurs de 29 pays, avec le marché unique et la libre circulation |
 | La **coopération transfrontalière** | Eurorégions, bassins de vie partagés, services communs ; des dizaines de milliers de travailleurs frontaliers chaque jour |
 | Les **flux immatériels** | Capitaux, données, information : ils ignorent largement les frontières, d'où la question de la régulation et de la fiscalité |
 
@@ -856,7 +856,7 @@ Ciudad Juárez et El Paso, Bâle au contact de trois pays, Genève dont le bassi
 
 ## Le dispositif
 | L'élément | Sa date | Ce qu'il fait |
-| L'espace **Schengen** | 1985, appliqué en 1995 | Supprime les contrôles intérieurs pour 27 pays, dont quatre hors Union |
+| L'espace **Schengen** | 1985, appliqué en 1995 | Supprime les contrôles intérieurs pour 29 pays, dont quatre hors Union |
 | **Frontex** | 2004 | Agence européenne de garde-frontières : elle appuie les États sur la frontière extérieure |
 | Les accords de **Dublin** | 1990, révisés | Le **premier pays d'entrée** est responsable de l'examen d'une demande d'asile |
 | Les bases de données communes | — | Elles enregistrent entrées et demandes |
@@ -896,7 +896,7 @@ Les débats portent sur les opérations de sauvetage, la criminalisation de l'ai
             ['Sur quel texte repose le droit d’asile ?', ['La convention de Genève de 1951', 'Le traité de Rome', 'Les accords de Schengen', 'Le pacte de 2024'], 0, 'C’est un droit individuel protégé par le droit international.'],
             ['Combien de personnes sont arrivées dans l’Union en 2015 ?', ['Plus d’un million', 'Environ cent mille', 'Environ dix millions', 'Moins de cinquante mille'], 0, 'Fuyant principalement la Syrie, l’Afghanistan et l’Érythrée.'],
             ['Quelle est la route migratoire la plus meurtrière du monde ?', ['La Méditerranée', 'La frontière américano-mexicaine', 'La Manche', 'La mer Égée seule'], 0, 'Plusieurs dizaines de milliers de disparus depuis 2014.'],
-            ['L’espace Schengen ne comprend que des États membres de l’Union européenne.', ['Vrai', 'Faux'], 1, 'Il compte 27 pays, dont quatre qui ne sont pas membres de l’Union.'],
+            ['L’espace Schengen ne comprend que des États membres de l’Union européenne.', ['Vrai', 'Faux'], 1, 'Il compte 29 pays, dont quatre qui ne sont pas membres de l’Union.'],
           ],
         },
 
@@ -1086,8 +1086,8 @@ Le **13 janvier 1898**, **Émile Zola** publie dans *L'Aurore*, à la une, une l
 ## L'issue
 | La date | L'étape |
 | **1899** | Dreyfus est gracié |
-| **1906** | Il est **réhabilité** et réintégré dans l'armée |
-| **1905** | L'affaire nourrit la loi de séparation des Églises et de l'État |
+| **1905** | L'affaire nourrit la **loi de séparation** des Églises et de l'État |
+| **1906** | Dreyfus est **réhabilité** et réintégré dans l'armée |
 
 > Ce que le jalon enseigne : la même liberté de la presse a permis la campagne de calomnie **et** son démenti. Elle n'est pas un instrument neutre, mais elle est la condition pour que l'erreur puisse être corrigée.`,
           },

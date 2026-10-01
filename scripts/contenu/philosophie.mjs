@@ -209,7 +209,7 @@ Les Grecs opposent la *phusis* — ce qui pousse et se développe de soi-même �
 ## Maîtriser ou ménager
 | Position | Le programme |
 | **Descartes** | Nous rendre « comme maîtres et possesseurs de la nature » : la connaître pour l’utiliser |
-| **Hans Jonas** | Agir de telle sorte que les effets de nos actes soient compatibles avec la permanence d’une vie humaine sur terre |
+| **Hans Jonas** | Agir de telle sorte que les effets de nos actes soient compatibles avec la permanence d’une vie authentiquement humaine sur terre |
 
 La crise écologique retourne le programme cartésien : la nature devient moins une réserve qu’une **responsabilité**.`,
           },
@@ -546,7 +546,7 @@ La liberté cesse alors d’être un point de départ : elle devient une **conqu
             cours: `Le libre arbitre est le pouvoir de choisir entre plusieurs possibles, et d’**avoir pu faire autrement**. Sans lui, la responsabilité et le mérite s’effondrent : on ne juge pas une pierre qui tombe.
 
 ## Le pouvoir de la volonté
-**Descartes** fait de la volonté ce qu’il y a de plus grand en nous : « elle est si ample qu’elle nous rend en quelque façon semblables à Dieu ». Mais il ajoute une nuance qu’on oublie souvent.
+**Descartes** fait de la volonté ce qu’il y a de plus grand en nous : c’est par elle, écrit-il, que « je porte l’image et la ressemblance de Dieu ». Mais il ajoute une nuance qu’on oublie souvent.
 
 | Degré de liberté | Ce que c’est | Sa valeur |
 | Liberté d’**indifférence** | Choisir sans aucune raison, à pile ou face | « Le plus bas degré de la liberté » |
@@ -749,7 +749,7 @@ Chercher la vérité n’est pas neutre : elle dérange les intérêts établis.
 2. L’**hypothèse** propose une réponse.
 3. L’**expérience** la met à l’épreuve — et le savant doit être prêt à l’abandonner.
 
-> « L’expérimentateur doit douter, fuir les idées fixes. » Le fait ne parle jamais seul : il ne répond qu’à une question qu’on lui pose.
+> « L’expérimentateur doit douter, fuir les idées fixes et garder toujours sa liberté d’esprit. » Le fait ne parle jamais seul : il ne répond qu’à une question qu’on lui pose.
 
 ## Induire, ou réfuter
 | | L’induction | La réfutation (**Popper**) |

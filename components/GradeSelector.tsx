@@ -1,7 +1,7 @@
 'use client'
 
 import { useId, useState, useTransition } from 'react'
-import { ChevronDown, GraduationCap } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { type GradeLevel } from '@/lib/types'
@@ -64,21 +64,14 @@ export default function GradeSelector({
   return (
     <section
       aria-label="Ma classe"
-      className="moi-card rounded-3xl bg-white px-5 py-4"
+      className="carte p-4"
     >
-      <div className="flex items-center gap-2">
-        <span className="flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <GraduationCap className="size-5" strokeWidth={2.2} aria-hidden="true" />
-        </span>
-        <div>
-          <h2 className="titre-section text-foreground">
-            <label htmlFor={selectId}>Ma classe</label>
-          </h2>
-          <p className="text-xs text-muted-foreground">
-            Change d&apos;année pour adapter tout ton contenu.
-          </p>
-        </div>
-      </div>
+      <h2 className="titre-section">
+        <label htmlFor={selectId}>Ma classe</label>
+      </h2>
+      <p className="mt-0.5 text-sm font-semibold text-muted-foreground">
+        Change d&apos;année pour adapter tout ton contenu.
+      </p>
 
       <div className="relative mt-3">
         <select

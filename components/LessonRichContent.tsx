@@ -1,4 +1,6 @@
+import { typographie } from '@/lib/typographie'
 import { cn } from '@/lib/utils'
+import styles from './LessonRichContent.module.css'
 
 // -----------------------------------------------------------------------------
 // LA FEUILLE DE COURS — mise en forme « cahier » du contenu des leçons.
@@ -35,18 +37,41 @@ import { cn } from '@/lib/utils'
  * Le `[^*\n]` de l'italique l'empêche par ailleurs de franchir une fin de ligne
  * ou d'avaler une étoile — une astérisque isolée dans une phrase reste donc une
  * astérisque, et ne mange pas le reste du paragraphe.
+ *
+ * UN NIVEAU D'IMBRICATION (29/09/2026). Un gras peut porter un italique
+ * (« **querelle du *Cid*** », un titre d'œuvre dans un terme à retenir), un
+ * italique un gras (« *I can **swim*** »), et `***x***` est les deux à la fois.
+ * 31 lignes de 27 cours s'affichaient avec des astérisques parasites. Le
+ * contenu d'un gras ou d'un italique est rendu à son tour ; l'italique ne se
+ * referme pas sur une étoile suivie d'une autre (`(?!\*)`), sans quoi
+ * « *I can **swim*** » se fermerait dès « *I can * ».
  */
-function renderInline(text: string) {
+const EMPHASE =
+  /(\*\*\*[^*\n]+\*\*\*|\*\*(?:[^*\n]|\*[^*\n]+\*)+?\*\*|\*(?:[^*\n]|\*\*[^*\n]+\*\*)+?\*(?!\*))/g
+
+function renderInline(text: string): React.ReactNode[] {
   return text
-    .split(/(\*\*[^*]+\*\*|\*[^*\n]+\*)/g)
+    .split(EMPHASE)
     .filter((part) => part.length > 0)
     .map((part, i) => {
+      if (
+        part.startsWith('***') &&
+        part.endsWith('***') &&
+        part.length > 6 &&
+        !part.slice(3, -3).includes('*')
+      ) {
+        return (
+          <strong key={i} className="font-bold text-foreground">
+            <em className="italic">{typographie(part.slice(3, -3))}</em>
+          </strong>
+        )
+      }
       if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
         // Le TERME à retenir : pleine encre, sur un corps volontairement plus
         // clair. C'est le contraste qui le désigne, pas une couleur de plus.
         return (
           <strong key={i} className="font-bold text-foreground">
-            {part.slice(2, -2)}
+            {renderInline(part.slice(2, -2))}
           </strong>
         )
       }
@@ -58,11 +83,12 @@ function renderInline(text: string) {
         // déjà leur emploi (action et récompense).
         return (
           <em key={i} className="text-foreground italic">
-            {part.slice(1, -1)}
+            {renderInline(part.slice(1, -1))}
           </em>
         )
       }
-      return part
+      // Espace insécable avant « : ; ! ? » et dans les guillemets (lib/typographie).
+      return typographie(part)
     })
 }
 
@@ -130,6 +156,9 @@ export default function LessonRichContent({
   let numeros: string[] = []
   let tableau: string[] = []
   let frise: { date: string; evenement: string }[] = []
+  // Un bloc de code (``` … ```) : ses lignes sont gardées BRUTES — un programme
+  // Python perd son sens sans son indentation, et « - 1 » n'y est pas une puce.
+  let code: string[] | null = null
   let sectionCount = 0
 
   const flushPuces = () => {
@@ -183,48 +212,49 @@ export default function LessonRichContent({
     blocks.push(
       // Le conteneur qui défile est la SEULE façon honnête de poser un tableau
       // sur un téléphone : sans lui, une colonne de trop pousse toute la page
-      // vers la droite et casse la lecture du cours entier.
-      <div
-        key={`tbl-${blocks.length}`}
-        className="-mx-1 overflow-x-auto rounded-2xl ring-1 ring-border"
-      >
-        <table className="w-full border-collapse text-[15px]">
-          <thead>
-            <tr className="bg-muted">
-              {entete.map((c, i) => (
-                <th
-                  key={i}
-                  scope="col"
-                  className="px-3 py-2 text-left font-heading text-[13px] font-extrabold whitespace-nowrap text-foreground"
-                >
-                  {renderInline(c)}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {corps.map((ligne, i) => (
-              <tr
-                key={i}
-                className={cn(
-                  'border-t border-border',
-                  // Le zébrage : sur un tableau de conjugaison, il évite de
-                  // sauter d'une ligne à l'autre en suivant du doigt.
-                  i % 2 === 1 && 'bg-card/60',
-                )}
-              >
-                {ligne.map((c, j) => (
-                  <td
-                    key={j}
-                    className="px-3 py-2 align-top leading-snug text-foreground/85"
+      // vers la droite et casse la lecture du cours entier. Le fondu de droite
+      // (module CSS) dit qu'il y a une suite quand le tableau déborde.
+      <div key={`tbl-${blocks.length}`} className={cn('-mx-1', styles.cadre)}>
+        <div className={cn('overflow-x-auto rounded-2xl ring-1 ring-border', styles.defile)}>
+          <table className="w-full border-collapse text-[15px]">
+            <thead>
+              <tr className="bg-muted">
+                {entete.map((c, i) => (
+                  <th
+                    key={i}
+                    scope="col"
+                    className="px-3 py-2 text-left font-heading text-[13px] font-extrabold whitespace-nowrap text-foreground"
                   >
                     {renderInline(c)}
-                  </td>
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {corps.map((ligne, i) => (
+                <tr
+                  key={i}
+                  className={cn(
+                    'border-t border-border',
+                    // Le zébrage : sur un tableau de conjugaison, il évite de
+                    // sauter d'une ligne à l'autre en suivant du doigt.
+                    i % 2 === 1 && 'bg-card/60',
+                  )}
+                >
+                  {ligne.map((c, j) => (
+                    <td
+                      key={j}
+                      className="px-3 py-2 align-top leading-snug text-foreground/85"
+                    >
+                      {renderInline(c)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <span aria-hidden="true" className={styles.indice} />
       </div>,
     )
   }
@@ -260,6 +290,17 @@ export default function LessonRichContent({
     )
   }
 
+  const pousseCode = (lignes: string[]) => {
+    blocks.push(
+      <pre
+        key={`code-${blocks.length}`}
+        className="code -mx-1 overflow-x-auto rounded-2xl bg-muted px-4 py-3 font-mono text-[13px] leading-relaxed text-foreground"
+      >
+        {lignes.join('\n')}
+      </pre>,
+    )
+  }
+
   /** Referme tout bloc multiligne en cours. */
   const flushTout = () => {
     flushPuces()
@@ -270,6 +311,22 @@ export default function LessonRichContent({
 
   for (const line of lines) {
     const trimmed = line.trim()
+
+    // --- Bloc de code : tout ce qui suit l'ouverture est pris tel quel.
+    if (code) {
+      if (trimmed.startsWith('```')) {
+        pousseCode(code)
+        code = null
+      } else {
+        code.push(line.replace(/\r$/, ''))
+      }
+      continue
+    }
+    if (trimmed.startsWith('```')) {
+      flushTout()
+      code = []
+      continue
+    }
 
     if (!trimmed) {
       flushTout()
@@ -318,7 +375,20 @@ export default function LessonRichContent({
     const formuleTexte = litFormule(trimmed)
     const maillons = litChaine(trimmed)
 
-    if (trimmed.startsWith('## ')) {
+    if (trimmed.startsWith('### ')) {
+      // L'INTERTITRE de troisième rang (2 cours sur 2 969 au 29/09/2026 : les
+      // étapes d'un dosage, les droits du salarié). Sans cette branche, les
+      // dièses s'affichaient tels quels. Plus discret que la section `##` :
+      // ni barre ni pastille, juste un titre qui découpe la section.
+      blocks.push(
+        <h4
+          key={`h4-${blocks.length}`}
+          className="font-heading pt-2 text-[1.1rem] leading-tight font-extrabold text-balance text-foreground first:pt-0"
+        >
+          {renderInline(trimmed.slice(4))}
+        </h4>,
+      )
+    } else if (trimmed.startsWith('## ')) {
       blocks.push(
         <h3
           key={`h3-${blocks.length}`}
@@ -439,6 +509,8 @@ export default function LessonRichContent({
     }
   }
   flushTout()
+  // Un bloc jamais refermé garde son code plutôt que de le perdre.
+  if (code) pousseCode(code)
 
   return (
     // 16 px de corps : le plancher de lisibilité sur mobile. L'interligne à 1,7

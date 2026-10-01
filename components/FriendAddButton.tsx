@@ -11,89 +11,30 @@ import { addFriendByCode } from '@/app/amis/actions'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { useSortieAnimee } from '@/components/useSortieAnimee'
 import ParrainageCard from '@/components/ParrainageCard'
-import { CristalIcon } from '@/components/ui/MonnaieIcon'
-import { REFERRAL_GEM_REWARD, type ReferralSummary } from '@/lib/gems'
+import type { ReferralSummary } from '@/lib/gems'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
- * « Ajouter un ami » de l'onglet Amis : ouvre une modale avec tout le
- * nécessaire — mon QR à faire scanner, mon code à copier, et le champ
- * « code d'un ami ». Quatre déclencheurs possibles : le rond du header
- * (`icon`, défaut), le gros bouton violet sous le classement (`cta` — il a été
- * vert, une couleur d'état posée sur une action), ou la pastille « Ajouter »
- * de la rangée stories (`story`), ou le bouton D'ANGLE du classement des amis
- * (`coin`). Un seul libellé partout : « Ajouter un ami ».
+ * « Ajouter un ami » de l'onglet Amis : un déclencheur, et la fenêtre qu'il
+ * ouvre (`FenetreAjouterAmi`). Trois déclencheurs : le rond du header (`icon`,
+ * défaut), le gros bouton violet (`cta` — il a été vert, une couleur d'état
+ * posée sur une action), ou la pastille « Ajouter » de la rangée stories
+ * (`story`). Un seul libellé partout : « Ajouter un ami ».
  *
- * LE BOUTON D'ANGLE (Lucas, 17/09/2026 : « le bloc inviter un ami est trop
- * bas, il faut l'intégrer dans le bloc classement des amis, dans l'angle, avec
- * une icône qui donne envie de cliquer »). La carte de parrainage vivait sous
- * le classement, à un écran de là. Elle entre dans CETTE fenêtre : un seul
- * endroit pour faire venir un ami, qu'on ait un lien à partager (et des gemmes
- * à gagner) ou le code d'un ami à saisir. Le bouton porte le gain en pastille
- * dorée, et se trémousse de temps en temps (`.invite-coin`).
+ * Le bloc « Mes amis » (components/amis/MesAmis) n'utilise pas ce bouton : ses
+ * dix places et son gros bouton ouvrent la MÊME fenêtre, qu'il tient lui-même
+ * (`FenetreAjouterAmi`). Le bouton d'angle « +30 » qu'il portait a disparu
+ * avec la refonte du 01/10/2026.
  */
 export default function FriendAddButton({
   myFriendCode,
   variant = 'icon',
-  referral = null,
 }: {
   myFriendCode: string
-  variant?: 'icon' | 'cta' | 'story' | 'coin'
-  /** Où en sont mes invitations — la fenêtre de la variante `coin` l'affiche. */
-  referral?: ReferralSummary | null
+  variant?: 'icon' | 'cta' | 'story'
 }) {
-  const avecParrainage = variant === 'coin' && referral !== null
   const [open, setOpen] = useState(false)
   useFermeAuMasquage(setOpen, false)
-  const panel = useRef<HTMLDivElement>(null)
-  useDialogFocus(panel, open)
-  const [copied, setCopied] = useState(false)
-  const [copyFailed, setCopyFailed] = useState(false)
-  const [code, setCode] = useState('')
-  const [feedback, setFeedback] = useState<{
-    ok: boolean
-    message: string
-  } | null>(null)
-  const [isAdding, startAdding] = useTransition()
-  // Reste montée le temps de l'animation de sortie (CSS, sans framer-motion).
-  const { monte, etat, onAnimationEnd } = useSortieAnimee(open)
-
-  // Fermeture au clavier (Échap), comme les autres modales de l'app.
-  useEffect(() => {
-    if (!open) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [open])
-
-  const copyCode = async () => {
-    if (!myFriendCode) return
-    try {
-      await navigator.clipboard.writeText(myFriendCode)
-      setCopyFailed(false)
-      setCopied(true)
-      sfx.tap()
-      setTimeout(() => setCopied(false), 1600)
-    } catch {
-      // Presse-papiers indisponible (contexte non sécurisé, permission…) :
-      // on le dit au lieu de laisser un tap sans effet.
-      setCopyFailed(true)
-    }
-  }
-
-  const submitCode = (e: React.FormEvent) => {
-    e.preventDefault()
-    const value = code.trim()
-    if (!value || isAdding) return
-    sfx.tap()
-    startAdding(async () => {
-      const res = await addFriendByCode(value)
-      setFeedback(res)
-      if (res.ok) setCode('')
-    })
-  }
 
   return (
     <>
@@ -108,29 +49,6 @@ export default function FriendAddButton({
           <UserPlus strokeWidth={2.8} aria-hidden="true" />
           Ajouter un ami
         </Button>
-      ) : variant === 'coin' ? (
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setOpen(true)
-          }}
-          aria-haspopup="dialog"
-          aria-label={`Ajouter un ami — +${REFERRAL_GEM_REWARD} gemmes chacun`}
-          className="invite-coin relative mr-1 flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-[0_4px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-[3px] active:shadow-none"
-        >
-          <UserPlus className="size-5" strokeWidth={2.6} aria-hidden="true" />
-          {/* Le gain en pastille : « +30 » puis le CRISTAL ILLUSTRÉ, le même
-              objet que le bandeau et la carte de profil (Lucas, 18/09/2026) —
-              l'icône au trait ne se reconnaissait pas comme la monnaie. */}
-          <span
-            aria-hidden="true"
-            className="font-heading absolute -top-2.5 -right-2 flex items-center gap-0.5 rounded-full bg-highlight py-0.5 pr-1 pl-1.5 text-[11px] leading-none font-extrabold text-foreground shadow-sm ring-2 ring-card"
-          >
-            +{REFERRAL_GEM_REWARD}
-            <CristalIcon className="-my-1 size-4" />
-          </span>
-        </button>
       ) : variant === 'story' ? (
         <button
           type="button"
@@ -167,7 +85,92 @@ export default function FriendAddButton({
           <UserPlus className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </button>
       )}
+      <FenetreAjouterAmi
+        open={open}
+        onClose={() => setOpen(false)}
+        myFriendCode={myFriendCode}
+      />
+    </>
+  )
+}
 
+/**
+ * LA FENÊTRE « AJOUTER UN AMI » : mon QR à faire scanner, mon code à copier, et
+ * le champ « code d'un ami ». Avec `referral`, elle s'ouvre sur la carte de
+ * parrainage (le lien à partager, les gemmes à gagner) : un seul endroit pour
+ * faire venir un ami, qu'on ait un lien à envoyer ou un code à saisir.
+ *
+ * L'ouverture est tenue par l'appelant (`open` / `onClose`) : plusieurs
+ * déclencheurs peuvent ouvrir la même fenêtre.
+ */
+export function FenetreAjouterAmi({
+  open,
+  onClose,
+  myFriendCode,
+  referral = null,
+}: {
+  open: boolean
+  onClose: () => void
+  myFriendCode: string
+  /** Où en sont mes invitations : la fenêtre s'ouvre alors sur le parrainage. */
+  referral?: ReferralSummary | null
+}) {
+  const avecParrainage = referral !== null
+  const setOpen = (ouverte: boolean) => {
+    if (!ouverte) onClose()
+  }
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
+  const [copied, setCopied] = useState(false)
+  const [copyFailed, setCopyFailed] = useState(false)
+  const [code, setCode] = useState('')
+  const [feedback, setFeedback] = useState<{
+    ok: boolean
+    message: string
+  } | null>(null)
+  const [isAdding, startAdding] = useTransition()
+  // Reste montée le temps de l'animation de sortie (CSS, sans framer-motion).
+  const { monte, etat, onAnimationEnd } = useSortieAnimee(open)
+
+  // Fermeture au clavier (Échap), comme les autres modales de l'app.
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open, onClose])
+
+  const copyCode = async () => {
+    if (!myFriendCode) return
+    try {
+      await navigator.clipboard.writeText(myFriendCode)
+      setCopyFailed(false)
+      setCopied(true)
+      sfx.tap()
+      setTimeout(() => setCopied(false), 1600)
+    } catch {
+      // Presse-papiers indisponible (contexte non sécurisé, permission…) :
+      // on le dit au lieu de laisser un tap sans effet.
+      setCopyFailed(true)
+    }
+  }
+
+  const submitCode = (e: React.FormEvent) => {
+    e.preventDefault()
+    const value = code.trim()
+    if (!value || isAdding) return
+    sfx.tap()
+    startAdding(async () => {
+      const res = await addFriendByCode(value)
+      setFeedback(res)
+      if (res.ok) setCode('')
+    })
+  }
+
+  return (
+    <>
       {typeof document !== 'undefined'
         ? createPortal(
             monte ? (

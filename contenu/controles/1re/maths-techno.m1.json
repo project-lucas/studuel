@@ -1,0 +1,1225 @@
+{
+  "niveau": "1re",
+  "matiere": "maths-techno",
+  "sujets": [
+    {
+      "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+      "difficulte": 1,
+      "titre": "Les achats de Maëlle",
+      "consigne": "Réponds à chaque question sans calculatrice, en écrivant le coefficient multiplicateur utilisé.",
+      "enonce": "**Situation.** Maëlle surveille les prix pendant un mois.\n\n1. Un pull coûte 60 €. Pendant les soldes, son prix baisse de 30 %. Donne le coefficient multiplicateur, puis le nouveau prix.\n2. Le loyer de sa sœur, 750 € par mois, augmente de 2 %. Donne le coefficient multiplicateur, puis le nouveau loyer.\n3. Le prix d'un casque passe de 80 € à 68 €. Calcule le taux d'évolution et exprime-le en pourcentage.",
+      "bareme": [
+        {
+          "critere": "Question 1 : coefficient 0,7 et prix soldé 42 €",
+          "points": 6
+        },
+        {
+          "critere": "Question 2 : coefficient 1,02 et nouveau loyer 765 €",
+          "points": 7
+        },
+        {
+          "critere": "Question 3 : taux (68 − 80) ÷ 80 = −0,15, soit une baisse de 15 %",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Baisser de 30 %, c'est multiplier par **1 − 30/100 = 0,7**.\nNouveau prix : 60 × 0,7 = **42 €**.\n\n2. Augmenter de 2 %, c'est multiplier par **1 + 2/100 = 1,02**.\nNouveau loyer : 750 × 1,02 = 750 + 15 = **765 €**.\n\n3. taux = (valeur finale − valeur initiale) ÷ valeur initiale = (68 − 80) ÷ 80 = −12 ÷ 80 = **−0,15**.\nLe prix du casque a donc **baissé de 15 %** (coefficient multiplicateur 0,85 ; contrôle : 80 × 0,85 = 68)."
+    },
+    {
+      "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+      "difficulte": 2,
+      "titre": "Le forfait de Nolan",
+      "consigne": "Justifie chaque réponse par un calcul utilisant les coefficients multiplicateurs. Rédige une phrase de conclusion.",
+      "enonce": "**Situation.** Le forfait téléphonique de Nolan coûte 20 € par mois.\n\n1. En janvier, l'opérateur augmente le prix de 10 %. En juin, il le baisse de 10 %. Nolan pense qu'il paie de nouveau 20 €. Calcule le coefficient multiplicateur global, le prix payé en juin, et dis si Nolan a raison.\n2. L'abonnement de musique de Nolan coûte 30 € par trimestre après une hausse de 25 %. Quel était son prix avant la hausse ?\n3. Quelle évolution, en pourcentage, faudrait-il appliquer à ces 30 € pour revenir au prix d'avant la hausse ?",
+      "bareme": [
+        {
+          "critere": "Coefficient global 1,1 × 0,9 = 0,99 et prix de juin 19,80 €",
+          "points": 7
+        },
+        {
+          "critere": "Conclusion : Nolan a tort, baisse globale de 1 %",
+          "points": 3
+        },
+        {
+          "critere": "Prix initial retrouvé par division : 30 ÷ 1,25 = 24 €",
+          "points": 5
+        },
+        {
+          "critere": "Évolution réciproque : coefficient 1 ÷ 1,25 = 0,8, soit une baisse de 20 %",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Hausse de 10 % : coefficient 1,1 ; baisse de 10 % : coefficient 0,9. Les coefficients se **multiplient** : 1,1 × 0,9 = **0,99**.\nPrix en juin : 20 × 0,99 = **19,80 €**.\nNolan a **tort** : 0,99 = 1 − 0,01, l'évolution globale est une **baisse de 1 %**, et non 0 %. Les pourcentages ne s'additionnent pas.\n\n2. valeur initiale = valeur finale ÷ CM = 30 ÷ 1,25 = **24 €**.\nContrôle : 24 × 1,25 = 24 + 6 = 30.\n\n3. On applique le coefficient inverse : 1 ÷ 1,25 = **0,8** = 1 − 0,2. Il faut donc une **baisse de 20 %** (et non de 25 %).\nContrôle : 30 × 0,8 = 24 €."
+    },
+    {
+      "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+      "difficulte": 3,
+      "titre": "La population de Saint-Aubin",
+      "consigne": "Réponds aux questions en justifiant chaque calcul. Sans calculatrice.",
+      "enonce": "**Situation.** La mairie de Saint-Aubin publie l'évolution de sa population sous forme d'indices, base 100 en 2020. En 2020, le village comptait **2 000 habitants**.\n\n| Année | 2020 | 2022 | 2024 |\n| Indice | 100 | 110 | 99 |\n\n1. Quelle a été l'évolution de la population entre 2020 et 2022, puis entre 2020 et 2024 ? Exprime-les en pourcentage.\n2. Calcule le nombre d'habitants en 2022 et en 2024.\n3. Calcule le taux d'évolution de la population entre 2022 et 2024.\n4. Un conseiller municipal affirme : « La population a gagné 10 % puis perdu 10 %, elle est donc revenue à son niveau de 2020. » Explique son erreur à l'aide des coefficients multiplicateurs.\n5. En 2024, 40 % des habitants sont retraités, et 25 % des retraités vivent seuls. Quelle proportion des habitants sont des retraités vivant seuls ? Combien sont-ils ?",
+      "bareme": [
+        {
+          "critere": "Lecture des indices : + 10 % de 2020 à 2022, − 1 % de 2020 à 2024",
+          "points": 4
+        },
+        {
+          "critere": "Effectifs : 2 200 habitants en 2022 et 1 980 en 2024",
+          "points": 4
+        },
+        {
+          "critere": "Taux de 2022 à 2024 : (1 980 − 2 200) ÷ 2 200 = −0,1, soit − 10 %",
+          "points": 4
+        },
+        {
+          "critere": "Erreur du conseiller expliquée : 1,1 × 0,9 = 0,99, baisse globale de 1 %",
+          "points": 4
+        },
+        {
+          "critere": "Proportion de proportion : 0,4 × 0,25 = 0,1, soit 10 % et 198 habitants",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Un indice de 110 signifie une **hausse de 10 %** depuis 2020 ; un indice de 99 signifie une **baisse de 1 %** depuis 2020.\n\n2. 2022 : 2 000 × 1,1 = **2 200 habitants**.\n2024 : 2 000 × 0,99 = **1 980 habitants**.\n\n3. taux = (1 980 − 2 200) ÷ 2 200 = −220 ÷ 2 200 = **−0,1**, soit une **baisse de 10 %** entre 2022 et 2024.\n(On peut aussi calculer 99 ÷ 110 = 0,9 = 1 − 0,1.)\n\n4. Le conseiller a raison sur les deux évolutions (+ 10 % puis − 10 %), mais il **additionne des pourcentages**, ce qui est faux. Les coefficients se multiplient : 1,1 × 0,9 = **0,99**. La population de 2024 correspond à une **baisse de 1 %** par rapport à 2020 : 1 980 habitants au lieu de 2 000.\n\n5. C'est une proportion d'une proportion : 0,4 × 0,25 = **0,1**, soit **10 %** des habitants.\nNombre : 0,1 × 1 980 = **198 retraités vivant seuls**."
+    },
+    {
+      "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+      "difficulte": 1,
+      "titre": "Six calculs sans calculatrice",
+      "consigne": "Calcule chaque expression en détaillant les étapes. Donne les fractions sous forme simplifiée.",
+      "enonce": "**Sans calculatrice.**\n\n1. Calcule : A = 2/5 + 1/3 ; B = 4/9 × 3/8 ; C = 5/6 ÷ 2/3.\n2. Écris sous la forme d'une seule puissance de 10, puis sous forme d'entier ou de nombre décimal : D = 10⁴ × 10^(−7). Calcule E = (2³)² ÷ 2⁴.\n3. Donne l'écriture scientifique de 32 000 et de 0,0072.",
+      "bareme": [
+        {
+          "critere": "Fractions : A = 11/15, B = 1/6, C = 5/4 avec les étapes",
+          "points": 9
+        },
+        {
+          "critere": "Puissances : D = 10^(−3) = 0,001 et E = 2² = 4 par les règles des exposants",
+          "points": 6
+        },
+        {
+          "critere": "Écritures scientifiques 3,2 × 10⁴ et 7,2 × 10^(−3)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. A = 2/5 + 1/3 = 6/15 + 5/15 = **11/15** (même dénominateur d'abord).\nB = 4/9 × 3/8 = 12/72 = **1/6**.\nC = 5/6 ÷ 2/3 = 5/6 × 3/2 = 15/12 = **5/4**.\n\n2. D = 10^(4 + (−7)) = **10^(−3) = 0,001**.\nE = (2³)² ÷ 2⁴ = 2⁶ ÷ 2⁴ = 2^(6 − 4) = 2² = **4**.\n\n3. 32 000 = **3,2 × 10⁴** ; 0,0072 = **7,2 × 10^(−3)** (on vérifie que 1 ≤ 3,2 < 10 et 1 ≤ 7,2 < 10)."
+    },
+    {
+      "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+      "difficulte": 2,
+      "titre": "Le trajet de Samia",
+      "consigne": "Réponds en détaillant les conversions. Sans calculatrice. Conclus par une phrase avec l'unité.",
+      "enonce": "**Situation.** Samia part en vacances en voiture.\n\n1. Sur une route, elle roule à 72 km/h. Convertis cette vitesse en m/s.\n2. À cette vitesse, quelle distance parcourt-elle en 45 minutes ?\n3. Combien de temps, en minutes, lui faut-il pour parcourir 18 km à 72 km/h ?\n4. Dans le gîte, une cuve d'eau de pluie a un volume de 1,2 m³. Elle est remplie aux 3/4. Combien de litres d'eau contient-elle ?",
+      "bareme": [
+        {
+          "critere": "72 km/h = 20 m/s (division par 3,6)",
+          "points": 4
+        },
+        {
+          "critere": "45 min = 3/4 h et distance 72 × 3/4 = 54 km",
+          "points": 6
+        },
+        {
+          "critere": "Durée 18 ÷ 72 = 1/4 h, soit 15 minutes",
+          "points": 5
+        },
+        {
+          "critere": "1,2 m³ = 1 200 L, puis 3/4 × 1 200 = 900 L",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 1 m/s = 3,6 km/h, donc 72 km/h = 72 ÷ 3,6 = **20 m/s**.\n\n2. 45 min = 45/60 h = **3/4 h**.\nDistance = vitesse × durée = 72 × 3/4 = 216/4 = **54 km**.\n\n3. Durée = distance ÷ vitesse = 18 ÷ 72 = 1/4 h = **15 minutes**.\nContrôle : en une heure, 72 km ; en un quart d'heure, quatre fois moins, 18 km.\n\n4. 1 m³ = 1 000 L, donc 1,2 m³ = **1 200 L**.\nLa cuve contient 3/4 × 1 200 = **900 L** d'eau."
+    },
+    {
+      "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+      "difficulte": 3,
+      "titre": "Le disque dur du club vidéo",
+      "consigne": "Réponds sans calculatrice, en utilisant les règles sur les puissances et les fractions. Justifie chaque étape.",
+      "enonce": "**Situation.** Le club vidéo du lycée achète un disque dur de **2 × 10¹²** octets. Un film tourné par le club occupe **4 × 10⁹** octets.\n\n1. Combien de films peut-on stocker, au maximum, sur ce disque ? Donne le résultat en écriture scientifique, puis en entier.\n2. Le disque copie les données à environ 48 millions d'octets par seconde, soit 4,8 × 10⁷ octets/s. En arrondissant ce débit à 5 × 10⁷, donne un ordre de grandeur de la durée de copie d'un film.\n3. Après un an, 3/8 du disque sont occupés par des films et 1/5 par des photos. Quelle fraction du disque reste libre ?\n4. Cette fraction est-elle plus ou moins de la moitié du disque ? Justifie.\n5. Calcule l'espace libre en octets et donne-le en écriture scientifique.",
+      "bareme": [
+        {
+          "critere": "Quotient 2 × 10¹² ÷ (4 × 10⁹) = 0,5 × 10³ = 5 × 10² = 500 films",
+          "points": 5
+        },
+        {
+          "critere": "Ordre de grandeur : 4 × 10⁹ ÷ (5 × 10⁷) = 80 s environ",
+          "points": 4
+        },
+        {
+          "critere": "Fraction libre : 1 − 3/8 − 1/5 = 17/40 au même dénominateur",
+          "points": 5
+        },
+        {
+          "critere": "Comparaison 17/40 < 20/40 = 1/2, donc moins de la moitié",
+          "points": 2
+        },
+        {
+          "critere": "Espace libre 17/40 × 2 × 10¹² = 8,5 × 10¹¹ octets",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (2 × 10¹²) ÷ (4 × 10⁹) = (2 ÷ 4) × 10^(12 − 9) = 0,5 × 10³ = **5 × 10²**, soit **500 films**.\n\n2. Durée ≈ (4 × 10⁹) ÷ (5 × 10⁷) = 0,8 × 10² = **80 secondes**, soit un peu plus d'une minute. (Le calcul exact donne environ 83 s : l'ordre de grandeur est cohérent.)\n\n3. On met au même dénominateur 40 : 3/8 = 15/40 et 1/5 = 8/40.\nFraction libre : 40/40 − 15/40 − 8/40 = **17/40**.\n\n4. La moitié du disque vaut 1/2 = 20/40. Comme 17/40 < 20/40, l'espace libre représente **moins de la moitié** du disque.\n\n5. 17/40 × 2 × 10¹² = 34/40 × 10¹² = 0,85 × 10¹² = **8,5 × 10¹¹ octets**."
+    },
+    {
+      "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+      "difficulte": 1,
+      "titre": "Développer, factoriser, résoudre",
+      "consigne": "Détaille chaque étape de calcul.",
+      "enonce": "1. Développe et réduis : A = 4(x − 3) et B = (x + 5)².\n2. Factorise : C = 3x² − 12x et D = x² − 49.\n3. Résous l'équation 5x − 7 = 13.",
+      "bareme": [
+        {
+          "critere": "Développements justes : A = 4x − 12 et B = x² + 10x + 25 (double produit présent)",
+          "points": 7
+        },
+        {
+          "critere": "Factorisations justes : C = 3x(x − 4) et D = (x − 7)(x + 7)",
+          "points": 7
+        },
+        {
+          "critere": "Résolution : 5x = 20 donc x = 4, avec vérification ou étapes",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. A = 4 × x − 4 × 3 = **4x − 12**.\nB = (x + 5)² = x² + 2 × x × 5 + 5² = **x² + 10x + 25** (on n'oublie pas le double produit 10x).\n\n2. C = 3x² − 12x : le facteur commun est 3x, donc **C = 3x(x − 4)**.\nD = x² − 49 = x² − 7² : différence de deux carrés, donc **D = (x − 7)(x + 7)**.\n\n3. 5x − 7 = 13\n5x = 20\n**x = 4**.\nVérification : 5 × 4 − 7 = 13."
+    },
+    {
+      "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+      "difficulte": 2,
+      "titre": "Équations au labo d'électricité",
+      "consigne": "Résous chaque équation ou inéquation en détaillant la méthode utilisée, puis conclus.",
+      "enonce": "1. Résous l'équation x² − 16 = 0 en factorisant.\n2. Résous l'équation (2x − 6)(x + 1) = 0.\n3. Résous l'inéquation −4x + 8 > 0.\n4. **Au labo.** La puissance d'un appareil est donnée par P = U × I (P en watts, U en volts, I en ampères). Exprime I en fonction de P et U, puis calcule l'intensité pour un radiateur de 1 150 W branché sur 230 V.",
+      "bareme": [
+        {
+          "critere": "x² − 16 = (x − 4)(x + 4) et solutions 4 et −4",
+          "points": 5
+        },
+        {
+          "critere": "Produit nul : 2x − 6 = 0 ou x + 1 = 0, solutions 3 et −1",
+          "points": 5
+        },
+        {
+          "critere": "Inéquation : division par −4 avec changement de sens, x < 2",
+          "points": 5
+        },
+        {
+          "critere": "I = P ÷ U et I = 1 150 ÷ 230 = 5 A",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. x² − 16 = (x − 4)(x + 4). Un produit est nul si et seulement si l'un de ses facteurs est nul : x − 4 = 0 ou x + 4 = 0. Solutions : **x = 4 ou x = −4**.\n\n2. (2x − 6)(x + 1) = 0 équivaut à 2x − 6 = 0 ou x + 1 = 0, soit **x = 3 ou x = −1**.\n\n3. −4x + 8 > 0\n−4x > −8\nOn divise par −4, nombre **négatif** : le sens de l'inégalité change. **x < 2**.\nContrôle : pour x = 0, −4 × 0 + 8 = 8 > 0.\n\n4. P = U × I donne **I = P ÷ U**.\nI = 1 150 ÷ 230 = **5 A**. Contrôle : 230 × 5 = 1 150."
+    },
+    {
+      "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+      "difficulte": 3,
+      "titre": "Une expression sous trois formes",
+      "consigne": "Réponds aux questions dans l'ordre : chacune s'appuie sur la précédente. Justifie chaque étape.",
+      "enonce": "On considère l'expression A(x) = (x − 2)² − 9.\n\n1. Développe et réduis A(x).\n2. En remarquant que 9 = 3², factorise A(x).\n3. Résous l'équation A(x) = 0.\n4. Dresse le tableau de signes de A(x), puis résous l'inéquation A(x) < 0.\n5. En utilisant la forme développée, résous l'équation A(x) = −5.",
+      "bareme": [
+        {
+          "critere": "Forme développée A(x) = x² − 4x − 5",
+          "points": 4
+        },
+        {
+          "critere": "Forme factorisée A(x) = (x − 5)(x + 1) par différence de deux carrés",
+          "points": 4
+        },
+        {
+          "critere": "Solutions de A(x) = 0 : x = 5 ou x = −1 (produit nul)",
+          "points": 3
+        },
+        {
+          "critere": "Tableau de signes juste et solutions de A(x) < 0 : x entre −1 et 5, bornes exclues",
+          "points": 5
+        },
+        {
+          "critere": "A(x) = −5 ramené à x(x − 4) = 0, solutions 0 et 4",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. A(x) = x² − 4x + 4 − 9 = **x² − 4x − 5**.\n\n2. A(x) = (x − 2)² − 3² est une différence de deux carrés :\nA(x) = (x − 2 − 3)(x − 2 + 3) = **(x − 5)(x + 1)**.\nContrôle : (x − 5)(x + 1) = x² + x − 5x − 5 = x² − 4x − 5.\n\n3. (x − 5)(x + 1) = 0 équivaut à x − 5 = 0 ou x + 1 = 0 : **x = 5 ou x = −1**.\n\n4. Tableau de signes :\n\n| x | moins de −1 | entre −1 et 5 | plus de 5 |\n| x + 1 | − | + | + |\n| x − 5 | − | − | + |\n| A(x) | + | − | + |\n\nA(x) s'annule en −1 et en 5. Donc **A(x) < 0 pour x strictement compris entre −1 et 5**, soit x ∈ ]−1 ; 5[.\n\n5. A(x) = −5 s'écrit x² − 4x − 5 = −5, soit x² − 4x = 0.\nFacteur commun x : x(x − 4) = 0, donc **x = 0 ou x = 4**.\nVérification : A(0) = (−2)² − 9 = −5 et A(4) = 2² − 9 = −5."
+    },
+    {
+      "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+      "difficulte": 1,
+      "titre": "La droite passant par deux points",
+      "consigne": "Justifie chaque réponse par un calcul.",
+      "enonce": "Dans un repère, on considère les points A(1 ; 3) et B(4 ; 9).\n\n1. Calcule le coefficient directeur m de la droite (AB).\n2. Détermine son ordonnée à l'origine p, puis l'équation réduite de (AB).\n3. Le point C(−2 ; −3) appartient-il à la droite (AB) ? La droite monte-t-elle ou descend-elle ?",
+      "bareme": [
+        {
+          "critere": "m = (9 − 3) ÷ (4 − 1) = 2",
+          "points": 6
+        },
+        {
+          "critere": "p = 1 trouvé à partir d'un point, équation y = 2x + 1",
+          "points": 8
+        },
+        {
+          "critere": "C appartient à la droite (2 × (−2) + 1 = −3) et la droite monte car m > 0",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. m = (yB − yA) ÷ (xB − xA) = (9 − 3) ÷ (4 − 1) = 6 ÷ 3 = **2**.\n\n2. L'équation est de la forme y = 2x + p. Le point A est sur la droite : 3 = 2 × 1 + p, donc **p = 1**.\nÉquation réduite : **y = 2x + 1**. Vérification avec B : 2 × 4 + 1 = 9.\n\n3. Pour x = −2 : 2 × (−2) + 1 = −3, qui est bien l'ordonnée de C. **C appartient à (AB)**.\nComme m = 2 > 0, la droite **monte**."
+    },
+    {
+      "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+      "difficulte": 2,
+      "titre": "Deux compagnies de taxi",
+      "consigne": "Réponds à chaque question en justifiant, et conclus par une phrase avec l'unité.",
+      "enonce": "**Situation.** La compagnie Rapido facture 4 € de prise en charge puis 1,50 € par kilomètre. Le prix, en euros, pour x kilomètres est donc y = 1,5x + 4.\n\n1. Donne le coefficient directeur et l'ordonnée à l'origine de cette droite, et explique ce qu'ils représentent pour le client.\n2. Combien coûte un trajet de 12 km avec Rapido ?\n3. Lucas a payé 25 € chez Rapido. Quelle distance a-t-il parcourue ?\n4. La compagnie Éclair affiche ses prix par une droite qui passe par les points (0 ; 0) et (10 ; 20). Détermine son équation. Pour quelle distance les deux compagnies coûtent-elles le même prix ?",
+      "bareme": [
+        {
+          "critere": "m = 1,5 (prix par km) et p = 4 (prise en charge) correctement interprétés",
+          "points": 5
+        },
+        {
+          "critere": "Trajet de 12 km : 1,5 × 12 + 4 = 22 €",
+          "points": 4
+        },
+        {
+          "critere": "Distance pour 25 € : 1,5x = 21, x = 14 km",
+          "points": 5
+        },
+        {
+          "critere": "Équation d'Éclair y = 2x et égalité des prix à 8 km (16 €)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Coefficient directeur **m = 1,5** : chaque kilomètre de plus coûte 1,50 €. Ordonnée à l'origine **p = 4** : pour 0 km, on paie déjà 4 €, c'est la prise en charge.\n\n2. y = 1,5 × 12 + 4 = 18 + 4 = **22 €**.\n\n3. 1,5x + 4 = 25, donc 1,5x = 21, et x = 21 ÷ 1,5 = **14 km**.\n\n4. m = (20 − 0) ÷ (10 − 0) = 2 et la droite passe par (0 ; 0), donc p = 0 : **y = 2x**.\nMême prix : 2x = 1,5x + 4, soit 0,5x = 4, donc **x = 8 km** (prix commun : 16 €).\nPour aller plus loin : pour 5 km, Éclair coûte 10 € et Rapido 11,50 € ; Éclair est moins chère sur les petits trajets, Rapido sur les longs (sa droite monte moins vite)."
+    },
+    {
+      "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+      "difficulte": 3,
+      "titre": "Lire une courbe en U",
+      "consigne": "Réponds en t'appuyant sur le tableau de valeurs et sur la description de la courbe. Justifie chaque lecture.",
+      "enonce": "**Document.** La courbe d'une fonction f, définie sur [−2 ; 4], passe par les points du tableau suivant. Elle descend du point (−2 ; 5) jusqu'au point (1 ; −4), puis remonte jusqu'au point (4 ; 5).\n\n| x | −2 | −1 | 0 | 1 | 2 | 3 | 4 |\n| f(x) | 5 | 0 | −3 | −4 | −3 | 0 | 5 |\n\n1. Donne l'image de 3 par f, puis les antécédents de −3.\n2. Résous l'équation f(x) = 0.\n3. Donne le signe de f(x) selon les valeurs de x.\n4. Dresse le tableau de variations de f et donne son minimum.\n5. Détermine l'équation réduite de la droite d passant par les points de la courbe d'abscisses −1 et 1. Cette droite monte-t-elle ou descend-elle ?",
+      "bareme": [
+        {
+          "critere": "Image de 3 : 0 ; antécédents de −3 : 0 et 2",
+          "points": 4
+        },
+        {
+          "critere": "Solutions de f(x) = 0 : x = −1 et x = 3",
+          "points": 3
+        },
+        {
+          "critere": "Signe : f positive sur [−2 ; −1] et [3 ; 4], négative entre −1 et 3",
+          "points": 4
+        },
+        {
+          "critere": "Tableau de variations : décroissante sur [−2 ; 1], croissante sur [1 ; 4], minimum −4 en x = 1",
+          "points": 4
+        },
+        {
+          "critere": "Droite d : m = −2, p = −2, équation y = −2x − 2, elle descend",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'image de 3 est l'ordonnée du point d'abscisse 3 : **f(3) = 0**.\nLes antécédents de −3 sont les abscisses des points d'ordonnée −3 : **0 et 2**.\n\n2. On lit les abscisses des points où la courbe coupe l'axe des abscisses : **x = −1 et x = 3**.\n\n3. La courbe est au-dessus de l'axe des abscisses avant −1 et après 3, au-dessous entre les deux :\n- **f(x) ≥ 0 sur [−2 ; −1] et sur [3 ; 4]** (nulle en −1 et 3) ;\n- **f(x) < 0 pour x entre −1 et 3**.\n\n4. Tableau de variations :\n\n| x | −2 | | 1 | | 4 |\n| f | 5 | décroissante | −4 | croissante | 5 |\n\nLe **minimum de f est −4**, atteint en x = 1.\n\n5. Les points sont (−1 ; 0) et (1 ; −4).\nm = (−4 − 0) ÷ (1 − (−1)) = −4 ÷ 2 = **−2**.\nAvec (1 ; −4) : −4 = −2 × 1 + p, donc **p = −2**. Équation : **y = −2x − 2**.\nVérification avec (−1 ; 0) : −2 × (−1) − 2 = 0.\nComme m < 0, la droite **descend**."
+    },
+    {
+      "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+      "difficulte": 1,
+      "titre": "Les notes de Yasmine",
+      "consigne": "Calcule chaque indicateur en montrant ton calcul.",
+      "enonce": "**Situation.** Voici les notes de Yasmine en physique ce trimestre : 8 ; 11 ; 12 ; 14 ; 15.\n\n1. Calcule la moyenne de ces notes.\n2. Détermine la médiane et l'étendue de la série.\n3. En maths, Yasmine a eu 12 à un devoir de coefficient 2 et 15 à un oral de coefficient 1. Calcule sa moyenne pondérée.",
+      "bareme": [
+        {
+          "critere": "Moyenne 60 ÷ 5 = 12",
+          "points": 6
+        },
+        {
+          "critere": "Médiane 12 (3e valeur rangée) et étendue 15 − 8 = 7",
+          "points": 7
+        },
+        {
+          "critere": "Moyenne pondérée (24 + 15) ÷ 3 = 13",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Somme : 8 + 11 + 12 + 14 + 15 = 60. Moyenne : 60 ÷ 5 = **12**.\n\n2. Les valeurs sont déjà rangées ; il y en a 5, la médiane est la 3e : **12**.\nÉtendue : maximum − minimum = 15 − 8 = **7**.\n\n3. Moyenne pondérée = (12 × 2 + 15 × 1) ÷ (2 + 1) = (24 + 15) ÷ 3 = 39 ÷ 3 = **13**."
+    },
+    {
+      "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+      "difficulte": 2,
+      "titre": "Le pop-corn du cinéma",
+      "consigne": "Pour chaque probabilité, écris le calcul sous forme de quotient, puis donne le résultat.",
+      "enonce": "**Situation.** Un cinéma interroge 300 spectateurs.\n\n| | Pop-corn | Pas de pop-corn | Total |\n| Adultes | 80 | 120 | 200 |\n| Moins de 18 ans | 60 | 40 | 100 |\n| Total | 140 | 160 | 300 |\n\nOn choisit un spectateur au hasard. On note J : « le spectateur a moins de 18 ans » et P : « il achète du pop-corn ».\n\n1. Calcule la fréquence marginale des moins de 18 ans.\n2. Calcule P(J ∩ P) et explique ce qu'elle représente.\n3. Calcule P_J(P).\n4. Calcule P_P(J). Explique pourquoi elle est différente de P_J(P).",
+      "bareme": [
+        {
+          "critere": "Fréquence marginale des moins de 18 ans : 100 ÷ 300 = 1/3",
+          "points": 4
+        },
+        {
+          "critere": "P(J ∩ P) = 60 ÷ 300 = 0,2 avec sa signification",
+          "points": 5
+        },
+        {
+          "critere": "P_J(P) = 60 ÷ 100 = 0,6",
+          "points": 5
+        },
+        {
+          "critere": "P_P(J) = 60 ÷ 140 = 3/7 ≈ 0,43 et changement de population de référence expliqué",
+          "points": 6
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Fréquence marginale des moins de 18 ans : 100 ÷ 300 = **1/3 ≈ 0,33**.\n\n2. P(J ∩ P) = 60 ÷ 300 = **0,2** : c'est la probabilité que le spectateur ait moins de 18 ans **et** achète du pop-corn (population de référence : les 300 spectateurs).\n\n3. P_J(P) : la population de référence est celle des 100 moins de 18 ans, dont 60 achètent du pop-corn. P_J(P) = 60 ÷ 100 = **0,6**.\n\n4. P_P(J) : la population de référence est celle des 140 acheteurs de pop-corn, dont 60 ont moins de 18 ans. P_P(J) = 60 ÷ 140 = **3/7 ≈ 0,43**.\nLes deux probabilités sont différentes car « sachant » change la population de départ : on divise par 100 dans un cas, par 140 dans l'autre."
+    },
+    {
+      "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+      "difficulte": 3,
+      "titre": "Les trajets des élèves de 1re STMG",
+      "consigne": "Réponds aux deux parties en justifiant chaque calcul et en rédigeant tes interprétations.",
+      "enonce": "**Partie A.** Voici la durée du trajet domicile-lycée, en minutes, de 11 élèves, rangées dans l'ordre :\n\n5 ; 8 ; 10 ; 12 ; 12 ; 15 ; 18 ; 20 ; 25 ; 30 ; 43\n\n*Rappel : Q1 est la plus petite valeur de la série telle qu'au moins un quart des valeurs lui soient inférieures ou égales ; Q3, la plus petite telle qu'au moins trois quarts des valeurs lui soient inférieures ou égales.*\n\n1. Calcule la moyenne et la médiane de cette série.\n2. Détermine Q1, Q3 et l'étendue.\n3. La moyenne est plus grande que la médiane. Explique pourquoi à partir des valeurs.\n\n**Partie B.** Dans tout le lycée, 30 % des élèves viennent en bus (B). Parmi eux, 20 % arrivent en retard au moins une fois par semaine (R). Parmi les élèves qui ne viennent pas en bus, 10 % sont dans ce cas.\n\n4. Construis l'arbre pondéré de la situation.\n5. Calcule P(B ∩ R) et P(B̄ ∩ R). Un élève affirme : « Parmi les élèves du lycée, ceux qui viennent en bus et arrivent en retard sont plus nombreux que ceux qui ne viennent pas en bus et arrivent en retard. » A-t-il raison ?",
+      "bareme": [
+        {
+          "critere": "Moyenne 198 ÷ 11 = 18 min et médiane 15 min (6e valeur)",
+          "points": 4
+        },
+        {
+          "critere": "Q1 = 10, Q3 = 25 et étendue 43 − 5 = 38",
+          "points": 5
+        },
+        {
+          "critere": "Explication : la valeur 43, très élevée, tire la moyenne vers le haut",
+          "points": 3
+        },
+        {
+          "critere": "Arbre complet : 0,3 et 0,7 au premier niveau, 0,2 / 0,8 et 0,1 / 0,9 au second",
+          "points": 4
+        },
+        {
+          "critere": "P(B ∩ R) = 0,06 et P(B̄ ∩ R) = 0,07, l'élève a tort",
+          "points": 4
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "**Partie A**\n\n1. Somme : 5 + 8 + 10 + 12 + 12 + 15 + 18 + 20 + 25 + 30 + 43 = 198. Moyenne : 198 ÷ 11 = **18 min**.\nIl y a 11 valeurs rangées : la médiane est la 6e, **15 min**.\n\n2. Un quart de 11 = 2,75 : Q1 est la 3e valeur, **Q1 = 10 min**.\nTrois quarts de 11 = 8,25 : Q3 est la 9e valeur, **Q3 = 25 min**.\nÉtendue : 43 − 5 = **38 min**.\n\n3. La médiane ne dépend que de l'ordre des valeurs, alors que la moyenne dépend de toutes leurs grandeurs. La valeur **43**, très éloignée des autres, augmente fortement la somme et **tire la moyenne vers le haut** (18 min), au-dessus de la médiane (15 min).\n\n**Partie B**\n\n4. Arbre : premier niveau B (0,3) et B̄ (0,7). Après B : R (0,2) et R̄ (0,8). Après B̄ : R (0,1) et R̄ (0,9). Les branches issues d'un même nœud ont une somme de 1.\n\n5. La probabilité d'un chemin est le produit de ses branches :\nP(B ∩ R) = 0,3 × 0,2 = **0,06** ;\nP(B̄ ∩ R) = 0,7 × 0,1 = **0,07**.\nL'élève **a tort** : 0,06 < 0,07. Même si les élèves du bus sont plus souvent en retard (20 % contre 10 %), ils sont bien moins nombreux (30 % des élèves) : au total, il y a davantage d'élèves en retard parmi ceux qui ne prennent pas le bus."
+    },
+    {
+      "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+      "difficulte": 1,
+      "titre": "Deux suites, deux modes",
+      "consigne": "Calcule les termes demandés en détaillant chaque calcul.",
+      "enonce": "On considère deux suites :\n- la suite u définie pour tout entier naturel n par u(n) = n² + 2n ;\n- la suite v définie par v(0) = 5 et, pour tout n, v(n+1) = 3v(n) − 4.\n\n1. Calcule u(0), u(1), u(2) et u(3).\n2. Calcule v(1), v(2) et v(3).\n3. Calcule u(20). Pourrait-on calculer v(20) aussi directement ? Explique.",
+      "bareme": [
+        {
+          "critere": "u(0) = 0, u(1) = 3, u(2) = 8, u(3) = 15",
+          "points": 6
+        },
+        {
+          "critere": "v(1) = 11, v(2) = 29, v(3) = 83",
+          "points": 7
+        },
+        {
+          "critere": "u(20) = 440 et explication : v est définie par récurrence, il faut tous les termes précédents",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. u(0) = 0 + 0 = **0** ; u(1) = 1 + 2 = **3** ; u(2) = 4 + 4 = **8** ; u(3) = 9 + 6 = **15**.\n\n2. v(1) = 3 × 5 − 4 = **11** ; v(2) = 3 × 11 − 4 = **29** ; v(3) = 3 × 29 − 4 = **83**.\n\n3. u est définie de façon **explicite** : u(20) = 20² + 2 × 20 = 400 + 40 = **440**.\nOn **ne peut pas** calculer v(20) aussi directement : v est définie **par récurrence**, il faut calculer v(1), v(2), …, jusqu'à v(19) avant d'obtenir v(20)."
+    },
+    {
+      "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+      "difficulte": 2,
+      "titre": "Les abonnés de la chaîne de Timéo",
+      "consigne": "Réponds à chaque question en justifiant. Arrondis à l'unité si besoin.",
+      "enonce": "**Situation.** La chaîne vidéo de Timéo compte 1 000 abonnés au mois 0. Chaque mois, 10 % des abonnés se désabonnent, puis 200 nouveaux abonnés arrivent. On note a(n) le nombre d'abonnés au mois n.\n\n1. Justifie que a(n+1) = 0,9 × a(n) + 200. Cette suite est-elle définie de façon explicite ou par récurrence ?\n2. Calcule a(1), a(2) et a(3).\n3. Calcule les différences a(1) − a(0), a(2) − a(1) et a(3) − a(2). Que peux-tu dire de l'évolution du nombre d'abonnés sur ces trois premiers mois ? La suite est-elle arithmétique ?\n4. Comment représente-t-on cette suite dans un repère ? Pourquoi ne relie-t-on pas les points ?",
+      "bareme": [
+        {
+          "critere": "Justification de la relation : perdre 10 % = × 0,9, puis + 200 ; suite par récurrence",
+          "points": 5
+        },
+        {
+          "critere": "a(1) = 1 100, a(2) = 1 190, a(3) = 1 271",
+          "points": 6
+        },
+        {
+          "critere": "Différences 100, 90, 81 positives : hausse sur ces mois, écarts non constants donc pas arithmétique",
+          "points": 5
+        },
+        {
+          "critere": "Représentation par des points isolés (n ; a(n)), n entier",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Perdre 10 % des abonnés revient à multiplier par 1 − 0,1 = 0,9 ; on ajoute ensuite 200 abonnés. D'où **a(n+1) = 0,9 × a(n) + 200**. La suite est définie **par récurrence** : on passe d'un terme au suivant.\n\n2. a(1) = 0,9 × 1 000 + 200 = **1 100** ;\na(2) = 0,9 × 1 100 + 200 = 990 + 200 = **1 190** ;\na(3) = 0,9 × 1 190 + 200 = 1 071 + 200 = **1 271**.\n\n3. a(1) − a(0) = **100** ; a(2) − a(1) = **90** ; a(3) − a(2) = **81**.\nCes différences sont positives : le nombre d'abonnés **augmente** chaque mois sur cette période (de moins en moins vite).\nLes écarts ne sont **pas constants** : la suite **n'est pas arithmétique**.\n\n4. On place les points de coordonnées (n ; a(n)) : **un nuage de points isolés**. On ne les relie pas car n ne prend que des valeurs **entières** (mois 0, 1, 2…) : il n'y a pas de terme entre deux mois."
+    },
+    {
+      "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+      "difficulte": 3,
+      "titre": "Une suite, un algorithme de seuil",
+      "consigne": "Traite les questions dans l'ordre. Justifie tes réponses et fais apparaître les valeurs successives des variables.",
+      "enonce": "On considère la suite u définie par u(0) = 3 et, pour tout entier naturel n, u(n+1) = 2u(n) − 2.\n\n1. Calcule u(1), u(2), u(3) et u(4).\n2. On admet que, pour tout n, u(n) = 2^n + 2. Vérifie cette formule pour n = 0, 1, 2 et 3.\n3. À l'aide de cette formule, montre que u(n+1) − u(n) = 2^n, puis déduis-en le sens de variation de u.\n4. On considère l'algorithme suivant :\n\n| Ligne | Code |\n| 1 | n ← 0 |\n| 2 | u ← 3 |\n| 3 | tant que u ≤ 100 : |\n| 4 | … n ← n + 1 |\n| 5 | … u ← 2 × u − 2 |\n| 6 | afficher n |\n\nQuelle valeur affiche-t-il ? Présente les valeurs successives de n et u dans un tableau, et interprète le résultat.\n5. Calcule u(10). Explique l'intérêt de la forme explicite par rapport à la récurrence pour ce calcul.",
+      "bareme": [
+        {
+          "critere": "u(1) = 4, u(2) = 6, u(3) = 10, u(4) = 18",
+          "points": 4
+        },
+        {
+          "critere": "Vérification de la formule 2^n + 2 pour n = 0 à 3",
+          "points": 3
+        },
+        {
+          "critere": "u(n+1) − u(n) = 2^(n+1) − 2^n = 2^n > 0, donc u croissante",
+          "points": 5
+        },
+        {
+          "critere": "Algorithme : tableau jusqu'à u = 130, affichage de 7, premier rang où u(n) > 100",
+          "points": 5
+        },
+        {
+          "critere": "u(10) = 1 026 et intérêt de la forme explicite (accès direct au rang)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. u(1) = 2 × 3 − 2 = **4** ; u(2) = 2 × 4 − 2 = **6** ; u(3) = 2 × 6 − 2 = **10** ; u(4) = 2 × 10 − 2 = **18**.\n\n2. 2⁰ + 2 = 1 + 2 = 3 = u(0) ; 2¹ + 2 = 4 = u(1) ; 2² + 2 = 6 = u(2) ; 2³ + 2 = 10 = u(3). La formule est **vérifiée**.\n\n3. u(n+1) − u(n) = (2^(n+1) + 2) − (2^n + 2) = 2^(n+1) − 2^n = 2 × 2^n − 2^n = **2^n**.\nOr 2^n > 0 pour tout n, donc u(n+1) − u(n) > 0 : la suite u est **croissante**.\n\n4. Valeurs successives :\n\n| n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n| u | 3 | 4 | 6 | 10 | 18 | 34 | 66 | 130 |\n\nTant que u ≤ 100, la boucle continue. Pour n = 6, u = 66 ≤ 100 : on continue ; pour n = 7, u = 130 > 100 : la boucle s'arrête. L'algorithme **affiche 7** : **u(7) est le premier terme strictement supérieur à 100**.\n\n5. u(10) = 2¹⁰ + 2 = 1 024 + 2 = **1 026**.\nAvec la forme explicite, on calcule directement le terme de rang 10 ; avec la récurrence, il faudrait calculer les dix termes précédents un par un."
+    },
+    {
+      "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+      "difficulte": 1,
+      "titre": "Une suite de raison 5",
+      "consigne": "Justifie chaque réponse avec les formules du cours.",
+      "enonce": "On considère la suite arithmétique u de premier terme u(0) = 12 et de raison r = 5.\n\n1. Calcule u(1) et u(2).\n2. Exprime u(n) en fonction de n, puis calcule u(20).\n3. Quel est le sens de variation de la suite u ? Justifie.",
+      "bareme": [
+        {
+          "critere": "u(1) = 17 et u(2) = 22",
+          "points": 5
+        },
+        {
+          "critere": "u(n) = 12 + 5n et u(20) = 112",
+          "points": 9
+        },
+        {
+          "critere": "Suite croissante car r = 5 > 0",
+          "points": 6
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. u(1) = u(0) + r = 12 + 5 = **17** ; u(2) = 17 + 5 = **22**.\n\n2. Pour une suite arithmétique : u(n) = u(0) + n × r, donc **u(n) = 12 + 5n**.\nu(20) = 12 + 5 × 20 = 12 + 100 = **112**.\n\n3. La raison r = 5 est **positive** : la suite u est **croissante**."
+    },
+    {
+      "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+      "difficulte": 2,
+      "titre": "Les vélos en libre-service",
+      "consigne": "Réponds à chaque question en justifiant. Termine par une phrase de conclusion.",
+      "enonce": "**Situation.** En 2025, une ville dispose de 180 vélos en libre-service. Chaque année, elle en ajoute 25. On note u(n) le nombre de vélos l'année 2025 + n, donc u(0) = 180.\n\n1. Justifie que la suite u est arithmétique et donne sa raison.\n2. Exprime u(n) en fonction de n. Combien de vélos la ville aura-t-elle en 2032 ?\n3. La ville vise 400 vélos. En quelle année atteindra-t-elle au moins cet objectif ?\n4. Pour vérifier, Karim utilise un tableur : les rangs sont en colonne A (0 en A1), les nombres de vélos en colonne B (180 en B1). Quelle formule peut-il taper en B2 et recopier vers le bas ? Propose aussi une formule qui calcule directement le terme à partir du rang.",
+      "bareme": [
+        {
+          "critere": "u(n+1) = u(n) + 25 : suite arithmétique de raison 25",
+          "points": 4
+        },
+        {
+          "critere": "u(n) = 180 + 25n et u(7) = 355 vélos en 2032",
+          "points": 6
+        },
+        {
+          "critere": "Seuil : 25n ≥ 220, n ≥ 8,8, donc n = 9, année 2034 (u(9) = 405)",
+          "points": 6
+        },
+        {
+          "critere": "Formules =B1+25 (récurrence) et =180+25*A2 (explicite)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Chaque année, on **ajoute** toujours 25 vélos : u(n+1) = u(n) + 25. La suite est **arithmétique de raison 25**.\n\n2. **u(n) = 180 + 25n**. 2032 correspond à n = 7 : u(7) = 180 + 175 = **355 vélos**.\n\n3. On cherche n tel que 180 + 25n ≥ 400, soit 25n ≥ 220, donc n ≥ 8,8. Le premier entier qui convient est **n = 9** : u(9) = 180 + 225 = 405 (alors que u(8) = 380).\nL'objectif sera atteint en **2034**.\n\n4. Récurrence : en B2, **=B1+25**, recopiée vers le bas.\nForme explicite : **=180+25*A2** (chaque cellule se calcule à partir du rang). Les deux colonnes doivent donner les mêmes nombres."
+    },
+    {
+      "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+      "difficulte": 3,
+      "titre": "Deux clubs de sport",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque étape.",
+      "enonce": "**Situation.** Le club Alpha gagne chaque mois le même nombre d'adhérents. On note u(n) son nombre d'adhérents au mois n. On sait que u(3) = 17 et u(8) = 42.\n\nLe club Bêta comptait 60 adhérents au mois 0 et en perd 2 chaque mois. On note v(n) son nombre d'adhérents au mois n.\n\n1. Justifie que u est une suite arithmétique, puis calcule sa raison et u(0).\n2. Exprime u(n) et v(n) en fonction de n. Donne le sens de variation de chaque suite.\n3. Dans un repère, les points (n ; u(n)) sont-ils alignés ? Si oui, donne l'équation de la droite qui les porte.\n4. À partir de quel mois le club Alpha aura-t-il strictement plus d'adhérents que le club Bêta ? Vérifie en calculant u et v pour ce mois et le précédent.",
+      "bareme": [
+        {
+          "critere": "Suite arithmétique justifiée, r = (42 − 17) ÷ 5 = 5 et u(0) = 2",
+          "points": 5
+        },
+        {
+          "critere": "u(n) = 2 + 5n croissante, v(n) = 60 − 2n décroissante",
+          "points": 5
+        },
+        {
+          "critere": "Points alignés sur la droite y = 5x + 2",
+          "points": 3
+        },
+        {
+          "critere": "Inéquation 2 + 5n > 60 − 2n, n > 58/7, premier mois n = 9",
+          "points": 5
+        },
+        {
+          "critere": "Vérification : u(8) = 42 < v(8) = 44 et u(9) = 47 > v(9) = 42",
+          "points": 2
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. Le club gagne chaque mois le **même nombre** d'adhérents : u(n+1) = u(n) + r, la suite est **arithmétique**.\nu(8) = u(3) + (8 − 3) × r, donc 42 = 17 + 5r, 5r = 25, **r = 5**.\nu(3) = u(0) + 3r, donc 17 = u(0) + 15, **u(0) = 2**.\n\n2. **u(n) = 2 + 5n** : r = 5 > 0, la suite est **croissante**.\nv est arithmétique de premier terme 60 et de raison −2 : **v(n) = 60 − 2n**, **décroissante** car −2 < 0.\n\n3. Oui : les points d'une suite arithmétique sont **alignés**, sur la droite d'équation **y = 5x + 2** (y = rx + u(0)).\n\n4. On résout 2 + 5n > 60 − 2n, soit 7n > 58, donc n > 58/7 ≈ 8,3. Le premier entier qui convient est **n = 9**.\nVérification : u(8) = 42 et v(8) = 44 (Alpha encore derrière) ; u(9) = 47 et v(9) = 42 (Alpha devant).\nC'est donc **au 9e mois** qu'Alpha dépasse Bêta."
+    },
+    {
+      "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+      "difficulte": 1,
+      "titre": "Une suite de raison 1,2",
+      "consigne": "Justifie chaque réponse avec les formules du cours.",
+      "enonce": "On considère la suite géométrique u de premier terme u(0) = 500 et de raison q = 1,2.\n\n1. Calcule u(1) et u(2).\n2. Exprime u(n) en fonction de n.\n3. Quel est le sens de variation de u ? À quel pourcentage d'évolution correspond le passage d'un terme au suivant ?",
+      "bareme": [
+        {
+          "critere": "u(1) = 600 et u(2) = 720",
+          "points": 7
+        },
+        {
+          "critere": "u(n) = 500 × 1,2^n",
+          "points": 6
+        },
+        {
+          "critere": "Suite croissante car q > 1, hausse de 20 % à chaque étape",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. u(1) = 1,2 × 500 = **600** ; u(2) = 1,2 × 600 = **720**.\n\n2. Pour une suite géométrique : u(n) = u(0) × q^n, donc **u(n) = 500 × 1,2^n**.\n\n3. Les termes sont positifs et q = 1,2 > 1 : la suite est **croissante**.\nMultiplier par 1,2 = 1 + 0,2, c'est **augmenter de 20 %** à chaque étape."
+    },
+    {
+      "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+      "difficulte": 2,
+      "titre": "La voiture d'Hugo",
+      "consigne": "Réponds à chaque question en justifiant. Conclus par une phrase.",
+      "enonce": "**Situation.** Hugo achète une voiture 20 000 €. On estime qu'elle perd 20 % de sa valeur chaque année. On note v(n) sa valeur, en euros, au bout de n années, donc v(0) = 20 000.\n\n1. Justifie que v est une suite géométrique et donne sa raison.\n2. Exprime v(n) en fonction de n. Quel est son sens de variation ?\n3. Calcule v(1), v(2), v(3) et v(4).\n4. Au bout de combien d'années la voiture vaudra-t-elle moins de 10 000 € pour la première fois ?",
+      "bareme": [
+        {
+          "critere": "Perte de 20 % = × 0,8 : suite géométrique de raison 0,8",
+          "points": 5
+        },
+        {
+          "critere": "v(n) = 20 000 × 0,8^n, décroissante car 0 < 0,8 < 1",
+          "points": 5
+        },
+        {
+          "critere": "v(1) = 16 000, v(2) = 12 800, v(3) = 10 240, v(4) = 8 192",
+          "points": 6
+        },
+        {
+          "critere": "Seuil : v(3) > 10 000 et v(4) < 10 000, donc 4 ans",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Perdre 20 %, c'est multiplier par 1 − 0,2 = 0,8 : v(n+1) = 0,8 × v(n). La suite est **géométrique de raison 0,8**.\n\n2. **v(n) = 20 000 × 0,8^n**. Les termes sont positifs et 0 < 0,8 < 1 : la suite est **décroissante**.\n\n3. v(1) = 0,8 × 20 000 = **16 000 €** ;\nv(2) = 0,8 × 16 000 = **12 800 €** ;\nv(3) = 0,8 × 12 800 = **10 240 €** ;\nv(4) = 0,8 × 10 240 = **8 192 €**.\n\n4. v(3) = 10 240 € est encore supérieur à 10 000 €, v(4) = 8 192 € est inférieur. La voiture vaudra moins de 10 000 € pour la première fois **au bout de 4 ans**."
+    },
+    {
+      "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+      "difficulte": 3,
+      "titre": "Intérêts simples ou intérêts composés ?",
+      "consigne": "Réponds en justifiant chaque étape, puis rédige une conclusion argumentée.",
+      "enonce": "**Situation.** Chloé dispose de 1 000 € et hésite entre deux placements.\n- **Placement A** : chaque année, on ajoute 60 € au capital.\n- **Placement B** : chaque année, le capital augmente de 5 %.\n\nOn note a(n) et b(n) le capital, en euros, au bout de n années (a(0) = b(0) = 1 000).\n\n1. Quelle est la nature de chaque suite ? Donne sa raison et exprime a(n) et b(n) en fonction de n.\n2. Calcule a(2) et b(2). Quel placement est le plus intéressant au bout de 2 ans ?\n3. Chloé obtient au tableur les valeurs suivantes (arrondies au centime) :\n\n| n | 6 | 7 | 8 | 9 | 10 |\n| b(n) | 1 340,10 | 1 407,10 | 1 477,46 | 1 551,33 | 1 628,89 |\n\nCalcule a(n) pour ces mêmes rangs et détermine à partir de quelle année le placement B devient plus intéressant.\n4. Explique pourquoi le placement B finit par l'emporter, alors qu'il rapporte moins au début.",
+      "bareme": [
+        {
+          "critere": "a arithmétique de raison 60, a(n) = 1 000 + 60n ; b géométrique de raison 1,05, b(n) = 1 000 × 1,05^n",
+          "points": 5
+        },
+        {
+          "critere": "a(2) = 1 120 et b(2) = 1 102,50 : A plus intéressant à 2 ans",
+          "points": 4
+        },
+        {
+          "critere": "a(6) à a(10) : 1 360 ; 1 420 ; 1 480 ; 1 540 ; 1 600",
+          "points": 4
+        },
+        {
+          "critere": "Comparaison : B dépasse A à partir de n = 9 (1 551,33 > 1 540, alors que 1 477,46 < 1 480)",
+          "points": 4
+        },
+        {
+          "critere": "Explication : évolution relative constante, intérêts des intérêts, la géométrique (q > 1) dépasse l'arithmétique",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. Placement A : on **ajoute** toujours 60 € : suite **arithmétique de raison 60**, **a(n) = 1 000 + 60n**.\nPlacement B : on **multiplie** toujours par 1,05 (hausse de 5 %) : suite **géométrique de raison 1,05**, **b(n) = 1 000 × 1,05^n**.\n\n2. a(2) = 1 000 + 120 = **1 120 €**.\nb(2) = 1 000 × 1,05² = 1 000 × 1,1025 = **1 102,50 €**.\nAu bout de 2 ans, le **placement A** est le plus intéressant.\n\n3. a(6) = 1 360 ; a(7) = 1 420 ; a(8) = 1 480 ; a(9) = 1 540 ; a(10) = 1 600.\nn = 8 : b(8) = 1 477,46 < a(8) = 1 480, A est encore devant.\nn = 9 : b(9) = 1 551,33 > a(9) = 1 540, B passe devant (et reste devant au rang 10 : 1 628,89 > 1 600).\nLe placement B devient plus intéressant **à partir de la 9e année**.\n\n4. Le placement A rapporte toujours 60 € par an (évolution **absolue** constante). Le placement B rapporte 5 % d'un capital qui grossit : 50 € la 1re année, 52,50 € la 2e, puis davantage chaque année, car on touche aussi les **intérêts des intérêts** (évolution **relative** constante). Pour q > 1, une suite géométrique finit toujours par dépasser une suite arithmétique : la croissance exponentielle l'emporte à long terme. Si Chloé place son argent longtemps, B est le meilleur choix."
+    },
+    {
+      "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+      "difficulte": 1,
+      "titre": "Une parabole sous forme factorisée",
+      "consigne": "Justifie chaque réponse à l'aide de la forme de f.",
+      "enonce": "On considère la fonction f définie sur les réels par f(x) = 3(x − 2)(x + 4).\n\n1. Donne les racines de f.\n2. La parabole est-elle ouverte vers le haut ou vers le bas ? f admet-elle un maximum ou un minimum ?\n3. Donne l'équation de l'axe de symétrie de la parabole, puis les coordonnées de son sommet.",
+      "bareme": [
+        {
+          "critere": "Racines 2 et −4",
+          "points": 5
+        },
+        {
+          "critere": "a = 3 > 0 : parabole ouverte vers le haut, minimum",
+          "points": 5
+        },
+        {
+          "critere": "Axe x = −1 et sommet (−1 ; −27)",
+          "points": 10
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f(x) = 3(x − 2)(x − (−4)) : les racines sont **2 et −4**.\n\n2. a = 3 > 0 : la parabole est **ouverte vers le haut**, et f admet un **minimum** en son sommet.\n\n3. Axe de symétrie : x = (2 + (−4)) ÷ 2 = **x = −1**.\nf(−1) = 3 × (−1 − 2) × (−1 + 4) = 3 × (−3) × 3 = −27.\nSommet : **(−1 ; −27)** ; le minimum de f est −27."
+    },
+    {
+      "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+      "difficulte": 2,
+      "titre": "Le bénéfice de l'atelier de Léna",
+      "consigne": "Réponds à chaque question en justifiant, et conclus par une phrase avec les unités.",
+      "enonce": "**Situation.** Léna fabrique des lampes. Son bénéfice, en milliers d'euros, pour x centaines de lampes produites (x entre 0 et 10), est B(x) = −2(x − 1)(x − 9).\n\n1. Pour quelles productions le bénéfice est-il nul ?\n2. Donne le signe de B(x) selon x. Pour quelles quantités de lampes Léna fait-elle un bénéfice positif ?\n3. Détermine la production qui donne le bénéfice maximal, et la valeur de ce bénéfice.",
+      "bareme": [
+        {
+          "critere": "Racines 1 et 9 : bénéfice nul pour 100 et 900 lampes",
+          "points": 5
+        },
+        {
+          "critere": "Signe : a = −2 < 0, B(x) > 0 entre 1 et 9, négatif en dehors",
+          "points": 6
+        },
+        {
+          "critere": "Axe x = 5 et B(5) = 32",
+          "points": 6
+        },
+        {
+          "critere": "Conclusion : 500 lampes, bénéfice maximal 32 000 €",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. B(x) = 0 pour x = 1 ou x = 9 (racines de la forme factorisée) : le bénéfice est nul pour **100 lampes** et pour **900 lampes**.\n\n2. a = −2 < 0. Le signe est celui de a à l'extérieur des racines et le signe contraire entre elles :\n- B(x) < 0 pour x entre 0 et 1, et pour x entre 9 et 10 ;\n- **B(x) > 0 pour x strictement compris entre 1 et 9**.\nLéna fait un bénéfice positif en produisant **entre 100 et 900 lampes**.\n\n3. Axe de symétrie : x = (1 + 9) ÷ 2 = 5.\nB(5) = −2 × (5 − 1) × (5 − 9) = −2 × 4 × (−4) = 32.\nComme a < 0, c'est un **maximum** : le bénéfice est maximal pour **500 lampes** et vaut **32 000 €**."
+    },
+    {
+      "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+      "difficulte": 3,
+      "titre": "Trois lectures d'un même polynôme",
+      "consigne": "Traite les questions dans l'ordre. Justifie chaque résultat par un calcul.",
+      "enonce": "On considère la fonction f définie sur les réels par f(x) = x² − 6x + 5.\n\n1. Vérifie que 1 est une racine de f.\n2. Montre que f(x) = (x − 1)(x − 5). Quelle est l'autre racine ?\n3. Détermine l'axe de symétrie et le sommet de la parabole. f admet-elle un maximum ou un minimum ? Donne sa valeur.\n4. Dresse le tableau de signes de f(x).\n5. Résous l'équation f(x) = 5 sans utiliser la forme factorisée, puis explique comment ce résultat confirme l'axe de symétrie trouvé à la question 3.",
+      "bareme": [
+        {
+          "critere": "f(1) = 1 − 6 + 5 = 0",
+          "points": 3
+        },
+        {
+          "critere": "Développement de (x − 1)(x − 5) et seconde racine 5",
+          "points": 4
+        },
+        {
+          "critere": "Axe x = 3, sommet (3 ; −4), minimum car a = 1 > 0",
+          "points": 5
+        },
+        {
+          "critere": "Signe : positif avant 1 et après 5, négatif entre 1 et 5",
+          "points": 4
+        },
+        {
+          "critere": "f(x) = 5 donne x(x − 6) = 0, solutions 0 et 6, milieu 3 = axe",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. f(1) = 1² − 6 × 1 + 5 = 1 − 6 + 5 = **0** : 1 est bien une racine.\n\n2. (x − 1)(x − 5) = x² − 5x − x + 5 = x² − 6x + 5 = f(x).\nL'autre racine est **5**.\n\n3. Axe de symétrie : x = (1 + 5) ÷ 2 = **x = 3**.\nf(3) = 9 − 18 + 5 = −4 : sommet **(3 ; −4)**.\na = 1 > 0 : la parabole est ouverte vers le haut, f admet un **minimum égal à −4**, atteint en x = 3.\n\n4. Tableau de signes (a > 0) :\n\n| x | avant 1 | entre 1 et 5 | après 5 |\n| f(x) | + | − | + |\n\nf(x) s'annule en 1 et en 5.\n\n5. f(x) = 5 s'écrit x² − 6x + 5 = 5, soit x² − 6x = 0, donc x(x − 6) = 0 : **x = 0 ou x = 6**.\nLes points d'abscisses 0 et 6 ont la même image (5). L'axe de symétrie passe au milieu : (0 + 6) ÷ 2 = 3. On retrouve bien **x = 3**."
+    },
+    {
+      "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+      "difficulte": 1,
+      "titre": "Sécante et tangente à la parabole",
+      "consigne": "Détaille chaque calcul.",
+      "enonce": "On considère la fonction carré f(x) = x².\n\n1. Calcule le taux de variation de f entre 2 et 5. Que représente ce nombre pour la courbe ?\n2. On admet que f′(3) = 6. Détermine l'équation de la tangente à la courbe au point d'abscisse 3.\n3. Cette tangente monte-t-elle ou descend-elle ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Taux (25 − 4) ÷ (5 − 2) = 7, coefficient directeur de la sécante",
+          "points": 8
+        },
+        {
+          "critere": "Tangente y = 6(x − 3) + 9 = 6x − 9",
+          "points": 8
+        },
+        {
+          "critere": "La tangente monte car f′(3) = 6 > 0",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Taux de variation = (f(5) − f(2)) ÷ (5 − 2) = (25 − 4) ÷ 3 = 21 ÷ 3 = **7**.\nC'est le **coefficient directeur de la sécante** passant par les points (2 ; 4) et (5 ; 25).\n\n2. f(3) = 9 et f′(3) = 6. Équation de la tangente : y = f′(3)(x − 3) + f(3) = 6(x − 3) + 9 = 6x − 18 + 9, soit **y = 6x − 9**.\nVérification : pour x = 3, y = 18 − 9 = 9.\n\n3. f′(3) = 6 > 0 : la tangente **monte**."
+    },
+    {
+      "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+      "difficulte": 2,
+      "titre": "Le départ de Jade",
+      "consigne": "Réponds en détaillant les calculs, et donne chaque vitesse avec son unité.",
+      "enonce": "**Situation.** Au départ d'une course, la distance parcourue par Jade, en mètres, t secondes après le départ, est d(t) = 0,5t² (pour t entre 0 et 10).\n\n1. Calcule la distance parcourue au bout de 2 s et au bout de 6 s, puis la vitesse moyenne de Jade entre ces deux instants.\n2. Pour un nombre h non nul, montre que le taux de variation de d entre 4 et 4 + h vaut 4 + 0,5h.\n3. Déduis-en le nombre dérivé d′(4). Que représente-t-il pour Jade ?",
+      "bareme": [
+        {
+          "critere": "d(2) = 2 m, d(6) = 18 m et vitesse moyenne 16 ÷ 4 = 4 m/s",
+          "points": 6
+        },
+        {
+          "critere": "Calcul de d(4 + h) = 8 + 4h + 0,5h² et taux 4 + 0,5h",
+          "points": 8
+        },
+        {
+          "critere": "d′(4) = 4 quand h tend vers 0",
+          "points": 3
+        },
+        {
+          "critere": "Interprétation : vitesse instantanée de 4 m/s à t = 4 s",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. d(2) = 0,5 × 4 = **2 m** ; d(6) = 0,5 × 36 = **18 m**.\nVitesse moyenne = (d(6) − d(2)) ÷ (6 − 2) = 16 ÷ 4 = **4 m/s**.\n\n2. d(4) = 0,5 × 16 = 8.\nd(4 + h) = 0,5 × (4 + h)² = 0,5 × (16 + 8h + h²) = 8 + 4h + 0,5h².\nTaux = (d(4 + h) − d(4)) ÷ h = (4h + 0,5h²) ÷ h = **4 + 0,5h**.\n\n3. Quand h se rapproche de 0, 4 + 0,5h se rapproche de 4 : **d′(4) = 4**.\nC'est la **vitesse instantanée** de Jade à l'instant t = 4 s : **4 m/s**. (La vitesse moyenne calculée à la question 1 est une vitesse sur un intervalle, pas à un instant.)"
+    },
+    {
+      "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+      "difficulte": 3,
+      "titre": "Deux tangentes à une parabole",
+      "consigne": "Traite les questions dans l'ordre et justifie chaque calcul.",
+      "enonce": "On considère la fonction f définie sur les réels par f(x) = x² − 4x + 1.\n\n1. Calcule le taux de variation de f entre 0 et 4. Que peux-tu dire de la sécante qui passe par les points d'abscisses 0 et 4 ?\n2. Pour h non nul, montre que le taux de variation de f entre 1 et 1 + h vaut h − 2. Déduis-en f′(1).\n3. Détermine l'équation de la tangente à la courbe au point d'abscisse 1. Passe-t-elle par l'origine du repère ?\n4. De la même façon, calcule le taux de variation entre 2 et 2 + h, puis f′(2). Donne l'équation de la tangente en 2 et décris sa position.\n5. En t'appuyant sur les questions 3 et 4, décris l'allure de la courbe au voisinage de x = 1, puis de x = 2.",
+      "bareme": [
+        {
+          "critere": "Taux entre 0 et 4 nul (f(0) = f(4) = 1), sécante horizontale",
+          "points": 3
+        },
+        {
+          "critere": "f(1 + h) = h² − 2h − 2, taux h − 2 et f′(1) = −2",
+          "points": 5
+        },
+        {
+          "critere": "Tangente en 1 : y = −2x, qui passe par l'origine",
+          "points": 4
+        },
+        {
+          "critere": "Taux entre 2 et 2 + h égal à h, f′(2) = 0, tangente horizontale y = −3",
+          "points": 5
+        },
+        {
+          "critere": "Interprétation : la courbe descend près de 1, tangente horizontale en 2",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. f(0) = 1 et f(4) = 16 − 16 + 1 = 1. Taux = (1 − 1) ÷ (4 − 0) = **0** : la sécante est **horizontale** (coefficient directeur nul).\n\n2. f(1) = 1 − 4 + 1 = −2.\nf(1 + h) = (1 + h)² − 4(1 + h) + 1 = 1 + 2h + h² − 4 − 4h + 1 = h² − 2h − 2.\nTaux = (f(1 + h) − f(1)) ÷ h = (h² − 2h) ÷ h = **h − 2**.\nQuand h se rapproche de 0, h − 2 se rapproche de −2 : **f′(1) = −2**.\n\n3. y = f′(1)(x − 1) + f(1) = −2(x − 1) − 2 = −2x + 2 − 2, soit **y = −2x**.\nPour x = 0, y = 0 : la tangente **passe par l'origine**.\n\n4. f(2) = 4 − 8 + 1 = −3.\nf(2 + h) = 4 + 4h + h² − 8 − 4h + 1 = h² − 3.\nTaux = (h² − 3 − (−3)) ÷ h = h² ÷ h = **h**, qui se rapproche de 0 : **f′(2) = 0**.\nTangente : y = 0 × (x − 2) − 3, soit **y = −3** : elle est **horizontale**.\n\n5. En x = 1, f′(1) = −2 < 0 : la tangente descend, la courbe **descend** au voisinage de 1. En x = 2, la tangente est **horizontale** : c'est là que la courbe passe par son point le plus bas (2 ; −3), sommet de la parabole, au milieu des abscisses 0 et 4 qui ont la même image."
+    },
+    {
+      "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+      "difficulte": 1,
+      "titre": "Dériver des polynômes",
+      "consigne": "Donne chaque dérivée en citant les règles utilisées.",
+      "enonce": "1. Calcule la fonction dérivée de chacune des fonctions suivantes :\n- f(x) = 4x² − 3x + 2 ;\n- g(x) = x³ + 5x ;\n- h(x) = −2x³ + x².\n2. Étudie le signe de f′(x) selon x.\n3. Déduis-en les variations de f.",
+      "bareme": [
+        {
+          "critere": "f′(x) = 8x − 3, g′(x) = 3x² + 5, h′(x) = −6x² + 2x",
+          "points": 10
+        },
+        {
+          "critere": "f′(x) s'annule en 3/8, négative avant, positive après",
+          "points": 5
+        },
+        {
+          "critere": "f décroissante puis croissante, changement en x = 3/8",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Avec (x²)′ = 2x, (x³)′ = 3x², (x)′ = 1, (k)′ = 0, (k × u)′ = k × u′ et (u + v)′ = u′ + v′ :\n- f′(x) = 4 × 2x − 3 × 1 + 0 = **8x − 3** ;\n- g′(x) = **3x² + 5** ;\n- h′(x) = −2 × 3x² + 2x = **−6x² + 2x**.\n\n2. 8x − 3 = 0 pour x = 3/8. Le coefficient de x (8) est positif : **f′(x) < 0 pour x < 3/8** et **f′(x) > 0 pour x > 3/8**.\n\n3. f est **décroissante** pour x ≤ 3/8 et **croissante** pour x ≥ 3/8 : f admet un minimum en x = 3/8."
+    },
+    {
+      "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+      "difficulte": 2,
+      "titre": "Le bénéfice de la PME",
+      "consigne": "Suis la méthode du cours : dérivée, signe, variations, extremum. Conclus avec les unités.",
+      "enonce": "**Situation.** Une PME fabrique des trottinettes. Son bénéfice, en milliers d'euros, pour x centaines de trottinettes (x entre 0 et 10), est B(x) = −x² + 10x − 16.\n\n1. Calcule B′(x).\n2. Étudie le signe de B′(x) sur [0 ; 10] et dresse le tableau de variations de B.\n3. Combien de trottinettes faut-il fabriquer pour que le bénéfice soit maximal ? Quel est ce bénéfice ?",
+      "bareme": [
+        {
+          "critere": "B′(x) = −2x + 10",
+          "points": 5
+        },
+        {
+          "critere": "B′ s'annule en 5, positive avant, négative après",
+          "points": 5
+        },
+        {
+          "critere": "Tableau : B croissante sur [0 ; 5], décroissante sur [5 ; 10]",
+          "points": 4
+        },
+        {
+          "critere": "Maximum B(5) = 9 calculé dans B : 500 trottinettes, 9 000 €",
+          "points": 6
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **B′(x) = −2x + 10**.\n\n2. −2x + 10 = 0 pour x = 5. Le coefficient de x est négatif : B′(x) > 0 pour x < 5 et B′(x) < 0 pour x > 5.\n\n| x | 0 | | 5 | | 10 |\n| B′(x) | | + | 0 | − | |\n| B | −16 | croissante | 9 | décroissante | −16 |\n\n(B(0) = −16 ; B(10) = −100 + 100 − 16 = −16.)\n\n3. B′ s'annule en changeant de signe de + à − : B admet un **maximum** en x = 5. On remplace x dans **B** (et non dans B′) : B(5) = −25 + 50 − 16 = **9**.\nIl faut fabriquer **500 trottinettes** ; le bénéfice maximal est de **9 000 €**."
+    },
+    {
+      "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+      "difficulte": 3,
+      "titre": "Étude complète d'une fonction cubique",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque étape.",
+      "enonce": "On considère la fonction f définie sur [−4 ; 4] par f(x) = x³ − 12x + 3.\n\n1. Calcule f′(x) et montre que f′(x) = 3(x − 2)(x + 2).\n2. Étudie le signe de f′(x) à l'aide d'un tableau de signes.\n3. Dresse le tableau de variations de f sur [−4 ; 4], en calculant les valeurs de f aux bornes et aux valeurs où f′ s'annule.\n4. Donne les extremums locaux de f. Nora affirme : « Comme f′(2) = 0, le minimum de f vaut 0. » Explique son erreur.\n5. Calcule f′(0). Donne l'équation de la tangente à la courbe au point d'abscisse 0.",
+      "bareme": [
+        {
+          "critere": "f′(x) = 3x² − 12 = 3(x² − 4) = 3(x − 2)(x + 2)",
+          "points": 4
+        },
+        {
+          "critere": "Signe : + sur [−4 ; −2[, − sur ]−2 ; 2[, + sur ]2 ; 4]",
+          "points": 4
+        },
+        {
+          "critere": "Tableau de variations avec f(−4) = −13, f(−2) = 19, f(2) = −13, f(4) = 19",
+          "points": 5
+        },
+        {
+          "critere": "Maximum local 19 en −2, minimum local −13 en 2 ; erreur de Nora : on calcule dans f, pas dans f′",
+          "points": 4
+        },
+        {
+          "critere": "f′(0) = −12 et tangente y = −12x + 3",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. f′(x) = 3x² − 12 = 3(x² − 4) = **3(x − 2)(x + 2)** (différence de deux carrés).\n\n2. Tableau de signes :\n\n| x | de −4 à −2 | entre −2 et 2 | de 2 à 4 |\n| x + 2 | + | + | + |\n| x − 2 | − | − | + |\n| f′(x) | + | − | + |\n\n(le facteur 3 est positif ; f′ s'annule en −2 et en 2.)\n\n3. f(−4) = −64 + 48 + 3 = −13 ; f(−2) = −8 + 24 + 3 = 19 ; f(2) = 8 − 24 + 3 = −13 ; f(4) = 64 − 48 + 3 = 19.\n\n| x | −4 | | −2 | | 2 | | 4 |\n| f | −13 | croissante | 19 | décroissante | −13 | croissante | 19 |\n\n4. f′ s'annule en −2 en passant de + à − : **maximum local 19** en x = −2. f′ s'annule en 2 en passant de − à + : **minimum local −13** en x = 2.\nNora confond f et f′ : f′(2) = 0 indique que la tangente est horizontale en 2, mais la **valeur** du minimum s'obtient en remplaçant x par 2 dans **f** : f(2) = −13, et non 0.\n\n5. f′(0) = 3 × 0 − 12 = **−12** et f(0) = 3.\nTangente : y = −12(x − 0) + 3, soit **y = −12x + 3** (elle descend, f est décroissante autour de 0)."
+    },
+    {
+      "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+      "difficulte": 1,
+      "titre": "Point moyen et estimation",
+      "consigne": "Détaille tes calculs et précise s'il s'agit d'une interpolation ou d'une extrapolation.",
+      "enonce": "On a relevé la série statistique à deux variables suivante :\n\n| x | 1 | 2 | 3 | 4 | 5 |\n| y | 4 | 7 | 8 | 11 | 15 |\n\n1. Calcule les coordonnées du point moyen G.\n2. Un tableur propose l'ajustement affine y = 2,6x + 1,2. Vérifie que cette droite passe par G.\n3. Utilise cet ajustement pour estimer y pour x = 6. S'agit-il d'une interpolation ou d'une extrapolation ?",
+      "bareme": [
+        {
+          "critere": "x̄ = 3, ȳ = 45 ÷ 5 = 9, donc G(3 ; 9)",
+          "points": 7
+        },
+        {
+          "critere": "Vérification 2,6 × 3 + 1,2 = 9",
+          "points": 5
+        },
+        {
+          "critere": "Estimation 16,8 pour x = 6, extrapolation à prendre avec prudence",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. x̄ = (1 + 2 + 3 + 4 + 5) ÷ 5 = 15 ÷ 5 = 3.\nȳ = (4 + 7 + 8 + 11 + 15) ÷ 5 = 45 ÷ 5 = 9.\n**G(3 ; 9)**.\n\n2. Pour x = 3 : 2,6 × 3 + 1,2 = 7,8 + 1,2 = 9. La droite **passe bien par G**.\n\n3. Pour x = 6 : y = 2,6 × 6 + 1,2 = 15,6 + 1,2 = **16,8**.\nx = 6 est **en dehors** des données observées (de 1 à 5) : c'est une **extrapolation**, à prendre avec prudence car rien ne garantit que la tendance continue."
+    },
+    {
+      "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+      "difficulte": 2,
+      "titre": "Publicité et ventes d'une boutique en ligne",
+      "consigne": "Applique la méthode de Mayer en détaillant chaque étape, puis interprète.",
+      "enonce": "**Situation.** Une boutique en ligne a relevé, sur six mois, ses dépenses de publicité x (en milliers d'euros) et ses ventes y (en centaines d'articles).\n\n| x | 1 | 2 | 3 | 4 | 5 | 6 |\n| y | 4 | 5 | 9 | 10 | 12 | 14 |\n\n1. Calcule le point moyen G1 des trois premiers points et le point moyen G2 des trois derniers.\n2. Détermine l'équation de la droite de Mayer (G1G2).\n3. Calcule le point moyen G de toute la série et vérifie que la droite passe par G.\n4. Estime les ventes pour 2 500 € de publicité, puis pour 10 000 €. Laquelle de ces deux estimations est la plus fiable ? Justifie.",
+      "bareme": [
+        {
+          "critere": "G1(2 ; 6) et G2(5 ; 12)",
+          "points": 5
+        },
+        {
+          "critere": "Droite y = 2x + 2 (a = 6 ÷ 3 = 2, b = 2)",
+          "points": 5
+        },
+        {
+          "critere": "G(3,5 ; 9) et vérification 2 × 3,5 + 2 = 9",
+          "points": 4
+        },
+        {
+          "critere": "Estimations 700 articles (interpolation, fiable) et 2 200 articles (extrapolation, prudence)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Premier groupe : x̄ = (1 + 2 + 3) ÷ 3 = 2 ; ȳ = (4 + 5 + 9) ÷ 3 = 18 ÷ 3 = 6. **G1(2 ; 6)**.\nSecond groupe : x̄ = (4 + 5 + 6) ÷ 3 = 5 ; ȳ = (10 + 12 + 14) ÷ 3 = 36 ÷ 3 = 12. **G2(5 ; 12)**.\n\n2. a = (12 − 6) ÷ (5 − 2) = 6 ÷ 3 = 2. Avec G1 : 6 = 2 × 2 + b, donc b = 2. Droite de Mayer : **y = 2x + 2**.\n\n3. x̄ = 21 ÷ 6 = 3,5 ; ȳ = 54 ÷ 6 = 9. **G(3,5 ; 9)**. Pour x = 3,5 : 2 × 3,5 + 2 = 9 : la droite passe bien par G.\n\n4. 2 500 € correspond à x = 2,5 : y = 2 × 2,5 + 2 = 7, soit environ **700 articles**. C'est une **interpolation** (2,5 est entre 1 et 6) : estimation assez fiable.\n10 000 € correspond à x = 10 : y = 22, soit environ **2 200 articles**. C'est une **extrapolation** (bien au-delà des données) : estimation beaucoup moins fiable, rien ne garantit que les ventes continuent d'augmenter au même rythme.\nLa première estimation est donc la plus fiable."
+    },
+    {
+      "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+      "difficulte": 3,
+      "titre": "Le chiffre d'affaires d'une jeune entreprise",
+      "consigne": "Réponds en justifiant chaque calcul, puis rédige une analyse critique pour la dernière question.",
+      "enonce": "**Situation.** Une jeune entreprise a relevé son chiffre d'affaires y (en dizaines de milliers d'euros) selon le rang x de l'année d'activité.\n\n| x | 1 | 2 | 3 | 4 | 5 | 6 |\n| y | 2 | 3,5 | 3,5 | 7,5 | 9 | 10,5 |\n\n1. Calcule les coordonnées du point moyen G.\n2. Détermine l'équation de la droite de Mayer, en coupant la série en deux groupes de trois points. Vérifie qu'elle passe par G.\n3. Le tableur donne, par la méthode des moindres carrés, la droite y = 1,8x − 0,3. Que rend-elle minimale ? Passe-t-elle aussi par G ?\n4. Estime le chiffre d'affaires de la 8e année avec chacune des deux droites. Commente l'écart et la fiabilité de ces estimations.\n5. Un journaliste écrit : « L'ajustement est excellent : c'est donc le temps qui fait augmenter le chiffre d'affaires. » Discute cette affirmation.",
+      "bareme": [
+        {
+          "critere": "G(3,5 ; 6)",
+          "points": 3
+        },
+        {
+          "critere": "G1(2 ; 3), G2(5 ; 9), droite y = 2x − 1 passant par G",
+          "points": 5
+        },
+        {
+          "critere": "Moindres carrés : somme des carrés des écarts verticaux minimale ; 1,8 × 3,5 − 0,3 = 6",
+          "points": 4
+        },
+        {
+          "critere": "Estimations 15 et 14,1 (150 000 € et 141 000 €), extrapolation incertaine",
+          "points": 4
+        },
+        {
+          "critere": "Critique : un ajustement ne prouve pas une causalité, d'autres facteurs expliquent la hausse",
+          "points": 4
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. x̄ = 21 ÷ 6 = 3,5 ; ȳ = (2 + 3,5 + 3,5 + 7,5 + 9 + 10,5) ÷ 6 = 36 ÷ 6 = 6. **G(3,5 ; 6)**.\n\n2. G1 : x̄ = 2 ; ȳ = (2 + 3,5 + 3,5) ÷ 3 = 9 ÷ 3 = 3, donc **G1(2 ; 3)**.\nG2 : x̄ = 5 ; ȳ = (7,5 + 9 + 10,5) ÷ 3 = 27 ÷ 3 = 9, donc **G2(5 ; 9)**.\na = (9 − 3) ÷ (5 − 2) = 2 ; 3 = 2 × 2 + b donne b = −1. Droite de Mayer : **y = 2x − 1**.\nPour x = 3,5 : 2 × 3,5 − 1 = 6 : elle **passe par G**.\n\n3. La droite des moindres carrés rend **minimale la somme des carrés des écarts verticaux** Σ (y_i − (ax_i + b))². Pour x = 3,5 : 1,8 × 3,5 − 0,3 = 6,3 − 0,3 = 6 : elle **passe aussi par G**.\n\n4. Mayer : y = 2 × 8 − 1 = **15**, soit 150 000 €. Moindres carrés : y = 1,8 × 8 − 0,3 = 14,4 − 0,3 = **14,1**, soit 141 000 €.\nLes deux droites donnent des estimations proches (écart de 9 000 €), mais l'année 8 est **hors des données** : c'est une **extrapolation**, peu fiable. Rien ne garantit que la croissance continue au même rythme ; l'écart entre les deux modèles grandit d'ailleurs à mesure qu'on s'éloigne des données.\n\n5. Le journaliste a tort : un bon ajustement ne prouve **pas** que x est la **cause** de y. Le temps qui passe ne produit pas de chiffre d'affaires par lui-même ; la hausse peut s'expliquer par d'autres facteurs qui évoluent avec les années (clientèle qui grandit, notoriété, nouveaux produits, embauches…). L'ajustement **résume** les données, il n'explique pas le mécanisme."
+    },
+    {
+      "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+      "difficulte": 1,
+      "titre": "Un arbre à compléter",
+      "consigne": "Construis l'arbre puis justifie chaque calcul.",
+      "enonce": "On considère deux événements A et B tels que P(A) = 0,4, P_A(B) = 0,5 et P_Ā(B) = 0,25.\n\n1. Construis l'arbre pondéré complet de la situation.\n2. Calcule P(A ∩ B) et P(Ā ∩ B).\n3. Déduis-en P(B) en citant la formule utilisée.",
+      "bareme": [
+        {
+          "critere": "Arbre complet : 0,4 / 0,6 ; 0,5 / 0,5 ; 0,25 / 0,75",
+          "points": 6
+        },
+        {
+          "critere": "P(A ∩ B) = 0,2 et P(Ā ∩ B) = 0,15",
+          "points": 8
+        },
+        {
+          "critere": "Probabilités totales : P(B) = 0,35",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Premier niveau : A (0,4) et Ā (1 − 0,4 = **0,6**).\nAprès A : B (0,5) et B̄ (**0,5**). Après Ā : B (0,25) et B̄ (**0,75**).\nLes branches issues d'un même nœud ont une somme de 1.\n\n2. On multiplie le long des chemins :\nP(A ∩ B) = 0,4 × 0,5 = **0,2** ;\nP(Ā ∩ B) = 0,6 × 0,25 = **0,15**.\n\n3. Formule des probabilités totales : P(B) = P(A ∩ B) + P(Ā ∩ B) = 0,2 + 0,15 = **0,35**."
+    },
+    {
+      "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+      "difficulte": 2,
+      "titre": "Un test de dépistage",
+      "consigne": "Construis un arbre pondéré, justifie chaque calcul et interprète le dernier résultat.",
+      "enonce": "**Situation.** Dans une population, 5 % des personnes sont atteintes d'une maladie (événement M). Un test de dépistage a une sensibilité de 0,9 et une spécificité de 0,8. On note T l'événement « le test est positif ».\n\n1. Traduis la sensibilité et la spécificité par des probabilités conditionnelles, puis construis l'arbre pondéré.\n2. Calcule P(M ∩ T), puis la probabilité qu'une personne soit un faux positif.\n3. Calcule P(T).\n4. Calcule P_T(M), arrondie au centième. Que penser d'un test positif isolé ?",
+      "bareme": [
+        {
+          "critere": "P_M(T) = 0,9 et P_M̄(T̄) = 0,8, arbre complet avec P_M̄(T) = 0,2",
+          "points": 5
+        },
+        {
+          "critere": "P(M ∩ T) = 0,045 et P(M̄ ∩ T) = 0,19 (faux positifs)",
+          "points": 5
+        },
+        {
+          "critere": "P(T) = 0,045 + 0,19 = 0,235",
+          "points": 4
+        },
+        {
+          "critere": "P_T(M) = 0,045 ÷ 0,235 ≈ 0,19 et interprétation",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Sensibilité : **P_M(T) = 0,9** ; spécificité : **P_M̄(T̄) = 0,8**, donc P_M̄(T) = 0,2.\nArbre : M (0,05) puis T (0,9) / T̄ (0,1) ; M̄ (0,95) puis T (0,2) / T̄ (0,8).\n\n2. P(M ∩ T) = 0,05 × 0,9 = **0,045**.\nUn faux positif est une personne **non malade** dont le test est positif : P(M̄ ∩ T) = 0,95 × 0,2 = **0,19**.\n\n3. Probabilités totales : P(T) = 0,045 + 0,19 = **0,235**.\n\n4. P_T(M) = P(M ∩ T) ÷ P(T) = 0,045 ÷ 0,235 = 45/235 = 9/47 ≈ **0,19**.\nParmi les personnes testées positives, **moins d'une sur cinq** est réellement malade : la plupart des positifs sont des faux positifs, car la maladie est rare. Un test positif isolé ne suffit pas à conclure ; il faut un examen complémentaire. On remarque aussi que P_T(M) ≈ 0,19 est très différent de P_M(T) = 0,9."
+    },
+    {
+      "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+      "difficulte": 3,
+      "titre": "Deux salles de sport, deux conclusions",
+      "consigne": "Traite les deux parties en justifiant chaque calcul. Rédige une réponse argumentée pour la dernière question.",
+      "enonce": "On choisit au hasard un client d'une salle de sport. On note A : « le client a pris l'option coaching » et F : « le client vient plus de deux fois par semaine ».\n\n**Partie A — Salle Olympe.** 30 % des clients ont pris l'option coaching. Parmi eux, 60 % viennent plus de deux fois par semaine ; parmi les autres clients, 40 %.\n\n1. Construis l'arbre pondéré, puis calcule P(A ∩ F) et P(F).\n2. Calcule P_F(A), arrondie au centième, et explique ce qu'elle représente.\n3. Les événements A et F sont-ils indépendants ? Justifie par un calcul.\n\n**Partie B — Salle Titan.** 30 % des clients ont pris l'option coaching. Parmi eux, 60 % viennent plus de deux fois par semaine ; parmi les autres clients, 60 % aussi.\n\n4. Calcule P(F) pour cette salle. A et F sont-ils indépendants ? Interprète.\n5. Un client de la salle Titan affirme : « A et F sont indépendants, donc un client ne peut pas à la fois avoir pris le coaching et venir souvent. » Explique son erreur.",
+      "bareme": [
+        {
+          "critere": "Arbre Olympe, P(A ∩ F) = 0,18 et P(F) = 0,18 + 0,28 = 0,46",
+          "points": 5
+        },
+        {
+          "critere": "P_F(A) = 0,18 ÷ 0,46 = 9/23 ≈ 0,39 et son sens",
+          "points": 4
+        },
+        {
+          "critere": "Non-indépendance : P(A) × P(F) = 0,138 ≠ 0,18 (ou P_A(F) = 0,6 ≠ 0,46)",
+          "points": 4
+        },
+        {
+          "critere": "Titan : P(F) = 0,6 = P_A(F), donc indépendance, interprétée",
+          "points": 4
+        },
+        {
+          "critere": "Confusion entre indépendants et incompatibles expliquée (P(A ∩ F) = 0,18 ≠ 0)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "**Partie A**\n\n1. Arbre : A (0,3) puis F (0,6) / F̄ (0,4) ; Ā (0,7) puis F (0,4) / F̄ (0,6).\nP(A ∩ F) = 0,3 × 0,6 = **0,18** ; P(Ā ∩ F) = 0,7 × 0,4 = 0,28.\nProbabilités totales : P(F) = 0,18 + 0,28 = **0,46**.\n\n2. P_F(A) = P(A ∩ F) ÷ P(F) = 0,18 ÷ 0,46 = 18/46 = 9/23 ≈ **0,39** : parmi les clients qui viennent plus de deux fois par semaine, environ 39 % ont pris le coaching.\n\n3. P(A) × P(F) = 0,3 × 0,46 = 0,138, alors que P(A ∩ F) = 0,18. Comme 0,138 ≠ 0,18, A et F **ne sont pas indépendants**. (Autre justification : P_A(F) = 0,6 ≠ P(F) = 0,46 : savoir qu'un client a pris le coaching change la probabilité qu'il vienne souvent.)\n\n**Partie B**\n\n4. P(F) = 0,3 × 0,6 + 0,7 × 0,6 = 0,18 + 0,42 = **0,6**. Donc P_A(F) = 0,6 = P(F) : A et F sont **indépendants** (on vérifie : P(A) × P(F) = 0,3 × 0,6 = 0,18 = P(A ∩ F)). À la salle Titan, prendre le coaching ne change rien à la fréquence de venue.\n\n5. Le client confond **indépendants** et **incompatibles**. Des événements incompatibles ne peuvent pas se produire ensemble (P(A ∩ F) = 0). Ici, P(A ∩ F) = 0,18 ≠ 0 : 18 % des clients ont pris le coaching et viennent souvent. L'indépendance signifie seulement que savoir A réalisé ne modifie pas la probabilité de F. D'ailleurs, deux événements incompatibles de probabilités non nulles ne sont jamais indépendants."
+    },
+    {
+      "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+      "difficulte": 1,
+      "titre": "Une loi de probabilité à compléter",
+      "consigne": "Justifie chaque réponse par un calcul.",
+      "enonce": "Une variable aléatoire X a la loi suivante, où a est un nombre inconnu :\n\n| x_i | 0 | 1 | 2 | 3 |\n| P(X = x_i) | 0,1 | 0,3 | 0,4 | a |\n\n1. Calcule a.\n2. Calcule P(X ≥ 2).\n3. Calcule l'espérance E(X).",
+      "bareme": [
+        {
+          "critere": "a = 1 − (0,1 + 0,3 + 0,4) = 0,2",
+          "points": 6
+        },
+        {
+          "critere": "P(X ≥ 2) = 0,4 + 0,2 = 0,6",
+          "points": 6
+        },
+        {
+          "critere": "E(X) = 0 + 0,3 + 0,8 + 0,6 = 1,7",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La somme des probabilités d'une loi vaut 1 : 0,1 + 0,3 + 0,4 + a = 1, donc 0,8 + a = 1 et **a = 0,2**.\n\n2. P(X ≥ 2) = P(X = 2) + P(X = 3) = 0,4 + 0,2 = **0,6**.\n\n3. E(X) = 0 × 0,1 + 1 × 0,3 + 2 × 0,4 + 3 × 0,2 = 0 + 0,3 + 0,8 + 0,6 = **1,7**."
+    },
+    {
+      "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+      "difficulte": 2,
+      "titre": "Les tirs au but de Rayan",
+      "consigne": "Construis l'arbre, puis justifie chaque probabilité par le nombre de chemins et un produit.",
+      "enonce": "**Situation.** Rayan réussit un tir au but avec une probabilité 0,7. Il tire trois fois ; les tirs sont indépendants. On note X le nombre de tirs réussis.\n\n1. Explique pourquoi chaque tir est une épreuve de Bernoulli, et donne son paramètre.\n2. Calcule la probabilité que Rayan réussisse ses trois tirs, puis qu'il n'en réussisse aucun.\n3. Combien de chemins de l'arbre comportent exactement deux succès ? Calcule P(X = 2), puis P(X = 1).\n4. Vérifie que la somme des probabilités vaut 1, puis calcule E(X) et interprète.",
+      "bareme": [
+        {
+          "critere": "Deux issues (réussi, raté), paramètre p = 0,7",
+          "points": 3
+        },
+        {
+          "critere": "P(X = 3) = 0,343 et P(X = 0) = 0,027",
+          "points": 5
+        },
+        {
+          "critere": "3 chemins ; P(X = 2) = 0,441 et P(X = 1) = 0,189",
+          "points": 7
+        },
+        {
+          "critere": "Somme 1 et E(X) = 2,1 tirs réussis en moyenne",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Chaque tir n'a que **deux issues** : réussi (succès) ou raté (échec). C'est une épreuve de Bernoulli de paramètre **p = 0,7** (échec : 0,3).\n\n2. Les tirs sont indépendants : on multiplie le long du chemin.\nP(X = 3) = 0,7³ = **0,343** ; P(X = 0) = 0,3³ = **0,027**.\n\n3. Exactement deux succès : SSE, SES, ESS, soit **3 chemins**, chacun de probabilité 0,7² × 0,3 = 0,147.\nP(X = 2) = 3 × 0,147 = **0,441**.\nExactement un succès : 3 chemins de probabilité 0,7 × 0,3² = 0,063, donc P(X = 1) = 3 × 0,063 = **0,189**.\n\n4. 0,027 + 0,189 + 0,441 + 0,343 = **1**.\nE(X) = 0 × 0,027 + 1 × 0,189 + 2 × 0,441 + 3 × 0,343 = 0,189 + 0,882 + 1,029 = **2,1**.\nSur un grand nombre de séries de trois tirs, Rayan réussit **en moyenne 2,1 tirs** par série."
+    },
+    {
+      "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+      "difficulte": 3,
+      "titre": "Le stand de la kermesse",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque calcul. Interprète tes résultats en phrases.",
+      "enonce": "**Situation.** À la kermesse du lycée, un stand propose le jeu suivant. Le joueur paie 2 € puis fait tourner deux fois une roue. À chaque tour, il gagne avec une probabilité 0,4 ; les deux tours sont indépendants.\n- S'il gagne les deux tours, il reçoit 10 €.\n- S'il gagne un seul tour, il reçoit 2 €.\n- Sinon, il ne reçoit rien.\n\nOn note X le gain **net** du joueur (ce qu'il reçoit moins sa mise de 2 €).\n\n1. Quelles valeurs X peut-elle prendre ?\n2. À l'aide d'un arbre, établis la loi de probabilité de X.\n3. Calcule E(X). Le jeu est-il favorable au joueur ou à l'organisateur ?\n4. L'organisateur veut rendre le jeu équitable en changeant seulement la somme R reçue pour deux tours gagnés. Quelle doit être cette somme ?\n5. Pour vérifier la probabilité 0,4, on simule des échantillons de 100 tours et on observe la fréquence des tours gagnés. Combien de tours faudrait-il par échantillon pour diviser par 3 la dispersion de cette fréquence ?",
+      "bareme": [
+        {
+          "critere": "Valeurs de X : 8, 0 et −2",
+          "points": 3
+        },
+        {
+          "critere": "Loi : P(X = 8) = 0,16, P(X = 0) = 0,48, P(X = −2) = 0,36 (somme 1)",
+          "points": 5
+        },
+        {
+          "critere": "E(X) = 1,28 − 0,72 = 0,56 : jeu favorable au joueur",
+          "points": 5
+        },
+        {
+          "critere": "Équitable : (R − 2) × 0,16 − 0,72 = 0, donc R = 6,50 €",
+          "points": 4
+        },
+        {
+          "critere": "Dispersion en 1 ÷ √n : multiplier n par 9, soit 900 tours",
+          "points": 3
+        }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. Deux tours gagnés : 10 − 2 = **8 €** ; un seul : 2 − 2 = **0 €** ; aucun : 0 − 2 = **−2 €**.\n\n2. Arbre à deux niveaux, G (0,4) / Ḡ (0,6) à chaque tour.\nP(X = 8) = 0,4 × 0,4 = **0,16** ;\nP(X = 0) : deux chemins (G, Ḡ) et (Ḡ, G), chacun 0,4 × 0,6 = 0,24, soit **0,48** ;\nP(X = −2) = 0,6 × 0,6 = **0,36**.\nContrôle : 0,16 + 0,48 + 0,36 = 1.\n\n3. E(X) = 8 × 0,16 + 0 × 0,48 + (−2) × 0,36 = 1,28 − 0,72 = **0,56**.\nE(X) > 0 : sur un grand nombre de parties, le joueur gagne **en moyenne 0,56 €** par partie. Le jeu est **favorable au joueur** (et défavorable à l'organisateur).\n\n4. Le gain net pour deux tours gagnés devient R − 2. Le jeu est équitable si E(X) = 0 :\n(R − 2) × 0,16 + 0 × 0,48 − 2 × 0,36 = 0, soit (R − 2) × 0,16 = 0,72, donc R − 2 = 4,5 et **R = 6,50 €**.\n\n5. La dispersion de la fréquence est de l'ordre de 1 ÷ √n. Pour la diviser par 3, il faut multiplier n par 3² = **9** : des échantillons de **900 tours**."
+    },
+    {
+      "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+      "difficulte": 1,
+      "titre": "Le format de l'épreuve et quatre automatismes",
+      "consigne": "Réponds sans calculatrice, comme le jour de l'épreuve. Donne le calcul pour chaque automatisme.",
+      "enonce": "**Partie 1 — Le format.**\n1. Donne la durée de l'épreuve anticipée de mathématiques, son coefficient, et dis si la calculatrice est autorisée.\n2. Combien de points rapporte la partie automatismes, et combien la partie exercices ?\n\n**Partie 2 — Automatismes.**\n3. Calcule 1,1² et 0,9².\n4. Calcule 25 % de 120.\n5. Un prix augmente de 10 % deux fois de suite. Quelle est l'évolution globale ?",
+      "bareme": [
+        {
+          "critere": "Format : 2 heures, coefficient 2, sans calculatrice ; 6 points d'automatismes, 14 points d'exercices",
+          "points": 6
+        },
+        {
+          "critere": "1,1² = 1,21 et 0,9² = 0,81",
+          "points": 5
+        },
+        {
+          "critere": "25 % de 120 = 30",
+          "points": 4
+        },
+        {
+          "critere": "Deux hausses de 10 % : 1,1 × 1,1 = 1,21, soit + 21 %",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. L'épreuve dure **2 heures**, a un **coefficient 2** et se passe **sans calculatrice**.\n\n2. La partie 1 (automatismes, en QCM) rapporte **6 points** ; la partie 2 (2 ou 3 exercices guidés) rapporte **14 points**.\n\n3. 1,1² = **1,21** ; 0,9² = **0,81**.\n\n4. 25 % de 120 = 0,25 × 120 = **30**.\n\n5. Les coefficients se multiplient : 1,1 × 1,1 = 1,21 = 1 + 0,21. L'évolution globale est une **hausse de 21 %**, et non de 20 %."
+    },
+    {
+      "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+      "difficulte": 2,
+      "titre": "La copie de Théo : quatre pièges",
+      "consigne": "Pour chaque ligne de la copie, dis si elle est juste ou fausse. Si elle est fausse, nomme le piège et écris la bonne réponse avec son calcul.",
+      "enonce": "**Document — Extrait de la copie de Théo à l'épreuve blanche.**\n\n> **a.** Un prix augmente de 5 % deux fois de suite : il a augmenté de 10 % en tout.\n>\n> **b.** −2x > 6, donc x > −3.\n>\n> **c.** P(A) = 0,5 et P_A(B) = 0,4, donc P(A ∩ B) = 0,4.\n>\n> **d.** f(x) = x² − 6x + 10, donc f′(x) = 2x − 6, qui s'annule en changeant de signe en x = 3. Le minimum de f vaut f′(3) = 0.\n\nCorrige la copie de Théo ligne par ligne.",
+      "bareme": [
+        {
+          "critere": "a. Pourcentages additionnés : 1,05² = 1,1025, soit + 10,25 %",
+          "points": 5
+        },
+        {
+          "critere": "b. Sens de l'inégalité non changé : x < −3",
+          "points": 5
+        },
+        {
+          "critere": "c. Confusion P_A(B) et P(A ∩ B) : 0,5 × 0,4 = 0,2",
+          "points": 5
+        },
+        {
+          "critere": "d. x remplacé dans f′ au lieu de f : minimum f(3) = 1",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "**a. Fausse.** Piège : additionner des pourcentages d'évolutions successives. Les coefficients se multiplient : 1,05 × 1,05 = 1,1025, soit une **hausse de 10,25 %**.\n\n**b. Fausse.** Piège : oublier de changer le sens de l'inégalité. On divise par −2, nombre négatif, donc le sens change : **x < −3**.\n\n**c. Fausse.** Piège : confondre P_A(B) et P(A ∩ B). P(A ∩ B) = P(A) × P_A(B) = 0,5 × 0,4 = **0,2**.\n\n**d. Fausse (en partie).** La dérivée f′(x) = 2x − 6 et l'annulation en x = 3 (de − à +, donc minimum) sont justes. Piège : remplacer x dans f′ au lieu de f. La valeur du minimum est f(3) = 9 − 18 + 10 = **1**, et non 0."
+    },
+    {
+      "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+      "difficulte": 3,
+      "titre": "Un exercice guidé de la partie 2",
+      "consigne": "Traite cet exercice comme le jour de l'épreuve : sans calculatrice, une phrase de conclusion par question, avec l'unité.",
+      "enonce": "**Exercice.** En 2025, la ville de Beaumont compte 5 000 habitants. On estime que sa population augmente de 10 % par an. On note u(n) le nombre d'habitants en 2025 + n, donc u(0) = 5 000.\n\n1. Justifie que u est une suite géométrique et donne sa raison.\n2. Exprime u(n) en fonction de n, puis calcule u(2) sans calculatrice.\n3. Calcule u(3) et u(4). En quelle année la population dépassera-t-elle 7 000 habitants pour la première fois ?\n4. Un élève écrit : « En trois ans, la population augmente de 3 × 10 % = 30 %. » Corrige-le.\n5. **Méthode.** Une candidate n'a pas réussi à trouver la raison à la question 1. Explique ce qu'elle doit faire pour traiter quand même les questions suivantes, et pourquoi.",
+      "bareme": [
+        {
+          "critere": "Hausse de 10 % = × 1,1 : suite géométrique de raison 1,1",
+          "points": 4
+        },
+        {
+          "critere": "u(n) = 5 000 × 1,1^n et u(2) = 5 000 × 1,21 = 6 050",
+          "points": 4
+        },
+        {
+          "critere": "u(3) = 6 655, u(4) = 7 320,5 : seuil dépassé en 2029",
+          "points": 5
+        },
+        {
+          "critere": "Correction : 1,1³ = 1,331, soit + 33,1 % et non + 30 %",
+          "points": 4
+        },
+        {
+          "critere": "Méthode : admettre le résultat (raison donnée par l'énoncé) et continuer, les questions étant liées",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Augmenter de 10 %, c'est multiplier par 1,1 : u(n+1) = 1,1 × u(n). La suite est **géométrique de raison 1,1**.\n\n2. **u(n) = 5 000 × 1,1^n**. u(2) = 5 000 × 1,1² = 5 000 × 1,21 = **6 050 habitants**.\n\n3. u(3) = 1,1 × 6 050 = 6 050 + 605 = **6 655** ; u(4) = 1,1 × 6 655 = 6 655 + 665,5 = **7 320,5**.\nu(3) < 7 000 < u(4) : la population dépassera 7 000 habitants pour la première fois en 2025 + 4 = **2029**.\n\n4. Les pourcentages ne s'additionnent pas, les coefficients se multiplient : 1,1³ = 1,21 × 1,1 = 1,331. En trois ans, la population augmente de **33,1 %** (5 000 × 1,331 = 6 655, cohérent avec la question 3).\n\n5. Elle doit **admettre le résultat** de la question 1 — ici, la raison 1,1 se lit d'ailleurs dans l'énoncé (hausse de 10 %) — et **continuer** : les questions d'un exercice guidé s'appuient souvent sur les précédentes. Une question sautée ne rapporte rien, mais un raisonnement juste sur les questions suivantes rapporte des points."
+    }
+  ]
+}

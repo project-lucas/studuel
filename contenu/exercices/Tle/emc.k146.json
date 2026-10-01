@@ -1,0 +1,3567 @@
+{
+ "niveau": "Tle",
+ "matiere": "emc",
+ "exercices": [
+  {
+   "chapitre": "99b79047-e0f8-53b6-83fd-381be01e0b49",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui comptait à Athènes ?",
+   "competence": "lire-graphique",
+   "situation": "Au Ve siècle avant J.-C., Athènes est célèbre pour sa démocratie. Un graphique compare les habitants qui avaient des droits politiques et les autres.",
+   "documents": [
+    {
+     "id": "ath",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les habitants d’Athènes",
+     "source": "Ordres de grandeur arrondis, Athènes, Ve siècle avant J.-C.",
+     "categories": [
+      "Citoyens",
+      "Femmes, métèques et esclaves"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        40,
+        260
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 300,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Groupe"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ath",
+     "enonce": "Touche la barre du groupe qui possédait tous les droits politiques.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Les droits politiques appartenaient aux citoyens.",
+     "explication": "Les **citoyens** votaient et exerçaient les magistratures : environ 40 000 personnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants (en milliers) n’avaient aucun droit politique ?",
+     "reponse": 260,
+     "unite": "milliers",
+     "aide": "Lis la hauteur de la seconde barre.",
+     "explication": "Les femmes, les métèques et les esclaves représentent environ **260 000** habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ quelle part des habitants (en %) étaient citoyens ? Arrondis à l’unité.",
+     "reponse": 13,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "Divise 40 par le total 300, puis multiplie par 100.",
+     "explication": "40 ÷ 300 ≈ 0,133 : environ **13 %** des habitants seulement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce graphique sur la démocratie athénienne ?",
+     "options": [
+      "Que les droits politiques n’appartenaient qu’à une petite minorité d’habitants",
+      "Que presque tous les habitants votaient lors de chaque assemblée du peuple",
+      "Que les esclaves formaient une minorité très réduite de la population totale",
+      "Que la démocratie athénienne était réservée aux seuls habitants les plus riches"
+     ],
+     "reponse": 0,
+     "aide": "Compare la première barre à la seconde.",
+     "explication": "La démocratie athénienne était directe mais **réservée à une minorité** : la première question est toujours « qui fait partie du peuple ? »."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b79047-e0f8-53b6-83fd-381be01e0b49",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le vote s’ouvre, étape par étape",
+   "competence": "se-reperer-temps",
+   "situation": "Clairval est un village imaginaire. Pour comprendre les règles du vote, Noé observe d’abord la frise de l’extension du suffrage en France, puis un petit cas censitaire.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’extension du suffrage en France",
+     "source": "Dates du cours.",
+     "debut": 1840,
+     "fin": 1980,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "hommes",
+       "date": 1848,
+       "nom": "Suffrage masculin"
+      },
+      {
+       "id": "femmes",
+       "date": 1944,
+       "nom": "Vote des femmes"
+      },
+      {
+       "id": "premier",
+       "date": 1945,
+       "nom": "Premier vote femmes"
+      },
+      {
+       "id": "dixhuit",
+       "date": 1974,
+       "nom": "Majorité à 18 ans"
+      }
+     ]
+    },
+    {
+     "id": "cens",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Clairval, un régime censitaire",
+     "source": "Situation imaginée pour l’exercice",
+     "blocs": [
+      "Dans le village imaginaire de Clairval vivent 300 hommes adultes. Sous un régime censitaire, seuls peuvent voter ceux qui paient au moins 200 francs d’impôt : 18 d’entre eux y parviennent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui ouvre le vote à l’ensemble des hommes.",
+     "reponse": [
+      "hommes"
+     ],
+     "aide": "Cherche la date la plus ancienne de la frise.",
+     "explication": "Le **suffrage universel masculin** est instauré en 1848."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le suffrage universel masculin du droit de vote des femmes ?",
+     "reponse": 96,
+     "unite": "ans",
+     "aide": "Soustrais 1848 à la date du droit de vote des femmes.",
+     "explication": "1944 − 1848 = **96 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À Clairval, quelle part des 300 hommes peut voter sous ce régime censitaire (en %) ?",
+     "reponse": 6,
+     "unite": "%",
+     "aide": "Divise 18 par 300, puis multiplie par 100.",
+     "explication": "18 ÷ 300 = 0,06 : **6 %** seulement des hommes peuvent voter."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire d’un tel régime censitaire ?",
+     "options": [
+      "Il réserve le pouvoir politique à une petite minorité définie par sa fortune",
+      "Il donne une voix égale à chaque habitant quelle que soit sa richesse",
+      "Il désigne les magistrats par tirage au sort parmi tous les habitants",
+      "Il limite le pouvoir du roi en s’appuyant sur une charte écrite célèbre"
+     ],
+     "reponse": 0,
+     "aide": "Regarde qui a le droit de voter selon le texte.",
+     "explication": "Un régime censitaire lie le vote à l’impôt payé : il donne le pouvoir à une **minorité riche**."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b79047-e0f8-53b6-83fd-381be01e0b49",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois vagues, des reflux",
+   "competence": "analyser-document",
+   "situation": "Lina et Malik préparent un exposé. Elle pense que la démocratie ne cesse de progresser, lui n’en est pas si sûr. Ils s’appuient sur les trois vagues de démocratisation décrites par un politiste.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat de Lina et Malik",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Regarde la frise du cours : trois vagues de démocratisation, donc la démocratie ne fait qu’avancer !"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Pas si vite. Après chaque vague, il y a eu un [[r|reflux]] : rien n’est acquis pour toujours."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Mais la troisième vague a touché beaucoup de pays."
+      }
+     ]
+    },
+    {
+     "id": "vag",
+     "type": "tableau",
+     "titre": "Les trois vagues de démocratisation",
+     "source": "D’après le politiste Samuel Huntington (résumé).",
+     "colonnes": [
+      "Vague",
+      "Période",
+      "Exemples"
+     ],
+     "lignes": [
+      [
+       "Première",
+       "XIXe et début du XXe siècle",
+       "Europe occidentale, Amérique du Nord"
+      ],
+      [
+       "Deuxième",
+       "Après 1945",
+       "Reconstruction, décolonisation"
+      ],
+      [
+       "Troisième",
+       "À partir de 1974",
+       "Portugal, Espagne, Grèce, Amérique latine, Europe de l’Est après 1989"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "enonce": "Touche le mot par lequel Malik rappelle qu’une démocratie peut reculer après avoir progressé.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche le mot qui désigne un mouvement de recul.",
+     "explication": "Un **reflux** : chaque vague a été suivie d’un recul de la démocratie."
+    },
+    {
+     "type": "zone",
+     "document": "vag",
+     "enonce": "Touche la période de la vague qui concerne le Portugal, l’Espagne et la Grèce.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Regarde la colonne des exemples, puis celle des périodes.",
+     "explication": "Ces pays sortent de dictature à partir de 1974 : c’est la **troisième vague**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque vague à un exemple qui la caractérise.",
+     "paires": [
+      [
+       "Première vague",
+       "Europe occidentale et Amérique du Nord"
+      ],
+      [
+       "Deuxième vague",
+       "Reconstruction et décolonisation après 1945"
+      ],
+      [
+       "Troisième vague",
+       "Europe de l’Est après 1989"
+      ]
+     ],
+     "aide": "Suis les lignes du tableau.",
+     "explication": "La **première** touche l’Occident au XIXe siècle, la **deuxième** suit 1945, la **troisième** commence en 1974 et s’étend après 1989."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion Malik peut-il tirer du cours ?",
+     "options": [
+      "La démocratie est un régime réversible : chaque progrès peut être suivi d’un recul",
+      "La démocratie est un régime irréversible dès qu’un pays l’a adoptée une fois",
+      "La démocratie est un régime récent qui n’a jamais existé avant le XIXe siècle",
+      "La démocratie est un régime devenu majoritaire partout depuis la guerre froide"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de Malik.",
+     "explication": "La démocratie est **rare et réversible** : les reflux rappellent qu’elle se défend."
+    }
+   ]
+  },
+  {
+   "chapitre": "1931e51c-4c88-52ef-9010-23dbb5ab8c18",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est souverain ?",
+   "competence": "lire-tableau",
+   "situation": "Deux grands penseurs ne répondent pas pareil à la question « à qui appartient la souveraineté ? ». Un tableau compare leurs idées.",
+   "documents": [
+    {
+     "id": "sou",
+     "type": "tableau",
+     "titre": "Deux conceptions de la souveraineté",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "",
+      "Souveraineté populaire",
+      "Souveraineté nationale"
+     ],
+     "lignes": [
+      [
+       "Le théoricien",
+       "Rousseau",
+       "?"
+      ],
+      [
+       "Chaque citoyen détient",
+       "Une part de la souveraineté",
+       "Aucune part : elle est indivisible"
+      ],
+      [
+       "Le mandat de l’élu",
+       "?",
+       "Représentatif : l’élu décide librement"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel théoricien est associé à la souveraineté nationale ?",
+     "reponse": [
+      "Sieyès",
+      "Emmanuel-Joseph Sieyès",
+      "l’abbé Sieyès",
+      "abbé Sieyès"
+     ],
+     "placeholder": "Un nom de famille",
+     "aide": "Regarde la première ligne du tableau : une case est à compléter.",
+     "explication": "**Sieyès** défend la souveraineté nationale : la Nation s’exprime par ses représentants."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Dans la souveraineté populaire, le mandat de l’élu est ___ : il doit obéir à ses électeurs.",
+     "reponses": [
+      [
+       "impératif"
+      ]
+     ],
+     "banque": [
+      "impératif",
+      "représentatif",
+      "illimité",
+      "symbolique"
+     ],
+     "aide": "L’autre colonne parle de mandat représentatif.",
+     "explication": "Le mandat est **impératif** : l’élu est lié par la volonté de ceux qui l’ont élu."
+    },
+    {
+     "type": "zone",
+     "document": "sou",
+     "enonce": "Touche la case qui dit qu’aucun citoyen ne détient de part de la souveraineté nationale.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le mot « indivisible ».",
+     "explication": "Dans la souveraineté nationale, la souveraineté appartient à la Nation entière : elle est **indivisible**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1931e51c-4c88-52ef-9010-23dbb5ab8c18",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle forme de démocratie ?",
+   "competence": "analyser-document",
+   "situation": "Trois scènes de la vie politique montrent trois façons différentes de faire participer les citoyens. Il s’agit de bien les reconnaître.",
+   "documents": [
+    {
+     "id": "sce",
+     "type": "tableau",
+     "titre": "Trois scènes",
+     "source": "Scènes imaginées pour l’exercice.",
+     "colonnes": [
+      "Scène"
+     ],
+     "lignes": [
+      [
+       "A : tous les électeurs d’une ville répondent par « oui » ou « non » à une question posée par référendum local."
+      ],
+      [
+       "B : des habitants réunis en conseil de quartier donnent leur avis sur un projet de parc ; le maire prendra la décision."
+      ],
+      [
+       "C : à l’Assemblée nationale, les députés élus votent une loi après en avoir débattu."
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque scène à sa forme de démocratie.",
+     "paires": [
+      [
+       "Scène A",
+       "Démocratie directe"
+      ],
+      [
+       "Scène B",
+       "Démocratie participative"
+      ],
+      [
+       "Scène C",
+       "Démocratie représentative"
+      ]
+     ],
+     "aide": "Demande-toi qui tranche vraiment dans chaque scène.",
+     "explication": "**A** : le peuple décide lui-même. **B** : les habitants sont associés sans trancher. **C** : des élus décident au nom du peuple."
+    },
+    {
+     "type": "zone",
+     "document": "sce",
+     "enonce": "Touche la scène où ceux que l’on consulte ne tranchent pas eux-mêmes.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Qui prend la décision finale ?",
+     "explication": "Dans la scène **B**, les habitants donnent leur avis, mais c’est le maire qui décide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la Constitution française mêle-t-elle représentants et référendum ?",
+     "options": [
+      "Parce que la souveraineté nationale s’exerce par les représentants et par le référendum",
+      "Parce que la souveraineté appartient au chef de l’État et non au peuple",
+      "Parce que le peuple doit voter chaque loi sans passer par des représentants",
+      "Parce que le référendum a remplacé tous les représentants dans la Constitution"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la phrase de la Constitution citée dans le cours.",
+     "explication": "La Constitution **combine** souveraineté nationale et populaire : le peuple l’exerce « par ses représentants et par la voie du référendum »."
+    }
+   ]
+  },
+  {
+   "chapitre": "1931e51c-4c88-52ef-9010-23dbb5ab8c18",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La majorité peut-elle tout ?",
+   "competence": "argumenter",
+   "situation": "Dans un pays imaginaire, un Parlement vote une loi à une très large majorité. Faut-il pour autant la juger démocratique ? Deux documents aident à trancher.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une loi très soutenue",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Le Parlement de Norvélie, pays imaginaire, vient d’adopter à 70 % des voix une loi interdisant à une minorité religieuse de se réunir. Le gouvernement annonce qu’il jugera lui-même les recours contre cette loi."
+     ]
+    },
+    {
+     "id": "gar",
+     "type": "tableau",
+     "titre": "Les garanties de la démocratie",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Garantie",
+      "Ce qu’elle empêche"
+     ],
+     "lignes": [
+      [
+       "Séparation des pouvoirs",
+       "Qu’un organe décide et juge à la fois"
+      ],
+      [
+       "État de droit",
+       "Que les gouvernants s’exemptent de la loi"
+      ],
+      [
+       "Contrôle de la loi par un juge",
+       "Qu’une loi viole la Constitution"
+      ],
+      [
+       "Droits fondamentaux",
+       "Que la majorité décide de tout"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gar",
+     "enonce": "Touche la garantie que le gouvernement bafoue en jugeant lui-même les recours.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Le gouvernement décide et juge à la fois.",
+     "explication": "C’est la **séparation des pouvoirs** : un même organe ne doit pas décider et juger."
+    },
+    {
+     "type": "choix",
+     "enonce": "La loi a été votée à 70 %. Peut-on dire qu’elle est démocratique ?",
+     "options": [
+      "Non : avoir la majorité ne suffit pas si elle supprime les droits d’une minorité",
+      "Oui : la règle de la majorité suffit à rendre toute loi démocratique",
+      "Oui : une minorité religieuse n’a pas de droits face au vote du Parlement",
+      "Non : toute loi votée par le Parlement est contraire à la démocratie"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne du tableau.",
+     "explication": "Une majorité qui supprime les droits d’une minorité **détruit la démocratie** tout en respectant la règle du nombre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation selon qu’elle respecte ou trahit la démocratie.",
+     "categories": [
+      "Respecte la démocratie",
+      "Trahit la démocratie"
+     ],
+     "items": [
+      [
+       "Une loi adoptée par la majorité peut être contestée devant un juge",
+       0
+      ],
+      [
+       "Une majorité supprime le droit de réunion d’une minorité",
+       1
+      ],
+      [
+       "Le gouvernement décide aussi de juger ses opposants",
+       1
+      ],
+      [
+       "Un ministre est soumis à la loi comme tout citoyen",
+       0
+      ],
+      [
+       "Une loi adoptée à 60 % respecte les droits fondamentaux de chacun",
+       0
+      ]
+     ],
+     "aide": "Pense aux garanties du tableau.",
+     "explication": "Sont démocratiques : le recours au juge, la soumission à la loi, le respect des droits. Sont contraires : supprimer les droits d’une minorité et **décider et juger à la fois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d109bc2-6e82-532e-9de3-c30f86ea3f10",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Bureau de vote, mode d’emploi",
+   "competence": "analyser-document",
+   "situation": "Dans un bureau de vote imaginaire, une affiche rappelle les règles du scrutin et donne quelques chiffres de la journée.",
+   "documents": [
+    {
+     "id": "bur",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Bureau de vote n° 4",
+     "sousTitre": "Dimanche, 8 h – 18 h",
+     "emoji": "🗳️",
+     "lignes": [
+      {
+       "texte": "Un électeur, une voix",
+       "id": "voix"
+      },
+      {
+       "texte": "Isoloir obligatoire",
+       "id": "iso"
+      },
+      {
+       "texte": "Voter est un droit, pas une obligation",
+       "id": "libre"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Électeurs inscrits",
+       "valeur": "1 250",
+       "id": "ins"
+      },
+      {
+       "texte": "Votants",
+       "valeur": "800",
+       "id": "vot"
+      }
+     ],
+     "pied": "Affiche imaginée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bur",
+     "enonce": "Touche la ligne qui garantit l’égalité du vote.",
+     "reponse": [
+      "voix"
+     ],
+     "aide": "Chaque personne compte pour autant qu’une autre.",
+     "explication": "« Un électeur, une voix » : c’est le principe du vote **égal**."
+    },
+    {
+     "type": "zone",
+     "document": "bur",
+     "enonce": "Touche la ligne qui montre qu’on n’est pas obligé de voter.",
+     "reponse": [
+      "libre"
+     ],
+     "aide": "Cherche le mot « obligation ».",
+     "explication": "Voter est un droit, pas une obligation : le vote est **libre** en France."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’abstention de ce bureau (en %) ?",
+     "reponse": 36,
+     "unite": "%",
+     "aide": "Calcule d’abord le nombre d’inscrits qui n’ont pas voté.",
+     "explication": "1 250 − 800 = 450 abstentionnistes ; 450 ÷ 1 250 = 0,36 soit **36 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d109bc2-6e82-532e-9de3-c30f86ea3f10",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mêmes voix, autres sièges",
+   "competence": "raisonner",
+   "situation": "Dans un pays imaginaire, 20 sièges sont à pourvoir. Les mêmes votes sont comptés de deux façons : scrutin majoritaire puis proportionnel.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des voix obtenues",
+     "source": "Résultats imaginés pour l’exercice.",
+     "categories": [
+      "Parti A",
+      "Parti B",
+      "Parti C"
+     ],
+     "series": [
+      {
+       "nom": "Voix",
+       "valeurs": [
+        45,
+        35,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des voix",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Parti"
+     }
+    },
+    {
+     "id": "sie",
+     "type": "tableau",
+     "titre": "Sièges selon le mode de scrutin",
+     "source": "Le parti A arrive en tête dans les 20 circonscriptions.",
+     "colonnes": [
+      "Mode",
+      "Parti A",
+      "Parti B",
+      "Parti C"
+     ],
+     "lignes": [
+      [
+       "Majoritaire",
+       20,
+       0,
+       0
+      ],
+      [
+       "Proportionnel",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voix",
+     "enonce": "Touche la barre du parti qui obtient le plus de voix.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le **parti A** a 45 % des voix."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le scrutin proportionnel, combien de sièges obtient le parti A sur 20 ?",
+     "reponse": 9,
+     "unite": "sièges",
+     "aide": "Calcule 45 % de 20.",
+     "explication": "45 % de 20 = **9 sièges**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de sièges le parti C gagne-t-il en passant du scrutin majoritaire au scrutin proportionnel ?",
+     "reponse": 4,
+     "unite": "sièges",
+     "aide": "Calcule 20 % de 20, puis compare avec 0.",
+     "explication": "20 % de 20 = 4 sièges, contre 0 au scrutin majoritaire : **4 sièges** de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cet exemple ?",
+     "options": [
+      "Qu’un même vote peut donner des sièges très différents selon le mode de scrutin choisi",
+      "Que le scrutin majoritaire reflète toujours fidèlement la répartition exacte des voix",
+      "Que la proportionnelle donne toujours une majorité nette au parti arrivé en tête",
+      "Que le mode de scrutin n’a aucune influence sur la composition de l’assemblée"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux lignes du tableau.",
+     "explication": "Il n’existe **aucun mode de scrutin neutre** : choisir entre représentativité et majorité nette est un choix politique."
+    }
+   ]
+  },
+  {
+   "chapitre": "7d109bc2-6e82-532e-9de3-c30f86ea3f10",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Élu, mais par qui ?",
+   "competence": "analyser-document",
+   "situation": "Dans une ville imaginaire, un maire est élu dans les règles. Pourtant, des habitants contestent sa légitimité. Les chiffres permettent de comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "tableau",
+     "titre": "Résultats de l’élection",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élection imaginaire",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "Électeurs inscrits",
+       "40 000"
+      ],
+      [
+       "Votants",
+       "20 000"
+      ],
+      [
+       "Voix obtenues par l’élu",
+       "11 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un maire contesté",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Le nouveau maire a été proclamé élu, et aucun recours n’a été déposé. Mais plusieurs habitants estiment qu’il ne représente pas vraiment la ville : beaucoup n’ont pas voté, certains ne sont pas inscrits là où ils vivent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de participation (en %) ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Divise le nombre de votants par le nombre d’inscrits.",
+     "explication": "20 000 ÷ 40 000 = 0,5 soit **50 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des inscrits a voté pour l’élu (en %) ? Arrondis au dixième.",
+     "reponse": 27.5,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Divise 11 000 par 40 000.",
+     "explication": "11 000 ÷ 40 000 = 0,275 soit **27,5 %** des inscrits."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment peut-on qualifier cette élection ?",
+     "options": [
+      "Elle est légale, mais sa légitimité peut être discutée vu la faible part des inscrits",
+      "Elle est illégale puisque moins de la moitié des inscrits a voté pour l’élu",
+      "Elle est à la fois illégale et illégitime car la participation est de seulement 50 %",
+      "Elle est pleinement légitime car la légalité suffit toujours à fonder la légitimité"
+     ],
+     "reponse": 0,
+     "aide": "Distingue ce que dit la loi de ce que pensent les habitants.",
+     "explication": "L’élection est **légale** mais sa **légitimité** peut être contestée : les deux notions sont distinctes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : mal-inscription, non-inscription ou abstention.",
+     "categories": [
+      "Mal-inscription",
+      "Non-inscription",
+      "Abstention"
+     ],
+     "items": [
+      [
+       "Clara vit à Lyon mais reste inscrite sur les listes de Brest",
+       0
+      ],
+      [
+       "Sami, 19 ans, n’est inscrit sur aucune liste électorale",
+       1
+      ],
+      [
+       "Inès est inscrite, mais reste chez elle le jour du vote",
+       2
+      ],
+      [
+       "Paul a déménagé à Nantes sans mettre à jour son inscription",
+       0
+      ],
+      [
+       "Nora, 21 ans, ne figure sur aucune liste électorale",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : est-il inscrit ? Où ? A-t-il voté ?",
+     "explication": "**Mal-inscrit** : inscrit ailleurs que là où il vit. **Non-inscrit** : sur aucune liste. **Abstentionniste** : inscrit mais qui ne vote pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "641f8e0c-90af-5906-ac50-cf422583d8f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux articles de 1905",
+   "competence": "analyser-texte",
+   "situation": "La loi du 9 décembre 1905 sépare les Églises et l’État. Voici ses deux articles fondateurs, reformulés pour l’exercice.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La loi de 1905",
+     "source": "Texte adapté pour l’exercice, d’après la loi du 9 décembre 1905",
+     "blocs": [
+      "Article 1 : la République assure la [[l|liberté]] de [[l|conscience]] et garantit aux cultes le droit de s’exercer librement.",
+      "Article 2 : la République ne [[n|reconnaît]], ne [[n|salarie]] et ne [[n|subventionne]] aucun culte."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche les deux mots qui nomment ce que l’État assure aux croyants comme aux non-croyants.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Cherche dans l’article 1.",
+     "explication": "La République assure la **liberté de conscience** : chacun croit ou ne croit pas."
+    },
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche les trois verbes qui disent ce que la République ne fait pas pour les cultes.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Cherche dans l’article 2.",
+     "explication": "L’État ne **reconnaît**, ne **salarie** et ne **subventionne** aucun culte : c’est sa neutralité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La laïcité, c’est la liberté de croire ou de ne pas croire, et la ___ de l’État.",
+     "reponses": [
+      [
+       "neutralité"
+      ]
+     ],
+     "banque": [
+      "neutralité",
+      "hostilité",
+      "gratuité",
+      "autorité"
+     ],
+     "aide": "L’État ne choisit aucune religion.",
+     "explication": "La laïcité associe **liberté** des personnes et **neutralité** de l’État."
+    }
+   ]
+  },
+  {
+   "chapitre": "641f8e0c-90af-5906-ac50-cf422583d8f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La neutralité vise qui ?",
+   "competence": "analyser-document",
+   "situation": "Sarah rapporte ce que lui a dit sa cousine sur la laïcité. Nicolas n’est pas d’accord. Le tableau donne la règle selon les personnes.",
+   "documents": [
+    {
+     "id": "dia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Un malentendu",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nicolas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Ma cousine dit que la laïcité interdit de porter un voile ou une croix dans la rue."
+      },
+      {
+       "qui": "Nicolas",
+       "texte": "Faux ! La neutralité vise l’[[e|État]] et ses [[e|agents]], pas les passants."
+      }
+     ]
+    },
+    {
+     "id": "reg",
+     "type": "tableau",
+     "titre": "La règle selon la personne",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Personne concernée",
+      "Règle"
+     ],
+     "lignes": [
+      [
+       "Agent public dans ses fonctions",
+       "Doit rester neutre"
+      ],
+      [
+       "Usager dans l’espace public",
+       "Libre de porter un signe religieux"
+      ],
+      [
+       "Élève de l’école publique",
+       "Signes religieux ostensibles interdits (loi de 2004)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche les deux mots qui désignent ceux à qui s’impose la neutralité.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche dans la réponse de Nicolas.",
+     "explication": "La neutralité s’impose à l’**État** et à ses **agents**, pas aux passants."
+    },
+    {
+     "type": "zone",
+     "document": "reg",
+     "enonce": "Touche la case qui dit ce que la règle permet aux personnes dans la rue.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Regarde la ligne des usagers.",
+     "explication": "Dans l’espace public, chacun est **libre** de porter un signe religieux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : permise ou interdite ?",
+     "categories": [
+      "Permis",
+      "Interdit"
+     ],
+     "items": [
+      [
+       "Une passante porte un signe religieux dans la rue",
+       0
+      ],
+      [
+       "Une élève porte un signe religieux ostensible dans sa classe de lycée public",
+       1
+      ],
+      [
+       "Un agent de mairie affiche sa religion à son guichet",
+       1
+      ],
+      [
+       "Un usager de la bibliothèque municipale porte une croix apparente",
+       0
+      ],
+      [
+       "Une personne circule le visage entièrement dissimulé dans l’espace public",
+       1
+      ],
+      [
+       "Un lycéen dit à un camarade qu’il ne croit en aucun dieu",
+       0
+      ]
+     ],
+     "aide": "Distingue agents, élèves de l’école publique et simples usagers.",
+     "explication": "Sont interdits : les signes ostensibles à l’école publique (2004), la neutralité brisée par un agent, la dissimulation du visage (2010). Les usagers restent **libres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "641f8e0c-90af-5906-ac50-cf422583d8f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Critiquer une religion, est-ce un délit ?",
+   "competence": "argumenter",
+   "situation": "Un débat scolaire porte sur la liberté d’expression. Cinq propos imaginaires sont à classer, puis une carte rappelle un cas particulier de la laïcité en France.",
+   "documents": [
+    {
+     "id": "pro",
+     "type": "tableau",
+     "titre": "Cinq propos imaginaires",
+     "source": "Propos imaginés pour l’exercice.",
+     "colonnes": [
+      "N°",
+      "Propos"
+     ],
+     "lignes": [
+      [
+       1,
+       "« Cette religion n’est qu’une croyance sans preuve, je n’y crois pas. »"
+      ],
+      [
+       2,
+       "Un dessin de presse se moque du dogme d’une religion."
+      ],
+      [
+       3,
+       "« Il faut chasser de notre ville tous les fidèles de cette religion. »"
+      ],
+      [
+       4,
+       "« Ces gens sont des nuisibles à cause de leur religion. »"
+      ],
+      [
+       5,
+       "« Je ne crois en aucun dieu et je le dis. »"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "car",
+     "type": "carte",
+     "titre": "Quatre villes de l’Est et du Nord",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "strasbourg",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "nancy",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "dijon",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque propos : permis par la loi ou puni par la loi ?",
+     "categories": [
+      "Permis par la loi",
+      "Puni par la loi"
+     ],
+     "items": [
+      [
+       "Propos 1 : « Cette religion n’est qu’une croyance sans preuve. »",
+       0
+      ],
+      [
+       "Propos 2 : un dessin qui se moque d’un dogme",
+       0
+      ],
+      [
+       "Propos 3 : « Chassons tous les fidèles de cette religion. »",
+       1
+      ],
+      [
+       "Propos 4 : « Ces gens sont des nuisibles à cause de leur religion. »",
+       1
+      ],
+      [
+       "Propos 5 : « Je ne crois en aucun dieu. »",
+       0
+      ]
+     ],
+     "aide": "Les idées sont critiquables ; les personnes sont protégées.",
+     "explication": "Le **blasphème n’existe pas** en droit français : critiquer une idée est permis. L’injure et l’incitation à la haine visant des **personnes** sont punies."
+    },
+    {
+     "type": "zone",
+     "document": "car",
+     "enonce": "Touche la ville située dans le territoire qui a gardé le régime concordataire.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est l’ancienne terre annexée à l’Empire allemand en 1905.",
+     "explication": "**Strasbourg** se trouve en Alsace-Moselle. Nancy, en Meurthe-et-Moselle, n’en fait pas partie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire des cultes en Alsace-Moselle aujourd’hui ?",
+     "options": [
+      "Certains cultes y sont salariés par l’État, sous le régime concordataire",
+      "Aucun culte n’y est reconnu, la loi de 1905 s’y applique comme ailleurs",
+      "Les cultes y sont interdits depuis l’annexion à l’Empire allemand",
+      "Les cultes n’y sont financés que par des dons, sans aucune aide de l’État"
+     ],
+     "reponse": 0,
+     "aide": "Cette région n’a jamais reçu la loi de séparation.",
+     "explication": "L’Alsace-Moselle n’a **jamais reçu la loi de 1905** : des cultes y sont salariés par l’État."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0fceaa8-f97d-54e9-bae4-ddbc1d986fef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Autoritaire ou totalitaire ?",
+   "competence": "lire-tableau",
+   "situation": "Deux types de régimes non démocratiques se ressemblent parfois, mais ne contrôlent pas la société de la même façon. Un tableau les compare.",
+   "documents": [
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Deux régimes non démocratiques",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "",
+      "Autoritaire",
+      "Totalitaire"
+     ],
+     "lignes": [
+      [
+       "Ce que le pouvoir contrôle",
+       "L’État et la vie politique",
+       "?"
+      ],
+      [
+       "La société civile",
+       "Garde des espaces d’autonomie",
+       "N’en garde aucun"
+      ],
+      [
+       "Les moyens",
+       "Répression ciblée",
+       "Idéologie officielle, parti unique, terreur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cmp",
+     "enonce": "Touche la case qui dit que la société civile garde des espaces d’autonomie.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Regarde la ligne « La société civile ».",
+     "explication": "Dans un régime **autoritaire**, la société civile garde des espaces d’autonomie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Un régime totalitaire prétend contrôler la ___ entière.",
+     "reponses": [
+      [
+       "société"
+      ]
+     ],
+     "banque": [
+      "société",
+      "armée",
+      "presse",
+      "école"
+     ],
+     "aide": "Le tableau parle de ce que le pouvoir contrôle.",
+     "explication": "Le totalitarisme contrôle la **société entière**, là où l’autoritarisme contrôle surtout l’État."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique selon le régime.",
+     "categories": [
+      "Autoritaire",
+      "Totalitaire"
+     ],
+     "items": [
+      [
+       "Répression ciblée",
+       0
+      ],
+      [
+       "Opposition simplement entravée",
+       0
+      ],
+      [
+       "Terreur organisée contre la population",
+       1
+      ],
+      [
+       "Idéologie officielle qui encadre toute la vie",
+       1
+      ],
+      [
+       "Espaces d’autonomie pour la société civile",
+       0
+      ]
+     ],
+     "aide": "Pense à l’étendue du contrôle exercé.",
+     "explication": "**Autoritaire** : contrôle de l’État, répression ciblée, société civile partiellement libre. **Totalitaire** : terreur, idéologie officielle, société entière contrôlée."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0fceaa8-f97d-54e9-bae4-ddbc1d986fef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Altaria, pays imaginaire",
+   "competence": "se-reperer-temps",
+   "situation": "Dans le pays imaginaire d’Altaria, un parti arrive au pouvoir par les urnes. La frise retrace ses décisions successives. Chaque étape est légale.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Altaria, de 2010 à 2018",
+     "source": "Pays et événements imaginés pour l’exercice.",
+     "debut": 2008,
+     "fin": 2020,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "vic",
+       "date": 2010,
+       "nom": "Victoire électorale"
+      },
+      {
+       "id": "dec",
+       "date": 2012,
+       "nom": "Nouveau découpage"
+      },
+      {
+       "id": "med",
+       "date": 2014,
+       "nom": "Médias rachetés"
+      },
+      {
+       "id": "jug",
+       "date": 2016,
+       "nom": "Juges nommés"
+      },
+      {
+       "id": "elec",
+       "date": 2018,
+       "nom": "Élection gagnée"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "enonce": "Touche l’étape qui place la justice sous la dépendance du pouvoir.",
+     "reponse": [
+      "jug"
+     ],
+     "aide": "Quelle mesure concerne les juges ?",
+     "explication": "La nomination des **juges** par le pouvoir vide la justice de son indépendance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première victoire électorale de la nomination des juges ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 2010 à la date de la nomination des juges.",
+     "explication": "2016 − 2010 = **6 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : apparence conservée ou substance vidée ?",
+     "categories": [
+      "Apparence conservée",
+      "Substance vidée"
+     ],
+     "items": [
+      [
+       "Des élections sont organisées",
+       0
+      ],
+      [
+       "Des circonscriptions dessinées pour avantager un parti",
+       1
+      ],
+      [
+       "Des journaux continuent de paraître",
+       0
+      ],
+      [
+       "Des médias rachetés par des proches du pouvoir",
+       1
+      ],
+      [
+       "Une cour de justice continue de siéger",
+       0
+      ],
+      [
+       "Des juges choisis par le pouvoir",
+       1
+      ]
+     ],
+     "aide": "Distingue ce qu’on voit de ce qui a changé en coulisses.",
+     "explication": "Les **apparences** restent, la **substance** est vidée : c’est la démocratie illibérale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifier Altaria ?",
+     "options": [
+      "Une démocratie illibérale : les formes sont gardées mais les contre-pouvoirs sont vidés",
+      "Un régime totalitaire : toute la société est contrôlée par une idéologie officielle",
+      "Une dictature militaire issue d’un coup d’État contre un gouvernement élu",
+      "Une démocratie en bonne santé : les élections ont lieu, donc les contre-pouvoirs aussi"
+     ],
+     "reponse": 0,
+     "aide": "Les élections ont lieu, mais les contre-pouvoirs ?",
+     "explication": "Altaria est une **démocratie illibérale** : on ne renverse plus une démocratie, on la vide de l’intérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0fceaa8-f97d-54e9-bae4-ddbc1d986fef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi le doute s’installe",
+   "competence": "analyser-document",
+   "situation": "Dans une commune imaginaire, un sondage mesure la défiance envers les élus. Les réponses disent aussi ce qui peut aider à résister.",
+   "documents": [
+    {
+     "id": "son",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Part des personnes d’accord avec chaque phrase",
+     "source": "Sondage imaginaire, plusieurs réponses possibles.",
+     "categories": [
+      "Les élus ne s’intéressent pas à des gens comme moi",
+      "Voter ne change pas grand-chose",
+      "J’ai confiance dans les associations de ma commune"
+     ],
+     "series": [
+      {
+       "nom": "D’accord",
+       "valeurs": [
+        62,
+        48,
+        71
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Personnes d’accord",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     }
+    },
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Ce qui résiste",
+     "source": "Résumé rédigé pour l’exercice",
+     "blocs": [
+      "Ce qui aide une démocratie à résister : des institutions indépendantes, une presse pluraliste, des contre-pouvoirs locaux, une société civile organisée, et l’alternance effective."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de points séparent la phrase la plus citée de la moins citée ?",
+     "reponse": 23,
+     "unite": "points",
+     "aide": "Repère la plus grande valeur et la plus petite.",
+     "explication": "71 − 48 = **23 points**."
+    },
+    {
+     "type": "zone",
+     "document": "son",
+     "enonce": "Touche la phrase qui exprime le sentiment d’inutilité du vote.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche l’idée que voter ne sert à rien.",
+     "explication": "« Voter ne change pas grand-chose » traduit le **sentiment d’inutilité** du vote, facteur d’abstention."
+    },
+    {
+     "type": "zone",
+     "document": "son",
+     "enonce": "Touche la phrase qui renvoie à un point d’appui de la démocratie cité dans le texte.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Le texte parle d’une société civile organisée.",
+     "explication": "Les associations sont une **société civile organisée**, un appui pour résister."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque facteur de contestation à un exemple concret.",
+     "paires": [
+      [
+       "Défiance",
+       "« Les élus ne nous écoutent jamais »"
+      ],
+      [
+       "Sentiment d’inutilité du vote",
+       "« À quoi bon voter, rien ne change »"
+      ],
+      [
+       "Inégalités",
+       "Une ville dont l’usine a fermé sans aucune aide"
+      ],
+      [
+       "Désinformation",
+       "Une fausse rumeur plus rapide que son démenti"
+      ]
+     ],
+     "aide": "Un facteur par exemple : cherche le mot-clé de chacun.",
+     "explication": "**Défiance**, **inutilité du vote**, **inégalités** (sentiment d’abandon) et **désinformation** alimentent ensemble la contestation."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c15ed54-8224-5b00-aa3a-6633c033438f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle menace ?",
+   "competence": "analyser-texte",
+   "situation": "Quatre faits divers imaginaires, une semaine, quatre menaces différentes contre une démocratie. Il faut les reconnaître, puis replacer trois attentats dans le temps.",
+   "documents": [
+    {
+     "id": "faits",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une semaine de faits divers",
+     "source": "Faits imaginés pour l’exercice",
+     "blocs": [
+      "Lundi, les ordinateurs d’un hôpital sont bloqués par un logiciel pirate qui réclame une rançon.",
+      "Mardi, un réseau de faux comptes venus d’un autre pays diffuse de fausses informations juste avant une élection.",
+      "Mercredi, la police démantèle un réseau qui blanchit l’argent d’un trafic de stupéfiants.",
+      "Jeudi, un homme attaque des passants au nom d’une idéologie extrémiste."
+     ]
+    },
+    {
+     "id": "dat",
+     "type": "tableau",
+     "titre": "Trois attentats en France",
+     "source": "Dates du cours.",
+     "colonnes": [
+      "Attentat",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Nice",
+       "Juillet 2016"
+      ],
+      [
+       "Charlie Hebdo et Hyper Cacher",
+       "Janvier 2015"
+      ],
+      [
+       "Attentats du 13 novembre",
+       "Novembre 2015"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait à la menace qu’il illustre.",
+     "paires": [
+      [
+       "Un hôpital paralysé par un logiciel pirate",
+       "Cyberattaque"
+      ],
+      [
+       "De faux comptes étrangers avant une élection",
+       "Ingérence étrangère"
+      ],
+      [
+       "Un réseau qui blanchit l’argent d’un trafic",
+       "Criminalité organisée"
+      ],
+      [
+       "Une attaque de passants au nom d’une idéologie extrémiste",
+       "Terrorisme"
+      ]
+     ],
+     "aide": "Un fait par menace : cherche ce que chacun vise.",
+     "explication": "Cyberattaque (hôpital), ingérence étrangère (manipulation avant une élection), criminalité organisée (blanchiment), **terrorisme** (attaque idéologique)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois attentats du plus ancien au plus récent.",
+     "items": [
+      "Charlie Hebdo et Hyper Cacher",
+      "Attentats du 13 novembre",
+      "Nice"
+     ],
+     "aide": "Lis les dates du tableau.",
+     "explication": "Janvier 2015, puis novembre 2015, puis juillet 2016 : **Charlie Hebdo et Hyper Cacher**, **13 novembre**, **Nice**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Une démocratie doit assurer la sécurité sans sacrifier les ___ qui la définissent.",
+     "reponses": [
+      [
+       "libertés"
+      ]
+     ],
+     "banque": [
+      "libertés",
+      "frontières",
+      "impôts",
+      "élections"
+     ],
+     "aide": "Tout le sujet tient dans un équilibre.",
+     "explication": "Elle doit protéger **sans sacrifier les libertés** qui la définissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c15ed54-8224-5b00-aa3a-6633c033438f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les trois critères",
+   "competence": "raisonner",
+   "situation": "Un pays imaginaire étudie quatre projets de mesures de sécurité. Pour chacun, un juriste a noté trois critères. À toi de juger.",
+   "documents": [
+    {
+     "id": "pro",
+     "type": "tableau",
+     "titre": "Quatre projets de mesures",
+     "source": "Projets imaginés pour l’exercice.",
+     "colonnes": [
+      "Projet",
+      "Menace établie ?",
+      "Moyen moins intrusif possible ?",
+      "Recours devant un juge ?"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Oui",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "B",
+       "Oui",
+       "Non",
+       "Non"
+      ],
+      [
+       "C",
+       "Non",
+       "Non",
+       "Oui"
+      ],
+      [
+       "D",
+       "Oui",
+       "Non",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pro",
+     "enonce": "Touche le projet qui est nécessaire, proportionné et contrôlé.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Il faut une menace établie, aucun moyen plus doux possible et un recours devant un juge.",
+     "explication": "Le projet **D** répond aux trois critères : menace établie, pas de moyen moins intrusif, recours possible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de projets manquent à au moins un des trois critères ?",
+     "reponse": 3,
+     "unite": "projets",
+     "aide": "Vérifie chaque ligne l’une après l’autre.",
+     "explication": "**A** est disproportionné, **B** n’est pas contrôlé, **C** n’est pas nécessaire : 3 projets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel critère fait défaut au projet B ?",
+     "options": [
+      "Le contrôle : aucun juge ne peut censurer la mesure",
+      "La nécessité : aucune menace établie ne la justifie",
+      "La proportion : un moyen moins intrusif aurait suffi",
+      "La publicité : la mesure n’est pas publiée au Journal officiel"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne.",
+     "explication": "Sans recours devant un juge, la mesure n’est pas **contrôlée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c15ed54-8224-5b00-aa3a-6633c033438f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un régime d’exception qui dure",
+   "competence": "analyser-document",
+   "situation": "En Norlande, pays imaginaire, l’état d’urgence dure. Des chiffres et un texte permettent de juger ce qu’il apporte et ce qu’il coûte.",
+   "documents": [
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Les perquisitions administratives",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Perquisitions administratives",
+      "Dont suivies d’une procédure judiciaire"
+     ],
+     "lignes": [
+      [
+       2016,
+       3000,
+       150
+      ],
+      [
+       2017,
+       1000,
+       40
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "rap",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Extrait d’un rapport imaginaire",
+     "source": "Texte imaginé pour l’exercice",
+     "blocs": [
+      "Dans le pays imaginaire de Norlande, l’état d’urgence a été déclaré en 2016 après un attentat. Les perquisitions sont ordonnées par l’[[a|administration]], sans juge. Un parlementaire rappelle que le Parlement doit limiter ces mesures dans le temps. En 2018, une loi fait entrer plusieurs de ces mesures dans le droit commun, sous le seul contrôle du juge administratif."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En 2016, quelle part des perquisitions a été suivie d’une procédure judiciaire (en %) ?",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "Divise 150 par 3 000.",
+     "explication": "150 ÷ 3 000 = 0,05 soit **5 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2017, combien de perquisitions n’ont été suivies d’aucune procédure judiciaire ?",
+     "reponse": 960,
+     "unite": "perquisitions",
+     "aide": "Soustrais les perquisitions suivies d’une procédure du total.",
+     "explication": "1 000 − 40 = **960** perquisitions sans suite judiciaire."
+    },
+    {
+     "type": "zone",
+     "document": "rap",
+     "enonce": "Touche le mot qui désigne l’autorité qui ordonne ces perquisitions.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle décide à la place d’un juge.",
+     "explication": "Les perquisitions sont ordonnées par l’**administration**, pas par un juge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure de ces chiffres sans aller plus loin que les données ?",
+     "options": [
+      "Ils posent la question de l’efficacité et de la proportionnalité, sans prouver une illégalité",
+      "Ils prouvent que toutes les perquisitions ont été illégales et doivent être annulées",
+      "Ils montrent que l’état d’urgence a supprimé toute menace terroriste dans le pays",
+      "Ils montrent que la sécurité n’a aucun rapport avec les libertés dans une démocratie"
+     ],
+     "reponse": 0,
+     "aide": "Un chiffre ne suffit pas à prouver une illégalité.",
+     "explication": "Les chiffres invitent à s’interroger sur la **proportionnalité** et le contrôle, mais ne prouvent rien d’illégal à eux seuls."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bc662bf-07ba-53e4-adfd-80b941138600",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’Europe, de 1979 à 2009",
+   "competence": "se-reperer-temps",
+   "situation": "L’Union européenne s’est construite par étapes, et sa dimension démocratique a grandi avec elle. Une frise rassemble quelques dates clés.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Six étapes européennes",
+     "source": "Dates du cours.",
+     "debut": 1975,
+     "fin": 2010,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "parl",
+       "date": 1979,
+       "nom": "Parlement élu"
+      },
+      {
+       "id": "grece",
+       "date": 1981,
+       "nom": "Grèce adhère"
+      },
+      {
+       "id": "iber",
+       "date": 1986,
+       "nom": "Espagne, Portugal"
+      },
+      {
+       "id": "cop",
+       "date": 1993,
+       "nom": "Critères Copenhague"
+      },
+      {
+       "id": "est",
+       "date": 2004,
+       "nom": "Adhésion de 10 États"
+      },
+      {
+       "id": "charte",
+       "date": 2009,
+       "nom": "Charte contraignante"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "enonce": "Touche l’événement qui permet aux citoyens d’élire directement leurs députés européens.",
+     "reponse": [
+      "parl"
+     ],
+     "aide": "Il s’agit d’une élection au suffrage universel direct.",
+     "explication": "Depuis **1979**, le Parlement européen est élu au suffrage universel direct."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’élection directe du Parlement de la Charte contraignante ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais 1979 à 2009.",
+     "explication": "2009 − 1979 = **30 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les critères de Copenhague de l’adhésion des dix États ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Soustrais 1993 à 2004.",
+     "explication": "2004 − 1993 = **11 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bc662bf-07ba-53e4-adfd-80b941138600",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui décide, qui est élu ?",
+   "competence": "analyser-document",
+   "situation": "Une pétition imaginaire, « Air propre », veut faire changer la loi européenne. Mais qui décide en Europe, et cette pétition peut-elle aboutir ?",
+   "documents": [
+    {
+     "id": "ins",
+     "type": "tableau",
+     "titre": "Les institutions européennes",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Institution",
+      "Comment elle est désignée",
+      "Ce qu’on lui reproche"
+     ],
+     "lignes": [
+      [
+       "Parlement européen",
+       "Élu au suffrage universel direct",
+       "Une participation faible aux européennes"
+      ],
+      [
+       "Conseil",
+       "Réunit des gouvernements élus",
+       "Une responsabilité diluée"
+      ],
+      [
+       "Commission",
+       "Investie par le Parlement, non élue directement",
+       "Elle détient l’initiative législative sans être élue"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "sig",
+     "type": "tableau",
+     "titre": "Signatures de l’initiative « Air propre »",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Signatures"
+     ],
+     "lignes": [
+      [
+       "Allemagne",
+       "300 000"
+      ],
+      [
+       "France",
+       "250 000"
+      ],
+      [
+       "Espagne",
+       "200 000"
+      ],
+      [
+       "Italie",
+       "150 000"
+      ],
+      [
+       "Pologne",
+       "100 000"
+      ],
+      [
+       "Portugal",
+       "50 000"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ins",
+     "enonce": "Touche l’institution qui n’est pas élue directement mais qui propose les lois.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Regarde la dernière colonne du tableau des institutions.",
+     "explication": "La **Commission** détient l’initiative législative sans être élue directement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les eurodéputés sont élus au suffrage universel ___ depuis 1979.",
+     "reponses": [
+      [
+       "direct"
+      ]
+     ],
+     "banque": [
+      "direct",
+      "indirect",
+      "censitaire",
+      "restreint"
+     ],
+     "aide": "Relis la première ligne du premier tableau.",
+     "explication": "Les eurodéputés sont élus au suffrage universel **direct** depuis 1979."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de signatures l’initiative « Air propre » a-t-elle recueillies au total ?",
+     "reponse": 1050000,
+     "unite": "signatures",
+     "aide": "Additionne les six lignes du second tableau.",
+     "explication": "300 000 + 250 000 + 200 000 + 150 000 + 100 000 + 50 000 = **1 050 000**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette pétition peut-elle être déposée comme initiative citoyenne européenne ?",
+     "options": [
+      "Non : elle doit aussi réunir des signatures d’au moins sept États, or il y en a six",
+      "Oui : plus d’un million de signatures suffisent, quel que soit le nombre d’États",
+      "Oui : elle a été soutenue par des citoyens de la France et de l’Allemagne",
+      "Non : une initiative citoyenne ne peut jamais porter sur l’environnement"
+     ],
+     "reponse": 0,
+     "aide": "Un million de signatures ne suffit pas : compte aussi les pays.",
+     "explication": "Il faut **un million de signatures venant d’au moins sept États**. Ici, il n’y en a que six : l’initiative ne remplit pas la condition."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bc662bf-07ba-53e4-adfd-80b941138600",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un déficit démocratique ?",
+   "competence": "argumenter",
+   "situation": "Julia et Yanis débattent de la démocratie dans l’Union européenne. Deux regards honnêtes, et un tableau sur les moyens de faire respecter les valeurs communes.",
+   "documents": [
+    {
+     "id": "dia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat de Julia et Yanis",
+     "participants": [
+      {
+       "nom": "Julia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Julia",
+       "texte": "L’Europe, c’est une machine lointaine : la Commission n’est même pas [[e|élue]] !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Les lois passent pourtant par des députés élus et des gouvernements responsables devant leurs Parlements."
+      },
+      {
+       "qui": "Julia",
+       "texte": "Oui, mais qui est responsable de quoi ? Personne ne s’y retrouve."
+      }
+     ]
+    },
+    {
+     "id": "ins",
+     "type": "tableau",
+     "titre": "Faire respecter les valeurs communes",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Instrument",
+      "Ce qu’il permet",
+      "Sa limite"
+     ],
+     "lignes": [
+      [
+       "Article 2 du TUE",
+       "Énonce les valeurs communes",
+       "Déclaratif"
+      ],
+      [
+       "Article 7",
+       "Sanctionner un État qui s’en écarte",
+       "L’unanimité requise le rend presque inapplicable"
+      ],
+      [
+       "Conditionnalité budgétaire (2020)",
+       "Suspendre les fonds en cas d’atteinte à l’État de droit",
+       "Elle a été utilisée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche le mot qui résume ce que Julia reproche à la Commission.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche ce qui manque à la Commission selon Julia.",
+     "explication": "Julia reproche à la Commission de ne pas être **élue**."
+    },
+    {
+     "type": "zone",
+     "document": "ins",
+     "enonce": "Touche la limite de l’article 7 du traité sur l’Union européenne.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Regarde la troisième colonne.",
+     "explication": "L’**unanimité** requise rend l’article 7 presque inapplicable."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument : déficit démocratique ou pas de déficit ?",
+     "categories": [
+      "Pour un déficit démocratique",
+      "Contre un déficit démocratique"
+     ],
+     "items": [
+      [
+       "La Commission, qui propose les lois, n’est pas élue",
+       0
+      ],
+      [
+       "La participation aux élections européennes est faible",
+       0
+      ],
+      [
+       "La responsabilité est diluée entre plusieurs institutions",
+       0
+      ],
+      [
+       "Les lois sont adoptées par des députés élus et des gouvernements responsables",
+       1
+      ],
+      [
+       "Chaque décision est prise par des élus ou des gouvernements responsables",
+       1
+      ]
+     ],
+     "aide": "Un argument dénonce un manque, l’autre rappelle les élus.",
+     "explication": "Le débat est honnête : c’est la **lisibilité** du système, plus que sa légitimité formelle, qui fait problème."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase expose honnêtement la position de Yanis avant de la discuter ?",
+     "options": [
+      "Yanis rappelle que chaque loi passe par des élus ou des gouvernements responsables",
+      "Yanis affirme que l’Union est parfaite et que toute critique est absurde",
+      "Yanis pense que les citoyens n’ont aucun droit de critiquer les institutions",
+      "Yanis refuse de discuter parce qu’il juge Julia mal informée sur l’Europe"
+     ],
+     "reponse": 0,
+     "aide": "Exposer honnêtement, c’est reprendre ce qui a été dit.",
+     "explication": "Exposer honnêtement une position, c’est la **restituer fidèlement**, sans caricature, avant de la discuter."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5603d8e-b51e-575d-972d-d394d398e3e3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Débat ou dispute ?",
+   "competence": "argumenter",
+   "situation": "Inès propose une idée pour son lycée. La réponse de Léo ne va pas faire avancer la discussion. Observe la différence entre débattre et se disputer.",
+   "documents": [
+    {
+     "id": "dia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Un message au lycée",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Je pense qu’on devrait installer des bacs de tri dans le lycée."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Des bacs de tri ? Arrête, tu es [[p|ridicule]] avec tes idées."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche le mot par lequel Léo attaque la personne plutôt que l’idée.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche le mot qui juge Inès.",
+     "explication": "« **Ridicule** » vise Inès, pas son idée : c’est une dispute, pas un débat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : débat ou dispute ?",
+     "categories": [
+      "Débat",
+      "Dispute"
+     ],
+     "items": [
+      [
+       "Je comprends ton point, mais voici une étude qui montre le contraire",
+       0
+      ],
+      [
+       "Tais-toi, tu n’y connais rien",
+       1
+      ],
+      [
+       "Peux-tu me donner ta source ?",
+       0
+      ],
+      [
+       "Personne ne t’écoute de toute façon",
+       1
+      ]
+     ],
+     "aide": "Dans un débat, on attaque l’idée, jamais la personne.",
+     "explication": "Débattre, c’est avancer des **raisons** et écouter l’objection ; se disputer, c’est attaquer la personne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse d’Inès relance le débat ?",
+     "options": [
+      "Quelle objection précise as-tu ? Regardons ensemble ce que coûterait chaque bac",
+      "Tu as tort, tu ne t’intéresses jamais à rien d’utile dans ce lycée",
+      "Tout le monde est d’accord avec moi, donc il n’y a plus rien à dire",
+      "Laisse tomber, de toute façon je n’ai jamais besoin de ton avis"
+     ],
+     "reponse": 0,
+     "aide": "Une bonne réponse prend l’objection au sérieux.",
+     "explication": "Demander une objection précise **relance** le débat : on prend l’idée de l’autre au sérieux."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5603d8e-b51e-575d-972d-d394d398e3e3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Repérer le sophisme",
+   "competence": "analyser-document",
+   "situation": "Trois propos imaginaires entendus dans un débat ressemblent à des arguments, mais leur logique est trompeuse. Sauras-tu nommer chaque erreur ?",
+   "documents": [
+    {
+     "id": "pro",
+     "type": "tableau",
+     "titre": "Trois propos",
+     "source": "Propos imaginés pour l’exercice.",
+     "colonnes": [
+      "N°",
+      "Propos"
+     ],
+     "lignes": [
+      [
+       "a",
+       "« Soit on interdit tous les écrans, soit les enfants deviennent des zombies. »"
+      ],
+      [
+       "b",
+       "« Ce député est divorcé, donc son projet de loi sur l’école ne vaut rien. »"
+      ],
+      [
+       "c",
+       "« J’ai croisé deux cyclistes impolis : tous les cyclistes sont irrespectueux. »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pro",
+     "enonce": "Touche le propos qui n’offre que deux possibilités alors qu’il en existe d’autres.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche le propos construit sur « soit… soit… ».",
+     "explication": "C’est le propos **a** : il n’envisage que deux solutions extrêmes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque propos au sophisme qu’il illustre.",
+     "paires": [
+      [
+       "Propos a : « Soit on interdit tous les écrans… »",
+       "Faux dilemme"
+      ],
+      [
+       "Propos b : « Ce député est divorcé… »",
+       "Attaque personnelle"
+      ],
+      [
+       "Propos c : « Deux cyclistes impolis… »",
+       "Généralisation abusive"
+      ]
+     ],
+     "aide": "Le sophisme b juge la personne, le c part de peu de cas.",
+     "explication": "**a** faux dilemme, **b** attaque personnelle, **c** généralisation abusive."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment répondre au propos c sans commettre de sophisme ?",
+     "options": [
+      "Demander sur combien de cyclistes repose cette affirmation avant de la discuter",
+      "Répondre que les automobilistes sont pires et changer de sujet",
+      "Traiter celui qui parle de menteur et de personne peu fiable",
+      "Affirmer que tout le monde pense la même chose et clore la discussion"
+     ],
+     "reponse": 0,
+     "aide": "Interroge la base du raisonnement, pas la personne.",
+     "explication": "On répond en **questionnant la preuve** : deux cas ne suffisent pas à justifier une règle générale."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5603d8e-b51e-575d-972d-d394d398e3e3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Information virale : vérifie avant de partager",
+   "competence": "argumenter",
+   "situation": "Une publication circule sur les réseaux. Hugo veut la partager, Léa hésite. Il faut repérer ce qui doit alerter, vérifier, puis construire son propre argument.",
+   "documents": [
+    {
+     "id": "pub",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une publication virale",
+     "source": "Publication imaginée pour l’exercice",
+     "blocs": [
+      "« [[e|URGENT]] : une étude prouve que les cours du matin rendent les élèves malades ! Aucun nom, aucune date, aucun lien. [[e|Partagez]] avant que ce soit supprimé ! »"
+     ]
+    },
+    {
+     "id": "dia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Hugo et Léa",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Je partage, ça passe partout."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Attends : qui l’a publié, et où est l’étude ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pub",
+     "enonce": "Touche les deux mots qui poussent à réagir avant de vérifier.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche ce qui crée l’urgence.",
+     "explication": "« **URGENT** » et « **Partagez** » cherchent à déclencher une réaction avant toute vérification."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la première vérification à faire ?",
+     "options": [
+      "Chercher qui a publié l’information et où l’étude citée peut être consultée",
+      "Compter le nombre de partages pour savoir si beaucoup de gens y croient",
+      "Demander à un ami s’il a déjà vu passer cette publication sur un réseau",
+      "Attendre que la publication soit supprimée avant de se faire une opinion"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la question de Léa.",
+     "explication": "Il faut **vérifier la source** : qui publie, et où l’étude peut être consultée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois éléments d’un argument bien construit.",
+     "items": [
+      "Énoncer sa thèse",
+      "Donner une raison",
+      "Appuyer cette raison sur un exemple vérifiable"
+     ],
+     "aide": "On affirme, on justifie, on illustre.",
+     "explication": "Un argument suit l’ordre **thèse**, **raison**, **exemple**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réponse à la difficulté qu’elle vise.",
+     "paires": [
+      [
+       "Éducation aux médias et à l’information",
+       "Former le lecteur"
+      ],
+      [
+       "Règles de pluralisme de l’Arcom",
+       "Garantir les temps de parole"
+      ],
+      [
+       "Règlement européen sur les services numériques",
+       "Responsabiliser les plateformes"
+      ],
+      [
+       "Conventions citoyennes",
+       "Organiser un débat avec des citoyens"
+      ]
+     ],
+     "aide": "Une réponse par objectif : lis chaque mot-clé.",
+     "explication": "L’**EMI** forme le lecteur, l’**Arcom** veille au pluralisme, le **règlement européen** responsabilise les plateformes, les **conventions citoyennes** organisent le débat."
+    }
+   ]
+  },
+  {
+   "chapitre": "c91ea828-7673-5b40-98ad-8ed2976eb1f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix ans de transparence",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis une affaire qui a choqué l’opinion, la France a multiplié les règles de transparence. Une frise rassemble les étapes principales.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "De 2013 à 2022",
+     "source": "Dates du cours.",
+     "debut": 2010,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cah",
+       "date": 2013,
+       "nom": "Affaire Cahuzac"
+      },
+      {
+       "id": "sapin",
+       "date": 2016,
+       "nom": "Loi Sapin II"
+      },
+      {
+       "id": "conf",
+       "date": 2017,
+       "nom": "Lois de confiance"
+      },
+      {
+       "id": "alerte",
+       "date": 2022,
+       "nom": "Loi sur l’alerte"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "enonce": "Touche l’événement le plus récent de la frise.",
+     "reponse": [
+      "alerte"
+     ],
+     "aide": "Cherche la date la plus éloignée.",
+     "explication": "La loi de **2022** sur les lanceurs d’alerte est la plus récente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’affaire Cahuzac de la loi de 2022 ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Soustrais 2013 à 2022.",
+     "explication": "2022 − 2013 = **9 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La HATVP contrôle les déclarations de ___ et les déclarations d’___ des responsables publics.",
+     "reponses": [
+      [
+       "patrimoine"
+      ],
+      [
+       "intérêts"
+      ]
+     ],
+     "banque": [
+      "patrimoine",
+      "intérêts",
+      "impôts",
+      "absences"
+     ],
+     "aide": "Il y a deux sortes de déclarations : l’une sur les biens, l’autre sur les liens.",
+     "explication": "La HATVP contrôle les **déclarations de patrimoine** et les **déclarations d’intérêts**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c91ea828-7673-5b40-98ad-8ed2976eb1f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Conflit d’intérêts ?",
+   "competence": "raisonner",
+   "situation": "Au conseil municipal de Saint-Aubin, une décision pose question. Il faut repérer l’intérêt privé, puis classer d’autres situations.",
+   "documents": [
+    {
+     "id": "cm",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une délibération à Saint-Aubin",
+     "source": "Situation imaginée pour l’exercice",
+     "blocs": [
+      "Au conseil municipal de Saint-Aubin, douze élus votent une subvention de 15 000 € à l’association « Les Amis du stade ». La [[i|présidente]] de cette association, Mme Laurent, siège parmi les conseillers et vote avec les autres."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cm",
+     "enonce": "Touche le mot qui révèle l’intérêt privé de Mme Laurent dans ce vote.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "Quel rôle a-t-elle dans l’association ?",
+     "explication": "Mme Laurent est **présidente** de l’association qui reçoit la subvention : c’est un conflit d’intérêts."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devait faire Mme Laurent ?",
+     "options": [
+      "Déclarer son lien avec l’association et ne pas participer au vote",
+      "Voter comme les autres conseillers puisqu’elle agit de bonne foi",
+      "Démissionner de tous ses mandats avant que la séance commence",
+      "Demander l’avis de la Cour des comptes avant de prendre part au vote"
+     ],
+     "reponse": 0,
+     "aide": "On déclare le conflit, puis on se déporte.",
+     "explication": "Elle doit **déclarer** son lien et se **déporter**, c’est-à-dire s’abstenir de participer à la décision."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mme Laurent et deux collègues proches de l’association se déportent : combien de conseillers prennent part au vote ?",
+     "reponse": 9,
+     "unite": "conseillers",
+     "aide": "Soustrais les élus déportés du nombre total.",
+     "explication": "12 − 3 = **9** conseillers."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : conflit d’intérêts possible ou pas ?",
+     "categories": [
+      "Conflit d’intérêts possible",
+      "Pas de conflit d’intérêts"
+     ],
+     "items": [
+      [
+       "Une élue vote une subvention pour l’association qu’elle préside",
+       0
+      ],
+      [
+       "Un ministre attribue un marché public à l’entreprise de son frère",
+       0
+      ],
+      [
+       "Un député vote une loi qui s’applique à tous les habitants",
+       1
+      ],
+      [
+       "Un maire inaugure un stade municipal",
+       1
+      ],
+      [
+       "Un élu décide d’un permis de construire pour son propre terrain",
+       0
+      ]
+     ],
+     "aide": "Cherche un intérêt privé qui pourrait influencer une fonction publique.",
+     "explication": "Il y a conflit d’intérêts quand un **intérêt privé** peut influencer l’exercice d’une fonction publique."
+    }
+   ]
+  },
+  {
+   "chapitre": "c91ea828-7673-5b40-98ad-8ed2976eb1f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Transparence : jusqu’où ?",
+   "competence": "argumenter",
+   "situation": "Ana croit qu’il suffit de tout rendre public. Bilal est plus nuancé. Les institutions de contrôle et les risques de dérive sont au cœur du débat.",
+   "documents": [
+    {
+     "id": "dia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat d’Ana et Bilal",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Bilal",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Si tout est public, il n’y aura plus de scandales."
+      },
+      {
+       "qui": "Bilal",
+       "texte": "Rendre public ne suffit pas : il faut encore que quelqu’un [[c|contrôle]]."
+      }
+     ]
+    },
+    {
+     "id": "ins",
+     "type": "tableau",
+     "titre": "Qui contrôle quoi ?",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Institution ou texte",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "HATVP",
+       "Contrôle les déclarations de patrimoine et d’intérêts"
+      ],
+      [
+       "Cour des comptes",
+       "Contrôle l’emploi des fonds publics"
+      ],
+      [
+       "Loi Sapin II (2016)",
+       "Crée le premier statut du lanceur d’alerte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dia",
+     "enonce": "Touche le mot par lequel Bilal dit qu’il faut une vérification réelle.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche le verbe qui suit « quelqu’un ».",
+     "explication": "Il faut que quelqu’un **contrôle** : la transparence rend le contrôle possible, sans le garantir."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à l’institution ou au texte concerné.",
+     "paires": [
+      [
+       "Vérifier le patrimoine déclaré par un ministre",
+       "HATVP"
+      ],
+      [
+       "Examiner comment une région a dépensé l’argent public",
+       "Cour des comptes"
+      ],
+      [
+       "Protéger un salarié qui signale une fraude",
+       "Loi Sapin II"
+      ]
+     ],
+     "aide": "Regarde la colonne « Ce qu’il fait ».",
+     "explication": "La **HATVP** vérifie les déclarations, la **Cour des comptes** les dépenses publiques, la **loi Sapin II** protège les lanceurs d’alerte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure : elle renforce la confiance ou risque de déraper ?",
+     "categories": [
+      "Renforce la confiance",
+      "Risque de dériver"
+     ],
+     "items": [
+      [
+       "Publier les déclarations d’intérêts de responsables publics",
+       0
+      ],
+      [
+       "Publier l’adresse personnelle et les trajets quotidiens d’un élu",
+       1
+      ],
+      [
+       "Protéger contre les représailles celui qui signale une fraude",
+       0
+      ],
+      [
+       "Exiger un justificatif public de chaque dépense privée d’un élu",
+       1
+      ],
+      [
+       "Diffuser en open data les marchés publics",
+       0
+      ]
+     ],
+     "aide": "La transparence ne doit pas devenir surveillance de la vie privée.",
+     "explication": "La transparence peut **renforcer la confiance**, mais poussée à l’extrême elle devient **surveillance de la vie privée** des élus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume la nuance du cours sur la transparence ?",
+     "options": [
+      "La transparence rend le contrôle possible sans garantir à elle seule la probité",
+      "La transparence garantit la probité dès que toutes les données sont publiées",
+      "La transparence est inutile puisque les élus respectent toujours la loi",
+      "La transparence doit être totale, y compris sur la vie privée des élus"
+     ],
+     "reponse": 0,
+     "aide": "Relis le message de Bilal.",
+     "explication": "La transparence **rend le contrôle possible**, elle ne le garantit pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "74108697-0023-55b8-9f75-0a0b446af663",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La semaine de Mathis",
+   "competence": "analyser-texte",
+   "situation": "Mathis, 17 ans, s’implique de plusieurs façons. Toutes ne se valent pas : certaines sont un vrai engagement, d’autres un geste isolé.",
+   "documents": [
+    {
+     "id": "sem",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La semaine de Mathis",
+     "source": "Texte imaginé pour l’exercice",
+     "blocs": [
+      "Mathis a 17 ans. [[c|Chaque]] [[c|samedi]] matin, depuis deux ans, il aide une association à distribuer des repas. Hier soir, il a signé en passant une pétition en ligne. Il siège aussi au conseil municipal des jeunes de sa ville, qui se réunit une fois par mois."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sem",
+     "enonce": "Touche les deux mots qui montrent la continuité de l’action de Mathis.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce qui revient régulièrement.",
+     "explication": "« **Chaque samedi** » montre que son action est régulière, donc continue."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque action : engagement ou geste isolé ?",
+     "categories": [
+      "Engagement",
+      "Geste isolé"
+     ],
+     "items": [
+      [
+       "Distribuer des repas chaque samedi avec une association",
+       0
+      ],
+      [
+       "Signer en passant une pétition en ligne",
+       1
+      ],
+      [
+       "Siéger au conseil municipal des jeunes",
+       0
+      ],
+      [
+       "Partager un message d’indignation sans autre suite",
+       1
+      ]
+     ],
+     "aide": "Cherche la continuité et l’appui d’une organisation.",
+     "explication": "Un **engagement** s’inscrit dans la durée et dans une organisation ; un **geste isolé**, même sincère, n’en est pas un."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mathis donne 3 heures chaque samedi depuis deux ans, soit 104 samedis. Combien d’heures cela fait-il ?",
+     "reponse": 312,
+     "unite": "heures",
+     "aide": "Multiplie 104 par 3.",
+     "explication": "104 × 3 = **312 heures**."
+    }
+   ]
+  },
+  {
+   "chapitre": "74108697-0023-55b8-9f75-0a0b446af663",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle forme d’action ?",
+   "competence": "raisonner",
+   "situation": "Jade veut sauver la bibliothèque de son quartier. Une affiche municipale lui ouvre plusieurs possibilités, et elle réfléchit aux formes d’action.",
+   "documents": [
+    {
+     "id": "aff",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Mairie de Vallée-Claire",
+     "sousTitre": "Pour les jeunes",
+     "emoji": "📢",
+     "lignes": [
+      {
+       "texte": "Budget participatif : déposez votre projet avant le 15 mars",
+       "id": "bp"
+      },
+      {
+       "texte": "Conseil municipal des jeunes : réunion le 2 avril",
+       "id": "cmj"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Bibliothèque Jean-Moulin : fermeture prévue le 30 juin",
+       "id": "fb"
+      }
+     ],
+     "pied": "Affiche imaginée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aff",
+     "enonce": "Touche la ligne qui permet à Jade de proposer un projet financé par la ville.",
+     "reponse": [
+      "bp"
+     ],
+     "aide": "Cherche le dispositif où l’on dépose un projet.",
+     "explication": "Le **budget participatif** laisse les habitants affecter une part du budget de la ville."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque action à la forme d’engagement qu’elle illustre.",
+     "paires": [
+      [
+       "Pétition en ligne",
+       "Mobilisation rapide, sans organisation"
+      ],
+      [
+       "Boycott d’un produit",
+       "Consommation engagée"
+      ],
+      [
+       "Refuser publiquement une règle injuste en acceptant la sanction",
+       "Désobéissance civile"
+      ],
+      [
+       "Siéger au conseil municipal des jeunes",
+       "Engagement local"
+      ]
+     ],
+     "aide": "Une forme par action : cherche le mot-clé.",
+     "explication": "**Pétition** : mobilisation rapide. **Boycott** : consommation engagée. **Désobéissance civile** : publique, assumée, non violente. **Conseil des jeunes** : engagement local."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque action : légale et proportionnée, ou à écarter ?",
+     "categories": [
+      "Légale et proportionnée",
+      "À écarter"
+     ],
+     "items": [
+      [
+       "Organiser une pétition et la remettre à la mairie",
+       0
+      ],
+      [
+       "Occuper la mairie de nuit en forçant une porte",
+       1
+      ],
+      [
+       "Proposer un projet au budget participatif",
+       0
+      ],
+      [
+       "Bloquer violemment une route pour empêcher la circulation",
+       1
+      ]
+     ],
+     "aide": "Une action d’engagement doit être légale et proportionnée.",
+     "explication": "Le programme demande de choisir une action **proportionnée et légale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "74108697-0023-55b8-9f75-0a0b446af663",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une pétition, un clic ou un engagement ?",
+   "competence": "lire-graphique",
+   "situation": "La pétition « Sauvons nos cours d’eau » a recueilli des signatures en quatre semaines. Un graphique suit sa progression, un texte montre ce qui se passe ensuite.",
+   "documents": [
+    {
+     "id": "pet",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signatures recueillies, semaine après semaine",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Début",
+      "Sem. 1",
+      "Sem. 2",
+      "Sem. 3",
+      "Sem. 4"
+     ],
+     "series": [
+      {
+       "nom": "Signatures",
+       "valeurs": [
+        0,
+        5,
+        20,
+        38,
+        40
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Signatures",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps"
+     }
+    },
+    {
+     "id": "suite",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Après la première semaine",
+     "source": "Texte imaginé pour l’exercice",
+     "blocs": [
+      "Dès la première semaine, l’association « Sauvons nos cours d’eau » reprend la pétition : elle organise des réunions dans dix communes et rencontre des élus."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de milliers de signatures ont été ajoutées entre la semaine 1 et la semaine 3 ?",
+     "reponse": 33,
+     "unite": "milliers",
+     "aide": "Lis la valeur de chaque semaine, puis soustrais.",
+     "explication": "38 − 5 = **33 milliers** de signatures."
+    },
+    {
+     "type": "zone",
+     "document": "pet",
+     "enonce": "Touche la semaine où la pétition progresse le moins.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Compare les écarts entre deux semaines consécutives.",
+     "explication": "Entre la semaine 3 et la semaine 4, il n’y a que **2 milliers** de signatures en plus."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : se rapproche d’un engagement ou relève du « slacktivisme » ?",
+     "categories": [
+      "Se rapproche d’un engagement",
+      "Relève du slacktivisme"
+     ],
+     "items": [
+      [
+       "Une association reprend la pétition et rencontre des élus",
+       0
+      ],
+      [
+       "Un clic de signature sans lire ni suivre la suite",
+       1
+      ],
+      [
+       "Des réunions régulières organisées dans dix communes",
+       0
+      ],
+      [
+       "Un partage en un instant pour se donner bonne conscience",
+       1
+      ]
+     ],
+     "aide": "Cherche la continuité de l’action et son appui dans une organisation.",
+     "explication": "Le **slacktivisme** donne l’impression d’agir sans effort ni effet ; l’**engagement** s’inscrit dans la durée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette pétition peut-elle aller plus loin qu’un simple clic ?",
+     "options": [
+      "Parce qu’elle est reprise avec continuité par une organisation qui agit sur la durée",
+      "Parce qu’elle a recueilli plus de signatures que les autres pétitions en ligne",
+      "Parce qu’un nombre élevé de clics suffit à obliger le Parlement à légiférer",
+      "Parce qu’elle remplace l’engagement des partis et des syndicats dans la société"
+     ],
+     "reponse": 0,
+     "aide": "Relis le texte : qui reprend la pétition ?",
+     "explication": "Une pétition peut porter un sujet jusqu’au Parlement quand elle est **relayée dans la durée** par une organisation."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cd15f2-3c74-5a00-8766-4e7e008e7141",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une convention citoyenne",
+   "competence": "analyser-document",
+   "situation": "La ville imaginaire de Valbonne réunit une convention citoyenne. Les habitants tirés au sort reçoivent une invitation.",
+   "documents": [
+    {
+     "id": "inv",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Convention citoyenne de Valbonne",
+     "sousTitre": "Invitation imaginaire",
+     "emoji": "✉️",
+     "lignes": [
+      {
+       "texte": "Participants : 100 habitants tirés au sort",
+       "id": "tirage"
+      },
+      {
+       "texte": "Durée : 6 week-ends de 2 jours",
+       "id": "duree"
+      },
+      {
+       "texte": "Travail : informations d’experts, puis débats",
+       "id": "travail"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Le conseil municipal répond publiquement à chaque proposition",
+       "id": "reponse"
+      }
+     ],
+     "pied": "Invitation imaginée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inv",
+     "enonce": "Touche la ligne qui dit comment les participants sont choisis.",
+     "reponse": [
+      "tirage"
+     ],
+     "aide": "Cherche la ligne sur la sélection des participants.",
+     "explication": "Les participants sont **tirés au sort** : cela assure une diversité sociale que l’élection ne produit pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours de travail la convention représente-t-elle au total ?",
+     "reponse": 12,
+     "unite": "jours",
+     "aide": "Multiplie le nombre de week-ends par 2 jours.",
+     "explication": "6 × 2 = **12 jours**."
+    },
+    {
+     "type": "zone",
+     "document": "inv",
+     "enonce": "Touche la ligne qui évite que les propositions restent sans suite.",
+     "reponse": [
+      "reponse"
+     ],
+     "aide": "Cherche l’engagement pris par la mairie.",
+     "explication": "Répondre **publiquement** à chaque proposition évite qu’une consultation reste sans effet."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cd15f2-3c74-5a00-8766-4e7e008e7141",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le RIP : un seuil très haut",
+   "competence": "raisonner",
+   "situation": "Le référendum d’initiative partagée (RIP) existe depuis 2008. Un tableau donne ses seuils et quelques ordres de grandeur pour comprendre pourquoi il n’a jamais abouti.",
+   "documents": [
+    {
+     "id": "rip",
+     "type": "tableau",
+     "titre": "Le référendum d’initiative partagée",
+     "source": "Chiffres arrondis, 2024.",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Parlementaires au total (577 députés et 348 sénateurs)",
+       "925"
+      ],
+      [
+       "Seuil de parlementaires signataires",
+       "Un cinquième"
+      ],
+      [
+       "Corps électoral (environ)",
+       "48 millions"
+      ],
+      [
+       "Seuil d’électeurs signataires",
+       "Un dixième"
+      ],
+      [
+       "Fois où la procédure est allée à son terme",
+       "Aucune"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de parlementaires doivent au moins soutenir un RIP ?",
+     "reponse": 185,
+     "unite": "parlementaires",
+     "aide": "Calcule un cinquième de 925.",
+     "explication": "925 ÷ 5 = **185 parlementaires**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’électeurs doivent soutenir un RIP ?",
+     "reponse": 4.8,
+     "unite": "millions",
+     "aide": "Calcule un dixième de 48 millions.",
+     "explication": "48 ÷ 10 = **4,8 millions** d’électeurs."
+    },
+    {
+     "type": "zone",
+     "document": "rip",
+     "enonce": "Touche la case qui dit combien de fois la procédure est allée à son terme.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Regarde la dernière ligne.",
+     "explication": "Aucune fois : la procédure n’est **jamais allée à son terme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle différence sépare le RIC réclamé par certains et le RIP qui existe ?",
+     "options": [
+      "Le RIC viendrait des seuls citoyens, le RIP exige aussi des parlementaires",
+      "Le RIC existe en droit depuis 2008, le RIP n’a jamais été prévu",
+      "Le RIC exige des parlementaires, le RIP vient des seuls citoyens",
+      "Le RIC et le RIP sont deux noms pour exactement la même procédure"
+     ],
+     "reponse": 0,
+     "aide": "Le « P » de RIP veut dire « partagée ».",
+     "explication": "Le **RIC** viendrait des seuls citoyens ; le **RIP**, seul prévu par le droit français, est **partagé** avec les parlementaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cd15f2-3c74-5a00-8766-4e7e008e7141",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Consulter sans écouter",
+   "competence": "argumenter",
+   "situation": "Dans la commune imaginaire de Brassac, un sondage mesure la confiance dans la mairie selon ce qu’elle a fait de ses consultations. Que faut-il en conclure ?",
+   "documents": [
+    {
+     "id": "conf",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Confiance dans la mairie de Brassac",
+     "source": "Sondage imaginaire.",
+     "categories": [
+      "Avant toute consultation",
+      "Après une consultation suivie d’effets",
+      "Après une consultation sans suite"
+     ],
+     "series": [
+      {
+       "nom": "Confiance",
+       "valeurs": [
+        40,
+        55,
+        30
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Confiance",
+      "unite": "en %",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Situation"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la confiance diffère-t-elle entre les deux types de consultation ?",
+     "reponse": 25,
+     "unite": "points",
+     "aide": "Soustrais la plus petite valeur à la plus grande.",
+     "explication": "55 − 30 = **25 points** d’écart."
+    },
+    {
+     "type": "zone",
+     "document": "conf",
+     "enonce": "Touche la situation où la confiance est la plus basse.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus petite.",
+     "explication": "Après une consultation **sans suite**, la confiance tombe à 30 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce sondage ?",
+     "options": [
+      "Associer les citoyens renforce la confiance seulement si les décisions en tiennent compte",
+      "Consulter les citoyens fait toujours monter la confiance, même sans aucune suite",
+      "La confiance baisse à chaque consultation, quelle que soit la suite qui lui est donnée",
+      "La confiance dans la mairie ne dépend pas de ce qu’elle fait des consultations"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux barres après consultation.",
+     "explication": "Consulter **renforce** la démocratie si les décisions en tiennent compte ; sinon la défiance **s’aggrave**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pratique : elle renforce la démocratie ou aggrave la défiance ?",
+     "categories": [
+      "Renforce la démocratie",
+      "Aggrave la défiance"
+     ],
+     "items": [
+      [
+       "Une convention dont les propositions sont examinées une à une en public",
+       0
+      ],
+      [
+       "Une plateforme en ligne dont les contributions restent sans réponse",
+       1
+      ],
+      [
+       "Un budget participatif dont les projets gagnants sont réalisés",
+       0
+      ],
+      [
+       "Une consultation lancée puis oubliée",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si les citoyens sont écoutés ou non.",
+     "explication": "Une participation suivie d’effets **renforce** la démocratie ; une consultation sans effet **aggrave** la défiance."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef694fa8-7d90-5ff2-ae9c-3e4fffb85c71",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des droits pour tous, depuis 1948",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis 1945, un ordre juridique international proclame des droits universels. Une frise rassemble les textes et les institutions clés.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "De 1948 à 2002",
+     "source": "Dates du cours.",
+     "debut": 1940,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "dudh",
+       "date": 1948,
+       "nom": "Déclaration universelle"
+      },
+      {
+       "id": "cedh",
+       "date": 1950,
+       "nom": "Convention européenne"
+      },
+      {
+       "id": "pactes",
+       "date": 1966,
+       "nom": "Pactes"
+      },
+      {
+       "id": "enfant",
+       "date": 1989,
+       "nom": "Droits de l’enfant"
+      },
+      {
+       "id": "rome",
+       "date": 1998,
+       "nom": "Statut de Rome"
+      },
+      {
+       "id": "cpi",
+       "date": 2002,
+       "nom": "CPI en vigueur"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "enonce": "Touche le texte de 1950 qui permet à un simple individu de faire condamner un État.",
+     "reponse": [
+      "cedh"
+     ],
+     "aide": "Il s’agit d’une convention européenne.",
+     "explication": "La **Convention européenne** de 1950 permet à la CEDH de condamner un État sur requête d’un individu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’adoption du statut de Rome de son entrée en vigueur ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais 1998 à 2002.",
+     "explication": "2002 − 1998 = **4 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque texte à ce qu’il apporte.",
+     "paires": [
+      [
+       "Déclaration universelle (1948)",
+       "Aucune force contraignante"
+      ],
+      [
+       "Convention européenne (1950)",
+       "Une cour peut condamner un État"
+      ],
+      [
+       "Statut de Rome (1998)",
+       "Une cour juge des individus"
+      ]
+     ],
+     "aide": "Un texte par apport : relis les noms.",
+     "explication": "La **Déclaration** n’a pas de force contraignante, la **Convention européenne** permet de condamner un État, le **statut de Rome** crée une cour qui juge des individus."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef694fa8-7d90-5ff2-ae9c-3e4fffb85c71",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La justice pénale internationale",
+   "competence": "analyser-document",
+   "situation": "La Cour pénale internationale juge des individus pour les crimes les plus graves, mais elle a des limites. Un tableau et un texte aident à les comprendre.",
+   "documents": [
+    {
+     "id": "rat",
+     "type": "tableau",
+     "titre": "Grandes puissances et statut de Rome",
+     "source": "Situation du cours, arrondie.",
+     "colonnes": [
+      "Pays",
+      "A ratifié le statut de Rome"
+     ],
+     "lignes": [
+      [
+       "États-Unis",
+       "Non"
+      ],
+      [
+       "Chine",
+       "Non"
+      ],
+      [
+       "Russie",
+       "Non"
+      ],
+      [
+       "Inde",
+       "Non"
+      ],
+      [
+       "France",
+       "Oui"
+      ],
+      [
+       "Royaume-Uni",
+       "Oui"
+      ],
+      [
+       "Allemagne",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "cpi",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un mandat d’arrêt",
+     "source": "Texte imaginé pour l’exercice",
+     "blocs": [
+      "La Cour pénale internationale émet un mandat d’arrêt contre un responsable accusé de crimes de guerre. Mais elle n’a aucune [[p|police]] : elle dépend des États pour arrêter les personnes recherchées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de pays du tableau n’ont pas ratifié le statut de Rome ?",
+     "reponse": 4,
+     "unite": "pays",
+     "aide": "Compte les lignes marquées « Non ».",
+     "explication": "Les États-Unis, la Chine, la Russie et l’Inde : **4 pays**."
+    },
+    {
+     "type": "zone",
+     "document": "cpi",
+     "enonce": "Touche le mot qui explique pourquoi la Cour doit compter sur les États.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Que n’a pas la Cour pour arrêter quelqu’un ?",
+     "explication": "La Cour n’a pas de **police** : les États doivent arrêter les personnes recherchées."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à ce qu’elle pose.",
+     "paires": [
+      [
+       "Responsabilité de protéger (2005)",
+       "Un État qui massacre sa population perd la protection de sa souveraineté"
+      ],
+      [
+       "Droit de veto",
+       "Un membre permanent peut bloquer une décision du Conseil de sécurité"
+      ],
+      [
+       "Droit d’ingérence",
+       "Une idée d’intervention sans base juridique claire"
+      ]
+     ],
+     "aide": "Une notion par phrase : cherche le mot-clé.",
+     "explication": "La **responsabilité de protéger** limite la souveraineté, le **veto** bloque le Conseil, le **droit d’ingérence** n’a jamais eu de base juridique claire."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef694fa8-7d90-5ff2-ae9c-3e4fffb85c71",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que peuvent les ONG",
+   "competence": "argumenter",
+   "situation": "Une ONG imaginaire publie un rapport sur des violations des droits de l’homme. Que peut-elle vraiment faire, et que peut décider le Conseil de sécurité ?",
+   "documents": [
+    {
+     "id": "rap",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un rapport d’ONG",
+     "source": "Texte imaginé pour l’exercice",
+     "blocs": [
+      "L’ONG imaginaire « Droits sans frontières » publie un rapport sur des violences commises dans un pays. Son dossier s’appuie sur des [[p|témoignages]] et des [[p|photographies]] datées, qu’elle transmet à la presse et aux diplomates."
+     ]
+    },
+    {
+     "id": "vot",
+     "type": "tableau",
+     "titre": "Un vote au Conseil de sécurité",
+     "source": "Vote imaginé pour l’exercice.",
+     "colonnes": [
+      "Vote",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "Pour",
+       13
+      ],
+      [
+       "Contre (membre permanent)",
+       1
+      ],
+      [
+       "Abstention",
+       1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rap",
+     "enonce": "Touche les deux mots qui désignent les preuves réunies par l’ONG.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce sur quoi s’appuie le dossier.",
+     "explication": "Les **témoignages** et les **photographies** sont les preuves : le pouvoir d’une ONG est celui de la preuve et de l’opinion."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son pouvoir.",
+     "paires": [
+      [
+       "ONG",
+       "Documenter et alerter l’opinion"
+      ],
+      [
+       "Cour européenne des droits de l’homme",
+       "Condamner un État"
+      ],
+      [
+       "Cour pénale internationale",
+       "Juger des individus"
+      ],
+      [
+       "Conseil de sécurité",
+       "Décider, sauf veto d’un membre permanent"
+      ]
+     ],
+     "aide": "Un acteur par pouvoir : cherche ce que chacun peut faire.",
+     "explication": "Les **ONG** documentent, la **CEDH** condamne des États, la **CPI** juge des individus, le **Conseil de sécurité** décide sous la menace du veto."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient le projet de résolution ?",
+     "options": [
+      "Il est bloqué, car un membre permanent a utilisé son droit de veto",
+      "Il est adopté, car il a obtenu la grande majorité des voix",
+      "Il est renvoyé devant la Cour pénale internationale pour jugement",
+      "Il est adopté après l’abstention, qui vaut vote favorable de plein droit"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Contre (membre permanent) ».",
+     "explication": "Un seul vote contre d’un membre permanent est un **veto** : le projet est bloqué malgré 13 voix pour."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : pouvoir de la preuve ou pouvoir de décider ?",
+     "categories": [
+      "Pouvoir de la preuve et de l’opinion",
+      "Pouvoir de juger ou de décider"
+     ],
+     "items": [
+      [
+       "Un rapport d’ONG documente des violations",
+       0
+      ],
+      [
+       "Une campagne d’ONG alerte l’opinion publique",
+       0
+      ],
+      [
+       "La CEDH condamne un État",
+       1
+      ],
+      [
+       "La CPI juge un individu",
+       1
+      ],
+      [
+       "Le Conseil de sécurité vote une résolution",
+       1
+      ]
+     ],
+     "aide": "Les ONG n’ont aucune force contraignante.",
+     "explication": "Les ONG ont une **puissance sans moyens de coercition** ; les cours et le Conseil de sécurité peuvent juger ou décider."
+    }
+   ]
+  }
+ ]
+}

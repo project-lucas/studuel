@@ -649,7 +649,7 @@ En **1953**, **Clair Patterson** date des **météorites** par uranium-plomb : *
 | Objet | Sa distance ou sa taille |
 | L’étoile la plus proche | **4,2 al** |
 | La **Voie lactée** | environ **100 000 al** de diamètre |
-| L’Univers observable | environ **13,8 milliards** d’années-lumière |
+| L’Univers observable | environ **46 milliards** d’années-lumière de rayon (son âge : 13,8 milliards d’années) |
 
 > **Regarder loin, c’est regarder tôt** : la lumière met du temps.
 

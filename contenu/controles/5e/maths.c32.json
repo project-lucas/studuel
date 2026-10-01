@@ -1,0 +1,959 @@
+{
+  "niveau": "5e",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+      "difficulte": 1,
+      "titre": "Les températures de la semaine",
+      "consigne": "Réponds à chaque question en justifiant avec le cours.",
+      "enonce": "**Situation.** Voici les températures relevées à midi dans une ville : lundi −3 °C, mardi +2 °C, mercredi −8 °C, jeudi 0 °C.\n\n1. Quel jour a-t-il fait le plus froid ? Justifie.\n2. Range ces quatre températures dans l’ordre croissant.\n3. Donne la distance à zéro de −8 et l’opposé de −3.",
+      "bareme": [
+        {
+          "critere": "Mercredi, avec la justification : −8 est le plus petit",
+          "points": 6
+        },
+        {
+          "critere": "Rangement −8 < −3 < 0 < +2",
+          "points": 7
+        },
+        {
+          "critere": "Distance à zéro de −8 : 8 ; opposé de −3 : +3",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. C’est **mercredi** : entre deux négatifs, le plus petit est celui qui a la plus grande distance à zéro. −8 est plus petit que −3, que 0 et que +2.\n\n2. Ordre croissant : les négatifs d’abord (−8 puis −3), puis zéro, puis les positifs : **−8 < −3 < 0 < +2**.\n\n3. La distance à zéro de −8 est le nombre sans son signe : **8**. L’opposé de −3 est le nombre symétrique par rapport à zéro : **+3**."
+    },
+    {
+      "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+      "difficulte": 2,
+      "titre": "Le rectangle du repère",
+      "consigne": "Justifie avec le vocabulaire du repère (abscisse, ordonnée).",
+      "enonce": "**Situation.** Dans un repère, on place les points A(2 ; 3), B(−3 ; 3) et C(−3 ; −1). On veut placer D pour que ABCD soit un rectangle dont les côtés sont parallèles aux axes.\n\n1. Quelles sont les coordonnées de D ? Justifie.\n2. Calcule les longueurs AB et BC (en unités du repère).\n3. Calcule le périmètre et l’aire du rectangle ABCD.",
+      "bareme": [
+        {
+          "critere": "D(2 ; −1) : abscisse de A et ordonnée de C",
+          "points": 6
+        },
+        {
+          "critere": "AB = 2 + 3 = 5 unités et BC = 3 + 1 = 4 unités",
+          "points": 7
+        },
+        {
+          "critere": "Périmètre 2 × (5 + 4) = 18 et aire 5 × 4 = 20",
+          "points": 7
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les côtés sont parallèles aux axes : D est sur la même verticale que A (même abscisse, **2**) et sur la même horizontale que C (même ordonnée, **−1**). Donc **D(2 ; −1)**.\n\n2. A et B ont la même ordonnée : AB est horizontal. Un point est à 2 à droite de l’origine et l’autre à 3 à gauche : AB = 2 + 3 = **5 unités**. B et C ont la même abscisse : BC = 3 + 1 = **4 unités** (l’un est à 3 au-dessus de l’axe, l’autre à 1 en dessous).\n\n3. Périmètre : 2 × (5 + 4) = **18 unités**. Aire : 5 × 4 = **20 unités d’aire**."
+    },
+    {
+      "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+      "difficulte": 3,
+      "titre": "Les altitudes",
+      "consigne": "Rédige et justifie chaque comparaison.",
+      "enonce": "**Situation.** Quatre lieux ont pour altitudes : A −40 m, B +120 m, C −15 m et D −75 m.\n\n1. Range ces lieux du plus haut au plus bas.\n2. Quelle est la différence d’altitude entre B et D ? Explique ton calcul avec une droite graduée.\n3. Quelle est la différence d’altitude entre A et D ?\n4. Un élève écrit « −75 est plus grand que −40 car 75 est plus grand que 40 ». Explique son erreur.",
+      "bareme": [
+        {
+          "critere": "Rangement B, C, A, D",
+          "points": 4
+        },
+        {
+          "critere": "Écart B–D : 120 + 75 = 195 m (de part et d’autre de zéro)",
+          "points": 5
+        },
+        {
+          "critere": "Écart A–D : 75 − 40 = 35 m (du même côté de zéro)",
+          "points": 5
+        },
+        {
+          "critere": "Erreur expliquée : chez les négatifs, la plus grande distance à zéro donne le plus petit nombre",
+          "points": 6
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Du plus haut au plus bas : **B (+120) > C (−15) > A (−40) > D (−75)**.\n\n2. B est à 120 m au-dessus de zéro et D à 75 m en dessous : sur la droite graduée, on additionne les deux distances : 120 + 75 = **195 m**.\n\n3. A et D sont du même côté de zéro : on soustrait les distances à zéro, 75 − 40 = **35 m**.\n\n4. L’élève compare les distances à zéro, pas les nombres. Pour deux négatifs, c’est **la plus petite distance à zéro qui gagne** : −40 est à droite de −75 sur la droite graduée, donc −40 > −75."
+    },
+    {
+      "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+      "difficulte": 1,
+      "titre": "Trois calculs de relatifs",
+      "consigne": "Écris chaque calcul et conclus par une phrase.",
+      "enonce": "**Situation.** Voici trois calculs de nombres relatifs à effectuer sans calculatrice. Pour chacun, écris le calcul avec les signes bien visibles, applique la règle du cours (mêmes signes, signes différents, soustraction) et donne le résultat.\n\n1. (−7) + (−5)\n2. (+8) + (−11)\n3. 6 − (−2)",
+      "bareme": [
+        {
+          "critere": "(−7) + (−5) = −12 : mêmes signes, on additionne les distances",
+          "points": 6
+        },
+        {
+          "critere": "(+8) + (−11) = −3 : signes différents, signe du plus fort",
+          "points": 7
+        },
+        {
+          "critere": "6 − (−2) = 6 + 2 = 8 : soustraire, c’est ajouter l’opposé",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Mêmes signes : on additionne les distances à zéro (7 + 5 = 12) et on garde le signe commun. (−7) + (−5) = **−12**.\n\n2. Signes différents : on soustrait la plus petite distance de la plus grande (11 − 8 = 3) et on garde le signe du plus « fort », ici le négatif. (+8) + (−11) = **−3**.\n\n3. Soustraire, c’est ajouter l’opposé : 6 − (−2) = 6 + (+2) = **8**."
+    },
+    {
+      "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+      "difficulte": 2,
+      "titre": "Le compte de Malik",
+      "consigne": "Écris chaque opération sous forme de somme de relatifs.",
+      "enonce": "**Situation.** Le solde du compte de Malik est de +45 €. Il fait successivement : un achat de 60 € (−60), un virement reçu de 100 € (+100), puis un prélèvement de 30 € (−30).\n\n1. Donne le solde après chaque opération.\n2. Écris le bilan complet sous forme d’un seul calcul et vérifie le solde final.\n3. Quel a été le solde le plus bas ? Que signifie ce résultat ?",
+      "bareme": [
+        {
+          "critere": "Soldes successifs : −15 €, +85 €, +55 €",
+          "points": 8
+        },
+        {
+          "critere": "Bilan : 45 + (−60) + 100 + (−30) = 55 €",
+          "points": 6
+        },
+        {
+          "critere": "Solde le plus bas : −15 €, le compte est à découvert",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Après l’achat : 45 + (−60) = **−15 €**. Après le virement : −15 + 100 = **+85 €**. Après le prélèvement : 85 + (−30) = **+55 €**.\n\n2. Bilan : 45 + (−60) + 100 + (−30). Les positifs : 45 + 100 = 145. Les négatifs : 60 + 30 = 90. Bilan : 145 − 90 = **55 €**, comme au 1.\n\n3. Le solde le plus bas est **−15 €** après l’achat : un solde négatif signifie que le compte est **à découvert** (Malik doit 15 € à la banque)."
+    },
+    {
+      "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+      "difficulte": 3,
+      "titre": "Simplifier et calculer",
+      "consigne": "Écris chaque étape et corrige l’erreur demandée.",
+      "enonce": "**Situation.** On étudie plusieurs expressions.\n\n1. Simplifie les signes puis calcule A = 3 + (−5) − (−2) − (+7).\n2. Calcule B = −9 + 14 − 6 + 5 − 8 en regroupant les positifs et les négatifs.\n3. Calcule C = (−4) − (−7) − (+3).\n4. Un élève a écrit 5 − (−3) = 2. Explique son erreur et donne le bon résultat.",
+      "bareme": [
+        {
+          "critere": "A = 3 − 5 + 2 − 7 = −7",
+          "points": 5
+        },
+        {
+          "critere": "B : positifs 19, négatifs 23, résultat −4",
+          "points": 5
+        },
+        {
+          "critere": "C = −4 + 7 − 3 = 0",
+          "points": 5
+        },
+        {
+          "critere": "Erreur : il a soustrait 3 au lieu d’ajouter l’opposé ; 5 − (−3) = 8",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. + (−5) devient − 5, − (−2) devient + 2, − (+7) devient − 7 : A = 3 − 5 + 2 − 7 = **−7**.\n\n2. Positifs : 14 + 5 = 19. Négatifs : 9 + 6 + 8 = 23. Bilan : 19 − 23 = **−4**.\n\n3. C = −4 + 7 − 3 = 3 − 3 = **0**.\n\n4. L’élève a traité 5 − (−3) comme 5 − 3. Or **soustraire un nombre négatif revient à ajouter** son opposé : 5 − (−3) = 5 + 3 = **8**. Un ordre de grandeur le confirme : retirer une dette augmente la somme."
+    },
+    {
+      "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+      "difficulte": 1,
+      "titre": "Simplifier et prendre une fraction",
+      "consigne": "Justifie chaque simplification.",
+      "enonce": "**Situation.** On travaille sur trois fractions.\n\n1. Simplifie 18/30 jusqu’à la fraction irréductible.\n2. Simplifie 12/16 jusqu’à la fraction irréductible.\n3. Combien font les 3/4 de 40 ?",
+      "bareme": [
+        {
+          "critere": "18/30 = 3/5 (division par 6)",
+          "points": 6
+        },
+        {
+          "critere": "12/16 = 3/4 (division par 4)",
+          "points": 7
+        },
+        {
+          "critere": "3/4 de 40 : 40 ÷ 4 × 3 = 30",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. On divise le numérateur et le dénominateur par 6 : 18/30 = **3/5**, qui est irréductible.\n\n2. On divise par 4 : 12/16 = **3/4**, irréductible.\n\n3. Un quart de 40 vaut 40 ÷ 4 = 10, donc les trois quarts valent 10 × 3 = **30**."
+    },
+    {
+      "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+      "difficulte": 2,
+      "titre": "Les activités de la classe",
+      "consigne": "Justifie chaque calcul avec une fraction.",
+      "enonce": "**Situation.** Dans une classe de 28 élèves, les 3/7 font du sport et 1/4 font de la musique. Aucun élève ne fait les deux.\n\n1. Combien d’élèves font du sport ?\n2. Combien d’élèves font de la musique ?\n3. Combien d’élèves ne font ni sport ni musique ? Quelle fraction de la classe cela représente-t-il ?",
+      "bareme": [
+        {
+          "critere": "Sport : 28 ÷ 7 × 3 = 12 élèves",
+          "points": 7
+        },
+        {
+          "critere": "Musique : 28 ÷ 4 = 7 élèves",
+          "points": 6
+        },
+        {
+          "critere": "28 − 12 − 7 = 9 élèves, soit 9/28 (irréductible)",
+          "points": 7
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Un septième de 28 vaut 28 ÷ 7 = 4, donc les 3/7 valent 4 × 3 = **12 élèves**.\n\n2. Un quart de 28 vaut 28 ÷ 4 = **7 élèves**.\n\n3. 12 + 7 = 19 élèves font une activité, donc 28 − 19 = **9 élèves** ne font ni l’un ni l’autre. Cela représente **9/28** de la classe ; 9 et 28 n’ont aucun diviseur commun autre que 1, la fraction est irréductible."
+    },
+    {
+      "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+      "difficulte": 3,
+      "titre": "Le livre de Léa",
+      "consigne": "Rédige avec soin chaque étape.",
+      "enonce": "**Situation.** Léa lit un livre de 250 pages. Elle a déjà lu les 3/5 du livre.\n\n1. Parmi 7/8, 9/9, 11/10 et 5/6, laquelle est supérieure à 1 ? Justifie.\n2. Simplifie 42/56.\n3. Combien de pages Léa a-t-elle lues ? Combien lui en reste-t-il ? Quelle fraction du livre cela représente-t-il ?\n4. Léa écrit une fraction dont le dénominateur est 0. Pourquoi est-ce impossible ?",
+      "bareme": [
+        {
+          "critere": "11/10 est supérieur à 1 car 11 > 10 ; 9/9 vaut 1",
+          "points": 4
+        },
+        {
+          "critere": "42/56 = 3/4 (division par 14)",
+          "points": 5
+        },
+        {
+          "critere": "150 pages lues, 100 restantes, soit 2/5",
+          "points": 6
+        },
+        {
+          "critere": "a/0 n’existe pas : on ne peut pas partager en 0 part",
+          "points": 5
+        }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Une fraction est supérieure à 1 quand son numérateur est plus grand que son dénominateur : **11/10 > 1**. 9/9 = 1, et 7/8 et 5/6 sont inférieures à 1.\n\n2. On divise haut et bas par 14 : 42/56 = **3/4**.\n\n3. Un cinquième de 250 vaut 50, donc les 3/5 valent 150 : Léa a lu **150 pages**. Il lui reste 250 − 150 = **100 pages**, soit 1 − 3/5 = **2/5** du livre (100 = 50 × 2).\n\n4. Le dénominateur dit en combien de parts on partage le tout : on ne peut pas partager en 0 part. Le dénominateur n’est **jamais nul** : a/0 n’existe pas."
+    },
+    {
+      "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+      "difficulte": 1,
+      "titre": "Trois calculs de fractions",
+      "consigne": "Réduis au même dénominateur et simplifie.",
+      "enonce": "**Situation.** On étudie trois questions sur les fractions.\n\n1. Compare 3/10 et 3/4.\n2. Calcule 1/2 + 1/4.\n3. Calcule 5/6 − 1/3.",
+      "bareme": [
+        {
+          "critere": "3/10 < 3/4 : même numérateur, plus petit dénominateur = plus grand",
+          "points": 6
+        },
+        {
+          "critere": "1/2 + 1/4 = 2/4 + 1/4 = 3/4",
+          "points": 7
+        },
+        {
+          "critere": "5/6 − 1/3 = 5/6 − 2/6 = 3/6 = 1/2",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Les deux fractions ont le même numérateur : la plus grande est celle dont le dénominateur est le plus petit. **3/4 > 3/10**.\n\n2. On réduit au dénominateur 4 : 1/2 = 2/4, donc 2/4 + 1/4 = **3/4**.\n\n3. On réduit au dénominateur 6 : 1/3 = 2/6, donc 5/6 − 2/6 = 3/6 = **1/2**."
+    },
+    {
+      "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+      "difficulte": 2,
+      "titre": "La recette de Camille",
+      "consigne": "Écris les calculs en réduisant au même dénominateur.",
+      "enonce": "**Situation.** Pour une recette, Camille verse 1/4 de litre de lait et 1/3 de litre de crème dans un saladier. Elle dispose d’une bouteille de 1 litre de lait.\n\n1. Quel liquide y a-t-elle mis en plus grande quantité ? Justifie.\n2. Quelle fraction de litre y a-t-il dans le saladier ?\n3. Quelle fraction de la bouteille de 1 litre est vide si elle n’utilise que le lait de la recette ?",
+      "bareme": [
+        {
+          "critere": "1/3 = 4/12 > 3/12 = 1/4 : plus de crème",
+          "points": 7
+        },
+        {
+          "critere": "1/4 + 1/3 = 3/12 + 4/12 = 7/12 L",
+          "points": 7
+        },
+        {
+          "critere": "1 − 1/4 = 3/4 de la bouteille reste plein, donc 1/4 seulement est vide",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Au dénominateur 12 : 1/4 = 3/12 et 1/3 = 4/12. Comme 4/12 > 3/12, elle a mis **plus de crème** que de lait.\n\n2. 1/4 + 1/3 = 3/12 + 4/12 = **7/12 de litre**. Le résultat est plus grand que chacune des deux fractions, comme il se doit pour une addition.\n\n3. Elle n’utilise que 1/4 de litre de lait : **1/4** de la bouteille est vide, et 1 − 1/4 = 3/4 reste plein."
+    },
+    {
+      "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+      "difficulte": 3,
+      "titre": "Le jardin de M. Morel",
+      "consigne": "Rédige chaque calcul, avec une vérification.",
+      "enonce": "**Situation.** M. Morel partage son jardin de 200 m² : 2/5 pour le potager, 1/4 pour la pelouse, et le reste pour les fleurs.\n\n1. Quelle fraction du jardin occupent le potager et la pelouse ensemble ?\n2. Quelle fraction du jardin reste pour les fleurs ?\n3. Calcule l’aire de chaque zone en m².\n4. Compare le potager et la pelouse. Vérifie que les trois aires font bien 200 m².",
+      "bareme": [
+        {
+          "critere": "2/5 + 1/4 = 8/20 + 5/20 = 13/20",
+          "points": 5
+        },
+        {
+          "critere": "Fleurs : 1 − 13/20 = 7/20",
+          "points": 5
+        },
+        {
+          "critere": "Potager 80 m², pelouse 50 m², fleurs 70 m²",
+          "points": 5
+        },
+        {
+          "critere": "Potager plus grand (8/20 > 5/20) et 80 + 50 + 70 = 200",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Au dénominateur 20 : 2/5 = 8/20 et 1/4 = 5/20. Ensemble : 8/20 + 5/20 = **13/20**.\n\n2. Le jardin entier vaut 20/20 : il reste 20/20 − 13/20 = **7/20** pour les fleurs.\n\n3. Un vingtième de 200 m² vaut 10 m². Potager : 8 × 10 = **80 m²**. Pelouse : 5 × 10 = **50 m²**. Fleurs : 7 × 10 = **70 m²**.\n\n4. 8/20 > 5/20 : le potager est plus grand que la pelouse (80 m² > 50 m²). Vérification : 80 + 50 + 70 = **200 m²**."
+    },
+    {
+      "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+      "difficulte": 1,
+      "titre": "Divisions et nombres premiers",
+      "consigne": "Écris l’égalité de la division euclidienne.",
+      "enonce": "**Situation.** On travaille sur la division euclidienne et les nombres premiers.\n\n1. Effectue la division euclidienne de 47 par 6 et écris l’égalité correspondante.\n2. Effectue la division euclidienne de 100 par 9 et écris l’égalité correspondante.\n3. Parmi 15, 17 et 21, quel est le nombre premier ? Justifie.",
+      "bareme": [
+        {
+          "critere": "47 = 6 × 7 + 5, avec un reste inférieur à 6",
+          "points": 7
+        },
+        {
+          "critere": "100 = 9 × 11 + 1",
+          "points": 7
+        },
+        {
+          "critere": "17 est premier : seulement deux diviseurs, 1 et 17",
+          "points": 6
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. 6 × 7 = 42 et 47 − 42 = 5 : **47 = 6 × 7 + 5**. Le reste 5 est bien inférieur au diviseur 6.\n\n2. 9 × 11 = 99 et 100 − 99 = 1 : **100 = 9 × 11 + 1**.\n\n3. **17** est premier : il n’a que deux diviseurs, 1 et 17. Mais 15 = 3 × 5 et 21 = 3 × 7 ont d’autres diviseurs."
+    },
+    {
+      "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+      "difficulte": 2,
+      "titre": "Les boîtes de gâteaux",
+      "consigne": "Justifie avec la division euclidienne.",
+      "enonce": "**Situation.** Une pâtissière a préparé 85 gâteaux. Elle les range dans des boîtes de 6 gâteaux.\n\n1. Combien de boîtes pleines obtient-elle ? Combien de gâteaux restent ? Écris l’égalité de la division euclidienne.\n2. Combien de boîtes doit-elle utiliser pour ranger tous les gâteaux ?\n3. Le nombre 85 est-il divisible par 5 ? par 3 ? Justifie avec les critères de divisibilité.",
+      "bareme": [
+        {
+          "critere": "85 = 6 × 14 + 1 : 14 boîtes pleines et 1 gâteau restant",
+          "points": 7
+        },
+        {
+          "critere": "15 boîtes au total, car il reste un gâteau",
+          "points": 7
+        },
+        {
+          "critere": "85 divisible par 5 (finit par 5), pas par 3 (8 + 5 = 13)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. 6 × 14 = 84 et 85 − 84 = 1 : **85 = 6 × 14 + 1**. Elle remplit **14 boîtes** et il reste **1 gâteau**.\n\n2. Il reste un gâteau à ranger : il faut une boîte de plus, soit **15 boîtes**.\n\n3. 85 se termine par 5 : il est **divisible par 5** (85 = 5 × 17). La somme de ses chiffres est 8 + 5 = 13, qui n’est pas divisible par 3 : 85 **n’est pas divisible par 3**."
+    },
+    {
+      "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+      "difficulte": 3,
+      "titre": "Décomposer pour simplifier",
+      "consigne": "Rédige les décompositions étape par étape.",
+      "enonce": "**Situation.** On veut simplifier la fraction 84/90 en utilisant les nombres premiers.\n\n1. Décompose 84 en produit de facteurs premiers.\n2. Décompose 90 en produit de facteurs premiers.\n3. Simplifie la fraction 84/90 en la rendant irréductible.\n4. Le nombre 91 est-il premier ? Justifie.",
+      "bareme": [
+        {
+          "critere": "84 = 2² × 3 × 7",
+          "points": 5
+        },
+        {
+          "critere": "90 = 2 × 3² × 5",
+          "points": 5
+        },
+        {
+          "critere": "84/90 = 14/15 en barrant 2 × 3 = 6",
+          "points": 6
+        },
+        {
+          "critere": "91 = 7 × 13 : il n’est pas premier",
+          "points": 4
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7, soit **2² × 3 × 7**.\n\n2. 90 = 2 × 45 = 2 × 3 × 15 = 2 × 3 × 3 × 5, soit **2 × 3² × 5**.\n\n3. Les facteurs communs sont 2 et 3 (produit 6) : 84/90 = (2 × 2 × 3 × 7)/(2 × 3 × 3 × 5) = 14/15. Fraction **irréductible : 14/15**, car 14 = 2 × 7 et 15 = 3 × 5 n’ont aucun facteur commun.\n\n4. 91 = 7 × 13 : il a d’autres diviseurs que 1 et lui-même, donc **91 n’est pas premier** (piège : il ne se termine pas par un chiffre pair et n’est pas dans la table de 3)."
+    },
+    {
+      "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+      "difficulte": 1,
+      "titre": "Remplacer les lettres",
+      "consigne": "Écris les calculs en rétablissant les signes ×.",
+      "enonce": "**Situation.** On considère l’expression A = 3x + 5.\n\n1. Calcule A pour x = 4, puis pour x = 0.\n2. Réduis l’expression 5x + 2x.\n3. Écris le périmètre d’un carré de côté c avec une lettre, puis calcule-le pour c = 6,5 cm.",
+      "bareme": [
+        {
+          "critere": "A(4) = 17 et A(0) = 5",
+          "points": 6
+        },
+        {
+          "critere": "5x + 2x = 7x",
+          "points": 7
+        },
+        {
+          "critere": "Périmètre 4c ; pour c = 6,5 : 26 cm",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Pour x = 4 : A = 3 × 4 + 5 = 12 + 5 = **17**. Pour x = 0 : A = 3 × 0 + 5 = **5**.\n\n2. Les deux termes sont de même nature : 5x + 2x = (5 + 2)x = **7x**.\n\n3. Le périmètre d’un carré de côté c est **4 × c**, qui s’écrit 4c. Pour c = 6,5 cm : 4 × 6,5 = **26 cm**."
+    },
+    {
+      "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+      "difficulte": 2,
+      "titre": "Réduire, développer, factoriser",
+      "consigne": "Écris les étapes de chaque calcul.",
+      "enonce": "**Situation.** Voici quatre transformations d’écriture à effectuer.\n\n1. Réduis 6x + 4 − 2x + 7.\n2. Développe 3(x + 7).\n3. Développe −(2x − 5).\n4. Factorise 8x + 12.",
+      "bareme": [
+        {
+          "critere": "Réduction : 4x + 11",
+          "points": 5
+        },
+        {
+          "critere": "Développement : 3x + 21",
+          "points": 5
+        },
+        {
+          "critere": "−(2x − 5) = −2x + 5, tous les signes changent",
+          "points": 5
+        },
+        {
+          "critere": "Factorisation : 8x + 12 = 4(2x + 3)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. On regroupe les termes en x (6x − 2x = 4x) et les nombres (4 + 7 = 11) : **4x + 11**.\n\n2. k(a + b) = ka + kb : 3(x + 7) = 3 × x + 3 × 7 = **3x + 21**.\n\n3. Le signe moins devant la parenthèse change **tous** les signes à l’intérieur : −(2x − 5) = **−2x + 5**.\n\n4. Le facteur commun à 8x et 12 est 4 : 8x = 4 × 2x et 12 = 4 × 3, donc **8x + 12 = 4(2x + 3)**."
+    },
+    {
+      "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+      "difficulte": 3,
+      "titre": "Un programme de calcul",
+      "consigne": "Rédige avec des expressions littérales.",
+      "enonce": "**Situation.** Voici un programme de calcul : choisir un nombre x, lui ajouter 3, multiplier le résultat par 2, puis soustraire 6.\n\n1. Applique le programme au nombre 5.\n2. Écris une expression littérale qui donne le résultat pour un nombre x.\n3. Développe et réduis cette expression. Que remarques-tu ?\n4. Léa affirme que 3(x + 2) = 3x + 2. Montre qu’elle a tort avec un contre-exemple.",
+      "bareme": [
+        {
+          "critere": "Pour x = 5 : (5 + 3) × 2 − 6 = 10",
+          "points": 4
+        },
+        {
+          "critere": "Expression 2(x + 3) − 6",
+          "points": 5
+        },
+        {
+          "critere": "2(x + 3) − 6 = 2x : le programme double le nombre choisi",
+          "points": 6
+        },
+        {
+          "critere": "Contre-exemple x = 0 : 3(0 + 2) = 6 et 3 × 0 + 2 = 2",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Pour x = 5 : 5 + 3 = 8, 8 × 2 = 16, 16 − 6 = **10**.\n\n2. Ajouter 3 donne x + 3 ; multiplier par 2 donne 2(x + 3) ; soustraire 6 donne **2(x + 3) − 6**.\n\n3. On développe : 2(x + 3) − 6 = 2x + 6 − 6 = **2x**. Le programme donne toujours **le double** du nombre choisi, quel que soit x (avec x = 5 : 10).\n\n4. Pour x = 0 : 3(0 + 2) = 6 alors que 3 × 0 + 2 = 2. Un seul contre-exemple suffit : l’égalité est **fausse** (la bonne écriture développée est 3x + 6)."
+    },
+    {
+      "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+      "difficulte": 1,
+      "titre": "Frères et sœurs",
+      "consigne": "Réponds à partir du tableau.",
+      "enonce": "**Situation.** On a demandé à 20 élèves combien ils ont de frères et sœurs. Résultats : 0 frère ou sœur : 4 élèves ; 1 : 8 élèves ; 2 : 5 élèves ; 3 : 3 élèves.\n\n1. Vérifie que l’effectif total est bien 20.\n2. Calcule la fréquence des élèves qui ont 1 frère ou sœur, en pourcentage.\n3. Ce caractère est-il quantitatif ou qualitatif ? Calcule l’étendue de la série.",
+      "bareme": [
+        {
+          "critere": "Effectif total : 4 + 8 + 5 + 3 = 20",
+          "points": 6
+        },
+        {
+          "critere": "Fréquence : 8 ÷ 20 = 0,4 = 40 %",
+          "points": 7
+        },
+        {
+          "critere": "Quantitatif ; étendue 3 − 0 = 3",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. 4 + 8 + 5 + 3 = **20** : l’effectif total est bien 20.\n\n2. Fréquence = effectif de la valeur ÷ effectif total = 8 ÷ 20 = 0,4 = **40 %**.\n\n3. Le nombre de frères et sœurs se compte : le caractère est **quantitatif**. Étendue = plus grande valeur − plus petite valeur = 3 − 0 = **3**."
+    },
+    {
+      "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+      "difficulte": 2,
+      "titre": "Les sports du club",
+      "consigne": "Justifie le choix du graphique.",
+      "enonce": "**Situation.** Dans un club de 30 élèves, on compte : 12 élèves en football, 9 en danse, 6 en natation et 3 en judo.\n\n1. Calcule la fréquence de chaque sport en pourcentage.\n2. On veut un diagramme circulaire. Calcule l’angle de chaque secteur et vérifie leur somme.\n3. Quel autre graphique conviendrait pour un caractère qualitatif comme le sport pratiqué ?",
+      "bareme": [
+        {
+          "critere": "Fréquences : 40 %, 30 %, 20 % et 10 %",
+          "points": 7
+        },
+        {
+          "critere": "Angles : 144°, 108°, 72°, 36°, de somme 360°",
+          "points": 7
+        },
+        {
+          "critere": "Diagramme en barres (caractère qualitatif)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Fréquence = effectif ÷ 30 : football 12/30 = **40 %**, danse 9/30 = **30 %**, natation 6/30 = **20 %**, judo 3/30 = **10 %**.\n\n2. Angle = fréquence × 360° : football 0,40 × 360 = **144°** ; danse 0,30 × 360 = **108°** ; natation 0,20 × 360 = **72°** ; judo 0,10 × 360 = **36°**. Somme : 144 + 108 + 72 + 36 = 360°, ce qui vérifie le travail.\n\n3. Le sport pratiqué est un caractère qualitatif : on peut aussi le représenter par un **diagramme en barres**."
+    },
+    {
+      "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+      "difficulte": 3,
+      "titre": "Étendue et graphique trompeur",
+      "consigne": "Rédige avec méthode.",
+      "enonce": "**Situation.** Une série de cinq températures est : 21 °C, 14 °C, 18 °C, 25 °C, 17 °C. Par ailleurs, un journal montre un graphique en barres de ses ventes : la barre de mars représente 92 exemplaires et celle d’avril 96 exemplaires, mais l’axe vertical commence à 90 exemplaires et non à 0.\n\n1. Calcule l’étendue de la série de températures.\n2. Sur le graphique, les hauteurs visibles des barres sont 2 et 6 unités. Que semble-t-il se passer d’avril par rapport à mars ? Est-ce la réalité ?\n3. Quelle vérification aurait dû faire le lecteur avant de comparer les barres ?\n4. Quelle représentation choisir pour suivre l’évolution des ventes mois après mois ?",
+      "bareme": [
+        {
+          "critere": "Étendue : 25 − 14 = 11 °C",
+          "points": 4
+        },
+        {
+          "critere": "Les ventes semblent tripler alors que la hausse réelle n’est que de 4 exemplaires",
+          "points": 6
+        },
+        {
+          "critere": "Il faut vérifier si l’axe vertical part bien de zéro",
+          "points": 6
+        },
+        {
+          "critere": "Une courbe pour une évolution dans le temps",
+          "points": 4
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Étendue = plus grande valeur − plus petite valeur = 25 − 14 = **11 °C**.\n\n2. La barre d’avril paraît 3 fois plus haute que celle de mars (6 contre 2), comme si les ventes avaient triplé. C’est trompeur : les ventes passent de 92 à 96, soit **4 exemplaires de plus** seulement.\n\n3. Avant de comparer les hauteurs, le lecteur doit **vérifier que l’axe vertical part bien de zéro** (et lire le titre, les axes et les unités). Un axe tronqué déforme la perception sans falsifier aucun chiffre.\n\n4. Pour une évolution dans le temps, on choisit une **courbe**."
+    },
+    {
+      "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+      "difficulte": 1,
+      "titre": "Les notes de Sarah",
+      "consigne": "Écris les calculs en entier.",
+      "enonce": "**Situation.** Sarah a obtenu les notes suivantes en mathématiques : 12, 15, 9, 16 et 13.\n\n1. Calcule sa moyenne.\n2. Calcule l’étendue de ses notes.\n3. La moyenne pouvait-elle être 17 ? Justifie sans calculer.",
+      "bareme": [
+        {
+          "critere": "Moyenne : 65 ÷ 5 = 13",
+          "points": 8
+        },
+        {
+          "critere": "Étendue : 16 − 9 = 7",
+          "points": 6
+        },
+        {
+          "critere": "Non : la moyenne est comprise entre 9 et 16",
+          "points": 6
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Somme : 12 + 15 + 9 + 16 + 13 = 65. Moyenne : 65 ÷ 5 = **13**.\n\n2. Étendue = plus grande note − plus petite note = 16 − 9 = **7**.\n\n3. Une moyenne est toujours **comprise entre la plus petite et la plus grande valeur** de la série, ici entre 9 et 16. Elle ne peut donc pas valoir 17."
+    },
+    {
+      "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+      "difficulte": 2,
+      "titre": "Le bulletin d’Inès",
+      "consigne": "Écris la formule de la moyenne pondérée avant de calculer.",
+      "enonce": "**Situation.** Inès a en maths 14 (coefficient 4), en français 10 (coefficient 3), en anglais 16 (coefficient 2) et en sport 18 (coefficient 1).\n\n1. Calcule la somme des coefficients.\n2. Calcule sa moyenne pondérée.\n3. Calcule aussi la moyenne simple des quatre notes. Pourquoi est-elle différente ?",
+      "bareme": [
+        {
+          "critere": "Somme des coefficients : 10",
+          "points": 5
+        },
+        {
+          "critere": "Moyenne pondérée : 136 ÷ 10 = 13,6",
+          "points": 9
+        },
+        {
+          "critere": "Moyenne simple 14,5, différente car les coefficients pèsent différemment",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. 4 + 3 + 2 + 1 = **10**.\n\n2. 14 × 4 = 56 ; 10 × 3 = 30 ; 16 × 2 = 32 ; 18 × 1 = 18. Somme : 56 + 30 + 32 + 18 = 136. Moyenne : 136 ÷ 10 = **13,6**.\n\n3. Moyenne simple : (14 + 10 + 16 + 18) ÷ 4 = 58 ÷ 4 = **14,5**. Elle est plus élevée car elle donne le même poids à toutes les notes : en pondérant, le français (10) compte trois fois et le sport (18) une seule fois."
+    },
+    {
+      "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+      "difficulte": 3,
+      "titre": "Deux classes, une moyenne",
+      "consigne": "Rédige en repassant par les totaux.",
+      "enonce": "**Situation.** La classe de 5e A compte 24 élèves et sa moyenne au contrôle est de 11. La classe de 5e B compte 16 élèves et sa moyenne est de 14.\n\n1. Calcule la somme des notes de chaque classe.\n2. Calcule la moyenne des 40 élèves.\n3. Un élève affirme : « la moyenne est (11 + 14) ÷ 2 = 12,5 ». Explique son erreur.\n4. Dans quel cas aurait-il eu raison ?",
+      "bareme": [
+        {
+          "critere": "Sommes : 24 × 11 = 264 et 16 × 14 = 224",
+          "points": 5
+        },
+        {
+          "critere": "Moyenne globale : 488 ÷ 40 = 12,2",
+          "points": 5
+        },
+        {
+          "critere": "Erreur : ce n’est pas la moyenne des moyennes, les effectifs diffèrent",
+          "points": 5
+        },
+        {
+          "critere": "Il aurait raison si les deux classes avaient le même effectif",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Somme des notes de 5e A : 24 × 11 = **264**. Somme des notes de 5e B : 16 × 14 = **224**.\n\n2. Moyenne des 40 élèves : (264 + 224) ÷ 40 = 488 ÷ 40 = **12,2**.\n\n3. La moyenne de plusieurs groupes **n’est pas la moyenne des moyennes** : la classe de 24 élèves pèse plus que celle de 16. L’élève a donné le même poids aux deux classes ; on trouve 12,2 et non 12,5.\n\n4. Il aurait eu raison si les deux classes avaient **le même effectif**, par exemple 20 élèves chacune : ((20 × 11) + (20 × 14)) ÷ 40 = 12,5."
+    },
+    {
+      "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+      "difficulte": 1,
+      "titre": "Premières formules",
+      "consigne": "Écris les formules telles qu’on les saisirait dans le tableur.",
+      "enonce": "**Situation.** Dans un tableur, les cellules A1, A2 et A3 contiennent les nombres 5, 7 et 9.\n\n1. Écris la formule qui calcule la somme de ces trois cellules et donne son résultat.\n2. Écris la formule qui calcule leur moyenne et donne son résultat.\n3. Que désigne A1:A3 ? Par quel signe commence toute formule ?",
+      "bareme": [
+        {
+          "critere": "=SOMME(A1:A3) donne 21",
+          "points": 7
+        },
+        {
+          "critere": "=MOYENNE(A1:A3) donne 7",
+          "points": 7
+        },
+        {
+          "critere": "A1:A3 est une plage (cellules A1, A2, A3) ; une formule commence par =",
+          "points": 6
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **=SOMME(A1:A3)** donne 5 + 7 + 9 = **21**.\n\n2. **=MOYENNE(A1:A3)** donne 21 ÷ 3 = **7**.\n\n3. **A1:A3** est une **plage** : elle désigne toutes les cellules de A1 à A3 (A1, A2 et A3). Toute formule commence **toujours par le signe =**."
+    },
+    {
+      "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+      "difficulte": 2,
+      "titre": "Les notes dans le tableur",
+      "consigne": "Écris les formules et leurs résultats.",
+      "enonce": "**Situation.** Les cellules B2 à B6 contiennent les notes 8, 12, 15, 9 et 16.\n\n1. Écris la formule de la moyenne de ces notes et donne son résultat.\n2. Écris la formule de l’étendue avec MAX et MIN et donne son résultat. Quelle formule compte le nombre de notes ?\n3. La cellule C2 contient =B2+B3. On la recopie une ligne plus bas dans C3. Que devient-elle ?",
+      "bareme": [
+        {
+          "critere": "=MOYENNE(B2:B6) donne 12",
+          "points": 7
+        },
+        {
+          "critere": "=MAX(B2:B6)−MIN(B2:B6) donne 8 ; =NB(B2:B6) donne 5",
+          "points": 7
+        },
+        {
+          "critere": "La formule devient =B3+B4 : les références se décalent",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. **=MOYENNE(B2:B6)** : (8 + 12 + 15 + 9 + 16) ÷ 5 = 60 ÷ 5 = **12**.\n\n2. **=MAX(B2:B6)−MIN(B2:B6)** donne 16 − 8 = **8**, l’étendue. **=NB(B2:B6)** compte les valeurs et donne **5**.\n\n3. Les références relatives se décalent à la recopie : **=B2+B3** devient **=B3+B4** dans la cellule C3."
+    },
+    {
+      "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+      "difficulte": 3,
+      "titre": "Le tableau des effectifs",
+      "consigne": "Rédige avec les formules et explique le rôle des dollars.",
+      "enonce": "**Situation.** Dans un tableur, les cellules B2 à B5 contiennent les effectifs 4, 8, 5 et 3. On veut calculer l’effectif total dans B6, puis les fréquences dans la colonne C.\n\n1. Écris la formule de B6 et donne son résultat.\n2. Écris la formule de la fréquence en C2, pensée pour être recopiée vers le bas, et explique le rôle des dollars.\n3. Donne les valeurs des fréquences en C2 à C5 et vérifie leur somme.\n4. Quelle vérification faut-il faire avant de faire confiance à toute la colonne ?",
+      "bareme": [
+        {
+          "critere": "B6 : =SOMME(B2:B5) donne 20",
+          "points": 4
+        },
+        {
+          "critere": "C2 : =B2/$B$6 ; les dollars figent la référence du total à la recopie",
+          "points": 6
+        },
+        {
+          "critere": "Fréquences 0,2 ; 0,4 ; 0,25 ; 0,15 de somme 1",
+          "points": 5
+        },
+        {
+          "critere": "Vérifier une valeur à la main avant de faire confiance à la colonne",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. **=SOMME(B2:B5)** donne 4 + 8 + 5 + 3 = **20**.\n\n2. **=B2/$B$6**. Les dollars rendent la référence **absolue** : à la recopie, B2 devient B3, B4, B5 (elle se décale) mais $B$6 reste figée sur le total. Sans dollars, B6 deviendrait B7, une cellule vide, et les résultats seraient faux.\n\n3. Fréquences : 4 ÷ 20 = **0,2** ; 8 ÷ 20 = **0,4** ; 5 ÷ 20 = **0,25** ; 3 ÷ 20 = **0,15**. Somme : 0,2 + 0,4 + 0,25 + 0,15 = **1**, soit 100 %.\n\n4. Avant de faire confiance à une colonne entière de résultats, on **vérifie une valeur à la main** : un calcul faux peut sembler parfaitement plausible."
+    },
+    {
+      "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+      "difficulte": 1,
+      "titre": "Le lancer de dé",
+      "consigne": "Donne chaque probabilité sous forme de fraction irréductible.",
+      "enonce": "**Situation.** On lance un dé équilibré à six faces numérotées de 1 à 6.\n\n1. Quelle est la probabilité d’obtenir un 6 ?\n2. Quelle est la probabilité d’obtenir un nombre impair ?\n3. Quelle est la probabilité d’obtenir un nombre supérieur à 4 ?",
+      "bareme": [
+        {
+          "critere": "P(6) = 1/6",
+          "points": 6
+        },
+        {
+          "critere": "P(impair) = 3/6 = 1/2",
+          "points": 7
+        },
+        {
+          "critere": "P(supérieur à 4) = 2/6 = 1/3, avec les issues 5 et 6",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "Toutes les faces ont la même chance : c’est une situation d’équiprobabilité, P = issues favorables ÷ issues possibles (6 possibles).\n\n1. Une seule issue favorable : P(6) = **1/6**.\n\n2. Les nombres impairs sont 1, 3 et 5 : P = 3/6 = **1/2**.\n\n3. Les nombres supérieurs à 4 sont 5 et 6 : P = 2/6 = **1/3**."
+    },
+    {
+      "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+      "difficulte": 2,
+      "titre": "Le sac de jetons",
+      "consigne": "Justifie avec le nombre d’issues favorables et possibles.",
+      "enonce": "**Situation.** Un sac contient 10 jetons indiscernables au toucher : 5 rouges, 3 bleus et 2 verts. On tire un jeton au hasard.\n\n1. Quelle est la probabilité de tirer un jeton rouge ?\n2. Quelle est la probabilité de tirer un jeton bleu ?\n3. Quelle est la probabilité de ne pas tirer un jeton vert ? Explique avec l’événement contraire.",
+      "bareme": [
+        {
+          "critere": "P(rouge) = 5/10 = 1/2",
+          "points": 6
+        },
+        {
+          "critere": "P(bleu) = 3/10",
+          "points": 7
+        },
+        {
+          "critere": "P(non vert) = 1 − 2/10 = 8/10 = 4/5",
+          "points": 7
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. 5 issues favorables sur 10 : P(rouge) = 5/10 = **1/2**.\n\n2. 3 issues favorables sur 10 : P(bleu) = **3/10**.\n\n3. L’événement contraire de « ne pas tirer un vert » est « tirer un vert », de probabilité 2/10. Donc P(non vert) = 1 − 2/10 = 8/10 = **4/5**. On retrouve le même résultat en comptant les 5 + 3 = 8 jetons non verts."
+    },
+    {
+      "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+      "difficulte": 3,
+      "titre": "La roue de la chance",
+      "consigne": "Rédige en distinguant probabilité et fréquence.",
+      "enonce": "**Situation.** Une roue est partagée en 8 secteurs identiques : 1 doré, 3 rouges et 4 bleus. On la fait tourner et on note la couleur du secteur désigné.\n\n1. Quelle est la probabilité d’obtenir le secteur doré ?\n2. Quelle est la probabilité d’obtenir un secteur rouge ou doré ? Et de ne pas obtenir un secteur bleu ?\n3. Sur 40 tours, le doré sort 7 fois. Calcule la fréquence observée et compare-la à la probabilité. Comment l’expliques-tu ?\n4. Le doré n’est pas sorti pendant 5 tours de suite. Est-il plus probable au tour suivant ?",
+      "bareme": [
+        {
+          "critere": "P(doré) = 1/8",
+          "points": 4
+        },
+        {
+          "critere": "P(rouge ou doré) = 4/8 = 1/2 ; P(non bleu) = 1 − 4/8 = 1/2",
+          "points": 4
+        },
+        {
+          "critere": "Fréquence 7/40 = 0,175 contre 0,125 ; elles se rapprochent avec un grand nombre d’essais",
+          "points": 6
+        },
+        {
+          "critere": "Non : la roue n’a pas de mémoire, la probabilité reste 1/8",
+          "points": 6
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. Un secteur doré sur 8, tous de même taille : **P(doré) = 1/8**.\n\n2. Rouge ou doré : 3 + 1 = 4 secteurs sur 8, soit **1/2**. Ne pas obtenir un bleu : 1 − 4/8 = **1/2** (les 4 secteurs non bleus).\n\n3. La fréquence observée est 7/40 = **0,175**, tandis que la probabilité est 1/8 = 0,125. Sur peu d’essais, fréquence et probabilité ne coïncident pas. Plus on répète l’expérience, plus la fréquence **se rapproche** de la probabilité (loi des grands nombres).\n\n4. **Non** : la roue n’a pas de mémoire. Même après 5 tours sans doré, la probabilité reste **1/8** au tour suivant."
+    },
+    {
+      "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+      "difficulte": 1,
+      "titre": "Le prix des pommes",
+      "consigne": "Utilise la méthode de ton choix et explique-la.",
+      "enonce": "**Situation.** 4 kg de pommes coûtent 10 €. Le prix est proportionnel à la masse.\n\n1. Combien coûtent 12 kg de pommes ?\n2. Combien coûtent 2 kg de pommes ?\n3. Quel est le prix d’un kilogramme (le coefficient de proportionnalité) ?",
+      "bareme": [
+        {
+          "critere": "12 kg coûtent 30 € (linéarité : masse × 3, prix × 3)",
+          "points": 7
+        },
+        {
+          "critere": "2 kg coûtent 5 € (moitié de la masse, moitié du prix)",
+          "points": 6
+        },
+        {
+          "critere": "Prix du kilogramme : 10 ÷ 4 = 2,5 €",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. 12 = 4 × 3 : la masse est multipliée par 3, le prix aussi. 10 × 3 = **30 €**.\n\n2. 2 kg est la moitié de 4 kg : le prix est divisé par 2, 10 ÷ 2 = **5 €**.\n\n3. Le coefficient est le prix d’un kilogramme : 10 ÷ 4 = **2,5 € par kg**. On retrouve 12 × 2,5 = 30 € et 2 × 2,5 = 5 €."
+    },
+    {
+      "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+      "difficulte": 2,
+      "titre": "La recette pour dix personnes",
+      "consigne": "Justifie avec le produit en croix ou le coefficient.",
+      "enonce": "**Situation.** Une recette pour 4 personnes demande 300 g de farine et 120 g de beurre. Les quantités sont proportionnelles au nombre de personnes.\n\n1. Quelle quantité de farine faut-il pour 10 personnes ?\n2. Quelle quantité de beurre faut-il pour 10 personnes ?\n3. Quelle quantité de farine faut-il pour 6 personnes ?",
+      "bareme": [
+        {
+          "critere": "Farine pour 10 personnes : 300 × 10 ÷ 4 = 750 g",
+          "points": 7
+        },
+        {
+          "critere": "Beurre pour 10 personnes : 120 × 10 ÷ 4 = 300 g",
+          "points": 7
+        },
+        {
+          "critere": "Farine pour 6 personnes : 300 × 6 ÷ 4 = 450 g",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Produit en croix : 4 × x = 300 × 10, donc x = 3 000 ÷ 4 = **750 g** de farine. (Avec le coefficient : 300 ÷ 4 = 75 g par personne, 75 × 10 = 750.)\n\n2. 120 ÷ 4 = 30 g de beurre par personne, donc 30 × 10 = **300 g** de beurre.\n\n3. 75 g de farine par personne, donc 75 × 6 = **450 g** de farine. Vérification : plus de personnes donne plus de farine, 450 g est compris entre 300 g (4 personnes) et 750 g (10 personnes)."
+    },
+    {
+      "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+      "difficulte": 3,
+      "titre": "Trois méthodes et un piège",
+      "consigne": "Rédige en précisant la méthode utilisée.",
+      "enonce": "**Situation.** 7 cahiers coûtent 10,50 €. Le prix est proportionnel au nombre de cahiers. Par ailleurs, une salle de sport propose un tarif : 5 € d’abonnement plus 2 € par entrée.\n\n1. Calcule le prix d’un cahier (passage à l’unité), puis le prix de 12 cahiers.\n2. Calcule le prix de 9 cahiers avec un produit en croix.\n3. Avec le tarif de la salle de sport, calcule le prix de 3 entrées et de 6 entrées.\n4. Ce tarif est-il proportionnel au nombre d’entrées ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Un cahier 1,5 € ; 12 cahiers 18 €",
+          "points": 4
+        },
+        {
+          "critere": "Produit en croix : 7 × x = 10,5 × 9, donc x = 13,5 €",
+          "points": 5
+        },
+        {
+          "critere": "3 entrées : 11 € et 6 entrées : 17 €",
+          "points": 5
+        },
+        {
+          "critere": "Non proportionnel : 11 × 2 = 22, différent de 17",
+          "points": 6
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. 10,50 ÷ 7 = **1,50 €** le cahier, donc 12 cahiers : 12 × 1,50 = **18 €**.\n\n2. Produit en croix : 7 × x = 10,50 × 9 = 94,50, donc x = 94,50 ÷ 7 = **13,50 €** (contrôle : 9 × 1,50 = 13,50).\n\n3. 3 entrées : 5 + 3 × 2 = **11 €**. 6 entrées : 5 + 6 × 2 = **17 €**.\n\n4. Le tarif **n’est pas proportionnel** : 6 entrées est le double de 3 entrées, or le prix ne double pas (11 × 2 = 22 mais on paie 17 €). L’abonnement fixe casse la proportionnalité : un produit en croix donnerait ici un résultat faux."
+    },
+    {
+      "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+      "difficulte": 1,
+      "titre": "Calculer un pourcentage",
+      "consigne": "Écris le calcul et le résultat.",
+      "enonce": "**Situation.** Calcule mentalement en posant ton raisonnement.\n\n1. Calcule 25 % de 80 €.\n2. Calcule 10 % de 250 €.\n3. Calcule 50 % de 36 kg.",
+      "bareme": [
+        {
+          "critere": "25 % de 80 = 20 € (80 ÷ 4)",
+          "points": 6
+        },
+        {
+          "critere": "10 % de 250 = 25 € (250 ÷ 10)",
+          "points": 7
+        },
+        {
+          "critere": "50 % de 36 = 18 kg (36 ÷ 2)",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. 25 % = 1/4 : 80 ÷ 4 = **20 €**.\n\n2. 10 % = 1/10 : 250 ÷ 10 = **25 €**.\n\n3. 50 % = 1/2 : 36 ÷ 2 = **18 kg**.\n\nOn peut aussi multiplier par le coefficient : 80 × 0,25 = 20 ; 250 × 0,10 = 25 ; 36 × 0,50 = 18."
+    },
+    {
+      "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+      "difficulte": 2,
+      "titre": "Les soldes",
+      "consigne": "Justifie avec les coefficients ou les pourcentages.",
+      "enonce": "**Situation.** Pendant les soldes, un jean à 60 € est réduit de 20 % et un sweat à 45 € est réduit de 10 %.\n\n1. Calcule le prix du jean soldé.\n2. Calcule le prix du sweat soldé.\n3. Calcule le prix total des deux articles soldés et l’économie réalisée.",
+      "bareme": [
+        {
+          "critere": "Jean : 60 × 0,80 = 48 €",
+          "points": 7
+        },
+        {
+          "critere": "Sweat : 45 × 0,90 = 40,50 €",
+          "points": 7
+        },
+        {
+          "critere": "Total 88,50 € et économie 16,50 €",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. Réduction de 20 % : coefficient 1 − 0,20 = 0,80. 60 × 0,80 = **48 €**.\n\n2. Réduction de 10 % : coefficient 0,90. 45 × 0,90 = **40,50 €**.\n\n3. Total soldé : 48 + 40,50 = **88,50 €**. Prix avant soldes : 60 + 45 = 105 €. Économie : 105 − 88,50 = **16,50 €**."
+    },
+    {
+      "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+      "difficulte": 3,
+      "titre": "Quatre problèmes de pourcentages",
+      "consigne": "Rédige chaque réponse avec une phrase de conclusion.",
+      "enonce": "**Situation.** Voici quatre questions.\n\n1. Dans une classe de 25 élèves, il y a 15 filles. Quel pourcentage de la classe représentent-elles ?\n2. Dans un club, 12 élèves représentent 40 % des adhérents. Combien y a-t-il d’adhérents ?\n3. Un prix augmente de 10 %, puis de nouveau de 10 %. Par quel coefficient est-il multiplié ? Est-ce une hausse de 20 % ? Justifie.\n4. Un article à 50 € augmente de 20 %. Quel est son nouveau prix ?",
+      "bareme": [
+        {
+          "critere": "Filles : 15 ÷ 25 = 0,6 = 60 %",
+          "points": 4
+        },
+        {
+          "critere": "Adhérents : 12 ÷ 0,40 = 30",
+          "points": 4
+        },
+        {
+          "critere": "Coefficient 1,1 × 1,1 = 1,21, soit +21 % et non +20 %",
+          "points": 6
+        },
+        {
+          "critere": "Nouveau prix : 50 × 1,2 = 60 €",
+          "points": 6
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. (partie ÷ tout) × 100 : 15 ÷ 25 = 0,6, soit **60 %** de la classe.\n\n2. On cherche le tout : 12 ÷ 0,40 = **30 adhérents**.\n\n3. Chaque hausse multiplie par 1,1. Les coefficients se multiplient : 1,1 × 1,1 = **1,21**, soit une hausse de **21 %**. Les pourcentages successifs ne s’additionnent pas : la deuxième hausse s’applique sur un prix déjà augmenté (avec 100 € : 110 € puis 121 €).\n\n4. Augmenter de 20 %, c’est multiplier par 1,20 : 50 × 1,20 = **60 €**."
+    },
+    {
+      "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+      "difficulte": 1,
+      "titre": "Lire une carte",
+      "consigne": "Convertis toutes les distances dans la même unité avant de calculer.",
+      "enonce": "**Situation.** Une carte est à l’échelle 1/25 000.\n\n1. Deux villages sont distants de 5 cm sur la carte. Quelle est la distance réelle en km ?\n2. Deux ponts sont distants de 6 cm sur la carte. Quelle est la distance réelle en km ?\n3. Une randonnée de 2,5 km doit être dessinée sur la carte. Quelle longueur aura-t-elle sur la carte ?",
+      "bareme": [
+        {
+          "critere": "5 cm : 125 000 cm réels, soit 1,25 km",
+          "points": 6
+        },
+        {
+          "critere": "6 cm : 150 000 cm réels, soit 1,5 km",
+          "points": 7
+        },
+        {
+          "critere": "2,5 km = 250 000 cm ; 250 000 ÷ 25 000 = 10 cm",
+          "points": 7
+        }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Distance réelle : 5 × 25 000 = 125 000 cm = 1 250 m = **1,25 km**.\n\n2. 6 × 25 000 = 150 000 cm = 1 500 m = **1,5 km**.\n\n3. 2,5 km = 2 500 m = 250 000 cm. Sur la carte : 250 000 ÷ 25 000 = **10 cm**. (Piège : 1 km = 100 000 cm et non 1 000 cm.)"
+    },
+    {
+      "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+      "difficulte": 2,
+      "titre": "Partager selon un ratio",
+      "consigne": "Suis les étapes du partage en parts.",
+      "enonce": "**Situation.** Deux amis, Élio et Nora, se partagent 84 € selon le ratio 3 : 4 (3 parts pour Élio, 4 parts pour Nora).\n\n1. Combien y a-t-il de parts en tout ? Quelle est la valeur d’une part ?\n2. Quelle somme reçoit chacun ?\n3. Quelle fraction du total reçoit Élio ? Vérifie ton résultat.",
+      "bareme": [
+        {
+          "critere": "7 parts en tout, une part vaut 12 €",
+          "points": 7
+        },
+        {
+          "critere": "Élio 36 € et Nora 48 €",
+          "points": 7
+        },
+        {
+          "critere": "Élio reçoit 3/7 du total ; vérification 36 + 48 = 84",
+          "points": 6
+        }
+      ],
+      "dureeMin": 9,
+      "corrige": "1. 3 + 4 = **7 parts**. Une part vaut 84 ÷ 7 = **12 €**.\n\n2. Élio : 3 × 12 = **36 €**. Nora : 4 × 12 = **48 €**.\n\n3. Élio reçoit **3/7** du total (le dénominateur est le total des parts, pas 4). Vérification : 36 + 48 = 84 €, et 3/7 de 84 = 84 ÷ 7 × 3 = 36 €."
+    },
+    {
+      "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+      "difficulte": 3,
+      "titre": "Échelles et ratios",
+      "consigne": "Rédige chaque calcul avec ses conversions.",
+      "enonce": "**Situation.** Sur un plan, un trajet mesure 8 cm alors qu’il mesure 2 km dans la réalité.\n\n1. Calcule l’échelle du plan et écris-la sous la forme 1/…\n2. Sur ce plan, un autre trajet mesure 12 cm. Quelle est sa longueur réelle en km ?\n3. Trois personnes se partagent 180 € selon le ratio 1 : 2 : 3. Quelle somme reçoit chacune ?\n4. Un insecte est dessiné à l’échelle 5 (agrandissement) et mesure 6 cm sur le dessin. Quelle est sa taille réelle ?",
+      "bareme": [
+        {
+          "critere": "Échelle : 8 ÷ 200 000 = 1/25 000",
+          "points": 5
+        },
+        {
+          "critere": "12 cm sur le plan : 300 000 cm, soit 3 km",
+          "points": 5
+        },
+        {
+          "critere": "6 parts de 30 € : 30 €, 60 € et 90 €",
+          "points": 5
+        },
+        {
+          "critere": "Taille réelle : 6 ÷ 5 = 1,2 cm",
+          "points": 5
+        }
+      ],
+      "dureeMin": 14,
+      "corrige": "1. On convertit 2 km = 200 000 cm. Échelle = distance sur le plan ÷ distance réelle = 8 ÷ 200 000 = 1/25 000. L’échelle est **1/25 000**.\n\n2. 12 × 25 000 = 300 000 cm = 3 000 m = **3 km**.\n\n3. Nombre de parts : 1 + 2 + 3 = 6. Une part : 180 ÷ 6 = 30 €. Les trois personnes reçoivent **30 €, 60 € et 90 €** (vérification : 30 + 60 + 90 = 180).\n\n4. L’échelle 5 est supérieure à 1 : c’est un **agrandissement**. La taille réelle est 6 ÷ 5 = **1,2 cm**."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "difficulte": 1,
+      "titre": "Charger un condensateur",
+      "consigne": "Réponds à chaque question en donnant la relation utilisée, le calcul et l'unité.",
+      "enonce": "Un condensateur de capacité C = 100 µF, initialement déchargé, est chargé à travers une résistance R = 10 kΩ par un générateur de tension E = 5,0 V.\n\n1. Calcule la constante de temps τ du circuit. Vérifie que R × C est bien homogène à un temps.\n2. Quelle est la tension aux bornes du condensateur à la date t = τ ? Au bout de combien de temps le régime permanent est-il pratiquement atteint ?\n3. En régime permanent, calcule la charge q du condensateur et l'énergie qu'il stocke.\n4. Quelle est alors l'intensité du courant dans le circuit ? Justifie.",
+      "bareme": [
+        { "critere": "τ = R × C = 1,0 s avec conversions justes et homogénéité (Ω × F = s)", "points": 5 },
+        { "critere": "u(τ) ≈ 3,2 V (63 % de E) et régime permanent vers 5τ = 5 s", "points": 5 },
+        { "critere": "q = C × E = 5,0 × 10⁻⁴ C et énergie ½ C u² = 1,25 × 10⁻³ J", "points": 6 },
+        { "critere": "i = 0 en régime permanent justifié par i = C du/dt (interrupteur ouvert)", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. τ = R × C = 10 × 10³ Ω × 100 × 10⁻⁶ F = **1,0 s**. Le produit Ω × F est homogène à des secondes : τ est bien un temps.\n2. À t = τ, la tension a atteint **63 %** de sa valeur finale : u(τ) = 0,63 × 5,0 ≈ **3,2 V** (exactement E(1 − e⁻¹) ≈ 3,16 V). Le régime permanent est pratiquement atteint à **5τ = 5 s**.\n3. En régime permanent, u = E = 5,0 V. q = C × u = 100 × 10⁻⁶ × 5,0 = **5,0 × 10⁻⁴ C**. Énergie : ½ C u² = 0,5 × 100 × 10⁻⁶ × 5,0² = **1,25 × 10⁻³ J**.\n4. En régime permanent, u ne varie plus : du/dt = 0, donc i = C × du/dt = **0**. Le condensateur se comporte comme un **interrupteur ouvert**."
+    },
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "difficulte": 2,
+      "titre": "Le flash de l'appareil photo de Noé",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque calcul (relation, application numérique, unité).",
+      "enonce": "**Situation.** Le flash de l'appareil photo de Noé contient un condensateur de capacité C = 150 µF. La pile le charge, à travers un circuit équivalent à une résistance R = 20 kΩ, jusqu'à une tension de 300 V. Il se décharge ensuite brusquement dans la lampe du flash.\n\n1. Calcule la constante de temps de la charge. Combien de temps Noé doit-il attendre, environ, avant que le flash soit prêt ?\n2. Calcule l'énergie stockée dans le condensateur chargé sous 300 V.\n3. La décharge dans la lampe a une constante de temps τ' = 1,0 ms. Calcule la résistance r équivalente à la lampe.\n4. Pendant la décharge, u(t) = 300 × e^(−t/τ'). Quelle tension reste-t-il aux bornes du condensateur à t = τ' ?\n5. Explique pourquoi on utilise un condensateur plutôt que de brancher la pile directement sur la lampe.",
+      "bareme": [
+        { "critere": "τ = 3,0 s et attente d'environ 5τ = 15 s", "points": 5 },
+        { "critere": "Énergie ½ C u² = 6,75 J", "points": 5 },
+        { "critere": "r = τ'/C ≈ 6,7 Ω et u(τ') ≈ 110 V (37 % de 300 V)", "points": 6 },
+        { "critere": "Rôle du condensateur : charge lente par la pile, restitution très rapide de l'énergie", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. τ = R × C = 20 × 10³ × 150 × 10⁻⁶ = **3,0 s**. Le régime permanent est pratiquement atteint à 5τ : Noé doit attendre environ **15 s**.\n2. E = ½ C u² = 0,5 × 150 × 10⁻⁶ × 300² = 0,5 × 150 × 10⁻⁶ × 90 000 = **6,75 J**.\n3. τ' = r × C, donc r = τ'/C = 1,0 × 10⁻³ / 150 × 10⁻⁶ ≈ **6,7 Ω**.\n4. À t = τ', il reste **37 %** de la tension initiale : u(τ') = 300 × e⁻¹ ≈ 0,37 × 300 ≈ **110 V**.\n5. La pile ne peut fournir l'énergie que lentement. Le condensateur **accumule** cette énergie pendant plusieurs secondes (τ = 3 s), puis la **restitue très vite**, en quelques millisecondes (τ' = 1 ms, 3 000 fois plus court) : c'est ce qui produit l'éclair intense du flash."
+    },
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "difficulte": 3,
+      "titre": "Un capteur de niveau dans une cuve",
+      "consigne": "Traite les deux parties en justifiant chaque étape. Les résultats numériques seront donnés avec deux ou trois chiffres significatifs.",
+      "enonce": "**Partie A – L'équation de charge.** Un dipôle RC est alimenté par une tension constante E ; le condensateur est déchargé à t = 0.\n\n1. À partir de q = C × u et i = C × du/dt, et de la loi des mailles E = R × i + u, établis l'équation RC × du/dt + u = E.\n2. Vérifie que u(t) = E(1 − e^(−t/RC)) est solution et respecte la condition initiale.\n3. Montre que la tangente à l'origine de la courbe de u a pour équation y = (E/τ) × t, et qu'elle coupe l'asymptote u = E à t = τ.\n\n**Partie B – Le capteur.** Dans une cuve de hauteur H, deux armatures verticales forment un condensateur. Le liquide, en remplaçant l'air entre elles, fait varier la capacité. Le fabricant indique :\n\n> C = 200 + 360 × (h / H), avec C en pF et h la hauteur de liquide.\n\nLe condensateur est chargé à travers une résistance R = 1,0 MΩ, et un circuit mesure la constante de temps.\n\n4. Calcule τ pour la cuve vide, puis pleine.\n5. Une mesure donne τ = 0,38 ms. Détermine la capacité, puis la fraction h/H de remplissage.\n6. Explique en une phrase le principe de ce capteur. Quel autre système étudié dans l'année obéit à la même loi mathématique que la décharge d'un condensateur ?",
+      "bareme": [
+        { "critere": "Équation différentielle établie à partir des relations du condensateur et de la loi des mailles", "points": 4 },
+        { "critere": "Solution vérifiée (dérivée, somme égale à E, u(0) = 0)", "points": 4 },
+        { "critere": "Tangente à l'origine de pente E/τ, intersection avec u = E à t = τ", "points": 3 },
+        { "critere": "τ vide = 0,20 ms, τ pleine = 0,56 ms ; C = 380 pF et h/H = 0,50", "points": 6 },
+        { "critere": "Principe : le niveau change C, donc τ, durée mesurable ; analogie avec la décroissance radioactive ou le refroidissement", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Loi des mailles : E = R × i + u, avec i = C × du/dt : E = RC × du/dt + u, soit **RC × du/dt + u = E**.\n2. u(t) = E − E e^(−t/RC), donc du/dt = (E/RC) × e^(−t/RC). Alors RC × du/dt = E e^(−t/RC) et RC × du/dt + u = E e^(−t/RC) + E − E e^(−t/RC) = **E** ✓. À t = 0 : u(0) = E(1 − 1) = **0** ✓ (condensateur déchargé).\n3. La pente de la tangente à l'origine vaut du/dt(0) = E/RC = **E/τ** ; elle passe par l'origine : y = (E/τ) × t. Elle coupe l'asymptote u = E quand (E/τ) × t = E, soit **t = τ**.\n4. Cuve vide (h = 0) : C = 200 pF, τ = 1,0 × 10⁶ × 200 × 10⁻¹² = **2,0 × 10⁻⁴ s = 0,20 ms**. Cuve pleine (h = H) : C = 560 pF, τ = **0,56 ms**.\n5. C = τ/R = 0,38 × 10⁻³ / 1,0 × 10⁶ = 3,8 × 10⁻¹⁰ F = **380 pF**. Puis 380 = 200 + 360 × (h/H), d'où h/H = 180/360 = **0,50** : la cuve est **à moitié pleine**.\n6. Le liquide remplace l'air entre les armatures : il **fait varier C, donc τ = RC, donc une durée mesurable** qui renseigne sur le niveau. La décharge u = E e^(−t/τ) suit la même loi que la **décroissance radioactive** (ou le **refroidissement d'un corps**) : une analogie formelle, une seule équation."
+    }
+  ]
+}

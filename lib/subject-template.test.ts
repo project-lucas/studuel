@@ -9,12 +9,11 @@ import {
   crowns,
   exerciceBadge,
   exerciceMeta,
+  fichesNumerotees,
   groupSupports,
   type SupportChip,
   estimateMinutes,
   examBannerOnTop,
-  flashcardsBadge,
-  flashcardsMeta,
   catalogIsStale,
   chapterUnit,
   disciplinesOf,
@@ -274,6 +273,7 @@ const row = (
   discipline: null,
   aQuiz: true,
   quizTeste: false,
+  xpRestant: 135,
 })
 
 describe('groupChaptersByTheme', () => {
@@ -568,17 +568,6 @@ describe('quizMeta', () => {
   })
 })
 
-describe('flashcardsMeta', () => {
-  test('cartes seules', () => {
-    expect(flashcardsMeta(12, 0)).toBe('12 cartes')
-    expect(flashcardsMeta(1, 0)).toBe('1 carte')
-  })
-
-  test('avec la file à revoir', () => {
-    expect(flashcardsMeta(12, 4)).toBe('12 cartes · 4 à revoir')
-  })
-})
-
 describe('quizBadge', () => {
   test('le score quand le quiz a été joué', () => {
     expect(quizBadge({ score: 7, total: 10 }, 10)).toBe('7/10')
@@ -590,21 +579,6 @@ describe('quizBadge', () => {
 
   test('rien à annoncer sans question', () => {
     expect(quizBadge(null, 0)).toBeNull()
-  })
-})
-
-describe('flashcardsBadge', () => {
-  test('la file du jour passe devant le paquet', () => {
-    expect(flashcardsBadge(12, 4)).toBe('4 à revoir')
-  })
-
-  test('le paquet quand rien n’est dû', () => {
-    expect(flashcardsBadge(12, 0)).toBe('12 cartes')
-    expect(flashcardsBadge(1, 0)).toBe('1 carte')
-  })
-
-  test('rien à annoncer sans carte', () => {
-    expect(flashcardsBadge(0, 0)).toBeNull()
   })
 })
 
@@ -620,7 +594,7 @@ describe('exerciceMeta / exerciceBadge — la note du faux contrôle', () => {
   })
 })
 
-describe('groupSupports — trois verbes, trois groupes', () => {
+describe('groupSupports — deux verbes, deux groupes', () => {
   const chip = (kind: SupportChip['kind']): SupportChip => ({
     kind,
     label: kind,
@@ -630,20 +604,20 @@ describe('groupSupports — trois verbes, trois groupes', () => {
     done: false,
   })
 
-  test('range chaque tuile sous son verbe, dans l’ordre apprendre → mémoriser → se tester', () => {
+  test('range chaque tuile sous son verbe, dans l’ordre apprendre → se tester', () => {
     const groupes = groupSupports([
       chip('quiz'),
       chip('cours'),
       chip('ia'),
-      chip('flashcards'),
       chip('carte'),
       chip('exercice'),
       chip('erreurs'),
     ])
-    expect(groupes.map((g) => g.label)).toEqual(['Apprendre', 'Mémoriser', 'Se tester'])
+    // « Mémoriser » est parti avec les flashcards (01/10/2026) : il n'aurait
+    // plus coiffé qu'une tuile. « Mes erreurs » se range avec les tests.
+    expect(groupes.map((g) => g.label)).toEqual(['Apprendre', 'Se tester'])
     expect(groupes[0].chips.map((c) => c.kind)).toEqual(['cours', 'carte'])
-    expect(groupes[1].chips.map((c) => c.kind)).toEqual(['flashcards', 'erreurs'])
-    expect(groupes[2].chips.map((c) => c.kind)).toEqual(['quiz', 'ia', 'exercice'])
+    expect(groupes[1].chips.map((c) => c.kind)).toEqual(['quiz', 'ia', 'exercice', 'erreurs'])
   })
 
   test('un groupe vide n’apparaît pas', () => {
@@ -795,5 +769,13 @@ describe('le quiz du chapitre s’ouvre quand chaque fiche a été testée', () 
     const acces = accesQuizChapitre([fiche(false, false)])
     expect(acces.debloque).toBe(false)
     expect(phraseAccesQuiz(acces)).toBe('Aucune fiche de ce chapitre n’a encore de quiz.')
+  })
+})
+
+describe('fichesNumerotees', () => {
+  test('ne numérote pas les notions de philosophie, qui n’ont pas d’ordre', () => {
+    expect(fichesNumerotees('philosophie')).toBe(false)
+    expect(fichesNumerotees('maths')).toBe(true)
+    expect(fichesNumerotees('francais')).toBe(true)
   })
 })

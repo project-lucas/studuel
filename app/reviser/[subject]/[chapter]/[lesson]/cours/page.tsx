@@ -3,6 +3,7 @@ import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
+import { typographie } from '@/lib/typographie'
 import { loadLessonContext } from '../data'
 import { loadChapterSupports } from '../../supports'
 
@@ -61,8 +62,8 @@ export default async function CoursPage({
         className="entete-cours"
         retour={{ fallback: `/reviser/${subject.slug}` }}
         droite={<LessonPrintButton />}
-        titre={chapter.title}
-        sousTitre={sousTitre}
+        titre={typographie(chapter.title)}
+        sousTitre={typographie(sousTitre)}
       />
 
       <div className="mt-6">
@@ -77,10 +78,10 @@ export default async function CoursPage({
           />
 
           {/* La suite, sur place. Le cours ne se terminait que par « Tester
-              mes connaissances » : pour les flashcards, la fiche ou
+              mes connaissances » : pour la fiche ou
               l'exercice du MÊME chapitre, il fallait remonter à la page
               matière et changer d'onglet. Les supports sont ici, rangés sous
-              leurs trois verbes et calés sur la leçon qu'on vient de lire. */}
+              leurs verbes et calés sur la leçon qu'on vient de lire. */}
           {supports.length > 0 ? (
             <section className="mt-8" aria-labelledby="suite-du-chapitre">
               <h2

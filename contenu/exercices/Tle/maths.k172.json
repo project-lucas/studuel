@@ -1,0 +1,4099 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le trajet du drone",
+      "competence": "lire-graphique",
+      "situation": "Un drone suit un parcours : sa hauteur f(x), en mètres, est tracée en fonction du temps x, en secondes. À l’instant 2, le pilote change de programme. Le point plein A appartient à la courbe ; le point B, lui, est « vide » (il n’appartient pas à la courbe).",
+      "documents": [
+        {
+          "id": "c",
+          "type": "schema",
+          "titre": "La hauteur du drone",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                210
+              ],
+              "a": [
+                329.8,
+                210
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                210
+              ],
+              "a": [
+                40,
+                34
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                86,
+                207
+              ],
+              "a": [
+                86,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 86,
+              "y": 227,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                132,
+                207
+              ],
+              "a": [
+                132,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 132,
+              "y": 227,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                178,
+                207
+              ],
+              "a": [
+                178,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 227,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                224,
+                207
+              ],
+              "a": [
+                224,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 224,
+              "y": 227,
+              "texte": "4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                270,
+                207
+              ],
+              "a": [
+                270,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 227,
+              "texte": "5",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                316,
+                207
+              ],
+              "a": [
+                316,
+                213
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 316,
+              "y": 227,
+              "texte": "6",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                170
+              ],
+              "a": [
+                43,
+                170
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 174,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                130
+              ],
+              "a": [
+                43,
+                130
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 134,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                90
+              ],
+              "a": [
+                43,
+                90
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 94,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                50
+              ],
+              "a": [
+                43,
+                50
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 54,
+              "texte": "4",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                170
+              ],
+              "a": [
+                132,
+                90
+              ],
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                132,
+                170
+              ],
+              "a": [
+                224,
+                90
+              ],
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                224,
+                90
+              ],
+              "a": [
+                316,
+                170
+              ],
+              "epaisseur": 2
+            },
+            {
+              "forme": "cercle",
+              "cx": 132,
+              "cy": 90,
+              "r": 4.5,
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 132,
+              "cy": 170,
+              "r": 4.5,
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 132,
+              "cy": 90,
+              "r": 14,
+              "motif": "aucun",
+              "id": "haut",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 132,
+              "cy": 170,
+              "r": 14,
+              "motif": "aucun",
+              "id": "bas",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 86,
+              "cy": 130,
+              "r": 14,
+              "motif": "aucun",
+              "id": "milieu",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 224,
+              "cy": 90,
+              "r": 14,
+              "motif": "aucun",
+              "id": "coin",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 76,
+              "texte": "C",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 108,
+              "y": 80,
+              "texte": "A",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 142,
+              "y": 196,
+              "texte": "B",
+              "gras": true
+            }
+          ],
+          "source": "Courbe imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "c",
+          "enonce": "Touche les deux points entre lesquels la courbe « saute ».",
+          "reponse": [
+            "haut",
+            "bas"
+          ],
+          "aide": "La courbe se coupe en x = 2 : cherche les deux extrémités du saut.",
+          "explication": "Les points **A et B** sont les deux extrémités du saut : à gauche de 2 la courbe arrive en A, à droite elle repart de B.",
+          "multiple": true
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand x se rapproche de 2 par la droite, vers quelle valeur tend f(x) ?",
+          "reponse": 1,
+          "aide": "Regarde où repart la deuxième partie de la courbe.",
+          "explication": "La limite à droite en 2 vaut **1**."
+        },
+        {
+          "type": "choix",
+          "enonce": "La fonction f est-elle continue en 2 ?",
+          "options": [
+            "Non : les limites à gauche et à droite en 2 sont différentes, il y a un saut",
+            "Oui : f(2) existe, cela suffit pour que la fonction soit continue",
+            "Oui : la courbe est définie partout, donc elle est continue partout",
+            "Non : f n’est pas définie en 2, donc elle ne peut pas être continue"
+          ],
+          "reponse": 0,
+          "aide": "Une fonction continue a une seule limite en 2, égale à f(2).",
+          "explication": "f(2) = 3 existe, mais la limite à droite vaut 1 : les deux limites diffèrent, donc **f n’est pas continue en 2**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Au point C, la courbe fait un « coin » sans saut. Que peut-on dire de f en ce point ?",
+          "options": [
+            "f est continue en C mais pas dérivable",
+            "f est dérivable en C mais pas continue",
+            "f est continue et dérivable en C",
+            "f n’est ni continue ni dérivable en C"
+          ],
+          "reponse": 0,
+          "aide": "On peut tracer le coin sans lever le crayon, mais il n’y a pas de tangente.",
+          "explication": "On trace la courbe sans lever le crayon en C : **f est continue**. Mais la pente change brusquement (point anguleux) : elle n’est pas dérivable."
+        }
+      ]
+    },
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Combien de solutions ?",
+      "competence": "raisonner",
+      "situation": "Une fonction f est définie et continue sur [−2 ; 5]. Son tableau de valeurs aux bornes des intervalles de monotonie est donné ci-dessous. On cherche le nombre de solutions de l’équation f(x) = k selon k.",
+      "documents": [
+        {
+          "id": "tv",
+          "type": "tableau",
+          "titre": "Valeurs de f aux bornes",
+          "colonnes": [
+            "x",
+            "−2",
+            "1",
+            "5"
+          ],
+          "lignes": [
+            [
+              "f(x)",
+              "−3",
+              "4",
+              "−1"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "f est strictement croissante sur [−2 ; 1], strictement décroissante sur [1 ; 5]"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tv",
+          "enonce": "Touche la valeur du maximum de f sur [−2 ; 5].",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "f croît puis décroît : le maximum est atteint à la charnière.",
+          "explication": "f croît jusqu’en x = 1 puis décroît : son maximum est **4**, atteint en x = 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation f(x) = 0 admet-elle sur [−2 ; 5] ?",
+          "reponse": 2,
+          "aide": "Traite chaque intervalle de monotonie séparément : 0 est-il entre les valeurs aux bornes ?",
+          "explication": "Sur [−2 ; 1], 0 est compris entre −3 et 4 : une solution. Sur [1 ; 5], 0 est compris entre 4 et −1 : une solution. Au total **2** solutions."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation f(x) = −2 admet-elle sur [−2 ; 5] ?",
+          "reponse": 1,
+          "aide": "Sur chaque intervalle, demande-toi si −2 est compris entre les deux valeurs aux bornes.",
+          "explication": "Sur [−2 ; 1], −2 est entre −3 et 4 : une solution. Sur [1 ; 5], les valeurs vont de 4 à −1 : −2 n’est jamais atteint. Au total **1** solution."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation f(x) = 5 admet-elle sur [−2 ; 5] ?",
+          "reponse": 0,
+          "aide": "Compare 5 au maximum de f.",
+          "explication": "Le maximum de f est 4 : la valeur 5 n’est jamais atteinte, il y a **0** solution."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur [−2 ; 1], pourquoi la solution de f(x) = 0 est-elle unique ?",
+          "options": [
+            "f est continue et strictement croissante, et 0 est compris entre −3 et 4",
+            "f est positive sur cet intervalle, donc elle ne s’annule qu’une seule fois",
+            "f est dérivable sur cet intervalle, donc elle ne s’annule qu’une seule fois",
+            "f est décroissante sur cet intervalle, donc elle ne s’annule qu’une seule fois"
+          ],
+          "reponse": 0,
+          "aide": "Trois éléments de rédaction : continuité, stricte monotonie, encadrement de k.",
+          "explication": "C’est le théorème de la bijection : **continuité + stricte monotonie + 0 compris entre f(−2) et f(1)** donnent une solution unique."
+        }
+      ]
+    },
+    {
+      "chapitre": "991e91e7-0c1e-5823-9845-2e544670cc69",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La racine coincée par dichotomie",
+      "competence": "modeliser",
+      "situation": "On cherche la solution de x³ + x − 1 = 0 sur [0 ; 1]. Fanny la piège par dichotomie et note ses étapes dans un tableau.",
+      "documents": [
+        {
+          "id": "def",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La fonction",
+          "blocs": [
+            "f(x) = x³ + x − 1 sur [0 ; 1].",
+            "f est continue et strictement croissante (f′(x) = 3x² + 1 > 0). f(0) = −1 et f(1) = 1."
+          ]
+        },
+        {
+          "id": "dic",
+          "type": "tableau",
+          "titre": "Le suivi de Fanny",
+          "colonnes": [
+            "Étape",
+            "a",
+            "b",
+            "milieu m",
+            "f(m)"
+          ],
+          "lignes": [
+            [
+              1,
+              0,
+              1,
+              0.5,
+              "?"
+            ],
+            [
+              2,
+              0.5,
+              1,
+              0.75,
+              0.172
+            ],
+            [
+              3,
+              0.5,
+              0.75,
+              0.625,
+              "−0,131"
+            ],
+            [
+              4,
+              0.625,
+              0.75,
+              0.6875,
+              "?"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Valeurs arrondies au millième"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule f(0,5), arrondi au millième. (f(0,5) = 0,125 + 0,5 − 1)",
+          "reponse": -0.375,
+          "aide": "Calcule 0,5³ = 0,125.",
+          "explication": "f(0,5) = 0,125 + 0,5 − 1 = **−0,375**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "À l’étape 1, f(0,5) < 0 et f(1) > 0. Quel intervalle garde-t-on ?",
+          "options": [
+            "[0,5 ; 1], car f change de signe",
+            "[0 ; 0,5], car f(0) est négatif",
+            "Les deux, par prudence",
+            "[0,25 ; 0,75]"
+          ],
+          "reponse": 0,
+          "aide": "On garde la moitié où f passe d’une valeur négative à une valeur positive.",
+          "explication": "f(0,5) < 0 < f(1) : d’après le théorème des valeurs intermédiaires, la solution est dans **[0,5 ; 1]**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule f(0,6875), arrondi au millième.",
+          "reponse": 0.012,
+          "aide": "Élève 0,6875 au cube : environ 0,325.",
+          "explication": "0,6875³ ≈ 0,3250, donc f(0,6875) ≈ 0,325 + 0,6875 − 1 = **0,012**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "À l’étape 4, f(0,6875) > 0 et f(0,625) < 0. Quel est le nouvel intervalle ?",
+          "options": [
+            "[0,625 ; 0,6875]",
+            "[0,6875 ; 0,75]",
+            "[0,625 ; 0,75]",
+            "[0 ; 0,625]"
+          ],
+          "reponse": 0,
+          "aide": "La solution est entre la valeur négative et la valeur positive.",
+          "explication": "f(0,625) < 0 < f(0,6875) : la solution est dans **[0,625 ; 0,6875]**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’amplitude de l’intervalle obtenu après l’étape 4 ?",
+          "reponse": 0.0625,
+          "aide": "L’amplitude était 1 au départ ; elle est divisée par 2 à chaque étape.",
+          "explication": "Amplitude : 0,6875 − 0,625 = **0,0625**, soit 1/16.",
+          "tolerance": 0.0001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’étapes faut-il au minimum pour que l’amplitude soit inférieure à 0,001 ?",
+          "reponse": 10,
+          "aide": "Après n étapes, l’amplitude vaut 1/2ⁿ. Compare 2⁹ et 2¹⁰ à 1 000.",
+          "explication": "2⁹ = 512 < 1 000 < 2¹⁰ = 1 024 : il faut **10** étapes."
+        }
+      ]
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La courbe du logarithme",
+      "competence": "lire-graphique",
+      "situation": "Le logarithme népérien est la réciproque de l’exponentielle. Voici sa courbe, avec trois points remarquables.",
+      "documents": [
+        {
+          "id": "c",
+          "type": "schema",
+          "titre": "La courbe de ln",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                120
+              ],
+              "a": [
+                328.79999999999995,
+                120
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                220.8
+              ],
+              "a": [
+                60,
+                48.60000000000001
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                108,
+                117
+              ],
+              "a": [
+                108,
+                123
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 108,
+              "y": 137,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                156,
+                117
+              ],
+              "a": [
+                156,
+                123
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 156,
+              "y": 137,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                204,
+                117
+              ],
+              "a": [
+                204,
+                123
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 204,
+              "y": 137,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                252,
+                117
+              ],
+              "a": [
+                252,
+                123
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 252,
+              "y": 137,
+              "texte": "4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                117
+              ],
+              "a": [
+                300,
+                123
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 300,
+              "y": 137,
+              "texte": "5",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                57,
+                78
+              ],
+              "a": [
+                63,
+                78
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 52,
+              "y": 82,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                57,
+                162
+              ],
+              "a": [
+                63,
+                162
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 52,
+              "y": 166,
+              "texte": "−1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                57,
+                204
+              ],
+              "a": [
+                63,
+                204
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 52,
+              "y": 208,
+              "texte": "−2",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "chemin",
+              "d": "M64.8 216.7 L67.9 195.7 L71.0 181.7 L74.2 171.3 L77.3 162.9 L80.4 155.9 L83.5 150.0 L86.6 144.7 L89.8 140.1 L92.9 135.9 L96.0 132.1 L99.1 128.6 L102.2 125.4 L105.4 122.4 L108.5 119.6 L111.6 117.0 L114.7 114.5 L117.8 112.2 L121.0 110.0 L124.1 107.9 L127.2 105.9 L130.3 104.0 L133.4 102.1 L136.6 100.4 L139.7 98.7 L142.8 97.1 L145.9 95.5 L149.0 94.0 L152.2 92.6 L155.3 91.2 L158.4 89.9 L161.5 88.5 L164.6 87.3 L167.8 86.0 L170.9 84.8 L174.0 83.7 L177.1 82.5 L180.2 81.4 L183.4 80.4 L186.5 79.3 L189.6 78.3 L192.7 77.3 L195.8 76.3 L199.0 75.4 L202.1 74.4 L205.2 73.5 L208.3 72.6 L211.4 71.7 L214.6 70.9 L217.7 70.0 L220.8 69.2 L223.9 68.4 L227.0 67.6 L230.2 66.8 L233.3 66.1 L236.4 65.3 L239.5 64.6 L242.6 63.9 L245.8 63.2 L248.9 62.5 L252.0 61.8 L255.1 61.1 L258.2 60.4 L261.4 59.8 L264.5 59.1 L267.6 58.5 L270.7 57.9 L273.8 57.3 L277.0 56.6 L280.1 56.0 L283.2 55.5 L286.3 54.9 L289.4 54.3 L292.6 53.7 L295.7 53.2 L298.8 52.6 L301.9 52.1 L305.0 51.5 L308.2 51.0 L311.3 50.5 L314.4 50.0",
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190.47752776603417,
+                120
+              ],
+              "a": [
+                190.47752776603417,
+                78
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                78
+              ],
+              "a": [
+                190.47752776603417,
+                78
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "texte",
+              "x": 190.47752776603417,
+              "y": 112,
+              "texte": "e",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 108,
+              "cy": 120,
+              "r": 10,
+              "motif": "aucun",
+              "id": "un",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 190.47752776603417,
+              "cy": 78,
+              "r": 10,
+              "motif": "aucun",
+              "id": "e",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 84,
+              "cy": 149.1121815835177,
+              "r": 10,
+              "motif": "aucun",
+              "id": "demi",
+              "zone": true
+            }
+          ],
+          "source": "Courbe tracée d’après ln"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "c",
+          "enonce": "Touche le point où la courbe coupe l’axe des abscisses.",
+          "reponse": [
+            "un"
+          ],
+          "aide": "Cherche l’abscisse x telle que ln x = 0.",
+          "explication": "La courbe coupe l’axe des abscisses au point d’abscisse 1 : **ln 1 = 0**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis l’ordonnée du point de la courbe d’abscisse e (les pointillés t’aident).",
+          "reponse": 1,
+          "aide": "Suis le pointillé horizontal jusqu’à l’axe des ordonnées.",
+          "explication": "Le point d’abscisse e est à la hauteur **1** : ln e = 1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quand x se rapproche de 0 par valeurs positives, que fait ln x ?",
+          "options": [
+            "Il tend vers moins l’infini : l’axe des ordonnées est asymptote",
+            "Il tend vers 0, car ln x est petit quand x est lui-même petit",
+            "Il tend vers plus l’infini, car ln est croissante sur ]0 ; +∞[",
+            "Il tend vers 1, car e⁰ = 1 et ln est la réciproque de l’exponentielle"
+          ],
+          "reponse": 0,
+          "aide": "Regarde comment la courbe plonge le long de l’axe des ordonnées.",
+          "explication": "La courbe descend sans fin en se collant à l’axe des ordonnées : ln x tend vers **moins l’infini**, asymptote verticale d’équation x = 0."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le point d’abscisse 0,5 a pour ordonnée ln 0,5 = −ln 2. Donne sa valeur arrondie au centième (ln 2 ≈ 0,693).",
+          "reponse": -0.69,
+          "aide": "ln 0,5 = ln(1/2) = −ln 2.",
+          "explication": "ln 0,5 = −ln 2 ≈ **−0,69**.",
+          "tolerance": 0.01
+        }
+      ]
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les calculs de Yanis",
+      "competence": "calculer",
+      "situation": "Yanis veut exprimer des logarithmes avec seulement ln 2 et ln 3. Il a recopié trois règles dans son carnet.",
+      "documents": [
+        {
+          "id": "val",
+          "type": "tableau",
+          "titre": "Les deux valeurs connues",
+          "colonnes": [
+            "Nombre",
+            "Valeur approchée"
+          ],
+          "lignes": [
+            [
+              "ln 2",
+              0.693
+            ],
+            [
+              "ln 3",
+              1.099
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies au millième"
+        },
+        {
+          "id": "r",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le carnet de Yanis",
+          "blocs": [
+            "ln(a × b) = ln a + ln b",
+            "ln(a ÷ b) = ln a − ln b",
+            "ln(aⁿ) = n × ln a"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque logarithme à son écriture avec ln 2 et ln 3.",
+          "paires": [
+            [
+              "ln 6",
+              "ln 2 plus ln 3"
+            ],
+            [
+              "ln 8",
+              "trois fois ln 2"
+            ],
+            [
+              "ln(3/2)",
+              "ln 3 moins ln 2"
+            ],
+            [
+              "ln(1/4)",
+              "deux fois l’opposé de ln 2"
+            ]
+          ],
+          "aide": "Décompose : 6 = 2 × 3 ; 8 = 2³ ; 3/2 est un quotient ; 1/4 = 2⁻².",
+          "explication": "**ln 6 = ln 2 + ln 3** ; **ln 8 = 3 ln 2** ; **ln(3/2) = ln 3 − ln 2** ; **ln(1/4) = −2 ln 2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule ln 6 = ln 2 + ln 3, arrondi au millième.",
+          "reponse": 1.792,
+          "aide": "Additionne les deux valeurs du tableau.",
+          "explication": "0,693 + 1,099 = **1,792**.",
+          "tolerance": 0.002
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule ln 18 = ln 2 + 2 ln 3, arrondi au centième.",
+          "reponse": 2.89,
+          "aide": "Double d’abord ln 3.",
+          "explication": "ln 18 = 0,693 + 2 × 1,099 = 0,693 + 2,198 = **2,89**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces égalités : lesquelles sont vraies pour tous les réels a et b strictement positifs ?",
+          "categories": [
+            "Vraie",
+            "Fausse"
+          ],
+          "items": [
+            [
+              "ln(ab) = ln a + ln b",
+              0
+            ],
+            [
+              "ln(a + b) = ln a + ln b",
+              1
+            ],
+            [
+              "ln(a³) = 3 ln a",
+              0
+            ],
+            [
+              "ln a × ln b = ln(ab)",
+              1
+            ],
+            [
+              "ln(1/b) = −ln b",
+              0
+            ],
+            [
+              "ln(a²) = 2 + ln a",
+              1
+            ]
+          ],
+          "aide": "Le logarithme transforme un produit en somme, rien d’autre : une somme dans ln ne se découpe pas.",
+          "explication": "Les règles du carnet sont vraies (et ln(1/b) = −ln b en découle). **ln(a + b), ln(a − b) et le produit de logarithmes ne se simplifient pas ainsi.**"
+        }
+      ]
+    },
+    {
+      "chapitre": "f62292b9-7a62-50db-bb01-ac81b5857c68",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Doubler son capital",
+      "competence": "modeliser",
+      "situation": "Léa place 2 000 € à 3 % d’intérêts par an, sans jamais retirer d’argent. Son capital après n années est C(n) = 2 000 × 1,03ⁿ. Elle veut savoir quand il aura doublé, puis triplé.",
+      "documents": [
+        {
+          "id": "cap",
+          "type": "tableau",
+          "titre": "Le capital de Léa",
+          "colonnes": [
+            "Années n",
+            "0",
+            "10",
+            "20",
+            "24"
+          ],
+          "lignes": [
+            [
+              "C(n) en €",
+              "2 000",
+              "2 687,83",
+              "3 612,22",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies au centime"
+        },
+        {
+          "id": "e",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le point de méthode",
+          "blocs": [
+            "Pour résoudre 1,03ⁿ ≥ 2, on compose par ln, qui est strictement croissante : n × ln 1,03 ≥ ln 2.",
+            "ln 2 ≈ 0,6931 ; ln 3 ≈ 1,0986."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule ln 1,03, arrondi à 10⁻⁴ (à la calculatrice).",
+          "reponse": 0.0296,
+          "aide": "Utilise la touche ln.",
+          "explication": "ln 1,03 ≈ **0,0296**.",
+          "tolerance": 0.0001
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi peut-on écrire n × ln 1,03 ≥ ln 2 à partir de 1,03ⁿ ≥ 2 ?",
+          "options": [
+            "ln est strictement croissante et ln(1,03ⁿ) = n ln 1,03",
+            "Parce que ln est décroissante",
+            "Parce que ln(1,03ⁿ) = ln n × ln 1,03",
+            "Parce que 1,03 est plus grand que 1, sans autre raison"
+          ],
+          "reponse": 0,
+          "aide": "Deux propriétés : le sens des inégalités, et la règle sur les puissances.",
+          "explication": "ln est croissante : elle conserve l’inégalité ; et ln(1,03ⁿ) = n ln 1,03. On obtient **n ln 1,03 ≥ ln 2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien d’années entières le capital a-t-il doublé pour la première fois ? (n ≥ ln 2 ÷ ln 1,03 ≈ 23,4)",
+          "reponse": 24,
+          "aide": "n doit être un entier supérieur ou égal à 23,4.",
+          "explication": "n ≥ 23,4 donc le premier entier est **24**. Contrôle : 1,03²³ ≈ 1,97 < 2 et 1,03²⁴ ≈ 2,03 > 2."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule C(24), arrondi à l’euro. (C(24) = 2 000 × 1,03²⁴)",
+          "reponse": 4066,
+          "aide": "Utilise la touche puissance de la calculatrice.",
+          "explication": "1,03²⁴ ≈ 2,0328, donc C(24) ≈ 4 065,6 €, soit **4 066 €** à l’euro près.",
+          "tolerance": 1,
+          "unite": "€"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien d’années entières le capital a-t-il triplé pour la première fois ? (n ≥ ln 3 ÷ ln 1,03)",
+          "reponse": 38,
+          "aide": "Calcule 1,0986 ÷ 0,0296, puis prends l’entier supérieur.",
+          "explication": "n ≥ ln 3 ÷ ln 1,03 ≈ 37,2 : le premier entier est **38**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La suite ln(C(n)) est arithmétique. Quelle est sa raison, arrondie à 10⁻⁴ ?",
+          "reponse": 0.0296,
+          "aide": "ln(C(n)) = ln 2 000 + n ln 1,03.",
+          "explication": "ln(C(n+1)) − ln(C(n)) = ln 1,03 ≈ **0,0296** : la raison est constante.",
+          "tolerance": 0.0001
+        }
+      ]
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La tangente au point A",
+      "competence": "lire-graphique",
+      "situation": "Voici la courbe de ln et sa tangente T (en pointillés) au point A d’abscisse 1. Comme ln 1 = 0 et ln′(1) = 1, on peut approcher ln près de 1 par la tangente.",
+      "documents": [
+        {
+          "id": "c",
+          "type": "schema",
+          "titre": "La courbe de ln et sa tangente en 1",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                190
+              ],
+              "a": [
+                347,
+                190
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                261.5
+              ],
+              "a": [
+                50,
+                47
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                105,
+                187
+              ],
+              "a": [
+                105,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 105,
+              "y": 207,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                187
+              ],
+              "a": [
+                160,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 207,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                215,
+                187
+              ],
+              "a": [
+                215,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 215,
+              "y": 207,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                270,
+                187
+              ],
+              "a": [
+                270,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 270,
+              "y": 207,
+              "texte": "4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                325,
+                187
+              ],
+              "a": [
+                325,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 325,
+              "y": 207,
+              "texte": "5",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                47,
+                135
+              ],
+              "a": [
+                53,
+                135
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 42,
+              "y": 139,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                47,
+                80
+              ],
+              "a": [
+                53,
+                80
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 42,
+              "y": 84,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                47,
+                245
+              ],
+              "a": [
+                53,
+                245
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 42,
+              "y": 249,
+              "texte": "−1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "chemin",
+              "d": "M66.5 256.2 L70.3 244.7 L74.2 235.2 L78.0 227.0 L81.9 220.0 L85.8 213.7 L89.6 208.1 L93.5 203.0 L97.3 198.3 L101.2 194.0 L105.0 190.0 L108.8 186.3 L112.7 182.8 L116.5 179.5 L120.4 176.4 L124.3 173.5 L128.1 170.7 L132.0 168.1 L135.8 165.5 L139.7 163.1 L143.5 160.8 L147.3 158.6 L151.2 156.5 L155.1 154.4 L158.9 152.4 L162.8 150.5 L166.6 148.7 L170.4 146.9 L174.3 145.2 L178.2 143.5 L182.0 141.8 L185.8 140.3 L189.7 138.7 L193.5 137.2 L197.4 135.8 L201.3 134.4 L205.1 133.0 L209.0 131.6 L212.8 130.3 L216.7 129.0 L220.5 127.8 L224.3 126.5 L228.2 125.3 L232.1 124.2 L235.9 123.0 L239.8 121.9 L243.6 120.8 L247.4 119.7 L251.3 118.6 L255.2 117.6 L259.0 116.6 L262.9 115.6 L266.7 114.6 L270.6 113.6 L274.4 112.7 L278.3 111.7 L282.1 110.8 L285.9 109.9 L289.8 109.0 L293.6 108.1 L297.5 107.3 L301.4 106.4 L305.2 105.6 L309.1 104.8 L312.9 104.0 L316.8 103.2 L320.6 102.4 L324.4 101.6 L328.3 100.8 L332.1 100.1 L336.0 99.3",
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                66.5,
+                228.5
+              ],
+              "a": [
+                248,
+                47
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 105,
+              "cy": 190,
+              "r": 10,
+              "motif": "aucun",
+              "id": "A",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 187.5,
+              "cy": 139.60400974692146,
+              "r": 10,
+              "motif": "aucun",
+              "id": "B",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 281,
+              "cy": 111.07035110908726,
+              "r": 10,
+              "motif": "aucun",
+              "id": "Cc",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 117,
+              "y": 208,
+              "texte": "A",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 253.5,
+              "y": 49.75,
+              "texte": "T",
+              "gras": true,
+              "italique": true
+            }
+          ],
+          "source": "Tracé d’après ln"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "c",
+          "enonce": "Touche le point de contact entre la courbe et la tangente T.",
+          "reponse": [
+            "A"
+          ],
+          "aide": "Le point de tangence a pour abscisse 1.",
+          "explication": "La tangente touche la courbe au point **A (1 ; 0)**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’équation de T ?",
+          "options": [
+            "y = x − 1",
+            "y = x",
+            "y = 2x − 2",
+            "y = 1"
+          ],
+          "reponse": 0,
+          "aide": "y = ln′(1)(x − 1) + ln 1.",
+          "explication": "y = 1 × (x − 1) + 0 : **y = x − 1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En utilisant la tangente, donne une valeur approchée de ln 1,1 (la tangente vaut 1,1 − 1 en x = 1,1).",
+          "reponse": 0.1,
+          "aide": "Remplace x par 1,1 dans l’équation de T.",
+          "explication": "y = 1,1 − 1 = **0,1** : la vraie valeur est ln 1,1 ≈ 0,095.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "La courbe est-elle au-dessus ou au-dessous de T ?",
+          "options": [
+            "Au-dessous : ln est concave, donc ln x ≤ x − 1 pour tout x > 0",
+            "Au-dessus : ln est convexe, donc ln x ≥ x − 1 pour tout x > 0",
+            "Elle traverse T en A, puisque ln change de convexité en ce point",
+            "Elle est confondue avec T, car ln est affine au voisinage de A"
+          ],
+          "reponse": 0,
+          "aide": "Regarde où se trouve la courbe par rapport aux pointillés, de chaque côté de A.",
+          "explication": "ln est concave (ln″ < 0) : elle reste **sous** ses tangentes, donc ln x ≤ x − 1 pour tout x > 0."
+        }
+      ]
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le minimum de f",
+      "competence": "resoudre",
+      "situation": "Soit f(x) = x − 2 ln x, définie sur ]0 ; +∞[. Marion a dressé le tableau de variations de f mais a laissé une case vide.",
+      "documents": [
+        {
+          "id": "tv",
+          "type": "tableau",
+          "titre": "Tableau de variations de f",
+          "colonnes": [
+            "x",
+            "0",
+            "2",
+            "+∞"
+          ],
+          "lignes": [
+            [
+              "signe de f′(x)",
+              "",
+              "−  puis  +",
+              ""
+            ],
+            [
+              "variations de f",
+              "+∞",
+              "?",
+              "+∞"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "f′(x) = 1 − 2/x = (x − 2)/x"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel est l’ensemble de définition de f ?",
+          "options": [
+            "ℝ privé de 0, car ln n’est pas défini en 0 mais l’est ailleurs",
+            "]0 ; +∞[, car ln n’existe que pour les réels x strictement positifs",
+            "[0 ; +∞[, car ln existe aussi en 0 et pour tous les réels positifs",
+            "ℝ tout entier, car ln est définie pour tous les nombres réels"
+          ],
+          "reponse": 1,
+          "aide": "Sur quels réels ln x est-il défini ?",
+          "explication": "ln x n’existe que pour x > 0 : f est définie sur **]0 ; +∞[**."
+        },
+        {
+          "type": "zone",
+          "document": "tv",
+          "enonce": "Touche la case du tableau où se lit la valeur de f en x = 2 (la case « ? »).",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Cherche la colonne de x = 2, ligne des variations.",
+          "explication": "La case « ? » donne le **minimum de f**, atteint en x = 2."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le minimum f(2), arrondi au centième. (f(2) = 2 − 2 ln 2)",
+          "reponse": 0.61,
+          "aide": "ln 2 ≈ 0,693.",
+          "explication": "f(2) = 2 − 2 × 0,693 ≈ **0,61**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation f(x) = 0,5 admet-elle ?",
+          "reponse": 0,
+          "aide": "Compare 0,5 au minimum de f.",
+          "explication": "Le minimum de f vaut environ 0,61 > 0,5 : f ne prend jamais la valeur 0,5, **0** solution."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation f(x) = 1 admet-elle ?",
+          "reponse": 2,
+          "aide": "Sur chaque intervalle de monotonie, 1 est-il entre le minimum et +∞ ?",
+          "explication": "Le minimum 0,61 est inférieur à 1 et f tend vers +∞ des deux côtés : une solution sur ]0 ; 2[ et une sur ]2 ; +∞[, soit **2** solutions."
+        }
+      ]
+    },
+    {
+      "chapitre": "bec4cd4e-b6b2-5600-9635-1d5da3a5f6ea",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Qui gagne : eπ ou πe ?",
+      "competence": "raisonner",
+      "situation": "Soit g(x) = ln x ÷ x sur ]0 ; +∞[. Tiphaine veut comparer les deux nombres e^π et π^e sans calculatrice. Elle commence par étudier g.",
+      "documents": [
+        {
+          "id": "val",
+          "type": "tableau",
+          "titre": "Quelques valeurs de g",
+          "colonnes": [
+            "x",
+            "1",
+            "2",
+            "e",
+            "4",
+            "10",
+            "100"
+          ],
+          "lignes": [
+            [
+              "g(x)",
+              0,
+              0.347,
+              0.368,
+              0.347,
+              0.23,
+              0.046
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies au millième"
+        },
+        {
+          "id": "der",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La dérivée",
+          "blocs": [
+            "g′(x) = (1 − ln x) ÷ x².",
+            "g′(x) > 0 pour x < e et g′(x) < 0 pour x > e."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "val",
+          "enonce": "Touche la valeur la plus grande prise par g dans ce tableau.",
+          "reponse": [
+            "r0c3"
+          ],
+          "aide": "Compare les valeurs de la ligne de g.",
+          "explication": "La plus grande valeur du tableau est **g(e) ≈ 0,368**, le maximum de g."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule g′(1) avec g′(x) = (1 − ln x) ÷ x².",
+          "reponse": 1,
+          "aide": "ln 1 = 0.",
+          "explication": "g′(1) = (1 − 0) ÷ 1 = **1** : g croît en 1."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation g(x) = 0,3 admet-elle ?",
+          "reponse": 2,
+          "aide": "g croît jusqu’à 0,368 puis décroît vers 0 : 0,3 est entre 0 et le maximum des deux côtés.",
+          "explication": "g croît de 0 à 0,368 sur ]1 ; e[ puis décroît vers 0 : 0,3 est atteint **2** fois (et g est négatif avant 1)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Puisque π > e et que g décroît sur [e ; +∞[, que peut-on dire de g(π) et g(e) ?",
+          "options": [
+            "g(π) est plus petit que g(e)",
+            "g(π) est plus grand que g(e)",
+            "g(π) est égal à g(e), car g est constante après e",
+            "On ne peut rien dire de g(π)"
+          ],
+          "reponse": 0,
+          "aide": "g est strictement décroissante sur [e ; +∞[.",
+          "explication": "g décroît après e et π > e : **g(π) < g(e)**, soit ln π ÷ π < 1/e."
+        },
+        {
+          "type": "choix",
+          "enonce": "En multipliant par eπ, que donne ln π ÷ π < 1/e ?",
+          "options": [
+            "e ln π est inférieur à π : donc π^e est inférieur à e^π",
+            "e ln π est supérieur à π : donc π^e est supérieur à e^π",
+            "ln π est inférieur à ln e : donc π est inférieur à e",
+            "π ln e est inférieur à e ln π : donc e^π est inférieur à π^e"
+          ],
+          "reponse": 0,
+          "aide": "Multiplie les deux membres par eπ > 0, puis compose par l’exponentielle.",
+          "explication": "e ln π < π équivaut à ln(π^e) < ln(e^π), donc **π^e < e^π**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le cercle de la balançoire",
+      "competence": "lire-graphique",
+      "situation": "Sur le cercle trigonométrique, le point associé au réel x a pour coordonnées (cos x ; sin x). Voici sept points du demi-cercle supérieur, avec deux lectures en pointillés.",
+      "documents": [
+        {
+          "id": "cer",
+          "type": "schema",
+          "titre": "Le cercle trigonométrique",
+          "largeur": 340,
+          "hauteur": 270,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 135,
+              "r": 100,
+              "motif": "aucun"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                52,
+                135
+              ],
+              "a": [
+                288,
+                135
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                247
+              ],
+              "a": [
+                170,
+                17
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 174,
+              "y": 149,
+              "texte": "0",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 274,
+              "y": 149,
+              "texte": "1",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 66,
+              "y": 149,
+              "texte": "−1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 39,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 239,
+              "texte": "−1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                132
+              ],
+              "a": [
+                220,
+                138
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 220,
+              "y": 151,
+              "texte": "0,5",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                167,
+                85
+              ],
+              "a": [
+                173,
+                85
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 162,
+              "y": 89,
+              "texte": "0,5",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                48.39745962155614
+              ],
+              "a": [
+                220,
+                135
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                256.6025403784439,
+                85
+              ],
+              "a": [
+                170,
+                85
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 135,
+              "r": 8,
+              "motif": "clair",
+              "id": "p0",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 256.6025403784439,
+              "cy": 85,
+              "r": 8,
+              "motif": "clair",
+              "id": "p30",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 277.38715006927043,
+              "y": 77,
+              "texte": "π/6",
+              "taille": "petit",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 220,
+              "cy": 48.39745962155614,
+              "r": 8,
+              "motif": "clair",
+              "id": "p60",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 31.61284993072961,
+              "texte": "π/3",
+              "taille": "petit",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 35,
+              "r": 8,
+              "motif": "clair",
+              "id": "p90",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 15,
+              "texte": "π/2",
+              "taille": "petit",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 120.00000000000003,
+              "cy": 48.39745962155612,
+              "r": 8,
+              "motif": "clair",
+              "id": "p120",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 108.00000000000003,
+              "y": 31.612849930729595,
+              "texte": "2π/3",
+              "taille": "petit",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 83.39745962155612,
+              "cy": 85,
+              "r": 8,
+              "motif": "clair",
+              "id": "p150",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 62.612849930729595,
+              "y": 77,
+              "texte": "5π/6",
+              "taille": "petit",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 135,
+              "r": 8,
+              "motif": "clair",
+              "id": "p180",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 296,
+              "y": 127,
+              "texte": "0",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 44,
+              "y": 127,
+              "texte": "π",
+              "taille": "petit",
+              "gras": true,
+              "ancre": "fin"
+            }
+          ],
+          "source": "Figure à la règle et au compas"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cer",
+          "enonce": "Touche le point associé au réel π/2.",
+          "reponse": [
+            "p90"
+          ],
+          "aide": "π/2 correspond à un quart de tour depuis le point (1 ; 0).",
+          "explication": "Un quart de tour mène au sommet du cercle : le point **(0 ; 1)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis l’abscisse du point associé à π/3 : c’est cos(π/3). (Suis le pointillé vers l’axe des abscisses.)",
+          "reponse": 0.5,
+          "aide": "Le pointillé descend vers l’axe horizontal, sur la graduation 0,5.",
+          "explication": "cos(π/3) = **0,5**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le point associé à 2π/3 est le symétrique de celui de π/3 par rapport à l’axe des ordonnées. Que vaut cos(2π/3) ?",
+          "reponse": -0.5,
+          "aide": "Une symétrie par rapport à l’axe des ordonnées change le signe de l’abscisse.",
+          "explication": "Les abscisses sont opposées : cos(2π/3) = **−0,5**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les points associés à π/3 et à −π/3 sont symétriques par rapport à l’axe des abscisses. Que peut-on dire ?",
+          "options": [
+            "Même abscisse, ordonnées opposées : cos est paire, sin est impaire",
+            "Abscisses opposées, même ordonnée : cos est impaire, sin est paire",
+            "Coordonnées toutes deux opposées : cos et sin sont toutes deux impaires",
+            "Mêmes coordonnées : cos et sin sont toutes deux des fonctions paires"
+          ],
+          "reponse": 0,
+          "aide": "Une symétrie par rapport à l’axe des abscisses laisse x inchangé.",
+          "explication": "cos(−x) = cos x et sin(−x) = −sin x : **cos est paire, sin est impaire**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux solutions par tour",
+      "competence": "resoudre",
+      "situation": "Noémie résout l’équation cos x = 1/2 sur [0 ; 2π]. Elle trace la courbe du cosinus et la droite d’équation y = 0,5 (en pointillés).",
+      "documents": [
+        {
+          "id": "g",
+          "type": "schema",
+          "titre": "cos x sur une période",
+          "largeur": 340,
+          "hauteur": 215,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                125
+              ],
+              "a": [
+                324.7433388230814,
+                125
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                196.3
+              ],
+              "a": [
+                30,
+                47.5
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 22,
+              "y": 67,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 22,
+              "y": 191,
+              "texte": "−1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 22,
+              "y": 98,
+              "texte": "0,5",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100.68583470577035,
+                122
+              ],
+              "a": [
+                100.68583470577035,
+                128
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 100.68583470577035,
+              "y": 141,
+              "texte": "π/2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                171.3716694115407,
+                122
+              ],
+              "a": [
+                171.3716694115407,
+                128
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 171.3716694115407,
+              "y": 141,
+              "texte": "π",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                242.05750411731103,
+                122
+              ],
+              "a": [
+                242.05750411731103,
+                128
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 242.05750411731103,
+              "y": 141,
+              "texte": "3π/2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                312.7433388230814,
+                122
+              ],
+              "a": [
+                312.7433388230814,
+                128
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 312.7433388230814,
+              "y": 141,
+              "texte": "2π",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "chemin",
+              "d": "M30.0 63.0 L33.5 63.2 L37.1 63.8 L40.6 64.7 L44.1 66.0 L47.7 67.7 L51.2 69.8 L54.7 72.1 L58.3 74.8 L61.8 77.9 L65.3 81.2 L68.9 84.7 L72.4 88.6 L75.9 92.6 L79.5 96.9 L83.0 101.3 L86.5 105.8 L90.1 110.5 L93.6 115.3 L97.2 120.1 L100.7 125.0 L104.2 129.9 L107.8 134.7 L111.3 139.5 L114.8 144.2 L118.4 148.7 L121.9 153.1 L125.4 157.4 L129.0 161.4 L132.5 165.3 L136.0 168.8 L139.6 172.1 L143.1 175.2 L146.6 177.9 L150.2 180.2 L153.7 182.3 L157.2 184.0 L160.8 185.3 L164.3 186.2 L167.8 186.8 L171.4 187.0 L174.9 186.8 L178.4 186.2 L182.0 185.3 L185.5 184.0 L189.0 182.3 L192.6 180.2 L196.1 177.9 L199.6 175.2 L203.2 172.1 L206.7 168.8 L210.2 165.3 L213.8 161.4 L217.3 157.4 L220.9 153.1 L224.4 148.7 L227.9 144.2 L231.5 139.5 L235.0 134.7 L238.5 129.9 L242.1 125.0 L245.6 120.1 L249.1 115.3 L252.7 110.5 L256.2 105.8 L259.7 101.3 L263.3 96.9 L266.8 92.6 L270.3 88.6 L273.9 84.7 L277.4 81.2 L280.9 77.9 L284.5 74.8 L288.0 72.1 L291.5 69.8 L295.1 67.7 L298.6 66.0 L302.1 64.7 L305.7 63.8 L309.2 63.2 L312.7 63.0",
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                30,
+                94
+              ],
+              "a": [
+                312.7433388230814,
+                94
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 77.1238898038469,
+              "cy": 94,
+              "r": 9,
+              "motif": "aucun",
+              "id": "s1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 265.6194490192345,
+              "cy": 94,
+              "r": 9,
+              "motif": "aucun",
+              "id": "s2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 124.24777960769379,
+              "cy": 156,
+              "r": 9,
+              "motif": "aucun",
+              "id": "d1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 218.49555921538757,
+              "cy": 156,
+              "r": 9,
+              "motif": "aucun",
+              "id": "d2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 308.7433388230814,
+              "y": 67,
+              "texte": "cos",
+              "italique": true,
+              "taille": "petit",
+              "ancre": "fin"
+            }
+          ],
+          "source": "Tracé d’après cos"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "g",
+          "enonce": "Touche les deux points de la courbe où cos x = 0,5.",
+          "reponse": [
+            "s1",
+            "s2"
+          ],
+          "aide": "Cherche où la courbe rencontre la droite pointillée.",
+          "explication": "La courbe coupe la droite y = 0,5 en **deux** points : d’abscisses π/3 et 5π/3.",
+          "multiple": true
+        },
+        {
+          "type": "nombre",
+          "enonce": "Donne la première solution π/3, arrondie au centième.",
+          "reponse": 1.05,
+          "aide": "π ≈ 3,1416, divisé par 3.",
+          "explication": "π/3 ≈ **1,05**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la seconde solution de cos x = 1/2 sur [0 ; 2π] ?",
+          "options": [
+            "5π/3, l’opposée de π/3 à 2π près, symétrique par rapport à l’axe des x",
+            "π − π/3, le symétrique de π/3 par rapport à l’axe des ordonnées",
+            "4π/3, le symétrique de π/3 par rapport à l’origine du repère",
+            "π/6, la moitié de la première solution sur le cercle trigonométrique"
+          ],
+          "reponse": 0,
+          "aide": "cos x = cos a a deux familles : x = a + 2kπ et x = −a + 2kπ.",
+          "explication": "Seconde famille : x = −π/3 + 2kπ ; pour k = 1 on obtient **5π/3**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour sin x = 1/2 sur [0 ; 2π], quelles sont les solutions ?",
+          "options": [
+            "π/6 et 5π/6",
+            "π/6 et 11π/6",
+            "π/3 et 2π/3",
+            "π/6 et 7π/6"
+          ],
+          "reponse": 0,
+          "aide": "sin x = sin a a pour familles x = a + 2kπ et x = π − a + 2kπ.",
+          "explication": "sin(π/6) = 1/2 et la seconde famille est π − π/6 = **5π/6**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de solutions l’équation cos x = −0,3 admet-elle sur [0 ; 2π] ?",
+          "reponse": 2,
+          "aide": "Trace mentalement la droite y = −0,3 : combien de fois coupe-t-elle la courbe ?",
+          "explication": "La droite y = −0,3 coupe la courbe **2** fois sur une période."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4203e6c-c6c3-570a-86f8-10f3f13efd5f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La marée du petit port",
+      "competence": "modeliser",
+      "situation": "Dans un petit port, la hauteur d’eau (en mètres) est modélisée par h(t) = 4 + 2 sin(πt/6), où t est le nombre d’heures écoulées depuis minuit. La courbe montre une journée partielle.",
+      "documents": [
+        {
+          "id": "mar",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Hauteur d’eau h(t)",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ],
+          "series": [
+            {
+              "nom": "Hauteur (m)",
+              "valeurs": [
+                4,
+                5,
+                5.73,
+                6,
+                5.73,
+                5,
+                4,
+                3,
+                2.27,
+                2,
+                2.27,
+                3,
+                4
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Hauteur",
+            "unite": "m",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Heure t"
+          },
+          "valeurs": false,
+          "source": "Modèle imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mar",
+          "enonce": "Touche l’heure où la marée est la plus haute.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le sommet de la courbe.",
+          "explication": "La marée est la plus haute à **t = 3** (mer haute : 6 m)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis la période de la courbe, en heures : le temps entre deux sommets du même type.",
+          "reponse": 12,
+          "aide": "Compare t = 0 et la valeur de t où la courbe revient au même point.",
+          "explication": "La hauteur est la même en t = 0 et t = 12 : la période est **12 h**. (Formule : 2π ÷ (π/6) = 12.)"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’amplitude des oscillations (la hauteur entre le niveau moyen et un sommet) ?",
+          "reponse": 2,
+          "aide": "Niveau moyen 4 m, sommet 6 m.",
+          "explication": "h varie entre 2 et 6 : l’amplitude est **2 m**, le coefficient devant le sinus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule h(2), arrondi au centième. (sin(π/3) = √3/2)",
+          "reponse": 5.73,
+          "aide": "h(2) = 4 + 2 sin(π/3).",
+          "explication": "h(2) = 4 + 2 × 0,866 ≈ **5,73 m**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "nombre",
+          "enonce": "La vitesse de montée est h′(t) = (π/3) cos(πt/6). Calcule h′(0), arrondi au centième (en m/h).",
+          "reponse": 1.05,
+          "aide": "cos 0 = 1.",
+          "explication": "h′(0) = π/3 × 1 ≈ **1,05 m/h**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "choix",
+          "enonce": "À quelles heures de [0 ; 12[ la hauteur vaut-elle 5 m ? (il faut sin(πt/6) = 1/2)",
+          "options": [
+            "t = 1 et t = 5",
+            "t = 1 et t = 11",
+            "t = 2 et t = 4",
+            "t = 3 seulement"
+          ],
+          "reponse": 0,
+          "aide": "πt/6 vaut π/6 ou π − π/6 = 5π/6.",
+          "explication": "πt/6 = π/6 donne t = 1 ; πt/6 = 5π/6 donne **t = 5**."
+        }
+      ]
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Dérivée, puis primitive",
+      "competence": "calculer",
+      "situation": "Hugo vérifie des primitives en dérivant. Il a dressé un tableau avec la dérivée de quatre fonctions. Une fonction F est une primitive de f quand F′ = f.",
+      "documents": [
+        {
+          "id": "der",
+          "type": "tableau",
+          "titre": "Les dérivées calculées par Hugo",
+          "colonnes": [
+            "Fonction F(x)",
+            "Sa dérivée F′(x)"
+          ],
+          "lignes": [
+            [
+              "sin x",
+              "cos x"
+            ],
+            [
+              "cos x",
+              "−sin x"
+            ],
+            [
+              "−cos x",
+              "sin x"
+            ],
+            [
+              "x ln x",
+              "ln x + 1"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Dérivées exactes"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "der",
+          "enonce": "Touche la fonction F du tableau qui est une primitive de la fonction sinus.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Cherche la ligne dont la dérivée est sin x.",
+          "explication": "La dérivée de −cos x est sin x : **−cos x** est une primitive de sinus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les primitives de sinus sont F(x) = −cos x + C. On impose F(0) = 3. Que vaut C ?",
+          "reponse": 4,
+          "aide": "F(0) = −cos 0 + C = −1 + C.",
+          "explication": "−1 + C = 3 donc **C = 4**."
+        },
+        {
+          "type": "choix",
+          "enonce": "x ln x est-elle une primitive de ln x ?",
+          "options": [
+            "Non : sa dérivée est ln x + 1, pas ln x",
+            "Oui : elle contient ln x",
+            "Oui : toute fonction avec ln est une primitive de ln",
+            "Non : ln x n’a pas de primitive"
+          ],
+          "reponse": 0,
+          "aide": "Lis la dernière ligne du tableau.",
+          "explication": "Sa dérivée vaut ln x + 1 ≠ ln x : **non**. Par contre x ln x − x convient : sa dérivée est ln x + 1 − 1 = ln x."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour G(x) = x ln x − x, calcule G′(e) = ln e.",
+          "reponse": 1,
+          "aide": "G′(x) = ln x.",
+          "explication": "G′(e) = ln e = **1**."
+        }
+      ]
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le médicament dans le sang",
+      "competence": "modeliser",
+      "situation": "Un médicament est perfusé en continu : la quantité y(t) (en mg) dans le sang vérifie y′ = −0,5 y + 2, avec y(0) = 10, où t est en heures. Le graphique montre la solution.",
+      "documents": [
+        {
+          "id": "eq",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le modèle",
+          "blocs": [
+            "y′ = a y + b avec a = −0,5 et b = 2.",
+            "Les solutions sont y(t) = C e^(−0,5 t) + 4."
+          ]
+        },
+        {
+          "id": "g",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Quantité de médicament",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "series": [
+            {
+              "nom": "y(t) en mg",
+              "valeurs": [
+                10,
+                6.21,
+                4.81,
+                4.3,
+                4.11
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Quantité",
+            "unite": "mg",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps en heures"
+          },
+          "valeurs": false,
+          "source": "Modèle imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "La solution constante de y′ = a y + b est −b/a. Que vaut-elle ici ?",
+          "reponse": 4,
+          "aide": "Calcule −2 ÷ (−0,5).",
+          "explication": "−b/a = −2 ÷ (−0,5) = **4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec y(0) = 10, trouve C dans y(t) = C e^(−0,5 t) + 4.",
+          "reponse": 6,
+          "aide": "y(0) = C × e⁰ + 4 = C + 4.",
+          "explication": "C + 4 = 10 donc **C = 6**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule y(2) = 6e⁻¹ + 4, arrondi au centième.",
+          "reponse": 6.21,
+          "aide": "e⁻¹ ≈ 0,3679.",
+          "explication": "y(2) = 6 × 0,3679 + 4 ≈ **6,21 mg**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "zone",
+          "document": "g",
+          "enonce": "Touche l’instant où la quantité de médicament est la plus grande.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Regarde le point le plus haut de la courbe.",
+          "explication": "La courbe est décroissante : le maximum est à **t = 0** (10 mg)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Vers quelle valeur la quantité se stabilise-t-elle quand t devient grand ?",
+          "options": [
+            "4 mg, la solution constante de l’équation différentielle étudiée",
+            "0 mg, car le médicament finit par être totalement éliminé du sang",
+            "10 mg, car la quantité finit par se stabiliser à sa valeur maximale",
+            "6 mg, car la quantité ne redescend jamais en dessous de cette valeur"
+          ],
+          "reponse": 0,
+          "aide": "e^(−0,5 t) tend vers 0.",
+          "explication": "Comme e^(−0,5 t) tend vers 0, y(t) tend vers **4 mg**."
+        }
+      ]
+    },
+    {
+      "chapitre": "82604df7-9525-5f30-8b6c-84ba2e7c3b89",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Reconnaître u′",
+      "competence": "raisonner",
+      "situation": "Pour trouver une primitive d’une fonction de la forme u′ e^u ou u′/u, on repère d’abord u, puis u′. Léon a commencé un tableau de repérage.",
+      "documents": [
+        {
+          "id": "rep",
+          "type": "tableau",
+          "titre": "Le repérage de Léon",
+          "colonnes": [
+            "f(x)",
+            "u(x)",
+            "u′(x)"
+          ],
+          "lignes": [
+            [
+              "2x e^(x² + 1)",
+              "x² + 1",
+              "2x"
+            ],
+            [
+              "3x² e^(x³)",
+              "x³",
+              "?"
+            ],
+            [
+              "x e^(x² + 1)",
+              "x² + 1",
+              "2x"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Pour x e^(x² + 1), il manque un facteur 1/2"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : que vaut u′(2), sachant que u(x) = x³ ? (u′(x) = 3x²)",
+          "reponse": 12,
+          "aide": "Dérive x³ puis remplace x par 2.",
+          "explication": "u′(x) = 3x² donc u′(2) = 3 × 4 = **12**."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque fonction à l’une de ses primitives.",
+          "paires": [
+            [
+              "2x e^(x² + 1)",
+              "e^(x² + 1)"
+            ],
+            [
+              "x e^(x² + 1)",
+              "un demi de e^(x² + 1)"
+            ],
+            [
+              "2x ÷ (x² + 1)",
+              "ln(x² + 1)"
+            ],
+            [
+              "3x² (x³ + 1)²",
+              "(x³ + 1)³ ÷ 3"
+            ]
+          ],
+          "aide": "Repère u, vérifie que u′ est là, ajoute le bon facteur si besoin.",
+          "explication": "**2x e^(x²+1) → e^(x²+1)** ; **x e^(x²+1) → ½ e^(x²+1)** ; **2x/(x²+1) → ln(x²+1)** ; **3x²(x³+1)² → (x³+1)³/3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "F est la primitive de f(x) = x e^(x² + 1) telle que F(0) = 0 : F(x) = ½ e^(x² + 1) − e/2. Calcule F(1), arrondi au centième.",
+          "reponse": 2.34,
+          "aide": "F(1) = ½ e² − e/2, avec e² ≈ 7,389 et e ≈ 2,718.",
+          "explication": "F(1) = (7,389 − 2,718) ÷ 2 ≈ **2,34**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi écrit-on « ln(x² + 1) » et non « ln|x² + 1| » ?",
+          "options": [
+            "Parce que x² + 1 est toujours strictement positif",
+            "Parce que ln ne se fait jamais avec des valeurs absolues",
+            "Parce que x² + 1 est toujours négatif",
+            "Pour simplifier, sans raison mathématique"
+          ],
+          "reponse": 0,
+          "aide": "Étudie le signe de x² + 1.",
+          "explication": "x² + 1 ≥ 1 > 0 : **la valeur absolue est inutile**."
+        }
+      ]
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’aire sous la droite",
+      "competence": "lire-graphique",
+      "situation": "La droite ci-dessous est la courbe de f(x) = x/2 + 1 sur [0 ; 4]. Le domaine coloré est compris entre la droite, l’axe des abscisses et les droites x = 0 et x = 4 ; son aire est l’intégrale de f de 0 à 4.",
+      "documents": [
+        {
+          "id": "c",
+          "type": "schema",
+          "titre": "L’aire sous la courbe de f",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  40,
+                  190
+                ],
+                [
+                  280,
+                  190
+                ],
+                [
+                  280,
+                  55
+                ],
+                [
+                  40,
+                  145
+                ]
+              ],
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                190
+              ],
+              "a": [
+                316,
+                190
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                190
+              ],
+              "a": [
+                40,
+                19
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100,
+                187
+              ],
+              "a": [
+                100,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 100,
+              "y": 207,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                187
+              ],
+              "a": [
+                160,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 207,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                220,
+                187
+              ],
+              "a": [
+                220,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 220,
+              "y": 207,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                280,
+                187
+              ],
+              "a": [
+                280,
+                193
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 280,
+              "y": 207,
+              "texte": "4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                145
+              ],
+              "a": [
+                43,
+                145
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 149,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                100
+              ],
+              "a": [
+                43,
+                100
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 104,
+              "texte": "2",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                37,
+                55
+              ],
+              "a": [
+                43,
+                55
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 32,
+              "y": 59,
+              "texte": "3",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                145
+              ],
+              "a": [
+                280,
+                55
+              ],
+              "epaisseur": 2
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                280,
+                190
+              ],
+              "a": [
+                280,
+                55
+              ],
+              "style": "pointilles"
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 145,
+              "r": 11,
+              "motif": "aucun",
+              "id": "x0",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 100,
+              "r": 11,
+              "motif": "aucun",
+              "id": "x2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 280,
+              "cy": 55,
+              "r": 11,
+              "motif": "aucun",
+              "id": "x4",
+              "zone": true
+            }
+          ],
+          "source": "Tracé d’après f(x) = x/2 + 1"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "c",
+          "enonce": "Touche le point de la droite d’abscisse 4.",
+          "reponse": [
+            "x4"
+          ],
+          "aide": "Cherche l’extrémité droite du segment.",
+          "explication": "Le point d’abscisse 4 est à la hauteur f(4) = **3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’aire du domaine, en unités d’aire : c’est un trapèze de bases 1 et 3 et de hauteur 4.",
+          "reponse": 8,
+          "aide": "Aire d’un trapèze = (petite base + grande base) ÷ 2 × hauteur.",
+          "explication": "(1 + 3) ÷ 2 × 4 = **8** unités d’aire. On retrouve F(4) − F(0) avec F(x) = x²/4 + x."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur moyenne de f sur [0 ; 4] ? (intégrale ÷ longueur de l’intervalle)",
+          "reponse": 2,
+          "aide": "Divise 8 par 4.",
+          "explication": "8 ÷ 4 = **2** : c’est f(2), la hauteur du rectangle de même aire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Que vaut l’intégrale de f de 4 à 0 ? (les bornes sont inversées)",
+          "reponse": -8,
+          "aide": "Échanger les bornes change le signe.",
+          "explication": "Inverser les bornes change le signe : **−8**."
+        }
+      ]
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le bassin qui se remplit",
+      "competence": "modeliser",
+      "situation": "Un bassin est alimenté pendant 6 minutes avec un débit d(t) = −t² + 6t (en litres par minute), où t est le temps en minutes. Le volume d’eau reçu est l’intégrale du débit.",
+      "documents": [
+        {
+          "id": "deb",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Le débit d(t)",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "series": [
+            {
+              "nom": "Débit (L/min)",
+              "valeurs": [
+                0,
+                5,
+                8,
+                9,
+                8,
+                5,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Débit",
+            "unite": "L/min",
+            "min": 0,
+            "max": 10,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps en minutes"
+          },
+          "valeurs": false,
+          "source": "Modèle imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "deb",
+          "enonce": "Touche l’instant où le débit est maximal.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le sommet de la courbe.",
+          "explication": "Le débit est maximal à **t = 3 min** (9 L/min)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est une primitive D de d(t) = −t² + 6t ?",
+          "options": [
+            "D(t) = −t³/3 + 3t²",
+            "D(t) = −t³ + 6t²",
+            "D(t) = −2t + 6",
+            "D(t) = −t³/3 + 6t²"
+          ],
+          "reponse": 0,
+          "aide": "On augmente la puissance de 1 et on divise par le nouvel exposant.",
+          "explication": "Primitive de t² : t³/3. Primitive de 6t : 3t². Donc **D(t) = −t³/3 + 3t²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume reçu entre t = 0 et t = 6 : D(6) − D(0).",
+          "reponse": 36,
+          "aide": "D(6) = −72 + 108.",
+          "explication": "D(6) = −216/3 + 3 × 36 = 36 et D(0) = 0 : **36 L**.",
+          "unite": "L"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le débit moyen sur [0 ; 6], en L/min ?",
+          "reponse": 6,
+          "aide": "Divise le volume par la durée.",
+          "explication": "36 ÷ 6 = **6 L/min**.",
+          "unite": "L/min"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume reçu entre t = 3 et t = 6 : D(6) − D(3), avec D(3) = 18.",
+          "reponse": 18,
+          "aide": "Soustrais le volume déjà reçu à t = 3.",
+          "explication": "36 − 18 = **18 L** : la courbe est symétrique autour de t = 3, les deux moitiés se valent.",
+          "unite": "L"
+        }
+      ]
+    },
+    {
+      "chapitre": "aad38118-4928-5d11-9a79-6e3628642daf",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une intégration par parties",
+      "competence": "calculer",
+      "situation": "Deux objectifs : calculer l’intégrale de 0 à 1 de x e^x dx par parties, puis l’aire entre les courbes y = x et y = x² sur [0 ; 1].",
+      "documents": [
+        {
+          "id": "ipp",
+          "type": "tableau",
+          "titre": "Le choix de u′ et v",
+          "colonnes": [
+            "Fonction",
+            "Expression",
+            "Sa primitive (pour u′) ou sa dérivée (pour v)"
+          ],
+          "lignes": [
+            [
+              "u′(x)",
+              "e^x",
+              "u(x) = e^x"
+            ],
+            [
+              "v(x)",
+              "x",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Formule : ∫ u′v = [uv] − ∫ u v′"
+        },
+        {
+          "id": "aire",
+          "type": "schema",
+          "titre": "Les courbes y = x et y = x² sur [0 ; 1]",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                200
+              ],
+              "a": [
+                300,
+                200
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                200
+              ],
+              "a": [
+                50,
+                4.500000000000028
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                197
+              ],
+              "a": [
+                150,
+                203
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 150,
+              "y": 217,
+              "texte": "0,5",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                197
+              ],
+              "a": [
+                250,
+                203
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 217,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                47,
+                115
+              ],
+              "a": [
+                53,
+                115
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 42,
+              "y": 119,
+              "texte": "0,5",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                47,
+                30
+              ],
+              "a": [
+                53,
+                30
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 42,
+              "y": 34,
+              "texte": "1",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                200
+              ],
+              "a": [
+                250,
+                30
+              ],
+              "epaisseur": 2,
+              "id": "droite",
+              "zone": true
+            },
+            {
+              "forme": "chemin",
+              "d": "M50.0 200.0 L55.0 199.9 L60.0 199.6 L65.0 199.0 L70.0 198.3 L75.0 197.3 L80.0 196.2 L85.0 194.8 L90.0 193.2 L95.0 191.4 L100.0 189.4 L105.0 187.1 L110.0 184.7 L115.0 182.0 L120.0 179.2 L125.0 176.1 L130.0 172.8 L135.0 169.3 L140.0 165.6 L145.0 161.6 L150.0 157.5 L155.0 153.1 L160.0 148.6 L165.0 143.8 L170.0 138.8 L175.0 133.6 L180.0 128.2 L185.0 122.5 L190.0 116.7 L195.0 110.6 L200.0 104.4 L205.0 97.9 L210.0 91.2 L215.0 84.3 L220.0 77.2 L225.0 69.8 L230.0 62.3 L235.0 54.5 L240.0 46.6 L245.0 38.4 L250.0 30.0",
+              "epaisseur": 2,
+              "id": "parabole",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 206,
+              "y": 37.599999999999994,
+              "texte": "y = x",
+              "italique": true,
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 240,
+              "y": 110.6,
+              "texte": "y = x²",
+              "italique": true,
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ],
+          "source": "Tracé des fonctions"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : que vaut la dérivée v′(x) de v(x) = x ?",
+          "reponse": 1,
+          "aide": "La dérivée de x est constante.",
+          "explication": "v′(x) = **1**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule [u v] de 0 à 1 = [x e^x] de 0 à 1, arrondi au centième.",
+          "reponse": 2.72,
+          "aide": "En 1 : 1 × e ; en 0 : 0.",
+          "explication": "1 × e − 0 × e⁰ = e ≈ **2,72**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’intégrale de 0 à 1 de u v′ = e^x, arrondie au centième.",
+          "reponse": 1.72,
+          "aide": "Une primitive de e^x est e^x.",
+          "explication": "e¹ − e⁰ = e − 1 ≈ **1,72**.",
+          "tolerance": 0.01
+        },
+        {
+          "type": "nombre",
+          "enonce": "Conclus : l’intégrale de 0 à 1 de x e^x dx = [x e^x] − (e − 1). Que vaut-elle ?",
+          "reponse": 1,
+          "aide": "e − (e − 1).",
+          "explication": "e − (e − 1) = **1**."
+        },
+        {
+          "type": "zone",
+          "document": "aire",
+          "enonce": "Touche la courbe située au-dessus de l’autre sur ]0 ; 1[.",
+          "reponse": [
+            "droite"
+          ],
+          "aide": "Compare leurs hauteurs en x = 0,5 : 0,5 et 0,25.",
+          "explication": "En x = 0,5 on a x = 0,5 > x² = 0,25 : **la droite y = x** est au-dessus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’aire entre les courbes, arrondie au centième : l’intégrale de 0 à 1 de (x − x²) dx = [x²/2 − x³/3].",
+          "reponse": 0.17,
+          "aide": "1/2 − 1/3.",
+          "explication": "1/2 − 1/3 = 1/6 ≈ **0,17** unité d’aire.",
+          "tolerance": 0.005
+        }
+      ]
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux tirs au panier",
+      "competence": "lire-graphique",
+      "situation": "Sacha réussit un tir au panier avec la probabilité 0,3, et ses deux tirs sont indépendants. S désigne « tir réussi » et E « tir manqué ». L’arbre pondéré représente ses deux tirs.",
+      "documents": [
+        {
+          "id": "arb",
+          "type": "schema",
+          "titre": "L’arbre des deux tirs",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                120
+              ],
+              "a": [
+                136,
+                62
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                120
+              ],
+              "a": [
+                136,
+                178
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                164,
+                62
+              ],
+              "a": [
+                252,
+                32
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                164,
+                62
+              ],
+              "a": [
+                252,
+                92
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                164,
+                178
+              ],
+              "a": [
+                252,
+                148
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                164,
+                178
+              ],
+              "a": [
+                252,
+                208
+              ]
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 120,
+              "r": 14,
+              "texte": "D",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 62,
+              "r": 14,
+              "texte": "S",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 178,
+              "r": 14,
+              "texte": "E",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 252,
+              "y": 19,
+              "l": 70,
+              "h": 26,
+              "arrondi": 8,
+              "texte": "S puis S",
+              "id": "SS",
+              "zone": true,
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 252,
+              "y": 79,
+              "l": 70,
+              "h": 26,
+              "arrondi": 8,
+              "texte": "S puis E",
+              "id": "SE",
+              "zone": true,
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 252,
+              "y": 135,
+              "l": 70,
+              "h": 26,
+              "arrondi": 8,
+              "texte": "E puis S",
+              "id": "ES",
+              "zone": true,
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 252,
+              "y": 195,
+              "l": 70,
+              "h": 26,
+              "arrondi": 8,
+              "texte": "E puis E",
+              "id": "EE",
+              "zone": true,
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 80,
+              "y": 76,
+              "texte": "0,3",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 80,
+              "y": 172,
+              "texte": "0,7",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 196,
+              "y": 38,
+              "texte": "0,3",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 196,
+              "y": 92,
+              "texte": "0,7",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 196,
+              "y": 158,
+              "texte": "0,3",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 196,
+              "y": 214,
+              "texte": "0,7",
+              "taille": "petit",
+              "ancre": "fin"
+            }
+          ],
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "arb",
+          "enonce": "Touche les deux issues où Sacha réussit exactement un tir.",
+          "reponse": [
+            "SE",
+            "ES"
+          ],
+          "aide": "Cherche les chemins qui contiennent un S et un E.",
+          "explication": "Les chemins **S puis E** et **E puis S** contiennent exactement un succès.",
+          "multiple": true
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la probabilité du chemin « S puis E » : on multiplie les probabilités des branches (0,3 × 0,7).",
+          "reponse": 0.21,
+          "aide": "Sur un chemin on multiplie.",
+          "explication": "0,3 × 0,7 = **0,21**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la probabilité de réussir exactement un tir ? (on additionne les deux chemins)",
+          "reponse": 0.42,
+          "aide": "Les deux chemins ont la même probabilité.",
+          "explication": "0,21 + 0,21 = **0,42**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle condition rend légitime la multiplication des probabilités sur un chemin ?",
+          "options": [
+            "L’indépendance des deux tirs",
+            "Le fait que 0,3 soit inférieur à 0,5",
+            "Le fait qu’il n’y ait que deux issues",
+            "Le fait que Sacha soit motivé"
+          ],
+          "reponse": 0,
+          "aide": "Penses au mot de l’énoncé : « indépendants ».",
+          "explication": "On multiplie parce que **les tirs sont indépendants** : le premier ne change pas la chance du second."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Cinq lancers francs",
+      "competence": "modeliser",
+      "situation": "Lou tente 5 lancers francs ; à chacun, elle réussit avec la probabilité 0,4, indépendamment des autres. X est le nombre de lancers réussis : X suit la loi binomiale B(5 ; 0,4).",
+      "documents": [
+        {
+          "id": "loi",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Loi de X : P(X = k)",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "P(X = k)",
+              "valeurs": [
+                0.078,
+                0.259,
+                0.346,
+                0.23,
+                0.077,
+                0.01
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Probabilité",
+            "min": 0,
+            "max": 0.4,
+            "pas": 0.1
+          },
+          "axeX": {
+            "titre": "Nombre de lancers réussis k"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies au millième"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "loi",
+          "enonce": "Touche le nombre de réussites le plus probable.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "La barre la plus haute est celle de **k = 2** (environ 0,346)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’espérance de X ? E(X) = n × p.",
+          "reponse": 2,
+          "aide": "Multiplie 5 par 0,4.",
+          "explication": "E(X) = 5 × 0,4 = **2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule P(X = 2) = C(5,2) × 0,4² × 0,6³, arrondie au dix-millième.",
+          "reponse": 0.3456,
+          "aide": "C(5,2) = 10.",
+          "explication": "10 × 0,16 × 0,216 = **0,3456**.",
+          "tolerance": 0.0001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule P(X ≥ 1) = 1 − P(X = 0), arrondie au dix-millième. (P(X = 0) = 0,6⁵)",
+          "reponse": 0.9222,
+          "aide": "Le contraire de « au moins 1 » est « aucun ».",
+          "explication": "0,6⁵ = 0,07776 donc P(X ≥ 1) = 1 − 0,07776 ≈ **0,9222**.",
+          "tolerance": 0.0001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’écart-type de X : σ = √(n p (1 − p)), arrondi au centième.",
+          "reponse": 1.1,
+          "aide": "n p (1 − p) = 5 × 0,4 × 0,6 = 1,2.",
+          "explication": "σ = √1,2 ≈ **1,10**.",
+          "tolerance": 0.01
+        }
+      ]
+    },
+    {
+      "chapitre": "7f7e5d08-9e40-5c96-a1e4-5733ffe826d9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Combien de tirs pour toucher ?",
+      "competence": "raisonner",
+      "situation": "Un archer touche sa cible avec la probabilité 0,3 à chaque tir, les tirs étant indépendants. On cherche le nombre de tirs qu’il lui faut pour toucher au moins une fois avec une probabilité d’au moins 0,99. Une seconde situation, avec une urne, teste l’indépendance.",
+      "documents": [
+        {
+          "id": "sr",
+          "type": "tableau",
+          "titre": "Probabilité de toucher au moins une fois en n tirs",
+          "colonnes": [
+            "n",
+            "5",
+            "10",
+            "12",
+            "13"
+          ],
+          "lignes": [
+            [
+              "P(au moins une touche)",
+              "0,832",
+              "0,972",
+              "0,986",
+              "0,990"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "P = 1 − 0,7ⁿ, valeurs arrondies au millième"
+        },
+        {
+          "id": "urne",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "L’urne",
+          "blocs": [
+            "Une urne contient 10 boules dont 3 rouges. On tire 2 boules l’une après l’autre, sans remise. Y compte les boules rouges obtenues."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avec 5 tirs, quelle est la probabilité d’au moins une touche ? Calcule 1 − 0,7⁵ au millième.",
+          "reponse": 0.832,
+          "aide": "0,7⁵ ≈ 0,168.",
+          "explication": "1 − 0,168 = **0,832**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le plus petit nombre de tirs n pour que la probabilité dépasse 0,99 ? (0,7ⁿ ≤ 0,01)",
+          "reponse": 13,
+          "aide": "Lis le tableau : entre 12 et 13.",
+          "explication": "À 12 tirs, 0,986 < 0,99 ; à 13 tirs, 0,990 ≥ 0,99 : il faut **13** tirs."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec n = 13 tirs, quel est le nombre moyen de touches E(X) = n p ?",
+          "reponse": 3.9,
+          "aide": "Multiplie 13 par 0,3.",
+          "explication": "13 × 0,3 = **3,9**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Y, nombre de boules rouges dans l’urne sans remise, suit-elle une loi binomiale ?",
+          "options": [
+            "Non : sans remise, les tirages successifs ne sont pas indépendants",
+            "Oui : il y a seulement deux issues à chaque tirage, rouge ou pas rouge",
+            "Oui : il y a plusieurs tirages, donc on répète des épreuves de Bernoulli",
+            "Non : il y a trop de boules dans l’urne pour pouvoir appliquer la loi"
+          ],
+          "reponse": 0,
+          "aide": "La composition de l’urne change après le premier tirage.",
+          "explication": "Sans remise, la probabilité du second tirage dépend du premier : **pas d’indépendance**, donc pas de loi binomiale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule P(les deux boules sont rouges) = 3/10 × 2/9, arrondie au millième.",
+          "reponse": 0.067,
+          "aide": "Après une rouge, il reste 2 rouges sur 9 boules.",
+          "explication": "3/10 × 2/9 = 6/90 = 1/15 ≈ **0,067** (avec remise, on aurait eu 0,09).",
+          "tolerance": 0.001
+        }
+      ]
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le jeu de la kermesse",
+      "competence": "calculer",
+      "situation": "À la kermesse, le gain X (en euros) d’un jeu suit la loi donnée dans le tableau. On veut résumer ce jeu par son espérance et sa variance, puis étudier une transformation affine.",
+      "documents": [
+        {
+          "id": "loi",
+          "type": "tableau",
+          "titre": "La loi de X",
+          "colonnes": [
+            "Gain x",
+            "1",
+            "2",
+            "5"
+          ],
+          "lignes": [
+            [
+              "P(X = x)",
+              "0,5",
+              "0,3",
+              "0,2"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Jeu imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’espérance E(X) = 1 × 0,5 + 2 × 0,3 + 5 × 0,2.",
+          "reponse": 2.1,
+          "aide": "Additionne les trois produits.",
+          "explication": "0,5 + 0,6 + 1 = **2,1 €**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la variance V(X) = E(X²) − E(X)², sachant que E(X²) = 6,7.",
+          "reponse": 2.29,
+          "aide": "E(X)² = 2,1² = 4,41.",
+          "explication": "6,7 − 4,41 = **2,29**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le jeu est relancé avec le gain Y = 2X + 3. Calcule E(Y) = 2 E(X) + 3.",
+          "reponse": 7.2,
+          "aide": "L’espérance suit la transformation affine.",
+          "explication": "2 × 2,1 + 3 = **7,2**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devient la variance dans V(2X + 3) ?",
+          "options": [
+            "4 fois V(X) : le 3 disparaît",
+            "2 fois V(X) plus 3",
+            "4 fois V(X) plus 3",
+            "Elle reste égale à V(X)"
+          ],
+          "reponse": 0,
+          "aide": "V(aX + b) = a² V(X).",
+          "explication": "V(2X + 3) = 2² × V(X) = 4 × 2,29 = **9,16** : décaler ne change pas la dispersion."
+        }
+      ]
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux machines en série",
+      "competence": "raisonner",
+      "situation": "Dans une usine, une pièce passe d’abord par la machine A, puis par la machine B. Les durées X et Y (en minutes) sont indépendantes. La durée totale est T = X + Y. Léo prétend que σ(T) = 3 + 4 = 7.",
+      "documents": [
+        {
+          "id": "mac",
+          "type": "tableau",
+          "titre": "Les deux machines",
+          "colonnes": [
+            "Machine",
+            "Espérance",
+            "Écart-type"
+          ],
+          "lignes": [
+            [
+              "A (durée X)",
+              12,
+              3
+            ],
+            [
+              "B (durée Y)",
+              8,
+              4
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice ; durées en minutes"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule E(T) = E(X) + E(Y), en minutes.",
+          "reponse": 20,
+          "aide": "L’espérance est toujours additive.",
+          "explication": "12 + 8 = **20 min**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la variance V(T) = V(X) + V(Y) (X et Y sont indépendantes). Commence par les variances : 3² et 4².",
+          "reponse": 25,
+          "aide": "V(X) = 9 et V(Y) = 16.",
+          "explication": "9 + 16 = **25**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’écart-type σ(T) = √V(T), en minutes.",
+          "reponse": 5,
+          "aide": "√25.",
+          "explication": "σ(T) = **5 min**, et non 7 : ce sont les variances qui s’additionnent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le raisonnement de Léo (3 + 4 = 7) est-il faux ?",
+          "options": [
+            "Les écarts-types ne s’additionnent pas : ce sont les variances",
+            "Parce que X et Y ne sont pas indépendantes",
+            "Parce que 3 + 4 n’est pas 7",
+            "Parce que l’écart-type d’une somme est la moyenne des écarts-types"
+          ],
+          "reponse": 0,
+          "aide": "Quelle grandeur est additive sous indépendance ?",
+          "explication": "La variance est additive sous indépendance, pas l’écart-type : **σ(T) = √(9 + 16) = 5**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule V(X − Y) : attention, la variance d’une différence de variables indépendantes s’additionne aussi.",
+          "reponse": 25,
+          "aide": "V(−Y) = (−1)² V(Y) = V(Y).",
+          "explication": "V(X − Y) = V(X) + V(Y) = 9 + 16 = **25**."
+        }
+      ]
+    },
+    {
+      "chapitre": "caf333d8-aeb6-5b08-a949-4d25b13e8e60",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quadrupler pour diviser par deux",
+      "competence": "modeliser",
+      "situation": "Un institut interroge n personnes indépendantes ; chaque réponse X suit une même loi d’espérance 10 et d’écart-type 2. On note S la somme des n réponses et M = S/n leur moyenne.",
+      "documents": [
+        {
+          "id": "sig",
+          "type": "tableau",
+          "titre": "L’écart-type de M selon la taille de l’échantillon",
+          "colonnes": [
+            "Taille n",
+            "25",
+            "100",
+            "400",
+            "1 600"
+          ],
+          "lignes": [
+            [
+              "σ(M)",
+              0.4,
+              0.2,
+              0.1,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "σ(M) = 2 ÷ √n"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’espérance de M ? E(M) = μ.",
+          "reponse": 10,
+          "aide": "La moyenne empirique a la même espérance que chaque réponse.",
+          "explication": "E(M) = μ = **10**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour n = 100, calcule σ(S) = σ × √n.",
+          "reponse": 20,
+          "aide": "√100 = 10.",
+          "explication": "σ(S) = 2 × 10 = **20**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : σ(M) pour n = 1 600 = 2 ÷ √1 600.",
+          "reponse": 0.05,
+          "aide": "√1 600 = 40.",
+          "explication": "2 ÷ 40 = **0,05**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il faire à n pour diviser σ(M) par 2 ?",
+          "options": [
+            "Le multiplier par 4",
+            "Le multiplier par 2",
+            "Le multiplier par 8",
+            "Le diviser par 2"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le passage de 25 à 100 dans le tableau.",
+          "explication": "σ(M) = σ/√n : pour diviser par 2 il faut **quadrupler n** (25 → 100 : 0,4 → 0,2)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle taille minimale n faut-il pour avoir σ(M) ≤ 0,025 ? (2 ÷ √n ≤ 0,025)",
+          "reponse": 6400,
+          "aide": "Cherche √n ≥ 80.",
+          "explication": "√n ≥ 2 ÷ 0,025 = 80 donc n ≥ **6 400**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une variable B suit la loi B(200 ; 0,3). Calcule son écart-type √(n p (1 − p)), arrondi au centième.",
+          "reponse": 6.48,
+          "aide": "n p (1 − p) = 200 × 0,3 × 0,7 = 42.",
+          "explication": "σ = √42 ≈ **6,48**. Une loi binomiale est la somme de 200 épreuves de Bernoulli indépendantes.",
+          "tolerance": 0.01
+        }
+      ]
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La pièce qui se calme",
+      "competence": "lire-graphique",
+      "situation": "Clara lance une pièce équilibrée et note la fréquence de « pile » après 10, 50, 100, 500, 1 000 et 5 000 lancers. Elle veut comprendre ce que cela dit de la probabilité 0,5.",
+      "documents": [
+        {
+          "id": "f",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Fréquence de « pile » selon le nombre de lancers",
+          "categories": [
+            "10",
+            "50",
+            "100",
+            "500",
+            "1 000",
+            "5 000"
+          ],
+          "series": [
+            {
+              "nom": "Fréquence de pile",
+              "valeurs": [
+                0.7,
+                0.56,
+                0.52,
+                0.51,
+                0.504,
+                0.501
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Fréquence",
+            "min": 0.4,
+            "max": 0.8,
+            "pas": 0.1
+          },
+          "axeX": {
+            "titre": "Nombre de lancers"
+          },
+          "valeurs": false,
+          "source": "Simulation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "f",
+          "enonce": "Touche le point le plus proche de la probabilité théorique 0,5.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Compare l’écart à 0,5 de chaque point.",
+          "explication": "Le dernier point (5 000 lancers) est le plus proche de 0,5 : **k5**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’illustre ce graphique ?",
+          "options": [
+            "La fréquence se rapproche de la probabilité quand n grandit (loi des grands nombres)",
+            "La pièce finit par compenser ses écarts passés, en rééquilibrant elle-même pile et face",
+            "La fréquence devient exactement égale à 0,5 dès que n dépasse quelques centaines",
+            "Les lancers ne sont plus indépendants quand n devient très grand, à cause de la pièce"
+          ],
+          "reponse": 0,
+          "aide": "Observe l’évolution de la courbe vers la droite.",
+          "explication": "C’est la loi des grands nombres : **la fréquence se concentre autour de la probabilité**, sans jamais être garantie égale à 0,5."
+        },
+        {
+          "type": "choix",
+          "enonce": "Après dix « pile » consécutifs, quelle est la probabilité que le prochain lancer soit « pile » ?",
+          "options": [
+            "1/2",
+            "Moins de 1/2 : la pièce doit compenser",
+            "Plus de 1/2 : la pièce est truquée",
+            "0"
+          ],
+          "reponse": 0,
+          "aide": "La pièce n’a pas de mémoire.",
+          "explication": "Les lancers sont indépendants : la probabilité reste **1/2**. Croire le contraire est l’erreur du joueur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’attente X à la caisse est positive, d’espérance 4 minutes. Majore P(X ≥ 12) par l’inégalité de Markov : E(X)/12, arrondi au centième.",
+          "reponse": 0.33,
+          "aide": "Markov : P(X ≥ a) ≤ E(X)/a.",
+          "explication": "P(X ≥ 12) ≤ 4/12 ≈ **0,33**.",
+          "tolerance": 0.005
+        }
+      ]
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une garantie qui coûte cher",
+      "competence": "raisonner",
+      "situation": "Une variable X a pour espérance 50 et pour variance 25 (écart-type 5), sans qu’on connaisse sa loi. L’inégalité de Bienaymé-Tchebychev donne P(|X − 50| ≥ δ) ≤ 25/δ². On dresse un tableau des majorants.",
+      "documents": [
+        {
+          "id": "maj",
+          "type": "tableau",
+          "titre": "Le majorant 25/δ²",
+          "colonnes": [
+            "Écart δ",
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "lignes": [
+            [
+              "Majorant 25/δ²",
+              "1",
+              "0,25",
+              "?",
+              "0,0625"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs exactes ou arrondies au dix-millième"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : 25/15², arrondi au centième.",
+          "reponse": 0.11,
+          "aide": "15² = 225.",
+          "explication": "25 ÷ 225 ≈ **0,11**.",
+          "tolerance": 0.005
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour δ = 5, le majorant vaut 1. Que nous apprend l’inégalité ?",
+          "options": [
+            "Rien d’utile : toute probabilité est inférieure ou égale à 1 de toute façon",
+            "Que l’événement est certain, puisque la probabilité est majorée par 1 ici",
+            "Que la variable est constante, car l’inégalité atteint sa valeur maximale 1",
+            "Que la probabilité vaut exactement 1, puisque c’est la valeur du majorant"
+          ],
+          "reponse": 0,
+          "aide": "Une probabilité est toujours ≤ 1.",
+          "explication": "Un majorant égal à 1 est sans intérêt : **elle n’apprend rien** pour cet écart."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Minore P(|X − 50| < 10) par 1 − 0,25.",
+          "reponse": 0.75,
+          "aide": "Passe à l’événement contraire.",
+          "explication": "P(|X − 50| < 10) ≥ 1 − 0,25 = **0,75**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie « P(|X − 50| ≥ 10) ≤ 0,25 » ?",
+          "options": [
+            "Cette probabilité est au plus 0,25 (elle peut être bien plus petite)",
+            "Cette probabilité vaut exactement 0,25, ni plus ni moins que cette valeur",
+            "Cette probabilité est au moins 0,25 (elle peut être bien plus grande)",
+            "Cette probabilité vaut 0,75, le complément de la valeur 0,25 donnée"
+          ],
+          "reponse": 0,
+          "aide": "C’est une inégalité, pas une égalité.",
+          "explication": "L’inégalité donne un **majorant** : la vraie probabilité peut être beaucoup plus petite, l’inégalité est grossière mais vaut pour toute loi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour garantir un risque d’au plus 0,04, quel écart δ minimal faut-il ? (25/δ² ≤ 0,04)",
+          "reponse": 25,
+          "aide": "δ² ≥ 25 ÷ 0,04 = 625.",
+          "explication": "δ² ≥ 625 donc **δ ≥ 25**."
+        }
+      ]
+    },
+    {
+      "chapitre": "57c3ab02-b9ff-56d1-80d2-020ea0aaf608",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Dimensionner un sondage",
+      "competence": "modeliser",
+      "situation": "Un institut veut estimer une proportion p inconnue à partir de la fréquence M observée sur n personnes. L’inégalité de concentration donne P(|M − p| ≥ δ) ≤ p(1 − p)/(n δ²), et p(1 − p) ≤ 1/4 quel que soit p. On fixe δ = 0,05.",
+      "documents": [
+        {
+          "id": "maj",
+          "type": "tableau",
+          "titre": "Le majorant 1/(4 n δ²) pour δ = 0,05",
+          "colonnes": [
+            "Taille n",
+            "500",
+            "1 000",
+            "2 000",
+            "8 000"
+          ],
+          "lignes": [
+            [
+              "Majorant",
+              "0,2",
+              "0,1",
+              "?",
+              "0,0125"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Majorant utilisable sans connaître p"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur maximale de p(1 − p), atteinte pour p = 1/2 ?",
+          "reponse": 0.25,
+          "aide": "Calcule 0,5 × 0,5.",
+          "explication": "p(1 − p) ≤ 1/2 × 1/2 = **0,25**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : 1/(4 × 2 000 × 0,05²).",
+          "reponse": 0.05,
+          "aide": "0,05² = 0,0025 ; 4 × 2 000 × 0,0025 = 20.",
+          "explication": "1 ÷ 20 = **0,05**.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle taille n suffit pour que le risque soit au plus 0,02 avec δ = 0,05 ? (1/(4 n × 0,0025) ≤ 0,02)",
+          "reponse": 5000,
+          "aide": "n ≥ 1 ÷ (4 × 0,0025 × 0,02).",
+          "explication": "n ≥ 1 ÷ 0,0002 = **5 000**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec n = 2 000 et une précision plus fine δ = 0,025, calcule le majorant 1/(4 n δ²).",
+          "reponse": 0.2,
+          "aide": "δ² = 0,000625 ; 4 × 2 000 × 0,000625 = 5.",
+          "explication": "1 ÷ 5 = **0,2** : précision doublée, risque multiplié par 4.",
+          "tolerance": 0.001
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il faire à n pour garder le même risque quand on divise δ par 2 ?",
+          "options": [
+            "Le multiplier par 4",
+            "Le multiplier par 2",
+            "Le laisser inchangé",
+            "Le diviser par 2"
+          ],
+          "reponse": 0,
+          "aide": "δ est au carré dans le majorant.",
+          "explication": "Le majorant contient n δ² : diviser δ par 2 divise δ² par 4, donc il faut **quadrupler n**."
+        }
+      ]
+    }
+  ]
+}

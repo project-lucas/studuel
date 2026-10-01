@@ -1,0 +1,508 @@
+{
+  "niveau": "1re",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+      "difficulte": 1,
+      "titre": "Le sucre du goûter",
+      "consigne": "Écris chaque formule avant l'application numérique et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Pour son goûter, Adam dissout un morceau de sucre contenant **m = 9,0 g** de glucose, de formule brute **C₆H₁₂O₆**.\n\n**Données.** M(C) = 12,0 g/mol ; M(H) = 1,0 g/mol ; M(O) = 16,0 g/mol ; N(A) = 6,02 × 10²³ mol⁻¹.\n\n1. Qu'est-ce qu'une mole ? Que représente la constante d'Avogadro ?\n2. Calcule la masse molaire du glucose.\n3. Calcule la quantité de matière de glucose dans le morceau de sucre, puis le nombre de molécules de glucose qu'il contient.",
+      "bareme": [
+        { "critere": "Une mole contient N(A) ≈ 6,02 × 10²³ entités", "points": 4 },
+        { "critere": "M(glucose) = 6 × 12,0 + 12 × 1,0 + 6 × 16,0 = 180 g/mol", "points": 6 },
+        { "critere": "n = m / M = 0,050 mol et N = n × N(A) ≈ 3,0 × 10²² molécules", "points": 10 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Une **mole** est un paquet contenant **N(A) ≈ 6,02 × 10²³ entités** (atomes, molécules, ions). N(A), la **constante d'Avogadro**, est ce nombre d'entités par mole : elle fait le pont entre l'échelle de la molécule et celle de la balance.\n2. La masse molaire d'une molécule est la somme de celles de tous ses atomes : M = 6 × 12,0 + 12 × 1,0 + 6 × 16,0 = 72 + 12 + 96 = **180 g/mol**.\n3. n = m / M = 9,0 / 180 = **0,050 mol** (5,0 × 10⁻² mol). N = n × N(A) = 0,050 × 6,02 × 10²³ ≈ **3,0 × 10²² molécules** (3,01 × 10²²)."
+    },
+    {
+      "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+      "difficulte": 2,
+      "titre": "Préparer puis diluer une solution de glucose",
+      "consigne": "Détaille chaque calcul et décris les gestes expérimentaux avec la verrerie adaptée.",
+      "enonce": "**Situation.** Au laboratoire, Sarah dissout **4,5 g** de glucose (M = 180 g/mol) dans de l'eau et complète à **250,0 mL** dans une fiole jaugée : c'est la solution mère S.\n\n1. Calcule la quantité de matière de glucose dissoute, puis la concentration en quantité de matière C de la solution S.\n2. Calcule la concentration en masse t de S de deux façons : à partir de la masse dissoute, puis à partir de C et M.\n3. Sarah veut préparer **100,0 mL** d'une solution fille à **0,020 mol/L** par dilution de S. Calcule le volume de solution mère à prélever et le facteur de dilution.\n4. Décris le protocole de cette dilution, étape par étape, en nommant la verrerie.",
+      "bareme": [
+        { "critere": "n = 0,025 mol et C = n / V = 0,10 mol/L", "points": 5 },
+        { "critere": "t = 18 g/L obtenue par m / V et par C × M", "points": 4 },
+        { "critere": "V(prélevé) = 20,0 mL par conservation de la quantité de soluté ; facteur 5", "points": 6 },
+        { "critere": "Protocole : pipette jaugée, fiole jaugée de 100,0 mL, trait de jauge, homogénéiser", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. n = m / M = 4,5 / 180 = **0,025 mol**. V = 250,0 mL = 0,2500 L. C = n / V = 0,025 / 0,2500 = **0,10 mol/L**.\n2. Par la masse : t = m / V = 4,5 / 0,2500 = **18 g/L**. Par la relation du cours : t = C × M = 0,10 × 180 = **18 g/L**. Les deux résultats concordent.\n3. Diluer ne change pas la quantité de soluté : C(mère) × V(prélevé) = C(fille) × V(fille), donc V(prélevé) = 0,020 × 100,0 / 0,10 = **20,0 mL**. Facteur de dilution : C(mère) / C(fille) = 0,10 / 0,020 = **5**.\n4. Protocole :\n- prélever **20,0 mL** de solution mère avec une **pipette jaugée** de 20,0 mL ;\n- les verser dans une **fiole jaugée de 100,0 mL** ;\n- compléter avec de l'eau distillée **jusqu'au trait de jauge** ;\n- **boucher et homogénéiser** en retournant la fiole."
+    },
+    {
+      "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+      "difficulte": 3,
+      "titre": "Liquide, gaz et solution : compter les molécules",
+      "consigne": "Choisis à chaque fois la relation adaptée à l'état de l'espèce, détaille les calculs et rédige les comparaisons.",
+      "enonce": "**Données.** M(C) = 12,0 g/mol ; M(H) = 1,0 g/mol ; M(O) = 16,0 g/mol ; M(Na) = 23,0 g/mol ; M(Cl) = 35,5 g/mol ; volume molaire des gaz dans les conditions de l'expérience V(m) = 24 L/mol.\n\n**Situation.** Dans le laboratoire de Noé se trouvent :\n- un tube contenant **10,0 mL** d'éthanol liquide, C₂H₆O, de masse volumique **ρ = 0,79 g/mL** ;\n- un flacon contenant **1,2 L** de dioxyde de carbone gazeux, CO₂ ;\n- un flacon de sérum physiologique, solution de chlorure de sodium NaCl à **9,0 g/L**.\n\n1. Calcule la quantité de matière d'éthanol dans le tube.\n2. Calcule la quantité de matière de CO₂ dans le flacon, puis sa masse. Le résultat aurait-il été différent avec 1,2 L de dioxygène ? Justifie.\n3. Lequel, du tube d'éthanol ou du flacon de CO₂, contient le plus de molécules ? Justifie sans calculer le nombre de molécules.\n4. Calcule la concentration en quantité de matière du sérum physiologique. Noé le dilue 10 fois : quelle est la nouvelle concentration en masse ?",
+      "bareme": [
+        { "critere": "m = ρ × V = 7,9 g ; M(éthanol) = 46 g/mol ; n ≈ 0,17 mol", "points": 5 },
+        { "critere": "n(CO₂) = V / V(m) = 0,050 mol ; m = 2,2 g ; même n pour le dioxygène, V(m) indépendant du gaz", "points": 5 },
+        { "critere": "Comparaison par les quantités de matière : l'éthanol contient plus de molécules", "points": 3 },
+        { "critere": "M(NaCl) = 58,5 g/mol, C = t / M ≈ 0,15 mol/L ; après dilution par 10, t = 0,90 g/L", "points": 5 },
+        { "critere": "Choix justifié de la relation adaptée (liquide, gaz, solution)", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Pour un volume de liquide : m = ρ × V = 0,79 × 10,0 = **7,9 g**. M(C₂H₆O) = 2 × 12,0 + 6 × 1,0 + 16,0 = **46 g/mol**. n = m / M = 7,9 / 46 ≈ **0,17 mol** (0,172 mol).\n2. Pour un gaz : n = V / V(m) = 1,2 / 24 = **0,050 mol**. M(CO₂) = 12,0 + 2 × 16,0 = 44 g/mol ; m = n × M = 0,050 × 44 = **2,2 g**. Avec 1,2 L de dioxygène, on aurait trouvé **la même quantité de matière** (0,050 mol) : le volume molaire **ne dépend pas de la nature du gaz**. Seule la masse serait différente.\n3. Le nombre de molécules est proportionnel à la quantité de matière (N = n × N(A)). Le tube d'éthanol en contient 0,17 mol, le flacon de CO₂ 0,050 mol : **le tube d'éthanol contient le plus de molécules**, environ 3,4 fois plus, alors que son volume est cent vingt fois plus petit.\n4. M(NaCl) = 23,0 + 35,5 = **58,5 g/mol**. t = C × M, donc C = t / M = 9,0 / 58,5 ≈ **0,15 mol/L** (0,154 mol/L). Une dilution d'un facteur 10 divise la concentration par 10 : t(fille) = 9,0 / 10 = **0,90 g/L** (et C ≈ 0,015 mol/L)."
+    },
+    {
+      "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+      "difficulte": 1,
+      "titre": "Le spectrophotomètre de Manon",
+      "consigne": "Réponds par des phrases complètes et détaille les deux calculs.",
+      "enonce": "**Situation.** Manon étudie une solution bleue au spectrophotomètre.\n\n1. Qu'est-ce que l'absorbance ? Quelle est son unité ?\n2. Dans quel domaine de couleurs la solution bleue absorbe-t-elle principalement ? Justifie. À quelle longueur d'onde Manon doit-elle régler l'appareil, et pourquoi ?\n3. Énonce la loi de Beer-Lambert et sa condition de validité.\n4. Pour une concentration **C = 2,0 × 10⁻³ mol/L**, Manon mesure **A = 0,40**. Calcule le coefficient k, puis l'absorbance attendue pour une solution deux fois moins concentrée.",
+      "bareme": [
+        { "critere": "Absorbance mesurée par le spectrophotomètre, sans unité, nulle si rien n'est absorbé", "points": 4 },
+        { "critere": "Absorbe dans le jaune-orangé (couleur complémentaire) ; réglage à λ(max) pour la sensibilité et la précision", "points": 6 },
+        { "critere": "A = k × C pour une solution diluée, à longueur d'onde donnée", "points": 4 },
+        { "critere": "k = 200 L/mol et A = 0,20", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**absorbance** A mesure la lumière retenue par la solution ; elle est mesurée par le spectrophotomètre et **n'a pas d'unité**. Elle vaut 0 pour une solution qui n'absorbe rien.\n2. Une solution absorbe la **couleur complémentaire** de celle qu'elle paraît avoir : une solution bleue absorbe dans le **jaune-orangé**, autour de 600 nm. Manon doit régler l'appareil à **λ(max)**, la longueur d'onde la plus absorbée : c'est là que la variation d'absorbance est la plus forte (**sensibilité**) et qu'un petit écart de réglage change peu le résultat (**précision**).\n3. Loi de Beer-Lambert : **A = k × C**, l'absorbance est **proportionnelle** à la concentration, pour une solution **diluée** et à une longueur d'onde donnée.\n4. k = A / C = 0,40 / 2,0 × 10⁻³ = **200 L/mol**. Pour C = 1,0 × 10⁻³ mol/L : A = 200 × 1,0 × 10⁻³ = **0,20** (proportionnalité : concentration divisée par 2, absorbance divisée par 2)."
+    },
+    {
+      "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+      "difficulte": 2,
+      "titre": "Une gamme d'étalons",
+      "consigne": "Exploite les mesures, détaille les calculs et justifie la méthode.",
+      "enonce": "**Situation.** Pour doser une solution colorée inconnue, Théo prépare des étalons à partir d'une solution mère à **5,0 mmol/L**. Il règle le spectrophotomètre à λ(max), fait le blanc, puis mesure :\n\n| C (mmol/L) | 0,5 | 1,0 | 1,5 | 2,0 | 2,5 |\n| A | 0,12 | 0,24 | 0,36 | 0,48 | 0,60 |\n\nPour une dilution, on rappelle : C(mère) × V(prélevé) = C(fille) × V(fille).\n\n1. Quel volume de solution mère Théo doit-il prélever pour préparer **20,0 mL** de l'étalon à 1,0 mmol/L ?\n2. À quoi sert le blanc ? Avec quoi le fait-on ?\n3. Montre que les mesures vérifient la loi de Beer-Lambert et détermine le coefficient k de la droite d'étalonnage.\n4. La solution inconnue a une absorbance **A = 0,42**. Détermine sa concentration.",
+      "bareme": [
+        { "critere": "V(prélevé) = 4,0 mL", "points": 4 },
+        { "critere": "Blanc fait avec le solvant seul, pour ne mesurer que l'espèce étudiée", "points": 4 },
+        { "critere": "A / C constant : droite passant par l'origine, k = 0,24 L/mmol", "points": 6 },
+        { "critere": "C = A / k = 1,75 mmol/L, dans le domaine de la gamme", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. V(prélevé) = C(fille) × V(fille) / C(mère) = 1,0 × 20,0 / 5,0 = **4,0 mL**.\n2. Le **blanc** se fait avec le **solvant seul** dans la cuve : il permet de ne mesurer que l'absorption de l'**espèce étudiée**, sans celle du solvant et de la cuve.\n3. Pour chaque étalon, A / C = 0,12 / 0,5 = 0,24 / 1,0 = 0,36 / 1,5 = 0,48 / 2,0 = 0,60 / 2,5 = **0,24 L/mmol**. Le rapport est constant : A est **proportionnelle** à C, la droite d'étalonnage passe par l'origine. La loi de Beer-Lambert est vérifiée avec **k = 0,24 L/mmol**.\n4. C = A / k = 0,42 / 0,24 = **1,75 mmol/L** (environ 1,8 mmol/L). Cette valeur est comprise dans la gamme d'étalons (entre 1,5 et 2,0 mmol/L), ce qui rend la lecture fiable."
+    },
+    {
+      "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+      "difficulte": 3,
+      "titre": "Le colorant d'une boisson bleue",
+      "consigne": "Analyse la démarche expérimentale, exploite les mesures et justifie chaque choix à l'aide du cours.",
+      "enonce": "**Situation.** Une boisson bleue contient un seul colorant, noté B, de masse molaire **M = 800 g/mol**. Inès veut déterminer sa concentration.\n\n**Doc 1 – Spectre d'absorption de B** : un seul maximum, à **600 nm**.\n\n**Doc 2 – Étalons de B mesurés à 600 nm**\n\n| C (µmol/L) | 2,0 | 4,0 | 6,0 | 8,0 |\n| A | 0,25 | 0,50 | 0,75 | 1,00 |\n\n**Doc 3 – Mesures sur la boisson** : la boisson pure donne **A = 1,90**, au-delà de la gamme. Inès la dilue **4 fois** et mesure alors **A = 0,55**.\n\n1. Pourquoi le maximum d'absorption se trouve-t-il vers 600 nm pour une boisson bleue ? Pourquoi travailler à cette longueur d'onde ?\n2. Détermine le coefficient k de la droite d'étalonnage.\n3. Pourquoi Inès ne peut-elle pas utiliser directement la mesure A = 1,90 ? Justifie à l'aide des limites de la loi de Beer-Lambert.\n4. Calcule la concentration de B dans la solution diluée, puis dans la boisson.\n5. Déduis-en la concentration en masse de B dans la boisson, en mg/L.\n6. Cite deux précautions qui évitent de fausser les mesures.",
+      "bareme": [
+        { "critere": "Absorption dans la couleur complémentaire du bleu ; λ(max) pour sensibilité et précision", "points": 4 },
+        { "critere": "k = 0,125 L/µmol (droite passant par l'origine)", "points": 3 },
+        { "critere": "Hors gamme et solution trop concentrée : la loi n'est plus sûre, la droite s'incurve ; d'où la dilution", "points": 4 },
+        { "critere": "C(diluée) = 4,4 µmol/L et C(boisson) = 17,6 µmol/L", "points": 5 },
+        { "critere": "t = C × M ≈ 14 mg/L et deux précautions (blanc, cuve propre, réglage à λ(max))", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Une solution absorbe la **couleur complémentaire** de celle qu'elle paraît avoir : une solution bleue absorbe dans le **jaune-orangé**, autour de 600 nm. On travaille à **λ(max)** car la variation d'absorbance y est la plus forte (**sensibilité**) et un petit écart de réglage y change peu le résultat (**précision**).\n2. A / C = 0,25 / 2,0 = 0,50 / 4,0 = 0,75 / 6,0 = 1,00 / 8,0 = **0,125 L/µmol** : k = 0,125 L/µmol, la droite passe par l'origine.\n3. La mesure A = 1,90 est **en dehors de la gamme** d'étalonnage (A ≤ 1,00) : rien ne garantit que la droite y reste valable. La loi de Beer-Lambert ne vaut que pour des solutions **diluées** : pour une solution **trop concentrée**, la droite **s'incurve** et la lecture serait fausse. Il faut donc diluer pour revenir dans la gamme.\n4. Solution diluée : C = A / k = 0,55 / 0,125 = **4,4 µmol/L**. La boisson ayant été diluée 4 fois : C(boisson) = 4 × 4,4 = **17,6 µmol/L** (1,76 × 10⁻⁵ mol/L).\n5. t = C × M = 1,76 × 10⁻⁵ × 800 ≈ 1,41 × 10⁻² g/L ≈ **14 mg/L**.\n6. Précautions : faire le **blanc** avec le solvant avant la série ; utiliser une **cuve propre**, non rayée et sans trace de doigt ; garder le réglage à **λ(max)** pour toutes les mesures ; mesurer rapidement si l'espèce risque de réagir."
+    },
+    {
+      "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+      "difficulte": 1,
+      "titre": "Le méthane et le piège du réactif limitant",
+      "consigne": "Construis le raisonnement du cours et détaille chaque calcul.",
+      "enonce": "**Situation.** On fait brûler du méthane selon l'équation :\n\n> CH₄ + 2 O₂ → CO₂ + 2 H₂O\n\nL'état initial contient **0,30 mol** de CH₄ et **0,50 mol** de O₂, et aucun produit.\n\n1. Que mesure l'avancement x ? Que vaut-il à l'état initial ?\n2. Exprime, en fonction de x, la quantité de chaque espèce en cours de réaction.\n3. Détermine le réactif limitant et l'avancement maximal. Pourquoi ne suffit-il pas de regarder quelle quantité initiale est la plus petite ?\n4. Donne la composition du système à l'état final.",
+      "bareme": [
+        { "critere": "x en moles, progression de la réaction, x = 0 à l'état initial", "points": 3 },
+        { "critere": "Expressions 0,30 − x ; 0,50 − 2x ; x ; 2x", "points": 5 },
+        { "critere": "Rapports 0,30 et 0,25 : O₂ limitant, x(max) = 0,25 mol ; diviser par le coefficient", "points": 7 },
+        { "critere": "État final : 0,05 mol CH₄, 0 mol O₂, 0,25 mol CO₂, 0,50 mol H₂O", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. L'**avancement** x, en moles, mesure la **progression** de la réaction. Il vaut **0** à l'état initial et croît jusqu'à x(max).\n2. Réactifs : n = n(initial) − coefficient × x ; produits : n = n(initial) + coefficient × x.\n- n(CH₄) = 0,30 − x ; n(O₂) = 0,50 − 2x ;\n- n(CO₂) = x ; n(H₂O) = 2x.\n3. Rapports n(initial) / coefficient : CH₄ : 0,30 / 1 = 0,30 ; O₂ : 0,50 / 2 = **0,25**. Le plus petit désigne le réactif limitant : **O₂ est limitant**, et **x(max) = 0,25 mol**. Pourtant O₂ est en plus grande quantité au départ (0,50 > 0,30) : comme il en faut **deux** par molécule de méthane, il faut **diviser par le coefficient** avant de comparer.\n4. Avec x = 0,25 mol : n(CH₄) = 0,30 − 0,25 = **0,05 mol** ; n(O₂) = **0 mol** ; n(CO₂) = **0,25 mol** ; n(H₂O) = **0,50 mol**."
+    },
+    {
+      "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+      "difficulte": 2,
+      "titre": "L'aluminium qui brûle",
+      "consigne": "Établis le tableau d'avancement, détermine le réactif limitant et fais le bilan de matière en masse.",
+      "enonce": "**Situation.** Lors d'une démonstration, on fait réagir de la poudre d'aluminium avec du dioxygène :\n\n> 4 Al + 3 O₂ → 2 Al₂O₃\n\nÉtat initial : **5,4 g** d'aluminium et **2,4 L** de dioxygène.\n\n**Données.** M(Al) = 27,0 g/mol ; M(O) = 16,0 g/mol ; volume molaire V(m) = 24 L/mol.\n\n1. Calcule les quantités de matière initiales des deux réactifs.\n2. Construis le tableau d'avancement (état initial, intermédiaire, final).\n3. Détermine le réactif limitant et l'avancement maximal.\n4. Calcule la masse d'oxyde d'aluminium formée et la masse du réactif restant. Vérifie la conservation de la masse.",
+      "bareme": [
+        { "critere": "n(Al) = 0,20 mol et n(O₂) = 0,10 mol", "points": 4 },
+        { "critere": "Tableau d'avancement correct avec les coefficients 4, 3 et 2", "points": 5 },
+        { "critere": "Rapports 0,050 et 0,033 : O₂ limitant, x(max) ≈ 0,033 mol", "points": 5 },
+        { "critere": "m(Al₂O₃) = 6,8 g, m(Al restant) = 1,8 g, 8,6 g de part et d'autre", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. n(Al) = m / M = 5,4 / 27,0 = **0,20 mol**. n(O₂) = V / V(m) = 2,4 / 24 = **0,10 mol**.\n2. Tableau d'avancement :\n| État | Al | O₂ | Al₂O₃ |\n| Initial (x = 0) | 0,20 | 0,10 | 0 |\n| Intermédiaire (x) | 0,20 − 4x | 0,10 − 3x | 2x |\n| Final (x(max)) | 0,20 − 4x(max) | 0,10 − 3x(max) | 2x(max) |\n3. Rapports : Al : 0,20 / 4 = 0,050 ; O₂ : 0,10 / 3 ≈ **0,033**. Le plus petit rapport désigne **O₂ comme réactif limitant** ; **x(max) = 0,10 / 3 ≈ 0,033 mol**.\n4. n(Al₂O₃) = 2 × x(max) ≈ 0,067 mol ; M(Al₂O₃) = 2 × 27,0 + 3 × 16,0 = 102 g/mol ; m = 0,0667 × 102 ≈ **6,8 g**.\nn(Al restant) = 0,20 − 4 × 0,0333 ≈ 0,067 mol ; m = 0,0667 × 27,0 ≈ **1,8 g**.\nConservation : avant, 5,4 g d'Al + 0,10 × 32 = 3,2 g d'O₂, soit **8,6 g** ; après, 6,8 + 1,8 = **8,6 g**. La masse est conservée."
+    },
+    {
+      "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+      "difficulte": 3,
+      "titre": "Du zinc dans l'acide",
+      "consigne": "Vérifie l'équation, construis le raisonnement complet et analyse l'écart entre théorie et mesure.",
+      "enonce": "**Situation.** Maëlys verse **50,0 mL** d'une solution acide contenant des ions H⁺ à **0,60 mol/L** sur **1,31 g** de zinc. Il se forme du dihydrogène gazeux, qu'elle recueille :\n\n> Zn + 2 H⁺ → Zn²⁺ + H₂\n\n**Données.** M(Zn) = 65,4 g/mol ; V(m) = 24 L/mol ; pour une espèce en solution, n = C × V.\n\n1. Vérifie que l'équation conserve les atomes et la charge.\n2. Calcule les quantités initiales de zinc et d'ions H⁺.\n3. Détermine le réactif limitant, l'avancement maximal et le volume de dihydrogène attendu.\n4. Maëlys ne recueille que **0,30 L** de dihydrogène. Calcule le rendement de l'expérience.\n5. Quel volume de solution acide aurait-il fallu verser pour réaliser un mélange stœchiométrique avec ce zinc ? Quel est l'intérêt d'un tel mélange ?",
+      "bareme": [
+        { "critere": "Conservation des atomes (Zn, H) et de la charge (+2 de chaque côté)", "points": 3 },
+        { "critere": "n(Zn) = 0,0200 mol et n(H⁺) = 0,030 mol", "points": 4 },
+        { "critere": "Rapports 0,020 et 0,015 : H⁺ limitant, x(max) = 0,015 mol, V(H₂) = 0,36 L", "points": 6 },
+        { "critere": "Rendement = 0,30 / 0,36 ≈ 83 %", "points": 3 },
+        { "critere": "n(H⁺) = 0,040 mol, V ≈ 67 mL ; tous les réactifs épuisés, aucun gaspillé", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Atomes : 1 Zn et 2 H de chaque côté. Charge : à gauche 2 × (+1) = +2 ; à droite +2 (Zn²⁺) et 0 (H₂). L'équation est **équilibrée**.\n2. n(Zn) = m / M = 1,31 / 65,4 ≈ **0,0200 mol**. n(H⁺) = C × V = 0,60 × 0,0500 = **0,030 mol**.\n3. Rapports n(initial) / coefficient : Zn : 0,0200 / 1 = 0,020 ; H⁺ : 0,030 / 2 = **0,015**. **H⁺ est limitant** (alors qu'il est le plus abondant au départ), **x(max) = 0,015 mol**. n(H₂) = x(max) = 0,015 mol ; V = n × V(m) = 0,015 × 24 = **0,36 L**.\n4. Rendement : η = 0,30 / 0,36 ≈ **0,83**, soit **83 %**. (Même rapport en quantités de matière : 0,0125 / 0,015.)\n5. Pour consommer tout le zinc : n(H⁺) = 2 × 0,0200 = 0,040 mol, donc V = n / C = 0,040 / 0,60 ≈ **67 mL** (66,7 mL). Dans un mélange stœchiométrique, **tous les réactifs s'épuisent en même temps** : aucun n'est gaspillé, c'est l'objectif d'une synthèse industrielle."
+    },
+    {
+      "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+      "difficulte": 1,
+      "titre": "Titrer un détartrant",
+      "consigne": "Réponds par des phrases complètes et détaille le calcul final.",
+      "enonce": "**Situation.** Pour connaître la concentration d'une solution d'acide chlorhydrique, Lucas en prélève **V = 20,0 mL** et la titre par une solution d'hydroxyde de sodium de concentration **C = 0,100 mol/L**. Les réactifs réagissent mole à mole (coefficients 1-1). Il obtient l'équivalence pour **V(E) = 12,4 mL**.\n\n1. Quel est le réactif titré ? le réactif titrant ? Où se trouve chacun, et avec quelle verrerie est-il mesuré ?\n2. Cite les quatre qualités que doit avoir la réaction support d'un titrage.\n3. Définis l'équivalence, puis calcule la concentration de l'acide chlorhydrique.",
+      "bareme": [
+        { "critere": "Titré : acide, concentration inconnue, dans le bécher, prélevé à la pipette jaugée ; titrant : soude, burette graduée", "points": 6 },
+        { "critere": "Réaction totale, rapide, unique, repérable", "points": 5 },
+        { "critere": "Équivalence : proportions stœchiométriques ; C(acide) = 0,100 × 12,4 / 20,0 = 0,0620 mol/L", "points": 9 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le **réactif titré** est l'acide chlorhydrique : sa concentration est **inconnue**, il est dans le **bécher**, prélevé avec une **pipette jaugée**. Le **réactif titrant** est la solution d'hydroxyde de sodium : sa concentration est **connue**, elle est versée avec une **burette graduée**.\n2. La réaction support doit être **totale**, **rapide**, **unique** (sans réaction parasite) et **repérable** (son terme doit se voir ou se mesurer).\n3. L'**équivalence** est l'instant où les réactifs ont été introduits dans les **proportions stœchiométriques**. Pour des coefficients 1-1 : C(titré) × V(titré) = C(titrant) × V(E), donc C(acide) = 0,100 × 12,4 / 20,0 = **0,0620 mol/L** (6,20 × 10⁻² mol/L)."
+    },
+    {
+      "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+      "difficulte": 2,
+      "titre": "Le fer d'un complément alimentaire",
+      "consigne": "Tiens compte des coefficients stœchiométriques et justifie chaque étape.",
+      "enonce": "**Situation.** Pour doser les ions fer Fe²⁺ d'une solution, Aya en prélève **10,0 mL** et les titre par une solution violette de permanganate de potassium, contenant des ions MnO₄⁻ à **0,020 mol/L**. La réaction support est :\n\n> MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O\n\nLes ions Mn²⁺ et Fe³⁺ sont quasiment incolores à ces concentrations. L'équivalence est atteinte pour **V(E) = 8,0 mL**.\n\n1. Comment Aya repère-t-elle l'équivalence ? Justifie en décrivant ce qui se passe avant et après.\n2. Écris la relation entre les quantités de matière à l'équivalence, en tenant compte des coefficients.\n3. Calcule la quantité d'ions MnO₄⁻ versée à l'équivalence, puis la quantité et la concentration des ions Fe²⁺.\n4. Avant le titrage, Aya a ajouté 20 mL d'eau distillée dans le bécher. Son résultat est-il faussé ? Justifie.",
+      "bareme": [
+        { "critere": "Avant l'équivalence MnO₄⁻ limitant, décoloré ; après, il s'accumule : première teinte violette persistante", "points": 5 },
+        { "critere": "n(Fe²⁺) = 5 × n(MnO₄⁻) à l'équivalence", "points": 4 },
+        { "critere": "n(MnO₄⁻) = 1,6 × 10⁻⁴ mol, n(Fe²⁺) = 8,0 × 10⁻⁴ mol, C = 0,080 mol/L", "points": 7 },
+        { "critere": "Pas faussé : l'eau change la concentration, pas la quantité de matière titrée", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Avant l'équivalence**, le titrant MnO₄⁻ est le réactif **limitant** : chaque goutte violette est consommée et le mélange reste incolore. **Après**, les ions Fe²⁺ ont disparu et MnO₄⁻ **s'accumule** : l'équivalence est repérée à la **première teinte violette persistante** (titrage colorimétrique).\n2. D'après les coefficients (1 MnO₄⁻ pour 5 Fe²⁺), à l'équivalence : **n(Fe²⁺) / 5 = n(MnO₄⁻)**, soit n(Fe²⁺) = 5 × C(MnO₄⁻) × V(E).\n3. n(MnO₄⁻) = 0,020 × 8,0 × 10⁻³ = **1,6 × 10⁻⁴ mol**. n(Fe²⁺) = 5 × 1,6 × 10⁻⁴ = **8,0 × 10⁻⁴ mol**. C(Fe²⁺) = 8,0 × 10⁻⁴ / 10,0 × 10⁻³ = **0,080 mol/L**. (Oublier le coefficient 5 donnerait 0,016 mol/L, cinq fois trop peu : c'est l'erreur la plus fréquente.)\n4. **Non.** L'eau distillée change la concentration dans le bécher, mais **pas la quantité de matière** d'ions Fe²⁺ prélevée. Or, à l'équivalence, c'est une **quantité de matière** qui compte, et le calcul utilise les 10,0 mL prélevés à la pipette."
+    },
+    {
+      "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+      "difficulte": 3,
+      "titre": "L'acidité d'un vinaigre",
+      "consigne": "Exploite les documents, détaille chaque calcul et justifie la démarche expérimentale.",
+      "enonce": "**Situation.** Noah veut vérifier la concentration d'un vinaigre, qui contient de l'acide éthanoïque CH₃COOH (M = 60 g/mol). Il le **dilue 10 fois**, prélève **10,0 mL** de la solution diluée et la titre par une solution d'hydroxyde de sodium à **0,10 mol/L**, en suivant la conductivité. La réaction support est :\n\n> CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O\n\n**Document – Modélisation des mesures** (σ en mS/cm, V en mL) :\n- avant l'équivalence : σ = 0,12 + 0,030 × V ;\n- après l'équivalence : σ = −0,30 + 0,080 × V.\n\n1. Quel type de titrage Noah réalise-t-il ? Comment y repère-t-on l'équivalence ?\n2. Détermine par le calcul le volume à l'équivalence V(E).\n3. Calcule la concentration en acide de la solution diluée, puis celle du vinaigre.\n4. Déduis-en la concentration en masse d'acide éthanoïque dans le vinaigre.\n5. Pourquoi Noah prélève-t-il le vinaigre dilué à la pipette jaugée et non à l'éprouvette ? Aurait-il pu repérer l'équivalence autrement ?",
+      "bareme": [
+        { "critere": "Titrage conductimétrique, équivalence à l'intersection des deux droites", "points": 3 },
+        { "critere": "Résolution 0,12 + 0,030 V = −0,30 + 0,080 V : V(E) = 8,4 mL", "points": 5 },
+        { "critere": "C(diluée) = 0,084 mol/L et C(vinaigre) = 0,84 mol/L (relation 1-1)", "points": 5 },
+        { "critere": "t = C × M ≈ 50 g/L", "points": 3 },
+        { "critere": "Pipette jaugée pour la précision ; autre repérage : titrage pH-métrique (saut de pH) ou colorimétrique", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. C'est un **titrage conductimétrique** : on suit la conductivité σ. L'équivalence est au **point d'intersection des deux droites** de la courbe σ = f(V).\n2. À l'intersection : 0,12 + 0,030 × V = −0,30 + 0,080 × V, donc 0,42 = 0,050 × V et **V(E) = 8,4 mL**.\n3. Coefficients 1-1 : C(diluée) × V(prélevé) = C(titrant) × V(E), donc C(diluée) = 0,10 × 8,4 / 10,0 = **0,084 mol/L**. Le vinaigre a été dilué 10 fois : C(vinaigre) = 10 × 0,084 = **0,84 mol/L**.\n4. t = C × M = 0,84 × 60 ≈ **50 g/L** (50,4 g/L).\n5. La **pipette jaugée** est **précise**, alors que l'éprouvette ne l'est pas : or tout le calcul repose sur la quantité de matière prélevée. Noah aurait aussi pu réaliser un **titrage pH-métrique** (équivalence au **saut de pH**, repéré par la méthode des tangentes parallèles) ou un **titrage colorimétrique** avec un indicateur coloré (premier changement de couleur persistant)."
+    },
+    {
+      "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+      "difficulte": 1,
+      "titre": "L'eau et l'ammoniac",
+      "consigne": "Réponds en comptant les électrons de valence et en justifiant chaque résultat.",
+      "enonce": "1. Donne le nombre d'électrons de valence de l'hydrogène, du carbone, de l'azote, de l'oxygène et du chlore.\n2. Énonce la règle de l'octet. Pourquoi l'hydrogène fait-il exception ?\n3. Pour la molécule d'eau H₂O : compte le total des électrons de valence, déduis-en le nombre de doublets, puis indique combien sont liants et combien sont non liants. Décris son schéma de Lewis.\n4. Même travail pour l'ammoniac NH₃.",
+      "bareme": [
+        { "critere": "H : 1 ; C : 4 ; N : 5 ; O : 6 ; Cl : 7", "points": 4 },
+        { "critere": "Octet : s'entourer de 8 électrons ; H : règle du duet, 2 électrons", "points": 4 },
+        { "critere": "H₂O : 8 électrons, 4 doublets, 2 liants O–H et 2 non liants sur O", "points": 6 },
+        { "critere": "NH₃ : 8 électrons, 4 doublets, 3 liants N–H et 1 non liant sur N", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Hydrogène : **1** ; carbone : **4** ; azote : **5** ; oxygène : **6** ; chlore (halogène) : **7**.\n2. Un atome tend à s'entourer de **huit électrons** de valence, comme le gaz noble le plus proche : c'est la **règle de l'octet**. L'hydrogène ne s'entoure que de **deux** électrons : c'est la **règle du duet**.\n3. H₂O : 2 × 1 + 6 = **8 électrons**, soit **4 doublets**. L'oxygène forme **2 liaisons simples** O–H (2 doublets liants) et porte **2 doublets non liants**. Schéma : H–O–H, l'oxygène entouré de deux doublets non liants ; il a ainsi son octet, chaque H son duet.\n4. NH₃ : 5 + 3 × 1 = **8 électrons**, soit **4 doublets**. L'azote forme **3 liaisons** N–H (3 doublets liants) et porte **1 doublet non liant**. Schéma : l'azote au centre relié aux trois H, avec un doublet non liant ; octet respecté pour N, duet pour chaque H."
+    },
+    {
+      "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+      "difficulte": 2,
+      "titre": "Méthane, méthanal, cyanure d'hydrogène",
+      "consigne": "Applique la méthode du cours en quatre étapes pour chaque molécule et vérifie la règle de l'octet.",
+      "enonce": "On étudie trois molécules : le méthane **CH₄**, le méthanal **CH₂O** (le carbone est lié aux deux H et à l'oxygène) et le cyanure d'hydrogène **HCN** (enchaînement H, C, N).\n\n1. Rappelle les quatre étapes de l'établissement d'un schéma de Lewis.\n2. Pour chaque molécule, calcule le total des électrons de valence et le nombre de doublets.\n3. Établis le schéma de Lewis de chaque molécule en décrivant les liaisons (simples, doubles, triples) et les doublets non liants. Vérifie que chaque atome respecte l'octet ou le duet.\n4. Quelle est la géométrie du méthane ? Justifie.",
+      "bareme": [
+        { "critere": "Les quatre étapes : compter, liaisons simples, doublets non liants, liaisons multiples si besoin", "points": 4 },
+        { "critere": "CH₄ : 8 e⁻, 4 doublets ; CH₂O : 12 e⁻, 6 doublets ; HCN : 10 e⁻, 5 doublets", "points": 5 },
+        { "critere": "Schémas justes : 4 liaisons C–H ; C=O avec 2 doublets non liants sur O ; H–C≡N avec 1 doublet non liant sur N", "points": 8 },
+        { "critere": "Méthane tétraédrique : 4 doublets autour du carbone qui se repoussent", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Étapes : (1) compter le **total** des électrons de valence ; (2) placer les **liaisons simples** entre atomes voisins ; (3) compléter les octets avec les **doublets non liants** ; (4) si un atome reste incomplet, former une liaison **double** ou **triple**.\n2. CH₄ : 4 + 4 × 1 = **8 e⁻**, **4 doublets**. CH₂O : 4 + 2 × 1 + 6 = **12 e⁻**, **6 doublets**. HCN : 1 + 4 + 5 = **10 e⁻**, **5 doublets**.\n3. \n- **CH₄** : 4 liaisons simples C–H, aucun doublet non liant. C a 4 doublets (octet), chaque H un doublet (duet).\n- **CH₂O** : 2 liaisons C–H, et avec des liaisons simples seulement le carbone resterait incomplet : on forme une **double liaison C=O**. L'oxygène porte **2 doublets non liants**. Bilan : 2 + 2 + 2 = 6 doublets ✓ ; C a 4 doublets, O a 2 liants + 2 non liants.\n- **HCN** : liaison H–C, puis une **triple liaison C≡N** pour compléter le carbone ; l'azote porte **1 doublet non liant**. Bilan : 1 + 3 + 1 = 5 doublets ✓ ; C a 4 doublets, N a 3 liants + 1 non liant, H son duet.\n4. Autour du carbone du méthane se trouvent **4 doublets** qui se **repoussent** et s'écartent au maximum : la géométrie est **tétraédrique**."
+    },
+    {
+      "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+      "difficulte": 3,
+      "titre": "Des ions et une double liaison",
+      "consigne": "Applique la méthode du cours, y compris pour les ions, et justifie les géométries à partir des doublets.",
+      "enonce": "On étudie l'ion ammonium **NH₄⁺**, l'ion hydroxyde **HO⁻**, l'éthylène **C₂H₄** (les deux carbones sont liés entre eux, chacun porte deux H) et la molécule d'eau **H₂O**.\n\n1. Pour chacune des quatre entités, calcule le total des électrons de valence (sans oublier la charge des ions) et le nombre de doublets.\n2. Établis le schéma de Lewis de NH₄⁺ et de HO⁻ en décrivant liaisons et doublets non liants.\n3. Établis le schéma de Lewis de C₂H₄. Explique pourquoi une liaison double est nécessaire.\n4. L'ion ammonium et la molécule d'eau ont tous deux **4 doublets** autour de l'atome central. Pourtant l'eau est dite coudée. Explique la géométrie de chacun à partir de ses doublets liants et non liants.",
+      "bareme": [
+        { "critere": "NH₄⁺ : 5 + 4 − 1 = 8 e⁻ ; HO⁻ : 6 + 1 + 1 = 8 e⁻ ; C₂H₄ : 12 e⁻ ; H₂O : 8 e⁻ ; doublets déduits", "points": 5 },
+        { "critere": "NH₄⁺ : 4 liaisons N–H, aucun non liant ; HO⁻ : 1 liaison O–H, 3 doublets non liants sur O", "points": 5 },
+        { "critere": "C₂H₄ : 4 liaisons C–H et C=C ; sans double liaison, chaque carbone n'aurait que 3 doublets", "points": 4 },
+        { "critere": "NH₄⁺ tétraédrique (4 liaisons) ; eau : 4 doublets dont 2 non liants, les atomes forment un angle, molécule coudée", "points": 4 },
+        { "critere": "Octet et duet vérifiés pour chaque atome", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. \n- **NH₄⁺** : 5 + 4 × 1 − 1 (charge +) = **8 e⁻**, **4 doublets**.\n- **HO⁻** : 6 + 1 + 1 (charge −) = **8 e⁻**, **4 doublets**.\n- **C₂H₄** : 2 × 4 + 4 × 1 = **12 e⁻**, **6 doublets**.\n- **H₂O** : 6 + 2 × 1 = **8 e⁻**, **4 doublets**.\n2. **NH₄⁺** : l'azote est lié aux **quatre H** par 4 liaisons simples ; **aucun doublet non liant** (4 doublets utilisés). N a son octet, chaque H son duet. **HO⁻** : une liaison O–H et **3 doublets non liants** sur l'oxygène (1 + 3 = 4 doublets) : O a son octet.\n3. **C₂H₄** : on place 4 liaisons C–H et une liaison C–C, soit 5 doublets. Il reste 1 doublet : chaque carbone n'aurait alors que **3 doublets** (6 électrons), l'octet ne serait pas atteint. On forme donc une **double liaison C=C** : chaque carbone a 2 liaisons C–H + 2 doublets de la double liaison = 4 doublets. Aucun doublet non liant ; bilan 4 + 2 = 6 doublets ✓.\n4. Les doublets, liants ou non, se **repoussent** et s'écartent au maximum ; 4 doublets se placent selon un **tétraèdre**. Dans **NH₄⁺**, les 4 doublets sont liants : les 4 H occupent les 4 sommets, l'ion est **tétraédrique**. Dans **H₂O**, 2 des 4 doublets sont **non liants** : seuls 2 H sont liés, placés sur deux directions du tétraèdre ; les trois atomes H, O, H ne sont pas alignés : la molécule est **coudée**, et non linéaire."
+    },
+    {
+      "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+      "difficulte": 1,
+      "titre": "Liaisons polarisées ou non",
+      "consigne": "Réponds en t'appuyant sur les valeurs d'électronégativité fournies.",
+      "enonce": "**Données – Électronégativités (échelle de Pauling)** : H : 2,20 ; C : 2,55 ; N : 3,04 ; O : 3,44 ; Cl : 3,16 ; F : 3,98.\n\n1. Définis l'électronégativité. Comment varie-t-elle le long d'une période et le long d'une colonne du tableau périodique ? Quel est l'élément le plus électronégatif ?\n2. Les liaisons suivantes sont-elles polarisées ? Pour chaque liaison polarisée, indique sur quel atome se place la charge partielle δ− : H–Cl ; Cl–Cl ; O–H ; H–H.\n3. Que signifient les notations δ+ et δ− ? Un atome qui porte δ− est-il un ion ?",
+      "bareme": [
+        { "critere": "Définition ; augmente de gauche à droite, diminue de haut en bas ; fluor le plus électronégatif", "points": 6 },
+        { "critere": "H–Cl et O–H polarisées (δ− sur Cl et sur O) ; Cl–Cl et H–H non polarisées", "points": 9 },
+        { "critere": "Charges partielles, pas des ions", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**électronégativité** mesure la tendance d'un atome à **attirer vers lui les électrons** d'une liaison qu'il partage. Elle **augmente de gauche à droite** sur une période et **diminue de haut en bas** dans une colonne. Le **fluor** est le plus électronégatif.\n2. \n- **H–Cl** : électronégativités différentes (3,16 > 2,20) : liaison **polarisée**, **δ− sur Cl**, δ+ sur H.\n- **Cl–Cl** : atomes identiques : liaison **non polarisée**.\n- **O–H** : 3,44 > 2,20 : **polarisée**, **δ− sur O**, δ+ sur H.\n- **H–H** : atomes identiques : **non polarisée**.\n3. δ+ et δ− sont des **charges partielles** : le doublet de liaison est simplement **déplacé** vers l'atome le plus électronégatif. Un atome qui porte δ− **n'est pas un ion** : il n'a pas gagné d'électron entier."
+    },
+    {
+      "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+      "difficulte": 2,
+      "titre": "Deux molécules, deux verdicts",
+      "consigne": "Pour chaque molécule, examine les liaisons puis la géométrie avant de conclure.",
+      "enonce": "**Données – Électronégativités** : H : 2,20 ; C : 2,55 ; O : 3,44 ; Cl : 3,16.\n\n**Situation.** Julia compare quatre molécules :\n- l'eau H₂O, **coudée** ;\n- le dioxyde de carbone CO₂, **linéaire et symétrique** (O=C=O) ;\n- le chlorure d'hydrogène HCl ;\n- le dichlore Cl₂.\n\n1. À quelle double condition une molécule est-elle polaire ?\n2. Pour chaque molécule, dis si ses liaisons sont polarisées, puis si la molécule est polaire ou apolaire. Justifie.\n3. Julia remarque que l'eau et le dioxyde de carbone contiennent tous deux des liaisons polarisées avec l'oxygène. Pourquoi leurs polarités sont-elles opposées ?\n4. Le chlorure d'hydrogène se dissout-il mieux dans l'eau ou dans le cyclohexane (solvant apolaire) ? Justifie.",
+      "bareme": [
+        { "critere": "Liaisons polarisées ET charges partielles qui ne se compensent pas", "points": 4 },
+        { "critere": "H₂O polaire, CO₂ apolaire, HCl polaire, Cl₂ apolaire (liaison non polarisée), chacun justifié", "points": 8 },
+        { "critere": "Rôle de la géométrie : coudée, rien ne se compense ; linéaire symétrique, les effets s'annulent", "points": 4 },
+        { "critere": "HCl dans l'eau : semblable dissout semblable", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Une molécule est **polaire** si ses liaisons sont **polarisées** **et** si les charges partielles **ne se compensent pas**.\n2. \n- **H₂O** : liaisons O–H polarisées (3,44 > 2,20) ; molécule **coudée**, les effets ne se compensent pas : **polaire**.\n- **CO₂** : liaisons C=O fortement polarisées (3,44 > 2,55) ; molécule **linéaire et symétrique**, les deux effets s'annulent : **apolaire**.\n- **HCl** : liaison polarisée (3,16 > 2,20), une seule liaison, rien ne la compense : **polaire**.\n- **Cl₂** : deux atomes identiques, liaison **non polarisée** : **apolaire**.\n3. C'est la **géométrie** qui fait la différence : dans CO₂, les deux liaisons sont opposées et symétriques, leurs effets s'annulent ; dans H₂O, coudée, ils s'additionnent. La géométrie compte autant que l'électronégativité.\n4. HCl est polaire : d'après la règle « **semblable dissout semblable** », il se dissout mieux dans l'**eau**, solvant polaire, que dans le cyclohexane, apolaire."
+    },
+    {
+      "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+      "difficulte": 3,
+      "titre": "Polarité, ébullition et solubilité",
+      "consigne": "Exploite les données, raisonne en deux temps (liaisons puis géométrie) et relie la polarité aux propriétés observées.",
+      "enonce": "**Données – Électronégativités** : H : 2,20 ; C : 2,55 ; O : 3,44 ; S : 2,58 ; I : 2,66.\n\n**Document 1 – Deux molécules de même masse molaire (44 g/mol)**\n\n| Molécule | Formule | Géométrie autour du carbone lié à O | Température d'ébullition |\n| Propane | C₃H₈ | — | −42 °C |\n| Éthanal | CH₃–CHO | Liaison C=O non compensée | 20 °C |\n\n**Document 2 – Deux oxydes** : le dioxyde de soufre SO₂ est **coudé** ; le dioxyde de carbone CO₂ est **linéaire et symétrique**.\n\n**Document 3** : le diiode I₂ est un solide violet ; on l'agite avec de l'eau puis avec du cyclohexane (apolaire).\n\n1. Les liaisons C–H du propane sont très peu polarisées. Justifie à l'aide des données, et conclus sur le caractère polaire ou apolaire du propane.\n2. L'éthanal est polaire. Explique pourquoi, puis interprète l'écart de températures d'ébullition du document 1.\n3. Détermine la polarité de SO₂ et de CO₂. Justifie.\n4. Prévois dans quel solvant le diiode se dissout le mieux. Justifie en deux étapes.",
+      "bareme": [
+        { "critere": "Écart C–H faible (0,35) : liaisons quasi non polarisées, propane apolaire", "points": 3 },
+        { "critere": "C=O polarisée non compensée : éthanal polaire ; molécules polaires s'attirent davantage, ébullition plus haute à masse égale", "points": 6 },
+        { "critere": "SO₂ polaire (liaisons polarisées, coudée) ; CO₂ apolaire (linéaire, symétrique)", "points": 5 },
+        { "critere": "I₂ : liaison entre atomes identiques, apolaire ; se dissout mieux dans le cyclohexane", "points": 4 },
+        { "critere": "Raisonnement en deux temps rédigé et appuyé sur les documents", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'écart d'électronégativité entre C (2,55) et H (2,20) n'est que de **0,35** : les liaisons C–H sont **très peu polarisées**. Le propane, qui ne contient que des liaisons C–H et C–C (non polarisées), est **apolaire**.\n2. Dans l'éthanal, la liaison **C=O** est fortement polarisée (3,44 contre 2,55 : δ− sur O, δ+ sur C) et **rien ne la compense** : la molécule est **polaire**. À masse molaire égale (44 g/mol), les molécules **polaires s'attirent davantage** : il faut plus d'énergie pour les séparer, elles **bouillent plus haut**. D'où 20 °C pour l'éthanal contre −42 °C pour le propane.\n3. Dans les deux cas, les liaisons avec l'oxygène sont **polarisées** (O plus électronégatif que S et que C). **SO₂** est **coudé** : les charges partielles ne se compensent pas, la molécule est **polaire**. **CO₂** est **linéaire et symétrique** : les deux effets s'annulent, la molécule est **apolaire**.\n4. Étape 1 : la liaison I–I unit deux **atomes identiques** : elle n'est **pas polarisée**, I₂ est **apolaire**. Étape 2 : « **semblable dissout semblable** » : une espèce apolaire se dissout dans un solvant apolaire. Le diiode se dissout donc mieux dans le **cyclohexane** que dans l'eau, polaire."
+    },
+    {
+      "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+      "difficulte": 1,
+      "titre": "Ce qui casse quand l'eau bout",
+      "consigne": "Réponds par des phrases complètes en distinguant bien liaisons et interactions.",
+      "enonce": "1. Nomme les deux liaisons fortes du cours et donne pour chacune son principe et ce qu'elle forme.\n2. Nomme les deux interactions faibles qui s'exercent entre les entités. Entre quelles molécules existe chacune ?\n3. Quand l'eau bout dans une casserole, rompt-on des liaisons covalentes ? Justifie.\n4. Le sel de cuisine est un solide ionique. Pourquoi est-il électriquement neutre ?",
+      "bareme": [
+        { "critere": "Covalente (doublet partagé, molécule) ; ionique (attraction entre ions de charges opposées, solide ionique)", "points": 6 },
+        { "critere": "Van der Waals entre toutes les molécules ; liaison hydrogène : H lié à O, N ou F et doublet non liant d'un atome électronégatif", "points": 6 },
+        { "critere": "Ébullition : seules les interactions entre molécules sont rompues, aucune liaison covalente", "points": 5 },
+        { "critere": "Solide ionique : empilement régulier d'ions dont les charges se compensent", "points": 3 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **liaison covalente** : un **doublet partagé** entre deux atomes ; elle forme la **molécule** (c'est elle qu'on rompt dans une réaction chimique). La **liaison ionique** : l'**attraction entre ions de charges opposées** ; elle forme un **solide ionique**.\n2. Les interactions de **Van der Waals** existent entre **toutes** les molécules. La **liaison hydrogène** s'établit quand un **H lié à O, N ou F** s'approche du **doublet non liant** d'un autre atome électronégatif ; elle est plus forte que Van der Waals.\n3. **Non.** Vaporiser un corps moléculaire ne casse **aucune liaison covalente** : on rompt seulement les **interactions entre molécules** (ici surtout des liaisons hydrogène). Les molécules H₂O restent entières dans la vapeur.\n4. Un solide ionique est un **empilement régulier** d'ions positifs et négatifs dont les charges **se compensent** : il est **électriquement neutre** dans son ensemble."
+    },
+    {
+      "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+      "difficulte": 2,
+      "titre": "Les alcanes et l'anomalie de l'eau",
+      "consigne": "Exploite les données en identifiant à chaque fois l'interaction en jeu.",
+      "enonce": "**Document 1 – Températures d'ébullition de quelques alcanes linéaires**\n\n| Alcane | Méthane | Éthane | Propane | Butane |\n| Nombre de carbones | 1 | 2 | 3 | 4 |\n| T(ébullition) | −162 °C | −89 °C | −42 °C | −0,5 °C |\n\n**Document 2 – Deux molécules voisines**\n\n| Molécule | Masse molaire | T(ébullition) |\n| Eau H₂O | 18 g/mol | 100 °C |\n| Sulfure d'hydrogène H₂S | 34 g/mol | −60 °C |\n\n1. Décris l'évolution de la température d'ébullition dans le document 1 et explique-la.\n2. Quelle interaction supplémentaire existe entre les molécules d'eau ? Précise entre quels atomes elle s'établit.\n3. Explique pourquoi l'eau est liquide à température ambiante alors que H₂S, pourtant plus lourd, est gazeux.\n4. Compare l'ordre de grandeur de l'énergie des interactions faibles à celle des liaisons covalentes.",
+      "bareme": [
+        { "critere": "T(éb) croît avec la longueur de chaîne : Van der Waals augmente avec la taille", "points": 6 },
+        { "critere": "Liaison hydrogène : H lié à O d'une molécule et doublet non liant de l'O d'une autre", "points": 5 },
+        { "critere": "Liaisons hydrogène entre molécules d'eau, plus fortes que Van der Waals : eau liquide, anomalie", "points": 6 },
+        { "critere": "Interactions faibles 10 à 100 fois moins énergétiques que les liaisons covalentes", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La température d'ébullition **augmente avec le nombre de carbones** (de −162 °C à −0,5 °C). Les molécules sont de plus en plus grandes : les **interactions de Van der Waals**, qui augmentent avec la **taille**, sont plus fortes, et il faut plus d'énergie pour séparer les molécules.\n2. Entre les molécules d'eau s'établissent des **liaisons hydrogène** : un **atome H lié à un O** d'une molécule s'approche du **doublet non liant de l'oxygène** d'une molécule voisine.\n3. À masse molaire comparable, l'eau « devrait » être gazeuse comme H₂S. Mais ses molécules sont unies par des **liaisons hydrogène**, plus fortes que les interactions de Van der Waals : il faut beaucoup plus d'énergie pour les séparer. C'est l'**anomalie de l'eau** : elle est liquide à température ambiante (et sa glace flotte). H₂S, dont les molécules ne sont liées que par des interactions plus faibles, bout à −60 °C malgré sa masse molaire plus grande.\n4. Les interactions faibles sont **dix à cent fois moins énergétiques** que les liaisons covalentes."
+    },
+    {
+      "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+      "difficulte": 3,
+      "titre": "Deux molécules de formule C₂H₆O",
+      "consigne": "Analyse les documents en distinguant précisément liaisons covalentes et interactions entre entités.",
+      "enonce": "**Document 1 – Deux isomères de formule C₂H₆O (46 g/mol)**\n\n| Molécule | Formule semi-développée | T(ébullition) |\n| Éthanol | CH₃–CH₂–OH | 78 °C |\n| Méthoxyméthane | CH₃–O–CH₃ | −24 °C |\n\n**Document 2 – Ordres de grandeur d'énergie** : liaison covalente O–H : environ 460 kJ/mol ; liaison hydrogène entre molécules d'eau : environ 20 kJ/mol.\n\n**Document 3** : Karim dissout du sel NaCl (Na⁺, Cl⁻) dans l'eau.\n\n1. Les deux molécules du document 1 ont la même masse molaire. Identifie celle qui peut former des liaisons hydrogène entre ses molécules et justifie. Explique alors l'écart de températures d'ébullition.\n2. À l'aide du document 2, calcule le rapport entre l'énergie d'une liaison O–H et celle d'une liaison hydrogène. Est-il conforme au cours ?\n3. Quand l'éthanol bout, quelles « liaisons » sont rompues, et lesquelles ne le sont pas ?\n4. Décris les trois étapes de la dissolution du sel dans l'eau. Précise, pour la solvatation, quelle partie des molécules d'eau se tourne vers Na⁺ et laquelle vers Cl⁻. Pourquoi l'eau réussit-elle cette dissolution ?",
+      "bareme": [
+        { "critere": "Éthanol : H lié à O, liaisons hydrogène ; méthoxyméthane : aucun H lié à O ; d'où 78 °C contre −24 °C", "points": 6 },
+        { "critere": "Rapport 460 / 20 = 23, entre 10 et 100, conforme", "points": 3 },
+        { "critere": "Ébullition : interactions entre molécules rompues, aucune liaison covalente", "points": 3 },
+        { "critere": "Dissociation, solvatation, dispersion ; O (δ−) vers Na⁺, H (δ+) vers Cl⁻ ; eau polaire", "points": 6 },
+        { "critere": "Rédaction rigoureuse distinguant liaisons et interactions", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Dans l'**éthanol**, un atome **H est lié à O** (groupe –OH) : il peut s'approcher du doublet non liant de l'oxygène d'une molécule voisine et former une **liaison hydrogène**. Dans le **méthoxyméthane**, tous les H sont liés à des carbones : **pas de liaison hydrogène** entre ses molécules, seulement des interactions de Van der Waals. Les liaisons hydrogène étant plus fortes, il faut plus d'énergie pour séparer les molécules d'éthanol : il bout à **78 °C**, contre **−24 °C** pour son isomère.\n2. 460 / 20 = **23** : la liaison hydrogène est environ 23 fois moins énergétique que la liaison covalente O–H. C'est **conforme** au cours (interactions faibles dix à cent fois moins énergétiques).\n3. Quand l'éthanol bout, on rompt les **interactions entre molécules** (liaisons hydrogène et Van der Waals). **Aucune liaison covalente** n'est rompue : les molécules CH₃–CH₂–OH restent entières dans la vapeur.\n4. \n- **Dissociation** : les ions Na⁺ et Cl⁻ du cristal se séparent.\n- **Solvatation** : les molécules d'eau s'orientent autour de chaque ion en tournant leur **pôle opposé** vers lui : l'**oxygène (δ−)** vers **Na⁺**, les **hydrogènes (δ+)** vers **Cl⁻**.\n- **Dispersion** : les ions solvatés se répartissent dans tout le solvant.\nL'eau y réussit précisément parce qu'elle est **polaire** : ses charges partielles lui permettent d'entourer les ions."
+    },
+    {
+      "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+      "difficulte": 1,
+      "titre": "L'eau salée saturée",
+      "consigne": "Réponds par des phrases complètes et détaille le calcul.",
+      "enonce": "**Situation.** À 20 °C, la solubilité du chlorure de sodium (sel de cuisine) dans l'eau vaut **360 g/L**. Kenza verse **100 g** de sel dans **250 mL** d'eau à 20 °C et agite longuement.\n\n1. Définis la solubilité et la solution saturée.\n2. Calcule la masse maximale de sel que peuvent dissoudre 250 mL d'eau à 20 °C. La solution de Kenza est-elle saturée ? Que reste-t-il au fond du verre ?\n3. Comment évolue en général la solubilité d'un solide quand la température augmente ? Et celle d'un gaz ? Donne un exemple de la vie courante pour le gaz.",
+      "bareme": [
+        { "critere": "Solubilité : masse maximale dissoute par litre à une température donnée ; saturée : solubilité atteinte", "points": 5 },
+        { "critere": "360 × 0,250 = 90 g ; solution saturée, 10 g de sel non dissous", "points": 9 },
+        { "critere": "Solide : solubilité augmente ; gaz : diminue (boisson gazeuse qui se dégaze en se réchauffant)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **solubilité** d'une espèce est la **masse maximale** que l'on peut dissoudre dans **un litre** de solvant, à une température donnée. Au-delà, la solution est **saturée** : elle ne peut plus dissoudre davantage.\n2. m(max) = 360 × 0,250 = **90 g**. Kenza a versé 100 g > 90 g : la solution est **saturée** et il reste 100 − 90 = **10 g** de sel **non dissous** au fond du verre.\n3. Pour un **solide**, la solubilité **augmente** presque toujours avec la température. Pour un **gaz**, elle **diminue** : une boisson gazeuse se **dégaze** en se réchauffant."
+    },
+    {
+      "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+      "difficulte": 2,
+      "titre": "Extraire le diiode",
+      "consigne": "Justifie le choix du solvant par les deux conditions du cours, puis décris le mode opératoire.",
+      "enonce": "**Situation.** Tim dispose d'une solution aqueuse de diiode I₂, espèce apolaire, et veut l'extraire.\n\n**Document – Trois solvants**\n\n| Solvant | Miscible à l'eau ? | Solubilité du diiode | Masse volumique |\n| Éthanol | Oui | Grande | 0,79 g/mL |\n| Cyclohexane | Non | Très grande | 0,78 g/mL |\n| Dichlorométhane | Non | Grande | 1,33 g/mL |\n\nMasse volumique de la solution aqueuse : 1,00 g/mL.\n\n1. Énonce les deux conditions que doit remplir un solvant extracteur.\n2. Élimine le solvant qui ne convient pas, en justifiant. Pourquoi le diiode, apolaire, est-il plus soluble dans le cyclohexane que dans l'eau ?\n3. Tim choisit le cyclohexane. Décris les étapes de l'extraction dans l'ampoule à décanter, en justifiant le dégazage.\n4. Où se trouve la phase contenant le diiode à la fin ? Et si Tim avait choisi le dichlorométhane ? Justifie.",
+      "bareme": [
+        { "critere": "Solvant extracteur : dissout mieux l'espèce et non miscible au solvant de départ", "points": 4 },
+        { "critere": "Éthanol éliminé car miscible à l'eau ; semblable dissout semblable pour le cyclohexane", "points": 5 },
+        { "critere": "Étapes : verser, agiter en dégazant (vapeurs, pression), décanter, récupérer les phases", "points": 6 },
+        { "critere": "Cyclohexane moins dense : phase du haut ; dichlorométhane plus dense : phase du bas", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le solvant extracteur doit **mieux dissoudre** l'espèce recherchée que le solvant de départ, et être **non miscible** avec lui (sinon les phases ne se sépareraient pas).\n2. L'**éthanol** est **miscible à l'eau** : il ne formerait pas deux phases, il est **éliminé**. Le diiode est apolaire ; le cyclohexane est apolaire, l'eau polaire : d'après « **semblable dissout semblable** », le diiode se dissout bien mieux dans le cyclohexane.\n3. Mode opératoire :\n- verser la solution aqueuse et le cyclohexane dans l'**ampoule à décanter** ;\n- **agiter en dégazant** régulièrement (robinet ouvert, ampoule retournée) : l'agitation libère des vapeurs qui font **monter la pression** ;\n- laisser **décanter** : les deux phases se séparent nettement ;\n- **récupérer chaque phase** en ouvrant le robinet.\n4. La phase la moins dense surnage. Le cyclohexane (0,78 g/mL) est moins dense que l'eau (1,00 g/mL) : la phase contenant le diiode est **en haut**. Avec le dichlorométhane (1,33 g/mL), plus dense que l'eau, elle serait **en bas**."
+    },
+    {
+      "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+      "difficulte": 3,
+      "titre": "Isoler et contrôler l'espèce E",
+      "consigne": "Exploite les données pour choisir et justifier chaque étape, puis interprète la chromatographie.",
+      "enonce": "**Situation.** Une espèce solide E, polaire, se trouve dissoute dans **500 mL** d'eau. Sarah veut l'extraire, puis vérifier la pureté du produit obtenu.\n\n**Document 1 – Solubilité de E**\n\n| Solvant | Solubilité de E | Miscible à l'eau ? | Masse volumique |\n| Eau à 20 °C | 20 g/L | — | 1,00 g/mL |\n| Eau à 80 °C | 180 g/L | — | — |\n| Dichlorométhane | 120 g/L | Non | 1,33 g/mL |\n| Éther | 15 g/L | Non | 0,71 g/mL |\n\n**Document 2 – Chromatographie sur couche mince** : trois dépôts — le produit brut, le produit après purification, E pur (référence). Le produit brut donne deux taches, dont une à la hauteur de la référence ; le produit purifié ne donne qu'une tache, à la hauteur de la référence.\n\n1. Quelle masse maximale de E les 500 mL d'eau peuvent-ils contenir à 20 °C ? et à 80 °C ?\n2. Choisis le solvant extracteur entre le dichlorométhane et l'éther. Justifie par les deux conditions du cours.\n3. Après agitation et décantation, où se trouve la phase contenant E ? Comment Sarah récupère-t-elle ensuite E solide ?\n4. Interprète la chromatographie du document 2.\n5. Pourquoi faut-il refroidir la solution aqueuse avant l'extraction, plutôt que la laisser chaude ?",
+      "bareme": [
+        { "critere": "10 g à 20 °C et 90 g à 80 °C", "points": 3 },
+        { "critere": "Dichlorométhane : non miscible et dissout mieux E que l'eau ; éther éliminé (dissout moins bien que l'eau)", "points": 5 },
+        { "critere": "Phase organique en bas (1,33 g/mL) ; évaporation du solvant", "points": 4 },
+        { "critere": "Brut : E + une impureté ; purifié : une seule tache à la hauteur de la référence, E pur", "points": 4 },
+        { "critere": "Eau chaude : E y est plus soluble et retenu dans la phase aqueuse ; eau froide : extraction plus efficace", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. À 20 °C : 20 × 0,500 = **10 g**. À 80 °C : 180 × 0,500 = **90 g**. La solubilité d'un solide augmente avec la température.\n2. Les deux solvants sont **non miscibles** à l'eau. Mais le solvant extracteur doit **mieux dissoudre** E que l'eau (20 g/L à 20 °C) : le **dichlorométhane** (120 g/L) convient ; l'**éther** (15 g/L) dissout E moins bien que l'eau, il ne ferait pas passer E de la phase aqueuse vers la phase organique. **Choix : le dichlorométhane.**\n3. Le dichlorométhane (1,33 g/mL) est plus dense que l'eau (1,00 g/mL) : la phase organique contenant E est **en bas** de l'ampoule. Sarah la récupère, puis élimine le solvant par **évaporation** : il reste E solide.\n4. Même hauteur de tache = même espèce. Le produit **brut** contient **E** (tache à la hauteur de la référence) et **une impureté** (seconde tache). Le produit **purifié** ne donne qu'une tache, à la hauteur de E : il est **pur** (du moins, aucune impureté n'est détectée).\n5. À chaud, E est bien plus soluble dans l'eau (180 g/L au lieu de 20 g/L) : l'eau le **retiendrait** davantage et l'avantage du dichlorométhane (120 g/L) disparaîtrait. En refroidissant, on rend E moins soluble dans l'eau que dans le solvant extracteur : l'extraction est **plus efficace**. (De plus, un solvant chauffé libère davantage de vapeurs dans l'ampoule.)"
+    },
+    {
+      "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+      "difficulte": 1,
+      "titre": "Quatre façons d'écrire le butane",
+      "consigne": "Réponds en utilisant le vocabulaire du cours.",
+      "enonce": "1. Nomme les quatre représentations d'une molécule et dis ce que chacune montre. Donne la formule brute et la formule semi-développée du butane.\n2. Dans une formule topologique, que représentent chaque sommet et chaque extrémité ? Écrit-on les atomes d'hydrogène portés par les carbones ?\n3. Donne la famille de chacune des molécules suivantes d'après son nom : éthanol ; propanone ; acide éthanoïque ; pentane ; butanal.\n4. Donne le préfixe correspondant à une chaîne de 3, de 5 et de 6 carbones.",
+      "bareme": [
+        { "critere": "Brute, développée, semi-développée, topologique ; C₄H₁₀ et CH₃–CH₂–CH₂–CH₃", "points": 7 },
+        { "critere": "Sommets et extrémités = carbones ; H portés par les C non écrits", "points": 4 },
+        { "critere": "Alcool, cétone, acide carboxylique, alcane, aldéhyde", "points": 5 },
+        { "critere": "prop-, pent-, hex-", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. \n- **Brute** : le nombre de chaque atome, sans structure : **C₄H₁₀**.\n- **Développée** : toutes les liaisons, hydrogènes compris.\n- **Semi-développée** : les liaisons avec les hydrogènes sont sous-entendues : **CH₃–CH₂–CH₂–CH₃**.\n- **Topologique** : une ligne brisée.\n2. Chaque **sommet** et chaque **extrémité** représente un **atome de carbone** ; les H portés par les carbones **ne sont pas écrits**.\n3. Éthan**ol** : **alcool** ; propan**one** : **cétone** ; acide éthan**oïque** : **acide carboxylique** ; pent**ane** : **alcane** ; butan**al** : **aldéhyde**.\n4. 3 carbones : **prop-** ; 5 : **pent-** ; 6 : **hex-**."
+    },
+    {
+      "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+      "difficulte": 2,
+      "titre": "Les deux isomères de C₄H₁₀",
+      "consigne": "Justifie chaque nom par les étapes de la nomenclature du cours.",
+      "enonce": "**Situation.** Les cartouches de gaz de camping contiennent deux alcanes de formule brute C₄H₁₀ :\n\n- molécule A : CH₃–CH₂–CH₂–CH₃ ;\n- molécule B : CH₃–CH(CH₃)–CH₃ (le carbone central porte un groupe CH₃).\n\n**Donnée** : une des deux bout à −0,5 °C, l'autre à −12 °C.\n\n1. Que sont A et B l'une pour l'autre ? Justifie.\n2. Nomme A, puis nomme B en suivant les quatre étapes du cours (chaîne principale, numérotation, ramification, terminaison).\n3. Décris la formule topologique de A et celle de B (nombre de sommets et d'extrémités, forme).\n4. Attribue à chaque molécule sa température d'ébullition. Justifie.",
+      "bareme": [
+        { "critere": "Isomères : même formule brute, structures différentes", "points": 4 },
+        { "critere": "A : butane ; B : 2-méthylpropane (chaîne de 3 C, méthyl en position 2)", "points": 7 },
+        { "critere": "Topologiques : A ligne brisée de 4 carbones ; B trois branches autour d'un sommet central", "points": 4 },
+        { "critere": "A (linéaire) −0,5 °C ; B (ramifiée) −12 °C : Van der Waals plus faibles pour la chaîne ramifiée", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. A et B ont la **même formule brute** C₄H₁₀ mais des **structures différentes** : ce sont des **isomères**. Ils n'ont pas les mêmes propriétés.\n2. **A** : chaîne linéaire de 4 carbones, alcane : **butane**.\n**B** : (1) la chaîne principale la plus longue compte **3 carbones** (prop-) ; (2) on la numérote pour donner le plus petit indice à la ramification : elle est sur le carbone **2** (de n'importe quel côté) ; (3) la ramification CH₃ est un groupe **méthyl** ; (4) terminaison **-ane**. Nom : **2-méthylpropane**.\n3. **A** : une ligne brisée en zigzag à **4 carbones** (2 extrémités et 2 sommets). **B** : un sommet central (le carbone 2) d'où partent **trois segments**, chacun terminé par une extrémité (les trois CH₃) : une forme en « Y ».\n4. À nombre de carbones égal, une chaîne **ramifiée** bout **plus bas** qu'une chaîne linéaire : ses molécules s'emboîtent moins bien, les interactions de **Van der Waals** sont plus faibles. Donc **A (butane) : −0,5 °C** et **B (2-méthylpropane) : −12 °C**."
+    },
+    {
+      "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+      "difficulte": 3,
+      "titre": "Nommer, reconnaître, comparer",
+      "consigne": "Nomme chaque molécule en justifiant les étapes, puis exploite tes résultats pour répondre aux questions d'analyse.",
+      "enonce": "**Document – Six molécules en formule semi-développée**\n\n- M1 : CH₃–CH₂–CH₂–CH₂–CH₃\n- M2 : CH₃–CH(CH₃)–CH₂–CH₃\n- M3 : CH₃–CH(CH₃)–CH(CH₃)–CH₃\n- M4 : CH₃–CH₂–CH(OH)–CH₃\n- M5 : CH₃–CH=CH–CH₂–CH₃\n- M6 : CH₃–CO–CH₂–CH₃ (le deuxième carbone porte un O par une double liaison)\n\n1. Donne la formule brute de M1, M2 et M3.\n2. Nomme les six molécules en précisant pour chacune sa famille. Justifie la numérotation choisie pour M2, M4 et M5.\n3. Parmi ces molécules, repère deux isomères. Justifie.\n4. M1 bout à 36 °C et M2 à 28 °C. Explique cet écart.\n5. Un élève a nommé M4 « butan-3-ol ». Explique son erreur.",
+      "bareme": [
+        { "critere": "M1 et M2 : C₅H₁₂ ; M3 : C₆H₁₄", "points": 3 },
+        { "critere": "Noms : pentane, 2-méthylbutane, 2,3-diméthylbutane, butan-2-ol, pent-2-ène, butanone ; familles justes", "points": 8 },
+        { "critere": "M1 et M2 isomères : même formule brute, structures différentes", "points": 3 },
+        { "critere": "Chaîne ramifiée : emboîtement moins bon, Van der Waals plus faibles, ébullition plus basse", "points": 3 },
+        { "critere": "Erreur de numérotation : plus petits indices, donc 2 et non 3", "points": 3 }
+      ],
+      "dureeMin": 19,
+      "corrige": "1. M1 : **C₅H₁₂** ; M2 : **C₅H₁₂** ; M3 : **C₆H₁₄**.\n2. \n- **M1** : chaîne linéaire de 5 C, alcane : **pentane**.\n- **M2** : chaîne principale de 4 C (but-), un **méthyl** ; numérotée pour qu'il porte le plus petit indice (2 et non 3) : **2-méthylbutane**, alcane.\n- **M3** : chaîne principale de 4 C, deux méthyls sur les carbones 2 et 3 (multiplicateur di-) : **2,3-diméthylbutane**, alcane.\n- **M4** : chaîne de 4 C portant un groupe –OH : alcool. Numérotée pour donner le plus petit indice à la fonction : carbone 2. **Butan-2-ol**.\n- **M5** : chaîne de 5 C avec une double liaison : alcène. Numérotée pour donner le plus petit indice à la double liaison, entre C2 et C3 : **pent-2-ène**.\n- **M6** : chaîne de 4 C avec un C=O au milieu de la chaîne : **cétone**, **butanone** (butan-2-one).\n3. **M1 et M2** ont la même formule brute C₅H₁₂ et des structures différentes (linéaire / ramifiée) : ce sont des **isomères**.\n4. M2 est **ramifiée**, M1 **linéaire** : à nombre de carbones égal, les molécules ramifiées s'emboîtent moins bien, les interactions de **Van der Waals** sont plus faibles, donc M2 bout plus bas (28 °C contre 36 °C).\n5. L'élève a numéroté la chaîne dans le mauvais sens. Il faut la numéroter de façon à donner **les plus petits indices** à la fonction : en partant de l'autre extrémité, l'OH est sur le carbone **2**. Le nom correct est **butan-2-ol**."
+    },
+    {
+      "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+      "difficulte": 1,
+      "titre": "Les quatre étapes d'une synthèse",
+      "consigne": "Réponds par des phrases complètes en donnant pour chaque élément son rôle.",
+      "enonce": "1. Nomme dans l'ordre les quatre étapes d'une synthèse organique et dis ce que fait chacune.\n2. Pendant la transformation, le mélange est chauffé à reflux. Quel est le rôle du réfrigérant ? Celui de la pierre ponce ?\n3. Cite les deux facteurs cinétiques du cours. Un catalyseur modifie-t-il l'état final du système ? Est-il consommé ?\n4. Pourquoi le rendement d'une synthèse est-il toujours inférieur à 1 ?",
+      "bareme": [
+        { "critere": "Transformation, isolement, purification, identification, avec leur rôle", "points": 7 },
+        { "critere": "Réfrigérant : condense les vapeurs qui retombent, chauffer sans perte ; pierre ponce : régule l'ébullition", "points": 5 },
+        { "critere": "Température et concentration ; catalyseur non consommé, état final inchangé", "points": 5 },
+        { "critere": "Réaction jamais totale et pertes à chaque manipulation", "points": 3 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. (1) **Transformation** : les réactifs réagissent. (2) **Isolement** : on sépare le produit du mélange. (3) **Purification** : on élimine les impuretés restantes. (4) **Identification** : on vérifie que c'est bien le produit voulu.\n2. Le **réfrigérant** vertical **condense les vapeurs**, qui retombent dans le ballon : on chauffe **sans rien perdre**. La **pierre ponce** **régule l'ébullition**.\n3. Les facteurs cinétiques : la **température** et la **concentration** des réactifs, qui accélèrent la réaction quand elles augmentent. Un **catalyseur** accélère la réaction **sans être consommé** et **sans modifier l'état final**.\n4. La réaction n'est **jamais totale**, et **chaque manipulation** (transvasement, filtration, purification) fait perdre un peu de produit : le rendement est toujours inférieur à 1."
+    },
+    {
+      "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+      "difficulte": 2,
+      "titre": "La synthèse de l'aspirine",
+      "consigne": "Justifie chaque choix de technique et détaille le calcul du rendement.",
+      "enonce": "**Situation.** Au laboratoire, Hugo synthétise de l'aspirine, un solide blanc, en chauffant à reflux **5,0 g** d'acide salicylique avec un excès d'anhydride acétique, en présence de quelques gouttes d'acide sulfurique. Une mole d'acide salicylique donne au mieux une mole d'aspirine. Après refroidissement, l'aspirine précipite. Hugo obtient **4,9 g** d'aspirine purifiée.\n\n**Données.** M(acide salicylique) = 138 g/mol ; M(aspirine) = 180 g/mol ; température de fusion de l'aspirine pure : 135 °C.\n\n1. Quel est le rôle de l'acide sulfurique ? Quel est le réactif limitant ? Justifie.\n2. L'aspirine est un solide. Quelle technique Hugo utilise-t-il pour l'isoler, puis pour la purifier ? Explique le principe de la purification.\n3. Propose deux méthodes pour identifier le produit obtenu, en précisant ce qu'on observe si c'est bien de l'aspirine pure.\n4. Calcule la quantité maximale d'aspirine attendue, puis le rendement de la synthèse.",
+      "bareme": [
+        { "critere": "Acide sulfurique catalyseur ; acide salicylique limitant (anhydride en excès)", "points": 4 },
+        { "critere": "Isolement par filtration sur Büchner ; purification par recristallisation, principe expliqué", "points": 6 },
+        { "critere": "Identification : température de fusion 135 °C, CCM (même hauteur que la référence) ou infrarouge", "points": 4 },
+        { "critere": "n(max) ≈ 0,036 mol, n(obtenu) ≈ 0,027 mol, rendement ≈ 75 %", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'acide sulfurique est un **catalyseur** : il accélère la réaction sans être consommé et sans modifier l'état final. L'anhydride acétique est **en excès** : le réactif limitant est l'**acide salicylique**.\n2. L'aspirine est solide : on l'**isole** par **filtration sur Büchner**. On la **purifie** par **recristallisation** : on la dissout à chaud dans un minimum de solvant, puis on refroidit lentement ; le produit cristallise tandis que les impuretés, plus solubles, restent en solution. On filtre à nouveau.\n3. \n- Mesurer la **température de fusion** : on doit trouver **135 °C**, la valeur tabulée.\n- Faire une **chromatographie sur couche mince** avec trois dépôts (brut, purifié, aspirine de référence) : le produit purifié doit donner une **seule tache**, à la **même hauteur** que la référence.\n(La spectroscopie **infrarouge** permettrait aussi de vérifier les groupes fonctionnels.)\n4. n(acide salicylique) = 5,0 / 138 ≈ **0,036 mol** (0,0362). Une mole donnant au plus une mole d'aspirine : n(max) ≈ 0,0362 mol. n(obtenu) = 4,9 / 180 ≈ **0,027 mol** (0,0272). η = 0,0272 / 0,0362 ≈ **0,75**, soit **75 %**."
+    },
+    {
+      "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+      "difficulte": 3,
+      "titre": "L'arôme de banane",
+      "consigne": "Analyse le protocole, justifie chaque étape par le cours et détaille les calculs.",
+      "enonce": "**Situation.** Pour fabriquer l'arôme de banane, Léa fait réagir de l'acide éthanoïque avec du 3-méthylbutan-1-ol, en présence d'acide sulfurique, selon :\n\n> acide éthanoïque + 3-méthylbutan-1-ol → éthanoate de 3-méthylbutyle + eau\n\n(une mole de chaque réactif donne une mole d'ester).\n\n**Protocole.** (1) Dans un ballon : **20,0 mL** d'acide éthanoïque, **22,0 mL** d'alcool, 1 mL d'acide sulfurique, pierre ponce ; chauffage à reflux 30 min. (2) Après refroidissement, on verse le mélange dans l'eau salée ; l'ester, peu soluble dans l'eau salée, forme une phase séparée qu'on récupère à l'ampoule à décanter. (3) On distille la phase organique. (4) On enregistre un spectre infrarouge.\n\n**Données.**\n\n| Espèce | M (g/mol) | ρ (g/mL) | T(ébullition) |\n| Acide éthanoïque | 60 | 1,05 | 118 °C |\n| 3-méthylbutan-1-ol | 88 | 0,81 | 131 °C |\n| Ester | 130 | 0,87 | 142 °C |\n\nOn rappelle : m = ρ × V et n = m / M.\n\n1. Associe chaque étape du protocole à l'une des quatre étapes d'une synthèse, en nommant la technique utilisée.\n2. Justifie le chauffage à reflux et le rôle de l'acide sulfurique.\n3. Calcule les quantités initiales des deux réactifs et identifie le réactif limitant.\n4. Léa obtient **17,5 g** d'ester pur. Calcule la masse maximale attendue et le rendement. Donne deux raisons pour lesquelles il est inférieur à 100 %.\n5. Dans l'ampoule, la phase contenant l'ester est-elle au-dessus ou au-dessous de la phase aqueuse (ρ ≈ 1,1 g/mL) ? Que peut révéler le spectre infrarouge ?",
+      "bareme": [
+        { "critere": "Étapes : transformation (reflux), isolement (extraction, ampoule), purification (distillation), identification (infrarouge)", "points": 4 },
+        { "critere": "Reflux : chauffer pour accélérer sans perte ; acide sulfurique catalyseur, état final inchangé", "points": 3 },
+        { "critere": "n(acide) = 0,35 mol, n(alcool) ≈ 0,20 mol : alcool limitant", "points": 5 },
+        { "critere": "m(max) ≈ 26,3 g, rendement ≈ 66 %, deux raisons (réaction non totale, pertes)", "points": 5 },
+        { "critere": "Phase de l'ester au-dessus (0,87 < 1,1) ; infrarouge : groupes fonctionnels", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. (1) **Transformation**, par **chauffage à reflux**. (2) **Isolement**, par **extraction liquide-liquide** à l'**ampoule à décanter**. (3) **Purification**, par **distillation** (fractionnée) : l'ester et les restes de réactifs ont des températures d'ébullition différentes. (4) **Identification** par **spectroscopie infrarouge**.\n2. La **température** est un facteur cinétique : chauffer accélère la réaction ; le **réfrigérant** condense les vapeurs, qui retombent dans le ballon : on chauffe **sans perte de matière**. L'acide sulfurique est un **catalyseur** : il accélère la réaction sans être consommé et sans modifier l'état final.\n3. Acide : m = 1,05 × 20,0 = 21,0 g ; n = 21,0 / 60 = **0,350 mol**. Alcool : m = 0,81 × 22,0 = 17,8 g ; n = 17,8 / 88 ≈ **0,203 mol**. Coefficients 1-1 : le plus petit rapport désigne l'**alcool** comme **réactif limitant** ; x(max) ≈ 0,203 mol.\n4. m(max) = 0,203 × 130 ≈ **26,3 g**. η = 17,5 / 26,3 ≈ **0,66**, soit **66 %**. Raisons : la réaction **n'est pas totale** ; chaque manipulation (transvasements, décantation, distillation) **fait perdre** un peu de produit.\n5. L'ester (0,87 g/mL) est **moins dense** que la phase aqueuse (environ 1,1 g/mL) : sa phase est **au-dessus**. Le spectre **infrarouge** révèle les **groupes fonctionnels** : on vérifie la présence du groupe ester (et l'absence du groupe –OH de l'alcool résiduel)."
+    },
+    {
+      "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+      "difficulte": 1,
+      "titre": "La flamme de la gazinière",
+      "consigne": "Réponds par des phrases complètes et justifie l'ajustement des équations.",
+      "enonce": "1. Définis une combustion. Est-elle endothermique ou exothermique ?\n2. Compare la combustion complète et la combustion incomplète d'un hydrocarbure : quantité de dioxygène, produits formés, aspect de la flamme.\n3. Pourquoi le monoxyde de carbone est-il si dangereux ?\n4. Ajuste l'équation de la combustion complète du propane C₃H₈, en suivant l'ordre du cours.",
+      "bareme": [
+        { "critere": "Réaction d'un combustible avec le dioxygène, libérant de l'énergie : exothermique", "points": 4 },
+        { "critere": "Complète : O₂ en excès, CO₂ et eau ; incomplète : O₂ en défaut, CO et suie, flamme jaune et fumeuse", "points": 6 },
+        { "critere": "CO inodore, incolore, mortel : se fixe sur l'hémoglobine à la place du dioxygène", "points": 4 },
+        { "critere": "C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O ajustée dans l'ordre C, H, O", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Une **combustion** est la réaction d'un **combustible** avec le **dioxygène**, accompagnée d'une libération d'énergie. Elle est **exothermique** : elle cède de l'énergie au milieu.\n2. **Complète** : dioxygène **en excès** ; produits : **dioxyde de carbone** et **eau**. **Incomplète** : dioxygène **en défaut** ; produits : **monoxyde de carbone** (CO) et **suie** ; la suie rend la flamme **jaune et fumeuse**.\n3. Le CO est **inodore, incolore et mortel** : il se fixe sur l'**hémoglobine** à la place du dioxygène. C'est la première cause d'intoxication domestique liée au chauffage.\n4. On ajuste d'abord le **carbone** : 3 CO₂ ; puis l'**hydrogène** : 8 H donc 4 H₂O ; enfin l'**oxygène** : à droite 3 × 2 + 4 × 1 = 10 O, donc 5 O₂. **C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**."
+    },
+    {
+      "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+      "difficulte": 2,
+      "titre": "La cartouche de butane",
+      "consigne": "Ajuste l'équation, puis détaille chaque calcul en écrivant la relation utilisée.",
+      "enonce": "**Situation.** Pour un week-end de camping, Nina emporte un réchaud et une cartouche contenant **190 g** de butane C₄H₁₀. On suppose la combustion complète.\n\n**Données.** M(C) = 12 g/mol ; M(H) = 1 g/mol ; M(O) = 16 g/mol ; pouvoir calorifique du butane : **45,7 MJ/kg** ; on rappelle n = m / M.\n\n1. Ajuste l'équation de la combustion complète du butane (on peut obtenir des coefficients entiers en multipliant par 2).\n2. Définis le pouvoir calorifique, puis calcule l'énergie libérée par la combustion de toute la cartouche.\n3. Calcule la quantité de matière de butane, puis la masse de dioxyde de carbone rejetée.\n4. Le butane est un combustible fossile. En quoi son bilan carbone diffère-t-il de celui du bois ?",
+      "bareme": [
+        { "critere": "2 C₄H₁₀ + 13 O₂ → 8 CO₂ + 10 H₂O", "points": 5 },
+        { "critere": "Définition du pouvoir calorifique et E = 0,190 × 45,7 ≈ 8,7 MJ", "points": 5 },
+        { "critere": "n(butane) ≈ 3,28 mol, n(CO₂) = 4 × n ≈ 13,1 mol, m(CO₂) ≈ 577 g", "points": 6 },
+        { "critere": "Fossile : carbone stocké depuis des millions d'années, ajout net ; bois : carbone prélevé récemment par photosynthèse", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Carbone : 4 CO₂ ; hydrogène : 10 H donc 5 H₂O ; oxygène : 4 × 2 + 5 = 13 O, soit 13/2 O₂. En multipliant par 2 : **2 C₄H₁₀ + 13 O₂ → 8 CO₂ + 10 H₂O** (vérification : 26 O de chaque côté).\n2. Le **pouvoir calorifique** est l'énergie libérée par la combustion complète d'**un kilogramme** de combustible. E = m × PC = 0,190 × 45,7 ≈ **8,7 MJ** (8,68 × 10⁶ J).\n3. M(C₄H₁₀) = 4 × 12 + 10 × 1 = 58 g/mol ; n = 190 / 58 ≈ **3,28 mol**. D'après l'équation, 2 mol de butane donnent 8 mol de CO₂ : n(CO₂) = 4 × 3,28 ≈ **13,1 mol**. M(CO₂) = 44 g/mol ; m = 13,1 × 44 ≈ **577 g**. La cartouche rejette environ trois fois sa masse en CO₂.\n4. Le carbone du butane, combustible **fossile**, était **stocké depuis des millions d'années** : sa combustion est un **ajout net** à l'atmosphère. Celui du bois (biomasse) a été **prélevé récemment par photosynthèse** : le bilan est de nature différente. Cela ne supprime pas les autres polluants émis (particules fines, oxydes d'azote)."
+    },
+    {
+      "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+      "difficulte": 3,
+      "titre": "Le méthane par ses énergies de liaison",
+      "consigne": "Construis le bilan énergétique étape par étape, puis analyse les résultats et leurs enjeux.",
+      "enonce": "**Situation.** Le gaz naturel, combustible fossile, est essentiellement du méthane :\n\n> CH₄ + 2 O₂ → CO₂ + 2 H₂O\n\n**Document 1 – Énergies de liaison (kJ/mol)** : C–H : 415 ; O=O : 498 ; C=O : 804 ; O–H : 463.\n\n**Document 2 – Structures** : CH₄ contient 4 liaisons C–H ; O₂ une liaison O=O ; CO₂ deux liaisons C=O ; H₂O deux liaisons O–H.\n\n**Données.** M(CH₄) = 16 g/mol.\n\n1. Vérifie que l'équation est ajustée.\n2. Calcule l'énergie qu'il faut fournir pour rompre toutes les liaisons des réactifs, pour une mole de méthane.\n3. Calcule l'énergie libérée par la formation de toutes les liaisons des produits.\n4. Déduis-en le bilan énergétique pour une mole de méthane. Son signe est-il cohérent avec le type de réaction ?\n5. Estime le pouvoir calorifique du méthane en MJ/kg.\n6. Dans une salle de bains mal aérée, un chauffe-eau au gaz fonctionne avec une flamme jaune. Analyse la situation et le danger.",
+      "bareme": [
+        { "critere": "Ajustement vérifié : 1 C, 4 H, 4 O de chaque côté", "points": 2 },
+        { "critere": "Rupture : 4 × 415 + 2 × 498 = 2 656 kJ", "points": 4 },
+        { "critere": "Formation : 2 × 804 + 4 × 463 = 3 460 kJ", "points": 4 },
+        { "critere": "Bilan −804 kJ/mol, négatif : réaction exothermique ; pouvoir calorifique ≈ 50 MJ/kg", "points": 6 },
+        { "critere": "Flamme jaune : combustion incomplète faute de dioxygène, CO inodore et mortel, suie", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Carbone : 1 = 1 ; hydrogène : 4 = 2 × 2 ; oxygène : 2 × 2 = 4 à gauche, 2 + 2 × 1 = 4 à droite. L'équation est **ajustée**.\n2. **Rompre** les liaisons des réactifs **coûte** de l'énergie : 4 liaisons C–H et 2 liaisons O=O, soit 4 × 415 + 2 × 498 = 1 660 + 996 = **2 656 kJ**.\n3. **Former** les liaisons des produits en **libère** : 2 liaisons C=O (une molécule de CO₂) et 4 liaisons O–H (deux molécules d'eau), soit 2 × 804 + 4 × 463 = 1 608 + 1 852 = **3 460 kJ**.\n4. Bilan : 2 656 − 3 460 = **−804 kJ** par mole de méthane. Le total est **négatif** : on libère plus d'énergie en formant les liaisons qu'on n'en dépense pour les rompre. C'est cohérent : une combustion est **exothermique**.\n5. Dans 1 kg de méthane : n = 1 000 / 16 = 62,5 mol. E ≈ 62,5 × 804 ≈ 50 250 kJ ≈ **50 MJ/kg**.\n6. Une **flamme jaune** signale une **combustion incomplète** : dans une pièce mal aérée, le **dioxygène est en défaut**. Il se forme de la **suie** (qui colore la flamme) et du **monoxyde de carbone**, **inodore, incolore et mortel** : il se fixe sur l'hémoglobine à la place du dioxygène. C'est la première cause d'intoxication domestique liée au chauffage : il faut aérer et faire vérifier l'appareil. De plus, le gaz naturel étant **fossile**, son carbone est un ajout net à l'atmosphère."
+    }
+  ]
+}

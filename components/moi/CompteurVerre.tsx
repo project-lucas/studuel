@@ -29,14 +29,14 @@ export default function CompteurVerre({
   return (
     <div
       className={cn(
-        'flex min-w-0 flex-col items-center justify-center rounded-2xl border border-white/16 bg-white/12 px-1.5 py-2 text-center backdrop-blur-[4px]',
+        'flex min-w-0 flex-col items-center justify-center rounded-2xl bg-secondary px-1.5 py-2 text-center',
         className,
       )}
     >
       <p className="font-heading truncate text-[19px] leading-none font-extrabold tabular-nums">
         {valeur}
       </p>
-      <p className="mt-1 truncate text-[9.5px] font-bold tracking-[0.05em] text-white/80 uppercase">
+      <p className="mt-1 truncate text-[9.5px] font-bold tracking-[0.05em] text-muted-foreground uppercase">
         {legende}
       </p>
     </div>

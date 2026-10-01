@@ -5,7 +5,6 @@ const lesson = (over: Partial<SupportLesson> & { id: string }): SupportLesson =>
   title: `Leçon ${over.id}`,
   quizId: `q-${over.id}`,
   questionCount: 10,
-  dueCount: 0,
   best: null,
   ownQuiz: true,
   read: false,
@@ -64,16 +63,12 @@ describe('ce que la fiche dit de l’avancement', () => {
     expect(tente.find((c) => c.kind === 'quiz')?.badge).toBe('7/10')
   })
 
-  test('NE COCHE JAMAIS les flashcards, même quand rien n’est dû', () => {
-    // Un paquet jamais ouvert et un paquet à jour ont le même `dueCount` : 0.
-    // Cocher sur cette base afficherait « à jour » sur des cartes jamais vues.
-    const chips = buildChapterSupports(
-      input([lesson({ id: 'l1', dueCount: 0 })]),
-    )
-    const cartes = chips.find((c) => c.kind === 'flashcards')
-    expect(cartes?.done).toBe(false)
-    // Le badge, lui, dit l'état sans mentir.
-    expect(cartes?.badge).toBe('10 cartes')
+  test('ne propose PLUS de flashcards : elles rejouaient les questions du quiz', () => {
+    // Décision du 01/10/2026 : recto = l'énoncé du quiz, verso = sa bonne
+    // réponse. Le même contenu sous un second habillage — la tuile est partie.
+    const chips = buildChapterSupports(input([lesson({ id: 'l1' })], true, 3))
+    expect(chips.some((c) => (c.kind as string) === 'flashcards')).toBe(false)
+    expect(chips.some((c) => c.href.endsWith('/flashcards'))).toBe(false)
   })
 
   test('coche l’EXERCICE à partir du seuil de maîtrise, comme le quiz', () => {
@@ -97,15 +92,13 @@ describe('ce que la fiche dit de l’avancement', () => {
 })
 
 describe('buildChapterSupports', () => {
-  test('les supports, dans l’ordre des trois groupes : apprendre · mémoriser · se tester', () => {
-    // Cours et Fiche (apprendre), Flashcards (mémoriser), Quiz · Exercice ·
-    // Moi vs IA (se tester). C'est l'ordre que suit la fiche dépliée, qui ne
-    // connaît pas les groupes.
+  test('les supports, dans l’ordre des deux groupes : apprendre · se tester', () => {
+    // Cours et Fiche (apprendre), Quiz · Exercice · Moi vs IA (se tester).
+    // C'est l'ordre que suit la fiche dépliée, qui ne connaît pas les groupes.
     const chips = buildChapterSupports(input([lesson({ id: 'l1' })]))
     expect(chips.map((c) => c.kind)).toEqual([
       'cours',
       'carte',
-      'flashcards',
       'quiz',
       'exercice',
       'ia',
@@ -114,13 +107,7 @@ describe('buildChapterSupports', () => {
 
   test('pas de carte mentale quand le chapitre n’en a pas', () => {
     const chips = buildChapterSupports(input([lesson({ id: 'l1' })], false))
-    expect(chips.map((c) => c.kind)).toEqual([
-      'cours',
-      'flashcards',
-      'quiz',
-      'exercice',
-      'ia',
-    ])
+    expect(chips.map((c) => c.kind)).toEqual(['cours', 'quiz', 'exercice', 'ia'])
   })
 
   test('un chapitre sans quiz garde son cours — et son exercice, qui se rédige sur le cours', () => {
@@ -187,27 +174,18 @@ describe('buildChapterSupports', () => {
       input([lesson({ id: 'l1', ownQuiz: false, quizId: 'q-autre' })], false),
     )
     expect(chips.some((c) => c.kind === 'quiz')).toBe(false)
-    // Les flashcards, elles, se jouent sur le quiz emprunté.
-    expect(chips.map((c) => c.kind)).toEqual([
-      'cours',
-      'flashcards',
-      'exercice',
-      'ia',
-    ])
+    expect(chips.map((c) => c.kind)).toEqual(['cours', 'exercice', 'ia'])
   })
 
   test('la leçon lue épingle les supports du pied de cours', () => {
     const chips = buildChapterSupports(
       input([
         lesson({ id: 'l1', best: { score: 4, total: 10, ratio: 0.4 } }),
-        lesson({ id: 'l2', dueCount: 3 }),
+        lesson({ id: 'l2' }),
       ]),
       'l2',
     )
     expect(chips.find((c) => c.kind === 'quiz')?.href).toBe('/test/q-l2')
-    expect(chips.find((c) => c.kind === 'flashcards')?.meta).toBe(
-      '10 cartes · 3 à revoir',
-    )
   })
 
   test('leçon lue sans quiz propre : le quiz retombe sur le chapitre', () => {
@@ -219,10 +197,6 @@ describe('buildChapterSupports', () => {
       'l2',
     )
     expect(chips.find((c) => c.kind === 'quiz')?.href).toBe('/test/q-l1')
-    // …mais les flashcards restent celles de la leçon lue.
-    expect(chips.find((c) => c.kind === 'flashcards')?.href).toBe(
-      '/reviser/anglais/ch1/l2/flashcards',
-    )
   })
 
   test('la carte verrouillée s’annonce comme telle', () => {
@@ -276,15 +250,14 @@ describe('buildChapterSupports', () => {
     expect(erreurs?.meta).toBe('3 notions à revoir')
     // La file lancée est celle DU CHAPITRE, pas celle de toute la matière.
     expect(erreurs?.href).toBe('/reviser/revoir?matiere=anglais&chapitre=ch1')
-    // Elle vit dans MÉMORISER, juste après les flashcards : on corrige ce
-    // qu'on a mal retenu, avant d'aller se tester.
+    // Elle vit dans SE TESTER, après le quiz et l'exercice : on y rejoue ce
+    // qu'on a raté en se testant.
     expect(chips.map((c) => c.kind)).toEqual([
       'cours',
       'carte',
-      'flashcards',
-      'erreurs',
       'quiz',
       'exercice',
+      'erreurs',
       'ia',
     ])
   })
@@ -292,13 +265,11 @@ describe('buildChapterSupports', () => {
   test('ne promet plus d’XP sur un geste qui n’en paye plus', () => {
     // Les tuiles annonçaient « +20 XP », « +10 XP », « +25 XP ». Depuis que
     // l'XP se gagne sur l'ACQUIS (lib/wallet.XP_AWARDS), ces gestes n'en
-    // versent plus directement : le quiz paye par les COURONNES qu'il allume,
-    // les flashcards par les cartes qu'elles font passer en « acquise ».
+    // versent plus directement : le quiz paye par les COURONNES qu'il allume.
     // Afficher un chiffre ici serait devenu une promesse fausse — et une
     // promesse fausse sur une récompense se paye cher en confiance.
     const chips = buildChapterSupports(input([lesson({ id: 'l1' })]))
     expect(chips.find((c) => c.kind === 'quiz')?.xp).toBeUndefined()
-    expect(chips.find((c) => c.kind === 'flashcards')?.xp).toBeUndefined()
     expect(chips.find((c) => c.kind === 'exercice')?.xp).toBeUndefined()
     expect(chips.find((c) => c.kind === 'carte')?.xp).toBeUndefined()
   })

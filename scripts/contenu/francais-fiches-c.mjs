@@ -36,7 +36,10 @@ des composites). Cette migration n'écrit que des fiches neuves.`,
           titre: 'La Ferme des animaux, George Orwell',
           lecon: {
             titre: 'Orwell, 1945 — la révolution confisquée',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**George Orwell** (1903-1950), de son vrai nom **Eric Blair**, est un **socialiste anglais** qui a combattu dans les milices du **POUM** pendant la **guerre d’Espagne** : il y a vu les communistes staliniens **liquider leurs alliés**. Écrit en **1943-1944**, le livre est **refusé par plusieurs éditeurs** — l’URSS est alors l’**alliée** du Royaume-Uni — et paraît en **août 1945**, sous-titré « **conte de fées** ».
+
+## L’histoire
 Les animaux de la ferme du **Manoir**, menés par les **cochons**, chassent le fermier ivrogne **Jones** et fondent la **Ferme des animaux**, régie par **sept commandements**.
 
 > Le dernier : « **Tous les animaux sont égaux.** »
@@ -47,8 +50,12 @@ Les animaux de la ferme du **Manoir**, menés par les **cochons**, chassent le f
 | **Napoléon** | Il élève **secrètement des chiens** et prend le pouvoir |
 | **Brille-Babil** | La **propagande** |
 | **Malabar**, le cheval | Travailleur infatigable — « je vais **travailler plus dur** » — **vendu à l’équarrisseur** |
+| **Benjamin**, l’âne | Le **sceptique** qui comprend tout et **ne dit rien** |
+| **Les moutons** | Ils **bêlent les slogans** pour couvrir tout débat |
 
 | L’engrenage | Ce qui se passe |
+| Le **moulin** | Projet de Boule de Neige, **volé** par Napoléon après l’expulsion de son rival |
+| Les **aveux** | Des animaux avouent des crimes imaginaires et sont **exécutés** par les chiens |
 | Les commandements sont **réécrits nuitamment** | Jusqu’au dernier : « Tous les animaux sont égaux, **mais certains sont plus égaux que d’autres** » |
 | La fin | Les cochons **marchent sur deux pattes** et **dînent avec les fermiers** : **on ne les distingue plus** |
 
@@ -61,6 +68,11 @@ Les animaux de la ferme du **Manoir**, menés par les **cochons**, chassent le f
 | La **réécriture de l’histoire** | Les commandements repeints |
 
 > Orwell, **socialiste**, vise le **totalitarisme** — **non la révolte elle-même**. La forme **animalière** rend la démonstration **implacable**.
+
+## Pour la dissertation et l’oral
+- **L’apologue** : la fable **plaît et instruit** — un récit simple porte une thèse politique.
+- **Le pouvoir des mots** : qui contrôle le langage et la mémoire contrôle les corps (la même idée irrigue *1984*, en 1949).
+- **La responsabilité des témoins** : le silence de Benjamin, la docilité de Malabar.
 
 > « Tous les animaux sont égaux, mais certains sont plus égaux que d’autres. »`,
           },
@@ -77,7 +89,10 @@ Les animaux de la ferme du **Manoir**, menés par les **cochons**, chassent le f
           titre: 'La Guerre de Troie n’aura pas lieu, Jean Giraudoux',
           lecon: {
             titre: 'Giraudoux, 1935 — tout faire pour éviter la guerre',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Jean Giraudoux** (1882-1944) est **diplomate** de carrière et **ancien combattant de 1914**, blessé au front. Il écrit pour le metteur en scène **Louis Jouvet**, qui crée la pièce en **novembre 1935** au théâtre de l’**Athénée**. Il reprend la matière de l’*Iliade* d’Homère pour parler de l’Europe de son temps.
+
+## L’histoire
 Deux actes.
 
 | Camp | Qui | Ce qu’il veut |
@@ -86,10 +101,13 @@ Deux actes.
 | — | **Ulysse**, ambassadeur grec | Il **accepte de repartir avec Hélène** |
 | Pour la **guerre** | Le vieux **Priam**, le poète **Demokos**, les vieillards | Pour la **beauté d’Hélène** et pour la **gloire** |
 | Le destin | **Cassandre** | Elle **annonce** |
+| L’indifférence | **Hélène** et **Pâris** | Légers, ils **ne se sentent responsables de rien** |
+| Le droit | Le juriste **Busiris** | Il démontre que l’offense grecque en est une — puis, **menacé par Hector**, que c’est une **politesse** |
 
 | Le basculement | Ce qui se passe |
-| Alors qu’ils ont **réussi** | L’ivrogne **Ajax gifle Hector** |
-| **Demokos** crie au **viol d’Hélène** | Hector **le tue** |
+| Plus tôt | L’ivrogne **Ajax gifle Hector**, qui **encaisse** sans répondre |
+| Alors qu’ils ont **réussi** | Ajax, ivre, revient **importuner Andromaque** |
+| **Demokos** appelle les Troyens **aux armes** | Hector **le tue** |
 | Mourant, Demokos **accuse Ajax** | La foule **se soulève** |
 | La fin | **Les portes de la guerre s’ouvrent** |
 
@@ -99,6 +117,13 @@ Créée en **1935**, entre **Hitler au pouvoir** et **Munich**.
 > La pièce dit l’angoisse d’une génération : **la guerre arrive par les mots, la vanité et le hasard — non par nécessité**.
 
 Le dialogue **Hector-Ulysse** est un **sommet du théâtre politique français**. Le titre est **ironique** : **le spectateur sait dès le départ que la guerre aura lieu**.
+
+## Pour la dissertation et l’oral
+- **Tragédie et ironie** : le spectateur connaît l’issue, les personnages luttent quand même — c’est l’**ironie tragique**.
+- **Le langage comme arme** : le chant de guerre de Demokos, les **« épithètes »** injurieuses, le droit qui plie (Busiris).
+- **Le ton** : un mélange de **préciosité**, d’humour et de gravité propre à Giraudoux.
+
+> « Le droit est la plus puissante des écoles de l’imagination. »
 
 > « Le privilège des grands, c’est de voir les catastrophes d’une terrasse. »`,
           },
@@ -115,7 +140,10 @@ Le dialogue **Hector-Ulysse** est un **sommet du théâtre politique français**
           titre: 'La jalousie du Barbouillé, Molière',
           lecon: {
             titre: 'Molière, vers 1660 — la farce à l’état pur',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Molière** (Jean-Baptiste Poquelin, 1622-1673) passe **treize ans en province** (1645-1658) avec sa troupe avant de s’installer à Paris. Il y joue de **petites farces**, souvent improvisées à l’italienne. *La Jalousie du Barbouillé* en est un témoin : son nom vient du **visage barbouillé de farine**, masque traditionnel des farceurs.
+
+## La pièce
 Une **farce en un acte**, en prose — **parmi les plus anciennes** de Molière. Le texte nous est parvenu par une **copie tardive**.
 
 | Étape | Ce qui se passe |
@@ -126,6 +154,13 @@ Une **farce en un acte**, en prose — **parmi les plus anciennes** de Molière.
 | L’accusation | Elle le dénonce devant son père **Gorgibus** : il **courrait la nuit** |
 | La fin | Une **réconciliation forcée** |
 
+## Les personnages
+| Personnage | Ce qu’il est |
+| **Le Barbouillé** | Le mari **brutal et soupçonneux**, qui finit **dupé** |
+| **Angélique** | L’épouse **rusée**, qui retourne la situation |
+| **Le Docteur** | Le savant **bavard**, qui cite le latin à tort et à travers |
+| **Gorgibus** | Le père, juge **crédule** de la querelle |
+
 ## À retenir
 > On y reconnaît l’**ossature** de *George Dandin* (1668), que Molière tirera de cette farce.
 
@@ -135,6 +170,13 @@ Une **farce en un acte**, en prose — **parmi les plus anciennes** de Molière.
 | De **caractère** | Le **docteur pédant**, un type que Molière **reprendra sans cesse** |
 
 > La **farce**, héritée du **Moyen Âge** et de la *commedia dell’arte*, est le **socle de tout son théâtre** — et **il ne l’a jamais reniée**, même devenu l’auteur du roi.
+
+## Pour la dissertation et l’oral
+- **Le rire et le pouvoir dans le couple** : le mari qui veut tout contrôler est puni par sa propre ruse.
+- **La satire du savoir creux** : le docteur annonce les **médecins** et les **pédants** des grandes comédies.
+- **La farce, école de Molière** : rythme, jeu physique, situations renversées.
+
+Dans *George Dandin*, le mari trompé se le répète : « **Vous l’avez voulu, vous l’avez voulu, George Dandin, vous l’avez voulu.** »
 
 > Le renversement de situation — l’enfermeur enfermé — est le ressort de toute la pièce.`,
           },
@@ -151,19 +193,27 @@ Une **farce en un acte**, en prose — **parmi les plus anciennes** de Molière.
           titre: 'La Joie de vivre, Émile Zola',
           lecon: {
             titre: 'Zola, 1884 — la bonté à l’épreuve',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Émile Zola** (1840-1902), chef de file du **naturalisme**, publie en **1884** ce roman intime, loin des grandes fresques sociales. Il y met ses propres angoisses : la **peur de la mort**, qui le hantait, et le **pessimisme** à la mode, venu de **Schopenhauer**.
+
+## L’histoire
 **Pauline Quenu**, orpheline de **dix ans**, riche de **cent cinquante mille francs**, est recueillie par ses cousins **Chanteau** à **Bonneville**, village **battu par la mer** en Normandie.
 
 | Personnage | Ce qu’il est |
 | L’**oncle Chanteau** | Rongé par la **goutte** |
 | La **tante** | **Avide** |
 | Le cousin **Lazare** | **Velléitaire**, **hanté par la peur de la mort** : il **commence tout et n’achève rien** |
+| **Pauline** | Fille des charcutiers **Quenu** du *Ventre de Paris* : **généreuse**, saine, **lucide** |
+| **Louise Thibaudier** | Jeune fille **coquette** et fragile, que Lazare épouse |
+| **Véronique** | La servante, **bourrue et fidèle** |
+| Le docteur **Cazenove** | Le médecin ami, **sceptique** |
 
 | L’engrenage | Ce qui se passe |
 | La famille **dépense la fortune** de Pauline | Elle **donne sans compter** |
 | Elle aime Lazare | Elle **finance ses projets ratés** |
+| Les projets | Une **usine d’algues**, des **épis contre la mer** que les tempêtes emportent |
 | Il en épouse une autre, **Louise** | Elle **sauve leur enfant à la naissance** et **l’élève** |
-| Autour | La mer **démolit le village**, la bonne meurt, la servante **se pend** |
+| Autour | La mer **démolit le village**, la tante meurt, la servante Véronique **se pend** |
 
 ## À retenir
 Titre **ironique** — le roman est l’un des plus **sombres** de Zola.
@@ -171,6 +221,13 @@ Titre **ironique** — le roman est l’un des plus **sombres** de Zola.
 > Et pourtant **pas seulement** : **Pauline incarne une joie de vivre têtue**, faite de **don** et d’**acceptation** — opposée au **pessimisme** de Lazare, lecteur de **Schopenhauer**.
 
 **Douzième volume** des *Rougon-Macquart*, écrit **après la mort de la mère de Zola**.
+
+## Pour la dissertation et l’oral
+- **Le naturalisme intérieur** : l’hérédité et le milieu, mais aussi une **psychologie de l’angoisse**.
+- **Le personnage lumineux** dans un monde sombre : Pauline, figure rare chez Zola.
+- **La mer** : force aveugle qui ronge le village comme la peur ronge Lazare.
+
+Le roman se clôt sur le cri absurde de Chanteau, perclus de goutte, devant le suicide de Véronique : « **Faut-il être bête pour se tuer !** »
 
 > « À quoi bon ? » demande Lazare ; « pour les autres », répond la vie de Pauline.`,
           },
@@ -187,7 +244,10 @@ Titre **ironique** — le roman est l’un des plus **sombres** de Zola.
           titre: 'La Leçon, Eugène Ionesco',
           lecon: {
             titre: 'Ionesco, 1951 — quand le savoir devient une arme',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Eugène Ionesco** (1909-1994), né en **Roumanie**, installé en France, invente avec Beckett le **théâtre de l’absurde**. *La Leçon*, sous-titrée « **drame comique** », est créée le **20 février 1951** au **Théâtre de Poche**, un an après *La Cantatrice chauve*.
+
+## La pièce
 Un acte. Une **élève** de dix-huit ans, **gaie et confiante**, vient prendre un cours particulier chez un vieux **professeur timide**, pour préparer le « **doctorat total** ».
 
 | Étape | Ce qui se passe |
@@ -199,6 +259,14 @@ Un acte. Une **élève** de dix-huit ans, **gaie et confiante**, vient prendre u
 
 > La **bonne**, Marie, gronde, nettoie, lui **passe un brassard** — et **fait entrer l’élève suivante**.
 
+## Les personnages
+| Personnage | Son évolution |
+| **Le Professeur** | De la **politesse craintive** à la **tyrannie** : sa voix enfle à mesure que l’élève s’éteint |
+| **L’Élève** | De la **vivacité** à l’**apathie** : elle ne répète plus que « j’ai mal aux dents » |
+| **Marie**, la bonne | Elle **sait tout** d’avance, met en garde, puis **couvre** le crime |
+
+Le mot qui tue est aussi une leçon de vocabulaire : le professeur fait répéter le mot « **couteau** » dans toutes les langues avant de frapper.
+
 ## À retenir
 Pièce du **théâtre de l’absurde**, créée en **1951**, jouée **sans interruption depuis 1957** au Théâtre de la Huchette, avec *La Cantatrice chauve*.
 
@@ -209,7 +277,12 @@ Pièce du **théâtre de l’absurde**, créée en **1951**, jouée **sans inter
 
 Mais la pièce est **d’abord une mécanique comique implacable**.
 
-> « L’arithmétique mène à la philologie, et la philologie mène au crime. »`,
+## Pour la dissertation et l’oral
+- **Une structure circulaire** : la pièce finit comme elle a commencé, par un **coup de sonnette** — la violence se répète.
+- **Le langage vidé de sens** : logique folle, exemples absurdes, mots qui ne communiquent plus.
+- **Le rire qui glace** : on rit de la leçon, puis on comprend qu’on a ri d’une domination.
+
+La bonne, Marie, avait prévenu : « **La philologie mène au pire !** »`,
           },
           questions: [
             ['Que vient faire l’élève chez le professeur ?', ['Préparer le « doctorat total »', 'Passer un examen', 'Demander du travail', 'Rendre un livre'], 0, 'Elle sait additionner mais ne sait pas soustraire.'],
@@ -224,7 +297,10 @@ Mais la pièce est **d’abord une mécanique comique implacable**.
           titre: 'La Machine infernale, Jean Cocteau',
           lecon: {
             titre: 'Cocteau, 1934 — le mythe d’Œdipe remonté comme un piège',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Jean Cocteau** (1889-1963), poète, cinéaste, dessinateur, reprend dans l’entre-deux-guerres les **mythes grecs** en les modernisant. La pièce est créée en **1934** par **Louis Jouvet**, dans des décors de **Christian Bérard**. Sa source : *Œdipe roi* de **Sophocle**.
+
+## La pièce
 Quatre actes qui reprennent le mythe d’**Œdipe**. Un **prologue**, dit par une **Voix**, **annonce d’emblée toute l’histoire**.
 
 > « Une des plus **parfaites machines** construites par les dieux infernaux pour l’**anéantissement mathématique** d’un mortel. »
@@ -235,6 +311,16 @@ Quatre actes qui reprennent le mythe d’**Œdipe**. Un **prologue**, dit par un
 | **III** | La nuit de noces : Œdipe et **Jocaste**, **épuisés, s’endorment**, tandis que les **indices s’accumulent** |
 | **IV** | **Dix-sept ans plus tard** : la peste, la révélation, le **suicide de Jocaste**, Œdipe **s’aveuglant**, **Antigone** le guidant hors de la ville |
 
+## Les personnages
+| Personnage | Chez Cocteau |
+| **Œdipe** | Jeune homme **ambitieux et vaniteux**, pressé de régner |
+| **Jocaste** | Reine **coquette** et inquiète, obsédée par son **âge** |
+| **Tirésias** | Le devin, que Jocaste surnomme « **Zizi** » |
+| **Le Sphinx** | Déesse fatiguée de tuer, qui rêve d’être aimée |
+| **Anubis** | Le dieu à tête de chacal, **gardien de la règle** divine |
+
+Les objets annoncent la fin : dès l’acte I, l’**écharpe** de Jocaste la gêne et l’entrave — c’est avec elle qu’elle se pendra ; c’est avec sa **broche** qu’Œdipe se crèvera les yeux.
+
 ## À retenir
 | Ce que Cocteau change | Ce qu’il garde |
 | Le **ton** : familier, drôle, **insolent** | L’**issue**, à la lettre |
@@ -242,6 +328,11 @@ Quatre actes qui reprennent le mythe d’**Œdipe**. Un **prologue**, dit par un
 > **C’est le décalage qui produit l’émotion.**
 
 > La pièce montre que le **tragique n’est pas dans la surprise**, mais dans le **mécanisme que rien n’enraye**.
+
+## Pour la dissertation et l’oral
+- **Réécrire un mythe** : garder l’intrigue, changer le regard — comme Anouilh (*Antigone*) ou Giraudoux.
+- **La fatalité** : les hommes croient choisir, les dieux ont déjà tout réglé.
+- **Les signes** : tout est dit au spectateur, rien n’est compris par les personnages.
 
 > « Regarde, spectateur, remontée à bloc… une des plus parfaites machines construites par les dieux infernaux. »`,
           },
@@ -258,11 +349,14 @@ Quatre actes qui reprennent le mythe d’**Œdipe**. Un **prologue**, dit par un
           titre: 'La Mare au diable, George Sand',
           lecon: {
             titre: 'Sand, 1846 — un roman champêtre du Berry',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**George Sand** (Aurore Dupin, 1804-1876) vit à **Nohant**, dans le **Berry**, qu’elle connaît intimement. Engagée à gauche, elle publie en **1846** ce court roman qui s’ouvre sur une gravure de **Holbein** : un vieux laboureur harcelé par la Mort. Elle veut au contraire montrer un paysan **heureux et digne**.
+
+## L’histoire
 **Germain**, laboureur de **vingt-huit ans**, **veuf** avec trois enfants, part **sur ordre de son beau-père** demander en mariage une veuve d’un village voisin.
 
 | Qui l’accompagne | Pourquoi |
-| Son fils **Petit-Pierre** | Il **s’est caché dans les affaires** |
+| Son fils **Petit-Pierre** | Il s’est **caché dans un fossé** au bord du chemin pour que son père l’emmène |
 | **Marie**, seize ans | Elle va **se placer comme bergère** |
 
 | Étape | Ce qui se passe |
@@ -271,6 +365,14 @@ Quatre actes qui reprennent le mythe d’**Œdipe**. Un **prologue**, dit par un
 | Marie | Elle **fuit un maître qui la harcèle** |
 | La fin | De retour au village, Germain **comprend qu’il aime Marie** — elle finit par **accepter** |
 
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Germain** | Le laboureur **droit et laborieux**, timide en amour |
+| **Marie** | La jeune fille **pauvre**, courageuse, **maternelle** avec Petit-Pierre |
+| **Le père Maurice** | Le beau-père, sage et prudent, qui pousse au remariage |
+| **La mère Guillette** | La mère de Marie, voisine **pauvre** |
+| **La veuve** | Coquette, **flattée par ses soupirants** |
+
 ## À retenir
 Le **premier** des **romans champêtres** de George Sand, avec *La Petite Fadette* et *François le Champi*.
 
@@ -278,6 +380,13 @@ Le **premier** des **romans champêtres** de George Sand, avec *La Petite Fadett
 | Une littérature qui montre la **dignité et l’intelligence des paysans** | Le **pittoresque** et la **condescendance** |
 
 Le roman contient un long **appendice ethnographique** sur les **noces de campagne** dans le **Berry**. Écriture **claire**, sensible au paysage, **sans misérabilisme**.
+
+## Pour la dissertation et l’oral
+- **L’idéalisation** : Sand assume de peindre la campagne **telle qu’elle pourrait être**, contre le réalisme noir.
+- **La nuit initiatique** : la mare égare les voyageurs pour mieux révéler les cœurs.
+- **Le romanesque simple** : peu d’événements, une émotion vraie.
+
+L’épigraphe de la gravure de Holbein : « **À la sueur de ton visaige / Tu gagnerois ta pauvre vie, / Après long travail et usaige, / Voicy la mort qui te convie.** »
 
 > Sand écrit contre « l’art pour l’art » : elle veut une littérature **utile et fraternelle**.`,
           },
@@ -294,7 +403,10 @@ Le roman contient un long **appendice ethnographique** sur les **noces de campag
           titre: 'La Marmite, Plaute',
           lecon: {
             titre: 'Plaute, IIe siècle av. J.-C. — l’ancêtre de L’Avare',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Plaute** (vers 254 – 184 av. J.-C.) est le grand auteur **comique de Rome**. Il adapte des comédies grecques de la « **Comédie nouvelle** » (Ménandre et ses contemporains) pour un public populaire, avec chansons, jeux de mots et bastonnades. Une vingtaine de ses pièces nous sont parvenues.
+
+## L’histoire
 *Aulularia*. **Euclion**, vieil Athénien **pauvre**, a trouvé chez lui une **marmite pleine d’or**, cachée par son grand-père.
 
 | Ce qu’il fait | Ce que ça produit |
@@ -303,8 +415,18 @@ Le roman contient un long **appendice ethnographique** sur les **noces de campag
 
 | L’intrigue | Ce qui se passe |
 | Sa fille **Phédria** est **enceinte** du jeune **Lyconide** | Elle doit épouser le vieux **Mégadore**, **qui la prend sans dot** |
+| Les cuisiniers du mariage | Euclion les **chasse à coups de bâton**, persuadé qu’ils cherchent son or |
+| Le **quiproquo** | Lyconide avoue sa **faute** envers Phédria ; Euclion croit qu’il parle de la **marmite** |
 | L’**esclave de Lyconide** vole la marmite | Euclion **croit devenir fou** |
 | La fin du texte est **perdue** | Les résumés antiques indiquent qu’il **retrouve son or**, le **donne en dot** et **se libère de son obsession** |
+
+## Les personnages
+| Personnage | Son type |
+| **Euclion** | Le **vieil avare**, soupçonneux jusqu’au délire |
+| **Mégadore** | Le voisin **riche et bienveillant** |
+| **Lyconide** | Le **jeune amoureux**, neveu de Mégadore |
+| **Staphyla** | La vieille esclave d’Euclion, **maltraitée** |
+| **Le dieu Lare** | Le dieu du foyer, qui dit le **prologue** |
 
 ## À retenir
 Comédie **latine**, elle-même adaptée de **modèles grecs** — et **source directe** de *L’Avare* de **Molière** (1668).
@@ -315,6 +437,10 @@ Comédie **latine**, elle-même adaptée de **modèles grecs** — et **source d
 | La découverte du vol | Le fameux « **Au voleur !** » |
 
 Comique de **caractère** et de **répétition**, adresses au public, et des **types** — le vieil avare, le jeune amoureux, l’esclave rusé — **qui traverseront tout le théâtre occidental**.
+
+## Pour la dissertation et l’oral
+- **L’imitation créatrice** : Plaute adapte les Grecs, Molière adapte Plaute — la comédie est un art de la **reprise**.
+- **Le quiproquo** : Molière reprendra la scène (Valère parle d’Élise, Harpagon de sa cassette).
 
 > Molière n’a pas copié Plaute : il a fait un **personnage** là où il y avait un **type**.`,
           },
@@ -331,7 +457,10 @@ Comique de **caractère** et de **répétition**, adresses au public, et des **t
           titre: 'La Métamorphose, Franz Kafka',
           lecon: {
             titre: 'Kafka, 1915 — « un monstrueux insecte »',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Franz Kafka** (1883-1924), juif de **Prague** écrivant en **allemand**, est employé dans une **compagnie d’assurances** contre les accidents du travail. Il écrit le récit en **1912** et le publie en **1915**. Il demande à son éditeur que l’insecte **ne soit jamais dessiné** sur la couverture.
+
+## L’histoire
 « En se réveillant un matin après des rêves agités, **Gregor Samsa** se retrouva, dans son lit, métamorphosé en un **monstrueux insecte**. »
 
 > **Aucune explication ne sera donnée.**
@@ -346,6 +475,16 @@ Comique de **caractère** et de **répétition**, adresses au public, et des **t
 | La sentence | **Grete** déclare qu’il faut « **s’en débarrasser** » |
 | La fin | Gregor **meurt** ; la famille, **soulagée**, part en promenade **au soleil** et remarque que **Grete est devenue une belle jeune fille** |
 
+## Les personnages
+| Personnage | Son rôle |
+| **Gregor** | Le fils **dévoué**, réduit à une chose qu’on cache |
+| **Le père** | Ancien commerçant **ruiné** ; il reprend l’uniforme et l’autorité |
+| **La mère** | Aimante mais **impuissante** |
+| **Grete** | La sœur, de la tendresse à la **condamnation** |
+| **Le fondé de pouvoir** | L’employeur qui vient **réclamer** Gregor dès le premier matin |
+
+Le récit est construit en **trois parties**, chacune finissant par une sortie de Gregor hors de sa chambre.
+
 ## À retenir
 Récit de **1915**, l’un des textes **fondateurs** de la littérature moderne.
 
@@ -357,6 +496,11 @@ Récit de **1915**, l’un des textes **fondateurs** de la littérature moderne.
 | La **maladie** | L’exclusion de celui qui **ne « sert » plus** |
 
 Le style est **neutre**, **presque comique** par endroits.
+
+## Pour la dissertation et l’oral
+- **Un fantastique sans hésitation** : personne ne s’étonne vraiment, c’est cela qui inquiète.
+- **L’inversion** : la famille renaît à mesure que Gregor s’éteint.
+- Gregor se demande : « **Qu’est-ce qui m’est arrivé ?** »
 
 > « Ce n’était pas un rêve. »`,
           },
@@ -373,7 +517,10 @@ Le style est **neutre**, **presque comique** par endroits.
           titre: 'La Modification, Michel Butor',
           lecon: {
             titre: 'Butor, 1957 — un roman écrit à « vous »',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Michel Butor** (1926-2016), professeur et essayiste, est associé au **Nouveau Roman**, qui rejette l’intrigue et le personnage traditionnels au profit d’une **expérience de la conscience et de la forme**. *La Modification* paraît en **1957** aux éditions de Minuit.
+
+## L’histoire
 **Léon Delmont**, directeur d’une firme de machines à écrire, prend le train **Paris-Rome** — **en troisième classe, pour ne pas être reconnu**.
 
 | Son projet initial | Ce qu’il va annoncer |
@@ -388,6 +535,15 @@ Le style est **neutre**, **presque comique** par endroits.
 | Donc | Il **détruirait tout** en l’installant à Paris |
 | À l’arrivée | Il a **renoncé** — et décide d’**écrire un livre** sur cette expérience |
 
+## Les personnages
+| Personnage | Ce qu’il représente |
+| **Léon Delmont** | Quadragénaire **las** de sa vie bourgeoise à Paris |
+| **Henriette** | L’épouse, mère de ses **quatre enfants** : la routine parisienne |
+| **Cécile** | La maîtresse, qui vit **à Rome** : la liberté, le **rêve** |
+| Les voyageurs | Des inconnus à qui il **invente des noms et des vies** |
+
+Le roman suit **trois temps mêlés** : le trajet présent, les **voyages passés** entre Paris et Rome, et l’**avenir** imaginé, qui se défait peu à peu.
+
 ## À retenir
 **Prix Renaudot 1957**, l’œuvre la plus célèbre du **Nouveau Roman**.
 
@@ -398,6 +554,11 @@ Le style est **neutre**, **presque comique** par endroits.
 | De **lieu** | Un compartiment |
 | De **temps** | Un trajet |
 | L’**événement** | Il n’est qu’un **changement d’avis** |
+
+## Pour la dissertation et l’oral
+- **Le roman sans aventure** : l’action est intérieure, la tension naît de la **pensée qui bascule**.
+- **La mise en abyme** : le livre que Delmont décide d’écrire est celui qu’on vient de lire.
+- **Rome et Paris** : deux villes, deux vies, deux faces d’un même homme.
 
 > « Vous avez mis le pied gauche sur la rainure de cuivre… »`,
           },
@@ -414,11 +575,24 @@ Le style est **neutre**, **presque comique** par endroits.
           titre: 'La Peau de chagrin, Honoré de Balzac',
           lecon: {
             titre: 'Balzac, 1831 — chaque désir coûte un morceau de vie',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Honoré de Balzac** (1799-1850) connaît son **premier grand succès** avec ce roman de **1831**, écrit au lendemain de la **révolution de Juillet**. Il y mêle le **conte fantastique**, à la mode depuis Hoffmann, et la peinture exacte du Paris de son temps.
+
+## L’histoire
 | Partie | Ce qui s’y passe |
 | **Le Talisman** | **Raphaël de Valentin**, ruiné, perd sa dernière pièce au jeu et va se noyer ; un **antiquaire** lui offre une **peau d’onagre** qui exauce tous les vœux — **mais rétrécit à chaque souhait**, et **la vie de son possesseur avec elle** |
 | **La Femme sans cœur** | Récit **rétrospectif** : la jeunesse studieuse et pauvre, l’amour pour la comtesse **Fœdora**, **incapable d’aimer**, et la ruine |
 | **L’Agonie** | Riche et **condamné**, il tente de **ne plus rien désirer** ; savants et médecins **échouent** à étirer la peau ; il **meurt en désirant Pauline**, qui l’aime depuis toujours |
+
+Son premier vœu : une **orgie** fastueuse — il se retrouve aussitôt au banquet du banquier **Taillefer**, puis apprend qu’il **hérite de six millions**. La peau a déjà rétréci.
+
+## Les personnages
+| Personnage | Ce qu’il représente |
+| **Raphaël** | Le jeune homme de génie **dévoré par le désir** |
+| **L’antiquaire** | Le vieillard centenaire qui a tout **su** et n’a rien **voulu** |
+| **Fœdora** | La société mondaine, **brillante et froide** |
+| **Pauline** | L’amour **pur et dévoué**, fille de sa logeuse |
+| **Rastignac** | L’ami **arriviste** qui lui apprend le monde |
 
 ## À retenir
 Le roman qui **ouvre les Études philosophiques** de *La Comédie humaine*.
@@ -431,6 +605,11 @@ Le roman qui **ouvre les Études philosophiques** de *La Comédie humaine*.
 > Le fantastique — la peau — est installé dans un **Paris minutieusement décrit** : c’est le **réalisme fantastique**.
 
 > Le roman dit l’**énergie d’une époque** — **1830**, spéculation, arrivisme — **qui se consume elle-même**.
+
+## Pour la dissertation et l’oral
+- **Le pacte** : une variante du mythe de **Faust**, sans diable, où l’on paie de sa propre vie.
+- **L’économie de la vie** : chaque désir est une **dépense** — la métaphore est aussi sociale.
+- **Le talisman** porte une inscription : « **Si tu me possèdes, tu posséderas tout. Mais ta vie m’appartiendra.** »
 
 > « Vouloir nous brûle et Pouvoir nous détruit. »`,
           },
@@ -447,7 +626,10 @@ Le roman qui **ouvre les Études philosophiques** de *La Comédie humaine*.
           titre: 'La Peste, Albert Camus',
           lecon: {
             titre: 'Camus, 1947 — la ville fermée, et ceux qui soignent',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Albert Camus** (1913-1960), né en **Algérie**, journaliste, résistant au journal *Combat*, prix **Nobel de littérature** en **1957**. Il porte le roman pendant toute la guerre et le publie en **1947**, avec une épigraphe empruntée à **Daniel Defoe**.
+
+## L’histoire
 À **Oran**, dans les années **1940**, des **rats meurent par milliers**, puis les hommes. Les autorités **tardent** — puis **ferment la ville**.
 
 | Personnage | Ce qu’il choisit |
@@ -457,6 +639,9 @@ Le roman qui **ouvre les Études philosophiques** de *La Comédie humaine*.
 | Le père **Paneloux** | Il prêche la peste comme un **châtiment** — puis, **après la mort atroce d’un enfant**, **change de discours** et meurt |
 | **Grand**, employé modeste | Il écrit **sans fin la première phrase** d’un roman |
 | **Cottard** | Il **profite du fléau** |
+| Le vieux docteur **Castel** | Il met au point un **sérum** |
+
+L’enfant qui meurt sous leurs yeux est le **fils du juge Othon**, sur qui le sérum de Castel est essayé trop tard. Tarrou, qui cherchait à être « **un saint sans Dieu** », meurt parmi les derniers malades ; la femme de Rieux, soignée loin d’Oran, meurt aussi.
 
 > La peste recule, la ville rouvre. **Le narrateur se révèle être Rieux** : il a écrit cette chronique pour « dire simplement ce qu’on apprend au milieu des fléaux ».
 
@@ -471,7 +656,12 @@ Roman de **1947**, cycle de la **révolte**, avec *L’Homme révolté*.
 
 > La **dernière page** avertit que le bacille « **ne meurt ni ne disparaît jamais** ».
 
-> « Il ne s’agit pas d’héroïsme. Il s’agit d’honnêteté. »`,
+## Pour la dissertation et l’oral
+- **La chronique** : un narrateur qui se cache pour témoigner avec **objectivité**.
+- **La révolte** selon Camus : face à l’absurde et au mal, agir **ensemble**, sans attendre de salut.
+- **L’exil** : séparés de ceux qu’ils aiment, les Oranais vivent une **prison collective**.
+
+> « Il ne s’agit pas d’héroïsme dans tout cela. Il s’agit d’honnêteté. »`,
           },
           questions: [
             ['Dans quelle ville se déroule le roman ?', ['Oran', 'Alger', 'Marseille', 'Constantine'], 0, 'La ville est fermée quand l’épidémie est reconnue.'],
@@ -479,14 +669,17 @@ Roman de **1947**, cycle de la **révolte**, avec *L’Homme révolté*.
             ['Que décide Rambert ?', ['Rester pour lutter, au lieu de rejoindre la femme qu’il aime', 'Fuir la ville', 'Écrire un article accusateur', 'Se cacher chez Cottard'], 0, 'Son évolution est l’un des fils moraux du roman.'],
             ['Qu’est-ce qui fait changer le discours du père Paneloux ?', ['La mort atroce d’un enfant', 'La fermeture des églises', 'La guérison de Rieux', 'Le départ de Rambert'], 0, 'Le châtiment divin ne peut plus expliquer l’innocent qui souffre.'],
             ['Quel avertissement clôt le roman ?', ['Le bacille de la peste ne meurt ni ne disparaît jamais', 'La ville sera détruite', 'Rieux quitte Oran', 'Cottard sera jugé'], 0, 'La vigilance vaut pour tous les fléaux, y compris politiques.'],
-            ['Le roman célèbre l’héroïsme exceptionnel.', ['Vrai', 'Faux'], 1, '« Il ne s’agit pas d’héroïsme, il s’agit d’honnêteté » : Camus valorise le travail obstiné.'],
+            ['Le roman célèbre l’héroïsme exceptionnel.', ['Vrai', 'Faux'], 1, '« Il ne s’agit pas d’héroïsme dans tout cela. Il s’agit d’honnêteté » : Camus valorise le travail obstiné.'],
           ],
         },
         {
           titre: 'La Petite Fadette, George Sand',
           lecon: {
             titre: 'Sand, 1849 — la sorcière était une jeune fille',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**George Sand** (1804-1876), républicaine déçue par l’**échec de 1848**, se retire à **Nohant** et revient au roman champêtre. *La Petite Fadette* paraît en **1849**, trois ans après *La Mare au diable*. L’action se passe au village de **la Cosse**, dans le Berry.
+
+## L’histoire
 Les jumeaux **Landry** et **Sylvinet** Barbeau sont **inséparables**. Leur père les **sépare** en plaçant Landry dans une ferme voisine — ce qui rend **Sylvinet malade de jalousie**.
 
 | Personnage | Ce qu’elle est |
@@ -494,13 +687,23 @@ Les jumeaux **Landry** et **Sylvinet** Barbeau sont **inséparables**. Leur pèr
 | Ce que le village en fait | Une **sorcière** |
 
 | Étape | Ce qui se passe |
+| La promesse | Elle aide Landry à **retrouver Sylvinet**, disparu près de la rivière ; en échange, il doit lui accorder ce qu’elle voudra — **danser avec elle** à la fête |
 | L’aide | Elle **aide Landry** ; il découvre son **intelligence** et sa **bonté** |
+| Le départ | Pour se refaire une réputation, elle **quitte le village** et part servir en ville |
 | La transformation | Elle apprend à se tenir, **hérite d’un magot inattendu** |
 | La guérison | Elle **soigne Sylvinet** de sa jalousie maladive |
 | La fin | Elle **épouse Landry** |
 
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Landry** | Le jumeau **fort et raisonnable**, qui ose aimer contre le village |
+| **Sylvinet** | Le jumeau **fragile**, possessif — il finit par **partir soldat** |
+| **Le père Barbeau** | Le paysan **aisé et prudent**, méfiant envers Fadette |
+| **La mère Fadet** | La grand-mère **guérisseuse**, redoutée |
+| **Madelon** | La jolie fille que Landry courtisait d’abord, **jalouse** |
+
 ## À retenir
-**Deuxième** grand **roman champêtre** de George Sand, écrit **après l’échec de la révolution de 1848**.
+**Troisième** grand **roman champêtre** de George Sand (après *La Mare au diable* et *François le Champi*), écrit **après l’échec de la révolution de 1848**.
 
 > Elle y cherche, dit-elle, à **parler d’autre chose que de politique** — tout en **défendant les mêmes valeurs**.
 
@@ -512,13 +715,17 @@ Les jumeaux **Landry** et **Sylvinet** Barbeau sont **inséparables**. Leur pèr
 
 Langue **simple**, dialogues teintés de **parler berrichon**.
 
+## Pour la dissertation et l’oral
+- **Le conte d’apprentissage** : la « sorcière » devient une femme respectée, comme dans un conte de fées.
+- **Le préjugé** : un village entier se trompe, un seul regard suffit à le corriger.
+
 > On n’est laid et méchant que dans les yeux du village.`,
           },
           questions: [
             ['Qui sont Landry et Sylvinet ?', ['Deux frères jumeaux inséparables', 'Deux cousins rivaux', 'Les frères de Fadette', 'Deux fermiers voisins'], 0, 'Leur séparation rend Sylvinet malade de jalousie.'],
             ['Pourquoi le village prend-il Fadette pour une sorcière ?', ['Elle est pauvre, moqueuse et élevée par une grand-mère guérisseuse', 'Elle jette réellement des sorts', 'Elle vient d’un autre pays', 'Elle refuse d’aller à l’église'], 0, 'Le regard des autres fabrique la sorcière.'],
             ['Que fait Fadette pour Sylvinet ?', ['Elle le soigne de sa jalousie maladive', 'Elle l’épouse', 'Elle le dénonce', 'Elle l’éloigne du village'], 0, 'Sa connaissance des plantes et des âmes le sauve.'],
-            ['Quel événement personnel change la situation de Fadette ?', ['Un héritage inattendu', 'Un mariage arrangé', 'Un départ pour la ville', 'La mort de Landry'], 0, 'Elle acquiert aussi les manières que le village exigeait.'],
+            ['Quel événement personnel change la situation de Fadette ?', ['Un héritage inattendu', 'Un mariage arrangé', 'Un procès gagné', 'La mort de Landry'], 0, 'Elle acquiert aussi les manières que le village exigeait.'],
             ['Dans quel contexte George Sand écrit-elle ce roman ?', ['Après l’échec de la révolution de 1848', 'Pendant la Restauration', 'Sous le Second Empire finissant', 'Avant 1830'], 0, 'Elle veut parler d’autre chose que de politique, sans renier ses valeurs.'],
             ['Le roman appartient aux romans champêtres de Sand.', ['Vrai', 'Faux'], 0, 'Avec La Mare au diable et François le Champi.'],
           ],
@@ -527,7 +734,10 @@ Langue **simple**, dialogues teintés de **parler berrichon**.
           titre: 'La Porte étroite, André Gide',
           lecon: {
             titre: 'Gide, 1909 — le renoncement comme piège',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**André Gide** (1869-1951), prix **Nobel** en **1947**, a grandi dans une famille **protestante** austère. Il appelle *La Porte étroite* un « **récit** » : un texte court, à un seul narrateur, qui met une **idée à l’épreuve** d’un destin. L’action se passe en **Normandie**, à **Fongueusemare**, près du Havre.
+
+## L’histoire
 **Jérôme** aime sa cousine **Alissa** depuis l’enfance. **Elle l’aime aussi.**
 
 | Ce qui la retient | Le détail |
@@ -543,6 +753,13 @@ Langue **simple**, dialogues teintés de **parler berrichon**.
 
 > Son **journal**, découvert **après sa mort**, révèle qu’elle l’a **aimé jusqu’au bout** — et **qu’elle a souffert de son propre sacrifice**.
 
+## Les personnages
+| Personnage | Son rôle |
+| **Jérôme** | Le narrateur, amoureux **patient** — trop soumis à l’idéal d’Alissa |
+| **Alissa** | L’héroïne qui **sacrifie son bonheur** à la sainteté |
+| **Juliette** | La sœur **vive**, qui épouse sans amour un viticulteur, **Édouard Teissières** |
+| **Lucile Bucolin** | La mère, qui **fuit le foyer** avec un amant |
+
 ## À retenir
 Publié en **1909**, ce **récit** est le **pendant exact** de *L’Immoraliste*.
 
@@ -553,7 +770,12 @@ Publié en **1909**, ce **récit** est le **pendant exact** de *L’Immoraliste*
 
 **Construction remarquable** : le récit de Jérôme, **puis le journal d’Alissa** — **qui retourne toute la lecture**.
 
-> « Il n’y a pas de plus grande douleur que d’avoir été heureux. »`,
+## Pour la dissertation et l’oral
+- **La vertu qui détruit** : le sacrifice n’apporte ni paix ni sainteté, seulement la solitude.
+- **Le point de vue limité** : Jérôme ne comprend qu’à la lecture du journal.
+- Le récit se clôt sur Juliette, dix ans plus tard : « **Allons ! il faut se réveiller…** »
+
+> Le bonheur refusé au nom de la sainteté ne donne ni l’un ni l’autre.`,
           },
           questions: [
             ['Pourquoi Alissa refuse-t-elle d’épouser Jérôme ?', ['Elle croit que leur bonheur les détournerait de Dieu', 'Elle en aime un autre', 'Sa famille s’y oppose', 'Elle est malade'], 0, 'La « porte étroite » de l’Évangile lui sert de justification.'],
@@ -568,12 +790,16 @@ Publié en **1909**, ce **récit** est le **pendant exact** de *L’Immoraliste*
           titre: 'La Princesse de Clèves, Madame de Lafayette',
           lecon: {
             titre: 'Madame de Lafayette, 1678 — l’aveu et le refus',
-            cours: `## L’histoire
+            cours: `## L’autrice et le contexte
+**Madame de Lafayette** (1634-1693), femme de lettres lettrée, amie de **La Rochefoucauld** et de **Madame de Sévigné**, fréquente les **salons précieux**. Elle situe son roman **un siècle plus tôt**, à la cour des **Valois**, mais y peint la cour de **Louis XIV**.
+
+## L’histoire
 À la cour d’**Henri II**, en **1558**.
 
 | Étape | Ce qui se passe |
 | Le mariage | **Mademoiselle de Chartres**, seize ans, épouse **sans amour** le **prince de Clèves**, qui l’adore |
 | La rencontre | Le **duc de Nemours** : coup de foudre **réciproque et silencieux** |
+| Le portrait | Elle voit Nemours **dérober son portrait** et **ne dit rien** |
 | L’avertissement | Sa **mère** la met en garde — puis meurt |
 | L’**aveu** | Pour se protéger, elle **avoue à son mari** qu’elle aime un autre homme, **sans le nommer**, et demande à quitter la cour |
 | Le témoin | **Nemours, caché, entend tout** |
@@ -584,6 +810,13 @@ Elle se retire, et **meurt jeune**.
 
 > La scène de l’aveu est **sans précédent dans le roman français**.
 
+## Les personnages
+| Personnage | Ce qu’il représente |
+| **La princesse** | La **conscience** qui s’observe et se juge |
+| **Madame de Chartres** | La mère **éducatrice**, qui enseigne la méfiance |
+| **Le prince de Clèves** | L’époux **aimant et estimable**, qu’elle ne peut aimer d’amour |
+| **Le duc de Nemours** | Le séducteur **accompli** de la cour |
+
 ## À retenir
 **Premier grand roman d’analyse** : **l’action extérieure compte moins que les mouvements intérieurs**. Publié **anonymement**.
 
@@ -591,7 +824,12 @@ Elle se retire, et **meurt jeune**.
 
 > Le **refus final** — orgueil ? sagesse ? liberté ? — est l’un des **sujets de dissertation les plus fréquents**.
 
-> « Il faut se retirer de la cour pour y voir clair. »`,
+## Pour la dissertation et l’oral
+- **Passion et raison** : la passion est une maladie qu’on analyse, dans l’esprit du **jansénisme** et des moralistes.
+- La mère prévient : « **Ce qui paraît n’est presque jamais la vérité.** »
+- La première phrase : « **La magnificence et la galanterie n’ont jamais paru en France avec tant d’éclat que dans les dernières années du règne de Henri second.** »
+
+> La dernière phrase : « **et sa vie, qui fut assez courte, laissa des exemples de vertu inimitables.** »`,
           },
           questions: [
             ['Quelle scène rend le roman célèbre ?', ['L’aveu de la princesse à son mari', 'Le duel de Nemours', 'Le bal du Louvre', 'La mort du roi'], 0, 'Nemours, caché, entend tout : le procédé est audacieux.'],
@@ -606,13 +844,17 @@ Elle se retire, et **meurt jeune**.
           titre: 'La Princesse de Montpensier, Madame de La Fayette',
           lecon: {
             titre: 'Madame de La Fayette, 1662 — le premier récit d’une œuvre',
-            cours: `## L’histoire
+            cours: `## L’autrice et le contexte
+**Madame de La Fayette** (1634-1693) publie à **vingt-huit ans** ce premier texte, court, sans nom d’auteur. Elle rompt avec les **longs romans héroïques** du temps (ceux de Mademoiselle de Scudéry) : une **nouvelle** vraisemblable, brève, dans un cadre **historique réel**.
+
+## L’histoire
 Pendant les **guerres de religion**.
 
 | Personnage | Sa position |
 | **Mademoiselle de Mézières** | Amoureuse du **duc de Guise**, **mariée par sa famille** au **prince de Montpensier** |
 | Le **comte de Chabannes** | Homme d’honneur plus âgé, à qui le mari la **confie** pendant qu’il guerroie |
 | Ce qu’il devient | Il **tombe amoureux d’elle** — et devient pourtant son **confident loyal** |
+| Le **duc d’Anjou** | Frère du roi, futur Henri III, **rival de Guise** auprès d’elle |
 
 | Étape | Ce qui se passe |
 | Le retour de Guise | **La passion renaît** |
@@ -620,6 +862,12 @@ Pendant les **guerres de religion**.
 | Le sacrifice | **Chabannes**, pour la sauver, **se laisse prendre pour l’amant** |
 | Sa fin | Chassé, il est **tué au cours de la Saint-Barthélemy** |
 | La fin | **Guise épouse une autre femme par ambition** ; la princesse, **abandonnée de tous**, **meurt de chagrin** |
+
+## Les thèmes
+| Thème | Ce qu’il montre |
+| La **jalousie** | Elle circule entre tous les hommes du récit |
+| Le **mariage arrangé** | Une alliance de familles, non de cœurs |
+| La **cour** | Un théâtre de rivalités où l’amour sert l’ambition |
 
 ## À retenir
 Publiée **anonymement** en **1662**, cette **nouvelle historique** **annonce** *La Princesse de Clèves*.
@@ -632,6 +880,10 @@ Publiée **anonymement** en **1662**, cette **nouvelle historique** **annonce** 
 > **Chabannes**, dont le **dévouement absolu n’est jamais récompensé**, est l’une des grandes créations de l’autrice.
 
 Adaptée au cinéma par **Bertrand Tavernier** (2010).
+
+## Pour la dissertation et l’oral
+- **La brièveté** : un narrateur **sobre**, qui juge en une phrase.
+- **La leçon morale** : la dernière phrase dit que la princesse « aurait sans doute été la plus heureuse, **si la vertu et la prudence eussent conduit toutes ses actions** ».
 
 > La passion, chez Madame de La Fayette, ne se paie jamais autrement que par la mort ou le renoncement.`,
           },
@@ -648,22 +900,33 @@ Adaptée au cinéma par **Bertrand Tavernier** (2010).
           titre: 'La Puce à l’oreille, Georges Feydeau',
           lecon: {
             titre: 'Feydeau, 1907 — le vaudeville comme horlogerie',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Georges Feydeau** (1862-1921) est le maître du **vaudeville** de la **Belle Époque**. *La Puce à l’oreille* est créée en **1907** au **Théâtre des Nouveautés**. Ses pièces montrent une **bourgeoisie parisienne** aisée, obsédée par les apparences, que le moindre soupçon fait dérailler.
+
+## L’histoire
 **Raymonde Chandebise** soupçonne son mari **Victor-Emmanuel** d’infidélité — une **paire de bretelles** renvoyée d’un hôtel louche lui a mis « **la puce à l’oreille** ».
 
 | Étape | Ce qui se passe |
 | Le piège | Elle lui fait écrire par son amie **Lucienne** une **lettre anonyme de rendez-vous** à l’hôtel du **Minet-Galant** |
 | La méprise | Chandebise, croyant à une erreur, **envoie à sa place son ami Tournel** |
+| L’emballement | Homenidès reconnaît l’écriture de sa femme et **court à l’hôtel pour tuer** |
 
 | À l’hôtel | Qui s’y croise |
 | **Homenidès** | Le mari espagnol **jaloux** de Lucienne |
 | **Camille** | Le neveu **qui parle sans consonnes** |
-| Le docteur **Finache**, le patron **Feraillon** | Le personnel |
+| Le docteur **Finache**, le patron **Feraillon** | Un habitué de l’hôtel, et son patron |
 | **Poche** | Le garçon d’hôtel **ivrogne**, **sosie parfait** de Chandebise |
 
 > Les portes claquent, un **lit tournant** fait disparaître les amants, **tout le monde se prend pour un autre**.
 
 Au dernier acte, tout se dénoue chez les Chandebise et **le malentendu s’efface**.
+
+## Les personnages
+| Personnage | Son ressort comique |
+| **Chandebise** | Mari **innocent**, directeur d’une compagnie d’assurances, **confondu avec son sosie** |
+| **Raymonde** | L’épouse **soupçonneuse**, qui monte le piège |
+| **Tournel** | L’ami qui **courtise Raymonde** en secret |
+| **Camille** | Son défaut de langage ; Finache lui pose un **palais d’argent** |
 
 ## À retenir
 Le **vaudeville** porté à sa **perfection mécanique** : trois actes — **exposition**, **machine infernale**, **retour à l’ordre**.
@@ -672,7 +935,12 @@ Le **vaudeville** porté à sa **perfection mécanique** : trois actes — **exp
 
 Le **sosie** et le **quiproquo d’identité** en font l’une de ses pièces **les plus jouées**.
 
-> « Le vaudeville, c’est de la géométrie. »`,
+## Pour la dissertation et l’oral
+- **Le comique de situation** : un seul soupçon suffit à lancer la machine.
+- **La mise en scène** : les **didascalies** de Feydeau sont minutieuses — le rythme est écrit.
+- **Le rire et l’inquiétude** : chacun perd son identité, jusqu’au vertige.
+
+> Le vaudeville selon Feydeau : une géométrie des entrées et des sorties.`,
           },
           questions: [
             ['Qu’est-ce qui met « la puce à l’oreille » de Raymonde ?', ['Une paire de bretelles renvoyée d’un hôtel', 'Une lettre anonyme reçue', 'Un parfum inconnu', 'Un témoin'], 0, 'Elle organise alors un faux rendez-vous pour confondre son mari.'],
@@ -687,12 +955,20 @@ Le **sosie** et le **quiproquo d’identité** en font l’une de ses pièces **
           titre: 'La rage de l’expression, Francis Ponge',
           lecon: {
             titre: 'Ponge, 1952 — le poème montré en chantier',
-            cours: `## L’œuvre
+            cours: `## L’auteur et le contexte
+**Francis Ponge** (1899-1988) s’est fait connaître en **1942** avec *Le Parti pris des choses*. Pendant la guerre, il est **résistant** et parcourt la zone sud ; les textes de *La Rage de l’expression* sont écrits dans ces années, au gré des lieux où il vit, puis publiés en **1952**.
+
+## L’œuvre
 **Sept ensembles** écrits entre **1938 et 1944**, publiés en **1952**.
 
 « Berges de la Loire », « Le Carnet du bois de pins », « La Mounine », « L’Œillet », « La Guêpe », « Le Mimosa », « Notes prises pour un oiseau ».
 
 > Ce ne sont **pas des poèmes finis** mais des **journaux d’écriture** : **datés, raturés, contradictoires**.
+
+| Texte | Ce qu’on y voit |
+| « Le Carnet du bois de pins » | Des pages de reprises sur un bois de pins, et des **lettres** échangées sur ce travail même |
+| « La Mounine » | Un **ciel de Provence** vu en voyage, que le poète **n’arrive pas à dire** |
+| « Le Mimosa » | Un objet **aimé depuis l’enfance** : l’affection **gêne** la description |
 
 ## Le projet
 Décrire des objets **modestes** — un pin, un œillet, une guêpe — **sans les humaniser ni les symboliser**.
@@ -716,6 +992,11 @@ Décrire des objets **modestes** — un pin, un œillet, une guêpe — **sans l
 
 C’est aussi une **leçon de modestie** : **nommer exactement une guêpe est plus difficile que chanter ses états d’âme**.
 
+## Pour la dissertation et l’oral
+- **Poésie et prose** : pas de vers, pas de rime — la poésie tient à l’**exigence de justesse**.
+- **Le brouillon comme œuvre** : l’inachèvement devient une **forme**.
+- **Contre le lyrisme** : l’émotion est déplacée du poète vers la chose.
+
 > Le poème est ici le compte rendu de sa propre fabrication.`,
           },
           questions: [
@@ -731,7 +1012,10 @@ C’est aussi une **leçon de modestie** : **nommer exactement une guêpe est pl
           titre: 'La Reine Margot, Alexandre Dumas',
           lecon: {
             titre: 'Dumas, 1845 — la Saint-Barthélemy en roman',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Alexandre Dumas** (1802-1870), l’auteur des *Trois Mousquetaires*, publie *La Reine Margot* en **feuilleton** dans le journal *La Presse*. Le roman ouvre la **trilogie des Valois**, suivie de *La Dame de Monsoreau* et des *Quarante-Cinq*.
+
+## L’histoire
 **Août 1572.**
 
 | Étape | Ce qui se passe |
@@ -739,20 +1023,35 @@ C’est aussi une **leçon de modestie** : **nommer exactement une guêpe est pl
 | Six jours plus tard | Le **massacre de la Saint-Barthélemy**, ordonné par **Catherine de Médicis** et **Charles IX** |
 | La nuit du massacre | Margot **sauve La Mole**, jeune gentilhomme protestant blessé — **dont elle devient la maîtresse** |
 | Le second couple | La duchesse de **Nevers** aime **Coconnas**, l’ami de La Mole |
+| La chasse | Henri **sauve Charles IX** d’un sanglier : le roi lui en garde de l’amitié |
 | Le poison | Le fameux **livre empoisonné** destiné à Henri — **et qui tue Charles IX** |
 | La fin | Fuite manquée, **exécution de La Mole et Coconnas** — **Margot emporte la tête de son amant** |
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Margot** | Reine **libre et courageuse**, alliée politique de son mari |
+| **Henri de Navarre** | Le futur **Henri IV**, rusé, qui survit en feignant |
+| **Catherine de Médicis** | La reine mère **calculatrice**, qui consulte astrologues et empoisonneurs |
+| **Charles IX** | Roi **tourmenté**, hanté par le massacre |
+| **Le duc d’Alençon** | Frère cadet **jaloux et traître** |
+| **René** | Le parfumeur florentin de Catherine, **fabricant de poisons** |
 
 ## À retenir
 Roman historique de **1845**, écrit avec **Auguste Maquet**.
 
 | La méthode de Dumas | Sa formule |
-| Personnages **réels**, événements **attestés**, ressorts **romanesques ajoutés** | « **Violer l’Histoire, à condition de lui faire de beaux enfants** » |
+| Personnages **réels**, événements **attestés**, ressorts **romanesques ajoutés** | Selon une formule qu’on lui prête : **violer l’Histoire, à condition de lui faire de beaux enfants** |
 
 > Le livre a fixé, **plus que les manuels**, l’image populaire de la **Saint-Barthélemy** et de **Catherine de Médicis**.
 
 Adapté au cinéma par **Patrice Chéreau** (1994).
 
-> « Il n’y a pas de plus grand ennemi qu’un frère. »`,
+## Pour la dissertation et l’oral
+- **Le roman historique** : l’Histoire vue par ses coulisses — secrets, poisons, amours.
+- **Le feuilleton** : chapitres courts, rebondissements, fins suspendues.
+- **La violence politique** : les guerres de religion déchirent jusqu’aux familles royales.
+
+> Dans ce roman, les pires ennemis sont souvent du même sang.`,
           },
           questions: [
             ['Quel événement historique le roman raconte-t-il ?', ['Le massacre de la Saint-Barthélemy, en 1572', 'La Fronde', 'La Ligue et l’assassinat d’Henri III', 'La révocation de l’édit de Nantes'], 0, 'Il suit de six jours le mariage de Margot et d’Henri de Navarre.'],
@@ -767,7 +1066,10 @@ Adapté au cinéma par **Patrice Chéreau** (1994).
           titre: 'La Symphonie pastorale, André Gide',
           lecon: {
             titre: 'Gide, 1919 — l’aveuglement du pasteur',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**André Gide** (1869-1951), protestant de formation, publie ce **récit** en **1919**. L’action se passe dans le **Jura suisse**, au village de **La Brévine**, sous la neige. Le pasteur-narrateur écrit son journal en **deux cahiers**.
+
+## L’histoire
 Un **pasteur** suisse recueille **Gertrude**, jeune **orpheline aveugle**, sauvage et muette, et entreprend de l’**éduquer**. Il tient un **journal** de cette éducation.
 
 | Ce qu’il fait | Ce qu’il ne voit pas |
@@ -780,6 +1082,15 @@ Un **pasteur** suisse recueille **Gertrude**, jeune **orpheline aveugle**, sauva
 | Elle comprend | Qu’elle **aimait Jacques** — et mesure la **souffrance de la femme du pasteur** |
 | La fin | Elle **se jette dans la rivière** et meurt **après avoir tout dit** |
 
+## Les personnages
+| Personnage | Son rôle |
+| **Le pasteur** | Narrateur **de bonne foi**, aveugle à son propre désir |
+| **Gertrude** | L’aveugle qui s’éveille au langage, à la beauté, puis à la **vérité** |
+| **Amélie** | L’épouse **délaissée**, dont le pasteur juge la jalousie mesquine |
+| **Jacques** | Le fils, **rival** de son père, qui se tourne vers le catholicisme |
+
+Gertrude, convertie elle aussi, cite saint Paul : « **Quand le commandement vint, le péché reprit vie, et moi je mourus.** »
+
 ## À retenir
 Un **récit en deux cahiers**, publié en **1919**.
 
@@ -790,6 +1101,11 @@ Un **récit en deux cahiers**, publié en **1919**.
 | La **confusion** entre charité et désir | Il **se justifie par l’Écriture** |
 
 **Structure implacable** : le journal, écrit par un **narrateur de bonne foi**, **se retourne contre lui**.
+
+## Pour la dissertation et l’oral
+- **Le narrateur non fiable** : le lecteur comprend avant celui qui écrit.
+- **Voir et savoir** : la cécité physique répond à l’aveuglement moral.
+- **Le bonheur fondé sur l’ignorance** peut-il être un vrai bonheur ?
 
 > « Le péché, c’est ce qui obscurcit l’âme. »`,
           },
@@ -806,7 +1122,10 @@ Un **récit en deux cahiers**, publié en **1919**.
           titre: 'La Vie devant soi, Émile Ajar',
           lecon: {
             titre: 'Ajar (Romain Gary), 1975 — Momo et Madame Rosa',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Romain Gary** (1914-1980), aviateur de la **France libre**, diplomate, romancier reconnu, invente en **1974** un auteur fictif, **Émile Ajar**, pour échapper à son image. Son petit-cousin **Paul Pavlowitch** joue le rôle d’Ajar devant la presse. Le roman paraît en **1975**.
+
+## L’histoire
 À **Belleville**.
 
 | Personnage | Qui il est |
@@ -815,6 +1134,10 @@ Un **récit en deux cahiers**, publié en **1919**.
 | Le docteur **Katz** | Le médecin |
 | **Monsieur Hamil** | Il vieillit et **récite Victor Hugo** |
 | **Madame Lola** | Ancien **boxeur sénégalais** devenu travesti |
+
+| Le secret | Ce qui se passe |
+| Le retour du père | Un homme sorti d’un asile vient réclamer son fils ; Madame Rosa prétend l’avoir élevé **dans la religion juive** |
+| La révélation | Momo apprend qu’il a **quatorze ans**, non dix : Rosa l’a **rajeuni** pour le garder |
 
 | La fin | Ce qui se passe |
 | Madame Rosa **s’affaiblit**, perd la tête | Elle redoute l’hôpital et « l’**acharnement thérapeutique** » |
@@ -831,6 +1154,11 @@ Un **récit en deux cahiers**, publié en **1919**.
 
 Thèmes : la **vieillesse**, la **dignité**, l’**amour hors des liens du sang**, la mémoire de la **Shoah**, l’**immigration**.
 
+## Pour la dissertation et l’oral
+- **Le regard d’enfant** : la naïveté du narrateur rend supportable ce qui est terrible, et le rend plus fort.
+- **La famille choisie** : une Juive et un petit Arabe liés par l’amour, contre tous les clivages.
+- **Le droit de mourir dans la dignité**, débat que le roman pose avant l’heure.
+
 > « On peut pas vivre sans quelqu’un à aimer. »`,
           },
           questions: [
@@ -846,7 +1174,10 @@ Thèmes : la **vieillesse**, la **dignité**, l’**amour hors des liens du sang
           titre: 'Le Barbier de Séville, Beaumarchais',
           lecon: {
             titre: 'Beaumarchais, 1775 — Figaro entre en scène',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Beaumarchais** (1732-1799) — horloger, musicien, homme d’affaires, agent secret — crée la pièce en **1775** à la **Comédie-Française**. Jouée d’abord en cinq actes, elle **échoue** ; il la resserre en quatre actes et elle **triomphe** trois jours plus tard. Son sous-titre : « **la Précaution inutile** ».
+
+## L’histoire
 Comédie en **quatre actes et en prose**.
 
 | Personnage | Sa position |
@@ -854,6 +1185,9 @@ Comédie en **quatre actes et en prose**.
 | Le **docteur Bartholo** | Son **tuteur** : il veut l’**épouser pour sa dot** et **la surveille jour et nuit** |
 | **Bazile** | Le maître de musique — l’homme de la fameuse **tirade sur la calomnie** |
 | **Figaro** | Ancien valet du comte, devenu **barbier** et « **factotum de la ville** » |
+| **Rosine** | Jeune fille **enfermée** mais **rusée**, qui fait passer ses billets |
+
+Pour être aimé pour lui-même, le comte se présente d’abord sous le nom d’un étudiant pauvre, **Lindor**, et chante sous le balcon.
 
 | Le stratagème de Figaro | Le détail |
 | Un **déguisement** | Le comte en **soldat ivre** |
@@ -861,12 +1195,19 @@ Comédie en **quatre actes et en prose**.
 | Une **lettre** qui circule | Le nœud |
 | Un **notaire** qui arrive de nuit | Le mariage est signé **sous le nez de Bartholo** |
 
+Quand Bazile survient à contretemps, tous le persuadent qu’il a **la fièvre** et le renvoient se coucher — une bourse glissée achève de le convaincre.
+
 ## À retenir
 Première pièce de la **trilogie**, avec *Le Mariage de Figaro* et *La Mère coupable*.
 
 > Figaro y est encore l’**adjuvant brillant du maître** — **pas encore le protagoniste politique** qu’il deviendra en **1784**.
 
 Rythme d’**opéra**, **virtuosité verbale**, comique d’**intrigue**. **Rossini** en a tiré son opéra de **1816**.
+
+## Pour la dissertation et l’oral
+- **Le schéma classique** — le barbon, la pupille, l’amoureux, le valet — **renouvelé** par la vitesse et l’esprit.
+- **La précaution inutile** : plus Bartholo enferme, plus Rosine s’échappe.
+- **Figaro**, homme du peuple plus habile que les maîtres : le germe d’une **critique sociale**.
 
 > « Je me presse de rire de tout, de peur d’être obligé d’en pleurer. »`,
           },
@@ -883,7 +1224,10 @@ Rythme d’**opéra**, **virtuosité verbale**, comique d’**intrigue**. **Ross
           titre: 'Le Château des Carpathes, Jules Verne',
           lecon: {
             titre: 'Verne, 1892 — le fantastique expliqué par la technique',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Jules Verne** (1828-1905), auteur des *Voyages extraordinaires* publiés par **Hetzel**, écrit ce roman à la fin de sa carrière. En **1892**, le **phonographe** d’Edison (1877) est encore une merveille récente, et l’électricité fascine.
+
+## L’histoire
 En **Transylvanie**, les villageois de **Werst** redoutent le **château abandonné** du baron **Rodolphe de Gortz**.
 
 | Le signe inquiétant | Ce qu’on en dit |
@@ -891,10 +1235,18 @@ En **Transylvanie**, les villageois de **Werst** redoutent le **château abandon
 | Une apparition | On y aurait vu **La Stilla**, cantatrice célèbre **morte sur scène cinq ans plus tôt** |
 
 | Étape | Ce qui se passe |
+| La première alerte | Le berger **Frik** voit de la fumée à la **lunette** ; le forestier **Nic Deck** monte au château et en revient **paralysé** |
 | Le jeune comte **Franz de Télek** | Il avait **aimé La Stilla** : il **monte au château** |
 | Ce qu’il éprouve | Il **entend sa voix**, **croit la voir apparaître** |
 | La vérité | Gortz, **amoureux fou** de la cantatrice, avait fait **enregistrer sa voix sur des phonographes** et **projette son image** par un jeu de **miroirs** |
 | La fin | Le château **saute** ; Franz sombre dans la **folie** avant de guérir |
+
+## Les personnages
+| Personnage | Son rôle |
+| **Rodolphe de Gortz** | Le baron **mélomane obsédé**, qui ne vit que pour une voix |
+| **Orfanik** | Le savant inventeur à son service, **génie des machines** |
+| **Franz de Télek** | L’amant romantique, que la vérité **brise** |
+| **Maître Koltz** | Le premier magistrat du village, **superstitieux** comme les autres |
 
 ## À retenir
 Roman **tardif** de Verne (**1892**), où le **fantastique** est **mis en place puis démonté par la technique**.
@@ -904,6 +1256,11 @@ Roman **tardif** de Verne (**1892**), où le **fantastique** est **mis en place 
 | Ce que le livre annonce | Pourquoi |
 | Le **cinéma** | Quelques années **avant les frères Lumière** |
 | Une réflexion sur l’**image** | Elle **survit à la personne** |
+
+## Pour la dissertation et l’oral
+- **Le fantastique expliqué** : Verne prend le décor gothique pour mieux le **rationaliser**.
+- **Science et superstition** : le village croit aux esprits, le lecteur découvre des machines.
+- **Le deuil et la reproduction** : aimer une voix enregistrée, c’est refuser la mort.
 
 > « Cette histoire n’est pas fantastique, elle n’est que romanesque. »`,
           },
@@ -920,7 +1277,10 @@ Roman **tardif** de Verne (**1892**), où le **fantastique** est **mis en place 
           titre: 'Le Cid, Pierre Corneille',
           lecon: {
             titre: 'Corneille, 1637 — l’honneur contre l’amour',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Pierre Corneille** (1606-1684), avocat rouennais, triomphe avec *Le Cid* au **théâtre du Marais**, au tout début de **1637**. Il s’inspire d’une pièce espagnole, *Les Enfances du Cid* de **Guillén de Castro**. D’abord **tragi-comédie**, la pièce devient **tragédie** dans les éditions suivantes.
+
+## L’histoire
 **Rodrigue** et **Chimène** s’aiment et vont être mariés.
 
 | Étape | Ce qui se passe |
@@ -933,6 +1293,14 @@ Roman **tardif** de Verne (**1892**), où le **fantastique** est **mis en place 
 
 > **La fin est ouverte.**
 
+## Les personnages
+| Personnage | Son conflit |
+| **Rodrigue** | L’**honneur** de sa famille contre son **amour** |
+| **Chimène** | Le **devoir** de venger son père contre son amour |
+| **L’Infante** | Elle aime Rodrigue mais **renonce** : il n’est pas de son rang |
+| **Don Fernand** | Le roi de Castille, **arbitre** qui temporise |
+| **Don Sanche** | Soupirant de Chimène, **champion** malheureux |
+
 ## À retenir
 La pièce qui a déclenché la **querelle du Cid** (**1637**).
 
@@ -941,6 +1309,11 @@ La pièce qui a déclenché la **querelle du Cid** (**1637**).
 | La **bienséance** | **Chimène épousant le meurtrier de son père** |
 
 > Corneille y invente le **héros cornélien** : **celui qui se grandit en choisissant le devoir — sans cesser d’aimer**.
+
+## Pour la dissertation et l’oral
+- **Le dilemme cornélien** : deux valeurs également hautes, et un choix qui coûte.
+- **Des vers devenus proverbes** : « **Rodrigue, as-tu du cœur ?** », « **À vaincre sans péril, on triomphe sans gloire** », et l’aveu de Chimène, « **Va, je ne te hais point** ».
+- **Baroque et classicisme** : une pièce foisonnante, à l’heure où les règles s’imposent.
 
 > « Va, cours, vole, et nous venge. »`,
           },
@@ -957,7 +1330,10 @@ La pièce qui a déclenché la **querelle du Cid** (**1637**).
           titre: 'Le Colonel Chabert, Honoré de Balzac',
           lecon: {
             titre: 'Balzac, 1832 — le mort qui revient',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Honoré de Balzac** (1799-1850) publie ce récit en **1832**, sous un autre titre (*La Transaction*), puis l’intègre à *La Comédie humaine*. Balzac a été **clerc d’avoué** dans sa jeunesse : il connaît de l’intérieur les **études**, les dossiers et les arrangements qu’on y négocie.
+
+## L’histoire
 Un homme **misérable** se présente à l’étude de l’avoué **Derville**.
 
 | Ce qu’il affirme | Le détail |
@@ -972,6 +1348,15 @@ Un homme **misérable** se présente à l’étude de l’avoué **Derville**.
 | Le **renoncement** | Écœuré, il renonce **à sa fortune, à son nom, à son identité** |
 | L’épilogue | Des années plus tard, Derville le retrouve à l’**hospice de Bicêtre**, où il **se fait appeler par un numéro** |
 
+## Les personnages
+| Personnage | Ce qu’il représente |
+| **Chabert** | L’**honneur militaire** de l’Empire, naïf devant l’argent |
+| **La comtesse Ferraud** | Ancienne fille du Palais-Royal devenue comtesse : l’**ambition** sans scrupules |
+| **Le comte Ferraud** | Noble de la Restauration, qui pourrait la **répudier** pour devenir pair de France |
+| **Derville** | L’avoué **honnête**, qui voit tout et ne peut rien |
+
+À l’hospice, le vieillard refuse son nom : « **Pas Chabert ! pas Chabert ! je me nomme Hyacinthe.** »
+
 ## À retenir
 Un **récit bref et féroce** des *Scènes de la vie privée*.
 
@@ -981,6 +1366,10 @@ Un **récit bref et féroce** des *Scènes de la vie privée*.
 | L’**histoire** | Un héros de l’Empire, **devenu inutile sous la Restauration** |
 
 > **Derville**, l’homme de loi **honnête**, a la fonction du **témoin lucide**.
+
+## Pour la dissertation et l’oral
+- **Le réalisme balzacien** : la société est un **système d’intérêts** où l’individu pèse peu.
+- **L’identité** : on peut être vivant et **légalement mort** — le nom tient au papier.
 
 > « J’ai été enterré sous des morts ; mais maintenant je suis enterré sous des vivants. »`,
           },
@@ -997,7 +1386,10 @@ Un **récit bref et féroce** des *Scènes de la vie privée*.
           titre: 'Le Comte de Monte-Cristo, Alexandre Dumas',
           lecon: {
             titre: 'Dumas, 1844 — la vengeance méthodique',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Alexandre Dumas** (1802-1870) publie ce roman en **feuilleton** dans le *Journal des débats*, de **1844 à 1846**, avec un succès immense. L’action court de **1815** — le retour de Napoléon de l’île d’Elbe — à la **monarchie de Juillet**.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | Le bonheur | **Edmond Dantès**, jeune marin, va être **capitaine** et épouser **Mercédès** |
 | La dénonciation | Par **jalousie** — **Danglars**, **Fernand** — et par **calcul** — le procureur **Villefort** |
@@ -1007,6 +1399,16 @@ Un **récit bref et féroce** des *Scènes de la vie privée*.
 | La vengeance | Sous plusieurs identités — dont le **comte de Monte-Cristo** — il détruit **méthodiquement** ses ennemis : ruine, déshonneur, folie, suicide |
 | Le doute | La vengeance **atteint aussi des innocents** : il **s’en trouble** — et **part**, avec **Haydée** |
 
+Villefort l’a fait disparaître parce que la lettre bonapartiste que portait Dantès était adressée à **son propre père, Noirtier**.
+
+## Les personnages
+| Personnage | Ce qu’il devient |
+| **Fernand Mondego** | Le **comte de Morcerf**, pair de France — démasqué pour avoir trahi le père d’Haydée, il se tue |
+| **Danglars** | **Baron et banquier**, ruiné par le comte |
+| **Villefort** | **Procureur du roi**, qui finit **fou** |
+| **Mercédès** | L’épouse de Fernand, qui a **reconnu Dantès** |
+| **Morrel** | L’armateur **loyal**, que le comte sauve de la faillite |
+
 ## À retenir
 Roman-feuilleton de **1844**, écrit avec **Auguste Maquet** : l’un des **plus lus au monde**.
 
@@ -1014,6 +1416,11 @@ Roman-feuilleton de **1844**, écrit avec **Auguste Maquet** : l’un des **plus
 | Implacable | **Bonheur**, **injustice**, **vengeance** |
 
 > Il pose une **question morale sérieuse** — **jusqu’où la vengeance est-elle juste ?** — **sous les habits du roman populaire**.
+
+## Pour la dissertation et l’oral
+- **Le héros-justicier** qui se croit l’instrument de la Providence, puis doute.
+- **La métamorphose** : le naïf marin devient un homme tout-puissant, masqué, énigmatique.
+- **La société de 1830** : l’argent, la presse, la Bourse — Dumas rejoint Balzac.
 
 > « Attendre et espérer. »`,
           },
@@ -1030,8 +1437,11 @@ Roman-feuilleton de **1844**, écrit avec **Auguste Maquet** : l’un des **plus
           titre: 'Le Dernier Jour d’un condamné, Victor Hugo',
           lecon: {
             titre: 'Hugo, 1829 — un plaidoyer déguisé en journal',
-            cours: `## L’œuvre
-Récit à la **première personne** : un homme condamné à mort écrit pendant les **six semaines**, puis les **dernières heures**, qui précèdent son exécution.
+            cours: `## L’auteur et le contexte
+**Victor Hugo** (1802-1885) a vingt-sept ans, il est le jeune chef du **romantisme**. Adolescent, il a vu dresser la guillotine en place de Grève ; les exécutions publiques y attirent encore les foules. Le livre paraît en **1829**.
+
+## L’œuvre
+Récit à la **première personne** : un homme condamné à mort écrit pendant les **derniers jours**, puis les **dernières heures**, qui précèdent son exécution.
 
 > On ne saura **ni son nom, ni son crime**. Hugo l’a voulu ainsi : **pour que le lecteur ne puisse pas se rassurer en jugeant le personnage**.
 
@@ -1045,6 +1455,13 @@ Récit à la **première personne** : un homme condamné à mort écrit pendant 
 
 > Le récit s’arrête **net** : « **QUATRE HEURES.** »
 
+## Les personnages
+| Personnage | Son rôle |
+| **Le condamné** | Un homme **instruit**, qui a une mère, une femme et une enfant |
+| **Marie**, sa fille | L’innocence qui **ne le reconnaît plus** |
+| **Le prêtre** | Il récite des formules apprises, **sans le toucher** |
+| **Le « friauche »** | Un vieux forçat condamné lui aussi, qui lui **prend sa redingote** |
+
 ## À retenir
 Un **plaidoyer contre la peine de mort**, publié **anonymement** en **1829** — Hugo ne le revendiquera que dans la préface de **1832**.
 
@@ -1053,6 +1470,12 @@ Un **plaidoyer contre la peine de mort**, publié **anonymement** en **1829** �
 | Il fait **éprouver** au lecteur | **Minute par minute**, l’attente de l’échafaud |
 
 Hugo poursuivra ce combat toute sa vie — *Claude Gueux*, discours de 1848. La peine de mort sera abolie en France en **1981**.
+
+## Pour la dissertation et l’oral
+- **Convaincre ou persuader** : le récit ne démontre pas, il fait **ressentir** — c’est une argumentation par l’émotion.
+- **L’anonymat** du condamné en fait **n’importe qui** : le lecteur ne peut plus se tenir à distance.
+- **Le fragment** : chapitres brefs, parfois d’une ligne, qui miment le temps haché de l’angoisse.
+- Le condamné rappelle que « **les hommes sont tous condamnés à mort avec des sursis indéfinis** ».
 
 > « Condamné à mort ! Voilà cinq semaines que j’habite avec cette pensée. »`,
           },
@@ -1069,12 +1492,17 @@ Hugo poursuivra ce combat toute sa vie — *Claude Gueux*, discours de 1848. La 
           titre: 'Le Dindon, Georges Feydeau',
           lecon: {
             titre: 'Feydeau, 1896 — trois actes, personne d’innocent',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Georges Feydeau** (1862-1921) crée *Le Dindon* en **1896** au **théâtre du Palais-Royal**. C’est l’époque de ses grands succès : il écrit pour un public bourgeois qui vient rire de lui-même, de ses mariages et de ses hôtels « discrets ».
+
+## L’histoire
 | Étape | Ce qui se passe |
 | Le départ | **Pontagnac** poursuit dans la rue **Lucienne Vatelin** **jusque chez elle** — et découvre qu’elle est **la femme de son ami** |
 | Le serment | Vexée, Lucienne jure à son mari une **fidélité conditionnelle** : elle ne cédera à Pontagnac **que si son mari la trompe** |
 | L’ironie | Or **Vatelin est justement relancé** par une ancienne maîtresse anglaise, **Maggy Soldignac**, qui débarque à Paris |
 | Le rendez-vous | À l’hôtel **Ultimus** |
+| Le calcul | Pontagnac **conseille l’hôtel** à Vatelin et **prévient Lucienne**, pour qu’elle surprenne son mari |
+| Le retour de bâton | Soldignac arrive avec un **commissaire** : c’est Pontagnac qu’on prend pour l’amant de Maggy |
 
 | À l’hôtel | Ce qui s’y croise |
 | Maris, femmes, amants | Un **commissaire** |
@@ -1084,12 +1512,25 @@ Hugo poursuivra ce combat toute sa vie — *Claude Gueux*, discours de 1848. La 
 | Tout rentre dans l’ordre | **Personne n’a réussi à tromper personne** |
 | **Pontagnac**, découvert par sa propre femme | Se retrouve « **le dindon** » de la farce |
 
+## Les personnages
+| Personnage | Son ressort comique |
+| **Pontagnac** | Le **séducteur** de trottoir, sûr de lui, pris à ses propres pièges |
+| **Vatelin** | Le mari **honnête** que son passé rattrape |
+| **Lucienne** | L’épouse **vertueuse par principe**, qui cherche un « vengeur » |
+| **Rédillon** | Le jeune soupirant de Lucienne, **épuisé** au mauvais moment par sa maîtresse Armandine |
+| **Soldignac** | Le mari de Maggy, que l’on redoute |
+
 ## À retenir
 Un des **vaudevilles les plus parfaits** de Feydeau : **mécanique implacable**, portes, quiproquos, **objets qui déclenchent des catastrophes**.
 
 > Le titre dit la morale : **celui qui manœuvre le plus est celui qui perd**.
 
 Satire féroce du **mariage bourgeois**, où l’**adultère est moins un désir qu’une convention sociale**.
+
+## Pour la dissertation et l’oral
+- **Le comique de situation** porté à l’extrême : chaque acte accélère le précédent.
+- **L’arroseur arrosé** : Pontagnac tombe dans le piège qu’il tend aux autres.
+- **Le rire moraliste malgré lui** : les conventions sauvent la vertu mieux que la vertu.
 
 > Chez Feydeau, la vertu est presque toujours un accident de calendrier.`,
           },
@@ -1106,7 +1547,10 @@ Satire féroce du **mariage bourgeois**, où l’**adultère est moins un désir
           titre: 'Le Grand Meaulnes, Alain Fournier',
           lecon: {
             titre: 'Alain-Fournier, 1913 — le domaine qu’on ne retrouve pas',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Alain-Fournier** (Henri-Alban Fournier, 1886-1914) a grandi dans le **Cher**, fils d’instituteurs. En **1905**, il croise à Paris une jeune fille, **Yvonne de Quiévrecourt**, qu’il ne pourra jamais épouser : cette rencontre nourrit tout le roman. Le livre manque de peu le **Goncourt 1913**.
+
+## L’histoire
 **François Seurel**, fils d’instituteur en **Sologne**, raconte l’arrivée dans son école d’**Augustin Meaulnes**, dit **le grand Meaulnes**.
 
 | Étape | Ce qui se passe |
@@ -1114,8 +1558,17 @@ Satire féroce du **mariage bourgeois**, où l’**adultère est moins un désir
 | Ce qu’il a trouvé | En **se perdant** : un **domaine mystérieux**, une **fête étrange**, et **Yvonne de Galais**, dont il tombe amoureux |
 | L’obstacle | **Impossible de retrouver le chemin** |
 | La recherche | Des années ; la rencontre de **Frantz de Galais**, le frère **fantasque** dont les fiançailles avaient échoué ; une **promesse imprudente** |
+| Le retour de Frantz | Il reparaît déguisé en **bohémien**, à l’école même |
 | Les retrouvailles | Il épouse **Yvonne** — puis **repart immédiatement** pour tenir sa promesse |
 | La fin | Yvonne **meurt en donnant naissance à une fille** ; Meaulnes revient enfin, et **repart avec l’enfant** |
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Meaulnes** | L’**aventurier**, qui veut l’absolu et fuit le bonheur réel |
+| **François Seurel** | Le narrateur **fidèle**, qui vit par procuration |
+| **Yvonne de Galais** | L’amour **idéal**, fragile |
+| **Frantz** | L’enfant **capricieux** qui refuse de grandir |
+| **Valentine** | La fiancée qui a fui Frantz — Meaulnes la retrouve à Paris, **sans le savoir** |
 
 ## À retenir
 Roman **unique** d’**Alain-Fournier**, publié en **1913** — l’auteur est **tué au front en 1914**, à **vingt-sept ans**.
@@ -1128,7 +1581,12 @@ Roman **unique** d’**Alain-Fournier**, publié en **1913** — l’auteur est 
 
 L’un des romans français **les plus lus** du XXe siècle.
 
-> « Il eût mieux valu ne jamais retrouver le domaine. »`,
+## Pour la dissertation et l’oral
+- **Le narrateur témoin** : François raconte un héros qu’il admire, et se raconte en creux.
+- **Le rêve et le réel** : la fête est-elle un rêve ? Le roman ne tranche jamais tout à fait.
+- La dernière image : Meaulnes, la nuit, **enveloppant sa fille dans un manteau** et partant « **pour de nouvelles aventures** ».
+
+> Retrouver le domaine perdu ne rend pas le bonheur entrevu.`,
           },
           questions: [
             ['Qui raconte l’histoire ?', ['François Seurel, le camarade de Meaulnes', 'Meaulnes lui-même', 'Yvonne de Galais', 'Un narrateur omniscient'], 0, 'Fils d’instituteur, il observe et rapporte.'],
@@ -1143,7 +1601,10 @@ L’un des romans français **les plus lus** du XXe siècle.
           titre: 'Le Guépard, Giuseppe Tomasi di Lampedusa',
           lecon: {
             titre: 'Lampedusa, 1958 — « il faut que tout change… »',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Giuseppe Tomasi**, prince de **Lampedusa** (1896-1957), aristocrate de Palerme, écrit son unique roman à la fin de sa vie, en s’inspirant de son **arrière-grand-père**, prince et astronome. Refusé par deux éditeurs, le livre paraît **après sa mort**, chez **Feltrinelli**. Le guépard est l’**emblème** des Salina.
+
+## L’histoire
 **Sicile, 1860.** Garibaldi débarque ; l’unité italienne se fait.
 
 | Personnage | Sa position |
@@ -1151,12 +1612,17 @@ L’un des romans français **les plus lus** du XXe siècle.
 | Son neveu **Tancredi** | Il rejoint les **garibaldiens**, puis l’**armée royale** |
 | **Angelica** | Fille du maire parvenu **Don Calogero Sedàra** : Tancredi l’épouse |
 | La fortune neuve | Elle **remplace** celle de la noblesse ruinée |
+| **Concetta** | La fille du prince, **amoureuse de Tancredi**, écartée |
+| Le père **Pirrone** | Le jésuite de la maison, témoin des changements |
 
 | Étape | Ce qui se passe |
+| Le plébiscite | À **Donnafugata**, les votes sont **truqués** : le « oui » est proclamé à l’unanimité |
 | Le refus | Le prince **refuse un siège de sénateur**, expliquant que **les Siciliens ne veulent pas changer** |
 | Le **bal** | Somptueux, à Palerme |
 | La mort du prince | **1883** |
 | L’épilogue, **1910** | Ses filles vieillies, une chapelle **pleine de fausses reliques**, un **chien empaillé jeté à la poubelle** |
+
+Le chien, **Bendicò**, fidèle compagnon du prince, clôt le livre : même la mémoire finit aux ordures.
 
 ## À retenir
 Roman **posthume** (**1958**), **refusé de son vivant**, **prix Strega**, immense succès mondial ; film de **Visconti** (1963).
@@ -1164,6 +1630,11 @@ Roman **posthume** (**1958**), **refusé de son vivant**, **prix Strega**, immen
 > Il donne la formule la plus citée sur le conservatisme politique : « **Il faut que tout change pour que rien ne change.** »
 
 Méditation sur la **mort**, le **temps** et la **Sicile** ; ton d’**ironie mélancolique**.
+
+## Pour la dissertation et l’oral
+- **Le roman historique vu d’en haut** : la révolution racontée par ceux qu’elle remplace.
+- **La relève des élites** : les guépards cèdent la place à des bourgeois avides — le prince le dit avec amertume.
+- **La mort** : le chapitre de l’agonie du prince, qui fait le compte de ses heures heureuses.
 
 > « Se vogliamo che tutto rimanga come è, bisogna che tutto cambi. »`,
           },
@@ -1180,7 +1651,10 @@ Méditation sur la **mort**, le **temps** et la **Sicile** ; ton d’**ironie m�
           titre: 'Le Horla, Guy de Maupassant',
           lecon: {
             titre: 'Maupassant, 1887 — le journal d’un homme qui se perd',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Guy de Maupassant** (1850-1893), disciple de **Flaubert**, révélé par *Boule de suif* (1880), écrit plus de trois cents nouvelles. Une **première version** du *Horla* paraît en **1886** : le narrateur y raconte son histoire devant des médecins, dans une maison de santé. La seconde, celle qu’on lit, adopte le journal.
+
+## L’histoire
 Version définitive publiée en **1887**, sous forme de **journal intime**.
 
 | Étape | Ce qui se passe |
@@ -1189,9 +1663,16 @@ Version définitive publiée en **1887**, sous forme de **journal intime**.
 | Les indices | Sa **carafe se vide**, une **rose se coupe seule**, une **page se tourne sans main** |
 | Le nom | Il appelle cet être invisible le **Horla** |
 | Les explications | Un séjour à Paris, une séance d’**hypnotisme**, un article sur une **épidémie de folie au Brésil** |
+| Le miroir | Il **ne voit plus son reflet** : l’être invisible se tient entre lui et la glace |
 | La conclusion | **Une espèce nouvelle vient remplacer l’homme** |
 | L’acte | Il **enferme le Horla dans sa maison** et y **met le feu** — **brûlant ses domestiques** |
 | La chute | L’être **a survécu** : « il va donc falloir **que je me tue, moi** » |
+
+## Le décor et les étapes
+| Lieu | Ce qu’il apporte |
+| Sa maison **au bord de la Seine**, près de Rouen | Le cadre paisible que l’angoisse envahit |
+| Le **Mont-Saint-Michel** | Un moine lui parle des forces invisibles, comme le **vent** |
+| **Paris** | Le docteur **Parent** hypnotise sa cousine : la volonté peut être possédée |
 
 ## À retenir
 Chef-d’œuvre du **fantastique**.
@@ -1202,6 +1683,11 @@ Chef-d’œuvre du **fantastique**.
 | La forme du **journal** | Elle rend la **contamination progressive** |
 
 Maupassant lui-même **mourra fou**, syphilitique, **six ans plus tard**.
+
+## Pour la dissertation et l’oral
+- **Le fantastique et la science** : hypnose, microbes, évolution — les savoirs du temps nourrissent la peur.
+- **La ponctuation de l’angoisse** : exclamations, questions, phrases brisées.
+- Le moine du Mont-Saint-Michel lui demande : « **Est-ce que nous voyons la cent millième partie de ce qui existe ?** »
 
 > « Il est venu, celui que redoutaient les premières terreurs des peuples naïfs. »`,
           },
@@ -1218,7 +1704,10 @@ Maupassant lui-même **mourra fou**, syphilitique, **six ans plus tard**.
           titre: 'Le Hussard sur le toit, Jean Giono',
           lecon: {
             titre: 'Giono, 1951 — traverser le choléra',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Jean Giono** (1895-1970), né à **Manosque**, ancien combattant de 1914 devenu **pacifiste**, emprisonné en 1939 puis à la Libération, change de manière après la guerre. Le roman paraît en **1951** et appartient au **cycle du Hussard**, avec *Angelo* et *Le Bonheur fou*.
+
+## L’histoire
 **1832**, en Provence. **Angelo Pardi**, jeune colonel de hussards piémontais, **carbonaro en fuite**, traverse une région ravagée par le **choléra**.
 
 | Ce qu’il découvre | Le détail |
@@ -1226,11 +1715,19 @@ Maupassant lui-même **mourra fou**, syphilitique, **six ans plus tard**.
 | La **barbarie des vivants** | **Plus que celle de la maladie** |
 
 | Étape | Ce qui se passe |
+| Le petit médecin | Un jeune médecin français lui apprend à **frictionner** les malades, puis meurt |
 | L’accusation | Poursuivi comme **empoisonneur de fontaines** |
 | Le refuge | Il se réfugie sur les **toits de Manosque**, d’où il **observe la ville** |
+| La religieuse | Redescendu, il aide une nonne à **laver les morts** |
 | La rencontre | **Pauline de Théus**, qui cherche son mari : ils voyagent ensemble, **s’aident, se protègent — sans se toucher** |
 | Le sommet | Pauline contracte le choléra ; il la **sauve en la frictionnant toute une nuit** |
 | La fin | Il la **ramène chez elle** et **repart pour l’Italie** |
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Angelo** | L’idéaliste **généreux**, qui cherche à être digne de lui-même |
+| **Pauline** | Une jeune femme **courageuse et libre**, mariée à un vieux marquis |
+| **Giuseppe** | Le frère de lait d’Angelo, cordonnier et **révolutionnaire** |
 
 ## À retenir
 Le plus célèbre roman du « **second Giono** », d’après-guerre : **moins lyrique, plus romanesque**, influencé par **Stendhal**.
@@ -1242,6 +1739,11 @@ Le plus célèbre roman du « **second Giono** », d’après-guerre : **moins l
 > Il tient par un héros de la **générosité** : **Angelo agit toujours bien, sans calcul** — ce qui fait de lui **un personnage rare**.
 
 La **retenue amoureuse** entre Angelo et Pauline est l’un des **sommets** du livre. Adapté au cinéma par **Rappeneau** (1995).
+
+## Pour la dissertation et l’oral
+- **L’épidémie révélatrice** : la peur fait tomber les masques sociaux (à comparer avec *La Peste* de Camus).
+- **Le héros stendhalien** : jeunesse, panache, **sens de l’honneur**.
+- **L’amour sans aveu** : la pudeur crée une intensité que la passion déclarée n’aurait pas.
 
 > Le choléra y révèle les hommes, il ne les change pas.`,
           },
@@ -1258,7 +1760,10 @@ La **retenue amoureuse** entre Angelo et Pauline est l’un des **sommets** du l
           titre: 'Le Jeu de l’amour et du hasard, Marivaux',
           lecon: {
             titre: 'Marivaux, 1730 — deux couples, deux déguisements',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Marivaux** (1688-1763), romancier et journaliste, écrit surtout pour les **Comédiens-Italiens**, dont le jeu vif et naturel convient à ses dialogues. *Le Jeu de l’amour et du hasard* est créé par eux en **1730**. Les noms Silvia et Arlequin sont ceux de leurs rôles habituels.
+
+## L’histoire
 Comédie en **trois actes et en prose**.
 
 | Personnage | Son déguisement |
@@ -1272,6 +1777,14 @@ Comédie en **trois actes et en prose**.
 | **Dorante avoue le premier** | — |
 | **Silvia prolonge le jeu** | Jusqu’à obtenir **qu’il la demande en mariage en la croyant servante** — puis elle se démasque |
 
+Pour hâter les choses, **Mario** feint d’aimer la fausse Lisette et rend Dorante **jaloux**.
+
+## Les thèmes
+| Thème | Ce que la pièce en fait |
+| Le **mariage** | Silvia en redoute la réalité : un mari aimable en société peut être un tyran chez lui |
+| La **sincérité** | Elle ne se prouve que par une épreuve |
+| Le **langage** | Les personnages découvrent ce qu’ils sentent **en parlant** |
+
 ## À retenir
 La comédie **la plus jouée** de Marivaux.
 
@@ -1281,6 +1794,11 @@ La comédie **la plus jouée** de Marivaux.
 > La réponse est **nuancée** : **Arlequin et Lisette se reconnaissent aussi comme domestiques** — et **l’ordre social n’est finalement pas renversé**.
 
 Langue du **marivaudage** : **dire et retarder l’aveu**.
+
+## Pour la dissertation et l’oral
+- **Le double déguisement** : une symétrie parfaite, que le spectateur est seul (avec Orgon et Mario) à voir entièrement.
+- **Le comique et l’émotion** : on rit d’Arlequin, on est touché par Silvia et Dorante.
+- **Le jeu et la vérité** : c’est sous le masque que les cœurs se révèlent.
 
 > « Je vois clair dans mon cœur. »`,
           },
@@ -1297,14 +1815,28 @@ Langue du **marivaudage** : **dire et retarder l’aveu**.
           titre: 'Le Lys dans la vallée, Honoré de Balzac',
           lecon: {
             titre: 'Balzac, 1836 — l’amour retenu, jusqu’à la mort',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Honoré de Balzac** (1799-1850) publie ce roman en **1836**, dans les *Scènes de la vie de province*. Il y transpose l’amour de sa jeunesse pour **Madame de Berny**, de vingt-deux ans son aînée, et y peint la **Touraine**, sa province natale.
+
+## La forme
+Tout le roman est une **longue lettre** : Félix raconte son passé à sa nouvelle amie, **Natalie de Manerville**. Elle lui répond, à la fin, par un billet **sec et ironique** : elle refuse de rivaliser avec une morte — et **rompt**.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | Le premier geste | **Félix de Vandenesse**, jeune homme **mal aimé de sa mère**, rencontre à un bal **Henriette de Mortsauf** et, dans un élan, **lui embrasse les épaules** |
 | Le décor | Il la retrouve en **Touraine**, à **Clochegourde** : mariée à un comte **malade, aigri et tyrannique**, mère de **deux enfants fragiles** |
 | L’amour | **Jamais consommé** : promenades, lettres, dévouement, **souffrance** |
+| Le langage des fleurs | Félix compose pour elle des **bouquets** qui disent ce qu’il ne peut pas dire |
 | La règle | Henriette impose la **vertu** et le **renoncement** — **tout en vivant de cette passion** |
 | La rupture | À Paris, Félix devient l’amant de **lady Dudley**, Anglaise **sensuelle** |
 | La fin | Henriette l’apprend, **se laisse mourir de faim et de chagrin**, et lui laisse une **lettre bouleversante** avouant ce qu’elle a **réprimé** |
+
+## Les personnages
+| Personnage | Ce qu’il représente |
+| **Félix** | Le jeune homme **sensible**, puis ambitieux |
+| **Henriette** | L’**amour spirituel**, la mère et l’ange |
+| **Lady Dudley** | L’**amour charnel**, la passion sans scrupule |
+| **M. de Mortsauf** | Un ancien émigré **brisé**, qui fait souffrir les siens |
 
 ## À retenir
 Roman **lyrique et cruel**, écrit **en réponse** au *Volupté* de **Sainte-Beuve**.
@@ -1317,7 +1849,11 @@ Roman **lyrique et cruel**, écrit **en réponse** au *Volupté* de **Sainte-Beu
 
 La **longue lettre finale** d’Henriette est l’une des **grandes pages** de la littérature française.
 
-> « Vous avez été mon seul plaisir, et vous m’avez tuée. »`,
+## Pour la dissertation et l’oral
+- **Deux amours opposés**, l’ange et la femme sensuelle : un schéma romantique que Balzac rend douloureux.
+- **Le paysage-état d’âme** : la vallée reflète la passion.
+
+> Dans sa lettre posthume, Henriette avoue qu’elle a aimé Félix de toute la force qu’elle refusait de lui montrer.`,
           },
           questions: [
             ['Où se déroule l’essentiel du roman ?', ['En Touraine, à Clochegourde, dans la vallée de l’Indre', 'À Paris', 'En Bretagne', 'En Angleterre'], 0, 'La vallée y est décrite comme un corps.'],
@@ -1332,16 +1868,31 @@ La **longue lettre finale** d’Henriette est l’une des **grandes pages** de l
           titre: 'Le Malade imaginaire, Molière',
           lecon: {
             titre: 'Molière, 1673 — la dernière pièce',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Molière** (1622-1673), déjà gravement malade, écrit cette **comédie-ballet** avec le musicien **Marc-Antoine Charpentier**. Elle est créée en **février 1673** au théâtre du **Palais-Royal**. Toute sa vie, Molière a raillé les médecins : c’est sa dernière charge contre eux.
+
+## L’histoire
 Comédie-ballet en **trois actes**.
 
 | Étape | Ce qui se passe |
+| L’ouverture | Argan, seul, **fait ses comptes d’apothicaire** : lavements, purges, médecines |
 | Le projet | **Argan**, obsédé par sa santé et par ses lavements, veut marier sa fille **Angélique** au médecin ridicule **Thomas Diafoirus** — **pour avoir un médecin dans la famille** |
 | L’obstacle | Elle aime **Cléante** |
+| Le déguisement | Cléante se fait passer pour **maître de musique** et chante son amour devant Argan |
 | Le premier stratagème | **Toinette** se déguise en **médecin de passage** et **contredit Purgon** |
 | Le second | **Argan feint d’être mort** |
 | L’épreuve de vérité | Sa seconde femme **Béline se réjouit** ; **Angélique pleure** |
 | Le dénouement | Il accepte le mariage **à condition que Cléante devienne médecin** — d’où la **cérémonie burlesque** en **faux latin**, où **c’est Argan lui-même qu’on reçoit médecin** |
+
+## Les personnages
+| Personnage | Son rôle |
+| **Argan** | L’**égoïste** qui se croit malade et tyrannise la maison |
+| **Toinette** | La servante **insolente et lucide**, metteuse en scène |
+| **Béralde** | Le frère **raisonnable**, porte-parole de la nature contre la médecine |
+| **Béline** | La seconde épouse, **hypocrite**, qui guette l’héritage |
+| **Les Diafoirus** et **Purgon** | Des médecins **pédants**, sûrs d’eux et dangereux |
+
+Déguisée en médecin, Toinette a une réponse à tout : « **Le poumon, le poumon, vous dis-je.** »
 
 ## À retenir
 Créée en **1673**. Molière, **malade**, **joue Argan** — et **meurt le soir de la quatrième représentation**.
@@ -1352,7 +1903,11 @@ Créée en **1673**. Molière, **malade**, **joue Argan** — et **meurt le soir
 
 > C’est le point central : **jouer un rôle est le moyen d’accéder à la vérité**.
 
-> « Dignus, dignus est intrare in nostro docto corpore. »`,
+## Pour la dissertation et l’oral
+- **La comédie de caractère** : la manie d’Argan menace toute sa famille.
+- **Rire de la mort** : la fausse mort, écrite par un auteur mourant.
+
+> « Dignus, dignus est entrare / In nostro docto corpore. »`,
           },
           questions: [
             ['Que veut Argan pour sa fille ?', ['Un mari médecin, Thomas Diafoirus', 'Un mariage riche', 'Un couvent', 'Un mariage avec Cléante'], 0, 'Il veut un médecin dans la famille pour lui seul.'],
@@ -1367,7 +1922,10 @@ Créée en **1673**. Molière, **malade**, **joue Argan** — et **meurt le soir
           titre: 'Le Mariage de Figaro, Beaumarchais',
           lecon: {
             titre: 'Beaumarchais, 1784 — la folle journée',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Beaumarchais** (1732-1799) écrit la suite du *Barbier de Séville*. **Louis XVI**, qui a lu la pièce, l’interdit ; elle est finalement créée en **avril 1784** à la **Comédie-Française**, avec un triomphe. **Mozart** en tire *Les Noces de Figaro* en **1786**.
+
+## L’histoire
 Comédie en **cinq actes**, créée en **1784** après **trois ans d’interdiction**.
 
 | Étape | Ce qui se passe |
@@ -1377,6 +1935,16 @@ Comédie en **cinq actes**, créée en **1784** après **trois ans d’interdict
 | Le contretemps | Le page **Chérubin**, amoureux de **toutes** les femmes |
 | Le procès burlesque | **Marceline** découvre que Figaro est **son fils** |
 | Le dénouement | Le soir, dans l’obscurité, le comte **courtise sa propre femme** déguisée en Suzanne ; démasqué, **il demande pardon** |
+
+Le procès révèle aussi que le père de Figaro est **Bartholo**, l’ancien tuteur du *Barbier*. Chérubin, caché dans la chambre de la comtesse, doit **sauter par la fenêtre**.
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Figaro** | L’homme **sans naissance**, qui ne doit rien qu’à son esprit |
+| **Suzanne** | La fiancée **fine et loyale**, souvent plus habile que Figaro |
+| **La comtesse** | L’ancienne Rosine, **délaissée**, mélancolique |
+| **Le comte** | Le grand seigneur **jaloux et volage** |
+| **Brid’oison** | Le juge **bègue**, attaché à « la forme » |
 
 ## À retenir
 > Le **valet devient protagoniste** : il a **le titre**, **l’initiative** — et le fameux **monologue de l’acte V**.
@@ -1390,6 +1958,10 @@ Il y reproche au comte de s’être « **donné la peine de naître, et rien de 
 | Le sort fait aux **femmes** | La **tirade de Marceline** |
 
 **Cinq ans avant 1789.** Louis XVI : « il faudrait détruire la Bastille pour que la représentation de cette pièce ne fût pas une inconséquence dangereuse ».
+
+## Pour la dissertation et l’oral
+- **Comédie et critique sociale** : le rire fait passer une charge politique.
+- Figaro défend la liberté de la presse : « **Sans la liberté de blâmer, il n’est point d’éloge flatteur.** »
 
 > « Parce que vous êtes un grand seigneur, vous vous croyez un grand génie ! »`,
           },
@@ -1406,26 +1978,44 @@ Il y reproche au comte de s’être « **donné la peine de naître, et rien de 
           titre: 'Le médecin volant, Molière',
           lecon: {
             titre: 'Molière, vers 1659 — une farce de jeunesse',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Molière** (1622-1673) parcourt la province avec sa troupe de **1645 à 1658**. Il y joue de petites farces à l’italienne, dont peu nous sont parvenues. Le texte du *Médecin volant* n’a été publié qu’au **XIXe siècle**, d’après une copie ancienne.
+
+## La pièce
 **Farce en un acte**, en prose — **parmi les toutes premières** de Molière, jouée par sa troupe **avant l’installation à Paris**.
 
 | Étape | Ce qui se passe |
 | L’obstacle | **Gorgibus** veut marier sa fille **Lucile** à Villebrequin ; elle aime **Valère** |
 | La ruse | Pour gagner du temps, elle **feint d’être malade** |
 | Le déguisement | Le valet **Sganarelle** se fait passer pour **médecin** — avec un **aplomb délirant** et un **jargon savant** inventé |
+| La consultation | Il examine les **urines** de la malade — et va jusqu’à y goûter |
 | La complication | Il doit se faire passer pour **deux personnes à la fois** : le médecin **et lui-même** |
 | Le titre | D’où les **sauts par la fenêtre** et la course d’une pièce à l’autre |
+| La fin | Démasqué, il obtient le **pardon** de Gorgibus : Lucile épousera Valère |
+
+## Les personnages
+| Personnage | Son rôle |
+| **Sganarelle** | Le valet **fourbe et bavard**, meneur de jeu |
+| **Gorgibus** | Le père **crédule**, que tout le monde dupe |
+| **Sabine** | La cousine de Lucile, qui **trouve l’idée** du faux médecin |
+| **Gros-René** | Le valet de Gorgibus, qui **découvre la supercherie** |
+
+Sganarelle invoque Hippocrate et Galien pour affirmer, avec gravité, qu’**une personne ne se porte pas bien quand elle est malade**.
 
 ## À retenir
 > **Tout Molière est déjà là en germe.**
 
 | Élément | Ce qu’il deviendra |
-| Le **valet metteur en scène** | Scapin, Toinette, Dubois |
+| Le **valet metteur en scène** | Mascarille, Scapin, Toinette |
 | Le **père obstiné** | Gorgibus, Orgon, Harpagon |
 | Le **médecin charlatan** | Diafoirus, Purgon |
 | Le comique de **gestes** | Hérité de la *commedia dell’arte* italienne, **longtemps côtoyée** |
 
 On retrouvera ce canevas dans *Le Médecin malgré lui* (**1666**), en **trois actes** et **infiniment plus riche**.
+
+## Pour la dissertation et l’oral
+- **Le comique de mots** : le faux savoir tient à des tautologies prononcées avec assurance.
+- **Le rythme de la farce** : entrées, sorties, fenêtre, tout va vite.
 
 > Le rire de Molière commence par le corps, avant de devenir satire.`,
           },
@@ -1442,7 +2032,10 @@ On retrouvera ce canevas dans *Le Médecin malgré lui* (**1666**), en **trois a
           titre: 'Le Meilleur des mondes, Aldous Huxley',
           lecon: {
             titre: 'Huxley, 1932 — une dictature du bonheur',
-            cours: `## Le monde décrit
+            cours: `## L’auteur et le contexte
+**Aldous Huxley** (1894-1963), écrivain anglais issu d’une famille de **savants**, publie *Brave New World* en **1932**, au temps du **fordisme**, de l’**eugénisme** et de la publicité de masse. Il y revient en **1958** dans un essai, *Retour au meilleur des mondes*.
+
+## Le monde décrit
 En l’an **632 après Ford**, l’humanité est **produite en flacons**.
 
 | Le dispositif | Ce qu’il fait |
@@ -1451,12 +2044,17 @@ En l’an **632 après Ford**, l’humanité est **produite en flacons**.
 | La **vieillesse**, la **religion** | Abolies |
 | Le **soma** | Une drogue **sans effets secondaires** |
 | La **consommation** et la **sexualité libre** | Les autres piliers de la stabilité |
+| L’**hypnopédie** | Des slogans répétés aux enfants **pendant leur sommeil** |
 
+## L’intrigue
 | L’intrigue | Ce qui se passe |
 | **Bernard Marx** et **Lenina** | Ils ramènent d’une **réserve** **John le Sauvage**, élevé hors du système, **nourri de Shakespeare** |
+| Le scandale | John est le fils du **Directeur** de l’Incubation et d’une femme perdue dans la réserve, **Linda** : le Directeur doit démissionner |
 | John | Fasciné puis **horrifié**, il réclame **le droit d’être malheureux** |
 | **Mustapha Menier**, l’administrateur | Il lui explique **posément** que **le bonheur a un prix** |
 | La fin | Devenu **curiosité médiatique**, John **se pend** |
+
+Bernard et son ami **Helmholtz Watson**, écrivain insatisfait, sont **exilés sur une île**.
 
 ## À retenir
 La grande **contre-utopie**, avec *1984* — **mais inverse**.
@@ -1466,7 +2064,12 @@ La grande **contre-utopie**, avec *1984* — **mais inverse**.
 
 > Le roman anticipe la **manipulation génétique**, le **divertissement de masse** et les **psychotropes**. Le titre est une **citation ironique** de *La Tempête* de Shakespeare.
 
-> « Vous réclamez le droit d’être malheureux ? — Je le réclame. »`,
+## Pour la dissertation et l’oral
+- **L’utopie retournée** : un monde parfait sur le papier, où la liberté a disparu sans que personne la regrette.
+- **Le rôle de la littérature** : Shakespeare, interdit, donne à John les mots pour refuser.
+- Dans *La Tempête*, Miranda s’écrie : « **Ô meilleur des mondes, qui compte de tels habitants !** »
+
+> Face à Mustapha Menier, John finit par revendiquer le droit d’être malheureux.`,
           },
           questions: [
             ['Comment naissent les humains dans ce monde ?', ['Produits en flacons et conditionnés en cinq castes', 'Par familles traditionnelles', 'Par clonage volontaire d’adultes', 'Ils sont importés des réserves'], 0, 'Des Alphas aux Epsilons, chacun est programmé pour aimer sa condition.'],
@@ -1481,12 +2084,16 @@ La grande **contre-utopie**, avec *1984* — **mais inverse**.
           titre: 'Le Menteur, Pierre Corneille',
           lecon: {
             titre: 'Corneille, 1644 — mentir avec génie',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Pierre Corneille** (1606-1684), déjà auteur du *Cid*, d’*Horace* et de *Cinna*, revient à la **comédie** avec *Le Menteur*, joué en **1644** au **théâtre du Marais**. Il lui donnera une suite, *La Suite du Menteur*. Selon une anecdote rapportée plus tard, Molière aurait dit lui devoir sa vocation de grand auteur comique.
+
+## L’histoire
 Comédie en **cinq actes et en vers**, adaptée de *La Verdad sospechosa* de l’Espagnol **Alarcón**.
 
 | Étape | Ce que Dorante invente |
 | L’arrivée | Venu de Poitiers, **décidé à se faire remarquer** |
 | Aux Tuileries | Un **passé de guerrier** revenu d’Allemagne, devant **Clarice** et **Lucrèce** |
+| Devant **Alcippe** | Une **fête somptueuse sur l’eau** offerte la veille à une dame — ce qui rend jaloux Alcippe, fiancé de Clarice |
 | Face au mariage arrangé par **Géronte** | Un **mariage secret complet** à Poitiers |
 
 > Son valet **Cliton** **n’en revient pas** — il sert de relais au spectateur.
@@ -1495,6 +2102,13 @@ Comédie en **cinq actes et en vers**, adaptée de *La Verdad sospechosa* de l�
 | Il croit que celle qu’il aime s’appelle **Lucrèce** — **alors que c’est Clarice** | Un **duel** avec **Alcippe**, et un tourbillon de méprises |
 
 Démasqué par son père, il **retombe sur ses pieds** : il **épouse la vraie Lucrèce**.
+
+## Les personnages
+| Personnage | Son rôle |
+| **Dorante** | Le **menteur virtuose**, qui invente pour briller |
+| **Géronte** | Le père **crédule**, puis **humilié**, qui lui reproche de trahir l’honneur |
+| **Cliton** | Le valet **admiratif et effaré** |
+| **Clarice** et **Lucrèce** | Les deux amies, que Dorante **confond** |
 
 ## À retenir
 > Le mensonge y est un **art** : **Dorante improvise, ne se répète jamais** — et **le spectateur admire autant qu’il rit**.
@@ -1506,7 +2120,11 @@ Démasqué par son père, il **retombe sur ses pieds** : il **épouse la vraie L
 
 > Le dénouement laisse le menteur **ni puni ni corrigé** : cela a longtemps **gêné les commentateurs** — et **rend la pièce très moderne**.
 
-> « Il ment comme il respire, et il respire en vers. »`,
+## Pour la dissertation et l’oral
+- **Le mensonge comme création** : Dorante est un poète, ses récits sont de petits romans.
+- Cliton en tire la leçon : « **Il faut bonne mémoire, après qu’on a menti.** »
+
+> Dorante ment comme on improvise un poème : pour le plaisir de l’invention.`,
           },
           questions: [
             ['D’où vient Dorante au début de la pièce ?', ['De Poitiers', 'De Lyon', 'De Bordeaux', 'De Madrid'], 0, 'Il abandonne le droit pour se faire homme du monde à Paris.'],
@@ -1521,19 +2139,27 @@ Démasqué par son père, il **retombe sur ses pieds** : il **épouse la vraie L
           titre: 'Le Misanthrope, Molière',
           lecon: {
             titre: 'Molière, 1666 — dire la vérité, et se rendre impossible',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Molière** (1622-1673) crée *Le Misanthrope* en **1666** au théâtre du **Palais-Royal**, au sortir de la bataille du *Tartuffe*, alors interdit. Sous-titre : « **l’Atrabilaire amoureux** » — l’homme à l’humeur noire qui aime une coquette. C’est la **grande comédie** en vers selon les règles classiques.
+
+## L’histoire
 Comédie en **cinq actes et en vers**.
 
 | Personnage | Sa position |
 | **Alceste** | Il **refuse les compromis** de la vie mondaine : flatteries, sourires, **mensonges polis** |
 | **Philinte**, son ami | Partisan de la **mesure** |
-| **Oronte** | Alceste **critique son sonnet** — ce qui lui vaut un **procès** |
+| **Oronte** | Alceste **critique son sonnet** — ce qui le fait convoquer devant le **tribunal des maréchaux** ; à côté, il **perd un procès** contre un adversaire malhonnête, par refus de solliciter ses juges |
 | **Célimène** | Jeune **veuve brillante**, coquette : elle tient salon et **croque tous les absents** en portraits féroces |
+| **Éliante** | La cousine de Célimène, **sincère**, qui finira par épouser Philinte |
+| **Arsinoé** | La **prude** jalouse, qui fait la morale et convoite Alceste |
+| **Acaste** et **Clitandre** | Deux **marquis** vaniteux, soupirants de Célimène |
 
 | Le dénouement | Ce qui se passe |
 | Ses **lettres à plusieurs prétendants** sont rendues publiques | Elle est **démasquée** |
 | Alceste lui propose de le suivre **au désert** | Elle **refuse** : **elle a vingt ans** |
 | La fin | **Alceste part seul** |
+
+Dans la scène du sonnet, Alceste oppose aux vers précieux d’Oronte une **vieille chanson populaire** qu’il juge plus vraie.
 
 ## À retenir
 Comédie **grave**, presque **sans rire franc** : on peut la lire comme une **tragédie de l’intransigeance**.
@@ -1544,12 +2170,17 @@ Comédie **grave**, presque **sans rire franc** : on peut la lire comme une **tr
 
 > **Molière ne tranche pas.** C’est ce qui a fait de cette pièce, **longtemps moins jouée**, **l’une des plus commentées**.
 
+## Pour la dissertation et l’oral
+- **Sincérité et politesse** : peut-on vivre en société sans un peu de masque ?
+- **Le débat continue** : Rousseau, en 1758, reprochera à Molière d’avoir rendu la vertu ridicule.
+- Philinte résume sa sagesse : « **La parfaite raison fuit toute extrémité.** »
+
 > « Je veux qu’on soit sincère, et qu’en homme d’honneur, on ne lâche aucun mot qui ne parte du cœur. »`,
           },
           questions: [
             ['Que refuse Alceste ?', ['Les flatteries et les compromis de la vie mondaine', 'Le mariage', 'La justice royale', 'La poésie'], 0, 'Il exige la sincérité absolue en toute circonstance.'],
             ['Qui incarne la mesure face à Alceste ?', ['Philinte', 'Oronte', 'Acaste', 'Du Bois'], 0, 'Sa sagesse ressemble parfois à de la complaisance.'],
-            ['Pourquoi Alceste se retrouve-t-il en procès ?', ['Il a critiqué durement le sonnet d’Oronte', 'Il a insulté le roi', 'Il a refusé de payer une dette', 'Il a frappé un rival'], 0, 'La sincérité a un coût social immédiat.'],
+            ['Qu’est-ce qui vaut à Alceste d’être convoqué devant le tribunal des maréchaux ?', ['Sa critique sévère du sonnet d’Oronte', 'Une insulte au roi', 'Une dette impayée', 'Un coup porté à un rival'], 0, 'La sincérité a un coût social immédiat : l’affaire du sonnet devient une querelle d’honneur.', 'Pourquoi Alceste se retrouve-t-il en procès ?'],
             ['Qui est Célimène ?', ['Une jeune veuve brillante et coquette qui tient salon', 'La sœur d’Alceste', 'Une prude retirée', 'Une servante'], 0, 'Elle croque tous les absents en portraits féroces.'],
             ['Que propose Alceste à Célimène à la fin ?', ['Le suivre au désert, loin du monde', 'L’épouser à la cour', 'Renoncer à son procès', 'Fuir à l’étranger avec Philinte'], 0, 'Elle refuse : elle a vingt ans. Alceste part seul.'],
             ['Molière donne clairement raison à Alceste.', ['Vrai', 'Faux'], 1, 'Il a raison sur le fond et tort dans la vie : la pièce ne tranche pas.'],
@@ -1559,7 +2190,10 @@ Comédie **grave**, presque **sans rire franc** : on peut la lire comme une **tr
           titre: 'Le Neveu de Rameau, Denis Diderot',
           lecon: {
             titre: 'Diderot, 1805 — un dialogue explosif publié après tout le monde',
-            cours: `## L’œuvre
+            cours: `## L’auteur et le contexte
+**Denis Diderot** (1713-1784), maître d’œuvre de l’*Encyclopédie*, est l’esprit le plus libre des Lumières. Il sous-titre ce texte « **Satire seconde** » et le garde **secret** : il y met en scène, sous leurs vrais noms, les ennemis des philosophes.
+
+## L’œuvre
 Un **dialogue**, rencontré au **café de la Régence**.
 
 | Interlocuteur | Qui il est |
@@ -1574,6 +2208,8 @@ Un **dialogue**, rencontré au **café de la Régence**.
 
 > Le philosophe le **contredit**, s’indigne — **mais rit et l’écoute jusqu’au bout**.
 
+Le neveu vient d’être **chassé** de la maison d’un riche protecteur, le financier **Bertin** — pour avoir, une fois, **dit une vérité** à table. Au sommet du dialogue, il mime à lui seul **un opéra entier** : chanteurs, orchestre, danseurs.
+
 ## À retenir
 Écrit et remanié entre **1761 et 1774**, **jamais publié du vivant** de Diderot.
 
@@ -1585,6 +2221,11 @@ Un **dialogue**, rencontré au **café de la Régence**.
 | Une réflexion sur la **musique** | La querelle des Bouffons |
 
 > **Hegel** puis **Freud** y ont vu un texte majeur sur la **conscience divisée**.
+
+## Pour la dissertation et l’oral
+- **Le dialogue des Lumières** : deux voix, aucune ne l’emporte — le lecteur juge.
+- **La vérité dans la bouche du fou** : le bouffon dit ce que la morale officielle tait.
+- La première page : « **Mes pensées, ce sont mes catins** » — le philosophe laisse vagabonder son esprit.
 
 > « Il n’y a dans tout un royaume qu’un homme qui marche, c’est le souverain : tout le reste prend des positions. »`,
           },
@@ -1601,10 +2242,15 @@ Un **dialogue**, rencontré au **café de la Régence**.
           titre: 'Le Parti pris des choses, Francis Ponge',
           lecon: {
             titre: 'Ponge, 1942 — trente-deux objets, trente-deux poèmes',
-            cours: `## Le recueil
+            cours: `## L’auteur et le contexte
+**Francis Ponge** (1899-1988) a longtemps été **employé** (chez Hachette, dans les messageries) et écrivait le soir. Il publie *Le Parti pris des choses* chez **Gallimard** en **1942**, grâce au soutien de **Jean Paulhan**. **Sartre** lui consacre en 1944 un long essai, qui le fait connaître.
+
+## Le recueil
 **Trente-deux textes brefs** en **prose**, publiés en **1942**.
 
 « La Pluie », « Le Cageot », « La Bougie », « La Cigarette », « L’Orange », « L’Huître », « Le Pain », « Le Cycle des saisons », « **Le Galet** » — ce dernier, **plus long**, servant de **manifeste**.
+
+On y trouve aussi « Escargots », « Les Mûres », « Le Gymnaste » : des choses, des bêtes, des gens vus **comme des choses**.
 
 ## Le programme
 Prendre le **parti des choses** **contre les habitudes du langage**.
@@ -1622,10 +2268,17 @@ Ponge a parlé de « **définition-description-objet littéraire** ».
 
 > « L’huître, de la **grosseur d’un galet moyen**, est d’une apparence plus rugueuse, d’une couleur moins unie, brillamment blanchâtre. »
 
+## Un exemple : « Le Cageot »
+Ponge part du **mot** lui-même, placé par la langue entre **cage** et **cachot** ; puis il décrit l’objet — léger, fragile, jeté après usage — et finit par une **tendresse** pour cette chose méprisée. Le poème tient en **un paragraphe**.
+
 ## À retenir
 Le recueil **fonde une poétique** qui a marqué tout le XXe siècle : le **poème-objet**, l’attention au **minuscule**, la **méfiance envers l’effusion**.
 
 > Ponge n’est pas anti-lyrique **par sécheresse** mais **par exigence** : il veut **rendre justice à ce qui n’a pas de voix**.
+
+## Pour la dissertation et l’oral
+- **Le poème en prose** : la poésie tient au regard et au travail du mot, pas au vers.
+- **L’humour** : l’objet banal traité avec le sérieux d’un savant.
 
 > « Le parti pris des choses égale compte tenu des mots. »`,
           },
@@ -1642,13 +2295,22 @@ Le recueil **fonde une poétique** qui a marqué tout le XXe siècle : le **poè
           titre: 'Le paysan parvenu, Marivaux',
           lecon: {
             titre: 'Marivaux, 1734-1735 — monter par les femmes',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Marivaux** (1688-1763), auteur de comédies, est aussi un grand **romancier**. *Le Paysan parvenu* paraît en **cinq parties** en **1734-1735**, en même temps que *La Vie de Marianne*. Le récit s’ouvre sur l’aveu du narrateur : « **Le titre que je donne à mes Mémoires annonce ma naissance** » — il ne l’a jamais cachée.
+
+## L’histoire
 **Roman-mémoires inachevé.** **Jacob**, fils de fermier venu vendre du vin à Paris, est **beau, vif et sans scrupules excessifs**.
 
 | Femme | Ce qu’elle lui apporte |
 | **Geneviève**, servante entretenue par son maître | Elle lui **propose un arrangement** |
 | **Mademoiselle Habert**, dévote plus âgée | Il l’**épouse** — elle a de l’argent |
 | **Madame de Ferval** et **Madame de Fécour** | Elles le **protègent**, séduites par sa jeunesse |
+
+| Étape | Ce qui se passe |
+| Le refus | Il **refuse** d’épouser Geneviève, dont il devine la situation : il a son **honneur** |
+| La rencontre | Sur le **Pont-Neuf**, il secourt Mlle Habert, prise d’un malaise |
+| L’obstacle | La **sœur aînée** et le directeur de conscience s’opposent au mariage |
+| Le courage | Il sauve un jeune seigneur **attaqué dans la rue** et gagne sa protection |
 
 > Chaque étape le **rapproche du monde qu’il visait** — jusqu’à une **charge** et un **nom de noblesse** : « **Monsieur de La Vallée** ». Puis **le récit s’interrompt**.
 
@@ -1662,7 +2324,12 @@ Le **pendant masculin** de *La Vie de Marianne*, du même Marivaux.
 
 > Le livre **annonce Bel-Ami et Julien Sorel** — **mais sans tragédie** : la **comédie sociale y reste souriante**.
 
-> « Il n’y a rien de tel que d’être aimable pour aller vite. »`,
+## Pour la dissertation et l’oral
+- **Le double regard** : le jeune Jacob agit, le vieux narrateur analyse ses calculs et sa vanité.
+- **La satire des dévots** : piété et intérêt se mêlent chez les sœurs Habert.
+- **Le corps et l’ascension** : la beauté est un capital, comme l’argent.
+
+> Chez Jacob, l’art de plaire tient lieu de naissance.`,
           },
           questions: [
             ['Qui est Jacob ?', ['Un fils de fermier monté à Paris, beau et débrouillard', 'Un noble ruiné', 'Un marchand vénitien', 'Un valet de comédie'], 0, 'Il vend d’abord du vin pour son maître.'],
@@ -1677,17 +2344,24 @@ Le **pendant masculin** de *La Vie de Marianne*, du même Marivaux.
           titre: 'Le Père Goriot, Honoré de Balzac',
           lecon: {
             titre: 'Balzac, 1835 — la pension Vauquer et la conquête de Paris',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Honoré de Balzac** (1799-1850) publie *Le Père Goriot* en **1835**. Il y fait revenir des personnages déjà créés et décide d’en faire le principe de toute son œuvre : c’est la naissance de *La Comédie humaine*. L’action se passe en **1819**, sous la **Restauration**.
+
+## L’histoire
 Dans la misérable **pension Vauquer**, à Paris.
 
 | Personnage | Ce qu’il est |
 | **Eugène de Rastignac** | Étudiant en droit **pauvre et ambitieux** |
 | Le **père Goriot** | Ancien **vermicellier**, **ruiné par ses deux filles** — **Anastasie de Restaud** et **Delphine de Nucingen** — qu’il aime **jusqu’à l’aveuglement** et qui **ne viennent que pour de l’argent** |
 | **Vautrin** | **Forçat évadé** sous un faux nom |
+| **Madame de Beauséant** | Cousine de Rastignac, grande dame qui lui **ouvre le monde** — puis s’en retire, abandonnée |
+| **Victorine Taillefer** | Jeune fille pauvre, **déshéritée** par un père millionnaire |
 
 | Le pacte de Vautrin | Ce qu’il propose |
 | À Rastignac | **Épouser une héritière** — **dont il fera tuer le frère** |
 | Son issue | Vautrin est **démasqué et arrêté** |
+
+L’héritière, c’est Victorine : son frère est **tué en duel**, comme prévu, et Rastignac **refuse** d’en profiter. Vautrin, vrai nom **Jacques Collin**, surnommé « **Trompe-la-Mort** », est **vendu à la police** par deux pensionnaires.
 
 | La fin | Ce qui se passe |
 | **Goriot meurt** seul, ruiné | **Aucune de ses filles ne vient** |
@@ -1702,6 +2376,11 @@ Roman **clé** de *La Comédie humaine* : **c’est ici que Balzac invente le re
 | **Rastignac** | L’**ambition qui s’initie** |
 
 Peinture de l’**argent comme unique loi** et du **Paris de 1819 comme champ de bataille**.
+
+## Pour la dissertation et l’oral
+- **Le roman d’apprentissage** : trois maîtres pour Rastignac — Mme de Beauséant, Vautrin, Goriot.
+- **La description balzacienne** : la pension Vauquer, décrite en détail, explique ceux qui y vivent.
+- Vautrin : on fait son chemin « **par l’éclat du génie ou par l’adresse de la corruption** ».
 
 > « À nous deux maintenant ! »`,
           },
@@ -1718,15 +2397,26 @@ Peinture de l’**argent comme unique loi** et du **Paris de 1819 comme champ de
           titre: 'Le Petit Malade, Georges Courteline',
           lecon: {
             titre: 'Courteline — la saynète en quelques répliques',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Georges Courteline** (1858-1929), ancien employé de ministère, fait rire la France de la **Belle Époque** avec ses récits et ses saynètes. *Le Petit Malade* paraît en **1905** dans le recueil *Coco, Coco et Toto*, consacré aux enfants et à leurs parents.
+
+## La pièce
 Une **saynète minuscule**, de quelques pages, **tout entière dans un quiproquo médical**.
 
 | Étape | Ce qui se passe |
 | L’urgence | Une mère **affolée** fait venir un **médecin** pour son petit garçon |
-| La description | Des symptômes **terrifiants** — le praticien **s’inquiète** |
-| La révélation | L’enfant est simplement **tombé de la fenêtre** |
-| La chute | **Chute dont il a l’habitude** et **dont il se relève sans mal** |
-| La fin | Le médecin, **furieux d’avoir couru pour rien**, repart |
+| La description | L’enfant, **Toto**, quatre ans et demi, **tombe tout le temps** depuis ce matin — dès qu’on le met debout, « **Pouf !** » |
+| La démonstration | Devant le médecin, on le pose par terre : il tombe, trois fois de suite |
+| L’examen | L’enfant n’a mal nulle part, a bien dormi, a faim : il respire la santé |
+| Le diagnostic | Le médecin, **compétent**, conclut : « **C’est de la paralysie** » — des membres inférieurs |
+| La révélation | En voulant vérifier l’insensibilité des jambes, il découvre que la mère a mis **les deux jambes dans la même jambe du pantalon** |
+| La fin | Le médecin **éclate** : la maladie n’était qu’une **maladresse** |
+
+## Les personnages
+| Personnage | Son ressort comique |
+| **La mère** | Inquiète, **bavarde**, aveugle à l’évidence |
+| **Le médecin** | Il **pose un diagnostic grave** sur des indices qui disent le contraire |
+| **Toto** | Il répond « **Oui, monsieur** », « **Non, monsieur** » : il est le seul à ne pas s’inquiéter |
 
 ## À retenir
 **Courteline** (1858-1929) est le maître de la **forme brève comique**.
@@ -1739,6 +2429,11 @@ Une **saynète minuscule**, de quelques pages, **tout entière dans un quiproquo
 | Employés, militaires, ménages, juges | La **bêtise administrative**, l’**absurdité des règlements**, l’**aveuglement conjugal** |
 
 > Sa **langue parlée**, ses dialogues d’une **efficacité redoutable** et son sens du **décalage** **annoncent le théâtre de l’absurde**.
+
+## Pour la dissertation et l’oral
+- **Le comique de répétition** : les chutes se suivent, identiques.
+- **La satire du savoir médical**, dans la lignée de Molière : le jargon remplace l’observation.
+- **La chute** au sens propre et au sens théâtral : la dernière réplique retourne tout.
 
 > Le comique de Courteline naît toujours d’un écart entre le sérieux du ton et la petitesse de la chose.`,
           },
@@ -1755,7 +2450,10 @@ Une **saynète minuscule**, de quelques pages, **tout entière dans un quiproquo
           titre: 'Le Procès, Franz Kafka',
           lecon: {
             titre: 'Kafka, 1925 — accusé sans savoir de quoi',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Franz Kafka** (1883-1924), écrivain de **Prague** de langue allemande, docteur en droit, employé d’assurances, écrit *Le Procès* en **1914-1915** sans le terminer. Seul le chapitre de la parabole « Devant la Loi » paraît de son vivant.
+
+## L’histoire
 « On avait sûrement calomnié **Joseph K.**, car **sans avoir rien fait de mal**, il fut **arrêté un matin**. »
 
 | Le paradoxe | Le détail |
@@ -1770,12 +2468,25 @@ Une **saynète minuscule**, de quelques pages, **tout entière dans un quiproquo
 
 > Un an après son arrestation, deux hommes emmènent K. dans une carrière et le tuent « **comme un chien** ».
 
+## Les personnages
+| Personnage | Son rôle |
+| **Joseph K.** | **Fondé de pouvoir** dans une banque, sûr de lui, puis **usé** par le procès |
+| **L’oncle** | Il le mène chez l’avocat **Huld** |
+| **Leni** | La garde-malade de l’avocat, qui **séduit** les accusés |
+| **Titorelli** | Le **peintre** des juges, qui connaît les ficelles du tribunal |
+| **Block** | Un commerçant accusé depuis des années, **humilié** devant son avocat |
+
 ## À retenir
 Roman **inachevé**, publié en **1925** par **Max Brod** — **contre la volonté de Kafka**, qui avait demandé qu’on **brûle ses manuscrits**.
 
 > Le mot « **kafkaïen** » vient de là : une **bureaucratie absurde, invisible**, dont la logique échappe — et **à laquelle on finit par consentir**.
 
 Lectures possibles : la **culpabilité**, le **judaïsme**, l’**Empire austro-hongrois**, le **totalitarisme à venir**.
+
+## Pour la dissertation et l’oral
+- **L’absurde avant la lettre** : l’homme cherche un sens que le monde ne donne pas.
+- **La mise en abyme** : la parabole résume tout le roman en une page.
+- Le gardien, à l’homme mourant : « **Cette entrée n’était faite que pour toi. Maintenant je m’en vais et je ferme la porte.** »
 
 > « Comme un chien ! dit-il, c’était comme si la honte dût lui survivre. »`,
           },
@@ -1792,15 +2503,26 @@ Lectures possibles : la **culpabilité**, le **judaïsme**, l’**Empire austro-
           titre: 'Le Roi des Aulnes, Michel Tournier',
           lecon: {
             titre: 'Tournier, 1970 — le mythe de l’ogre',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Michel Tournier** (1924-2016), germaniste de formation et lecteur des philosophes, **réécrit les mythes** : *Vendredi ou les Limbes du Pacifique* (1967) reprenait Robinson. *Le Roi des Aulnes* (**1970**) plonge dans l’Allemagne nazie à travers un Français.
+
+## L’histoire
 **Abel Tiffauges**, garagiste parisien, **géant maladroit et solitaire**, tient un journal — les « **Écrits sinistres** » — où il se persuade que **le monde lui envoie des signes**.
 
 | Étape | Ce qui se passe |
+| L’enfance | Au collège **Saint-Christophe**, il vénère son ami **Nestor**, enfant étrange qui meurt dans un incendie |
 | L’échappée | Accusé **à tort** d’un crime, il **échappe au procès** grâce à la **déclaration de guerre** |
+| La drôle de guerre | Soldat dans une unité de **pigeons voyageurs** |
 | La captivité | Prisonnier en **Prusse-Orientale** |
 | Rominten | **Garde-chasse** chez **Göring** |
 | **Kaltenborn** | Il devient **rabatteur d’enfants** pour la **napola**, école d’élite nazie : il parcourt les campagnes pour « **recruter** » des garçons — **et se sent enfin à sa place** |
 | La fin | Dans l’effondrement du Reich, il **porte sur ses épaules Éphraïm**, enfant juif rescapé d’**Auschwitz**, et **s’enfonce dans le marais** |
+
+## Les figures du « porteur »
+| Figure | Ce qu’elle représente |
+| **Saint Christophe** | Le géant qui **porte l’enfant** pour le sauver |
+| **L’ogre** | Celui qui **enlève** l’enfant pour le dévorer |
+| **Le Roi des Aulnes** | Celui qui **arrache** l’enfant à son père |
 
 ## À retenir
 **Prix Goncourt 1970**, **à l’unanimité**.
@@ -1813,7 +2535,12 @@ Lectures possibles : la **culpabilité**, le **judaïsme**, l’**Empire austro-
 
 Livre **difficile**, souvent **discuté** pour son **ambiguïté même**.
 
-> « Tiffauges portait Éphraïm comme on porte un enfant… et comme on porte une croix. »`,
+## Pour la dissertation et l’oral
+- **Réécrire un mythe** pour lire l’Histoire : la légende éclaire la barbarie.
+- **Le narrateur fasciné** : le journal de Tiffauges oblige à lire de l’intérieur une conscience trouble.
+- **L’inversion finale** : l’ogre devient porteur, dans un geste qui le sauve peut-être.
+
+> La dernière image : le géant qui s’enfonce dans le marais, portant l’enfant sur ses épaules — saint Christophe plutôt qu’ogre.`,
           },
           questions: [
             ['Qui est Abel Tiffauges ?', ['Un garagiste solitaire persuadé que le monde lui envoie des signes', 'Un officier allemand', 'Un instituteur breton', 'Un médecin militaire'], 0, 'Il tient un journal intitulé « Écrits sinistres ».'],
@@ -1828,7 +2555,10 @@ Livre **difficile**, souvent **discuté** pour son **ambiguïté même**.
           titre: 'Le Roi se meurt, Eugène Ionesco',
           lecon: {
             titre: 'Ionesco, 1962 — apprendre à mourir en une heure trente',
-            cours: `## La pièce
+            cours: `## L’auteur et le contexte
+**Eugène Ionesco** (1909-1994) crée la pièce en **décembre 1962** à Paris. Le roi s’appelle **Bérenger**, comme le héros de *Rhinocéros* (1959) : Ionesco en fait un **homme ordinaire**, ici couronné. La pièce se joue **d’un seul tenant**, sans entracte.
+
+## La pièce
 **Bérenger Ier**, roi d’un royaume **qui se fissure et rétrécit**, apprend **au début de la pièce** qu’il va mourir **à la fin du spectacle**.
 
 | Personnage | Son rôle |
@@ -1845,6 +2575,13 @@ Livre **difficile**, souvent **discuté** pour son **ambiguïté même**.
 | Le royaume **se réduit à mesure** | Marguerite le **guide pas à pas** |
 | Tout disparaît | **Le roi s’efface sur son trône** |
 
+## Le royaume comme miroir
+| Signe | Ce qu’il dit du roi |
+| Le **palais se lézarde** | Le corps se défait |
+| Le **garde** annonce tout sur un ton officiel | Le rituel royal devient dérisoire |
+| Les **pouvoirs** du roi cessent d’obéir | Il n’est plus qu’un **homme** |
+| Juliette raconte sa vie **pénible** | Le roi découvre la vie des autres trop tard |
+
 ## À retenir
 La pièce **la plus grave** d’Ionesco, écrite **après une maladie**.
 
@@ -1854,6 +2591,11 @@ La pièce **la plus grave** d’Ionesco, écrite **après une maladie**.
 | Une **horloge** | **La durée de la pièce est celle de l’agonie** |
 
 Le rire y **persiste** — **grinçant**.
+
+## Pour la dissertation et l’oral
+- **Tragédie et farce** : un roi, une cour, une mort annoncée — et des gags.
+- **Le temps réel** : le spectateur vit l’agonie à la même vitesse que le roi.
+- **Les deux reines** : l’acceptation contre le déni.
 
 > « Tu vas mourir dans une heure et demie, tu vas mourir à la fin du spectacle. »`,
           },
@@ -1870,7 +2612,10 @@ Le rire y **persiste** — **grinçant**.
           titre: 'Le Roman de la momie, Théophile Gautier',
           lecon: {
             titre: 'Gautier, 1858 — l’Égypte ressuscitée par l’érudition',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Théophile Gautier** (1811-1872), poète d’*Émaux et Camées*, défend depuis la préface de *Mademoiselle de Maupin* (1835) l’**art pour l’art**. Le roman paraît en **feuilleton** en 1857, puis en volume en **1858** ; il est dédié à **Ernest Feydeau**, archéologue amateur qui l’a documenté. L’époque vit les fouilles de **Mariette** en Égypte.
+
+## L’histoire
 | Cadre | Ce qui s’y passe |
 | Le **prologue moderne** | Un jeune **lord anglais** et le savant allemand **Rumphius** découvrent dans la **Vallée des Rois** une tombe intacte : la **momie d’une jeune femme** et un **papyrus** |
 | Le roman | Il **est** la traduction de ce papyrus |
@@ -1880,9 +2625,16 @@ Le rire y **persiste** — **grinçant**.
 | **Poëri** | **Ra’hel**, une femme de son peuple |
 | Le **pharaon** | **Tahoser** — qu’il **élève au rang de reine** |
 
+| Étape | Ce qui se passe |
+| La fuite | Tahoser, **déguisée en pauvre fille**, va vivre chez Poëri pour être près de lui |
+| L’enlèvement | Le pharaon la **fait ramener** au palais |
+| **Moïse** | Il affronte le pharaon et réclame la liberté des Hébreux |
+
 | La fin | Ce qui se passe |
 | Les **plaies d’Égypte**, la **fuite des Hébreux** | La poursuite, la **mer Rouge**, l’**engloutissement de l’armée** |
 | **Tahoser meurt** | Elle reçoit le **tombeau préparé pour le pharaon** |
+
+Au retour, le lord anglais **ne se mariera jamais** : il reste amoureux de la momie.
 
 ## À retenir
 Roman **archéologique** : Gautier s’est appuyé sur les travaux des **égyptologues de son temps**.
@@ -1891,6 +2643,11 @@ Roman **archéologique** : Gautier s’est appuyé sur les travaux des **égypto
 
 | Le « culte de la forme » | Ce qu’il implique |
 | Gautier, tenant de l’**art pour l’art** | La **beauté visuelle prime sur la psychologie** |
+
+## Pour la dissertation et l’oral
+- **Le roman à cadre** : le récit moderne authentifie le récit antique.
+- **L’exotisme** romantique, nourri de science.
+- La doctrine de Gautier : « **Il n’y a de vraiment beau que ce qui ne peut servir à rien.** »
 
 > Le roman a nourri toute l’égyptomanie du XIXe siècle finissant.`,
           },
@@ -1907,7 +2664,10 @@ Roman **archéologique** : Gautier s’est appuyé sur les travaux des **égypto
           titre: 'Le Roman inachevé, Louis Aragon',
           lecon: {
             titre: 'Aragon, 1956 — une autobiographie en vers',
-            cours: `## Le recueil
+            cours: `## L’auteur et le contexte
+**Louis Aragon** (1897-1982), fondateur du **surréalisme** avec Breton, devenu **communiste** en 1927, poète de la **Résistance**, publie ce recueil en **1956**. C’est l’année du **rapport Khrouchtchev** sur les crimes de Staline et de l’**écrasement de Budapest** : le poète fait le compte de sa vie.
+
+## Le recueil
 Publié en **1956**, présenté par Aragon comme une **autobiographie en vers**.
 
 | Épisode | Ce qu’il porte |
@@ -1926,9 +2686,16 @@ Publié en **1956**, présenté par Aragon comme une **autobiographie en vers**.
 | Le **retour de la rime** | **Que les modernes avaient abandonnée** |
 | Refrains, jeux d’**enjambements** | La musique |
 
-> Aragon l’a théorisé dans *Les Yeux d’Elsa* : la rime est **ce qui reste quand la mémoire flanche** — l’instrument d’une poésie **populaire et chantable**.
+> Aragon l’a défendu dès la guerre (« La Rime en 1940 », dans *Le Crève-cœur*) : la rime, appui de la **mémoire**, est l’instrument d’une poésie **populaire et chantable**.
 
-Beaucoup de ces poèmes ont été **mis en musique** : **Ferré**, **Ferrat**, **Brassens**.
+Beaucoup de ces poèmes ont été **mis en musique** : **Ferré**, **Ferrat**.
+
+| Poème | Chanté par |
+| « Strophes pour se souvenir » | **Léo Ferré** (« L’Affiche rouge ») |
+| « Est-ce ainsi que les hommes vivent » | **Léo Ferré** |
+| « Que serais-je sans toi » | **Jean Ferrat** |
+
+**Brassens**, lui, a chanté un poème d’un autre recueil, « Il n’y a pas d’amour heureux » (*La Diane française*).
 
 ## À retenir
 L’un des grands recueils de l’après-guerre.
@@ -1939,6 +2706,10 @@ L’un des grands recueils de l’après-guerre.
 | Une réflexion sur le **temps** | Le fil du recueil |
 
 « **Strophes pour se souvenir** », sur le groupe **Manouchian**, y côtoie des poèmes d’amour.
+
+## Pour la dissertation et l’oral
+- **Le lyrisme autobiographique** : le « je » se raconte en vers, entre aveu et mise en scène.
+- **Poésie et chanson** : la rime rend les vers mémorables.
 
 > « Que serais-je sans toi qui vins à ma rencontre… »`,
           },
@@ -1955,7 +2726,10 @@ L’un des grands recueils de l’après-guerre.
           titre: 'Le Rouge et le Noir, Stendhal',
           lecon: {
             titre: 'Stendhal, 1830 — chronique de 1830',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Stendhal** (Henri Beyle, 1783-1842), ancien officier de Napoléon, publie le roman en **novembre 1830**, quelques mois après la **révolution de Juillet**. Il s’inspire d’un fait divers : l’**affaire Berthet**, un ancien séminariste qui tira sur son ancienne maîtresse dans une église de l’Isère et fut guillotiné en 1828.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | L’origine | **Julien Sorel**, fils d’un charpentier de **Verrières**, **nourri du souvenir de Napoléon** |
 | Verrières | Précepteur chez **M. de Rênal**, il séduit sa femme — **autant par orgueil de classe que par amour** |
@@ -1965,6 +2739,16 @@ L’un des grands recueils de l’après-guerre.
 | L’acte | Julien retourne à Verrières et **tire sur elle pendant la messe** |
 | Le procès | Elle **survit** ; lui **refuse de se défendre** et **accuse la société** de condamner en lui **un paysan qui a voulu s’élever** |
 | La fin | **Guillotiné**, enterré par **Mathilde** ; **Madame de Rênal meurt trois jours après** |
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Julien** | L’**énergie** et l’hypocrisie calculée d’un jeune homme pauvre |
+| **Madame de Rênal** | L’amour **tendre et sincère**, sans calcul |
+| **Mathilde de La Mole** | L’amour **de tête**, héroïque et romanesque |
+| **L’abbé Pirard** | Le directeur du séminaire, **janséniste** intègre, qui le protège |
+| **Valenod** | Le notable **parvenu et vulgaire** |
+
+Mathilde vénère un ancêtre, **Boniface de La Mole**, décapité en 1574 et aimé de la reine Marguerite : elle emporte, comme elle, la tête de son amant.
 
 ## À retenir
 Sous-titre : « **Chronique de 1830** ».
@@ -1978,9 +2762,12 @@ Sous-titre : « **Chronique de 1830** ».
 | Le **discours indirect libre** | La pensée entre dans le récit |
 | La **focalisation serrée** | On suit les **calculs** du héros |
 
-> Sa définition célèbre : « **Un roman est un miroir que l’on promène le long d’un chemin.** »
+> Sa définition célèbre, en épigraphe d’un chapitre : « **Un roman : c’est un miroir qu’on promène le long d’un chemin.** »
 
-> « À vingt ans, l’idée d’aller à Paris ! »`,
+## Pour la dissertation et l’oral
+- Au procès, Julien retourne l’accusation contre ses juges.
+
+> « Messieurs, je n’ai point l’honneur d’appartenir à votre classe, vous voyez en moi un paysan qui s’est révolté contre la bassesse de sa fortune. »`,
           },
           questions: [
             ['Que symbolisent le rouge et le noir ?', ['L’armée et l’Église, deux voies d’ascension', 'Le sang et la mort', 'La révolution et la royauté', 'L’amour et la haine'], 0, 'Julien serait officier sous Napoléon ; il sera séminariste.'],
@@ -1995,7 +2782,10 @@ Sous-titre : « **Chronique de 1830** ».
           titre: 'Le Tartuffe, Molière',
           lecon: {
             titre: 'Molière, 1664-1669 — cinq ans de bataille contre les dévots',
-            cours: `## L’histoire
+            cours: `## L’auteur et le contexte
+**Molière** (1622-1673), protégé par **Louis XIV**, joue une première version en trois actes à **Versailles** en **1664**, pendant les fêtes des *Plaisirs de l’île enchantée*. Les **dévots**, notamment la **Compagnie du Saint-Sacrement**, obtiennent l’interdiction. Molière adresse des **placets au roi** pour défendre sa pièce.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | L’aveuglement | **Orgon**, riche bourgeois, a recueilli **Tartuffe**, **faux dévot** à la **piété ostentatoire** |
 | Les dons | Il lui promet sa fille **Mariane** — qui aime **Valère** —, le fait **son héritier** et lui confie une **cassette compromettante** |
@@ -2004,6 +2794,8 @@ Sous-titre : « **Chronique de 1830** ».
 | Le **piège** | Elmire cache Orgon **sous une table** et **laisse Tartuffe la courtiser** |
 | Le retournement | Orgon, **enfin détrompé**, le chasse — **mais trop tard** : Tartuffe **possède la donation et la cassette** et **fait expulser la famille** |
 | Le dénouement | Un **exempt** du roi intervient **in extremis** : **le prince a démasqué l’imposteur** |
+
+Quand Dorine lui raconte que sa femme a été malade tandis que Tartuffe mangeait et dormait bien, Orgon ne sait que répéter : « **Le pauvre homme !** »
 
 ## À retenir
 | Date | Le sort de la pièce |
@@ -2016,6 +2808,11 @@ Sous-titre : « **Chronique de 1830** ».
 Le **dénouement par le roi** est un **hommage obligé** — et **fragile**.
 
 > Le personnage-titre **n’entre qu’au troisième acte** : il a d’abord été **construit par les paroles des autres**. C’est l’un des coups de génie de la construction.
+
+## Pour la dissertation et l’oral
+- **La comédie peut-elle corriger les mœurs ?** Molière le soutient dans sa préface.
+- **Le vrai et le faux dévot** : Cléante distingue la piété sincère de la grimace.
+- Tartuffe dévoile sa morale : « **Le Ciel défend, de vrai, certains contentements ; / Mais on trouve avec lui des accommodements.** »
 
 > « Couvrez ce sein que je ne saurais voir. »`,
           },

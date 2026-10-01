@@ -1,0 +1,624 @@
+{
+  "niveau": "2de",
+  "matiere": "snt",
+  "sujets": [
+    {
+      "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+      "difficulte": 1,
+      "titre": "Ce qu'est une donnée ouverte",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Définis l'**open data**. Peut-on réutiliser une donnée ouverte à des fins commerciales ?\n2. Cite **quatre critères** qu'une donnée doit remplir pour être ouverte.\n3. Quelle loi, et de quelle année, impose aux administrations françaises de publier leurs données d'intérêt public ? Quel portail les rassemble ?",
+      "bareme": [
+        { "critere": "Donnée que chacun peut librement consulter, réutiliser et redistribuer, y compris à des fins commerciales", "points": 6 },
+        { "critere": "Quatre critères justes parmi : accessible, gratuite, format ouvert, lisible par machine, métadonnées, licence explicite", "points": 8 },
+        { "critere": "Loi pour une République numérique de 2016 ; data.gouv.fr", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'**open data** désigne une donnée que **chacun peut librement consulter, réutiliser et redistribuer**, **y compris à des fins commerciales** : oui, la réutilisation commerciale est permise.\n2. Critères : **accessible** (en ligne, sans démarche) ; **gratuite** (ou à coût marginal) ; dans un **format ouvert** (CSV, JSON, XML, et non un PDF scanné) ; **lisible par machine** (exploitable sans ressaisie) ; **documentée par des métadonnées** ; sous **licence explicite** autorisant la réutilisation.\n3. La **loi pour une République numérique** de **2016** impose la publication par défaut des données d'intérêt public. Le portail **data.gouv.fr** les rassemble (budgets, résultats électoraux, horaires de transport, qualité de l'air…)."
+    },
+    {
+      "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+      "difficulte": 2,
+      "titre": "Trois fichiers de la mairie",
+      "consigne": "Examine chaque fichier au regard des critères de l'open data et justifie.",
+      "enonce": "**Document.** Une mairie publie en ligne, gratuitement, trois fichiers :\n\n| Fichier | Description |\n|---|---|\n| A | Les horaires des bus, dans un PDF scanné |\n| B | Les mesures de qualité de l'air au format CSV, avec une fiche qui décrit chaque colonne et une licence autorisant la réutilisation |\n| C | La liste des accidents de la route au format JSON, sans aucune description des champs ni licence |\n\n1. Pour chaque fichier, dis s'il respecte les critères de l'open data. Cite le ou les critères manquants.\n2. Quel fichier une développeuse pourrait-elle utiliser tout de suite pour créer une application de carte de la qualité de l'air ? Pourquoi ?\n3. Que faudrait-il changer au fichier A pour qu'il devienne réellement ouvert ?",
+      "bareme": [
+        { "critere": "A non conforme : PDF scanné, ni format ouvert ni lisible par machine", "points": 5 },
+        { "critere": "B conforme : format ouvert, métadonnées, licence explicite", "points": 4 },
+        { "critere": "C non conforme : format ouvert mais sans métadonnées ni licence", "points": 5 },
+        { "critere": "Application sur B, exploitable sans ressaisie et réutilisation autorisée ; A publié en CSV ou JSON avec métadonnées et licence", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **A** : **non conforme**. Un PDF scanné n'est **ni un format ouvert ni lisible par machine** : il faudrait tout ressaisir. **B** : **conforme** : format ouvert (CSV), **métadonnées** (la fiche décrit chaque colonne), **licence explicite**, accessible et gratuit. **C** : **non conforme** malgré son format ouvert (JSON) : il manque les **métadonnées** (on ne sait pas ce que contient le fichier) et la **licence** (la réutilisation n'est pas autorisée explicitement).\n2. Le fichier **B** : il est **exploitable sans ressaisie**, on sait ce que contient chaque colonne, et la licence **autorise la réutilisation**, y compris dans une application.\n3. Il faudrait publier les horaires dans un **format ouvert lisible par machine** (CSV ou JSON), **documenté par des métadonnées** et placé sous une **licence explicite**."
+    },
+    {
+      "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+      "difficulte": 3,
+      "titre": "Faut-il tout ouvrir ?",
+      "consigne": "Réponds en argumentant ; la dernière question demande un court paragraphe.",
+      "enonce": "**Situation.** Un élu propose de publier en open data le fichier des élèves inscrits à la cantine : **nom**, **adresse**, **classe**, **allergies**. Il ajoute : « Même si on retire les noms, ce sera anonyme. »\n\n1. Ces données peuvent-elles être ouvertes telles quelles ? Justifie.\n2. Discute la phrase de l'élu en expliquant le risque de **réidentification par croisement**.\n3. Cite **deux** autres limites de l'open data, en dehors des données personnelles.\n4. Cite **trois** usages utiles de l'open data et montre, en quelques lignes, qu'une donnée ouverte « ne vaut que par ce qu'on en fait ».",
+      "bareme": [
+        { "critere": "Non : données personnelles, non ouvrables sans anonymisation solide", "points": 4 },
+        { "critere": "Retirer le nom ne suffit pas : adresse, classe, allergies croisées avec d'autres sources permettent de retrouver l'élève", "points": 6 },
+        { "critere": "Deux limites parmi : secret statistique et sécurité, qualité inégale, coût de mise à jour", "points": 4 },
+        { "critere": "Trois usages (applications, journalisme de données, recherche, contrôle citoyen) et idée qu'un fichier non réutilisé n'est pas une politique publique", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Non**. Ce sont des **données personnelles** (et les allergies touchent à la santé). Elles ne sont **pas ouvrables sans anonymisation solide**.\n2. L'élu se trompe : retirer le nom ne suffit pas. L'**adresse**, la **classe** et les **allergies**, **croisées** avec d'autres informations (un annuaire, une photo de classe, ce que chacun sait de ses voisins), permettent souvent de **retrouver l'élève**. C'est la **réidentification par croisement**, un **risque réel**.\n3. Deux limites parmi : le **secret statistique** et la **sécurité** (certaines données ne peuvent pas être publiées) ; la **qualité inégale** des jeux publiés (fichiers incomplets ou mal documentés) ; le **coût de mise à jour** (une donnée périmée vaut peu).\n4. Usages : des **applications** (horaires en temps réel, comparateurs de prix, cartes de qualité de l'air) ; le **journalisme de données** ; la **recherche** ; le **contrôle citoyen** de l'action publique. Publier ne suffit pas : ces usages n'existent que si quelqu'un se saisit du fichier. **Un fichier que personne ne réutilise est un fichier, pas une politique publique.**"
+    },
+    {
+      "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+      "difficulte": 1,
+      "titre": "Le nuage est un bâtiment",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Définis le **cloud**. Pourquoi le cours dit-il qu'il « n'a rien d'immatériel » ?\n2. Cite les **trois niveaux de service** du cloud et ce que chacun fournit.\n3. Cite trois éléments qu'on trouve dans un **datacenter** et le rôle de chacun.",
+      "bareme": [
+        { "critere": "Ressources informatiques hébergées ailleurs, mises à disposition par le réseau et facturées à l'usage ; stockées sur des disques dans des bâtiments", "points": 7 },
+        { "critere": "Infrastructure (machines, stockage), plateforme (environnement d'exécution), logiciel (application prête à l'emploi)", "points": 6 },
+        { "critere": "Trois éléments justes avec leur rôle (serveurs, alimentation redondante, climatisation, liaisons multiples, réplication)", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Le **cloud** est la mise à disposition, **par le réseau**, de **ressources informatiques hébergées ailleurs** et **facturées à l'usage**. Il n'a rien d'immatériel : un fichier envoyé « dans le nuage » atterrit **sur un disque**, dans un **bâtiment** que quelqu'un possède, alimente et refroidit.\n2. **Infrastructure** : des machines et du stockage. **Plateforme** : un environnement d'exécution. **Logiciel** : une application prête à l'emploi.\n3. Par exemple : des milliers de **serveurs en baies** (capacité de calcul et de stockage) ; une **alimentation redondante** et des **groupes électrogènes** (survivre à une coupure) ; la **climatisation** (évacuer la chaleur) ; des **liaisons réseau multiples** (rester joignable) ; la **réplication** sur plusieurs machines et plusieurs sites (survivre à une panne ou à un incendie)."
+    },
+    {
+      "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+      "difficulte": 2,
+      "titre": "Comparer deux datacenters",
+      "consigne": "Montre tes calculs, puis justifie tes réponses.",
+      "enonce": "**Document.** Consommation d'électricité sur une année de deux datacenters :\n\n| Datacenter | Énergie totale consommée | Énergie utilisée par les calculs |\n|---|---|---|\n| Alpha | 30 GWh | 20 GWh |\n| Bêta | 26 GWh | 20 GWh |\n\n1. Rappelle la définition du **PUE**.\n2. Calcule le PUE de chaque datacenter.\n3. Lequel est le plus efficace ? Justifie. À quoi sert, selon toi, l'énergie qui ne va pas aux calculs ?\n4. Les données des clients sont **répliquées** sur plusieurs sites. Pourquoi ?",
+      "bareme": [
+        { "critere": "PUE = énergie totale rapportée à celle qui sert réellement aux calculs", "points": 4 },
+        { "critere": "Calculs justes : Alpha 30 / 20 = 1,5 ; Bêta 26 / 20 = 1,3", "points": 6 },
+        { "critere": "Bêta plus efficace (PUE plus proche de 1) ; énergie restante surtout pour le refroidissement", "points": 5 },
+        { "critere": "Réplication : survivre à une panne matérielle ou à un sinistre", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le **PUE** est l'**énergie totale** consommée par le datacenter **rapportée à celle qui sert réellement aux calculs**.\n2. **Alpha** : 30 / 20 = **1,5**. **Bêta** : 26 / 20 = **1,3**.\n3. **Bêta** est le plus efficace : son PUE est plus petit, plus proche de 1 ; pour la même énergie de calcul (20 GWh), il consomme moins au total. L'énergie qui ne va pas aux calculs sert surtout au **refroidissement** (climatisation) et au fonctionnement du bâtiment : chez Alpha, 10 GWh ; chez Bêta, 6 GWh.\n4. La **réplication** sur plusieurs machines et plusieurs sites permet aux données de **survivre à une panne matérielle ou à un sinistre** (un incendie, par exemple)."
+    },
+    {
+      "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+      "difficulte": 3,
+      "titre": "Le lycée passe au cloud",
+      "consigne": "Rédige une réponse argumentée, organisée en paragraphes.",
+      "enonce": "**Situation.** Un lycée veut abandonner ses propres serveurs et stocker tous les travaux des élèves et les dossiers administratifs sur le cloud d'une grande entreprise étrangère.\n\n1. Présente **trois avantages** de ce choix pour le lycée.\n2. Présente la **contrepartie** de chacun de ces avantages.\n3. Explique la question de la **souveraineté** des données : pourquoi le pays de stockage et la nationalité de l'hébergeur comptent-ils ?\n4. Un professeur dit : « Au moins, le cloud ne pollue pas. » Réponds-lui avec les repères du cours sur l'empreinte environnementale du numérique.",
+      "bareme": [
+        { "critere": "Trois avantages : accès de partout et partage, sauvegarde automatique, capacité élastique sans investissement", "points": 5 },
+        { "critere": "Contreparties : dépendance à la connexion, dépendance au fournisseur, coût qui grimpe avec le volume", "points": 5 },
+        { "critere": "Souveraineté : la loi applicable dépend du pays de stockage et de la nationalité de l'hébergeur", "points": 4 },
+        { "critere": "Réponse au professeur : environ 4 % des émissions mondiales, électricité et refroidissement des datacenters, fabrication des terminaux premier poste", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Avantages : **accès depuis n'importe où**, synchronisation et **partage** ; **sauvegarde automatique** ; une capacité **élastique** (on paie plus d'espace quand on en a besoin) **sans investissement matériel**.\n2. Contreparties : sans connexion, plus d'accès (**dépendance à la connexion**) ; le lycée dépend d'une seule entreprise (**dépendance au fournisseur**) ; un **coût qui grimpe avec le volume** stocké.\n3. Les données sont stockées dans un pays et par une entreprise d'une certaine nationalité : **la loi applicable dépend du pays de stockage et de la nationalité de l'hébergeur**. Des données d'élèves confiées à une entreprise étrangère peuvent donc relever d'une autre loi que la loi française : c'est la question de la **souveraineté**.\n4. Le professeur se trompe : le nuage, ce sont des **bâtiments climatisés**, des câbles et des factures d'électricité. Le numérique représente **environ 4 %** des émissions mondiales de gaz à effet de serre, **en croissance**. Le poste des datacenters, c'est l'**électricité et le refroidissement** (mesuré par le PUE) ; et le **principal poste** du numérique reste la **fabrication des terminaux**."
+    },
+    {
+      "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+      "difficulte": 1,
+      "titre": "Vocabulaire des graphes et petit monde",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Définis : le **degré** d'un sommet, la **distance** entre deux sommets, le **diamètre** d'un graphe.\n2. Qu'est-ce qu'un graphe **orienté** ? Donne un exemple tiré des réseaux sociaux.\n3. Présente l'expérience du **petit monde** : auteur, date, protocole, résultat.",
+      "bareme": [
+        { "critere": "Degré = nombre de voisins ; distance = longueur de la plus courte chaîne ; diamètre = la plus grande de ces distances", "points": 7 },
+        { "critere": "Graphe orienté : relation à sens unique (je te suis sans que tu me suives)", "points": 4 },
+        { "critere": "Milgram, 1967, lettre à un inconnu de Boston par des connaissances personnelles, environ six intermédiaires", "points": 9 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le **degré** d'un sommet est le **nombre de ses voisins**. La **distance** entre deux sommets est la **longueur de la plus courte chaîne** qui les relie. Le **diamètre** du graphe est la **plus grande de ces distances**.\n2. Dans un graphe **orienté**, les relations ont un sens : **je te suis sans que tu me suives**, comme l'abonnement à un compte sur certains réseaux sociaux.\n3. En **1967**, le psychologue **Stanley Milgram** demande de faire parvenir une lettre à un **inconnu de Boston**, en passant **uniquement par des connaissances personnelles**. Résultat : environ **six intermédiaires** en moyenne. D'où l'expression des **six degrés de séparation**."
+    },
+    {
+      "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+      "difficulte": 2,
+      "titre": "Les six amis",
+      "consigne": "Utilise le graphe et montre les chaînes que tu utilises.",
+      "enonce": "**Document.** Six élèves sont reliés par ces relations d'amitié :\n\n| Relation |\n|---|\n| Ana — Ben |\n| Ana — Céline |\n| Ben — Céline |\n| Céline — Driss |\n| Driss — Élia |\n| Élia — Farid |\n\n1. Donne le **degré** de chaque élève.\n2. Quelle est la **distance** entre Ana et Farid ? Écris la chaîne la plus courte.\n3. Quel est le **diamètre** de ce graphe ? Justifie.\n4. Repère un **triangle** dans ce graphe. Que signifie-t-il ?",
+      "bareme": [
+        { "critere": "Degrés justes : Ana 2, Ben 2, Céline 3, Driss 2, Élia 2, Farid 1", "points": 5 },
+        { "critere": "Distance Ana-Farid = 4 : Ana-Céline-Driss-Élia-Farid", "points": 5 },
+        { "critere": "Diamètre = 4 (Ana-Farid, Ben-Farid), aucune distance plus grande", "points": 5 },
+        { "critere": "Triangle Ana-Ben-Céline : mes amis sont amis entre eux", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Ana : 2** (Ben, Céline) ; **Ben : 2** (Ana, Céline) ; **Céline : 3** (Ana, Ben, Driss) ; **Driss : 2** (Céline, Élia) ; **Élia : 2** (Driss, Farid) ; **Farid : 1** (Élia).\n2. Chaîne la plus courte : **Ana — Céline — Driss — Élia — Farid**, donc une distance de **4**.\n3. Les plus grandes distances sont Ana-Farid = 4 et Ben-Farid = 4 (Ben — Céline — Driss — Élia — Farid). Les autres paires sont plus proches (Céline-Farid = 3, Ana-Élia = 3…). Le **diamètre** vaut **4**.\n4. **Ana — Ben — Céline** forme un **triangle** : Ana, Ben et Céline sont tous amis entre eux. Cela traduit le fait, fréquent dans les grands réseaux sociaux, que **mes amis sont amis entre eux** (forte densité de triangles)."
+    },
+    {
+      "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+      "difficulte": 3,
+      "titre": "La force des liens faibles",
+      "consigne": "Reprends le graphe, fais les calculs demandés, puis argumente.",
+      "enonce": "**Document.** On reprend le groupe de six élèves :\n\n| Relation |\n|---|\n| Ana — Ben |\n| Ana — Céline |\n| Ben — Céline |\n| Céline — Driss |\n| Driss — Élia |\n| Élia — Farid |\n\nDans ce graphe, le diamètre vaut 4. Ana rencontre Farid lors d'un stage : une nouvelle relation **Ana — Farid** apparaît.\n\n1. Quelle est maintenant la distance entre Ben et Farid ? Entre Céline et Farid ?\n2. Quel est le nouveau **diamètre** du graphe ? Donne une paire d'élèves qui l'atteint.\n3. Explique, à partir de cet exemple, ce que le cours appelle les **liens faibles** et pourquoi ils raccourcissent les chemins.\n4. Une rumeur part de Ben. Pourquoi le même modèle de graphe peut-il servir à étudier la diffusion d'une rumeur et celle d'un virus ? Cite une autre application de l'analyse des graphes.",
+      "bareme": [
+        { "critere": "Ben-Farid = 2 (Ben-Ana-Farid) ; Céline-Farid = 2 (Céline-Ana-Farid)", "points": 5 },
+        { "critere": "Nouveau diamètre = 3, atteint par la seule paire Ben-Élia, les autres paires étant à 1 ou 2", "points": 5 },
+        { "critere": "Lien faible : connaissance lointaine qui relie des mondes séparés et fait chuter les distances", "points": 5 },
+        { "critere": "Diffusion de proche en proche le long des arêtes, pour une information comme pour une épidémie ; autre application juste", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Ben-Farid = 2** : Ben — Ana — Farid (avant : 4). **Céline-Farid = 2** : Céline — Ana — Farid (avant : 3).\n2. Nouvelles distances : Ben-Élia = 3 (Ben — Ana — Farid — Élia, ou Ben — Céline — Driss — Élia) ; toutes les autres paires sont à 1 ou 2 (par exemple Ben-Driss = 2, Ana-Driss = 2, Driss-Farid = 2, Céline-Élia = 2). Le **nouveau diamètre vaut 3**, atteint par la paire **Ben — Élia**.\n3. La relation Ana — Farid est un **lien faible** : une connaissance lointaine, nouée hors du groupe habituel. Ce ne sont pas les amis proches qui raccourcissent les chemins, mais ces liens qui **relient des mondes séparés** : une seule arête a fait passer le diamètre de 4 à 3 et rapproché Farid de tout le groupe.\n4. Une rumeur, comme un virus, se **transmet de proche en proche le long des arêtes** du graphe : le même modèle décrit donc la **diffusion** d'une information et celle d'une **épidémie**. Autres applications : **recommander** des contacts ou des contenus (proximité dans le graphe), **détecter des communautés** (zones fortement connectées), **repérer des comptes influents** (degré et position)."
+    },
+    {
+      "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+      "difficulte": 1,
+      "titre": "Bulle de filtre et chambre d'écho",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Un fil d'actualité est-il chronologique ? Sur quoi repose son classement ?\n2. Qu'est-ce que le **filtrage collaboratif** ?\n3. Quel objectif les algorithmes de recommandation optimisent-ils ?\n4. Distingue la **bulle de filtre** et la **chambre d'écho**.",
+      "bareme": [
+        { "critere": "Non : classé par un algorithme qui prédit les réactions (clics, temps passé, interactions)", "points": 5 },
+        { "critere": "Recommander à partir des comportements d'utilisateurs jugés semblables", "points": 4 },
+        { "critere": "L'engagement : le temps et l'attention", "points": 4 },
+        { "critere": "Bulle : enfermement algorithmique (Eli Pariser) ; chambre d'écho : phénomène social, on ne discute qu'avec ceux qui pensent pareil", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Non**. Le fil est **classé** par un algorithme qui **prédit vos réactions** à partir de vos clics, du temps passé et de vos interactions.\n2. Le **filtrage collaboratif** recommande à un utilisateur ce qu'ont apprécié des **utilisateurs jugés semblables**.\n3. Ils optimisent l'**engagement** : le **temps** et l'**attention**. Ils n'optimisent ni la vérité ni l'équilibre, mais la **réaction**.\n4. La **bulle de filtre**, popularisée par **Eli Pariser**, est l'**enfermement algorithmique** dans des contenus conformes à ses opinions. La **chambre d'écho** est le **phénomène social** correspondant : on ne discute qu'avec ceux qui pensent comme soi."
+    },
+    {
+      "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+      "difficulte": 2,
+      "titre": "La photo de l'inondation",
+      "consigne": "Analyse la situation et justifie avec les notions du cours.",
+      "enonce": "**Situation.** Théo voit passer dans son fil une photo de rues inondées, avec ce titre : « SCANDALE : ce matin, la ville est sous l'eau et personne n'en parle ! » La publication a déjà été partagée des milliers de fois. Théo, persuadé que les médias cachent tout, s'apprête à la partager lui aussi.\n\n1. Pourquoi ce type de publication circule-t-il plus vite qu'une information vérifiée ? Cite deux facteurs du cours.\n2. Quel **biais** pousse Théo à croire la publication sans la vérifier ?\n3. Quel réflexe permet de savoir si la photo est ancienne ou détournée ?\n4. Cite deux autres réflexes que Théo devrait avoir avant de partager.",
+      "bareme": [
+        { "critere": "Surprise et indignation ; effet de répétition ou illusion de familiarité", "points": 6 },
+        { "critere": "Biais de confirmation : on retient ce qui nous donne raison", "points": 4 },
+        { "critere": "Recherche d'image inversée", "points": 4 },
+        { "critere": "Deux réflexes : source et date, document d'origine, recoupement, rubriques de vérification, méfiance envers l'émotion forte", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. La publication joue sur la **surprise** et l'**indignation** : une infox circule plus vite qu'une information vérifiée. Les milliers de partages créent un **effet de répétition** (ce qu'on lit souvent paraît vrai) et une **illusion de familiarité** (ce qui est connu paraît fiable).\n2. Le **biais de confirmation** : Théo pense déjà que les médias cachent tout, il retient ce qui **lui donne raison**.\n3. Une **recherche d'image inversée** montre si la photo est **ancienne ou détournée**.\n4. Vérifier la **source et sa date** (qui parle, et quand) ; retrouver l'**information d'origine** ; chercher la même information **ailleurs** (recouper) ; consulter les **rubriques de vérification** des rédactions. Et se méfier d'un titre qui provoque une émotion forte : **sa propre indignation est le levier utilisé**."
+    },
+    {
+      "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+      "difficulte": 3,
+      "titre": "Optimiser la réaction",
+      "consigne": "Rédige une réponse argumentée, en plusieurs paragraphes, appuyée sur les notions du cours.",
+      "enonce": "**Document.**\n\n> « Un algorithme qui maximise l'engagement n'optimise ni la vérité, ni l'équilibre : il optimise la réaction. » (extrait du cours)\n\n1. Explique pourquoi une sélection des publications est **inévitable** sur un réseau social, et ce qui pose question dans cette sélection.\n2. Explique la phrase du document : comment fonctionne un système de recommandation, et pourquoi favorise-t-il ce qui fait réagir ?\n3. Montre comment ce fonctionnement peut conduire à la **bulle de filtre** et renforcer les convictions de chacun.\n4. Propose trois moyens, pour un utilisateur, de se défendre de ces effets.",
+      "bareme": [
+        { "critere": "Personne ne peut tout lire ; la question est qui sélectionne et selon quels critères", "points": 4 },
+        { "critere": "Classement non chronologique, prédiction des réactions, filtrage collaboratif, objectif d'engagement", "points": 6 },
+        { "critere": "Bulle de filtre : contenus conformes aux opinions, convictions renforcées, avis contraires qui paraissent minoritaires", "points": 5 },
+        { "critere": "Trois réflexes justes : source et date, document d'origine, recoupement, image inversée, rubriques de vérification", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Aucun utilisateur ne peut lire tout ce qui se publie** : une sélection est donc inévitable. La question est de savoir **qui la fait**, et **selon quels critères**.\n2. Le fil **n'est pas chronologique** : il est **classé** par un algorithme qui **prédit vos réactions** à partir de vos clics, du temps passé, de vos interactions, et du comportement d'utilisateurs jugés semblables (**filtrage collaboratif**). L'objectif optimisé est l'**engagement** : le temps et l'attention. Ce qui fait réagir (la surprise, l'indignation) est donc mis en avant, qu'il soit vrai ou faux, nuancé ou non : l'algorithme optimise la **réaction**.\n3. En montrant surtout ce qui plaît à chacun, l'algorithme enferme dans des contenus **conformes à ses opinions** : c'est la **bulle de filtre** (Eli Pariser). Elle se double d'une **chambre d'écho** sociale. Résultat : **les convictions se renforcent**, et les **avis contraires paraissent minoritaires**.\n4. Vérifier la **source et sa date** ; retrouver l'**information d'origine** ; chercher la même information **ailleurs** ; faire une **recherche d'image inversée** ; consulter les **rubriques de vérification** ; se méfier des titres qui provoquent une émotion forte."
+    },
+    {
+      "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+      "difficulte": 1,
+      "titre": "Trois sortes de traces",
+      "consigne": "Classe et justifie à l'aide du cours.",
+      "enonce": "Voici six traces laissées par Inès en ligne :\n\n| Trace |\n|---|\n| a) L'avis qu'elle a écrit sur un restaurant |\n| b) L'adresse IP de sa connexion |\n| c) Une photo de classe où un ami l'a identifiée |\n| d) Son historique d'achats sur un site |\n| e) La photo de vacances qu'elle a publiée |\n| f) Un commentaire d'une camarade qui la cite |\n\n1. Classe chaque trace : **volontaire**, **involontaire** ou **héritée**. Justifie en définissant chaque catégorie.\n2. Depuis quand le **RGPD** est-il en vigueur ? Quelle autorité française contrôle son application ?",
+      "bareme": [
+        { "critere": "Définitions justes des trois catégories (ce que l'on publie, laissée par la machine, laissée par les autres)", "points": 6 },
+        { "critere": "Classement juste : a et e volontaires, b et d involontaires, c et f héritées", "points": 9 },
+        { "critere": "RGPD depuis 2018 ; la CNIL", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une trace **volontaire** est ce que l'on **publie** soi-même ; une trace **involontaire** est **laissée par la machine** ; une trace **héritée** est **laissée par les autres** à notre sujet.\n- a) l'avis sur le restaurant : **volontaire**.\n- b) l'adresse IP : **involontaire**.\n- c) la photo de classe où un ami l'a identifiée : **héritée**.\n- d) l'historique d'achats : **involontaire**.\n- e) la photo de vacances qu'elle a publiée : **volontaire**.\n- f) le commentaire qui la cite : **héritée**.\n2. Le **RGPD** est en vigueur depuis **2018**. En France, c'est la **CNIL** qui contrôle et sanctionne."
+    },
+    {
+      "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+      "difficulte": 2,
+      "titre": "La photo de Manon",
+      "consigne": "Lis la situation et réponds en citant les droits et notions du cours.",
+      "enonce": "**Situation.** Manon découvre qu'un camarade a publié, sans lui demander, une photo d'elle prise à une fête, en l'identifiant par son nom. La photo est commentée et partagée. Par ailleurs, Manon voudrait savoir quelles données un réseau social a collectées sur elle depuis son inscription.\n\n1. De quel type de trace s'agit-il pour la photo ?\n2. Quel droit du RGPD permet à Manon de savoir quelles données le réseau social détient sur elle ? Et d'obtenir leur suppression ?\n3. Que peut faire Manon auprès de la plateforme au sujet de la photo ? Que dit la loi de la diffusion d'images sans consentement ?\n4. Le camarade dit : « Je l'ai supprimée de mon compte, donc elle a disparu. » A-t-il raison ?",
+      "bareme": [
+        { "critere": "Trace héritée, laissée par un autre", "points": 3 },
+        { "critere": "Droit d'accès ; droit à l'effacement (droit à l'oubli)", "points": 6 },
+        { "critere": "Signaler le contenu à la plateforme ; diffusion d'images sans consentement = délit", "points": 6 },
+        { "critere": "Non : ce qui a été copié ou partagé subsiste", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. C'est une trace **héritée** : elle a été laissée par un autre, qui l'a publiée et identifiée.\n2. Le **droit d'accès** lui permet d'**obtenir ses données** ; le **droit à l'effacement**, dit **droit à l'oubli**, lui permet d'en demander la suppression. Elle peut aussi être informée, rectifier une erreur, s'opposer à un traitement, récupérer ses données (portabilité).\n3. Elle peut **exercer ses droits auprès de la plateforme** et **signaler** le contenu. La **diffusion d'images sans consentement** est un **délit**, aggravé pour les images intimes.\n4. **Non**. La photo a été commentée et partagée : **un contenu supprimé ne fait pas disparaître ce qui a déjà été copié**. Elle peut ressurgir plus tard, sortie de son contexte."
+    },
+    {
+      "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+      "difficulte": 3,
+      "titre": "« À 18 ans, je supprime tout »",
+      "consigne": "Rédige une réponse argumentée, organisée en paragraphes.",
+      "enonce": "**Document.** Adam, 15 ans, explique :\n\n> « Je publie tout ce que je veux, même les blagues limites. De toute façon, à 18 ans, je supprimerai mon compte et tout disparaîtra. Et puis j'ai accepté les conditions d'utilisation une fois, donc j'ai donné mon accord pour toujours. »\n\n1. Réponds à Adam sur l'idée que supprimer son compte fera tout disparaître. Utilise la notion de **résurgence**.\n2. Explique la phrase du cours : « Publier, c'est écrire à trois publics à la fois. »\n3. Discute l'idée d'un accord « pour toujours » à l'aide des conditions d'un **consentement** valable au sens du RGPD.\n4. Propose à Adam **trois bonnes pratiques**.",
+      "bareme": [
+        { "critere": "Compte supprimé ne fait pas disparaître ce qui a été copié ; résurgence hors contexte, par exemple lors d'un recrutement", "points": 5 },
+        { "critere": "Trois publics : ceux que l'on vise, ceux que l'on n'a pas prévus, ceux qui liront dans dix ans", "points": 5 },
+        { "critere": "Consentement libre, spécifique, éclairé et révocable : pas un accord pour toujours", "points": 5 },
+        { "critere": "Trois bonnes pratiques justes : confidentialité, séparer les usages, image d'autrui, exercer ses droits et signaler", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Adam se trompe : **un compte supprimé ne fait pas disparaître ce qui a déjà été copié**. Une publication recopiée, **sortie de son contexte**, peut **ressortir des années plus tard**, par exemple **lors d'un recrutement** : c'est la **résurgence**. Une « blague limite » peut aussi relever du **cyberharcèlement**, qui est un délit.\n2. Quand on publie, on s'adresse à **ceux que l'on vise** (ses amis), mais aussi à **ceux que l'on n'a pas prévus** (quelqu'un à qui la publication est transférée) et à **ceux qui liront dans dix ans** (un futur employeur). On ne choisit pas vraiment son public.\n3. Au sens du RGPD, le consentement doit être **libre, spécifique, éclairé et révocable**. Il n'est donc **pas donné pour toujours** : Adam peut le **retirer**, et il peut aussi exercer ses droits (accès, rectification, **effacement**, opposition).\n4. Bonnes pratiques : régler les **paramètres de confidentialité** ; **séparer les usages** (personnel, scolaire, professionnel) ; **réfléchir avant de publier l'image d'autrui** ; **exercer ses droits** auprès des plateformes et **signaler** les contenus illicites."
+    },
+    {
+      "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+      "difficulte": 1,
+      "titre": "Le pixel et ses couleurs",
+      "consigne": "Réponds en justifiant.",
+      "enonce": "1. Qu'est-ce qu'un **pixel** dans une image matricielle ?\n2. Dans le modèle **RVB**, combien de niveaux compte chaque composante codée sur 8 bits ? Combien de bits pèse un pixel couleur ? Combien de couleurs sont possibles ?\n3. Donne les composantes RVB du **noir**, du **blanc** et du **rouge vif**.",
+      "bareme": [
+        { "critere": "Point élémentaire d'une image découpée en lignes et colonnes, portant une valeur", "points": 5 },
+        { "critere": "256 niveaux, 24 bits, environ 16,7 millions de couleurs", "points": 9 },
+        { "critere": "Noir (0, 0, 0), blanc (255, 255, 255), rouge vif (255, 0, 0)", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Une image matricielle est découpée en **pixels**, rangés en **lignes et en colonnes**. Chaque pixel porte une **valeur** : un niveau de gris, ou trois valeurs pour la couleur.\n2. Chaque composante (rouge, vert, bleu) est codée sur **8 bits**, soit **256 niveaux** (de 0 à 255). Un pixel couleur pèse donc **24 bits** (3 × 8). Cela donne environ **16,7 millions** de couleurs possibles.\n3. **Noir** : (0, 0, 0). **Blanc** : (255, 255, 255). **Rouge vif** : (255, 0, 0)."
+    },
+    {
+      "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+      "difficulte": 2,
+      "titre": "Poids et formats",
+      "consigne": "Montre tes calculs, puis justifie tes choix de format.",
+      "enonce": "**Rappel.** Poids brut = nombre de pixels × nombre d'octets par pixel. 1 Mo = 1 000 000 octets.\n\n1. Calcule le poids brut d'une image couleur RVB de **1 920 × 1 080** pixels (un pixel RVB pèse 3 octets). Donne le résultat en octets puis en Mo (arrondi au dixième).\n2. Calcule le poids brut d'une image en **niveaux de gris** de **1 000 × 1 000** pixels, sachant qu'un pixel gris pèse 1 octet.\n3. Pour chaque usage, choisis entre **PNG**, **JPEG** et **GIF** et justifie : a) le logo du club, avec un fond transparent ; b) une photo de paysage ; c) une petite animation.",
+      "bareme": [
+        { "critere": "1 920 × 1 080 = 2 073 600 pixels ; × 3 = 6 220 800 octets ≈ 6,2 Mo", "points": 7 },
+        { "critere": "1 000 × 1 000 × 1 = 1 000 000 octets = 1 Mo", "points": 4 },
+        { "critere": "Logo : PNG (sans perte, transparence) ; photo : JPEG (avec perte, adapté aux photos) ; animation : GIF", "points": 9 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Nombre de pixels : 1 920 × 1 080 = **2 073 600**. Poids brut : 2 073 600 × 3 = **6 220 800 octets**, soit environ **6,2 Mo**.\n2. 1 000 × 1 000 = 1 000 000 pixels, × 1 octet = **1 000 000 octets = 1 Mo**. Comme le dit le cours : un million d'octets, rien d'autre.\n3. a) Le logo : **PNG**, compression **sans perte**, adapté aux logos et captures, et il gère la **transparence**. b) La photo : **JPEG**, compression **avec perte**, adaptée aux photographies (des artefacts apparaissent seulement si on compresse trop). c) L'animation : **GIF**, fait pour les petites animations (limité à 256 couleurs)."
+    },
+    {
+      "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+      "difficulte": 3,
+      "titre": "La banderole du lycée",
+      "consigne": "Réponds en montrant tes calculs et en argumentant.",
+      "enonce": "**Situation.** Pour la fête du lycée, Maëlys doit imprimer une banderole de 3 mètres de long avec le **logo** du lycée, et publier en ligne une **photo** de la fête prise en 1 920 × 1 080 pixels.\n\n1. Le logo existe en deux versions : une image **matricielle** de 200 × 100 pixels et une image **vectorielle** (SVG). Laquelle choisir pour la banderole ? Justifie par le comportement de chaque type à l'agrandissement.\n2. Pourquoi ne peut-on pas enregistrer la photo de la fête en vectoriel ?\n3. Le poids brut de la photo est de 6 220 800 octets. Enregistrée en JPEG, elle ne pèse plus que 1 500 000 octets. Combien de fois est-elle plus légère (arrondi à l'unité) ? Quelle contrepartie cette compression a-t-elle ?\n4. Avant de publier la photo, que doit vérifier Maëlys dans ses **métadonnées EXIF** ? Pourquoi ?",
+      "bareme": [
+        { "critere": "Vectoriel : formes décrites par des équations, aucune perte à l'agrandissement ; le matriciel pixelliserait", "points": 6 },
+        { "critere": "Le vectoriel convient mal à la photographie", "points": 3 },
+        { "critere": "6 220 800 / 1 500 000 ≈ 4 fois ; contrepartie : compression avec perte, artefacts si trop compressée", "points": 6 },
+        { "critere": "EXIF : appareil, date et parfois position GPS à retirer avant publication", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Il faut choisir la version **vectorielle** (SVG). Une image vectorielle stocke des **formes décrites par des équations** : on peut l'agrandir **sans aucune perte de qualité**. L'image matricielle de 200 × 100 pixels stocke une grille de pixels ; étirée sur 3 mètres, elle **pixelliserait** (chaque pixel deviendrait un gros carré visible).\n2. Le vectoriel décrit des formes géométriques ; une photographie est faite de nuances infinies qu'on ne peut pas décrire ainsi : **le vectoriel convient mal à la photographie**.\n3. 6 220 800 / 1 500 000 ≈ 4,1 : la photo est environ **4 fois plus légère**. La contrepartie : le JPEG compresse **avec perte** ; une partie de l'information est supprimée, et des **artefacts** deviennent visibles si l'on compresse trop.\n4. Les **métadonnées EXIF** enregistrent l'**appareil**, la **date** et parfois la **position GPS** du lieu de prise de vue. Maëlys doit vérifier qu'aucune position sensible ne sera publiée avec la photo."
+    },
+    {
+      "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+      "difficulte": 1,
+      "titre": "Négatif et niveaux de gris",
+      "consigne": "Montre tes calculs.",
+      "enonce": "1. Comment calcule-t-on le **négatif** d'un pixel codé sur 8 bits ?\n2. Calcule le négatif des pixels suivants : (255, 0, 0) ; (0, 0, 0) ; (100, 200, 50).\n3. Convertis le pixel (90, 120, 150) en niveau de gris par la méthode de la **moyenne**.\n4. Pourquoi la méthode de la **luminance** donne-t-elle un meilleur résultat visuel que la moyenne ?",
+      "bareme": [
+        { "critere": "Chaque composante remplacée par 255 moins sa valeur", "points": 4 },
+        { "critere": "Négatifs justes : (0, 255, 255), (255, 255, 255), (155, 55, 205)", "points": 7 },
+        { "critere": "(90 + 120 + 150) / 3 = 120", "points": 4 },
+        { "critere": "Moyenne pondérée où le vert compte davantage, car l'œil y est plus sensible", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. On remplace **chaque composante** par **255 moins sa valeur**.\n2. (255, 0, 0) → **(0, 255, 255)** : le rouge vif devient cyan. (0, 0, 0) → **(255, 255, 255)** : le noir devient blanc. (100, 200, 50) → (255 − 100, 255 − 200, 255 − 50) = **(155, 55, 205)**.\n3. (90 + 120 + 150) / 3 = 360 / 3 = **120**. Le pixel gris vaut (120, 120, 120).\n4. La **luminance** est une **moyenne pondérée** dans laquelle le **vert compte davantage**, parce que **l'œil est plus sensible au vert** qu'au bleu. Le gris obtenu correspond mieux à la clarté que l'on perçoit."
+    },
+    {
+      "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+      "difficulte": 2,
+      "titre": "Une image de quatre pixels",
+      "consigne": "Applique chaque traitement pixel par pixel en montrant tes calculs.",
+      "enonce": "**Document.** Une minuscule image couleur de 2 × 2 pixels :\n\n| Pixel | R | V | B |\n|---|---|---|---|\n| P1 | 200 | 150 | 100 |\n| P2 | 30 | 60 | 90 |\n| P3 | 255 | 255 | 255 |\n| P4 | 120 | 90 | 60 |\n\n1. Convertis chaque pixel en niveau de gris par la méthode de la **moyenne**.\n2. Applique ensuite un **seuillage** avec un seuil de **128** : chaque pixel gris au-dessus du seuil devient blanc, en dessous il devient noir. Donne le résultat.\n3. À quoi sert le seuillage dans les traitements automatiques ?",
+      "bareme": [
+        { "critere": "Gris justes : P1 150, P2 60, P3 255, P4 90", "points": 8 },
+        { "critere": "Seuillage juste : P1 blanc, P2 noir, P3 blanc, P4 noir", "points": 6 },
+        { "critere": "Il sépare la forme du fond : base de la reconnaissance de caractères", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **P1** : (200 + 150 + 100) / 3 = 450 / 3 = **150**. **P2** : (30 + 60 + 90) / 3 = 180 / 3 = **60**. **P3** : (255 + 255 + 255) / 3 = **255**. **P4** : (120 + 90 + 60) / 3 = 270 / 3 = **90**.\n2. Seuil 128 : **P1** (150) → **blanc** ; **P2** (60) → **noir** ; **P3** (255) → **blanc** ; **P4** (90) → **noir**.\n3. Le seuillage **sépare la forme du fond** : l'image ne garde que du noir et du blanc. C'est la **base de la reconnaissance de caractères** et de nombreux traitements automatiques."
+    },
+    {
+      "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+      "difficulte": 3,
+      "titre": "Les « vraies couleurs » de 1900",
+      "consigne": "Montre tes calculs, puis rédige une réponse argumentée à la dernière question.",
+      "enonce": "**Situation.** Un logiciel de retouche propose plusieurs filtres.\n\n1. On **permute** le rouge et le bleu du pixel (255, 0, 0). Quel pixel obtient-on ? Et pour (40, 180, 220) ?\n2. On applique **deux fois de suite** le négatif au pixel (40, 180, 220). Montre le calcul et conclus sur une propriété du négatif.\n3. Le cours dit qu'« une retouche est une fonction appliquée à un million de nombres ». Explique cette phrase.\n4. Un documentaire annonce : « Grâce à la colorisation automatique, découvrez les vraies couleurs de Paris en 1900. » Discute cette affirmation.",
+      "bareme": [
+        { "critere": "Permutation : (0, 0, 255) et (220, 180, 40)", "points": 4 },
+        { "critere": "Négatif : (215, 75, 35) puis retour à (40, 180, 220) ; opération réversible", "points": 5 },
+        { "critere": "L'image est un tableau de nombres ; un filtre applique le même calcul à chaque pixel", "points": 5 },
+        { "critere": "Un modèle d'apprentissage prédit des couleurs plausibles : résultat vraisemblable, pas véridique", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Permuter rouge et bleu : (255, 0, 0) → **(0, 0, 255)**, le rouge vif devient bleu. (40, 180, 220) → **(220, 180, 40)**.\n2. Premier négatif : (255 − 40, 255 − 180, 255 − 220) = **(215, 75, 35)**. Second négatif : (255 − 215, 255 − 75, 255 − 35) = **(40, 180, 220)**. On retrouve le pixel de départ : le négatif est **réversible**.\n3. Une image est un **tableau de nombres**. Une retouche n'est pas un geste mystérieux : c'est **un calcul (une fonction) appliqué à chacun des pixels**. Une photo d'un million de pixels, c'est un million de fois le même calcul.\n4. L'affirmation est trompeuse. La colorisation automatique utilise un **modèle d'apprentissage** qui **prédit des couleurs plausibles** ; il ne peut pas retrouver des couleurs qui n'ont jamais été enregistrées sur une photo en noir et blanc. Le résultat est **vraisemblable, pas véridique** : coloriser une photo de 1900, c'est **inventer** des couleurs plausibles, pas les retrouver."
+    },
+    {
+      "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+      "difficulte": 1,
+      "titre": "Lire un histogramme",
+      "consigne": "Réponds en justifiant.",
+      "enonce": "1. Que compte l'**histogramme** d'une image ? Que porte l'abscisse, que porte l'ordonnée ?\n2. Donne le diagnostic pour chacune de ces allures :\n\n| Image | Allure de l'histogramme |\n|---|---|\n| A | Tassé à gauche |\n| B | Resserré au centre |\n| C | Tassé à droite |\n| D | Étalé sur toute la plage |\n\n3. L'histogramme dit-il si une image est belle ? Qu'indique-t-il ?",
+      "bareme": [
+        { "critere": "Nombre de pixels pour chaque valeur ; abscisse 0 à 255 du sombre au clair, ordonnée nombre de pixels", "points": 6 },
+        { "critere": "A sous-exposée, B peu contrastée, C surexposée, D information bien répartie", "points": 10 },
+        { "critere": "Non : il dit si l'information est répartie ou entassée", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'histogramme compte, **pour chaque valeur possible, le nombre de pixels qui la portent**. En **abscisse** : les valeurs de **0 à 255**, des tons sombres à gauche aux tons clairs à droite. En **ordonnée** : le **nombre de pixels**.\n2. **A** : tassé à gauche → image **sous-exposée**. **B** : resserré au centre → image **peu contrastée**. **C** : tassé à droite → image **surexposée**. **D** : étalé → **information bien répartie**.\n3. **Non**. L'histogramme ne dit pas si l'image est belle : il dit si l'**information est répartie ou entassée**. C'est un outil de diagnostic."
+    },
+    {
+      "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+      "difficulte": 2,
+      "titre": "Étirer un histogramme",
+      "consigne": "Applique la formule en montrant tes calculs.",
+      "enonce": "**Situation.** Une photo prise par temps de brouillard a des pixels dont les valeurs vont seulement de **80** à **170**. On applique un **étirement d'histogramme** : 80 devient 0 et 170 devient 255. Toutes les autres valeurs sont transformées par la formule :\n\n> nouvelle valeur = (ancienne valeur − 80) × 255 / 90\n\n1. À quelle allure d'histogramme correspond cette photo avant traitement ? Quel défaut a-t-elle ?\n2. Vérifie avec la formule que 80 donne 0 et que 170 donne 255.\n3. Calcule la nouvelle valeur d'un pixel à **110** et d'un pixel à **125** (arrondis à l'unité).\n4. L'étirement a-t-il inventé des détails ? Explique ce qu'il fait réellement.",
+      "bareme": [
+        { "critere": "Histogramme resserré (au centre) : image peu contrastée", "points": 4 },
+        { "critere": "Vérifications justes : 0 × 255 / 90 = 0 et 90 × 255 / 90 = 255", "points": 4 },
+        { "critere": "110 → 30 × 255 / 90 = 85 ; 125 → 45 × 255 / 90 = 127,5, soit 127 ou 128", "points": 6 },
+        { "critere": "Aucun détail inventé : il étale les valeurs occupées sur toute la plage, le contraste augmente", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les valeurs n'occupent qu'une partie de la plage 0-255 : l'histogramme est **resserré** (ici vers le centre). L'image est **peu contrastée**.\n2. Pour 80 : (80 − 80) × 255 / 90 = 0 × 255 / 90 = **0**. Pour 170 : (170 − 80) × 255 / 90 = 90 × 255 / 90 = **255**.\n3. Pour **110** : (110 − 80) × 255 / 90 = 30 × 255 / 90 = 7 650 / 90 = **85**. Pour **125** : (125 − 80) × 255 / 90 = 45 × 255 / 90 = 127,5, soit **127 ou 128** selon l'arrondi.\n4. **Non**. L'étirement **étale les valeurs occupées sur toute la plage disponible** : les pixels sombres deviennent plus sombres, les clairs plus clairs, donc **le contraste augmente**. Mais **aucun détail n'est inventé** : on utilise mieux la place existante."
+    },
+    {
+      "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+      "difficulte": 3,
+      "titre": "Sauver une photo d'astronomie",
+      "consigne": "Argumente en t'appuyant sur les notions du cours.",
+      "enonce": "**Situation.** Nour, passionnée d'astronomie, a pris deux photos.\n\n- **Photo 1** : une nébuleuse très faible, presque noire ; son histogramme est tassé à gauche et étroit.\n- **Photo 2** : la Lune, dont une grande zone est entièrement blanche, à la valeur **255**.\n\n1. Pour la photo 1, compare l'**étirement** et l'**égalisation** d'histogramme : que fait chacun ? Lequel révélera le plus de détails invisibles ?\n2. Quel **coût** l'égalisation a-t-elle ? Que risque de voir apparaître Nour ?\n3. Nour espère récupérer les détails de la zone blanche de la photo 2 par traitement. Est-ce possible ? Justifie.\n4. Nour réglait jusque-là son exposition en regardant l'écran de son appareil. Pourquoi les photographes surveillent-ils plutôt l'histogramme ?",
+      "bareme": [
+        { "critere": "Étirement : étale les valeurs occupées sur la plage ; égalisation : redistribue pour aplatir l'histogramme", "points": 5 },
+        { "critere": "L'égalisation renforce fortement le contraste local et révèle des détails invisibles (utile en astronomie)", "points": 4 },
+        { "critere": "Coût : elle accentue le bruit, image parfois peu naturelle", "points": 4 },
+        { "critere": "Zone à 255 brûlée irrécupérable : les traitements ne créent pas d'information", "points": 4 },
+        { "critere": "L'écran trompe par sa luminosité ; l'histogramme montre objectivement la répartition", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. L'**étirement** étale les valeurs occupées sur **toute la plage disponible** : le contraste global augmente. L'**égalisation** **redistribue** les valeurs pour rendre l'histogramme **aussi plat que possible** : elle renforce fortement le **contraste local** et **révèle des détails invisibles**. Pour une nébuleuse faible, c'est l'égalisation qui en montrera le plus : elle est très utile en imagerie **astronomique**, médicale ou satellitaire.\n2. L'égalisation **accentue le bruit** : Nour risque de voir apparaître du grain, et l'image peut devenir **peu naturelle**.\n3. **Non**. Ces traitements **ne créent pas d'information** : une zone entièrement à **255**, **brûlée** par la surexposition, ne contient plus aucune différence entre ses pixels. Elle est **irrécupérable**.\n4. Parce que la **luminosité de l'écran trompe** : une image peut paraître bien exposée sur un écran lumineux. L'histogramme montre objectivement si l'information est répartie ou entassée, et s'il y a des zones brûlées. C'est pourquoi les photographes **exposent en surveillant l'histogramme** plutôt que l'écran."
+    },
+    {
+      "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+      "difficulte": 1,
+      "titre": "Définition, résolution, poids",
+      "consigne": "Réponds en justifiant.",
+      "enonce": "1. Définis la **définition**, la **résolution** et le **poids** d'une image, avec leur unité.\n2. Une image fait 4 000 × 3 000 pixels. Quelle est sa définition ?\n3. Pourquoi la même image imprimée en très grand format paraît-elle floue ?\n4. Réduire la définition d'une image : que perd-on ? Et l'agrandir : que fait l'algorithme ?",
+      "bareme": [
+        { "critere": "Définition = nombre de pixels ; résolution = densité en points par pouce ; poids = définition × octets par pixel, en octets", "points": 7 },
+        { "critere": "12 millions de pixels", "points": 3 },
+        { "critere": "Ses pixels s'étalent sur une plus grande surface", "points": 4 },
+        { "critere": "Réduire supprime de l'information définitivement ; agrandir interpole à partir des voisins", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **définition** est le **nombre de pixels** en largeur et en hauteur. La **résolution** est la **densité** à l'affichage ou à l'impression, en **points par pouce**. Le **poids** vaut **définition × octets par pixel**, en **octets**.\n2. 4 000 × 3 000 = **12 millions de pixels**.\n3. Le nombre de pixels ne change pas : imprimée en grand, l'image a ses **pixels qui s'étalent** sur une plus grande surface, donc une densité plus faible, et elle paraît floue.\n4. **Réduire** la définition **supprime de l'information, définitivement**. **Agrandir** **interpole** : l'algorithme invente des valeurs intermédiaires à partir des voisins. L'image paraît plus grande, **pas plus détaillée**."
+    },
+    {
+      "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+      "difficulte": 2,
+      "titre": "Imprimer la photo de classe",
+      "consigne": "Montre tes calculs, arrondis au dixième.",
+      "enonce": "**Situation.** Le photographe du lycée fournit une photo de classe de **3 000 × 2 000 pixels**, en couleurs RVB (3 octets par pixel).\n\n**Donnée.** 1 pouce = 2,54 cm. Pour une impression nette, on vise 300 points par pouce.\n\n1. Calcule la **définition** et le **poids brut** de la photo (en octets, puis en Mo avec 1 Mo = 1 000 000 octets).\n2. À **300 points par pouce**, quelles seront les dimensions de l'impression en pouces, puis en centimètres ?\n3. Maxime veut l'imprimer en poster de **50,8 cm** de large. Quelle sera alors la résolution, en points par pouce ? La photo sera-t-elle aussi nette ? Pourquoi ?\n4. Maxime propose d'« agrandir la photo dans un logiciel pour ajouter des détails ». Réponds-lui.",
+      "bareme": [
+        { "critere": "6 000 000 pixels ; 18 000 000 octets = 18 Mo", "points": 5 },
+        { "critere": "10 × 6,7 pouces soit 25,4 cm × 16,9 cm", "points": 5 },
+        { "critere": "50,8 cm = 20 pouces ; 3 000 / 20 = 150 points par pouce ; moins nette car les pixels s'étalent", "points": 5 },
+        { "critere": "Agrandir interpole à partir des voisins : plus grand, pas plus détaillé", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Définition : 3 000 × 2 000 = **6 000 000 pixels**. Poids brut : 6 000 000 × 3 = **18 000 000 octets = 18 Mo**.\n2. Largeur : 3 000 / 300 = **10 pouces**, soit 10 × 2,54 = **25,4 cm**. Hauteur : 2 000 / 300 ≈ **6,7 pouces**, soit environ 6,67 × 2,54 ≈ **16,9 cm**.\n3. 50,8 / 2,54 = **20 pouces**. Résolution : 3 000 / 20 = **150 points par pouce**, deux fois moins que 300. La photo sera **moins nette** : le même nombre de pixels **s'étale** sur une surface plus grande.\n4. C'est impossible : agrandir **interpole**, c'est-à-dire **invente des valeurs intermédiaires** à partir des pixels voisins. L'image paraît **plus grande, pas plus détaillée**. Zoomer pour rendre lisible un détail invisible n'existe qu'au cinéma."
+    },
+    {
+      "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+      "difficulte": 3,
+      "titre": "Un filtre de moyenne contre le bruit",
+      "consigne": "Montre tes calculs, puis justifie tes réponses.",
+      "enonce": "**Principe.** Un filtre de **moyenne** remplace la valeur du pixel central par la moyenne des 9 valeurs du carré 3 × 3 qui l'entoure (lui compris).\n\n**Document 1 — zone régulière (niveaux de gris)**\n\n| 10 | 20 | 30 |\n|---|---|---|\n| 40 | 50 | 60 |\n| 70 | 80 | 90 |\n\n**Document 2 — zone d'une photo prise dans l'obscurité**\n\n| 50 | 52 | 48 |\n|---|---|---|\n| 51 | 250 | 49 |\n| 50 | 50 | 50 |\n\n1. Comment s'appelle la petite matrice qui définit la façon de combiner les voisins ?\n2. Calcule la nouvelle valeur du pixel central du document 1, puis du document 2 (arrondie au dixième).\n3. Dans le document 2, le pixel central à 250 est un point de **bruit**. Quel est l'effet du filtre sur lui ? Quel usage des filtres cela illustre-t-il ?\n4. Quel effet général produit un filtre de moyenne sur une image ? Cite deux autres effets qu'on peut obtenir avec d'autres noyaux, et un domaine qui les utilise.",
+      "bareme": [
+        { "critere": "Le noyau (filtrage par convolution)", "points": 3 },
+        { "critere": "Doc 1 : 450 / 9 = 50 ; doc 2 : 650 / 9 ≈ 72,2", "points": 6 },
+        { "critere": "Le point de bruit passe de 250 à environ 72, proche de ses voisins : réduction du bruit par lissage", "points": 5 },
+        { "critere": "Moyenne = flou ; autres noyaux : netteté renforcée, détection des contours ; domaine (reconnaissance de caractères, imagerie médicale)", "points": 6 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. C'est le **noyau** : un **filtre** remplace la valeur de chaque pixel par une combinaison de celles de ses voisins, définie par cette petite matrice (filtrage par **convolution**).\n2. **Document 1** : 10 + 20 + 30 + 40 + 50 + 60 + 70 + 80 + 90 = 450 ; 450 / 9 = **50**. Le pixel central ne change pas : la zone est régulière.\n**Document 2** : 50 + 52 + 48 = 150 ; 51 + 250 + 49 = 350 ; 50 + 50 + 50 = 150 ; total 650 ; 650 / 9 ≈ **72,2**.\n3. Le point de bruit passe de **250 à environ 72** : il se rapproche fortement de ses voisins (autour de 50) et devient beaucoup moins visible. C'est l'usage du **lissage** pour **réduire le bruit** d'une photo prise dans l'obscurité.\n4. Un filtre de moyenne produit un **flou**. D'autres noyaux donnent une **netteté renforcée** (accentuation des écarts) ou la **détection des contours** (variations brutales). La détection des formes et des contours sert à la **reconnaissance de caractères** et à l'**imagerie médicale** ; empilées, ces opérations forment les premières couches des réseaux de neurones de vision."
+    },
+    {
+      "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+      "difficulte": 1,
+      "titre": "Le capteur et ses photosites",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Quelles sont les **trois étapes** par lesquelles un capteur transforme la lumière en image ?\n2. Qu'est-ce qu'un **photosite** ? Quelle technologie équipe le plus souvent les capteurs ?\n3. Un photosite perçoit-il la couleur ? Comment obtient-on quand même une image en couleurs ?",
+      "bareme": [
+        { "critere": "Collecter, mesurer, coder", "points": 4 },
+        { "critere": "Photosite : cellule qui accumule des charges proportionnelles à la lumière reçue pendant la pose ; CMOS", "points": 7 },
+        { "critere": "Non : il compte des photons ; filtre coloré (matrice de Bayer, deux verts pour un rouge et un bleu) puis dématriçage", "points": 9 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Collecter** la lumière, la **mesurer**, la **coder** en nombres.\n2. Un **photosite** est une cellule du capteur qui **accumule des charges électriques proportionnelles à la lumière reçue** pendant la pose. Un capteur en porte des millions. La technologie la plus courante est le **CMOS** (l'autre est le CCD).\n3. **Non** : un photosite **compte des photons**, il ne voit pas la couleur. On place devant chacun un **filtre coloré**, selon la **matrice de Bayer** (deux verts pour un rouge et un bleu). Puis un algorithme, le **dématriçage**, reconstitue les trois composantes de chaque pixel à partir des voisins."
+    },
+    {
+      "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+      "difficulte": 2,
+      "titre": "Compter les filtres de Bayer",
+      "consigne": "Montre tes calculs et justifie.",
+      "enonce": "**Situation.** Le capteur d'un appareil photo compte **4 000 × 3 000 photosites**, chacun derrière un filtre de la **matrice de Bayer**.\n\n1. Combien de photosites le capteur compte-t-il en tout ?\n2. Dans la matrice de Bayer, le motif compte deux filtres verts pour un rouge et un bleu. Combien de photosites sont derrière un filtre **vert** ? **rouge** ? **bleu** ?\n3. Pourquoi y a-t-il deux fois plus de filtres verts ?\n4. Chaque photosite ne mesure qu'une seule couleur, pourtant chaque pixel de la photo finale a trois composantes. Explique comment.\n5. Un **convertisseur analogique-numérique** code chaque mesure sur 8 bits. Combien de niveaux cela donne-t-il ?",
+      "bareme": [
+        { "critere": "12 000 000 photosites", "points": 3 },
+        { "critere": "Vert 6 000 000, rouge 3 000 000, bleu 3 000 000", "points": 6 },
+        { "critere": "La sensibilité de l'œil au vert", "points": 3 },
+        { "critere": "Le dématriçage reconstitue les composantes manquantes à partir des voisins", "points": 5 },
+        { "critere": "256 niveaux", "points": 3 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 4 000 × 3 000 = **12 000 000 photosites**.\n2. Sur 4 filtres, 2 sont verts, 1 rouge, 1 bleu. **Vert** : 12 000 000 × 2 / 4 = **6 000 000**. **Rouge** : 12 000 000 / 4 = **3 000 000**. **Bleu** : **3 000 000**.\n3. Parce que l'**œil humain est plus sensible au vert** : on mesure davantage cette couleur.\n4. Un algorithme, le **dématriçage**, **reconstitue les trois composantes** de chaque pixel **à partir des voisins** : par exemple, pour un photosite vert, le rouge et le bleu sont estimés à partir des photosites rouges et bleus qui l'entourent. Un capteur ne voit pas les couleurs : le reste est du calcul.\n5. Sur **8 bits**, chaque mesure prend **256 niveaux**."
+    },
+    {
+      "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+      "difficulte": 3,
+      "titre": "48 mégapixels, est-ce mieux ?",
+      "consigne": "Rédige une réponse argumentée en t'appuyant sur les facteurs de qualité vus en cours.",
+      "enonce": "**Situation.** Julien compare deux appareils :\n\n| | Téléphone | Appareil photo |\n|---|---|---|\n| Nombre de pixels | 48 millions | 24 millions |\n| Taille du capteur | Très petit | Grand |\n| Formats proposés | JPEG | JPEG et RAW (12 bits, soit 4 096 niveaux par composante) |\n\nJulien affirme : « Le téléphone est deux fois meilleur, il a deux fois plus de mégapixels. »\n\n1. Discute l'affirmation de Julien : quel facteur compte davantage que le nombre de mégapixels ? Pourquoi ?\n2. Julien photographie un concert dans une salle sombre et monte la **sensibilité**. Quel défaut apparaît ? Cite deux autres réglages ou éléments qui déterminent la quantité de lumière ou la netteté.\n3. Quel est l'intérêt du format **RAW** ? Compare les 4 096 niveaux par composante aux 256 d'un codage sur 8 bits.\n4. Pourquoi le téléphone peut-il malgré tout donner de bonnes photos ?",
+      "bareme": [
+        { "critere": "Affirmation fausse : la taille du capteur et des photosites est plus déterminante que le nombre de mégapixels", "points": 5 },
+        { "critere": "Montée de la sensibilité = bruit ; ouverture, durée d'exposition ou qualité de l'optique citées", "points": 5 },
+        { "critere": "RAW conserve les données du capteur avant traitement ; 4 096 niveaux, 16 fois plus que 256", "points": 5 },
+        { "critere": "Le traitement logiciel embarqué, aujourd'hui décisif dans les téléphones", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Julien se trompe. Selon le cours, la **taille du capteur et des photosites** est **plus déterminante que le seul nombre de mégapixels**. Sur un très petit capteur, 48 millions de photosites sont minuscules : chacun reçoit peu de lumière. L'appareil a deux fois moins de pixels, mais des photosites bien plus grands.\n2. La montée de la **sensibilité** génère du **bruit**. La quantité de lumière reçue dépend aussi de l'**ouverture** et de la **durée d'exposition** ; la netteté dépend de la **qualité de l'optique** (aberrations).\n3. Le format **RAW** **conserve les données du capteur avant traitement**. Sur 12 bits, il offre **4 096 niveaux** par composante, contre **256** sur 8 bits : 4 096 / 256 = **16 fois plus** de nuances, donc plus de marge pour corriger la photo ensuite.\n4. Parce que le **traitement logiciel embarqué** est aujourd'hui **décisif dans les téléphones** : il compense en partie la petite taille du capteur."
+    },
+    {
+      "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+      "difficulte": 1,
+      "titre": "Le principe du positionnement",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Un téléphone émet-il un signal vers les satellites pour se localiser ? Explique ce que fait le satellite et ce que fait le récepteur.\n2. Associe chaque système de positionnement à son origine : GPS, Galileo, GLONASS, Beidou.\n3. Pourquoi les satellites embarquent-ils une **horloge atomique** ?",
+      "bareme": [
+        { "critere": "Non : le satellite émet l'heure d'émission et sa position, le récepteur compare à l'heure de réception et en déduit sa distance", "points": 8 },
+        { "critere": "GPS États-Unis, Galileo Union européenne, GLONASS Russie, Beidou Chine", "points": 6 },
+        { "critere": "L'heure doit être extrêmement précise : une infime erreur de temps donne une grande erreur de distance", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Non** : le téléphone **écoute et calcule**. Le **satellite** émet en permanence l'**heure d'émission**, donnée par une horloge atomique, et **sa position**. Le **récepteur** compare cette heure à l'**heure de réception** et en déduit sa **distance** au satellite.\n2. **GPS** : États-Unis. **Galileo** : Union européenne. **GLONASS** : Russie. **Beidou** : Chine.\n3. La distance est calculée à partir d'un **temps de vol** : une **erreur infime sur l'heure** produit une **grande erreur de distance**. Il faut donc une horloge extrêmement précise, l'**horloge atomique**."
+    },
+    {
+      "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+      "difficulte": 2,
+      "titre": "Satellite après satellite",
+      "consigne": "Montre tes calculs et explique chaque étape de la trilatération.",
+      "enonce": "**Donnée.** Le signal d'un satellite voyage à environ **300 000 km par seconde**.\n\n1. Le signal d'un satellite met **0,07 seconde** pour arriver au récepteur. À quelle distance du satellite se trouve le récepteur ?\n2. Complète : avec **1** satellite, la position possible est… ; avec **2**, … ; avec **3**, … ; avec **4**, … .\n3. Le cours précise : « Ce n'est pas de la triangulation d'angles. » Explique.\n4. Une erreur de **0,001 seconde** (un millième) sur l'horloge du récepteur fausserait la distance de combien de kilomètres ? Qu'en conclus-tu sur le rôle du quatrième satellite ?",
+      "bareme": [
+        { "critere": "300 000 × 0,07 = 21 000 km", "points": 4 },
+        { "critere": "1 : une sphère ; 2 : un cercle ; 3 : deux points dont un seul plausible ; 4 : position et altitude avec correction de l'horloge", "points": 7 },
+        { "critere": "Calcul de distances à partir de temps de vol, et non mesure d'angles", "points": 4 },
+        { "critere": "300 000 × 0,001 = 300 km ; le 4e satellite corrige l'horloge du récepteur, qui n'est pas atomique", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Distance = vitesse × temps = 300 000 × 0,07 = **21 000 km**.\n2. Avec **1** satellite : une **sphère** de positions possibles. Avec **2** : un **cercle**. Avec **3** : **deux points**, dont un seul est plausible. Avec **4** : la **position et l'altitude**, en **corrigeant l'horloge du récepteur**.\n3. On ne mesure pas des angles : on calcule des **distances** à partir de **temps de vol** du signal. C'est la **trilatération**.\n4. 300 000 × 0,001 = **300 km** d'erreur. L'horloge du récepteur **n'est pas atomique** : une erreur minuscule rendrait la position inutilisable. Le **quatrième satellite** sert justement à **corriger cette horloge**."
+    },
+    {
+      "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+      "difficulte": 3,
+      "titre": "La journée de Zoé",
+      "consigne": "Analyse chaque situation, puis rédige un court paragraphe argumenté.",
+      "enonce": "**Situation.** Zoé utilise la localisation de son téléphone toute la journée :\n\n| Moment | Lieu |\n|---|---|\n| 8 h | Dans une rue étroite, entre de hauts immeubles |\n| 10 h | En randonnée, sur un plateau dégagé |\n| 12 h | Dans un centre commercial |\n| 15 h | Dans un tunnel routier |\n\n1. Pour chaque moment, indique la **précision** attendue du positionnement par satellite et explique pourquoi.\n2. Au centre commercial et dans le tunnel, le téléphone indique tout de même une position. Quels **appoints** utilise-t-il ? Que fait chacun ?\n3. Une application de lampe de poche demande à Zoé l'accès permanent à sa position. En quelques lignes, explique pourquoi la position est une donnée **sensible** et ce que Zoé devrait faire.",
+      "bareme": [
+        { "critere": "8 h dégradée par réflexion sur les façades ; 10 h quelques mètres en terrain dégagé", "points": 5 },
+        { "critere": "12 h et 15 h fortement dégradée voire nulle (intérieur, tunnel)", "points": 4 },
+        { "critere": "Appoints : antennes du réseau mobile, wifi répertoriés, capteurs internes, avec leur apport", "points": 5 },
+        { "critere": "Position sensible : domicile, travail, habitudes, fréquentations ; protégée par le RGPD ; limiter l'autorisation à l'usage réel", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **8 h** : en ville, la précision est **dégradée** par la **réflexion des signaux sur les façades**. **10 h** : en terrain dégagé, précision de **quelques mètres**. **12 h** : en intérieur, précision **fortement dégradée, voire nulle** (les signaux traversent mal les bâtiments). **15 h** : en tunnel, **fortement dégradée, voire nulle**.\n2. Le téléphone utilise des **appoints** : les **antennes du réseau mobile** (une position approchée, rapide) ; les **réseaux wifi répertoriés** (une position en intérieur, utile au centre commercial) ; les **capteurs internes** (accéléromètre, gyroscope, boussole), qui assurent la **continuité entre deux points**, par exemple dans le tunnel.\n3. La position est l'une des données les plus **sensibles** : elle révèle le **domicile**, le **travail**, les **habitudes**, les **fréquentations**. Le **RGPD** la protège. Une lampe de poche n'a aucun besoin de savoir où est Zoé : l'autorisation demandée par une application **mérite d'être limitée à l'usage réel**. Zoé devrait **refuser** cet accès."
+    },
+    {
+      "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+      "difficulte": 1,
+      "titre": "La route devient un graphe",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Pour calculer un itinéraire, comment modélise-t-on un réseau routier ? Que représentent les **sommets**, les **arêtes** et le **poids** ?\n2. Cite trois poids possibles et l'itinéraire que chacun donne.\n3. Présente l'**algorithme de Dijkstra** : sa date, ce qu'il calcule, sa condition sur les poids.",
+      "bareme": [
+        { "critere": "Graphe pondéré : sommets = intersections, arêtes = tronçons, poids = ce que l'on minimise", "points": 6 },
+        { "critere": "Distance (plus court), durée (plus rapide), coût composite (péages, pente, interdictions)", "points": 6 },
+        { "critere": "1959 ; plus court chemin d'un sommet vers tous les autres ; poids positifs", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. On modélise le réseau par un **graphe pondéré** : les **sommets** sont les **intersections**, les **arêtes** les **tronçons de route**, et le **poids** de chaque arête est **ce que l'on cherche à minimiser**.\n2. La **distance** donne le trajet le plus **court** ; la **durée** donne le plus **rapide** (vitesse autorisée, type de voie, feux, trafic) ; un **coût composite** tient compte des **péages**, de la **pente** ou des **interdictions de tourner**.\n3. L'**algorithme de Dijkstra** date de **1959**. Il calcule le **plus court chemin d'un sommet vers tous les autres**. Il part de l'origine, explore les sommets les plus proches et met à jour les distances. Condition : les poids doivent être **positifs**."
+    },
+    {
+      "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+      "difficulte": 2,
+      "titre": "De la maison au lycée",
+      "consigne": "Applique l'algorithme de Dijkstra en présentant tes étapes.",
+      "enonce": "**Document.** Le trajet de Nils entre sa maison **M** et le lycée **L** passe par trois carrefours A, B et C. Les distances sont en kilomètres :\n\n| Tronçon | Distance |\n|---|---|\n| M — A | 2 |\n| M — B | 5 |\n| A — B | 1 |\n| A — C | 6 |\n| B — C | 2 |\n| B — L | 7 |\n| C — L | 1 |\n\n1. Applique l'algorithme de Dijkstra à partir de M : à chaque étape, indique le sommet choisi et les distances mises à jour.\n2. Quel est le plus court chemin de M à L, et sa longueur ?\n3. Vérifie ton résultat en calculant la longueur du chemin M — B — L.",
+      "bareme": [
+        { "critere": "Étapes justes : M 0 ; A choisi (2), B mis à jour à 3 ; B choisi (3), C à 5 et L à 10 ; C choisi (5), L mis à jour à 6", "points": 10 },
+        { "critere": "Plus court chemin M-A-B-C-L de 6 km", "points": 6 },
+        { "critere": "M-B-L = 5 + 7 = 12 km, plus long", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Départ : M = 0, les autres inconnus.\n- On part de **M** : A = 2, B = 5.\n- Sommet le plus proche non traité : **A (2)**. Par A : B = min(5 ; 2 + 1) = **3** ; C = 2 + 6 = **8**.\n- Suivant : **B (3)**. Par B : C = min(8 ; 3 + 2) = **5** ; L = 3 + 7 = **10**.\n- Suivant : **C (5)**. Par C : L = min(10 ; 5 + 1) = **6**.\n- Suivant : **L (6)** : c'est fini.\n2. Le plus court chemin est **M — A — B — C — L**, de longueur 2 + 1 + 2 + 1 = **6 km**.\n3. M — B — L = 5 + 7 = **12 km** : deux fois plus long. Le chemin le plus direct en nombre de tronçons n'est pas le plus court."
+    },
+    {
+      "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+      "difficulte": 3,
+      "titre": "Le plus court n'est pas le plus rapide",
+      "consigne": "Fais les calculs demandés, puis argumente.",
+      "enonce": "**Document.** Même réseau que pour le trajet de Nils, mais on connaît cette fois la **durée** de chaque tronçon aux heures de pointe, en minutes :\n\n| Tronçon | Distance (km) | Durée (min) |\n|---|---|---|\n| M — A | 2 | 4 |\n| M — B | 5 | 6 |\n| A — B | 1 | 3 |\n| A — C | 6 | 10 |\n| B — C | 2 | 8 |\n| B — L | 7 | 5 |\n| C — L | 1 | 2 |\n\n1. Le chemin le plus court en distance est M — A — B — C — L (6 km). Calcule sa durée.\n2. Calcule la durée des chemins M — B — L et M — A — B — L. Quel est le plus rapide des trois ? Quelle distance fait-il ?\n3. Que montre cet exemple sur le choix du **poids** ?\n4. Sur un réseau de millions de sommets, pourquoi utilise-t-on l'algorithme **A étoile** plutôt que Dijkstra seul ? Explique son principe.\n5. Toutes les applications envoient les automobilistes par la même petite rue. Cite deux effets réels de ce calcul d'itinéraire sur le terrain.",
+      "bareme": [
+        { "critere": "M-A-B-C-L = 4 + 3 + 8 + 2 = 17 min", "points": 4 },
+        { "critere": "M-B-L = 11 min, M-A-B-L = 12 min ; le plus rapide M-B-L, 12 km", "points": 5 },
+        { "critere": "Changer le poids change l'itinéraire : le plus court n'est pas le plus rapide", "points": 3 },
+        { "critere": "A étoile : estimation de la distance restante (vol d'oiseau) pour explorer d'abord dans la bonne direction ; Dijkstra explore trop", "points": 4 },
+        { "critere": "Deux effets : report du trafic dans des rues résidentielles, commerce écarté, déviation saturée", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. M — A — B — C — L : 4 + 3 + 8 + 2 = **17 minutes**.\n2. M — B — L : 6 + 5 = **11 minutes**. M — A — B — L : 4 + 3 + 5 = **12 minutes**. Le plus rapide est **M — B — L**, en 11 minutes, mais il fait 5 + 7 = **12 km**, deux fois plus que le plus court.\n3. **Changer le poids change l'itinéraire** : minimiser la distance donne M — A — B — C — L, minimiser la durée donne M — B — L. **Le plus court n'est pas le plus rapide.** Un GPS ne cherche pas la belle route : il minimise la quantité qu'on lui a demandé de minimiser.\n4. Sur un réseau de millions de sommets, **Dijkstra seul explore trop** : il avance dans toutes les directions. **A étoile** ajoute une **estimation de la distance restante** (le **vol d'oiseau**) pour **explorer d'abord dans la bonne direction**. On utilise aussi des **prétraitements** qui hiérarchisent le réseau (les autoroutes d'abord).\n5. Effets réels : **reporter le trafic dans des rues résidentielles**, **faire disparaître un commerce d'un trajet**, **saturer une déviation** que tout le monde emprunte au même moment."
+    },
+    {
+      "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+      "difficulte": 1,
+      "titre": "Capteurs, commande, actionneurs",
+      "consigne": "Classe chaque élément et justifie à l'aide des définitions du cours.",
+      "enonce": "Voici des éléments d'un **portail automatique** :\n\n| Élément |\n|---|\n| a) Le moteur qui ouvre le portail |\n| b) Le détecteur de présence |\n| c) Le microcontrôleur qui applique le programme |\n| d) Le voyant clignotant |\n| e) Le capteur de lumière |\n\n1. Définis les **trois organes** d'un système automatisé.\n2. Classe chacun des cinq éléments dans l'un des trois organes.",
+      "bareme": [
+        { "critere": "Capteurs : transforment une grandeur physique en signal ; commande : applique un programme ; actionneurs : agissent sur le monde", "points": 9 },
+        { "critere": "Classement juste : a et d actionneurs, b et e capteurs, c partie commande", "points": 11 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Les **capteurs** transforment une **grandeur physique en signal** (température, lumière, distance, présence…). La **partie commande** **applique un programme** (un microcontrôleur). Les **actionneurs** **agissent sur le monde** (moteur, vérin, résistance chauffante, vanne, voyant).\n2. a) Le moteur : **actionneur**. b) Le détecteur de présence : **capteur**. c) Le microcontrôleur : **partie commande**. d) Le voyant clignotant : **actionneur**. e) Le capteur de lumière : **capteur**."
+    },
+    {
+      "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+      "difficulte": 2,
+      "titre": "Grille-pain ou thermostat",
+      "consigne": "Lis la situation et réponds en justifiant.",
+      "enonce": "**Situation.** Dans la cuisine de Salomé, deux appareils :\n\n- un **grille-pain** qui chauffe pendant 2 minutes, puis s'arrête, que le pain soit doré ou non ;\n- un **radiateur** réglé sur **20 °C** : il mesure la température de la pièce, chauffe quand elle est en dessous de 20 °C et s'arrête quand elle l'atteint.\n\n1. Lequel fonctionne en **boucle ouverte** ? Lequel en **boucle fermée** ? Justifie.\n2. Pour le radiateur, identifie le **capteur**, l'**actionneur** et la **consigne**.\n3. Explique la phrase du cours : « Sans rétroaction, une machine applique une recette. Avec rétroaction, elle poursuit un objectif. »",
+      "bareme": [
+        { "critere": "Grille-pain en boucle ouverte (exécute sans vérifier) ; radiateur en boucle fermée (mesure et corrige)", "points": 7 },
+        { "critere": "Capteur de température, résistance chauffante (actionneur), consigne 20 °C", "points": 6 },
+        { "critere": "Boucle ouverte : suit une durée fixe quel que soit le résultat ; boucle fermée : mesure l'effet et corrige pour atteindre la consigne", "points": 7 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le **grille-pain** fonctionne en **boucle ouverte** : il exécute sa tâche (chauffer 2 minutes) **sans vérifier le résultat**. Le **radiateur** fonctionne en **boucle fermée** : il **mesure l'effet de son action** (la température) et **corrige** (il chauffe ou s'arrête).\n2. **Capteur** : le capteur de **température**. **Actionneur** : la **résistance chauffante** du radiateur. **Consigne** : **20 °C**, la valeur à laquelle la partie commande compare la mesure.\n3. Le grille-pain **applique une recette** : 2 minutes, quel que soit l'état du pain. Le radiateur **poursuit un objectif** : il ajuste son action tant que la température n'est pas celle de la consigne. C'est la **rétroaction** qui fait la différence."
+    },
+    {
+      "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+      "difficulte": 3,
+      "titre": "La serre du lycée",
+      "consigne": "Analyse le système, puis argumente sur ses enjeux.",
+      "enonce": "**Situation.** Le lycée installe une serre automatisée. Un capteur mesure la température ; un microcontrôleur la compare à une **consigne de 22 °C** ; s'il fait trop chaud, il ouvre les fenêtres de toit grâce à un **vérin** ; s'il fait trop froid, il allume un **chauffage**. Le système est relié au réseau du lycée pour être surveillé à distance.\n\n1. Décris la **boucle de rétroaction** de la serre, étape par étape, en nommant les trois organes.\n2. Un jour, le capteur tombe en panne et indique **30 °C** en permanence, alors qu'il fait 12 °C dehors. Que fait le système ? Quelles conséquences pour les plantes ?\n3. Quel risque supplémentaire apparaît parce que la serre est **connectée** au réseau ?\n4. Le cours affirme qu'« un même schéma décrit une machine à laver et un avion en pilotage automatique ». Explique, puis cite une question qui reste ouverte pour les véhicules autonomes.",
+      "bareme": [
+        { "critere": "Boucle : capteur mesure, commande compare à 22 °C, actionneurs (vérin, chauffage) corrigent, nouvelle mesure", "points": 6 },
+        { "critere": "Capteur défaillant : le système croit qu'il fait trop chaud, ouvre les fenêtres, n'allume jamais le chauffage ; les plantes gèlent ou souffrent du froid", "points": 5 },
+        { "critere": "Cybersécurité : un système connecté peut être attaqué ou piloté à distance", "points": 4 },
+        { "critere": "Même triplet capteurs, commande, actionneurs, seule la complexité change ; question de la responsabilité en cas d'accident", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le **capteur** mesure la température de la serre et la transforme en signal. La **partie commande** (le microcontrôleur) la **compare à la consigne** de 22 °C. Si elle est trop haute, elle commande le **vérin**, qui ouvre les fenêtres ; si elle est trop basse, elle commande le **chauffage** : ce sont les **actionneurs**. Le capteur mesure à nouveau l'effet de l'action, et le système corrige encore : c'est une **boucle fermée**.\n2. Le système **décide à partir d'une information fausse** : il croit qu'il fait 30 °C, donc trop chaud. Il **ouvre les fenêtres** et **n'allume jamais le chauffage**, alors qu'il fait 12 °C dehors. Les plantes risquent de souffrir du froid, voire de geler. C'est le risque de **fiabilité** : un capteur en panne fait prendre une mauvaise décision.\n3. La **cybersécurité** : dès que le système est **connecté**, quelqu'un peut tenter d'y entrer, de fausser ses mesures ou de le piloter à distance.\n4. Tous ces systèmes reposent sur le **même triplet** : des **capteurs**, une **partie commande**, des **actionneurs**, souvent en boucle fermée ; **seule la complexité change**. Pour les **véhicules autonomes**, la question de la **responsabilité en cas d'accident** reste largement ouverte."
+    },
+    {
+      "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+      "difficulte": 1,
+      "titre": "Des objets qui parlent au réseau",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Qu'est-ce que l'**Internet des objets** ?\n2. Cite **trois facteurs** qui l'ont rendu possible et l'apport de chacun.\n3. Associe chaque application à son domaine : compteur communicant, sonde d'humidité dans un champ, traçabilité des colis, éclairage adaptatif des rues.",
+      "bareme": [
+        { "critere": "Extension du réseau à des objets du quotidien capables de mesurer, communiquer et parfois agir", "points": 5 },
+        { "critere": "Trois facteurs justes avec leur apport : miniaturisation et baisse du coût des capteurs, réseaux sans fil, IPv6, cloud", "points": 9 },
+        { "critere": "Énergie, agriculture, logistique, ville", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'**Internet des objets** désigne l'**extension du réseau à des objets du quotidien** capables de **mesurer**, de **communiquer** et parfois d'**agir**.\n2. La **miniaturisation** et la **chute du coût des capteurs** (des objets à quelques euros) ; les réseaux **sans fil** (wifi, Bluetooth, 4G et 5G, réseaux basse consommation à longue portée) ; l'**IPv6** (un adressage sans limite pratique) ; le **cloud** (stocker et traiter les flux collectés).\n3. Compteur communicant : **énergie**. Sonde d'humidité : **agriculture** (agriculture de précision). Traçabilité des colis : **logistique**. Éclairage adaptatif : **ville**."
+    },
+    {
+      "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+      "difficulte": 2,
+      "titre": "La maison connectée d'Hugo",
+      "consigne": "Analyse la situation et propose des corrections justifiées.",
+      "enonce": "**Situation.** Hugo a installé chez lui une caméra connectée à 25 €, une montre qui suit son sommeil et un thermostat pilotable depuis son téléphone. Il n'a jamais changé le mot de passe de la caméra (« admin »), ni fait une seule mise à jour.\n\n1. Relève les **faiblesses** de l'installation d'Hugo et la conséquence de chacune.\n2. Pourquoi la caméra d'Hugo pourrait-elle servir à attaquer d'autres personnes ? Appuie-toi sur l'exemple vu en cours.\n3. Quelles informations **intimes** ces trois objets mesurent-ils ?\n4. Propose deux corrections simples à Hugo.",
+      "bareme": [
+        { "critere": "Mot de passe par défaut : objet accessible à tous ; absence de mise à jour : failles ouvertes (et éventuel chiffrement absent)", "points": 6 },
+        { "critere": "Recrue d'un réseau de machines compromises ; botnet Mirai, caméras, grands services saturés en 2016", "points": 5 },
+        { "critere": "Présence, sommeil, déplacements", "points": 4 },
+        { "critere": "Changer le mot de passe par défaut et faire les mises à jour (ou vérifier le chiffrement)", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le **mot de passe par défaut** (« admin ») : l'objet est **accessible à tous**. L'**absence de mise à jour** : les **failles restent ouvertes**. S'y ajoute peut-être l'absence de **chiffrement** : les données circuleraient en clair. Ces objets deviennent des **portes d'entrée sur le réseau domestique**.\n2. Un objet mal protégé peut être pris en main et devenir une **recrue d'un réseau de machines compromises**. En **2016**, le botnet **Mirai** a mobilisé des **caméras connectées** pour **saturer de grands services**.\n3. Ces objets mesurent la **présence** à la maison (caméra, thermostat), le **sommeil** (montre), les **déplacements**.\n4. **Changer le mot de passe par défaut** pour un mot de passe long et unique ; **faire les mises à jour** pour corriger les failles connues."
+    },
+    {
+      "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+      "difficulte": 3,
+      "titre": "Des milliards de capteurs à trois euros",
+      "consigne": "Rédige une réponse argumentée, organisée en paragraphes.",
+      "enonce": "**Document.**\n\n> « Un capteur à trois euros qui envoie une mesure par heure, multiplié par des milliards : voilà le véritable changement d'échelle. » (extrait du cours)\n\n1. Explique ce document : en quoi le changement d'échelle tient-il au nombre d'objets plutôt qu'à la puissance de chacun ? Cite deux usages qui en profitent (industrie, agriculture, ville…).\n2. Un capteur envoie **une mesure par heure**. Combien de mesures envoie-t-il en une journée ? En une année de 365 jours ? Que représentent ces mesures pour **un million** de capteurs en une année ?\n3. Présente les enjeux de l'Internet des objets pour la **vie privée**, l'**environnement** et la **souveraineté**.",
+      "bareme": [
+        { "critere": "Changement d'échelle expliqué (objets peu chers, en masse, qui mesurent en continu) et deux usages justes", "points": 5 },
+        { "critere": "24 mesures par jour, 8 760 par an, 8 760 000 000 pour un million de capteurs", "points": 5 },
+        { "critere": "Vie privée : présence, sommeil, déplacements mesurés", "points": 3 },
+        { "critere": "Environnement : fabrication, terres rares, obsolescence, déchets électroniques", "points": 4 },
+        { "critere": "Souveraineté : un objet peut cesser de fonctionner quand le fabricant ferme ses serveurs", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Chaque capteur est simple et peu cher (**quelques euros**, grâce à la miniaturisation), mais on en déploie **des milliards**, qui mesurent en continu. C'est leur **nombre** qui change tout : une multitude de mesures sur l'habitat, l'énergie, les champs, les villes. Usages : la **maintenance prédictive** dans l'industrie, l'**agriculture de précision** (sondes d'humidité), l'**éclairage adaptatif**, le **stationnement** et la **qualité de l'air** en ville, les **compteurs communicants**.\n2. Une mesure par heure : **24** par jour ; 24 × 365 = **8 760** par an. Pour un million de capteurs : 8 760 × 1 000 000 = **8 760 000 000** mesures par an, près de 9 milliards : d'où le besoin du **cloud** pour stocker et traiter ces flux.\n3. **Vie privée** : ces objets mesurent la **présence**, le **sommeil**, les **déplacements**. **Environnement** : leur **fabrication**, les **terres rares**, l'**obsolescence** et les **déchets électroniques**. **Souveraineté** : un objet **cesse parfois de fonctionner quand son fabricant ferme ses serveurs** ; l'utilisateur dépend d'une entreprise pour un objet qu'il a acheté."
+    }
+  ]
+}

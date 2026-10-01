@@ -564,7 +564,7 @@ Tout entier supérieur à 1 s’écrit d’une seule façon comme produit de fac
             ['Quelle égalité définit la division euclidienne ?', ['a = b × q + r, avec 0 ≤ r < b', 'a = b × q, sans reste', 'a = b + q + r', 'a = (b + q) × r'], 0, 'Le reste est toujours inférieur au diviseur.'],
             ['Quel est le reste de la division de 47 par 5 ?', ['2', '9', '7', '5'], 0, '47 = 5 × 9 + 2.'],
             ['Que dit-on quand le reste est nul ?', ['a est divisible par b, b est un diviseur de a, a est un multiple de b', 'a est premier', 'b est premier', 'La division est impossible'], 0, 'Trois formulations pour une même relation.'],
-            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs', 'Un entier impair', 'Un entier divisible par 2', 'Le premier d’une liste'], 0, '1 et lui-même.'],
+            ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs', 'Un entier impair', 'Un entier divisible par 2', 'Le premier d’une liste'], 0, 'Ses deux seuls diviseurs positifs sont 1 et lui-même. C’est pourquoi 1 n’est pas premier, et 2 est le seul nombre premier pair.'],
             ['Quel est le seul nombre premier pair ?', ['2', '4', '0', 'Il n’y en a pas'], 0, 'Tout autre nombre pair est divisible par 2.'],
             ['Quelle est la décomposition en facteurs premiers de 60 ?', ['2² × 3 × 5', '2 × 3 × 10', '4 × 15', '2³ × 3 × 5'], 0, 'On divise successivement par le plus petit facteur premier.'],
             ['Quel est le critère de divisibilité par 3 ?', ['La somme des chiffres est divisible par 3', 'Le nombre se termine par 3', 'Le nombre est impair', 'Le nombre est divisible par 9'], 0, 'Le même principe vaut pour 9.'],

@@ -1,0 +1,501 @@
+{
+  "id": "maths-brevet-2025-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2025,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "25GENMATMEAG1",
+  "titre": "Brevet 2025 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : cinq exercices indépendants sur 100 points, dont un QCM et un exercice d'algorithmique avec Scratch. Tout est à traiter, dans l'ordre que tu veux.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Probabilités : deux urnes. L'urne A contient 6 boules (7 ; 10 ; 12 ; 15 ; 24 ; 30), l'urne B en contient 9 (2 ; 5 ; 6 ; 8 ; 17 ; 18 ; 21 ; 22 ; 25).",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Une probabilité, c'est toujours le nombre de cas favorables divisé par le nombre de cas possibles : ici, le nombre de boules de l'urne.",
+        "Urne A : un nombre pair a une probabilité de $\\frac{4}{6} = \\frac{2}{3}$. Urne B : un nombre premier (2, 5, 17) a une probabilité de $\\frac{3}{9} = \\frac{1}{3}$.",
+        "L'urne A contient 3 multiples de 6, l'urne B seulement 2.",
+        "Obtenir 20 ou plus : $\\frac{1}{3}$ dans chaque urne. Avec une boule 50 en plus, on passe à $\\frac{3}{7}$ pour A et $\\frac{2}{5}$ pour B : ce n'est plus égal."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "On tire une boule dans l'urne A : probabilité d'obtenir un nombre pair.",
+          "blocs": [
+            { "type": "texte", "texte": "Les boules sont indiscernables au toucher : chaque boule a la même chance d'être tirée. On est dans une situation d'**équiprobabilité**." },
+            { "type": "texte", "texte": "L'urne A contient 6 boules. Les numéros pairs sont 10, 12, 24 et 30 : il y en a 4." },
+            { "type": "formule", "tex": "P(\\text{pair}) = \\frac{4}{6} = \\frac{2}{3}" },
+            { "type": "reponse", "texte": "La probabilité d'obtenir un nombre pair dans l'urne A est $\\frac{2}{3}$." },
+            { "type": "astuce", "texte": "Écris toujours la liste des cas favorables sur ta copie avant la fraction : si tu te trompes d'une boule, le correcteur voit quand même que ta méthode est la bonne." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "On tire une boule dans l'urne B : justifier que la probabilité d'obtenir un nombre premier est $\\frac{1}{3}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Un **nombre premier** a exactement deux diviseurs : 1 et lui-même. On passe les 9 boules en revue." },
+            {
+              "type": "tableau",
+              "entetes": ["Numéro", "Premier ?", "Pourquoi"],
+              "lignes": [
+                ["2", "oui", "diviseurs : 1 et 2"],
+                ["5", "oui", "diviseurs : 1 et 5"],
+                ["6", "non", "$6 = 2 \\times 3$"],
+                ["8", "non", "$8 = 2 \\times 4$"],
+                ["17", "oui", "diviseurs : 1 et 17"],
+                ["18", "non", "$18 = 2 \\times 9$"],
+                ["21", "non", "$21 = 3 \\times 7$"],
+                ["22", "non", "$22 = 2 \\times 11$"],
+                ["25", "non", "$25 = 5 \\times 5$"]
+              ]
+            },
+            { "type": "texte", "texte": "Il y a donc 3 nombres premiers (2, 5 et 17) sur 9 boules." },
+            { "type": "formule", "tex": "P(\\text{premier}) = \\frac{3}{9} = \\frac{1}{3}" },
+            { "type": "reponse", "texte": "Trois boules sur neuf portent un nombre premier : la probabilité vaut bien $\\frac{3}{9} = \\frac{1}{3}$." },
+            { "type": "piege", "texte": "2 est premier (c'est le seul nombre premier pair), et 21 ne l'est pas : $21 = 3 \\times 7$. Ce sont les deux erreurs classiques." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelle urne contient le plus de boules dont le numéro est un multiple de 6 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Un multiple de 6 est un nombre de la table de 6 : 6, 12, 18, 24, 30…" },
+            { "type": "liste", "items": [
+              "Urne A : 12, 24 et 30, soit **3 boules** ($12 = 6 \\times 2$, $24 = 6 \\times 4$, $30 = 6 \\times 5$).",
+              "Urne B : 6 et 18, soit **2 boules** ($6 = 6 \\times 1$, $18 = 6 \\times 3$)."
+            ] },
+            { "type": "reponse", "texte": "C'est l'**urne A** qui contient le plus de multiples de 6 : 3 boules contre 2." },
+            { "type": "piege", "texte": "La question porte sur le NOMBRE de boules, pas sur une probabilité. Pas besoin de fraction ici (d'ailleurs, en probabilité, A gagnerait aussi : $\\frac{3}{6}$ contre $\\frac{2}{9}$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Démontrer que la probabilité d'obtenir un nombre supérieur ou égal à 20 est la même quelle que soit l'urne.",
+          "blocs": [
+            { "type": "texte", "texte": "« Supérieur ou égal à 20 » : 20 lui-même compterait, mais aucune boule ne porte 20." },
+            { "type": "liste", "items": [
+              "Urne A : 24 et 30, soit 2 boules sur 6 : $P = \\frac{2}{6} = \\frac{1}{3}$.",
+              "Urne B : 21, 22 et 25, soit 3 boules sur 9 : $P = \\frac{3}{9} = \\frac{1}{3}$."
+            ] },
+            { "type": "reponse", "texte": "Dans les deux urnes, la probabilité d'obtenir un nombre supérieur ou égal à 20 vaut $\\frac{1}{3}$ : elle est la même." },
+            { "type": "astuce", "texte": "Pour comparer deux fractions, simplifie-les d'abord : $\\frac{2}{6}$ et $\\frac{3}{9}$ n'ont pas l'air égales, mais les deux valent $\\frac{1}{3}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "On ajoute une boule 50 dans chaque urne : la probabilité d'obtenir 20 ou plus est-elle toujours la même ?",
+          "blocs": [
+            { "type": "texte", "texte": "Ajouter une boule change DEUX choses : le nombre de cas favorables (50 est supérieur à 20) ET le nombre total de boules." },
+            { "type": "liste", "items": [
+              "Urne A : 7 boules, dont 3 supérieures ou égales à 20 (24, 30, 50) : $P = \\frac{3}{7}$.",
+              "Urne B : 10 boules, dont 4 supérieures ou égales à 20 (21, 22, 25, 50) : $P = \\frac{4}{10} = \\frac{2}{5}$."
+            ] },
+            { "type": "texte", "texte": "On compare en mettant au même dénominateur, 35 :" },
+            { "type": "formule", "tex": "\\frac{3}{7} = \\frac{15}{35} \\quad \\text{et} \\quad \\frac{2}{5} = \\frac{14}{35}" },
+            { "type": "texte", "texte": "Ou à la calculatrice : $\\frac{3}{7} \\approx 0{,}429$ et $\\frac{2}{5} = 0{,}4$." },
+            { "type": "reponse", "texte": "Non : les probabilités ne sont plus égales. Avec l'urne A ($\\frac{3}{7}$), on a un peu plus de chances d'obtenir 20 ou plus qu'avec l'urne B ($\\frac{2}{5}$)." },
+            { "type": "piege", "texte": "Ajouter la même boule aux deux urnes ne garde pas l'égalité : elle pèse plus dans la petite urne A (une boule sur 7) que dans la grande urne B (une boule sur 10)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Un aquathlon. Partie A, la course à pied : le parcours ACDEB, avec A, C, B alignés, A, D, E alignés, ADC rectangle en A, AC = 480 m, CB = 120 m, AE = 250 m, DE = 50 m. Partie B, la natation : les temps de 9 élèves sur 200 m.",
+      "points": 23,
+      "minutes": 25,
+      "enBref": [
+        "AD = AE − DE = 200 m, puis le théorème de Pythagore dans ADC donne CD = 520 m.",
+        "La réciproque du théorème de Thalès prouve que (CD) et (BE) sont parallèles : $\\frac{AC}{AB} = \\frac{AD}{AE} = 0{,}8$.",
+        "La tangente donne l'angle $\\widehat{ACD} \\approx 22{,}6°$, plus que 20° : le parcours est validé.",
+        "Le temps médian est le 5e des 9 temps rangés : 6 min.",
+        "Le poisson rouge nage 200 m en 2 min 24 s, bien plus vite que le meilleur élève (5 min 30 s)."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : la course à pied" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Justifier que AD = 200 m.",
+          "blocs": [
+            { "type": "texte", "texte": "Les points A, D, E sont alignés, et D est entre A et E. Donc $AE = AD + DE$, c'est-à-dire :" },
+            { "type": "formule", "tex": "AD = AE - DE = 250 - 50 = 200 \\text{ m}" },
+            { "type": "reponse", "texte": "$AD = 200$ m." },
+            { "type": "attendu", "texte": "Le mot « alignés » doit apparaître : c'est lui qui autorise la soustraction des longueurs." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer la longueur CD.",
+          "blocs": [
+            { "type": "texte", "texte": "Le triangle ADC est rectangle en A, donc son hypoténuse est [CD], le côté opposé à l'angle droit. D'après le **théorème de Pythagore** :" },
+            { "type": "formule", "tex": "CD^2 = AC^2 + AD^2 = 480^2 + 200^2 = 230\\,400 + 40\\,000 = 270\\,400" },
+            { "type": "formule", "tex": "CD = \\sqrt{270\\,400} = 520 \\text{ m}" },
+            { "type": "reponse", "texte": "$CD = 520$ m." },
+            { "type": "astuce", "texte": "Pour Pythagore, écris toujours la phrase en trois temps : « le triangle est rectangle en… », « d'après le théorème de Pythagore », puis l'égalité avec l'hypoténuse seule d'un côté." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.a",
+          "intitule": "Les droites (CD) et (BE) sont-elles parallèles ?",
+          "blocs": [
+            { "type": "texte", "texte": "Deux droites, deux points alignés sur chacune, un point commun A : c'est la configuration de Thalès. Pour PROUVER un parallélisme, on utilise la **réciproque du théorème de Thalès**." },
+            { "type": "texte", "texte": "A, C, B sont alignés avec C entre A et B, donc $AB = AC + CB = 480 + 120 = 600$ m. On calcule séparément les deux rapports :" },
+            { "type": "formule", "tex": "\\frac{AC}{AB} = \\frac{480}{600} = 0{,}8 \\qquad \\frac{AD}{AE} = \\frac{200}{250} = 0{,}8" },
+            { "type": "texte", "texte": "Les deux rapports sont égaux, et les points A, C, B d'une part, A, D, E d'autre part, sont alignés dans le même ordre. D'après la réciproque du théorème de Thalès, les droites (CD) et (BE) sont parallèles." },
+            { "type": "reponse", "texte": "Oui, $(CD) \\parallel (BE)$, car $\\frac{AC}{AB} = \\frac{AD}{AE} = 0{,}8$." },
+            { "type": "piege", "texte": "N'écris pas $\\frac{AC}{AB} = \\frac{AD}{AE}$ avant de l'avoir vérifié : c'est justement ce qu'on cherche à savoir. Calcule chaque rapport à part, puis constate qu'ils sont égaux." },
+            { "type": "attendu", "texte": "Le correcteur attend le calcul de AB, les deux rapports calculés séparément, la mention de l'alignement dans le même ordre et le nom de la propriété : réciproque du théorème de Thalès." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.b",
+          "intitule": "La mesure de l'angle $\\widehat{ACD}$ est-elle supérieure à 20° ?",
+          "blocs": [
+            { "type": "texte", "texte": "Dans le triangle ADC rectangle en A, on se place du point de vue de l'angle $\\widehat{ACD}$ : [AD] est le côté **opposé**, [AC] le côté **adjacent**. On connaît les deux, donc on utilise la **tangente** (TOA : Tangente = Opposé sur Adjacent)." },
+            { "type": "formule", "tex": "\\tan \\widehat{ACD} = \\frac{AD}{AC} = \\frac{200}{480} = \\frac{5}{12}" },
+            { "type": "formule", "tex": "\\widehat{ACD} = \\arctan\\left(\\frac{5}{12}\\right) \\approx 22{,}6°" },
+            { "type": "reponse", "texte": "Oui : $\\widehat{ACD} \\approx 22{,}6°$, ce qui est supérieur à 20°." },
+            { "type": "astuce", "texte": "Sur la calculatrice, la touche s'appelle $\\tan^{-1}$, « Arctan » ou « atan ». Vérifie qu'elle est en mode DEGRÉS. Tu peux aussi utiliser le cosinus avec $CD = 520$ : $\\cos \\widehat{ACD} = \\frac{480}{520}$ donne le même angle." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3.c",
+          "intitule": "Le parcours est-il validé ?",
+          "blocs": [
+            { "type": "texte", "texte": "Il fallait DEUX conditions : (CD) et (BE) parallèles (vrai, question 3.a) et $\\widehat{ACD}$ supérieur à 20° (vrai, question 3.b)." },
+            { "type": "reponse", "texte": "Les deux conditions sont remplies : le parcours est validé." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : la natation" },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Quel est le temps médian de cette série ?",
+          "blocs": [
+            { "type": "texte", "texte": "Les 9 temps sont déjà rangés dans l'ordre croissant : 5 min 30 s ; 5 min 45 s ; 5 min 49 s ; 5 min 50 s ; **6 min** ; 6 min 11 s ; 6 min 12 s ; 6 min 20 s ; 6 min 40 s." },
+            { "type": "texte", "texte": "Il y a 9 valeurs, un nombre impair : la médiane est la valeur du milieu, la 5e, avec 4 valeurs avant et 4 valeurs après." },
+            { "type": "reponse", "texte": "Le temps médian est **6 min** : la moitié des élèves a nagé en 6 min ou moins." },
+            { "type": "piege", "texte": "La médiane n'est pas la moyenne. Et avant de chercher la valeur du milieu, vérifie TOUJOURS que la série est rangée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Un poisson rouge nage à 5 km/h. Nage-t-il plus vite que l'élève le plus rapide ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'élève le plus rapide met le temps le plus court : 5 min 30 s pour 200 m. Deux méthodes, au choix." },
+            { "type": "texte", "texte": "**Méthode 1 : le temps du poisson sur 200 m.** À 5 km/h, le poisson parcourt 5 000 m en 60 min. Pour 200 m :" },
+            { "type": "formule", "tex": "t = \\frac{200}{5\\,000} \\times 60 = 2{,}4 \\text{ min} = 2 \\text{ min } 24 \\text{ s}" },
+            { "type": "texte", "texte": "($0{,}4$ min $= 0{,}4 \\times 60 = 24$ s.) 2 min 24 s, c'est bien moins que 5 min 30 s." },
+            { "type": "texte", "texte": "**Méthode 2 : la vitesse de l'élève.** 5 min 30 s $= 5{,}5$ min $= \\frac{5{,}5}{60}$ h, et 200 m $= 0{,}2$ km :" },
+            { "type": "formule", "tex": "v = \\frac{0{,}2}{5{,}5 \\div 60} = \\frac{0{,}2 \\times 60}{5{,}5} \\approx 2{,}18 \\text{ km/h}" },
+            { "type": "reponse", "texte": "Oui : le poisson rouge (5 km/h) nage plus vite que l'élève le plus rapide (environ $2{,}2$ km/h). Il ferait les 200 m en 2 min 24 s au lieu de 5 min 30 s." },
+            { "type": "piege", "texte": "5 min 30 s ne s'écrit pas $5{,}30$ min mais $5{,}5$ min : une demi-minute, c'est 30 secondes." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "QCM de six questions, sans justification : une seule réponse exacte par question.",
+      "points": 18,
+      "minutes": 15,
+      "enBref": [
+        "Les bonnes réponses : 1 C · 2 D · 3 A · 4 B · 5 A · 6 B.",
+        "Proportionnalité, transformation sur quadrillage, pourcentage, aire, développement et volume : six automatismes de 3e.",
+        "Aucune justification n'est demandée, mais fais le calcul au brouillon : les mauvaises réponses sont des erreurs classiques."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "3 melons coûtent 8,40 €. Combien coûtent 5 melons ?",
+          "blocs": [
+            { "type": "texte", "texte": "On passe par le prix d'un melon : $8{,}40 \\div 3 = 2{,}80$ €, puis $5 \\times 2{,}80 = 14$ €." },
+            { "type": "reponse", "texte": "Réponse **C** : 14 €." },
+            { "type": "piege", "texte": "Ajouter 2 € par melon supplémentaire ($8{,}40 + 2 = 10{,}40$, réponse D) n'a pas de sens : le prix est proportionnel au nombre de melons, on multiplie, on n'ajoute pas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quelle transformation permet de passer de la figure 1 à la figure 2 ?",
+          "blocs": [
+            { "type": "texte", "texte": "La figure 2 n'a pas le même « sens » que la figure 1 : elle est retournée, comme dans un miroir. Une translation, une rotation ou une symétrie centrale gardent le sens des figures ; seule la **symétrie axiale** retourne une figure." },
+            { "type": "texte", "texte": "On le vérifie sur le quadrillage : l'axe est la diagonale qui passe entre les deux figures, de bas à gauche vers le haut à droite. La pointe en bas à gauche de la figure 1 et la pointe du bas de la figure 2 sont à la même distance de cette diagonale, de part et d'autre ; il en va de même pour chaque sommet." },
+            { "type": "reponse", "texte": "Réponse **D** : une symétrie axiale." },
+            { "type": "astuce", "texte": "Le test du calque : décalque la figure 1. Si tu peux la poser sur la figure 2 en la faisant seulement glisser ou tourner, c'est une translation ou une rotation. Si tu dois RETOURNER le calque, c'est une symétrie axiale." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Un article à 350 € augmente de 20 %. Quel est son nouveau prix ?",
+          "blocs": [
+            { "type": "texte", "texte": "Augmenter de 20 %, c'est multiplier par $1 + \\frac{20}{100} = 1{,}2$ : $350 \\times 1{,}2 = 420$ €." },
+            { "type": "texte", "texte": "Autre chemin : 10 % de 350, c'est 35, donc 20 %, c'est 70 ; puis $350 + 70 = 420$ €." },
+            { "type": "reponse", "texte": "Réponse **A** : 420 €." },
+            { "type": "piege", "texte": "370 € (réponse C), c'est ajouter 20 € au lieu de 20 %." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "L'aire du triangle ABC, rectangle en B, avec AB = 6 cm, BC = 4,5 cm, AC = 7,5 cm.",
+          "blocs": [
+            { "type": "texte", "texte": "Dans un triangle rectangle, les deux côtés de l'angle droit sont une base et sa hauteur. L'angle droit est en B : ce sont [AB] et [BC]." },
+            { "type": "formule", "tex": "\\mathcal{A} = \\frac{AB \\times BC}{2} = \\frac{6 \\times 4{,}5}{2} = \\frac{27}{2} = 13{,}5 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "Réponse **B** : $13{,}5$ cm²." },
+            { "type": "piege", "texte": "L'hypoténuse (7,5 cm) ne sert pas ici. Et n'oublie pas de diviser par 2 : $6 \\times 4{,}5 = 27$ est le leurre de la réponse A." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "La forme développée et réduite de $(2x + 3)(x - 4)$.",
+          "blocs": [
+            { "type": "texte", "texte": "On applique la double distributivité : chaque terme de la première parenthèse multiplie chaque terme de la seconde." },
+            { "type": "formule", "tex": "(2x + 3)(x - 4) = 2x \\times x + 2x \\times (-4) + 3 \\times x + 3 \\times (-4)" },
+            { "type": "formule", "tex": "= 2x^2 - 8x + 3x - 12 = 2x^2 - 5x - 12" },
+            { "type": "reponse", "texte": "Réponse **A** : $2x^2 - 5x - 12$." },
+            { "type": "astuce", "texte": "Pour vérifier, remplace $x$ par une valeur simple, par exemple $x = 1$ : $(2 + 3)(1 - 4) = -15$, et $2 - 5 - 12 = -15$. Les deux formes donnent le même nombre." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Le volume d'une pyramide à base rectangulaire de 7 cm sur 4 cm et de hauteur 12 cm.",
+          "blocs": [
+            { "type": "texte", "texte": "Le volume d'une pyramide est le tiers du produit de l'aire de sa base par sa hauteur. La base est un rectangle de $7 \\times 4 = 28$ cm²." },
+            { "type": "formule", "tex": "V = \\frac{\\mathcal{A}_{\\text{base}} \\times h}{3} = \\frac{28 \\times 12}{3} = \\frac{336}{3} = 112 \\text{ cm}^3" },
+            { "type": "reponse", "texte": "Réponse **B** : 112 cm³." },
+            { "type": "piege", "texte": "336 cm³ (réponse C) est le volume du pavé droit de même base et de même hauteur : la pyramide n'en occupe que le tiers." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Algorithmique : des programmes de calcul « magiques ». Partie A, le programme de Zoé (soustraire 4, multiplier par 2, ajouter 8). Partie B, le programme Scratch de Fred.",
+      "points": 20,
+      "minutes": 25,
+      "enBref": [
+        "Programme de Zoé : 10 donne 20, et −7 donne −14.",
+        "Avec $x$ au départ, Zoé obtient $(x - 4) \\times 2 + 8 = 2x$ : elle a raison, le résultat est toujours le double du nombre choisi.",
+        "Programme de Fred : $x \\to 4x \\to 4x + 10 \\to 5(4x + 10) = 20x + 50$.",
+        "Pour obtenir 75, on résout $20x + 50 = 75$ : il faut choisir $1{,}25$.",
+        "Pour obtenir toujours $20x$, la sixième ligne retire 50 : « mettre résultat à (résultat) − (50) »."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : le programme de Zoé" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Vérifier qu'avec 10 au départ, on obtient 20.",
+          "blocs": [
+            { "type": "liste", "ordonnee": true, "items": [
+              "Choisir un nombre : $10$.",
+              "Soustraire 4 : $10 - 4 = 6$.",
+              "Multiplier par 2 : $6 \\times 2 = 12$.",
+              "Ajouter 8 : $12 + 8 = 20$."
+            ] },
+            { "type": "reponse", "texte": "Avec 10 au départ, on obtient bien 20." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quel résultat obtient-on avec −7 au départ ?",
+          "blocs": [
+            { "type": "liste", "ordonnee": true, "items": [
+              "Choisir un nombre : $-7$.",
+              "Soustraire 4 : $-7 - 4 = -11$.",
+              "Multiplier par 2 : $-11 \\times 2 = -22$.",
+              "Ajouter 8 : $-22 + 8 = -14$."
+            ] },
+            { "type": "reponse", "texte": "Avec $-7$ au départ, on obtient $-14$." },
+            { "type": "piege", "texte": "$-7 - 4$ fait $-11$, pas $-3$ : quand on retire 4 à un nombre négatif, on s'éloigne encore de zéro." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Zoé affirme que le résultat est toujours le double du nombre de départ. A-t-elle raison ?",
+          "blocs": [
+            { "type": "texte", "texte": "Deux exemples (10 donne 20, −7 donne −14) vont dans son sens, mais des exemples ne prouvent rien pour TOUS les nombres. Il faut un calcul littéral : on appelle $x$ le nombre de départ." },
+            { "type": "formule", "tex": "(x - 4) \\times 2 + 8 = 2x - 8 + 8 = 2x" },
+            { "type": "reponse", "texte": "Oui, Zoé a raison : quel que soit le nombre $x$ choisi, le programme donne $2x$, le double du nombre de départ." },
+            { "type": "attendu", "texte": "Pour démontrer une propriété vraie pour tous les nombres, le correcteur attend un calcul avec une lettre. Tester des exemples ne suffit que pour montrer qu'une affirmation est FAUSSE (un seul contre-exemple suffit alors)." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : le programme de Fred" },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Démontrer qu'avec $x$ au départ, le programme de Fred donne $20x + 50$.",
+          "blocs": [
+            { "type": "texte", "texte": "Quand l'élève tape un nombre, Scratch le range dans « réponse » : ici, $x$. On suit la variable « résultat » bloc par bloc." },
+            {
+              "type": "tableau",
+              "entetes": ["Bloc exécuté", "Valeur de « résultat »"],
+              "lignes": [
+                ["demander « Choisir un nombre » et attendre", "(réponse $= x$)"],
+                ["mettre résultat à (réponse) $\\times$ 4", "$4x$"],
+                ["mettre résultat à (résultat) + 10", "$4x + 10$"],
+                ["mettre résultat à (résultat) $\\times$ 5", "$5(4x + 10)$"],
+                ["dire (résultat)", "$5(4x + 10)$"]
+              ]
+            },
+            { "type": "texte", "texte": "On développe avec la distributivité simple :" },
+            { "type": "formule", "tex": "5(4x + 10) = 5 \\times 4x + 5 \\times 10 = 20x + 50" },
+            { "type": "reponse", "texte": "Le programme de Fred donne bien $20x + 50$." },
+            { "type": "texte", "texte": "**Pour s'en convaincre sur un exemple**, avec $x = 3$ : résultat vaut $12$, puis $22$, puis $110$ ; et $20 \\times 3 + 50 = 110$." },
+            { "type": "piege", "texte": "Le « + 10 » s'applique à tout ce qui précède, puis le « × 5 » multiplie TOUT : c'est $5(4x + 10)$, avec parenthèses, et non $4x + 10 \\times 5$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Quel nombre choisir au départ pour obtenir 75 ?",
+          "blocs": [
+            { "type": "texte", "texte": "On cherche $x$ tel que le résultat, $20x + 50$, soit égal à 75. On résout l'équation :" },
+            { "type": "formule", "tex": "20x + 50 = 75 \\iff 20x = 25 \\iff x = \\frac{25}{20} = 1{,}25" },
+            { "type": "texte", "texte": "Vérification avec le script : $1{,}25 \\times 4 = 5$, puis $5 + 10 = 15$, puis $15 \\times 5 = 75$." },
+            { "type": "reponse", "texte": "Il faut choisir $1{,}25$ au départ." },
+            { "type": "astuce", "texte": "Remonter un programme de calcul « à l'envers » marche aussi : 75, divisé par 5 donne 15, moins 10 donne 5, divisé par 4 donne $1{,}25$. Chaque opération est remplacée par son contraire, en partant de la fin." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Compléter la sixième ligne pour que le résultat soit toujours 20 fois le nombre de départ.",
+          "blocs": [
+            { "type": "texte", "texte": "Après les trois premières instructions, « résultat » vaut $20x + 50$. On veut obtenir $20x$ : il suffit de retirer 50 au résultat." },
+            { "type": "code", "langage": "texte", "code": "mettre [résultat] à ((résultat) - (50))" },
+            { "type": "texte", "texte": "Suivi des variables avec $x = 3$ au départ :" },
+            {
+              "type": "tableau",
+              "entetes": ["Ligne", "Bloc", "réponse", "résultat"],
+              "lignes": [
+                ["2", "demander « Choisir un nombre »", "3", "—"],
+                ["3", "mettre résultat à (réponse) $\\times$ 4", "3", "12"],
+                ["4", "mettre résultat à (résultat) + 10", "3", "22"],
+                ["5", "mettre résultat à (résultat) $\\times$ 5", "3", "110"],
+                ["6", "mettre résultat à (résultat) − 50", "3", "60"],
+                ["7", "dire (résultat)", "3", "60"]
+              ]
+            },
+            { "type": "texte", "texte": "On obtient 60, soit $20 \\times 3$. En général : $20x + 50 - 50 = 20x$." },
+            { "type": "reponse", "texte": "Sixième ligne : **mettre résultat à (résultat) − (50)**." },
+            { "type": "piege", "texte": "Le bloc a deux cases : dans la première on met la variable « résultat » (pas le nombre 110, qui ne vaut que pour $x = 3$), dans la seconde le nombre 50." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Acheter ou louer une voiture ? Option Achat : 22 400 € plus 75 € d'assurance par mois. Option Location : 425 € par mois, assurance comprise. Partie A avec un tableur, partie B avec des fonctions.",
+      "points": 19,
+      "minutes": 25,
+      "enBref": [
+        "Achat, la première année : $22\\,400 + 12 \\times 75 = 23\\,300$ €.",
+        "Après 36 mois, l'achat coûte 25 100 € et la location 15 300 € : la location fait économiser 9 800 €.",
+        "Dans le tableur, la formule de B3 est =B1*425.",
+        "Les fonctions sont $g(x) = 425x$ et $f(x) = 75x + 22\\,400$ : une fonction linéaire et une fonction affine.",
+        "Les deux droites se croisent à 64 mois : au-delà, l'achat devient l'option la plus avantageuse."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer qu'avec l'option Achat, la dépense à la fin de la première année est de 23 300 €.",
+          "blocs": [
+            { "type": "texte", "texte": "Une année compte 12 mois. On paie la voiture une fois, puis l'assurance chaque mois :" },
+            { "type": "formule", "tex": "22\\,400 + 12 \\times 75 = 22\\,400 + 900 = 23\\,300 \\text{ euros}" },
+            { "type": "reponse", "texte": "La dépense de la première année avec l'option Achat est bien de 23 300 €." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Après 36 mois, quelle économie réalise le client s'il choisit la location ?",
+          "blocs": [
+            { "type": "texte", "texte": "On calcule la dépense de chaque option sur 36 mois." },
+            { "type": "formule", "tex": "\\text{Achat : } 22\\,400 + 36 \\times 75 = 22\\,400 + 2\\,700 = 25\\,100 \\text{ euros}" },
+            { "type": "formule", "tex": "\\text{Location : } 36 \\times 425 = 15\\,300 \\text{ euros}" },
+            { "type": "formule", "tex": "25\\,100 - 15\\,300 = 9\\,800 \\text{ euros}" },
+            { "type": "reponse", "texte": "Sur 36 mois, la location fait économiser **9 800 €** au client." },
+            { "type": "astuce", "texte": "Le tableur de la question 3 donne déjà 25 100 € pour l'achat sur 36 mois (cellule D2) : sers-t'en pour vérifier ton calcul." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelle formule saisir en B3 pour compléter la ligne 3 jusqu'à F3 ?",
+          "blocs": [
+            { "type": "texte", "texte": "La dépense en location, c'est 425 € fois le nombre de mois. Le nombre de mois de la colonne B est dans la cellule B1." },
+            { "type": "code", "langage": "texte", "code": "=B1*425" },
+            { "type": "texte", "texte": "En étirant vers la droite, le tableur remplace B1 par C1, D1, E1 puis F1 : la ligne 3 affiche 5 100 ; 10 200 ; 15 300 ; 20 400 ; 25 500." },
+            { "type": "reponse", "texte": "En B3, on saisit **=B1*425**." },
+            { "type": "piege", "texte": "N'oublie pas le signe « = » au début : sans lui, le tableur affiche le texte tel quel au lieu de calculer. Et écris B1, pas 12 : sinon tous les mois donneraient 5 100." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B" },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Déterminer l'expression de $f(x)$, la dépense avec l'option Achat.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour $x$ mois, on paie 22 400 € une fois, plus 75 € par mois, soit $75x$ :" },
+            { "type": "formule", "tex": "f(x) = 75x + 22\\,400" },
+            { "type": "texte", "texte": "C'est une fonction **affine** ; $g(x) = 425x$ est une fonction **linéaire** (sa droite passe par l'origine). Contrôle avec le tableur : $f(12) = 900 + 22\\,400 = 23\\,300$." },
+            { "type": "reponse", "texte": "$f(x) = 75x + 22\\,400$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Par lecture graphique : à partir de combien de mois l'option Achat est-elle la plus avantageuse ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'option la plus avantageuse est celle qui coûte le MOINS : sur le graphique, c'est la courbe la plus BASSE." },
+            { "type": "liste", "items": [
+              "Avant le point d'intersection, $C_g$ (location) est en dessous de $C_f$ : la location coûte moins cher.",
+              "Les deux droites se coupent en un point d'abscisse 64 environ (et d'ordonnée 27 200 € environ).",
+              "Après ce point, $C_f$ (achat) passe sous $C_g$ : l'achat coûte moins cher."
+            ] },
+            { "type": "texte", "texte": "Le calcul confirme la lecture : $425x = 75x + 22\\,400 \\iff 350x = 22\\,400 \\iff x = 64$. À 64 mois, les deux options coûtent exactement $425 \\times 64 = 27\\,200$ €." },
+            { "type": "reponse", "texte": "Les courbes se croisent à **64 mois** : au-delà de 64 mois (donc à partir du 65e mois, un peu plus de 5 ans), l'option Achat est la plus avantageuse." },
+            { "type": "attendu", "texte": "Le correcteur attend une trace de la lecture : l'abscisse du point d'intersection des deux droites (tracés en pointillés sur le graphique si tu le rends) et la phrase qui dit quelle courbe est en dessous après ce point." }
+          ]
+        }
+      ]
+    }
+  ]
+}

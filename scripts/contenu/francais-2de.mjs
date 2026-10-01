@@ -344,7 +344,7 @@ La **parodie** est l'imitation comique d'un modèle sérieux.
 ## Ronsard : la fuite du temps
 | L'élément | Son contenu |
 | Le thème | Le **carpe diem**, hérité d'Horace : la beauté passe, il faut en jouir |
-| Le sonnet fameux | « Mignonne, allons voir si la rose » |
+| Le poème fameux | « Mignonne, allons voir si la rose » — une **ode** (trois sizains d'octosyllabes), pas un sonnet |
 | Son procédé | Toute une **comparaison** entre la fleur fanée en un jour et la jeunesse de Cassandre |
 
 ## L'animalité dans le sonnet
@@ -392,7 +392,7 @@ Ces figures viennent de Pétrarque.
 ## Le lion classique
 | La fable de **La Fontaine** | Ce qu'elle montre |
 | « La Génisse, la Chèvre et la Brebis en société avec le Lion » | La loi du plus fort déguisée en contrat |
-| « Le Lion et le Rat » | On a toujours besoin d'un plus petit que soi : le rapport de force se retourne |
+| « Le Lion et le Rat » | « On a souvent besoin d'un plus petit que soi » : le rapport de force se retourne |
 
 ## Le lion moderne
 | Son usage | Sa forme |
@@ -1307,7 +1307,7 @@ Ballets, opéras, comédies musicales — *West Side Story* transpose l'intrigue
 
 Les deux amis sont dits « deux moitiés d'un même homme ».
 
-> « Je ne t'aimais pas, Cœlio, c'est toi qui m'aimais. » La réplique finale de Marianne à Octave rend la mort irréparable — et sans coupable désignable.
+> « Je ne vous aime pas, Marianne ; c'était Cœlio qui vous aimait. » La réplique finale d'Octave à Marianne rend la mort irréparable — et sans coupable désignable.
 
 ## Le drame romantique
 | Le trait | Ce à quoi il s'oppose |

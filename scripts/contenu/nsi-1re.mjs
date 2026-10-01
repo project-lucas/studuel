@@ -308,9 +308,9 @@ Le processeur n'exécute que des instructions élémentaires codées en binaire 
 | Ce qui est traduit | **Tout le programme**, avant l'exécution | **Instruction par instruction**, pendant |
 | Le résultat | Un exécutable rapide, lié à une plateforme | Aucun fichier produit |
 | La souplesse | Faible | Élevée |
-| Les erreurs de syntaxe | Détectées **avant** le lancement | Au moment où la ligne est atteinte |
+| Les erreurs de syntaxe | Détectées **avant** le lancement | En Python aussi, avant le lancement ; ce sont les erreurs d'exécution qui attendent que la ligne soit atteinte |
 
-> Python est interprété : un programme peut s'exécuter longtemps avant de s'arrêter sur une faute située à la fin.
+> Python est interprété : un programme peut s'exécuter longtemps avant de s'arrêter sur une erreur d'exécution (nom inconnu, division par zéro) située à la fin.
 
 ## Ce qu'un programme manipule
 | L'élément | Ce qu'il est |
@@ -334,7 +334,7 @@ Le processeur n'exécute que des instructions élémentaires codées en binaire 
             ['En machine, 0,1 + 0,2 donne exactement 0,3.', ['Vrai', 'Faux'], 1, '0,1 n’a pas d’écriture binaire finie : les flottants sont approchés.'],
             ['Comment comparer deux flottants de façon fiable ?', ['En testant si leur écart est inférieur à une tolérance', 'Avec un test d’égalité stricte', 'En les convertissant en chaînes', 'En les arrondissant à l’entier'], 0, 'L’égalité stricte entre flottants est une source classique de bugs.'],
             ['Un programme peut-il déterminer si un autre programme s’arrêtera ?', ['Non, pas dans le cas général', 'Oui, toujours', 'Oui, s’il est assez rapide', 'Oui, depuis les processeurs modernes'], 0, 'C’est le problème de l’arrêt : un résultat d’indécidabilité, non une limite technique.'],
-            ['Un programme compilé détecte les erreurs de syntaxe avant son lancement.', ['Vrai', 'Faux'], 0, 'Un programme interprété, lui, s’arrête au moment où il atteint la ligne fautive.'],
+            ['Un programme compilé détecte les erreurs de syntaxe avant son lancement.', ['Vrai', 'Faux'], 0, 'En Python aussi, une erreur de syntaxe empêche le lancement ; ce sont les erreurs d’exécution qui n’apparaissent qu’en atteignant la ligne.'],
             ['Qu’est-ce qu’un jeu d’instructions ?', ['L’ensemble des instructions élémentaires qu’une famille de processeurs sait exécuter', 'La liste des programmes installés', 'Le manuel d’un langage', 'Les fonctions d’une bibliothèque'], 0, 'Il diffère d’une architecture de processeur à l’autre.'],
             ['Quelles sont les trois grandes structures de contrôle d’un programme ?', ['Le test conditionnel, la boucle bornée et la boucle non bornée', 'La variable, la fonction et le type', 'L’entrée, le calcul et la sortie', 'Le module, la classe et l’objet'], 0, 'Elles suffisent à exprimer tout algorithme.'],
           ],

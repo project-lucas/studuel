@@ -36,6 +36,7 @@ export type Faute = { chemin: string; message: string }
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const ID = /^[A-Za-z0-9_-]{1,40}$/
 const MOTIFS = ['plein', 'clair', 'hachures', 'points', 'aucun']
+const POSITIONS: string[] = ['n', 'ne', 'e', 'se', 's', 'so', 'o', 'no']
 
 /** Nombre de questions permis selon les étoiles : l'exercice 1 reste court. */
 export const QUESTIONS_PAR_ETOILES: Record<1 | 2 | 3, [number, number]> = {
@@ -225,6 +226,11 @@ function validerDocument(r: Relecteur, d: Document, chemin: string) {
         r.faute(chemin, 'cadre : xmin < xmax, ymin < ymax, 40 unités au plus')
       const points = new Set((d.points ?? []).map((p) => p.id))
       r.uniques(chemin, (d.points ?? []).map((p) => p.id), 'point')
+      // Une position inconnue (« nw » au lieu de « no ») faisait planter le rendu
+      // de la figure sans que rien ne le signale (30/09/2026).
+      for (const p of d.points ?? [])
+        if (p.position !== undefined && !POSITIONS.includes(p.position))
+          r.faute(chemin, `point « ${p.id} » : position « ${p.position} » inconnue (${POSITIONS.join(', ')})`)
       const ref = (id: string, quoi: string) => {
         if (!points.has(id)) r.faute(chemin, `${quoi} : point inconnu « ${id} »`)
       }

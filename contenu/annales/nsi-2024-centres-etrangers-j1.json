@@ -1,0 +1,454 @@
+{
+  "id": "nsi-2024-centres-etrangers-j1",
+  "matiere": "nsi",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2024,
+  "centre": "Centres étrangers",
+  "jour": 1,
+  "code": "24-NSIJ1G11",
+  "titre": "Bac 2024 — NSI",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous obligatoires : graphes et marche aléatoire (6 points), adressage IP et routage (6 points), bases de données et programmation objet (8 points). Calculatrice interdite.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Graphes, récursivité et simulation : un virus qui migre au hasard d'un ordinateur à l'autre dans un réseau.",
+      "points": 6,
+      "minutes": 60,
+      "enBref": [
+        "Listes de voisins du réseau complété : `[[1, 2, 3, 4, 5], [0, 2, 3], [0, 1, 5], [0, 1], [0], [0, 2]]`.",
+        "`voisin_alea` tire un indice au hasard dans la liste des voisins ; `marche_alea` est récursive (elle s'appelle elle-même avec n − 1) et simule n déplacements du virus.",
+        "`simule` compte les arrivées sur chaque sommet puis divise par `n_tests` : on obtient une fréquence d'arrivée par ordinateur.",
+        "L'ordinateur 0 accueille le virus le plus souvent (32,8 %) : c'est lui qu'il faut protéger.",
+        "Le temps de propagation se calcule par un parcours en largeur depuis s : c'est la plus grande distance obtenue."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Compléter la définition de voisins pour le réseau à 5 ordinateurs.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur la figure, les arêtes sont 0–1, 0–2, 0–3, 0–4, 1–2 et 1–3. L'ordinateur 3 est relié à 0 et 1 ; l'ordinateur 4 seulement à 0." },
+            { "type": "code", "langage": "python", "code": "voisins = [[1, 2, 3, 4],\n           [0, 2, 3],\n           [0, 1],\n           [0, 1],\n           [0]]" },
+            { "type": "astuce", "texte": "Le graphe n'est pas orienté : si j est dans la liste de i, alors i doit être dans la liste de j. Vérifie cette symétrie avant de rendre ta copie, elle attrape la plupart des oublis." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Dessiner le nouveau graphe avec l'ordinateur 5.",
+          "blocs": [
+            { "type": "texte", "texte": "On reprend le dessin de la figure 1 et on ajoute un sommet 5, relié par une arête à 0 et une arête à 2 (par exemple placé à droite, entre 2 et 4). Le graphe a alors 6 sommets et 8 arêtes : 0–1, 0–2, 0–3, 0–4, 0–5, 1–2, 1–3, 2–5." },
+            { "type": "attendu", "texte": "Les six sommets numérotés et les deux nouvelles arêtes 0–5 et 2–5, sans flèches (le réseau n'est pas orienté)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Nouvelle définition de voisins.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "voisins = [[1, 2, 3, 4, 5],\n           [0, 2, 3],\n           [0, 1, 5],\n           [0, 1],\n           [0],\n           [0, 2]]" },
+            { "type": "piege", "texte": "Ajouter la ligne `[0, 2]` pour le sommet 5 ne suffit pas : il faut aussi ajouter 5 dans les listes de 0 et de 2." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Fonction voisin_alea.",
+          "blocs": [
+            { "type": "texte", "texte": "La liste `voisins[s]` contient les voisins de s. On tire un indice valide entre 0 et `len(voisins[s]) - 1`, ce que fait exactement `random.randrange(len(voisins[s]))`." },
+            { "type": "code", "langage": "python", "code": "import random\n\ndef voisin_alea(voisins, s):\n    return voisins[s][random.randrange(len(voisins[s]))]" },
+            { "type": "piege", "texte": "`random.randrange(len(voisins))` tirerait un sommet quelconque du graphe, pas forcément un voisin de s." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Justifier que marche_alea est récursive.",
+          "blocs": [
+            { "type": "reponse", "texte": "Ligne 4, la fonction `marche_alea` s'appelle elle-même (avec `n - 1`) : c'est la définition d'une fonction récursive. Le cas de base `n == 0` (lignes 2-3) arrête les appels, et il est toujours atteint puisque n diminue de 1 à chaque appel." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Ce que modélise marche_alea.",
+          "blocs": [
+            { "type": "reponse", "texte": "Elle simule le parcours du virus : parti de l'ordinateur i, il migre n fois de suite vers un ordinateur voisin choisi au hasard. La fonction renvoie le numéro de l'ordinateur où se trouve le virus après ces n migrations." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Fonction simule.",
+          "blocs": [
+            { "type": "texte", "texte": "On répète `n_tests` fois la marche aléatoire ; à chaque fois on ajoute 1 à la case du sommet d'arrivée. À la fin, on divise chaque compteur par `n_tests` pour obtenir une fréquence." },
+            { "type": "code", "langage": "python", "code": "def simule(voisins, i, n_tests, n_pas):\n    results = [0] * len(voisins)\n    for _ in range(n_tests):\n        arrivee = marche_alea(voisins, i, n_pas)\n        results[arrivee] = results[arrivee] + 1\n    for j in range(len(results)):\n        results[j] = results[j] / n_tests\n    return results" },
+            { "type": "texte", "texte": "Coût : `n_tests` marches de `n_pas` étapes, soit un nombre d'opérations proportionnel à `n_tests × n_pas`." },
+            { "type": "piege", "texte": "Avec `n_pas = 1000`, `marche_alea` empile plus de 1 000 appels récursifs : en Python, la limite par défaut (1 000) est dépassée et l'appel de la question 8 lève une `RecursionError`. Il faudrait augmenter la limite (`sys.setrecursionlimit`) ou écrire la marche avec une boucle : `for _ in range(n): i = voisin_alea(voisins, i)`. Le sujet admet que l'appel fonctionne, mais le signaler montre que tu comprends la pile d'appels." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Ordinateur qu'il est le plus rentable de protéger.",
+          "blocs": [
+            { "type": "texte", "texte": "La case j donne la proportion des simulations où le virus termine sur l'ordinateur j. La plus grande valeur est 0,328, en position 0 : après une longue errance, le virus se trouve sur l'ordinateur 0 dans environ un tiers des cas." },
+            { "type": "reponse", "texte": "L'ordinateur 0 : c'est lui que le virus visite le plus souvent." },
+            { "type": "texte", "texte": "Pour aller plus loin : après un grand nombre de pas, la probabilité d'être sur un sommet est proportionnelle à son **degré**. Les degrés sont 5, 3, 3, 2, 1, 2 (total 16), soit 0,3125 ; 0,1875 ; 0,1875 ; 0,125 ; 0,0625 ; 0,125 — très proche des fréquences simulées. Le sommet le plus connecté est le plus exposé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Algorithme donnant le temps de propagation du virus à tout le réseau.",
+          "blocs": [
+            { "type": "texte", "texte": "À l'étape 1, le virus atteint les voisins de s ; à l'étape 2, les voisins de ces voisins, et ainsi de suite. Un ordinateur est donc contaminé à l'étape égale à sa **distance** (en nombre d'arêtes) à s. Le réseau est entièrement contaminé à l'étape égale à la plus grande de ces distances. Un **parcours en largeur** depuis s calcule exactement ces distances, couche par couche." },
+            { "type": "code", "langage": "python", "code": "def temps_propagation(voisins, s):\n    distance = [-1] * len(voisins)   # -1 : pas encore contaminé\n    distance[s] = 0\n    file = [s]\n    while file:\n        sommet = file.pop(0)\n        for v in voisins[sommet]:\n            if distance[v] == -1:\n                distance[v] = distance[sommet] + 1\n                file.append(v)\n    return max(distance)" },
+            { "type": "texte", "texte": "Sur le réseau à 6 ordinateurs, depuis l'ordinateur 4 : 0 est contaminé à l'étape 1, puis 1, 2, 3 et 5 à l'étape 2. Le temps renvoyé est 2. Chaque sommet entre une fois dans la file et chaque liste de voisins est lue une fois : le coût est linéaire en nombre de sommets plus nombre d'arêtes (à `pop(0)` près, qu'une `deque` rendrait constant)." },
+            { "type": "astuce", "texte": "Dès qu'un énoncé parle de « propagation étape par étape », de « plus petit nombre de sauts » ou de « distance » dans un graphe non pondéré, pense parcours en largeur avec une file." },
+            { "type": "attendu", "texte": "L'idée du parcours en largeur, le marquage des sommets déjà contaminés (sinon on tourne en rond), et la réponse = distance maximale. Si le réseau n'est pas connexe, certains sommets ne sont jamais atteints (distance −1) : tu peux le signaler." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Réseaux : adresses IPv4 et masques, protocoles de routage RIP et OSPF sur un réseau de huit routeurs.",
+      "points": 6,
+      "minutes": 60,
+      "enBref": [
+        "Réseau L2 (/16) : masque 255.255.0.0, adresse du réseau 172.16.0.0, adresse de diffusion 172.16.255.255, 65 534 adresses de machines.",
+        "Avec les tables données, L1 → A → H → D → L2.",
+        "Liaison H–D rompue, RIP : deux chemins les plus courts, A → H → C → D et A → B → C → D ; le routeur H doit forcément changer sa règle.",
+        "OSPF : coûts 1 (1 Gbit/s), 10 (100 Mbit/s), 0,1 (10 Gbit/s). Chemin A → G → F → E → D de coût 1,3 ; sans G–F, A → H → F → E → D de coût 2,2."
+      ],
+      "blocs": [
+        {
+          "type": "texte",
+          "texte": "Relève d'abord les liaisons sur le schéma, grâce aux adresses des interfaces : A–B, A–G, A–H, B–C, G–H, G–F, H–C, H–F, H–D, C–D, F–E, E–D. L1 est relié à A, L2 à D."
+        },
+        { "type": "titre", "texte": "Partie A : adresses IP" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Masque de sous-réseau de L2 (16 bits) en notation décimale pointée.",
+          "blocs": [
+            { "type": "texte", "texte": "16 bits à 1 puis 16 bits à 0 : les deux premiers octets valent 11111111 = 255, les deux derniers 0." },
+            { "type": "reponse", "texte": "255.255.0.0" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Adresse du réseau L2.",
+          "blocs": [
+            { "type": "texte", "texte": "Les machines de L2 ont des adresses 172.16.x.y/16 : la partie réseau est 172.16, on met la partie machine (les deux derniers octets) à 0." },
+            { "type": "reponse", "texte": "172.16.0.0" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Adresse de diffusion de L2.",
+          "blocs": [
+            { "type": "texte", "texte": "Même partie réseau, partie machine entièrement à 1 : chacun des deux derniers octets vaut 255." },
+            { "type": "reponse", "texte": "172.16.255.255" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Nombre maximum de machines sur L2.",
+          "blocs": [
+            { "type": "formule", "tex": "2^{16} - 2 = 65\\,536 - 2 = 65\\,534" },
+            { "type": "texte", "texte": "La partie machine compte 32 − 16 = 16 bits, soit $2^{16}$ adresses ; on retire l'adresse du réseau et l'adresse de diffusion, qui ne peuvent être attribuées à aucune machine." },
+            { "type": "reponse", "texte": "65 534 adresses de machines. L'une d'elles, 172.16.255.254, est déjà prise par l'interface du routeur D : il reste 65 533 adresses pour les ordinateurs." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : protocoles de routage" },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Chemin suivi de L1 vers L2 d'après les tables.",
+          "blocs": [
+            { "type": "texte", "texte": "L1 est relié au routeur A. La table de A indique la passerelle 53.10.10.2 : c'est l'interface du routeur H. La table de H indique 53.10.10.6 : c'est une interface du routeur D. D est directement connecté à L2." },
+            { "type": "reponse", "texte": "L1 → A → H → D → L2." },
+            { "type": "astuce", "texte": "Une passerelle est l'adresse de l'interface du routeur **suivant**, pas du routeur courant : cherche cette adresse sur le schéma pour savoir de quel routeur il s'agit." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Liaison H–D rompue, protocole RIP : nouveaux chemins de L1 vers L2.",
+          "blocs": [
+            { "type": "texte", "texte": "Il faut aller de A à D sans la liaison H–D, en minimisant le nombre de routeurs. Sans la liaison H–D, A (voisins B, G, H) et D (voisins C, E) n'ont plus aucun voisin commun : il faut au moins 3 liaisons. Or C, voisin de D, est aussi voisin de B et de H, qui sont voisins de A : on obtient deux chemins de 3 liaisons. Ceux qui passent par E en comptent 4." },
+            {
+              "type": "tableau",
+              "entetes": ["Chemin", "Liaisons entre routeurs"],
+              "lignes": [
+                ["L1 → A → B → C → D → L2", "3"],
+                ["L1 → A → H → C → D → L2", "3"],
+                ["L1 → A → H → F → E → D → L2", "4"],
+                ["L1 → A → G → F → E → D → L2", "4"]
+              ]
+            },
+            { "type": "reponse", "texte": "RIP retiendra l'un des deux chemins à égalité : L1 → A → B → C → D → L2 ou L1 → A → H → C → D → L2." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Routeurs dont la règle vers L2 est obligatoirement modifiée, et nouvelles règles.",
+          "blocs": [
+            { "type": "texte", "texte": "On examine chaque routeur : sa règle actuelle vers L2 reste-t-elle valable, et reste-t-elle la plus courte ? **H** envoyait vers D par la liaison rompue : sa règle est forcément modifiée, quel que soit le chemin choisi. H rejoint maintenant D en 2 sauts par C." },
+            { "type": "texte", "texte": "**Choix du chemin A → H → C → D.** La règle de A (passerelle H) reste bonne. B, C, D, E, F ne passaient pas par H–D. G passe par H, qui passe désormais par C : G → H → C → D fait 3 liaisons, autant que G → F → E → D, donc rien n'oblige à changer G. Un seul routeur est modifié :" },
+            {
+              "type": "tableau",
+              "entetes": ["Routeur", "Réseau destinataire", "Passerelle", "Interface"],
+              "lignes": [
+                ["H", "L2", "53.10.10.10", "53.10.10.9"]
+              ]
+            },
+            { "type": "texte", "texte": "**Choix du chemin A → B → C → D.** A doit en plus passer par B, et H reste à corriger (un paquet qui arrive en H, depuis G ou F, doit encore pouvoir atteindre L2) :" },
+            {
+              "type": "tableau",
+              "entetes": ["Routeur", "Réseau destinataire", "Passerelle", "Interface"],
+              "lignes": [
+                ["A", "L2", "193.55.24.2", "193.55.24.1"],
+                ["H", "L2", "53.10.10.10", "53.10.10.9"]
+              ]
+            },
+            { "type": "piege", "texte": "Ne regarder que les routeurs du chemin choisi : le sujet demande d'examiner **tous** les routeurs. H garde une règle qui pointe vers une liaison morte si on ne la corrige pas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Coût des liaisons pour les trois bandes passantes.",
+          "blocs": [
+            { "type": "formule", "tex": "\\text{coût} = \\frac{10^9}{BP}" },
+            {
+              "type": "tableau",
+              "entetes": ["Bande passante", "En bit/s", "Coût"],
+              "lignes": [
+                ["100 Mbit/s", "$10^8$", "$10^9 / 10^8 = 10$"],
+                ["1 Gbit/s", "$10^9$", "$10^9 / 10^9 = 1$"],
+                ["10 Gbit/s", "$10^{10}$", "$10^9 / 10^{10} = 0{,}1$"]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Chemin OSPF de L1 vers L2 et son coût.",
+          "blocs": [
+            { "type": "texte", "texte": "On compare les chemins de A vers D. Les liaisons à 10 Gbit/s (coût 0,1) forment la chaîne G–F–E–D : il suffit d'atteindre G depuis A (coût 1)." },
+            {
+              "type": "tableau",
+              "entetes": ["Chemin de A à D", "Coût"],
+              "lignes": [
+                ["A → G → F → E → D", "1 + 0,1 + 0,1 + 0,1 = 1,3"],
+                ["A → H → F → E → D", "1 + 1 + 0,1 + 0,1 = 2,2"],
+                ["A → B → C → D", "1 + 1 + 1 = 3"],
+                ["A → H → D", "1 + 10 = 11"]
+              ]
+            },
+            { "type": "reponse", "texte": "L1 → A → G → F → E → D → L2, de coût 1,3." },
+            { "type": "texte", "texte": "Ce chemin compte 4 liaisons, contre 2 pour A → H → D : OSPF accepte des détours pour emprunter des liaisons rapides." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "Liaison G–F rompue : nouveau chemin OSPF et son coût.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour rejoindre la chaîne rapide F–E–D, il faut maintenant atteindre F par H : A → H → F coûte 2. On compare avec les autres possibilités." },
+            {
+              "type": "tableau",
+              "entetes": ["Chemin de A à D", "Coût"],
+              "lignes": [
+                ["A → H → F → E → D", "1 + 1 + 0,1 + 0,1 = 2,2"],
+                ["A → B → C → D", "3"],
+                ["A → G → H → F → E → D", "1 + 1 + 1 + 0,1 + 0,1 = 3,2"],
+                ["A → H → D", "11"]
+              ]
+            },
+            { "type": "reponse", "texte": "L1 → A → H → F → E → D → L2, de coût 2,2." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Bases de données, SQL et programmation objet en Python : la gestion des réservations et des factures d'un camping municipal.",
+      "points": 8,
+      "minutes": 90,
+      "enBref": [
+        "Partie A : clé primaire = valeur unique ; clés étrangères = liens vers Client et Emplacement ; la requête à 25 € renvoie les emplacements 1, 4 et 6.",
+        "La requête de la question 8 joint Reservation à Client et à Emplacement, puis filtre sur `id_reservation = 18`.",
+        "Partie B : `self` désigne l'objet sur lequel on appelle la méthode ; le montant est `tarif × jours + personnes × 2,20 × jours`.",
+        "`facture_est_valide` plante car elle compare la chaîne `annee` à des entiers : il faut `int(annee)`. Au passage, `que_des_chiffres` oublie le chiffre 6.",
+        "Il reste à tester `mois in calendrier`, puis que le numéro a trois caractères, tous des chiffres."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : la base de données" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Deux avantages d'une base de données relationnelle sur un fichier texte ou tableur.",
+          "blocs": [
+            {
+              "type": "liste",
+              "items": [
+                "**L'intégrité des données** : le SGBD impose des contraintes (types, clé primaire unique, clés étrangères) et refuse une réservation pour un client qui n'existe pas.",
+                "**Pas de redondance** : l'adresse d'un client est écrite une seule fois, dans Client, et non recopiée à chaque réservation ; une modification se fait en un seul endroit.",
+                "**Les accès simultanés** : plusieurs personnes peuvent consulter et modifier la base en même temps sans corrompre les données.",
+                "**Des requêtes puissantes** : SQL permet de croiser les tables (jointures) et de filtrer rapidement de gros volumes."
+              ]
+            },
+            { "type": "attendu", "texte": "Deux avantages cités et expliqués en une phrase chacun suffisent." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Caractéristique d'un attribut pour être clé primaire.",
+          "blocs": [
+            { "type": "reponse", "texte": "Sa valeur doit être unique pour chaque enregistrement de la relation (et toujours renseignée), afin d'identifier chaque ligne sans ambiguïté." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Rôle des clés étrangères id_client et id_emplacement dans Reservation.",
+          "blocs": [
+            { "type": "reponse", "texte": "`id_client` fait référence à la clé primaire de Client (qui réserve) et `id_emplacement` à celle de Emplacement (quel emplacement est réservé). Elles relient chaque réservation à un client et à un emplacement existants : le SGBD refuse une réservation qui pointerait vers un client ou un emplacement absent (intégrité référentielle)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Schéma relationnel de Emplacement, avec la clé primaire et les types.",
+          "blocs": [
+            { "type": "reponse", "texte": "Emplacement (**id_emplacement** : INT, nom : TEXT, localisation : TEXT, tarif_journalier : FLOAT) — clé primaire `id_emplacement` (à souligner) ; aucune clé étrangère." },
+            { "type": "texte", "texte": "`localisation` mélange une lettre et un chiffre (A4, D1) : c'est une chaîne. `tarif_journalier` prend des valeurs comme 29.90 : c'est un nombre décimal (FLOAT, REAL ou DECIMAL sont acceptés)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Résultat de la requête sur tarif_journalier = 25.",
+          "blocs": [
+            {
+              "type": "tableau",
+              "entetes": ["id_emplacement", "nom", "localisation"],
+              "lignes": [
+                ["1", "myrtille", "A4"],
+                ["4", "mandarine", "B1"],
+                ["6", "melon", "A2"]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Nom et prénom des clients habitant à Strasbourg.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "SELECT nom, prenom\nFROM Client\nWHERE ville = 'Strasbourg';" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Ajouter le client 42, Edgar CODD.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "INSERT INTO Client\nVALUES (42, 'CODD', 'Edgar', '28 rue des Capucines', 'Lyon', 'France', '0555555555');" },
+            { "type": "piege", "texte": "Le numéro de téléphone s'écrit entre apostrophes : c'est une chaîne. Stocké comme un entier, il perdrait son 0 initial." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Informations de la réservation 18 (client, séjour, tarif).",
+          "blocs": [
+            { "type": "texte", "texte": "Les six colonnes viennent de trois relations : on part de Reservation et on la joint à Client par `id_client`, puis à Emplacement par `id_emplacement`." },
+            { "type": "code", "langage": "sql", "code": "SELECT Client.nom, Client.prenom,\n       Reservation.nombre_personne,\n       Reservation.date_arrivee, Reservation.date_depart,\n       Emplacement.tarif_journalier\nFROM Reservation\nJOIN Client ON Reservation.id_client = Client.id_client\nJOIN Emplacement ON Reservation.id_emplacement = Emplacement.id_emplacement\nWHERE Reservation.id_reservation = 18;" },
+            { "type": "attendu", "texte": "Deux jointures, chacune avec sa condition `ON` sur la clé étrangère, et le filtre sur l'identifiant de réservation. Préfixer par la table est indispensable pour `nom`, qui existe à la fois dans Client et dans Emplacement." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : la facture en Python" },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Pourquoi self est un paramètre des méthodes.",
+          "blocs": [
+            { "type": "texte", "texte": "Une méthode est écrite une fois dans la classe mais s'applique à de nombreux objets. `self` désigne **l'objet sur lequel la méthode est appelée** : lors de `resa.nb_jours()`, Python passe automatiquement `resa` comme valeur de `self`. C'est grâce à lui que la méthode lit ou modifie les attributs de cet objet précis (`self.date_depart`), et que le constructeur `__init__` range les valeurs dans le nouvel objet." },
+            { "type": "reponse", "texte": "`self` représente l'instance courante : il permet à chaque méthode d'accéder aux attributs et aux autres méthodes de l'objet qui l'appelle." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "Instancier client01 pour Edgar CODD.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "client01 = Client('CODD', 'Edgar', '28 rue des Capucines', 'Lyon', 'France', '0555555555')" },
+            { "type": "texte", "texte": "Les arguments suivent l'ordre des paramètres de `__init__` : nom, prenom, adresse, ville, pays, telephone. Pas d'identifiant ici : la classe Client n'a pas d'attribut `id_client`." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Ligne 5 de montant_a_regler.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour un séjour de n jours : location = tarif journalier × n ; taxe = 2,20 × nombre de personnes × n. On récupère n par la méthode `nb_jours()` de la réservation." },
+            { "type": "code", "langage": "python", "code": "def montant_a_regler(triplet):\n    client, reservation, emplacement = triplet\n    return (emplacement.tarif_journalier * reservation.nb_jours()\n            + reservation.nombre_personne * 2.20 * reservation.nb_jours())" },
+            { "type": "texte", "texte": "Vérification avec l'exemple : 30 € la journée, 4 personnes, 12 jours donnent 30 × 12 + 4 × 2,20 × 12 = 360 + 105,6 = 465,6 €." },
+            { "type": "piege", "texte": "`nb_jours` est une **méthode** : il faut les parenthèses, `reservation.nb_jours()`. Sans elles, on multiplie un nombre par une fonction et Python lève une erreur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "12",
+          "intitule": "Pourquoi facture_est_valide provoque une erreur.",
+          "blocs": [
+            { "type": "texte", "texte": "`annee` provient de `split` : c'est une **chaîne** (par exemple '2024'). Ligne 25, le test `2018 <= annee <= 2024` compare un entier et une chaîne, ce que Python refuse : il lève `TypeError: '<=' not supported between instances of 'int' and 'str'`." },
+            { "type": "reponse", "texte": "Ligne 25, on compare la chaîne `annee` aux entiers 2018 et 2024 : Python ne sait pas comparer un `int` et un `str`, d'où une `TypeError`." },
+            { "type": "piege", "texte": "Il y a une seconde erreur, silencieuse celle-là : ligne 12, la chaîne \"012345789\" **oublie le chiffre 6**. `que_des_chiffres('236')` renvoie donc `False`, et une facture valide comme '2024-JUN-236' serait refusée dès qu'on réutilisera cette fonction pour le numéro." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "13",
+          "intitule": "Corriger le code pour supprimer cette erreur.",
+          "blocs": [
+            { "type": "texte", "texte": "On convertit la chaîne en entier avant la comparaison. C'est sans risque : la ligne 23 a déjà vérifié que `annee` ne contient que des chiffres." },
+            { "type": "code", "langage": "python", "code": "if not(len(annee) == 4) or not(2018 <= int(annee) <= 2024):\n    return False" },
+            { "type": "texte", "texte": "Et on corrige la ligne 12 : `if not(car in \"0123456789\"):`." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "14",
+          "intitule": "Vérifier le mois (ligne 28) et le numéro (ligne 30).",
+          "blocs": [
+            { "type": "texte", "texte": "Le mois doit être l'une des douze abréviations du tableau `calendrier`. Le numéro doit faire exactement trois caractères, tous des chiffres. Voici la fonction complète, corrigée :" },
+            { "type": "code", "langage": "python", "code": "def que_des_chiffres(chaine):\n    for car in chaine:\n        if not(car in '0123456789'):\n            return False\n    return True\n\ndef facture_est_valide(chaine):\n    partie = separe(chaine)\n    if not(len(partie) == 3):\n        return False\n    annee, mois, numero = partie[0], partie[1], partie[2]\n    if not(que_des_chiffres(annee)):\n        return False\n    if not(len(annee) == 4) or not(2018 <= int(annee) <= 2024):\n        return False\n    # vérification du mois MMM\n    if not(mois in calendrier):\n        return False\n    # vérification du numéro xxx\n    if not(len(numero) == 3) or not(que_des_chiffres(numero)):\n        return False\n    return True" },
+            { "type": "texte", "texte": "Contrôle sur les exemples du sujet : '2024-MAY-230' → True ; '2012-MAY-230' → False (année) ; '2024-MAI-230' → False ('MAI' absent du calendrier) ; '2024-JUN-23' → False (deux chiffres seulement)." },
+            { "type": "astuce", "texte": "Pour valider une chaîne, enchaîne les tests « si ce n'est pas bon, `return False` » et termine par `return True` : chaque condition reste lisible seule, et l'ordre protège les suivantes (ici, `int(annee)` n'est appelé qu'une fois les chiffres vérifiés)." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3356 @@
+{
+ "niveau": "Tle",
+ "matiere": "sport",
+ "exercices": [
+  {
+   "chapitre": "51a4549e-8e77-58f9-9071-54bd236fe2cb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’échauffement de Jade",
+   "competence": "lire-tableau",
+   "situation": "Jade prépare une épreuve de demi-fond au lycée. Dans sa fiche d’entraînement, elle note son échauffement étape par étape, du début jusqu’à la ligne de départ.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "La fiche de Jade",
+     "colonnes": [
+      "Durée",
+      "Ce que fait Jade"
+     ],
+     "lignes": [
+      [
+       "6 min",
+       "Footing lent, pas chassés, courses arrière"
+      ],
+      [
+       "4 min",
+       "Cercles des épaules, des hanches, des genoux et des chevilles"
+      ],
+      [
+       "8 min",
+       "Gammes athlétiques, puis accélérations de plus en plus rapides"
+      ],
+      [
+       "2 min",
+       "Course proche de l’allure de l’épreuve"
+      ]
+     ],
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée totale de l’échauffement de Jade, en minutes ?",
+     "reponse": 20,
+     "unite": "min",
+     "aide": "Additionne les quatre durées de la première colonne.",
+     "explication": "6 + 4 + 8 + 2 = **20 min**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la durée de l’étape la plus longue.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare les quatre durées.",
+     "explication": "L’étape la plus longue dure **8 min** : les gammes athlétiques et les accélérations, c’est le travail spécifique de l’échauffement."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étape de la fiche à sa partie d’échauffement.",
+     "paires": [
+      [
+       "Footing lent, pas chassés",
+       "Partie générale"
+      ],
+      [
+       "Cercles des épaules et des hanches",
+       "Partie articulaire"
+      ],
+      [
+       "Gammes et accélérations",
+       "Partie spécifique"
+      ],
+      [
+       "Course proche de l’allure de l’épreuve",
+       "Fin, proche de l’intensité"
+      ]
+     ],
+     "aide": "Un échauffement va du général au spécifique, puis se termine près de l’intensité de l’épreuve.",
+     "explication": "Général (tout le corps), **articulaire** (mobiliser les articulations), **spécifique** (gestes de l’activité de plus en plus intenses), puis une course proche de l’intensité de l’épreuve."
+    }
+   ]
+  },
+  {
+   "chapitre": "51a4549e-8e77-58f9-9071-54bd236fe2cb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cœur après le match",
+   "competence": "lire-graphique",
+   "situation": "Élias a disputé un match de volley-ball. Son cardiofréquencemètre a noté sa fréquence cardiaque (FC) toutes les 5 minutes : échauffement de 0 à 15 min, match de 15 à 20 min, puis retour au calme en marchant.",
+   "documents": [
+    {
+     "id": "fc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fréquence cardiaque d’Élias",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35"
+     ],
+     "series": [
+      {
+       "nom": "FC",
+       "valeurs": [
+        75,
+        110,
+        130,
+        150,
+        185,
+        120,
+        95,
+        85
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "FC",
+      "unite": "bpm",
+      "min": 60,
+      "max": 200,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fc",
+     "enonce": "Touche le moment où la FC d’Élias est la plus haute.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "La FC est maximale à la **20e minute** (185 bpm), à la fin du match."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute la FC a-t-elle augmenté pendant l’échauffement, de 0 à 15 min ?",
+     "reponse": 75,
+     "unite": "bpm",
+     "aide": "Compare la FC à la minute 15 et à la minute 0.",
+     "explication": "150 − 75 = **75 bpm** : l’échauffement fait monter le cœur progressivement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la FC a-t-elle baissé pendant les 10 minutes qui suivent la fin du match, de 20 à 30 min ?",
+     "reponse": 90,
+     "unite": "bpm",
+     "aide": "Compare la FC à la minute 20 et à la minute 30.",
+     "explication": "185 − 95 = **90 bpm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la courbe après la 20e minute ?",
+     "options": [
+      "La FC redescend progressivement : le retour au calme aide le cœur à ralentir en douceur",
+      "La FC retombe aussitôt à sa valeur de repos, donc le retour au calme ne change rien",
+      "La FC continue de monter après l’arrêt du jeu, donc il faut rester immobile le plus vite possible",
+      "La FC reste au niveau du match, car le cœur ne ralentit jamais avant le lendemain"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si la courbe retombe d’un coup ou par étapes.",
+     "explication": "La FC ne tombe pas d’un coup : elle passe par 120, 95 puis 85 bpm. Quelques minutes d’activité légère **aident le cœur à ralentir progressivement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "51a4549e-8e77-58f9-9071-54bd236fe2cb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux échauffements avant le sprint",
+   "competence": "analyser-document",
+   "situation": "Anna et Bastien vont courir un 30 m lancé. Anna s’échauffe en suivant les étapes du cours ; Bastien, pressé, fait tout autrement. Un chronométreur mesure ensuite le temps moyen de chaque façon de se préparer.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "tableau",
+     "titre": "Deux façons de se préparer",
+     "colonnes": [
+      "Étape",
+      "Anna",
+      "Bastien"
+     ],
+     "lignes": [
+      [
+       "Général",
+       "8 min de footing lent",
+       "3 min de marche"
+      ],
+      [
+       "Articulaire",
+       "5 min de cercles d’épaules, de hanches et de chevilles",
+       "Aucune"
+      ],
+      [
+       "Spécifique",
+       "5 min de gammes et 3 accélérations progressives",
+       "10 min d’étirements statiques, 30 s par muscle"
+      ],
+      [
+       "Avant le départ",
+       "2 min de récupération",
+       "Départ immédiat"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiches écrites pour l’exercice"
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Temps sur 30 m lancé",
+     "colonnes": [
+      "Préparation",
+      "Temps (s)"
+     ],
+     "lignes": [
+      [
+       "10 min d’étirements longs et statiques",
+       "4,35"
+      ],
+      [
+       "20 min d’échauffement progressif et dynamique",
+       "4,20"
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de minutes l’échauffement d’Anna dure-t-il de plus que celui de Bastien ?",
+     "reponse": 7,
+     "unite": "min",
+     "aide": "Calcule la durée totale de chacun dans le premier tableau : Anna 8 + 5 + 5 + 2, Bastien 3 + 10.",
+     "explication": "Anna : 8 + 5 + 5 + 2 = 20 min. Bastien : 3 + 10 = 13 min. L’écart est de **7 min**."
+    },
+    {
+     "type": "zone",
+     "document": "deux",
+     "enonce": "Touche, dans la colonne de Bastien, l’étape que le cours déconseille avant un sprint.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche l’étape où il garde longtemps une position étirée.",
+     "explication": "Avant un effort explosif, les **étirements longs et statiques** sont déconseillés : ils peuvent diminuer temporairement la force et la vitesse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de secondes le temps est-il meilleur après l’échauffement dynamique qu’après les étirements statiques ?",
+     "reponse": 0.15,
+     "unite": "s",
+     "aide": "Soustrais les deux temps du second tableau.",
+     "explication": "4,35 − 4,20 = **0,15 s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tirer des deux documents ?",
+     "options": [
+      "Avant un effort explosif, un échauffement progressif aux gestes dynamiques vaut mieux que de longs étirements statiques",
+      "Plus un échauffement est court, plus le sprint est rapide, car les muscles gardent toute leur énergie",
+      "Les étirements longs et statiques sont indispensables pour courir vite, l’échauffement ne sert qu’à se concentrer",
+      "Le temps ne dépend pas de la préparation : les deux élèves ont simplement couru à des moments différents"
+     ],
+     "reponse": 0,
+     "aide": "Compare la préparation d’Anna et celle de Bastien avec leurs temps.",
+     "explication": "Un échauffement **progressif, complet et adapté** à l’activité prépare mieux un sprint que de longs étirements statiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "f26ff817-4c78-5148-b894-14067495b81e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une cheville au handball",
+   "competence": "analyser-document",
+   "situation": "Pendant un match de handball, Malik retombe mal d’un saut. Ses camarades et son professeur réagissent. À toi de repérer la blessure et de choisir les bons réflexes.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Malik",
+       "emoji": "🤾",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "🧑",
+       "cote": "droite"
+      },
+      {
+       "nom": "M. Roux",
+       "emoji": "🧑‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Malik",
+       "texte": "Aïe ! Ma cheville s’est tordue en retombant, et elle gonfle déjà."
+      },
+      {
+       "qui": "Inès",
+       "texte": "On dirait une [[e|entorse]]. Ne marche pas dessus, je préviens M. Roux."
+      },
+      {
+       "qui": "M. Roux",
+       "texte": "Merci Inès. Malik, assieds-toi, tu sors du jeu. Je m’occupe de toi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dial",
+     "enonce": "Touche le mot qui nomme la blessure de Malik.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Inès le dit dans sa réplique.",
+     "explication": "Une **entorse** est un ligament étiré ou déchiré, souvent à la cheville."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les bons réflexes après l’entorse de Malik.",
+     "items": [
+      "Arrêter l’activité",
+      "Appliquer du froid",
+      "Surélever la cheville",
+      "Faire examiner si la douleur ou le gonflement persistent"
+     ],
+     "aide": "On commence par arrêter, on finit par l’avis médical.",
+     "explication": "On **arrête**, on applique du **froid**, on **surélève**, puis on fait examiner si la douleur ou le gonflement persistent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque blessure à son réflexe.",
+     "paires": [
+      [
+       "Entorse de la cheville",
+       "Arrêter, froid, surélever"
+      ],
+      [
+       "Crampe au mollet",
+       "Étirer doucement et s’hydrater"
+      ],
+      [
+       "Tendinite",
+       "Repos relatif et avis médical"
+      ],
+      [
+       "Choc à la tête avec vertiges",
+       "Arrêter tout de suite, ne pas reprendre ce jour-là"
+      ]
+     ],
+     "aide": "Pense à ce qui se passe dans le corps pour chaque blessure.",
+     "explication": "Chaque blessure a son réflexe : la crampe s’étire doucement, la tendinite demande du repos, et un choc à la tête avec vertiges impose d’arrêter **immédiatement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f26ff817-4c78-5148-b894-14067495b81e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au pied du mur d’escalade",
+   "competence": "analyser-document",
+   "situation": "Dans une salle d’escalade, le professeur étudie la sécurité de la séance : le matériel installé, le rôle de chacun et le moment où surviennent les accidents. Les chiffres viennent d’un relevé fait dans un lycée.",
+   "documents": [
+    {
+     "id": "mur",
+     "type": "schema",
+     "titre": "Une cordée au pied du mur",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 22,
+       "l": 40,
+       "h": 168,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 14,
+       "texte": "Mur",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        190
+       ],
+       "a": [
+        320,
+        190
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 190,
+       "l": 130,
+       "h": 26,
+       "arrondi": 4,
+       "texte": "Tapis",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "tapis",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 92,
+       "cy": 70,
+       "r": 15,
+       "texte": "G",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "grimpeur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 58,
+       "texte": "Grimpeur",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        70
+       ],
+       "a": [
+        244,
+        168
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 252,
+       "cy": 168,
+       "r": 15,
+       "texte": "A",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "assureur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 210,
+       "texte": "Assureur",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "acc",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Accidents selon le moment de la séance",
+     "categories": [
+      "0–15 min",
+      "15–30 min",
+      "30–45 min",
+      "45–60 min"
+     ],
+     "series": [
+      {
+       "nom": "Accidents",
+       "valeurs": [
+        2,
+        3,
+        4,
+        9
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Accidents relevés",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Moment de la séance"
+     },
+     "valeurs": false,
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mur",
+     "enonce": "Touche l’élément de sécurité passive.",
+     "reponse": [
+      "tapis"
+     ],
+     "aide": "La sécurité passive, c’est du matériel qui protège, sans qu’on ait à agir.",
+     "explication": "Le **tapis de réception** est du matériel qui protège : c’est de la sécurité passive. L’assureur, lui, agit : c’est de la sécurité active."
+    },
+    {
+     "type": "zone",
+     "document": "acc",
+     "enonce": "Touche la tranche de la séance où les accidents sont les plus nombreux.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est la **dernière tranche** (45–60 min) : avec la fatigue, l’attention et la précision baissent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des accidents a lieu dans la dernière tranche, en pourcentage ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Additionne les quatre barres, puis divise la dernière par le total.",
+     "explication": "2 + 3 + 4 + 9 = 18 accidents et 9 ÷ 18 = 0,5, soit **50 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque pratique selon le type de sécurité.",
+     "categories": [
+      "Sécurité passive",
+      "Sécurité active"
+     ],
+     "items": [
+      [
+       "Tapis de réception",
+       0
+      ],
+      [
+       "Casque",
+       0
+      ],
+      [
+       "Zone balisée autour du mur",
+       0
+      ],
+      [
+       "Vérification mutuelle du baudrier",
+       1
+      ],
+      [
+       "Échauffement",
+       1
+      ],
+      [
+       "Respect des consignes",
+       1
+      ]
+     ],
+     "aide": "Le matériel et l’organisation protègent passivement ; les comportements de chacun protègent activement.",
+     "explication": "Le **matériel et l’organisation** (tapis, casque, zone balisée) relèvent de la sécurité passive ; les **comportements** (vérification, échauffement, consignes) de la sécurité active."
+    }
+   ]
+  },
+  {
+   "chapitre": "f26ff817-4c78-5148-b894-14067495b81e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois accidents, trois réflexes",
+   "competence": "analyser-texte",
+   "situation": "Le professeur d’EPS remet à la classe la fiche de trois incidents survenus dans l’année. Pour chacun, il faut trouver la bonne réaction et l’ordre des gestes à accomplir.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Fiche d’incidents",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "**Cas 1.** En fin de séance de basket, Lina, épuisée, sent son mollet se contracter violemment : c’est une crampe.",
+      "**Cas 2.** Noa reçoit un ballon en pleine tête. Il dit que tout va bien, mais il a des [[s|vertiges]] et une [[s|nausée]].",
+      "**Cas 3.** En gymnastique, Théo tombe lourdement de la barre et se plaint d’une douleur vive à la nuque. Il ne bouge plus."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque élève au bon réflexe.",
+     "paires": [
+      [
+       "Lina",
+       "Étirer doucement le muscle et s’hydrater"
+      ],
+      [
+       "Noa",
+       "Arrêter tout de suite, ne pas reprendre ce jour-là"
+      ],
+      [
+       "Théo",
+       "Ne pas le déplacer, sauf danger immédiat"
+      ]
+     ],
+     "aide": "Relis la blessure de chaque élève et pense à ce qui est dangereux dans chaque cas.",
+     "explication": "Crampe : on **étire doucement** et on s’hydrate. Choc à la tête : on **arrête** et on ne reprend pas le jour même. Blessure possible à la nuque : on **ne déplace pas**, sauf danger immédiat."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche les deux signes qui obligent Noa à arrêter immédiatement.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche, dans le cas 2, ce que Noa ressent malgré ses paroles.",
+     "explication": "Les **vertiges** et la **nausée** sont des signes de commotion possible : on arrête sur-le-champ, même si l’élève dit que tout va bien."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dans le cas de Théo, range les trois temps de l’intervention.",
+     "items": [
+      "Protéger : arrêter les activités et écarter le danger",
+      "Alerter : prévenir le professeur, qui appelle le 15, le 18 ou le 112",
+      "Secourir : selon sa formation, sans déplacer Théo"
+     ],
+     "aide": "Le sigle PAS donne l’ordre : P, A, puis S.",
+     "explication": "On suit l’ordre **Protéger, Alerter, Secourir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne faut-il pas relever Théo ?",
+     "options": [
+      "Un mouvement inutile pourrait aggraver une blessure à la nuque ou au dos",
+      "Le règlement interdit à un élève de toucher un camarade blessé, quelle que soit la situation",
+      "Un blessé doit toujours rester debout pour que la douleur se répartisse mieux",
+      "Il doit d’abord terminer son enchaînement pour que la séance soit validée"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que la chute a pu atteindre.",
+     "explication": "Une personne qui pourrait être blessée au dos ou à la nuque **ne se déplace pas**, sauf danger immédiat."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8e1929a-25b9-5938-be14-138dd1ae5688",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les rôles du set",
+   "competence": "observer-schema",
+   "situation": "Pendant un set de volley-ball, la classe ne se contente pas de jouer : plusieurs élèves tiennent un rôle pour que le match se déroule bien. Voici où chacun se place.",
+   "documents": [
+    {
+     "id": "terrain",
+     "type": "schema",
+     "titre": "Terrain de volley-ball vu de dessus",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 280,
+       "h": 140,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        170,
+        170
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 22,
+       "texte": "Filet",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 104,
+       "texte": "Équipe A",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 104,
+       "texte": "Équipe B",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 134,
+       "y": 184,
+       "l": 72,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Arbitre",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "arbitre",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 216,
+       "y": 184,
+       "l": 94,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Observateur",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "observateur",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 184,
+       "l": 94,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "Marqueur",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "marqueur",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "terrain",
+     "enonce": "Touche la place de l’arbitre.",
+     "reponse": [
+      "arbitre"
+     ],
+     "aide": "Il est au bout du filet, là où il voit le mieux l’action.",
+     "explication": "L’**arbitre** se place au bout du filet : c’est de là qu’il voit le mieux l’action et qu’il peut décider clairement."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rôle à sa mission.",
+     "paires": [
+      [
+       "Arbitre",
+       "Appliquer le règlement et le faire respecter"
+      ],
+      [
+       "Observateur",
+       "Relever des informations fiables et les transmettre"
+      ],
+      [
+       "Marqueur",
+       "Noter les points à chaque échange"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait pendant le match.",
+     "explication": "L’arbitre **applique et fait respecter** le règlement, l’observateur **relève et transmet**, le marqueur **note les points**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la mission de l’observateur.",
+     "texte": "L’observateur ___ des informations fiables et les ___ à son partenaire.",
+     "reponses": [
+      [
+       "relève",
+       "relève",
+       "recueille"
+      ],
+      [
+       "transmet"
+      ]
+     ],
+     "banque": [
+      "relève",
+      "transmet",
+      "oublie",
+      "garde"
+     ],
+     "aide": "Il note, puis il communique.",
+     "explication": "L’observateur **relève** des informations fiables et les **transmet** : c’est ce qui aide son partenaire à progresser."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8e1929a-25b9-5938-be14-138dd1ae5688",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fiche de l’observateur",
+   "competence": "lire-tableau",
+   "situation": "Sacha observe Léna en volley-ball. Pour chacune de ses sept attaques, il note la zone du terrain qu’elle vise et le résultat de l’attaque. Il doit ensuite lui transmettre une remarque utile.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Les sept attaques de Léna",
+     "colonnes": [
+      "Attaque",
+      "Zone visée",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Centre",
+       "Perdue"
+      ],
+      [
+       "2",
+       "Centre",
+       "Perdue"
+      ],
+      [
+       "3",
+       "Droite",
+       "Gagnée"
+      ],
+      [
+       "4",
+       "Centre",
+       "Perdue"
+      ],
+      [
+       "5",
+       "Centre",
+       "Gagnée"
+      ],
+      [
+       "6",
+       "Gauche",
+       "Gagnée"
+      ],
+      [
+       "7",
+       "Centre",
+       "Perdue"
+      ]
+     ],
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’attaques ont visé le centre ?",
+     "reponse": 5,
+     "aide": "Compte les lignes où la zone visée est « Centre ».",
+     "explication": "Les attaques 1, 2, 4, 5 et 7 visent le centre : **5 attaques**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Parmi ces attaques vers le centre, combien ont été perdues ?",
+     "reponse": 4,
+     "aide": "Garde seulement les lignes « Centre », puis compte les « Perdue ».",
+     "explication": "Les attaques 1, 2, 4 et 7 sont perdues : **4 attaques sur 5**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la zone visée par l’unique attaque dirigée vers la droite.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche le mot « Droite » dans la colonne des zones.",
+     "explication": "C’est l’attaque **3**, qui a été gagnée : les côtés réussissent mieux que le centre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque Sacha doit-il transmettre à Léna ?",
+     "options": [
+      "« 4 de tes 5 attaques au centre ont été perdues : vise plutôt les côtés. »",
+      "« Tu joues mal : il faudrait vraiment que tu t’y mettes sérieusement. »",
+      "« C’est nul : tu ferais mieux de laisser quelqu’un d’autre attaquer. »",
+      "« Attaque plus fort, sans te soucier de l’endroit où tombe le ballon. »"
+     ],
+     "reponse": 0,
+     "aide": "Une bonne remarque s’appuie sur des chiffres relevés.",
+     "explication": "Une remarque utile donne une **information chiffrée** et une **piste pour progresser**, pas un jugement."
+    }
+   ]
+  },
+  {
+   "chapitre": "e8e1929a-25b9-5938-be14-138dd1ae5688",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre degrés, une arbitre",
+   "competence": "analyser-document",
+   "situation": "En badminton, quatre élèves arbitrent chacun à leur tour, et le professeur décrit ce qu’il observe. Amel, elle, prépare le bac : elle a choisi la répartition de ses points entre l’AFL2 et l’AFL3.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les observations du professeur",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "**Sacha** connaît mal le règlement et siffle presque au hasard.",
+      "**Léo** connaît et applique le règlement, mais laisse passer les fautes sans les faire respecter.",
+      "**Maya** connaît le règlement, l’applique et le fait respecter ; elle transmet ses observations.",
+      "**Inès** fait tout cela et, en plus, aide ses camarades arbitres à se placer et à décider."
+     ]
+    },
+    {
+     "id": "amel",
+     "type": "tableau",
+     "titre": "Le bulletin d’Amel",
+     "colonnes": [
+      "Attendu",
+      "Points possibles",
+      "Points obtenus"
+     ],
+     "lignes": [
+      [
+       "AFL1",
+       "12",
+       "9"
+      ],
+      [
+       "AFL2",
+       "2",
+       "1"
+      ],
+      [
+       "AFL3",
+       "6",
+       "5"
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque élève au degré d’engagement qui correspond.",
+     "paires": [
+      [
+       "Sacha",
+       "Engagement subi"
+      ],
+      [
+       "Léo",
+       "Engagement aléatoire"
+      ],
+      [
+       "Maya",
+       "Engagement fonctionnel"
+      ],
+      [
+       "Inès",
+       "Engagement solidaire"
+      ]
+     ],
+     "aide": "Plus le degré est élevé, plus l’élève en fait : connaître, appliquer, faire respecter, aider les autres.",
+     "explication": "Subi : règlement mal connu. Aléatoire : connu et appliqué, mais pas **respecté**. Fonctionnel : connu, appliqué et **respecté**. Solidaire : tout cela et **aide les autres**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle répartition Amel a-t-elle choisie entre l’AFL2 et l’AFL3 ?",
+     "options": [
+      "2 points pour l’AFL2 et 6 points pour l’AFL3",
+      "4 points pour l’AFL2 et 4 points pour l’AFL3",
+      "6 points pour l’AFL2 et 2 points pour l’AFL3",
+      "8 points pour l’AFL2 et 0 point pour l’AFL3"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « Points possibles » du bulletin.",
+     "explication": "Amel a **2 points possibles** en AFL2 et **6** en AFL3 : elle a donné la priorité aux rôles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle note Amel obtient-elle sur 20 pour cette épreuve ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Additionne ses points obtenus.",
+     "explication": "9 + 1 + 5 = **15 points** sur 20."
+    },
+    {
+     "type": "zone",
+     "document": "amel",
+     "enonce": "Touche le nombre de points que l’AFL3 peut rapporter à Amel.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne AFL3, colonne « Points possibles ».",
+     "explication": "L’AFL3 peut lui rapporter **6 points** : c’est le choix « priorité aux rôles »."
+    }
+   ]
+  },
+  {
+   "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois épreuves de Lina",
+   "competence": "lire-tableau",
+   "situation": "Lina passe le bac d’EPS en contrôle en cours de formation. Ses trois épreuves, dans trois champs différents, ont toutes été notées sur 20.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Les notes de Lina",
+     "colonnes": [
+      "Activité",
+      "Champ",
+      "Note sur 20"
+     ],
+     "lignes": [
+      [
+       "Demi-fond",
+       "CA1",
+       "13"
+      ],
+      [
+       "Acrosport",
+       "CA3",
+       "17"
+      ],
+      [
+       "Badminton",
+       "CA4",
+       "12"
+      ]
+     ],
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la note finale d’EPS de Lina ?",
+     "reponse": 14,
+     "unite": "/20",
+     "aide": "La note finale est la moyenne des trois épreuves.",
+     "explication": "(13 + 17 + 12) ÷ 3 = 42 ÷ 3 = **14/20**."
+    },
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche la meilleure note de Lina.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare les trois notes.",
+     "explication": "Sa meilleure note est **17/20**, en acrosport."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Lina avait été absente sans justificatif au badminton, elle aurait eu 0 à cette épreuve. Quelle serait alors sa note finale ?",
+     "reponse": 10,
+     "unite": "/20",
+     "aide": "Remplace 12 par 0 dans la moyenne.",
+     "explication": "(13 + 17 + 0) ÷ 3 = 30 ÷ 3 = **10/20** : l’absence n’élimine pas, mais elle fait chuter la moyenne."
+    }
+   ]
+  },
+  {
+   "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux façons de répartir les points",
+   "competence": "calculer",
+   "situation": "Zoé et Hugo ont passé la même épreuve, mais ils n’ont pas choisi la même répartition des 8 points entre l’AFL2 et l’AFL3. L’AFL1 est noté sur 12 pour tout le monde.",
+   "documents": [
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Les points de Zoé et de Hugo",
+     "colonnes": [
+      "Élève",
+      "AFL1",
+      "AFL2",
+      "AFL3",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Zoé",
+       "10 sur 12",
+       "3 sur 4",
+       "2 sur 4",
+       "?"
+      ],
+      [
+       "Hugo",
+       "8 sur 12",
+       "5 sur 6",
+       "2 sur 2",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total de Zoé sur 20 ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Additionne ses points obtenus : 10, 3 et 2.",
+     "explication": "10 + 3 + 2 = **15 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total de Hugo sur 20 ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Additionne ses points obtenus : 8, 5 et 2.",
+     "explication": "8 + 5 + 2 = **15 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces phrases décrit le choix de Hugo ?",
+     "options": [
+      "Il a donné la priorité à l’entraînement : 6 points pour l’AFL2 et 2 pour l’AFL3",
+      "Il a équilibré ses points : 4 points pour l’AFL2 et 4 pour l’AFL3",
+      "Il a donné la priorité aux rôles : 2 points pour l’AFL2 et 6 pour l’AFL3",
+      "Il a tout misé sur les rôles : 0 point pour l’AFL2 et 8 pour l’AFL3"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les « sur … » dans les colonnes AFL2 et AFL3.",
+     "explication": "Hugo a **6 points** possibles en AFL2 et **2** en AFL3 : c’est la répartition « priorité à l’entraînement »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Hugo avait obtenu seulement 1 sur 2 à l’AFL3, quel aurait été son total ?",
+     "reponse": 14,
+     "unite": "points",
+     "aide": "Remplace 2 par 1 dans son total.",
+     "explication": "8 + 5 + 1 = **14 points**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Que prévoit le règlement ?",
+   "competence": "analyser-document",
+   "situation": "Trois élèves de Terminale se trouvent dans des situations différentes face au bac d’EPS. Le règlement prévoit pour chacune une conséquence précise. Un tableau donne les notes de Sacha.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois situations",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "**Sacha** était absent à son épreuve de natation et n’a fourni aucun justificatif.",
+      "**Lola** s’est blessée à la cheville une semaine avant son épreuve ; son certificat médical l’atteste.",
+      "**Karim** prépare le bac sans être scolarisé dans un lycée : il est candidat individuel."
+     ]
+    },
+    {
+     "id": "sacha",
+     "type": "tableau",
+     "titre": "Les épreuves de Sacha",
+     "colonnes": [
+      "Activité",
+      "Note sur 20"
+     ],
+     "lignes": [
+      [
+       "Demi-fond",
+       "13"
+      ],
+      [
+       "Badminton",
+       "11"
+      ],
+      [
+       "Natation",
+       "Absent, non justifié"
+      ]
+     ],
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque élève à ce que prévoit le règlement.",
+     "paires": [
+      [
+       "Sacha, absent sans justificatif",
+       "Un 0 à cette épreuve, sans élimination"
+      ],
+      [
+       "Lola, blessée avec certificat",
+       "Une épreuve adaptée ou différée"
+      ],
+      [
+       "Karim, candidat individuel",
+       "Un examen ponctuel sur deux activités"
+      ]
+     ],
+     "aide": "Relis chaque situation : absence, blessure attestée, statut de candidat.",
+     "explication": "Absence non justifiée : **0** à l’épreuve, non éliminatoire. Blessure attestée : épreuve **adaptée ou différée**. Candidat individuel : **examen ponctuel** sur deux activités."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la note finale d’EPS de Sacha, avec 0 à la natation ?",
+     "reponse": 8,
+     "unite": "/20",
+     "aide": "Fais la moyenne de 13, 11 et 0.",
+     "explication": "(13 + 11 + 0) ÷ 3 = 24 ÷ 3 = **8/20**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "S’il avait obtenu 12 à la natation, quelle aurait été sa note finale ?",
+     "reponse": 12,
+     "unite": "/20",
+     "aide": "Fais la moyenne de 13, 11 et 12.",
+     "explication": "(13 + 11 + 12) ÷ 3 = 36 ÷ 3 = **12/20**. Son absence lui a coûté 4 points."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lola ne peut pas fournir d’effort physique. L’évaluation peut-elle reposer seulement sur l’AFL2 et l’AFL3 ?",
+     "options": [
+      "Non : il reste toujours une part d’action motrice, adaptée à sa blessure si besoin",
+      "Oui : une blessure supprime définitivement l’évaluation de l’action motrice",
+      "Oui : l’AFL1 est un bonus qui ne compte pas dans la note finale",
+      "Non : elle doit faire l’épreuve normale, sans aucune adaptation"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la part de l’évaluation qui concerne l’action, même en cas d’inaptitude.",
+     "explication": "Même en cas d’inaptitude partielle, l’évaluation **ne repose jamais** sur les seuls AFL2 et AFL3 : il y a toujours une part d’action motrice, adaptée si besoin."
+    }
+   ]
+  },
+  {
+   "chapitre": "a441361a-cf38-5044-9002-7564b86d5a5a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq familles d’activités",
+   "competence": "lire-tableau",
+   "situation": "Au lycée, l’EPS regroupe les activités en cinq champs d’apprentissage. Le tableau rappelle ce que vise chacun ; à toi de ranger des activités dans la bonne famille.",
+   "documents": [
+    {
+     "id": "champs",
+     "type": "tableau",
+     "titre": "Les champs d’apprentissage",
+     "colonnes": [
+      "Champ",
+      "Ce qu’il vise"
+     ],
+     "lignes": [
+      [
+       "CA1",
+       "Une performance maximale, mesurable à une échéance donnée"
+      ],
+      [
+       "CA2",
+       "Un déplacement adapté à des environnements variés ou incertains"
+      ],
+      [
+       "CA3",
+       "Une prestation destinée à être vue et appréciée"
+      ],
+      [
+       "CA4",
+       "Un affrontement individuel ou collectif à conduire et maîtriser"
+      ],
+      [
+       "CA5",
+       "Développer ses ressources et s’entretenir selon un but choisi"
+      ]
+     ],
+     "source": "D’après le programme d’EPS du lycée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque activité à son champ.",
+     "paires": [
+      [
+       "Lancer de javelot",
+       "CA1"
+      ],
+      [
+       "Course d’orientation",
+       "CA2"
+      ],
+      [
+       "Danse",
+       "CA3"
+      ],
+      [
+       "Tennis de table",
+       "CA4"
+      ],
+      [
+       "Musculation pour son projet",
+       "CA5"
+      ]
+     ],
+     "aide": "Relis le tableau : que cherche-t-on dans chaque activité ?",
+     "explication": "Javelot : performance mesurée (**CA1**). Orientation : milieu incertain (**CA2**). Danse : prestation jugée (**CA3**). Tennis de table : affrontement (**CA4**). Musculation pour un but choisi : **CA5**."
+    },
+    {
+     "type": "zone",
+     "document": "champs",
+     "enonce": "Touche le code du champ où l’on cherche à se transformer soi-même selon un but choisi.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Ce champ n’oppose personne à personne.",
+     "explication": "C’est le **CA5** : on n’y bat personne, on développe ses propres ressources."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que visent les trois attendus de chaque champ.",
+     "texte": "L’AFL1 vise à ___, l’AFL2 à se préparer et à ___, l’AFL3 à tenir des ___.",
+     "reponses": [
+      [
+       "agir"
+      ],
+      [
+       "s’entraîner",
+       "sentrainer",
+       "entraîner"
+      ],
+      [
+       "rôles",
+       "roles"
+      ]
+     ],
+     "banque": [
+      "agir",
+      "s’entraîner",
+      "rôles",
+      "gagner",
+      "mémoriser"
+     ],
+     "aide": "Agir, se préparer, vivre avec les autres.",
+     "explication": "**Agir** (AFL1), se préparer et **s’entraîner** (AFL2), tenir des **rôles** (AFL3)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a441361a-cf38-5044-9002-7564b86d5a5a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le calendrier de la classe",
+   "competence": "raisonner",
+   "situation": "En Terminale, une classe pratique cinq activités au fil de l’année. Au bac, chaque élève présentera trois épreuves relevant de trois champs d’apprentissage différents.",
+   "documents": [
+    {
+     "id": "cal",
+     "type": "tableau",
+     "titre": "L’année de la classe",
+     "colonnes": [
+      "Période",
+      "Activité"
+     ],
+     "lignes": [
+      [
+       "Septembre – octobre",
+       "Demi-fond"
+      ],
+      [
+       "Novembre – décembre",
+       "Volley-ball"
+      ],
+      [
+       "Janvier – février",
+       "Acrosport"
+      ],
+      [
+       "Mars – avril",
+       "Escalade"
+      ],
+      [
+       "Mai – juin",
+       "Badminton"
+      ]
+     ],
+     "source": "Calendrier écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cal",
+     "enonce": "Touche les deux activités qui relèvent du même champ.",
+     "reponse": [
+      "r1c1",
+      "r4c1"
+     ],
+     "multiple": true,
+     "aide": "Pense aux sports où l’on conduit un affrontement.",
+     "explication": "Le **volley-ball** et le **badminton** relèvent tous deux du CA4 : conduire et maîtriser un affrontement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de champs différents ce calendrier couvre-t-il ?",
+     "reponse": 4,
+     "aide": "Demi-fond CA1, volley CA4, acrosport CA3, escalade CA2, badminton CA4.",
+     "explication": "CA1, CA4, CA3 et CA2 : **4 champs** (le badminton répète le CA4)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel trio d’épreuves respecte la règle des trois champs différents ?",
+     "options": [
+      "Demi-fond, acrosport, volley-ball",
+      "Demi-fond, volley-ball, badminton",
+      "Volley-ball, badminton, acrosport",
+      "Escalade, volley-ball, badminton"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le trio où aucun champ n’apparaît deux fois.",
+     "explication": "Demi-fond (CA1), acrosport (CA3) et volley-ball (CA4) : **trois champs différents**. Les autres trios contiennent volley-ball et badminton, donc deux fois le CA4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le volley-ball et le badminton sont-ils dans le même champ ?",
+     "options": [
+      "Dans les deux, on apprend à conduire et maîtriser un affrontement",
+      "Dans les deux, on cherche à battre un record mesuré au chronomètre",
+      "Dans les deux, on présente une chorégraphie devant des juges",
+      "Dans les deux, on avance dans un milieu inconnu à lire"
+     ],
+     "reponse": 0,
+     "aide": "Les activités d’un même champ font apprendre la même chose.",
+     "explication": "Un champ regroupe des activités qui font **apprendre la même chose** : ici, gagner un affrontement (CA4)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a441361a-cf38-5044-9002-7564b86d5a5a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des paroles aux champs",
+   "competence": "analyser-texte",
+   "situation": "Cinq lycéens expliquent ce qu’ils cherchent dans leur activité. Un second tableau montre les choix d’épreuves de trois élèves pour le bac : l’un d’eux respecte la règle des champs différents.",
+   "documents": [
+    {
+     "id": "paroles",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Cinq lycéens",
+     "auteur": "Textes écrits pour l’exercice",
+     "blocs": [
+      "**Yanis** : « J’ai choisi la musculation : je veux gagner en force, selon un objectif que j’ai fixé moi-même. »",
+      "**Nina** : « Mon enchaînement sera jugé devant toute la classe : il doit être vu et apprécié. »",
+      "**Maël** : « Au badminton, je veux lire le jeu de mon adversaire et le mettre en difficulté. »",
+      "**Sarah** : « Mon but est de courir mon 100 m le plus vite possible : le chronomètre fera foi. »",
+      "**Lou** : « En forêt, je choisis mon itinéraire entre deux balises sans savoir ce que je vais rencontrer. »"
+     ]
+    },
+    {
+     "id": "trio",
+     "type": "tableau",
+     "titre": "Trois choix d’épreuves",
+     "colonnes": [
+      "Élève",
+      "Épreuve 1",
+      "Épreuve 2",
+      "Épreuve 3"
+     ],
+     "lignes": [
+      [
+       "Éva",
+       "Acrosport",
+       "Badminton",
+       "Demi-fond"
+      ],
+      [
+       "Tom",
+       "Volley-ball",
+       "Tennis de table",
+       "Natation de vitesse"
+      ],
+      [
+       "Jade",
+       "Danse",
+       "Acrosport",
+       "Musculation"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Choix écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque lycéen au champ qui correspond.",
+     "paires": [
+      [
+       "Yanis",
+       "CA5"
+      ],
+      [
+       "Nina",
+       "CA3"
+      ],
+      [
+       "Maël",
+       "CA4"
+      ],
+      [
+       "Sarah",
+       "CA1"
+      ],
+      [
+       "Lou",
+       "CA2"
+      ]
+     ],
+     "aide": "Cherche dans chaque phrase ce qui est visé : record, itinéraire, jugement, affrontement, but choisi.",
+     "explication": "Yanis : but choisi (**CA5**). Nina : prestation jugée (**CA3**). Maël : affrontement (**CA4**). Sarah : performance mesurée (**CA1**). Lou : milieu incertain (**CA2**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel élève du second tableau respecte la règle des trois champs différents ?",
+     "options": [
+      "Éva",
+      "Tom",
+      "Jade",
+      "Aucun des trois"
+     ],
+     "reponse": 0,
+     "aide": "Note le champ de chaque activité : acrosport CA3, badminton CA4, demi-fond CA1…",
+     "explication": "Éva présente l’acrosport (CA3), le badminton (CA4) et le demi-fond (CA1) : **trois champs différents**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves du tableau ne respectent pas cette règle ?",
+     "reponse": 2,
+     "aide": "Cherche ceux qui ont deux activités du même champ.",
+     "explication": "Tom a deux activités du CA4 et Jade deux du CA3 : **2 élèves**."
+    },
+    {
+     "type": "zone",
+     "document": "trio",
+     "enonce": "Touche les deux activités de Jade qui relèvent du même champ.",
+     "reponse": [
+      "r2c1",
+      "r2c2"
+     ],
+     "multiple": true,
+     "aide": "Pense aux activités où l’on présente une prestation jugée.",
+     "explication": "La **danse** et l’**acrosport** relèvent toutes deux du CA3."
+    }
+   ]
+  },
+  {
+   "chapitre": "b584c1c3-452a-5047-826b-93b9cb92b6aa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Plat contre haies",
+   "competence": "lire-tableau",
+   "situation": "Kenza prépare le 50 m haies. Pour mesurer ses progrès techniques, elle compare son temps sur le plat et son temps sur les haies : l’écart est son indice technique.",
+   "documents": [
+    {
+     "id": "indice",
+     "type": "tableau",
+     "titre": "Les deux séances de Kenza",
+     "colonnes": [
+      "Séance",
+      "50 m plat (s)",
+      "50 m haies (s)",
+      "Écart (s)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "7,6",
+       "8,8",
+       "?"
+      ],
+      [
+       "2",
+       "7,6",
+       "8,5",
+       "?"
+      ]
+     ],
+     "source": "Temps écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre le plat et les haies à la séance 1, en secondes ?",
+     "reponse": 1.2,
+     "unite": "s",
+     "aide": "Soustrais le temps du plat au temps des haies.",
+     "explication": "8,8 − 7,6 = **1,2 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart à la séance 2, en secondes ?",
+     "reponse": 0.9,
+     "unite": "s",
+     "aide": "Même calcul avec 8,5 et 7,6.",
+     "explication": "8,5 − 7,6 = **0,9 s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’évolution de l’écart sur la technique de Kenza ?",
+     "options": [
+      "Son efficacité technique a progressé, même si son temps sur le plat n’a pas changé",
+      "Sa performance a baissé, car son temps sur le plat n’a pas été amélioré",
+      "Elle a fait une faute, puisque l’écart est devenu plus petit que la première fois",
+      "Il est impossible de conclure, car les temps ne portent que sur une seule course"
+     ],
+     "reponse": 0,
+     "aide": "Un écart plus petit veut dire que les haies la ralentissent moins.",
+     "explication": "L’écart passe de 1,2 s à 0,9 s : elle franchit mieux les haies, son **indice technique progresse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b584c1c3-452a-5047-826b-93b9cb92b6aa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle filière pour quel effort ?",
+   "competence": "analyser-document",
+   "situation": "Le professeur dresse la liste de six épreuves du CA1 avec la durée de l’effort d’un élève. Selon cette durée, une filière d’énergie domine : c’est elle qu’il faut apprendre à gérer.",
+   "documents": [
+    {
+     "id": "efforts",
+     "type": "tableau",
+     "titre": "Durée de l’effort",
+     "colonnes": [
+      "Épreuve",
+      "Durée de l’effort"
+     ],
+     "lignes": [
+      [
+       "Lancer de poids",
+       "2 s"
+      ],
+      [
+       "60 m plat",
+       "8,5 s"
+      ],
+      [
+       "400 m",
+       "65 s"
+      ],
+      [
+       "100 m nage",
+       "70 s"
+      ],
+      [
+       "1 500 m",
+       "5 min 20 s"
+      ],
+      [
+       "3 000 m",
+       "11 min"
+      ]
+     ],
+     "source": "Durées écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "efforts",
+     "enonce": "Touche la durée de l’effort le plus court.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Compare les durées : pense aux unités (s, min).",
+     "explication": "Le lancer de poids ne dure que **2 s**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque épreuve selon la filière d’énergie qui domine.",
+     "categories": [
+      "Anaérobie alactique",
+      "Anaérobie lactique",
+      "Aérobie"
+     ],
+     "items": [
+      [
+       "Lancer de poids",
+       0
+      ],
+      [
+       "60 m plat",
+       0
+      ],
+      [
+       "400 m",
+       1
+      ],
+      [
+       "100 m nage",
+       1
+      ],
+      [
+       "1 500 m",
+       2
+      ],
+      [
+       "3 000 m",
+       2
+      ]
+     ],
+     "aide": "Moins de 10 s, de 10 s à 2 min environ, puis au-delà.",
+     "explication": "Moins de 10 s : **alactique**. De 10 s à 2 min environ : **lactique**. Au-delà : **aérobie**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse moyenne du 400 m, en mètres par seconde, arrondie au dixième ?",
+     "reponse": 6.2,
+     "unite": "m/s",
+     "tolerance": 0.05,
+     "aide": "Vitesse = distance ÷ durée, avec 400 m et 65 s.",
+     "explication": "400 ÷ 65 ≈ 6,15, soit **6,2 m/s** au dixième près."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur un 400 m, quelle erreur menace le plus la fin de course ?",
+     "options": [
+      "Partir à vitesse maximale, sans répartir son effort sur la distance",
+      "Répartir son effort en gardant un peu d’énergie pour la dernière ligne droite",
+      "S’échauffer de façon spécifique avant le départ de la course",
+      "Regarder droit devant soi plutôt que derrière soi en courant"
+     ],
+     "reponse": 0,
+     "aide": "Dans une course de 10 s à 2 min, il faut gérer la répartition de l’effort.",
+     "explication": "Sur un effort lactique, partir trop vite fait **s’effondrer à la fin** : il faut répartir son effort."
+    }
+   ]
+  },
+  {
+   "chapitre": "b584c1c3-452a-5047-826b-93b9cb92b6aa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Six essais en longueur",
+   "competence": "analyser-document",
+   "situation": "Jules passe son épreuve de saut en longueur. Son professeur lui donne six essais. La performance est notée sur 6 points d’après un barème de l’établissement, à partir de sa meilleure distance valide.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les six essais de Jules",
+     "colonnes": [
+      "Essai",
+      "Distance (m)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "4,35"
+      ],
+      [
+       "2",
+       "4,62"
+      ],
+      [
+       "3",
+       "Nul"
+      ],
+      [
+       "4",
+       "4,78"
+      ],
+      [
+       "5",
+       "4,70"
+      ],
+      [
+       "6",
+       "4,95"
+      ]
+     ],
+     "source": "Résultats écrits pour l’exercice"
+    },
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Barème de performance",
+     "colonnes": [
+      "Distance minimale (m)",
+      "Points sur 6"
+     ],
+     "lignes": [
+      [
+       "3,60",
+       "2"
+      ],
+      [
+       "4,00",
+       "3"
+      ],
+      [
+       "4,50",
+       "4"
+      ],
+      [
+       "4,90",
+       "5"
+      ],
+      [
+       "5,30",
+       "6"
+      ]
+     ],
+     "source": "Barème écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la meilleure performance de Jules, en mètres ?",
+     "reponse": 4.95,
+     "unite": "m",
+     "aide": "Cherche la plus grande distance valide.",
+     "explication": "Sa meilleure distance est **4,95 m**, à l’essai 6."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points sur 6 cette distance lui rapporte-t-elle ?",
+     "reponse": 5,
+     "unite": "points",
+     "aide": "Cherche le plus grand seuil que 4,95 m atteint.",
+     "explication": "4,95 m dépasse 4,90 m mais pas 5,30 m : **5 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de centimètres lui manque-t-il pour atteindre le palier de 6 points ?",
+     "reponse": 35,
+     "unite": "cm",
+     "aide": "Soustrais sa distance à 5,30 m, puis convertis en centimètres.",
+     "explication": "5,30 − 4,95 = 0,35 m, soit **35 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche le numéro de l’essai nul.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche le mot « Nul » et regarde la ligne.",
+     "explication": "L’essai **3** est nul : un essai nul, sans distance mesurée, n’apporte rien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après son essai nul, que doit décider Jules au quatrième essai ?",
+     "options": [
+      "Assurer un essai valable en réglant son élan, avant de retenter plus loin",
+      "Sauter sans course d’élan pour être certain de ne pas dépasser la planche",
+      "Arrêter de sauter pour ne pas se fatiguer avant la fin de l’épreuve",
+      "Courir à la vitesse maximale, même si le geste se désorganise totalement"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la vitesse utile et à la stratégie d’essais.",
+     "explication": "Il faut **assurer d’abord un essai valable**, avec un élan maîtrisé, puis tenter plus loin : aller plus vite ne sert à rien si le geste se dégrade."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a2acb9a-db94-5c99-901d-9718efe9260a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Avant de grimper",
+   "competence": "analyser-document",
+   "situation": "Dans une salle d’escalade, chaque cordée affiche sa fiche de vérification avant le départ. Le grimpeur et l’assureur la relisent ensemble, ligne par ligne.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Avant de grimper",
+     "sousTitre": "Vérification mutuelle",
+     "emoji": "🧗",
+     "lignes": [
+      {
+       "texte": "Baudrier serré et bouclé",
+       "id": "bau"
+      },
+      {
+       "texte": "Nœud en huit tressé, avec nœud d’arrêt",
+       "id": "noeud"
+      },
+      {
+       "texte": "Système d’assurage installé",
+       "id": "assurage"
+      },
+      {
+       "texte": "Mousqueton verrouillé",
+       "id": "mous"
+      },
+      {
+       "texte": "Brin libre tenu par l’assureur",
+       "id": "brin"
+      }
+     ],
+     "pied": "Jamais de départ sans vérification",
+     "teinte": "bleu",
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui décrit l’attache de la corde au baudrier.",
+     "reponse": [
+      "noeud"
+     ],
+     "aide": "Cherche le mot « nœud ».",
+     "explication": "Le grimpeur s’encorde avec un **nœud en huit tressé**, suivi d’un nœud d’arrêt."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois temps de la chaîne de sécurité.",
+     "items": [
+      "S’encorder avec un nœud en huit tressé",
+      "Vérifier mutuellement baudrier, nœud et mousqueton",
+      "Assurer en gardant une main sur le brin libre"
+     ],
+     "aide": "On s’attache, on contrôle, puis on grimpe.",
+     "explication": "D’abord on **s’encorde**, puis on **vérifie mutuellement**, et seulement ensuite l’assureur **assure** la progression."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rôle à son geste.",
+     "paires": [
+      [
+       "Grimpeur",
+       "S’encorder au pontet du baudrier"
+      ],
+      [
+       "Assureur",
+       "Garder une main sur le brin libre"
+      ],
+      [
+       "Contre-assureur",
+       "Tenir le brin libre derrière l’assureur"
+      ]
+     ],
+     "aide": "Pense à ce que chacun tient ou attache.",
+     "explication": "Le grimpeur **s’encorde**, l’assureur garde **une main sur le brin libre**, et le contre-assureur tient ce brin **derrière** lui."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a2acb9a-db94-5c99-901d-9718efe9260a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire la carte de la forêt",
+   "competence": "lire-carte",
+   "situation": "Pour sa première course d’orientation, Emma étudie l’extrait de carte du parcours. Elle doit d’abord comprendre la légende, puis repérer ce qui peut l’aider à ne pas se perdre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "schema",
+     "titre": "Extrait de carte d’orientation",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 300,
+       "h": 176,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 36,
+       "l": 100,
+       "h": 90,
+       "teinte": "vert",
+       "motif": "hachures",
+       "id": "dense",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 268,
+       "cy": 76,
+       "rx": 40,
+       "ry": 28,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "etang",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 34,
+       "y": 120,
+       "l": 70,
+       "h": 50,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "clairiere",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         128,
+         172
+        ],
+        [
+         168,
+         140
+        ],
+        [
+         210,
+         172
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "colline",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 184,
+       "l": 300,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "chemin",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "legende",
+     "type": "tableau",
+     "titre": "Légende",
+     "colonnes": [
+      "Couleur",
+      "Signification"
+     ],
+     "lignes": [
+      [
+       "Jaune",
+       "Zone découverte"
+      ],
+      [
+       "Blanc",
+       "Forêt facile à traverser"
+      ],
+      [
+       "Vert",
+       "Végétation plus dense"
+      ],
+      [
+       "Bleu",
+       "Eau"
+      ],
+      [
+       "Marron",
+       "Relief"
+      ],
+      [
+       "Trait noir",
+       "Chemin"
+      ]
+     ],
+     "source": "D’après la légende usuelle des cartes d’orientation"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone de végétation dense.",
+     "reponse": [
+      "dense"
+     ],
+     "aide": "Relis la légende pour trouver la couleur de la végétation dense.",
+     "explication": "La **végétation dense** ralentit la course et on s’y repère mal : la légende la signale par sa teinte."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone découverte.",
+     "reponse": [
+      "clairiere"
+     ],
+     "aide": "Cherche la couleur qui signifie « zone découverte ».",
+     "explication": "Une **zone découverte** est signalée par sa teinte dans la légende : on y avance vite et on y voit loin."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’élément linéaire qui peut servir de ligne directrice.",
+     "reponse": [
+      "chemin"
+     ],
+     "aide": "Une ligne directrice se suit sur la longueur, sans se perdre.",
+     "explication": "Le **chemin** est une ligne directrice : il se suit facilement et permet de ne pas perdre la direction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le nord de la carte est en haut de la feuille, mais la boussole indique le nord derrière Emma. Que doit-elle faire ?",
+     "options": [
+      "Tourner la carte jusqu’à ce que son nord coïncide avec le nord de la boussole",
+      "Garder la carte telle quelle, car le nord de la boussole n’a pas d’importance",
+      "Retourner la carte sens dessus dessous pour que le sud soit en haut",
+      "Plier la carte pour que seule la zone découverte reste visible"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit d’orienter la carte.",
+     "explication": "Orienter la carte, c’est faire **coïncider le nord de la carte avec le nord réel**, avec la boussole ou les éléments du terrain."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a2acb9a-db94-5c99-901d-9718efe9260a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois postes, deux itinéraires",
+   "competence": "raisonner",
+   "situation": "Sur un parcours, Lucas doit rejoindre trois postes. Entre chacun, il peut couper en ligne droite par la forêt dense ou passer par le chemin, plus long. Il compare les deux choix avant de partir.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "schema",
+     "titre": "Le parcours (schéma non à l’échelle)",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 60,
+       "l": 130,
+       "h": 100,
+       "teinte": "vert",
+       "motif": "hachures"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 50 180 L 50 40 L 290 40 L 290 180",
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 180,
+       "r": 13,
+       "texte": "1",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 40,
+       "r": 13,
+       "texte": "2",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 180,
+       "r": 13,
+       "texte": "3",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 140,
+       "cy": 190,
+       "rx": 30,
+       "ry": 15,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "etang",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 150,
+       "r": 9,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "rocher",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 128,
+       "texte": "Rocher",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 212,
+       "texte": "Étang",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Les deux choix",
+     "colonnes": [
+      "Étape",
+      "Trajet direct, en forêt dense",
+      "Trajet par le chemin"
+     ],
+     "lignes": [
+      [
+       "Poste 1 → poste 2",
+       "240 m à 40 m/min",
+       "400 m à 100 m/min"
+      ],
+      [
+       "Poste 2 → poste 3",
+       "200 m à 40 m/min",
+       "350 m à 100 m/min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Vitesses écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure le trajet direct du poste 1 au poste 2 ?",
+     "reponse": 6,
+     "unite": "min",
+     "aide": "Temps = distance ÷ vitesse : 240 ÷ 40.",
+     "explication": "240 ÷ 40 = **6 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Et le trajet par le chemin, du poste 1 au poste 2 ?",
+     "reponse": 4,
+     "unite": "min",
+     "aide": "Même calcul avec 400 m et 100 m/min.",
+     "explication": "400 ÷ 100 = **4 min**, malgré la distance plus longue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les deux étapes, combien de minutes le chemin fait-il gagner par rapport aux trajets directs ?",
+     "reponse": 3.5,
+     "unite": "min",
+     "aide": "Direct : 6 + 5. Chemin : 4 + 3,5.",
+     "explication": "Direct : 6 + 5 = 11 min. Chemin : 4 + 3,5 = 7,5 min. Le gain est de **3,5 min**."
+    },
+    {
+     "type": "zone",
+     "document": "parcours",
+     "enonce": "Le poste 3 est dans la forêt. Touche l’élément facile à trouver près de lui, d’où Lucas finira avec précision.",
+     "reponse": [
+      "rocher"
+     ],
+     "aide": "Cherche un repère proche du poste 3, pas l’étang.",
+     "explication": "Le **rocher** est facile à trouver et proche du poste : c’est un bon **point d’attaque**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un trajet plus long par le chemin peut-il être le meilleur choix ?",
+     "options": [
+      "On y avance bien plus vite et on risque moins de perdre la direction",
+      "Le chemin est toujours plus court que la ligne droite, quelle que soit la carte",
+      "La traversée de la forêt dense est interdite par le règlement de l’épreuve",
+      "Les postes se trouvent toujours sur les chemins, jamais dans la forêt"
+     ],
+     "reponse": 0,
+     "aide": "Compare la vitesse de déplacement dans les deux milieux.",
+     "explication": "En forêt dense on avance lentement et on perd la direction : le chemin est une **ligne directrice**, plus rapide et plus sûre."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9eb4ac6-4daa-5502-8045-8b9f4dc2745c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La phrase dansée",
+   "competence": "lire-tableau",
+   "situation": "Quatre danseurs composent une phrase chorégraphique en quatre temps. Chaque temps utilise un procédé de composition différent. Le plan de la chorégraphie est noté dans un tableau.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le plan de la chorégraphie",
+     "colonnes": [
+      "Temps",
+      "Durée",
+      "Ce que font les quatre danseurs"
+     ],
+     "lignes": [
+      [
+       "Temps 1",
+       "8 s",
+       "Les quatre lèvent le bras au même moment"
+      ],
+      [
+       "Temps 2",
+       "12 s",
+       "Chacun reprend le même geste, un peu après son voisin"
+      ],
+      [
+       "Temps 3",
+       "6 s",
+       "Un mouvement très lent, puis un mouvement très rapide"
+      ],
+      [
+       "Temps 4",
+       "10 s",
+       "À chaque reprise, un nouveau geste s’ajoute à la phrase"
+      ]
+     ],
+     "source": "Plan écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque temps au procédé de composition utilisé.",
+     "paires": [
+      [
+       "Temps 1",
+       "Unisson"
+      ],
+      [
+       "Temps 2",
+       "Canon"
+      ],
+      [
+       "Temps 3",
+       "Contraste"
+      ],
+      [
+       "Temps 4",
+       "Accumulation"
+      ]
+     ],
+     "aide": "Unisson : ensemble. Canon : décalé. Contraste : opposé. Accumulation : qui s’ajoute.",
+     "explication": "**Unisson** : même geste en même temps. **Canon** : même geste décalé dans le temps. **Contraste** : lent et rapide. **Accumulation** : un geste de plus à chaque reprise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée totale de la phrase chorégraphique, en secondes ?",
+     "reponse": 36,
+     "unite": "s",
+     "aide": "Additionne les quatre durées.",
+     "explication": "8 + 12 + 6 + 10 = **36 s**."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la durée du temps le plus long.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare les quatre durées.",
+     "explication": "Le temps le plus long est le **temps 2** (12 s), celui du canon."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9eb4ac6-4daa-5502-8045-8b9f4dc2745c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Porter sans se blesser",
+   "competence": "observer-schema",
+   "situation": "En acrosport, le voltigeur doit monter sur le porteur, placé à quatre pattes, le dos plat. Le jury, lui, commente ensuite chaque prestation selon quatre critères connus d’avance.",
+   "documents": [
+    {
+     "id": "porteur",
+     "type": "schema",
+     "titre": "Un porteur à quatre pattes (vu de côté)",
+     "largeur": 380,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 90,
+       "l": 82,
+       "h": 44,
+       "texte": "Bassin",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "bassin",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 107,
+       "y": 90,
+       "l": 82,
+       "h": 44,
+       "texte": "Reins",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "reins",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 189,
+       "y": 90,
+       "l": 82,
+       "h": 44,
+       "texte": "Milieu du dos",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "dos",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 271,
+       "y": 90,
+       "l": 82,
+       "h": 44,
+       "texte": "Épaules",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "epaules",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        66,
+        134
+       ],
+       "a": [
+        66,
+        186
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        312,
+        134
+       ],
+       "a": [
+        312,
+        186
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        190
+       ],
+       "a": [
+        370,
+        190
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 214,
+       "texte": "Genoux et mains au sol, dos plat",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "jury",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les commentaires du jury",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les éléments sont simples, mais les enchaînements sont variés, avec des liaisons fluides et des changements de niveau.",
+      "La chute dans la roue a fait perdre des points malgré la valeur de l’élément.",
+      "Le propos de la tempête se lit du début à la fin de la prestation.",
+      "Le groupe présente un équilibre renversé et deux pyramides à trois étages."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "porteur",
+     "enonce": "Touche les deux parties du porteur sur lesquelles le voltigeur prend appui pour monter.",
+     "reponse": [
+      "bassin",
+      "epaules"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les parties les plus solides, aux deux extrémités du dos.",
+     "explication": "Le voltigeur monte par le **bassin** et les **épaules**, jamais par les reins ni le milieu du dos."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque commentaire du jury au critère jugé.",
+     "paires": [
+      [
+       "Enchaînements variés, liaisons fluides",
+       "Composition"
+      ],
+      [
+       "Chute malgré la valeur de l’élément",
+       "Exécution"
+      ],
+      [
+       "Propos de la tempête lisible",
+       "Interprétation"
+      ],
+      [
+       "Équilibre renversé et pyramides",
+       "Difficulté"
+      ]
+     ],
+     "aide": "Quelle question le jury se pose-t-il pour chaque commentaire ?",
+     "explication": "La **composition** juge la construction et les liaisons ; l’**exécution** juge la maîtrise ; l’**interprétation** juge l’intention ; la **difficulté** juge la valeur des éléments."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un groupe hésite entre une pyramide à trois étages mal stabilisée et deux pyramides à deux étages bien tenues. Que lui conseiller ?",
+     "options": [
+      "Présenter les deux pyramides à deux étages : l’exécution et la composition rapporteront davantage",
+      "Tenter la pyramide à trois étages : la difficulté rapporte toujours plus qu’une chute ne coûte",
+      "Ne présenter aucune pyramide, afin d’éviter complètement le risque d’une chute",
+      "Tenter les deux, en comptant sur le pareur pour rattraper toutes les chutes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’une chute coûte par rapport à la difficulté.",
+     "explication": "Mieux vaut un élément plus simple **parfaitement maîtrisé** qu’un élément difficile raté : une chute coûte souvent plus que la difficulté ne rapporte."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9eb4ac6-4daa-5502-8045-8b9f4dc2745c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fiche d’enchaînement",
+   "competence": "lire-tableau",
+   "situation": "Un trio d’acrosport a prévu quatre éléments pour son enchaînement. Chacun a une valeur de difficulté. Le juge note ce qui a vraiment été réalisé le jour de la prestation.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "L’enchaînement du trio",
+     "colonnes": [
+      "Élément",
+      "Difficulté (points)",
+      "Réalisation"
+     ],
+     "lignes": [
+      [
+       "Équilibre renversé",
+       "0,6",
+       "Tenu trois secondes"
+      ],
+      [
+       "Pyramide à trois étages",
+       "1,0",
+       "Écroulée"
+      ],
+      [
+       "Pyramide à deux étages",
+       "0,5",
+       "Tenue trois secondes"
+      ],
+      [
+       "Roulade groupée",
+       "0,2",
+       "Fluide"
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la difficulté totale des éléments réalisés, en points ?",
+     "reponse": 1.3,
+     "unite": "points",
+     "aide": "N’additionne que les éléments qui ne se sont pas écroulés.",
+     "explication": "0,6 + 0,5 + 0,2 = **1,3 point**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points de difficulté ont été perdus par rapport au total prévu ?",
+     "reponse": 1,
+     "unite": "point",
+     "aide": "Le total prévu est de 2,3 points.",
+     "explication": "0,6 + 1,0 + 0,5 + 0,2 = 2,3. Puis 2,3 − 1,3 = **1,0 point**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la réalisation de l’élément qui n’a pas pu être réussi.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le mot qui dit qu’un élément est tombé.",
+     "explication": "La pyramide à trois étages s’est **écroulée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de cette fiche ?",
+     "options": [
+      "L’élément le plus difficile a rapporté moins qu’un élément simple, car il n’a pas été maîtrisé",
+      "Plus un élément est difficile, plus il rapporte, même quand il s’écroule",
+      "Une chute ne compte pas, car seule la difficulté annoncée est jugée",
+      "La roulade groupée a rapporté plus que les autres, car elle est la plus courte"
+     ],
+     "reponse": 0,
+     "aide": "Compare la pyramide à trois étages et la roulade groupée.",
+     "explication": "La pyramide à trois étages valait 1,0 point mais s’est écroulée : elle rapporte **moins qu’une roulade fluide**. Mieux vaut maîtriser un élément plus simple."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc3a0e6a-6504-5ade-a834-5bd64c7bf6db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où jouer le volant ?",
+   "competence": "observer-schema",
+   "situation": "En simple au badminton, le terrain mesure 13,40 m de long. Ton adversaire est au fond de son demi-terrain, à gauche sur le schéma. Tu observes le terrain avant de jouer.",
+   "documents": [
+    {
+     "id": "court",
+     "type": "schema",
+     "titre": "Le court de badminton vu de dessus",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 10,
+       "l": 90,
+       "h": 220,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 10,
+       "l": 45,
+       "h": 55,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 10,
+       "l": 45,
+       "h": 55,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 65,
+       "l": 45,
+       "h": 55,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 65,
+       "l": 45,
+       "h": 55,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "d",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 24,
+       "texte": "A",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 24,
+       "texte": "B",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 79,
+       "texte": "C",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 79,
+       "texte": "D",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 138,
+       "cy": 46,
+       "r": 11,
+       "texte": "Adv",
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        120
+       ],
+       "a": [
+        215,
+        120
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 124,
+       "texte": "Filet",
+       "taille": "petit",
+       "ancre": "fin",
+       "italique": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 182,
+       "cy": 200,
+       "r": 11,
+       "texte": "Toi",
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        10
+       ],
+       "a": [
+        235,
+        230
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 244,
+       "y": 124,
+       "texte": "13,40 m",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "court",
+     "enonce": "Touche la zone la plus éloignée de l’adversaire.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Il est dans la zone A : cherche la zone du côté opposé, vers le filet.",
+     "explication": "La zone **D** est la plus éloignée de l’adversaire : jouer là, c’est jouer dans l’espace libre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance sépare le filet de la ligne de fond d’un côté, en mètres ?",
+     "reponse": 6.7,
+     "unite": "m",
+     "tolerance": 0.05,
+     "aide": "Le filet est au milieu du terrain de 13,40 m.",
+     "explication": "13,40 ÷ 2 = **6,70 m**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces décisions : stratégie ou tactique ?",
+     "categories": [
+      "Stratégie",
+      "Tactique"
+     ],
+     "items": [
+      [
+       "Avant le match : « Je vais jouer sur son revers, qu’il maîtrise mal. »",
+       0
+      ],
+      [
+       "Entre deux sets : « Je vais varier mes services. »",
+       0
+      ],
+      [
+       "Dans l’échange : « Il est en fond de court, je joue un amorti. »",
+       1
+      ],
+      [
+       "Dans l’échange : « Il s’est déplacé à gauche, je joue à droite. »",
+       1
+      ]
+     ],
+     "aide": "La stratégie se prépare avant ; la tactique se décide pendant le jeu.",
+     "explication": "La **stratégie** est un plan fait avant le match ou entre deux sets ; la **tactique** est une décision prise dans l’instant."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc3a0e6a-6504-5ade-a834-5bd64c7bf6db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les paniers encaissés",
+   "competence": "lire-graphique",
+   "situation": "Le coach d’une équipe de basket fait relever, pendant un match, la zone de tir de chaque panier encaissé. Il veut décider comment défendre au quart-temps suivant.",
+   "documents": [
+    {
+     "id": "paniers",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Paniers encaissés selon la zone de tir",
+     "categories": [
+      "Sous le panier",
+      "Demi-distance",
+      "À trois points"
+     ],
+     "series": [
+      {
+       "nom": "Paniers",
+       "valeurs": [
+        9,
+        3,
+        4
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Paniers encaissés",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Zone de tir"
+     },
+     "valeurs": false,
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paniers",
+     "enonce": "Touche la zone où l’équipe encaisse le plus de paniers.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est la zone **sous le panier**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des paniers encaissés vient de la zone sous le panier, en pourcentage arrondi à l’unité ?",
+     "reponse": 56,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Additionne les trois barres, puis divise la plus haute par le total.",
+     "explication": "9 + 3 + 4 = 16 paniers et 9 ÷ 16 = 0,5625, soit **56 %** environ."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle décision le relevé justifie-t-il pour la suite du match ?",
+     "options": [
+      "Fermer l’espace sous le panier et se replacer plus vite après chaque perte de balle",
+      "Laisser tout l’espace sous le panier pour mieux défendre à trois points",
+      "Ne rien changer, car la zone où l’on encaisse le plus de paniers est sans importance",
+      "Défendre uniquement à trois points, puisque ce sont les tirs qui rapportent le plus"
+     ],
+     "reponse": 0,
+     "aide": "Défendre, c’est retrouver l’équilibre : se replacer, fermer l’espace.",
+     "explication": "En défense, on cherche à **retrouver l’équilibre** : se replacer et fermer l’espace là où l’adversaire marque le plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette décision est prise avant le prochain quart-temps, à partir de chiffres relevés. C’est…",
+     "options": [
+      "Une stratégie",
+      "Une tactique"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Une tactique se décide dans l’instant, pendant le jeu.",
+     "explication": "Un plan établi **avant** le jeu, à partir des forces et faiblesses relevées, est une **stratégie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc3a0e6a-6504-5ade-a834-5bd64c7bf6db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Perdre de peu, gagner facilement",
+   "competence": "analyser-document",
+   "situation": "En tournoi de badminton, l’observateur compare deux joueurs : Enzo a joué un adversaire plus faible, Maya une adversaire plus forte. Il a aussi compté combien de volants chacun a joués dans l’espace libre.",
+   "documents": [
+    {
+     "id": "sets",
+     "type": "tableau",
+     "titre": "Le score des sets",
+     "colonnes": [
+      "Joueur",
+      "Adversaire",
+      "Score du set"
+     ],
+     "lignes": [
+      [
+       "Enzo",
+       "Karim, plus faible",
+       "21–6"
+      ],
+      [
+       "Maya",
+       "Léa, plus forte",
+       "19–21"
+      ]
+     ],
+     "source": "Scores écrits pour l’exercice"
+    },
+    {
+     "id": "libre",
+     "type": "tableau",
+     "titre": "Volants joués dans l’espace libre",
+     "colonnes": [
+      "Joueur",
+      "Volants dans l’espace libre"
+     ],
+     "lignes": [
+      [
+       "Enzo",
+       "5 sur 20"
+      ],
+      [
+       "Maya",
+       "14 sur 20"
+      ]
+     ],
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de points d’Enzo dans son set ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Soustrais le plus petit score au plus grand.",
+     "explication": "21 − 6 = **15 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de points de Maya dans son set ?",
+     "reponse": 2,
+     "unite": "points",
+     "aide": "Même calcul avec 21 et 19.",
+     "explication": "21 − 19 = **2 points**, en faveur de son adversaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de ses volants Maya a-t-elle joués dans l’espace libre ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Divise 14 par 20 puis multiplie par 100.",
+     "explication": "14 ÷ 20 = 0,7, soit **70 %**. Enzo n’est qu’à 25 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel joueur montre les meilleurs choix tactiques ?",
+     "options": [
+      "Maya : elle a perdu de peu contre plus forte, en jouant souvent dans l’espace libre",
+      "Enzo : il a gagné largement, donc ses choix sont forcément les meilleurs",
+      "Les deux de la même façon, car seul le score final a de l’importance",
+      "Aucun des deux, car on ne peut juger les choix que lors d’une victoire"
+     ],
+     "reponse": 0,
+     "aide": "En CA4, on croise le gain des rencontres et l’efficacité des choix.",
+     "explication": "Un joueur qui **perd de peu contre plus fort** peut montrer plus de qualités qu’un joueur qui gagne facilement contre plus faible : ici, Maya joue 70 % de ses volants dans l’espace libre."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7d435fb-093b-590a-b0fb-7c0a8cf3fa59",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La cible de Mia",
+   "competence": "calculer",
+   "situation": "Mia veut améliorer son endurance en courant à 60 % de sa fréquence cardiaque de réserve. Son professeur lui donne la formule de Karvonen : FC cible = FC repos + pourcentage × (FC max − FC repos).",
+   "documents": [
+    {
+     "id": "mia",
+     "type": "tableau",
+     "titre": "Les données de Mia",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "FC de repos",
+       "65 bpm"
+      ],
+      [
+       "FC maximale mesurée en test",
+       "195 bpm"
+      ],
+      [
+       "Intensité visée",
+       "60 % de la FC de réserve"
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la FC de réserve de Mia, en bpm ?",
+     "reponse": 130,
+     "unite": "bpm",
+     "aide": "FC de réserve = FC max − FC de repos.",
+     "explication": "195 − 65 = **130 bpm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa FC cible à 60 % de la réserve, en bpm ?",
+     "reponse": 143,
+     "unite": "bpm",
+     "aide": "FC cible = 65 + 0,6 × 130.",
+     "explication": "0,6 × 130 = 78, puis 65 + 78 = **143 bpm**."
+    },
+    {
+     "type": "zone",
+     "document": "mia",
+     "enonce": "Touche la FC maximale de Mia.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la valeur mesurée lors d’un test.",
+     "explication": "Sa FC maximale, mesurée en test, est de **195 bpm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7d435fb-093b-590a-b0fb-7c0a8cf3fa59",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La séance en deux blocs",
+   "competence": "lire-graphique",
+   "situation": "Romane (FC de repos 70 bpm, FC max 190 bpm) court deux blocs de 10 minutes, avec une marche entre les deux. Elle vise 75 % de sa FC de réserve et note sa FC toutes les 5 minutes.",
+   "documents": [
+    {
+     "id": "seance",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La FC de Romane pendant la séance",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25",
+      "30"
+     ],
+     "series": [
+      {
+       "nom": "FC",
+       "valeurs": [
+        70,
+        140,
+        158,
+        110,
+        145,
+        165,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "FC",
+      "unite": "bpm",
+      "min": 60,
+      "max": 180,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la FC de réserve de Romane, en bpm ?",
+     "reponse": 120,
+     "unite": "bpm",
+     "aide": "FC de réserve = FC max − FC de repos.",
+     "explication": "190 − 70 = **120 bpm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa FC cible à 75 % de la réserve, en bpm ?",
+     "reponse": 160,
+     "unite": "bpm",
+     "aide": "FC cible = 70 + 0,75 × 120.",
+     "explication": "0,75 × 120 = 90, puis 70 + 90 = **160 bpm**."
+    },
+    {
+     "type": "zone",
+     "document": "seance",
+     "enonce": "Touche le moment où la FC dépasse la cible.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point situé au-dessus de 160 bpm.",
+     "explication": "À la **25e minute**, la FC (165 bpm) dépasse la cible de 160 bpm."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la FC descend-elle à 110 bpm à la 15e minute ?",
+     "options": [
+      "Romane marche entre les deux blocs : la récupération active fait redescendre le cœur",
+      "Elle a arrêté toute activité et s’est assise pendant vingt minutes complètes",
+      "Son cœur s’est arrêté de s’adapter à l’effort, ce qui est normal en séance",
+      "Elle a couru plus vite, ce qui fait toujours baisser la fréquence cardiaque"
+     ],
+     "reponse": 0,
+     "aide": "Relis la situation : que fait Romane entre les deux blocs ?",
+     "explication": "Entre les deux blocs, la **marche** est une récupération active : la FC redescend avant le deuxième bloc."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7d435fb-093b-590a-b0fb-7c0a8cf3fa59",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le carnet de Noé",
+   "competence": "analyser-document",
+   "situation": "Noé (FC de repos 62 bpm, FC max 192 bpm) prépare un projet d’endurance. Il tient un carnet de ses séances de course et de musculation, en notant aussi son ressenti sur une échelle de 0 à 10.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Carnet de course",
+     "colonnes": [
+      "Séance",
+      "Prévu",
+      "Réalisé",
+      "Ressenti sur 10"
+     ],
+     "lignes": [
+      [
+       "S1",
+       "3 × 10 min à 70 %",
+       "Fait",
+       "5"
+      ],
+      [
+       "S2",
+       "3 × 10 min à 70 %",
+       "Fait",
+       "6"
+      ],
+      [
+       "S3",
+       "3 × 12 min à 70 %",
+       "Fait",
+       "9"
+      ]
+     ],
+     "source": "Carnet écrit pour l’exercice"
+    },
+    {
+     "id": "muscu",
+     "type": "tableau",
+     "titre": "Séances de musculation",
+     "colonnes": [
+      "Séance",
+      "Charge",
+      "Répétitions",
+      "Récupération"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Légère",
+       "20",
+       "30 s"
+      ],
+      [
+       "B",
+       "Lourde",
+       "4",
+       "3 min"
+      ],
+      [
+       "C",
+       "Moyenne",
+       "10",
+       "1 min 30"
+      ]
+     ],
+     "source": "Séances écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le ressenti de la séance la plus difficile.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Plus le ressenti est proche de 10, plus la séance est dure.",
+     "explication": "La séance **S3** est ressentie à 9 sur 10 : c’est la plus difficile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la FC cible de Noé à 70 % de sa FC de réserve, en bpm ?",
+     "reponse": 153,
+     "unite": "bpm",
+     "aide": "FC cible = 62 + 0,7 × (192 − 62).",
+     "explication": "FC de réserve : 192 − 62 = 130. Puis 62 + 0,7 × 130 = 62 + 91 = **153 bpm**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque séance de musculation au mobile travaillé.",
+     "paires": [
+      [
+       "Séance A",
+       "Endurance musculaire"
+      ],
+      [
+       "Séance B",
+       "Force"
+      ],
+      [
+       "Séance C",
+       "Volume musculaire"
+      ]
+     ],
+     "aide": "Charge légère et nombreuses répétitions, charge lourde et peu de répétitions, ou entre les deux.",
+     "explication": "Charge légère, 20 répétitions, récupération courte : **endurance musculaire**. Charge lourde, 4 répétitions, longue récupération : **force**. Charge moyenne, environ 10 répétitions : **volume musculaire**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À la dernière répétition de la séance B, Noé arrondit le dos. Que doit-il décider ?",
+     "options": [
+      "Alléger la charge : la qualité du geste passe avant le poids soulevé",
+      "Ajouter du poids pour finir la série plus vite malgré le dos arrondi",
+      "Garder la même charge : un dos arrondi est normal quand la charge est lourde",
+      "Raccourcir la récupération pour ne pas perdre la chaleur musculaire"
+     ],
+     "reponse": 0,
+     "aide": "Une charge qui déforme le mouvement est trop lourde.",
+     "explication": "La **qualité du geste passe avant la charge** : un dos arrondi montre que la charge est trop lourde pour l’instant."
+    }
+   ]
+  }
+ ]
+}

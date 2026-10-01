@@ -3,6 +3,8 @@ import { notFound, redirect } from 'next/navigation'
 import { Crown } from 'lucide-react'
 import Cahier from '@/components/exercices/Cahier'
 import PageChapitre from '@/components/exercices/PageChapitre'
+import SommaireLivre from '@/components/exercices/livre/SommaireLivre'
+import { chargerLivre } from '@/lib/exercices/livre-server'
 import ControleBlanc from '@/components/exercice/ControleBlanc'
 import { Button } from '@/components/ui/button'
 import { chargerCahier } from '@/lib/exercices/cahier-server'
@@ -48,7 +50,11 @@ export default async function ExercicePage({
   const { subject, ...chapter } = row
   const backHref = `/reviser/${subject.slug}/${chapter.id}`
   const premium = canAccessPremiumTests(tier)
-  const lignes = await chargerCahier(supabase, chapter.id, user.id)
+  const [lignes, livre] = await Promise.all([
+    chargerCahier(supabase, chapter.id, user.id),
+    // Le manuel du thème : ses autres chapitres, pour passer de l'un à l'autre.
+    chargerLivre(supabase, subject.slug, chapter.id, user.id),
+  ])
   const aUnCahier = lignes !== null && lignes.length > 0
 
   return (
@@ -63,6 +69,13 @@ export default async function ExercicePage({
         <div className="flex flex-col gap-5">
           {!premium ? <PorteStudueLPlus titre={chapter.title} retour={backHref} cahier /> : null}
           <Cahier lignes={lignes} base={`${backHref}/exercice`} premium={premium} controle={premium} />
+          {premium && livre && livre.sections.length > 1 ? (
+            <section className="carte mx-auto w-full max-w-xl p-4">
+              <p className="surtitre">Le manuel du thème</p>
+              <h2 className="titre-section mb-3">{livre.titre}</h2>
+              <SommaireLivre livre={livre} courante={{ chapitreId: chapter.id, position: 0 }} />
+            </section>
+          ) : null}
         </div>
       ) : premium ? (
         <ControleBlanc chapterId={chapter.id} chapterTitle={chapter.title} backHref={backHref} />
@@ -84,8 +97,8 @@ function PorteStudueLPlus({ titre, retour, cahier = false }: { titre: string; re
       </p>
       <p className="text-muted-foreground mt-2 text-sm text-balance">
         {cahier
-          ? `Trois exercices sur « ${titre} », avec des cartes, des graphiques et des textes à analyser, qui rapportent des gemmes. En attendant, le quiz et les flashcards du chapitre sont ouverts.`
-          : `Un vrai sujet écrit sur le cours de « ${titre} », que l’IA corrige et note sur 20, avec le corrigé. En attendant, le quiz et les flashcards du chapitre sont ouverts.`}
+          ? `Trois exercices sur « ${titre} », avec des cartes, des graphiques et des textes à analyser, qui rapportent des gemmes. En attendant, le cours et le quiz du chapitre sont ouverts.`
+          : `Un vrai sujet écrit sur le cours de « ${titre} », que l’IA corrige et note sur 20, avec le corrigé. En attendant, le cours et le quiz du chapitre sont ouverts.`}
       </p>
       <div className="mt-4 flex flex-col items-center gap-2">
         <Button asChild className="rounded-full">

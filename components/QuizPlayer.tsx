@@ -62,6 +62,7 @@ import {
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import IllustrationQuiz from '@/components/quiz/IllustrationQuiz'
 import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
 
@@ -1073,46 +1074,6 @@ export default function QuizPlayer({
           : { paddingBottom: 'env(safe-area-inset-bottom)' }
       }
     >
-      {/* L'ILLUSTRATION DE LA MATIÈRE, DANS L'ANGLE.
-          Elle occupait le creux entre l'énoncé et les réponses, au CENTRE de
-          l'écran — c'est-à-dire sur l'axe du regard, exactement là où l'œil
-          descend de la question vers les plaques. Un décor posé sur ce chemin
-          n'est plus un décor : il se fait lire comme un élément de l'exercice
-          (« le drapeau fait-il partie de la question ? »), et il repoussait les
-          réponses vers le bas.
-
-          Dans l'angle, elle rend cette hauteur au contenu et garde son seul
-          vrai rôle : dire de quelle matière on révise, du coin de l'œil. Elle
-          déborde des deux bords et passe SOUS tout le reste (`-z-0` contre la
-          colonne en `z-10`) — un motif d'angle, comme le blason d'une faction
-          dans un jeu, pas un objet de plus à regarder.
-
-          Très en retrait (opacité basse, halo diffus) : à sa saturation
-          d'avant, posée derrière le bouton « quitter » et l'énoncé, elle
-          salissait les deux. */}
-      {vignette ? (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-10 -left-14 -z-0 select-none md:-top-4 md:-left-6"
-        >
-          <span
-            className="absolute inset-0 m-auto size-52 rounded-full blur-3xl"
-            style={{
-              background:
-                'radial-gradient(circle, var(--jeu-glow), transparent 70%)',
-            }}
-          />
-          <Image
-            src={vignette}
-            alt=""
-            width={320}
-            height={320}
-            sizes="176px"
-            className="relative h-auto w-48 opacity-30 drop-shadow-sm md:w-44 md:opacity-45"
-          />
-        </div>
-      ) : null}
-
       <div className="relative z-10 mx-auto flex w-full max-w-xl flex-1 flex-col">
         {/* LA RANGÉE DU HAUT : quitter · progression · son.
             L'anneau « Question 4/8 » vivait au MILIEU de l'écran, entre le
@@ -1281,7 +1242,26 @@ export default function QuizPlayer({
             assez bas pour tomber dans l'axe du regard, assez haut pour que les
             réponses restent sous le pouce. Aucun des trois creux ne domine :
             c'est ce qui évite de retomber sur la carte blanche flottante. */}
-        <div className="min-h-2 flex-[0.8]" aria-hidden="true" />
+        {/* L'AGENCEMENT (25/09/2026, Lucas : « on peut faire mieux »). Trois
+            creux se partageaient l'écran — sous la barre, entre l'énoncé et
+            les réponses, sous les réponses — et l'illustration, rognée dans
+            l'angle, se lisait comme une tache derrière le bouton « quitter ».
+            Désormais UN seul bloc, qui part du HAUT : l'illustration ENTIÈRE,
+            l'énoncé, puis les réponses juste dessous, à écarts fixes. Tout le
+            vide va sous les réponses, et « Valider » reste seul en bas. (Un
+            creux flexible AU-DESSUS du bloc a été essayé le même jour : sur un
+            vrai/faux, il laissait un tiers d'écran vide sous la barre.) */}
+        <div className="h-4 shrink-0" aria-hidden="true" />
+
+        {vignette ? (
+          <div className="mb-2 shrink-0">
+            <IllustrationQuiz
+              key={index}
+              src={vignette}
+              reaction={answered ? (isCorrect ? 'joie' : 'rate') : 'attente'}
+            />
+          </div>
+        ) : null}
 
         <div className="shrink-0">
           {/* LA CONSIGNE DIT LA FORME. Elle annonçait « Choisis la bonne
@@ -1320,7 +1300,7 @@ export default function QuizPlayer({
               height={256}
               sizes="80px"
               priority
-              className="size-20 shrink-0 rounded-full"
+              className="size-14 shrink-0 rounded-full"
             />
             {/* L'ÉNONCÉ EN GRAND. Il était en `text-lg` (18 px) — la taille
                 d'un paragraphe — pour la seule chose que l'élève doit lire sur
@@ -1363,10 +1343,9 @@ export default function QuizPlayer({
           </div>
         </div>
 
-        {/* LA RESPIRATION avant les réponses. Elle ne porte plus rien depuis
-            que l'illustration est passée dans l'angle : c'est du vide, et c'est
-            son rôle — séparer ce qu'on lit de ce qu'on tape. */}
-        <div className="min-h-3 flex-[0.7]" aria-hidden="true" />
+        {/* Entre ce qu'on lit et ce qu'on tape : un écart FIXE, plus un creux
+            qui grandissait avec l'écran. */}
+        <div className="h-5 shrink-0" aria-hidden="true" />
 
         {/* LES RÉPONSES, ANCRÉES EN BAS — au plus près du pouce.
             Elles suivaient la question dans le flux : sur un écran haut, elles
@@ -1397,12 +1376,12 @@ export default function QuizPlayer({
           />
         </div>
 
-        {/* La respiration du BAS. Elle vaut moins que celle du haut (0,35
+        {/* La respiration du BAS — la SEULE qui s'étire (voir l'agencement plus haut). Autrefois elle valait moins que celle du haut (0,35
             contre 1) : les réponses doivent tomber PRÈS DU POUCE, juste
             au-dessus des boutons, pas flotter au milieu de l'écran. Le vide se
             rassemble donc au-dessus d'elles, entre l'énoncé et le plateau, là
             où il sert de respiration à la lecture. */}
-        <div className="min-h-3 flex-[0.35]" aria-hidden="true" />
+        <div className="min-h-3 flex-1" aria-hidden="true" />
 
         {/* VALIDER, SEUL.
             Le tap sur une réponse corrigeait immédiatement : un doigt qui

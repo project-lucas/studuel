@@ -1,0 +1,506 @@
+{
+  "niveau": "1re",
+  "matiere": "enseignement-scientifique",
+  "sujets": [
+    {
+      "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+      "difficulte": 1,
+      "titre": "Le monocorde de Pythagore",
+      "consigne": "Réponds en détaillant les calculs.",
+      "enonce": "**Situation.** Élise joue de la guitare. Sa corde de la, jouée à vide, émet un la2 à 220 Hz.\n\n1. Donne les rapports de fréquences de l’octave, de la quinte et de la quarte. Que découvre Pythagore à propos des intervalles consonants ?\n2. Élise appuie au milieu de la corde, ce qui divise par deux la longueur qui vibre. Quelle fréquence obtient-elle ? Quelle note est-ce ?\n3. Calcule la fréquence de la note située une quinte au-dessus du la2, puis celle située une quarte au-dessus.",
+      "bareme": [
+        { "critere": "Octave 2/1, quinte 3/2, quarte 4/3 ; consonance = rapports d’entiers simples", "points": 7 },
+        { "critere": "Longueur divisée par 2, fréquence doublée : 440 Hz, le la3 (même nom, une octave au-dessus)", "points": 6 },
+        { "critere": "Quinte : 330 Hz ; quarte : environ 293,3 Hz", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Octave : 2/1** ; **quinte : 3/2** ; **quarte : 4/3**. Pythagore découvre que les intervalles jugés **consonants** correspondent à des **rapports de nombres entiers simples**.\n2. Sur une corde tendue, la fréquence est **inversement proportionnelle à la longueur** qui vibre : diviser la longueur par deux **double** la fréquence. 220 × 2 = **440 Hz** : c’est le **la3**, une octave au-dessus. Deux notes séparées d’une octave portent le même nom.\n3. Quinte : 220 × 3/2 = **330 Hz**. Quarte : 220 × 4/3 ≈ **293,3 Hz**."
+    },
+    {
+      "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+      "difficulte": 2,
+      "titre": "Construire la gamme de Pythagore",
+      "consigne": "Détaille chaque calcul et arrondis au centième si nécessaire.",
+      "enonce": "**Situation.** Sacha veut construire une gamme de Pythagore à partir d’un do de fréquence 264 Hz. Il travaille dans l’octave [264 Hz ; 528 Hz[.\n\n**Méthode.** On empile des quintes (× 3/2) ; chaque fois qu’une note sort de l’octave de départ, on la ramène dedans en divisant par 2.\n\n1. Pourquoi l’octave de départ s’arrête-t-elle à 528 Hz ?\n2. Calcule successivement, en partant du do : sol, ré, la, mi. Indique à chaque fois si tu as dû diviser par 2.\n3. Le la de Sacha a-t-il la même fréquence que le la3 de référence (440 Hz) ? Calcule l’écart.\n4. Explique pourquoi ces notes forment des intervalles consonants avec le do.",
+      "bareme": [
+        { "critere": "528 = 264 × 2 : l’octave a un rapport 2", "points": 3 },
+        { "critere": "sol 396 Hz ; ré 297 Hz (594 / 2) ; la 445,5 Hz ; mi 334,13 Hz (668,25 / 2)", "points": 10 },
+        { "critere": "Écart du la : 445,5 − 440 = 5,5 Hz", "points": 3 },
+        { "critere": "Notes obtenues par des rapports d’entiers simples (puissances de 3/2 et de 2)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L’octave correspond au rapport **2** : 264 × 2 = **528 Hz** est le do suivant, qui porte le même nom.\n2. - **sol** = 264 × 3/2 = **396 Hz** (dans l’octave).\n- **ré** = 396 × 3/2 = 594 Hz, supérieur à 528 : on divise par 2 → **297 Hz**.\n- **la** = 297 × 3/2 = **445,5 Hz** (dans l’octave).\n- **mi** = 445,5 × 3/2 = 668,25 Hz, supérieur à 528 : on divise par 2 → **334,13 Hz** (334,125).\n3. Non : 445,5 − 440 = **5,5 Hz** d’écart. Le la obtenu dépend du do de départ choisi.\n4. Chaque note est obtenue en multipliant par 3/2 et en divisant par 2 : son rapport au do est un **rapport de nombres entiers** (3/2 pour le sol, 9/8 pour le ré…). Ce sont des empilements de **quintes**, l’intervalle consonant par excellence après l’octave."
+    },
+    {
+      "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+      "difficulte": 3,
+      "titre": "La gamme qui ne se referme pas",
+      "consigne": "Détaille les calculs, puis rédige une analyse argumentée.",
+      "enonce": "**Données.**\n- Dans la gamme tempérée, l’octave est divisée en 12 demi-tons égaux de rapport 2^(1/12) ≈ 1,0595.\n- Une quinte correspond à 7 demi-tons.\n- La3 de référence : 440 Hz.\n\n1. Calcule (3/2)^12 et 2^7. Que représentent ces deux nombres en termes d’empilement d’intervalles ?\n2. Calcule l’écart relatif entre les deux. Comment s’appelle-t-il ? Pourquoi montre-t-il que la gamme de Pythagore « ne se referme pas » ?\n3. Montre que douze demi-tons tempérés redonnent exactement une octave.\n4. Calcule le rapport d’une quinte tempérée, puis la fréquence de la note située une quinte tempérée au-dessus du la3. Compare à la quinte pure.\n5. Calcule la fréquence de la note située un demi-ton tempéré au-dessus du la3.\n6. Explique pourquoi la gamme tempérée est un « compromis assumé » et pourquoi elle s’est imposée.",
+      "bareme": [
+        { "critere": "(3/2)^12 ≈ 129,7 (douze quintes) et 2^7 = 128 (sept octaves)", "points": 4 },
+        { "critere": "Écart ≈ 1,4 % : le comma pythagoricien, aucune puissance de 3/2 n’égale une puissance de 2", "points": 4 },
+        { "critere": "(2^(1/12))^12 = 2", "points": 2 },
+        { "critere": "Quinte tempérée ≈ 1,498 ; 440 × 1,498 ≈ 659,3 Hz contre 660 Hz ; demi-ton : ≈ 466,2 Hz", "points": 6 },
+        { "critere": "Compromis : aucun intervalle parfaitement juste, toutes les tonalités jouables", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (3/2)^12 ≈ **129,7** : c’est l’empilement de **douze quintes**. 2^7 = **128** : c’est l’empilement de **sept octaves**. Les deux devraient ramener à la même note, mais ne sont pas égaux.\n2. 129,7 / 128 ≈ 1,014 : l’écart est d’environ **1,4 %**. C’est le **comma pythagoricien**. Aucune puissance de 3/2 n’est jamais égale à une puissance de 2 : en empilant des quintes pures, on ne retombe jamais exactement sur la note de départ. La gamme **ne se referme pas** et un instrument ainsi accordé sonne faux dès qu’on change de tonalité.\n3. (2^(1/12))^12 = 2^(12/12) = 2^1 = **2** : douze demi-tons redonnent exactement l’octave.\n4. Quinte tempérée = 7 demi-tons : 2^(7/12) ≈ **1,498**. Fréquence : 440 × 1,498 ≈ **659,3 Hz**. La quinte pure donnerait 440 × 1,5 = **660 Hz** : la quinte tempérée est légèrement trop basse.\n5. 440 × 1,0595 ≈ **466,2 Hz**.\n6. Dans la gamme tempérée, **aucun intervalle n’est parfaitement juste** (sauf l’octave) : la quinte vaut 1,498 au lieu de 1,5. En échange, tous les demi-tons sont égaux, donc **toutes les tonalités deviennent également jouables**. On sacrifie un peu de pureté arithmétique pour gagner la liberté musicale : c’est un **compromis assumé**, généralisé à l’époque de Bach."
+    },
+    {
+      "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+      "difficulte": 1,
+      "titre": "Numériser une voix",
+      "consigne": "Réponds en justifiant et en détaillant les calculs.",
+      "enonce": "**Situation.** Malik enregistre sa voix avec un micro relié à un ordinateur.\n\n1. Que produit le microphone ? Nomme les deux opérations qui transforment ce signal en suite de nombres, et ce que chacune découpe.\n2. Énonce le critère de Shannon-Nyquist. Le son que Malik veut enregistrer monte jusqu’à 20 kHz : quelle fréquence d’échantillonnage minimale faut-il ? Pourquoi le CD utilise-t-il 44,1 kHz ?\n3. Combien de niveaux permet une quantification sur 8 bits ? sur 16 bits ?",
+      "bareme": [
+        { "critere": "Signal analogique ; échantillonnage (temps) et quantification (amplitude)", "points": 7 },
+        { "critere": "fe ≥ 2 × fmax, soit au moins 40 kHz ; 44,1 kHz respecte ce critère", "points": 7 },
+        { "critere": "2^8 = 256 et 2^16 = 65 536 niveaux", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le microphone produit un **signal analogique** : une tension qui varie **continûment**. On l’**échantillonne** (découpage du **temps**, réglé par la fréquence d’échantillonnage fe), puis on le **quantifie** (découpage de l’**amplitude**, réglé par la résolution en bits).\n2. Le critère de Shannon-Nyquist impose **fe ≥ 2 × fmax**. Pour 20 kHz : fe ≥ 2 × 20 = **40 kHz**. Le CD utilise **44,1 kHz**, un peu plus que 40 kHz : il peut reconstituer tout le son audible.\n3. Avec n bits, on a 2^n niveaux : 8 bits → 2^8 = **256** niveaux ; 16 bits → 2^16 = **65 536** niveaux."
+    },
+    {
+      "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+      "difficulte": 2,
+      "titre": "Le poids d’un podcast",
+      "consigne": "Détaille chaque calcul avec les unités. On prendra 1 octet = 8 bits et 1 Mo = 10^6 octets.",
+      "enonce": "**Situation.** Clara enregistre un podcast de 5 minutes, en **mono** (une seule voie), avec une fréquence d’échantillonnage de 48 kHz et une quantification sur 24 bits.\n\n**Donnée.** taille = fe × n × durée × nombre de voies.\n\n1. Ce réglage respecte-t-il le critère de Shannon-Nyquist pour un son allant jusqu’à 20 kHz ? Justifie.\n2. Calcule la taille du fichier non compressé en bits, puis en mégaoctets.\n3. Clara compresse son fichier en MP3, ce qui divise la taille par dix environ. Quelle taille obtient-elle ? Que perd-elle ?\n4. Pour archiver l’original, elle hésite entre MP3 et FLAC. Que lui conseilles-tu ? Justifie.",
+      "bareme": [
+        { "critere": "48 kHz ≥ 2 × 20 kHz = 40 kHz : critère respecté", "points": 4 },
+        { "critere": "48 000 × 24 × 300 × 1 = 345 600 000 bits = 43,2 Mo", "points": 7 },
+        { "critere": "MP3 ≈ 4,3 Mo ; perte d’information non récupérable (sons masqués, fréquences extrêmes)", "points": 5 },
+        { "critere": "FLAC : compression sans perte, fichier restitué à l’identique", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 2 × 20 kHz = 40 kHz ; 48 kHz ≥ 40 kHz : le critère de Shannon-Nyquist est **respecté**.\n2. Durée : 5 × 60 = 300 s. Taille = 48 000 × 24 × 300 × 1 = **345 600 000 bits**. En octets : 345 600 000 / 8 = 43 200 000 octets = **43,2 Mo**.\n3. 43,2 / 10 ≈ **4,3 Mo**. La compression MP3 est **avec perte** : elle supprime ce que l’oreille ne perçoit pas (sons **masqués**, fréquences extrêmes). Cette information est **non récupérable**.\n4. Pour archiver, il faut garder tout le son : le **FLAC** est une compression **sans perte** qui restitue le fichier **à l’identique**, avec un gain de place plus modeste. Le MP3 convient à la diffusion, pas à l’archive."
+    },
+    {
+      "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+      "difficulte": 3,
+      "titre": "Du vinyle au streaming",
+      "consigne": "Détaille les calculs et rédige des réponses argumentées qui mobilisent plusieurs notions du chapitre.",
+      "enonce": "**Données.** Une seconde de son au format CD (44,1 kHz, 16 bits, stéréo) représente 1 411 200 bits. 1 octet = 8 bits ; 1 Mo = 10^6 octets.\n\n**Situation 1.** Un album dure 60 minutes. Un CD peut contenir environ 700 Mo.\n\n**Situation 2.** Une ancienne ligne téléphonique échantillonne à 8 kHz. Un violon joue une note dont un harmonique a une fréquence de 6 kHz.\n\n**Situation 3.** Nina possède un vieux disque vinyle (analogique) qu’elle a recopié plusieurs fois sur cassette ; la dernière copie grésille. Son cousin copie un fichier numérique dix fois de suite : la dixième copie est identique à l’original.\n\n1. Retrouve par le calcul les 1 411 200 bits d’une seconde de CD.\n2. Situation 1 : calcule la taille de l’album non compressé, en Mo. Tient-il sur un CD ?\n3. Situation 2 : quelle est la fréquence maximale correctement transmise par la ligne ? Que risque-t-il d’arriver à l’harmonique de 6 kHz ?\n4. Situation 3 : explique la différence entre les deux copies. Cite deux autres avantages du numérique.\n5. Explique en quelques lignes pourquoi le streaming utilise une compression avec perte.",
+      "bareme": [
+        { "critere": "44 100 × 16 × 2 = 1 411 200 bits", "points": 3 },
+        { "critere": "1 411 200 × 3 600 ≈ 5,08 × 10^9 bits ≈ 635 Mo : l’album tient sur un CD", "points": 5 },
+        { "critere": "fmax = 4 kHz ; repliement de spectre : fréquence inventée", "points": 5 },
+        { "critere": "Analogique qui se dégrade, numérique qui se régénère ; correction d’erreurs, traitement par calcul", "points": 4 },
+        { "critere": "Streaming : taille divisée par dix environ, perte non récupérable mais peu perceptible", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. taille = fe × n × durée × nombre de voies = 44 100 × 16 × 1 × 2 = **1 411 200 bits**.\n2. 60 min = 3 600 s. 1 411 200 × 3 600 ≈ 5,08 × 10^9 bits ; en octets : 5,08 × 10^9 / 8 ≈ 6,35 × 10^8 octets ≈ **635 Mo**. C’est moins que 700 Mo : l’album **tient sur un CD**.\n3. D’après Shannon-Nyquist, fe ≥ 2 × fmax, donc fmax ≤ 8 / 2 = **4 kHz**. L’harmonique de 6 kHz dépasse cette limite : il est mal échantillonné et produit un **repliement de spectre**, c’est-à-dire une fréquence **inventée**, absente du son d’origine.\n4. Un signal **analogique se dégrade** à chaque copie et transmission, sans correction possible : le grésillement s’accumule. Un signal **numérique** est une suite de nombres qui **se régénère exactement** : la dixième copie est identique. Autres avantages : il se **corrige** (codes détecteurs d’erreurs), se **duplique sans perte** et se **traite par calcul**.\n5. Un son non compressé est très lourd (une chanson de trois minutes pèse une trentaine de mégaoctets). La compression **avec perte** (MP3, AAC) divise la taille par **dix** environ en supprimant ce que l’oreille ne perçoit pas. L’information supprimée est **non récupérable**, mais c’est le prix qui rend la diffusion rapide possible : c’est le **prix du streaming**."
+    },
+    {
+      "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+      "difficulte": 1,
+      "titre": "Le trajet d’un son dans l’oreille",
+      "consigne": "Réponds à chaque question en quelques phrases précises.",
+      "enonce": "**Situation.** Pendant un cours de musique, Adèle se demande comment la note de la flûte arrive jusqu’à son cerveau.\n\n1. Nomme les trois étages de l’oreille, leurs éléments principaux et le rôle de chacun.\n2. Où se fait l’amplification, et comment ?\n3. Quelles cellules transforment la vibration en message nerveux ? Par quel nerf et vers quelle région du cerveau ce message est-il conduit ?",
+      "bareme": [
+        { "critere": "Externe (capter, tympan qui vibre), moyenne (osselets, amplifier), interne (cochlée, coder)", "points": 9 },
+        { "critere": "Amplification par les osselets : force du grand tympan concentrée sur la petite fenêtre ovale", "points": 5 },
+        { "critere": "Cellules ciliées de l’organe de Corti, nerf auditif, aires auditives du cortex temporal", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. - Oreille **externe** : pavillon, conduit auditif, **tympan** → elle **capte** et canalise le son ; le tympan **vibre** sous les variations de pression de l’air.\n- Oreille **moyenne** : les trois **osselets** (marteau, enclume, étrier) → ils **amplifient** et adaptent la vibration.\n- Oreille **interne** : la **cochlée**, l’organe de Corti, les cellules ciliées → elle **code** la vibration en message nerveux.\n2. Dans l’oreille moyenne : les osselets concentrent la force du **grand tympan** sur la **petite fenêtre ovale**. (L’étrier est le plus petit os du corps.)\n3. Les **cellules ciliées** de l’**organe de Corti** convertissent la vibration en message nerveux. Il circule par le **nerf auditif** jusqu’aux **aires auditives du cortex temporal**."
+    },
+    {
+      "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+      "difficulte": 2,
+      "titre": "Casque trop fort",
+      "consigne": "Justifie chaque réponse ; détaille les calculs de durée.",
+      "enonce": "**Situation.** Enzo écoute sa musique au casque très fort. Un bilan auditif montre qu’il entend mal les sons aigus, autour de 4 000 Hz, alors qu’il entend bien les graves.\n\n**Donnée.** On admet qu’une exposition de 8 h par jour à 85 dB est tolérable, et que chaque augmentation de 3 dB divise par deux cette durée.\n\n1. Explique ce qu’est la tonotopie. Dans quelle partie de la cochlée les cellules d’Enzo sont-elles probablement abîmées ? Justifie.\n2. Comment la cochlée code-t-elle la hauteur d’un son ? et son intensité ?\n3. Calcule la durée d’exposition tolérable à 88 dB, 91 dB, 94 dB et 97 dB.\n4. Enzo espère que « ça va repousser ». Que lui réponds-tu ? Quels signes auraient dû l’alerter ?",
+      "bareme": [
+        { "critere": "Tonotopie ; aigus détectés à la base, près de l’entrée : cellules de la base abîmées", "points": 5 },
+        { "critere": "Hauteur par la position des cellules ; intensité par la fréquence des potentiels d’action et le nombre de fibres", "points": 5 },
+        { "critere": "4 h, 2 h, 1 h, 30 min", "points": 6 },
+        { "critere": "Cellules ciliées non régénérées ; acouphènes, oreilles cotonneuses", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La membrane basilaire est rigide et étroite à la base, souple et large au sommet : elle entre en résonance à un **endroit différent selon la fréquence**. C’est la **tonotopie**. Les **aigus** résonnent à l’**entrée** (la base), les graves au fond. Enzo entend mal les aigus : ce sont les cellules ciliées de la **base** de la cochlée qui sont abîmées.\n2. La **hauteur** est codée par la **position** des cellules ciliées stimulées. L’**intensité** est codée par la **fréquence des potentiels d’action** et par le **nombre de fibres** recrutées.\n3. Chaque +3 dB divise la durée par deux : 88 dB → **4 h** ; 91 dB → **2 h** ; 94 dB → **1 h** ; 97 dB → **30 min**.\n4. Non : les **cellules ciliées ne se régénèrent pas**. Un traumatisme sonore les détruit **définitivement**. Les signes d’alerte sont les **acouphènes** (sifflements), qui indiquent une atteinte en cours, et l’impression d’oreilles **cotonneuses**, qui traduit une fatigue auditive."
+    },
+    {
+      "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+      "difficulte": 3,
+      "titre": "Après le concert",
+      "consigne": "Exploite la situation, détaille le calcul et rédige des réponses argumentées.",
+      "enonce": "**Situation.** Samedi soir, Louise passe 2 heures près des enceintes d’un concert, où le niveau sonore est de 100 dB. En sortant, elle entend un sifflement et a l’impression d’avoir du coton dans les oreilles. Dans le métro, elle croit entendre son prénom dans le bruit des rames, alors que personne ne l’appelle.\n\n**Donnée.** On admet qu’une exposition de 8 h à 85 dB est tolérable, et que chaque augmentation de 3 dB divise par deux cette durée.\n\n1. Calcule la durée d’exposition tolérable à 100 dB. Combien de fois Louise l’a-t-elle dépassée ?\n2. Décris le trajet du son depuis les enceintes jusqu’au message nerveux, en précisant le rôle de chaque étage de l’oreille.\n3. Explique ses symptômes à la sortie et pourquoi ils sont un avertissement sérieux.\n4. Le prénom entendu dans le métro : explique la phrase du cours « la perception n’est pas la mesure ».\n5. Propose deux conseils pour son prochain concert et justifie-les avec le cours.",
+      "bareme": [
+        { "critere": "15 min tolérables à 100 dB ; 2 h = 8 fois la durée tolérable", "points": 5 },
+        { "critere": "Trajet complet : tympan, osselets et fenêtre ovale, cochlée, cellules ciliées, nerf auditif", "points": 5 },
+        { "critere": "Acouphènes et oreilles cotonneuses ; cellules ciliées non régénérées", "points": 4 },
+        { "critere": "Le cerveau reconstruit et se laisse tromper : illusion auditive", "points": 3 },
+        { "critere": "Conseils justifiés par le niveau et la durée d’exposition", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. De 85 à 100 dB : +15 dB, soit 5 fois +3 dB. La durée est divisée par 2^5 = 32 : 8 h / 32 = 480 min / 32 = **15 min**. Louise est restée 2 h = 120 min, soit 120 / 15 = **8 fois** la durée tolérable.\n2. Le **pavillon** et le **conduit** canalisent le son ; le **tympan** vibre. Les **osselets** (marteau, enclume, étrier) transmettent et **amplifient** la vibration en concentrant la force du grand tympan sur la petite **fenêtre ovale**. Dans la **cochlée**, la membrane basilaire résonne à un endroit qui dépend de la fréquence (tonotopie) ; les **cellules ciliées** de l’organe de Corti convertissent la vibration en **message nerveux**, conduit par le **nerf auditif** jusqu’au **cortex temporal**.\n3. Le sifflement est un **acouphène**, signe d’une **atteinte en cours** ; les oreilles cotonneuses traduisent une **fatigue auditive**. C’est sérieux car les **cellules ciliées ne se régénèrent pas** : si elles sont détruites, la perte d’audition est **définitive**.\n4. Le cerveau ne se contente pas de mesurer le son : il le compare, l’identifie, l’associe à la mémoire. Il **reconstruit**, comble les manques et peut **se laisser tromper** : c’est une **illusion auditive**. Le bruit ne contenait pas son prénom, c’est son cerveau qui l’a construit.\n5. Par exemple : **s’éloigner des enceintes** (baisser le niveau, car le risque croît vite au-delà de 85 dB) ; **porter des bouchons d’oreille** ; **faire des pauses au calme** (réduire la durée, puisque chaque +3 dB divise par deux la durée tolérable)."
+    },
+    {
+      "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+      "difficulte": 1,
+      "titre": "Soldes et coefficients",
+      "consigne": "Réponds en détaillant les calculs.",
+      "enonce": "**Situation.** Farid suit le prix d’une paire de baskets.\n\n1. Le prix passe de 200 € à 250 €. Calcule le taux d’évolution.\n2. Donne le coefficient multiplicateur associé à une baisse de 20 %, puis à une hausse de 15 %.\n3. Pendant les soldes, un article à 80 € subit une hausse de 10 % puis une baisse de 10 %. Calcule son prix final et le taux d’évolution global. Revient-on au prix de départ ?",
+      "bareme": [
+        { "critere": "t = (250 − 200) / 200 = 0,25, soit +25 %", "points": 5 },
+        { "critere": "CM = 0,80 et CM = 1,15", "points": 5 },
+        { "critere": "80 × 1,10 × 0,90 = 79,20 € ; CM global 0,99, soit −1 % : pas de retour au départ", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. t = (V2 − V1) / V1 = (250 − 200) / 200 = 50 / 200 = 0,25, soit **+25 %**.\n2. CM = 1 + t : baisse de 20 % → CM = 1 − 0,20 = **0,80** ; hausse de 15 % → CM = **1,15**.\n3. Les évolutions successives se **multiplient** : CM global = 1,10 × 0,90 = **0,99**. Prix final : 80 × 0,99 = **79,20 €**. Le taux global est 0,99 − 1 = −0,01, soit une **baisse de 1 %**. On ne revient **pas** au prix de départ : une hausse puis une baisse du même pourcentage ne s’annulent pas."
+    },
+    {
+      "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+      "difficulte": 2,
+      "titre": "Le prix de la baguette",
+      "consigne": "Détaille chaque calcul et arrondis au dixième de pourcentage.",
+      "enonce": "**Document – Indice du prix de la baguette (base 100 en 2015)**\n\n| Année | 2015 | 2020 | 2024 |\n| Indice | 100 | 112 | 126 |\n\n**Situation.** En 2015, une baguette coûtait 1,00 €. Un journal titre : « Le prix de la baguette a augmenté de 14 % entre 2020 et 2024. »\n\n1. Que signifie l’indice 112 en 2020 ?\n2. Calcule le prix de la baguette en 2024.\n3. Calcule le vrai taux d’évolution entre 2020 et 2024. Le journal a-t-il raison ? Quelle erreur a-t-il faite ?\n4. Dans la même ville, la part des ménages qui achètent leur pain en boulangerie passe de 12 % à 15 %. Exprime cette évolution en points de pourcentage, puis en valeur relative.",
+      "bareme": [
+        { "critere": "Indice 112 : hausse de 12 % depuis 2015", "points": 4 },
+        { "critere": "Prix 2024 : 1,00 × 1,26 = 1,26 €", "points": 4 },
+        { "critere": "126 / 112 = 1,125, soit +12,5 % ; erreur : 126 − 112 soustrait des points d’indice", "points": 7 },
+        { "critere": "+3 points et +25 %", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Un indice de 112 (base 100 en 2015) signifie une **hausse de 12 %** depuis 2015.\n2. Indice = 100 × V / V(référence), donc V(2024) = 1,00 × 126 / 100 = **1,26 €**.\n3. Taux entre 2020 et 2024 : 126 / 112 − 1 = 1,125 − 1 = 0,125, soit **+12,5 %**. Le journal a **tort** : il a calculé 126 − 112 = 14, une différence d’indices, comme si c’était un pourcentage. Or l’indice 2020 n’est pas 100 : il faut rapporter l’écart à la valeur de 2020.\n4. En **points de pourcentage** (différence absolue) : 15 − 12 = **+3 points**. En **valeur relative** : (15 − 12) / 12 = 0,25, soit **+25 %**. Les deux formulations sont justes et ne disent pas la même chose."
+    },
+    {
+      "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+      "difficulte": 3,
+      "titre": "Les chiffres du lycée",
+      "consigne": "Détaille les calculs et justifie chaque affirmation corrigée.",
+      "enonce": "**Situation.** Le lycée Jean-Moulin compte 1 200 élèves. 35 % sont en 1re, et 40 % des élèves de 1re suivent la spécialité SES.\n\nL’an prochain, on prévoit une hausse de 15 % de l’effectif total, puis l’année suivante une baisse de 10 %.\n\nLe journal du lycée écrit :\n> « 75 % des élèves du lycée suivent SES ou sont en 1re. » « En deux ans, l’effectif aura augmenté de 5 %. » « Pour revenir ensuite à 1 200 élèves, il suffira d’une baisse de 15 %. »\n\n1. Calcule le nombre d’élèves de 1re, puis le nombre d’élèves de 1re qui suivent SES. Quelle proportion de l’établissement représentent-ils ?\n2. Quelle erreur a été faite dans la première phrase du journal ?\n3. Calcule l’effectif dans deux ans et le taux d’évolution global. Corrige la deuxième phrase.\n4. Quelle baisse annulerait exactement la hausse de 15 % ? Corrige la troisième phrase.",
+      "bareme": [
+        { "critere": "420 élèves de 1re, 168 en SES, proportion 0,35 × 0,40 = 14 %", "points": 5 },
+        { "critere": "Les proportions emboîtées se multiplient, elles ne s’additionnent pas", "points": 3 },
+        { "critere": "Effectif 1 242 ; CM global 1,15 × 0,90 = 1,035, soit +3,5 % et non +5 %", "points": 6 },
+        { "critere": "Évolution réciproque : 1 / 1,15 ≈ 0,870, soit une baisse d’environ 13 % et non 15 %", "points": 6 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Élèves de 1re : 1 200 × 0,35 = **420**. Élèves de 1re en SES : 420 × 0,40 = **168**. Proportion dans l’établissement : 168 / 1 200 = 0,14, soit **14 %** (c’est aussi 0,35 × 0,40 = 0,14).\n2. Le journal a **additionné** 35 % et 40 %. Or 40 % est une proportion **des élèves de 1re**, pas de tout le lycée : les proportions **emboîtées se multiplient**, elles ne s’additionnent jamais. Les élèves de SES font d’ailleurs déjà partie des élèves de 1re.\n3. Effectif dans un an : 1 200 × 1,15 = 1 380 ; dans deux ans : 1 380 × 0,90 = **1 242**. CM global = 1,15 × 0,90 = **1,035**, soit une hausse de **3,5 %**, et non de 5 % : les taux successifs ne s’additionnent pas, ils se composent par multiplication.\n4. Pour annuler une hausse de 15 % (CM = 1,15), il faut multiplier par 1 / 1,15 ≈ **0,870**, soit une baisse d’environ **13 %** (13,0 %) et non de 15 %. Vérification : 1 380 × 0,870 ≈ 1 200. Une baisse de 15 % donnerait 1 380 × 0,85 = 1 173 élèves."
+    },
+    {
+      "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+      "difficulte": 1,
+      "titre": "Le dé de Lucie",
+      "consigne": "Réponds en justifiant chaque calcul.",
+      "enonce": "**Situation.** Lucie lance un dé équilibré à six faces numérotées de 1 à 6.\n\n1. Décris l’univers de cette expérience aléatoire. Pourquoi est-on en situation d’équiprobabilité ?\n2. Calcule la probabilité des événements : A « obtenir un nombre pair » ; B « obtenir 5 ou plus » ; C « obtenir 7 ».\n3. Après cinq lancers d’une pièce équilibrée qui ont tous donné « pile », son frère affirme : « Face a maintenant plus de chances de sortir. » A-t-il raison ?\n4. Explique la différence entre fréquence et probabilité.",
+      "bareme": [
+        { "critere": "Univers {1 ; 2 ; 3 ; 4 ; 5 ; 6}, dé équilibré donc issues équiprobables", "points": 4 },
+        { "critere": "P(A) = 0,5 ; P(B) = 1/3 ; P(C) = 0", "points": 7 },
+        { "critere": "Le hasard n’a pas de mémoire : probabilité toujours 1/2", "points": 4 },
+        { "critere": "Fréquence observée après coup, probabilité posée comme modèle", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L’univers est l’ensemble des issues : **{1 ; 2 ; 3 ; 4 ; 5 ; 6}**. Le dé est **équilibré** : chaque issue a la même probabilité, 1/6.\n2. En équiprobabilité, P = issues favorables / issues possibles.\n- A = {2 ; 4 ; 6} : P(A) = 3/6 = **0,5**.\n- B = {5 ; 6} : P(B) = 2/6 = **1/3**.\n- C est impossible : P(C) = **0**.\n3. Non. Le hasard **n’a pas de mémoire** : les lancers sont indépendants et la probabilité d’obtenir face au lancer suivant reste **1/2**.\n4. La **fréquence** se calcule **après coup**, sur des données : nombre de réalisations / nombre d’essais. La **probabilité** est posée **avant**, comme un **modèle** théorique. Les deux se rejoignent quand le nombre d’essais augmente : c’est la **loi des grands nombres**."
+    },
+    {
+      "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+      "difficulte": 2,
+      "titre": "Des échantillons qui fluctuent",
+      "consigne": "Détaille les calculs et justifie tes conclusions.",
+      "enonce": "**Situation.** Une urne contient autant de boules rouges que de boules noires : la proportion de rouges est p = 0,5. Des élèves tirent des échantillons avec remise.\n\n**Donnée.** Intervalle de fluctuation au seuil de 95 % : [p − 1/√n ; p + 1/√n].\n\n1. Ambre tire 100 boules et obtient 58 rouges ; Yacine tire 100 boules et obtient 47 rouges. Leurs fréquences sont différentes : est-ce anormal ? Comment s’appelle ce phénomène ?\n2. Calcule l’intervalle de fluctuation pour n = 100. Les résultats d’Ambre et de Yacine y sont-ils ?\n3. Calcule l’intervalle pour n = 400, puis pour n = 10 000. Que constates-tu ?\n4. Par combien faut-il multiplier la taille de l’échantillon pour diviser la largeur de l’intervalle par 10 ?",
+      "bareme": [
+        { "critere": "Fluctuation d’échantillonnage : écart normal entre deux échantillons", "points": 4 },
+        { "critere": "n = 100 : [0,4 ; 0,6] ; 0,58 et 0,47 y sont", "points": 5 },
+        { "critere": "n = 400 : [0,45 ; 0,55] ; n = 10 000 : [0,49 ; 0,51] ; l’intervalle se resserre", "points": 7 },
+        { "critere": "Fluctuation en 1/√n : multiplier n par 100", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Non, ce n’est pas anormal. Deux échantillons de même taille tirés de la même population ne donnent **pas** la même fréquence : c’est la **fluctuation d’échantillonnage**.\n2. n = 100 : 1/√100 = 1/10 = 0,1. Intervalle : [0,5 − 0,1 ; 0,5 + 0,1] = **[0,4 ; 0,6]**. Ambre : 58/100 = 0,58 ; Yacine : 0,47. Les deux fréquences sont **dans l’intervalle**.\n3. n = 400 : 1/√400 = 1/20 = 0,05 → **[0,45 ; 0,55]**. n = 10 000 : 1/√10 000 = 0,01 → **[0,49 ; 0,51]**. Plus l’échantillon est grand, plus l’intervalle se **resserre** : les fréquences se rapprochent de la probabilité (loi des grands nombres). Avec n = 400, une fréquence de 0,58 serait en dehors.\n4. La fluctuation diminue en **1/√n** : pour la diviser par 10, il faut multiplier n par 10² = **100** (de 100 à 10 000, la demi-largeur passe de 0,1 à 0,01)."
+    },
+    {
+      "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+      "difficulte": 3,
+      "titre": "Une pièce suspecte",
+      "consigne": "Détaille les calculs et rédige une conclusion nuancée.",
+      "enonce": "**Situation.** Au club de jeux, Maxence soupçonne une pièce d’être truquée. Il la lance 1 000 fois et obtient 560 « pile ». Pour comparer, il fait simuler par un tableur 1 000 lancers d’une pièce équilibrée : le tableur donne 509 « pile ».\n\n**Données.** Intervalle de fluctuation au seuil de 95 % : [p − 1/√n ; p + 1/√n]. √1 000 ≈ 31,6.\n\n1. Quelle probabilité de « pile » attend-on pour une pièce équilibrée ? Pourquoi la simulation ne donne-t-elle pas exactement 500 ?\n2. Calcule l’intervalle de fluctuation pour n = 1 000 et p = 0,5 (arrondis au millième).\n3. La fréquence obtenue par Maxence est-elle dans l’intervalle ? Que peux-tu en conclure ? Cette conclusion est-elle une certitude ?\n4. Combien de lancers faudrait-il pour que l’intervalle ait une demi-largeur de 0,01 ?\n5. Pourquoi le programme recommande-t-il de simuler avant d’écrire une loi ? Explique en t’appuyant sur la loi des grands nombres.",
+      "bareme": [
+        { "critere": "p = 0,5 ; la simulation fluctue autour de 500", "points": 3 },
+        { "critere": "1/√1 000 ≈ 0,032 ; intervalle ≈ [0,468 ; 0,532]", "points": 5 },
+        { "critere": "0,56 hors de l’intervalle : doute fondé, mais risque d’erreur d’environ 5 %", "points": 6 },
+        { "critere": "1/√n = 0,01 donc n = 10 000", "points": 3 },
+        { "critere": "Simulation : observer la stabilisation des fréquences, loi des grands nombres", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Pour une pièce équilibrée, P(pile) = **0,5**. Les 1 000 lancers simulés sont un échantillon : leur fréquence **fluctue** autour de 0,5 (ici 0,509), c’est la fluctuation d’échantillonnage.\n2. 1/√1 000 ≈ 1 / 31,6 ≈ 0,032. Intervalle : [0,5 − 0,032 ; 0,5 + 0,032] ≈ **[0,468 ; 0,532]**.\n3. Fréquence de Maxence : 560 / 1 000 = **0,56**, qui est **en dehors** de l’intervalle (0,56 > 0,532). Environ 95 % des échantillons d’une pièce équilibrée tombent dans cet intervalle : un tel résultat est donc peu probable avec une pièce équilibrée, et le **doute** sur la pièce est fondé. Ce n’est **pas une certitude** : environ 5 % des échantillons d’une pièce équilibrée sortent de l’intervalle.\n4. 1/√n = 0,01 → √n = 100 → **n = 10 000** lancers.\n5. La **loi des grands nombres** dit que la fréquence se rapproche de la probabilité quand le nombre d’essais augmente. Un tableur simule des milliers de tirages en quelques secondes et l’on **voit se stabiliser** la fréquence. C’est la méthode du programme : **observer la régularité avant d’en écrire la loi**."
+    },
+    {
+      "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+      "difficulte": 1,
+      "titre": "Toujours plus 7",
+      "consigne": "Réponds en justifiant et en détaillant les calculs.",
+      "enonce": "**Situation.** Rose observe la suite de nombres : 5 ; 12 ; 19 ; 26 ; …\n\n1. Montre que cette suite est arithmétique et donne sa raison.\n2. On note u(0) = 5. Écris la forme explicite de u(n), puis calcule u(10).\n3. La suite 3 ; 6 ; 12 ; 24 est-elle arithmétique ? Justifie.\n4. Calcule la somme 1 + 2 + … + 50.",
+      "bareme": [
+        { "critere": "Différences constantes égales à 7 : suite arithmétique de raison 7", "points": 5 },
+        { "critere": "u(n) = 5 + 7n et u(10) = 75", "points": 6 },
+        { "critere": "Différences 3, 6, 12 non constantes : pas arithmétique", "points": 4 },
+        { "critere": "50 × 51 / 2 = 1 275", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Différences : 12 − 5 = 7 ; 19 − 12 = 7 ; 26 − 19 = 7. Elles sont **constantes** : la suite est **arithmétique de raison r = 7**.\n2. u(n) = u(0) + n × r = **5 + 7n**. u(10) = 5 + 70 = **75**.\n3. Différences : 3 ; 6 ; 12. Elles ne sont **pas constantes** : la suite n’est **pas arithmétique** (chaque terme est multiplié par 2 : elle est géométrique).\n4. 1 + 2 + … + n = n(n + 1) / 2, donc 1 + … + 50 = 50 × 51 / 2 = **1 275**."
+    },
+    {
+      "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+      "difficulte": 2,
+      "titre": "Deux salles de sport",
+      "consigne": "Modélise chaque offre par une suite, puis réponds en justifiant.",
+      "enonce": "**Situation.** Noah hésite entre deux salles de sport.\n- **Salle A** : 30 € d’inscription, puis 22 € par mois.\n- **Salle B** : pas d’inscription, 25 € par mois.\n\nOn note a(n) et b(n) le montant total payé après n mois.\n\n1. Exprime a(n) et b(n) en fonction de n. Quelle est la nature de ces suites ? Donne leurs raisons.\n2. Calcule le total payé dans chaque salle après 12 mois.\n3. Au bout de combien de mois les deux salles ont-elles coûté la même somme ? Quelle salle devient ensuite la moins chère ?\n4. Noah dispose de 500 € pour la salle A. Au bout de combien de mois aura-t-il dépassé ce budget ?",
+      "bareme": [
+        { "critere": "a(n) = 30 + 22n et b(n) = 25n, suites arithmétiques de raisons 22 et 25", "points": 5 },
+        { "critere": "a(12) = 294 € et b(12) = 300 €", "points": 4 },
+        { "critere": "Égalité pour n = 10 (250 €), A moins chère ensuite", "points": 6 },
+        { "critere": "30 + 22n > 500 à partir de n = 22 (a(21) = 492, a(22) = 514)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Chaque mois, on ajoute toujours la même somme : a(n) = **30 + 22n** et b(n) = **25n**. Ce sont des suites **arithmétiques**, de raisons **22** et **25** (premiers termes 30 et 0).\n2. a(12) = 30 + 22 × 12 = 30 + 264 = **294 €** ; b(12) = 25 × 12 = **300 €**.\n3. a(n) = b(n) ⇔ 30 + 22n = 25n ⇔ 30 = 3n ⇔ **n = 10**. Après 10 mois, les deux salles ont coûté **250 €**. Ensuite, la salle A augmente de 22 € par mois contre 25 € pour B : **A devient la moins chère**.\n4. 30 + 22n > 500 ⇔ 22n > 470 ⇔ n > 21,36… a(21) = 30 + 462 = 492 € (encore dans le budget) ; a(22) = 30 + 484 = 514 €. Noah dépasse son budget au **22e mois**."
+    },
+    {
+      "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+      "difficulte": 3,
+      "titre": "La tirelire de Lina",
+      "consigne": "Détaille chaque calcul et justifie les méthodes utilisées.",
+      "enonce": "**Situation.** Lina décide d’épargner pour un voyage : elle met 20 € la première semaine, puis chaque semaine 5 € de plus que la semaine précédente. On note u(n) la somme déposée la n-ième semaine, avec u(1) = 20.\n\n1. Montre que (u(n)) est une suite arithmétique. Donne sa raison et sa forme explicite.\n2. Combien Lina dépose-t-elle la 10e semaine ? Quelle semaine déposera-t-elle 100 € ?\n3. On veut le total épargné après 10 semaines. Montre que ce total vaut 10 × 20 + 5 × (0 + 1 + … + 9), puis calcule-le avec la formule de la somme des premiers entiers.\n4. Calcule de même le total épargné après 20 semaines.\n5. Lina représente u(n) sur un graphique. Quelle forme ont les points ? Comment remplirait-elle la colonne u(n) sur un tableur ?",
+      "bareme": [
+        { "critere": "Raison 5, u(n) = 20 + (n − 1) × 5", "points": 4 },
+        { "critere": "u(10) = 65 € ; 100 € la 17e semaine", "points": 4 },
+        { "critere": "Décomposition justifiée et total de 425 € après 10 semaines", "points": 5 },
+        { "critere": "Total après 20 semaines : 400 + 5 × 190 = 1 350 €", "points": 4 },
+        { "critere": "Points alignés ; cellule précédente + 5", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Chaque semaine, Lina dépose 5 € de plus : u(n + 1) = u(n) + 5. La suite est **arithmétique de raison 5**. Elle commence au rang 1 : u(n) = u(1) + (n − 1) × r = **20 + (n − 1) × 5**.\n2. u(10) = 20 + 9 × 5 = **65 €**. u(n) = 100 ⇔ 20 + 5(n − 1) = 100 ⇔ 5(n − 1) = 80 ⇔ n − 1 = 16 ⇔ **n = 17** : la **17e semaine**.\n3. Les dépôts sont 20 + 0 × 5, 20 + 1 × 5, …, 20 + 9 × 5. En les additionnant : dix fois 20, plus 5 × (0 + 1 + … + 9) = **10 × 20 + 5 × (0 + 1 + … + 9)**. Or 1 + … + 9 = 9 × 10 / 2 = 45. Total : 200 + 5 × 45 = 200 + 225 = **425 €**.\n4. Après 20 semaines : 20 × 20 + 5 × (0 + 1 + … + 19). 1 + … + 19 = 19 × 20 / 2 = 190. Total : 400 + 950 = **1 350 €**.\n5. Les points d’une suite arithmétique sont **alignés** : c’est la signature graphique de la croissance linéaire. Sur un tableur, chaque cellule reprend la **précédente augmentée de 5** (par exemple =B2+5)."
+    },
+    {
+      "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+      "difficulte": 1,
+      "titre": "La course en taxi",
+      "consigne": "Réponds en détaillant les calculs.",
+      "enonce": "**Situation.** Un taxi facture 3 € de prise en charge, puis 1,20 € par kilomètre. On note f(x) le prix, en euros, d’une course de x kilomètres.\n\n1. Exprime f(x) en fonction de x. Quelle est la nature de cette fonction ? Donne son coefficient directeur et son ordonnée à l’origine, et ce qu’ils représentent.\n2. Calcule le prix d’une course de 15 km.\n3. Avec 27 €, quelle distance Maya peut-elle parcourir ?\n4. La droite représentant f est-elle croissante ou décroissante ? Justifie.",
+      "bareme": [
+        { "critere": "f(x) = 1,2x + 3, affine ; a = 1,2 € par km, b = 3 € de départ", "points": 7 },
+        { "critere": "f(15) = 21 €", "points": 4 },
+        { "critere": "1,2x + 3 = 27 donne x = 20 km", "points": 5 },
+        { "critere": "a > 0 : droite croissante", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **f(x) = 1,2x + 3**. C’est une fonction **affine**. Son **coefficient directeur** a = **1,2** : ce que gagne le prix quand on parcourt 1 km de plus. Son **ordonnée à l’origine** b = **3** : le prix pour 0 km, la prise en charge.\n2. f(15) = 1,2 × 15 + 3 = 18 + 3 = **21 €**.\n3. 1,2x + 3 = 27 ⇔ 1,2x = 24 ⇔ x = 24 / 1,2 = **20 km**.\n4. a = 1,2 > 0 : la droite est **croissante** (plus la course est longue, plus elle coûte cher)."
+    },
+    {
+      "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+      "difficulte": 2,
+      "titre": "L’eau qui chauffe",
+      "consigne": "Détaille chaque calcul et justifie.",
+      "enonce": "**Situation.** Pendant un TP, Ilyes chauffe de l’eau. Il constate que la température augmente régulièrement : 35 °C au bout de 2 minutes, 55 °C au bout de 6 minutes. On modélise la température par une fonction affine T(x) = a x + b, où x est le temps en minutes.\n\n**Donnée.** À la pression normale, l’eau bout à 100 °C : sa température cesse alors d’augmenter.\n\n1. Calcule le coefficient directeur a à partir des deux mesures. Interprète-le.\n2. Détermine b et interprète-le.\n3. Selon ce modèle, au bout de combien de temps l’eau atteint-elle 100 °C ?\n4. Ilyes calcule T(20) avec le modèle. Quel résultat obtient-il ? Est-il réaliste ? Quelle précaution ce résultat illustre-t-il ?",
+      "bareme": [
+        { "critere": "a = (55 − 35) / (6 − 2) = 5 °C par minute", "points": 5 },
+        { "critere": "b = 25 : température initiale", "points": 4 },
+        { "critere": "5x + 25 = 100 donne x = 15 min", "points": 5 },
+        { "critere": "T(20) = 125 °C, irréaliste : ne pas extrapoler hors du domaine de validité", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. a = (T(6) − T(2)) / (6 − 2) = (55 − 35) / 4 = 20 / 4 = **5**. La température augmente de **5 °C par minute**.\n2. T(2) = 5 × 2 + b = 35, donc b = 35 − 10 = **25**. C’est T(0) : la **température initiale** de l’eau, 25 °C. Donc T(x) = 5x + 25.\n3. 5x + 25 = 100 ⇔ 5x = 75 ⇔ **x = 15 min**.\n4. T(20) = 5 × 20 + 25 = **125 °C**. C’est **irréaliste** : à 100 °C l’eau bout et sa température cesse d’augmenter. Le modèle affine n’est valable que sur un **intervalle** (ici de 0 à 15 min environ). **Extrapoler une droite hors de son domaine de validité** est une faute classique."
+    },
+    {
+      "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+      "difficulte": 3,
+      "titre": "Forfaits et population",
+      "consigne": "Traite les deux parties en détaillant les calculs et en justifiant.",
+      "enonce": "**Partie A – Deux forfaits téléphoniques**\n\n- Forfait A : 10 € fixes plus 0,05 € par minute : f(x) = 0,05x + 10.\n- Forfait B : 0,09 € par minute, sans frais fixes : g(x) = 0,09x.\n\n1. Quelle fonction traduit une situation de proportionnalité ? Justifie.\n2. Calcule le taux d’accroissement de f entre x = 100 et x = 400. Aurait-on obtenu la même valeur avec deux autres points ? Pourquoi ?\n3. Pour combien de minutes les deux forfaits coûtent-ils le même prix ? Quel forfait conseiller à un élève qui téléphone 3 heures par mois ?\n\n**Partie B – Une ville qui grandit**\n\nEn 2020, une ville compte 12 000 habitants ; elle en gagne 350 par an. On note u(n) la population en 2020 + n.\n\n4. Exprime u(n), puis la fonction affine f qui prolonge cette suite. Quel lien existe-t-il entre la raison et le coefficient directeur ?\n5. En quelle année la population dépassera-t-elle 15 000 habitants selon ce modèle ?",
+      "bareme": [
+        { "critere": "g linéaire (b = 0) : proportionnalité", "points": 2 },
+        { "critere": "Taux = 0,05, identique pour tous les points : c’est une droite", "points": 4 },
+        { "critere": "Égalité à 250 min ; 180 min : B moins cher (16,20 € contre 19 €)", "points": 6 },
+        { "critere": "u(n) = 12 000 + 350n, f(x) = 350x + 12 000 ; raison = coefficient directeur", "points": 4 },
+        { "critere": "n > 8,57 donc n = 9 : en 2029", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. g(x) = 0,09x est **linéaire** (b = 0) : le prix est **proportionnel** au nombre de minutes.\n2. f(100) = 5 + 10 = 15 ; f(400) = 20 + 10 = 30. Taux = (30 − 15) / (400 − 100) = 15 / 300 = **0,05**. C’est le coefficient directeur a : pour une fonction affine, ce quotient est **le même quels que soient les deux points choisis**, c’est la définition d’une droite.\n3. f(x) = g(x) ⇔ 0,05x + 10 = 0,09x ⇔ 10 = 0,04x ⇔ **x = 250 min**. Pour 3 h = 180 min : f(180) = 9 + 10 = **19 €** ; g(180) = **16,20 €**. Sous 250 min, B est moins cher : on conseille le **forfait B**.\n4. u(n) = **12 000 + 350n** (suite arithmétique de raison 350). La fonction qui la prolonge est **f(x) = 350x + 12 000**. La **raison** de la suite **est** le **coefficient directeur** de la fonction : même croissance, par pas ou en continu.\n5. 12 000 + 350n > 15 000 ⇔ 350n > 3 000 ⇔ n > 8,57… Donc n = 9 : u(9) = 15 150. La population dépasse 15 000 habitants en **2029** (en 2028, u(8) = 14 800)."
+    },
+    {
+      "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+      "difficulte": 1,
+      "titre": "Multiplier par 1,2",
+      "consigne": "Réponds en justifiant et en détaillant les calculs.",
+      "enonce": "**Situation.** Le nombre d’abonnés d’une chaîne vidéo évolue ainsi, mois après mois : 200 ; 240 ; 288 ; …\n\n1. Montre que ces nombres forment le début d’une suite géométrique. Donne sa raison q et le taux d’évolution mensuel correspondant.\n2. On note u(0) = 200. Écris la forme explicite de u(n), puis calcule u(5) (arrondi à l’unité).\n3. Comment distinguer une suite géométrique d’une suite arithmétique ? Applique à la suite 200 ; 230 ; 260 ; 290.",
+      "bareme": [
+        { "critere": "Quotients constants égaux à 1,2 : q = 1,2, soit +20 % par mois", "points": 7 },
+        { "critere": "u(n) = 200 × 1,2^n et u(5) ≈ 498", "points": 7 },
+        { "critere": "Quotients constants / différences constantes ; la seconde suite est arithmétique de raison 30", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Quotients : 240 / 200 = 1,2 ; 288 / 240 = 1,2. Ils sont **constants** : la suite est **géométrique de raison q = 1,2**. Comme q = 1 + t, t = 0,2 : **+20 % par mois**.\n2. u(n) = u(0) × q^n = **200 × 1,2^n**. u(5) = 200 × 1,2^5 = 200 × 2,488 32 ≈ **498** abonnés (497,66).\n3. Une suite est **arithmétique** si les **différences** entre termes consécutifs sont constantes, **géométrique** si les **quotients** sont constants. Pour 200 ; 230 ; 260 ; 290 : les différences valent toutes 30, les quotients non (1,15 puis 1,13…) : c’est une suite **arithmétique** de raison 30."
+    },
+    {
+      "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+      "difficulte": 2,
+      "titre": "Le livret d’Anton",
+      "consigne": "Détaille chaque calcul et arrondis au centime.",
+      "enonce": "**Situation.** Anton place 2 000 € sur un livret rémunéré à 3 % par an. Les intérêts de chaque année restent sur le livret. On note u(n) le capital après n années.\n\n1. Montre que (u(n)) est une suite géométrique ; donne sa raison et sa forme explicite.\n2. Calcule le capital après 5 ans.\n3. Sa sœur affirme : « 3 % de 2 000 €, c’est 60 € par an, donc au bout de 5 ans il aura 2 300 €. » Pourquoi obtient-elle moins que toi ?\n4. Estime le temps de doublement du capital avec la règle des 70. Vérifie à la calculatrice en calculant u(23) et u(24).",
+      "bareme": [
+        { "critere": "Chaque année × 1,03 : q = 1,03, u(n) = 2 000 × 1,03^n", "points": 5 },
+        { "critere": "u(5) ≈ 2 318,55 €", "points": 5 },
+        { "critere": "Les intérêts produisent eux-mêmes des intérêts (modèle géométrique, pas arithmétique)", "points": 5 },
+        { "critere": "70 / 3 ≈ 23,3 ans ; u(23) ≈ 3 947 € et u(24) ≈ 4 066 € : doublement la 24e année", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Chaque année, le capital est multiplié par le coefficient multiplicateur 1 + 3 % = 1,03 : u(n + 1) = 1,03 × u(n). La suite est **géométrique de raison q = 1,03**, et u(n) = **2 000 × 1,03^n**.\n2. u(5) = 2 000 × 1,03^5 ≈ 2 000 × 1,159 274 ≈ **2 318,55 €**.\n3. Sa sœur ajoute toujours 60 € : c’est un modèle **arithmétique**. Or les intérêts de chaque année s’ajoutent au capital et **produisent eux-mêmes des intérêts** : on multiplie par 1,03 chaque année. On obtient 18,55 € de plus.\n4. Règle : temps de doublement ≈ 70 / t = 70 / 3 ≈ **23,3 ans**. Vérification : u(23) = 2 000 × 1,03^23 ≈ **3 947,17 €** (pas encore doublé) ; u(24) = 2 000 × 1,03^24 ≈ **4 065,59 €** (doublé). Le capital double au cours de la **24e année**, conformément à l’estimation."
+    },
+    {
+      "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+      "difficulte": 3,
+      "titre": "Linéaire contre exponentiel",
+      "consigne": "Traite les deux parties en détaillant les calculs et en justifiant.",
+      "enonce": "**Partie A – Deux villes**\n\nEn 2000, la ville A compte 10 000 habitants et gagne 500 habitants par an. La ville B compte 8 000 habitants et sa population augmente de 4 % par an. On note a(n) et b(n) leurs populations en 2000 + n.\n\n1. Exprime a(n) et b(n). Précise la nature de chaque suite.\n2. Calcule a(10) et b(10) (arrondi à l’unité). Quelle ville est la plus peuplée en 2010 ?\n3. Calcule a(28), b(28), a(29) et b(29) (arrondis à l’unité). En quelle année B dépasse-t-elle A pour la première fois ?\n4. Quel résultat général du cours cette comparaison illustre-t-elle ?\n\n**Partie B – Un médicament**\n\nUne dose de 100 mg de médicament est éliminée du sang à raison de 15 % par heure. On note m(n) la quantité restante après n heures.\n\n5. Donne la raison de la suite et sa forme explicite. Calcule m(4) et m(5) (au dixième). Au bout de combien d’heures entières reste-t-il moins de la moitié de la dose ?\n6. Comment se comporte cette suite à long terme ?",
+      "bareme": [
+        { "critere": "a(n) = 10 000 + 500n arithmétique ; b(n) = 8 000 × 1,04^n géométrique", "points": 4 },
+        { "critere": "a(10) = 15 000, b(10) ≈ 11 842 : A plus peuplée", "points": 3 },
+        { "critere": "a(28) = 24 000 > b(28) ≈ 23 990 ; a(29) = 24 500 < b(29) ≈ 24 949 : en 2029", "points": 5 },
+        { "critere": "Une croissance exponentielle finit toujours par dépasser une croissance linéaire", "points": 3 },
+        { "critere": "q = 0,85, m(4) ≈ 52,2 mg, m(5) ≈ 44,4 mg : moins de la moitié après 5 h ; décroissance vers 0", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. a(n) = **10 000 + 500n** : on ajoute 500 chaque année, suite **arithmétique** de raison 500. b(n) = **8 000 × 1,04^n** : on multiplie par 1,04 chaque année, suite **géométrique** de raison 1,04.\n2. a(10) = 10 000 + 5 000 = **15 000**. b(10) = 8 000 × 1,04^10 ≈ 8 000 × 1,480 ≈ **11 842**. En 2010, la ville **A** est la plus peuplée.\n3. a(28) = 10 000 + 14 000 = **24 000** ; b(28) = 8 000 × 1,04^28 ≈ **23 990** : A reste devant, de peu. a(29) = **24 500** ; b(29) = 8 000 × 1,04^29 ≈ **24 949** : B est devant. B dépasse A pour la première fois en **2029**.\n4. Une croissance **exponentielle** finit **toujours** par dépasser n’importe quelle croissance **linéaire**, même si elle part de plus bas.\n5. Perdre 15 %, c’est multiplier par 1 − 0,15 = **0,85** : m(n) = **100 × 0,85^n**, suite géométrique de raison 0,85. m(4) = 100 × 0,85^4 ≈ **52,2 mg** ; m(5) = 100 × 0,85^5 ≈ **44,4 mg**. Il reste moins de 50 mg à partir de **5 heures**.\n6. Comme 0 < q < 1, la suite **décroît vers 0 sans jamais l’atteindre**. Elle a une **demi-vie** constante, comprise entre 4 et 5 heures."
+    },
+    {
+      "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+      "difficulte": 1,
+      "titre": "Deux exponentielles",
+      "consigne": "Réponds en justifiant et en détaillant les calculs.",
+      "enonce": "**Situation.** On considère les fonctions f(x) = 500 × 1,5^x et g(x) = 800 × 0,8^x, définies pour tout réel x positif.\n\n1. Donne la valeur initiale de chaque fonction.\n2. Précise le sens de variation de f et de g. Justifie.\n3. Calcule f(2) et g(2).\n4. Une de ces fonctions peut-elle prendre une valeur négative ou nulle ? Justifie.\n5. À l’aide de la propriété q^(a+b) = q^a × q^b, montre que f(x + 1) = 1,5 × f(x). Que signifie ce résultat ?",
+      "bareme": [
+        { "critere": "f(0) = 500 et g(0) = 800", "points": 3 },
+        { "critere": "f croissante (1,5 > 1), g décroissante (0 < 0,8 < 1)", "points": 5 },
+        { "critere": "f(2) = 1 125 et g(2) = 512", "points": 4 },
+        { "critere": "Exponentielle toujours strictement positive", "points": 3 },
+        { "critere": "f(x + 1) = 500 × 1,5^x × 1,5 : chaque unité de temps multiplie par 1,5", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. k = f(0) : f(0) = 500 × 1,5^0 = **500** ; g(0) = **800**.\n2. f a pour base q = 1,5 > 1 : elle est **croissante**. g a pour base q = 0,8, avec 0 < 0,8 < 1 : elle est **décroissante**.\n3. f(2) = 500 × 1,5² = 500 × 2,25 = **1 125**. g(2) = 800 × 0,8² = 800 × 0,64 = **512**.\n4. Non : une fonction exponentielle est **toujours strictement positive** ; elle ne s’annule jamais et ne devient jamais négative (g se rapproche de 0 sans l’atteindre).\n5. f(x + 1) = 500 × 1,5^(x+1) = 500 × 1,5^x × 1,5^1 = 1,5 × f(x). Quand x augmente de 1, f est **multipliée par 1,5** : additionner les durées revient à multiplier les facteurs. C’est la propriété fondamentale de la croissance exponentielle."
+    },
+    {
+      "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+      "difficulte": 2,
+      "titre": "L’iode radioactif",
+      "consigne": "Détaille chaque calcul et arrondis à l’unité.",
+      "enonce": "**Situation.** Pour un examen médical, un patient reçoit une dose contenant 64 000 noyaux (valeur simplifiée) d’iode 131, dont la demi-vie est T = 8 jours. Le nombre de noyaux restants après t jours est N(t) = N0 × 0,5^(t/8).\n\n1. Que vaut N0 ? Quel est le sens de variation de N ? Justifie.\n2. Calcule N(8), N(16) et N(24). Interprète.\n3. Calcule N(12). Montre que 0,5^(12/8) = 0,5 × 0,5^(1/2) et explique ce que signifie ce découpage.\n4. Au bout d’un nombre entier de demi-vies, quand reste-t-il pour la première fois moins de 1 % des noyaux initiaux ? Donne la durée en jours.",
+      "bareme": [
+        { "critere": "N0 = 64 000, fonction décroissante car 0 < 0,5 < 1", "points": 3 },
+        { "critere": "32 000, 16 000, 8 000 : divisé par 2 à chaque demi-vie", "points": 5 },
+        { "critere": "N(12) ≈ 22 627 et découpage 8 + 4 jours par q^(a+b) = q^a × q^b", "points": 6 },
+        { "critere": "1 % = 640 ; après 7 demi-vies il reste 500 : 56 jours", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. N0 = N(0) = **64 000**. La base 0,5 est comprise entre 0 et 1 : N est **décroissante**.\n2. N(8) = 64 000 × 0,5 = **32 000** ; N(16) = 64 000 × 0,5² = **16 000** ; N(24) = 64 000 × 0,5³ = **8 000**. À chaque demi-vie de 8 jours, le nombre de noyaux est **divisé par 2** : la demi-vie est constante.\n3. N(12) = 64 000 × 0,5^1,5 ≈ 64 000 × 0,3536 ≈ **22 627**. Comme 12/8 = 1 + 1/2, 0,5^(12/8) = 0,5^1 × 0,5^(1/2) : 12 jours = 8 jours puis 4 jours. **Additionner les durées revient à multiplier les facteurs** : on divise par 2 pendant les 8 premiers jours, puis on multiplie par 0,5^(1/2) ≈ 0,71 pendant les 4 jours suivants.\n4. 1 % de 64 000 = **640**. Après k demi-vies, il reste 64 000 / 2^k : k = 6 → 1 000 (encore plus de 640) ; k = 7 → **500** (moins de 640). Il faut **7 demi-vies**, soit 7 × 8 = **56 jours**."
+    },
+    {
+      "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+      "difficulte": 3,
+      "titre": "Une épidémie qui double",
+      "consigne": "Détaille les calculs et rédige des réponses argumentées.",
+      "enonce": "**Situation.** Au début d’une épidémie, on compte 100 cas, et le nombre de cas double tous les 3 jours. On modélise le nombre de cas au jour t par f(t) = 100 × 2^(t/3).\n\nUn élève propose un autre modèle : « Il y a 100 cas de plus chaque jour », soit g(t) = 100 + 100t.\n\n1. Calcule f(15) et f(30). Calcule g(15) et g(30). Compare.\n2. Montre, avec la propriété q^(a+b) = q^a × q^b, que f(t + 3) = 2 × f(t) pour tout t. Que dit ce résultat du temps de doublement ?\n3. Calcule le facteur multiplicatif sur une journée, 2^(1/3) (au centième), et traduis-le en taux d’évolution quotidien.\n4. Sur un graphique à échelle logarithmique verticale, quelle forme prend la courbe de f ? Pourquoi les épidémiologistes préfèrent-ils ce type de graphique ?\n5. Explique la phrase du cours : « Un pourcentage constant d’évolution ne produit jamais une droite. »",
+      "bareme": [
+        { "critere": "f(15) = 3 200 ; f(30) = 102 400 ; g(15) = 1 600 ; g(30) = 3 100", "points": 5 },
+        { "critere": "f(t + 3) = 100 × 2^(t/3) × 2 : temps de doublement constant", "points": 4 },
+        { "critere": "2^(1/3) ≈ 1,26 : environ +26 % par jour", "points": 4 },
+        { "critere": "Échelle logarithmique : une droite, plus lisible", "points": 3 },
+        { "critere": "Pourcentage constant = facteur multiplicatif constant : courbe qui part lentement puis s’envole", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. f(15) = 100 × 2^5 = **3 200** ; f(30) = 100 × 2^10 = **102 400**. g(15) = 100 + 1 500 = **1 600** ; g(30) = 100 + 3 000 = **3 100**. Au début les modèles restent proches, mais à 30 jours le modèle exponentiel donne **33 fois plus** de cas que le modèle affine.\n2. f(t + 3) = 100 × 2^((t+3)/3) = 100 × 2^(t/3 + 1) = 100 × 2^(t/3) × 2^1 = **2 × f(t)**. Quel que soit le moment, il faut 3 jours pour doubler : le **temps de doublement est constant**.\n3. 2^(1/3) ≈ **1,26**. Chaque jour, le nombre de cas est multiplié par 1,26 : c’est une hausse d’environ **26 % par jour**.\n4. En **échelle logarithmique** verticale, une exponentielle devient une **droite**. On y lit directement si le rythme de doublement reste le même (droite) ou change (pente qui varie) : **la droite se lit, la courbe se subit**.\n5. Un pourcentage constant d’évolution correspond à un **coefficient multiplicateur constant** : on **multiplie** toujours par le même nombre, on n’**ajoute** pas la même quantité. Les augmentations sont donc de plus en plus grandes : la courbe part **lentement** puis **s’envole**. Seule une augmentation d’une quantité constante (fonction affine) donne une droite."
+    },
+    {
+      "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+      "difficulte": 1,
+      "titre": "Sécante et tangente",
+      "consigne": "Détaille chaque calcul.",
+      "enonce": "**Situation.** On étudie la fonction f(x) = x².\n\n1. Calcule le taux de variation moyen de f entre 1 et 3. Que représente-t-il graphiquement ?\n2. Montre que, pour h non nul, (f(2 + h) − f(2)) / h = 4 + h. Déduis-en le nombre dérivé f’(2).\n3. Écris l’équation de la tangente à la courbe de f au point d’abscisse 2.",
+      "bareme": [
+        { "critere": "(9 − 1) / (3 − 1) = 4 : coefficient directeur de la sécante", "points": 6 },
+        { "critere": "Développement (4 + 4h + h² − 4) / h = 4 + h, puis f’(2) = 4 quand h tend vers 0", "points": 8 },
+        { "critere": "y = 4(x − 2) + 4, soit y = 4x − 4", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Taux = (f(3) − f(1)) / (3 − 1) = (9 − 1) / 2 = **4**. C’est le **coefficient directeur de la sécante**, la droite qui joint les points de la courbe d’abscisses 1 et 3.\n2. f(2 + h) = (2 + h)² = 4 + 4h + h². Donc (f(2 + h) − f(2)) / h = (4 + 4h + h² − 4) / h = (4h + h²) / h = **4 + h**. Quand h tend vers 0, ce quotient se rapproche de 4 : **f’(2) = 4**.\n3. y = f’(2)(x − 2) + f(2) = 4(x − 2) + 4 = **4x − 4**."
+    },
+    {
+      "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+      "difficulte": 2,
+      "titre": "La balle qui tombe",
+      "consigne": "Détaille chaque calcul et précise les unités.",
+      "enonce": "**Situation.** Ninon lâche une balle du haut d’une tour. La distance parcourue (en mètres) au bout de t secondes est x(t) = 5t².\n\n1. Calcule la vitesse moyenne de la balle entre t = 1 s et t = 3 s.\n2. Montre que, pour h non nul, (x(2 + h) − x(2)) / h = 20 + 5h. Déduis-en la vitesse instantanée à t = 2 s.\n3. Calcule de même la vitesse instantanée à t = 3 s.\n4. Que représente x’(t) en physique ? Le signe de x’(3) est-il cohérent avec la situation ?",
+      "bareme": [
+        { "critere": "Vitesse moyenne = (45 − 5) / 2 = 20 m/s", "points": 5 },
+        { "critere": "Calcul du quotient 20 + 5h et vitesse de 20 m/s à t = 2 s", "points": 6 },
+        { "critere": "Quotient 30 + 5h et vitesse de 30 m/s à t = 3 s", "points": 5 },
+        { "critere": "x’(t) = vitesse instantanée ; positive : la distance parcourue augmente", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. x(1) = 5 et x(3) = 45. Vitesse moyenne = (45 − 5) / (3 − 1) = 40 / 2 = **20 m/s**.\n2. x(2 + h) = 5(4 + 4h + h²) = 20 + 20h + 5h². (x(2 + h) − x(2)) / h = (20h + 5h²) / h = **20 + 5h**. Quand h tend vers 0 : **x’(2) = 20 m/s**.\n3. x(3 + h) = 5(9 + 6h + h²) = 45 + 30h + 5h². (x(3 + h) − x(3)) / h = (30h + 5h²) / h = 30 + 5h → **x’(3) = 30 m/s**.\n4. La dérivée de la position est la **vitesse instantanée** (celle qu’afficherait un compteur). x’(3) = 30 > 0 : la fonction x **croît**, la distance parcourue augmente, ce qui est cohérent avec une balle qui tombe de plus en plus vite."
+    },
+    {
+      "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+      "difficulte": 3,
+      "titre": "Deux tangentes qui se croisent",
+      "consigne": "Détaille chaque étape du raisonnement.",
+      "enonce": "**Situation.** On étudie la fonction f(x) = x² − 6x + 10.\n\n1. Pour un réel a et h non nul, montre que (f(a + h) − f(a)) / h = 2a − 6 + h. Déduis-en f’(a) en fonction de a.\n2. Calcule f’(1), f’(3) et f’(5). Que peut-on dire des variations de f au voisinage de chacun de ces points ?\n3. Que se passe-t-il graphiquement au point d’abscisse 3 ? Calcule f(3).\n4. Écris les équations des tangentes T1 et T5 aux points d’abscisses 1 et 5.\n5. Calcule les coordonnées du point d’intersection de T1 et T5. Que remarques-tu par rapport au point d’abscisse 3 ?",
+      "bareme": [
+        { "critere": "Développement correct et f’(a) = 2a − 6", "points": 5 },
+        { "critere": "f’(1) = −4, f’(3) = 0, f’(5) = 4 et lecture du signe", "points": 4 },
+        { "critere": "Tangente horizontale en 3, f(3) = 1 : minimum", "points": 3 },
+        { "critere": "T1 : y = −4x + 9 ; T5 : y = 4x − 15", "points": 5 },
+        { "critere": "Intersection (3 ; −3), à la verticale du point de tangente horizontale", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f(a + h) = (a + h)² − 6(a + h) + 10 = a² + 2ah + h² − 6a − 6h + 10. f(a + h) − f(a) = 2ah + h² − 6h. Divisé par h : **2a − 6 + h**. Quand h tend vers 0 : **f’(a) = 2a − 6**.\n2. f’(1) = **−4** < 0 : f **décroît** au voisinage de 1 (la tangente descend). f’(3) = **0** : tangente **horizontale**. f’(5) = **4** > 0 : f **croît** au voisinage de 5.\n3. En x = 3, la tangente est horizontale : f passe de décroissante à croissante, c’est un **minimum**. f(3) = 9 − 18 + 10 = **1**.\n4. f(1) = 1 − 6 + 10 = 5 ; T1 : y = −4(x − 1) + 5, soit **y = −4x + 9**. f(5) = 25 − 30 + 10 = 5 ; T5 : y = 4(x − 5) + 5, soit **y = 4x − 15**.\n5. −4x + 9 = 4x − 15 ⇔ 24 = 8x ⇔ x = 3 ; y = −12 + 9 = −3. Intersection : **(3 ; −3)**. Elle se trouve à l’abscisse 3, sur la même verticale que le minimum (3 ; 1) : la figure est **symétrique** par rapport à la droite x = 3 (f(1) = f(5) = 5 et les pentes sont opposées)."
+    },
+    {
+      "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+      "difficulte": 1,
+      "titre": "Dériver sans hésiter",
+      "consigne": "Donne chaque dérivée en citant les formules utilisées.",
+      "enonce": "**Situation.** Pour réviser, Lisa calcule des dérivées.\n\n1. Calcule la dérivée de chaque fonction :\n- a(x) = 4x³ − 2x² + 7x − 1\n- b(x) = −3x + 8\n- c(x) = 5 / x (pour x non nul)\n2. On considère k(x) = x² − 4x sur l’intervalle [0 ; 5]. Calcule k’(x), étudie son signe et dresse le tableau de variation de k, avec les valeurs aux bornes et au point où k’ s’annule.",
+      "bareme": [
+        { "critere": "a’(x) = 12x² − 4x + 7", "points": 4 },
+        { "critere": "b’(x) = −3 et c’(x) = −5 / x²", "points": 5 },
+        { "critere": "k’(x) = 2x − 4, négative puis positive, annulée en 2", "points": 5 },
+        { "critere": "Tableau : k décroissante sur [0 ; 2], croissante sur [2 ; 5] ; k(0) = 0, k(2) = −4, k(5) = 5", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. On utilise (u + v)’ = u’ + v’ et (k u)’ = k u’.\n- a’(x) = 4 × 3x² − 2 × 2x + 7 = **12x² − 4x + 7**.\n- b’(x) = **−3** (dérivée de a x + b : a).\n- c(x) = 5 × 1/x, et (1/x)’ = −1/x² : c’(x) = **−5 / x²**.\n2. k’(x) = **2x − 4**. 2x − 4 = 0 ⇔ x = 2. Sur [0 ; 2[, k’(x) < 0 ; sur ]2 ; 5], k’(x) > 0.\nTableau : k **décroît** de k(0) = **0** à k(2) = 4 − 8 = **−4**, puis **croît** jusqu’à k(5) = 25 − 20 = **5**. k’ passe de − à + en 2 : **minimum −4 en x = 2**."
+    },
+    {
+      "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+      "difficulte": 2,
+      "titre": "Le jet d’eau",
+      "consigne": "Suis la méthode du tableau de variation et justifie chaque étape.",
+      "enonce": "**Situation.** La hauteur (en mètres) d’une goutte d’eau lancée par une fontaine est modélisée, en fonction de la distance horizontale x (en mètres), par f(x) = −x² + 6x − 5, pour x dans [1 ; 5].\n\n1. Calcule f’(x).\n2. Résous f’(x) = 0 et étudie le signe de f’(x) sur [1 ; 5].\n3. Dresse le tableau de variation de f, avec les valeurs aux bornes et au point où f’ s’annule.\n4. Quelle est la hauteur maximale atteinte par la goutte, et à quelle distance ? Justifie que c’est bien un maximum.",
+      "bareme": [
+        { "critere": "f’(x) = −2x + 6", "points": 4 },
+        { "critere": "Annulation en x = 3, f’ positive avant et négative après", "points": 5 },
+        { "critere": "Tableau : croissante sur [1 ; 3], décroissante sur [3 ; 5] ; f(1) = 0, f(3) = 4, f(5) = 0", "points": 6 },
+        { "critere": "Maximum 4 m à 3 m, justifié par le changement de signe de + à −", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. f’(x) = −2x + 6.\n2. −2x + 6 = 0 ⇔ **x = 3**. Pour x < 3, −2x + 6 > 0 ; pour x > 3, −2x + 6 < 0. Donc f’ est **positive sur [1 ; 3[** et **négative sur ]3 ; 5]**.\n3. f(1) = −1 + 6 − 5 = **0** ; f(3) = −9 + 18 − 5 = **4** ; f(5) = −25 + 30 − 5 = **0**. f est **croissante sur [1 ; 3]** de 0 à 4, puis **décroissante sur [3 ; 5]** de 4 à 0.\n4. La hauteur maximale est **4 m**, atteinte à **3 m** de distance horizontale. C’est bien un **maximum** car f’ **change de signe**, en passant **de + à −**, en x = 3 (l’annulation seule ne suffirait pas)."
+    },
+    {
+      "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+      "difficulte": 3,
+      "titre": "Le meilleur bénéfice",
+      "consigne": "Traite les deux parties en détaillant chaque étape et en justifiant.",
+      "enonce": "**Partie A – Optimiser**\n\nUn atelier fabrique des lampes. Pour x dizaines de lampes vendues, avec x dans [0 ; 50], le bénéfice en euros est B(x) = −2x² + 120x − 1 000.\n\n1. Calcule B’(x) et étudie son signe.\n2. Dresse le tableau de variation de B sur [0 ; 50], avec les valeurs aux bornes et au point où B’ s’annule.\n3. Combien de lampes faut-il vendre pour que le bénéfice soit maximal ? Quel est ce bénéfice ?\n\n**Partie B – Attention aux conclusions hâtives**\n\n4. Soit g(x) = x³ − 3x sur [−2 ; 2]. Montre que g’(x) = 3(x − 1)(x + 1), étudie son signe et dresse le tableau de variation de g. Précise ses extremums.\n5. Samir dit : « Pour f(x) = x³, f’(0) = 0, donc f a un maximum ou un minimum en 0. » Réponds-lui.",
+      "bareme": [
+        { "critere": "B’(x) = −4x + 120, positive avant 30, négative après", "points": 4 },
+        { "critere": "Tableau : B(0) = −1 000, B(30) = 800, B(50) = 0", "points": 4 },
+        { "critere": "300 lampes, bénéfice maximal de 800 €", "points": 3 },
+        { "critere": "g’ factorisé, signe + − +, maximum 2 en −1, minimum −2 en 1, valeurs aux bornes", "points": 6 },
+        { "critere": "f’(0) = 0 sans changement de signe : pas d’extremum, f toujours croissante", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. B’(x) = −4x + 120. −4x + 120 = 0 ⇔ **x = 30**. B’(x) > 0 sur [0 ; 30[ et B’(x) < 0 sur ]30 ; 50].\n2. B(0) = **−1 000** ; B(30) = −2 × 900 + 3 600 − 1 000 = **800** ; B(50) = −5 000 + 6 000 − 1 000 = **0**. B est croissante sur [0 ; 30] puis décroissante sur [30 ; 50].\n3. B’ passe de + à − en 30 : **maximum**. Il faut vendre 30 dizaines, soit **300 lampes**, pour un bénéfice maximal de **800 €**.\n4. g’(x) = 3x² − 3 = 3(x² − 1) = **3(x − 1)(x + 1)**. Signe : g’(x) > 0 sur [−2 ; −1[, g’(x) < 0 sur ]−1 ; 1[, g’(x) > 0 sur ]1 ; 2]. Valeurs : g(−2) = −8 + 6 = −2 ; g(−1) = −1 + 3 = **2** ; g(1) = 1 − 3 = **−2** ; g(2) = 8 − 6 = 2. g croît de −2 à 2 sur [−2 ; −1], décroît de 2 à −2 sur [−1 ; 1], croît de −2 à 2 sur [1 ; 2]. **Maximum local 2 en x = −1** (g’ passe de + à −), **minimum local −2 en x = 1** (g’ passe de − à +).\n5. Samir a tort : f’(x) = 3x² s’annule en 0 mais reste **positive** de part et d’autre, **sans changer de signe**. La fonction continue de croître : **pas d’extremum** en 0. L’annulation de la dérivée ne suffit pas, il faut un changement de signe."
+    }
+  ]
+}

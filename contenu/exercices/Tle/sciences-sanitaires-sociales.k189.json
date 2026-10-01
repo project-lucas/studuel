@@ -1,0 +1,2522 @@
+{
+ "niveau": "Tle",
+ "matiere": "sciences-sanitaires-sociales",
+ "exercices": [
+  {
+   "chapitre": "3634b660-54d1-5913-aa49-87a475cbca02",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire la vaccination sans se tromper",
+   "competence": "lire-tableau",
+   "situation": "Le CCAS de Val-Clair, ville imaginaire, présente l’évolution de la vaccination contre la grippe chez les 65 ans et plus. Avant de rédiger, il faut lire les chiffres avec justesse.",
+   "documents": [
+    {
+     "id": "vac",
+     "type": "tableau",
+     "titre": "Part des 65 ans et plus vaccinés contre la grippe",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "2019",
+      "2023"
+     ],
+     "lignes": [
+      [
+       "Personnes vaccinées (%)",
+       40,
+       52
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vac",
+     "enonce": "Touche la part de personnes vaccinées en 2023.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Repère la colonne 2023 dans le tableau.",
+     "explication": "En 2023, **52 %** des 65 ans et plus sont vaccinés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de personnes vaccinées a-t-elle augmenté entre 2019 et 2023 ?",
+     "reponse": 12,
+     "unite": "points",
+     "aide": "Fais la différence entre les deux pourcentages.",
+     "explication": "52 − 40 = **12 points**. Un écart entre deux pourcentages se dit en points."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de variation de cette part entre 2019 et 2023, en % ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Calcule (arrivée − départ) ÷ départ × 100.",
+     "explication": "(52 − 40) ÷ 40 × 100 = **30 %** : la part a augmenté de 30 %, soit 12 points."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de lecture est correcte ?",
+     "options": [
+      "La part de vaccinés est passée de 40 % à 52 %, soit une hausse de 12 points.",
+      "La part de vaccinés est passée de 40 % à 52 %, soit une hausse de 12 %.",
+      "La part de vaccinés est passée de 40 % à 52 %, soit une hausse de 30 points.",
+      "La part de vaccinés est passée de 52 % à 40 %, soit une baisse de 12 points."
+     ],
+     "reponse": 0,
+     "aide": "Ne confonds pas points et pourcentage.",
+     "explication": "La bonne phrase donne l’écart **en points** : **12 points** (et 30 % de variation)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3634b660-54d1-5913-aa49-87a475cbca02",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le renoncement aux soins, en dossier",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la seconde partie de l’épreuve : un petit dossier de deux documents sur le renoncement aux soins dans une ville imaginaire. Tu dois lire, calculer puis organiser tes arguments.",
+   "documents": [
+    {
+     "id": "doc1",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Document 1 : extrait d’un rapport",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Dans la ville imaginaire de Val-Clair, l’observatoire de santé constate en 2023 qu’un habitant sur cinq sans complémentaire santé a renoncé à des soins au cours des douze derniers mois, pour des raisons financières. Il recommande de mieux faire connaître la complémentaire santé solidaire et le tiers payant."
+     ]
+    },
+    {
+     "id": "doc2",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Document 2 : renoncement aux soins selon la couverture",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Sans complémentaire",
+      "Avec complémentaire",
+      "Avec C2S"
+     ],
+     "series": [
+      {
+       "nom": "Renoncement",
+       "valeurs": [
+        20,
+        5,
+        4
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Personnes ayant renoncé",
+      "unite": "en %",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Couverture"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "doc2",
+     "enonce": "Touche le groupe où le renoncement aux soins est le plus fréquent.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les personnes **sans complémentaire** sont les plus concernées : 20 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les personnes sans complémentaire renoncent combien de fois plus souvent que celles qui en ont une ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise la valeur la plus haute par celle du groupe « Avec complémentaire ».",
+     "explication": "20 ÷ 5 = **4** : elles renoncent quatre fois plus souvent."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase d’un paragraphe argumenté : idée, preuve tirée du dossier, ou connaissance personnelle.",
+     "categories": [
+      "Idée",
+      "Preuve du dossier",
+      "Connaissance personnelle"
+     ],
+     "items": [
+      [
+       "Le coût des soins peut empêcher de se soigner",
+       0
+      ],
+      [
+       "Selon le document 1, un habitant sur cinq sans complémentaire renonce aux soins",
+       1
+      ],
+      [
+       "La C2S couvre la part complémentaire des soins des ménages modestes",
+       2
+      ],
+      [
+       "Les dispositifs financiers réduisent les inégalités d’accès aux soins",
+       0
+      ],
+      [
+       "Selon le document 2, 5 % des personnes avec complémentaire renoncent aux soins",
+       1
+      ],
+      [
+       "Le tiers payant dispense d’avancer les frais chez le professionnel de santé",
+       2
+      ]
+     ],
+     "aide": "Une preuve cite un document ; une connaissance vient du cours.",
+     "explication": "L’**idée** affirme, la **preuve** cite un document, la **connaissance** explique ou complète."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart, en points, entre le renoncement des personnes sans complémentaire et celui des personnes avec la C2S ?",
+     "reponse": 16,
+     "unite": "points",
+     "aide": "Soustrais les deux pourcentages lus sur le graphique.",
+     "explication": "20 − 4 = **16 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sujet : « Montrer que le coût des soins influence l’accès aux soins. » Quel plan est le meilleur ?",
+     "options": [
+      "I. Ce que dit le document 1 sur le renoncement — II. Ce que dit le document 2 sur les groupes",
+      "I. L’organisation des médecins de la région — II. L’organisation des hôpitaux de la région",
+      "I. Le coût, un obstacle à l’accès aux soins — II. Des dispositifs qui réduisent cet obstacle",
+      "I. Les chiffres donnés par le graphique — II. Les phrases données par le texte du rapport"
+     ],
+     "reponse": 2,
+     "aide": "Un plan classe par idées, pas par documents.",
+     "explication": "Le bon plan est **thématique** et répond au sujet. Un plan « document par document » est pénalisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "3634b660-54d1-5913-aa49-87a475cbca02",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Densité de médecins : conclure",
+   "competence": "raisonner",
+   "situation": "Sujet de la seconde partie : « Les inégalités territoriales d’accès aux soins s’aggravent-elles ? » Le dossier compare une ville et un territoire rural imaginaires. À toi de calculer puis de conclure.",
+   "documents": [
+    {
+     "id": "sujet",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le sujet",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les inégalités territoriales d’accès aux soins s’aggravent-elles ? Appuie-toi sur le tableau."
+     ]
+    },
+    {
+     "id": "dens",
+     "type": "tableau",
+     "titre": "Médecins généralistes pour 100 000 habitants",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Territoire",
+      "2013",
+      "2023"
+     ],
+     "lignes": [
+      [
+       "A (ville)",
+       120,
+       132
+      ],
+      [
+       "B (rural)",
+       80,
+       72
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dens",
+     "enonce": "Touche la densité du territoire rural en 2023.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Repère la ligne B et la colonne 2023.",
+     "explication": "Le territoire rural compte **72** généralistes pour 100 000 habitants en 2023."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % la densité du territoire B a-t-elle baissé entre 2013 et 2023 ? Donne un nombre positif.",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Calcule (72 − 80) ÷ 80 × 100 et garde la valeur positive.",
+     "explication": "(80 − 72) ÷ 80 × 100 = **10 %** de baisse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de lecture.",
+     "texte": "Entre 2013 et 2023, la densité a ___ de 10 % dans le territoire A et a ___ de 10 % dans le territoire B : l’écart entre les deux se ___.",
+     "reponses": [
+      [
+       "augmenté"
+      ],
+      [
+       "diminué",
+       "baissé"
+      ],
+      [
+       "creuse"
+      ]
+     ],
+     "banque": [
+      "augmenté",
+      "diminué",
+      "creuse",
+      "réduit",
+      "maintenu"
+     ],
+     "aide": "A passe de 120 à 132, B de 80 à 72.",
+     "explication": "A a **augmenté** de 10 % (+12), B a **diminué** de 10 % (−8) : l’écart **se creuse**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de densité entre A et B en 2023 ?",
+     "reponse": 60,
+     "unite": "médecins",
+     "aide": "Soustrais 72 à 132.",
+     "explication": "132 − 72 = **60**. En 2013, l’écart était de 40 : il a bien augmenté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion répond correctement au sujet ?",
+     "options": [
+      "Non : le territoire A a gagné des médecins, donc l’écart entre territoires s’est réduit",
+      "Non : la densité du territoire B a baissé, ce qui prouve que ses besoins de soins ont disparu",
+      "Oui : la densité a augmenté partout, donc tous les habitants accèdent désormais aux soins",
+      "Oui : en dix ans, l’écart de densité est passé de 40 à 60 médecins pour 100 000 habitants"
+     ],
+     "reponse": 3,
+     "aide": "Une conclusion répond à la question posée, chiffres à l’appui.",
+     "explication": "La conclusion doit **répondre** et citer les chiffres : l’écart passe de **40 à 60**, donc les inégalités s’aggravent."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d422ae3-f90c-563b-a1d0-896f9aadda9e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du diagnostic au bilan",
+   "competence": "observer-schema",
+   "situation": "Le CCAS de Valmont, ville imaginaire, lance un projet pour rompre l’isolement des aînés. Il doit suivre des étapes, de l’idée jusqu’au bilan.",
+   "documents": [
+    {
+     "id": "phases",
+     "type": "chaine",
+     "titre": "Les phases d’un projet",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "etude",
+       "texte": "Étude"
+      },
+      {
+       "id": "conception",
+       "texte": "Conception"
+      },
+      {
+       "id": "oeuvre",
+       "texte": "?"
+      },
+      {
+       "id": "eval",
+       "texte": "Évaluation"
+      }
+     ],
+     "liens": [
+      {
+       "de": "etude",
+       "a": "conception"
+      },
+      {
+       "de": "conception",
+       "a": "oeuvre"
+      },
+      {
+       "de": "oeuvre",
+       "a": "eval"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phases",
+     "enonce": "Touche la phase où l’on fixe les objectifs, le calendrier et le budget.",
+     "reponse": [
+      "conception"
+     ],
+     "aide": "Ce sont des choix faits avant de se lancer.",
+     "explication": "C’est la **conception** : on fixe objectifs, actions, moyens, calendrier et budget."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le nom de la phase notée « ? », celle où l’on réalise les actions ?",
+     "reponse": [
+      "mise en œuvre",
+      "mise en oeuvre",
+      "la mise en œuvre",
+      "la mise en oeuvre"
+     ],
+     "aide": "Elle vient après la conception, avant l’évaluation.",
+     "explication": "C’est la **mise en œuvre** : on réalise les actions, on coordonne et on ajuste."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque action du CCAS à la phase du projet.",
+     "paires": [
+      [
+       "Interroger les aînés par questionnaire",
+       "Étude"
+      ],
+      [
+       "Établir un budget prévisionnel",
+       "Conception"
+      ],
+      [
+       "Animer les ateliers du jeudi",
+       "Mise en œuvre"
+      ],
+      [
+       "Mesurer le taux de participation",
+       "Évaluation"
+      ]
+     ],
+     "aide": "Demande-toi : avant, pendant ou après l’action ?",
+     "explication": "Enquêter = **étude**, budgéter = **conception**, animer = **mise en œuvre**, mesurer = **évaluation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d422ae3-f90c-563b-a1d0-896f9aadda9e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les ateliers du jeudi",
+   "competence": "analyser-document",
+   "situation": "Un projet d’ateliers pour les aînés s’achève. Deux documents présentent ses objectifs puis son bilan. À toi d’en tirer des indicateurs.",
+   "documents": [
+    {
+     "id": "obj",
+     "type": "tableau",
+     "titre": "Les objectifs du projet",
+     "source": "Extrait imaginé pour l’exercice.",
+     "colonnes": [
+      "Niveau",
+      "Formulation"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Objectif général",
+       "Réduire l’isolement social des plus de 75 ans de Valmont"
+      ],
+      [
+       "Objectif spécifique",
+       "Augmenter la participation des aînés isolés à des activités collectives"
+      ],
+      [
+       "Objectif opérationnel",
+       "Organiser 20 ateliers d’ici juin, avec 40 participants au moins"
+      ]
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le bilan en fin de projet",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Prévu",
+      "Réalisé"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Participants",
+       40,
+       34
+      ],
+      [
+       "Ateliers tenus",
+       20,
+       18
+      ],
+      [
+       "Coût total (€)",
+       7000,
+       6800
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "obj",
+     "enonce": "Touche l’objectif opérationnel.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Il est précis, chiffré et daté.",
+     "explication": "L’objectif opérationnel est celui qui fixe **20 ateliers d’ici juin avec 40 participants** : précis, mesurable et daté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de l’objectif de participants a été atteint ?",
+     "reponse": 85,
+     "unite": "%",
+     "aide": "Divise 34 par 40, puis multiplie par 100.",
+     "explication": "34 ÷ 40 × 100 = **85 %** : c’est un indicateur d’efficacité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « Améliorer le bien-être des aînés » n’est-il pas un bon objectif opérationnel ?",
+     "options": [
+      "Il est trop précis : il décrit une action à réaliser chaque semaine",
+      "Il ne concerne pas la population cible, mais les professionnels du projet",
+      "Il n’est ni précis, ni mesurable, ni daté : on ne pourrait pas l’évaluer",
+      "Il est trop mesurable : on saurait trop facilement s’il est atteint"
+     ],
+     "reponse": 2,
+     "aide": "Relis la règle : précis, mesurable, réaliste, daté.",
+     "explication": "Un objectif opérationnel doit être **précis, mesurable, réaliste et daté**, sinon on ne peut pas l’évaluer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût réalisé par participant, en euros ?",
+     "reponse": 200,
+     "unite": "€",
+     "aide": "Divise le coût total réalisé par le nombre de participants réalisé.",
+     "explication": "6 800 ÷ 34 = **200 €** par participant : c’est un indicateur d’efficience (coût prévu : 175 €)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d422ae3-f90c-563b-a1d0-896f9aadda9e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bouger après 60 ans : faut-il continuer ?",
+   "competence": "raisonner",
+   "situation": "Une association a mené un projet de gymnastique douce, financé par une collectivité. Le comité de pilotage doit décider de la suite à partir du bilan chiffré et d’une note.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan du projet « Bouger après 60 ans »",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Prévu",
+      "Réalisé"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Séances organisées",
+       30,
+       30
+      ],
+      [
+       "Personnes inscrites",
+       50,
+       42
+      ],
+      [
+       "Personnes présentes à 80 % des séances",
+       25,
+       12
+      ],
+      [
+       "Budget dépensé (€)",
+       9000,
+       9600
+      ]
+     ]
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note du comité de pilotage",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les participants apprécient les séances, mais beaucoup arrêtent en cours de route : horaires trop tardifs, trajets difficiles le soir et exercices jugés trop intenses par certains."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche l’indicateur dont l’objectif est atteint à moins de 50 %.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare le réalisé au prévu ligne par ligne.",
+     "explication": "12 ÷ 25 = **48 %** : c’est l’indicateur sur les participants assidus qui est le plus loin de l’objectif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de l’objectif d’inscrits a été atteint ?",
+     "reponse": 84,
+     "unite": "%",
+     "aide": "Divise 42 par 50.",
+     "explication": "42 ÷ 50 × 100 = **84 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle décision est la mieux justifiée ?",
+     "options": [
+      "Arrêter : le dépassement du budget prouve à lui seul que le projet est un échec",
+      "Pérenniser tel quel : les trente séances ont bien eu lieu, donc rien n’est à revoir",
+      "Ajuster : garder l’action, mais revoir horaires et transports pour retenir le public",
+      "Ne rien décider : l’évaluation ne sert qu’à remplir le rapport des financeurs"
+     ],
+     "reponse": 2,
+     "aide": "Cherche pourquoi les participants partent.",
+     "explication": "Le projet répond à un besoin mais perd son public : on **ajuste** (horaires, transport, intensité) plutôt que d’arrêter ou de continuer à l’identique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % le budget réalisé dépasse-t-il le budget prévu ? Arrondis à l’unité.",
+     "reponse": 7,
+     "unite": "%",
+     "aide": "Calcule (9 600 − 9 000) ÷ 9 000 × 100.",
+     "explication": "600 ÷ 9 000 × 100 ≈ **6,7 %**, soit **7 %** : un léger dépassement.",
+     "tolerance": 0.5
+    }
+   ]
+  },
+  {
+   "chapitre": "1e54dd14-9bf3-59ce-ae0e-674c83d2d2ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sept dates de la politique de santé",
+   "competence": "se-reperer-temps",
+   "situation": "Une frise rassemble quelques grandes étapes de la politique de santé française depuis 1945. Tu dois t’y repérer.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Étapes de la politique de santé",
+     "source": "Dates des textes officiels.",
+     "debut": 1940,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "secu",
+       "date": 1945,
+       "nom": "Sécurité sociale"
+      },
+      {
+       "id": "chu",
+       "date": 1958,
+       "nom": "CHU créés"
+      },
+      {
+       "id": "juppe",
+       "date": 1996,
+       "nom": "Ordonnances Juppé"
+      },
+      {
+       "id": "kouchner",
+       "date": 2002,
+       "nom": "Droits des malades"
+      },
+      {
+       "id": "hpst",
+       "date": 2009,
+       "nom": "Loi HPST"
+      },
+      {
+       "id": "moder",
+       "date": 2016,
+       "nom": "Modernisation"
+      },
+      {
+       "id": "numerus",
+       "date": 2019,
+       "nom": "Fin du numerus clausus"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi qui a créé les agences régionales de santé.",
+     "reponse": [
+      "hpst"
+     ],
+     "aide": "Son nom évoque l’hôpital, les patients, la santé et les territoires.",
+     "explication": "La loi **HPST** de 2009 crée les ARS, installées en 2010."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la Sécurité sociale de la loi sur les droits des malades ?",
+     "reponse": 57,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2002 − 1945 = **57 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces lois de la plus ancienne à la plus récente.",
+     "items": [
+      "Loi sur les droits des malades",
+      "Loi HPST",
+      "Loi de modernisation de notre système de santé",
+      "Loi sur la fin du numerus clausus"
+     ],
+     "aide": "Lis les dates sur la frise.",
+     "explication": "Droits des malades (2002), HPST (2009), modernisation (2016), fin du numerus clausus (2019)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e54dd14-9bf3-59ce-ae0e-674c83d2d2ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un problème, une réponse",
+   "competence": "analyser-document",
+   "situation": "Chaque époque répond aux problèmes de santé qu’elle rencontre. Quatre mesures, quatre problèmes : à toi de les relier.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Quatre mesures de politique de santé",
+     "source": "Dates des textes officiels.",
+     "colonnes": [
+      "Mesure",
+      "Année"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Vaccination obligatoire contre la variole",
+       1902
+      ],
+      [
+       "Création de la Sécurité sociale",
+       1945
+      ],
+      [
+       "Vote annuel de l’ONDAM par le Parlement",
+       1996
+      ],
+      [
+       "Loi sur les droits des malades",
+       2002
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la mesure qui a fait de l’accès aux soins un droit financé collectivement.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Pense à l’assurance maladie pour tous.",
+     "explication": "C’est la **Sécurité sociale** (1945)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure du tableau au problème auquel elle répond.",
+     "paires": [
+      [
+       "Vaccination obligatoire contre la variole",
+       "Épidémies de maladies infectieuses"
+      ],
+      [
+       "Création de la Sécurité sociale",
+       "Inégal accès aux soins"
+      ],
+      [
+       "Vote annuel de l’ONDAM",
+       "Hausse rapide des dépenses"
+      ],
+      [
+       "Loi sur les droits des malades",
+       "Place du patient face aux maladies chroniques"
+      ]
+     ],
+     "aide": "Chaque époque a son problème dominant.",
+     "explication": "Variole = **épidémies**, Sécurité sociale = **accès aux soins**, ONDAM = **dépenses**, droits des malades = **place du patient**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la politique de santé ne se limite-t-elle plus à l’hôpital aujourd’hui ?",
+     "options": [
+      "Les maladies infectieuses ont disparu, donc l’hôpital n’a plus aucune utilité sociale",
+      "L’État a transféré toute la politique de santé aux hôpitaux publics de chaque région",
+      "Les maladies chroniques exigent de coordonner soignants de ville, médico-social et collectivités",
+      "Les patients refusent désormais d’être soignés à l’hôpital pour des raisons de confort"
+     ],
+     "reponse": 2,
+     "aide": "Pense à la transition épidémiologique.",
+     "explication": "Avec les maladies chroniques, il faut **coordonner** la ville, l’hôpital, le médico-social et les collectivités."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e54dd14-9bf3-59ce-ae0e-674c83d2d2ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tabac : des outils qui s’empilent",
+   "competence": "analyser-document",
+   "situation": "La lutte contre le tabagisme illustre l’empilement des outils de politique de santé. Une frise donne trois mesures, un graphique imaginaire l’évolution du tabagisme.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois mesures contre le tabac",
+     "source": "Dates des textes officiels.",
+     "debut": 1990,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "evin",
+       "date": 1991,
+       "nom": "Loi Évin"
+      },
+      {
+       "id": "lieux",
+       "date": 2007,
+       "nom": "Lieux publics sans tabac"
+      },
+      {
+       "id": "paquet",
+       "date": 2016,
+       "nom": "Paquet neutre"
+      }
+     ]
+    },
+    {
+     "id": "fum",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Fumeurs quotidiens (% des adultes)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "2000",
+      "2010",
+      "2016",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Fumeurs",
+       "valeurs": [
+        30,
+        28,
+        24,
+        18
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Part des adultes",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi de 1991 qui a interdit la publicité pour le tabac.",
+     "reponse": [
+      "evin"
+     ],
+     "aide": "C’est la plus ancienne des trois mesures.",
+     "explication": "La **loi Évin** (1991) interdit la publicité pour le tabac et le tabac dans les lieux collectifs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de fumeurs a-t-elle baissé entre 2000 et 2023 ?",
+     "reponse": 12,
+     "unite": "points",
+     "aide": "Soustrais 18 à 30.",
+     "explication": "30 − 18 = **12 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La baisse observée prouve-t-elle que la loi Évin à elle seule l’explique ?",
+     "options": [
+      "Oui : aucune autre mesure n’a été prise entre 1991 et 2023 pour réduire le tabagisme",
+      "Oui : les chiffres baissent à chaque date, donc une seule loi explique cette baisse",
+      "Non : le tabagisme n’a jamais baissé, ce graphique est donc un simple hasard statistique",
+      "Non : plusieurs outils se sont empilés (interdictions, prix, paquet neutre, aides au sevrage)"
+     ],
+     "reponse": 3,
+     "aide": "Regarde la frise : combien de mesures ?",
+     "explication": "La baisse s’explique par un **empilement d’outils** : loi Évin, interdiction dans les lieux publics, paquet neutre, prix, aides au sevrage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % la part de fumeurs a-t-elle baissé entre 2016 et 2023 ? Donne un nombre positif.",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Calcule (24 − 18) ÷ 24 × 100.",
+     "explication": "(24 − 18) ÷ 24 × 100 = **25 %** de baisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "22602fdc-5c25-53c3-b049-88cefb3dd339",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du monde à la commune",
+   "competence": "observer-schema",
+   "situation": "Une politique de santé se décline de l’échelon mondial jusqu’à la commune. Un schéma montre les cinq niveaux.",
+   "documents": [
+    {
+     "id": "echelons",
+     "type": "chaine",
+     "titre": "Les échelons de la politique de santé",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "monde",
+       "texte": "Monde"
+      },
+      {
+       "id": "europe",
+       "texte": "Europe"
+      },
+      {
+       "id": "france",
+       "texte": "France"
+      },
+      {
+       "id": "region",
+       "texte": "Région"
+      },
+      {
+       "id": "commune",
+       "texte": "Commune"
+      }
+     ],
+     "liens": [
+      {
+       "de": "monde",
+       "a": "europe"
+      },
+      {
+       "de": "europe",
+       "a": "france"
+      },
+      {
+       "de": "france",
+       "a": "region"
+      },
+      {
+       "de": "region",
+       "a": "commune"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echelons",
+     "enonce": "Touche l’échelon où agit l’agence régionale de santé.",
+     "reponse": [
+      "region"
+     ],
+     "aide": "Son nom te donne l’indice.",
+     "explication": "L’ARS agit à l’échelon **régional** : elle arrête le projet régional de santé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur ou outil à son échelon.",
+     "paires": [
+      [
+       "OMS",
+       "Mondial"
+      ],
+      [
+       "EMA (médicaments)",
+       "Européen"
+      ],
+      [
+       "Stratégie nationale de santé",
+       "National"
+      ],
+      [
+       "Projet régional de santé",
+       "Régional"
+      ],
+      [
+       "Contrat local de santé",
+       "Local"
+      ]
+     ],
+     "aide": "Pars du plus large au plus proche.",
+     "explication": "OMS = **mondial**, EMA = **européen**, SNS = **national**, PRS = **régional**, contrat local = **local**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’élaboration d’une politique de santé.",
+     "items": [
+      "Observer les indicateurs de santé",
+      "Mettre le problème sur l’agenda",
+      "Fixer les priorités et les objectifs",
+      "Mettre en œuvre sur les territoires",
+      "Évaluer les résultats"
+     ],
+     "aide": "On ne décide pas avant d’avoir observé.",
+     "explication": "Observer, mettre sur l’agenda, décider, mettre en œuvre, **évaluer**."
+    }
+   ]
+  },
+  {
+   "chapitre": "22602fdc-5c25-53c3-b049-88cefb3dd339",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Besoin, demande, offre",
+   "competence": "lire-tableau",
+   "situation": "Dans un territoire imaginaire, des infirmières scolaires repèrent des lycéens en souffrance. Un tableau compare ce qui est nécessaire, ce qui est demandé et ce qui est disponible.",
+   "documents": [
+    {
+     "id": "sm",
+     "type": "tableau",
+     "titre": "Santé mentale des lycéens, sur un mois",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Nombre"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Élèves en souffrance repérés par les infirmières scolaires",
+       240
+      ],
+      [
+       "Rendez-vous demandés par les élèves ou leurs parents",
+       180
+      ],
+      [
+       "Places de consultation disponibles",
+       60
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sm",
+     "enonce": "Touche le chiffre qui mesure l’offre de soins.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "L’offre, c’est ce qui est disponible.",
+     "explication": "Les **60** places de consultation sont l’offre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des élèves repérés a demandé un rendez-vous, en % ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Divise 180 par 240.",
+     "explication": "180 ÷ 240 × 100 = **75 %**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon qu’elle décrit un besoin, une demande ou une offre.",
+     "categories": [
+      "Besoin",
+      "Demande",
+      "Offre"
+     ],
+     "items": [
+      [
+       "Des infirmières repèrent 240 élèves en souffrance",
+       0
+      ],
+      [
+       "Des parents appellent pour obtenir un rendez-vous chez un psychologue",
+       1
+      ],
+      [
+       "Le centre médico-psychologique dispose de 60 places par mois",
+       2
+      ],
+      [
+       "Les indicateurs de santé révèlent une hausse des troubles anxieux",
+       0
+      ],
+      [
+       "Des élèves réclament des consultations plus proches du lycée",
+       1
+      ],
+      [
+       "Deux psychologues scolaires sont en poste dans le secteur",
+       2
+      ]
+     ],
+     "aide": "Besoin = établi par les professionnels, demande = exprimée, offre = disponible.",
+     "explication": "Le **besoin** est établi par les professionnels, la **demande** est exprimée par la population, l’**offre** est ce qui existe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de demandes de rendez-vous ne peuvent pas être satisfaites ce mois-ci ?",
+     "reponse": 120,
+     "unite": "rendez-vous",
+     "aide": "Soustrais l’offre à la demande.",
+     "explication": "180 − 60 = **120** rendez-vous sans réponse : le problème est à mettre sur l’agenda."
+    }
+   ]
+  },
+  {
+   "chapitre": "22602fdc-5c25-53c3-b049-88cefb3dd339",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Présenter la santé mentale dans son contexte",
+   "competence": "argumenter",
+   "situation": "Sujet : « Présenter la politique de santé mentale dans son contexte. » Une région imaginaire fournit des chiffres sur les jeunes. À toi d’organiser la présentation.",
+   "documents": [
+    {
+     "id": "sujet",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le sujet",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Présenter la politique de santé mentale dans son contexte, du niveau national au niveau local."
+     ]
+    },
+    {
+     "id": "anx",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Jeunes de 15 à 24 ans déclarant des troubles anxieux (%)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "2019",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Troubles anxieux",
+       "valeurs": [
+        12,
+        18
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Part des jeunes",
+      "unite": "en %",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de variation de cette part entre 2019 et 2024, en % ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Calcule (18 − 12) ÷ 12 × 100.",
+     "explication": "(18 − 12) ÷ 12 × 100 = **50 %** : c’est le contexte chiffré de la politique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’une présentation de politique de santé dans son contexte.",
+     "items": [
+      "Le contexte : hausse des troubles anxieux et psychiatrie saturée",
+      "La priorité nationale : grande cause nationale en 2025",
+      "Les mesures : psychologues remboursés, numéro 3114",
+      "La déclinaison dans les projets régionaux de santé",
+      "L’évaluation des résultats"
+     ],
+     "aide": "On part du problème avant de parler des solutions.",
+     "explication": "Contexte, priorité, mesures, déclinaison, **évaluation**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément selon son échelon.",
+     "categories": [
+      "National",
+      "Régional",
+      "Local"
+     ],
+     "items": [
+      [
+       "Stratégie nationale de santé",
+       0
+      ],
+      [
+       "Numéro national de prévention du suicide 3114",
+       0
+      ],
+      [
+       "Schéma régional de santé à cinq ans",
+       1
+      ],
+      [
+       "Programme régional d’accès à la prévention et aux soins des plus démunis",
+       1
+      ],
+      [
+       "Contrat local de santé signé entre l’ARS et une intercommunalité",
+       2
+      ],
+      [
+       "Permanence d’écoute pour les jeunes ouverte par une commune",
+       2
+      ]
+     ],
+     "aide": "Qui décide ? L’État, l’ARS ou une collectivité ?",
+     "explication": "La SNS et le 3114 sont **nationaux**, le schéma régional et le PRAPS **régionaux**, le contrat local et la permanence **locaux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi commence-t-on la présentation d’une politique par son contexte ?",
+     "options": [
+      "Parce que les lois de santé sont toujours votées avant que le problème apparaisse",
+      "Parce que le contexte sert surtout à citer tous les textes juridiques en vigueur",
+      "Parce que la présentation doit suivre l’ordre alphabétique des institutions citées",
+      "Parce qu’une priorité se justifie par un problème de santé repéré grâce aux données"
+     ],
+     "reponse": 3,
+     "aide": "Une politique répond à un problème.",
+     "explication": "Une politique naît d’un **constat** fondé sur des données : on le présente avant les mesures."
+    }
+   ]
+  },
+  {
+   "chapitre": "48936332-692c-52f1-8742-4f9d0794adce",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les usagers entrent dans la décision",
+   "competence": "se-reperer-temps",
+   "situation": "La démocratie sanitaire s’est construite par étapes depuis les années 1990. Une frise en donne quatre ; tu dois aussi connaître les instances à chaque échelon.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre étapes de la démocratie sanitaire",
+     "source": "Dates des textes et événements officiels.",
+     "debut": 1990,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "usagers",
+       "date": 1996,
+       "nom": "Usagers au conseil"
+      },
+      {
+       "id": "etats",
+       "date": 1998,
+       "nom": "États généraux"
+      },
+      {
+       "id": "loi",
+       "date": 2002,
+       "nom": "Loi du 4 mars"
+      },
+      {
+       "id": "assos",
+       "date": 2016,
+       "nom": "France Assos Santé"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’étape où les représentants des usagers entrent dans les conseils d’administration des hôpitaux.",
+     "reponse": [
+      "usagers"
+     ],
+     "aide": "C’est la plus ancienne des quatre.",
+     "explication": "Dès **1996**, des représentants des usagers siègent dans les conseils d’administration."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’arrivée des usagers dans les hôpitaux de la création de France Assos Santé ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2016 − 1996 = **20 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instance à son échelon.",
+     "paires": [
+      [
+       "Conférence nationale de santé",
+       "National"
+      ],
+      [
+       "Conférence régionale de la santé et de l’autonomie",
+       "Régional"
+      ],
+      [
+       "Conseil territorial de santé",
+       "Territorial"
+      ],
+      [
+       "Commission des usagers",
+       "Établissement"
+      ]
+     ],
+     "aide": "Du plus large au plus proche.",
+     "explication": "CNS = **national**, CRSA = **régional**, conseil territorial = **territorial**, commission des usagers = **établissement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "48936332-692c-52f1-8742-4f9d0794adce",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une réclamation à l’hôpital",
+   "competence": "analyser-texte",
+   "situation": "M. Bernard est opéré dans un hôpital imaginaire. Certains de ses droits sont respectés, d’autres non. Lis son histoire puis analyse-la.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’histoire de M. Bernard",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Lundi, M. Bernard, 71 ans, est opéré de la hanche dans un hôpital de Saint-Rivage, ville imaginaire. La veille, le chirurgien lui a expliqué l’intervention et ses risques, puis lui a proposé une autre solution ; M. Bernard a accepté l’opération librement.",
+      "Le lendemain, il demande à lire son [[d|dossier]] médical : on le lui remet sans difficulté.",
+      "À sa sortie, l’infirmier évoque sa maladie à voix haute dans le couloir, devant d’autres patients. Personne ne lui a jamais proposé de désigner une personne de confiance. M. Bernard dépose une réclamation auprès de l’hôpital."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui désigne le document que M. Bernard a pu consulter.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est un document médical.",
+     "explication": "Il a pu lire son **dossier** médical : c’est son droit d’accès direct."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait selon que le droit du patient est respecté ou non.",
+     "categories": [
+      "Droit respecté",
+      "Droit non respecté"
+     ],
+     "items": [
+      [
+       "Le chirurgien explique l’opération et ses risques ; M. Bernard accepte librement",
+       0
+      ],
+      [
+       "M. Bernard obtient son dossier médical quand il le demande",
+       0
+      ],
+      [
+       "L’infirmier parle de la maladie devant d’autres patients",
+       1
+      ],
+      [
+       "Personne ne propose à M. Bernard de désigner une personne de confiance",
+       1
+      ]
+     ],
+     "aide": "Repère information, consentement, secret médical, personne de confiance.",
+     "explication": "Information, consentement et accès au dossier sont respectés ; le **secret médical** et la **personne de confiance** ne le sont pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut faire la commission des usagers après examen de la réclamation ?",
+     "options": [
+      "Décider seule de sanctionner l’infirmier en le licenciant de l’hôpital sans délai",
+      "Modifier le projet régional de santé de toute la région pour éviter ce type de cas",
+      "Proposer des améliorations, par exemple sur l’accueil et le respect de la confidentialité",
+      "Voter la loi de financement de la Sécurité sociale en tenant compte de la réclamation"
+     ],
+     "reponse": 2,
+     "aide": "Son rôle est d’examiner et de proposer.",
+     "explication": "La commission des usagers **examine les plaintes** et **propose des améliorations** ; elle ne sanctionne pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque droit à sa définition.",
+     "paires": [
+      [
+       "Consentement libre et éclairé",
+       "Accepter ou refuser un soin après avoir été informé"
+      ],
+      [
+       "Personne de confiance",
+       "Quelqu’un qui parle pour moi si je ne peux plus m’exprimer"
+      ],
+      [
+       "Directives anticipées",
+       "Mes volontés écrites sur ma fin de vie"
+      ],
+      [
+       "Secret médical",
+       "Interdiction de révéler mes informations de santé"
+      ]
+     ],
+     "aide": "Chaque droit protège le patient autrement.",
+     "explication": "Chaque droit de la loi de 2002 (et de la loi Claeys-Leonetti pour les **directives anticipées**) a un rôle précis."
+    }
+   ]
+  },
+  {
+   "chapitre": "48936332-692c-52f1-8742-4f9d0794adce",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un avis qui ne s’impose pas",
+   "competence": "argumenter",
+   "situation": "Dans une région imaginaire, une agence veut fermer une maternité. L’instance de démocratie sanitaire s’y oppose, mais la décision tombe quand même. Deux documents aident à comprendre.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un avis défavorable",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "L’agence régionale de santé d’Hauterive, région imaginaire, prévoit de fermer la maternité d’un petit hôpital. La conférence régionale de la santé et de l’autonomie rend un avis défavorable, mais l’agence maintient sa décision."
+     ]
+    },
+    {
+     "id": "crsa",
+     "type": "tableau",
+     "titre": "Composition imaginaire de la conférence régionale",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Collège",
+      "Sièges"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Représentants des usagers",
+       12
+      ],
+      [
+       "Professionnels et établissements",
+       18
+      ],
+      [
+       "Élus et collectivités",
+       10
+      ],
+      [
+       "Autres (organismes sociaux, personnalités)",
+       10
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crsa",
+     "enonce": "Touche le collège qui compte le plus de sièges.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le plus grand nombre de sièges.",
+     "explication": "Les **professionnels et établissements** ont 18 sièges."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des sièges les représentants des usagers détiennent-ils, en % ?",
+     "reponse": 24,
+     "unite": "%",
+     "aide": "Divise 12 par le total des sièges.",
+     "explication": "12 ÷ 50 × 100 = **24 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’agence peut-elle maintenir sa décision malgré l’avis défavorable ?",
+     "options": [
+      "Non : l’avis de la conférence régionale s’impose toujours au directeur de l’agence",
+      "Oui : cette instance est consultative, son avis ne s’impose pas à l’agence",
+      "Non : une telle décision ne peut être prise qu’avec l’accord des usagers",
+      "Oui : cette instance n’existe pas dans la loi et ses avis sont sans valeur"
+     ],
+     "reponse": 1,
+     "aide": "Regarde si l’instance décide ou seulement conseille.",
+     "explication": "Les instances de démocratie sanitaire sont **consultatives** : leurs avis ne s’imposent pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : atout ou limite de la démocratie sanitaire.",
+     "categories": [
+      "Atout",
+      "Limite"
+     ],
+     "items": [
+      [
+       "Des décisions mieux adaptées aux besoins",
+       0
+      ],
+      [
+       "Des décisions mieux acceptées",
+       0
+      ],
+      [
+       "Le patient devient acteur de sa santé",
+       0
+      ],
+      [
+       "Des avis qui ne s’imposent pas",
+       1
+      ],
+      [
+       "Des représentants peu nombreux et peu connus",
+       1
+      ],
+      [
+       "Peu de participation des publics éloignés du système de santé",
+       1
+      ]
+     ],
+     "aide": "Les atouts améliorent les décisions, les limites freinent la participation.",
+     "explication": "Les **atouts** : adaptation, acceptation, patient acteur. Les **limites** : avis consultatifs, représentants peu connus, publics éloignés."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a47a9f3-4f2a-513f-b6ed-120526e9d86b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soigner n’est pas tout",
+   "competence": "observer-schema",
+   "situation": "Le système de soins est une partie d’un ensemble plus large. Un schéma le montre, puis tu classes des situations.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Deux ensembles emboîtés",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 105,
+       "rx": 145,
+       "ry": 90,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "sante",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 140,
+       "rx": 85,
+       "ry": 38,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "soins",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 50,
+       "texte": "Système de santé",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 70,
+       "texte": "prévention, recherche, formation…",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 145,
+       "texte": "Système de soins",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche le système de soins.",
+     "reponse": [
+      "soins"
+     ],
+     "aide": "C’est l’ensemble contenu dans l’autre.",
+     "explication": "Le **système de soins** est une composante du système de santé, dessinée à l’intérieur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : relève-t-elle du système de soins ou du reste du système de santé ?",
+     "categories": [
+      "Système de soins",
+      "Reste du système de santé"
+     ],
+     "items": [
+      [
+       "Une consultation chez un kinésithérapeute",
+       0
+      ],
+      [
+       "Une hospitalisation pour une appendicite",
+       0
+      ],
+      [
+       "La vente de médicaments en pharmacie",
+       0
+      ],
+      [
+       "Le contrôle de la qualité de l’eau du robinet",
+       1
+      ],
+      [
+       "Une recherche sur un nouveau vaccin",
+       1
+      ],
+      [
+       "La formation de futures infirmières",
+       1
+      ]
+     ],
+     "aide": "Le système de soins produit des soins.",
+     "explication": "Les **soins** : consultation, hospitalisation, pharmacie. Le reste (**prévention, sécurité sanitaire, recherche, formation**) relève du système de santé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son rôle.",
+     "paires": [
+      [
+       "Parlement",
+       "Vote la loi de financement de la Sécurité sociale"
+      ],
+      [
+       "Assurance maladie",
+       "Rembourse les soins et négocie avec les libéraux"
+      ],
+      [
+       "Agence régionale de santé",
+       "Pilote l’offre de soins et la prévention en région"
+      ],
+      [
+       "Santé publique France",
+       "Surveille l’état de santé et alerte"
+      ]
+     ],
+     "aide": "Chacun a une part de la gouvernance.",
+     "explication": "Le **Parlement** vote, l’**assurance maladie** rembourse, l’**ARS** pilote en région, **Santé publique France** surveille."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a47a9f3-4f2a-513f-b6ed-120526e9d86b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chemin d’un nouveau médicament",
+   "competence": "analyser-document",
+   "situation": "Un nouveau médicament mobilise plusieurs acteurs avant d’être remboursé. Un schéma montre les étapes, un tableau donne les taux de remboursement habituels.",
+   "documents": [
+    {
+     "id": "chemin",
+     "type": "chaine",
+     "titre": "Les étapes",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "amm",
+       "texte": "Autorisation de mise sur le marché"
+      },
+      {
+       "id": "smr",
+       "texte": "Évaluation du service médical rendu"
+      },
+      {
+       "id": "prix",
+       "texte": "Prix et remboursement"
+      },
+      {
+       "id": "surv",
+       "texte": "Surveillance après commercialisation"
+      }
+     ],
+     "liens": [
+      {
+       "de": "amm",
+       "a": "smr"
+      },
+      {
+       "de": "smr",
+       "a": "prix"
+      },
+      {
+       "de": "prix",
+       "a": "surv"
+      }
+     ]
+    },
+    {
+     "id": "smrtab",
+     "type": "tableau",
+     "titre": "Taux de remboursement selon le service médical rendu",
+     "source": "Taux habituels, arrondis.",
+     "colonnes": [
+      "Service médical rendu",
+      "Taux remboursé"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Important",
+       "65 %"
+      ],
+      [
+       "Modéré",
+       "30 %"
+      ],
+      [
+       "Faible",
+       "15 %"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chemin",
+     "enonce": "Touche l’étape où intervient la Haute Autorité de santé.",
+     "reponse": [
+      "smr"
+     ],
+     "aide": "Elle juge l’utilité du médicament.",
+     "explication": "La **HAS** évalue le service médical rendu avant le remboursement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape à l’acteur qui s’en charge.",
+     "paires": [
+      [
+       "Autorisation de mise sur le marché",
+       "EMA (Europe) ou ANSM (France)"
+      ],
+      [
+       "Évaluation du service médical rendu",
+       "Haute Autorité de santé"
+      ],
+      [
+       "Fixation du prix",
+       "Comité économique des produits de santé"
+      ],
+      [
+       "Surveillance après commercialisation",
+       "La pharmacovigilance"
+      ]
+     ],
+     "aide": "Quatre étapes, quatre acteurs différents.",
+     "explication": "Un seul produit mobilise **quatre acteurs** : c’est la gouvernance en action."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un médicament au service médical rendu modéré a une base de remboursement de 40 €. Combien l’assurance maladie rembourse-t-elle, en euros, hors franchise ?",
+     "reponse": 12,
+     "unite": "€",
+     "aide": "Applique le taux du tableau à 40 €.",
+     "explication": "30 % de 40 € = **12 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a47a9f3-4f2a-513f-b6ed-120526e9d86b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une clinique veut ouvrir",
+   "competence": "raisonner",
+   "situation": "Une clinique privée imaginaire veut ouvrir 60 lits à Saint-Rivage. Qui décide de quoi ? Un article et un tableau montrent que plusieurs acteurs se partagent le pouvoir.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une clinique à Saint-Rivage",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "La clinique du Port souhaite ouvrir 60 lits à Saint-Rivage, ville imaginaire. Elle doit obtenir une [[a|autorisation]] avant d’accueillir des patients, faire appliquer par ses médecins les tarifs fixés avec l’assurance maladie, et financer son activité dans l’enveloppe nationale des dépenses."
+     ]
+    },
+    {
+     "id": "dem",
+     "type": "tableau",
+     "titre": "Les trois démarches de la clinique",
+     "source": "Tableau écrit pour l’exercice.",
+     "colonnes": [
+      "Démarche",
+      "Ce qu’elle permet"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Demande d’autorisation d’ouvrir 60 lits",
+       "Exercer légalement comme établissement de santé"
+      ],
+      [
+       "Convention avec l’assurance maladie",
+       "Appliquer des tarifs fixés avec l’assurance maladie"
+      ],
+      [
+       "Financement dans l’objectif national de dépenses",
+       "Être payée dans le cadre voté au Parlement"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art",
+     "enonce": "Touche le mot qui désigne ce que la clinique doit obtenir avant d’accueillir des patients.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est l’accord officiel d’ouvrir.",
+     "explication": "Il lui faut une **autorisation**, délivrée par l’agence régionale de santé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque décision à l’acteur qui la prend.",
+     "paires": [
+      [
+       "Autoriser l’ouverture des 60 lits",
+       "Agence régionale de santé"
+      ],
+      [
+       "Fixer les tarifs des médecins libéraux",
+       "Assurance maladie (par convention)"
+      ],
+      [
+       "Voter l’objectif national de dépenses",
+       "Parlement (loi de financement)"
+      ]
+     ],
+     "aide": "Trois acteurs, trois niveaux de décision.",
+     "explication": "L’**ARS** autorise, l’**assurance maladie** négocie les tarifs, le **Parlement** vote l’objectif de dépenses."
+    },
+    {
+     "type": "zone",
+     "document": "dem",
+     "enonce": "Touche la démarche qui passe par une convention avec l’assurance maladie.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le mot « convention ».",
+     "explication": "Les tarifs des libéraux sont fixés par des **conventions** avec l’assurance maladie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la gouvernance du système de santé est partagée ?",
+     "options": [
+      "Parce qu’un seul acteur, le ministre, décide de toutes les autorisations et de tous les tarifs",
+      "Parce que l’État, l’assurance maladie, les ARS et les professionnels détiennent chacun une part du pouvoir",
+      "Parce que les patients votent chaque année le budget de la clinique et celui des hôpitaux",
+      "Parce que l’OMS fixe directement les tarifs des médecins dans chacun des pays du monde"
+     ],
+     "reponse": 1,
+     "aide": "Compte les acteurs qui interviennent dans l’histoire de la clinique.",
+     "explication": "Plusieurs acteurs se partagent le pouvoir : la **coordination** est indispensable."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fb9bcc-c276-5bc5-ac94-92a2bd9ba60b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui paie les soins ?",
+   "competence": "lire-graphique",
+   "situation": "Les comptes de la santé montrent qui finance les soins et biens médicaux consommés en France. Le graphique donne des ordres de grandeur.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Qui finance la consommation de soins et de biens médicaux (en %) ?",
+     "source": "Ordres de grandeur arrondis, comptes de la santé (DREES).",
+     "categories": [
+      "Sécurité sociale",
+      "Organismes complémentaires",
+      "Ménages (reste à charge)",
+      "État et collectivités"
+     ],
+     "series": [
+      {
+       "nom": "Part du financement",
+       "valeurs": [
+        80,
+        12,
+        7,
+        1
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "enonce": "Touche le financeur principal des soins et biens médicaux.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part.",
+     "explication": "La **Sécurité sociale** finance environ 80 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La consommation de soins et de biens médicaux est de 250 milliards d’euros. Combien la Sécurité sociale en finance-t-elle, en milliards d’euros ?",
+     "reponse": 200,
+     "unite": "Md€",
+     "aide": "Calcule 80 % de 250.",
+     "explication": "0,8 × 250 = **200 milliards d’euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « la Sécurité sociale finance environ 80 % » ?",
+     "options": [
+      "La Sécurité sociale rembourse exactement 80 % du prix de chaque consultation de chaque assuré",
+      "80 % des assurés sont intégralement remboursés, les 20 % restants ne le sont pas du tout",
+      "La Sécurité sociale finance 80 % de ses propres dépenses et les ménages le reste",
+      "Sur 100 € de soins et de biens médicaux consommés, environ 80 € sont pris en charge par la Sécurité sociale"
+     ],
+     "reponse": 3,
+     "aide": "Pense à 100 € de soins consommés.",
+     "explication": "Sur 100 € consommés, environ **80 €** viennent de la Sécurité sociale : c’est une part du total, pas un taux par acte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des soins est financée par les organismes complémentaires et les ménages réunis, en % ?",
+     "reponse": 19,
+     "unite": "%",
+     "aide": "Additionne les deux parts.",
+     "explication": "12 + 7 = **19 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fb9bcc-c276-5bc5-ac94-92a2bd9ba60b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où part l’argent de la santé ?",
+   "competence": "lire-tableau",
+   "situation": "Le tableau répartit la consommation de soins et de biens médicaux par poste. Tu dois lire, calculer puis relier les modes de paiement à leurs acteurs.",
+   "documents": [
+    {
+     "id": "postes",
+     "type": "tableau",
+     "titre": "Les postes de la consommation de soins et de biens médicaux",
+     "source": "Ordres de grandeur arrondis pour l’exercice, d’après les comptes de la santé (DREES).",
+     "colonnes": [
+      "Poste",
+      "Milliards d’euros"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Soins hospitaliers",
+       120
+      ],
+      [
+       "Soins de ville",
+       60
+      ],
+      [
+       "Médicaments",
+       37
+      ],
+      [
+       "Transports sanitaires",
+       5
+      ],
+      [
+       "Autres biens médicaux (optique, prothèses…)",
+       28
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "postes",
+     "enonce": "Touche le poste le plus important.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche le plus grand nombre de milliards.",
+     "explication": "Les **soins hospitaliers** pèsent 120 milliards."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le total est de 250 milliards d’euros. Quelle part représentent les soins hospitaliers, en % ?",
+     "reponse": 48,
+     "unite": "%",
+     "aide": "Divise 120 par 250.",
+     "explication": "120 ÷ 250 × 100 = **48 %** : près de la moitié."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mode de paiement ou de régulation à son public.",
+     "paires": [
+      [
+       "Tarification à l’activité (T2A)",
+       "Hôpitaux"
+      ],
+      [
+       "Paiement à l’acte selon des tarifs conventionnels",
+       "Professionnels libéraux"
+      ],
+      [
+       "Ticket modérateur et franchises",
+       "Patients"
+      ],
+      [
+       "Vote de l’objectif national de dépenses",
+       "Parlement"
+      ]
+     ],
+     "aide": "Chaque mécanisme vise un acteur précis.",
+     "explication": "La **T2A** finance les hôpitaux, l’acte les **libéraux**, le ticket modérateur les **patients**, l’ONDAM est voté par le **Parlement**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part représentent les médicaments, en % ? Arrondis à l’unité.",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Divise 37 par 250.",
+     "explication": "37 ÷ 250 × 100 = 14,8 %, soit **15 %**.",
+     "tolerance": 0.5
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fb9bcc-c276-5bc5-ac94-92a2bd9ba60b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ville qui vieillit",
+   "competence": "raisonner",
+   "situation": "Dans une ville imaginaire de 100 000 habitants, la part des personnes âgées augmente. Deux documents permettent de mesurer l’effet du vieillissement sur la dépense d’assurance maladie.",
+   "documents": [
+    {
+     "id": "dep",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Dépense moyenne remboursée par personne et par an (€)",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "Moins de 20 ans",
+      "20-59 ans",
+      "60-74 ans",
+      "75 ans et plus"
+     ],
+     "series": [
+      {
+       "nom": "Dépense moyenne",
+       "valeurs": [
+        900,
+        1800,
+        3600,
+        5400
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Dépense par personne",
+      "unite": "en €",
+      "min": 0,
+      "max": 6000,
+      "pas": 1000
+     },
+     "axeX": {
+      "titre": "Âge"
+     }
+    },
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "Population de la ville par classe d’âge",
+     "source": "Données imaginées pour l’exercice.",
+     "colonnes": [
+      "Classe d’âge",
+      "Habitants"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Moins de 20 ans",
+       20000
+      ],
+      [
+       "20-59 ans",
+       45000
+      ],
+      [
+       "60-74 ans",
+       20000
+      ],
+      [
+       "75 ans et plus",
+       15000
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la dépense totale des 75 ans et plus, en millions d’euros ?",
+     "reponse": 81,
+     "unite": "millions d’euros",
+     "aide": "Multiplie 15 000 habitants par 5 400 €.",
+     "explication": "15 000 × 5 400 € = 81 000 000 €, soit **81 millions d’euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la hausse de la part des 75 ans et plus fait-elle monter les dépenses ?",
+     "options": [
+      "Ils paient moins de cotisations, ce qui augmente mécaniquement le prix de chaque soin",
+      "Ils refusent les médicaments génériques, ce qui rend chaque traitement plus cher",
+      "Ils sont exclus du remboursement, donc l’État finance seul toutes leurs dépenses",
+      "Ils sont plus souvent atteints de maladies chroniques et consomment davantage de soins"
+     ],
+     "reponse": 3,
+     "aide": "Regarde la barre des 75 ans et plus.",
+     "explication": "Avec l’âge, les **maladies chroniques** augmentent, donc la consommation de soins aussi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La dépense totale de la ville est de 252 millions d’euros. Quelle part vient des 75 ans et plus, en % ? Arrondis à l’unité.",
+     "reponse": 32,
+     "unite": "%",
+     "aide": "Divise 81 par 252.",
+     "explication": "81 ÷ 252 × 100 ≈ 32 % des dépenses, pour **15 %** de la population.",
+     "tolerance": 0.5
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque facteur : explique-t-il la hausse des dépenses de santé ?",
+     "categories": [
+      "Explique la hausse",
+      "N’explique pas la hausse"
+     ],
+     "items": [
+      [
+       "Le vieillissement de la population",
+       0
+      ],
+      [
+       "Des traitements innovants souvent coûteux",
+       0
+      ],
+      [
+       "La hausse des maladies chroniques",
+       0
+      ],
+      [
+       "La baisse du nombre de personnes âgées",
+       1
+      ],
+      [
+       "La disparition des progrès techniques en médecine",
+       1
+      ],
+      [
+       "Une baisse de la demande de soins",
+       1
+      ]
+     ],
+     "aide": "Pense au vieillissement, aux maladies chroniques et aux progrès techniques.",
+     "explication": "Vieillissement, maladies chroniques et **progrès techniques** font monter la dépense."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c7b6c5e-90fe-5bf0-ae5b-5f693e3a0194",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des élèves malades après la cantine",
+   "competence": "observer-schema",
+   "situation": "Plusieurs élèves d’une école imaginaire sont malades après le déjeuner. La veille sanitaire suit des étapes bien précises.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "La réponse à une menace sanitaire",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "signal",
+       "texte": "Signal"
+      },
+      {
+       "id": "verif",
+       "texte": "?"
+      },
+      {
+       "id": "eval",
+       "texte": "Évaluation du risque"
+      },
+      {
+       "id": "alerte",
+       "texte": "Alerte"
+      },
+      {
+       "id": "reponse",
+       "texte": "Réponse"
+      }
+     ],
+     "liens": [
+      {
+       "de": "signal",
+       "a": "verif"
+      },
+      {
+       "de": "verif",
+       "a": "eval"
+      },
+      {
+       "de": "eval",
+       "a": "alerte"
+      },
+      {
+       "de": "alerte",
+       "a": "reponse"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel mot manque à l’étape notée « ? », entre le signal et l’évaluation du risque ?",
+     "reponse": [
+      "vérification",
+      "verification",
+      "la vérification",
+      "la verification"
+     ],
+     "aide": "On s’assure que le signal est réel.",
+     "explication": "On procède d’abord à la **vérification** du signal."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche l’étape où l’on ferme la cuisine ou retire le lot contaminé.",
+     "reponse": [
+      "reponse"
+     ],
+     "aide": "Ce sont des mesures concrètes.",
+     "explication": "Fermer la cuisine est une **réponse** : une mesure prise après l’alerte."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son rôle.",
+     "paires": [
+      [
+       "Le médecin scolaire",
+       "Déclare les cas à l’ARS"
+      ],
+      [
+       "L’ARS",
+       "Reçoit les signalements et prend les premières mesures"
+      ],
+      [
+       "Santé publique France",
+       "Enquête, surveille et alerte"
+      ],
+      [
+       "La Direction générale de la santé",
+       "Décide des mesures nationales"
+      ]
+     ],
+     "aide": "Du terrain vers le national.",
+     "explication": "Le **médecin** déclare, l’**ARS** réagit, **Santé publique France** enquête, la **DGS** décide au niveau national."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c7b6c5e-90fe-5bf0-ae5b-5f693e3a0194",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq signalements, cinq vigilances",
+   "competence": "analyser-document",
+   "situation": "Un centre de veille reçoit cinq signalements. Chacun relève d’une vigilance précise. Puis tu dois savoir quelles maladies se déclarent obligatoirement.",
+   "documents": [
+    {
+     "id": "sig",
+     "type": "tableau",
+     "titre": "Les signalements reçus",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Signalement",
+      "Lieu"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Une prothèse de genou se brise après quatre mois",
+       "Clinique de Saint-Rivage"
+      ],
+      [
+       "Une réaction grave survient après une transfusion",
+       "Hôpital de Valmont"
+      ],
+      [
+       "Plusieurs personnes sont intoxiquées par un produit ménager",
+       "Résidence des Lilas"
+      ],
+      [
+       "Une patiente fait une allergie sévère à un traitement",
+       "Cabinet médical de Val-Clair"
+      ],
+      [
+       "Un sirop contre la toux est détourné et utilisé en abus",
+       "Lycée d’Hauterive"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sig",
+     "enonce": "Touche le signalement qui relève de l’hémovigilance.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "L’hémovigilance surveille le sang et les transfusions.",
+     "explication": "Une réaction après une **transfusion** relève de l’**hémovigilance**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque maladie : à déclaration obligatoire ou non ?",
+     "categories": [
+      "À déclaration obligatoire",
+      "Non soumise à déclaration"
+     ],
+     "items": [
+      [
+       "La rougeole",
+       0
+      ],
+      [
+       "La tuberculose",
+       0
+      ],
+      [
+       "La légionellose",
+       0
+      ],
+      [
+       "Le rhume",
+       1
+      ],
+      [
+       "Une otite",
+       1
+      ],
+      [
+       "Une verrue",
+       1
+      ]
+     ],
+     "aide": "Ce sont des maladies graves ou contagieuses qui menacent la collectivité.",
+     "explication": "Rougeole, tuberculose et légionellose sont à **déclaration obligatoire** ; le rhume, l’otite et la verrue ne le sont pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la déclaration d’une légionellose.",
+     "items": [
+      "Un médecin diagnostique une légionellose",
+      "Il la signale sans délai à l’ARS",
+      "Il notifie le cas de façon anonymisée à Santé publique France",
+      "Les données servent à suivre l’évolution au niveau national"
+     ],
+     "aide": "Le signalement à l’ARS vient avant la notification.",
+     "explication": "Le médecin **signale** à l’ARS puis **notifie** de façon anonymisée à Santé publique France."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c7b6c5e-90fe-5bf0-ae5b-5f693e3a0194",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Légionellose à Saint-Rivage",
+   "competence": "raisonner",
+   "situation": "Des cas de légionellose apparaissent dans un quartier imaginaire. Un article raconte la réaction de l’agence, un graphique donne le nombre de cas par semaine.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Alerte dans le quartier du Port",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "À Saint-Rivage, ville imaginaire, quatre cas de légionellose sont signalés à l’agence régionale de santé en semaine 29, tous chez des habitants du même quartier. Les analyses sont en cours, mais l’agence, sans attendre leurs résultats définitifs, fait arrêter et désinfecter une tour aéroréfrigérante voisine, source possible de contamination."
+     ]
+    },
+    {
+     "id": "cas",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Cas de légionellose déclarés par semaine",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S31",
+      "S32"
+     ],
+     "series": [
+      {
+       "nom": "Cas",
+       "valeurs": [
+        1,
+        2,
+        4,
+        8,
+        5,
+        2
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de cas",
+      "unite": "cas",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Semaine"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche la semaine où le nombre de cas est le plus élevé.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le pic est en **semaine 30** : 8 cas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel nombre le nombre de cas a-t-il été multiplié entre la semaine 28 et la semaine 30 ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise le nombre de cas de S30 par celui de S28.",
+     "explication": "8 ÷ 2 = **4** : le coefficient multiplicateur est 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel principe justifie l’arrêt de la tour sans attendre les résultats définitifs ?",
+     "options": [
+      "Le principe de traçabilité : suivre chaque lot de produit de sa fabrication à sa vente",
+      "Le principe de transparence : publier chaque semaine tous les résultats d’analyses",
+      "Le principe de précaution : agir face à un risque grave même sans certitude scientifique",
+      "Le principe de gratuité : ne faire payer aucun soin aux habitants du quartier"
+     ],
+     "reponse": 2,
+     "aide": "L’agence agit avant d’être certaine.",
+     "explication": "C’est la **précaution** : on agit face à un risque grave sans attendre la certitude."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % le nombre de cas a-t-il baissé entre la semaine 30 et la semaine 31 ? Donne un nombre positif.",
+     "reponse": 37.5,
+     "unite": "%",
+     "aide": "Calcule (8 − 5) ÷ 8 × 100.",
+     "explication": "(8 − 5) ÷ 8 × 100 = **37,5 %** de baisse.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure relève de la prévention et non de la veille ?",
+     "options": [
+      "Déclarer chaque nouveau cas à l’agence régionale de santé",
+      "Suivre le nombre de cas semaine après semaine",
+      "Alerter les autorités sanitaires d’un groupe de cas",
+      "Nettoyer et désinfecter régulièrement les tours aéroréfrigérantes"
+     ],
+     "reponse": 3,
+     "aide": "La veille détecte et alerte ; la prévention agit sur les causes.",
+     "explication": "La veille **détecte et alerte** ; la **prévention** agit sur les causes, ici en désinfectant les tours."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+{
+  "niveau": "Tle",
+  "matiere": "chimie-biologie-physiopathologie",
+  "sujets": [
+    {
+      "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+      "difficulte": 1,
+      "titre": "Le coussin gonflable de la voiture d'Inès",
+      "consigne": "Réponds à chaque question en écrivant la formule littérale avant de remplacer par les valeurs, et donne chaque résultat avec son unité.",
+      "enonce": "**Situation.** Le générateur de gaz d'un ancien modèle d'airbag contient **65 g d'azoture de sodium** NaN₃. Lors d'un choc, il se décompose selon l'équation :\n\n> 2 NaN₃ → 2 Na + 3 N₂\n\n**Données** : M(NaN₃) = 65 g/mol ; volume molaire d'un gaz Vm = 24 L/mol à 20 °C sous la pression atmosphérique.\n\n1. Calcule la quantité de matière d'azoture de sodium contenue dans le générateur.\n2. En utilisant les coefficients de l'équation, déduis-en la quantité de matière de diazote N₂ libérée.\n3. Calcule le volume de diazote obtenu à 20 °C et commente l'ordre de grandeur de ce résultat.",
+      "bareme": [
+        { "critere": "n(NaN₃) = m ÷ M = 65 ÷ 65 = 1,0 mol, formule écrite et unité donnée", "points": 6 },
+        { "critere": "Proportions de l'équation utilisées : n(N₂) = 3/2 × n(NaN₃) = 1,5 mol", "points": 7 },
+        { "critere": "V = n × Vm = 1,5 × 24 = 36 L, avec un commentaire sur la vraisemblance du volume", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. n(NaN₃) = m ÷ M = 65 ÷ 65 = **1,0 mol**.\n2. D'après l'équation, **2 mol** de NaN₃ donnent **3 mol** de N₂ : n(N₂) = n(NaN₃) × 3 ÷ 2 = 1,0 × 3 ÷ 2 = **1,5 mol**.\n3. V(N₂) = n × Vm = 1,5 × 24 = **36 L**. C'est un volume de l'ordre de quelques dizaines de litres, cohérent avec la taille d'un coussin gonflable : le résultat est plausible (un résultat de 36 000 L ou de 0,036 L signalerait une erreur).\n\nOn accepte 36 L obtenus en une seule ligne à condition que le passage par les proportions de l'équation (3/2) apparaisse."
+    },
+    {
+      "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+      "difficulte": 2,
+      "titre": "Contrôle d'alcoolémie au bord de la route",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque réponse par le cours et par un calcul lorsque c'est demandé.",
+      "enonce": "**Situation.** Hugo a son permis depuis un an : il est **jeune conducteur**. Lors d'un contrôle, un gendarme lui fait souffler dans un éthylotest chimique, puis dans un éthylomètre.\n\n**Document 1 – Les deux couples mis en jeu**\n\n| Le couple | La demi-équation |\n| Cr₂O₇²⁻ / Cr³⁺ | Cr₂O₇²⁻ + 14 H⁺ + 6 e⁻ = 2 Cr³⁺ + 7 H₂O |\n| CH₃COOH / C₂H₅OH | CH₃COOH + 4 H⁺ + 4 e⁻ = C₂H₅OH + H₂O |\n\n**Document 2 – La réglementation** : 0,5 g d'alcool par litre de sang correspond à 0,25 mg par litre d'air expiré (les deux grandeurs sont proportionnelles). Seuil légal : 0,5 g/L de sang, ramené à 0,2 g/L de sang pour les jeunes conducteurs.\n\n1. Dans l'éthylotest, la zone passe de l'orange au vert. Quelle espèce est oxydée, quelle espèce est réduite ? Justifie par la couleur observée.\n2. À partir du document 1, écris l'équation de la réaction entre les ions dichromate et l'éthanol, en expliquant comment tu égalises les électrons.\n3. L'éthylomètre indique **0,15 mg/L d'air expiré**. Convertis cette valeur en g/L de sang et dis si Hugo est en infraction. Le serait-il s'il était conducteur expérimenté ?",
+      "bareme": [
+        { "critere": "Éthanol oxydé en acide éthanoïque, ions dichromate (orange) réduits en ions chrome III (verts)", "points": 5 },
+        { "critere": "Électrons égalisés (12 = 2 × 6 = 3 × 4) et équation bilan juste et équilibrée", "points": 7 },
+        { "critere": "Conversion 0,15 mg/L d'air → 0,30 g/L de sang par proportionnalité", "points": 4 },
+        { "critere": "Comparaison aux deux seuils : infraction pour Hugo (0,30 > 0,2), pas pour un conducteur expérimenté (0,30 < 0,5)", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L'**éthanol** C₂H₅OH est **oxydé** en acide éthanoïque CH₃COOH (il perd des électrons) ; les ions **dichromate** Cr₂O₇²⁻, orange, sont **réduits** en ions chrome III Cr³⁺, verts. Le passage de l'orange au vert montre que les ions dichromate ont été transformés : de l'alcool était présent dans l'air expiré.\n2. Le dichromate capte 6 e⁻, l'éthanol en cède 4. Le plus petit multiple commun est **12** : on multiplie la demi-équation du dichromate par 2 et celle de l'éthanol par 3 (12 = 2 × 6 = 3 × 4). En additionnant (sens dichromate → Cr³⁺, sens éthanol → acide) et en simplifiant les H⁺ et H₂O :\n\n2 Cr₂O₇²⁻ + 16 H⁺ + 3 C₂H₅OH → 4 Cr³⁺ + 11 H₂O + 3 CH₃COOH\n\nVérification : H : 16 + 18 = 34 à gauche, 22 + 12 = 34 à droite ; charges : −4 + 16 = +12 à gauche, 4 × 3 = +12 à droite.\n3. 0,25 mg/L d'air ↔ 0,5 g/L de sang, donc on multiplie par 2 : 0,15 mg/L d'air ↔ 0,15 × 2 = **0,30 g/L de sang**.\n- Hugo est jeune conducteur : 0,30 g/L > 0,2 g/L, il est **en infraction**.\n- Un conducteur expérimenté avec la même valeur ne le serait pas : 0,30 g/L < 0,5 g/L."
+    },
+    {
+      "chapitre": "0ad50bc5-e1af-5ffd-a692-3490df7f87f1",
+      "difficulte": 3,
+      "titre": "Le frigo de la colocation",
+      "consigne": "Exploite les documents, fais les calculs demandés en écrivant les formules, puis argumente en t'appuyant sur les notions du cours.",
+      "enonce": "**Situation.** Dans une colocation d'étudiants, Camille fait le tri dans la cuisine.\n\n**Document 1 – Deux laits dosés en travaux pratiques**\n\n| Le lait | Acide lactique dosé |\n| Lait A (ouvert hier) | 1,6 g/L |\n| Lait B (ouvert il y a dix jours, laissé hors du frigo) | 2,4 g/L |\n\n**Document 2 – Un beurre oublié** : laissé plusieurs jours sur la table, le beurre a pris une odeur forte et désagréable.\n\n**Document 3 – Une boisson** : elle contient **150 mg/L** d'acide benzoïque (E210). La DJA de cet additif est de **5 mg/kg/jour**.\n\n1. Exprime l'acidité de chaque lait en degrés Dornic. Lequel est frais ? Explique, au niveau chimique et biologique, ce qui arrive au lait B et pourquoi il finit par cailler.\n2. Nomme la transformation subie par le beurre, décris-la et cite ses facteurs. Propose un procédé de conservation adapté et dis s'il est physique ou chimique.\n3. À quelle famille d'additifs appartient E210 ? Définis la DJA.\n4. Calcule le volume maximal de cette boisson que peuvent boire chaque jour, sans dépasser la DJA, le petit frère de Camille (20 kg) et Camille (70 kg). Commente.",
+      "bareme": [
+        { "critere": "Lait A : 16 °D (frais, 15 à 18 °D) ; lait B : 24 °D, trop acide", "points": 4 },
+        { "critere": "Caillage expliqué : bactéries, lactose transformé en acide lactique, acidité qui fait coaguler les protéines", "points": 4 },
+        { "critere": "Rancissement hydrolytique : hydrolyse des triglycérides, facteurs, procédé physique proposé (froid)", "points": 4 },
+        { "critere": "E210 classé comme conservateur et DJA définie (additif, chaque jour, toute la vie, en mg/kg/jour)", "points": 3 },
+        { "critere": "Doses maximales 100 mg et 350 mg, volumes 0,67 L et 2,3 L, commentaire sur le rôle de la masse", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. 1 °D correspond à 0,1 g d'acide lactique par litre.\n- Lait A : 1,6 ÷ 0,1 = **16 °D** : entre 15 et 18 °D, il est **frais**.\n- Lait B : 2,4 ÷ 0,1 = **24 °D** : trop acide, il n'est plus frais.\nDans le lait B, des **bactéries** (micro-organismes) se sont multipliées, favorisées par la température ambiante ; elles transforment le **lactose** en **acide lactique**. L'acidité augmente, et elle fait **coaguler les protéines** du lait : il caille.\n2. C'est le **rancissement hydrolytique** : l'**hydrolyse des triglycérides** du beurre libère des acides gras à l'odeur forte. Facteurs : **eau, enzymes, micro-organismes** (et la chaleur de la pièce qui les favorise). Procédé proposé : conserver le beurre au **réfrigérateur** (froid), procédé **physique** ; l'emballage limite aussi les contaminations.\n3. Les additifs E200 à E299 sont des **conservateurs** : E210 en est un. La **DJA** est la quantité d'une substance ajoutée volontairement (additif) que l'on peut ingérer **chaque jour, toute sa vie, sans risque appréciable** ; elle s'exprime en mg par kg de masse corporelle et par jour.\n4. Dose maximale = DJA × masse.\n- Frère : 5 × 20 = **100 mg** par jour ; volume = 100 ÷ 150 ≈ **0,67 L**.\n- Camille : 5 × 70 = **350 mg** par jour ; volume = 350 ÷ 150 ≈ **2,3 L**.\nLa DJA dépend de la **masse** : l'enfant l'atteint avec un volume trois à quatre fois plus petit. Une seule bouteille de 50 cL représente déjà les trois quarts de sa dose maximale, alors que pour un adulte le risque est faible à consommation normale."
+    },
+    {
+      "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+      "difficulte": 1,
+      "titre": "Trois eaux sur la paillasse",
+      "consigne": "Réponds à chaque question par quelques phrases précises, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Sur la paillasse de Yanis, trois flacons non étiquetés : de l'**eau distillée**, de l'**eau minérale** et de l'**eau de mer**. Il dispose d'un conductimètre et de chlorure de sodium NaCl solide.\n\n1. Explique pourquoi le chlorure de sodium se dissout bien dans l'eau. Utilise les mots « polaire » et « hydratés », et écris l'équation de dissolution.\n2. Yanis mesure trois conductivités : quasi nulle, moyenne, très élevée. Attribue chaque valeur à l'une des trois eaux, en justifiant.\n3. Pourquoi est-il dangereux d'utiliser un appareil électrique près de l'eau du robinet ?",
+      "bareme": [
+        { "critere": "Molécule d'eau polaire (charges partielles), ions attirés, détachés et hydratés ; équation NaCl(s) → Na⁺(aq) + Cl⁻(aq)", "points": 8 },
+        { "critere": "Attribution justifiée par la quantité d'ions : distillée quasi nulle, minérale moyenne, mer très élevée", "points": 8 },
+        { "critere": "Eau chargée en ions donc conductrice du courant", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La molécule d'eau est **polaire** : l'oxygène, plus électronégatif, porte une charge partielle négative, les hydrogènes une charge partielle positive. Les ions du cristal sont attirés par ces pôles (Na⁺ par l'oxygène, Cl⁻ par les hydrogènes), se détachent et s'entourent de molécules d'eau : ils sont **hydratés**.\nNaCl(s) → Na⁺(aq) + Cl⁻(aq)\n2. Une solution conduit le courant grâce à ses **ions** ; la conductivité augmente avec leur concentration.\n- **Quasi nulle** : eau **distillée** (débarrassée des ions).\n- **Moyenne** : eau **minérale** (ions calcium, magnésium, hydrogénocarbonate…).\n- **Très élevée** : eau **de mer** (beaucoup d'ions sodium et chlorure).\n3. L'eau du robinet contient des **ions mobiles** : elle **conduit le courant**. Au contact d'un appareil électrique, elle peut faire passer le courant à travers le corps : risque d'électrocution."
+    },
+    {
+      "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+      "difficulte": 2,
+      "titre": "La bouteille d'oxygène de M. Garnier",
+      "consigne": "Convertis les unités avant de calculer, écris la formule littérale, puis donne les résultats avec leur unité.",
+      "enonce": "**Situation.** M. Garnier, insuffisant respiratoire, utilise à domicile une bouteille d'oxygène médical de **10 L** remplie à **150 bar**, à la température de **20 °C**. Son médecin lui a prescrit un débit de **3 L de dioxygène par minute** (volume mesuré à la pression atmosphérique).\n\n**Données** : 1 bar = 10⁵ Pa ; R = 8,314 J/(mol·K) ; T(K) = θ(°C) + 273 ; Vm = 24 L/mol à 20 °C sous la pression atmosphérique.\n\n1. Convertis la pression, le volume et la température dans les unités de la loi du gaz parfait.\n2. Calcule la quantité de matière de dioxygène contenue dans la bouteille.\n3. Quel volume ce dioxygène occuperait-il à la pression atmosphérique ? Pendant combien de temps environ la bouteille permet-elle de respirer au débit prescrit ?\n4. L'air ambiant contient environ 21 % de dioxygène. Pourquoi une bouteille d'oxygène médical est-elle utile à ce patient ?",
+      "bareme": [
+        { "critere": "Conversions justes : P = 1,5 × 10⁷ Pa, V = 1,0 × 10⁻² m³, T = 293 K", "points": 5 },
+        { "critere": "n = P × V ÷ (R × T) ≈ 62 mol, formule écrite", "points": 6 },
+        { "critere": "V ≈ 1,5 × 10³ L puis durée ≈ 490 min, soit environ 8 h", "points": 6 },
+        { "critere": "Explication : dioxygène pur contre 21 % dans l'air, apport enrichi pour un patient qui en manque", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. P = 150 × 10⁵ = **1,5 × 10⁷ Pa** ; V = 10 L = **1,0 × 10⁻² m³** ; T = 20 + 273 = **293 K**.\n2. P × V = n × R × T, donc n = P × V ÷ (R × T) = (1,5 × 10⁷ × 1,0 × 10⁻²) ÷ (8,314 × 293) = 1,5 × 10⁵ ÷ 2 436 ≈ **62 mol** de dioxygène.\n3. V = n × Vm = 61,6 × 24 ≈ **1,5 × 10³ L** (environ 1 480 L).\nDurée = 1 480 ÷ 3 ≈ **490 minutes**, soit **environ 8 heures**.\nL'ordre de grandeur est cohérent : une bouteille de ce type sert quelques heures, il faut prévoir son remplacement.\n4. L'air ne contient qu'environ **21 %** de dioxygène (fraction molaire). La bouteille délivre du **dioxygène pur** : mélangé à l'air inspiré, il enrichit l'apport d'oxygène d'un patient dont les poumons n'en fournissent plus assez au sang."
+    },
+    {
+      "chapitre": "73bdb32f-66d2-5e98-a373-2e9b4ee5b9aa",
+      "difficulte": 3,
+      "titre": "L'eau du puits de la ferme des Lemaire",
+      "consigne": "Exploite les documents, fais les calculs en écrivant les formules, puis rédige une conclusion argumentée sur la potabilité de cette eau et son traitement.",
+      "enonce": "**Situation.** La famille Lemaire veut savoir si l'eau de son puits peut être bue. Un laboratoire l'analyse.\n\n**Document 1 – Dosage conductimétrique des ions sulfate.** On place **20,0 mL** d'eau du puits dans un bécher et on ajoute progressivement une solution de chlorure de baryum (Ba²⁺ + 2 Cl⁻) à **1,0 × 10⁻² mol/L**. Réaction : Ba²⁺ + SO₄²⁻ → BaSO₄ (précipité blanc). La courbe σ = f(V) présente deux portions de droite : presque horizontale jusqu'à **12,0 mL**, puis nettement croissante au-delà.\n\n**Document 2 – Autres résultats et limites de qualité**\n\n| Le paramètre | Le résultat | La limite |\n| Sulfates | à calculer | 250 mg/L |\n| Nitrates | 38 mg/L | 50 mg/L |\n| pH | 7,4 | entre 6,5 et 9 |\n| Un pesticide | 0,3 µg/L | 0,1 µg/L |\n\nDonnée : M(SO₄²⁻) = 96 g/mol.\n\n1. Explique l'allure de la courbe avant et après 12,0 mL. Comment repère-t-on l'équivalence et que signifie-t-elle ?\n2. Calcule la concentration en quantité de matière, puis en masse (en mg/L), des ions sulfate de l'eau du puits.\n3. Ce pesticide est-il un macropolluant ou un micropolluant ? Justifie.\n4. Conclus : l'eau est-elle potable ? Quels paramètres posent problème ? Propose un traitement adapté au pesticide et explique son principe.",
+      "bareme": [
+        { "critere": "Allure expliquée (sulfate consommé puis Ba²⁺ et Cl⁻ accumulés) et équivalence au changement de pente, réactifs dans les proportions de l'équation", "points": 5 },
+        { "critere": "n(SO₄²⁻) = n(Ba²⁺) = 1,2 × 10⁻⁴ mol ; C = 6,0 × 10⁻³ mol/L", "points": 5 },
+        { "critere": "Cm = C × M ≈ 0,58 g/L soit environ 580 mg/L", "points": 3 },
+        { "critere": "Pesticide classé micropolluant (actif à très faible concentration)", "points": 2 },
+        { "critere": "Conclusion : non potable (sulfates et pesticide au-dessus des limites), adsorption sur charbon actif expliquée", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Avant 12,0 mL**, les ions sulfate disparaissent au fur et à mesure (ils précipitent avec les ions baryum ajoutés) : σ varie peu. **Après 12,0 mL**, il n'y a plus de sulfate : les ions baryum et chlorure ajoutés s'accumulent, σ augmente nettement. L'**équivalence** se lit au **changement de pente**, ici à **V = 12,0 mL** : les réactifs ont alors été introduits dans les **proportions de l'équation** (1 Ba²⁺ pour 1 SO₄²⁻).\n2. À l'équivalence : n(SO₄²⁻) = n(Ba²⁺) = C × V = 1,0 × 10⁻² × 12,0 × 10⁻³ = **1,2 × 10⁻⁴ mol**.\nC(SO₄²⁻) = n ÷ V = 1,2 × 10⁻⁴ ÷ 20,0 × 10⁻³ = **6,0 × 10⁻³ mol/L**.\nCm = C × M = 6,0 × 10⁻³ × 96 ≈ **0,58 g/L**, soit environ **580 mg/L**.\n3. Le pesticide est un **micropolluant** : il est présent et actif à **très faible concentration** (quelques dixièmes de microgramme par litre), comme les pesticides, médicaments ou métaux lourds.\n4. Nitrates (38 < 50 mg/L) et pH (7,4, entre 6,5 et 9) respectent les critères. Mais les **sulfates** (environ 580 mg/L, plus du double de 250 mg/L) et le **pesticide** (0,3 µg/L, trois fois la limite) les dépassent : l'eau **n'est pas potable** en l'état (et il faudrait aussi des analyses microbiologiques). Pour le pesticide : **adsorption sur charbon actif**, dont la surface immense retient les molécules à sa surface (l'oxydation par l'ozone est aussi possible)."
+    },
+    {
+      "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+      "difficulte": 1,
+      "titre": "L'échographie de la cheville de Malik",
+      "consigne": "Réponds à chaque question en justifiant ; écris la formule avant de remplacer par les valeurs.",
+      "enonce": "**Situation.** Malik s'est fait une entorse. Le médecin réalise une échographie de sa cheville.\n\n**Données** : vitesse des ultrasons dans les tissus mous v = 1 540 m/s ; 1 µs = 10⁻⁶ s.\n\n1. Les ultrasons sont-ils des ondes mécaniques ou électromagnétiques ? Donne une conséquence sur leur propagation.\n2. Un écho revient à la sonde **65 µs** après l'émission. Calcule la profondeur de l'interface qui l'a renvoyé, en expliquant la division par 2.\n3. Le médecin hésite ensuite avec une IRM. Explique pourquoi l'IRM, comme l'échographie, n'expose pas le patient à une irradiation.",
+      "bareme": [
+        { "critere": "Onde mécanique, qui a besoin d'un milieu matériel (ne se propage pas dans le vide)", "points": 5 },
+        { "critere": "d = v × Δt ÷ 2 = 1 540 × 65 × 10⁻⁶ ÷ 2 ≈ 5,0 × 10⁻² m, division par 2 expliquée par l'aller-retour", "points": 10 },
+        { "critere": "IRM : champ magnétique et radiofréquences sur les noyaux d'hydrogène, aucun rayonnement ionisant", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les ultrasons sont des ondes **mécaniques** (fréquence supérieure à 20 kHz) : elles ont **besoin d'un milieu matériel** pour se propager et ne se propagent pas dans le vide ; dans les tissus mous, leur vitesse est d'environ 1 540 m/s.\n2. L'onde fait un **aller et retour** entre la sonde et l'interface : la distance parcourue vaut 2d.\nd = v × Δt ÷ 2 = 1 540 × 65 × 10⁻⁶ ÷ 2 ≈ **5,0 × 10⁻² m**, soit **5,0 cm**.\n3. L'**IRM** utilise un **champ magnétique** et des **radiofréquences** qui agissent sur les noyaux d'hydrogène de l'eau des tissus : elle n'utilise ni rayons X ni radioactivité, donc **aucune irradiation** du patient. L'échographie utilise des ultrasons, ondes mécaniques, elle non plus n'est pas irradiante."
+    },
+    {
+      "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+      "difficulte": 2,
+      "titre": "La scintigraphie osseuse de Mme Duval",
+      "consigne": "Réponds en écrivant tes calculs et en justifiant avec les notions du cours.",
+      "enonce": "**Situation.** Mme Duval, 60 kg, passe une scintigraphie osseuse. On lui injecte à **8 h** du technétium 99m, émetteur **γ** de période **T = 6 h**, à raison de **10 MBq par kg** de masse corporelle.\n\n1. Calcule l'activité injectée à Mme Duval. Que représente un becquerel ?\n2. Définis la période d'un radio-isotope. Quelle sera l'activité du technétium restant à **20 h** le même jour, puis à **8 h le lendemain** ?\n3. Quelle est la nature du rayonnement γ ? Pourquoi est-il adapté à une image prise par une caméra placée à l'extérieur du corps ?\n4. Cite trois précautions que doit prendre le manipulateur en radiologie qui prépare et injecte la dose.",
+      "bareme": [
+        { "critere": "Activité injectée : 10 × 60 = 600 MBq ; Bq = une désintégration par seconde", "points": 4 },
+        { "critere": "Période définie ; 150 MBq à 20 h (2 périodes) et 37,5 MBq le lendemain à 8 h (4 périodes, 1/16)", "points": 8 },
+        { "critere": "γ = photon très énergétique, qui sort du corps et atteint le détecteur", "points": 4 },
+        { "critere": "Trois précautions justes (durée, distance, écran de plomb, dosimètre, gestion des déchets)", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Activité injectée = 10 MBq/kg × 60 kg = **600 MBq**. Le becquerel (Bq) correspond à **une désintégration par seconde** : 600 MBq = 6,00 × 10⁸ désintégrations par seconde.\n2. La **période** (demi-vie) est la durée au bout de laquelle **la moitié** des noyaux radioactifs s'est désintégrée.\n- À 20 h : 12 h = **2 périodes**, il reste 600 ÷ 2² = **150 MBq**.\n- Le lendemain à 8 h : 24 h = **4 périodes**, il reste 600 ÷ 2⁴ = 600 ÷ 16 = **37,5 MBq**, soit 1/16 de l'activité initiale.\n3. Le rayonnement γ est constitué de **photons très énergétiques** : il traverse les tissus et **sort du corps**, ce qui permet à la caméra placée à l'extérieur de localiser l'endroit où le traceur s'est fixé (ici les os).\n4. Précautions : **limiter la durée** d'exposition, **augmenter la distance** à la source, utiliser des **écrans de plomb** (protège-seringue), porter un **dosimètre**, signaler la zone (trèfle), gérer les **déchets** et les urines de la patiente."
+    },
+    {
+      "chapitre": "e48e856a-120e-5736-bd4d-c1ae69d14a21",
+      "difficulte": 3,
+      "titre": "Trois examens pour un même patient",
+      "consigne": "Exploite les données, fais les calculs demandés, puis argumente le choix de chaque technique en t'appuyant sur le cours.",
+      "enonce": "**Situation.** M. Benali, 58 ans, consulte après une chute. Son dossier réunit trois examens.\n\n**Examen 1 – Radiographie du poignet.** Le générateur émet un rayonnement de fréquence f = 3,0 × 10¹⁷ Hz. Sur le cliché, l'os apparaît blanc et un trait noir le traverse.\n\n**Examen 2 – Échographie Doppler du cou.** Dans une artère carotide, l'onde réfléchie par le sang revient avec une fréquence plus élevée qu'à l'émission, et la vitesse du sang est nettement plus grande à un endroit précis de l'artère.\n\n**Examen 3 – TEP (tomographie par émission de positons).** On lui injecte à 9 h 00 une molécule proche du glucose marquée au **fluor 18** (émetteur β⁺, T ≈ 110 min), d'activité **280 MBq**.\n\n**Donnée** : c = 3,00 × 10⁸ m/s.\n\n1. Calcule la longueur d'onde du rayonnement de l'examen 1 et vérifie qu'il s'agit de rayons X. Pourquoi l'os apparaît-il blanc ? Que peut signifier le trait noir ?\n2. Qu'indique la fréquence plus élevée de l'onde réfléchie à l'examen 2 ? Que suggère l'accélération locale du sang ?\n3. Quelle particule émet le fluor 18 ? Pourquoi les cellules cancéreuses « s'allument »-elles en TEP ? Quelle activité reste-t-il à 14 h 30 ?\n4. Parmi ces trois examens, lesquels exposent le patient à un rayonnement ionisant ? Justifie.",
+      "bareme": [
+        { "critere": "λ = c ÷ f = 1,0 × 10⁻⁹ m = 1 nm, compris entre 0,01 et 10 nm : rayons X", "points": 4 },
+        { "critere": "Os blanc : forte absorption (calcium Z = 20, tissu dense) ; trait noir = rayons non absorbés, fracture possible", "points": 4 },
+        { "critere": "Doppler : sang qui s'approche de la sonde ; accélération locale = rétrécissement de l'artère", "points": 4 },
+        { "critere": "β⁺ = positon ; cellules cancéreuses grandes consommatrices de glucose ; 330 min = 3 périodes, 35 MBq", "points": 5 },
+        { "critere": "Radiographie et TEP ionisantes, échographie Doppler non ionisante (ultrasons, ondes mécaniques)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. λ = c ÷ f = 3,00 × 10⁸ ÷ 3,0 × 10¹⁷ = **1,0 × 10⁻⁹ m = 1,0 nm**. Cette valeur est comprise entre 0,01 et 10 nm : ce sont bien des **rayons X**.\nL'os est riche en **calcium** (Z = 20) et en phosphore, et c'est un tissu dense : il **absorbe fortement** les rayons X, qui n'atteignent pas le détecteur : il apparaît **blanc**. Le trait noir est une zone où les rayons ont traversé sans être absorbés : l'os est interrompu, ce qui évoque une **fracture**.\n2. Par effet Doppler, l'onde réfléchie par une cible en mouvement change de fréquence ; une fréquence **plus élevée** signifie que le sang **s'approche** de la sonde. Une vitesse du sang nettement plus grande à un endroit précis indique que le sang **accélère** : cela révèle un **rétrécissement de l'artère** à cet endroit.\n3. Le fluor 18 est émetteur **β⁺** : il émet un **positon** (antiparticule de l'électron). Il est fixé sur une molécule proche du glucose ; les cellules cancéreuses, **grandes consommatrices de glucose**, captent davantage le traceur et apparaissent plus intensément.\nDe 9 h 00 à 14 h 30 : 330 min = 3 × 110 min = **3 périodes**. Activité restante = 280 ÷ 2³ = 280 ÷ 8 = **35 MBq**.\n4. La **radiographie** (rayons X) et la **TEP** (radioactivité) exposent à des **rayonnements ionisants**. L'**échographie Doppler** utilise des ultrasons, ondes **mécaniques** : elle n'irradie pas. Les doses de la radiographie diagnostique et de la médecine nucléaire diagnostique restent faibles, mais on les justifie par le bénéfice attendu."
+    },
+    {
+      "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+      "difficulte": 1,
+      "titre": "Préparer du sérum physiologique",
+      "consigne": "Réponds à chaque question en écrivant les formules et en citant le matériel précis.",
+      "enonce": "**Situation.** En travaux pratiques, Salomé doit préparer **250,0 mL** de sérum physiologique, une solution de chlorure de sodium NaCl à **9,0 g/L**.\n\n**Donnée** : M(NaCl) = 58,5 g/mol.\n\n1. Écris l'équation de dissolution du chlorure de sodium dans l'eau.\n2. Calcule la masse de chlorure de sodium à peser, puis décris le protocole de préparation (matériel et gestes).\n3. Calcule la concentration en quantité de matière de cette solution.",
+      "bareme": [
+        { "critere": "Équation NaCl(s) → Na⁺(aq) + Cl⁻(aq)", "points": 4 },
+        { "critere": "m = Cm × V = 2,25 g et protocole : pesée, fiole jaugée de 250 mL, dissolution, trait de jauge, agitation", "points": 10 },
+        { "critere": "C = Cm ÷ M ≈ 0,15 mol/L", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. NaCl(s) → Na⁺(aq) + Cl⁻(aq) : le chlorure de sodium est un soluté **ionique**.\n2. m = Cm × V = 9,0 × 0,2500 = **2,25 g** (environ 2,3 g).\nProtocole : peser 2,25 g de NaCl dans une coupelle sur une balance ; l'introduire dans une **fiole jaugée de 250,0 mL** à l'aide d'un entonnoir, en rinçant la coupelle avec de l'eau distillée ; remplir la fiole aux trois quarts, **agiter** pour dissoudre ; **compléter au trait de jauge** avec de l'eau distillée ; boucher et agiter pour homogénéiser.\n3. Cm = C × M, donc C = Cm ÷ M = 9,0 ÷ 58,5 ≈ **0,15 mol/L**."
+    },
+    {
+      "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+      "difficulte": 2,
+      "titre": "La glycémie de Mme Roche",
+      "consigne": "Exploite le tableau de mesures, écris tes calculs et conclus en comparant aux valeurs de référence.",
+      "enonce": "**Situation.** Au laboratoire, on dose le glucose du plasma de Mme Roche, prélevé à jeun. Le glucose étant incolore, on le fait d'abord réagir avec des enzymes qui produisent une espèce colorée en quantité proportionnelle. On mesure ensuite des absorbances au spectrophotomètre.\n\n**Document – Gamme étalon**\n\n| C (mmol/L) | 0 | 2,0 | 4,0 | 6,0 | 8,0 |\n| A | 0 | 0,12 | 0,24 | 0,36 | 0,48 |\n\nL'échantillon de Mme Roche, traité de la même façon, donne **A = 0,33**.\n\n**Données** : M(glucose) = 180 g/mol ; glycémie à jeun de référence : 0,70 à 1,10 g/L.\n\n1. À quelle longueur d'onde règle-t-on le spectrophotomètre ? Pourquoi fait-on réagir le glucose avant la mesure ?\n2. Montre que les mesures vérifient la loi de Beer-Lambert et détermine le coefficient k.\n3. Déduis-en la glycémie de Mme Roche en mmol/L, puis en g/L. Est-elle dans les valeurs de référence ?",
+      "bareme": [
+        { "critere": "Longueur d'onde du maximum d'absorbance ; glucose incolore transformé en espèce colorée proportionnelle", "points": 5 },
+        { "critere": "A proportionnelle à C (droite par l'origine, rapport constant), k = 0,060 L/mmol", "points": 6 },
+        { "critere": "C = A ÷ k = 5,5 mmol/L, puis Cm = C × M ≈ 0,99 g/L", "points": 6 },
+        { "critere": "Conclusion : glycémie normale (entre 0,70 et 1,10 g/L)", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On règle le spectrophotomètre à la longueur d'onde où l'**absorbance est maximale** pour l'espèce colorée. Le glucose est **incolore** : il n'absorbe pas dans le visible ; la réaction enzymatique produit une espèce **colorée** en quantité **proportionnelle** au glucose, que l'on peut doser.\n2. A ÷ C vaut toujours 0,12 ÷ 2,0 = 0,24 ÷ 4,0 = 0,36 ÷ 6,0 = 0,48 ÷ 8,0 = **0,060 L/mmol**, et A = 0 pour C = 0 : les points sont alignés sur une droite passant par l'origine. L'absorbance est **proportionnelle** à la concentration : A = k × C avec **k = 0,060 L/mmol** (loi de Beer-Lambert).\n3. C = A ÷ k = 0,33 ÷ 0,060 = **5,5 mmol/L** (lecture possible sur la droite).\nCm = C × M = 5,5 × 10⁻³ mol/L × 180 g/mol ≈ **0,99 g/L**.\n0,70 ≤ 0,99 ≤ 1,10 g/L : la glycémie à jeun de Mme Roche est **dans les valeurs de référence**."
+    },
+    {
+      "chapitre": "7db92b49-bd5f-5849-965b-ae0598746b0a",
+      "difficulte": 3,
+      "titre": "Un ionogramme et une ampoule de chlorure de calcium",
+      "consigne": "Fais les calculs en écrivant les formules et les unités, puis interprète les résultats en restant prudent comme le serait un biologiste.",
+      "enonce": "**Situation.** M. Faure, 82 ans, est hospitalisé. Sa prise de sang est rendue par un ancien automate qui exprime les ions en **g/L**.\n\n**Document 1 – Résultats**\n\n| L'ion | Le résultat |\n| Na⁺ | 3,6 g/L |\n| K⁺ | 0,16 g/L |\n\n**Document 2 – Valeurs de référence** : natrémie 135 à 145 mmol/L ; kaliémie 3,5 à 5,0 mmol/L.\n\n**Document 3 – Une ampoule injectable** de 10 mL de chlorure de calcium CaCl₂ à **100 g/L**. Le médecin prescrit l'injection de **0,50 g** de CaCl₂.\n\n**Données** : M(Na) = 23 g/mol ; M(K) = 39,1 g/mol ; M(CaCl₂) = 111 g/mol.\n\n1. Convertis les deux résultats en mmol/L et compare-les aux valeurs de référence.\n2. Que peut-on dire de ces résultats ? Comment doivent-ils être utilisés par le médecin ?\n3. Écris l'équation de dissolution du chlorure de calcium. Calcule la concentration en quantité de matière de l'ampoule, puis la concentration des ions chlorure.\n4. Quel volume de la solution de l'ampoule faut-il injecter pour administrer la dose prescrite ?",
+      "bareme": [
+        { "critere": "Na⁺ : 3,6 ÷ 23 ≈ 0,157 mol/L = 157 mmol/L ; K⁺ : 0,16 ÷ 39,1 ≈ 4,1 mmol/L", "points": 6 },
+        { "critere": "Natrémie au-dessus de l'intervalle, kaliémie normale ; résultat qui oriente et se confirme avec le contexte clinique", "points": 4 },
+        { "critere": "CaCl₂(s) → Ca²⁺(aq) + 2 Cl⁻(aq) ; C ≈ 0,90 mol/L et [Cl⁻] = 2 × C ≈ 1,8 mol/L", "points": 6 },
+        { "critere": "Volume à injecter : 0,50 ÷ 100 = 5,0 × 10⁻³ L = 5,0 mL", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. C = Cm ÷ M.\n- Na⁺ : 3,6 ÷ 23 ≈ 0,157 mol/L = **157 mmol/L** : supérieure à 145 mmol/L, la natrémie est **trop élevée**.\n- K⁺ : 0,16 ÷ 39,1 ≈ 0,0041 mol/L = **4,1 mmol/L** : comprise entre 3,5 et 5,0 mmol/L, la kaliémie est **normale**.\n2. Un résultat hors de l'intervalle de référence **oriente** le diagnostic mais ne le pose pas à lui seul : le médecin doit le **confirmer par d'autres examens** et le lire avec le **contexte clinique** du patient (âge, symptômes, traitements).\n3. CaCl₂(s) → Ca²⁺(aq) + 2 Cl⁻(aq).\nC = Cm ÷ M = 100 ÷ 111 ≈ **0,90 mol/L**.\nUne mole de soluté libère **deux** moles d'ions chlorure : [Cl⁻] = 2 × C ≈ **1,8 mol/L**.\n4. V = m ÷ Cm = 0,50 ÷ 100 = 5,0 × 10⁻³ L = **5,0 mL** (la moitié de l'ampoule)."
+    },
+    {
+      "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+      "difficulte": 1,
+      "titre": "L'alanine et la glycine",
+      "consigne": "Réponds à chaque question en utilisant le vocabulaire précis du cours.",
+      "enonce": "**Données** : formule générale d'un acide α-aminé H₂N–CH(R)–COOH ; pour la glycine R = H, pour l'alanine R = CH₃.\n\n1. Écris la formule semi-développée de l'alanine et entoure (ou nomme) ses deux groupes caractéristiques.\n2. Définis un carbone asymétrique. L'alanine en possède-t-elle un ? Et la glycine ? Justifie.\n3. En représentation de Fischer, avec –COOH en haut et R en bas, le groupe –NH₂ de l'alanine des protéines humaines est-il à gauche ou à droite ? Comment appelle-t-on cette forme ?",
+      "bareme": [
+        { "critere": "Formule H₂N–CH(CH₃)–COOH, groupes amine et carboxyle nommés", "points": 6 },
+        { "critere": "Définition du carbone asymétrique, alanine chirale (4 groupes différents), glycine non chirale (deux H)", "points": 8 },
+        { "critere": "–NH₂ à gauche : acide aminé L", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Alanine : **H₂N–CH(CH₃)–COOH**. Groupe **amine** –NH₂ et groupe **carboxyle** –COOH, portés par le même carbone (carbone α).\n2. Un **carbone asymétrique** est lié à **quatre groupes différents**.\n- Alanine : le carbone α porte –NH₂, –COOH, –H et –CH₃, quatre groupes différents : il est asymétrique, la molécule est **chirale** (deux énantiomères non superposables).\n- Glycine : R = H, le carbone α porte **deux atomes d'hydrogène** : il n'est pas asymétrique, la glycine **n'est pas chirale**.\n3. Les protéines humaines sont construites avec des acides aminés **L** : en Fischer, –NH₂ est **à gauche**."
+    },
+    {
+      "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+      "difficulte": 2,
+      "titre": "Des dipeptides à la protéine",
+      "consigne": "Réponds en écrivant les formules demandées et en justifiant avec le cours.",
+      "enonce": "**Situation.** En TP, Théo dispose de glycine (R = H) et d'alanine (R = CH₃), de formule générale H₂N–CH(R)–COOH.\n\n1. Écris l'équation de formation du dipeptide **Gly-Ala** (glycine en premier, son groupe –COOH réagissant avec le –NH₂ de l'alanine). Entoure ou nomme la liaison peptidique. Quel est le nom de ce type de réaction ?\n2. Théo affirme : « Avec deux acides aminés, on ne peut faire que deux dipeptides. » Corrige-le en les listant tous.\n3. Comment pourrait-il retrouver les acides aminés qui constituent un dipeptide inconnu ?\n4. Une enzyme chauffée à 80 °C ne fonctionne plus, alors que sa séquence d'acides aminés n'a pas changé. Explique en utilisant les niveaux de structure d'une protéine.",
+      "bareme": [
+        { "critere": "Équation juste : H₂N–CH₂–CO–NH–CH(CH₃)–COOH + H₂O, liaison –CO–NH– repérée, condensation", "points": 7 },
+        { "critere": "Quatre dipeptides : Gly-Gly, Gly-Ala, Ala-Gly, Ala-Ala (l'ordre compte)", "points": 4 },
+        { "critere": "Hydrolyse du peptide", "points": 3 },
+        { "critere": "Dénaturation : structure primaire conservée mais forme 3D perdue, donc site actif et fonction perdus", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. H₂N–CH₂–COOH + H₂N–CH(CH₃)–COOH → **H₂N–CH₂–CO–NH–CH(CH₃)–COOH** + H₂O\nLe groupe **–CO–NH–** est la **liaison peptidique**. C'est une **condensation** : le –COOH de la glycine réagit avec le –NH₂ de l'alanine, avec élimination d'une molécule d'eau.\n2. Théo a tort : l'**ordre compte** et chaque acide aminé peut se lier à lui-même. On obtient **quatre** dipeptides : **Gly-Gly, Gly-Ala, Ala-Gly, Ala-Ala** (Gly-Ala et Ala-Gly sont différents).\n3. Par **hydrolyse** du dipeptide : la liaison peptidique est rompue et on retrouve les acides aminés qui le constituent.\n4. La **structure primaire** (séquence des acides aminés) est intacte, mais la chaleur a détruit les repliements (structures **secondaire** et **tertiaire**) : la protéine est **dénaturée**, elle a perdu sa **forme en trois dimensions**. Or c'est cette forme qui détermine l'action : le **site actif** de l'enzyme n'existe plus, elle ne fonctionne plus."
+    },
+    {
+      "chapitre": "50aac090-2865-5418-9a00-3cfd4625ca52",
+      "difficulte": 3,
+      "titre": "Du savon avec de l'huile d'olive",
+      "consigne": "Exploite les données, fais les calculs en écrivant les formules, puis argumente sur la santé en t'appuyant sur le cours.",
+      "enonce": "**Situation.** Pour un projet, Lina fabrique du savon à partir de **trioléine**, le triglycéride formé à partir de glycérol et de trois molécules d'**acide oléique** (acide gras à une double liaison C=C, abondant dans l'huile d'olive). Elle la chauffe avec un excès de soude (Na⁺ + HO⁻).\n\n**Données** : M(trioléine) = 884 g/mol ; M(oléate de sodium, le savon) = 304 g/mol. Lina utilise **44,2 g** de trioléine et récupère **36,5 g** de savon sec.\n\n1. Qu'est-ce qu'un triglycéride ? L'acide oléique est-il saturé, mono-insaturé ou polyinsaturé ? Justifie.\n2. Écris l'équation de saponification sous forme littérale (triglycéride + soude) et nomme les produits. En quoi diffère-t-elle d'une hydrolyse ?\n3. Calcule la quantité de matière de trioléine, la quantité maximale de savon attendue, puis le rendement de Lina.\n4. Sa grand-mère lui dit : « Les huiles, c'est toutes pareil, je fais frire avec de l'huile de noix. » Rédige quelques lignes pour lui répondre en t'appuyant sur les acides gras et la santé.",
+      "bareme": [
+        { "critere": "Triglycéride = triester du glycérol et de trois acides gras ; acide oléique mono-insaturé (une double liaison)", "points": 4 },
+        { "critere": "Saponification : triglycéride + 3 (Na⁺ + HO⁻) → glycérol + 3 (R–COO⁻ + Na⁺), totale à chaud, contre hydrolyse lente et limitée", "points": 5 },
+        { "critere": "n = 0,0500 mol, n(max) = 0,150 mol de savon, n(obtenu) ≈ 0,120 mol, rendement ≈ 80 %", "points": 7 },
+        { "critere": "Argumentation : acides gras polyinsaturés dégradés à forte chaleur, huile de noix pour l'assaisonnement, intérêt des oméga 3", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Un **triglycéride** est un **triester** formé à partir du **glycérol** (un trialcool) et de **trois acides gras**. L'acide oléique possède **une seule** double liaison C=C : il est **mono-insaturé**.\n2. Triglycéride + 3 (Na⁺ + HO⁻) → **glycérol** + 3 (R–COO⁻ + Na⁺), les ions carboxylate formant le **savon**.\nLa saponification est **totale** et se fait **à chaud** avec la soude ; l'hydrolyse (triglycéride + 3 H₂O ⇌ glycérol + 3 acides gras) est **lente et limitée**, accélérée par des enzymes (lipases).\n3. n(trioléine) = m ÷ M = 44,2 ÷ 884 = **0,0500 mol**.\n1 mol de triglycéride donne au plus 3 mol de savon : n(max) = 3 × 0,0500 = **0,150 mol** (soit 0,150 × 304 = 45,6 g).\nn(obtenu) = 36,5 ÷ 304 ≈ **0,120 mol**.\nRendement = 0,120 ÷ 0,150 = **0,80**, soit **80 %** (ou 36,5 ÷ 45,6 ≈ 80 %).\n4. Les huiles ne sont pas toutes pareilles. L'huile de noix est riche en acides gras **polyinsaturés**, dont des **oméga 3** bénéfiques pour la santé ; mais ces acides gras **se dégradent à forte chaleur** : on réserve cette huile à l'**assaisonnement**, pas à la friture. Pour la santé, il faut limiter les acides gras **saturés** et **trans**, qui augmentent le « mauvais » cholestérol et le risque cardio-vasculaire, et garder un bon rapport oméga 6 / oméga 3."
+    },
+    {
+      "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+      "difficulte": 1,
+      "titre": "Vitamine C ou vitamine A ?",
+      "consigne": "Réponds à chaque question en justifiant par la structure des molécules.",
+      "enonce": "**Situation.** Nour hésite à prendre des compléments alimentaires. Elle lit que la vitamine C (acide ascorbique) est une petite molécule riche en groupes –OH, alors que la vitamine A (rétinol) possède une longue chaîne carbonée et un seul groupe –OH.\n\n1. Laquelle de ces vitamines est hydrosoluble, laquelle est liposoluble ? Justifie par leur structure.\n2. Pourquoi faut-il des apports **quotidiens** de vitamine C, alors qu'un excès de vitamine A peut être toxique ?\n3. Associe à chaque vitamine (A, C, D) la conséquence de sa carence.",
+      "bareme": [
+        { "critere": "Vitamine C hydrosoluble (nombreux –OH), vitamine A liposoluble (longue chaîne carbonée, un seul –OH)", "points": 8 },
+        { "critere": "C peu stockée, excès éliminé dans les urines ; A stockée dans le foie et les graisses, d'où la toxicité d'un excès", "points": 6 },
+        { "critere": "Scorbut (C), rachitisme (D), troubles de la vision nocturne (A)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Plus une molécule a de groupes –OH par rapport à sa chaîne carbonée, plus elle est soluble dans l'eau.\n- La **vitamine C**, petite et riche en –OH, est **hydrosoluble**.\n- La **vitamine A**, longue chaîne carbonée avec un seul –OH, est **liposoluble**.\n2. La vitamine C, hydrosoluble, est **peu stockée** : l'excès part dans les **urines**, il faut donc des apports **quotidiens**. La vitamine A, liposoluble, est **stockée** dans le foie et les graisses : elle s'accumule, et un excès peut devenir **toxique**.\n3. Carence en vitamine C → **scorbut** ; en vitamine D → **rachitisme** ; en vitamine A → **troubles de la vision nocturne**."
+    },
+    {
+      "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+      "difficulte": 2,
+      "titre": "Ce comprimé contient-il vraiment 100 mg de vitamine C ?",
+      "consigne": "Explique le principe du dosage, fais les calculs en écrivant les formules, puis conclus.",
+      "enonce": "**Situation.** La boîte d'un complément annonce « vitamine C : 100 mg par comprimé ». Gabriel vérifie.\n\n**Protocole.** Il dissout un comprimé dans de l'eau et complète à **100,0 mL** en fiole jaugée. Il prélève **10,0 mL** de cette solution, ajoute quelques gouttes d'empois d'amidon, puis verse une solution de diiode I₂ à **5,00 × 10⁻³ mol/L**. L'équivalence est obtenue pour **11,4 mL** de diiode versé.\n\n**Réaction du dosage** : C₆H₈O₆ + I₂ → C₆H₆O₆ + 2 H⁺ + 2 I⁻ (une mole de diiode réagit avec une mole d'acide ascorbique).\n\n**Donnée** : M(acide ascorbique) = 176 g/mol.\n\n1. Quel est le rôle du diiode dans cette réaction ? Comment l'empois d'amidon permet-il de repérer l'équivalence ?\n2. Calcule la quantité de matière de vitamine C dans les 10,0 mL dosés.\n3. Déduis-en la masse de vitamine C dans le comprimé. L'étiquette est-elle exacte ?",
+      "bareme": [
+        { "critere": "Le diiode oxyde l'acide ascorbique ; l'empois bleuit dès que le diiode est en excès, ce qui repère l'équivalence", "points": 6 },
+        { "critere": "n(vit C) = n(I₂) = C × Véq = 5,70 × 10⁻⁵ mol", "points": 6 },
+        { "critere": "Facteur 10 (100,0 mL / 10,0 mL) : 5,70 × 10⁻⁴ mol, m = n × M ≈ 0,100 g = 100 mg", "points": 6 },
+        { "critere": "Conclusion : l'étiquette est exacte", "points": 2 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le diiode **oxyde** l'acide ascorbique (vitamine C). Tant qu'il reste de la vitamine C, le diiode versé est consommé aussitôt. Dès qu'elle a entièrement réagi, le diiode se trouve **en excès** : l'empois d'amidon **bleuit**, ce qui repère l'**équivalence**.\n2. À l'équivalence, une mole de I₂ pour une mole de vitamine C : n(vit C) = n(I₂) = C × Véq = 5,00 × 10⁻³ × 11,4 × 10⁻³ = **5,70 × 10⁻⁵ mol** dans 10,0 mL.\n3. Le comprimé est dissous dans 100,0 mL, dix fois plus que le volume dosé : n(comprimé) = 10 × 5,70 × 10⁻⁵ = **5,70 × 10⁻⁴ mol**.\nm = n × M = 5,70 × 10⁻⁴ × 176 ≈ **0,100 g = 100 mg**.\nLa masse trouvée correspond à l'indication : l'**étiquette est exacte**."
+    },
+    {
+      "chapitre": "3df7d090-74c7-50fd-9430-21e5e5ec03e4",
+      "difficulte": 3,
+      "titre": "Deux étiquettes avant la plage",
+      "consigne": "Analyse les deux documents, puis réponds en argumentant avec les notions du cours. Termine par un conseil rédigé à Zoé.",
+      "enonce": "**Situation.** Avant d'aller à la plage, Zoé achète une boisson et une crème solaire.\n\n**Document 1 – Étiquette de la boisson**\n\n> Ingrédients : eau, sucre, jus de citron, colorant (E150d), conservateur (E211), antioxydant (E300 : acide ascorbique), épaississant (E412), arôme naturel de vanille.\n\n**Document 2 – Étiquette de la crème solaire**\n\n> SPF 50 – logo UVA entouré. Ingrédients : aqua, filtres UV, glycérine (hydratant), tocophérol (vitamine E), parfum.\n\n1. Classe chaque additif de la boisson dans sa famille et donne son rôle. Justifie par les numéros.\n2. Un additif est-il autorisé une fois pour toutes ? Appuie-toi sur l'exemple du dioxyde de titane E171.\n3. Une amie affirme qu'un arôme de vanille de synthèse est « moins bon pour la santé » que l'arôme naturel. Discute cette affirmation.\n4. Explique ce que signifient « SPF 50 » et le logo UVA, en distinguant les effets des UVA et des UVB. Pourquoi la crème contient-elle de la vitamine E ? Pourquoi « aqua » est-il écrit en premier ?\n5. Rédige un conseil de trois ou quatre lignes à Zoé pour se protéger du soleil.",
+      "bareme": [
+        { "critere": "Familles justes : E150d colorant, E211 conservateur, E300 antioxydant, E412 texturant, avec leurs rôles", "points": 5 },
+        { "critere": "Autorisation européenne après évaluation avec DJA, retrait en cas de doute (E171 interdit depuis 2022)", "points": 3 },
+        { "critere": "Molécule de synthèse identique : mêmes propriétés ; l'extrait naturel contient d'autres molécules qui enrichissent le goût", "points": 3 },
+        { "critere": "SPF surtout contre les UVB (coups de soleil), logo UVA (vieillissement, cancers) ; vitamine E antioxydante ; aqua solvant majoritaire", "points": 6 },
+        { "critere": "Conseil cohérent : aucune protection totale, en remettre souvent, limiter l'exposition", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. - **E150d** (E100 à E199) : **colorant**, donne ou rend la couleur.\n- **E211** (E200 à E299) : **conservateur**, limite le développement des micro-organismes.\n- **E300** (E300 à E399) : **antioxydant**, ralentit l'oxydation.\n- **E412** (E400 à E499) : **texturant** (épaississant), donne la consistance.\n2. Non. Chaque additif est **autorisé au niveau européen après évaluation**, avec une **DJA** ; il peut être **retiré** quand un doute apparaît : le dioxyde de titane **E171** est interdit dans l'alimentation dans l'Union européenne depuis **2022**.\n3. L'affirmation est fausse telle quelle : une molécule de synthèse **identique** à la molécule naturelle (la **vanilline**) a **les mêmes propriétés**. La différence est gustative : l'extrait naturel contient **d'autres molécules** qui enrichissent le goût.\n4. L'indice **SPF** mesure surtout la protection contre les **UVB**, responsables des **coups de soleil**, qui participent aux cancers de la peau ; SPF 50 est une protection élevée. Le **logo UVA** signale une protection contre les **UVA**, qui pénètrent plus profondément (**vieillissement** de la peau, **cancers**). La **vitamine E** (tocophérol) est un **antioxydant** : elle neutralise les **radicaux libres** produits par les UV. Les ingrédients sont écrits par **concentration décroissante** : l'eau (aqua), le **solvant**, est le plus abondant.\n5. Exemple : « Zoé, ta crème protège bien des UVB et des UVA, mais **aucune crème ne protège totalement**. Remets-en **souvent**, surtout après la baignade, et **limite ton exposition** : évite les heures les plus chaudes et couvre-toi. »"
+    },
+    {
+      "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+      "difficulte": 1,
+      "titre": "Où est l'eau de M. Lefèvre ?",
+      "consigne": "Fais les calculs demandés en montrant ta démarche, puis réponds par des phrases précises.",
+      "enonce": "**Situation.** M. Lefèvre pèse **70 kg**. On admet qu'1 kg d'eau occupe 1 L.\n\n1. Calcule le volume d'eau totale de son organisme.\n2. Calcule le volume de chaque compartiment : liquide intracellulaire, liquide extracellulaire, puis, dans l'extracellulaire, liquide interstitiel et plasma.\n3. Qu'appelle-t-on le **milieu intérieur** ? Cite ses constituants.",
+      "bareme": [
+        { "critere": "Eau totale : 60 % de 70 kg = 42 L", "points": 5 },
+        { "critere": "Intracellulaire 28 L, extracellulaire 14 L, interstitiel 10,5 L, plasma 3,5 L", "points": 10 },
+        { "critere": "Milieu intérieur = liquide extracellulaire : plasma, liquide interstitiel, lymphe", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'eau représente environ **60 %** de la masse d'un adulte : 0,60 × 70 = **42 kg**, soit **42 L**.\n2. - Intracellulaire (2/3) : 42 × 2/3 = **28 L**.\n- Extracellulaire (1/3) : 42 × 1/3 = **14 L**.\n- Interstitiel (3/4 de l'extracellulaire) : 14 × 3/4 = **10,5 L**.\n- Plasma (1/4 de l'extracellulaire) : 14 × 1/4 = **3,5 L**.\n3. Le **milieu intérieur** est le **liquide extracellulaire**, dans lequel baignent les cellules : **plasma**, **liquide interstitiel** et **lymphe**. Sa composition est maintenue presque constante par des organes régulateurs, dont le rein."
+    },
+    {
+      "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+      "difficulte": 2,
+      "titre": "Du plasma à l'urine",
+      "consigne": "Exploite le tableau : décris des valeurs précises, puis interprète-les avec tes connaissances.",
+      "enonce": "**Document – Composition comparée (en g/L) chez un adulte en bonne santé**\n\n| Le constituant | Plasma | Urine primitive | Urine définitive |\n| Protéines | 70 | 0 | 0 |\n| Glucose | 1 | 1 | 0 |\n| Urée | 0,3 | 0,3 | 20 |\n\nChaque jour, les glomérules filtrent environ **180 L** de plasma, et la diurèse est d'environ **1,5 L**.\n\n1. Compare le plasma et l'urine primitive. Quelle fonction du néphron cette comparaison met-elle en évidence ? Où a-t-elle lieu ?\n2. Compare l'urine primitive et l'urine définitive pour le glucose. Quelle fonction est mise en évidence ?\n3. Calcule par combien la concentration de l'urée est multipliée entre l'urine primitive et l'urine définitive. Explique ce résultat à l'aide du pourcentage d'eau réabsorbée, que tu calculeras.",
+      "bareme": [
+        { "critere": "Filtration glomérulaire : même composition sans les protéines, trop grosses, au niveau du glomérule", "points": 6 },
+        { "critere": "Réabsorption tubulaire du glucose en totalité (1 g/L puis 0)", "points": 5 },
+        { "critere": "Facteur 20 ÷ 0,3 ≈ 67 et eau réabsorbée : (180 − 1,5) ÷ 180 ≈ 99,2 %", "points": 6 },
+        { "critere": "Interprétation : l'eau est massivement réabsorbée alors que l'urée l'est peu, elle se concentre", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'urine primitive a la **même composition** que le plasma (glucose 1 g/L, urée 0,3 g/L) **sauf les protéines** (70 g/L dans le plasma, 0 dans l'urine primitive). C'est la **filtration glomérulaire** : au niveau du **glomérule**, le plasma est filtré, les protéines, **trop grosses**, restent dans le sang.\n2. Le glucose passe de **1 g/L** dans l'urine primitive à **0** dans l'urine définitive : il est **réabsorbé en totalité** par le tube, et retourne dans le sang. C'est la **réabsorption tubulaire**.\n3. 20 ÷ 0,3 ≈ **67** : l'urée est environ 67 fois plus concentrée dans l'urine définitive.\nEau réabsorbée : (180 − 1,5) ÷ 180 = 178,5 ÷ 180 ≈ **99,2 %** (plus de 99 %).\nL'eau est **massivement réabsorbée** alors que l'urée l'est **peu** : la même quantité d'urée se retrouve dans un volume beaucoup plus petit, sa concentration augmente fortement. Le rein élimine ainsi ce **déchet** tout en conservant l'eau."
+    },
+    {
+      "chapitre": "b7f02856-3fcb-5926-8ea9-0f65459eb690",
+      "difficulte": 3,
+      "titre": "Deux bandelettes urinaires et un pesticide",
+      "consigne": "Analyse chaque situation en reliant les résultats au fonctionnement du néphron, puis rédige tes réponses de façon argumentée.",
+      "enonce": "**Situation 1.** Deux patients font une analyse d'urine.\n\n| | M. Durand | Mme Petit |\n| Glucose dans l'urine | 6 g/L | 0 |\n| Protéines dans l'urine | 0 | 1,5 g/L |\n| Glycémie | 2,4 g/L | 0,95 g/L |\n| Remarque | Soif excessive | Aucune |\n\n**Situation 2.** Un agriculteur manipule depuis des années un **pesticide liposoluble**, absorbé par la peau et les voies respiratoires.\n\n1. Nomme les anomalies urinaires de chaque patient (vocabulaire médical) et dis pourquoi elles sont anormales.\n2. Pour chaque patient, localise l'étape du fonctionnement rénal en cause et explique l'origine probable de l'anomalie.\n3. Traduis le terme utilisé pour la soif de M. Durand.\n4. Situation 2 : ce pesticide est-il un xénobiotique ? Décris son devenir dans l'organisme, de l'absorption à l'élimination, et explique pourquoi une exposition répétée est préoccupante.",
+      "bareme": [
+        { "critere": "Glycosurie (M. Durand) et protéinurie (Mme Petit), toutes deux anormales", "points": 3 },
+        { "critere": "Protéinurie : atteinte du glomérule qui laisse passer les protéines", "points": 4 },
+        { "critere": "Glycosurie : glycémie trop élevée (2,4 g/L), glucose filtré en excès, réabsorption dépassée ; rein non en cause, diabète évoqué", "points": 5 },
+        { "critere": "Polydipsie = soif excessive", "points": 2 },
+        { "critere": "Xénobiotique ; absorption, distribution, métabolisme hépatique, stockage adipeux, élimination ; accumulation et toxicité", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. M. Durand a une **glycosurie** (glucose dans l'urine), Mme Petit une **protéinurie** (protéines dans l'urine). Normalement, l'urine définitive ne contient **ni glucose ni protéines**.\n2. - **Mme Petit** : les protéines, trop grosses, ne sont normalement **pas filtrées** par le glomérule. Leur présence signale une **atteinte du glomérule** : l'étape de **filtration** est en cause.\n- **M. Durand** : sa glycémie (**2,4 g/L**) est très au-dessus de la normale. Le glucose filtré est alors trop abondant et le tube ne peut plus **tout réabsorber** : il passe dans l'urine. Le rein n'est pas malade : c'est la **glycémie trop élevée** qui est en cause, ce qui évoque un **diabète**.\n3. **Polydipsie** : soif excessive (poly- : beaucoup ; -dipsie : soif).\n4. Oui : c'est une substance **étrangère** à l'organisme, qu'il ne produit pas, donc un **xénobiotique**. Son devenir : **absorption** cutanée et respiratoire → **distribution** par le sang → **métabolisme**, surtout par le **foie**, qui le transforme → **stockage** dans le **tissu adipeux**, puisqu'il est liposoluble → **élimination** (urine, bile et selles, air expiré, sueur). Une exposition répétée est préoccupante : stocké, il **s'accumule au fil des expositions** et peut avoir des effets toxiques sur le **foie** et les **reins**, perturber les hormones ou être cancérogène."
+    },
+    {
+      "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+      "difficulte": 1,
+      "titre": "Deux hormones pour une glycémie",
+      "consigne": "Réponds à chaque question par des phrases précises, avec le vocabulaire du cours.",
+      "enonce": "1. Définis une **hormone**.\n2. Quelles cellules du pancréas sécrètent l'insuline ? Et le glucagon ? Dans quelles structures se trouvent-elles ?\n3. Complète en phrases : après un repas, quelle hormone est sécrétée et quelles sont ses actions ? À jeun, quelle hormone est sécrétée et quelles sont ses actions sur le foie ?",
+      "bareme": [
+        { "critere": "Hormone : sécrétée par une glande endocrine dans le sang, agit à distance sur des cellules cibles à récepteurs", "points": 5 },
+        { "critere": "Cellules β (insuline) et α (glucagon) des îlots de Langerhans", "points": 5 },
+        { "critere": "Insuline : absorption du glucose par muscles et tissu adipeux, glycogenèse ; glucagon : glycogénolyse et néoglucogenèse", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une **hormone** est une molécule sécrétée par une **glande endocrine** dans le **sang**, qui agit **à distance** sur des **cellules cibles** porteuses de **récepteurs** spécifiques.\n2. L'insuline est sécrétée par les **cellules β**, le glucagon par les **cellules α** ; ces cellules se trouvent dans les **îlots de Langerhans**, la partie endocrine du pancréas.\n3. - **Après un repas**, la glycémie monte : les cellules β sécrètent l'**insuline** (seule hormone hypoglycémiante). Les **muscles** et le **tissu adipeux** absorbent le glucose ; le **foie** et les muscles le stockent en **glycogène** (glycogenèse) ; l'excès devient des graisses.\n- **À jeun**, la glycémie tend à baisser : les cellules α sécrètent le **glucagon** (hyperglycémiant). Le **foie** dégrade son glycogène (**glycogénolyse**) et fabrique du glucose (**néoglucogenèse**), qu'il libère dans le sang."
+    },
+    {
+      "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+      "difficulte": 2,
+      "titre": "Deux courbes après le petit-déjeuner",
+      "consigne": "Exploite le document : décris avec des valeurs précises, compare, interprète, puis conclus.",
+      "enonce": "**Document – Glycémie (g/L) de deux adultes, à jeun puis après le même petit-déjeuner**\n\n| Temps | 0 (à jeun) | 30 min | 60 min | 120 min |\n| Élodie | 0,85 | 1,30 | 1,20 | 0,88 |\n| M. Morel | 1,35 | 2,10 | 2,50 | 2,20 |\n\nUne deuxième glycémie à jeun de M. Morel, mesurée la semaine suivante, vaut **1,32 g/L**.\n\n1. Décris l'évolution de la glycémie d'Élodie et explique son retour à la valeur de départ en nommant l'hormone et ses cibles.\n2. Compare la courbe de M. Morel à celle d'Élodie.\n3. M. Morel est-il diabétique ? Justifie avec le critère du cours.\n4. En quoi la régulation d'Élodie illustre-t-elle l'homéostasie ?",
+      "bareme": [
+        { "critere": "Description chiffrée (0,85 → 1,30 à 30 min → 0,88 à 120 min) et retour en deux heures", "points": 5 },
+        { "critere": "Explication : insuline des cellules β, absorption du glucose par muscles et tissu adipeux, stockage en glycogène", "points": 5 },
+        { "critere": "Comparaison chiffrée : M. Morel plus haut à jeun, pic plus élevé et plus tardif, pas de retour", "points": 4 },
+        { "critere": "Diabète : glycémie à jeun ≥ 1,26 g/L à deux reprises (1,35 et 1,32)", "points": 4 },
+        { "critere": "Homéostasie : glycémie maintenue autour d'une valeur, équilibre dynamique", "points": 2 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La glycémie d'Élodie passe de **0,85 g/L** à jeun à **1,30 g/L** 30 min après le repas (le glucose absorbé arrive dans le sang), puis redescend à **0,88 g/L** à 120 min : elle revient à sa valeur de départ en **deux heures** environ. L'élévation stimule les **cellules β** des îlots de Langerhans, qui sécrètent l'**insuline** : les **muscles** et le **tissu adipeux** absorbent le glucose, le **foie** et les muscles le stockent en **glycogène**.\n2. M. Morel part d'une glycémie à jeun plus élevée (**1,35** contre 0,85 g/L), monte plus haut (**2,50 g/L** à 60 min contre 1,30 à 30 min), et reste à **2,20 g/L** à 120 min : sa glycémie **ne revient pas** à sa valeur de départ.\n3. Le diabète est défini par une **glycémie à jeun ≥ 1,26 g/L à deux reprises**. M. Morel a 1,35 puis 1,32 g/L : il est **diabétique**.\n4. Chez Élodie, la glycémie **oscille autour d'une valeur** (proche de 1 g/L) et y revient après chaque écart : c'est l'**homéostasie**, un **équilibre dynamique** du milieu intérieur."
+    },
+    {
+      "chapitre": "5028cb6a-9ae4-5fc1-a109-7882364a0197",
+      "difficulte": 3,
+      "titre": "Le cas de Léo, 13 ans",
+      "consigne": "Suis la démarche du cas clinique : relève les signes, compare aux valeurs de référence, relie-les au mécanisme, nomme la pathologie et justifie le traitement.",
+      "enonce": "**Situation.** Léo, 13 ans, sans surpoids, est amené chez le médecin : depuis trois semaines, il a **très soif**, se lève la nuit pour **uriner**, a **perdu 4 kg** et se sent **très fatigué**.\n\n**Examens** :\n\n| L'examen | Le résultat |\n| Glycémie | 3,1 g/L |\n| Glucose dans l'urine | présent |\n| Corps cétoniques | présents |\n| Anticorps dirigés contre les îlots de Langerhans | présents |\n\nSon grand-père, 67 ans, en surpoids et sédentaire, a découvert son diabète lors d'une prise de sang de routine.\n\n1. Classe les signes de Léo en signes cliniques et signes paracliniques.\n2. Explique l'enchaînement qui relie l'hyperglycémie de Léo à sa soif intense, en utilisant les termes glycosurie, polyurie et polydipsie.\n3. De quel type de diabète Léo est-il atteint ? Justifie par au moins trois arguments, dont l'étiologie.\n4. Quel traitement est indispensable pour Léo, et pourquoi ? Quelle complication aiguë de ce traitement doit-il savoir reconnaître, et que doit-il faire ?\n5. Compare en quelques lignes le diabète du grand-père à celui de Léo (type, origine, début, prévention).",
+      "bareme": [
+        { "critere": "Cliniques : soif, urines abondantes, amaigrissement, fatigue ; paracliniques : glycémie, glycosurie, corps cétoniques, anticorps", "points": 3 },
+        { "critere": "Chaîne : hyperglycémie → glycosurie (au-delà de 1,8 g/L) → polyurie → déshydratation → polydipsie", "points": 5 },
+        { "critere": "Type 1 justifié : jeune âge, début brutal, anticorps anti-îlots = maladie auto-immune détruisant les cellules β", "points": 5 },
+        { "critere": "Insuline à vie car plus de sécrétion ; hypoglycémie (sueurs, tremblements, malaise) → sucre immédiatement", "points": 4 },
+        { "critere": "Comparaison : type 2, insulinorésistance, début progressif et silencieux, en grande partie évitable", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Signes cliniques** : soif intense, urines abondantes (même la nuit), amaigrissement de 4 kg, fatigue. **Signes paracliniques** : glycémie à 3,1 g/L, glycosurie, corps cétoniques, anticorps anti-îlots.\n2. La glycémie (3,1 g/L) dépasse environ **1,8 g/L** : le rein ne réabsorbe plus tout le glucose, qui passe dans l'urine (**glycosurie**). Le glucose **entraîne l'eau** dans l'urine : les urines sont abondantes (**polyurie**). Léo perd de l'eau et se **déshydrate**, ce qui provoque une soif intense (**polydipsie**).\n3. Léo est atteint d'un **diabète de type 1** :\n- il est **jeune** (13 ans) et sans surpoids ;\n- le **début est brutal** (trois semaines), avec soif, polyurie, amaigrissement et fatigue ;\n- la présence d'**anticorps dirigés contre les îlots** signe une maladie **auto-immune** : son système immunitaire **détruit les cellules β**, il ne produit **plus d'insuline** (étiologie).\n4. Il lui faut de l'**insuline à vie** (injections ou pompe), avec surveillance de la glycémie, car ses cellules β ne la produisent plus : l'hygiène de vie seule ne peut pas la remplacer. Complication aiguë du traitement : l'**hypoglycémie** (sueurs, tremblements, malaise) ; il doit prendre du **sucre immédiatement**.\n5. Le grand-père a très probablement un **diabète de type 2** (90 % des cas) : après 40 ans, avec surpoids et sédentarité comme facteurs de risque ; origine : **insulinorésistance** puis insuffisance de sécrétion ; début **progressif et silencieux**, découvert par une prise de sang. Traitement par hygiène de vie puis médicaments, parfois insuline. Contrairement au type 1, il est **en grande partie évitable** (activité physique, poids, alimentation)."
+    }
+  ]
+}

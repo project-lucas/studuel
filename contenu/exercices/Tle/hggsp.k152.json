@@ -1,0 +1,3906 @@
+{
+ "niveau": "Tle",
+ "matiere": "hggsp",
+ "exercices": [
+  {
+   "chapitre": "da561915-2798-5509-878f-4dae409dcc9f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jusqu’où va la souveraineté ?",
+   "competence": "observer-schema",
+   "situation": "Une côtière, un chalutier et un cargo : Nour regarde un schéma des zones de la mer, de la côte vers le large. Le dessin n’est pas à l’échelle.",
+   "documents": [
+    {
+     "id": "zones",
+     "type": "schema",
+     "titre": "Les zones de la mer, vues de dessus",
+     "source": "Schéma non proportionnel, d’après le cours.",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 30,
+       "l": 60,
+       "h": 130,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "terre",
+       "zone": true,
+       "texte": "Terre"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 30,
+       "l": 60,
+       "h": 130,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "mt",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 30,
+       "l": 100,
+       "h": 130,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "zee",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 30,
+       "l": 80,
+       "h": 130,
+       "teinte": "bleu",
+       "motif": "hachures",
+       "id": "haute",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        165
+       ],
+       "a": [
+        80,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        165
+       ],
+       "a": [
+        140,
+        178
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        165
+       ],
+       "a": [
+        240,
+        178
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 196,
+       "texte": "côte",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 196,
+       "texte": "12 milles",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 196,
+       "texte": "200 milles",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zones",
+     "enonce": "Touche la zone où l’État côtier exerce sa pleine souveraineté.",
+     "reponse": [
+      "mt"
+     ],
+     "aide": "C’est la bande la plus proche de la côte, limitée à 12 milles.",
+     "explication": "La **mer territoriale** (zone A) s’étend jusqu’à 12 milles marins : l’État y est souverain, comme sur son territoire."
+    },
+    {
+     "type": "zone",
+     "document": "zones",
+     "enonce": "Touche la zone située au-delà des 200 milles, libre pour tous les navires.",
+     "reponse": [
+      "haute"
+     ],
+     "aide": "Cherche ce qui commence après la limite des 200 milles.",
+     "explication": "Au-delà de la ZEE commence la **haute mer** (zone C) : elle est libre, aucun État ne peut s’en approprier une partie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un chalutier étranger est à 100 milles marins de la côte. Combien de milles doit-il encore parcourir pour sortir de la zone économique exclusive ?",
+     "reponse": 100,
+     "unite": "milles",
+     "aide": "Lis la limite de la zone B sur le schéma, puis soustrais.",
+     "explication": "La ZEE s’arrête à 200 milles : 200 − 100 = **100 milles**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la zone B, que peut faire l’État côtier ?",
+     "options": [
+      "Se réserver l’exploitation de la pêche et des hydrocarbures",
+      "Exercer sa souveraineté pleine, comme sur sa terre",
+      "Laisser chacun exploiter librement les ressources",
+      "Interdire le passage de tous les navires étrangers"
+     ],
+     "reponse": 0,
+     "aide": "Dans cette zone, l’État n’est pas souverain, mais il a des droits précis.",
+     "explication": "Dans la **ZEE**, l’État a des droits **exclusifs d’exploitation** (pêche, pétrole, gaz), mais les navires y circulent librement."
+    }
+   ]
+  },
+  {
+   "chapitre": "da561915-2798-5509-878f-4dae409dcc9f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une place au-dessus de la Terre",
+   "competence": "lire-graphique",
+   "situation": "Lina compare l’altitude de quelques objets en orbite. Elle veut comprendre pourquoi une seule orbite déchaîne les convoitises.",
+   "documents": [
+    {
+     "id": "orbites",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Altitude de quelques objets en orbite",
+     "source": "Altitudes arrondies.",
+     "categories": [
+      "Station spatiale internationale",
+      "Constellation Starlink",
+      "Satellites GPS",
+      "Orbite géostationnaire"
+     ],
+     "series": [
+      {
+       "nom": "Altitude",
+       "valeurs": [
+        400,
+        550,
+        20200,
+        36000
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Altitude",
+      "unite": "km",
+      "min": 0,
+      "max": 40000,
+      "pas": 10000
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "orbites",
+     "enonce": "Touche l’orbite où un satellite reste fixe au-dessus d’un même point du globe.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Elle est la plus haute du graphique.",
+     "explication": "C’est l’**orbite géostationnaire**, à 36 000 km : un satellite y tourne aussi vite que la Terre, donc il semble immobile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois l’orbite géostationnaire est-elle plus haute que celle de la station spatiale (36 000 km contre 400 km) ?",
+     "reponse": 90,
+     "unite": "fois",
+     "aide": "Divise 36 000 par 400.",
+     "explication": "36 000 ÷ 400 = **90 fois** plus haute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les États se disputent-ils l’orbite géostationnaire ?",
+     "options": [
+      "Ses places sont limitées et précieuses pour les télécommunications",
+      "Elle appartient au premier État qui y lance un satellite",
+      "Elle est la seule où un satellite puisse fonctionner",
+      "Elle est gratuite et échappe à toute règle d’attribution"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui est rare dans l’espace et à ce que l’on peut y installer.",
+     "explication": "L’orbite est une **ressource rare** : on ne peut y placer qu’un nombre limité de satellites, et la géostationnaire est la plus utile pour les télécommunications."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque ressource : on la trouve plutôt en mer ou dans l’espace ?",
+     "categories": [
+      "En mer",
+      "Dans l’espace"
+     ],
+     "items": [
+      [
+       "Les nodules polymétalliques",
+       0
+      ],
+      [
+       "Les fréquences radio des satellites",
+       1
+      ],
+      [
+       "Les hydrocarbures offshore",
+       0
+      ],
+      [
+       "L’orbite géostationnaire",
+       1
+      ],
+      [
+       "Les poissons",
+       0
+      ]
+     ],
+     "aide": "Les fréquences et les orbites n’existent qu’au-dessus de nous.",
+     "explication": "En **mer** : nodules, hydrocarbures, poissons. Dans **l’espace** : orbites et fréquences radio, deux ressources rares."
+    }
+   ]
+  },
+  {
+   "chapitre": "da561915-2798-5509-878f-4dae409dcc9f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jour où le câble a cédé",
+   "competence": "lire-carte",
+   "situation": "Un incident imaginé coupe les câbles sous-marins de la mer Rouge. Avec une carte et un tableau, Sacha mesure ce qui reste du trafic Europe–Asie.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois détroits sur les routes Europe–Asie",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -10,
+      -12,
+      128,
+      48
+     ],
+     "lieux": [
+      {
+       "id": "marseille",
+       "lieu": "marseille",
+       "symbole": "point",
+       "nom": "Marseille"
+      },
+      {
+       "id": "singapour",
+       "lieu": "singapour",
+       "symbole": "point",
+       "nom": "Singapour"
+      },
+      {
+       "id": "a",
+       "lon": 43.4,
+       "lat": 12.6,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 56.3,
+       "lat": 26.5,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 101.2,
+       "lat": 2.8,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "trafic",
+     "type": "tableau",
+     "titre": "Trafic de données Europe–Asie",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Route",
+      "Part du trafic"
+     ],
+     "lignes": [
+      [
+       "Câbles par la mer Rouge",
+       "70 %"
+      ],
+      [
+       "Câbles contournant l’Afrique",
+       "25 %"
+      ],
+      [
+       "Satellites",
+       "5 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit de Bab el-Mandeb, à l’entrée sud de la mer Rouge.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est au sud de la mer Rouge, face à Djibouti.",
+     "explication": "Le détroit de **Bab el-Mandeb** (A) relie la mer Rouge à l’océan Indien : les câbles y passent en masse."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit de Malacca, entre l’océan Indien et la mer de Chine méridionale.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Il est tout près de Singapour.",
+     "explication": "Le détroit de **Malacca** (C) passe entre la Malaisie et l’île de Sumatra, à côté de Singapour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après la coupure des câbles de la mer Rouge, quelle part du trafic (en %) reste disponible ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Additionne les routes qui ne passent pas par la mer Rouge.",
+     "explication": "25 % + 5 % = **30 %** du trafic reste disponible : les 70 % de la mer Rouge sont perdus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un câble sous-marin est-il un enjeu géopolitique ?",
+     "options": [
+      "Il porte l’essentiel des données mais reste peu protégé",
+      "Il appartient à l’ONU, qui en garantit la sécurité",
+      "Il est trop cher pour être utilisé par les entreprises",
+      "Il est remplacé sans difficulté par les satellites"
+     ],
+     "reponse": 0,
+     "aide": "Les satellites ne portent qu’une faible part du trafic.",
+     "explication": "Les câbles transportent **99 %** des données et se trouvent dans des passages étroits et exposés : une **infrastructure invisible et vulnérable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "81e0e657-bf0c-5969-9219-4195cc1a2fcb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La course à l’espace en dates",
+   "competence": "se-reperer-temps",
+   "situation": "Noé place sur une frise les grandes étapes de la course à l’espace entre les deux Grands.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La course à l’espace",
+     "debut": 1955,
+     "fin": 1980,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "course",
+       "debut": 1957,
+       "fin": 1969,
+       "nom": "Course à l’espace",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "spoutnik",
+       "date": 1957,
+       "nom": "Spoutnik"
+      },
+      {
+       "id": "gagarine",
+       "date": 1961,
+       "nom": "Gagarine"
+      },
+      {
+       "id": "apollo",
+       "date": 1969,
+       "nom": "Apollo 11"
+      },
+      {
+       "id": "soyouz",
+       "date": 1975,
+       "nom": "Apollo-Soyouz"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la date du premier homme dans l’espace.",
+     "reponse": [
+      "gagarine"
+     ],
+     "aide": "C’est quatre ans après le premier satellite.",
+     "explication": "Iouri Gagarine vole en **1961**, pour l’URSS : quatre ans après Spoutnik."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier satellite des premiers pas sur la Lune ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais 1957 à 1969.",
+     "explication": "1969 − 1957 = **12 ans** entre Spoutnik et Apollo 11."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le lancement d’un satellite inquiète-t-il le camp adverse ?",
+     "options": [
+      "La fusée qui le porte peut aussi lancer une ogive",
+      "Le satellite peut bombarder directement la Terre",
+      "Le lancement viole le traité de l’espace de 1967",
+      "Les satellites brouillent toutes les radios ennemies"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que la fusée peut transporter d’autre.",
+     "explication": "Une fusée capable de mettre un satellite en orbite peut porter une **ogive** : chaque succès spatial est aussi une démonstration militaire. (Le traité de l’espace date de 1967, après Spoutnik.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "81e0e657-bf0c-5969-9219-4195cc1a2fcb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les fusées qu’on réutilise",
+   "competence": "lire-graphique",
+   "situation": "Emma compare le prix d’un kilo envoyé en orbite avant et après l’arrivée des lanceurs réutilisables, puis repère qui joue dans l’espace aujourd’hui.",
+   "documents": [
+    {
+     "id": "cout",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Coût indicatif pour envoyer 1 kg en orbite basse",
+     "source": "Ordres de grandeur arrondis pour l’exercice.",
+     "categories": [
+      "Navette spatiale (1981-2011)",
+      "Fusée réutilisable (années 2020)"
+     ],
+     "series": [
+      {
+       "nom": "Coût",
+       "valeurs": [
+        50,
+        2.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Coût par kilo",
+      "unite": "en milliers de dollars",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "valeurs": false
+    },
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Qui joue dans l’espace ?",
+     "colonnes": [
+      "Acteur",
+      "Jalon"
+     ],
+     "lignes": [
+      [
+       "États-Unis",
+       "Space Force (2019), programme Artemis"
+      ],
+      [
+       "Chine",
+       "Station Tiangong"
+      ],
+      [
+       "Inde",
+       "Alunissage près du pôle Sud (2023)"
+      ],
+      [
+       "Agence spatiale européenne",
+       "Ariane, lancée depuis Kourou"
+      ],
+      [
+       "SpaceX",
+       "Lanceurs réutilisables, constellation Starlink"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "D’après le graphique, combien de fois la fusée réutilisable est-elle moins chère que la navette ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise 50 par 2,5.",
+     "explication": "50 ÷ 2,5 = **20** : le coût de l’accès à l’orbite s’effondre."
+    },
+    {
+     "type": "zone",
+     "document": "acteurs",
+     "enonce": "Touche l’acteur qui n’est pas un État.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Un seul nom du tableau est celui d’une entreprise.",
+     "explication": "**SpaceX** est une entreprise privée : le New Space fait entrer le privé dans une conquête longtemps réservée aux États."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoquent les constellations de milliers de satellites ?",
+     "options": [
+      "Une orbite basse plus encombrée et plus de débris",
+      "Un espace où les satellites sont interdits",
+      "La fin de toute concurrence entre États",
+      "Un retour au monopole de la NASA"
+     ],
+     "reponse": 0,
+     "aide": "Plus d’objets en orbite, c’est plus de risques de collision.",
+     "explication": "Des milliers de satellites **encombrent l’orbite basse** : les débris deviennent une menace directe pour les satellites en service."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan.",
+     "texte": "Des lanceurs ___ font chuter le coût de l’accès à l’orbite ; la puissance spatiale n’est plus seulement ___.",
+     "reponses": [
+      [
+       "réutilisables"
+      ],
+      [
+       "étatique"
+      ]
+     ],
+     "banque": [
+      "réutilisables",
+      "étatique",
+      "jetables",
+      "militaire"
+     ],
+     "aide": "Regarde le graphique, puis le nom de SpaceX dans le tableau.",
+     "explication": "Des lanceurs **réutilisables** baissent les coûts, et la puissance spatiale n’est plus seulement **étatique** : des entreprises y jouent un rôle majeur."
+    }
+   ]
+  },
+  {
+   "chapitre": "81e0e657-bf0c-5969-9219-4195cc1a2fcb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tirer sur un satellite",
+   "competence": "analyser-document",
+   "situation": "Trois États ont détruit un de leurs propres satellites pour montrer leur force. Rita lit le tableau puis la note d’un ingénieur imaginé, et mesure le risque.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Trois essais antisatellites",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pays",
+      "Année",
+      "Cible"
+     ],
+     "lignes": [
+      [
+       "Chine",
+       "2007",
+       "Un de ses satellites météorologiques hors d’âge"
+      ],
+      [
+       "Inde",
+       "2019",
+       "Un de ses satellites en orbite basse"
+      ],
+      [
+       "Russie",
+       "2021",
+       "Un de ses satellites hors service"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note d’un ingénieur",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Quand un satellite est détruit par un missile, il ne disparaît pas : il se brise en milliers de fragments.",
+      "Chaque fragment file à plusieurs kilomètres par seconde, sur la même orbite que les satellites voisins. Même le pays qui a tiré n’en est pas protégé."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche le pays qui a détruit un de ses satellites en 2021.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Lis la colonne des années.",
+     "explication": "C’est la **Russie** : son essai de 2021 a dispersé des débris en orbite basse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier essai du tableau du dernier ?",
+     "reponse": 14,
+     "unite": "ans",
+     "aide": "Soustrais 2007 à 2021.",
+     "explication": "2021 − 2007 = **14 ans** entre l’essai chinois et l’essai russe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un tel essai menace-t-il aussi les satellites du pays qui tire ?",
+     "options": [
+      "Les débris se dispersent et menacent tous les objets voisins",
+      "Le missile se retourne automatiquement contre son lanceur",
+      "Les satellites du pays sont détruits par le traité de 1967",
+      "Les autres États répliquent aussitôt par un tir identique"
+     ],
+     "reponse": 0,
+     "aide": "Relis le second paragraphe de la note.",
+     "explication": "Les **débris** se dispersent sur l’orbite et ne choisissent pas leurs victimes : ils menacent tous les satellites voisins, y compris ceux de l’État qui a tiré."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur : État ou entreprise privée ?",
+     "categories": [
+      "État ou agence publique",
+      "Entreprise privée"
+     ],
+     "items": [
+      [
+       "NASA",
+       0
+      ],
+      [
+       "SpaceX",
+       1
+      ],
+      [
+       "Agence spatiale européenne",
+       0
+      ],
+      [
+       "Blue Origin",
+       1
+      ],
+      [
+       "Space Force",
+       0
+      ]
+     ],
+     "aide": "Une agence dépend d’un gouvernement ; une entreprise appartient à des actionnaires.",
+     "explication": "**NASA**, **ESA** et **Space Force** sont publiques ; **SpaceX** et **Blue Origin** sont des entreprises privées : la compétition n’est plus seulement entre États."
+    }
+   ]
+  },
+  {
+   "chapitre": "adc2e617-5572-5e99-86cd-4ac9c2a2aef7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui revendique la mer de Chine ?",
+   "competence": "lire-carte",
+   "situation": "Hugo observe une carte de la mer de Chine méridionale : des pays riverains, et une zone que Pékin dit sienne.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La mer de Chine méridionale",
+     "source": "Carte schématique : le tracé de la zone est approximatif.",
+     "fond": "monde",
+     "cadrage": [
+      98,
+      -2,
+      128,
+      26
+     ],
+     "regionsCliquables": true,
+     "aires": [
+      {
+       "id": "ligne",
+       "contour": [
+        [
+         108,
+         18
+        ],
+        [
+         109.5,
+         14
+        ],
+        [
+         109,
+         10
+        ],
+        [
+         110,
+         6.5
+        ],
+        [
+         112.3,
+         4
+        ],
+        [
+         115,
+         4.5
+        ],
+        [
+         118,
+         7
+        ],
+        [
+         118.5,
+         11
+        ],
+        [
+         119.3,
+         15
+        ],
+        [
+         120.5,
+         19
+        ],
+        [
+         121,
+         21.5
+        ],
+        [
+         118,
+         21.5
+        ],
+        [
+         114,
+         20.5
+        ],
+        [
+         111,
+         19
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "hachures",
+       "etiquette": "Zone revendiquée par Pékin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone que la Chine revendique par sa « ligne en neuf traits ».",
+     "reponse": [
+      "ligne"
+     ],
+     "aide": "C’est la grande zone hachurée au milieu de la mer.",
+     "explication": "La Chine revendique 80 à 90 % de la mer de Chine méridionale par sa **ligne en neuf traits**, malgré la décision de 2016."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois pays du cours qui s’opposent aux revendications chinoises : Vietnam, Philippines et Malaisie.",
+     "reponse": [
+      "VNM",
+      "PHL",
+      "MYS"
+     ],
+     "multiple": true,
+     "aide": "Ce sont des voisins qui bordent la mer, à l’ouest, à l’est et au sud.",
+     "explication": "Le **Vietnam**, les **Philippines** et la **Malaisie** contestent la zone revendiquée par Pékin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change la construction d’îles artificielles en mer de Chine ?",
+     "options": [
+      "Elle crée un fait accompli que le droit peine à défaire",
+      "Elle étend automatiquement la ZEE chinoise de 200 milles",
+      "Elle prouve que l’ONU reconnaît la zone comme chinoise",
+      "Elle supprime la navigation de tous les navires civils"
+     ],
+     "reponse": 0,
+     "aide": "Pense au rapport entre le droit et ce qui est déjà construit.",
+     "explication": "Les îles artificielles transforment un rapport de force juridique en **fait accompli** : Pékin les militarise et ignore la sentence de 2016."
+    }
+   ]
+  },
+  {
+   "chapitre": "adc2e617-5572-5e99-86cd-4ac9c2a2aef7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les océans de la France",
+   "competence": "lire-carte",
+   "situation": "La France n’est pas qu’un pays d’Europe : ses outre-mer lui donnent des eaux sur tous les océans. Jade repère ces territoires.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre territoires français d’outre-mer",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "kourou",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "saint-denis-reunion",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "papeete",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "noumea",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "surfaces",
+     "type": "tableau",
+     "titre": "Surfaces de la France",
+     "source": "Chiffres arrondis.",
+     "colonnes": [
+      "Espace",
+      "Surface (millions de km²)"
+     ],
+     "lignes": [
+      [
+       "Territoire de la métropole",
+       "0,55"
+      ],
+      [
+       "Zone économique exclusive (totale)",
+       "11"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le territoire français d’Amérique du Sud.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Kourou est en Guyane, sur la côte nord du continent.",
+     "explication": "**A** est la Guyane, en Amérique du Sud, sur l’Atlantique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux territoires français de l’océan Pacifique.",
+     "reponse": [
+      "c",
+      "d"
+     ],
+     "multiple": true,
+     "aide": "Regarde à l’est de l’Australie et plus à l’est encore.",
+     "explication": "**C** (la Polynésie) et **D** (la Nouvelle-Calédonie) ouvrent des ZEE dans le Pacifique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la ZEE de la France est-elle plus grande que son territoire de métropole ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise 11 par 0,55.",
+     "explication": "11 ÷ 0,55 = **20** : la mer donne à la France vingt fois la surface de la métropole."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque territoire à l’océan qui l’entoure.",
+     "paires": [
+      [
+       "La Réunion",
+       "Océan Indien"
+      ],
+      [
+       "La Guyane",
+       "Océan Atlantique"
+      ],
+      [
+       "La Polynésie française",
+       "Océan Pacifique"
+      ]
+     ],
+     "aide": "Reprends les lettres de la carte.",
+     "explication": "La Réunion baigne dans l’**océan Indien**, la Guyane borde l’**Atlantique**, la Polynésie est au cœur du **Pacifique** : c’est ce qui donne à la France une voix dans l’Indo-Pacifique."
+    }
+   ]
+  },
+  {
+   "chapitre": "adc2e617-5572-5e99-86cd-4ac9c2a2aef7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La route du Nord",
+   "competence": "analyser-document",
+   "situation": "La fonte de la banquise rouvre l’Arctique. Une compagnie maritime imaginaire compare la route par Suez à la route du Nord.",
+   "documents": [
+    {
+     "id": "routes",
+     "type": "tableau",
+     "titre": "Shanghai – Rotterdam",
+     "source": "Distances arrondies pour l’exercice.",
+     "colonnes": [
+      "Route",
+      "Distance"
+     ],
+     "lignes": [
+      [
+       "Par le canal de Suez",
+       "20 000 km"
+      ],
+      [
+       "Par l’Arctique (route du Nord)",
+       "14 000 km"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note d’une compagnie maritime",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "La route du Nord raccourcit le trajet, mais la glace ne s’ouvre que quelques mois par an.",
+      "Il faut des brise-glaces, des navires renforcés et des assurances très chères. Et plusieurs États se disputent déjà les fonds voisins."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de kilomètres la route du Nord fait-elle économiser par rapport à Suez ?",
+     "reponse": 6000,
+     "unite": "km",
+     "aide": "Soustrais les deux distances du tableau.",
+     "explication": "20 000 − 14 000 = **6 000 km** économisés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle part de la distance la route du Nord économise-t-elle ?",
+     "options": [
+      "30 %",
+      "10 %",
+      "20 %",
+      "50 %"
+     ],
+     "reponse": 0,
+     "aide": "Compare le gain (6 000 km) à la distance par Suez.",
+     "explication": "6 000 ÷ 20 000 = 0,3 : soit **30 %** de la distance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la route du Nord ne remplace-t-elle pas encore Suez ?",
+     "options": [
+      "La glace limite la saison et le passage coûte cher",
+      "Le droit de la mer l’interdit à tous les navires",
+      "Les États-Unis y contrôlent tous les ports",
+      "Les navires n’y trouvent aucune ressource à transporter"
+     ],
+     "reponse": 0,
+     "aide": "Relis la note de la compagnie.",
+     "explication": "Le passage est **saisonnier** et exige des **brise-glaces** et des assurances chères : le gain de distance ne suffit pas à tout compenser."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que la fonte ouvre, ou ce qui freine encore ?",
+     "categories": [
+      "La fonte ouvre",
+      "Ce qui freine encore"
+     ],
+     "items": [
+      [
+       "Un trajet plus court",
+       0
+      ],
+      [
+       "L’accès à des hydrocarbures",
+       0
+      ],
+      [
+       "Une saison de navigation très courte",
+       1
+      ],
+      [
+       "Des brise-glaces indispensables",
+       1
+      ],
+      [
+       "Des assurances très chères",
+       1
+      ]
+     ],
+     "aide": "Relis la note : elle cite ce qui reste difficile.",
+     "explication": "La fonte **ouvre** un trajet plus court et l’accès aux hydrocarbures ; la saison courte, les brise-glaces et les assurances **freinent** encore la route du Nord."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8aff4f6-01ac-5958-97ef-49bd1be98c11",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quinze ans de montée en puissance",
+   "competence": "se-reperer-temps",
+   "situation": "Maya place sur une frise quatre étapes de la montée en puissance chinoise, sur mer comme dans l’espace.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Chine, mer et espace",
+     "debut": 2000,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "vol",
+       "date": 2003,
+       "nom": "Vol habité"
+      },
+      {
+       "id": "soie",
+       "date": 2013,
+       "nom": "Routes de la soie"
+      },
+      {
+       "id": "djibouti",
+       "date": 2017,
+       "nom": "Base à Djibouti"
+      },
+      {
+       "id": "mars",
+       "date": 2021,
+       "nom": "Rover sur Mars"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année où la Chine ouvre sa première base militaire à l’étranger.",
+     "reponse": [
+      "djibouti"
+     ],
+     "aide": "Elle est située en Afrique de l’Est.",
+     "explication": "La base de **Djibouti** ouvre en **2017** : premier point d’appui militaire chinois hors du pays."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier vol habité de l’arrivée du rover sur Mars ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais 2003 à 2021.",
+     "explication": "2021 − 2003 = **18 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque étape : puissance spatiale ou puissance maritime ?",
+     "categories": [
+      "Espace",
+      "Mer"
+     ],
+     "items": [
+      [
+       "Vol habité",
+       0
+      ],
+      [
+       "Rover sur Mars",
+       0
+      ],
+      [
+       "Routes de la soie maritimes",
+       1
+      ],
+      [
+       "Base de Djibouti",
+       1
+      ]
+     ],
+     "aide": "Une base et des routes se trouvent au bord de la mer.",
+     "explication": "Le **vol habité** et le **rover** relèvent de l’espace ; les **routes de la soie maritimes** et la **base de Djibouti** relèvent de la puissance maritime."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes du plus ancien au plus récent.",
+     "items": [
+      "Premier vol habité",
+      "Lancement des routes de la soie",
+      "Base militaire à Djibouti",
+      "Rover sur Mars"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**2003 → 2013 → 2017 → 2021** : d’abord l’espace, puis la mer, puis de nouveau l’espace."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8aff4f6-01ac-5958-97ef-49bd1be98c11",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un collier de ports",
+   "competence": "lire-carte",
+   "situation": "Théo suit les ports où la Chine investit, puis compte combien de géants du conteneur sont chinois.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Des ports le long des routes de la soie maritimes",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      10,
+      -5,
+      130,
+      48
+     ],
+     "lieux": [
+      {
+       "id": "pirees",
+       "lon": 23.64,
+       "lat": 37.94,
+       "symbole": "point",
+       "nom": "Le Pirée"
+      },
+      {
+       "id": "djibouti",
+       "lon": 43.15,
+       "lat": 11.59,
+       "symbole": "point",
+       "nom": "Djibouti"
+      },
+      {
+       "id": "gwadar",
+       "lon": 62.33,
+       "lat": 25.12,
+       "symbole": "point",
+       "nom": "Gwadar"
+      },
+      {
+       "id": "hambantota",
+       "lon": 81.12,
+       "lat": 6.12,
+       "symbole": "point",
+       "nom": "Hambantota"
+      },
+      {
+       "id": "shanghai",
+       "lieu": "shanghai",
+       "symbole": "point",
+       "nom": "Shanghai"
+      }
+     ]
+    },
+    {
+     "id": "ports",
+     "type": "tableau",
+     "titre": "Dix grands ports à conteneurs",
+     "source": "Classement approximatif de 2022, ordre non respecté.",
+     "colonnes": [
+      "Port",
+      "Pays"
+     ],
+     "lignes": [
+      [
+       "Shanghai",
+       "Chine"
+      ],
+      [
+       "Singapour",
+       "Singapour"
+      ],
+      [
+       "Ningbo-Zhoushan",
+       "Chine"
+      ],
+      [
+       "Shenzhen",
+       "Chine"
+      ],
+      [
+       "Canton",
+       "Chine"
+      ],
+      [
+       "Qingdao",
+       "Chine"
+      ],
+      [
+       "Busan",
+       "Corée du Sud"
+      ],
+      [
+       "Tianjin",
+       "Chine"
+      ],
+      [
+       "Hong Kong",
+       "Chine"
+      ],
+      [
+       "Rotterdam",
+       "Pays-Bas"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le port européen de la route de la soie maritime.",
+     "reponse": [
+      "pirees"
+     ],
+     "aide": "C’est un port de Grèce, en Méditerranée.",
+     "explication": "Le **Pirée**, port d’Athènes, est l’un des ports où la Chine a investi pour sa route de la soie maritime."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu où la Chine a ouvert sa base militaire en 2017.",
+     "reponse": [
+      "djibouti"
+     ],
+     "aide": "Il est à l’entrée sud de la mer Rouge.",
+     "explication": "La base militaire chinoise est à **Djibouti**, près du détroit de Bab el-Mandeb."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien des dix ports du tableau sont chinois (Hong Kong compris) ?",
+     "reponse": 7,
+     "unite": "ports",
+     "aide": "Compte les lignes où le pays est « Chine ».",
+     "explication": "Sept des dix sont chinois : **Shanghai, Ningbo, Shenzhen, Canton, Qingdao, Tianjin et Hong Kong**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la Chine investit-elle dans des ports à l’étranger ?",
+     "options": [
+      "Pour sécuriser ses routes et gagner un levier diplomatique",
+      "Pour remplacer tous ses propres ports par des ports étrangers",
+      "Pour respecter une décision de la Cour d’arbitrage de 2016",
+      "Pour réduire fortement ses échanges avec toute l’Europe"
+     ],
+     "reponse": 0,
+     "aide": "Relis la conclusion du cours sur l’infrastructure et le levier.",
+     "explication": "Elle construit d’abord une **infrastructure** qui sécurise ses routes, puis un **levier diplomatique** auprès des pays partenaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8aff4f6-01ac-5958-97ef-49bd1be98c11",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le piège du détroit",
+   "competence": "analyser-document",
+   "situation": "Malgré ses ports et sa flotte, la Chine dépend d’un goulot d’étranglement. Et ses voisins s’inquiètent. Léo croise une carte et un tableau d’alliances.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Asie-Pacifique",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      60,
+      -45,
+      155,
+      50
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "malacca",
+       "lon": 101.2,
+       "lat": 2.8,
+       "symbole": "lettre",
+       "lettre": "M"
+      }
+     ]
+    },
+    {
+     "id": "alliances",
+     "type": "tableau",
+     "titre": "Deux alliances face à la Chine",
+     "colonnes": [
+      "Alliance",
+      "Membres"
+     ],
+     "lignes": [
+      [
+       "Quad",
+       "États-Unis, Japon, Inde, Australie"
+      ],
+      [
+       "AUKUS",
+       "Australie, Royaume-Uni, États-Unis"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit de Malacca.",
+     "reponse": [
+      "malacca"
+     ],
+     "aide": "Il sépare l’île de Sumatra de la péninsule malaise.",
+     "explication": "Le détroit de **Malacca** (M) est le goulot par où passe l’essentiel des importations chinoises : c’est le « dilemme de Malacca »."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois pays d’Asie-Pacifique membres du Quad : Inde, Japon et Australie.",
+     "reponse": [
+      "IND",
+      "JPN",
+      "AUS"
+     ],
+     "multiple": true,
+     "aide": "Le quatrième membre, les États-Unis, est hors de la carte.",
+     "explication": "L’**Inde**, le **Japon** et l’**Australie** forment le Quad avec les États-Unis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Pékin cherche-t-il des routes qui évitent Malacca ?",
+     "options": [
+      "Ses importations passent par un détroit qu’il ne contrôle pas",
+      "Le droit de la mer interdit aux navires chinois d’y passer",
+      "Ce détroit est fermé par les glaces une bonne partie de l’année",
+      "Les voisins chinois y font payer un droit de passage très élevé"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que signifie dépendre d’un passage contrôlé par d’autres.",
+     "explication": "Pékin dépend d’un **goulot qu’il ne contrôle pas** : c’est le « dilemme de Malacca », une faiblesse malgré sa puissance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le paradoxe de la puissance.",
+     "texte": "La montée en puissance de la Chine provoque des ___ : ses voisins se rapprochent des ___.",
+     "reponses": [
+      [
+       "contre-alliances"
+      ],
+      [
+       "États-Unis"
+      ]
+     ],
+     "banque": [
+      "contre-alliances",
+      "États-Unis",
+      "Nations unies",
+      "accords de libre-échange"
+     ],
+     "aide": "Regarde les membres communs du Quad et d’AUKUS.",
+     "explication": "Elle suscite mécaniquement des **contre-alliances** (Quad, AUKUS) : ses voisins se rapprochent des **États-Unis**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d425555-12f1-5c8f-a127-33dbd1503ccd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux façons de faire la guerre",
+   "competence": "analyser-document",
+   "situation": "Anaïs compare la guerre telle que Clausewitz l’imaginait et les conflits d’aujourd’hui, dans un tableau à deux colonnes.",
+   "documents": [
+    {
+     "id": "modeles",
+     "type": "tableau",
+     "titre": "Guerre classique et conflit contemporain",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Guerre classique (modèle trinitaire)",
+      "Conflit contemporain"
+     ],
+     "lignes": [
+      [
+       "Acteurs",
+       "États",
+       "Groupes armés, milices, parfois États"
+      ],
+      [
+       "Combattants",
+       "Armées régulières",
+       "Guérilla, adversaire irrégulier"
+      ],
+      [
+       "Début",
+       "Déclaration de guerre",
+       "Pas de déclaration"
+      ],
+      [
+       "Fin",
+       "Traité de paix",
+       "Cessez-le-feu, sans traité"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modeles",
+     "enonce": "Touche ce qui met fin à une guerre classique.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Regarde la ligne « Fin » et la colonne de la guerre classique.",
+     "explication": "Une guerre classique se termine par un **traité de paix** entre États."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’une guerre classique, du début à la fin.",
+     "items": [
+      "Déclaration de guerre",
+      "Combats entre armées régulières",
+      "Négociations entre États",
+      "Traité de paix"
+     ],
+     "aide": "Relis la colonne de la guerre classique, de « Début » à « Fin ».",
+     "explication": "**Déclaration → combats → négociations → traité** : c’est le modèle trinitaire de Clausewitz."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : guerre classique ou conflit contemporain ?",
+     "categories": [
+      "Guerre classique",
+      "Conflit contemporain"
+     ],
+     "items": [
+      [
+       "Armées régulières face à face",
+       0
+      ],
+      [
+       "Pas de déclaration de guerre",
+       1
+      ],
+      [
+       "Adversaire irrégulier",
+       1
+      ],
+      [
+       "Fin par un traité",
+       0
+      ],
+      [
+       "Civils souvent victimes",
+       1
+      ]
+     ],
+     "aide": "Relis les deux colonnes du tableau.",
+     "explication": "**Classique** : armées régulières, traité. **Contemporain** : pas de déclaration, adversaire irrégulier, civils souvent victimes."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d425555-12f1-5c8f-a127-33dbd1503ccd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dix ans de cessez-le-feu",
+   "competence": "analyser-texte",
+   "situation": "Un reportage imaginé raconte un village coupé en deux dix ans après la fin des combats. Est-ce la paix ?",
+   "documents": [
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Dix ans après le cessez-le-feu",
+     "source": "Reportage imaginé pour l’exercice.",
+     "blocs": [
+      "Il y a dix ans, le [[a|cessez-le-feu]] a mis fin aux combats entre les deux armées. Depuis, plus un coup de feu n’a été tiré le long de la ligne de démarcation.",
+      "Mais le village de Mira reste coupé en deux : la route est fermée, les familles ne se voient plus et personne n’a obtenu de réparation pour les maisons détruites.",
+      "Aucun accord n’a réglé la question de la [[b|frontière]]. Chaque année, les deux gouvernements renouvellent la trêve, et chaque année les négociations s’arrêtent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui dit que les combats se sont arrêtés.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche dans le premier paragraphe.",
+     "explication": "Le **cessez-le-feu** a fait taire les armes, mais il ne règle pas le différend."
+    },
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche, dans le dernier paragraphe, ce qui n’a jamais été réglé entre les deux États.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il s’agit de la ligne qui sépare les deux pays.",
+     "explication": "La **frontière** n’a jamais été fixée par un accord : le différend demeure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifier cette situation ?",
+     "options": [
+      "Une paix négative : les armes se taisent, le différend demeure",
+      "Une paix positive : justice et réconciliation sont installées",
+      "Une guerre hybride mêlant cyberattaques et désinformation",
+      "Une guerre totale mobilisant toute la société du pays"
+     ],
+     "reponse": 0,
+     "aide": "Les armes sont silencieuses, mais est-ce que tout est réglé ?",
+     "explication": "C’est une **paix négative** : simple absence de guerre. Elle dure, comme dans un **conflit gelé**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition de Galtung.",
+     "texte": "Pour passer à une paix ___, il faudrait aussi ___ les victimes et reconstruire.",
+     "reponses": [
+      [
+       "positive"
+      ],
+      [
+       "indemniser"
+      ]
+     ],
+     "banque": [
+      "positive",
+      "négative",
+      "indemniser",
+      "bombarder"
+     ],
+     "aide": "Dans le reportage, personne n’a obtenu de réparation.",
+     "explication": "Une paix **positive** suppose la justice : il faut **indemniser** les victimes, reconstruire et réconcilier."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d425555-12f1-5c8f-a127-33dbd1503ccd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre conflits, quatre visages",
+   "competence": "analyser-document",
+   "situation": "Une médiatrice imaginaire passe en revue quatre conflits et cherche qui peut agir dans chacun.",
+   "documents": [
+    {
+     "id": "conflits",
+     "type": "tableau",
+     "titre": "Quatre conflits",
+     "source": "D’après le cours ; dates arrondies à l’année.",
+     "colonnes": [
+      "Conflit",
+      "Acteurs",
+      "Date clé",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Corée",
+       "Corée du Nord et Corée du Sud",
+       "1953",
+       "Armistice, sans traité de paix"
+      ],
+      [
+       "Syrie",
+       "Régime, groupes armés, puissances étrangères",
+       "2011",
+       "Guerre civile internationalisée"
+      ],
+      [
+       "Ukraine",
+       "Russie et Ukraine",
+       "2022",
+       "Front continu, chars et artillerie"
+      ],
+      [
+       "Chypre",
+       "Chypriotes grecs et turcs",
+       "1974",
+       "Ligne de démarcation, île divisée"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note d’une médiatrice",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Dans une crise comme celles-ci, aucun acteur ne suffit. Les États négocient et garantissent ; l’ONU envoie des Casques bleus.",
+      "Une organisation régionale peut agir plus vite, et des ONG gardent le contact quand les gouvernements ne se parlent plus."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conflits",
+     "enonce": "Touche les deux conflits gelés du tableau.",
+     "reponse": [
+      "r0c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Un conflit gelé : les armes se sont tues, mais rien n’est réglé.",
+     "explication": "La **Corée** (armistice de 1953) et **Chypre** (ligne de démarcation depuis 1974) sont des **conflits gelés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lequel de ces conflits ressemble le plus à la guerre interétatique de haute intensité ?",
+     "options": [
+      "Le conflit en Ukraine, à partir de 2022",
+      "La guerre civile en Syrie, depuis 2011",
+      "L’armistice en Corée, signé en 1953",
+      "La division de l’île de Chypre, depuis 1974"
+     ],
+     "reponse": 0,
+     "aide": "Cherche deux États, un front continu, des chars et de l’artillerie.",
+     "explication": "L’invasion de l’**Ukraine en 2022** rappelle que la guerre classique de haute intensité n’a pas disparu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années, en 2023, l’armistice de Corée (1953) tient-il ?",
+     "reponse": 70,
+     "unite": "ans",
+     "aide": "Soustrais 1953 à 2023.",
+     "explication": "2023 − 1953 = **70 ans** : un conflit gelé peut durer très longtemps sans paix véritable."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur de la paix à son rôle.",
+     "paires": [
+      [
+       "Les États",
+       "Négocier et garantir"
+      ],
+      [
+       "L’ONU",
+       "Envoyer des Casques bleus"
+      ],
+      [
+       "Les organisations régionales",
+       "Agir plus vite que l’ONU"
+      ],
+      [
+       "Les ONG",
+       "Garder le contact entre adversaires"
+      ]
+     ],
+     "aide": "Relis la note de la médiatrice.",
+     "explication": "Les **États** négocient et garantissent, l’**ONU** envoie des Casques bleus, les **organisations régionales** agissent plus vite, les **ONG** gardent le contact."
+    }
+   ]
+  },
+  {
+   "chapitre": "68578406-ce8d-5d53-aae7-6b8fb316c2a7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre siècles de guerres",
+   "competence": "se-reperer-temps",
+   "situation": "Jules place sur une frise les grandes étapes de la mutation de la guerre, de 1648 à nos jours.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De Westphalie au terrorisme",
+     "debut": 1600,
+     "fin": 2050,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "mondiales",
+       "debut": 1914,
+       "fin": 1945,
+       "nom": "Guerres mondiales",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "westphalie",
+       "date": 1648,
+       "nom": "Westphalie"
+      },
+      {
+       "id": "levee",
+       "date": 1793,
+       "nom": "Levée en masse"
+      },
+      {
+       "id": "attentats",
+       "date": 2001,
+       "nom": "11 septembre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année des traités de Westphalie.",
+     "reponse": [
+      "westphalie"
+     ],
+     "aide": "C’est l’événement le plus ancien de la frise.",
+     "explication": "Les traités de **Westphalie** (1648) mettent fin à la guerre de Trente Ans et fondent le système des États souverains."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les traités de Westphalie de la levée en masse ?",
+     "reponse": 145,
+     "unite": "ans",
+     "aide": "Soustrais 1648 à 1793.",
+     "explication": "1793 − 1648 = **145 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’ont en commun la levée en masse et les guerres mondiales ?",
+     "options": [
+      "Elles mobilisent toute la société, combattants et civils",
+      "Elles opposent uniquement des armées de métier",
+      "Elles se terminent toutes par un simple cessez-le-feu",
+      "Elles ne concernent que des conflits religieux"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que signifie « guerre totale ».",
+     "explication": "Ce sont les étapes de la **guerre totale** : toute la société est mobilisée et la frontière entre combattants et civils s’efface."
+    }
+   ]
+  },
+  {
+   "chapitre": "68578406-ce8d-5d53-aae7-6b8fb316c2a7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sans insigne ni déclaration",
+   "competence": "analyser-document",
+   "situation": "Un tableau range les formes de conflit actuelles ; un récit imaginé décrit le début d’une guerre hybride.",
+   "documents": [
+    {
+     "id": "formes",
+     "type": "tableau",
+     "titre": "Trois formes de conflit",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Forme",
+      "Exemple",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "Terrorisme",
+       "11 septembre 2001",
+       "Violence non étatique, effet politique par la peur"
+      ],
+      [
+       "Guerre hybride",
+       "Annexion de la Crimée, 2014",
+       "Forces régulières, milices, désinformation, sans déclaration"
+      ],
+      [
+       "Cyberconflictualité",
+       "Estonie 2007, Stuxnet",
+       "Attaques d’infrastructures, espionnage, manipulation de l’information"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une péninsule, un printemps",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Fin février, des hommes armés, sans insigne sur leur uniforme, prennent position autour des bâtiments officiels. Les médias diffusent en boucle le même récit, des sites officiels sont attaqués par des pirates informatiques.",
+      "Aucune guerre n’est [[d|déclarée]]. En mars, un référendum est organisé, puis la péninsule est rattachée à l’État voisin."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formes",
+     "enonce": "Touche la case qui cite le virus informatique visant le programme nucléaire iranien.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne de la cyberconflictualité.",
+     "explication": "**Stuxnet** a visé le programme nucléaire iranien : c’est un exemple de cyberconflictualité."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui montre qu’il manque une étape de la guerre classique.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Une guerre classique commence par une déclaration.",
+     "explication": "« Aucune guerre n’est **déclarée** » : c’est un trait de la guerre hybride."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exemple à sa forme de conflit.",
+     "paires": [
+      [
+       "11 septembre 2001",
+       "Terrorisme"
+      ],
+      [
+       "Annexion de la Crimée (2014)",
+       "Guerre hybride"
+      ],
+      [
+       "Stuxnet",
+       "Cyberconflictualité"
+      ]
+     ],
+     "aide": "Relis la colonne « Exemple » du tableau.",
+     "explication": "Le **11 septembre** est du **terrorisme**, la **Crimée** une **guerre hybride**, **Stuxnet** une **cyberattaque**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces conflits n’ont-ils pas de fin claire ?",
+     "options": [
+      "Sans ligne de front ni traité de paix, rien ne marque leur fin",
+      "Les États interdisent de les déclarer terminés",
+      "Ils se terminent toujours au bout d’un an exactement",
+      "Ils sont toujours arbitrés par l’ONU, qui les suspend"
+     ],
+     "reponse": 0,
+     "aide": "Que faut-il pour qu’une guerre classique s’arrête ?",
+     "explication": "Ces guerres n’ont **ni ligne de front ni traité de paix** : elles n’ont pas de fin claire."
+    }
+   ]
+  },
+  {
+   "chapitre": "68578406-ce8d-5d53-aae7-6b8fb316c2a7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La guerre a-t-elle disparu ?",
+   "competence": "argumenter",
+   "situation": "Lou et Sam se disputent au sujet de la guerre classique. Un tableau leur donne quatre repères pour trancher.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Discussion entre deux élèves",
+     "source": "Dialogue écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "La guerre classique, c’est fini : aujourd’hui on a surtout des attentats et des cyberattaques."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Et les [[a|chars]] et l’artillerie en Ukraine en 2022, alors ?"
+      },
+      {
+       "qui": "Lou",
+       "texte": "Ah oui… donc il y a plusieurs sortes de guerres en même temps ?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Exactement : elles s’ajoutent, l’une ne remplace pas l’autre."
+      }
+     ]
+    },
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Quatre repères",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "2001",
+       "Attentats du 11 septembre"
+      ],
+      [
+       "2007",
+       "Cyberattaques contre l’Estonie"
+      ],
+      [
+       "2014",
+       "Annexion de la Crimée"
+      ],
+      [
+       "2022",
+       "Invasion de l’Ukraine"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot de Sam qui prouve que la guerre de haute intensité n’a pas disparu.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Pense à ce qu’on voit sur un front continu.",
+     "explication": "Les **chars** et l’artillerie de 2022 montrent que la guerre interétatique classique existe toujours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’annexion de la Crimée de l’invasion de l’Ukraine ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Soustrais 2014 à 2022.",
+     "explication": "2022 − 2014 = **8 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : guerre de haute intensité ou conflit diffus ?",
+     "categories": [
+      "Haute intensité",
+      "Conflit diffus"
+     ],
+     "items": [
+      [
+       "Front continu",
+       0
+      ],
+      [
+       "Chars et artillerie",
+       0
+      ],
+      [
+       "Désinformation",
+       1
+      ],
+      [
+       "Cyberattaque contre des infrastructures",
+       1
+      ],
+      [
+       "Pas de traité de paix",
+       1
+      ]
+     ],
+     "aide": "Un conflit diffus n’a ni front ni traité.",
+     "explication": "La **haute intensité** : front continu, chars. Le **conflit diffus** : désinformation, cyberattaques, pas de traité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion Sam et Lou peuvent-ils tirer ?",
+     "options": [
+      "Les formes de guerre se superposent, elles ne se remplacent pas",
+      "La guerre classique a totalement disparu depuis 2001",
+      "Les cyberattaques ont remplacé les armées régulières",
+      "Seul le terrorisme compte encore comme forme de guerre"
+     ],
+     "reponse": 0,
+     "aide": "Lis la dernière réplique de Sam.",
+     "explication": "Il ne s’agit pas d’un **remplacement** mais d’une **superposition** : guerre classique, terrorisme et cyberconflits coexistent."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9ebff1b-5ce2-5148-a15d-06d4b4f29079",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux siècles pour bâtir la paix",
+   "competence": "se-reperer-temps",
+   "situation": "Clémence place sur une frise quatre tentatives d’organiser la paix entre les États.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Organiser la paix",
+     "debut": 1800,
+     "fin": 2025,
+     "pas": 25,
+     "evenements": [
+      {
+       "id": "vienne",
+       "date": 1815,
+       "nom": "Congrès de Vienne"
+      },
+      {
+       "id": "sdn",
+       "date": 1919,
+       "nom": "SDN"
+      },
+      {
+       "id": "onu",
+       "date": 1945,
+       "nom": "ONU"
+      },
+      {
+       "id": "cpi",
+       "date": 2002,
+       "nom": "CPI"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la date de la Société des Nations, née du traité de Versailles.",
+     "reponse": [
+      "sdn"
+     ],
+     "aide": "Elle naît juste après la Première Guerre mondiale.",
+     "explication": "La **SDN** naît en **1919**, sur une idée du président américain Wilson."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la SDN de l’ONU ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais 1919 à 1945.",
+     "explication": "1945 − 1919 = **26 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée relie le congrès de Vienne, la SDN et l’ONU ?",
+     "options": [
+      "Encadrer les rapports entre États pour éviter la guerre",
+      "Supprimer la souveraineté de tous les États",
+      "Créer une armée mondiale unique",
+      "Interdire aux États de se faire la guerre sans condition"
+     ],
+     "reponse": 0,
+     "aide": "Pense au but de toute la partie : construire des règles et des institutions.",
+     "explication": "Chaque étape cherche à **encadrer** les rapports de force par des règles et des institutions, sans supprimer la souveraineté des États."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9ebff1b-5ce2-5148-a15d-06d4b4f29079",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Juger des États, juger des hommes",
+   "competence": "analyser-document",
+   "situation": "Deux juridictions internationales ne jugent pas les mêmes cas. Ilyès lit un tableau, puis classe des affaires.",
+   "documents": [
+    {
+     "id": "cours",
+     "type": "tableau",
+     "titre": "CIJ et CPI",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "CIJ",
+      "CPI"
+     ],
+     "lignes": [
+      [
+       "Créée",
+       "1945",
+       "Rome 1998, en vigueur 2002"
+      ],
+      [
+       "Qui elle juge",
+       "Les États",
+       "Les individus"
+      ],
+      [
+       "Exemple de faits",
+       "Différend entre deux États",
+       "Génocide, crimes de guerre, crimes contre l’humanité"
+      ],
+      [
+       "Sa limite",
+       "Exige le consentement des États",
+       "Ni la Chine, ni la Russie, ni les États-Unis n’en sont parties"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cours",
+     "enonce": "Touche la limite de la CPI.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Regarde la dernière ligne, colonne CPI.",
+     "explication": "La CPI est limitée : **ni la Chine, ni la Russie, ni les États-Unis** n’en sont parties."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque affaire : devant la CIJ ou devant la CPI ?",
+     "categories": [
+      "CIJ",
+      "CPI"
+     ],
+     "items": [
+      [
+       "Un litige de frontière maritime entre deux États",
+       0
+      ],
+      [
+       "Un chef de milice accusé de crimes de guerre",
+       1
+      ],
+      [
+       "Un différend sur un traité entre deux États",
+       0
+      ],
+      [
+       "Un dirigeant poursuivi pour crimes contre l’humanité",
+       1
+      ]
+     ],
+     "aide": "Se demander : qui est jugé, un État ou une personne ?",
+     "explication": "La **CIJ** juge des **États** ; la **CPI** juge des **individus**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la CPI ne peut-elle pas juger tout le monde ?",
+     "options": [
+      "Des grandes puissances n’en sont pas parties",
+      "Elle ne juge que les États, pas les individus",
+      "Elle a été supprimée par le Conseil de sécurité",
+      "Elle n’a compétence que sur le continent européen"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « Sa limite ».",
+     "explication": "Des **grandes puissances** (Chine, Russie, États-Unis) **n’en sont pas parties**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la CIJ de l’entrée en vigueur de la CPI ?",
+     "reponse": 57,
+     "unite": "ans",
+     "aide": "Soustrais 1945 à 2002.",
+     "explication": "2002 − 1945 = **57 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9ebff1b-5ce2-5148-a15d-06d4b4f29079",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le veto du Conseil de sécurité",
+   "competence": "analyser-document",
+   "situation": "Trois votes imaginés au Conseil de sécurité : Emeric doit dire lesquels aboutissent, en appliquant la règle.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La règle du vote",
+     "auteur": "Résumé de la Charte des Nations unies",
+     "source": "Règle résumée pour l’exercice.",
+     "blocs": [
+      "Le Conseil compte quinze membres. Une résolution est adoptée avec au moins neuf voix pour, si aucun des cinq membres permanents ne vote contre."
+     ]
+    },
+    {
+     "id": "votes",
+     "type": "tableau",
+     "titre": "Trois votes",
+     "source": "Votes imaginés pour l’exercice.",
+     "colonnes": [
+      "Vote",
+      "Pour",
+      "Contre",
+      "Abstentions",
+      "Contre d’un membre permanent ?"
+     ],
+     "lignes": [
+      [
+       "A",
+       "10",
+       "0",
+       "5",
+       "Non"
+      ],
+      [
+       "B",
+       "13",
+       "1",
+       "1",
+       "Oui"
+      ],
+      [
+       "C",
+       "8",
+       "0",
+       "7",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque vote : résolution adoptée ou rejetée ?",
+     "categories": [
+      "Adoptée",
+      "Rejetée"
+     ],
+     "items": [
+      [
+       "Vote A",
+       0
+      ],
+      [
+       "Vote B",
+       1
+      ],
+      [
+       "Vote C",
+       1
+      ]
+     ],
+     "aide": "Il faut neuf voix pour, et aucun veto.",
+     "explication": "**A** est adopté (10 voix, pas de veto). **B** est rejeté (veto). **C** est rejeté (8 voix seulement)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de voix manque-t-il au vote C pour atteindre le minimum ?",
+     "reponse": 1,
+     "unite": "voix",
+     "aide": "Compare 8 à 9.",
+     "explication": "9 − 8 = **1 voix**."
+    },
+    {
+     "type": "zone",
+     "document": "votes",
+     "enonce": "Touche la case qui déclenche un veto.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "Cherche la seule case « Oui ».",
+     "explication": "Un membre permanent a voté contre au vote B : c’est un **veto**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le vote B est-il rejeté malgré 13 voix pour ?",
+     "options": [
+      "Un membre permanent a voté contre : c’est un veto",
+      "Il faut quinze voix pour adopter une résolution",
+      "Les abstentions comptent comme des voix contre",
+      "Un seul vote contre suffit toujours à rejeter"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne.",
+     "explication": "Le **droit de veto** des cinq permanents garantit leur participation, mais il **bloque** le Conseil dès que l’un d’eux s’oppose."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cfc6132-e315-5827-9d28-e648feea944e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le golfe et ses deux rivaux",
+   "competence": "lire-carte",
+   "situation": "Élise observe une carte du golfe Persique, où deux puissances rivales se font face autour d’un passage étroit.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le Moyen-Orient et le golfe Persique",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      28,
+      8,
+      68,
+      42
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 56.3,
+       "lat": 26.5,
+       "symbole": "lettre",
+       "lettre": "A"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux puissances régionales rivales : l’Arabie saoudite et l’Iran.",
+     "reponse": [
+      "SAU",
+      "IRN"
+     ],
+     "multiple": true,
+     "aide": "L’une est sur la rive ouest du golfe Persique, l’autre sur la rive est.",
+     "explication": "L’**Arabie saoudite** et l’**Iran** se font face de part et d’autre du golfe : leur rivalité structure de nombreux conflits."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit d’Ormuz, à la sortie du golfe Persique.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est un passage étroit entre l’Iran et Oman.",
+     "explication": "Le détroit d’**Ormuz** (A) est la porte de sortie du golfe Persique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le détroit d’Ormuz est-il stratégique ?",
+     "options": [
+      "Une grande part du pétrole du Golfe y transite",
+      "Il sépare l’Europe de l’Asie",
+      "Il relie la mer Noire à la Méditerranée",
+      "Il abrite les principales bases militaires russes"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’on exporte depuis les pays du Golfe.",
+     "explication": "Le pétrole et le gaz du Golfe transitent par **Ormuz** : un passage **vital** pour l’approvisionnement mondial."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cfc6132-e315-5827-9d28-e648feea944e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’un partage à l’autre",
+   "competence": "se-reperer-temps",
+   "situation": "Une frise et un tableau retracent les décisions qui ont fait du Moyen-Orient un foyer de conflits.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Moyen-Orient au XXe siècle",
+     "debut": 1910,
+     "fin": 2000,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "mandats",
+       "debut": 1920,
+       "fin": 1948,
+       "nom": "Mandats",
+       "teinte": "sable"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "sykes",
+       "date": 1916,
+       "nom": "Sykes-Picot"
+      },
+      {
+       "id": "partage",
+       "date": 1947,
+       "nom": "Plan de partage"
+      },
+      {
+       "id": "six",
+       "date": 1967,
+       "nom": "Six Jours"
+      },
+      {
+       "id": "kippour",
+       "date": 1973,
+       "nom": "Kippour"
+      },
+      {
+       "id": "oslo",
+       "date": 1993,
+       "nom": "Oslo"
+      }
+     ]
+    },
+    {
+     "id": "decisions",
+     "type": "tableau",
+     "titre": "Trois décisions",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Décision",
+      "Date",
+      "Ce qu’elle prévoit"
+     ],
+     "lignes": [
+      [
+       "Déclaration Balfour",
+       "1917",
+       "Un foyer national juif en Palestine"
+      ],
+      [
+       "Plan de partage de l’ONU",
+       "1947",
+       "Un État juif et un État arabe"
+      ],
+      [
+       "Accords d’Oslo",
+       "1993",
+       "Reconnaissance mutuelle, autonomie palestinienne"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la guerre après laquelle Israël occupe la Cisjordanie, Gaza et le Golan.",
+     "reponse": [
+      "six"
+     ],
+     "aide": "C’est une guerre de 1967.",
+     "explication": "La guerre des **Six Jours** (1967) conduit à l’occupation de la Cisjordanie, de Gaza et du Golan."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déclaration Balfour du plan de partage de l’ONU ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais 1917 à 1947.",
+     "explication": "1947 − 1917 = **30 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque décision à son effet.",
+     "paires": [
+      [
+       "Déclaration Balfour",
+       "Promesse d’un foyer national juif"
+      ],
+      [
+       "Plan de partage",
+       "Deux États prévus en Palestine"
+      ],
+      [
+       "Accords d’Oslo",
+       "Autonomie palestinienne"
+      ]
+     ],
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "**Balfour** promet un foyer national juif, le **plan de partage** prévoit deux États, **Oslo** ouvre l’autonomie palestinienne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’ont en commun Sykes-Picot et la déclaration Balfour ?",
+     "options": [
+      "Des décisions prises de l’extérieur sur les territoires de la région",
+      "Des accords signés entre Israël et ses voisins",
+      "Des traités de paix conclus à l’issue des guerres israélo-arabes",
+      "Des résolutions votées par le Conseil de sécurité"
+     ],
+     "reponse": 0,
+     "aide": "Qui décide, en 1916 et en 1917 ?",
+     "explication": "Les deux sont des décisions de **puissances extérieures** (France et Royaume-Uni), qui ont tracé des frontières de l’extérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cfc6132-e315-5827-9d28-e648feea944e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Aucun conflit n’est isolé",
+   "competence": "analyser-document",
+   "situation": "Une carte des territoires occupés en 1967 et un tableau des puissances extérieures : Yanis cherche pourquoi la paix est si difficile.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Israël et ses voisins",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      30,
+      28,
+      40,
+      36
+     ],
+     "lieux": [
+      {
+       "id": "golan",
+       "lon": 35.75,
+       "lat": 33,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "cisjordanie",
+       "lon": 35.25,
+       "lat": 32,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "gaza",
+       "lon": 34.45,
+       "lat": 31.45,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "puissances",
+     "type": "tableau",
+     "titre": "Des puissances dans la région",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Puissance",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "États-Unis",
+       "Longtemps garants de l’équilibre régional"
+      ],
+      [
+       "Russie",
+       "Revenue par la Syrie à partir de 2015"
+      ],
+      [
+       "Iran",
+       "Rival de l’Arabie saoudite"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le plateau du Golan.",
+     "reponse": [
+      "golan"
+     ],
+     "aide": "Il est tout au nord d’Israël, près de la Syrie.",
+     "explication": "Le **Golan** (A) est un plateau au nord d’Israël, occupé depuis 1967."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la bande de Gaza.",
+     "reponse": [
+      "gaza"
+     ],
+     "aide": "Elle est sur la côte, au sud-ouest d’Israël.",
+     "explication": "**Gaza** (C) borde la Méditerranée, au sud-ouest d’Israël."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque conflit : guerre entre États ou guerre civile ?",
+     "categories": [
+      "Entre États",
+      "Guerre civile"
+     ],
+     "items": [
+      [
+       "Guerre Iran-Irak",
+       0
+      ],
+      [
+       "Guerre civile syrienne",
+       1
+      ],
+      [
+       "Guerre des Six Jours",
+       0
+      ],
+      [
+       "Guerre au Yémen",
+       1
+      ],
+      [
+       "Guerre du Kippour",
+       0
+      ]
+     ],
+     "aide": "Se demander : qui s’affronte, deux États ou des camps dans un même pays ?",
+     "explication": "Iran-Irak, Six Jours et Kippour opposent des **États** ; la Syrie (depuis 2011) et le Yémen (depuis 2014) sont des **guerres civiles** où s’invitent des puissances extérieures."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un accord local est-il si difficile à obtenir ?",
+     "options": [
+      "Chaque conflit sert de terrain à des rivalités plus larges",
+      "Les États de la région refusent toute négociation",
+      "L’ONU interdit les médiations dans la région",
+      "Les frontières de la région sont parfaitement réglées"
+     ],
+     "reponse": 0,
+     "aide": "Relis la conclusion du cours : aucun conflit n’est isolé.",
+     "explication": "**Aucun conflit du Moyen-Orient n’est isolé** : un accord local suppose l’accord de puissances extérieures."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab50a3ad-d906-5231-a928-755c8f7b0037",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Histoire ou mémoire ?",
+   "competence": "analyser-document",
+   "situation": "Deux documents parlent de la guerre d’Algérie : celui d’un historien, celui d’un ancien appelé imaginaire. Bastien apprend à les distinguer.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "tableau",
+     "titre": "Deux façons de parler du passé",
+     "source": "Tableau écrit pour l’exercice.",
+     "colonnes": [
+      "",
+      "Document A",
+      "Document B"
+     ],
+     "lignes": [
+      [
+       "Qui parle",
+       "Un historien",
+       "Un ancien appelé (témoin imaginaire)"
+      ],
+      [
+       "Sur quoi il s’appuie",
+       "Des archives, des sources croisées",
+       "Ses souvenirs personnels"
+      ],
+      [
+       "Ce qu’on peut en faire",
+       "Le discuter, le corriger",
+       "L’écouter, sans en faire un récit complet"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deux",
+     "enonce": "Touche la case qui décrit la méthode de l’histoire.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "L’histoire s’appuie sur des sources, pas sur des souvenirs.",
+     "explication": "L’histoire repose sur des **archives** et des **sources croisées** : c’est un savoir critique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : histoire ou mémoire ?",
+     "categories": [
+      "Histoire",
+      "Mémoire"
+     ],
+     "items": [
+      [
+       "Croiser plusieurs archives",
+       0
+      ],
+      [
+       "Raconter ce que l’on a vécu",
+       1
+      ],
+      [
+       "Être discuté et révisé par d’autres chercheurs",
+       0
+      ],
+      [
+       "Rester sélectif, porté par un groupe",
+       1
+      ],
+      [
+       "S’appuyer sur une méthode critique",
+       0
+      ]
+     ],
+     "aide": "L’histoire se discute ; la mémoire se vit.",
+     "explication": "L’**histoire** croise les sources, se discute et se révise. La **mémoire** est un souvenir vécu, sélectif, porté par un groupe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi a-t-on longtemps parlé d’« événements » plutôt que de « guerre » ?",
+     "options": [
+      "Pour éviter de reconnaître officiellement une guerre",
+      "Parce que le mot « guerre » n’existait pas en 1954",
+      "Parce que l’ONU interdisait ce mot",
+      "Parce que les historiens avaient prouvé que ce n’était pas une guerre"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « guerre » n’est reconnu officiellement qu’en 1999.",
+     "explication": "La France parle d’« **événements** » et d’« opérations de maintien de l’ordre » jusqu’en **1999** : un choix de mots qui évite de reconnaître la guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab50a3ad-d906-5231-a928-755c8f7b0037",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des mémoires qui se heurtent",
+   "competence": "se-reperer-temps",
+   "situation": "Cléo place sur une frise la guerre, la fin des combats et quelques gestes de reconnaissance, puis relie des groupes à leur mémoire.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Guerre et reconnaissance",
+     "debut": 1950,
+     "fin": 2025,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "guerre",
+       "debut": 1954,
+       "fin": 1962,
+       "nom": "Guerre",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "evian",
+       "date": 1962,
+       "nom": "Évian"
+      },
+      {
+       "id": "mot",
+       "date": 1999,
+       "nom": "Mot « guerre »"
+      },
+      {
+       "id": "audin",
+       "date": 2018,
+       "nom": "Audin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période de la guerre d’Algérie.",
+     "reponse": [
+      "guerre"
+     ],
+     "aide": "Elle commence en 1954.",
+     "explication": "La guerre dure de **1954 à 1962**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre les accords d’Évian et la reconnaissance officielle du mot « guerre » ?",
+     "reponse": 37,
+     "unite": "ans",
+     "aide": "Soustrais 1962 à 1999.",
+     "explication": "1999 − 1962 = **37 ans** de silence officiel."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque groupe à sa mémoire.",
+     "paires": [
+      [
+       "Les appelés du contingent",
+       "Longtemps silencieux"
+      ],
+      [
+       "Les pieds-noirs",
+       "Une mémoire de l’arrachement"
+      ],
+      [
+       "Les harkis",
+       "Supplétifs abandonnés"
+      ],
+      [
+       "Les immigrés algériens",
+       "Marqués par la répression du 17 octobre 1961"
+      ]
+     ],
+     "aide": "Chaque groupe a vécu la guerre différemment.",
+     "explication": "Les mémoires sont **plurielles et concurrentes** : chaque groupe retient ce qu’il a vécu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que produisent les lois d’amnistie qui suivent les accords d’Évian ?",
+     "options": [
+      "Elles interdisent les poursuites et referment le dossier",
+      "Elles ouvrent les archives au public",
+      "Elles indemnisent immédiatement toutes les victimes",
+      "Elles créent une commission d’enquête indépendante"
+     ],
+     "reponse": 0,
+     "aide": "Le silence n’est pas un oubli : c’est une décision politique.",
+     "explication": "Les **amnisties** interdisent les poursuites et referment le dossier : le **silence** est une **décision politique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab50a3ad-d906-5231-a928-755c8f7b0037",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’État reconnaît, l’historien établit",
+   "competence": "argumenter",
+   "situation": "Une exposition imaginaire mêle archives, conférence et cérémonie. Ninon doit distinguer ce qui relève de la mémoire et ce qui relève de l’histoire.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Exposition « Paris, octobre 1961 »",
+     "sousTitre": "Affiche imaginée pour l’exercice",
+     "emoji": "🖼️",
+     "lignes": [
+      {
+       "texte": "Archives de la préfecture, photographies, témoignages croisés",
+       "id": "archives"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Conférence d’un historien : ce que disent les sources",
+       "id": "conf"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Dépôt de gerbe devant la plaque commémorative",
+       "id": "gerbe"
+      }
+     ],
+     "pied": "Entrée libre",
+     "teinte": "violet"
+    },
+    {
+     "id": "gestes",
+     "type": "tableau",
+     "titre": "Trois gestes de l’État",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Année",
+      "Geste"
+     ],
+     "lignes": [
+      [
+       "2001",
+       "Plaque commémorative pour le 17 octobre 1961"
+      ],
+      [
+       "2018",
+       "Responsabilité de la France dans l’assassinat de Maurice Audin"
+      ],
+      [
+       "2021",
+       "Reconnaissance pour Ali Boumendjel"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche les deux activités qui relèvent du travail de l’historien.",
+     "reponse": [
+      "archives",
+      "conf"
+     ],
+     "multiple": true,
+     "aide": "L’historien travaille sur des sources et les explique.",
+     "explication": "Les **archives** et la **conférence** relèvent de l’histoire ; le **dépôt de gerbe** est un geste de mémoire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque action : geste de l’État ou travail de l’historien ?",
+     "categories": [
+      "Geste de l’État",
+      "Travail de l’historien"
+     ],
+     "items": [
+      [
+       "Reconnaître la responsabilité de la France dans la mort de Maurice Audin",
+       0
+      ],
+      [
+       "Établir par les archives ce qui s’est passé le 17 octobre 1961",
+       1
+      ],
+      [
+       "Poser une plaque commémorative",
+       0
+      ],
+      [
+       "Confronter des témoignages et des sources écrites",
+       1
+      ]
+     ],
+     "aide": "L’un reconnaît, l’autre établit.",
+     "explication": "L’**État** reconnaît et commémore ; l’**historien** établit avec des sources. Les deux gestes ne se remplacent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la plaque de 2001 de la reconnaissance du cas Audin ?",
+     "reponse": 17,
+     "unite": "ans",
+     "aide": "Soustrais 2001 à 2018.",
+     "explication": "2018 − 2001 = **17 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un geste de l’État ne remplace-t-il pas le travail de l’historien ?",
+     "options": [
+      "L’État reconnaît un fait, l’historien doit l’établir avec des sources",
+      "L’État n’a pas le droit de parler de l’histoire",
+      "L’historien décide seul de ce que l’État doit reconnaître",
+      "Le travail de l’historien est moins fiable que celui de l’État"
+     ],
+     "reponse": 0,
+     "aide": "Relis la conclusion sur reconnaître et établir.",
+     "explication": "« L’**État peut reconnaître**, l’**historien doit établir** » : un geste politique ne tient pas lieu de démonstration."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cae0a96-b4b1-55c5-9205-54984ae907fc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle de débat",
+   "competence": "se-reperer-temps",
+   "situation": "Ludo situe sur une frise les moments où l’on a cherché à dire qui était responsable de 1914.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Qui est responsable de 1914 ?",
+     "debut": 1910,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "versailles",
+       "date": 1919,
+       "nom": "Versailles"
+      },
+      {
+       "id": "fischer",
+       "date": 1961,
+       "nom": "Fischer"
+      },
+      {
+       "id": "clark",
+       "date": 2012,
+       "nom": "Clark"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année de la thèse de l’historien allemand Fritz Fischer.",
+     "reponse": [
+      "fischer"
+     ],
+     "aide": "Cherche le nom de l’historien.",
+     "explication": "Fritz Fischer publie en **1961** : l’Allemagne a poursuivi des buts de guerre expansionnistes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le traité de Versailles de la thèse de Fischer ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Soustrais 1919 à 1961.",
+     "explication": "1961 − 1919 = **42 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moment du débat à sa thèse.",
+     "paires": [
+      [
+       "Traité de Versailles (1919)",
+       "L’Allemagne et ses alliés sont responsables"
+      ],
+      [
+       "Fritz Fischer (1961)",
+       "Des buts de guerre expansionnistes"
+      ],
+      [
+       "Christopher Clark (2012)",
+       "Des dirigeants « somnambules »"
+      ],
+      [
+       "Années 1920",
+       "Chacun cherche à se disculper"
+      ]
+     ],
+     "aide": "Une thèse par moment du débat.",
+     "explication": "Le débat évolue : **1919** la culpabilité allemande, **années 1920** la bataille des documents, **1961** Fischer, **aujourd’hui** l’engrenage."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cae0a96-b4b1-55c5-9205-54984ae907fc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’engrenage de l’été 1914",
+   "competence": "analyser-document",
+   "situation": "Un tableau retrace cinq étapes de la crise de l’été 1914. Zoé y cherche comment une crise locale est devenue une guerre européenne.",
+   "documents": [
+    {
+     "id": "crise",
+     "type": "tableau",
+     "titre": "L’été 1914",
+     "source": "D’après le cours ; dates arrondies au jour.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "28 juin",
+       "Attentat de Sarajevo contre l’archiduc François-Ferdinand"
+      ],
+      [
+       "23 juillet",
+       "Ultimatum de l’Autriche-Hongrie à la Serbie"
+      ],
+      [
+       "30 juillet",
+       "Mobilisation générale de la Russie"
+      ],
+      [
+       "1er août",
+       "L’Allemagne déclare la guerre à la Russie"
+      ],
+      [
+       "3 août",
+       "L’Allemagne déclare la guerre à la France"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent l’ultimatum à la Serbie (23 juillet) de la déclaration de guerre allemande à la France (3 août) ?",
+     "reponse": 11,
+     "unite": "jours",
+     "aide": "Du 23 au 31 juillet, puis jusqu’au 3 août.",
+     "explication": "Du 23 juillet au 3 août : 8 jours jusqu’au 31, puis 3 de plus, soit **11 jours**."
+    },
+    {
+     "type": "zone",
+     "document": "crise",
+     "enonce": "Touche l’événement qui déclenche la crise.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "C’est le premier événement de la liste.",
+     "explication": "L’**attentat de Sarajevo** (28 juin) est l’étincelle de la crise."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays à son rôle dans la crise.",
+     "paires": [
+      [
+       "Autriche-Hongrie",
+       "Envoie l’ultimatum à la Serbie"
+      ],
+      [
+       "Russie",
+       "Mobilise son armée en soutien à la Serbie"
+      ],
+      [
+       "Allemagne",
+       "Déclare la guerre à la Russie puis à la France"
+      ]
+     ],
+     "aide": "Relis les lignes du tableau.",
+     "explication": "L’**Autriche-Hongrie** lance l’ultimatum, la **Russie** mobilise, l’**Allemagne** déclare la guerre : l’engrenage est enclenché."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mécanisme explique que la crise s’étende si vite ?",
+     "options": [
+      "Alliances et plans de mobilisation s’enchaînent",
+      "Un complot unique, dirigé en secret par un seul État",
+      "Un ordre du tsar, imposé à tous les États d’Europe",
+      "Un accident de parcours sans aucune cause politique"
+     ],
+     "reponse": 0,
+     "aide": "Que font les alliés d’un État quand il entre en guerre ?",
+     "explication": "Les **alliances**, les **plans de mobilisation rigides** et la course aux armements enchaînent les décisions : c’est la lecture actuelle de l’**engrenage**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cae0a96-b4b1-55c5-9205-54984ae907fc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux lectures, des sources pour juger",
+   "competence": "argumenter",
+   "situation": "Deux thèses imaginaires s’opposent sur 1914. Enzo trie leurs arguments et cherche comment les départager.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Thèse A",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Les [[a|archives]] montrent que les dirigeants de l’Empire allemand voulaient élargir leur puissance en Europe et ont accepté le risque d’une guerre générale."
+     ]
+    },
+    {
+     "id": "b",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Thèse B",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Aucun dirigeant n’a voulu un conflit de cette ampleur : les alliances, les plans de mobilisation et l’aveuglement ont enchaîné les décisions, comme dans une machine qu’on ne sait plus arrêter."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "a",
+     "enonce": "Touche le mot qui montre sur quoi s’appuie la thèse A.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Un historien s’appuie sur des sources écrites.",
+     "explication": "La thèse A s’appuie sur les **archives** : c’est la méthode de Fischer en 1961."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument : responsabilité principale de l’Allemagne ou responsabilités partagées ?",
+     "categories": [
+      "Principale de l’Allemagne",
+      "Responsabilités partagées"
+     ],
+     "items": [
+      [
+       "Les archives allemandes révèlent des buts de guerre expansionnistes",
+       0
+      ],
+      [
+       "Les plans de mobilisation laissent peu de marge à la diplomatie",
+       1
+      ],
+      [
+       "Le jeu des alliances étend automatiquement le conflit",
+       1
+      ],
+      [
+       "Berlin encourage Vienne à punir la Serbie",
+       0
+      ],
+      [
+       "Les dirigeants n’ont pas mesuré ce qu’ils déclenchaient",
+       1
+      ]
+     ],
+     "aide": "La thèse A charge l’Allemagne, la thèse B répartit.",
+     "explication": "Les arguments sur les **buts de guerre** et l’attitude de **Berlin** chargent l’Allemagne ; **alliances**, **plans** et **aveuglement** répartissent les responsabilités."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les quatre temps du débat, du plus ancien au plus récent.",
+     "items": [
+      "1919 : l’article 231 désigne l’Allemagne et ses alliés",
+      "Années 1920 : chacun publie ses recueils de documents",
+      "1961 : Fritz Fischer et les buts de guerre allemands",
+      "Aujourd’hui : l’engrenage, des responsabilités partagées"
+     ],
+     "aide": "Pense à la date de chaque moment.",
+     "explication": "**1919 → années 1920 → 1961 → aujourd’hui** : la réponse change parce que les sources et les questions changent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel critère permet de départager deux interprétations ?",
+     "options": [
+      "Leur capacité à rendre compte des sources connues",
+      "Le nombre de pays qui les adoptent",
+      "La date à laquelle elles ont été publiées",
+      "L’autorité de l’historien qui les défend"
+     ],
+     "reponse": 0,
+     "aide": "Toutes les interprétations ne se valent pas.",
+     "explication": "Les interprétations se jugent aux **sources**, à la **méthode** et à leur capacité de rendre compte des **documents connus**."
+    }
+   ]
+  },
+  {
+   "chapitre": "92b98666-de2b-5f10-addb-0a8b5a5b5195",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux crimes, deux tribunaux",
+   "competence": "analyser-document",
+   "situation": "Un tableau compare le génocide des Tutsi et les guerres d’ex-Yougoslavie. Lyes y cherche ce qui les distingue.",
+   "documents": [
+    {
+     "id": "crimes",
+     "type": "tableau",
+     "titre": "Rwanda et ex-Yougoslavie",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Rwanda, 1994",
+      "Ex-Yougoslavie, 1991-1999"
+     ],
+     "lignes": [
+      [
+       "Fait majeur",
+       "Cent jours de génocide",
+       "Guerres d’éclatement, siège de Sarajevo"
+      ],
+      [
+       "Victimes",
+       "Environ 800 000 morts (Tutsi)",
+       "Srebrenica, juillet 1995 : plus de 8 000 hommes et adolescents bosniaques musulmans"
+      ],
+      [
+       "Communauté internationale",
+       "N’intervient pas",
+       "Intervient tard"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de morts par jour, en moyenne, pendant les cent jours du génocide des Tutsi ?",
+     "reponse": 8000,
+     "unite": "morts",
+     "aide": "Divise 800 000 par 100.",
+     "explication": "800 000 ÷ 100 = **8 000 morts par jour** en moyenne."
+    },
+    {
+     "type": "zone",
+     "document": "crimes",
+     "enonce": "Touche la case qui cite le massacre de Srebrenica.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la colonne de l’ex-Yougoslavie.",
+     "explication": "Le massacre de **Srebrenica**, en juillet 1995, est qualifié de génocide par la justice internationale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque juridiction à son domaine.",
+     "paires": [
+      [
+       "TPIY",
+       "Ex-Yougoslavie"
+      ],
+      [
+       "TPIR",
+       "Rwanda"
+      ],
+      [
+       "CPI",
+       "Tribunal permanent, depuis 2002"
+      ]
+     ],
+     "aide": "Les deux premiers sont nés pour un conflit précis.",
+     "explication": "Le **TPIY** (1993) juge l’ex-Yougoslavie, le **TPIR** (1994) le Rwanda ; la **CPI** est permanente depuis **2002**."
+    }
+   ]
+  },
+  {
+   "chapitre": "92b98666-de2b-5f10-addb-0a8b5a5b5195",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Nuremberg à La Haye",
+   "competence": "se-reperer-temps",
+   "situation": "Une frise et un tableau retracent la naissance et les verdicts de la justice internationale pénale.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La justice internationale pénale",
+     "debut": 1940,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nuremberg",
+       "date": 1945,
+       "nom": "Nuremberg"
+      },
+      {
+       "id": "tpiy",
+       "date": 1993,
+       "nom": "TPIY"
+      },
+      {
+       "id": "cpi",
+       "date": 2002,
+       "nom": "CPI"
+      }
+     ]
+    },
+    {
+     "id": "accuses",
+     "type": "tableau",
+     "titre": "Trois accusés",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Accusé",
+      "Issue"
+     ],
+     "lignes": [
+      [
+       "Slobodan Milošević",
+       "Mort avant son verdict"
+      ],
+      [
+       "Radovan Karadžić",
+       "Condamné à la perpétuité"
+      ],
+      [
+       "Jean Kambanda, Premier ministre rwandais",
+       "Condamné pour génocide"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le tribunal qui a forgé la notion de crime contre l’humanité.",
+     "reponse": [
+      "nuremberg"
+     ],
+     "aide": "C’est le plus ancien des trois.",
+     "explication": "Le tribunal de **Nuremberg** (1945-1946) forge la notion de **crime contre l’humanité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création du TPIY de celle de la CPI (entrée en vigueur) ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Soustrais 1993 à 2002.",
+     "explication": "2002 − 1993 = **9 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque accusé à l’issue de son procès.",
+     "paires": [
+      [
+       "Milošević",
+       "Mort avant son verdict"
+      ],
+      [
+       "Karadžić",
+       "Condamné à la perpétuité"
+      ],
+      [
+       "Kambanda",
+       "Condamné pour génocide"
+      ]
+     ],
+     "aide": "Relis le tableau.",
+     "explication": "**Milošević** meurt avant son verdict ; **Karadžić** est condamné à la perpétuité ; **Kambanda** est condamné pour génocide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la mort de Milošević avant son verdict pose-t-elle problème ?",
+     "options": [
+      "Elle prive les victimes d’un jugement sur un accusé principal",
+      "Elle prouve que le tribunal n’avait pas de compétence",
+      "Elle annule les condamnations de tous ses coaccusés",
+      "Elle met fin à l’existence du tribunal pour l’ex-Yougoslavie"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’attendent les victimes d’un procès.",
+     "explication": "Sans verdict, la justice ne peut pas **établir ni sanctionner** ce que Milošević a fait : les victimes restent sans jugement sur l’un des principaux accusés."
+    }
+   ]
+  },
+  {
+   "chapitre": "92b98666-de2b-5f10-addb-0a8b5a5b5195",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La justice sur la colline",
+   "competence": "analyser-document",
+   "situation": "Au Rwanda, des dizaines de milliers de prisonniers attendaient un procès. Une habitante imaginaire raconte les gacaca, et un tableau en donne le bilan.",
+   "documents": [
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la colline",
+     "source": "Témoignage imaginé, écrit pour l’exercice.",
+     "blocs": [
+      "On s’est assis sur l’herbe, sur la place de la colline, en plein air. Les voisins écoutaient, les rescapés racontaient. Un juge du village posait les questions.",
+      "C’était long, mais nous n’avions pas besoin d’aller jusqu’à [[a|Arusha]], en Tanzanie, où siège le tribunal international."
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Les gacaca, bilan",
+     "source": "D’après le cours ; chiffres arrondis.",
+     "colonnes": [
+      "Ce qu’elles apportent",
+      "Ce qu’on leur reproche"
+     ],
+     "lignes": [
+      [
+       "Près de deux millions de dossiers jugés entre 2002 et 2012",
+       "Des garanties procédurales insuffisantes"
+      ],
+      [
+       "Rapidité, proximité avec les victimes",
+       "Le risque de règlements de comptes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche la ville étrangère où siège le tribunal international évoqué.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est en Tanzanie.",
+     "explication": "Le **TPIR** siège à **Arusha**, en Tanzanie : loin des collines rwandaises."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche ce qu’on reproche aux gacaca sur le terrain des droits de la défense.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche un mot lié à la procédure.",
+     "explication": "Les gacaca offrent des **garanties procédurales insuffisantes** : la défense y est mal protégée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de dossiers les gacaca ont-elles jugés, en moyenne, par an entre 2002 et 2012 (près de deux millions en dix ans) ?",
+     "reponse": 200000,
+     "unite": "dossiers",
+     "aide": "Divise 2 000 000 par 10.",
+     "explication": "2 000 000 ÷ 10 = **200 000 dossiers par an**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : justice internationale ou justice locale ?",
+     "categories": [
+      "Internationale",
+      "Locale (gacaca)"
+     ],
+     "items": [
+      [
+       "Fixe la qualification de génocide",
+       0
+      ],
+      [
+       "Traite la masse des dossiers",
+       1
+      ],
+      [
+       "Se tient en plein air, près des victimes",
+       1
+      ],
+      [
+       "Juge en priorité les principaux responsables",
+       0
+      ],
+      [
+       "Siège loin du pays où les crimes ont eu lieu",
+       0
+      ]
+     ],
+     "aide": "L’une traite l’exemplarité, l’autre la vie du village.",
+     "explication": "La **justice internationale** fixe la qualification et juge les principaux responsables ; la **justice locale** traite la masse et la vie du village."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Rwanda a-t-il rouvert des juridictions traditionnelles ?",
+     "options": [
+      "Plus de cent mille détenus attendaient d’être jugés",
+      "L’ONU interdisait de juger les génocidaires sur place",
+      "Le TPIR avait déjà jugé tous les suspects",
+      "Les tribunaux ordinaires avaient été entièrement reconstruits"
+     ],
+     "reponse": 0,
+     "aide": "Pense au nombre de prisonniers dans les prisons rwandaises.",
+     "explication": "Avec **plus de cent mille détenus**, les tribunaux ordinaires ne suffisaient pas : les **gacaca** traitent la masse des dossiers."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7121606-c829-5476-b15b-db62fd25c312",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du silence à la reconnaissance",
+   "competence": "se-reperer-temps",
+   "situation": "Mila place sur une frise les moments où la mémoire du génocide des Juifs s’est réveillée en France.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le génocide des Juifs en France : silence et réveil",
+     "debut": 1940,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "vel",
+       "date": 1942,
+       "nom": "Vél d’Hiv"
+      },
+      {
+       "id": "eichmann",
+       "date": 1961,
+       "nom": "Procès Eichmann"
+      },
+      {
+       "id": "paxton",
+       "date": 1973,
+       "nom": "Paxton"
+      },
+      {
+       "id": "shoah",
+       "date": 1985,
+       "nom": "Film Shoah"
+      },
+      {
+       "id": "chirac",
+       "date": 1995,
+       "nom": "Discours de Chirac"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année du livre de Robert Paxton sur Vichy.",
+     "reponse": [
+      "paxton"
+     ],
+     "aide": "C’est entre le procès Eichmann et le film Shoah.",
+     "explication": "Robert Paxton publie *La France de Vichy* en **1973** et établit la collaboration d’État."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "La rafle du Vél d’Hiv",
+      "Le procès Eichmann",
+      "Le livre de Paxton",
+      "Le discours de Chirac"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1942 → 1961 → 1973 → 1995** : du crime au réveil, puis à la reconnaissance par l’État."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la rafle du Vél d’Hiv du discours qui reconnaît la responsabilité de l’État ?",
+     "reponse": 53,
+     "unite": "ans",
+     "aide": "Soustrais 1942 à 1995.",
+     "explication": "1995 − 1942 = **53 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7121606-c829-5476-b15b-db62fd25c312",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Déportés : mais lesquels ?",
+   "competence": "analyser-texte",
+   "situation": "Un déporté imaginaire raconte son retour en 1945. Nour y cherche les signes du silence, puis compare deux génocides.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "Deux génocides",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Victimes",
+      "Estimation",
+      "Nom du génocide"
+     ],
+     "lignes": [
+      [
+       "Les Juifs",
+       "Environ six millions",
+       "Shoah"
+      ],
+      [
+       "Les Tsiganes",
+       "Entre 200 000 et 500 000",
+       "Porajmos"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le retour",
+     "source": "Témoignage imaginé, écrit pour l’exercice.",
+     "blocs": [
+      "Je suis rentré en 1945. À la gare, on m’a serré la main, puis on m’a demandé de ne plus en parler.",
+      "Dans les papiers officiels, j’étais classé parmi les [[d|déportés]]. Personne ne disait que nous avions été arrêtés parce que nous étions juifs."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chiffres",
+     "enonce": "Touche la case qui donne le nom du génocide des Tsiganes.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Le mot commence par P.",
+     "explication": "Le génocide des Tsiganes s’appelle le **Porajmos**."
+    },
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche le mot officiel qui efface la spécificité du génocide des Juifs.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est le terme des papiers officiels.",
+     "explication": "Le mot « **déportés** » met dans la même catégorie tous les déportés et efface la spécificité du génocide des Juifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le retour des déportés se heurte-t-il à l’indifférence ?",
+     "options": [
+      "La société veut reconstruire plutôt que se souvenir",
+      "Les survivants refusent de parler à qui que ce soit",
+      "Les archives sont fermées à tous les historiens",
+      "L’État interdit toute évocation publique de la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Que veut faire la société française à la Libération ?",
+     "explication": "Après la guerre, la société veut **reconstruire**, pas se souvenir : c’est le temps du **silence**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : temps du silence ou réveil de la mémoire ?",
+     "categories": [
+      "Silence (1945-années 1960)",
+      "Réveil de la mémoire"
+     ],
+     "items": [
+      [
+       "Les victimes juives noyées parmi les « déportés »",
+       0
+      ],
+      [
+       "Le procès Eichmann à Jérusalem",
+       1
+      ],
+      [
+       "Le récit d’une France massivement résistante",
+       0
+      ],
+      [
+       "Le film Shoah de Claude Lanzmann",
+       1
+      ],
+      [
+       "Le livre de Paxton sur Vichy",
+       1
+      ]
+     ],
+     "aide": "Le silence précède les années 1960 ; le réveil vient ensuite.",
+     "explication": "Le **silence** : victimes noyées, résistancialisme. Le **réveil** : Eichmann (1961), Paxton (1973), *Shoah* (1985)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7121606-c829-5476-b15b-db62fd25c312",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Commémorer sans savoir ?",
+   "competence": "argumenter",
+   "situation": "Clara dépose une fleur au Mémorial. Un tableau rappelle les grands procès de la justice française, et un court texte décrit sa visite.",
+   "documents": [
+    {
+     "id": "proces",
+     "type": "tableau",
+     "titre": "Trois procès en France",
+     "source": "D’après le cours. Les crimes contre l’humanité sont imprescriptibles depuis 1964.",
+     "colonnes": [
+      "Procès",
+      "Année",
+      "Qui est jugé"
+     ],
+     "lignes": [
+      [
+       "Barbie",
+       "1987",
+       "Ancien chef de la Gestapo à Lyon"
+      ],
+      [
+       "Touvier",
+       "1994",
+       "Ancien responsable de la Milice à Lyon"
+      ],
+      [
+       "Papon",
+       "1998",
+       "Ancien haut fonctionnaire du régime de Vichy"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "visite",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une visite au Mémorial",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Lors de la cérémonie, Clara dépose une fleur et prend une photo pour ses réseaux.",
+      "En rentrant, elle ne sait pas dire qui étaient les victimes, ni pourquoi l’État français a été jugé responsable."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "proces",
+     "enonce": "Touche le procès d’un ancien haut fonctionnaire de Vichy.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche le procès de 1998.",
+     "explication": "Le procès de **Papon** (1998) juge un ancien haut fonctionnaire de Vichy."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déclaration d’imprescriptibilité (1964) du procès Barbie ?",
+     "reponse": 23,
+     "unite": "ans",
+     "aide": "Soustrais 1964 à 1987.",
+     "explication": "1987 − 1964 = **23 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque procès à la personne jugée.",
+     "paires": [
+      [
+       "Barbie",
+       "Ancien chef de la Gestapo à Lyon"
+      ],
+      [
+       "Touvier",
+       "Ancien responsable de la Milice à Lyon"
+      ],
+      [
+       "Papon",
+       "Ancien haut fonctionnaire de Vichy"
+      ]
+     ],
+     "aide": "Relis la dernière colonne.",
+     "explication": "**Barbie** dirigeait la Gestapo de Lyon, **Touvier** la Milice, **Papon** était haut fonctionnaire : la justice juge les auteurs de crimes contre l’humanité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que manque-t-il à Clara pour que sa commémoration ait du sens ?",
+     "options": [
+      "Des connaissances sur les faits et les responsables",
+      "Une autorisation officielle de commémorer",
+      "Un plus grand nombre de photographies du lieu",
+      "Un discours prononcé par un responsable politique"
+     ],
+     "reponse": 0,
+     "aide": "Commémorer sans comprendre est un risque.",
+     "explication": "Commémorer **sans connaître** est le risque d’aujourd’hui : il faut les **faits**, les **responsabilités** et l’**histoire**."
+    }
+   ]
+  }
+ ]
+}

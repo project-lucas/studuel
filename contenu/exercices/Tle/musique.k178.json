@@ -1,0 +1,3570 @@
+{
+ "niveau": "Tle",
+ "matiere": "musique",
+ "exercices": [
+  {
+   "chapitre": "82c6831f-46ec-573b-866a-0a1cda775626",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq dates pour un voyage",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé de culture musicale. Tu places cinq repères sur une frise, puis tu associes chaque période à un compositeur.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Cinq œuvres, quatre siècles",
+     "debut": 1600,
+     "fin": 2000,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "or",
+       "date": 1607,
+       "nom": "L’Orfeo"
+      },
+      {
+       "id": "cb",
+       "date": 1722,
+       "nom": "Clavier bien tempéré"
+      },
+      {
+       "id": "n9",
+       "date": 1824,
+       "nom": "Neuvième Symphonie"
+      },
+      {
+       "id": "sa",
+       "date": 1913,
+       "nom": "Sacre du printemps"
+      },
+      {
+       "id": "sc",
+       "date": 1948,
+       "nom": "Musique concrète"
+      }
+     ],
+     "source": "Repères d’histoire de la musique occidentale."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "n9"
+     ],
+     "enonce": "Touche l’œuvre composée pendant la période classique et sa charnière, entre 1750 et 1850.",
+     "aide": "Une seule des cinq dates tombe dans cet intervalle.",
+     "explication": "C’est la **Neuvième Symphonie** de Beethoven, en **1824** : les autres œuvres sont avant 1750 ou après 1850."
+    },
+    {
+     "type": "nombre",
+     "reponse": 115,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *L’Orfeo* du *Clavier bien tempéré* ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "**115 ans** : 1722 − 1607 = 115. Les deux œuvres appartiennent au baroque."
+    },
+    {
+     "type": "nombre",
+     "reponse": 89,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la Neuvième Symphonie du *Sacre du printemps* ?",
+     "aide": "Soustrais 1824 de 1913.",
+     "explication": "**89 ans** : 1913 − 1824 = 89."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque période à un compositeur qui lui appartient.",
+     "paires": [
+      [
+       "Renaissance",
+       "Josquin des Prés"
+      ],
+      [
+       "Baroque",
+       "Haendel"
+      ],
+      [
+       "Classique",
+       "Haydn"
+      ],
+      [
+       "Romantique",
+       "Chopin"
+      ]
+     ],
+     "aide": "Pense aux dates : 1450-1600, 1600-1750, 1750-1820, XIXe siècle.",
+     "explication": "**Josquin des Prés** est de la Renaissance, **Haendel** du baroque, **Haydn** du classique, **Chopin** du romantique."
+    }
+   ]
+  },
+  {
+   "chapitre": "82c6831f-46ec-573b-866a-0a1cda775626",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À quelle époque cette musique ?",
+   "competence": "analyser-document",
+   "situation": "Un camarade a pris des notes à l’écoute de quatre extraits inconnus. Toi, tu dois les situer dans le temps, en t’appuyant sur des indices entendus.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Carnet d’écoute",
+     "colonnes": [
+      "Extrait",
+      "Effectif",
+      "Langage et rythme"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Voix d’hommes seules, sans instrument",
+       "Une seule ligne, rythme souple, sans pulsation marquée"
+      ],
+      [
+       "B",
+       "Clavecin et violoncelle jouant une basse continue, violons",
+       "Rythme moteur, ornements, énergie continue"
+      ],
+      [
+       "C",
+       "Quatuor à cordes",
+       "Mélodie accompagnée claire, phrases symétriques de quatre mesures"
+      ],
+      [
+       "D",
+       "Grand orchestre avec harpe et cuivres",
+       "Harmonies chromatiques, élans et contrastes d’expression"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui donne l’indice d’effectif le plus caractéristique de la musique baroque.",
+     "aide": "C’est un accompagnement grave que jouent ensemble un instrument à clavier et un instrument grave.",
+     "explication": "L’indice est la **basse continue** (clavecin et violoncelle) : elle signe le baroque."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à la période la plus probable.",
+     "paires": [
+      [
+       "A",
+       "Moyen Âge"
+      ],
+      [
+       "B",
+       "Baroque"
+      ],
+      [
+       "C",
+       "Classique"
+      ],
+      [
+       "D",
+       "Romantique"
+      ]
+     ],
+     "aide": "Une ligne sans accompagnement ; une basse continue ; des phrases symétriques ; un grand orchestre chromatique.",
+     "explication": "**A** : monodie, donc Moyen Âge ; **B** : basse continue, donc baroque ; **C** : phrases symétriques, donc classique ; **D** : grand orchestre chromatique, donc romantique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment conclure proprement pour l’extrait B ?",
+     "options": [
+      "Probablement baroque, d’après la basse continue et le rythme moteur",
+      "Sûrement romantique, car l’orchestre joue avec beaucoup de force",
+      "Baroque, car un compositeur célèbre l’a forcément écrit ici",
+      "Impossible à dater, car on ne peut jamais faire d’hypothèse"
+     ],
+     "reponse": 0,
+     "aide": "Une datation est une hypothèse, mais elle s’appuie sur des indices entendus.",
+     "explication": "On conclut **prudemment et en argumentant** : « probablement baroque, par la basse continue et le rythme moteur »."
+    }
+   ]
+  },
+  {
+   "chapitre": "82c6831f-46ec-573b-866a-0a1cda775626",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du swing au hip-hop",
+   "competence": "se-reperer-temps",
+   "situation": "Quatre extraits de musiques du XXe siècle t’ont été décrits. Tu les situes sur une frise, puis tu les associes à leur courant et à leurs musiciens.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Quatre courants, quatre décennies",
+     "debut": 1920,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "sw",
+       "date": 1935,
+       "nom": "Swing"
+      },
+      {
+       "id": "be",
+       "date": 1945,
+       "nom": "Bebop"
+      },
+      {
+       "id": "rr",
+       "date": 1955,
+       "nom": "Rock’n’roll"
+      },
+      {
+       "id": "hh",
+       "date": 1975,
+       "nom": "Hip-hop"
+      }
+     ],
+     "source": "Milieux de décennies : repères approximatifs."
+    },
+    {
+     "id": "ex",
+     "type": "tableau",
+     "titre": "Quatre extraits décrits",
+     "colonnes": [
+      "Extrait",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Orchestre de seize musiciens, cuivres par sections, pulsation qui swingue"
+      ],
+      [
+       "2",
+       "Petit groupe, tempo très rapide, solos virtuoses sur une grille d’accords"
+      ],
+      [
+       "3",
+       "Voix qui parle en rythme sur une boucle de batterie échantillonnée"
+      ],
+      [
+       "4",
+       "Guitare électrique, voix, batterie, rythme bondissant"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "hh"
+     ],
+     "enonce": "Touche le courant né dans le Bronx, à New York.",
+     "aide": "Il date des années 1970.",
+     "explication": "C’est le **hip-hop**, né dans le Bronx dans les années 1970."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à son courant.",
+     "paires": [
+      [
+       "Extrait 1",
+       "Swing"
+      ],
+      [
+       "Extrait 2",
+       "Bebop"
+      ],
+      [
+       "Extrait 3",
+       "Hip-hop"
+      ],
+      [
+       "Extrait 4",
+       "Rock’n’roll"
+      ]
+     ],
+     "aide": "Seize musiciens : un big band. Solos virtuoses et tempo rapide : le jazz des années 1940.",
+     "explication": "**1** : big band, donc swing ; **2** : petit groupe virtuose, donc bebop ; **3** : voix parlée sur boucle échantillonnée, donc hip-hop ; **4** : guitare électrique, donc rock’n’roll."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les quatre courants du plus ancien au plus récent.",
+     "items": [
+      "Swing",
+      "Bebop",
+      "Rock’n’roll",
+      "Hip-hop"
+     ],
+     "aide": "Relis les positions sur la frise.",
+     "explication": "Dans l’ordre : **swing** (années 1930), **bebop** (années 1940), **rock’n’roll** (années 1950), **hip-hop** (années 1970)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque musicien du côté de son courant.",
+     "categories": [
+      "Swing",
+      "Bebop"
+     ],
+     "items": [
+      [
+       "Duke Ellington",
+       0
+      ],
+      [
+       "Charlie Parker",
+       1
+      ],
+      [
+       "Count Basie",
+       0
+      ],
+      [
+       "Dizzy Gillespie",
+       1
+      ]
+     ],
+     "aide": "Les deux premiers dirigent des big bands ; les deux autres inventent un jazz de petits groupes.",
+     "explication": "**Ellington et Basie** dirigent des big bands de swing ; **Parker et Gillespie** inventent le bebop."
+    }
+   ]
+  },
+  {
+   "chapitre": "6056ae9f-945d-5e26-97a0-ae4e1745cbae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux versions du même concerto",
+   "competence": "comprendre-langue",
+   "situation": "Une claveciniste compare deux enregistrements du même concerto : l’un sur instruments d’époque, l’autre sur instruments modernes.",
+   "documents": [
+    {
+     "id": "v",
+     "type": "tableau",
+     "titre": "Fiche de comparaison",
+     "colonnes": [
+      "Critère",
+      "Instruments d’époque",
+      "Instruments modernes"
+     ],
+     "lignes": [
+      [
+       "Cordes",
+       "Boyau",
+       "Métal"
+      ],
+      [
+       "Diapason",
+       "La à 415 Hz",
+       "La à 440 Hz"
+      ],
+      [
+       "Vibrato",
+       "Un ornement",
+       "Continu"
+      ],
+      [
+       "Effectif",
+       "Petit, proche des sources",
+       "Parfois plus fourni"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Repères généraux pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "v",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui donne le diapason des instruments d’époque.",
+     "aide": "Le diapason d’époque est plus bas que celui d’aujourd’hui.",
+     "explication": "C’est **415 Hz** : le la baroque est plus bas que le la moderne (440 Hz)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 25,
+     "unite": "Hz",
+     "enonce": "De combien de hertz le diapason moderne dépasse-t-il le diapason d’époque ?",
+     "aide": "Soustrais les deux valeurs du tableau.",
+     "explication": "**25 Hz** : 440 − 415 = 25."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description.",
+     "texte": "Sur instruments d’époque, les cordes en ___ donnent un son plus ___ ; le vibrato y est un ___.",
+     "reponses": [
+      [
+       "boyau"
+      ],
+      [
+       "doux"
+      ],
+      [
+       "ornement"
+      ]
+     ],
+     "banque": [
+      "boyau",
+      "métal",
+      "doux",
+      "puissant",
+      "ornement",
+      "continu"
+     ],
+     "aide": "Relis les colonnes du tableau.",
+     "explication": "**Boyau**, **doux**, **ornement** : c’est la couleur des instruments d’époque."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que l’authenticité est une quête et non un résultat ?",
+     "options": [
+      "On ignore comment on jouait exactement, donc chaque choix reste artistique",
+      "On sait tout de l’époque, donc il suffit de recopier les gestes exacts",
+      "On joue toujours plus vite qu’autrefois, donc le résultat varie",
+      "On ne trouve plus aucune partition, donc il faut tout inventer"
+     ],
+     "reponse": 0,
+     "aide": "Personne n’a enregistré les concerts du XVIIIe siècle.",
+     "explication": "On ne sait pas **exactement** comment on jouait : l’interprétation historiquement informée est elle aussi un **choix artistique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6056ae9f-945d-5e26-97a0-ae4e1745cbae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Reprise, arrangement ou sample ?",
+   "competence": "analyser-document",
+   "situation": "Cinq projets de musiciens arrivent au studio du lycée. Tu dois dire de quelle pratique de recréation chacun relève.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "tableau",
+     "titre": "Les cinq projets",
+     "colonnes": [
+      "Projet",
+      "Ce que fait le musicien"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Il réécrit l’accompagnement d’une chanson pour quatuor à cordes"
+      ],
+      [
+       "2",
+       "Une flûtiste joue un concerto écrit pour violoncelle"
+      ],
+      [
+       "3",
+       "Un producteur réutilise quatre secondes d’un vieux disque"
+      ],
+      [
+       "4",
+       "Une élève compose « à la manière de » Bach"
+      ],
+      [
+       "5",
+       "Un chanteur enregistre sa version d’un tube"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Projets imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque projet à sa pratique.",
+     "paires": [
+      [
+       "Projet 1",
+       "Arrangement"
+      ],
+      [
+       "Projet 2",
+       "Transcription"
+      ],
+      [
+       "Projet 3",
+       "Sample"
+      ],
+      [
+       "Projet 4",
+       "Pastiche"
+      ],
+      [
+       "Projet 5",
+       "Reprise"
+      ]
+     ],
+     "aide": "Un sample est un fragment d’enregistrement ; une transcription change d’instrument ; un pastiche imite un style.",
+     "explication": "**1** arrangement, **2** transcription, **3** sample, **4** pastiche, **5** reprise."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche le projet où l’on compose une œuvre nouvelle sans recopier une mélodie existante.",
+     "aide": "Cherche celui qui imite un style.",
+     "explication": "C’est le **projet 4** : le pastiche imite une manière sans recopier."
+    },
+    {
+     "type": "categories",
+     "enonce": "Que reste-t-il de l’œuvre, et qu’est-ce qui change le plus d’une version à l’autre ?",
+     "categories": [
+      "Ce qui reste",
+      "Ce qui change le plus"
+     ],
+     "items": [
+      [
+       "La mélodie",
+       0
+      ],
+      [
+       "L’ordre des parties",
+       0
+      ],
+      [
+       "Le timbre des voix et des instruments",
+       1
+      ],
+      [
+       "Le style d’interprétation",
+       1
+      ],
+      [
+       "Les paroles d’une chanson",
+       0
+      ]
+     ],
+     "aide": "Ce qu’on reconnaît tout de suite ; ce qui colore le son.",
+     "explication": "Restent la **mélodie**, la **forme** et le **texte** ; changent surtout le **timbre** et le **style**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6056ae9f-945d-5e26-97a0-ae4e1745cbae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Commenter deux versions",
+   "competence": "raisonner",
+   "situation": "Une élève a relevé des indices sur deux versions imaginaires de la même chanson. Elle prépare un commentaire sans classer les versions.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "tableau",
+     "titre": "Deux versions",
+     "colonnes": [
+      "Critère",
+      "Version A",
+      "Version B"
+     ],
+     "lignes": [
+      [
+       "Tempo",
+       "60 à la noire",
+       "96 à la noire"
+      ],
+      [
+       "Effectif",
+       "Voix et piano",
+       "Voix, groupe et cordes"
+      ],
+      [
+       "Mélodie",
+       "Identique",
+       "Identique"
+      ],
+      [
+       "Texte",
+       "Identique",
+       "Identique"
+      ],
+      [
+       "Durée",
+       "2 min 50",
+       "4 min 10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "c",
+     "multiple": true,
+     "reponse": [
+      "r2c1",
+      "r2c2",
+      "r3c1",
+      "r3c2"
+     ],
+     "enonce": "Touche les quatre cases qui disent ce qui reste identique d’une version à l’autre.",
+     "aide": "Il y a deux critères dont les deux cases sont identiques.",
+     "explication": "Restent la **mélodie** et le **texte** : ce sont les repères qu’on reconnaît tout de suite."
+    },
+    {
+     "type": "nombre",
+     "reponse": 80,
+     "unite": "s",
+     "enonce": "Combien de secondes la version B dure-t-elle de plus que la version A ?",
+     "aide": "Convertis chaque durée en secondes.",
+     "explication": "**80 s** : 4 min 10 s = 250 s, 2 min 50 s = 170 s, et 250 − 170 = 80."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du commentaire de deux versions.",
+     "items": [
+      "Identifier ce qui reste",
+      "Relever ce qui change",
+      "Interpréter le projet de chaque version",
+      "Évaluer sans hiérarchiser"
+     ],
+     "aide": "On observe avant d’interpréter.",
+     "explication": "Dans l’ordre : **identifier, relever, interpréter, évaluer** sans hiérarchiser."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion respecte la méthode ?",
+     "options": [
+      "Chaque version éclaire la chanson autrement, selon son projet artistique",
+      "La version la plus récente est meilleure parce qu’elle est plus riche",
+      "La version la plus simple est meilleure parce qu’elle est plus fidèle",
+      "La version la plus longue est meilleure parce qu’elle dit davantage"
+     ],
+     "reponse": 0,
+     "aide": "On compare et on interprète, on ne désigne pas de gagnant.",
+     "explication": "Face à deux versions, on **compare et interprète** chaque projet, sans hiérarchiser."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eb5da4b-715e-51a5-bb44-cf3fe3083043",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le corpus ultramarin",
+   "competence": "lire-tableau",
+   "situation": "Les élèves de l’option musique étudient des paires d’œuvres venues de trois territoires, l’une ancienne et l’autre récente.",
+   "documents": [
+    {
+     "id": "co",
+     "type": "tableau",
+     "titre": "Le corpus de l’option",
+     "colonnes": [
+      "Territoire",
+      "Œuvre plus ancienne",
+      "Œuvre récente"
+     ],
+     "lignes": [
+      [
+       "Antilles",
+       "Eugène Mona, *Ti Milo* (1978)",
+       "Admiral T, *Ti Milo* (2011)"
+      ],
+      [
+       "Polynésie",
+       "*Himéné tarava* (1989)",
+       "*Haka Enana* (2010)"
+      ],
+      [
+       "La Réunion",
+       "Danyel Waro, *Laviyon* (1994)",
+       "Wati Watia Zorey Band, *Rest’ là Maloya* (2016)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Corpus de l’option musique, 2026-2027."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche l’œuvre la plus récente de tout le corpus.",
+     "aide": "Compare les trois dates de la dernière colonne.",
+     "explication": "C’est *Rest’ là Maloya*, en **2016**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 33,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent les deux versions de *Ti Milo* ?",
+     "aide": "Soustrais 1978 de 2011.",
+     "explication": "**33 ans** : 2011 − 1978 = 33."
+    },
+    {
+     "type": "nombre",
+     "reponse": 21,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *Himéné tarava* de *Haka Enana* ?",
+     "aide": "Soustrais 1989 de 2010.",
+     "explication": "**21 ans** : 2010 − 1989 = 21."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque territoire à sa tradition vocale.",
+     "paires": [
+      [
+       "La Réunion",
+       "Maloya"
+      ],
+      [
+       "Polynésie",
+       "Himene"
+      ],
+      [
+       "Guadeloupe",
+       "Gwoka"
+      ]
+     ],
+     "aide": "Le maloya chante les esclaves et engagés, les himene viennent des cantiques, le gwoka se danse au tambour.",
+     "explication": "Le **maloya** vient de La Réunion, les **himene** de Polynésie, le **gwoka** de Guadeloupe."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eb5da4b-715e-51a5-bb44-cf3fe3083043",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet d’un ethnomusicologue",
+   "competence": "analyser-document",
+   "situation": "Une ethnomusicologue note ce qu’elle entend lors d’une veillée. Tu relis ses notes pour identifier deux traditions vocales.",
+   "documents": [
+    {
+     "id": "car",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Carnet d’écoute",
+     "blocs": [
+      "Un soliste lance une phrase et le chœur lui répond, tandis qu’un [[h|kayamb]] rempli de graines marque le rythme. Les paroles sont en créole.",
+      "Plus tard, un chœur puissant chante sans instrument : une voix grave tient une seule note longue pendant que des voix aiguës ornent la mélodie."
+     ],
+     "source": "Carnet écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "car",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui désigne l’instrument rythmique de la première veillée.",
+     "aide": "C’est un hochet rempli de graines.",
+     "explication": "C’est le **kayamb**, hochet de tiges rempli de graines, typique de La Réunion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait du côté du maloya ou des himene.",
+     "categories": [
+      "Maloya",
+      "Himene"
+     ],
+     "items": [
+      [
+       "Chant responsorial",
+       0
+      ],
+      [
+       "Hochet kayamb",
+       0
+      ],
+      [
+       "Cantiques des missionnaires protestants",
+       1
+      ],
+      [
+       "Bourdon tenu par une voix grave",
+       1
+      ],
+      [
+       "Chants des esclaves et des engagés",
+       0
+      ],
+      [
+       "Polyphonie chorale puissante",
+       1
+      ]
+     ],
+     "aide": "Le maloya vient d’Afrique et de Madagascar ; les himene, de la rencontre avec des cantiques.",
+     "explication": "Le **maloya** : responsorial, kayamb, chants des esclaves ; les **himene** : cantiques, bourdon, polyphonie chorale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie chanter en créole pour ces musiciens ?",
+     "options": [
+      "Affirmer une mémoire et une identité propres",
+      "Imiter les chansons de la pop mondiale",
+      "Éviter toute trace d’histoire coloniale",
+      "Rendre la musique plus facile à copier"
+     ],
+     "reponse": 0,
+     "aide": "Le créole est né de la rencontre des langues dans les colonies.",
+     "explication": "Chanter en créole, c’est affirmer une **mémoire** et une **identité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eb5da4b-715e-51a5-bb44-cf3fe3083043",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mondialisation : trois mouvements",
+   "competence": "raisonner",
+   "situation": "Une frise rappelle des dates du corpus et de la reconnaissance du patrimoine ; un tableau propose trois situations à classer.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Reconnaissance et création",
+     "debut": 1990,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "lv",
+       "date": 1994,
+       "nom": "Laviyon"
+      },
+      {
+       "id": "ma",
+       "date": 2009,
+       "nom": "Maloya UNESCO"
+      },
+      {
+       "id": "gw",
+       "date": 2014,
+       "nom": "Gwoka UNESCO"
+      }
+     ],
+     "source": "Dates du cours."
+    },
+    {
+     "id": "s",
+     "type": "tableau",
+     "titre": "Trois situations",
+     "colonnes": [
+      "Situation",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Les mêmes tubes dominent les plateformes à Paris comme à Tahiti"
+      ],
+      [
+       "2",
+       "Un groupe mêle tambours de maloya et guitares électriques"
+      ],
+      [
+       "3",
+       "Un chanteur défend son créole face aux radios"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations imaginées pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "ma"
+     ],
+     "enonce": "Touche l’inscription du maloya au patrimoine immatériel de l’UNESCO.",
+     "aide": "Elle précède celle du gwoka.",
+     "explication": "C’est **2009** : le maloya est inscrit à l’UNESCO cette année-là."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’inscription du maloya de celle du gwoka ?",
+     "aide": "Soustrais 2009 de 2014.",
+     "explication": "**5 ans** : 2014 − 2009 = 5."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à son mouvement.",
+     "paires": [
+      [
+       "Situation 1",
+       "Uniformisation"
+      ],
+      [
+       "Situation 2",
+       "Métissage"
+      ],
+      [
+       "Situation 3",
+       "Revendication"
+      ]
+     ],
+     "aide": "Un seul son partout ; des musiques qui se mêlent ; une musique qui s’affirme.",
+     "explication": "**1** uniformisation, **2** métissage, **3** revendication."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un auditeur trouve ce chant « faux ». Que dit l’ethnomusicologie ?",
+     "options": [
+      "Il faut décrire ce chant selon ses règles, non selon nos habitudes d’écoute",
+      "Il faut corriger ce chant pour qu’il ressemble à la musique classique",
+      "Il faut conclure que ce chant est moins précis que la pop mondiale",
+      "Il faut ignorer ce chant tant qu’il n’est pas enregistré en studio"
+     ],
+     "reponse": 0,
+     "aide": "D’autres cultures ont d’autres échelles, rythmes et timbres.",
+     "explication": "Ce qui paraît faux vient souvent de nos **habitudes** : on décrit cette musique **selon ses propres règles**."
+    }
+   ]
+  },
+  {
+   "chapitre": "60282444-5408-5cb8-a41c-7995be918ef0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois exercices, 3 h 30",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares l’épreuve écrite de spécialité musique. Le tableau résume ce que le sujet te demande.",
+   "documents": [
+    {
+     "id": "ex",
+     "type": "tableau",
+     "titre": "L’épreuve écrite",
+     "colonnes": [
+      "Exercice",
+      "Ce qu’on te demande",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Décrire un bref extrait d’une œuvre hors programme",
+       "30 à 45 minutes"
+      ],
+      [
+       "2",
+       "Comparer deux extraits identifiés, dont un du programme limitatif",
+       "1 h 45 à 2 h 15"
+      ],
+      [
+       "3",
+       "Commenter des documents sur la vie musicale contemporaine",
+       "45 minutes à 1 heure"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Épreuve de spécialité musique."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ex",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la durée de l’exercice le plus long, le cœur de l’épreuve.",
+     "aide": "Compare les trois durées de la dernière colonne.",
+     "explication": "C’est **1 h 45 à 2 h 15** : le commentaire comparé est le cœur de l’épreuve."
+    },
+    {
+     "type": "nombre",
+     "reponse": 210,
+     "unite": "minutes",
+     "enonce": "L’épreuve dure 3 h 30. Combien cela fait-il de minutes ?",
+     "aide": "3 heures valent 180 minutes.",
+     "explication": "**210 minutes** : 3 × 60 + 30 = 210."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "minutes",
+     "enonce": "Tu passes 40 minutes sur l’exercice 1 et 2 heures sur l’exercice 2. Combien de minutes te restent-ils pour l’exercice 3 ?",
+     "aide": "Retire 40 min et 120 min de 210 min.",
+     "explication": "**50 minutes** : 210 − 40 − 120 = 50."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exercice à sa mission.",
+     "paires": [
+      [
+       "Exercice 1",
+       "Décrire un bref extrait hors programme"
+      ],
+      [
+       "Exercice 2",
+       "Comparer deux extraits identifiés"
+      ],
+      [
+       "Exercice 3",
+       "Commenter des documents sur la vie musicale"
+      ]
+     ],
+     "aide": "Lis la deuxième colonne du tableau.",
+     "explication": "L’**exercice 1** décrit, le **2** compare, le **3** commente des documents."
+    }
+   ]
+  },
+  {
+   "chapitre": "60282444-5408-5cb8-a41c-7995be918ef0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Décrire, pas commenter",
+   "competence": "analyser-texte",
+   "situation": "Pour l’exercice 1, on décrit avec des faits musicaux. Un professeur a recueilli cinq phrases d’élèves et te demande de les trier.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "tableau",
+     "titre": "Phrases d’élèves",
+     "colonnes": [
+      "N°",
+      "Phrase"
+     ],
+     "lignes": [
+      [
+       "1",
+       "C’est très joyeux et ça donne envie de danser."
+      ],
+      [
+       "2",
+       "Le tempo est rapide et la pulsation très régulière."
+      ],
+      [
+       "3",
+       "J’adore cette voix, elle me touche beaucoup."
+      ],
+      [
+       "4",
+       "Un violon solo répond à l’orchestre à cordes."
+      ],
+      [
+       "5",
+       "La nuance passe de piano à forte."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Phrases imaginées pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ph",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "enonce": "Touche les deux phrases qui donnent une impression sans dire ce qui la produit.",
+     "aide": "Cherche celles où on ne peut relever aucun fait musical.",
+     "explication": "Les phrases **1** et **3** sont des impressions : aucun fait musical (tempo, effectif, nuance) ne les appuie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment transformer la phrase 1 en vraie description ?",
+     "options": [
+      "C’est joyeux, car le tempo est vif et le mode majeur",
+      "C’est joyeux, car on a envie de bouger en l’écoutant",
+      "C’est joyeux, car tout le monde aime ce genre de musique",
+      "C’est joyeux, car la chanson raconte quelque chose d’heureux"
+     ],
+     "reponse": 0,
+     "aide": "Une impression n’a de valeur que si on dit ce qui la produit.",
+     "explication": "On dit **ce qui produit** l’impression : le **tempo vif** et le **mode majeur** sont des faits musicaux."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la consigne de l’exercice 1.",
+     "texte": "On décrit objectivement le langage musical : effectif, forme, ___, rythme, mélodie et ___.",
+     "reponses": [
+      [
+       "texture"
+      ],
+      [
+       "nuances"
+      ]
+     ],
+     "banque": [
+      "texture",
+      "nuances",
+      "impression",
+      "opinion",
+      "public",
+      "titre"
+     ],
+     "aide": "Relis la liste des paramètres à décrire.",
+     "explication": "On décrit l’**effectif**, la **forme**, la **texture**, le **rythme**, la **mélodie** et les **nuances**."
+    }
+   ]
+  },
+  {
+   "chapitre": "60282444-5408-5cb8-a41c-7995be918ef0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le commentaire comparé, pas à pas",
+   "competence": "raisonner",
+   "situation": "Pour l’exercice 2, un élève a relevé des indices sur deux extraits imaginaires. Il doit construire un plan thématique.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Relevés",
+     "colonnes": [
+      "Paramètre",
+      "Extrait A",
+      "Extrait B"
+     ],
+     "lignes": [
+      [
+       "Tempo",
+       "Vif",
+       "Vif"
+      ],
+      [
+       "Effectif",
+       "Orchestre à cordes et violoncelle solo",
+       "Voix, trompette et orchestre"
+      ],
+      [
+       "Dialogue",
+       "L’orchestre alterne avec le soliste",
+       "La trompette répond à la voix"
+      ],
+      [
+       "Nuances",
+       "Contrastes forte et piano",
+       "Nuances souples et progressives"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rel",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r0c2"
+     ],
+     "enonce": "Touche les deux cases qui montrent une ressemblance entre les extraits.",
+     "aide": "Cherche la ligne où les deux cases disent la même chose.",
+     "explication": "Dans les **deux** extraits, le **tempo est vif** : c’est une ressemblance à noter dans la première partie du plan."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes de l’exercice 2 dans l’ordre.",
+     "items": [
+      "Écouter plusieurs fois et noter par paramètre",
+      "Confirmer avec la partition",
+      "Suivre les entrées d’analyse du sujet",
+      "Construire un plan thématique",
+      "Enrichir de références"
+     ],
+     "aide": "On écoute avant de lire la partition.",
+     "explication": "**Écouter, confirmer avec la partition, suivre les entrées, construire, enrichir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel plan est attendu ?",
+     "options": [
+      "Des parties thématiques mêlant ressemblances et différences",
+      "Une partie sur l’extrait A, puis une partie sur l’extrait B",
+      "Une liste des paramètres sans aucun lien entre les extraits",
+      "Une conclusion seule, sans introduction ni parties"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit de ne pas faire « extrait A puis extrait B ».",
+     "explication": "Le plan est **thématique** : ressemblances et différences apparaissent **à l’intérieur de chaque partie**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de commentaire.",
+     "texte": "Dans les deux extraits, le tempo est ___ ; mais là où l’un fait dialoguer tutti et ___, l’autre fait répondre la ___ à la voix.",
+     "reponses": [
+      [
+       "vif"
+      ],
+      [
+       "soliste"
+      ],
+      [
+       "trompette"
+      ]
+     ],
+     "banque": [
+      "vif",
+      "lent",
+      "soliste",
+      "chœur",
+      "trompette",
+      "flûte"
+     ],
+     "aide": "Relis la ligne Dialogue du tableau.",
+     "explication": "**Vif**, **soliste**, **trompette** : une ressemblance, puis une différence."
+    }
+   ]
+  },
+  {
+   "chapitre": "085bf2e6-7601-5f7a-a1f6-647fea1e3ae4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les règles de l’oral",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares l’oral de spécialité musique. Un tableau rappelle les règles à connaître.",
+   "documents": [
+    {
+     "id": "re",
+     "type": "tableau",
+     "titre": "L’oral en un coup d’œil",
+     "colonnes": [
+      "Règle",
+      "Ce qu’il faut savoir"
+     ],
+     "lignes": [
+      [
+       "Durée totale",
+       "30 minutes"
+      ],
+      [
+       "Préparation",
+       "Aucune"
+      ],
+      [
+       "Interprétation et exposé",
+       "15 minutes au plus"
+      ],
+      [
+       "Groupe",
+       "5 élèves au plus, toi compris"
+      ],
+      [
+       "Accompagnement enregistré",
+       "Non admis"
+      ],
+      [
+       "Document de synthèse",
+       "2 pages au plus, quinze jours avant"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Épreuve orale de spécialité musique."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "re",
+     "multiple": false,
+     "reponse": [
+      "r5c1"
+     ],
+     "enonce": "Touche la case qui dit quand remettre le document de synthèse.",
+     "aide": "Cherche la ligne qui parle du document de synthèse.",
+     "explication": "Le document fait **deux pages au plus** et arrive **quinze jours avant** l’épreuve."
+    },
+    {
+     "type": "nombre",
+     "reponse": 15,
+     "unite": "minutes",
+     "enonce": "L’interprétation et l’exposé durent 15 minutes au plus. Combien de minutes au moins reste-t-il à l’entretien ?",
+     "aide": "Retire 15 minutes de la durée totale.",
+     "explication": "**15 minutes** : 30 − 15 = 15."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "élèves",
+     "enonce": "Un groupe compte 5 élèves au plus, toi compris. Combien d’autres élèves peuvent t’accompagner ?",
+     "aide": "Retire-toi du total.",
+     "explication": "**4 élèves** : 5 − 1 = 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Peux-tu jouer avec une piste enregistrée qui accompagne ton groupe ?",
+     "options": [
+      "Non, aucun accompagnement enregistré n’est admis",
+      "Oui, si la piste dure moins de cinq minutes",
+      "Oui, si le jury a donné son accord avant",
+      "Oui, à condition que la piste soit en début de pièce"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne Accompagnement enregistré.",
+     "explication": "**Non** : aucun accompagnement enregistré n’est admis."
+    }
+   ]
+  },
+  {
+   "chapitre": "085bf2e6-7601-5f7a-a1f6-647fea1e3ae4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un exposé bien construit",
+   "competence": "analyser-texte",
+   "situation": "Une élève présente sa création. Tu lis un extrait de son exposé, écrit pour l’exercice, puis tu ranges ses idées.",
+   "documents": [
+    {
+     "id": "ex",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Extrait d’exposé",
+     "blocs": [
+      "Notre création s’appuie sur une grille de blues, avec une voix qui improvise en [[s|scat]] et une ritournelle instrumentale qui revient.",
+      "Je la relie à *Porgy and Bess*, où voix et trompette dialoguent, et à l’*Allegro assai* de C. P. E. Bach, où alternent tutti et solo."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ex",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui désigne l’improvisation vocale sur des syllabes sans sens.",
+     "aide": "C’est un mot du vocabulaire du jazz.",
+     "explication": "C’est le **scat**, improvisation vocale sur des syllabes sans sens."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée dans la partie d’exposé qui lui convient.",
+     "categories": [
+      "Démarche",
+      "Références",
+      "Techniques",
+      "Liens avec le programme"
+     ],
+     "items": [
+      [
+       "Pourquoi nous avons renoncé à un second couplet",
+       0
+      ],
+      [
+       "Les disques de jazz qui m’ont inspirée",
+       1
+      ],
+      [
+       "L’improvisation en scat sur la grille",
+       2
+      ],
+      [
+       "Le dialogue voix-trompette comme dans *Porgy and Bess*",
+       3
+      ],
+      [
+       "Les difficultés rencontrées en répétition",
+       0
+      ]
+     ],
+     "aide": "Choix et difficultés ; œuvres inspirantes ; procédés ; œuvres du programme.",
+     "explication": "La **démarche** dit les choix et difficultés ; les **références**, les influences ; les **techniques**, les procédés ; les **liens**, le programme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que juge le jury à l’oral ?",
+     "options": [
+      "Ta compréhension de ce que tu as créé",
+      "Ta fidélité exacte à une partition écrite",
+      "Le nombre de musiciens de ton groupe",
+      "La durée de ton document de synthèse"
+     ],
+     "reponse": 0,
+     "aide": "La musique vivante peut s’éloigner de la partition.",
+     "explication": "L’oral juge ta **compréhension** de ce que tu as créé, pas la conformité à la partition."
+    }
+   ]
+  },
+  {
+   "chapitre": "085bf2e6-7601-5f7a-a1f6-647fea1e3ae4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un SMS avant l’oral",
+   "competence": "raisonner",
+   "situation": "Deux élèves de la spécialité s’écrivent la veille de la remise du document de synthèse. Leur dialogue est imaginé pour l’exercice.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Mon document de synthèse fait trois pages, ça passe ?"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Non, deux pages [[p|maximum]], visé par ton prof et ton chef d’établissement."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Et il part quand ? Mon oral est le 29 juin."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Quinze jours avant."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui limite la longueur du document de synthèse.",
+     "aide": "Il suit « deux pages ».",
+     "explication": "C’est **maximum** : le document fait **deux pages au plus**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 14,
+     "unite": "juin",
+     "enonce": "L’oral d’Emma est le 29 juin. Quel jour de juin doit-elle remettre son document, quinze jours avant ?",
+     "aide": "Retire 15 jours au 29.",
+     "explication": "**Le 14 juin** : 29 − 15 = 14."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque action selon ce que permet l’oral.",
+     "categories": [
+      "Autorisé",
+      "Interdit"
+     ],
+     "items": [
+      [
+       "Illustrer une réponse en chantant",
+       0
+      ],
+      [
+       "Être accompagné par des élèves du lycée",
+       0
+      ],
+      [
+       "Remettre au jury une représentation graphique",
+       0
+      ],
+      [
+       "Utiliser un accompagnement enregistré",
+       1
+      ],
+      [
+       "Préparer en salle avant de passer devant le jury",
+       1
+      ]
+     ],
+     "aide": "Relis les règles : pas de préparation, pas de piste enregistrée.",
+     "explication": "Sont **autorisés** : chanter pour illustrer, jouer avec des élèves du lycée, remettre une représentation graphique. Sont **interdits** : l’accompagnement enregistré et la préparation."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef653269-3feb-5b12-859d-d039b4e4c21a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les débuts de la SACEM",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur la protection des auteurs. Tu places trois dates sur une frise, puis tu rapproches les droits de ce qu’ils protègent.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "De 1847 à 1985",
+     "debut": 1840,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "am",
+       "date": 1847,
+       "nom": "Les Ambassadeurs"
+      },
+      {
+       "id": "sa",
+       "date": 1851,
+       "nom": "Création de la SACEM"
+      },
+      {
+       "id": "dv",
+       "date": 1985,
+       "nom": "Droits voisins"
+      }
+     ],
+     "source": "Repères du cours."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "sa"
+     ],
+     "enonce": "Touche la création de la SACEM.",
+     "aide": "Elle suit de peu l’affaire des Ambassadeurs.",
+     "explication": "La **SACEM** est créée en **1851**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’affaire des Ambassadeurs de la création de la SACEM ?",
+     "aide": "Soustrais 1847 de 1851.",
+     "explication": "**4 ans** : 1851 − 1847 = 4."
+    },
+    {
+     "type": "nombre",
+     "reponse": 134,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la création de la SACEM de la loi sur les droits voisins ?",
+     "aide": "Soustrais 1851 de 1985.",
+     "explication": "**134 ans** : 1985 − 1851 = 134."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque droit à ce qu’il protège.",
+     "paires": [
+      [
+       "Droit moral",
+       "Le nom de l’auteur et le respect de l’œuvre"
+      ],
+      [
+       "Droits patrimoniaux",
+       "La rémunération à chaque diffusion ou reproduction"
+      ],
+      [
+       "Droits voisins",
+       "Les interprètes et les producteurs"
+      ]
+     ],
+     "aide": "Le moral ne s’achète pas ; les patrimoniaux rapportent de l’argent ; les voisins concernent d’autres acteurs.",
+     "explication": "Le **droit moral** protège le nom et l’œuvre, les **droits patrimoniaux** la rémunération, les **droits voisins** interprètes et producteurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef653269-3feb-5b12-859d-d039b4e4c21a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui touche quoi ?",
+   "competence": "analyser-document",
+   "situation": "Une chanson imaginaire, *Lueur*, est diffusée à la radio. Une fiche dit qui a fait quoi, et tu dois dire qui touche quoi.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "tableau",
+     "titre": "Fiche de la chanson *Lueur*",
+     "colonnes": [
+      "Rôle",
+      "Personne"
+     ],
+     "lignes": [
+      [
+       "Musique",
+       "Inès"
+      ],
+      [
+       "Paroles",
+       "Malik"
+      ],
+      [
+       "Édition",
+       "Éditions du Nord"
+      ],
+      [
+       "Interprétation",
+       "Sofia"
+      ],
+      [
+       "Enregistrement financé par",
+       "Label Rivage"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Personnes et sociétés imaginées pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la personne qui finance l’enregistrement : le producteur.",
+     "aide": "C’est celui que le tableau appelle « label ».",
+     "explication": "C’est le **label Rivage**, le producteur qui finance l’enregistrement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à sa rémunération.",
+     "paires": [
+      [
+       "Inès et Malik",
+       "Droits d’auteur"
+      ],
+      [
+       "Éditions du Nord",
+       "Une part des droits d’auteur"
+      ],
+      [
+       "Sofia",
+       "Cachets et droits voisins"
+      ],
+      [
+       "Label Rivage",
+       "Ventes de l’enregistrement et droits voisins"
+      ]
+     ],
+     "aide": "Les auteurs touchent des droits d’auteur ; l’éditeur en reçoit une part.",
+     "explication": "**Inès et Malik** (auteurs) touchent des droits d’auteur ; l’éditeur en perçoit une part ; **Sofia** des cachets et droits voisins ; le **label** les ventes et droits voisins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève recopie la mélodie de *Lueur* sans autorisation. Que protège le droit d’auteur ?",
+     "options": [
+      "Une œuvre précise, mais ni une idée ni un style",
+      "Une idée de chanson et tout ce qui lui ressemble",
+      "Un style entier, pour tous ceux qui l’imitent",
+      "Un titre, mais jamais la mélodie ni les paroles"
+     ],
+     "reponse": 0,
+     "aide": "On peut composer « à la manière de », pas recopier.",
+     "explication": "Le droit d’auteur protège une **œuvre**, pas une idée ni un style : on peut imiter, pas recopier."
+    },
+    {
+     "type": "nombre",
+     "reponse": 70,
+     "unite": "ans",
+     "enonce": "Combien d’années après la mort d’un auteur son œuvre entre-t-elle dans le domaine public en France ?",
+     "aide": "C’est un chiffre du cours.",
+     "explication": "**70 ans** après sa mort : l’œuvre devient libre de droits."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef653269-3feb-5b12-859d-d039b4e4c21a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’argent du streaming",
+   "competence": "modeliser",
+   "situation": "Une plateforme partage 500 000 € d’abonnements au prorata des écoutes du mois. Tu calcules qui reçoit quoi, puis tu discutes le modèle.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Écoutes du mois sur la plateforme",
+     "categories": [
+      "Artiste Star",
+      "Artiste Duo",
+      "Artiste Solo"
+     ],
+     "series": [
+      {
+       "nom": "Écoutes",
+       "valeurs": [
+        60,
+        30,
+        10
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Écoutes",
+      "unite": "en millions",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Artistes"
+     },
+     "valeurs": false,
+     "source": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "multiple": false,
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche l’artiste qui recevra la plus grande part.",
+     "aide": "Au prorata, la plus grande part va à la barre la plus haute.",
+     "explication": "C’est l’**artiste Star**, avec **60 millions** d’écoutes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "%",
+     "enonce": "Quelle part des écoutes représente l’artiste Solo, en pourcentage ?",
+     "aide": "Additionne les trois barres, puis divise 10 par le total.",
+     "explication": "**10 %** : le total est 100 millions d’écoutes et Solo en compte 10."
+    },
+    {
+     "type": "nombre",
+     "reponse": 150000,
+     "unite": "€",
+     "enonce": "Combien d’euros recevra l’artiste Duo sur les 500 000 € ?",
+     "aide": "Duo pèse 30 % des écoutes : calcule 30 % de 500 000.",
+     "explication": "**150 000 €** : 30 % de 500 000 = 150 000."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel défaut le modèle « centré sur l’utilisateur » veut-il corriger ?",
+     "options": [
+      "L’abonnement d’un fan profite aussi aux artistes qu’il n’écoute jamais",
+      "Les artistes peu écoutés reçoivent trop d’argent chaque mois",
+      "Les plateformes ne versent aucun revenu aux auteurs",
+      "Les abonnés paient plusieurs fois la même écoute"
+     ],
+     "reponse": 0,
+     "aide": "Dans le modèle au prorata, l’argent passe par un grand pot commun.",
+     "explication": "Au **prorata**, l’argent d’un fan de Solo est partagé entre tous ; le modèle **centré sur l’utilisateur** le verserait à ce qu’il écoute."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a6e8b-dc0f-56d5-aee1-fa9908dc1a4d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq supports, cinq époques",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur l’histoire des supports de la musique. Tu les places sur une frise, puis tu les associes à leur particularité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Des cylindres au CD",
+     "debut": 1870,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "ph",
+       "date": 1877,
+       "nom": "Phonographe"
+      },
+      {
+       "id": "gr",
+       "date": 1887,
+       "nom": "Gramophone"
+      },
+      {
+       "id": "lp",
+       "date": 1948,
+       "nom": "Microsillon"
+      },
+      {
+       "id": "ca",
+       "date": 1963,
+       "nom": "Cassette"
+      },
+      {
+       "id": "cd",
+       "date": 1982,
+       "nom": "Disque compact"
+      }
+     ],
+     "source": "Repères du cours."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "cd"
+     ],
+     "enonce": "Touche le support qui apporte le son numérique.",
+     "aide": "Il est apparu dans les années 1980.",
+     "explication": "C’est le **disque compact**, en **1982** : le son numérique."
+    },
+    {
+     "type": "nombre",
+     "reponse": 105,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le phonographe du disque compact ?",
+     "aide": "Soustrais 1877 de 1982.",
+     "explication": "**105 ans** : 1982 − 1877 = 105."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque support à sa particularité.",
+     "paires": [
+      [
+       "Phonographe",
+       "Un cylindre inventé par Edison"
+      ],
+      [
+       "Gramophone",
+       "Un disque plat inventé par Berliner"
+      ],
+      [
+       "Microsillon",
+       "Un disque long, qui fait naître l’album"
+      ],
+      [
+       "Cassette",
+       "On enregistre et on emporte sa musique"
+      ]
+     ],
+     "aide": "Edison, Berliner, le disque de 33 tours, puis le support qu’on emporte.",
+     "explication": "Le **phonographe** utilise un cylindre, le **gramophone** un disque plat, le **microsillon** un disque long, la **cassette** se transporte."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a6e8b-dc0f-56d5-aee1-fa9908dc1a4d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sortir de scène",
+   "competence": "analyser-document",
+   "situation": "Deux choix radicaux marquent l’histoire de la musique enregistrée. Un tableau les résume, et tu tires des conséquences.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "tableau",
+     "titre": "Deux choix radicaux",
+     "colonnes": [
+      "Artiste",
+      "Année",
+      "Choix"
+     ],
+     "lignes": [
+      [
+       "Glenn Gould",
+       "1964",
+       "Arrête les concerts pour ne jouer qu’en studio"
+      ],
+      [
+       "Les Beatles",
+       "1966",
+       "Arrêtent de tourner ; leur disque de 1967 est un disque de studio"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Repères du cours."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche l’année où Glenn Gould arrête les concerts.",
+     "aide": "Lis la colonne des années.",
+     "explication": "Glenn Gould arrête les concerts en **1964**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’arrêt des concerts de Gould de celui des Beatles ?",
+     "aide": "Soustrais 1964 de 1966.",
+     "explication": "**2 ans** : 1966 − 1964 = 2."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée du côté du concert ou du studio.",
+     "categories": [
+      "Le concert",
+      "Le studio"
+     ],
+     "items": [
+      [
+       "Le public qui vibre ensemble",
+       0
+      ],
+      [
+       "Superposer les prises et corriger",
+       1
+      ],
+      [
+       "Le corps des musiciens dans la salle",
+       0
+      ],
+      [
+       "Enregistrer chaque instrument séparément",
+       1
+      ],
+      [
+       "Vérifier que « c’est vraiment eux »",
+       0
+      ]
+     ],
+     "aide": "Le concert, c’est la présence ; le studio, c’est la construction.",
+     "explication": "Le **concert** offre présence, partage, authenticité ; le **studio** permet superposition, correction et multipiste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que perd une œuvre reproduite en série, selon Walter Benjamin ?",
+     "options": [
+      "Son aura : le caractère unique de sa présence, ici et maintenant",
+      "Sa mélodie : elle devient impossible à reconnaître",
+      "Sa forme : ses parties ne sont plus dans le même ordre",
+      "Son compositeur : on ne sait plus qui l’a écrite"
+     ],
+     "reponse": 0,
+     "aide": "Benjamin écrit en 1935 sur la reproduction des œuvres.",
+     "explication": "Benjamin parle de la perte de l’**aura**, mais la reproduction rend aussi l’œuvre accessible à tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a6e8b-dc0f-56d5-aee1-fa9908dc1a4d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un live est-il encore vivant ?",
+   "competence": "argumenter",
+   "situation": "Une élève prépare un exposé sur la problématique « Musique vivante vs musique enregistrée ». Tu relis son texte, écrit pour l’exercice, puis tu précises le vocabulaire.",
+   "documents": [
+    {
+     "id": "ex",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Brouillon d’exposé",
+     "blocs": [
+      "Au concert, je vois les musiciens et le public vibre avec moi : c’est un événement unique. Sur disque, je peux réécouter en boucle et comparer.",
+      "En 1948, Pierre Schaeffer compose avec des sons enregistrés ; en 1935, Walter Benjamin parle de la perte de l’[[a|aura]]."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ex",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui désigne ce que perd une œuvre reproduite en série.",
+     "aide": "Il vient de Walter Benjamin.",
+     "explication": "C’est l’**aura** : le caractère unique de la présence ici et maintenant."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à sa définition.",
+     "paires": [
+      [
+       "Multipiste",
+       "Enregistrer chaque instrument séparément"
+      ],
+      [
+       "Sample",
+       "Réutiliser un fragment d’un disque existant"
+      ],
+      [
+       "Musique concrète",
+       "Composer avec des sons enregistrés"
+      ],
+      [
+       "Aura",
+       "Le caractère unique d’une présence ici et maintenant"
+      ]
+     ],
+     "aide": "Sample et musique concrète partent tous deux de sons enregistrés, mais pas de la même façon.",
+     "explication": "Le **multipiste** sépare les instruments, le **sample** réutilise un fragment, la **musique concrète** compose avec des sons enregistrés, l’**aura** est la présence unique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique convient le mieux à un exposé sur ce thème ?",
+     "options": [
+      "L’enregistrement a-t-il changé la manière de composer ?",
+      "Quel est le meilleur support pour écouter de la musique ?",
+      "Pourquoi certains artistes n’aiment-ils pas les disques ?",
+      "Combien de disques une chanson peut-elle vendre ?"
+     ],
+     "reponse": 0,
+     "aide": "Une bonne problématique est une question ouverte qui appelle un raisonnement.",
+     "explication": "Une problématique **ouverte et argumentable** : l’enregistrement a-t-il changé la **manière de composer** ?"
+    }
+   ]
+  },
+  {
+   "chapitre": "11804536-c838-5b18-9114-e59616f7dcb4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce qui revient, ce qui change",
+   "competence": "analyser-document",
+   "situation": "Un musicogramme montre les sections d’une pièce imaginaire. Tu repères ce qui revient et tu nommes la forme.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "s1",
+       "texte": "R"
+      },
+      {
+       "id": "s2",
+       "texte": "A"
+      },
+      {
+       "id": "s3",
+       "texte": "R"
+      },
+      {
+       "id": "s4",
+       "texte": "B"
+      },
+      {
+       "id": "s5",
+       "texte": "R"
+      }
+     ],
+     "liens": [
+      {
+       "de": "s1",
+       "a": "s2"
+      },
+      {
+       "de": "s2",
+       "a": "s3"
+      },
+      {
+       "de": "s3",
+       "a": "s4"
+      },
+      {
+       "de": "s4",
+       "a": "s5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "fois",
+     "enonce": "Combien de fois la section R revient-elle dans la pièce ?",
+     "aide": "Compte les carrés marqués R.",
+     "explication": "**3 fois** : R ouvre, sépare et termine la pièce."
+    },
+    {
+     "type": "nombre",
+     "reponse": 100,
+     "unite": "s",
+     "enonce": "Chaque section dure 20 secondes. Combien de secondes dure la pièce entière ?",
+     "aide": "Il y a cinq sections.",
+     "explication": "**100 secondes** : 5 × 20 = 100."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle forme décrit le schéma R · A · R · B · R ?",
+     "options": [
+      "Le rondeau",
+      "La forme sonate",
+      "Le blues de 12 mesures",
+      "Le thème et variations"
+     ],
+     "reponse": 0,
+     "aide": "Le refrain revient entre les couplets.",
+     "explication": "C’est le **rondeau** : R · A · R · B · R."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme à son schéma.",
+     "paires": [
+      [
+       "Couplet-refrain",
+       "A · R · B · R"
+      ],
+      [
+       "Forme ABA",
+       "A · B · A"
+      ],
+      [
+       "Ritournelle",
+       "Tutti · solo · tutti · solo · tutti"
+      ],
+      [
+       "Thème et variations",
+       "A · A1 · A2 · A3"
+      ]
+     ],
+     "aide": "Cherche les schémas avec un refrain, un retour, une alternance, des variantes.",
+     "explication": "**Couplet-refrain** A · R · B · R ; **ABA** ; **ritournelle** alternant tutti et solo ; **thème et variations** A · A1 · A2."
+    }
+   ]
+  },
+  {
+   "chapitre": "11804536-c838-5b18-9114-e59616f7dcb4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Plan d’une symphonie imaginaire",
+   "competence": "analyser-document",
+   "situation": "Le plan d’un premier mouvement de symphonie, écrit pour l’exercice, indique les mesures et les tonalités. Tu y retrouves la forme sonate.",
+   "documents": [
+    {
+     "id": "pl",
+     "type": "tableau",
+     "titre": "Premier mouvement en do majeur",
+     "colonnes": [
+      "Partie",
+      "Mesures",
+      "Tonalités"
+     ],
+     "lignes": [
+      [
+       "Exposition",
+       "1 à 60",
+       "do majeur, puis sol majeur"
+      ],
+      [
+       "Développement",
+       "61 à 110",
+       "tonalités variées"
+      ],
+      [
+       "Réexposition",
+       "111 à 170",
+       "do majeur"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Plan imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pl",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la tonalité des deux thèmes dans la réexposition.",
+     "aide": "Dans la réexposition, les deux thèmes reviennent au ton principal.",
+     "explication": "Les deux thèmes sont au **ton principal**, **do majeur**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "mesures",
+     "enonce": "Combien de mesures compte le développement ?",
+     "aide": "Compte de la mesure 61 à la mesure 110 incluses.",
+     "explication": "**50 mesures** : 110 − 61 + 1 = 50."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description de la forme sonate.",
+     "texte": "Dans l’exposition, le thème 2 est dans un ton ___ ; le développement ___ les thèmes ; la réexposition les ramène au ton ___.",
+     "reponses": [
+      [
+       "voisin"
+      ],
+      [
+       "fragmente"
+      ],
+      [
+       "principal"
+      ]
+     ],
+     "banque": [
+      "voisin",
+      "fragmente",
+      "principal",
+      "lointain",
+      "répète",
+      "supprime"
+     ],
+     "aide": "Relis le tableau : sol majeur, tonalités variées, do majeur.",
+     "explication": "Le thème 2 passe dans un ton **voisin**, le développement **fragmente** les thèmes, la réexposition revient au ton **principal**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase distingue bien genre et forme ?",
+     "options": [
+      "La symphonie est un genre, la forme sonate organise son premier mouvement",
+      "La symphonie est une forme, la forme sonate est un genre",
+      "La symphonie et la forme sonate désignent exactement la même chose",
+      "La forme sonate est un genre réservé aux chansons populaires"
+     ],
+     "reponse": 0,
+     "aide": "Le genre dit quel type d’œuvre ; la forme dit comment elle est construite.",
+     "explication": "La **symphonie** est un **genre** ; la **forme sonate** est la manière dont son premier mouvement est **construit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "11804536-c838-5b18-9114-e59616f7dcb4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le temps musical",
+   "competence": "raisonner",
+   "situation": "Quatre extraits imaginaires illustrent des notions du temps musical. Tu les associes, puis tu calcules des durées.",
+   "documents": [
+    {
+     "id": "te",
+     "type": "tableau",
+     "titre": "Quatre extraits décrits",
+     "colonnes": [
+      "Extrait",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une pulsation de 60 battements par minute, groupés par trois"
+      ],
+      [
+       "2",
+       "Un motif de quatre notes répété sans cesse sous la mélodie"
+      ],
+      [
+       "3",
+       "Un chant sans aucune pulsation perceptible"
+      ],
+      [
+       "4",
+       "Un thème exposé, puis orné et harmonisé autrement à chaque reprise"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à sa notion.",
+     "paires": [
+      [
+       "Extrait 1",
+       "Mesure ternaire"
+      ],
+      [
+       "Extrait 2",
+       "Ostinato"
+      ],
+      [
+       "Extrait 3",
+       "Temps lisse"
+      ],
+      [
+       "Extrait 4",
+       "Variation"
+      ]
+     ],
+     "aide": "Groupés par trois ; répété sans cesse ; sans pulsation ; orné à chaque reprise.",
+     "explication": "**1** mesure ternaire, **2** ostinato, **3** temps lisse, **4** variation."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "s",
+     "enonce": "À 60 battements par minute, combien de secondes dure une mesure à trois temps ?",
+     "aide": "Un battement dure une seconde.",
+     "explication": "**3 secondes** : 3 temps × 1 s = 3 s."
+    },
+    {
+     "type": "nombre",
+     "reponse": 64,
+     "unite": "s",
+     "enonce": "Une pièce de 32 mesures à quatre temps est jouée à 120 battements par minute. Combien de secondes dure-t-elle ?",
+     "aide": "À 120 battements par minute, un battement dure une demi-seconde.",
+     "explication": "**64 secondes** : 32 × 4 = 128 battements, et 128 ÷ 2 = 64 s."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque procédé sous son principe.",
+     "categories": [
+      "Répétition",
+      "Contraste",
+      "Variation"
+     ],
+     "items": [
+      [
+       "Un refrain qui revient identique",
+       0
+      ],
+      [
+       "Un changement de tempo soudain",
+       1
+      ],
+      [
+       "Un thème orné à la reprise",
+       2
+      ],
+      [
+       "Un couplet différent du premier",
+       1
+      ],
+      [
+       "Un thème harmonisé autrement",
+       2
+      ]
+     ],
+     "aide": "Identique ; différent ; identique mais transformé.",
+     "explication": "La **répétition** ramène à l’identique, le **contraste** surprend, la **variation** reconnaît et renouvelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "0459ee2d-db3a-5278-a164-094638cfd774",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Par degrés ou par sauts ?",
+   "competence": "analyser-document",
+   "situation": "Un professeur note quatre fragments de mélodie sous forme de noms de notes. Tu les observes pour décrire le mouvement mélodique, puis tu relies des mots de rythme à leur sens.",
+   "documents": [
+    {
+     "id": "fg",
+     "type": "tableau",
+     "titre": "Quatre fragments",
+     "colonnes": [
+      "Fragment",
+      "Notes"
+     ],
+     "lignes": [
+      [
+       "A",
+       "do – ré – mi – fa"
+      ],
+      [
+       "B",
+       "do – sol – do – sol"
+      ],
+      [
+       "C",
+       "mi – fa – mi – ré"
+      ],
+      [
+       "D",
+       "do – mi – la – do"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fragments imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fg",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "enonce": "Touche les deux fragments qui avancent par degrés conjoints, sans sauts.",
+     "aide": "Un degré conjoint, c’est une note voisine : do vers ré, mi vers fa.",
+     "explication": "Les fragments **A** et **C** avancent par notes voisines : c’est un mouvement **conjoint**. B et D contiennent des **sauts** (disjoint)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mot désigne un mouvement par sauts ?",
+     "options": [
+      "Disjoint",
+      "Conjoint",
+      "Chromatique",
+      "Modal"
+     ],
+     "reponse": 0,
+     "aide": "Il s’oppose à « conjoint ».",
+     "explication": "Un mouvement par sauts est **disjoint** ; par degrés voisins, il est **conjoint**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme de rythme à son sens.",
+     "paires": [
+      [
+       "Syncope",
+       "Son attaqué sur un temps faible et prolongé sur le temps fort"
+      ],
+      [
+       "Contretemps",
+       "Son placé entre les temps, le temps étant un silence"
+      ],
+      [
+       "Swing",
+       "Croches jouées de manière inégale, typique du jazz"
+      ],
+      [
+       "Rubato",
+       "Liberté de tempo qui étire et rattrape"
+      ]
+     ],
+     "aide": "Le swing est lié au jazz ; le rubato est une liberté de tempo.",
+     "explication": "La **syncope** décale l’attaque, le **contretemps** se place entre les temps, le **swing** rend les croches inégales, le **rubato** libère le tempo."
+    }
+   ]
+  },
+  {
+   "chapitre": "0459ee2d-db3a-5278-a164-094638cfd774",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment les voix s’organisent",
+   "competence": "analyser-texte",
+   "situation": "Cinq extraits de chant ou de musique ont été décrits. Tu donnes à chacun le mot de texture qui lui convient.",
+   "documents": [
+    {
+     "id": "tx",
+     "type": "tableau",
+     "titre": "Cinq extraits décrits",
+     "colonnes": [
+      "Extrait",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Un seul chanteur, sans accompagnement"
+      ],
+      [
+       "2",
+       "Un chœur dont toutes les voix avancent ensemble, en accords"
+      ],
+      [
+       "3",
+       "Trois voix qui reprennent l’une après l’autre la même mélodie, en décalé"
+      ],
+      [
+       "4",
+       "Une voix principale soutenue par des accords de guitare"
+      ],
+      [
+       "5",
+       "Une cornemuse : une note tenue sous la mélodie"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait au terme de texture qui le décrit.",
+     "paires": [
+      [
+       "Extrait 1",
+       "Monodie"
+      ],
+      [
+       "Extrait 2",
+       "Homophonie"
+      ],
+      [
+       "Extrait 3",
+       "Canon"
+      ],
+      [
+       "Extrait 4",
+       "Mélodie accompagnée"
+      ],
+      [
+       "Extrait 5",
+       "Bourdon"
+      ]
+     ],
+     "aide": "Une voix seule ; des accords ensemble ; des voix en décalé ; une voix soutenue ; une note tenue.",
+     "explication": "**1** monodie, **2** homophonie, **3** canon (imitation), **4** mélodie accompagnée, **5** bourdon."
+    },
+    {
+     "type": "zone",
+     "document": "tx",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’extrait qui illustre l’imitation entre les voix.",
+     "aide": "Une voix reprend ce qu’une autre vient de jouer.",
+     "explication": "C’est l’**extrait 3** : chaque voix reprend la mélodie de la précédente, c’est l’**imitation** d’un canon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la différence entre homophonie et polyphonie ?",
+     "options": [
+      "Homophonie : voix ensemble en accords ; polyphonie : lignes indépendantes superposées",
+      "Homophonie : une seule voix ; polyphonie : deux voix qui se suivent",
+      "Homophonie : musique sans rythme ; polyphonie : musique très rapide",
+      "Homophonie : voix aiguës seulement ; polyphonie : voix graves seulement"
+     ],
+     "reponse": 0,
+     "aide": "Dans l’une, les voix bougent ensemble ; dans l’autre, chacune a sa ligne.",
+     "explication": "L’**homophonie** fait avancer toutes les voix ensemble ; la **polyphonie** superpose des **lignes indépendantes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0459ee2d-db3a-5278-a164-094638cfd774",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Notes d’écoute d’un jazz",
+   "competence": "raisonner",
+   "situation": "Une élève a noté ce qu’elle entend dans un extrait de jazz imaginaire. Tu transformes ses notes en vocabulaire précis.",
+   "documents": [
+    {
+     "id": "no",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Notes d’écoute",
+     "blocs": [
+      "Après l’introduction, la contrebasse marche, une note par temps. La chanteuse improvise sur des syllabes sans sens. Le trompettiste joue seul un tour de grille, puis toute la section de saxophones répète une courte formule. Les cordes jouent en [[p|pizzicato]]."
+     ],
+     "source": "Notes écrites pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "no",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit comment les cordes sont jouées.",
+     "aide": "Les cordes sont pincées avec le doigt.",
+     "explication": "Le mot est **pizzicato** : les cordes sont pincées."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque passage des notes au terme de jazz.",
+     "paires": [
+      [
+       "La contrebasse marche, une note par temps",
+       "Walking bass"
+      ],
+      [
+       "La chanteuse improvise sur des syllabes sans sens",
+       "Scat"
+      ],
+      [
+       "Le trompettiste joue seul un tour de grille",
+       "Chorus"
+      ],
+      [
+       "Les saxophones répètent une courte formule",
+       "Riff"
+      ]
+     ],
+     "aide": "Une basse qui marche ; des syllabes sans sens ; une grille improvisée ; une formule répétée.",
+     "explication": "**Walking bass**, **scat**, **chorus** et **riff** : quatre mots du vocabulaire du jazz."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque terme dans son paramètre.",
+     "categories": [
+      "Timbre",
+      "Rythme"
+     ],
+     "items": [
+      [
+       "Pizzicato",
+       0
+      ],
+      [
+       "Syncope",
+       1
+      ],
+      [
+       "Sourdine",
+       0
+      ],
+      [
+       "Rubato",
+       1
+      ],
+      [
+       "Vibrato",
+       0
+      ],
+      [
+       "Swing",
+       1
+      ]
+     ],
+     "aide": "Le timbre colore le son ; le rythme organise le temps.",
+     "explication": "**Pizzicato, sourdine, vibrato** touchent le timbre ; **syncope, rubato, swing** touchent le rythme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est un bon relevé d’écoute ?",
+     "options": [
+      "Dès la deuxième diffusion, le riff des saxophones soutient le chorus du trompettiste",
+      "C’est beau, l’ambiance est agréable et on sent la chaleur des instruments",
+      "Le morceau fait penser à un film que j’ai vu pendant les vacances",
+      "Les musiciens semblent très heureux de jouer ensemble ce soir-là"
+     ],
+     "reponse": 0,
+     "aide": "Un bon relevé situe et nomme avec précision.",
+     "explication": "Un bon relevé **situe** (deuxième diffusion) et **nomme** (riff, chorus)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f08e102-88c5-5bad-bf54-7f8903660863",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche du disque de 1958",
+   "competence": "comprendre-langue",
+   "situation": "Tu prépares la fiche d’identité du disque au programme. Tu la lis, puis tu relies quelques titres à leur place dans l’opéra.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Porgy and Bess",
+     "sousTitre": "Louis Armstrong et Ella Fitzgerald",
+     "emoji": "🎺",
+     "lignes": [
+      {
+       "texte": "Opéra de George Gershwin créé en",
+       "valeur": "1935",
+       "id": "op"
+      },
+      {
+       "texte": "Disque paru chez Verve Records en",
+       "valeur": "1958",
+       "id": "di"
+      },
+      {
+       "texte": "Arrangements et direction",
+       "valeur": "Russell Garcia"
+      },
+      {
+       "texte": "Producteur",
+       "valeur": "Norman Granz"
+      }
+     ],
+     "pied": "Cinq titres au programme",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": false,
+     "reponse": [
+      "di"
+     ],
+     "enonce": "Touche la ligne qui donne l’année de parution du disque.",
+     "aide": "Il est paru chez Verve Records.",
+     "explication": "Le disque est paru en **1958**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la création de l’opéra de la parution du disque ?",
+     "aide": "Soustrais 1935 de 1958.",
+     "explication": "**23 ans** : 1958 − 1935 = 23."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque titre au personnage qui le chante dans l’opéra.",
+     "paires": [
+      [
+       "Summertime",
+       "Clara"
+      ],
+      [
+       "I Got Plenty O’ Nuttin’",
+       "Porgy"
+      ],
+      [
+       "It Ain’t Necessarily So",
+       "Sportin’ Life"
+      ]
+     ],
+     "aide": "La berceuse ; le mendiant heureux ; celui qui se moque de la Bible.",
+     "explication": "*Summertime* est chanté par **Clara**, *I Got Plenty O’ Nuttin’* par **Porgy**, *It Ain’t Necessarily So* par **Sportin’ Life**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f08e102-88c5-5bad-bf54-7f8903660863",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que le disque change",
+   "competence": "analyser-document",
+   "situation": "Tu compares l’opéra de 1935 et le disque de 1958 à l’aide d’un tableau, puis tu distingues le rôle de chaque chanteur.",
+   "documents": [
+    {
+     "id": "cp",
+     "type": "tableau",
+     "titre": "Le disque de 1958 et l’opéra",
+     "colonnes": [
+      "Élément du disque",
+      "Ce que cela change"
+     ],
+     "lignes": [
+      [
+       "Deux voix seulement",
+       "La distribution ne compte plus : les deux chantent hommes, femmes et chœur"
+      ],
+      [
+       "La trompette d’Armstrong",
+       "Elle répond au chant comme une seconde voix"
+      ],
+      [
+       "Le swing",
+       "Les mots sont placés avant ou après le temps"
+      ],
+      [
+       "Le grand orchestre avec cordes",
+       "Des couleurs symphoniques au service de chansons"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cp",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit comment la trompette se comporte face au chant.",
+     "aide": "Cherche le rôle de la trompette dans la deuxième ligne.",
+     "explication": "La trompette d’Armstrong **répond au chant** comme une seconde voix."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait du côté du chanteur ou de la chanteuse.",
+     "categories": [
+      "Louis Armstrong",
+      "Ella Fitzgerald"
+     ],
+     "items": [
+      [
+       "Voix rocailleuse",
+       0
+      ],
+      [
+       "Vibrato large",
+       0
+      ],
+      [
+       "Voix claire et souple",
+       1
+      ],
+      [
+       "Voix très juste",
+       1
+      ],
+      [
+       "Trompette qui répond au chant",
+       0
+      ]
+     ],
+     "aide": "Un timbre rocailleux et la trompette d’un côté ; la clarté et la souplesse de l’autre.",
+     "explication": "**Armstrong** : voix rocailleuse, vibrato large, trompette ; **Fitzgerald** : voix claire, souple et juste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le cours qualifie-t-il ce disque par rapport à l’opéra ?",
+     "options": [
+      "Une recréation qui fait de ces airs des standards de jazz",
+      "Une version abrégée qui résume l’histoire de l’opéra",
+      "Une copie fidèle qui reproduit la mise en scène de 1935",
+      "Un pastiche qui imite le style d’un autre compositeur"
+     ],
+     "reponse": 0,
+     "aide": "C’est un mot de la thématique « Authenticité vs recréation ».",
+     "explication": "Ce disque n’est pas une version abrégée : c’est une **recréation**, qui fait des airs de scène des **standards** de jazz."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f08e102-88c5-5bad-bf54-7f8903660863",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du roman au disque",
+   "competence": "argumenter",
+   "situation": "Deux élèves comparent l’opéra et le disque. Leur dialogue est écrit pour l’exercice, à partir des repères du cours.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Dans l’opéra, *Summertime* est une [[b|berceuse]] chantée par Clara."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Oui. Sur le disque de 1958, c’est Ella qui la chante, avec l’orchestre de Russell Garcia."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Le disque est donc une version abrégée de l’opéra ?"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Non, c’est une [[r|recréation]] : des airs de scène deviennent des standards de jazz."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui dit quel genre de chanson est *Summertime* dans l’opéra.",
+     "aide": "Une chanson pour endormir un enfant.",
+     "explication": "C’est une **berceuse**, chantée par Clara à son bébé."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot que Léo emploie pour dire ce qu’est le disque par rapport à l’opéra.",
+     "aide": "Il répond à l’idée de « version abrégée ».",
+     "explication": "Léo parle de **recréation**, pas de version abrégée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois étapes de l’histoire de l’œuvre.",
+     "items": [
+      "Le roman *Porgy* de DuBose Heyward",
+      "La création de l’opéra de Gershwin",
+      "Le disque d’Armstrong et Fitzgerald"
+     ],
+     "aide": "Le roman précède l’opéra, qui précède le disque.",
+     "explication": "Dans l’ordre : **1925** (roman), **1935** (opéra), **1958** (disque)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait sous le titre qu’il décrit.",
+     "categories": [
+      "Summertime",
+      "It Ain’t Necessarily So",
+      "Oh Lawd, I’m on My Way!"
+     ],
+     "items": [
+      [
+       "Tempo lent, mode mineur, couleur de blues",
+       0
+      ],
+      [
+       "Sportin’ Life se moque des histoires de la Bible",
+       1
+      ],
+      [
+       "Porgy part pour New York dans le finale",
+       2
+      ],
+      [
+       "Berceuse chantée par Clara à son bébé",
+       0
+      ],
+      [
+       "Rythme syncopé et dialogue soliste-chœur",
+       1
+      ],
+      [
+       "Élan d’un spiritual, marche vers l’ailleurs",
+       2
+      ]
+     ],
+     "aide": "Une berceuse ; une chanson ironique ; un finale.",
+     "explication": "*Summertime* : berceuse lente ; *It Ain’t Necessarily So* : ironie et syncopes ; *Oh Lawd* : finale, élan de spiritual."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b51fe6e-7046-5dcb-9636-71c2447ac6ea",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vie de C. P. E. Bach",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur le compositeur du concerto au programme. Tu places cinq repères sur une frise.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Une vie, 1714-1788",
+     "debut": 1700,
+     "fin": 1800,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "na",
+       "date": 1714,
+       "nom": "Naissance"
+      },
+      {
+       "id": "co",
+       "date": 1740,
+       "nom": "Cour de Prusse"
+      },
+      {
+       "id": "es",
+       "date": 1753,
+       "nom": "Essai sur le clavier"
+      },
+      {
+       "id": "ha",
+       "date": 1768,
+       "nom": "Directeur à Hambourg"
+      },
+      {
+       "id": "mo",
+       "date": 1788,
+       "nom": "Mort"
+      }
+     ],
+     "source": "Repères du cours."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "ha"
+     ],
+     "enonce": "Touche l’année où il succède à Telemann à Hambourg.",
+     "aide": "Elle suit l’Essai de 1753.",
+     "explication": "Il succède à Telemann en **1768** comme directeur de la musique à Hambourg."
+    },
+    {
+     "type": "nombre",
+     "reponse": 26,
+     "unite": "ans",
+     "enonce": "Quel âge a-t-il en 1740, quand il devient claveciniste de la cour de Frédéric II ?",
+     "aide": "Soustrais 1714 de 1740.",
+     "explication": "**26 ans** : 1740 − 1714 = 26."
+    },
+    {
+     "type": "nombre",
+     "reponse": 74,
+     "unite": "ans",
+     "enonce": "Quel âge a-t-il à sa mort, en 1788 ?",
+     "aide": "Soustrais 1714 de 1788.",
+     "explication": "**74 ans** : 1788 − 1714 = 74."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque repère à son lieu ou à son nom.",
+     "paires": [
+      [
+       "Claveciniste de Frédéric II",
+       "Berlin et Potsdam"
+      ],
+      [
+       "Directeur de la musique",
+       "Hambourg"
+      ],
+      [
+       "Son père",
+       "Jean-Sébastien Bach"
+      ],
+      [
+       "Le catalogue Wq",
+       "Alfred Wotquenne"
+      ]
+     ],
+     "aide": "Une cour de Prusse ; une grande ville du nord ; un père célèbre ; un musicologue.",
+     "explication": "La cour est à **Berlin et Potsdam**, la direction musicale à **Hambourg**, son père est **Jean-Sébastien Bach**, le catalogue est de **Wotquenne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b51fe6e-7046-5dcb-9636-71c2447ac6ea",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Tutti et solo, seconde par seconde",
+   "competence": "analyser-document",
+   "situation": "Un chef a chronométré une interprétation imaginaire d’un mouvement de concerto à ritournelle. Tu exploites son minutage.",
+   "documents": [
+    {
+     "id": "mi",
+     "type": "tableau",
+     "titre": "Minutage",
+     "colonnes": [
+      "Section",
+      "Durée en secondes"
+     ],
+     "lignes": [
+      [
+       "Ritournelle 1 (tutti)",
+       "30"
+      ],
+      [
+       "Épisode 1 (solo)",
+       "50"
+      ],
+      [
+       "Ritournelle 2 (tutti, abrégée)",
+       "20"
+      ],
+      [
+       "Épisode 2 (solo)",
+       "60"
+      ],
+      [
+       "Ritournelle finale (tutti)",
+       "40"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Minutage imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mi",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la durée de la ritournelle abrégée.",
+     "aide": "Elle est indiquée « abrégée » dans le tableau.",
+     "explication": "C’est **20 secondes** : la deuxième ritournelle est écourtée."
+    },
+    {
+     "type": "nombre",
+     "reponse": 90,
+     "unite": "s",
+     "enonce": "Combien de secondes l’orchestre seul joue-t-il en tout ?",
+     "aide": "Additionne les trois ritournelles.",
+     "explication": "**90 secondes** : 30 + 20 + 40 = 90."
+    },
+    {
+     "type": "nombre",
+     "reponse": 110,
+     "unite": "s",
+     "enonce": "Combien de secondes le soliste joue-t-il en tout ?",
+     "aide": "Additionne les deux épisodes.",
+     "explication": "**110 secondes** : 50 + 60 = 110."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les ritournelles passent-elles par des tonalités voisines ?",
+     "options": [
+      "Pour relancer le discours avant le retour final en la majeur",
+      "Pour cacher le thème afin que personne ne le reconnaisse",
+      "Pour laisser le soliste se reposer pendant que l’orchestre joue",
+      "Pour éviter que les cordes ne jouent deux fois la même note"
+     ],
+     "reponse": 0,
+     "aide": "La pièce revient à la tonalité d’origine à la fin.",
+     "explication": "Les retours **modulent** par des tonalités voisines, puis la ritournelle finale revient en **la majeur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b51fe6e-7046-5dcb-9636-71c2447ac6ea",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Baroque, sensible ou classique ?",
+   "competence": "raisonner",
+   "situation": "Trois extraits imaginaires ont été décrits. Tu situes le style de chacun, puis tu retrouves ce qui fait l’Empfindsamkeit.",
+   "documents": [
+    {
+     "id": "st",
+     "type": "tableau",
+     "titre": "Trois extraits décrits",
+     "colonnes": [
+      "Extrait",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Énergie continue, un seul caractère du début à la fin, basse continue"
+      ],
+      [
+       "B",
+       "Phrases symétriques de quatre mesures, mélodie accompagnée claire"
+      ],
+      [
+       "C",
+       "Silences, passages de piano à forte sans transition, surprises harmoniques"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extraits imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à son style.",
+     "paires": [
+      [
+       "Extrait A",
+       "Baroque tardif"
+      ],
+      [
+       "Extrait B",
+       "Style classique"
+      ],
+      [
+       "Extrait C",
+       "Style sensible"
+      ]
+     ],
+     "aide": "Un seul affect ; des phrases symétriques ; des contrastes soudains.",
+     "explication": "**A** baroque tardif, **B** classique, **C** style sensible (*Empfindsamer Stil*)."
+    },
+    {
+     "type": "zone",
+     "document": "st",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’extrait qui ressemble le plus à l’*Allegro assai* de C. P. E. Bach.",
+     "aide": "Il mêle des surprises et des changements d’humeur brusques.",
+     "explication": "C’est l’**extrait C** : contrastes soudains et surprises, le style sensible."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le concerto Wq 172.",
+     "texte": "Ce concerto existe en trois versions : pour ___, pour clavecin et pour ___.",
+     "reponses": [
+      [
+       "violoncelle"
+      ],
+      [
+       "flûte"
+      ]
+     ],
+     "banque": [
+      "violoncelle",
+      "flûte",
+      "hautbois",
+      "violon",
+      "orgue"
+     ],
+     "aide": "Relis la fiche d’œuvre.",
+     "explication": "Il existe pour **violoncelle**, **clavecin** et **flûte**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que C. P. E. Bach fait le pont entre deux styles ?",
+     "options": [
+      "Il garde la basse continue mais y met des changements d’humeur qui annoncent Haydn",
+      "Il abandonne la basse continue et copie exactement le style de Mozart",
+      "Il écrit seulement pour le clavecin, comme son père avant lui",
+      "Il rejette les concertos et compose uniquement des opéras"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’il garde du baroque et ce qu’il annonce du classique.",
+     "explication": "Il **garde** la basse continue et la ritournelle baroques, mais ajoute des **contrastes brusques** qui annoncent **Haydn**."
+    }
+   ]
+  },
+  {
+   "chapitre": "54eff373-138b-5333-bd91-6dab245a55ff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du XIVe siècle à l’Ars subtilior",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur la fin du Moyen Âge. Tu places des repères sur une frise, puis tu précises le vocabulaire.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Ars nova et Ars subtilior",
+     "debut": 1300,
+     "fin": 1420,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "ar",
+       "date": 1320,
+       "nom": "Ars nova"
+      },
+      {
+       "id": "mm",
+       "date": 1377,
+       "nom": "Mort de Machaut"
+      },
+      {
+       "id": "co",
+       "date": 1400,
+       "nom": "Cordier (vers 1400)"
+      }
+     ],
+     "source": "Repères du cours ; dates approximatives."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "mm"
+     ],
+     "enonce": "Touche la mort de Guillaume de Machaut.",
+     "aide": "Elle est postérieure à 1370.",
+     "explication": "Guillaume de Machaut meurt en **1377**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 57,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’Ars nova (vers 1320) de la mort de Machaut ?",
+     "aide": "Soustrais 1320 de 1377.",
+     "explication": "**57 ans** : 1377 − 1320 = 57."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à son sens.",
+     "paires": [
+      [
+       "Canon",
+       "Une même mélodie reprise en décalé par plusieurs voix"
+      ],
+      [
+       "Rondeau",
+       "Forme poétique et musicale à refrain"
+      ],
+      [
+       "Palindrome",
+       "Ce qui se lit pareil dans les deux sens"
+      ],
+      [
+       "Rétrograde",
+       "Une mélodie jouée de la dernière note à la première"
+      ]
+     ],
+     "aide": "Un palindrome se lit dans les deux sens ; un rétrograde se lit à l’envers.",
+     "explication": "Le **canon** reprend en décalé, le **rondeau** a un refrain, le **palindrome** se lit dans les deux sens, le **rétrograde** à l’envers."
+    }
+   ]
+  },
+  {
+   "chapitre": "54eff373-138b-5333-bd91-6dab245a55ff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Voir la musique",
+   "competence": "observer-schema",
+   "situation": "Deux partitions de la fin du Moyen Âge sont dessinées : l’une en cercle, l’autre en forme d’instrument.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Deux partitions dessinées",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 95,
+       "r": 62,
+       "id": "cer",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 95,
+       "r": 42
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 95,
+       "r": 22
+      },
+      {
+       "forme": "chemin",
+       "d": "M 215 175 L 220 45 Q 285 20 300 95 L 290 175 Z",
+       "id": "har",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        165
+       ],
+       "a": [
+        242,
+        55
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258,
+        165
+       ],
+       "a": [
+        260,
+        48
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        276,
+        165
+       ],
+       "a": [
+        278,
+        52
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 200,
+       "texte": "Partition A",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 200,
+       "texte": "Partition B",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "multiple": false,
+     "reponse": [
+      "cer"
+     ],
+     "enonce": "Touche la partition dessinée en cercle.",
+     "aide": "Cherche la forme ronde.",
+     "explication": "C’est la **partition A** : elle évoque *Tout par compas suy composés* de Baude Cordier."
+    },
+    {
+     "type": "zone",
+     "document": "sch",
+     "multiple": false,
+     "reponse": [
+      "har"
+     ],
+     "enonce": "Touche la partition qui représente un instrument de l’harmonie.",
+     "aide": "Les portées y deviennent des cordes.",
+     "explication": "C’est la **partition B** : *La Harpe de Mélodie* de Jacob Senleches."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque œuvre à sa forme dessinée.",
+     "paires": [
+      [
+       "*La Harpe de Mélodie*",
+       "Une harpe"
+      ],
+      [
+       "*Tout par compas suy composés*",
+       "Un cercle"
+      ],
+      [
+       "*Belle, bonne, sage*",
+       "Un cœur"
+      ]
+     ],
+     "aide": "Une harpe ; un cercle ; un cœur.",
+     "explication": "Senleches dessine une **harpe**, Cordier un **cercle** et, dans *Belle, bonne, sage*, un **cœur**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Cordier choisit-il le cercle pour un canon ?",
+     "options": [
+      "Le canon tourne sans fin, comme le cercle",
+      "Le cercle est la forme la plus facile à dessiner",
+      "Le cercle représente un instrument à cordes",
+      "Le cercle remplace la clé de la partition"
+     ],
+     "reponse": 0,
+     "aide": "Un canon se répète sans jamais s’arrêter.",
+     "explication": "Le canon **tourne sans fin**, comme le **cercle** ; le texte vante aussi la composition « au compas »."
+    }
+   ]
+  },
+  {
+   "chapitre": "54eff373-138b-5333-bd91-6dab245a55ff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’écriture, une énigme",
+   "competence": "raisonner",
+   "situation": "Des fragments de mélodie, écrits pour l’exercice, illustrent le jeu de l’écriture médiévale ; tu les relies aux quatre pièces du programme.",
+   "documents": [
+    {
+     "id": "pa",
+     "type": "tableau",
+     "titre": "Quatre fragments",
+     "colonnes": [
+      "Fragment",
+      "Notes"
+     ],
+     "lignes": [
+      [
+       "A",
+       "la – si – do – ré – do – si – la"
+      ],
+      [
+       "B",
+       "la – si – do – ré – mi – fa – sol"
+      ],
+      [
+       "C",
+       "mi – fa – sol – fa – mi"
+      ],
+      [
+       "D",
+       "sol – la – si – do"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fragments imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pa",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "enonce": "Touche les deux fragments qui se lisent pareil à l’endroit et à l’envers.",
+     "aide": "Lis chaque fragment de gauche à droite, puis de droite à gauche.",
+     "explication": "Les fragments **A** et **C** sont des **palindromes** : on y lit les mêmes notes dans les deux sens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rétrograde du fragment D : sol – la – si – do ?",
+     "options": [
+      "do – si – la – sol",
+      "sol – do – la – si",
+      "la – sol – do – si",
+      "sol – la – si – do"
+     ],
+     "reponse": 0,
+     "aide": "On lit le fragment de la dernière note à la première.",
+     "explication": "Le rétrograde de D est **do – si – la – sol**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque jeu d’écriture sous la pièce qui l’emploie.",
+     "categories": [
+      "Machaut",
+      "Ciconia",
+      "Senleches",
+      "Cordier"
+     ],
+     "items": [
+      [
+       "Elle se lit à l’endroit et à l’envers",
+       0
+      ],
+      [
+       "Une seule ligne est écrite pour trois voix à vitesses différentes",
+       1
+      ],
+      [
+       "La partition est dessinée en forme de harpe",
+       2
+      ],
+      [
+       "La partition est écrite en cercle",
+       3
+      ]
+     ],
+     "aide": "Relis le tableau des quatre pièces.",
+     "explication": "**Machaut** joue sur le sens de lecture, **Ciconia** sur les proportions d’un canon, **Senleches** sur la harpe, **Cordier** sur le cercle."
+    }
+   ]
+  }
+ ]
+}

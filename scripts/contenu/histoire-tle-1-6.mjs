@@ -391,7 +391,7 @@ Partout, l’État régule davantage. Mais la crise a **affaibli** les démocrat
 | Février 1933 | L’**incendie du Reichstag** sert de prétexte à suspendre les libertés |
 | Mars 1933 | Les **pleins pouvoirs** achèvent le processus |
 | 1933-1934 | Partis et syndicats interdits ; « nuit des Longs Couteaux » |
-| Août 1934 | Mort d’Hindenburg : Hitler devient **Reichsführer** |
+| Août 1934 | Mort d’Hindenburg : Hitler cumule les fonctions de chancelier et de président : il devient le **Führer** |
 
 > Le nazisme n’a **pas** pris le pouvoir par un coup d’État : il l’a **reçu**, puis a détruit de l’intérieur les règles qui le lui avaient donné. C’est ce qui en fait un cas d’étude pour toute démocratie.
 
@@ -669,7 +669,7 @@ L’**État français** remplace la République.
 | 1944 | Les **FFI** participent aux combats |
 
 ## La Libération
-Débarquements de juin et août 1944, insurrections, libération de Paris. Le **GPRF** rétablit la République, épure, nationalise — et accorde le **droit de vote aux femmes** par l’ordonnance d’avril 1944.`,
+Débarquements de juin et août 1944, insurrections, libération de Paris. Le **GPRF** rétablit la République, épure, nationalise. Le **droit de vote des femmes** date de l’ordonnance du 21 avril 1944, prise à Alger par le Comité français de libération nationale, quelques semaines avant la naissance du GPRF.`,
           },
           questions: [
             ['Quand l’armistice est-il signé entre la France et l’Allemagne ?', ['Le 22 juin 1940', 'Le 10 mai 1940', 'Le 3 septembre 1939', 'Le 11 novembre 1942'], 0, 'Il ouvre quatre années d’occupation.'],
@@ -679,7 +679,7 @@ Débarquements de juin et août 1944, insurrections, libération de Paris. Le **
             ['Qui unifie la Résistance intérieure et crée le CNR ?', ['Jean Moulin', 'Pierre Brossolette', 'Jean Cavaillès', 'Henri Frenay'], 0, 'Le Conseil national de la Résistance se réunit en mai 1943.'],
             ['Le statut des Juifs d’octobre 1940 a été pris à la demande de l’Allemagne.', ['Vrai', 'Faux'], 1, 'Vichy le prend de sa propre initiative : c’est un antisémitisme d’État français.'],
             ['Quelle rafle de juillet 1942 est exécutée par la police française ?', ['La rafle du Vél d’Hiv', 'La rafle de Marseille', 'La rafle du Marais', 'La rafle de Drancy'], 0, 'Plus de 13 000 personnes arrêtées, dont plus de 4 000 enfants.'],
-            ['Quelle avancée politique majeure le GPRF accorde-t-il en 1944 ?', ['Le droit de vote aux femmes', 'La Sécurité sociale', 'Les congés payés', 'La retraite par répartition'], 0, 'Elles voteront pour la première fois en avril 1945.'],
+            ['Quelle avancée politique majeure l’ordonnance du 21 avril 1944 apporte-t-elle ?', ['Le droit de vote aux femmes', 'La Sécurité sociale', 'Les congés payés', 'La retraite par répartition'], 0, 'Elles voteront pour la première fois en avril 1945.', 'Quelle avancée politique majeure le GPRF accorde-t-il en 1944 ?'],
           ],
         },
         {

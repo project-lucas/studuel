@@ -1,0 +1,169 @@
+{
+  "id": "svt-brevet-2025-metropole",
+  "matiere": "svt",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2025,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "25GENSCMEAG1",
+  "titre": "Brevet 2025 — Sciences : SVT",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la SVT (30 minutes, 25 points), corrigée ici, et la physique-chimie (30 minutes, 25 points), corrigée dans le dossier Physique-Chimie.",
+  "parties": [
+    {
+      "id": "svt",
+      "titre": "SVT",
+      "nature": "exercice",
+      "enonce": "Les doryphores, des insectes qui mangent les feuilles, et leur impact sur les cultures de pommes de terre (Solanum tuberosum).",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : le document 1 montre que le nombre de tubercules ne change pas (30 par plant) mais que leur masse moyenne chute de 100 g à 25 g : c'est la proposition 3.",
+        "Question 2a : seule l'expérience C fait varier la surface des feuilles (100 % contre 75 %) en gardant tout le reste identique ; A ne change rien, B change deux choses à la fois (feuilles et température).",
+        "Question 2b : deux plants ne réagissent jamais exactement pareil ; avec 10 plants par lot, on fait une moyenne et le résultat devient fiable.",
+        "Question 3 : les doryphores mangent les feuilles, donc moins de photosynthèse, donc moins de matière organique envoyée par la sève élaborée vers les tubercules, qui en stockent moins : ils sont plus légers."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        {
+          "type": "texte",
+          "texte": "Le sujet part d'une observation d'agriculteur (les doryphores abîment les récoltes) et te demande de l'expliquer pas à pas : **le constat** (document 1), **la démarche expérimentale** (document 3), puis **l'explication** qui relie tout grâce au rôle des organes de la plante (document 2). Les photographies de la page 2 ne servent qu'à te présenter l'insecte et la pomme de terre : aucune question ne porte dessus."
+        },
+        {
+          "type": "astuce",
+          "texte": "En SVT, chaque phrase qui s'appuie sur un document commence par le nommer : « Le document 1 montre que… ». Puis tu donnes une valeur chiffrée, et enfin tu en tires une conclusion. **Je vois → je conclus** : c'est la méthode qui rapporte des points à chaque question."
+        },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "À l'aide du document 1, recopier le numéro de la proposition exacte : l'action des doryphores entraîne une diminution / augmentation du nombre ou de la masse moyenne des tubercules.",
+          "points": 4,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "**Document 1, graphique de gauche (nombre de tubercules par plant).** Les deux barres ont la même hauteur : environ **30 tubercules par plant** sans doryphore comme avec doryphores. Le nombre ne change donc pas : les propositions 1 et 2 sont fausses."
+            },
+            {
+              "type": "texte",
+              "texte": "**Document 1, graphique de droite (masse moyenne des tubercules par plant, en g).** Sans doryphore, la masse moyenne est d'environ **100 g** ; avec doryphores, elle n'est plus que d'environ **25 g**. Elle est donc divisée par 4 ($100 \\div 25 = 4$) : elle diminue. La proposition 4 est fausse, la proposition 3 est juste."
+            },
+            {
+              "type": "piege",
+              "texte": "Les deux graphiques se ressemblent mais ne mesurent pas la même chose. Lis toujours le titre de l'axe vertical avant de comparer des barres : ici « NOMBRE » à gauche, « MASSE moyenne » à droite."
+            },
+            {
+              "type": "reponse",
+              "texte": "**Proposition 3** : l'action des doryphores entraîne une diminution de la masse moyenne des tubercules (environ 100 g sans doryphore contre 25 g avec), alors que leur nombre reste le même (environ 30 par plant)."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "Parmi les expériences A, B et C du document 3, indiquer celle qui permet de tester l'hypothèse « plus la surface totale des feuilles est petite, plus la masse moyenne des tubercules est faible ». Expliquer votre choix.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "Pour tester l'influence d'un facteur, une bonne expérience compare deux lots qui ne diffèrent **que par ce facteur** : ici, la surface des feuilles. Tout le reste (température, arrosage, lumière, durée) doit être identique. Vérifions chaque expérience dans le **document 3**."
+            },
+            {
+              "type": "tableau",
+              "entetes": ["Expérience", "Feuilles", "Température", "Ce qui change entre les deux lots"],
+              "lignes": [
+                ["A (lots 1 et 2)", "100 % et 100 %", "22 °C et 22 °C", "Rien : on ne teste aucun facteur"],
+                ["B (lots 3 et 4)", "100 % et 75 %", "3 °C et 22 °C", "Deux facteurs à la fois : feuilles ET température"],
+                ["C (lots 5 et 6)", "100 % et 75 %", "22 °C et 22 °C", "Un seul facteur : la surface des feuilles"]
+              ]
+            },
+            {
+              "type": "texte",
+              "texte": "Dans l'expérience B, si le lot 4 donnait des tubercules différents du lot 3, on ne saurait pas si c'est à cause des feuilles arrachées ou de la température : le résultat ne permettrait pas de conclure. Dans l'expérience C, le lot 5 (100 % des feuilles) sert de **témoin**, et seule la surface des feuilles change dans le lot 6 (75 %). Le sujet précise que 75 % respecte la limite des 50 % de feuilles à garder pour obtenir des tubercules."
+            },
+            {
+              "type": "reponse",
+              "texte": "**L'expérience C.** Les lots 5 et 6 ne diffèrent que par la surface des feuilles (100 % contre 75 %) ; température (22 °C), arrosage, lumière et durée (4 mois) sont identiques. Si le lot 6 donne des tubercules plus légers, ce sera forcément dû à la surface des feuilles."
+            },
+            {
+              "type": "attendu",
+              "texte": "Le correcteur attend le choix de C ET la justification : un seul paramètre varie (la surface des feuilles), les autres sont fixés. Expliquer pourquoi A et B ne conviennent pas (aucun facteur testé ; deux facteurs qui varient en même temps) montre que tu as compris la démarche."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "Chaque expérience a été réalisée avec des lots de 10 plants. Expliquer l'intérêt d'avoir utilisé plusieurs plants.",
+          "points": null,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "Deux plants de pomme de terre ne sont jamais parfaitement identiques : l'un peut être un peu plus vigoureux, un autre un peu malade ou planté dans une terre légèrement différente. Avec un seul plant par lot, un résultat pourrait venir du hasard, d'un plant « à part », et non de la surface des feuilles."
+            },
+            {
+              "type": "texte",
+              "texte": "Avec 10 plants par lot, on calcule une **moyenne** : les différences propres à chaque plant se compensent, et un plant inhabituel pèse peu. C'est d'ailleurs pour cela que le sujet parle de **masse moyenne** des tubercules."
+            },
+            {
+              "type": "reponse",
+              "texte": "Utiliser plusieurs plants permet de tenir compte des différences naturelles entre les individus : on obtient une moyenne, et le résultat est plus fiable (on limite l'effet du hasard ou d'un plant particulier)."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "À l'aide des documents 1, 2 et 3, expliquer pourquoi la présence d'un grand nombre de doryphores sur les plants modifie la masse moyenne des tubercules récoltés.",
+          "points": 9,
+          "blocs": [
+            {
+              "type": "texte",
+              "texte": "C'est la question de synthèse : il faut construire une **chaîne d'explication** qui va de l'insecte jusqu'au tubercule, en appuyant chaque maillon sur un document."
+            },
+            {
+              "type": "texte",
+              "texte": "**Le constat (document 1).** Les larves et les adultes doryphores se nourrissent des feuilles de la plante. Avec doryphores, la masse moyenne des tubercules passe d'environ 100 g à environ 25 g, alors que leur nombre reste d'environ 30 par plant."
+            },
+            {
+              "type": "texte",
+              "texte": "**Le rôle des feuilles et des tubercules (document 2).** Les **feuilles** fabriquent la matière organique par la **photosynthèse**, à partir d'eau, de dioxyde de carbone et de lumière. La **tige** transporte cette matière organique dans la **sève élaborée**, de la feuille vers tous les organes de la plante. Les **tubercules** stockent des réserves de matière organique."
+            },
+            {
+              "type": "texte",
+              "texte": "**Le lien entre surface des feuilles et masse des tubercules (document 3).** Les élèves ont proposé de tester l'hypothèse « plus la surface totale des feuilles est petite, plus la masse moyenne des tubercules est faible », en arrachant des feuilles pour **simuler l'action des doryphores**. Cette hypothèse est cohérente avec le document 2 : moins de feuilles, c'est moins de surface pour capter la lumière."
+            },
+            { "type": "titre", "texte": "La chaîne d'explication" },
+            {
+              "type": "liste",
+              "ordonnee": true,
+              "items": [
+                "De nombreux doryphores mangent les feuilles : la surface totale des feuilles diminue (document 1).",
+                "Moins de feuilles, c'est moins de photosynthèse : la plante fabrique moins de matière organique (document 2).",
+                "La sève élaborée transporte donc moins de matière organique des feuilles vers les tubercules (document 2).",
+                "Les tubercules stockent moins de réserves : ils sont plus légers, leur masse moyenne diminue (document 1 : de 100 g à 25 g), comme le prévoit l'hypothèse testée par l'expérience C (document 3)."
+              ]
+            },
+            {
+              "type": "reponse",
+              "texte": "En mangeant les feuilles, les doryphores réduisent la surface qui réalise la photosynthèse. La plante produit alors moins de matière organique, et la sève élaborée en apporte moins aux tubercules, qui stockent moins de réserves : leur masse moyenne baisse (environ 25 g au lieu de 100 g), même si leur nombre ne change pas. L'agriculteur récolte donc moins de pommes de terre en masse."
+            },
+            {
+              "type": "piege",
+              "texte": "Ne dis pas que les doryphores mangent les pommes de terre : le document 1 précise qu'ils se nourrissent des FEUILLES. C'est justement tout l'intérêt de la question : expliquer comment une attaque des feuilles, en haut de la plante, abîme un organe enterré qu'elle ne touche pas."
+            },
+            {
+              "type": "attendu",
+              "texte": "Le correcteur vérifie que les trois documents sont utilisés, avec au moins une valeur chiffrée du document 1, et que les mots clés apparaissent : feuilles, photosynthèse, matière organique, sève élaborée, réserves, tubercules. Des connecteurs logiques (« donc », « or », « c'est pourquoi ») montrent que tu relies les idées au lieu de les empiler."
+            }
+          ]
+        },
+        {
+          "type": "astuce",
+          "texte": "Pour une question « expliquer pourquoi » à plusieurs documents, fais d'abord au brouillon une chaîne de flèches (doryphores → feuilles mangées → moins de photosynthèse → moins de matière organique → tubercules plus légers), puis rédige une phrase par flèche en citant le document qui la justifie."
+        }
+      ]
+    }
+  ]
+}

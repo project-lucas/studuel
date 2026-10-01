@@ -619,7 +619,7 @@ Elle choisit l’**amitié**, l’**étude** et la retraite dans la maison offer
 | Question | Les réponses possibles |
 | **Qui raconte ?** | Narrateur **interne** (« je », personnage), **externe**, ou **omniscient** (il entre dans les consciences) |
 | **Depuis quel point de vue ?** | Focalisation **interne** (par les yeux d’un personnage), **zéro** (savoir total), **externe** (on filme du dehors) |
-| **Quand ?** | Récit **rétrospectif** (après coup, comme Des Grieux), **simultané**, ou **enchâssé** |
+| **Quand ?** | Récit **rétrospectif** (après coup, comme Télumée qui raconte sa vie depuis son jardin), **simultané**, ou **enchâssé** |
 
 > Le récit **enchâssé** — un récit dans le récit — installe une distance et pose la question de la **fiabilité du témoin**.
 
@@ -638,9 +638,21 @@ Elle choisit l’**amitié**, l’**étude** et la retraite dans la maison offer
 | Époque | Ce que devient le roman |
 | **Moyen Âge** | En **vers**, chevaleresque et courtois — Chrétien de Troyes |
 | **XVIIe** | Le roman d’**analyse** : *La Princesse de Clèves* |
-| **XVIIIe** | **Mémoires** et **lettres fictives** donnent l’illusion du vrai — *Manon Lescaut*, *Les Liaisons dangereuses* |
+| **XVIIIe** | **Mémoires** et **lettres fictives** donnent l’illusion du vrai — *Les Liaisons dangereuses* |
 | **XIXe** | Le **réalisme** (Balzac, Stendhal, Flaubert) puis le **naturalisme** (Zola) : une science de la société |
-| **XXe-XXIe** | Le récit se **fragmente**, le personnage se défait (Proust, Céline, Nouveau Roman) ; le **récit intime** revient (Colette, Duras, Ernaux) |
+| **XXe-XXIe** | Le récit se **fragmente**, le personnage se défait (Proust, Céline, Nouveau Roman) ; d’autres **voix** et d’autres **mondes** prennent la parole (Duras, Ernaux, les romancières des Antilles) |
+
+## Les trois œuvres du bac 2027
+Le professeur en choisit **une**, avec son **parcours associé** (programme national de l’année 2026-2027).
+
+| Œuvre | Parcours | Ce qu’elle apporte à l’objet d’étude |
+| Chrétien de Troyes, *Le Chevalier de la charrette* (vers 1177-1181) | **Le roman et l’invention de l’amour** | Le roman **naît** : un récit en vers, en langue romane, qui fait de l’**amour** le moteur de l’aventure |
+| Émile Zola, *Pot-Bouille* (1882) | **Dévoiler les rouages de la société** | Le roman **naturaliste** ouvre un immeuble bourgeois comme on ouvre une machine |
+| Simone Schwarz-Bart, *Pluie et vent sur Télumée Miracle* (1972) | **Tisser les mémoires, habiter le monde** | Une vieille femme de Guadeloupe raconte **quatre générations** de femmes, après l’esclavage |
+
+> Trois âges du genre, trois manières de raconter : un **conteur** qui intervient dans son récit, un **narrateur** qui semble s’effacer derrière ce qu’il montre, une **narratrice** qui dit « je » au soir de sa vie.
+
+En voie technologique, le parcours de Chrétien de Troyes s’intitule **« Héroïsme et amour »**, et Zola est représenté par *Thérèse Raquin* (**« Anatomie des passions »**).
 
 ## Le personnage
 Héros, **antihéros**, personnage **en marge** : le roman a très tôt cherché ses figures **hors des normes** — criminels, courtisanes, déclassés.

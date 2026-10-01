@@ -150,6 +150,8 @@ DELETE FROM public.chapters c
 | 10³ | 1 000 |
 | 10⁻³ | 0,001 |
 
+Pour les puissances de 10, l'exposant compte les zéros : 10⁶ s'écrit 1 suivi de six zéros, et 10⁻⁶ = 0,000 001, avec le 1 au sixième rang après la virgule.
+
 ## Les quatre règles de calcul
 | L'opération | La règle | Ce qu'on fait aux exposants |
 | aᵐ × aⁿ | aᵐ⁺ⁿ | On les **additionne** |
@@ -158,6 +160,8 @@ DELETE FROM public.chapters c
 | (a × b)ⁿ | aⁿ × bⁿ | On distribue |
 
 > Ces règles ne fonctionnent qu'entre puissances **de même base**. 2³ × 5³ ne se simplifie pas en additionnant les exposants : il faut passer par (2 × 5)³ = 10³.
+
+La règle du quotient explique la convention a⁰ = 1 : a³ ÷ a³ vaut 1, et la règle donne a³⁻³ = a⁰.
 
 ## L'écriture scientifique
 Tout nombre s'écrit sous la forme **a × 10ⁿ**, où **1 ≤ a < 10** et n est un entier relatif.
@@ -172,11 +176,24 @@ Tout nombre s'écrit sous la forme **a × 10ⁿ**, où **1 ≤ a < 10** et n est
 
 La méthode : placer la virgule après le premier chiffre non nul, puis compter les rangs franchis.
 
+## Exemple résolu : un calcul à rendre en écriture scientifique
+Calculer A = (6 × 10⁵) × (4 × 10⁻²).
+1. On regroupe les nombres d'un côté, les puissances de 10 de l'autre : A = (6 × 4) × (10⁵ × 10⁻²).
+2. On calcule : 6 × 4 = 24 et 10⁵ × 10⁻² = 10⁵⁻² = 10³, donc A = 24 × 10³.
+3. 24 n'est pas entre 1 et 10 : on écrit 24 = 2,4 × 10¹, donc A = 2,4 × 10¹ × 10³ = **2,4 × 10⁴**.
+
 ## À quoi ça sert
 | L'usage | Son exemple |
 | **Comparer** | Le plus grand exposant l'emporte, si les deux sont bien en écriture scientifique |
 | Écrire le très **grand** | Distance Terre-Soleil : 1,5 × 10⁸ km |
-| Écrire le très **petit** | Taille d'un virus : 1 × 10⁻⁷ m |`,
+| Écrire le très **petit** | Taille d'un virus : 1 × 10⁻⁷ m |
+
+## Les erreurs fréquentes
+- Confondre 10⁻³ avec un nombre négatif : 10⁻³ = 0,001 est **positif**.
+- Écrire 45,3 × 10³ : c'est juste, mais ce n'est **pas** l'écriture scientifique, car 45,3 dépasse 10.
+- Multiplier les exposants au lieu de les additionner : 2⁵ × 2³ = 2⁸, pas 2¹⁵.
+
+> Au brevet, ce chapitre revient dans les exercices de sciences (distances, tailles, masses) : on attend l'écriture scientifique du résultat et un calcul détaillé.`,
           },
           questions: [
             ['Que vaut a⁰ pour a non nul ?', ['1', '0', 'a', 'Cela n’existe pas'], 0, 'C’est une convention qui rend cohérente la règle a^m ÷ a^n = a^(m−n).'],
@@ -203,6 +220,8 @@ La méthode : placer la virgule après le premier chiffre non nul, puis compter 
 | **2** est le seul premier **pair** | Tous les autres pairs sont divisibles par 2 |
 | **1 n'est pas premier** | Il n'a qu'**un seul** diviseur |
 
+Pour savoir si un nombre est premier, on teste sa divisibilité par 2, 3, 5, 7, 11… et on s'arrête dès que le carré du diviseur testé dépasse le nombre. Exemple : 97 n'est divisible ni par 2, ni par 3, ni par 5, ni par 7, et 11² = 121 dépasse 97 : **97 est premier**.
+
 ## Les critères de divisibilité
 | Le diviseur | Le critère |
 | **2** | Le nombre se termine par 0, 2, 4, 6 ou 8 |
@@ -221,6 +240,8 @@ Tout entier supérieur à 1 s'écrit d'**une seule façon** comme produit de nom
 | 15 | 3 × 5 |
 | **Total** | **2² × 3² × 5** |
 
+De même, 45 = 3² × 5 : ses diviseurs premiers sont **3 et 5**, et eux seuls.
+
 ## Rendre une fraction irréductible
 Une fraction est **irréductible** quand numérateur et dénominateur n'ont **aucun diviseur commun** autre que 1.
 
@@ -231,6 +252,17 @@ Une fraction est **irréductible** quand numérateur et dénominateur n'ont **au
 | Le résultat | **7/10** |
 
 > Simplifier n'est pas « enlever des chiffres » : c'est **diviser le haut et le bas** par le même nombre.
+
+## Exemple résolu : un problème de partage
+Un fleuriste a 84 roses et 60 tulipes. Il veut faire le plus grand nombre de bouquets identiques en utilisant toutes ses fleurs.
+1. On décompose : 84 = 2² × 3 × 7 et 60 = 2² × 3 × 5.
+2. Les facteurs communs sont 2² × 3 = 12 : il fait **12 bouquets**.
+3. Chaque bouquet contient 84 ÷ 12 = 7 roses et 60 ÷ 12 = 5 tulipes.
+
+## Les erreurs fréquentes
+- Dire que 1 est premier, ou qu'un nombre impair est forcément premier (9, 15, 21 ne le sont pas).
+- Arrêter la décomposition trop tôt : 4 × 45 n'est pas une décomposition en facteurs **premiers**.
+- Simplifier par un facteur qui n'est pas commun aux deux décompositions.
 
 ## Pourquoi c'est utile
 Une fraction irréductible est la forme la plus simple d'un quotient : c'est celle qu'attend le brevet, et celle qui rend deux fractions comparables d'un coup d'œil.`,
@@ -265,12 +297,16 @@ On transforme un **produit** en **somme**.
 | (a − b)² | a² − **2ab** + b² |
 | (a + b)(a − b) | a² − b² |
 
+Exemple : (2x + 3)(x − 4) = 2x² − 8x + 3x − 12 = 2x² − 5x − 12.
+
 ## Factoriser
 L'opération inverse : on transforme une **somme** en **produit**.
 
 | L'expression | Sa forme factorisée | Ce qu'on a repéré |
 | 5x + 15 | **5(x + 3)** | Un **facteur commun** |
 | x² − 9 | **(x + 3)(x − 3)** | Une **identité remarquable** |
+
+Pour vérifier une factorisation, on redéveloppe : 5(x + 3) redonne bien 5x + 15.
 
 ## Réduire
 On regroupe les termes de même nature.
@@ -287,13 +323,28 @@ On regroupe les termes de même nature.
 | Retirer 3 des deux côtés | 4x = 16 |
 | Diviser par 4 | **x = 4** |
 
+La méthode quand l'inconnue est des deux côtés :
+1. Développer et réduire chaque membre.
+2. Regrouper les termes en x d'un côté, les nombres de l'autre, en faisant la même opération des deux côtés.
+3. Diviser par le coefficient de x.
+4. Vérifier.
+
+Exemple résolu : 5x − 7 = 2x + 8. On retire 2x des deux côtés : 3x − 7 = 8. On ajoute 7 : 3x = 15. On divise par 3 : **x = 5**. Vérification : 5 × 5 − 7 = 18 et 2 × 5 + 8 = 18.
+
 ## L'équation produit nul
 Si **A × B = 0**, alors **A = 0 ou B = 0**.
 
 | L'équation | Ses solutions |
 | (x − 2)(x + 5) = 0 | **2** et **−5** |
 
-> Toujours **vérifier** sa solution en la remplaçant dans l'équation de départ : c'est un point gratuit au brevet.`,
+Pour x² − 9 = 0, on factorise d'abord : (x + 3)(x − 3) = 0, donc x = −3 ou x = 3.
+
+> Toujours **vérifier** sa solution en la remplaçant dans l'équation de départ : c'est un point gratuit au brevet.
+
+## Les erreurs fréquentes
+- Oublier le double produit : (x + 3)² n'est pas x² + 9, c'est x² + 6x + 9.
+- Mal distribuer un signe moins : −(x − 4) = −x + 4.
+- Garder le signe en changeant de membre : en « passant » +3 de l'autre côté, il devient −3, parce qu'on a retiré 3 aux deux membres.`,
           },
           questions: [
             ['Que donne le développement de (a + b)² ?', ['a² + 2ab + b²', 'a² + b²', 'a² − 2ab + b²', '2a + 2b'], 0, 'Le double produit 2ab est l’erreur la plus fréquente à l’oubli.'],
@@ -330,6 +381,8 @@ On additionne toutes les valeurs et on divise par leur nombre.
 
 Avec des **effectifs**, on calcule une **moyenne pondérée** : chaque valeur multipliée par son effectif, divisée par l'effectif **total**.
 
+La moyenne n'est pas forcément une valeur de la série : ici, personne n'a eu 13.
+
 ## La médiane
 Elle partage la série ordonnée en **deux groupes de même effectif**.
 
@@ -347,7 +400,21 @@ La **différence** entre la plus grande et la plus petite valeur : 17 − 8 = **
 | Le terme | Sa définition |
 | L'**effectif** d'une valeur | Le nombre de fois où elle apparaît |
 | La **fréquence** | Effectif ÷ effectif total, souvent en pourcentage |
-| La somme des fréquences | Toujours **1**, ou 100 % |`,
+| La somme des fréquences | Toujours **1**, ou 100 % |
+
+## Exemple résolu avec un tableau d'effectifs
+Nombre de frères et sœurs dans une classe : 0 (5 élèves), 1 (9 élèves), 2 (4 élèves), 3 (2 élèves).
+1. Effectif total : 5 + 9 + 4 + 2 = 20.
+2. Moyenne : (0 × 5 + 1 × 9 + 2 × 4 + 3 × 2) ÷ 20 = 23 ÷ 20 = **1,15**.
+3. Médiane : l'effectif est pair, on prend la moyenne de la 10e et de la 11e valeur. Les 5 premières valent 0, les suivantes jusqu'à la 14e valent 1 : la médiane vaut **1**.
+4. Étendue : 3 − 0 = **3**. Fréquence de la valeur 1 : 9 ÷ 20 = 0,45, soit **45 %**.
+
+## Les erreurs fréquentes
+- Chercher la médiane sans avoir rangé la série.
+- Oublier les effectifs : la moyenne de ce tableau n'est pas (0 + 1 + 2 + 3) ÷ 4.
+- Confondre la position de la médiane (la 10e valeur) et sa valeur (1).
+
+> Au brevet, on demande souvent de calculer ces indicateurs à partir d'un tableur ou d'un diagramme, puis d'interpréter : « au moins la moitié des élèves ont… » se justifie par la médiane.`,
           },
           questions: [
             ['Comment calcule-t-on la moyenne d’une série ?', ['On additionne les valeurs et on divise par leur nombre', 'On prend la valeur du milieu', 'On soustrait la plus petite valeur à la plus grande', 'On prend la valeur la plus fréquente'], 0, 'Avec des effectifs, chaque valeur est multipliée par son effectif.'],
@@ -377,6 +444,8 @@ La **différence** entre la plus grande et la plus petite valeur : 17 − 8 = **
 | **0** | Événement **impossible** |
 | **1** | Événement **certain** |
 
+Une probabilité peut s'écrire en fraction (1/4), en décimal (0,25) ou en pourcentage (25 %) : c'est le même nombre.
+
 ## Le calcul dans le cas équiprobable
 Quand toutes les issues ont la même chance :
 
@@ -384,6 +453,11 @@ P(A) = nombre d'issues **favorables** ÷ nombre d'issues **possibles**
 
 | L'exemple | Le calcul |
 | « Nombre pair » avec un dé à six faces | 3/6 = **1/2** |
+
+La méthode :
+1. Lister toutes les issues possibles et vérifier qu'elles sont équiprobables.
+2. Compter les issues qui réalisent l'événement.
+3. Faire le quotient, puis simplifier.
 
 ## L'événement contraire
 P(non A) = 1 − P(A)
@@ -396,7 +470,21 @@ P(non A) = 1 − P(A)
 | Le **tableau à double entrée** | On croise les deux épreuves |
 | Pour un événement | On **additionne** les branches qui conviennent |
 
-> La probabilité ne prédit pas le prochain lancer. Elle dit ce qui se passe **sur un grand nombre** de répétitions : c'est la loi des grands nombres, qui rapproche la fréquence observée de la probabilité théorique.`,
+## Exemple résolu
+Une urne contient 3 boules rouges et 2 vertes. On tire une boule, on la remet, on en tire une seconde.
+1. Au premier tirage : P(rouge) = 3/5 et P(verte) = 2/5.
+2. P(deux rouges) = 3/5 × 3/5 = **9/25**, en multipliant le long de la branche.
+3. P(au moins une verte) = 1 − P(deux rouges) = 1 − 9/25 = **16/25**, par l'événement contraire.
+4. P(deux boules de même couleur) = 9/25 + 2/5 × 2/5 = 9/25 + 4/25 = **13/25**, en additionnant deux branches.
+
+> La probabilité ne prédit pas le prochain lancer. Elle dit ce qui se passe **sur un grand nombre** de répétitions : c'est la loi des grands nombres, qui rapproche la fréquence observée de la probabilité théorique.
+
+## Les erreurs fréquentes
+- Croire que le hasard « compense » : une pièce tombée cinq fois sur pile a toujours une chance sur deux de tomber sur face. Elle n'a pas de mémoire.
+- Trouver une probabilité supérieure à 1 ou négative : c'est forcément une erreur de calcul.
+- Additionner le long d'une branche au lieu de multiplier.
+
+> Au brevet, les probabilités tombent presque chaque année : urnes, dés, roues de loterie, souvent avec une question « le jeu est-il équitable ? ».`,
           },
           questions: [
             ['Entre quelles valeurs une probabilité est-elle toujours comprise ?', ['Entre 0 et 1', 'Entre −1 et 1', 'Entre 0 et 100', 'Entre 1 et 10'], 0, '0 = impossible, 1 = certain.'],
@@ -424,6 +512,8 @@ P(non A) = 1 − P(A)
 
 > Un nombre a **une seule image**, mais un nombre peut avoir **plusieurs antécédents** — ou aucun. C'est la dissymétrie la plus souvent oubliée.
 
+Exemple avec g(x) = x² : g(3) = 9 et g(−3) = 9, donc 9 a deux antécédents, 3 et −3 ; et −4 n'en a aucun, car un carré n'est jamais négatif.
+
 ## Les deux calculs
 | Le calcul | Ce qu'on fait | Un exemple avec f(x) = 2x + 5 |
 | Une **image** | On **remplace** x par sa valeur | f(3) = 2 × 3 + 5 = **11** |
@@ -440,7 +530,22 @@ P(non A) = 1 − P(A)
 | L'**image** de 3 | Partir de 3 en **abscisse**, monter jusqu'à la courbe, lire en **ordonnée** |
 | L'**antécédent** de 7 | Partir de 7 en **ordonnée**, aller horizontalement jusqu'à la courbe, lire en **abscisse** |
 
-> Il peut y avoir **plusieurs** antécédents : la lecture horizontale peut couper la courbe en plusieurs points.`,
+> Il peut y avoir **plusieurs** antécédents : la lecture horizontale peut couper la courbe en plusieurs points.
+
+## Exemple résolu
+Soit h(x) = 3x − 4.
+1. Image de −2 : h(−2) = 3 × (−2) − 4 = −6 − 4 = **−10**.
+2. Antécédent de 11 : on résout 3x − 4 = 11, soit 3x = 15, donc **x = 5**.
+3. Le point A(2 ; 3) est-il sur la courbe ? h(2) = 3 × 2 − 4 = 2, et non 3 : **A n'est pas sur la courbe**.
+
+Pour tester si un point est sur une courbe, on calcule l'image de son abscisse et on la compare à son ordonnée.
+
+## Les erreurs fréquentes
+- Inverser image et antécédent dans la phrase réponse.
+- Lire un graphique dans le mauvais sens : pour une image, on part toujours de l'axe horizontal.
+- Oublier les parenthèses autour d'un nombre négatif : avec g(x) = x², g(−3) = (−3)² = 9.
+
+> Au brevet, on rencontre la fonction sous ses trois formes, souvent dans un même exercice avec un tableur : savoir passer de l'une à l'autre est l'objectif du chapitre.`,
           },
           questions: [
             ['Qu’est-ce qu’une fonction ?', ['Un procédé qui associe à un nombre un seul autre nombre', 'Une égalité entre deux expressions', 'Une suite de nombres ordonnés', 'Un tableau de proportionnalité'], 0, 'À chaque antécédent correspond une image unique.'],
@@ -474,6 +579,8 @@ P(non A) = 1 − P(A)
 
 Le coefficient a est la **pente** : en avançant de 1 vers la droite, on monte de a.
 
+Pour tracer la droite, un seul point suffit en plus de l'origine : avec f(x) = 1,5x, on place (0 ; 0) et (2 ; 3), puis on trace.
+
 ## Les pourcentages, cas particulier
 | L'opération | Le coefficient multiplicateur |
 | Prendre **t %** | t/100 — la fonction x ↦ 0,2x donne 20 % de x |
@@ -490,7 +597,22 @@ Le coefficient a est la **pente** : en avançant de 1 vers la droite, on monte d
 | L'indice | Ce qu'on vérifie |
 | La **formule** | De la forme a x, **sans terme constant** |
 | Le **tableau** | Le quotient f(x) ÷ x est **constant** |
-| Le **graphique** | Une droite passant par l'**origine** |`,
+| Le **graphique** | Une droite passant par l'**origine** |
+
+## Exemple résolu
+Un article coûte 80 €. Il est soldé à −25 %, puis augmenté de 10 %.
+1. Coefficient de la baisse : 1 − 0,25 = 0,75. Coefficient de la hausse : 1 + 0,10 = 1,10.
+2. Coefficient global : 0,75 × 1,10 = 0,825. Le prix final est 80 × 0,825 = **66 €**.
+3. 0,825 = 1 − 0,175 : l'évolution globale est une **baisse de 17,5 %**, et non de 15 %.
+
+Autre exemple : f est linéaire et f(4) = 10. Alors a = 10 ÷ 4 = 2,5, donc f(x) = 2,5x et f(6) = **15**.
+
+## Les erreurs fréquentes
+- Multiplier par 0,15 pour augmenter de 15 % : on obtient seulement la hausse, pas le nouveau prix.
+- Additionner des pourcentages successifs.
+- Déclarer proportionnelle une situation représentée par une droite qui ne passe pas par l'origine.
+
+> Au brevet, la proportionnalité se démontre par le graphique (droite par l'origine) ou par le tableau (quotients égaux) : il faut citer l'argument, pas seulement conclure.`,
           },
           questions: [
             ['Quelle est la forme d’une fonction linéaire ?', ['f(x) = a x', 'f(x) = a x + b avec b non nul', 'f(x) = x²', 'f(x) = a ÷ x'], 0, 'Aucun terme constant : c’est ce qui la distingue de la fonction affine.'],
@@ -529,6 +651,8 @@ Le coefficient a est la **pente** : en avançant de 1 vers la droite, on monte d
 
 Elle coupe l'axe des ordonnées au point (0 ; b).
 
+Pour la tracer : 1. placer (0 ; b) ; 2. calculer une autre image, par exemple f(2) ; 3. placer ce second point et tracer la droite. Avec f(x) = −2x + 3 : on place (0 ; 3) et (2 ; −1).
+
 ## Déterminer a et b à partir de deux points
 a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 
@@ -539,12 +663,25 @@ a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 
 > Une fonction affine n'est **pas** une situation de proportionnalité, sauf si b = 0 : un forfait de 15 € plus 2 € par heure ne double pas quand les heures doublent.
 
+## Exemple résolu : comparer deux offres
+Un club propose deux tarifs : offre A, 6 € la séance ; offre B, un abonnement de 30 € puis 3,50 € la séance.
+1. On modélise : A(x) = 6x, fonction linéaire ; B(x) = 3,5x + 30, fonction affine.
+2. On cherche quand les prix sont égaux : 6x = 3,5x + 30, donc 2,5x = 30 et **x = 12**.
+3. Pour 12 séances, les deux offres coûtent 72 €. En dessous, l'offre A est moins chère ; au-delà, c'est l'offre B.
+
+Sur le graphique, x = 12 est l'abscisse du point d'intersection des deux droites.
+
 ## Les usages du brevet
 | La situation | Ce qu'on cherche |
 | Tarifs à abonnement | Comparer deux offres |
 | Distance avec une avance de départ | Le moment du rattrapage |
 | Deux droites tracées | Leur **point d'intersection** |
-| Deux formules | L'équation qui les égalise |`,
+| Deux formules | L'équation qui les égalise |
+
+## Les erreurs fréquentes
+- Inverser a et b : dans 3x + 2, la pente est 3, l'ordonnée à l'origine est 2.
+- Calculer a avec les différences dans un ordre différent en haut et en bas.
+- Lire l'ordonnée à l'origine ailleurs que sur l'axe des ordonnées.`,
           },
           questions: [
             ['Quelle est la forme d’une fonction affine ?', ['f(x) = a x + b', 'f(x) = a x seulement', 'f(x) = x² + b', 'f(x) = a ÷ (x + b)'], 0, 'a est le coefficient directeur, b l’ordonnée à l’origine.'],
@@ -571,6 +708,8 @@ a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 | La **sphère** | La **surface** : les points à distance R du centre | La coque d'un ballon |
 | La **boule** | Le **solide plein** | Le ballon entier |
 
+La sphère de centre O et de rayon R est l'ensemble des points M de l'espace tels que OM = R ; la boule est l'ensemble des points tels que OM ≤ R.
+
 ## Les deux formules
 | La grandeur | Sa formule | Son unité |
 | **Aire de la sphère** | A = 4 × π × R² | Une unité **carrée** |
@@ -585,11 +724,21 @@ a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 
 > La coïncidence des valeurs n'arrive que pour R = 3 : ce sont deux grandeurs différentes, l'une en cm², l'autre en cm³.
 
+## Exemple résolu : une balle de tennis
+Une balle a un diamètre de 6,6 cm. Quel est son volume, au cm³ près ?
+1. Le rayon : R = 6,6 ÷ 2 = 3,3 cm.
+2. La formule : V = (4/3) × π × 3,3³.
+3. Le calcul : 3,3³ = 35,937, donc V ≈ (4/3) × 3,1416 × 35,937 ≈ **151 cm³**, soit environ 0,15 L.
+
+La méthode à suivre à chaque fois : 1. repérer rayon ou diamètre ; 2. écrire la formule littérale ; 3. remplacer ; 4. donner la valeur exacte (en π) puis l'arrondi demandé, avec l'unité.
+
 ## Les sections d'une sphère
 | La position du plan | La section obtenue |
 | Quelconque | Un **cercle** |
 | **Par le centre** | Un **grand cercle**, de même rayon que la sphère |
 | Plus le plan s'éloigne du centre | Plus le cercle est **petit** |
+
+Le rayon r de la section se calcule avec Pythagore : si le plan est à la distance d du centre, r² = R² − d².
 
 ## Effet d'un agrandissement
 | Si le rayon est multiplié par k | La grandeur est multipliée par |
@@ -602,7 +751,12 @@ a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 ## Les unités
 | L'équivalence | Sa valeur |
 | 1 L | 1 dm³ |
-| 1 cm³ | 1 mL |`,
+| 1 cm³ | 1 mL |
+
+## Les erreurs fréquentes
+- Utiliser π × R², l'aire d'un disque, pour l'aire de la sphère.
+- Oublier le 4/3, ou élever le rayon au carré au lieu du cube dans le volume.
+- Donner un volume en cm² : une aire et un volume n'ont jamais la même unité.`,
           },
           questions: [
             ['Quelle est la différence entre une sphère et une boule ?', ['La sphère est la surface, la boule est le solide plein', 'La sphère est pleine, la boule est creuse', 'Ce sont deux mots pour le même objet', 'La sphère est plate, la boule est en volume'], 0, 'La coque du ballon contre le ballon entier.'],
@@ -632,6 +786,8 @@ a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 | **Cône** | Parallèle à la base | Un **disque** |
 | **Sphère** | Quelconque | Un **cercle** — un grand cercle si le plan passe par le centre |
 
+Pour se représenter une section, on imagine le solide en pâte à modeler tranché par un fil : la face coupée est la section. Dans une figure en perspective, les longueurs de la section se calculent souvent avec Pythagore ou Thalès.
+
 ## La réduction dans la pyramide et le cône
 La section parallèle à la base est une **réduction** de la base, de coefficient k égal au rapport des hauteurs.
 
@@ -647,7 +803,23 @@ La section parallèle à la base est une **réduction** de la base, de coefficie
 | **Pyramide** | (1/3) × aire de la base × hauteur |
 | **Cône** | (1/3) × aire de la base × hauteur |
 
-> Le **tiers** de la pyramide et du cône n'est pas un détail : c'est le facteur que les copies oublient le plus souvent.`,
+> Le **tiers** de la pyramide et du cône n'est pas un détail : c'est le facteur que les copies oublient le plus souvent.
+
+## Exemple résolu : une pyramide coupée
+Une pyramide de hauteur 12 cm a une base carrée de 9 cm de côté. On la coupe par un plan parallèle à la base, à 4 cm du sommet.
+1. Le coefficient de réduction : k = 4 ÷ 12 = 1/3.
+2. La section est un carré de côté 9 × 1/3 = **3 cm**, d'aire 9 cm².
+3. Le volume de la grande pyramide : (1/3) × 9² × 12 = (1/3) × 81 × 12 = 324 cm³.
+4. Le volume de la petite pyramide : 324 × (1/3)³ = 324 ÷ 27 = **12 cm³**.
+
+La méthode : 1. identifier la nature de la section ; 2. calculer le coefficient k comme rapport des hauteurs, petite sur grande ; 3. appliquer k, k² ou k³ selon la grandeur cherchée.
+
+## Les erreurs fréquentes
+- Appliquer k à une aire ou à un volume au lieu de k² ou k³.
+- Prendre la distance à la base au lieu de la distance au sommet pour calculer k.
+- Croire qu'une sphère peut donner autre chose qu'un cercle : c'est toujours un cercle.
+
+> Au brevet, les sections apparaissent dans des problèmes concrets (silos, verres coniques, pyramides) où l'on combine volume, réduction et conversion en litres.`,
           },
           questions: [
             ['Quelle figure obtient-on en coupant un cylindre par un plan parallèle à sa base ?', ['Un disque de même rayon que la base', 'Un rectangle', 'Une ellipse', 'Un triangle'], 0, 'Le plan « recopie » la base.'],
@@ -674,6 +846,12 @@ L'image M′ de M par l'homothétie de centre O et de rapport k est le point de 
 | **Positif** | Du **même côté** que M par rapport à O |
 | **Négatif** | De l'**autre côté** : la figure est retournée |
 
+La méthode de construction, point par point :
+1. Tracer la demi-droite ou la droite (OM).
+2. Mesurer OM et calculer OM′ = valeur absolue de k × OM.
+3. Placer M′ sur (OM), du même côté que M si k est positif, de l'autre côté si k est négatif.
+4. Recommencer pour chaque sommet, puis relier les images.
+
 ## Ce qu'elle conserve, ce qu'elle multiplie
 | Elle **conserve** | Elle **multiplie** |
 | L'**alignement** | Les **longueurs** par la valeur absolue de k |
@@ -692,10 +870,23 @@ L'image M′ de M par l'homothétie de centre O et de rapport k est le point de 
 
 > Une homothétie de rapport 3 triple les longueurs mais multiplie l'aire par **9** : c'est la source d'erreur numéro un du chapitre.
 
+## Exemple résolu
+Un triangle ABC a des côtés de 3 cm, 4 cm et 5 cm, et une aire de 6 cm². On lui applique l'homothétie de centre O et de rapport −2.
+1. Les longueurs sont multipliées par 2 : l'image a des côtés de **6 cm, 8 cm et 10 cm**.
+2. L'aire est multipliée par (−2)² = 4 : elle vaut **24 cm²**.
+3. Le signe moins place l'image de l'autre côté de O : le triangle est retourné, mais ses angles sont inchangés.
+
+Pour retrouver le rapport à partir d'une figure : k = OM′ ÷ OM, avec un signe moins si M et M′ sont de part et d'autre de O.
+
 ## Le lien avec Thalès
 Une homothétie de centre O transforme une droite en une **droite parallèle**.
 
-> C'est exactement la configuration du théorème de Thalès : les deux chapitres décrivent la même situation, l'un par une transformation, l'autre par une égalité de quotients.`,
+> C'est exactement la configuration du théorème de Thalès : les deux chapitres décrivent la même situation, l'un par une transformation, l'autre par une égalité de quotients.
+
+## Les erreurs fréquentes
+- Croire qu'un rapport de 0,5 agrandit : toute valeur absolue inférieure à 1 réduit.
+- Oublier que k négatif retourne la figure autour du centre.
+- Multiplier une aire par k au lieu de k².`,
           },
           questions: [
             ['Qu’est-ce qu’une homothétie ?', ['Une transformation qui agrandit ou réduit une figure depuis un point fixe', 'Une rotation autour d’un point', 'Une translation le long d’un vecteur', 'Une symétrie par rapport à une droite'], 0, 'Elle est définie par un centre et un rapport.'],
@@ -734,6 +925,12 @@ AM / AB = AN / AC = MN / BC
 
 > L'erreur classique est de mélanger un « petit » et un « grand » segment dans le même quotient. Écrire toujours **petit sur grand** évite la moitié des fautes.
 
+## Exemple résolu : calculer une longueur
+On sait : A, M, B alignés ; A, N, C alignés ; (MN) parallèle à (BC) ; AM = 3 cm, AB = 5 cm, BC = 7 cm. Calculer MN.
+1. Les droites (MB) et (NC) sont sécantes en A et (MN) est parallèle à (BC) : d'après le théorème de Thalès, AM / AB = AN / AC = MN / BC.
+2. On garde les quotients utiles : 3 / 5 = MN / 7.
+3. Produit en croix : MN = 3 × 7 ÷ 5 = **4,2 cm**.
+
 ## Les deux usages inverses
 | Ce qu'on veut prouver | Ce qu'on utilise | La condition |
 | Les droites sont **parallèles** | La **réciproque** | Les points alignés **dans le même ordre**, et AM / AB = AN / AC |
@@ -741,11 +938,18 @@ AM / AB = AN / AC = MN / BC
 
 > C'est la question type du brevet : on calcule les deux quotients, on les compare, on conclut.
 
+Exemple : AM = 4, AB = 10, AN = 6, AC = 15. AM / AB = 0,4 et AN / AC = 0,4 : les quotients sont égaux et les points sont dans le même ordre, donc (MN) et (BC) sont parallèles. Si l'on avait trouvé 0,4 et 0,42, on conclurait qu'elles ne le sont pas.
+
 ## Le lien avec les agrandissements
 | Le rapport commun k | Ce qu'il multiplie |
 | Les **longueurs** | k |
 | Les **aires** | k² |
-| Les **volumes** | k³ |`,
+| Les **volumes** | k³ |
+
+## Les erreurs fréquentes
+- Oublier de citer le parallélisme avant d'appliquer le théorème : sans lui, il ne s'applique pas.
+- Comparer des quotients arrondis : on compare des valeurs exactes, ou des produits en croix.
+- Chercher un angle avec Thalès : le théorème ne parle que de longueurs, les angles relèvent de la trigonométrie.`,
           },
           questions: [
             ['Quelle condition rend le théorème de Thalès applicable ?', ['Deux droites parallèles coupées par deux sécantes', 'Un triangle rectangle', 'Deux cercles de même rayon', 'Un quadrilatère quelconque'], 0, 'Le parallélisme est l’hypothèse indispensable.'],
@@ -771,6 +975,8 @@ AM / AB = AN / AC = MN / BC
 | L'**adjacent** | Il **touche** l'angle choisi |
 | L'**opposé** | Il lui **fait face** |
 
+L'adjacent et l'opposé dépendent de l'angle choisi : l'adjacent de l'un des angles aigus est l'opposé de l'autre. L'hypoténuse, elle, ne change jamais.
+
 ## Les trois formules
 | Le rapport | Sa formule |
 | **cos** | adjacent ÷ hypoténuse |
@@ -785,6 +991,17 @@ Le moyen mnémotechnique : **CAH – SOH – TOA**.
 | Un **angle** | Calculer le quotient, puis utiliser **cos⁻¹, sin⁻¹ ou tan⁻¹** |
 
 > Vérifier que la calculatrice est bien en mode **degrés** (DEG) : en radians, tous les résultats sont faux **sans que rien ne le signale**.
+
+## Exemples résolus
+Triangle ABC rectangle en B, avec l'angle en A de 35° et AC = 8 cm. Calculer BC.
+1. Depuis l'angle A : AC est l'hypoténuse, BC est l'opposé.
+2. La formule qui relie opposé et hypoténuse est le sinus : sin 35° = BC / 8.
+3. BC = 8 × sin 35° ≈ **4,6 cm**.
+
+Triangle DEF rectangle en E, avec DE = 5 cm et EF = 12 cm. Calculer l'angle en D.
+1. Depuis D : EF est l'opposé, DE l'adjacent.
+2. tan D = 12 / 5 = 2,4.
+3. D = tan⁻¹(2,4) ≈ **67°**.
 
 ## Les valeurs à connaître
 | L'angle | cos | sin | tan |
@@ -801,7 +1018,14 @@ Le moyen mnémotechnique : **CAH – SOH – TOA**.
 | **Pythagore** | Trois **longueurs** : a² + b² = c² |
 | La **trigonométrie** | Deux longueurs et un **angle** |
 
-> Une figure se traite souvent avec les deux à la suite.`,
+> Une figure se traite souvent avec les deux à la suite.
+
+## Les erreurs fréquentes
+- Prendre l'hypoténuse pour l'adjacent : l'hypoténuse est toujours en face de l'angle droit.
+- Arrondir trop tôt : on garde la valeur de la calculatrice jusqu'au résultat final.
+- Utiliser la trigonométrie dans un triangle qui n'est pas rectangle.
+
+> Au brevet, la trigonométrie sert souvent à calculer une hauteur (rampe, échelle, toit) ou un angle de pente.`,
           },
           questions: [
             ['Que vaut le cosinus d’un angle aigu dans un triangle rectangle ?', ['Adjacent ÷ hypoténuse', 'Opposé ÷ hypoténuse', 'Opposé ÷ adjacent', 'Hypoténuse ÷ adjacent'], 0, 'Le moyen mnémotechnique CAH : Cosinus, Adjacent, Hypoténuse.'],
@@ -835,11 +1059,25 @@ AB / DE = AC / DF = BC / EF = k
 
 > L'ordre des lettres n'est pas décoratif : c'est lui qui dit quel côté correspond à quel autre.
 
+La méthode :
+1. Montrer que deux angles sont égaux (angle commun, angles opposés par le sommet, angles droits, angles alternes-internes).
+2. Conclure que les triangles sont semblables, en écrivant les sommets dans l'ordre des correspondances.
+3. Écrire l'égalité des quotients de côtés homologues.
+4. Calculer la longueur cherchée par un produit en croix.
+
+## Exemple résolu : la hauteur d'un arbre
+Un bâton de 1,5 m, planté verticalement, a une ombre de 2 m. Au même moment, l'ombre d'un arbre mesure 14 m.
+1. Les deux triangles (objet, ombre, rayon de soleil) ont chacun un angle droit au sol, et le même angle entre le sol et les rayons : ils sont semblables.
+2. Le rapport de similitude : k = 14 ÷ 2 = 7.
+3. La hauteur de l'arbre : 1,5 × 7 = **10,5 m**.
+
 ## Ce que le rapport multiplie
 | La grandeur | Son coefficient |
 | Les **longueurs** | k |
 | Les **aires** | **k²** |
 | Les **volumes**, pour des solides semblables | **k³** |
+
+Si k = 2, un triangle d'aire 5 cm² a pour « grand frère » un triangle d'aire 20 cm².
 
 ## Semblables et égaux
 | Les triangles | Leur rapport | Ce qu'ils partagent |
@@ -854,7 +1092,11 @@ AB / DE = AC / DF = BC / EF = k
 | Démontrer une **égalité de rapports** | Une configuration géométrique |
 | Relier une **réduction** à son modèle | Maquette, plan |
 
-> La configuration de Thalès produit d'ailleurs toujours deux triangles semblables.`,
+> La configuration de Thalès produit d'ailleurs toujours deux triangles semblables.
+
+## Les erreurs fréquentes
+- Associer deux côtés qui ne se correspondent pas : on suit l'ordre des sommets.
+- Croire que des triangles semblables ont la même aire : c'est vrai seulement si k = 1.`,
           },
           questions: [
             ['Quand deux triangles sont-ils semblables ?', ['Quand leurs angles sont deux à deux égaux', 'Quand ils ont la même aire', 'Quand ils ont un côté commun', 'Quand ils sont tous deux rectangles'], 0, 'Leurs côtés sont alors proportionnels.'],

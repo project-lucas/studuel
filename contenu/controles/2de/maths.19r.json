@@ -1,0 +1,1594 @@
+{
+  "niveau": "2de",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+      "difficulte": 1,
+      "titre": "Ranger les nombres, écrire les intervalles",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Pour chacun des nombres suivants, donne le **plus petit** ensemble (parmi ℕ, ℤ, ⅅ, ℚ, ℝ) auquel il appartient : −4 ; 0,75 ; 2/3 ; π ; 12/4.\n2. Écris sous forme d'intervalle l'ensemble des réels x tels que :\n   a. −2 < x ≤ 5\n   b. x ≥ 1\n   c. x < 0\n3. Calcule |−3,5| et |4 − 9|.",
+      "bareme": [
+        {
+          "critere": "Les cinq nombres rangés dans le bon plus petit ensemble, avec une justification",
+          "points": 8
+        },
+        {
+          "critere": "Les trois intervalles écrits avec les bons crochets (ouverts du côté de l'infini)",
+          "points": 9
+        },
+        {
+          "critere": "Les deux valeurs absolues justes",
+          "points": 3
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n- −4 : entier négatif, donc dans **ℤ** (pas dans ℕ).\n- 0,75 = 75/100 : écriture décimale finie, donc **ⅅ** (pas entier).\n- 2/3 = 0,666… : quotient de deux entiers mais écriture décimale infinie, donc **ℚ** (pas décimal).\n- π : irrationnel, donc seulement **ℝ**.\n- 12/4 = 3 : entier positif, donc **ℕ**.\n2.\n   a. **]−2 ; 5]** (−2 exclu, 5 compris).\n   b. **[1 ; +∞[** (crochet ouvert du côté de l'infini).\n   c. **]−∞ ; 0[** (0 exclu).\n3. |−3,5| = **3,5** (distance de −3,5 à 0) ; |4 − 9| = |−5| = **5**."
+    },
+    {
+      "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+      "difficulte": 2,
+      "titre": "Deux poissons, un seul aquarium",
+      "consigne": "Lis la situation, puis réponds en écrivant chaque ensemble de solutions sous forme d'intervalle.",
+      "enonce": "**Situation.** Maya veut installer deux espèces de poissons dans le même aquarium.\n- Le poisson A ne supporte qu'une température T (en °C) telle que |T − 26| ≤ 2.\n- Le poisson B ne supporte qu'une température comprise entre 22 °C et 25 °C, bornes comprises.\n\n1. Traduis la condition du poisson A par un intervalle. Explique ce que signifie |T − 26| ≤ 2 en termes de distance.\n2. Écris l'intervalle des températures supportées par le poisson B.\n3. Détermine l'intervalle des températures qui conviennent **aux deux** poissons. Quelle opération sur les ensembles utilises-tu ?\n4. Détermine l'ensemble des températures qui conviennent **à au moins un** des deux poissons.\n5. Une température de 25,5 °C convient-elle aux deux poissons ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Condition du poisson A traduite en [24 ; 28] avec l'idée de distance à 26 inférieure ou égale à 2",
+          "points": 5
+        },
+        {
+          "critere": "Intervalle du poisson B [22 ; 25] et intersection [24 ; 25] identifiée comme une intersection",
+          "points": 6
+        },
+        {
+          "critere": "Réunion [22 ; 28] correcte",
+          "points": 5
+        },
+        {
+          "critere": "Réponse justifiée pour 25,5 °C",
+          "points": 4
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. |T − 26| est la distance entre T et 26. La condition dit que T est à une distance d'au plus 2 de 26 : c'est l'intervalle centré en 26 de rayon 2, **[24 ; 28]**.\n2. Poisson B : **[22 ; 25]**.\n3. Il faut que T appartienne aux deux intervalles : c'est l'**intersection** [24 ; 28] ∩ [22 ; 25] = **[24 ; 25]**.\n4. Il suffit que T appartienne à l'un ou à l'autre : c'est la **réunion** [22 ; 25] ∪ [24 ; 28] = **[22 ; 28]** (les deux intervalles se chevauchent, la réunion est d'un seul tenant).\n5. 25,5 n'appartient pas à [24 ; 25] (25,5 > 25) : cette température convient au poisson A mais **pas** au poisson B, donc pas aux deux."
+    },
+    {
+      "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+      "difficulte": 3,
+      "titre": "Intervalles, valeur absolue et nature des nombres",
+      "consigne": "Réponds à chaque question en justifiant. Les réponses non justifiées ne rapportent pas de points.",
+      "enonce": "On considère les ensembles :\n- A, l'ensemble des réels x tels que x ≤ 3 **et** x ≥ −1 ;\n- B, l'ensemble des réels x tels que |x − 5| ≤ 3.\n\n1. Écris A sous forme d'un intervalle, en expliquant qu'il s'agit de l'intersection de ]−∞ ; 3] et de [−1 ; +∞[.\n2. Écris B sous forme d'un intervalle en utilisant la notion de distance.\n3. Détermine A ∩ B et A ∪ B.\n4. Parmi les nombres 5/2 ; 7/2 ; 3 ; π ; −1, lesquels appartiennent à A ∩ B ? Justifie chaque réponse.\n5. Vrai ou faux : « tous les nombres de A ∩ B sont des décimaux ». Justifie à l'aide d'un exemple tiré du cours.",
+      "bareme": [
+        {
+          "critere": "A = [−1 ; 3] obtenu comme intersection",
+          "points": 4
+        },
+        {
+          "critere": "B = [2 ; 8] justifié par la distance de x à 5",
+          "points": 4
+        },
+        {
+          "critere": "A ∩ B = [2 ; 3] et A ∪ B = [−1 ; 8]",
+          "points": 5
+        },
+        {
+          "critere": "Appartenance des cinq nombres à A ∩ B correctement justifiée (π ≈ 3,14 > 3)",
+          "points": 4
+        },
+        {
+          "critere": "Réponse « faux » avec un contre-exemple rationnel non décimal de [2 ; 3], comme 7/3",
+          "points": 3
+        }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. x ≤ 3 correspond à ]−∞ ; 3] et x ≥ −1 à [−1 ; +∞[. Les deux conditions en même temps : c'est l'intersection, **A = [−1 ; 3]**.\n2. |x − 5| est la distance de x à 5 ; elle doit être au plus 3 : intervalle centré en 5 de rayon 3, **B = [5 − 3 ; 5 + 3] = [2 ; 8]**.\n3. **A ∩ B = [2 ; 3]** (ce qui est commun) ; **A ∪ B = [−1 ; 8]** (les intervalles se chevauchent entre 2 et 3).\n4.\n- 5/2 = 2,5 : 2 ≤ 2,5 ≤ 3, **oui**.\n- 7/2 = 3,5 > 3 : **non**.\n- 3 : borne comprise, **oui**.\n- π ≈ 3,14 > 3 : **non**.\n- −1 < 2 : **non** (il est dans A mais pas dans B).\n5. **Faux.** 7/3 = 2,333… appartient à [2 ; 3], mais sa fraction irréductible a un dénominateur qui contient le facteur 3 : son écriture décimale n'est pas finie, 7/3 est rationnel mais **pas décimal**. (Tout autre contre-exemple juste est accepté, par exemple 8/3.)"
+    },
+    {
+      "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+      "difficulte": 1,
+      "titre": "Décimal ou pas ? Calculs de fractions",
+      "consigne": "Justifie chaque réponse et donne les résultats sous forme de fraction irréductible.",
+      "enonce": "1. Parmi les fractions suivantes, lesquelles représentent un nombre **décimal** ? 7/20 ; 5/6 ; 13/25 ; 4/12. Justifie à l'aide des facteurs premiers du dénominateur, et donne l'écriture décimale des décimaux.\n2. Calcule et simplifie :\n   a. A = 3/4 + 5/6\n   b. B = 2/3 × 9/10\n   c. C = (5/8) ÷ (15/4)",
+      "bareme": [
+        {
+          "critere": "Les deux décimaux (7/20 et 13/25) reconnus avec leur écriture décimale",
+          "points": 6
+        },
+        {
+          "critere": "Justification par les facteurs premiers 2 et 5 du dénominateur de la fraction irréductible",
+          "points": 5
+        },
+        {
+          "critere": "Les trois calculs justes et simplifiés : 19/12, 3/5, 1/6",
+          "points": 9
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1.\n- 7/20 est irréductible et 20 = 2² × 5 : seuls 2 et 5, donc **décimal** : 7/20 = 35/100 = 0,35.\n- 5/6 est irréductible et 6 = 2 × 3 : le facteur 3 apparaît, **pas décimal**.\n- 13/25 est irréductible et 25 = 5² : **décimal** : 13/25 = 52/100 = 0,52.\n- 4/12 = 1/3 (il faut d'abord rendre la fraction irréductible) : dénominateur 3, **pas décimal**.\n2.\n   a. A = 9/12 + 10/12 = **19/12**.\n   b. B = (2 × 9)/(3 × 10) = 18/30 = **3/5**.\n   c. C = 5/8 × 4/15 = 20/120 = **1/6** (diviser, c'est multiplier par l'inverse)."
+    },
+    {
+      "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+      "difficulte": 2,
+      "titre": "La pizza de Zoé",
+      "consigne": "Lis la situation, puis réponds en justifiant tes calculs.",
+      "enonce": "**Situation.** Zoé partage une pizza : elle en mange 1/3, son ami Malik en mange 1/4, et le reste est gardé pour le soir.\n\n1. Quelle fraction de la pizza a été mangée ? Quelle fraction reste-t-il ?\n2. La fraction restante est-elle un nombre décimal ? Est-elle un rationnel ? Justifie, en décrivant son écriture décimale.\n3. Malik refait le calcul avec des valeurs approchées : il remplace 1/3 par 0,33 et 1/4 par 0,25, puis calcule 1 − (0,33 + 0,25). Quel résultat obtient-il ? Compare avec la valeur exacte du reste et explique pourquoi il vaut mieux garder les valeurs exactes.",
+      "bareme": [
+        {
+          "critere": "Fraction mangée 7/12 et reste 5/12 obtenus par réduction au même dénominateur",
+          "points": 6
+        },
+        {
+          "critere": "5/12 non décimal (facteur 3 au dénominateur) mais rationnel, écriture décimale périodique 0,41666…",
+          "points": 7
+        },
+        {
+          "critere": "Calcul de Malik (0,42), écart avec 5/12 et explication sur l'accumulation des arrondis",
+          "points": 7
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Mangé : 1/3 + 1/4 = 4/12 + 3/12 = **7/12**. Reste : 1 − 7/12 = **5/12**.\n2. 5/12 est irréductible et 12 = 2² × 3 : le facteur 3 empêche l'écriture décimale d'être finie, donc 5/12 **n'est pas décimal**. C'est bien un **rationnel** (quotient de deux entiers) : son écriture décimale est 0,41666…, infinie mais **périodique** (le 6 se répète).\n3. Malik obtient 1 − 0,58 = **0,42**. La valeur exacte est 5/12 = 0,41666… : l'écart est d'environ 0,0033. Les deux arrondis (0,33 au lieu de 0,333… ; ici 0,25 est exact) introduisent une erreur qui se reporte sur le résultat. Avec plusieurs calculs successifs, les arrondis s'accumulent : garder **5/12**, valeur exacte, évite toute erreur."
+    },
+    {
+      "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+      "difficulte": 3,
+      "titre": "Familles de nombres et raisonnement par l'absurde",
+      "consigne": "Réponds en rédigeant des justifications complètes.",
+      "enonce": "1. Classe chacun des nombres suivants dans sa famille la plus précise (décimal, rationnel non décimal, irrationnel), en justifiant : 0,125 ; 22/7 ; 4/33 ; π.\n2. Lina affirme : « π = 22/7, d'ailleurs les deux commencent par 3,14. » Explique pourquoi c'est impossible.\n3. Effectue la division de 4 par 33 jusqu'à obtenir quatre chiffres après la virgule. Que constates-tu ? Donne la période et sa longueur.\n4. Rédige la démonstration par l'absurde du fait que √2 est irrationnel, en indiquant clairement l'hypothèse, les étapes et la contradiction.",
+      "bareme": [
+        {
+          "critere": "Les quatre nombres correctement classés et justifiés",
+          "points": 6
+        },
+        {
+          "critere": "Impossibilité π = 22/7 : un irrationnel ne peut pas être un quotient d'entiers",
+          "points": 4
+        },
+        {
+          "critere": "Division 4/33 = 0,1212… avec la période 12 de longueur 2",
+          "points": 3
+        },
+        {
+          "critere": "Démonstration par l'absurde complète : hypothèse irréductible, parité de p puis de q, contradiction",
+          "points": 7
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1.\n- 0,125 = 125/1000 : écriture décimale finie, **décimal** (c'est 1/8).\n- 22/7 : quotient d'entiers irréductible, dénominateur 7 (ni 2 ni 5) : **rationnel non décimal**.\n- 4/33 : irréductible, 33 = 3 × 11 : **rationnel non décimal**.\n- π : **irrationnel** (écriture décimale infinie, non périodique).\n2. 22/7 est un quotient de deux entiers, donc un rationnel. π est irrationnel : il ne peut s'écrire comme quotient de deux entiers. Donc π ≠ 22/7 ; les deux nombres ont seulement les mêmes premières décimales (22/7 = 3,142857…, π = 3,14159…).\n3. 4 ÷ 33 = 0,1212… : les restes successifs sont 7, 4, 7, 4… donc les chiffres 1 et 2 se répètent. **Période : 12, de longueur 2.** C'est une écriture périodique, signe d'un rationnel.\n4. On suppose que √2 est rationnel : √2 = p/q avec p/q **irréductible**. En élevant au carré : 2 = p²/q², donc **2q² = p²**. p² est pair, donc **p est pair** : on pose p = 2k. Alors 2q² = 4k², soit q² = 2k² : q² est pair, donc **q est pair**. p et q sont tous deux pairs : la fraction p/q se simplifie par 2, ce qui **contredit** l'hypothèse d'irréductibilité. L'hypothèse est fausse : **√2 est irrationnel**."
+    },
+    {
+      "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+      "difficulte": 1,
+      "titre": "Critères, nombres premiers, décomposition",
+      "consigne": "Justifie chaque réponse en citant le critère ou le calcul utilisé.",
+      "enonce": "1. Le nombre 4 515 est-il divisible par 2 ? par 3 ? par 4 ? par 5 ? par 9 ? par 10 ? Justifie chaque réponse avec un critère de divisibilité.\n2. Les nombres 91 et 97 sont-ils premiers ? Justifie.\n3. Décompose 84 en produit de facteurs premiers.",
+      "bareme": [
+        {
+          "critere": "Les six réponses justes, chacune justifiée par le bon critère",
+          "points": 8
+        },
+        {
+          "critere": "91 = 7 × 13 non premier ; 97 premier, testé avec les premiers jusqu'à √97",
+          "points": 6
+        },
+        {
+          "critere": "Décomposition 84 = 2² × 3 × 7",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1.\n- Par 2 : chiffre des unités 5, impair → **non**.\n- Par 3 : 4 + 5 + 1 + 5 = 15, divisible par 3 → **oui**.\n- Par 4 : 15 n'est pas divisible par 4 → **non**.\n- Par 5 : se termine par 5 → **oui**.\n- Par 9 : 15 n'est pas divisible par 9 → **non**.\n- Par 10 : ne se termine pas par 0 → **non**.\n2. **91 = 7 × 13** : il a d'autres diviseurs que 1 et lui-même, il n'est **pas premier**. Pour 97 : √97 ≈ 9,8, on teste les premiers 2, 3, 5, 7. 97 est impair ; 9 + 7 = 16 non divisible par 3 ; il ne finit ni par 0 ni par 5 ; 97 = 7 × 13 + 6. Aucun ne divise 97 : **97 est premier**.\n3. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7, donc **84 = 2² × 3 × 7**."
+    },
+    {
+      "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+      "difficulte": 2,
+      "titre": "Les bouquets du fleuriste",
+      "consigne": "Lis la situation, puis réponds en détaillant tes décompositions.",
+      "enonce": "**Situation.** Un fleuriste dispose de 84 roses et de 126 tulipes. Il veut composer des bouquets **tous identiques** (même nombre de roses et même nombre de tulipes dans chacun), en utilisant **toutes** les fleurs.\n\n1. Décompose 84 et 126 en produits de facteurs premiers.\n2. Quel est le plus grand nombre de bouquets qu'il peut réaliser ? Justifie à l'aide des décompositions.\n3. Combien chaque bouquet contient-il de roses et de tulipes ?\n4. Écris la fraction 84/126 sous forme irréductible.",
+      "bareme": [
+        {
+          "critere": "Décompositions 84 = 2² × 3 × 7 et 126 = 2 × 3² × 7",
+          "points": 6
+        },
+        {
+          "critere": "Nombre de bouquets = PGCD = 42, obtenu avec les facteurs communs au plus petit exposant",
+          "points": 6
+        },
+        {
+          "critere": "Composition d'un bouquet : 2 roses et 3 tulipes",
+          "points": 5
+        },
+        {
+          "critere": "Fraction irréductible 2/3",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 84 = 2 × 2 × 3 × 7 = **2² × 3 × 7** ; 126 = 2 × 63 = 2 × 3 × 3 × 7 = **2 × 3² × 7**.\n2. Le nombre de bouquets doit diviser 84 et 126 : on cherche le **PGCD**. On prend les facteurs communs au plus petit exposant : 2¹, 3¹, 7¹. PGCD = 2 × 3 × 7 = **42 bouquets**.\n3. 84 ÷ 42 = **2 roses** et 126 ÷ 42 = **3 tulipes** par bouquet. Vérification : 42 × 2 = 84 et 42 × 3 = 126.\n4. On divise par le PGCD 42 : 84/126 = **2/3**."
+    },
+    {
+      "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+      "difficulte": 3,
+      "titre": "Du nombre premier à la cryptographie",
+      "consigne": "Réponds à chaque question en justifiant soigneusement.",
+      "enonce": "1. Le nombre 221 est-il premier ? Indique jusqu'à quel nombre il suffit de tester les diviseurs, et pourquoi on ne teste que des nombres premiers.\n2. Décompose 1 050 et 1 540 en produits de facteurs premiers.\n3. Déduis-en le PGCD de 1 050 et 1 540, puis la forme irréductible de la fraction 1 050/1 540.\n4. La fraction obtenue représente-t-elle un nombre décimal ? Justifie.\n5. Calculer 13 × 17 est immédiat. Explique, à partir de la question 1, pourquoi le travail inverse est plus long, et pourquoi cette différence sert à protéger des données quand les nombres sont très grands.",
+      "bareme": [
+        {
+          "critere": "221 = 13 × 17 non premier, tests limités aux premiers jusqu'à √221 ≈ 14,9",
+          "points": 5
+        },
+        {
+          "critere": "Décompositions 1 050 = 2 × 3 × 5² × 7 et 1 540 = 2² × 5 × 7 × 11",
+          "points": 5
+        },
+        {
+          "critere": "PGCD = 70 et fraction irréductible 15/22",
+          "points": 5
+        },
+        {
+          "critere": "15/22 non décimal à cause du facteur 11",
+          "points": 3
+        },
+        {
+          "critere": "Explication de l'asymétrie multiplier / factoriser et de son usage en cryptographie",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. √221 ≈ 14,9 : il suffit de tester les premiers 2, 3, 5, 7, 11, 13 (si 221 avait un diviseur composé, il aurait aussi un diviseur premier plus petit). 221 est impair ; 2 + 2 + 1 = 5 non divisible par 3 ; il ne finit pas par 0 ou 5 ; 221 = 7 × 31 + 4 ; 221 = 11 × 20 + 1 ; **221 = 13 × 17**. Il n'est **pas premier**.\n2. 1 050 = 2 × 525 = 2 × 3 × 175 = 2 × 3 × 5 × 35 = **2 × 3 × 5² × 7**.\n1 540 = 2 × 770 = 2 × 2 × 385 = 2² × 5 × 77 = **2² × 5 × 7 × 11**.\n3. Facteurs communs au plus petit exposant : 2, 5, 7. **PGCD = 2 × 5 × 7 = 70**. 1 050 ÷ 70 = 15 et 1 540 ÷ 70 = 22 : **1 050/1 540 = 15/22**, irréductible (15 = 3 × 5 et 22 = 2 × 11 n'ont aucun facteur commun).\n4. Le dénominateur 22 = 2 × 11 contient le facteur 11 : **15/22 n'est pas décimal** (c'est un rationnel).\n5. Multiplier 13 × 17 = 221 se fait en une opération. Retrouver 13 et 17 à partir de 221 oblige à essayer les diviseurs un à un. Pour un produit de deux **très grands** nombres premiers, ces essais deviennent si nombreux qu'ils sont hors de portée : c'est sur cette difficulté de **factoriser** que repose la sécurité de nombreux systèmes de chiffrement."
+    },
+    {
+      "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+      "difficulte": 1,
+      "titre": "Puissances et racines sans faute",
+      "consigne": "Donne chaque résultat sous la forme demandée en citant la règle utilisée.",
+      "enonce": "1. Écris sous la forme d'une seule puissance ou d'un nombre : A = a⁵ × a⁻² ; B = (x²)³ / x⁴ (x non nul) ; C = 2⁻³.\n2. Écris en notation scientifique : 0,000 45 et 3 200 000.\n3. Écris √50 sous la forme a√2 avec a entier, puis écris 1/√5 sans racine au dénominateur.",
+      "bareme": [
+        {
+          "critere": "A = a³, B = x², C = 1/8 avec les règles des puissances",
+          "points": 8
+        },
+        {
+          "critere": "Notations scientifiques 4,5 × 10⁻⁴ et 3,2 × 10⁶",
+          "points": 5
+        },
+        {
+          "critere": "√50 = 5√2 et 1/√5 = √5/5",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1.\n- A = a⁵⁺⁽⁻²⁾ = **a³** (produit de même base).\n- B = x⁶ / x⁴ = x⁶⁻⁴ = **x²** (puissance de puissance, puis quotient).\n- C = 1/2³ = **1/8** (exposant négatif).\n2. 0,000 45 = **4,5 × 10⁻⁴** ; 3 200 000 = **3,2 × 10⁶** (dans les deux cas, 1 ≤ a < 10).\n3. √50 = √(25 × 2) = √25 × √2 = **5√2**. 1/√5 = (1 × √5)/(√5 × √5) = **√5/5**."
+    },
+    {
+      "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+      "difficulte": 2,
+      "titre": "Simplifier un quotient sans barrer de termes",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "On considère l'expression F(x) = (3x + 6) / (x² + 2x).\n\n1. Factorise le dénominateur par un facteur commun, puis détermine les **valeurs interdites** de F.\n2. Factorise le numérateur, puis simplifie F(x) pour x différent des valeurs interdites.\n3. Nina a écrit : « (x + 6)/(x + 2) = 6/2 = 3 ». Explique son erreur, puis montre avec x = 1 que son égalité est fausse.\n4. Calcule F(4) avec l'expression de départ, puis avec l'expression simplifiée, et vérifie que tu trouves la même valeur.",
+      "bareme": [
+        {
+          "critere": "Dénominateur factorisé x(x + 2) et valeurs interdites 0 et −2",
+          "points": 5
+        },
+        {
+          "critere": "Simplification F(x) = 3/x obtenue en factorisant avant de simplifier",
+          "points": 6
+        },
+        {
+          "critere": "Erreur de Nina expliquée (termes barrés, pas des facteurs) et contre-exemple x = 1",
+          "points": 5
+        },
+        {
+          "critere": "F(4) = 3/4 trouvé par les deux calculs",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. x² + 2x = **x(x + 2)**. Il s'annule pour x = 0 ou x + 2 = 0, soit x = −2. **Valeurs interdites : 0 et −2.**\n2. 3x + 6 = **3(x + 2)**. Donc F(x) = 3(x + 2) / (x(x + 2)) : le facteur (x + 2) est commun, on peut le simplifier. Pour x ≠ 0 et x ≠ −2, **F(x) = 3/x**.\n3. Nina a « barré » des **termes** (x) et non des **facteurs** : c'est interdit, on ne simplifie que des facteurs. Avec x = 1 : (1 + 6)/(1 + 2) = 7/3 ≈ 2,33, qui n'est pas égal à 3.\n4. Expression de départ : (3 × 4 + 6)/(16 + 8) = 18/24 = **3/4**. Expression simplifiée : 3/4. Les deux résultats sont égaux."
+    },
+    {
+      "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+      "difficulte": 3,
+      "titre": "Racines, notation scientifique et quotients",
+      "consigne": "Donne des résultats exacts et justifie chaque règle employée.",
+      "enonce": "1. Calcule √9 + √16 et √(9 + 16). Que montre ce calcul sur l'égalité √(a + b) = √a + √b ?\n2. Calcule sous forme exacte, sans calculatrice : A = √12 × √3 ; B = √18 / √2 ; C = (2√3)².\n3. Écris 6/√3 sans racine au dénominateur, puis simplifie.\n4. La distance Terre–Soleil vaut environ 1,5 × 10⁸ km et la lumière parcourt 3 × 10⁵ km par seconde. Calcule en notation scientifique le temps, en secondes, que met la lumière du Soleil pour nous parvenir.\n5. Pour x différent de 0 et de −1, écris 1/x + 2/(x + 1) sous la forme d'un seul quotient.",
+      "bareme": [
+        {
+          "critere": "Contre-exemple 7 ≠ 5 et calculs exacts A = 6, B = 3, C = 12",
+          "points": 5
+        },
+        {
+          "critere": "6/√3 = 2√3 en multipliant haut et bas par √3",
+          "points": 3
+        },
+        {
+          "critere": "Temps de 5 × 10² s obtenu avec les règles des puissances de 10",
+          "points": 5
+        },
+        {
+          "critere": "Somme réduite au même dénominateur (3x + 1)/(x(x + 1)) avec les valeurs interdites",
+          "points": 7
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. √9 + √16 = 3 + 4 = **7** ; √(9 + 16) = √25 = **5**. 7 ≠ 5 : l'égalité √(a + b) = √a + √b est **fausse** en général.\n2. A = √(12 × 3) = √36 = **6** ; B = √(18/2) = √9 = **3** ; C = 2² × (√3)² = 4 × 3 = **12**.\n3. 6/√3 = (6 × √3)/(√3 × √3) = 6√3/3 = **2√3**.\n4. t = (1,5 × 10⁸) / (3 × 10⁵) = (1,5/3) × 10⁸⁻⁵ = 0,5 × 10³ = **5 × 10² s**, soit 500 s (environ 8 min 20 s).\n5. Même dénominateur x(x + 1) : 1/x + 2/(x + 1) = (x + 1)/(x(x + 1)) + 2x/(x(x + 1)) = **(3x + 1) / (x(x + 1))**, valable pour x ≠ 0 et x ≠ −1 (valeurs qui annulent le dénominateur)."
+    },
+    {
+      "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+      "difficulte": 1,
+      "titre": "Développer et factoriser",
+      "consigne": "Identifie a et b avant chaque calcul et cite l'identité utilisée.",
+      "enonce": "1. Développe et réduis :\n   a. (x + 4)²\n   b. (2x − 3)²\n   c. (5x + 1)(5x − 1)\n2. Factorise :\n   a. x² − 36\n   b. x² − 10x + 25",
+      "bareme": [
+        {
+          "critere": "Les trois développements justes, double produit compris",
+          "points": 10
+        },
+        {
+          "critere": "Les deux factorisations justes avec l'identité reconnue",
+          "points": 10
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n   a. a = x, b = 4 : (x + 4)² = **x² + 8x + 16** (première identité).\n   b. a = 2x, b = 3 : (2x − 3)² = **4x² − 12x + 9** (deuxième identité).\n   c. a = 5x, b = 1 : (5x + 1)(5x − 1) = **25x² − 1** (troisième identité).\n2.\n   a. x² − 36 = x² − 6² = **(x − 6)(x + 6)** (troisième identité).\n   b. x² − 10x + 25 = x² − 2 × x × 5 + 5² = **(x − 5)²** (deuxième identité)."
+    },
+    {
+      "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+      "difficulte": 2,
+      "titre": "Calcul de tête et aire d'un cadre",
+      "consigne": "Utilise une identité remarquable à chaque question et écris-la.",
+      "enonce": "1. Calcule 103² sans poser la multiplication, à l'aide d'une identité remarquable.\n2. Calcule 98 × 102 de la même façon.\n3. **Situation.** Tom découpe, dans un carré de côté (x + 3) cm, un petit carré de côté 3 cm. On note A(x) l'aire restante, avec x > 0.\n   a. Exprime A(x), puis développe et réduis.\n   b. Factorise A(x).\n   c. Vérifie ton résultat avec x = 5 en calculant l'aire de deux façons.",
+      "bareme": [
+        {
+          "critere": "103² = 10 609 obtenu avec (100 + 3)²",
+          "points": 5
+        },
+        {
+          "critere": "98 × 102 = 9 996 obtenu avec (100 − 2)(100 + 2)",
+          "points": 5
+        },
+        {
+          "critere": "A(x) = (x + 3)² − 9 = x² + 6x puis factorisé en x(x + 6)",
+          "points": 6
+        },
+        {
+          "critere": "Vérification juste pour x = 5 (55 cm² par les deux calculs)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 103² = (100 + 3)² = 10 000 + 2 × 100 × 3 + 9 = 10 000 + 600 + 9 = **10 609**.\n2. 98 × 102 = (100 − 2)(100 + 2) = 100² − 2² = 10 000 − 4 = **9 996**.\n3.\n   a. A(x) = (x + 3)² − 3² = x² + 6x + 9 − 9 = **x² + 6x**.\n   b. Facteur commun x : **A(x) = x(x + 6)**. (On peut aussi voir la troisième identité : (x + 3 − 3)(x + 3 + 3) = x(x + 6).)\n   c. Pour x = 5 : grand carré 8² = 64, petit carré 9, aire 64 − 9 = **55 cm²** ; et x(x + 6) = 5 × 11 = **55**. Les deux calculs concordent."
+    },
+    {
+      "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+      "difficulte": 3,
+      "titre": "Choisir la bonne forme pour résoudre",
+      "consigne": "Justifie chaque étape et indique la forme de l'expression que tu utilises.",
+      "enonce": "On considère E = (2x + 1)² − 25.\n\n1. Développe et réduis E.\n2. Factorise E en reconnaissant une identité remarquable (précise a et b).\n3. Résous l'équation E = 0.\n4. Calcule E pour x = 0 en choisissant la forme la plus adaptée, puis vérifie avec l'autre forme.\n5. Résous l'équation E = −24 en choisissant la forme la plus adaptée.",
+      "bareme": [
+        {
+          "critere": "Forme développée 4x² + 4x − 24",
+          "points": 4
+        },
+        {
+          "critere": "Forme factorisée (2x − 4)(2x + 6) avec a = 2x + 1 et b = 5",
+          "points": 5
+        },
+        {
+          "critere": "E = 0 résolue par le produit nul : x = 2 ou x = −3",
+          "points": 5
+        },
+        {
+          "critere": "E(0) = −24 trouvé et vérifié par les deux formes",
+          "points": 3
+        },
+        {
+          "critere": "E = −24 résolue : x = 0 ou x = −1, en factorisant 4x² + 4x",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (2x + 1)² = 4x² + 4x + 1, donc E = 4x² + 4x + 1 − 25 = **4x² + 4x − 24**.\n2. E = a² − b² avec a = 2x + 1 et b = 5 : E = (2x + 1 − 5)(2x + 1 + 5) = **(2x − 4)(2x + 6)**.\n3. Forme factorisée : un produit est nul si et seulement si l'un de ses facteurs est nul. 2x − 4 = 0 donne **x = 2** ; 2x + 6 = 0 donne **x = −3**. S = {−3 ; 2}.\n4. Forme développée : E = 0 + 0 − 24 = **−24**. Vérification avec la forme factorisée : (−4) × 6 = −24.\n5. Forme développée : 4x² + 4x − 24 = −24 équivaut à 4x² + 4x = 0, soit **4x(x + 1) = 0**. Produit nul : **x = 0 ou x = −1**. Vérification : pour x = −1, (−1)² − 25 = 1 − 25 = −24."
+    },
+    {
+      "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+      "difficulte": 1,
+      "titre": "Trois résolutions express",
+      "consigne": "Résous en détaillant les étapes, et donne l'ensemble des solutions.",
+      "enonce": "1. Résous l'équation 5x − 7 = 2x + 8.\n2. Résous l'équation (x + 3)(2x − 8) = 0.\n3. Résous l'inéquation −3x + 9 ≥ 0 et donne l'ensemble des solutions sous forme d'intervalle.",
+      "bareme": [
+        {
+          "critere": "Équation du premier degré résolue : x = 5",
+          "points": 6
+        },
+        {
+          "critere": "Produit nul : x = −3 ou x = 4",
+          "points": 6
+        },
+        {
+          "critere": "Inéquation résolue avec changement de sens en divisant par −3 : S = ]−∞ ; 3]",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. 5x − 2x = 8 + 7, soit 3x = 15, donc **x = 5**. Vérification : 25 − 7 = 18 et 10 + 8 = 18.\n2. Un produit est nul si et seulement si l'un de ses facteurs est nul : x + 3 = 0 donne **x = −3** ; 2x − 8 = 0 donne **x = 4**. S = {−3 ; 4}.\n3. −3x ≥ −9. On divise par −3, nombre **strictement négatif** : le sens de l'inégalité **s'inverse** : x ≤ 3. **S = ]−∞ ; 3]**."
+    },
+    {
+      "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+      "difficulte": 2,
+      "titre": "Quel tarif pour louer un vélo ?",
+      "consigne": "Lis la situation, puis réponds en mettant chaque question en équation ou en inéquation.",
+      "enonce": "**Situation.** Pour louer un vélo, Samir a le choix entre deux tarifs :\n- tarif A : 12 € de frais fixes, puis 1,50 € par heure ;\n- tarif B : 3 € par heure, sans frais fixes.\nOn note h le nombre d'heures de location (h ≥ 0).\n\n1. Exprime le prix payé avec chaque tarif en fonction de h.\n2. Pour quelle durée les deux tarifs coûtent-ils le même prix ? Quel est ce prix ?\n3. Résous une inéquation pour déterminer les durées pour lesquelles le tarif B est **strictement** moins cher.\n4. Samir prévoit une location de 10 heures. Quel tarif lui conseilles-tu ? Justifie par un calcul.",
+      "bareme": [
+        {
+          "critere": "Prix A = 12 + 1,5h et prix B = 3h",
+          "points": 4
+        },
+        {
+          "critere": "Égalité résolue : h = 8, prix commun 24 €",
+          "points": 5
+        },
+        {
+          "critere": "Inéquation 3h < 12 + 1,5h résolue : h < 8, soit [0 ; 8[",
+          "points": 7
+        },
+        {
+          "critere": "Conseil justifié pour 10 heures (A à 27 € contre B à 30 €)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Prix A = **12 + 1,5h** ; prix B = **3h**.\n2. 3h = 12 + 1,5h équivaut à 1,5h = 12, soit **h = 8**. Prix : 3 × 8 = **24 €** (et 12 + 1,5 × 8 = 24 €).\n3. B moins cher : 3h < 12 + 1,5h, soit 1,5h < 12. On divise par 1,5, positif : le sens est conservé, **h < 8**. Avec h ≥ 0 : le tarif B est moins cher pour une durée dans **[0 ; 8[**.\n4. Pour 10 heures : A coûte 12 + 1,5 × 10 = **27 €**, B coûte 3 × 10 = **30 €**. On conseille le **tarif A**, ce qui est cohérent avec la question 3 (10 > 8)."
+    },
+    {
+      "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+      "difficulte": 3,
+      "titre": "Tableaux de signes : produit et quotient",
+      "consigne": "Résous chaque inéquation à l'aide d'un tableau de signes complet, et donne les solutions sous forme d'intervalles.",
+      "enonce": "1. On considère l'inéquation (2x − 6)/(x + 1) ≤ 0.\n   a. Quelle est la valeur interdite ? Pourquoi faut-il la chercher avant toute résolution ?\n   b. Dresse le tableau de signes du quotient.\n   c. Déduis-en l'ensemble des solutions.\n2. Résous l'inéquation (x − 2)(−x + 5) > 0 à l'aide d'un tableau de signes.\n3. Vérifie ta réponse à la question 1 en testant x = 0 et x = 4.",
+      "bareme": [
+        {
+          "critere": "Valeur interdite −1 identifiée et justifiée",
+          "points": 3
+        },
+        {
+          "critere": "Tableau de signes du quotient juste, avec double barre en −1",
+          "points": 6
+        },
+        {
+          "critere": "Solution S = ]−1 ; 3] avec les bons crochets",
+          "points": 4
+        },
+        {
+          "critere": "Tableau du produit juste et solution ]2 ; 5[",
+          "points": 5
+        },
+        {
+          "critere": "Vérification par les deux valeurs tests",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1.\n   a. Le dénominateur x + 1 s'annule pour **x = −1** : le quotient n'y est pas défini. Il faut l'exclure avant de résoudre, sinon on risque de l'inclure dans les solutions.\n   b. 2x − 6 s'annule en 3 (négatif avant, positif après) ; x + 1 s'annule en −1 (négatif avant, positif après).\n\n| x | −∞ … −1 | −1 … 3 | 3 … +∞ |\n| 2x − 6 | − | − | + |\n| x + 1 | − | + | + |\n| quotient | + (double barre en −1) | − (0 en 3) | + |\n\n   c. Le quotient est négatif ou nul sur ]−1 ; 3], −1 exclu (interdite) et 3 inclus (le quotient y vaut 0) : **S = ]−1 ; 3]**.\n2. x − 2 s'annule en 2 (négatif puis positif) ; −x + 5 s'annule en 5 (positif puis négatif, car le coefficient de x est négatif).\n\n| x | −∞ … 2 | 2 … 5 | 5 … +∞ |\n| x − 2 | − | + | + |\n| −x + 5 | + | + | − |\n| produit | − | + | − |\n\nProduit strictement positif : **S = ]2 ; 5[** (2 et 5 exclus car le produit y est nul).\n3. x = 0 : (−6)/1 = −6 ≤ 0, 0 est bien solution (0 ∈ ]−1 ; 3]). x = 4 : 2/5 > 0, 4 n'est pas solution (4 ∉ ]−1 ; 3])."
+    },
+    {
+      "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+      "difficulte": 1,
+      "titre": "Le triangle 6-8-10",
+      "consigne": "Réponds en citant le théorème ou la définition utilisée.",
+      "enonce": "Le triangle ABC a pour côtés AB = 6 cm, AC = 8 cm et BC = 10 cm.\n\n1. Démontre que le triangle ABC est rectangle, et précise en quel sommet.\n2. Calcule cos(ABC), puis donne une valeur approchée au degré près de l'angle ABC.\n3. Comment s'appelle le point de concours des médiatrices d'un triangle ? Quelle propriété a-t-il par rapport aux sommets ?",
+      "bareme": [
+        {
+          "critere": "Réciproque de Pythagore appliquée : 36 + 64 = 100, triangle rectangle en A",
+          "points": 8
+        },
+        {
+          "critere": "cos(ABC) = 6/10 = 0,6 et angle d'environ 53°",
+          "points": 7
+        },
+        {
+          "critere": "Centre du cercle circonscrit, équidistant des trois sommets",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le plus grand côté est BC. BC² = 100 ; AB² + AC² = 36 + 64 = 100. Comme BC² = AB² + AC², d'après la **réciproque du théorème de Pythagore**, le triangle ABC est **rectangle en A**.\n2. Dans le triangle rectangle en A, pour l'angle en B : côté adjacent AB, hypoténuse BC. **cos(ABC) = 6/10 = 0,6**. À la calculatrice, ABC ≈ **53°**.\n3. Les médiatrices se coupent au **centre du cercle circonscrit**, qui est **équidistant des trois sommets**."
+    },
+    {
+      "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+      "difficulte": 2,
+      "titre": "Le chemin le plus court vers la route",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque calcul.",
+      "enonce": "**Situation.** La maison de Clara est au point M. Une route rectiligne est modélisée par une droite d. H est le **projeté orthogonal** de M sur d, et MH = 120 m. Un arrêt de bus se trouve au point P de la route, avec HP = 50 m.\n\n1. Rappelle la définition du projeté orthogonal H de M sur d.\n2. Calcule la distance MP.\n3. Clara prétend qu'aucun point de la route n'est à moins de 120 m de sa maison. A-t-elle raison ? Justifie avec une propriété du cours.\n4. Un autre arrêt Q, sur la route, est à 150 m de la maison. Calcule la distance HQ.",
+      "bareme": [
+        {
+          "critere": "Définition du projeté orthogonal : point H de d tel que (MH) soit perpendiculaire à d",
+          "points": 5
+        },
+        {
+          "critere": "MP = 130 m par Pythagore dans le triangle MHP rectangle en H",
+          "points": 6
+        },
+        {
+          "critere": "Minimalité : MH est la plus courte distance de M à un point de d",
+          "points": 5
+        },
+        {
+          "critere": "HQ = 90 m par Pythagore",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. H est le point de la droite d tel que la droite (MH) soit **perpendiculaire** à d.\n2. Le triangle MHP est rectangle en H. Par le théorème de Pythagore : MP² = MH² + HP² = 120² + 50² = 14 400 + 2 500 = 16 900, donc **MP = √16 900 = 130 m**.\n3. Oui : d'après la propriété de **minimalité** du projeté orthogonal, MH est la plus courte des distances de M à un point de d. Tout point de la route est donc à au moins 120 m de la maison (MH = 120 m est la distance de M à la droite d).\n4. Le triangle MHQ est rectangle en H : HQ² = MQ² − MH² = 150² − 120² = 22 500 − 14 400 = 8 100, donc **HQ = 90 m**."
+    },
+    {
+      "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+      "difficulte": 3,
+      "titre": "Hauteur, aire et distance à une droite",
+      "consigne": "Rédige chaque réponse en citant l'outil utilisé et sa condition d'emploi.",
+      "enonce": "Dans le triangle ABC, BC = 14 cm. On note H le **projeté orthogonal** de A sur la droite (BC) ; H appartient au segment [BC], avec BH = 5 cm. On sait aussi que AB = 13 cm.\n\n1. Calcule AH.\n2. Calcule l'aire du triangle ABC.\n3. Calcule HC, puis AC.\n4. On note K le projeté orthogonal de B sur la droite (AC). En exprimant l'aire du triangle ABC d'une autre façon, calcule la distance BK du point B à la droite (AC).\n5. Le triangle ABC est-il rectangle ? Justifie.",
+      "bareme": [
+        {
+          "critere": "AH = 12 cm par Pythagore dans ABH rectangle en H",
+          "points": 4
+        },
+        {
+          "critere": "Aire = 14 × 12 / 2 = 84 cm²",
+          "points": 3
+        },
+        {
+          "critere": "HC = 9 cm et AC = 15 cm",
+          "points": 4
+        },
+        {
+          "critere": "BK = 2 × 84 / 15 = 11,2 cm, en prenant [AC] comme base et BK comme hauteur",
+          "points": 5
+        },
+        {
+          "critere": "Triangle non rectangle : l'égalité de Pythagore n'est pas vérifiée pour le plus grand côté AC",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (AH) est perpendiculaire à (BC) : le triangle ABH est rectangle en H. AH² = AB² − BH² = 169 − 25 = 144, donc **AH = 12 cm**.\n2. AH est la hauteur relative à [BC] : aire = BC × AH / 2 = 14 × 12 / 2 = **84 cm²**.\n3. H est sur [BC] : HC = 14 − 5 = **9 cm**. Le triangle AHC est rectangle en H : AC² = AH² + HC² = 144 + 81 = 225, donc **AC = 15 cm**.\n4. BK est la hauteur relative à [AC] (distance de B à la droite (AC)). Aire = AC × BK / 2, donc 84 = 15 × BK / 2, soit **BK = 168 / 15 = 11,2 cm**.\n5. Le plus grand côté est AC = 15. AC² = 225 ; AB² + BC² = 169 + 196 = 365. Comme 225 ≠ 365, l'égalité de Pythagore n'est pas vérifiée : si le triangle était rectangle, ce serait en B et l'on aurait AC² = AB² + BC². Le triangle ABC **n'est pas rectangle**."
+    },
+    {
+      "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+      "difficulte": 1,
+      "titre": "Chasles et parallélogramme",
+      "consigne": "On note →AB le vecteur d'origine A et d'extrémité B. Justifie chaque réponse.",
+      "enonce": "1. Cite les trois caractéristiques du vecteur →AB.\n2. Simplifie à l'aide de la relation de Chasles :\n   a. →AB + →BC + →CD\n   b. →MA + →AM\n   c. →BC + →AB\n3. A, B, C et D sont quatre points tels que →AB = →DC. Quelle est la nature du quadrilatère ABCD ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Direction (droite (AB)), sens (de A vers B), norme (longueur AB)",
+          "points": 6
+        },
+        {
+          "critere": "Les trois simplifications justes : →AD, vecteur nul, →AC",
+          "points": 9
+        },
+        {
+          "critere": "ABCD parallélogramme (éventuellement aplati) justifié par l'égalité de vecteurs",
+          "points": 5
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **direction** : celle de la droite (AB) ; le **sens** : de A vers B ; la **norme** : la longueur AB.\n2.\n   a. →AB + →BC = →AC, puis →AC + →CD = **→AD**.\n   b. →MA + →AM = →MM = **le vecteur nul**.\n   c. →BC + →AB = →AB + →BC (commutativité) = **→AC**.\n3. D'après le cours, →AB = →CD équivaut à « ABDC est un parallélogramme ». Ici →AB = →DC : en remplaçant C par D et D par C, on obtient que **ABCD est un parallélogramme** (éventuellement aplati)."
+    },
+    {
+      "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+      "difficulte": 2,
+      "titre": "Déplacements dans un parallélogramme",
+      "consigne": "On note →AB le vecteur d'origine A et d'extrémité B. Justifie chaque égalité par une propriété du cours.",
+      "enonce": "ABCD est un parallélogramme.\n\n1. Justifie que →AB = →DC.\n2. Simplifie →AB + →AD en utilisant la règle du parallélogramme.\n3. Calcule →AB + →BC + →CA.\n4. On place le point E tel que →CE = →AB. Quelle est la nature du quadrilatère ABEC ? Justifie.\n5. Exprime →AE en fonction de →AB et →AD.",
+      "bareme": [
+        {
+          "critere": "→AB = →DC justifié par la définition de l'égalité de vecteurs dans ABCD",
+          "points": 4
+        },
+        {
+          "critere": "→AB + →AD = →AC et →AB + →BC + →CA = vecteur nul",
+          "points": 5
+        },
+        {
+          "critere": "ABEC parallélogramme justifié par →AB = →CE",
+          "points": 5
+        },
+        {
+          "critere": "→AE = 2→AB + →AD obtenu par la relation de Chasles",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. ABCD est un parallélogramme, donc (AB) et (DC) sont parallèles, AB = DC, et on va de A vers B dans le même sens que de D vers C : **→AB = →DC** (même direction, même sens, même norme).\n2. La somme de deux vecteurs de même origine est la diagonale issue du point commun : **→AB + →AD = →AC**.\n3. →AB + →BC = →AC, puis →AC + →CA = →AA = **vecteur nul**.\n4. →AB = →CE équivaut, d'après le cours, à « **ABEC est un parallélogramme** ».\n5. Chasles : →AE = →AC + →CE = (→AB + →AD) + →AB = **2→AB + →AD**."
+    },
+    {
+      "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+      "difficulte": 3,
+      "titre": "Démontrer un alignement avec des vecteurs",
+      "consigne": "On note →AB le vecteur d'origine A et d'extrémité B. Rédige chaque étape en citant la propriété utilisée.",
+      "enonce": "ABC est un triangle. On place le point D tel que →AD = 3→AB − 2→AC.\n\n1. À l'aide de la relation de Chasles, écris →BD en fonction de →BA et →AD, puis en fonction de →AB et →AC.\n2. Montre que →AB − →AC = →CB (on rappelle que −→AC = →CA), puis que →BD = 2→CB.\n3. Déduis-en que les points B, C et D sont alignés.\n4. Décris la position du point D sur la droite (BC) : sens de →BD par rapport à →CB, et longueur BD en fonction de BC.\n5. On place E tel que →AE = →AB + →AC. Quelle est la nature de ABEC ? Justifie.",
+      "bareme": [
+        {
+          "critere": "→BD = →BA + →AD = 2→AB − 2→AC, calcul juste",
+          "points": 5
+        },
+        {
+          "critere": "→AB − →AC = →CB justifié par Chasles et →BD = 2→CB",
+          "points": 5
+        },
+        {
+          "critere": "Alignement : vecteurs colinéaires ayant le point B en commun",
+          "points": 4
+        },
+        {
+          "critere": "Position de D : même sens que →CB et BD = 2BC",
+          "points": 3
+        },
+        {
+          "critere": "ABEC parallélogramme par la règle du parallélogramme",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. →BD = →BA + →AD = −→AB + 3→AB − 2→AC = **2→AB − 2→AC**.\n2. →AB − →AC = →AB + →CA = →CA + →AB = **→CB** (Chasles). Donc →BD = 2(→AB − →AC) = **2→CB**.\n3. →BD = 2→CB : les vecteurs →BD et →CB sont **colinéaires** (k = 2). Les droites (BD) et (CB) sont donc parallèles ; comme elles ont le point **B en commun**, elles sont confondues : **B, C et D sont alignés**.\n4. k = 2 > 0 : →BD a **le même sens** que →CB, c'est-à-dire qu'en partant de B on s'éloigne de C, dans la direction de C vers B. Sa norme vaut 2 fois celle de →CB : **BD = 2BC**. D est donc sur la droite (BC), au-delà de B par rapport à C, à une distance 2BC de B.\n5. →AE = →AB + →AC : d'après la règle du parallélogramme, E est l'extrémité de la diagonale issue de A du parallélogramme construit sur [AB] et [AC] : **ABEC est un parallélogramme** (on vérifie : →AE = →AB + →AC donne →BE = →BA + →AE = →AC, donc →AC = →BE, ce qui équivaut à ABEC parallélogramme)."
+    },
+    {
+      "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+      "difficulte": 1,
+      "titre": "Coordonnées, milieu, distance",
+      "consigne": "Le plan est muni d'un repère orthonormé. Détaille chaque calcul.",
+      "enonce": "On donne A(2 ; −1) et B(6 ; 2).\n\n1. Calcule les coordonnées du vecteur →AB.\n2. Calcule les coordonnées du milieu I de [AB].\n3. Calcule la distance AB.\n4. Les vecteurs u(4 ; 3) et v(−8 ; −6) sont-ils colinéaires ? Justifie avec le déterminant.",
+      "bareme": [
+        {
+          "critere": "→AB (4 ; 3) en soustrayant l'origine à l'extrémité",
+          "points": 5
+        },
+        {
+          "critere": "Milieu I (4 ; 0,5)",
+          "points": 5
+        },
+        {
+          "critere": "AB = 5 par la formule de distance en repère orthonormé",
+          "points": 5
+        },
+        {
+          "critere": "Déterminant nul, donc u et v colinéaires",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. →AB (6 − 2 ; 2 − (−1)) = **(4 ; 3)**.\n2. I ((2 + 6)/2 ; (−1 + 2)/2) = **(4 ; 0,5)**.\n3. Le repère est orthonormé : AB = √(4² + 3²) = √(16 + 9) = √25 = **5**.\n4. Déterminant : 4 × (−6) − 3 × (−8) = −24 + 24 = **0**. Le déterminant est nul : **u et v sont colinéaires** (en effet v = −2u)."
+    },
+    {
+      "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+      "difficulte": 2,
+      "titre": "Compléter un parallélogramme",
+      "consigne": "Le plan est muni d'un repère. Justifie chaque réponse par un calcul.",
+      "enonce": "On donne A(1 ; 2), B(5 ; 3) et C(6 ; 7).\n\n1. Calcule les coordonnées de →AB.\n2. Détermine les coordonnées du point D tel que ABCD soit un parallélogramme.\n3. Vérifie ton résultat en montrant que les diagonales [AC] et [BD] ont le même milieu.\n4. Le point E(9 ; 8) est-il aligné avec A et C ? Justifie.",
+      "bareme": [
+        {
+          "critere": "→AB (4 ; 1)",
+          "points": 4
+        },
+        {
+          "critere": "D (2 ; 6) obtenu à partir de →AB = →DC",
+          "points": 6
+        },
+        {
+          "critere": "Milieux de [AC] et [BD] tous deux égaux à (3,5 ; 4,5)",
+          "points": 5
+        },
+        {
+          "critere": "Non-alignement justifié par un déterminant non nul (−10)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. →AB (5 − 1 ; 3 − 2) = **(4 ; 1)**.\n2. ABCD est un parallélogramme si et seulement si →AB = →DC. Avec D(x ; y) : →DC (6 − x ; 7 − y) = (4 ; 1), donc x = 2 et y = 6 : **D(2 ; 6)**.\n3. Milieu de [AC] : ((1 + 6)/2 ; (2 + 7)/2) = (3,5 ; 4,5). Milieu de [BD] : ((5 + 2)/2 ; (3 + 6)/2) = (3,5 ; 4,5). Les diagonales ont **le même milieu** : ABCD est bien un parallélogramme.\n4. →AC (5 ; 5) et →AE (8 ; 6). Déterminant : 5 × 6 − 5 × 8 = 30 − 40 = **−10 ≠ 0**. Les vecteurs ne sont pas colinéaires : **A, C et E ne sont pas alignés**."
+    },
+    {
+      "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+      "difficulte": 3,
+      "titre": "Un triangle étudié par le calcul",
+      "consigne": "Le plan est muni d'un repère orthonormé. Rédige chaque démonstration par le calcul.",
+      "enonce": "On donne A(−2 ; 1), B(2 ; 3) et C(4 ; −1).\n\n1. Calcule les longueurs AB, BC et AC (valeurs exactes).\n2. Démontre que le triangle ABC est rectangle et isocèle, en précisant le sommet.\n3. Détermine les coordonnées du point D tel que ABCD soit un parallélogramme.\n4. Calcule les coordonnées du centre K de ce parallélogramme, et vérifie que K est aussi le milieu de [BD].\n5. Le point M(8 ; 6) est-il aligné avec A et B ? Justifie.",
+      "bareme": [
+        {
+          "critere": "AB = √20, BC = √20, AC = √40",
+          "points": 5
+        },
+        {
+          "critere": "Rectangle en B par la réciproque de Pythagore et isocèle (AB = BC)",
+          "points": 4
+        },
+        {
+          "critere": "D (0 ; −3) par →AB = →DC",
+          "points": 4
+        },
+        {
+          "critere": "K (1 ; 0) milieu de [AC] et de [BD]",
+          "points": 3
+        },
+        {
+          "critere": "Alignement de A, B, M justifié par un déterminant nul",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. →AB (4 ; 2) : AB = √(16 + 4) = **√20**. →BC (2 ; −4) : BC = √(4 + 16) = **√20**. →AC (6 ; −2) : AC = √(36 + 4) = **√40**.\n2. AB² + BC² = 20 + 20 = 40 = AC². D'après la réciproque de Pythagore, ABC est **rectangle en B**. Comme AB = BC, il est aussi **isocèle en B**.\n3. →AB = →DC avec D(x ; y) : (4 − x ; −1 − y) = (4 ; 2), donc x = 0 et y = −3 : **D(0 ; −3)**.\n4. K milieu de [AC] : ((−2 + 4)/2 ; (1 − 1)/2) = **(1 ; 0)**. Milieu de [BD] : ((2 + 0)/2 ; (3 − 3)/2) = (1 ; 0) : c'est bien K.\n5. →AB (4 ; 2) et →AM (10 ; 5). Déterminant : 4 × 5 − 2 × 10 = 20 − 20 = **0**. Les vecteurs sont colinéaires et ont le point A en commun : **A, B et M sont alignés**."
+    },
+    {
+      "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+      "difficulte": 1,
+      "titre": "L'équation d'une droite par deux points",
+      "consigne": "Détaille chaque calcul.",
+      "enonce": "On donne A(1 ; 3) et B(4 ; 9).\n\n1. Calcule le coefficient directeur m de la droite (AB), puis son ordonnée à l'origine p. Écris l'équation réduite de (AB).\n2. Donne un vecteur directeur de (AB). La droite monte-t-elle ou descend-elle ?\n3. Le point C(−2 ; −3) appartient-il à (AB) ? Et le point E(3 ; 6) ?",
+      "bareme": [
+        {
+          "critere": "m = 2, p = 1 et équation réduite y = 2x + 1",
+          "points": 10
+        },
+        {
+          "critere": "Vecteur directeur (1 ; 2) et droite qui monte (m > 0)",
+          "points": 4
+        },
+        {
+          "critere": "C appartient à la droite, E non, par substitution des coordonnées",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. m = (9 − 3)/(4 − 1) = 6/3 = **2**. A appartient à la droite : 3 = 2 × 1 + p, donc **p = 1**. Équation réduite : **y = 2x + 1**.\n2. Un vecteur directeur est **(1 ; m) = (1 ; 2)**. m > 0 : la droite **monte**.\n3. Pour C : 2 × (−2) + 1 = −3, égal à l'ordonnée de C : **C ∈ (AB)**. Pour E : 2 × 3 + 1 = 7 ≠ 6 : **E ∉ (AB)**."
+    },
+    {
+      "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+      "difficulte": 2,
+      "titre": "Deux compagnies de taxi",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque calcul.",
+      "enonce": "**Situation.** Le prix d'une course de taxi (en €) dépend de la distance x (en km).\n- La compagnie A facture selon la droite d'équation y = 1,5x + 4.\n- Pour la compagnie B, une course de 0 km coûte 7 € et une course de 10 km coûte 19 € ; son prix est aussi représenté par une droite.\n\n1. Détermine l'équation réduite de la droite de la compagnie B.\n2. Interprète le coefficient directeur et l'ordonnée à l'origine de chaque droite.\n3. Les deux droites sont-elles parallèles ? Calcule les coordonnées de leur point d'intersection.\n4. Pour une course de 20 km, quelle compagnie est la moins chère ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Droite B : y = 1,2x + 7",
+          "points": 5
+        },
+        {
+          "critere": "Interprétation : prix par km (coefficient directeur) et prise en charge (ordonnée à l'origine)",
+          "points": 4
+        },
+        {
+          "critere": "Droites sécantes (1,5 ≠ 1,2) et intersection (10 ; 19) par résolution du système",
+          "points": 7
+        },
+        {
+          "critere": "Comparaison à 20 km : A 34 €, B 31 €, B moins chère",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. m = (19 − 7)/(10 − 0) = 12/10 = **1,2** ; p = 7 (prix pour 0 km). Droite B : **y = 1,2x + 7**.\n2. Le coefficient directeur est le prix par kilomètre (1,50 € pour A, 1,20 € pour B) ; l'ordonnée à l'origine est le prix fixe de prise en charge (4 € pour A, 7 € pour B).\n3. Les coefficients directeurs sont différents (1,5 ≠ 1,2) : les droites sont **sécantes**. On résout 1,5x + 4 = 1,2x + 7, soit 0,3x = 3, donc **x = 10**, puis y = 1,5 × 10 + 4 = **19**. Point d'intersection : **(10 ; 19)** : pour 10 km, les deux courses coûtent 19 €.\n4. À 20 km : A coûte 1,5 × 20 + 4 = **34 €**, B coûte 1,2 × 20 + 7 = **31 €**. La compagnie **B** est la moins chère (au-delà de 10 km, sa droite, moins pentue, est au-dessous)."
+    },
+    {
+      "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+      "difficulte": 3,
+      "titre": "Équations cartésiennes et positions relatives",
+      "consigne": "Justifie chaque réponse à l'aide des vecteurs directeurs ou des coefficients directeurs.",
+      "enonce": "On considère les droites :\n- d₁ d'équation 2x − y + 3 = 0 ;\n- d₂ passant par A(1 ; −1) et de vecteur directeur u(1 ; 2) ;\n- d₃ d'équation x + 2y − 4 = 0.\n\n1. Donne un vecteur directeur de d₁ et de d₃.\n2. Détermine l'équation réduite de d₂. Les droites d₁ et d₂ sont-elles parallèles ? Sont-elles confondues ?\n3. Montre que d₁ et d₃ sont sécantes, puis calcule les coordonnées de leur point d'intersection.\n4. Donne une équation de la droite parallèle à l'axe des ordonnées passant par A.",
+      "bareme": [
+        {
+          "critere": "Vecteurs directeurs (1 ; 2) pour d₁ et (−2 ; 1) pour d₃ avec la règle (−b ; a)",
+          "points": 4
+        },
+        {
+          "critere": "d₂ : y = 2x − 3, parallèle à d₁ mais non confondue",
+          "points": 5
+        },
+        {
+          "critere": "Sécantes justifiées (déterminant non nul ou coefficients différents)",
+          "points": 3
+        },
+        {
+          "critere": "Intersection (−0,4 ; 2,2) par résolution du système, vérifiée",
+          "points": 5
+        },
+        {
+          "critere": "Droite verticale x = 1",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. d₁ : a = 2, b = −1, vecteur directeur (−b ; a) = **(1 ; 2)**. d₃ : a = 1, b = 2, vecteur directeur **(−2 ; 1)**.\n2. u(1 ; 2) = (1 ; m) donc m = 2 ; A ∈ d₂ : −1 = 2 × 1 + p, p = −3. **d₂ : y = 2x − 3**. d₁ s'écrit y = 2x + 3 : même coefficient directeur 2, donc **d₁ et d₂ sont parallèles**. Leurs ordonnées à l'origine diffèrent (3 et −3) : elles ne sont **pas confondues** (strictement parallèles).\n3. Déterminant de (1 ; 2) et (−2 ; 1) : 1 × 1 − 2 × (−2) = 5 ≠ 0 : les vecteurs directeurs ne sont pas colinéaires, les droites sont **sécantes**. Système : y = 2x + 3 et x + 2y − 4 = 0. En substituant : x + 2(2x + 3) − 4 = 0, soit 5x + 2 = 0, **x = −0,4** ; y = 2 × (−0,4) + 3 = **2,2**. Point d'intersection **(−0,4 ; 2,2)**. Vérification dans d₃ : −0,4 + 4,4 − 4 = 0.\n4. Une droite parallèle à l'axe des ordonnées a une équation x = c ; elle passe par A : **x = 1**."
+    },
+    {
+      "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+      "difficulte": 1,
+      "titre": "Images, antécédents, ensemble de définition",
+      "consigne": "Réponds à chaque question en détaillant tes calculs.",
+      "enonce": "On considère la fonction f définie sur ℝ par f(x) = x² − 3x.\n\n1. Calcule l'image de 2 et l'image de −1 par f.\n2. Vérifie que 0 et 3 sont deux antécédents de 0 par f. Le nombre 0 a-t-il un seul antécédent ?\n3. Donne l'ensemble de définition de chacune des fonctions suivantes, en justifiant :\n   a. g(x) = 1/(x − 5)\n   b. h(x) = √(x − 2)",
+      "bareme": [
+        {
+          "critere": "Images justes : f(2) = −2 et f(−1) = 4",
+          "points": 6
+        },
+        {
+          "critere": "Vérification f(0) = 0 et f(3) = 0, et remarque qu'un nombre peut avoir plusieurs antécédents",
+          "points": 6
+        },
+        {
+          "critere": "Ensembles de définition : ℝ privé de 5 et [2 ; +∞[, justifiés",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f(2) = 2² − 3 × 2 = 4 − 6 = **−2**. f(−1) = (−1)² − 3 × (−1) = 1 + 3 = **4**.\n2. f(0) = 0 − 0 = 0 et f(3) = 9 − 9 = 0 : **0 et 3 sont des antécédents de 0**. Le nombre 0 a donc **au moins deux** antécédents : rien n'interdit à un nombre d'avoir plusieurs antécédents (c'est l'image qui est unique).\n3.\n   a. Le dénominateur ne doit pas s'annuler : x − 5 ≠ 0, x ≠ 5. **Df = ℝ privé de 5**, soit ]−∞ ; 5[ ∪ ]5 ; +∞[.\n   b. L'intérieur de la racine doit être positif ou nul : x − 2 ≥ 0, x ≥ 2. **Dh = [2 ; +∞[**."
+    },
+    {
+      "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+      "difficulte": 2,
+      "titre": "Lire un tableau de variations",
+      "consigne": "Réponds en t'appuyant uniquement sur le tableau de variations, et justifie chaque réponse.",
+      "enonce": "Une fonction f est définie sur [−3 ; 5]. Son tableau de variations indique :\n- f(−3) = 2 ;\n- f est **décroissante** sur [−3 ; 1], jusqu'à f(1) = −4 ;\n- f est **croissante** sur [1 ; 5], jusqu'à f(5) = 3.\n\n1. Donne le minimum et le maximum de f sur [−3 ; 5], et les valeurs de x où ils sont atteints.\n2. Compare f(−2) et f(0), puis f(2) et f(4). Justifie par le sens de variation.\n3. Combien l'équation f(x) = 0 a-t-elle de solutions sur [−3 ; 5] ? Justifie.\n4. Peut-on comparer f(0) et f(4) à l'aide du tableau ? Explique.",
+      "bareme": [
+        {
+          "critere": "Minimum −4 en x = 1 et maximum 3 en x = 5",
+          "points": 5
+        },
+        {
+          "critere": "Comparaisons f(−2) ≥ f(0) et f(2) ≤ f(4) justifiées par la décroissance puis la croissance",
+          "points": 7
+        },
+        {
+          "critere": "Deux solutions à f(x) = 0, une sur chaque intervalle de monotonie",
+          "points": 5
+        },
+        {
+          "critere": "Explication : f(0) et f(4) ne sont pas sur un même intervalle de monotonie, comparaison impossible",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Les valeurs extrêmes du tableau sont 2, −4 et 3. **Minimum : −4, atteint en x = 1. Maximum : 3, atteint en x = 5** (3 > 2).\n2. −2 et 0 sont dans [−3 ; 1] où f est décroissante : elle inverse l'ordre ; −2 ≤ 0 donc **f(−2) ≥ f(0)**. 2 et 4 sont dans [1 ; 5] où f est croissante : elle conserve l'ordre ; 2 ≤ 4 donc **f(2) ≤ f(4)**. (Les flèches indiquant ici une variation stricte, on accepte aussi les inégalités strictes.)\n3. Sur [−3 ; 1], f décroît de 2 à −4 : elle prend la valeur 0 **une fois**. Sur [1 ; 5], f croît de −4 à 3 : elle prend la valeur 0 **une fois**. L'équation f(x) = 0 a **deux solutions**, l'une entre −3 et 1, l'autre entre 1 et 5.\n4. **Non.** 0 est dans [−3 ; 1] et 4 dans [1 ; 5] : on sait seulement que f(0) est entre −4 et 2, et f(4) entre −4 et 3. Le tableau ne permet pas de trancher : il faudrait connaître les valeurs."
+    },
+    {
+      "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+      "difficulte": 3,
+      "titre": "Le rectangle d'aire maximale",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque étape.",
+      "enonce": "**Situation.** Nour veut délimiter un enclos rectangulaire avec 20 m de grillage (le périmètre vaut 20 m). On note x la largeur en mètres, et A(x) l'aire de l'enclos en m².\n\n1. Montre que la longueur vaut 10 − x, puis que A(x) = x(10 − x). Explique pourquoi on étudie A sur l'intervalle [0 ; 10].\n2. Recopie et complète le tableau de valeurs :\n\n| x | 0 | 2 | 4 | 5 | 6 | 8 | 10 |\n| A(x) | | | | | | | |\n\n3. À l'aide du tableau, conjecture le sens de variation de A et son maximum.\n4. Développe (x − 5)², puis vérifie que 25 − A(x) = (x − 5)². Déduis-en que A(x) ≤ 25 pour tout x, et que 25 est bien le maximum.\n5. Quels sont les antécédents de 16 par A ? Vérifie par le calcul.",
+      "bareme": [
+        {
+          "critere": "Expression de la longueur et de A(x), intervalle [0 ; 10] justifié",
+          "points": 3
+        },
+        {
+          "critere": "Tableau de valeurs juste : 0, 16, 24, 25, 24, 16, 0",
+          "points": 4
+        },
+        {
+          "critere": "Conjecture : croissante sur [0 ; 5], décroissante sur [5 ; 10], maximum 25 en 5",
+          "points": 4
+        },
+        {
+          "critere": "Démonstration 25 − A(x) = (x − 5)² ≥ 0, donc maximum 25 atteint en x = 5",
+          "points": 5
+        },
+        {
+          "critere": "Antécédents de 16 : 2 et 8, vérifiés",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le périmètre vaut 2 × (largeur + longueur) = 20, donc largeur + longueur = 10 et la longueur vaut **10 − x**. A(x) = largeur × longueur = **x(10 − x)**. Une longueur est positive : x ≥ 0 et 10 − x ≥ 0, donc x ∈ **[0 ; 10]**.\n2. A(0) = 0 ; A(2) = 2 × 8 = 16 ; A(4) = 4 × 6 = 24 ; A(5) = 5 × 5 = 25 ; A(6) = 6 × 4 = 24 ; A(8) = 8 × 2 = 16 ; A(10) = 0.\n3. A semble **croissante sur [0 ; 5]** et **décroissante sur [5 ; 10]**, avec un **maximum de 25 m² en x = 5** (l'enclos carré de 5 m de côté).\n4. (x − 5)² = x² − 10x + 25. Et 25 − A(x) = 25 − 10x + x² = x² − 10x + 25. Donc **25 − A(x) = (x − 5)²**. Un carré est positif ou nul, donc 25 − A(x) ≥ 0, soit **A(x) ≤ 25** pour tout x. Comme A(5) = 25, **25 est le maximum**, atteint en x = 5.\n5. D'après le tableau, A(2) = 16 et A(8) = 16 : **les antécédents de 16 sont 2 et 8**. Vérification : 2 × (10 − 2) = 16 et 8 × (10 − 8) = 16."
+    },
+    {
+      "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+      "difficulte": 1,
+      "titre": "Une fonction affine décroissante",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "On considère la fonction f définie sur ℝ par f(x) = −3x + 6.\n\n1. Donne les valeurs de a et de b. Quel est le sens de variation de f ? Justifie.\n2. Calcule f(0), f(2) et f(−1). Que représente f(0) pour la droite représentative ?\n3. Pour quelle valeur de x la fonction f s'annule-t-elle ? Dresse le tableau de signes de f.",
+      "bareme": [
+        {
+          "critere": "a = −3, b = 6 et f décroissante car a < 0",
+          "points": 6
+        },
+        {
+          "critere": "f(0) = 6 (ordonnée à l'origine), f(2) = 0, f(−1) = 9",
+          "points": 6
+        },
+        {
+          "critere": "f s'annule en 2 ; positive avant 2, négative après",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **a = −3** et **b = 6**. Comme a < 0, f est **décroissante** sur ℝ.\n2. f(0) = **6** : c'est l'**ordonnée à l'origine**, l'ordonnée du point où la droite coupe l'axe des ordonnées. f(2) = −6 + 6 = **0** ; f(−1) = 3 + 6 = **9**.\n3. f(x) = 0 pour x = −b/a = −6/(−3) = **2**. Comme a < 0 :\n\n| x | −∞ … 2 | 2 … +∞ |\n| f(x) | + (0 en 2) | − |\n\nf est **positive** sur ]−∞ ; 2] et **négative** sur [2 ; +∞[."
+    },
+    {
+      "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+      "difficulte": 2,
+      "titre": "Deux abonnements à la salle de sport",
+      "consigne": "Lis la situation, puis réponds en justifiant tes calculs.",
+      "enonce": "**Situation.** Une salle de sport propose deux formules pour l'année, x désignant le nombre de séances :\n- formule A : 20 € d'inscription puis 8 € par séance ;\n- formule B : son prix est donné par une fonction affine g ; on sait que 5 séances coûtent 65 € et que 15 séances coûtent 135 €.\n\n1. Exprime le prix f(x) de la formule A. Explique pourquoi f est affine et ce que représentent ses coefficients.\n2. Détermine l'expression de g(x) en calculant d'abord a par le taux d'accroissement.\n3. Pour combien de séances les deux formules coûtent-elles le même prix ? Au-delà, quelle formule est la moins chère ? Justifie.",
+      "bareme": [
+        {
+          "critere": "f(x) = 8x + 20 avec l'interprétation : 8 € par séance, 20 € fixes",
+          "points": 5
+        },
+        {
+          "critere": "g(x) = 7x + 30 : a = 70/10 = 7 puis b par réinjection d'un point",
+          "points": 7
+        },
+        {
+          "critere": "Égalité en x = 10 (100 €) et formule B moins chère au-delà, justifiée",
+          "points": 8
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **f(x) = 8x + 20**. C'est une fonction affine (forme ax + b) : a = 8 est le prix d'une séance (le coefficient directeur), b = 20 le forfait fixe d'inscription (l'ordonnée à l'origine).\n2. Taux d'accroissement : a = (135 − 65)/(15 − 5) = 70/10 = **7**. Avec le point (5 ; 65) : 65 = 7 × 5 + b, soit b = 65 − 35 = **30**. **g(x) = 7x + 30**. Vérification : 7 × 15 + 30 = 135.\n3. 8x + 20 = 7x + 30 donne **x = 10** : 10 séances coûtent **100 €** dans les deux formules. Au-delà, f(x) − g(x) = x − 10 > 0 pour x > 10 : la formule A est plus chère, donc la **formule B est la moins chère** (sa séance coûte 7 € au lieu de 8 €). Par exemple, pour 20 séances : A = 180 €, B = 170 €."
+    },
+    {
+      "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+      "difficulte": 3,
+      "titre": "Retrouver une fonction affine et l'utiliser",
+      "consigne": "Justifie chaque étape ; les tableaux de signes doivent être complets.",
+      "enonce": "f est une fonction affine telle que f(−2) = 7 et f(4) = −5.\n\n1. Détermine l'expression de f(x).\n2. Sans calcul supplémentaire, quel est le taux d'accroissement de f entre 0 et 10 ? Justifie par une propriété du cours.\n3. Détermine le nombre qui annule f, puis dresse le tableau de signes de f.\n4. On pose g(x) = x + 2. Résous l'inéquation f(x) × g(x) ≥ 0 à l'aide d'un tableau de signes.\n5. La fonction f est-elle linéaire ? Justifie.",
+      "bareme": [
+        {
+          "critere": "f(x) = −2x + 3 : a = −12/6 = −2 puis b = 3",
+          "points": 5
+        },
+        {
+          "critere": "Taux d'accroissement égal à −2 quelle que soit la paire, propriété caractéristique citée",
+          "points": 3
+        },
+        {
+          "critere": "f s'annule en 1,5 ; positive avant, négative après (a < 0)",
+          "points": 4
+        },
+        {
+          "critere": "Tableau de signes du produit juste et solution [−2 ; 1,5]",
+          "points": 6
+        },
+        {
+          "critere": "f non linéaire car b ≠ 0",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. a = (f(4) − f(−2))/(4 − (−2)) = (−5 − 7)/6 = −12/6 = **−2**. Avec f(−2) = 7 : 7 = −2 × (−2) + b, soit b = **3**. **f(x) = −2x + 3**.\n2. Pour une fonction affine, le taux d'accroissement est **constant et égal à a**, quelle que soit la paire de valeurs choisie : entre 0 et 10, il vaut **−2**. (Vérification : (f(10) − f(0))/10 = (−17 − 3)/10 = −2.)\n3. f(x) = 0 pour x = −b/a = −3/(−2) = **1,5**. Comme a < 0, f est **positive** avant 1,5 et **négative** après.\n4. g(x) = x + 2 s'annule en −2 ; a = 1 > 0 : négative avant, positive après.\n\n| x | −∞ … −2 | −2 … 1,5 | 1,5 … +∞ |\n| f(x) | + | + | − |\n| g(x) | − | + | + |\n| produit | − | + | − |\n\nLe produit est nul en −2 et en 1,5. **S = [−2 ; 1,5]**.\n5. Une fonction linéaire a b = 0. Ici b = 3 ≠ 0 : f **n'est pas linéaire** (sa droite ne passe pas par l'origine)."
+    },
+    {
+      "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+      "difficulte": 1,
+      "titre": "Équations x² = k et comparaisons",
+      "consigne": "Réponds en justifiant à l'aide des propriétés de la fonction carré.",
+      "enonce": "1. Résous dans ℝ les équations suivantes :\n   a. x² = 49\n   b. x² = −9\n   c. x² = 0\n2. Dresse le tableau de variations de la fonction carré et donne son minimum.\n3. Sans calculer les carrés, compare :\n   a. 2,3² et 2,5²\n   b. (−4)² et (−3)²",
+      "bareme": [
+        {
+          "critere": "Solutions : 7 et −7 ; aucune ; 0",
+          "points": 8
+        },
+        {
+          "critere": "Tableau de variations (décroissante puis croissante) et minimum 0 en 0",
+          "points": 5
+        },
+        {
+          "critere": "Comparaisons justifiées par le sens de variation sur le bon intervalle",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1.\n   a. 49 > 0 : deux solutions, **x = 7 ou x = −7**.\n   b. −9 < 0 : un carré n'est jamais négatif, **aucune solution**.\n   c. **x = 0**, seule solution.\n2. La fonction carré est **décroissante sur ]−∞ ; 0]** et **croissante sur [0 ; +∞[**. Son **minimum est 0**, atteint en x = 0 (sommet de la parabole).\n3.\n   a. 2,3 et 2,5 sont dans [0 ; +∞[ où la fonction carré est croissante (elle conserve l'ordre) : 2,3 < 2,5 donc **2,3² < 2,5²**.\n   b. −4 et −3 sont dans ]−∞ ; 0] où elle est décroissante (elle inverse l'ordre) : −4 < −3 donc **(−4)² > (−3)²** (16 > 9)."
+    },
+    {
+      "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+      "difficulte": 2,
+      "titre": "Le potager carré",
+      "consigne": "Réponds en justifiant, et écris les solutions sous forme d'intervalles.",
+      "enonce": "1. Résous dans ℝ les inéquations :\n   a. x² ≤ 16\n   b. x² > 4\n2. **Situation.** Rayan veut un potager carré de côté x mètres (x > 0) dont l'aire ne dépasse pas 81 m². Quelles sont les valeurs possibles de x ? Justifie.\n3. Hugo affirme : « Si a < b, alors a² < b². » Est-ce vrai ? Justifie par un contre-exemple ou une démonstration, et dis dans quel cas l'affirmation est vraie.",
+      "bareme": [
+        {
+          "critere": "x² ≤ 16 : [−4 ; 4]",
+          "points": 6
+        },
+        {
+          "critere": "x² > 4 : ]−∞ ; −2[ ∪ ]2 ; +∞[",
+          "points": 6
+        },
+        {
+          "critere": "Côté du potager dans ]0 ; 9] avec la contrainte x > 0",
+          "points": 4
+        },
+        {
+          "critere": "Affirmation fausse avec un contre-exemple, vraie pour a et b positifs",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n   a. x² ≤ 16 : les carrés inférieurs ou égaux à 16 sont ceux des nombres entre −4 et 4 (parabole sous la droite y = 16). **S = [−4 ; 4]**.\n   b. x² > 4 : **S = ]−∞ ; −2[ ∪ ]2 ; +∞[**.\n2. L'aire est x² ≤ 81, donc x ∈ [−9 ; 9] ; comme x > 0 (c'est une longueur), **x ∈ ]0 ; 9]** : le côté mesure au plus 9 m.\n3. **Faux** en général : −3 < 2 mais (−3)² = 9 > 2² = 4. Passer au carré ne conserve pas l'ordre. L'affirmation est **vraie lorsque a et b sont positifs ou nuls**, car la fonction carré est croissante sur [0 ; +∞[."
+    },
+    {
+      "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+      "difficulte": 3,
+      "titre": "Encadrer un carré, résoudre avec la parabole",
+      "consigne": "Justifie chaque réponse par une propriété de la fonction carré.",
+      "enonce": "1. Résous l'équation (x − 3)² = 25.\n2. Résous l'inéquation x² ≤ 2. Donne les bornes en valeur exacte.\n3. Donne le meilleur encadrement possible de x² :\n   a. lorsque −3 ≤ x ≤ −1 ;\n   b. lorsque −1 ≤ x ≤ 2.\n4. Justifie par un calcul que la fonction carré est paire, et vérifie-le avec x = 2,5. Quelle conséquence graphique cela a-t-il ?",
+      "bareme": [
+        {
+          "critere": "(x − 3)² = 25 : x − 3 = 5 ou −5, donc x = 8 ou x = −2",
+          "points": 5
+        },
+        {
+          "critere": "x² ≤ 2 : [−√2 ; √2]",
+          "points": 4
+        },
+        {
+          "critere": "Encadrement 1 ≤ x² ≤ 9 par la décroissance sur les négatifs",
+          "points": 4
+        },
+        {
+          "critere": "Encadrement 0 ≤ x² ≤ 4 en tenant compte du minimum atteint en 0",
+          "points": 5
+        },
+        {
+          "critere": "Parité : (−x)² = x², vérification 6,25, symétrie par rapport à l'axe des ordonnées",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On pose X = x − 3 : X² = 25 donne X = 5 ou X = −5 (ne pas oublier la solution négative). Donc x − 3 = 5, **x = 8**, ou x − 3 = −5, **x = −2**.\n2. x² ≤ 2 : **S = [−√2 ; √2]** (même raisonnement que x² ≤ 9 donne [−3 ; 3]).\n3.\n   a. Sur [−3 ; −1] ⊂ ]−∞ ; 0], la fonction carré est **décroissante** : elle inverse l'ordre. De −3 ≤ x ≤ −1 on tire (−1)² ≤ x² ≤ (−3)², soit **1 ≤ x² ≤ 9**.\n   b. L'intervalle [−1 ; 2] contient 0 : il faut couper. Sur [−1 ; 0], x² va de 1 à 0 ; sur [0 ; 2], x² va de 0 à 4. Le minimum est 0 (atteint en 0) et le maximum est le plus grand de 1 et 4 : **0 ≤ x² ≤ 4**. (Élever −1 ≤ x ≤ 2 au carré « terme à terme » donnerait 1 ≤ x² ≤ 4, ce qui est faux : pour x = 0, x² = 0.)\n4. Pour tout réel x, (−x)² = x² : la fonction carré est **paire**. Vérification : (−2,5)² = 6,25 = 2,5². Conséquence : sa courbe, la parabole, est **symétrique par rapport à l'axe des ordonnées**."
+    },
+    {
+      "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+      "difficulte": 1,
+      "titre": "Cubes et racines cubiques",
+      "consigne": "Réponds en justifiant par une propriété de la fonction cube.",
+      "enonce": "1. Résous dans ℝ les équations :\n   a. x³ = 64\n   b. x³ = −125\n   c. x³ = 0\n2. Sans calcul, donne le signe de (−2)³ et celui de 3³. Justifie.\n3. Compare (−3)³ et (−2)³ sans les calculer, puis vérifie par le calcul.",
+      "bareme": [
+        {
+          "critere": "Solutions uniques : 4, −5, 0",
+          "points": 8
+        },
+        {
+          "critere": "Signes justifiés : x³ a le signe de x",
+          "points": 5
+        },
+        {
+          "critere": "Comparaison (−3)³ < (−2)³ justifiée par la croissance sur ℝ et vérifiée (−27 < −8)",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'équation x³ = k a **toujours exactement une** solution.\n   a. 4³ = 64 : **x = 4**.\n   b. (−5)³ = −125 : **x = −5** (le cube garde le signe, une solution négative existe).\n   c. **x = 0**.\n2. x³ a **le signe de x** : (−2)³ est **négatif**, 3³ est **positif**.\n3. La fonction cube est **croissante sur ℝ** : elle conserve l'ordre quels que soient les signes. −3 < −2 donc **(−3)³ < (−2)³**. Vérification : −27 < −8."
+    },
+    {
+      "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+      "difficulte": 2,
+      "titre": "L'aquarium cubique",
+      "consigne": "Lis la situation, puis réponds en justifiant.",
+      "enonce": "**Situation.** Le volume d'un cube d'arête a (en cm) vaut a³ (en cm³).\n\n1. Un aquarium cubique a un volume de 27 000 cm³. Quelle est la longueur de son arête ? Justifie qu'il n'y a qu'une seule réponse possible.\n2. Un second aquarium cubique contient 8 litres, soit 8 000 cm³. Calcule son arête.\n3. Sami affirme : « Pour tout nombre positif x, x³ est plus grand que x². » Teste son affirmation avec x = 0,5 et x = 3, puis dis sur quel intervalle elle est vraie et sur lequel elle est fausse.",
+      "bareme": [
+        {
+          "critere": "Arête de 30 cm et unicité de la solution de x³ = k",
+          "points": 6
+        },
+        {
+          "critere": "Arête de 20 cm",
+          "points": 4
+        },
+        {
+          "critere": "Calculs 0,125 < 0,25 et 27 > 9",
+          "points": 5
+        },
+        {
+          "critere": "Conclusion : x³ ≤ x² sur [0 ; 1], x³ ≥ x² sur [1 ; +∞[, affirmation fausse",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. On résout a³ = 27 000. Or 30³ = 27 000 : **a = 30 cm**. L'équation x³ = k a toujours **exactement une** solution (la fonction cube est croissante sur ℝ) : c'est la seule réponse.\n2. a³ = 8 000 et 20³ = 8 000 : **a = 20 cm**.\n3. Pour x = 0,5 : x³ = 0,125 et x² = 0,25, donc **x³ < x²**. Pour x = 3 : x³ = 27 et x² = 9, donc **x³ > x²**. L'affirmation de Sami est **fausse** : sur [0 ; 1], x³ ≤ x² (élever à une puissance plus grande rapproche de 0) ; sur [1 ; +∞[, x³ ≥ x². Les deux sont égaux en 0 et en 1."
+    },
+    {
+      "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+      "difficulte": 3,
+      "titre": "Cube contre carré",
+      "consigne": "Justifie chaque réponse par une propriété du cours.",
+      "enonce": "1. Calcule f(−2) et f(2) pour f(x) = x³. Quelle propriété de la fonction cube illustres-tu ? Quelle en est la conséquence graphique ? Compare avec la fonction carré.\n2. Donne le meilleur encadrement de x³, puis de x², lorsque −2 ≤ x ≤ 3.\n3. Range dans l'ordre croissant x, x² et x³ pour x = 0,4, en donnant leurs valeurs. Aurais-tu pu prévoir cet ordre sans calcul ?\n4. Résous l'inéquation x³ ≤ −8.\n5. Combien l'équation x³ = −1 a-t-elle de solutions ? Et l'équation x² = −1 ? Explique la différence.",
+      "bareme": [
+        {
+          "critere": "f(−2) = −8, f(2) = 8 : fonction impaire, symétrie par rapport à l'origine, opposée à la parité du carré",
+          "points": 3
+        },
+        {
+          "critere": "Encadrements −8 ≤ x³ ≤ 27 et 0 ≤ x² ≤ 9",
+          "points": 5
+        },
+        {
+          "critere": "Rangement 0,064 < 0,16 < 0,4 prévu par la règle sur [0 ; 1]",
+          "points": 4
+        },
+        {
+          "critere": "x³ ≤ −8 équivaut à x ≤ −2, justifié par la conservation de l'ordre",
+          "points": 4
+        },
+        {
+          "critere": "Une solution (−1) pour le cube, aucune pour le carré, avec l'explication sur le signe",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. f(−2) = −8 et f(2) = 8 : f(−x) = −f(x), la fonction cube est **impaire** ; sa courbe est **symétrique par rapport à l'origine**. La fonction carré, elle, est paire (symétrie par rapport à l'axe des ordonnées).\n2. La fonction cube est croissante sur ℝ : de −2 ≤ x ≤ 3 on tire **−8 ≤ x³ ≤ 27**. Pour le carré, l'intervalle contient 0 : le minimum est 0 et le maximum le plus grand de 4 et 9 : **0 ≤ x² ≤ 9**.\n3. x = 0,4 ; x² = 0,16 ; x³ = 0,064. Ordre : **x³ < x² < x**. On pouvait le prévoir : sur [0 ; 1], **x³ ≤ x² ≤ x** (élever à une puissance plus grande rapproche de 0).\n4. −8 = (−2)³. La fonction cube conserve l'ordre, donc x³ ≤ (−2)³ équivaut à x ≤ −2 : **S = ]−∞ ; −2]**.\n5. x³ = −1 a **exactement une** solution : x = −1 (le cube garde le signe). x² = −1 n'en a **aucune** : un carré n'est jamais négatif. C'est la différence du cours : le cube garde le signe, le carré l'efface."
+    },
+    {
+      "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+      "difficulte": 1,
+      "titre": "Premiers pas avec la racine carrée",
+      "consigne": "Réponds en justifiant chaque réponse.",
+      "enonce": "1. Quel est l'ensemble de définition de la fonction racine carrée ? Pourquoi ? Calcule √49 et √0,25.\n2. Résous les équations :\n   a. √x = 6\n   b. √x = −2\n3. Compare 0,36 et √0,36. Le résultat est-il surprenant ? Explique à l'aide du cours.",
+      "bareme": [
+        {
+          "critere": "Ensemble [0 ; +∞[ justifié ; √49 = 7 et √0,25 = 0,5",
+          "points": 6
+        },
+        {
+          "critere": "√x = 6 donne x = 36 ; √x = −2 n'a pas de solution",
+          "points": 8
+        },
+        {
+          "critere": "√0,36 = 0,6 > 0,36, expliqué par x ≤ √x sur [0 ; 1]",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La racine carrée n'est définie que sur **[0 ; +∞[** : la racine carrée d'un nombre négatif n'existe pas dans ℝ. √49 = **7** et √0,25 = **0,5** (0,5² = 0,25).\n2.\n   a. 6 ≥ 0 : x = 6² = **36**.\n   b. Une racine carrée est toujours positive ou nulle : **aucune solution**.\n3. √0,36 = 0,6 et **0,6 > 0,36**. Ce n'est pas surprenant : sur [0 ; 1], **x ≤ √x** — la racine d'un nombre compris entre 0 et 1 est plus grande que lui."
+    },
+    {
+      "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+      "difficulte": 2,
+      "titre": "Du côté du carré à la racine",
+      "consigne": "Lis chaque situation, puis réponds en justifiant.",
+      "enonce": "1. Paul écrit : « √((−4)²) = −4. » Trouve son erreur, donne la bonne valeur et la règle générale qui s'applique.\n2. **Situation.** Élise veut dessiner deux jardins carrés, l'un de 50 m², l'autre de 72 m².\n   a. Exprime le côté de chaque jardin à l'aide d'une racine carrée, puis donne une valeur approchée au centimètre près.\n   b. Sans calculatrice, comment savoir lequel a le plus grand côté ? Justifie par le sens de variation.\n3. Résous l'équation √(2x − 1) = 3, puis vérifie la solution trouvée dans l'équation de départ.",
+      "bareme": [
+        {
+          "critere": "√((−4)²) = 4 et règle √(x²) = |x|",
+          "points": 5
+        },
+        {
+          "critere": "Côtés √50 ≈ 7,07 m et √72 ≈ 8,49 m, comparaison par la croissance de la racine",
+          "points": 7
+        },
+        {
+          "critere": "Équation résolue en élevant au carré (x = 5) puis vérifiée",
+          "points": 8
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. √((−4)²) = √16 = **4**, pas −4 : une racine carrée est toujours positive. La règle générale est **√(x²) = |x|** pour tout réel x ; l'égalité √(x²) = x n'est vraie que pour x ≥ 0.\n2.\n   a. Le côté c vérifie c² = aire, avec c > 0 : c = √50 ≈ **7,07 m** et c = √72 ≈ **8,49 m**.\n   b. La fonction racine carrée est **croissante** sur [0 ; +∞[ : 50 < 72 donc √50 < √72. Le jardin de 72 m² a le plus grand côté.\n3. On élève au carré : 2x − 1 = 9, donc 2x = 10, **x = 5**. Vérification (indispensable : élever au carré peut créer des solutions parasites) : √(2 × 5 − 1) = √9 = 3. **S = {5}**."
+    },
+    {
+      "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+      "difficulte": 3,
+      "titre": "La solution parasite",
+      "consigne": "Justifie chaque étape ; toute solution doit être vérifiée.",
+      "enonce": "On veut résoudre l'équation (E) : √(x + 6) = x.\n\n1. Pour quelles valeurs de x le membre de gauche est-il défini ?\n2. En élevant au carré, montre que toute solution de (E) vérifie x² − x − 6 = 0.\n3. Vérifie en développant que x² − x − 6 = (x − 3)(x + 2), puis résous x² − x − 6 = 0.\n4. Vérifie chaque valeur trouvée dans (E). Conclus, et explique le phénomène observé.\n5. Compare √x, x et x² pour x = 0,64, puis pour x = 4. Quelle règle du cours retrouves-tu ?\n6. Donne un encadrement de √x lorsque 4 ≤ x ≤ 9.",
+      "bareme": [
+        {
+          "critere": "Domaine x ≥ −6",
+          "points": 2
+        },
+        {
+          "critere": "Mise au carré, développement de (x − 3)(x + 2) et solutions 3 et −2",
+          "points": 5
+        },
+        {
+          "critere": "Vérification : 3 convient, −2 est une solution parasite (√4 = 2 ≠ −2), S = {3}",
+          "points": 5
+        },
+        {
+          "critere": "Comparaisons 0,4096 < 0,64 < 0,8 et 2 < 4 < 16, règle selon la position par rapport à 1",
+          "points": 5
+        },
+        {
+          "critere": "Encadrement 2 ≤ √x ≤ 3 par la croissance de la racine",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Il faut x + 6 ≥ 0, soit **x ≥ −6**.\n2. Si √(x + 6) = x, en élevant au carré : x + 6 = x², soit **x² − x − 6 = 0**.\n3. (x − 3)(x + 2) = x² + 2x − 3x − 6 = x² − x − 6. Produit nul : **x = 3 ou x = −2**.\n4. Pour x = 3 : √9 = 3 = x, **3 est solution**. Pour x = −2 : √4 = 2 ≠ −2, **−2 n'est pas solution**. **S = {3}**. Élever au carré a créé une **solution parasite** : l'équation x + 6 = x² est aussi vérifiée quand √(x + 6) = −x. Une racine étant positive, la solution doit aussi vérifier x ≥ 0.\n5. Pour x = 0,64 : √x = 0,8 et x² = 0,4096, donc **x² < x < √x**. Pour x = 4 : √x = 2, x² = 16, donc **√x < x < x²**. On retrouve : sur [0 ; 1], x ≤ √x ; sur [1 ; +∞[, √x ≤ x (les points d'égalité sont 0 et 1).\n6. La fonction racine carrée est croissante : de 4 ≤ x ≤ 9 on tire √4 ≤ √x ≤ √9, soit **2 ≤ √x ≤ 3**."
+    },
+    {
+      "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+      "difficulte": 1,
+      "titre": "Calculer avec l'inverse",
+      "consigne": "Réponds en justifiant chaque réponse.",
+      "enonce": "1. Quel est l'ensemble de définition de la fonction inverse ? Pourquoi ?\n2. Calcule l'image par la fonction inverse de 4, de −0,5 et de 0,2.\n3. Résous les équations :\n   a. 1/x = 5\n   b. 1/x = −4\n   c. 1/x = 0",
+      "bareme": [
+        {
+          "critere": "Ensemble ℝ privé de 0, justifié par l'impossibilité de diviser par 0",
+          "points": 4
+        },
+        {
+          "critere": "Images 0,25 ; −2 ; 5",
+          "points": 6
+        },
+        {
+          "critere": "Solutions 0,2 ; −0,25 ; aucune pour 1/x = 0",
+          "points": 10
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **ℝ privé de 0**, soit ]−∞ ; 0[ ∪ ]0 ; +∞[ : diviser par zéro n'a pas de sens, 0 est une valeur interdite.\n2. 1/4 = **0,25** ; 1/(−0,5) = **−2** ; 1/0,2 = **5**.\n3.\n   a. k = 5 non nul : x = 1/5 = **0,2**.\n   b. x = 1/(−4) = **−0,25**.\n   c. Un quotient 1/x n'est jamais nul (son numérateur vaut 1) : **aucune solution**."
+    },
+    {
+      "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+      "difficulte": 2,
+      "titre": "Comparer des inverses sans se tromper",
+      "consigne": "Justifie chaque réponse par le sens de variation de la fonction inverse sur le bon intervalle.",
+      "enonce": "1. Compare 1/3 et 1/7 sans calcul.\n2. Compare 1/(−2) et 1/(−5) sans calcul, puis vérifie avec les valeurs décimales.\n3. Inès écrit : « La fonction inverse est décroissante et −1 < 2, donc 1/(−1) > 1/2. » Vérifie son résultat par le calcul, puis explique son erreur de raisonnement.\n4. On sait que 2 ≤ x ≤ 5. Donne un encadrement de 1/x.",
+      "bareme": [
+        {
+          "critere": "1/3 > 1/7 justifié par la décroissance sur ]0 ; +∞[",
+          "points": 5
+        },
+        {
+          "critere": "1/(−5) > 1/(−2) justifié par la décroissance sur ]−∞ ; 0[, vérifié (−0,2 > −0,5)",
+          "points": 5
+        },
+        {
+          "critere": "Conclusion d'Inès fausse (−1 < 0,5) : pas de décroissance sur la réunion des deux intervalles",
+          "points": 5
+        },
+        {
+          "critere": "Encadrement 0,2 ≤ 1/x ≤ 0,5 avec inversion de l'ordre",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 3 et 7 sont dans ]0 ; +∞[ où la fonction inverse est **décroissante** (elle inverse l'ordre) : 3 < 7 donc **1/3 > 1/7**.\n2. −5 et −2 sont dans ]−∞ ; 0[ où elle est décroissante : −5 < −2 donc **1/(−5) > 1/(−2)**. Vérification : −0,2 > −0,5.\n3. 1/(−1) = −1 et 1/2 = 0,5 : −1 < 0,5, donc la conclusion d'Inès est **fausse**. Son erreur : −1 et 2 ne sont **pas dans le même intervalle**. La fonction inverse est décroissante sur ]−∞ ; 0[ et sur ]0 ; +∞[ séparément, mais **pas** sur leur réunion : on ne peut comparer par le sens de variation que deux nombres du même intervalle.\n4. 2 et 5 sont dans ]0 ; +∞[ où la fonction est décroissante : de 2 ≤ x ≤ 5 on tire 1/5 ≤ 1/x ≤ 1/2, soit **0,2 ≤ 1/x ≤ 0,5**."
+    },
+    {
+      "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+      "difficulte": 3,
+      "titre": "L'inéquation 1/x ≤ 2",
+      "consigne": "Rédige une résolution complète avec un tableau de signes, puis réponds aux questions d'analyse.",
+      "enonce": "On veut résoudre dans ℝ privé de 0 l'inéquation 1/x ≤ 2.\n\n1. Léa multiplie les deux membres par x et obtient 1 ≤ 2x, donc x ≥ 0,5. Teste x = −1 dans l'inéquation de départ : que constates-tu ? Explique l'erreur de Léa.\n2. Montre que l'inéquation équivaut à (1 − 2x)/x ≤ 0.\n3. Dresse le tableau de signes de (1 − 2x)/x, en indiquant la valeur interdite.\n4. Déduis-en l'ensemble des solutions.\n5. Vérifie ta réponse avec x = 0,25 et x = 1.",
+      "bareme": [
+        {
+          "critere": "x = −1 est solution et l'erreur de Léa expliquée (signe de x inconnu, sens de l'inégalité)",
+          "points": 4
+        },
+        {
+          "critere": "Réduction au même dénominateur : 1/x − 2 = (1 − 2x)/x",
+          "points": 4
+        },
+        {
+          "critere": "Tableau de signes juste avec double barre en 0 et zéro en 0,5",
+          "points": 6
+        },
+        {
+          "critere": "S = ]−∞ ; 0[ ∪ [0,5 ; +∞[",
+          "points": 4
+        },
+        {
+          "critere": "Vérifications justes avec 0,25 et 1",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Pour x = −1 : 1/(−1) = −1 ≤ 2, donc **−1 est solution**, alors que Léa a trouvé x ≥ 0,5. Son erreur : elle a multiplié par x **sans connaître son signe**. Si x < 0, multiplier par x **inverse** le sens de l'inégalité ; elle a donc perdu toutes les solutions négatives.\n2. 1/x ≤ 2 équivaut à 1/x − 2 ≤ 0, et 1/x − 2 = 1/x − 2x/x = **(1 − 2x)/x**.\n3. 1 − 2x s'annule en 0,5 (positif avant, négatif après : coefficient −2) ; x s'annule en 0 (valeur interdite).\n\n| x | −∞ … 0 | 0 … 0,5 | 0,5 … +∞ |\n| 1 − 2x | + | + | − |\n| x | − | + | + |\n| quotient | − (double barre en 0) | + (0 en 0,5) | − |\n\n4. Le quotient est négatif ou nul sur ]−∞ ; 0[ et sur [0,5 ; +∞[ (0,5 inclus car le quotient y est nul, 0 exclu car interdit). **S = ]−∞ ; 0[ ∪ [0,5 ; +∞[**.\n5. x = 0,25 : 1/0,25 = 4 > 2, **non solution** (0,25 ∉ S). x = 1 : 1/1 = 1 ≤ 2, **solution** (1 ∈ S)."
+    },
+    {
+      "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+      "difficulte": 1,
+      "titre": "Pourcentages et coefficients",
+      "consigne": "Détaille chaque calcul.",
+      "enonce": "1. Dans une classe de 30 élèves, 9 font du théâtre. Quelle est la proportion d'élèves qui font du théâtre ? Exprime-la en pourcentage.\n2. Calcule 35 % de 240.\n3. Donne le coefficient multiplicateur associé à une hausse de 12 %, puis à une baisse de 8 %.\n4. Un jeu vidéo coûte 45 €. Son prix augmente de 12 %. Calcule le nouveau prix.",
+      "bareme": [
+        {
+          "critere": "Proportion 0,3 soit 30 % et 35 % de 240 = 84",
+          "points": 6
+        },
+        {
+          "critere": "Coefficients 1,12 et 0,92",
+          "points": 6
+        },
+        {
+          "critere": "Nouveau prix 50,40 € obtenu avec le coefficient multiplicateur",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Proportion = 9/30 = **0,3**, soit **30 %**.\n2. 240 × 35/100 = **84**.\n3. Hausse de 12 % : 1 + 12/100 = **1,12**. Baisse de 8 % : 1 − 8/100 = **0,92**.\n4. On multiplie le prix de départ par le coefficient de la hausse : 45 × 1,12 = **50,40 €** (la hausse vaut 45 × 0,12 = 5,40 €)."
+    },
+    {
+      "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+      "difficulte": 2,
+      "titre": "Au lycée et en boutique",
+      "consigne": "Lis chaque situation, puis réponds en justifiant tes calculs.",
+      "enonce": "1. **Au lycée.** Un lycée compte 1 200 élèves. 30 % sont en seconde, et 45 % des élèves de seconde sont demi-pensionnaires.\n   a. Quelle proportion de l'ensemble des élèves du lycée est en seconde et demi-pensionnaire ? Donne-la en pourcentage.\n   b. Combien d'élèves cela représente-t-il ? Vérifie en passant par le nombre d'élèves de seconde.\n2. **En boutique.** Une veste coûte 80 €. Son prix augmente de 25 %, puis baisse de 20 %. Calcule le prix final et le coefficient global. Explique le résultat.\n3. **Au bac blanc.** Le taux de réussite passe de 80 % à 84 %. Donne l'évolution en points, puis en pourcentage.",
+      "bareme": [
+        {
+          "critere": "Proportion 0,3 × 0,45 = 0,135 soit 13,5 %, et 162 élèves vérifiés",
+          "points": 6
+        },
+        {
+          "critere": "Prix final 80 €, coefficient global 1,25 × 0,8 = 1, évolution réciproque expliquée",
+          "points": 7
+        },
+        {
+          "critere": "+4 points et +5 %, sans confondre les deux",
+          "points": 7
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n   a. Proportion de proportion : 0,30 × 0,45 = **0,135**, soit **13,5 %**.\n   b. 1 200 × 0,135 = **162 élèves**. Vérification : 1 200 × 0,30 = 360 élèves de seconde, et 360 × 0,45 = 162.\n2. 80 × 1,25 = 100 €, puis 100 × 0,80 = **80 €**. Coefficient global : 1,25 × 0,80 = **1** : on revient au prix de départ. Ce n'est pas le cas en général (une hausse de 20 % puis une baisse de 20 % donne 0,96) ; ici, la baisse de 20 % est exactement l'**évolution réciproque** d'une hausse de 25 %, car 1/1,25 = 0,80.\n3. En **points** : 84 − 80 = **+4 points**. En **pourcentage** : 84/80 = 1,05, soit **+5 %**. Les deux ne doivent pas être confondus."
+    },
+    {
+      "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+      "difficulte": 3,
+      "titre": "Démêler les chiffres d'un article",
+      "consigne": "Analyse chaque affirmation en justifiant par le calcul. Arrondis les pourcentages au centième.",
+      "enonce": "**Document.** Un journal local écrit :\n> « La population de notre ville, qui comptait 20 000 habitants, a augmenté de 10 % la première année, baissé de 5 % la deuxième, puis augmenté de 2 % la troisième. Au total, elle a donc augmenté de 7 %. Par ailleurs, le taux de chômage est passé de 7,5 % à 9 % : il a augmenté de 1,5 %. »\n\n1. Calcule le coefficient multiplicateur global sur les trois ans, puis le pourcentage d'évolution global.\n2. Calcule la population au bout des trois ans.\n3. Explique l'erreur de raisonnement du journal sur l'évolution de la population.\n4. Quelle évolution en pourcentage faudrait-il ensuite pour revenir à 20 000 habitants ? Justifie.\n5. Corrige la phrase sur le chômage en distinguant points et pourcentage.",
+      "bareme": [
+        {
+          "critere": "Coefficient global 1,1 × 0,95 × 1,02 = 1,0659, soit +6,59 %",
+          "points": 5
+        },
+        {
+          "critere": "Population finale 21 318 habitants",
+          "points": 3
+        },
+        {
+          "critere": "Erreur expliquée : on multiplie les coefficients, on n'additionne pas les pourcentages",
+          "points": 4
+        },
+        {
+          "critere": "Évolution réciproque : coefficient 1/1,0659 ≈ 0,9382, baisse d'environ 6,18 %",
+          "points": 4
+        },
+        {
+          "critere": "Chômage : +1,5 point mais +20 %",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Coefficient global : 1,10 × 0,95 × 1,02 = 1,045 × 1,02 = **1,0659**. Évolution globale : **+6,59 %**.\n2. 20 000 × 1,0659 = **21 318 habitants**.\n3. Le journal a **additionné les pourcentages** (10 − 5 + 2 = 7). Or des évolutions successives se composent en **multipliant les coefficients** : chaque pourcentage s'applique à une population qui a déjà changé. Le vrai résultat est +6,59 %, pas +7 %.\n4. Évolution réciproque : coefficient **1/1,0659 ≈ 0,9382**, soit une **baisse d'environ 6,18 %** (et non de 6,59 %). Vérification : 21 318 × 0,9382 ≈ 20 000.\n5. Le taux passe de 7,5 % à 9 % : c'est une hausse de **1,5 point**. En pourcentage, 9/7,5 = 1,2, soit une hausse de **20 %**. Dire « 1,5 % » confond points et pourcentage."
+    },
+    {
+      "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+      "difficulte": 1,
+      "titre": "Les notes de Jade",
+      "consigne": "Détaille chaque calcul.",
+      "enonce": "Voici les notes de Jade au premier trimestre : 8 ; 12 ; 15 ; 9 ; 12 ; 14 ; 7.\n\n1. Calcule la moyenne de ces notes.\n2. Range les notes dans l'ordre croissant, puis détermine la médiane.\n3. Calcule l'étendue de la série. Que mesure-t-elle ?",
+      "bareme": [
+        {
+          "critere": "Moyenne 77/7 = 11",
+          "points": 7
+        },
+        {
+          "critere": "Série ordonnée et médiane 12 (4e valeur sur 7)",
+          "points": 7
+        },
+        {
+          "critere": "Étendue 15 − 7 = 8, interprétée comme l'écart entre extrêmes",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Somme : 8 + 12 + 15 + 9 + 12 + 14 + 7 = 77. Moyenne : 77/7 = **11**.\n2. Série ordonnée : 7 ; 8 ; 9 ; 12 ; 12 ; 14 ; 15. Il y a 7 valeurs : la médiane est la 4e, **12** (3 notes en dessous, 3 au-dessus).\n3. Étendue : 15 − 7 = **8**. Elle mesure l'écart entre la plus grande et la plus petite note."
+    },
+    {
+      "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+      "difficulte": 2,
+      "titre": "Les salaires d'une petite entreprise",
+      "consigne": "Lis la situation, puis réponds en détaillant tes calculs.",
+      "enonce": "**Situation.** Les neuf salariés d'une entreprise touchent, en euros par mois :\n1 600 ; 1 700 ; 1 700 ; 1 800 ; 1 900 ; 2 000 ; 2 100 ; 2 200 ; 9 000 (le salaire du dirigeant).\n\nOn rappelle : Q1 est la plus petite valeur de la série ordonnée telle qu'au moins 25 % des valeurs lui soient inférieures ou égales ; Q3 est la plus petite valeur telle qu'au moins 75 % des valeurs lui soient inférieures ou égales.\n\n1. Calcule le salaire moyen (arrondi à l'euro) et le salaire médian.\n2. Détermine Q1, Q3 et l'écart interquartile.\n3. Le dirigeant annonce : « Chez nous, on gagne en moyenne plus de 2 600 € par mois. » Que penses-tu de cette présentation ? Quel indicateur de position est le plus représentatif ici, et pourquoi ?",
+      "bareme": [
+        {
+          "critere": "Moyenne ≈ 2 667 € (24 000 / 9) et médiane 1 900 €",
+          "points": 5
+        },
+        {
+          "critere": "Q1 = 1 700 €, Q3 = 2 100 €, écart interquartile 400 €",
+          "points": 6
+        },
+        {
+          "critere": "Critique : moyenne tirée vers le haut par une valeur extrême",
+          "points": 5
+        },
+        {
+          "critere": "Choix justifié de la médiane, insensible aux extrêmes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Somme : 1 600 + 1 700 + 1 700 + 1 800 + 1 900 + 2 000 + 2 100 + 2 200 = 15 000, plus 9 000 : 24 000. Moyenne : 24 000/9 ≈ **2 667 €**. La série est ordonnée, 9 valeurs : la médiane est la 5e, **1 900 €**.\n2. 25 % de 9 = 2,25 : Q1 est la 3e valeur, **1 700 €**. 75 % de 9 = 6,75 : Q3 est la 7e valeur, **2 100 €**. Écart interquartile : 2 100 − 1 700 = **400 €**.\n3. L'annonce est **exacte mais trompeuse** : huit salariés sur neuf gagnent 2 200 € ou moins. La moyenne est **tirée vers le haut** par le salaire du dirigeant (9 000 €), car elle est très sensible aux valeurs extrêmes. La **médiane** (1 900 €) est plus représentative : elle partage les salariés en deux moitiés et n'est pas influencée par la valeur extrême. C'est pour cela qu'on publie le salaire médian."
+    },
+    {
+      "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+      "difficulte": 3,
+      "titre": "Combien de livres par an ?",
+      "consigne": "Détaille chaque calcul et justifie tes interprétations.",
+      "enonce": "On a demandé aux 25 élèves d'une classe A combien de livres ils avaient lus pendant l'été.\n\n| Nombre de livres | 0 | 1 | 2 | 3 | 4 | 5 |\n| Effectif | 3 | 5 | 7 | 5 | 3 | 2 |\n\nOn rappelle : Q1 est la plus petite valeur de la série ordonnée telle qu'au moins 25 % des valeurs lui soient inférieures ou égales ; Q3, la plus petite telle qu'au moins 75 % des valeurs lui soient inférieures ou égales.\n\n1. Calcule la moyenne pondérée de la classe A.\n2. Détermine la médiane, Q1, Q3 et l'écart interquartile.\n3. Dans une classe B de 35 élèves, on trouve : moyenne 3,2 ; médiane 2 ; Q1 = 0 ; Q3 = 5. Compare la dispersion des deux classes.\n4. Hugo calcule la moyenne des 60 élèves des deux classes ainsi : (2,24 + 3,2)/2. Donne son résultat, explique pourquoi il est faux et calcule la vraie moyenne.",
+      "bareme": [
+        {
+          "critere": "Moyenne pondérée 56/25 = 2,24",
+          "points": 4
+        },
+        {
+          "critere": "Médiane 2, Q1 = 1, Q3 = 3 et écart interquartile 2 à l'aide des effectifs cumulés",
+          "points": 6
+        },
+        {
+          "critere": "Comparaison : écart interquartile 5 en B contre 2 en A, B plus dispersée",
+          "points": 4
+        },
+        {
+          "critere": "Moyenne de moyennes 2,72 fausse (effectifs différents) et vraie moyenne 168/60 = 2,8",
+          "points": 6
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Somme pondérée : 0 × 3 + 1 × 5 + 2 × 7 + 3 × 5 + 4 × 3 + 5 × 2 = 0 + 5 + 14 + 15 + 12 + 10 = 56. Moyenne : 56/25 = **2,24 livres**.\n2. Effectifs cumulés croissants : 3 ; 8 ; 15 ; 20 ; 23 ; 25.\n- Médiane : 25 valeurs, la 13e. 8 < 13 ≤ 15 : **médiane = 2**.\n- Q1 : 25 % de 25 = 6,25, donc la 7e valeur. 3 < 7 ≤ 8 : **Q1 = 1**.\n- Q3 : 75 % de 25 = 18,75, donc la 19e valeur. 15 < 19 ≤ 20 : **Q3 = 3**.\n- Écart interquartile : 3 − 1 = **2**.\n3. Les deux classes ont la même médiane (2), mais l'écart interquartile de B vaut 5 − 0 = **5**, contre **2** pour A : le cœur de la série B est beaucoup plus **dispersé** (des élèves qui ne lisent rien et d'autres qui lisent beaucoup). La moyenne ne suffit pas à décrire une série.\n4. Hugo obtient (2,24 + 3,2)/2 = **2,72**. C'est faux : une **moyenne de moyennes** ne tient pas compte des effectifs (25 et 35 élèves). Vraie moyenne : nombre total de livres (56 + 3,2 × 35 = 56 + 112 = 168) divisé par 60 élèves : 168/60 = **2,8 livres**."
+    },
+    {
+      "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+      "difficulte": 1,
+      "titre": "Un lancer de dé",
+      "consigne": "Justifie chaque probabilité.",
+      "enonce": "On lance un dé équilibré à six faces numérotées de 1 à 6.\n\n1. Décris l'univers Ω de cette expérience. Pourquoi est-on en situation d'équiprobabilité ?\n2. On note A l'événement « obtenir un multiple de 3 ». Écris A comme une partie de Ω et calcule P(A).\n3. On note B l'événement « obtenir au moins 2 ». Décris l'événement contraire de B, puis calcule P(B) en l'utilisant.",
+      "bareme": [
+        {
+          "critere": "Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6} et équiprobabilité justifiée par le dé équilibré",
+          "points": 5
+        },
+        {
+          "critere": "A = {3 ; 6} et P(A) = 2/6 = 1/3",
+          "points": 7
+        },
+        {
+          "critere": "Contraire de B = {1} et P(B) = 1 − 1/6 = 5/6",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6}**. Le dé est équilibré : chaque face a la même probabilité, 1/6 : c'est une situation d'**équiprobabilité**.\n2. **A = {3 ; 6}**. P(A) = issues favorables / issues possibles = 2/6 = **1/3**.\n3. Le contraire de B est « obtenir moins de 2 », soit **{1}**, de probabilité 1/6. Donc P(B) = 1 − 1/6 = **5/6**."
+    },
+    {
+      "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+      "difficulte": 2,
+      "titre": "Sport et lycéens",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque probabilité.",
+      "enonce": "**Situation.** On a interrogé 200 lycéens. 110 sont des filles. Parmi les filles, 66 pratiquent un sport en club ; parmi les garçons, 60 pratiquent un sport en club.\n\n1. Recopie et complète le tableau à double entrée :\n\n| | Sport | Pas de sport | Total |\n| Filles | | | |\n| Garçons | | | |\n| Total | | | 200 |\n\n2. On choisit un lycéen au hasard. On note F « c'est une fille » et S « il pratique un sport en club ». Calcule P(F), P(S) et P(F ∩ S).\n3. Calcule P(F ∪ S) à l'aide de la formule du cours, puis vérifie avec le tableau.",
+      "bareme": [
+        {
+          "critere": "Tableau complet et juste (44, 90, 30, 126, 74)",
+          "points": 4
+        },
+        {
+          "critere": "P(F) = 0,55 et P(S) = 0,63",
+          "points": 4
+        },
+        {
+          "critere": "P(F ∩ S) = 0,33 identifiée comme l'intersection",
+          "points": 6
+        },
+        {
+          "critere": "P(F ∪ S) = 0,85 par la formule, vérifiée par le tableau (170 / 200)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1.\n\n| | Sport | Pas de sport | Total |\n| Filles | 66 | 44 | 110 |\n| Garçons | 60 | 30 | 90 |\n| Total | 126 | 74 | 200 |\n\n2. Situation d'équiprobabilité (choix au hasard) : P(F) = 110/200 = **0,55** ; P(S) = 126/200 = **0,63** ; F ∩ S = « fille qui pratique un sport » : P(F ∩ S) = 66/200 = **0,33**.\n3. P(F ∪ S) = P(F) + P(S) − P(F ∩ S) = 0,55 + 0,63 − 0,33 = **0,85**. Vérification : F ∪ S regroupe les 110 filles et les 60 garçons sportifs, soit 170 lycéens, et 170/200 = 0,85. La soustraction évite de compter deux fois les 66 filles sportives."
+    },
+    {
+      "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+      "difficulte": 3,
+      "titre": "Deux tirages dans une urne",
+      "consigne": "Construis un arbre de probabilités et justifie chaque calcul.",
+      "enonce": "**Situation.** Une urne contient 3 boules rouges (R) et 2 boules bleues (B), indiscernables au toucher. On tire une boule, on note sa couleur, on la **remet** dans l'urne, puis on tire une seconde boule.\n\n1. Construis l'arbre de probabilités de cette expérience.\n2. Calcule la probabilité d'obtenir deux boules rouges, puis celle d'obtenir deux boules de la même couleur.\n3. Calcule la probabilité d'obtenir au moins une boule bleue, en utilisant l'événement contraire.\n4. Calcule la probabilité d'obtenir exactement une boule rouge. Vérifie la cohérence de tes résultats en additionnant les probabilités d'événements qui couvrent tous les cas.",
+      "bareme": [
+        {
+          "critere": "Arbre complet avec les probabilités 3/5 et 2/5 à chaque tirage",
+          "points": 4
+        },
+        {
+          "critere": "P(RR) = 9/25 et P(même couleur) = 13/25",
+          "points": 6
+        },
+        {
+          "critere": "P(au moins une bleue) = 1 − 9/25 = 16/25 par l'événement contraire",
+          "points": 5
+        },
+        {
+          "critere": "P(exactement une rouge) = 12/25 et vérification 13/25 + 12/25 = 1",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Premier tirage : R avec probabilité 3/5, B avec probabilité 2/5. La boule est remise : au second tirage, depuis chaque branche, R avec 3/5 et B avec 2/5. Quatre chemins : RR, RB, BR, BB.\n2. On multiplie le long d'un chemin : P(RR) = 3/5 × 3/5 = **9/25**. P(BB) = 2/5 × 2/5 = 4/25. Même couleur = RR ou BB (chemins incompatibles, on additionne) : 9/25 + 4/25 = **13/25**.\n3. Le contraire de « au moins une bleue » est « aucune bleue », c'est-à-dire RR. P = 1 − 9/25 = **16/25**.\n4. Exactement une rouge : RB ou BR. P(RB) = 3/5 × 2/5 = 6/25, P(BR) = 2/5 × 3/5 = 6/25 ; total **12/25**. Vérification : « même couleur » et « exactement une rouge » couvrent tous les cas sans se chevaucher : 13/25 + 12/25 = 25/25 = 1. De même, P(au moins une bleue) = P(RB) + P(BR) + P(BB) = 6/25 + 6/25 + 4/25 = 16/25, ce qui confirme la question 3."
+    },
+    {
+      "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+      "difficulte": 1,
+      "titre": "L'intervalle de fluctuation",
+      "consigne": "Réponds en justifiant chaque calcul.",
+      "enonce": "1. Qu'appelle-t-on fluctuation d'échantillonnage ? Est-ce une erreur de mesure ?\n2. Dans une grande population, la proportion d'un caractère vaut p = 0,3. On prélève des échantillons de taille n = 400. Calcule l'intervalle de fluctuation au seuil de 95 %.\n3. Un échantillon de 400 personnes donne une fréquence observée f = 0,28. Ce résultat est-il compatible avec p = 0,3 ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Définition : variation de la fréquence observée d'un échantillon à l'autre, inhérente au tirage",
+          "points": 6
+        },
+        {
+          "critere": "Intervalle [0,25 ; 0,35] avec 1/√400 = 0,05",
+          "points": 8
+        },
+        {
+          "critere": "0,28 dans l'intervalle : résultat compatible, pas de rejet",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **fluctuation d'échantillonnage** est la variation de la fréquence observée d'un échantillon à l'autre, pour des échantillons de même taille. Ce n'est **pas une erreur de mesure** : elle est inhérente au tirage au hasard.\n2. 1/√400 = 1/20 = 0,05. Intervalle : [0,3 − 0,05 ; 0,3 + 0,05] = **[0,25 ; 0,35]**.\n3. 0,28 appartient à [0,25 ; 0,35] : le résultat est **compatible** avec p = 0,3, on ne rejette pas cette valeur au seuil de 95 %."
+    },
+    {
+      "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+      "difficulte": 2,
+      "titre": "La pièce est-elle truquée ?",
+      "consigne": "Lis la situation, puis réponds en justifiant chaque conclusion.",
+      "enonce": "**Situation.** Yanis veut savoir si sa pièce est équilibrée, c'est-à-dire si la probabilité d'obtenir « pile » vaut p = 0,5.\n\n1. Il lance la pièce 100 fois et obtient 62 fois « pile ». Calcule la fréquence observée et l'intervalle de fluctuation au seuil de 95 %. Que peut-il conclure ?\n2. Son amie Salomé lance une autre pièce 2 500 fois et obtient 1 290 fois « pile ». Même question.\n3. Salomé en déduit : « Ma pièce est donc parfaitement équilibrée. » Qu'en penses-tu ?\n4. Par combien a été divisée la demi-largeur de l'intervalle en passant de 100 à 2 500 lancers ? Relie ce résultat à la racine de n.",
+      "bareme": [
+        {
+          "critere": "f = 0,62 hors de [0,4 ; 0,6] : hypothèse rejetée au seuil de 95 %",
+          "points": 5
+        },
+        {
+          "critere": "f = 0,516 dans [0,48 ; 0,52] : hypothèse non rejetée",
+          "points": 5
+        },
+        {
+          "critere": "Ne pas rejeter n'est pas démontrer",
+          "points": 5
+        },
+        {
+          "critere": "Demi-largeur divisée par 5 (0,1 à 0,02) car n est multiplié par 25 et √25 = 5",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. f = 62/100 = **0,62**. 1/√100 = 0,1 : intervalle [0,5 − 0,1 ; 0,5 + 0,1] = **[0,4 ; 0,6]**. 0,62 est **hors** de l'intervalle : on **rejette** l'hypothèse « la pièce est équilibrée », au seuil de 95 %.\n2. f = 1 290/2 500 = **0,516**. 1/√2 500 = 1/50 = 0,02 : intervalle **[0,48 ; 0,52]**. 0,516 est **dans** l'intervalle : on **ne rejette pas** l'hypothèse.\n3. Salomé va trop loin : ne pas rejeter l'hypothèse **n'est pas la démontrer**. Le résultat est seulement compatible avec p = 0,5 ; une pièce très légèrement déséquilibrée pourrait donner le même résultat.\n4. La demi-largeur passe de 0,1 à 0,02 : elle est **divisée par 5**. n a été multiplié par 25, et la précision dépend de la **racine** de n : √25 = 5."
+    },
+    {
+      "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+      "difficulte": 3,
+      "titre": "Clients satisfaits : vérifier une affirmation",
+      "consigne": "Analyse la situation en justifiant chaque conclusion par le cours.",
+      "enonce": "**Situation.** Une entreprise de livraison affirme sur son site : « 80 % de nos clients sont satisfaits. » Une association de consommateurs interroge au hasard 400 clients : 296 se déclarent satisfaits.\n\n1. Calcule l'intervalle de fluctuation au seuil de 95 % associé à p = 0,8 et n = 400.\n2. Calcule la fréquence observée. Que peut conclure l'association ? Justifie.\n3. Si 312 clients s'étaient déclarés satisfaits, qu'aurait-on pu conclure ? L'affirmation de l'entreprise serait-elle alors démontrée ?\n4. L'association veut un intervalle de demi-largeur 0,025. Quelle taille d'échantillon doit-elle choisir ? Justifie.\n5. L'entreprise répond : « Sur notre page, 10 000 clients ont cliqué sur “satisfait” ou “pas satisfait”, et 85 % ont cliqué sur “satisfait”. Notre échantillon est 25 fois plus grand, il est donc plus fiable. » Critique cet argument.",
+      "bareme": [
+        {
+          "critere": "Intervalle [0,75 ; 0,85] avec 1/√400 = 0,05",
+          "points": 4
+        },
+        {
+          "critere": "f = 0,74 hors de l'intervalle : affirmation rejetée au seuil de 95 %",
+          "points": 5
+        },
+        {
+          "critere": "f = 0,78 dans l'intervalle : pas de rejet, mais pas de démonstration",
+          "points": 3
+        },
+        {
+          "critere": "n = 1 600 (1/√n = 0,025, soit n multiplié par 4)",
+          "points": 4
+        },
+        {
+          "critere": "Biais de recrutement (réponses volontaires) que la taille ne corrige pas",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. 1/√400 = 0,05 : intervalle [0,8 − 0,05 ; 0,8 + 0,05] = **[0,75 ; 0,85]**.\n2. f = 296/400 = **0,74**. 0,74 est **hors** de l'intervalle (0,74 < 0,75) : l'association peut **rejeter** l'affirmation « 80 % de clients satisfaits », au seuil de 95 %.\n3. f = 312/400 = 0,78, qui est **dans** l'intervalle : on n'aurait **pas rejeté** l'affirmation. Mais ne pas rejeter **n'est pas démontrer** : le résultat serait seulement compatible avec 80 %.\n4. Il faut 1/√n = 0,025, soit √n = 40, donc **n = 1 600**. On retrouve la règle : pour diviser l'incertitude par deux (de 0,05 à 0,025), il faut multiplier la taille par quatre (400 × 4).\n5. L'argument ne tient pas. Un échantillon est le résultat de tirages **indépendants au hasard** ; ici, ce sont des clients qui ont **choisi** de répondre sur la page de l'entreprise : l'échantillon est **mal recruté** (biais de recrutement). Un tel biais **ne se corrige pas par la taille** : 10 000 réponses volontaires restent biaisées, alors que 400 clients tirés au hasard donnent une information fiable, à la fluctuation près."
+    }
+  ]
+}

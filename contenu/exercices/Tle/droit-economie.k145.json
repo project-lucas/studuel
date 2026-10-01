@@ -1,0 +1,2577 @@
+{
+ "niveau": "Tle",
+ "matiere": "droit-economie",
+ "exercices": [
+  {
+   "chapitre": "07df3dc6-904b-51d9-8ca8-879437ce0777",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois associés, une camionnette",
+   "competence": "lire-tableau",
+   "situation": "Nour, Hugo et Lila créent une SAS pour livrer des repas à vélo et en camionnette. Chacun apporte quelque chose : le tableau récapitule leurs apports.",
+   "documents": [
+    {
+     "id": "apports",
+     "type": "tableau",
+     "titre": "Les apports des trois associés de la SAS « Vélo Vert »",
+     "source": "Société et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Associé",
+      "Apport",
+      "Valeur (€)"
+     ],
+     "lignes": [
+      [
+       "Nour",
+       "De l’argent",
+       12000
+      ],
+      [
+       "Hugo",
+       "Une camionnette de livraison",
+       8000
+      ],
+      [
+       "Lila",
+       "De l’argent",
+       20000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "apports",
+     "enonce": "Touche la case qui décrit l’apport en nature.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Un apport en nature n’est pas de l’argent : c’est un bien.",
+     "explication": "La **camionnette** est un apport en nature : un bien apporté à la société, et non une somme d’argent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le capital de la SAS, en euros ?",
+     "reponse": 40000,
+     "unite": "€",
+     "aide": "Additionne les valeurs des trois apports.",
+     "explication": "12 000 + 8 000 + 20 000 = **40 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La SAS réalise 10 000 € de bénéfice, partagés au prorata des apports. Combien Hugo reçoit-il ?",
+     "reponse": 2000,
+     "unite": "€",
+     "aide": "Calcule d’abord la part d’Hugo dans le capital : 8 000 sur 40 000.",
+     "explication": "Hugo détient 8 000 ÷ 40 000 = 20 % du capital, donc 20 % × 10 000 = **2 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07df3dc6-904b-51d9-8ca8-879437ce0777",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un prêt ou une société ?",
+   "competence": "argumenter",
+   "situation": "Léa veut lancer une pizzeria ambulante. Malik propose de l’aider, mais à ses conditions. Est-ce vraiment un contrat de société ?",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message de Malik",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Je lance ma pizzeria ambulante. Tu veux entrer dans l’affaire ?"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Je te verse 5 000 € pour développer ton camion, mais je ne veux pas m’en occuper."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Et si l’affaire perd de l’argent ?"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Tu me [[r|rembourses]] quand même mes 5 000 € : je ne veux rien perdre."
+      }
+     ]
+    },
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Les trois éléments du contrat de société",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Élément",
+      "Question à se poser"
+     ],
+     "lignes": [
+      [
+       "Les apports",
+       "Chaque associé met-il quelque chose dans l’entreprise ?"
+      ],
+      [
+       "L’affectio societatis",
+       "Les associés veulent-ils collaborer à l’entreprise commune, sur un pied d’égalité ?"
+      ],
+      [
+       "Le partage des résultats",
+       "Les associés partagent-ils les bénéfices et supportent-ils les pertes ?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui montre que Malik refuse de contribuer aux pertes.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche ce que Malik exige quoi qu’il arrive.",
+     "explication": "Malik exige d’être **remboursé** quoi qu’il arrive : il refuse donc de supporter les pertes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase de Malik à l’élément du contrat de société qui la concerne.",
+     "paires": [
+      [
+       "« Je te verse 5 000 € pour ton camion »",
+       "Il y a bien un apport"
+      ],
+      [
+       "« Je ne veux pas m’en occuper »",
+       "Pas d’affectio societatis"
+      ],
+      [
+       "« Tu me rembourses quand même »",
+       "Pas de contribution aux pertes"
+      ]
+     ],
+     "aide": "Reprends les trois questions du tableau, une par une.",
+     "explication": "Malik apporte de l’argent, mais il refuse de collaborer (**pas d’affectio societatis**) et de supporter les pertes : il manque deux éléments sur trois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la bonne qualification de l’accord proposé par Malik ?",
+     "options": [
+      "Ce n’est pas une société : il manque l’affectio societatis et le partage des pertes",
+      "C’est une société : un apport d’argent suffit à lui seul à former le contrat",
+      "C’est une société : une clause de remboursement garanti est tout à fait permise",
+      "Ce n’est pas une société : un apport en argent est interdit par le Code civil"
+     ],
+     "reponse": 0,
+     "aide": "Compte les éléments du tableau que l’accord respecte.",
+     "explication": "Sans affectio societatis ni contribution aux pertes, ce n’est **pas un contrat de société** : c’est plutôt un prêt."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Imaginons une vraie société : Malik apporte 5 000 €, Léa son camion estimé à 15 000 €. Pour 8 000 € de bénéfice, combien revient à Malik ?",
+     "reponse": 2000,
+     "unite": "€",
+     "aide": "Malik détient 5 000 sur 20 000 du capital.",
+     "explication": "Malik détient 5 000 ÷ 20 000 = 25 % du capital, donc 25 % × 8 000 = **2 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07df3dc6-904b-51d9-8ca8-879437ce0777",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une SARL en liquidation",
+   "competence": "analyser-document",
+   "situation": "La SARL « Ciné Plein Air » ferme après deux étés de pluie. Ses deux associés vont-ils devoir payer toutes les dettes ? Le bilan et le capital disent ce qui se passe.",
+   "documents": [
+    {
+     "id": "capital",
+     "type": "tableau",
+     "titre": "Le capital de la SARL",
+     "source": "Société et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Associé",
+      "Apport (€)",
+      "Part du capital"
+     ],
+     "lignes": [
+      [
+       "Sonia",
+       30000,
+       "60 %"
+      ],
+      [
+       "Karim",
+       20000,
+       "40 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "bilan",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le bilan de la liquidation",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les biens de la SARL, vendus aux enchères, rapportent 35 000 €, alors que ses dettes atteignent 90 000 €. Pour obtenir un prêt, Karim s’était porté [[c|caution]] personnelle de la banque à hauteur de 20 000 €. Sonia, elle, n’a signé aucune garantie personnelle."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme de dettes les biens vendus ne couvrent-ils pas, en euros ?",
+     "reponse": 55000,
+     "unite": "€",
+     "aide": "Soustrais les 35 000 € des 90 000 € de dettes.",
+     "explication": "90 000 − 35 000 = **55 000 €** de dettes restent impayées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peuvent saisir les créanciers sur les biens personnels de Sonia ?",
+     "options": [
+      "Rien : sa responsabilité est limitée à son apport, déjà engagé dans la société",
+      "Tout ce qu’elle possède, jusqu’au remboursement complet des 55 000 €",
+      "Sa part des dettes, soit 60 % de 55 000 €, en plus de son apport",
+      "La moitié des dettes restantes, par parts égales entre les deux associés"
+     ],
+     "reponse": 0,
+     "aide": "Dans une SARL, jusqu’où va la responsabilité d’un associé ?",
+     "explication": "Dans une SARL, la responsabilité est **limitée aux apports** : sans garantie personnelle, Sonia a déjà perdu son apport et rien de plus."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le mot qui désigne l’engagement personnel pris par Karim.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce que Karim a fait pour que la banque prête.",
+     "explication": "Karim s’est porté **caution** : il s’est engagé personnellement, en plus de son apport."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme Karim peut-il perdre au maximum, apport et caution compris, en euros ?",
+     "reponse": 40000,
+     "unite": "€",
+     "aide": "Additionne ce qu’il a apporté et ce qu’il a garanti.",
+     "explication": "Son apport (20 000 €) est perdu, et sa caution l’oblige à payer jusqu’à 20 000 € de plus : **40 000 €**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque associé selon ce qu’il risque.",
+     "categories": [
+      "Risque limité à l’apport",
+      "Risque au-delà de l’apport"
+     ],
+     "items": [
+      [
+       "Sonia, sans garantie personnelle",
+       0
+      ],
+      [
+       "Karim, qui a donné sa caution",
+       1
+      ],
+      [
+       "Un dirigeant dont la faute de gestion a aggravé la faillite",
+       1
+      ],
+      [
+       "Un associé de SAS qui n’a rien signé d’autre que les statuts",
+       0
+      ],
+      [
+       "Un associé qui a garanti lui-même une dette de la société",
+       1
+      ]
+     ],
+     "aide": "Seules les garanties personnelles et les fautes de gestion dépassent l’apport.",
+     "explication": "La responsabilité limitée protège l’associé **sauf** garantie personnelle ou faute de gestion."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a539fe0-ef33-56f6-bf40-94c68b6a7fe1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une rue, quatre commerçants",
+   "competence": "analyser-document",
+   "situation": "Dans la rue du Marché, quatre commerçants se disputent les mêmes clients. Tous les moyens sont-ils permis ? Le tableau décrit ce que chacun fait.",
+   "documents": [
+    {
+     "id": "rue",
+     "type": "tableau",
+     "titre": "Quatre commerçants (imaginaires)",
+     "source": "Situations écrites pour l’exercice.",
+     "colonnes": [
+      "Commerçant",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Maya, fleuriste",
+       "Baisse ses prix de 10 % pour attirer les clients de la boutique voisine"
+      ],
+      [
+       "Théo, libraire",
+       "Répète à ses clients, à tort, que les livres du voisin sont de la contrefaçon"
+      ],
+      [
+       "Inès, boulangère",
+       "Reprend presque à l’identique le nom et le logo de la boulangerie d’en face"
+      ],
+      [
+       "Paul, coiffeur",
+       "Embauche en un mois tous les salariés du salon voisin et copie son fichier clients"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rue",
+     "enonce": "Touche ce que fait le commerçant dont la pratique est loyale.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Attirer des clients est permis quand les moyens sont honnêtes.",
+     "explication": "Baisser ses prix est un moyen **loyal** d’attirer la clientèle : c’est le jeu normal de la concurrence."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque commerçant à la pratique déloyale qu’il commet.",
+     "paires": [
+      [
+       "Théo, libraire",
+       "Dénigrement"
+      ],
+      [
+       "Inès, boulangère",
+       "Confusion"
+      ],
+      [
+       "Paul, coiffeur",
+       "Désorganisation"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait : critiquer, imiter, débaucher.",
+     "explication": "Théo **dénigre**, Inès crée une **confusion** avec le nom et le logo, Paul **désorganise** l’entreprise voisine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maya peut-elle être poursuivie pour concurrence déloyale ?",
+     "options": [
+      "Non : attirer la clientèle d’un concurrent par des prix plus bas est licite",
+      "Oui : toute baisse de prix qui vise la clientèle d’un concurrent est interdite",
+      "Oui : un commerçant doit prévenir son voisin avant de changer ses tarifs",
+      "Non : mais seulement si elle baisse ses prix de moins de cinq pour cent"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première ligne du tableau : que critique-t-on chez Maya ?",
+     "explication": "Attirer la clientèle d’un concurrent est **licite** ; seuls les moyens déloyaux sont sanctionnés."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a539fe0-ef33-56f6-bf40-94c68b6a7fe1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les mécaniciens partis chez le voisin",
+   "competence": "analyser-texte",
+   "situation": "Le garage Mécano-Plus vient de perdre presque toute son équipe, et une bonne partie de ses clients. Son gérant veut agir en justice : a-t-il une chance de gagner ?",
+   "documents": [
+    {
+     "id": "garage",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mars, dans la vallée",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Depuis quinze ans, le garage Mécano-Plus répare les voitures de la vallée avec cinq mécaniciens. En mars, le garage concurrent Auto-Rapide propose des salaires plus élevés à quatre d’entre eux. Ils démissionnent le même mois et emportent le [[f|fichier]] des clients de Mécano-Plus, qu’ils utilisent pour démarcher ces clients.",
+      "Pendant les deux mois suivants, Mécano-Plus perd 30 % de son chiffre d’affaires mensuel, qui était de 25 000 €. Son gérant saisit le tribunal."
+     ]
+    },
+    {
+     "id": "cond",
+     "type": "tableau",
+     "titre": "Les trois conditions de l’action en concurrence déloyale",
+     "source": "Résumé du cours (art. 1240 du Code civil).",
+     "colonnes": [
+      "Condition",
+      "Ce qu’il faut prouver"
+     ],
+     "lignes": [
+      [
+       "Faute",
+       "Un acte déloyal du concurrent"
+      ],
+      [
+       "Préjudice",
+       "Un dommage subi par la victime"
+      ],
+      [
+       "Lien de causalité",
+       "Le dommage vient bien de cet acte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Débaucher massivement le personnel clé et détourner un fichier clients constitue…",
+     "options": [
+      "Une désorganisation de l’entreprise concurrente",
+      "Un dénigrement de l’entreprise concurrente",
+      "Une confusion avec l’entreprise concurrente",
+      "Une entente avec l’entreprise concurrente"
+     ],
+     "reponse": 0,
+     "aide": "Ici, on désorganise le fonctionnement de l’entreprise concurrente.",
+     "explication": "Débaucher le personnel clé et détourner un fichier clients, c’est une **désorganisation**."
+    },
+    {
+     "type": "zone",
+     "document": "garage",
+     "enonce": "Touche ce que les mécaniciens ont emporté avec eux.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cherche ce que les mécaniciens utilisent pour démarcher les clients.",
+     "explication": "Ils ont emporté le **fichier** des clients, un outil de travail qui n’était pas à eux."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque condition de l’action aux faits de l’affaire.",
+     "paires": [
+      [
+       "Faute",
+       "Quatre mécaniciens débauchés et le fichier clients détourné"
+      ],
+      [
+       "Préjudice",
+       "Perte de 30 % du chiffre d’affaires mensuel"
+      ],
+      [
+       "Lien de causalité",
+       "Les clients perdus sont ceux démarchés avec le fichier"
+      ]
+     ],
+     "aide": "Faute : ce qui est fait ; préjudice : ce qui est perdu ; lien : pourquoi les deux se suivent.",
+     "explication": "Les trois conditions sont réunies : la **faute**, le **préjudice** chiffré et le **lien de causalité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel chiffre d’affaires Mécano-Plus a-t-il perdu sur les deux mois, en euros ?",
+     "reponse": 15000,
+     "unite": "€",
+     "aide": "Calcule 30 % de 25 000 €, puis multiplie par deux mois.",
+     "explication": "30 % × 25 000 = 7 500 € par mois, donc 2 × 7 500 = **15 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a539fe0-ef33-56f6-bf40-94c68b6a7fe1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Entente, dominance ou franchise ?",
+   "competence": "raisonner",
+   "situation": "Un juriste examine quatre situations d’un même secteur : lesquelles sont permises, lesquelles sont sanctionnées ? Le contrat de franchise du cas D donne aussi de quoi calculer.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre situations de marché (imaginaires)",
+     "source": "Situations écrites pour l’exercice.",
+     "colonnes": [
+      "Cas",
+      "Les faits"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Trois fabricants de ciment d’une région se réunissent en secret et fixent ensemble un prix minimum"
+      ],
+      [
+       "B",
+       "Un fabricant détient 70 % du marché et garde son avance par des prix bas et une meilleure qualité"
+      ],
+      [
+       "C",
+       "Ce même fabricant refuse sans raison de vendre à un petit distributeur pour le faire disparaître"
+      ],
+      [
+       "D",
+       "Un franchiseur autorise un commerçant indépendant à utiliser sa marque contre des redevances"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "franch",
+     "type": "tableau",
+     "titre": "Extrait du contrat de franchise du cas D",
+     "source": "Clauses imaginées pour l’exercice.",
+     "colonnes": [
+      "Clause",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Droit d’entrée",
+       "20 000 €, payé à la signature"
+      ],
+      [
+       "Redevance",
+       "5 % du chiffre d’affaires annuel du franchisé"
+      ],
+      [
+       "Assistance",
+       "Formation et suivi fournis par le franchiseur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque cas selon qu’il est permis ou sanctionné.",
+     "categories": [
+      "Pratique licite",
+      "Pratique illicite"
+     ],
+     "items": [
+      [
+       "Cas A : fixer ensemble un prix minimum",
+       1
+      ],
+      [
+       "Cas B : être dominant grâce à de bons prix",
+       0
+      ],
+      [
+       "Cas C : refuser de vendre pour éliminer un distributeur",
+       1
+      ],
+      [
+       "Cas D : franchiser sa marque contre redevances",
+       0
+      ]
+     ],
+     "aide": "Être dominant est permis ; abuser de sa position ne l’est pas.",
+     "explication": "L’**entente** (A) et l’**abus** (C) sont sanctionnés ; la position dominante seule (B) et la franchise (D) sont licites."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche ce que font les fabricants qui forment une entente illicite.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche des entreprises qui s’accordent entre elles sur les prix.",
+     "explication": "Fixer ensemble un prix minimum est une **entente illicite** : les concurrents faussent le marché."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le franchisé du cas D réalise 240 000 € de chiffre d’affaires dans l’année. Quelle redevance annuelle doit-il verser, en euros ?",
+     "reponse": 12000,
+     "unite": "€",
+     "aide": "La redevance est un pourcentage du chiffre d’affaires.",
+     "explication": "5 % × 240 000 = **12 000 €** par an, en plus du droit d’entrée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le fabricant du cas C appartient à un groupe dont le chiffre d’affaires mondial atteint 3 milliards d’euros. Quelle amende maximale peut-il encourir, en millions d’euros ?",
+     "reponse": 300,
+     "unite": "M€",
+     "aide": "Le plafond est de 10 % du chiffre d’affaires mondial.",
+     "explication": "10 % de 3 000 millions = **300 millions d’euros** au plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il retenir du cas B ?",
+     "options": [
+      "Être dominant n’est pas interdit : seul l’abus de cette position l’est",
+      "Toute entreprise qui dépasse la moitié du marché est automatiquement sanctionnée",
+      "Une position dominante est interdite dès qu’elle dure plus de deux années",
+      "Des prix bas pratiqués par une entreprise dominante sont toujours prédateurs"
+     ],
+     "reponse": 0,
+     "aide": "Compare les cas B et C : qu’est-ce qui change ?",
+     "explication": "Le cas B est **licite** : le fabricant domine par ses prix et sa qualité. C’est l’**abus** (cas C) qui est sanctionné."
+    }
+   ]
+  },
+  {
+   "chapitre": "caf86144-188c-5e53-a874-0a1600fee4f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le budget d’un pays imaginaire",
+   "competence": "lire-graphique",
+   "situation": "Le ministre des Finances d’un pays imaginaire présente le budget de l’année. Le pays compte un PIB de 2 400 milliards d’euros. Le graphique compare ses recettes et ses dépenses.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Recettes et dépenses publiques",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Recettes",
+      "Dépenses"
+     ],
+     "series": [
+      {
+       "nom": "Budget",
+       "valeurs": [
+        900,
+        960
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Montant",
+      "unite": "en Md€",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Poste"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche la barre la plus haute.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare la hauteur des deux barres.",
+     "explication": "Les **dépenses** (960 Md€) dépassent les recettes (900 Md€)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de milliards d’euros le déficit public s’élève-t-il ?",
+     "reponse": 60,
+     "unite": "Md€",
+     "aide": "Soustrais les recettes des dépenses.",
+     "explication": "960 − 900 = **60 Md€** de déficit (le solde est de − 60 Md€)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le déficit en pourcentage du PIB ?",
+     "reponse": 2.5,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Divise le déficit par le PIB, puis multiplie par 100.",
+     "explication": "60 ÷ 2 400 × 100 = **2,5 %** du PIB."
+    }
+   ]
+  },
+  {
+   "chapitre": "caf86144-188c-5e53-a874-0a1600fee4f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une papeterie au bord de la rivière",
+   "competence": "modeliser",
+   "situation": "Une papeterie produit 1 000 tonnes de papier par an et rejette des produits dans la rivière. Les pêcheurs en subissent les conséquences, sans être payés pour cela.",
+   "documents": [
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Les coûts par tonne de papier (imaginaires)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Par tonne produite",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Coût de production payé par l’usine",
+       50
+      ],
+      [
+       "Dommage subi par les pêcheurs et les riverains",
+       30
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "sit",
+     "type": "tableau",
+     "titre": "Trois situations économiques",
+     "source": "Situations écrites pour l’exercice.",
+     "colonnes": [
+      "Situation",
+      "Effet sur les autres"
+     ],
+     "lignes": [
+      [
+       "Une papeterie rejette des produits dans la rivière",
+       "Les pêcheurs perdent une partie de leurs prises"
+      ],
+      [
+       "Un laboratoire public découvre un vaccin",
+       "Toute la population en profite sans payer"
+      ],
+      [
+       "Une usine fonctionne toute la nuit",
+       "Les voisins ne dorment plus"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total du dommage subi chaque année par les pêcheurs et les riverains, en euros ?",
+     "reponse": 30000,
+     "unite": "€",
+     "aide": "Multiplie le dommage par tonne par la production annuelle.",
+     "explication": "30 € × 1 000 tonnes = **30 000 €** de dommage, que personne ne compense."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût réel d’une tonne de papier pour la société, en euros ?",
+     "reponse": 80,
+     "unite": "€",
+     "aide": "Additionne ce que paie l’usine et ce que subissent les autres.",
+     "explication": "50 + 30 = **80 €** : l’usine ne paie que 50 €, c’est une externalité négative."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure oblige l’usine à tenir compte du dommage qu’elle cause ?",
+     "options": [
+      "Une taxe de 30 € par tonne produite, égale au dommage",
+      "Une subvention de 30 € par tonne produite, pour aider l’usine",
+      "Un assouplissement des normes de rejet pour réduire ses coûts",
+      "Une interdiction pour les pêcheurs de se plaindre du dommage"
+     ],
+     "reponse": 0,
+     "aide": "Il faut que l’usine paie le dommage, pas qu’elle en soit aidée.",
+     "explication": "Une **taxe** égale au dommage fait payer à l’usine le coût qu’elle faisait supporter aux autres."
+    },
+    {
+     "type": "zone",
+     "document": "sit",
+     "enonce": "Touche la situation qu’il faudrait plutôt subventionner.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche l’effet positif dont tout le monde profite.",
+     "explication": "Le **vaccin** est une externalité positive : on la subventionne pour qu’elle soit produite en quantité suffisante."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation selon le type d’externalité.",
+     "categories": [
+      "Externalité négative",
+      "Externalité positive"
+     ],
+     "items": [
+      [
+       "Le bruit d’une discothèque pour les voisins",
+       0
+      ],
+      [
+       "Les travaux de recherche d’un laboratoire public",
+       1
+      ],
+      [
+       "Les fumées d’une cimenterie sur un village",
+       0
+      ],
+      [
+       "Les vaccinations qui protègent aussi les non-vaccinés",
+       1
+      ]
+     ],
+     "aide": "Un effet qui nuit sans compensation est négatif ; un effet qui profite aux autres est positif.",
+     "explication": "La pollution et le bruit sont des externalités **négatives** ; la recherche et la vaccination des externalités **positives**."
+    }
+   ]
+  },
+  {
+   "chapitre": "caf86144-188c-5e53-a874-0a1600fee4f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le banc de thons sans règle",
+   "competence": "argumenter",
+   "situation": "Dans une mer imaginaire, le même bien semble appartenir à tout le monde. Deux documents montrent pourquoi ce n’est pas une bonne nouvelle.",
+   "documents": [
+    {
+     "id": "biens",
+     "type": "tableau",
+     "titre": "Quatre biens, deux questions",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Bien",
+      "Rival ?",
+      "Exclusif ?"
+     ],
+     "lignes": [
+      [
+       "Éclairage public",
+       "Non",
+       "Non"
+      ],
+      [
+       "Poissons de l’océan",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Place de cinéma",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Défense nationale",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "thons",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le banc de thons",
+     "source": "Texte et chiffres imaginés pour l’exercice",
+     "blocs": [
+      "Dans une mer imaginaire, un banc de thons compte 10 000 tonnes. Chaque année, il se reconstitue de 1 500 tonnes, mais les pêcheurs en prélèvent 2 500 tonnes, sans aucune règle. Personne ne peut leur interdire l’accès à la mer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "biens",
+     "enonce": "Touche le bien qui est rival mais non exclusif.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Rival : ce que l’un consomme n’est plus disponible pour l’autre. Non exclusif : on ne peut empêcher personne d’y accéder.",
+     "explication": "Les **poissons de l’océan** sont rivaux (chaque poisson pêché est perdu pour les autres) mais non exclusifs : c’est un bien commun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de tonnes le stock de thons diminue-t-il chaque année ?",
+     "reponse": 1000,
+     "unite": "t",
+     "aide": "Compare ce qui est pêché à ce qui se reconstitue.",
+     "explication": "2 500 − 1 500 = **1 000 tonnes** de moins chaque année."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si rien ne change, quel sera le stock de thons après 5 ans, en tonnes ?",
+     "reponse": 5000,
+     "unite": "t",
+     "aide": "Retire cinq fois la baisse annuelle du stock de départ.",
+     "explication": "10 000 − 5 × 1 000 = **5 000 tonnes** : le banc est divisé par deux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse publique convient à ce bien commun ?",
+     "options": [
+      "Des quotas de pêche limitant les prélèvements à 1 500 tonnes par an",
+      "Une subvention versée aux pêcheurs pour qu’ils pêchent davantage",
+      "Aucune mesure : la pêche libre protège toujours les ressources",
+      "Une taxe visant à réduire la reconstitution naturelle du banc"
+     ],
+     "reponse": 0,
+     "aide": "Que faut-il limiter pour que le stock cesse de baisser ?",
+     "explication": "Les **quotas** limitent les prélèvements à ce que le banc peut reconstituer : 1 500 tonnes par an."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque bien selon sa nature.",
+     "categories": [
+      "Bien public",
+      "Bien commun",
+      "Bien privé"
+     ],
+     "items": [
+      [
+       "L’éclairage d’une rue",
+       0
+      ],
+      [
+       "Les thons d’une mer sans règle",
+       1
+      ],
+      [
+       "Une place de cinéma",
+       2
+      ],
+      [
+       "La défense nationale",
+       0
+      ],
+      [
+       "L’eau d’une nappe sans règle d’usage",
+       1
+      ]
+     ],
+     "aide": "Public : ni rival ni exclusif. Commun : rival mais non exclusif. Privé : rival et exclusif.",
+     "explication": "L’éclairage et la défense sont des biens **publics**, les thons et la nappe des biens **communs**, la place de cinéma un bien **privé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9d4856-4024-5ea5-a00d-fb2f1be5cba9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le PIB recule : que décider ?",
+   "competence": "lire-tableau",
+   "situation": "Dans un pays imaginaire, le PIB a évolué trimestre après trimestre. Le gouvernement doit dire si l’économie est en récession, puis choisir une réponse.",
+   "documents": [
+    {
+     "id": "pib",
+     "type": "tableau",
+     "titre": "Variation du PIB d’un trimestre à l’autre",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Trimestre",
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+     ],
+     "lignes": [
+      [
+       "Variation du PIB (%)",
+       "+ 0,6",
+       "+ 0,2",
+       "− 0,3",
+       "− 0,4"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pib",
+     "enonce": "Touche le premier trimestre où le PIB recule.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche le premier signe moins.",
+     "explication": "Le PIB recule dès **T3** (− 0,3 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de trimestres consécutifs de recul le tableau montre-t-il ?",
+     "reponse": 2,
+     "unite": "trimestres",
+     "aide": "Compte les trimestres où la variation est négative.",
+     "explication": "T3 et T4 : **2 trimestres** de baisse consécutifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la convention du cours, comment qualifier cette période ?",
+     "options": [
+      "Une récession : le PIB recule pendant deux trimestres consécutifs",
+      "Une expansion : la croissance reste forte et le chômage baisse",
+      "Une dépression : le PIB chute fortement depuis plusieurs années",
+      "Une crise : le PIB ne bouge plus depuis un trimestre entier"
+     ],
+     "reponse": 0,
+     "aide": "Deux trimestres de baisse consécutifs : quel mot du cours ?",
+     "explication": "Au moins deux trimestres de baisse du PIB : c’est une **récession**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure budgétaire de relance le gouvernement peut-il décider ?",
+     "options": [
+      "Augmenter les dépenses publiques, quitte à creuser le déficit",
+      "Relever les impôts pour réduire le déficit au plus vite",
+      "Baisser les taux directeurs de la zone euro lui-même",
+      "Réduire les dépenses publiques pour équilibrer le budget"
+     ],
+     "reponse": 0,
+     "aide": "Une politique contracyclique va à contre-courant du ralentissement.",
+     "explication": "Une **relance budgétaire** augmente les dépenses ou baisse les impôts. Les taux directeurs relèvent de la BCE, pas du gouvernement."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9d4856-4024-5ea5-a00d-fb2f1be5cba9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Calculer un impôt progressif",
+   "competence": "calculer",
+   "situation": "Un pays imaginaire applique un impôt sur le revenu par tranches. Sur ce barème, on calcule l’impôt de deux foyers et on regarde ce que « progressif » veut dire.",
+   "documents": [
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Barème de l’impôt sur le revenu annuel",
+     "source": "Barème simplifié, imaginé pour l’exercice.",
+     "colonnes": [
+      "Tranche de revenu",
+      "Taux"
+     ],
+     "lignes": [
+      [
+       "Jusqu’à 12 000 €",
+       "0 %"
+      ],
+      [
+       "De 12 000 € à 32 000 €",
+       "15 %"
+      ],
+      [
+       "Au-delà de 32 000 €",
+       "35 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel impôt paie un foyer dont le revenu annuel est de 20 000 € ?",
+     "reponse": 1200,
+     "unite": "€",
+     "aide": "Seule la part au-dessus de 12 000 € est taxée, à 15 %.",
+     "explication": "(20 000 − 12 000) × 15 % = **1 200 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel impôt paie un foyer dont le revenu annuel est de 40 000 € ?",
+     "reponse": 5800,
+     "unite": "€",
+     "aide": "Calcule séparément la tranche à 15 % (20 000 €) et la tranche à 35 %.",
+     "explication": "20 000 × 15 % = 3 000 €, plus 8 000 × 35 % = 2 800 €, soit **5 800 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux moyen d’imposition de ce foyer à 40 000 € ? (en %)",
+     "reponse": 14.5,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Divise l’impôt payé par le revenu total.",
+     "explication": "5 800 ÷ 40 000 × 100 = **14,5 %**."
+    },
+    {
+     "type": "zone",
+     "document": "bareme",
+     "enonce": "Touche le taux marginal le plus élevé.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Le taux marginal le plus haut s’applique aux revenus les plus hauts.",
+     "explication": "Le taux de **35 %** s’applique au-delà de 32 000 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le taux moyen de 14,5 % est-il inférieur au taux marginal de 35 % ?",
+     "options": [
+      "Chaque taux ne s’applique qu’à la tranche de revenu correspondante",
+      "Le taux de 35 % ne vise que les contribuables de plus de soixante ans",
+      "L’impôt est calculé sur la moitié seulement du revenu déclaré",
+      "Le barème est recalculé chaque mois selon l’évolution des prix"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à ton calcul : sur quelle somme s’applique le taux de 35 % ?",
+     "explication": "Chaque taux ne frappe que **sa tranche** : le taux de 35 % ne s’applique qu’aux 8 000 € au-delà de 32 000 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9d4856-4024-5ea5-a00d-fb2f1be5cba9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du chômage au RSA",
+   "competence": "analyser-document",
+   "situation": "Amel a perdu son emploi. Ses droits changent avec le temps : elle passe d’une protection à une autre. Le tableau et son parcours aident à comprendre les logiques de la protection sociale.",
+   "documents": [
+    {
+     "id": "presta",
+     "type": "tableau",
+     "titre": "Trois prestations sociales",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Prestation",
+      "Condition pour en bénéficier",
+      "Financement"
+     ],
+     "lignes": [
+      [
+       "Allocation chômage",
+       "Avoir cotisé pendant son emploi",
+       "Cotisations sociales"
+      ],
+      [
+       "RSA",
+       "Avoir des ressources inférieures à un plafond",
+       "Impôt"
+      ],
+      [
+       "Allocations familiales",
+       "Avoir des enfants à charge",
+       "Impôt"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "amel",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le parcours d’Amel",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Amel, 38 ans, a travaillé douze ans avant d’être licenciée. Elle a perçu l’allocation chômage pendant deux ans, grâce à ses cotisations. Ses droits sont épuisés : avec 250 € de ressources par mois, elle demande alors le RSA.",
+      "Dans cet exercice, on suppose que le RSA verse la différence entre un montant garanti de 600 € et les ressources du foyer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque prestation à sa logique.",
+     "paires": [
+      [
+       "Allocation chômage",
+       "Assurance"
+      ],
+      [
+       "RSA",
+       "Assistance"
+      ],
+      [
+       "Allocations familiales",
+       "Universalité"
+      ]
+     ],
+     "aide": "Lis la colonne « Condition » : cotisé, dans le besoin, ou sans condition ?",
+     "explication": "**Assurance** : on a cotisé ; **assistance** : on est dans le besoin ; **universalité** : tout le monde y a droit."
+    },
+    {
+     "type": "choix",
+     "enonce": "En passant de l’allocation chômage au RSA, Amel passe…",
+     "options": [
+      "d’une logique d’assurance à une logique d’assistance",
+      "d’une logique d’assistance à une logique d’assurance",
+      "d’une logique d’universalité à une logique d’assurance",
+      "d’une logique d’assurance à une logique d’universalité"
+     ],
+     "reponse": 0,
+     "aide": "Ses cotisations ne lui ouvrent plus de droits : qu’est-ce qui ouvre le RSA ?",
+     "explication": "L’allocation chômage repose sur les **cotisations** (assurance) ; le RSA sur le **besoin** (assistance)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel montant mensuel de RSA Amel reçoit-elle dans cet exercice, en euros ?",
+     "reponse": 350,
+     "unite": "€",
+     "aide": "Soustrais ses ressources du montant garanti.",
+     "explication": "600 − 250 = **350 €** par mois."
+    },
+    {
+     "type": "zone",
+     "document": "presta",
+     "enonce": "Touche le financement de l’allocation chômage.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Regarde la dernière colonne de la première ligne.",
+     "explication": "L’allocation chômage est financée par les **cotisations sociales**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque transfert selon le type de redistribution.",
+     "categories": [
+      "Redistribution horizontale",
+      "Redistribution verticale"
+     ],
+     "items": [
+      [
+       "Des bien-portants vers les malades",
+       0
+      ],
+      [
+       "Des ménages sans enfant vers les familles",
+       0
+      ],
+      [
+       "Des hauts revenus vers les bas revenus par un impôt progressif",
+       1
+      ],
+      [
+       "Des actifs vers les retraités",
+       0
+      ],
+      [
+       "Un revenu de solidarité financé par l’impôt pour les plus modestes",
+       1
+      ]
+     ],
+     "aide": "Horizontal : face à un risque. Vertical : des plus riches vers les plus pauvres.",
+     "explication": "L’**horizontale** couvre les risques ; la **verticale** réduit les inégalités de revenus."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8a88dff-f1d3-5d47-8bc4-4849db885561",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les 50 millions de Plaine",
+   "competence": "lire-tableau",
+   "situation": "Le pays imaginaire de Plaine compte 50 millions de personnes de 15 à 64 ans. Le tableau les répartit selon leur situation face à l’emploi.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "La population de 15 à 64 ans",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Catégorie",
+      "Personnes (millions)"
+     ],
+     "lignes": [
+      [
+       "Actifs occupés",
+       32
+      ],
+      [
+       "Chômeurs",
+       3
+      ],
+      [
+       "Inactifs (élèves, étudiants, personnes au foyer…)",
+       15
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche le nombre de chômeurs.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Le chômeur est sans emploi mais en recherche.",
+     "explication": "Plaine compte **3 millions** de chômeurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la population active de Plaine, en millions ?",
+     "reponse": 35,
+     "unite": "millions",
+     "aide": "La population active réunit actifs occupés et chômeurs.",
+     "explication": "32 + 3 = **35 millions** de personnes actives."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’emploi, en % ?",
+     "reponse": 64,
+     "unite": "%",
+     "aide": "Divise les actifs occupés par la population de 15 à 64 ans.",
+     "explication": "32 ÷ 50 × 100 = **64 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de chômage, en % arrondi au dixième ?",
+     "reponse": 8.6,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Divise les chômeurs par la population active.",
+     "explication": "3 ÷ 35 × 100 ≈ **8,6 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8a88dff-f1d3-5d47-8bc4-4849db885561",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chômeur, vraiment ?",
+   "competence": "analyser-document",
+   "situation": "Selon la définition internationale du BIT, tout le monde n’est pas chômeur au sens statistique. Quatre personnes, un graphique : à toi de trier et d’interpréter.",
+   "documents": [
+    {
+     "id": "profils",
+     "type": "tableau",
+     "titre": "Quatre personnes, une semaine de référence",
+     "source": "Situations écrites pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Sa situation"
+     ],
+     "lignes": [
+      [
+       "Ali",
+       "N’a pas travaillé une heure, cherche un emploi depuis trois semaines et peut commencer dans les quinze jours"
+      ],
+      [
+       "Bérénice",
+       "A travaillé deux heures cette semaine comme serveuse et cherche un autre emploi"
+      ],
+      [
+       "Corentin",
+       "Est inscrit à France Travail, mais en arrêt maladie, sans aucune recherche ce mois-ci"
+      ],
+      [
+       "Dina",
+       "A 60 ans, reste au foyer par choix et ne cherche pas d’emploi"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "diplome",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Taux de chômage selon le diplôme",
+     "source": "Ordres de grandeur imaginés pour l’exercice.",
+     "categories": [
+      "Sans diplôme",
+      "Bac",
+      "Bac + 3 ou plus"
+     ],
+     "series": [
+      {
+       "nom": "Taux de chômage",
+       "valeurs": [
+        16,
+        8,
+        4
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Taux de chômage",
+      "unite": "en %",
+      "min": 0,
+      "max": 20,
+      "pas": 4
+     },
+     "axeX": {
+      "titre": "Niveau de diplôme"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque personne selon la définition du BIT.",
+     "categories": [
+      "Chômeur au sens du BIT",
+      "Pas chômeur au sens du BIT"
+     ],
+     "items": [
+      [
+       "Ali",
+       0
+      ],
+      [
+       "Bérénice",
+       1
+      ],
+      [
+       "Corentin",
+       1
+      ],
+      [
+       "Dina",
+       1
+      ]
+     ],
+     "aide": "Un chômeur est sans emploi, disponible et en recherche active : les trois conditions à la fois.",
+     "explication": "**Ali** remplit les trois conditions. Bérénice est en emploi, Corentin n’est ni disponible ni en recherche, Dina ne cherche pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Bérénice n’est-elle pas chômeuse ?",
+     "options": [
+      "Elle a travaillé au moins une heure pendant la semaine de référence",
+      "Elle cherche un autre emploi, ce qui suffit à l’exclure du chômage",
+      "Elle travaille moins de trente heures, donc elle reste inactive",
+      "Elle n’est pas inscrite à France Travail, ce qui est obligatoire"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première condition : sans emploi, c’est vraiment zéro heure.",
+     "explication": "Une seule heure de travail dans la semaine de référence suffit pour être compté comme **actif occupé**."
+    },
+    {
+     "type": "zone",
+     "document": "diplome",
+     "enonce": "Touche le groupe le plus touché par le chômage.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **sans-diplôme** ont le taux de chômage le plus élevé (16 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le taux de chômage des sans-diplôme est combien de fois celui des bac + 3 ou plus ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise 16 par 4.",
+     "explication": "16 ÷ 4 = **4 fois** plus élevé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle forme de chômage ce graphique illustre-t-il surtout ?",
+     "options": [
+      "Structurel : les qualifications ne correspondent pas aux emplois proposés",
+      "Conjoncturel : la demande de biens et services est insuffisante dans le pays",
+      "Frictionnel : les personnes mettent simplement du temps à changer d’emploi",
+      "Volontaire : les personnes refusent systématiquement tous les emplois qui leur sont proposés"
+     ],
+     "reponse": 0,
+     "aide": "Le diplôme est une qualification : quel chômage est lié aux qualifications ?",
+     "explication": "Un écart selon le diplôme traduit un chômage **structurel** : l’inadéquation entre qualifications et emplois."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8a88dff-f1d3-5d47-8bc4-4849db885561",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’usine ferme, les postes restent vides",
+   "competence": "raisonner",
+   "situation": "Dans une région d’un pays imaginaire, une usine ferme alors que des postes restent sans candidat. Croise le tableau et l’article pour comprendre deux chômages différents.",
+   "documents": [
+    {
+     "id": "conj",
+     "type": "tableau",
+     "titre": "Croissance et chômage",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Croissance du PIB (%)",
+      "Taux de chômage (%)"
+     ],
+     "lignes": [
+      [
+       "N",
+       "+ 2,0",
+       "7,0"
+      ],
+      [
+       "N + 1",
+       "− 1,0",
+       "8,5"
+      ],
+      [
+       "N + 2",
+       "+ 0,5",
+       "9,0"
+      ],
+      [
+       "N + 3",
+       "+ 2,5",
+       "8,0"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "usine",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une usine ferme",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "L’usine de meubles Bois d’Or ferme ses portes : 120 ouvriers sont licenciés. Dans la même région, 80 postes de techniciens en maintenance informatique restent sans candidat, faute de personnes formées. En N + 1, le pays compte 30 millions d’actifs."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conj",
+     "enonce": "Touche l’année où le PIB recule.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le signe moins dans la colonne de la croissance.",
+     "explication": "En **N + 1**, le PIB recule de 1,0 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "La hausse du chômage entre N et N + 1 est surtout…",
+     "options": [
+      "Conjoncturelle : la production recule, donc les entreprises embauchent moins",
+      "Structurelle : les qualifications ne correspondent pas aux emplois du pays",
+      "Frictionnelle : les actifs mettent du temps à passer d’un emploi à l’autre",
+      "Volontaire : les actifs refusent les emplois qui leur sont proposés"
+     ],
+     "reponse": 0,
+     "aide": "La production recule : que font les entreprises ?",
+     "explication": "Quand le PIB recule, l’insuffisance de demande provoque un chômage **conjoncturel**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En N + 1, combien y a-t-il de chômeurs, en millions ? (8,5 % de 30 millions)",
+     "reponse": 2.55,
+     "unite": "millions",
+     "tolerance": 0.005,
+     "aide": "Le taux de chômage se calcule sur la population active.",
+     "explication": "8,5 % × 30 millions = **2,55 millions** de chômeurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les 80 postes de techniciens restent-ils vacants ?",
+     "options": [
+      "Les qualifications des chômeurs ne correspondent pas aux emplois proposés",
+      "La demande de biens et services est devenue insuffisante dans toute la région",
+      "Les chômeurs mettent simplement du temps à passer d’un emploi à l’autre",
+      "Le plein emploi est atteint dans la région, donc aucun candidat ne reste"
+     ],
+     "reponse": 0,
+     "aide": "Il y a des emplois et des chômeurs, mais personne de formé.",
+     "explication": "Des postes vacants faute de personnes formées : un chômage **structurel** par inadéquation des qualifications."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure selon la politique de l’emploi.",
+     "categories": [
+      "Politique active",
+      "Politique passive"
+     ],
+     "items": [
+      [
+       "Financer une formation en maintenance informatique pour les ouvriers licenciés",
+       0
+      ],
+      [
+       "Verser une allocation aux ouvriers licenciés",
+       1
+      ],
+      [
+       "Accorder une aide à l’embauche d’un ouvrier licencié",
+       0
+      ],
+      [
+       "Accompagner les chômeurs dans leur recherche d’emploi",
+       0
+      ],
+      [
+       "Proposer une préretraite anticipée aux licenciés",
+       1
+      ]
+     ],
+     "aide": "Active : aider à retrouver un emploi. Passive : atténuer les conséquences du chômage.",
+     "explication": "Les mesures **actives** créent ou facilitent l’emploi ; les mesures **passives** indemnisent."
+    }
+   ]
+  },
+  {
+   "chapitre": "e984daf6-cf8a-538a-96e6-a68e7c74fdab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La balance d’un pays imaginaire",
+   "competence": "lire-tableau",
+   "situation": "Un pays imaginaire vend et achète des biens et des services au reste du monde. Le tableau donne ses échanges de l’année, en milliards d’euros.",
+   "documents": [
+    {
+     "id": "echanges",
+     "type": "tableau",
+     "titre": "Exportations et importations",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Échanges",
+      "Exportations (Md€)",
+      "Importations (Md€)"
+     ],
+     "lignes": [
+      [
+       "Biens",
+       500,
+       560
+      ],
+      [
+       "Services",
+       200,
+       140
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echanges",
+     "enonce": "Touche le poste où le pays est excédentaire.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Excédentaire : les exportations dépassent les importations.",
+     "explication": "Pour les **services**, 200 > 140 : le pays est excédentaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de milliards d’euros la balance des biens est-elle déficitaire ?",
+     "reponse": 60,
+     "unite": "Md€",
+     "aide": "Soustrais les importations des exportations de biens.",
+     "explication": "500 − 560 = − 60 : un déficit de **60 Md€**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de couverture des biens, en % arrondi au dixième ?",
+     "reponse": 89.3,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Divise les exportations par les importations, puis multiplie par 100.",
+     "explication": "500 ÷ 560 × 100 ≈ **89,3 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde de la balance des biens et services, en milliards d’euros ?",
+     "reponse": 0,
+     "unite": "Md€",
+     "aide": "Additionne d’abord les exportations, puis les importations.",
+     "explication": "Exportations : 700 ; importations : 700. Solde : **0** : le déficit des biens est compensé par l’excédent des services."
+    }
+   ]
+  },
+  {
+   "chapitre": "e984daf6-cf8a-538a-96e6-a68e7c74fdab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un smartphone, quatre étapes",
+   "competence": "lire-graphique",
+   "situation": "Un smartphone vendu 800 € est conçu, fabriqué et vendu dans plusieurs pays. La chaîne de valeur et la répartition du prix montrent qui gagne quoi.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "La chaîne de valeur du smartphone",
+     "noeuds": [
+      {
+       "id": "conc",
+       "texte": "Conception",
+       "emoji": "💡"
+      },
+      {
+       "id": "comp",
+       "texte": "Fabrication des composants",
+       "emoji": "🔧"
+      },
+      {
+       "id": "assem",
+       "texte": "Assemblage du produit fini",
+       "emoji": "🏭"
+      },
+      {
+       "id": "vente",
+       "texte": "Vente aux consommateurs",
+       "emoji": "🛒"
+      }
+     ],
+     "liens": [
+      {
+       "de": "conc",
+       "a": "comp"
+      },
+      {
+       "de": "comp",
+       "a": "assem"
+      },
+      {
+       "de": "assem",
+       "a": "vente"
+      }
+     ]
+    },
+    {
+     "id": "prix",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Répartition du prix de vente (800 €)",
+     "source": "Répartition imaginée pour l’exercice.",
+     "categories": [
+      "Conception",
+      "Composants",
+      "Assemblage",
+      "Vente"
+     ],
+     "series": [
+      {
+       "nom": "Part du prix",
+       "valeurs": [
+        40,
+        30,
+        5,
+        25
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du prix",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Étape"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape où les composants sont réunis en un produit fini.",
+     "reponse": [
+      "assem"
+     ],
+     "aide": "Les composants arrivent avant cette étape.",
+     "explication": "**L’assemblage** réunit les composants en un produit fini."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros du prix de 800 € reviennent à la conception ?",
+     "reponse": 320,
+     "unite": "€",
+     "aide": "La conception capte 40 % du prix.",
+     "explication": "40 % × 800 = **320 €**."
+    },
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche l’étape qui capte la plus petite part du prix.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "L’**assemblage** ne capte que 5 % du prix."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque produit selon sa nature.",
+     "categories": [
+      "Produit intermédiaire",
+      "Produit fini"
+     ],
+     "items": [
+      [
+       "Un écran vendu à l’usine d’assemblage",
+       0
+      ],
+      [
+       "Un smartphone acheté par un client",
+       1
+      ],
+      [
+       "Une batterie livrée à l’assembleur",
+       0
+      ],
+      [
+       "Une puce électronique livrée à l’assembleur",
+       0
+      ],
+      [
+       "Un ordinateur portable acheté par un étudiant",
+       1
+      ]
+     ],
+     "aide": "Un produit intermédiaire est transformé ; un produit fini est consommé.",
+     "explication": "Les **produits intermédiaires** entrent dans la fabrication d’un autre produit ; les **produits finis** vont au consommateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "e984daf6-cf8a-538a-96e6-a68e7c74fdab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un droit de douane sur l’acier",
+   "competence": "analyser-document",
+   "situation": "Un pays protège ses aciéries par un droit de douane, et son partenaire conteste. Un article et un tableau de prix permettent de chiffrer l’effet de la mesure.",
+   "documents": [
+    {
+     "id": "douane",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lambria protège ses aciéries",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Le pays de Lambria, imaginaire, impose un droit de douane de 25 % sur l’acier importé afin de protéger ses aciéries. La Dorvanie, pays exportateur, estime que cette mesure viole les règles de l’OMC."
+     ]
+    },
+    {
+     "id": "acier",
+     "type": "tableau",
+     "titre": "Prix de la tonne d’acier en Lambria",
+     "source": "Prix imaginés pour l’exercice.",
+     "colonnes": [
+      "Acier",
+      "Avant le droit (€)",
+      "Après le droit de 25 % (€)"
+     ],
+     "lignes": [
+      [
+       "Importé",
+       800,
+       "?"
+      ],
+      [
+       "National",
+       950,
+       950
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix de la tonne d’acier importé après le droit de douane, en euros ?",
+     "reponse": 1000,
+     "unite": "€",
+     "aide": "Calcule 800 € plus 25 % de 800 €.",
+     "explication": "800 × 1,25 = **1 000 €** la tonne."
+    },
+    {
+     "type": "zone",
+     "document": "acier",
+     "enonce": "Touche le prix de l’acier le plus bas après le droit de douane.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare l’acier importé après le droit et l’acier national.",
+     "explication": "Après le droit, l’acier **national** (950 €) devient moins cher que l’acier importé (1 000 €)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lambria importe 100 000 tonnes, toutes maintenues malgré le droit. Quelle recette l’État tire-t-il du droit de douane, en millions d’euros ?",
+     "reponse": 20,
+     "unite": "M€",
+     "aide": "Le droit est de 200 € par tonne.",
+     "explication": "200 € × 100 000 t = 20 000 000 € soit **20 millions d’euros**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure selon la politique commerciale.",
+     "categories": [
+      "Protectionniste",
+      "Libre-échangiste"
+     ],
+     "items": [
+      [
+       "Instaurer des quotas d’importation",
+       0
+      ],
+      [
+       "Baisser les droits de douane",
+       1
+      ],
+      [
+       "Durcir les normes applicables aux produits importés",
+       0
+      ],
+      [
+       "Harmoniser les normes entre pays partenaires",
+       1
+      ],
+      [
+       "Supprimer les douanes entre partenaires",
+       1
+      ]
+     ],
+     "aide": "Protéger le marché national, ou l’ouvrir ?",
+     "explication": "Quotas et normes durcies **protègent** ; baisser les droits, harmoniser les normes et supprimer les douanes **ouvrent** les échanges."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut faire la Dorvanie pour contester la mesure ?",
+     "options": [
+      "Saisir l’Organe de règlement des différends de l’OMC",
+      "Saisir l’Autorité de la concurrence de Lambria",
+      "Demander à la BCE de baisser ses taux directeurs",
+      "Saisir le conseil de prud’hommes de Lambria"
+     ],
+     "reponse": 0,
+     "aide": "Quelle institution tranche les litiges commerciaux entre États ?",
+     "explication": "L’**Organe de règlement des différends** de l’OMC tranche les litiges commerciaux entre États."
+    }
+   ]
+  },
+  {
+   "chapitre": "8e67cb95-d048-5ee6-a061-4522e5b80c9a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mix énergétique d’un pays",
+   "competence": "lire-graphique",
+   "situation": "Un pays imaginaire dresse le bilan de ses sources d’énergie. Le graphique montre ce que chacune représente dans la consommation.",
+   "documents": [
+    {
+     "id": "energie",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Sources d’énergie consommées",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Pétrole",
+      "Gaz",
+      "Charbon",
+      "Solaire",
+      "Éolien",
+      "Hydraulique"
+     ],
+     "series": [
+      {
+       "nom": "Part de la consommation",
+       "valeurs": [
+        35,
+        20,
+        10,
+        15,
+        12,
+        8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la consommation",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Source"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "energie",
+     "enonce": "Touche la source d’énergie la plus utilisée.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Le **pétrole** pèse 35 % de la consommation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la consommation vient d’énergies renouvelables (solaire, éolien, hydraulique), en % ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Additionne les trois sources renouvelables.",
+     "explication": "15 + 12 + 8 = **35 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque pèse sur les 65 % issus du pétrole, du gaz et du charbon ?",
+     "options": [
+      "L’épuisement, car leur stock est limité et ne se reconstitue pas",
+      "La saturation, car elles se reconstituent plus vite qu’on les consomme",
+      "Le manque de soleil, car elles dépendent du climat de la région",
+      "La gratuité, car leur prix ne cesse de baisser avec l’usage"
+     ],
+     "reponse": 0,
+     "aide": "Pétrole, gaz et charbon sont des ressources non renouvelables.",
+     "explication": "Ces ressources sont **non renouvelables** : en consommer, c’est épuiser un stock limité."
+    }
+   ]
+  },
+  {
+   "chapitre": "8e67cb95-d048-5ee6-a061-4522e5b80c9a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui est sous le seuil de pauvreté ?",
+   "competence": "calculer",
+   "situation": "Neuf personnes d’un quartier imaginaire comparent leur niveau de vie. Le seuil de pauvreté relative se calcule à partir de la médiane.",
+   "documents": [
+    {
+     "id": "nv",
+     "type": "tableau",
+     "titre": "Niveau de vie mensuel de neuf personnes",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Niveau de vie (€)"
+     ],
+     "lignes": [
+      [
+       "A",
+       900
+      ],
+      [
+       "B",
+       1000
+      ],
+      [
+       "C",
+       1250
+      ],
+      [
+       "D",
+       1500
+      ],
+      [
+       "E",
+       1800
+      ],
+      [
+       "F",
+       2000
+      ],
+      [
+       "G",
+       2100
+      ],
+      [
+       "H",
+       2500
+      ],
+      [
+       "I",
+       4400
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nv",
+     "enonce": "Touche le niveau de vie médian de ce groupe.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Les valeurs sont rangées par ordre croissant : prends la valeur du milieu.",
+     "explication": "Avec neuf personnes, la médiane est la 5e valeur : **1 800 €** (personne E)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le seuil de pauvreté relative de ce groupe, en euros ?",
+     "reponse": 1080,
+     "unite": "€",
+     "aide": "Le seuil est à 60 % du niveau de vie médian.",
+     "explication": "60 % × 1 800 = **1 080 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes vivent sous ce seuil ?",
+     "reponse": 2,
+     "unite": "personnes",
+     "aide": "Compare chaque niveau de vie à 1 080 €.",
+     "explication": "A (900 €) et B (1 000 €) sont sous 1 080 € : **2 personnes**. C, à 1 250 €, est au-dessus."
+    },
+    {
+     "type": "choix",
+     "enonce": "La personne B (1 000 €) est…",
+     "options": [
+      "Pauvre au sens relatif, sans l’être forcément au sens absolu",
+      "Pauvre au sens absolu, car elle vit sous le seuil de 1 080 €",
+      "Pas pauvre, car elle gagne plus que la moitié du médian",
+      "Pauvre au sens relatif seulement si elle vit en famille nombreuse"
+     ],
+     "reponse": 0,
+     "aide": "Le seuil de 60 % de la médiane mesure la pauvreté par rapport aux autres.",
+     "explication": "Sous 60 % du niveau de vie médian, B est pauvre au sens **relatif** ; elle ne l’est pas forcément au sens absolu (minimum vital)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le revenu de la personne I double. Que devient le seuil de pauvreté ?",
+     "options": [
+      "Il ne change pas, car la médiane reste de 1 800 €",
+      "Il augmente, car la moyenne des niveaux de vie augmente fortement",
+      "Il double, car il est calculé sur le niveau de vie le plus haut",
+      "Il baisse, car l’écart entre hauts et bas revenus se creuse"
+     ],
+     "reponse": 0,
+     "aide": "Quelle personne donne la médiane ? Son niveau de vie a-t-il bougé ?",
+     "explication": "La médiane ne dépend pas des valeurs extrêmes : elle reste de 1 800 €, le seuil aussi : **1 080 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8e67cb95-d048-5ee6-a061-4522e5b80c9a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Innover avec une coopérative",
+   "competence": "modeliser",
+   "situation": "Un pays imaginaire analyse d’où vient sa croissance, et une coopérative de vêtements d’occasion incarne une autre manière de produire. Deux documents à croiser.",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Les sources de la croissance",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Source",
+      "Contribution (points de croissance)"
+     ],
+     "lignes": [
+      [
+       "Hausse du travail",
+       "0,5"
+      ],
+      [
+       "Hausse du capital",
+       "1,0"
+      ],
+      [
+       "Productivité globale des facteurs",
+       "1,5"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "statuts",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les statuts de Recycl’Habits",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Recycl’Habits collecte, répare et revend des vêtements d’occasion. Chaque associé dispose d’une [[d|voix]], quel que soit le nombre de parts détenues. Le bénéfice est réparti ainsi : 50 % en réserves qui ne seront jamais partagées, 40 % aux salariés, 10 % aux détenteurs de parts."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la croissance totale du pays, en points de croissance ?",
+     "reponse": 3,
+     "unite": "points",
+     "tolerance": 0.05,
+     "aide": "Additionne les trois contributions.",
+     "explication": "0,5 + 1,0 + 1,5 = **3 points** de croissance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la croissance vient de la productivité globale des facteurs, en % ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Divise sa contribution par la croissance totale.",
+     "explication": "1,5 ÷ 3 × 100 = **50 %** : la moitié de la croissance vient du progrès technique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette forte part de la productivité globale des facteurs s’explique notamment par…",
+     "options": [
+      "L’innovation, produite par l’investissement en recherche et en éducation",
+      "La baisse du nombre d’actifs dans les entreprises du pays",
+      "L’épuisement progressif des ressources naturelles non renouvelables",
+      "La réduction du capital disponible pour chaque travailleur"
+     ],
+     "reponse": 0,
+     "aide": "Le progrès technique ne tombe pas du ciel : d’où vient-il ?",
+     "explication": "L’innovation est **endogène** : elle naît de l’investissement en recherche, en éducation et en infrastructures."
+    },
+    {
+     "type": "zone",
+     "document": "statuts",
+     "enonce": "Touche le mot qui montre la gouvernance démocratique de la coopérative.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Chaque associé en a une, quelle que soit sa part.",
+     "explication": "Une **voix** par associé, quel que soit le capital : c’est la gouvernance démocratique de l’ESS."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le bénéfice d’une année est de 60 000 €. Combien ira aux réserves impartageables, en euros ?",
+     "reponse": 30000,
+     "unite": "€",
+     "aide": "Les réserves reçoivent 50 % du bénéfice.",
+     "explication": "50 % × 60 000 = **30 000 €**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque exemple au modèle économique qui lui correspond.",
+     "paires": [
+      [
+       "Revendre des vêtements après les avoir réparés",
+       "Économie circulaire"
+      ],
+      [
+       "Partager une perceuse entre voisins",
+       "Économie collaborative"
+      ],
+      [
+       "Une coopérative où chaque associé a une voix",
+       "Économie sociale et solidaire"
+      ]
+     ],
+     "aide": "Recycler, mutualiser, gouverner démocratiquement : trois idées différentes.",
+     "explication": "Réparer et revendre : économie **circulaire** ; mutualiser : économie **collaborative** ; une voix par associé : économie **sociale et solidaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5278d7a-f697-51d0-878b-9089ffa7b83f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire un graphique de ventes",
+   "competence": "lire-graphique",
+   "situation": "Un document statistique se lit avec méthode : source, date, unité, tendance. Ici, les ventes de voitures électriques d’un pays imaginaire.",
+   "documents": [
+    {
+     "id": "ventes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Ventes de voitures électriques",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Ventes",
+       "valeurs": [
+        200,
+        250,
+        300,
+        270
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Ventes",
+      "unite": "en milliers de véhicules",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ventes",
+     "enonce": "Touche l’année où les ventes sont les plus élevées.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les ventes culminent en **2023**, avec 300 milliers de véhicules."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de lecture est correcte ?",
+     "options": [
+      "En 2023, 300 milliers de voitures électriques ont été vendues dans ce pays",
+      "En 2023, 300 voitures électriques seulement ont été vendues dans ce pays",
+      "En 2024, 300 milliers de voitures électriques ont été vendues dans ce pays",
+      "En 2023, 300 millions de voitures électriques ont été vendues dans ce pays"
+     ],
+     "reponse": 0,
+     "aide": "Vérifie l’année et l’unité indiquées sur l’axe.",
+     "explication": "Une bonne phrase de lecture cite l’année, la valeur et l’**unité** : 300 milliers en 2023."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % les ventes ont-elles augmenté entre 2021 et 2023 ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Taux de variation = (arrivée − départ) ÷ départ × 100.",
+     "explication": "(300 − 200) ÷ 200 × 100 = **+ 50 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % les ventes ont-elles baissé entre 2023 et 2024 ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Le départ est 300, l’arrivée 270.",
+     "explication": "(300 − 270) ÷ 300 × 100 = **10 %** de baisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5278d7a-f697-51d0-878b-9089ffa7b83f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sofia peut-elle renvoyer sa veste ?",
+   "competence": "raisonner",
+   "situation": "Un cas pratique s’écrit en cinq temps. Celui de Sofia, cliente d’un site marchand, permet de s’entraîner avec la règle du délai de rétractation.",
+   "documents": [
+    {
+     "id": "veste",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une commande en ligne",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Sofia commande une veste sur un site marchand le 4 juin. Elle la reçoit le 6 juin. Le 25 juin, elle décide de la renvoyer et réclame le remboursement ; le site refuse."
+     ]
+    },
+    {
+     "id": "regle",
+     "type": "tableau",
+     "titre": "La règle du Code de la consommation",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Élément",
+      "Règle"
+     ],
+     "lignes": [
+      [
+       "Délai",
+       "14 jours"
+      ],
+      [
+       "Point de départ",
+       "La réception du bien"
+      ],
+      [
+       "Justification",
+       "Aucune n’est exigée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les cinq temps du cas pratique.",
+     "items": [
+      "Les faits",
+      "Le problème de droit",
+      "La règle de droit",
+      "L’application aux faits",
+      "La solution"
+     ],
+     "aide": "On commence par ce qui s’est passé et on finit par la réponse.",
+     "explication": "Faits, problème de droit, règle, **application**, solution."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le bon problème de droit ?",
+     "options": [
+      "Un consommateur peut-il se rétracter d’un achat à distance plus de 14 jours après réception ?",
+      "Le site marchand doit-il rembourser Sofia, qui a renvoyé sa veste le 25 juin ?",
+      "Un consommateur peut toujours se rétracter d’un achat à distance, sans condition de délai.",
+      "Sofia a-t-elle le droit de renvoyer sa veste reçue le 6 juin ?"
+     ],
+     "reponse": 0,
+     "aide": "Un bon problème est une question juridique, générale, sans les noms.",
+     "explication": "Un bon problème de droit est **juridique et général** : sans le nom de Sofia, et sous forme de question."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le dernier jour de juin où Sofia pouvait se rétracter ? (donne le numéro du jour)",
+     "reponse": 20,
+     "aide": "Compte 14 jours à partir du 6 juin.",
+     "explication": "Le 6 juin + 14 jours = **20 juin**. Le 25 juin, le délai est dépassé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase dans le bon temps du raisonnement.",
+     "categories": [
+      "Les faits",
+      "La règle",
+      "L’application",
+      "La solution"
+     ],
+     "items": [
+      [
+       "Sofia a reçu sa veste le 6 juin et veut la renvoyer le 25",
+       0
+      ],
+      [
+       "Le consommateur dispose de 14 jours à compter de la réception",
+       1
+      ],
+      [
+       "Sofia agit 19 jours après la réception : le délai est dépassé",
+       2
+      ],
+      [
+       "Sofia ne peut donc plus se rétracter",
+       3
+      ],
+      [
+       "Le site a refusé de la rembourser",
+       0
+      ],
+      [
+       "Aucune justification n’est exigée du consommateur",
+       1
+      ]
+     ],
+     "aide": "Faits : ce qui s’est passé. Règle : ce que dit la loi. Application : on confronte. Solution : on conclut.",
+     "explication": "L’**application** (19 jours > 14 jours) relie les faits à la règle et prépare la solution."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5278d7a-f697-51d0-878b-9089ffa7b83f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le salaire minimum en débat",
+   "competence": "argumenter",
+   "situation": "Pour la question argumentée, on construit chaque argument en AEI : Affirmer, Expliquer, Illustrer. Le salaire minimum d’un pays imaginaire sert de sujet.",
+   "documents": [
+    {
+     "id": "smic",
+     "type": "tableau",
+     "titre": "Un salaire minimum imaginaire",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Année N",
+      "Année N + 5"
+     ],
+     "lignes": [
+      [
+       "Salaire minimum mensuel (€)",
+       1200,
+       1380
+      ],
+      [
+       "Indice des prix",
+       100,
+       110
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat d’Alix et de Ben",
+     "participants": [
+      {
+       "nom": "Alix",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Alix",
+       "texte": "Le salaire minimum protège les salariés les plus modestes !"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Oui, mais son [[c|coût]] pour l’employeur peut freiner l’embauche des moins qualifiés."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche le mot qui résume ce que Ben reproche au salaire minimum.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce qui pèse sur l’employeur.",
+     "explication": "Ben pointe le **coût** du travail : c’est la limite du salaire minimum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % le salaire minimum a-t-il augmenté entre N et N + 5 ?",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Taux de variation = (arrivée − départ) ÷ départ × 100.",
+     "explication": "(1 380 − 1 200) ÷ 1 200 × 100 = **15 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % les prix ont-ils augmenté entre N et N + 5 ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Regarde l’indice des prix : il passe de 100 à 110.",
+     "explication": "De 100 à 110 : **+ 10 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le pouvoir d’achat du salaire minimum a-t-il augmenté ?",
+     "options": [
+      "Oui : le salaire a progressé de 15 %, plus vite que les prix (10 %)",
+      "Non : les prix ont augmenté, donc le pouvoir d’achat a forcément baissé",
+      "Non : le salaire a augmenté de 10 %, exactement comme les prix",
+      "Oui : le salaire a progressé de 10 %, plus vite que les prix (15 %)"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hausse du salaire à celle des prix.",
+     "explication": "Le salaire (+ 15 %) augmente plus vite que les prix (+ 10 %) : le pouvoir d’achat **progresse**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase à l’étape de la méthode AEI qu’elle illustre.",
+     "paires": [
+      [
+       "« Le salaire minimum protège le pouvoir d’achat des salariés modestes »",
+       "Affirmer"
+      ],
+      [
+       "« Car sa hausse dépasse celle des prix, le salarié peut acheter davantage »",
+       "Expliquer"
+      ],
+      [
+       "« Dans le tableau, il passe de 1 200 € à 1 380 € en cinq ans »",
+       "Illustrer"
+      ]
+     ],
+     "aide": "A : une idée. E : le mécanisme. I : un document ou un exemple.",
+     "explication": "**Affirmer** pose l’idée, **Expliquer** donne le mécanisme, **Illustrer** s’appuie sur un document chiffré."
+    }
+   ]
+  }
+ ]
+}

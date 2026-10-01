@@ -1,0 +1,3219 @@
+{
+ "niveau": "Tle",
+ "matiere": "biochimie-biologie-biotechnologie",
+ "exercices": [
+  {
+   "chapitre": "151b3b5f-5aa0-5587-acdf-27aedaa1051f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe de fusion d’un ADN",
+   "competence": "lire-graphique",
+   "situation": "On chauffe lentement une solution d’ADN double brin et on mesure son absorbance à 260 nm à chaque palier de température.",
+   "documents": [
+    {
+     "id": "fusion",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Absorbance de l’ADN à 260 nm en fonction de la température",
+     "categories": [
+      "60",
+      "65",
+      "70",
+      "75",
+      "80",
+      "85",
+      "90",
+      "95",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "A260",
+       "valeurs": [
+        0.5,
+        0.5,
+        0.51,
+        0.55,
+        0.64,
+        0.75,
+        0.88,
+        0.97,
+        1
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance à 260 nm",
+      "min": 0,
+      "max": 1.2,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Température (°C)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fusion",
+     "enonce": "Touche le point de la température de fusion Tm : celui où l’absorbance est à mi-chemin entre son minimum (0,50) et son maximum (1,00).",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "À mi-chemin entre 0,50 et 1,00, l’absorbance vaut 0,75.",
+     "explication": "À mi-chemin, l’absorbance vaut 0,75 : c’est le point à 85 °C, donc **Tm = 85 °C**. La moitié de l’ADN est alors dénaturée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’absorbance a-t-elle augmenté entre 60 °C et 100 °C ?",
+     "reponse": 100,
+     "unite": "%",
+     "aide": "Calcule l’écart entre les deux valeurs, puis divise-le par la valeur de départ.",
+     "explication": "L’absorbance passe de 0,50 à 1,00 : elle double, soit **+ 100 %**. C’est l’effet hyperchrome."
+    },
+    {
+     "type": "choix",
+     "enonce": "On chauffe de la même façon un second ADN, plus riche en C et G. Où se place sa courbe par rapport à celle du document ?",
+     "options": [
+      "Décalée vers les températures plus hautes, car les paires C≡G ont trois liaisons hydrogène à rompre",
+      "Décalée vers les températures plus basses, car les paires C≡G n’ont que deux liaisons hydrogène à rompre",
+      "Identique, car la température de fusion dépend de la longueur de l’ADN et non de ses bases",
+      "Décalée vers les températures plus hautes, car ce sont les liaisons phosphodiester qui se rompent plus tard"
+     ],
+     "reponse": 0,
+     "aide": "Compte les liaisons hydrogène d’une paire C≡G et d’une paire A=T.",
+     "explication": "Plus il y a de paires **C≡G** (trois liaisons hydrogène), plus il faut de chaleur pour séparer les brins : la Tm augmente et la courbe se décale vers la droite. Les liaisons phosphodiester ne se rompent pas à la dénaturation."
+    }
+   ]
+  },
+  {
+   "chapitre": "151b3b5f-5aa0-5587-acdf-27aedaa1051f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Extraire l’ADN d’un prélèvement de salive",
+   "competence": "calculer",
+   "situation": "Trois extraits d’ADN double brin ont été préparés à partir de salive, puis dosés au spectrophotomètre après dilution. Pour l’ADN double brin, une absorbance de 1 à 260 nm correspond à 50 µg·mL⁻¹.",
+   "documents": [
+    {
+     "id": "extraits",
+     "type": "tableau",
+     "titre": "Dosage des trois extraits",
+     "colonnes": [
+      "Extrait",
+      "Dilution",
+      "A260",
+      "A280"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1/20",
+       "0,40",
+       "0,22"
+      ],
+      [
+       "B",
+       "1/20",
+       "0,30",
+       "0,20"
+      ],
+      [
+       "C",
+       "1/10",
+       "0,15",
+       "0,08"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en ADN de l’extrait A avant dilution ?",
+     "reponse": 400,
+     "unite": "µg·mL⁻¹",
+     "aide": "Concentration mesurée = A260 × 50 ; il faut ensuite tenir compte de la dilution au 1/20.",
+     "explication": "Dans la cuve : 0,40 × 50 = 20 µg·mL⁻¹. L’extrait a été dilué 20 fois : 20 × 20 = **400 µg·mL⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rapport A260 / A280 de l’extrait B.",
+     "reponse": 1.5,
+     "tolerance": 0.05,
+     "aide": "Divise l’absorbance à 260 nm par celle à 280 nm.",
+     "explication": "0,30 ÷ 0,20 = **1,5**. Un ADN pur donne environ 1,8 : ici, des protéines ont été entraînées avec l’ADN."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel extrait faut-il purifier de nouveau ?",
+     "options": [
+      "L’extrait B, car son rapport A260 / A280 est nettement inférieur à 1,8 : il reste des protéines",
+      "L’extrait A, car son rapport A260 / A280 est trop proche de 1,8 pour que la mesure soit fiable",
+      "L’extrait C, car sa dilution est la plus faible des trois et fausse le rapport A260 / A280",
+      "Aucun extrait, car les trois absorbances à 260 nm dépassent déjà la valeur de 0,10"
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque rapport A260 / A280 à la valeur d’un ADN pur.",
+     "explication": "Le rapport de B vaut 1,5 alors qu’un ADN pur est proche de **1,8** : l’extrait B est contaminé par des protéines. Le rapport ne dépend pas de la dilution."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de l’extraction de l’ADN dans l’ordre.",
+     "items": [
+      "Lyser les cellules avec un détergent",
+      "Éliminer les protéines avec une protéase ou du sel",
+      "Précipiter l’ADN avec de l’éthanol froid",
+      "Contrôler la solution au spectrophotomètre"
+     ],
+     "aide": "Il faut d’abord ouvrir les cellules, et on ne contrôle qu’à la fin.",
+     "explication": "Lyse, **déprotéinisation**, **précipitation à l’éthanol froid**, puis contrôle : les protéines, dont les nucléases, doivent partir avant de récupérer l’ADN."
+    }
+   ]
+  },
+  {
+   "chapitre": "151b3b5f-5aa0-5587-acdf-27aedaa1051f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un taxol contre la prolifération",
+   "competence": "analyser-document",
+   "situation": "Des cellules en culture sont observées au cytomètre en flux, qui classe chaque cellule selon sa quantité d’ADN. Une partie de la culture a reçu du taxol, une substance qui bloque la mitose.",
+   "documents": [
+    {
+     "id": "cyto",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Répartition des cellules selon leur quantité d’ADN",
+     "categories": [
+      "2n (G1)",
+      "Entre 2n et 4n (S)",
+      "4n (G2 et mitose)"
+     ],
+     "series": [
+      {
+       "nom": "Témoin",
+       "valeurs": [
+        60,
+        25,
+        15
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Avec taxol",
+       "valeurs": [
+        20,
+        15,
+        65
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Cellules",
+      "unite": "%",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Quantité d’ADN"
+     },
+     "valeurs": false,
+     "source": "Résultats imaginés pour l’exercice"
+    },
+    {
+     "id": "contact",
+     "type": "tableau",
+     "titre": "Deux cultures observées à confluence",
+     "colonnes": [
+      "Culture",
+      "Couches de cellules",
+      "Division au contact des voisines"
+     ],
+     "lignes": [
+      [
+       "Cellules normales",
+       "1 seule couche",
+       "s’arrête"
+      ],
+      [
+       "Cellules tumorales",
+       "plusieurs couches",
+       "continue"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cyto",
+     "enonce": "Touche la catégorie où le taxol fait s’accumuler les cellules.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la catégorie où la barre « Avec taxol » dépasse nettement celle du témoin.",
+     "explication": "Les cellules traitées s’accumulent à **4n** : 65 % contre 15 % pour le témoin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage la part des cellules à 4n augmente-t-elle avec le taxol ?",
+     "reponse": 50,
+     "unite": "points",
+     "aide": "Soustrais la part du témoin à celle des cellules traitées.",
+     "explication": "65 − 15 = **50 points** de pourcentage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les cellules traitées restent-elles à 4n ?",
+     "options": [
+      "Elles ont répliqué leur ADN en phase S mais, la mitose étant bloquée, elles ne peuvent pas se diviser",
+      "Elles n’ont pas pu répliquer leur ADN en phase S, si bien qu’elles gardent deux copies de chaque chromosome",
+      "Elles ont terminé leur mitose mais ne parviennent plus à décondenser leurs chromosomes en phase G1",
+      "Elles ont perdu la moitié de leur génome à chaque division, ce que le taxol empêche de compenser"
+     ],
+     "reponse": 0,
+     "aide": "Une cellule à 4n a déjà doublé son ADN. Que lui manque-t-il pour se diviser ?",
+     "explication": "Le taxol agit sur la **mitose** : l’ADN a été doublé en phase S (4n), mais la cellule ne peut pas se diviser et reste bloquée avant de revenir à 2n."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, pourquoi les cellules tumorales forment-elles plusieurs couches ?",
+     "options": [
+      "Elles continuent à se diviser au contact de leurs voisines : elles ont perdu l’inhibition de contact",
+      "Elles se divisent moins vite que les cellules normales, ce qui les oblige à s’empiler sur leurs voisines",
+      "Elles perdent leur adhérence au fond de la boîte, si bien qu’elles arrêtent toute division cellulaire",
+      "Elles reçoivent plus de nutriments que les cellules normales, ce qui stoppe le contrôle de leur cycle"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne du tableau.",
+     "explication": "Dans la culture normale, la division **s’arrête au contact**. Les cellules tumorales ont perdu cette inhibition de contact : elles prolifèrent et s’empilent."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3f400f6-4ef2-5a71-ad76-a6be509924ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une bactérie en coupe",
+   "competence": "observer-schema",
+   "situation": "Une bactérie est un procaryote : elle n’a pas de noyau. Le schéma en montre une en coupe, avec trois repères lettrés.",
+   "documents": [
+    {
+     "id": "bact",
+     "type": "schema",
+     "titre": "Une bactérie en coupe (schéma simplifié)",
+     "largeur": 340,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 100,
+       "rx": 140,
+       "ry": 75,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 100,
+       "rx": 128,
+       "ry": 63,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 145,
+       "cy": 100,
+       "rx": 62,
+       "ry": 32,
+       "teinte": "encre",
+       "motif": "points"
+      },
+      {
+       "forme": "cercle",
+       "cx": 255,
+       "cy": 98,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 52,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 55,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 148,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 145,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 175,
+       "cy": 150,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 145,
+       "cy": 100,
+       "r": 11,
+       "texte": "A",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 255,
+       "cy": 98,
+       "r": 11,
+       "texte": "B",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 35,
+       "cy": 100,
+       "r": 11,
+       "texte": "C",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 200,
+       "texte": "Bactérie (coupe)",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche la lettre qui marque le chromosome bactérien, la grande molécule d’ADN circulaire.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le chromosome occupe la grande zone centrale, sans membrane autour.",
+     "explication": "Le chromosome bactérien (repère **A**) baigne dans le cytoplasme : c’est le nucléoïde, sans enveloppe nucléaire."
+    },
+    {
+     "type": "zone",
+     "document": "bact",
+     "enonce": "Touche la lettre qui marque le plasmide, la petite molécule d’ADN qui peut porter un gène de résistance à un antibiotique.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche la petite boucle d’ADN, distincte du chromosome.",
+     "explication": "Le **plasmide** (repère B) est une petite molécule d’ADN extrachromosomique, souvent porteuse de gènes de résistance."
+    },
+    {
+     "type": "choix",
+     "enonce": "On place dans de l’eau pure une bactérie dont on a détruit la structure C avec du lysozyme. Que lui arrive-t-il ?",
+     "options": [
+      "Elle éclate, car sans sa paroi elle ne résiste plus à l’entrée d’eau dans la cellule",
+      "Elle se dessèche, car sans sa paroi elle perd son eau vers le milieu extérieur très pur",
+      "Elle survit sans changement, car sa membrane suffit à résister à l’entrée d’eau en grande quantité",
+      "Elle se divise plus vite, car sans sa paroi elle n’est plus limitée dans la croissance de sa taille"
+     ],
+     "reponse": 0,
+     "aide": "La structure C est la paroi. À quoi sert-elle quand l’eau entre dans la cellule ?",
+     "explication": "La paroi (repère C) **résiste à la lyse osmotique** : sans elle, l’eau entre, la cellule gonfle et **éclate**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3f400f6-4ef2-5a71-ad76-a6be509924ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Contrôler la qualité d’une eau",
+   "competence": "lire-tableau",
+   "situation": "Un laboratoire dénombre les bactéries d’un prélèvement, puis compare trois eaux à un critère imaginé pour l’exercice : une eau de boisson ne doit contenir aucun E. coli dans 100 mL.",
+   "documents": [
+    {
+     "id": "denombre",
+     "type": "tableau",
+     "titre": "Dénombrement : 1 mL de chaque dilution étalé sur gélose",
+     "colonnes": [
+      "Dilution",
+      "Colonies comptées"
+     ],
+     "lignes": [
+      [
+       "10⁻²",
+       "plus de 300"
+      ],
+      [
+       "10⁻³",
+       "120"
+      ],
+      [
+       "10⁻⁴",
+       "11"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "On ne compte que les boîtes de 30 à 300 colonies."
+    },
+    {
+     "id": "eaux",
+     "type": "tableau",
+     "titre": "Flores indicatrices dans trois eaux",
+     "colonnes": [
+      "Eau",
+      "Coliformes (pour 100 mL)",
+      "E. coli (pour 100 mL)"
+     ],
+     "lignes": [
+      [
+       "Puits",
+       "12",
+       "0"
+      ],
+      [
+       "Source",
+       "40",
+       "3"
+      ],
+      [
+       "Robinet",
+       "0",
+       "0"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle dilution faut-il utiliser pour calculer la concentration de l’échantillon ?",
+     "options": [
+      "La dilution 10⁻³, car son nombre de colonies est compris entre 30 et 300",
+      "La dilution 10⁻², car elle porte le plus de colonies et donne ainsi la mesure la plus précise",
+      "La dilution 10⁻⁴, car ses colonies sont assez peu nombreuses pour être comptées sans aucune erreur",
+      "Les trois dilutions, dont on fait la moyenne pour réduire au maximum l’erreur de comptage"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la règle de comptage donnée sous le premier tableau.",
+     "explication": "Seule la boîte **10⁻³** (120 colonies) est dans la plage de 30 à 300 : trop de colonies se touchent et se confondent, trop peu donnent une mesure imprécise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’UFC (unités formant colonie) par mL contient l’échantillon de départ ?",
+     "reponse": 120000,
+     "unite": "UFC·mL⁻¹",
+     "aide": "Multiplie le nombre de colonies par l’inverse de la dilution. On a étalé 1 mL.",
+     "explication": "120 colonies pour 1 mL de dilution 10⁻³ : 120 × 10³ = **120 000 UFC·mL⁻¹** (soit 1,2 × 10⁵)."
+    },
+    {
+     "type": "zone",
+     "document": "eaux",
+     "enonce": "Touche la case qui révèle une contamination fécale.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la seule case de la colonne E. coli qui n’est pas nulle.",
+     "explication": "Les 3 *E. coli* de la source signalent une **contamination fécale** : cette eau ne respecte pas le critère."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3f400f6-4ef2-5a71-ad76-a6be509924ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le VIH, du récepteur au bourgeonnement",
+   "competence": "analyser-document",
+   "situation": "Le VIH est un rétrovirus à ARN qui infecte les lymphocytes T4. Le premier document résume son cycle dans une cellule ; le second suit le nombre de T4 d’un patient non traité. Seuil retenu ici pour le stade sida : moins de 200 T4 par mm³.",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Fixation sur le récepteur CD4"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Intégration de l’ADN viral au génome hôte"
+      },
+      {
+       "id": "n4",
+       "texte": "Synthèse des protéines virales"
+      },
+      {
+       "id": "n5",
+       "texte": "Bourgeonnement de nouveaux virus"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "t4",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Lymphocytes T4 d’un patient non traité",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "T4",
+       "valeurs": [
+        900,
+        850,
+        780,
+        700,
+        620,
+        520,
+        420,
+        320,
+        220,
+        150,
+        90
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Lymphocytes T4",
+      "unite": "par mm³",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Années depuis l’infection"
+     },
+     "valeurs": false,
+     "source": "Valeurs idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque à la place du point d’interrogation ?",
+     "options": [
+      "La transcriptase inverse copie l’ARN viral en ADN, qui pourra ensuite s’intégrer",
+      "La cellule traduit directement l’ARN viral en ADN grâce à ses propres enzymes",
+      "La protéase virale découpe l’ADN de la cellule pour y loger l’ARN du virus",
+      "L’enveloppe du virus fusionne avec le noyau pour y déposer son ARN intact"
+     ],
+     "reponse": 0,
+     "aide": "Le virus a un génome à ARN, la cellule a un génome à ADN : que faut-il faire entre les deux ?",
+     "explication": "Le génome du VIH est un **ARN** : la transcriptase inverse le copie en **ADN**, qui peut alors être intégré."
+    },
+    {
+     "type": "zone",
+     "document": "cycle",
+     "enonce": "Un médicament inhibe la transcriptase inverse. Touche l’étape qu’il bloque.",
+     "reponse": [
+      "n2"
+     ],
+     "aide": "Quelle étape est assurée par cette enzyme ?",
+     "explication": "Il bloque la **transcription inverse** (étape 2) : sans ADN viral, il n’y a ni intégration ni production de nouveaux virus."
+    },
+    {
+     "type": "zone",
+     "document": "t4",
+     "enonce": "Touche le premier point sous le seuil de 200 T4 par mm³.",
+     "reponse": [
+      "k9"
+     ],
+     "aide": "Cherche la première année où la courbe passe sous 200.",
+     "explication": "À l’année 8 il reste 220 T4 ; à l’année **9**, 150 : c’est le premier point sous le seuil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de T4 par mm³ ce patient a-t-il perdus entre l’année 5 et l’année 9 ?",
+     "reponse": 370,
+     "unite": "par mm³",
+     "tolerance": 10,
+     "aide": "Lis les deux valeurs sur la courbe, puis soustrais.",
+     "explication": "Année 5 : 520 ; année 9 : 150. Perte : 520 − 150 = **370 T4 par mm³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un traitement antirétroviral contrôle-t-il le virus sans l’éliminer ?",
+     "options": [
+      "L’ADN viral intégré reste dans le génome de certaines cellules et reprend son activité si on arrête",
+      "Le virus se transforme en plasmide bactérien que les médicaments ne savent pas reconnaître",
+      "Les antirétroviraux se comportent comme des anticorps qui n’agissent que sur les virus libres",
+      "Le virus quitte l’organisme pendant le traitement et y revient à chaque nouvelle infection"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’étape 3 du cycle.",
+     "explication": "Les médicaments visent les enzymes du virus, mais l’ADN intégré (étape 3) **reste latent** dans certaines cellules : il ne disparaît pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "51b44c0d-6c8f-5fe1-b289-f61b6f2baeb2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les phases d’une culture bactérienne",
+   "competence": "lire-graphique",
+   "situation": "Une bactérie est cultivée dans un volume fixe de milieu, sans rien ajouter ni retirer. On suit le logarithme décimal du nombre de bactéries par mL.",
+   "documents": [
+    {
+     "id": "crois",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Croissance en milieu non renouvelé",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "log N",
+       "valeurs": [
+        3,
+        3,
+        3.2,
+        3.8,
+        4.4,
+        5,
+        5.6,
+        6,
+        6.2,
+        6.2,
+        6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "log N",
+      "min": 0,
+      "max": 7,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (h)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crois",
+     "enonce": "Touche le dernier point de la phase de latence, avant que la population ne commence à augmenter.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Pendant la latence, la valeur ne change pas.",
+     "explication": "La valeur reste à 3,0 jusqu’à **1 h** : la latence est l’adaptation au milieu, sans division."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bactéries par mL y a-t-il à t = 0 ? (log N = 3,0)",
+     "reponse": 1000,
+     "unite": "bactéries·mL⁻¹",
+     "aide": "log N = 3 signifie que N = 10 à la puissance 3.",
+     "explication": "log N = 3,0 donc N = 10³ = **1 000 bactéries·mL⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 8 h et 9 h, la courbe est plate. Que se passe-t-il ?",
+     "options": [
+      "La vitesse de croissance est nulle : autant de bactéries meurent que de nouvelles se divisent",
+      "Les bactéries cessent de vivre : la mort l’emporte alors nettement sur les divisions dans la culture",
+      "Les bactéries s’adaptent au milieu et se préparent à se diviser en synthétisant leurs enzymes",
+      "Les bactéries se divisent à vitesse maximale, mais le spectrophotomètre n’est plus assez sensible"
+     ],
+     "reponse": 0,
+     "aide": "Une courbe plate veut dire que la population ne change plus.",
+     "explication": "C’est la **phase stationnaire** : les divisions compensent exactement les morts, le nombre de bactéries vivantes reste constant."
+    }
+   ]
+  },
+  {
+   "chapitre": "51b44c0d-6c8f-5fe1-b289-f61b6f2baeb2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le temps de génération à deux températures",
+   "competence": "calculer",
+   "situation": "Deux cultures de la même bactérie sont placées à 37 °C et à 25 °C. On compte les bactéries au début et après 120 min, toujours en phase exponentielle.",
+   "documents": [
+    {
+     "id": "temp",
+     "type": "tableau",
+     "titre": "Dénombrements à deux températures",
+     "colonnes": [
+      "Température",
+      "N à 0 min (bactéries·mL⁻¹)",
+      "N à 120 min (bactéries·mL⁻¹)"
+     ],
+     "lignes": [
+      [
+       "37 °C",
+       "2 × 10⁵",
+       "3,2 × 10⁶"
+      ],
+      [
+       "25 °C",
+       "2 × 10⁵",
+       "8 × 10⁵"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de générations a-t-il fallu à 37 °C pour passer de 2 × 10⁵ à 3,2 × 10⁶ bactéries·mL⁻¹ ?",
+     "reponse": 4,
+     "aide": "Le rapport des populations est une puissance de 2 : 2ⁿ.",
+     "explication": "3,2 × 10⁶ ÷ 2 × 10⁵ = 16 = 2⁴ : **4 générations**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le temps de génération à 37 °C ?",
+     "reponse": 30,
+     "unite": "min",
+     "aide": "G = durée ÷ nombre de générations.",
+     "explication": "G = 120 ÷ 4 = **30 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux de croissance µ à 37 °C (µ = 0,69 ÷ G), en min⁻¹.",
+     "reponse": 0.023,
+     "unite": "min⁻¹",
+     "tolerance": 0.001,
+     "aide": "Utilise la valeur de G que tu viens de trouver.",
+     "explication": "µ = 0,69 ÷ 30 ≈ **0,023 min⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure pour la culture à 25 °C ?",
+     "options": [
+      "G vaut 60 min : deux générations seulement en 120 min, la croissance est deux fois plus lente",
+      "G vaut 30 min : comme à 37 °C, car le rapport des populations reste supérieur à 1 dans les deux cultures",
+      "G vaut 15 min : la population est multipliée par 4, donc la croissance est plus rapide qu’à 37 °C",
+      "G vaut 120 min : une seule génération a eu lieu, car la population n’a pas été multipliée par 16"
+     ],
+     "reponse": 0,
+     "aide": "Calcule d’abord le rapport des populations, puis le nombre de générations.",
+     "explication": "8 × 10⁵ ÷ 2 × 10⁵ = 4 = 2² : **2 générations** en 120 min, donc G = 60 min. Le froid **allonge** le temps de génération."
+    }
+   ]
+  },
+  {
+   "chapitre": "51b44c0d-6c8f-5fe1-b289-f61b6f2baeb2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un antibiogramme à interpréter",
+   "competence": "analyser-document",
+   "situation": "Trois disques d’antibiotiques A, B et C sont posés sur une gélose ensemencée en nappe. Valeurs critiques imaginées pour l’exercice : souche sensible si le diamètre est d’au moins 22 mm, résistante s’il est inférieur à 18 mm. Le disque mesure 6 mm.",
+   "documents": [
+    {
+     "id": "abg",
+     "type": "schema",
+     "titre": "Gélose après 24 h d’incubation (vue de dessus)",
+     "largeur": 340,
+     "hauteur": 245,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 118,
+       "r": 100,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 88,
+       "r": 40,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 88,
+       "r": 30,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 88,
+       "r": 11,
+       "texte": "A",
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 88,
+       "r": 11,
+       "texte": "B",
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 163,
+       "r": 11,
+       "texte": "C",
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 125,
+       "y": 140,
+       "texte": "26 mm",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 215,
+       "y": 134,
+       "texte": "20 mm",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 190,
+       "texte": "6 mm",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 240,
+       "texte": "Diamètres des zones d’inhibition",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "cmi",
+     "type": "tableau",
+     "titre": "Antibiotique A : recherche de la CMI en milieu liquide",
+     "colonnes": [
+      "Concentration (µg·mL⁻¹)",
+      "0,5",
+      "1",
+      "2",
+      "4",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Croissance visible",
+       "oui",
+       "oui",
+       "oui",
+       "non",
+       "non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abg",
+     "enonce": "Touche le disque autour duquel aucune zone d’inhibition n’apparaît.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Une zone de 6 mm, c’est le disque lui-même.",
+     "explication": "Autour du disque **C**, le diamètre est de 6 mm, celui du disque : l’antibiotique n’inhibe pas la croissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment interpréter le résultat pour l’antibiotique B (20 mm) ?",
+     "options": [
+      "Intermédiaire, car 20 mm est compris entre les deux valeurs critiques, 18 et 22 mm",
+      "Sensible, car sa zone d’inhibition est bien visible et dépasse largement le diamètre du disque",
+      "Résistante, car 20 mm est inférieur au diamètre de la zone de l’antibiotique A, qui sert de référence",
+      "Impossible à interpréter, car une seule mesure ne permet pas de comparer avec les valeurs critiques"
+     ],
+     "reponse": 0,
+     "aide": "Compare 20 mm aux deux valeurs critiques de la situation.",
+     "explication": "20 mm est à la fois inférieur à 22 mm (pas sensible) et supérieur ou égal à 18 mm (pas résistante) : la souche est **intermédiaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la CMI de l’antibiotique A, en µg·mL⁻¹ ?",
+     "reponse": 4,
+     "unite": "µg·mL⁻¹",
+     "aide": "La CMI est la plus petite concentration sans aucune croissance visible.",
+     "explication": "Pas de croissance à partir de 4 µg·mL⁻¹ : la **CMI est de 4 µg·mL⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le disque C contient de la vancomycine, et tous les bacilles Gram négatif testés ainsi ne montrent aucune zone. Quelle est l’explication ?",
+     "options": [
+      "Une résistance naturelle : la membrane externe des Gram négatif empêche la vancomycine d’agir",
+      "Une résistance acquise : chaque bacille a reçu un plasmide portant un gène de résistance à la vancomycine",
+      "Une erreur de manipulation : un antibiotique actif doit toujours produire une zone autour de son disque",
+      "Une sensibilité : l’absence de zone montre que la vancomycine a tué toutes les bactéries sous le disque"
+     ],
+     "reponse": 0,
+     "aide": "Toute une espèce est concernée : pense à la paroi des Gram négatif.",
+     "explication": "Une résistance qui touche **toute l’espèce** est naturelle : la membrane externe des Gram négatif bloque la vancomycine."
+    }
+   ]
+  },
+  {
+   "chapitre": "68bcaab4-2f96-565f-ae7b-6ec058962bd0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois tubes de gélose profonde",
+   "competence": "observer-schema",
+   "situation": "Pour connaître le type respiratoire d’une bactérie, on l’ensemence dans une gélose profonde, sans agitation. Chaque point du schéma est une colonie apparue après incubation.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "schema",
+     "titre": "Trois souches en gélose profonde",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 25,
+       "l": 60,
+       "h": 155,
+       "arrondi": 12,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 25,
+       "l": 60,
+       "h": 155,
+       "arrondi": 12,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 25,
+       "l": 60,
+       "h": 155,
+       "arrondi": 12,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 45,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 62,
+       "cy": 42,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 72,
+       "cy": 46,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 58,
+       "cy": 52,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 68,
+       "cy": 54,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 46,
+       "cy": 54,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 48,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 175,
+       "cy": 44,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 188,
+       "cy": 52,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 75,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 182,
+       "cy": 90,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 110,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 178,
+       "cy": 128,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 145,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 166,
+       "cy": 160,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 168,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 155,
+       "cy": 95,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 185,
+       "cy": 115,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 150,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 282,
+       "cy": 146,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 294,
+       "cy": 152,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 276,
+       "cy": 160,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 288,
+       "cy": 164,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 266,
+       "cy": 168,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 298,
+       "cy": 168,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 172,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 205,
+       "r": 11,
+       "texte": "A",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 205,
+       "r": 11,
+       "texte": "B",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 205,
+       "r": 11,
+       "texte": "C",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 234,
+       "texte": "Surface en haut, fond en bas",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la lettre du tube qui contient une bactérie aérobie stricte.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Une bactérie aérobie stricte a besoin de dioxygène : où y en a-t-il le plus ?",
+     "explication": "Elle pousse **en surface**, là où le dioxygène de l’air diffuse : tube A."
+    },
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la lettre du tube qui contient une bactérie anaérobie stricte.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Une anaérobie stricte est tuée par le dioxygène : elle reste loin de la surface.",
+     "explication": "Elle pousse **au fond**, là où le dioxygène n’arrive pas : tube C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le tube B montre des colonies sur toute la hauteur. De quel type respiratoire s’agit-il ?",
+     "options": [
+      "Aéro-anaérobie facultatif : la bactérie se développe avec ou sans dioxygène",
+      "Aérobie stricte : la bactérie consomme le dioxygène dissous sur toute la hauteur du tube",
+      "Anaérobie stricte : la bactérie se développe en profondeur mais reste sensible à l’air",
+      "Microaérophile : la bactérie ne tolère qu’une faible teneur en dioxygène, juste sous la surface"
+     ],
+     "reponse": 0,
+     "aide": "Elle pousse partout : le dioxygène n’est ni nécessaire ni gênant.",
+     "explication": "Elle pousse **partout**, donc avec ou sans dioxygène : c’est un **aéro-anaérobie facultatif**."
+    }
+   ]
+  },
+  {
+   "chapitre": "68bcaab4-2f96-565f-ae7b-6ec058962bd0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Staphylococcus ou Streptococcus ?",
+   "competence": "raisonner",
+   "situation": "Un laboratoire isole une souche pure S et suit une clé dichotomique pour l’orienter vers un genre bactérien.",
+   "documents": [
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Résultats de la souche S",
+     "colonnes": [
+      "Caractère",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Forme et Gram",
+       "coques Gram positif, en amas"
+      ],
+      [
+       "Catalase",
+       "positive : des bulles apparaissent"
+      ],
+      [
+       "Mobilité",
+       "immobile"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "cle",
+     "type": "schema",
+     "titre": "Clé dichotomique (extrait)",
+     "largeur": 340,
+     "hauteur": 185,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 15,
+       "l": 150,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "Coques Gram positif"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        55
+       ],
+       "a": [
+        85,
+        120
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        55
+       ],
+       "a": [
+        255,
+        120
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 92,
+       "texte": "Catalase +",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 92,
+       "texte": "Catalase −",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 120,
+       "l": 150,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "Staphylococcus",
+       "id": "staph",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 120,
+       "l": 150,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "encre",
+       "motif": "clair",
+       "texte": "Streptococcus",
+       "id": "strepto",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cle",
+     "enonce": "Touche le genre vers lequel la clé oriente la souche S.",
+     "reponse": [
+      "staph"
+     ],
+     "aide": "Relis le résultat du test de la catalase dans le premier tableau.",
+     "explication": "Coques Gram positif et catalase positive : la clé mène à **Staphylococcus**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel témoin négatif valide le test de la catalase ?",
+     "options": [
+      "Une souche de Streptococcus connue comme catalase négative, qui ne doit produire aucune bulle",
+      "Une colonie de la souche S elle-même, qui doit produire des bulles au contact de l’eau oxygénée",
+      "Une souche de Staphylococcus connue comme catalase positive, qui ne doit produire aucune bulle",
+      "De l’eau oxygénée seule, sans aucune colonie, qui doit produire un grand nombre de bulles"
+     ],
+     "reponse": 0,
+     "aide": "Un témoin négatif est une souche connue pour ne PAS réagir.",
+     "explication": "Le témoin négatif est une souche **connue négative** : elle ne doit pas réagir. Si elle produisait des bulles, le test serait invalide."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel réactif met-on au contact d’une colonie pour rechercher la catalase ?",
+     "reponse": [
+      "eau oxygénée",
+      "l’eau oxygénée",
+      "peroxyde d’hydrogène",
+      "le peroxyde d’hydrogène",
+      "H2O2",
+      "H₂O₂"
+     ],
+     "placeholder": "Un nom de réactif",
+     "aide": "La catalase détruit cette molécule en libérant du dioxygène.",
+     "explication": "On utilise de l’**eau oxygénée** (peroxyde d’hydrogène, H₂O₂) : la catalase la détruit et libère du dioxygène, d’où les bulles."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les grandes étapes d’une identification bactérienne.",
+     "items": [
+      "Isoler une colonie pour obtenir une souche pure",
+      "Observer les colonies et réaliser la coloration de Gram",
+      "Réaliser les tests métaboliques avec leurs témoins",
+      "Comparer les résultats à une clé ou à une base de données"
+     ],
+     "aide": "On ne teste qu’une souche pure, et on conclut en comparant.",
+     "explication": "Souche **pure** d’abord, caractères morphologiques, tests métaboliques **avec témoins**, puis comparaison des résultats à une clé ou une base."
+    }
+   ]
+  },
+  {
+   "chapitre": "68bcaab4-2f96-565f-ae7b-6ec058962bd0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lire le profil d’une micro-galerie",
+   "competence": "modeliser",
+   "situation": "Une micro-galerie comporte six tests, lus par groupes de trois. Dans chaque groupe, un test positif vaut 1, 2 ou 4, selon sa place ; on additionne les valeurs des tests positifs pour obtenir un chiffre.",
+   "documents": [
+    {
+     "id": "galerie",
+     "type": "tableau",
+     "titre": "Lecture de la galerie",
+     "colonnes": [
+      "Test",
+      "Valeur si positif",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Test 1",
+       "1",
+       "+"
+      ],
+      [
+       "Test 2",
+       "2",
+       "−"
+      ],
+      [
+       "Test 3",
+       "4",
+       "+"
+      ],
+      [
+       "Test 4",
+       "1",
+       "−"
+      ],
+      [
+       "Test 5",
+       "2",
+       "+"
+      ],
+      [
+       "Test 6",
+       "4",
+       "+"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "catalogue",
+     "type": "tableau",
+     "titre": "Extrait du catalogue d’identification",
+     "colonnes": [
+      "Profil",
+      "Espèce",
+      "Identification"
+     ],
+     "lignes": [
+      [
+       "54",
+       "Espèce X",
+       "70 %"
+      ],
+      [
+       "56",
+       "Espèce Y",
+       "96 %"
+      ],
+      [
+       "16",
+       "Espèce Z",
+       "91 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Noms d’espèces fictifs"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Écris le profil numérique de la souche.",
+     "texte": "Le premier chiffre est ___ et le second chiffre est ___.",
+     "reponses": [
+      [
+       "5"
+      ],
+      [
+       "6"
+      ]
+     ],
+     "aide": "Additionne seulement les valeurs des tests positifs, groupe par groupe.",
+     "explication": "Groupe 1 : tests 1 et 3 positifs, 1 + 4 = **5**. Groupe 2 : tests 5 et 6 positifs, 2 + 4 = **6**. Profil : 56."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle espèce le catalogue propose-t-il pour ce profil ?",
+     "options": [
+      "L’espèce Y, avec une identification de 96 %",
+      "L’espèce X, avec une identification de 70 %, car son profil est le plus proche",
+      "L’espèce Z, avec une identification de 91 %, car elle est la plus fréquente",
+      "Aucune espèce : le catalogue ne donne rien pour un profil à deux chiffres"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la ligne dont le profil est exactement celui que tu as calculé.",
+     "explication": "Le profil 56 correspond à l’**espèce Y** (96 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le test 5 est lu négatif par erreur. Quel serait alors le profil complet ?",
+     "reponse": 54,
+     "aide": "Le second chiffre perd la valeur du test 5.",
+     "explication": "Second groupe : seul le test 6 est positif, il reste 4. Le profil devient **54**, qui mène à l’espèce X à 70 % : une erreur de lecture change l’espèce proposée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le témoin négatif de la galerie donne un test positif. Que faut-il faire ?",
+     "options": [
+      "Considérer la galerie comme invalide et la recommencer, car un réactif ou une manipulation est en cause",
+      "Garder le profil obtenu, car seuls les tests de l’échantillon comptent dans la lecture de la galerie",
+      "Retirer ce test du profil et identifier la souche avec les cinq tests restants de la galerie",
+      "Compter ce test comme négatif pour la souche, car le témoin a déjà réagi pour elle"
+     ],
+     "reponse": 0,
+     "aide": "Un témoin négatif ne doit jamais réagir.",
+     "explication": "Un témoin négatif qui réagit signale une **réaction parasite** : la galerie n’a aucune valeur et doit être refaite."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c522328-b9f4-5090-93d1-4e4172fdd5d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les étapes d’un ELISA sandwich",
+   "competence": "observer-schema",
+   "situation": "Un ELISA sandwich détecte un antigène dans un échantillon. Le schéma résume la procédure dans un puits de microplaque.",
+   "documents": [
+    {
+     "id": "elisa",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Un ELISA sandwich",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Anticorps de capture fixé au fond du puits"
+      },
+      {
+       "id": "n2",
+       "texte": "Antigène de l’échantillon fixé, puis lavage"
+      },
+      {
+       "id": "n3",
+       "texte": "Anticorps conjugué à une enzyme, puis lavage"
+      },
+      {
+       "id": "n4",
+       "texte": "Substrat chromogène ajouté"
+      },
+      {
+       "id": "n5",
+       "texte": "Couleur proportionnelle à la quantité d’antigène"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "elisa",
+     "enonce": "Touche l’étape où l’on ajoute la molécule qui porte l’enzyme.",
+     "reponse": [
+      "n3"
+     ],
+     "aide": "L’enzyme est couplée à un second anticorps.",
+     "explication": "L’enzyme est portée par l’**anticorps conjugué** (étape 3)."
+    },
+    {
+     "type": "zone",
+     "document": "elisa",
+     "enonce": "Touche l’étape où l’on ajoute la molécule que l’enzyme transforme en produit coloré.",
+     "reponse": [
+      "n4"
+     ],
+     "aide": "Cette molécule se nomme « substrat chromogène ».",
+     "explication": "L’enzyme transforme le **substrat chromogène** (étape 4) en produit coloré."
+    },
+    {
+     "type": "choix",
+     "enonce": "On oublie le lavage après l’ajout du conjugué. Que voit-on ?",
+     "options": [
+      "Tous les puits se colorent, car le conjugué libre transforme le substrat même sans antigène",
+      "Aucun puits ne se colore, car le conjugué en excès détruit l’antigène qui était fixé au fond",
+      "Seuls les puits contenant l’antigène se colorent, comme si le lavage avait bien été fait",
+      "Seul le puits du témoin positif se colore, car les autres puits sont vidés par l’oubli du lavage"
+     ],
+     "reponse": 0,
+     "aide": "À quoi sert un lavage : que retire-t-il ?",
+     "explication": "Sans lavage, le conjugué **resté libre** colore tous les puits : le résultat n’a plus de valeur."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c522328-b9f4-5090-93d1-4e4172fdd5d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Groupage sanguin sur lame",
+   "competence": "lire-tableau",
+   "situation": "Quatre patients sont testés avec trois réactifs contenant des anticorps : anti-A, anti-B et anti-D. Une goutte de sang est mélangée à chaque réactif, sur une lame.",
+   "documents": [
+    {
+     "id": "groupage",
+     "type": "tableau",
+     "titre": "Résultats de l’agglutination",
+     "colonnes": [
+      "Sang de",
+      "Anti-A",
+      "Anti-B",
+      "Anti-D"
+     ],
+     "lignes": [
+      [
+       "Patient 1",
+       "agglutine",
+       "non",
+       "agglutine"
+      ],
+      [
+       "Patient 2",
+       "non",
+       "agglutine",
+       "non"
+      ],
+      [
+       "Patient 3",
+       "non",
+       "non",
+       "non"
+      ],
+      [
+       "Patient 4",
+       "agglutine",
+       "agglutine",
+       "agglutine"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque patient à son groupe sanguin.",
+     "paires": [
+      [
+       "Patient 1",
+       "A positif"
+      ],
+      [
+       "Patient 2",
+       "B négatif"
+      ],
+      [
+       "Patient 3",
+       "O négatif"
+      ],
+      [
+       "Patient 4",
+       "AB positif"
+      ]
+     ],
+     "aide": "Anti-A et anti-B donnent le groupe, anti-D donne le rhésus : agglutination = antigène présent.",
+     "explication": "**Patient 1** : A et D. **Patient 2** : B seul. **Patient 3** : aucun antigène, donc O négatif. **Patient 4** : A, B et D."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi voit-on des agglutinats à l’œil nu ?",
+     "options": [
+      "Chaque anticorps a deux bras et relie plusieurs globules rouges, qui forment des amas visibles",
+      "Chaque anticorps dissout la membrane des globules rouges, ce qui colore le mélange en rouge foncé",
+      "Chaque anticorps est couplé à une enzyme qui transforme un substrat en produit coloré visible",
+      "Chaque anticorps diffuse dans le sang et forme avec l’antigène un arc de précipitation en gel"
+     ],
+     "reponse": 0,
+     "aide": "Les antigènes sont ici portés par des cellules entières.",
+     "explication": "L’antigène est **particulaire** (globule rouge) : les anticorps à deux bras relient plusieurs cellules et forment des **agglutinats**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de ces patients portent l’antigène D (rhésus positif) ?",
+     "reponse": 2,
+     "aide": "Regarde la colonne anti-D.",
+     "explication": "Les patients 1 et 4 agglutinent avec l’anti-D : **2 patients**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c522328-b9f4-5090-93d1-4e4172fdd5d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Doser un antigène par ELISA",
+   "competence": "calculer",
+   "situation": "Une gamme d’étalonnage est réalisée en ELISA sandwich : l’absorbance à 450 nm est linéaire jusqu’à 100 ng·mL⁻¹ d’antigène. Deux patients sont testés ; le patient A a donné un résultat très élevé, refait après dilution au 1/10.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Absorbances mesurées",
+     "colonnes": [
+      "Échantillon",
+      "Absorbance à 450 nm"
+     ],
+     "lignes": [
+      [
+       "Témoin négatif",
+       "0,06"
+      ],
+      [
+       "Patient B",
+       "0,31"
+      ],
+      [
+       "Patient A (non dilué)",
+       "1,40"
+      ],
+      [
+       "Patient A (dilué au 1/10)",
+       "0,55"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "gamme",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Gamme d’étalonnage",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "A450",
+       "valeurs": [
+        0.05,
+        0.25,
+        0.45,
+        0.65,
+        0.85,
+        1.05
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance à 450 nm",
+      "min": 0,
+      "max": 1.2,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Antigène (ng·mL⁻¹)"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en antigène du patient B ?",
+     "reponse": 26,
+     "unite": "ng·mL⁻¹",
+     "tolerance": 2,
+     "aide": "Trouve sur la gamme la concentration qui donne une absorbance de 0,31.",
+     "explication": "La droite passe de 0,25 (20 ng·mL⁻¹) à 0,45 (40) : 0,31 correspond à **26 ng·mL⁻¹** environ."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne peut-on pas utiliser l’absorbance de 1,40 du patient A non dilué ?",
+     "options": [
+      "Elle dépasse la valeur de la gamme, où la linéarité n’est pas démontrée : la concentration lue serait fausse",
+      "Elle est inférieure à celle du témoin négatif, ce qui montre que l’antigène est absent de l’échantillon",
+      "Elle correspond à une concentration négative, que la gamme d’étalonnage ne permet jamais de lire",
+      "Elle n’a de sens que si on la divise par la valeur du témoin négatif, qui n’a pas été refaite"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1,40 à la plus grande absorbance de la gamme.",
+     "explication": "1,40 est **au-dessus** du dernier point de la gamme (1,05) : on ne sait pas si la droite s’y prolonge. On dilue et on refait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en antigène du patient A dans l’échantillon de départ ?",
+     "reponse": 500,
+     "unite": "ng·mL⁻¹",
+     "aide": "Lis la concentration du tube dilué, puis tiens compte de la dilution au 1/10.",
+     "explication": "A = 0,55 donne 50 ng·mL⁻¹ dans le tube dilué ; l’échantillon de départ est 10 fois plus concentré : **500 ng·mL⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve un témoin négatif dont l’absorbance est de 0,06, proche du fond de la gamme ?",
+     "options": [
+      "Qu’il n’y a pas de réaction parasite : la couleur des puits vient bien de l’antigène dosé",
+      "Que le test est invalide, car un témoin négatif doit toujours donner une absorbance nulle",
+      "Que les réactifs ont perdu leur efficacité, puisque aucune couleur forte n’apparaît dans ce puits",
+      "Que l’échantillon du patient B est négatif, puisqu’il doit donner la même absorbance que lui"
+     ],
+     "reponse": 0,
+     "aide": "Un témoin négatif doit rester proche du fond du test.",
+     "explication": "Un absorbance très faible signale l’**absence de réaction parasite** : les lavages et les réactifs sont corrects, le test est valide."
+    }
+   ]
+  },
+  {
+   "chapitre": "54e2455c-b030-5cf3-b502-0efcb0d8826c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Après la centrifugation",
+   "competence": "observer-schema",
+   "situation": "On a broyé des cellules de foie dans un tampon, puis centrifugé l’extrait. Le schéma montre le tube à la fin de la centrifugation.",
+   "documents": [
+    {
+     "id": "tube",
+     "type": "schema",
+     "titre": "Un tube après centrifugation",
+     "largeur": 340,
+     "hauteur": 235,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 20,
+       "l": 100,
+       "h": 180,
+       "arrondi": 14,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 124,
+       "y": 26,
+       "l": 92,
+       "h": 120,
+       "arrondi": 6,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "surn",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 172,
+       "rx": 40,
+       "ry": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "culot",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 225,
+       "texte": "Tube après centrifugation",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche le culot.",
+     "reponse": [
+      "culot"
+     ],
+     "aide": "Le culot est ce qui a sédimenté : il est au fond du tube.",
+     "explication": "Le **culot** rassemble les éléments denses, tombés au fond sous l’effet de la rotation."
+    },
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche le surnageant.",
+     "reponse": [
+      "surn"
+     ],
+     "aide": "Le surnageant est le liquide qui reste au-dessus du culot.",
+     "explication": "Le **surnageant** est le liquide au-dessus du culot."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’enzyme cherchée est soluble dans le cytoplasme. Quelle fraction faut-il conserver ?",
+     "options": [
+      "Le surnageant, car les protéines solubles y sont restées alors que les débris ont sédimenté",
+      "Le culot, car il rassemble tout ce qui est dense, enzyme soluble comprise, après la rotation",
+      "Les deux fractions mélangées de nouveau, car la centrifugation détruit les enzymes solubles",
+      "Aucune des deux, car une enzyme soluble reste toujours sur la paroi du tube de centrifugation"
+     ],
+     "reponse": 0,
+     "aide": "Une protéine soluble ne sédimente pas.",
+     "explication": "Une enzyme soluble reste dans le **surnageant** ; le culot contient noyaux, débris et organites. On ne jette le culot qu’après avoir vérifié."
+    }
+   ]
+  },
+  {
+   "chapitre": "54e2455c-b030-5cf3-b502-0efcb0d8826c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une électrophorèse de fragments d’ADN",
+   "competence": "lire-graphique",
+   "situation": "Des fragments d’ADN sont séparés dans un gel d’agarose : le marqueur de taille M sert de référence. Les deux autres pistes, S1 et S2, contiennent deux échantillons. Le pôle + est en bas.",
+   "documents": [
+    {
+     "id": "gel",
+     "type": "schema",
+     "titre": "Gel d’agarose révélé",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 28,
+       "l": 255,
+       "h": 205,
+       "arrondi": 6,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 20,
+       "texte": "M",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 20,
+       "texte": "S1",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 20,
+       "texte": "S2",
+       "taille": "petit",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 36,
+       "l": 44,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 168,
+       "y": 36,
+       "l": 44,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 253,
+       "y": 36,
+       "l": 44,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 80,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 115,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 150,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 185,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 168,
+       "y": 80,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "s1a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 168,
+       "y": 150,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "s1b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 253,
+       "y": 115,
+       "l": 44,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "s2a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 54,
+       "y": 87,
+       "texte": "1 000 pb",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 54,
+       "y": 122,
+       "texte": "500 pb",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 54,
+       "y": 157,
+       "texte": "250 pb",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 54,
+       "y": 192,
+       "texte": "100 pb",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        328,
+        70
+       ],
+       "a": [
+        328,
+        190
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 328,
+       "y": 52,
+       "texte": "−",
+       "taille": "grand",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 328,
+       "y": 212,
+       "texte": "+",
+       "taille": "grand",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille du fragment de la piste S2, en paires de bases ?",
+     "reponse": 500,
+     "unite": "pb",
+     "aide": "Cherche la bande du marqueur qui se trouve à la même hauteur.",
+     "explication": "La bande de S2 est à la hauteur de celle de 500 pb du marqueur : **500 pb**."
+    },
+    {
+     "type": "zone",
+     "document": "gel",
+     "enonce": "Touche le plus petit fragment de la piste S1.",
+     "reponse": [
+      "s1b"
+     ],
+     "aide": "Les petits fragments migrent plus loin vers le pôle +.",
+     "explication": "Dans S1, la bande la plus basse a le plus migré : c’est le plus petit fragment, à environ **250 pb**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le fragment de 1 000 pb a-t-il moins migré que celui de 250 pb ?",
+     "options": [
+      "Les grands fragments se faufilent plus difficilement dans les mailles du gel",
+      "Les grands fragments portent moins de charges négatives que les petits et sont donc moins attirés",
+      "Les grands fragments sont attirés par le pôle −, vers lequel ils migrent en partie",
+      "Les grands fragments ont été dénaturés, si bien qu’ils ne sont plus entraînés par le champ"
+     ],
+     "reponse": 0,
+     "aide": "Pense au gel comme à un tamis.",
+     "explication": "Tous les fragments migrent vers le pôle +, mais le gel **ralentit les grands** : les petits vont plus loin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La piste S1 provient d’une digestion complète d’un ADN linéaire. Quelle était la taille de cet ADN, en pb ?",
+     "reponse": 1250,
+     "unite": "pb",
+     "aide": "Additionne les tailles des fragments de la piste S1.",
+     "explication": "1 000 + 250 = **1 250 pb**."
+    }
+   ]
+  },
+  {
+   "chapitre": "54e2455c-b030-5cf3-b502-0efcb0d8826c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Suivre la purification d’une enzyme",
+   "competence": "analyser-document",
+   "situation": "Une enzyme est purifiée en trois étapes à partir d’un extrait brut. On mesure l’activité totale et la masse de protéines totales à chaque étape, puis on passe l’étape 2 sur une colonne d’exclusion dont on recueille des fractions.",
+   "documents": [
+    {
+     "id": "purif",
+     "type": "tableau",
+     "titre": "Tableau de purification",
+     "colonnes": [
+      "Étape",
+      "Activité totale (U)",
+      "Protéines totales (mg)"
+     ],
+     "lignes": [
+      [
+       "Extrait brut",
+       "4 000",
+       "800"
+      ],
+      [
+       "1. Précipitation",
+       "3 200",
+       "160"
+      ],
+      [
+       "2. Exclusion",
+       "2 400",
+       "30"
+      ],
+      [
+       "3. Affinité",
+       "1 800",
+       "6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "chromato",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Colonne d’exclusion : protéines et activité par fraction",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Protéines (A280)",
+       "valeurs": [
+        0,
+        0.1,
+        0.8,
+        0.2,
+        0.1,
+        0.9,
+        0.3,
+        0.1,
+        0.6,
+        0.1
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Activité enzymatique",
+       "valeurs": [
+        0,
+        0,
+        0,
+        0,
+        0.1,
+        0.9,
+        0.1,
+        0,
+        0,
+        0
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Unités relatives",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Numéro de fraction"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’activité spécifique après la précipitation, en U·mg⁻¹ ?",
+     "reponse": 20,
+     "unite": "U·mg⁻¹",
+     "aide": "Activité spécifique = activité totale ÷ protéines totales.",
+     "explication": "3 200 ÷ 160 = **20 U·mg⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement après l’étape d’exclusion ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Rendement = activité totale à l’étape ÷ activité totale de départ × 100.",
+     "explication": "2 400 ÷ 4 000 × 100 = **60 %**."
+    },
+    {
+     "type": "zone",
+     "document": "chromato",
+     "enonce": "Touche le numéro de la fraction qu’il faut conserver pour récupérer l’enzyme.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche la fraction où l’activité enzymatique est maximale.",
+     "explication": "L’activité culmine à la fraction **6** : c’est celle qui contient l’enzyme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur la colonne d’exclusion, l’enzyme sort après un premier pic de protéines. Que dire de sa taille ?",
+     "options": [
+      "Elle est plus petite que les protéines du premier pic, qui sont sorties avant elle",
+      "Elle est plus grande que les protéines du premier pic, qui sont restées plus longtemps dans la colonne",
+      "Elle porte plus de charges que les protéines du premier pic, qui ont été retenues par la résine",
+      "Elle a moins d’affinité pour le ligand que les protéines du premier pic, qui y sont fixées"
+     ],
+     "reponse": 0,
+     "aide": "En exclusion, les grosses molécules sortent en premier.",
+     "explication": "En **exclusion**, les grosses molécules n’entrent pas dans les pores et sortent d’abord : l’enzyme, sortie après, est **plus petite**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’enrichissement final, après l’étape d’affinité ?",
+     "reponse": 60,
+     "aide": "Enrichissement = activité spécifique finale ÷ activité spécifique de l’extrait brut.",
+     "explication": "Brut : 4 000 ÷ 800 = 5 U·mg⁻¹ ; final : 1 800 ÷ 6 = 300 U·mg⁻¹. 300 ÷ 5 = **60**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d52c5a0-de5d-57f3-a573-90603f89a10d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Doser le glucose par la méthode GOD-POD",
+   "competence": "observer-schema",
+   "situation": "On dose le glucose d’un plasma avec deux enzymes. Réactions : glucose + O₂ → acide gluconique + H₂O₂ (glucose oxydase) ; 2 H₂O₂ + chromogène → chromophore rose + 4 H₂O (peroxydase).",
+   "documents": [
+    {
+     "id": "godpod",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Deux réactions couplées",
+     "noeuds": [
+      {
+       "id": "glu",
+       "texte": "Glucose"
+      },
+      {
+       "id": "h2o2",
+       "texte": "Peroxyde d’hydrogène (H₂O₂)"
+      },
+      {
+       "id": "chromo",
+       "texte": "Chromophore rose"
+      }
+     ],
+     "liens": [
+      {
+       "de": "glu",
+       "a": "h2o2",
+       "texte": "glucose oxydase"
+      },
+      {
+       "de": "h2o2",
+       "a": "chromo",
+       "texte": "peroxydase + chromogène"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "godpod",
+     "enonce": "Touche la molécule dont on cherche la concentration.",
+     "reponse": [
+      "glu"
+     ],
+     "aide": "On dose le substrat de départ.",
+     "explication": "C’est le **glucose**, substrat de départ et réactif limitant."
+    },
+    {
+     "type": "zone",
+     "document": "godpod",
+     "enonce": "Touche la molécule dont on mesure l’absorbance.",
+     "reponse": [
+      "chromo"
+     ],
+     "aide": "Seule une molécule colorée absorbe à la longueur d’onde choisie.",
+     "explication": "On mesure le **chromophore rose**, dont la quantité est liée à celle du glucose."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de moles de glucose faut-il pour former 1 mole de chromophore ?",
+     "reponse": 2,
+     "unite": "mol",
+     "aide": "Suis les coefficients : 1 glucose donne combien de H₂O₂, et combien faut-il de H₂O₂ pour un chromophore ?",
+     "explication": "1 glucose donne 1 H₂O₂, et 2 H₂O₂ donnent 1 chromophore : il faut **2 glucoses** pour 1 chromophore."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans ce dosage en point final, quels éléments sont en excès ?",
+     "options": [
+      "Les enzymes et les autres réactifs : seul le glucose limite la réaction",
+      "Le glucose : on le met en excès pour que les enzymes travaillent à vitesse maximale",
+      "Le chromophore : on le met en excès pour que l’absorbance soit la plus grande possible",
+      "Rien n’est en excès : tous les réactifs sont exactement dans les proportions des équations"
+     ],
+     "reponse": 0,
+     "aide": "Le substrat à doser doit être la molécule limitante.",
+     "explication": "Les **enzymes et réactifs sont en excès** : tout le glucose est transformé, et l’absorbance finale en dépend seul."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d52c5a0-de5d-57f3-a573-90603f89a10d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un étalon unique et un blanc",
+   "competence": "calculer",
+   "situation": "Un laboratoire dose le glucose avec un étalon unique de 5,0 mmol·L⁻¹ et un blanc réactif. La réponse est linéaire dans ce domaine de concentrations.",
+   "documents": [
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Tableau de mesure à 510 nm",
+     "colonnes": [
+      "Tube",
+      "Volume prélevé",
+      "Absorbance"
+     ],
+     "lignes": [
+      [
+       "Blanc",
+       "0 µL d’échantillon",
+       "0,050"
+      ],
+      [
+       "Étalon (5,0 mmol·L⁻¹)",
+       "10 µL",
+       "0,450"
+      ],
+      [
+       "Essai",
+       "10 µL",
+       "0,314"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À quoi sert le tube blanc ?",
+     "options": [
+      "Il donne l’absorbance du réactif seul, qu’on retranche à celle des autres tubes",
+      "Il donne l’absorbance d’une solution à 5,0 mmol·L⁻¹, qui sert à calculer la concentration de l’essai",
+      "Il sert à vérifier que la cuve du spectrophotomètre n’absorbe pas la lumière à la longueur d’onde utilisée",
+      "Il donne l’absorbance d’un échantillon très dilué, qui permet de fixer la limite de détection du dosage"
+     ],
+     "reponse": 0,
+     "aide": "Dans le blanc, il n’y a pas d’échantillon.",
+     "explication": "Le **blanc** ne contient que les réactifs : son absorbance est un « bruit de fond » à soustraire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’absorbance corrigée de l’essai ?",
+     "reponse": 0.264,
+     "tolerance": 0.001,
+     "aide": "Retranche l’absorbance du blanc.",
+     "explication": "0,314 − 0,050 = **0,264**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en glucose de l’essai ?",
+     "reponse": 3.3,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.05,
+     "aide": "c(essai) = c(étalon) × A(essai) ÷ A(étalon), avec les absorbances corrigées.",
+     "explication": "Étalon corrigé : 0,450 − 0,050 = 0,400. c = 5,0 × 0,264 ÷ 0,400 = **3,3 mmol·L⁻¹**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle loi relie l’absorbance d’une solution à sa concentration ?",
+     "reponse": [
+      "Beer-Lambert",
+      "loi de Beer-Lambert",
+      "Beer Lambert",
+      "la loi de Beer-Lambert"
+     ],
+     "placeholder": "Deux noms propres",
+     "aide": "Deux noms de physiciens, reliés par un trait d’union.",
+     "explication": "C’est la **loi de Beer-Lambert** : A = ε × ℓ × c. Elle rend l’absorbance proportionnelle à la concentration."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d52c5a0-de5d-57f3-a573-90603f89a10d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mesurer une activité enzymatique",
+   "competence": "modeliser",
+   "situation": "On mesure l’activité d’une phosphatase alcaline dans un sérum : le substrat est en excès, et on suit l’absorbance à 405 nm du produit coloré au cours du temps.",
+   "documents": [
+    {
+     "id": "cinetique",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Absorbance à 405 nm en fonction du temps",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "A405",
+       "valeurs": [
+        0,
+        0.037,
+        0.074,
+        0.111,
+        0.148,
+        0.17,
+        0.183,
+        0.19,
+        0.194
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "min": 0,
+      "max": 0.2,
+      "pas": 0.05
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    },
+    {
+     "id": "params",
+     "type": "tableau",
+     "titre": "Conditions de la mesure",
+     "colonnes": [
+      "Paramètre",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Coefficient d’absorption molaire ε",
+       "18 500 L·mol⁻¹·cm⁻¹"
+      ],
+      [
+       "Trajet optique ℓ",
+       "1 cm"
+      ],
+      [
+       "Volume réactionnel dans la cuve",
+       "3,0 mL"
+      ],
+      [
+       "Prise d’essai de sérum",
+       "0,15 mL"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cinetique",
+     "enonce": "Touche le dernier point de la période initiale, où la courbe est encore une droite.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche où la courbe commence à s’infléchir.",
+     "explication": "La courbe est une droite de 0 à **4 min** ; ensuite la vitesse diminue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la pente ΔA / Δt de la période initiale, en min⁻¹.",
+     "reponse": 0.037,
+     "unite": "min⁻¹",
+     "tolerance": 0.001,
+     "aide": "Pente = variation d’absorbance ÷ durée, entre 0 et 4 min.",
+     "explication": "0,148 ÷ 4 = **0,037 min⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle vitesse de formation du produit cela représente-t-il dans la cuve, en µmol·L⁻¹·min⁻¹ ?",
+     "reponse": 2,
+     "unite": "µmol·L⁻¹·min⁻¹",
+     "tolerance": 0.05,
+     "aide": "Divise la pente par ε × ℓ : on obtient des mol·L⁻¹·min⁻¹, à convertir en µmol.",
+     "explication": "0,037 ÷ 18 500 = 2,0 × 10⁻⁶ mol·L⁻¹·min⁻¹ = **2,0 µmol·L⁻¹·min⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration d’activité du sérum, en U·L⁻¹ ?",
+     "reponse": 40,
+     "unite": "U·L⁻¹",
+     "tolerance": 0.5,
+     "aide": "Quantité transformée par minute dans 3,0 mL, rapportée à la prise d’essai de 0,15 mL.",
+     "explication": "Dans 3,0 mL : 2,0 × 3,0 × 10⁻³ = 6,0 × 10⁻³ µmol·min⁻¹, apportés par 0,15 mL de sérum : 6,0 × 10⁻³ ÷ 0,15 × 10⁻³ = **40 U·L⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève calcule la pente entre 6 et 8 min. Que trouve-t-il ?",
+     "options": [
+      "Une pente plus faible : l’activité est sous-estimée, car la vitesse a déjà chuté",
+      "La même pente, car la vitesse d’une réaction enzymatique est toujours constante au cours du temps",
+      "Une pente plus forte : l’activité est surestimée, car le produit s’accumule et accélère la réaction",
+      "Une pente nulle, car l’enzyme est détruite dès que l’absorbance dépasse la valeur de 0,15"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la forme de la courbe après 4 minutes.",
+     "explication": "Après la période initiale, la courbe s’aplatit : la pente est plus faible, donc l’activité est **sous-estimée**. On mesure toujours la vitesse **initiale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f53b35e2-4bb8-57f0-a8b9-26eb30832d54",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un cycle de PCR",
+   "competence": "observer-schema",
+   "situation": "La PCR copie une séquence cible en répétant un cycle de trois étapes. Le schéma montre un cycle.",
+   "documents": [
+    {
+     "id": "pcr",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Un cycle de PCR",
+     "noeuds": [
+      {
+       "id": "den",
+       "texte": "Dénaturation, environ 95 °C"
+      },
+      {
+       "id": "hyb",
+       "texte": "Hybridation des amorces"
+      },
+      {
+       "id": "elo",
+       "texte": "Élongation, 72 °C"
+      }
+     ],
+     "liens": [
+      {
+       "de": "den",
+       "a": "hyb"
+      },
+      {
+       "de": "hyb",
+       "a": "elo"
+      },
+      {
+       "de": "elo",
+       "a": "den"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pcr",
+     "enonce": "Touche l’étape où agit la Taq polymérase.",
+     "reponse": [
+      "elo"
+     ],
+     "aide": "La polymérase fabrique le brin complémentaire.",
+     "explication": "La Taq polymérase synthétise le brin complémentaire pendant l’**élongation**, à 72 °C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi utilise-t-on la Taq polymérase, issue d’une bactérie de sources chaudes ?",
+     "options": [
+      "Elle résiste aux 95 °C de la dénaturation : on n’a pas à en rajouter à chaque cycle",
+      "Elle fonctionne mieux à froid, ce qui permet de se passer de l’étape de dénaturation",
+      "Elle ouvre elle-même la double hélice, ce qui rend les amorces inutiles au début du cycle",
+      "Elle copie l’ARN en ADN, ce qui permet d’amplifier directement le génome des rétrovirus"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la température de la première étape.",
+     "explication": "À 95 °C, une polymérase ordinaire serait **détruite** : la Taq est **thermostable**, donc réutilisable pour tous les cycles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de copies au maximum obtient-on après 5 cycles à partir d’une seule molécule ?",
+     "reponse": 32,
+     "aide": "Le nombre de copies double à chaque cycle : 2ⁿ.",
+     "explication": "2⁵ = **32 copies**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le tube témoin sans ADN, une bande apparaît après la PCR. Que conclure ?",
+     "options": [
+      "Il y a eu une contamination par de l’ADN étranger : les résultats sont à refaire",
+      "La PCR fonctionne bien, car une bande prouve que les amorces se sont fixées sur la cible",
+      "Les amorces ont fabriqué de l’ADN à partir de rien, ce qui arrive lorsque le cycle est trop long",
+      "Le témoin est positif : le mélange réactionnel est efficace et on peut valider les autres tubes"
+     ],
+     "reponse": 0,
+     "aide": "Un tube sans ADN ne doit rien amplifier.",
+     "explication": "Sans ADN matrice, aucune bande n’est attendue : c’est le signe d’une **contamination**. Il faut refaire la PCR."
+    }
+   ]
+  },
+  {
+   "chapitre": "f53b35e2-4bb8-57f0-a8b9-26eb30832d54",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Couper un ADN avec EcoRI",
+   "competence": "modeliser",
+   "situation": "Une enzyme de restriction, EcoRI, coupe un ADN linéaire de 6 000 paires de bases (pb). Le schéma indique ses deux sites de coupure.",
+   "documents": [
+    {
+     "id": "adn",
+     "type": "schema",
+     "titre": "ADN linéaire de 6 000 pb",
+     "largeur": 340,
+     "hauteur": 165,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        85
+       ],
+       "a": [
+        310,
+        85
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        60
+       ],
+       "a": [
+        100,
+        105
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        217,
+        60
+       ],
+       "a": [
+        217,
+        105
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 42,
+       "r": 11,
+       "texte": "1",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "s1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 217,
+       "cy": 42,
+       "r": 11,
+       "texte": "2",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "s2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 125,
+       "texte": "0",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 125,
+       "texte": "1 500 pb",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 217,
+       "y": 125,
+       "texte": "4 000 pb",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 310,
+       "y": 145,
+       "texte": "6 000 pb",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 155,
+       "texte": "Sites EcoRI numérotés 1 et 2",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fragments obtient-on après une digestion complète ?",
+     "reponse": 3,
+     "aide": "Sur un ADN linéaire, n sites donnent n + 1 fragments.",
+     "explication": "2 sites sur un ADN linéaire : **3 fragments**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille du plus grand fragment, en pb ?",
+     "reponse": 2500,
+     "unite": "pb",
+     "aide": "Calcule la taille de chaque fragment entre deux coupures.",
+     "explication": "Fragments : 1 500, 4 000 − 1 500 = 2 500, et 6 000 − 4 000 = 2 000 pb. Le plus grand fait **2 500 pb**."
+    },
+    {
+     "type": "zone",
+     "document": "adn",
+     "enonce": "Touche le site de restriction le plus proche de l’extrémité droite de la molécule.",
+     "reponse": [
+      "s2"
+     ],
+     "aide": "L’extrémité droite est celle de 6 000 pb.",
+     "explication": "Le site **2** (4 000 pb) est le plus proche de l’extrémité droite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le même ADN, mais circulaire, porte les mêmes deux sites. Combien de fragments obtient-on ?",
+     "options": [
+      "Deux fragments, car sur un ADN circulaire il y a autant de fragments que de sites",
+      "Trois fragments, car n sites donnent toujours n + 1 fragments, que l’ADN soit circulaire ou non",
+      "Un seul fragment, car un ADN circulaire coupé deux fois se referme aussitôt sur lui-même",
+      "Quatre fragments, car chaque coupure d’un ADN circulaire coupe aussi son brin complémentaire"
+     ],
+     "reponse": 0,
+     "aide": "Dans un cercle, le dernier fragment rejoint le premier.",
+     "explication": "Sur un ADN **circulaire**, n sites donnent **n fragments** : ici 2."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un site de restriction est une séquence palindromique. Laquelle l’est ?",
+     "options": [
+      "GAATTC",
+      "GAATCC",
+      "GACTTC",
+      "GATTCC"
+     ],
+     "reponse": 0,
+     "aide": "Lis le brin complémentaire dans le sens 5’→3’ : il doit redonner la même séquence.",
+     "explication": "Le brin complémentaire de GAATTC est CTTAAG ; lu de 5’ à 3’, il redonne **GAATTC** : c’est un palindrome, comme le site d’EcoRI."
+    }
+   ]
+  },
+  {
+   "chapitre": "f53b35e2-4bb8-57f0-a8b9-26eb30832d54",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cloner un gène dans un plasmide",
+   "competence": "analyser-document",
+   "situation": "Un gène est inséré dans un plasmide qui porte un gène de résistance à l’ampicilline et un gène rapporteur : les colonies avec un plasmide recombinant restent blanches, celles avec un plasmide vide sont bleues.",
+   "documents": [
+    {
+     "id": "clonage",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Les étapes du clonage",
+     "noeuds": [
+      {
+       "id": "dig",
+       "texte": "Digestion du vecteur et du gène (même enzyme)"
+      },
+      {
+       "id": "lig",
+       "texte": "Ligation"
+      },
+      {
+       "id": "tra",
+       "texte": "Transformation de bactéries compétentes"
+      },
+      {
+       "id": "sel",
+       "texte": "Sélection sur milieu avec ampicilline"
+      }
+     ],
+     "liens": [
+      {
+       "de": "dig",
+       "a": "lig"
+      },
+      {
+       "de": "lig",
+       "a": "tra"
+      },
+      {
+       "de": "tra",
+       "a": "sel"
+      }
+     ]
+    },
+    {
+     "id": "boites",
+     "type": "tableau",
+     "titre": "Trois boîtes de Pétri",
+     "colonnes": [
+      "Boîte",
+      "Bactéries déposées",
+      "Milieu",
+      "Colonies obtenues"
+     ],
+     "lignes": [
+      [
+       "1",
+       "non transformées",
+       "sans ampicilline",
+       "tapis continu"
+      ],
+      [
+       "2",
+       "non transformées",
+       "avec ampicilline",
+       "0"
+      ],
+      [
+       "3",
+       "mélange de ligation",
+       "avec ampicilline",
+       "48 (36 blanches, 12 bleues)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "clonage",
+     "enonce": "Touche l’étape où la ligase soude le gène dans le plasmide.",
+     "reponse": [
+      "lig"
+     ],
+     "aide": "Ligation : c’est le nom de cette étape.",
+     "explication": "La **ligase** soude le gène et le plasmide pendant la **ligation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve la boîte 2 ?",
+     "options": [
+      "Les bactéries non transformées sont sensibles à l’ampicilline : le milieu sélectionne bien les transformées",
+      "Les bactéries non transformées sont résistantes à l’ampicilline, ce qui permet de les distinguer des autres",
+      "L’ampicilline empêche la division de toutes les bactéries, y compris celles qui portent le plasmide",
+      "Le milieu sans ampicilline est contaminé, car il devrait donner un tapis continu de bactéries"
+     ],
+     "reponse": 0,
+     "aide": "Compare la boîte 2 à la boîte 1.",
+     "explication": "Sans plasmide, les bactéries **ne poussent pas** sur ampicilline : seules les bactéries transformées le pourront. C’est un témoin négatif de la sélection."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des colonies de la boîte 3 contient un plasmide recombinant ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Seules les colonies blanches contiennent le gène inséré.",
+     "explication": "36 colonies blanches sur 48 : 36 ÷ 48 × 100 = **75 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que contiennent les 12 colonies bleues de la boîte 3 ?",
+     "options": [
+      "Un plasmide sans le gène inséré : il confère la résistance à l’ampicilline mais reste vide",
+      "Aucun plasmide : elles ont poussé malgré l’ampicilline, car elles y sont naturellement résistantes",
+      "Le plasmide recombinant, dont le gène inséré fait apparaître la couleur bleue à la place du blanc",
+      "Un plasmide recombinant porteur de deux copies du gène, qui leur donne une couleur plus foncée"
+     ],
+     "reponse": 0,
+     "aide": "Elles poussent sur ampicilline : a-t-on besoin d’un plasmide pour cela ?",
+     "explication": "Elles poussent sur ampicilline, donc elles ont reçu un plasmide, mais **vide** : le gène rapporteur n’a pas été interrompu, la colonie est bleue."
+    }
+   ]
+  }
+ ]
+}

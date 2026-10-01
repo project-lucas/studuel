@@ -159,7 +159,7 @@ DELETE FROM public.chapters c
 ## Le pluriel régulier
 | La terminaison du nom | Sa marque de pluriel | Un exemple |
 | Cas général | **-s** | cars, tables |
-| **-s, -sh, -ch, -x, -o** | **-es** | boxes, watches, potatoes |
+| **-s, -sh, -ch, -x**, souvent **-o** | **-es** | boxes, watches, potatoes (mais photos, pianos) |
 | **Consonne + y** | **-ies** | city → cit**ies** (mais boy → boys) |
 | **-f / -fe** | Souvent **-ves** | leaf → lea**ves**, knife → kni**ves** |
 
@@ -186,7 +186,33 @@ water, money, **information**, **advice**, **news**, **furniture**, homework, mu
 ## Le génitif
 | Le possesseur | Sa marque | Un exemple |
 | Singulier | **'s** | my sister**'s** phone |
-| Pluriel en -s | L'apostrophe **seule** | the student**s'** books |`,
+| Pluriel en -s | L'apostrophe **seule** | the student**s'** books |
+
+## Des noms toujours au pluriel
+Certains noms n’existent qu’au pluriel en anglais, et le verbe les suit au pluriel.
+
+| Le nom | Son sens | Un exemple |
+| **trousers, jeans, shorts** | Un pantalon, un jean, un short | *My jeans **are** new* — mon jean est neuf |
+| **glasses, scissors** | Des lunettes, des ciseaux | *Where **are** my glasses?* |
+| **clothes** | Des vêtements | *Her clothes **are** expensive* |
+| **people, police** | Les gens, la police | *People **are** friendly here* |
+
+> Pour compter ces noms, on passe par **a pair of** : *a pair of jeans*, *two pairs of scissors*.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *an information* | **a piece of** information | Information est indénombrable |
+| *the news are* | the news **is** | News est un singulier malgré son -s |
+| *three persons* (courant) | three **people** | People est le pluriel usuel de person |
+| *my homeworks* | my **homework** | Homework ne prend jamais de -s |
+
+## Mini-méthode : choisir la bonne forme
+1. Demande-toi si tu peux compter l’objet (*one chair, two chairs*) : si oui, il est dénombrable.
+2. S’il est indénombrable, pas de *a / an*, pas de -s, verbe au singulier.
+3. Pour en donner une quantité, ajoute un partitif : *a bottle of* milk, *a slice of* bread, *a piece of* news.
+4. S’il est dénombrable, vérifie sa terminaison avant d’ajouter -s, -es ou -ies, et pense aux irréguliers.
+
+*I need some advice: I have two pieces of news for you.* — J’ai besoin de conseils : j’ai deux nouvelles à t’annoncer.`,
           },
           questions: [
             ['Quel est le pluriel de « child » ?', ['children', 'childs', 'childes', 'childrens'], 0, 'C’est l’un des pluriels irréguliers les plus fréquents.'],
@@ -236,7 +262,33 @@ water, money, **information**, **advice**, **news**, **furniture**, homework, mu
 | *I play the piano* | Un instrument prend **the** |
 | *I play – football* | Un sport n'en prend **pas** |
 | *she goes to – school* | Pour **étudier** |
-| *she goes to the school* | Le **bâtiment** précis |`,
+| *she goes to the school* | Le **bâtiment** précis |
+
+## Pas d’article là où le français en met un
+Le français met presque toujours un article devant le nom ; l’anglais, non. Quand on parle **en général**, on n’en met pas.
+
+| Le français dit | L’anglais dit |
+| **Les** enfants aiment jouer | ***Children** like playing* |
+| **La** musique me détend | ***Music** relaxes me* |
+| **Le** petit déjeuner est prêt | ***Breakfast** is ready* |
+| J’apprends **l’**anglais | *I learn **English*** |
+| **Le** président Lincoln | ***President** Lincoln* |
+
+> Dès qu’on précise **lesquels**, the revient : *The children **in my class** are noisy* — les enfants de ma classe.
+
+## Des emplois de a / an à retenir
+| L’expression | Sa traduction |
+| *What **a** nice day!* | Quelle belle journée ! |
+| *half **an** hour* | une demi-heure |
+| *once **a** month*, *50 km **an** hour* | une fois par mois, 50 km à l’heure |
+| *I have **a** headache* | j’ai mal à la tête |
+
+## Mini-méthode en trois questions
+1. Le nom est-il **déjà connu** ou **unique** ? → **the**.
+2. Est-ce un singulier dénombrable **quelconque**, un métier ? → **a / an**, selon le son qui suit.
+3. Est-ce un pluriel ou un indénombrable pris **en général**, un nom propre, un repas, un sport ? → **rien**.
+
+*I saw a film yesterday. The film was about horses. I love horses.* — J’ai vu un film hier. Le film parlait de chevaux. J’adore les chevaux.`,
           },
           questions: [
             ['Quand emploie-t-on « an » plutôt que « a » ?', ['Devant un son de voyelle', 'Devant la lettre A, E, I, O ou U', 'Devant un nom pluriel', 'Devant un nom propre'], 0, '« An hour » (h muet) mais « a university » (son « you »).'],
@@ -283,7 +335,30 @@ L’anglais emploie les démonstratifs là où le français dirait autre chose :
 - *Hello, **this** is Paul speaking.* (« c’est Paul »)
 - ***This** is my sister, Kate.* (pour présenter quelqu’un)
 
-> Le démonstratif s’accorde toujours en nombre avec le nom qui suit : *this child*, *these children*.`,
+> Le démonstratif s’accorde toujours en nombre avec le nom qui suit : *this child*, *these children*.
+
+## This ou that pour parler de ce qu’on vient de dire
+| La situation | Le démonstratif | Un exemple |
+| Ce que je **vais** dire | **this** | *Listen to **this**: we won!* — Écoute ça : on a gagné ! |
+| Ce que l’autre **vient de** dire | **that** | ***That**’s a good idea!* — C’est une bonne idée ! |
+| Une réaction à une nouvelle | **that** | ***That**’s great! / **That**’s terrible!* |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *this books* | **these** books | Le démonstratif prend la marque du pluriel |
+| *that people* | **those** people | People est un pluriel |
+| *this news are* | this news **is** | News est singulier |
+| *Who is it? — It’s me, Tom* (au téléphone) | ***This** is Tom* | Au téléphone, on se présente avec this |
+
+## Répondre avec one et ones
+Pour éviter de répéter le nom, le démonstratif est souvent suivi de **one** (singulier) ou **ones** (pluriel) :
+- *Which bag do you want? — **This one**.* — Celui-ci.
+- *I don’t like these shoes, I prefer **those ones** / **those**.* — Je préfère celles-là.
+
+## Mini-méthode
+1. Compte : un seul élément → this / that ; plusieurs → these / those.
+2. Mesure la distance : ici, maintenant → this / these ; là-bas, autrefois → that / those.
+3. Vérifie l’accord avec le nom et avec le verbe : *These **are** my friends. That **was** a long time ago.*`,
           },
           questions: [
             ['Quel démonstratif emploie-t-on pour un objet proche au pluriel ?', ['these', 'this', 'those', 'that'], 0, '« These shoes are new. »'],
@@ -336,7 +411,33 @@ Pour les **objets** et les notions abstraites : *the roof **of** the house*, *th
 - Un pronom possessif ne se fait **jamais** suivre d’un nom : on dit *mine*, jamais « mine book ».
 
 ## Whose
-La question du possesseur se pose avec **whose** : *Whose bag is this? — It’s Kate’s.*`,
+La question du possesseur se pose avec **whose** : *Whose bag is this? — It’s Kate’s.*
+
+## Les emplois particuliers du génitif
+| La tournure | Son sens | Un exemple |
+| Génitif **sans nom** derrière | Chez quelqu’un, un magasin | *at my grandmother**’s*** — chez ma grand-mère ; *at the baker**’s*** — à la boulangerie |
+| **Double génitif** | Deux possesseurs **ensemble** | *Tom and Kate**’s** house* — la maison de Tom et Kate (une seule) |
+| **a friend of mine** | Un ami parmi d’autres | *She is **a friend of mine*** — c’est une amie à moi |
+
+## Les parties du corps
+Là où le français met « le, la », l’anglais met le **possessif**.
+
+| Le français dit | L’anglais dit |
+| Il s’est cassé **la** jambe | *He broke **his** leg* |
+| Lève **la** main | *Raise **your** hand* |
+| J’ai mal à **la** tête | *My head hurts* / *I have a headache* |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *her father* dit par un garçon de son père | ***his** father* — c’est le possesseur (lui) qui décide |
+| *the book of Paul* | ***Paul’s** book* |
+| *it’s tail* (sa queue, pour un chien) | ***its** tail* |
+| *this is my* | *this is **mine*** |
+
+## Mini-méthode
+1. Le possesseur est une personne ou un animal → **génitif ’s** ; une chose → **of**.
+2. Place d’abord le possesseur, puis l’objet : *my friend’s dog* — le chien de mon ami.
+3. Le possessif s’accorde avec le possesseur : *Paul and **his** mother*, *Kate and **her** father*.`,
           },
           questions: [
             ['Comment traduit-on « la voiture de mon père » ?', ['my father’s car', 'the car of my father', 'my father car', 'the father’s my car'], 0, 'L’ordre est inverse du français : possesseur + ’s + objet.'],
@@ -371,8 +472,8 @@ La question du possesseur se pose avec **whose** : *Whose bag is this? — It’
 
 ## A few et a little
 | Le mot | Son nom | Son sens |
-| **a few** | Dénombrable | Quelques, **assez** |
-| **a little** | Indénombrable | Un peu, assez |
+| **a few** | Dénombrable | **Quelques** : un peu, et c’est positif |
+| **a little** | Indénombrable | **Un peu** : et c’est positif |
 | **few** (sans a) | Dénombrable | **Peu** : trop peu |
 | **little** (sans a) | Indénombrable | Peu : trop peu |
 
@@ -389,7 +490,33 @@ La question du possesseur se pose avec **whose** : *Whose bag is this? — It’
 ## Le tableau de décision
 | Le nom | Ses quantifieurs |
 | **Dénombrable** | many, a few, few, a lot of |
-| **Indénombrable** | much, a little, little, a lot of |`,
+| **Indénombrable** | much, a little, little, a lot of |
+
+## Some et any dans leurs composés
+La même règle vaut pour les mots formés sur some, any et no.
+
+| Affirmative | Négative, question | Sens négatif seul |
+| some**body** / some**one** | any**body** / any**one** | **nobody** / **no one** |
+| some**thing** | any**thing** | **nothing** |
+| some**where** | any**where** | **nowhere** |
+
+*There is **nobody** here* = *There isn’t **anybody** here* — Il n’y a personne ici.
+
+> Une seule négation par phrase : *I didn’t see **anything***, jamais « I didn’t see nothing ».
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *much friends* | **many** friends / **a lot of** friends | Friends est dénombrable |
+| *a few money* | **a little** money | Money est indénombrable |
+| *I have much work* | *I have **a lot of** work* | Much sonne lourd à l’affirmative |
+| *I don’t have no time* | *I don’t have **any** time* / *I have **no** time* | Double négation |
+
+## Mini-méthode en trois étapes
+1. **Le nom** : dénombrable (many, a few) ou indénombrable (much, a little) ?
+2. **La phrase** : affirmative (some, a lot of) ou négative et interrogative (any, much, many) ?
+3. **L’intention** : rassurer (a few, a little) ou déplorer (few, little) ?
+
+*How many students came? — Only a few, but we had a lot of fun.* — Combien d’élèves sont venus ? — Seulement quelques-uns, mais on s’est bien amusés.`,
           },
           questions: [
             ['Quel quantifieur emploie-t-on dans une phrase négative ?', ['any', 'some', 'much of', 'a few'], 0, '« I don’t have any money. »'],
@@ -442,7 +569,37 @@ opinion → taille → âge → forme → couleur → origine → matière → b
 ## Les adjectifs substantivés
 Précédés de **the**, certains adjectifs désignent un groupe entier, avec un verbe au **pluriel**.
 
-*the rich*, *the poor*, *the young*, *the homeless*`,
+*the rich*, *the poor*, *the young*, *the homeless*
+
+## Les verbes d’état qui se construisent avec un adjectif
+Après **look, feel, sound, smell, taste, seem**, on emploie un **adjectif**, jamais un adverbe.
+
+| La phrase | Sa traduction |
+| *You **look** happy* | Tu as l’air heureux |
+| *This soup **smells** good* | Cette soupe sent bon |
+| *That **sounds** great!* | Ça a l’air génial ! |
+| *I **feel** sick* | Je me sens mal |
+
+> *She looks happily* est faux : le verbe décrit ici un état, pas une manière d’agir.
+
+## Les adjectifs de nationalité
+| La règle | Un exemple |
+| Toujours une **majuscule** | *a **F**rench film*, ***E**nglish food* |
+| Invariables comme tous les adjectifs | *two **Spanish** girls* |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *a car red* | *a **red car*** |
+| *two reds cars* | *two **red** cars* |
+| *a five-years-old boy* | *a five-**year**-old boy* |
+| *I am interesting by history* | *I am **interested in** history* |
+
+## Mini-méthode : décrire en trois temps
+1. Place tous les adjectifs **avant** le nom, sans les accorder.
+2. Range-les dans l’ordre : opinion, taille, âge, couleur, origine, matière.
+3. Pour un sentiment, choisis **-ed** si c’est la personne qui ressent, **-ing** si c’est la chose qui provoque.
+
+*It was an exciting match, but I was tired after it.* — C’était un match passionnant, mais j’étais fatigué après.`,
           },
           questions: [
             ['Où se place l’adjectif en anglais ?', ['Avant le nom', 'Après le nom', 'À la fin de la phrase', 'Cela dépend de son sens'], 0, '« A beautiful house », l’inverse du français.'],
@@ -490,7 +647,36 @@ Précédés de **the**, certains adjectifs désignent un groupe entier, avec un 
 ## Be et have peuvent être lexicaux
 | La phrase | Le statut du verbe | La question correspondante |
 | *I am French* | **be** lexical, mais il garde ses pouvoirs | *Am I French?* |
-| *I have a car* | **have** lexical : il faut **do** | *Do you have a car?* |`,
+| *I have a car* | **have** lexical : il faut **do** | *Do you have a car?* |
+
+## Reconnaître l’auxiliaire dans une phrase
+Un auxiliaire est toujours suivi d’un **autre verbe**, qui porte le sens.
+
+| La phrase | L’auxiliaire | Le verbe lexical |
+| *She **is** reading* | is | reading |
+| *We **have** eaten* | have | eaten |
+| *They **don’t** know* | don’t | know |
+| *You **should** rest* | should | rest |
+
+Quand il n’y a **pas** d’auxiliaire visible — au présent simple et au prétérit simple affirmatifs — il est caché dans la terminaison : *She work**s***, *She work**ed***. Il réapparaît dès qu’on pose une question : *Does she work?*, *Did she work?*
+
+## Les réponses courtes et les reprises
+L’auxiliaire suffit à reprendre toute la phrase :
+- *Can you swim? — Yes, I **can**.* — Oui (je sais).
+- *Has she finished? — No, she **hasn’t**.* — Non.
+- *I like pizza. — So **do** I.* — Moi aussi.
+- *I didn’t go. — Neither **did** I.* — Moi non plus.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *Like you pizza?* | ***Do** you like pizza?* |
+| *I not like it* | *I **don’t** like it* |
+| *Yes, I like* (réponse courte) | *Yes, I **do*** |
+
+## Mini-méthode
+1. Cherche l’auxiliaire de la phrase ; s’il n’y en a pas, fais apparaître **do / does / did**.
+2. Pour une question, place-le devant le sujet ; pour une négation, ajoute **not** après lui.
+3. Pour répondre ou réagir, réutilise ce même auxiliaire.`,
           },
           questions: [
             ['À quoi servent les auxiliaires ?', ['À construire la question, la négation et la reprise courte', 'À donner le sens principal du verbe', 'À accorder le verbe avec le sujet', 'À former le pluriel'], 0, 'Les verbes lexicaux, eux, portent le sens.'],
@@ -545,7 +731,32 @@ Précédés de **the**, certains adjectifs désignent un groupe entier, avec un 
 | we'd | we **had** ou we **would** |
 | **he's** | he **is** ou he **has** |
 
-> C'est ce qui **suit** qui tranche : *he's tired* (is) contre *he's finished* (has).`,
+> C'est ce qui **suit** qui tranche : *he's tired* (is) contre *he's finished* (has).
+
+## Là où le français dit « avoir » et l’anglais « be »
+| Le français | L’anglais |
+| J’ai froid / chaud | *I **am** cold / hot* |
+| J’ai faim / soif | *I **am** hungry / thirsty* |
+| J’ai peur | *I **am** afraid / scared* |
+| J’ai raison / tort | *I **am** right / wrong* |
+| J’ai de la chance | *I **am** lucky* |
+
+## There is / there are
+« Il y a » se construit avec **be** : *There **is** a cat* (singulier), *There **are** two cats* (pluriel), *There **was** a storm* (passé).
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *I have 15 years* | *I **am** 15 (years old)* |
+| *He have a dog* | *He **has** a dog* |
+| *They was late* | *They **were** late* |
+| *Have you a car?* (vieilli) | ***Do** you have a car?* / *Have you **got** a car?* |
+
+## Mini-méthode pour conjuguer sans se tromper
+1. Repère le sujet : il, elle, ça (he, she, it) → **is / has / was** ; les autres → **are / have / were** (sauf I am, I was).
+2. Décide si le verbe est **auxiliaire** (suivi d’un autre verbe) ou **lexical** (seul).
+3. Be garde toujours ses pouvoirs ; have lexical demande **do** pour la question et la négation.
+
+*She has been ill, but now she is better.* — Elle a été malade, mais maintenant elle va mieux.`,
           },
           questions: [
             ['Comment dit-on « J’ai 15 ans » ?', ['I am 15.', 'I have 15.', 'I have 15 years.', 'I am 15 years.'], 0, 'L’anglais emploie « be » là où le français emploie « avoir ».'],
@@ -595,7 +806,32 @@ Dès que **do** apparaît, il prend la marque du temps et de la personne. Le ver
 ## DO peut aussi être lexical
 *I do my homework.*
 
-> Il faut alors un **second** do pour interroger : *What do you do?*`,
+> Il faut alors un **second** do pour interroger : *What do you do?*
+
+## DO dans les réponses courtes et les reprises
+| L’emploi | Un exemple | Sa traduction |
+| Réponse courte | *Do you like tea? — Yes, I **do**.* | Oui (j’aime ça). |
+| Accord positif | *I play chess. — So **do** I.* | Moi aussi. |
+| Accord négatif | *She didn’t come. — Neither **did** I.* | Moi non plus. |
+| Question tag | *You live here, **don’t** you?* | N’est-ce pas ? |
+
+## L’impératif négatif
+L’ordre négatif se forme toujours avec **don’t**, même avec be : *Don’t shout!* — Ne crie pas ! ; *Don’t be late!* — Ne sois pas en retard !
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *She don’t like it* | *She **doesn’t** like it* | 3e personne du singulier |
+| *Do she work?* | ***Does** she work?* | Même raison |
+| *I didn’t knew* | *I didn’t **know*** | Did porte déjà le passé |
+| *Where you live?* | *Where **do** you live?* | Il faut l’auxiliaire |
+
+## Mini-méthode en quatre étapes
+1. La phrase contient-elle déjà be, have auxiliaire ou un modal ? Si oui, pas de do.
+2. Sinon, choisis **do / does** au présent (**does** avec he, she, it) ou **did** au passé.
+3. Remets le verbe lexical à la **base verbale** : plus de -s, plus de -ed.
+4. Relis : une seule marque de temps dans la phrase.
+
+*Does your brother play football? — No, he doesn’t. He plays tennis.* — Ton frère joue-t-il au foot ? — Non. Il joue au tennis.`,
           },
           questions: [
             ['Dans quels cas l’auxiliaire DO apparaît-il ?', ['À la négation, à l’interrogation et à l’insistance', 'Dans toutes les phrases', 'Seulement au passé', 'Seulement avec les modaux'], 0, 'Aux temps simples uniquement.'],
@@ -639,7 +875,35 @@ Dès que **do** apparaît, il prend la marque du temps et de la personne. Le ver
 ## Au passé
 | Ce qu'on exprime | La forme |
 | L'**obligation** | **had to** — *I had to stay home* |
-| L'**interdiction** | **couldn't**, ou *wasn't allowed to* |`,
+| L'**interdiction** | **couldn't**, ou *wasn't allowed to* |
+
+## Must au futur et aux autres temps
+Must n’existe qu’au présent. Pour tous les autres temps, on emprunte **have to**.
+
+| Le temps | La forme | Sa traduction |
+| Présent | *I **must** / **have to** leave* | Je dois partir |
+| Passé | *I **had to** leave* | J’ai dû partir |
+| Futur | *I **will have to** leave* | Je devrai partir |
+| Present perfect | *I **have had to** leave* | J’ai dû partir (et ça compte encore) |
+
+> *I will must* est impossible : deux modaux ne se suivent jamais.
+
+## Have got to
+À l’oral britannique, **have got to** équivaut à have to : *I’ve got to go* — il faut que j’y aille.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *You must to go* | *You must **go*** |
+| *She musts* | *She **must*** |
+| *I musted* | *I **had to*** |
+| *You mustn’t come* (pour « tu n’es pas obligé ») | *You **don’t have to** come* |
+
+## Mini-méthode
+1. Qui impose ? Moi → **must** ; une règle, une situation → **have to**.
+2. Quel temps ? Hors du présent, seul **have to** se conjugue.
+3. Négation : interdit → **mustn’t** ; pas obligatoire → **don’t have to / needn’t**.
+
+*At school, we have to wear a uniform, but we don’t have to wear a tie. We mustn’t use our phones.* — Au collège, nous devons porter un uniforme, mais pas forcément de cravate. Nous n’avons pas le droit d’utiliser nos téléphones.`,
           },
           questions: [
             ['D’où vient l’obligation exprimée par « must » ?', ['De celui qui parle', 'Du règlement extérieur', 'D’une loi écrite', 'De personne'], 0, '« Have to » exprime, lui, une contrainte extérieure.'],
@@ -686,7 +950,33 @@ C’est la forme de remplacement, qui se conjugue à tous les temps là où *can
 | Capacité passée générale | could |
 | Réussite ponctuelle passée | was/were able to |
 | Capacité future | will be able to |
-| Demande polie | could / would you mind |`,
+| Demande polie | could / would you mind |
+
+## Les formes de can, pas à pas
+| La forme | Un exemple | Sa traduction |
+| Affirmative | *She **can** dance* | Elle sait danser |
+| Négative | *He **can’t** / **cannot** drive* | Il ne sait pas conduire |
+| Question | ***Can** you cook?* | Tu sais cuisiner ? |
+| Réponse courte | *Yes, I **can**. / No, I **can’t**.* | Oui. / Non. |
+| Passé | *I **couldn’t** sleep last night* | Je n’ai pas pu dormir cette nuit |
+
+## Savoir ou pouvoir ?
+Le français distingue « savoir faire » et « pouvoir faire » ; l’anglais dit **can** dans les deux cas. C’est le contexte qui tranche :
+- *I can swim.* — Je sais nager.
+- *I can come tomorrow.* — Je peux venir demain.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *She cans swim* | *She **can** swim* | Can est invariable |
+| *I can to swim* | *I can **swim*** | Jamais de to après un modal |
+| *I will can* | *I **will be able to*** | Deux modaux ne se suivent pas |
+| *Do you can…?* | ***Can** you…?* | Can pose la question lui-même |
+| *He could open the door* (une fois, en y arrivant) | *He **was able to** / **managed to** open it* | Réussite ponctuelle |
+
+## Mini-méthode
+1. Présent → **can** ; passé général → **could** ; passé ponctuel → **was able to**.
+2. Futur, present perfect ou après un autre modal → **be able to**, conjugué.
+3. Pour une demande polie, préfère **could**.`,
           },
           questions: [
             ['Quel modal exprime la capacité au présent ?', ['can', 'must', 'should', 'may'], 0, '« I can swim. »'],
@@ -736,7 +1026,34 @@ La forme qui se conjugue à tous les temps, et qui insiste sur une **règle ext�
 |---|---|---|---|
 | Familier | Can I…? | You can | You can’t |
 | Poli | Could I…? | — | — |
-| Formel | May I…? | You may | You may not |`,
+| Formel | May I…? | You may | You may not |
+
+## Demander la permission, pas à pas
+| La demande | Son registre | Sa traduction |
+| *Can I open the window?* | Familier | Je peux ouvrir la fenêtre ? |
+| *Could I open the window?* | Poli | Est-ce que je pourrais… ? |
+| *May I open the window?* | Formel | Puis-je ouvrir la fenêtre ? |
+| *Do you mind if I open the window?* | Très poli | Ça vous dérange si j’ouvre… ? |
+
+> À *Do you mind…?*, on accepte en disant **No** : *No, not at all* — non, pas du tout (ça ne me dérange pas).
+
+## Répondre
+- Accepter : *Yes, of course.* / *Sure, go ahead.* — Bien sûr, vas-y.
+- Refuser poliment : *I’m sorry, you can’t.* / *I’m afraid not.* — Je regrette, non.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *Can I to go out?* | *Can I **go** out?* |
+| *I could go to the party* (pour une permission reçue une fois) | *I **was allowed to** go* |
+| *I am allowed go* | *I am allowed **to** go* |
+| *You may to leave* | *You may **leave*** |
+
+## Mini-méthode
+1. Choisis le registre : un ami (**can**), un adulte (**could**), un cadre officiel (**may**).
+2. Pour un autre temps que le présent, passe à **be allowed to**.
+3. Pour interdire, **can’t** suffit ; **mustn’t** est plus fort, **may not** plus écrit.
+
+*When I was ten, I wasn’t allowed to go out alone. Now I can.* — À dix ans, je n’avais pas le droit de sortir seul. Maintenant, je peux.`,
           },
           questions: [
             ['Quel modal est le plus formel pour demander la permission ?', ['may', 'can', 'could', 'must'], 0, '« May I come in? » s’emploie à l’écrit ou avec un adulte.'],
@@ -791,7 +1108,32 @@ Il est **invariable** : pas de -s, pas de « to ».
 ## Autres formulations
 | La tournure | Un exemple |
 | *Why don't you…?* | *Why don't you call her?* |
-| *If I were you, I would…* | *If I were you, I'd apologise* |`,
+| *If I were you, I would…* | *If I were you, I'd apologise* |
+
+## Demander conseil
+| La question | Sa traduction |
+| *What **should** I do?* | Qu’est-ce que je devrais faire ? |
+| *Do you think I **should** tell her?* | Tu crois que je devrais lui dire ? |
+| *What would you do if you were me?* | Que ferais-tu à ma place ? |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *You should to go* | *You should **go*** | Should est un modal |
+| *She shoulds* | *She **should*** | Invariable |
+| *You had better to go* | *You had better **go*** | Base verbale, sans to |
+| *You hadn’t better* | *You**’d better not*** | La négation suit better |
+| *If I was you* (à l’écrit) | *If I **were** you* | Forme attendue à l’écrit |
+
+## Mini-méthode pour conseiller
+1. Choisis la force : conseil simple → **should** ; conseil urgent → **had better** ; obligation → **must**.
+2. Mets le verbe qui suit à la **base verbale** (sauf *ought to*).
+3. Pour regretter un conseil non suivi, passe à **should have + participe passé**.
+
+## Un exemple travaillé
+Ton ami a un contrôle demain et n’a rien révisé :
+- *You **should** revise tonight.* — Tu devrais réviser ce soir.
+- *You**’d better** not go to bed too late.* — Tu ferais mieux de ne pas te coucher trop tard.
+- *You **should have** started last week!* — Tu aurais dû commencer la semaine dernière !`,
           },
           questions: [
             ['Quel modal exprime le conseil de base ?', ['should', 'must', 'can', 'may'], 0, '« You should revise for the test. »'],
@@ -832,7 +1174,35 @@ Il est **invariable** : pas de -s, pas de « to ».
 ## Would rather, pour dire sa préférence
 | La construction | Un exemple |
 | would rather + **base verbale** | *I'd rather stay home* |
-| Pour comparer : + **than** | *I'd rather stay home than go out* |`,
+| Pour comparer : + **than** | *I'd rather stay home than go out* |
+
+## Shall I, pour proposer son aide
+**Shall I…?** propose de faire quelque chose **pour l’autre** : *Shall I open the window?* — Voulez-vous que j’ouvre la fenêtre ? ; *Shall I help you?* — Je t’aide ? **Shall we…?** propose de faire quelque chose **ensemble** : *Shall we dance?* — On danse ?
+
+## Suggérer à quelqu’un d’autre
+| La forme | Ce qui suit | Un exemple |
+| **You could** | Base verbale | *You could ask your teacher* — tu pourrais demander à ton professeur |
+| **Why don’t you** | Base verbale | *Why don’t you try again?* — Pourquoi n’essaies-tu pas encore ? |
+| **I suggest** | -ING, ou that + sujet + verbe | *I suggest **going** by bus* / *I suggest (that) we **go** by bus* |
+
+> *I suggest you to go* est faux : **suggest** ne se construit jamais avec un complément + to.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *Let’s to go* | *Let’s **go*** |
+| *What about to go out?* | *What about **going** out?* |
+| *Why don’t we going?* | *Why don’t we **go**?* |
+| *Let’s don’t wait* | *Let’s **not** wait* |
+
+## Mini-méthode
+1. Repère la forme choisie.
+2. Applique la construction qui va avec : base verbale (let’s, shall we, why don’t we, why not) ou **-ING** (how about, what about).
+3. Termine si tu veux par le tag *shall we?* après let’s.
+
+## Un dialogue modèle
+— *It’s raining. Let’s stay at home, shall we?* — Il pleut. Restons à la maison, d’accord ?
+— *How about watching a film?* — Et si on regardait un film ?
+— *Good idea! Why don’t we make popcorn too?* — Bonne idée ! Et si on faisait aussi du pop-corn ?`,
           },
           questions: [
             ['Comment se construit « Let’s » ?', ['Let’s + base verbale', 'Let’s + to + verbe', 'Let’s + verbe en -ING', 'Let’s + participe passé'], 0, '« Let’s go to the cinema. »'],
@@ -884,7 +1254,34 @@ Même construction que *wish*, avec une charge émotionnelle plus forte.
 ## Les pièges du français
 | L'anglais dit | Et non |
 | *I'd like* | I would want |
-| *I wish you a happy birthday* | La **seule** construction de wish qui ne recule pas d'un temps |`,
+| *I wish you a happy birthday* | La **seule** construction de wish qui ne recule pas d'un temps |
+
+## Would like, pas à pas
+| La forme | Un exemple | Sa traduction |
+| Affirmative | *I**’d like** a sandwich* | Je voudrais un sandwich |
+| Avec un verbe | *She**’d like to** visit London* | Elle aimerait visiter Londres |
+| Négative | *I **wouldn’t like to** live there* | Je n’aimerais pas vivre là-bas |
+| Pour quelqu’un d’autre | *I’d like **you to** come* | J’aimerais que tu viennes |
+
+> *I’d like that you come* est faux : l’anglais dit **would like + complément + to + verbe**.
+
+## Like ou would like ?
+- *I **like** chocolate.* — J’aime le chocolat (en général).
+- *I**’d like** some chocolate.* — Je voudrais du chocolat (maintenant).
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I wish I have more time* | *I wish I **had** more time* | On recule d’un temps |
+| *I wish I didn’t say that* (regret passé) | *I wish I **hadn’t said** that* | Passé → past perfect |
+| *I would like go* | *I would like **to** go* | Would like + to |
+| *I regret to say that* (pour un regret) | *I regret **saying** that* | Regret + -ING pour le passé |
+
+## Mini-méthode pour exprimer un regret
+1. Sur quoi porte le regret ? Le présent → **wish + prétérit** ; le passé → **wish + past perfect**.
+2. Tu veux que quelque chose change ? → **wish + would**.
+3. Tu veux plus d’émotion ? Remplace I wish par **If only**.
+
+*I wish I spoke Spanish. If only I had taken it at school!* — Si seulement je parlais espagnol. Si seulement je l’avais pris au collège !`,
           },
           questions: [
             ['Quelle construction suit « would like » ?', ['to + verbe', 'la base verbale', 'le verbe en -ING', 'le participe passé'], 0, '« I’d like to travel. »'],
@@ -927,7 +1324,29 @@ Même construction que *wish*, avec une charge émotionnelle plus forte.
 - **I’m sure / I doubt** : *I’m sure he **knows**.*
 
 ## May et might
-*Might* marque une probabilité un peu plus faible que *may*, mais les deux sont souvent interchangeables à l’oral.`,
+*Might* marque une probabilité un peu plus faible que *may*, mais les deux sont souvent interchangeables à l’oral.
+
+## Répondre à « Where is Tom? » : l’échelle en action
+| La réponse | Ce qu’elle signifie |
+| *He **must** be in his room.* | Il est sûrement dans sa chambre (j’en suis presque sûr). |
+| *He **should** be at school.* | Il devrait être au collège (c’est normal à cette heure). |
+| *He **may** / **might** be at the gym.* | Il est peut-être à la salle de sport. |
+| *He **can’t** be at home: his bike is gone.* | Il ne peut pas être à la maison : son vélo n’est plus là. |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *He mustn’t be serious* (pour « il ne peut pas être sérieux ») | *He **can’t** be serious* | Mustn’t = interdiction |
+| *He will maybe come* | *He **may** come* / *Maybe he will come* | Maybe se place en tête de phrase |
+| *He must has left* | *He must **have** left* | Après un modal, base verbale |
+| *It may to rain* | *It may **rain*** | Jamais de to |
+
+## Mini-méthode en trois questions
+1. Suis-je presque sûr que c’est vrai ? → **must** ; presque sûr que c’est faux ? → **can’t**.
+2. Est-ce seulement possible ? → **may**, **might**, **could**.
+3. Est-ce que je parle du passé ? → ajoute **have + participe passé** : *must have*, *can’t have*, *might have*.
+
+## Un exemple travaillé
+La fenêtre est cassée et il y a un ballon dans le salon : *Someone **must have** kicked the ball. It **can’t have** been Grandma, she was out. It **might have** been the neighbours’ kids.* — Quelqu’un a dû tirer dans le ballon. Ça ne peut pas être Mamie, elle était sortie. C’étaient peut-être les enfants des voisins.`,
           },
           questions: [
             ['Quel modal exprime la quasi-certitude positive ?', ['must', 'might', 'can’t', 'may'], 0, '« He must be tired » : j’en suis presque sûr.'],
@@ -976,7 +1395,35 @@ Même construction que *wish*, avec une charge émotionnelle plus forte.
 
 ## Le piège du français
 | Ce qu'on veut dire | La forme correcte | La forme fautive |
-| Je me suis fait couper les cheveux | *I had my hair cut* | *I cut my hair* — qui signifie que je les ai coupés moi-même |`,
+| Je me suis fait couper les cheveux | *I had my hair cut* | *I cut my hair* — qui signifie que je les ai coupés moi-même |
+
+## Les formes de make et let
+| Le verbe | Présent | Prétérit | Participe passé |
+| make | make / makes | **made** | **made** |
+| let | let / lets | **let** | **let** |
+| have | have / has | **had** | **had** |
+| get | get / gets | **got** | **got** |
+
+> Let a trois formes identiques : *She let me go* peut être au présent (avec *lets* à la 3e personne) ou au prétérit.
+
+## Des exemples traduits
+| La phrase | Sa traduction |
+| *The teacher made us rewrite the text.* | Le professeur nous a fait réécrire le texte. |
+| *My parents let me go to the concert.* | Mes parents m’ont laissé aller au concert. |
+| *I’m having my room painted.* | Je fais repeindre ma chambre. |
+| *She got her brother to lend her his bike.* | Elle a convaincu son frère de lui prêter son vélo. |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *She made me to cry* | *She made me **cry*** |
+| *They let me to stay* | *They let me **stay*** |
+| *I was let to go* | *I **was allowed to** go* |
+| *I got him help me* | *I got him **to** help me* |
+
+## Mini-méthode
+1. Quel sens ? Obliger → **make** ; permettre → **let** ; faire faire par un professionnel → **have** ; convaincre → **get**.
+2. Place le complément (la personne ou l’objet) juste après le verbe.
+3. Choisis la suite : base verbale (make, let), participe passé (have, get + objet), **to** + verbe (get + personne).`,
           },
           questions: [
             ['Quelle construction suit « make » au sens d’obliger ?', ['make + complément + base verbale', 'make + complément + to + verbe', 'make + complément + participe passé', 'make + complément + verbe en -ING'], 0, '« My parents make me do my homework. »'],
@@ -1082,7 +1529,35 @@ enjoy, like, love, hate, finish, avoid, mind, suggest, keep, practise, imagine, 
 ## L'infinitif de but
 | Pour dire « pour + verbe » | La forme |
 | Correcte | **to** ou **in order to** : *I went to the shop to buy bread* |
-| Fautive | *for buying* |`,
+| Fautive | *for buying* |
+
+## Les verbes suivis d’un complément + TO
+Après **want, would like, ask, tell, expect, help**, on intercale la personne avant **to** :
+
+| La phrase | Sa traduction |
+| *I want **you to** listen* | Je veux que tu écoutes |
+| *She asked **me to** wait* | Elle m’a demandé d’attendre |
+| *They told **us to** sit down* | Ils nous ont dit de nous asseoir |
+
+> *I want that you listen* est impossible : l’anglais ne met jamais **that** après want.
+
+## Like, love, hate : les deux formes
+Ces verbes acceptent -ING et to presque sans différence de sens : *I like swimming* / *I like to swim*. Mais **would like** est toujours suivi de **to** : *I’d like to swim.*
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I enjoy to read* | *I enjoy **reading*** | Enjoy + -ING |
+| *She decided going* | *She decided **to go*** | Decide + to |
+| *I look forward to see you* | *I look forward to **seeing** you* | To est ici une préposition |
+| *before to leave* | *before **leaving*** | Préposition + -ING |
+| *You must to go* | *You must **go*** | Modal + base verbale |
+
+## Mini-méthode
+1. Qu’y a-t-il juste avant ? Une préposition → **-ING** ; un modal → **base verbale**.
+2. Sinon, c’est le premier verbe qui décide : apprends-le avec sa construction (*enjoy doing*, *decide to do*).
+3. Pour stop, remember, try, demande-toi si l’action est **déjà faite** (-ING) ou **à faire** (to).
+
+*I remember meeting her, but I forgot to call her.* — Je me souviens de l’avoir rencontrée, mais j’ai oublié de l’appeler.`,
           },
           questions: [
             ['Quelle forme suit « enjoy » ?', ['Le verbe en -ING', 'to + verbe', 'La base verbale', 'Le participe passé'], 0, '« I enjoy reading. »'],
@@ -1132,7 +1607,38 @@ enjoy, like, love, hate, finish, avoid, mind, suggest, keep, practise, imagine, 
 > L'ordre habituel en fin de phrase : **manière → lieu → temps**. *She sang beautifully at the concert last night.*
 
 ## Un piège permanent
-> On n'intercale **jamais** un adverbe entre le verbe et son complément d'objet : *I speak English well*, jamais « I speak well English ».`,
+> On n'intercale **jamais** un adverbe entre le verbe et son complément d'objet : *I speak English well*, jamais « I speak well English ».
+
+## Adjectif ou adverbe ?
+L’adjectif décrit **un nom** ; l’adverbe décrit **une action**.
+
+| L’adjectif | L’adverbe |
+| *She is a **careful** driver* — une conductrice prudente | *She drives **carefully*** — elle conduit prudemment |
+| *He is a **good** singer* | *He sings **well*** |
+| *It’s a **fast** car* | *It goes **fast*** |
+
+> Après be, look, seem, feel, on emploie l’**adjectif** : *She looks sad*, jamais « sadly ».
+
+## Des adverbes de fréquence classés
+| L’adverbe | Sa fréquence approximative |
+| always | 100 % — toujours |
+| usually | 90 % — d’habitude |
+| often | 70 % — souvent |
+| sometimes | 50 % — parfois |
+| rarely / seldom | 10 % — rarement |
+| never | 0 % — jamais |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *He works hardly* (pour « il travaille dur ») | *He works **hard*** |
+| *She sings good* | *She sings **well*** |
+| *I go always to school by bus* | *I **always go** to school by bus* |
+| *He is enough tall* | *He is tall **enough*** |
+
+## Mini-méthode
+1. Demande-toi ce que le mot décrit : un nom → adjectif ; un verbe → adverbe en **-ly** (sauf irréguliers).
+2. Place l’adverbe de fréquence devant le verbe lexical, mais après be et les auxiliaires.
+3. En fin de phrase, range : manière, lieu, temps.`,
           },
           questions: [
             ['Comment forme-t-on la plupart des adverbes ?', ['En ajoutant -ly à l’adjectif', 'En ajoutant -ed au verbe', 'En ajoutant -ing au verbe', 'En doublant l’adjectif'], 0, 'slow → slowly, careful → carefully.'],
@@ -1187,7 +1693,37 @@ Il s'accompagne des adverbes de fréquence : always, often, usually, never, ever
 ## Les verbes qui n'acceptent pas -ING
 Les verbes d'**état** : know, like, love, hate, want, need, understand, believe, prefer, seem, belong.
 
-> *I know the answer*, jamais « I am knowing ».`,
+> *I know the answer*, jamais « I am knowing ».
+
+## Les marqueurs qui aident à choisir
+| Présent simple | Présent en BE + -ING |
+| every day, every week | now, right now, at the moment |
+| always, usually, often, never | today, this week |
+| on Mondays, at the weekend | Look! Listen! |
+
+## Les formes pas à pas
+| La phrase | Présent simple | BE + -ING |
+| Affirmative | *She **plays** the piano* | *She **is playing** the piano* |
+| Négative | *She **doesn’t play*** | *She **isn’t playing*** |
+| Question | ***Does** she **play**?* | ***Is** she **playing**?* |
+
+L’orthographe du -ING : *make → making* (e muet tombe), *swim → swimming* (consonne doublée), *lie → lying*.
+
+## Les erreurs d’un francophone
+Le français n’a qu’un présent : « je lis » peut vouloir dire « je lis en général » ou « je suis en train de lire ». L’anglais oblige à choisir.
+
+| L’erreur | La forme correcte |
+| *I am going to school every day by bus* | *I **go** to school every day by bus* |
+| *Listen! She sings* | *Listen! She **is singing*** |
+| *He play football* | *He **plays** football* |
+| *I am liking this song* | *I **like** this song* |
+
+## Mini-méthode
+1. Cherche un marqueur de temps : habitude ou moment présent ?
+2. Demande-toi si l’action est **permanente** ou **en cours / temporaire**.
+3. Vérifie le verbe : un verbe d’état reste au présent simple.
+
+*Usually I walk to school, but this week I’m taking the bus because it’s raining.* — D’habitude je vais au collège à pied, mais cette semaine je prends le bus parce qu’il pleut.`,
           },
           questions: [
             ['Quel temps exprime une habitude ?', ['Le présent simple', 'Le présent en BE + -ING', 'Le prétérit', 'Le present perfect'], 0, '« I go to school by bus. »'],
@@ -1246,7 +1782,36 @@ yesterday, last week, in 2019, two days ago, when I was young, then
 | Le son final du verbe | La réalisation | Un exemple |
 | **Sourd** | [t] | worked |
 | **Sonore** | [d] | played |
-| **t** ou **d** | [ɪd] | wanted, needed |`,
+| **t** ou **d** | [ɪd] | wanted, needed |
+
+## Les formes pas à pas
+| La phrase | Verbe régulier | Verbe irrégulier |
+| Affirmative | *I **played*** | *I **went*** |
+| Négative | *I **didn’t play*** | *I **didn’t go*** |
+| Question | ***Did** you **play**?* | ***Did** you **go**?* |
+| Réponse courte | *Yes, I **did**.* | *No, I **didn’t**.* |
+
+## Ce que le français dit autrement
+Le prétérit anglais traduit à la fois le **passé composé** et le **passé simple** français, et souvent l’imparfait d’habitude.
+
+| Le français | L’anglais |
+| Hier, j’**ai vu** un film | *Yesterday I **saw** a film* |
+| Il **ouvrit** la porte | *He **opened** the door* |
+| Quand j’étais petit, je **jouais** dehors | *When I was little, I **played** outside* |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I goed* | *I **went*** | Go est irrégulier |
+| *She didn’t came* | *She didn’t **come*** | Did porte déjà le passé |
+| *When did you arrived?* | *When did you **arrive**?* | Même raison |
+| *I have visited London last year* | *I **visited** London last year* | Last year impose le prétérit |
+
+## Mini-méthode
+1. Repère un moment passé précis : il impose le prétérit.
+2. Régulier ou irrégulier ? Ajoute -ed ou cherche la 2e colonne.
+3. En négation et en question, mets **did** et reviens à la base verbale.
+
+*Last summer we went to Scotland. We visited Edinburgh and it rained every day.* — L’été dernier nous sommes allés en Écosse. Nous avons visité Édimbourg et il a plu tous les jours.`,
           },
           questions: [
             ['Quel temps emploie-t-on avec « yesterday » ?', ['Le prétérit simple', 'Le present perfect', 'Le présent simple', 'Le past perfect'], 0, 'Un repère passé précis impose le prétérit.'],
@@ -1295,7 +1860,34 @@ was / were + verbe en **-ING**
 ## Les verbes d'état
 Comme au présent, ils n'acceptent pas -ING.
 
-> *I knew the answer*, jamais « I was knowing ».`,
+> *I knew the answer*, jamais « I was knowing ».
+
+## La formation pas à pas
+1. Choisis **was** (I, he, she, it) ou **were** (you, we, they).
+2. Ajoute le verbe en **-ING**, avec son orthographe : *write → writing*, *run → running*, *play → playing*.
+3. Pour la négation, **wasn’t / weren’t** ; pour la question, place **was / were** devant le sujet.
+
+| La question | La réponse courte |
+| *Were you sleeping?* | *Yes, I **was**. / No, I **wasn’t**.* |
+| *What was she doing?* | *She was reading.* — Elle lisait. |
+
+## Ce que le français dit autrement
+Le prétérit en BE + -ING correspond souvent à l’**imparfait** français quand il décrit une action en cours : « je regardais la télé », « il pleuvait ». Mais tout imparfait ne se traduit pas ainsi : une **habitude** passée se dit au prétérit simple ou avec *used to*.
+
+| Le français | L’anglais |
+| Il pleuvait quand je suis sorti | *It **was raining** when I went out* |
+| Je lisais pendant qu’il dormait | *I **was reading** while he **was sleeping*** |
+| Tous les étés, nous allions à la mer | *Every summer we **went** / **used to go** to the seaside* |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *I was watch TV* | *I was **watching** TV* |
+| *They was playing* | *They **were** playing* |
+| *When I was arriving, he left* (arrivée brève) | *When I **arrived**, he **was leaving*** |
+| *I was having a car* (possession) | *I **had** a car* |
+
+## Un récit modèle
+*It was a cold evening. The wind was blowing and people were hurrying home. Suddenly, a man appeared.* — C’était une soirée froide. Le vent soufflait et les gens se pressaient de rentrer. Soudain, un homme apparut. Le décor est en BE + -ING, l’événement au prétérit simple.`,
           },
           questions: [
             ['Quelle forme prend le prétérit en BE + -ING ?', ['was / were + verbe en -ING', 'did + verbe en -ING', 'have + participe passé', 'was + participe passé'], 0, '« I was working », « They were playing ».'],
@@ -1345,7 +1937,31 @@ Marqueurs : **ever, never, already, yet, just, before**.
 
 ## La place des marqueurs
 - **already, just, never, ever** : entre l’auxiliaire et le participe passé — *I have **just** arrived.*
-- **yet** : en fin de phrase, dans les questions et les négations — *Have you finished **yet**?* / *I haven’t finished **yet**.*`,
+- **yet** : en fin de phrase, dans les questions et les négations — *Have you finished **yet**?* / *I haven’t finished **yet**.*
+
+## Les formes pas à pas
+| La phrase | Un exemple | Sa traduction |
+| Affirmative | *She **has visited** Rome* | Elle a visité Rome |
+| Négative | *We **haven’t finished*** | Nous n’avons pas fini |
+| Question | ***Have** you **ever been** to London?* | Es-tu déjà allé à Londres ? |
+| Réponse courte | *Yes, I **have**. / No, I **haven’t**.* | Oui. / Non. |
+
+> *been* ou *gone* ? *She has **been** to Paris* : elle y est allée et elle est revenue. *She has **gone** to Paris* : elle y est partie, elle y est encore.
+
+## Ce que le français dit autrement
+Le français emploie le **présent** avec « depuis », l’anglais le **present perfect** : « J’habite ici depuis cinq ans » se dit *I **have lived** here for five years*. Dire *I live here since five years* est la faute la plus fréquente d’un francophone.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *I am here since Monday* | *I **have been** here since Monday* |
+| *I have seen him yesterday* | *I **saw** him yesterday* |
+| *She have finished* | *She **has** finished* |
+| *Have you finished already yet?* | *Have you finished **yet**?* |
+
+## Mini-méthode
+1. Y a-t-il une date ou un moment passé précis ? Si oui → prétérit.
+2. Sinon, le fait compte-t-il **maintenant** (résultat, expérience, situation qui dure) ? → present perfect.
+3. Forme-le : **have / has** + participe passé (3e colonne ou -ed).`,
           },
           questions: [
             ['Comment se forme le present perfect ?', ['have / has + participe passé', 'have / has + base verbale', 'be + participe passé', 'did + participe passé'], 0, '« I have finished », « She has gone ».'],
@@ -1392,7 +2008,34 @@ had + participe passé, à toutes les personnes
 | Dans la **troisième condition** | *If I had known, I would have come* |
 
 ## Quand il n'est pas nécessaire
-> Quand l'ordre chronologique est déjà clair : *She opened the door, took her coat and left.* Trois prétérits simples suffisent.`,
+> Quand l'ordre chronologique est déjà clair : *She opened the door, took her coat and left.* Trois prétérits simples suffisent.
+
+## Past perfect ou prétérit ?
+| La phrase | Ce qui s’est passé |
+| *When I arrived, the film **started**.* | Le film a commencé **au moment où** je suis arrivé. |
+| *When I arrived, the film **had started**.* | Le film avait **déjà** commencé : j’ai raté le début. |
+
+## Les marqueurs du past perfect
+**already**, **just**, **never … before**, **by the time**, **after**, **before** :
+- *By the time we got there, the shop **had closed**.* — Le temps qu’on arrive, le magasin avait fermé.
+- *I **had never seen** snow before that winter.* — Je n’avais jamais vu de neige avant cet hiver-là.
+- *He **had just left** when she phoned.* — Il venait de partir quand elle a téléphoné.
+
+> « Venir de » au passé se dit **had just + participe passé**.
+
+## Ce que le français dit autrement
+Le past perfect correspond au **plus-que-parfait** français : « j’avais fini », « elle était partie ». Mais l’anglais n’emploie que **had**, jamais « was » : *She **had** left*, jamais « she was left ».
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *She was gone when I arrived* (plus-que-parfait) | *She **had gone** / **had left*** |
+| *I had went* | *I had **gone*** |
+| *He had finish* | *He had **finished*** |
+
+## Mini-méthode
+1. Repère les deux actions passées.
+2. Mets la plus **ancienne** au past perfect, la plus **récente** au prétérit.
+3. Si l’ordre est déjà évident, garde le prétérit simple.`,
           },
           questions: [
             ['Comment se forme le past perfect ?', ['had + participe passé', 'have + participe passé', 'was + participe passé', 'did + participe passé'], 0, '« I had finished », à toutes les personnes.'],
@@ -1437,7 +2080,33 @@ Après **when, as soon as, before, after, until**, l'anglais emploie le **prése
 
 ## Le futur proche du passé
 | La forme | Son sens |
-| **was / were going to** | J'avais l'intention — *I was going to call you, but I forgot* |`,
+| **was / were going to** | J'avais l'intention — *I was going to call you, but I forgot* |
+
+## Les formes pas à pas
+| La forme | Négative | Question |
+| *I **will** help you* | *I **won’t** help you* | ***Will** you help me?* |
+| *She **is going to** travel* | *She **isn’t going to** travel* | ***Is** she **going to** travel?* |
+| *We **are leaving** tomorrow* | *We **aren’t leaving*** | ***Are** you **leaving**?* |
+
+## Des emplois de will à retenir
+- L’**offre** : *I’ll carry your bag.* — Je vais porter ton sac.
+- La **demande** : *Will you help me?* — Tu veux bien m’aider ?
+- Le **refus** : *The door won’t open.* — La porte refuse de s’ouvrir.
+
+## Un exemple qui les met ensemble
+*Next summer I’m going to learn to surf (intention). My flight leaves on 3 July (horaire) and I’m meeting my cousin at the airport (rendez-vous). I think it will be great (prédiction)!* — L’été prochain, je vais apprendre à surfer. Mon vol part le 3 juillet et je retrouve mon cousin à l’aéroport. Je pense que ce sera génial !
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I will to go* | *I will **go*** | Will est un modal |
+| *When I will be older* | *When I **am** older* | Présent après when |
+| *I go to call you* | *I**’m going to** call you* | Be going to + base verbale |
+| *It will rain* (en voyant les nuages) | *It**’s going to** rain* | Indice présent |
+
+## Mini-méthode
+1. Est-ce décidé à l’instant ou une prédiction ? → **will**.
+2. Est-ce une intention ou un indice visible ? → **be going to**.
+3. Est-ce organisé avec quelqu’un ? → **BE + -ING** ; un horaire officiel ? → **présent simple**.`,
           },
           questions: [
             ['Quelle forme exprime une décision prise au moment de parler ?', ['will', 'be going to', 'le présent en BE + -ING', 'le présent simple'], 0, '« The phone’s ringing — I’ll get it! »'],
@@ -1487,7 +2156,32 @@ Les deux ordres sont possibles. Quand *if* ouvre la phrase, une **virgule** sép
 ## Le conditionnel hors de « if »
 - politesse : *I **would like** a coffee.*
 - préférence : *I **would rather** stay.*
-- après *wish* : *I wish I **could** come.*`,
+- après *wish* : *I wish I **could** come.*
+
+## Unless, « à moins que »
+**unless** = **if … not** : *You will fail **unless** you work.* = *You will fail **if** you **don’t** work.* — Tu échoueras si tu ne travailles pas.
+
+## Les vérités générales : le type zéro
+Pour ce qui est **toujours** vrai, on met le présent des deux côtés : *If you heat ice, it melts.* — Si on chauffe de la glace, elle fond.
+
+## Les erreurs d’un francophone
+En français, on dit « si j’avais » puis « je voudrais » : c’est exactement la logique du type 2. La faute vient d’ailleurs : ajouter un *would* après *if*, sur le modèle du conditionnel français fautif « si j’aurais ».
+
+| L’erreur | La forme correcte |
+| *If I would have money, I would buy it* | *If I **had** money, I would buy it* |
+| *If it will rain, I stay home* | *If it **rains**, I **will** stay home* |
+| *If I had known, I would come* | *If I had known, I **would have come*** |
+| *If I was you* (à l’écrit) | *If I **were** you* |
+
+## Mini-méthode en trois questions
+1. La situation est-elle **possible** ? → type 1 : présent / will.
+2. Est-elle **imaginaire** dans le présent ? → type 2 : prétérit / would.
+3. Est-elle un **regret** sur le passé, impossible à changer ? → type 3 : past perfect / would have + participe passé.
+
+## Trois exemples traduits
+- *If you **come**, we **will play** tennis.* — Si tu viens, on jouera au tennis.
+- *If you **came**, we **would play** tennis.* — Si tu venais, on jouerait au tennis.
+- *If you **had come**, we **would have played** tennis.* — Si tu étais venu, on aurait joué au tennis.`,
           },
           questions: [
             ['Quelle structure suit une condition de type 1 ?', ['if + présent, will + base verbale', 'if + prétérit, would + base verbale', 'if + will, présent', 'if + past perfect, would have + participe passé'], 0, '« If it rains, I will stay home. »'],
@@ -1603,7 +2297,35 @@ Un complément de temps peut aussi ouvrir la phrase.
 | L'erreur | La forme correcte |
 | La **double négation** | *I didn't see anybody* — jamais « didn't see nobody » |
 | L'adverbe entre verbe et objet | *I speak English well* — jamais « speak well English » |
-| L'adverbe de **fréquence** | **Avant** le verbe lexical : *I often go there* |`,
+| L'adverbe de **fréquence** | **Avant** le verbe lexical : *I often go there* |
+
+## Les questions et les négations gardent un ordre fixe
+| La phrase | Son ordre | Un exemple |
+| Affirmative | Sujet – verbe – complément | *Tom likes music* |
+| Négative | Sujet – auxiliaire + not – verbe | *Tom **doesn’t** like music* |
+| Question | Auxiliaire – sujet – verbe | ***Does** Tom like music?* |
+
+## Les connecteurs essentiels traduits
+| Le mot | Son sens | Un exemple |
+| **because** | parce que | *I stayed home because I was ill* |
+| **so** | donc, alors | *I was ill, so I stayed home* |
+| **but** | mais | *It’s small but comfortable* |
+| **although** | bien que | *Although it was late, he kept working* |
+| **unless** | à moins que | *I’ll go unless it rains* |
+
+> *Because* introduit la **cause**, *so* la **conséquence** : les deux phrases disent la même chose, dans un ordre différent.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *Is raining* | ***It** is raining* |
+| *Yesterday went I to the cinema* | *Yesterday **I went** to the cinema* |
+| *I like very much football* | *I like football **very much*** |
+
+## Mini-méthode pour écrire une phrase longue
+1. Écris d’abord la phrase simple : sujet, verbe, complément.
+2. Ajoute les compléments dans l’ordre manière, lieu, temps.
+3. Relie une seconde idée par un coordonnant (and, but, so) ou un subordonnant (because, when, if).
+4. Relis : chaque proposition a son sujet et son verbe conjugué.`,
           },
           questions: [
             ['Quel est l’ordre de base d’une phrase anglaise ?', ['Sujet – Verbe – Complément d’objet', 'Verbe – Sujet – Complément', 'Sujet – Complément – Verbe', 'Complément – Verbe – Sujet'], 0, 'Cet ordre ne se déplace pas.'],
@@ -1652,7 +2374,33 @@ Emplois :
 > Attention : certains verbes pronominaux français ne le sont pas en anglais. *I wash* (je me lave), *I get up* (je me lève), *I feel* (je me sens) — sans pronom réfléchi.
 
 ## THEY, pronom neutre
-*They* sert aussi de pronom **singulier neutre** quand le genre est inconnu ou non pertinent : *Someone called — **they** left a message.* C’est une tournure standard, y compris à l’écrit.`,
+*They* sert aussi de pronom **singulier neutre** quand le genre est inconnu ou non pertinent : *Someone called — **they** left a message.* C’est une tournure standard, y compris à l’écrit.
+
+## Les pronoms compléments, pas à pas
+| Le français | L’anglais |
+| Je **l’**aime (lui) | *I like **him*** |
+| Elle **nous** appelle | *She calls **us*** |
+| Donne-**le-moi** | *Give **it to me*** |
+| Viens avec **moi** | *Come with **me*** |
+| C’est **moi** | *It’s **me*** |
+
+> En anglais, le pronom complément se place **après** le verbe, jamais avant comme en français.
+
+## Each other : l’un l’autre
+Quand l’action est **réciproque**, on emploie **each other**, pas un réfléchi : *They love **each other**.* — Ils s’aiment. *They love themselves* voudrait dire que chacun s’aime lui-même.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *Me and my friend went* (à l’écrit) | *My friend **and I** went* | Sujet : I, et on se cite en dernier |
+| *Between you and I* | *Between you and **me*** | Après une préposition : complément |
+| *I him saw* | *I saw **him*** | Le complément suit le verbe |
+| *We met ourselves at six* | *We **met** at six* | Pas de réfléchi pour se retrouver |
+| *They kissed themselves* | *They kissed **each other*** | Action réciproque |
+
+## Mini-méthode
+1. Le pronom fait-il l’action ? → pronom **sujet** (I, he, they).
+2. La subit-il, ou suit-il une préposition ? → pronom **complément** (me, him, them).
+3. L’action revient-elle sur le sujet lui-même ? → **réfléchi** (myself) ; sur l’autre ? → **each other**.`,
           },
           questions: [
             ['Quel est le pronom complément correspondant à « they » ?', ['them', 'their', 'theirs', 'themselves'], 0, '« I saw them. »'],
@@ -1701,7 +2449,31 @@ Emplois :
 | **Soutenu** | Elle remonte : *the girl to whom I spoke* |
 
 ## L'erreur du francophone
-> Le relatif ne se traduit pas mot à mot : « que » peut donner *that*, *which*, *who*, ou **rien du tout**. C'est la **fonction** dans la relative qui décide, pas le mot français.`,
+> Le relatif ne se traduit pas mot à mot : « que » peut donner *that*, *which*, *who*, ou **rien du tout**. C'est la **fonction** dans la relative qui décide, pas le mot français.
+
+## Relier deux phrases en une, pas à pas
+1. Repère le nom **répété** dans les deux phrases.
+2. Remplace-le, dans la seconde, par le relatif qui convient.
+3. Place la relative **juste après** son antécédent.
+
+| Les deux phrases | La phrase reliée |
+| *I have a friend. **She** speaks Chinese.* | *I have a friend **who** speaks Chinese.* |
+| *This is the film. I saw **it** yesterday.* | *This is the film (**that**) I saw yesterday.* |
+| *I met a boy. **His** sister is famous.* | *I met a boy **whose** sister is famous.* |
+| *This is the house. I grew up **there**.* | *This is the house **where** I grew up.* |
+
+## What, « ce que »
+« Ce que » et « ce qui » se traduisent par **what**, sans antécédent : *I know **what** you did.* — Je sais ce que tu as fait. *Tell me **what** happened.* — Dis-moi ce qui s’est passé.
+
+> *Everything that* reste avec that : *Everything **that** he said was true*, jamais « everything what ».
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *the man which lives here* | *the man **who** lives here* |
+| *the book who I read* | *the book **which / that** I read* |
+| *the girl who her father is a doctor* | *the girl **whose** father is a doctor* |
+| *My sister, that lives in Rome, …* | *My sister, **who** lives in Rome, …* |
+| *the book that I read it* | *the book that I read* — pas de pronom en double |`,
           },
           questions: [
             ['Quel pronom relatif emploie-t-on pour une personne ?', ['who', 'which', 'whose', 'where'], 0, '« The man who lives here. »'],
@@ -1759,7 +2531,32 @@ Après *I wonder*, *Do you know*, *Could you tell me*, la question **reprend l'o
 | La forme correcte | La forme fautive |
 | *Do you know where he lives?* | where **does** he live |
 
-> C'est le piège classique : dès que la question est enchâssée, elle cesse d'être une question **dans sa forme**.`,
+> C'est le piège classique : dès que la question est enchâssée, elle cesse d'être une question **dans sa forme**.
+
+## Les mots interrogatifs suivis d’un nom
+| La question | Sa traduction |
+| ***What time** is it?* | Quelle heure est-il ? |
+| ***What colour** is your bike?* | De quelle couleur est ton vélo ? |
+| ***Which bus** goes to the station?* | Quel bus va à la gare ? |
+| ***How many brothers** have you got?* | Combien de frères as-tu ? |
+| ***How much money** do you need?* | De combien d’argent as-tu besoin ? |
+
+## La préposition en fin de question
+En anglais courant, la préposition reste **à la fin** : *Who are you talking **to**?* — À qui parles-tu ? ; *Where do you come **from**?* — D’où viens-tu ? ; *What are you looking **at**?* — Que regardes-tu ?
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *Where you live?* | *Where **do** you live?* | Il faut l’auxiliaire |
+| *What did she said?* | *What did she **say**?* | Did porte le passé |
+| *How old have you?* | *How old **are** you?* | L’âge se dit avec be |
+| *Who did call you?* | *Who **called** you?* | Who est sujet |
+| *Can you tell me where is the station?* | *…where **the station is**?* | Question indirecte |
+
+## Mini-méthode pour construire une question
+1. Choisis le mot interrogatif selon ce que tu demandes (lieu, temps, cause, quantité).
+2. Ajoute l’**auxiliaire** du temps : am/is/are, do/does/did, have/has, ou un modal.
+3. Puis le **sujet**, puis le **verbe** à la base verbale.
+4. Si le mot interrogatif est le sujet, garde l’ordre de l’affirmative.`,
           },
           questions: [
             ['Comment forme-t-on une question fermée avec un temps simple ?', ['En ajoutant do, does ou did devant le sujet', 'En inversant simplement le verbe et le sujet', 'En ajoutant « est-ce que »', 'En changeant l’intonation seulement'], 0, '« Do you like it? », « Did she come? »'],
@@ -1810,7 +2607,33 @@ Après *I wonder*, *Do you know*, *Could you tell me*, la question **reprend l'o
 | **Descendante** | On est sûr : on cherche l'accord |
 | **Montante** | On doute vraiment : c'est une vraie question |
 
-> Le tag ne s'invente pas : il se **déduit** mécaniquement. Auxiliaire, polarité inversée, pronom sujet — dans cet ordre.`,
+> Le tag ne s'invente pas : il se **déduit** mécaniquement. Auxiliaire, polarité inversée, pronom sujet — dans cet ordre.
+
+## La méthode, pas à pas sur un exemple
+Phrase de départ : *Your sister lives in London.*
+1. L’auxiliaire ? Aucun visible, présent simple 3e personne → **does**.
+2. La polarité ? Affirmative → tag **négatif** : **doesn’t**.
+3. Le sujet ? *Your sister* → pronom **she**.
+Résultat : *Your sister lives in London, **doesn’t she**?*
+
+## D’autres cas à connaître
+| La phrase | Son tag | Pourquoi |
+| *You’ll come, …* | *won’t you?* | Auxiliaire will |
+| *She should rest, …* | *shouldn’t she?* | Modal repris |
+| *He never lies, …* | *does he?* | Never rend la phrase négative |
+| *Nothing happened, …* | *did it?* | Nothing = sujet négatif, repris par it |
+| *This is your bag, …* | *isn’t it?* | This / that → it |
+
+## Répondre à un question tag
+On répond à ce qui est **vrai**, pas au tag : *You aren’t tired, are you? — **No, I’m not.*** (je ne suis pas fatigué) ; ***Yes, I am.*** (si, je suis fatigué).
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *You like tea, isn’t it?* | *You like tea, **don’t you**?* |
+| *She is nice, isn’t it?* | *She is nice, **isn’t she**?* |
+| *They can’t swim, can’t they?* | *They can’t swim, **can they**?* |
+
+> « Isn’t it ? » n’est pas un tag passe-partout comme « n’est-ce pas ? » : il faut toujours reprendre l’auxiliaire et le sujet de la phrase.`,
           },
           questions: [
             ['Que reprend un question tag ?', ['L’auxiliaire de la phrase', 'Le verbe lexical', 'Le complément d’objet', 'L’adverbe'], 0, 'Sans auxiliaire, on emploie do, does ou did.'],
@@ -1864,7 +2687,31 @@ How + adjectif ou adverbe (+ sujet + verbe)
 
 ## Le piège du francophone
 | Ce qu'on veut dire | La forme correcte | La forme fautive |
-| Comme c'est beau ! | *How beautiful it is!* ou *How beautiful!* | *How is it beautiful!* |`,
+| Comme c'est beau ! | *How beautiful it is!* ou *How beautiful!* | *How is it beautiful!* |
+
+## La méthode, pas à pas
+1. Repère le mot sur lequel porte l’exclamation : un **nom** ou un **adjectif / adverbe** ?
+2. Devant un nom → **what** ; ajoute **a / an** si le nom est singulier dénombrable.
+3. Devant un adjectif ou un adverbe → **how**.
+4. Si tu ajoutes un sujet et un verbe, garde l’ordre **sujet + verbe** à la fin.
+
+## Des exemples traduits
+| L’exclamation | Sa traduction |
+| *What a surprise!* | Quelle surprise ! |
+| *What lovely flowers!* | Quelles jolies fleurs ! |
+| *What bad luck!* | Quelle malchance ! |
+| *How kind of you!* | Comme c’est gentil de ta part ! |
+| *How well she plays!* | Comme elle joue bien ! |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *What beautiful day!* | *What **a** beautiful day!* | Day est singulier dénombrable |
+| *What a terrible weather!* | *What terrible weather!* | Weather est indénombrable |
+| *How a beautiful house!* | *What a beautiful house!* | Devant un nom : what |
+| *It was so a good film!* | *It was **such a** good film!* | Such devant le nom |
+
+## So, such et la conséquence
+So et such introduisent aussi une conséquence avec **that** : *It was **so** cold **that** we stayed inside.* — Il faisait si froid que nous sommes restés à l’intérieur. *It was **such** a long film **that** I fell asleep.* — C’était un film si long que je me suis endormi.`,
           },
           questions: [
             ['Quel mot introduit une exclamation devant un nom ?', ['what', 'how', 'so', 'such'], 0, '« What a beautiful day! »'],
@@ -1914,7 +2761,34 @@ Un verbe à deux compléments (give, send, tell, offer) donne **deux** passifs p
 *They gave **me** **a prize**.* → *I **was given** a prize.* (le plus courant) ou *A prize **was given** to me.*
 
 ## L’erreur classique
-Ne pas oublier **be** : *The window broken* est incomplet ; il faut *The window **was** broken*.`,
+Ne pas oublier **be** : *The window broken* est incomplet ; il faut *The window **was** broken*.
+
+## Les autres temps du passif
+| Temps | Actif | Passif |
+| Présent en BE + -ING | *They **are building** a school.* | *A school **is being built**.* |
+| Prétérit en BE + -ING | *They **were painting** the walls.* | *The walls **were being painted**.* |
+| Be going to | *They **are going to** open it.* | *It **is going to be opened**.* |
+
+## Des tournures fréquentes
+| Le passif | Sa traduction |
+| *English **is spoken** here.* | On parle anglais ici. |
+| *I **was born** in 2011.* | Je suis né en 2011. |
+| *He **is said** to be rich.* | On dit qu’il est riche. |
+| *The match **was cancelled**.* | Le match a été annulé. |
+
+> Le français dit souvent « **on** » là où l’anglais met un passif : *My phone was stolen* — on m’a volé mon téléphone.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *I am born in 2011* | *I **was** born in 2011* |
+| *The house was build in 1900* | *The house was **built*** |
+| *The letter was written of her* | *The letter was written **by** her* |
+
+## Mini-méthode en quatre étapes
+1. Repère le temps du verbe actif.
+2. Mets **be** à ce même temps.
+3. Ajoute le **participe passé** du verbe (3e colonne ou -ed).
+4. N’ajoute **by** + auteur que si l’auteur apporte une information.`,
           },
           questions: [
             ['Comment se forme la voix passive ?', ['be + participe passé', 'have + participe passé', 'do + base verbale', 'be + verbe en -ING'], 0, '« It was built », « Houses are built ».'],
@@ -1966,7 +2840,36 @@ Ne pas oublier **be** : *The window broken* est incomplet ; il faut *The window 
 | De plus en plus | *bigger and bigger*, *more and more expensive* |
 | Plus… plus… | *The more you practise, the better you get* |
 
-> L'erreur la plus fréquente est de cumuler les deux marques : *more taller* est faux. Un adjectif ne prend **jamais** *-er* et *more* à la fois.`,
+> L'erreur la plus fréquente est de cumuler les deux marques : *more taller* est faux. Un adjectif ne prend **jamais** *-er* et *more* à la fois.
+
+## Les règles d’orthographe de -er
+| L’adjectif | Sa règle | Son comparatif |
+| En **-e** | On ajoute seulement -r | nice → nic**er** |
+| Consonne-voyelle-consonne | Consonne doublée | hot → hot**ter**, thin → thin**ner** |
+| En **-y** | y devient i | easy → eas**ier**, funny → funn**ier** |
+
+## Des exemples traduits
+| La phrase | Sa traduction |
+| *My brother is older than me.* | Mon frère est plus âgé que moi. |
+| *This test is easier than the last one.* | Ce contrôle est plus facile que le précédent. |
+| *Football is more popular than rugby.* | Le football est plus populaire que le rugby. |
+| *My bag is as heavy as yours.* | Mon sac est aussi lourd que le tien. |
+| *I have fewer lessons than you.* | J’ai moins de cours que toi. |
+
+## Renforcer un comparatif
+**much**, **far**, **a lot** (bien plus) ou **a bit**, **slightly** (un peu) se placent devant : *much bigger* — beaucoup plus grand ; *a bit more expensive* — un peu plus cher. On ne dit jamais « very bigger ».
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *taller that me* | *taller **than** me* |
+| *more big* | ***bigger*** |
+| *gooder* | ***better*** |
+| *as tall than* | *as tall **as*** |
+
+## Mini-méthode
+1. Compte les syllabes de l’adjectif : court → -er ; long → more.
+2. Vérifie les irréguliers (good, bad, far).
+3. Termine par **than** (supériorité, infériorité) ou encadre par **as … as** (égalité).`,
           },
           questions: [
             ['Comment forme-t-on le comparatif d’un adjectif court ?', ['adjectif + -er + than', 'more + adjectif + than', 'as + adjectif + as', 'the + adjectif + -est'], 0, '« Taller than », « bigger than ».'],
@@ -2017,7 +2920,32 @@ Ne pas oublier **be** : *The window broken* est incomplet ; il faut *The window 
 *the most books*, *the least money*, *the fewest mistakes*
 
 ## L'erreur classique
-> On ne cumule jamais les deux marques : *the most tallest* est faux, comme *more taller* au comparatif.`,
+> On ne cumule jamais les deux marques : *the most tallest* est faux, comme *more taller* au comparatif.
+
+## Les règles d’orthographe de -est
+| L’adjectif | Sa règle | Son superlatif |
+| En **-e** | On ajoute -st | large → the larg**est** |
+| Consonne-voyelle-consonne | Consonne doublée | big → the big**gest**, hot → the hot**test** |
+| En **-y** | y devient i | funny → the funn**iest** |
+
+## Des exemples traduits
+| La phrase | Sa traduction |
+| *Mount Everest is **the highest** mountain in the world.* | L’Everest est la plus haute montagne du monde. |
+| *It was **the worst** day of my life.* | Ce fut le pire jour de ma vie. |
+| *She is **the most talented** player in the team.* | C’est la joueuse la plus douée de l’équipe. |
+| *This is **the least interesting** book I have ever read.* | C’est le livre le moins intéressant que j’aie jamais lu. |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *the tallest boy of the class* | *…**in** the class* | Un lieu, un groupe → in |
+| *She is best* | *She is **the** best* | The est obligatoire |
+| *the more beautiful city* (sens superlatif) | *the **most** beautiful city* | Most, pas more |
+| *the best film I never saw* | *the best film I have **ever** seen* | Ever + present perfect |
+
+## Mini-méthode
+1. Compte les éléments : deux → comparatif ; trois ou plus → superlatif.
+2. Adjectif court → **the …-est** ; long → **the most** ; infériorité → **the least**.
+3. Vérifie les irréguliers et termine par **in** (lieu, groupe) ou **of** (ensemble, période).`,
           },
           questions: [
             ['Comment forme-t-on le superlatif d’un adjectif court ?', ['the + adjectif + -est', 'the most + adjectif', 'adjectif + -er + than', 'as + adjectif + as'], 0, '« The tallest », « the biggest ».'],
@@ -2064,7 +2992,30 @@ Avec les adverbes de fréquence : **always, usually, often, sometimes, rarely, n
 | Être habitué à | be used to | **-ING** ou nom |
 | S’habituer à | get used to | **-ING** ou nom |
 
-> Le piège tient en un mot : après *used to* (habitude passée), **base verbale** ; après *be/get used to* (habitude acquise), **-ING**. *I used to **swim*** contre *I am used to **swimming***.`,
+> Le piège tient en un mot : après *used to* (habitude passée), **base verbale** ; après *be/get used to* (habitude acquise), **-ING**. *I used to **swim*** contre *I am used to **swimming***.
+
+## Des exemples traduits
+| La phrase | Sa traduction |
+| *I usually **have** breakfast at seven.* | D’habitude, je prends mon petit déjeuner à sept heures. |
+| *We **used to live** in Lyon.* | Nous habitions à Lyon (avant). |
+| *There **used to be** a cinema here.* | Il y avait un cinéma ici autrefois. |
+| *I**’m used to** the noise.* | J’ai l’habitude du bruit. |
+| *You’ll soon **get used to** it.* | Tu vas vite t’y habituer. |
+
+## Ce que le français dit autrement
+Le français emploie souvent l’**imparfait** pour une habitude passée : « je jouais au foot le mercredi ». L’anglais a trois choix : *I **played** football on Wednesdays* (prétérit simple, neutre), *I **used to play*** (insiste sur le fait que c’est fini), *I **would play*** (récit, souvenir).
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I use to play* (au passé) | *I **used** to play* | Used, avec -d, à l’affirmative |
+| *I didn’t used to* | *I didn’t **use** to* | Did porte déjà le passé |
+| *I am used to get up early* | *I am used to **getting** up early* | To est ici une préposition |
+| *I would live in Lyon* (habitude d’état) | *I **used to** live in Lyon* | Would : actions répétées seulement |
+
+## Mini-méthode
+1. L’habitude est-elle **actuelle** ? → présent simple + adverbe de fréquence.
+2. Est-elle **finie** ? → **used to + base verbale** (ou *would* pour une action répétée).
+3. Parles-tu d’être ou de devenir **habitué** ? → **be / get used to + -ING** ou nom.`,
           },
           questions: [
             ['Quel temps exprime une habitude présente ?', ['Le présent simple', 'Le présent en BE + -ING', 'Le present perfect', 'Le prétérit'], 0, '« I go to school by bus. »'],
@@ -2096,7 +3047,7 @@ Avec les adverbes de fréquence : **always, usually, often, sometimes, rarely, n
 ## IN ORDER TO / SO AS TO
 | L'emploi | Un exemple |
 | Le but, avec insistance | *He left early in order to catch the train* |
-| Le but **négatif** — la seule forme possible | *I wrote it down so as not to forget* |
+| Le but **négatif** — la forme la plus courante (*in order not to* existe aussi) | *I wrote it down so as not to forget* |
 
 ## SO THAT + proposition
 Quand le but concerne un **autre sujet**, il faut une proposition complète.
@@ -2117,7 +3068,34 @@ Quand le but concerne un **autre sujet**, il faut une proposition complète.
 ## Interroger sur le but
 | La question | Un exemple |
 | *What… for?* | *What did you do that for?* |
-| *Why?* | La réponse commence souvent par *To…* : *Why did you call? — To ask you something* |`,
+| *Why?* | La réponse commence souvent par *To…* : *Why did you call? — To ask you something* |
+
+## Des exemples traduits
+| La phrase | Sa traduction |
+| *I’m saving money **to buy** a bike.* | J’économise pour acheter un vélo. |
+| *She got up early **so as not to miss** the bus.* | Elle s’est levée tôt pour ne pas rater le bus. |
+| *Speak louder **so that** everyone **can** hear you.* | Parle plus fort pour que tout le monde t’entende. |
+| *He whispered **so that** the baby **wouldn’t** wake up.* | Il chuchotait pour que le bébé ne se réveille pas. |
+
+## Le but négatif, pas à pas
+| La forme | Correcte ? |
+| *so as not to* / *in order not to* + base verbale | Oui |
+| *so that* + sujet + *won’t / wouldn’t* | Oui |
+| *not to* seul | Rare, à éviter en début d’apprentissage |
+| *for not* + verbe | **Jamais** |
+
+> *not* se place **avant** *to* : *so as **not to** forget*, jamais « so as to not forget » dans une copie.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *I came for see you* | *I came **to see** you* |
+| *I study for to pass my exam* | *I study **to pass** my exam* |
+| *I’ll help you so that you finish* (sans modal, maladroit) | *…so that you **can** finish* |
+
+## Mini-méthode en trois questions
+1. Le but concerne-t-il le **même sujet** ? → **to** + base verbale (ou *in order to*).
+2. Concerne-t-il **quelqu’un d’autre** ? → **so that** + sujet + can / could / will / would.
+3. Le but est-il **négatif** ? → **so as not to** ou **in order not to**.`,
           },
           questions: [
             ['Comment exprime-t-on simplement le but d’une action ?', ['to + base verbale', 'for + verbe en -ING', 'for + base verbale', 'so + base verbale'], 0, '« I went to the shop to buy bread. »'],
@@ -2166,7 +3144,30 @@ Il s’emploie à tous les temps : *I worked there **for** two years* (fini), *I
 - **it’s been … since** : *It**’s been** two years **since** I saw him.*
 - **during + nom** : *during the holidays* — jamais *during two hours*, qui doit devenir *for two hours*.
 
-> Le test le plus sûr : peut-on répondre « **combien de temps ?** » → *for*. Peut-on répondre « **depuis quand ?** » → *since*.`,
+> Le test le plus sûr : peut-on répondre « **combien de temps ?** » → *for*. Peut-on répondre « **depuis quand ?** » → *since*.
+
+## Ce que le français dit autrement
+Le français emploie le **présent** avec « depuis » pour une situation qui dure encore ; l’anglais emploie le **present perfect** (ou le present perfect en BE + -ING pour une activité).
+
+| Le français | L’anglais |
+| J’habite ici depuis 2019 | *I **have lived** here **since** 2019* |
+| Je l’attends depuis une heure | *I **have been waiting** for him **for** an hour* |
+| Je le connais depuis longtemps | *I **have known** him **for** a long time* |
+| Je l’ai vu il y a deux jours | *I **saw** him two days **ago*** |
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte | Pourquoi |
+| *I live here since two years* | *I **have lived** here **for** two years* | Deux ans est une durée, et la situation dure |
+| *I am waiting since 8 o’clock* | *I **have been waiting since** 8 o’clock* | Present perfect avec since |
+| *Since how long…?* | ***How long** have you…?* | Tournure fixe |
+| *I arrived since three days* | *I arrived three days **ago*** | Moment passé → ago |
+
+## Mini-méthode en trois questions
+1. La situation dure-t-elle **encore** ? → present perfect.
+2. Donnes-tu une **durée** (combien de temps) ? → **for** ; un **point de départ** (depuis quand) ? → **since**.
+3. Situes-tu un **moment passé** par rapport à aujourd’hui ? → prétérit + **ago**.
+
+*I started judo five years ago, so I have done judo for five years — since I was nine.* — J’ai commencé le judo il y a cinq ans : j’en fais donc depuis cinq ans, depuis mes neuf ans.`,
           },
           questions: [
             ['Quelle préposition introduit une durée ?', ['for', 'since', 'ago', 'during'], 0, '« For five years », « for a long time ».'],
@@ -2221,7 +3222,34 @@ Elles **reprennent l’ordre de l’affirmative**, sans auxiliaire déplacé :
 *« Close the door. » → She told me **to close** the door.*
 *« Don’t be late. » → She told me **not to be** late.*
 
-> Le recul des temps ne s’applique **pas** quand le verbe introducteur est au présent (*He says he is tired*) ni quand le fait rapporté est toujours vrai.`,
+> Le recul des temps ne s’applique **pas** quand le verbe introducteur est au présent (*He says he is tired*) ni quand le fait rapporté est toujours vrai.
+
+## Les verbes introducteurs
+**say** et **tell** ne sont pas les seuls : *explain*, *answer*, *reply*, *add*, *promise*, *admit* rapportent aussi des paroles, et **ask** une question ou une demande.
+
+| Le verbe | Sa construction | Un exemple |
+| **promise** | + to + verbe | *He promised **to call** me* — il a promis de m’appeler |
+| **explain** | + that, jamais de personne directe | *She explained **that** she was ill* |
+| **ask** | + if / wh- (question), + personne + to (demande) | *He asked **me to help** him* |
+
+## Un exemple travaillé
+Paroles directes, lundi : *« I **will** finish my project **tomorrow**, » said Emma.*
+1. Le temps recule : **will** → **would**.
+2. Le pronom et le possessif changent : **I** → **she**, **my** → **her**.
+3. Le repère change : **tomorrow** → **the next day**.
+Résultat : *Emma said (that) she **would** finish her project **the next day**.* — Emma a dit qu’elle finirait son projet le lendemain.
+
+## Les erreurs d’un francophone
+| L’erreur | La forme correcte |
+| *He said me that…* | *He **told me** that…* / *He **said** that…* |
+| *She asked where did I live* | *She asked where **I lived*** |
+| *He told me to not shout* | *He told me **not to** shout* |
+| *She asked me if was I ready* | *She asked me if **I was** ready* |
+
+## Mini-méthode
+1. Regarde le verbe introducteur : au passé → recule les temps ; au présent → ne change rien.
+2. Adapte pronoms, possessifs et repères au nouveau locuteur.
+3. Question → if / whether ou mot interrogatif + ordre affirmatif ; ordre → to + base verbale.`,
           },
           questions: [
             ['Que devient un présent simple au discours indirect après « he said » ?', ['Un prétérit', 'Un present perfect', 'Un past perfect', 'Il ne change pas'], 0, '« I am tired » devient « He said he was tired ».'],

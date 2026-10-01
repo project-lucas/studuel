@@ -1,0 +1,3114 @@
+{
+ "niveau": "3e",
+ "matiere": "emc",
+ "exercices": [
+  {
+   "chapitre": "dcaa1027-5f64-57e5-8fb6-111ee36563f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que dit la loi",
+   "competence": "analyser-texte",
+   "situation": "Le professeur d’EMC distribue un extrait de loi adapté pour la classe. Il s’agit de repérer ce qui définit une discrimination.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Définition de la discrimination",
+     "blocs": [
+      "La discrimination est une différence de traitement défavorable, fondée sur un critère interdit par la loi, comme l’[[c|origine]], le [[c|sexe]] ou le [[c|handicap]].",
+      "Elle est punie de trois ans d’emprisonnement et de 45 000 € d’amende."
+     ],
+     "source": "D’après le Code pénal, articles 225-1 et 225-2 (texte adapté pour l’exercice)."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche les trois critères interdits cités dans le texte.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Ils suivent l’expression « comme l’ ».",
+     "explication": "**Origine**, **sexe** et **handicap** font partie des critères interdits, avec la religion, l’âge ou l’apparence physique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années de prison une discrimination est-elle punie au maximum ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Lis la dernière phrase du texte.",
+     "explication": "Jusqu’à **3 ans d’emprisonnement** et **45 000 €** d’amende pour un particulier ou une entreprise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces situations est une discrimination ?",
+     "options": [
+      "Refuser de louer un logement à quelqu’un à cause de son nom",
+      "Refuser un emploi à un candidat sans le diplôme exigé",
+      "Ne pas inviter quelqu’un à son anniversaire",
+      "Choisir un ami selon ses goûts"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un traitement défavorable, un critère interdit et un domaine protégé.",
+     "explication": "Le **nom** renvoie à l’origine, critère interdit ; le **logement** est un domaine protégé. Le diplôme, lui, est un critère **pertinent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcaa1027-5f64-57e5-8fb6-111ee36563f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Directe, indirecte ou légitime ?",
+   "competence": "analyser-document",
+   "situation": "Une conseillère de la mission locale présente à des lycéens plusieurs cas tirés de situations réelles. Il faut les classer.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "colonnes": [
+      "N°",
+      "La situation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une entreprise écarte un candidat qui n’a pas le diplôme exigé pour le poste."
+      ],
+      [
+       "2",
+       "Un propriétaire refuse de louer à une famille à cause de son nom."
+      ],
+      [
+       "3",
+       "Un employeur refuse un candidat sans permis alors que le poste demande de conduire."
+      ],
+      [
+       "4",
+       "Un club refuse une joueuse à cause de son handicap, alors que l’activité peut être adaptée."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas imaginés pour l’exercice."
+    },
+    {
+     "id": "reglement",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Un règlement de recrutement",
+     "blocs": [
+      "« Pour devenir agent d’accueil, il faut mesurer au moins 1,80 m. » Cette taille n’a aucun lien avec les missions du poste, mais elle écarte surtout des femmes."
+     ],
+     "source": "Règlement imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation du tableau.",
+     "categories": [
+      "Discrimination",
+      "Différence légitime"
+     ],
+     "items": [
+      [
+       "Situation 1",
+       1
+      ],
+      [
+       "Situation 2",
+       0
+      ],
+      [
+       "Situation 3",
+       1
+      ],
+      [
+       "Situation 4",
+       0
+      ]
+     ],
+     "aide": "Un critère pertinent pour le poste est légitime ; un critère interdit non.",
+     "explication": "Les situations **1** et **3** reposent sur un critère **pertinent** (diplôme, permis). Les situations **2** (nom) et **4** (handicap) reposent sur un critère **interdit**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le règlement sur la taille minimale est une discrimination…",
+     "options": [
+      "Indirecte",
+      "Directe",
+      "Légitime",
+      "Inexistante"
+     ],
+     "reponse": 0,
+     "aide": "La règle est neutre en apparence, mais défavorise un groupe.",
+     "explication": "C’est une discrimination **indirecte** : une règle neutre en apparence qui défavorise en fait un groupe (ici les femmes)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le recruteur dit : « Je n’ai pas voulu discriminer, ça m’est venu naturellement. » Est-ce une défense valable ?",
+     "options": [
+      "Non : le droit regarde ce qui a été fait, pas l’intention",
+      "Oui : sans intention, pas de délit",
+      "Oui, si c’est la première fois",
+      "Non, sauf s’il a des excuses écrites"
+     ],
+     "reponse": 0,
+     "aide": "Le droit juge le résultat de l’acte.",
+     "explication": "Le droit ne demande pas ce que la personne a **voulu** faire, mais ce qu’elle a **fait** : on peut discriminer sans se penser raciste ou sexiste."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle autorité indépendante peut être saisie gratuitement par toute personne qui s’estime discriminée ?",
+     "reponse": [
+      "défenseur des droits",
+      "le défenseur des droits"
+     ],
+     "placeholder": "Nom de l’autorité",
+     "aide": "Son nom commence par « Défenseur ».",
+     "explication": "C’est le **Défenseur des droits**, saisi gratuitement par toute personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcaa1027-5f64-57e5-8fb6-111ee36563f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le test des deux candidatures",
+   "competence": "argumenter",
+   "situation": "Une association envoie 100 candidatures identiques, à une seule différence près : le nom sur le CV. Elle compare les réponses positives. La responsable des ressources humaines répond par courrier, écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "testing",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Réponses positives sur 100 candidatures",
+     "categories": [
+      "Candidature A",
+      "Candidature B"
+     ],
+     "series": [
+      {
+       "nom": "Réponses positives",
+       "valeurs": [
+        42,
+        21
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Réponses positives",
+      "unite": "sur 100",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Résultats imaginés pour l’exercice."
+    },
+    {
+     "id": "courrier",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Réponse de la direction",
+     "blocs": [
+      "Nous n’avons jamais eu l’intention de discriminer. Nous cherchions simplement un profil qui « corresponde à notre équipe »."
+     ],
+     "source": "Courrier écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "testing",
+     "enonce": "Touche la candidature qui reçoit le moins de réponses positives.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare la hauteur des deux barres.",
+     "explication": "La candidature **B** reçoit 21 réponses positives, deux fois moins que la A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de réponses positives entre les deux candidatures ?",
+     "reponse": 21,
+     "unite": "réponses",
+     "aide": "Soustrais 21 à 42.",
+     "explication": "42 − 21 = **21 réponses** d’écart. Les deux CV étant identiques, la différence vient du critère comparé."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert le « testing » ?",
+     "options": [
+      "À comparer deux candidatures identiques, sauf sur un critère, pour prouver une discrimination",
+      "À tester les compétences du candidat",
+      "À choisir le meilleur candidat",
+      "À sanctionner l’association"
+     ],
+     "reponse": 0,
+     "aide": "Les deux CV sont identiques sauf sur un critère.",
+     "explication": "Le **testing** compare deux candidatures identiques sauf sur un critère : c’est une preuve **admise en justice**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La direction dit n’avoir « jamais eu l’intention » de discriminer. Peut-elle être condamnée ?",
+     "options": [
+      "Oui : l’intention n’est pas nécessaire, le résultat suffit",
+      "Non : sans intention, aucune faute",
+      "Non, car elle a écrit un courrier poli",
+      "Oui, mais seulement si elle l’avoue"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la leçon sur les sanctions.",
+     "explication": "Il n’est **pas nécessaire** d’avoir voulu discriminer : l’acte, lui, suffit pour qu’il y ait délit."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2c56dae-8863-5ab9-a39d-3e650eb92870",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le droit de dire",
+   "competence": "analyser-texte",
+   "situation": "L’article 11 de la Déclaration de 1789 est au cœur de la liberté d’expression. Lis cette version adaptée pour la classe.",
+   "documents": [
+    {
+     "id": "art11",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Article 11 (adapté)",
+     "blocs": [
+      "La libre communication des pensées et des opinions est un droit très précieux. Chacun peut [[p|parler]], [[p|écrire]] et [[p|publier]] librement, mais doit répondre des abus de cette liberté dans les cas fixés par la loi."
+     ],
+     "source": "D’après l’article 11 de la Déclaration des droits de l’homme et du citoyen de 1789 (texte adapté pour l’exercice)."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art11",
+     "enonce": "Touche les trois verbes qui disent ce que chacun peut faire librement.",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "aide": "Ils sont dans la deuxième phrase, après « Chacun peut ».",
+     "explication": "Chacun peut **parler**, **écrire** et **publier** librement, tout en répondant des abus prévus par la loi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle loi du 29 juillet 1881 encadre la liberté de la presse et ses limites ?",
+     "options": [
+      "La loi sur la liberté de la presse",
+      "La loi sur la laïcité",
+      "La loi sur le vote des femmes",
+      "La loi sur le service civique"
+     ],
+     "reponse": 0,
+     "aide": "Elle est citée dans la leçon avec la Déclaration de 1789.",
+     "explication": "La **loi du 29 juillet 1881** pose la liberté de la presse **et** ses limites."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque délit à sa définition.",
+     "paires": [
+      [
+       "Injure",
+       "Une expression outrageante, sans fait précis"
+      ],
+      [
+       "Diffamation",
+       "Un fait faux qui porte atteinte à l’honneur"
+      ],
+      [
+       "Apologie du terrorisme",
+       "La présentation favorable d’un acte terroriste"
+      ]
+     ],
+     "aide": "Pour l’une, il y a un fait précis ; pour l’autre, non.",
+     "explication": "L’**injure** est outrageante sans fait précis ; la **diffamation** allègue un fait **faux** ; l’**apologie du terrorisme** présente un acte sous un jour favorable."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2c56dae-8863-5ab9-a39d-3e650eb92870",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sur le forum de la classe",
+   "competence": "argumenter",
+   "situation": "Noé et Lila discutent de ce qu’on peut écrire sur internet. Leur échange est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "forum",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Discussion à propos d’internet",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lila",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noé",
+       "texte": "Sur internet je peux tout écrire : avec mon [[p|pseudo]], personne ne sait qui je suis."
+      },
+      {
+       "qui": "Lila",
+       "texte": "Faux. Ton adresse IP permet de te retrouver, et la loi s’applique de la même façon en ligne."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Et si je ne fais que [[s|partager]] un message qui n’est pas de moi ?"
+      },
+      {
+       "qui": "Lila",
+       "texte": "Partager, c’est diffuser : tu es concerné aussi."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "forum",
+     "enonce": "Touche le mot qui exprime la fausse protection dont parle Noé.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Il pense qu’un faux nom suffit à ne pas être retrouvé.",
+     "explication": "Le **pseudonyme** ne protège pas : le message est traçable par l’**adresse IP**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui permet de retrouver l’auteur d’un message posté sous pseudonyme ?",
+     "options": [
+      "L’adresse IP",
+      "La couleur de l’écran",
+      "Le prénom de ses amis",
+      "Son nombre d’abonnés"
+     ],
+     "reponse": 0,
+     "aide": "Lila le dit dans sa première réponse.",
+     "explication": "L’**adresse IP** du message permet de remonter jusqu’à son auteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Partager un contenu illicite, est-ce engager sa responsabilité ?",
+     "options": [
+      "Oui : publier, partager ou retweeter, c’est diffuser",
+      "Non : seul l’auteur est responsable",
+      "Non, sauf avec un pseudo",
+      "Oui, mais uniquement pour un adulte"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la dernière réplique de Lila.",
+     "explication": "**Partager** un contenu illicite, c’est le **diffuser** : cela engage aussi celui qui partage."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces propos : protégés ou punis par la loi ?",
+     "categories": [
+      "Protégé",
+      "Puni"
+     ],
+     "items": [
+      [
+       "Critiquer une religion ou une idée",
+       0
+      ],
+      [
+       "Se moquer d’un parti politique par une caricature",
+       0
+      ],
+      [
+       "Critiquer une loi",
+       0
+      ],
+      [
+       "Appeler à s’en prendre à des personnes à cause de leur religion",
+       1
+      ],
+      [
+       "Affirmer à tort qu’un camarade a volé",
+       1
+      ],
+      [
+       "Insulter un camarade dans un commentaire",
+       1
+      ]
+     ],
+     "aide": "La frontière n’est pas entre le poli et l’impoli.",
+     "explication": "La frontière passe entre l’**idée** (qu’on peut critiquer) et la **personne** (qu’on ne peut pas viser par la haine, l’injure ou la diffamation)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2c56dae-8863-5ab9-a39d-3e650eb92870",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une photo qui tourne",
+   "competence": "analyser-document",
+   "situation": "Dans le groupe de messagerie d’une classe, une photo circule. Chacun a un rôle dans ce qui s’est passé. Le récit est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le groupe de la 3e B",
+     "blocs": [
+      "Tom publie une photo de Yanis endormi en cours, sans lui demander son accord.",
+      "Clara écrit : « Yanis a [[d|volé]] le portable de Maëlle », alors que c’est [[d|faux]].",
+      "Hugo ajoute : « T’es vraiment nul ». Enfin, Inès partage la photo à tout le collège."
+     ],
+     "source": "Récit écrit pour l’exercice."
+    },
+    {
+     "id": "qualif",
+     "type": "tableau",
+     "titre": "Qui a fait quoi ?",
+     "colonnes": [
+      "Auteur",
+      "Acte"
+     ],
+     "lignes": [
+      [
+       "Tom",
+       "Diffuse la photo sans l’accord de Yanis"
+      ],
+      [
+       "Clara",
+       "Affirme un fait faux qui porte atteinte à l’honneur"
+      ],
+      [
+       "Hugo",
+       "Écrit une expression outrageante, sans fait précis"
+      ],
+      [
+       "Inès",
+       "Partage la photo à tout le collège"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les deux mots qui montrent que Clara commet une diffamation.",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "aide": "Elle avance un fait, et il est inexact.",
+     "explication": "Clara avance un fait précis (« volé ») qui est **faux** : c’est une **diffamation**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque auteur à la qualification de son acte.",
+     "paires": [
+      [
+       "Tom",
+       "Atteinte au droit à l’image"
+      ],
+      [
+       "Clara",
+       "Diffamation"
+      ],
+      [
+       "Hugo",
+       "Injure"
+      ],
+      [
+       "Inès",
+       "Diffusion : celui qui partage est concerné"
+      ]
+     ],
+     "aide": "Regarde ce que fait chacun dans le tableau.",
+     "explication": "**Tom** viole le droit à l’image, **Clara** diffame, **Hugo** injurie et **Inès**, en partageant, **diffuse** à son tour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où passe la frontière de la liberté d’expression dans cette histoire ?",
+     "options": [
+      "Entre l’idée et la personne",
+      "Entre le poli et l’impoli",
+      "Entre les adultes et les élèves",
+      "Entre internet et la vie réelle"
+     ],
+     "reponse": 0,
+     "aide": "On peut critiquer une idée, pas s’en prendre à une personne.",
+     "explication": "La frontière est entre l’**idée** et la **personne**, pas entre le poli et l’impoli."
+    },
+    {
+     "type": "choix",
+     "enonce": "Peut-on diffuser la photo de quelqu’un sans son accord, si elle n’est pas insultante ?",
+     "options": [
+      "Non : le droit à l’image protège aussi les images neutres",
+      "Oui : une photo neutre n’est pas un problème",
+      "Oui, si elle est drôle",
+      "Oui, entre élèves de la même classe"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’encadré sur le droit à l’image.",
+     "explication": "Diffuser une image **sans l’accord** de la personne est interdit, **même** si elle n’est pas insultante."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e7d8da-139b-5834-99ef-74e2e7d5d907",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La journée numérique d’Ilan",
+   "competence": "analyser-document",
+   "situation": "Ilan, 14 ans, a laissé des traces numériques tout au long de sa journée. Certaines viennent de lui, d’autres non.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "Les traces d’Ilan",
+     "colonnes": [
+      "Heure",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "8 h",
+       "Ilan publie une photo de son petit-déjeuner."
+      ],
+      [
+       "12 h",
+       "Une amie le tague sur une photo de classe."
+      ],
+      [
+       "15 h",
+       "Son application de sport enregistre sa position."
+      ],
+      [
+       "20 h",
+       "Il tape des recherches sur un moteur de recherche."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Journée imaginée pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche la ligne où une trace est laissée par quelqu’un d’autre qu’Ilan.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche l’heure où une amie le tague.",
+     "explication": "Quand une amie le tague, c’est un contenu publié par **d’autres** sur lui, sans qu’il l’ait choisi."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque trace selon qui la produit.",
+     "categories": [
+      "Ce que je publie",
+      "Ce que d’autres publient",
+      "Ce que les services enregistrent"
+     ],
+     "items": [
+      [
+       "Ma photo de profil",
+       0
+      ],
+      [
+       "Un commentaire que j’écris sous une vidéo",
+       0
+      ],
+      [
+       "Un article du journal du collège qui parle de moi",
+       1
+      ],
+      [
+       "Une amie qui me tague sur une photo",
+       1
+      ],
+      [
+       "Ma position enregistrée par une appli",
+       2
+      ],
+      [
+       "Mes recherches sur un moteur",
+       2
+      ]
+     ],
+     "aide": "Trois couches : publier, être publié, être enregistré.",
+     "explication": "L’identité numérique a **trois couches** : ce qu’on publie, ce que d’autres publient sur nous, ce que les services **enregistrent** sans qu’on le voie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel article du Code civil protège la vie privée ?",
+     "options": [
+      "L’article 9",
+      "L’article 1",
+      "L’article 225",
+      "L’article 11"
+     ],
+     "reponse": 0,
+     "aide": "Il protège le domicile, la santé, la vie sentimentale, les convictions et l’image.",
+     "explication": "L’**article 9 du Code civil** protège la vie privée."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e7d8da-139b-5834-99ef-74e2e7d5d907",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mélissa et l’application",
+   "competence": "analyser-document",
+   "situation": "Mélissa a 14 ans et veut s’inscrire sur une application. Son frère Hugo lui explique ce que dit la loi. La conversation est écrite pour l’exercice.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Conversation de Mélissa et de Hugo",
+     "participants": [
+      {
+       "nom": "Mélissa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mélissa",
+       "texte": "L’appli demande mon accord pour utiliser mes données. J’ai 14 ans, je peux le donner seule ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non, avant l’âge du consentement autonome, il faut l’accord d’un parent."
+      },
+      {
+       "qui": "Mélissa",
+       "texte": "Et si je veux ensuite voir ou effacer mes données ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Le RGPD te donne des droits, et tu peux saisir la CNIL."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Les droits du RGPD",
+     "colonnes": [
+      "Le droit",
+      "Ce qu’il permet"
+     ],
+     "lignes": [
+      [
+       "Accès",
+       "Savoir quelles données sont détenues"
+      ],
+      [
+       "Rectification",
+       "?"
+      ],
+      [
+       "Effacement",
+       "?"
+      ],
+      [
+       "Opposition",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel âge peut-on consentir seul au traitement de ses données en France ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Mélissa n’a pas encore cet âge.",
+     "explication": "En France, on consent seul à **15 ans** ; en dessous, il faut l’accord d’un parent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit faire Mélissa, qui a 14 ans, pour s’inscrire ?",
+     "options": [
+      "Obtenir l’accord d’un parent",
+      "Rien : l’appli est gratuite",
+      "Attendre 18 ans",
+      "Mentir sur son âge"
+     ],
+     "reponse": 0,
+     "aide": "Elle a moins de 15 ans.",
+     "explication": "Avant 15 ans, il faut l’**accord d’un parent** pour que le service traite ses données."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque droit du RGPD à ce qu’il permet.",
+     "paires": [
+      [
+       "Accès",
+       "Consulter ses données"
+      ],
+      [
+       "Rectification",
+       "Les corriger"
+      ],
+      [
+       "Effacement",
+       "Demander leur suppression"
+      ],
+      [
+       "Opposition",
+       "Refuser un usage de ses données"
+      ]
+     ],
+     "aide": "Le RGPD est entré en application en 2018.",
+     "explication": "**Accès** : consulter ; **rectification** : corriger ; **effacement** : le « droit à l’oubli » ; **opposition** : refuser un usage."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle autorité française veille à la protection des données personnelles ?",
+     "reponse": [
+      "cnil",
+      "la cnil"
+     ],
+     "placeholder": "Un sigle",
+     "aide": "Elle est citée dans la dernière réplique de Hugo.",
+     "explication": "C’est la **CNIL**, qui peut être saisie en cas de problème."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e7d8da-139b-5834-99ef-74e2e7d5d907",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Supprimer ne suffit pas",
+   "competence": "argumenter",
+   "situation": "Une élève a publié une vidéo moqueuse à 13 ans, puis l’a supprimée. Trois ans plus tard, elle ressurgit. Le chemin de la vidéo est schématisé.",
+   "documents": [
+    {
+     "id": "chemin",
+     "type": "chaine",
+     "titre": "Le chemin d’une publication",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "pub",
+       "texte": "Je publie une vidéo"
+      },
+      {
+       "id": "capture",
+       "texte": "Un contact en fait une capture"
+      },
+      {
+       "id": "partage",
+       "texte": "La capture est partagée et archivée"
+      },
+      {
+       "id": "sup",
+       "texte": "Je supprime ma publication"
+      },
+      {
+       "id": "fin",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pub",
+       "a": "capture"
+      },
+      {
+       "de": "capture",
+       "a": "partage"
+      },
+      {
+       "de": "partage",
+       "a": "sup"
+      },
+      {
+       "de": "sup",
+       "a": "fin"
+      }
+     ]
+    },
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le témoignage de Camille",
+     "blocs": [
+      "J’ai supprimé ma vidéo depuis longtemps. Pourtant, quelqu’un l’a retrouvée et l’a montrée à un employeur potentiel pour mon stage."
+     ],
+     "source": "Témoignage écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chemin",
+     "enonce": "Touche l’étape qui explique pourquoi supprimer sa publication ne suffit pas.",
+     "reponse": [
+      "capture"
+     ],
+     "aide": "Quelqu’un d’autre en garde une trace.",
+     "explication": "La **capture d’écran** est une copie que l’on ne contrôle plus : supprimer l’original ne la fait pas disparaître."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devrait indiquer le dernier « ? » ?",
+     "options": [
+      "L’image existe toujours ailleurs, copiée ou archivée",
+      "L’image a disparu pour toujours",
+      "L’image est désormais privée",
+      "L’image est devenue légale"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « permanence » de la leçon.",
+     "explication": "Le contenu est **copiable** et **archivé** : supprimer ne supprime pas les captures d’écran."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces réflexes : à adopter ou à éviter.",
+     "categories": [
+      "À adopter",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "Régler la confidentialité de ses comptes",
+       0
+      ],
+      [
+       "Utiliser des mots de passe distincts",
+       0
+      ],
+      [
+       "Réfléchir avant de publier la photo d’un camarade",
+       0
+      ],
+      [
+       "Diffuser une image intime",
+       1
+      ],
+      [
+       "Poster sans réfléchir une photo de quelqu’un d’autre",
+       1
+      ]
+     ],
+     "aide": "Pense à ce qui protège la vie privée, et à ce qui la menace.",
+     "explication": "Réglages de confidentialité, mots de passe distincts et **réflexion avant publication** protègent. **Diffuser une image intime** est un délit lourdement puni."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une publication de collège peut-elle ressortir dix ans plus tard ?",
+     "options": [
+      "Parce que le contenu a pu être copié et archivé",
+      "Parce qu’internet efface tout au bout de dix ans",
+      "Parce que la loi interdit de supprimer",
+      "Parce que seul l’auteur peut la retrouver"
+     ],
+     "reponse": 0,
+     "aide": "Pense au chemin schématisé.",
+     "explication": "Un contenu **copié** et **archivé** peut ressortir longtemps après, par exemple devant un employeur."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e512c0e-ff95-5285-96dc-155942cda412",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La loi de 1905",
+   "competence": "analyser-texte",
+   "situation": "La loi du 9 décembre 1905 est le texte fondateur de la laïcité. Voici ses deux idées, présentées dans un extrait adapté.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La loi de séparation (adaptée)",
+     "blocs": [
+      "La République garantit la liberté de conscience et le libre exercice des cultes.",
+      "Elle ne [[s|reconnaît]], ne [[s|salarie]] et ne [[s|subventionne]] aucun culte."
+     ],
+     "source": "D’après la loi du 9 décembre 1905 (texte adapté pour l’exercice)."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche les trois verbes qui expriment le principe de séparation de l’État et des cultes.",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "aide": "Ils sont dans la deuxième phrase.",
+     "explication": "L’État ne **reconnaît**, ne **salarie** et ne **subventionne** aucun culte : c’est la **séparation**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pilier de la laïcité à ce qu’il garantit.",
+     "paires": [
+      [
+       "Liberté de conscience",
+       "Croire, ne pas croire, changer, pratiquer ou non"
+      ],
+      [
+       "Séparation",
+       "L’État ne reconnaît ni ne finance aucun culte"
+      ],
+      [
+       "Égalité",
+       "Tous égaux devant la loi, quelle que soit leur croyance"
+      ]
+     ],
+     "aide": "Chaque pilier a un mot-clé dans son nom.",
+     "explication": "Trois piliers : **liberté de conscience**, **séparation**, **égalité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La laïcité, est-ce l’athéisme de l’État ?",
+     "options": [
+      "Non : l’État n’a pas d’opinion sur Dieu",
+      "Oui : l’État est athée",
+      "Oui, depuis 1905",
+      "Oui, mais seulement à l’école"
+     ],
+     "reponse": 0,
+     "aide": "Le texte garantit aussi le libre exercice des cultes.",
+     "explication": "La laïcité n’est **pas** l’athéisme d’État : l’État n’a pas d’opinion sur Dieu et garantit le libre exercice des cultes."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e512c0e-ff95-5285-96dc-155942cda412",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où s’applique la loi de 2004 ?",
+   "competence": "lire-tableau",
+   "situation": "La loi du 15 mars 2004 interdit les signes religieux ostensibles aux élèves, mais pas partout. Un tableau précise les lieux concernés.",
+   "documents": [
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "La loi de 2004, lieu par lieu",
+     "colonnes": [
+      "Le lieu",
+      "La loi s’applique-t-elle ?"
+     ],
+     "lignes": [
+      [
+       "École, collège, lycée publics",
+       "Oui"
+      ],
+      [
+       "Université",
+       "Non"
+      ],
+      [
+       "La rue",
+       "Non"
+      ],
+      [
+       "Établissement privé sous contrat",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lieux",
+     "enonce": "Touche la case qui indique le seul lieu où la loi s’applique.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche le « Oui ».",
+     "explication": "La loi du 15 mars 2004 ne s’applique qu’à l’**école, au collège et au lycée publics**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les quatre lieux du tableau, dans combien la loi de 2004 ne s’applique-t-elle PAS ?",
+     "reponse": 3,
+     "unite": "lieux",
+     "aide": "Compte les « Non ».",
+     "explication": "Elle ne s’applique pas à l’**université**, à la **rue** et aux **établissements privés sous contrat** : **3 lieux** sur 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un enseignant d’un collège public peut-il manifester ses convictions religieuses en classe ?",
+     "options": [
+      "Non : les agents publics sont neutres dans l’exercice de leurs fonctions",
+      "Oui : c’est sa liberté d’expression",
+      "Oui, mais seulement le matin",
+      "Non, même dans sa vie privée"
+     ],
+     "reponse": 0,
+     "aide": "La neutralité s’applique dans l’exercice des fonctions.",
+     "explication": "Les agents publics sont **neutres dans l’exercice de leurs fonctions**, pas dans leur vie privée."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel régime particulier est toujours en vigueur en Alsace-Moselle ?",
+     "reponse": [
+      "concordat",
+      "le concordat"
+     ],
+     "placeholder": "Un nom",
+     "aide": "Ces régions étaient allemandes en 1905.",
+     "explication": "Le **Concordat** y est toujours en vigueur : la laïcité n’y est pas parfaitement uniforme."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e512c0e-ff95-5285-96dc-155942cda412",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un débat sur la laïcité",
+   "competence": "argumenter",
+   "situation": "En classe, Sacha répète une idée entendue autour de lui. Maya la corrige. Le dialogue est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Un débat en classe",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "Ma cousine dit que la laïcité, c’est [[f|interdire]] les religions."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Non : l’État est neutre, mais la loi de 1905 garantit aussi le libre exercice des cultes."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Et en Alsace-Moselle, c’est pareil ?"
+      },
+      {
+       "qui": "Maya",
+       "texte": "Pas tout à fait : ces régions étaient allemandes en 1905, le Concordat y est resté."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "neutralite",
+     "type": "tableau",
+     "titre": "Qui doit la neutralité ?",
+     "colonnes": [
+      "La personne",
+      "Son obligation"
+     ],
+     "lignes": [
+      [
+       "Agents publics (enseignants, policiers, employés de mairie)",
+       "?"
+      ],
+      [
+       "Usagers d’un service public",
+       "Libres, sauf exception prévue par la loi"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche le mot qui exprime l’idée fausse de Sacha.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "C’est le verbe qui dit ce que la laïcité ne fait pas.",
+     "explication": "La laïcité n’**interdit** pas les religions : elle garantit le libre exercice des cultes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour les agents publics ?",
+     "options": [
+      "Neutres dans l’exercice de leurs fonctions, pas dans leur vie privée",
+      "Neutres partout, tout le temps",
+      "Libres de manifester leurs convictions en service",
+      "Aucune obligation"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la situation des usagers, par contraste.",
+     "explication": "Les agents publics sont **neutres dans l’exercice de leurs fonctions**, pas dans leur vie privée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’Alsace-Moselle a-t-elle gardé le Concordat ?",
+     "options": [
+      "Parce qu’elle était allemande en 1905",
+      "Parce qu’elle a refusé la loi",
+      "Parce qu’elle est plus religieuse",
+      "Parce que la loi de 1905 l’y autorise explicitement"
+     ],
+     "reponse": 0,
+     "aide": "Maya donne la raison dans sa dernière réplique.",
+     "explication": "La loi de 1905 est née quand l’Alsace-Moselle était **allemande** : le Concordat y est resté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces affirmations : idée fausse ou idée juste sur la laïcité.",
+     "categories": [
+      "Idée fausse",
+      "Idée juste"
+     ],
+     "items": [
+      [
+       "L’État est athée",
+       0
+      ],
+      [
+       "On ne peut porter aucun signe religieux dans la rue",
+       0
+      ],
+      [
+       "La loi de 1905 ne garantit que la neutralité de l’État",
+       0
+      ],
+      [
+       "L’État n’a pas d’opinion sur Dieu",
+       1
+      ],
+      [
+       "Un usager d’un service public est libre, sauf exception prévue par la loi",
+       1
+      ],
+      [
+       "La laïcité protège chaque croyant, et l’incroyant de toutes les croyances",
+       1
+      ]
+     ],
+     "aide": "La loi de 1905 a deux faces.",
+     "explication": "La laïcité est un **principe d’organisation** : elle protège chaque croyant du pouvoir des autres croyances, et l’incroyant de toutes."
+    }
+   ]
+  },
+  {
+   "chapitre": "bae0d5e3-108c-5633-9670-f956d75f0efb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Contravention, délit ou crime ?",
+   "competence": "lire-tableau",
+   "situation": "Un magistrat présente à des élèves les trois degrés d’infraction. Il leur demande de relier chaque infraction au tribunal qui la juge.",
+   "documents": [
+    {
+     "id": "infractions",
+     "type": "tableau",
+     "titre": "Les trois degrés d’infraction",
+     "colonnes": [
+      "Degré",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Contravention",
+       "Excès de vitesse"
+      ],
+      [
+       "Délit",
+       "Vol, discrimination"
+      ],
+      [
+       "Crime",
+       "Meurtre, viol"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "infractions",
+     "enonce": "Touche la case qui donne l’exemple d’une contravention.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne « Contravention ».",
+     "explication": "L’**excès de vitesse** est une contravention."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque degré d’infraction au tribunal qui le juge.",
+     "paires": [
+      [
+       "Contravention",
+       "Tribunal de police"
+      ],
+      [
+       "Délit",
+       "Tribunal correctionnel"
+      ],
+      [
+       "Crime",
+       "Cour d’assises ou cour criminelle"
+      ]
+     ],
+     "aide": "Plus l’infraction est grave, plus la juridiction est solennelle.",
+     "explication": "**Contravention** → tribunal de police ; **délit** → tribunal correctionnel ; **crime** → cour d’assises ou cour criminelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie la présomption d’innocence ?",
+     "options": [
+      "On est innocent jusqu’à une condamnation définitive",
+      "On est coupable tant qu’on n’a pas prouvé le contraire",
+      "On est innocent seulement s’il y a un avocat",
+      "On est innocent pour un délit mais pas pour un crime"
+     ],
+     "reponse": 0,
+     "aide": "C’est à l’accusation de prouver.",
+     "explication": "La **présomption d’innocence** oblige l’accusation à **prouver** plutôt que l’accusé à se disculper."
+    }
+   ]
+  },
+  {
+   "chapitre": "bae0d5e3-108c-5633-9670-f956d75f0efb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Malik devant le juge des enfants",
+   "competence": "analyser-texte",
+   "situation": "Malik, 15 ans, est soupçonné d’un vol. Voici ce que sa famille apprend de la procédure. Le récit est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dossier de Malik",
+     "blocs": [
+      "Malik a 15 ans. Un [[j|juge]] des enfants examine son dossier : il privilégie l’éducatif sur le répressif.",
+      "Son avocat peut lire les preuves de l’accusation et les discuter : c’est le principe du [[c|contradictoire]].",
+      "L’audience n’est pas publique. Tant qu’il n’est pas condamné définitivement, Malik reste présumé innocent."
+     ],
+     "source": "Récit écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche le mot qui désigne le principe permettant à chaque partie de discuter les preuves de l’autre.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Il est dans la deuxième phrase.",
+     "explication": "C’est le principe du **contradictoire** : chaque partie connaît et discute les preuves de l’autre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « il privilégie l’éducatif » ?",
+     "options": [
+      "Le juge cherche d’abord à éduquer et à accompagner le mineur",
+      "Le juge n’inflige jamais de sanction",
+      "Le juge est un enseignant",
+      "Le juge ignore la gravité des faits"
+     ],
+     "reponse": 0,
+     "aide": "La justice des mineurs est spécifique.",
+     "explication": "La justice des mineurs privilégie l’**éducatif** sur le répressif, mais peut sanctionner à partir de 13 ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel âge une peine est-elle possible pour un mineur ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Elle est alors atténuée : c’est l’excuse de minorité.",
+     "explication": "À partir de **13 ans**, une peine est possible mais **atténuée** (excuse de minorité)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’audience d’un mineur n’est-elle pas publique ?",
+     "options": [
+      "Pour protéger le mineur : les débats sont à huis clos",
+      "Parce que la justice est secrète",
+      "Parce qu’il y a trop de monde",
+      "Parce qu’il n’a pas d’avocat"
+     ],
+     "reponse": 0,
+     "aide": "La publicité des débats est la règle, avec des exceptions.",
+     "explication": "La **publicité des débats** est la règle, sauf exceptions : pour un mineur, les débats ne sont pas publics."
+    }
+   ]
+  },
+  {
+   "chapitre": "bae0d5e3-108c-5633-9670-f956d75f0efb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui juge quoi, et avec qui ?",
+   "competence": "argumenter",
+   "situation": "Quatre situations très différentes arrivent au tribunal d’une ville. Un second tableau présente les acteurs d’un procès.",
+   "documents": [
+    {
+     "id": "litiges",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "colonnes": [
+      "Lettre",
+      "La situation"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Un locataire refuse de payer son loyer à son propriétaire."
+      ],
+      [
+       "B",
+       "Un automobiliste roule à 70 km/h là où c’est limité à 50."
+      ],
+      [
+       "C",
+       "Un homme vole un scooter."
+      ],
+      [
+       "D",
+       "Un citoyen conteste le refus de permis de construire de sa mairie."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations imaginées pour l’exercice."
+    },
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Les acteurs d’un procès",
+     "colonnes": [
+      "L’acteur",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Juge",
+       "?"
+      ],
+      [
+       "Procureur",
+       "?"
+      ],
+      [
+       "Avocat",
+       "?"
+      ],
+      [
+       "Greffier",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation selon la juridiction qui en connaît.",
+     "categories": [
+      "Ordre administratif",
+      "Civil (conflit entre particuliers)",
+      "Pénal : contravention",
+      "Pénal : délit"
+     ],
+     "items": [
+      [
+       "Situation A",
+       1
+      ],
+      [
+       "Situation B",
+       2
+      ],
+      [
+       "Situation C",
+       3
+      ],
+      [
+       "Situation D",
+       0
+      ]
+     ],
+     "aide": "Pense à qui s’oppose à qui, et à la gravité de l’infraction.",
+     "explication": "A est un litige **civil** entre particuliers, B une **contravention**, C un **délit**, D un litige avec l’**administration** (ordre administratif)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur du procès à son rôle.",
+     "paires": [
+      [
+       "Juge",
+       "Il tranche"
+      ],
+      [
+       "Procureur",
+       "Il représente la société et poursuit"
+      ],
+      [
+       "Avocat",
+       "Il défend"
+      ],
+      [
+       "Greffier",
+       "Il consigne ce qui se dit à l’audience"
+      ]
+     ],
+     "aide": "Chacun a une mission précise.",
+     "explication": "Le **juge** tranche, le **procureur** poursuit au nom de la société, l’**avocat** défend, le **greffier** consigne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet l’aide juridictionnelle ?",
+     "options": [
+      "D’accéder à la justice quand on a peu de moyens",
+      "De ne pas être jugé",
+      "De choisir son juge",
+      "De supprimer une amende"
+     ],
+     "reponse": 0,
+     "aide": "Elle bénéficie aux plus modestes.",
+     "explication": "L’**aide juridictionnelle** permet d’accéder à la justice même avec peu de moyens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le « double degré de juridiction » ?",
+     "options": [
+      "Le droit de faire appel d’une décision",
+      "Le droit d’être jugé deux fois pour la même chose",
+      "Deux juges dans la salle",
+      "Une double peine"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « appel » en est la clé.",
+     "explication": "Le **double degré de juridiction** est le droit de faire **appel**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cfacad16-529e-5ff4-9e23-ad46c335a483",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Français, citoyen : pas tout à fait pareil",
+   "competence": "analyser-document",
+   "situation": "Au collège, on demande souvent la différence entre être français et être citoyen. Un tableau les compare.",
+   "documents": [
+    {
+     "id": "notions",
+     "type": "tableau",
+     "titre": "Deux notions",
+     "colonnes": [
+      "La notion",
+      "Ce qu’elle désigne"
+     ],
+     "lignes": [
+      [
+       "Nationalité",
+       "Le lien juridique avec un État"
+      ],
+      [
+       "Citoyenneté",
+       "Voter, être élu, exercer certaines fonctions"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notions",
+     "enonce": "Touche la case qui dit ce qu’ajoute la citoyenneté à la nationalité.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Elle concerne la participation à la vie politique.",
+     "explication": "La **citoyenneté** ajoute la participation à la vie politique : voter, être élu, exercer certaines fonctions."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chacun de ces éléments : un droit ou un devoir du citoyen ?",
+     "categories": [
+      "Droit",
+      "Devoir"
+     ],
+     "items": [
+      [
+       "Voter",
+       0
+      ],
+      [
+       "Adhérer à un parti politique",
+       0
+      ],
+      [
+       "S’exprimer librement",
+       0
+      ],
+      [
+       "Payer l’impôt",
+       1
+      ],
+      [
+       "Être juré si l’on est tiré au sort",
+       1
+      ],
+      [
+       "Se faire recenser à 16 ans",
+       1
+      ]
+     ],
+     "aide": "Les droits existent d’abord ; les devoirs permettent à la société de tenir.",
+     "explication": "Voter, adhérer à un parti et s’exprimer sont des **droits**. L’**impôt**, le **jury** et le **recensement** sont des **devoirs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La citoyenneté européenne remplace-t-elle la citoyenneté nationale ?",
+     "options": [
+      "Non : elle s’y ajoute",
+      "Oui : elle la remplace",
+      "Oui, pour les Français nés après 2000",
+      "Non : elle n’existe pas"
+     ],
+     "reponse": 0,
+     "aide": "Une citoyenneté s’ajoute à l’autre.",
+     "explication": "La citoyenneté européenne **s’ajoute** à la citoyenneté nationale ; elle ne la remplace pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "cfacad16-529e-5ff4-9e23-ad46c335a483",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À 16 ans, le recensement",
+   "competence": "analyser-document",
+   "situation": "Lou vient d’avoir 16 ans. Son cousin Théo lui explique la démarche à effectuer. Un tableau montre aussi les voies pour devenir français. Le dialogue est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Conversation de Lou et de Théo",
+     "participants": [
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "On m’a dit de me faire [[r|recenser]]. C’est obligatoire ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Oui, à 16 ans, en mairie ou en ligne. Ensuite il y a la Journée défense et citoyenneté."
+      },
+      {
+       "qui": "Lou",
+       "texte": "Et si je ne la fais pas ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Tu n’auras pas l’attestation, exigée pour le baccalauréat et le permis de conduire."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "voies",
+     "type": "tableau",
+     "titre": "Comment devient-on français ?",
+     "colonnes": [
+      "La voie",
+      "Sa condition"
+     ],
+     "lignes": [
+      [
+       "Filiation",
+       "Au moins un parent français"
+      ],
+      [
+       "Naissance et résidence",
+       "Né en France de parents étrangers : français à 18 ans, sous condition de résidence"
+      ],
+      [
+       "Naturalisation",
+       "Plusieurs années de résidence, examen de langue et de valeurs"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À quel âge doit-on se faire recenser ?",
+     "reponse": 16,
+     "unite": "ans",
+     "aide": "Lou vient d’avoir cet âge.",
+     "explication": "Le recensement est obligatoire à **16 ans**, en mairie ou en ligne."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui désigne la démarche obligatoire à 16 ans.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est la première démarche dont parle Lou.",
+     "explication": "Le **recensement** est la démarche obligatoire à 16 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quoi l’attestation de la Journée défense et citoyenneté est-elle exigée ?",
+     "options": [
+      "Pour s’inscrire au baccalauréat et au permis de conduire",
+      "Pour voter",
+      "Pour ouvrir un compte en banque",
+      "Pour entrer au lycée"
+     ],
+     "reponse": 0,
+     "aide": "Théo cite deux démarches.",
+     "explication": "L’attestation de JDC est exigée pour le **baccalauréat**, le **permis de conduire** et les concours publics."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un jeune né en France de parents étrangers peut devenir français à 18 ans. Comment appelle-t-on cette voie ?",
+     "options": [
+      "Le droit du sol, sous condition de résidence",
+      "La filiation",
+      "La naturalisation",
+      "Le mariage"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la deuxième ligne du tableau.",
+     "explication": "C’est la voie par la **naissance et la résidence** : le **droit du sol**, sous condition de résidence en France."
+    }
+   ]
+  },
+  {
+   "chapitre": "cfacad16-529e-5ff4-9e23-ad46c335a483",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Marta, citoyenne européenne à Lyon",
+   "competence": "argumenter",
+   "situation": "Marta, de nationalité espagnole, vit à Lyon depuis deux ans. Un tableau rappelle les droits de la citoyenneté européenne. Sa situation est imaginée pour l’exercice.",
+   "documents": [
+    {
+     "id": "marta",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La situation de Marta",
+     "blocs": [
+      "Marta est espagnole et vit à Lyon. Elle se demande à quelles élections elle peut participer. En vacances au Japon, elle perd son passeport et cherche une aide."
+     ],
+     "source": "Situation imaginée pour l’exercice."
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Les droits du citoyen européen",
+     "colonnes": [
+      "Le droit",
+      "Ce qu’il permet"
+     ],
+     "lignes": [
+      [
+       "Libre circulation",
+       "S’installer dans un autre État membre"
+      ],
+      [
+       "Vote local et européen",
+       "Voter aux municipales et aux européennes dans son pays de résidence"
+      ],
+      [
+       "Protection consulaire",
+       "Celle de n’importe quel État membre, hors d’Europe"
+      ],
+      [
+       "Pétition",
+       "Devant le Parlement européen"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Marta peut-elle voter aux élections municipales de Lyon ?",
+     "options": [
+      "Oui : c’est un droit du citoyen européen résidant en France",
+      "Non : réservées aux Français",
+      "Oui, mais seulement après dix ans",
+      "Non, sauf si elle se marie"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Vote local et européen ».",
+     "explication": "Un citoyen européen résidant en France peut voter aux **municipales** et aux **européennes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Peut-elle voter à l’élection présidentielle française ?",
+     "options": [
+      "Non : cette élection est réservée aux citoyens français",
+      "Oui, comme tout résident",
+      "Oui, si elle le demande",
+      "Oui, mais seulement au second tour"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau ne cite que deux types d’élections.",
+     "explication": "Seules les **municipales** et les **européennes** sont ouvertes aux citoyens de l’UE résidents ; la présidentielle est réservée aux **Français**."
+    },
+    {
+     "type": "zone",
+     "document": "droits",
+     "enonce": "Touche la case qui décrit ce qui peut aider Marta au Japon.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Il s’agit d’une aide hors d’Europe.",
+     "explication": "La **protection consulaire** : n’importe quel État membre de l’UE peut l’aider hors d’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "droits",
+     "enonce": "Touche la case du droit qui permet de s’adresser au Parlement européen.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche le mot « pétition ».",
+     "explication": "Le droit de **pétition** permet de s’adresser au Parlement européen."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « la citoyenneté européenne s’ajoute à la citoyenneté nationale » pour Marta ?",
+     "options": [
+      "Elle reste espagnole et gagne des droits en France",
+      "Elle perd sa nationalité espagnole",
+      "Elle devient française",
+      "Elle n’a aucun droit nouveau"
+     ],
+     "reponse": 0,
+     "aide": "Une citoyenneté en plus, pas à la place.",
+     "explication": "Marta **garde** sa nationalité espagnole et **gagne** des droits supplémentaires dans l’Union."
+    }
+   ]
+  },
+  {
+   "chapitre": "a49cc1af-5705-5dc4-98f8-09f053b051a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un suffrage, quatre caractères",
+   "competence": "analyser-texte",
+   "situation": "La Constitution définit les caractères du suffrage. Voici un extrait adapté pour la classe.",
+   "documents": [
+    {
+     "id": "constit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le suffrage (extrait adapté)",
+     "blocs": [
+      "Le suffrage est toujours [[c|universel]], [[c|égal]] et [[c|secret]] : tous les citoyens majeurs votent, chaque personne a une voix, et personne ne sait ce que l’autre a voté."
+     ],
+     "source": "D’après l’article 3 de la Constitution de 1958 (texte adapté pour l’exercice)."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "constit",
+     "enonce": "Touche les trois caractères du suffrage cités dans le texte.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Ils sont avant les deux-points.",
+     "explication": "Le suffrage est **universel**, **égal** et **secret**. Il est aussi **libre**, sans pression."
+    },
+    {
+     "type": "choix",
+     "enonce": "Depuis quand l’isoloir et l’enveloppe garantissent-ils le secret du vote ?",
+     "options": [
+      "1913",
+      "1848",
+      "1944",
+      "1974"
+     ],
+     "reponse": 0,
+     "aide": "C’est avant la Première Guerre mondiale.",
+     "explication": "L’**isoloir** et l’**enveloppe** garantissent le secret du vote depuis **1913**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de l’histoire du droit de vote.",
+     "items": [
+      "1848 : suffrage universel masculin",
+      "1944 : droit de vote des femmes",
+      "1974 : majorité abaissée à 18 ans"
+     ],
+     "aide": "Pense à l’ordre chronologique.",
+     "explication": "**1848**, **1944** (exercé pour la première fois en 1945) puis **1974** : une conquête lente."
+    }
+   ]
+  },
+  {
+   "chapitre": "a49cc1af-5705-5dc4-98f8-09f053b051a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui élit qui ?",
+   "competence": "lire-tableau",
+   "situation": "Un tableau résume les principales élections et la durée des mandats.",
+   "documents": [
+    {
+     "id": "elections",
+     "type": "tableau",
+     "titre": "Les principales élections",
+     "colonnes": [
+      "Élection",
+      "On élit",
+      "Durée du mandat"
+     ],
+     "lignes": [
+      [
+       "Présidentielle",
+       "Le président de la République",
+       "5 ans"
+      ],
+      [
+       "Législatives",
+       "Les députés",
+       "5 ans"
+      ],
+      [
+       "Municipales",
+       "Le conseil municipal, qui élit le maire",
+       "6 ans"
+      ],
+      [
+       "Européennes",
+       "Les députés européens",
+       "5 ans"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "elections",
+     "enonce": "Touche la case qui donne la durée du mandat d’un conseil municipal.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne « Municipales ».",
+     "explication": "Le conseil municipal est élu pour **6 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui élit le maire ?",
+     "options": [
+      "Le conseil municipal",
+      "Directement les habitants",
+      "Le préfet",
+      "Le président de la République"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « On élit ».",
+     "explication": "Les habitants élisent le **conseil municipal**, qui élit ensuite le **maire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un conseil municipal est élu en 2020. En quelle année la prochaine élection municipale a-t-elle lieu ?",
+     "reponse": 2026,
+     "aide": "Ajoute la durée du mandat à 2020.",
+     "explication": "2020 + 6 = **2026**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelles élections un citoyen de l’Union européenne résidant en France peut-il voter ?",
+     "options": [
+      "Aux municipales et aux européennes",
+      "À toutes les élections",
+      "Aux législatives et à la présidentielle",
+      "À aucune"
+     ],
+     "reponse": 0,
+     "aide": "Deux élections seulement.",
+     "explication": "Il peut voter aux **municipales** et aux **européennes**, pas aux autres élections."
+    }
+   ]
+  },
+  {
+   "chapitre": "a49cc1af-5705-5dc4-98f8-09f053b051a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Voix, sièges et abstention",
+   "competence": "modeliser",
+   "situation": "Une commune de 1 000 inscrits organise une élection. Un premier tableau compare deux modes de scrutin, un second donne la participation.",
+   "documents": [
+    {
+     "id": "modes",
+     "type": "tableau",
+     "titre": "Voix et sièges (10 sièges à pourvoir)",
+     "colonnes": [
+      "Parti",
+      "Part des voix",
+      "Sièges au scrutin proportionnel",
+      "Sièges au scrutin majoritaire"
+     ],
+     "lignes": [
+      [
+       "A",
+       "40 %",
+       4,
+       10
+      ],
+      [
+       "B",
+       "30 %",
+       3,
+       0
+      ],
+      [
+       "C",
+       "20 %",
+       2,
+       0
+      ],
+      [
+       "D",
+       "10 %",
+       1,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Simulation imaginée pour l’exercice : le parti A arrive en tête partout."
+    },
+    {
+     "id": "participation",
+     "type": "tableau",
+     "titre": "La participation",
+     "colonnes": [
+      "Catégorie",
+      "Nombre de personnes"
+     ],
+     "lignes": [
+      [
+       "Inscrits",
+       1000
+      ],
+      [
+       "Abstentions",
+       400
+      ],
+      [
+       "Votes blancs",
+       20
+      ],
+      [
+       "Votes nuls",
+       30
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’abstention (en %) ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Abstentions ÷ inscrits × 100.",
+     "explication": "400 ÷ 1 000 = **40 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de suffrages exprimés ? Pense que les votes blancs et nuls n’en font pas partie.",
+     "reponse": 550,
+     "unite": "suffrages",
+     "aide": "Votants = 1 000 − 400. Retire ensuite blancs et nuls.",
+     "explication": "Votants : 600. Suffrages exprimés : 600 − 20 − 30 = **550**."
+    },
+    {
+     "type": "zone",
+     "document": "modes",
+     "enonce": "Touche la case qui montre le parti qui gagne tous les sièges au scrutin majoritaire.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Regarde la dernière colonne, ligne du parti A.",
+     "explication": "Au scrutin **majoritaire**, A remporte **10 sièges sur 10** avec 40 % des voix."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mode de scrutin laisse le plus de voix sans représentation dans cette simulation ?",
+     "options": [
+      "Le scrutin majoritaire",
+      "Le scrutin proportionnel",
+      "Aucun des deux",
+      "Les deux autant"
+     ],
+     "reponse": 0,
+     "aide": "Compare les sièges aux voix.",
+     "explication": "Au scrutin **majoritaire**, 60 % des voix (B, C et D) n’obtiennent aucun siège : le mode de scrutin **fabrique** une part du résultat."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau sur le mode de scrutin ?",
+     "options": [
+      "Il n’est pas neutre : il influence le résultat",
+      "C’est un simple détail technique",
+      "Il n’a aucun effet sur le nombre de sièges",
+      "Il est choisi par chaque électeur"
+     ],
+     "reponse": 0,
+     "aide": "Les mêmes voix donnent des sièges très différents.",
+     "explication": "Aucun mode n’est neutre : avec les **mêmes voix**, les sièges sont répartis très différemment."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c182b11-baeb-5575-8a2c-21eebf445d1b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Information, opinion, rumeur ou pub ?",
+   "competence": "analyser-document",
+   "situation": "Un professeur documentaliste présente quatre contenus croisés dans une même journée. Il faut dire de quelle nature est chacun.",
+   "documents": [
+    {
+     "id": "contenus",
+     "type": "tableau",
+     "titre": "Quatre contenus",
+     "colonnes": [
+      "Contenu",
+      "Ce qu’on lit"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Article signé et daté qui rapporte l’ouverture d’un gymnase, avec la source citée."
+      ],
+      [
+       "B",
+       "Commentaire : « Ce film est nul. »"
+      ],
+      [
+       "C",
+       "« Il paraît que le collège ferme, tout le monde le dit. »"
+      ],
+      [
+       "D",
+       "Spot : « Achetez ce produit, vous allez adorer ! »"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Contenus imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contenus",
+     "enonce": "Touche le contenu qui est une information au sens journalistique.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche un fait vérifié, sourcé, daté et signé.",
+     "explication": "L’article A est un fait **vérifié**, **sourcé**, **daté** et **signé** : c’est une information."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque contenu à sa nature.",
+     "paires": [
+      [
+       "A",
+       "Une information"
+      ],
+      [
+       "B",
+       "Une opinion"
+      ],
+      [
+       "C",
+       "Une rumeur"
+      ],
+      [
+       "D",
+       "Une publicité"
+      ]
+     ],
+     "aide": "Une opinion n’a pas à être vraie ; une rumeur n’a pas de source.",
+     "explication": "A est une **information**, B une **opinion**, C une **rumeur** (sans source identifiable), D une **publicité** (un message payé pour convaincre)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qu’une infox ?",
+     "options": [
+      "Une fausse information diffusée volontairement",
+      "Une information vérifiée",
+      "Une opinion personnelle",
+      "Une publicité"
+     ],
+     "reponse": 0,
+     "aide": "Le mot vient de « information » et « intoxication ».",
+     "explication": "Une **infox** est une fausse information **diffusée volontairement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c182b11-baeb-5575-8a2c-21eebf445d1b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cette photo est-elle vraie ?",
+   "competence": "argumenter",
+   "situation": "Rayan veut poster une photo qui l’a mis très en colère. Ana le freine. Le dialogue est écrit pour l’exercice. Un tableau rappelle les questions à se poser.",
+   "documents": [
+    {
+     "id": "bulles",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Avant de poster",
+     "participants": [
+      {
+       "nom": "Rayan",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Rayan",
+       "texte": "Regarde cette photo : une manifestation violente en ville hier ! Elle a été partagée 3 000 fois. Je la poste."
+      },
+      {
+       "qui": "Ana",
+       "texte": "Attends : qui l’a publiée, et quand ? Une vraie photo peut avoir dix ans."
+      },
+      {
+       "qui": "Rayan",
+       "texte": "Elle m’a mis en [[c|colère]], donc ça doit être vrai."
+      },
+      {
+       "qui": "Ana",
+       "texte": "C’est justement l’effet recherché."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "questions",
+     "type": "tableau",
+     "titre": "Les cinq questions",
+     "colonnes": [
+      "La question",
+      "Ce qu’elle vérifie"
+     ],
+     "lignes": [
+      [
+       "Qui ?",
+       "Le site est-il identifiable ?"
+      ],
+      [
+       "Quand ?",
+       "La photo est-elle récente ?"
+      ],
+      [
+       "D’où ?",
+       "Remonte-t-on à une source première ?"
+      ],
+      [
+       "Pourquoi ?",
+       "Qui a intérêt à ce que j’y croie ?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bulles",
+     "enonce": "Touche le mot qui montre l’émotion que cherche à provoquer une infox.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Rayan l’éprouve devant la photo.",
+     "explication": "Les infox visent l’**émotion** (peur, colère, indignation) : elle fait partager avant de réfléchir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un grand nombre de partages est-il un gage de fiabilité ?",
+     "options": [
+      "Non : une infox peut être partagée des milliers de fois",
+      "Oui : plus c’est partagé, plus c’est vrai",
+      "Oui, au-delà de 1 000 partages",
+      "Oui, si l’auteur est connu"
+     ],
+     "reponse": 0,
+     "aide": "Rayan s’en sert pour se convaincre.",
+     "explication": "Un grand nombre de partages **ne prouve rien** : les infox circulent vite parce qu’elles sont faites pour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel outil permet de vérifier d’où vient une photo et depuis quand elle circule ?",
+     "options": [
+      "La recherche d’image inversée",
+      "Un filtre de photo",
+      "Le nombre de « j’aime »",
+      "Un logiciel de retouche"
+     ],
+     "reponse": 0,
+     "aide": "Il compare l’image à d’autres déjà publiées.",
+     "explication": "La **recherche d’image inversée** permet de retrouver l’origine et les premières apparitions d’une photo."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le premier réflexe utile face à une infox ?",
+     "options": [
+      "Ne pas la relayer",
+      "La partager avec un commentaire",
+      "La poster pour la démentir",
+      "L’imprimer"
+     ],
+     "reponse": 0,
+     "aide": "Même de bonne foi, partager, c’est diffuser.",
+     "explication": "Le premier réflexe utile est de **ne pas relayer** : partager une infox, même de bonne foi, c’est la diffuser."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c182b11-baeb-5575-8a2c-21eebf445d1b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dans la bulle de Chloé",
+   "competence": "analyser-document",
+   "situation": "Chloé s’informe presque uniquement sur les réseaux. Elle a compté les sources qui lui sont apparues pendant un mois. Le cycle de l’algorithme est schématisé.",
+   "documents": [
+    {
+     "id": "bulle",
+     "type": "chaine",
+     "titre": "Le cycle de la bulle de filtre",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Je regarde un contenu"
+      },
+      {
+       "id": "b",
+       "texte": "L’algorithme retient ce qui capte l’attention"
+      },
+      {
+       "id": "c",
+       "texte": "Il me propose des contenus semblables"
+      },
+      {
+       "id": "d",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "a"
+      }
+     ]
+    },
+    {
+     "id": "sources",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Sources rencontrées par Chloé en un mois",
+     "categories": [
+      "Même opinion que Chloé",
+      "Autres opinions"
+     ],
+     "series": [
+      {
+       "nom": "Sources",
+       "valeurs": [
+        18,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Sources",
+      "unite": "nombre",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que devrait indiquer le dernier « ? » du cycle ?",
+     "options": [
+      "Je finis par ne voir que ce qui confirme mes idées",
+      "Je vois autant d’opinions différentes",
+      "Je ne vois plus aucun contenu",
+      "L’algorithme s’arrête"
+     ],
+     "reponse": 0,
+     "aide": "Le cycle recommence avec des contenus de plus en plus semblables.",
+     "explication": "On finit par ne voir que ce qui **confirme** ses idées : c’est la **bulle de filtre**."
+    },
+    {
+     "type": "zone",
+     "document": "sources",
+     "enonce": "Touche la catégorie de sources qui domine dans l’univers de Chloé.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les sources de **même opinion** dominent : 18 sur 20."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle proportion (en %) des sources de Chloé partage son opinion ?",
+     "reponse": 90,
+     "unite": "%",
+     "aide": "18 sources sur 20 au total.",
+     "explication": "18 ÷ 20 = **90 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Chloé peut-elle sortir de sa bulle de filtre ?",
+     "options": [
+      "En allant chercher volontairement d’autres sources",
+      "En attendant que l’algorithme change",
+      "En ne vérifiant plus rien",
+      "En se désabonnant de toute information"
+     ],
+     "reponse": 0,
+     "aide": "Cela demande un effort volontaire.",
+     "explication": "Il faut aller chercher **volontairement** d’autres sources et comparer plusieurs médias."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de sources indépendantes un journaliste doit-il recouper au minimum ?",
+     "options": [
+      "Deux",
+      "Une",
+      "Dix",
+      "Aucune, s’il est expérimenté"
+     ],
+     "reponse": 0,
+     "aide": "C’est le minimum du recoupement.",
+     "explication": "Un journaliste **recoupe au moins deux sources indépendantes** avant de signer une information."
+    }
+   ]
+  },
+  {
+   "chapitre": "75e32bd1-a0a6-553b-93d1-c36f4984ed96",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le service civique",
+   "competence": "analyser-document",
+   "situation": "Une affiche invite les jeunes à s’engager dans un service civique.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Service civique",
+     "sousTitre": "Une mission pour s’engager",
+     "emoji": "🤝",
+     "lignes": [
+      {
+       "texte": "À partir de 16 ans",
+       "id": "age",
+       "gras": true
+      },
+      {
+       "texte": "Mission d’intérêt général de 6 à 12 mois",
+       "id": "duree"
+      },
+      {
+       "texte": "Mission indemnisée"
+      }
+     ],
+     "teinte": "violet",
+     "source": "Affiche imaginée pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui donne l’âge minimal pour faire un service civique.",
+     "reponse": [
+      "age"
+     ],
+     "aide": "Cherche un chiffre suivi du mot « ans ».",
+     "explication": "Le service civique est possible dès **16 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mois dure au maximum une mission de service civique ?",
+     "reponse": 12,
+     "unite": "mois",
+     "aide": "Lis la deuxième ligne.",
+     "explication": "Une mission dure de **6 à 12 mois**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme d’engagement à un exemple.",
+     "paires": [
+      [
+       "Associatif",
+       "Être bénévole dans une association"
+      ],
+      [
+       "Syndical",
+       "Défendre des droits collectifs au travail"
+      ],
+      [
+       "Scolaire",
+       "Être délégué de classe"
+      ],
+      [
+       "Citoyen",
+       "Signer une pétition"
+      ]
+     ],
+     "aide": "Chaque forme d’engagement a son terrain.",
+     "explication": "Associatif, syndical, scolaire, citoyen : l’engagement prend des **formes** très différentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "75e32bd1-a0a6-553b-93d1-c36f4984ed96",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand Lila se casse la jambe",
+   "competence": "analyser-document",
+   "situation": "Le père de Lila perd son emploi ; Lila se casse la jambe. Un tableau présente les dispositifs de solidarité organisée. Le récit est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La famille de Lila",
+     "blocs": [
+      "Le père de Lila perd son emploi : il reçoit l’[[c|assurance]] [[c|chômage]]. Lila se casse la jambe : ses soins sont remboursés par la Sécurité sociale."
+     ],
+     "source": "Récit écrit pour l’exercice."
+    },
+    {
+     "id": "dispositifs",
+     "type": "tableau",
+     "titre": "Les dispositifs de solidarité",
+     "colonnes": [
+      "Le dispositif",
+      "Ce qu’il couvre"
+     ],
+     "lignes": [
+      [
+       "Sécurité sociale (1945)",
+       "La maladie, la famille, les accidents du travail"
+      ],
+      [
+       "Assurance chômage",
+       "?"
+      ],
+      [
+       "Retraites",
+       "?"
+      ],
+      [
+       "Aides au logement",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les deux mots qui nomment le dispositif qui aide le père de Lila.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Il couvre la perte d’emploi.",
+     "explication": "L’**assurance chômage** couvre la perte d’emploi."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dispositif à ce qu’il couvre.",
+     "paires": [
+      [
+       "Assurance chômage",
+       "La perte d’emploi"
+      ],
+      [
+       "Retraites",
+       "La vieillesse"
+      ],
+      [
+       "Aides au logement",
+       "Le coût du logement"
+      ]
+     ],
+     "aide": "Le nom du dispositif suffit parfois.",
+     "explication": "L’**assurance chômage** couvre la perte d’emploi, les **retraites** la vieillesse, les **aides au logement** le coût du logement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le principe de la solidarité organisée ?",
+     "options": [
+      "Chacun cotise selon ses moyens et reçoit selon ses besoins",
+      "Chacun reçoit ce qu’il a payé, ni plus ni moins",
+      "Seuls les plus riches cotisent",
+      "Elle repose uniquement sur la charité"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas de la charité : c’est un droit.",
+     "explication": "Chacun cotise **selon ses moyens** et reçoit **selon ses besoins** ; c’est un **droit**, financé par les cotisations et l’impôt."
+    },
+    {
+     "type": "choix",
+     "enonce": "En quelle année la Sécurité sociale a-t-elle été créée ?",
+     "options": [
+      "1945",
+      "1905",
+      "1974",
+      "1997"
+     ],
+     "reponse": 0,
+     "aide": "C’est à la sortie de la Seconde Guerre mondiale.",
+     "explication": "La **Sécurité sociale** est créée en **1945**."
+    }
+   ]
+  },
+  {
+   "chapitre": "75e32bd1-a0a6-553b-93d1-c36f4984ed96",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Inès veut s’engager",
+   "competence": "argumenter",
+   "situation": "Inès, 14 ans, voudrait agir pour le climat, mais elle ne sait pas par où commencer. Un tableau rappelle quelques objectifs de développement durable. Son message est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "ines",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message d’Inès",
+     "blocs": [
+      "Je voudrais m’engager pour l’environnement. On m’a parlé d’une [[a|association]] du quartier, mais je ne sais pas si je suis assez grande. Je suis aussi éco-déléguée de ma classe."
+     ],
+     "source": "Message écrit pour l’exercice."
+    },
+    {
+     "id": "ods",
+     "type": "tableau",
+     "titre": "Quelques objectifs de développement durable",
+     "colonnes": [
+      "Objectif",
+      "Thème"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Pas de pauvreté"
+      ],
+      [
+       "3",
+       "Bonne santé et bien-être"
+      ],
+      [
+       "4",
+       "Éducation de qualité"
+      ],
+      [
+       "13",
+       "Mesures relatives à la lutte contre les changements climatiques"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extrait des objectifs de l’ONU, formulations abrégées."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ines",
+     "enonce": "Touche le mot qui désigne le type de groupement que cherche Inès pour s’engager.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est question d’un groupement à but non lucratif, régi par la loi de 1901.",
+     "explication": "Une **association loi 1901** est un groupement à but non lucratif."
+    },
+    {
+     "type": "zone",
+     "document": "ods",
+     "enonce": "Touche la case de l’objectif qui concerne le climat.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche le numéro à deux chiffres.",
+     "explication": "L’objectif **13** concerne la lutte contre les changements climatiques."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces formes d’engagement selon leur accessibilité.",
+     "categories": [
+      "Accessible au collège",
+      "À partir de 16 ans"
+     ],
+     "items": [
+      [
+       "Délégué de classe",
+       0
+      ],
+      [
+       "Éco-délégué",
+       0
+      ],
+      [
+       "Association sportive du collège",
+       0
+      ],
+      [
+       "Journal du collège",
+       0
+      ],
+      [
+       "Service civique",
+       1
+      ]
+     ],
+     "aide": "Le service civique a une condition d’âge.",
+     "explication": "Les engagements **scolaires** sont ouverts dès le collège ; le **service civique** commence à **16 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les 17 objectifs de développement durable ont été fixés en 2015 pour l’horizon 2030. Combien d’années s’écoulent entre les deux ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Soustrais 2015 à 2030.",
+     "explication": "2030 − 2015 = **15 ans** : un cap commun fixé par l’ONU."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que l’engagement demande surtout ?",
+     "options": [
+      "Du temps, de la régularité, et d’accepter que les résultats soient lents et partagés",
+      "D’être remercié immédiatement",
+      "D’être majeur",
+      "D’obtenir des résultats en une semaine"
+     ],
+     "reponse": 0,
+     "aide": "On ne s’engage pas pour être remercié.",
+     "explication": "S’engager demande du **temps**, de la **régularité** et l’acceptation de résultats **lents et partagés**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d3a66a7-4ab4-565b-8db6-6ea81cba30c6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les forces de la défense",
+   "competence": "lire-tableau",
+   "situation": "Un officier présente aux élèves les forces armées françaises et leur milieu d’action.",
+   "documents": [
+    {
+     "id": "armees",
+     "type": "tableau",
+     "titre": "Les forces",
+     "colonnes": [
+      "La force",
+      "Son milieu"
+     ],
+     "lignes": [
+      [
+       "Armée de Terre",
+       "Le sol"
+      ],
+      [
+       "Marine nationale",
+       "La mer"
+      ],
+      [
+       "Armée de l’air et de l’espace",
+       "L’air et l’espace"
+      ],
+      [
+       "Gendarmerie nationale",
+       "La sécurité du territoire"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "armees",
+     "enonce": "Touche la force qui agit en mer.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Son nom contient « Marine ».",
+     "explication": "La **Marine nationale** agit en mer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand le service militaire a-t-il été suspendu en France ?",
+     "options": [
+      "En 1997",
+      "En 1905",
+      "En 1974",
+      "En 2015"
+     ],
+     "reponse": 0,
+     "aide": "Depuis, la défense repose sur une armée professionnelle.",
+     "explication": "Le service militaire est suspendu depuis **1997** ; la défense repose sur une armée professionnelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque domaine de défense à ce qu’il protège.",
+     "paires": [
+      [
+       "Cyberdéfense",
+       "Réseaux, hôpitaux, administrations"
+      ],
+      [
+       "Sécurité civile",
+       "Pompiers, secours, gestion de crise"
+      ],
+      [
+       "Sécurité économique",
+       "L’approvisionnement en énergie, santé, alimentation"
+      ]
+     ],
+     "aide": "La défense ne se limite plus aux armées.",
+     "explication": "La défense s’est **élargie** : cyberdéfense, sécurité civile, sécurité économique et lutte antiterroriste."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d3a66a7-4ab4-565b-8db6-6ea81cba30c6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le parcours de citoyenneté",
+   "competence": "se-reperer-temps",
+   "situation": "Entre le collège et 18 ans, tout jeune suit un parcours de citoyenneté qui prépare à la défense nationale.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "chaine",
+     "titre": "Le parcours de citoyenneté",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "ens",
+       "texte": "Enseignement de défense"
+      },
+      {
+       "id": "rec",
+       "texte": "Recensement"
+      },
+      {
+       "id": "jdc",
+       "texte": "Journée défense et citoyenneté"
+      },
+      {
+       "id": "att",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ens",
+       "a": "rec"
+      },
+      {
+       "de": "rec",
+       "a": "jdc"
+      },
+      {
+       "de": "jdc",
+       "a": "att"
+      }
+     ]
+    },
+    {
+     "id": "moments",
+     "type": "tableau",
+     "titre": "Les moments du parcours",
+     "colonnes": [
+      "L’étape",
+      "Le moment"
+     ],
+     "lignes": [
+      [
+       "Enseignement de défense",
+       "Au collège et au lycée"
+      ],
+      [
+       "Recensement",
+       "À 16 ans"
+      ],
+      [
+       "Journée défense et citoyenneté",
+       "Entre 16 et 18 ans"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parcours",
+     "enonce": "Touche l’étape obligatoire à 16 ans.",
+     "reponse": [
+      "rec"
+     ],
+     "aide": "On s’inscrit en mairie ou en ligne.",
+     "explication": "Le **recensement** est obligatoire à **16 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remplace le « ? » : ce que l’on reçoit après la journée défense et citoyenneté ?",
+     "options": [
+      "Une attestation, exigée pour le baccalauréat, le permis de conduire et les concours publics",
+      "Un diplôme militaire",
+      "Une carte d’électeur",
+      "Un uniforme"
+     ],
+     "reponse": 0,
+     "aide": "Elle ouvre l’accès à plusieurs démarches de la vie courante.",
+     "explication": "L’**attestation de JDC** est exigée pour s’inscrire au **baccalauréat**, au **permis de conduire** et aux **concours publics**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années, au plus, la Journée défense et citoyenneté peut-elle avoir lieu ? (de 16 à 18 ans)",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais 16 à 18.",
+     "explication": "Elle a lieu **entre 16 et 18 ans**, soit sur une période de 2 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui s’adresse l’enseignement de défense ?",
+     "options": [
+      "À tous les élèves, au collège et au lycée",
+      "Seulement aux futurs militaires",
+      "Seulement aux garçons",
+      "Seulement après 18 ans"
+     ],
+     "reponse": 0,
+     "aide": "C’est le premier maillon du parcours.",
+     "explication": "L’**enseignement de défense** est donné à tous au **collège et au lycée** : la défense est l’affaire de tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d3a66a7-4ab4-565b-8db6-6ea81cba30c6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une cyberattaque contre un hôpital",
+   "competence": "analyser-document",
+   "situation": "Un article écrit pour l’exercice raconte une attaque informatique contre un hôpital. Un tableau présente trois cadres collectifs de la défense.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Hôpital paralysé",
+     "blocs": [
+      "Un matin, les ordinateurs d’un hôpital sont bloqués par une [[c|cyberattaque]]. Les dossiers des patients sont inaccessibles. Les [[s|pompiers]] et les secours mettent en place une cellule de crise.",
+      "Aucune armée n’a franchi de frontière : un logiciel a suffi."
+     ],
+     "source": "Article imaginé pour l’exercice."
+    },
+    {
+     "id": "cadres",
+     "type": "tableau",
+     "titre": "Les cadres collectifs",
+     "colonnes": [
+      "L’organisation",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "OTAN (1949)",
+       "Alliance militaire : une attaque contre un membre engage les autres"
+      ],
+      [
+       "Union européenne",
+       "Politique de sécurité et de défense commune"
+      ],
+      [
+       "ONU",
+       "Opérations de maintien de la paix, « casques bleus »"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche le mot qui désigne le type de menace qui frappe l’hôpital.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est une attaque par logiciel.",
+     "explication": "C’est une **cyberattaque** : la **cyberdéfense** protège les réseaux et les administrations."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche le mot qui désigne ceux qui relèvent de la sécurité civile.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Ils interviennent pour les secours et les catastrophes.",
+     "explication": "Les **pompiers** relèvent de la **sécurité civile**, qui gère les secours et les crises."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la défense ne concerne-t-elle pas que les militaires ?",
+     "options": [
+      "Parce que les menaces touchent aussi les réseaux, les secours et l’économie",
+      "Parce que l’armée n’existe plus",
+      "Parce que seuls les civils décident",
+      "Parce que la défense est privée"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de l’article.",
+     "explication": "La défense s’est déplacée vers des terrains **sans frontière** : cyberdéfense, sécurité civile, sécurité économique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organisation à son rôle.",
+     "paires": [
+      [
+       "OTAN",
+       "Une attaque contre un membre engage les autres"
+      ],
+      [
+       "Union européenne",
+       "Une politique de sécurité et de défense commune"
+      ],
+      [
+       "ONU",
+       "Les opérations de maintien de la paix"
+      ]
+     ],
+     "aide": "Regarde le tableau.",
+     "explication": "L’**OTAN** est une alliance militaire (1949), l’**UE** a une politique de sécurité commune, l’**ONU** conduit des opérations de maintien de la paix."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on les forces de maintien de la paix de l’ONU ?",
+     "options": [
+      "Les casques bleus",
+      "Les cadets",
+      "Les réservistes",
+      "Les gendarmes"
+     ],
+     "reponse": 0,
+     "aide": "Elles portent un nom de couleur.",
+     "explication": "Ce sont les **casques bleus**."
+    }
+   ]
+  }
+ ]
+}

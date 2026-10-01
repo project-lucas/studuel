@@ -9,14 +9,14 @@ import type { SupportChip } from '@/lib/subject-template'
 import type { Chapter } from '@/lib/types'
 
 /**
- * Les supports d'un chapitre : Cours · Fiche · Flashcards · Quiz · Exercice ·
- * Moi vs IA, avec leur état. Données du CHAPITRE, servies à ses deux écrans :
+ * Les supports d'un chapitre : Cours · Fiche · Quiz · Exercice · Moi vs IA,
+ * avec leur état. Données du CHAPITRE, servies à ses deux écrans :
  *
  *  - l'écran de chapitre, où l'élève choisit par quoi il commence (aucune leçon
  *    de référence : rien n'est encore lu) ;
  *  - le pied de cours, calé sur la leçon qu'il vient de lire — la lecture se
  *    terminait en cul-de-sac, il fallait remonter à la page matière, changer
- *    d'onglet et re-scroller pour les flashcards du MÊME chapitre.
+ *    d'onglet et re-scroller pour le quiz du MÊME chapitre.
  *
  * Tout est lu en parallèle, et chaque source manquante dégrade sa pastille sans
  * jamais faire tomber l'écran qui l'accueille.
@@ -168,7 +168,6 @@ export async function loadChapterSupports(
       title: l.title,
       quizId,
       questionCount: quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0,
-      dueCount: quizId ? (dueByQuiz.get(quizId) ?? 0) : 0,
       best: ownQuizId ? (bestByQuiz.get(ownQuizId) ?? null) : null,
       ownQuiz: ownQuizId !== null,
       read: lecons_lues.has(l.id),

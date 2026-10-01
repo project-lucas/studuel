@@ -133,7 +133,7 @@ DELETE FROM public.chapters c
 
 ## Une naissance militaire, puis universitaire
 | La date | L'étape |
-| **1969** | **ARPANET** relie quatre universités américaines ; l'objectif est de faire circuler l'information même si une partie du réseau tombe |
+| **1969** | **ARPANET** relie quatre sites américains (trois universités et un institut de recherche) ; l'objectif est de faire circuler l'information même si une partie du réseau tombe |
 | **1983** | La famille de protocoles **TCP/IP** devient la règle commune : c'est la naissance d'Internet tel qu'on le connaît |
 
 ## Le principe de commutation de paquets
@@ -164,7 +164,7 @@ Chaque couche ignore les détails des autres.
           },
           questions: [
             ['Qu’est-ce qu’Internet ?', ['Un réseau de réseaux reliés par des protocoles communs', 'Un ordinateur central géant', 'Une entreprise américaine', 'Un ensemble de pages web'], 0, 'Aucune entité ne le possède ni ne le contrôle entièrement.'],
-            ['Comment s’appelle l’ancêtre d’Internet créé en 1969 ?', ['ARPANET', 'CERN', 'NSFNET', 'MINITEL'], 0, 'Il reliait quatre universités américaines.'],
+            ['Comment s’appelle l’ancêtre d’Internet créé en 1969 ?', ['ARPANET', 'CERN', 'NSFNET', 'MINITEL'], 0, 'Il reliait quatre sites américains : trois universités et un institut de recherche.'],
             ['Qu’est-ce que la commutation de paquets ?', ['Le découpage d’un message en paquets voyageant indépendamment', 'Le chiffrement des messages', 'La compression des fichiers', 'La duplication des serveurs'], 0, 'Les paquets sont réassemblés à l’arrivée.'],
             ['Pourquoi Internet est-il résilient ?', ['Si un lien tombe, les paquets empruntent un autre chemin', 'Parce que les données sont sauvegardées', 'Parce qu’il est chiffré', 'Parce qu’un centre le supervise'], 0, 'L’absence de centre est un choix de conception.'],
             ['Combien de couches compte le modèle TCP/IP ?', ['Quatre', 'Sept', 'Deux', 'Cinq'], 0, 'Accès réseau, Internet, transport, application.'],
@@ -887,7 +887,7 @@ Le vectoriel convient mal à la photographie.
           questions: [
             ['Qu’est-ce qu’un pixel ?', ['Le point élémentaire d’une image matricielle', 'Une unité de mesure de l’écran', 'Un format de fichier', 'Un niveau de compression'], 0, 'Il porte une ou trois valeurs numériques.'],
             ['Quelles sont les trois composantes du modèle RVB ?', ['Rouge, vert, bleu', 'Rouge, violet, blanc', 'Cyan, magenta, jaune', 'Rouge, vert, blanc'], 0, 'La synthèse additive des écrans.'],
-            ['Combien de niveaux par composante si elle est codée sur 8 bits ?', ['256', '128', '512', '1024'], 0, 'De 0 à 255.'],
+            ['Combien de niveaux par composante si elle est codée sur 8 bits ?', ['256', '128', '512', '1024'], 0, '8 bits donnent 2⁸ = 256 valeurs, numérotées de 0 à 255.'],
             ['Combien de couleurs peut afficher un pixel codé en 24 bits ?', ['Environ 16,7 millions', 'Environ 65 000', '256', 'Un nombre infini'], 0, '256 puissance 3.'],
             ['Quel format compresse sans perte d’information ?', ['PNG', 'JPEG', 'GIF', 'WEBP en mode dégradé'], 0, 'JPEG compresse avec perte, ce qui crée des artefacts.'],
             ['Une image vectorielle peut être agrandie sans perte de qualité.', ['Vrai', 'Faux'], 0, 'Elle décrit des formes par des équations, pas par des pixels.'],

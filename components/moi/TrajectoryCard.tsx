@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { Info, Pencil } from 'lucide-react'
+import EnTeteBloc from '@/components/moi/EnTeteBloc'
 import type { ChartPoint } from '@/components/moi/TrajectoryChart'
 
 // LA COURBE, CHARGÉE À LA DEMANDE. `recharts` est une grosse bibliothèque, et
@@ -86,16 +87,12 @@ export default function TrajectoryCard({
   return (
     <section
       aria-label="Ta trajectoire au bac"
-      className="carte-plaque p-4"
+      className="carte p-4"
     >
-      <div>
-        <h2 className="titre-section text-foreground">
-          Ta trajectoire au bac
-        </h2>
-        <p className="mt-0.5 text-xs text-muted-foreground">
-          Deux futurs possibles selon ce que tu fais cette semaine
-        </p>
-      </div>
+      <EnTeteBloc
+        titre="Ta trajectoire au bac"
+        sousTitre="Deux futurs possibles selon ce que tu fais cette semaine"
+      />
 
       {hasData ? (
         <>

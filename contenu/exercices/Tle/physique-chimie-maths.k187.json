@@ -1,0 +1,2473 @@
+{
+ "niveau": "Tle",
+ "matiere": "physique-chimie-maths",
+ "exercices": [
+  {
+   "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le condensateur qui se décharge",
+   "competence": "calculer",
+   "situation": "Quatre signaux sont relevés sur une carte électronique. Le signal C est la charge q(t) d’un condensateur qui se décharge (q en mC, t en s). Le courant de décharge vaut i = −q′(t).",
+   "documents": [
+    {
+     "id": "signaux",
+     "type": "tableau",
+     "titre": "Quatre signaux",
+     "colonnes": [
+      "Signal",
+      "Expression"
+     ],
+     "lignes": [
+      [
+       "A",
+       "(3t + 1)⁴"
+      ],
+      [
+       "B",
+       "sin(100π t)"
+      ],
+      [
+       "C",
+       "4 e^(−2t)"
+      ],
+      [
+       "D",
+       "ln(t² + 1)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "signaux",
+     "enonce": "Touche l’expression du signal dont la fonction intérieure est u(t) = −2t.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La fonction intérieure est ce qu’il y a « dans » l’exponentielle.",
+     "explication": "Dans 4 e^(−2t), l’exponentielle s’applique à −2t : la fonction intérieure est bien **u(t) = −2t**, dans le **signal C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité i(0) à l’instant t = 0, en mA (1 mC par seconde = 1 mA).",
+     "reponse": 8,
+     "unite": "mA",
+     "tolerance": 0.01,
+     "aide": "q′(t) = 4 × (−2) × e^(−2t). Puis i = −q′.",
+     "explication": "q′(t) = −8 e^(−2t), donc i(t) = 8 e^(−2t) et i(0) = 8 e⁰ = **8 mA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité i(1) à t = 1 s, arrondie au centième de mA.",
+     "reponse": 1.08,
+     "unite": "mA",
+     "tolerance": 0.01,
+     "aide": "i(t) = 8 e^(−2t) : remplace t par 1.",
+     "explication": "i(1) = 8 e^(−2) ≈ 8 × 0,1353 ≈ **1,08 mA** : le courant a beaucoup diminué en une seconde."
+    }
+   ]
+  },
+  {
+   "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un signal de 50 Hz et sa vitesse de variation",
+   "competence": "calculer",
+   "situation": "Un capteur délivre la tension u(t) = 12 sin(100π t) (u en V, t en s). La chaîne ci-dessous montre comment elle se construit à partir de t. On cherche la vitesse de variation u′(t) de ce signal.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Construction de u(t)",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "t"
+      },
+      {
+       "id": "n2",
+       "texte": "100π t"
+      },
+      {
+       "id": "n3",
+       "texte": "sin(100π t)"
+      },
+      {
+       "id": "n4",
+       "texte": "12 sin(100π t)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape qui joue le rôle de fonction intérieure pour le sinus.",
+     "reponse": [
+      "n2"
+     ],
+     "aide": "La fonction intérieure est ce que l’on met « dans » le sinus.",
+     "explication": "Le sinus s’applique à 100π t : c’est la fonction intérieure **u(t) = 100π t**, de dérivée 100π."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de u(t) = 12 sin(100π t) ?",
+     "options": [
+      "12 × 100π × cos(100π t), on multiplie par la dérivée de l’intérieur",
+      "12 × cos(100π t), sans multiplier par la dérivée de l’intérieur",
+      "−12 × 100π × sin(100π t), on dérive le sinus comme un cosinus",
+      "12 × 100π × sin(100π t), on garde le sinus sans le dériver"
+     ],
+     "reponse": 0,
+     "aide": "Dérive la fonction extérieure, puis multiplie par la dérivée de la fonction intérieure.",
+     "explication": "On dérive l’extérieur (sin devient cos) et on multiplie par la dérivée de l’intérieur : **u′(t) = 1 200π cos(100π t)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus grande valeur que prend u′(t) ? Arrondis à l’unité, en V·s⁻¹.",
+     "reponse": 3770,
+     "unite": "V·s⁻¹",
+     "tolerance": 2,
+     "aide": "Le cosinus ne dépasse jamais 1.",
+     "explication": "Le cosinus vaut au plus 1 : u′ ≤ 1 200π ≈ **3 770 V·s⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u′(0,01) en V·s⁻¹, à l’unité près.",
+     "reponse": -3770,
+     "unite": "V·s⁻¹",
+     "tolerance": 2,
+     "aide": "À t = 0,01 s : 100π t = π.",
+     "explication": "À t = 0,01 s, 100π t = π et cos π = −1 : u′(0,01) = −1 200π ≈ **−3 770 V·s⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre primitives, une fausse",
+   "competence": "raisonner",
+   "situation": "Un groupe d’élèves a proposé une primitive pour chacune de ces quatre fonctions. Une seule proposition est fausse : tu la repères, tu la corriges, puis tu utilises la bonne primitive.",
+   "documents": [
+    {
+     "id": "prims",
+     "type": "tableau",
+     "titre": "Primitives proposées",
+     "colonnes": [
+      "Fonction f(x)",
+      "Primitive proposée F(x)"
+     ],
+     "lignes": [
+      [
+       "6x (x² + 1)²",
+       "(x² + 1)³"
+      ],
+      [
+       "4x e^(2x²)",
+       "e^(2x²)"
+      ],
+      [
+       "cos(3x)",
+       "sin(3x)"
+      ],
+      [
+       "2x / (x² + 1)",
+       "ln(x² + 1)"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prims",
+     "enonce": "Touche la primitive proposée qui est fausse.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Dérive chaque proposition et compare avec f.",
+     "explication": "La dérivée de sin(3x) est 3 cos(3x), et non cos(3x) : la proposition **sin(3x)** est fausse. Les trois autres se retrouvent en dérivant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il changer pour corriger la ligne fausse ?",
+     "options": [
+      "Il manque le facteur 1/3 : la dérivée de sin(3x) vaut 3 cos(3x), pas cos(3x)",
+      "Il manque un signe moins : la primitive du cosinus est l’opposé du sinus",
+      "Il faut un facteur 3 : on multiplie par la dérivée de la fonction intérieure",
+      "Il faut élever au carré : la primitive de cos(3x) s’écrit alors sin²(3x)"
+     ],
+     "reponse": 0,
+     "aide": "Dérive sin(3x) et regarde ce qui apparaît devant le cosinus.",
+     "explication": "La bonne primitive est **(1/3) sin(3x)** : en la dérivant, le 3 de la dérivée intérieure se compense avec le facteur 1/3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Soit F la primitive de f(x) = 4x e^(2x²) telle que F(0) = 3. Calcule F(1), arrondie au centième.",
+     "reponse": 9.39,
+     "tolerance": 0.02,
+     "aide": "F(x) = e^(2x²) + C : utilise F(0) = 3 pour trouver C.",
+     "explication": "F(x) = e^(2x²) + C et F(0) = 1 + C = 3, donc C = 2. F(1) = e² + 2 ≈ **9,39**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Soit G la bonne primitive de cos(3x) qui s’annule en 0. Calcule G(π/6), arrondie au centième.",
+     "reponse": 0.33,
+     "tolerance": 0.005,
+     "aide": "G(x) = (1/3) sin(3x) s’annule déjà en 0.",
+     "explication": "G(x) = (1/3) sin(3x), donc G(π/6) = (1/3) sin(π/2) = 1/3 ≈ **0,33**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le démarrage du moteur",
+   "competence": "lire-graphique",
+   "situation": "Un moteur démarre : sa puissance augmente régulièrement pendant 4 s. L’énergie consommée est l’aire sous la courbe de puissance.",
+   "documents": [
+    {
+     "id": "puiss",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Puissance du moteur au démarrage",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "P",
+       "valeurs": [
+        0,
+        100,
+        200,
+        300,
+        400
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance P",
+      "unite": "W",
+      "min": 0,
+      "max": 400,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "puiss",
+     "enonce": "Touche l’instant où la puissance vaut 200 W.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Repère 200 W sur l’axe vertical, puis descends vers l’axe du temps.",
+     "explication": "La puissance vaut 200 W à **t = 2 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La courbe est une droite : l’aire sous la courbe de 0 à 4 s est celle d’un triangle. Calcule l’énergie consommée, en J.",
+     "reponse": 800,
+     "unite": "J",
+     "tolerance": 1,
+     "aide": "Aire d’un triangle = base × hauteur ÷ 2.",
+     "explication": "E = 4 × 400 ÷ 2 = **800 J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance moyenne pendant ces 4 s, en W.",
+     "reponse": 200,
+     "unite": "W",
+     "tolerance": 0.5,
+     "aide": "Puissance moyenne = énergie ÷ durée.",
+     "explication": "P moyenne = 800 ÷ 4 = **200 W**, soit la valeur à mi-parcours."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La distance du chariot par les rectangles",
+   "competence": "modeliser",
+   "situation": "Un chariot a pour vitesse v(t) = t² (en m·s⁻¹, t en s). La distance parcourue entre 0 et 2 s est l’intégrale de v. Un tableur donne les valeurs suivantes, toutes les demi-secondes.",
+   "documents": [
+    {
+     "id": "vit",
+     "type": "tableau",
+     "titre": "Vitesse du chariot",
+     "colonnes": [
+      "t (s)",
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2"
+     ],
+     "lignes": [
+      [
+       "v(t) = t² (m·s⁻¹)",
+       0,
+       "0,25",
+       1,
+       "2,25",
+       4
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Méthode des rectangles à gauche, avec 4 rectangles de largeur 0,5 s : calcule la distance approchée, en m.",
+     "reponse": 1.75,
+     "unite": "m",
+     "tolerance": 0.01,
+     "aide": "Somme les hauteurs v(0), v(0,5), v(1), v(1,5), puis multiplie par la largeur 0,5.",
+     "explication": "D ≈ 0,5 × (0 + 0,25 + 1 + 2,25) = 0,5 × 3,5 = **1,75 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur exacte de la distance avec une primitive de t², arrondie au centième de mètre.",
+     "reponse": 2.67,
+     "unite": "m",
+     "tolerance": 0.01,
+     "aide": "Une primitive de t² est t³ / 3.",
+     "explication": "D = [t³/3] de 0 à 2 = 8/3 ≈ **2,67 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la méthode des rectangles à gauche donne-t-elle ici une valeur inférieure à la valeur exacte ?",
+     "options": [
+      "La vitesse est croissante : chaque rectangle à gauche reste sous la courbe",
+      "La vitesse est décroissante : chaque rectangle à gauche reste sous la courbe",
+      "La vitesse est croissante : chaque rectangle à gauche dépasse la courbe",
+      "La vitesse est décroissante : chaque rectangle à gauche dépasse la courbe"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le tableau : v augmente ou diminue ? Puis compare la hauteur du rectangle (valeur à gauche) à celle de la courbe.",
+     "explication": "Sur chaque bande, v est croissante : sa valeur à gauche est la plus petite, le rectangle est **sous la courbe** et la somme **sous-estime** l’aire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse moyenne du chariot sur [0 ; 2], arrondie au centième de m·s⁻¹.",
+     "reponse": 1.33,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.01,
+     "aide": "Vitesse moyenne = distance exacte ÷ durée.",
+     "explication": "Valeur moyenne = (8/3) ÷ 2 = 4/3 ≈ **1,33 m·s⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux moteurs, deux énergies",
+   "competence": "modeliser",
+   "situation": "Deux moteurs démarrent en même temps. Leurs puissances (en kW) sont P₁(t) = 2t et P₂(t) = 0,5 t², avec t en s. On rappelle que 1 kW × 1 s = 1 kJ.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Puissances des deux moteurs",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "P₁ = 2t",
+       "valeurs": [
+        0,
+        2,
+        4,
+        6,
+        8
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "P₂ = 0,5 t²",
+       "valeurs": [
+        0,
+        0.5,
+        2,
+        4.5,
+        8
+       ],
+       "teinte": "jaune"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "kW",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deux",
+     "enonce": "Touche l’instant, autre que le démarrage, où les deux moteurs ont la même puissance.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche où les deux courbes se croisent.",
+     "explication": "Les deux courbes se rejoignent à **t = 4 s**, avec 8 kW chacune."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie E₁ = ∫ de 0 à 4 de 2t dt fournie par le premier moteur, en kJ.",
+     "reponse": 16,
+     "unite": "kJ",
+     "tolerance": 0.01,
+     "aide": "Une primitive de 2t est t².",
+     "explication": "E₁ = [t²] de 0 à 4 = **16 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie E₂ = ∫ de 0 à 4 de 0,5 t² dt du second moteur, en kJ (arrondi au centième).",
+     "reponse": 10.67,
+     "unite": "kJ",
+     "tolerance": 0.02,
+     "aide": "Une primitive de 0,5 t² est t³ / 6.",
+     "explication": "E₂ = [t³/6] de 0 à 4 = 64/6 ≈ **10,67 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la différence d’énergie E₁ − E₂, arrondie au centième de kJ ?",
+     "reponse": 5.33,
+     "unite": "kJ",
+     "tolerance": 0.02,
+     "aide": "C’est aussi l’aire entre les deux courbes.",
+     "explication": "E₁ − E₂ = 16 − 10,67 = 16/3 ≈ **5,33 kJ**, l’aire entre les deux courbes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance moyenne du premier moteur sur [0 ; 4], en kW.",
+     "reponse": 4,
+     "unite": "kW",
+     "tolerance": 0.01,
+     "aide": "Puissance moyenne = énergie ÷ durée.",
+     "explication": "P₁ moyenne = 16 ÷ 4 = **4 kW**."
+    }
+   ]
+  },
+  {
+   "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tension du condensateur qui tombe",
+   "competence": "lire-graphique",
+   "situation": "Un condensateur se décharge dans une résistance. La tension à ses bornes suit la loi u(t) = 12 e^(−t/2) (u en V, t en s). Le graphique donne quelques relevés arrondis au dixième.",
+   "documents": [
+    {
+     "id": "uc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension aux bornes du condensateur",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "u",
+       "valeurs": [
+        12,
+        7.3,
+        4.4,
+        2.7,
+        1.6
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Tension u",
+      "unite": "V",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Relevés arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "uc",
+     "enonce": "Touche le relevé où la tension est la plus proche de 3 V.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Regarde sur la courbe à quel instant la valeur passe près de 3 V.",
+     "explication": "À **t = 3 s**, la tension vaut environ 2,7 V : c’est le relevé le plus proche de 3 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(3) avec la formule, arrondie au centième de volt.",
+     "reponse": 2.68,
+     "unite": "V",
+     "tolerance": 0.02,
+     "aide": "u(3) = 12 e^(−1,5).",
+     "explication": "u(3) = 12 e^(−1,5) ≈ 12 × 0,2231 ≈ **2,68 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant la tension vaut-elle 6 V ? Arrondis au centième de seconde.",
+     "reponse": 1.39,
+     "unite": "s",
+     "tolerance": 0.02,
+     "aide": "Résous e^(−t/2) = 1/2, en prenant le logarithme népérien.",
+     "explication": "12 e^(−t/2) = 6 ⇔ e^(−t/2) = 1/2 ⇔ −t/2 = −ln 2 ⇔ t = 2 ln 2 ≈ **1,39 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel instant la tension passe-t-elle sous 0,1 V ? Arrondis au centième de seconde.",
+     "reponse": 9.57,
+     "unite": "s",
+     "tolerance": 0.02,
+     "aide": "Résous 12 e^(−t/2) = 0,1, donc e^(−t/2) = 1/120.",
+     "explication": "e^(−t/2) = 1/120 ⇔ t = 2 ln 120 ≈ **9,57 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’iode 131 à l’hôpital",
+   "competence": "modeliser",
+   "situation": "Un service de médecine nucléaire reçoit un flacon d’iode 131 d’activité 400 MBq. L’activité décroît selon A(t) = A₀ e^(−λ t), avec t en jours. Le tableau donne l’activité mesurée au cours du temps.",
+   "documents": [
+    {
+     "id": "act",
+     "type": "tableau",
+     "titre": "Activité du flacon",
+     "colonnes": [
+      "t (jours)",
+      "0",
+      "8",
+      "16",
+      "24"
+     ],
+     "lignes": [
+      [
+       "A (MBq)",
+       400,
+       200,
+       100,
+       50
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "act",
+     "enonce": "Touche la case qui donne l’activité quand elle a été divisée par deux pour la première fois.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la moitié de 400 MBq.",
+     "explication": "La moitié de 400 est 200 : la case **200 MBq**, à t = 8 jours. Donc t½ = 8 jours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la constante radioactive λ = ln 2 / t½ avec t½ = 8 jours. Arrondis à 0,001 près, en j⁻¹.",
+     "reponse": 0.087,
+     "unite": "j⁻¹",
+     "tolerance": 0.0006,
+     "aide": "ln 2 ≈ 0,693.",
+     "explication": "λ = ln 2 ÷ 8 ≈ 0,693 ÷ 8 ≈ **0,087 j⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’activité au bout de 20 jours, en MBq (arrondie au dixième), avec λ = ln 2 / 8.",
+     "reponse": 70.7,
+     "unite": "MBq",
+     "tolerance": 0.3,
+     "aide": "A(20) = 400 e^(−20 λ), avec λ = ln 2 / 8 (ne l’arrondis pas trop tôt).",
+     "explication": "A(20) = 400 e^(−20 ln 2 / 8) = 400 × 2^(−2,5) ≈ **70,7 MBq**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de jours l’activité est-elle réduite à 10 % de sa valeur initiale ? Arrondis au dixième de jour.",
+     "reponse": 26.6,
+     "unite": "jours",
+     "tolerance": 0.1,
+     "aide": "Résous e^(−λ t) = 0,1, donc −λ t = ln 0,1 = −ln 10.",
+     "explication": "t = ln 10 / λ = 2,303 ÷ 0,0866 ≈ **26,6 jours**."
+    }
+   ]
+  },
+  {
+   "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le niveau sonore de l’atelier",
+   "competence": "modeliser",
+   "situation": "Dans un atelier, une perceuse et une scie circulaire fonctionnent. Le niveau sonore L, en décibels, se calcule à partir de l’intensité acoustique I par la loi donnée dans la fiche.",
+   "documents": [
+    {
+     "id": "mach",
+     "type": "tableau",
+     "titre": "Intensités acoustiques mesurées",
+     "colonnes": [
+      "Machine",
+      "Intensité I (W·m⁻²)"
+     ],
+     "lignes": [
+      [
+       "Perceuse",
+       "3,0 × 10⁻⁵"
+      ],
+      [
+       "Scie circulaire",
+       "1,2 × 10⁻⁴"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Mesures à 1 m de chaque machine"
+    },
+    {
+     "id": "loi",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Niveau sonore",
+     "sousTitre": "Loi à utiliser",
+     "emoji": "🔊",
+     "lignes": [
+      {
+       "texte": "L = 10 × log(I / I₀)",
+       "valeur": "en dB",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "I₀",
+       "valeur": "1,0 × 10⁻¹² W·m⁻²"
+      },
+      {
+       "texte": "log x",
+       "valeur": "ln x / ln 10"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mach",
+     "enonce": "Touche la machine la plus bruyante.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "La plus bruyante a la plus grande intensité acoustique.",
+     "explication": "La scie a l’intensité la plus grande (1,2 × 10⁻⁴ contre 3,0 × 10⁻⁵) : c’est la **scie circulaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le niveau sonore de la perceuse, arrondi au dixième de dB.",
+     "reponse": 74.8,
+     "unite": "dB",
+     "tolerance": 0.1,
+     "aide": "I / I₀ = 3,0 × 10⁻⁵ ÷ 1,0 × 10⁻¹² = 3,0 × 10⁷.",
+     "explication": "L = 10 × log(3,0 × 10⁷) ≈ 10 × 7,477 ≈ **74,8 dB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le niveau sonore de la scie circulaire, arrondi au dixième de dB.",
+     "reponse": 80.8,
+     "unite": "dB",
+     "tolerance": 0.1,
+     "aide": "I / I₀ = 1,2 × 10⁸.",
+     "explication": "L = 10 × log(1,2 × 10⁸) ≈ 10 × 8,079 ≈ **80,8 dB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les deux machines fonctionnent ensemble : leurs intensités s’additionnent. Calcule le niveau sonore total, arrondi au dixième de dB.",
+     "reponse": 81.8,
+     "unite": "dB",
+     "tolerance": 0.1,
+     "aide": "Additionne d’abord les intensités, pas les niveaux en dB.",
+     "explication": "I = 3,0 × 10⁻⁵ + 1,2 × 10⁻⁴ = 1,5 × 10⁻⁴ W·m⁻², donc L = 10 × log(1,5 × 10⁸) ≈ **81,8 dB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quand l’intensité acoustique double, de combien de dB le niveau augmente-t-il ? Arrondis au dixième.",
+     "reponse": 3,
+     "unite": "dB",
+     "tolerance": 0.05,
+     "aide": "L₂ − L₁ = 10 × (log(2I) − log I) = 10 × log 2.",
+     "explication": "L augmente de 10 × log 2 ≈ **3,0 dB**, quelle que soit l’intensité de départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelles fonctions vérifient y′ = 3y ?",
+   "competence": "raisonner",
+   "situation": "Dans un modèle de croissance, une grandeur y(x) vérifie l’équation différentielle y′ = 3y. Quatre fonctions sont proposées : on cherche lesquelles sont des solutions.",
+   "documents": [
+    {
+     "id": "cand",
+     "type": "tableau",
+     "titre": "Fonctions candidates",
+     "colonnes": [
+      "Candidate",
+      "Fonction y(x)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "e^(3x)"
+      ],
+      [
+       "B",
+       "5 e^(3x)"
+      ],
+      [
+       "C",
+       "e^(−3x)"
+      ],
+      [
+       "D",
+       "3x + 1"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cand",
+     "enonce": "Touche toutes les fonctions qui sont solutions de y′ = 3y.",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "aide": "Les solutions de y′ = a y sont les fonctions C e^(a x). Calcule y′ pour chaque candidate et compare avec 3y.",
+     "explication": "Les solutions sont **e^(3x)** et **5 e^(3x)** : leur dérivée vaut bien 3 fois la fonction. Pour e^(−3x), y′ = −3y ; pour 3x + 1, y′ = 3 mais 3y = 9x + 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour la solution y(x) = 5 e^(3x), calcule y′(0).",
+     "reponse": 15,
+     "tolerance": 0.01,
+     "aide": "y′ = 3y : calcule y(0) puis multiplie par 3.",
+     "explication": "y(0) = 5, donc y′(0) = 3 × 5 = **15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle solution vérifie y(0) = 2 ? Calcule sa valeur en x = 1, arrondie au centième.",
+     "reponse": 40.17,
+     "tolerance": 0.05,
+     "aide": "La solution s’écrit y = C e^(3x) ; y(0) = C.",
+     "explication": "C = 2 et y(x) = 2 e^(3x) ; y(1) = 2 e³ ≈ **40,17**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le fer à souder qui refroidit",
+   "competence": "modeliser",
+   "situation": "Un fer à souder chauffé à 180 °C est débranché dans un atelier. Sa température θ (en °C, t en min) vérifie θ′ = −0,05 θ + 1, avec θ(0) = 180. Le graphique donne des relevés arrondis au dixième.",
+   "documents": [
+    {
+     "id": "ref",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température du fer à souder",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40"
+     ],
+     "series": [
+      {
+       "nom": "θ",
+       "valeurs": [
+        180,
+        117,
+        78.9,
+        55.7,
+        41.7
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Température θ",
+      "unite": "°C",
+      "min": 0,
+      "max": 180,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Relevés arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ref",
+     "enonce": "Touche le relevé où la température est la plus proche de 80 °C.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la valeur de la courbe la plus voisine de 80.",
+     "explication": "À **t = 20 min**, la température est d’environ 78,9 °C : c’est le relevé le plus proche de 80 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la solution constante de θ′ = −0,05 θ + 1, en °C (elle vaut −b/a) ?",
+     "reponse": 20,
+     "unite": "°C",
+     "tolerance": 0.01,
+     "aide": "Une solution constante a une dérivée nulle : résous −0,05 θ + 1 = 0.",
+     "explication": "−0,05 θ + 1 = 0 ⇔ θ = 1 ÷ 0,05 = **20 °C** : c’est la température de la pièce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les solutions s’écrivent θ(t) = C e^(−0,05 t) + 20. Avec θ(0) = 180, que vaut C ?",
+     "reponse": 160,
+     "tolerance": 0.01,
+     "aide": "θ(0) = C e⁰ + 20.",
+     "explication": "θ(0) = C + 20 = 180, donc **C = 160**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la température à t = 30 min, arrondie au dixième de °C.",
+     "reponse": 55.7,
+     "unite": "°C",
+     "tolerance": 0.1,
+     "aide": "θ(30) = 160 e^(−1,5) + 20.",
+     "explication": "θ(30) = 160 e^(−1,5) + 20 ≈ 35,7 + 20 ≈ **55,7 °C**, ce que montre le graphique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de minutes le fer atteint-il 50 °C ? Arrondis au dixième de minute.",
+     "reponse": 33.5,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Résous 160 e^(−0,05 t) + 20 = 50, donc e^(−0,05 t) = 30/160.",
+     "explication": "e^(−0,05 t) = 3/16 ⇔ t = 20 ln(16/3) ≈ **33,5 min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La charge du condensateur, pas à pas",
+   "competence": "modeliser",
+   "situation": "Un condensateur se charge : sa tension u (en V, t en s) vérifie u′ = −2u + 10, avec u(0) = 0. On l’approche d’abord par la méthode d’Euler, puis on compare avec la solution exacte.",
+   "documents": [
+    {
+     "id": "euler",
+     "type": "tableau",
+     "titre": "Méthode d’Euler, pas h = 0,25 s",
+     "colonnes": [
+      "t (s)",
+      "0",
+      "0,25",
+      "0,5",
+      "0,75",
+      "1"
+     ],
+     "lignes": [
+      [
+       "u (V)",
+       0,
+       "2,5",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "donnees",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Charge d’un condensateur",
+     "sousTitre": "Données",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Équation",
+       "valeur": "u′ = −2u + 10"
+      },
+      {
+       "texte": "Condition initiale",
+       "valeur": "u(0) = 0 V"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Euler",
+       "valeur": "u(t + h) ≈ u(t) + h × u′(t)",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(0,5) par la méthode d’Euler, en V.",
+     "reponse": 3.75,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "u′(0,25) = −2 × 2,5 + 10 = 5 ; puis u(0,5) ≈ 2,5 + 0,25 × 5.",
+     "explication": "u(0,5) ≈ 2,5 + 0,25 × (−2 × 2,5 + 10) = 2,5 + 1,25 = **3,75 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(0,75) par la méthode d’Euler, en V.",
+     "reponse": 4.375,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "Utilise u(0,5) = 3,75.",
+     "explication": "u(0,75) ≈ 3,75 + 0,25 × (−7,5 + 10) = 3,75 + 0,625 = **4,375 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(1) par la méthode d’Euler, arrondie au centième de volt.",
+     "reponse": 4.69,
+     "unite": "V",
+     "tolerance": 0.01,
+     "aide": "Utilise u(0,75) = 4,375.",
+     "explication": "u(1) ≈ 4,375 + 0,25 × (−8,75 + 10) = 4,375 + 0,3125 ≈ **4,69 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La solution exacte est u(t) = 5 − 5 e^(−2t). Calcule u(1), arrondie au centième de volt.",
+     "reponse": 4.32,
+     "unite": "V",
+     "tolerance": 0.01,
+     "aide": "Calcule 5 − 5 e^(−2).",
+     "explication": "u(1) = 5 − 5 e^(−2) ≈ 5 − 0,68 ≈ **4,32 V** : Euler a dépassé la valeur exacte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant la tension exacte atteint-elle 4 V ? Arrondis au centième de seconde.",
+     "reponse": 0.8,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "Résous 5 − 5 e^(−2t) = 4, donc e^(−2t) = 1/5.",
+     "explication": "e^(−2t) = 1/5 ⇔ t = ln 5 / 2 ≈ **0,80 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois points dans le plan complexe",
+   "competence": "observer-schema",
+   "situation": "Dans le plan complexe, le point A a pour affixe 2 + 2i, le point B a pour affixe 3i et le point C a pour affixe −2. Le point O est l’origine.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Plan complexe",
+     "cadre": {
+      "xmin": -3,
+      "xmax": 4,
+      "ymin": -1,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 2,
+       "position": "ne"
+      },
+      {
+       "id": "B",
+       "x": 0,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "C",
+       "x": -2,
+       "y": 0,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "A"
+      },
+      {
+       "de": "O",
+       "a": "B"
+      },
+      {
+       "de": "O",
+       "a": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point B d’affixe 3i.",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Un nombre imaginaire pur se trouve sur l’axe vertical.",
+     "explication": "3i a pour partie réelle 0 et partie imaginaire 3 : c’est le point **B**, en (0 ; 3)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le module de 2 + 2i, arrondi au centième.",
+     "reponse": 2.83,
+     "tolerance": 0.01,
+     "aide": "Le module vaut √(a² + b²).",
+     "explication": "|2 + 2i| = √(4 + 4) = √8 ≈ **2,83**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est un argument de 2 + 2i ?",
+     "options": [
+      "π/4, c’est-à-dire un huitième de tour",
+      "π/2, c’est-à-dire un quart de tour",
+      "π/3, c’est-à-dire un sixième de tour",
+      "π/6, c’est-à-dire un douzième de tour"
+     ],
+     "reponse": 0,
+     "aide": "Les parties réelle et imaginaire sont égales : la demi-droite OA partage en deux l’angle droit.",
+     "explication": "Comme a = b, cos θ = sin θ, donc θ = **π/4** : OA est la bissectrice du premier quadrant."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point dont un argument est π.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Un argument π correspond à un demi-tour depuis l’axe des réels positifs.",
+     "explication": "Le point **C** d’affixe −2 est sur la demi-droite des réels négatifs : −2 = 2 e^(iπ)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Additionner deux courants déphasés",
+   "competence": "calculer",
+   "situation": "Un moteur et une résistance sont branchés en dérivation sur le même générateur. L’ampèremètre A1 mesure le courant i₁ de la résistance, A2 le courant i₂ du moteur, et A le courant total. On associe à chaque courant le complexe I e^(iφ).",
+   "documents": [
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Deux dipôles en dérivation",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "generateur"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        2,
+        0
+       ],
+       "composant": "amperemetre",
+       "nom": "A",
+       "id": "a0"
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        4,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        4,
+        2
+       ],
+       "composant": "amperemetre",
+       "nom": "A1",
+       "id": "a1"
+      },
+      {
+       "de": [
+        4,
+        2
+       ],
+       "a": [
+        4,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "res"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        2
+       ],
+       "composant": "amperemetre",
+       "nom": "A2",
+       "id": "a2"
+      },
+      {
+       "de": [
+        8,
+        2
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "moteur",
+       "nom": "M",
+       "id": "mot"
+      }
+     ]
+    },
+    {
+     "id": "cour",
+     "type": "tableau",
+     "titre": "Mesures",
+     "colonnes": [
+      "Courant",
+      "Valeur efficace (A)",
+      "Phase (rad)"
+     ],
+     "lignes": [
+      [
+       "i₁",
+       3,
+       "0"
+      ],
+      [
+       "i₂",
+       4,
+       "−π/2 (en retard d’un quart de période)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche l’ampèremètre qui mesure le courant total.",
+     "reponse": [
+      "a0"
+     ],
+     "aide": "Le courant total passe avant de se partager entre les deux branches.",
+     "explication": "Le courant total traverse l’ampèremètre **A**, placé avant la dérivation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le courant total correspond à 3 + 4 e^(−iπ/2) = 3 − 4i. Calcule sa valeur efficace I, en A.",
+     "reponse": 5,
+     "unite": "A",
+     "tolerance": 0.01,
+     "aide": "Le module de 3 − 4i vaut √(3² + 4²).",
+     "explication": "I = |3 − 4i| = √(9 + 16) = **5 A**, et non 3 + 4 = 7 A, car les courants sont déphasés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la phase φ du courant total par rapport à i₁, en rad, arrondie au millième (elle est négative).",
+     "reponse": -0.927,
+     "unite": "rad",
+     "tolerance": 0.005,
+     "aide": "cos φ = 3/5 et sin φ = −4/5 : φ = −arctan(4/3).",
+     "explication": "φ = −arctan(4/3) ≈ **−0,927 rad** : le courant total est en retard sur i₁."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur maximale I√2 du courant total, arrondie au centième d’ampère.",
+     "reponse": 7.07,
+     "unite": "A",
+     "tolerance": 0.01,
+     "aide": "I max = I × √2.",
+     "explication": "I max = 5 √2 ≈ **7,07 A**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux voies, un seul signal",
+   "competence": "modeliser",
+   "situation": "Deux capteurs de même fréquence sont sommés : s(t) = 3 cos(100π t) + 3√3 sin(100π t), en V, avec t en s. On veut écrire s(t) sous la forme A cos(100π t + φ), avec A = √(a² + b²), cos φ = a/A et sin φ = −b/A.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Somme de deux signaux",
+     "sousTitre": "Composantes de s(t)",
+     "emoji": "〰️",
+     "lignes": [
+      {
+       "texte": "Cosinus (a)",
+       "valeur": "3"
+      },
+      {
+       "texte": "Sinus (b)",
+       "valeur": "3√3 ≈ 5,20"
+      },
+      {
+       "texte": "Fréquence",
+       "valeur": "50 Hz"
+      }
+     ]
+    },
+    {
+     "id": "sig",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Relevés du signal s(t)",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "s",
+       "valeurs": [
+        3,
+        5.2,
+        -3,
+        -5.2,
+        3
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Tension s",
+      "unite": "V",
+      "min": -6,
+      "max": 6,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Relevés arrondis au centième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sig",
+     "enonce": "Touche le relevé le plus élevé des cinq.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le relevé le plus haut est à **t = 5 ms**, avec environ 5,2 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’amplitude A = √(a² + b²), en V.",
+     "reponse": 6,
+     "unite": "V",
+     "tolerance": 0.01,
+     "aide": "a = 3 et b = 3√3, donc a² = 9 et b² = 27.",
+     "explication": "A = √(9 + 27) = √36 = **6 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la phase φ, en rad, arrondie au millième.",
+     "reponse": -1.047,
+     "unite": "rad",
+     "tolerance": 0.002,
+     "aide": "cos φ = 3/6 = 1/2 et sin φ = −3√3/6 = −√3/2.",
+     "explication": "cos φ = 1/2 et sin φ < 0 : φ = **−π/3 ≈ −1,047 rad**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant s(t) atteint-il son premier maximum ? Arrondis au centième de ms.",
+     "reponse": 3.33,
+     "unite": "ms",
+     "tolerance": 0.02,
+     "aide": "Le maximum est atteint quand 100π t + φ = 0.",
+     "explication": "100π t = π/3 ⇔ t = 1/300 s ≈ **3,33 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur efficace de s, A/√2, arrondie au centième de volt.",
+     "reponse": 4.24,
+     "unite": "V",
+     "tolerance": 0.01,
+     "aide": "Valeur efficace = amplitude ÷ √2.",
+     "explication": "S = 6 ÷ √2 ≈ **4,24 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plan de la matinée",
+   "competence": "lire-tableau",
+   "situation": "Le jour de l’épreuve, tu disposes de 3 heures. Voici une répartition conseillée du temps entre les grandes étapes.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Répartition conseillée",
+     "colonnes": [
+      "Moment",
+      "Durée conseillée (min)"
+     ],
+     "lignes": [
+      [
+       "Lecture du sujet",
+       10
+      ],
+      [
+       "Physique-chimie (14 points)",
+       115
+      ],
+      [
+       "Mathématiques (6 points)",
+       50
+      ],
+      [
+       "Relecture",
+       5
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temps",
+     "enonce": "Touche la durée conseillée pour les mathématiques.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « Mathématiques » et sa durée.",
+     "explication": "Les mathématiques ont **50 minutes** conseillées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Additionne les quatre durées : combien de minutes au total ?",
+     "reponse": 180,
+     "unite": "min",
+     "tolerance": 0.01,
+     "aide": "10 + 115 + 50 + 5.",
+     "explication": "Le total fait **180 minutes**, soit bien 3 heures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes, en moyenne, pour gagner un point en mathématiques ? Arrondis au dixième.",
+     "reponse": 8.3,
+     "unite": "min",
+     "tolerance": 0.05,
+     "aide": "Durée en mathématiques ÷ nombre de points.",
+     "explication": "50 ÷ 6 ≈ **8,3 minutes par point**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Corriger une copie de physique",
+   "competence": "analyser-document",
+   "situation": "Un élève a rédigé le calcul de la puissance active d’un moteur sous 230 V, parcouru par 10 A avec un facteur de puissance de 0,80. Ses lignes, reproduites ci-dessous, ne sont pas dans l’ordre conseillé.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "tableau",
+     "titre": "La copie de l’élève",
+     "colonnes": [
+      "Ligne",
+      "Ce que l’élève a écrit"
+     ],
+     "lignes": [
+      [
+       "a",
+       "P = 230 × 10 × 0,80"
+      ],
+      [
+       "b",
+       "P = 1 840"
+      ],
+      [
+       "c",
+       "P = U × I × cos φ"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "enonce": "Touche la ligne qui contient l’expression littérale.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "L’expression littérale ne contient que des lettres, pas de nombres.",
+     "explication": "La ligne c, **P = U × I × cos φ**, est l’expression littérale : elle vient en premier."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’un calcul de physique dans l’ordre conseillé.",
+     "items": [
+      "Écrire l’expression littérale",
+      "Faire l’application numérique",
+      "Donner le résultat avec son unité",
+      "Conclure par une phrase"
+     ],
+     "aide": "On part de la loi, puis on remplace par les nombres.",
+     "explication": "Ordre conseillé : **expression littérale, application numérique, résultat avec unité, phrase de conclusion**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que manque-t-il à la ligne b pour qu’elle soit complète ?",
+     "options": [
+      "L’unité du résultat, qui doit être les watts (W)",
+      "L’expression littérale, qui doit être recopiée sous le résultat",
+      "Une seconde application numérique, avec le cos φ en degrés",
+      "La tension maximale, qui doit remplacer la valeur efficace"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui suit le nombre 1 840.",
+     "explication": "Un résultat sans unité est faux : il faut écrire **P = 1 840 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec U = 230 V, I = 4,2 A et cos φ = 0,80, donne P en watts avec le bon nombre de chiffres significatifs (deux, comme la donnée la moins précise : écris 770 pour 7,7 × 10²).",
+     "reponse": 770,
+     "unite": "W",
+     "tolerance": 5,
+     "aide": "Calcule d’abord P, puis arrondis à deux chiffres significatifs.",
+     "explication": "P = 230 × 4,2 × 0,80 = 772,8 W ; avec deux chiffres significatifs : **7,7 × 10² W**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Répartir son temps sur un exercice",
+   "competence": "raisonner",
+   "situation": "Tu abordes l’exercice A du sujet de physique-chimie, noté sur 8 points au total. La règle de la fiche dit que le temps suit le barème.",
+   "documents": [
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Barème de l’exercice A",
+     "colonnes": [
+      "Question",
+      "Points"
+     ],
+     "lignes": [
+      [
+       "1. Montrer que S = 2 300 VA",
+       "1,5"
+      ],
+      [
+       "2. Déterminer le facteur de puissance k",
+       "1"
+      ],
+      [
+       "3. Calculer les pertes en ligne",
+       "2"
+      ],
+      [
+       "4. Conclure sur le rendement",
+       "3,5"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "regle",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Règle du temps",
+     "sousTitre": "Physique-chimie",
+     "emoji": "⏱️",
+     "lignes": [
+      {
+       "texte": "Points de physique-chimie",
+       "valeur": "14"
+      },
+      {
+       "texte": "Temps conseillé",
+       "valeur": "115 min"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Le temps suit le barème",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bareme",
+     "enonce": "Touche la question qui mérite le plus de temps.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Le temps suit le barème : cherche la question qui rapporte le plus de points.",
+     "explication": "La question 4 rapporte **3,5 points** : c’est celle qui mérite le plus de temps."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel temps consacrer à l’exercice A ? Arrondis au dixième de minute.",
+     "reponse": 65.7,
+     "unite": "min",
+     "tolerance": 0.3,
+     "aide": "Temps = 115 × 8 ÷ 14.",
+     "explication": "115 × 8 ÷ 14 ≈ **65,7 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel temps consacrer à la question 4 ? Arrondis au dixième de minute.",
+     "reponse": 28.8,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Temps = 115 × 3,5 ÷ 14.",
+     "explication": "115 × 3,5 ÷ 14 = **28,75 min**, soit environ 28,8 minutes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Tu ne parviens pas à montrer que S = 2 300 VA à la question 1. Que fais-tu pour la question 2 ?",
+     "options": [
+      "Utiliser quand même la valeur donnée, S = 2 300 VA, pour calculer k",
+      "Laisser la question 2 blanche, car elle dépend du résultat de la question 1",
+      "Inventer une valeur de S plus commode pour continuer la question 2",
+      "Reprendre la question 1 pendant vingt minutes avant de continuer"
+     ],
+     "reponse": 0,
+     "aide": "Le résultat est donné dans l’énoncé : il est utilisable.",
+     "explication": "Quand le résultat est donné, on **l’utilise quand même** : la suite reste faisable et rapporte ses points."
+    }
+   ]
+  },
+  {
+   "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La batterie du vélo électrique",
+   "competence": "analyser-document",
+   "situation": "Sur la batterie d’un vélo à assistance électrique, on relève les caractéristiques ci-dessous. Le moteur absorbe 180 W.",
+   "documents": [
+    {
+     "id": "bat",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Batterie lithium-ion",
+     "sousTitre": "Vélo à assistance",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Tension nominale",
+       "valeur": "36 V",
+       "id": "u"
+      },
+      {
+       "texte": "Capacité",
+       "valeur": "10 Ah",
+       "id": "cap"
+      },
+      {
+       "texte": "Masse",
+       "valeur": "2,5 kg",
+       "id": "m"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bat",
+     "enonce": "Touche la ligne qui donne la capacité de la batterie.",
+     "reponse": [
+      "cap"
+     ],
+     "aide": "La capacité s’exprime en ampères-heures.",
+     "explication": "La capacité est la ligne en ampères-heures : **10 Ah**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie stockée E = U × Q, en Wh.",
+     "reponse": 360,
+     "unite": "Wh",
+     "tolerance": 0.5,
+     "aide": "U en volts, Q en ampères-heures : le produit est en wattheures.",
+     "explication": "E = 36 × 10 = **360 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie massique de cette batterie, en Wh/kg.",
+     "reponse": 144,
+     "unite": "Wh/kg",
+     "tolerance": 0.5,
+     "aide": "Énergie ÷ masse.",
+     "explication": "360 ÷ 2,5 = **144 Wh/kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’autonomie à pleine puissance, avec un moteur de 180 W, en heures.",
+     "reponse": 2,
+     "unite": "h",
+     "tolerance": 0.01,
+     "aide": "Durée = énergie ÷ puissance.",
+     "explication": "360 ÷ 180 = **2,0 h**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans la pile zinc-cuivre",
+   "competence": "observer-schema",
+   "situation": "Une pile zinc-cuivre alimente une lampe. L’électrode de zinc est la borne négative ; à son contact, Zn → Zn²⁺ + 2 e⁻. Elle débite 0,50 A pendant 2,0 h. Données : F = 96 500 C·mol⁻¹ ; M(Zn) = 65,4 g·mol⁻¹.",
+   "documents": [
+    {
+     "id": "pile",
+     "type": "schema",
+     "titre": "Pile en fonctionnement",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 105,
+       "l": 280,
+       "h": 75,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 85,
+       "l": 16,
+       "h": 80,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "eg",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 274,
+       "y": 85,
+       "l": 16,
+       "h": 80,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "ed",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 184,
+       "texte": "Zn",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 282,
+       "y": 184,
+       "texte": "Cu",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 160,
+       "texte": "Solution",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        85
+       ],
+       "a": [
+        58,
+        45
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        45
+       ],
+       "a": [
+        140,
+        45
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 33,
+       "l": 60,
+       "h": 24,
+       "arrondi": 6,
+       "texte": "Lampe",
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        45
+       ],
+       "a": [
+        282,
+        45
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        282,
+        45
+       ],
+       "a": [
+        282,
+        85
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        25
+       ],
+       "a": [
+        120,
+        25
+       ],
+       "fleche": "fin",
+       "id": "f1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 15,
+       "texte": "1",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        25
+       ],
+       "a": [
+        220,
+        25
+       ],
+       "fleche": "fin",
+       "id": "f2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 15,
+       "texte": "2",
+       "ancre": "milieu",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche l’électrode où a lieu l’oxydation.",
+     "reponse": [
+      "eg"
+     ],
+     "aide": "L’oxydation libère des électrons : c’est l’électrode de zinc, borne négative.",
+     "explication": "Le zinc est oxydé (Zn → Zn²⁺ + 2 e⁻) à l’électrode de **zinc**, l’anode, borne négative."
+    },
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche la flèche qui indique le sens de déplacement des électrons dans le circuit extérieur.",
+     "reponse": [
+      "f1"
+     ],
+     "aide": "Les électrons partent de la borne négative et rejoignent la borne positive.",
+     "explication": "Les électrons vont de la borne − (zinc) vers la borne + (cuivre) : la **flèche 1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité d’électrons échangés n(e⁻) = I Δt / F, en mmol, arrondie au dixième.",
+     "reponse": 37.3,
+     "unite": "mmol",
+     "tolerance": 0.1,
+     "aide": "Convertis 2,0 h en secondes : Q = I × Δt en coulombs.",
+     "explication": "Q = 0,50 × 7 200 = 3 600 C ; n(e⁻) = 3 600 ÷ 96 500 ≈ **37,3 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chaque atome de zinc libère 2 électrons. Calcule la masse de zinc consommée, en g, arrondie au centième.",
+     "reponse": 1.22,
+     "unite": "g",
+     "tolerance": 0.01,
+     "aide": "n(Zn) = n(e⁻) ÷ 2, puis m = n × M.",
+     "explication": "n(Zn) ≈ 18,65 mmol ; m = 0,01865 × 65,4 ≈ **1,22 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Choisir l’énergie d’un bus électrique",
+   "competence": "modeliser",
+   "situation": "Un petit bus électrique doit embarquer 60 kWh. On compare trois technologies d’accumulateurs, puis une pile à combustible qui pourrait le prolonger. Donnée : F = 96 500 C·mol⁻¹.",
+   "documents": [
+    {
+     "id": "techno",
+     "type": "tableau",
+     "titre": "Technologies d’accumulateurs",
+     "colonnes": [
+      "Technologie",
+      "Tension d’un élément (V)",
+      "Énergie massique (Wh/kg)"
+     ],
+     "lignes": [
+      [
+       "Plomb",
+       "2",
+       "35"
+      ],
+      [
+       "Nickel-métal hydrure",
+       "1,2",
+       "80"
+      ],
+      [
+       "Lithium-ion",
+       "3,7",
+       "200"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Ordres de grandeur"
+    },
+    {
+     "id": "bus",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Cahier des charges",
+     "sousTitre": "Petit bus électrique",
+     "emoji": "🚌",
+     "lignes": [
+      {
+       "texte": "Énergie à embarquer",
+       "valeur": "60 kWh"
+      },
+      {
+       "texte": "Tension du pack",
+       "valeur": "400 V minimum"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Pile à combustible",
+       "valeur": "100 A pendant 1 h"
+      },
+      {
+       "texte": "M(H₂)",
+       "valeur": "2,0 g·mol⁻¹"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "techno",
+     "enonce": "Touche la technologie qui donne la plus petite masse de batterie pour une même énergie.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "La masse est plus petite quand l’énergie massique est grande.",
+     "explication": "Le **lithium-ion** a la plus grande énergie massique (200 Wh/kg) : pour 60 kWh, c’est lui qui pèse le moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse de batterie lithium-ion nécessaire pour 60 kWh, en kg.",
+     "reponse": 300,
+     "unite": "kg",
+     "tolerance": 1,
+     "aide": "60 kWh = 60 000 Wh ; masse = énergie ÷ énergie massique.",
+     "explication": "m = 60 000 ÷ 200 = **300 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse nécessaire avec du plomb, en kg, arrondie à l’unité.",
+     "reponse": 1714,
+     "unite": "kg",
+     "tolerance": 2,
+     "aide": "Même calcul avec 35 Wh/kg.",
+     "explication": "m = 60 000 ÷ 35 ≈ **1 714 kg** : presque six fois plus lourd."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments lithium-ion de 3,7 V faut-il monter en série, au minimum, pour atteindre 400 V ?",
+     "reponse": 109,
+     "tolerance": 0.01,
+     "aide": "Les tensions s’additionnent en série ; il faut un nombre entier d’éléments.",
+     "explication": "400 ÷ 3,7 ≈ 108,1 : il faut au moins **109 éléments**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La pile à combustible débite 100 A pendant 1 h. Calcule la masse de dihydrogène consommée, en g, arrondie au centième (chaque H₂ cède 2 électrons).",
+     "reponse": 3.73,
+     "unite": "g",
+     "tolerance": 0.02,
+     "aide": "Q = 100 × 3 600 C ; n(e⁻) = Q ÷ F ; n(H₂) = n(e⁻) ÷ 2.",
+     "explication": "Q = 360 000 C ; n(e⁻) ≈ 3,73 mol ; n(H₂) ≈ 1,87 mol ; m ≈ 1,87 × 2,0 ≈ **3,73 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La plaque signalétique de la perceuse",
+   "competence": "analyser-document",
+   "situation": "Une perceuse est alimentée par le secteur. Sa plaque signalétique indique les valeurs suivantes.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Perceuse à percussion",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🔧",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "230 V"
+      },
+      {
+       "texte": "Intensité",
+       "valeur": "4,0 A"
+      },
+      {
+       "texte": "Puissance active",
+       "valeur": "736 W",
+       "id": "pact"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la ligne qui donne la puissance active.",
+     "reponse": [
+      "pact"
+     ],
+     "aide": "La puissance active se mesure en watts.",
+     "explication": "La puissance active est celle exprimée en watts : **736 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance apparente S = U × I, en VA.",
+     "reponse": 920,
+     "unite": "VA",
+     "tolerance": 0.5,
+     "aide": "Multiplie les valeurs efficaces de la tension et de l’intensité.",
+     "explication": "S = 230 × 4,0 = **920 VA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le facteur de puissance k = P / S.",
+     "reponse": 0.8,
+     "tolerance": 0.005,
+     "aide": "Divise la puissance active par la puissance apparente.",
+     "explication": "k = 736 ÷ 920 = **0,80**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un radiateur (k = 1) de même puissance active 736 W sous 230 V absorbe quelle intensité, en A ?",
+     "reponse": 3.2,
+     "unite": "A",
+     "tolerance": 0.05,
+     "aide": "Pour k = 1, P = U × I.",
+     "explication": "I = 736 ÷ 230 = **3,2 A**, moins que les 4,0 A de la perceuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi 400 000 volts ?",
+   "competence": "modeliser",
+   "situation": "Une ligne de résistance R = 5,0 Ω doit transporter une puissance active P = 10 MW, avec un facteur de puissance égal à 1. On compare deux tensions de transport : 20 kV et 400 kV. Les pertes valent Pj = R × I², avec I = P / U.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "chaine",
+     "titre": "Le chemin de l’électricité",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "alt",
+       "texte": "Alternateur (20 kV)"
+      },
+      {
+       "id": "elev",
+       "texte": "Transformateur élévateur"
+      },
+      {
+       "id": "thT",
+       "texte": "Ligne très haute tension"
+      },
+      {
+       "id": "abai",
+       "texte": "Poste abaisseur"
+      },
+      {
+       "id": "conso",
+       "texte": "Consommateurs"
+      }
+     ],
+     "liens": [
+      {
+       "de": "alt",
+       "a": "elev"
+      },
+      {
+       "de": "elev",
+       "a": "thT"
+      },
+      {
+       "de": "thT",
+       "a": "abai"
+      },
+      {
+       "de": "abai",
+       "a": "conso"
+      }
+     ]
+    },
+    {
+     "id": "lignes",
+     "type": "tableau",
+     "titre": "Comparaison des deux tensions",
+     "colonnes": [
+      "Grandeur",
+      "Ligne à 20 kV",
+      "Ligne à 400 kV"
+     ],
+     "lignes": [
+      [
+       "Intensité I (A)",
+       "?",
+       "?"
+      ],
+      [
+       "Pertes Pj (kW)",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche l’appareil qui élève la tension en sortie de l’alternateur.",
+     "reponse": [
+      "elev"
+     ],
+     "aide": "Cherche le mot « élévateur ».",
+     "explication": "C’est le **transformateur élévateur** qui porte la tension de 20 kV à 400 kV."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité dans la ligne à 20 kV, en A.",
+     "reponse": 500,
+     "unite": "A",
+     "tolerance": 0.5,
+     "aide": "I = P / U, avec P = 10 × 10⁶ W et U = 20 × 10³ V.",
+     "explication": "I = 10 × 10⁶ ÷ 20 × 10³ = **500 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule les pertes dans la ligne à 400 kV, en kW, arrondies au centième.",
+     "reponse": 3.13,
+     "unite": "kW",
+     "tolerance": 0.01,
+     "aide": "I = 25 A à 400 kV ; Pj = R × I².",
+     "explication": "Pj = 5,0 × 25² = 3 125 W, soit **3,13 kW** environ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois les pertes à 20 kV sont-elles plus grandes que celles à 400 kV ?",
+     "reponse": 400,
+     "tolerance": 0.5,
+     "aide": "Calcule les pertes à 20 kV : R × 500², puis divise par celles à 400 kV.",
+     "explication": "Pj à 20 kV = 5,0 × 500² = 1 250 kW ; 1 250 000 ÷ 3 125 = **400** : tension × 20, pertes ÷ 400."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le transformateur de l’établi",
+   "competence": "analyser-document",
+   "situation": "Un transformateur abaisse le secteur pour alimenter une lampe d’atelier (résistance pure, facteur de puissance 1). Les mesures sont rassemblées dans le tableau ; le schéma n’est pas à l’échelle.",
+   "documents": [
+    {
+     "id": "transfo",
+     "type": "schema",
+     "titre": "Transformateur monophasé",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 40,
+       "l": 160,
+       "h": 140,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 70,
+       "l": 100,
+       "h": 80,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 85,
+       "l": 42,
+       "h": 50,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "bp",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 214,
+       "y": 85,
+       "l": 42,
+       "h": 50,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "bs",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 105,
+       "texte": "Secteur",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 122,
+       "texte": "230 V",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 105,
+       "texte": "Lampe",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 122,
+       "texte": "24 V",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 205,
+       "texte": "N₁ = 920",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 205,
+       "texte": "N₂ = ?",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "essai",
+     "type": "tableau",
+     "titre": "Mesures",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance absorbée au primaire P₁",
+       "100 W"
+      ],
+      [
+       "Facteur de puissance au primaire",
+       "0,90"
+      ],
+      [
+       "Puissance fournie à la lampe P₂",
+       "96 W"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "transfo",
+     "enonce": "Touche la bobine reliée au secteur 230 V.",
+     "reponse": [
+      "bp"
+     ],
+     "aide": "Le secteur est du côté du primaire, à gauche du schéma.",
+     "explication": "La bobine du primaire est celle reliée au secteur **230 V**, à gauche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre de spires N₂ du secondaire, avec N₂ / N₁ = U₂ / U₁.",
+     "reponse": 96,
+     "unite": "spires",
+     "tolerance": 0.5,
+     "aide": "N₂ = N₁ × U₂ ÷ U₁.",
+     "explication": "N₂ = 920 × 24 ÷ 230 = **96 spires**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité I₂ dans la lampe, en A (facteur de puissance 1).",
+     "reponse": 4,
+     "unite": "A",
+     "tolerance": 0.02,
+     "aide": "Pour k = 1, P₂ = U₂ × I₂.",
+     "explication": "I₂ = 96 ÷ 24 = **4,0 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement η = P₂ / P₁, en pourcentage.",
+     "reponse": 96,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise la puissance fournie par la puissance absorbée.",
+     "explication": "η = 96 ÷ 100 = 0,96, soit **96 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité I₁ absorbée au primaire avec P₁ = U₁ × I₁ × k, arrondie au millième d’ampère.",
+     "reponse": 0.483,
+     "unite": "A",
+     "tolerance": 0.003,
+     "aide": "I₁ = P₁ ÷ (U₁ × k), avec k = 0,90.",
+     "explication": "I₁ = 100 ÷ (230 × 0,90) ≈ **0,483 A**."
+    }
+   ]
+  }
+ ]
+}

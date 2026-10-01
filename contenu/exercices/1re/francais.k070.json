@@ -1,0 +1,3248 @@
+{
+  "niveau": "1re",
+  "matiere": "francais",
+  "exercices": [
+    {
+      "chapitre": "b199ad65-bc32-53d9-a241-05269915211a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le sommaire de la Déclaration",
+      "competence": "analyser-document",
+      "situation": "Pour préparer ton oral, tu as recopié le plan de la Déclaration d’Olympe de Gouges, mais les parties sont en désordre. Remets de l’ordre, puis relis la phrase la plus célèbre du texte.",
+      "documents": [
+        {
+          "id": "sommaire",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Sommaire en désordre",
+          "sousTitre": "Déclaration des droits de la femme et de la citoyenne (1791)",
+          "emoji": "📜",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Le postambule",
+              "id": "post"
+            },
+            {
+              "texte": "Le contrat social de l’homme et de la femme",
+              "id": "contrat"
+            },
+            {
+              "texte": "La dédicace",
+              "id": "ded"
+            },
+            {
+              "texte": "Les dix-sept articles",
+              "id": "art"
+            },
+            {
+              "texte": "Le préambule",
+              "id": "pre"
+            }
+          ],
+          "pied": "Plan à reconstituer"
+        },
+        {
+          "id": "artx",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Article X (extrait)",
+          "blocs": [
+            "« La femme a le droit de monter sur l’[[l|échafaud]] ; elle doit avoir également celui de monter à la [[l|tribune]]. »"
+          ],
+          "source": "Olympe de Gouges, Déclaration des droits de la femme et de la citoyenne, 1791"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sommaire",
+          "multiple": false,
+          "reponse": [
+            "pre"
+          ],
+          "enonce": "Touche la partie où les « mères, filles, sœurs, représentantes de la nation » demandent à être constituées en Assemblée.",
+          "aide": "Cette partie ouvre les articles ; elle est calquée sur celle de 1789.",
+          "explication": "C’est **le préambule** : il reprend celui de 1789 pour y faire entrer les femmes."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les parties dans l’ordre où on les lit.",
+          "items": [
+            "La dédicace",
+            "Le préambule",
+            "Les dix-sept articles",
+            "Le postambule",
+            "Le contrat social de l’homme et de la femme"
+          ],
+          "aide": "Le texte commence par une dédicace et finit par le contrat social.",
+          "explication": "Ordre : **dédicace, préambule, dix-sept articles, postambule, contrat social**."
+        },
+        {
+          "type": "zone",
+          "document": "artx",
+          "multiple": true,
+          "reponse": [
+            "l"
+          ],
+          "enonce": "Dans l’article X, touche les deux mots qui désignent les deux lieux que la femme doit pouvoir atteindre.",
+          "aide": "Un lieu de châtiment, un lieu de parole.",
+          "explication": "Les deux lieux sont **l’échafaud** et **la tribune** : la loi punit les femmes, elle doit donc aussi les laisser parler."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est l’argument de l’article X ?",
+          "options": [
+            "Puisque la loi punit les femmes comme des citoyennes, elle doit les représenter",
+            "Les femmes doivent éviter la politique pour éviter l’échafaud et la prison",
+            "La tribune est aussi dangereuse que l’échafaud, donc les femmes doivent s’en écarter",
+            "Les hommes doivent monter à la tribune à leur place, puisqu’elles risquent l’échafaud"
+          ],
+          "reponse": 0,
+          "aide": "Relis les deux moitiés de la phrase : que se passe-t-il dans la première, que réclame la seconde ?",
+          "explication": "L’argument est **imparable** : si la femme est jugée et punie en citoyenne, elle doit l’être aussi pour parler et pour voter."
+        }
+      ]
+    },
+    {
+      "chapitre": "b199ad65-bc32-53d9-a241-05269915211a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "1789 et 1791 face à face",
+      "competence": "analyser-texte",
+      "situation": "Olympe de Gouges a repris la forme de la Déclaration de 1789. Compare les deux premiers articles, puis mesure ce qui change et ce qui reste.",
+      "documents": [
+        {
+          "id": "a1789",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Article premier, 1789",
+          "blocs": [
+            "« Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l’utilité commune. »"
+          ],
+          "source": "Déclaration des droits de l’homme et du citoyen, 1789"
+        },
+        {
+          "id": "a1791",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Article premier, 1791",
+          "blocs": [
+            "« La [[f|femme]] naît libre et demeure égale à l’homme en droits. Les distinctions sociales ne peuvent être fondées que sur l’utilité commune. »"
+          ],
+          "source": "Olympe de Gouges, Déclaration des droits de la femme et de la citoyenne, 1791"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "a1791",
+          "multiple": false,
+          "reponse": [
+            "f"
+          ],
+          "enonce": "Dans le texte de 1791, touche le mot qui prend la place de « hommes » comme sujet.",
+          "aide": "Compare la première phrase des deux articles.",
+          "explication": "C’est **femme** : le sujet change, tout le reste de la phrase est déjà là."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément : Olympe de Gouges le reprend de 1789 ou l’ajoute ?",
+          "categories": [
+            "Repris de 1789",
+            "Ajouté en 1791"
+          ],
+          "items": [
+            [
+              "La numérotation des articles",
+              0
+            ],
+            [
+              "La structure : préambule puis articles",
+              0
+            ],
+            [
+              "Le postambule",
+              1
+            ],
+            [
+              "Le contrat social de l’homme et de la femme",
+              1
+            ],
+            [
+              "L’ordre des articles",
+              0
+            ]
+          ],
+          "aide": "Le postambule et le contrat social n’existent pas en 1789.",
+          "explication": "Elle **reprend** la forme (articles, numérotation, ordre) et **ajoute** le postambule et le contrat social."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce pastiche est-il plus efficace qu’un long plaidoyer ?",
+          "options": [
+            "Le lecteur compare lui-même et voit que les femmes ont été oubliées",
+            "Il évite de citer le texte de 1789 pour ne pas lasser le lecteur",
+            "Il est plus court à lire et donc moins ennuyeux pour le lecteur",
+            "Il flatte les auteurs de 1789 pour les amener à changer d’avis"
+          ],
+          "reponse": 0,
+          "aide": "Que fait le lecteur qui reconnaît le modèle ?",
+          "explication": "Le lecteur **fait lui-même la comparaison** : l’oubli des femmes devient visible sans qu’il soit besoin de le démontrer."
+        }
+      ]
+    },
+    {
+      "chapitre": "b199ad65-bc32-53d9-a241-05269915211a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une autrice, une date, un prix",
+      "competence": "se-reperer-temps",
+      "situation": "Tu prépares un entretien sur Olympe de Gouges : croise sa vie, la Révolution et un extrait du postambule pour comprendre son audace.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "La Révolution et la Déclaration",
+          "debut": 1786,
+          "fin": 1794,
+          "pas": 1,
+          "evenements": [
+            {
+              "id": "ddhc",
+              "date": 1789,
+              "nom": "Droits de l’homme"
+            },
+            {
+              "id": "dec",
+              "date": 1791,
+              "nom": "Sa Déclaration"
+            },
+            {
+              "id": "guil",
+              "date": 1793,
+              "nom": "Guillotinée"
+            }
+          ]
+        },
+        {
+          "id": "idt",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Marie Gouze, dite Olympe de Gouges",
+          "sousTitre": "Carte d’identité",
+          "emoji": "🎭",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Née",
+              "valeur": "1748, Montauban"
+            },
+            {
+              "texte": "Écrit",
+              "valeur": "Du théâtre"
+            },
+            {
+              "texte": "Position",
+              "valeur": "Révolutionnaire modérée"
+            }
+          ],
+          "pied": "Autrice et militante"
+        },
+        {
+          "id": "post",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Le postambule (extrait)",
+          "blocs": [
+            "« [[i|Femme]], [[i|réveille-toi]] ; le tocsin de la raison se fait entendre dans tout l’univers ; [[i|reconnais]] tes droits. »"
+          ],
+          "source": "Olympe de Gouges, 1791"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "multiple": false,
+          "reponse": [
+            "dec"
+          ],
+          "enonce": "Sur la frise, touche l’année où paraît la Déclaration d’Olympe de Gouges.",
+          "aide": "Elle répond à un texte publié deux ans plus tôt.",
+          "explication": "Elle paraît en **1791**, deux ans après la Déclaration de 1789."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel âge a Olympe de Gouges en 1791 ? Utilise sa carte d’identité.",
+          "reponse": 43,
+          "aide": "Soustrais la date de naissance.",
+          "explication": "1791 − 1748 = **43 ans** environ : elle n’est plus une débutante quand elle prend la plume.",
+          "tolerance": 1
+        },
+        {
+          "type": "zone",
+          "document": "post",
+          "multiple": true,
+          "reponse": [
+            "i"
+          ],
+          "enonce": "Dans le postambule, touche les trois mots qui s’adressent directement aux femmes (l’apostrophe et les ordres).",
+          "aide": "Un nom qu’on interpelle, puis deux verbes à l’impératif.",
+          "explication": "Touche **Femme** (apostrophe), **réveille-toi** et **reconnais** (impératifs) : le ton n’est plus juridique mais polémique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Olympe de Gouges change-t-elle de registre au postambule ?",
+          "options": [
+            "La loi ne suffit pas : il faut aussi convaincre les femmes elles-mêmes",
+            "Elle veut adoucir le ton pour ne pas froisser la reine",
+            "Elle a terminé la liste des articles et change simplement de sujet",
+            "Elle veut imiter le style de la Déclaration de 1789 jusqu’au bout"
+          ],
+          "reponse": 0,
+          "aide": "À qui ces ordres s’adressent-ils ?",
+          "explication": "La loi ne suffit pas : **il faut convaincre les femmes elles-mêmes**, d’où l’apostrophe et l’impératif."
+        }
+      ]
+    },
+    {
+      "chapitre": "22812fc6-a156-5bcc-b9bc-9d3e813162dc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois registres, trois publics",
+      "competence": "analyser-texte",
+      "situation": "Dans son texte, Olympe de Gouges ne parle pas à tout le monde de la même façon. Associe chaque partie à son registre, puis repère l’apostrophe dans un court passage imité.",
+      "documents": [
+        {
+          "id": "reg",
+          "type": "tableau",
+          "titre": "Les trois registres",
+          "colonnes": [
+            "Partie du texte",
+            "Registre",
+            "Public visé"
+          ],
+          "lignes": [
+            [
+              "Les dix-sept articles",
+              "?",
+              "Les législateurs"
+            ],
+            [
+              "Le postambule",
+              "?",
+              "Les femmes"
+            ],
+            [
+              "Le contrat social",
+              "?",
+              "Tous"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "imite",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Un postambule imité",
+          "blocs": [
+            "Femmes, [[i|levez-vous]] ! Combien de temps encore accepterez-vous qu’on vous flatte pour mieux vous faire taire ? [[i|Reconnaissez]] vos droits !"
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière du postambule"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque partie du texte à son registre.",
+          "paires": [
+            [
+              "Les dix-sept articles",
+              "Juridique"
+            ],
+            [
+              "Le postambule",
+              "Polémique"
+            ],
+            [
+              "Le contrat social",
+              "Didactique"
+            ]
+          ],
+          "aide": "Le registre s’accorde au public que visent les parties.",
+          "explication": "Les articles sont **juridiques** (ils parlent aux législateurs), le postambule **polémique** (il secoue les femmes), le contrat **didactique** (il propose des solutions)."
+        },
+        {
+          "type": "zone",
+          "document": "imite",
+          "multiple": true,
+          "reponse": [
+            "i"
+          ],
+          "enonce": "Touche les deux verbes à l’impératif dans le passage imité.",
+          "aide": "L’impératif donne un ordre : « fais », « faites ».",
+          "explication": "Les impératifs sont **levez-vous** et **Reconnaissez** : ils appartiennent au registre polémique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produit la question du passage imité ?",
+          "options": [
+            "Elle interpelle les lectrices et les pousse à réagir",
+            "Elle demande un renseignement précis à la lectrice",
+            "Elle adoucit le ton pour rassurer les lecteurs",
+            "Elle résume les articles de loi en une phrase"
+          ],
+          "reponse": 0,
+          "aide": "Attend-on vraiment une réponse à « Combien de temps encore… » ?",
+          "explication": "C’est une question qui **interpelle** : elle relève de la polémique, non de l’information."
+        }
+      ]
+    },
+    {
+      "chapitre": "22812fc6-a156-5bcc-b9bc-9d3e813162dc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Ce que le texte réclame, ce qu’il laisse de côté",
+      "competence": "argumenter",
+      "situation": "Un bon devoir sur Olympe de Gouges mesure l’ampleur de ses demandes, puis pointe les limites de son texte sans le condamner.",
+      "documents": [
+        {
+          "id": "revend",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Ce que réclame le texte",
+          "sousTitre": "Quatre égalités",
+          "emoji": "⚖️",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Voter et être élue",
+              "id": "vote"
+            },
+            {
+              "texte": "Hériter et posséder des biens",
+              "id": "biens"
+            },
+            {
+              "texte": "Parler en public et publier",
+              "id": "parler"
+            },
+            {
+              "texte": "Être reconnue comme sujet de droit",
+              "id": "sujet"
+            }
+          ],
+          "pied": "Programme complet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque demande à l’égalité qu’elle recouvre.",
+          "paires": [
+            [
+              "Voter et être élue",
+              "Égalité politique"
+            ],
+            [
+              "Hériter et posséder des biens",
+              "Égalité civile"
+            ],
+            [
+              "Parler en public et publier",
+              "Égalité d’expression"
+            ],
+            [
+              "Être reconnue comme sujet de droit",
+              "Égalité de statut"
+            ]
+          ],
+          "aide": "Quatre mots : politique, civile, d’expression, de statut.",
+          "explication": "Chaque demande porte sur une égalité : **politique**, **civile**, **d’expression**, **de statut**."
+        },
+        {
+          "type": "zone",
+          "document": "revend",
+          "multiple": false,
+          "reponse": [
+            "sujet"
+          ],
+          "enonce": "Touche la demande qui veut que la femme ne soit plus seulement protégée.",
+          "aide": "Être protégée, c’est dépendre ; être sujet, c’est décider.",
+          "explication": "C’est **être reconnue comme sujet de droit** : on n’est plus protégée, on a des droits."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque trait du texte : force ou limite ?",
+          "categories": [
+            "Une force du texte",
+            "Une limite du texte"
+          ],
+          "items": [
+            [
+              "Il reprend la forme de 1789",
+              0
+            ],
+            [
+              "Il s’adresse d’abord aux femmes instruites",
+              1
+            ],
+            [
+              "Il parle la langue des législateurs",
+              0
+            ],
+            [
+              "Il garde un vocabulaire de la « nature » féminine",
+              1
+            ],
+            [
+              "Il réclame aussi l’égalité civile",
+              0
+            ]
+          ],
+          "aide": "Une limite, c’est ce qui relève des catégories de l’époque.",
+          "explication": "Les **limites** : public d’abord instruit, vocabulaire de la « nature » féminine ; le reste sont des **forces**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un bon devoir mentionne-t-il ces limites ?",
+          "options": [
+            "Elles situent le texte dans son époque sans le condamner",
+            "Elles prouvent que le texte est sans valeur aujourd’hui",
+            "Elles montrent que l’élève n’a pas lu le texte jusqu’au bout",
+            "Elles font oublier le courage de l’autrice pour son temps"
+          ],
+          "reponse": 0,
+          "aide": "Un texte du XVIIIe siècle peut-il penser hors de son temps ?",
+          "explication": "Ces tensions **ne l’affaiblissent pas comme document** : elles le situent dans son époque."
+        }
+      ]
+    },
+    {
+      "chapitre": "22812fc6-a156-5bcc-b9bc-9d3e813162dc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un texte sans pouvoir peut-il changer la loi ?",
+      "competence": "argumenter",
+      "situation": "Tu prépares une dissertation : une déclaration sans pouvoir est-elle inutile ? Bâtis tes arguments à partir des faits.",
+      "documents": [
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Bilan de la Déclaration",
+          "colonnes": [
+            "Date",
+            "Fait"
+          ],
+          "lignes": [
+            [
+              "1791",
+              "Publication ; aucun effet légal immédiat"
+            ],
+            [
+              "1793",
+              "Olympe de Gouges est guillotinée"
+            ],
+            [
+              "1944",
+              "Les Françaises obtiennent le droit de vote"
+            ],
+            [
+              "Aujourd’hui",
+              "Le texte est au programme du bac"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "axes",
+          "type": "tableau",
+          "titre": "Axes possibles",
+          "colonnes": [
+            "Question",
+            "Piste de réponse"
+          ],
+          "lignes": [
+            [
+              "Un texte peut-il changer la loi ?",
+              "Pas directement"
+            ],
+            [
+              "Le pastiche est-il plus efficace que l’argumentation directe ?",
+              "Ici, oui"
+            ],
+            [
+              "Faut-il être entendu de son temps pour avoir raison ?",
+              "Ignoré en 1791, aujourd’hui au programme"
+            ],
+            [
+              "L’écriture est-elle un combat ?",
+              "Le prix payé par l’autrice répond"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la Déclaration (1791) du droit de vote des Françaises ?",
+          "reponse": 153,
+          "aide": "Soustrais les deux années.",
+          "explication": "1944 − 1791 = **153 ans** : les demandes d’Olympe de Gouges n’ont été réalisées qu’au XXe siècle."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque fait : plaide-t-il pour l’efficacité du texte ou contre ?",
+          "categories": [
+            "Pour l’efficacité",
+            "Contre l’efficacité"
+          ],
+          "items": [
+            [
+              "Le texte rend l’exclusion des femmes visible",
+              0
+            ],
+            [
+              "Ignoré en 1791, il est aujourd’hui au programme du bac",
+              0
+            ],
+            [
+              "Aucun effet légal immédiat",
+              1
+            ],
+            [
+              "Le droit de vote n’arrive qu’en 1944",
+              1
+            ],
+            [
+              "Il change ce qui peut être dit",
+              0
+            ]
+          ],
+          "aide": "Distingue l’effet sur la loi et l’effet sur les idées.",
+          "explication": "Pour : visibilité, postérité, changement de ce qui peut être dit. Contre : aucun effet légal, vote en 1944."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la réponse : un texte ne change pas la loi ___, mais il change ce qui peut être ___.",
+          "texte": "Un texte ne change pas la loi ___, mais il change ce qui peut être ___.",
+          "reponses": [
+            [
+              "directement"
+            ],
+            [
+              "dit"
+            ]
+          ],
+          "banque": [
+            "directement",
+            "dit",
+            "fait",
+            "fait voter"
+          ],
+          "aide": "Deux mots : l’un pour l’effet sur la loi, l’autre pour les idées.",
+          "explication": "Pas **directement** : il change **ce qui peut être dit**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque axe de dissertation à l’argument qu’on peut en tirer.",
+          "paires": [
+            [
+              "Un texte peut-il changer la loi ?",
+              "Aucun effet légal en 1791, vote en 1944"
+            ],
+            [
+              "Le pastiche est-il plus efficace ?",
+              "L’oubli des femmes devient visible"
+            ],
+            [
+              "Faut-il être entendu de son temps ?",
+              "Ignoré en 1791, étudié aujourd’hui"
+            ],
+            [
+              "L’écriture est-elle un combat ?",
+              "L’autrice est guillotinée"
+            ]
+          ],
+          "aide": "Reporte-toi au tableau des axes.",
+          "explication": "Chaque axe s’appuie sur un fait : absence d’effet légal, visibilité du pastiche, postérité, destin de l’autrice."
+        }
+      ]
+    },
+    {
+      "chapitre": "174f7797-f7e3-5700-b020-cb153fd04493",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Questions par SMS",
+      "competence": "manier-langue",
+      "situation": "Léa invite Malik à une soirée. Dans leurs messages, les questions ne se ressemblent pas toutes : repère les mots interrogatifs, puis trie-les.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Léa",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Malik",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Léa",
+              "texte": "Tu viens ce soir ?"
+            },
+            {
+              "qui": "Malik",
+              "texte": "[[w|Où]] est-ce que ça se passe ?"
+            },
+            {
+              "qui": "Léa",
+              "texte": "Chez Inès, à 19 h. Tu as fini tes devoirs ?"
+            },
+            {
+              "qui": "Malik",
+              "texte": "Pas encore. [[w|Pourquoi]] tu demandes ça ?"
+            },
+            {
+              "qui": "Léa",
+              "texte": "[[w|Comment]] veux-tu qu’on s’amuse sans toi ?"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "multiple": true,
+          "reponse": [
+            "w"
+          ],
+          "enonce": "Touche les trois mots interrogatifs du dialogue.",
+          "aide": "Ce sont des mots qui ouvrent une question portant sur un élément précis.",
+          "explication": "Les mots interrogatifs sont **Où**, **Pourquoi** et **Comment**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces questions du dialogue : totale ou partielle ?",
+          "categories": [
+            "Totale",
+            "Partielle"
+          ],
+          "items": [
+            [
+              "Tu viens ce soir ?",
+              0
+            ],
+            [
+              "Où est-ce que ça se passe ?",
+              1
+            ],
+            [
+              "Tu as fini tes devoirs ?",
+              0
+            ],
+            [
+              "Pourquoi tu demandes ça ?",
+              1
+            ]
+          ],
+          "aide": "Peut-on répondre par oui ou non ?",
+          "explication": "Les **totales** appellent oui ou non ; les **partielles** portent sur un élément et contiennent un mot interrogatif."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque construction à son exemple.",
+          "paires": [
+            [
+              "Intonation seule",
+              "Tu viens ce soir ?"
+            ],
+            [
+              "« Est-ce que »",
+              "Est-ce que tu viens ce soir ?"
+            ],
+            [
+              "Inversion sujet-verbe",
+              "Viens-tu ce soir ?"
+            ]
+          ],
+          "aide": "Cherche ce qui change : le ton, une locution, l’ordre des mots.",
+          "explication": "L’**intonation seule** est familière, « est-ce que » courante, l’**inversion** soutenue."
+        }
+      ]
+    },
+    {
+      "chapitre": "174f7797-f7e3-5700-b020-cb153fd04493",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Que faire ?",
+      "competence": "analyser-texte",
+      "situation": "Voici un monologue écrit pour l’exercice. Les questions n’y servent pas toutes à demander quelque chose : apprends à nommer leur valeur.",
+      "documents": [
+        {
+          "id": "monolog",
+          "type": "texte",
+          "genre": "theatre",
+          "titre": "Clarisse devant la porte",
+          "blocs": [
+            {
+              "didascalie": "Clarisse, seule, hésite devant la porte de la maison."
+            },
+            {
+              "personnage": "Clarisse",
+              "replique": "Que faire ? Partirai-je sans un mot, ou la regarderai-je en face ? Qui, demain, osera dire que j’ai eu tort ?"
+            },
+            {
+              "didascalie": "Elle se tourne vers le public."
+            },
+            {
+              "personnage": "Clarisse",
+              "replique": "Et vous, que feriez-vous à ma place ?"
+            }
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque question à sa valeur.",
+          "paires": [
+            [
+              "Que faire ?",
+              "Délibération"
+            ],
+            [
+              "Qui ne sait pas qu’un mensonge finit par se découvrir ?",
+              "Question rhétorique"
+            ],
+            [
+              "Quelle heure est-il ?",
+              "Vraie question"
+            ]
+          ],
+          "aide": "Une seule attend vraiment une réponse ; une seule est posée à soi-même.",
+          "explication": "« Que faire ? » est une **délibération** ; la deuxième **n’attend pas de réponse** (tout le monde le sait) ; la troisième est une **vraie question**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la construction de « Partirai-je sans un mot ? » ?",
+          "options": [
+            "Interrogation totale, avec inversion sujet-verbe",
+            "Interrogation partielle, avec « est-ce que »",
+            "Interrogation partielle, avec intonation seule",
+            "Interrogation totale, avec intonation seule"
+          ],
+          "reponse": 0,
+          "aide": "Y a-t-il un mot interrogatif ? Comment le sujet est-il placé ?",
+          "explication": "Pas de mot interrogatif : c’est une **interrogation totale**, construite par **inversion** du sujet (« partirai-je »)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait Clarisse quand elle se pose à elle-même ces questions au théâtre ?",
+          "options": [
+            "Elle donne à voir son hésitation",
+            "Elle demande un renseignement au public",
+            "Elle raconte ce qui s’est passé",
+            "Elle dénonce un adversaire"
+          ],
+          "reponse": 0,
+          "aide": "Que ressent-on quand un personnage se demande « Que faire ? » ?",
+          "explication": "Dans un monologue, la délibération **donne à voir l’hésitation** du personnage."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les trois étapes de l’analyse d’une interrogation à l’oral.",
+          "items": [
+            "Repérer le type : totale ou partielle",
+            "Repérer la construction",
+            "Nommer la valeur : vraie question, rhétorique, délibération"
+          ],
+          "aide": "La valeur est ce qu’on dit en dernier.",
+          "explication": "Type, **construction**, puis **valeur** : c’est la troisième étape qui montre ce que tu sais lire."
+        }
+      ]
+    },
+    {
+      "chapitre": "174f7797-f7e3-5700-b020-cb153fd04493",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le discours du délégué",
+      "competence": "argumenter",
+      "situation": "Un délégué de classe s’adresse à ses camarades dans un discours écrit pour l’exercice. Analyse ses questions comme à l’oral.",
+      "documents": [
+        {
+          "id": "disc",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Discours du délégué",
+          "blocs": [
+            "Élèves, amis, qui ne connaît pas l’état de notre lycée ? Est-ce que nous allons attendre encore un an ? Pourquoi ne pas agir dès aujourd’hui ? Serait-il raisonnable de nous taire ?"
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de ces quatre questions sont des interrogations partielles ?",
+          "reponse": 2,
+          "aide": "Cherche les mots interrogatifs.",
+          "explication": "Deux : « **Qui** ne connaît pas… » et « **Pourquoi** ne pas agir… ». Les deux autres sont totales."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque question à son niveau de langue.",
+          "paires": [
+            [
+              "Est-ce que nous allons attendre encore un an ?",
+              "Courant"
+            ],
+            [
+              "Serait-il raisonnable de nous taire ?",
+              "Soutenu"
+            ]
+          ],
+          "aide": "Regarde la construction : « est-ce que » ou inversion.",
+          "explication": "« Est-ce que » est **courant** ; l’inversion (« serait-il ») est **soutenue**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la valeur dominante de ces questions ?",
+          "options": [
+            "Des questions rhétoriques qui n’attendent pas de réponse",
+            "De vraies questions qui cherchent des informations",
+            "Des délibérations intérieures",
+            "Des questions indirectes"
+          ],
+          "reponse": 0,
+          "aide": "Le délégué attend-il vraiment qu’on lui réponde ?",
+          "explication": "Ce sont des **questions rhétoriques** : elles affirment sous forme de questions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est leur effet sur les camarades ?",
+          "options": [
+            "Elles guident l’auditoire vers la conclusion que le délégué souhaite",
+            "Elles leur apprennent des faits nouveaux qu’ils ne connaissaient pas",
+            "Elles leur laissent entièrement le choix de leur propre conclusion",
+            "Elles ralentissent seulement le discours sans rien dire de plus"
+          ],
+          "reponse": 0,
+          "aide": "Quelle réponse chacun est-il poussé à donner ?",
+          "explication": "La question rhétorique est une **arme majeure de l’argumentation** : elle entraîne l’adhésion."
+        }
+      ]
+    },
+    {
+      "chapitre": "2ac12546-9e5b-5341-91d8-6162f898ec21",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sara et Léo",
+      "competence": "manier-langue",
+      "situation": "Un petit récit rapporte des questions. Trouve ce qui les introduit, puis compare avec les questions posées directement.",
+      "documents": [
+        {
+          "id": "sara",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Un matin au collège",
+          "blocs": [
+            "Sara arrive au collège. Léo lui [[v|demande]] où elle habite. Elle se [[v|demande]] pourquoi il veut le savoir. Il [[v|ignore]] si elle sera à l’heure demain."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sara",
+          "multiple": true,
+          "reponse": [
+            "v"
+          ],
+          "enonce": "Touche les trois verbes qui introduisent une question rapportée.",
+          "aide": "Ils signifient « poser » ou « ne pas savoir ».",
+          "explication": "Les verbes introducteurs sont **demande**, **demande** (« se demande ») et **ignore**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque phrase : interrogation directe ou indirecte ?",
+          "categories": [
+            "Directe",
+            "Indirecte"
+          ],
+          "items": [
+            [
+              "Où habites-tu ?",
+              0
+            ],
+            [
+              "Léo lui demande où elle habite.",
+              1
+            ],
+            [
+              "Pourquoi veut-il le savoir ?",
+              0
+            ],
+            [
+              "Il ignore si elle sera à l’heure.",
+              1
+            ]
+          ],
+          "aide": "Cherche le point d’interrogation et l’inversion.",
+          "explication": "La **directe** garde point d’interrogation et inversion ; l’**indirecte** est une subordonnée sans ces signes."
+        },
+        {
+          "type": "trous",
+          "enonce": "« Viendras-tu ? » devient « Je me demande ___ tu viendras. »",
+          "texte": "Je me demande ___ tu viendras.",
+          "reponses": [
+            [
+              "si"
+            ]
+          ],
+          "banque": [
+            "si",
+            "que",
+            "ce que",
+            "où"
+          ],
+          "aide": "Une question totale passe par un petit mot.",
+          "explication": "La question totale devient indirecte avec **si**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2ac12546-9e5b-5341-91d8-6162f898ec21",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "À la bibliothèque",
+      "competence": "manier-langue",
+      "situation": "Jules et Clara se croisent au CDI. Transforme leurs questions en interrogations indirectes, au passé.",
+      "documents": [
+        {
+          "id": "cdi",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Jules",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Clara",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Jules",
+              "texte": "Où vas-tu ?"
+            },
+            {
+              "qui": "Clara",
+              "texte": "À la bibliothèque. Qu’est-ce que tu cherches ?"
+            },
+            {
+              "qui": "Jules",
+              "texte": "Mon cahier. Est-ce que tu l’as vu ?"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Complète : Jules a demandé à Clara où elle ___.",
+          "texte": "Jules a demandé à Clara où elle ___.",
+          "reponses": [
+            [
+              "allait"
+            ]
+          ],
+          "aide": "Le verbe introducteur est au passé : le présent devient imparfait.",
+          "explication": "« Où vas-tu ? » devient « où elle **allait** » : personne et temps changent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment Clara a-t-elle demandé à Jules ce qu’il cherchait, à l’indirect ?",
+          "options": [
+            "Elle lui a demandé ce qu’il cherchait",
+            "Elle lui a demandé qu’est-ce qu’il cherche",
+            "Elle lui a demandé ce qu’est-ce qu’il cherchait",
+            "Elle lui a demandé si il cherchait"
+          ],
+          "reponse": 0,
+          "aide": "« Qu’est-ce que » devient « ce que », et le temps s’accorde.",
+          "explication": "« Qu’est-ce que tu cherches ? » → « **ce qu’il cherchait** »."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète : Jules lui a demandé ___ elle l’___ vu.",
+          "texte": "Jules lui a demandé ___ elle l’___ vu.",
+          "reponses": [
+            [
+              "si"
+            ],
+            [
+              "avait"
+            ]
+          ],
+          "banque": [
+            "si",
+            "que",
+            "avait",
+            "a",
+            "ce que"
+          ],
+          "aide": "« Est-ce que » devient « si » ; « tu l’as vu » se met au plus-que-parfait.",
+          "explication": "« Est-ce que tu l’as vu ? » → « **si** elle l’**avait** vu »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans « Clara a demandé à Jules ce qu’il cherchait », quelle est la subordonnée ?",
+          "options": [
+            "Une interrogative indirecte, COD de « a demandé »",
+            "Une relative qui complète un nom",
+            "Une circonstancielle de cause",
+            "Une complétive introduite par « que » sujet"
+          ],
+          "reponse": 0,
+          "aide": "Que demande Clara ? Cette subordonnée répond à la question « quoi ? ».",
+          "explication": "C’est une **interrogative indirecte**, COD du verbe introducteur « a demandé »."
+        }
+      ]
+    },
+    {
+      "chapitre": "2ac12546-9e5b-5341-91d8-6162f898ec21",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux manières de rapporter",
+      "competence": "analyser-texte",
+      "situation": "Voici la même scène racontée de deux façons (textes écrits pour l’exercice). Compare la voix du colonel dans l’une et dans l’autre.",
+      "documents": [
+        {
+          "id": "dir",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Version A : discours direct",
+          "blocs": [
+            "Alors le colonel se tourna vers le lieutenant : « Qui a donné cet ordre ? Pourquoi n’ai-je pas été prévenu ? »"
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "ind",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Version B : discours indirect",
+          "blocs": [
+            "Alors le colonel demanda au lieutenant [[q|qui]] avait donné cet ordre et [[q|pourquoi]] il n’avait pas été prévenu."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ind",
+          "multiple": true,
+          "reponse": [
+            "q"
+          ],
+          "enonce": "Dans la version B, touche les deux mots interrogatifs.",
+          "aide": "Ils étaient déjà là dans la version A.",
+          "explication": "Les mots interrogatifs **qui** et **pourquoi** ne changent pas à l’indirect."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément : disparaît, change ou reste identique à l’indirect ?",
+          "categories": [
+            "Disparaît",
+            "Change",
+            "Reste identique"
+          ],
+          "items": [
+            [
+              "Le point d’interrogation",
+              0
+            ],
+            [
+              "L’inversion du sujet (« ai-je »)",
+              0
+            ],
+            [
+              "Le temps du verbe (« ai été » devient « avait été »)",
+              1
+            ],
+            [
+              "Le mot « pourquoi »",
+              2
+            ],
+            [
+              "Le mot « qui »",
+              2
+            ]
+          ],
+          "aide": "Compare mot à mot les deux versions.",
+          "explication": "Le point d’interrogation et l’inversion **disparaissent**, le temps et la personne **changent**, « qui » et « pourquoi » **restent**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produit la version B ?",
+          "options": [
+            "Elle efface la voix du colonel et met le narrateur entre lui et le lecteur",
+            "Elle rend la scène plus vivante en donnant la parole directe au colonel",
+            "Elle accélère l’action en supprimant tous les verbes de la phrase",
+            "Elle transforme les questions du colonel en ordres adressés au lecteur"
+          ],
+          "reponse": 0,
+          "aide": "Dans laquelle entend-on le colonel parler ?",
+          "explication": "L’indirect **efface la voix** du personnage : on n’entend plus le colonel, on entend le narrateur."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète : dans la version B, le narrateur se place ___ le lecteur et la parole du colonel.",
+          "texte": "Dans la version B, le narrateur se place ___ le lecteur et la parole du colonel.",
+          "reponses": [
+            [
+              "entre"
+            ]
+          ],
+          "banque": [
+            "entre",
+            "contre",
+            "devant",
+            "avec"
+          ],
+          "aide": "Le narrateur sert d’intermédiaire.",
+          "explication": "Le narrateur se place **entre** le lecteur et la parole : il prend de la distance, parfois de l’ironie."
+        }
+      ]
+    },
+    {
+      "chapitre": "2db15f5d-3fc8-5ecc-ae8e-9d64fc381800",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le village endormi",
+      "competence": "analyser-texte",
+      "situation": "Dans un court texte, plusieurs mots viennent se glisser après « ne ». Repère-les, puis distingue les formes particulières de négation.",
+      "documents": [
+        {
+          "id": "vill",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le village endormi",
+          "blocs": [
+            "Le village ne dort [[n|plus]]. [[n|Personne]] n’ose sortir et l’on n’entend [[n|guère]] que le vent. [[n|Jamais]] la nuit ne fut si longue."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "vill",
+          "multiple": true,
+          "reponse": [
+            "n"
+          ],
+          "enonce": "Touche les quatre mots qui forment la négation avec « ne ».",
+          "aide": "Ils complètent « ne » comme « pas » le fait.",
+          "explication": "Les seconds termes sont **plus**, **Personne**, **guère** et **Jamais**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque forme à son exemple.",
+          "paires": [
+            [
+              "Négation exceptive",
+              "Il n’a que deux amis."
+            ],
+            [
+              "Négation lexicale",
+              "Un geste inhumain"
+            ],
+            [
+              "Négation à un seul terme",
+              "Je ne saurais dire"
+            ],
+            [
+              "« Ne » explétif",
+              "Je crains qu’il ne pleuve."
+            ]
+          ],
+          "aide": "Pense au piège : une forme négative qui ne nie pas.",
+          "explication": "L’exceptive a **forme** de négation et **sens** de restriction ; la lexicale porte son sens négatif dans le mot ; l’explétif ne nie rien."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie « Il n’a que deux amis » ?",
+          "options": [
+            "Il a seulement deux amis",
+            "Il n’a aucun ami",
+            "Il a plus de deux amis",
+            "Il n’a pas deux amis"
+          ],
+          "reponse": 0,
+          "aide": "« Ne… que » équivaut à un autre adverbe.",
+          "explication": "**Il a seulement deux amis** : c’est une restriction, pas une négation."
+        }
+      ]
+    },
+    {
+      "chapitre": "2db15f5d-3fc8-5ecc-ae8e-9d64fc381800",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le portrait de monsieur Varin",
+      "competence": "analyser-texte",
+      "situation": "Un portrait écrit pour l’exercice peint un homme par ce qui lui manque. Repère les négations, puis trie des phrases.",
+      "documents": [
+        {
+          "id": "varin",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Monsieur Varin",
+          "blocs": [
+            "Monsieur Varin ne dit rien, ne demande rien, n’attend plus personne. Il vit [[l|sans]] lumière dans un silence [[l|inhumain]]."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "varin",
+          "multiple": true,
+          "reponse": [
+            "l"
+          ],
+          "enonce": "Touche les deux mots dont le sens négatif est porté par le mot lui-même (négation lexicale).",
+          "aide": "Un mot sans « ne », et un adjectif commençant par un préfixe négatif.",
+          "explication": "Ce sont **sans** et **inhumain** : le sens négatif est dans le mot."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète : le portrait est construit par ___ : on définit l’homme par ce qui lui manque.",
+          "texte": "Le portrait est construit par ___ : on définit l’homme par ce qui lui manque.",
+          "reponses": [
+            [
+              "soustraction"
+            ]
+          ],
+          "banque": [
+            "soustraction",
+            "addition",
+            "comparaison",
+            "exagération"
+          ],
+          "aide": "On retire au lieu d’ajouter.",
+          "explication": "Une accumulation de négations donne un portrait **par soustraction**, qui peint le vide."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque phrase : négation totale, négation partielle ou restriction ?",
+          "categories": [
+            "Négation totale",
+            "Négation partielle",
+            "Restriction (pas une négation)"
+          ],
+          "items": [
+            [
+              "Elle ne chante pas.",
+              0
+            ],
+            [
+              "Ils ne viennent jamais en hiver.",
+              1
+            ],
+            [
+              "Il n’a que dix euros.",
+              2
+            ],
+            [
+              "Je ne suis pas content.",
+              0
+            ],
+            [
+              "Elle ne chante que le soir.",
+              2
+            ]
+          ],
+          "aide": "Demande-toi ce qui est nié : toute la phrase, un élément, ou rien.",
+          "explication": "« Ne… pas » nie toute la phrase ; « jamais en hiver » nie un élément ; « ne… que » **restreint**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2db15f5d-3fc8-5ecc-ae8e-9d64fc381800",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un texte qui disqualifie",
+      "competence": "analyser-texte",
+      "situation": "Dans un pamphlet écrit pour l’exercice, les négations servent à attaquer. Distingue les formes et leurs effets.",
+      "documents": [
+        {
+          "id": "pamph",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Contre ce prétendu progrès",
+          "blocs": [
+            "Ce prétendu progrès est [[l|inutile]], [[l|inacceptable]], [[l|inhumain]]. Ceux qui l’approuvent ne voient rien, ne savent rien, et n’ont [[e|qu’une]] idée : se taire."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pamph",
+          "multiple": true,
+          "reponse": [
+            "l"
+          ],
+          "enonce": "Touche les trois adjectifs qui portent une négation dans leur sens (négation lexicale).",
+          "aide": "Ils commencent par un préfixe négatif.",
+          "explication": "Les négations lexicales sont **inutile**, **inacceptable** et **inhumain**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produisent ces négations lexicales en série ?",
+          "options": [
+            "Elles disqualifient sans avoir l’air de nier",
+            "Elles adoucissent le propos pour ménager le lecteur",
+            "Elles marquent l’hésitation de celui qui parle",
+            "Elles accélèrent le récit en multipliant les faits"
+          ],
+          "reponse": 0,
+          "aide": "L’auteur dit-il « non » ou qualifie-t-il ?",
+          "explication": "Elles **disqualifient sans avoir l’air de nier** : c’est un procédé polémique."
+        },
+        {
+          "type": "zone",
+          "document": "pamph",
+          "multiple": false,
+          "reponse": [
+            "e"
+          ],
+          "enonce": "Touche le mot qui marque la restriction dans « n’ont qu’une idée ».",
+          "aide": "Quelle est la forme qui ressemble à une négation sans en être une ?",
+          "explication": "C’est **qu’une** (« ne… que ») : la négation exceptive est en réalité une restriction."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait cette exceptive dans le texte ?",
+          "options": [
+            "Elle resserre l’attention sur une seule chose",
+            "Elle nie toute la phrase",
+            "Elle marque une question",
+            "Elle fait oublier le reste du portrait"
+          ],
+          "reponse": 0,
+          "aide": "« N’ont qu’une idée » veut dire « ont seulement une idée ».",
+          "explication": "La négation exceptive **resserre** l’attention sur une seule chose : une insistance."
+        }
+      ]
+    },
+    {
+      "chapitre": "bb864e16-b8f5-59ea-b4d4-1fa635c956c5",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois siècles de littérature d’idées",
+      "competence": "se-reperer-temps",
+      "situation": "Le programme va du XVIe au XVIIIe siècle. Replace les moments et les œuvres sur une frise, puis rattache chaque auteur à son siècle.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Humanisme, âge classique, Lumières",
+          "debut": 1500,
+          "fin": 1800,
+          "pas": 50,
+          "periodes": [
+            {
+              "id": "hum",
+              "debut": 1500,
+              "fin": 1600,
+              "nom": "XVIe siècle",
+              "teinte": "ambre"
+            },
+            {
+              "id": "cla",
+              "debut": 1600,
+              "fin": 1700,
+              "nom": "XVIIe siècle",
+              "teinte": "bleu"
+            },
+            {
+              "id": "lum",
+              "debut": 1700,
+              "fin": 1800,
+              "nom": "XVIIIe siècle",
+              "teinte": "turquoise"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "ess",
+              "date": 1580,
+              "nom": "Essais"
+            },
+            {
+              "id": "fab",
+              "date": 1668,
+              "nom": "Fables"
+            },
+            {
+              "id": "lp",
+              "date": 1721,
+              "nom": "Lettres persanes"
+            },
+            {
+              "id": "can",
+              "date": 1759,
+              "nom": "Candide"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "multiple": false,
+          "reponse": [
+            "lum"
+          ],
+          "enonce": "Touche le siècle des Lumières.",
+          "aide": "Le mouvement de la raison contre les préjugés.",
+          "explication": "Les Lumières correspondent au **XVIIIe siècle**."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "multiple": false,
+          "reponse": [
+            "lp"
+          ],
+          "enonce": "Touche l’œuvre parue en 1721 : les Lettres persanes de Montesquieu.",
+          "aide": "Lis les dates au-dessus des noms.",
+          "explication": "Les **Lettres persanes** paraissent en **1721**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque auteur à son moment.",
+          "paires": [
+            [
+              "Montaigne",
+              "Humanisme (XVIe)"
+            ],
+            [
+              "La Bruyère",
+              "Âge classique (XVIIe)"
+            ],
+            [
+              "Voltaire",
+              "Lumières (XVIIIe)"
+            ]
+          ],
+          "aide": "Aide-toi de la frise et des noms vus au cours.",
+          "explication": "Montaigne est humaniste, La Bruyère moraliste de l’âge classique, Voltaire philosophe des Lumières."
+        }
+      ]
+    },
+    {
+      "chapitre": "bb864e16-b8f5-59ea-b4d4-1fa635c956c5",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le voyageur et les vitres",
+      "competence": "argumenter",
+      "situation": "Un visiteur venu d’ailleurs décrit notre monde dans une lettre écrite pour l’exercice. Que dénonce-t-il, et comment ?",
+      "documents": [
+        {
+          "id": "lettre",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Lettre d’un voyageur",
+          "blocs": [
+            "Ici, chacun porte à la main une petite vitre qu’il ne cesse de [[r|regarder]]. Les gens marchent côte à côte sans se parler, [[r|fascinés]] par leur vitre. Ils m’assurent qu’elle les rapproche. Je les crois volontiers : c’est sans doute pourquoi ils se tiennent si près les uns des autres sans jamais s’adresser un mot."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle ce procédé où un étranger décrit la société ?",
+          "options": [
+            "Le regard éloigné",
+            "La maxime universelle",
+            "L’apologue didactique",
+            "La gradation ascendante"
+          ],
+          "reponse": 0,
+          "aide": "Ce que l’habitude rend invisible devient étrange vu du dehors.",
+          "explication": "C’est **le regard éloigné** (le Persan, le Huron…), procédé maître de l’argumentation indirecte."
+        },
+        {
+          "type": "zone",
+          "document": "lettre",
+          "multiple": true,
+          "reponse": [
+            "r"
+          ],
+          "enonce": "Touche les deux mots qui montrent que les gens sont captivés par leur vitre.",
+          "aide": "Un verbe, puis un participe-adjectif.",
+          "explication": "Les mots sont **regarder** et **fascinés** : l’auteur dénonce une attention captive."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque moyen d’agir : convaincre, persuader ou délibérer ?",
+          "categories": [
+            "Convaincre",
+            "Persuader",
+            "Délibérer"
+          ],
+          "items": [
+            [
+              "Thèse, arguments et exemples",
+              0
+            ],
+            [
+              "Faire rire d’un travers par l’ironie",
+              1
+            ],
+            [
+              "Peser le pour et le contre",
+              2
+            ],
+            [
+              "Connecteurs logiques",
+              0
+            ],
+            [
+              "Apostrophe, image et rythme",
+              1
+            ],
+            [
+              "Dialogue ouvert qui ne tranche pas d’avance",
+              2
+            ]
+          ],
+          "aide": "Raison, émotions, jugement.",
+          "explication": "**Convaincre** vise la raison, **persuader** les émotions, **délibérer** le jugement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’auteur passe-t-il par une lettre fictive plutôt que par un essai ?",
+          "options": [
+            "L’argumentation indirecte se retient mieux et échappe à la censure",
+            "Un essai serait toujours interdit et jamais publié à cette époque",
+            "La lettre est plus courte qu’un essai et donc plus facile à lire",
+            "La fiction n’a pas de thèse : elle ne fait que divertir le lecteur"
+          ],
+          "reponse": 0,
+          "aide": "Quel avantage a le détour de la fiction ?",
+          "explication": "L’argumentation **indirecte** échappe plus facilement à la censure et se retient mieux."
+        }
+      ]
+    },
+    {
+      "chapitre": "bb864e16-b8f5-59ea-b4d4-1fa635c956c5",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Portrait d’un moraliste",
+      "competence": "analyser-texte",
+      "situation": "Un portrait bref, dans le goût des moralistes, est écrit pour l’exercice. Replace-le dans l’histoire des idées et analyse sa technique.",
+      "documents": [
+        {
+          "id": "mom",
+          "type": "tableau",
+          "titre": "Trois moments",
+          "colonnes": [
+            "Moment",
+            "Sa posture"
+          ],
+          "lignes": [
+            [
+              "Humanisme (XVIe)",
+              "Examen critique de tout"
+            ],
+            [
+              "Âge classique (XVIIe)",
+              "Observer l’homme en société, forme brève"
+            ],
+            [
+              "Lumières (XVIIIe)",
+              "La raison contre les préjugés"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "clit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Portrait de Clitandre",
+          "blocs": [
+            "Clitandre parle de tout et n’écoute personne ; il a [[t|mille]] amis à table et pas un [[t|seul]] au malheur."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque moment à sa posture.",
+          "paires": [
+            [
+              "Humanisme",
+              "Examen critique de tout"
+            ],
+            [
+              "Âge classique",
+              "Observer l’homme en société, forme brève et ciselée"
+            ],
+            [
+              "Lumières",
+              "La raison contre les préjugés"
+            ]
+          ],
+          "aide": "Reprends le tableau du document 1.",
+          "explication": "Humanisme : critique de tout ; classique : l’homme en société ; Lumières : la raison contre les préjugés."
+        },
+        {
+          "type": "zone",
+          "document": "clit",
+          "multiple": true,
+          "reponse": [
+            "t"
+          ],
+          "enonce": "Touche les deux mots qui s’opposent dans la dernière phrase du portrait.",
+          "aide": "Un grand nombre, puis l’absence.",
+          "explication": "**mille** s’oppose à **seul** : c’est une antithèse."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quel moment rattacher ce portrait bref et ciselé ?",
+          "options": [
+            "À l’âge classique, celui des moralistes",
+            "À l’humanisme de la Renaissance, au XVIe siècle",
+            "Aux Lumières, celles du XVIIIe siècle",
+            "À aucun moment : le portrait est hors du temps"
+          ],
+          "reponse": 0,
+          "aide": "Quelle forme brève les moralistes du XVIIe siècle aiment-ils ?",
+          "explication": "Un portrait bref et ciselé qui observe l’homme en société est typique de **l’âge classique**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la visée de ce portrait ?",
+          "options": [
+            "Ridiculiser un travers social pour faire réfléchir",
+            "Raconter une histoire d’amitié entre deux personnages",
+            "Enseigner une technique de métier à un apprenti",
+            "Faire voter une loi pour corriger ce travers"
+          ],
+          "reponse": 0,
+          "aide": "Contre qui ou contre quoi l’auteur écrit-il ?",
+          "explication": "Chaque outil doit se rattacher à une visée : ici, **ridiculiser** un travers pour faire réfléchir."
+        }
+      ]
+    },
+    {
+      "chapitre": "857bb35f-c934-5383-a0b9-b42dd295d324",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le colosse et son socle",
+      "competence": "analyser-texte",
+      "situation": "Ce passage, adapté pour l’exercice, contient l’image la plus célèbre du Discours. Lis-le, puis repère ce qu’il demande.",
+      "documents": [
+        {
+          "id": "colosse",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Ne plus le soutenir",
+          "blocs": [
+            "« [[i|Soyez]] résolus de ne servir plus, et vous voilà libres. Je ne veux pas que vous le poussiez ni que vous l’ébranliez ; seulement ne le [[i|soutenez]] plus, et vous le verrez, comme un grand colosse dont on a dérobé la base, tomber de son propre poids et se rompre. »"
+          ],
+          "source": "D’après La Boétie, Discours de la servitude volontaire (vers 1548) — texte adapté"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "colosse",
+          "multiple": true,
+          "reponse": [
+            "i"
+          ],
+          "enonce": "Touche les deux verbes à l’impératif.",
+          "aide": "Un verbe d’état, puis un verbe d’appui.",
+          "explication": "Les impératifs sont **Soyez** et **soutenez** : le texte donne un ordre simple."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que propose La Boétie pour se libérer du tyran ?",
+          "options": [
+            "Cesser de le soutenir, sans violence ni révolte armée",
+            "Le pousser et l’ébranler jusqu’à sa chute",
+            "Lever une armée et le combattre par les armes",
+            "Attendre qu’un tyran plus doux lui succède"
+          ],
+          "reponse": 0,
+          "aide": "Relis la phrase qui dit ce qu’il ne veut pas.",
+          "explication": "Il suffit de **retirer son consentement** : ni bataille, ni armes."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque image ou élément à ce qu’il dit.",
+          "paires": [
+            [
+              "Le colosse dont on retire la base",
+              "Le tyran tombe dès qu’on cesse de le soutenir"
+            ],
+            [
+              "Le joug que l’on croit naturel",
+              "L’habitude de servir"
+            ],
+            [
+              "« Cinq ou six », puis six cents, puis six mille",
+              "La chaîne des complices"
+            ],
+            [
+              "Les jeux et les fêtes",
+              "Le divertissement qui endort"
+            ]
+          ],
+          "aide": "Chaque image dit une cause ou une conséquence.",
+          "explication": "Colosse : le tyran dépend de ceux qui le soutiennent ; joug : habitude ; chaîne : complices ; fêtes : divertissement."
+        }
+      ]
+    },
+    {
+      "chapitre": "857bb35f-c934-5383-a0b9-b42dd295d324",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La pyramide des complices",
+      "competence": "observer-schema",
+      "situation": "La Boétie explique que la tyrannie tient par une chaîne d’intérêts. Observe le schéma, puis classe les ressorts de l’obéissance.",
+      "documents": [
+        {
+          "id": "pyr",
+          "type": "schema",
+          "titre": "La chaîne des complices",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 110,
+              "y": 20,
+              "l": 100,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Le tyran",
+              "id": "tyran",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 68,
+              "l": 160,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Cinq ou six",
+              "id": "cinq",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 50,
+              "y": 116,
+              "l": 220,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Six cents",
+              "id": "six100",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 164,
+              "l": 280,
+              "h": 34,
+              "arrondi": 6,
+              "texte": "Six mille",
+              "id": "six1000",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 218,
+              "texte": "Chacun profite de celui qui est au-dessus",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pyr",
+          "multiple": false,
+          "reponse": [
+            "cinq"
+          ],
+          "enonce": "Touche le groupe qui profite directement du tyran et le soutient de près.",
+          "aide": "Il se trouve juste sous le tyran.",
+          "explication": "Ce sont **les cinq ou six** qui profitent directement du tyran ; six cents profitent à leur tour d’eux, puis six mille."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque trait parmi les ressorts de l’obéissance.",
+          "categories": [
+            "L’habitude",
+            "Le divertissement",
+            "La chaîne des complices"
+          ],
+          "items": [
+            [
+              "On naît sous le joug et on le croit naturel",
+              0
+            ],
+            [
+              "Jeux, théâtres, fêtes, distributions de blé",
+              1
+            ],
+            [
+              "Cinq ou six en profitent, puis six cents",
+              2
+            ],
+            [
+              "Le pouvoir amuse ceux qu’il dépouille",
+              1
+            ],
+            [
+              "Une pyramide d’intérêts",
+              2
+            ],
+            [
+              "« La première raison, c’est la coutume »",
+              0
+            ]
+          ],
+          "aide": "Trois ressorts : habitude, divertissement, complices.",
+          "explication": "La coutume est l’**habitude** ; fêtes et jeux sont le **divertissement** ; la pyramide est la **chaîne des complices**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la chaîne des complices est-elle la plus redoutable ?",
+          "options": [
+            "Elle fait tenir l’édifice sans que le tyran ait à agir",
+            "Elle supprime l’habitude et la peur chez les sujets",
+            "Elle dépend du hasard et non de l’intérêt de chacun",
+            "Elle se limite à cinq ou six personnes autour du tyran"
+          ],
+          "reponse": 0,
+          "aide": "Qui travaille pour le tyran dans le schéma ?",
+          "explication": "Une **pyramide d’intérêts** fait tenir l’édifice sans que le tyran ait à agir."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel renversement La Boétie opère-t-il ?",
+          "options": [
+            "Il demande comment le peuple tient le tyran",
+            "Il demande comment le tyran punit",
+            "Il demande comment limiter le pouvoir des nobles",
+            "Il demande qui paie les impôts"
+          ],
+          "reponse": 0,
+          "aide": "La question habituelle est « comment le tyran tient-il le peuple ? ».",
+          "explication": "Il demande : **comment le peuple tient-il le tyran ?** La domination est consentie."
+        }
+      ]
+    },
+    {
+      "chapitre": "857bb35f-c934-5383-a0b9-b42dd295d324",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un maître sans clés",
+      "competence": "argumenter",
+      "situation": "Un texte écrit pour l’exercice, à la manière de La Boétie, sert de point de départ pour analyser la thèse et les moyens de l’auteur.",
+      "documents": [
+        {
+          "id": "ren",
+          "type": "tableau",
+          "titre": "Le renversement",
+          "colonnes": [
+            "La question habituelle",
+            "La question de La Boétie"
+          ],
+          "lignes": [
+            [
+              "Comment le tyran tient-il le peuple ?",
+              "Comment le peuple tient-il le tyran ?"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "maitre",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le maître et ses clés",
+          "blocs": [
+            "Vous vous plaignez du maître, et pourtant c’est vous qui lui [[a|portez]] ses bagages.",
+            "Que peut-il, seul, contre vous tous ? Rien.",
+            "Chaque matin, c’est encore vous qui lui [[a|tendez]] ses clés."
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière du Discours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "maitre",
+          "multiple": true,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Touche les deux verbes qui montrent que les « vous » aident le maître.",
+          "aide": "Deux gestes de service.",
+          "explication": "**portez** et **tendez** : les sujets donnent eux-mêmes au maître sa force."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait la question « Que peut-il, seul, contre vous tous ? »",
+          "options": [
+            "C’est une question rhétorique : la réponse est « rien »",
+            "C’est une vraie question, qui cherche une information",
+            "C’est une délibération du maître",
+            "C’est une question indirecte"
+          ],
+          "reponse": 0,
+          "aide": "Le texte répond lui-même juste après.",
+          "explication": "Question **rhétorique** : le texte répond « Rien », ce qui renforce la thèse."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément : cause de l’obéissance ou remède ?",
+          "categories": [
+            "Cause de l’obéissance",
+            "Remède"
+          ],
+          "items": [
+            [
+              "La coutume",
+              0
+            ],
+            [
+              "Les jeux et les fêtes",
+              0
+            ],
+            [
+              "La chaîne des complices",
+              0
+            ],
+            [
+              "Retirer son consentement",
+              1
+            ],
+            [
+              "Refuser de soutenir le tyran, sans le combattre",
+              1
+            ],
+            [
+              "Se résoudre à ne plus servir",
+              1
+            ]
+          ],
+          "aide": "Les causes maintiennent le tyran ; les remèdes le retirent.",
+          "explication": "La coutume, les fêtes et la chaîne des complices **maintiennent** le tyran ; retirer son consentement est le **remède**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le texte a-t-il servi à tous les camps ?",
+          "options": [
+            "Il déplace la responsabilité politique du tyran vers le peuple",
+            "Il donne un plan de bataille précis pour renverser un roi",
+            "Il défend la monarchie absolue et l’obéissance au roi",
+            "Il refuse toute politique et conseille de se retirer du monde"
+          ],
+          "reponse": 0,
+          "aide": "Qui détient le pouvoir, selon la thèse ?",
+          "explication": "Il **déplace la responsabilité politique** du tyran vers le peuple : chaque camp peut s’en servir."
+        }
+      ]
+    },
+    {
+      "chapitre": "1dc17334-17d3-5e0e-a23c-d9805ad384c2",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La marquise et le vaisseau",
+      "competence": "analyser-texte",
+      "situation": "Dans ce dialogue écrit pour l’exercice, à la manière de Fontenelle, une marquise objecte et le philosophe répond par une image.",
+      "documents": [
+        {
+          "id": "dial",
+          "type": "texte",
+          "genre": "theatre",
+          "titre": "Soirée dans le parc",
+          "blocs": [
+            {
+              "didascalie": "La marquise et le philosophe regardent le ciel."
+            },
+            {
+              "personnage": "La marquise",
+              "replique": "Comment la Terre tournerait-elle sans que je le sente ?"
+            },
+            {
+              "personnage": "Le philosophe",
+              "replique": "Madame, vous êtes sur la Terre [[c|comme]] sur un vaisseau : il avance, et vous ne sentez rien."
+            }
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière de Fontenelle"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque élément à son rôle.",
+          "paires": [
+            [
+              "La marquise",
+              "Elle pose les objections du lecteur"
+            ],
+            [
+              "Le philosophe",
+              "Il explique pas à pas"
+            ],
+            [
+              "L’image du vaisseau",
+              "Rendre sensible un mouvement qu’on ne sent pas"
+            ],
+            [
+              "Le ton galant",
+              "Toucher un public mondain"
+            ]
+          ],
+          "aide": "Chaque élément sert la vulgarisation.",
+          "explication": "La marquise **représente le lecteur**, le philosophe **explique**, l’image **rend sensible**, le ton galant **touche un public mondain**."
+        },
+        {
+          "type": "zone",
+          "document": "dial",
+          "multiple": false,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche le mot qui annonce la comparaison.",
+          "aide": "Un petit mot de comparaison.",
+          "explication": "Le mot est **comme** : il relie la Terre au vaisseau."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi sert l’objection de la marquise ?",
+          "options": [
+            "Elle est celle du lecteur, qui part de zéro",
+            "Elle montre que la marquise est ignorante",
+            "Elle ralentit l’exposé",
+            "Elle contredit la science"
+          ],
+          "reponse": 0,
+          "aide": "Qui se reconnaît dans ses questions ?",
+          "explication": "Les objections de la marquise sont **celles du lecteur** : le dialogue rend visible le chemin."
+        }
+      ]
+    },
+    {
+      "chapitre": "1dc17334-17d3-5e0e-a23c-d9805ad384c2",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Conjecture ou dogme ?",
+      "competence": "analyser-texte",
+      "situation": "Fontenelle ne prétend pas prouver que d’autres mondes sont habités. Compare quatre manières de parler et mesure la prudence de l’auteur.",
+      "documents": [
+        {
+          "id": "notions",
+          "type": "tableau",
+          "titre": "Ce que le dialogue enseigne",
+          "colonnes": [
+            "Notion",
+            "Ce qu’elle bouscule"
+          ],
+          "lignes": [
+            [
+              "Le système de Copernic",
+              "La Terre tourne autour du Soleil et sur elle-même"
+            ],
+            [
+              "La taille de l’univers",
+              "Elle dépasse l’imagination"
+            ],
+            [
+              "Les planètes",
+              "Des mondes, pas de simples points lumineux"
+            ],
+            [
+              "Les étoiles fixes",
+              "Autant de soleils"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Quatre phrases de philosophe",
+          "blocs": [
+            "« Il est raisonnable de penser que d’autres mondes existent. »",
+            "« Il est certain, et personne n’en doute, que la Lune est habitée. »",
+            "« On peut supposer que les étoiles sont des soleils. »",
+            "« Je l’affirme : il en est ainsi, sans discussion possible. »"
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque notion à ce qu’elle bouscule.",
+          "paires": [
+            [
+              "Le système de Copernic",
+              "La Terre tourne autour du Soleil et sur elle-même"
+            ],
+            [
+              "La taille de l’univers",
+              "Elle dépasse l’imagination"
+            ],
+            [
+              "Les planètes",
+              "Des mondes, pas de simples points lumineux"
+            ],
+            [
+              "Les étoiles fixes",
+              "Autant de soleils"
+            ]
+          ],
+          "aide": "Le tableau du document 1 t’aide.",
+          "explication": "Copernic déplace la Terre ; l’univers est immense ; les planètes sont des mondes ; les étoiles fixes sont des soleils."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les formules : prudente ou dogmatique ?",
+          "categories": [
+            "Prudente",
+            "Dogmatique"
+          ],
+          "items": [
+            [
+              "Il est raisonnable de penser que…",
+              0
+            ],
+            [
+              "Il est certain, et personne n’en doute, que…",
+              1
+            ],
+            [
+              "On peut supposer que…",
+              0
+            ],
+            [
+              "Je l’affirme : il en est ainsi, sans discussion possible.",
+              1
+            ]
+          ],
+          "aide": "La prudence avance des hypothèses, le dogme des certitudes.",
+          "explication": "Fontenelle emploie des formules **prudentes** : une **conjecture raisonnable**, jamais un dogme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la prudence est-elle une méthode chez Fontenelle ?",
+          "options": [
+            "Elle évite de déformer en simplifiant",
+            "Elle dispense de prouver ce qu’on affirme",
+            "Elle sert à cacher son ignorance aux lecteurs",
+            "Elle flatte la marquise pour lui plaire"
+          ],
+          "reponse": 0,
+          "aide": "Simplifier risque de déformer.",
+          "explication": "Simplifier, c’est risquer de déformer : **la prudence** (des hypothèses, pas des vérités assénées) y répond."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle tension traverse l’œuvre ?",
+          "options": [
+            "Rendre la science accessible sans la déformer",
+            "Partir ou rester, entre la ville et la campagne",
+            "Obéir ou se révolter, face à un pouvoir tyrannique",
+            "Décrire ou raconter, entre roman et traité"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la question du parcours.",
+          "explication": "Le dialogue et la prudence répondent à la tension **rendre accessible sans déformer**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1dc17334-17d3-5e0e-a23c-d9805ad384c2",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’horloge du philosophe",
+      "competence": "argumenter",
+      "situation": "Fontenelle explique l’univers par des images tirées du monde de la marquise. Étudie ces images, puis un passage imité pour l’exercice.",
+      "documents": [
+        {
+          "id": "images",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Quatre images de Fontenelle",
+          "sousTitre": "Le monde mondain au service de la science",
+          "emoji": "🔭",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Le spectacle d’opéra"
+            },
+            {
+              "texte": "Le vaisseau"
+            },
+            {
+              "texte": "L’horloge"
+            },
+            {
+              "texte": "Les voisins"
+            }
+          ],
+          "pied": "Images"
+        },
+        {
+          "id": "montre",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "À la manière de Fontenelle",
+          "blocs": [
+            "Regardez cette montre : on voit l’[[m|aiguille]] qui court, mais on ne voit pas les [[r|rouages]]. Le philosophe est celui qui ouvre le boîtier."
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière de Fontenelle"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque image à ce qu’elle explique.",
+          "paires": [
+            [
+              "Le spectacle d’opéra",
+              "Le philosophe cherche les machines et les cordes derrière le décor"
+            ],
+            [
+              "Le vaisseau",
+              "Le mouvement qu’on ne sent pas"
+            ],
+            [
+              "L’horloge",
+              "Un mécanisme réglé"
+            ],
+            [
+              "Les voisins",
+              "Des mondes qu’on n’a pas encore visités"
+            ]
+          ],
+          "aide": "Chaque image traduit une idée scientifique.",
+          "explication": "L’**opéra** cache ses machines, le **vaisseau** fait comprendre le mouvement, l’**horloge** un mécanisme réglé, les **voisins** les autres mondes."
+        },
+        {
+          "type": "zone",
+          "document": "montre",
+          "multiple": false,
+          "reponse": [
+            "r"
+          ],
+          "enonce": "Dans le passage imité, touche ce qui joue le rôle des machines cachées derrière le décor.",
+          "aide": "On voit l’aiguille, pas… quoi ?",
+          "explication": "Ce sont **les rouages** : le philosophe cherche ce qui fait marcher le spectacle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Fontenelle choisit-il des images du monde mondain ?",
+          "options": [
+            "Pour expliquer une notion difficile par une image familière à la marquise",
+            "Pour éviter d’avoir à parler d’astronomie devant une femme du monde",
+            "Pour cacher la science aux savants qui la connaissent déjà",
+            "Pour se moquer de l’ignorance de la marquise devant le lecteur"
+          ],
+          "reponse": 0,
+          "aide": "À qui s’adresse-t-il ?",
+          "explication": "Chaque notion difficile est rendue par une **analogie prise dans le monde mondain** de la marquise."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que répondre à « rendre accessible, c’est déformer » ?",
+          "options": [
+            "Le dialogue donne la parole aux objections et la prudence évite d’asséner",
+            "Il faut renoncer à vulgariser, car expliquer revient toujours à déformer",
+            "Un ton galant rend forcément la science fausse, donc inutile à lire",
+            "Seuls les savants doivent lire ces textes, pas les gens du monde"
+          ],
+          "reponse": 0,
+          "aide": "Quelles sont les deux réponses de Fontenelle ?",
+          "explication": "Le **dialogue** (la marquise objecte) et la **prudence** (hypothèses) répondent à la tension de l’œuvre."
+        }
+      ]
+    },
+    {
+      "chapitre": "b361d7d1-33bc-5fa5-9659-c55bb6cde75f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Zilia, de Lima à Paris",
+      "competence": "analyser-document",
+      "situation": "Avant d’étudier le roman de Graffigny, remets en place son histoire et ses personnages.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Lettres d’une Péruvienne",
+          "sousTitre": "Carte d’identité",
+          "emoji": "✉️",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Autrice",
+              "valeur": "Françoise de Graffigny"
+            },
+            {
+              "texte": "Première édition",
+              "valeur": "1747",
+              "id": "ed1"
+            },
+            {
+              "texte": "Édition augmentée",
+              "valeur": "1752",
+              "id": "ed2"
+            },
+            {
+              "texte": "Forme",
+              "valeur": "Roman épistolaire"
+            }
+          ],
+          "pied": "Œuvre du programme"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "multiple": false,
+          "reponse": [
+            "ed2"
+          ],
+          "enonce": "Touche la ligne qui donne la date de l’édition augmentée.",
+          "aide": "Elle paraît après la première édition.",
+          "explication": "L’édition augmentée paraît en **1752**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets l’histoire de Zilia dans l’ordre.",
+          "items": [
+            "Elle est promise à Aza",
+            "Elle est enlevée par les conquistadors",
+            "Elle est capturée par des Français",
+            "Le chevalier Déterville la recueille en France",
+            "Elle refuse le mariage et choisit l’étude"
+          ],
+          "aide": "Pense à son voyage, puis à son arrivée.",
+          "explication": "L’ordre : **promise, enlevée, capturée, recueillie, elle refuse le mariage**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque personnage à son rôle.",
+          "paires": [
+            [
+              "Zilia",
+              "Jeune Inca qui écrit des lettres"
+            ],
+            [
+              "Aza",
+              "Son promis, converti à la fin"
+            ],
+            [
+              "Déterville",
+              "Le chevalier qui la recueille et espère l’épouser"
+            ]
+          ],
+          "aide": "Trois personnages, trois rôles.",
+          "explication": "Zilia est l’**héroïne et la narratrice**, Aza le **promis**, Déterville **celui qui l’accueille**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b361d7d1-33bc-5fa5-9659-c55bb6cde75f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le regard de Zilia",
+      "competence": "analyser-texte",
+      "situation": "Zilia décrit la société française comme si tout y était étrange. Étudie ce regard avec un passage imité pour l’exercice.",
+      "documents": [
+        {
+          "id": "enigmes",
+          "type": "tableau",
+          "titre": "Objet devenu énigme",
+          "colonnes": [
+            "Objet décrit",
+            "Ce qu’il dévoile"
+          ],
+          "lignes": [
+            [
+              "Les miroirs et les carrosses",
+              "La vanité"
+            ],
+            [
+              "Les rites religieux",
+              "L’hypocrisie"
+            ],
+            [
+              "La politesse mondaine",
+              "La superficialité"
+            ],
+            [
+              "L’éducation des femmes",
+              "Des ornements, sans savoir"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "salon",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Une lettre à la manière de Zilia",
+          "blocs": [
+            "Hier, on m’a menée dans une grande salle où des hommes et des femmes marchaient en rond. Ils parlaient [[a|beaucoup]] et ne disaient [[a|rien]] ; ils riaient, mais leurs yeux restaient graves. On m’a dit que c’était un divertissement."
+          ],
+          "source": "Texte écrit pour l’exercice, à la manière de Zilia"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque objet devenu énigme à ce qu’il dévoile.",
+          "paires": [
+            [
+              "Les miroirs et les carrosses",
+              "La vanité"
+            ],
+            [
+              "Les rites religieux",
+              "L’hypocrisie"
+            ],
+            [
+              "La politesse mondaine",
+              "La superficialité"
+            ],
+            [
+              "L’éducation des femmes",
+              "Des ornements, sans savoir"
+            ]
+          ],
+          "aide": "Reprends le document 1.",
+          "explication": "Chaque objet décrit sans l’excuse de l’habitude dévoile un défaut de la société."
+        },
+        {
+          "type": "zone",
+          "document": "salon",
+          "multiple": true,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Touche les deux mots qui s’opposent dans « Ils parlaient… et ne disaient… ».",
+          "aide": "Une quantité, puis un néant.",
+          "explication": "**beaucoup** s’oppose à **rien** : l’antithèse dénonce la superficialité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Zilia peut-elle tout décrire sans l’excuse de l’habitude ?",
+          "options": [
+            "Elle ne comprend rien à leurs usages et les voit donc de l’extérieur",
+            "Elle les approuve tous car elle les juge naturels et raisonnables",
+            "Elle connaît déjà bien la France et ses usages depuis l’enfance",
+            "Elle écrit pour les flatter et gagner la faveur de Déterville"
+          ],
+          "reponse": 0,
+          "aide": "Que change le fait de ne rien comprendre ?",
+          "explication": "Ne rien comprendre permet de **tout décrire** : ce que l’habitude rend invisible devient étrange."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur quoi Zilia écrit-elle d’abord ses lettres ?",
+          "options": [
+            "Sur des quipus, des cordelettes nouées",
+            "Sur du parchemin, à la plume d’oie",
+            "Sur des tablettes de cire gravées au stylet",
+            "Sur des feuilles de palmier séchées"
+          ],
+          "reponse": 0,
+          "aide": "Elle ne connaît pas encore le français.",
+          "explication": "Elle écrit d’abord sur des **quipus**, puis en français, quand elle l’a appris."
+        }
+      ]
+    },
+    {
+      "chapitre": "b361d7d1-33bc-5fa5-9659-c55bb6cde75f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une fin sans mariage",
+      "competence": "argumenter",
+      "situation": "Dans son dénouement, Graffigny refuse la fin habituelle des romans de l’époque. Mesure ce geste.",
+      "documents": [
+        {
+          "id": "fin",
+          "type": "tableau",
+          "titre": "Les prétendants à la fin du roman",
+          "colonnes": [
+            "Personnage",
+            "Situation"
+          ],
+          "lignes": [
+            [
+              "Aza",
+              "Converti, il va épouser une Espagnole"
+            ],
+            [
+              "Déterville",
+              "Il aime Zilia et espère"
+            ],
+            [
+              "Zilia",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "etapes",
+          "type": "tableau",
+          "titre": "Ce qu’écrire devient pour Zilia",
+          "colonnes": [
+            "Étape",
+            "Écrire, c’est…"
+          ],
+          "lignes": [
+            [
+              "D’abord",
+              "Survivre"
+            ],
+            [
+              "Ensuite",
+              "Comprendre"
+            ],
+            [
+              "Enfin",
+              "Exister par soi-même"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que fait Zilia ? Remplace le « ? ».",
+          "options": [
+            "Elle refuse les deux prétendants et choisit l’amitié et l’étude",
+            "Elle épouse Déterville, qui la demande en mariage depuis longtemps",
+            "Elle retrouve Aza, lui pardonne son infidélité et l’épouse",
+            "Elle retourne au Pérou auprès des siens et quitte la France"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les situations des deux autres personnages.",
+          "explication": "Elle refuse **les deux** et choisit l’**amitié**, l’**étude** et la retraite dans la maison offerte par Déterville."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les étapes de l’écriture pour Zilia.",
+          "items": [
+            "Survivre",
+            "Comprendre",
+            "Exister par soi-même"
+          ],
+          "aide": "Du plus urgent au plus profond.",
+          "explication": "Écrire devient d’abord **survivre**, puis **comprendre**, enfin **exister par soi-même**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce dénouement est-il le geste le plus radical du livre ?",
+          "options": [
+            "Dans un roman de l’époque, l’héroïne finit mariée ou morte",
+            "Zilia meurt de chagrin à la fin du roman, comme l’héroïne type",
+            "Zilia entre au couvent pour échapper aux deux prétendants",
+            "Zilia se marie avec Aza après de longues retrouvailles"
+          ],
+          "reponse": 0,
+          "aide": "Quelles fins ordinaires attend-on à l’époque ?",
+          "explication": "Le refus du mariage est **impensable** dans le roman de l’époque, où l’héroïne finit **mariée ou morte**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que permet la forme épistolaire ?",
+          "options": [
+            "Tenir ensemble satire de la société et construction d’une femme libre",
+            "Éviter toute critique de la société par la voix de l’héroïne",
+            "Supprimer le personnage d’Aza de l’intrigue pour ne garder que Déterville",
+            "Raconter toute l’histoire à la troisième personne du singulier"
+          ],
+          "reponse": 0,
+          "aide": "Qui parle dans un roman par lettres ?",
+          "explication": "La forme **épistolaire** fait tenir ensemble **satire** et **sujet féminin autonome**."
+        }
+      ]
+    },
+    {
+      "chapitre": "79385c1a-3f42-53cb-8eb1-8d521c164577",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Compter les verbes",
+      "competence": "manier-langue",
+      "situation": "La méthode de l’oral tient en une opération : compter les verbes conjugués. Applique-la à quelques phrases.",
+      "documents": [
+        {
+          "id": "aube",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Un matin",
+          "blocs": [
+            "Le jour se [[v|lève]]. Les oiseaux [[v|chantent]], le vent [[v|souffle]]."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "aube",
+          "multiple": true,
+          "reponse": [
+            "v"
+          ],
+          "enonce": "Touche les trois verbes conjugués.",
+          "aide": "Les verbes sont les mots qui changent avec le sujet.",
+          "explication": "Les verbes conjugués sont **lève**, **chantent** et **souffle**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces phrases : simple ou complexe ?",
+          "categories": [
+            "Phrase simple",
+            "Phrase complexe"
+          ],
+          "items": [
+            [
+              "Elle avait mangé.",
+              0
+            ],
+            [
+              "Elle rit parce qu’il pleut.",
+              1
+            ],
+            [
+              "Nous partons voir la mer.",
+              0
+            ],
+            [
+              "Le jour se lève, les oiseaux chantent.",
+              1
+            ]
+          ],
+          "aide": "Compte les verbes conjugués, pas tous les verbes.",
+          "explication": "« Elle avait mangé » : un verbe conjugué ; « partons voir » : un seul conjugué, « voir » étant à l’infinitif."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque piège à sa règle.",
+          "paires": [
+            [
+              "Elle avait mangé",
+              "Un seul verbe conjugué"
+            ],
+            [
+              "Quel bruit !",
+              "Phrase averbale, aucune proposition"
+            ],
+            [
+              "Nous partons voir la mer",
+              "Phrase simple : l’infinitif n’est pas conjugué"
+            ],
+            [
+              "Écoute !",
+              "Une proposition : le sujet est sous-entendu"
+            ]
+          ],
+          "aide": "Quatre pièges de la méthode.",
+          "explication": "Temps composés, phrase averbale, infinitif et sujet sous-entendu sont les **quatre pièges**."
+        }
+      ]
+    },
+    {
+      "chapitre": "79385c1a-3f42-53cb-8eb1-8d521c164577",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une nuit de marche",
+      "competence": "analyser-texte",
+      "situation": "Une phrase littéraire écrite pour l’exercice enchaîne plusieurs propositions. Découpe-la.",
+      "documents": [
+        {
+          "id": "nuit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "La nuit tombe",
+          "blocs": [
+            "Quand la nuit tomba, les enfants, [[s2|qui]] avaient marché tout le jour, s’endormirent ; le vent se leva, mais personne ne l’entendit."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de propositions la phrase compte-t-elle ?",
+          "reponse": 5,
+          "aide": "Compte les verbes conjugués : tomba, avaient marché, s’endormirent, se leva, entendit.",
+          "explication": "Il y a **cinq** verbes conjugués (« avaient marché » compte pour un) donc cinq propositions."
+        },
+        {
+          "type": "zone",
+          "document": "nuit",
+          "multiple": false,
+          "reponse": [
+            "s2"
+          ],
+          "enonce": "Touche le mot qui introduit la proposition « qui avaient marché tout le jour ».",
+          "aide": "C’est un pronom relatif.",
+          "explication": "C’est **qui** : le pronom relatif marque la subordination."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces mots : subordination ou coordination ?",
+          "categories": [
+            "Subordination",
+            "Coordination"
+          ],
+          "items": [
+            [
+              "quand",
+              0
+            ],
+            [
+              "mais",
+              1
+            ],
+            [
+              "qui",
+              0
+            ],
+            [
+              "donc",
+              1
+            ],
+            [
+              "lorsque",
+              0
+            ],
+            [
+              "or",
+              1
+            ]
+          ],
+          "aide": "Le lien est de dépendance ou d’égalité.",
+          "explication": "**Quand**, **qui**, **lorsque** subordonnent ; **mais**, **donc**, **or** coordonnent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle relation le point-virgule établit-il entre « s’endormirent » et « le vent se leva » ?",
+          "options": [
+            "La juxtaposition",
+            "La subordination",
+            "La coordination",
+            "L’enchâssement"
+          ],
+          "reponse": 0,
+          "aide": "Un signe de ponctuation, sans mot de liaison.",
+          "explication": "Le point-virgule relie deux propositions de même rang : c’est une **juxtaposition**."
+        }
+      ]
+    },
+    {
+      "chapitre": "79385c1a-3f42-53cb-8eb1-8d521c164577",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Phrases en poupées russes",
+      "competence": "analyser-texte",
+      "situation": "Tu prépares la question de grammaire de l’oral : découpe une phrase où une subordonnée en contient une autre, puis classe trois constructions.",
+      "documents": [
+        {
+          "id": "poup",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Une phrase à tiroirs",
+          "blocs": [
+            "Je [[v|sais]] que tu [[v|crois]] que la fête [[v|est]] annulée."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "trois",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Trois constructions",
+          "blocs": [
+            "Il entra, s’assit, se tut.",
+            "Il entra et s’assit.",
+            "Il entra quand elle chanta."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de verbes conjugués la phrase de départ compte-t-elle ?",
+          "reponse": 3,
+          "aide": "Sais, crois, est.",
+          "explication": "Trois verbes conjugués : **sais**, **crois**, **est** : trois propositions."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque proposition à son statut.",
+          "paires": [
+            [
+              "Je sais",
+              "Principale"
+            ],
+            [
+              "que tu crois",
+              "Subordonnée qui en contient une autre"
+            ],
+            [
+              "que la fête est annulée",
+              "Subordonnée enchâssée dans la précédente"
+            ]
+          ],
+          "aide": "Qui dépend de qui ?",
+          "explication": "« Je sais » commande ; « que tu crois » en dépend et contient « que la fête est annulée » : c’est l’**enchâssement**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque phrase : juxtaposition, coordination ou subordination ?",
+          "categories": [
+            "Juxtaposition",
+            "Coordination",
+            "Subordination"
+          ],
+          "items": [
+            [
+              "Il entra, s’assit, se tut.",
+              0
+            ],
+            [
+              "Il entra et s’assit.",
+              1
+            ],
+            [
+              "Il entra quand elle chanta.",
+              2
+            ]
+          ],
+          "aide": "Ponctuation seule, conjonction de coordination, conjonction de subordination.",
+          "explication": "Virgules : **juxtaposition** ; « et » : **coordination** ; « quand » : **subordination**."
+        },
+        {
+          "type": "choix",
+          "enonce": "« Il sort acheter du pain et revient vite » est une phrase :",
+          "options": [
+            "Complexe : deux verbes conjugués (sort et revient)",
+            "Simple, car elle ne contient qu’un infinitif : acheter",
+            "Averbale, car elle ne contient aucun verbe conjugué",
+            "Complexe : trois verbes conjugués (sort, acheter, revient)"
+          ],
+          "reponse": 0,
+          "aide": "Compte seulement les verbes conjugués.",
+          "explication": "« Sort » et « revient » sont conjugués ; « acheter » ne l’est pas : phrase **complexe**, coordonnée par « et »."
+        }
+      ]
+    },
+    {
+      "chapitre": "e1bc8318-64df-5245-9fef-fd77e0c21bbb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le village s’éveille",
+      "competence": "manier-langue",
+      "situation": "Une phrase de récit accumule les propositions. Analyse-la, puis classe les mots de liaison.",
+      "documents": [
+        {
+          "id": "eveil",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le village s’éveille",
+          "blocs": [
+            "Le soleil [[v|montait]], les coqs [[v|chantaient]], le village [[v|s’éveillait]]."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "eveil",
+          "multiple": true,
+          "reponse": [
+            "v"
+          ],
+          "enonce": "Touche les trois verbes conjugués.",
+          "aide": "Un verbe par proposition.",
+          "explication": "**montait**, **chantaient**, **s’éveillait** : trois propositions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment ces trois propositions sont-elles reliées ?",
+          "options": [
+            "Par la ponctuation : elles sont juxtaposées",
+            "Par une conjonction de coordination",
+            "Par un pronom relatif",
+            "Par une conjonction de subordination"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les virgules.",
+          "explication": "Il n’y a pas de mot de liaison : c’est de la **juxtaposition**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces mots : conjonction de coordination ou adverbe de liaison ?",
+          "categories": [
+            "Conjonction de coordination",
+            "Adverbe de liaison"
+          ],
+          "items": [
+            [
+              "mais",
+              0
+            ],
+            [
+              "cependant",
+              1
+            ],
+            [
+              "donc",
+              0
+            ],
+            [
+              "pourtant",
+              1
+            ],
+            [
+              "ni",
+              0
+            ],
+            [
+              "ensuite",
+              1
+            ]
+          ],
+          "aide": "Un adverbe de liaison peut se déplacer.",
+          "explication": "Les conjonctions sont **mais, ou, et, donc, or, ni, car** ; les autres sont des **adverbes de liaison**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e1bc8318-64df-5245-9fef-fd77e0c21bbb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un livre à rendre",
+      "competence": "analyser-texte",
+      "situation": "Un court récit écrit pour l’exercice mêle juxtaposition et coordination. Analyse-le comme à l’oral.",
+      "documents": [
+        {
+          "id": "livre",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Zoé sort",
+          "blocs": [
+            "Il pleuvait, [[c|mais]] Zoé sortit : elle devait rendre ce livre, [[c|car]] la bibliothèque fermait à midi."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "livre",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche les deux conjonctions de coordination.",
+          "aide": "Deux mots de la liste « mais, ou, et, donc, or, ni, car ».",
+          "explication": "Ce sont **mais** et **car**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot de liaison au rapport qu’il exprime.",
+          "paires": [
+            [
+              "mais",
+              "Opposition"
+            ],
+            [
+              "car",
+              "Cause"
+            ]
+          ],
+          "aide": "Pluie / sortie ; sortie / fermeture.",
+          "explication": "« Mais » oppose la pluie à la sortie ; « car » donne la **cause** du départ."
+        },
+        {
+          "type": "trous",
+          "enonce": "Pour subordonner la cause avec une conjonction de subordination : Zoé devait rendre ce livre ___ la bibliothèque fermait à midi.",
+          "texte": "Zoé devait rendre ce livre ___ la bibliothèque fermait à midi.",
+          "reponses": [
+            [
+              "parce que"
+            ]
+          ],
+          "banque": [
+            "parce que",
+            "mais",
+            "donc",
+            "or"
+          ],
+          "aide": "Il faut une conjonction de subordination, pas de coordination.",
+          "explication": "**parce que** subordonne ; **car** coordonne : c’est la distinction la plus demandée à l’oral."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel lien le deux-points établit-il entre « Zoé sortit » et « elle devait rendre ce livre » ?",
+          "options": [
+            "Une juxtaposition, au lecteur de comprendre le lien",
+            "Une coordination, le deux-points jouant le rôle d’un « et »",
+            "Une subordination, le deux-points introduisant une cause",
+            "Une phrase simple, puisque la ponctuation ne relie rien"
+          ],
+          "reponse": 0,
+          "aide": "Il n’y a pas de conjonction.",
+          "explication": "Le deux-points juxtapose : le lien de **cause** est implicite."
+        }
+      ]
+    },
+    {
+      "chapitre": "e1bc8318-64df-5245-9fef-fd77e0c21bbb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Vite ou posément",
+      "competence": "analyser-texte",
+      "situation": "Deux textes écrits pour l’exercice n’ont pas le même rythme. Compare, puis associe effets et contextes.",
+      "documents": [
+        {
+          "id": "vite",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Texte A : un récit",
+          "blocs": [
+            "Le chien aboya, la porte claqua, les enfants coururent, la nuit tomba."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "pose",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Texte B : un discours",
+          "blocs": [
+            "Nous sommes fatigués, [[a|cependant]] nous avançons ; nous avons peur, [[a|pourtant]] nous avançons."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque contexte à l’effet de la juxtaposition.",
+          "paires": [
+            [
+              "Dans un récit",
+              "Elle accélère l’action"
+            ],
+            [
+              "Dans une description",
+              "Elle entasse les détails"
+            ],
+            [
+              "Dans un discours",
+              "Elle marque l’émotion qui bouscule la syntaxe"
+            ]
+          ],
+          "aide": "Un effet par contexte.",
+          "explication": "Récit : **accélération** ; description : **accumulation** ; discours : **émotion**."
+        },
+        {
+          "type": "zone",
+          "document": "pose",
+          "multiple": true,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Dans le texte B, touche les deux adverbes de liaison.",
+          "aide": "Ils marquent une opposition et peuvent se déplacer.",
+          "explication": "Ce sont **cependant** et **pourtant** : des adverbes de liaison, pas des conjonctions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel rapport logique exprime « cependant » dans le texte B ?",
+          "options": [
+            "L’opposition",
+            "La cause",
+            "La conséquence",
+            "Le but"
+          ],
+          "reponse": 0,
+          "aide": "La fatigue devrait arrêter, mais…",
+          "explication": "« Cependant » oppose la fatigue et le fait d’avancer : c’est une coordination **adversative**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produit cette coordination adversative, à l’inverse du texte A ?",
+          "options": [
+            "Elle marque un raisonnement contrôlé",
+            "Elle accélère l’action",
+            "Elle supprime les détails",
+            "Elle indique un simple dialogue"
+          ],
+          "reponse": 0,
+          "aide": "Pense au mot « contrôlé ».",
+          "explication": "La coordination adversative (*mais*, *pourtant*) marque au contraire **un raisonnement contrôlé**."
+        }
+      ]
+    }
+  ]
+}

@@ -36,7 +36,12 @@ des composites). Cette migration n'écrit que des fiches neuves.`,
           titre: 'Mémoires d’outre-tombe, François-René de Chateaubriand',
           lecon: {
             titre: 'Chateaubriand, 1849 — parler depuis l’au-delà',
-            cours: `## L’œuvre
+            cours: `Une vie racontée comme un morceau d’histoire : c’est l’œuvre de toute une existence.
+
+## L’auteur et le contexte
+**François-René de Chateaubriand** (1768-1848), né à **Saint-Malo** dans une famille noble bretonne, traverse la **Révolution**, l’**Empire**, la **Restauration** et la **monarchie de Juillet**. Écrivain célèbre, il est aussi **homme politique** : ministre, ambassadeur.
+
+## L’œuvre
 **Quarante-deux livres**, écrits sur **plus de trente ans** et publiés **après sa mort**, en **1849-1850**.
 
 > D’où le titre : **l’auteur s’adresse au lecteur depuis sa tombe**. Il y raconte sa vie — mais surtout **son siècle**, qu’il a **traversé tout entier**.
@@ -54,20 +59,34 @@ des composites). Cette migration n'écrit que des fiches neuves.`,
 Chef-d’œuvre de la **prose française**.
 
 | Ce que Chateaubriand invente | Comment |
-| Une **écriture du temps** | Il **superpose les époques** — « Je me trouve **entre deux siècles** comme au **confluent de deux fleuves** » |
+| Une **écriture du temps** | Il **superpose les époques** — « Je me suis rencontré **entre les deux siècles** comme au **confluent de deux fleuves** » |
 | Un « **je** » double | À la fois **intime et historique** |
 | Un **double** fascinant | **Napoléon** y occupe des livres entiers — **fasciné et détesté** |
 
 > Il **revient sur les lieux** et **compare ce qu’il fut à ce qu’il est** : c’est le procédé qui donne au livre sa profondeur.
 
-> « J’ai rencontré la fin d’un vieux monde et le commencement d’un monde nouveau. »`,
+> « J’ai vu finir et commencer un monde. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Le narrateur**, Chateaubriand | À la fois témoin, acteur et juge de son siècle |
+| **Lucile** | La sœur tendre et fragile de l’enfance |
+| Le **père** | Seigneur de Combourg, silencieux et redouté |
+| **Napoléon** | L’adversaire admiré, figure de l’énergie moderne |
+
+## Les thèmes
+Le **temps qui détruit**, la **mémoire**, la **fin de l’aristocratie**, la **gloire** et sa vanité.
+
+## Pour la dissertation et l’oral
+1. Exemple parfait d’**autobiographie** qui dépasse le « moi » : l’intime devient **témoignage historique**.
+2. La **grive de Montboissier** : un chant d’oiseau fait resurgir Combourg — une **mémoire involontaire** avant Proust.`,
           },
           questions: [
             ['Pourquoi le titre parle-t-il d’« outre-tombe » ?', ['L’œuvre devait paraître après la mort de l’auteur', 'Elle raconte des visions surnaturelles', 'Elle est écrite dans un cimetière', 'Elle s’adresse aux morts'], 0, 'Publiée en 1849-1850, elle s’adresse au lecteur depuis la tombe.'],
             ['Où se déroule l’enfance racontée dans les premiers livres ?', ['Au château de Combourg, en Bretagne', 'À Paris', 'En Normandie', 'En Amérique'], 0, 'Avec un père taciturne et la sœur Lucile.'],
             ['Quel voyage marque sa jeunesse ?', ['Un voyage en Amérique, en 1791', 'Un voyage en Russie', 'Un tour d’Italie', 'Un séjour en Égypte'], 0, 'Il en tirera Atala et René.'],
             ['Quelle figure occupe des livres entiers de l’œuvre ?', ['Napoléon', 'Louis XVI', 'Robespierre', 'Talleyrand'], 0, 'Un double fascinant et détesté.'],
-            ['Quelle est la particularité de l’écriture du temps chez Chateaubriand ?', ['Il superpose les époques et se compare à lui-même', 'Il suit un ordre strictement chronologique', 'Il refuse toute date', 'Il écrit au présent uniquement'], 0, '« Je me trouve entre deux siècles comme au confluent de deux fleuves. »'],
+            ['Quelle est la particularité de l’écriture du temps chez Chateaubriand ?', ['Il superpose les époques et se compare à lui-même', 'Il suit un ordre strictement chronologique', 'Il refuse toute date', 'Il écrit au présent uniquement'], 0, '« Je me suis rencontré entre les deux siècles comme au confluent de deux fleuves », écrit-il dans la préface testamentaire.'],
             ['L’œuvre a été publiée du vivant de l’auteur.', ['Vrai', 'Faux'], 1, 'Elle paraît en 1849-1850, après sa mort.'],
           ],
         },
@@ -75,7 +94,12 @@ Chef-d’œuvre de la **prose française**.
           titre: 'Mémoires de guerre, Tome III : Le Salut, 1944-1946, Charles de Gaulle',
           lecon: {
             titre: 'De Gaulle, 1959 — la Libération racontée par celui qui l’a menée',
-            cours: `## L’œuvre
+            cours: `Le chef de la France libre raconte lui-même comment il a relevé l’État.
+
+## L’auteur et le contexte
+**Charles de Gaulle** (1890-1970), officier, lance l’**appel du 18 juin 1940** depuis Londres et dirige la **France libre**. À la Libération, il préside le **Gouvernement provisoire**. Retiré en 1946, il écrit ses *Mémoires* à **Colombey-les-Deux-Églises**, pendant sa « **traversée du désert** ».
+
+## L’œuvre
 **Troisième et dernier tome** des *Mémoires de guerre* — après *L’Appel* et *L’Unité* —, publié en **1959** : **l’année où de Gaulle devient président de la Ve République**.
 
 | Période couverte | **Août 1944 – janvier 1946** |
@@ -99,7 +123,21 @@ La première phrase de *L’Appel* est célèbre : « **Toute ma vie, je me suis
 
 **À lire comme un texte, avec ses procédés** — c’est ainsi qu’il figure dans les manuels.
 
-> « La France ne peut être la France sans la grandeur. »`,
+> « La France ne peut être la France sans la grandeur. »
+
+## Les personnages
+| Figure | Son rôle dans le récit |
+| **De Gaulle** | Le narrateur et le héros, « de Gaulle » vu de l’extérieur |
+| La **France** | Personnage à part entière, qu’il faut remettre debout |
+| Les **Alliés** | Des partenaires dont il faut arracher le respect |
+| Les **partis** | L’obstacle qui le pousse à partir |
+
+## Les thèmes
+La **grandeur**, l’**unité nationale**, l’**État**, la **solitude du chef**.
+
+## Pour la dissertation et l’oral
+1. Un **genre à la frontière** : mémoires (histoire vue par un acteur) et non autobiographie (histoire d’une personnalité).
+2. L’écriture sert une **légende** : se demander ce que le récit **choisit** et ce qu’il **tait**.`,
           },
           questions: [
             ['Quelle période ce tome couvre-t-il ?', ['Août 1944 – janvier 1946', '1940-1942', '1958-1962', '1939-1940'], 0, 'De la libération de Paris à sa démission.'],
@@ -114,16 +152,21 @@ La première phrase de *L’Appel* est célèbre : « **Toute ma vie, je me suis
           titre: 'Mes forêts, Hélène Dorion',
           lecon: {
             titre: 'Dorion, 2021 — la forêt comme miroir intime',
-            cours: `## Le recueil
+            cours: `Un recueil de poèmes où marcher en forêt devient une façon de se comprendre.
+
+## L’autrice et le contexte
+**Hélène Dorion**, née en **1958** à **Québec**, poétesse et romancière, a reçu de nombreux prix au Québec et en France. Son œuvre interroge le **lien entre l’être humain et le monde**. *Mes forêts* paraît en **2021**, dans un temps d’inquiétude écologique.
+
+## Le recueil
 Publié en **2021** par la poétesse **québécoise** **Hélène Dorion** : **première autrice vivante** inscrite au programme du bac de français.
 
 | Section | Son motif |
 | « L’écorce incertaine » | La forêt comme corps |
 | « Une chute de galets » | La fragilité, la perte |
-| « Mes forêts sont de longues traînées de temps » | Le temps, la filiation |
+| « L’onde du chaos » | Les menaces : guerres, famines, chiffres, écrans |
 | « Le bruissement du temps » | L’écoute, l’apaisement |
 
-> Des **citations en exergue** — Rilke, Char, des scientifiques — **ouvrent les sections**.
+> Des **citations de poétesses**, en exergue, **ouvrent les sections**.
 
 ## Ce qui s’y joue
 La forêt **n’est pas un décor** : elle est un **double du sujet**.
@@ -134,7 +177,7 @@ La forêt **n’est pas un décor** : elle est un **double du sujet**.
 
 > Le **possessif du titre** le dit : *mes* forêts.
 
-S’y mêlent le **deuil du père**, l’**enfance**, le **corps qui vieillit** — et une conscience **écologique** vécue **comme une appartenance au vivant**, **non comme un discours**.
+S’y mêlent les **deuils**, les **souvenirs d’enfance**, le **temps qui passe** — et une conscience **écologique** vécue **comme une appartenance au vivant**, **non comme un discours**.
 
 ## L’écriture
 | Procédé | Son effet |
@@ -144,7 +187,15 @@ S’y mêlent le **deuil du père**, l’**enfance**, le **corps qui vieillit** 
 
 > Langue **simple et concrète** : **la densité vient des images, non du vocabulaire**.
 
-> Parcours associé au bac : « la poésie, la nature, l’intime ».`,
+> Parcours associé au bac : « la poésie, la nature, l’intime ».
+
+## Pour la dissertation et l’oral
+1. Entre les sections reviennent des poèmes qui s’ouvrent par « **Mes forêts sont…** » : un **refrain**, comme un chœur.
+2. « **L’onde du chaos** » fait entrer le monde contemporain : les **chiffres**, les **sigles**, les **écrans** menacent la forêt et l’attention.
+3. Parcours : montre que la **nature** n’est pas un décor mais un **miroir de l’intime** — et que la poésie **répare** en nommant.
+4. Rapprochements : **Ronsard** (« Contre les bûcherons de la forêt de Gâtine »), **Hugo** dans *Les Contemplations*, **Ponge**.
+
+> Formule à retenir : chez Dorion, **regarder un arbre, c’est lire le temps**.`,
           },
           questions: [
             ['De quelle nationalité est Hélène Dorion ?', ['Québécoise', 'Française', 'Belge', 'Suisse'], 0, 'Elle est la première autrice vivante au programme du bac de français.'],
@@ -152,14 +203,19 @@ S’y mêlent le **deuil du père**, l’**enfance**, le **corps qui vieillit** 
             ['Que signifie le possessif du titre ?', ['La forêt est un paysage intérieur autant qu’extérieur', 'La poétesse possède une forêt', 'Ce sont des forêts imaginaires', 'Le titre est ironique'], 0, 'L’arbre sert à dire une vie humaine.'],
             ['Quelle forme prennent les poèmes ?', ['Vers libres, presque sans ponctuation, avec beaucoup de blancs', 'Sonnets', 'Alexandrins rimés', 'Poèmes en prose'], 0, 'Le silence fait partie du texte.'],
             ['Comment la dimension écologique s’exprime-t-elle ?', ['Comme une appartenance vécue au vivant, non comme un discours', 'Par un manifeste militant', 'Par des données scientifiques', 'Elle est absente'], 0, 'Quand la forêt brûle, c’est nous que la perte atteint.'],
-            ['Quel deuil traverse le recueil ?', ['Celui du père', 'Celui d’un enfant', 'Celui d’un ami', 'Aucun'], 0, 'Il nourrit notamment la deuxième section.'],
+            ['Quelle dimension intime traverse le recueil ?', ['Le deuil et la mémoire de l’enfance', 'Une passion amoureuse', 'Un exil politique', 'Aucune : le recueil est purement descriptif'], 0, 'La forêt devient un lieu de recueillement : l’enfance, les figures aimées et les pertes y remontent.', 'Quel deuil traverse le recueil ?'],
           ],
         },
         {
           titre: 'Métamorphoses, Ovide',
           lecon: {
             titre: 'Ovide, an 8 — le grand réservoir des mythes',
-            cours: `## L’œuvre
+            cours: `Le grand livre des mythes antiques, raconté comme une suite ininterrompue de transformations.
+
+## L’auteur et le contexte
+**Ovide** (43 av. J.-C. – vers 17 ou 18 apr. J.-C.), poète latin de **Rome**, célèbre sous **Auguste** pour ses poèmes d’amour (*L’Art d’aimer*). Il est exilé à **Tomes**, sur les bords de la mer Noire, pour une raison restée mystérieuse — « un poème et une erreur », dit-il — et y meurt sans avoir été rappelé.
+
+## L’œuvre
 | Fait | Le détail |
 | La forme | **Quinze livres** en hexamètres, environ **douze mille vers** |
 | La date | Achevés vers **l’an 8** — **juste avant l’exil d’Ovide** à Tomes, sur la mer Noire, **décidé par Auguste** |
@@ -188,7 +244,18 @@ Des dieux, des hommes et des nymphes **changés en arbres, en animaux, en source
 | Le mélange du **sublime** et du **badin** | Le ton varie sans cesse |
 | Sa thèse | **La transformation est la loi même du monde** |
 
-> « Mon dessein est de dire les formes changées en corps nouveaux. »`,
+> « Mon dessein est de dire les formes changées en corps nouveaux. »
+
+## Les thèmes
+| Thème | Exemple |
+| Le **désir** et ses dangers | Apollon et Daphné, Narcisse |
+| La **démesure** punie | Arachné défie Minerve, Icare vole trop haut |
+| L’**art** qui donne vie | Pygmalion, Orphée qui charme les Enfers |
+| La **fidélité** récompensée | Philémon et Baucis |
+
+## Pour la dissertation et l’oral
+1. Les *Métamorphoses* sont un **réservoir de réécritures** : cite-les dès qu’un sujet parle de **mythe**, d’**amour** ou de **création**.
+2. Le mythe de **Pygmalion** pose la question de l’**illusion artistique**.`,
           },
           questions: [
             ['Quel est le sujet annoncé du poème ?', ['Les formes changées en corps nouveaux', 'La fondation de Rome', 'La guerre de Troie', 'Les travaux des champs'], 0, 'La transformation est la loi du monde selon Ovide.'],
@@ -203,19 +270,24 @@ Des dieux, des hommes et des nymphes **changés en arbres, en animaux, en source
           titre: 'Micromégas, Voltaire',
           lecon: {
             titre: 'Voltaire, 1752 — voir la Terre de très haut',
-            cours: `## L’histoire
+            cours: `Deux géants venus du ciel regardent l’humanité à la loupe — et le lecteur rit de lui-même.
+
+## L’auteur et le contexte
+**Voltaire** (1694-1778), figure majeure des **Lumières**, publie *Micromégas* en **1752**. Passionné de sciences, il a fait connaître en France la physique de **Newton**. Le conte naît d’un siècle où l’on **mesure la Terre** : les expéditions de Maupertuis en Laponie (1736-1737) inspirent le navire du **cercle polaire**.
+
+## L’histoire
 | Personnage | Sa taille |
-| **Micromégas**, habitant d’une planète de **Sirius** | **Huit lieues** de haut ; il vit **plusieurs centaines de siècles** |
+| **Micromégas**, habitant d’une planète de **Sirius** | **Huit lieues** de haut ; il vit **des millions d’années** |
 | Son compagnon **saturnien** | « Seulement » **mille toises** — secrétaire de l’Académie |
 | Les humains | Des « **atomes intelligents** » |
 
 | Étape | Ce qui se passe |
-| Le bannissement | Micromégas est chassé de sa planète **pour un livre jugé hérétique** |
+| Le bannissement | Pour **un livre jugé hérétique**, Micromégas est **banni de la cour pour huit cents ans** : il part voyager |
 | Le voyage | Il explore le système solaire avec le Saturnien |
 | Sur **Terre** | Ils la croient **déserte** — puis découvrent, **à la loupe**, un navire d’explorateurs revenant du **cercle polaire** |
 | L’étonnement | Ces atomes **savent mesurer les astres** |
 | La déception | Dès qu’on leur demande **ce qu’est l’âme**, ils **se disputent** |
-| L’horreur | Ils **s’entretuent par centaines de milliers** pour **quelques arpents de boue** |
+| L’horreur | Ils **s’entretuent par centaines de milliers** pour **quelques tas de boue** grands comme un talon |
 | Le cadeau | Micromégas leur laisse un **livre censé contenir la fin de toutes choses** |
 
 > **Le livre est entièrement blanc.**
@@ -228,11 +300,20 @@ Des dieux, des hommes et des nymphes **changés en arbres, en animaux, en source
 | Cible | Ce qu’il célèbre |
 | La **métaphysique bavarde**, la **guerre**, l’**anthropocentrisme** | La **science expérimentale** : **Newton**, **Locke** |
 
-> L’un des **premiers récits de science-fiction philosophique**.`,
+> L’un des **premiers récits de science-fiction philosophique**.
+
+## Les thèmes
+La **relativité** (tout est grand ou petit selon le point de vue), l’**orgueil humain**, la **guerre**, la **vanité des systèmes philosophiques**.
+
+## Pour la dissertation et l’oral
+1. Le nom même fait sens : **micro** (petit) et **mégas** (grand).
+2. Les philosophes interrogés défendent Aristote, Descartes, Malebranche, Leibniz, Locke : seul le **disciple de Locke**, prudent, est approuvé.
+3. Un **disciple de saint Thomas** affirme que tout est fait **pour l’homme** : les géants éclatent d’un **rire inextinguible**.
+4. Rapprochement : *Les Voyages de Gulliver* de **Swift**, que Voltaire admire.`,
           },
           questions: [
             ['D’où vient Micromégas ?', ['D’une planète de l’étoile Sirius', 'De Saturne', 'De la Lune', 'De Mars'], 0, 'Il mesure huit lieues et vit des centaines de siècles.'],
-            ['Pourquoi a-t-il été banni de sa planète ?', ['Pour un livre jugé hérétique', 'Pour un crime', 'Pour désobéissance militaire', 'Il est parti volontairement'], 0, 'La satire de l’intolérance commence dès la première page.'],
+            ['Pourquoi Micromégas est-il banni de la cour ?', ['Pour un livre jugé hérétique', 'Pour un crime', 'Pour désobéissance militaire', 'Pour avoir insulté le roi'], 0, 'Le muphti fait condamner son livre ; interdit de cour pour huit cents ans, il part voyager. La satire de l’intolérance commence dès la première page.', 'Pourquoi a-t-il été banni de sa planète ?'],
             ['Comment les géants découvrent-ils les humains ?', ['À la loupe, sur un navire revenant du cercle polaire', 'Par un télescope', 'Par des signaux lumineux', 'Ils ne les découvrent pas'], 0, 'Ils croyaient d’abord la Terre déserte.'],
             ['Qu’est-ce qui étonne Micromégas chez les humains ?', ['Ils savent mesurer les astres, mais se disputent sur l’âme', 'Ils sont pacifiques', 'Ils vivent très longtemps', 'Ils ignorent tout de la science'], 0, 'Le savoir et la bêtise y cohabitent.'],
             ['Que contient le livre offert par Micromégas ?', ['Rien : il est entièrement blanc', 'La formule de l’immortalité', 'Un traité d’astronomie', 'Une carte du système solaire'], 0, 'La chute est un chef-d’œuvre d’ironie.'],
@@ -243,7 +324,12 @@ Des dieux, des hommes et des nymphes **changés en arbres, en animaux, en source
           titre: 'Nadja, André Breton',
           lecon: {
             titre: 'Breton, 1928 — « Qui suis-je ? »',
-            cours: `## L’œuvre
+            cours: `Un livre qui raconte une rencontre réelle et refuse d’être un roman.
+
+## L’auteur et le contexte
+**André Breton** (1896-1966), fondateur et théoricien du **surréalisme** — *Manifeste du surréalisme*, **1924**. *Nadja* paraît en **1928**. Les surréalistes cherchent à libérer l’esprit par le **rêve**, l’**inconscient** et le **hasard**, dans le sillage de **Freud** et après le choc de la Grande Guerre.
+
+## L’œuvre
 Récit en **trois parties**, illustré de **photographies** — rues, objets, personnes — **qui remplacent les descriptions**.
 
 > Il s’ouvre sur une question : « **Qui suis-je ?** »
@@ -268,7 +354,21 @@ L’un des textes **majeurs du surréalisme** : le **hasard**, la **ville** et l
 
 > Il pose aussi un **problème moral**, souvent discuté : **Breton s’éloigne quand Nadja est internée**.
 
-> « La beauté sera convulsive ou ne sera pas. »`,
+> « La beauté sera convulsive ou ne sera pas. »
+
+## Les personnages
+| Personnage | Son rôle |
+| Le **narrateur**, Breton lui-même | Il observe, note, interroge |
+| **Nadja** | Jeune femme libre, pauvre et fantasque, « âme errante » |
+| L’**autre femme**, « Toi » | Celle à qui s’adresse la fin du livre |
+
+## Les thèmes
+Le **hasard objectif**, la **ville** comme espace de rencontres, la **folie**, l’**amour**, la **liberté**.
+
+## Pour la dissertation et l’oral
+1. *Nadja* interroge les **frontières du roman** : récit vrai, photographies, journal.
+2. La **folie** y est à la fois fascinante et **critiquée par l’institution** : Breton attaque violemment l’asile.
+3. Rapprochements : *Le Paysan de Paris* d’**Aragon**, les promenades de **Nerval**.`,
           },
           questions: [
             ['Par quelle question le livre s’ouvre-t-il ?', ['« Qui suis-je ? »', '« Où vais-je ? »', '« Qu’est-ce que le surréalisme ? »', '« Que puis-je savoir ? »'], 0, 'Le livre est une enquête sur l’identité du narrateur.'],
@@ -283,7 +383,12 @@ L’un des textes **majeurs du surréalisme** : le **hasard**, la **ville** et l
           titre: 'Nana, Émile Zola',
           lecon: {
             titre: 'Zola, 1880 — la « mouche d’or »',
-            cours: `## L’histoire
+            cours: `L’ascension et la chute d’une courtisane, miroir d’un Empire qui s’effondre.
+
+## L’auteur et le contexte
+**Émile Zola** (1840-1902), chef de file du **naturalisme**, publie *Nana* en **1880**. Le cycle des *Rougon-Macquart* raconte « l’histoire naturelle et sociale d’une famille sous le **Second Empire** » : vingt romans où l’**hérédité** et le **milieu** façonnent les destins. L’action couvre les dernières années de l’Empire, jusqu’en **1870**.
+
+## L’histoire
 **Nana**, fille de **Gervaise** et de **Coupeau** (*L’Assommoir*), débute au théâtre des **Variétés** dans *La Blonde Vénus*.
 
 > Elle **chante faux**, **ne sait pas jouer** — mais **paraît presque nue** : elle **triomphe**.
@@ -295,7 +400,7 @@ L’un des textes **majeurs du surréalisme** : le **hasard**, la **ville** et l
 | **Vandeuvres** | Il **se brûle dans son écurie** après avoir **triché aux courses** |
 
 | Le sommet | La fin |
-| La journée du **Grand Prix de Paris**, où une pouliche nommée **Nana** gagne | Nana disparaît, revient **défigurée par la petite vérole**, et **meurt seule** dans une chambre du Grand Hôtel |
+| La journée du **Grand Prix de Paris**, où une pouliche nommée **Nana** gagne | Nana disparaît, revient **défigurée par la petite vérole**, et **meurt** dans une chambre du Grand Hôtel |
 
 > Sous les fenêtres, la foule crie « **À Berlin !** » : la **guerre de 1870** commence.
 
@@ -306,7 +411,16 @@ L’un des textes **majeurs du surréalisme** : le **hasard**, la **ville** et l
 
 Grandes **scènes collectives** — le théâtre, les courses, les soupers — et **fin symbolique d’une brutalité rare**.
 
-> « Ce qu’elle avait sur la face, c’était la pourriture d’un empire. »`,
+> « Il semblait que le virus pris par elle dans les ruisseaux, sur les charognes tolérées, ce ferment dont elle avait empoisonné un peuple, venait de lui remonter au visage et l’avait pourri. »
+
+## Les thèmes
+Le **désir** et l’**argent**, la **corruption des élites**, la **prostitution**, l’**hérédité** — Nana porte l’alcoolisme de ses parents.
+
+## Pour la dissertation et l’oral
+1. Nana est un **personnage-symbole** : la « mouche d’or » venge le peuple des faubourgs sur les riches qui l’ont méprisé.
+2. Montre la **méthode naturaliste** : documentation sur le théâtre, les courses, le demi-monde.
+3. La mort finale, décrite avec une précision clinique, fait du **corps** le lieu où se lit l’histoire.
+4. Rapprochement : *L’Assommoir* pour la mère, **Gervaise** ; *La Dame aux camélias* de Dumas fils pour la courtisane idéalisée — tout l’inverse.`,
           },
           questions: [
             ['Qui est Nana ?', ['La fille de Gervaise et Coupeau, devenue actrice puis courtisane', 'Une aristocrate déclassée', 'Une ouvrière du textile', 'Une chanteuse de rue'], 0, 'Elle débute dans La Blonde Vénus, aux Variétés.'],
@@ -321,7 +435,12 @@ Grandes **scènes collectives** — le théâtre, les courses, les soupers — e
           titre: 'Notre-Dame de Paris, Victor Hugo',
           lecon: {
             titre: 'Hugo, 1831 — la cathédrale comme personnage',
-            cours: `## L’histoire
+            cours: `Le grand roman gothique du romantisme français, où un monument devient héros.
+
+## L’auteur et le contexte
+**Victor Hugo** (1802-1885) publie *Notre-Dame de Paris* en **1831**, à vingt-neuf ans, juste après la **bataille d’*Hernani*** et la révolution de 1830. Le goût romantique pour le **Moyen Âge** est alors à la mode, et Hugo milite contre les « **démolisseurs** » qui détruisent les monuments anciens.
+
+## L’histoire
 **Paris, 1482.**
 
 | Personnage | Qui il est |
@@ -345,7 +464,16 @@ Roman **historique et politique** : Hugo l’écrit **pour défendre le patrimoi
 
 > La cathédrale y est **un personnage à part entière** — et **le roman a sauvé Notre-Dame**, **restaurée après son succès**.
 
-> « Ceci tuera cela. »`,
+> « Ceci tuera cela. »
+
+## Les thèmes
+La **fatalité** — le mot grec *Anankè*, gravé sur un mur de la cathédrale, ouvre le roman —, l’**amour impossible**, le **peuple**, la **justice** aveugle, l’**opposition du beau et du laid**.
+
+## Pour la dissertation et l’oral
+1. Le roman illustre la **Préface de Cromwell** : **Quasimodo**, monstrueux et sublime, unit le **grotesque** et le **sublime**.
+2. Chaque personnage aime Esmeralda **à sa manière** : Frollo par **possession**, Phœbus par **légèreté**, Quasimodo par **dévouement**.
+3. Le poète **Gringoire**, qui préfère sauver la chèvre, apporte une **touche comique**.
+4. Pour un sujet sur le **roman historique**, cite la reconstitution du Paris de Louis XI.`,
           },
           questions: [
             ['En quelle année se déroule l’action ?', ['1482', '1789', '1348', '1572'], 0, 'Paris à la fin du Moyen Âge.'],
@@ -360,7 +488,12 @@ Roman **historique et politique** : Hugo l’écrit **pour défendre le patrimoi
           titre: 'Odyssée, Homère',
           lecon: {
             titre: 'Homère, VIIIe siècle av. J.-C. — dix ans pour rentrer',
-            cours: `## Le récit
+            cours: `Le récit fondateur du retour chez soi, chanté depuis près de trois mille ans.
+
+## L’auteur et le contexte
+L’*Odyssée* est attribuée à **Homère**, poète grec dont l’existence même reste discutée. Composée vers le **VIIIe siècle av. J.-C.**, elle vient d’une **tradition orale** : des aèdes la récitaient en musique. Elle fait suite à l’*Iliade*, qui raconte un épisode de la **guerre de Troie**.
+
+## Le récit
 **Vingt-quatre chants.** Dix ans après la chute de Troie, **Ulysse** n’est toujours pas rentré à **Ithaque**.
 
 | À Ithaque | La situation |
@@ -387,7 +520,15 @@ Le grand poème du **retour** — *nostos* —, de la **ruse** — Ulysse est «
 
 Il a nourri **Joyce** (*Ulysse*), **Giono**, **Le Clézio** et d’innombrables réécritures.
 
-> « Je suis Ulysse, fils de Laërte. »`,
+> « Je suis Ulysse, fils de Laërte. »
+
+## Les thèmes
+L’**hospitalité** (sacrée chez les Grecs, bafouée par le Cyclope et les prétendants), la **fidélité** de Pénélope — qui défait la nuit la toile tissée le jour —, la **ruse** contre la force, la **condition humaine** : Ulysse refuse l’immortalité offerte par **Calypso**.
+
+## Pour la dissertation et l’oral
+1. Ulysse est un **héros de l’intelligence** : il se fait appeler « **Personne** » pour tromper Polyphème.
+2. Le poème invente le **récit enchâssé** : Ulysse raconte lui-même ses aventures.
+3. Pour la **réécriture** : Joyce, **Giono** (*Naissance de l’Odyssée*), et déjà **Du Bellay** : « Heureux qui, comme Ulysse, a fait un beau voyage ».`,
           },
           questions: [
             ['Combien de temps Ulysse met-il à rentrer après la guerre ?', ['Dix ans', 'Deux ans', 'Vingt ans', 'Un an'], 0, 'La guerre elle-même avait duré dix ans.'],
@@ -402,7 +543,12 @@ Il a nourri **Joyce** (*Ulysse*), **Giono**, **Le Clézio** et d’innombrables 
           titre: 'Œdipe roi, Sophocle',
           lecon: {
             titre: 'Sophocle, vers 429 av. J.-C. — l’enquête qui se retourne',
-            cours: `## L’histoire
+            cours: `La tragédie grecque la plus célèbre, où un roi enquête sur lui-même.
+
+## L’auteur et le contexte
+**Sophocle** (vers 496-406 av. J.-C.), l’un des trois grands tragiques d’**Athènes** avec Eschyle et Euripide. *Œdipe roi* est jouée vers **430-420 av. J.-C.**, lors des concours du théâtre de **Dionysos**. Les spectateurs connaissent déjà le mythe : tout l’intérêt vient de la **manière** dont la vérité éclate.
+
+## L’histoire
 **Thèbes** est frappée par la **peste**. L’oracle exige que l’on **chasse le meurtrier de l’ancien roi Laïos**.
 
 | Étape de l’enquête | Ce qui se passe |
@@ -416,7 +562,7 @@ Il a nourri **Joyce** (*Ulysse*), **Giono**, **Le Clézio** et d’innombrables 
 
 | La fin | Ce qui arrive |
 | **Jocaste** | Elle **se pend** |
-| **Œdipe** | Il **se crève les yeux** avec les **agrafes de sa robe** — et part **en exil** |
+| **Œdipe** | Il **se crève les yeux** avec les **agrafes de sa robe** — et **réclame l’exil** ; Créon s’en remet à l’oracle |
 
 ## À retenir
 Le **modèle de la tragédie** selon **Aristote**.
@@ -430,13 +576,22 @@ Le **modèle de la tragédie** selon **Aristote**.
 
 **Freud** en tirera le « complexe d’Œdipe » ; le mythe a été repris par **Corneille**, **Voltaire**, **Gide**, **Cocteau** et **Pasolini**.
 
-> « Ô lumière, que je te voie pour la dernière fois. »`,
+> « Ô lumière, que je te voie pour la dernière fois. »
+
+## Les thèmes
+Le **destin** contre la **liberté**, la **vérité** qui aveugle, la **faute involontaire**, la **souillure** qui frappe toute la cité.
+
+## Pour la dissertation et l’oral
+1. **Ironie tragique** : le spectateur sait ce qu’Œdipe ignore ; chacune de ses menaces contre le coupable se retourne contre lui.
+2. **Cécité et lumière** : Tirésias, aveugle, voit la vérité ; Œdipe, qui voit, est aveugle.
+3. Le **chœur** de vieillards thébains commente et tire la leçon : n’appeler personne heureux avant sa mort.
+4. Pour un sujet sur la **tragédie** : Œdipe n’est ni tout à fait innocent ni tout à fait coupable, le héros idéal selon Aristote.`,
           },
           questions: [
             ['Pourquoi Œdipe mène-t-il l’enquête ?', ['L’oracle exige que l’on chasse le meurtrier de Laïos pour arrêter la peste', 'Il veut prouver son innocence', 'Créon l’y oblige', 'Jocaste le lui demande'], 0, 'Il ignore qu’il enquête sur lui-même.'],
             ['Qui accuse Œdipe le premier ?', ['Le devin Tirésias', 'Créon', 'Jocaste', 'Le berger'], 0, 'Œdipe crie alors au complot.'],
             ['Qu’a fait Œdipe sans le savoir ?', ['Il a tué son père et épousé sa mère', 'Il a trahi Thèbes', 'Il a offensé les dieux', 'Il a volé le trône'], 0, 'L’oracle s’accomplit malgré tout ce qui fut tenté pour l’éviter.'],
-            ['Comment se termine la pièce ?', ['Jocaste se pend, Œdipe se crève les yeux et part en exil', 'Œdipe est acquitté', 'La peste cesse sans autre conséquence', 'Créon est condamné'], 0, 'Il se punit lui-même de n’avoir pas vu.'],
+            ['Comment se termine la pièce ?', ['Jocaste se pend, Œdipe se crève les yeux et réclame l’exil', 'Œdipe est acquitté', 'La peste cesse sans autre conséquence', 'Créon est condamné'], 0, 'Il se punit lui-même de n’avoir pas vu.'],
             ['Quels termes d’Aristote la pièce illustre-t-elle ?', ['Péripétie et reconnaissance', 'Unité de ton et bienséance', 'Catharsis et chœur seulement', 'Prologue et épilogue'], 0, 'Le renversement et la reconnaissance y coïncident.'],
             ['La pièce est construite comme une enquête.', ['Vrai', 'Faux'], 0, 'Le juge y découvre qu’il est le coupable : c’est un modèle du genre.'],
           ],
@@ -445,7 +600,12 @@ Le **modèle de la tragédie** selon **Aristote**.
           titre: 'On ne badine pas avec l’amour, Alfred de Musset',
           lecon: {
             titre: 'Musset, 1834 — le jeu qui tue',
-            cours: `## L’histoire
+            cours: `Une comédie qui tourne à la tragédie : l’orgueil des amants tue une innocente.
+
+## L’auteur et le contexte
+**Alfred de Musset** (1810-1857), poète et dramaturge romantique, publie la pièce en **1834**, dans la *Revue des Deux Mondes*, après sa liaison orageuse avec **George Sand** à Venise. Déçu par l’échec d’une de ses pièces en 1830, il écrit désormais un théâtre **à lire** — rassemblé sous le titre *Un spectacle dans un fauteuil*. La pièce n’est créée qu’en **1861**, après sa mort.
+
+## L’histoire
 **Proverbe** en **trois actes**.
 
 | Étape | Ce qui se passe |
@@ -465,7 +625,23 @@ Le **modèle de la tragédie** selon **Aristote**.
 
 La pièce, **écrite pour la lecture**, est devenue **l’une des plus jouées du répertoire**.
 
-> « On est souvent trompé en amour, souvent blessé et souvent malheureux ; mais on aime. »`,
+> « On est souvent trompé en amour, souvent blessé et souvent malheureux ; mais on aime. »
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Perdican** | La jeunesse fière, l’amour de la vie |
+| **Camille** | La méfiance, l’orgueil, la peur d’être trahie |
+| **Rosette** | L’innocence sacrifiée |
+| Le **baron**, **Blazius**, **Bridaine**, **dame Pluche** | Des fantoches ridicules |
+| Le **chœur** | Emprunté au théâtre grec, il commente l’action |
+
+## Les thèmes
+L’**amour** et l’**orgueil**, la **sincérité**, la **religion** qui fait peur au lieu de guider, la **fin de l’enfance**.
+
+## Pour la dissertation et l’oral
+1. Le titre est un **proverbe** : la pièce le démontre, comme une leçon morale.
+2. La tirade de Perdican (acte II) : les hommes et les femmes sont imparfaits, mais **l’amour vaut d’être vécu**.
+3. Pour un sujet sur le **mélange des registres** : du rire des fantoches à la mort de Rosette.`,
           },
           questions: [
             ['Quel genre Musset revendique-t-il pour cette pièce ?', ['Le proverbe', 'La tragédie', 'La farce', 'Le vaudeville'], 0, 'Publiée dans Un spectacle dans un fauteuil, elle était destinée à la lecture.'],
@@ -480,7 +656,12 @@ La pièce, **écrite pour la lecture**, est devenue **l’une des plus jouées d
           titre: 'On purge bébé, Georges Feydeau',
           lecon: {
             titre: 'Feydeau, 1910 — la scène de ménage devient un acte',
-            cours: `## La pièce
+            cours: `Une farce d’un acte où une histoire de purge ruine un contrat militaire.
+
+## L’auteur et le contexte
+**Georges Feydeau** (1862-1921), maître du **vaudeville** de la Belle Époque (*Le Dindon*, *La Dame de chez Maxim*). *On purge bébé* est créée en **1910**. Dans ses dernières pièces, Feydeau quitte les quiproquos d’hôtels et d’amants pour les **querelles de couple**, qu’il observe avec une cruauté amusée.
+
+## La pièce
 **Un acte**, une **matinée**, un **salon**.
 
 | Personnage | Ce qu’il veut |
@@ -491,8 +672,8 @@ La pièce, **écrite pour la lecture**, est devenue **l’une des plus jouées d
 | L’engrenage | Ce qui se passe |
 | La négociation d’affaires | **Constamment interrompue** par la **guerre domestique** |
 | Julie | Elle **insulte Chouilloux** et évoque **devant lui** les **infidélités supposées de sa femme** |
-| La catastrophe | Elle finit par **faire boire la purge… au fonctionnaire lui-même**, par méprise |
-| La fin | **Le marché est perdu.** Toto, lui, **avale finalement le remède** |
+| La catastrophe | Elle force **le fonctionnaire lui-même** à goûter la purge, qu’il finit par **avaler d’un trait**, suffoqué de colère |
+| La fin | **Le marché est perdu.** Follavoine, furieux, **vide le second verre** — et Toto fait croire à sa mère qu’il a **bu sa purge** |
 
 ## À retenir
 Pièce **tardive** de Feydeau, de la série *Du mariage au divorce*.
@@ -506,12 +687,21 @@ Pièce **tardive** de Feydeau, de la série *Du mariage au divorce*.
 
 > La pièce est un **modèle de construction en un acte**.
 
-> Le vaudeville y devient comédie de mœurs, presque cruelle.`,
+> Le vaudeville y devient comédie de mœurs, presque cruelle.
+
+## Les thèmes
+Le **couple** en guerre, l’**argent** et l’ambition, le **corps** trivial (purge, pot de chambre), la **bêtise** des notables.
+
+## Pour la dissertation et l’oral
+1. Le **comique** est de tous les types : **de mots** (insultes, sous-entendus), **de gestes** (le pot qui se brise), **de situation** (la purge avalée par le mauvais), **de caractère** (Julie têtue, Follavoine lâche).
+2. L’**enfant capricieux**, Toto, mène tous les adultes : renversement comique de l’autorité.
+3. Un pot « incassable » qui se casse : l’**objet** devient ressort dramatique.
+4. Rapprochement : **Molière** (les médecins et les purges du *Malade imaginaire*), **Ionesco** (*La Cantatrice chauve*).`,
           },
           questions: [
             ['Quel marché Follavoine espère-t-il obtenir ?', ['Des pots de chambre incassables pour l’armée', 'Des porcelaines de luxe', 'Un contrat de vaisselle d’État', 'Une commande municipale'], 0, 'Le sujet trivial écrase le sérieux des affaires.'],
             ['Qu’est-ce qui interrompt constamment la négociation ?', ['La querelle domestique autour de la purge de Toto', 'Un incendie', 'L’arrivée de créanciers', 'Une panne de courant'], 0, 'Julie entre en peignoir et en pantoufles.'],
-            ['Qui finit par boire la purge ?', ['Chouilloux, le fonctionnaire, par méprise', 'Toto seulement', 'Follavoine', 'Personne'], 0, 'Le marché est perdu du même coup.'],
+            ['Qui boit la purge destinée à Toto ?', ['Chouilloux, puis Follavoine', 'Toto, finalement', 'Julie', 'Personne'], 0, 'Chouilloux l’avale d’abord, puis Follavoine, ivre de rage, vide le second verre ; Toto, lui, fait croire à sa mère qu’il a bu.', 'Qui finit par boire la purge ?'],
             ['À quelle série la pièce appartient-elle ?', ['Du mariage au divorce', 'Les Fiancés de Loches', 'Le Théâtre en liberté', 'Les Farces de province'], 0, 'Feydeau y quitte le vaudeville d’hôtel pour le huis clos conjugal.'],
             ['D’où naît le comique de la pièce ?', ['Du décalage entre le sérieux des affaires et la trivialité domestique', 'De déguisements', 'De quiproquos d’identité', 'De jeux de mots savants'], 0, 'Le dialogue conjugal y est d’une brutalité admirée par Ionesco.'],
             ['La pièce comporte plusieurs actes et de nombreux décors.', ['Vrai', 'Faux'], 1, 'Un seul acte, un seul salon, une matinée.'],
@@ -521,7 +711,12 @@ Pièce **tardive** de Feydeau, de la série *Du mariage au divorce*.
           titre: 'Pantagruel, François Rabelais',
           lecon: {
             titre: 'Rabelais, 1532 — le premier livre du cycle',
-            cours: `## L’œuvre
+            cours: `Le premier roman de géants de Rabelais : un rire énorme au service d’une pensée neuve.
+
+## L’auteur et le contexte
+**François Rabelais** (vers 1483 ou 1494 – 1553), moine, puis **médecin** à Lyon, grand **humaniste** qui lit le grec et correspond avec Érasme. Il écrit à l’époque de la **Renaissance** et de la **Réforme**, quand l’imprimerie diffuse les savoirs anciens et que la **Sorbonne** surveille les livres.
+
+## L’œuvre
 Publié en **1532** sous le pseudonyme d’**Alcofribas Nasier**.
 
 > *Pantagruel* **précède** *Gargantua* (1534) **dans l’ordre de publication** — bien qu’il raconte la vie du **fils**.
@@ -545,7 +740,19 @@ Le livre **parodie** les **romans de chevalerie** et les **almanachs populaires*
 
 Le livre fut **condamné par la Sorbonne**.
 
-> « Science sans conscience n’est que ruine de l’âme. »`,
+> « Science sans conscience n’est que ruine de l’âme. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Pantagruel** | Le géant bon, savant et généreux |
+| **Gargantua** | Son père, auteur de la lettre sur l’éducation |
+| **Panurge** | Le trickster rusé, qui parle de nombreuses langues à leur première rencontre |
+| **Épistémon** | Le compagnon sage, revenu des Enfers |
+
+## Pour la dissertation et l’oral
+1. La **lettre de Gargantua** (chapitre VIII) : apprendre les **langues anciennes**, l’**histoire**, les **sciences**, la **médecine** — un « abîme de science ».
+2. Le **comique** est aussi une **arme** contre les vieux savoirs de la scolastique.
+3. Pour un sujet sur l’**humanisme** : l’homme peut se perfectionner par l’**éducation**.`,
           },
           questions: [
             ['Quel livre du cycle a été publié en premier ?', ['Pantagruel, en 1532', 'Gargantua', 'Le Tiers Livre', 'Le Quart Livre'], 0, 'Gargantua, qui raconte le père, paraît deux ans plus tard.'],
@@ -560,14 +767,19 @@ Le livre fut **condamné par la Sorbonne**.
           titre: 'Pierre et Jean, Guy de Maupassant',
           lecon: {
             titre: 'Maupassant, 1888 — un héritage qui révèle tout',
-            cours: `## L’histoire
+            cours: `Un roman bref où un héritage révèle un secret de famille.
+
+## L’auteur et le contexte
+**Guy de Maupassant** (1850-1893), disciple de **Flaubert**, auteur de plus de trois cents nouvelles et de six romans. *Pierre et Jean* paraît en **1888**, précédé de l’essai « **Le Roman** ». Le décor du **Havre**, port normand, est celui que Maupassant connaît depuis l’enfance.
+
+## L’histoire
 Au **Havre**, la famille **Roland** apprend qu’un ami de la famille, **Maréchal**, a **légué toute sa fortune au fils cadet, Jean** — et **rien à l’aîné, Pierre**.
 
 > **Le père ne s’étonne de rien.**
 
 | Étape | Ce qui se passe |
 | L’enquête intérieure | **Pierre**, médecin sans clientèle, **jaloux et lucide**, se demande : **pourquoi ce legs à un seul ?** |
-| Les indices | Un **portrait disparu**, des **dates**, une **phrase de servante** |
+| Les indices | Un **portrait disparu**, des **dates**, une **phrase de serveuse** de brasserie |
 | La certitude | **Jean est le fils de Maréchal** — **leur mère a trompé son père** |
 | L’aveu | Il le fait comprendre à sa mère, **qui avoue à Jean** |
 | La fin | Devenu **insupportable à tous**, Pierre s’embarque comme **médecin de bord** — **la famille le regarde partir, soulagée** |
@@ -575,18 +787,32 @@ Au **Havre**, la famille **Roland** apprend qu’un ami de la famille, **Maréch
 ## À retenir
 Roman **court**, d’une **construction parfaite** : **tout se joue dans le regard et le soupçon**, **sans événement extérieur**.
 
-> La **préface**, célèbre, expose la théorie de Maupassant : « Le Réalisme, s’il est un artiste, cherchera **non pas à nous montrer la photographie banale de la vie**, mais à nous en donner **la vision plus complète, plus saisissante que la réalité même**. »
+> La **préface**, célèbre, expose la théorie de Maupassant : « Le réaliste, s’il est un artiste, cherchera, **non pas à nous montrer la photographie banale de la vie**, mais à nous en donner **la vision plus complète, plus saisissante, plus probante que la réalité même**. »
 
-Et sa formule la plus citée : « **faire vrai consiste à donner l’illusion complète du vrai** ».
+Et sa formule la plus citée : « **Faire vrai consiste donc à donner l’illusion complète du vrai** ».
 
-> « Il en avait assez de cette maison. »`,
+> Dernière phrase : « […] elle ne vit plus rien qu’une petite fumée grise, si lointaine, si légère qu’elle avait l’air d’un peu de brume. »
+
+## Les personnages
+| Personnage | Ce qui le définit |
+| **Pierre** | L’aîné, médecin, jaloux, lucide et malheureux |
+| **Jean** | Le cadet, avocat, blond, calme, l’héritier |
+| **Madame Roland** | La mère, qui porte un secret ancien |
+| Le **père Roland** | Ancien bijoutier, passionné de pêche, aveugle à tout |
+| **Madame Rosémilly** | La jeune veuve que Jean va épouser |
+
+## Les thèmes
+La **jalousie**, le **soupçon**, la **filiation**, la **culpabilité**, la **mer** (départs, bateaux, sirènes de brume).
+
+## Pour la dissertation et l’oral
+Le roman se lit du **point de vue de Pierre** : le lecteur mène l’enquête avec lui. Utile pour un sujet sur le **réalisme** : Maupassant choisit, **n’enregistre pas tout**.`,
           },
           questions: [
             ['Quel événement déclenche l’intrigue ?', ['Un héritage laissé au seul fils cadet', 'Un naufrage', 'La mort du père', 'Un mariage annoncé'], 0, 'Maréchal lègue toute sa fortune à Jean.'],
             ['Que découvre Pierre par déduction ?', ['Que Jean est le fils de Maréchal', 'Que son père est ruiné', 'Que Jean est adopté', 'Que Maréchal était son oncle'], 0, 'Un portrait disparu et des dates suffisent.'],
             ['Comment Pierre agit-il après sa découverte ?', ['Il la fait comprendre à sa mère, puis s’embarque comme médecin de bord', 'Il porte plainte', 'Il tue Jean en duel', 'Il se tait définitivement'], 0, 'Sa famille le regarde partir avec soulagement.'],
             ['Quelle est la particularité de la construction du roman ?', ['Tout se joue dans le regard et le soupçon, sans événement extérieur', 'Il alterne plusieurs narrateurs', 'Il est écrit en lettres', 'Il couvre trente ans'], 0, 'C’est un modèle de roman court.'],
-            ['Que contient la préface du roman ?', ['La théorie de Maupassant sur le roman et l’illusion du vrai', 'Une dédicace à Flaubert', 'Un résumé de l’intrigue', 'Une réponse à la critique'], 0, '« Faire vrai consiste à donner l’illusion complète du vrai. »'],
+            ['Que contient la préface du roman ?', ['La théorie de Maupassant sur le roman et l’illusion du vrai', 'Une dédicace à Flaubert', 'Un résumé de l’intrigue', 'Une réponse à la critique'], 0, '« Faire vrai consiste donc à donner l’illusion complète du vrai. »'],
             ['Le père Roland comprend la situation en même temps que Pierre.', ['Vrai', 'Faux'], 1, 'Il ne s’étonne de rien : son aveuglement est un ressort du roman.'],
           ],
         },
@@ -594,18 +820,23 @@ Et sa formule la plus citée : « **faire vrai consiste à donner l’illusion c
           titre: 'Poèmes antiques, Charles Leconte de Lisle',
           lecon: {
             titre: 'Leconte de Lisle, 1852 — le premier manifeste parnassien',
-            cours: `## Le recueil
+            cours: `Le recueil qui tourne le dos aux confidences romantiques pour sculpter des mythes.
+
+## L’auteur et le contexte
+**Charles Leconte de Lisle** (1818-1894), né à **Saint-Paul de La Réunion**, installé à Paris, déçu par l’échec de la **révolution de 1848** où il s’était engagé. Il se tourne alors vers une poésie de **savoir** et de **beauté**, loin de l’actualité. Traducteur d’Homère et des tragiques grecs, il succède à **Victor Hugo** à l’Académie française en **1886**.
+
+## Le recueil
 Publié en **1852**, il impose **Leconte de Lisle** comme **chef de file** de ce qu’on appellera le **Parnasse**.
 
 | La préface | Ce qu’elle condamne, ce qu’elle réclame |
-| Elle **condamne** | Le **lyrisme personnel** des romantiques, « l’**étalage des plaies du cœur** » |
+| Elle **condamne** | Le **lyrisme personnel** des romantiques : l’« **aveu public des angoisses du cœur** » est « une vanité et une profanation gratuites » |
 | Elle **réclame** | Une poésie **impersonnelle**, **savante**, tournée vers l’**Antiquité** et les **mythes** |
 
 ## Le contenu
 | Source | Les poèmes |
 | La **Grèce** | « Hélène », « Niobé », « Khirôn » |
 | Les hymnes **védiques** et la mythologie **indienne** | « Bhagavat », « La Vision de Brahma » |
-| Son île natale, **La Réunion** | Des poèmes **créoles** |
+| Les **Poésies diverses** et les **Chansons écossaises** | « Midi », « Juin », « La Fille aux cheveux de lin » |
 
 > Leconte de Lisle est l’un des **premiers en France** à puiser dans les **textes sanskrits**, traduits au début du siècle.
 
@@ -621,13 +852,22 @@ Recueils suivants : *Poèmes barbares* (**1862**), *Poèmes tragiques* (**1884**
 
 > Cette **rigueur**, longtemps admirée, sera **contestée par les symbolistes**, qui lui reprocheront sa **froideur**.
 
-> « Le siècle est industriel, vous devez être utile… Je n’ai rien à répondre. »`,
+> « Les émotions personnelles n’y ont laissé que peu de traces. » (préface)
+
+## Les thèmes
+La **beauté** idéale de la Grèce, les **religions** anciennes, la **nature** grandiose et indifférente, le **temps** qui détruit les dieux eux-mêmes.
+
+## Pour la dissertation et l’oral
+1. Le Parnasse réagit contre le **lyrisme** de Lamartine et de Musset : c’est un bon contre-exemple pour tout sujet sur l’**expression de soi**.
+2. On peut le rapprocher de **Gautier** et de sa doctrine de « **l’art pour l’art** » (préface de *Mademoiselle de Maupin*, 1835).
+3. Le **sonnet** et l’alexandrin impeccable y sont la règle : la forme est un **travail d’orfèvre**.
+4. Ses jeunes disciples — Heredia, Sully Prudhomme, et un temps **Verlaine** — publieront *Le Parnasse contemporain* (1866).`,
           },
           questions: [
             ['Quel mouvement ce recueil inaugure-t-il ?', ['Le Parnasse', 'Le symbolisme', 'Le romantisme', 'Le naturalisme'], 0, 'Leconte de Lisle en devient le chef de file.'],
-            ['Que condamne la préface ?', ['Le lyrisme personnel et « l’étalage des plaies du cœur »', 'La poésie savante', 'L’Antiquité', 'La rime riche'], 0, 'Elle réclame une poésie impersonnelle.'],
+            ['Que condamne la préface ?', ['Le lyrisme personnel : l’aveu public des angoisses du cœur', 'La poésie savante', 'L’Antiquité', 'La rime riche'], 0, 'Elle y voit « une vanité et une profanation gratuites » et réclame une poésie impersonnelle.'],
             ['Quelles sources d’inspiration le recueil mobilise-t-il ?', ['La Grèce antique et la mythologie indienne', 'Le Moyen Âge chrétien', 'La Renaissance italienne', 'Le folklore breton'], 0, 'Leconte de Lisle puise dans les textes sanskrits récemment traduits.'],
-            ['De quelle île l’auteur est-il originaire ?', ['La Réunion', 'La Martinique', 'La Corse', 'Madagascar'], 0, 'Des poèmes créoles s’y rattachent.'],
+            ['De quelle île l’auteur est-il originaire ?', ['La Réunion', 'La Martinique', 'La Corse', 'Madagascar'], 0, 'Né à Saint-Paul, il chantera les paysages de son île surtout dans les Poèmes barbares.'],
             ['Quels sont les trois principes du Parnasse ?', ['Impersonnalité, érudition, culte de la forme', 'Sincérité, spontanéité, engagement', 'Rêve, hasard, inconscient', 'Observation, document, hérédité'], 0, 'La poésie doit être un art objectif, comme la sculpture.'],
             ['Le Parnasse a été prolongé sans contestation par les symbolistes.', ['Vrai', 'Faux'], 1, 'Ils lui reprocheront précisément sa froideur et son impersonnalité.'],
           ],
@@ -636,7 +876,12 @@ Recueils suivants : *Poèmes barbares* (**1862**), *Poèmes tragiques* (**1884**
           titre: 'Poèmes saturniens, Paul Verlaine',
           lecon: {
             titre: 'Verlaine, 1866 — le premier recueil, entre Parnasse et musique',
-            cours: `## Le recueil
+            cours: `Le premier recueil d’un poète de vingt-deux ans, déjà tout en musique et en mélancolie.
+
+## L’auteur et le contexte
+**Paul Verlaine** (1844-1896), employé de bureau à l’Hôtel de ville de Paris, fréquente les **Parnassiens**. Les *Poèmes saturniens* paraissent en **1866** chez l’éditeur Lemerre, celui du Parnasse. Viendront ensuite *Fêtes galantes* (1869), *Romances sans paroles* (1874), *Sagesse* (1881).
+
+## Le recueil
 **Premier livre** de **Verlaine**, publié à **vingt-deux ans**, **à compte d’auteur**.
 
 > Le titre vient de **Saturne**, **planète des mélancoliques** : les « **saturniens** » sont **nés sous une mauvaise étoile**.
@@ -665,7 +910,15 @@ Le tout **encadré d’un prologue et d’un épilogue encore très parnassiens*
 
 Il ouvre ainsi la voie au **symbolisme** — **tout en gardant l’héritage parnassien** de son époque.
 
-> « Les sanglots longs des violons de l’automne / Blessent mon cœur d’une langueur monotone. »`,
+> « Les sanglots longs des violons de l’automne / Blessent mon cœur d’une langueur monotone. »
+
+## Les thèmes
+La **mélancolie**, le **rêve**, l’**amour** perdu ou idéal, le **souvenir** (« Nevermore »), le **paysage** comme état d’âme.
+
+## Pour la dissertation et l’oral
+1. « Mon rêve familier » est un **sonnet** : Verlaine garde les formes fixes mais les rend **fluides**.
+2. Dans « Chanson d’automne », les vers très courts (**quatre** et **trois syllabes**) et les sonorités nasales imitent la **plainte du violon**.
+3. Pour un sujet sur la **poésie et la musique** : Verlaine est l’exemple à citer.`,
           },
           questions: [
             ['D’où vient le titre du recueil ?', ['De Saturne, planète des mélancoliques', 'D’un poème de Baudelaire', 'D’un lieu-dit', 'D’un mot inventé'], 0, 'Les « saturniens » sont nés sous une mauvaise étoile.'],
@@ -680,7 +933,12 @@ Il ouvre ainsi la voie au **symbolisme** — **tout en gardant l’héritage par
           titre: 'Poésies, Stéphane Mallarmé',
           lecon: {
             titre: 'Mallarmé — la poésie portée à l’absolu',
-            cours: `## L’œuvre
+            cours: `Une œuvre courte et difficile qui a fait de la poésie un travail sur le langage lui-même.
+
+## L’auteur et le contexte
+**Stéphane Mallarmé** (1842-1898), **professeur d’anglais** en lycée, traducteur d’**Edgar Poe**. Admirateur de **Baudelaire**, il traverse une grave crise spirituelle dans les années 1860. Rendu célèbre en 1884 par *À rebours* de Huysmans et par *Les Poètes maudits* de Verlaine, il devient le maître de la jeunesse **symboliste**.
+
+## L’œuvre
 Un ensemble **mince** — quelques dizaines de poèmes, rassemblés en **1887**, puis dans l’édition **posthume de 1899** — **qui a pourtant changé la poésie française**.
 
 | Poème | Ce qu’on en retient |
@@ -706,12 +964,20 @@ Chef de file du **symbolisme**, il tient ses « **mardis** » **rue de Rome** �
 
 > Son influence sur **toute la poésie du XXe siècle** est **immense**.
 
-> « Un coup de dés jamais n’abolira le hasard. »`,
+> « Un coup de dés jamais n’abolira le hasard. »
+
+## Les thèmes
+L’**Idéal** inaccessible (l’Azur), l’**impuissance** créatrice, la **page blanche**, l’**absence** et le **néant**, la **fuite** hors du réel (« Fuir ! là-bas fuir ! »).
+
+## Pour la dissertation et l’oral
+1. Le cygne pris dans la glace est un **symbole** du poète prisonnier de son idéal.
+2. L’**obscurité** est voulue : le lecteur doit **participer** au sens.
+3. Utile pour un sujet sur l’**émancipation du langage** poétique, entre Baudelaire et Apollinaire.`,
           },
           questions: [
             ['Quelle est la formule qui résume la poétique de Mallarmé ?', ['« Peindre non la chose, mais l’effet qu’elle produit »', '« De la musique avant toute chose »', '« Il faut être absolument moderne »', '« La beauté sera convulsive »'], 0, 'Le poème suggère au lieu de décrire.'],
             ['Quel poème commence par « La chair est triste, hélas ! » ?', ['Brise marine', 'L’Azur', 'Apparition', 'Sainte'], 0, '« … et j’ai lu tous les livres. »'],
-            ['Quelle œuvre musicale s’inspire de son églogue ?', ['Le Prélude à l’après-midi d’un faune de Debussy', 'Le Sacre du printemps', 'Pelléas et Mélisande', 'La Mer'], 0, 'Créé en 1894.'],
+            ['Quelle œuvre musicale s’inspire de son églogue ?', ['Le Prélude à l’après-midi d’un faune de Debussy', 'Le Sacre du printemps', 'Pelléas et Mélisande', 'La Mer'], 0, 'Debussy compose le *Prélude à l’après-midi d’un faune* en 1894, d’après le poème que Mallarmé publie en 1876.'],
             ['Qu’est-ce que le « Livre » chez Mallarmé ?', ['Un ouvrage absolu qui contiendrait tout, jamais réalisé', 'Son unique recueil publié', 'Un journal intime', 'Un traité de poétique'], 0, 'Il n’en a laissé que des notes et des fragments.'],
             ['Quelle innovation apporte Un coup de dés ?', ['La mise en page devient un moyen poétique', 'La suppression des rimes', 'L’usage du vers libre', 'L’écriture automatique'], 0, 'Le texte y éclate sur la double page.'],
             ['Mallarmé a laissé une œuvre poétique très abondante.', ['Vrai', 'Faux'], 1, 'Son œuvre est mince, et son influence immense.'],
@@ -721,7 +987,12 @@ Chef de file du **symbolisme**, il tient ses « **mardis** » **rue de Rome** �
           titre: 'Polyeucte, Pierre Corneille',
           lecon: {
             titre: 'Corneille, 1643 — la tragédie chrétienne',
-            cours: `## L’histoire
+            cours: `La tragédie d’un martyr chrétien, où l’héroïsme cornélien devient sainteté.
+
+## L’auteur et le contexte
+**Pierre Corneille** (1606-1684), avocat à Rouen, triomphe avec *Le Cid* (1637), puis *Horace* et *Cinna*. *Polyeucte martyr* est créé vers **1642-1643**. Le sujet vient de la vie d’un saint des **premiers siècles**, martyrisé sous l’empereur Décius au IIIe siècle.
+
+## L’histoire
 En **Arménie**, sous l’empereur **Décie**.
 
 | Personnage | Sa position |
@@ -744,7 +1015,16 @@ La grande **tragédie chrétienne** du théâtre français.
 
 La pièce pose la question, **très discutée au XVIIe siècle**, du rapport entre la **volonté** et la **grâce divine**.
 
-> « Je vous aime, beaucoup moins que mon Dieu, mais bien plus que moi-même. »`,
+> « Je vous aime, beaucoup moins que mon Dieu, mais bien plus que moi-même. »
+
+## Les thèmes
+La **foi** et la **grâce**, le **devoir** conjugal, l’**honneur**, l’amour **dépassé** plutôt que renié, la **générosité**.
+
+## Pour la dissertation et l’oral
+1. Le héros cornélien **se dépasse** : Polyeucte va de l’amour humain à l’amour de Dieu.
+2. **Pauline** est une grande héroïne : elle aime Sévère mais **choisit son devoir** envers son époux.
+3. **Félix**, gouverneur lâche et calculateur, fait contraste : il craint pour sa place.
+4. Pour un sujet sur la **tragédie classique** : la pièce respecte les **trois unités** et les **bienséances** — le martyre a lieu hors scène.`,
           },
           questions: [
             ['Que fait Polyeucte après son baptême ?', ['Il brise les idoles en plein sacrifice public', 'Il fuit la ville', 'Il convertit Pauline', 'Il renonce à son titre'], 0, 'Le geste le condamne à mort.'],
@@ -759,7 +1039,12 @@ La pièce pose la question, **très discutée au XVIIe siècle**, du rapport ent
           titre: 'Pour un oui ou pour un non, Nathalie Sarraute',
           lecon: {
             titre: 'Sarraute, 1982 — une amitié détruite par un ton',
-            cours: `## La pièce
+            cours: `Une brouille entre deux amis, née d’une intonation : le drame est dans les mots eux-mêmes.
+
+## L’autrice et le contexte
+**Nathalie Sarraute** (1900-1999), née en Russie, avocate puis écrivaine, figure du **Nouveau Roman**. *Pour un oui ou pour un non* est d’abord une **pièce radiophonique** (1981), puis créée au théâtre en **1986**. C’est sa pièce la plus jouée.
+
+## La pièce
 Deux personnages **sans nom** : **H1** et **H2**.
 
 | Étape | Ce qui se passe |
@@ -783,7 +1068,20 @@ Le texte avance par **reprises**, **répétitions**, phrases **inachevées**, po
 
 > **Ce sont les silences qui portent le sens.** La pièce démontre la **violence du langage ordinaire** : **une intonation suffit à classer quelqu’un**.
 
-> « C’est bien… ça. »`,
+> « C’est bien… ça. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **H1** | Celui qui a dit « C’est bien… ça » et ne comprend pas |
+| **H2** | Celui qui s’est senti blessé et rompt |
+| **H3** et **F** | Des voisins appelés comme juges, qui ne comprennent rien |
+
+## Les thèmes
+L’**amitié**, le **langage** comme violence, les **non-dits**, l’**écart social** entre deux vies.
+
+## Pour la dissertation et l’oral
+1. Le théâtre du XXe siècle se passe d’**action** : ici tout **est** parole.
+2. Rapprochements : **Beckett** et **Ionesco** pour le dépouillement ; **Tropismes**, où la même idée naît.`,
           },
           questions: [
             ['Combien de personnages principaux la pièce compte-t-elle ?', ['Deux, H1 et H2', 'Trois', 'Quatre', 'Un seul'], 0, 'Des voisins interviennent brièvement.'],
@@ -798,7 +1096,12 @@ Le texte avance par **reprises**, **répétitions**, phrases **inachevées**, po
           titre: 'Préface de Cromwell, Victor Hugo',
           lecon: {
             titre: 'Hugo, 1827 — le manifeste du drame romantique',
-            cours: `## Le texte
+            cours: `Le manifeste du drame romantique, écrit par un auteur de vingt-cinq ans.
+
+## L’auteur et le contexte
+**Victor Hugo** (1802-1885) publie *Cromwell* et sa préface en **1827**. Le théâtre français est alors dominé par la **tragédie classique**, ses règles et ses alexandrins nobles. Les jeunes romantiques, admirateurs de **Shakespeare**, réclament un théâtre libre, capable de montrer **toute la vie**.
+
+## Le texte
 Préface d’une pièce **injouable** — *Cromwell*, **plus de six mille vers**.
 
 > Elle est devenue le **manifeste** de la génération romantique — **bien plus lue que la pièce qu’elle précède**.
@@ -815,7 +1118,7 @@ Le christianisme a révélé la **dualité** de l’homme : **corps et âme**, *
 | Ce que l’art moderne doit unir | Ce que le grotesque n’est pas |
 | Le **sublime** et le **grotesque** | Le **laid gratuit** |
 
-> Le grotesque est **ce qui, par contraste, fait ressortir le beau** : **Quasimodo**, **Falstaff**, **Triboulet**.
+> Le grotesque est **ce qui, par contraste, fait ressortir le beau** : Hugo cite **Sganarelle** et **Méphistophélès** — il créera lui-même **Quasimodo** (1831) et **Triboulet** (1832).
 
 ## Ce qu’il faut abolir
 | Règle abolie | Nuance |
@@ -830,7 +1133,13 @@ Le texte **prépare** *Hernani* (**1830**) et sa **bataille**.
 
 > Il ne fonde pas seulement une **esthétique théâtrale** : il **justifie tout le romantisme français**, **jusque dans le roman** — *Notre-Dame de Paris*, *Les Misérables*.
 
-> « Le drame est la poésie complète. »`,
+> « Le drame est la poésie complète. »
+
+## Pour la dissertation et l’oral
+1. **Couleur locale** : Hugo veut que le drame fasse revivre une **époque** et un **lieu** précis.
+2. L’**alexandrin** est gardé mais assoupli : **enjambements**, **rejets**, coupes irrégulières.
+3. Pour un sujet sur les **règles** du théâtre, oppose la Préface à l’*Art poétique* de **Boileau** (1674).
+4. Rapprochement : *Racine et Shakespeare* de **Stendhal**, publié quelques années plus tôt.`,
           },
           questions: [
             ['Que préface ce texte ?', ['Cromwell, une pièce de plus de six mille vers, injouable', 'Hernani', 'Ruy Blas', 'Les Contemplations'], 0, 'La préface est bien plus lue que la pièce.'],
@@ -845,7 +1154,12 @@ Le texte **prépare** *Hernani* (**1830**) et sa **bataille**.
           titre: 'Premières poésies, Alfred de Musset',
           lecon: {
             titre: 'Musset, 1829-1835 — l’enfant terrible du romantisme',
-            cours: `## Le recueil
+            cours: `Les vers d’un jeune dandy qui aime le romantisme et s’en moque en même temps.
+
+## L’auteur et le contexte
+**Alfred de Musset** (1810-1857), enfant gâté du Paris romantique, fréquente dès dix-sept ans le **Cénacle** de Victor Hugo. Brillant, élégant, il connaît le succès très tôt. Le volume *Premières poésies* rassemble ses vers de jeunesse ; les *Poésies nouvelles* regroupent ensuite les œuvres de la maturité, dont les *Nuits*.
+
+## Le recueil
 Il regroupe les poèmes de jeunesse de Musset, de **1829 à 1835**.
 
 | Œuvre | Le détail |
@@ -868,7 +1182,16 @@ Les *Premières poésies* **précèdent** les grandes *Nuits* (**1835-1837**), �
 
 > Elles montrent un poète **très jeune**, **virtuose**, qui **prend le romantisme au sérieux tout en s’en moquant**. Position **rare** — et qui explique sa **popularité durable auprès des lycéens**.
 
-> « Mon verre n’est pas grand, mais je bois dans mon verre. »`,
+> « Mon verre n’est pas grand, mais je bois dans mon verre. »
+
+## Les thèmes
+L’**amour** et le **libertinage**, la **jeunesse**, la **débauche** et le désenchantement (*Rolla* : le « mal du siècle »), la **liberté** du poète.
+
+## Pour la dissertation et l’oral
+1. *Rolla* s’ouvre sur la nostalgie d’un temps de foi, et accuse **Voltaire** d’avoir détruit les croyances.
+2. L’**ironie** est une marque de Musset : il montre que le romantisme peut rire de lui-même.
+3. Pour un sujet sur l’**originalité** en art, cite son refus de l’imitation.
+4. Rapprochement : sa *Confession d’un enfant du siècle* (1836) en prose.`,
           },
           questions: [
             ['À quel âge Musset publie-t-il ses premiers poèmes ?', ['Dix-neuf ans', 'Trente ans', 'Vingt-cinq ans', 'Quinze ans'], 0, 'Les Contes d’Espagne et d’Italie paraissent en 1829.'],
@@ -883,7 +1206,12 @@ Les *Premières poésies* **précèdent** les grandes *Nuits* (**1835-1837**), �
           titre: 'Racine et Shakespeare, Stendhal',
           lecon: {
             titre: 'Stendhal, 1823-1825 — le premier manifeste romantique français',
-            cours: `## Le texte
+            cours: `Un pamphlet vif qui défend un théâtre moderne contre le respect aveugle des classiques.
+
+## L’auteur et le contexte
+**Stendhal** — de son vrai nom Henri Beyle (1783-1842) —, ancien soldat de l’Empire, amoureux de l’**Italie**, n’est pas encore le romancier du *Rouge et le Noir* (1830). En **1822**, des comédiens anglais venus jouer Shakespeare à Paris sont chassés sous les sifflets d’un public qui voit en eux les **ennemis de Waterloo**.
+
+## Le texte
 **Deux brochures polémiques**, publiées en **1823** et **1825** — **avant même** la *Préface de Cromwell*.
 
 > Stendhal y prend parti dans la querelle entre **classiques** et **romantiques**, à un moment où une **troupe anglaise jouant Shakespeare à Paris était huée**.
@@ -910,7 +1238,15 @@ Un texte **vif, drôle, argumentatif**, qui pose le principe de la **relativité
 
 > Il **annonce toute la bataille romantique** et **éclaire la poétique des romans de Stendhal**.
 
-> « Le romanticisme est l’art de présenter aux peuples ce qui, aujourd’hui, peut leur plaire. »`,
+> « Le classicisme, au contraire, leur présente la littérature qui donnait le plus grand plaisir possible à leurs arrière-grands-pères. »
+
+## Les thèmes
+Le **goût** qui change avec les époques, la **liberté** de l’artiste, le **plaisir** du spectateur, la **modernité**.
+
+## Pour la dissertation et l’oral
+1. La deuxième brochure répond à un discours de l’Académie française contre le romantisme.
+2. Pour un sujet sur les **règles** au théâtre, cite l’argument de la **vraisemblance** : un spectateur ne croit pas qu’il s’est passé vingt-quatre heures en trois.
+3. Rapprochement : **Hugo** reprendra ces idées dans la *Préface de Cromwell* (1827), en gardant le vers.`,
           },
           questions: [
             ['Quand ces brochures ont-elles été publiées ?', ['En 1823 et 1825, avant la Préface de Cromwell', 'En 1830', 'En 1840', 'En 1810'], 0, 'Stendhal devance donc Hugo.'],
@@ -925,7 +1261,12 @@ Un texte **vif, drôle, argumentatif**, qui pose le principe de la **relativité
           titre: 'Réflexions ou sentences et maximes morales, François de la Rochefoucauld',
           lecon: {
             titre: 'La Rochefoucauld, 1665 — l’amour-propre démasqué',
-            cours: `## L’œuvre
+            cours: `Des phrases courtes et tranchantes qui démasquent les faux-semblants du cœur humain.
+
+## L’auteur et le contexte
+**François de La Rochefoucauld** (1613-1680), duc et prince de Marcillac, grand seigneur, conspire contre Richelieu puis participe à la **Fronde** contre Mazarin (1648-1653), où il est gravement blessé aux yeux. Retiré, il fréquente les **salons**, notamment ceux de **Madame de Sablé** et de **Madame de La Fayette**, son amie.
+
+## L’œuvre
 Environ **cinq cents maximes**, publiées en **1665** et **retravaillées jusqu’en 1678**.
 
 | La forme | Son origine |
@@ -951,7 +1292,15 @@ La Rochefoucauld est un **moraliste** au sens classique : **il ne prêche pas, i
 
 > Son **pessimisme**, souvent rapproché du **jansénisme**, a nourri **Nietzsche** et **Freud**.
 
-> « Nous avons tous assez de force pour supporter les maux d’autrui. »`,
+> « Nous avons tous assez de force pour supporter les maux d’autrui. »
+
+## Les thèmes
+L’**amour-propre**, l’**hypocrisie**, l’**intérêt**, la **vanité**, la **lucidité** amère sur l’homme.
+
+## Pour la dissertation et l’oral
+1. Le **genre bref** oblige le lecteur à réfléchir : la maxime **surprend** et se retient.
+2. Procédés à repérer : **antithèse**, **parallélisme**, **généralisation** (« nous », « on »), **chute**.
+3. Pour un sujet sur les **moralistes**, rapproche-le de **La Bruyère** (*Les Caractères*) et de **Pascal**.`,
           },
           questions: [
             ['Combien de maximes le recueil contient-il environ ?', ['Cinq cents', 'Cinquante', 'Deux mille', 'Cent'], 0, 'Retravaillées de 1665 à 1678.'],
@@ -966,7 +1315,12 @@ La Rochefoucauld est un **moraliste** au sens classique : **il ne prêche pas, i
           titre: 'Rhétorique, Aristote',
           lecon: {
             titre: 'Aristote, IVe siècle av. J.-C. — la théorie de la persuasion',
-            cours: `## L’œuvre
+            cours: `Le traité fondateur de l’art de persuader, toujours utilisé pour analyser un discours.
+
+## L’auteur et le contexte
+**Aristote** (384-322 av. J.-C.), philosophe grec, élève de **Platon** et précepteur d’**Alexandre le Grand**, fonde à Athènes son école, le **Lycée**. Dans une cité où tout citoyen doit parler à l’assemblée et au tribunal, la parole est un **pouvoir**. Platon accusait les **sophistes** de manipuler ; Aristote veut faire de la rhétorique une **méthode**.
+
+## L’œuvre
 **Trois livres**, où **Aristote** définit la rhétorique comme « la **faculté de découvrir, pour chaque question, ce qui est propre à persuader** ».
 
 > Ce n’est **ni un art du mensonge ni un simple ornement** : c’est une **technique**, **neutre en soi**, dont l’usage peut être **bon ou mauvais**.
@@ -991,7 +1345,17 @@ La Rochefoucauld est un **moraliste** au sens classique : **il ne prêche pas, i
 
 Dès qu’on demande « **quels sont les procédés de persuasion ?** », **c’est à cette grille que l’on répond**.
 
-> Persuader n’est pas prouver : c’est rendre une thèse acceptable pour un auditoire donné.`,
+> Persuader n’est pas prouver : c’est rendre une thèse acceptable pour un auditoire donné.
+
+## Les idées clés
+| Notion | Définition simple |
+| L’**auditoire** | C’est pour lui qu’on parle : on adapte ses arguments |
+| Le **vraisemblable** | Ce qui paraît vrai au plus grand nombre |
+| L’**exemple** | Un raisonnement par cas particulier, comme une fable |
+
+## Pour la dissertation et l’oral
+1. Analyse un texte argumentatif en cherchant **les trois moyens** : image de l’auteur, émotions, raisonnements.
+2. Rapprochement : **Cicéron** et **Quintilien** reprendront ce système à Rome.`,
           },
           questions: [
             ['Comment Aristote définit-il la rhétorique ?', ['La faculté de découvrir ce qui est propre à persuader', 'L’art de mentir avec élégance', 'La science du beau langage', 'L’étude des figures de style'], 0, 'C’est une technique neutre, dont l’usage peut être bon ou mauvais.'],
@@ -1006,7 +1370,12 @@ Dès qu’on demande « **quels sont les procédés de persuasion ?** », **c’
           titre: 'Rhinocéros, Eugène Ionesco',
           lecon: {
             titre: 'Ionesco, 1959 — tout le monde devient rhinocéros',
-            cours: `## La pièce
+            cours: `Une petite ville se change en troupeau de rhinocéros : le théâtre de l’absurde devient politique.
+
+## L’auteur et le contexte
+**Eugène Ionesco** (1909-1994), né en **Roumanie**, installé en France, pionnier du **théâtre de l’absurde** avec *La Cantatrice chauve* (1950). *Rhinocéros* est créée en **1959** en Allemagne, puis à Paris en **1960** par **Jean-Louis Barrault**. Bérenger est un personnage qui revient dans plusieurs pièces d’Ionesco.
+
+## La pièce
 **Trois actes.** Dans une petite ville de province, un **rhinocéros** traverse la place un dimanche. **Puis un deuxième.** Puis on découvre que **les habitants se métamorphosent eux-mêmes**.
 
 | Le prétexte invoqué | Par qui |
@@ -1029,7 +1398,15 @@ Dès qu’on demande « **quels sont les procédés de persuasion ?** », **c’
 | Le héros | Ce qui le sauve |
 | Un **antihéros** | **Sa faiblesse même** |
 
-> « Je suis le dernier homme, je le resterai jusqu’au bout ! »`,
+> « Je suis le dernier homme, je le resterai jusqu’au bout ! »
+
+## Les thèmes
+Le **conformisme**, la **déshumanisation**, la **résistance** individuelle, le **langage** vidé de sens (les syllogismes absurdes du Logicien), la **solitude**.
+
+## Pour la dissertation et l’oral
+1. Le **comique** de l’acte I (le Logicien : « tous les chats sont mortels ») devient **inquiétant** ensuite.
+2. La **métamorphose** de Jean est une scène de **spectacle** : la peau verdit, la voix change, une corne pousse.
+3. Pour un sujet sur l’**engagement** au théâtre : une fable plutôt qu’un discours.`,
           },
           questions: [
             ['Que devient la population de la ville ?', ['Elle se métamorphose en rhinocéros', 'Elle fuit la ville', 'Elle se révolte', 'Elle tombe malade'], 0, 'Chacun trouve une bonne raison de se transformer.'],
@@ -1044,7 +1421,12 @@ Dès qu’on demande « **quels sont les procédés de persuasion ?** », **c’
           titre: 'Romances sans paroles, Paul Verlaine',
           lecon: {
             titre: 'Verlaine, 1874 — la musique sans le sens',
-            cours: `## Le recueil
+            cours: `Le recueil de la musique pure, écrit sur les routes avec Rimbaud.
+
+## L’auteur et le contexte
+**Paul Verlaine** (1844-1896) rencontre **Arthur Rimbaud** en 1871. Il quitte sa femme **Mathilde** et part avec lui en Belgique et à Londres. En juillet **1873**, à Bruxelles, il tire deux coups de revolver sur Rimbaud et le blesse au poignet : il est condamné à **deux ans de prison**.
+
+## Le recueil
 Écrit pendant l’**errance avec Rimbaud** — Belgique, Angleterre —, publié en **1874**.
 
 > Verlaine était alors **emprisonné à Mons**, **pour avoir tiré sur son compagnon**.
@@ -1070,7 +1452,15 @@ Le recueil **le plus moderne** de Verlaine et l’un des **sommets du symbolisme
 
 > Il montre qu’un **poème peut se passer d’anecdote et de message**. **Debussy** et **Fauré** y puiseront abondamment.
 
-> « Il pleure dans mon cœur comme il pleut sur la ville. »`,
+> « Il pleure dans mon cœur comme il pleut sur la ville. »
+
+## Les thèmes
+La **mélancolie** sans cause (« Il pleure dans mon cœur »), le **voyage**, l’**amour** et la **culpabilité**, le **paysage** comme reflet de l’âme.
+
+## Pour la dissertation et l’oral
+1. Poème à citer : « Il pleure dans mon cœur » — la **pluie** et les **larmes** se confondent, et la tristesse n’a « **pas de raison** ».
+2. « Green », « Spleen », « Streets » : des **titres anglais**, souvenir de Londres.
+3. Pour un sujet sur la **poésie et la musique** : les poèmes sont des **mélodies** où compte le son plus que le sens.`,
           },
           questions: [
             ['Dans quelles circonstances le recueil paraît-il ?', ['Pendant l’emprisonnement de Verlaine à Mons', 'À son retour à Paris', 'Après la mort de Rimbaud', 'Avant sa rencontre avec Rimbaud'], 0, 'Il avait tiré sur Rimbaud à Bruxelles.'],
@@ -1085,7 +1475,12 @@ Le recueil **le plus moderne** de Verlaine et l’un des **sommets du symbolisme
           titre: 'Roméo et Juliette, William Shakespeare',
           lecon: {
             titre: 'Shakespeare, vers 1595 — cinq jours, deux familles',
-            cours: `## L’histoire
+            cours: `La plus célèbre histoire d’amour du théâtre, brisée par la haine de deux familles.
+
+## L’auteur et le contexte
+**William Shakespeare** (1564-1616), dramaturge et acteur anglais, écrit *Roméo et Juliette* vers **1595**, sous le règne d’**Élisabeth Ire**. Il reprend une histoire italienne déjà connue, adaptée en poème anglais par **Arthur Brooke** (1562). Le théâtre élisabéthain ignore les règles classiques : lieux multiples, mélange des tons.
+
+## L’histoire
 À **Vérone**, les **Montaigu** et les **Capulet** **se haïssent depuis des générations**.
 
 | Étape | Ce qui se passe |
@@ -1106,7 +1501,19 @@ Tragédie de la **jeunesse** et de la **hâte** : **tout se joue en cinq jours**
 | Les **scènes archétypales** | Le **balcon**, l’**aube et l’alouette** |
 | Le **hasard** | La lettre non remise **devient l’instrument du destin** |
 
-> « Ce n’était pas l’alouette, c’était le rossignol. »`,
+> « Ce n’était pas l’alouette, c’était le rossignol. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Roméo**, **Juliette** | Les amants |
+| **Mercutio** | L’ami moqueur, qui maudit les deux familles en mourant |
+| La **nourrice** | Confidente bavarde et crue de Juliette |
+| **Tybalt** | Le cousin violent |
+| **Frère Laurent** | Le moine conciliateur |
+
+## Pour la dissertation et l’oral
+1. Le **prologue** annonce tout : les amants sont « nés sous une mauvaise étoile ».
+2. Le mythe de l’**amour plus fort que la mort** : réécrit dans *West Side Story*.`,
           },
           questions: [
             ['En combien de temps se déroule l’action ?', ['Environ cinq jours', 'Un an', 'Trois mois', 'Une journée'], 0, 'La hâte est un élément essentiel de la tragédie.'],
@@ -1121,7 +1528,12 @@ Tragédie de la **jeunesse** et de la **hâte** : **tout se joue en cinq jours**
           titre: 'Ruy Blas, Victor Hugo',
           lecon: {
             titre: 'Hugo, 1838 — « ver de terre amoureux d’une étoile »',
-            cours: `## L’histoire
+            cours: `Un valet amoureux d’une reine devient ministre : le drame romantique à son sommet.
+
+## L’auteur et le contexte
+**Victor Hugo** (1802-1885) fait jouer *Ruy Blas* en **1838**, pour l’ouverture du **théâtre de la Renaissance**. L’action se passe à Madrid sous **Charles II**, dernier roi Habsbourg d’Espagne, au temps d’une monarchie décadente. Hugo met en pratique les idées de la *Préface de Cromwell*.
+
+## L’histoire
 **Espagne, fin du XVIIe siècle.**
 
 | Personnage | Sa position |
@@ -1146,7 +1558,21 @@ Le **drame romantique** dans sa forme **la plus achevée**.
 
 > Hugo l’a résumé : **le peuple, incarné par un valet de génie, est capable de gouverner mieux que la noblesse** — **mais la société le lui interdit**.
 
-> « Ver de terre amoureux d’une étoile. »`,
+> « Ver de terre amoureux d’une étoile. »
+
+## Les personnages
+| Personnage | Ce qu’il incarne |
+| **Ruy Blas** | Le peuple, génie sans nom |
+| **La reine**, **Marie de Neubourg** | Une femme seule et délaissée par le roi |
+| **Don Salluste** | La noblesse cynique et vengeresse |
+| **Don César** | Le noble déclassé, libre et joyeux |
+
+## Les thèmes
+L’**amour impossible** entre classes sociales, le **pouvoir**, la **corruption**, le **masque** et l’identité.
+
+## Pour la dissertation et l’oral
+1. La réplique « Ver de terre amoureux d’une étoile » résume l’**écart social**.
+2. Pour un sujet sur le **drame romantique**, cite le **mélange des registres**.`,
           },
           questions: [
             ['Qui est Ruy Blas ?', ['Un valet qui se fait passer pour un noble', 'Un grand d’Espagne exilé', 'Un ministre corrompu', 'Le frère de la reine'], 0, 'Don Salluste l’utilise comme instrument de vengeance.'],
@@ -1161,7 +1587,12 @@ Le **drame romantique** dans sa forme **la plus achevée**.
           titre: 'Sagesse, Paul Verlaine',
           lecon: {
             titre: 'Verlaine, 1881 — la conversion en prison',
-            cours: `## Le recueil
+            cours: `Le recueil de la conversion : un poète en prison cherche le pardon.
+
+## L’auteur et le contexte
+**Paul Verlaine** (1844-1896), condamné pour avoir blessé **Rimbaud** à Bruxelles en 1873, est incarcéré en Belgique jusqu’en **1875**. En prison, il apprend que sa femme obtient la séparation : il se tourne vers la **religion**. *Sagesse* paraît en **1881** chez un éditeur catholique et passe presque inaperçu.
+
+## Le recueil
 Écrit en grande partie à la **prison de Mons**, où Verlaine purge **deux ans** pour avoir **tiré sur Rimbaud** — et où il **se convertit au catholicisme**.
 
 > Publié en **1881**, il **déroute** les lecteurs qui attendaient le poète des *Fêtes galantes*.
@@ -1169,8 +1600,7 @@ Le **drame romantique** dans sa forme **la plus achevée**.
 | Partie | Ce qu’elle porte |
 | La première | Le **repentir** et la **lutte intérieure** |
 | La deuxième | Le fameux **dialogue avec le Christ** — « Mon Dieu m’a dit : Mon fils, il faut m’aimer » |
-| La troisième | La **foi** et l’**humilité** |
-| La quatrième | Quelques-uns de ses **plus beaux textes**, écrits **depuis la cellule** |
+| La troisième | La **foi** et l’**humilité** — et quelques-uns de ses **plus beaux textes**, écrits **depuis la cellule** |
 
 | Poème de la cellule | Son vers |
 | « **Le ciel est, par-dessus le toit** » | « Si bleu, si calme » |
@@ -1185,7 +1615,15 @@ Le **drame romantique** dans sa forme **la plus achevée**.
 
 C’est le début du « **pauvre Lelian** » : **alcoolique et misérable**, **adulé par les jeunes symbolistes**.
 
-> « Qu’as-tu fait, ô toi que voilà, / De ta jeunesse ? »`,
+> « Qu’as-tu fait, ô toi que voilà, / De ta jeunesse ? »
+
+## Les thèmes
+La **faute** et le **repentir**, la **grâce**, l’**humilité**, la **prison** et la **liberté** entrevue par la fenêtre, la **jeunesse** perdue.
+
+## Pour la dissertation et l’oral
+1. « Le ciel est, par-dessus le toit » : un poème simple, fait de **répétitions**, où la **vie** passe dehors pendant que le poète se lamente.
+2. La question finale — « Qu’as-tu fait… de ta jeunesse ? » — est un **examen de conscience**.
+3. Pour un sujet sur le **lyrisme** : la plainte personnelle devient **prière**.`,
           },
           questions: [
             ['Où Verlaine a-t-il écrit une grande partie du recueil ?', ['En prison, à Mons', 'À Londres', 'Dans les Ardennes', 'À Paris'], 0, 'Il y purgeait deux ans pour avoir tiré sur Rimbaud.'],
@@ -1200,13 +1638,18 @@ C’est le début du « **pauvre Lelian** » : **alcoolique et misérable**, **a
           titre: 'Sept manifestes Dada, Tristan Tzara',
           lecon: {
             titre: 'Tzara, 1924 — l’art contre l’art',
-            cours: `## Le mouvement
+            cours: `Des textes qui crient, insultent et rient : le manifeste d’un art qui veut tout détruire.
+
+## L’auteur et le contexte
+**Tristan Tzara** (1896-1963), de son vrai nom Samuel Rosenstock, né en **Roumanie**, arrive à Zurich en 1915 et devient l’animateur de **Dada**. Il s’installe à **Paris** en **1920**. Pendant la Grande Guerre, Dada répond au **massacre** par la **dérision**.
+
+## Le mouvement
 **Dada** naît à **Zurich** en **1916**, au **Cabaret Voltaire**, autour de **Tristan Tzara**, **Hugo Ball**, **Hans Arp**.
 
 > Dans une **ville neutre**, **au milieu d’une guerre européenne qui vide de sens les valeurs au nom desquelles on massacre**.
 
 | Le nom | Ce qu’il signifie |
-| Trouvé **au hasard dans un dictionnaire** | **Rien** — **c’est un programme** |
+| Trouvé, dit la légende, **au hasard dans un dictionnaire** — en langage enfantin, un « dada » est un cheval de bois | **Rien** — **c’est un programme** |
 
 ## Le recueil
 Les *Sept manifestes Dada* réunissent en **1924** les textes de Tzara, dont le fameux *Manifeste Dada 1918*.
@@ -1218,7 +1661,7 @@ Les *Sept manifestes Dada* réunissent en **1924** les textes de Tzara, dont le 
 | La **psychologie** |
 | Le **sens** lui-même — « **Dada ne signifie rien** » |
 
-> Le célèbre mode d’emploi : « **Pour faire un poème dadaïste**, prenez un journal, prenez des ciseaux, **découpez chaque mot**, mettez-les dans un sac, **agitez doucement**, sortez-les l’un après l’autre. »
+> Le célèbre mode d’emploi « **Pour faire un poème dadaïste** » : prendre un journal et des ciseaux, **découper un article mot par mot**, mettre les mots dans un sac, **agiter doucement**, puis les sortir l’un après l’autre et les recopier.
 
 ## À retenir
 Dada est une **table rase**, **pas une école** : **provocation**, **spectacles chaotiques**, tracts, **insultes au public**.
@@ -1227,11 +1670,25 @@ Dada est une **table rase**, **pas une école** : **provocation**, **spectacles 
 | Il **se dissout** dans les années 1920 | Il **ouvre directement sur le surréalisme** — **Breton**, d’abord dadaïste, **rompra avec Tzara** |
 | — | Et, plus loin, sur **tout l’art contemporain** |
 
-> « Dada ne signifie rien. »`,
+> « Dada ne signifie rien. »
+
+## Les figures
+| Figure | Son rôle |
+| **Tristan Tzara** | Le poète-provocateur, auteur des manifestes |
+| **Hugo Ball** | Fondateur du Cabaret Voltaire, auteur de **poèmes phonétiques** |
+| **Hans Arp** | Peintre et sculpteur, qui compose **au hasard** |
+| **Marcel Duchamp** | Proche de Dada, il expose un urinoir signé, *Fontaine* (1917) |
+
+## Les thèmes
+La **révolte** contre une civilisation qui a produit la guerre, le **hasard**, la **liberté** totale, le **non-sens** comme arme.
+
+## Pour la dissertation et l’oral
+1. Le manifeste Dada est un **anti-manifeste** : il se contredit volontairement.
+2. Pour un sujet sur l’**émancipation du langage** ou sur la question « qu’est-ce qu’un poème ? », Dada est l’exemple extrême.`,
           },
           questions: [
             ['Où et quand Dada est-il né ?', ['À Zurich, en 1916, au Cabaret Voltaire', 'À Paris, en 1920', 'À Berlin, en 1918', 'À New York, en 1914'], 0, 'Dans une ville neutre, en pleine guerre européenne.'],
-            ['Que signifie le mot « dada » ?', ['Rien : il a été trouvé au hasard dans un dictionnaire', 'Cheval, en langage enfantin, symbole du mouvement', 'Un cri de guerre roumain', 'Une abréviation d’un manifeste'], 0, 'L’absence de sens est un programme.'],
+            ['Selon la légende du mouvement, comment le mot « dada » a-t-il été trouvé ?', ['Au hasard, dans un dictionnaire', 'Dans un poème de Rimbaud', 'Par un vote des membres du groupe', 'Dans un manifeste futuriste'], 0, 'Choisi pour ne rien vouloir dire, il est un programme : « Dada ne signifie rien ».', 'Que signifie le mot « dada » ?'],
             ['Quelle recette Tzara donne-t-il pour écrire un poème ?', ['Découper un article de journal et tirer les mots au hasard', 'Écrire sous la dictée d’un rêve', 'Imiter les poètes anciens', 'Composer en vers réguliers'], 0, 'Le hasard remplace l’intention.'],
             ['Que refuse Dada ?', ['L’art, la logique, la morale, le bon goût et le sens', 'La guerre uniquement', 'La peinture figurative', 'Le théâtre'], 0, 'C’est une table rase, pas une école.'],
             ['Quel mouvement succède à Dada ?', ['Le surréalisme', 'Le futurisme', 'Le cubisme', 'L’expressionnisme'], 0, 'Breton, d’abord dadaïste, rompra avec Tzara.'],
@@ -1242,7 +1699,12 @@ Dada est une **table rase**, **pas une école** : **provocation**, **spectacles 
           titre: 'Si le grain ne meurt, André Gide',
           lecon: {
             titre: 'Gide, 1926 — l’autobiographie sans arrangement',
-            cours: `## L’œuvre
+            cours: `Le récit sincère d’une jeunesse, jusqu’à la découverte de soi.
+
+## L’auteur et le contexte
+**André Gide** (1869-1951), né à Paris dans une famille **protestante** aisée, auteur des *Nourritures terrestres* (1897) et des *Faux-Monnayeurs* (1925), fondateur de la *Nouvelle Revue française*. Il reçoit le **prix Nobel de littérature** en **1947**. Toute son œuvre défend la **sincérité** et la **liberté** contre la morale imposée.
+
+## L’œuvre
 Autobiographie couvrant **l’enfance et la jeunesse** de Gide, **jusqu’à ses fiançailles** avec sa cousine **Madeleine**, en **1895**.
 
 > Le titre vient de l’Évangile de Jean : « **Si le grain ne meurt… il ne porte pas de fruit** » — **il faut mourir à soi-même pour naître**.
@@ -1263,7 +1725,20 @@ Publié d’abord **confidentiellement**, puis en librairie en **1926**.
 | Ce que le livre fait aussi | Le détail |
 | Il **doute de son propre exercice** | **Gide sait que se raconter, c’est composer** |
 
-> « Je ne suis qu’un petit garçon qui s’amuse, doublé d’un pasteur protestant qui l’ennuie. »`,
+> « Les Mémoires ne sont jamais qu’à demi sincères, si grand que soit le souci de vérité : tout est toujours plus compliqué qu’on ne le dit. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Juliette Rondeaux**, la mère | Aimante mais autoritaire, gardienne de la morale |
+| **Paul Gide**, le père | Professeur de droit, mort en 1880, quand André n’a pas encore onze ans |
+| **Madeleine Rondeaux** | La cousine aimée, qu’il épousera |
+| **Anna Shackleton** | L’amie de sa mère, figure douce de l’enfance |
+| **Oscar Wilde** | L’écrivain qui l’encourage à vivre librement |
+
+## Pour la dissertation et l’oral
+1. Le livre a **deux parties** : l’enfance en France, puis la **révélation** en Algérie.
+2. Pour un sujet sur l’**autobiographie** : se dire vrai exige du **courage**, mais reste une **construction**.
+3. Rapprochement : les *Confessions* de **Rousseau**, qui revendiquaient déjà de tout dire.`,
           },
           questions: [
             ['D’où vient le titre du livre ?', ['De l’Évangile de Jean : « Si le grain ne meurt… »', 'D’un poème de Baudelaire', 'D’un proverbe normand', 'D’une lettre de Madeleine'], 0, 'Il faut mourir à soi-même pour porter du fruit.'],
@@ -1278,11 +1753,16 @@ Publié d’abord **confidentiellement**, puis en librairie en **1926**.
           titre: 'Sido, Colette',
           lecon: {
             titre: 'Colette, 1930 — le portrait d’un monde par sa mère',
-            cours: `## L’œuvre
+            cours: `Un portrait de mère qui est aussi une leçon de regard sur le monde.
+
+## L’autrice et le contexte
+**Colette** (1873-1954), née à **Saint-Sauveur-en-Puisaye**, en Bourgogne, célèbre dès les *Claudine* (publiées d’abord sous le nom de son mari, Willy), journaliste, actrice de music-hall, première femme présidente de l’**académie Goncourt**. *Sido* paraît en **1930**. Sa mère, Sidonie, est morte en **1912**.
+
+## L’œuvre
 Un **récit de mémoire** en **trois parties**, écrit à **cinquante-sept ans**, **longtemps après la mort de sa mère**.
 
 | Partie | Qui elle porte | Ce qu’on en retient |
-| **Sido** | **Sidonie Landoy**, la mère | Elle guette les orages, **sauve les chenilles**, connaît chaque plante — et **refuse de quitter son jardin même pour voir sa fille** |
+| **Sido** | **Sidonie Landoy**, la mère | Elle lit le vent et les **points cardinaux**, connaît chaque plante, **laisse le merle piller ses cerises pour l’admirer** — et refuse de cesser d’« être de son village » |
 | **Le Capitaine** | Le père, ancien militaire **amputé** | **Poète sans œuvre** : à sa mort, on découvre que ses **volumes reliés sont blancs**, sauf la **dédicace à sa femme** |
 | **Les Sauvages** | Les frères et la sœur | **Silencieux et indépendants** |
 
@@ -1297,7 +1777,23 @@ Parcours associé au bac : **la célébration du monde**.
 
 > **Sido** est moins un **personnage** qu’une **manière de regarder** — **dont naît le style de sa fille**.
 
-> « Je ne suis pas de celles qui abandonnent leur jardin. »`,
+> « Et pourquoi cesserais-je d’être de mon village ? » (première phrase)
+
+## Les personnages
+| Personnage | Ce qui le définit |
+| **Sido** | La mère, attentive à tout ce qui vit |
+| Le **Capitaine** Colette | Le père, qui a perdu une jambe à la guerre d’Italie |
+| **Achille** | Le demi-frère aîné, devenu médecin |
+| **Léo** | Le frère rêveur, resté enfant |
+| La **narratrice** | Colette adulte, qui se souvient |
+
+## Les thèmes
+La **mère**, la **nature**, l’**enfance**, la **mémoire**, le **couple** des parents, le **deuil**.
+
+## Pour la dissertation et l’oral
+1. La **précision sensorielle** — odeurs, couleurs, bruits — est la clé du style.
+2. Pour un sujet sur l’**écriture de soi** : Colette parle d’elle en parlant des **autres**.
+3. Ne pas confondre : la lettre où Sido refuse une visite pour voir fleurir son **cactus rose** ouvre *La Naissance du jour* (1928), non *Sido*.`,
           },
           questions: [
             ['Quelles sont les trois parties de l’œuvre ?', ['Sido, Le Capitaine, Les Sauvages', 'La Mère, Le Jardin, Le Village', 'L’Enfance, Paris, Le Retour', 'Printemps, Été, Hiver'], 0, 'Trois portraits, sans récit continu.'],
@@ -1312,7 +1808,12 @@ Parcours associé au bac : **la célébration du monde**.
           titre: 'Sonnets pour Hélène, Pierre de Ronsard',
           lecon: {
             titre: 'Ronsard, 1578 — le poète vieillissant',
-            cours: `## Le recueil
+            cours: `Les sonnets d’amour d’un poète vieillissant, qui promet à sa dame l’immortalité.
+
+## L’auteur et le contexte
+**Pierre de Ronsard** (1524-1585), gentilhomme du Vendômois devenu sourd dans sa jeunesse, chef de la **Pléiade** avec **Du Bellay**, qui veut élever la **langue française** au niveau des langues antiques. « Prince des poètes », poète officiel de la cour sous Charles IX, il voit sa faveur baisser sous **Henri III**. Il avait déjà chanté **Cassandre** et **Marie**.
+
+## Le recueil
 **Deux livres de sonnets**, publiés en **1578**, adressés à **Hélène de Surgères**, jeune **dame d’honneur de Catherine de Médicis**.
 
 > Ronsard a alors **cinquante-quatre ans**. **Le décalage d’âge est constamment présent** — et donne au cycle sa tonalité si particulière : **galanterie**, **mélancolie**, **revendication du pouvoir du poème**.
@@ -1335,7 +1836,20 @@ Parcours associé au bac : **la célébration du monde**.
 
 > Ronsard y atteint une **simplicité de langue** qu’il **n’avait pas dans ses premiers recueils pétrarquistes**.
 
-> « Cueillez dès aujourd’hui les roses de la vie. »`,
+> « Cueillez dès aujourd’hui les roses de la vie. »
+
+## Les personnages
+| Figure | Son rôle |
+| Le **poète** | Amoureux, vieillissant, fier de son art |
+| **Hélène** | Jeune femme froide et lettrée, en deuil d’un fiancé tué pendant les guerres de Religion |
+| **Hélène de Troie** | La beauté légendaire, en arrière-plan |
+
+## Les thèmes
+Le **temps** qui passe, le **carpe diem**, l’**amour** non partagé, l’**immortalité** par la poésie.
+
+## Pour la dissertation et l’oral
+1. Le **sonnet** : deux quatrains, deux tercets, une **chute** qui frappe.
+2. Pour un sujet sur la **poésie et le temps**, ce recueil est un exemple majeur, avec « Mignonne, allons voir si la rose ».`,
           },
           questions: [
             ['Qui est Hélène de Surgères ?', ['Une jeune dame d’honneur de Catherine de Médicis', 'La femme de Ronsard', 'Une paysanne d’Anjou', 'Une reine'], 0, 'Ronsard a cinquante-quatre ans lorsqu’il lui adresse ces sonnets.'],
@@ -1350,7 +1864,12 @@ Parcours associé au bac : **la célébration du monde**.
           titre: 'Supplément au voyage de Bougainville, Denis Diderot',
           lecon: {
             titre: 'Diderot, 1796 — Tahiti comme miroir critique',
-            cours: `## L’œuvre
+            cours: `Un dialogue philosophique où un « sauvage » juge la civilisation européenne.
+
+## L’auteur et le contexte
+**Denis Diderot** (1713-1784), grand philosophe des **Lumières**, dirige l’**Encyclopédie** pendant plus de vingt ans. Le navigateur **Louis-Antoine de Bougainville** fait escale à **Tahiti** en **1768** et publie en **1771** son *Voyage autour du monde*. Il ramène en France un Tahitien, **Aotourou**. L’Europe s’interroge alors sur le « **bon sauvage** ».
+
+## L’œuvre
 Écrit en **1772**, après la lecture du **récit de voyage de Bougainville** — publié seulement en **1796**.
 
 | La forme | Le détail |
@@ -1372,7 +1891,21 @@ Un texte des Lumières **à son point le plus radical**, où l’**altérité** 
 
 > **Tahiti y est largement idéalisé** : c’est un **outil critique**, **non une ethnographie**.
 
-> « Il était innocent et heureux avant votre arrivée. »`,
+> « Nous sommes innocents, nous sommes heureux ; et tu ne peux que nuire à notre bonheur. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **A** et **B** | Les deux interlocuteurs qui commentent le voyage |
+| Le **vieillard** | La voix accusatrice de Tahiti |
+| **Orou** | Le Tahitien qui raisonne mieux que l’Européen |
+| L’**aumônier** | Le religieux, tiraillé entre ses vœux et l’hospitalité tahitienne |
+
+## Les thèmes
+La **nature** et la **loi**, la **liberté sexuelle**, la **critique de la religion**, la **colonisation**.
+
+## Pour la dissertation et l’oral
+1. Le **dialogue** permet de confronter les idées sans conclure dogmatiquement.
+2. Pour un sujet sur le **regard étranger**, rapproche-le des *Lettres persanes* de **Montesquieu** et de l’*Ingénu* de **Voltaire**.`,
           },
           questions: [
             ['De quel texte ce Supplément est-il le prolongement ?', ['Le récit de voyage de Bougainville', 'L’Encyclopédie', 'Les Lettres persanes', 'Le Voyage en Italie'], 0, 'Diderot y ajoute un dialogue critique.'],
@@ -1387,12 +1920,17 @@ Un texte des Lumières **à son point le plus radical**, où l’**altérité** 
           titre: 'Terre des hommes, Antoine de Saint-Exupéry',
           lecon: {
             titre: 'Saint-Exupéry, 1939 — le métier et la fraternité',
-            cours: `## L’œuvre
+            cours: `Un pilote raconte son métier et en tire une pensée sur ce qui fait un homme.
+
+## L’auteur et le contexte
+**Antoine de Saint-Exupéry** (1900-1944), aviateur et écrivain, entre en **1926** aux lignes Latécoère, la future **Aéropostale**, qui transporte le courrier de Toulouse vers l’Afrique et l’Amérique du Sud. Il est chef d’escale au **cap Juby**, dans le Sahara. *Terre des hommes* paraît en **1939**, à la veille de la guerre.
+
+## L’œuvre
 Un récit fait de **souvenirs** et de **méditations** — **non un roman**.
 
 | Épisode | Ce qu’il raconte |
 | Les débuts de l’**Aéropostale** | Toulouse, l’Espagne, l’Afrique ; le **vol de nuit** |
-| **Guillaumet** | Perdu **cinq jours dans les Andes** après un crash : il **marche pour que sa famille puisse toucher l’assurance** — « **ce que j’ai fait, aucune bête ne l’aurait fait** » |
+| **Guillaumet** | Perdu **cinq jours dans les Andes** après un crash : il **marche pour que sa famille puisse toucher l’assurance** — « **Ce que j’ai fait, je te le jure, jamais aucune bête ne l’aurait fait.** » |
 | **Mermoz** | **Disparu en mer** |
 | L’accident de **Libye**, 1935 | Saint-Exupéry lui-même : l’**errance** et le **sauvetage par un Bédouin** |
 | L’**Espagne en guerre** | Et une réflexion sur l’homme |
@@ -1410,11 +1948,24 @@ Un récit fait de **souvenirs** et de **méditations** — **non un roman**.
 
 > Le livre **annonce** *Le Petit Prince* (1943) : **même attention aux liens, à la responsabilité, à ce qui est invisible**.
 
-> « Être homme, c’est précisément être responsable. »`,
+> « Être homme, c’est précisément être responsable. »
+
+## Les personnages
+| Figure | Ce qu’elle incarne |
+| **Saint-Exupéry** | Le narrateur, pilote et témoin |
+| **Henri Guillaumet** | Le courage obstiné, l’ami |
+| **Jean Mermoz** | Le pionnier des lignes |
+| **Prévot** | Le mécanicien, compagnon du crash en Libye |
+| Le **Bédouin** | Le sauveur anonyme, « l’Homme » |
+
+## Pour la dissertation et l’oral
+1. Un livre **à la frontière** de l’essai, du récit et de l’autobiographie.
+2. Thèmes : la **fraternité**, le **métier**, la **responsabilité**, le **désert**, la **soif**.
+3. Utile pour un sujet sur l’**humanisme** au XXe siècle.`,
           },
           questions: [
             ['De quelle compagnie aérienne le livre raconte-t-il les débuts ?', ['L’Aéropostale', 'Air France', 'La Lufthansa', 'La compagnie Latécoère du Pacifique'], 0, 'Toulouse, l’Espagne, l’Afrique, puis l’Amérique du Sud.'],
-            ['Quel exploit de Guillaumet le livre raconte-t-il ?', ['Sa marche de cinq jours dans les Andes après un crash', 'Un vol transatlantique record', 'Un sauvetage en mer', 'Une traversée du Sahara en voiture'], 0, '« Ce que j’ai fait, aucune bête ne l’aurait fait. »'],
+            ['Quel exploit de Guillaumet le livre raconte-t-il ?', ['Sa marche de cinq jours dans les Andes après un crash', 'Un vol transatlantique record', 'Un sauvetage en mer', 'Une traversée du Sahara en voiture'], 0, '« Ce que j’ai fait, je te le jure, jamais aucune bête ne l’aurait fait. »'],
             ['Quel accident personnel Saint-Exupéry raconte-t-il ?', ['Son crash dans le désert de Libye, en 1935', 'Un amerrissage en Méditerranée', 'Une panne au-dessus des Andes', 'Un accident à l’atterrissage à Toulouse'], 0, 'Il est sauvé par un Bédouin après plusieurs jours d’errance.'],
             ['Quelle formule résume la morale du livre ?', ['« Être homme, c’est précisément être responsable »', '« On ne voit bien qu’avec le cœur »', '« L’essentiel est invisible »', '« Il faut cultiver son jardin »'], 0, 'Le métier et le lien entre camarades donnent le sens.'],
             ['Quelle image clôt le livre ?', ['Un enfant d’émigrés endormi dans un train, « Mozart assassiné »', 'Un avion au décollage', 'Le désert au lever du jour', 'Un portrait de Mermoz'], 0, 'C’est l’une des pages les plus citées de l’auteur.'],
@@ -1425,7 +1976,12 @@ Un récit fait de **souvenirs** et de **méditations** — **non un roman**.
           titre: 'Thérèse Desqueyroux, François Mauriac',
           lecon: {
             titre: 'Mauriac, 1927 — une femme qui a voulu tuer son mari',
-            cours: `## L’histoire
+            cours: `L’histoire d’une femme qui a voulu empoisonner son mari — sans savoir elle-même pourquoi.
+
+## L’auteur et le contexte
+**François Mauriac** (1885-1970), né à **Bordeaux**, romancier **catholique**, peint la bourgeoisie des **Landes** et du Bordelais qu’il connaît de l’intérieur. *Thérèse Desqueyroux* paraît en **1927**. Mauriac s’inspire d’un procès réel de 1906, celui d’une femme accusée d’avoir voulu empoisonner son mari.
+
+## L’histoire
 Le roman s’ouvre **à la sortie du palais de justice** : un **non-lieu** vient d’être prononcé en faveur de **Thérèse Desqueyroux**, accusée d’avoir **tenté d’empoisonner son mari Bernard**.
 
 > **La famille a menti pour éviter le scandale.**
@@ -1448,7 +2004,20 @@ Roman **catholique sans démonstration**.
 
 **Prix Nobel** en **1952**.
 
-> « Je ne sais pas ce que j’ai voulu. »`,
+> « Je ne sais pas ce que j’ai voulu. »
+
+## Les personnages
+| Personnage | Ce qui le définit |
+| **Thérèse** | Intelligente, lucide, étouffée |
+| **Bernard Desqueyroux** | Le mari, propriétaire terrien borné et sûr de lui |
+| **Anne de la Trave** | La demi-sœur de Bernard, amie d’enfance de Thérèse |
+| **Jean Azévédo** | Le jeune homme cultivé qui fait entrevoir à Thérèse une autre vie |
+
+## Les thèmes
+L’**enfermement**, la **famille** et les apparences, la **liberté**, la **culpabilité**, la **grâce** absente.
+
+## Pour la dissertation et l’oral
+Un personnage **ambigu** : ni héroïne, ni monstre. Le premier geste naît le jour d’un **incendie** : Bernard avale une double dose de son remède, et Thérèse se tait.`,
           },
           questions: [
             ['Comment le roman s’ouvre-t-il ?', ['À la sortie du palais de justice, après un non-lieu', 'Le jour du mariage', 'Pendant l’empoisonnement', 'À Paris'], 0, 'La famille a menti pour éviter le scandale.'],
@@ -1463,7 +2032,12 @@ Roman **catholique sans démonstration**.
           titre: 'Thérèse Raquin, Émile Zola',
           lecon: {
             titre: 'Zola, 1867 — un crime et deux tempéraments',
-            cours: `## L’histoire
+            cours: `Deux amants tuent un mari, puis se détruisent : le premier grand roman de Zola.
+
+## L’auteur et le contexte
+**Émile Zola** (1840-1902) publie *Thérèse Raquin* en **1867**, avant de commencer les *Rougon-Macquart*. Il travaille alors dans l’édition et le journalisme et s’enthousiasme pour la **science** : la médecine, la physiologie, les théories de l’**hérédité** et du **tempérament**.
+
+## L’histoire
 **Thérèse**, élevée par sa tante **Madame Raquin**, est mariée à son cousin **Camille**, **chétif et médiocre**, et vit dans une **mercerie sombre** du **passage du Pont-Neuf**.
 
 | Étape | Ce qui se passe |
@@ -1484,7 +2058,22 @@ Roman de **jeunesse** — Zola a **vingt-sept ans** —, **scandale immédiat** 
 
 > C’est l’**acte de naissance du naturalisme**.
 
-> « Le remords, chez eux, fut purement physique. »`,
+> « Ses remords étaient purement physiques. » (de Laurent)
+
+## Les personnages
+| Personnage | Son tempérament |
+| **Thérèse** | Nerveuse, passionnée, longtemps contenue |
+| **Laurent** | Sanguin, paresseux, peintre raté |
+| **Camille** | Maladif, égoïste |
+| **Madame Raquin** | Mère aimante, puis témoin impuissant |
+| **Grivet** et **Michaud** | Les invités du jeudi soir, qui ne voient rien |
+
+## Les thèmes
+Le **désir**, le **crime**, le **remords** physique, l’**enfermement** (la boutique humide).
+
+## Pour la dissertation et l’oral
+1. Après le crime, Laurent ne peint plus que des visages qui ressemblent **tous au noyé** : le corps garde la trace de la faute.
+2. Un exemple de **huis clos** romanesque.`,
           },
           questions: [
             ['Où vit Thérèse au début du roman ?', ['Dans une mercerie sombre du passage du Pont-Neuf', 'Dans une ferme du Midi', 'À Saint-Ouen', 'Dans un hôtel particulier'], 0, 'Le décor étouffant prépare le drame.'],
@@ -1492,28 +2081,33 @@ Roman de **jeunesse** — Zola a **vingt-sept ans** —, **scandale immédiat** 
             ['Que se passe-t-il après leur mariage ?', ['Ils ne peuvent plus se toucher, hantés par le noyé', 'Ils sont arrêtés', 'Ils s’enfuient à l’étranger', 'Ils vivent heureux'], 0, 'Insomnies, hallucinations, haine et coups.'],
             ['Quel est le rôle de Madame Raquin à la fin ?', ['Paralysée, elle comprend tout et assiste muette à leur destruction', 'Elle les dénonce à la police', 'Elle les protège', 'Elle meurt avant le crime'], 0, 'Son regard devient un châtiment.'],
             ['Que dit la préface de la seconde édition ?', ['Les personnages sont des tempéraments, étudiés comme sur des cadavres', 'Le roman est une fiction morale', 'L’auteur regrette le scandale', 'Le crime doit être puni par la loi'], 0, 'C’est l’acte de naissance du naturalisme.'],
-            ['Le remords des personnages est présenté comme moral.', ['Vrai', 'Faux'], 1, 'Zola insiste : « Le remords, chez eux, fut purement physique. »'],
+            ['Le remords des personnages est présenté comme moral.', ['Vrai', 'Faux'], 1, '« Ses remords étaient purement physiques », écrit Zola de Laurent ; la préface parle d’« un simple désordre organique ».'],
           ],
         },
         {
           titre: 'Tobie des Marais, Sylvie Germain',
           lecon: {
             titre: 'Germain, 1998 — un texte biblique transposé dans le Marais poitevin',
-            cours: `## L’histoire
+            cours: `Une histoire de la Bible réinventée dans les marais de l’ouest de la France.
+
+## L’autrice et le contexte
+**Sylvie Germain**, née en **1954** à Châteauroux, a étudié la **philosophie** (avec Emmanuel Levinas). Son œuvre, marquée par la **spiritualité** et le **mal**, compte notamment *Le Livre des nuits* (1985) et *Jours de colère* (prix Femina 1989). *Tobie des Marais* paraît en **1998**.
+
+## L’histoire
 Le roman **transpose le Livre de Tobie** — texte de l’**Ancien Testament** — dans le **Marais poitevin contemporain**.
 
 | Personnage | Sa situation |
 | **Tobie Guélène** | Il grandit auprès de son père |
-| **Théodore**, le père | **Veuf inconsolable** depuis l’**assassinat** de sa femme **Deborah**, dans des circonstances **obscures** |
-| Ce qu’il devient | Il **perd la vue et la raison** |
+| **Théodore**, le père | **Veuf inconsolable** depuis la mort de sa femme **Anna**, **décapitée** par un fil tendu lors d’une **sortie à cheval** — sa tête n’est jamais retrouvée |
+| Ce qu’il devient | Frappé d’une **attaque cérébrale**, il **sombre** — une **cécité** de l’esprit, écho de l’aveuglement du Tobit biblique |
 | **Raphaël** | Le **compagnon mystérieux** du voyage |
-| **Sara** | Marquée par une **malédiction** : **plusieurs de ses fiancés sont morts** |
+| **Sarra** | Marquée par une **malédiction** : **depuis ses treize ans, tous ses amoureux sont morts accidentellement** |
 
 | Étape | Ce qui se passe |
 | Le départ | Tobie est envoyé **récupérer une dette lointaine** |
 | Le voyage | Avec **Raphaël** et **un chien** |
 | Le rôle de l’ange | Il **guide**, **protège**, **guérit** |
-| Le retour | Il **rend la vue au père** |
+| Le retour | Il **rend au père le goût de vivre** : Théodore sort enfin de son deuil |
 
 ## À retenir
 Sylvie Germain écrit une **réécriture qui n’explique jamais le surnaturel** : **Raphaël est un compagnon comme un autre** — **la lecture reste ouverte**.
@@ -1522,13 +2116,24 @@ Sylvie Germain écrit une **réécriture qui n’explique jamais le surnaturel**
 | **Poétique**, très sensible aux **eaux**, aux **brumes**, aux **arbres** du marais | Le **mal**, la **mémoire**, la **parole perdue** |
 | — | La **présence obscure du sacré dans le monde ordinaire** |
 
-> Le sacré n’y est pas au-dessus du monde, il est dedans, à peine visible.`,
+> Le sacré n’y est pas au-dessus du monde, il est dedans, à peine visible.
+
+## Les personnages
+| Personnage | Son rôle |
+| **Déborah** | L’arrière-grand-mère, juive venue de Pologne, mémoire de la famille |
+| **Ragouël** | Le père de Sarra, peintre |
+
+## Le modèle biblique
+Dans le *Livre de Tobie*, le vieux Tobit, aveugle, envoie son fils Tobie récupérer une somme d’argent ; l’ange **Raphaël** l’accompagne, avec un chien ; Tobie épouse **Sara**, dont un démon a tué les sept maris, et guérit son père avec le fiel d’un poisson.
+
+## Pour la dissertation et l’oral
+Un bel exemple de **réécriture** : Sylvie Germain garde la trame et les noms, mais transporte le récit à notre époque, dans le **Marais poitevin**.`,
           },
           questions: [
             ['De quel texte le roman est-il la réécriture ?', ['Le Livre de Tobie, dans l’Ancien Testament', 'L’Odyssée', 'Le Livre de Job', 'Les Évangiles'], 0, 'Il en transpose l’intrigue dans le Marais poitevin.'],
             ['Où se déroule le roman ?', ['Dans le Marais poitevin contemporain', 'En Palestine antique', 'En Bretagne', 'À Paris'], 0, 'Les eaux et les brumes du marais nourrissent l’écriture.'],
             ['Qui accompagne Tobie dans son voyage ?', ['Raphaël, un compagnon mystérieux, et un chien', 'Son père Théodore', 'Sara', 'Un prêtre'], 0, 'La figure de l’ange n’est jamais expliquée.'],
-            ['Qu’est-il arrivé à la mère de Tobie ?', ['Elle a été assassinée dans des circonstances obscures', 'Elle est morte en couches', 'Elle a quitté la famille', 'Elle est malade'], 0, 'Le père en devient inconsolable, puis aveugle.'],
+            ['Qu’est-il arrivé à la mère de Tobie ?', ['Elle est morte décapitée dans un accident, lors d’une sortie à cheval', 'Elle est morte en couches', 'Elle a quitté la famille', 'Elle est malade'], 0, 'Sa tête n’est jamais retrouvée : Théodore, qui ne peut l’enterrer entière, sombre dans le deuil.'],
             ['Comment le roman traite-t-il le surnaturel ?', ['Sans jamais l’expliquer : la lecture reste ouverte', 'Il le nie', 'Il le démontre', 'Il le tourne en dérision'], 0, 'Le sacré est présent dans le monde ordinaire, à peine visible.'],
             ['Le mal et la mémoire sont des thèmes constants chez Sylvie Germain.', ['Vrai', 'Faux'], 0, 'Ils traversent toute son œuvre, avec la question de la parole perdue.'],
           ],
@@ -1537,7 +2142,12 @@ Sylvie Germain écrit une **réécriture qui n’explique jamais le surnaturel**
           titre: 'Tous les matins du monde, Pascal Quignard',
           lecon: {
             titre: 'Quignard, 1991 — la musique contre le monde',
-            cours: `## L’histoire
+            cours: `Un court roman sur la musique, le deuil et le silence, dans la France du Grand Siècle.
+
+## L’auteur et le contexte
+**Pascal Quignard**, né en **1948**, écrivain érudit et musicien, auteur de *Petits traités* et des *Ombres errantes* (prix **Goncourt 2002**). *Tous les matins du monde* paraît en **1991**. Sainte Colombe et Marin Marais ont réellement existé : ce sont deux maîtres de la viole au XVIIe siècle, mais on sait très peu de la vie du premier.
+
+## L’histoire
 France, **XVIIe siècle**.
 
 | Personnage | Sa position |
@@ -1561,7 +2171,20 @@ Roman **bref**, en **chapitres très courts**, écrit dans une **langue sèche e
 
 Le film d’**Alain Corneau** (1991), avec la musique de **Jordi Savall**, a fait connaître le livre au monde entier.
 
-> « La musique est simplement là pour parler de ce dont la parole ne peut parler. »`,
+> « La musique est simplement là pour parler de ce dont la parole ne peut parler. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Madeleine** et **Toinette** | Les filles de Sainte Colombe, musiciennes |
+| Madeleine | Aimée puis abandonnée par Marin Marais, elle finit par se pendre |
+| Le peintre **Baugin** | Ami de Sainte Colombe, il peint une nature morte aux gaufrettes |
+
+## Les thèmes
+Le **deuil**, l’**art** et l’**ambition**, le **silence**, la **transmission** entre maître et élève.
+
+## Pour la dissertation et l’oral
+1. Oppose les deux musiciens : l’**artiste retiré** et l’**artiste de cour**.
+2. Utile pour un sujet sur l’**art** et la **mort**.`,
           },
           questions: [
             ['De quel instrument joue Monsieur de Sainte Colombe ?', ['La viole de gambe', 'Le clavecin', 'Le violon', 'Le luth'], 0, 'Il joue seul, dans une cabane au fond de son jardin.'],
@@ -1576,7 +2199,12 @@ Le film d’**Alain Corneau** (1991), avec la musique de **Jordi Savall**, a fai
           titre: 'Traité sur la tolérance, Voltaire',
           lecon: {
             titre: 'Voltaire, 1763 — l’affaire Calas',
-            cours: `## Le contexte : l’affaire Calas
+            cours: `Un livre de combat, écrit pour réhabiliter un innocent et défendre la liberté de croire.
+
+## L’auteur et le contexte
+**Voltaire** (1694-1778), installé à **Ferney**, près de Genève, est alors l’écrivain le plus célèbre d’Europe (*Candide*, 1759). Au XVIIIe siècle, depuis la **révocation de l’édit de Nantes** (1685), les protestants français n’ont plus d’existence légale. Voltaire s’engage aussi dans l’affaire **Sirven** et l’affaire du **chevalier de La Barre**.
+
+## Le contexte : l’affaire Calas
 | Étape | Ce qui se passe |
 | **Toulouse, 1761** | **Marc-Antoine Calas** est retrouvé **pendu** chez son père |
 | La rumeur | La famille est **protestante** : on accuse le père, **Jean Calas**, d’avoir **tué son fils pour l’empêcher de se convertir** |
@@ -1601,7 +2229,21 @@ Le texte **fondateur** du combat pour la **tolérance** et pour la **justice**.
 
 > Et un **modèle d’engagement** : Voltaire y **invente le rôle de l’intellectuel** qui **prend une cause particulière pour en faire une question universelle**.
 
-> « Écrasons l’infâme. » (formule de sa correspondance, devenue son mot d’ordre)`,
+> « Écrasons l’infâme. » (formule de sa correspondance, devenue son mot d’ordre)
+
+## Les figures
+| Figure | Son rôle |
+| **Jean Calas** | Le marchand protestant, victime d’une erreur judiciaire |
+| **Marc-Antoine** | Le fils retrouvé mort |
+| Les **juges de Toulouse** | Le fanatisme au pouvoir |
+| **Voltaire** | L’avocat de l’opinion |
+
+## Les thèmes
+Le **fanatisme**, la **justice**, la **liberté de conscience**, la **raison**.
+
+## Pour la dissertation et l’oral
+1. Le livre mêle **récit**, **argumentation** et **ironie**.
+2. Un exemple majeur pour tout sujet sur l’**engagement** de l’écrivain, avant Hugo et Zola (*J’accuse*, 1898).`,
           },
           questions: [
             ['Quelle affaire judiciaire a déclenché le Traité ?', ['L’affaire Calas, à Toulouse', 'L’affaire du chevalier de La Barre', 'L’affaire Sirven', 'L’affaire du collier'], 0, 'Jean Calas fut roué vif en 1762, sans preuve.'],
@@ -1616,7 +2258,12 @@ Le texte **fondateur** du combat pour la **tolérance** et pour la **justice**.
           titre: 'Tristan et Iseult',
           lecon: {
             titre: 'XIIe siècle — le philtre et la faute',
-            cours: `## L’œuvre
+            cours: `Le grand mythe de l’amour-passion, né au Moyen Âge.
+
+## Le contexte
+La légende vient de la **tradition celte** (Cornouailles, Irlande, Bretagne). Au **XIIe siècle**, la cour d’**Aliénor d’Aquitaine** et les cours du nord de la France aiment les récits bretons, ou « matière de Bretagne », comme ceux du roi Arthur. Ces textes sont écrits en **vers** et destinés à être **lus à voix haute**.
+
+## L’œuvre
 Il n’existe **pas UN Tristan**, mais des **versions fragmentaires** du **XIIe siècle**.
 
 | Version | Sa langue |
@@ -1642,7 +2289,20 @@ Il n’existe **pas UN Tristan**, mais des **versions fragmentaires** du **XIIe 
 
 Le récit fonde le **mythe occidental de la passion contre la loi** — **Denis de Rougemont**, *L’Amour et l’Occident*.
 
-> « Ni vous sans moi, ni moi sans vous. »`,
+> « Ni vous sans moi, ni moi sans vous. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Tristan** | Le chevalier, vainqueur du **Morholt** d’Irlande |
+| **Iseult la Blonde** | La reine, guérisseuse |
+| Le **roi Marc** | L’oncle trahi, partagé entre colère et tendresse |
+| **Brangien** | La servante, responsable du philtre |
+| Les **barons félons** et le nain **Frocin** | Les ennemis qui guettent les amants |
+
+## Pour la dissertation et l’oral
+1. Dans la forêt, Marc trouve les amants endormis, **séparés par une épée**, et les épargne.
+2. La passion y **s’oppose** à l’amour courtois : elle ne connaît ni loi ni mesure.
+3. Réécritures : l’opéra de **Wagner** (1865).`,
           },
           questions: [
             ['Sous quelle forme le récit nous est-il parvenu ?', ['En versions fragmentaires du XIIe siècle, reconstituées ensuite', 'En un roman unique et complet', 'Uniquement par la tradition orale', 'Par une chanson de geste'], 0, 'Béroul, Thomas et Marie de France ; reconstitution de Bédier en 1900.'],
@@ -1657,13 +2317,18 @@ Le récit fonde le **mythe occidental de la passion contre la loi** — **Denis 
           titre: 'Tropismes, Nathalie Sarraute',
           lecon: {
             titre: 'Sarraute, 1939 — vingt-quatre textes qui inventent une méthode',
-            cours: `## L’œuvre
+            cours: `De courts textes qui décrivent ce qui se passe en nous avant que nous parlions.
+
+## L’autrice et le contexte
+**Nathalie Sarraute** (1900-1999), née en **Russie**, arrivée enfant à Paris, avocate jusqu’en 1940. Elle écrit ces textes à partir de **1932**. **Sartre** la salue dans sa préface à son roman *Portrait d’un inconnu* (1948), et elle devient une figure majeure du **Nouveau Roman**, avec Robbe-Grillet et Butor.
+
+## L’œuvre
 **Premier livre** de **Nathalie Sarraute**, publié en **1939** et **passé totalement inaperçu**.
 
 > **Réédité en 1957**, il devient un **texte de référence du Nouveau Roman**.
 
 | La forme | Le détail |
-| **Vingt-quatre textes brefs** | **Sans intrigue** ni personnages nommés : « **ils** », « **elle** », « **on** » |
+| **Vingt-quatre textes brefs** dans l’édition de 1957 (dix-neuf en 1939) | **Sans intrigue** ni personnages nommés : « **ils** », « **elle** », « **on** » |
 
 ## Les tropismes
 Le mot vient de la **biologie** : **mouvements élémentaires d’un organisme vers une source de lumière ou de chaleur**.
@@ -1685,7 +2350,16 @@ Chaque texte **isole un de ces mouvements** : une visite, une conversation de sa
 ## À retenir
 Sarraute a construit **toute son œuvre** — romans, essais (*L’Ère du soupçon*, 1956), théâtre (*Pour un oui ou pour un non*) — **sur cette découverte initiale**.
 
-> « Ces mouvements… glissent très rapidement aux limites de notre conscience. »`,
+> Ce sont « des mouvements indéfinissables, qui glissent très rapidement aux limites de notre conscience » (préface de *L’Ère du soupçon*, 1956).
+
+## Les thèmes
+Les **relations** sociales, l’**incommunicabilité**, les **clichés** du langage, la **peur** et la **cruauté** ordinaires.
+
+## Pour la dissertation et l’oral
+1. Le livre remet en cause le **personnage** classique : ni nom, ni portrait, ni histoire.
+2. Pour un sujet sur le **roman au XXe siècle**, cite *L’Ère du soupçon* : le lecteur ne croit plus aux personnages.
+3. Le **présent** et l’**imparfait** installent des scènes sans début ni fin.
+4. Rapprochement : **Proust**, qui analysait déjà les mouvements infimes de l’esprit.`,
           },
           questions: [
             ['En quelle année Tropismes a-t-il paru ?', ['1939, dans l’indifférence générale', '1957', '1926', '1968'], 0, 'La réédition de 1957 lui donnera son statut.'],
@@ -1700,7 +2374,12 @@ Sarraute a construit **toute son œuvre** — romans, essais (*L’Ère du soup�
           titre: 'Un Balcon en forêt, Julien Gracq',
           lecon: {
             titre: 'Gracq, 1958 — la drôle de guerre dans les Ardennes',
-            cours: `## L’histoire
+            cours: `L’attente d’une guerre qui ne vient pas, dans une forêt magique.
+
+## L’auteur et le contexte
+**Julien Gracq** (1910-2007), de son vrai nom **Louis Poirier**, professeur d’histoire-géographie, auteur du *Rivage des Syrtes* (1951). *Un balcon en forêt* paraît en **1958**. Gracq a lui-même été mobilisé en 1939 et fait prisonnier en 1940 : le roman puise dans son expérience.
+
+## L’histoire
 **Automne 1939.** L’aspirant **Grange** est affecté dans les **Ardennes**, à la tête d’une « **maison forte** » — un **blockhaus perdu dans la forêt**, avec **trois hommes**.
 
 | Période | Ce qui s’y passe |
@@ -1718,7 +2397,20 @@ Le grand roman de l’**attente** et du **désastre**.
 
 > Il avait **refusé le prix Goncourt** en **1951** pour *Le Rivage des Syrtes*, **après un pamphlet contre le milieu littéraire** — *La Littérature à l’estomac*.
 
-> « Il lui semblait que la guerre était une longue rêverie que l’on faisait les yeux ouverts. »`,
+> La drôle de guerre y devient une **longue rêverie éveillée**, que l’offensive brise d’un coup.
+
+## Les personnages
+| Personnage | Son rôle |
+| **Grange** | L’aspirant rêveur, heureux dans l’attente |
+| **Mona** | La jeune femme libre et enfantine des Falizes |
+| **Olivon**, **Hervouët**, **Gourcuff** | Les trois soldats de la maison forte |
+| Le **capitaine Varin** | Le supérieur lucide, qui sait que rien ne tiendra |
+
+## Les thèmes
+L’**attente**, la **guerre**, la **nature**, l’**amour** hors du temps, la **mort** qui vient.
+
+## Pour la dissertation et l’oral
+Un roman de **guerre sans combat** : utile pour un sujet sur le roman qui ne raconte pas d’action, ou sur la **description** poétique.`,
           },
           questions: [
             ['Où et quand se déroule le roman ?', ['Dans les Ardennes, de l’automne 1939 à mai 1940', 'En Alsace, en 1914', 'En Normandie, en 1944', 'Dans les Alpes, en 1940'], 0, 'C’est la période dite de la drôle de guerre.'],
@@ -1733,7 +2425,12 @@ Le grand roman de l’**attente** et du **désastre**.
           titre: 'Un Barrage contre le Pacifique, Marguerite Duras',
           lecon: {
             titre: 'Duras, 1950 — la concession incultivable',
-            cours: `## L’histoire
+            cours: `Une mère se bat contre la mer et contre l’administration : un roman de la misère coloniale.
+
+## L’autrice et le contexte
+**Marguerite Duras** (1914-1996), née près de **Saïgon**, en Indochine française, où elle vit jusqu’à dix-huit ans. Sa mère, institutrice, avait acheté une concession au **Cambodge**, inondée chaque année. *Un barrage contre le Pacifique* paraît en **1950**. Duras deviendra une figure majeure du roman et du cinéma (*Hiroshima mon amour*, scénario de 1959).
+
+## L’histoire
 **Indochine française**, années **1930**.
 
 | Personnage | Sa situation |
@@ -1757,7 +2454,15 @@ Roman largement **autobiographique** : Duras a **vécu cette enfance** — et y 
 
 Écriture **encore classique** — mais **déjà tendue par la répétition et le ressassement**.
 
-> « Elle avait cru qu’on pouvait faire quelque chose contre le Pacifique. »`,
+> La mère a cru pouvoir **tenir tête au Pacifique** : toute sa vie s’est brisée contre cette illusion.
+
+## Les thèmes
+L’**injustice** coloniale, la **misère**, l’**argent**, la **famille** étouffante, le **désir** de partir, la **révolte**.
+
+## Pour la dissertation et l’oral
+1. La **mère** est un personnage tragique : sa lutte contre la mer est **héroïque et vaine**.
+2. Suzanne est **regardée**, et marchandée : le roman montre le **corps féminin** comme monnaie d’échange.
+3. Utile pour un sujet sur le roman et la **dénonciation**, ou sur l’**autobiographie** réécrite.`,
           },
           questions: [
             ['Qu’a acheté la mère à l’administration coloniale ?', ['Une concession régulièrement envahie par la mer', 'Une plantation d’hévéas prospère', 'Une maison à Saigon', 'Un bateau'], 0, 'L’administration corrompue lui a vendu une terre incultivable.'],
@@ -1772,8 +2477,13 @@ Roman largement **autobiographique** : Duras a **vécu cette enfance** — et y 
           titre: 'Une Saison en Enfer, Arthur Rimbaud',
           lecon: {
             titre: 'Rimbaud, 1873 — le seul livre qu’il ait publié lui-même',
-            cours: `## L’œuvre
-Écrit à **dix-huit ans**, **après la rupture violente avec Verlaine** — les **coups de feu de Bruxelles** —, et publié **à compte d’auteur** à Bruxelles en **1873**.
+            cours: `Le seul livre publié par Rimbaud : un bilan de sa vie et de sa poésie, à dix-huit ans.
+
+## L’auteur et le contexte
+**Arthur Rimbaud** (1854-1891), né à **Charleville**, écrit ses premiers poèmes au lycée, puis *Le Bateau ivre* (1871). Dans la **Lettre du voyant** (1871), il veut devenir voyant « par un long, immense et raisonné **dérèglement de tous les sens** ». Il rejoint Verlaine à Paris en 1871 ; commence leur vie errante.
+
+## L’œuvre
+Écrit à **dix-huit ans**, d’avril à août 1873, **achevé après la rupture violente avec Verlaine** — les **coups de feu de Bruxelles** —, et publié **à compte d’auteur** à Bruxelles en **1873**.
 
 > C’est le **seul livre** que Rimbaud ait **lui-même mené à la publication**. Il **n’en retirera presque aucun exemplaire de l’imprimeur**.
 
@@ -1799,11 +2509,19 @@ C’est un **bilan** — **et une rupture**.
 
 > Après quoi **il cessera d’écrire** : départs, Chypre, l’**Abyssinie**, le **commerce des armes** — et la mort à **trente-sept ans**.
 
-> « Il faut être absolument moderne. »`,
+> « Il faut être absolument moderne. »
+
+## Les thèmes
+La **révolte**, l’**enfer** et le **salut**, la **quête** d’une langue nouvelle, l’**échec**, l’**adieu** à la poésie.
+
+## Pour la dissertation et l’oral
+1. Un texte en **prose poétique** : rythmes brisés, exclamations, formules.
+2. « Alchimie du verbe » cite ses propres poèmes antérieurs pour les **juger**.
+3. Les *Illuminations*, publiées par Verlaine en 1886, prolongent cette recherche.`,
           },
           questions: [
             ['Quelle particularité éditoriale ce livre présente-t-il ?', ['C’est le seul que Rimbaud ait publié lui-même', 'Il a été publié par Verlaine', 'Il est posthume', 'Il a paru en revue seulement'], 0, 'À compte d’auteur, à Bruxelles, en 1873.'],
-            ['Quel épisode biographique précède l’écriture ?', ['La rupture violente avec Verlaine à Bruxelles', 'Son départ pour l’Abyssinie', 'La Commune de Paris', 'Son entrée au lycée'], 0, 'Verlaine avait tiré sur lui.'],
+            ['Quel épisode biographique précède l’achèvement du livre ?', ['La rupture violente avec Verlaine à Bruxelles', 'Son départ pour l’Abyssinie', 'La Commune de Paris', 'Son entrée au lycée'], 0, 'Commencé au printemps 1873, le livre est achevé en août, après que Verlaine a tiré sur lui à Bruxelles.', 'Quel épisode biographique précède l’écriture ?'],
             ['Que fait Rimbaud dans « Alchimie du verbe » ?', ['Il raconte et juge sa propre entreprise poétique', 'Il décrit un voyage', 'Il attaque ses contemporains', 'Il traduit un texte latin'], 0, 'C’est un bilan critique de son projet de voyant.'],
             ['Quelle formule célèbre le livre contient-il ?', ['« Il faut être absolument moderne »', '« Je est un autre »', '« La beauté sera convulsive »', '« Changer la vie »'], 0, 'Elle figure dans la section « Adieu ».'],
             ['Que fait Rimbaud après ce livre ?', ['Il cesse peu à peu d’écrire et part à l’étranger', 'Il publie dix recueils', 'Il devient critique', 'Il enseigne à Paris'], 0, 'Chypre, l’Abyssinie, le commerce ; il meurt à trente-sept ans.'],
@@ -1814,7 +2532,12 @@ C’est un **bilan** — **et une rupture**.
           titre: 'Une Vie, Guy de Maupassant',
           lecon: {
             titre: 'Maupassant, 1883 — « l’humble vérité »',
-            cours: `## L’histoire
+            cours: `La vie d’une femme de sa jeunesse à sa vieillesse : une suite de désillusions.
+
+## L’auteur et le contexte
+**Guy de Maupassant** (1850-1893), élève de **Flaubert**, publie *Une vie* en **1883**. L’action se déroule en **Normandie**, sa région natale, entre **1819** et le milieu du siècle. Le roman est réaliste : il peint la **vie ordinaire**, sans héros ni grandes aventures.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | Le départ | **Jeanne**, fille du baron Le Perthuis des Vauds, sort du couvent **pleine de rêves** et s’installe au château des **Peuples**, en Normandie |
 | Le mariage | **Julien de Lamare** : **séduisant et avare**, il la **déçoit dès le voyage de noces** |
@@ -1832,7 +2555,20 @@ C’est un **bilan** — **et une rupture**.
 | **Flaubert**, son maître | On a souvent rapproché **Jeanne d’Emma Bovary** |
 | La différence | **Jeanne ne se révolte jamais** |
 
-> « La vie, voyez-vous, ça n’est jamais si bon ni si mauvais qu’on croit. »`,
+> « La vie, voyez-vous, ça n’est jamais si bon ni si mauvais qu’on croit. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Jeanne** | L’héroïne, naïve et bonne |
+| Le **baron** et la **baronne** | Les parents, généreux mais faibles |
+| **Tante Lison** | La vieille fille effacée |
+| L’abbé **Tolbiac** | Le prêtre fanatique |
+
+## Les thèmes
+Le **désenchantement**, le **temps** qui use, le **mariage**, la **maternité**.
+
+## Pour la dissertation et l’oral
+Un exemple de **roman réaliste** : utile pour montrer que le roman peut tenir **sans héroïsme**.`,
           },
           questions: [
             ['Comment Maupassant sous-titre-t-il son roman ?', ['« L’humble vérité »', '« Mœurs de province »', '« Chronique de 1880 »', '« Scènes normandes »'], 0, 'Le programme réaliste est annoncé dès le titre.'],
@@ -1847,7 +2583,12 @@ C’est un **bilan** — **et une rupture**.
           titre: 'Vendredi ou les Limbes du Pacifique, Michel Tournier',
           lecon: {
             titre: 'Tournier, 1967 — Robinson retourné',
-            cours: `## L’histoire
+            cours: `Robinson Crusoé revu à l’envers : c’est le sauvage qui enseigne.
+
+## L’auteur et le contexte
+**Michel Tournier** (1924-2016), agrégatif de philosophie, élève de l’ethnologue **Claude Lévi-Strauss**. *Vendredi ou les Limbes du Pacifique* (1967) est son premier roman : il reçoit le **Grand Prix du roman de l’Académie française**. Il obtient ensuite le prix **Goncourt** avec *Le Roi des Aulnes* (1970).
+
+## L’histoire
 Réécriture du *Robinson Crusoé* de **Defoe**. Naufragé sur l’île de **Speranza**.
 
 | Étape | Ce que fait Robinson |
@@ -1870,7 +2611,20 @@ Roman **philosophique** — **Tournier était philosophe de formation** —, nou
 
 > Une version **pour la jeunesse**, *Vendredi ou la Vie sauvage* (**1971**), est **encore plus lue que l’original**.
 
-> « L’autre est la pièce maîtresse de notre univers. »`,
+> Robinson découvre qu’**autrui** est indispensable à son rapport au monde : sans l’autre, son univers se défait.
+
+## Les personnages
+| Personnage | Son rôle |
+| **Robinson** | Le naufragé, Anglais pieux et méthodique |
+| **Vendredi** | L’Araucan joyeux, libre et inventif |
+| **Speranza** | L’île elle-même, presque vivante |
+| **Andoar** | Le vieux bouc que Vendredi combat |
+
+## Les thèmes
+La **solitude**, l’**autre**, la **civilisation**, la **nature**, le **temps**.
+
+## Pour la dissertation et l’oral
+Un modèle de **réécriture** : le mythe de Robinson est **inversé**. Robinson tient un **log-book** : la voix du journal alterne avec le récit.`,
           },
           questions: [
             ['De quel roman ce livre est-il la réécriture ?', ['Robinson Crusoé de Defoe', 'L’Île mystérieuse de Verne', 'Sa Majesté des Mouches', 'Le Voyage de Gulliver'], 0, 'Tournier en inverse le sens.'],
@@ -1885,7 +2639,12 @@ Roman **philosophique** — **Tournier était philosophe de formation** —, nou
           titre: 'Vol de nuit, Antoine de Saint-Exupéry',
           lecon: {
             titre: 'Saint-Exupéry, 1931 — le prix du courrier',
-            cours: `## L’histoire
+            cours: `Une nuit dans les bureaux et dans le ciel : le prix à payer pour que passe le courrier.
+
+## L’auteur et le contexte
+**Antoine de Saint-Exupéry** (1900-1944) dirige de **1929 à 1931** l’**Aeroposta Argentina**, filiale de l’Aéropostale en Amérique du Sud, et ouvre des lignes vers la **Patagonie**. Les vols de nuit, encore très dangereux, sont alors nouveaux. **Rivière** doit beaucoup à **Didier Daurat**, le directeur d’exploitation de l’Aéropostale.
+
+## L’histoire
 Amérique du Sud, aux débuts de l’**Aéropostale**. **Trois courriers de nuit** convergent vers **Buenos Aires** : Patagonie, Chili, Paraguay.
 
 | Personnage | Sa position |
@@ -1909,7 +2668,21 @@ Amérique du Sud, aux débuts de l’**Aéropostale**. **Trois courriers de nuit
 
 Saint-Exupéry écrivait **d’expérience** : **il était pilote de ligne**.
 
-> « Nous demandons d’être éternels, et nous ne le sommes pas. »`,
+> « Nous ne demandons pas à être éternels, mais à ne pas voir les actes et les choses tout à coup perdre leur sens. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Rivière** | Le chef inflexible |
+| **Fabien** | Le pilote perdu dans l’orage |
+| La **femme** de Fabien | L’attente, l’amour humain |
+| **Robineau** | L’inspecteur, tenté par l’amitié |
+| **Pellerin** | Le pilote qui a traversé les Andes |
+
+## Les thèmes
+Le **devoir**, l’**action**, la **mort**, la **solitude du chef**, le **bonheur** individuel contre l’œuvre collective.
+
+## Pour la dissertation et l’oral
+Utile pour un sujet sur le **héros** : Rivière est-il un tyran ou un héros ?`,
           },
           questions: [
             ['Où se déroule le roman ?', ['En Amérique du Sud, aux débuts de l’Aéropostale', 'En Afrique du Nord', 'En France', 'Aux États-Unis'], 0, 'Trois courriers de nuit convergent vers Buenos Aires.'],
@@ -1924,7 +2697,12 @@ Saint-Exupéry écrivait **d’expérience** : **il était pilote de ligne**.
           titre: 'Voyage au bout de la nuit, Louis-Ferdinand Céline',
           lecon: {
             titre: 'Céline, 1932 — la langue parlée entre en littérature',
-            cours: `## L’histoire
+            cours: `Le voyage d’un antihéros à travers la guerre, les colonies, l’usine et la misère.
+
+## L’auteur et le contexte
+**Louis-Ferdinand Céline** (1894-1961), de son vrai nom Louis-Ferdinand **Destouches**, blessé en **1914**, puis **médecin** des pauvres en banlieue parisienne, à **Clichy**. *Voyage au bout de la nuit* paraît en **1932**. Collaborationniste pendant l’Occupation, il fuit en Allemagne puis au Danemark en 1944.
+
+## L’histoire
 | Étape | Ce que Bardamu y découvre |
 | **1914** | Il s’engage **sur un coup de tête** — et découvre l’**horreur absurde de la guerre** |
 | L’**Afrique** coloniale | Chaleur, fièvre, **exploitation** |
@@ -1951,7 +2729,21 @@ Saint-Exupéry écrivait **d’expérience** : **il était pilote de ligne**.
 
 > L’œuvre romanesque **se lit sans jamais l’ignorer**.
 
-> « Voyager, c’est bien utile, ça fait travailler l’imagination. »`,
+> « Voyager, c’est bien utile, ça fait travailler l’imagination. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Ferdinand Bardamu** | Le narrateur, lâche, lucide et désespéré |
+| **Robinson** | Le double, qui échoue partout |
+| **Lola** | L’infirmière américaine rencontrée à Paris |
+| **Molly** | La prostituée de Détroit, la seule vraiment bonne |
+| **Madelon** | La fiancée jalouse de Robinson |
+
+## Les thèmes
+La **guerre**, la **peur**, la **mort**, la **misère**, la **lâcheté** assumée, la **nuit**.
+
+## Pour la dissertation et l’oral
+Un roman **picaresque** : un personnage traverse des milieux et les juge.`,
           },
           questions: [
             ['Quelles étapes le voyage de Bardamu comporte-t-il ?', ['La guerre, l’Afrique coloniale, les États-Unis, la banlieue parisienne', 'L’Espagne, l’Italie, la Grèce', 'La Russie et la Chine', 'Uniquement Paris'], 0, 'Chaque étape révèle un visage du même mensonge.'],
@@ -1966,7 +2758,12 @@ Saint-Exupéry écrivait **d’expérience** : **il était pilote de ligne**.
           titre: 'Voyage au centre de la Terre, Jules Verne',
           lecon: {
             titre: 'Verne, 1864 — descendre par un volcan',
-            cours: `## L’histoire
+            cours: `Un voyage scientifique jusque dans les profondeurs de la Terre.
+
+## L’auteur et le contexte
+**Jules Verne** (1828-1905), né à **Nantes**, publie *Voyage au centre de la Terre* en **1864**, chez l’éditeur **Pierre-Jules Hetzel**. C’est le temps des grands débats sur l’**âge de la Terre** et les **fossiles**. Verne écrira plus de soixante romans : *Vingt mille lieues sous les mers*, *Le Tour du monde en quatre-vingts jours*.
+
+## L’histoire
 | Étape | Ce qui se passe |
 | La découverte | À Hambourg, le professeur **Otto Lidenbrock** trouve dans un manuscrit islandais un **cryptogramme** signé de l’alchimiste **Arne Saknussemm** |
 | Le message | Il indique un **passage vers le centre de la Terre** par le cratère du volcan **Sneffels**, en **Islande** |
@@ -1993,7 +2790,20 @@ L’un des premiers **Voyages extraordinaires**.
 
 > Le motif de la **descente** a nourri **toute la science-fiction et le cinéma**.
 
-> « Descends dans le cratère du Yocul de Sneffels… audacieux voyageur, et tu parviendras au centre de la Terre. »`,
+> « Descends dans le cratère du Yocul de Sneffels que l’ombre du Scartaris vient caresser avant les calendes de Juillet, voyageur audacieux, et tu parviendras au centre de la Terre. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Otto Lidenbrock** | Professeur de minéralogie, colérique |
+| **Axel** | Le narrateur, qui a peur mais suit |
+| **Hans Bjelke** | Le guide islandais, silencieux |
+| **Graüben** | La fiancée d’Axel, restée à Hambourg |
+
+## Les thèmes
+La **science**, l’**aventure**, le **temps** géologique, le **courage**, le **mystère**.
+
+## Pour la dissertation et l’oral
+Axel, perdu seul dans les galeries, vit une **épreuve** qui ressemble à un **rite de passage**.`,
           },
           questions: [
             ['Comment le voyage est-il décidé ?', ['Un cryptogramme trouvé dans un vieux livre islandais', 'Une carte achetée à Hambourg', 'Un rêve du professeur', 'Une lettre anonyme'], 0, 'Il est signé de l’alchimiste Arne Saknussemm.'],
@@ -2008,7 +2818,12 @@ L’un des premiers **Voyages extraordinaires**.
           titre: 'Zadig ou la Destinée, Voltaire',
           lecon: {
             titre: 'Voltaire, 1747 — la providence en question',
-            cours: `## L’histoire
+            cours: `Un conte oriental où un sage subit tous les malheurs du monde.
+
+## L’auteur et le contexte
+**Voltaire** (1694-1778) publie *Zadig* en **1748** (une première version, *Memnon*, paraît en 1747). Il vit alors à la **cour**, dont il connaît l’envie et les intrigues. Les contes orientaux sont à la mode depuis la traduction des *Mille et Une Nuits* par Galland.
+
+## L’histoire
 **Zadig**, jeune Babylonien **sage, riche et vertueux**, subit une **succession d’injustices** : trahisons amoureuses, procès absurdes, jalousies de cour.
 
 | Épisode | Ce qu’il montre |
@@ -2032,7 +2847,21 @@ L’un des premiers **Voyages extraordinaires**.
 
 Ironie, **rythme rapide**, satire de la **justice**, des **courtisans** et des **querelles religieuses**.
 
-> « Il n’y a point de mal dont il ne naisse un bien. »`,
+> « Il n’y a point de mal dont il ne naisse un bien. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Zadig** | Le sage persécuté |
+| **Astarté** | La reine aimée |
+| **Moabdar** | Le roi jaloux |
+| **Sétoc** | Le marchand qui achète Zadig comme esclave, puis devient son ami |
+| **Jesrad** | L’ange déguisé en ermite |
+
+## Les thèmes
+Le **destin**, la **justice**, la **raison**, la **providence**, le **mal**.
+
+## Pour la dissertation et l’oral
+Un conte **philosophique** : il faut lire les aventures comme des **démonstrations**.`,
           },
           questions: [
             ['Que vaut à Zadig sa fameuse description du chien et du cheval ?', ['Une accusation de vol', 'Une récompense royale', 'Un poste de juge', 'L’exil immédiat'], 0, 'La page est souvent citée comme un ancêtre du raisonnement policier.'],
@@ -2047,7 +2876,12 @@ Ironie, **rythme rapide**, satire de la **justice**, des **courtisans** et des *
           titre: 'Zazie dans le métro, Raymond Queneau',
           lecon: {
             titre: 'Queneau, 1959 — « Doukipudonktan »',
-            cours: `## L’histoire
+            cours: `Une gamine insolente à Paris : le roman comique qui a fait entrer la langue parlée dans la littérature.
+
+## L’auteur et le contexte
+**Raymond Queneau** (1903-1976), passé par le surréalisme, auteur des *Exercices de style* (1947), publie *Zazie dans le métro* en **1959** : c’est un grand succès. En **1960**, il fonde l’**Oulipo** (Ouvroir de littérature potentielle) avec **François Le Lionnais**. Il défend un « **néo-français** » proche de la langue parlée.
+
+## L’histoire
 **Zazie**, gamine de province **délurée et insolente**, débarque à Paris pour **deux jours** chez son oncle **Gabriel**, **danseur de charme** dans un cabaret.
 
 | Son unique désir | L’obstacle |
@@ -2072,7 +2906,21 @@ Membre fondateur de l’**Oulipo**, il y mêle **jeux de mots**, **parodies**, *
 
 > Adapté au cinéma par **Louis Malle** en **1960**.
 
-> « Doukipudonktan. »`,
+> « Doukipudonktan. »
+
+## Les personnages
+| Personnage | Son rôle |
+| **Zazie** | La gamine au vocabulaire cru |
+| **Gabriel** | L’oncle, grand et doux, qui danse travesti dans un cabaret |
+| **Marceline** | Sa femme, douce et discrète |
+| **Charles** | Le chauffeur de taxi, ami de Gabriel |
+| **Jeanne Lalochère** | La mère de Zazie |
+
+## Les thèmes
+L’**enfance**, la **ville**, le **langage**, l’**identité** changeante, le **jeu**.
+
+## Pour la dissertation et l’oral
+Un exemple d’**humour** et de **jeu sur la langue**.`,
           },
           questions: [
             ['Que veut absolument faire Zazie à Paris ?', ['Prendre le métro', 'Voir la tour Eiffel', 'Rencontrer son père', 'Aller au cinéma'], 0, 'Le métro est justement en grève.'],

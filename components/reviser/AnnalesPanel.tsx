@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { ChevronRight, Clock, FileText, GraduationCap, Scale } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import type { ExamYear } from '@/lib/annales'
+import { cheminAnnale, resumeParties, type AnneeAnnales } from '@/lib/annales-corrigees/apercu'
+import { sigleEpreuve } from '@/lib/annales-corrigees/epreuve'
 import {
   formatCoefficient,
   formatDuration,
@@ -17,9 +19,11 @@ import {
  * nationale (3e, 1re, Tle). Pour ces élèves, le programme n'est pas une fin en
  * soi — c'est une préparation, et l'écran doit le dire.
  *
- * DEUX BLOCS, DANS CET ORDRE. D'abord l'épreuve blanche, qui se joue tout de
- * suite ; ensuite l'épreuve réelle, partie par partie. L'inverse mettrait en
- * tête une fiche à lire là où l'élève est venu s'entraîner.
+ * TROIS BLOCS, DANS CET ORDRE. D'abord l'épreuve blanche, qui se joue tout de
+ * suite ; puis les SUJETS TOMBÉS ET LEUR CORRIGÉ STUDUEL (contenu/annales, une
+ * carte par sujet, la session la plus récente en tête) ; enfin l'épreuve
+ * réelle, partie par partie. L'inverse mettrait en tête une fiche à lire là où
+ * l'élève est venu s'entraîner.
  *
  * CE QUE LE SECOND BLOC MONTRE. Pas un énoncé de sujet tombé, mais la STRUCTURE
  * OFFICIELLE de l'épreuve : durée, coefficient, parties, barème, et les
@@ -36,10 +40,13 @@ export default function AnnalesPanel({
   subject,
   exam,
   papers,
+  annales,
 }: {
   subject: { slug: string; name: string }
   exam: ExamYear
   papers: ExamPaper[]
+  /** Les sujets tombés et leur corrigé Studuel (contenu/annales), par année. */
+  annales: AnneeAnnales[]
 }) {
   const sessions = groupPapersBySession(papers)
 
@@ -80,6 +87,8 @@ export default function AnnalesPanel({
           />
         </Link>
       </section>
+
+      {annales.length > 0 ? <AnnalesCorrigees subject={subject} annales={annales} /> : null}
 
       <section aria-labelledby="sujets-officiels">
         <h2 id="sujets-officiels" className="titre-section">
@@ -200,5 +209,67 @@ function PaperCard({ paper }: { paper: ExamPaper }) {
         ))}
       </ol>
     </article>
+  )
+}
+
+/**
+ * Les sujets réellement tombés, et leur corrigé Studuel. Une carte par sujet :
+ * l'année en billet à gauche (c'est ce qu'on cherche des yeux), le centre, ce
+ * que le sujet contient, et toute la carte mène à l'annale — le sujet et le
+ * corrigé y sont réunis.
+ */
+function AnnalesCorrigees({
+  subject,
+  annales,
+}: {
+  subject: { slug: string; name: string }
+  annales: AnneeAnnales[]
+}) {
+  const total = annales.reduce((n, a) => n + a.annales.length, 0)
+  return (
+    <section aria-labelledby="annales-corrigees">
+      <h2 id="annales-corrigees" className="titre-section">
+        Les sujets tombés, corrigés
+      </h2>
+      <p className="mt-0.5 mb-3 text-sm text-muted-foreground">
+        {total} sujet{total > 1 ? 's' : ''} officiel{total > 1 ? 's' : ''}, chacun avec son
+        corrigé Studuel : compose, puis corrige-toi partie par partie.
+      </p>
+      <ul className="flex flex-col gap-2.5">
+        {annales.flatMap((groupe) =>
+          groupe.annales.map((a) => (
+            <li key={a.id}>
+              <Link
+                href={cheminAnnale(subject.slug, a.id)}
+                onClick={() => sfx.tap()}
+                className="carte group flex items-center gap-3 p-2.5 pr-3.5 transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-px"
+              >
+                <span className="flex h-14 w-15 shrink-0 flex-col items-center justify-center rounded-2xl bg-secondary text-primary">
+                  <span className="text-[9px] font-extrabold tracking-wider uppercase opacity-70">
+                    {sigleEpreuve(a.examen)}
+                  </span>
+                  <span className="font-heading text-lg leading-none font-extrabold">{a.annee}</span>
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="font-heading block truncate text-[15px] leading-tight font-extrabold">
+                    {a.lieu}
+                  </span>
+                  <span className="mt-0.5 block truncate text-xs font-semibold text-muted-foreground">
+                    {resumeParties(a.parties)}
+                  </span>
+                  <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-accent px-2 py-0.5 text-[10.5px] font-extrabold text-[color-mix(in_oklch,var(--highlight),black_45%)]">
+                    Sujet + corrigé
+                  </span>
+                </span>
+                <ChevronRight
+                  className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </Link>
+            </li>
+          )),
+        )}
+      </ul>
+    </section>
   )
 }

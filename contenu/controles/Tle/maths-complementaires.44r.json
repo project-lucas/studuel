@@ -1,0 +1,1221 @@
+{
+  "niveau": "Tle",
+  "matiere": "maths-complementaires",
+  "sujets": [
+    {
+      "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+      "difficulte": 1,
+      "titre": "Deux formules d'épargne",
+      "consigne": "Réponds à chaque question en justifiant tes calculs.",
+      "enonce": "**Situation.** Inès et Karim ont chacun 500 € sur un compte au mois 0.\n\n- Inès ajoute **40 €** chaque mois ; on note u(n) son épargne au mois n.\n- Le compte de Karim augmente de **6 %** chaque mois ; on note v(n) son épargne au mois n.\n\n1. Donne la nature de chaque suite (arithmétique ou géométrique) et sa raison.\n2. Écris le terme général de u et de v, puis calcule u(5) et v(3) (arrondi au centime).\n3. Karim dit : « Si mon compte monte de 6 % puis baisse de 6 %, je retrouve ma somme de départ. » A-t-il raison ? Justifie avec les coefficients multiplicateurs.",
+      "bareme": [
+        {
+          "critere": "Nature et raison des deux suites justifiées (ajout constant / multiplication par 1,06)",
+          "points": 6
+        },
+        {
+          "critere": "Termes généraux corrects, u(5) = 700 et v(3) ≈ 595,51",
+          "points": 8
+        },
+        {
+          "critere": "Évolutions successives composées par produit 1,06 × 0,94 = 0,9964 et conclusion",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. On **ajoute** 40 € chaque mois à l'épargne d'Inès : u est **arithmétique** de raison r = 40. On **multiplie** chaque mois l'épargne de Karim par le coefficient 1 + 6/100 = 1,06 : v est **géométrique** de raison q = 1,06.\n2. u(n) = u(0) + n × r = 500 + 40n, donc u(5) = 500 + 200 = **700 €**.\nv(n) = v(0) × 1,06 puissance n = 500 × 1,06ⁿ, donc v(3) = 500 × 1,191016 ≈ **595,51 €**.\n3. Non. Une hausse de 6 % correspond au coefficient 1,06, une baisse de 6 % au coefficient 0,94. Les évolutions se composent en **multipliant** les coefficients : 1,06 × 0,94 = 0,9964. La somme est multipliée par 0,9964, soit une **baisse de 0,36 %** : Karim ne retrouve pas sa somme de départ (500 × 0,9964 = 498,20 €)."
+    },
+    {
+      "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+      "difficulte": 2,
+      "titre": "Une ville qui se vide",
+      "consigne": "Réponds aux questions en justifiant chaque étape.",
+      "enonce": "**Situation.** Une petite ville compte 20 000 habitants en 2025. Une étude prévoit que sa population va **baisser de 3 % par an**. On note p(n) la population prévue en 2025 + n.\n\n1. Justifie que la suite p est géométrique ; donne sa raison et son terme général.\n2. Calcule la population prévue en 2027. De quel pourcentage la population aura-t-elle baissé entre 2025 et 2027 ?\n3. Que devient p(n) à très long terme d'après ce modèle ? Ce comportement te semble-t-il réaliste pour une ville ? Justifie.\n4. Le maire espère ensuite une hausse de 25 % suivie d'une baisse de 20 %. Montre que la population reviendrait alors exactement à sa valeur de départ.",
+      "bareme": [
+        {
+          "critere": "Suite géométrique de raison 0,97 et terme général p(n) = 20 000 × 0,97ⁿ",
+          "points": 5
+        },
+        {
+          "critere": "p(2) = 18 818 et baisse globale de 5,91 % (coefficient 0,9409)",
+          "points": 6
+        },
+        {
+          "critere": "Limite 0 car 0 < q < 1 et regard critique sur le modèle",
+          "points": 5
+        },
+        {
+          "critere": "Produit des coefficients 1,25 × 0,8 = 1 correctement interprété",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Une baisse de 3 % correspond à une multiplication par 1 − 3/100 = 0,97. Chaque année, p(n+1) = 0,97 × p(n) : p est **géométrique** de raison **q = 0,97** et de premier terme p(0) = 20 000. Terme général : **p(n) = 20 000 × 0,97ⁿ**.\n2. p(2) = 20 000 × 0,97² = 20 000 × 0,9409 = **18 818 habitants**. Le coefficient global est 0,9409 = 1 − 0,0591 : la population a baissé de **5,91 %** (et non de 6 % : on multiplie les coefficients, on n'additionne pas les pourcentages).\n3. La raison vérifie 0 < q < 1 : la suite **tend vers 0**. Le modèle prévoit donc la disparition progressive de la ville. Ce n'est pas réaliste à très long terme : une baisse de 3 % par an ne dure pas indéfiniment (arrivées de nouveaux habitants, politique de la ville…). Le modèle n'est valable que sur quelques années.\n4. Une hausse de 25 % correspond au coefficient 1,25 et une baisse de 20 % au coefficient 0,8. Le coefficient global est 1,25 × 0,8 = **1** : la population est multipliée par 1, elle revient exactement à sa valeur de départ. À l'inverse, une hausse de 20 % suivie d'une baisse de 20 % donnerait 1,2 × 0,8 = 0,96."
+    },
+    {
+      "chapitre": "0df44c0c-64c7-58d6-ac06-86978d6d826b",
+      "difficulte": 3,
+      "titre": "Les truites du lac de Montfaucon",
+      "consigne": "Traite les questions dans l'ordre en justifiant chaque résultat.",
+      "enonce": "**Situation.** Au 1er janvier 2026, un lac contient 1 000 truites. Chaque année, la pêche et les prédateurs font **disparaître 20 %** des truites, puis la fédération de pêche **relâche 300 truites**. On note u(n) le nombre de truites au 1er janvier 2026 + n, avec u(0) = 1 000.\n\n1. Justifie que u(n+1) = 0,8 × u(n) + 300, puis calcule u(1) et u(2).\n2. La suite u est-elle arithmétique ? géométrique ? Justifie.\n3. Détermine le point fixe L, solution de L = 0,8 × L + 300.\n4. On pose v(n) = u(n) − L. Montre que v est géométrique ; précise sa raison et v(0).\n5. En déduire u(n) en fonction de n, puis vérifie ta formule avec u(2).\n6. Que devient le nombre de truites à long terme ? Le lac dépassera-t-il un jour ce nombre ? Interprète.",
+      "bareme": [
+        {
+          "critere": "Relation de récurrence justifiée, u(1) = 1 100 et u(2) = 1 180",
+          "points": 4
+        },
+        {
+          "critere": "Suite ni arithmétique ni géométrique, justifiée par les écarts et les quotients",
+          "points": 3
+        },
+        {
+          "critere": "Point fixe L = 1 500 et v géométrique de raison 0,8 démontré, v(0) = −500",
+          "points": 6
+        },
+        {
+          "critere": "Formule u(n) = 1 500 − 500 × 0,8ⁿ et vérification",
+          "points": 3
+        },
+        {
+          "critere": "Limite 1 500 justifiée (0 < 0,8 < 1), jamais dépassée, interprétée comme un équilibre",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Perdre 20 % revient à multiplier par 0,8, puis on ajoute 300 : **u(n+1) = 0,8 u(n) + 300**. u(1) = 0,8 × 1 000 + 300 = **1 100** ; u(2) = 0,8 × 1 100 + 300 = **1 180**.\n2. u(1) − u(0) = 100 et u(2) − u(1) = 80 : les écarts ne sont pas constants, u n'est **pas arithmétique**. u(1)/u(0) = 1,1 et u(2)/u(1) ≈ 1,073 : les quotients ne sont pas constants, u n'est **pas géométrique**. C'est une suite **arithmético-géométrique**.\n3. L = 0,8L + 300 ⇔ 0,2L = 300 ⇔ **L = 1 500**.\n4. v(n+1) = u(n+1) − 1 500 = 0,8 u(n) + 300 − 1 500 = 0,8 u(n) − 1 200 = 0,8 (u(n) − 1 500) = 0,8 v(n). La suite v est **géométrique de raison 0,8**, de premier terme v(0) = 1 000 − 1 500 = **−500**.\n5. v(n) = −500 × 0,8ⁿ, donc **u(n) = v(n) + L = 1 500 − 500 × 0,8ⁿ**. Vérification : u(2) = 1 500 − 500 × 0,64 = 1 500 − 320 = 1 180. ✓\n6. Comme 0 < 0,8 < 1, 0,8ⁿ tend vers 0, donc u(n) **tend vers 1 500**. Et 500 × 0,8ⁿ est toujours strictement positif : u(n) < 1 500 pour tout n, le lac **ne dépasse jamais** 1 500 truites. **Interprétation** : la population augmente et se stabilise vers un équilibre de 1 500 truites, où les 20 % de pertes (300 truites) compensent exactement les 300 truites relâchées."
+    },
+    {
+      "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+      "difficulte": 1,
+      "titre": "Deux modèles pour une application",
+      "consigne": "Réponds en justifiant, et donne les valeurs arrondies au dixième si besoin.",
+      "enonce": "**Situation.** Une application compte 200 utilisateurs au lancement (étape 0). Deux modèles sont proposés :\n\n- **Modèle A** : on gagne **15 utilisateurs** à chaque étape ; a(n) est le nombre d'utilisateurs à l'étape n.\n- **Modèle B** : le nombre d'utilisateurs **augmente de 10 %** à chaque étape ; b(n) est le nombre d'utilisateurs à l'étape n.\n\n1. Pour chaque modèle, écris la relation de récurrence puis la forme explicite.\n2. Calcule a(10) et b(3).\n3. Donne la limite de chaque suite. Laquelle correspond à une croissance linéaire, laquelle à une croissance exponentielle ?",
+      "bareme": [
+        {
+          "critere": "Relations de récurrence et formes explicites correctes pour les deux modèles",
+          "points": 8
+        },
+        {
+          "critere": "a(10) = 350 et b(3) = 266,2",
+          "points": 6
+        },
+        {
+          "critere": "Limites +∞ justifiées (r > 0, q > 1) et type de croissance identifié",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Modèle A** : a(n+1) = a(n) + 15, a(0) = 200 : suite **arithmétique** de raison 15, donc a(n) = 200 + 15n.\n**Modèle B** : une hausse de 10 % correspond à q = 1 + 10/100 = 1,1 ; b(n+1) = 1,1 × b(n), b(0) = 200 : suite **géométrique** de raison 1,1, donc b(n) = 200 × 1,1ⁿ.\n2. a(10) = 200 + 150 = **350** utilisateurs. b(3) = 200 × 1,1³ = 200 × 1,331 = **266,2** utilisateurs.\n3. La suite a est arithmétique de raison r = 15 > 0 : elle tend vers **+∞**. La suite b est géométrique de raison q = 1,1 > 1 : elle tend vers **+∞**. Le modèle A (ajout constant) est une croissance **linéaire** ; le modèle B (multiplication constante) est une croissance **exponentielle**, qui finit par dépasser largement le modèle A."
+    },
+    {
+      "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+      "difficulte": 2,
+      "titre": "Un traitement à doses répétées",
+      "consigne": "Réponds aux questions dans l'ordre en suivant la méthode du cours.",
+      "enonce": "**Situation.** Un patient reçoit un traitement. Chaque jour, son organisme élimine **40 %** du médicament présent, puis il reçoit une nouvelle dose de **20 mg**. On note u(n) la quantité de médicament (en mg) juste après la dose du jour n, avec u(0) = 20.\n\n1. Justifie que u(n+1) = 0,6 u(n) + 20, puis calcule u(1), u(2) et u(3).\n2. Détermine le point fixe c de cette relation.\n3. On pose v(n) = u(n) − c. Montre que v est géométrique et exprime u(n) en fonction de n.\n4. Détermine la limite de u et interprète-la pour le patient.",
+      "bareme": [
+        {
+          "critere": "Relation justifiée et u(1) = 32, u(2) = 39,2, u(3) = 43,52",
+          "points": 5
+        },
+        {
+          "critere": "Point fixe c = 50 calculé par c = 20/(1 − 0,6)",
+          "points": 4
+        },
+        {
+          "critere": "v géométrique de raison 0,6 démontré et u(n) = 50 − 30 × 0,6ⁿ",
+          "points": 6
+        },
+        {
+          "critere": "Limite 50 justifiée et interprétée comme un état d'équilibre",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Éliminer 40 % revient à multiplier par 0,6, puis on ajoute 20 mg : **u(n+1) = 0,6 u(n) + 20**.\nu(1) = 0,6 × 20 + 20 = **32 mg** ; u(2) = 0,6 × 32 + 20 = **39,2 mg** ; u(3) = 0,6 × 39,2 + 20 = **43,52 mg**.\n2. c = 0,6c + 20 ⇔ 0,4c = 20 ⇔ **c = 50** (c'est bien b/(1 − a) = 20/0,4).\n3. v(n+1) = u(n+1) − 50 = 0,6 u(n) + 20 − 50 = 0,6 u(n) − 30 = 0,6 (u(n) − 50) = 0,6 v(n). La suite v est **géométrique de raison 0,6**, avec v(0) = 20 − 50 = −30. Donc v(n) = −30 × 0,6ⁿ et **u(n) = 50 − 30 × 0,6ⁿ**. Vérification : u(1) = 50 − 18 = 32. ✓\n4. Comme −1 < 0,6 < 1, 0,6ⁿ tend vers 0 et u(n) **tend vers 50**. **Interprétation** : la quantité de médicament dans l'organisme se stabilise autour de **50 mg** juste après chaque dose ; c'est un état d'équilibre, atteint quelle que soit la quantité de départ, où les 40 % éliminés (20 mg) compensent la dose de 20 mg."
+    },
+    {
+      "chapitre": "aa61edbc-930d-5e21-891b-26764311c4fd",
+      "difficulte": 3,
+      "titre": "Saint-Aubin passera-t-elle les 15 000 habitants ?",
+      "consigne": "Traite toutes les questions en justifiant ; les valeurs numériques données peuvent être utilisées sans justification.",
+      "enonce": "**Situation.** La ville de Saint-Aubin compte 12 000 habitants en 2025. Chaque année, sa population **augmente de 2 %** par les naissances, mais **150 habitants** partent s'installer ailleurs. On note u(n) la population en 2025 + n, avec u(0) = 12 000.\n\n1. Justifie que u(n+1) = 1,02 u(n) − 150. Quel modèle reconnais-tu ?\n2. Calcule le point fixe c, puis montre que u(n) = 4 500 × 1,02ⁿ + 7 500.\n3. Montre que u(n+1) − u(n) = 90 × 1,02ⁿ. Qu'en déduis-tu sur le sens de variation de u ?\n4. Détermine la limite de u. Le système s'installe-t-il ici dans un équilibre ? Justifie en comparant avec le cas où le coefficient est compris entre −1 et 1.\n5. On veut l'année à partir de laquelle la population dépasse 15 000 habitants. Écris un algorithme de seuil (boucle « tant que ») qui répond à la question, puis conclus à l'aide des valeurs : 1,02²⁵ ≈ 1,641 et 1,02²⁶ ≈ 1,673.",
+      "bareme": [
+        {
+          "critere": "Relation justifiée et modèle arithmético-géométrique reconnu",
+          "points": 3
+        },
+        {
+          "critere": "Point fixe c = 7 500 et formule explicite démontrée par la suite v(n) = u(n) − c",
+          "points": 5
+        },
+        {
+          "critere": "Différence u(n+1) − u(n) calculée, suite croissante",
+          "points": 4
+        },
+        {
+          "critere": "Limite +∞ justifiée (1,02 > 1) et absence d'équilibre expliquée",
+          "points": 3
+        },
+        {
+          "critere": "Algorithme de seuil correct et conclusion : en 2051 (n = 26)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Une hausse de 2 % correspond à une multiplication par 1,02, puis on retire 150 : **u(n+1) = 1,02 u(n) − 150**. C'est une suite **arithmético-géométrique** (a = 1,02, b = −150) : un taux plus un prélèvement fixe.\n2. c = 1,02c − 150 ⇔ −0,02c = −150 ⇔ **c = 7 500**. On pose v(n) = u(n) − 7 500 : v(n+1) = 1,02 u(n) − 150 − 7 500 = 1,02 u(n) − 7 650 = 1,02 (u(n) − 7 500) = 1,02 v(n). v est géométrique de raison 1,02 et v(0) = 12 000 − 7 500 = 4 500. Donc v(n) = 4 500 × 1,02ⁿ et **u(n) = 4 500 × 1,02ⁿ + 7 500**.\n3. u(n+1) − u(n) = 4 500 × 1,02ⁿ⁺¹ − 4 500 × 1,02ⁿ = 4 500 × 1,02ⁿ × (1,02 − 1) = **90 × 1,02ⁿ**, strictement positif : la suite u est **croissante**.\n4. 1,02 > 1, donc 1,02ⁿ tend vers +∞ ; comme 4 500 > 0, **u tend vers +∞**. Il n'y a pas d'équilibre : la convergence vers le point fixe n'a lieu que lorsque le coefficient a est compris strictement entre −1 et 1. Ici, la population s'éloigne du point fixe 7 500 et croît sans limite.\n5. Algorithme :\n- n ← 0 ; u ← 12 000\n- Tant que u ≤ 15 000 : n ← n + 1 ; u ← 1,02 × u − 150\n- Afficher n\n\nu(n) > 15 000 ⇔ 4 500 × 1,02ⁿ > 7 500 ⇔ 1,02ⁿ > 7 500/4 500 ≈ 1,667. Or 1,02²⁵ ≈ 1,641 < 1,667 (u(25) ≈ 14 883) et 1,02²⁶ ≈ 1,673 > 1,667 (u(26) ≈ 15 030). L'algorithme affiche **n = 26** : la population dépasse 15 000 habitants en **2051**."
+    },
+    {
+      "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+      "difficulte": 1,
+      "titre": "Trois limites en l'infini",
+      "consigne": "Calcule chaque limite en justifiant ; nomme la forme indéterminée quand il y en a une.",
+      "enonce": "**Situation.** On considère, pour x > 4, les fonctions :\n\n- f(x) = 3x² − 5x + 1\n- g(x) = (2x + 1)/(x − 4)\n- h(x) = e^(−x) + 5\n\n1. Calcule la limite de f en +∞. Quelle forme indéterminée apparaît si l'on calcule terme à terme ? Lève-la.\n2. Calcule la limite de g en +∞ en factorisant par le terme dominant. Qu'en déduis-tu pour la courbe de g ?\n3. Calcule la limite de h en +∞ et interprète graphiquement.",
+      "bareme": [
+        {
+          "critere": "Limite de f : forme ∞ − ∞ reconnue, factorisation par x², limite +∞",
+          "points": 7
+        },
+        {
+          "critere": "Limite de g égale à 2 par factorisation, asymptote horizontale y = 2",
+          "points": 7
+        },
+        {
+          "critere": "Limite de h égale à 5 (e^(−x) tend vers 0), asymptote y = 5",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Terme à terme, 3x² tend vers +∞ et −5x vers −∞ : forme indéterminée **∞ − ∞**. On factorise par le terme dominant : f(x) = x² (3 − 5/x + 1/x²). Quand x tend vers +∞, 5/x et 1/x² tendent vers 0, donc la parenthèse tend vers 3, et x² tend vers +∞. Donc **f tend vers +∞**.\n2. Numérateur et dénominateur tendent vers +∞ : forme **∞/∞**. g(x) = x(2 + 1/x) / (x(1 − 4/x)) = (2 + 1/x)/(1 − 4/x), qui tend vers 2/1 = **2**. La courbe de g admet une **asymptote horizontale d'équation y = 2** en +∞.\n3. e^(−x) tend vers 0 en +∞, donc **h tend vers 5**. La droite d'équation **y = 5** est asymptote horizontale : la grandeur se stabilise au niveau 5."
+    },
+    {
+      "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+      "difficulte": 2,
+      "titre": "Des cerfs dans une réserve",
+      "consigne": "Réponds aux questions en justifiant, et conclus par une phrase sur le modèle.",
+      "enonce": "**Situation.** Dans une réserve naturelle, on modélise le nombre de cerfs, t années après leur réintroduction, par :\n\nP(t) = (6 000t + 800)/(t + 2), pour t ≥ 0.\n\n1. Calcule P(0) et P(8). Interprète.\n2. Quelle forme indéterminée obtient-on en calculant directement la limite de P en +∞ ?\n3. Lève l'indétermination et calcule la limite de P en +∞.\n4. Interprète ce résultat en une phrase sur la population de cerfs, et donne l'équation de l'asymptote correspondante.",
+      "bareme": [
+        {
+          "critere": "P(0) = 400 et P(8) = 4 880 calculés et interprétés",
+          "points": 4
+        },
+        {
+          "critere": "Forme indéterminée ∞/∞ identifiée",
+          "points": 3
+        },
+        {
+          "critere": "Factorisation par t et limite 6 000 justifiée",
+          "points": 7
+        },
+        {
+          "critere": "Interprétation : niveau de saturation de 6 000 cerfs, asymptote y = 6 000",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. P(0) = 800/2 = **400** : 400 cerfs ont été réintroduits. P(8) = (48 000 + 800)/10 = **4 880** : huit ans plus tard, la réserve compte environ 4 880 cerfs.\n2. Quand t tend vers +∞, le numérateur et le dénominateur tendent vers +∞ : forme indéterminée **∞/∞**.\n3. On factorise par le terme dominant t : P(t) = t(6 000 + 800/t) / (t(1 + 2/t)) = (6 000 + 800/t)/(1 + 2/t). Comme 800/t et 2/t tendent vers 0, **P(t) tend vers 6 000**.\n4. **La population de cerfs se stabilise autour de 6 000 individus** : c'est un niveau de saturation, lié aux ressources limitées de la réserve. La courbe de P admet une **asymptote horizontale d'équation y = 6 000**."
+    },
+    {
+      "chapitre": "2a446855-b9f5-5f10-8ebb-a13ed54c067d",
+      "difficulte": 3,
+      "titre": "Médicament, coût moyen et croissance d'une start-up",
+      "consigne": "Les trois parties sont indépendantes. Justifie chaque limite et conclus toujours par une phrase sur le modèle.",
+      "enonce": "**Partie A — Un médicament.** La concentration d'un médicament dans le sang, t heures après la prise, est modélisée par C(t) = 20t/e^t (en mg/L), pour t ≥ 0.\n\n1. Quelle forme indéterminée obtient-on en +∞ ? Calcule la limite de C en +∞ à l'aide des croissances comparées, puis interprète.\n\n**Partie B — Un coût moyen.** Une entreprise produit x centaines d'objets (x > 0). Le coût moyen d'une centaine est CM(x) = (0,5x² + 3x + 200)/x, en euros.\n\n2. Calcule la limite de CM en 0 (par valeurs positives). Quelle asymptote obtient-on ? Interprète.\n3. Montre que CM(x) = 0,5x + 3 + 200/x, puis calcule la limite de CM en +∞.\n\n**Partie C — Deux prévisions.** Pour le chiffre d'affaires d'une start-up (en milliers d'euros) après x années, Léna propose R₁(x) = x⁵ et Malik propose R₂(x) = e^x.\n\n4. Calcule R₁(5) et R₂(5) (arrondi à l'unité). Quel modèle donne la plus grande valeur au bout de 5 ans ?\n5. Calcule la limite de R₂(x)/R₁(x) en +∞. Que peux-tu en conclure à long terme ? Interprète en une phrase.",
+      "bareme": [
+        {
+          "critere": "Partie A : forme ∞/∞, limite 0 par croissances comparées, médicament éliminé",
+          "points": 5
+        },
+        {
+          "critere": "Partie B : limite +∞ en 0, asymptote verticale x = 0 interprétée",
+          "points": 4
+        },
+        {
+          "critere": "Partie B : écriture simplifiée et limite +∞ en +∞",
+          "points": 3
+        },
+        {
+          "critere": "Partie C : R₁(5) = 3 125 et R₂(5) ≈ 148, comparaison",
+          "points": 3
+        },
+        {
+          "critere": "Partie C : e^x/x⁵ tend vers +∞, l'exponentielle finit par l'emporter, conclusion rédigée",
+          "points": 5
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 20t et e^t tendent vers +∞ : forme **∞/∞**. Par croissances comparées, e^t/t tend vers +∞, donc son inverse t/e^t tend vers 0, et **C(t) tend vers 0**. **Le médicament finit par être entièrement éliminé du sang.**\n2. Quand x tend vers 0 par valeurs positives, le numérateur tend vers 200 et le dénominateur vers 0 en restant positif : **CM tend vers +∞**. La droite **x = 0** est **asymptote verticale** : produire presque rien coûte énormément par centaine d'objets, car les 200 € de coût fixe sont répartis sur une production minuscule.\n3. CM(x) = 0,5x²/x + 3x/x + 200/x = **0,5x + 3 + 200/x**. En +∞, 0,5x tend vers +∞ et 200/x vers 0 : **CM tend vers +∞**. Pour de très grandes productions, le coût moyen augmente sans limite.\n4. R₁(5) = 5⁵ = **3 125** ; R₂(5) = e⁵ ≈ **148**. Au bout de 5 ans, le modèle de Léna (puissance) donne une valeur bien plus grande.\n5. R₂(x)/R₁(x) = e^x/x⁵ tend vers **+∞** (croissances comparées : l'exponentielle l'emporte sur toute puissance de x). Donc, à long terme, R₂ finit par dépasser R₁, puis devient infiniment plus grande. **Le modèle exponentiel de Malik prévoit un décrochage tardif mais qui finit toujours par dépasser la croissance polynomiale de Léna**, aussi élevé que soit le degré."
+    },
+    {
+      "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+      "difficulte": 1,
+      "titre": "Dériver pour lire une pente",
+      "consigne": "Calcule les dérivées demandées en indiquant la formule utilisée.",
+      "enonce": "**Situation.** On considère les fonctions suivantes, définies pour x > 0 :\n\n- f(x) = x⁴ − 2x³ + 5\n- g(x) = x × ln(x)\n- h(x) = exp(x)/x\n\n1. Calcule f'(x), puis f'(1). Que représente f'(1) pour la courbe de f ?\n2. Calcule g'(x) en utilisant la formule de la dérivée d'un produit.\n3. Calcule h'(x) en utilisant la formule de la dérivée d'un quotient, et simplifie.",
+      "bareme": [
+        {
+          "critere": "f'(x) = 4x³ − 6x², f'(1) = −2 interprété comme coefficient directeur de la tangente",
+          "points": 7
+        },
+        {
+          "critere": "g'(x) = ln(x) + 1 avec la formule u'v + uv'",
+          "points": 6
+        },
+        {
+          "critere": "h'(x) = exp(x)(x − 1)/x² avec la formule (u'v − uv')/v²",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La dérivée de xⁿ est n xⁿ⁻¹, donc **f'(x) = 4x³ − 6x²** (la constante 5 a pour dérivée 0). f'(1) = 4 − 6 = **−2** : c'est le **coefficient directeur de la tangente** à la courbe de f au point d'abscisse 1 ; en ce point, f décroît à la vitesse instantanée de 2 unités par unité de x.\n2. g = u × v avec u(x) = x, u'(x) = 1, v(x) = ln(x), v'(x) = 1/x. g'(x) = u'v + uv' = 1 × ln(x) + x × 1/x = **ln(x) + 1**.\n3. h = u/v avec u(x) = exp(x), u'(x) = exp(x), v(x) = x, v'(x) = 1. h'(x) = (u'v − uv')/v² = (x exp(x) − exp(x))/x² = **exp(x)(x − 1)/x²**."
+    },
+    {
+      "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+      "difficulte": 2,
+      "titre": "Le prix des places de concert",
+      "consigne": "Suis la méthode d'optimisation du cours et justifie chaque étape.",
+      "enonce": "**Situation.** Une association organise un concert. Si le prix d'une place est p euros (avec 10 ≤ p ≤ 50), elle estime vendre q = 120 − 2p places.\n\n1. Montre que la recette, en euros, s'écrit R(p) = 120p − 2p².\n2. Calcule R'(p) et étudie son signe sur l'intervalle [10 ; 50].\n3. Dresse le tableau de variations de R sur [10 ; 50].\n4. Quel prix faut-il fixer pour que la recette soit maximale ? Combien de places seront vendues, et quelle sera la recette ?",
+      "bareme": [
+        {
+          "critere": "Recette R(p) = p × (120 − 2p) établie",
+          "points": 3
+        },
+        {
+          "critere": "R'(p) = 120 − 4p et étude de signe (positif avant 30, négatif après)",
+          "points": 7
+        },
+        {
+          "critere": "Tableau de variations correct avec R(10), R(30), R(50)",
+          "points": 5
+        },
+        {
+          "critere": "Conclusion : 30 €, 60 places, recette maximale 1 800 €",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Recette = prix × nombre de places vendues : R(p) = p(120 − 2p) = **120p − 2p²**.\n2. **R'(p) = 120 − 4p**. R'(p) > 0 ⇔ p < 30 ; R'(p) = 0 pour p = 30 ; R'(p) < 0 pour p > 30. R' est positive sur [10 ; 30] et négative sur [30 ; 50] : elle s'annule **en changeant de signe** en 30.\n3. R est croissante sur [10 ; 30], décroissante sur [30 ; 50].\n- R(10) = 1 200 − 200 = 1 000\n- R(30) = 3 600 − 1 800 = 1 800 (maximum)\n- R(50) = 6 000 − 5 000 = 1 000\n4. La recette est maximale pour un prix de **30 €** : l'association vend 120 − 60 = **60 places** et encaisse **1 800 €**. Cette solution est bien dans l'intervalle [10 ; 50], donc acceptable concrètement."
+    },
+    {
+      "chapitre": "e39de060-0e3b-56ad-b11f-8d067217a649",
+      "difficulte": 3,
+      "titre": "La boîte sans couvercle",
+      "consigne": "Suis la méthode d'optimisation du cours en justifiant chaque étape, puis conclus concrètement.",
+      "enonce": "**Situation.** Élias dispose d'une plaque de carton carrée de **30 cm** de côté. Il découpe, dans chaque coin, un carré de côté x cm, puis replie les bords pour obtenir une boîte sans couvercle, de base carrée.\n\n1. Explique pourquoi x doit appartenir à l'intervalle ]0 ; 15[.\n2. Montre que le volume de la boîte, en cm³, est V(x) = x(30 − 2x)², puis que V(x) = 4x³ − 120x² + 900x.\n3. Calcule V'(x) et montre que V'(x) = 12(x − 5)(x − 15).\n4. Étudie le signe de V'(x) sur ]0 ; 15[ et dresse le tableau de variations de V.\n5. Pour quelle valeur de x le volume est-il maximal ? Donne ce volume en cm³ puis en litres.\n6. Élias affirme : « Il suffit de trouver où V' s'annule pour avoir le maximum. » Explique pourquoi ce raisonnement est incomplet, en t'appuyant sur ce que tu as trouvé en x = 15.",
+      "bareme": [
+        {
+          "critere": "Intervalle ]0 ; 15[ justifié par les contraintes de longueur",
+          "points": 2
+        },
+        {
+          "critere": "Expression de V et forme développée correctes",
+          "points": 4
+        },
+        {
+          "critere": "V'(x) = 12x² − 240x + 900 et factorisation 12(x − 5)(x − 15) vérifiée",
+          "points": 5
+        },
+        {
+          "critere": "Signe de V' et tableau de variations corrects, maximum en x = 5",
+          "points": 5
+        },
+        {
+          "critere": "Volume maximal 2 000 cm³ = 2 L et critique argumentée du raisonnement d'Élias",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. x est une longueur, donc x > 0 ; on enlève 2x sur chaque côté de 30 cm, donc il faut 30 − 2x > 0, soit x < 15. D'où **x ∈ ]0 ; 15[**.\n2. La base est un carré de côté 30 − 2x et la hauteur vaut x : **V(x) = x(30 − 2x)²**. En développant : (30 − 2x)² = 900 − 120x + 4x², donc V(x) = x(900 − 120x + 4x²) = **4x³ − 120x² + 900x**.\n3. **V'(x) = 12x² − 240x + 900** = 12(x² − 20x + 75). Or (x − 5)(x − 15) = x² − 15x − 5x + 75 = x² − 20x + 75. Donc **V'(x) = 12(x − 5)(x − 15)**.\n4. Sur ]0 ; 15[, x − 15 < 0. Si 0 < x < 5 : x − 5 < 0, donc V'(x) > 0. Si 5 < x < 15 : x − 5 > 0, donc V'(x) < 0. V est **croissante sur ]0 ; 5]** et **décroissante sur [5 ; 15[** ; V' s'annule en changeant de signe en 5.\n5. Le volume est maximal pour **x = 5 cm** : V(5) = 5 × 20² = **2 000 cm³**, soit **2 litres**. La boîte a une base de 20 cm sur 20 cm et une hauteur de 5 cm.\n6. Une dérivée nulle ne suffit pas : c'est le **changement de signe** qui fait l'extremum, et la solution doit appartenir à l'intervalle. Ici V' s'annule aussi en x = 15, mais 15 est hors de ]0 ; 15[ (on n'aurait plus de boîte : V(15) = 0). Il faut donc étudier le signe de V' sur l'intervalle utile et vérifier que la valeur trouvée a un sens concret."
+    },
+    {
+      "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+      "difficulte": 1,
+      "titre": "En retard à cause du bus ?",
+      "consigne": "Construis l'arbre pondéré et justifie chaque calcul.",
+      "enonce": "**Situation.** Dans un lycée, **40 %** des élèves viennent en bus. Parmi eux, **25 %** arrivent au moins une fois en retard dans le mois. Parmi les élèves qui ne viennent pas en bus, **10 %** arrivent au moins une fois en retard.\n\nOn choisit un élève au hasard. On note B l'événement « l'élève vient en bus » et R l'événement « l'élève arrive au moins une fois en retard ».\n\n1. Construis un arbre pondéré qui décrit la situation.\n2. Calcule P(B inter R).\n3. Calcule P(R) en utilisant la formule des probabilités totales.",
+      "bareme": [
+        {
+          "critere": "Arbre pondéré complet et correct (somme des branches égale à 1 à chaque nœud)",
+          "points": 7
+        },
+        {
+          "critere": "P(B inter R) = 0,4 × 0,25 = 0,1",
+          "points": 6
+        },
+        {
+          "critere": "P(R) = 0,1 + 0,06 = 0,16 par la formule des probabilités totales",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Premier niveau : P(B) = 0,4 et P(non B) = 0,6. Second niveau : P_B(R) = 0,25 et P_B(non R) = 0,75 ; P_(non B)(R) = 0,1 et P_(non B)(non R) = 0,9. À chaque nœud, la somme des branches vaut 1.\n2. La probabilité d'un chemin est le produit des branches : P(B inter R) = P(B) × P_B(R) = 0,4 × 0,25 = **0,1**.\n3. Deux chemins mènent à R : P(R) = P(B inter R) + P(non B inter R) = 0,1 + 0,6 × 0,1 = 0,1 + 0,06 = **0,16**. Un élève choisi au hasard a 16 % de chances d'arriver au moins une fois en retard dans le mois."
+    },
+    {
+      "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+      "difficulte": 2,
+      "titre": "Deux machines, un défaut",
+      "consigne": "Réponds en justifiant avec un arbre pondéré ; arrondis au millième si besoin.",
+      "enonce": "**Situation.** Une usine fabrique des gourdes sur deux machines. La machine A produit **70 %** des gourdes, la machine B le reste. **2 %** des gourdes de la machine A sont défectueuses, contre **5 %** pour la machine B.\n\nOn prélève une gourde au hasard. On note A « la gourde vient de la machine A », B « elle vient de la machine B » et D « elle est défectueuse ».\n\n1. Construis l'arbre pondéré, puis calcule P(D).\n2. La gourde prélevée est défectueuse. Quelle est la probabilité qu'elle vienne de la machine A ?\n3. Les événements A et D sont-ils indépendants ? Justifie par un calcul.",
+      "bareme": [
+        {
+          "critere": "Arbre correct et P(D) = 0,014 + 0,015 = 0,029",
+          "points": 7
+        },
+        {
+          "critere": "P_D(A) = 0,014/0,029 ≈ 0,483 avec la formule de la probabilité conditionnelle",
+          "points": 7
+        },
+        {
+          "critere": "Non-indépendance justifiée : P(A inter D) = 0,014 différent de P(A) × P(D) = 0,0203",
+          "points": 6
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. P(A) = 0,7 ; P(B) = 0,3 ; P_A(D) = 0,02 ; P_B(D) = 0,05 (et les branches complémentaires 0,98 et 0,95).\nP(A inter D) = 0,7 × 0,02 = 0,014 ; P(B inter D) = 0,3 × 0,05 = 0,015. Par les probabilités totales : **P(D) = 0,014 + 0,015 = 0,029**.\n2. P_D(A) = P(A inter D)/P(D) = 0,014/0,029 ≈ **0,483**. Sachant que la gourde est défectueuse, il y a environ 48,3 % de chances qu'elle vienne de A (alors que A produit 70 % des gourdes).\n3. P(A) × P(D) = 0,7 × 0,029 = 0,0203, alors que P(A inter D) = 0,014. Ces deux nombres sont différents : **A et D ne sont pas indépendants**. On le voit aussi avec P_D(A) ≈ 0,483 différent de P(A) = 0,7 : savoir que la gourde est défectueuse change la probabilité qu'elle vienne de A."
+    },
+    {
+      "chapitre": "030fabd4-24f7-50eb-b96b-069b43f57f47",
+      "difficulte": 3,
+      "titre": "Un test de dépistage positif : faut-il s'inquiéter ?",
+      "consigne": "Réponds en justifiant chaque calcul ; arrondis au millième. Soigne l'interprétation.",
+      "enonce": "**Situation.** Une maladie touche **2 %** d'une population. Un test de dépistage a les caractéristiques suivantes :\n\n- si la personne est malade, le test est positif avec une probabilité de **0,95** ;\n- si la personne n'est pas malade, le test est positif avec une probabilité de **0,03**.\n\nOn choisit une personne au hasard. On note M « la personne est malade » et T « le test est positif ».\n\n1. Construis l'arbre pondéré et calcule P(T).\n2. Calcule P_T(M). Interprète le résultat.\n3. Complète le tableau d'effectifs pour 10 000 personnes et retrouve le résultat de la question 2.\n\n| | Test positif | Test négatif | Total |\n| Malades | … | … | … |\n| Non malades | … | … | … |\n| Total | … | … | 10 000 |\n\n4. Calcule la probabilité qu'une personne dont le test est négatif ne soit pas malade.\n5. Un journaliste écrit : « Le test est fiable à 95 %, donc un résultat positif signifie qu'on a 95 % de risque d'être malade. » Explique son erreur.",
+      "bareme": [
+        {
+          "critere": "Arbre correct et P(T) = 0,019 + 0,0294 = 0,0484",
+          "points": 4
+        },
+        {
+          "critere": "P_T(M) ≈ 0,393 calculée et interprétée",
+          "points": 5
+        },
+        {
+          "critere": "Tableau d'effectifs juste (190, 10, 294, 9 506) et 190/484 retrouvé",
+          "points": 4
+        },
+        {
+          "critere": "P(non M sachant non T) ≈ 0,999 calculée",
+          "points": 3
+        },
+        {
+          "critere": "Confusion entre P_M(T) et P_T(M) expliquée, rôle de la rareté de la maladie",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. P(M) = 0,02 ; P(non M) = 0,98 ; P_M(T) = 0,95 ; P_(non M)(T) = 0,03.\nP(M inter T) = 0,02 × 0,95 = 0,019 ; P(non M inter T) = 0,98 × 0,03 = 0,0294. **P(T) = 0,019 + 0,0294 = 0,0484**.\n2. P_T(M) = P(M inter T)/P(T) = 0,019/0,0484 ≈ **0,393**. Parmi les personnes testées positives, seules 39,3 % environ sont réellement malades : la majorité des positifs sont des **faux positifs**.\n3. Tableau :\n\n| | Positif | Négatif | Total |\n| Malades | 190 | 10 | 200 |\n| Non malades | 294 | 9 506 | 9 800 |\n| Total | 484 | 9 516 | 10 000 |\n\nParmi les 484 positifs, 190 sont malades : 190/484 ≈ 0,393. ✓\n4. P(non M inter non T) = 0,98 × 0,97 = 0,9506 et P(non T) = 1 − 0,0484 = 0,9516. P_(non T)(non M) = 0,9506/0,9516 ≈ **0,999** : un test négatif est très rassurant.\n5. Le journaliste confond **P_M(T) = 0,95** (probabilité d'être positif sachant qu'on est malade) et **P_T(M) ≈ 0,393** (probabilité d'être malade sachant qu'on est positif). Comme la maladie est rare, les 3 % d'erreur portent sur un très grand nombre de personnes saines (294 faux positifs) qui dépasse le nombre de vrais malades positifs (190). Un résultat positif doit donc être confirmé par un second examen."
+    },
+    {
+      "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+      "difficulte": 1,
+      "titre": "Continu ou pas ?",
+      "consigne": "Réponds en justifiant brièvement chaque réponse.",
+      "enonce": "**Situation.**\n\n1. Pour chacune des situations suivantes, dis si la grandeur est modélisée par une fonction continue ou non, en justifiant :\n   a. la température relevée au cours d'une journée en fonction de l'heure ;\n   b. le prix d'envoi d'une lettre en fonction de son poids, fixé par tranches ;\n   c. le nombre d'élèves inscrits au lycée en fonction de l'année ;\n   d. la fonction f(x) = x² + 3x sur l'intervalle [0 ; 2].\n2. Pour la fonction f de la question d, calcule f(0) et f(2). Montre que l'équation f(x) = 5 admet au moins une solution dans [0 ; 2], en citant le théorème utilisé.\n3. On sait seulement qu'une fonction g est continue sur [0 ; 4], que g(0) = 1 et g(4) = 9. Peut-on affirmer que l'équation g(x) = 5 a une seule solution dans [0 ; 4] ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Les quatre situations correctement classées et justifiées",
+          "points": 8
+        },
+        {
+          "critere": "f(0) = 0, f(2) = 10 et théorème des valeurs intermédiaires correctement appliqué",
+          "points": 7
+        },
+        {
+          "critere": "Unicité non garantie sans stricte monotonie",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. a. **Continue** : la température varie sans saut, la courbe se trace sans lever le crayon.\nb. **Non continue** : le prix saute d'une valeur à une autre au passage d'une tranche.\nc. **Non continue** : un nombre d'élèves est un nombre entier, c'est un modèle **discret**.\nd. **Continue** : c'est un polynôme.\n2. f(0) = 0 et f(2) = 4 + 6 = 10. f est continue sur [0 ; 2] (polynôme) et 5 est compris entre f(0) = 0 et f(2) = 10. D'après le **théorème des valeurs intermédiaires**, l'équation f(x) = 5 admet **au moins une solution** dans [0 ; 2].\n3. **Non.** La continuité et l'encadrement 1 < 5 < 9 donnent l'**existence** d'au moins une solution, mais pas son unicité : il faudrait en plus savoir que g est **strictement monotone** sur [0 ; 4]. Sans cette information, la courbe pourrait passer plusieurs fois par la valeur 5."
+    },
+    {
+      "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+      "difficulte": 2,
+      "titre": "Encadrer une solution par balayage",
+      "consigne": "Rédige la réponse de la question 1 avec les trois éléments attendus, puis encadre la solution.",
+      "enonce": "**Situation.** On considère la fonction f définie sur [1 ; 2] par f(x) = x³ + x − 5. **On admet que f est strictement croissante sur [1 ; 2].**\n\n1. Calcule f(1) et f(2). Montre que l'équation f(x) = 0 admet une **unique** solution α dans [1 ; 2].\n2. Par balayage avec un pas de 0,1, donne un encadrement de α d'amplitude 0,1 (indique les deux valeurs de f qui le justifient).\n3. Affine avec un pas de 0,01 pour obtenir un encadrement de α d'amplitude 0,01.",
+      "bareme": [
+        {
+          "critere": "f(1) = −3 et f(2) = 5 calculés",
+          "points": 3
+        },
+        {
+          "critere": "Rédaction complète : continuité, stricte monotonie, 0 compris entre f(1) et f(2), existence et unicité",
+          "points": 7
+        },
+        {
+          "critere": "Encadrement 1,5 < α < 1,6 justifié par f(1,5) < 0 < f(1,6)",
+          "points": 5
+        },
+        {
+          "critere": "Encadrement 1,51 < α < 1,52 justifié par f(1,51) < 0 < f(1,52)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. f(1) = 1 + 1 − 5 = **−3** ; f(2) = 8 + 2 − 5 = **5**.\n- f est **continue** sur [1 ; 2] (polynôme) : cela donne l'existence ;\n- f est **strictement croissante** sur [1 ; 2] : cela donne l'unicité ;\n- 0 est **compris entre** f(1) = −3 et f(2) = 5.\nD'après le théorème des valeurs intermédiaires (cas strictement monotone), l'équation f(x) = 0 admet **une unique solution α** dans [1 ; 2].\n2. f(1,5) = 3,375 + 1,5 − 5 = −0,125 < 0 et f(1,6) = 4,096 + 1,6 − 5 = 0,696 > 0. Donc **1,5 < α < 1,6**.\n3. f(1,51) = 3,442951 + 1,51 − 5 ≈ −0,047 < 0 et f(1,52) = 3,511808 + 1,52 − 5 ≈ 0,032 > 0. Donc **1,51 < α < 1,52**. Le théorème donne l'existence, la monotonie l'unicité, et le balayage la valeur approchée."
+    },
+    {
+      "chapitre": "4d0abfdb-744e-55b7-a1fe-81ddcc01758f",
+      "difficulte": 3,
+      "titre": "Quand la coopérative atteindra-t-elle 500 tonnes ?",
+      "consigne": "Distingue clairement existence, unicité et recherche de la valeur. Justifie chaque étape.",
+      "enonce": "**Situation.** La production de pommes d'une coopérative, t années après 2020, est modélisée par P(t) = 6,8t² + 120 (en tonnes), pour t dans [0 ; 10].\n\n1. Calcule P(0) et P(10). Justifie que P est continue et strictement croissante sur [0 ; 10].\n2. Montre qu'il existe un unique instant t₀ de [0 ; 10] tel que P(t₀) = 500.\n3. Applique la méthode par dichotomie à partir de l'intervalle [0 ; 10] : effectue **quatre** étapes en indiquant à chaque fois le milieu, la valeur de P en ce milieu et le nouvel intervalle.\n4. Écris l'algorithme de dichotomie (en langage naturel) qui donnerait t₀ avec une précision de 0,01.\n5. La coopérative modélise aussi son nombre de salariés par une fonction N. Elle compte 12 salariés en 2020 et 30 en 2030, et affirme qu'il y a eu forcément une année où elle en comptait exactement 21,5. Explique pourquoi ce raisonnement est faux.",
+      "bareme": [
+        {
+          "critere": "P(0) = 120 et P(10) = 800 ; continuité et stricte croissance justifiées",
+          "points": 4
+        },
+        {
+          "critere": "Existence et unicité de t₀ rédigées avec les trois éléments attendus",
+          "points": 4
+        },
+        {
+          "critere": "Quatre étapes de dichotomie correctes, intervalle final [6,875 ; 7,5]",
+          "points": 6
+        },
+        {
+          "critere": "Algorithme de dichotomie correct (boucle, test du signe, arrêt sur la précision)",
+          "points": 3
+        },
+        {
+          "critere": "Nombre de salariés discret : le théorème ne s'applique pas",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. P(0) = **120** et P(10) = 6,8 × 100 + 120 = **800**. P est un polynôme, donc **continue**. Pour 0 ≤ t < t' ≤ 10, on a t² < t'², donc 6,8t² + 120 < 6,8t'² + 120 : P est **strictement croissante** sur [0 ; 10].\n2. P est continue et strictement croissante sur [0 ; 10], et 500 est compris entre P(0) = 120 et P(10) = 800. D'après le théorème des valeurs intermédiaires (cas strictement monotone), il existe **un unique t₀** dans [0 ; 10] tel que P(t₀) = 500.\n3. Dichotomie :\n- milieu 5 : P(5) = 170 + 120 = 290 < 500 → **[5 ; 10]** ;\n- milieu 7,5 : P(7,5) = 382,5 + 120 = 502,5 > 500 → **[5 ; 7,5]** ;\n- milieu 6,25 : P(6,25) = 265,625 + 120 = 385,625 < 500 → **[6,25 ; 7,5]** ;\n- milieu 6,875 : P(6,875) ≈ 321,41 + 120 = 441,41 < 500 → **[6,875 ; 7,5]**.\nAprès quatre étapes, 6,875 < t₀ < 7,5 (la valeur exacte est t₀ ≈ 7,48 : la production atteint 500 tonnes au cours de l'année 2027).\n4. a ← 0 ; b ← 10. Tant que b − a > 0,01 : m ← (a + b)/2 ; si P(m) < 500 alors a ← m, sinon b ← m. Afficher a et b.\n5. Un nombre de salariés est un **nombre entier** : c'est un modèle **discret**, qui n'est pas continu. Le théorème des valeurs intermédiaires ne s'applique pas. D'ailleurs, 21,5 salariés n'a aucun sens : la valeur 21,5 n'est jamais atteinte."
+    },
+    {
+      "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+      "difficulte": 1,
+      "titre": "Même moyenne, deux classes différentes",
+      "consigne": "Calcule les indicateurs demandés et justifie ta conclusion.",
+      "enonce": "**Situation.** Voici les notes sur 20 obtenues à un même devoir par deux groupes de cinq élèves.\n\n| Groupe A | 8 | 9 | 10 | 11 | 12 |\n| Groupe B | 2 | 5 | 10 | 15 | 18 |\n\n1. Calcule la moyenne et la médiane de chaque groupe.\n2. Calcule l'écart-type de chaque groupe (arrondi au centième ; on utilise la moyenne des carrés des écarts à la moyenne).\n3. Un professeur dit : « Les deux groupes ont la même moyenne, donc ils ont le même niveau. » Que lui réponds-tu ?",
+      "bareme": [
+        {
+          "critere": "Moyennes et médianes égales à 10 pour les deux groupes",
+          "points": 6
+        },
+        {
+          "critere": "Écarts-types ≈ 1,41 (groupe A) et ≈ 5,97 (groupe B) calculés",
+          "points": 8
+        },
+        {
+          "critere": "Conclusion : même centre, dispersions très différentes",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Groupe A : moyenne = 50/5 = **10** ; médiane (3e valeur) = **10**. Groupe B : moyenne = (2 + 5 + 10 + 15 + 18)/5 = 50/5 = **10** ; médiane = **10**.\n2. Groupe A : écarts −2, −1, 0, 1, 2 ; carrés 4, 1, 0, 1, 4 ; moyenne des carrés = 10/5 = 2 ; écart-type = √2 ≈ **1,41**.\nGroupe B : écarts −8, −5, 0, 5, 8 ; carrés 64, 25, 0, 25, 64 ; moyenne des carrés = 178/5 = 35,6 ; écart-type = √35,6 ≈ **5,97**.\n3. La moyenne et la médiane ne décrivent que le **centre** de la série. Les deux groupes ont le même centre, mais le groupe B est beaucoup plus **dispersé** (écart-type environ quatre fois plus grand) : il réunit des élèves très en difficulté et d'autres très à l'aise, alors que le groupe A est homogène. Deux séries de même moyenne peuvent avoir des allures très différentes."
+    },
+    {
+      "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+      "difficulte": 2,
+      "titre": "Une piste cyclable qui divise",
+      "consigne": "Réponds en justifiant tes calculs et en rédigeant tes conclusions.",
+      "enonce": "**Situation.** Pour savoir si les habitants d'une ville sont favorables à une nouvelle piste cyclable, la mairie interroge un échantillon de **400 habitants** choisis au hasard. **216** se déclarent favorables.\n\n1. Calcule la fréquence f de personnes favorables dans l'échantillon.\n2. Détermine l'intervalle de confiance au niveau 95 % de la proportion de personnes favorables dans la ville.\n3. Le maire annonce : « Une majorité d'habitants soutient le projet. » Ce sondage permet-il de l'affirmer ? Justifie.\n4. Quelle taille d'échantillon faudrait-il pour obtenir une marge d'erreur de 2 points ? Combien de fois plus de personnes que dans le sondage actuel ?",
+      "bareme": [
+        {
+          "critere": "f = 216/400 = 0,54",
+          "points": 3
+        },
+        {
+          "critere": "Intervalle [0,49 ; 0,59] calculé avec 1/√400 = 0,05",
+          "points": 6
+        },
+        {
+          "critere": "Conclusion : l'intervalle contient des valeurs inférieures à 0,5, on ne peut pas affirmer la majorité",
+          "points": 6
+        },
+        {
+          "critere": "n = 2 500, soit 6,25 fois plus de personnes",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **f = 216/400 = 0,54**, soit 54 %.\n2. 1/√400 = 1/20 = 0,05. L'intervalle de confiance au niveau 95 % est [0,54 − 0,05 ; 0,54 + 0,05] = **[0,49 ; 0,59]**.\n3. **Non.** La proportion réelle de personnes favorables se situe, avec un niveau de confiance de 95 %, entre 49 % et 59 %. Cet intervalle contient des valeurs **inférieures à 50 %** : le sondage ne permet pas d'affirmer qu'une majorité soutient le projet, même si c'est plausible.\n4. On veut 1/√n = 0,02, soit √n = 50, donc **n = 2 500**. C'est 2 500/400 = **6,25 fois** plus de personnes pour une marge 2,5 fois plus petite : la largeur ne décroît qu'en 1/√n."
+    },
+    {
+      "chapitre": "ea6bb75c-d5e5-5584-b024-f2830abc825a",
+      "difficulte": 3,
+      "titre": "Élection des délégués au conseil régional des jeunes",
+      "consigne": "Réponds en justifiant ; arrondis au millième. Soigne l'interprétation de chaque résultat.",
+      "enonce": "**Situation.** Deux candidats, Sacha et Noor, se présentent à l'élection du conseil régional des jeunes. Un sondage réalisé sur **1 000 jeunes** choisis au hasard donne **51 %** d'intentions de vote pour Sacha et **49 %** pour Noor.\n\n1. Détermine l'intervalle de confiance au niveau 95 % de la proportion de jeunes qui voteront pour Sacha.\n2. Un média titre : « Sacha en tête ! ». Commente ce titre.\n3. On suppose maintenant que, dans toute la région, exactement 50 % des jeunes votent pour Sacha. On interroge 1 000 jeunes au hasard, de façon indépendante, et on note X le nombre de votes pour Sacha. Justifie que X suit une loi binomiale, dont tu préciseras les paramètres, puis calcule son espérance, sa variance et son écart-type.\n4. En t'appuyant sur la question 3, explique pourquoi un écart de 10 voix sur 1 000 (510 contre 490) entre les deux candidats n'a rien de surprenant, même si les deux sont exactement à égalité.\n5. L'institut propose de passer à 4 000 jeunes interrogés. Calcule la nouvelle marge d'erreur et commente le gain obtenu au regard du coût.",
+      "bareme": [
+        {
+          "critere": "Intervalle [0,478 ; 0,542] calculé avec 1/√1000 ≈ 0,032",
+          "points": 4
+        },
+        {
+          "critere": "Titre critiqué : écart de 2 points inférieur à la marge, bruit statistique",
+          "points": 4
+        },
+        {
+          "critere": "Loi binomiale B(1 000 ; 0,5) justifiée, E = 500, V = 250, écart-type ≈ 15,8",
+          "points": 5
+        },
+        {
+          "critere": "Écart de 10 voix comparé à l'écart-type : fluctuation normale",
+          "points": 3
+        },
+        {
+          "critere": "Marge ≈ 0,016 pour 4 000 personnes, divisée par 2 seulement pour un coût multiplié par 4",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 1/√1 000 ≈ 0,032. L'intervalle de confiance au niveau 95 % est [0,51 − 0,032 ; 0,51 + 0,032] ≈ **[0,478 ; 0,542]**.\n2. Le titre est **trompeur**. Avec une marge d'environ ± 3 points, l'intervalle contient des valeurs inférieures à 50 % : Noor pourrait tout aussi bien être en tête. Un écart de 2 points sur 1 000 personnes est du **bruit statistique** ; le commenter comme une avance est une faute de raisonnement.\n3. On répète 1 000 fois, de façon **indépendante**, une même expérience à **deux issues** (voter pour Sacha ou non), de probabilité de succès 0,5 : X suit la **loi binomiale de paramètres n = 1 000 et p = 0,5**. E(X) = n × p = **500** ; V(X) = n × p × (1 − p) = 1 000 × 0,5 × 0,5 = **250** ; écart-type = √250 ≈ **15,8**.\n4. Même en cas d'égalité parfaite, le nombre de votes pour Sacha dans l'échantillon fluctue autour de 500 avec un écart-type d'environ 16 voix. Obtenir 510 voix, soit un écart de 10 à l'espérance (moins d'un écart-type), est une **fluctuation tout à fait ordinaire** : ce résultat ne permet pas de départager les candidats.\n5. 1/√4 000 ≈ **0,016**, soit environ ± 1,6 point. En **quadruplant** l'échantillon, on ne fait que **diviser la marge par 2** (de 3,2 à 1,6 points), car la largeur décroît en 1/√n. Le coût est multiplié par 4 pour un gain modeste ; et même avec ± 1,6 point, un écart de 2 points resterait trop faible pour conclure avec certitude."
+    },
+    {
+      "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+      "difficulte": 1,
+      "titre": "Manipuler le logarithme",
+      "consigne": "Justifie chaque étape en citant la propriété utilisée ; donne les valeurs approchées au millième.",
+      "enonce": "**Situation.**\n\n1. Écris sous la forme a × ln(2) ou a × ln(5), avec a entier :\n   a. ln(8) ;\n   b. ln(50) − ln(2).\n2. Résous dans ℝ l'équation e^x = 7. Donne la valeur exacte puis une valeur approchée.\n3. Résous l'équation ln(x) = 2. Précise d'abord la condition d'existence, puis donne la valeur exacte et une valeur approchée de la solution.",
+      "bareme": [
+        {
+          "critere": "ln(8) = 3 ln(2) et ln(50) − ln(2) = ln(25) = 2 ln(5), propriétés citées",
+          "points": 7
+        },
+        {
+          "critere": "x = ln(7) ≈ 1,946",
+          "points": 6
+        },
+        {
+          "critere": "Condition x > 0 et x = e² ≈ 7,389",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. 8 = 2³, et ln(aⁿ) = n ln(a), donc **ln(8) = 3 ln(2)**.\nb. ln(a) − ln(b) = ln(a/b), donc ln(50) − ln(2) = ln(25) = ln(5²) = **2 ln(5)**.\n2. e^x = 7 ⇔ x = ln(7) (le logarithme est la réciproque de l'exponentielle). **x = ln(7) ≈ 1,946**.\n3. ln(x) n'existe que pour **x > 0**. ln(x) = 2 ⇔ x = e² (car e^(ln x) = x). **x = e² ≈ 7,389**, qui est bien strictement positif : c'est la solution."
+    },
+    {
+      "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+      "difficulte": 2,
+      "titre": "Épargner, puis vendre sa voiture",
+      "consigne": "Résous chaque question de seuil par le logarithme et arrondis dans le bon sens.",
+      "enonce": "**Situation.**\n\n**A.** Chloé place **5 000 €** à intérêts composés au taux de **3 % par an**. Son capital au bout de n années est 5 000 × 1,03ⁿ.\n\n1. À partir de combien d'années entières son capital atteindra-t-il au moins 8 000 € ? Résous l'inéquation par le logarithme.\n\n**B.** Sa voiture, achetée **20 000 €**, perd **15 %** de sa valeur chaque année. Sa valeur au bout de n années est 20 000 × 0,85ⁿ.\n\n2. À partir de combien d'années entières vaudra-t-elle moins de 5 000 € ? Attention au sens de l'inégalité.\n3. Vérifie tes deux réponses en calculant les valeurs de part et d'autre du seuil.",
+      "bareme": [
+        {
+          "critere": "1,03ⁿ ≥ 1,6 résolu : n ≥ ln(1,6)/ln(1,03) ≈ 15,9, donc 16 ans",
+          "points": 7
+        },
+        {
+          "critere": "0,85ⁿ < 0,25 résolu avec changement de sens (ln(0,85) < 0) : n > 8,53, donc 9 ans",
+          "points": 8
+        },
+        {
+          "critere": "Vérifications numériques de part et d'autre des seuils",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 5 000 × 1,03ⁿ ≥ 8 000 ⇔ 1,03ⁿ ≥ 1,6 ⇔ n ln(1,03) ≥ ln(1,6) (ln est strictement croissante) ⇔ n ≥ ln(1,6)/ln(1,03) (car ln(1,03) > 0) ≈ 15,9. On arrondit dans le sens qui respecte l'inégalité : **au bout de 16 ans**.\n2. 20 000 × 0,85ⁿ < 5 000 ⇔ 0,85ⁿ < 0,25 ⇔ n ln(0,85) < ln(0,25). Comme **ln(0,85) < 0**, diviser change le sens : n > ln(0,25)/ln(0,85) ≈ (−1,386)/(−0,163) ≈ 8,53. Donc **au bout de 9 ans**.\n3. Capital : 5 000 × 1,03¹⁵ ≈ 7 789,84 € < 8 000 € et 5 000 × 1,03¹⁶ ≈ 8 023,53 € ≥ 8 000 €. ✓\nVoiture : 20 000 × 0,85⁸ ≈ 5 449,81 € et 20 000 × 0,85⁹ ≈ 4 632,34 € < 5 000 €. ✓"
+    },
+    {
+      "chapitre": "fc9c9b25-fb32-5b87-a4a2-8efa831020d9",
+      "difficulte": 3,
+      "titre": "Des bactéries et des décibels",
+      "consigne": "Traite les trois parties en justifiant ; arrondis au millième si besoin.",
+      "enonce": "**Partie A — Repérer un modèle.** Un laboratoire compte des bactéries toutes les heures :\n\n| Heure n | 0 | 1 | 2 | 3 |\n| Nombre u(n) | 500 | 1 000 | 2 000 | 4 000 |\n\n1. Calcule ln(u(n)) pour chaque valeur (au millième) et les écarts successifs. Que constates-tu ?\n2. Justifie que ln(u(n)) = ln(500) + n ln(2) et que le modèle est exponentiel. Donne la raison de la suite u.\n\n**Partie B — Un seuil.** On suppose que u(n) = 500 × 2ⁿ reste valable.\n\n3. À partir de combien d'heures entières la culture dépasse-t-elle 1 000 000 de bactéries ?\n\n**Partie C — Une échelle logarithmique.** Sur l'échelle des décibels, **augmenter le niveau sonore de 10 dB revient à multiplier l'intensité du son par 10**.\n\n4. Une salle de classe calme est à 60 dB, un concert à 90 dB. Par combien l'intensité sonore est-elle multipliée ? Pourquoi est-il faux de dire que le concert est « 1,5 fois plus fort » ?\n\n**Partie D.** On pose f(x) = ln(x² + 1) pour tout réel x.\n\n5. Justifie que f est définie sur ℝ, calcule f'(x) et donne le sens de variation de f sur [0 ; +∞[.",
+      "bareme": [
+        {
+          "critere": "Logarithmes 6,215 ; 6,908 ; 7,601 ; 8,294 et écarts constants ≈ 0,693 = ln(2)",
+          "points": 4
+        },
+        {
+          "critere": "Linéarisation justifiée, modèle exponentiel de raison 2",
+          "points": 4
+        },
+        {
+          "critere": "2ⁿ > 2 000 résolu : n > 10,97, donc 11 heures",
+          "points": 5
+        },
+        {
+          "critere": "Intensité multipliée par 1 000 et explication du caractère multiplicatif de l'échelle",
+          "points": 4
+        },
+        {
+          "critere": "f'(x) = 2x/(x² + 1) par (ln u)' = u'/u, f croissante sur [0 ; +∞[",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. ln(500) ≈ 6,215 ; ln(1 000) ≈ 6,908 ; ln(2 000) ≈ 7,601 ; ln(4 000) ≈ 8,294. Les écarts successifs valent tous environ **0,693**, soit ln(2) : les points (n ; ln(u(n))) sont **alignés**.\n2. Chaque heure, le nombre est multiplié par 2 : u(n) = 500 × 2ⁿ, donc ln(u(n)) = ln(500) + ln(2ⁿ) = **ln(500) + n ln(2)**. La suite des ln est arithmétique de raison ln(2) : le nuage des logarithmes s'aligne, donc **le modèle est exponentiel**, et u est géométrique de **raison 2**.\n3. 500 × 2ⁿ > 1 000 000 ⇔ 2ⁿ > 2 000 ⇔ n ln(2) > ln(2 000) ⇔ n > ln(2 000)/ln(2) ≈ 10,97. Donc **à partir de 11 heures**. Vérification : 2¹⁰ = 1 024 < 2 000 et 2¹¹ = 2 048 > 2 000.\n4. De 60 à 90 dB, on monte de 30 dB, soit trois fois 10 dB : l'intensité est multipliée par 10 × 10 × 10 = **1 000**. Sur une échelle logarithmique, une augmentation d'une unité correspond à une **multiplication** de la grandeur, pas à une addition : le rapport 90/60 = 1,5 n'a aucun sens physique.\n5. Pour tout réel x, x² + 1 ≥ 1 > 0 : ln(x² + 1) existe, **f est définie sur ℝ**. Avec u(x) = x² + 1, u'(x) = 2x et (ln u)' = u'/u : **f'(x) = 2x/(x² + 1)**. Sur [0 ; +∞[, 2x ≥ 0 et x² + 1 > 0, donc f'(x) ≥ 0 (nulle seulement en 0) : **f est croissante** sur [0 ; +∞[."
+    },
+    {
+      "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+      "difficulte": 1,
+      "titre": "Dériver des fonctions composées",
+      "consigne": "Calcule chaque dérivée en indiquant la formule du cours utilisée.",
+      "enonce": "**Situation.** Calcule la dérivée de chacune des fonctions suivantes (on se place sur un intervalle où elles sont définies et dérivables) :\n\n1. f(x) = e^(−0,2x)\n2. g(x) = ln(3x + 1), pour x > 0\n3. h(x) = √(2x + 5), pour x > 0\n4. k(x) = (x² + 1)³\n5. Donne l'équation de la tangente à la courbe de f au point d'abscisse 0.",
+      "bareme": [
+        {
+          "critere": "f'(x) = −0,2 e^(−0,2x) et g'(x) = 3/(3x + 1), avec le facteur u' présent",
+          "points": 8
+        },
+        {
+          "critere": "h'(x) = 1/√(2x + 5) et k'(x) = 6x(x² + 1)²",
+          "points": 6
+        },
+        {
+          "critere": "Tangente y = −0,2x + 1 obtenue par y = f'(a)(x − a) + f(a)",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f = e^u avec u(x) = −0,2x, u'(x) = −0,2. (e^u)' = u' e^u, donc **f'(x) = −0,2 e^(−0,2x)**. Oublier le facteur −0,2 inverserait le sens de variation.\n2. g = ln u avec u(x) = 3x + 1 > 0, u'(x) = 3. (ln u)' = u'/u, donc **g'(x) = 3/(3x + 1)**.\n3. h = √u avec u(x) = 2x + 5 > 0, u'(x) = 2. (√u)' = u'/(2√u), donc h'(x) = 2/(2√(2x + 5)) = **1/√(2x + 5)**.\n4. k = u³ avec u(x) = x² + 1, u'(x) = 2x. (uⁿ)' = n u' uⁿ⁻¹, donc k'(x) = 3 × 2x × (x² + 1)² = **6x(x² + 1)²**.\n5. f(0) = e⁰ = 1 et f'(0) = −0,2. La tangente a pour équation y = f'(0)(x − 0) + f(0), soit **y = −0,2x + 1**."
+    },
+    {
+      "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+      "difficulte": 2,
+      "titre": "Le pic de concentration d'un antidouleur",
+      "consigne": "Suis la méthode d'optimisation et conclus avec les unités ; arrondis au millième.",
+      "enonce": "**Situation.** Après la prise d'un antidouleur, la concentration dans le sang, t heures après la prise, est modélisée par :\n\nC(t) = 10t e^(−0,5t) (en mg/L), pour t dans [0 ; 12].\n\n1. Montre que C'(t) = 5 e^(−0,5t) (2 − t).\n2. Étudie le signe de C'(t) sur [0 ; 12] et dresse le tableau de variations de C.\n3. À quel instant la concentration est-elle maximale ? Donne la valeur exacte puis approchée de ce maximum.\n4. Calcule C(12). Interprète.",
+      "bareme": [
+        {
+          "critere": "Dérivée du produit avec (e^u)' = u' e^u, factorisation correcte",
+          "points": 6
+        },
+        {
+          "critere": "Signe de C' (positif avant 2, négatif après) et tableau de variations",
+          "points": 6
+        },
+        {
+          "critere": "Maximum en t = 2 h : C(2) = 20 e^(−1) ≈ 7,358 mg/L",
+          "points": 5
+        },
+        {
+          "critere": "C(12) ≈ 0,297 mg/L et interprétation (médicament presque éliminé)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. C = u × v avec u(t) = 10t, u'(t) = 10, v(t) = e^(−0,5t), v'(t) = −0,5 e^(−0,5t).\nC'(t) = u'v + uv' = 10 e^(−0,5t) + 10t × (−0,5) e^(−0,5t) = e^(−0,5t)(10 − 5t) = **5 e^(−0,5t)(2 − t)**.\n2. Une exponentielle est toujours strictement positive, donc C'(t) a le signe de 2 − t : **positif sur [0 ; 2]**, **négatif sur [2 ; 12]**, et C' s'annule en changeant de signe en 2. C est croissante sur [0 ; 2] et décroissante sur [2 ; 12]. C(0) = 0.\n3. La concentration est maximale **2 heures** après la prise : C(2) = 20 e^(−1) ≈ **7,358 mg/L**.\n4. C(12) = 120 e^(−6) ≈ **0,297 mg/L** : au bout de 12 heures, il ne reste presque plus de médicament dans le sang ; une nouvelle prise peut être envisagée."
+    },
+    {
+      "chapitre": "75d21456-1d9c-5eda-8771-6014ede38951",
+      "difficulte": 3,
+      "titre": "L'atelier de trottinettes",
+      "consigne": "Justifie chaque étape, et conclus en revenant à la situation avec les unités.",
+      "enonce": "**Situation.** Un atelier fabrique x centaines de trottinettes par mois. Le coût total, en milliers d'euros, est C(x) = x³ − 12x² + 51x + 40. Chaque centaine est vendue 30 000 €, donc la recette est R(x) = 30x (en milliers d'euros).\n\n**Partie A — Capacité de 9 centaines** (x dans [0 ; 9]).\n\n1. Calcule le coût marginal C'(x) et la recette marginale R'(x).\n2. Montre que le bénéfice s'écrit B(x) = −x³ + 12x² − 21x − 40.\n3. Calcule B'(x) et montre que B'(x) = −3(x − 1)(x − 7).\n4. Dresse le tableau de variations de B sur [0 ; 9] en calculant B(0), B(1), B(7) et B(9). Quelle production maximise le bénéfice ? Quel est ce bénéfice maximal ?\n5. Vérifie qu'en cette production, le coût marginal est égal à la recette marginale.\n\n**Partie B — Une panne.** Une machine tombe en panne : l'atelier ne peut plus produire que 5 centaines au maximum (x dans [0 ; 5]).\n\n6. Où le bénéfice est-il maximal désormais ? Quelle est sa valeur ? Explique pourquoi la réponse de la partie A ne convient plus.",
+      "bareme": [
+        {
+          "critere": "C'(x) = 3x² − 24x + 51 et R'(x) = 30",
+          "points": 3
+        },
+        {
+          "critere": "B(x) établi et B'(x) = −3x² + 24x − 21 = −3(x − 1)(x − 7) vérifié",
+          "points": 5
+        },
+        {
+          "critere": "Tableau de variations juste et maximum B(7) = 58, soit 700 trottinettes et 58 000 €",
+          "points": 6
+        },
+        {
+          "critere": "C'(7) = 30 = R'(7) vérifié",
+          "points": 2
+        },
+        {
+          "critere": "Partie B : maximum au bord x = 5, B(5) = 30 soit 30 000 €, intervalle de validité expliqué",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **C'(x) = 3x² − 24x + 51** (coût marginal) et **R'(x) = 30** (recette marginale).\n2. B(x) = R(x) − C(x) = 30x − x³ + 12x² − 51x − 40 = **−x³ + 12x² − 21x − 40**.\n3. **B'(x) = −3x² + 24x − 21** = −3(x² − 8x + 7). Or (x − 1)(x − 7) = x² − 8x + 7, donc **B'(x) = −3(x − 1)(x − 7)**.\n4. −3 < 0 : B'(x) est négatif à l'extérieur des racines et positif entre elles. B décroît sur [0 ; 1], croît sur [1 ; 7], décroît sur [7 ; 9].\n- B(0) = −40 ; B(1) = −1 + 12 − 21 − 40 = −50 ;\n- B(7) = −343 + 588 − 147 − 40 = **58** ;\n- B(9) = −729 + 972 − 189 − 40 = 14.\nLe bénéfice est maximal pour **x = 7**, soit **700 trottinettes** par mois, et vaut **58 000 €**.\n5. C'(7) = 147 − 168 + 51 = 30 = R'(7) : le coût marginal égale bien la recette marginale au maximum du bénéfice.\n6. Sur [0 ; 5], B décroît sur [0 ; 1] puis croît sur [1 ; 5] ; l'optimum x = 7 est **hors de l'intervalle de validité**, il n'a plus de sens. On compare les bornes : B(0) = −40 et B(5) = −125 + 300 − 105 − 40 = **30**. Le bénéfice est maximal **au bord**, pour **x = 5** : 500 trottinettes, **30 000 €** de bénéfice."
+    },
+    {
+      "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+      "difficulte": 1,
+      "titre": "Trouver un point d'inflexion",
+      "consigne": "Justifie chaque réponse par le signe de la dérivée seconde.",
+      "enonce": "**Situation.** On considère la fonction f définie sur ℝ par f(x) = x³ − 6x² + 5.\n\n1. Calcule f'(x) puis f''(x).\n2. Étudie le signe de f''(x) et déduis-en les intervalles sur lesquels f est convexe ou concave.\n3. La courbe de f admet-elle un point d'inflexion ? Si oui, donne ses coordonnées et justifie.",
+      "bareme": [
+        {
+          "critere": "f'(x) = 3x² − 12x et f''(x) = 6x − 12",
+          "points": 6
+        },
+        {
+          "critere": "f concave sur ]−∞ ; 2] et convexe sur [2 ; +∞[ justifié par le signe de f''",
+          "points": 8
+        },
+        {
+          "critere": "Point d'inflexion (2 ; −11) justifié par le changement de signe de f''",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **f'(x) = 3x² − 12x** et **f''(x) = 6x − 12**.\n2. f''(x) ≥ 0 ⇔ 6x − 12 ≥ 0 ⇔ x ≥ 2. Donc f'' est négative sur ]−∞ ; 2] : **f est concave sur ]−∞ ; 2]** ; f'' est positive sur [2 ; +∞[ : **f est convexe sur [2 ; +∞[**.\n3. f'' s'annule en 2 **en changeant de signe** : la courbe change de convexité, elle admet un **point d'inflexion** d'abscisse 2. f(2) = 8 − 24 + 5 = −11 : le point d'inflexion est **(2 ; −11)**. En ce point, la tangente traverse la courbe."
+    },
+    {
+      "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+      "difficulte": 2,
+      "titre": "Le lancement d'une console",
+      "consigne": "Justifie par les signes de N' et N'', et interprète chaque résultat en français.",
+      "enonce": "**Situation.** Le nombre total de consoles vendues, t mois après le lancement, est modélisé par N(t) = −t³ + 9t² + 10 (en milliers), pour t dans [0 ; 6].\n\n1. Calcule N'(t) et montre que N'(t) = 3t(6 − t). Déduis-en le sens de variation de N sur [0 ; 6].\n2. Calcule N''(t). Étudie la convexité de N sur [0 ; 6].\n3. Montre que la courbe admet un point d'inflexion et donne ses coordonnées.\n4. Interprète : que se passe-t-il pour les ventes avant et après ce point ? Que vaut la vitesse de vente à ce moment ?",
+      "bareme": [
+        {
+          "critere": "N'(t) = 3t(6 − t) positive, N croissante sur [0 ; 6]",
+          "points": 5
+        },
+        {
+          "critere": "N''(t) = −6t + 18 : convexe sur [0 ; 3], concave sur [3 ; 6]",
+          "points": 6
+        },
+        {
+          "critere": "Point d'inflexion (3 ; 64) justifié par le changement de signe de N''",
+          "points": 4
+        },
+        {
+          "critere": "Interprétation : accélération puis ralentissement, vitesse maximale N'(3) = 27 milliers par mois",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. N'(t) = −3t² + 18t = **3t(6 − t)**. Sur [0 ; 6], 3t ≥ 0 et 6 − t ≥ 0, donc N'(t) ≥ 0 : **N est croissante** ; le nombre total de consoles vendues augmente.\n2. **N''(t) = −6t + 18**. N''(t) ≥ 0 ⇔ t ≤ 3. N est **convexe sur [0 ; 3]** et **concave sur [3 ; 6]**.\n3. N'' s'annule en 3 en changeant de signe : la courbe admet un **point d'inflexion** d'abscisse 3. N(3) = −27 + 81 + 10 = 64, d'où le point **(3 ; 64)**.\n4. Sur [0 ; 3], N' > 0 et N'' > 0 : les ventes augmentent **de plus en plus vite** (effet de lancement). Sur [3 ; 6], N' > 0 et N'' < 0 : elles augmentent encore, mais **de moins en moins vite**. Le point d'inflexion marque le **pic de la vitesse de vente** : N'(3) = 9 × 3 = **27 milliers de consoles par mois**. Ce n'est pas le maximum du total, qui continue d'augmenter après le 3e mois (N(6) = 118 milliers)."
+    },
+    {
+      "chapitre": "dc8af2c7-8382-5e79-9808-4d056107cffd",
+      "difficulte": 3,
+      "titre": "Convexité, inégalité et épidémie",
+      "consigne": "Les parties sont indépendantes. Justifie chaque résultat et soigne les interprétations.",
+      "enonce": "**Partie A — Une inégalité.** On pose g(x) = e^x − x − 1 pour tout réel x.\n\n1. Calcule g''(x) et justifie que la fonction exponentielle est convexe sur ℝ.\n2. Détermine l'équation de la tangente à la courbe de la fonction exponentielle au point d'abscisse 0. En utilisant la position d'une courbe convexe par rapport à ses tangentes, montre que e^x ≥ x + 1 pour tout réel x.\n\n**Partie B — Une épidémie.** Le nombre total de cas depuis le début d'une épidémie, t jours après son début, est modélisé par C(t) = −2t³ + 90t², pour t dans [0 ; 30].\n\n3. Calcule C'(t) et C''(t). Étudie la convexité de C sur [0 ; 30] et détermine le point d'inflexion.\n4. Que représente C'(t) ? Quel jour le nombre de nouveaux cas quotidiens est-il le plus élevé ? Combien vaut-il ?\n5. Un journaliste écrit le 15e jour : « Le pic est atteint, l'épidémie est terminée. » Corrige-le en calculant C(15) et C(30).\n\n**Partie C.** 6. Un café refroidit : sa température baisse, mais de moins en moins vite. La fonction qui la modélise est-elle convexe ou concave ? Justifie.",
+      "bareme": [
+        {
+          "critere": "g''(x) = e^x > 0, convexité de l'exponentielle, tangente y = x + 1 et inégalité justifiée",
+          "points": 5
+        },
+        {
+          "critere": "C'(t) = −6t² + 180t, C''(t) = −12t + 180, convexe sur [0 ; 15], concave sur [15 ; 30], inflexion en t = 15",
+          "points": 5
+        },
+        {
+          "critere": "Nouveaux cas maximaux le 15e jour : C'(15) = 1 350",
+          "points": 4
+        },
+        {
+          "critere": "C(15) = 13 500 et C(30) = 27 000 : le total continue d'augmenter, confusion inflexion / maximum dénoncée",
+          "points": 4
+        },
+        {
+          "critere": "Fonction décroissante et convexe justifiée",
+          "points": 2
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. g'(x) = e^x − 1 et g''(x) = e^x. La dérivée seconde de l'exponentielle est e^x > 0 : **l'exponentielle est convexe** sur ℝ.\n2. La tangente en 0 : y = e⁰(x − 0) + e⁰, soit **y = x + 1**. Une courbe convexe est **au-dessus de ses tangentes**, donc pour tout réel x, **e^x ≥ x + 1**.\n3. **C'(t) = −6t² + 180t = 6t(30 − t)** et **C''(t) = −12t + 180**. C''(t) ≥ 0 ⇔ t ≤ 15 : C est **convexe sur [0 ; 15]**, **concave sur [15 ; 30]**. C'' s'annule en 15 en changeant de signe : **point d'inflexion d'abscisse 15**.\n4. C'(t) est la **vitesse** d'augmentation du total, c'est-à-dire le nombre de **nouveaux cas par jour**. Il est maximal au point d'inflexion, le **15e jour** : C'(15) = −1 350 + 2 700 = **1 350 nouveaux cas par jour**.\n5. C(15) = −6 750 + 20 250 = **13 500** cas et C(30) = −54 000 + 81 000 = **27 000** cas. Le 15e jour, c'est le pic des **nouveaux cas**, pas la fin : le total va encore doubler (C' ≥ 0 jusqu'au 30e jour). Le journaliste confond le point d'inflexion (vitesse maximale) avec le maximum de la courbe. On remarque que l'inflexion a lieu à mi-chemin du plafond (13 500 = 27 000/2).\n6. La température **baisse** : la fonction est décroissante (T' < 0). Elle baisse **de moins en moins vite** : T' augmente vers 0, donc T' est croissante, ce qui caractérise une fonction **convexe**. Variation et convexité sont indépendantes."
+    },
+    {
+      "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+      "difficulte": 1,
+      "titre": "Retrouver une primitive",
+      "consigne": "Donne chaque primitive en indiquant la forme reconnue.",
+      "enonce": "**Situation.**\n\n1. Donne une primitive sur ℝ de chacune des fonctions suivantes :\n   a. f(x) = 3x² + 4x − 1 ;\n   b. g(x) = e^(2x) ;\n   c. h(x) = 2x/(x² + 1).\n2. Détermine **la** primitive F de f qui vérifie F(0) = 5.\n3. Vérifie ta réponse de la question 1.b en dérivant.",
+      "bareme": [
+        {
+          "critere": "Primitives de f, g et h correctes avec la forme reconnue (xⁿ, u' e^u, u'/u)",
+          "points": 10
+        },
+        {
+          "critere": "F(x) = x³ + 2x² − x + 5 déterminée par la condition initiale",
+          "points": 6
+        },
+        {
+          "critere": "Vérification par dérivation de la primitive de g",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. a. Une primitive de xⁿ est xⁿ⁺¹/(n + 1) : F(x) = **x³ + 2x² − x** (à une constante près).\nb. On reconnaît u' e^u avec u(x) = 2x, u'(x) = 2 ; g(x) = ½ × 2e^(2x), donc une primitive est **G(x) = ½ e^(2x)** (on corrige le facteur constant en multipliant par son inverse).\nc. On reconnaît u'/u avec u(x) = x² + 1 > 0 : une primitive est **H(x) = ln(x² + 1)**.\n2. Les primitives de f sont x³ + 2x² − x + k, k réel. F(0) = k = 5, donc **F(x) = x³ + 2x² − x + 5** : la condition initiale désigne une primitive et une seule.\n3. G'(x) = ½ × 2e^(2x) = e^(2x) = g(x). ✓"
+    },
+    {
+      "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+      "difficulte": 2,
+      "titre": "L'élimination d'un médicament",
+      "consigne": "Justifie chaque étape ; arrondis au centième.",
+      "enonce": "**Situation.** On injecte à un patient **80 mg** d'un médicament. On admet que la quantité y(t) de médicament dans le sang (en mg), t heures après l'injection, vérifie l'équation différentielle :\n\ny' = −0,3y, avec y(0) = 80.\n\n1. Donne la forme générale des solutions de l'équation y' = −0,3y.\n2. Détermine la solution qui vérifie la condition initiale.\n3. Vérifie que cette fonction est bien solution de l'équation.\n4. Calcule la quantité de médicament restant au bout de 5 heures. Que devient cette quantité à long terme ? Interprète le signe de a = −0,3.",
+      "bareme": [
+        {
+          "critere": "Solutions de la forme C e^(−0,3t)",
+          "points": 4
+        },
+        {
+          "critere": "C = 80 par la condition initiale : y(t) = 80 e^(−0,3t)",
+          "points": 5
+        },
+        {
+          "critere": "Vérification : y' = −0,3 × 80 e^(−0,3t) = −0,3 y",
+          "points": 4
+        },
+        {
+          "critere": "y(5) ≈ 17,85 mg, limite 0 et interprétation (décroissance exponentielle)",
+          "points": 7
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les solutions de y' = ay sont les fonctions t ↦ C e^(at), C réel. Ici : **y(t) = C e^(−0,3t)**.\n2. y(0) = C e⁰ = C = 80. Donc **y(t) = 80 e^(−0,3t)**.\n3. y'(t) = 80 × (−0,3) e^(−0,3t) = −0,3 × 80 e^(−0,3t) = −0,3 y(t). ✓ Et y(0) = 80. ✓\n4. y(5) = 80 e^(−1,5) ≈ 80 × 0,2231 ≈ **17,85 mg**. Comme −0,3 < 0, e^(−0,3t) tend vers 0 : la quantité **tend vers 0**. **Interprétation** : a < 0 traduit une **décroissance exponentielle** ; la vitesse d'élimination est proportionnelle à la quantité présente, et le médicament est progressivement éliminé de l'organisme."
+    },
+    {
+      "chapitre": "37f61281-da6b-5f7b-afd4-783cd676cb0e",
+      "difficulte": 3,
+      "titre": "Le chocolat chaud qui refroidit",
+      "consigne": "Suis la méthode du cours et justifie chaque étape ; arrondis au centième.",
+      "enonce": "**Situation.** Maëlle se sert un chocolat chaud à **90 °C** dans une pièce à température constante. On admet que la température T(t) du chocolat (en °C), t minutes après, vérifie :\n\nT' = −0,1 T + 2, avec T(0) = 90.\n\n1. Détermine la solution particulière constante de cette équation.\n2. Déduis-en la forme générale des solutions, puis la solution qui vérifie la condition initiale.\n3. Calcule T(10). Interprète.\n4. Détermine la limite de T en +∞. Que représente cette valeur concrètement ? Dépend-elle de la température de départ ?\n5. Maëlle boit son chocolat quand il est descendu sous 30 °C. Calcule T(19) et T(20), puis conclus à la minute près.\n6. On relève la température chaque minute et on note u(n) = T(n). On admet que u(n+1) = a u(n) + b pour certains réels a et b. Quel modèle discret reconnais-tu ? Vers quelle valeur doit tendre u(n) ? Justifie sans calcul.",
+      "bareme": [
+        {
+          "critere": "Solution constante T = −b/a = 20 obtenue par 0 = −0,1 T + 2",
+          "points": 3
+        },
+        {
+          "critere": "Solutions C e^(−0,1t) + 20 et C = 70 : T(t) = 70 e^(−0,1t) + 20",
+          "points": 5
+        },
+        {
+          "critere": "T(10) ≈ 45,75 °C et limite 20 °C interprétée comme la température ambiante, indépendante du départ",
+          "points": 5
+        },
+        {
+          "critere": "T(19) ≈ 30,47 et T(20) ≈ 29,47 : sous 30 °C au bout de 20 minutes",
+          "points": 4
+        },
+        {
+          "critere": "Lien avec la suite arithmético-géométrique et son point d'équilibre 20",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. La solution constante vérifie 0 = −0,1 T + 2, soit **T = 20** (c'est −b/a = −2/(−0,1)).\n2. On ajoute les solutions de l'équation sans second membre T' = −0,1T : **T(t) = C e^(−0,1t) + 20**. Condition initiale : T(0) = C + 20 = 90, donc C = 70 et **T(t) = 70 e^(−0,1t) + 20**.\n3. T(10) = 70 e^(−1) + 20 ≈ 70 × 0,3679 + 20 ≈ **45,75 °C** : au bout de 10 minutes, le chocolat a perdu environ 44 °C.\n4. Comme −0,1 < 0, e^(−0,1t) tend vers 0, donc **T tend vers 20 °C**. C'est le **niveau d'équilibre** : la température de la pièce. Il **ne dépend pas** de la température de départ (seule la constante C en dépend).\n5. T(19) = 70 e^(−1,9) + 20 ≈ 70 × 0,1496 + 20 ≈ **30,47 °C** ; T(20) = 70 e^(−2) + 20 ≈ 70 × 0,1353 + 20 ≈ **29,47 °C**. T est décroissante (T'(t) = −7 e^(−0,1t) < 0) : le chocolat passe sous 30 °C entre la 19e et la 20e minute ; Maëlle peut le boire **au bout de 20 minutes**.\n6. C'est une **suite arithmético-géométrique**, la version **discrète** de l'équation y' = ay + b. Les deux modèles décrivent la même situation (un taux plus un apport fixe) et convergent vers le même **état d'équilibre** : u(n) = T(n) doit tendre vers **20 °C**, la limite de T."
+    },
+    {
+      "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+      "difficulte": 1,
+      "titre": "Calculer des intégrales simples",
+      "consigne": "Calcule chaque intégrale en donnant la primitive utilisée.",
+      "enonce": "**Situation.** On considère la fonction f définie sur [0 ; 2] par f(x) = 3x² + 1.\n\n1. Calcule l'intégrale de 0 à 2 de f(x) dx.\n2. Calcule l'intégrale de 1 à 3 de 2x dx.\n3. Calcule la valeur moyenne de f sur [0 ; 2]. Compare-la avec la moyenne (f(0) + f(2))/2. Que remarques-tu ?",
+      "bareme": [
+        {
+          "critere": "Primitive x³ + x et intégrale égale à 10",
+          "points": 7
+        },
+        {
+          "critere": "Primitive x² et intégrale égale à 8",
+          "points": 5
+        },
+        {
+          "critere": "Valeur moyenne 5, comparaison avec 7 et remarque (f non affine)",
+          "points": 8
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Une primitive de f est F(x) = x³ + x. L'intégrale vaut F(2) − F(0) = (8 + 2) − 0 = **10**.\n2. Une primitive de 2x est x². L'intégrale vaut 3² − 1² = 9 − 1 = **8**.\n3. Valeur moyenne : (1/(2 − 0)) × 10 = **5**. Or f(0) = 1 et f(2) = 13, donc (f(0) + f(2))/2 = **7**. Les deux valeurs sont **différentes** : la valeur moyenne d'une fonction n'est pas la moyenne de ses valeurs aux bornes dès que la fonction n'est pas affine."
+    },
+    {
+      "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+      "difficulte": 2,
+      "titre": "Le débit d'une fontaine",
+      "consigne": "Justifie chaque calcul et précise l'unité de chaque résultat ; arrondis au centième.",
+      "enonce": "**Situation.** Le débit d'une fontaine, t minutes après sa mise en route, est modélisé par :\n\nd(t) = −0,5t² + 4t + 10 (en litres par minute), pour t dans [0 ; 8].\n\n1. Calcule d(0), d(4) et d(8).\n2. Détermine une primitive D de d.\n3. Calcule le volume d'eau écoulé pendant les 8 premières minutes. Justifie l'unité.\n4. Calcule le débit moyen de la fontaine sur ces 8 minutes.\n5. Calcule le volume écoulé entre la 4e et la 8e minute, et déduis-en, grâce à la relation de Chasles, le volume écoulé pendant les 4 premières minutes.",
+      "bareme": [
+        {
+          "critere": "d(0) = 10, d(4) = 18, d(8) = 10 et primitive D(t) = −t³/6 + 2t² + 10t",
+          "points": 5
+        },
+        {
+          "critere": "Volume = 368/3 ≈ 122,67 L avec unité justifiée (L/min × min)",
+          "points": 6
+        },
+        {
+          "critere": "Débit moyen = 46/3 ≈ 15,33 L/min",
+          "points": 4
+        },
+        {
+          "critere": "Volume entre 4 et 8 min = 184/3 ≈ 61,33 L et volume sur [0 ; 4] déduit par Chasles",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. d(0) = **10** ; d(4) = −8 + 16 + 10 = **18** ; d(8) = −32 + 32 + 10 = **10** (en L/min).\n2. **D(t) = −t³/6 + 2t² + 10t**.\n3. Le volume est l'intégrale du débit : D(8) − D(0) = −512/6 + 128 + 80 = 208 − 256/3 = **368/3 ≈ 122,67 L**. On intègre des litres par minute sur des minutes : le résultat est en **litres**.\n4. Débit moyen = (1/8) × 368/3 = **46/3 ≈ 15,33 L/min**. (Ce n'est pas (10 + 10)/2 = 10 : le débit n'est pas affine.)\n5. D(4) = −64/6 + 32 + 40 = 72 − 32/3 = 184/3. Volume entre 4 et 8 minutes : D(8) − D(4) = 368/3 − 184/3 = 184/3 ≈ **61,33 L**.\nPar la relation de Chasles, volume sur [0 ; 8] = volume sur [0 ; 4] + volume sur [4 ; 8], donc volume sur [0 ; 4] = 368/3 − 184/3 = **184/3 ≈ 61,33 L** (on retrouve D(4) − D(0) = 184/3). Le débit est symétrique autour de t = 4, les deux moitiés donnent le même volume."
+    },
+    {
+      "chapitre": "6a81e6be-3fc7-5c44-b210-816c1492d0ee",
+      "difficulte": 3,
+      "titre": "Le gymnase économe",
+      "consigne": "Justifie chaque calcul, donne l'unité de chaque résultat et interprète ; arrondis au centième.",
+      "enonce": "**Situation.** Pendant une journée d'ouverture de 10 heures, un gymnase sans dispositif d'économie consomme une puissance constante f(t) = 10 kW. Équipé d'un système de gestion intelligente, sa puissance consommée devient :\n\ng(t) = 0,1t² − t + 10 (en kW), pour t dans [0 ; 10] (t en heures).\n\n1. Montre que f(t) − g(t) = 0,1t(10 − t), puis que g(t) ≤ f(t) sur [0 ; 10].\n2. Calcule l'énergie consommée sur la journée sans dispositif, puis avec le dispositif. Précise l'unité.\n3. Calcule l'économie d'énergie réalisée sur la journée. Quelle interprétation graphique en donnes-tu ?\n4. Calcule la puissance moyenne consommée avec le dispositif.\n5. On veut une valeur approchée de l'intégrale de g entre 0 et 10 par la méthode des trapèzes, avec deux trapèzes de largeur 5. Calcule-la et compare-la à la valeur exacte. Pourquoi cette approximation est-elle ici trop grande ?",
+      "bareme": [
+        {
+          "critere": "f − g = 0,1t(10 − t) positif sur [0 ; 10]",
+          "points": 3
+        },
+        {
+          "critere": "Énergies 100 kWh et 250/3 ≈ 83,33 kWh avec l'unité kW × h = kWh",
+          "points": 5
+        },
+        {
+          "critere": "Économie 50/3 ≈ 16,67 kWh, interprétée comme l'aire entre les deux courbes",
+          "points": 5
+        },
+        {
+          "critere": "Puissance moyenne ≈ 8,33 kW",
+          "points": 3
+        },
+        {
+          "critere": "Méthode des trapèzes = 87,5 kWh, surestimation expliquée par la forme de la courbe",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f(t) − g(t) = 10 − 0,1t² + t − 10 = t − 0,1t² = **0,1t(10 − t)**. Sur [0 ; 10], 0,1t ≥ 0 et 10 − t ≥ 0, donc f(t) − g(t) ≥ 0 : **g(t) ≤ f(t)**.\n2. Sans dispositif : intégrale de 0 à 10 de 10 dt = 10 × 10 = **100 kWh**.\nAvec dispositif : une primitive de g est G(t) = 0,1t³/3 − t²/2 + 10t ; G(10) − G(0) = 100/3 − 50 + 100 = **250/3 ≈ 83,33 kWh**. On intègre des kW sur des heures : le résultat est une **énergie en kWh**.\n3. Économie = intégrale de 0 à 10 de (f − g) = intégrale de (t − 0,1t²) = [t²/2 − 0,1t³/3] de 0 à 10 = 50 − 100/3 = **50/3 ≈ 16,67 kWh** (on retrouve 100 − 250/3). C'est l'**aire entre les deux courbes** : l'écart cumulé entre les deux scénarios, soit environ 16,7 % d'énergie économisée.\n4. Puissance moyenne = (1/10) × 250/3 = **25/3 ≈ 8,33 kW**.\n5. g(0) = 10 ; g(5) = 2,5 − 5 + 10 = 7,5 ; g(10) = 10 − 10 + 10 = 10. Trapèzes : 5 × (10 + 7,5)/2 + 5 × (7,5 + 10)/2 = 43,75 + 43,75 = **87,5 kWh**, contre 83,33 kWh exactement. L'approximation est **trop grande** : la courbe de g est une parabole tournée vers le haut, elle passe **au-dessous** des segments (cordes) qui forment le haut des trapèzes ; ceux-ci ajoutent donc de l'aire. Un découpage plus fin réduirait l'écart."
+    },
+    {
+      "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+      "difficulte": 1,
+      "titre": "Le jeu du dé de la kermesse",
+      "consigne": "Présente la loi dans un tableau et justifie chaque calcul.",
+      "enonce": "**Situation.** À la kermesse, un jeu coûte **2 €**. On lance un dé équilibré à six faces :\n\n- si on obtient 6, on reçoit **8 €** ;\n- si on obtient 4 ou 5, on récupère sa mise de **2 €** ;\n- sinon, on ne reçoit rien.\n\nOn note X le **gain net** du joueur (ce qu'il reçoit moins sa mise).\n\n1. Donne les valeurs possibles de X et la loi de probabilité de X dans un tableau. Vérifie que la somme des probabilités vaut 1.\n2. Calcule l'espérance de X. Le jeu est-il équitable ?\n3. Calcule la variance et l'écart-type de X.",
+      "bareme": [
+        {
+          "critere": "Valeurs 6, 0, −2 avec probabilités 1/6, 2/6, 3/6 et somme égale à 1",
+          "points": 7
+        },
+        {
+          "critere": "E(X) = 0 et jeu équitable justifié",
+          "points": 6
+        },
+        {
+          "critere": "V(X) = 8 et écart-type ≈ 2,83 €",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Gains nets : 6 → 8 − 2 = **6 €** ; 4 ou 5 → 2 − 2 = **0 €** ; 1, 2 ou 3 → **−2 €**.\n\n| Valeur de X | −2 | 0 | 6 |\n| Probabilité | 3/6 | 2/6 | 1/6 |\n\nSomme : 3/6 + 2/6 + 1/6 = 1. ✓\n2. E(X) = −2 × 3/6 + 0 × 2/6 + 6 × 1/6 = −1 + 0 + 1 = **0**. L'espérance de gain est nulle : le jeu est **équitable** ; sur un très grand nombre de parties, le joueur ne gagne ni ne perd en moyenne.\n3. E(X²) = 4 × 3/6 + 0 + 36 × 1/6 = 2 + 6 = 8. V(X) = E(X²) − E(X)² = 8 − 0 = **8**. σ(X) = √8 ≈ **2,83 €**."
+    },
+    {
+      "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+      "difficulte": 2,
+      "titre": "Contrôle qualité des ampoules",
+      "consigne": "Justifie l'emploi de la loi binomiale puis chaque calcul ; arrondis au dix-millième.",
+      "enonce": "**Situation.** Une usine produit des ampoules dont **5 %** sont défectueuses. Pour un contrôle, on prélève **20 ampoules** dans un stock très important, si bien qu'on peut assimiler ce prélèvement à un tirage **avec remise**. On note X le nombre d'ampoules défectueuses dans le prélèvement.\n\n1. Justifie que X suit une loi binomiale ; précise ses paramètres.\n2. Calcule l'espérance de X et interprète.\n3. Calcule P(X = 0) et P(X = 1).\n4. Le lot est refusé si le prélèvement contient **au moins 2** ampoules défectueuses. Calcule la probabilité que le lot soit refusé, en passant par l'événement contraire.",
+      "bareme": [
+        {
+          "critere": "Trois conditions vérifiées (identiques, indépendantes, deux issues), B(20 ; 0,05)",
+          "points": 5
+        },
+        {
+          "critere": "E(X) = 1 interprétée",
+          "points": 3
+        },
+        {
+          "critere": "P(X = 0) ≈ 0,3585 et P(X = 1) ≈ 0,3774",
+          "points": 6
+        },
+        {
+          "critere": "P(X ≥ 2) = 1 − P(X ≤ 1) ≈ 0,2642",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On répète **20 fois** une même épreuve à **deux issues** (défectueuse ou non), de probabilité de succès 0,05 ; le tirage étant assimilé à un tirage avec remise, les épreuves sont **identiques et indépendantes**. X suit la **loi binomiale B(20 ; 0,05)**.\n2. E(X) = n × p = 20 × 0,05 = **1** : sur un grand nombre de prélèvements, on trouve en moyenne une ampoule défectueuse par prélèvement de 20.\n3. P(X = 0) = 0,95²⁰ ≈ **0,3585**.\nP(X = 1) = C(20,1) × 0,05 × 0,95¹⁹ = 20 × 0,05 × 0,95¹⁹ = 0,95¹⁹ ≈ **0,3774**.\n4. P(X ≥ 2) = 1 − P(X ≤ 1) = 1 − (P(X = 0) + P(X = 1)) ≈ 1 − 0,7358 ≈ **0,2642**. Le lot est refusé dans environ 26 % des cas."
+    },
+    {
+      "chapitre": "21b56e3a-d75e-5510-8cfb-91ad28b464fe",
+      "difficulte": 3,
+      "titre": "Primes au centre d'appels",
+      "consigne": "Justifie chaque étape, en particulier les conditions d'emploi des formules ; arrondis au centième.",
+      "enonce": "**Situation.** Yanis travaille dans un centre d'appels. Chaque appel aboutit à une vente avec une probabilité de **0,2**, indépendamment des autres. Chaque jour, il passe **50 appels**. On note X le nombre de ventes de Yanis dans une journée.\n\n1. Justifie que X suit une loi binomiale ; précise ses paramètres. Calcule E(X), V(X) et σ(X).\n2. Son salaire journalier S (en euros) est composé d'un fixe de 120 € et d'une prime de 3 € par vente : S = 120 + 3X. Calcule E(S), V(S) et σ(S).\n3. Une journée est dite « excellente » quand Yanis réalise au moins 12 ventes. On donne P(X ≤ 11) ≈ 0,711. Calcule la probabilité d'une journée excellente.\n4. Sa collègue Lou réalise elle aussi un nombre de ventes Y qui suit la même loi, indépendamment de Yanis. Calcule l'espérance et la variance du nombre total de ventes X + Y de l'équipe. Quelle hypothèse est indispensable pour la variance ?\n5. Le lundi, Yanis appelle 50 clients tirés **sans remise** dans un fichier de 60 clients fidèles, dont 12 achètent toujours. Peut-on encore utiliser la loi binomiale pour X ? Justifie.",
+      "bareme": [
+        {
+          "critere": "B(50 ; 0,2) justifiée, E(X) = 10, V(X) = 8, σ(X) ≈ 2,83",
+          "points": 5
+        },
+        {
+          "critere": "E(S) = 150 €, V(S) = 72, σ(S) ≈ 8,49 € avec les formules de aX + b",
+          "points": 5
+        },
+        {
+          "critere": "P(X ≥ 12) = 1 − P(X ≤ 11) ≈ 0,289",
+          "points": 3
+        },
+        {
+          "critere": "E(X + Y) = 20 et V(X + Y) = 16 avec l'hypothèse d'indépendance",
+          "points": 4
+        },
+        {
+          "critere": "Tirage sans remise dans une petite population : indépendance violée, loi binomiale inadaptée",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On répète **50 fois**, de façon **indépendante**, une épreuve **identique** à **deux issues** (vente ou non) de probabilité 0,2 : X suit **B(50 ; 0,2)**. E(X) = 50 × 0,2 = **10** ; V(X) = 50 × 0,2 × 0,8 = **8** ; σ(X) = √8 ≈ **2,83**.\n2. E(S) = 120 + 3E(X) = 120 + 30 = **150 €**. V(S) = 3² × V(X) = 9 × 8 = **72** (le fixe 120 disparaît de la variance). σ(S) = √72 ≈ **8,49 €**.\n3. P(X ≥ 12) = 1 − P(X ≤ 11) ≈ 1 − 0,711 = **0,289** : environ 29 % des journées sont excellentes.\n4. E(X + Y) = E(X) + E(Y) = 10 + 10 = **20**, ce qui est **toujours** vrai. V(X + Y) = V(X) + V(Y) = 8 + 8 = **16**, ce qui n'est vrai **que parce que X et Y sont indépendantes**.\n5. **Non.** Dans un fichier de 60 clients, tirer 50 clients **sans remise** modifie la composition du fichier à chaque appel : la probabilité de vente d'un appel dépend des appels précédents. Les épreuves ne sont plus **indépendantes** (ni identiques) : la condition d'indépendance est violée, la loi binomiale ne s'applique pas. D'ailleurs X ne peut pas dépasser 12 ici."
+    },
+    {
+      "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+      "difficulte": 1,
+      "titre": "L'attente du bus",
+      "consigne": "Justifie chaque calcul par une propriété de la loi uniforme.",
+      "enonce": "**Situation.** Un bus passe toutes les 30 minutes. Nour arrive à l'arrêt à un instant choisi au hasard. Son temps d'attente X (en minutes) suit la **loi uniforme sur [0 ; 30]**.\n\n1. Donne la densité de X.\n2. Calcule la probabilité que Nour attende entre 10 et 25 minutes, puis celle qu'elle attende plus de 20 minutes.\n3. Calcule le temps d'attente moyen.\n4. Quelle est la probabilité que Nour attende exactement 12 minutes ? Est-ce impossible pour autant ?",
+      "bareme": [
+        {
+          "critere": "Densité constante égale à 1/30 sur [0 ; 30]",
+          "points": 4
+        },
+        {
+          "critere": "P(10 ≤ X ≤ 25) = 0,5 et P(X > 20) = 1/3",
+          "points": 7
+        },
+        {
+          "critere": "Espérance (0 + 30)/2 = 15 minutes",
+          "points": 4
+        },
+        {
+          "critere": "P(X = 12) = 0, probabilité nulle sans être impossible",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Pour une loi uniforme sur [a ; b], la densité est constante et vaut 1/(b − a) : ici **f(x) = 1/30** sur [0 ; 30].\n2. P(10 ≤ X ≤ 25) = (25 − 10)/30 = 15/30 = **0,5**.\nP(X > 20) = (30 − 20)/30 = 10/30 = **1/3** ≈ 0,333.\n3. E(X) = (a + b)/2 = (0 + 30)/2 = **15 minutes**.\n4. Pour une variable à densité, **P(X = 12) = 0** : l'intégrale sur un point est nulle. Ce n'est pas impossible pour autant : Nour attendra bien une durée précise, mais chaque valeur isolée a une probabilité nulle. C'est pourquoi P(X > 20) = P(X ≥ 20)."
+    },
+    {
+      "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+      "difficulte": 2,
+      "titre": "La durée de vie d'un capteur",
+      "consigne": "Justifie chaque calcul ; arrondis au dix-millième.",
+      "enonce": "**Situation.** La durée de vie X (en heures) d'un capteur électronique suit la **loi exponentielle de paramètre λ = 0,002**. On rappelle que P(X > t) = e^(−λt).\n\n1. Calcule la durée de vie moyenne d'un capteur.\n2. Calcule la probabilité qu'un capteur tienne plus de 1 000 heures.\n3. Calcule la probabilité qu'un capteur tombe en panne dans les 200 premières heures.\n4. Un capteur fonctionne déjà depuis 1 000 heures. Quelle est la probabilité qu'il tienne encore au moins 200 heures ? Quelle propriété de la loi exponentielle retrouves-tu ?",
+      "bareme": [
+        {
+          "critere": "E(X) = 1/λ = 500 heures",
+          "points": 4
+        },
+        {
+          "critere": "P(X > 1 000) = e^(−2) ≈ 0,1353",
+          "points": 4
+        },
+        {
+          "critere": "P(X ≤ 200) = 1 − e^(−0,4) ≈ 0,3297",
+          "points": 5
+        },
+        {
+          "critere": "Probabilité conditionnelle égale à e^(−0,4) ≈ 0,6703 et absence de mémoire identifiée",
+          "points": 7
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. E(X) = 1/λ = 1/0,002 = **500 heures**.\n2. P(X > 1 000) = e^(−0,002 × 1 000) = e^(−2) ≈ **0,1353**.\n3. P(X ≤ 200) = 1 − P(X > 200) = 1 − e^(−0,4) ≈ 1 − 0,6703 = **0,3297**.\n4. On cherche P_(X > 1 000)(X > 1 200) = P(X > 1 200)/P(X > 1 000) = e^(−2,4)/e^(−2) = e^(−0,4) ≈ **0,6703**. C'est exactement P(X > 200) : c'est l'**absence de mémoire** de la loi exponentielle. Un capteur qui a déjà fonctionné 1 000 heures a la même probabilité de tenir 200 heures de plus qu'un capteur neuf ; le modèle convient à l'électronique, qui ne s'use pas."
+    },
+    {
+      "chapitre": "306035de-445f-5a94-ac05-7fd4c4ba6cab",
+      "difficulte": 3,
+      "titre": "Paquets de riz, densités et choix du modèle",
+      "consigne": "Les parties sont indépendantes. Justifie chaque résultat en citant le repère ou la propriété du cours utilisé.",
+      "enonce": "**Partie A — Une densité.** On considère la fonction f définie sur [0 ; 1] par f(x) = 2x.\n\n1. Vérifie que f est une densité de probabilité sur [0 ; 1].\n2. X suit la loi de densité f. Calcule P(X ≤ 0,5) et P(X ≥ 0,5). Pourquoi ne trouve-t-on pas 0,5 et 0,5 ?\n\n**Partie B — Des paquets de riz.** La masse M (en grammes) d'un paquet de riz suit la **loi normale de paramètres μ = 500 et σ = 5**. On utilise les repères : environ 68 % des valeurs dans μ ± σ, 95 % dans μ ± 2σ, 99,7 % dans μ ± 3σ.\n\n3. Donne une valeur approchée de P(490 ≤ M ≤ 510), puis de P(M < 490).\n4. Un paquet est refusé s'il pèse plus de 515 g. Estime la proportion de paquets refusés.\n5. Estime P(495 ≤ M ≤ 510) en utilisant la symétrie de la courbe.\n\n**Partie C — Choisir le modèle.**\n\n6. Un fabricant de pneus veut modéliser la durée de vie de ses pneus par une loi exponentielle. Est-ce pertinent ? Justifie.",
+      "bareme": [
+        {
+          "critere": "f continue, positive, intégrale égale à 1 sur [0 ; 1]",
+          "points": 4
+        },
+        {
+          "critere": "P(X ≤ 0,5) = 0,25, P(X ≥ 0,5) = 0,75, explication par la forme de la densité",
+          "points": 4
+        },
+        {
+          "critere": "P(490 ≤ M ≤ 510) ≈ 0,95 et P(M < 490) ≈ 0,025",
+          "points": 4
+        },
+        {
+          "critere": "P(M > 515) ≈ 0,0015 et P(495 ≤ M ≤ 510) ≈ 0,815 par symétrie",
+          "points": 5
+        },
+        {
+          "critere": "Loi exponentielle inadaptée à l'usure (absence de mémoire)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f est **continue** et **positive** sur [0 ; 1] (2x ≥ 0). Une primitive est x², et l'intégrale de 0 à 1 vaut 1² − 0² = **1**. f est bien une densité.\n2. P(X ≤ 0,5) = 0,5² − 0 = **0,25** ; P(X ≥ 0,5) = 1 − 0,25 = **0,75** (inégalité large ou stricte, c'est pareil). La densité n'est pas constante : elle est plus grande près de 1, donc l'aire sous la courbe est plus grande sur [0,5 ; 1] que sur [0 ; 0,5].\n3. 490 = μ − 2σ et 510 = μ + 2σ : **P(490 ≤ M ≤ 510) ≈ 0,95**. Par symétrie, les 5 % restants se partagent également : **P(M < 490) ≈ 0,025**.\n4. 515 = μ + 3σ. P(485 ≤ M ≤ 515) ≈ 0,997, il reste 0,003, partagé par symétrie : **P(M > 515) ≈ 0,0015**, soit environ 0,15 % de paquets refusés.\n5. P(495 ≤ M ≤ 500) ≈ 0,68/2 = 0,34 et P(500 ≤ M ≤ 510) ≈ 0,95/2 = 0,475. Donc **P(495 ≤ M ≤ 510) ≈ 0,34 + 0,475 = 0,815**.\n6. **Non.** La loi exponentielle est **sans mémoire** : un pneu déjà usé aurait la même probabilité de durer encore 10 000 km qu'un pneu neuf. Or un pneu **s'use** : plus il a roulé, plus il risque de lâcher. Le modèle exponentiel convient aux composants électroniques, pas à ce qui s'use."
+    },
+    {
+      "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+      "difficulte": 1,
+      "titre": "Révisions et notes",
+      "consigne": "Justifie chaque réponse ; pour la prévision, précise si elle est fiable.",
+      "enonce": "**Situation.** On a relevé, pour cinq élèves, le nombre d'heures de révision x et la note obtenue y (sur 20) :\n\n| x (heures) | 1 | 2 | 3 | 4 | 5 |\n| y (note) | 3 | 5 | 6 | 8 | 10 |\n\nLa calculatrice donne la droite de régression de y en x : y = 1,7x + 1,3.\n\n1. Calcule les coordonnées du point moyen G et vérifie que la droite passe par G.\n2. Estime la note d'un élève qui a révisé 3,5 heures. S'agit-il d'une interpolation ou d'une extrapolation ?\n3. Estime la note d'un élève qui réviserait 12 heures. Que penses-tu de ce résultat ?",
+      "bareme": [
+        {
+          "critere": "G(3 ; 6,4) calculé et vérification 1,7 × 3 + 1,3 = 6,4",
+          "points": 7
+        },
+        {
+          "critere": "Estimation 7,25 pour 3,5 h, identifiée comme interpolation",
+          "points": 6
+        },
+        {
+          "critere": "Estimation 21,7 pour 12 h, extrapolation absurde (note sur 20) et réserve exprimée",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Moyenne des x : (1 + 2 + 3 + 4 + 5)/5 = 3. Moyenne des y : (3 + 5 + 6 + 8 + 10)/5 = 32/5 = 6,4. **G(3 ; 6,4)**. Vérification : 1,7 × 3 + 1,3 = 5,1 + 1,3 = 6,4 : la droite passe bien par G, comme toute droite de régression.\n2. y = 1,7 × 3,5 + 1,3 = 5,95 + 1,3 = **7,25**. 3,5 est dans la plage observée [1 ; 5] : c'est une **interpolation**, raisonnablement fiable.\n3. y = 1,7 × 12 + 1,3 = 20,4 + 1,3 = **21,7**. C'est une **extrapolation** loin de la plage observée, et le résultat est absurde : une note ne dépasse pas 20. Le modèle affine n'est valable que sur les données observées ; toute extrapolation doit être assortie d'une **réserve**."
+    },
+    {
+      "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+      "difficulte": 2,
+      "titre": "La production de miel de la coopérative",
+      "consigne": "Justifie chaque calcul et rédige tes conclusions.",
+      "enonce": "**Situation.** Une coopérative relève sa production annuelle de miel :\n\n| Année | 2020 | 2021 | 2022 | 2023 | 2024 |\n| Rang x | 0 | 1 | 2 | 3 | 4 |\n| Production y (tonnes) | 52 | 55 | 61 | 63 | 69 |\n\n1. Calcule les coordonnées du point moyen G.\n2. On donne : la somme des produits (x − x̄)(y − ȳ) vaut 42 et la somme des (x − x̄)² vaut 10. La pente de la droite de régression de y en x est a = 42/10. Détermine l'équation y = ax + b de cette droite.\n3. Le coefficient de corrélation linéaire vaut r ≈ 0,99. Interprète.\n4. Estime la production en 2027. Quelle réserve dois-tu faire ?\n5. La coopérative a lancé une campagne publicitaire en 2020. Son directeur affirme : « La corrélation prouve que la campagne a fait augmenter la production. » Que lui réponds-tu ?",
+      "bareme": [
+        {
+          "critere": "G(2 ; 60)",
+          "points": 3
+        },
+        {
+          "critere": "Droite y = 4,2x + 51,6 obtenue en utilisant le passage par G",
+          "points": 5
+        },
+        {
+          "critere": "r ≈ 0,99 interprété : points presque alignés sur une droite croissante",
+          "points": 3
+        },
+        {
+          "critere": "Prévision de 81 tonnes en 2027 (x = 7) avec réserve sur l'extrapolation",
+          "points": 5
+        },
+        {
+          "critere": "Corrélation n'est pas causalité, autre explication proposée",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. x̄ = (0 + 1 + 2 + 3 + 4)/5 = 2 ; ȳ = (52 + 55 + 61 + 63 + 69)/5 = 300/5 = 60. **G(2 ; 60)**.\n2. a = 42/10 = **4,2**. La droite passe par G : 60 = 4,2 × 2 + b, donc b = 60 − 8,4 = **51,6**. Équation : **y = 4,2x + 51,6**.\n3. r ≈ 0,99 est très proche de 1 : les points sont **presque alignés sur une droite croissante**, l'ajustement affine est pertinent.\n4. 2027 correspond au rang x = 7 : y = 4,2 × 7 + 51,6 = 29,4 + 51,6 = **81 tonnes**. C'est une **extrapolation** au-delà de la plage observée : elle suppose que la tendance se poursuit (une mauvaise saison, une maladie des abeilles ou la météo peuvent la contredire). Il faut l'assortir d'une réserve.\n5. Une corrélation ne prouve **jamais** une causalité. Ici, x est simplement le temps : la production augmente avec les années, ce qui peut s'expliquer par d'autres causes (nouvelles ruches, meilleurs printemps, nouveaux apiculteurs). Seule une **expérimentation contrôlée** pourrait établir l'effet de la campagne."
+    },
+    {
+      "chapitre": "1f1e7849-3348-50ae-99bf-60e6db7342d8",
+      "difficulte": 3,
+      "titre": "La chaîne vidéo de Timéo",
+      "consigne": "Justifie chaque étape ; arrondis les logarithmes au millième.",
+      "enonce": "**Situation.** Timéo relève le nombre d'abonnés de sa chaîne vidéo (en centaines) au début de chaque mois :\n\n| Mois t | 0 | 1 | 2 | 3 | 4 |\n| Abonnés y (centaines) | 100 | 150 | 225 | 338 | 506 |\n\n1. Représente mentalement le nuage : pourquoi un ajustement affine de y en t n'est-il pas adapté ? Calcule les quotients successifs y(t+1)/y(t). Que constates-tu ?\n2. On pose z = ln(y). Calcule les valeurs de z au millième.\n3. La calculatrice donne la droite de régression de z en t : z = 0,405t + 4,605. Vérifie qu'elle passe (aux arrondis près) par le point moyen du nuage (t ; z).\n4. Déduis-en une expression de y en fonction de t de la forme y = k × q^t (on donne e^4,605 ≈ 100 et e^0,405 ≈ 1,5).\n5. Estime le nombre d'abonnés au mois 6. Quelle précaution faut-il prendre ?\n6. Timéo remarque que le nombre de ses abonnés et les ventes nationales de micros pour la vidéo augmentent ensemble (coefficient de corrélation 0,97). Il en conclut que sa chaîne fait vendre des micros. Discute ce raisonnement.",
+      "bareme": [
+        {
+          "critere": "Nuage courbe, quotients constants ≈ 1,5 : croissance exponentielle reconnue",
+          "points": 4
+        },
+        {
+          "critere": "Valeurs de z correctes (4,605 ; 5,011 ; 5,416 ; 5,823 ; 6,227)",
+          "points": 3
+        },
+        {
+          "critere": "Point moyen (2 ; 5,416) et vérification sur la droite",
+          "points": 3
+        },
+        {
+          "critere": "Retour au modèle y = 100 × 1,5^t et prévision ≈ 1 139 centaines au mois 6 avec réserve",
+          "points": 5
+        },
+        {
+          "critere": "Corrélation n'est pas causalité : facteur commun ou coïncidence expliqués",
+          "points": 5
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Les écarts entre valeurs successives augmentent (50 ; 75 ; 113 ; 168) : le nuage est **courbe**, un ajustement affine serait mauvais. Quotients : 150/100 = 1,5 ; 225/150 = 1,5 ; 338/225 ≈ 1,502 ; 506/338 ≈ 1,497. Ils sont **constants, environ 1,5** : l'évolution est **exponentielle** (multiplication constante).\n2. z : ln(100) ≈ **4,605** ; ln(150) ≈ **5,011** ; ln(225) ≈ **5,416** ; ln(338) ≈ **5,823** ; ln(506) ≈ **6,227**.\n3. Moyenne des t : 2. Moyenne des z : (4,605 + 5,011 + 5,416 + 5,823 + 6,227)/5 = 27,082/5 ≈ 5,416. Sur la droite : 0,405 × 2 + 4,605 = 5,415 ≈ 5,416 ✓ (écart dû aux arrondis).\n4. z = ln(y) = 0,405t + 4,605, donc y = e^(0,405t + 4,605) = e^4,605 × (e^0,405)^t ≈ **100 × 1,5^t**.\n5. y(6) ≈ 100 × 1,5⁶ = 100 × 11,390625 ≈ **1 139 centaines**, soit environ 113 900 abonnés. C'est une **extrapolation** : rien ne garantit qu'une croissance de 50 % par mois se maintienne (elle finit toujours par ralentir). Il faut assortir cette prévision d'une réserve.\n6. Une forte corrélation ne prouve **pas** une causalité. Un **facteur commun** peut expliquer les deux hausses : l'engouement général pour la création de vidéos fait à la fois grossir les chaînes et vendre des micros. Ce peut aussi être une **coïncidence**, puisque les deux grandeurs augmentent simplement avec le temps. Seule une expérimentation contrôlée pourrait établir un lien de cause à effet."
+    }
+  ]
+}

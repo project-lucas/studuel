@@ -1,0 +1,3728 @@
+{
+ "niveau": "Tle",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "de32d197-9ae6-561b-a372-9e73829dff82",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la crise au pouvoir : la frise d’Hitler",
+   "competence": "se-reperer-temps",
+   "situation": "Maëlle prépare une frise pour son exposé : elle veut montrer en quelques repères comment, en une dizaine d’années, un petit parti devient le maître de l’Allemagne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du krach de 1929 à la Nuit de Cristal",
+     "source": "Dates exactes.",
+     "debut": 1928,
+     "fin": 1940,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "crise",
+       "date": 1929,
+       "nom": "Crise économique"
+      },
+      {
+       "id": "sco",
+       "date": 1932,
+       "nom": "NSDAP à 37 %"
+      },
+      {
+       "id": "chan",
+       "date": 1933,
+       "nom": "Hitler chancelier"
+      },
+      {
+       "id": "nur",
+       "date": 1935,
+       "nom": "Lois de Nuremberg"
+      },
+      {
+       "id": "cri",
+       "date": 1938,
+       "nom": "Nuit de Cristal"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "nur"
+     ],
+     "enonce": "Touche l’événement qui suit immédiatement la nomination d’Hitler comme chancelier.",
+     "aide": "Cherche, à droite de 1933, l’événement le plus proche.",
+     "explication": "Après **1933** vient **1935** : les lois de Nuremberg retirent aux Juifs la citoyenneté allemande."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La crise économique mondiale",
+      "Le NSDAP à 37 % des voix",
+      "Hitler chancelier",
+      "La Nuit de Cristal"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1929**, **1932**, **1933**, **1938** : la crise ouvre la voie au succès électoral, puis au pouvoir, puis à la violence de masse."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la nomination d’Hitler de la Nuit de Cristal ?",
+     "aide": "Soustrais 1933 de 1938.",
+     "explication": "1938 − 1933 = **5 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "de32d197-9ae6-561b-a372-9e73829dff82",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un pouvoir reçu, pas conquis",
+   "competence": "analyser-document",
+   "situation": "Élodie doit répondre à une question d’élève : « Hitler a-t-il gagné les élections pour devenir chancelier ? » Elle compare des résultats électoraux et un récit de la journée du 30 janvier 1933.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les voix du NSDAP aux élections au Reichstag",
+     "source": "Résultats arrondis au dixième.",
+     "categories": [
+      "Mai 1928",
+      "Sept. 1930",
+      "Juil. 1932",
+      "Nov. 1932"
+     ],
+     "series": [
+      {
+       "nom": "Voix du NSDAP",
+       "valeurs": [
+        2.6,
+        18.3,
+        37.3,
+        33.1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des voix",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Élection"
+     },
+     "valeurs": true
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le 30 janvier 1933",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Le 30 janvier 1933, le président [[h|Hindenburg]] nomme Adolf Hitler chancelier. Le NSDAP n’a pas la majorité au Reichstag : Hitler dirige un gouvernement de coalition, où les nazis ne tiennent que trois postes sur onze.",
+      "Quelques semaines plus tard, l’incendie du Reichstag sert de prétexte à la suspension des libertés, puis les pleins pouvoirs sont votés."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche la barre de l’élection où le NSDAP réalise son meilleur score.",
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est **juillet 1932**, avec 37,3 % des voix : le meilleur score libre du parti."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4.2,
+     "unite": "points",
+     "tolerance": 0.05,
+     "enonce": "De combien de points le score du NSDAP recule-t-il entre juillet et novembre 1932 ?",
+     "aide": "Soustrais les deux valeurs écrites au bout des barres.",
+     "explication": "37,3 − 33,1 = **4,2 points** : le parti recule, et n’a jamais eu la majorité absolue."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot du texte qui donne le nom de celui qui nomme Hitler chancelier.",
+     "aide": "Lis la première phrase.",
+     "explication": "C’est **Hindenburg**, le président de la République : Hitler est nommé, il n’a pas pris le pouvoir par la force."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Par une nomination légale, puis en détruisant les règles de l’intérieur",
+      "Par un coup d’État militaire réussi contre la République de Weimar",
+      "Par une élection où le NSDAP obtient la majorité absolue des voix",
+      "Par un référendum où les Allemands le choisissent comme chancelier"
+     ],
+     "reponse": 0,
+     "enonce": "Comment Hitler accède-t-il au pouvoir ?",
+     "aide": "Regarde le meilleur score du NSDAP, puis qui signe la nomination.",
+     "explication": "Le NSDAP n’a jamais dépassé **37,3 %** et c’est le président qui nomme Hitler : le pouvoir est **reçu légalement**, puis les règles sont détruites de l’intérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "de32d197-9ae6-561b-a372-9e73829dff82",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une journée en Allemagne nazie",
+   "competence": "analyser-document",
+   "situation": "Une lectrice imagine le quotidien de Karl, treize ans, à Berlin en 1937. En suivant son récit et la carte de l’Europe, elle relie la vie quotidienne aux ambitions du régime.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Berlin, 1937",
+     "auteur": "Récit écrit pour l’exercice",
+     "blocs": [
+      "Chaque samedi, Karl enfile l’uniforme des Jeunesses hitlériennes. À la radio, la voix de Goebbels répète les mêmes slogans. Son voisin, M. Weiss, a dû fermer son magasin depuis les lois de Nuremberg.",
+      "Un soir, des hommes de la [[g|Gestapo]] emmènent un ami de son père. On dit qu’il est parti pour Dachau, l’un des premiers camps, ouvert dès 1933."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe des ambitions nazies",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "cadrage": [
+      0,
+      42,
+      32,
+      60
+     ],
+     "regionsCliquables": true,
+     "regions": [
+      {
+       "code": "DEU",
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Allemagne"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Allemagne nazie en 1933"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "AUT"
+     ],
+     "enonce": "Touche l’Autriche, annexée par l’Allemagne en mars 1938.",
+     "aide": "Elle est au sud de l’Allemagne, dans les Alpes.",
+     "explication": "L’**Autriche** est annexée en mars 1938 : c’est l’Anschluss, première étape de la conquête de l’espace vital."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "POL"
+     ],
+     "enonce": "Touche la Pologne, envahie le 1er septembre 1939.",
+     "aide": "Elle est à l’est de l’Allemagne.",
+     "explication": "La **Pologne** est envahie le 1er septembre 1939 : cette attaque déclenche la Seconde Guerre mondiale."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot du récit qui désigne la police politique du régime.",
+     "aide": "C’est un acronyme allemand, cité à la fin du récit.",
+     "explication": "La **Gestapo** est la police politique nazie : elle arrête les opposants sans contrôle de la justice."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Terreur",
+      "Propagande",
+      "Embrigadement"
+     ],
+     "items": [
+      [
+       "La Gestapo arrête les opposants",
+       0
+      ],
+      [
+       "Le camp de Dachau ouvre en 1933",
+       0
+      ],
+      [
+       "Goebbels contrôle la radio et la presse",
+       1
+      ],
+      [
+       "Les Jeux de Berlin servent de vitrine au régime",
+       1
+      ],
+      [
+       "Les Jeunesses hitlériennes encadrent les adolescents",
+       2
+      ]
+     ],
+     "enonce": "Range chaque mesure du régime selon l’instrument qu’elle illustre.",
+     "aide": "Demande-toi si la mesure fait peur, fait croire ou fait entrer dans les rangs.",
+     "explication": "La Gestapo et Dachau relèvent de la **terreur** ; Goebbels et les Jeux de Berlin, de la **propagande** ; les Jeunesses hitlériennes, de l’**embrigadement**."
+    },
+    {
+     "type": "trous",
+     "texte": "Le régime nazi repose sur un parti ___, une police politique et une idéologie fondée sur la ___.",
+     "reponses": [
+      [
+       "unique"
+      ],
+      [
+       "race",
+       "race aryenne"
+      ]
+     ],
+     "banque": [
+      "unique",
+      "race",
+      "classe",
+      "nation"
+     ],
+     "enonce": "Complète ce bilan.",
+     "aide": "Un seul parti est autorisé, et l’idéologie hiérarchise l’humanité.",
+     "explication": "Un parti **unique** et une idéologie de la **race** : c’est ce qui distingue le nazisme du régime soviétique, fondé sur la classe."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f1fe78b-2b4c-5105-b629-4f3e4e8a6d9a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes étapes du fascisme italien",
+   "competence": "se-reperer-temps",
+   "situation": "Mathis construit la frise du fascisme pour son cahier : il place les repères qui vont de la naissance du mouvement à la chute du Duce.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1919 à 1943",
+     "source": "Dates exactes.",
+     "debut": 1918,
+     "fin": 1944,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "fais",
+       "date": 1919,
+       "nom": "Faisceaux de combat"
+      },
+      {
+       "id": "rome",
+       "date": 1922,
+       "nom": "Marche sur Rome"
+      },
+      {
+       "id": "lat",
+       "date": 1929,
+       "nom": "Accords du Latran"
+      },
+      {
+       "id": "eth",
+       "date": 1935,
+       "nom": "Conquête Éthiopie"
+      },
+      {
+       "id": "rac",
+       "date": 1938,
+       "nom": "Lois raciales"
+      },
+      {
+       "id": "chute",
+       "date": 1943,
+       "nom": "Chute de Mussolini"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "rome"
+     ],
+     "enonce": "Touche l’événement qui porte Mussolini au pouvoir.",
+     "aide": "Il se passe en 1922 : des milliers de chemises noires convergent vers la capitale.",
+     "explication": "La **marche sur Rome**, en octobre 1922, conduit le roi à nommer Mussolini chef du gouvernement."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Les Faisceaux de combat",
+      "La marche sur Rome",
+      "Les accords du Latran",
+      "Les lois raciales"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1919**, **1922**, **1929**, **1938** : le mouvement naît, prend le pouvoir, s’entend avec l’Église, puis imite les lois raciales allemandes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 21,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la marche sur Rome de la chute de Mussolini ?",
+     "aide": "Soustrais 1922 de 1943.",
+     "explication": "1943 − 1922 = **21 ans** de pouvoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f1fe78b-2b4c-5105-b629-4f3e4e8a6d9a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Octobre 1922 : le roi appelle Mussolini",
+   "competence": "analyser-document",
+   "situation": "Zoé prépare un exposé sur les limites du fascisme italien : elle lit un récit de la marche sur Rome, puis un tableau qui montre ce que le régime contrôle et ce qui lui échappe.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La marche sur Rome",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Fin octobre 1922, des milliers de chemises noires convergent vers Rome. Le gouvernement demande l’état de siège ; le roi [[r|Victor-Emmanuel]] III refuse de le signer.",
+      "Il appelle alors Mussolini à Rome et le charge de former le gouvernement. Mussolini n’a pas pris le pouvoir par la force : il l’a reçu du roi."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Ce que contrôle le régime et ce qui lui échappe",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Domaine",
+      "Ce que fait le régime",
+      "Ce qui lui échappe"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Jeunesse",
+       "Les Balilla",
+       "Aucun contre-pouvoir"
+      ],
+      [
+       "Loisirs",
+       "Le Dopolavoro",
+       "Aucun contre-pouvoir"
+      ],
+      [
+       "Pouvoir d’État",
+       "Le Duce et le parti unique",
+       "La monarchie, qui reste en place"
+      ],
+      [
+       "Religion",
+       "Les accords du Latran (1929)",
+       "L’Église, qui garde son autonomie"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot du texte qui donne le nom du roi qui refuse l’état de siège.",
+     "aide": "Lis la dernière phrase du premier paragraphe.",
+     "explication": "Le roi **Victor-Emmanuel** III refuse l’état de siège : c’est lui qui ouvre à Mussolini la porte du pouvoir."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2",
+      "r3c2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux cases qui montrent ce qui échappe au contrôle du Duce.",
+     "aide": "Regarde la colonne « Ce qui lui échappe » : deux lignes sont différentes des autres.",
+     "explication": "La **monarchie** et l’**Église** subsistent à côté du Duce : c’est la limite du fascisme italien."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la marche sur Rome de la signature des accords du Latran ?",
+     "aide": "Une date est dans le texte, l’autre dans le tableau.",
+     "explication": "1929 − 1922 = **7 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le roi lui confie le gouvernement au lieu de défendre l’État contre lui",
+      "L’armée royale écrase les chemises noires aux portes de la capitale",
+      "Les électeurs lui donnent la majorité absolue lors d’un scrutin libre",
+      "Le pape l’appelle au pouvoir après un accord signé avec le Vatican"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre le document 1 sur l’arrivée de Mussolini au pouvoir ?",
+     "aide": "Relis qui refuse, puis qui appelle Mussolini.",
+     "explication": "Le roi refuse l’état de siège puis **nomme** Mussolini : le pouvoir est reçu du souverain, pas conquis par un coup d’État."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f1fe78b-2b4c-5105-b629-4f3e4e8a6d9a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Duce et Führer : deux chemins vers le pouvoir",
+   "competence": "raisonner",
+   "situation": "Salomé veut comparer deux dictatures voisines : elle croise un tableau qui met l’Italie et l’Allemagne face à face avec un texte sur l’Axe Rome-Berlin.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux prises de pouvoir",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Italie fasciste",
+      "Allemagne nazie"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Nomination du chef",
+       "Octobre 1922",
+       "30 janvier 1933"
+      ],
+      [
+       "Qui le nomme",
+       "Le roi Victor-Emmanuel III",
+       "Le président Hindenburg"
+      ],
+      [
+       "Titre reçu",
+       "Président du Conseil",
+       "Chancelier"
+      ],
+      [
+       "Lois raciales",
+       "1938",
+       "1935"
+      ],
+      [
+       "Fin du chef",
+       "Destitué par le roi en 1943",
+       "Suicide en 1945"
+      ]
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’Italie dans le sillage du Reich",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "En 1936, l’Italie et l’Allemagne proclament l’Axe Rome-Berlin ; en 1939, le pacte d’Acier en fait des alliés militaires. En 1938, l’Italie imite les lois raciales allemandes.",
+      "Peu à peu, le pays du Duce devient le [[s|satellite]] du Reich."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui donne la date des lois raciales en Italie.",
+     "aide": "Cherche la ligne « Lois raciales », colonne de l’Italie.",
+     "explication": "Les lois raciales italiennes datent de **1938**, trois ans après celles de Nuremberg."
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "unite": "ans",
+     "enonce": "Combien d’années le fascisme précède-t-il le nazisme au pouvoir ?",
+     "aide": "Compare les deux dates de nomination.",
+     "explication": "1933 − 1922 = **11 ans** : le fascisme sert de modèle."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "L’Axe Rome-Berlin",
+      "Les lois raciales italiennes",
+      "Le pacte d’Acier",
+      "La destitution de Mussolini"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Les dates sont dans le texte et dans la dernière ligne du tableau.",
+     "explication": "**1936**, **1938**, **1939**, **1943** : l’Italie s’aligne sur l’Allemagne avant de perdre son chef."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot du texte qui dit ce que devient l’Italie par rapport à l’Allemagne.",
+     "aide": "C’est un mot de la dernière phrase.",
+     "explication": "L’Italie devient un **satellite** du Reich : elle suit l’Allemagne au lieu de la précéder."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Deux pouvoirs, la monarchie et l’Église, restent debout à côté du Duce",
+      "Il n’a jamais eu de parti unique, de milice ni de police politique",
+      "Il repose sur une idéologie raciale encore plus poussée que le nazisme",
+      "Il a pris le pouvoir par un putsch armé contre le roi et l’Église"
+     ],
+     "reponse": 0,
+     "enonce": "Comparé au nazisme, qu’est-ce qui distingue le fascisme italien ?",
+     "aide": "Pense à celui qui nomme Mussolini, puis qui le destitue.",
+     "explication": "Le roi nomme puis **destitue** Mussolini, et l’Église garde son autonomie : le fascisme italien ne contrôle pas toute la société."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c812c67-8a00-5898-a1a0-ba155ea82c4f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De 1917 aux grandes purges",
+   "competence": "se-reperer-temps",
+   "situation": "Yanis trace la frise de l’URSS de Lénine à Staline, pour situer les grands tournants de la construction du système soviétique.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Vingt ans d’histoire soviétique",
+     "source": "Dates exactes.",
+     "debut": 1916,
+     "fin": 1940,
+     "pas": 4,
+     "evenements": [
+      {
+       "id": "oct",
+       "date": 1917,
+       "nom": "Révolution d’Octobre"
+      },
+      {
+       "id": "nep",
+       "date": 1921,
+       "nom": "NEP"
+      },
+      {
+       "id": "lenine",
+       "date": 1924,
+       "nom": "Mort de Lénine"
+      },
+      {
+       "id": "plan",
+       "date": 1928,
+       "nom": "Premier plan"
+      },
+      {
+       "id": "fam",
+       "date": 1932,
+       "nom": "Famine d’Ukraine"
+      },
+      {
+       "id": "pur",
+       "date": 1936,
+       "nom": "Grandes purges"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "plan"
+     ],
+     "enonce": "Touche l’événement qui suit la mort de Lénine.",
+     "aide": "Cherche, à droite de 1924, le repère le plus proche.",
+     "explication": "Après la mort de Lénine (1924), le premier plan quinquennal de **1928** lance l’industrialisation forcée sous Staline."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La révolution d’Octobre",
+      "La NEP",
+      "Le premier plan quinquennal",
+      "Les grandes purges"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1917**, **1921**, **1928**, **1936** : révolution, compromis de la NEP, industrialisation forcée, puis terreur."
+    },
+    {
+     "type": "nombre",
+     "reponse": 19,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la révolution d’Octobre des grandes purges ?",
+     "aide": "Soustrais 1917 de 1936.",
+     "explication": "1936 − 1917 = **19 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c812c67-8a00-5898-a1a0-ba155ea82c4f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans un village d’Ukraine, en 1930",
+   "competence": "analyser-document",
+   "situation": "Une historienne présente la collectivisation à sa classe : elle montre un graphique de ses progrès et un récit situé dans un village d’Ukraine.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des exploitations paysannes collectivisées",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "1928",
+      "1930",
+      "1932",
+      "1937"
+     ],
+     "series": [
+      {
+       "nom": "Exploitations collectivisées",
+       "valeurs": [
+        2,
+        24,
+        62,
+        93
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des exploitations",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un village d’Ukraine",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Ukraine, printemps 1930. Les autorités rassemblent les paysans du village : la terre et le bétail seront mis en commun dans un kolkhoze.",
+      "Ceux que le pouvoir désigne comme [[k|koulaks]], paysans présentés comme aisés, voient leurs biens saisis et leurs familles déportées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la barre de l’année où plus de neuf exploitations sur dix sont collectivisées.",
+     "aide": "Neuf sur dix, c’est 90 %.",
+     "explication": "En **1937**, 93 % des exploitations sont collectivisées : la paysannerie a perdu ses terres."
+    },
+    {
+     "type": "nombre",
+     "reponse": 38,
+     "unite": "points",
+     "enonce": "De combien de points la part des exploitations collectivisées progresse-t-elle entre 1930 et 1932 ?",
+     "aide": "Soustrais les deux valeurs écrites au bout des barres.",
+     "explication": "62 − 24 = **38 points** en deux ans : la collectivisation est imposée par la contrainte."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche le mot du texte qui désigne les paysans présentés comme aisés.",
+     "aide": "Il commence par « k » et il est expliqué juste après.",
+     "explication": "Les **koulaks** sont désignés comme ennemis : leurs biens sont saisis et leurs familles déportées."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Contrôler les campagnes et prélever la récolte qui finance l’industrie",
+      "Redonner la terre à ceux qui la travaillent depuis la révolution",
+      "Développer le commerce privé des céréales avec les pays voisins",
+      "Réduire le nombre d’ouvriers employés dans les usines d’État"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi le régime collectivise-t-il les campagnes ?",
+     "aide": "Pense aux plans quinquennaux qui ont besoin d’être financés.",
+     "explication": "La collectivisation place les paysans sous contrôle et permet de **prélever** les récoltes pour financer l’industrialisation à marche forcée."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c812c67-8a00-5898-a1a0-ba155ea82c4f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La terreur et l’État soviétique",
+   "competence": "raisonner",
+   "situation": "Une lycéenne prépare une composition sur la terreur stalinienne : elle lit le récit d’un procès de Moscou, repère les lieux de déportation sur une carte, puis classe les instruments du pouvoir.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un procès de Moscou",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Août 1936, Moscou. Zinoviev et Kamenev, anciens compagnons de Lénine, comparaissent devant un tribunal. Ils reconnaissent publiquement des crimes inventés et sont fusillés. Deux autres procès suivent, en 1937 et 1938.",
+      "Ces [[a|aveux]] arrachés par le NKVD servent à montrer que le régime est entouré d’ennemis. Pendant ce temps, des centaines de milliers de personnes sont exécutées et des millions déportées au Goulag."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Moscou et trois lieux de déportation",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      25,
+      40,
+      170,
+      75
+     ],
+     "lieux": [
+      {
+       "id": "moscou",
+       "lieu": "moscou",
+       "symbole": "point",
+       "nom": "Moscou"
+      },
+      {
+       "id": "vork",
+       "lon": 64.03,
+       "lat": 67.5,
+       "symbole": "point",
+       "nom": "Vorkouta"
+      },
+      {
+       "id": "nor",
+       "lon": 88.2,
+       "lat": 69.35,
+       "symbole": "point",
+       "nom": "Norilsk"
+      },
+      {
+       "id": "mag",
+       "lon": 150.8,
+       "lat": 59.56,
+       "symbole": "point",
+       "nom": "Magadan"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot du texte qui désigne ce que les accusés reconnaissent publiquement.",
+     "aide": "Le mot est au début du deuxième paragraphe.",
+     "explication": "Les **aveux** sont arrachés par le NKVD : les procès de Moscou servent à désigner des ennemis imaginaires."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "mag"
+     ],
+     "enonce": "Touche Magadan, le lieu de déportation le plus éloigné de Moscou.",
+     "aide": "Cherche le point tout à l’est, près du Pacifique.",
+     "explication": "**Magadan**, sur la côte du Pacifique, est à plusieurs milliers de kilomètres de Moscou : le Goulag couvre tout le territoire de l’URSS."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Terreur",
+      "Transformation de l’économie",
+      "Encadrement des esprits"
+     ],
+     "items": [
+      [
+       "Les grandes purges de 1936-1938",
+       0
+      ],
+      [
+       "Le NKVD",
+       0
+      ],
+      [
+       "Le Goulag",
+       0
+      ],
+      [
+       "Les plans quinquennaux",
+       1
+      ],
+      [
+       "L’industrialisation à marche forcée",
+       1
+      ],
+      [
+       "Le culte de la personnalité de Staline",
+       2
+      ],
+      [
+       "Le réalisme socialiste imposé aux artistes",
+       2
+      ],
+      [
+       "Les Komsomols pour la jeunesse",
+       2
+      ]
+     ],
+     "enonce": "Range chaque élément du système stalinien dans la bonne catégorie.",
+     "aide": "Trois catégories : faire peur, transformer l’économie, façonner les esprits.",
+     "explication": "Purges, NKVD et Goulag relèvent de la **terreur** ; les plans, de l’**économie** ; le culte, le réalisme socialiste et les Komsomols, de l’**encadrement des esprits**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "NKVD",
+       "Police politique"
+      ],
+      [
+       "Kolkhoze",
+       "Ferme collective"
+      ],
+      [
+       "Goulag",
+       "Système de camps de travail"
+      ],
+      [
+       "Koulak",
+       "Paysan présenté comme aisé"
+      ]
+     ],
+     "enonce": "Associe chaque mot du vocabulaire soviétique à sa définition.",
+     "aide": "Reprends le texte et le cours : chaque mot y est lié à un acteur ou à une institution.",
+     "explication": "Le **NKVD** est la police politique, le **kolkhoze** une ferme collective, le **Goulag** un système de camps et un **koulak** un paysan présenté comme aisé."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il exige l’adhésion de tous et prétend transformer la société",
+      "Il tolère les opinions privées tant qu’elles restent silencieuses",
+      "Il partage le pouvoir avec une monarchie et une Église puissantes",
+      "Il se contente de maintenir l’ordre par une armée très présente"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi qualifie-t-on ce régime de totalitaire et non simplement d’autoritaire ?",
+     "aide": "Un régime autoritaire se contente d’obéissance ; que demande celui-ci ?",
+     "explication": "Le régime exige l’**adhésion** et veut refaire la société entière : procès, purges et culte du chef y servent."
+    }
+   ]
+  },
+  {
+   "chapitre": "55e4bc78-3b5b-5af7-81d6-ba834caac91f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois régimes, trois idéologies",
+   "competence": "lire-tableau",
+   "situation": "Nour fait la fiche de révision du chapitre : elle range dans un tableau ce que les trois régimes totalitaires ont de différent.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois régimes totalitaires comparés",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Nazisme",
+      "Stalinisme",
+      "Fascisme italien"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Idéologie",
+       "Raciale",
+       "De classe",
+       "Nationaliste"
+      ],
+      [
+       "Portée affichée",
+       "Hiérarchie des races",
+       "Universaliste",
+       "Grandeur romaine"
+      ],
+      [
+       "But",
+       "Espace vital",
+       "Révolution mondiale",
+       "Restauration nationale"
+      ],
+      [
+       "Contre-pouvoirs",
+       "Aucun",
+       "Aucun",
+       "Monarchie et Église"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c3"
+     ],
+     "enonce": "Touche la case qui donne l’idéologie du fascisme italien.",
+     "aide": "Cherche la ligne « Idéologie », colonne du fascisme.",
+     "explication": "L’idéologie du fascisme italien est **nationaliste** : elle promet la grandeur de l’Italie, héritière de Rome."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c3"
+     ],
+     "enonce": "Touche la case qui montre ce qui subsiste à côté du chef en Italie.",
+     "aide": "Regarde la ligne « Contre-pouvoirs », colonne de l’Italie.",
+     "explication": "Le fascisme italien laisse subsister la **monarchie** et l’**Église** ; le nazisme et le stalinisme, aucun contre-pouvoir."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Hitler",
+       "Führer"
+      ],
+      [
+       "Mussolini",
+       "Duce"
+      ],
+      [
+       "Staline",
+       "Secrétaire général du parti"
+      ]
+     ],
+     "enonce": "Associe chaque dirigeant à son titre.",
+     "aide": "Les titres ne sont pas dans le tableau : pense au cours sur chaque régime.",
+     "explication": "**Hitler** est le Führer, **Mussolini** le Duce et **Staline** le secrétaire général du parti."
+    }
+   ]
+  },
+  {
+   "chapitre": "55e4bc78-3b5b-5af7-81d6-ba834caac91f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Obéir ou adhérer ?",
+   "competence": "analyser-texte",
+   "situation": "Un élève demande à son professeur pourquoi on ne dit pas simplement « dictature ». Elle répond avec une notice sur le mot « totalitarisme » et un tableau qui oppose deux types de régimes.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le mot « totalitarisme »",
+     "auteur": "Notice écrite pour l’exercice, d’après le cours",
+     "blocs": [
+      "Le mot « totalitarisme » est forgé dans les années 1920-1930. La philosophe Hannah Arendt le popularise en 1951 dans *Les Origines du totalitarisme*. Un régime autoritaire se contente d’obtenir l’obéissance ; un régime totalitaire exige l’[[a|adhésion]] de chacun.",
+      "Le concept a pourtant été critiqué : il rapproche des régimes très différents et il a beaucoup servi d’argument politique pendant la guerre froide."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Autoritaire ou totalitaire ?",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Régime autoritaire",
+      "Régime totalitaire"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Ce que le pouvoir exige",
+       "L’obéissance",
+       "L’adhésion"
+      ],
+      [
+       "Vie privée",
+       "Tolérée si l’on se tait",
+       "Contrôlée et mobilisée"
+      ],
+      [
+       "Jeunesse",
+       "Peu encadrée",
+       "Embrigadée dans des organisations du parti"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui décrit la jeunesse sous un régime totalitaire.",
+     "aide": "Cherche la ligne « Jeunesse », colonne « Régime totalitaire ».",
+     "explication": "Sous un régime totalitaire, la jeunesse est **embrigadée** : Jeunesses hitlériennes, Balilla ou Komsomols."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Autoritaire",
+      "Totalitaire"
+     ],
+     "items": [
+      [
+       "Le pouvoir se contente que l’on obéisse",
+       0
+      ],
+      [
+       "Les opinions privées sont tolérées tant qu’elles restent silencieuses",
+       0
+      ],
+      [
+       "Le régime veut façonner un homme nouveau",
+       1
+      ],
+      [
+       "La jeunesse est embrigadée dans des organisations du parti",
+       1
+      ],
+      [
+       "Le citoyen doit adhérer à l’idéologie officielle",
+       1
+      ]
+     ],
+     "enonce": "Range chaque trait dans le type de régime qui lui correspond.",
+     "aide": "Un seul type de régime se contente du silence.",
+     "explication": "L’obéissance et le silence suffisent à un régime **autoritaire** ; le régime **totalitaire** veut l’adhésion, l’homme nouveau et la jeunesse embrigadée."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot du texte qui résume ce qu’un régime totalitaire exige de chacun.",
+     "aide": "Cherche ce qu’il exige, contrairement à l’obéissance.",
+     "explication": "Le régime totalitaire exige l’**adhésion** : on doit croire, pas seulement obéir."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il rapproche des régimes différents et a servi d’arme politique",
+      "Il ne s’applique qu’aux régimes qui ont existé après 1945",
+      "Il sépare trop nettement des régimes qui se ressemblent vraiment",
+      "Il confond les régimes autoritaires avec les démocraties libérales"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle critique le texte adresse-t-il au concept de totalitarisme ?",
+     "aide": "Relis le deuxième paragraphe.",
+     "explication": "Le concept **rapproche** des régimes très différents et a servi d’**argument politique** pendant la guerre froide : il reste utile pour comparer, à condition de ne pas les confondre."
+    }
+   ]
+  },
+  {
+   "chapitre": "55e4bc78-3b5b-5af7-81d6-ba834caac91f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Munich, 1938 : les démocraties reculent",
+   "competence": "raisonner",
+   "situation": "Un élève de terminale doit expliquer comment les démocraties ont réagi aux régimes totalitaires. Il croise une frise qui situe les régimes et le récit des accords de Munich.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre repères de l’entre-deux-guerres",
+     "source": "Dates exactes.",
+     "debut": 1920,
+     "fin": 1940,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "rome",
+       "date": 1922,
+       "nom": "Marche sur Rome"
+      },
+      {
+       "id": "plan",
+       "date": 1928,
+       "nom": "Premier plan"
+      },
+      {
+       "id": "chan",
+       "date": 1933,
+       "nom": "Hitler chancelier"
+      },
+      {
+       "id": "mun",
+       "date": 1938,
+       "nom": "Accords de Munich"
+      }
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les accords de Munich",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Les 29 et 30 septembre 1938, Hitler, Mussolini, le Britannique Chamberlain et le Français Daladier se réunissent à Munich. Aucun représentant de la Tchécoslovaquie n’est invité. Ils décident de céder à l’Allemagne les [[s|Sudètes]], une région tchécoslovaque.",
+      "Les démocraties espèrent préserver la paix. En mars 1939, l’armée allemande occupe pourtant le reste du pays."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot du texte qui désigne la région cédée à l’Allemagne.",
+     "aide": "Elle est tchécoslovaque, et son nom est à la fin de la première phrase.",
+     "explication": "Les **Sudètes**, région tchécoslovaque, sont cédées à l’Allemagne sans que la Tchécoslovaquie ait été consultée."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Dirigeant d’un régime totalitaire",
+      "Dirigeant d’une démocratie"
+     ],
+     "items": [
+      [
+       "Hitler",
+       0
+      ],
+      [
+       "Mussolini",
+       0
+      ],
+      [
+       "Chamberlain",
+       1
+      ],
+      [
+       "Daladier",
+       1
+      ]
+     ],
+     "enonce": "Range chaque signataire de Munich selon le régime qu’il dirige.",
+     "aide": "Le texte donne leur pays ; pense au type de régime de chacun.",
+     "explication": "**Hitler** et **Mussolini** dirigent des régimes totalitaires ; **Chamberlain** (Royaume-Uni) et **Daladier** (France) sont à la tête de démocraties."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’arrivée d’Hitler au pouvoir des accords de Munich ?",
+     "aide": "Les deux dates sont sur la frise.",
+     "explication": "1938 − 1933 = **5 ans**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La marche sur Rome",
+      "Le premier plan quinquennal",
+      "Hitler chancelier",
+      "Les accords de Munich"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1922**, **1928**, **1933**, **1938** : les régimes totalitaires s’installent avant que les démocraties ne cèdent à Munich."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Hitler obtient les Sudètes, puis occupe le reste du pays quelques mois plus tard",
+      "Hitler renonce à toute nouvelle ambition après avoir obtenu ce qu’il voulait",
+      "Les démocraties obtiennent en échange le désarmement de l’Allemagne nazie",
+      "La Tchécoslovaquie refuse de signer et déclare aussitôt la guerre à l’Allemagne"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi les accords de Munich illustrent-ils l’échec de l’apaisement ?",
+     "aide": "Regarde ce qui se passe en mars 1939.",
+     "explication": "En **mars 1939**, l’Allemagne occupe le reste de la Tchécoslovaquie : les concessions n’ont pas arrêté Hitler."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3ba049f-87a5-5576-9fcb-9d485134ed2a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre passages, une mer qui travaille",
+   "competence": "lire-carte",
+   "situation": "Hugo suit un porte-conteneurs qui quitte l’Asie pour l’Europe. Sur sa carte, quatre lettres marquent les points de passage obligés de la route.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre points de passage maritimes",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -10,
+      130,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 32.55,
+       "lat": 30,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": -79.6,
+       "lat": 9.1,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 100.3,
+       "lat": 3.6,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 56.5,
+       "lat": 26.6,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Ce que mesure l’EVP",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Conteneur",
+      "Longueur",
+      "Compte pour"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "Petit",
+       "20 pieds",
+       "1 EVP"
+      ],
+      [
+       "Grand",
+       "40 pieds",
+       "2 EVP"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le canal de Panama, qui relie l’Atlantique au Pacifique.",
+     "aide": "Cherche l’isthme étroit entre l’Amérique du Nord et l’Amérique du Sud.",
+     "explication": "**B** est le canal de Panama : il évite aux navires le détour par le cap Horn."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le détroit de Malacca, entre l’océan Indien et la mer de Chine.",
+     "aide": "Il longe la péninsule malaise, en Asie du Sud-Est.",
+     "explication": "**C** est le détroit de Malacca, passage obligé entre l’océan Indien et la mer de Chine."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10000,
+     "unite": "conteneurs",
+     "enonce": "Un porte-conteneurs de 20 000 EVP ne porte que des conteneurs de 40 pieds. Combien de conteneurs transporte-t-il ?",
+     "aide": "Un conteneur de 40 pieds compte pour 2 EVP.",
+     "explication": "20 000 ÷ 2 = **10 000 conteneurs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3ba049f-87a5-5576-9fcb-9d485134ed2a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Shanghai, Rotterdam : le classement des ports",
+   "competence": "lire-graphique",
+   "situation": "Lina compare le trafic de cinq grands ports et situe sur une carte la façade maritime du nord-ouest de l’Europe.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Trafic de conteneurs de cinq ports en 2023",
+     "source": "Chiffres arrondis, 2023.",
+     "categories": [
+      "Shanghai",
+      "Singapour",
+      "Ningbo-Zhoushan",
+      "Shenzhen",
+      "Rotterdam"
+     ],
+     "series": [
+      {
+       "nom": "Conteneurs",
+       "valeurs": [
+        49,
+        39,
+        35,
+        30,
+        13
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Trafic",
+      "unite": "en millions d’EVP",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "valeurs": true
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La façade du nord-ouest de l’Europe",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "cadrage": [
+      -2,
+      47,
+      13,
+      55
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "hambourg",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "rotterdam",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "le-havre",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche la barre du seul port européen du graphique.",
+     "aide": "Les quatre autres ports sont en Asie.",
+     "explication": "**Rotterdam** est le seul port européen du graphique, et de loin le plus petit des cinq."
+    },
+    {
+     "type": "nombre",
+     "reponse": 36,
+     "unite": "millions d’EVP",
+     "enonce": "Combien de millions d’EVP séparent Shanghai de Rotterdam ?",
+     "aide": "Soustrais les deux valeurs écrites au bout des barres.",
+     "explication": "49 − 13 = **36 millions d’EVP**."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche Hambourg, le port allemand à l’est de la façade qui va jusqu’au Havre.",
+     "aide": "C’est le point le plus à l’est et le plus au nord des trois.",
+     "explication": "**A** est Hambourg : avec Rotterdam (B) et Le Havre (C), il appartient à la façade Hambourg-Le Havre."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les ports européens restent loin derrière les premiers ports asiatiques",
+      "Rotterdam dépasse Shenzhen et talonne Shanghai pour le trafic mondial",
+      "Les quatre premiers ports mondiaux sont tous situés en Europe du Nord",
+      "Singapour est le seul port du classement qui dépasse Shanghai"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre le graphique sur la place de l’Europe ?",
+     "aide": "Compare la barre de Rotterdam aux quatre autres.",
+     "explication": "Rotterdam, avec **13 millions d’EVP**, est très loin derrière les grands ports asiatiques : le centre du trafic maritime s’est déplacé vers l’Asie."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3ba049f-87a5-5576-9fcb-9d485134ed2a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le blocage du canal de Suez",
+   "competence": "raisonner",
+   "situation": "Une élève prépare un exposé sur l’*Ever Given*, le navire qui bloque le canal de Suez en 2021. Elle suit le parcours d’un conteneur dans un hub et lit un article sur le blocage.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Le voyage d’un conteneur",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "usine",
+       "texte": "Usine de Shenzhen",
+       "emoji": "🏭"
+      },
+      {
+       "id": "geant",
+       "texte": "Porte-conteneurs géant",
+       "emoji": "🚢"
+      },
+      {
+       "id": "hub",
+       "texte": "Hub de Singapour",
+       "emoji": "⚓"
+      },
+      {
+       "id": "petit",
+       "texte": "Petit navire",
+       "emoji": "⛴️"
+      },
+      {
+       "id": "jak",
+       "texte": "Port de Jakarta",
+       "emoji": "🏗️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "usine",
+       "a": "geant"
+      },
+      {
+       "de": "geant",
+       "a": "hub"
+      },
+      {
+       "de": "hub",
+       "a": "petit"
+      },
+      {
+       "de": "petit",
+       "a": "jak"
+      }
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un navire en travers",
+     "auteur": "Texte écrit pour l’exercice, d’après des faits de 2021",
+     "blocs": [
+      "Le 23 mars 2021, l’*Ever Given*, un porte-conteneurs de 400 mètres de long, s’échoue en travers du canal de [[s|Suez]]. Des centaines de navires attendent de chaque côté.",
+      "Il est dégagé le 29 mars, soit six jours plus tard. On estime à près de 10 milliards de dollars par jour la valeur des marchandises immobilisées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "reponse": [
+      "hub"
+     ],
+     "enonce": "Touche le maillon où les conteneurs passent du grand navire à des navires plus petits.",
+     "aide": "C’est le point de la chaîne où l’on éclate les cargaisons.",
+     "explication": "Le **hub** de Singapour est le lieu du transbordement : les conteneurs y changent de navire."
+    },
+    {
+     "type": "trous",
+     "texte": "Le ___ consiste à répartir les cargaisons d’un grand navire vers des navires plus petits, dans un ___.",
+     "reponses": [
+      [
+       "transbordement"
+      ],
+      [
+       "hub"
+      ]
+     ],
+     "banque": [
+      "transbordement",
+      "hub",
+      "canal",
+      "détroit"
+     ],
+     "enonce": "Complète cette définition.",
+     "aide": "Le premier mot est le nom de l’opération, le second celui du port où elle a lieu.",
+     "explication": "Le **transbordement** se fait dans un **hub** : c’est ce qu’illustre Singapour dans la chaîne."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot du texte qui désigne le canal bloqué.",
+     "aide": "Il relie la Méditerranée à la mer Rouge.",
+     "explication": "Le canal de **Suez** est bloqué par l’*Ever Given* : un seul incident arrête une partie du commerce mondial."
+    },
+    {
+     "type": "nombre",
+     "reponse": 60,
+     "unite": "Md de $",
+     "enonce": "À raison de 10 milliards de dollars par jour, quelle valeur de marchandises est immobilisée pendant le blocage de six jours ?",
+     "aide": "Multiplie la valeur par jour par le nombre de jours.",
+     "explication": "10 × 6 = **60 milliards de dollars**, ordre de grandeur de l’immobilisation."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le canal est un point de passage obligé entre l’Europe et l’Asie",
+      "Le canal est le seul endroit où l’on peut charger des conteneurs",
+      "Le canal appartient à toutes les compagnies qui possèdent des navires",
+      "Le canal fournit l’essentiel du pétrole que consomme l’Europe"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi un seul navire bloqué perturbe-t-il le commerce mondial ?",
+     "aide": "Pense à ce que relie le canal et à ce que font les autres navires.",
+     "explication": "Le canal est un **point de passage obligé** : quand il est bloqué, tout le trafic entre l’Europe et l’Asie attend ou fait un détour."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb7e3e4c-ea10-5a2d-914c-4bdec970bc9e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux archipels en mer de Chine méridionale",
+   "competence": "lire-carte",
+   "situation": "Théo étudie une mer où se croisent les routes du commerce mondial. Sa carte montre la zone revendiquée par Pékin et deux archipels.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La mer de Chine méridionale",
+     "source": "Carte schématique : le tracé de la zone est approximatif.",
+     "fond": "monde",
+     "cadrage": [
+      95,
+      -2,
+      128,
+      26
+     ],
+     "aires": [
+      {
+       "contour": [
+        [
+         108,
+         21
+        ],
+        [
+         108,
+         17
+        ],
+        [
+         109,
+         12
+        ],
+        [
+         110,
+         7
+        ],
+        [
+         112,
+         4
+        ],
+        [
+         114,
+         4.5
+        ],
+        [
+         117,
+         7
+        ],
+        [
+         118,
+         10
+        ],
+        [
+         119,
+         14
+        ],
+        [
+         120,
+         18
+        ],
+        [
+         122,
+         21
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "clair",
+       "etiquette": "Zone revendiquée par Pékin"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 112.3,
+       "lat": 16.5,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 114.3,
+       "lat": 9.8,
+       "symbole": "lettre",
+       "lettre": "B"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Une unité de mesure",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Unité",
+      "Valeur"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "1 mille marin",
+       "1,852 km"
+      ],
+      [
+       "Limite de la ZEE",
+       "200 milles marins"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les Paracels, l’archipel le plus au nord des deux.",
+     "aide": "Compare la hauteur des deux lettres sur la carte.",
+     "explication": "**A** est l’archipel des Paracels, au nord ; **B** est celui des Spratleys, plus au sud."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche les Spratleys, l’archipel le plus au sud des deux.",
+     "aide": "Compare la hauteur des deux lettres sur la carte.",
+     "explication": "**B** est l’archipel des Spratleys : la Chine y a construit des îlots artificiels militarisés."
+    },
+    {
+     "type": "nombre",
+     "reponse": 370,
+     "unite": "km",
+     "tolerance": 5,
+     "enonce": "Combien de kilomètres font 200 milles marins, arrondi à la dizaine ?",
+     "aide": "Multiplie 200 par 1,852.",
+     "explication": "200 × 1,852 = 370,4, soit **370 km** : une ZEE s’étend très loin en mer."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb7e3e4c-ea10-5a2d-914c-4bdec970bc9e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "2016 : la sentence que Pékin ignore",
+   "competence": "analyser-texte",
+   "situation": "Une lycéenne étudie les tensions en mer de Chine méridionale : elle lit un extrait sur la sentence de 2016 et compare la stratégie de deux grandes puissances.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une sentence rejetée",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Le 12 juillet 2016, un tribunal arbitral siégeant à La Haye, saisi par les [[p|Philippines]], juge que la « ligne en neuf traits » de Pékin n’a pas de fondement juridique.",
+      "Pékin déclare la sentence « nulle et non avenue » et poursuit la militarisation d’îlots artificiels aux Spratleys et aux Paracels."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux stratégies de puissance",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "États-Unis",
+      "Chine"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Moyens",
+       "Première marine hauturière, une dizaine de porte-avions nucléaires",
+       "Première flotte du monde en nombre de bâtiments"
+      ],
+      [
+       "Stratégie",
+       "Un réseau mondial de bases",
+       "Une base à Djibouti, des ports acquis ou financés : les routes de la soie maritimes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot du texte qui donne le nom du pays qui saisit le tribunal.",
+     "aide": "Il est cité dans la première phrase.",
+     "explication": "Ce sont les **Philippines** qui saisissent le tribunal arbitral de La Haye."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle rejette la sentence et continue à militariser des îlots artificiels",
+      "Elle accepte la sentence et retire ses installations des archipels",
+      "Elle demande à l’ONU de trancher le litige à la place du tribunal",
+      "Elle partage les archipels avec les Philippines après un accord"
+     ],
+     "reponse": 0,
+     "enonce": "Comment la Chine réagit-elle à la sentence de 2016 ?",
+     "aide": "Relis le second paragraphe.",
+     "explication": "Pékin déclare la sentence « nulle et non avenue » et **continue** à militariser les îlots : une décision de justice n’a pas de force sans sanction."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui décrit la stratégie de la Chine pour contrôler les routes.",
+     "aide": "Cherche la ligne « Stratégie », colonne de la Chine.",
+     "explication": "La Chine combine une **base à Djibouti** et des ports acquis ou financés : ce sont les routes de la soie maritimes."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Mer de Chine méridionale",
+       "Îlots artificiels militarisés"
+      ],
+      [
+       "Arctique",
+       "Route maritime du Nord ouverte par la fonte"
+      ],
+      [
+       "Golfe de Guinée",
+       "Piraterie"
+      ],
+      [
+       "Djibouti",
+       "Première base militaire chinoise à l’étranger"
+      ]
+     ],
+     "enonce": "Associe chaque lieu à l’enjeu stratégique qui le caractérise.",
+     "aide": "Chaque lieu correspond à un enjeu différent vu dans le cours.",
+     "explication": "La **mer de Chine méridionale** concentre les îlots militarisés, l’**Arctique** la route du Nord, le **golfe de Guinée** la piraterie et **Djibouti** la première base chinoise à l’étranger."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb7e3e4c-ea10-5a2d-914c-4bdec970bc9e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les points d’appui de la Chine sur les mers",
+   "competence": "raisonner",
+   "situation": "Un élève reconstitue la chaîne de points d’appui que la Chine tisse entre la mer de Chine et l’Afrique de l’Est. Il croise un tableau qui décrit chaque port avec une carte où chaque port porte une lettre.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quatre points d’appui",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Port",
+      "Pays",
+      "Statut",
+      "Sur la carte"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Djibouti",
+       "Djibouti",
+       "Base militaire (2017)",
+       "A"
+      ],
+      [
+       "Gwadar",
+       "Pakistan",
+       "Port dont l’exploitation est confiée à une entreprise chinoise",
+       "B"
+      ],
+      [
+       "Hambantota",
+       "Sri Lanka",
+       "Port loué pour 99 ans à une entreprise chinoise (2017)",
+       "C"
+      ],
+      [
+       "Kyaukpyu",
+       "Birmanie",
+       "Port relié à la Chine par un oléoduc et un gazoduc",
+       "D"
+      ]
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Une route de ports",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      35,
+      -5,
+      100,
+      32
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 43.15,
+       "lat": 11.6,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 62.33,
+       "lat": 25.12,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 81.12,
+       "lat": 6.12,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 93.55,
+       "lat": 19.43,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche sur la carte le port loué pour 99 ans à une entreprise chinoise.",
+     "aide": "Trouve la lettre du port dans le tableau, puis cherche-la sur la carte.",
+     "explication": "Le port loué pour 99 ans est **Hambantota**, au Sri Lanka : c’est la lettre C."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche sur la carte le port relié à la Chine par un oléoduc.",
+     "aide": "Regarde la ligne « Kyaukpyu » dans le tableau.",
+     "explication": "**Kyaukpyu**, en Birmanie (lettre D), est relié à la Chine par un oléoduc et un gazoduc : la Chine y contourne Malacca."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2116,
+     "enonce": "Le bail de 99 ans signé en 2017 prend fin en quelle année ?",
+     "aide": "Ajoute 99 à l’année de signature.",
+     "explication": "2017 + 99 = **2116** : la Chine contrôle le port pour un siècle."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Sécuriser la route du pétrole entre le golfe arabo-persique et la Chine",
+      "Fermer les routes maritimes aux navires marchands des autres pays",
+      "Créer des ports de pêche pour nourrir la population des pays hôtes",
+      "Remplacer les ZEE de ces pays par une seule zone sous contrôle chinois"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle logique relie ces quatre points d’appui ?",
+     "aide": "Regarde où ils se trouvent : entre la mer de Chine et l’Afrique de l’Est.",
+     "explication": "Les points d’appui jalonnent la route qui amène le **pétrole** du golfe jusqu’en Chine : ce sont des relais pour la flotte, le commerce et l’énergie."
+    }
+   ]
+  },
+  {
+   "chapitre": "db9f6de3-bb00-5714-95cf-3c4760d85269",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Malacca : un goulet de 900 km",
+   "competence": "lire-carte",
+   "situation": "Inès suit un pétrolier de l’océan Indien vers la mer de Chine. Elle situe le détroit de Malacca sur une carte et lit ses chiffres clés.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le détroit de Malacca",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      92,
+      -3,
+      112,
+      12
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 100.3,
+       "lat": 3.6,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "singapour",
+       "symbole": "lettre",
+       "lettre": "B"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Le détroit en chiffres",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Longueur",
+       "environ 900 km"
+      ],
+      [
+       "Largeur minimale",
+       "2,7 km"
+      ],
+      [
+       "Navires par an",
+       "90 000 à 100 000"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche Singapour, la cité-État située à la sortie du détroit.",
+     "aide": "Elle est à l’extrémité sud de la péninsule malaise.",
+     "explication": "**B** est Singapour, qui a bâti sa fortune à la sortie du détroit : port de transbordement, raffinage, finance."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le détroit de Malacca, entre la Malaisie et Sumatra.",
+     "aide": "Il passe entre la péninsule malaise et la grande île à l’ouest.",
+     "explication": "**A** marque le détroit de Malacca, étroit passage entre la péninsule malaise et Sumatra."
+    },
+    {
+     "type": "nombre",
+     "reponse": 60,
+     "unite": "heures",
+     "enonce": "Un pétrolier avance à 15 km/h sur toute la longueur du détroit. Combien d’heures met-il pour le traverser ?",
+     "aide": "Divise la longueur du détroit par la vitesse.",
+     "explication": "900 ÷ 15 = **60 heures**, soit deux jours et demi dans un couloir très étroit."
+    }
+   ]
+  },
+  {
+   "chapitre": "db9f6de3-bb00-5714-95cf-3c4760d85269",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le golfe arabo-persique et ses bases",
+   "competence": "lire-carte",
+   "situation": "Kaïs étudie un golfe qui porte une part majeure du pétrole mondial. Il croise une carte et un tableau qui dit qui y est présent.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le golfe arabo-persique",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      46,
+      21,
+      64,
+      31
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 50.55,
+       "lat": 26.2,
+       "symbole": "point",
+       "nom": "Bahreïn"
+      },
+      {
+       "id": "b",
+       "lon": 54.4,
+       "lat": 24.45,
+       "symbole": "point",
+       "nom": "Abou Dabi"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Qui est présent dans le golfe ?",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Acteur",
+      "Sa présence"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Iran",
+       "Riverain ; a menacé plusieurs fois de fermer le détroit"
+      ],
+      [
+       "États-Unis",
+       "Ve flotte basée à Bahreïn"
+      ],
+      [
+       "France",
+       "Base militaire à Abou Dabi"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "IRN"
+     ],
+     "enonce": "Touche l’Iran, le riverain qui a menacé de fermer le détroit d’Ormuz.",
+     "aide": "Il occupe toute la rive nord du golfe.",
+     "explication": "L’**Iran** borde la rive nord du golfe et a menacé plusieurs fois de fermer le détroit d’Ormuz."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le lieu de la base militaire française.",
+     "aide": "Cherche la ligne « France » dans le tableau.",
+     "explication": "La France a une base militaire à **Abou Dabi**, aux Émirats arabes unis."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une part du pétrole mondial y passe, donc le menacer pèse sur tous",
+      "Il appartient à un seul pays qui décide seul du prix du pétrole",
+      "Il est le seul détroit qui relie la Méditerranée à l’Atlantique",
+      "Il est trop large pour que les marines puissent le surveiller"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi le détroit d’Ormuz est-il à la fois une artère et un levier de pression ?",
+     "aide": "Pense à la part du pétrole qui y transite, puis à ce qui arrive si on le ferme.",
+     "explication": "Environ **un cinquième** du pétrole consommé dans le monde y passe : c’est une artère vitale, et le menacer devient un moyen de pression."
+    }
+   ]
+  },
+  {
+   "chapitre": "db9f6de3-bb00-5714-95cf-3c4760d85269",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux goulets, une même vulnérabilité",
+   "competence": "raisonner",
+   "situation": "Un élève compare Malacca et Ormuz pour son devoir : il croise un tableau de chiffres, la dépendance de la Chine et les solutions de contournement.",
+   "documents": [
+    {
+     "id": "tab1",
+     "type": "tableau",
+     "titre": "Deux détroits en chiffres",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Détroit de Malacca",
+      "Détroit d’Ormuz"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Ce qu’il relie",
+       "Océan Indien et mer de Chine",
+       "Golfe arabo-persique et reste du monde"
+      ],
+      [
+       "Trafic",
+       "90 000 à 100 000 navires par an",
+       "Environ 20 millions de barils par jour"
+      ],
+      [
+       "Part mondiale",
+       "Environ un quart du commerce maritime",
+       "Environ un cinquième du pétrole consommé"
+      ]
+     ]
+    },
+    {
+     "id": "sect",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Importations d’hydrocarbures de la Chine",
+     "source": "Ordre de grandeur, d’après le cours.",
+     "categories": [
+      "Passent par Malacca",
+      "Empruntent d’autres voies"
+     ],
+     "series": [
+      {
+       "nom": "Part des importations",
+       "valeurs": [
+        80,
+        20
+       ]
+      }
+     ],
+     "valeurs": true
+    },
+    {
+     "id": "tab2",
+     "type": "tableau",
+     "titre": "Le contournement de Malacca",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Solution",
+      "État"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Oléoducs vers la Birmanie et le Pakistan",
+       "En service, capacité limitée"
+      ],
+      [
+       "Canal de Kra en Thaïlande",
+       "Jamais engagé"
+      ],
+      [
+       "Routes terrestres eurasiatiques",
+       "En développement, coûteuses"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 7.3,
+     "unite": "Md de barils",
+     "tolerance": 0.1,
+     "enonce": "À 20 millions de barils par jour, combien de milliards de barils passent par Ormuz en un an de 365 jours ?",
+     "aide": "Multiplie 20 millions par 365, puis convertis en milliards.",
+     "explication": "20 × 365 = 7 300 millions, soit **7,3 milliards de barils** par an."
+    },
+    {
+     "type": "zone",
+     "document": "sect",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la part des importations d’hydrocarbures de la Chine qui passe par Malacca.",
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Environ **80 %** des importations d’hydrocarbures chinoises passent par Malacca : c’est le dilemme de Malacca."
+    },
+    {
+     "type": "zone",
+     "document": "tab2",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui donne l’état du projet de canal de Kra.",
+     "aide": "Cherche la ligne « Canal de Kra », colonne « État ».",
+     "explication": "Le projet de canal de Kra en Thaïlande est **jamais engagé** : il n’offre donc aucun contournement réel."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La mondialisation a concentré ses flux sur quelques passages, sans solution de secours",
+      "La mondialisation a réparti ses flux sur des dizaines de routes équivalentes",
+      "Les États riverains de ces détroits décident seuls du prix des marchandises",
+      "Les solutions de contournement suffisent déjà à remplacer ces deux passages"
+     ],
+     "reponse": 0,
+     "enonce": "Que signifie « efficacité maximale, résilience minimale » ?",
+     "aide": "Regarde l’état des solutions de contournement.",
+     "explication": "Les flux sont **concentrés** sur quelques passages et les solutions de remplacement restent limitées ou inexistantes : c’est efficace, mais fragile."
+    }
+   ]
+  },
+  {
+   "chapitre": "c564d9ae-4b2e-528d-905b-48bfef70f929",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trop de poissons pêchés, trop d’engrais",
+   "competence": "lire-graphique",
+   "situation": "Sacha prépare un panneau sur l’état de l’océan : un graphique sur la pêche et un schéma qui explique comment les engrais tuent des zones entières.",
+   "documents": [
+    {
+     "id": "sect",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "État des stocks de poissons",
+     "source": "Part arrondie, d’après le cours.",
+     "categories": [
+      "Stocks surexploités",
+      "Autres stocks"
+     ],
+     "series": [
+      {
+       "nom": "Part des stocks",
+       "valeurs": [
+        35,
+        65
+       ]
+      }
+     ],
+     "valeurs": true
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Des champs à la zone morte",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "eng",
+       "texte": "Engrais sur les champs",
+       "emoji": "🌾"
+      },
+      {
+       "id": "riv",
+       "texte": "Rivières jusqu’à la mer",
+       "emoji": "🌊"
+      },
+      {
+       "id": "mys",
+       "texte": "?"
+      },
+      {
+       "id": "oxy",
+       "texte": "Eau sans oxygène",
+       "emoji": "🫧"
+      },
+      {
+       "id": "mort",
+       "texte": "Zone morte",
+       "emoji": "💀"
+      }
+     ],
+     "liens": [
+      {
+       "de": "eng",
+       "a": "riv"
+      },
+      {
+       "de": "riv",
+       "a": "mys"
+      },
+      {
+       "de": "mys",
+       "a": "oxy"
+      },
+      {
+       "de": "oxy",
+       "a": "mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sect",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la part des stocks de poissons qui sont surexploités.",
+     "aide": "Elle est la plus petite des deux.",
+     "explication": "Environ **35 %** des stocks sont surexploités : plus d’un stock sur trois est pêché au-delà de ses capacités."
+    },
+    {
+     "type": "nombre",
+     "reponse": 70,
+     "unite": "stocks",
+     "enonce": "Sur 200 stocks de poissons, combien sont surexploités ?",
+     "aide": "Calcule 35 % de 200.",
+     "explication": "35 % de 200 = **70 stocks**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une prolifération d’algues qui étouffe l’eau",
+      "Une acidification qui dissout les coquilles",
+      "Une hausse du niveau de la mer sur la côte",
+      "Une surpêche qui vide les stocks de poissons"
+     ],
+     "reponse": 0,
+     "enonce": "Quel maillon manque entre les rivières et l’eau sans oxygène ?",
+     "aide": "Les engrais nourrissent des êtres vivants qui se multiplient trop.",
+     "explication": "Les engrais provoquent une **prolifération d’algues** (marées vertes) : en se décomposant, elles consomment l’oxygène et créent des zones mortes."
+    }
+   ]
+  },
+  {
+   "chapitre": "c564d9ae-4b2e-528d-905b-48bfef70f929",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pollutions et gouvernance : qui protège l’océan ?",
+   "competence": "analyser-document",
+   "situation": "Une lycéenne prépare une fiche de synthèse : elle lit un tableau sur les pollutions puis un texte sur le traité qui protège la haute mer.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quatre pollutions de l’océan",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pollution",
+      "Mécanisme",
+      "Effet"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Plastiques",
+       "8 à 10 millions de tonnes par an",
+       "Gyres, puis microplastiques dans la chaîne alimentaire"
+      ],
+      [
+       "Eutrophisation",
+       "Engrais agricoles",
+       "Marées vertes, zones mortes"
+      ],
+      [
+       "Acidification",
+       "L’océan absorbe du CO₂",
+       "Coraux et coquillages fragilisés"
+      ],
+      [
+       "Réchauffement",
+       "Excès de chaleur stocké",
+       "Blanchissement des coraux, montée du niveau marin"
+      ]
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La haute mer",
+     "auteur": "Texte écrit pour l’exercice, chiffres arrondis",
+     "blocs": [
+      "Environ 60 % de l’océan est de la haute mer : elle n’appartient à aucun État. En 2023, les Nations unies adoptent un traité, surnommé [[b|BBNJ]], qui permet d’y créer des aires protégées.",
+      "L’objectif international est de protéger 30 % des espaces marins d’ici 2030."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui décrit l’effet de l’eutrophisation.",
+     "aide": "Cherche la ligne « Eutrophisation », colonne « Effet ».",
+     "explication": "L’eutrophisation, due aux engrais, provoque des **marées vertes** et des **zones mortes**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Plastiques",
+      "Eutrophisation",
+      "Acidification",
+      "Réchauffement"
+     ],
+     "items": [
+      [
+       "Des microplastiques entrent dans la chaîne alimentaire",
+       0
+      ],
+      [
+       "Des tourbillons de déchets flottants, les gyres",
+       0
+      ],
+      [
+       "Les algues vertes envahissent la plage",
+       1
+      ],
+      [
+       "Des zones mortes privées d’oxygène",
+       1
+      ],
+      [
+       "Les coquillages ont du mal à fabriquer leur coquille",
+       2
+      ],
+      [
+       "Les coraux blanchissent",
+       3
+      ]
+     ],
+     "enonce": "Range chaque conséquence dans la pollution qui la provoque.",
+     "aide": "Relis la colonne « Effet » du tableau.",
+     "explication": "Les microplastiques et les gyres viennent des **plastiques**, les algues et zones mortes de l’**eutrophisation**, les coquilles fragiles de l’**acidification**, le blanchissement des coraux du **réchauffement**."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot du texte qui désigne le traité adopté en 2023.",
+     "aide": "C’est un acronyme de quatre lettres.",
+     "explication": "Le traité **BBNJ** permet de créer des aires protégées en haute mer."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "%",
+     "enonce": "Si toute la protection se faisait en haute mer, quelle part de la haute mer, en %, faudrait-il protéger pour atteindre 30 % de l’océan ?",
+     "aide": "La haute mer couvre 60 % de l’océan : cherche quelle part de 60 fait 30.",
+     "explication": "30 ÷ 60 = 0,5, soit **50 %** de la haute mer : l’objectif est ambitieux."
+    }
+   ]
+  },
+  {
+   "chapitre": "c564d9ae-4b2e-528d-905b-48bfef70f929",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il exploiter le fond des océans ?",
+   "competence": "argumenter",
+   "situation": "Un élève prépare un débat sur l’exploitation des nodules au fond du Pacifique. Il lit un texte, puis un tableau qui décrit les outils de gouvernance qui encadrent ces fonds.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Des pommes de terre au fond de l’eau",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Dans le Pacifique, entre Hawaï et le Mexique, des nodules de la taille d’une pomme de terre tapissent le fond à plus de 4 000 mètres. Ils contiennent du nickel, du cobalt et du manganèse, métaux des batteries.",
+      "Les industriels veulent les extraire ; des scientifiques demandent un [[m|moratoire]], car on connaît mal la vie de ces fonds."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les instruments de gouvernance",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Instrument",
+      "Date",
+      "Ce qu’il permet"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "AIFM",
+       "1994",
+       "Délivre les permis d’exploration au-delà des ZEE"
+      ],
+      [
+       "Traité BBNJ",
+       "2023",
+       "Créer des aires protégées en haute mer"
+      ],
+      [
+       "Objectif international",
+       "2030",
+       "Protéger 30 % des espaces marins"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui dit ce que permet l’AIFM.",
+     "aide": "Cherche la ligne « AIFM », dernière colonne.",
+     "explication": "L’**AIFM** délivre les permis d’exploration des fonds marins au-delà des ZEE."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot du texte qui désigne la pause demandée par des scientifiques.",
+     "aide": "Il est à la fin du second paragraphe.",
+     "explication": "Un **moratoire** est une pause : des scientifiques l’exigent car les écosystèmes des grands fonds sont mal connus."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Pour l’exploitation",
+      "Contre l’exploitation"
+     ],
+     "items": [
+      [
+       "Les batteries demandent toujours plus de nickel et de cobalt",
+       0
+      ],
+      [
+       "Des métaux extraits en mer réduiraient la dépendance à quelques pays miniers",
+       0
+      ],
+      [
+       "Les fonds profonds abritent des espèces encore inconnues",
+       1
+      ],
+      [
+       "Les sédiments soulevés peuvent étouffer la vie sur de grandes distances",
+       1
+      ],
+      [
+       "On connaît mal les écosystèmes des grands fonds",
+       1
+      ]
+     ],
+     "enonce": "Range chaque argument dans le camp qui le défend.",
+     "aide": "Les uns parlent de besoins en métaux, les autres de connaissances et de risques.",
+     "explication": "Les besoins en **métaux** plaident pour l’exploitation ; la méconnaissance des fonds et les **risques** pour les écosystèmes plaident contre."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "L’AIFM commence à fonctionner",
+      "Le traité BBNJ est adopté",
+      "L’échéance de l’objectif des 30 %"
+     ],
+     "enonce": "Range ces trois étapes du plus ancien au plus récent.",
+     "aide": "Les dates sont dans la colonne « Date ».",
+     "explication": "**1994**, **2023**, **2030** : la gouvernance s’est construite lentement, et l’objectif est encore devant nous."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une aire protégée sur le papier, mais sans contrôle réel sur place",
+      "Une réserve où l’on ne peut entrer qu’avec un permis écrit",
+      "Une réserve financée uniquement par la vente de publications",
+      "Un traité signé sur papier mais jamais ratifié par un État"
+     ],
+     "reponse": 0,
+     "enonce": "Que signifie l’expression « parc de papier » ?",
+     "aide": "Pense à la différence entre l’existence légale d’une aire et sa surveillance réelle.",
+     "explication": "Un **parc de papier** est protégé en théorie, mais sans contrôle effectif : beaucoup d’aires marines protégées existantes restent dans ce cas."
+    }
+   ]
+  },
+  {
+   "chapitre": "80825025-7fcb-5218-97e7-a4a9e12badb7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La France, deuxième domaine maritime du monde",
+   "competence": "lire-graphique",
+   "situation": "Romane prépare son exposé sur la France et la mer : elle compare l’étendue des zones économiques exclusives de cinq pays.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Étendue de la ZEE de cinq pays",
+     "source": "Chiffres arrondis ; les classements varient un peu selon les sources.",
+     "categories": [
+      "États-Unis",
+      "France",
+      "Australie",
+      "Russie",
+      "Royaume-Uni"
+     ],
+     "series": [
+      {
+       "nom": "ZEE",
+       "valeurs": [
+        11.4,
+        10.2,
+        8.1,
+        7.6,
+        6.8
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Étendue",
+      "unite": "en millions de km²",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k1"
+     ],
+     "enonce": "Touche la barre du pays qui occupe la deuxième place du classement.",
+     "aide": "Les pays sont classés du plus grand au plus petit.",
+     "explication": "La **France** occupe le deuxième rang avec environ 10,2 millions de km² de ZEE."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1.2,
+     "unite": "millions de km²",
+     "tolerance": 0.05,
+     "enonce": "De combien de millions de km² la ZEE des États-Unis dépasse-t-elle celle de la France ?",
+     "aide": "Soustrais les deux valeurs écrites au bout des barres.",
+     "explication": "11,4 − 10,2 = **1,2 million de km²**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Polynésie française",
+       "Océan Pacifique"
+      ],
+      [
+       "La Réunion",
+       "Océan Indien"
+      ],
+      [
+       "Guyane",
+       "Océan Atlantique"
+      ]
+     ],
+     "enonce": "Associe chaque territoire français à l’océan où il se trouve.",
+     "aide": "Pense à la situation de chaque territoire : Amérique du Sud, sud-ouest de l’océan Indien, Polynésie.",
+     "explication": "La **Polynésie française** est dans le Pacifique, **La Réunion** dans l’océan Indien et la **Guyane** sur la façade atlantique de l’Amérique du Sud."
+    }
+   ]
+  },
+  {
+   "chapitre": "80825025-7fcb-5218-97e7-a4a9e12badb7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un domaine maritime qui vient d’outre-mer",
+   "competence": "lire-carte",
+   "situation": "Jules cherche où se trouve la ZEE française. Il place sur une carte du monde quatre points, dont Paris, et lit la part de l’outre-mer dans la ZEE.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Paris et trois territoires d’outre-mer",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -170,
+      -45,
+      180,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "papeete",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "noumea",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "saint-denis-reunion",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "cayenne",
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lieu": "paris",
+       "symbole": "etoile"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Origine de la ZEE française",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Territoires",
+      "Part de la ZEE de 10,2 millions de km²"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Outre-mer",
+       "plus de 96 %"
+      ],
+      [
+       "Hexagone",
+       "moins de 4 %"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux territoires français situés dans l’océan Pacifique.",
+     "aide": "Cherche les deux points à l’est et à l’ouest, dans l’hémisphère sud.",
+     "explication": "**A** (Papeete, en Polynésie française) et **B** (Nouméa, en Nouvelle-Calédonie) sont dans le Pacifique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le territoire français situé dans l’océan Indien.",
+     "aide": "Cherche entre l’Afrique et l’Inde.",
+     "explication": "**C** est Saint-Denis, à La Réunion, dans l’océan Indien."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.4,
+     "unite": "millions de km²",
+     "tolerance": 0.06,
+     "enonce": "Environ quelle part de la ZEE, en millions de km², vient de l’Hexagone (4 % de 10,2) ?",
+     "aide": "Calcule 4 % de 10,2 et arrondis au dixième.",
+     "explication": "4 % de 10,2 = 0,408, soit environ **0,4 million de km²** : presque tout le domaine maritime est outre-mer."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La métropole ne donne qu’une petite part de la puissance maritime française",
+      "La métropole donne l’essentiel de l’espace maritime de la France",
+      "Les territoires d’outre-mer ne comptent presque pas dans la ZEE",
+      "La France n’est présente que dans l’océan Atlantique et la Méditerranée"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre le tableau sur la puissance maritime de la France ?",
+     "aide": "Compare les deux parts : qui pèse le plus ?",
+     "explication": "L’outre-mer donne **plus de 96 %** de la ZEE : sans lui, la France serait une puissance maritime moyenne."
+    }
+   ]
+  },
+  {
+   "chapitre": "80825025-7fcb-5218-97e7-a4a9e12badb7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Puissance maritime : oui, mais…",
+   "competence": "argumenter",
+   "situation": "Une élève prépare une composition sur le sujet « La France est-elle une puissance maritime ? » : elle lit le sujet et compare les ports français aux grands ports européens.",
+   "documents": [
+    {
+     "id": "sujet",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le sujet",
+     "auteur": "Sujet écrit pour l’exercice",
+     "blocs": [
+      "**Sujet** : La France est-elle une puissance maritime ?",
+      "Une bonne copie dit à la fois ce que la France a et ce qui lui manque, sans trancher trop vite."
+     ]
+    },
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Trafic de conteneurs de cinq ports européens",
+     "source": "Ordres de grandeur arrondis, 2023.",
+     "categories": [
+      "Anvers-Bruges",
+      "Rotterdam",
+      "Hambourg",
+      "Le Havre",
+      "Marseille-Fos"
+     ],
+     "series": [
+      {
+       "nom": "Conteneurs",
+       "valeurs": [
+        13,
+        13,
+        8,
+        3,
+        1.5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Trafic",
+      "unite": "en millions d’EVP",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la barre du premier port français du graphique.",
+     "aide": "Deux ports sont français ; cherche celui qui a le plus fort trafic.",
+     "explication": "**Le Havre**, avec environ 3 millions d’EVP, est le premier port français du graphique."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "fois",
+     "tolerance": 0.5,
+     "enonce": "Rotterdam traite environ combien de fois plus de conteneurs que Le Havre, arrondi à l’unité ?",
+     "aide": "Divise la valeur de Rotterdam par celle du Havre.",
+     "explication": "13 ÷ 3 ≈ 4,3, soit environ **4 fois** plus : les ports français décrochent."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Atout",
+      "Faiblesse"
+     ],
+     "items": [
+      [
+       "Le porte-avions nucléaire Charles de Gaulle",
+       0
+      ],
+      [
+       "La compagnie CMA CGM, parmi les trois premières du conteneur",
+       0
+      ],
+      [
+       "Les chantiers navals de Saint-Nazaire",
+       0
+      ],
+      [
+       "Des ports loin derrière Rotterdam et Anvers",
+       1
+      ],
+      [
+       "Une flotte de commerce modeste sous pavillon français",
+       1
+      ],
+      [
+       "Une surveillance dispersée sur trois océans",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément parmi les atouts ou les faiblesses de la France.",
+     "aide": "Les atouts sont militaires, économiques ou industriels ; les faiblesses, portuaires ou liées à la surveillance.",
+     "explication": "Le porte-avions, CMA CGM et Saint-Nazaire sont des **atouts** ; les ports en retrait, la flotte de commerce modeste et la surveillance dispersée sont des **faiblesses**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "I. Un domaine immense — II. Des atouts réels — III. Des faiblesses, dont les ports",
+      "I. Une flotte de commerce dominante — II. Les ports les plus actifs d’Europe — III. Une puissance complète",
+      "I. Un domaine sans territoires d’outre-mer — II. Des ports de premier rang — III. Une flotte qui domine",
+      "I. La première ZEE du monde — II. Aucun point faible — III. Une puissance maritime sans limites"
+     ],
+     "reponse": 0,
+     "enonce": "Quel plan répond le mieux au sujet ?",
+     "aide": "Le sujet demande de dire ce que la France a et ce qui lui manque.",
+     "explication": "Le bon plan montre un **domaine immense**, des **atouts réels**, puis des **faiblesses** : puissance par le domaine et la marine, pas par l’économie portuaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "5357e0ec-d512-56b9-9924-3dcd7b40c0c8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trente ans d’interventions américaines",
+   "competence": "se-reperer-temps",
+   "situation": "Léo construit la frise de la puissance américaine depuis la fin de la guerre froide : il veut situer les interventions et les retraits.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la guerre du Golfe au retrait d’Afghanistan",
+     "source": "Dates exactes.",
+     "debut": 1990,
+     "fin": 2022,
+     "pas": 4,
+     "evenements": [
+      {
+       "id": "golfe",
+       "date": 1991,
+       "nom": "Guerre du Golfe"
+      },
+      {
+       "id": "kos",
+       "date": 1999,
+       "nom": "Kosovo"
+      },
+      {
+       "id": "11s",
+       "date": 2001,
+       "nom": "11 septembre"
+      },
+      {
+       "id": "irak",
+       "date": 2003,
+       "nom": "Guerre d’Irak"
+      },
+      {
+       "id": "rirak",
+       "date": 2011,
+       "nom": "Retrait d’Irak"
+      },
+      {
+       "id": "rafg",
+       "date": 2021,
+       "nom": "Retrait afghan"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "11s"
+     ],
+     "enonce": "Touche l’événement qui déclenche la « guerre contre le terrorisme ».",
+     "aide": "Il se produit à New York et à Washington.",
+     "explication": "Les attentats du **11 septembre 2001** sont à l’origine de la « guerre contre le terrorisme » américaine."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La guerre du Golfe",
+      "L’intervention au Kosovo",
+      "L’invasion de l’Irak",
+      "Le retrait d’Afghanistan"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1991**, **1999**, **2003**, **2021** : les interventions des années 1990 précèdent les guerres d’après le 11 septembre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le 11 septembre 2001 du retrait d’Afghanistan ?",
+     "aide": "Soustrais 2001 de 2021.",
+     "explication": "2021 − 2001 = **20 ans** de guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "5357e0ec-d512-56b9-9924-3dcd7b40c0c8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Budgets militaires et guerre d’Irak",
+   "competence": "raisonner",
+   "situation": "Une élève évalue la puissance américaine : elle compare les budgets militaires de quatre pays et le bilan de deux interventions.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Budgets militaires en 2023",
+     "source": "Ordres de grandeur arrondis, d’après les estimations du SIPRI.",
+     "categories": [
+      "États-Unis",
+      "Chine",
+      "Russie",
+      "France"
+     ],
+     "series": [
+      {
+       "nom": "Budget",
+       "valeurs": [
+        900,
+        300,
+        110,
+        60
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Budget",
+      "unite": "en milliards de dollars",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "valeurs": true
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux interventions après le 11 septembre",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Afghanistan",
+      "Irak"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Année",
+       "2001",
+       "2003"
+      ],
+      [
+       "Motif",
+       "Abriter al-Qaïda",
+       "Armes de destruction massive"
+      ],
+      [
+       "Bilan",
+       "Retrait en 2021, retour des talibans",
+       "Armes jamais retrouvées ; pas de mandat de l’ONU"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k1"
+     ],
+     "enonce": "Touche la barre du pays qui a le deuxième budget militaire.",
+     "aide": "Les pays sont classés du plus fort budget au plus faible.",
+     "explication": "La **Chine**, avec environ 300 milliards de dollars, arrive loin derrière les États-Unis."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "fois",
+     "enonce": "Combien de fois le budget militaire des États-Unis dépasse-t-il celui de la Chine ?",
+     "aide": "Divise 900 par 300.",
+     "explication": "900 ÷ 300 = **3 fois** : c’est ce que signifie « premier budget du monde »."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui donne le motif invoqué pour intervenir en Irak.",
+     "aide": "Cherche la ligne « Motif », colonne « Irak ».",
+     "explication": "Le motif invoqué pour l’Irak est l’existence d’**armes de destruction massive**, qui n’ont jamais été retrouvées."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle est décidée sans mandat de l’ONU et sur un motif jamais prouvé",
+      "Elle est autorisée par l’ONU et appuyée par tous les alliés",
+      "Elle réussit à installer durablement une démocratie stable",
+      "Elle est décidée pour répondre à une attaque de l’Irak"
+     ],
+     "reponse": 0,
+     "enonce": "Qu’est-ce qui affaiblit la légitimité de l’intervention en Irak ?",
+     "aide": "Regarde la colonne « Irak », ligne « Bilan ».",
+     "explication": "L’intervention de 2003 se fait **sans mandat de l’ONU**, pour un motif qui s’est révélé faux : elle abîme durablement l’image des États-Unis."
+    }
+   ]
+  },
+  {
+   "chapitre": "5357e0ec-d512-56b9-9924-3dcd7b40c0c8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une hyperpuissance qui doute",
+   "competence": "argumenter",
+   "situation": "Un élève prépare une conclusion de dissertation : il lit un article sur les retraits américains, classe les atouts et les limites de la puissance, puis relie les notions du cours.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Kaboul, août 2021",
+     "auteur": "Article imaginé pour l’exercice, d’après le cours",
+     "blocs": [
+      "En août 2021, les derniers soldats américains quittent l’Afghanistan, vingt ans après y être entrés. Les [[t|talibans]] reprennent Kaboul. En 2011, les troupes avaient déjà quitté l’Irak.",
+      "Pendant ce temps, la Chine devient la deuxième économie du monde, et le slogan « America First » exprime la tentation du repli."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot du texte qui désigne le groupe qui reprend Kaboul.",
+     "aide": "Il est cité dans la deuxième phrase.",
+     "explication": "Les **talibans** reprennent Kaboul : vingt ans de guerre n’ont pas changé le rapport de forces sur place."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le retrait d’Irak du retrait d’Afghanistan ?",
+     "aide": "Les deux dates sont dans le texte.",
+     "explication": "2021 − 2011 = **10 ans**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Atout de la puissance",
+      "Limite de la puissance"
+     ],
+     "items": [
+      [
+       "Le dollar, monnaie des échanges internationaux",
+       0
+      ],
+      [
+       "Le premier budget militaire du monde",
+       0
+      ],
+      [
+       "Un cinéma et une musique qui rayonnent",
+       0
+      ],
+      [
+       "Des guerres longues qui s’enlisent",
+       1
+      ],
+      [
+       "La montée de la Chine",
+       1
+      ],
+      [
+       "La tentation du repli « America First »",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément parmi les atouts ou les limites de la puissance américaine.",
+     "aide": "Les atouts relèvent de la finance, de la force et de l’influence ; les limites, des guerres et de la concurrence.",
+     "explication": "Le **dollar**, le **budget militaire** et le **soft power** sont des atouts ; l’**enlisement**, la **Chine** et le **repli** sont des limites."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Hyperpuissance",
+       "Puissance sans rival après 1991"
+      ],
+      [
+       "Soft power",
+       "Influence par la culture et les idées"
+      ],
+      [
+       "Monde unipolaire",
+       "Un seul pôle de puissance domine"
+      ],
+      [
+       "Monde multipolaire",
+       "Plusieurs pôles de puissance coexistent"
+      ]
+     ],
+     "enonce": "Associe chaque notion à sa définition.",
+     "aide": "Pense à ce que suggère chaque mot : « uni », « multi », « soft ».",
+     "explication": "L’**hyperpuissance** est sans rival, le **soft power** une influence culturelle, le monde **unipolaire** a un seul pôle et le monde **multipolaire** plusieurs."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La puissance américaine reste immense mais ne suffit plus à imposer un ordre",
+      "La puissance américaine a disparu et la Chine domine seule le monde",
+      "La puissance américaine s’est renforcée grâce à ses guerres au Moyen-Orient",
+      "La puissance américaine n’a jamais eu de rival depuis la fin de la guerre froide"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle conclusion tire-t-on de ces éléments ?",
+     "aide": "Pense à la fois aux atouts et aux limites.",
+     "explication": "Les retraits, la Chine et le repli montrent que la puissance reste **immense** mais ne suffit plus à imposer un ordre : le monde devient multipolaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "288dea7f-b7e7-5db6-92da-4fdc0af0d017",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes étapes de la coopération mondiale",
+   "competence": "se-reperer-temps",
+   "situation": "Une élève construit la frise de la coopération internationale depuis 1945 : elle place les institutions et les grands accords.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De l’ONU à l’accord de Paris",
+     "source": "Dates exactes.",
+     "debut": 1940,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "onu",
+       "date": 1945,
+       "nom": "Création de l’ONU"
+      },
+      {
+       "id": "g7",
+       "date": 1975,
+       "nom": "Premier G7"
+      },
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Sommet de Rio"
+      },
+      {
+       "id": "cpi",
+       "date": 2002,
+       "nom": "Cour pénale"
+      },
+      {
+       "id": "g20",
+       "date": 2008,
+       "nom": "Premier G20"
+      },
+      {
+       "id": "paris",
+       "date": 2015,
+       "nom": "Accord de Paris"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cpi"
+     ],
+     "enonce": "Touche l’institution qui juge les crimes contre l’humanité.",
+     "aide": "Elle commence en 2002.",
+     "explication": "La **Cour pénale internationale** est entrée en fonction en 2002 pour juger génocides, crimes contre l’humanité et crimes de guerre."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Création de l’ONU",
+      "Premier G7",
+      "Sommet de Rio",
+      "Accord de Paris"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1945**, **1975**, **1992**, **2015** : de l’ONU à l’accord de Paris, le cadre de la coopération s’élargit."
+    },
+    {
+     "type": "nombre",
+     "reponse": 30,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la création de l’ONU du premier G7 ?",
+     "aide": "Soustrais 1945 de 1975.",
+     "explication": "1975 − 1945 = **30 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "288dea7f-b7e7-5db6-92da-4fdc0af0d017",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Climat : des accords sans sanctions",
+   "competence": "analyser-document",
+   "situation": "Une lycéenne prépare une fiche sur la coopération climatique : elle lit un tableau des grandes étapes, puis un texte sur l’accord de Paris.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les étapes de la coopération climatique",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "L’étape",
+      "Sa portée"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1988",
+       "Création du GIEC",
+       "Une base scientifique commune"
+      ],
+      [
+       "1992",
+       "Sommet de Rio",
+       "Le climat entre à l’agenda mondial"
+      ],
+      [
+       "1997",
+       "Protocole de Kyoto",
+       "Contraignant, mais les États-Unis ne le ratifient pas"
+      ],
+      [
+       "2015",
+       "Accord de Paris, COP21",
+       "195 États, bien en dessous de 2 °C"
+      ]
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Paris, décembre 2015",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "À Paris, en décembre 2015, 195 délégations s’accordent pour limiter le réchauffement bien en dessous de 2 °C. Chaque État fixe lui-même son engagement : ce sont des contributions [[v|volontaires]].",
+      "Aucune sanction n’est prévue. Additionnées, ces promesses ne suffisent pas encore à atteindre l’objectif."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui dit pourquoi le protocole de Kyoto est limité.",
+     "aide": "Cherche la ligne « Protocole de Kyoto », dernière colonne.",
+     "explication": "Kyoto est contraignant, mais les **États-Unis ne le ratifient pas** : l’un des principaux émetteurs reste en dehors."
+    },
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le sommet de Rio de l’accord de Paris ?",
+     "aide": "Les deux dates sont dans le tableau.",
+     "explication": "2015 − 1992 = **23 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot du texte qui dit que chaque État choisit lui-même son engagement.",
+     "aide": "Il décrit les contributions de chaque État.",
+     "explication": "Les contributions sont **volontaires** : chaque État fixe lui-même son effort, sans sanction possible."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Tous les États y participent, mais chacun choisit son engagement sans sanction",
+      "Tous les États doivent réduire leurs émissions de la même quantité",
+      "Seuls les grands pays industrialisés prennent des engagements chiffrés",
+      "Les États qui ne respectent pas leurs promesses sont condamnés à des amendes"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi dit-on que l’accord de Paris est universel mais non contraignant ?",
+     "aide": "Relis les deux phrases sur les engagements et les sanctions.",
+     "explication": "L’accord est **universel** (195 États) mais **non contraignant** : chacun fixe son engagement et aucune sanction n’est prévue."
+    }
+   ]
+  },
+  {
+   "chapitre": "288dea7f-b7e7-5db6-92da-4fdc0af0d017",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Coopérer : une force et une faiblesse",
+   "competence": "argumenter",
+   "situation": "Léa et Hugo débattent de l’utilité de la coopération internationale. Pour trancher, une lycéenne croise leur dialogue et un tableau des institutions.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les institutions de la coopération",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Créée",
+      "Ce qu’elle fait"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "ONU",
+       "1945",
+       "Maintient la paix, agences spécialisées"
+      ],
+      [
+       "G7",
+       "1975",
+       "Réunit les grandes économies occidentales"
+      ],
+      [
+       "OMC",
+       "1995",
+       "Arbitre le commerce mondial"
+      ],
+      [
+       "Cour pénale internationale",
+       "2002",
+       "Juge génocides et crimes contre l’humanité"
+      ],
+      [
+       "G20",
+       "2008",
+       "Élargit le cercle aux économies émergentes"
+      ]
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "La coopération internationale ne sert à rien : l’ONU ne peut presque jamais rien imposer."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "C’est vrai que le droit de [[v|veto]] des cinq membres permanents bloque souvent ses décisions."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Alors des normes sans sanctions, ça ne change rien ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Si : elles rendent possible l’accord entre des États qui restent souverains."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "L’ONU",
+      "Le G7",
+      "L’OMC",
+      "Le G20"
+     ],
+     "enonce": "Range ces quatre institutions de la plus ancienne à la plus récente.",
+     "aide": "Les dates sont dans la colonne « Créée ».",
+     "explication": "**1945**, **1975**, **1995**, **2008** : les institutions s’ajoutent pour répondre à des problèmes de plus en plus mondiaux."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "OMC",
+       "Arbitrer le commerce mondial"
+      ],
+      [
+       "Cour pénale internationale",
+       "Juger génocides et crimes contre l’humanité"
+      ],
+      [
+       "G20",
+       "Faire entrer les économies émergentes"
+      ],
+      [
+       "ONU",
+       "Maintenir la paix"
+      ]
+     ],
+     "enonce": "Associe chaque institution à son rôle.",
+     "aide": "Utilise la dernière colonne du tableau.",
+     "explication": "L’**OMC** arbitre le commerce, la **CPI** juge les crimes les plus graves, le **G20** intègre les émergents et l’**ONU** maintient la paix."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot du dialogue qui désigne le pouvoir de blocage des cinq membres permanents.",
+     "aide": "Il est dans la réplique de Hugo.",
+     "explication": "Le droit de **veto** permet à chacun des cinq membres permanents du Conseil de sécurité de bloquer une décision."
+    },
+    {
+     "type": "trous",
+     "texte": "La coopération internationale produit des ___, rarement des ___.",
+     "reponses": [
+      [
+       "normes"
+      ],
+      [
+       "sanctions"
+      ]
+     ],
+     "banque": [
+      "normes",
+      "sanctions",
+      "guerres",
+      "monnaies"
+     ],
+     "enonce": "Complète cette phrase de conclusion.",
+     "aide": "Pense à la force et à la faiblesse de la coopération, selon Hugo.",
+     "explication": "Elle produit des **normes**, rarement des **sanctions** : c’est sa force et sa faiblesse."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les normes créées ensemble rendent des accords possibles, même sans sanction",
+      "Les normes remplacent les États et décident à leur place des politiques",
+      "Les normes sont toujours appliquées parce que tout État les respecte",
+      "Les normes n’existent que dans les textes et n’ont jamais d’effet réel"
+     ],
+     "reponse": 0,
+     "enonce": "Quel argument d’Hugo répond à la dernière question de Léa ?",
+     "aide": "Relis la dernière réplique.",
+     "explication": "Hugo défend les **normes** : sans sanction, elles permettent pourtant à des États souverains de s’accorder, ce qui est à la fois la force et la faiblesse de la coopération."
+    }
+   ]
+  }
+ ]
+}

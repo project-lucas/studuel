@@ -1,0 +1,442 @@
+{
+  "id": "maths-2023-metropole-j1",
+  "matiere": "maths",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2023,
+  "centre": "Métropole",
+  "jour": 1,
+  "code": "23-MATJ1ME1",
+  "titre": "Bac 2023 — Mathématiques (spécialité), jour 1",
+  "dureeMin": 240,
+  "coefficient": 16,
+  "consigne": "Quatre exercices de 5 points, tous à traiter. Calculatrice en mode examen autorisée.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "QCM de probabilités : machines sous garantie et défectueuses (probabilités conditionnelles), puis loi binomiale de paramètres $n$ et $p = 0{,}082$.",
+      "points": 5,
+      "minutes": 45,
+      "enBref": [
+        "Cinq questions, aucune justification demandée, mais chaque réponse se trouve par un calcul court qu'il faut faire au brouillon.",
+        "Traduis d'abord l'énoncé : $p(G) = 0{,}2$, $p(G \\cap D) = 0{,}002$ et $p(D) = 0{,}082$.",
+        "Réponses : 1. b ($0{,}01$) ; 2. b ($0{,}08$) ; 3. b ($0{,}024$) ; 4. b ($0{,}789$) ; 5. c ($n = 10$).",
+        "Les deux pièges : « la machine est défectueuse » impose de conditionner par $D$ (question 3), et « $X > 2$ » est une inégalité stricte (question 4)."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Traduire l'énoncé" },
+        { "type": "texte", "texte": "Les pourcentages de l'énoncé sont des probabilités sur une machine tirée au hasard : $p(G) = 0{,}2$ ; $p(G \\cap D) = 0{,}002$ (« à la fois défectueuse et sous garantie » est une intersection) ; $p(D) = 0{,}082$." },
+        { "type": "piege", "texte": "Le $0{,}2\\,\\%$ n'est PAS une probabilité conditionnelle : c'est la part de TOUTES les machines qui sont à la fois défectueuses et sous garantie. Le reporter sur une branche secondaire de l'arbre fausse les trois premières questions." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "La probabilité $p_G(D)$ est égale à…",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "Par définition d'une probabilité conditionnelle :" },
+            { "type": "formule", "tex": "p_G(D) = \\frac{p(G \\cap D)}{p(G)} = \\frac{0{,}002}{0{,}2} = 0{,}01." },
+            { "type": "reponse", "texte": "Réponse **b** : $p_G(D) = 0{,}01$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "La probabilité $p(\\overline{G} \\cap D)$ est égale à…",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "$G$ et $\\overline{G}$ forment une partition de l'univers ; d'après la formule des probabilités totales, $p(D) = p(G \\cap D) + p(\\overline{G} \\cap D)$. Donc :" },
+            { "type": "formule", "tex": "p(\\overline{G} \\cap D) = p(D) - p(G \\cap D) = 0{,}082 - 0{,}002 = 0{,}08." },
+            { "type": "reponse", "texte": "Réponse **b** : $p(\\overline{G} \\cap D) = 0{,}08$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "La machine est défectueuse : probabilité qu'elle soit sous garantie, à $10^{-3}$ près.",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "On sait que la machine est défectueuse : on cherche $p_D(G)$, et non $p_G(D)$." },
+            { "type": "formule", "tex": "p_D(G) = \\frac{p(G \\cap D)}{p(D)} = \\frac{0{,}002}{0{,}082} = \\frac{1}{41} \\approx 0{,}024." },
+            { "type": "reponse", "texte": "Réponse **b** : environ $0{,}024$." },
+            { "type": "astuce", "texte": "Le mot qui suit « sachant que » ou qui décrit ce qu'on SAIT déjà (« la machine est défectueuse ») va en indice. Ici l'information connue est $D$, donc on divise par $p(D)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Avec $n = 50$, la valeur arrondie au millième de $p(X > 2)$ est…",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "$X$ suit la loi binomiale $\\mathcal{B}(50\\,;\\,0{,}082)$. Comme $X$ ne prend que des valeurs entières, l'événement contraire de $\\{X > 2\\}$ est $\\{X \\leqslant 2\\}$ :" },
+            { "type": "formule", "tex": "p(X > 2) = 1 - p(X \\leqslant 2) = 1 - \\left[p(X=0) + p(X=1) + p(X=2)\\right]." },
+            { "type": "texte", "texte": "À la calculatrice (fonction de répartition binomiale), $p(X \\leqslant 2) \\approx 0{,}2114$, d'où $p(X > 2) \\approx 1 - 0{,}2114 = 0{,}7886$." },
+            { "type": "reponse", "texte": "Réponse **b** : $p(X > 2) \\approx 0{,}789$." },
+            { "type": "piege", "texte": "Calculer $1 - p(X \\leqslant 3)$ ou $1 - p(X < 2)$ : l'inégalité stricte change tout. Écris toujours l'événement contraire en toutes lettres avant de taper sur la calculatrice. Les mauvaises réponses sont des erreurs prévues : $0{,}136$ est $p(X = 2)$, $0{,}864$ est $1 - p(X = 2)$, et $0{,}924$ est $p(X \\geqslant 2)$, qu'on obtient en confondant « $> 2$ » et « $\\geqslant 2$ »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Plus grande valeur de $n$ pour laquelle la probabilité que toutes les machines fonctionnent dépasse $0{,}4$.",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "« Toutes les machines fonctionnent » correspond à $\\{X = 0\\}$, et $p(X = 0) = (1 - 0{,}082)^n = 0{,}918^n$. On résout :" },
+            { "type": "formule", "tex": "0{,}918^n > 0{,}4 \\iff n \\ln(0{,}918) > \\ln(0{,}4) \\iff n < \\frac{\\ln(0{,}4)}{\\ln(0{,}918)}" },
+            { "type": "texte", "texte": "On a appliqué la fonction $\\ln$, strictement croissante sur $]0\\,;+\\infty[$, puis divisé par $\\ln(0{,}918) < 0$, ce qui renverse l'inégalité. Or $\\dfrac{\\ln(0{,}4)}{\\ln(0{,}918)} \\approx 10{,}71$. Vérification : $0{,}918^{10} \\approx 0{,}425 > 0{,}4$ et $0{,}918^{11} \\approx 0{,}390 < 0{,}4$." },
+            { "type": "reponse", "texte": "Réponse **c** : la plus grande valeur possible est $n = 10$." },
+            { "type": "piege", "texte": "Diviser par un logarithme de nombre compris entre 0 et 1, c'est diviser par un nombre NÉGATIF : le sens de l'inégalité change." }
+          ]
+        },
+        { "type": "attendu", "texte": "Un point par bonne réponse, rien d'enlevé pour une erreur : ne laisse aucune question sans réponse. Aucune justification n'est notée, mais le calcul au brouillon reste le seul moyen fiable de trancher." }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Étude de la fonction $f(x) = x^2 - 8\\ln(x)$ sur $]0\\,;+\\infty[$ : limites, variations, équation $f(x) = 0$, signe, et famille de fonctions $g_k = f + k$.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "Un exercice d'étude de fonction complet et très classique : limites, dérivée, tableau de variations, théorème des valeurs intermédiaires, signe.",
+        "$\\lim_{x \\to 0} f(x) = +\\infty$ et $\\lim_{x \\to +\\infty} f(x) = +\\infty$ ; $f'(x) = \\frac{2(x^2-4)}{x}$.",
+        "$f$ décroît sur $]0\\,;2]$ et croît sur $[2\\,;+\\infty[$, avec un minimum $f(2) = 4 - 8\\ln 2 \\approx -1{,}55$.",
+        "$f$ est positive hors de $]\\alpha\\,;\\beta[$ et négative dedans ; la plus petite valeur de $k$ qui rend $g_k$ positive est $8\\ln 2 - 4$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Déterminer $\\lim_{x \\to 0} f(x)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Quand $x$ tend vers $0$ (par valeurs positives, puisque $f$ est définie sur $]0\\,;+\\infty[$) : $\\lim x^2 = 0$ et $\\lim \\ln(x) = -\\infty$, donc $\\lim\\,(-8\\ln x) = +\\infty$. Par somme :" },
+            { "type": "reponse", "texte": "$\\displaystyle\\lim_{x \\to 0} f(x) = +\\infty$ : l'axe des ordonnées est asymptote verticale à la courbe de $f$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Avec $f(x) = x^2\\left(1 - 8\\frac{\\ln x}{x^2}\\right)$, en déduire $\\lim_{x \\to +\\infty} f(x)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "En $+\\infty$, la forme $x^2 - 8\\ln x$ est indéterminée ($+\\infty - \\infty$). La forme factorisée la lève. Par croissances comparées, $\\lim_{x \\to +\\infty} \\frac{\\ln x}{x^2} = 0$ ; donc $\\lim\\left(1 - 8\\frac{\\ln x}{x^2}\\right) = 1$. Comme $\\lim x^2 = +\\infty$, par produit :" },
+            { "type": "reponse", "texte": "$\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$." },
+            { "type": "astuce", "texte": "Devant une forme « $+\\infty - \\infty$ », factorise par le terme qui l'emporte (ici $x^2$) : ce qui reste entre parenthèses tend vers une constante grâce aux croissances comparées." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que $f'(x) = \\frac{2(x^2-4)}{x}$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Pour tout $x > 0$, la dérivée de $x^2$ est $2x$ et celle de $\\ln x$ est $\\frac{1}{x}$. On réduit au même dénominateur :" },
+            { "type": "formule", "tex": "f'(x) = 2x - \\frac{8}{x} = \\frac{2x^2 - 8}{x} = \\frac{2(x^2 - 4)}{x}." },
+            { "type": "reponse", "texte": "Pour tout $x \\in\\, ]0\\,;+\\infty[$, $f'(x) = \\dfrac{2(x^2-4)}{x}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Variations de $f$, tableau complet et valeur exacte du minimum.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Sur $]0\\,;+\\infty[$, $x > 0$, donc $f'(x)$ a le signe de $x^2 - 4 = (x-2)(x+2)$. Comme $x + 2 > 0$, c'est le signe de $x - 2$ : $f'(x) < 0$ sur $]0\\,;2[$, $f'(2) = 0$, $f'(x) > 0$ sur $]2\\,;+\\infty[$." },
+            { "type": "texte", "texte": "Le minimum vaut $f(2) = 2^2 - 8\\ln 2 = 4 - 8\\ln 2 \\approx -1{,}55$." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$0$", "", "$2$", "", "$+\\infty$"],
+              "lignes": [
+                ["signe de $f'(x)$", "", "$-$", "$0$", "$+$", ""],
+                ["variations de $f$", "$+\\infty$", "décroissante", "$4 - 8\\ln 2$", "croissante", "$+\\infty$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$f$ est strictement décroissante sur $]0\\,;2]$, strictement croissante sur $[2\\,;+\\infty[$, et son minimum sur $]0\\,;+\\infty[$ est $f(2) = 4 - 8\\ln 2$." },
+            { "type": "attendu", "texte": "Un tableau « complet » porte les limites aux bornes (questions 1 et 2) ET la valeur exacte du minimum. La valeur approchée $-1{,}55$ est un bonus utile pour la suite, pas un remplacement." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Démontrer que $f(x) = 0$ admet une solution unique $\\alpha$ sur $]0\\,;2]$.",
+          "points": null,
+          "blocs": [
+            { "type": "liste", "items": [
+              "$f$ est continue sur $]0\\,;2]$ (elle y est dérivable) ;",
+              "$f$ est strictement décroissante sur $]0\\,;2]$ ;",
+              "$\\lim_{x \\to 0} f(x) = +\\infty$ et $f(2) = 4 - 8\\ln 2 < 0$ (car $8\\ln 2 \\approx 5{,}55 > 4$) ;",
+              "donc $0$ est une valeur comprise entre $f(2)$ et la limite en $0$."
+            ] },
+            { "type": "texte", "texte": "D'après le corollaire du théorème des valeurs intermédiaires (cas d'une fonction continue et strictement monotone), l'équation $f(x) = 0$ admet une unique solution sur $]0\\,;2]$." },
+            { "type": "reponse", "texte": "L'équation $f(x) = 0$ admet une solution unique $\\alpha$ dans $]0\\,;2]$ (en fait $\\alpha < 2$ puisque $f(2) \\neq 0$)." },
+            { "type": "piege", "texte": "Oublier la continuité ou la stricte monotonie : sans elles, le théorème ne donne que l'existence, pas l'unicité. Et une borne ouverte en $0$ se traite avec la LIMITE, pas avec une valeur $f(0)$ qui n'existe pas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Avec $\\beta$ l'unique solution sur $[2\\,;+\\infty[$, en déduire le signe de $f$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Sur $]0\\,;2]$, $f$ est strictement décroissante et s'annule en $\\alpha$ : $f(x) > 0$ pour $x < \\alpha$ et $f(x) < 0$ pour $\\alpha < x \\leqslant 2$. Sur $[2\\,;+\\infty[$, $f$ est strictement croissante et s'annule en $\\beta$ : $f(x) < 0$ pour $2 \\leqslant x < \\beta$ et $f(x) > 0$ pour $x > \\beta$." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$0$", "", "$\\alpha$", "", "$\\beta$", "", "$+\\infty$"],
+              "lignes": [
+                ["signe de $f(x)$", "", "$+$", "$0$", "$-$", "$0$", "$+$", ""]
+              ]
+            },
+            { "type": "reponse", "texte": "$f(x) > 0$ sur $]0\\,;\\alpha[\\, \\cup\\, ]\\beta\\,;+\\infty[$, $f(x) < 0$ sur $]\\alpha\\,;\\beta[$, et $f$ s'annule en $\\alpha$ et en $\\beta$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Plus petite valeur de $k$ pour laquelle $g_k(x) = x^2 - 8\\ln x + k$ est positive sur $]0\\,;+\\infty[$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Pour tout $x > 0$, $g_k(x) = f(x) + k$ : $g_k$ a les mêmes variations que $f$, et son minimum est atteint en $2$ : $g_k(2) = 4 - 8\\ln 2 + k$." },
+            { "type": "texte", "texte": "$g_k$ est positive sur $]0\\,;+\\infty[$ si et seulement si son minimum est positif :" },
+            { "type": "formule", "tex": "4 - 8\\ln 2 + k \\geqslant 0 \\iff k \\geqslant 8\\ln 2 - 4." },
+            { "type": "reponse", "texte": "La plus petite valeur de $k$ est $k = 8\\ln 2 - 4 \\approx 1{,}55$ (dans ce cas, $g_k$ s'annule seulement en $2$ et reste positive ailleurs)." },
+            { "type": "piege", "texte": "Attention au signe en isolant $k$ : de $4 - 8\\ln 2 + k \\geqslant 0$ on tire $k \\geqslant -(4 - 8\\ln 2) = 8\\ln 2 - 4$, nombre POSITIF. Répondre « $4 - 8\\ln 2$ » (négatif) est faux : avec ce $k$, $g_k(2) = 2(4 - 8\\ln 2) < 0$." },
+            { "type": "astuce", "texte": "Ajouter $k$ à une fonction, c'est translater sa courbe verticalement. Pour qu'elle passe au-dessus de l'axe, il faut remonter le point le plus bas jusqu'à $0$ : on ajoute exactement l'opposé du minimum." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Nombre de questions d'une FAQ : modèle arithmético-géométrique $u_{n+1} = 0{,}9u_n + 1{,}3$, modèle exponentiel $v_n = 9 - 6\\mathrm{e}^{-0{,}19(n-1)}$, puis comparaison des deux.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "Partie A : $u_2 = 4$, $u_3 = 4{,}9$ ; récurrence pour $u_n = 13 - \\frac{100}{9} \\times 0{,}9^n$ ; la suite est croissante ; `seuil(8.5)` renvoie $9$.",
+        "Partie B : $v_1 = 3{,}00$, $v_2 \\approx 4{,}04$ ; $v_n > 8{,}5$ pour la première fois à $n = 15$.",
+        "Partie C : le premier modèle dépasse 850 questions plus tôt (9e mois contre 15e) et donne aussi plus de questions à long terme (limite 1 300 contre 900).",
+        "Attention à l'unité : les suites comptent des CENTAINES de questions."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : première modélisation" },
+        {
+          "type": "question",
+          "numero": "A.1",
+          "intitule": "Calculer $u_2$ et $u_3$ et interpréter.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "u_2 = 0{,}9 \\times 3 + 1{,}3 = 4 \\qquad u_3 = 0{,}9 \\times 4 + 1{,}3 = 4{,}9" },
+            { "type": "reponse", "texte": "$u_2 = 4$ et $u_3 = 4{,}9$ : selon ce modèle, la FAQ compte 400 questions le 2e mois et 490 questions le 3e mois." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2",
+          "intitule": "Montrer par récurrence que $u_n = 13 - \\frac{100}{9} \\times 0{,}9^n$ pour tout $n \\geqslant 1$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Pour $n \\geqslant 1$, notons $P(n)$ : « $u_n = 13 - \\frac{100}{9} \\times 0{,}9^n$ »." },
+            { "type": "texte", "texte": "**Initialisation.** $13 - \\frac{100}{9} \\times 0{,}9 = 13 - \\frac{90}{9} = 13 - 10 = 3 = u_1$. Donc $P(1)$ est vraie." },
+            { "type": "texte", "texte": "**Hérédité.** Soit $k \\geqslant 1$ tel que $P(k)$ est vraie. Alors :" },
+            { "type": "formule", "tex": "u_{k+1} = 0{,}9\\,u_k + 1{,}3 = 0{,}9\\left(13 - \\frac{100}{9} \\times 0{,}9^k\\right) + 1{,}3 = 11{,}7 + 1{,}3 - \\frac{100}{9} \\times 0{,}9^{k+1} = 13 - \\frac{100}{9} \\times 0{,}9^{k+1}." },
+            { "type": "texte", "texte": "Donc $P(k+1)$ est vraie." },
+            { "type": "texte", "texte": "**Conclusion.** $P(1)$ est vraie et $P$ est héréditaire à partir du rang 1 : par récurrence, $P(n)$ est vraie pour tout $n \\geqslant 1$." },
+            { "type": "reponse", "texte": "Pour tout entier $n \\geqslant 1$, $u_n = 13 - \\dfrac{100}{9} \\times 0{,}9^n$." },
+            { "type": "attendu", "texte": "Les trois étapes nommées, l'hypothèse de récurrence utilisée explicitement dans le calcul, et une conclusion rédigée. Une hérédité « qui marche » sans dire où sert l'hypothèse perd des points." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.3",
+          "intitule": "En déduire que $(u_n)$ est croissante.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Pour tout $n \\geqslant 1$, avec la forme explicite :" },
+            { "type": "formule", "tex": "u_{n+1} - u_n = -\\frac{100}{9} \\times 0{,}9^{n+1} + \\frac{100}{9} \\times 0{,}9^n = \\frac{100}{9} \\times 0{,}9^n\\,(1 - 0{,}9) = \\frac{10}{9} \\times 0{,}9^n." },
+            { "type": "texte", "texte": "Comme $0{,}9^n > 0$, on a $u_{n+1} - u_n > 0$." },
+            { "type": "reponse", "texte": "Pour tout $n \\geqslant 1$, $u_{n+1} > u_n$ : la suite $(u_n)$ est (strictement) croissante." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.4",
+          "intitule": "Valeur renvoyée par `seuil(8.5)` et interprétation.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "La boucle continue tant que $u \\leqslant p$ : la fonction renvoie le premier rang $n$ tel que $u_n > 8{,}5$. On résout :" },
+            { "type": "formule", "tex": "13 - \\frac{100}{9} \\times 0{,}9^n > 8{,}5 \\iff \\frac{100}{9} \\times 0{,}9^n < 4{,}5 \\iff 0{,}9^n < 0{,}405 \\iff n > \\frac{\\ln(0{,}405)}{\\ln(0{,}9)}" },
+            { "type": "texte", "texte": "(la fonction $\\ln$ est strictement croissante, et $\\ln(0{,}9) < 0$ renverse l'inégalité). Or $\\frac{\\ln(0{,}405)}{\\ln(0{,}9)} \\approx 8{,}58$. Vérification : $u_8 \\approx 8{,}22 \\leqslant 8{,}5$ et $u_9 \\approx 8{,}70 > 8{,}5$." },
+            { "type": "reponse", "texte": "`seuil(8.5)` renvoie $9$ : selon le premier modèle, c'est au 9e mois que la FAQ dépasse pour la première fois 850 questions." },
+            { "type": "astuce", "texte": "Pour un programme de seuil, repère la condition de la boucle `while` : la fonction renvoie le premier rang où cette condition devient FAUSSE. Ici, le premier $n$ tel que $u_n > 8{,}5$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : une autre modélisation" },
+        {
+          "type": "question",
+          "numero": "B.1",
+          "intitule": "Valeurs arrondies au centième de $v_1$ et $v_2$.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "v_1 = 9 - 6\\mathrm{e}^{0} = 3 \\qquad v_2 = 9 - 6\\mathrm{e}^{-0{,}19} \\approx 4{,}04" },
+            { "type": "reponse", "texte": "$v_1 = 3{,}00$ et $v_2 \\approx 4{,}04$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2",
+          "intitule": "Plus petite valeur de $n$ telle que $v_n > 8{,}5$.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "9 - 6\\mathrm{e}^{-0{,}19(n-1)} > 8{,}5 \\iff \\mathrm{e}^{-0{,}19(n-1)} < \\frac{1}{12} \\iff -0{,}19(n-1) < -\\ln 12 \\iff n > 1 + \\frac{\\ln 12}{0{,}19}" },
+            { "type": "texte", "texte": "On a utilisé la stricte croissance de $\\ln$ (et $\\ln\\frac{1}{12} = -\\ln 12$), puis divisé par $-0{,}19 < 0$. Or $1 + \\frac{\\ln 12}{0{,}19} \\approx 14{,}08$. Vérification : $v_{14} \\approx 8{,}49$ et $v_{15} \\approx 8{,}58$." },
+            { "type": "reponse", "texte": "La plus petite valeur est $n = 15$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie C : comparaison des deux modèles" },
+        {
+          "type": "question",
+          "numero": "C.1",
+          "intitule": "Quel modèle conduit à modifier le site le plus tôt (plus de 850 questions) ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "850 questions correspondent à $8{,}5$ centaines. D'après A.4, le premier modèle dépasse ce seuil au 9e mois ; d'après B.2, le second au 15e mois." },
+            { "type": "reponse", "texte": "C'est le premier modèle, $(u_n)$, qui conduit à modifier le site le plus tôt (dès le 9e mois)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.2",
+          "intitule": "Quel modèle donne le plus grand nombre de questions à long terme ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Comme $-1 < 0{,}9 < 1$, $\\lim_{n \\to +\\infty} 0{,}9^n = 0$, donc $\\lim u_n = 13$." },
+            { "type": "texte", "texte": "Comme $\\lim_{n \\to +\\infty} -0{,}19(n-1) = -\\infty$ et $\\lim_{X \\to -\\infty} \\mathrm{e}^X = 0$, par composition $\\lim \\mathrm{e}^{-0{,}19(n-1)} = 0$, donc $\\lim v_n = 9$." },
+            { "type": "reponse", "texte": "À long terme, le premier modèle prévoit environ 1 300 questions contre 900 pour le second : c'est le premier modèle qui donne le plus de questions." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Géométrie dans l'espace : cube $ABCDEFGH$ d'arête 1, droite $(EC)$ orthogonale au plan $(GBD)$, distance d'un point à un plan et volume du tétraèdre $EGBD$.",
+      "points": 5,
+      "minutes": 60,
+      "enBref": [
+        "$E(0\\,;0\\,;1)$, $C(1\\,;1\\,;0)$, $G(1\\,;1\\,;1)$ ; $(EC)$ : $x = t$, $y = t$, $z = 1 - t$.",
+        "$\\overrightarrow{EC}(1\\,;1\\,;-1)$ est orthogonal à deux vecteurs non colinéaires du plan : c'est un vecteur normal de $(GBD)$, d'équation $x + y - z - 1 = 0$.",
+        "$I\\left(\\frac{2}{3}\\,;\\frac{2}{3}\\,;\\frac{1}{3}\\right)$ est le projeté orthogonal de $E$, donc la distance de $E$ au plan est $EI = \\frac{2\\sqrt{3}}{3}$.",
+        "$BDG$ est équilatéral de côté $\\sqrt{2}$, d'aire $\\frac{\\sqrt{3}}{2}$, et le volume vaut $\\frac{1}{3} \\times \\frac{\\sqrt{3}}{2} \\times \\frac{2\\sqrt{3}}{3} = \\frac{1}{3}$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Coordonnées de $E$, $C$ et $G$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Dans le repère $(A\\,;\\overrightarrow{AB}, \\overrightarrow{AD}, \\overrightarrow{AE})$ : $\\overrightarrow{AE} = \\overrightarrow{AE}$, $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$ et $\\overrightarrow{AG} = \\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$." },
+            { "type": "reponse", "texte": "$E(0\\,;0\\,;1)$, $C(1\\,;1\\,;0)$, $G(1\\,;1\\,;1)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Représentation paramétrique de $(EC)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "La droite passe par $E(0\\,;0\\,;1)$ et a pour vecteur directeur $\\overrightarrow{EC}(1 - 0\\,;1 - 0\\,;0 - 1) = (1\\,;1\\,;-1)$." },
+            { "type": "formule", "tex": "(EC) : \\begin{cases} x = t \\\\ y = t \\\\ z = 1 - t \\end{cases} \\quad t \\in \\mathbb{R}" },
+            { "type": "reponse", "texte": "$(EC)$ : $x = t$, $y = t$, $z = 1 - t$, avec $t \\in \\mathbb{R}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Démontrer que $(EC)$ est orthogonale au plan $(GBD)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Avec $B(1\\,;0\\,;0)$ et $D(0\\,;1\\,;0)$ : $\\overrightarrow{BD}(-1\\,;1\\,;0)$ et $\\overrightarrow{BG}(0\\,;1\\,;1)$. Ces deux vecteurs ne sont pas colinéaires (la première coordonnée de l'un est nulle, pas celle de l'autre) : ils dirigent le plan $(GBD)$." },
+            { "type": "texte", "texte": "Le repère est orthonormé, donc :" },
+            { "type": "formule", "tex": "\\overrightarrow{EC} \\cdot \\overrightarrow{BD} = -1 + 1 + 0 = 0 \\qquad \\overrightarrow{EC} \\cdot \\overrightarrow{BG} = 0 + 1 - 1 = 0" },
+            { "type": "reponse", "texte": "$\\overrightarrow{EC}$ est orthogonal à deux vecteurs non colinéaires du plan $(GBD)$ : la droite $(EC)$ est orthogonale au plan $(GBD)$." },
+            { "type": "piege", "texte": "Un seul produit scalaire nul ne suffit pas, et deux vecteurs colinéaires non plus : il faut DEUX vecteurs NON COLINÉAIRES du plan. Dis-le explicitement." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.a",
+          "intitule": "Justifier que $x + y - z - 1 = 0$ est une équation de $(GBD)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "D'après la question 3, $\\overrightarrow{EC}(1\\,;1\\,;-1)$ est normal au plan : une équation de $(GBD)$ est de la forme $x + y - z + d = 0$. Le plan passe par $B(1\\,;0\\,;0)$ : $1 + 0 - 0 + d = 0$, donc $d = -1$." },
+            { "type": "texte", "texte": "Contrôle : $D$ donne $0 + 1 - 0 - 1 = 0$ et $G$ donne $1 + 1 - 1 - 1 = 0$." },
+            { "type": "reponse", "texte": "Une équation cartésienne du plan $(GBD)$ est $x + y - z - 1 = 0$." },
+            { "type": "astuce", "texte": "Autre méthode acceptée : vérifier que les coordonnées de $G$, $B$ et $D$ (trois points non alignés) satisfont l'équation. Elle suffit, à condition de dire que les trois points ne sont pas alignés." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.b",
+          "intitule": "Montrer que $I\\left(\\frac{2}{3}\\,;\\frac{2}{3}\\,;\\frac{1}{3}\\right)$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "$I$ est sur $(EC)$ : ses coordonnées sont $(t\\,;t\\,;1-t)$ pour un certain réel $t$. $I$ est dans le plan :" },
+            { "type": "formule", "tex": "t + t - (1 - t) - 1 = 0 \\iff 3t - 2 = 0 \\iff t = \\frac{2}{3}" },
+            { "type": "reponse", "texte": "Avec $t = \\frac{2}{3}$ : $I\\left(\\frac{2}{3}\\,;\\frac{2}{3}\\,;\\frac{1}{3}\\right)$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4.c",
+          "intitule": "En déduire que la distance de $E$ au plan $(GBD)$ vaut $\\frac{2\\sqrt{3}}{3}$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "La droite $(EC)$ passe par $E$ et est orthogonale au plan ; elle le coupe en $I$. Donc $I$ est le projeté orthogonal de $E$ sur $(GBD)$, et la distance cherchée est $EI$." },
+            { "type": "formule", "tex": "\\overrightarrow{EI}\\left(\\tfrac{2}{3}\\,;\\tfrac{2}{3}\\,;-\\tfrac{2}{3}\\right) \\qquad EI = \\sqrt{\\tfrac{4}{9} + \\tfrac{4}{9} + \\tfrac{4}{9}} = \\sqrt{\\tfrac{12}{9}} = \\frac{2\\sqrt{3}}{3}" },
+            { "type": "reponse", "texte": "La distance du point $E$ au plan $(GBD)$ est $EI = \\dfrac{2\\sqrt{3}}{3}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.a",
+          "intitule": "Démontrer que $BDG$ est équilatéral.",
+          "points": null,
+          "blocs": [
+            { "type": "formule", "tex": "BD = \\sqrt{(-1)^2 + 1^2 + 0^2} = \\sqrt{2} \\quad BG = \\sqrt{0^2 + 1^2 + 1^2} = \\sqrt{2} \\quad DG = \\sqrt{1^2 + 0^2 + 1^2} = \\sqrt{2}" },
+            { "type": "reponse", "texte": "$BD = BG = DG = \\sqrt{2}$ (ce sont trois diagonales de faces du cube) : le triangle $BDG$ est équilatéral." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.b",
+          "intitule": "Calculer l'aire du triangle $BDG$ (avec $J$ milieu de $[BD]$).",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Dans un triangle équilatéral, la médiane issue de $G$ est aussi la hauteur : $(GJ) \\perp (BD)$. $J\\left(\\frac{1}{2}\\,;\\frac{1}{2}\\,;0\\right)$, donc $\\overrightarrow{JG}\\left(\\frac{1}{2}\\,;\\frac{1}{2}\\,;1\\right)$ et :" },
+            { "type": "formule", "tex": "GJ = \\sqrt{\\tfrac{1}{4} + \\tfrac{1}{4} + 1} = \\sqrt{\\tfrac{3}{2}} = \\frac{\\sqrt{6}}{2} \\qquad \\mathcal{A} = \\frac{BD \\times GJ}{2} = \\frac{\\sqrt{2} \\times \\frac{\\sqrt{6}}{2}}{2} = \\frac{\\sqrt{12}}{4} = \\frac{\\sqrt{3}}{2}" },
+            { "type": "reponse", "texte": "L'aire du triangle $BDG$ est $\\dfrac{\\sqrt{3}}{2}$." },
+            { "type": "astuce", "texte": "Contrôle express : l'aire d'un triangle équilatéral de côté $a$ vaut $\\frac{\\sqrt{3}}{4}a^2$ ; avec $a = \\sqrt{2}$, on retrouve $\\frac{\\sqrt{3}}{4} \\times 2 = \\frac{\\sqrt{3}}{2}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Justifier que le volume du tétraèdre $EGBD$ vaut $\\frac{1}{3}$.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "On prend pour base le triangle $BDG$ ; la hauteur relative à cette base est la distance de $E$ au plan $(GBD)$, soit $EI = \\frac{2\\sqrt{3}}{3}$ (question 4.c)." },
+            { "type": "formule", "tex": "V = \\frac{1}{3} \\times \\frac{\\sqrt{3}}{2} \\times \\frac{2\\sqrt{3}}{3} = \\frac{1}{3} \\times \\frac{2 \\times 3}{6} = \\frac{1}{3}" },
+            { "type": "reponse", "texte": "Le volume du tétraèdre $EGBD$ est $\\dfrac{1}{3}$." },
+            { "type": "attendu", "texte": "Le correcteur veut voir le lien entre les questions : la base est le triangle de la question 5 et la hauteur est la distance de la question 4.c, parce que $(EI)$ est orthogonale au plan de la base." }
+          ]
+        }
+      ]
+    }
+  ]
+}

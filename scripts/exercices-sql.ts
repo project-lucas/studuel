@@ -2,8 +2,13 @@
 // LE CONTENU DU CAHIER D'EXERCICES → une migration SQL.
 //
 //   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts \
-//     --num 375 --niveau 6e [--matieres maths,svt] [--suffixe 1] \
+//     --num 375 --niveau 6e [--matieres maths,svt] [--fichiers maths.2,svt] [--suffixe 1] \
 //     > supabase/contenu/375_exercices_6e.sql
+//
+// `--matieres` garde tous les lots d'une matière ; `--fichiers` désigne des lots
+// un par un (une matière trop lourde pour un seul fichier se coupe ainsi). Un
+// fichier reste sous ~300 Ko : la table temporaire empêche de le découper
+// ensuite (_ASSOCIE/decoupe-migrations.mjs ne sait couper que des VALUES).
 //
 // Lit contenu/exercices/<niveau>/<matière>.json, RELIT tout (lib/exercices/
 // valider.ts — une seule faute et rien n'est écrit), compile chaque exercice
@@ -31,9 +36,10 @@ function option(nom: string): string | undefined {
 const num = option('num')
 const niveau = option('niveau')
 const matieres = option('matieres')?.split(',').filter(Boolean)
+const fichiers = option('fichiers')?.split(',').filter(Boolean)
 const suffixe = option('suffixe')
 if (!num || !/^\d{3}$/.test(num) || !niveau) {
-  console.error('Usage : exercices-sql.ts --num NNN --niveau 6e [--matieres a,b] [--suffixe 1]')
+  console.error('Usage : exercices-sql.ts --num NNN --niveau 6e [--matieres a,b] [--fichiers a.2,b] [--suffixe 1]')
   process.exit(1)
 }
 
@@ -44,7 +50,14 @@ const noms = fs
   .map((f) => f.replace(/\.json$/, ''))
   // `maths.json`, `maths.2.json`… : la matière est ce qui précède le premier point.
   .filter((m) => !matieres || matieres.includes(m.split('.')[0]))
+  .filter((m) => !fichiers || fichiers.includes(m))
   .sort()
+
+const introuvables = (fichiers ?? []).filter((f) => !noms.includes(f))
+if (introuvables.length) {
+  console.error(`Lot(s) introuvable(s) dans contenu/exercices/${niveau} : ${introuvables.join(', ')}`)
+  process.exit(1)
+}
 
 const DELIM = '$ex$'
 const lignes: string[] = []
@@ -81,13 +94,13 @@ if (fautes > 0) {
   process.exit(1)
 }
 
-const nomFichier = `${num}_exercices_${niveau}${suffixe ? `_${suffixe}` : ''}.sql`
+const nomFichier = `${num}_exercices_${niveau.toLowerCase()}${suffixe ? `_${suffixe}` : ''}.sql`
 const sql = `-- =============================================================================
 -- ${num} — LE CAHIER D'EXERCICES DE ${niveau.toUpperCase()}${suffixe ? ` (partie ${suffixe})` : ''}
 --
 -- FICHIER GÉNÉRÉ par scripts/exercices-sql.ts depuis contenu/exercices/${niveau}/ :
 -- ne pas l'éditer à la main, corriger le JSON et régénérer :
---   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num ${num} --niveau ${niveau}${matieres ? ` --matieres ${matieres.join(',')}` : ''}${suffixe ? ` --suffixe ${suffixe}` : ''} > supabase/contenu/${nomFichier}
+--   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num ${num} --niveau ${niveau}${matieres ? ` --matieres ${matieres.join(',')}` : ''}${fichiers ? ` --fichiers ${fichiers.join(',')}` : ''}${suffixe ? ` --suffixe ${suffixe}` : ''} > supabase/contenu/${nomFichier}
 --
 -- ${lignes.length} exercices écrits et relus : pour chaque chapitre, trois exercices faits
 -- comme une page de manuel (★ facile, ★★ moyen, ★★★ plus corsé), avec leurs

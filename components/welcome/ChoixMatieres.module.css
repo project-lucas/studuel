@@ -1,0 +1,197 @@
+/*
+ * Écran « Quelles matières bosser ? » : une vitrine de tuiles illustrées.
+ * Chaque matière porte SON dessin (la vignette de son dossier dans Réviser),
+ * posé sur un disque crème ; la tuile choisie passe au lavis violet, sa coche
+ * tombe dans l'angle et le dessin se soulève. Transform et opacité seulement.
+ */
+
+.section {
+  padding-top: 18px;
+}
+
+.titreSection {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--onb-ink);
+}
+
+.sousTitre {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--onb-mut);
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 30rem) {
+  .grille {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.tuile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: 118px;
+  padding: 12px 4px 10px;
+  border: 2px solid var(--onb-line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 0 var(--onb-line-d);
+  color: var(--onb-ink);
+  text-align: center;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  animation: entree 0.42s cubic-bezier(0.2, 0.9, 0.3, 1.25) both;
+  animation-delay: calc(var(--rang, 0) * 28ms);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tuile:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--onb-line-d);
+}
+
+.tuile[aria-checked='true'] {
+  border-color: var(--onb-pp);
+  background: var(--onb-pps);
+  box-shadow: 0 4px 0 var(--onb-ppd);
+}
+
+.tuile[aria-checked='true']:active {
+  box-shadow: 0 1px 0 var(--onb-ppd);
+}
+
+.disque {
+  position: relative;
+  display: flex;
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: radial-gradient(circle at 50% 38%, #fbf7ec 0%, #f1e9d4 100%);
+}
+
+.tuile[aria-checked='true'] .disque {
+  background: radial-gradient(circle at 50% 38%, #fff 0%, #e3d6fb 100%);
+}
+
+.dessin {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+
+.tuile[aria-checked='true'] .dessin {
+  transform: translateY(-3px) scale(1.1) rotate(-4deg);
+}
+
+.icone {
+  width: 28px;
+  height: 28px;
+  color: var(--onb-pp);
+}
+
+.nom {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  letter-spacing: -0.01em;
+}
+
+.tuile[aria-checked='true'] .nom {
+  color: var(--onb-ppd);
+}
+
+.coche {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid #fff;
+  border-radius: 999px;
+  background: var(--onb-pp);
+  color: #fff;
+  box-shadow: 0 2px 0 var(--onb-ppd);
+  opacity: 0;
+  transform: scale(0.3) rotate(-30deg);
+  transition:
+    opacity 0.15s ease,
+    transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.6);
+}
+
+.tuile[aria-checked='true'] .coche {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Barre du compte : « 12 matières validées ». */
+.barre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.compte {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid var(--onb-line);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--onb-ink);
+}
+
+.compte b {
+  color: var(--onb-pp);
+}
+
+@keyframes entree {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tuile,
+  .dessin,
+  .coche {
+    animation: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,3658 @@
+{
+ "niveau": "Tle",
+ "matiere": "svt",
+ "exercices": [
+  {
+   "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le maïs avant le maïs",
+   "competence": "analyser-document",
+   "situation": "Dans un musée d’agronomie, Noor compare l’épi de téosinte, l’ancêtre sauvage du maïs, à un épi de maïs d’aujourd’hui. Les valeurs sont arrondies.",
+   "documents": [
+    {
+     "id": "teo",
+     "type": "tableau",
+     "titre": "Téosinte et maïs",
+     "colonnes": [
+      "Caractère",
+      "Téosinte sauvage",
+      "Maïs actuel"
+     ],
+     "lignes": [
+      [
+       "Grains par épi (environ)",
+       10,
+       500
+      ],
+      [
+       "Longueur de l’épi (cm)",
+       3,
+       18
+      ],
+      [
+       "Enveloppe des grains",
+       "coque dure",
+       "bractées, grains tendres"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "teo",
+     "enonce": "Touche le nombre de grains par épi du maïs actuel.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne « Grains par épi », puis la colonne du maïs.",
+     "explication": "Le maïs actuel porte environ **500 grains** par épi, contre une dizaine pour la téosinte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le maïs actuel porte-t-il plus de grains par épi que la téosinte ?",
+     "reponse": 50,
+     "unite": "fois",
+     "aide": "Divise 500 par 10.",
+     "explication": "500 ÷ 10 = **50 fois** plus de grains."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a opéré cette transformation au fil des millénaires ?",
+     "options": [
+      "Des cultivateurs qui ressemaient, sans projet précis, les grains des épis qui leur convenaient",
+      "Des chercheurs modernes qui ont croisé la téosinte avec d’autres plantes en laboratoire",
+      "Le climat, qui a fait grossir les grains de téosinte dans la nature en quelques années",
+      "Des oiseaux granivores qui ont rapporté dans les champs les plus gros grains trouvés"
+     ],
+     "reponse": 0,
+     "aide": "Il n’y avait ni laboratoire ni projet de « créer » le maïs.",
+     "explication": "Le geste de **ressemer** les récoltes a suffi à enclencher une **sélection artificielle**, involontaire, sur des milliers d’années."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’épi qui garde ses grains",
+   "competence": "experimenter",
+   "situation": "Dans une simulation simplifiée, on récolte chaque année des céréales sauvages à la date de la moisson, puis on ressème seulement les grains récoltés. Au départ, 1 % des épis gardent leurs grains.",
+   "documents": [
+    {
+     "id": "protocole",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le protocole",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les épis « cassants » laissent tomber leurs grains au sol avant la moisson. Les épis « non cassants » les gardent jusqu’à la récolte.",
+      "Chaque année, le cultivateur ne ressème que les grains qu’il a récoltés."
+     ]
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Épis qui gardent leurs grains",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Épis non cassants",
+       "valeurs": [
+        1,
+        5,
+        18,
+        55,
+        85,
+        96
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Épis non cassants",
+      "unite": "en % des épis",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Années de ressemis"
+     },
+     "valeurs": false,
+     "source": "Simulation simplifiée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche l’année où les épis non cassants deviennent majoritaires.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la première année où la courbe dépasse 50 %.",
+     "explication": "La **3e année**, la courbe atteint 55 % : c’est la première fois qu’elle dépasse 50 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage d’épis non cassants lit-on à la 2e année ?",
+     "reponse": 18,
+     "unite": "%",
+     "tolerance": 3,
+     "aide": "Lis la valeur de la courbe à la graduation 2.",
+     "explication": "À la 2e année, il y a environ **18 %** d’épis non cassants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la part des épis non cassants augmente-t-elle d’année en année ?",
+     "options": [
+      "Les grains des épis cassants tombent avant la moisson et ne sont donc pas ressemés",
+      "Les grains des épis cassants sont détruits à chaque fois par la moisson elle-même",
+      "Les épis non cassants produisent beaucoup plus de grains que les épis cassants",
+      "Le cultivateur choisit volontairement chaque année les épis qui gardent leurs grains"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui arrive aux grains d’un épi cassant avant la moisson.",
+     "explication": "Les épis cassants perdent leurs grains **avant** la récolte : leur descendance n’est pas ressemée. La récolte trie sans que personne le décide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la conséquence pour la plante devenue majoritairement non cassante ?",
+     "options": [
+      "Elle ne disperse plus ses grains seule et dépend des humains pour se reproduire",
+      "Elle se dissémine encore plus loin qu’avant grâce à des épis plus solides et plus gros",
+      "Elle cesse de produire des grains, ce qui oblige les humains à la ressemer chaque année",
+      "Elle devient plus résistante aux parasites qu’elle ne l’était dans l’état sauvage"
+     ],
+     "reponse": 0,
+     "aide": "Un épi qui garde ses grains peut-il les semer au sol tout seul ?",
+     "explication": "La plante est **incapable de se disséminer seule** : elle dépend désormais de nous, comme nous d’elle."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Semer ou racheter ?",
+   "competence": "resoudre",
+   "situation": "Hugo cultive 10 hectares de maïs. Il hésite entre racheter des semences hybrides F1 (150 € par hectare) et ressemer une partie de sa propre récolte de F1 (20 € par hectare). Il vend sa récolte 20 € le quintal (q).",
+   "documents": [
+    {
+     "id": "rdt",
+     "type": "tableau",
+     "titre": "Rendement et homogénéité",
+     "colonnes": [
+      "Semences",
+      "Rendement (q/ha)",
+      "Écart de hauteur (cm)"
+     ],
+     "lignes": [
+      [
+       "Lignée pure A",
+       40,
+       "± 3"
+      ],
+      [
+       "Lignée pure B",
+       45,
+       "± 3"
+      ],
+      [
+       "Hybride F1 (A × B)",
+       80,
+       "± 3"
+      ],
+      [
+       "Graines ressemées (F2)",
+       55,
+       "± 25"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "prix",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les coûts",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Semences F1 achetées : 150 € par hectare.",
+      "Graines ressemées issues de sa récolte : 20 € par hectare.",
+      "Prix de vente du maïs : 20 € le quintal."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rdt",
+     "enonce": "Touche le rendement de l’hybride F1.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne de l’hybride F1 (A × B).",
+     "explication": "L’hybride F1 atteint **80 q/ha**, bien plus que ses deux lignées parentales (40 et 45) : c’est la **vigueur hybride**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la marge par hectare avec les semences F1 (vente moins achat des semences) ?",
+     "reponse": 1450,
+     "unite": "€",
+     "aide": "Vente : 80 × 20. Puis retire 150.",
+     "explication": "80 × 20 − 150 = 1 600 − 150 = **1 450 €** par hectare."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la marge par hectare avec les graines ressemées (F2) ?",
+     "reponse": 1080,
+     "unite": "€",
+     "aide": "Vente : 55 × 20. Puis retire 20.",
+     "explication": "55 × 20 − 20 = 1 100 − 20 = **1 080 €** par hectare."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les plantes issues de graines ressemées sont-elles moins productives et plus hétérogènes ?",
+     "options": [
+      "À la méiose, les allèles des deux lignées se redistribuent : la F2 perd l’homogénéité et la vigueur de la F1",
+      "Les graines ressemées sont abîmées par la récolte et germent donc moins bien que les semences achetées",
+      "Les allèles de la F1 mutent tous en même temps quand la graine est conservée d’une année sur l’autre",
+      "La F1 est stérile : seules quelques plantes résistent, et elles produisent des graines très variables"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’écart de hauteur de la F2 : ± 25 cm contre ± 3 cm pour la F1.",
+     "explication": "La F1 est très homogène car tous ses individus ont le même génotype hétérozygote. Les graines F2 sont issues de la **méiose** de ces individus : les combinaisons d’allèles varient, donc **vigueur et homogénéité baissent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "789d2182-c10b-5a7e-934d-052cba8bbaac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où va l’énergie du Soleil ?",
+   "competence": "observer-schema",
+   "situation": "Chaque mètre carré de la Terre reçoit en moyenne 340 W/m² du Soleil. Une partie est renvoyée directement vers l’espace : c’est l’albédo, d’environ 30 %.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "schema",
+     "titre": "Le bilan radiatif moyen",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 300,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Reçu du Soleil : 340 W/m²",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "recu",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        64
+       ],
+       "a": [
+        90,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        64
+       ],
+       "a": [
+        250,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 100,
+       "l": 140,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Renvoyé : 30 %",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "renvoye",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 100,
+       "l": 140,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Absorbé : ?",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "absorbe",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        150
+       ],
+       "a": [
+        250,
+        196
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 178,
+       "texte": "chauffe",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 196,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Surface terrestre",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "surface",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 180,
+       "texte": "vers l’espace",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la case de l’énergie renvoyée directement vers l’espace.",
+     "reponse": [
+      "renvoye"
+     ],
+     "aide": "Cherche le mot « Renvoyé » et le pourcentage de l’albédo.",
+     "explication": "L’énergie **renvoyée** par l’albédo (30 %) repart vers l’espace sans chauffer la surface."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance par mètre carré est renvoyée vers l’espace ?",
+     "reponse": 102,
+     "unite": "W/m²",
+     "aide": "30 % de 340 : multiplie 340 par 0,30.",
+     "explication": "0,30 × 340 = **102 W/m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance par mètre carré est absorbée ?",
+     "reponse": 238,
+     "unite": "W/m²",
+     "aide": "Retire la puissance renvoyée à la puissance reçue.",
+     "explication": "340 − 102 = **238 W/m²** sont absorbés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient cette énergie absorbée ?",
+     "options": [
+      "Elle est réémise par la Terre, en grande partie sous forme d’infrarouge",
+      "Elle est entièrement renvoyée vers l’espace par l’albédo, sans chauffer le sol",
+      "Elle est stockée pour toujours dans les océans sans jamais être réémise",
+      "Elle est intégralement convertie en énergie chimique par la photosynthèse"
+     ],
+     "reponse": 0,
+     "aide": "Un sol chaud émet un rayonnement : lequel ?",
+     "explication": "La surface chauffée **réémet de l’infrarouge**, que les gaz à effet de serre absorbent en partie : c’est ce qui fixe la température d’équilibre."
+    }
+   ]
+  },
+  {
+   "chapitre": "789d2182-c10b-5a7e-934d-052cba8bbaac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un petit coup de pouce orbital",
+   "competence": "raisonner",
+   "situation": "Les paramètres de l’orbite terrestre varient de façon périodique. Pourtant, leur effet direct sur la température est faible, alors que les glaciations sont spectaculaires.",
+   "documents": [
+    {
+     "id": "param",
+     "type": "tableau",
+     "titre": "Les paramètres de Milankovitch",
+     "colonnes": [
+      "Paramètre",
+      "Ce qui varie",
+      "Période (ans)"
+     ],
+     "lignes": [
+      [
+       "Excentricité",
+       "Forme de l’orbite",
+       "environ 100 000"
+      ],
+      [
+       "Obliquité",
+       "Inclinaison de l’axe",
+       "environ 41 000"
+      ],
+      [
+       "Précession",
+       "Orientation de l’axe",
+       "environ 21 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "effets",
+     "type": "tableau",
+     "titre": "Effet direct et effet observé",
+     "colonnes": [
+      "Grandeur",
+      "Variation de température moyenne"
+     ],
+     "lignes": [
+      [
+       "Effet direct des paramètres orbitaux, sans rétroaction",
+       "environ 0,5 °C"
+      ],
+      [
+       "Écart observé entre période glaciaire et interglaciaire",
+       "environ 5 °C"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de cycles complets d’obliquité se déroulent en 123 000 ans ?",
+     "reponse": 3,
+     "unite": "cycles",
+     "aide": "Divise 123 000 par 41 000.",
+     "explication": "123 000 ÷ 41 000 = **3 cycles**."
+    },
+    {
+     "type": "zone",
+     "document": "param",
+     "enonce": "Touche la période du paramètre qui varie le plus vite.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La plus rapide est celle dont la période est la plus courte.",
+     "explication": "La **précession** se répète tous les 21 000 ans environ : c’est la période la plus courte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur l’écart observé est-il supérieur à l’effet direct ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise 5 °C par 0,5 °C.",
+     "explication": "5 ÷ 0,5 = **10** : l’effet observé est dix fois plus grand que l’effet direct."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de cet écart ?",
+     "options": [
+      "Des rétroactions amplifient l’effet direct, faible, des paramètres orbitaux",
+      "Les paramètres orbitaux modifient beaucoup la quantité totale d’énergie reçue",
+      "Les paramètres orbitaux n’ont finalement aucun rôle dans les cycles glaciaires",
+      "L’écart vient d’un changement de la constante solaire et non de l’orbite de la Terre"
+     ],
+     "reponse": 0,
+     "aide": "Si l’effet direct suffisait, l’écart observé serait proche de 0,5 °C.",
+     "explication": "Les paramètres **déclenchent**, les **rétroactions amplifient** : albédo de la glace, CO₂ dissous dans l’océan, vapeur d’eau."
+    }
+   ]
+  },
+  {
+   "chapitre": "789d2182-c10b-5a7e-934d-052cba8bbaac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La glace qui s’auto-entretient",
+   "competence": "raisonner",
+   "situation": "Sur une région de latitude élevée, chaque mètre carré reçoit 300 W/m² en été. Un refroidissement fait avancer la glace, et la nature de la surface change.",
+   "documents": [
+    {
+     "id": "boucle",
+     "type": "chaine",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Il fait plus froid"
+      },
+      {
+       "id": "b",
+       "texte": "La glace s’étend"
+      },
+      {
+       "id": "c",
+       "texte": "?"
+      },
+      {
+       "id": "d",
+       "texte": "Moins d’énergie solaire absorbée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "a"
+      }
+     ]
+    },
+    {
+     "id": "alb",
+     "type": "tableau",
+     "titre": "Albédo de quelques surfaces",
+     "colonnes": [
+      "Surface",
+      "Albédo"
+     ],
+     "lignes": [
+      [
+       "Océan libre",
+       "6 %"
+      ],
+      [
+       "Forêt",
+       "15 %"
+      ],
+      [
+       "Neige fraîche",
+       "80 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans la boucle ?",
+     "options": [
+      "La surface renvoie davantage d’énergie (albédo plus fort)",
+      "La surface renvoie moins d’énergie (albédo plus faible)",
+      "L’atmosphère absorbe davantage d’infrarouge (effet de serre)",
+      "Les océans libèrent davantage de CO₂ dans l’atmosphère"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le tableau : la glace et la neige sont-elles sombres ou claires ?",
+     "explication": "La glace remplace des surfaces sombres par des surfaces claires : l’**albédo augmente**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance par mètre carré l’océan libre absorbe-t-il ?",
+     "reponse": 282,
+     "unite": "W/m²",
+     "aide": "Il absorbe la part qu’il ne renvoie pas : 100 % − 6 %.",
+     "explication": "Il absorbe 94 % de 300 : 0,94 × 300 = **282 W/m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance par mètre carré la neige fraîche absorbe-t-elle ?",
+     "reponse": 60,
+     "unite": "W/m²",
+     "aide": "Elle absorbe 100 % − 80 % = 20 % de 300.",
+     "explication": "0,20 × 300 = **60 W/m²**."
+    },
+    {
+     "type": "zone",
+     "document": "alb",
+     "enonce": "Touche la surface qui, en remplaçant l’océan libre, renforce le plus le refroidissement.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la surface qui renvoie le plus d’énergie.",
+     "explication": "La **neige fraîche** renvoie 80 % de l’énergie : son extension diminue fortement l’énergie absorbée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand la glace fond, que se passe-t-il dans cette boucle ?",
+     "options": [
+      "Elle agit dans l’autre sens : l’albédo baisse et le réchauffement est amplifié",
+      "Elle s’arrête : l’albédo ne joue aucun rôle dans un réchauffement du climat",
+      "Elle s’inverse en rétroaction négative qui freine tout de suite le réchauffement",
+      "Elle ne concerne que la banquise, sans conséquence pour les continents"
+     ],
+     "reponse": 0,
+     "aide": "La rétroaction de l’albédo amplifie dans les deux sens.",
+     "explication": "Moins de glace, moins d’albédo, plus d’énergie absorbée : la rétroaction **amplifie** aussi le réchauffement."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4a20c7-1bcd-575a-b1d6-cbdaea881613",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Plus on creuse, plus on recule",
+   "competence": "lire-tableau",
+   "situation": "Dans un forage en Antarctique, on prélève une carotte de glace. La neige tombée chaque année s’est tassée en couches. Le tableau donne l’âge de la glace selon la profondeur (valeurs simplifiées).",
+   "documents": [
+    {
+     "id": "carotte",
+     "type": "tableau",
+     "titre": "Âge de la glace selon la profondeur",
+     "colonnes": [
+      "Profondeur (m)",
+      "Âge de la glace (milliers d’années)"
+     ],
+     "lignes": [
+      [
+       "500",
+       20
+      ],
+      [
+       "1 000",
+       60
+      ],
+      [
+       "2 000",
+       200
+      ],
+      [
+       "3 000",
+       600
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carotte",
+     "enonce": "Touche l’âge de la glace située à 1 000 m de profondeur.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne de 1 000 m.",
+     "explication": "À 1 000 m, la glace a environ **60 000 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la glace à 2 000 m est-elle plus ancienne que celle à 500 m ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise 200 par 20.",
+     "explication": "200 ÷ 20 = **10 fois** plus ancienne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la glace la plus profonde est-elle la plus ancienne ?",
+     "options": [
+      "Chaque année, une nouvelle couche de neige se dépose au-dessus des précédentes",
+      "La glace descend plus vite dans le sol quand elle devient plus froide avec l’âge",
+      "Les glaciers s’enfoncent dans la roche un peu plus chaque année à cause de leur poids",
+      "Les couches anciennes se forment en profondeur et remontent ensuite vers la surface"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la neige qui tombe chaque hiver sur celle de l’hiver précédent.",
+     "explication": "Les couches s’empilent : la neige la plus récente est **en haut**, la plus ancienne **en bas**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les bulles d’air prélevées à 3 000 m renseignent sur l’atmosphère…",
+     "options": [
+      "d’il y a environ 600 000 ans",
+      "d’il y a environ 60 000 ans",
+      "d’il y a environ 6 000 ans",
+      "d’il y a environ 6 millions d’années"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’âge de la glace à cette profondeur.",
+     "explication": "Les bulles sont de l’air **piégé à l’époque** où la neige s’est déposée : celles de 3 000 m ont environ **600 000 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4a20c7-1bcd-575a-b1d6-cbdaea881613",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’oxygène des coquilles",
+   "competence": "analyser-document",
+   "situation": "Des foraminifères, petits organismes marins, fabriquent leur coquille calcaire avec l’oxygène de l’eau où ils vivent. Une carotte de sédiments marins permet de suivre leur δ18O (proportion d’isotope lourd) sur 120 000 ans.",
+   "documents": [
+    {
+     "id": "principe",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le principe",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "L’isotope léger de l’oxygène s’évapore plus facilement que l’isotope lourd. En période glaciaire, il est piégé dans les glaces des continents : l’océan s’enrichit en isotope lourd.",
+      "Le δ18O des coquilles dépend aussi de la température de l’eau."
+     ]
+    },
+    {
+     "id": "d18o",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "δ18O des foraminifères",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "δ18O",
+       "valeurs": [
+        3.4,
+        5,
+        4.4,
+        4.2,
+        4.4,
+        4,
+        3.3
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "δ18O",
+      "unite": "en ‰",
+      "min": 3,
+      "max": 5.5,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Il y a … milliers d’années"
+     },
+     "valeurs": false,
+     "source": "Données simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d18o",
+     "enonce": "Touche le moment où l’océan est le plus enrichi en isotope lourd.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la valeur la plus élevée de la courbe.",
+     "explication": "Le maximum de δ18O (5,0 ‰) se situe il y a **20 000 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de δ18O entre le maximum et le minimum de la courbe ?",
+     "reponse": 1.7,
+     "unite": "‰",
+     "tolerance": 0.1,
+     "aide": "Maximum : 5,0. Minimum : 3,3.",
+     "explication": "5,0 − 3,3 = **1,7 ‰**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire des glaces continentales il y a 20 000 ans ?",
+     "options": [
+      "Elles étaient beaucoup plus volumineuses qu’aujourd’hui",
+      "Elles étaient à peu près aussi étendues qu’aujourd’hui",
+      "Elles n’existaient pas encore sur les continents",
+      "Elles étaient moins étendues qu’aujourd’hui"
+     ],
+     "reponse": 0,
+     "aide": "Quand le δ18O de l’océan est fort, où est passé l’isotope léger ?",
+     "explication": "Le δ18O est à son maximum : l’isotope léger est **piégé dans de grandes calottes** — la période est glaciaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le δ18O des coquilles ne donne-t-il pas à lui seul la température de l’eau ?",
+     "options": [
+      "Il dépend à la fois de la température de l’eau et du volume des glaces",
+      "Il dépend seulement de la profondeur à laquelle vivait chaque foraminifère",
+      "Il dépend seulement de la salinité de l’eau au moment de la mort de l’organisme",
+      "Il ne dépend d’aucun paramètre du milieu et reste constant au cours du temps"
+     ],
+     "reponse": 0,
+     "aide": "Relis le texte : deux causes font varier le δ18O.",
+     "explication": "Deux facteurs jouent : la **température** et le **volume des glaces**. C’est ce qui rend l’interprétation délicate."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4a20c7-1bcd-575a-b1d6-cbdaea881613",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Croiser une carotte et un modèle",
+   "competence": "raisonner",
+   "situation": "Une carotte de glace donne la température (écart avec la valeur préindustrielle) et le CO₂ de l’air piégé. Deux modèles climatiques ont été testés sur ce passé.",
+   "documents": [
+    {
+     "id": "glace",
+     "type": "tableau",
+     "titre": "Carotte de glace",
+     "colonnes": [
+      "Il y a (milliers d’années)",
+      "Température (°C)",
+      "CO₂ (ppm)"
+     ],
+     "lignes": [
+      [
+       "20",
+       "−9",
+       190
+      ],
+      [
+       "40",
+       "−6",
+       205
+      ],
+      [
+       "60",
+       "−5",
+       210
+      ],
+      [
+       "80",
+       "−6",
+       215
+      ],
+      [
+       "100",
+       "−4",
+       240
+      ],
+      [
+       "120",
+       "+1",
+       275
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées"
+    },
+    {
+     "id": "modeles",
+     "type": "tableau",
+     "titre": "Test de deux modèles",
+     "colonnes": [
+      "Modèle",
+      "Écart moyen avec les températures du passé (°C)"
+     ],
+     "lignes": [
+      [
+       "Modèle X",
+       "0,4"
+      ],
+      [
+       "Modèle Y",
+       "3,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de ppm le CO₂ varie-t-il entre sa valeur la plus basse et sa valeur la plus haute ?",
+     "reponse": 85,
+     "unite": "ppm",
+     "aide": "Plus haute : 275. Plus basse : 190.",
+     "explication": "275 − 190 = **85 ppm**."
+    },
+    {
+     "type": "zone",
+     "document": "glace",
+     "enonce": "Touche la température la plus basse du tableau.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la valeur négative la plus grande en valeur absolue.",
+     "explication": "La température la plus basse est **−9 °C**, il y a 20 000 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau ?",
+     "options": [
+      "Le CO₂ et la température varient de concert sur cette période",
+      "Le CO₂ reste constant alors que la température varie beaucoup",
+      "La température varie alors que le CO₂ est indépendante",
+      "Le CO₂ baisse quand la température augmente, et inversement"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne température et la colonne CO₂ ligne par ligne.",
+     "explication": "Quand la température monte, le CO₂ monte aussi : **ils varient de concert**. Seule la carotte donne les deux au même instant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel modèle mérite le plus de crédit pour projeter l’avenir ?",
+     "options": [
+      "Le modèle X, qui reproduit bien les températures du passé reconstitué",
+      "Le modèle Y, qui s’écarte franchement des températures du passé reconstitué",
+      "Aucun, car on ne peut pas tester un modèle avant que l’avenir soit arrivé",
+      "Les deux autant, puisqu’ils n’ont pas été testés sur les mêmes données"
+     ],
+     "reponse": 0,
+     "aide": "Un modèle fiable retrouve les climats du passé.",
+     "explication": "Un modèle est testé sur le passé : **X** ne s’écarte que de 0,4 °C, **Y** de 3,5 °C. X inspire davantage confiance."
+    }
+   ]
+  },
+  {
+   "chapitre": "77c0fbf9-31dc-51dc-96f8-8e1d6ce68840",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le CO₂ qui monte",
+   "competence": "lire-graphique",
+   "situation": "Depuis 1850, des mesures et des bulles d’air de glaces polaires permettent de suivre la teneur de l’atmosphère en CO₂. Avant l’ère industrielle, elle valait environ 280 ppm.",
+   "documents": [
+    {
+     "id": "co2",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "CO₂ atmosphérique",
+     "categories": [
+      "1850",
+      "1900",
+      "1950",
+      "2000",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "CO₂",
+       "valeurs": [
+        285,
+        296,
+        311,
+        369,
+        414
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "CO₂",
+      "unite": "en ppm",
+      "min": 250,
+      "max": 450,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co2",
+     "enonce": "Touche la date à partir de laquelle la teneur dépasse 400 ppm.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la première valeur supérieure à 400.",
+     "explication": "En **2020**, la teneur atteint 414 ppm, au-dessus de 400."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de ppm la teneur a-t-elle augmenté entre 1850 et 2020 ?",
+     "reponse": 129,
+     "unite": "ppm",
+     "aide": "Retire 285 à 414.",
+     "explication": "414 − 285 = **129 ppm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de ppm a-t-elle augmenté entre 1950 et 2000 ?",
+     "reponse": 58,
+     "unite": "ppm",
+     "aide": "Retire 311 à 369.",
+     "explication": "369 − 311 = **58 ppm** en 50 ans — et 45 ppm en seulement 20 ans de 2000 à 2020 : la hausse s’accélère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la cause principale de cette hausse ?",
+     "options": [
+      "La combustion de carbone fossile (charbon, pétrole, gaz) par les activités humaines",
+      "Une forte augmentation du volcanisme mondial depuis le milieu du XIXᵉ siècle",
+      "Une hausse de la quantité d’énergie envoyée par le Soleil depuis 1850",
+      "Un ralentissement de la photosynthèse à cause du froid sur les continents"
+     ],
+     "reponse": 0,
+     "aide": "Pense au carbone enfoui que nous brûlons en quelques siècles.",
+     "explication": "Nous rebrûlons en quelques siècles un carbone **enfoui depuis des millions d’années** : c’est la cause principale."
+    }
+   ]
+  },
+  {
+   "chapitre": "77c0fbf9-31dc-51dc-96f8-8e1d6ce68840",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un niveau de mer, plusieurs causes",
+   "competence": "analyser-document",
+   "situation": "Le niveau moyen des mers monte. Le tableau donne la contribution moyenne de chaque cause. Un expérimentateur modélise la fonte de la glace avec deux verres d’eau.",
+   "documents": [
+    {
+     "id": "niveau",
+     "type": "tableau",
+     "titre": "Causes de la montée du niveau marin",
+     "colonnes": [
+      "Cause",
+      "Contribution (mm/an)"
+     ],
+     "lignes": [
+      [
+       "Dilatation thermique de l’eau",
+       "1,3"
+      ],
+      [
+       "Glaciers de montagne",
+       "0,6"
+      ],
+      [
+       "Calotte du Groenland",
+       "0,7"
+      ],
+      [
+       "Calotte de l’Antarctique",
+       "0,3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, causes mineures omises"
+    },
+    {
+     "id": "verres",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’expérience des deux verres",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Deux verres sont remplis d’eau à ras bord. Dans le verre A, un glaçon flotte. Dans le verre B, un glaçon repose sur un petit support posé au fond, et dépasse de l’eau : il modélise une calotte posée sur un continent.",
+      "On laisse fondre les glaçons."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des contributions listées ?",
+     "reponse": 2.9,
+     "unite": "mm/an",
+     "aide": "Additionne les quatre valeurs.",
+     "explication": "1,3 + 0,6 + 0,7 + 0,3 = **2,9 mm/an**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de cette somme la dilatation thermique représente-t-elle, arrondie à l’unité ?",
+     "reponse": 45,
+     "unite": "%",
+     "aide": "Divise 1,3 par 2,9, puis multiplie par 100.",
+     "explication": "1,3 ÷ 2,9 ≈ 0,448, soit **45 %** environ."
+    },
+    {
+     "type": "zone",
+     "document": "niveau",
+     "enonce": "Touche la cause de fonte de glace continentale la plus importante.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare les lignes qui parlent de glaciers et de calottes.",
+     "explication": "La **calotte du Groenland** contribue pour 0,7 mm/an, plus que les autres glaces."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel verre l’eau déborde-t-elle quand le glaçon fond ?",
+     "options": [
+      "Dans le verre B, dont la glace posée sur un support s’ajoute à l’eau",
+      "Dans le verre A, dont le glaçon flottant ajoute un volume en fondant",
+      "Dans les deux verres, puisque toute glace qui fond fait monter le niveau",
+      "Dans aucun des deux verres, car la fonte ne change jamais le volume total"
+     ],
+     "reponse": 0,
+     "aide": "Un glaçon qui flotte déplace déjà un volume d’eau égal à son propre volume fondu.",
+     "explication": "Le glaçon flottant **déplace déjà** son volume : en fondant, le niveau ne change pas. La glace posée sur le support **ajoute** de l’eau : le verre B déborde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure pour le niveau des mers ?",
+     "options": [
+      "La fonte de la banquise flottante ne le fait pas monter, celle des calottes continentales si",
+      "La fonte de la banquise le fait monter autant que celle des calottes continentales",
+      "Seule la dilatation thermique compte, car aucune fonte de glace n’a d’effet sur le niveau",
+      "Seule la fonte des glaciers de montagne compte, celle des calottes n’y contribuant pas"
+     ],
+     "reponse": 0,
+     "aide": "Fais le lien entre le verre A et la banquise, le verre B et le Groenland.",
+     "explication": "Verre A = **banquise** (aucun effet), verre B = **glace continentale** (hausse du niveau)."
+    }
+   ]
+  },
+  {
+   "chapitre": "77c0fbf9-31dc-51dc-96f8-8e1d6ce68840",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une commune face au climat",
+   "competence": "argumenter",
+   "situation": "La commune imaginée de Belmont-sur-Mer étudie le climat de 2100. Le conseil municipal compare les scénarios du GIEC et six mesures possibles.",
+   "documents": [
+    {
+     "id": "scen",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Réchauffement projeté en 2100",
+     "categories": [
+      "Sobre",
+      "Intermédiaire",
+      "Fortement émetteur"
+     ],
+     "series": [
+      {
+       "nom": "Réchauffement",
+       "valeurs": [
+        1.5,
+        2.5,
+        4.5
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Réchauffement",
+      "unite": "°C par rapport à 1850-1900",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Scénario d’émissions"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies, d’après les scénarios du GIEC"
+    },
+    {
+     "id": "mesures",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les six mesures étudiées",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "1. Isoler les bâtiments publics.",
+      "2. Construire une digue devant la plage.",
+      "3. Végétaliser la cour de l’école.",
+      "4. Acheter de l’électricité décarbonée.",
+      "5. Planter des espèces adaptées à la chaleur et à la sécheresse.",
+      "6. Organiser du covoiturage pour les trajets domicile-travail."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel écart de réchauffement sépare les scénarios extrêmes ?",
+     "reponse": 3,
+     "unite": "°C",
+     "aide": "Retire 1,5 à 4,5.",
+     "explication": "4,5 − 1,5 = **3 °C** d’écart en 2100."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’où vient cet écart entre les trajectoires ?",
+     "options": [
+      "Des décisions d’émissions prises maintenant, pas d’une incertitude scientifique",
+      "D’une incertitude scientifique sur le fonctionnement de l’effet de serre lui-même",
+      "D’une variation du rayonnement solaire que personne ne sait prévoir pour 2100",
+      "D’un choix de la méthode de mesure de la température, qui change selon les pays"
+     ],
+     "reponse": 0,
+     "aide": "Un scénario décrit un niveau d’émissions, pas une erreur de mesure.",
+     "explication": "Les trajectoires dépendent des **décisions d’émissions** : le GIEC évalue ce que chaque choix implique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque mesure : atténuation (réduire les émissions) ou adaptation (limiter les dégâts).",
+     "categories": [
+      "Atténuation",
+      "Adaptation"
+     ],
+     "items": [
+      [
+       "Mesure 1 : isoler les bâtiments",
+       0
+      ],
+      [
+       "Mesure 2 : construire une digue",
+       1
+      ],
+      [
+       "Mesure 3 : végétaliser la cour de l’école",
+       1
+      ],
+      [
+       "Mesure 4 : électricité décarbonée",
+       0
+      ],
+      [
+       "Mesure 5 : espèces adaptées à la chaleur",
+       1
+      ],
+      [
+       "Mesure 6 : covoiturage",
+       0
+      ]
+     ],
+     "aide": "L’atténuation agit sur la cause, l’adaptation sur les conséquences.",
+     "explication": "**Atténuation** : isolation, électricité décarbonée, covoiturage. **Adaptation** : digue, végétalisation, espèces adaptées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le conseil propose de planter des arbres pour absorber le CO₂ et de ne rien changer d’autre. Que lui répondre ?",
+     "options": [
+      "Les puits de carbone ne remplacent pas la baisse des émissions, et un puits saturé ne stocke plus",
+      "Les arbres absorbent déjà la totalité des émissions, donc il n’y a rien d’autre à faire",
+      "Les arbres réchauffent toujours plus le climat qu’ils ne le refroidissent, donc c’est inutile",
+      "Les puits de carbone ne servent à rien, car l’océan absorbe déjà tout le CO₂ émis"
+     ],
+     "reponse": 0,
+     "aide": "Forêts, sols et océan absorbent environ la moitié des émissions actuelles.",
+     "explication": "Les puits absorbent **environ la moitié** des émissions : les renforcer aide, mais **ne remplace pas** la baisse des émissions."
+    }
+   ]
+  },
+  {
+   "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’ADN d’une cellule qui se divise",
+   "competence": "lire-graphique",
+   "situation": "Une cellule de peau se prépare à se diviser. On mesure sa quantité d’ADN à quatre moments du cycle cellulaire (unités arbitraires).",
+   "documents": [
+    {
+     "id": "adn",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Quantité d’ADN par cellule",
+     "categories": [
+      "G1",
+      "S (milieu)",
+      "G2",
+      "Cellule fille"
+     ],
+     "series": [
+      {
+       "nom": "Quantité d’ADN",
+       "valeurs": [
+        2,
+        3,
+        4,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité d’ADN",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Moment du cycle"
+     },
+     "valeurs": true,
+     "source": "Valeurs simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "adn",
+     "enonce": "Touche le moment où la cellule contient le plus d’ADN.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "En **G2**, la cellule contient 4 unités d’ADN : le double de G1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il entre G1 et G2 ?",
+     "options": [
+      "L’ADN est répliqué : chaque chromosome passe à deux chromatides sœurs identiques",
+      "La cellule se divise en deux cellules, chacune avec deux fois moins d’ADN qu’avant",
+      "Les chromosomes homologues échangent des portions d’ADN par crossing-over",
+      "De l’ADN nouveau, différent de l’ADN d’origine, est fabriqué pour diversifier la cellule"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la quantité d’ADN : elle passe de 2 à 4.",
+     "explication": "L’ADN a été **répliqué** (phase S) : chaque chromosome est devenu deux chromatides sœurs **identiques**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ADN lit-on dans une cellule fille ?",
+     "reponse": 2,
+     "unite": "unités",
+     "aide": "Regarde la dernière barre.",
+     "explication": "Une cellule fille revient à **2 unités**, comme la cellule de départ."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les cellules filles reviennent-elles à la quantité de départ ?",
+     "options": [
+      "À la mitose, les deux chromatides sœurs de chaque chromosome se séparent dans les deux cellules filles",
+      "La moitié de l’ADN est détruite à la fin de la mitose pour éviter qu’il y en ait trop",
+      "Chaque cellule fille synthétise seulement la moitié de son ADN avant de se diviser à nouveau",
+      "Les chromosomes sont coupés en deux au milieu puis répartis au hasard entre les deux cellules"
+     ],
+     "reponse": 0,
+     "aide": "Les deux chromatides sœurs sont identiques entre elles.",
+     "explication": "Chaque cellule fille reçoit **une chromatide de chaque chromosome** : elles sont identiques entre elles et à la cellule mère."
+    }
+   ]
+  },
+  {
+   "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un brin ancien, un brin neuf",
+   "competence": "experimenter",
+   "situation": "Des bactéries cultivées dans un milieu à azote lourd (¹⁵N) sont transférées dans un milieu à azote léger (¹⁴N). Après chaque génération, on sépare leur ADN selon sa densité.",
+   "documents": [
+    {
+     "id": "meselson",
+     "type": "tableau",
+     "titre": "Résultats de la séparation de l’ADN",
+     "colonnes": [
+      "Génération",
+      "ADN lourd (%)",
+      "ADN intermédiaire (%)",
+      "ADN léger (%)"
+     ],
+     "lignes": [
+      [
+       "Départ (milieu lourd)",
+       100,
+       0,
+       0
+      ],
+      [
+       "1 génération en milieu léger",
+       0,
+       100,
+       0
+      ],
+      [
+       "2 générations en milieu léger",
+       0,
+       50,
+       50
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après l’expérience de Meselson et Stahl (1958), résultats simplifiés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meselson",
+     "enonce": "Touche le pourcentage d’ADN intermédiaire après 2 générations en milieu léger.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne des 2 générations et la colonne « intermédiaire ».",
+     "explication": "Après 2 générations, **50 %** de l’ADN est intermédiaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si la réplication était conservative (une molécule entièrement ancienne, une entièrement neuve), que verrait-on après 1 génération ?",
+     "options": [
+      "50 % d’ADN lourd et 50 % d’ADN léger, sans ADN intermédiaire",
+      "100 % d’ADN intermédiaire, dont chaque molécule a un brin lourd et un brin léger",
+      "100 % d’ADN lourd, car aucune molécule neuve ne serait encore apparue",
+      "100 % d’ADN léger, car les molécules anciennes auraient toutes été détruites"
+     ],
+     "reponse": 0,
+     "aide": "Une molécule « conservée » reste entièrement lourde, l’autre est entièrement légère.",
+     "explication": "Une réplication conservative donnerait **50 % lourd + 50 % léger**. On observe 100 % d’intermédiaire : elle est exclue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle interprétation est compatible avec tous les résultats ?",
+     "options": [
+      "Chaque molécule fille garde un brin ancien et reçoit un brin neuf : la réplication est semi-conservative",
+      "Chaque molécule fille est entièrement neuve et l’ancienne est détruite à chaque génération",
+      "Les deux brins d’une molécule fille sont mélangés au hasard entre l’ancien et le neuf",
+      "L’ADN lourd se transforme en ADN léger sans qu’il y ait la moindre réplication de l’ADN"
+     ],
+     "reponse": 0,
+     "aide": "À la génération 1, toutes les molécules sont intermédiaires : que contient une molécule intermédiaire ?",
+     "explication": "Une molécule **intermédiaire** possède un brin lourd (ancien) et un brin léger (neuf) : c’est la **réplication semi-conservative**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage d’ADN intermédiaire attend-on après 3 générations en milieu léger ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "À chaque génération, les 2 brins lourds d’origine restent chacun dans une molécule. Combien de molécules au total à la génération 3 ?",
+     "explication": "À la génération 3, il y a 8 molécules, dont seulement 2 gardent un brin lourd : 2 ÷ 8 = **25 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un clone dans le corps",
+   "competence": "analyser-document",
+   "situation": "Chez un patient, on séquence des cellules d’une tumeur de la peau et des cellules de peau saine. Quatre mutations sont recherchées.",
+   "documents": [
+    {
+     "id": "seq",
+     "type": "tableau",
+     "titre": "Mutations recherchées",
+     "colonnes": [
+      "Mutation",
+      "Cellules tumorales (%)",
+      "Cellules saines (%)"
+     ],
+     "lignes": [
+      [
+       "Mutation A",
+       100,
+       0
+      ],
+      [
+       "Mutation B",
+       85,
+       0
+      ],
+      [
+       "Mutation C",
+       40,
+       0
+      ],
+      [
+       "Mutation D",
+       5,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "gene",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ce que l’on sait de la mutation A",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "La mutation A touche un gène qui freine normalement la division cellulaire. Les mutations B, C et D touchent d’autres gènes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "seq",
+     "enonce": "Touche la mutation présente dans toutes les cellules tumorales.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche la ligne à 100 %.",
+     "explication": "La **mutation A** est présente dans 100 % des cellules tumorales."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces mutations de la plus ancienne à la plus récente.",
+     "items": [
+      "Mutation A",
+      "Mutation B",
+      "Mutation C",
+      "Mutation D"
+     ],
+     "aide": "Une mutation nouvelle n’est portée que par les descendants de la cellule où elle est apparue.",
+     "explication": "Plus une mutation est **répandue** dans la tumeur, plus elle est **ancienne** : A (100 %), B (85 %), C (40 %), puis D (5 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 200 cellules tumorales, combien portent la mutation C ?",
+     "reponse": 80,
+     "unite": "cellules",
+     "aide": "Calcule 40 % de 200.",
+     "explication": "0,40 × 200 = **80 cellules**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi aucune de ces mutations n’est-elle présente dans les cellules saines ?",
+     "options": [
+      "Elles sont apparues dans une cellule somatique et n’ont été transmises qu’à ses cellules filles",
+      "Elles sont apparues dans toutes les cellules du corps, puis ont été réparées dans la peau saine",
+      "Elles sont héritées d’un seul parent et ne s’expriment que dans les cellules de la tumeur",
+      "Elles ne se produisent que dans les cellules sexuelles et restent donc absentes de la peau"
+     ],
+     "reponse": 0,
+     "aide": "Une mutation se transmet aux cellules issues de la cellule mutée.",
+     "explication": "Une mutation **somatique** est transmise aux **cellules filles** de la cellule mutée seulement : le reste du corps ne la porte pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces mutations peuvent-elles être transmises aux enfants du patient ?",
+     "options": [
+      "Non : elles sont somatiques, donc absentes de ses gamètes",
+      "Oui : toute mutation présente dans une tumeur est transmise à la descendance",
+      "Oui : elles sont transmises aux enfants lors de la fécondation, comme un caractère héréditaire",
+      "Oui, mais seulement la mutation A, car elle est présente dans toutes les cellules tumorales"
+     ],
+     "reponse": 0,
+     "aide": "Les enfants viennent d’un gamète : la tumeur de la peau en contient-elle ?",
+     "explication": "Les mutations somatiques ne touchent **pas les gamètes** : elles ne sont pas transmises à la descendance."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de gamètes différents ?",
+   "competence": "modeliser",
+   "situation": "Dans une espèce fictive, on calcule le nombre de gamètes différents que le seul brassage interchromosomique peut produire, selon le nombre de paires de chromosomes.",
+   "documents": [
+    {
+     "id": "paires",
+     "type": "tableau",
+     "titre": "Brassage interchromosomique",
+     "colonnes": [
+      "Paires de chromosomes",
+      "Gamètes différents possibles"
+     ],
+     "lignes": [
+      [
+       "1",
+       2
+      ],
+      [
+       "2",
+       4
+      ],
+      [
+       "3",
+       8
+      ],
+      [
+       "4",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chaque paire se répartit indépendamment des autres"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paires",
+     "enonce": "Touche le nombre de gamètes différents possibles pour 3 paires.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « 3 ».",
+     "explication": "Avec 3 paires : 2 × 2 × 2 = **8 gamètes** différents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de gamètes différents avec 4 paires de chromosomes ?",
+     "reponse": 16,
+     "unite": "gamètes",
+     "aide": "À chaque paire, le nombre double.",
+     "explication": "2⁴ = **16 gamètes** différents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une espèce a 2n = 10 chromosomes. Combien de gamètes différents par brassage interchromosomique seul ?",
+     "reponse": 32,
+     "unite": "gamètes",
+     "aide": "2n = 10, donc 5 paires. Calcule 2 à la puissance 5.",
+     "explication": "5 paires : 2⁵ = **32 gamètes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce nombre sous-estime-t-il la diversité réelle des gamètes ?",
+     "options": [
+      "Les crossing-over de la prophase I s’ajoutent au brassage interchromosomique",
+      "Les mutations de l’ADN s’ajoutent à chaque méiose et changent la forme des gamètes",
+      "Le nombre de chromosomes change à chaque méiose et augmente le nombre de paires",
+      "La fécondation ajoute une paire de chromosomes supplémentaire à chaque gamète"
+     ],
+     "reponse": 0,
+     "aide": "Il existe un second brassage dans la méiose, avant l’anaphase I.",
+     "explication": "Le **brassage intrachromosomique** (crossing-over en prophase I) s’ajoute et rend les possibilités innombrables."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des mouches qui trichent",
+   "competence": "lire-tableau",
+   "situation": "Chez la drosophile, deux gènes sont étudiés : la couleur du corps (gris ou noir) et la forme des ailes (normales ou vestigiales). On croise une femelle hétérozygote pour les deux gènes avec un mâle noir aux ailes vestigiales, double récessif : c’est un croisement-test.",
+   "documents": [
+    {
+     "id": "morgan",
+     "type": "tableau",
+     "titre": "Descendants du croisement-test",
+     "colonnes": [
+      "Phénotype",
+      "Nombre de descendants"
+     ],
+     "lignes": [
+      [
+       "Gris, ailes normales",
+       965
+      ],
+      [
+       "Noir, ailes vestigiales",
+       944
+      ],
+      [
+       "Gris, ailes vestigiales",
+       206
+      ],
+      [
+       "Noir, ailes normales",
+       185
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après les résultats historiques de Morgan"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "morgan",
+     "enonce": "Touche le phénotype le moins fréquent.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche le plus petit effectif.",
+     "explication": "Le phénotype « noir, ailes normales » est le moins fréquent, avec **185** descendants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de descendants au total ?",
+     "reponse": 2300,
+     "unite": "descendants",
+     "aide": "Additionne les quatre effectifs.",
+     "explication": "965 + 944 + 206 + 185 = **2 300**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de descendants sont recombinés, arrondi à l’unité ?",
+     "reponse": 17,
+     "unite": "%",
+     "aide": "Les recombinés sont les deux phénotypes minoritaires. Additionne-les, divise par le total.",
+     "explication": "(206 + 185) ÷ 2 300 = 391 ÷ 2 300 ≈ **17 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur la position des deux gènes ?",
+     "options": [
+      "Ils sont liés : proches sur un même chromosome, avec peu de recombinés",
+      "Ils sont indépendants : les quatre phénotypes seraient en proportions égales",
+      "Ils sont situés sur des chromosomes différents, donc sans aucun recombiné possible",
+      "Ils sont éloignés sur le même chromosome, avec autant de recombinés que de parentaux"
+     ],
+     "reponse": 0,
+     "aide": "Quatre phénotypes en proportions égales (25 % chacun) indiqueraient des gènes indépendants.",
+     "explication": "Deux phénotypes **parentaux majoritaires** et deux **recombinés minoritaires** : les gènes sont **liés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel événement de la méiose explique les phénotypes recombinés ?",
+     "options": [
+      "Un crossing-over entre les deux gènes, en prophase de la division I",
+      "Un brassage interchromosomique, à l’anaphase de la division II",
+      "Une mutation qui se produit dans 17 % des gamètes lors de la réplication",
+      "Une non-disjonction qui touche 17 % des paires de chromosomes homologues"
+     ],
+     "reponse": 0,
+     "aide": "Les recombinés résultent d’un échange entre chromosomes homologues.",
+     "explication": "Un **crossing-over** en prophase I échange des portions entre homologues : il sépare des allèles normalement liés."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand la méiose dérape",
+   "competence": "raisonner",
+   "situation": "Lors de la méiose d’une cellule humaine (2n = 46), la paire de chromosomes 21 se répartit anormalement : c’est une non-disjonction. Deux tableaux comparent les quatre gamètes selon qu’elle a lieu en division I ou en division II.",
+   "documents": [
+    {
+     "id": "div1",
+     "type": "tableau",
+     "titre": "Non-disjonction en division I",
+     "colonnes": [
+      "Gamète",
+      "Chromosomes",
+      "Exemplaires du 21"
+     ],
+     "lignes": [
+      [
+       "Gamète 1",
+       24,
+       2
+      ],
+      [
+       "Gamète 2",
+       24,
+       2
+      ],
+      [
+       "Gamète 3",
+       22,
+       0
+      ],
+      [
+       "Gamète 4",
+       22,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Schéma simplifié"
+    },
+    {
+     "id": "div2",
+     "type": "tableau",
+     "titre": "Non-disjonction en division II",
+     "colonnes": [
+      "Gamète",
+      "Chromosomes",
+      "Exemplaires du 21"
+     ],
+     "lignes": [
+      [
+       "Gamète 1",
+       24,
+       2
+      ],
+      [
+       "Gamète 2",
+       22,
+       0
+      ],
+      [
+       "Gamète 3",
+       23,
+       1
+      ],
+      [
+       "Gamète 4",
+       23,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Schéma simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "div1",
+     "enonce": "En division I, touche les deux gamètes qui donneraient une trisomie 21 après fécondation par un gamète normal.",
+     "reponse": [
+      "r0c0",
+      "r1c0"
+     ],
+     "multiple": true,
+     "aide": "Il faut trois exemplaires du chromosome 21 dans le zygote : donc deux dans le gamète anormal.",
+     "explication": "Les gamètes 1 et 2 portent **deux exemplaires** du 21 : avec un gamète normal, le zygote en a trois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes le zygote compte-t-il si le gamète 1 est fécondé par un gamète normal à 23 chromosomes ?",
+     "reponse": 47,
+     "unite": "chromosomes",
+     "aide": "Additionne 24 et 23.",
+     "explication": "24 + 23 = **47 chromosomes** : c’est la trisomie 21."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En division II, combien de gamètes sur quatre sont normaux (23 chromosomes, un seul 21) ?",
+     "reponse": 2,
+     "unite": "gamètes",
+     "aide": "Compte les gamètes à 23 chromosomes dans le second tableau.",
+     "explication": "Les gamètes 3 et 4 sont normaux : **2 gamètes** sur 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi aucun gamète n’est-il normal quand l’accident a lieu en division I ?",
+     "options": [
+      "La paire entière de chromosomes homologues part dans deux gamètes sur quatre, les deux autres n’en ont aucun",
+      "Les quatre gamètes reçoivent les deux chromosomes homologues, donc tous sont anormaux",
+      "Les chromatides sœurs se séparent normalement, mais chaque gamète reçoit une chromatide de moins",
+      "Les chromosomes homologues se séparent normalement, mais chaque gamète reçoit un chromosome de plus"
+     ],
+     "reponse": 0,
+     "aide": "La division I sépare les chromosomes homologues : que devient la paire qui ne se sépare pas ?",
+     "explication": "La paire reste groupée et va **entière** dans une cellule fille : deux gamètes en ont deux exemplaires, deux n’en ont aucun."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre observations de terrain",
+   "competence": "analyser-document",
+   "situation": "Une naturaliste note quatre observations dans son carnet. Elle se demande, pour chacune, si le génome des êtres vivants concernés change ou non.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le carnet de la naturaliste",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "1. Sur les racines d’un trèfle, des nodosités abritent des bactéries [[b|Rhizobium]] qui fixent le diazote de l’air.",
+      "2. Dans un hôpital, des bactéries résistantes à un antibiotique transmettent leur gène de résistance à d’autres bactéries par contact.",
+      "3. Dans une forêt, un champignon s’associe aux racines d’un hêtre : c’est une mycorhize.",
+      "4. Dans un groupe de chimpanzés, les jeunes apprennent à pêcher les termites en regardant leur mère."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le nom de la bactérie qui fixe le diazote de l’air.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche le mot en italique dans la première observation.",
+     "explication": "La bactérie des nodosités est **Rhizobium**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation selon que le génome des êtres vivants concernés change ou non.",
+     "categories": [
+      "Le génome change",
+      "Le génome ne change pas"
+     ],
+     "items": [
+      [
+       "Des bactéries échangent un gène de résistance à un antibiotique",
+       0
+      ],
+      [
+       "Un hybride stérile double son stock chromosomique et devient le blé tendre",
+       0
+      ],
+      [
+       "Un gène d’origine virale, la syncytine, s’insère dans les génomes de mammifères",
+       0
+      ],
+      [
+       "Un trèfle abrite des bactéries Rhizobium dans ses racines",
+       1
+      ],
+      [
+       "Un champignon s’associe aux racines d’un hêtre",
+       1
+      ],
+      [
+       "Des chimpanzés apprennent à pêcher les termites",
+       1
+      ]
+     ],
+     "aide": "Une symbiose et une tradition ne modifient pas l’ADN.",
+     "explication": "Transferts horizontaux et hybridations-polyploïdisations **modifient le génome** ; symbioses et transmission culturelle **non**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces observations illustre un transfert horizontal de gènes ?",
+     "options": [
+      "L’observation 2, dans l’hôpital",
+      "L’observation 1, sur les racines du trèfle",
+      "L’observation 3, dans la forêt",
+      "L’observation 4, chez les chimpanzés"
+     ],
+     "reponse": 0,
+     "aide": "Un gène passe d’un organisme à un autre sans reproduction.",
+     "explication": "Dans l’observation 2, un **gène** passe d’une bactérie à une autre **sans reproduction** : c’est un transfert horizontal."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du graminée sauvage au blé tendre",
+   "competence": "raisonner",
+   "situation": "Le blé tendre est le produit de deux hybridations suivies de doublements du stock chromosomique. Chaque gamète des graminées sauvages A, B et D porte 7 chromosomes.",
+   "documents": [
+    {
+     "id": "ble",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Deux graminées sauvages A et B (2n = 14 chacune)"
+      },
+      {
+       "id": "n2",
+       "texte": "Hybride AB, stérile"
+      },
+      {
+       "id": "n3",
+       "texte": "Doublement : amidonnier AABB (2n = 28)"
+      },
+      {
+       "id": "n4",
+       "texte": "Croisé avec D (2n = 14) : hybride ABD, stérile"
+      },
+      {
+       "id": "n5",
+       "texte": "Doublement : blé tendre AABBDD"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes l’hybride AB compte-t-il ?",
+     "reponse": 14,
+     "unite": "chromosomes",
+     "aide": "Il reçoit un gamète de A et un gamète de B, de 7 chromosomes chacun.",
+     "explication": "7 + 7 = **14 chromosomes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes l’hybride ABD compte-t-il ?",
+     "reponse": 21,
+     "unite": "chromosomes",
+     "aide": "Un gamète de l’amidonnier (2n = 28) porte 14 chromosomes, un gamète de D en porte 7.",
+     "explication": "14 + 7 = **21 chromosomes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes le blé tendre compte-t-il après doublement ?",
+     "reponse": 42,
+     "unite": "chromosomes",
+     "aide": "Double le nombre de chromosomes de l’hybride ABD.",
+     "explication": "2 × 21 = **42 chromosomes** (AABBDD)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le doublement du stock chromosomique restaure-t-il la fertilité ?",
+     "options": [
+      "Chaque chromosome retrouve un partenaire homologue pour s’apparier à la méiose",
+      "Le doublement supprime tous les chromosomes qui ne se ressemblent pas dans l’hybride",
+      "Le doublement fait disparaître la méiose, remplacée par une division de type mitose",
+      "Les chromosomes en trop sont éliminés, ce qui rend le nombre de chromosomes impair"
+     ],
+     "reponse": 0,
+     "aide": "Dans l’hybride AB, les chromosomes de A et de B n’ont pas de partenaire homologue.",
+     "explication": "Après doublement, chaque chromosome a un **homologue** : la **méiose** redevient possible, et l’hybride devient une espèce nouvelle fertile."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une résistance qui voyage",
+   "competence": "argumenter",
+   "situation": "Des chercheurs étudient la diffusion d’une résistance à un antibiotique. Au laboratoire, ils cultivent une souche sensible (S) avec une souche résistante (R). À l’hôpital, ils suivent la part de bactéries résistantes.",
+   "documents": [
+    {
+     "id": "labo",
+     "type": "tableau",
+     "titre": "Expérience au laboratoire",
+     "colonnes": [
+      "Conditions de culture",
+      "Bactéries S devenues résistantes (pour 1 000)"
+     ],
+     "lignes": [
+      [
+       "Souche S seule",
+       0
+      ],
+      [
+       "Souches S et R mélangées, au contact",
+       40
+      ],
+      [
+       "Souches S et R séparées par un filtre fin",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "hopital",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Bactéries résistantes dans un service",
+     "categories": [
+      "Année 0",
+      "Année 1",
+      "Année 2",
+      "Année 3",
+      "Année 4"
+     ],
+     "series": [
+      {
+       "nom": "Bactéries résistantes",
+       "valeurs": [
+        2,
+        5,
+        12,
+        30,
+        55
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Bactéries résistantes",
+      "unite": "en % des bactéries isolées",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "labo",
+     "enonce": "Touche la condition dans laquelle des bactéries S deviennent résistantes.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la ligne où le résultat n’est pas nul.",
+     "explication": "Seules les souches **mélangées, au contact**, donnent des bactéries S devenues résistantes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des bactéries S est devenu résistant au contact de la souche R ?",
+     "reponse": 4,
+     "unite": "%",
+     "aide": "40 pour 1 000 : divise par 1 000 puis multiplie par 100.",
+     "explication": "40 ÷ 1 000 = 0,04, soit **4 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de la condition avec filtre ?",
+     "options": [
+      "Le transfert du gène exige un contact entre les bactéries",
+      "Le gène de résistance passe à travers n’importe quel filtre, même fin",
+      "Les bactéries S deviennent résistantes uniquement par reproduction sexuée",
+      "La résistance apparaît dans la souche S quelle que soit la condition de culture"
+     ],
+     "reponse": 0,
+     "aide": "Le filtre empêche les bactéries de se toucher mais laisse passer le milieu.",
+     "explication": "Le filtre supprime le contact : le transfert ne se fait plus. Le gène passe d’une bactérie à l’autre **sans reproduction**, par **contact**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de bactéries résistantes lit-on à l’année 3 ?",
+     "reponse": 30,
+     "unite": "%",
+     "tolerance": 3,
+     "aide": "Lis la valeur de la courbe à l’année 3.",
+     "explication": "À l’année 3, environ **30 %** des bactéries sont résistantes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels phénomènes expliquent cette hausse rapide dans le service ?",
+     "options": [
+      "Le transfert horizontal du gène entre bactéries et la sélection des résistantes par l’antibiotique",
+      "Une mutation que l’antibiotique provoque dans chaque bactérie qu’il rencontre dans le service",
+      "Une reproduction sexuée fréquente entre bactéries sensibles et bactéries résistantes du service",
+      "Un changement de la forme des bactéries qui les rend plus faciles à détecter par les analyses"
+     ],
+     "reponse": 0,
+     "aide": "Le gène se transmet sans reproduction, et l’antibiotique trie les bactéries.",
+     "explication": "Le gène **se diffuse** par transfert horizontal, et l’antibiotique **sélectionne** les bactéries qui le portent : leur part augmente vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La phalène et les cheminées",
+   "competence": "lire-graphique",
+   "situation": "Dans une région industrielle d’Angleterre, des chercheurs ont suivi la part des phalènes de forme sombre dans la population. Les troncs des bouleaux ont noirci avec la suie des usines, puis des lois contre la pollution ont été adoptées.",
+   "documents": [
+    {
+     "id": "phalene",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Phalènes de forme sombre",
+     "categories": [
+      "1850",
+      "1900",
+      "1950",
+      "1980",
+      "2000"
+     ],
+     "series": [
+      {
+       "nom": "Forme sombre",
+       "valeurs": [
+        2,
+        95,
+        98,
+        40,
+        10
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "titre": "Phalènes sombres",
+      "unite": "en % de la population",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Tendances arrondies, pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phalene",
+     "enonce": "Touche la date où la forme sombre est la plus fréquente.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "En **1950**, la forme sombre atteint environ 98 % de la population."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de formes sombres lit-on en 1980 ?",
+     "reponse": 40,
+     "unite": "%",
+     "tolerance": 4,
+     "aide": "Lis la valeur de la courbe à 1980.",
+     "explication": "En 1980, la forme sombre représente environ **40 %** de la population."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la forme sombre augmente-t-elle entre 1850 et 1900 ?",
+     "options": [
+      "Sur les troncs noircis, elle est moins repérée par les oiseaux, donc plus de phalènes sombres survivent",
+      "La suie des usines provoque chez les phalènes la mutation qui leur donne une couleur sombre",
+      "Les phalènes sombres se reproduisent deux fois plus souvent que les claires, sans raison liée au milieu",
+      "Les phalènes claires quittent la région et sont remplacées par des phalènes sombres venues d’ailleurs"
+     ],
+     "reponse": 0,
+     "aide": "Pense à qui mange les phalènes, et à ce qu’il voit sur un tronc noir.",
+     "explication": "Sur un tronc noir, la forme sombre est **mieux camouflée** : elle survit et se reproduit davantage. C’est la **sélection naturelle**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la forme sombre régresse-t-elle après 1950 ?",
+     "options": [
+      "Les troncs s’éclaircissent avec la baisse de la pollution : la forme claire est de nouveau mieux camouflée",
+      "Les oiseaux perdent la vue des couleurs, si bien que la forme sombre n’est plus un avantage pour les phalènes",
+      "La forme sombre mute en forme claire à chaque génération quand l’air devient plus propre autour des bouleaux",
+      "Les lois interdisent de capturer les phalènes sombres, ce qui fait disparaître le risque lié à la prédation"
+     ],
+     "reponse": 0,
+     "aide": "Le milieu a changé : comment sont les troncs maintenant ?",
+     "explication": "La sélection est relative à un **milieu qui change** : quand les troncs s’éclaircissent, l’avantage s’inverse."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une population conforme ?",
+   "competence": "modeliser",
+   "situation": "On étudie un gène à deux allèles A et a dans deux populations de 500 individus. Le modèle de Hardy-Weinberg sert de référence : il prévoit des fréquences de génotypes p², 2pq et q².",
+   "documents": [
+    {
+     "id": "pop1",
+     "type": "tableau",
+     "titre": "Population 1",
+     "colonnes": [
+      "Génotype",
+      "Effectif observé"
+     ],
+     "lignes": [
+      [
+       "AA",
+       245
+      ],
+      [
+       "Aa",
+       210
+      ],
+      [
+       "aa",
+       45
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "500 individus"
+    },
+    {
+     "id": "pop2",
+     "type": "tableau",
+     "titre": "Population 2",
+     "colonnes": [
+      "Génotype",
+      "Effectif observé"
+     ],
+     "lignes": [
+      [
+       "AA",
+       300
+      ],
+      [
+       "Aa",
+       100
+      ],
+      [
+       "aa",
+       100
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "500 individus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence de l’allèle A dans la population 1 ?",
+     "reponse": 0.7,
+     "aide": "Il y a 1 000 allèles. Compte ceux de A : 2 par AA, 1 par Aa.",
+     "explication": "(2 × 245 + 210) ÷ 1 000 = 700 ÷ 1 000 = **0,7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La population 1 est-elle conforme au modèle de Hardy-Weinberg ?",
+     "options": [
+      "Oui : les effectifs observés (245, 210, 45) sont égaux aux effectifs attendus avec p = 0,7",
+      "Non : il y a beaucoup moins d’hétérozygotes que le modèle ne le prévoit",
+      "Non : il y a beaucoup plus d’individus aa que le modèle ne le prévoit",
+      "On ne peut pas savoir : le modèle ne permet aucune comparaison avec des effectifs observés"
+     ],
+     "reponse": 0,
+     "aide": "Calcule p² × 500, 2pq × 500 et q² × 500 avec p = 0,7 et q = 0,3.",
+     "explication": "Attendus : 0,49 × 500 = 245 ; 0,42 × 500 = 210 ; 0,09 × 500 = 45. **Ils sont identiques** aux effectifs observés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans la population 2, p vaut aussi 0,7. Combien d’hétérozygotes Aa le modèle prévoit-il ?",
+     "reponse": 210,
+     "unite": "individus",
+     "aide": "Calcule 2pq × 500.",
+     "explication": "2 × 0,7 × 0,3 × 500 = 0,42 × 500 = **210 individus**."
+    },
+    {
+     "type": "zone",
+     "document": "pop2",
+     "enonce": "Touche l’effectif observé d’hétérozygotes dans la population 2.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne du génotype Aa.",
+     "explication": "On observe seulement **100** hétérozygotes, contre 210 attendus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure pour la population 2 ?",
+     "options": [
+      "Au moins une hypothèse du modèle n’est pas respectée : une force évolutive ou des croisements non aléatoires",
+      "La population 2 est conforme, car la fréquence de l’allèle A y vaut aussi 0,7 comme dans la population 1",
+      "La population 2 est conforme, car le nombre total d’individus y est aussi de 500 comme dans la population 1",
+      "Le modèle de Hardy-Weinberg est faux, puisqu’il ne décrit pas du tout la population 2"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’effectif observé d’hétérozygotes à l’effectif attendu.",
+     "explication": "Un **déficit d’hétérozygotes** signale que le modèle n’est pas respecté : c’est l’intérêt de cette **référence nulle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le hasard ou le tri ?",
+   "competence": "raisonner",
+   "situation": "Trois populations isolées, sans migration ni mutation, sont suivies pendant 20 générations. On mesure la fréquence d’un même allèle au départ fixée à 50 %.",
+   "documents": [
+    {
+     "id": "allele",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fréquence de l’allèle étudié",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "Population A (20 individus)",
+       "valeurs": [
+        50,
+        65,
+        40,
+        75,
+        100
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Population B (2 000 individus)",
+       "valeurs": [
+        50,
+        51,
+        49,
+        50,
+        51
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Population C (2 000 individus)",
+       "valeurs": [
+        50,
+        58,
+        68,
+        79,
+        88
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence de l’allèle",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Générations"
+     },
+     "valeurs": false,
+     "source": "Simulation simplifiée"
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ce que l’on sait des populations",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Dans les populations A et B, l’allèle n’apporte aucun avantage : les individus qui le portent se reproduisent autant que les autres.",
+      "Dans la population C, l’allèle augmente de 10 % les chances de se reproduire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel écart de fréquence sépare les populations A et B à la génération 20 ?",
+     "reponse": 49,
+     "unite": "points",
+     "tolerance": 3,
+     "aide": "Lis 100 pour A et environ 51 pour B.",
+     "explication": "100 − 51 = **49 points** d’écart."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle population illustre la sélection naturelle ?",
+     "options": [
+      "La population C, où un allèle avantageux se répand de façon régulière",
+      "La population A, où la fréquence fluctue au hasard avant d’atteindre 100 %",
+      "La population B, où la fréquence reste proche de 50 % pendant toute la durée",
+      "Aucune des trois, car la sélection n’agit jamais sur la fréquence d’un allèle"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la population où l’allèle avantageux gagne du terrain de façon régulière.",
+     "explication": "Dans C, l’allèle avantageux augmente **régulièrement** : c’est un tri par la reproduction différentielle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi A varie-t-elle au hasard alors que B reste stable ?",
+     "options": [
+      "La dérive génétique est forte dans une population de petit effectif et faible dans une grande",
+      "Les individus de A se reproduisent moins bien que ceux de B, ce qui fait fluctuer l’allèle",
+      "Les mutations sont plus fréquentes dans une petite population que dans une grande",
+      "La sélection naturelle est plus forte dans B que dans A, et stabilise la fréquence de l’allèle"
+     ],
+     "reponse": 0,
+     "aide": "Compare les effectifs : 20 contre 2 000 individus.",
+     "explication": "Le **hasard de l’échantillonnage des gamètes** pèse lourd dans un petit effectif : c’est la **dérive génétique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans A, l’allèle atteint 100 %. Que peut-on en conclure ?",
+     "options": [
+      "Rien sur un avantage : il n’en apporte aucun et le hasard a suffi à le fixer",
+      "Qu’il est avantageux, puisque sa fréquence a atteint 100 % dans cette population",
+      "Que la population A a subi une forte sélection naturelle en faveur de cet allèle",
+      "Que l’allèle a été transféré depuis la population B par migration d’individus entre les deux"
+     ],
+     "reponse": 0,
+     "aide": "Relis le texte sur les populations A et B.",
+     "explication": "L’allèle est **neutre** dans A : sa fixation résulte de la **dérive**, pas d’un avantage."
+    }
+   ]
+  },
+  {
+   "chapitre": "79ed36ff-e0fc-5c96-aae2-2a70eac8b974",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans le sarcomère",
+   "competence": "observer-schema",
+   "situation": "Au microscope électronique, le muscle strié montre une alternance régulière de filaments. Le schéma représente un sarcomère et le tableau compare sa longueur et celle de ses filaments au repos et contracté.",
+   "documents": [
+    {
+     "id": "sarco",
+     "type": "schema",
+     "titre": "Un sarcomère (schéma simplifié)",
+     "largeur": 340,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 37,
+       "y": 28,
+       "l": 6,
+       "h": 122,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "z1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 297,
+       "y": 28,
+       "l": 6,
+       "h": 122,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "z2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 43,
+       "y": 44,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 43,
+       "y": 79,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 43,
+       "y": 114,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 44,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 79,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a5",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 114,
+       "l": 117,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a6",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 60,
+       "l": 140,
+       "h": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 95,
+       "l": 140,
+       "h": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        172
+       ],
+       "a": [
+        300,
+        172
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 196,
+       "texte": "Un sarcomère",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "long",
+     "type": "tableau",
+     "titre": "Longueurs mesurées",
+     "colonnes": [
+      "État",
+      "Sarcomère (µm)",
+      "Actine (µm)",
+      "Myosine (µm)"
+     ],
+     "lignes": [
+      [
+       "Relâché",
+       "2,4",
+       "1,0",
+       "1,6"
+      ],
+      [
+       "Contracté",
+       "1,8",
+       "1,0",
+       "1,6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sarco",
+     "enonce": "Touche les deux filaments épais de myosine.",
+     "reponse": [
+      "m1",
+      "m2"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux filaments les plus gros, au centre du sarcomère.",
+     "explication": "Les filaments **épais**, au centre, sont faits de **myosine**."
+    },
+    {
+     "type": "zone",
+     "document": "sarco",
+     "enonce": "Touche la strie Z située à gauche.",
+     "reponse": [
+      "z1"
+     ],
+     "aide": "Les stries Z sont les deux limites verticales du sarcomère.",
+     "explication": "Les **stries Z** délimitent le sarcomère : les filaments fins d’actine y sont ancrés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage le sarcomère se raccourcit-il entre l’état relâché et l’état contracté ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Calcule la différence de longueur, puis divise par la longueur au repos.",
+     "explication": "(2,4 − 1,8) ÷ 2,4 = 0,6 ÷ 2,4 = **25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau sur les filaments ?",
+     "options": [
+      "Leur longueur ne change pas : ils glissent les uns sur les autres",
+      "Les filaments d’actine se raccourcissent, ce qui rapproche les deux stries Z",
+      "Les filaments de myosine se raccourcissent, ce qui rapproche les deux stries Z",
+      "Leur longueur double pendant la contraction, ce qui écarte les deux stries Z"
+     ],
+     "reponse": 0,
+     "aide": "Compare les colonnes Actine et Myosine entre les deux lignes.",
+     "explication": "Actine et myosine gardent la **même longueur** : le sarcomère raccourcit parce que les filaments **glissent**, pas parce qu’ils raccourcissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "79ed36ff-e0fc-5c96-aae2-2a70eac8b974",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le muscle après la mort",
+   "competence": "experimenter",
+   "situation": "Des fibres musculaires à la membrane perméabilisée sont placées dans trois solutions. Après la mort d’un animal, le calcium s’échappe du réticulum sarcoplasmique et la régénération de l’ATP s’arrête.",
+   "documents": [
+    {
+     "id": "solutions",
+     "type": "tableau",
+     "titre": "Trois solutions, trois résultats",
+     "colonnes": [
+      "Condition",
+      "Ca²⁺",
+      "ATP",
+      "Observation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "présent",
+       "présent",
+       "la fibre se raccourcit"
+      ],
+      [
+       "2",
+       "absent",
+       "présent",
+       "la fibre reste relâchée"
+      ],
+      [
+       "3",
+       "présent",
+       "absent",
+       "la fibre reste raide, non raccourcie"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats simplifiés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "solutions",
+     "enonce": "Touche la condition qui correspond à un muscle après la mort.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Après la mort, il y a du calcium mais plus d’ATP.",
+     "explication": "Le muscle après la mort a du **Ca²⁺** mais **plus d’ATP** : c’est la condition 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fibre reste-t-elle raide dans la condition 3 ?",
+     "options": [
+      "Sans ATP, les têtes de myosine restent accrochées à l’actine et ne peuvent pas se détacher",
+      "Sans ATP, les filaments d’actine se raccourcissent puis restent figés à cette longueur",
+      "Sans ATP, le calcium quitte la fibre et bloque définitivement les filaments de myosine",
+      "Sans ATP, les stries Z se soudent entre elles et empêchent tout glissement des filaments"
+     ],
+     "reponse": 0,
+     "aide": "Que fait la fixation d’une molécule d’ATP sur une tête de myosine ?",
+     "explication": "La fixation d’ATP **détache** la tête de l’actine. Sans ATP, les têtes restent accrochées : c’est la **rigidité cadavérique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fibre ne se contracte-t-elle pas dans la condition 2 ?",
+     "options": [
+      "Sans Ca²⁺, les sites de fixation de la myosine restent masqués sur l’actine",
+      "Sans Ca²⁺, la myosine ne peut plus être fabriquée par la fibre musculaire",
+      "Sans Ca²⁺, l’ATP ne peut plus être hydrolysé et reste inutilisable dans la fibre",
+      "Sans Ca²⁺, les filaments d’actine s’allongent et ne peuvent plus glisser"
+     ],
+     "reponse": 0,
+     "aide": "Le calcium intervient avant que les têtes de myosine ne se fixent.",
+     "explication": "Le **Ca²⁺** déplace le complexe qui masque les sites de fixation sur l’actine. Sans lui, aucune tête ne peut s’accrocher."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’ensemble du tableau ?",
+     "options": [
+      "La contraction exige à la fois du Ca²⁺ et de l’ATP",
+      "La contraction exige seulement du Ca²⁺, l’ATP étant inutile à la contraction",
+      "La contraction exige seulement de l’ATP, le Ca²⁺ étant inutile à la contraction",
+      "La contraction ne dépend d’aucune de ces deux molécules dans la fibre musculaire"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui manque dans les conditions où la fibre ne se raccourcit pas.",
+     "explication": "Dans les conditions 2 et 3, une des deux molécules manque et la fibre ne se raccourcit pas : il faut **les deux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "79ed36ff-e0fc-5c96-aae2-2a70eac8b974",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Finesse ou puissance ?",
+   "competence": "raisonner",
+   "situation": "Un motoneurone commande toutes les fibres de son unité motrice. Le tableau compare deux muscles ; la courbe montre la force d’un muscle selon la part d’unités motrices recrutées.",
+   "documents": [
+    {
+     "id": "um",
+     "type": "tableau",
+     "titre": "Deux muscles",
+     "colonnes": [
+      "Muscle",
+      "Fibres",
+      "Motoneurones"
+     ],
+     "lignes": [
+      [
+       "Muscle de l’œil",
+       1200,
+       400
+      ],
+      [
+       "Muscle du mollet",
+       1000000,
+       600
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, pour l’exercice"
+    },
+    {
+     "id": "force",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Force et recrutement",
+     "categories": [
+      "0",
+      "25",
+      "50",
+      "75",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "Force du muscle",
+       "valeurs": [
+        0,
+        40,
+        100,
+        180,
+        300
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Force",
+      "unite": "en newtons",
+      "min": 0,
+      "max": 300,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Unités motrices recrutées (%)"
+     },
+     "valeurs": true,
+     "source": "Valeurs simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fibres une unité motrice compte-t-elle en moyenne dans le muscle de l’œil ?",
+     "reponse": 3,
+     "unite": "fibres",
+     "aide": "Divise le nombre de fibres par le nombre de motoneurones.",
+     "explication": "1 200 ÷ 400 = **3 fibres** par unité motrice."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même question pour le muscle du mollet, arrondie à l’unité.",
+     "reponse": 1667,
+     "unite": "fibres",
+     "aide": "Divise 1 000 000 par 600.",
+     "explication": "1 000 000 ÷ 600 ≈ **1 667 fibres** par unité motrice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le muscle de l’œil règle-t-il sa force plus finement que celui du mollet ?",
+     "options": [
+      "Chaque unité motrice recrutée n’y ajoute que quelques fibres, donc une très petite force",
+      "Chaque unité motrice recrutée y ajoute des milliers de fibres, donc une très grande force",
+      "Le muscle de l’œil a beaucoup plus de fibres que le muscle du mollet dans chaque unité",
+      "Le muscle de l’œil n’est commandé par aucun motoneurone, contrairement au muscle du mollet"
+     ],
+     "reponse": 0,
+     "aide": "Compare le nombre de fibres par unité motrice dans les deux muscles.",
+     "explication": "Les **petites unités motrices** de l’œil font varier la force par petits pas : c’est la **finesse**. Celles du mollet font varier la force par grands pas : la **puissance**."
+    },
+    {
+     "type": "zone",
+     "document": "force",
+     "enonce": "Touche la part d’unités motrices recrutées pour laquelle la force vaut 180 N.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la valeur 180 sur la courbe.",
+     "explication": "La force atteint **180 N** quand 75 % des unités motrices sont recrutées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la force augmente-t-elle quand on passe de 50 % à 75 % d’unités motrices recrutées ?",
+     "reponse": 80,
+     "unite": "N",
+     "aide": "Retire 100 à 180.",
+     "explication": "180 − 100 = **80 N**."
+    }
+   ]
+  },
+  {
+   "chapitre": "316c7240-8d0d-5e24-bfb8-0dc25fb1e8ee",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui fournit l’ATP, et quand ?",
+   "competence": "lire-graphique",
+   "situation": "Pendant un effort très intense, la fibre musculaire régénère son ATP par trois voies qui fonctionnent en même temps. La courbe donne la part de chacune selon la durée de l’effort.",
+   "documents": [
+    {
+     "id": "voies",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Part de l’ATP fournie par chaque voie",
+     "categories": [
+      "5",
+      "10",
+      "30",
+      "60",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Phosphocréatine",
+       "valeurs": [
+        80,
+        50,
+        15,
+        5,
+        2
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Fermentation lactique",
+       "valeurs": [
+        15,
+        40,
+        50,
+        35,
+        18
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Respiration cellulaire",
+       "valeurs": [
+        5,
+        10,
+        35,
+        60,
+        80
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de l’ATP",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Durée de l’effort (secondes)"
+     },
+     "valeurs": false,
+     "source": "Données simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voies",
+     "enonce": "Touche le moment où la respiration cellulaire devient la voie qui fournit le plus d’ATP.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la première durée où la courbe de la respiration est au-dessus des deux autres.",
+     "explication": "À **60 secondes**, la respiration cellulaire fournit 60 % de l’ATP, plus que chacune des deux autres voies."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’ATP la fermentation lactique fournit-elle à 30 secondes ?",
+     "reponse": 50,
+     "unite": "%",
+     "tolerance": 3,
+     "aide": "Lis la valeur de la courbe de la fermentation à la graduation 30.",
+     "explication": "À 30 secondes, la fermentation lactique fournit environ **50 %** de l’ATP."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’évolution de la phosphocréatine ?",
+     "options": [
+      "Sa contribution s’effondre en quelques secondes car sa réserve est très vite épuisée",
+      "Sa contribution augmente tout au long de l’effort, car sa réserve se renouvelle vite",
+      "Sa contribution reste stable pendant deux minutes, car sa réserve est très importante",
+      "Sa contribution est nulle au début de l’effort et n’apparaît qu’après une minute"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la valeur de cette courbe à 5 s puis à 60 s.",
+     "explication": "La réserve de phosphocréatine s’épuise en une dizaine de secondes : sa part **s’effondre** très vite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la valeur des trois courbes à 10 secondes ?",
+     "options": [
+      "Les trois voies fonctionnent en même temps, seule leur part relative change",
+      "Une seule voie fonctionne à la fois, les deux autres attendent leur tour",
+      "La respiration cellulaire est la seule voie qui soit active pendant les premières secondes",
+      "La phosphocréatine fournit la totalité de l’ATP pendant les dix premières secondes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si une seule courbe vaut 100 % à 10 s.",
+     "explication": "À 10 s, les **trois voies** contribuent : elles ne se succèdent pas comme des interrupteurs, leur **contribution relative** change."
+    }
+   ]
+  },
+  {
+   "chapitre": "316c7240-8d0d-5e24-bfb8-0dc25fb1e8ee",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux athlètes, deux muscles",
+   "competence": "analyser-document",
+   "situation": "Deux athlètes passent une biopsie musculaire. Par ailleurs, un sportif débutant suit douze semaines d’entraînement en endurance et on suit son VO₂ max, le volume maximal de dioxygène utilisé.",
+   "documents": [
+    {
+     "id": "athletes",
+     "type": "tableau",
+     "titre": "Biopsies musculaires",
+     "colonnes": [
+      "Athlète",
+      "Fibres de type I (%)",
+      "Capillaires par fibre"
+     ],
+     "lignes": [
+      [
+       "Marathonien",
+       75,
+       6
+      ],
+      [
+       "Sprinteur",
+       30,
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "vo2",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "VO₂ max pendant l’entraînement",
+     "categories": [
+      "0",
+      "4",
+      "8",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "VO₂ max",
+       "valeurs": [
+        42,
+        46,
+        50,
+        53
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "VO₂ max",
+      "unite": "mL/min/kg",
+      "min": 30,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Semaines d’entraînement"
+     },
+     "valeurs": true,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "athletes",
+     "enonce": "Touche la part de fibres de type I du marathonien.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne du marathonien et la colonne des fibres de type I.",
+     "explication": "Le marathonien a **75 %** de fibres de type I, lentes et résistantes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de fibres de type II (rapides) le marathonien possède-t-il ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Il n’y a que deux types de fibres : retire 75 à 100.",
+     "explication": "100 − 75 = **25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel athlète résiste le mieux à la fatigue, et pourquoi ?",
+     "options": [
+      "Le marathonien : ses fibres lentes, riches en mitochondries, utilisent la respiration cellulaire",
+      "Le sprinteur : ses fibres rapides, riches en mitochondries, utilisent la respiration cellulaire",
+      "Le marathonien : ses fibres lentes, pauvres en mitochondries, utilisent la fermentation lactique",
+      "Le sprinteur : ses fibres rapides, pauvres en mitochondries, utilisent la phosphocréatine"
+     ],
+     "reponse": 0,
+     "aide": "Les fibres de type I sont les fibres rouges, bien irriguées.",
+     "explication": "Les fibres de **type I** sont riches en **mitochondries** et très vascularisées : elles utilisent la **respiration cellulaire**, qui est durable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le VO₂ max a-t-il augmenté en 12 semaines ?",
+     "reponse": 11,
+     "unite": "mL/min/kg",
+     "aide": "Retire 42 à 53.",
+     "explication": "53 − 42 = **11 mL/min/kg**."
+    }
+   ]
+  },
+  {
+   "chapitre": "316c7240-8d0d-5e24-bfb8-0dc25fb1e8ee",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien de glucose pour un effort ?",
+   "competence": "resoudre",
+   "situation": "Pendant une minute d’effort, une fibre musculaire doit régénérer 960 unités d’ATP. On compare deux voies de production d’ATP à partir du glucose.",
+   "documents": [
+    {
+     "id": "voies",
+     "type": "tableau",
+     "titre": "Deux voies à partir du glucose",
+     "colonnes": [
+      "Voie",
+      "ATP par glucose",
+      "Déchet"
+     ],
+     "lignes": [
+      [
+       "Fermentation lactique (sans O₂)",
+       2,
+       "lactate"
+      ],
+      [
+       "Respiration cellulaire (avec O₂)",
+       32,
+       "CO₂ et eau"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "La respiration produit 30 à 36 ATP : on retient 32"
+    },
+    {
+     "id": "effort",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La situation",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Un sprinteur ne dispose pas assez vite de dioxygène dans ses fibres. Un marathonien en dispose en quantité suffisante. Le lactate s’accumule dans la fibre et contribue à la fatigue."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de glucose faut-il pour produire 960 ATP par fermentation lactique ?",
+     "reponse": 480,
+     "unite": "glucose",
+     "aide": "Divise 960 par le nombre d’ATP produits par glucose.",
+     "explication": "960 ÷ 2 = **480 glucose**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de glucose faut-il pour produire 960 ATP par respiration cellulaire ?",
+     "reponse": 30,
+     "unite": "glucose",
+     "aide": "Divise 960 par 32.",
+     "explication": "960 ÷ 32 = **30 glucose**."
+    },
+    {
+     "type": "zone",
+     "document": "voies",
+     "enonce": "Touche le déchet qui s’accumule dans la fibre et contribue à la fatigue.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la voie sans dioxygène.",
+     "explication": "Le **lactate**, produit par la fermentation, s’accumule et accompagne la fatigue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le sprinteur recourt-il à la fermentation malgré son faible rendement ?",
+     "options": [
+      "Elle est rapide et ne dépend pas de l’apport en O₂",
+      "Elle produit plus d’ATP par glucose que la respiration cellulaire",
+      "Elle ne produit aucun déchet qui puisse gêner la contraction musculaire",
+      "Elle utilise uniquement les lipides, qui sont plus faciles à mobiliser rapidement"
+     ],
+     "reponse": 0,
+     "aide": "Le sprinteur manque de dioxygène dans ses fibres.",
+     "explication": "La fermentation lactique est **rapide** et **indépendante de l’O₂** : elle compense son faible rendement quand l’effort est bref et intense."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le marathonien peut-il maintenir son effort beaucoup plus longtemps ?",
+     "options": [
+      "La respiration produit 16 fois plus d’ATP par glucose et peut aussi dégrader des lipides",
+      "La respiration produit 16 fois moins d’ATP par glucose mais n’a besoin d’aucun substrat",
+      "La respiration ne dépend pas de l’apport en dioxygène dans les fibres musculaires",
+      "La respiration est plus rapide que la phosphocréatine et sa réserve est très limitée"
+     ],
+     "reponse": 0,
+     "aide": "Compare le nombre de glucose nécessaire dans les deux voies.",
+     "explication": "La respiration fournit **30 à 36 ATP** par glucose (ici 16 fois plus que la fermentation) et peut dégrader des **lipides** : c’est une voie **illimitée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "94a612c1-a088-506a-a423-749982656f07",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Après une boisson sucrée",
+   "competence": "lire-tableau",
+   "situation": "Léa, à jeun, boit une boisson très sucrée. On suit sa glycémie et sa concentration en insuline pendant deux heures.",
+   "documents": [
+    {
+     "id": "repas",
+     "type": "tableau",
+     "titre": "Suivi de Léa",
+     "colonnes": [
+      "Temps (min)",
+      "Glycémie (g/L)",
+      "Insuline (u. a.)"
+     ],
+     "lignes": [
+      [
+       "0",
+       "0,9",
+       5
+      ],
+      [
+       "30",
+       "1,4",
+       60
+      ],
+      [
+       "60",
+       "1,1",
+       40
+      ],
+      [
+       "90",
+       "0,95",
+       15
+      ],
+      [
+       "120",
+       "0,9",
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "u. a. : unités arbitraires"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "repas",
+     "enonce": "Touche la glycémie la plus élevée.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la plus grande valeur de la colonne glycémie.",
+     "explication": "La glycémie est maximale à 30 minutes : **1,4 g/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie a-t-elle augmenté entre 0 et 30 minutes ?",
+     "reponse": 0.5,
+     "unite": "g/L",
+     "aide": "Retire 0,9 à 1,4.",
+     "explication": "1,4 − 0,9 = **0,5 g/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de minutes l’insuline est-elle maximale ?",
+     "reponse": 30,
+     "unite": "min",
+     "aide": "Cherche la plus grande valeur de la colonne insuline.",
+     "explication": "L’insuline est maximale à **30 minutes**, en même temps que la glycémie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet de conclure l’évolution de l’insuline ?",
+     "options": [
+      "Quand la glycémie monte, l’insuline augmente et fait revenir la glycémie vers 1 g/L",
+      "Quand la glycémie monte, l’insuline diminue et fait encore monter la glycémie",
+      "L’insuline augmente au hasard et n’a aucun lien avec l’évolution de la glycémie",
+      "L’insuline augmente pour faire monter la glycémie quand elle est trop basse"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui arrive à la glycémie quand l’insuline est forte.",
+     "explication": "L’insuline est la **seule hormone hypoglycémiante** : quand la glycémie monte, elle augmente et ramène la glycémie vers **1 g/L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "94a612c1-a088-506a-a423-749982656f07",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le coureur et son glucose",
+   "competence": "analyser-document",
+   "situation": "Un coureur est suivi pendant 90 minutes d’effort. Son muscle consomme beaucoup de glucose, pourtant sa glycémie reste autour de 1 g/L. Les hormones sont mesurées en unités arbitraires.",
+   "documents": [
+    {
+     "id": "hormones",
+     "type": "tableau",
+     "titre": "Glycémie et hormones pendant l’effort",
+     "colonnes": [
+      "Moment",
+      "Glycémie (g/L)",
+      "Insuline",
+      "Glucagon"
+     ],
+     "lignes": [
+      [
+       "Repos",
+       "1,0",
+       10,
+       10
+      ],
+      [
+       "Effort, 30 min",
+       "1,0",
+       4,
+       25
+      ],
+      [
+       "Effort, 90 min",
+       "0,9",
+       2,
+       40
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "u. a. : unités arbitraires"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hormones",
+     "enonce": "Touche la valeur de glucagon la plus élevée.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Cherche la plus grande valeur de la dernière colonne.",
+     "explication": "Après 90 minutes d’effort, le glucagon atteint **40**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le glucagon est-il multiplié entre le repos et 90 minutes d’effort ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise 40 par 10.",
+     "explication": "40 ÷ 10 = **4 fois** plus de glucagon."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’insuline a-t-elle baissé entre le repos et 90 minutes d’effort ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Retire 2 à 10, puis divise par 10.",
+     "explication": "(10 − 2) ÷ 10 = 0,8, soit **80 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment la glycémie reste-t-elle stable malgré la consommation du muscle ?",
+     "options": [
+      "Le glucagon augmente et le foie hydrolyse son glycogène pour libérer du glucose dans le sang",
+      "L’insuline augmente et le foie stocke davantage de glucose sous forme de glycogène",
+      "Le muscle libère dans le sang le glucose de son propre glycogène grâce au glucagon",
+      "Le pancréas cesse toute sécrétion et la glycémie se maintient sans aucune régulation"
+     ],
+     "reponse": 0,
+     "aide": "Quel organe est le principal effecteur de la régulation de la glycémie ?",
+     "explication": "Le **glucagon** (cellules α) stimule le **foie**, qui hydrolyse son glycogène et libère du glucose : la glycémie se maintient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que traduit la baisse de l’insuline pendant l’effort ?",
+     "options": [
+      "Le stockage du glucose n’est plus stimulé : le glucose reste disponible pour le muscle",
+      "L’insuline est détruite par le muscle, ce qui provoque une chute de la glycémie",
+      "L’insuline est remplacée par le glucagon dans les cellules musculaires, qui le stockent",
+      "Le pancréas s’épuise et ne fabrique plus d’hormone, quelle que soit la glycémie"
+     ],
+     "reponse": 0,
+     "aide": "Pense au rôle de l’insuline : favoriser l’entrée et le stockage du glucose.",
+     "explication": "Avec moins d’insuline, le glucose n’est plus stocké : il reste disponible pour l’organisme. Le muscle, lui, capte le glucose grâce à la **contraction** même."
+    }
+   ]
+  },
+  {
+   "chapitre": "94a612c1-a088-506a-a423-749982656f07",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois profils, trois glycémies",
+   "competence": "argumenter",
+   "situation": "Trois sujets boivent 75 g de glucose. On suit leur glycémie ; on mesure aussi leur insuline à jeun puis 60 minutes après. Un des sujets est diabétique de type 1, un de type 2, le dernier ne l’est pas.",
+   "documents": [
+    {
+     "id": "hgpo",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glycémie après la prise de glucose",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Sujet A",
+       "valeurs": [
+        0.9,
+        1.4,
+        1.3,
+        1.1,
+        0.9
+       ],
+       "teinte": "vert"
+      },
+      {
+       "nom": "Sujet B",
+       "valeurs": [
+        1.8,
+        2.4,
+        2.9,
+        3,
+        3
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Sujet C",
+       "valeurs": [
+        1.3,
+        2.1,
+        2.5,
+        2.4,
+        2.2
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g/L",
+      "min": 0,
+      "max": 3.5,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Minutes après la prise de glucose"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "insuline",
+     "type": "tableau",
+     "titre": "Insuline mesurée",
+     "colonnes": [
+      "Sujet",
+      "À jeun",
+      "À 60 min"
+     ],
+     "lignes": [
+      [
+       "Sujet A",
+       5,
+       50
+      ],
+      [
+       "Sujet B",
+       0,
+       0
+      ],
+      [
+       "Sujet C",
+       20,
+       35
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Unités arbitraires"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel sujet est diabétique de type 1 ?",
+     "options": [
+      "Le sujet B, dont l’insuline est nulle",
+      "Le sujet A, dont l’insuline est la plus élevée",
+      "Le sujet C, dont l’insuline est la plus basse",
+      "Aucun des trois : les données ne permettent pas de le dire"
+     ],
+     "reponse": 0,
+     "aide": "Une destruction des cellules β supprime la sécrétion d’insuline.",
+     "explication": "Le sujet **B** ne sécrète **aucune insuline** et sa glycémie reste très élevée : c’est le diabète de **type 1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la glycémie maximale du sujet A, en g/L ?",
+     "reponse": 1.4,
+     "unite": "g/L",
+     "tolerance": 0.1,
+     "aide": "Lis le point le plus haut de sa courbe.",
+     "explication": "La glycémie maximale du sujet A est d’environ **1,4 g/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de minutes la glycémie du sujet A repasse-t-elle sous 1 g/L ?",
+     "reponse": 120,
+     "unite": "min",
+     "aide": "Cherche la première graduation où sa courbe est sous 1.",
+     "explication": "Elle repasse sous 1 g/L à **120 minutes** : l’insuline a rétabli l’équilibre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la glycémie du sujet C reste-t-elle élevée malgré la présence d’insuline ?",
+     "options": [
+      "Ses cellules répondent mal à l’insuline : c’est une insulinorésistance",
+      "Ses cellules β sont détruites, donc il ne sécrète plus aucune insuline",
+      "Son foie libère de l’insuline en trop grande quantité après la prise de glucose",
+      "Son pancréas sécrète trop de glucagon, ce qui fait baisser sa glycémie"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne « À jeun » du sujet C avec celle du sujet A.",
+     "explication": "Le sujet C a de l’insuline, mais elle agit peu : c’est l’**insulinorésistance** du diabète de **type 2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle prise en charge est indispensable pour le sujet B ?",
+     "options": [
+      "Des apports d’insuline, car ses cellules β n’en produisent plus",
+      "Des injections de glucagon, pour faire baisser sa glycémie trop élevée",
+      "Des apports de glucose supplémentaires, pour stimuler son pancréas",
+      "Une ablation du pancréas, pour supprimer sa sécrétion de glucagon"
+     ],
+     "reponse": 0,
+     "aide": "Il manque au sujet B l’hormone hypoglycémiante.",
+     "explication": "Sans cellules β, l’**insuline** manque : il faut la lui apporter. Le glucagon, lui, fait **monter** la glycémie."
+    }
+   ]
+  }
+ ]
+}

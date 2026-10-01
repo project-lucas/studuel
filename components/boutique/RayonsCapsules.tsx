@@ -53,7 +53,7 @@ export default function RayonsCapsules({
   return (
     <section id="capsules" aria-labelledby="capsules-titre" className="flex scroll-mt-20 flex-col gap-5">
       <header className="flex flex-col gap-3">
-        <BandeauSection id="capsules-titre" variante="parchemin">
+        <BandeauSection id="capsules-titre" variante="ruban">
           Capsules
         </BandeauSection>
         <p className="px-1 text-sm text-muted-foreground">

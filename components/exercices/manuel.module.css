@@ -454,16 +454,45 @@
   position: relative;
 }
 
+/* Le C de Scratch : barre du haut et barre du bas sur toute la largeur, bras
+   gauche d'1rem, bouche OUVERTE à droite (le corps va jusqu'au bord). */
 .bouche > .blocTete {
+  align-self: stretch;
   border-radius: 0.35rem 0.35rem 0 0;
+  box-shadow: none;
+}
+
+/* L'ergot de la tête descend DANS la bouche : il s'aligne sur l'encoche du
+   premier bloc intérieur, décalé du bras gauche. */
+.bouche > .blocTete::after {
+  left: 1.9rem;
+}
+
+/* La barre « sinon » reçoit l'ergot du dernier bloc du « si » : son encoche
+   est dans la bouche, pas sur le bras gauche. */
+.bouche > .blocTete ~ .blocTete::before {
+  left: 1.9rem;
+}
+
+/* L'ergot du bas de la boucle, pour s'emboîter dans le bloc suivant. */
+.bouche::after {
+  content: '';
+  position: absolute;
+  bottom: -0.28rem;
+  left: 0.9rem;
+  width: 1.1rem;
+  height: 0.3rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+  background: var(--bloc);
+  z-index: 1;
 }
 
 .boucheCorps {
+  align-self: stretch;
   margin-left: 1rem;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0.75rem 0.3rem 0;
   min-width: 6rem;
   background: var(--papier);
-  border-radius: 0 0.35rem 0.35rem 0;
 }
 
 .entree {
@@ -872,4 +901,25 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* Le rappel d'une question « zone » : le document n'est dessiné qu'une fois,
+   en haut ; la carte de la question y renvoie. */
+.renvoiDocument {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.9rem;
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Le document que la question active attend : il devient la surface à toucher. */
+.docATouche > section {
+  box-shadow: 0 0 0 3px var(--primary);
 }

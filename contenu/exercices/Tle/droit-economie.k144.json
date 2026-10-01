@@ -1,0 +1,2299 @@
+{
+ "niveau": "Tle",
+ "matiere": "droit-economie",
+ "exercices": [
+  {
+   "chapitre": "a92fa301-4607-5fda-a35d-e59a2badad46",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois achats, trois contrats",
+   "competence": "analyser-document",
+   "situation": "Léo et Jade, 16 ans, ne sont pas émancipés. Chacun a fait un achat seul, comme la société Bâtir. Le tableau les recense.",
+   "documents": [
+    {
+     "id": "achats",
+     "type": "tableau",
+     "titre": "Les achats de la semaine",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Acheteur",
+      "Achat",
+      "Prix"
+     ],
+     "lignes": [
+      [
+       "Léo, 16 ans",
+       "Une baguette et un jus",
+       "2,80 €"
+      ],
+      [
+       "Jade, 16 ans",
+       "Une moto d’occasion",
+       "4 500 €"
+      ],
+      [
+       "Société Bâtir, majeure",
+       "Du ciment pour un chantier",
+       "1 200 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "achats",
+     "enonce": "Touche l’achat qu’une lycéenne non émancipée ne peut pas faire seule.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Pense aux actes courants de la vie d’un adolescent.",
+     "explication": "L’achat d’une **moto à 4 500 €** dépasse un acte courant : Jade est incapable de le conclure seule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la sanction du contrat conclu par Jade seule ?",
+     "options": [
+      "La nullité relative, que ses parents peuvent demander",
+      "La nullité absolue, que n’importe qui peut demander",
+      "La résiliation pour l’avenir uniquement",
+      "La clause pénale prévue par le vendeur"
+     ],
+     "reponse": 0,
+     "aide": "L’incapacité protège une personne précise.",
+     "explication": "L’incapacité protège l’intérêt privé du mineur : c’est une **nullité relative**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui peut agir pour obtenir cette annulation ?",
+     "options": [
+      "Les représentants légaux de Jade, donc ses parents",
+      "Le vendeur de la moto, qui regrette la vente",
+      "Toute personne qui s’intéresse à l’affaire",
+      "Le conseil de la société Bâtir, de passage"
+     ],
+     "reponse": 0,
+     "aide": "La règle protège Jade, pas le vendeur.",
+     "explication": "Seule la partie protégée agit : ici **les parents de Jade**, ses représentants légaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "a92fa301-4607-5fda-a35d-e59a2badad46",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le casque qui n’était pas neuf",
+   "competence": "analyser-texte",
+   "situation": "Nina a commandé un casque de moto en ligne. Elle écrit au site, puis veut connaître ses droits. Le tableau rappelle les trois vices du consentement.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message de Nina",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Le vendeur m’a affirmé que ce casque était neuf et homologué. Je découvre qu’il est d’occasion et non homologué, et il le savait. J’ai reçu le colis le 10 juin. — Nina"
+     ]
+    },
+    {
+     "id": "vices",
+     "type": "tableau",
+     "titre": "Les vices du consentement",
+     "colonnes": [
+      "Vice",
+      "Définition"
+     ],
+     "lignes": [
+      [
+       "Erreur",
+       "Fausse idée que l’on se fait tout seul"
+      ],
+      [
+       "Dol",
+       "Tromperie volontaire pour obtenir l’accord"
+      ],
+      [
+       "Violence",
+       "Contrainte ou menace pour obtenir l’accord"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vices",
+     "enonce": "Touche le vice du consentement dont Nina est victime.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Le vendeur savait et a affirmé le contraire.",
+     "explication": "Le vendeur l’a trompée volontairement : c’est un **dol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour obtenir l’annulation, que doit établir Nina ?",
+     "options": [
+      "Que le vendeur l’a trompée volontairement pour obtenir son accord",
+      "Que ce casque coûte moins cher chez un autre vendeur",
+      "Que le vendeur a déjà été condamné pour escroquerie",
+      "Que le contrat a été signé en présence d’un témoin"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la définition du dol.",
+     "explication": "Il faut prouver la **tromperie volontaire** qui a déterminé son consentement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le délai de rétractation est de 14 jours à compter de la réception du colis. Quel jour de juin se termine-t-il ?",
+     "reponse": 24,
+     "unite": "juin",
+     "aide": "Ajoute 14 au 10.",
+     "explication": "10 + 14 = le **24 juin**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’action en nullité se prescrit en principe par un nombre d’années fixe. Combien d’années ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Regarde la fin de la partie sur la nullité.",
+     "explication": "En principe, l’action se prescrit par **cinq ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a92fa301-4607-5fda-a35d-e59a2badad46",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le canapé et la clause cachée",
+   "competence": "analyser-document",
+   "situation": "Amel commande un canapé sur un site. Les conditions générales et le bon de commande ne sont pas tous irréprochables.",
+   "documents": [
+    {
+     "id": "cg",
+     "type": "tableau",
+     "titre": "Extrait des conditions générales",
+     "source": "Conditions imaginées pour l’exercice.",
+     "colonnes": [
+      "Art.",
+      "Clause"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Livraison sous quinze jours ouvrés."
+      ],
+      [
+       "2",
+       "Le vendeur peut augmenter le prix après la commande, sans que le client puisse refuser ou annuler."
+      ],
+      [
+       "3",
+       "Le client dispose de 14 jours pour se rétracter."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "bon",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Maison Confort",
+     "sousTitre": "Bon de commande à distance",
+     "emoji": "🛋️",
+     "lignes": [
+      {
+       "texte": "Canapé 3 places",
+       "valeur": "900 €"
+      },
+      {
+       "texte": "Livraison",
+       "valeur": "60 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "960 €",
+       "gras": true,
+       "id": "total"
+      }
+     ],
+     "pied": "Acompte de 30 % à la commande",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cg",
+     "enonce": "Touche la clause qui crée un déséquilibre significatif au détriment d’Amel.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Une seule clause laisse le vendeur tout décider.",
+     "explication": "La clause 2 permet au vendeur de changer le prix sans recours : c’est une **clause abusive**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient cette clause abusive ?",
+     "options": [
+      "Elle est réputée non écrite, le reste du contrat demeure",
+      "Elle entraîne la nullité de tout le contrat de vente",
+      "Elle s’applique sauf si Amel s’y oppose par lettre",
+      "Elle devient une clause pénale au profit d’Amel"
+     ],
+     "reponse": 0,
+     "aide": "La sanction vise la clause, pas le contrat entier.",
+     "explication": "La clause abusive est **réputée non écrite** : elle disparaît, le contrat subsiste."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’acompte à verser à la commande, en euros ?",
+     "reponse": 288,
+     "unite": "€",
+     "aide": "Calcule 30 % du total du bon.",
+     "explication": "30 % de 960 € = 0,3 × 960 = **288 €**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à sa sanction ou à son remède.",
+     "paires": [
+      [
+       "Consentement obtenu par tromperie",
+       "Nullité relative"
+      ],
+      [
+       "Objet contraire à l’ordre public",
+       "Nullité absolue"
+      ],
+      [
+       "Clause abusive",
+       "Réputée non écrite"
+      ],
+      [
+       "Achat à distance regretté",
+       "Rétractation sous 14 jours"
+      ]
+     ],
+     "aide": "Pense à qui la règle protège.",
+     "explication": "Chaque cas a son remède : le **vice du consentement** appelle la nullité relative, l’**ordre public** la nullité absolue, la **clause abusive** sa disparition, le **contrat à distance** la rétractation."
+    }
+   ]
+  },
+  {
+   "chapitre": "d22a9234-0748-578b-b13c-bd7013d42cab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’ordinateur qui n’arrive pas",
+   "competence": "analyser-document",
+   "situation": "Théo a commandé un ordinateur à 800 € avec 20 % d’acompte. La date de livraison est passée. Le tableau retrace les faits.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "tableau",
+     "titre": "Chronologie",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "1er mars",
+       "Commande d’un ordinateur à 800 € avec 20 % d’acompte"
+      ],
+      [
+       "15 mars",
+       "Date de livraison promise"
+      ],
+      [
+       "20 mars",
+       "Toujours rien reçu"
+      ],
+      [
+       "21 mars",
+       "Lettre recommandée : « livrez sous huit jours »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "Touche l’étape qui est la mise en demeure.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "C’est la lettre recommandée qui somme d’exécuter.",
+     "explication": "La lettre du 21 mars somme le vendeur de livrer : c’est la **mise en demeure**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours de retard le 20 mars, par rapport à la date promise ?",
+     "reponse": 5,
+     "unite": "jours",
+     "aide": "Compte du 15 au 20 mars.",
+     "explication": "20 − 15 = **5 jours** de retard."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le montant de l’acompte versé, en euros ?",
+     "reponse": 160,
+     "unite": "€",
+     "aide": "Calcule 20 % de 800.",
+     "explication": "0,2 × 800 = **160 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Théo veut obtenir l’ordinateur promis, pas un remboursement. Quelle sanction choisit-il ?",
+     "options": [
+      "L’exécution forcée en nature",
+      "La résolution du contrat de vente",
+      "La réduction du prix convenu",
+      "La clause résolutoire automatique"
+     ],
+     "reponse": 0,
+     "aide": "Il veut la chose elle-même.",
+     "explication": "Obtenir la prestation promise, c’est l’**exécution forcée en nature**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d22a9234-0748-578b-b13c-bd7013d42cab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan de travail ébréché",
+   "competence": "raisonner",
+   "situation": "Clémence a fait poser une cuisine. À la livraison, un coin du plan de travail est ébréché : un défaut mineur. Elle doit choisir une sanction proportionnée.",
+   "documents": [
+    {
+     "id": "sanc",
+     "type": "tableau",
+     "titre": "Les sanctions de l’inexécution",
+     "colonnes": [
+      "Sanction",
+      "Effet"
+     ],
+     "lignes": [
+      [
+       "Exception d’inexécution",
+       "Suspendre sa propre prestation"
+      ],
+      [
+       "Exécution forcée",
+       "Obtenir la prestation promise"
+      ],
+      [
+       "Réduction du prix",
+       "Garder le bien contre un prix diminué"
+      ],
+      [
+       "Résolution",
+       "Anéantir le contrat"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "devis",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Cuisines du Midi",
+     "sousTitre": "Devis accepté",
+     "emoji": "🍳",
+     "lignes": [
+      {
+       "texte": "Cuisine équipée",
+       "valeur": "8 000 €"
+      },
+      {
+       "texte": "Pose",
+       "valeur": "1 200 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "9 200 €",
+       "gras": true
+      }
+     ],
+     "pied": "Acompte versé : 30 %",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle sanction est proportionnée à un défaut mineur ?",
+     "options": [
+      "La réduction du prix, en gardant la cuisine",
+      "La résolution, en faisant reprendre toute la cuisine",
+      "Le refus de payer absolument tout le solde dû",
+      "La nullité du contrat pour cause d’incapacité"
+     ],
+     "reponse": 0,
+     "aide": "Elle veut garder la cuisine.",
+     "explication": "Pour un défaut mineur, on garde le bien et on obtient une **réduction du prix**."
+    },
+    {
+     "type": "zone",
+     "document": "sanc",
+     "enonce": "Touche la sanction la plus lourde, celle qui anéantit le contrat.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche le verbe « anéantir ».",
+     "explication": "La **résolution** anéantit le contrat : trop lourde ici."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Elle obtient 10 % de réduction sur le total du devis. Quel prix paie-t-elle, en euros ?",
+     "reponse": 8280,
+     "unite": "€",
+     "aide": "Calcule 90 % de 9 200.",
+     "explication": "0,9 × 9 200 = **8 280 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Elle a versé 30 % d’acompte sur 9 200 €. Combien reste-t-il à payer sur le prix réduit, en euros ?",
+     "reponse": 5520,
+     "unite": "€",
+     "aide": "Acompte : 0,3 × 9 200. Puis soustrais.",
+     "explication": "Acompte = 2 760 €. 8 280 − 2 760 = **5 520 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d22a9234-0748-578b-b13c-bd7013d42cab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le buffet livré en retard",
+   "competence": "raisonner",
+   "situation": "Une entreprise commande à un traiteur un buffet pour un séminaire. Le contrat contient plusieurs clauses ; le buffet arrive avec douze jours de retard.",
+   "documents": [
+    {
+     "id": "clauses",
+     "type": "tableau",
+     "titre": "Extrait du contrat",
+     "source": "Contrat imaginé pour l’exercice.",
+     "colonnes": [
+      "Art.",
+      "Clause"
+     ],
+     "lignes": [
+      [
+       "4",
+       "Retard de livraison : 150 € par jour de retard."
+      ],
+      [
+       "7",
+       "Le contrat prend fin de plein droit huit jours après une mise en demeure restée sans effet."
+      ],
+      [
+       "9",
+       "Paiement sous trente jours."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "faits",
+     "type": "tableau",
+     "titre": "Les faits",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Retard constaté",
+       "12 jours"
+      ],
+      [
+       "Préjudice réellement subi",
+       "600 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel montant la clause de l’article 4 donne-t-elle pour douze jours de retard, en euros ?",
+     "reponse": 1800,
+     "unite": "€",
+     "aide": "Multiplie le tarif par le nombre de jours.",
+     "explication": "12 × 150 = **1 800 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le préjudice réel est de 600 €. Que peut faire le juge ?",
+     "options": [
+      "Réduire la clause pénale, car elle est manifestement excessive",
+      "Annuler tout le contrat de traiteur sans autre motif",
+      "Doubler la somme pour punir le traiteur fautif",
+      "Refuser d’examiner la clause puisqu’elle est signée"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1 800 € et 600 €.",
+     "explication": "La clause dépasse largement le préjudice : le juge peut la **réduire** si elle est manifestement excessive."
+    },
+    {
+     "type": "zone",
+     "document": "clauses",
+     "enonce": "Touche la clause résolutoire.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Elle prévoit la fin automatique du contrat.",
+     "explication": "L’article 7 prévoit la fin **de plein droit** : c’est une **clause résolutoire**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation au mécanisme qui convient.",
+     "paires": [
+      [
+       "Un abonnement arrêté pour l’avenir",
+       "Résiliation"
+      ],
+      [
+       "Commande jamais livrée, annulée rétroactivement",
+       "Résolution"
+      ],
+      [
+       "Refus de payer le solde tant que les travaux ne sont pas finis",
+       "Exception d’inexécution"
+      ],
+      [
+       "Fin automatique après un manquement désigné",
+       "Clause résolutoire"
+      ]
+     ],
+     "aide": "Distingue « pour l’avenir » de « rétroactivement ».",
+     "explication": "La **résiliation** vaut pour l’avenir, la **résolution** efface tout, l’**exception d’inexécution** suspend, la **clause résolutoire** agit seule."
+    }
+   ]
+  },
+  {
+   "chapitre": "f484e499-f3ce-54e3-b956-af5552b7985a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le ballon dans la vitrine",
+   "competence": "analyser-document",
+   "situation": "Lors d’un match dans la rue, un ballon brise la vitrine de Mme Garnier, fleuriste. Elle fait établir la facture de ses pertes.",
+   "documents": [
+    {
+     "id": "fact",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Fleurs Garnier",
+     "sousTitre": "Facture des dommages",
+     "emoji": "🌷",
+     "lignes": [
+      {
+       "texte": "Vitrine remplacée",
+       "valeur": "640 €",
+       "id": "vit"
+      },
+      {
+       "texte": "Nettoyage et évacuation",
+       "valeur": "80 €",
+       "id": "net"
+      },
+      {
+       "texte": "Recettes perdues (2 jours)",
+       "valeur": "300 €",
+       "id": "rec"
+      }
+     ],
+     "pied": "Situation imaginée pour l’exercice",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fact",
+     "enonce": "Touche le poste qui correspond à une perte de revenus.",
+     "reponse": [
+      "rec"
+     ],
+     "aide": "Cherche ce que la boutique n’a pas pu gagner.",
+     "explication": "Les **recettes perdues** sont un préjudice matériel : un gain manqué."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total du préjudice matériel, en euros ?",
+     "reponse": 1020,
+     "unite": "€",
+     "aide": "Additionne les trois lignes.",
+     "explication": "640 + 80 + 300 = **1 020 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les parents des joueurs font eux-mêmes remplacer la vitrine. De quelle réparation s’agit-il ?",
+     "options": [
+      "Une réparation en nature",
+      "Une réparation par équivalent",
+      "Une sanction de nature pénale",
+      "Une réparation à titre moral"
+     ],
+     "reponse": 0,
+     "aide": "Ils réparent la chose elle-même.",
+     "explication": "Remplacer la vitrine soi-même, c’est réparer **en nature**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f484e499-f3ce-54e3-b956-af5552b7985a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Après l’accident de vélo",
+   "competence": "lire-tableau",
+   "situation": "Lina, renversée à vélo par une voiture, chiffre ses pertes. Elle réclame aussi la somme d’une course cycliste à laquelle elle n’était pas inscrite.",
+   "documents": [
+    {
+     "id": "postes",
+     "type": "tableau",
+     "titre": "Les postes de préjudice de Lina",
+     "source": "Montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Frais médicaux",
+       "450 €"
+      ],
+      [
+       "Salaire perdu (trois semaines)",
+       "1 800 €"
+      ],
+      [
+       "Vélo détruit",
+       "320 €"
+      ],
+      [
+       "Souffrances endurées",
+       "1 500 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque poste selon la nature du préjudice.",
+     "categories": [
+      "Patrimonial (matériel)",
+      "Moral"
+     ],
+     "items": [
+      [
+       "Le vélo détruit",
+       0
+      ],
+      [
+       "Le salaire perdu",
+       0
+      ],
+      [
+       "Les frais médicaux",
+       0
+      ],
+      [
+       "Les souffrances endurées",
+       1
+      ],
+      [
+       "La peur de remonter à vélo",
+       1
+      ]
+     ],
+     "aide": "Un préjudice moral ne se chiffre pas en factures.",
+     "explication": "Le **matériel** se prouve par des pièces ; le **moral** est la souffrance psychologique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des postes patrimoniaux, en euros ?",
+     "reponse": 2570,
+     "unite": "€",
+     "aide": "Additionne frais, salaire et vélo.",
+     "explication": "450 + 1 800 + 320 = **2 570 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la demande liée à la course non inscrite sera-t-elle refusée ?",
+     "options": [
+      "Le préjudice n’est pas certain : Lina n’était pas inscrite",
+      "Le préjudice n’est pas personnel : d’autres sont concernés",
+      "Le préjudice n’est pas légitime : le sport est interdit",
+      "Le préjudice est trop ancien pour être indemnisé"
+     ],
+     "reponse": 0,
+     "aide": "Un gain espéré sans occasion réelle reste hypothétique.",
+     "explication": "Le préjudice doit être **certain** ; ici la victoire est hypothétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "f484e499-f3ce-54e3-b956-af5552b7985a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La rivière de l’Aubelle",
+   "competence": "argumenter",
+   "situation": "Une cuve de solvants fuit dans l’Aubelle, rivière imaginaire. Poissons morts, berge à restaurer, pêcheur sans revenus : plusieurs acteurs peuvent agir.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Fuite à l’usine de peinture",
+     "source": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Une cuve de solvants s’est vidée dans l’Aubelle. Des milliers de poissons sont morts et le cours d’eau doit être restauré. Un pêcheur professionnel ne peut plus travailler. Le procureur a ouvert une enquête pour pollution."
+     ]
+    },
+    {
+     "id": "qui",
+     "type": "tableau",
+     "titre": "Qui peut agir ?",
+     "colonnes": [
+      "Acteur",
+      "Ce qu’il peut demander"
+     ],
+     "lignes": [
+      [
+       "Le pêcheur professionnel",
+       "Indemnisation de sa perte de revenus"
+      ],
+      [
+       "Une association de protection de l’environnement",
+       "Réparation du préjudice écologique"
+      ],
+      [
+       "Le procureur",
+       "Des poursuites et une sanction pénale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "qui",
+     "enonce": "Touche celui qui agit pour faire prononcer une sanction pénale.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "La société est représentée par le ministère public.",
+     "explication": "Le **procureur** déclenche l’action pénale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifie-t-on la mort de la faune et la dégradation de la rivière ?",
+     "options": [
+      "Un préjudice écologique, atteinte aux écosystèmes",
+      "Un simple préjudice moral, subi par le seul pêcheur professionnel",
+      "Une perte de chance, réparée au profit de l’association",
+      "Un préjudice esthétique, réparable par une simple amende"
+     ],
+     "reponse": 0,
+     "aide": "Aucune personne ne le subit directement.",
+     "explication": "C’est un **préjudice écologique** : une atteinte non négligeable aux fonctions des écosystèmes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque conséquence.",
+     "categories": [
+      "Responsabilité civile",
+      "Responsabilité pénale"
+     ],
+     "items": [
+      [
+       "Restaurer le milieu aux frais de l’usine",
+       0
+      ],
+      [
+       "Amende prononcée contre le dirigeant",
+       1
+      ],
+      [
+       "Dommages et intérêts au pêcheur",
+       0
+      ],
+      [
+       "Jugement devant le tribunal correctionnel",
+       1
+      ]
+     ],
+     "aide": "Réparer ou sanctionner ?",
+     "explication": "La **civile** répare la victime ; la **pénale** sanctionne un comportement interdit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment répare-t-on en priorité le préjudice écologique ?",
+     "options": [
+      "En nature, en restaurant le milieu",
+      "Par des excuses écrites au maire",
+      "Par une somme versée au dirigeant",
+      "Par une simple interdiction de pêche"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui rend la rivière à son état.",
+     "explication": "La réparation est **prioritairement en nature**."
+    }
+   ]
+  },
+  {
+   "chapitre": "24986ead-410b-5517-a9ed-e540dad75237",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre dossiers, quatre régimes",
+   "competence": "analyser-document",
+   "situation": "Un cabinet d’avocats reçoit quatre dossiers. Avant de plaider, il faut qualifier chaque situation : quel régime de responsabilité s’applique ?",
+   "documents": [
+    {
+     "id": "dossiers",
+     "type": "tableau",
+     "titre": "Quatre dossiers",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Dossier",
+      "Faits"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Un salarié se blesse en tombant d’un échafaudage pendant son service."
+      ],
+      [
+       "B",
+       "Un scooter renverse un piéton sur un passage protégé."
+      ],
+      [
+       "C",
+       "Un sèche-cheveux neuf surchauffe à cause d’un défaut de fabrication."
+      ],
+      [
+       "D",
+       "Un déménageur casse l’armoire qu’il devait transporter."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossiers",
+     "enonce": "Touche le dossier où un véhicule terrestre à moteur est impliqué.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche le scooter.",
+     "explication": "Le **scooter** est un véhicule terrestre à moteur : loi Badinter."
+    },
+    {
+     "type": "zone",
+     "document": "dossiers",
+     "enonce": "Touche le dossier qui relève de la responsabilité du fait des produits défectueux.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un produit neuf, un défaut de fabrication.",
+     "explication": "Le sèche-cheveux présente un **défaut de fabrication** : le producteur répond sans faute."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque dossier dans son régime.",
+     "categories": [
+      "Accident du travail",
+      "Circulation (loi Badinter)",
+      "Produit défectueux",
+      "Responsabilité contractuelle"
+     ],
+     "items": [
+      [
+       "Dossier A",
+       0
+      ],
+      [
+       "Dossier B",
+       1
+      ],
+      [
+       "Dossier C",
+       2
+      ],
+      [
+       "Dossier D",
+       3
+      ]
+     ],
+     "aide": "Commence par les régimes spéciaux.",
+     "explication": "A : **accident du travail** ; B : **circulation** ; C : **produit défectueux** ; D : **contrat** inexécuté."
+    }
+   ]
+  },
+  {
+   "chapitre": "24986ead-410b-5517-a9ed-e540dad75237",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chêne et la tempête",
+   "competence": "raisonner",
+   "situation": "Deux arbres sont tombés sur des voitures pendant une tempête. Le tableau compare les deux cas à l’aune de la force majeure.",
+   "documents": [
+    {
+     "id": "fm",
+     "type": "tableau",
+     "titre": "Deux cas de chute d’arbre",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Cas",
+      "Événement",
+      "Extérieur ?",
+      "Imprévisible ?",
+      "Irrésistible ?"
+     ],
+     "lignes": [
+      [
+       "Cas A",
+       "Tempête exceptionnelle non annoncée, arbre sain arraché",
+       "Oui",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Cas B",
+       "Tempête annoncée trois jours avant, arbre mort jamais élagué",
+       "Oui",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fm",
+     "enonce": "Touche la case qui montre que l’événement du cas B n’était pas imprévisible.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Cherche la colonne « Imprévisible ? » dans la ligne du cas B.",
+     "explication": "Dans le cas B, « Imprévisible ? » vaut **Non** : la tempête était annoncée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le cas A, que peut obtenir le propriétaire de l’arbre ?",
+     "options": [
+      "Une exonération totale, par la force majeure",
+      "Une exonération partielle par la faute de la victime",
+      "Aucune exonération, le gardien répond toujours",
+      "Une exonération qui ne vaut que devant le juge pénal"
+     ],
+     "reponse": 0,
+     "aide": "Les trois critères sont réunis.",
+     "explication": "Extérieur, imprévisible et irrésistible : **force majeure**, exonération totale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion sur le cas B.",
+     "texte": "Dans le cas B, la force majeure est ___ car la tempête était ___ et l’arbre mal entretenu.",
+     "reponses": [
+      [
+       "écartée"
+      ],
+      [
+       "prévisible"
+      ]
+     ],
+     "banque": [
+      "écartée",
+      "retenue",
+      "prévisible",
+      "imprévisible"
+     ],
+     "aide": "Une tempête annoncée se prévoit.",
+     "explication": "La force majeure est **écartée** car la tempête était **prévisible**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le cas B, le dommage est de 4 000 €. Le juge retient une faute de la victime à 25 % (voiture garée sous un arbre signalé dangereux). Quelle indemnité, en euros ?",
+     "reponse": 3000,
+     "unite": "€",
+     "aide": "Le responsable paie 75 %.",
+     "explication": "0,75 × 4 000 = **3 000 €** : la faute de la victime exonère partiellement."
+    }
+   ]
+  },
+  {
+   "chapitre": "24986ead-410b-5517-a9ed-e540dad75237",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La trottinette qui prend feu",
+   "competence": "argumenter",
+   "situation": "La batterie d’une trottinette neuve s’enflamme dans le garage de Mehdi. Il doit choisir sur quel fondement agir.",
+   "documents": [
+    {
+     "id": "faits",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le sinistre de Mehdi",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mehdi a acheté une trottinette électrique chez un revendeur. Une semaine plus tard, la batterie s’enflamme : le garage brûle (6 500 €), du matériel est détruit (800 €) et la trottinette est perdue (900 €). Le contrat de vente du revendeur dit : « aucune responsabilité quelle que soit la cause »."
+     ]
+    },
+    {
+     "id": "fond",
+     "type": "tableau",
+     "titre": "Les fondements possibles",
+     "colonnes": [
+      "Fondement",
+      "Contre qui",
+      "Ce que Mehdi doit prouver"
+     ],
+     "lignes": [
+      [
+       "Inexécution du contrat de vente",
+       "Le revendeur",
+       "Le manquement au contrat"
+      ],
+      [
+       "Produit défectueux",
+       "Le producteur",
+       "Le défaut, le dommage et le lien, sans faute"
+      ],
+      [
+       "Fait personnel",
+       "Toute personne fautive",
+       "Une faute, le dommage et le lien"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fond",
+     "enonce": "Touche le fondement qui permet d’agir contre le fabricant sans prouver de faute.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Regarde la dernière colonne.",
+     "explication": "Le **produit défectueux** engage le producteur sans faute prouvée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le montant total des dommages de Mehdi, en euros ?",
+     "reponse": 8200,
+     "unite": "€",
+     "aide": "Additionne garage, matériel et trottinette.",
+     "explication": "6 500 + 800 + 900 = **8 200 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vaut la clause « aucune responsabilité quelle que soit la cause » face à un consommateur ?",
+     "options": [
+      "Elle est écartée : elle crée un déséquilibre significatif",
+      "Elle est valable car Mehdi a signé le contrat",
+      "Elle vaut uniquement pour la faute de Mehdi",
+      "Elle supprime aussi la responsabilité du fabricant"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux clauses abusives.",
+     "explication": "Une clause exonératoire abusive contre un consommateur est **écartée**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range la démarche de qualification dans l’ordre.",
+     "items": [
+      "Je cherche un régime spécial applicable",
+      "Sinon, je cherche un contrat entre les parties",
+      "Sinon, j’applique la responsabilité extracontractuelle"
+     ],
+     "aide": "Du plus spécial au plus général.",
+     "explication": "On va **du plus spécial au plus général**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25aa91ff-0435-5f94-b6d9-abc2e77460af",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux livreurs, un seul salarié",
+   "competence": "analyser-document",
+   "situation": "Sofia et Abel livrent des repas. Le tableau décrit leur situation : l’un d’eux est peut-être un salarié qui s’ignore.",
+   "documents": [
+    {
+     "id": "livreurs",
+     "type": "tableau",
+     "titre": "Deux livreurs",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Livreur",
+      "Qui fixe les horaires ?",
+      "Qui donne les consignes ?",
+      "Sanction possible ?"
+     ],
+     "lignes": [
+      [
+       "Sofia",
+       "La plateforme",
+       "La plateforme",
+       "Oui : déconnexion"
+      ],
+      [
+       "Abel",
+       "Lui-même",
+       "Le client de chaque mission",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livreurs",
+     "enonce": "Touche le livreur dont la situation montre un lien de subordination.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche qui reçoit des ordres et peut être sanctionné.",
+     "explication": "Sofia est **subordonnée** : horaires imposés, consignes, sanction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel critère fait la différence entre Sofia et Abel ?",
+     "options": [
+      "Le lien de subordination",
+      "Le montant de la rémunération",
+      "Le nombre de livraisons par jour",
+      "Le lieu de signature du contrat"
+     ],
+     "reponse": 0,
+     "aide": "Ordres, contrôle, sanction.",
+     "explication": "Le **lien de subordination** est le critère décisif du contrat de travail."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sofia est requalifiée et embauchée comme employée en CDI. Quelle est la durée maximale initiale de sa période d’essai, en mois ?",
+     "reponse": 2,
+     "unite": "mois",
+     "aide": "Regarde le tableau des périodes d’essai, ligne « employés ».",
+     "explication": "Pour un employé, la durée initiale maximale est de **2 mois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25aa91ff-0435-5f94-b6d9-abc2e77460af",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les clauses de Romain",
+   "competence": "analyser-document",
+   "situation": "Romain signe un CDI. Son contrat comporte trois clauses particulières, dont une est irrégulière.",
+   "documents": [
+    {
+     "id": "cl",
+     "type": "tableau",
+     "titre": "Extrait du contrat de Romain",
+     "source": "Contrat imaginé pour l’exercice.",
+     "colonnes": [
+      "Clause",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Mobilité",
+       "Le salarié peut être muté à Paris ou dans le reste de l’Île-de-France."
+      ],
+      [
+       "Non-concurrence",
+       "Interdiction de travailler pour un concurrent pendant 5 ans, partout en France, sans aucune contrepartie."
+      ],
+      [
+       "Télétravail",
+       "Deux jours par semaine, si le salarié le souhaite."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cl",
+     "enonce": "Touche la clause qui est irrégulière.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Une clause qui interdit de travailler doit être compensée.",
+     "explication": "La non-concurrence **sans contrepartie financière** est irrégulière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette clause est-elle irrégulière ?",
+     "options": [
+      "Elle ne prévoit aucune contrepartie financière",
+      "Elle n’a pas été rédigée en langue anglaise",
+      "Elle a été signée trop tard dans l’année",
+      "Elle protège un intérêt légitime de l’entreprise"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la clause.",
+     "explication": "Il faut une **contrepartie financière**, une limite de temps et d’espace, et un intérêt légitime."
+    },
+    {
+     "type": "zone",
+     "document": "cl",
+     "enonce": "Touche la clause dont la zone géographique est définie précisément.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche une région nommée.",
+     "explication": "La **mobilité** vise « Paris ou l’Île-de-France » : zone précise, donc valable."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément d’une clause de non-concurrence.",
+     "categories": [
+      "Condition de validité",
+      "Clause irrégulière"
+     ],
+     "items": [
+      [
+       "Une contrepartie financière est prévue",
+       0
+      ],
+      [
+       "La durée est limitée dans le temps",
+       0
+      ],
+      [
+       "Tous les métiers du monde sont interdits",
+       1
+      ],
+      [
+       "Elle protège un intérêt légitime de l’entreprise",
+       0
+      ],
+      [
+       "Aucune limite de durée n’est prévue",
+       1
+      ]
+     ],
+     "aide": "Temps, espace, contrepartie, intérêt légitime.",
+     "explication": "Sont valables : **contrepartie**, **durée limitée**, **intérêt légitime**. Sont irréguliers : l’interdiction **sans limite**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25aa91ff-0435-5f94-b6d9-abc2e77460af",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Auto-entrepreneur ou salarié ?",
+   "competence": "argumenter",
+   "situation": "Yanis est graphiste « auto-entrepreneur » pour une agence. Ses échanges avec son responsable posent la question d’une requalification.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages du responsable",
+     "participants": [
+      {
+       "nom": "Responsable",
+       "emoji": "🧑‍💼",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "🧑‍🎨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Responsable",
+       "texte": "Demain, tu es à l’agence à 9 h et tu utilises notre logiciel."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Et si je veux prendre un autre client ?"
+      },
+      {
+       "qui": "Responsable",
+       "texte": "Non, sinon je ne te donne plus de missions."
+      }
+     ]
+    },
+    {
+     "id": "ind",
+     "type": "tableau",
+     "titre": "Les indices relevés",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Indice",
+      "Constat"
+     ],
+     "lignes": [
+      [
+       "Horaires",
+       "Imposés par l’agence"
+      ],
+      [
+       "Matériel",
+       "Logiciel de l’agence exigé"
+      ],
+      [
+       "Tarif",
+       "Fixé par Yanis lui-même"
+      ],
+      [
+       "Clientèle",
+       "Menace de ne plus donner de missions"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ind",
+     "enonce": "Touche les deux indices de subordination qui pèsent le plus lourd ici : les horaires et la menace.",
+     "reponse": [
+      "r0c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Un ordre et une sanction.",
+     "explication": "Les **horaires imposés** (ordre) et la **menace** (sanction) marquent la subordination."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui peut requalifier cette relation en contrat de travail ?",
+     "options": [
+      "Le conseil de prud’hommes, selon les faits",
+      "L’agence, par une simple déclaration",
+      "Le propriétaire du logiciel utilisé",
+      "Le notaire qui a rédigé le contrat"
+     ],
+     "reponse": 0,
+     "aide": "Le juge regarde les faits.",
+     "explication": "Le **conseil de prud’hommes** requalifie selon les faits, quel que soit le nom du contrat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation.",
+     "categories": [
+      "Contrat de travail",
+      "Contrat d’entreprise"
+     ],
+     "items": [
+      [
+       "Un plombier salarié d’une entreprise",
+       0
+      ],
+      [
+       "Un plombier artisan appelé par un particulier",
+       1
+      ],
+      [
+       "Un graphiste qui organise seul son temps pour plusieurs clients",
+       1
+      ],
+      [
+       "Une vendeuse dont l’employeur fixe les horaires",
+       0
+      ]
+     ],
+     "aide": "Subordination ou liberté d’organisation ?",
+     "explication": "Avec **subordination** : contrat de travail. Avec **liberté d’organisation** : contrat d’entreprise."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6df449d-88cd-5286-a87a-801d55bc9f90",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel contrat pour quel besoin ?",
+   "competence": "analyser-document",
+   "situation": "Quatre entreprises cherchent du personnel pour des besoins différents. Sacha, lui, signe un CDD de 6 mois pour un salaire total de 9 000 €.",
+   "documents": [
+    {
+     "id": "contrats",
+     "type": "tableau",
+     "titre": "Les contrats de travail",
+     "colonnes": [
+      "Contrat",
+      "Particularité"
+     ],
+     "lignes": [
+      [
+       "CDD",
+       "Écrit, motif précis et temporaire"
+      ],
+      [
+       "CDI de chantier",
+       "Prend fin à l’achèvement du chantier"
+      ],
+      [
+       "Contrat saisonnier",
+       "Tâches qui se répètent chaque année"
+      ],
+      [
+       "Intérim",
+       "Agence, intérimaire et entreprise utilisatrice"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contrats",
+     "enonce": "Touche le contrat qui met en jeu trois acteurs.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche agence, intérimaire et entreprise.",
+     "explication": "L’**intérim** est une relation tripartite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque besoin au contrat adapté.",
+     "paires": [
+      [
+       "Remplacer une salariée en congé",
+       "CDD"
+      ],
+      [
+       "Construire un pont en trois ans",
+       "CDI de chantier"
+      ],
+      [
+       "Cueillir les fraises chaque été",
+       "Contrat saisonnier"
+      ],
+      [
+       "Trouver vite un cariste via une agence",
+       "Intérim"
+      ]
+     ],
+     "aide": "Un mot-clé dans chaque besoin.",
+     "explication": "Remplacement : **CDD**. Projet : **CDI de chantier**. Retour annuel : **saisonnier**. Agence : **intérim**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À la fin de son CDD, Sacha perçoit une indemnité de fin de contrat de 10 %. De combien, en euros ?",
+     "reponse": 900,
+     "unite": "€",
+     "aide": "Calcule 10 % de 9 000.",
+     "explication": "0,1 × 9 000 = **900 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6df449d-88cd-5286-a87a-801d55bc9f90",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un licenciement qui ne passe pas",
+   "competence": "analyser-document",
+   "situation": "Amandine est licenciée. Sa lettre et le calendrier de la procédure posent problème.",
+   "documents": [
+    {
+     "id": "proc",
+     "type": "tableau",
+     "titre": "Le calendrier",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Jour",
+      "Étape"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "Convocation à un entretien préalable"
+      ],
+      [
+       "Jeudi",
+       "Entretien préalable"
+      ],
+      [
+       "Vendredi",
+       "Lettre de licenciement envoyée, le lendemain de l’entretien"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Extrait de la lettre",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Nous vous licencions car votre attitude ne correspond pas à l’esprit de l’équipe."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "proc",
+     "enonce": "Touche l’étape qui ne respecte pas la procédure.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La lettre doit attendre au moins deux jours ouvrables après l’entretien.",
+     "explication": "Une lettre envoyée **le lendemain** de l’entretien ne respecte pas le délai de deux jours ouvrables."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire du motif de la lettre ?",
+     "options": [
+      "Il n’est pas objectif : pas de cause réelle et sérieuse",
+      "Il est valable car l’employeur est libre de juger",
+      "Il est valable car le motif figure dans la lettre",
+      "Il relève d’un licenciement pour motif économique"
+     ],
+     "reponse": 0,
+     "aide": "Des faits exacts et objectifs sont exigés.",
+     "explication": "Un ressenti n’est pas un fait objectif : **pas de cause réelle et sérieuse**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mode de rupture selon son initiative.",
+     "categories": [
+      "Du salarié",
+      "De l’employeur",
+      "D’un commun accord"
+     ],
+     "items": [
+      [
+       "La démission",
+       0
+      ],
+      [
+       "Le licenciement",
+       1
+      ],
+      [
+       "La rupture conventionnelle",
+       2
+      ],
+      [
+       "Le départ à la retraite",
+       0
+      ]
+     ],
+     "aide": "Qui prend la décision ?",
+     "explication": "La démission et la retraite viennent du **salarié** ; le licenciement de l’**employeur** ; la rupture conventionnelle des **deux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut obtenir Amandine devant le conseil de prud’hommes ?",
+     "options": [
+      "Une indemnité encadrée par un barème",
+      "L’annulation de toutes ses dettes personnelles",
+      "Une peine de prison pour son employeur",
+      "Le doublement de son salaire pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Il existe un plancher et un plafond.",
+     "explication": "Un licenciement abusif donne droit à une **indemnité encadrée par un barème**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6df449d-88cd-5286-a87a-801d55bc9f90",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Démission, licenciement ou accord ?",
+   "competence": "argumenter",
+   "situation": "Trois salariés quittent leur entreprise de trois façons différentes. Il faut qualifier chaque rupture et en tirer les conséquences.",
+   "documents": [
+    {
+     "id": "dos",
+     "type": "tableau",
+     "titre": "Trois dossiers",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Salarié",
+      "Faits"
+     ],
+     "lignes": [
+      [
+       "Zoé",
+       "Elle écrit à son patron qu’elle quitte l’entreprise pour un autre emploi."
+      ],
+      [
+       "Bilal",
+       "L’usine ferme son atelier ; le poste de Bilal est supprimé faute de commandes."
+      ],
+      [
+       "Clara",
+       "Clara et son employeur conviennent d’un départ, homologué par l’administration."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "apres",
+     "type": "tableau",
+     "titre": "Après la rupture",
+     "colonnes": [
+      "Mode",
+      "Initiative",
+      "Allocation chômage"
+     ],
+     "lignes": [
+      [
+       "Démission",
+       "Le salarié",
+       "Non, en principe"
+      ],
+      [
+       "Licenciement économique",
+       "L’employeur",
+       "Oui"
+      ],
+      [
+       "Rupture conventionnelle",
+       "Les deux parties",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque salarié à son mode de rupture.",
+     "paires": [
+      [
+       "Zoé",
+       "Démission"
+      ],
+      [
+       "Bilal",
+       "Licenciement économique"
+      ],
+      [
+       "Clara",
+       "Rupture conventionnelle"
+      ]
+     ],
+     "aide": "Qui décide ?",
+     "explication": "Zoé décide seule : **démission**. Bilal : **licenciement économique**. Clara : **rupture conventionnelle**."
+    },
+    {
+     "type": "zone",
+     "document": "apres",
+     "enonce": "Touche le mode de rupture qui n’ouvre pas droit au chômage en principe.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Regarde la dernière colonne.",
+     "explication": "La **démission** n’ouvre pas droit au chômage, en principe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Clara et son employeur signent le 1er mars. Le délai de rétractation de 15 jours calendaires court à partir du lendemain. Quel jour de mars expire-t-il ?",
+     "reponse": 16,
+     "unite": "mars",
+     "aide": "Commence à compter le 2 mars.",
+     "explication": "Du 2 au 16 mars : 15 jours. Le délai expire le **16 mars**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le licenciement de Bilal n’est-il pas un licenciement pour motif personnel ?",
+     "options": [
+      "Il tient à la fermeture d’un atelier, non à sa personne",
+      "Il résulte d’une faute grave commise par Bilal",
+      "Il a été décidé par Bilal lui-même",
+      "Il suit une insuffisance de résultats de Bilal"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’origine de la suppression du poste.",
+     "explication": "La cause est **étrangère à la personne** du salarié : c’est un motif économique."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ae1c0c7-5bec-5e5e-be82-0e2b0d559b91",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que l’employeur peut imposer",
+   "competence": "analyser-document",
+   "situation": "Un employeur prend quatre décisions. Sont-elles justifiées par la nature de la tâche et proportionnées au but recherché ?",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Quatre décisions",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Décision",
+      "Lieu"
+     ],
+     "lignes": [
+      [
+       "Exiger des chaussures de sécurité",
+       "Chantier"
+      ],
+      [
+       "Interdire d’adhérer à un syndicat",
+       "Entreprise"
+      ],
+      [
+       "Filmer sans prévenir personne",
+       "Salle de repos"
+      ],
+      [
+       "Interdire le téléphone personnel près d’une machine dangereuse",
+       "Atelier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque décision.",
+     "categories": [
+      "Justifiée et proportionnée",
+      "Illicite"
+     ],
+     "items": [
+      [
+       "Exiger des chaussures de sécurité sur un chantier",
+       0
+      ],
+      [
+       "Interdire d’adhérer à un syndicat",
+       1
+      ],
+      [
+       "Filmer la salle de repos sans prévenir",
+       1
+      ],
+      [
+       "Interdire le téléphone près d’une machine dangereuse",
+       0
+      ]
+     ],
+     "aide": "La sécurité justifie, la liberté syndicale protège.",
+     "explication": "La **sécurité** justifie une restriction ; la **liberté syndicale** et le **respect de la vie privée** l’interdisent."
+    },
+    {
+     "type": "zone",
+     "document": "mes",
+     "enonce": "Touche la décision qui viole la liberté syndicale.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche le mot « syndicat ».",
+     "explication": "Interdire d’**adhérer à un syndicat** viole la liberté syndicale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’article L. 1121-1 du Code du travail sur les restrictions ?",
+     "options": [
+      "Elles doivent être justifiées par la tâche et proportionnées",
+      "Elles sont libres si l’employeur les juge utiles",
+      "Elles sont toujours interdites dans l’entreprise",
+      "Elles doivent être votées par les salariés"
+     ],
+     "reponse": 0,
+     "aide": "Deux conditions se cumulent.",
+     "explication": "Une restriction doit être **justifiée par la nature de la tâche** et **proportionnée** au but."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ae1c0c7-5bec-5e5e-be82-0e2b0d559b91",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Grève ou pas grève ?",
+   "competence": "analyser-document",
+   "situation": "Quatre mouvements sociaux sont survenus. Le droit de grève a des limites : toutes les cessations du travail ne sont pas licites.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "tableau",
+     "titre": "Quatre mouvements",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Cas",
+      "Description"
+     ],
+     "lignes": [
+      [
+       "Cas A",
+       "Arrêt collectif de 24 heures pour obtenir une hausse de salaire"
+      ],
+      [
+       "Cas B",
+       "Ralentissement volontaire des cadences pendant trois semaines, sans arrêt"
+      ],
+      [
+       "Cas C",
+       "Arrêt collectif pour protester contre la politique étrangère d’un pays"
+      ],
+      [
+       "Cas D",
+       "Arrêt collectif dans un hôpital public, après un préavis de 5 jours"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "enonce": "Touche les deux cas de grève illicite.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Un ralentissement n’est pas une cessation ; la politique n’est pas une revendication professionnelle.",
+     "explication": "Le **ralentissement** (grève perlée) et la **revendication purement politique** rendent la grève illicite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans un service public, le préavis de grève est obligatoire. Combien de jours à l’avance ?",
+     "reponse": 5,
+     "unite": "jours",
+     "aide": "Regarde le cas D.",
+     "explication": "Le préavis est de **5 jours** dans les services publics."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un gréviste gagne 90 € par jour et fait grève 2 jours. Quelle retenue sur son salaire, en euros ?",
+     "reponse": 180,
+     "unite": "€",
+     "aide": "Le salaire n’est pas versé pour le temps de grève.",
+     "explication": "2 × 90 = **180 €** retenus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un salarié a fait une grève licite. Son employeur peut-il le licencier pour cela ?",
+     "options": [
+      "Non, sauf faute lourde de sa part",
+      "Oui, dès que la grève dure plus d’un jour",
+      "Oui, s’il est en CDD ou en intérim",
+      "Oui, si l’entreprise perd de l’argent"
+     ],
+     "reponse": 0,
+     "aide": "La sanction est interdite, sauf une exception.",
+     "explication": "Toute sanction est interdite, sauf **faute lourde** du gréviste."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ae1c0c7-5bec-5e5e-be82-0e2b0d559b91",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un message, une caméra, un post",
+   "competence": "argumenter",
+   "situation": "Trois dossiers de salariés arrivent aux prud’hommes. Dans chacun, il faut dire qui a tort : le salarié ou l’employeur ?",
+   "documents": [
+    {
+     "id": "dos3",
+     "type": "tableau",
+     "titre": "Trois dossiers",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Dossier",
+      "Faits"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Un salarié écrit en public que sa patronne est « une voleuse », sans preuve."
+      ],
+      [
+       "2",
+       "Un employeur lit un courriel marqué « PERSONNEL » sur l’ordinateur du salarié."
+      ],
+      [
+       "3",
+       "Une caméra cachée filme le poste de travail, sans information des salariés."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque dossier à sa qualification.",
+     "paires": [
+      [
+       "Accusation publique sans preuve",
+       "Abus de la liberté d’expression"
+      ],
+      [
+       "Lecture d’un message « PERSONNEL »",
+       "Atteinte au secret des correspondances"
+      ],
+      [
+       "Caméra cachée au poste de travail",
+       "Surveillance non portée à la connaissance des salariés"
+      ]
+     ],
+     "aide": "Liberté d’expression, vie privée, surveillance.",
+     "explication": "Le 1 est un **abus**, le 2 une atteinte au **secret des correspondances**, le 3 une **surveillance illicite**."
+    },
+    {
+     "type": "zone",
+     "document": "dos3",
+     "enonce": "Touche les deux dossiers où c’est l’employeur qui viole les droits du salarié.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Un message personnel et une caméra cachée.",
+     "explication": "Dans les dossiers **2** et **3**, l’employeur viole le secret des correspondances et l’information sur la surveillance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence pour le salarié du dossier 1 ?",
+     "options": [
+      "Une sanction disciplinaire est possible : c’est un abus",
+      "Aucune sanction, car la liberté d’expression est absolue",
+      "Une peine obligatoire de prison pour son employeur",
+      "Un doublement de son salaire en compensation"
+     ],
+     "reponse": 0,
+     "aide": "Le propos est diffamatoire.",
+     "explication": "Des propos **diffamatoires** sont un abus : une sanction disciplinaire est possible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une entreprise compte 38 salariés. Combien doit-elle en embaucher pour atteindre le seuil de 50 salariés du délégué syndical ?",
+     "reponse": 12,
+     "unite": "salariés",
+     "aide": "Soustrais 38 de 50.",
+     "explication": "50 − 38 = **12 salariés**."
+    }
+   ]
+  },
+  {
+   "chapitre": "26505728-5f34-56d4-8830-f8da1b767f87",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La protection de l’entrepreneur, pas à pas",
+   "competence": "se-reperer-temps",
+   "situation": "La loi a protégé peu à peu les biens de l’entrepreneur individuel. La frise résume les étapes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre étapes de protection",
+     "debut": 2000,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ins",
+       "date": 2003,
+       "nom": "Insaisissabilité"
+      },
+      {
+       "id": "eirl",
+       "date": 2010,
+       "nom": "EIRL"
+      },
+      {
+       "id": "res",
+       "date": 2015,
+       "nom": "Résidence protégée"
+      },
+      {
+       "id": "statut",
+       "date": 2022,
+       "nom": "Statut unique"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’étape qui rend la séparation des patrimoines automatique.",
+     "reponse": [
+      "statut"
+     ],
+     "aide": "Elle date de 2022.",
+     "explication": "Le **statut unique** de 2022 sépare de plein droit les deux patrimoines."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déclaration d’insaisissabilité (2003) du statut unique ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais 2003 de 2022.",
+     "explication": "2022 − 2003 = **19 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Yann lance son entreprise individuelle en 2001. Sur quels biens ses créanciers professionnels peuvent-ils se payer ?",
+     "options": [
+      "Sur tous ses biens, y compris sa maison",
+      "Uniquement sur son stock et ses outils",
+      "Uniquement sur sa voiture personnelle",
+      "Sur aucun bien, faute de société distincte"
+     ],
+     "reponse": 0,
+     "aide": "Avant 2003, aucune protection n’existe.",
+     "explication": "En 2001, le patrimoine est **unique** : tous ses biens répondent des dettes."
+    }
+   ]
+  },
+  {
+   "chapitre": "26505728-5f34-56d4-8830-f8da1b767f87",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les deux patrimoines de Yanis",
+   "competence": "raisonner",
+   "situation": "Yanis, plombier en entreprise individuelle depuis 2024, doit 15 000 € à un fournisseur. Le tableau liste ses biens.",
+   "documents": [
+    {
+     "id": "biens",
+     "type": "tableau",
+     "titre": "Les biens de Yanis",
+     "source": "Valeurs imaginées pour l’exercice.",
+     "colonnes": [
+      "Bien",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Camionnette de l’activité",
+       "12 000 €"
+      ],
+      [
+       "Outils",
+       "4 000 €"
+      ],
+      [
+       "Stock de tuyaux",
+       "2 000 €"
+      ],
+      [
+       "Appartement où il vit",
+       "180 000 €"
+      ],
+      [
+       "Livret d’épargne personnel",
+       "8 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque bien dans son patrimoine.",
+     "categories": [
+      "Patrimoine professionnel",
+      "Patrimoine personnel"
+     ],
+     "items": [
+      [
+       "La camionnette de l’activité",
+       0
+      ],
+      [
+       "Les outils",
+       0
+      ],
+      [
+       "Le stock de tuyaux",
+       0
+      ],
+      [
+       "L’appartement où il vit",
+       1
+      ],
+      [
+       "Le livret d’épargne",
+       1
+      ]
+     ],
+     "aide": "Un bien est professionnel s’il est utile à l’activité.",
+     "explication": "Les biens **utiles à l’activité** sont professionnels ; le logement et l’épargne sont **personnels**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur totale du patrimoine professionnel, en euros ?",
+     "reponse": 18000,
+     "unite": "€",
+     "aide": "Additionne camionnette, outils et stock.",
+     "explication": "12 000 + 4 000 + 2 000 = **18 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le fournisseur peut-il saisir l’appartement de Yanis ?",
+     "options": [
+      "Non : seul le patrimoine professionnel est son gage",
+      "Oui : tous les biens répondent de toutes les dettes",
+      "Oui : mais seulement pour la moitié de sa valeur",
+      "Non : seuls ses livrets d’épargne sont insaisissables"
+     ],
+     "reponse": 0,
+     "aide": "Depuis 2022, les deux patrimoines sont séparés.",
+     "explication": "Le gage du créancier professionnel est le **patrimoine professionnel** seulement."
+    },
+    {
+     "type": "choix",
+     "enonce": "La banque exige que Yanis signe une renonciation à la protection. Que change-t-elle ?",
+     "options": [
+      "Elle peut alors saisir ses biens personnels",
+      "Elle supprime la dette envers le fournisseur",
+      "Elle transforme l’entreprise en société",
+      "Elle rend l’appartement saisissable par tous"
+     ],
+     "reponse": 0,
+     "aide": "Yanis peut renoncer au profit d’un créancier.",
+     "explication": "Avec la **renonciation**, cette banque peut se payer sur les biens personnels, pas les autres créanciers."
+    }
+   ]
+  },
+  {
+   "chapitre": "26505728-5f34-56d4-8830-f8da1b767f87",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rester seule ou créer une société ?",
+   "competence": "argumenter",
+   "situation": "Lina est boulangère et micro-entrepreneuse. Son activité grandit : elle veut embaucher, emprunter et limiter ses risques.",
+   "documents": [
+    {
+     "id": "lina",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le projet de Lina",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Lina a lancé sa boulangerie en micro-entreprise. Les ventes grimpent : elle souhaite embaucher un employé, emprunter pour un nouveau four et séparer clairement son activité de sa vie privée. Son comptable évoque la création d’une société."
+     ]
+    },
+    {
+     "id": "formes",
+     "type": "tableau",
+     "titre": "Comparer les formes",
+     "colonnes": [
+      "Forme",
+      "Personne morale distincte ?",
+      "Associés"
+     ],
+     "lignes": [
+      [
+       "Entreprise individuelle",
+       "Non",
+       "L’entrepreneur seul"
+      ],
+      [
+       "Micro-entrepreneur",
+       "Non : c’est une entreprise individuelle",
+       "L’entrepreneur seul"
+      ],
+      [
+       "SASU",
+       "Oui",
+       "Un associé unique"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formes",
+     "enonce": "Touche la forme qui crée une personne morale distincte de l’entrepreneur.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche le « Oui ».",
+     "explication": "La **SASU** est dotée de la personnalité morale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne exactement le statut de micro-entrepreneur ?",
+     "options": [
+      "Un régime simplifié appliqué à une entreprise individuelle",
+      "Une société dotée d’une personnalité morale propre",
+      "Un contrat de travail avec des cotisations réduites",
+      "Une association déclarée en préfecture"
+     ],
+     "reponse": 0,
+     "aide": "C’est un régime, pas une forme juridique.",
+     "explication": "Le micro-entrepreneur est un **entrepreneur individuel** à régime simplifié."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Le micro-entrepreneur est un ___ individuel qui bénéficie d’un régime ___.",
+     "reponses": [
+      [
+       "entrepreneur"
+      ],
+      [
+       "simplifié"
+      ]
+     ],
+     "banque": [
+      "entrepreneur",
+      "simplifié",
+      "société",
+      "complexe"
+     ],
+     "aide": "Reprends les mots du cours.",
+     "explication": "Un **entrepreneur** individuel à régime **simplifié**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Donne le sigle d’une société à associé unique.",
+     "reponse": [
+      "SASU",
+      "EURL"
+     ],
+     "aide": "Ce sont des sociétés d’une seule personne.",
+     "explication": "Une **EURL** ou une **SASU** est une société à associé unique, dotée de la personnalité morale."
+    }
+   ]
+  }
+ ]
+}

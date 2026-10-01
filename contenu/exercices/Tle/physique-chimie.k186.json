@@ -1,0 +1,3542 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "exercices": [
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois diodes, trois énergies",
+      "competence": "lire-graphique",
+      "situation": "Une lampe de poche contient trois diodes électroluminescentes. On donne h = 6,63 × 10⁻³⁴ J·s, c = 3,00 × 10⁸ m·s⁻¹ et 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "documents": [
+        {
+          "id": "diodes",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Longueur d’onde de chaque diode",
+          "categories": [
+            "Diode rouge",
+            "Diode verte",
+            "Diode bleue"
+          ],
+          "series": [
+            {
+              "nom": "λ",
+              "valeurs": [
+                650,
+                530,
+                450
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Longueur d’onde",
+            "unite": "nm",
+            "min": 0,
+            "max": 700,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Diode"
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies, écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "diodes",
+          "enonce": "Touche la diode dont les photons transportent le plus d’énergie.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "E = h c / λ : quand λ diminue, l’énergie du photon augmente.",
+          "explication": "**La diode bleue** a la plus petite longueur d’onde (450 nm) : ses photons sont les plus énergétiques."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie d’un photon de la diode bleue, en 10⁻¹⁹ J (arrondie au centième). Convertis λ en mètres.",
+          "reponse": 4.42,
+          "unite": "× 10⁻¹⁹ J",
+          "tolerance": 0.02,
+          "aide": "λ = 450 nm = 450 × 10⁻⁹ m. Utilise E = h c / λ.",
+          "explication": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ ÷ (450 × 10⁻⁹) ≈ **4,42 × 10⁻¹⁹ J**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime cette énergie en électronvolts (arrondie au centième).",
+          "reponse": 2.76,
+          "unite": "eV",
+          "tolerance": 0.03,
+          "aide": "Divise par 1,60 × 10⁻¹⁹ J, qui vaut 1 eV.",
+          "explication": "4,42 × 10⁻¹⁹ ÷ 1,60 × 10⁻¹⁹ ≈ **2,76 eV**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La cellule photoélectrique",
+      "competence": "analyser-document",
+      "situation": "Une cellule photoélectrique est éclairée par une lumière violette de longueur d’onde 400 nm. On donne h = 6,63 × 10⁻³⁴ J·s, c = 3,00 × 10⁸ m·s⁻¹ et 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "documents": [
+        {
+          "id": "metaux",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Travail d’extraction de quatre métaux",
+          "categories": [
+            "Césium",
+            "Potassium",
+            "Zinc",
+            "Platine"
+          ],
+          "series": [
+            {
+              "nom": "W₀",
+              "valeurs": [
+                2.1,
+                2.3,
+                4.3,
+                5.6
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Travail d’extraction W₀",
+            "unite": "eV",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Métal"
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie d’un photon de 400 nm, en eV (arrondie au dixième).",
+          "reponse": 3.1,
+          "unite": "eV",
+          "tolerance": 0.05,
+          "aide": "E = h c / λ en joules, puis divise par 1,60 × 10⁻¹⁹.",
+          "explication": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ ÷ (400 × 10⁻⁹) ≈ 4,97 × 10⁻¹⁹ J, soit **3,1 eV**."
+        },
+        {
+          "type": "zone",
+          "document": "metaux",
+          "enonce": "Touche tous les métaux qui peuvent émettre des électrons sous cette lumière.",
+          "reponse": [
+            "k0",
+            "k1"
+          ],
+          "multiple": true,
+          "aide": "Il faut que l’énergie d’un photon dépasse W₀.",
+          "explication": "Seuls le **césium** (2,1 eV) et le **potassium** (2,3 eV) ont un W₀ inférieur à 3,1 eV."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie cinétique maximale, en eV, un électron arraché au césium emporte-t-il ? Arrondis au dixième.",
+          "reponse": 1,
+          "unite": "eV",
+          "tolerance": 0.05,
+          "aide": "Ec max = énergie du photon − W₀.",
+          "explication": "Ec = 3,11 − 2,1 ≈ **1,0 eV**."
+        },
+        {
+          "type": "choix",
+          "enonce": "On remplace la lampe par une lampe violette dix fois plus intense. Peut-on maintenant arracher des électrons au zinc ?",
+          "options": [
+            "Non : chaque photon garde 3,1 eV, inférieur à W₀",
+            "Oui : dix fois plus de photons apportent dix fois plus d’énergie à un électron",
+            "Oui, mais seulement après quelques minutes d’éclairement",
+            "Non, car l’énergie des photons baisse quand la lampe est plus intense"
+          ],
+          "reponse": 0,
+          "aide": "Un électron reçoit un seul photon, jamais plusieurs à la fois.",
+          "explication": "L’intensité change le **nombre** de photons, pas leur énergie. Avec 3,1 eV < 4,3 eV, aucun électron n’est arraché au zinc."
+        }
+      ]
+    },
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les raies de l’hydrogène",
+      "competence": "modeliser",
+      "situation": "Voici les premiers niveaux d’énergie de l’atome d’hydrogène (échelle non respectée). On donne h = 6,63 × 10⁻³⁴ J·s, c = 3,00 × 10⁸ m·s⁻¹ et 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "documents": [
+        {
+          "id": "niveaux",
+          "type": "schema",
+          "titre": "Niveaux d’énergie de l’hydrogène",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                215
+              ],
+              "a": [
+                250,
+                215
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 219,
+              "texte": "n = 1",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 258,
+              "y": 219,
+              "texte": "−13,6 eV",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                135
+              ],
+              "a": [
+                250,
+                135
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 139,
+              "texte": "n = 2",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 258,
+              "y": 139,
+              "texte": "−3,40 eV",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                95
+              ],
+              "a": [
+                250,
+                95
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 99,
+              "texte": "n = 3",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 258,
+              "y": 99,
+              "texte": "−1,51 eV",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                70,
+                60
+              ],
+              "a": [
+                250,
+                60
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 64,
+              "texte": "n = 4",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 258,
+              "y": 64,
+              "texte": "−0,85 eV",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                110,
+                95
+              ],
+              "a": [
+                110,
+                135
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 86,
+              "y": 104,
+              "l": 48,
+              "h": 22,
+              "texte": "3 → 2",
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "t32",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                60
+              ],
+              "a": [
+                160,
+                135
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 136,
+              "y": 86.5,
+              "l": 48,
+              "h": 22,
+              "texte": "4 → 2",
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "t42",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                60
+              ],
+              "a": [
+                210,
+                95
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "rect",
+              "x": 186,
+              "y": 66.5,
+              "l": 48,
+              "h": 22,
+              "texte": "4 → 3",
+              "teinte": "blanc",
+              "motif": "plein",
+              "id": "t43",
+              "zone": true
+            }
+          ]
+        },
+        {
+          "id": "raies",
+          "type": "tableau",
+          "titre": "Raies visibles observées",
+          "colonnes": [
+            "Raie",
+            "Longueur d’onde (nm)"
+          ],
+          "lignes": [
+            [
+              "1",
+              656
+            ],
+            [
+              "2",
+              486
+            ],
+            [
+              "3",
+              434
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle énergie, en eV, l’atome émet-il en passant du niveau n = 3 au niveau n = 2 ?",
+          "reponse": 1.89,
+          "unite": "eV",
+          "tolerance": 0.02,
+          "aide": "ΔE = E₃ − E₂, avec les valeurs du schéma.",
+          "explication": "ΔE = −1,51 − (−3,40) = **1,89 eV**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur d’onde du photon émis pour cette transition, en nm (arrondie à l’unité) ?",
+          "reponse": 658,
+          "unite": "nm",
+          "tolerance": 4,
+          "aide": "Convertis ΔE en joules, puis λ = h c / ΔE.",
+          "explication": "ΔE = 1,89 × 1,60 × 10⁻¹⁹ = 3,02 × 10⁻¹⁹ J, d’où λ = h c / ΔE ≈ **658 nm**."
+        },
+        {
+          "type": "zone",
+          "document": "niveaux",
+          "enonce": "Touche la transition qui produit la raie de 486 nm du tableau.",
+          "reponse": [
+            "t42"
+          ],
+          "aide": "Calcule ΔE puis λ pour chaque transition. L’une sort du visible.",
+          "explication": "4 → 2 : ΔE = 2,55 eV, λ ≈ 488 nm, soit la raie de 486 nm. La transition 3 → 2 donne 658 nm et 4 → 3 environ 1 880 nm (infrarouge)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un photon de 2,00 eV traverse des atomes d’hydrogène dans le niveau n = 2. Que se passe-t-il ?",
+          "options": [
+            "Il n’est pas absorbé : aucun écart entre deux niveaux ne vaut 2,00 eV",
+            "Il est absorbé et l’atome passe au niveau n = 3, en gardant le surplus",
+            "Il est absorbé en partie, selon son intensité",
+            "Il est toujours absorbé si la lumière est assez intense"
+          ],
+          "reponse": 0,
+          "aide": "À partir de n = 2, les écarts possibles sont 1,89 eV (vers n = 3) et 2,55 eV (vers n = 4).",
+          "explication": "Un atome n’absorbe que la **différence exacte** entre deux niveaux. 2,00 eV ne correspond à aucun écart : le photon passe."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un condensateur qui se charge",
+      "competence": "lire-graphique",
+      "situation": "Un condensateur initialement déchargé est relié à un générateur de tension E = 6,0 V par l’intermédiaire d’un conducteur ohmique. On enregistre la tension uC à ses bornes.",
+      "documents": [
+        {
+          "id": "charge",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Charge du condensateur",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "series": [
+            {
+              "nom": "uC",
+              "valeurs": [
+                0,
+                2.36,
+                3.79,
+                4.66,
+                5.19,
+                5.51,
+                5.7,
+                5.82,
+                5.89,
+                5.93,
+                5.96
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "uC",
+            "unite": "V",
+            "min": 0,
+            "max": 7,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Vers quelle valeur, en volts, la tension uC tend-elle ?",
+          "reponse": 6,
+          "unite": "V",
+          "tolerance": 0.2,
+          "aide": "Regarde où la courbe se stabilise.",
+          "explication": "La courbe tend vers la tension du générateur : **6,0 V**."
+        },
+        {
+          "type": "zone",
+          "document": "charge",
+          "enonce": "Touche l’instant où uC atteint 63 % de sa valeur finale, soit environ 3,8 V.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche sur la courbe la hauteur 3,8 V.",
+          "explication": "À t = 2 s, uC ≈ 3,8 V = 0,63 × 6,0 V. **Cet instant est la constante de temps τ.**"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le circuit comporte R = 2,0 kΩ et C = 1,0 mF. Calcule τ = R × C, en secondes.",
+          "reponse": 2,
+          "unite": "s",
+          "tolerance": 0.05,
+          "aide": "Convertis : 2,0 kΩ = 2 000 Ω et 1,0 mF = 0,0010 F.",
+          "explication": "τ = 2 000 × 0,0010 = **2,0 s**, comme sur la courbe."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La jauge du réservoir",
+      "competence": "modeliser",
+      "situation": "Un capteur capacitif mesure le niveau d’un liquide : deux armatures verticales longent le réservoir. On place le capteur dans un circuit RC avec R = 10 kΩ et on mesure la constante de temps τ = R × C.",
+      "documents": [
+        {
+          "id": "capteur",
+          "type": "schema",
+          "titre": "Le capteur de niveau",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 110,
+              "y": 20,
+              "l": 120,
+              "h": 200,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 112,
+              "y": 22,
+              "l": 116,
+              "h": 88,
+              "motif": "aucun",
+              "id": "air",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 112,
+              "y": 110,
+              "l": 116,
+              "h": 108,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "liquide",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 94,
+              "y": 30,
+              "l": 8,
+              "h": 180,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "rect",
+              "x": 238,
+              "y": 30,
+              "l": 8,
+              "h": 180,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 70,
+              "texte": "Air",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 170,
+              "texte": "Liquide",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                278,
+                110
+              ],
+              "a": [
+                278,
+                218
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 300,
+              "y": 168,
+              "texte": "h",
+              "ancre": "milieu",
+              "taille": "grand"
+            },
+            {
+              "forme": "etiquette",
+              "x": 40,
+              "y": 22,
+              "texte": "Armature",
+              "vers": [
+                94,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capacite",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Capacité en fonction de h",
+          "categories": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "series": [
+            {
+              "nom": "C",
+              "valeurs": [
+                1,
+                2.5,
+                4,
+                5.5,
+                7
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Capacité C",
+            "unite": "nF",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Hauteur de liquide h (cm)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "capteur",
+          "enonce": "Touche ce qui sépare les armatures au-dessus du liquide.",
+          "reponse": [
+            "air"
+          ],
+          "aide": "Regarde la partie du réservoir qui n’est pas remplie de liquide.",
+          "explication": "Au-dessus du liquide, c’est **l’air** qui joue le rôle d’isolant. Quand le niveau monte, le liquide le remplace et la capacité change."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la courbe la capacité du capteur pour h = 10 cm, en nF.",
+          "reponse": 4,
+          "unite": "nF",
+          "tolerance": 0.2,
+          "aide": "Repère le point d’abscisse 10.",
+          "explication": "Pour h = 10 cm, C = **4,0 nF**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la constante de temps τ pour h = 10 cm, en microsecondes.",
+          "reponse": 40,
+          "unite": "µs",
+          "tolerance": 2,
+          "aide": "τ = R × C avec R = 10 000 Ω et C = 4,0 × 10⁻⁹ F.",
+          "explication": "τ = 1,0 × 10⁴ × 4,0 × 10⁻⁹ = 4,0 × 10⁻⁵ s = **40 µs**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On mesure τ = 55 µs. Calcule C puis lis sur la courbe la hauteur h correspondante, en cm.",
+          "reponse": 15,
+          "unite": "cm",
+          "tolerance": 0.5,
+          "aide": "C = τ / R = 55 × 10⁻⁶ ÷ 10 000, puis cherche cette valeur sur la courbe.",
+          "explication": "C = 5,5 × 10⁻⁹ F = 5,5 nF. La courbe donne **h = 15 cm**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6b59646-fd8a-5980-8c1f-fd2bd1f26455",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le flash qui se vide",
+      "competence": "modeliser",
+      "situation": "Dans un appareil photo, un condensateur chargé à u₀ = 12 V se décharge en quelques dizaines de millisecondes dans la lampe du flash. On enregistre sa tension.",
+      "documents": [
+        {
+          "id": "decharge",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Décharge du condensateur",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100",
+            "110",
+            "120",
+            "130",
+            "140",
+            "150"
+          ],
+          "series": [
+            {
+              "nom": "uC",
+              "valeurs": [
+                12,
+                8.6,
+                6.16,
+                4.41,
+                3.16,
+                2.27,
+                1.62,
+                1.16,
+                0.83,
+                0.6,
+                0.43,
+                0.31,
+                0.22,
+                0.16,
+                0.11,
+                0.08
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "uC",
+            "unite": "V",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps (ms)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "flash",
+          "type": "tableau",
+          "titre": "Le condensateur du flash",
+          "colonnes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Tension initiale u₀",
+              "12 V"
+            ],
+            [
+              "Capacité C",
+              "100 µF"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "decharge",
+          "enonce": "À t = τ, la tension a perdu 63 % de sa valeur : il en reste 37 %, soit environ 4,4 V. Touche cet instant.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la hauteur 4,4 V sur la courbe.",
+          "explication": "La tension vaut 4,4 V à t = 30 ms : **τ = 30 ms**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis de τ la valeur de la résistance R du circuit de décharge, en ohms (τ = R × C).",
+          "reponse": 300,
+          "unite": "Ω",
+          "tolerance": 10,
+          "aide": "R = τ / C, avec τ = 0,030 s et C = 100 × 10⁻⁶ F.",
+          "explication": "R = 0,030 ÷ (100 × 10⁻⁶) = **300 Ω**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie initialement stockée, ½ C u₀², en millijoules.",
+          "reponse": 7.2,
+          "unite": "mJ",
+          "tolerance": 0.1,
+          "aide": "C = 100 × 10⁻⁶ F et u₀ = 12 V : le résultat est en joules.",
+          "explication": "½ × 100 × 10⁻⁶ × 12² = 7,2 × 10⁻³ J = **7,2 mJ**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À t = τ, quelle part de l’énergie initiale reste-t-il dans le condensateur ?",
+          "options": [
+            "Environ 14 %",
+            "Environ 37 %",
+            "Environ 63 %",
+            "La moitié exactement"
+          ],
+          "reponse": 0,
+          "aide": "L’énergie est proportionnelle à u² : élève 0,37 au carré.",
+          "explication": "u vaut 0,37 u₀, donc E = ½ C (0,37 u₀)² ≈ 0,14 × E₀ : il reste **environ 14 %**."
+        },
+        {
+          "type": "zone",
+          "document": "decharge",
+          "enonce": "Touche le premier instant où la tension est passée sous 1 V.",
+          "reponse": [
+            "k8"
+          ],
+          "aide": "À 70 ms, uC vaut encore 1,2 V environ.",
+          "explication": "À 70 ms, uC ≈ 1,2 V ; à **80 ms**, uC ≈ 0,8 V : c’est le premier point sous 1 V."
+        }
+      ]
+    },
+    {
+      "chapitre": "2fe2e5b7-0d62-5462-93b4-d903c13ddc3e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une estérification qui s’arrête",
+      "competence": "lire-graphique",
+      "situation": "On mélange 1,00 mol d’acide éthanoïque et 1,00 mol d’éthanol. On suit l’avancement x de la transformation au cours du temps.",
+      "documents": [
+        {
+          "id": "avancement",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Avancement au cours du temps",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"
+          ],
+          "series": [
+            {
+              "nom": "x",
+              "valeurs": [
+                0,
+                0.3,
+                0.48,
+                0.58,
+                0.64,
+                0.667,
+                0.667,
+                0.667,
+                0.667,
+                0.667,
+                0.667
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Avancement x",
+            "unite": "mol",
+            "min": 0,
+            "max": 1,
+            "pas": 0.2
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "avancement",
+          "enonce": "Touche le premier instant où le système a atteint l’équilibre.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "L’avancement cesse de varier.",
+          "explication": "À partir de **50 min**, x ne change plus : l’état d’équilibre est atteint."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis l’avancement final x_f, en mol.",
+          "reponse": 0.67,
+          "unite": "mol",
+          "tolerance": 0.02,
+          "aide": "C’est la hauteur du palier.",
+          "explication": "Le palier est à **x_f ≈ 0,67 mol**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si la transformation était totale, on aurait x_max = 1,00 mol. Calcule le taux d’avancement final τ = x_f / x_max, en %.",
+          "reponse": 67,
+          "unite": "%",
+          "tolerance": 2,
+          "aide": "Divise x_f par x_max, puis multiplie par 100.",
+          "explication": "τ = 0,67 ÷ 1,00 = 0,67, soit **67 %** : la transformation n’est pas totale."
+        }
+      ]
+    },
+    {
+      "chapitre": "2fe2e5b7-0d62-5462-93b4-d903c13ddc3e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Dans quel sens ça évolue ?",
+      "competence": "calculer",
+      "situation": "Trois mélanges sont préparés à la même température avec les espèces de la réaction CH₃COOH + NH₃ = CH₃COO⁻ + NH₄⁺, de constante d’équilibre K = 2,5 × 10⁴. Concentrations en mol·L⁻¹.",
+      "documents": [
+        {
+          "id": "melanges",
+          "type": "tableau",
+          "titre": "Composition initiale des trois mélanges",
+          "colonnes": [
+            "Mélange",
+            "[CH₃COOH]",
+            "[NH₃]",
+            "[CH₃COO⁻]",
+            "[NH₄⁺]"
+          ],
+          "lignes": [
+            [
+              "Mélange 1",
+              "1,0 × 10⁻¹",
+              "1,0 × 10⁻¹",
+              "1,0 × 10⁻²",
+              "1,0 × 10⁻²"
+            ],
+            [
+              "Mélange 2",
+              "1,0 × 10⁻³",
+              "1,0 × 10⁻³",
+              "2,0 × 10⁻¹",
+              "2,0 × 10⁻¹"
+            ],
+            [
+              "Mélange 3",
+              "1,0 × 10⁻³",
+              "2,0 × 10⁻³",
+              "5,0 × 10⁻¹",
+              "1,0 × 10⁻¹"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le quotient de réaction initial du mélange 1 : Qr,i = [CH₃COO⁻][NH₄⁺] / ([CH₃COOH][NH₃]). Donne un nombre décimal.",
+          "reponse": 0.01,
+          "tolerance": 0.001,
+          "aide": "Numérateur : 1,0 × 10⁻² × 1,0 × 10⁻². Dénominateur : 1,0 × 10⁻¹ × 1,0 × 10⁻¹.",
+          "explication": "Qr,i = 10⁻⁴ ÷ 10⁻² = **0,010**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule Qr,i du mélange 2. Écris le nombre en entier, sans puissance de 10.",
+          "reponse": 40000,
+          "tolerance": 500,
+          "aide": "Produit des concentrations du haut : 0,20 × 0,20. Du bas : 1,0 × 10⁻³ × 1,0 × 10⁻³.",
+          "explication": "Qr,i = 0,040 ÷ 10⁻⁶ = **40 000**, soit 4,0 × 10⁴."
+        },
+        {
+          "type": "zone",
+          "document": "melanges",
+          "enonce": "Touche le nom du mélange qui est déjà à l’équilibre (Qr,i = K).",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Calcule Qr,i du mélange 3 : 0,50 × 0,10 au numérateur, 1,0 × 10⁻³ × 2,0 × 10⁻³ au dénominateur.",
+          "explication": "Pour le mélange 3, Qr,i = 0,050 ÷ 2,0 × 10⁻⁶ = 2,5 × 10⁴ = K : **le mélange 3** est à l’équilibre."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque mélange à son sens d’évolution, en comparant Qr,i à K.",
+          "paires": [
+            [
+              "Mélange 1",
+              "Il évolue dans le sens direct"
+            ],
+            [
+              "Mélange 2",
+              "Il évolue dans le sens indirect"
+            ],
+            [
+              "Mélange 3",
+              "Il n’évolue pas"
+            ]
+          ],
+          "aide": "Qr,i < K : sens direct ; Qr,i > K : sens indirect.",
+          "explication": "Mélange 1 : 0,010 < K, **sens direct**. Mélange 2 : 4,0 × 10⁴ > K, **sens indirect**. Mélange 3 : Qr,i = K, **aucune évolution**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2fe2e5b7-0d62-5462-93b4-d903c13ddc3e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Diluer un acide faible",
+      "competence": "raisonner",
+      "situation": "On mesure le pH de solutions d’acide éthanoïque de concentrations c différentes, puis on compare avec des solutions d’acide chlorhydrique de mêmes concentrations. On rappelle [H₃O⁺] = 10⁻ᵖᴴ mol·L⁻¹.",
+      "documents": [
+        {
+          "id": "ethanoique",
+          "type": "tableau",
+          "titre": "Acide éthanoïque",
+          "colonnes": [
+            "c (mol·L⁻¹)",
+            "pH mesuré"
+          ],
+          "lignes": [
+            [
+              "1,0 × 10⁻¹",
+              "2,88"
+            ],
+            [
+              "1,0 × 10⁻²",
+              "3,38"
+            ],
+            [
+              "1,0 × 10⁻³",
+              "3,91"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures arrondies"
+        },
+        {
+          "id": "chlorhydrique",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Acide chlorhydrique de mêmes concentrations",
+          "categories": [
+            "0,10 mol/L",
+            "0,010 mol/L",
+            "0,0010 mol/L"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                1,
+                2,
+                3
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 5,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Concentration c"
+          },
+          "valeurs": true,
+          "source": "Mesures arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule [H₃O⁺] pour l’acide éthanoïque à c = 1,0 × 10⁻² mol·L⁻¹, en 10⁻⁴ mol·L⁻¹ (arrondie au centième).",
+          "reponse": 4.17,
+          "unite": "× 10⁻⁴ mol·L⁻¹",
+          "tolerance": 0.05,
+          "aide": "Calcule 10 puissance −3,38.",
+          "explication": "Avec pH = 3,38, [H₃O⁺] = 10⁻³·³⁸ ≈ **4,17 × 10⁻⁴ mol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le taux d’avancement final τ = [H₃O⁺] / c de cette solution, en % (arrondi au dixième).",
+          "reponse": 4.2,
+          "unite": "%",
+          "tolerance": 0.15,
+          "aide": "Divise 4,17 × 10⁻⁴ par 1,0 × 10⁻².",
+          "explication": "τ = 4,17 × 10⁻⁴ ÷ 1,0 × 10⁻² ≈ 0,042, soit **4,2 %**."
+        },
+        {
+          "type": "zone",
+          "document": "ethanoique",
+          "enonce": "Touche la concentration de la solution d’acide éthanoïque où l’acide est le plus dissocié.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Compare τ pour les trois solutions : il grandit quand l’acide est plus dilué.",
+          "explication": "Pour c = 1,0 × 10⁻³ mol·L⁻¹, τ ≈ 12 % : c’est **la solution la plus diluée** où l’acide est le plus dissocié."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec c = 1,0 × 10⁻² mol·L⁻¹, calcule pKa = −log Ka, où Ka = [H₃O⁺]² / (c − [H₃O⁺]). Arrondis au centième.",
+          "reponse": 4.74,
+          "tolerance": 0.05,
+          "aide": "Ka = (4,17 × 10⁻⁴)² ÷ (1,0 × 10⁻² − 4,17 × 10⁻⁴), puis prends −log.",
+          "explication": "Ka ≈ 1,8 × 10⁻⁵, d’où **pKa ≈ 4,74** : proche de la valeur connue 4,8."
+        },
+        {
+          "type": "choix",
+          "enonce": "À c = 1,0 × 10⁻³ mol·L⁻¹, l’acide chlorhydrique a un pH de 3,00 et l’acide éthanoïque de 3,91. Pourquoi ?",
+          "options": [
+            "L’acide chlorhydrique réagit totalement avec l’eau, l’acide éthanoïque seulement en partie",
+            "L’acide éthanoïque est plus concentré que l’acide chlorhydrique, d’où son pH plus élevé",
+            "Leurs constantes d’équilibre K sont identiques, et seul le taux d’avancement τ diffère",
+            "L’acide éthanoïque ne réagit pas du tout avec l’eau, donc il ne libère aucun ion H₃O⁺"
+          ],
+          "reponse": 0,
+          "aide": "Compare le nombre d’ions H₃O⁺ formés à partir de la même quantité d’acide.",
+          "explication": "Acide fort : transformation **totale**, [H₃O⁺] = c. Acide faible : équilibre, **moins** d’ions H₃O⁺, donc un pH plus élevé."
+        }
+      ]
+    },
+    {
+      "chapitre": "96290d8f-5991-51e8-86a1-48fc9528b1ef",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La pile de Daniell",
+      "competence": "observer-schema",
+      "situation": "Une pile est faite de deux béchers reliés par un pont salin : l’un contient une lame de zinc dans une solution de sulfate de zinc, l’autre une lame de cuivre dans une solution de sulfate de cuivre. Pendant le fonctionnement, la lame de zinc se dissout.",
+      "documents": [
+        {
+          "id": "daniell",
+          "type": "schema",
+          "titre": "La pile et son circuit extérieur",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 100,
+              "l": 130,
+              "h": 110,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 22,
+              "y": 130,
+              "l": 126,
+              "h": 78,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 190,
+              "y": 100,
+              "l": 130,
+              "h": 110,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 192,
+              "y": 130,
+              "l": 126,
+              "h": 78,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 65,
+              "y": 55,
+              "l": 18,
+              "h": 120,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "zinc",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 255,
+              "y": 55,
+              "l": 18,
+              "h": 120,
+              "teinte": "ambre",
+              "motif": "plein",
+              "id": "cuivre",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                74,
+                55
+              ],
+              "a": [
+                74,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                74,
+                25
+              ],
+              "a": [
+                140,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                200,
+                25
+              ],
+              "a": [
+                264,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                264,
+                25
+              ],
+              "a": [
+                264,
+                55
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 140,
+              "y": 12,
+              "l": 60,
+              "h": 26,
+              "texte": "Lampe",
+              "teinte": "blanc",
+              "motif": "plein"
+            },
+            {
+              "forme": "rect",
+              "x": 105,
+              "y": 116,
+              "l": 130,
+              "h": 20,
+              "texte": "pont salin",
+              "arrondi": 8,
+              "teinte": "sable",
+              "motif": "plein",
+              "id": "pont",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 85,
+              "y": 194,
+              "texte": "Zinc",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 255,
+              "y": 194,
+              "texte": "Cuivre",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 85,
+              "y": 232,
+              "texte": "ZnSO₄ (aq)",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 255,
+              "y": 232,
+              "texte": "CuSO₄ (aq)",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "daniell",
+          "enonce": "Touche l’électrode qui joue le rôle d’anode, siège de l’oxydation.",
+          "reponse": [
+            "zinc"
+          ],
+          "aide": "Quelle lame se dissout pendant le fonctionnement ?",
+          "explication": "La lame de zinc se dissout : le zinc est **oxydé**. C’est l’anode, et le pôle négatif de la pile."
+        },
+        {
+          "type": "zone",
+          "document": "daniell",
+          "enonce": "Touche ce qui ferme le circuit à l’intérieur de la pile en laissant circuler des ions.",
+          "reponse": [
+            "pont"
+          ],
+          "aide": "Ce n’est ni une lame ni la lampe.",
+          "explication": "Le **pont salin** laisse passer les ions : il ferme le circuit et maintient l’électroneutralité des solutions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le fil du circuit extérieur, dans quel sens circulent les électrons ?",
+          "options": [
+            "De la lame de zinc vers la lame de cuivre",
+            "De la lame de cuivre vers la lame de zinc",
+            "Dans les deux sens, tour à tour",
+            "Ils traversent le pont salin"
+          ],
+          "reponse": 0,
+          "aide": "Les électrons partent de l’électrode où ils sont libérés.",
+          "explication": "Le zinc libère des électrons (anode) : ils circulent **du zinc vers le cuivre** dans le fil, et le courant conventionnel va en sens inverse."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète les deux demi-équations.",
+          "texte": "À l’anode : Zn = ___ + 2 e⁻ ; à la cathode : Cu²⁺ + 2 e⁻ = ___.",
+          "reponses": [
+            [
+              "Zn²⁺"
+            ],
+            [
+              "Cu"
+            ]
+          ],
+          "banque": [
+            "Zn²⁺",
+            "Cu",
+            "Zn",
+            "Cu²⁺"
+          ],
+          "aide": "À l’anode, le zinc perd des électrons ; à la cathode, l’ion cuivre en capte.",
+          "explication": "Anode : Zn = **Zn²⁺** + 2 e⁻. Cathode : Cu²⁺ + 2 e⁻ = **Cu**. Le cuivre se dépose sur la lame."
+        }
+      ]
+    },
+    {
+      "chapitre": "96290d8f-5991-51e8-86a1-48fc9528b1ef",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Combien de temps la pile tient-elle ?",
+      "competence": "calculer",
+      "situation": "Une pile débite un courant constant I = 50 mA. Son anode est une lame de zinc de masse 6,5 g (M = 65 g·mol⁻¹). Demi-équation à l’anode : Zn = Zn²⁺ + 2 e⁻. On donne F = 96 500 C·mol⁻¹.",
+      "documents": [
+        {
+          "id": "charge",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Charge débitée par la pile",
+          "categories": [
+            "0",
+            "20",
+            "40",
+            "60",
+            "80",
+            "100",
+            "120"
+          ],
+          "series": [
+            {
+              "nom": "Q",
+              "valeurs": [
+                0,
+                3600,
+                7200,
+                10800,
+                14400,
+                18000,
+                21600
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Charge Q",
+            "unite": "C",
+            "min": 0,
+            "max": 24000,
+            "pas": 4000
+          },
+          "axeX": {
+            "titre": "Temps (h)"
+          },
+          "valeurs": false,
+          "source": "Calculée pour I = 50 mA"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la quantité de matière de zinc de l’anode, en mol.",
+          "reponse": 0.1,
+          "unite": "mol",
+          "tolerance": 0.002,
+          "aide": "n = m / M.",
+          "explication": "n(Zn) = 6,5 ÷ 65 = **0,10 mol**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Chaque atome de zinc libère 2 électrons. Quelle quantité d’électrons, en mol, la lame peut-elle fournir au plus ?",
+          "reponse": 0.2,
+          "unite": "mol",
+          "tolerance": 0.005,
+          "aide": "Regarde la demi-équation : 1 Zn donne 2 e⁻.",
+          "explication": "n(e⁻) = 2 × 0,10 = **0,20 mol**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la charge électrique maximale que la pile peut débiter, Q = n(e⁻) × F, en coulombs.",
+          "reponse": 19300,
+          "unite": "C",
+          "tolerance": 200,
+          "aide": "Q = 0,20 × 96 500.",
+          "explication": "Q = 0,20 × 96 500 = **19 300 C**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la courbe la charge déjà débitée au bout de 60 h, en coulombs.",
+          "reponse": 10800,
+          "unite": "C",
+          "tolerance": 400,
+          "aide": "Repère le point d’abscisse 60.",
+          "explication": "À 60 h, la courbe indique **10 800 C**, soit 56 % de la capacité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la durée de fonctionnement maximale, Δt = Q / I, en heures (arrondie à l’unité).",
+          "reponse": 107,
+          "unite": "h",
+          "tolerance": 1,
+          "aide": "Q = 19 300 C et I = 0,050 A. Divise en secondes, puis convertis en heures.",
+          "explication": "Δt = 19 300 ÷ 0,050 = 386 000 s, soit **environ 107 h**. La courbe le confirme : 19 300 C se situent entre 100 h et 120 h."
+        }
+      ]
+    },
+    {
+      "chapitre": "96290d8f-5991-51e8-86a1-48fc9528b1ef",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quel réactif limite la pile ?",
+      "competence": "resoudre",
+      "situation": "Une pile argent-cuivre alimente un moteur. Réaction : Cu + 2 Ag⁺ = Cu²⁺ + 2 Ag, avec M(Cu) = 63,5 g·mol⁻¹ et F = 96 500 C·mol⁻¹. L’ampèremètre indique un courant constant de 40 mA.",
+      "documents": [
+        {
+          "id": "circuit",
+          "type": "circuit",
+          "titre": "Le circuit extérieur",
+          "branches": [
+            {
+              "de": [
+                0,
+                4
+              ],
+              "a": [
+                0,
+                0
+              ],
+              "composant": "pile"
+            },
+            {
+              "de": [
+                0,
+                0
+              ],
+              "a": [
+                4,
+                0
+              ]
+            },
+            {
+              "de": [
+                4,
+                0
+              ],
+              "a": [
+                8,
+                0
+              ]
+            },
+            {
+              "de": [
+                8,
+                0
+              ],
+              "a": [
+                8,
+                4
+              ],
+              "composant": "moteur",
+              "id": "moteur"
+            },
+            {
+              "de": [
+                8,
+                4
+              ],
+              "a": [
+                4,
+                4
+              ]
+            },
+            {
+              "de": [
+                4,
+                4
+              ],
+              "a": [
+                0,
+                4
+              ],
+              "composant": "amperemetre",
+              "nom": "40 mA",
+              "id": "ampli"
+            }
+          ]
+        },
+        {
+          "id": "contenu",
+          "type": "tableau",
+          "titre": "Contenu des demi-piles",
+          "colonnes": [
+            "Demi-pile",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "Argent",
+              "Ag⁺ : 50 mL à 0,10 mol·L⁻¹"
+            ],
+            [
+              "Cuivre",
+              "Lame de Cu de 0,50 g"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "circuit",
+          "enonce": "Touche l’appareil qui mesure l’intensité du courant.",
+          "reponse": [
+            "ampli"
+          ],
+          "aide": "C’est le composant marqué 40 mA.",
+          "explication": "L’**ampèremètre** mesure l’intensité : I = 40 mA = 0,040 A."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité d’ions Ag⁺ la demi-pile contient-elle, en mmol ?",
+          "reponse": 5,
+          "unite": "mmol",
+          "tolerance": 0.1,
+          "aide": "n = c × V, avec V = 0,050 L.",
+          "explication": "n(Ag⁺) = 0,10 × 0,050 = 5,0 × 10⁻³ mol = **5,0 mmol**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité de cuivre la lame contient-elle, en mmol (arrondie au dixième) ?",
+          "reponse": 7.9,
+          "unite": "mmol",
+          "tolerance": 0.1,
+          "aide": "n = m / M, avec m = 0,50 g.",
+          "explication": "n(Cu) = 0,50 ÷ 63,5 ≈ 7,9 × 10⁻³ mol = **7,9 mmol**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel réactif limite la durée de vie de la pile ?",
+          "options": [
+            "Les ions Ag⁺ : il en faudrait 15,7 mmol pour tout le cuivre et il n’y en a que 5,0",
+            "Le cuivre, car il y en a moins en quantité de matière que d’ions Ag⁺ dans la pile",
+            "Aucun des deux : une pile ne s’arrête jamais tant qu’il reste de l’électrolyte",
+            "Les deux en même temps, dans tous les cas, quelles que soient les quantités"
+          ],
+          "reponse": 0,
+          "aide": "L’équation consomme 2 Ag⁺ pour 1 Cu.",
+          "explication": "Pour consommer 7,9 mmol de Cu, il faudrait 2 × 7,9 = 15,7 mmol d’Ag⁺. Il n’y en a que 5,0 : **Ag⁺ est le réactif limitant**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les ions Ag⁺ captent chacun 1 électron (Ag⁺ + e⁻ = Ag). Calcule la durée maximale de fonctionnement, en heures (arrondie au centième).",
+          "reponse": 3.35,
+          "unite": "h",
+          "tolerance": 0.05,
+          "aide": "n(e⁻) = n(Ag⁺) = 5,0 × 10⁻³ mol ; Q = n(e⁻) × F ; Δt = Q / I.",
+          "explication": "Q = 5,0 × 10⁻³ × 96 500 = 482,5 C. Δt = 482,5 ÷ 0,040 ≈ 12 060 s, soit **3,35 h**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c125d414-e855-5d52-907a-11e48e0c749d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Séparer l’eau en deux gaz",
+      "competence": "observer-schema",
+      "situation": "On électrolyse de l’eau acidulée avec un générateur. Chaque électrode est coiffée d’un tube qui recueille le gaz formé. Bilan global : 2 H₂O = 2 H₂ + O₂.",
+      "documents": [
+        {
+          "id": "eau",
+          "type": "schema",
+          "titre": "Électrolyse de l’eau",
+          "largeur": 340,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 60,
+              "y": 110,
+              "l": 220,
+              "h": 120,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 62,
+              "y": 150,
+              "l": 216,
+              "h": 78,
+              "teinte": "ciel",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 96,
+              "y": 60,
+              "l": 42,
+              "h": 110,
+              "teinte": "ciel",
+              "motif": "aucun",
+              "id": "tubeg",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 212,
+              "y": 60,
+              "l": 42,
+              "h": 110,
+              "teinte": "ciel",
+              "motif": "aucun",
+              "id": "tubed",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 98,
+              "y": 62,
+              "l": 38,
+              "h": 64,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 214,
+              "y": 62,
+              "l": 38,
+              "h": 32,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 111,
+              "y": 80,
+              "l": 12,
+              "h": 110,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "elecg",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 227,
+              "y": 80,
+              "l": 12,
+              "h": 110,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "elecd",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                117,
+                80
+              ],
+              "a": [
+                117,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                117,
+                25
+              ],
+              "a": [
+                120,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                233,
+                80
+              ],
+              "a": [
+                233,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                233,
+                25
+              ],
+              "a": [
+                220,
+                25
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 8,
+              "l": 100,
+              "h": 34,
+              "texte": "Générateur",
+              "teinte": "blanc",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 130,
+              "y": 34,
+              "texte": "−",
+              "ancre": "milieu",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 210,
+              "y": 34,
+              "texte": "+",
+              "ancre": "milieu",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 250,
+              "texte": "Eau acidulée",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "eau",
+          "enonce": "Touche l’anode.",
+          "reponse": [
+            "elecd"
+          ],
+          "aide": "Regarde à quelle borne du générateur chaque électrode est reliée.",
+          "explication": "L’électrode reliée à la borne **+** du générateur est l’**anode**, siège de l’oxydation."
+        },
+        {
+          "type": "zone",
+          "document": "eau",
+          "enonce": "Touche le tube qui contient le dihydrogène.",
+          "reponse": [
+            "tubeg"
+          ],
+          "aide": "Le bilan 2 H₂O = 2 H₂ + O₂ donne deux fois plus de dihydrogène que de dioxygène.",
+          "explication": "Le dihydrogène se forme à la cathode, reliée à la borne −, et il est **deux fois plus abondant** : c’est le tube le plus rempli."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le bilan des électrodes.",
+          "texte": "À la cathode a lieu une ___ ; à l’anode, l’eau est oxydée en ___.",
+          "reponses": [
+            [
+              "réduction"
+            ],
+            [
+              "O₂"
+            ]
+          ],
+          "banque": [
+            "réduction",
+            "oxydation",
+            "O₂",
+            "H₂"
+          ],
+          "aide": "La cathode est toujours le siège de la réduction. Le gaz qui reste à l’anode est l’autre produit du bilan.",
+          "explication": "Cathode : **réduction** (formation de H₂). Anode : **oxydation**, l’eau donne du **O₂**. Les définitions ne dépendent pas du montage."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le fil qui relie le générateur à la cathode, dans quel sens circulent les électrons ?",
+          "options": [
+            "Du générateur vers la cathode",
+            "De la cathode vers le générateur",
+            "Des ions circulent dans le fil, pas des électrons",
+            "Il ne circule rien dans ce fil"
+          ],
+          "reponse": 0,
+          "aide": "À la cathode, des électrons sont captés : d’où viennent-ils ?",
+          "explication": "La cathode capte des électrons (réduction) : ils arrivent **du générateur** par le fil relié à sa borne −."
+        }
+      ]
+    },
+    {
+      "chapitre": "c125d414-e855-5d52-907a-11e48e0c749d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une clé recouverte de cuivre",
+      "competence": "calculer",
+      "situation": "Pour recouvrir une clé en acier de cuivre, on l’électrolyse dans une solution d’ions Cu²⁺ avec I = 0,50 A pendant 30 min. Cu²⁺ + 2 e⁻ = Cu ; M(Cu) = 63,5 g·mol⁻¹ ; F = 96 500 C·mol⁻¹.",
+      "documents": [
+        {
+          "id": "cuve",
+          "type": "schema",
+          "titre": "Le montage",
+          "largeur": 340,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 110,
+              "l": 260,
+              "h": 110,
+              "teinte": "gris",
+              "motif": "aucun"
+            },
+            {
+              "forme": "rect",
+              "x": 42,
+              "y": 140,
+              "l": 256,
+              "h": 78,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 80,
+              "y": 70,
+              "l": 18,
+              "h": 130,
+              "teinte": "ambre",
+              "motif": "plein",
+              "id": "lame",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 232,
+              "y": 70,
+              "l": 26,
+              "h": 130,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "cle",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                89,
+                70
+              ],
+              "a": [
+                89,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                89,
+                25
+              ],
+              "a": [
+                120,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                245,
+                70
+              ],
+              "a": [
+                245,
+                25
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                245,
+                25
+              ],
+              "a": [
+                220,
+                25
+              ]
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 8,
+              "l": 100,
+              "h": 34,
+              "texte": "Générateur",
+              "teinte": "blanc",
+              "motif": "plein"
+            },
+            {
+              "forme": "texte",
+              "x": 130,
+              "y": 34,
+              "texte": "+",
+              "ancre": "milieu",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 210,
+              "y": 34,
+              "texte": "−",
+              "ancre": "milieu",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 89,
+              "y": 244,
+              "texte": "Lame de cuivre",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 245,
+              "y": 244,
+              "texte": "Clé en acier",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "depot",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Masse de cuivre déposée",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60"
+          ],
+          "series": [
+            {
+              "nom": "m",
+              "valeurs": [
+                0,
+                98.7,
+                197.41,
+                296.11,
+                394.82,
+                493.52,
+                592.23
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Masse déposée",
+            "unite": "mg",
+            "min": 0,
+            "max": 600,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Temps (min)"
+          },
+          "valeurs": false,
+          "source": "Calculée pour I = 0,50 A"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cuve",
+          "enonce": "Touche l’objet sur lequel le cuivre va se déposer.",
+          "reponse": [
+            "cle"
+          ],
+          "aide": "Un dépôt métallique se fait à la cathode, reliée à la borne −.",
+          "explication": "La clé est reliée à la borne − : c’est la **cathode**, où Cu²⁺ est réduit en cuivre qui se dépose."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la quantité d’électrons échangés, n(e⁻) = I × Δt / F, en mmol (arrondie au centième). Δt en secondes.",
+          "reponse": 9.33,
+          "unite": "mmol",
+          "tolerance": 0.1,
+          "aide": "Δt = 30 min = 1 800 s.",
+          "explication": "n(e⁻) = 0,50 × 1 800 ÷ 96 500 ≈ 9,33 × 10⁻³ mol = **9,33 mmol**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Déduis la masse de cuivre déposée, en grammes (arrondie au centième).",
+          "reponse": 0.3,
+          "unite": "g",
+          "tolerance": 0.01,
+          "aide": "Cu²⁺ + 2 e⁻ = Cu : n(Cu) = n(e⁻) / 2. Puis m = n × M.",
+          "explication": "n(Cu) = 9,33 ÷ 2 ≈ 4,66 mmol, d’où m = 4,66 × 10⁻³ × 63,5 ≈ **0,30 g**."
+        },
+        {
+          "type": "zone",
+          "document": "depot",
+          "enonce": "Touche sur la courbe le point qui correspond à ta masse calculée.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Convertis ta masse en milligrammes et cherche l’instant 30 min.",
+          "explication": "À 30 min, la courbe indique 296 mg, soit **0,30 g** : le calcul et la courbe concordent."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle durée faut-il pour déposer 0,50 g de cuivre avec le même courant ? Réponds en minutes (arrondie à l’unité).",
+          "reponse": 51,
+          "unite": "min",
+          "tolerance": 1,
+          "aide": "n(Cu) = 0,50 / 63,5 ; n(e⁻) = 2 n(Cu) ; Δt = n(e⁻) × F / I.",
+          "explication": "n(Cu) ≈ 7,87 mmol, n(e⁻) ≈ 15,7 mmol, Q ≈ 1 520 C, Δt = 1 520 ÷ 0,50 ≈ 3 040 s, soit **environ 51 min**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c125d414-e855-5d52-907a-11e48e0c749d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le rendement d’un accumulateur",
+      "competence": "raisonner",
+      "situation": "Un accumulateur lithium-ion est chargé puis déchargé à intensité constante. On note les valeurs moyennes de la tension et de la durée de chaque phase. L’énergie électrique échangée vaut E = U × I × Δt, ici en wattheures.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "charge",
+              "texte": "Charge",
+              "emoji": "🔌"
+            },
+            {
+              "id": "repos",
+              "texte": "Repos",
+              "emoji": "🔋"
+            },
+            {
+              "id": "decharge",
+              "texte": "Décharge",
+              "emoji": "💡"
+            }
+          ],
+          "liens": [
+            {
+              "de": "charge",
+              "a": "repos"
+            },
+            {
+              "de": "repos",
+              "a": "decharge"
+            }
+          ]
+        },
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Valeurs moyennes mesurées",
+          "colonnes": [
+            "Phase",
+            "U (V)",
+            "I (A)",
+            "Durée (h)"
+          ],
+          "lignes": [
+            [
+              "Charge",
+              "4,20",
+              "1,00",
+              "3,0"
+            ],
+            [
+              "Décharge",
+              "3,60",
+              "1,00",
+              "2,85"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche la phase pendant laquelle l’accumulateur fonctionne en électrolyseur.",
+          "reponse": [
+            "charge"
+          ],
+          "aide": "Dans quelle phase un générateur impose-t-il au système d’évoluer dans le sens non spontané ?",
+          "explication": "Pendant la **charge**, un générateur force la transformation : l’accumulateur se comporte en électrolyseur. À la décharge, il se comporte en pile."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie reçue pendant la charge, en Wh.",
+          "reponse": 12.6,
+          "unite": "Wh",
+          "tolerance": 0.1,
+          "aide": "E = U × I × Δt avec les valeurs de la ligne « Charge ».",
+          "explication": "E = 4,20 × 1,00 × 3,0 = **12,6 Wh**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie restituée pendant la décharge, en Wh (arrondie au dixième).",
+          "reponse": 10.3,
+          "unite": "Wh",
+          "tolerance": 0.1,
+          "aide": "Même formule, avec la ligne « Décharge ».",
+          "explication": "E = 3,60 × 1,00 × 2,85 = **10,26 Wh**, soit environ 10,3 Wh."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rendement énergétique d’un cycle, énergie restituée ÷ énergie reçue, en % (arrondi à l’unité).",
+          "reponse": 81,
+          "unite": "%",
+          "tolerance": 1,
+          "aide": "Divise 10,26 par 12,6 puis multiplie par 100.",
+          "explication": "Rendement = 10,26 ÷ 12,6 ≈ 0,814, soit **81 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le rendement d’un cycle charge-décharge ne vaut-il jamais 100 % ?",
+          "options": [
+            "Une part de l’énergie est dissipée en chaleur à chaque conversion",
+            "Le générateur de charge fournit moins d’énergie qu’il n’affiche",
+            "L’accumulateur détruit une partie de ses électrodes à chaque cycle",
+            "La charge ne fait pas intervenir de réaction chimique"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui chauffe pendant la charge et la décharge.",
+          "explication": "Chaque conversion électrique-chimique perd de l’énergie sous forme de **chaleur** : ce qu’on récupère est toujours inférieur à ce qu’on a fourni."
+        }
+      ]
+    },
+    {
+      "chapitre": "a566cfe4-7b25-5fb8-b188-d9d0e42a9f62",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quelle forme domine ?",
+      "competence": "lire-graphique",
+      "situation": "Sur l’axe des pH ci-dessous, le point A marque le pKa du couple CH₃COOH / CH₃COO⁻ (4,8) et le point B celui du couple NH₄⁺ / NH₃ (9,2).",
+      "documents": [
+        {
+          "id": "axe",
+          "type": "droite",
+          "titre": "Axe des pH",
+          "min": 0,
+          "max": 14,
+          "pas": 1,
+          "division": 1,
+          "points": [
+            {
+              "id": "A",
+              "valeur": 4.8,
+              "nom": "A"
+            },
+            {
+              "id": "B",
+              "valeur": 9.2,
+              "nom": "B"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Dans une solution de pH = 3,0, quelle espèce du couple éthanoïque prédomine ?",
+          "options": [
+            "L’acide CH₃COOH",
+            "La base CH₃COO⁻",
+            "Les deux à égalité",
+            "Aucune des deux"
+          ],
+          "reponse": 0,
+          "aide": "Compare le pH de 3,0 au pKa du point A.",
+          "explication": "pH = 3,0 est **inférieur** à pKa = 4,8 : c’est l’**acide CH₃COOH** qui prédomine."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans l’eau de pH = 7,0, quelle espèce du couple ammonium prédomine ?",
+          "options": [
+            "L’ion ammonium NH₄⁺",
+            "L’ammoniac NH₃",
+            "Les deux à égalité",
+            "Aucune des deux"
+          ],
+          "reponse": 0,
+          "aide": "Compare le pH de 7,0 au pKa du point B.",
+          "explication": "pH = 7,0 est **inférieur** à pKa = 9,2 : c’est l’**ion ammonium NH₄⁺**, forme acide du couple, qui prédomine."
+        },
+        {
+          "type": "zone",
+          "document": "axe",
+          "enonce": "Touche le point où [NH₄⁺] = [NH₃].",
+          "reponse": [
+            "B"
+          ],
+          "aide": "Les deux formes ont la même concentration quand pH = pKa.",
+          "explication": "Les concentrations sont égales quand pH = pKa du couple ammonium : **le point B**, à 9,2."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle du diagramme de prédominance.",
+          "texte": "Si pH < pKa, c’est ___ qui prédomine ; si pH > pKa, c’est ___.",
+          "reponses": [
+            [
+              "l’acide"
+            ],
+            [
+              "la base"
+            ]
+          ],
+          "banque": [
+            "l’acide",
+            "la base"
+          ],
+          "aide": "Retiens : pH bas, milieu acide.",
+          "explication": "pH < pKa : **l’acide** prédomine. pH > pKa : **la base** prédomine. À pH = pKa, les deux se partagent à égalité."
+        }
+      ]
+    },
+    {
+      "chapitre": "a566cfe4-7b25-5fb8-b188-d9d0e42a9f62",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Classer les acides",
+      "competence": "lire-graphique",
+      "situation": "On dispose des pKa de quatre couples acide/base, relevés à 25 °C.",
+      "documents": [
+        {
+          "id": "pka",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "pKa de quatre couples",
+          "categories": [
+            "HF / F⁻",
+            "Acide méthanoïque / méthanoate",
+            "Acide éthanoïque / éthanoate",
+            "Ammonium / ammoniac"
+          ],
+          "series": [
+            {
+              "nom": "pKa",
+              "valeurs": [
+                3.2,
+                3.8,
+                4.8,
+                9.2
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pKa",
+            "min": 0,
+            "max": 10,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Couple"
+          },
+          "valeurs": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pka",
+          "enonce": "Touche le couple dont l’acide est le plus fort.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Plus un acide est fort, plus son pKa est petit.",
+          "explication": "Le pKa le plus petit est celui de **HF / F⁻** (3,2) : c’est l’acide le plus fort des quatre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule Ka du couple éthanoïque (pKa = 4,8), en 10⁻⁵ (arrondi au dixième).",
+          "reponse": 1.6,
+          "unite": "× 10⁻⁵",
+          "tolerance": 0.05,
+          "aide": "Ka = 10 puissance (−pKa).",
+          "explication": "Ka = 10⁻⁴·⁸ ≈ 1,58 × 10⁻⁵, soit **1,6 × 10⁻⁵**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans une solution de pH = 5,8, calcule le rapport [CH₃COO⁻] / [CH₃COOH]. On rappelle pH = pKa + log([A⁻]/[AH]).",
+          "reponse": 10,
+          "tolerance": 0.5,
+          "aide": "log du rapport = pH − pKa = 1,0.",
+          "explication": "log([A⁻]/[AH]) = 5,8 − 4,8 = 1,0, donc le rapport vaut **10** : la base est dix fois plus concentrée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans une solution de HF / F⁻ de pH = 3,2, que peut-on dire ?",
+          "options": [
+            "[HF] = [F⁻]",
+            "[HF] est dix fois plus grande que [F⁻]",
+            "[F⁻] est dix fois plus grande que [HF]",
+            "HF a totalement disparu"
+          ],
+          "reponse": 0,
+          "aide": "Compare ce pH au pKa lu sur le graphique.",
+          "explication": "pH = pKa = 3,2 : les deux espèces sont à **concentrations égales**. HF n’a pas disparu, c’est un acide faible."
+        }
+      ]
+    },
+    {
+      "chapitre": "a566cfe4-7b25-5fb8-b188-d9d0e42a9f62",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le titrage et son indicateur",
+      "competence": "analyser-document",
+      "situation": "On titre 20,0 mL d’acide éthanoïque de concentration inconnue cA par de la soude de concentration 0,100 mol·L⁻¹, en suivant le pH. L’équivalence correspond au milieu du saut de pH.",
+      "documents": [
+        {
+          "id": "titrage",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Courbe de titrage pH-métrique",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                2.88,
+                3.85,
+                4.2,
+                4.43,
+                4.62,
+                4.8,
+                4.98,
+                5.17,
+                5.4,
+                5.75,
+                8.75,
+                11.68,
+                11.96,
+                12.12,
+                12.22,
+                12.3
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Volume de soude versé (mL)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        },
+        {
+          "id": "indic",
+          "type": "tableau",
+          "titre": "Indicateurs colorés",
+          "colonnes": [
+            "Indicateur",
+            "Zone de virage (pH)"
+          ],
+          "lignes": [
+            [
+              "Hélianthine",
+              "3,1 à 4,4"
+            ],
+            [
+              "Bleu de bromothymol",
+              "6,0 à 7,6"
+            ],
+            [
+              "Phénolphtaléine",
+              "8,2 à 10,0"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "titrage",
+          "enonce": "Touche le point de l’équivalence, au milieu du saut de pH.",
+          "reponse": [
+            "k10"
+          ],
+          "aide": "C’est là que la courbe monte le plus vite.",
+          "explication": "Le saut de pH est centré sur **V = 20 mL** : c’est l’équivalence, V_E = 20 mL."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la concentration cA de l’acide, en mol·L⁻¹. À l’équivalence, cA × 20,0 mL = 0,100 × V_E.",
+          "reponse": 0.1,
+          "unite": "mol·L⁻¹",
+          "tolerance": 0.002,
+          "aide": "Lis V_E sur la courbe, puis cA = 0,100 × V_E / 20,0.",
+          "explication": "cA = 0,100 × 20 ÷ 20,0 = **0,100 mol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis sur la courbe le pH à la demi-équivalence (V = 10 mL) : il donne le pKa du couple.",
+          "reponse": 4.8,
+          "tolerance": 0.1,
+          "aide": "La demi-équivalence est à V_E / 2.",
+          "explication": "À V = 10 mL, pH ≈ 4,8 : **pKa = 4,8**, valeur du couple éthanoïque."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel indicateur convient pour repérer cette équivalence ?",
+          "options": [
+            "La phénolphtaléine",
+            "L’hélianthine",
+            "Le bleu de bromothymol",
+            "Aucun : il faut forcément un pH-mètre"
+          ],
+          "reponse": 0,
+          "aide": "Sa zone de virage doit contenir le pH à l’équivalence, environ 8,75.",
+          "explication": "Seule la **phénolphtaléine** (8,2 à 10,0) encadre le pH à l’équivalence. Avec l’indicateur bromothymol, le virage arrive trop tôt."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le pH à l’équivalence dépasse-t-il 7 ?",
+          "options": [
+            "La base conjuguée CH₃COO⁻ formée est basique",
+            "La soude est en excès à l’équivalence",
+            "L’eau se dissocie en produisant des ions H₃O⁺",
+            "L’acide éthanoïque est un acide fort"
+          ],
+          "reponse": 0,
+          "aide": "Quelle espèce majoritaire reste-t-il à l’équivalence ?",
+          "explication": "À l’équivalence, il ne reste que l’ion éthanoate CH₃COO⁻, **base faible** : le pH est supérieur à 7."
+        }
+      ]
+    },
+    {
+      "chapitre": "7596921b-bfd4-5f45-bcb3-456fac59630d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du pH à la concentration",
+      "competence": "lire-graphique",
+      "situation": "On prépare des solutions d’acide chlorhydrique, un acide fort, de concentrations c de plus en plus faibles, et on mesure leur pH.",
+      "documents": [
+        {
+          "id": "phc",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "pH de l’acide chlorhydrique",
+          "categories": [
+            "10⁻¹",
+            "10⁻²",
+            "10⁻³",
+            "10⁻⁴",
+            "10⁻⁵"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 7,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Concentration c (mol·L⁻¹)"
+          },
+          "valeurs": false,
+          "source": "Mesures idéalisées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis le pH de la solution de concentration c = 1,0 × 10⁻² mol·L⁻¹.",
+          "reponse": 2,
+          "tolerance": 0.1,
+          "aide": "Repère la graduation 10⁻² sur l’axe horizontal.",
+          "explication": "Pour c = 10⁻² mol·L⁻¹, **pH = 2,0**."
+        },
+        {
+          "type": "zone",
+          "document": "phc",
+          "enonce": "Touche la concentration d’une solution de pH = 4.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la hauteur 4 sur la courbe.",
+          "explication": "pH = 4 correspond à c = **10⁻⁴ mol·L⁻¹**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le pH d’une solution d’acide fort de concentration c = 5,0 × 10⁻³ mol·L⁻¹, avec pH = −log c. Arrondis au dixième.",
+          "reponse": 2.3,
+          "tolerance": 0.05,
+          "aide": "5,0 × 10⁻³ est entre 10⁻² et 10⁻³ : le pH est entre 2 et 3.",
+          "explication": "pH = −log(5,0 × 10⁻³) ≈ **2,3**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7596921b-bfd4-5f45-bcb3-456fac59630d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre solutions, quatre pH",
+      "competence": "analyser-document",
+      "situation": "Quatre solutions de même concentration c = 1,0 × 10⁻² mol·L⁻¹ ont été préparées : acide chlorhydrique, acide éthanoïque, soude et ammoniac. On a mesuré leur pH à 25 °C.",
+      "documents": [
+        {
+          "id": "quatre",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "pH de quatre solutions",
+          "categories": [
+            "Acide chlorhydrique",
+            "Acide éthanoïque",
+            "Soude",
+            "Ammoniac"
+          ],
+          "series": [
+            {
+              "nom": "pH",
+              "valeurs": [
+                2,
+                3.4,
+                12,
+                10.6
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Solution"
+          },
+          "valeurs": true,
+          "source": "Mesures arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "quatre",
+          "enonce": "Touche la solution d’acide qui est un acide faible.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "À même concentration, un acide faible libère moins d’ions H₃O⁺ : son pH est plus élevé.",
+          "explication": "L’acide chlorhydrique donne pH = 2,0 = −log c : il est totalement dissocié. L’**acide éthanoïque** (pH = 3,4) l’est beaucoup moins : c’est l’acide faible."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le taux d’avancement final de l’acide éthanoïque, τ = [H₃O⁺] / c, en % (arrondi au dixième).",
+          "reponse": 4,
+          "unite": "%",
+          "tolerance": 0.2,
+          "aide": "[H₃O⁺] = 10 puissance (−3,4).",
+          "explication": "[H₃O⁺] = 10⁻³·⁴ ≈ 4,0 × 10⁻⁴ mol·L⁻¹, donc τ = 4,0 × 10⁻⁴ ÷ 1,0 × 10⁻² = **4,0 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le taux d’avancement de la soude, τ = [HO⁻] / c, en %. On rappelle [HO⁻] = 10 puissance (pH − 14).",
+          "reponse": 100,
+          "unite": "%",
+          "tolerance": 1,
+          "aide": "[HO⁻] = 10⁽¹²⁻¹⁴⁾ = 10⁻² mol·L⁻¹.",
+          "explication": "[HO⁻] = 10⁻² mol·L⁻¹ = c, donc τ = **100 %** : la soude est une base forte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’acide éthanoïque a-t-il un pH plus élevé que l’acide chlorhydrique de même concentration ?",
+          "options": [
+            "Il libère moins d’ions H₃O⁺, car sa réaction avec l’eau est limitée et non totale",
+            "Il est moins concentré que l’acide chlorhydrique, contrairement à l’énoncé",
+            "Il contient des ions HO⁻ en grande quantité, qui neutralisent les H₃O⁺",
+            "Sa réaction avec l’eau est totale, mais beaucoup plus lente que celle de HCl"
+          ],
+          "reponse": 0,
+          "aide": "Compare [H₃O⁺] dans les deux solutions : 10⁻² et 4,0 × 10⁻⁴ mol·L⁻¹.",
+          "explication": "Transformation **limitée** : à l’équilibre, peu d’ions H₃O⁺ sont formés, donc le pH est plus élevé que pour un acide fort."
+        }
+      ]
+    },
+    {
+      "chapitre": "7596921b-bfd4-5f45-bcb3-456fac59630d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le tampon résiste",
+      "competence": "raisonner",
+      "situation": "On ajoute de l’acide fort (H₃O⁺) par petites quantités à 100 mL d’eau pure, puis à 100 mL d’une solution tampon contenant 10 mmol de CH₃COOH et 10 mmol de CH₃COO⁻ (pKa = 4,8). On relève le pH.",
+      "documents": [
+        {
+          "id": "phs",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "pH après ajout d’acide",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Eau pure",
+              "valeurs": [
+                7,
+                2,
+                1.7,
+                1.52,
+                1.4,
+                1.3
+              ]
+            },
+            {
+              "nom": "Tampon",
+              "valeurs": [
+                4.8,
+                4.71,
+                4.62,
+                4.53,
+                4.43,
+                4.32
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "pH",
+            "min": 0,
+            "max": 8,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Quantité de H₃O⁺ ajoutée (mmol)"
+          },
+          "valeurs": false,
+          "source": "Calculée, volume supposé constant"
+        },
+        {
+          "id": "compo",
+          "type": "tableau",
+          "titre": "Composition du tampon",
+          "colonnes": [
+            "Ajout de H₃O⁺ (mmol)",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "lignes": [
+            [
+              "n(CH₃COOH) (mmol)",
+              10,
+              9,
+              8,
+              7,
+              6,
+              5
+            ],
+            [
+              "n(CH₃COO⁻) (mmol)",
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Calculée"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis de combien le pH du tampon a diminué après l’ajout de 5 mmol de H₃O⁺.",
+          "reponse": 0.5,
+          "tolerance": 0.05,
+          "aide": "Soustrais le pH final au pH initial du tampon.",
+          "explication": "Le pH du tampon passe de 4,80 à 4,32 : il baisse de **0,5 unité** environ."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lis de combien le pH de l’eau pure a diminué après le même ajout.",
+          "reponse": 5.7,
+          "tolerance": 0.1,
+          "aide": "Le pH initial de l’eau pure est 7.",
+          "explication": "Le pH de l’eau passe de 7 à 1,3 : il baisse de **5,7 unités**. Le tampon résiste bien mieux."
+        },
+        {
+          "type": "zone",
+          "document": "phs",
+          "enonce": "Touche la quantité ajoutée pour laquelle l’eau pure atteint un pH d’environ 1,7.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Suis la courbe de l’eau pure.",
+          "explication": "Pour **2 mmol** ajoutées, l’eau pure est à pH = 1,7."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On ajoute plutôt 4 mmol de HO⁻ au tampon initial : n(CH₃COOH) devient 6 mmol et n(CH₃COO⁻) 14 mmol. Calcule le pH, avec pH = pKa + log(n(A⁻) / n(AH)). Arrondis au centième.",
+          "reponse": 5.17,
+          "tolerance": 0.02,
+          "aide": "Le rapport des quantités suffit : même volume. Calcule log(14 / 6).",
+          "explication": "pH = 4,8 + log(14 ÷ 6) ≈ **5,17** : il monte de 0,4 unité seulement."
+        },
+        {
+          "type": "choix",
+          "enonce": "On dilue ce tampon avec de l’eau pure, en doublant son volume. Que devient son pH ?",
+          "options": [
+            "Il ne change pratiquement pas, car le rapport des concentrations reste le même",
+            "Il double, comme le volume de la solution qui a été multiplié par deux",
+            "Il devient égal à 7, car l’eau pure ajoutée neutralise entièrement le tampon",
+            "Il diminue de moitié, puisque les concentrations sont toutes divisées par deux"
+          ],
+          "reponse": 0,
+          "aide": "Dans pH = pKa + log(n(A⁻) / n(AH)), que devient le rapport ?",
+          "explication": "La dilution divise les deux concentrations par 2 : le rapport [A⁻]/[AH] ne change pas, donc **le pH non plus** (ou presque)."
+        }
+      ]
+    },
+    {
+      "chapitre": "1792fea1-1c93-51c0-831d-c5f6bf9cc7a1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les flacons du laboratoire",
+      "competence": "analyser-document",
+      "situation": "Cinq liquides incolores sont rangés dans une armoire. Chaque étiquette porte le nom et la formule semi-développée du produit.",
+      "documents": [
+        {
+          "id": "flacons",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Armoire des liquides",
+          "sousTitre": "Cinq flacons",
+          "emoji": "🧪",
+          "lignes": [
+            {
+              "texte": "Éthanol",
+              "valeur": "CH₃CH₂OH",
+              "id": "ethanol"
+            },
+            {
+              "texte": "Éthanal",
+              "valeur": "CH₃CHO",
+              "id": "ethanal"
+            },
+            {
+              "texte": "Propanone",
+              "valeur": "CH₃COCH₃",
+              "id": "propanone"
+            },
+            {
+              "texte": "Acide éthanoïque",
+              "valeur": "CH₃COOH",
+              "id": "acide"
+            },
+            {
+              "texte": "Méthanoate de méthyle",
+              "valeur": "HCOOCH₃",
+              "id": "ester"
+            }
+          ],
+          "pied": "Étiquettes écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "flacons",
+          "enonce": "Touche le flacon qui contient un aldéhyde.",
+          "reponse": [
+            "ethanal"
+          ],
+          "aide": "L’aldéhyde porte le groupe —CHO en bout de chaîne.",
+          "explication": "L’**éthanal** CH₃CHO porte le groupe —CHO : c’est l’aldéhyde."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie les produits selon qu’ils contiennent ou non un groupe —OH.",
+          "categories": [
+            "Contient un groupe —OH",
+            "N’en contient pas"
+          ],
+          "items": [
+            [
+              "Éthanol",
+              0
+            ],
+            [
+              "Éthanal",
+              1
+            ],
+            [
+              "Propanone",
+              1
+            ],
+            [
+              "Acide éthanoïque",
+              0
+            ],
+            [
+              "Méthanoate de méthyle",
+              1
+            ]
+          ],
+          "aide": "Regarde la formule : cherche un O lié à un H.",
+          "explication": "L’**éthanol** (alcool) et l’**acide éthanoïque** (—COOH) contiennent un —OH. L’éthanal, la propanone et l’ester n’en ont pas."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque famille à son groupe caractéristique.",
+          "paires": [
+            [
+              "Aldéhyde",
+              "Groupe —CHO, en bout de chaîne"
+            ],
+            [
+              "Cétone",
+              "Groupe —CO—, en milieu de chaîne"
+            ],
+            [
+              "Acide carboxylique",
+              "Groupe —COOH"
+            ],
+            [
+              "Ester",
+              "Groupe —COO—"
+            ]
+          ],
+          "aide": "L’aldéhyde est toujours en bout de chaîne, la cétone toujours au milieu.",
+          "explication": "**Aldéhyde** : —CHO. **Cétone** : —CO—. **Acide carboxylique** : —COOH. **Ester** : —COO—."
+        }
+      ]
+    },
+    {
+      "chapitre": "1792fea1-1c93-51c0-831d-c5f6bf9cc7a1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le carbone qui rend chiral",
+      "competence": "observer-schema",
+      "situation": "L’acide lactique, produit par les muscles à l’effort, a pour formule brute C₃H₆O₃. Le schéma le représente en trois groupes carbonés. Un carbone asymétrique est lié à quatre substituants tous différents.",
+      "documents": [
+        {
+          "id": "lactique",
+          "type": "schema",
+          "titre": "L’acide lactique",
+          "largeur": 340,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 80,
+              "l": 60,
+              "h": 36,
+              "texte": "CH₃",
+              "arrondi": 6,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "c1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 80,
+              "l": 60,
+              "h": 36,
+              "texte": "CH",
+              "arrondi": 6,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "c2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 220,
+              "y": 80,
+              "l": 70,
+              "h": 36,
+              "texte": "COOH",
+              "arrondi": 6,
+              "teinte": "gris",
+              "motif": "clair",
+              "id": "c3",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                98
+              ],
+              "a": [
+                120,
+                98
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                180,
+                98
+              ],
+              "a": [
+                220,
+                98
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                116
+              ],
+              "a": [
+                150,
+                160
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 150,
+              "y": 182,
+              "texte": "OH",
+              "ancre": "milieu",
+              "taille": "grand"
+            }
+          ]
+        },
+        {
+          "id": "alcools",
+          "type": "tableau",
+          "titre": "Quatre molécules",
+          "colonnes": [
+            "Molécule",
+            "Formule semi-développée"
+          ],
+          "lignes": [
+            [
+              "Propan-2-ol",
+              "CH₃–CHOH–CH₃"
+            ],
+            [
+              "Butan-2-ol",
+              "CH₃–CHOH–CH₂–CH₃"
+            ],
+            [
+              "Pentan-3-ol",
+              "CH₃–CH₂–CHOH–CH₂–CH₃"
+            ],
+            [
+              "Acide 2-chloropropanoïque",
+              "CH₃–CHCl–COOH"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Formules exactes"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lactique",
+          "enonce": "Touche le groupe qui contient le carbone asymétrique.",
+          "reponse": [
+            "c2"
+          ],
+          "aide": "Cherche le carbone qui porte quatre substituants différents : un H, un OH, un CH₃ et un COOH.",
+          "explication": "Le carbone du groupe **CH(OH)** porte H, OH, CH₃ et COOH : quatre substituants différents, c’est le carbone asymétrique."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie les molécules du tableau selon qu’elles possèdent ou non un carbone asymétrique.",
+          "categories": [
+            "Possède un carbone asymétrique",
+            "N’en possède pas"
+          ],
+          "items": [
+            [
+              "Propan-2-ol",
+              1
+            ],
+            [
+              "Butan-2-ol",
+              0
+            ],
+            [
+              "Pentan-3-ol",
+              1
+            ],
+            [
+              "Acide 2-chloropropanoïque",
+              0
+            ]
+          ],
+          "aide": "Regarde le carbone qui porte le groupe caractéristique : a-t-il quatre voisins différents ?",
+          "explication": "Le **butan-2-ol** (H, OH, CH₃, C₂H₅) et l’**acide 2-chloropropanoïque** (H, Cl, CH₃, COOH) en ont un. Dans le propan-2-ol et le pentan-3-ol, deux substituants sont identiques."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’hydrogène la molécule d’acide lactique compte-t-elle ? Compte aussi celui du groupe —OH.",
+          "reponse": 6,
+          "aide": "Additionne ceux du CH₃, du CH, du OH du carbone central et du COOH.",
+          "explication": "CH₃ (3) + CH (1) + OH (1) + COOH (1) = **6 atomes d’hydrogène**, en accord avec C₃H₆O₃."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le butan-1-ol, CH₃–CH₂–CH₂–CH₂OH, et le butan-2-ol du tableau sont…",
+          "options": [
+            "Des isomères de constitution",
+            "Des énantiomères",
+            "Une même molécule écrite deux fois",
+            "Des diastéréo-isomères"
+          ],
+          "reponse": 0,
+          "aide": "Même formule brute C₄H₁₀O : qu’est-ce qui change dans l’enchaînement ?",
+          "explication": "Même formule brute, mais le groupe —OH est sur un autre carbone : ce sont des **isomères de constitution** (position du groupe)."
+        }
+      ]
+    },
+    {
+      "chapitre": "1792fea1-1c93-51c0-831d-c5f6bf9cc7a1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quel alcool résiste à l’oxydant ?",
+      "competence": "raisonner",
+      "situation": "Trois flacons A, B et C contiennent chacun un de ces alcools : le butan-1-ol, le butan-2-ol et le 2-méthylpropan-2-ol. On ajoute un oxydant dans chaque flacon et on note ce qui se passe.",
+      "documents": [
+        {
+          "id": "alcools",
+          "type": "tableau",
+          "titre": "Quatre alcools de formule brute C₄H₁₀O",
+          "colonnes": [
+            "Alcool",
+            "Formule semi-développée"
+          ],
+          "lignes": [
+            [
+              "Butan-1-ol",
+              "CH₃–CH₂–CH₂–CH₂OH"
+            ],
+            [
+              "Butan-2-ol",
+              "CH₃–CH₂–CHOH–CH₃"
+            ],
+            [
+              "2-méthylpropan-2-ol",
+              "(CH₃)₃C–OH"
+            ],
+            [
+              "2-méthylpropan-1-ol",
+              "(CH₃)₂CH–CH₂OH"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Formules exactes"
+        },
+        {
+          "id": "obs",
+          "type": "tableau",
+          "titre": "Observations après ajout de l’oxydant",
+          "colonnes": [
+            "Flacon",
+            "Observation"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Aucune transformation"
+            ],
+            [
+              "B",
+              "Il se forme une cétone"
+            ],
+            [
+              "C",
+              "Il se forme un aldéhyde"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Observations écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Trie les quatre alcools du tableau selon leur classe.",
+          "categories": [
+            "Primaire",
+            "Secondaire",
+            "Tertiaire"
+          ],
+          "items": [
+            [
+              "Butan-1-ol",
+              0
+            ],
+            [
+              "Butan-2-ol",
+              1
+            ],
+            [
+              "2-méthylpropan-2-ol",
+              2
+            ],
+            [
+              "2-méthylpropan-1-ol",
+              0
+            ]
+          ],
+          "aide": "Compte les carbones voisins de celui qui porte le —OH : un, deux ou trois.",
+          "explication": "**Primaires** : butan-1-ol et 2-méthylpropan-1-ol (un voisin). **Secondaire** : butan-2-ol (deux voisins). **Tertiaire** : 2-méthylpropan-2-ol (trois voisins)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’atomes d’hydrogène la molécule de butan-2-ol compte-t-elle ?",
+          "reponse": 10,
+          "aide": "Additionne les H de CH₃, CH₂, CHOH (avec le H du OH) et CH₃.",
+          "explication": "CH₃ (3) + CH₂ (2) + CHOH (2) + CH₃ (3) = **10**. Les quatre alcools sont des isomères de formule brute C₄H₁₀O."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque flacon à l’alcool qu’il contient.",
+          "paires": [
+            [
+              "Flacon A",
+              "2-méthylpropan-2-ol"
+            ],
+            [
+              "Flacon B",
+              "Butan-2-ol"
+            ],
+            [
+              "Flacon C",
+              "Butan-1-ol"
+            ]
+          ],
+          "aide": "Un alcool tertiaire ne s’oxyde pas ; un primaire donne un aldéhyde ; un secondaire donne une cétone.",
+          "explication": "A : le **2-méthylpropan-2-ol** (tertiaire) ne s’oxyde pas. B : le **butan-2-ol** (secondaire) donne une cétone. C : le **butan-1-ol** (primaire) donne un aldéhyde."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le butan-1-ol et le 2-méthylpropan-1-ol sont…",
+          "options": [
+            "Des isomères de constitution, dont la chaîne carbonée est différente",
+            "Des énantiomères, c’est-à-dire deux images l’une de l’autre dans un miroir",
+            "Une même molécule, simplement représentée de deux façons différentes",
+            "Des isomères Z/E, liés à la présence d’une double liaison dans la chaîne"
+          ],
+          "reponse": 0,
+          "aide": "Compare l’enchaînement des carbones : linéaire ou ramifié ?",
+          "explication": "Même formule C₄H₁₀O, mais l’un a une chaîne linéaire et l’autre une chaîne ramifiée : ce sont des **isomères de constitution**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois transformations à identifier",
+      "competence": "analyser-document",
+      "situation": "Un chimiste écrit trois transformations qui font intervenir l’éthanol, l’éthène et le bromoéthane. On les classe en comparant les réactifs et les produits.",
+      "documents": [
+        {
+          "id": "trois",
+          "type": "tableau",
+          "titre": "Trois transformations",
+          "colonnes": [
+            "Transformation"
+          ],
+          "lignes": [
+            [
+              "1 : CH₂=CH₂ + H₂O → CH₃CH₂OH"
+            ],
+            [
+              "2 : CH₃CH₂Br + HO⁻ → CH₃CH₂OH + Br⁻"
+            ],
+            [
+              "3 : CH₃CH₂OH → CH₂=CH₂ + H₂O"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "trois",
+          "enonce": "Touche la transformation au cours de laquelle la liaison double C=C disparaît.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Compare le réactif et le produit : où est la double liaison ?",
+          "explication": "Dans la transformation **1**, la double liaison C=C de l’éthène disparaît : l’eau s’additionne."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque transformation à sa catégorie.",
+          "paires": [
+            [
+              "Transformation 1",
+              "Addition"
+            ],
+            [
+              "Transformation 2",
+              "Substitution"
+            ],
+            [
+              "Transformation 3",
+              "Élimination"
+            ]
+          ],
+          "aide": "Addition : une insaturation disparaît. Élimination : une insaturation apparaît.",
+          "explication": "1 : **addition** (C=C disparaît). 2 : **substitution** (Br remplacé par OH). 3 : **élimination** (C=C apparaît)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la transformation 2 est-elle une substitution ?",
+          "options": [
+            "Le groupe —Br est remplacé par le groupe —OH, sans changer la chaîne",
+            "Une liaison double disparaît : chaque carbone reçoit un nouvel atome",
+            "Une liaison double apparaît tandis que deux atomes sont éliminés",
+            "La chaîne carbonée s’allonge : un atome de carbone est ajouté au bout"
+          ],
+          "reponse": 0,
+          "aide": "Compare le nombre de carbones et les groupes avant et après.",
+          "explication": "La chaîne ne change pas, pas de double liaison en jeu : **un groupe en remplace un autre**, —Br par —OH."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Cinq étapes, combien de produit ?",
+      "competence": "calculer",
+      "situation": "Une synthèse en cinq étapes part de 0,200 mol de réactif initial. Chaque étape convertit une mole de réactif en une mole de produit, avec le rendement indiqué. Le produit final a pour masse molaire 150 g·mol⁻¹.",
+      "documents": [
+        {
+          "id": "etapes",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Rendement de chaque étape",
+          "categories": [
+            "Étape 1",
+            "Étape 2",
+            "Étape 3",
+            "Étape 4",
+            "Étape 5"
+          ],
+          "series": [
+            {
+              "nom": "Rendement",
+              "valeurs": [
+                90,
+                85,
+                80,
+                75,
+                70
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Rendement",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Étape"
+          },
+          "valeurs": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etapes",
+          "enonce": "Touche l’étape qui fait perdre le plus de matière.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "C’est l’étape de plus faible rendement.",
+          "explication": "L’**étape 5** a le plus faible rendement (70 %) : c’est elle qui fait perdre le plus de matière."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rendement global de la synthèse, en % (arrondi à l’unité).",
+          "reponse": 32,
+          "unite": "%",
+          "tolerance": 1,
+          "aide": "Multiplie les cinq rendements exprimés en nombres décimaux : 0,90 × 0,85 × …",
+          "explication": "Rendement global = 0,90 × 0,85 × 0,80 × 0,75 × 0,70 ≈ 0,321, soit **32 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la masse de produit final obtenue, en grammes (arrondie au dixième).",
+          "reponse": 9.6,
+          "unite": "g",
+          "tolerance": 0.2,
+          "aide": "n(produit) = 0,200 × rendement global ; puis m = n × M.",
+          "explication": "n = 0,200 × 0,321 ≈ 0,0643 mol ; m = 0,0643 × 150 ≈ **9,6 g**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une étape utilise un catalyseur très coûteux. Où vaut-il mieux la placer dans la synthèse ?",
+          "options": [
+            "En fin de synthèse, pour ne pas l’engager sur de la matière qui sera perdue ensuite",
+            "Au début, pour ne pas l’oublier et pour qu’il profite à toute la synthèse",
+            "Au milieu, pour répartir le coût sur l’ensemble des étapes de la synthèse",
+            "Peu importe : l’ordre des étapes ne change rien au coût final de la synthèse"
+          ],
+          "reponse": 0,
+          "aide": "Chaque étape suivante fait perdre une part de la matière déjà transformée.",
+          "explication": "Placer l’étape coûteuse **le plus tard possible** évite de payer cher pour une matière qui sera partiellement perdue aux étapes suivantes."
+        }
+      ]
+    },
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Choisir sa voie de synthèse",
+      "competence": "resoudre",
+      "situation": "Pour préparer une molécule P, trois voies sont envisagées. Dans l’étape voulue, le réactif 1 (M = 120 g·mol⁻¹) et le réactif 2 (M = 60 g·mol⁻¹) donnent P (M = 150 g·mol⁻¹) et un unique sous-produit (M = 30 g·mol⁻¹).",
+      "documents": [
+        {
+          "id": "voies",
+          "type": "tableau",
+          "titre": "Les trois voies",
+          "colonnes": [
+            "Voie",
+            "Étapes (rendements)",
+            "Réactifs"
+          ],
+          "lignes": [
+            [
+              "A, avec protection",
+              "95 % · 80 % · 90 %",
+              "bon marché"
+            ],
+            [
+              "B, sans protection",
+              "1 étape : 45 % de P",
+              "bon marché"
+            ],
+            [
+              "C, réactif sélectif",
+              "1 étape : 70 %",
+              "très cher, toxique"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le rendement global de la voie A (protection, étape voulue, déprotection), en % (arrondi à l’unité).",
+          "reponse": 68,
+          "unite": "%",
+          "tolerance": 0.6,
+          "aide": "Multiplie les trois rendements en nombres décimaux.",
+          "explication": "Rendement = 0,95 × 0,80 × 0,90 = 0,684, soit **68 %**."
+        },
+        {
+          "type": "zone",
+          "document": "voies",
+          "enonce": "Touche, dans la première colonne, la voie qui a le meilleur rendement global.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Compare 68 %, 45 % et 70 %.",
+          "explication": "La voie **C** a le meilleur rendement global (70 % contre 68 % et 45 %)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Malgré ce rendement, pourquoi peut-on écarter la voie C ?",
+          "options": [
+            "Son réactif est cher et toxique : coût et sécurité comptent autant que le rendement",
+            "Un rendement de 70 % est impossible à atteindre en pratique dans une synthèse réelle",
+            "Une voie à une seule étape est toujours moins sélective qu’une voie à plusieurs",
+            "Elle impose forcément une protection de fonction, ce qui alourdit beaucoup la synthèse"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la colonne « Réactifs » du tableau.",
+          "explication": "Le choix d’une stratégie pèse **prix, sécurité et impact**, pas seulement le rendement. La voie A reste compétitive avec des réactifs bon marché."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’économie d’atomes de l’étape voulue, M(P) ÷ somme des M des réactifs, en % (arrondie à l’unité).",
+          "reponse": 83,
+          "unite": "%",
+          "tolerance": 1,
+          "aide": "Somme des réactifs : 120 + 60 = 180 g·mol⁻¹.",
+          "explication": "Économie d’atomes = 150 ÷ 180 ≈ 0,833, soit **83 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec 12,0 g de réactif 1 et la voie A, calcule la masse de P obtenue, en g (arrondie au dixième).",
+          "reponse": 10.3,
+          "unite": "g",
+          "tolerance": 0.15,
+          "aide": "n(réactif 1) = 12,0 / 120 ; multiplie par 0,684 puis par M(P).",
+          "explication": "n = 0,100 mol ; n(P) = 0,100 × 0,684 = 0,0684 mol ; m = 0,0684 × 150 ≈ **10,3 g**."
+        }
+      ]
+    }
+  ]
+}

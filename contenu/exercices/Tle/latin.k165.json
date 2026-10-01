@@ -1,0 +1,2249 @@
+{
+ "niveau": "Tle",
+ "matiere": "latin",
+ "exercices": [
+  {
+   "chapitre": "260e98c0-9992-5d62-9829-ea2e987d430b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les rayons de la bibliothèque de Pline",
+   "competence": "lire-tableau",
+   "situation": "Tu découvres le plan de l’*Histoire naturelle*, un monument de savoir en 37 livres. Lis le plan, puis retrouve l’héritage des mots latins du savoir.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le plan de l’Histoire naturelle",
+     "colonnes": [
+      "Livres",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "II",
+       "Le monde, les astres, les phénomènes du ciel"
+      ],
+      [
+       "III-VI",
+       "Géographie de l’univers connu"
+      ],
+      [
+       "VII",
+       "L’homme"
+      ],
+      [
+       "VIII-XI",
+       "Les animaux"
+      ],
+      [
+       "XII-XXXII",
+       "Les plantes et les remèdes"
+      ],
+      [
+       "XXXIII-XXXVII",
+       "Métaux, peinture, sculpture, pierres précieuses"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Plan résumé du cours"
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Quatre mots latins du savoir",
+     "colonnes": [
+      "Latin",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "natura",
+       "Ce qui fait naître et croître"
+      ],
+      [
+       "mundus",
+       "Le monde ordonné, mais aussi la parure"
+      ],
+      [
+       "caelum",
+       "Le ciel"
+      ],
+      [
+       "scientia",
+       "La connaissance"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mots du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche les livres consacrés aux animaux.",
+     "aide": "Cherche la ligne qui parle des animaux, et touche sa première case.",
+     "explication": "Ce sont les livres **VIII-XI** : quatre livres pour les bêtes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de livres consacrés aux plantes et aux remèdes compte l’ouvrage (du livre XII au livre XXXII compris) ?",
+     "reponse": 21,
+     "unite": "livres",
+     "aide": "Compte du XII au XXXII en comptant les deux bouts : 32 − 12 + 1.",
+     "explication": "32 − 12 + 1 = **21 livres** : presque toute la moitié de l’œuvre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot latin à son héritier français.",
+     "paires": [
+      [
+       "natura",
+       "naturel"
+      ],
+      [
+       "caelum",
+       "céleste"
+      ],
+      [
+       "scientia",
+       "science"
+      ],
+      [
+       "mundus",
+       "mondain"
+      ]
+     ],
+     "aide": "Le français garde souvent le radical latin presque intact.",
+     "explication": "**Natura** donne naturel, **caelum** céleste, **scientia** science et **mundus** mondain."
+    }
+   ]
+  },
+  {
+   "chapitre": "260e98c0-9992-5d62-9829-ea2e987d430b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le récit du neveu de Pline",
+   "competence": "analyser-texte",
+   "situation": "Voici quelques phrases latines simples, écrites pour l’exercice, qui résument la journée du 24 août 79. Repère les verbes, puis traduis.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une journée dans la baie de Naples",
+     "blocs": [
+      "Plinius, classis praefectus, Miseni [[v|erat]].",
+      "Vesuvius mons [[v|ardebat]] ; [[n|nubes]] ingens ex monte [[v|oriebatur]].",
+      "Plinius naves parari [[v|iubet]], quia incolis auxilium ferre [[v|vult]]."
+     ],
+     "source": "Phrases latines écrites pour l’exercice, inspirées des Lettres de Pline le Jeune"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les cinq verbes conjugués du texte.",
+     "aide": "Un verbe conjugué a une terminaison de personne : repère *-t* à la fin. Les deux infinitifs se terminent en *-ri* et *-re*, ils ne comptent pas.",
+     "explication": "Les verbes conjugués sont **erat, ardebat, oriebatur, iubet, vult**. *Parari* et *ferre* sont des infinitifs."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le sujet du verbe « oriebatur ».",
+     "aide": "Qui s’élevait de la montagne ? Cherche un nominatif.",
+     "explication": "Le sujet est **nubes** : « un immense nuage s’élevait de la montagne »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut faire Pline d’après la troisième phrase (« incolis auxilium ferre vult ») ?",
+     "options": [
+      "Porter secours aux habitants",
+      "Fuir loin de la baie",
+      "Aller chercher son neveu",
+      "Observer depuis Rome"
+     ],
+     "reponse": 0,
+     "aide": "*Auxilium ferre* : porter du secours. *Incolis* est un datif : « aux habitants ».",
+     "explication": "**Incolis auxilium ferre vult** : il veut porter secours aux habitants. *Ferre* est l’infinitif de *fero*, et *incolis* est au datif pluriel."
+    }
+   ]
+  },
+  {
+   "chapitre": "260e98c0-9992-5d62-9829-ea2e987d430b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Connaître les causes pour ne plus trembler",
+   "competence": "analyser-texte",
+   "situation": "Un vers de Virgile résume l’idéal scientifique que défend Sénèque dans ses *Questions naturelles*. Lis le vers, puis compare les deux façons de connaître le monde.",
+   "documents": [
+    {
+     "id": "virgile",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les Géorgiques, II, 490",
+     "blocs": [
+      "Felix qui potuit rerum cognoscere [[c|causas]]."
+     ],
+     "source": "Virgile, *Géorgiques* II, 490 (premier hémistiche du vers)"
+    },
+    {
+     "id": "deux",
+     "type": "tableau",
+     "titre": "Deux savoirs romains",
+     "colonnes": [
+      "Auteur",
+      "Œuvre",
+      "Démarche"
+     ],
+     "lignes": [
+      [
+       "Pline l’Ancien",
+       "Histoire naturelle",
+       "Recense des milliers de faits"
+      ],
+      [
+       "Sénèque",
+       "Questions naturelles",
+       "Cherche les causes des phénomènes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À quel cas est « causas », complément de « cognoscere » ?",
+     "options": [
+      "Accusatif pluriel",
+      "Nominatif pluriel",
+      "Génitif singulier",
+      "Ablatif pluriel"
+     ],
+     "reponse": 0,
+     "aide": "*Cognoscere* est un infinitif transitif : son complément d’objet se met au même cas qu’un COD.",
+     "explication": "**Causas** est à l’**accusatif pluriel** : COD de *cognoscere*. Le vers dit « Heureux celui qui a pu connaître les causes des choses »."
+    },
+    {
+     "type": "zone",
+     "document": "virgile",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne ce que le sage cherche à connaître.",
+     "aide": "Ce que l’on cherche à connaître, ce sont les raisons des choses.",
+     "explication": "Le sage cherche les **causas**, les causes : c’est exactement le projet des *Questions naturelles*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée du cours ce vers illustre-t-il le mieux ?",
+     "options": [
+      "Comprendre les causes délivre de la peur",
+      "Les peuples fabuleux vivent aux confins",
+      "Le Vésuve a détruit Pompéi en 79",
+      "Galien reprend la théorie des humeurs"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « heureux » et le verbe « connaître » vont ensemble.",
+     "explication": "Pour Sénèque, **comprendre les causes délivre de la peur** : l’âme qui les connaît cesse de trembler."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque auteur à sa démarche.",
+     "paires": [
+      [
+       "Pline l’Ancien",
+       "Recense vingt mille faits"
+      ],
+      [
+       "Sénèque",
+       "Cherche les causes des séismes"
+      ],
+      [
+       "Celse",
+       "Écrit en latin un traité de médecine"
+      ]
+     ],
+     "aide": "L’un accumule, l’autre explique, le troisième soigne.",
+     "explication": "**Pline** recense, **Sénèque** cherche les causes, **Celse** rédige le *De medicina*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ccfa9fad-79b2-5e2e-9503-9928547b9265",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tablette de plomb du cirque",
+   "competence": "analyser-document",
+   "situation": "Des archéologues ont retrouvé une lame de plomb percée d’un clou au fond d’un puits. Observe sa fiche, puis range les objets de la magie romaine.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Tabella defixionis",
+     "sousTitre": "Fiche d’objet imaginée pour l’exercice",
+     "emoji": "🪙",
+     "lignes": [
+      {
+       "texte": "Matière",
+       "valeur": "Lame de plomb",
+       "id": "mat"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Roulée et percée d’un clou"
+      },
+      {
+       "texte": "Lieu de dépôt",
+       "valeur": "Au fond d’un puits",
+       "id": "lieu"
+      },
+      {
+       "texte": "Cible visée",
+       "valeur": "Un aurige de l’écurie rivale",
+       "id": "cible"
+      }
+     ],
+     "pied": "Objet imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "mat"
+     ],
+     "enonce": "Touche la ligne qui indique dans quelle matière la tablette est faite.",
+     "aide": "Cherche le mot « Matière ».",
+     "explication": "La tablette est une **lame de plomb**, matériau le plus courant des tablettes d’exécration."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "cible"
+     ],
+     "enonce": "Touche la ligne qui montre que la magie touchait la vie ordinaire des Romains.",
+     "aide": "Un sport très populaire à Rome : les courses de chars.",
+     "explication": "La cible est un **aurige** : la magie visait un rival du cirque, pas seulement des ennemis de légende."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque objet magique à ce qu’il vise.",
+     "paires": [
+      [
+       "Tablette de plomb",
+       "Lier, faire échouer"
+      ],
+      [
+       "Amulette",
+       "Protéger"
+      ],
+      [
+       "Poupée percée",
+       "Envoûter"
+      ],
+      [
+       "Philtre",
+       "Faire aimer"
+      ]
+     ],
+     "aide": "Quatre objets, quatre buts différents.",
+     "explication": "La **tablette** lie, l’**amulette** protège, la **poupée percée** envoûte, le **philtre** fait aimer."
+    }
+   ]
+  },
+  {
+   "chapitre": "ccfa9fad-79b2-5e2e-9503-9928547b9265",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Religion ou magie ?",
+   "competence": "argumenter",
+   "situation": "Un jeune Romain hésite : tel geste relève-t-il de la religion de la cité ou de la magie ? Aide-le à trier, à l’aide du tableau du cours.",
+   "documents": [
+    {
+     "id": "fronti",
+     "type": "tableau",
+     "titre": "Où passe la frontière ?",
+     "colonnes": [
+      "Religion (religio)",
+      "Magie (magia)"
+     ],
+     "lignes": [
+      [
+       "Publique, au grand jour",
+       "Secrète, souvent de nuit"
+      ],
+      [
+       "Demande aux dieux",
+       "Prétend les contraindre par la formule exacte"
+      ],
+      [
+       "Rites de la cité",
+       "Intérêt privé, souvent contre autrui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste du côté de la religion de la cité ou de la magie.",
+     "categories": [
+      "Religion",
+      "Magie"
+     ],
+     "items": [
+      [
+       "Offrir des fruits aux Lares au grand jour",
+       0
+      ],
+      [
+       "Célébrer un rite public de la cité",
+       0
+      ],
+      [
+       "Graver une malédiction de nuit sur du plomb",
+       1
+      ],
+      [
+       "Réciter la formule exacte pour contraindre un dieu",
+       1
+      ],
+      [
+       "Jeter en cachette une tablette contre un rival",
+       1
+      ]
+     ],
+     "aide": "Regarde si le geste est public ou secret, s’il demande ou s’il contraint.",
+     "explication": "**Religion** : offrir aux Lares, célébrer un rite public. **Magie** : malédiction de nuit, formule qui contraint, tablette secrète contre un rival."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec les mots du tableau.",
+     "texte": "La religion ___ aux dieux ; la magie prétend les ___ par la formule exacte.",
+     "reponses": [
+      [
+       "demande"
+      ],
+      [
+       "contraindre"
+      ]
+     ],
+     "banque": [
+      "demande",
+      "contraindre",
+      "remercie",
+      "ignorer"
+     ],
+     "aide": "Relis la deuxième ligne du tableau.",
+     "explication": "La religion **demande** aux dieux, la magie prétend les **contraindre** : c’est la différence de fond."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Apulée est-il accusé de magie au IIe siècle ?",
+     "options": [
+      "Pour avoir épousé une riche veuve",
+      "Pour avoir volé un onguent magique",
+      "Pour avoir gravé une tablette de plomb",
+      "Pour avoir ranimé un mort à Rome"
+     ],
+     "reponse": 0,
+     "aide": "Son discours de défense s’appelle l’*Apologie*.",
+     "explication": "Apulée est accusé d’avoir **épousé une riche veuve, Pudentilla**, par des charmes. Son *Apologie* le défend."
+    }
+   ]
+  },
+  {
+   "chapitre": "ccfa9fad-79b2-5e2e-9503-9928547b9265",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre sorcières, quatre exploits",
+   "competence": "analyser-document",
+   "situation": "Les sorcières de la littérature latine sont toutes différentes. Croise l’affiche du cours et un petit texte pour les démêler.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les sorcières de la littérature",
+     "sousTitre": "Quatre auteurs, quatre portraits",
+     "emoji": "🧙",
+     "lignes": [
+      {
+       "texte": "Canidia",
+       "valeur": "Horace",
+       "id": "canidia"
+      },
+      {
+       "texte": "Médée",
+       "valeur": "Ovide, Métamorphoses VII",
+       "id": "medee"
+      },
+      {
+       "texte": "Érichtho",
+       "valeur": "Lucain, Pharsale VI",
+       "id": "erichtho"
+      },
+      {
+       "texte": "Pamphile",
+       "valeur": "Apulée, Métamorphoses",
+       "id": "pamphile"
+      }
+     ],
+     "pied": "D’après le cours"
+    },
+    {
+     "id": "tante",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une conversation de marché",
+     "blocs": [
+      "Ma tante jure qu’une sorcière de [[t|Thessalie]] peut faire descendre la [[l|Lune]] du ciel. Mon maître d’école n’y croit pas."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque sorcière à son exploit.",
+     "paires": [
+      [
+       "Canidia",
+       "Prépare un philtre avec des os déterrés"
+      ],
+      [
+       "Médée",
+       "Rajeunit le vieil Éson"
+      ],
+      [
+       "Érichtho",
+       "Ranime un cadavre pour qu’il prédise l’avenir"
+      ],
+      [
+       "Pamphile",
+       "Possède l’onguent qui change Lucius en âne"
+      ]
+     ],
+     "aide": "Pense à l’auteur indiqué sur l’affiche : Ovide, Lucain, Apulée.",
+     "explication": "**Canidia** déterre des os, **Médée** rajeunit Éson, **Érichtho** ranime un mort, **Pamphile** détient l’onguent qui change Lucius en âne."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "multiple": false,
+     "reponse": [
+      "erichtho"
+     ],
+     "enonce": "Touche la sorcière qui apparaît dans un poème sur la guerre civile.",
+     "aide": "La *Pharsale* de Lucain raconte la guerre entre César et Pompée.",
+     "explication": "**Érichtho** est la sorcière de la *Pharsale* : elle ranime un cadavre pour savoir l’issue de la guerre civile."
+    },
+    {
+     "type": "zone",
+     "document": "tante",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le nom de la région que les Romains tenaient pour la patrie des sorcières.",
+     "aide": "Une région de Grèce du Nord.",
+     "explication": "La **Thessalie** passait pour la patrie des sorcières : on disait qu’elles faisaient descendre la Lune."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre l’aventure de Lucius chez Apulée.",
+     "items": [
+      "Lucius vole l’onguent de Pamphile",
+      "Il se change par erreur en âne",
+      "Il invoque Isis",
+      "Il mange des roses",
+      "Il retrouve forme humaine"
+     ],
+     "aide": "Le remède d’Isis passe par des fleurs.",
+     "explication": "Lucius **vole l’onguent**, **devient âne**, **invoque Isis**, **mange des roses** et **redevient homme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fc83035-70b5-53ee-82ab-bad804fd1919",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un vers de Lucrèce à la loupe",
+   "competence": "manier-langue",
+   "situation": "Le vers le plus célèbre de Lucrèce accuse la religion superstitieuse. Regarde-le mot à mot.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "De rerum natura, I, 101",
+     "blocs": [
+      "Tantum [[r|religio]] potuit [[s|suadere]] malorum."
+     ],
+     "source": "Lucrèce, *De rerum natura* I, 101"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le sujet du verbe « potuit ».",
+     "aide": "Cherche le mot au nominatif qui a « pu » faire quelque chose.",
+     "explication": "Le sujet est **religio**, au nominatif : c’est elle qui a pu conseiller tant de crimes."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche l’infinitif.",
+     "aide": "Un infinitif latin se termine ici en -ere.",
+     "explication": "**Suadere** est l’infinitif, complément de *potuit* : « a pu conseiller »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne « religio » dans ce vers ?",
+     "options": [
+      "La crainte superstitieuse",
+      "La piété sereine",
+      "Le culte des ancêtres",
+      "Le respect des lois"
+     ],
+     "reponse": 0,
+     "aide": "Lucrèce parle du sacrifice d’Iphigénie.",
+     "explication": "Ici *religio* désigne la **crainte superstitieuse** qui pousse à sacrifier une jeune fille."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fc83035-70b5-53ee-82ab-bad804fd1919",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une mort qui n’est rien",
+   "competence": "manier-langue",
+   "situation": "Lucrèce veut délivrer les hommes de la peur de la mort. Analyse sa formule, puis retrouve le vocabulaire de sa physique.",
+   "documents": [
+    {
+     "id": "mort",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "De rerum natura, III, 830",
+     "blocs": [
+      "Nil [[g|igitur]] [[m|mors]] est ad nos."
+     ],
+     "source": "Lucrèce, *De rerum natura* III, 830 (début du vers)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mort",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot latin qui signifie « donc ».",
+     "aide": "C’est un connecteur logique, présent dans le cours.",
+     "explication": "**Igitur** signifie « donc » : il annonce la conclusion d’un raisonnement."
+    },
+    {
+     "type": "zone",
+     "document": "mort",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le sujet du verbe « est ».",
+     "aide": "La phrase parle de ce qui n’est « rien » pour nous.",
+     "explication": "Le sujet est **mors**, « la mort », au nominatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle traduction convient le mieux à la phrase ?",
+     "options": [
+      "La mort n’est donc rien pour nous",
+      "La mort vient donc jusqu’à nous",
+      "Rien n’est donc mort pour nous",
+      "Nous ne sommes donc rien pour la mort"
+     ],
+     "reponse": 0,
+     "aide": "*Nil* est un sujet ou un attribut ? Cherche qui est « rien ».",
+     "explication": "« **La mort n’est donc rien pour nous.** » *Mors* est le sujet, *nil* l’attribut, *ad nos* « pour nous »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme de la physique de Lucrèce à son sens.",
+     "paires": [
+      [
+       "inane",
+       "Le vide"
+      ],
+      [
+       "semina rerum",
+       "Les atomes"
+      ],
+      [
+       "clinamen",
+       "La légère déviation"
+      ],
+      [
+       "animus",
+       "L’esprit, fait d’atomes"
+      ]
+     ],
+     "aide": "Pense à la physique d’Épicure.",
+     "explication": "**Inane** est le vide, **semina rerum** les atomes, **clinamen** la déviation, **animus** l’esprit, lui aussi fait d’atomes."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fc83035-70b5-53ee-82ab-bad804fd1919",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux voix face aux dieux",
+   "competence": "argumenter",
+   "situation": "Lis deux réponses imaginées pour l’exercice : l’une épicurienne, l’autre académicienne. Croise-les avec le tableau de Cicéron pour les attribuer.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Débat au Jardin",
+     "blocs": [
+      "**Lucile** : Les dieux vivent heureux, loin de nous. Prier pour que le vent se lève ne sert à rien.",
+      "**Marc** : Je ne sais pas si l’oiseau annonce l’avenir. Je cherche le plus probable, et je suspends mon jugement."
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Religio et superstitio chez Cicéron",
+     "colonnes": [
+      "Mot",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "religio",
+       "Scrupule, culte réglé des dieux"
+      ],
+      [
+       "superstitio",
+       "Crainte excessive, crédulité"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Laquelle des deux voix est épicurienne ?",
+     "options": [
+      "Lucile, pour qui les dieux ne s’occupent pas de nous",
+      "Marc, pour qui la divination reste incertaine",
+      "Les deux, car toutes deux doutent de l’avenir",
+      "Aucune des deux, car elles croient aux dieux"
+     ],
+     "reponse": 0,
+     "aide": "Pour Épicure, les dieux ne s’intéressent pas aux hommes.",
+     "explication": "**Lucile** est épicurienne : les dieux, heureux, **ne s’occupent pas des hommes**. Marc suspend son jugement, comme la Nouvelle Académie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Attribue chaque idée à Lucrèce ou à Cicéron.",
+     "categories": [
+      "Lucrèce",
+      "Cicéron"
+     ],
+     "items": [
+      [
+       "Les dieux ne s’occupent pas des hommes",
+       0
+      ],
+      [
+       "L’âme est faite d’atomes et se disperse",
+       0
+      ],
+      [
+       "Mettre en vers la physique d’Épicure",
+       0
+      ],
+      [
+       "Suspendre son jugement quand on ne sait pas",
+       1
+      ],
+      [
+       "Distinguer religio et superstitio",
+       1
+      ],
+      [
+       "Rapporter le mot de Caton sur les haruspices",
+       1
+      ]
+     ],
+     "aide": "L’un est un poète épicurien, l’autre un avocat, augure et académicien.",
+     "explication": "**Lucrèce** : dieux lointains, âme d’atomes, physique d’Épicure en vers. **Cicéron** : suspension du jugement, religio/superstitio, mot de Caton."
+    },
+    {
+     "type": "zone",
+     "document": "mots",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le mot que Cicéron réserve à la crainte excessive qui asservit l’esprit.",
+     "aide": "Il s’oppose à *religio*.",
+     "explication": "C’est **superstitio** : la peur excessive, la crédulité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Marc, en cherchant « le plus probable », parle comme…",
+     "options": [
+      "Cicéron, membre de la Nouvelle Académie",
+      "Lucrèce, disciple fidèle d’Épicure",
+      "Augustin, évêque d’Hippone",
+      "Pline, auteur de l’Histoire naturelle"
+     ],
+     "reponse": 0,
+     "aide": "Quelle école suspend son jugement ?",
+     "explication": "Chercher le probable et suspendre son jugement est la méthode de la **Nouvelle Académie**, celle de **Cicéron**."
+    }
+   ]
+  },
+  {
+   "chapitre": "56f70b98-1d1e-56bd-aae1-e9a823e43a0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Néron à Théodose",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur les chrétiens dans l’Empire. Place les grandes dates sur une frise, puis retrouve ce que promettent les cultes à mystères.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les chrétiens dans l’Empire romain",
+     "debut": 0,
+     "fin": 400,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "incendie",
+       "date": 64,
+       "nom": "Incendie de Rome"
+      },
+      {
+       "id": "pline",
+       "date": 112,
+       "nom": "Lettre de Pline"
+      },
+      {
+       "id": "milan",
+       "date": 313,
+       "nom": "Liberté de culte"
+      },
+      {
+       "id": "thess",
+       "date": 380,
+       "nom": "Religion d’Empire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "thess"
+     ],
+     "enonce": "Touche l’événement où le christianisme devient la religion de l’Empire.",
+     "aide": "C’est l’édit de Théodose.",
+     "explication": "L’édit de Thessalonique, en **380**, fait du christianisme la religion de l’Empire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la liberté de culte de Constantin (313) de l’édit de Théodose (380) ?",
+     "reponse": 67,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "380 − 313 = **67 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque culte à mystères à ce qu’il promet ou offre.",
+     "paires": [
+      [
+       "Cybèle",
+       "Renaissance et fécondité"
+      ],
+      [
+       "Isis",
+       "Protection et salut après la mort"
+      ],
+      [
+       "Mithra",
+       "Culte des soldats, dans des grottes"
+      ],
+      [
+       "Bacchus",
+       "L’extase"
+      ]
+     ],
+     "aide": "Trois cultes viennent d’Orient, un de Grèce.",
+     "explication": "**Cybèle** promet renaissance, **Isis** le salut après la mort, **Mithra** réunit les soldats, **Bacchus** donne l’extase."
+    }
+   ]
+  },
+  {
+   "chapitre": "56f70b98-1d1e-56bd-aae1-e9a823e43a0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comme à un dieu",
+   "competence": "analyser-texte",
+   "situation": "Vers 112, Pline le Jeune décrit à l’empereur Trajan les réunions des chrétiens. Lis l’expression latine, puis compare leur attitude à celle de la religion de la cité.",
+   "documents": [
+    {
+     "id": "pline",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Lettres, X, 96",
+     "blocs": [
+      "… [[d|Christo]] [[q|quasi]] [[e|deo]] …"
+     ],
+     "source": "Pline le Jeune, *Lettres* X, 96 (expression citée dans le cours)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pline",
+     "multiple": false,
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche le mot latin qui signifie « comme ».",
+     "aide": "Un petit mot de comparaison, avant « deo ».",
+     "explication": "**Quasi** signifie « comme, pour ainsi dire »."
+    },
+    {
+     "type": "zone",
+     "document": "pline",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot latin qui signifie « dieu ».",
+     "aide": "Il est proche du mot français « déité ».",
+     "explication": "**Deo** est une forme de *deus* : « (comme) à un dieu »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que font les chrétiens, selon cette expression ?",
+     "options": [
+      "Ils chantent un hymne au Christ comme à un dieu",
+      "Ils sacrifient à l’empereur comme à un dieu",
+      "Ils offrent du vin aux Lares comme à des dieux",
+      "Ils consultent un augure comme un prêtre"
+     ],
+     "reponse": 0,
+     "aide": "La phrase complète de Pline parle d’un chant, avant l’aube.",
+     "explication": "Selon Pline, ils chantent un hymne **au Christ comme à un dieu** (*Christo quasi deo*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait du côté de la religion de la cité ou des chrétiens.",
+     "categories": [
+      "Religion de la cité",
+      "Chrétiens"
+     ],
+     "items": [
+      [
+       "Honorer l’empereur par un sacrifice",
+       0
+      ],
+      [
+       "Rites qui garantissent la pax deorum",
+       0
+      ],
+      [
+       "Vestales gardiennes du feu",
+       0
+      ],
+      [
+       "Un Dieu unique et exclusif",
+       1
+      ],
+      [
+       "Se réunir avant l’aube pour chanter un hymne",
+       1
+      ],
+      [
+       "Refuser de sacrifier aux dieux de la cité",
+       1
+      ]
+     ],
+     "aide": "Les chrétiens refusent d’honorer les autres dieux.",
+     "explication": "**Cité** : sacrifice à l’empereur, pax deorum, vestales. **Chrétiens** : Dieu unique, hymne avant l’aube, refus de sacrifier."
+    }
+   ]
+  },
+  {
+   "chapitre": "56f70b98-1d1e-56bd-aae1-e9a823e43a0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Augustin, entre deux mondes",
+   "competence": "se-reperer-temps",
+   "situation": "Augustin naît en 354, devient évêque, puis écrit *La Cité de Dieu* après le sac de Rome. Croise la frise et le tableau des grands textes chrétiens.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Autour d’Augustin",
+     "debut": 350,
+     "fin": 430,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "vie",
+       "debut": 354,
+       "fin": 430,
+       "nom": "Vie d’Augustin",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 354,
+       "nom": "Naissance"
+      },
+      {
+       "id": "theo",
+       "date": 380,
+       "nom": "Thessalonique"
+      },
+      {
+       "id": "sac",
+       "date": 410,
+       "nom": "Sac de Rome"
+      },
+      {
+       "id": "mort",
+       "date": 430,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Les grands textes chrétiens latins",
+     "colonnes": [
+      "Auteur",
+      "Œuvre",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Tertullien",
+       "Apologétique",
+       "Vers 200"
+      ],
+      [
+       "Jérôme",
+       "Vulgate",
+       "Fin du IVe siècle"
+      ],
+      [
+       "Augustin",
+       "La Cité de Dieu",
+       "Après 410"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Augustin avait-il lors du sac de Rome par Alaric ?",
+     "reponse": 56,
+     "unite": "ans",
+     "aide": "Soustrais la date de naissance à celle du sac de Rome.",
+     "explication": "410 − 354 = **56 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces œuvres dans l’ordre chronologique.",
+     "items": [
+      "Apologétique de Tertullien",
+      "Vulgate de Jérôme",
+      "Cité de Dieu d’Augustin"
+     ],
+     "aide": "Regarde la colonne « Date » du tableau.",
+     "explication": "L’**Apologétique** (vers 200) précède la **Vulgate** (fin du IVe siècle), puis **La Cité de Dieu** (après 410)."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "sac"
+     ],
+     "enonce": "Touche l’événement qui pousse Augustin à écrire *La Cité de Dieu*.",
+     "aide": "Alaric, en 410.",
+     "explication": "C’est le **sac de Rome par Alaric** en 410."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot latin au changement de sens qu’il connaît.",
+     "paires": [
+      [
+       "paganus",
+       "Le paysan, devenu « païen »"
+      ],
+      [
+       "fides",
+       "La bonne foi, devenue « foi »"
+      ]
+     ],
+     "aide": "Les campagnes restèrent fidèles aux anciens dieux.",
+     "explication": "**Paganus** (paysan) devient « païen » ; **fides** (bonne foi du contrat) devient la foi chrétienne."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cd8f882-359e-5065-a5bc-56f1c4a841f7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire le sujet du bac",
+   "competence": "lire-tableau",
+   "situation": "Voici le barème de l’épreuve écrite de spécialité LLCA. Lis-le avant de te lancer dans ta copie.",
+   "documents": [
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Barème de l’épreuve écrite",
+     "colonnes": [
+      "Partie",
+      "Question",
+      "Points"
+     ],
+     "lignes": [
+      [
+       "1. Étude de la langue",
+       "Traduction d’environ 90 mots",
+       "6"
+      ],
+      [
+       "1. Étude de la langue",
+       "Un fait de langue",
+       "2"
+      ],
+      [
+       "1. Étude de la langue",
+       "Une notion clé du lexique",
+       "2"
+      ],
+      [
+       "2. Compréhension et interprétation",
+       "Un essai sur les trois textes",
+       "10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bareme",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui donne les points de la traduction.",
+     "aide": "Cherche la ligne « Traduction » puis la colonne des points.",
+     "explication": "La traduction vaut **6 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points vaut toute la première partie, l’étude de la langue ?",
+     "reponse": 10,
+     "unite": "points",
+     "aide": "Additionne les trois lignes de la partie 1.",
+     "explication": "6 + 2 + 2 = **10 points** : la même valeur que l’essai."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points valent ensemble le fait de langue et la question de lexique ?",
+     "reponse": 4,
+     "unite": "points",
+     "aide": "Additionne seulement ces deux lignes.",
+     "explication": "2 + 2 = **4 points**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cd8f882-359e-5065-a5bc-56f1c4a841f7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Traduire en quelques étapes",
+   "competence": "manier-langue",
+   "situation": "Tu dois traduire une phrase latine simple, écrite pour l’exercice. Suis la méthode de l’épreuve : verbes, sujet, traduction.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase à traduire",
+     "blocs": [
+      "Cum nuntius [[v|venisset]], [[s|dux]] milites in forum [[v|convocavit]]."
+     ],
+     "source": "Phrase latine écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux verbes conjugués.",
+     "aide": "Première étape de la méthode : repérer les verbes conjugués.",
+     "explication": "Les verbes conjugués sont **venisset** et **convocavit** : il y a donc deux propositions."
+    },
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le sujet de « convocavit ».",
+     "aide": "Cherche le nominatif : qui convoque ?",
+     "explication": "Le sujet est **dux**, « le chef »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle traduction est la plus exacte ?",
+     "options": [
+      "Quand le messager fut arrivé, le chef convoqua les soldats au forum",
+      "Le messager arriva, quand le chef convoquait le forum des soldats",
+      "Comme le chef convoquait, le messager arriva vers les soldats",
+      "Quand le chef fut arrivé, le messager convoqua les soldats"
+     ],
+     "reponse": 0,
+     "aide": "*Cum* + subjonctif plus-que-parfait : action antérieure au passé.",
+     "explication": "*Cum nuntius venisset* : « quand le messager fut arrivé » ; *dux milites convocavit* : « le chef convoqua les soldats »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la méthode.",
+     "items": [
+      "Lire le titre et le chapeau",
+      "Repérer les verbes conjugués",
+      "Identifier les mots de liaison",
+      "Trouver sujet, objet et compléments",
+      "Relire sa traduction"
+     ],
+     "aide": "On lit, on repère, on construit, puis on relit.",
+     "explication": "La méthode commence par le **chapeau**, puis les **verbes**, les **mots de liaison**, **sujet, objet, compléments**, et finit par la **relecture**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cd8f882-359e-5065-a5bc-56f1c4a841f7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plan de Camille et l’oral",
+   "competence": "argumenter",
+   "situation": "Camille prépare l’essai du bac. Juge son plan, puis regarde la durée de l’oral de contrôle.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le plan de Camille",
+     "blocs": [
+      "Partie 1 : le texte latin d’Ovide.",
+      "Partie 2 : le texte de Sénèque.",
+      "Partie 3 : l’extrait de *La ferme africaine*."
+     ],
+     "source": "Plan écrit pour l’exercice"
+    },
+    {
+     "id": "oral",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Oral de contrôle",
+     "sousTitre": "Passage devant l’examinateur",
+     "emoji": "⏱️",
+     "lignes": [
+      {
+       "texte": "Préparation",
+       "valeur": "20 min"
+      },
+      {
+       "texte": "Exposé (lecture comprise)",
+       "valeur": "10 min",
+       "id": "expose"
+      },
+      {
+       "texte": "Entretien",
+       "valeur": "10 min",
+       "id": "entretien"
+      }
+     ],
+     "pied": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel défaut a le plan de Camille ?",
+     "options": [
+      "Il traite les textes un par un",
+      "Il oublie l’œuvre moderne",
+      "Il cite le latin sans traduction",
+      "Il recopie la question posée"
+     ],
+     "reponse": 0,
+     "aide": "Une partie par texte : que manque-t-il ?",
+     "explication": "Camille traite les textes **un par un** au lieu de les confronter dans chaque partie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque conseil : bon réflexe ou défaut fréquent ?",
+     "categories": [
+      "Bon réflexe",
+      "Défaut fréquent"
+     ],
+     "items": [
+      [
+       "Analyser comment et pourquoi",
+       0
+      ],
+      [
+       "Un exemple de Blixen dans chaque partie",
+       0
+      ],
+      [
+       "Confronter les textes dans chaque partie",
+       0
+      ],
+      [
+       "Paraphraser les textes",
+       1
+      ],
+      [
+       "Oublier l’œuvre moderne",
+       1
+      ],
+      [
+       "Traiter les textes un par un",
+       1
+      ]
+     ],
+     "aide": "Le tableau du cours oppose défauts et remèdes.",
+     "explication": "Les **remèdes** sont d’analyser, de confronter et de citer Blixen ; les **défauts** sont de paraphraser, d’oublier l’œuvre moderne et de traiter un texte après l’autre."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de l’essai.",
+     "items": [
+      "Analyser la question",
+      "Formuler une problématique",
+      "Construire deux ou trois parties",
+      "Mobiliser ses connaissances",
+      "Citer le latin avec parcimonie"
+     ],
+     "aide": "On commence par comprendre la question.",
+     "explication": "On **analyse la question**, on pose une **problématique**, on **construit les parties**, on **mobilise ses connaissances** et on **cite avec parcimonie**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure le passage devant l’examinateur (exposé et entretien), préparation exclue ?",
+     "reponse": 20,
+     "unite": "min",
+     "aide": "Additionne les deux lignes concernées de la fiche.",
+     "explication": "10 + 10 = **20 minutes** devant l’examinateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab199434-cffe-5ac2-a025-c9a33d1cc3b6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Reconnaître les verbes irréguliers",
+   "competence": "manier-langue",
+   "situation": "Les verbes les plus fréquents sont les plus irréguliers. Observe les temps primitifs, puis reconnais quelques formes.",
+   "documents": [
+    {
+     "id": "verbes",
+     "type": "tableau",
+     "titre": "Les verbes irréguliers",
+     "colonnes": [
+      "Verbe",
+      "Temps primitifs"
+     ],
+     "lignes": [
+      [
+       "eo, aller",
+       "eo, is, ire, ii (ivi), itum"
+      ],
+      [
+       "fero, porter",
+       "fero, fers, ferre, tuli, latum"
+      ],
+      [
+       "volo, vouloir",
+       "volo, vis, velle, volui"
+      ],
+      [
+       "nolo, ne pas vouloir",
+       "nolo, non vis, nolle, nolui"
+      ],
+      [
+       "malo, préférer",
+       "malo, mavis, malle, malui"
+      ],
+      [
+       "fio, devenir",
+       "fio, fis, fieri, factus sum"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verbes",
+     "multiple": false,
+     "reponse": [
+      "r4c0"
+     ],
+     "enonce": "Touche le verbe qui signifie « préférer ».",
+     "aide": "Il est construit sur *magis volo*.",
+     "explication": "**Malo** signifie « préférer »."
+    },
+    {
+     "type": "zone",
+     "document": "verbes",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la ligne dont le parfait est « tuli ».",
+     "aide": "Trois radicaux différents : *fer-*, *tul-*, *lat-*.",
+     "explication": "Le parfait **tuli** appartient à **fero**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme à son sens.",
+     "paires": [
+      [
+       "eunt",
+       "ils vont"
+      ],
+      [
+       "fers",
+       "tu portes"
+      ],
+      [
+       "vis",
+       "tu veux"
+      ],
+      [
+       "fis",
+       "tu deviens"
+      ]
+     ],
+     "aide": "Retrouve le verbe d’origine de chaque forme.",
+     "explication": "**Eunt** vient de *eo*, **fers** de *fero*, **vis** de *volo*, **fis** de *fio*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab199434-cffe-5ac2-a025-c9a33d1cc3b6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Oser, se repentir, avoir le droit",
+   "competence": "manier-langue",
+   "situation": "Trois phrases latines simples, écrites pour l’exercice, pour reconnaître semi-déponents et verbes non personnels.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Trois phrases",
+     "blocs": [
+      "1. Miles fortis hostes oppugnare [[s|ausus]] [[s|est]].",
+      "2. Me paenitet [[g|culpae]] meae.",
+      "3. Pueris in foro ludere non licet."
+     ],
+     "source": "Phrases latines écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mots qui forment le parfait de « audeo ».",
+     "aide": "Forme passive, sens actif : *ausus sum*.",
+     "explication": "**Ausus est** est le parfait du semi-déponent *audeo* : « il a osé »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire la phrase 1 ?",
+     "options": [
+      "Le soldat courageux a osé attaquer les ennemis",
+      "Le soldat courageux a été attaqué par les ennemis",
+      "Les ennemis ont osé attaquer le soldat courageux",
+      "Le soldat courageux osera attaquer les ennemis"
+     ],
+     "reponse": 0,
+     "aide": "*Ausus est* a un sens actif.",
+     "explication": "« **Le soldat courageux a osé attaquer les ennemis.** »"
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot au génitif qui donne la cause du repentir.",
+     "aide": "Avec *paenitet*, la cause se met au génitif.",
+     "explication": "**Culpae** est au génitif : « Je me repens de ma faute »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire la phrase 3 ?",
+     "options": [
+      "Les enfants n’ont pas le droit de jouer sur le forum",
+      "Les enfants ne veulent pas jouer sur le forum",
+      "Les enfants ne peuvent pas jouer, car le forum est fermé",
+      "Les enfants n’auront pas le temps de jouer au forum"
+     ],
+     "reponse": 0,
+     "aide": "*Licet* + datif + infinitif : « il est permis à… de… ».",
+     "explication": "*Licet* est un verbe non personnel : « il est permis ». Avec **non**, « il n’est pas permis aux enfants de jouer sur le forum »."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab199434-cffe-5ac2-a025-c9a33d1cc3b6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Supin, nonne et double négation",
+   "competence": "manier-langue",
+   "situation": "Quatre phrases latines simples, écrites pour l’exercice, pour croiser quatre points du programme.",
+   "documents": [
+    {
+     "id": "quatre",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Quatre phrases",
+     "blocs": [
+      "1. Milites in castra eunt [[s|dormitum]].",
+      "2. Nonne Romani fortes sunt ?",
+      "3. [[d|Discipulus]] felix esse videtur.",
+      "4. Nemo non in foro erat."
+     ],
+     "source": "Phrases latines écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quatre",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le supin de la phrase 1.",
+     "aide": "Il se termine en -um et suit un verbe de mouvement.",
+     "explication": "**Dormitum** est un supin en -um : il exprime le but (« pour dormir »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la phrase 2, quelle réponse « nonne » attend-il ?",
+     "options": [
+      "Oui",
+      "Non",
+      "Peut-être",
+      "Une alternative"
+     ],
+     "reponse": 0,
+     "aide": "*Nonne* annonce une réponse évidente.",
+     "explication": "*Nonne* attend la réponse « **oui** » : « Les Romains ne sont-ils pas courageux ? »"
+    },
+    {
+     "type": "zone",
+     "document": "quatre",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le sujet de « videtur ».",
+     "aide": "*Videtur* signifie « il semble », avec un sujet nominatif.",
+     "explication": "Le sujet est **discipulus** : « l’élève semble être heureux »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à sa traduction.",
+     "paires": [
+      [
+       "Milites in castra eunt dormitum",
+       "Les soldats vont au camp pour dormir"
+      ],
+      [
+       "Nonne Romani fortes sunt ?",
+       "Les Romains ne sont-ils pas courageux ?"
+      ],
+      [
+       "Discipulus felix esse videtur",
+       "L’élève semble être heureux"
+      ],
+      [
+       "Nemo non in foro erat",
+       "Tout le monde était sur le forum"
+      ]
+     ],
+     "aide": "*Nemo non* est une double négation.",
+     "explication": "*Nemo non* = **tout le monde** ; *videtur* = il semble ; *dormitum* = pour dormir ; *nonne* pose une question qui attend « oui »."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f3bb3a-0541-5237-9f2f-ff0e00bec190",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le cri de Laocoon",
+   "competence": "manier-langue",
+   "situation": "Devant le cheval de Troie, Laocoon lance le vers le plus cité de Virgile. Observe ses mots latins.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Énéide, II",
+     "blocs": [
+      "[[q|Quidquid]] id est, timeo Danaos et dona [[f|ferentes]]."
+     ],
+     "source": "Virgile, *Énéide* II (vers cité dans le cours)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche le relatif indéfini qui signifie « quoi que ».",
+     "aide": "Il existe en deux formes au neutre : *quodcumque* ou celle-ci.",
+     "explication": "**Quidquid** est le relatif indéfini neutre : « quoi que ce soit »."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le participe présent.",
+     "aide": "Il se termine en *-ntes* et est au pluriel.",
+     "explication": "**Ferentes** est le participe présent de *fero* : « apportant »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de verbes conjugués compte le vers ?",
+     "reponse": 2,
+     "unite": "verbes",
+     "aide": "Ne compte pas le participe *ferentes*.",
+     "explication": "Il y en a **deux** : *est* et *timeo*."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f3bb3a-0541-5237-9f2f-ff0e00bec190",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du discours direct au discours indirect",
+   "competence": "manier-langue",
+   "situation": "Des ambassadeurs parlent, puis on rapporte leurs paroles. Compare les deux versions latines, tirées du cours.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Direct ou indirect ?",
+     "blocs": [
+      "Discours direct : « Nos pacem petimus. »",
+      "Discours indirect : Legati dixerunt [[s|se]] pacem [[p|petere]]."
+     ],
+     "source": "Exemple du cours, dans l’esprit de César"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deux",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui remplace « nos » au style indirect.",
+     "aide": "Le pronom réfléchi renvoie à celui qui parle.",
+     "explication": "**Se** remplace *nos* : c’est le sujet de l’infinitive, à l’accusatif."
+    },
+    {
+     "type": "zone",
+     "document": "deux",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche l’infinitif qui remplace « petimus ».",
+     "aide": "Une déclarative devient une proposition infinitive.",
+     "explication": "**Petere** est l’infinitif qui remplace *petimus*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du discours direct à son devenir au style indirect.",
+     "paires": [
+      [
+       "Principale déclarative",
+       "Proposition infinitive"
+      ],
+      [
+       "Principale d’ordre",
+       "Subjonctif d’ordre"
+      ],
+      [
+       "Subordonnée",
+       "Subjonctif de dépendance"
+      ],
+      [
+       "ego, meus",
+       "se, suus"
+      ]
+     ],
+     "aide": "Un passage d’ordre ou de question passe au subjonctif.",
+     "explication": "Une **déclarative** devient une infinitive, un **ordre** et une **subordonnée** passent au **subjonctif**, *ego* et *meus* deviennent *se* et *suus*."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel cas est « se », sujet de l’infinitive « se pacem petere » ?",
+     "options": [
+      "Accusatif",
+      "Nominatif",
+      "Datif",
+      "Ablatif"
+     ],
+     "reponse": 0,
+     "aide": "Le sujet d’une infinitive n’est pas au nominatif.",
+     "explication": "Le sujet d’une proposition infinitive se met à l’**accusatif**."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f3bb3a-0541-5237-9f2f-ff0e00bec190",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Je hais et j’aime",
+   "competence": "manier-langue",
+   "situation": "Deux célèbres formules latines emploient des parfaits à sens de présent. Observe-les, puis replace la concordance des temps.",
+   "documents": [
+    {
+     "id": "formules",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux formules",
+     "blocs": [
+      "Catulle : [[v|Odi]] et [[v|amo]].",
+      "Maxime : Memento mori."
+     ],
+     "source": "Catulle, poème 85 (début) ; maxime latine"
+    },
+    {
+     "id": "concordance",
+     "type": "tableau",
+     "titre": "La concordance des temps au subjonctif",
+     "colonnes": [
+      "Principale",
+      "Simultanéité",
+      "Antériorité"
+     ],
+     "lignes": [
+      [
+       "Présent ou futur",
+       "Subjonctif présent",
+       "Subjonctif parfait"
+      ],
+      [
+       "Passé",
+       "Subjonctif imparfait",
+       "Subjonctif plus-que-parfait"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formules",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux verbes de la formule de Catulle.",
+     "aide": "Cherche deux formes verbales liées par *et*.",
+     "explication": "Les verbes sont **odi** et **amo** : « je hais et j’aime »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « odi » se traduit-il par un présent ?",
+     "options": [
+      "C’est un parfait à sens de présent",
+      "C’est un présent de l’indicatif passif",
+      "C’est un futur antérieur déguisé",
+      "C’est un subjonctif d’attraction modale"
+     ],
+     "reponse": 0,
+     "aide": "Odi, memini et novi ont la même particularité.",
+     "explication": "*Odi* est un **parfait à sens de présent** : « j’ai pris en haine », donc « je hais »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque parfait à son sens de présent.",
+     "paires": [
+      [
+       "memini",
+       "je me souviens"
+      ],
+      [
+       "novi",
+       "je sais"
+      ],
+      [
+       "odi",
+       "je hais"
+      ]
+     ],
+     "aide": "Le parfait dit le résultat présent d’une action passée.",
+     "explication": "**Memini** : je me souviens, **novi** : je sais, **odi** : je hais."
+    },
+    {
+     "type": "zone",
+     "document": "concordance",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche le temps du subjonctif qui exprime l’antériorité après une principale au présent.",
+     "aide": "Cherche la ligne « Présent ou futur » puis la colonne « Antériorité ».",
+     "explication": "Après un présent, l’antériorité se dit au **subjonctif parfait**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel mode est « memento », dans « memento mori » ?",
+     "options": [
+      "À l’impératif",
+      "À l’indicatif",
+      "Au subjonctif",
+      "À l’infinitif"
+     ],
+     "reponse": 0,
+     "aide": "Le cours donne l’impératif de *memini*.",
+     "explication": "*Memento* est l’**impératif** de *memini* : « souviens-toi »."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1a49723-16cf-5d45-b63e-b705c78946f7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le destin et le sacré",
+   "competence": "manier-langue",
+   "situation": "Tu prépares la question de lexique du bac. Lis le tableau des mots du destin et du sacré.",
+   "documents": [
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Les mots du destin et du sacré",
+     "colonnes": [
+      "Mot latin",
+      "Sens premier",
+      "Héritiers français"
+     ],
+     "lignes": [
+      [
+       "fatum",
+       "Ce qui a été dit",
+       "fatal, fatalité"
+      ],
+      [
+       "fortuna",
+       "Le sort, bon ou mauvais",
+       "fortune, fortuit"
+      ],
+      [
+       "monstrum",
+       "Signe envoyé par les dieux",
+       "monstre, montrer"
+      ],
+      [
+       "templum",
+       "Espace du ciel découpé par l’augure",
+       "temple, contempler"
+      ],
+      [
+       "augurium",
+       "Présage tiré des oiseaux",
+       "augure, inaugurer"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mots",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le mot latin qui a donné « temple » et « contempler ».",
+     "aide": "Regarde la colonne des héritiers français.",
+     "explication": "**Templum** a donné *temple* et *contempler* : contempler, c’était observer le templum céleste."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot latin à un héritier français.",
+     "paires": [
+      [
+       "fatum",
+       "fatal"
+      ],
+      [
+       "fortuna",
+       "fortuit"
+      ],
+      [
+       "augurium",
+       "inaugurer"
+      ],
+      [
+       "monstrum",
+       "montrer"
+      ]
+     ],
+     "aide": "Cherche le mot français qui garde la racine.",
+     "explication": "**Fatum** donne fatal, **fortuna** fortuit, **augurium** inaugurer, **monstrum** montrer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifiait d’abord « fatum », de « fari » ?",
+     "options": [
+      "Ce qui a été dit",
+      "Ce qui a été caché",
+      "Ce qui a été donné",
+      "Ce qui a été promis"
+     ],
+     "reponse": 0,
+     "aide": "*Fari* signifie « parler ».",
+     "explication": "*Fatum* vient de *fari*, « parler » : ce qui a été **dit** par les dieux."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1a49723-16cf-5d45-b63e-b705c78946f7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mot populaire ou mot savant ?",
+   "competence": "manier-langue",
+   "situation": "Un même mot latin a souvent donné deux mots français. Observe quatre doublets, puis range-en d’autres.",
+   "documents": [
+    {
+     "id": "doublets",
+     "type": "tableau",
+     "titre": "Quatre doublets",
+     "colonnes": [
+      "Latin",
+      "Mot populaire",
+      "Mot savant"
+     ],
+     "lignes": [
+      [
+       "fragilis",
+       "frêle",
+       "?"
+      ],
+      [
+       "hospitale",
+       "hôtel",
+       "?"
+      ],
+      [
+       "potionem",
+       "poison",
+       "?"
+      ],
+      [
+       "auscultare",
+       "écouter",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot latin à son doublet savant.",
+     "paires": [
+      [
+       "fragilis",
+       "fragile"
+      ],
+      [
+       "hospitale",
+       "hôpital"
+      ],
+      [
+       "potionem",
+       "potion"
+      ],
+      [
+       "auscultare",
+       "ausculter"
+      ]
+     ],
+     "aide": "Le mot savant ressemble davantage au latin.",
+     "explication": "Les doublets savants sont **fragile**, **hôpital**, **potion** et **ausculter**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots français : populaires ou savants ?",
+     "categories": [
+      "Populaire",
+      "Savant"
+     ],
+     "items": [
+      [
+       "peser",
+       0
+      ],
+      [
+       "livrer",
+       0
+      ],
+      [
+       "penser",
+       1
+      ],
+      [
+       "libérer",
+       1
+      ]
+     ],
+     "aide": "Le mot populaire s’est usé de bouche en bouche.",
+     "explication": "**Peser** et **livrer** sont populaires ; **penser** et **libérer**, recopiés par les lettrés, sont savants."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Le mot ___ s’est usé par la voix des siècles ; le mot ___ a été recopié plus tard par les lettrés.",
+     "reponses": [
+      [
+       "populaire"
+      ],
+      [
+       "savant"
+      ]
+     ],
+     "banque": [
+      "populaire",
+      "savant",
+      "ancien",
+      "rare"
+     ],
+     "aide": "Relis le titre des colonnes.",
+     "explication": "Le mot **populaire** est usé par l’usage, le mot **savant** vient des lettrés."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1a49723-16cf-5d45-b63e-b705c78946f7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Réussir la question de lexique",
+   "competence": "argumenter",
+   "situation": "Un élève a répondu à la question de lexique sur « ingenium », dans les *Tristes*. Corrige sa copie avec la méthode du cours.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Copie d’élève",
+     "blocs": [
+      "« Ingenium : c’est le talent poétique d’Ovide. C’est ce qui le console de l’exil. »"
+     ],
+     "source": "Copie écrite pour l’exercice"
+    },
+    {
+     "id": "racines",
+     "type": "tableau",
+     "titre": "Quelques racines rentables",
+     "colonnes": [
+      "Racine",
+      "Sens",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "duc-",
+       "conduire",
+       "aqueduc"
+      ],
+      [
+       "cap-",
+       "prendre",
+       "capture"
+      ],
+      [
+       "vid-/vis-",
+       "voir",
+       "évident"
+      ],
+      [
+       "mitt-/miss-",
+       "envoyer",
+       "mission"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre temps d’une bonne réponse.",
+     "items": [
+      "Donner le sens premier",
+      "Relever les emplois dans le texte",
+      "Dire le sens en contexte",
+      "Ouvrir sur un héritier ou un équivalent grec"
+     ],
+     "aide": "Du sens le plus ancien vers l’ouverture finale.",
+     "explication": "On donne le **sens premier**, on relève les **emplois**, on dit le **sens en contexte**, puis on **ouvre**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que manque-t-il à la copie de l’élève ?",
+     "options": [
+      "Le sens premier et un héritier français",
+      "Le sens en contexte des Tristes",
+      "Les emplois précis relevés dans le texte",
+      "Une traduction complète du passage"
+     ],
+     "reponse": 0,
+     "aide": "Elle donne seulement le sens en contexte.",
+     "explication": "L’élève oublie le **sens premier** (talent naturel, inné) et l’**ouverture** vers un héritier comme *ingénieux* ou *ingénieur*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mot français vient de « ingenium » ?",
+     "options": [
+      "Ingénieur",
+      "Ingestion",
+      "Ingérence",
+      "Ingratitude"
+     ],
+     "reponse": 0,
+     "aide": "Pense au métier de celui qui a du talent naturel pour inventer.",
+     "explication": "**Ingénieur** et *ingénieux* viennent d’*ingenium*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque racine à un mot français qui la contient.",
+     "paires": [
+      [
+       "duc-",
+       "aqueduc"
+      ],
+      [
+       "cap-",
+       "capture"
+      ],
+      [
+       "vid-/vis-",
+       "évident"
+      ],
+      [
+       "mitt-/miss-",
+       "mission"
+      ]
+     ],
+     "aide": "Le tableau de racines donne les exemples.",
+     "explication": "*Duc-* : aqueduc ; *cap-* : capture ; *vid-/vis-* : évident ; *mitt-/miss-* : mission."
+    }
+   ]
+  }
+ ]
+}

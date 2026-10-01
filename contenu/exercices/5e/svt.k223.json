@@ -1,0 +1,4866 @@
+{
+  "niveau": "5e",
+  "matiere": "svt",
+  "exercices": [
+    {
+      "chapitre": "a14f6d16-7763-5899-b6e1-91461c3b94df",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le voyage d’une bouchée",
+      "competence": "observer-schema",
+      "situation": "Lina croque dans un sandwich jambon-beurre. Suis sa bouchée sur le schéma du tube digestif.",
+      "documents": [
+        {
+          "id": "tube",
+          "type": "schema",
+          "titre": "Le tube digestif",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 80,
+              "cy": 26,
+              "rx": 34,
+              "ry": 15,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "bouche",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 72,
+              "y": 42,
+              "l": 16,
+              "h": 48,
+              "arrondi": 6,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "oeso",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 80,
+              "cy": 118,
+              "rx": 38,
+              "ry": 28,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "estomac",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 34,
+              "y": 150,
+              "l": 92,
+              "h": 72,
+              "arrondi": 14,
+              "teinte": "rose",
+              "motif": "clair",
+              "id": "gros",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 52,
+              "y": 162,
+              "l": 56,
+              "h": 48,
+              "arrondi": 10,
+              "teinte": "rose",
+              "motif": "plein",
+              "id": "grele",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                114,
+                26
+              ],
+              "a": [
+                168,
+                26
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 30,
+              "texte": "Bouche",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                66
+              ],
+              "a": [
+                168,
+                66
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 70,
+              "texte": "Œsophage",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                116,
+                118
+              ],
+              "a": [
+                168,
+                118
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 122,
+              "texte": "Estomac",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100,
+                186
+              ],
+              "a": [
+                168,
+                186
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 190,
+              "texte": "Intestin grêle",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                126,
+                212
+              ],
+              "a": [
+                168,
+                212
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 172,
+              "y": 216,
+              "texte": "Gros intestin",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tube",
+          "enonce": "Touche l’organe où les aliments sont brassés dans un suc acide.",
+          "reponse": [
+            "estomac"
+          ],
+          "aide": "Le suc gastrique est fabriqué par un organe en forme de poche.",
+          "explication": "C’est l’**estomac** : il brasse les aliments avec le suc gastrique acide."
+        },
+        {
+          "type": "zone",
+          "document": "tube",
+          "enonce": "Touche l’organe où se forment les matières fécales.",
+          "reponse": [
+            "gros"
+          ],
+          "aide": "C’est la dernière partie du trajet, celle où l’eau est réabsorbée.",
+          "explication": "Dans le **gros intestin**, l’eau est réabsorbée et les matières fécales se forment."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans la bouche, les dents broient le sandwich en petits morceaux. De quelle action s’agit-il ?",
+          "options": [
+            "Une action mécanique : elle fragmente les aliments",
+            "Une action chimique : elle coupe les liaisons entre molécules",
+            "Une absorption des nutriments dans le sang",
+            "Une action des enzymes de l’estomac"
+          ],
+          "reponse": 0,
+          "aide": "Les dents ne changent pas la nature des molécules : elles les découpent seulement.",
+          "explication": "Broyer, c’est **fragmenter** : c’est l’action mécanique, qui augmente la surface d’attaque des enzymes."
+        },
+        {
+          "type": "texte",
+          "enonce": "Comment s’appellent les contractions de l’œsophage qui font avancer la bouchée ? (un mot)",
+          "reponse": [
+            "péristaltisme",
+            "le péristaltisme"
+          ],
+          "aide": "Le mot commence par « péri- ».",
+          "explication": "Ce sont les mouvements du **péristaltisme**."
+        }
+      ]
+    },
+    {
+      "chapitre": "a14f6d16-7763-5899-b6e1-91461c3b94df",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le tube qui garde sa couleur",
+      "competence": "experimenter",
+      "situation": "On mélange de l’empois d’amidon avec de la salive, à 37 °C (la température du corps). L’eau iodée devient bleu-noir en présence d’amidon ; sans amidon, elle reste jaune-orangé.",
+      "documents": [
+        {
+          "id": "tubes",
+          "type": "tableau",
+          "titre": "Résultats après 15 minutes",
+          "colonnes": [
+            "Tube",
+            "Contenu",
+            "Couleur avec l’eau iodée"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Empois d’amidon + eau",
+              "Bleu-noir"
+            ],
+            [
+              "B",
+              "Empois d’amidon + salive",
+              "Jaune-orangé"
+            ],
+            [
+              "C",
+              "Empois d’amidon + salive préalablement portée à ébullition",
+              "Bleu-noir"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Expérience décrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tubes",
+          "enonce": "Touche la couleur obtenue dans le tube témoin, celui où l’on n’a pas mis de salive.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Le témoin est le tube où l’on n’ajoute pas la salive.",
+          "explication": "Le tube A est le témoin : sans salive, l’amidon est intact et l’eau iodée devient **bleu-noir**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que prouve le tube B, comparé au témoin ?",
+          "options": [
+            "La salive fait disparaître l’amidon",
+            "La salive contient de l’amidon",
+            "L’eau iodée détruit l’amidon",
+            "L’amidon disparaît tout seul en 15 minutes"
+          ],
+          "reponse": 0,
+          "aide": "Entre A et B, une seule chose change : la salive.",
+          "explication": "Entre A et B, seule la salive change, et l’amidon a disparu : **la salive attaque l’amidon**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le tube C, l’amidon est encore présent. Que peut-on en déduire ?",
+          "options": [
+            "La salive portée à ébullition n’agit plus : ses enzymes ne fonctionnent plus",
+            "La salive bouillie a transformé l’amidon en protéines, ce qui l’a rendu invisible",
+            "L’ébullition a fabriqué de l’amidon à partir des sucres présents dans la salive",
+            "La salive ne joue aucun rôle dans la digestion de l’amidon, qui se conserve seul"
+          ],
+          "reponse": 0,
+          "aide": "Compare C à B : la seule différence est l’ébullition de la salive.",
+          "explication": "Une enzyme est fragile : après ébullition elle n’agit plus, et le tube C reste **bleu-noir** comme le témoin."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel est le nom de l’enzyme de la salive qui coupe l’amidon ? (un mot)",
+          "reponse": [
+            "amylase",
+            "l’amylase",
+            "l'amylase"
+          ],
+          "aide": "Son nom commence comme celui de l’amidon : « amy- ».",
+          "explication": "C’est l’**amylase**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion.",
+          "texte": "L’amylase coupe l’amidon en petites molécules de ___ .",
+          "reponses": [
+            [
+              "glucose"
+            ]
+          ],
+          "banque": [
+            "glucose",
+            "acides aminés",
+            "acides gras",
+            "glycérol"
+          ],
+          "aide": "L’amidon est un glucide complexe.",
+          "explication": "L’amidon est coupé en **glucose**, assez petit pour traverser la paroi de l’intestin."
+        }
+      ]
+    },
+    {
+      "chapitre": "a14f6d16-7763-5899-b6e1-91461c3b94df",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Noé a-t-il mangé équilibré ?",
+      "competence": "raisonner",
+      "situation": "Noé, 13 ans, a noté ce qu’il a mangé et ce qu’il a dépensé en énergie pendant une semaine. L’équilibre alimentaire se juge sur plusieurs jours.",
+      "documents": [
+        {
+          "id": "energie",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Énergie apportée et dépensée par Noé",
+          "categories": [
+            "Lun.",
+            "Mar.",
+            "Mer.",
+            "Jeu.",
+            "Ven.",
+            "Sam.",
+            "Dim."
+          ],
+          "series": [
+            {
+              "nom": "Apportée (kcal)",
+              "valeurs": [
+                2200,
+                2800,
+                2400,
+                2000,
+                2600,
+                3000,
+                2600
+              ],
+              "teinte": "turquoise"
+            },
+            {
+              "nom": "Dépensée (kcal)",
+              "valeurs": [
+                2500,
+                2500,
+                2600,
+                2400,
+                2500,
+                2700,
+                2300
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Énergie",
+            "unite": "kcal",
+            "min": 1500,
+            "max": 3500,
+            "pas": 500
+          },
+          "axeX": {
+            "titre": "Jour"
+          },
+          "valeurs": false,
+          "source": "Valeurs inventées pour l’exercice"
+        },
+        {
+          "id": "reperes",
+          "type": "tableau",
+          "titre": "Les repères respectés par Noé",
+          "colonnes": [
+            "Repère",
+            "Fréquence conseillée",
+            "Jours respectés sur 7"
+          ],
+          "lignes": [
+            [
+              "Fruits et légumes",
+              "À chaque repas",
+              4
+            ],
+            [
+              "Produits laitiers",
+              "Chaque jour",
+              7
+            ],
+            [
+              "Protéines variées",
+              "Chaque jour",
+              6
+            ],
+            [
+              "Produits sucrés",
+              "Peu",
+              3
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "energie",
+          "enonce": "Touche le jour où Noé a mangé le plus d’énergie.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche le point le plus haut de la courbe « apportée ».",
+          "explication": "C’est le **samedi** : 3 000 kcal apportées."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’énergie totale apportée par l’alimentation de Noé sur la semaine.",
+          "reponse": 17600,
+          "unite": "kcal",
+          "aide": "Additionne les sept valeurs de la courbe « apportée ».",
+          "explication": "2 200 + 2 800 + 2 400 + 2 000 + 2 600 + 3 000 + 2 600 = **17 600 kcal**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’énergie dépensée sur la semaine vaut 17 500 kcal. Quel est l’écart (apportée − dépensée) ?",
+          "reponse": 100,
+          "unite": "kcal",
+          "aide": "Soustrais : 17 600 − 17 500.",
+          "explication": "17 600 − 17 500 = **100 kcal** : un écart minuscule sur sept jours."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit ce bilan de la semaine ?",
+          "options": [
+            "L’équilibre est presque parfait sur la semaine, même si les jours diffèrent",
+            "Un fort surpoids va s’installer, car les apports dépassent les besoins chaque jour",
+            "Noé souffre de dénutrition, car ses apports sont très inférieurs à ses besoins",
+            "Le bilan n’a pas de sens : il faut juger chaque repas, pas la semaine entière"
+          ],
+          "reponse": 0,
+          "aide": "L’équilibre alimentaire se juge sur plusieurs jours, pas repas par repas.",
+          "explication": "L’apport et la dépense sont presque égaux sur la semaine : **équilibre**, malgré des jours en excès (mardi, samedi) et en déficit (jeudi)."
+        },
+        {
+          "type": "zone",
+          "document": "reperes",
+          "enonce": "Touche le repère que Noé a respecté les 7 jours sur 7.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Cherche le nombre 7 dans la dernière colonne.",
+          "explication": "Les **produits laitiers** sont respectés 7 jours sur 7."
+        }
+      ]
+    },
+    {
+      "chapitre": "21866c21-b75c-5c5a-820d-d3da95e609f0",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinq doigts, mille visages",
+      "competence": "lire-tableau",
+      "situation": "Quatre élèves de 5e comparent leurs caractères. Certains sont les mêmes chez tous les humains, d’autres varient d’une personne à l’autre.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "tableau",
+          "titre": "Les caractères de quatre élèves",
+          "colonnes": [
+            "Élève",
+            "Couleur des yeux",
+            "Groupe sanguin",
+            "Doigts par main",
+            "Taille (cm)"
+          ],
+          "lignes": [
+            [
+              "Léo",
+              "Marron",
+              "A",
+              5,
+              152
+            ],
+            [
+              "Mina",
+              "Bleu",
+              "O",
+              5,
+              149
+            ],
+            [
+              "Sacha",
+              "Marron",
+              "B",
+              5,
+              155
+            ],
+            [
+              "Zoé",
+              "Vert",
+              "A",
+              5,
+              147
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves du tableau ont les yeux marron ?",
+          "reponse": 2,
+          "unite": "élèves",
+          "aide": "Lis la colonne « Couleur des yeux ».",
+          "explication": "Léo et Sacha : **2 élèves**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle colonne donne un caractère d’espèce, le même pour tous ?",
+          "options": [
+            "Doigts par main",
+            "Couleur des yeux",
+            "Groupe sanguin",
+            "Taille (cm)"
+          ],
+          "reponse": 0,
+          "aide": "Un caractère d’espèce ne change pas d’un élève à l’autre.",
+          "explication": "Tous ont **5 doigts par main** : c’est un caractère d’espèce. Les trois autres colonnes varient : ce sont des caractères individuels."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque caractère : d’espèce ou individuel ?",
+          "categories": [
+            "Caractère d’espèce",
+            "Caractère individuel"
+          ],
+          "items": [
+            [
+              "Une colonne vertébrale",
+              0
+            ],
+            [
+              "Forme du visage",
+              1
+            ],
+            [
+              "Deux yeux",
+              0
+            ],
+            [
+              "Couleur des cheveux",
+              1
+            ],
+            [
+              "Cinq doigts à chaque main",
+              0
+            ],
+            [
+              "Groupe sanguin",
+              1
+            ]
+          ],
+          "aide": "Demande-toi : tous les humains l’ont-ils ?",
+          "explication": "Ce que **tous** les humains partagent est un caractère d’espèce ; ce qui varie d’une personne à l’autre est individuel."
+        }
+      ]
+    },
+    {
+      "chapitre": "21866c21-b75c-5c5a-820d-d3da95e609f0",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Dolly et ses trois brebis",
+      "competence": "analyser-document",
+      "situation": "En 1996, des chercheurs écossais créent la brebis Dolly. Le schéma résume leur expérience.",
+      "documents": [
+        {
+          "id": "dolly",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "La naissance de Dolly",
+          "noeuds": [
+            {
+              "id": "n1",
+              "texte": "Brebis A (face blanche) : cellule de mamelle",
+              "emoji": "🐑"
+            },
+            {
+              "id": "n2",
+              "texte": "Ovule de B (face noire) + noyau de A",
+              "emoji": "🔬"
+            },
+            {
+              "id": "n3",
+              "texte": "Embryon porté par la brebis C (face noire)",
+              "emoji": "🤰"
+            },
+            {
+              "id": "n4",
+              "texte": "Naissance de l’agneau Dolly",
+              "emoji": "🍼"
+            }
+          ],
+          "liens": [
+            {
+              "de": "n1",
+              "a": "n2",
+              "texte": "on prélève son noyau"
+            },
+            {
+              "de": "n2",
+              "a": "n3"
+            },
+            {
+              "de": "n3",
+              "a": "n4"
+            }
+          ],
+          "source": "Schéma simplifié"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dolly",
+          "enonce": "Touche l’étape où le noyau de la brebis A est placé dans un ovule.",
+          "reponse": [
+            "n2"
+          ],
+          "aide": "C’est l’étape où deux brebis interviennent : A et B.",
+          "explication": "À l’étape « **ovule de B + noyau de A** », on associe le noyau de A et l’ovule de B."
+        },
+        {
+          "type": "choix",
+          "enonce": "De quelle couleur est la face de Dolly ?",
+          "options": [
+            "Blanche, comme la brebis A",
+            "Noire, comme la brebis B",
+            "Noire, comme la brebis C qui l’a portée",
+            "Grise, un mélange des trois"
+          ],
+          "reponse": 0,
+          "aide": "Dolly a reçu le noyau de la brebis A.",
+          "explication": "Le noyau porte l’information génétique : Dolly ressemble à la brebis A, **face blanche**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de brebis ont joué un rôle dans cette expérience ?",
+          "reponse": 3,
+          "unite": "brebis",
+          "aide": "Compte A, B et C.",
+          "explication": "A donne le noyau, B l’ovule, C porte l’embryon : **3 brebis**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que démontre cette expérience ?",
+          "options": [
+            "Le noyau impose les caractères de l’individu",
+            "Le cytoplasme de l’ovule impose les caractères",
+            "La brebis qui porte l’embryon impose ses caractères",
+            "L’environnement seul fait les caractères"
+          ],
+          "reponse": 0,
+          "aide": "Demande-toi ce que Dolly a reçu de A.",
+          "explication": "Dolly est semblable à A qui a donné **le noyau** : c’est lui qui porte l’information génétique."
+        }
+      ]
+    },
+    {
+      "chapitre": "21866c21-b75c-5c5a-820d-d3da95e609f0",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un alphabet à quatre lettres",
+      "competence": "raisonner",
+      "situation": "On étudie un fragment d’ADN, puis on compare trois cellules d’un même individu. Règle d’appariement des bases : A avec T, G avec C.",
+      "documents": [
+        {
+          "id": "brins",
+          "type": "tableau",
+          "titre": "Un fragment d’ADN",
+          "colonnes": [
+            "Brin",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "lignes": [
+            [
+              "Brin 1",
+              "A",
+              "T",
+              "G",
+              "C",
+              "A",
+              "A"
+            ],
+            [
+              "Brin 2",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Fragment inventé pour l’exercice"
+        },
+        {
+          "id": "cellules",
+          "type": "tableau",
+          "titre": "Trois cellules d’un même individu",
+          "colonnes": [
+            "Cellule",
+            "Gène de l’insuline présent ?",
+            "Insuline fabriquée ?"
+          ],
+          "lignes": [
+            [
+              "Pancréas (cellule bêta)",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Peau",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Neurone",
+              "Oui",
+              "Non"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Complète le brin 2, base par base.",
+          "texte": "Brin 2 : ___ ___ ___ ___ ___ ___",
+          "reponses": [
+            [
+              "T"
+            ],
+            [
+              "A"
+            ],
+            [
+              "C"
+            ],
+            [
+              "G"
+            ],
+            [
+              "T"
+            ],
+            [
+              "T"
+            ]
+          ],
+          "banque": [
+            "A",
+            "T",
+            "G",
+            "C"
+          ],
+          "aide": "Chaque base du brin 1 s’apparie : A avec T, G avec C.",
+          "explication": "Le brin 2 est **T A C G T T** : chaque base s’apparie avec sa complémentaire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de paires G–C contient ce fragment ?",
+          "reponse": 2,
+          "unite": "paires",
+          "aide": "Repère où le brin 1 a un G ou un C.",
+          "explication": "G en 3 et C en 4 : **2 paires** G–C (les 4 autres sont des paires A–T)."
+        },
+        {
+          "type": "zone",
+          "document": "cellules",
+          "enonce": "Touche la case qui dit si la cellule de la peau fabrique de l’insuline.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Lis la ligne « Peau ».",
+          "explication": "La cellule de la peau ne fabrique **pas** d’insuline : case « Non »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclure de ce tableau ?",
+          "options": [
+            "Toutes les cellules ont le même ADN, mais n’expriment pas les mêmes gènes",
+            "La cellule de la peau n’a pas le gène de l’insuline : elle l’a perdu en se spécialisant",
+            "Chaque organe possède un ADN différent, adapté à la fonction de ses cellules",
+            "Seul le pancréas contient de l’ADN, les autres cellules n’en ont pas du tout"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la colonne « gène présent ».",
+          "explication": "Le gène est présent partout (« Oui »), mais **exprimé** seulement dans le pancréas : c’est l’expression qui change, pas l’ADN."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de cellules du tableau possèdent le gène de l’insuline ?",
+          "reponse": 3,
+          "unite": "cellules",
+          "aide": "Lis la colonne « Gène de l’insuline présent ? ».",
+          "explication": "Les trois cellules le possèdent : **3**."
+        }
+      ]
+    },
+    {
+      "chapitre": "99965e49-31ad-541e-b43c-65538b17fe7c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les groupes sanguins de la famille Morel",
+      "competence": "lire-tableau",
+      "situation": "Quatre membres d’une famille ont fait analyser le gène des groupes sanguins. Chacun en porte deux allèles, un de chaque parent.",
+      "documents": [
+        {
+          "id": "morel",
+          "type": "tableau",
+          "titre": "Les allèles de la famille Morel",
+          "colonnes": [
+            "Personne",
+            "Premier allèle",
+            "Second allèle"
+          ],
+          "lignes": [
+            [
+              "Emma",
+              "O",
+              "O"
+            ],
+            [
+              "Karim",
+              "A",
+              "O"
+            ],
+            [
+              "Lou",
+              "A",
+              "A"
+            ],
+            [
+              "Théo",
+              "A",
+              "B"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situation imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque personne : homozygote ou hétérozygote pour ce gène ?",
+          "categories": [
+            "Homozygote",
+            "Hétérozygote"
+          ],
+          "items": [
+            [
+              "Emma",
+              0
+            ],
+            [
+              "Karim",
+              1
+            ],
+            [
+              "Lou",
+              0
+            ],
+            [
+              "Théo",
+              1
+            ]
+          ],
+          "aide": "Homozygote : les deux allèles sont identiques.",
+          "explication": "Emma (O et O) et Lou (A et A) ont deux allèles identiques : **homozygotes**. Karim et Théo en ont deux différents : **hétérozygotes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Karim porte les allèles A et O. Quel est son groupe sanguin ?",
+          "options": [
+            "A",
+            "O",
+            "AB",
+            "B"
+          ],
+          "reponse": 0,
+          "aide": "L’allèle A est dominant sur O.",
+          "explication": "A est dominant, O récessif : Karim est de groupe **A**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de personnes du tableau sont de groupe A ?",
+          "reponse": 2,
+          "unite": "personnes",
+          "aide": "Théo porte A et B : pour lui, les deux allèles s’expriment.",
+          "explication": "Karim (A//O) et Lou (A//A) sont de groupe A : **2 personnes**. Théo est de groupe AB."
+        }
+      ]
+    },
+    {
+      "chapitre": "99965e49-31ad-541e-b43c-65538b17fe7c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux parents, quatre possibilités",
+      "competence": "raisonner",
+      "situation": "M. Durand est de groupe A mais porte aussi l’allèle O (A//O). Mme Durand est de groupe B mais porte aussi l’allèle O (B//O). Chaque case du tableau est un enfant possible.",
+      "documents": [
+        {
+          "id": "croise",
+          "type": "tableau",
+          "titre": "Les enfants possibles",
+          "colonnes": [
+            "Père ↓   Mère →",
+            "B",
+            "O"
+          ],
+          "lignes": [
+            [
+              "A",
+              "A//B",
+              "A//O"
+            ],
+            [
+              "O",
+              "B//O",
+              "O//O"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chaque parent transmet un seul de ses deux allèles"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "croise",
+          "enonce": "Touche la case de l’enfant de groupe O.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Le groupe O ne correspond qu’à un seul génotype : deux allèles O.",
+          "explication": "Seul **O//O** donne le groupe O : l’allèle O est récessif et ne s’exprime qu’en double."
+        },
+        {
+          "type": "zone",
+          "document": "croise",
+          "enonce": "Touche la case de l’enfant de groupe AB.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Il faut les deux allèles A et B.",
+          "explication": "**A//B** : les allèles A et B sont codominants, les deux s’expriment."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur les quatre cases, une seule est de groupe O. Quelle est la chance, en pourcentage, que l’enfant soit de groupe O ?",
+          "reponse": 25,
+          "unite": "%",
+          "aide": "Une case sur quatre.",
+          "explication": "1 ÷ 4 = **25 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Des parents de groupes A et B peuvent-ils avoir un enfant de groupe O ?",
+          "options": [
+            "Oui, si chacun porte l’allèle O sans l’exprimer",
+            "Non, jamais : il n’y a pas d’allèle O dans leur groupe",
+            "Non, leur enfant sera forcément AB",
+            "Oui, mais seulement si l’un des deux est homozygote"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la case O//O du tableau.",
+          "explication": "Chaque parent hétérozygote peut transmettre son allèle **O** : l’enfant O//O est possible."
+        }
+      ]
+    },
+    {
+      "chapitre": "99965e49-31ad-541e-b43c-65538b17fe7c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une maladie qui saute les parents",
+      "competence": "analyser-document",
+      "situation": "Une maladie héréditaire rare touche un enfant. Arbre généalogique : carré = garçon, rond = fille, figure pleine = personne malade. L’allèle de la maladie, noté m, est récessif ; l’allèle normal est noté M.",
+      "documents": [
+        {
+          "id": "arbre",
+          "type": "schema",
+          "titre": "Arbre généalogique de la famille",
+          "largeur": 340,
+          "hauteur": 232,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                30
+              ],
+              "a": [
+                108,
+                30
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                232,
+                30
+              ],
+              "a": [
+                268,
+                30
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                30
+              ],
+              "a": [
+                90,
+                98
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                30
+              ],
+              "a": [
+                250,
+                98
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                102,
+                110
+              ],
+              "a": [
+                238,
+                110
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                110
+              ],
+              "a": [
+                170,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                140,
+                150
+              ],
+              "a": [
+                200,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                140,
+                150
+              ],
+              "a": [
+                140,
+                178
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                200,
+                150
+              ],
+              "a": [
+                200,
+                178
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 48,
+              "y": 18,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 120,
+              "cy": 30,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 208,
+              "y": 18,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 280,
+              "cy": 30,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i4",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 78,
+              "y": 98,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "ii1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 250,
+              "cy": 110,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "ii2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 140,
+              "cy": 190,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "iii1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 188,
+              "y": 178,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "iii2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 56,
+              "texte": "I-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 120,
+              "y": 56,
+              "texte": "I-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 220,
+              "y": 56,
+              "texte": "I-3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 280,
+              "y": 56,
+              "texte": "I-4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 136,
+              "texte": "II-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 136,
+              "texte": "II-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 218,
+              "texte": "III-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 218,
+              "texte": "III-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "genos",
+          "type": "tableau",
+          "titre": "Génotype et phénotype",
+          "colonnes": [
+            "Génotype",
+            "Phénotype"
+          ],
+          "lignes": [
+            [
+              "M//M",
+              "Sain"
+            ],
+            [
+              "M//m",
+              "Sain, porteur de l’allèle m"
+            ],
+            [
+              "m//m",
+              "Malade"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Allèle m récessif"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "arbre",
+          "enonce": "Touche les deux personnes saines qui portent forcément l’allèle m.",
+          "reponse": [
+            "ii1",
+            "ii2"
+          ],
+          "multiple": true,
+          "aide": "Ce sont les parents de l’enfant malade.",
+          "explication": "II-1 et II-2 sont sains, mais chacun a transmis un allèle m à III-1 : ils sont **M//m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quels allèles porte l’enfant malade III-1 ?",
+          "options": [
+            "Deux allèles m (génotype m//m)",
+            "Un allèle M et un allèle m",
+            "Deux allèles M",
+            "On ne peut pas le savoir"
+          ],
+          "reponse": 0,
+          "aide": "Une maladie récessive ne s’exprime qu’avec deux allèles m.",
+          "explication": "Il est malade : il porte deux allèles m, donc **m//m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’allèles m l’enfant malade a-t-il reçus de chacun de ses parents ?",
+          "reponse": 1,
+          "unite": "allèle",
+          "aide": "Il en a deux en tout : un de chaque parent.",
+          "explication": "Un allèle m du père et un de la mère : **1** de chaque parent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi deux parents sains peuvent-ils avoir un enfant malade ?",
+          "options": [
+            "Chacun porte un allèle m masqué par l’allèle M et l’a transmis",
+            "La maladie vient de l’alimentation de l’enfant pendant sa petite enfance",
+            "Un seul parent a transmis un allèle m, l’autre n’a rien transmis du tout",
+            "L’allèle m est dominant chez les parents, donc il s’exprime chez eux aussi"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le génotype M//m du tableau.",
+          "explication": "Masqué par l’allèle dominant M, m ne s’exprime pas chez les parents : ils sont **porteurs sains**, et l’enfant reçoit deux m."
+        },
+        {
+          "type": "zone",
+          "document": "genos",
+          "enonce": "Touche le génotype d’une personne saine qui peut transmettre l’allèle m.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Cherche un génotype avec un M et un m.",
+          "explication": "**M//m** : sain, mais capable de transmettre l’allèle m."
+        }
+      ]
+    },
+    {
+      "chapitre": "d55e7a85-8e73-5965-a1b0-72a411bbddb8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La peau qui se répare",
+      "competence": "observer-schema",
+      "situation": "Après une écorchure, la peau cicatrise en quelques jours : ses cellules se divisent. Le schéma suit une cellule de peau qui se divise.",
+      "documents": [
+        {
+          "id": "mitose",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Une division de cellule de peau",
+          "noeuds": [
+            {
+              "id": "m1",
+              "texte": "Cellule mère : 46 chromosomes"
+            },
+            {
+              "id": "m2",
+              "texte": "Copie de l’ADN (réplication)"
+            },
+            {
+              "id": "m3",
+              "texte": "Mitose"
+            },
+            {
+              "id": "m4",
+              "texte": "?"
+            }
+          ],
+          "liens": [
+            {
+              "de": "m1",
+              "a": "m2"
+            },
+            {
+              "de": "m2",
+              "a": "m3"
+            },
+            {
+              "de": "m3",
+              "a": "m4"
+            }
+          ],
+          "source": "Schéma simplifié"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de cellules filles obtient-on à la fin d’une mitose ?",
+          "reponse": 2,
+          "unite": "cellules",
+          "aide": "Une cellule mère se divise en ...",
+          "explication": "Une mitose donne **2** cellules filles."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de chromosomes possède chaque cellule fille ?",
+          "reponse": 46,
+          "unite": "chromosomes",
+          "aide": "Les cellules filles sont identiques à la cellule mère.",
+          "explication": "Les cellules filles sont identiques à la cellule mère : **46 chromosomes**."
+        },
+        {
+          "type": "zone",
+          "document": "mitose",
+          "enonce": "Touche l’étape où l’ADN est copié avant la division.",
+          "reponse": [
+            "m2"
+          ],
+          "aide": "Il faut copier l’ADN avant de partager la cellule.",
+          "explication": "La **réplication** de l’ADN précède la mitose : chaque cellule fille reçoit une copie complète."
+        },
+        {
+          "type": "choix",
+          "enonce": "Laquelle de ces situations repose sur la mitose ?",
+          "options": [
+            "La cicatrisation d’une écorchure",
+            "La fabrication des spermatozoïdes",
+            "La fécondation d’un ovule",
+            "La transmission d’une maladie aux enfants"
+          ],
+          "reponse": 0,
+          "aide": "La mitose fabrique des cellules identiques pour la croissance et le renouvellement.",
+          "explication": "La mitose renouvelle et répare les tissus : la **cicatrisation** en dépend."
+        }
+      ]
+    },
+    {
+      "chapitre": "d55e7a85-8e73-5965-a1b0-72a411bbddb8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "De 46 à 23, puis de nouveau 46",
+      "competence": "raisonner",
+      "situation": "On compte les chromosomes de différentes cellules humaines, de la peau jusqu’au tout début d’un embryon.",
+      "documents": [
+        {
+          "id": "chromo",
+          "type": "tableau",
+          "titre": "Nombre de chromosomes par cellule",
+          "colonnes": [
+            "Cellule",
+            "Chromosomes"
+          ],
+          "lignes": [
+            [
+              "Cellule de peau",
+              46
+            ],
+            [
+              "Spermatozoïde",
+              23
+            ],
+            [
+              "Ovule",
+              23
+            ],
+            [
+              "Œuf, juste après la fécondation",
+              "?"
+            ],
+            [
+              "Cellule de l’embryon, après une mitose de l’œuf",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Nombres chez l’être humain"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de chromosomes possède l’œuf après la fécondation ?",
+          "reponse": 46,
+          "unite": "chromosomes",
+          "aide": "L’œuf reçoit ceux du spermatozoïde et ceux de l’ovule.",
+          "explication": "23 + 23 = **46 chromosomes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de chromosomes possède chaque cellule de l’embryon après une mitose de l’œuf ?",
+          "reponse": 46,
+          "unite": "chromosomes",
+          "aide": "La mitose conserve le nombre de chromosomes.",
+          "explication": "La mitose donne deux cellules identiques à l’œuf : **46**."
+        },
+        {
+          "type": "zone",
+          "document": "chromo",
+          "enonce": "Touche les deux cellules produites par la méiose.",
+          "reponse": [
+            "r1c0",
+            "r2c0"
+          ],
+          "multiple": true,
+          "aide": "La méiose fabrique des gamètes à 23 chromosomes.",
+          "explication": "Le **spermatozoïde** et l’**ovule** sont des gamètes, issus de la méiose : 23 chromosomes chacun."
+        },
+        {
+          "type": "choix",
+          "enonce": "Deux frères ont les mêmes parents mais ne sont pas identiques. Pourquoi ?",
+          "options": [
+            "Les gamètes tirés au hasard n’ont pas les mêmes combinaisons de gènes",
+            "Leur ADN change à chaque mitose, donc chaque enfant reçoit un ADN modifié",
+            "Les frères n’ont pas le même nombre de chromosomes dans leurs cellules",
+            "Les parents changent d’ADN entre deux naissances à cause de leur âge"
+          ],
+          "reponse": 0,
+          "aide": "La méiose et la fécondation brassent l’information.",
+          "explication": "Méiose et fécondation tirent au hasard les gamètes : chaque enfant est une **combinaison unique**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une mutation survient dans une cellule de la peau d’une mère. Sera-t-elle transmise à son enfant ?",
+          "options": [
+            "Oui",
+            "Non"
+          ],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Quelles cellules transmettent l’information à l’enfant ?",
+          "explication": "**Non** : seule une mutation dans une cellule reproductrice est transmissible."
+        }
+      ]
+    },
+    {
+      "chapitre": "d55e7a85-8e73-5965-a1b0-72a411bbddb8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le daltonisme dans la famille Garnier",
+      "competence": "analyser-document",
+      "situation": "Le daltonisme empêche de distinguer certaines couleurs. Arbre généalogique d’une famille : carré = homme, rond = femme, figure pleine = personne daltonienne.",
+      "documents": [
+        {
+          "id": "garnier",
+          "type": "schema",
+          "titre": "La famille Garnier",
+          "largeur": 340,
+          "hauteur": 232,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                30
+              ],
+              "a": [
+                108,
+                30
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                30
+              ],
+              "a": [
+                90,
+                70
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                70
+              ],
+              "a": [
+                160,
+                70
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                50,
+                70
+              ],
+              "a": [
+                50,
+                98
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100,
+                70
+              ],
+              "a": [
+                100,
+                98
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                70
+              ],
+              "a": [
+                160,
+                98
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                172,
+                110
+              ],
+              "a": [
+                238,
+                110
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                205,
+                110
+              ],
+              "a": [
+                205,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                175,
+                150
+              ],
+              "a": [
+                235,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                175,
+                150
+              ],
+              "a": [
+                175,
+                178
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                235,
+                150
+              ],
+              "a": [
+                235,
+                178
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "rect",
+              "x": 48,
+              "y": 18,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 120,
+              "cy": 30,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "i2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 38,
+              "y": 98,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "ii1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 88,
+              "y": 98,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "ii3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 110,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "ii2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 238,
+              "y": 98,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "ii4",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 163,
+              "y": 178,
+              "l": 24,
+              "h": 24,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "iii1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 235,
+              "cy": 190,
+              "r": 12,
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "iii2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 56,
+              "texte": "I-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 120,
+              "y": 56,
+              "texte": "I-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 50,
+              "y": 136,
+              "texte": "II-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 100,
+              "y": 136,
+              "texte": "II-3",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 136,
+              "texte": "II-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 136,
+              "texte": "II-4",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 175,
+              "y": 218,
+              "texte": "III-1",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 235,
+              "y": 218,
+              "texte": "III-2",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        },
+        {
+          "id": "freq",
+          "type": "tableau",
+          "titre": "Le daltonisme en France",
+          "colonnes": [
+            "Population",
+            "Part de personnes daltoniennes"
+          ],
+          "lignes": [
+            [
+              "Hommes",
+              "8 %"
+            ],
+            [
+              "Femmes",
+              "0,5 %"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres arrondis"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de personnes daltoniennes figurent sur l’arbre ?",
+          "reponse": 2,
+          "unite": "personnes",
+          "aide": "Compte les figures pleines.",
+          "explication": "II-1 et III-1 : **2 personnes** daltoniennes, toutes deux des hommes."
+        },
+        {
+          "type": "zone",
+          "document": "garnier",
+          "enonce": "Touche les deux femmes non daltoniennes qui ont un fils daltonien.",
+          "reponse": [
+            "i2",
+            "ii2"
+          ],
+          "multiple": true,
+          "aide": "Cherche les mères des deux figures pleines.",
+          "explication": "I-2 est la mère de II-1 et II-2 la mère de III-1 : elles ne sont pas daltoniennes, mais elles ont transmis le caractère."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur l’arbre, le caractère touche seulement des garçons et peut sauter une génération. Qu’est-ce que cela suggère ?",
+          "options": [
+            "Un caractère porté par le chromosome X",
+            "Un caractère acquis pendant la vie",
+            "Une mutation apparue dans la peau",
+            "Un caractère dû à l’alimentation"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux indices donnés pour suivre un caractère dans un arbre.",
+          "explication": "Un caractère qui touche presque uniquement les garçons est probablement porté par le chromosome **X**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le daltonisme est-il plus fréquent chez les hommes que chez les femmes ?",
+          "reponse": 16,
+          "unite": "fois",
+          "aide": "Divise 8 par 0,5.",
+          "explication": "8 ÷ 0,5 = **16** : bien plus fréquent chez les hommes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel énoncé résume les deux documents ?",
+          "options": [
+            "Le daltonisme touche surtout les hommes, ce qui correspond à un gène du chromosome X",
+            "Le daltonisme touche autant les filles que les garçons, car le gène est sur un autosome",
+            "Le daltonisme se transmet seulement de père en fils, car il est porté par le chromosome Y",
+            "Le daltonisme apparaît seulement après 40 ans, par vieillissement des cellules de la rétine"
+          ],
+          "reponse": 0,
+          "aide": "L’arbre et les pourcentages disent la même chose.",
+          "explication": "Dans l’arbre comme dans les chiffres, les hommes sont bien plus touchés : **gène du chromosome X**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6244a88c-f692-51ab-bd01-b938192bd0ed",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pommier qui fleurit plus tôt",
+      "competence": "lire-graphique",
+      "situation": "Dans un verger, on note chaque année la date de floraison d’un pommier, en jour d’avril. Le graphique donne la moyenne de chaque décennie.",
+      "documents": [
+        {
+          "id": "fleur",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Date moyenne de floraison du pommier",
+          "categories": [
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Jour d’avril",
+              "valeurs": [
+                25,
+                22,
+                18,
+                12
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Jour d’avril",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Décennie"
+          },
+          "valeurs": false,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis la date moyenne de floraison en 2020, en jour d’avril.",
+          "reponse": 12,
+          "unite": "avril",
+          "tolerance": 1,
+          "aide": "Lis la hauteur de la dernière barre sur l’axe vertical.",
+          "explication": "En 2020, le pommier fleurit en moyenne le **12 avril**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de jours la floraison a-t-elle avancé entre 1990 et 2020 ?",
+          "reponse": 13,
+          "unite": "jours",
+          "aide": "Soustrais : 25 − 12.",
+          "explication": "25 − 12 = **13 jours** d’avance."
+        },
+        {
+          "type": "zone",
+          "document": "fleur",
+          "enonce": "Touche la décennie où la floraison est la plus tardive.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus haute : le jour d’avril le plus grand.",
+          "explication": "En **1990**, la floraison avait lieu vers le 25 avril, la date la plus tardive."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle l’étude du calendrier des événements du vivant (floraison, migration…) ?",
+          "options": [
+            "La phénologie",
+            "La morphologie",
+            "La classification",
+            "La mitose"
+          ],
+          "reponse": 0,
+          "aide": "Le mot commence par « phéno- ».",
+          "explication": "C’est la **phénologie** : le réchauffement avance les floraisons et décale les migrations."
+        }
+      ]
+    },
+    {
+      "chapitre": "6244a88c-f692-51ab-bd01-b938192bd0ed",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des poussins au garde-à-vous",
+      "competence": "raisonner",
+      "situation": "Chaque printemps, les mésanges nourrissent leurs poussins avec des chenilles. Les poussins ont besoin de nourriture à la semaine 18, toujours à la même date, alors que les chenilles sont de plus en plus précoces.",
+      "documents": [
+        {
+          "id": "chenilles",
+          "type": "tableau",
+          "titre": "Date du pic de chenilles",
+          "colonnes": [
+            "Année",
+            "Pic de chenilles (semaine)",
+            "Besoin des poussins (semaine)",
+            "Décalage (semaines)"
+          ],
+          "lignes": [
+            [
+              "1995",
+              18,
+              18,
+              0
+            ],
+            [
+              "2005",
+              17,
+              18,
+              1
+            ],
+            [
+              "2015",
+              16,
+              18,
+              "?"
+            ],
+            [
+              "2023",
+              15,
+              18,
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        },
+        {
+          "id": "effets",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Un effet en chaîne",
+          "noeuds": [
+            {
+              "id": "e1",
+              "texte": "Hiver plus doux"
+            },
+            {
+              "id": "e2",
+              "texte": "Chenilles plus précoces"
+            },
+            {
+              "id": "e3",
+              "texte": "Poussins mal nourris"
+            },
+            {
+              "id": "e4",
+              "texte": "Moins de jeunes mésanges"
+            }
+          ],
+          "liens": [
+            {
+              "de": "e1",
+              "a": "e2"
+            },
+            {
+              "de": "e2",
+              "a": "e3"
+            },
+            {
+              "de": "e3",
+              "a": "e4"
+            }
+          ],
+          "source": "Schéma simplifié"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le décalage en 2015, en semaines ?",
+          "reponse": 2,
+          "unite": "semaines",
+          "aide": "Soustrais : 18 − 16.",
+          "explication": "18 − 16 = **2 semaines** entre le pic de chenilles et le besoin des poussins."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le décalage en 2023, en semaines ?",
+          "reponse": 3,
+          "unite": "semaines",
+          "aide": "Soustrais : 18 − 15.",
+          "explication": "18 − 15 = **3 semaines**."
+        },
+        {
+          "type": "zone",
+          "document": "chenilles",
+          "enonce": "Touche l’année où les poussins ont le plus de mal à se nourrir.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Cherche l’année où le décalage est le plus grand.",
+          "explication": "En **2023**, le décalage atteint 3 semaines : les chenilles sont passées avant les poussins."
+        },
+        {
+          "type": "zone",
+          "document": "effets",
+          "enonce": "Touche la conséquence directe du décalage pour les poussins.",
+          "reponse": [
+            "e3"
+          ],
+          "aide": "Les poussins arrivent quand il n’y a plus assez de chenilles.",
+          "explication": "Les **poussins sont mal nourris** : c’est la conséquence directe, avant la baisse du nombre de jeunes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Les mésanges qui pondent plus tôt ont plus de descendants et transmettent ce caractère. Quelle réponse du vivant est-ce ?",
+          "options": [
+            "S’adapter, par sélection naturelle, sur plusieurs générations",
+            "Se déplacer vers le nord pour retrouver un climat plus frais",
+            "Disparaître localement, faute de pouvoir s’installer ailleurs",
+            "Changer d’espèce en quelques années, sous l’effet du climat"
+          ],
+          "reponse": 0,
+          "aide": "Se déplacer, s’adapter ou disparaître : laquelle demande plusieurs générations ?",
+          "explication": "Les oiseaux qui pondent plus tôt se reproduisent davantage : c’est une **adaptation** par sélection naturelle."
+        }
+      ]
+    },
+    {
+      "chapitre": "6244a88c-f692-51ab-bd01-b938192bd0ed",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Plus haut, toujours plus haut",
+      "competence": "modeliser",
+      "situation": "Une montagne imaginaire culmine à 2 500 m. Avec le réchauffement, des plantes de montagne montent. Le schéma montre trois étages d’altitude ; le tableau donne l’altitude maximale où vit chaque espèce.",
+      "documents": [
+        {
+          "id": "montagne",
+          "type": "schema",
+          "titre": "Une montagne de 2 500 m",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  40,
+                  220
+                ],
+                [
+                  300,
+                  220
+                ],
+                [
+                  235,
+                  125
+                ],
+                [
+                  105,
+                  125
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "bas",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  105,
+                  125
+                ],
+                [
+                  235,
+                  125
+                ],
+                [
+                  202.5,
+                  77.5
+                ],
+                [
+                  137.5,
+                  77.5
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "milieu",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  137.5,
+                  77.5
+                ],
+                [
+                  202.5,
+                  77.5
+                ],
+                [
+                  170,
+                  30
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "haut",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 178,
+              "texte": "1 700 – 2 100 m",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 105,
+              "texte": "2 100 – 2 300 m",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190,
+                52
+              ],
+              "a": [
+                222,
+                46
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 226,
+              "y": 50,
+              "texte": "2 300 – 2 500 m",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        },
+        {
+          "id": "especes",
+          "type": "tableau",
+          "titre": "Altitude maximale de chaque espèce",
+          "colonnes": [
+            "Espèce",
+            "En 1980 (m)",
+            "En 2020 (m)"
+          ],
+          "lignes": [
+            [
+              "A",
+              1800,
+              2000
+            ],
+            [
+              "B",
+              2100,
+              2300
+            ],
+            [
+              "C",
+              2400,
+              2500
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres la limite haute de l’espèce B a-t-elle monté entre 1980 et 2020 ?",
+          "reponse": 200,
+          "unite": "m",
+          "aide": "Soustrais : 2 300 − 2 100.",
+          "explication": "2 300 − 2 100 = **200 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle vitesse monte l’espèce B, en mètres par an ? (1980 → 2020 : 40 ans)",
+          "reponse": 5,
+          "unite": "m par an",
+          "aide": "Divise 200 m par 40 ans.",
+          "explication": "200 ÷ 40 = **5 m par an**."
+        },
+        {
+          "type": "zone",
+          "document": "montagne",
+          "enonce": "Touche l’étage d’altitude que l’espèce B a gagné entre 1980 et 2020.",
+          "reponse": [
+            "milieu"
+          ],
+          "aide": "Elle est passée de 2 100 m à 2 300 m.",
+          "explication": "L’étage **2 100 – 2 300 m** : c’est la tranche que l’espèce B a gagnée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle espèce est la plus menacée si le réchauffement continue ?",
+          "options": [
+            "L’espèce C : elle est presque au sommet et n’a plus d’étage au-dessus",
+            "L’espèce A : elle vit le plus bas et ne pourra donc jamais monter",
+            "L’espèce B : elle monte le plus vite, donc elle est la plus exposée",
+            "Aucune : toutes peuvent monter sans limite, tant que le climat se réchauffe"
+          ],
+          "reponse": 0,
+          "aide": "Compare la limite haute de chaque espèce à la hauteur du sommet.",
+          "explication": "L’espèce C atteint **2 500 m**, le sommet : elle n’a plus nulle part où monter."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion.",
+          "texte": "Si l’espèce C ne peut ni se déplacer ni s’adapter, elle va ___ localement.",
+          "reponses": [
+            [
+              "disparaître",
+              "disparaitre"
+            ]
+          ],
+          "banque": [
+            "disparaître",
+            "migrer",
+            "se multiplier",
+            "hiberner"
+          ],
+          "aide": "Trois réponses possibles : se déplacer, s’adapter, ...",
+          "explication": "Quand aucune des deux autres réponses n’est possible, l’espèce peut **disparaître** localement."
+        }
+      ]
+    },
+    {
+      "chapitre": "09278087-3af9-56d5-85e3-237289706166",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le lac de Valmont",
+      "competence": "analyser-texte",
+      "situation": "Un article imaginaire décrit ce qui change autour d’un lac. Chaque paragraphe décrit une pression différente sur la biodiversité.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le lac de Valmont en danger",
+          "auteur": "Article imaginé pour l’exercice",
+          "blocs": [
+            "En vingt ans, la forêt qui bordait le lac a laissé place à des lotissements et à un grand parking.",
+            "Les pêcheurs prélèvent chaque année plus de brochets que le lac ne peut en renouveler : les prises diminuent.",
+            "Une [[inv|plante]] aquatique venue d’Amérique du Sud, relâchée par un aquariophile, recouvre désormais la moitié de l’eau.",
+            "Enfin, les engrais des champs voisins, entraînés par la pluie, se retrouvent dans l’eau du lac."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque observation à la pression qu’elle illustre.",
+          "paires": [
+            [
+              "Des lotissements remplacent la forêt",
+              "Destruction des habitats"
+            ],
+            [
+              "Plus de brochets pêchés que le lac n’en renouvelle",
+              "Surexploitation"
+            ],
+            [
+              "Une plante venue d’Amérique du Sud recouvre l’eau",
+              "Espèce invasive"
+            ],
+            [
+              "Les engrais des champs arrivent dans le lac",
+              "Pollution"
+            ]
+          ],
+          "aide": "Relis chaque paragraphe : que se passe-t-il ?",
+          "explication": "Habitat détruit, prélèvement excessif, espèce venue d’ailleurs, engrais dans l’eau : **quatre pressions** différentes."
+        },
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche, dans le texte, le mot qui désigne l’espèce invasive.",
+          "reponse": [
+            "inv"
+          ],
+          "aide": "Elle vient d’Amérique du Sud et recouvre l’eau.",
+          "explication": "La **plante** aquatique venue d’Amérique du Sud est l’espèce invasive."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de pressions différentes l’article décrit-il ?",
+          "reponse": 4,
+          "unite": "pressions",
+          "aide": "Compte les paragraphes : chacun en décrit une.",
+          "explication": "Un paragraphe, une pression : **4 pressions**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ces pressions agissent en même temps sur le lac. Quel en est le résultat ?",
+          "options": [
+            "Leurs effets se cumulent",
+            "Elles s’annulent entre elles",
+            "Seule la plus forte compte",
+            "Elles ne touchent que les poissons"
+          ],
+          "reponse": 0,
+          "aide": "Elles ne s’additionnent pas à part : elles agissent ensemble.",
+          "explication": "Les pressions agissent **ensemble** et leurs effets se cumulent."
+        }
+      ]
+    },
+    {
+      "chapitre": "09278087-3af9-56d5-85e3-237289706166",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le jour où tout est consommé",
+      "competence": "lire-graphique",
+      "situation": "Le jour du dépassement est la date où l’humanité a utilisé tout ce que la planète renouvelle en un an. Pour un pays imaginaire, on l’écrit avec le numéro du jour dans l’année (le jour 365 est le 31 décembre).",
+      "documents": [
+        {
+          "id": "depassement",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Le jour du dépassement d’un pays imaginaire",
+          "categories": [
+            "2000",
+            "2005",
+            "2010",
+            "2015",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Numéro du jour",
+              "valeurs": [
+                273,
+                258,
+                243,
+                228,
+                213
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Numéro du jour dans l’année",
+            "min": 0,
+            "max": 300,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "depassement",
+          "enonce": "Touche l’année où le dépassement tombe le plus tôt dans l’année.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la barre la plus courte.",
+          "explication": "En **2020**, le dépassement tombe le jour 213 : c’est le plus précoce."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de jours le dépassement a-t-il avancé entre 2000 et 2020 ?",
+          "reponse": 60,
+          "unite": "jours",
+          "aide": "Soustrais : 273 − 213.",
+          "explication": "273 − 213 = **60 jours**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En 2020, l’année compte 365 jours mais les ressources sont épuisées au jour 213. Combien de « planètes » faudrait-il ? (365 ÷ 213, arrondi au dixième)",
+          "reponse": 1.7,
+          "unite": "planètes",
+          "tolerance": 0.05,
+          "aide": "Divise 365 par 213.",
+          "explication": "365 ÷ 213 ≈ **1,7** : il faudrait 1,7 planète pour durer toute l’année."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la tendance du graphique ?",
+          "options": [
+            "Chaque cinq ans, on épuise plus tôt ce que la planète renouvelle",
+            "La pression sur les ressources diminue, le jour arrive plus tard",
+            "Le jour du dépassement reste stable, à la même date tous les cinq ans",
+            "On consomme de moins en moins de ressources d’une période à l’autre"
+          ],
+          "reponse": 0,
+          "aide": "Compare la première et la dernière barre.",
+          "explication": "Les barres baissent : le dépassement tombe **de plus en plus tôt**."
+        }
+      ]
+    },
+    {
+      "chapitre": "09278087-3af9-56d5-85e3-237289706166",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Pourquoi les espèces disparaissent",
+      "competence": "analyser-document",
+      "situation": "Dans une région imaginaire, des chercheurs relèvent les pressions qui touchent les espèces menacées. Une même espèce peut subir plusieurs pressions à la fois.",
+      "documents": [
+        {
+          "id": "pressions",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Part des espèces menacées touchées par chaque pression",
+          "categories": [
+            "Destruction des habitats",
+            "Surexploitation",
+            "Espèces invasives",
+            "Pollutions",
+            "Changement climatique"
+          ],
+          "series": [
+            {
+              "nom": "Espèces touchées",
+              "valeurs": [
+                60,
+                35,
+                25,
+                20,
+                15
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des espèces menacées",
+            "unite": "%",
+            "min": 0,
+            "max": 70,
+            "pas": 10
+          },
+          "valeurs": false,
+          "source": "Valeurs inventées pour l’exercice"
+        },
+        {
+          "id": "rythme",
+          "type": "tableau",
+          "titre": "Le rythme des extinctions",
+          "colonnes": [
+            "Rythme",
+            "Espèces disparues par an"
+          ],
+          "lignes": [
+            [
+              "Naturel (valeur imaginaire)",
+              10
+            ],
+            [
+              "Actuel",
+              "De 100 à 1 000 fois plus"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Le cours donne « 100 à 1 000 fois le taux naturel »"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pressions",
+          "enonce": "Touche la pression qui touche le plus d’espèces menacées.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "La **destruction des habitats** touche 60 % des espèces menacées."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois plus d’espèces sont touchées par la destruction des habitats que par le changement climatique ?",
+          "reponse": 4,
+          "unite": "fois",
+          "aide": "Divise 60 par 15.",
+          "explication": "60 ÷ 15 = **4 fois** plus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le total des barres dépasse 100 %. Pourquoi ?",
+          "options": [
+            "Une même espèce subit plusieurs pressions en même temps",
+            "Il y a une erreur dans le graphique",
+            "Chaque pression touche des espèces différentes",
+            "Les pourcentages comptent deux fois les espèces disparues"
+          ],
+          "reponse": 0,
+          "aide": "Relis la situation : une espèce peut subir plusieurs pressions.",
+          "explication": "Les pressions se **cumulent** sur une même espèce : 60 + 35 + 25 + 20 + 15 = 155 %, donc plus de 100 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le nombre minimal d’espèces disparues par an aujourd’hui, dans cette région imaginaire ?",
+          "reponse": 1000,
+          "unite": "espèces par an",
+          "aide": "Au moins 100 fois le rythme naturel : 10 × 100.",
+          "explication": "10 × 100 = **1 000 espèces par an** au minimum."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque perte selon le niveau de biodiversité touché.",
+          "categories": [
+            "Écosystèmes",
+            "Espèces",
+            "Gènes"
+          ],
+          "items": [
+            [
+              "Une zone humide est drainée et asséchée",
+              0
+            ],
+            [
+              "Le dernier individu d’une espèce de grenouille meurt",
+              1
+            ],
+            [
+              "Une variété de blé n’est plus cultivée : sa résistance à une maladie disparaît",
+              2
+            ],
+            [
+              "Une forêt entière est rasée",
+              0
+            ],
+            [
+              "Un poisson est pêché jusqu’à disparition totale",
+              1
+            ]
+          ],
+          "aide": "Milieux entiers, espèces, ou versions d’un gène : trois niveaux.",
+          "explication": "Un milieu qui disparaît touche les **écosystèmes**, une espèce qui s’éteint touche les **espèces**, une version de gène perdue touche les **gènes**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b7f51747-c5ba-52d0-867b-4df5ac161aa1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui boit toute l’eau ?",
+      "competence": "lire-graphique",
+      "situation": "Dans le monde, l’eau douce prélevée dans les rivières et les nappes sert à trois grands usages.",
+      "documents": [
+        {
+          "id": "usages",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Les usages de l’eau prélevée dans le monde",
+          "categories": [
+            "Agriculture",
+            "Industrie",
+            "Usages domestiques"
+          ],
+          "series": [
+            {
+              "nom": "Part des prélèvements",
+              "valeurs": [
+                70,
+                20,
+                10
+              ]
+            }
+          ],
+          "valeurs": true,
+          "source": "Chiffres arrondis"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "usages",
+          "enonce": "Touche l’usage qui consomme le moins d’eau.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le plus petit secteur.",
+          "explication": "Les **usages domestiques** ne représentent que 10 % des prélèvements."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur 1 000 litres d’eau prélevés dans le monde, combien vont à l’industrie ?",
+          "reponse": 200,
+          "unite": "litres",
+          "aide": "L’industrie représente 20 % : 20 % de 1 000.",
+          "explication": "20 % de 1 000 = **200 litres**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des prélèvements, en pourcentage, revient à l’industrie et aux usages domestiques réunis ?",
+          "reponse": 30,
+          "unite": "%",
+          "aide": "Additionne 20 et 10.",
+          "explication": "20 + 10 = **30 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle l’apport d’eau aux cultures par des canaux ou des tuyaux ?",
+          "options": [
+            "L’irrigation",
+            "La floculation",
+            "La condensation",
+            "Le dessalement"
+          ],
+          "reponse": 0,
+          "aide": "C’est l’usage qui domine dans le graphique.",
+          "explication": "C’est l’**irrigation**, principal usage de l’eau douce."
+        }
+      ]
+    },
+    {
+      "chapitre": "b7f51747-c5ba-52d0-867b-4df5ac161aa1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le voyage d’une goutte",
+      "competence": "observer-schema",
+      "situation": "Suis le chemin de l’eau sur ce schéma : chaque lettre marque une étape du cycle de l’eau.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "schema",
+          "titre": "Le cycle de l’eau",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 160,
+              "l": 140,
+              "h": 56,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 160,
+              "y": 160,
+              "l": 160,
+              "h": 24,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 160,
+              "y": 184,
+              "l": 160,
+              "h": 32,
+              "teinte": "bleu",
+              "motif": "points"
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  210,
+                  160
+                ],
+                [
+                  255,
+                  100
+                ],
+                [
+                  300,
+                  160
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 130,
+              "cy": 48,
+              "rx": 52,
+              "ry": 18,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "emoji",
+              "x": 34,
+              "y": 38,
+              "emoji": "☀️",
+              "taille": 30
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 196,
+              "texte": "Mer",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 300,
+              "y": 178,
+              "texte": "Sol",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 283,
+              "y": 208,
+              "texte": "Nappe phréatique",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                154
+              ],
+              "a": [
+                80,
+                76
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                125,
+                70
+              ],
+              "a": [
+                125,
+                150
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                206,
+                156
+              ],
+              "a": [
+                166,
+                156
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190,
+                172
+              ],
+              "a": [
+                190,
+                204
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 44,
+              "cy": 116,
+              "r": 11,
+              "texte": "A",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 130,
+              "cy": 48,
+              "r": 11,
+              "texte": "B",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 146,
+              "cy": 112,
+              "r": 11,
+              "texte": "C",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 186,
+              "cy": 138,
+              "r": 11,
+              "texte": "D",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "d",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 208,
+              "cy": 192,
+              "r": 11,
+              "texte": "E",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "e",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque lettre du schéma à son étape.",
+          "paires": [
+            [
+              "A",
+              "Évaporation"
+            ],
+            [
+              "B",
+              "Condensation"
+            ],
+            [
+              "C",
+              "Précipitations"
+            ],
+            [
+              "D",
+              "Ruissellement"
+            ],
+            [
+              "E",
+              "Infiltration"
+            ]
+          ],
+          "aide": "Suis la goutte : elle monte, forme un nuage, retombe, glisse, s’enfonce.",
+          "explication": "A : la mer s’**évapore** ; B : la vapeur se **condense** en nuage ; C : l’eau **retombe** ; D : elle **ruisselle** ; E : elle s’**infiltre**."
+        },
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche l’étape où l’eau rejoint la nappe phréatique.",
+          "reponse": [
+            "e"
+          ],
+          "aide": "L’eau s’enfonce dans le sol.",
+          "explication": "L’**infiltration** (E) alimente les nappes phréatiques."
+        },
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche l’étape où l’eau rejoint la mer en glissant sur le sol.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Elle suit la surface du sol vers les rivières et la mer.",
+          "explication": "Le **ruissellement** (D) conduit l’eau vers les rivières, puis la mer."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui fournit l’énergie nécessaire à l’évaporation ?",
+          "options": [
+            "Le Soleil",
+            "La Lune",
+            "Le vent uniquement",
+            "Les nappes phréatiques"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce que le schéma montre en haut à gauche.",
+          "explication": "Le **Soleil** vaporise l’eau des océans et des sols."
+        }
+      ]
+    },
+    {
+      "chapitre": "b7f51747-c5ba-52d0-867b-4df5ac161aa1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le réseau d’eau de Sourcenette",
+      "competence": "modeliser",
+      "situation": "Sourcenette est une ville imaginaire. Un Français utilise environ 150 litres d’eau par jour chez lui. Attention : 1 m³ = 1 000 litres.",
+      "documents": [
+        {
+          "id": "virtuelle",
+          "type": "tableau",
+          "titre": "L’eau virtuelle de deux produits",
+          "colonnes": [
+            "Produit",
+            "Eau nécessaire pour le fabriquer"
+          ],
+          "lignes": [
+            [
+              "1 kg de bœuf",
+              "15 000 L"
+            ],
+            [
+              "1 tee-shirt en coton",
+              "2 700 L"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Ordres de grandeur arrondis"
+        },
+        {
+          "id": "reseau",
+          "type": "tableau",
+          "titre": "Le réseau de la ville, par jour",
+          "colonnes": [
+            "Mesure",
+            "Volume (m³)"
+          ],
+          "lignes": [
+            [
+              "Eau envoyée dans les canalisations",
+              10000
+            ],
+            [
+              "Eau arrivée chez les habitants",
+              7800
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de jours de consommation domestique d’un Français (150 L par jour) représente l’eau d’un tee-shirt ?",
+          "reponse": 18,
+          "unite": "jours",
+          "aide": "Divise 2 700 par 150.",
+          "explication": "2 700 ÷ 150 = **18 jours**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une famille mange 2 kg de bœuf par semaine. Quelle est l’eau virtuelle correspondante, en litres ?",
+          "reponse": 30000,
+          "unite": "litres",
+          "aide": "Multiplie 15 000 L par 2.",
+          "explication": "2 × 15 000 = **30 000 litres**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de m³ d’eau se perdent chaque jour dans les canalisations ?",
+          "reponse": 2200,
+          "unite": "m³",
+          "aide": "Soustrais l’eau arrivée à l’eau envoyée.",
+          "explication": "10 000 − 7 800 = **2 200 m³** perdus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage de l’eau envoyée est perdu ?",
+          "reponse": 22,
+          "unite": "%",
+          "aide": "Divise 2 200 par 10 000.",
+          "explication": "2 200 ÷ 10 000 = 0,22 soit **22 %** : un taux très élevé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle action réduit le plus directement ces pertes ?",
+          "options": [
+            "Réparer les canalisations qui fuient",
+            "Pomper davantage dans la nappe",
+            "Construire un barrage",
+            "Interdire de boire l’eau du robinet"
+          ],
+          "reponse": 0,
+          "aide": "Les pertes se produisent avant l’arrivée chez les habitants.",
+          "explication": "Les pertes sont des **fuites** du réseau : il faut les réparer."
+        }
+      ]
+    },
+    {
+      "chapitre": "1502b1be-e802-50bf-9a96-3409c4f12320",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le piège à pétrole",
+      "competence": "observer-schema",
+      "situation": "Un géologue observe la coupe d’un sous-sol. Les trois couches sont repérées par des lettres ; le tableau donne leurs propriétés.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "Coupe géologique du sous-sol",
+          "largeur": 340,
+          "hauteur": 210,
+          "elements": [
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 22,
+              "texte": "Surface du sol",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 36,
+              "l": 260,
+              "h": 40,
+              "teinte": "gris",
+              "motif": "clair",
+              "texte": "A",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 76,
+              "l": 260,
+              "h": 50,
+              "teinte": "sable",
+              "motif": "points",
+              "texte": "B",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 126,
+              "l": 260,
+              "h": 50,
+              "teinte": "brun",
+              "motif": "clair",
+              "texte": "C",
+              "id": "c",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                90,
+                150
+              ],
+              "a": [
+                90,
+                100
+              ],
+              "teinte": "encre",
+              "fleche": "fin",
+              "style": "pointilles"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                150
+              ],
+              "a": [
+                250,
+                100
+              ],
+              "teinte": "encre",
+              "fleche": "fin",
+              "style": "pointilles"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 196,
+              "texte": "Les flèches : déplacement des hydrocarbures",
+              "taille": "petit",
+              "ancre": "milieu",
+              "italique": true
+            }
+          ]
+        },
+        {
+          "id": "roches",
+          "type": "tableau",
+          "titre": "Les propriétés des roches",
+          "colonnes": [
+            "Couche",
+            "Particularité"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Argile imperméable"
+            ],
+            [
+              "B",
+              "Grès poreux, rempli de petits vides"
+            ],
+            [
+              "C",
+              "Marnes riches en matière organique"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Coupe simplifiée"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche la roche couverture, celle qui empêche le pétrole de monter à la surface.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Elle doit être imperméable.",
+          "explication": "La couche A, en **argile imperméable**, piège les hydrocarbures : c’est la roche couverture."
+        },
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche la roche réservoir, celle où le pétrole s’accumule.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Elle est poreuse : le pétrole se loge dans ses petits vides.",
+          "explication": "La couche B, en **grès poreux**, est la roche réservoir."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre la formation d’un gisement.",
+          "items": [
+            "La matière organique se dépose dans une roche mère",
+            "Les sédiments l’enfouissent : température et pression augmentent",
+            "Les hydrocarbures migrent vers le haut dans la roche réservoir",
+            "La roche couverture les piège"
+          ],
+          "aide": "Dépôt, enfouissement, migration, piégeage.",
+          "explication": "Dépôt dans la roche mère, **enfouissement**, **migration** dans le réservoir, **piégeage** sous la roche couverture."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passerait-il sans la couche A ?",
+          "options": [
+            "Le pétrole s’échapperait vers la surface : pas de gisement exploitable",
+            "Le pétrole se formerait plus vite, car il serait moins comprimé en profondeur",
+            "Le gisement serait plus grand, car le pétrole pourrait s’étaler librement",
+            "Le pétrole deviendrait renouvelable, car il se reformerait en quelques années"
+          ],
+          "reponse": 0,
+          "aide": "Sans piège, pas de gisement exploitable.",
+          "explication": "Sans roche couverture, les hydrocarbures **s’échappent** : il n’y a pas de gisement."
+        }
+      ]
+    },
+    {
+      "chapitre": "1502b1be-e802-50bf-9a96-3409c4f12320",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La colonne à distiller",
+      "competence": "analyser-document",
+      "situation": "Dans une raffinerie, le pétrole brut est chauffé puis envoyé dans une colonne. Chaque produit bout à une température différente ; les produits qui bouillent à basse température sortent en haut de la colonne.",
+      "documents": [
+        {
+          "id": "fractions",
+          "type": "tableau",
+          "titre": "Les fractions du pétrole brut",
+          "colonnes": [
+            "Fraction",
+            "Elle bout entre (°C)",
+            "Usage"
+          ],
+          "lignes": [
+            [
+              "Gaz",
+              "moins de 30",
+              "Carburant léger"
+            ],
+            [
+              "Essences",
+              "30 à 180",
+              "Carburant léger"
+            ],
+            [
+              "Kérosène",
+              "180 à 250",
+              "Aviation"
+            ],
+            [
+              "Gazole",
+              "250 à 350",
+              "Transport lourd, chauffage"
+            ],
+            [
+              "Résidus",
+              "plus de 350",
+              "Bitumes des routes"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies et simplifiées"
+        },
+        {
+          "id": "colonne",
+          "type": "schema",
+          "titre": "La colonne de distillation",
+          "largeur": 340,
+          "hauteur": 236,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 130,
+              "y": 16,
+              "l": 80,
+              "h": 208,
+              "arrondi": 8,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 44,
+              "texte": "Plus froid en haut",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 214,
+              "texte": "Plus chaud en bas",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                20,
+                182
+              ],
+              "a": [
+                130,
+                182
+              ],
+              "teinte": "encre",
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 20,
+              "y": 174,
+              "texte": "Pétrole chauffé",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                38
+              ],
+              "a": [
+                240,
+                38
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 252,
+              "cy": 38,
+              "r": 11,
+              "texte": "A",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "s-a",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                78
+              ],
+              "a": [
+                240,
+                78
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 252,
+              "cy": 78,
+              "r": 11,
+              "texte": "B",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "s-b",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                118
+              ],
+              "a": [
+                240,
+                118
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 252,
+              "cy": 118,
+              "r": 11,
+              "texte": "C",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "s-c",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                158
+              ],
+              "a": [
+                240,
+                158
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 252,
+              "cy": 158,
+              "r": 11,
+              "texte": "D",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "s-d",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                210,
+                204
+              ],
+              "a": [
+                240,
+                204
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 252,
+              "cy": 204,
+              "r": 11,
+              "texte": "E",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "s-e",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Un liquide bout à 210 °C. De quelle fraction s’agit-il ?",
+          "options": [
+            "Le kérosène",
+            "Les essences",
+            "Le gazole",
+            "Les résidus"
+          ],
+          "reponse": 0,
+          "aide": "Cherche l’intervalle du tableau qui contient 210.",
+          "explication": "210 °C est entre 180 et 250 °C : c’est le **kérosène**."
+        },
+        {
+          "type": "zone",
+          "document": "colonne",
+          "enonce": "Touche la sortie du gazole.",
+          "reponse": [
+            "s-d"
+          ],
+          "aide": "Classe les fractions du haut vers le bas : gaz, essences, kérosène, ...",
+          "explication": "Le gazole est la 4ᵉ fraction en partant du haut : sortie **D**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque fraction à son usage.",
+          "paires": [
+            [
+              "Kérosène",
+              "Avions"
+            ],
+            [
+              "Essences",
+              "Voitures à essence"
+            ],
+            [
+              "Résidus",
+              "Bitumes des routes"
+            ],
+            [
+              "Gazole",
+              "Camions et chauffage"
+            ]
+          ],
+          "aide": "Relis la dernière colonne du tableau.",
+          "explication": "Kérosène pour l’**aviation**, essences pour les voitures, résidus pour les **routes**, gazole pour le transport lourd."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la distillation fractionnée sépare-t-elle le pétrole en produits différents ?",
+          "options": [
+            "Chaque produit bout à une température différente",
+            "Chaque produit a une couleur différente",
+            "Les produits ont des odeurs différentes",
+            "Des enzymes séparent les produits"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la colonne « Elle bout entre (°C) ».",
+          "explication": "Les produits **bouillent à des températures différentes** : on les sépare à différentes hauteurs de la colonne."
+        }
+      ]
+    },
+    {
+      "chapitre": "1502b1be-e802-50bf-9a96-3409c4f12320",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le pétrole d’Ostrie",
+      "competence": "modeliser",
+      "situation": "Ostrie est un pays imaginaire. Le graphique montre à quoi sert son pétrole ; le tableau donne des chiffres sur son gisement.",
+      "documents": [
+        {
+          "id": "debouches",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Les débouchés du pétrole en Ostrie",
+          "categories": [
+            "Carburants",
+            "Pétrochimie",
+            "Chauffage",
+            "Bitumes et autres"
+          ],
+          "series": [
+            {
+              "nom": "Part de la consommation",
+              "valeurs": [
+                62,
+                16,
+                10,
+                12
+              ]
+            }
+          ],
+          "valeurs": true,
+          "source": "Valeurs inventées pour l’exercice"
+        },
+        {
+          "id": "gisement",
+          "type": "tableau",
+          "titre": "Le gisement d’Ostrie",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Réserves restantes",
+              "800 millions de barils"
+            ],
+            [
+              "Production par an",
+              "40 millions de barils"
+            ],
+            [
+              "Consommation du pays par an",
+              "50 millions de tonnes"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "debouches",
+          "enonce": "Touche le débouché qui fournit les plastiques et les médicaments.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Plastiques, textiles synthétiques, cosmétiques : c’est la chimie du pétrole.",
+          "explication": "La **pétrochimie** fabrique plastiques, médicaments, peintures…"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part du pétrole d’Ostrie, en pourcentage, ne sert pas de carburant ?",
+          "reponse": 38,
+          "unite": "%",
+          "aide": "Soustrais la part des carburants à 100.",
+          "explication": "100 − 62 = **38 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La pétrochimie reçoit 16 % de la consommation du pays (50 millions de tonnes par an). Combien de millions de tonnes ?",
+          "reponse": 8,
+          "unite": "Mt",
+          "aide": "Calcule 16 % de 50.",
+          "explication": "16 % de 50 = 0,16 × 50 = **8 millions de tonnes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À la production actuelle, pendant combien d’années les réserves restantes durent-elles ?",
+          "reponse": 20,
+          "unite": "ans",
+          "aide": "Divise les réserves par la production annuelle.",
+          "explication": "800 ÷ 40 = **20 ans**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ostrie veut « sortir du pétrole » en interdisant seulement les voitures à essence. Cela suffira-t-il ?",
+          "options": [
+            "Non : le pétrole sert aussi au chauffage, aux plastiques et aux routes",
+            "Oui : les carburants sont le seul usage du pétrole dans tout le pays",
+            "Oui : il restera 62 % du pétrole, ce qui suffit pour tous les autres usages",
+            "Oui : la pétrochimie n’utilise pas de pétrole, seulement du gaz et du charbon"
+          ],
+          "reponse": 0,
+          "aide": "Regarde toutes les parts du graphique.",
+          "explication": "38 % du pétrole sert à autre chose que les carburants : **sortir du pétrole** ne concerne pas que les voitures."
+        }
+      ]
+    },
+    {
+      "chapitre": "df4ad55a-4436-57c6-afe8-910888053264",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le même bras, quatre métiers",
+      "competence": "analyser-document",
+      "situation": "Un humain manipule, un chat marche, une baleine nage, une chauve-souris vole. On compare les os de leur membre antérieur.",
+      "documents": [
+        {
+          "id": "membres",
+          "type": "tableau",
+          "titre": "Le membre antérieur de quatre mammifères",
+          "colonnes": [
+            "Animal",
+            "Os du bras",
+            "Os de l’avant-bras",
+            "Doigts"
+          ],
+          "lignes": [
+            [
+              "Humain (bras)",
+              1,
+              2,
+              5
+            ],
+            [
+              "Chat (patte)",
+              1,
+              2,
+              5
+            ],
+            [
+              "Baleine (nageoire)",
+              1,
+              2,
+              5
+            ],
+            [
+              "Chauve-souris (aile)",
+              1,
+              2,
+              5
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Schéma simplifié"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’os compte l’avant-bras de la baleine ?",
+          "reponse": 2,
+          "unite": "os",
+          "aide": "Lis la ligne « Baleine », colonne « Os de l’avant-bras ».",
+          "explication": "L’avant-bras de la baleine compte **2 os**, comme celui de l’humain."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ces membres servent à des usages très différents mais suivent le même plan : un os, puis deux, puis les doigts. Que montre ce plan commun ?",
+          "options": [
+            "Une homologie : un héritage d’un ancêtre commun",
+            "Une convergence due à un mode de vie commun",
+            "Un hasard sans signification",
+            "Une adaptation à la nage seulement"
+          ],
+          "reponse": 0,
+          "aide": "Un mode de vie commun ? Ici, les modes de vie sont tous différents.",
+          "explication": "Le même plan malgré des usages différents est une **homologie** : les quatre animaux héritent d’un ancêtre commun."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque ressemblance : homologie ou convergence ?",
+          "categories": [
+            "Homologie",
+            "Convergence"
+          ],
+          "items": [
+            [
+              "Bras humain et aile de chauve-souris",
+              0
+            ],
+            [
+              "Aile d’oiseau et aile d’insecte",
+              1
+            ],
+            [
+              "Nageoire de requin et nageoire de dauphin",
+              1
+            ],
+            [
+              "Patte de chat et bras humain",
+              0
+            ]
+          ],
+          "aide": "Homologie : héritée d’un ancêtre. Convergence : même mode de vie.",
+          "explication": "Oiseau et insecte volent, requin et dauphin nagent : **convergences**. Humain, chauve-souris et chat partagent un plan hérité : **homologies**."
+        }
+      ]
+    },
+    {
+      "chapitre": "df4ad55a-4436-57c6-afe8-910888053264",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui est le cousin de qui ?",
+      "competence": "analyser-document",
+      "situation": "On compare cinq animaux d’après trois caractères. L’arbre de parenté place chacun au bout d’une branche ; chaque nœud numéroté représente un ancêtre commun.",
+      "documents": [
+        {
+          "id": "caracteres",
+          "type": "tableau",
+          "titre": "Les caractères de cinq animaux",
+          "colonnes": [
+            "Animal",
+            "Colonne vertébrale",
+            "Quatre membres",
+            "Poils et mamelles"
+          ],
+          "lignes": [
+            [
+              "Truite",
+              "Oui",
+              "Non",
+              "Non"
+            ],
+            [
+              "Salamandre",
+              "Oui",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Lézard",
+              "Oui",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Chat",
+              "Oui",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Humain",
+              "Oui",
+              "Oui",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données simplifiées"
+        },
+        {
+          "id": "arbre",
+          "type": "schema",
+          "titre": "L’arbre de parenté",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                70
+              ],
+              "a": [
+                190,
+                35
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                40,
+                70
+              ],
+              "a": [
+                80,
+                110
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                110
+              ],
+              "a": [
+                190,
+                80
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                80,
+                110
+              ],
+              "a": [
+                115,
+                150
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                115,
+                150
+              ],
+              "a": [
+                190,
+                125
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                115,
+                150
+              ],
+              "a": [
+                150,
+                192
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                192
+              ],
+              "a": [
+                190,
+                170
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                150,
+                192
+              ],
+              "a": [
+                190,
+                215
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 202,
+              "y": 39,
+              "texte": "Truite",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 202,
+              "y": 84,
+              "texte": "Salamandre",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 202,
+              "y": 129,
+              "texte": "Lézard",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 202,
+              "y": 174,
+              "texte": "Chat",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "texte",
+              "x": 202,
+              "y": 219,
+              "texte": "Humain",
+              "taille": "petit",
+              "ancre": "debut"
+            },
+            {
+              "forme": "cercle",
+              "cx": 40,
+              "cy": 70,
+              "r": 10,
+              "texte": "1",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "n1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 80,
+              "cy": 110,
+              "r": 10,
+              "texte": "2",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "n2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 115,
+              "cy": 150,
+              "r": 10,
+              "texte": "3",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "n3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 150,
+              "cy": 192,
+              "r": 10,
+              "texte": "4",
+              "teinte": "encre",
+              "motif": "clair",
+              "id": "n4",
+              "zone": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’animaux du tableau ont des poils et des mamelles ?",
+          "reponse": 2,
+          "unite": "animaux",
+          "aide": "Lis la dernière colonne.",
+          "explication": "Le chat et l’humain : **2 animaux**."
+        },
+        {
+          "type": "zone",
+          "document": "arbre",
+          "enonce": "Touche le nœud qui représente l’ancêtre commun du chat et de l’humain.",
+          "reponse": [
+            "n4"
+          ],
+          "aide": "Cherche le nœud d’où partent seulement les branches « Chat » et « Humain ».",
+          "explication": "Le nœud **4** est l’ancêtre commun le plus récent du chat et de l’humain."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que représente le nœud 3 ?",
+          "options": [
+            "L’ancêtre commun du lézard, du chat et de l’humain",
+            "L’ancêtre commun de tous les animaux du schéma",
+            "Un animal actuel",
+            "Un fossile"
+          ],
+          "reponse": 0,
+          "aide": "Regarde quelles branches partent du nœud 3.",
+          "explication": "Du nœud **3** partent le lézard, le chat et l’humain : c’est leur ancêtre commun."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel caractère a été acquis en dernier, par l’ancêtre commun du chat et de l’humain ?",
+          "options": [
+            "Les poils et les mamelles",
+            "La colonne vertébrale",
+            "Les quatre membres",
+            "Aucun des trois"
+          ],
+          "reponse": 0,
+          "aide": "Cherche le caractère partagé par le moins d’animaux.",
+          "explication": "Les **poils et mamelles** sont partagés par le seul groupe chat + humain : c’est le caractère le plus récent."
+        }
+      ]
+    },
+    {
+      "chapitre": "df4ad55a-4436-57c6-afe8-910888053264",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les grandes dates de la vie",
+      "competence": "se-reperer-temps",
+      "situation": "Les fossiles et les roches permettent de dater les grandes étapes de l’histoire de la vie. Le tableau les donne en millions d’années avant aujourd’hui.",
+      "documents": [
+        {
+          "id": "dates",
+          "type": "tableau",
+          "titre": "Quelques grandes étapes",
+          "colonnes": [
+            "Événement",
+            "Il y a (millions d’années)"
+          ],
+          "lignes": [
+            [
+              "Fin des dinosaures non aviens",
+              "66"
+            ],
+            [
+              "Apparition de la vie (êtres unicellulaires)",
+              "3 800"
+            ],
+            [
+              "Explosion du Cambrien",
+              "540"
+            ],
+            [
+              "Sortie des eaux",
+              "400"
+            ],
+            [
+              "Apparition d’*Homo sapiens*",
+              "0,3"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "tiktaalik",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Tiktaalik, un fossile particulier",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Tiktaalik est un animal fossile découvert dans l’Arctique canadien. Il vivait il y a environ 375 millions d’années, dans des eaux peu profondes.",
+            "Il avait des écailles et des branchies comme un poisson. Mais ses nageoires contenaient des os organisés comme ceux d’un membre (un os, puis deux, puis de petits os), et son cou était mobile."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Apparition de la vie (êtres unicellulaires)",
+            "Explosion du Cambrien",
+            "Sortie des eaux",
+            "Fin des dinosaures non aviens"
+          ],
+          "aide": "Plus le nombre de millions d’années est grand, plus l’événement est ancien.",
+          "explication": "3 800, puis 540, puis 400, puis 66 millions d’années : **vie, Cambrien, sortie des eaux, fin des dinosaures**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de millions d’années séparent l’explosion du Cambrien de la sortie des eaux ?",
+          "reponse": 140,
+          "unite": "Ma",
+          "aide": "Soustrais : 540 − 400.",
+          "explication": "540 − 400 = **140 millions d’années**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de millions d’années séparent la fin des dinosaures non aviens de l’apparition d’Homo sapiens ? (arrondi à l’unité)",
+          "reponse": 66,
+          "unite": "Ma",
+          "tolerance": 1,
+          "aide": "Soustrais 0,3 de 66 puis arrondis.",
+          "explication": "66 − 0,3 = 65,7 soit environ **66 millions d’années**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quel événement du tableau l’époque de Tiktaalik (375 millions d’années) est-elle la plus proche ?",
+          "options": [
+            "La sortie des eaux",
+            "La fin des dinosaures non aviens",
+            "L’apparition d’Homo sapiens",
+            "L’apparition de la vie"
+          ],
+          "reponse": 0,
+          "aide": "Cherche le nombre le plus proche de 375.",
+          "explication": "375 est tout près de 400 : Tiktaalik vivait à l’époque de la **sortie des eaux**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Tiktaalik est-il un fossile intéressant pour la parenté des êtres vivants ?",
+          "options": [
+            "Il associe des caractères de poisson et de membre : c’est une forme intermédiaire",
+            "Il prouve que les poissons descendent des dinosaures, car il est très ancien",
+            "Il est plus récent qu’Homo sapiens, donc il prouve que l’espèce humaine vient de lui",
+            "Il vivait déjà sur les continents comme un mammifère, sans aucun caractère de poisson"
+          ],
+          "reponse": 0,
+          "aide": "Relis ses caractères : écailles et branchies, mais aussi os de membre.",
+          "explication": "Il mêle des caractères de poisson et de tétrapode : c’est une **forme intermédiaire**, un indice de parenté."
+        }
+      ]
+    },
+    {
+      "chapitre": "6dfe56f4-af50-5408-8d5a-ec63940d46c0",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La phalène du bouleau",
+      "competence": "lire-graphique",
+      "situation": "La phalène du bouleau est un papillon de nuit qui se pose sur les troncs. Elle existe en deux formes, claire et sombre. Au XIXe siècle, la suie des usines a noirci les troncs des bouleaux autour de Manchester.",
+      "documents": [
+        {
+          "id": "phalene",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Part des deux formes dans la population",
+          "categories": [
+            "1850",
+            "1895",
+            "1960",
+            "1990"
+          ],
+          "series": [
+            {
+              "nom": "Forme sombre (%)",
+              "valeurs": [
+                2,
+                98,
+                50,
+                5
+              ],
+              "teinte": "encre"
+            },
+            {
+              "nom": "Forme claire (%)",
+              "valeurs": [
+                98,
+                2,
+                50,
+                95
+              ],
+              "teinte": "sable"
+            }
+          ],
+          "axeY": {
+            "titre": "Part de la population",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false,
+          "source": "Valeurs simplifiées, inspirées des observations de la région de Manchester"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "En 1895, quel est le pourcentage de phalènes de forme sombre ?",
+          "reponse": 98,
+          "unite": "%",
+          "tolerance": 2,
+          "aide": "Lis la barre sombre au-dessus de 1895.",
+          "explication": "En 1895, **98 %** des phalènes sont sombres."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les phalènes sombres dominent-elles en 1895 ?",
+          "options": [
+            "Sur les troncs noircis, elles sont moins repérées et moins mangées par les oiseaux",
+            "Les papillons changent de couleur au cours de leur vie pour se cacher des oiseaux",
+            "La suie provoque une mutation qui rend les phalènes sombres, et elle se transmet",
+            "Les phalènes claires sont parties vivre ailleurs, là où les troncs sont restés clairs"
+          ],
+          "reponse": 0,
+          "aide": "Les oiseaux repèrent leurs proies à la vue.",
+          "explication": "Les sombres se voient peu sur un tronc noir : elles survivent et se reproduisent davantage. C’est la **sélection naturelle**."
+        },
+        {
+          "type": "zone",
+          "document": "phalene",
+          "enonce": "Touche l’année où les deux formes sont aussi nombreuses l’une que l’autre.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche les deux barres de même hauteur.",
+          "explication": "En **1960**, chaque forme représente 50 % de la population."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points la part de phalènes sombres a-t-elle augmenté entre 1850 et 1895 ?",
+          "reponse": 96,
+          "unite": "points",
+          "aide": "Soustrais : 98 − 2.",
+          "explication": "98 − 2 = **96 points**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6dfe56f4-af50-5408-8d5a-ec63940d46c0",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le traitement qui ne marche plus",
+      "competence": "raisonner",
+      "situation": "Dans le corps d’Inès, un million de bactéries causent une infection. Un antibiotique tue les bactéries sensibles. Quelques bactéries portent, par hasard, une mutation qui les rend résistantes : elle existait avant le traitement.",
+      "documents": [
+        {
+          "id": "bacteries",
+          "type": "tableau",
+          "titre": "Les bactéries d’Inès",
+          "colonnes": [
+            "Moment",
+            "Sensibles",
+            "Résistantes"
+          ],
+          "lignes": [
+            [
+              "Avant le traitement",
+              "999 990",
+              "10"
+            ],
+            [
+              "Juste après l’antibiotique",
+              "0",
+              "10"
+            ],
+            [
+              "Après multiplication",
+              "0",
+              "10 000"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres inventés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de bactéries survivent à l’antibiotique ?",
+          "reponse": 10,
+          "unite": "bactéries",
+          "aide": "Lis la ligne « Juste après l’antibiotique ».",
+          "explication": "Seules les **10** bactéries résistantes survivent."
+        },
+        {
+          "type": "zone",
+          "document": "bacteries",
+          "enonce": "Touche le nombre de bactéries résistantes après multiplication.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Lis la dernière ligne, colonne « Résistantes ».",
+          "explication": "Après multiplication, il y a **10 000** bactéries résistantes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par quel nombre les bactéries résistantes ont-elles été multipliées ?",
+          "reponse": 1000,
+          "unite": "fois",
+          "aide": "Divise 10 000 par 10.",
+          "explication": "10 000 ÷ 10 = **1 000**."
+        },
+        {
+          "type": "choix",
+          "enonce": "D’où vient la résistance ?",
+          "options": [
+            "D’une mutation présente avant le traitement : l’antibiotique ne fait que trier",
+            "L’antibiotique a fabriqué la mutation chez les bactéries pour qu’elles survivent",
+            "Les bactéries ont décidé de résister en changeant leur fonctionnement à volonté",
+            "Elle vient d’Inès elle-même : son organisme a rendu les bactéries résistantes"
+          ],
+          "reponse": 0,
+          "aide": "Relis la situation : la mutation existait avant le traitement.",
+          "explication": "Les mutations sont aléatoires et précèdent le traitement : le milieu **trie** ce que le hasard a produit."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les quatre temps du raisonnement de la sélection naturelle.",
+          "items": [
+            "Les individus présentent des variations héréditaires",
+            "Ils produisent plus de descendants que le milieu ne peut en nourrir : il y a compétition",
+            "Les mieux adaptés survivent et se reproduisent davantage",
+            "Leurs caractères deviennent plus fréquents, génération après génération"
+          ],
+          "aide": "Variation, compétition, survie, fréquence.",
+          "explication": "Variation, **compétition**, survie des mieux adaptés, caractère plus **fréquent** : la sélection trie, elle ne crée rien."
+        }
+      ]
+    },
+    {
+      "chapitre": "6dfe56f4-af50-5408-8d5a-ec63940d46c0",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les pinsons de la sécheresse",
+      "competence": "analyser-document",
+      "situation": "Sur l’île de Daphne (Galápagos), une sécheresse a fait disparaître presque toutes les petites graines. Seuls les pinsons à bec épais savent casser les grosses graines dures.",
+      "documents": [
+        {
+          "id": "pinsons",
+          "type": "tableau",
+          "titre": "Une population de pinsons",
+          "colonnes": [
+            "Année",
+            "Nombre de pinsons",
+            "Épaisseur moyenne du bec (mm)"
+          ],
+          "lignes": [
+            [
+              "1976",
+              "1 200",
+              "9,2"
+            ],
+            [
+              "1978, après la sécheresse",
+              "180",
+              "9,7"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies, d’après les travaux de Peter et Rosemary Grant"
+        },
+        {
+          "id": "graines",
+          "type": "tableau",
+          "titre": "Les graines disponibles",
+          "colonnes": [
+            "Graines",
+            "Avant la sécheresse",
+            "Pendant la sécheresse"
+          ],
+          "lignes": [
+            [
+              "Petites graines molles",
+              "Très nombreuses",
+              "Presque toutes disparues"
+            ],
+            [
+              "Grosses graines dures",
+              "Rares",
+              "Toujours disponibles"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données simplifiées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage des pinsons a disparu entre 1976 et 1978 ? (arrondi à l’unité)",
+          "reponse": 85,
+          "unite": "%",
+          "aide": "Calcule (1 200 − 180) ÷ 1 200.",
+          "explication": "(1 200 − 180) ÷ 1 200 = 0,85 soit **85 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millimètres l’épaisseur moyenne du bec a-t-elle augmenté ?",
+          "reponse": 0.5,
+          "unite": "mm",
+          "tolerance": 0.01,
+          "aide": "Soustrais : 9,7 − 9,2.",
+          "explication": "9,7 − 9,2 = **0,5 mm**."
+        },
+        {
+          "type": "zone",
+          "document": "graines",
+          "enonce": "Touche la case qui dit ce qui reste disponible pendant la sécheresse pour les grosses graines.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Lis la ligne « Grosses graines dures ».",
+          "explication": "Les grosses graines dures sont **toujours disponibles** : seuls les becs épais peuvent les casser."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le bec moyen est-il devenu plus épais ?",
+          "options": [
+            "Les pinsons à bec épais ont mieux survécu et eu plus de descendants",
+            "Chaque pinson a épaissi son bec à force de casser des graines dures",
+            "La sécheresse a provoqué des mutations utiles",
+            "Les pinsons à petit bec ont appris à casser les graines dures"
+          ],
+          "reponse": 0,
+          "aide": "Un individu ne décide pas de la forme de son bec.",
+          "explication": "Les pinsons à bec épais **survivent mieux**, se reproduisent davantage et transmettent leur bec : la moyenne augmente."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle ce tri des individus par le milieu ?",
+          "options": [
+            "La sélection naturelle",
+            "La dérive génétique",
+            "La spéciation",
+            "La mitose"
+          ],
+          "reponse": 0,
+          "aide": "Ici, le milieu trie selon l’avantage : ce n’est pas le pur hasard.",
+          "explication": "C’est la **sélection naturelle** : le hasard fournit les variations, le milieu choisit."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cee6f77-031d-5b08-90df-57494e474572",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le classement des planètes",
+      "competence": "lire-tableau",
+      "situation": "Les huit planètes du système solaire ne se ressemblent pas. Le tableau donne leur distance au Soleil et leur diamètre.",
+      "documents": [
+        {
+          "id": "planetes",
+          "type": "tableau",
+          "titre": "Les huit planètes",
+          "colonnes": [
+            "Planète",
+            "Distance au Soleil (millions de km)",
+            "Diamètre (km)"
+          ],
+          "lignes": [
+            [
+              "Mercure",
+              "58",
+              "4 900"
+            ],
+            [
+              "Vénus",
+              "108",
+              "12 100"
+            ],
+            [
+              "Terre",
+              "150",
+              "12 700"
+            ],
+            [
+              "Mars",
+              "228",
+              "6 800"
+            ],
+            [
+              "Jupiter",
+              "778",
+              "139 800"
+            ],
+            [
+              "Saturne",
+              "1 430",
+              "116 500"
+            ],
+            [
+              "Uranus",
+              "2 870",
+              "50 700"
+            ],
+            [
+              "Neptune",
+              "4 500",
+              "49 200"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de planètes du tableau ont un diamètre inférieur à 13 000 km ?",
+          "reponse": 4,
+          "unite": "planètes",
+          "aide": "Lis la dernière colonne et compte les petites valeurs.",
+          "explication": "Mercure, Vénus, la Terre et Mars : **4 planètes**."
+        },
+        {
+          "type": "zone",
+          "document": "planetes",
+          "enonce": "Touche la planète qui a le plus grand diamètre.",
+          "reponse": [
+            "r4c0"
+          ],
+          "aide": "Cherche le nombre le plus grand de la dernière colonne.",
+          "explication": "**Jupiter** : 139 800 km de diamètre."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque planète dans sa famille.",
+          "categories": [
+            "Tellurique",
+            "Géante gazeuse",
+            "Géante glacée"
+          ],
+          "items": [
+            [
+              "Mars",
+              0
+            ],
+            [
+              "Jupiter",
+              1
+            ],
+            [
+              "Neptune",
+              2
+            ],
+            [
+              "Mercure",
+              0
+            ],
+            [
+              "Saturne",
+              1
+            ],
+            [
+              "Uranus",
+              2
+            ]
+          ],
+          "aide": "Telluriques : Mercure, Vénus, Terre, Mars. Géantes gazeuses : Jupiter, Saturne.",
+          "explication": "Mars et Mercure sont **telluriques**, Jupiter et Saturne **gazeuses**, Uranus et Neptune **glacées**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que remarque-t-on sur les quatre petites planètes rocheuses du tableau ?",
+          "options": [
+            "Elles sont les plus proches du Soleil",
+            "Elles sont les plus éloignées du Soleil",
+            "Elles sont toutes plus grosses que Jupiter",
+            "Elles ont toutes des anneaux"
+          ],
+          "reponse": 0,
+          "aide": "Compare leurs distances à celles de Jupiter.",
+          "explication": "Les telluriques occupent les **quatre premières places** en distance au Soleil."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cee6f77-031d-5b08-90df-57494e474572",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des journées qui s’allongent",
+      "competence": "lire-graphique",
+      "situation": "À Paris, la durée du jour change au fil de l’année. Le graphique la donne à quatre dates : les deux équinoxes et les deux solstices.",
+      "documents": [
+        {
+          "id": "jour",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Durée du jour à Paris",
+          "categories": [
+            "21 mars",
+            "21 juin",
+            "23 sept.",
+            "21 déc."
+          ],
+          "series": [
+            {
+              "nom": "Durée du jour",
+              "valeurs": [
+                12,
+                16,
+                12,
+                8
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Durée du jour",
+            "unite": "h",
+            "min": 0,
+            "max": 20,
+            "pas": 4
+          },
+          "axeX": {
+            "titre": "Date"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée du jour à Paris le 21 juin ?",
+          "reponse": 16,
+          "unite": "h",
+          "tolerance": 0.5,
+          "aide": "Lis la hauteur du point « 21 juin ».",
+          "explication": "Le 21 juin, le jour dure environ **16 h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien d’heures le jour est-il plus court le 21 décembre que le 21 juin ?",
+          "reponse": 8,
+          "unite": "h",
+          "aide": "Soustrais : 16 − 8.",
+          "explication": "16 − 8 = **8 h** de moins."
+        },
+        {
+          "type": "zone",
+          "document": "jour",
+          "enonce": "Touche les deux dates où le jour et la nuit durent autant (12 h chacun).",
+          "reponse": [
+            "k0",
+            "k2"
+          ],
+          "multiple": true,
+          "aide": "Cherche les points à 12 h.",
+          "explication": "Le **21 mars** et le **23 septembre** : le jour dure 12 h."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la cause de ces variations de durée du jour ?",
+          "options": [
+            "L’inclinaison de 23,5° de l’axe de rotation de la Terre",
+            "La distance Terre–Soleil, plus courte en été",
+            "La vitesse de rotation de la Terre, plus rapide en été",
+            "Les mouvements de la Lune"
+          ],
+          "reponse": 0,
+          "aide": "Ce ne sont pas les distances qui font les saisons.",
+          "explication": "C’est l’**inclinaison** de l’axe : en été, l’hémisphère reçoit les rayons plus longtemps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le 21 décembre, que se passe-t-il dans l’hémisphère sud ?",
+          "options": [
+            "Les jours y sont les plus longs : c’est l’été",
+            "Les jours y sont les plus courts : c’est l’hiver",
+            "La durée du jour y est de 12 h",
+            "Il y fait nuit toute la journée"
+          ],
+          "reponse": 0,
+          "aide": "Quand l’hémisphère nord est penché loin du Soleil, l’autre l’est vers lui.",
+          "explication": "L’axe est incliné : quand l’hémisphère nord a son jour le plus court, le sud a son **jour le plus long**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0cee6f77-031d-5b08-90df-57494e474572",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois voisines du Soleil",
+      "competence": "analyser-document",
+      "situation": "Vénus, la Terre et Mars sont trois planètes telluriques proches du Soleil, mais une seule abrite de l’eau liquide et la vie.",
+      "documents": [
+        {
+          "id": "voisines",
+          "type": "tableau",
+          "titre": "Trois planètes voisines",
+          "colonnes": [
+            "Planète",
+            "Atmosphère",
+            "Température moyenne au sol"
+          ],
+          "lignes": [
+            [
+              "Vénus",
+              "Très dense, surtout du dioxyde de carbone",
+              "465 °C"
+            ],
+            [
+              "Terre",
+              "Modérée, azote et dioxygène",
+              "15 °C"
+            ],
+            [
+              "Mars",
+              "Extrêmement mince",
+              "−63 °C"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "serre",
+          "type": "tableau",
+          "titre": "L’effet de serre naturel sur Terre",
+          "colonnes": [
+            "Situation",
+            "Température moyenne"
+          ],
+          "lignes": [
+            [
+              "Sans effet de serre naturel",
+              "−18 °C"
+            ],
+            [
+              "Avec l’effet de serre naturel",
+              "15 °C"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de degrés l’effet de serre naturel réchauffe-t-il la Terre ?",
+          "reponse": 33,
+          "unite": "°C",
+          "aide": "Soustrais : 15 − (−18).",
+          "explication": "15 − (−18) = **33 °C** de plus."
+        },
+        {
+          "type": "zone",
+          "document": "voisines",
+          "enonce": "Touche la température moyenne de la Terre.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Lis la ligne « Terre », dernière colonne.",
+          "explication": "La Terre est à **15 °C** en moyenne."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Vénus est-elle beaucoup trop chaude ?",
+          "options": [
+            "Un emballement de l’effet de serre dans son atmosphère dense en CO₂",
+            "Elle est la planète la plus éloignée du Soleil des trois voisines étudiées",
+            "Elle n’a pas d’atmosphère : la surface chauffe sans aucune protection",
+            "Son champ magnétique dévie le vent solaire, ce qui la réchauffe beaucoup"
+          ],
+          "reponse": 0,
+          "aide": "Regarde sa colonne « Atmosphère ».",
+          "explication": "Son atmosphère très dense en dioxyde de carbone a provoqué un **emballement de l’effet de serre**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Mars est-elle si froide ?",
+          "options": [
+            "Elle a perdu presque toute son atmosphère, donc presque pas d’effet de serre",
+            "Elle est plus proche du Soleil que la Terre, mais elle reçoit peu de lumière",
+            "Son atmosphère est trop épaisse, elle bloque la chaleur du Soleil avant le sol",
+            "Elle tourne plus vite que la Terre, donc la chaleur n’a pas le temps d’arriver"
+          ],
+          "reponse": 0,
+          "aide": "Regarde sa colonne « Atmosphère ».",
+          "explication": "Mars a perdu son atmosphère : elle garde très peu de chaleur, d’où **−63 °C**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelles conditions rendent la Terre habitable ? (plusieurs réponses)",
+          "options": [
+            "Sa distance au Soleil permet de l’eau liquide",
+            "L’effet de serre naturel la réchauffe",
+            "Sa masse lui permet de retenir une atmosphère",
+            "Sa grande Lune la chauffe"
+          ],
+          "reponse": [
+            0,
+            1,
+            2
+          ],
+          "aide": "Trois réponses sont justes.",
+          "explication": "Distance au Soleil, **effet de serre naturel** et masse suffisante pour garder une atmosphère : la Lune ne chauffe pas la Terre."
+        }
+      ]
+    }
+  ]
+}

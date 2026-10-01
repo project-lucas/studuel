@@ -1,0 +1,3458 @@
+{
+  "niveau": "Tle",
+  "matiere": "ses",
+  "exercices": [
+    {
+      "chapitre": "5cf9270b-c9ef-58af-9b8a-21f90dfb0313",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Six familles d’actifs",
+      "competence": "lire-tableau",
+      "situation": "Malik découvre comment l’INSEE répartit les actifs qui ont un emploi en six grands groupes. Avant de comparer avec sa ville, il veut bien lire ce tableau.",
+      "documents": [
+        {
+          "id": "pcs",
+          "type": "tableau",
+          "titre": "Les actifs occupés selon la PCS",
+          "source": "Ordres de grandeur arrondis, d’après l’INSEE (enquête Emploi, début des années 2020).",
+          "colonnes": [
+            "Groupe de PCS",
+            "Part des actifs occupés (%)"
+          ],
+          "lignes": [
+            [
+              "Agriculteurs exploitants",
+              1
+            ],
+            [
+              "Artisans, commerçants, chefs d’entreprise",
+              6
+            ],
+            [
+              "Cadres et professions intellectuelles supérieures",
+              21
+            ],
+            [
+              "Professions intermédiaires",
+              26
+            ],
+            [
+              "Employés",
+              27
+            ],
+            [
+              "Ouvriers",
+              19
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pcs",
+          "enonce": "Touche le groupe le plus nombreux parmi les actifs occupés.",
+          "reponse": [
+            "r4c0"
+          ],
+          "aide": "Cherche le plus grand pourcentage de la colonne de droite.",
+          "explication": "Les **employés** forment le groupe le plus nombreux, avec 27 % des actifs occupés."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des actifs occupés, en %, les employés et les ouvriers représentent-ils ensemble ?",
+          "reponse": 46,
+          "unite": "%",
+          "aide": "Additionne deux lignes du tableau.",
+          "explication": "27 + 19 = **46 %** : près d’un actif occupé sur deux est employé ou ouvrier."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans une commune imaginée de 2 000 actifs occupés qui aurait exactement cette répartition, combien y aurait-il de cadres et de professions intellectuelles supérieures ?",
+          "reponse": 420,
+          "aide": "Calcule 21 % de 2 000 : 2 000 × 21 ÷ 100.",
+          "explication": "2 000 × 0,21 = **420 cadres**."
+        }
+      ]
+    },
+    {
+      "chapitre": "5cf9270b-c9ef-58af-9b8a-21f90dfb0313",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Même âge, autre génération",
+      "competence": "raisonner",
+      "situation": "Deux générations sont comparées à 30 et à 50 ans. Les revenus sont exprimés en euros constants : l’inflation est déjà retirée. Deux effets se mélangent facilement : celui de l’âge et celui de la génération.",
+      "documents": [
+        {
+          "id": "rev",
+          "type": "tableau",
+          "titre": "Revenu mensuel moyen (euros constants)",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Génération",
+            "À 30 ans",
+            "À 50 ans"
+          ],
+          "lignes": [
+            [
+              "Née en 1950",
+              1500,
+              2400
+            ],
+            [
+              "Née en 1970",
+              1800,
+              2700
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Dans la génération née en 1950, de combien le revenu a-t-il augmenté, en %, entre 30 et 50 ans ?",
+          "reponse": 60,
+          "unite": "%",
+          "aide": "Taux de variation = (valeur finale − valeur initiale) ÷ valeur initiale. Ici : (2 400 − 1 500) ÷ 1 500.",
+          "explication": "(2 400 − 1 500) ÷ 1 500 = 0,6, soit **+60 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quand on suit une même génération entre 30 et 50 ans, la hausse de revenu mesure surtout…",
+          "options": [
+            "un effet d’âge : la position dans le cycle de vie",
+            "un effet de génération : l’année de naissance",
+            "un effet de la PCS uniquement",
+            "un effet du diplôme uniquement"
+          ],
+          "reponse": 0,
+          "aide": "Ici, la génération ne change pas : qu’est-ce qui change ?",
+          "explication": "La génération est la même ; seul l’**âge** change. La hausse de revenu au fil de la carrière est d’abord un **effet d’âge**."
+        },
+        {
+          "type": "zone",
+          "document": "rev",
+          "enonce": "Pour isoler un effet de génération, il faut comparer les deux générations au même âge. Touche les deux cases à comparer à 50 ans.",
+          "reponse": [
+            "r0c2",
+            "r1c2"
+          ],
+          "multiple": true,
+          "aide": "Les deux cases doivent être dans la même colonne.",
+          "explication": "À 50 ans, on lit **2 400** (née en 1950) et **2 700** (née en 1970) : l’âge est le même, seule la génération diffère."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 50 ans, de combien, en %, le revenu de la génération née en 1970 dépasse-t-il celui de la génération née en 1950 ?",
+          "reponse": 12.5,
+          "unite": "%",
+          "aide": "(2 700 − 2 400) ÷ 2 400.",
+          "explication": "(2 700 − 2 400) ÷ 2 400 = 0,125, soit **+12,5 %** : c’est un effet de génération."
+        }
+      ]
+    },
+    {
+      "chapitre": "5cf9270b-c9ef-58af-9b8a-21f90dfb0313",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quand les écarts se cumulent",
+      "competence": "raisonner",
+      "situation": "Une chaîne de désavantages relie le diplôme à la santé. Deux foyers imaginés permettent de mesurer si les écarts restent les mêmes d’un domaine à l’autre.",
+      "documents": [
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "n1",
+              "texte": "Faible diplôme"
+            },
+            {
+              "id": "n2",
+              "texte": "Emploi peu qualifié"
+            },
+            {
+              "id": "n3",
+              "texte": "?"
+            },
+            {
+              "id": "n4",
+              "texte": "Logement éloigné des services"
+            },
+            {
+              "id": "n5",
+              "texte": "?"
+            }
+          ],
+          "liens": [
+            {
+              "de": "n1",
+              "a": "n2"
+            },
+            {
+              "de": "n2",
+              "a": "n3"
+            },
+            {
+              "de": "n3",
+              "a": "n4"
+            },
+            {
+              "de": "n4",
+              "a": "n5"
+            }
+          ]
+        },
+        {
+          "id": "foyers",
+          "type": "tableau",
+          "titre": "Deux foyers imaginés",
+          "source": "Situations inventées pour l’exercice.",
+          "colonnes": [
+            "",
+            "Foyer A",
+            "Foyer B"
+          ],
+          "lignes": [
+            [
+              "Profession",
+              "Cadre",
+              "Ouvrier"
+            ],
+            [
+              "Diplôme",
+              "Master",
+              "CAP"
+            ],
+            [
+              "Revenu mensuel (€)",
+              "3 200",
+              "1 600"
+            ],
+            [
+              "Patrimoine (€)",
+              "240 000",
+              "12 000"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Complète les deux maillons manquants de la chaîne.",
+          "texte": "Troisième maillon : un revenu ___. Dernier maillon : une santé ___.",
+          "reponses": [
+            [
+              "plus faible"
+            ],
+            [
+              "dégradée"
+            ]
+          ],
+          "banque": [
+            "plus faible",
+            "plus élevé",
+            "dégradée",
+            "renforcée"
+          ],
+          "aide": "Plus on avance dans la chaîne, plus les désavantages s’ajoutent.",
+          "explication": "Un emploi peu qualifié donne un **revenu plus faible** ; un logement éloigné des services et des moyens réduits conduisent à une **santé dégradée**. Chaque désavantage en appelle un autre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le revenu du foyer A est-il plus élevé que celui du foyer B ?",
+          "reponse": 2,
+          "unite": "fois",
+          "aide": "Divise 3 200 par 1 600.",
+          "explication": "3 200 ÷ 1 600 = **2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le patrimoine du foyer A est-il plus élevé que celui du foyer B ?",
+          "reponse": 20,
+          "unite": "fois",
+          "aide": "Divise 240 000 par 12 000.",
+          "explication": "240 000 ÷ 12 000 = **20**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la comparaison des deux rapports (2 et 20) ?",
+          "options": [
+            "Que l’écart de patrimoine dépasse l’écart de revenu : les désavantages se cumulent",
+            "Que le revenu est le seul facteur qui structure la société, le patrimoine comptant peu",
+            "Que le diplôme n’a aucun effet sur le patrimoine, qui dépend uniquement de la chance",
+            "Que les deux foyers sont à égalité de ressources, malgré des revenus différents"
+          ],
+          "reponse": 0,
+          "aide": "Compare 2 et 20 : lequel des deux écarts est le plus fort ?",
+          "explication": "Le revenu est **2 fois** plus élevé, le patrimoine **20 fois** : les écarts s’additionnent et se multiplient. C’est le **cumul** des inégalités qui structure la société."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99fa28c-d982-51b3-9465-ac45947efc00",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cadres et ouvriers : le grand déplacement",
+      "competence": "lire-graphique",
+      "situation": "Rayan compare la place de deux groupes dans la population active il y a soixante-dix ans et aujourd’hui. Le graphique l’aide à mesurer le changement.",
+      "documents": [
+        {
+          "id": "gr",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Part dans la population active (%)",
+          "source": "Ordres de grandeur arrondis, d’après l’INSEE ; « aujourd’hui » = début des années 2020.",
+          "categories": [
+            "Cadres",
+            "Ouvriers"
+          ],
+          "series": [
+            {
+              "nom": "Vers 1950",
+              "valeurs": [
+                3,
+                40
+              ],
+              "teinte": "gris"
+            },
+            {
+              "nom": "Aujourd’hui",
+              "valeurs": [
+                20,
+                20
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des actifs",
+            "unite": "en %",
+            "min": 0,
+            "max": 50,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Groupe"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "gr",
+          "enonce": "Touche le groupe dont la part a été divisée par deux.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Compare la barre grise et la barre turquoise de chaque groupe.",
+          "explication": "La part des **ouvriers** est passée de 40 % à 20 % : elle a été divisée par deux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points de pourcentage la part des ouvriers a-t-elle baissé ?",
+          "reponse": 20,
+          "unite": "points",
+          "aide": "Une baisse en points se calcule par soustraction : 40 − 20.",
+          "explication": "40 − 20 = **20 points de pourcentage**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par combien la part des cadres a-t-elle été multipliée entre les deux dates ? Arrondis au dixième.",
+          "reponse": 6.7,
+          "tolerance": 0.05,
+          "aide": "Coefficient multiplicateur = valeur finale ÷ valeur initiale : 20 ÷ 3.",
+          "explication": "20 ÷ 3 ≈ **6,7** : la part des cadres a été multipliée par environ 6,7."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99fa28c-d982-51b3-9465-ac45947efc00",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le bac pour presque tous, mais pas à égalité",
+      "competence": "lire-graphique",
+      "situation": "La massification scolaire a fait grimper la part de bacheliers. Mais qui en a profité ? Lina lit un graphique national, puis compare deux milieux dans un échantillon imaginaire.",
+      "documents": [
+        {
+          "id": "bac",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Bacheliers dans une génération",
+          "source": "Ordres de grandeur arrondis.",
+          "categories": [
+            "1950",
+            "1970",
+            "1985",
+            "1995",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Part de bacheliers",
+              "valeurs": [
+                5,
+                20,
+                30,
+                60,
+                80
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Part de la génération",
+            "unite": "en %",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "milieux",
+          "type": "tableau",
+          "titre": "Bacheliers selon le milieu (sur 100 élèves de chaque milieu)",
+          "source": "Chiffres inventés pour l’exercice.",
+          "colonnes": [
+            "Milieu",
+            "1985",
+            "2020"
+          ],
+          "lignes": [
+            [
+              "Enfants de cadres",
+              70,
+              95
+            ],
+            [
+              "Enfants d’ouvriers",
+              25,
+              75
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Par combien la part de bacheliers a-t-elle été multipliée entre 1950 et 2020 ?",
+          "reponse": 16,
+          "aide": "Coefficient multiplicateur = 80 ÷ 5.",
+          "explication": "80 ÷ 5 = **16** : la part de bacheliers a été multipliée par 16."
+        },
+        {
+          "type": "zone",
+          "document": "bac",
+          "enonce": "La part de bacheliers a gagné 15, 10, 30 puis 20 points entre deux dates successives. Touche la date où s’achève la plus forte hausse.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Calcule la différence entre chaque barre et la précédente.",
+          "explication": "Entre 1985 et 1995, la part passe de 30 % à 60 % : **+30 points**, la plus forte hausse. Elle s’achève en **1995**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans le tableau, quel est l’écart, en points, entre la part de bacheliers des enfants de cadres et celle des enfants d’ouvriers en 2020 ?",
+          "reponse": 20,
+          "unite": "points",
+          "aide": "En 2020 : 95 − 75.",
+          "explication": "En 2020, l’écart est de 95 − 75 = **20 points** (contre 45 points en 1985)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure de l’ensemble des deux documents ?",
+          "options": [
+            "Le niveau de tous a progressé, mais les enfants de cadres restent devant : les positions relatives demeurent",
+            "Les enfants d’ouvriers ont rattrapé puis dépassé les enfants de cadres dans l’accès au bac général",
+            "La massification n’a profité à aucun milieu social : les taux d’accès au bac n’ont pas bougé",
+            "L’écart entre les deux milieux est aujourd’hui nul : l’origine sociale n’a plus d’effet scolaire"
+          ],
+          "reponse": 0,
+          "aide": "Regarde si l’ordre entre les deux lignes a changé entre 1985 et 2020.",
+          "explication": "Les deux milieux progressent (70 → 95 et 25 → 75), mais les enfants de cadres gardent **la première place** : le niveau s’élève **sans rebattre les rangs**."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99fa28c-d982-51b3-9465-ac45947efc00",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Moyennisation ou polarisation ?",
+      "competence": "analyser-document",
+      "situation": "Lina et Noa débattent de la société française. Elles s’appuient sur un tableau imaginaire qui suit les emplois selon leur qualification entre 1990 et 2020.",
+      "documents": [
+        {
+          "id": "emplois",
+          "type": "tableau",
+          "titre": "Variation du nombre d’emplois entre 1990 et 2020 (en milliers)",
+          "source": "Chiffres imaginés pour l’exercice, dans le sens des évolutions observées.",
+          "colonnes": [
+            "Type d’emplois",
+            "Variation"
+          ],
+          "lignes": [
+            [
+              "Emplois très qualifiés",
+              "+ 3 000"
+            ],
+            [
+              "Emplois de qualification intermédiaire",
+              "− 1 500"
+            ],
+            [
+              "Emplois peu qualifiés de services",
+              "+ 1 200"
+            ],
+            [
+              "Emplois d’ouvriers de l’industrie",
+              "− 800"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "debat",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Lina",
+              "emoji": "👩",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Noa",
+              "emoji": "🧑",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Lina",
+              "texte": "Tout le monde est plus diplômé qu’en 1950. La société est devenue une grande classe moyenne."
+            },
+            {
+              "qui": "Noa",
+              "texte": "Oui, mais depuis les années 1980 les écarts de patrimoine se sont creusés."
+            },
+            {
+              "qui": "Lina",
+              "texte": "Et l’emploi ? Les emplois du milieu reculent…"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "emplois",
+          "enonce": "Touche la ligne qui montre le recul des emplois du milieu de l’échelle.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Cherche la ligne qui n’est ni tout en haut, ni tout en bas de l’échelle de qualification.",
+          "explication": "Les emplois de **qualification intermédiaire** reculent de 1 500 milliers : c’est le signe d’une polarisation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le solde net d’emplois créés entre 1990 et 2020, en milliers ?",
+          "reponse": 1900,
+          "unite": "milliers",
+          "aide": "Additionne toutes les variations, avec leur signe : + 3 000 − 1 500 + 1 200 − 800.",
+          "explication": "3 000 − 1 500 + 1 200 − 800 = **+1 900 milliers** d’emplois."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque thèse à son contenu.",
+          "paires": [
+            [
+              "Moyennisation (années 1960-1970)",
+              "Une vaste classe moyenne absorbe les extrêmes"
+            ],
+            [
+              "Polarisation (depuis les années 1990)",
+              "Emplois très qualifiés et peu qualifiés progressent, emplois intermédiaires reculent"
+            ]
+          ],
+          "aide": "Le tableau illustre l’une des deux thèses.",
+          "explication": "La **moyennisation** décrit une société qui se resserre autour du milieu ; la **polarisation** décrit une société qui s’écarte vers le haut et le bas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion de copie respecte les deux constats de Lina et de Noa ?",
+          "options": [
+            "La société s’est enrichie et qualifiée pour presque tous, mais les écarts de patrimoine se sont creusés",
+            "Seule la moyennisation est vraie : les inégalités de revenu et de patrimoine ont disparu",
+            "Seule la polarisation est vraie : le niveau de diplôme n’a pas changé depuis cinquante ans",
+            "Il faut choisir une seule thèse et ignorer l’autre, pour que la copie reste cohérente"
+          ],
+          "reponse": 0,
+          "aide": "Une bonne copie ne choisit pas entre deux constats exacts.",
+          "explication": "Les deux constats se tiennent **ensemble** : élévation du niveau de qualification pour presque tous **et** creusement des écarts de patrimoine."
+        }
+      ]
+    },
+    {
+      "chapitre": "7b0a0111-cd13-5214-a5c9-a892c4c3b2ca",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui parle : Marx, Weber ou Bourdieu ?",
+      "competence": "analyser-document",
+      "situation": "En cours de SES, Emma résume trois auteurs sur une affiche. Elle doit ensuite attribuer à chacun des phrases entendues en classe.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Trois découpages de la société",
+          "sousTitre": "Affiche de la classe de Tle",
+          "emoji": "📚",
+          "lignes": [
+            {
+              "texte": "Marx",
+              "valeur": "Deux classes en conflit",
+              "id": "marx"
+            },
+            {
+              "texte": "Weber",
+              "valeur": "Trois ordres : économique, social, politique",
+              "id": "weber"
+            },
+            {
+              "texte": "Bourdieu",
+              "valeur": "Trois capitaux et un habitus",
+              "id": "bourdieu"
+            }
+          ],
+          "pied": "Affiche écrite pour l’exercice",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche l’auteur qui découpe la société en deux classes seulement.",
+          "reponse": [
+            "marx"
+          ],
+          "aide": "Le nombre de classes est dans la colonne de droite.",
+          "explication": "**Marx** oppose deux classes, la bourgeoisie et le prolétariat."
+        },
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche l’auteur qui parle d’habitus.",
+          "reponse": [
+            "bourdieu"
+          ],
+          "aide": "L’habitus est associé aux capitaux.",
+          "explication": "L’**habitus** est le concept de **Bourdieu** : les dispositions incorporées par la socialisation."
+        },
+        {
+          "type": "categories",
+          "enonce": "Attribue chaque phrase à l’auteur qui la dirait le mieux.",
+          "categories": [
+            "Marx",
+            "Weber",
+            "Bourdieu"
+          ],
+          "items": [
+            [
+              "« Ce qui compte, c’est qui possède l’usine et qui vend son travail. »",
+              0
+            ],
+            [
+              "« Les deux camps ont des intérêts qui s’opposent. »",
+              0
+            ],
+            [
+              "« Notaire ou professeure : même grand prestige, revenus différents. »",
+              1
+            ],
+            [
+              "« Les partis cherchent à conquérir le pouvoir. »",
+              1
+            ],
+            [
+              "« On va au musée, on parle avec aisance : un capital culturel hérité. »",
+              2
+            ],
+            [
+              "« Son réseau de relations l’a aidé à trouver un stage. »",
+              2
+            ]
+          ],
+          "aide": "Associe chaque phrase à un mot clé de l’affiche : rapports de production, prestige, partis, capitaux.",
+          "explication": "**Marx** : propriété des moyens de production et conflit. **Weber** : prestige (ordre social) et partis (ordre politique). **Bourdieu** : capital culturel et capital social."
+        }
+      ]
+    },
+    {
+      "chapitre": "7b0a0111-cd13-5214-a5c9-a892c4c3b2ca",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le notaire et le professeur",
+      "competence": "analyser-document",
+      "situation": "Pour Weber, la hiérarchie de l’argent n’est pas la seule. Un sondage imaginaire note le prestige de quatre personnes (sur 10) et donne leur revenu mensuel.",
+      "documents": [
+        {
+          "id": "personnes",
+          "type": "tableau",
+          "titre": "Quatre personnes imaginées",
+          "source": "Chiffres et notes de sondage imaginés pour l’exercice.",
+          "colonnes": [
+            "Personne",
+            "Métier",
+            "Revenu mensuel (€)",
+            "Prestige (sur 10)"
+          ],
+          "lignes": [
+            [
+              "Claire",
+              "Notaire",
+              "6 500",
+              8
+            ],
+            [
+              "Hugo",
+              "Professeur",
+              "2 600",
+              8
+            ],
+            [
+              "Sam",
+              "Chef de chantier",
+              "3 000",
+              4
+            ],
+            [
+              "Lou",
+              "Cadre commercial",
+              "5 000",
+              5
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "personnes",
+          "enonce": "Touche les deux personnes qui ont le même prestige mais des revenus très différents.",
+          "reponse": [
+            "r0c0",
+            "r1c0"
+          ],
+          "multiple": true,
+          "aide": "Cherche deux notes de prestige identiques dans la dernière colonne.",
+          "explication": "**Claire** et **Hugo** ont tous deux 8 sur 10 en prestige, mais 6 500 € contre 2 600 € de revenu."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le revenu de Claire est-il plus élevé que celui de Hugo ?",
+          "reponse": 2.5,
+          "unite": "fois",
+          "aide": "Divise 6 500 par 2 600.",
+          "explication": "6 500 ÷ 2 600 = **2,5**."
+        },
+        {
+          "type": "zone",
+          "document": "personnes",
+          "enonce": "Touche les deux personnes qui gagnent plus que Hugo mais qui ont moins de prestige que lui.",
+          "reponse": [
+            "r2c0",
+            "r3c0"
+          ],
+          "multiple": true,
+          "aide": "Compare d’abord le revenu à 2 600 €, puis le prestige à 8.",
+          "explication": "**Sam** (3 000 €, prestige 4) et **Lou** (5 000 €, prestige 5) gagnent plus que Hugo mais sont moins prestigieux."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce tableau, pour Weber ?",
+          "options": [
+            "Que l’ordre économique et l’ordre social ne se recouvrent pas",
+            "Que le prestige dépend uniquement du revenu",
+            "Que la société se divise en deux classes en conflit",
+            "Que tous les groupes ont le même habitus"
+          ],
+          "reponse": 0,
+          "aide": "Le revenu relève de l’ordre économique, le prestige de l’ordre social.",
+          "explication": "Revenu et prestige ne vont pas toujours de pair : les ordres **économique** et **social** ne se recouvrent pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "7b0a0111-cd13-5214-a5c9-a892c4c3b2ca",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les classes existent-elles encore ?",
+      "competence": "argumenter",
+      "situation": "Pour sa dissertation, Jade doit opposer des arguments sur la pertinence des classes sociales aujourd’hui. Elle s’appuie sur une enquête imaginaire et doit trier ses arguments.",
+      "documents": [
+        {
+          "id": "enquete",
+          "type": "tableau",
+          "titre": "Cadres et ouvriers : trois indicateurs",
+          "source": "Chiffres imaginés pour l’exercice, dans l’ordre de grandeur des enquêtes.",
+          "colonnes": [
+            "Indicateur",
+            "Cadres",
+            "Ouvriers"
+          ],
+          "lignes": [
+            [
+              "Patrimoine médian (€)",
+              "160 000",
+              "35 000"
+            ],
+            [
+              "Couples dont le conjoint est du même groupe (%)",
+              55,
+              45
+            ],
+            [
+              "Espérance de vie à 35 ans (années)",
+              49,
+              43
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le patrimoine médian des cadres dépasse-t-il celui des ouvriers ? Arrondis au dixième.",
+          "reponse": 4.6,
+          "tolerance": 0.05,
+          "unite": "fois",
+          "aide": "Divise 160 000 par 35 000.",
+          "explication": "160 000 ÷ 35 000 ≈ **4,6**."
+        },
+        {
+          "type": "zone",
+          "document": "enquete",
+          "enonce": "Touche la ligne qui illustre l’homogamie sociale.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "L’homogamie, c’est se mettre en couple avec quelqu’un du même milieu.",
+          "explication": "La ligne des **couples dont le conjoint est du même groupe** mesure l’homogamie sociale."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces arguments selon la thèse qu’ils soutiennent.",
+          "categories": [
+            "Les classes restent pertinentes",
+            "Les classes s’affaiblissent"
+          ],
+          "items": [
+            [
+              "Le patrimoine reste très inégal selon la PCS",
+              0
+            ],
+            [
+              "L’homogamie sociale reste élevée",
+              0
+            ],
+            [
+              "L’espérance de vie varie encore selon la PCS",
+              0
+            ],
+            [
+              "Les trajectoires sont de plus en plus individualisées",
+              1
+            ],
+            [
+              "Le genre, l’âge ou l’origine créent d’autres clivages",
+              1
+            ],
+            [
+              "Les frontières entre groupes sont brouillées par la moyennisation",
+              1
+            ]
+          ],
+          "aide": "Les deux premiers arguments se lisent dans le tableau.",
+          "explication": "Patrimoine, homogamie et espérance de vie plaident pour la **persistance** des classes. Individualisation, autres clivages et brouillage des frontières plaident pour leur **affaiblissement**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion correspond à ce qu’attend le programme ?",
+          "options": [
+            "Opposer les deux séries d’arguments, en les datant et en les appuyant sur des données",
+            "Affirmer que les classes ont totalement disparu, en s’appuyant sur la moyennisation",
+            "Affirmer que les classes n’ont jamais changé depuis Marx, malgré les transformations",
+            "Choisir un seul camp sans citer l’autre, afin d’avoir une thèse très tranchée"
+          ],
+          "reponse": 0,
+          "aide": "Le programme n’attend pas un verdict.",
+          "explication": "Le programme attend de **confronter les deux séries d’arguments**, datés et chiffrés, plutôt qu’un verdict tranché."
+        }
+      ]
+    },
+    {
+      "chapitre": "ea367789-cd51-5114-a11d-7ed48d5ab637",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Comment s’engage-t-on au lycée ?",
+      "competence": "lire-graphique",
+      "situation": "Le conseil de vie lycéenne a interrogé 200 élèves d’un lycée imaginaire : à quelles formes d’engagement ont-ils déjà pris part ?",
+      "documents": [
+        {
+          "id": "enq",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Élèves ayant déjà…",
+          "source": "Enquête imaginée pour l’exercice (200 élèves).",
+          "categories": [
+            "Signé une pétition",
+            "Adhéré à une association",
+            "Boycotté un produit",
+            "Participé à une manifestation",
+            "Adhéré à un syndicat"
+          ],
+          "series": [
+            {
+              "nom": "Élèves",
+              "valeurs": [
+                120,
+                80,
+                60,
+                40,
+                10
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre d’élèves",
+            "unite": "sur 200",
+            "min": 0,
+            "max": 140,
+            "pas": 20
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "enq",
+          "enonce": "Touche la forme d’engagement la plus répandue dans ce lycée.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "**Signer une pétition** : 120 élèves sur 200, c’est la forme la plus répandue."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des 200 élèves a déjà participé à une manifestation ? Réponds en %.",
+          "reponse": 20,
+          "unite": "%",
+          "aide": "Part = 40 ÷ 200 × 100.",
+          "explication": "40 ÷ 200 = 0,2, soit **20 %**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque geste à son répertoire d’engagement.",
+          "paires": [
+            [
+              "Voter aux élections municipales",
+              "Le vote"
+            ],
+            [
+              "Adhérer à un syndicat",
+              "Le militantisme"
+            ],
+            [
+              "Boycotter une marque",
+              "La consommation engagée"
+            ],
+            [
+              "Occuper son lycée",
+              "L’action protestataire"
+            ]
+          ],
+          "aide": "Pense au vote, au parti ou au syndicat, à l’achat, à la protestation.",
+          "explication": "Le **vote** est le geste le moins coûteux ; le **syndicat** est du militantisme ; le **boycott** est de la consommation engagée ; l’**occupation** est une action protestataire."
+        }
+      ]
+    },
+    {
+      "chapitre": "ea367789-cd51-5114-a11d-7ed48d5ab637",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le passager clandestin de l’usine",
+      "competence": "analyser-texte",
+      "situation": "Dans une usine imaginée, 100 salariés hésitent à faire grève pour obtenir une hausse de salaire. Olson a montré pourquoi une cause commune ne suffit pas toujours à mobiliser.",
+      "documents": [
+        {
+          "id": "usine",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Projet de grève chez Delmas",
+          "auteur": "Article écrit pour l’exercice",
+          "blocs": [
+            "Chez Delmas, 100 salariés réclament une hausse de 100 € par mois, valable pour tous les salariés de l’usine si la grève réussit.",
+            "Faire grève coûte 200 € de salaire perdu à chaque gréviste. La caisse du syndicat rembourse la moitié de cette perte, mais seulement aux adhérents.",
+            "Dans l’atelier de montage, 8 salariés se connaissent depuis dix ans : quand l’un d’eux manque, tout le monde le voit."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Si la grève réussit, combien gagne chaque salarié sur une année, en euros ?",
+          "reponse": 1200,
+          "unite": "€",
+          "aide": "La hausse est de 100 € par mois : combien de mois ?",
+          "explication": "100 € × 12 mois = **1 200 €** par an, gréviste ou non."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence de gain annuel y a-t-il entre un non-gréviste et un gréviste sans caisse de grève, si la grève réussit ?",
+          "reponse": 200,
+          "unite": "€",
+          "aide": "Seul le gréviste perd des jours de salaire.",
+          "explication": "Le non-gréviste gagne la hausse **sans** perdre 200 € : il gagne **200 € de plus** que le gréviste."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un salarié rationnel peut-il choisir de ne pas faire grève ?",
+          "options": [
+            "Il profitera de la hausse même sans participer : c’est le passager clandestin",
+            "Il ne souhaite pas de hausse de salaire",
+            "Il craint que la hausse soit de 100 € seulement pour les grévistes",
+            "Il ne connaît personne dans l’usine"
+          ],
+          "reponse": 0,
+          "aide": "Le bien obtenu est collectif : qui en profite ?",
+          "explication": "La hausse concerne **tous** les salariés : l’individu rationnel a intérêt à laisser les autres payer le coût de la grève. C’est le **passager clandestin** d’Olson."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque élément du texte selon la réponse qu’il apporte au paradoxe d’Olson.",
+          "categories": [
+            "Incitation sélective",
+            "Taille réduite du groupe"
+          ],
+          "items": [
+            [
+              "La caisse de grève versée seulement aux adhérents",
+              0
+            ],
+            [
+              "L’absence d’un salarié est visible dans l’atelier de 8 personnes",
+              1
+            ],
+            [
+              "Un service juridique gratuit réservé aux syndiqués",
+              0
+            ]
+          ],
+          "aide": "Une incitation sélective est réservée aux participants.",
+          "explication": "La **caisse de grève** et le **service juridique** sont réservés aux adhérents : ce sont des **incitations sélectives**. Dans un petit atelier, l’**abstention se voit** : c’est l’effet de la taille réduite."
+        }
+      ]
+    },
+    {
+      "chapitre": "ea367789-cd51-5114-a11d-7ed48d5ab637",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Moins d’adhérents, plus de causes",
+      "competence": "analyser-document",
+      "situation": "Dans une ville imaginée, on suit deux manières de s’engager : adhérer à une organisation (parti, syndicat) et soutenir ponctuellement une cause (pétition, don, relais en ligne).",
+      "documents": [
+        {
+          "id": "courbes",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Deux façons de s’engager (% des habitants)",
+          "source": "Données imaginées pour l’exercice.",
+          "categories": [
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Adhérents d’une organisation",
+              "valeurs": [
+                20,
+                16,
+                12,
+                10
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "Soutien ponctuel à une cause",
+              "valeurs": [
+                10,
+                16,
+                30,
+                45
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des habitants",
+            "unite": "en %",
+            "min": 0,
+            "max": 50,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Année"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "courbes",
+          "enonce": "Touche l’année où les deux courbes se croisent.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche le point où les deux séries ont la même valeur.",
+          "explication": "En **2000**, les deux séries valent 16 % : c’est le point de croisement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien, en %, la part d’adhérents a-t-elle évolué entre 1990 et 2020 ? Donne un nombre négatif.",
+          "reponse": -50,
+          "unite": "%",
+          "aide": "(10 − 20) ÷ 20 × 100.",
+          "explication": "(10 − 20) ÷ 20 = − 0,5, soit **− 50 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En 2020, combien de fois y a-t-il plus de personnes qui soutiennent ponctuellement une cause que d’adhérents ?",
+          "reponse": 4.5,
+          "unite": "fois",
+          "aide": "Divise 45 par 10.",
+          "explication": "45 ÷ 10 = **4,5**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces gestes selon la forme d’engagement dont ils relèvent.",
+          "categories": [
+            "Centré sur une organisation",
+            "Centré sur une cause"
+          ],
+          "items": [
+            [
+              "Cotiser chaque mois à un syndicat",
+              0
+            ],
+            [
+              "Tenir une permanence de section d’un parti",
+              0
+            ],
+            [
+              "Signer une pétition en ligne",
+              1
+            ],
+            [
+              "Relayer un appel à boycotter une marque",
+              1
+            ],
+            [
+              "Participer à un week-end de mobilisation pour le climat",
+              1
+            ]
+          ],
+          "aide": "Demande-toi si le geste dure ou s’il est ponctuel.",
+          "explication": "Adhérer et tenir une permanence relèvent de l’**organisation** ; pétition, boycott et mobilisation ponctuelle relèvent de la **cause**. Le recul des organisations n’est pas le recul de l’engagement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle interprétation est correcte ?",
+          "options": [
+            "L’adhésion recule mais l’engagement change de forme : plus ponctuel, centré sur des causes",
+            "L’engagement politique disparaît, puisque les adhésions aux organisations reculent partout",
+            "Les habitants ne se mobilisent plus du tout pour des causes, même à l’échelle locale",
+            "Les organisations traditionnelles se renforcent, et leurs effectifs augmentent chaque année"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les deux courbes ensemble.",
+          "explication": "Confondre le recul des **organisations** avec celui de l’**engagement** est l’erreur classique : l’engagement devient plus ponctuel et centré sur des causes."
+        }
+      ]
+    },
+    {
+      "chapitre": "388c0eed-c379-5ea1-a483-901e1a57ccaa",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Grève d’hier, mobilisation d’aujourd’hui",
+      "competence": "analyser-document",
+      "situation": "Yanis prépare une fiche comparative : d’un côté le conflit du travail des années 1960-1970, de l’autre les nouveaux mouvements sociaux apparus ensuite.",
+      "documents": [
+        {
+          "id": "comp",
+          "type": "tableau",
+          "titre": "Deux formes d’action collective",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "",
+            "Conflit du travail classique",
+            "Nouveau mouvement social"
+          ],
+          "lignes": [
+            [
+              "Enjeu principal",
+              "Répartition : salaires, temps de travail, conditions",
+              "Identité, droits, mode de vie"
+            ],
+            [
+              "Organisation",
+              "Syndicat structuré",
+              "Organisation souple, peu hiérarchisée"
+            ],
+            [
+              "Moyen privilégié",
+              "Grève, occupation, négociation",
+              "Visibilité dans les médias"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "comp",
+          "enonce": "Touche la case qui donne l’enjeu principal des nouveaux mouvements sociaux.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Cherche la ligne « Enjeu principal » puis la colonne de droite.",
+          "explication": "Les nouveaux mouvements sociaux portent surtout l’**identité, les droits et le mode de vie**, plus que la répartition."
+        },
+        {
+          "type": "zone",
+          "document": "comp",
+          "enonce": "Touche la case qui donne le moyen privilégié du conflit du travail classique.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne « Moyen privilégié » puis la colonne du conflit classique.",
+          "explication": "Le conflit du travail classique passe par la **grève, l’occupation et la négociation**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque mobilisation dans la forme d’action collective à laquelle elle se rattache.",
+          "categories": [
+            "Conflit du travail classique",
+            "Nouveau mouvement social"
+          ],
+          "items": [
+            [
+              "Une grève de la sidérurgie pour une hausse de salaires",
+              0
+            ],
+            [
+              "Une marche pour l’égalité entre femmes et hommes",
+              1
+            ],
+            [
+              "L’occupation d’une usine contre un plan de licenciements",
+              0
+            ],
+            [
+              "Une marche pour le climat",
+              1
+            ],
+            [
+              "Une manifestation pour les droits des minorités sexuelles",
+              1
+            ],
+            [
+              "Une négociation de branche sur le temps de travail",
+              0
+            ]
+          ],
+          "aide": "Demande-toi si l’enjeu est la répartition ou l’identité et les droits.",
+          "explication": "Salaires, licenciements et temps de travail relèvent de la **répartition** (conflit classique). Égalité, climat et droits des minorités relèvent de l’**identité et du mode de vie** (nouveaux mouvements sociaux)."
+        }
+      ]
+    },
+    {
+      "chapitre": "388c0eed-c379-5ea1-a483-901e1a57ccaa",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des conflits qui changent de visage",
+      "competence": "lire-graphique",
+      "situation": "Dans une région imaginée, on compte pour 1 000 salariés les journées de grève et les recours aux prud’hommes. Deux tendances se dessinent entre 1990 et 2020.",
+      "documents": [
+        {
+          "id": "conf",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Conflits du travail pour 1 000 salariés",
+          "source": "Données imaginées pour l’exercice.",
+          "categories": [
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Journées de grève",
+              "valeurs": [
+                120,
+                80,
+                50,
+                30
+              ],
+              "teinte": "gris"
+            },
+            {
+              "nom": "Recours aux prud’hommes",
+              "valeurs": [
+                10,
+                20,
+                30,
+                40
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Pour 1 000 salariés",
+            "min": 0,
+            "max": 140,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Par combien les journées de grève ont-elles été multipliées entre 1990 et 2020 ? Donne le coefficient multiplicateur.",
+          "reponse": 0.25,
+          "aide": "Coefficient multiplicateur = valeur finale ÷ valeur initiale : 30 ÷ 120.",
+          "explication": "30 ÷ 120 = **0,25** : les journées de grève ont été divisées par quatre, soit − 75 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien, en %, les recours aux prud’hommes ont-ils augmenté entre 1990 et 2020 ?",
+          "reponse": 300,
+          "unite": "%",
+          "aide": "(40 − 10) ÷ 10 × 100.",
+          "explication": "(40 − 10) ÷ 10 = 3, soit **+300 %** : les recours ont été multipliés par 4."
+        },
+        {
+          "type": "zone",
+          "document": "conf",
+          "enonce": "Touche la première année où les recours aux prud’hommes dépassent les journées de grève.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Compare les deux barres de chaque année.",
+          "explication": "En **2020**, les recours (40) dépassent les journées de grève (30) ; en 2010, c’était l’inverse (30 contre 50)."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe ces conflits selon qu’ils sont individualisés ou diversifiés.",
+          "categories": [
+            "Individualisé",
+            "Diversifié"
+          ],
+          "items": [
+            [
+              "Un salarié saisit les prud’hommes",
+              0
+            ],
+            [
+              "Une salariée conteste son licenciement devant le juge",
+              0
+            ],
+            [
+              "Un débrayage de dix minutes à la prise de poste",
+              1
+            ],
+            [
+              "Un refus collectif de faire des heures supplémentaires",
+              1
+            ]
+          ],
+          "aide": "Un conflit individualisé oppose une personne à son employeur devant un juge.",
+          "explication": "Les **recours prud’homaux** individualisent le conflit ; les **débrayages courts** et le **refus d’heures supplémentaires** le diversifient. Le conflit ne disparaît pas : il change de forme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montrent ces données ?",
+          "options": [
+            "Les conflits ne disparaissent pas : ils deviennent plus individuels",
+            "Les conflits du travail ont disparu, puisque les grèves sont moins fréquentes",
+            "Les salariés ne se plaignent plus, car leurs conditions de travail s’améliorent",
+            "Les syndicats ont gagné partout, donc les conflits n’ont plus de raison d’être"
+          ],
+          "reponse": 0,
+          "aide": "Regarde ce que fait la courbe des recours pendant que la grève recule.",
+          "explication": "La grève recule mais les **recours individuels augmentent** : les conflits se sont **individualisés et diversifiés**."
+        }
+      ]
+    },
+    {
+      "chapitre": "388c0eed-c379-5ea1-a483-901e1a57ccaa",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un rond-point, deux revendications",
+      "competence": "analyser-texte",
+      "situation": "Lors d’une mobilisation imaginée, inspirée de celles de ces dernières années, des habitants se retrouvent sur un rond-point. Deux documents permettent de comprendre ce qu’ils demandent et comment ils s’organisent.",
+      "documents": [
+        {
+          "id": "rond",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Samedi sur le rond-point",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Nadia et ses voisins discutent. « Avec les [[rep|taxes]] sur le carburant et des [[rep|salaires]] qui n’augmentent pas, on ne finit plus les mois », dit Nadia.",
+            "Karim ajoute : « Et on veut surtout être [[id|écoutés]] et [[id|reconnus]]. Personne ne nous représente : on s’est organisés sur les réseaux sociaux, sans chef ni porte-parole. »"
+          ]
+        },
+        {
+          "id": "chiffres",
+          "type": "tableau",
+          "titre": "Une mobilisation en chiffres",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Indicateur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Soutiens en ligne",
+              "48 000"
+            ],
+            [
+              "Personnes présentes sur le terrain",
+              "600"
+            ],
+            [
+              "Porte-parole désigné",
+              "Aucun"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rond",
+          "enonce": "Touche les deux mots qui relèvent d’une revendication de répartition.",
+          "reponse": [
+            "rep"
+          ],
+          "aide": "Pense aux sujets d’argent : ce que l’on paie, ce que l’on gagne.",
+          "explication": "**Taxes** et **salaires** relèvent de la **répartition** : qui paie, qui gagne quoi."
+        },
+        {
+          "type": "zone",
+          "document": "rond",
+          "enonce": "Touche les deux mots qui relèvent d’une demande de reconnaissance.",
+          "reponse": [
+            "id"
+          ],
+          "aide": "Pense à ce que Karim veut pour lui et ses voisins, au-delà de l’argent.",
+          "explication": "**Écoutés** et **reconnus** relèvent de l’**identité** : être pris en compte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce texte sur la lecture « anciens contre nouveaux mouvements » ?",
+          "options": [
+            "Un même mouvement peut porter à la fois une demande de répartition et de reconnaissance",
+            "Un mouvement ne porte jamais qu’une seule revendication, matérielle ou symbolique",
+            "Seule la répartition est une vraie revendication, la reconnaissance étant secondaire",
+            "Les nouveaux mouvements n’ont plus aucun enjeu matériel, seulement des enjeux culturels"
+          ],
+          "reponse": 0,
+          "aide": "Compare ce que demandent Nadia et Karim.",
+          "explication": "Nadia parle de **répartition**, Karim de **reconnaissance** : les deux s’articulent dans le même mouvement, ce qui rend la lecture « anciens contre nouveaux » contestée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de soutiens en ligne y a-t-il pour une personne présente sur le terrain ?",
+          "reponse": 80,
+          "unite": "soutiens",
+          "aide": "Divise 48 000 par 600.",
+          "explication": "48 000 ÷ 600 = **80** : le soutien en ligne est très massif par rapport à la présence physique."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Un mouvement massif mais sans porte-parole légitime peut rester sans ___.",
+          "reponses": [
+            [
+              "interlocuteur"
+            ]
+          ],
+          "banque": [
+            "interlocuteur",
+            "adhérent",
+            "budget",
+            "syndicat"
+          ],
+          "aide": "Qui négocierait avec les pouvoirs publics ?",
+          "explication": "Sans **porte-parole** légitime, le mouvement peut être massif mais **sans interlocuteur** : la négociation devient difficile."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6e69973-c04e-517a-802d-dc29adf03945",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "1929 et 2008 côte à côte",
+      "competence": "analyser-document",
+      "situation": "Sacha compare les deux grandes crises financières dans un tableau. Il veut ensuite remettre dans l’ordre le scénario qu’elles ont en commun.",
+      "documents": [
+        {
+          "id": "cmp",
+          "type": "tableau",
+          "titre": "Deux crises, un même scénario",
+          "source": "Ordres de grandeur arrondis (États-Unis).",
+          "colonnes": [
+            "",
+            "1929",
+            "2008"
+          ],
+          "lignes": [
+            [
+              "Marché en cause",
+              "La Bourse",
+              "L’immobilier américain"
+            ],
+            [
+              "Levier",
+              "Achat de titres à crédit",
+              "Crédits subprimes"
+            ],
+            [
+              "Déclencheur visible",
+              "Krach d’octobre 1929",
+              "Faillite de Lehman Brothers (septembre 2008)"
+            ],
+            [
+              "PIB américain",
+              "Environ − 30 %",
+              "Récession sévère"
+            ],
+            [
+              "Chômage au plus fort",
+              "Environ 25 %",
+              "Environ 10 %"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cmp",
+          "enonce": "Touche la case qui donne le déclencheur visible de la crise de 2008.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne « Déclencheur visible » et la colonne 2008.",
+          "explication": "Le déclencheur visible de 2008 est la **faillite de Lehman Brothers** en septembre 2008."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points le chômage au plus fort de la crise de 1929 dépasse-t-il celui de 2008 ?",
+          "reponse": 15,
+          "unite": "points",
+          "aide": "Soustrais 10 à 25.",
+          "explication": "25 − 10 = **15 points de pourcentage**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les quatre temps du scénario commun aux deux crises.",
+          "items": [
+            "Euphorie : crédit abondant, prix d’actifs en hausse",
+            "Retournement : un événement révèle que les valeurs ne reposent sur rien",
+            "Panique : tout le monde vend en même temps",
+            "Contagion : le crédit se ferme et le chômage monte"
+          ],
+          "aide": "Le scénario commence par la hausse des prix et finit par l’économie réelle.",
+          "explication": "Euphorie, **retournement**, **panique**, **contagion** : c’est le scénario commun à 1929 et à 2008."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6e69973-c04e-517a-802d-dc29adf03945",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand baisser les prix aggrave les dettes",
+      "competence": "raisonner",
+      "situation": "Irving Fisher a décrit la déflation par la dette. Un cycle et l’exemple d’un ménage imaginaire permettent de comprendre pourquoi la baisse des prix, en 1929, a aggravé la crise.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "disposition": "cycle",
+          "noeuds": [
+            {
+              "id": "a",
+              "texte": "Les prix baissent"
+            },
+            {
+              "id": "b",
+              "texte": "?"
+            },
+            {
+              "id": "c",
+              "texte": "Les débiteurs vendent pour rembourser"
+            }
+          ],
+          "liens": [
+            {
+              "de": "a",
+              "a": "b"
+            },
+            {
+              "de": "b",
+              "a": "c"
+            },
+            {
+              "de": "c",
+              "a": "a",
+              "texte": "nouvelle baisse"
+            }
+          ]
+        },
+        {
+          "id": "menage",
+          "type": "tableau",
+          "titre": "Un ménage endetté",
+          "source": "Situation imaginée pour l’exercice.",
+          "colonnes": [
+            "",
+            "Avant la baisse",
+            "Après une baisse des prix de 20 %"
+          ],
+          "lignes": [
+            [
+              "Valeur de la maison (€)",
+              "100 000",
+              "80 000"
+            ],
+            [
+              "Dette restant à rembourser (€)",
+              "100 000",
+              "100 000"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que faut-il écrire à la place du « ? » dans le cycle ?",
+          "options": [
+            "La valeur réelle des dettes augmente",
+            "La valeur réelle des dettes diminue",
+            "Les dettes sont effacées",
+            "Les salaires sont relevés"
+          ],
+          "reponse": 0,
+          "aide": "Quand les prix baissent, la dette en euros ne change pas : que devient son poids ?",
+          "explication": "La dette reste la même en euros alors que les prix baissent : sa **valeur réelle augmente**. C’est le cœur de la déflation par la dette."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Après la baisse, de combien d’euros la dette dépasse-t-elle la valeur de la maison ?",
+          "reponse": 20000,
+          "unite": "€",
+          "aide": "Soustrais la valeur de la maison à la dette après la baisse.",
+          "explication": "100 000 − 80 000 = **20 000 €** : le ménage doit plus que ce que vaut son bien."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand les prix baissent de 20 %, de combien, en %, la valeur réelle de la dette augmente-t-elle ? Arrondis à l’unité.",
+          "reponse": 25,
+          "unite": "%",
+          "aide": "Une baisse de 20 % correspond à un coefficient multiplicateur de 0,8. La valeur réelle est divisée par 0,8.",
+          "explication": "Coefficient 1 ÷ 0,8 = 1,25 : la valeur réelle de la dette augmente de **25 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce mécanisme aggrave-t-il la crise ?",
+          "options": [
+            "Les débiteurs vendent pour rembourser, ce qui fait encore baisser les prix",
+            "Les prix qui baissent augmentent les revenus des débiteurs, qui remboursent plus vite",
+            "Les banques prêtent davantage quand les prix baissent, ce qui relance la demande",
+            "La valeur des maisons augmente, ce qui rend les débiteurs plus riches"
+          ],
+          "reponse": 0,
+          "aide": "Observe le dernier maillon du cycle.",
+          "explication": "Les débiteurs **vendent pour rembourser** : l’offre augmente, les prix baissent encore, et la valeur réelle des dettes s’alourdit. C’est une **spirale**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c6e69973-c04e-517a-802d-dc29adf03945",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Pourquoi 2008 n’a pas été 1929",
+      "competence": "argumenter",
+      "situation": "Les deux crises sont parties de la finance, mais l’une a duré dix ans et l’autre a été contenue. Deux documents aident à comprendre pourquoi : le chômage et la réaction des autorités.",
+      "documents": [
+        {
+          "id": "chom",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Chômage aux États-Unis (%)",
+          "source": "Chiffres arrondis.",
+          "categories": [
+            "Avant la crise",
+            "Au plus fort de la crise"
+          ],
+          "series": [
+            {
+              "nom": "Crise des années 1930",
+              "valeurs": [
+                3,
+                25
+              ],
+              "teinte": "gris"
+            },
+            {
+              "nom": "Crise de 2008",
+              "valeurs": [
+                5,
+                10
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Taux de chômage",
+            "unite": "en %",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Moment"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "reac",
+          "type": "tableau",
+          "titre": "La réaction des autorités",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "",
+            "Crise des années 1930",
+            "Crise de 2008"
+          ],
+          "lignes": [
+            [
+              "Banques en difficulté",
+              "Faillites en chaîne",
+              "Sauvetage par les États"
+            ],
+            [
+              "Liquidités",
+              "Insuffisantes",
+              "Injections massives, taux à zéro"
+            ],
+            [
+              "Stabilisateurs automatiques",
+              "Inexistants",
+              "Présents"
+            ],
+            [
+              "Budget",
+              "Orthodoxie, puis New Deal",
+              "Déficits assumés"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "reac",
+          "enonce": "Touche la case qui dit que les stabilisateurs automatiques existaient en 2008.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne « Stabilisateurs automatiques » et la colonne 2008.",
+          "explication": "En 2008, les **stabilisateurs automatiques** existaient ; ils n’existaient pas en 1929."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points le chômage a-t-il augmenté pendant la crise de 2008 ?",
+          "reponse": 5,
+          "unite": "points",
+          "aide": "Compare la valeur au plus fort de la crise avec la valeur avant la crise.",
+          "explication": "10 − 5 = **5 points de pourcentage**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le chômage de la crise des années 1930 au plus fort de la crise est-il plus élevé que celui de 2008 ?",
+          "reponse": 2.5,
+          "unite": "fois",
+          "aide": "Divise 25 par 10.",
+          "explication": "25 ÷ 10 = **2,5**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque réaction de 2008 à ce qu’elle a empêché.",
+          "paires": [
+            [
+              "Injections massives de liquidités",
+              "L’assèchement du crédit"
+            ],
+            [
+              "Sauvetage des banques",
+              "Les faillites en chaîne"
+            ],
+            [
+              "Stabilisateurs automatiques",
+              "L’effondrement des revenus"
+            ]
+          ],
+          "aide": "Associe chaque mesure à son effet direct.",
+          "explication": "Les **liquidités** ont évité l’assèchement du crédit, le **sauvetage** les faillites en chaîne, les **stabilisateurs** l’effondrement des revenus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle leçon ressort de cette comparaison ?",
+          "options": [
+            "La réaction des autorités, plus que la nature de la crise, sépare une récession d’une dépression",
+            "La crise de 2008 était moins financière que celle de 1929, d’où une sortie plus rapide",
+            "Le chômage ne dépend jamais de la politique économique, seulement de la conjoncture mondiale",
+            "Il n’existe aucune différence entre les deux crises, ni dans leur origine ni dans leur issue"
+          ],
+          "reponse": 0,
+          "aide": "Compare ce que font les autorités dans chaque colonne du tableau.",
+          "explication": "La **réaction des autorités** fait la différence : liquidités, sauvetage des banques, stabilisateurs et déficits ont contenu 2008."
+        }
+      ]
+    },
+    {
+      "chapitre": "8b4cfd1b-56bd-5e38-a6cb-3fe90c53c59f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le prix qui s’envole",
+      "competence": "lire-graphique",
+      "situation": "Un actif imaginaire voit son prix grimper pendant quatre ans. Un graphique le compare à sa valeur fondamentale, c’est-à-dire à ce que valent vraiment les revenus qu’il rapportera.",
+      "documents": [
+        {
+          "id": "bulle",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prix et valeur fondamentale d’un actif imaginaire",
+          "source": "Données imaginées pour l’exercice.",
+          "categories": [
+            "An 1",
+            "An 2",
+            "An 3",
+            "An 4",
+            "An 5"
+          ],
+          "series": [
+            {
+              "nom": "Prix de marché",
+              "valeurs": [
+                100,
+                130,
+                180,
+                250,
+                160
+              ],
+              "teinte": "corail"
+            },
+            {
+              "nom": "Valeur fondamentale",
+              "valeurs": [
+                100,
+                102,
+                104,
+                106,
+                108
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Prix",
+            "unite": "en euros",
+            "min": 0,
+            "max": 300,
+            "pas": 50
+          },
+          "axeX": {
+            "titre": "Année"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "bulle",
+          "enonce": "Touche l’année où l’écart entre le prix de marché et la valeur fondamentale est le plus grand.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche l’endroit où les deux courbes sont les plus éloignées.",
+          "explication": "En **An 4**, le prix est de 250 pour une valeur fondamentale de 106 : c’est l’écart maximal."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est cet écart en An 4, en euros ?",
+          "reponse": 144,
+          "unite": "€",
+          "aide": "Soustrais la valeur fondamentale au prix de marché de l’An 4.",
+          "explication": "250 − 106 = **144 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien, en %, le prix de marché a-t-il augmenté entre An 1 et An 4 ?",
+          "reponse": 150,
+          "unite": "%",
+          "aide": "Taux de variation = (250 − 100) ÷ 100 × 100.",
+          "explication": "(250 − 100) ÷ 100 = 1,5, soit **+150 %**, alors que la valeur fondamentale n’a presque pas bougé."
+        }
+      ]
+    },
+    {
+      "chapitre": "8b4cfd1b-56bd-5e38-a6cb-3fe90c53c59f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le concours de beauté de Zephyr",
+      "competence": "analyser-document",
+      "situation": "Emma veut acheter des actions Zephyr, une entreprise imaginaire. Elle ne sait pas ce qu’elle fait, mais Tom lui pose quelques questions. Keynes comparait ce comportement à un concours de beauté.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Emma",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Tom",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Emma",
+              "texte": "Zephyr a plus que doublé en un mois !"
+            },
+            {
+              "qui": "Tom",
+              "texte": "Tu sais ce que vend l’entreprise ?"
+            },
+            {
+              "qui": "Emma",
+              "texte": "Non, mais les [[aut|autres]] en achètent, donc le prix va monter. Je revendrai plus cher."
+            },
+            {
+              "qui": "Tom",
+              "texte": "Et si tout le monde pense comme toi ?"
+            },
+            {
+              "qui": "Emma",
+              "texte": "Alors le prix monte encore… jusqu’au jour où plus personne n’achète."
+            }
+          ]
+        },
+        {
+          "id": "cours",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Action Zephyr",
+          "sousTitre": "Cours imaginés pour l’exercice",
+          "emoji": "📈",
+          "lignes": [
+            {
+              "texte": "Prix il y a un mois",
+              "valeur": "25 €"
+            },
+            {
+              "texte": "Prix aujourd’hui",
+              "valeur": "60 €"
+            },
+            {
+              "texte": "Dividende annuel par action",
+              "valeur": "1 €"
+            }
+          ],
+          "pied": "Chiffres imaginés",
+          "teinte": "bleu"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot qui montre qu’Emma se règle sur ce que font les autres, et non sur l’entreprise.",
+          "reponse": [
+            "aut"
+          ],
+          "aide": "Cherche le mot qui désigne les acheteurs dont Emma s’inspire.",
+          "explication": "Emma se règle sur les **autres** : elle anticipe l’opinion moyenne, pas les fondamentaux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien, en %, le prix de Zephyr a-t-il augmenté en un mois ?",
+          "reponse": 140,
+          "unite": "%",
+          "aide": "Taux de variation = (60 − 25) ÷ 25 × 100.",
+          "explication": "(60 − 25) ÷ 25 = 1,4, soit **+140 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le rendement du dividende aujourd’hui, en % du prix ? Arrondis au dixième.",
+          "reponse": 1.7,
+          "unite": "%",
+          "tolerance": 0.05,
+          "aide": "Rendement = dividende ÷ prix × 100 : 1 ÷ 60.",
+          "explication": "1 ÷ 60 ≈ 0,017, soit environ **1,7 %** : c’est très faible face à la hausse du prix."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Emma achète-t-elle malgré ce faible rendement ?",
+          "options": [
+            "Elle pense que le prix va monter parce que tout le monde achète : prophétie auto-réalisatrice",
+            "Elle vise le dividende de 1 € par action, qui lui garantit un rendement élevé",
+            "Elle connaît bien les produits de Zephyr et juge que ses bénéfices vont fortement croître",
+            "Elle veut soutenir l’entreprise Zephyr, par attachement à ses produits et à ses salariés"
+          ],
+          "reponse": 0,
+          "aide": "Emma attend de revendre plus cher, pas de toucher un revenu.",
+          "explication": "Emma parie sur la **hausse du prix** : si tous croient que le prix va monter, tous achètent et le prix monte. C’est une **prophétie auto-réalisatrice**."
+        }
+      ]
+    },
+    {
+      "chapitre": "8b4cfd1b-56bd-5e38-a6cb-3fe90c53c59f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Levier et retrait de panique",
+      "competence": "modeliser",
+      "situation": "Deux mécanismes fragilisent le système financier : l’effet de levier des investisseurs et le retrait de panique dans une banque. Deux tableaux imaginaires permettent de les chiffrer.",
+      "documents": [
+        {
+          "id": "levier",
+          "type": "tableau",
+          "titre": "Deux investisseurs achètent le même actif",
+          "source": "Situations imaginées pour l’exercice.",
+          "colonnes": [
+            "Investisseur",
+            "Apport (€)",
+            "Emprunt (€)",
+            "Actif acheté (€)"
+          ],
+          "lignes": [
+            [
+              "A",
+              100,
+              0,
+              100
+            ],
+            [
+              "B",
+              10,
+              90,
+              100
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "bilan",
+          "type": "tableau",
+          "titre": "Bilan d’une banque (en millions d’euros)",
+          "source": "Banque imaginée pour l’exercice.",
+          "colonnes": [
+            "Actif",
+            "Montant",
+            "Passif",
+            "Montant"
+          ],
+          "lignes": [
+            [
+              "Crédits à 20 ans",
+              90,
+              "Dépôts à vue",
+              100
+            ],
+            [
+              "Liquidités en caisse",
+              10,
+              "—",
+              "—"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le prix de l’actif baisse de 10 %. Quelle perte l’investisseur A subit-il, en % de son apport ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "L’actif vaut 90 au lieu de 100 : il perd 10 sur un apport de 100.",
+          "explication": "A perd 10 sur un apport de 100 : **10 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Même baisse de 10 %. Quelle perte l’investisseur B subit-il, en % de son apport ?",
+          "reponse": 100,
+          "unite": "%",
+          "aide": "L’actif vaut 90 : il doit encore rembourser 90. Que lui reste-t-il sur son apport de 10 ?",
+          "explication": "L’actif vaut 90, l’emprunt est de 90 : B perd ses 10 d’apport, soit **100 %**."
+        },
+        {
+          "type": "zone",
+          "document": "levier",
+          "enonce": "Touche l’investisseur que cette baisse ruine.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Cherche celui qui a emprunté presque tout.",
+          "explication": "**B** est ruiné : avec 90 d’emprunt pour 10 d’apport, une baisse de 10 % efface tout son apport."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des dépôts, en %, la banque peut-elle rembourser avec ses seules liquidités ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Liquidités ÷ dépôts.",
+          "explication": "10 ÷ 100 = **10 %** : au-delà, elle devrait vendre ses crédits à long terme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si 30 % des déposants retirent leur argent en même temps, que se passe-t-il ?",
+          "options": [
+            "La banque peut être solvable à long terme mais se retrouver illiquide à court terme",
+            "La banque est forcément en faillite définitive, car ses actifs ne valent plus rien",
+            "Les déposants perdent tous leurs droits sur l’argent qu’ils ont placé à la banque",
+            "La banque gagne de l’argent, car elle n’a plus à verser d’intérêts aux déposants"
+          ],
+          "reponse": 0,
+          "aide": "Compare les 30 % de retraits aux 10 % de liquidités.",
+          "explication": "La banque a transformé des dépôts courts en crédits longs : elle est **solvable mais illiquide**. C’est le mécanisme du **retrait de panique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b61bd151-8888-5d9c-bd23-8a7f1a52ecfe",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quand la banque centrale baisse ses taux",
+      "competence": "observer-schema",
+      "situation": "Deux banques centrales n’ont pas la même mission. Et quand l’une baisse ses taux directeurs, l’effet se transmet jusqu’au crédit d’un particulier.",
+      "documents": [
+        {
+          "id": "mandats",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Deux banques centrales",
+          "sousTitre": "Fiche de cours",
+          "emoji": "🏦",
+          "lignes": [
+            {
+              "texte": "BCE",
+              "valeur": "Stabilité des prix (2 % à moyen terme)",
+              "id": "bce"
+            },
+            {
+              "texte": "Réserve fédérale",
+              "valeur": "Prix stables et plein emploi",
+              "id": "fed"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice",
+          "teinte": "violet"
+        },
+        {
+          "id": "credit",
+          "type": "tableau",
+          "titre": "Un crédit sur un an",
+          "source": "Situation imaginée pour l’exercice.",
+          "colonnes": [
+            "",
+            "Taux du crédit",
+            "Somme empruntée"
+          ],
+          "lignes": [
+            [
+              "Avant la baisse",
+              "5 %",
+              "10 000 €"
+            ],
+            [
+              "Après la baisse",
+              "3 %",
+              "10 000 €"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mandats",
+          "enonce": "Touche la banque centrale qui a un double mandat.",
+          "reponse": [
+            "fed"
+          ],
+          "aide": "Cherche celle qui doit s’occuper des prix et de l’emploi.",
+          "explication": "La **Réserve fédérale** a un **double mandat** : stabilité des prix et plein emploi."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre la transmission d’une baisse des taux directeurs.",
+          "items": [
+            "La banque centrale baisse ses taux directeurs",
+            "Le crédit devient moins cher pour les banques puis pour les clients",
+            "Entreprises et ménages empruntent et dépensent davantage",
+            "La demande et l’inflation remontent"
+          ],
+          "aide": "La banque centrale agit d’abord sur les banques.",
+          "explication": "La baisse des taux rend le **crédit moins cher**, stimule la **dépense**, puis la **demande** et l’**inflation**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur une année, de combien d’euros les intérêts de l’emprunt diminuent-ils après la baisse ?",
+          "reponse": 200,
+          "unite": "€",
+          "aide": "Calcule les intérêts avant (5 % de 10 000) puis après (3 % de 10 000).",
+          "explication": "Avant : 500 €. Après : 300 €. L’économie est de **200 €** par an."
+        }
+      ]
+    },
+    {
+      "chapitre": "b61bd151-8888-5d9c-bd23-8a7f1a52ecfe",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand les taux atteignent zéro",
+      "competence": "raisonner",
+      "situation": "Après une crise, une banque centrale baisse ses taux directeurs jusqu’à zéro. Elle doit alors inventer d’autres instruments. Un graphique et une fiche imaginaires montrent l’évolution.",
+      "documents": [
+        {
+          "id": "taux",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Taux directeur d’une banque centrale imaginaire",
+          "source": "Données imaginées pour l’exercice.",
+          "categories": [
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011"
+          ],
+          "series": [
+            {
+              "nom": "Taux directeur",
+              "valeurs": [
+                4,
+                3,
+                1,
+                0,
+                0
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Taux directeur",
+            "unite": "en %",
+            "min": 0,
+            "max": 5,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Année"
+          }
+        },
+        {
+          "id": "achats",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Programme d’achats de titres",
+          "sousTitre": "Banque centrale imaginaire",
+          "emoji": "🏦",
+          "lignes": [
+            {
+              "texte": "Achats par mois",
+              "valeur": "60 milliards €"
+            },
+            {
+              "texte": "Durée du programme",
+              "valeur": "18 mois"
+            }
+          ],
+          "pied": "Programme imaginé pour l’exercice",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de points le taux directeur a-t-il baissé entre 2007 et 2010 ?",
+          "reponse": 4,
+          "unite": "points",
+          "aide": "Soustrais le taux de 2010 à celui de 2007.",
+          "explication": "4 − 0 = **4 points de pourcentage**."
+        },
+        {
+          "type": "zone",
+          "document": "taux",
+          "enonce": "Touche la première année où la marge de baisse des taux a disparu.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la première année où le taux vaut zéro.",
+          "explication": "Dès **2010**, le taux est à zéro : la banque centrale ne peut plus le baisser."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien la banque centrale aura-t-elle acheté de titres au total à la fin du programme, en milliards d’euros ?",
+          "reponse": 1080,
+          "unite": "milliards €",
+          "aide": "Multiplie le montant mensuel par le nombre de mois.",
+          "explication": "60 × 18 = **1 080 milliards d’euros**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque instrument non conventionnel à son effet.",
+          "paires": [
+            [
+              "Assouplissement quantitatif",
+              "Achat massif de titres pour faire baisser les taux longs"
+            ],
+            [
+              "Forward guidance",
+              "Annonce de la trajectoire des taux pour ancrer les anticipations"
+            ],
+            [
+              "Prêts de long terme aux banques",
+              "Taux très bas, à condition de prêter à l’économie"
+            ]
+          ],
+          "aide": "Chaque instrument agit par un canal différent.",
+          "explication": "L’**assouplissement quantitatif** fait baisser les taux longs, la **forward guidance** ancre les anticipations, les **prêts de long terme** encouragent le crédit."
+        }
+      ]
+    },
+    {
+      "chapitre": "b61bd151-8888-5d9c-bd23-8a7f1a52ecfe",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Supervision et prêteur en dernier ressort",
+      "competence": "modeliser",
+      "situation": "Une banque imaginée doit respecter une règle prudentielle, puis connaît une journée de panique. Deux outils interviennent : le ratio de fonds propres et le prêteur en dernier ressort.",
+      "documents": [
+        {
+          "id": "ratio",
+          "type": "tableau",
+          "titre": "La banque Belmont",
+          "source": "Banque et règle imaginées pour l’exercice.",
+          "colonnes": [
+            "Indicateur",
+            "Montant"
+          ],
+          "lignes": [
+            [
+              "Fonds propres (M€)",
+              6
+            ],
+            [
+              "Actifs pondérés par le risque (M€)",
+              100
+            ],
+            [
+              "Exigence minimale (% des actifs pondérés)",
+              8
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "panique",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Banque Belmont : lundi",
+          "sousTitre": "Journée de panique",
+          "emoji": "🏦",
+          "lignes": [
+            {
+              "texte": "Dépôts totaux",
+              "valeur": "100 M€"
+            },
+            {
+              "texte": "Retraits demandés dans la journée",
+              "valeur": "12 M€"
+            },
+            {
+              "texte": "Liquidités en caisse",
+              "valeur": "8 M€"
+            }
+          ],
+          "pied": "Chiffres imaginés",
+          "teinte": "corail"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le ratio de fonds propres de Belmont, en % des actifs pondérés ?",
+          "reponse": 6,
+          "unite": "%",
+          "aide": "Ratio = fonds propres ÷ actifs pondérés × 100.",
+          "explication": "6 ÷ 100 = **6 %**, inférieur à l’exigence de 8 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millions d’euros de fonds propres Belmont manque-t-elle pour atteindre 8 % ?",
+          "reponse": 2,
+          "unite": "M€",
+          "aide": "8 % de 100 M€, moins 6 M€.",
+          "explication": "8 % de 100 = 8 M€ ; 8 − 6 = **2 M€** à lever."
+        },
+        {
+          "type": "zone",
+          "document": "ratio",
+          "enonce": "Touche la ligne du montant par lequel on divise les fonds propres pour calculer le ratio.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Les fonds propres sont rapportés à des actifs pondérés par le risque.",
+          "explication": "On divise les fonds propres par les **actifs pondérés par le risque**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de millions d’euros manque-t-il à Belmont lundi pour honorer les retraits ?",
+          "reponse": 4,
+          "unite": "M€",
+          "aide": "Retraits demandés moins liquidités en caisse.",
+          "explication": "12 − 8 = **4 M€** : c’est là que la banque centrale peut prêter en dernier ressort."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces actions selon qu’elles respectent ou non la règle de Bagehot.",
+          "categories": [
+            "Conforme à Bagehot",
+            "Contraire à Bagehot"
+          ],
+          "items": [
+            [
+              "Prêter largement à la banque en difficulté",
+              0
+            ],
+            [
+              "Prêter à un taux de pénalité",
+              0
+            ],
+            [
+              "Prêter contre de bonnes garanties",
+              0
+            ],
+            [
+              "Prêter sans garantie, à taux zéro",
+              1
+            ],
+            [
+              "Refuser de prêter à une banque solvable mais illiquide",
+              1
+            ],
+            [
+              "Prêter très peu, pour punir les banques",
+              1
+            ]
+          ],
+          "aide": "Bagehot demande trois conditions : largement, taux de pénalité, bonnes garanties.",
+          "explication": "Bagehot : prêter **largement**, à un **taux de pénalité**, contre de **bonnes garanties**. Sans garanties et à taux zéro, le sauvetage devient une prime à l’imprudence."
+        }
+      ]
+    },
+    {
+      "chapitre": "be56bb0c-52c5-56b2-80d0-f7d19153f929",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Chômeur ou pas chômeur ?",
+      "competence": "analyser-document",
+      "situation": "L’INSEE applique la définition du BIT : pour être chômeur, il faut remplir trois conditions à la fois. Cinq personnes imaginaires sont passées au crible, puis on calcule un taux dans une commune fictive.",
+      "documents": [
+        {
+          "id": "pers",
+          "type": "tableau",
+          "titre": "Cinq situations",
+          "source": "Situations imaginées pour l’exercice.",
+          "colonnes": [
+            "Personne",
+            "Semaine de référence",
+            "Disponible sous 2 semaines ?",
+            "Recherche active ce mois-ci ?"
+          ],
+          "lignes": [
+            [
+              "Ana",
+              "A travaillé 2 heures",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Bilal",
+              "Aucune heure travaillée",
+              "Oui",
+              "Oui"
+            ],
+            [
+              "Chloé",
+              "Aucune heure travaillée",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Dylan",
+              "Aucune heure travaillée",
+              "Non (part à l’étranger)",
+              "Oui"
+            ],
+            [
+              "Élise",
+              "Aucune heure travaillée",
+              "Oui",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "commune",
+          "type": "tableau",
+          "titre": "Une commune imaginaire (15 ans ou plus)",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Catégorie",
+            "Personnes"
+          ],
+          "lignes": [
+            [
+              "Actifs occupés",
+              "4 500"
+            ],
+            [
+              "Chômeurs au sens du BIT",
+              "500"
+            ],
+            [
+              "Inactifs",
+              "5 000"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pers",
+          "enonce": "Touche les deux personnes qui sont chômeuses au sens du BIT.",
+          "reponse": [
+            "r1c0",
+            "r4c0"
+          ],
+          "multiple": true,
+          "aide": "Il faut les trois conditions : sans emploi, disponible, recherche active.",
+          "explication": "**Bilal** et **Élise** remplissent les trois conditions. Ana a travaillé, Chloé ne cherche pas, Dylan n’est pas disponible."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Ana n’est-elle pas chômeuse, alors qu’elle cherche un emploi ?",
+          "options": [
+            "Elle a travaillé au moins une heure durant la semaine de référence : elle est donc occupée",
+            "Elle suit une formation, et toute personne en formation est exclue des chômeurs",
+            "Elle n’est pas disponible pour travailler dans les deux semaines qui suivent",
+            "Elle n’est pas inscrite à France Travail, et le BIT exige cette inscription pour compter"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la condition « sans emploi ».",
+          "explication": "Pour le BIT, **une seule heure** travaillée pendant la semaine de référence suffit pour être compté comme occupé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux de chômage de cette commune, en % ? Attention : il se rapporte à la population active.",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Population active = actifs occupés + chômeurs.",
+          "explication": "Population active = 4 500 + 500 = 5 000. Taux = 500 ÷ 5 000 = **10 %**. (Rapporté à la population totale, on aurait trouvé 5 %, ce qui est faux.)"
+        }
+      ]
+    },
+    {
+      "chapitre": "be56bb0c-52c5-56b2-80d0-f7d19153f929",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux pays, même taux de chômage",
+      "competence": "lire-tableau",
+      "situation": "Deux pays imaginaires affichent le même taux de chômage. Leur situation est-elle pour autant identique ? Le tableau permet d’en juger.",
+      "documents": [
+        {
+          "id": "pays",
+          "type": "tableau",
+          "titre": "Deux pays imaginaires",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "",
+            "Pays A",
+            "Pays B"
+          ],
+          "lignes": [
+            [
+              "Population en âge de travailler",
+              "10 000",
+              "10 000"
+            ],
+            [
+              "Actifs occupés",
+              "6 650",
+              "4 750"
+            ],
+            [
+              "Chômeurs",
+              "350",
+              "250"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux de chômage du pays A, en % ?",
+          "reponse": 5,
+          "unite": "%",
+          "aide": "Taux de chômage = chômeurs ÷ population active. La population active est la somme des actifs occupés et des chômeurs.",
+          "explication": "Population active = 6 650 + 350 = 7 000. Taux = 350 ÷ 7 000 = **5 %**. Celui du pays B vaut aussi 5 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux d’emploi du pays B, en % ?",
+          "reponse": 47.5,
+          "unite": "%",
+          "aide": "Taux d’emploi = actifs occupés ÷ population en âge de travailler.",
+          "explication": "4 750 ÷ 10 000 = **47,5 %**. Dans le pays A, il vaut 66,5 %."
+        },
+        {
+          "type": "texte",
+          "enonce": "Le taux de chômage se rapporte à la population ___ (un mot).",
+          "reponse": [
+            "active",
+            "la population active"
+          ],
+          "aide": "Elle comprend les actifs occupés et les chômeurs.",
+          "explication": "Le taux de chômage se rapporte à la **population active**, jamais à la population totale."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclure de la comparaison des deux pays ?",
+          "options": [
+            "Même taux de chômage, mais taux d’emploi très différents : il faut lire les deux indicateurs",
+            "Les deux pays ont exactement la même situation, puisque leur taux de chômage est identique",
+            "Le pays B a proportionnellement moins de chômeurs que le pays A parmi ses actifs, donc il va mieux",
+            "Le taux d’emploi ne dit rien de plus que le taux de chômage, il le répète seulement"
+          ],
+          "reponse": 0,
+          "aide": "Compare les taux d’emploi des deux pays.",
+          "explication": "Les deux pays ont 5 % de chômage, mais **66,5 %** et **47,5 %** de taux d’emploi : ne regarder que le premier taux fait manquer la moitié de l’information."
+        }
+      ]
+    },
+    {
+      "chapitre": "be56bb0c-52c5-56b2-80d0-f7d19153f929",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le taux baisse : bonne nouvelle ?",
+      "competence": "analyser-document",
+      "situation": "Un gouvernement imaginaire se réjouit de la baisse du taux de chômage. Deux documents permettent de vérifier si ce recul vient de créations d’emplois ou d’autre chose.",
+      "documents": [
+        {
+          "id": "trim",
+          "type": "tableau",
+          "titre": "Deux trimestres consécutifs",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "",
+            "Trimestre 1",
+            "Trimestre 2"
+          ],
+          "lignes": [
+            [
+              "Actifs occupés",
+              "27 000",
+              "27 000"
+            ],
+            [
+              "Chômeurs",
+              "3 000",
+              "2 250"
+            ],
+            [
+              "Population en âge de travailler",
+              "45 000",
+              "45 000"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "halo",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Chômeurs et halo autour du chômage",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "Trimestre 1",
+            "Trimestre 2"
+          ],
+          "series": [
+            {
+              "nom": "Chômeurs",
+              "valeurs": [
+                3000,
+                2250
+              ],
+              "teinte": "gris"
+            },
+            {
+              "nom": "Halo autour du chômage",
+              "valeurs": [
+                1000,
+                1750
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Personnes",
+            "min": 0,
+            "max": 3500,
+            "pas": 500
+          },
+          "axeX": {
+            "titre": "Trimestre"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux de chômage au trimestre 1, en % ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Taux = chômeurs ÷ (actifs occupés + chômeurs).",
+          "explication": "3 000 ÷ (27 000 + 3 000) = **10 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux de chômage au trimestre 2, en % ? Arrondis au dixième.",
+          "reponse": 7.7,
+          "unite": "%",
+          "tolerance": 0.05,
+          "aide": "Population active du trimestre 2 : 27 000 + 2 250.",
+          "explication": "2 250 ÷ 29 250 ≈ **7,7 %**."
+        },
+        {
+          "type": "zone",
+          "document": "trim",
+          "enonce": "Touche la ligne qui montre qu’aucun emploi n’a été créé entre les deux trimestres.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Cherche la ligne qui est restée identique.",
+          "explication": "Le nombre d’**actifs occupés** est resté à 27 000 : aucun emploi net n’a été créé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de personnes le halo autour du chômage a-t-il augmenté entre les deux trimestres ?",
+          "reponse": 750,
+          "unite": "personnes",
+          "aide": "Soustrais la barre violette du trimestre 1 à celle du trimestre 2.",
+          "explication": "1 750 − 1 000 = **750 personnes**, autant que la baisse du nombre de chômeurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure de ces deux documents ?",
+          "options": [
+            "Le taux de chômage baisse parce que des chômeurs ont cessé de chercher, non parce que l’emploi progresse",
+            "Le chômage a baissé grâce à 750 créations d’emplois, qui ont absorbé une partie des chômeurs",
+            "Le taux d’emploi a progressé fortement, ce qui montre une reprise solide de l’activité",
+            "Le halo autour du chômage est sans rapport avec la baisse du taux, qu’il n’explique pas"
+          ],
+          "reponse": 0,
+          "aide": "Les actifs occupés n’ont pas changé. Où sont passés les chômeurs en moins ?",
+          "explication": "Les **750 chômeurs en moins** sont passés dans le **halo** : ils ont cessé de chercher. Le taux d’emploi reste à 27 000 ÷ 45 000 = 60 % : regarder le taux d’emploi permet de trancher."
+        }
+      ]
+    },
+    {
+      "chapitre": "97f464e5-d7e5-5ccc-b22c-822050cd6699",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Deux diagnostics sur le chômage",
+      "competence": "analyser-document",
+      "situation": "Inès et Marc discutent des causes du chômage. Leurs avis reflètent les deux grandes familles d’explication du programme.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👩",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Marc",
+              "emoji": "🧑",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "Les entreprises n’embauchent pas parce qu’elles ne vendent pas assez. Les chômeurs accepteraient le salaire actuel, mais aucun poste n’est ouvert."
+            },
+            {
+              "qui": "Marc",
+              "texte": "Moi, je pense que le salaire minimum est trop haut : certains postes ne sont plus rentables, donc ils ne sont pas créés."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque personne à l’explication qu’elle donne.",
+          "paires": [
+            [
+              "Inès",
+              "Insuffisance de la demande"
+            ],
+            [
+              "Marc",
+              "Salaire réel au-dessus du niveau d’équilibre"
+            ]
+          ],
+          "aide": "Inès parle des ventes, Marc du coût du travail.",
+          "explication": "Inès adopte une lecture **keynésienne** (manque de demande), Marc une lecture **néoclassique** (salaire trop élevé)."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque mesure selon la famille d’explication dont elle découle.",
+          "categories": [
+            "Soutenir la demande",
+            "Assouplir le marché du travail"
+          ],
+          "items": [
+            [
+              "Relance par la dépense publique",
+              0
+            ],
+            [
+              "Baisse des taux directeurs",
+              0
+            ],
+            [
+              "Baisse d’impôts pour les ménages",
+              0
+            ],
+            [
+              "Baisse des cotisations sociales",
+              1
+            ],
+            [
+              "Assouplissement de la protection de l’emploi",
+              1
+            ],
+            [
+              "Réforme de l’indemnisation du chômage",
+              1
+            ]
+          ],
+          "aide": "Soutenir la demande, c’est faire dépenser ; assouplir, c’est réduire le coût ou les règles.",
+          "explication": "Les mesures de **demande** font dépenser (dépense publique, taux, impôts). Les mesures d’**offre** réduisent le coût ou les règles du marché du travail."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Inès décrit un cercle vicieux. Remets ses maillons dans l’ordre.",
+          "items": [
+            "Les entreprises vendent moins et embauchent moins",
+            "Moins de salariés, donc moins de revenus",
+            "Moins de revenus, donc moins de consommation",
+            "Moins de consommation, donc moins de demande adressée aux entreprises"
+          ],
+          "aide": "La boucle repart de la demande qui manque aux entreprises.",
+          "explication": "Le mécanisme **s’auto-entretient** : moins d’emploi, moins de revenu, moins de consommation, moins de demande, donc moins d’emploi."
+        }
+      ]
+    },
+    {
+      "chapitre": "97f464e5-d7e5-5ccc-b22c-822050cd6699",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Payer plus que le marché, par choix",
+      "competence": "modeliser",
+      "situation": "Une entreprise imaginaire de 100 salariés hésite à verser un salaire plus élevé que celui du marché. Elle veut réduire les départs, qui lui coûtent cher en recrutement et en formation.",
+      "documents": [
+        {
+          "id": "salaire",
+          "type": "tableau",
+          "titre": "Deux politiques salariales",
+          "source": "Entreprise et chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "",
+            "Salaire du marché",
+            "Salaire supérieur"
+          ],
+          "lignes": [
+            [
+              "Salaire mensuel (€)",
+              "1 600",
+              "1 700"
+            ],
+            [
+              "Départs par an (pour 100 salariés)",
+              40,
+              10
+            ],
+            [
+              "Coût d’un départ (€)",
+              "6 000",
+              "6 000"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "salaire",
+          "enonce": "Touche la case qui donne le nombre de départs avec le salaire supérieur.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Cherche la ligne des départs, colonne du salaire supérieur.",
+          "explication": "Avec le salaire supérieur, il y a **10 départs** par an."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien l’entreprise économise-t-elle par an sur les coûts de départ avec le salaire supérieur, en euros ?",
+          "reponse": 180000,
+          "unite": "€",
+          "aide": "Coût des départs au salaire du marché : 40 × 6 000. Au salaire supérieur : 10 × 6 000.",
+          "explication": "240 000 − 60 000 = **180 000 €** d’économie par an."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien lui coûte, par an, la hausse de 100 € par mois pour ses 100 salariés, en euros ?",
+          "reponse": 120000,
+          "unite": "€",
+          "aide": "100 € × 12 mois × 100 salariés.",
+          "explication": "100 × 12 × 100 = **120 000 €** par an."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le gain net annuel de l’entreprise, en euros ?",
+          "reponse": 60000,
+          "unite": "€",
+          "aide": "Gain net = économie sur les départs − surcoût des salaires.",
+          "explication": "180 000 − 120 000 = **60 000 €** par an."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre cet exemple pour le débat sur le chômage ?",
+          "options": [
+            "Une entreprise peut payer au-dessus du marché par choix : c’est le salaire d’efficience",
+            "Le chômage vient toujours du salaire minimum, qui empêche les salaires de baisser",
+            "Les entreprises ne paient jamais plus que le marché, car cela réduirait leurs profits",
+            "Les départs n’ont aucun coût pour l’entreprise, qui remplace facilement ses salariés"
+          ],
+          "reponse": 0,
+          "aide": "Personne n’oblige l’entreprise à payer 1 700 €.",
+          "explication": "Le **salaire d’efficience** est choisi volontairement par l’entreprise : il maintient des salaires au-dessus de l’équilibre et un chômage durable **sans rigidité imposée**."
+        }
+      ]
+    },
+    {
+      "chapitre": "97f464e5-d7e5-5ccc-b22c-822050cd6699",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le chômage qui s’installe",
+      "competence": "raisonner",
+      "situation": "Dans un pays imaginaire, le taux de chômage monte pendant une récession, puis ne retrouve pas son niveau d’avant. Un graphique et un témoignage aident à comprendre pourquoi.",
+      "documents": [
+        {
+          "id": "chom",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Taux de chômage d’un pays imaginaire",
+          "source": "Données imaginées pour l’exercice.",
+          "categories": [
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014"
+          ],
+          "series": [
+            {
+              "nom": "Taux de chômage",
+              "valeurs": [
+                6,
+                6,
+                9,
+                10,
+                9.5,
+                9,
+                9,
+                9
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Taux de chômage",
+            "unite": "en %",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Année"
+          }
+        },
+        {
+          "id": "temoin",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le témoignage de Théo",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Théo, 45 ans, a perdu son emploi d’opérateur en 2009. En 2012, il n’a toujours pas retrouvé de poste.",
+            "« Je ne connais plus les nouvelles [[mach|machines]], dit-il. Et aux entretiens, on me demande ce que j’ai fait pendant trois ans. »"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chom",
+          "enonce": "Touche l’année où le chômage atteint son point le plus haut.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le sommet de la courbe.",
+          "explication": "Le chômage culmine en **2010**, à 10 %."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points le taux de chômage de 2014 dépasse-t-il celui de 2007 ?",
+          "reponse": 3,
+          "unite": "points",
+          "aide": "Soustrais le taux de 2007 à celui de 2014.",
+          "explication": "9 − 6 = **3 points de pourcentage** : le chômage n’est pas redescendu à son niveau d’avant la récession."
+        },
+        {
+          "type": "zone",
+          "document": "temoin",
+          "enonce": "Touche le mot qui illustre la dégradation des compétences de Théo.",
+          "reponse": [
+            "mach"
+          ],
+          "aide": "Cherche ce que Théo dit ne plus connaître.",
+          "explication": "Théo ne connaît plus les nouvelles **machines** : ses compétences se sont dégradées pendant l’inactivité."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase qui définit l’hystérésis.",
+          "texte": "Un chômage ___ long finit par devenir ___.",
+          "reponses": [
+            [
+              "conjoncturel"
+            ],
+            [
+              "structurel"
+            ]
+          ],
+          "banque": [
+            "conjoncturel",
+            "structurel",
+            "frictionnel",
+            "volontaire"
+          ],
+          "aide": "L’hystérésis transforme un chômage lié à la récession en chômage durable.",
+          "explication": "Un chômage **conjoncturel** long finit par devenir **structurel** : compétences dégradées, réseau distendu, signal négatif envoyé aux employeurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conséquence de politique économique en tire-t-on ?",
+          "options": [
+            "Réagir vite aux récessions, car attendre a un coût qui devient permanent pour l’économie",
+            "Attendre que le chômage baisse tout seul, car il finit toujours par se résorber",
+            "Ne rien faire en récession, car toute intervention de l’État aggrave la crise",
+            "Supprimer tout soutien aux chômeurs, afin de les inciter à reprendre un emploi"
+          ],
+          "reponse": 0,
+          "aide": "Que se passe-t-il si l’on attend trop longtemps ?",
+          "explication": "L’hystérésis plaide pour une **réaction rapide** aux récessions : le coût d’attendre n’est pas seulement présent, il est **permanent**."
+        }
+      ]
+    },
+    {
+      "chapitre": "fea077b4-aa3f-55b6-911e-d14ac4a2fccd",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "À chaque ville son remède",
+      "competence": "analyser-document",
+      "situation": "Trois villes imaginaires connaissent du chômage, mais pas pour les mêmes raisons. Une politique n’est efficace que si elle vise le bon chômage.",
+      "documents": [
+        {
+          "id": "villes",
+          "type": "tableau",
+          "titre": "Trois villes imaginaires",
+          "source": "Chiffres et situations imaginés pour l’exercice.",
+          "colonnes": [
+            "Ville",
+            "Chômeurs",
+            "Offres d’emploi",
+            "Situation"
+          ],
+          "lignes": [
+            [
+              "A",
+              "6 000",
+              "300",
+              "Récession : les commandes s’effondrent"
+            ],
+            [
+              "B",
+              "2 000",
+              "1 800",
+              "Les entreprises ne trouvent pas les compétences recherchées"
+            ],
+            [
+              "C",
+              "1 500",
+              "250",
+              "Les emplois peu qualifiés coûtent plus cher qu’ils ne rapportent"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Dans la ville A, combien de chômeurs y a-t-il pour une offre d’emploi ?",
+          "reponse": 20,
+          "unite": "chômeurs",
+          "aide": "Divise le nombre de chômeurs par le nombre d’offres.",
+          "explication": "6 000 ÷ 300 = **20 chômeurs par offre** : il manque des postes, pas des compétences."
+        },
+        {
+          "type": "zone",
+          "document": "villes",
+          "enonce": "Touche la ville où il y a presque autant d’offres d’emploi que de chômeurs.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Compare les deux colonnes de nombres pour chaque ville.",
+          "explication": "La ville **B** compte 2 000 chômeurs pour 1 800 offres : le problème est l’**inadéquation** des compétences."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque ville à la politique la plus adaptée.",
+          "paires": [
+            [
+              "Ville A",
+              "Relance de la demande"
+            ],
+            [
+              "Ville B",
+              "Formation"
+            ],
+            [
+              "Ville C",
+              "Allègement de cotisations sur les bas salaires"
+            ]
+          ],
+          "aide": "Identifie d’abord le type de chômage de chaque ville.",
+          "explication": "**A** : chômage conjoncturel, donc relance de la demande. **B** : inadéquation des qualifications, donc formation. **C** : emplois peu qualifiés trop coûteux, donc baisse du coût du travail ciblée."
+        }
+      ]
+    },
+    {
+      "chapitre": "fea077b4-aa3f-55b6-911e-d14ac4a2fccd",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’aide à l’embauche : pour qui ?",
+      "competence": "modeliser",
+      "situation": "L’État imaginaire verse une aide aux entreprises qui embauchent en CDI. Le ministre veut savoir combien elle coûte pour chaque emploi réellement créé.",
+      "documents": [
+        {
+          "id": "aide",
+          "type": "tableau",
+          "titre": "Bilan du dispositif imaginaire",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Indicateur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Aide par embauche en CDI (€)",
+              "4 000"
+            ],
+            [
+              "Embauches aidées",
+              50
+            ],
+            [
+              "Dont embauches qui auraient eu lieu sans l’aide",
+              30
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "aide",
+          "enonce": "Touche la ligne qui donne le nombre d’embauches qui auraient eu lieu sans l’aide.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Cherche la ligne qui parle d’embauches qui auraient eu lieu de toute façon.",
+          "explication": "Sur 50 embauches aidées, **30** auraient eu lieu sans l’aide."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’emplois l’aide a-t-elle réellement créés ?",
+          "reponse": 20,
+          "aide": "Soustrais les embauches qui auraient eu lieu de toute façon.",
+          "explication": "50 − 30 = **20 emplois** réellement créés."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment s’appelle le fait que 30 embauches auraient eu lieu même sans l’aide ?",
+          "options": [
+            "Un effet d’aubaine",
+            "Un effet de levier",
+            "Une trappe à bas salaires",
+            "Une hystérésis"
+          ],
+          "reponse": 0,
+          "aide": "L’entreprise touche l’aide alors qu’elle aurait embauché de toute façon.",
+          "explication": "C’est un **effet d’aubaine** : l’entreprise bénéficie d’une aide pour une embauche qu’elle aurait faite de toute façon."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien l’État a-t-il versé au total, en euros ?",
+          "reponse": 200000,
+          "unite": "€",
+          "aide": "Aide par embauche × nombre d’embauches aidées.",
+          "explication": "50 × 4 000 = **200 000 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien lui coûte chaque emploi réellement créé, en euros ?",
+          "reponse": 10000,
+          "unite": "€",
+          "aide": "Divise le coût total par le nombre d’emplois réellement créés.",
+          "explication": "200 000 ÷ 20 = **10 000 €** par emploi créé, plus du double de l’aide de 4 000 €."
+        }
+      ]
+    },
+    {
+      "chapitre": "fea077b4-aa3f-55b6-911e-d14ac4a2fccd",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Indemniser ou accompagner ?",
+      "competence": "argumenter",
+      "situation": "Deux pays imaginaires ne dépensent pas de la même façon pour leurs chômeurs. Un essai imaginaire compare deux modes de suivi. Que retiennent les évaluations ?",
+      "documents": [
+        {
+          "id": "depenses",
+          "type": "tableau",
+          "titre": "Dépenses pour l’emploi (en % du PIB)",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "",
+            "Pays A",
+            "Pays B"
+          ],
+          "lignes": [
+            [
+              "Dépenses passives (indemnisation)",
+              "1,5",
+              "1,2"
+            ],
+            [
+              "Dépenses actives (formation, accompagnement)",
+              "0,5",
+              "1,6"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "essai",
+          "type": "tableau",
+          "titre": "Un essai sur 1 000 chômeurs",
+          "source": "Essai imaginé pour l’exercice.",
+          "colonnes": [
+            "",
+            "Accompagnement intensif",
+            "Suivi classique"
+          ],
+          "lignes": [
+            [
+              "Chômeurs suivis",
+              500,
+              500
+            ],
+            [
+              "Retour à l’emploi en 6 mois (%)",
+              55,
+              40
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "depenses",
+          "enonce": "Touche la case qui donne la plus forte dépense en politiques actives.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Compare les deux cases de la ligne des dépenses actives.",
+          "explication": "Le pays **B** consacre **1,6 %** du PIB aux politiques actives, contre 0,5 % pour le pays A."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans le pays B, quelle part des dépenses totales, en %, va aux politiques actives ? Arrondis au dixième.",
+          "reponse": 57.1,
+          "unite": "%",
+          "tolerance": 0.05,
+          "aide": "Dépenses totales = 1,2 + 1,6. Part = 1,6 ÷ total.",
+          "explication": "1,6 ÷ 2,8 ≈ 0,571, soit environ **57,1 %**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque dépense selon qu’elle relève d’une politique passive ou active.",
+          "categories": [
+            "Politique passive",
+            "Politique active"
+          ],
+          "items": [
+            [
+              "Assurance chômage",
+              0
+            ],
+            [
+              "Préretraites",
+              0
+            ],
+            [
+              "Formation professionnelle",
+              1
+            ],
+            [
+              "Accompagnement renforcé des chômeurs",
+              1
+            ],
+            [
+              "Aide à la mobilité",
+              1
+            ],
+            [
+              "Emplois aidés",
+              1
+            ]
+          ],
+          "aide": "Une politique passive indemnise ; une politique active agit sur l’emploi lui-même.",
+          "explication": "**Assurance chômage** et **préretraites** indemnisent : politiques passives. Formation, accompagnement, mobilité et emplois aidés agissent sur l’emploi : politiques actives."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de chômeurs de plus retrouvent un emploi en 6 mois avec l’accompagnement intensif qu’avec le suivi classique ?",
+          "reponse": 75,
+          "unite": "chômeurs",
+          "aide": "Calcule 55 % de 500 puis 40 % de 500.",
+          "explication": "55 % de 500 = 275 ; 40 % de 500 = 200. Différence : **75 chômeurs**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle idée résume la flexicurité, que les évaluations valorisent ?",
+          "options": [
+            "La sécurité protège la personne et non le poste : indemnisation généreuse et accompagnement intensif",
+            "La flexibilité seule suffit à faire baisser le chômage, sans indemnisation ni accompagnement",
+            "Il faut protéger chaque poste de travail à tout prix, même quand l’entreprise décline",
+            "L’indemnisation doit être supprimée, afin d’inciter les chômeurs à accepter tout emploi"
+          ],
+          "reponse": 0,
+          "aide": "Le modèle danois associe deux volets à la flexibilité.",
+          "explication": "Dans la **flexicurité**, la sécurité porte sur la **personne**, pas sur le poste : c’est la combinaison flexibilité, indemnisation et accompagnement qui est valorisée."
+        }
+      ]
+    }
+  ]
+}

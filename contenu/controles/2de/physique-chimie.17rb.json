@@ -1,0 +1,511 @@
+{
+  "niveau": "2de",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+      "difficulte": 1,
+      "titre": "La flèche de la voiture",
+      "consigne": "Réponds par des phrases complètes et justifie la longueur de la flèche.",
+      "enonce": "**Situation.** Une voiture roule sur une route rectiligne orientée d'ouest en est, à la vitesse de **20 m·s⁻¹**. On veut représenter son vecteur vitesse avec l'échelle **1 cm pour 5 m·s⁻¹**.\n\n1. Cite les quatre caractéristiques d'un vecteur vitesse.\n2. Donne chacune de ces caractéristiques pour la voiture.\n3. Quelle doit être la longueur de la flèche ?\n4. En général, quelle est la direction du vecteur vitesse par rapport à la trajectoire ?",
+      "bareme": [
+        { "critere": "Point d'application, direction, sens, valeur", "points": 5 },
+        { "critere": "Caractéristiques de la voiture : sa position, direction ouest-est, sens vers l'est, 20 m·s⁻¹", "points": 6 },
+        { "critere": "Longueur : 20 / 5 = 4 cm", "points": 5 },
+        { "critere": "Direction tangente à la trajectoire", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Un vecteur vitesse a un **point d'application**, une **direction**, un **sens** et une **valeur**.\n2. Pour la voiture : point d'application = la **position de la voiture** ; direction = celle de la **route** (ouest-est) ; sens = **vers l'est**, celui du mouvement ; valeur = **20 m·s⁻¹**.\n3. Longueur = 20 / 5 = **4 cm**.\n4. Le vecteur vitesse est toujours **tangent à la trajectoire** (sur une route droite, il suit la droite)."
+    },
+    {
+      "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+      "difficulte": 2,
+      "titre": "Le chariot qui accélère",
+      "consigne": "Détaille tes calculs avec les unités SI, puis interprète la variation du vecteur vitesse.",
+      "enonce": "**Situation.** Un chariot se déplace en ligne droite sur un banc. Une caméra enregistre ses positions M₀, M₁, M₂… à intervalles réguliers **τ = 40 ms**. On mesure (en vraie grandeur) :\n\n- M₂M₄ = **3,2 cm** ;\n- M₄M₆ = **4,8 cm**.\n\n1. Calcule la valeur approchée de la vitesse v₃ au point M₃, puis v₅ au point M₅.\n2. Avec l'échelle 1 cm pour 0,10 m·s⁻¹, quelles longueurs donner aux flèches v₃ et v₅ ?\n3. Décris la construction du vecteur variation de vitesse entre M₃ et M₅. Quelle est sa valeur et son sens ?\n4. Que peut-on en déduire sur la somme des forces qui s'exercent sur le chariot ?",
+      "bareme": [
+        { "critere": "v₃ = 0,032 / 0,080 = 0,40 m·s⁻¹ et v₅ = 0,048 / 0,080 = 0,60 m·s⁻¹", "points": 7 },
+        { "critere": "Longueurs 4,0 cm et 6,0 cm", "points": 3 },
+        { "critere": "Construction depuis un même point ; variation 0,20 m·s⁻¹ dans le sens du mouvement", "points": 6 },
+        { "critere": "Somme des forces dans le sens du mouvement", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. v(i) ≈ M(i−1)M(i+1) / 2τ, avec 2τ = 80 ms = 0,080 s.\n- v₃ ≈ 0,032 / 0,080 = **0,40 m·s⁻¹** ;\n- v₅ ≈ 0,048 / 0,080 = **0,60 m·s⁻¹**.\n2. v₃ : 0,40 / 0,10 = **4,0 cm** ; v₅ : 0,60 / 0,10 = **6,0 cm**. Les deux flèches sont tangentes à la trajectoire, donc sur la droite du mouvement.\n3. On **reporte les deux vecteurs à partir d'un même point**, puis on trace le vecteur qui joint l'extrémité de v₃ à celle de v₅. Les vecteurs étant de même direction et de même sens, la variation vaut 0,60 − 0,40 = **0,20 m·s⁻¹**, **dans le sens du mouvement** : le mouvement est rectiligne accéléré.\n4. Le vecteur variation de vitesse a le même sens que la somme des forces : la **somme des forces n'est pas nulle** et elle est **dirigée dans le sens du mouvement**."
+    },
+    {
+      "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+      "difficulte": 3,
+      "titre": "Un tour de manège",
+      "consigne": "Raisonne à l'aide de constructions décrites et de calculs, puis argumente en reliant variation de vitesse et forces.",
+      "enonce": "**Situation.** Sur un manège, Mathis décrit un cercle de centre O à vitesse de valeur constante **3,0 m·s⁻¹**. On repère deux positions : A, puis B, un quart de tour plus loin.\n\n1. Le mouvement de Mathis est-il uniforme ? Son vecteur vitesse est-il constant ? Justifie.\n2. Décris les vecteurs vitesse en A et en B : direction par rapport au rayon OA (ou OB), sens, valeur. Quel angle font-ils entre eux ?\n3. Décris la construction du vecteur variation de vitesse entre A et B. Calcule sa valeur (utilise le théorème de Pythagore). Vers où pointe-t-il ?\n4. Un camarade affirme : « Mathis tourne à vitesse constante, donc les forces qui s'exercent sur lui se compensent. » Réfute cette affirmation.",
+      "bareme": [
+        { "critere": "Uniforme (valeur constante) mais vecteur vitesse non constant car la direction change", "points": 4 },
+        { "critere": "Vecteurs tangents, perpendiculaires aux rayons, 3,0 m·s⁻¹, perpendiculaires entre eux", "points": 4 },
+        { "critere": "Construction depuis un même point ; valeur √(3,0² + 3,0²) ≈ 4,2 m·s⁻¹", "points": 5 },
+        { "critere": "Variation dirigée vers l'intérieur du cercle, vers le centre", "points": 3 },
+        { "critere": "Variation non nulle donc somme des forces non nulle, dirigée vers le centre", "points": 4 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. La valeur de la vitesse est constante : le mouvement est **circulaire uniforme**. Mais la **direction** du vecteur vitesse change en permanence : le vecteur vitesse **n'est pas constant**.\n2. En A comme en B, le vecteur vitesse est **tangent** au cercle, donc **perpendiculaire au rayon** ; son sens est celui du mouvement ; sa valeur est **3,0 m·s⁻¹**. Entre A et B, le rayon a tourné d'un quart de tour (90°) : les deux vecteurs sont **perpendiculaires** entre eux.\n3. On reporte v(A) et v(B) à partir d'un **même point**, puis on trace le vecteur qui va de l'extrémité de v(A) à celle de v(B). Les deux vecteurs formant un angle droit, la variation est l'hypoténuse d'un triangle rectangle : Δv = √(3,0² + 3,0²) = √18 ≈ **4,2 m·s⁻¹**. Il pointe **vers l'intérieur du cercle, en direction du centre** O.\n4. L'affirmation est fausse : le vecteur vitesse **varie** (sa direction change), donc sa variation n'est **pas nulle**. Or le vecteur variation de vitesse a le même sens que la somme des forces : la somme des forces est **non nulle**, dirigée **vers le centre** du manège. Les forces ne se compensent pas."
+    },
+    {
+      "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+      "difficulte": 1,
+      "titre": "Le poids d'une astronaute",
+      "consigne": "Détaille tes calculs avec les unités, puis réponds par des phrases complètes.",
+      "enonce": "**Situation.** Une astronaute a une masse de **60 kg** (équipement compris).\n\n> Données : g(Terre) ≈ 9,8 N·kg⁻¹ ; g(Lune) ≈ 1,6 N·kg⁻¹.\n\n1. Calcule son poids sur Terre.\n2. Quelle est sa masse sur la Lune ? Calcule son poids sur la Lune.\n3. Donne les caractéristiques du poids (direction, sens, point d'application).\n4. Explique la différence entre masse et poids.",
+      "bareme": [
+        { "critere": "P = m × g = 60 × 9,8 = 588 N (≈ 5,9 × 10² N)", "points": 5 },
+        { "critere": "Masse 60 kg inchangée ; poids 60 × 1,6 = 96 N", "points": 6 },
+        { "critere": "Vertical, vers le bas, appliqué au centre de gravité", "points": 4 },
+        { "critere": "Masse (kg) identique partout ; poids (N), force qui dépend du lieu", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. P = m × g = 60 × 9,8 = **588 N**, soit environ 5,9 × 10² N.\n2. La masse ne dépend que de l'objet : elle vaut toujours **60 kg**. P(Lune) = 60 × 1,6 = **96 N**, environ six fois moins que sur Terre.\n3. Le poids est **vertical**, dirigé **vers le bas**, appliqué au **centre de gravité**.\n4. La **masse** (en kg) caractérise l'objet et est **identique partout**. Le **poids** est une **force** (en newtons) qui **dépend du lieu** par la valeur de g."
+    },
+    {
+      "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+      "difficulte": 2,
+      "titre": "La suspension du salon",
+      "consigne": "Réalise l'inventaire des actions puis réponds en justifiant chaque réponse par le cours.",
+      "enonce": "**Situation.** Une lampe de masse **1,5 kg** est suspendue au plafond par un fil. Le système étudié est la **lampe**. On néglige l'action de l'air.\n\n> Donnée : g ≈ 9,8 N·kg⁻¹.\n\n1. Fais l'inventaire des actions qui s'exercent sur la lampe. Décris le diagramme objet-interaction correspondant.\n2. Pour chaque action, indique s'il s'agit d'une action de contact ou à distance.\n3. Calcule la valeur du poids de la lampe et donne ses caractéristiques.\n4. La lampe exerce-t-elle, elle aussi, une force sur le fil ? Énonce le principe utilisé et donne les caractéristiques de cette force par rapport à celle du fil sur la lampe.",
+      "bareme": [
+        { "critere": "Deux actions : la Terre (poids) et le fil", "points": 4 },
+        { "critere": "Diagramme : lampe au centre, Terre et fil autour, une double flèche par interaction ; poids à distance, fil de contact", "points": 5 },
+        { "critere": "P = 1,5 × 9,8 = 14,7 N, vertical, vers le bas, au centre de gravité", "points": 5 },
+        { "critere": "Actions réciproques : même direction, même valeur, sens opposé, appliquées à des objets différents", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Deux acteurs agissent sur la lampe : la **Terre** et le **fil**. Diagramme objet-interaction : la lampe au centre, la Terre et le fil autour, reliés chacun à la lampe par une **double flèche** (le plafond n'agit pas directement sur la lampe).\n2. L'action de la Terre (le **poids**) est une action **à distance** ; l'action du **fil** est une action **de contact**.\n3. P = m × g = 1,5 × 9,8 = **14,7 N** ; vertical, vers le bas, appliqué au centre de gravité de la lampe.\n4. **Oui** : d'après le **principe des actions réciproques**, si le fil exerce une force sur la lampe, la lampe exerce sur le fil une force de **même direction**, de **même valeur** et de **sens opposé**. Ces deux forces s'appliquent à des objets différents (l'une sur la lampe, l'autre sur le fil) : elles ne se compensent pas entre elles."
+    },
+    {
+      "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+      "difficulte": 3,
+      "titre": "La Terre et la Lune s'attirent",
+      "consigne": "Détaille les calculs en notation scientifique puis argumente chaque réponse.",
+      "enonce": "> **Données** : G ≈ 6,67 × 10⁻¹¹ N·m²·kg⁻² ; masse de la Terre m(T) = 5,97 × 10²⁴ kg ; masse de la Lune m(L) = 7,35 × 10²² kg ; distance entre leurs centres d = 3,84 × 10⁸ m.\n\n1. Écris l'expression de la force d'interaction gravitationnelle exercée par la Terre sur la Lune, puis calcule sa valeur.\n2. Quelle est la valeur de la force exercée par la Lune sur la Terre ? Précise sa direction et son sens. Justifie.\n3. Ces deux forces se compensent-elles ? Explique.\n4. Si la Lune était deux fois plus loin, que deviendrait cette force ? Donne sa nouvelle valeur.\n5. Un élève affirme : « La Terre, bien plus massive, attire la Lune plus fort que la Lune n'attire la Terre. » Réponds-lui.",
+      "bareme": [
+        { "critere": "F = G × m(T) × m(L) / d² ≈ 2,0 × 10²⁰ N, calcul détaillé", "points": 6 },
+        { "critere": "Même valeur, même direction (droite des centres), sens opposé : force attractive et réciproque", "points": 4 },
+        { "critere": "Pas de compensation : les deux forces s'appliquent à deux objets différents", "points": 3 },
+        { "critere": "Distance doublée : force divisée par 4, soit ≈ 5,0 × 10¹⁹ N", "points": 4 },
+        { "critere": "Réfutation : l'interaction a la même valeur pour les deux corps", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. F = G × m(T) × m(L) / d².\nF = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ × 7,35 × 10²² / (3,84 × 10⁸)² ≈ 2,93 × 10³⁷ / 1,47 × 10¹⁷ ≈ **2,0 × 10²⁰ N**.\n2. La force gravitationnelle est **réciproque** : la Lune attire la Terre avec une force de **même valeur** (2,0 × 10²⁰ N), de même direction (la droite qui joint les centres), mais de **sens opposé** : dirigée de la Terre vers la Lune. Elle est **attractive**.\n3. **Non** : ces deux forces ne s'appliquent **pas au même objet** (l'une à la Lune, l'autre à la Terre). Elles ne se compensent jamais entre elles.\n4. La force décroît en 1/d² : doubler la distance la **divise par quatre**. F' = 2,0 × 10²⁰ / 4 = **5,0 × 10¹⁹ N**.\n5. C'est faux : d'après la formule, F dépend du **produit** des deux masses, identique pour les deux corps, et le principe des actions réciproques impose la **même valeur**. C'est la même interaction vue des deux côtés."
+    },
+    {
+      "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+      "difficulte": 1,
+      "titre": "Le palet qui glisse",
+      "consigne": "Réponds par des phrases complètes en citant le principe d'inertie.",
+      "enonce": "**Situation.** Sur une table à coussin d'air, Rayan lance un palet qui glisse presque sans frottement.\n\n1. Énonce le principe d'inertie.\n2. Après le lancer, comment le palet se déplace-t-il ? Justifie.\n3. Rayan pense qu'« il faut une force pour que le palet continue d'avancer ». Que lui réponds-tu ?\n4. Dans quel type de référentiel le principe d'inertie s'applique-t-il ? Quel référentiel peut-on utiliser ici ?",
+      "bareme": [
+        { "critere": "Énoncé : forces qui se compensent ⇔ vecteur vitesse constant (immobile ou rectiligne uniforme)", "points": 6 },
+        { "critere": "Palet en mouvement rectiligne uniforme car les forces se compensent presque", "points": 5 },
+        { "critere": "Une force sert à changer le mouvement, pas à l'entretenir", "points": 5 },
+        { "critere": "Référentiel galiléen ; terrestre, bonne approximation pour une expérience courte", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Dans un **référentiel galiléen**, si les forces qui s'exercent sur un système **se compensent**, son **vecteur vitesse ne varie pas** : il est immobile ou en mouvement **rectiligne uniforme** (et réciproquement).\n2. Sur coussin d'air, il n'y a presque pas de frottement : le poids est compensé par l'action de l'air soufflé. Les forces se compensent, le palet **conserve sa vitesse et sa direction** : mouvement **rectiligne uniforme**.\n3. C'est l'erreur la plus tenace de la mécanique : il ne faut **pas** de force pour **entretenir** un mouvement, il en faut une pour le **changer**.\n4. Dans un **référentiel galiléen** ; le **référentiel terrestre** en est une bonne approximation pour une expérience de courte durée."
+    },
+    {
+      "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+      "difficulte": 2,
+      "titre": "Trois situations à expliquer",
+      "consigne": "Pour chaque situation, fais le lien entre le mouvement et les forces en appliquant le principe d'inertie ou sa contraposée.",
+      "enonce": "1. **Le parachutiste.** Parachute ouvert, Nathan (masse totale **80 kg**) descend à vitesse constante, à la verticale. Que peut-on dire des forces qui s'exercent sur lui ? Calcule son poids (g ≈ 9,8 N·kg⁻¹) et déduis-en la valeur de la force exercée par l'air.\n2. **La skieuse.** Clara descend une piste droite et sa vitesse augmente. Les forces qui s'exercent sur elle se compensent-elles ? Dans quel sens est dirigée leur somme ?\n3. **La voiture.** Une voiture roule à vitesse constante sur une route droite, moteur en marche. Pourquoi le moteur doit-il continuer à fonctionner si les forces se compensent ?",
+      "bareme": [
+        { "critere": "Parachutiste : mouvement rectiligne uniforme donc forces qui se compensent", "points": 4 },
+        { "critere": "P = 784 N ; force de l'air de 784 N, verticale vers le haut", "points": 5 },
+        { "critere": "Skieuse : vitesse qui varie donc forces qui ne se compensent pas ; somme dans le sens du mouvement", "points": 6 },
+        { "critere": "Voiture : la force motrice compense exactement les frottements", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Nathan a un mouvement **rectiligne uniforme** : d'après la réciproque du principe d'inertie, les forces **se compensent**. P = m × g = 80 × 9,8 = **784 N**. La force exercée par l'air compense le poids : elle vaut **784 N**, verticale, dirigée **vers le haut**.\n2. La vitesse de Clara **augmente** : son vecteur vitesse varie. D'après la contraposée, les forces **ne se compensent pas**. Leur somme a le sens de la variation de vitesse : **dans le sens du mouvement**, vers le bas de la piste.\n3. Les forces se compensent parce que le moteur fournit une force motrice qui **compense exactement les frottements**. Si le moteur s'arrête, les frottements ne sont plus compensés : la voiture ralentit."
+    },
+    {
+      "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+      "difficulte": 3,
+      "titre": "Analyse d'un enregistrement et chute libre",
+      "consigne": "Exploite l'enregistrement, puis rédige une argumentation qui s'appuie sur le principe d'inertie.",
+      "enonce": "**Document 1.** Un palet glisse sur une table horizontale : sur coussin d'air d'abord, puis il passe sur une partie en moquette. Positions relevées toutes les 50 ms ; distances entre positions successives :\n\n| Intervalle | 1 | 2 | 3 | 4 | 5 | 6 |\n| Distance (cm) | 2,0 | 2,0 | 2,0 | 1,6 | 1,2 | 0,8 |\n\n**Document 2.** Dans un tube où l'on a fait le vide, on lâche en même temps une plume et une bille. Dans l'air, la bille arrive bien avant la plume.\n\n1. Décris le mouvement du palet dans chacune des deux phases (la trajectoire est rectiligne).\n2. Que peut-on dire des forces dans la première phase ? Dans la seconde ? Précise le sens de leur somme dans la seconde phase.\n3. Qu'est-ce qu'un corps en chute libre ? Dans le tube vidé, la plume et la bille sont-elles en chute libre ?\n4. Explique le document 2 : pourquoi tombent-elles ensemble dans le vide, et pas dans l'air ?\n5. Aristote pensait qu'un corps lourd tombe plus vite qu'un corps léger. Que montre le document 2 ?",
+      "bareme": [
+        { "critere": "Phase 1 rectiligne uniforme (distances égales), phase 2 rectiligne ralentie", "points": 4 },
+        { "critere": "Phase 1 : forces qui se compensent ; phase 2 : ne se compensent pas, somme opposée au mouvement", "points": 5 },
+        { "critere": "Chute libre : soumis à son seul poids ; oui dans le vide", "points": 3 },
+        { "critere": "Même variation de vitesse sans air ; dans l'air, la résistance de l'air les sépare", "points": 5 },
+        { "critere": "La masse n'intervient pas dans la chute libre : Aristote se trompait", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Intervalles 1 à 3 : distances **égales** pendant des durées égales : mouvement **rectiligne uniforme**. Intervalles 4 à 6 : distances qui **diminuent** : mouvement **rectiligne ralenti**.\n2. Première phase : le vecteur vitesse ne varie pas, donc les forces **se compensent** (principe d'inertie). Seconde phase : le vecteur vitesse varie, donc les forces **ne se compensent pas** (contraposée). La variation de vitesse est opposée au mouvement : la somme des forces est **dirigée en sens inverse du mouvement** (frottements de la moquette).\n3. Un corps en **chute libre** n'est soumis qu'à **son poids**. Dans le tube vidé, il n'y a pas d'air : la plume et la bille sont **en chute libre**.\n4. Tous les corps en chute libre subissent la **même variation de vitesse**, quelle que soit leur masse : dans le vide, ils tombent **ensemble**. Dans l'air, la **résistance de l'air** freine beaucoup plus la plume : c'est elle qui les sépare, et non la masse.\n5. Le document montre que la **masse n'intervient pas** dans la chute libre : l'idée d'Aristote vient de l'effet de l'air, pas de la masse."
+    },
+    {
+      "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+      "difficulte": 1,
+      "titre": "Le son de la guitare",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Élise joue de la guitare dans sa chambre ; son frère l'entend depuis le couloir.\n\n1. Décris les trois étapes de la chaîne du son dans cette situation (émission, propagation, réception).\n2. Le son transporte-t-il de l'air de la guitare jusqu'à l'oreille ? Explique comment il se propage.\n3. Un film montre une explosion bruyante dans l'espace. Est-ce physiquement possible ? Justifie.\n4. Donne l'ordre de grandeur de la célérité du son dans l'air à 20 °C.",
+      "bareme": [
+        { "critere": "Émission : corde qui vibre ; propagation dans l'air ; réception par l'oreille", "points": 6 },
+        { "critere": "Pas de transport de matière : compressions et dilatations transmises de proche en proche", "points": 5 },
+        { "critere": "Impossible : le son ne se propage pas dans le vide, il lui faut un milieu matériel", "points": 5 },
+        { "critere": "Environ 340 m·s⁻¹", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Émission** : la corde de la guitare **vibre**. **Propagation** : la vibration se transmet de proche en proche dans l'**air**, milieu matériel. **Réception** : l'**oreille** du frère convertit la vibration.\n2. **Non** : le son est une onde mécanique, faite de **compressions et dilatations** successives du milieu. Chaque molécule oscille autour de sa position d'équilibre et transmet la perturbation à sa voisine : il n'y a **pas de transport de matière**, seulement d'énergie.\n3. **Non** : le son a besoin d'un **milieu matériel** pour se propager ; dans le **vide** de l'espace, il n'y a aucune matière à faire vibrer.\n4. Dans l'air à 20 °C, v ≈ **340 m·s⁻¹**."
+    },
+    {
+      "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+      "difficulte": 2,
+      "titre": "Sonar et orage",
+      "consigne": "Choisis la bonne relation pour chaque situation et détaille tes calculs.",
+      "enonce": "> Données : célérité du son dans l'air ≈ 340 m·s⁻¹ ; dans l'eau de mer ≈ 1 500 m·s⁻¹.\n\n**Situation 1.** Le sonar d'un bateau émet un signal vers le fond. L'écho revient **0,40 s** après l'émission.\n\n**Situation 2.** Pendant un orage, Lucie compte **6 s** entre l'éclair et le tonnerre.\n\n1. Explique le principe de la méthode de l'écho et écris la relation qui donne la distance.\n2. Calcule la profondeur de l'eau sous le bateau.\n3. Calcule la distance qui sépare Lucie de l'orage.\n4. Pourquoi Lucie voit-elle l'éclair avant d'entendre le tonnerre ? Pourquoi peut-on négliger la durée de trajet de la lumière ?",
+      "bareme": [
+        { "critere": "Aller-retour : d = v × Δt / 2", "points": 5 },
+        { "critere": "d = 1 500 × 0,40 / 2 = 300 m", "points": 5 },
+        { "critere": "d = 340 × 6 ≈ 2,0 × 10³ m (environ 2 km)", "points": 5 },
+        { "critere": "La lumière va beaucoup plus vite que le son, elle arrive presque instantanément", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le signal fait un **aller-retour** entre l'émetteur et l'obstacle : la durée mesurée correspond à deux fois la distance. **d = v × Δt / 2**.\n2. d = 1 500 × 0,40 / 2 = **300 m**.\n3. Le son parcourt l'aller simple : d = v × Δt = 340 × 6 ≈ **2 000 m**, soit environ **2 km**.\n4. La **lumière** se propage beaucoup plus vite que le son : elle arrive **presque instantanément**, tandis que le son met environ 3 s par kilomètre. On peut donc mesurer le retard du tonnerre comme la durée de trajet du son."
+    },
+    {
+      "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+      "difficulte": 3,
+      "titre": "Le coup de marteau sur le rail",
+      "consigne": "Exploite les données pour calculer les durées de propagation, puis explique les résultats avec le cours.",
+      "enonce": "**Situation.** Sur une voie ferrée désaffectée, Ilyes frappe un rail en acier avec un marteau. Son amie Mia, à **510 m** de là, a l'oreille posée contre le rail. Elle entend **deux coups** successifs.\n\n> Données : célérité du son dans l'air ≈ 340 m·s⁻¹ ; dans l'acier ≈ 5 100 m·s⁻¹.\n\n1. Explique pourquoi Mia entend deux coups.\n2. Calcule la durée de propagation du son dans le rail, puis dans l'air.\n3. Calcule le retard entre les deux coups. Quelle relation du cours retrouve-t-on ?\n4. Pourquoi le son se propage-t-il plus vite dans l'acier que dans l'air ?\n5. Mia ne connaît pas la distance et mesure seulement un retard de 1,4 s entre les deux coups. Montre que cette mesure permettrait de retrouver la distance (on utilisera le fait qu'une durée de trajet vaut d / v).",
+      "bareme": [
+        { "critere": "Deux chemins de propagation : le rail et l'air, à des célérités différentes", "points": 3 },
+        { "critere": "Δt(acier) = 510 / 5 100 = 0,10 s ; Δt(air) = 510 / 340 = 1,5 s", "points": 5 },
+        { "critere": "Retard 1,4 s ; relation du retard entre deux trajets", "points": 4 },
+        { "critere": "Célérité plus grande dans un milieu dense et rigide", "points": 3 },
+        { "critere": "d / 340 − d / 5 100 = 1,4 conduit à d ≈ 510 m", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le son se propage par **deux chemins** : dans le **rail** (acier) et dans l'**air**. Les célérités étant différentes, il n'arrive pas en même temps par les deux : Mia entend deux coups.\n2. Dans l'acier : Δt₁ = d / v = 510 / 5 100 = **0,10 s**. Dans l'air : Δt₂ = 510 / 340 = **1,5 s**.\n3. Retard = 1,5 − 0,10 = **1,4 s**. C'est l'idée de la relation du **retard** : la différence de durée de trajet permet de **localiser** une source sonore.\n4. La célérité du son est d'autant plus grande que le milieu est **dense et rigide** : l'acier transmet la vibration bien plus vite que l'air.\n5. Retard = d / 340 − d / 5 100 = 1,4. Or 1/340 − 1/5 100 ≈ 0,002 94 − 0,000 20 = 0,002 75 s·m⁻¹. Donc d ≈ 1,4 / 0,002 75 ≈ **510 m** : la mesure du retard suffit à retrouver la distance."
+    },
+    {
+      "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+      "difficulte": 1,
+      "titre": "Audible ou non ?",
+      "consigne": "Détaille chaque calcul avec les unités, puis conclus par une phrase.",
+      "enonce": "1. Donne la relation entre la période T et la fréquence f d'un son, avec leurs unités.\n2. Un diapason émet un son de période **T = 4,0 ms**. Calcule sa fréquence. Ce son est-il audible par l'être humain ?\n3. Un sifflet pour chien émet un son de période **T = 25 µs**. Calcule sa fréquence. L'oreille humaine l'entend-elle ? Comment appelle-t-on ce type de son ?\n4. De ces deux sons, lequel est le plus aigu ? Justifie.",
+      "bareme": [
+        { "critere": "f = 1 / T, f en hertz, T en secondes", "points": 4 },
+        { "critere": "f = 1 / 0,0040 = 250 Hz, audible (20 Hz à 20 000 Hz)", "points": 6 },
+        { "critere": "f = 1 / (25 × 10⁻⁶) = 40 000 Hz, ultrason inaudible", "points": 6 },
+        { "critere": "Plus aigu : la plus grande fréquence, le sifflet", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **f = 1 / T**, avec f en **hertz** (Hz) et T en **secondes**.\n2. T = 4,0 ms = 4,0 × 10⁻³ s. f = 1 / (4,0 × 10⁻³) = **250 Hz**. Elle est comprise entre 20 Hz et 20 000 Hz : le son est **audible**.\n3. T = 25 µs = 25 × 10⁻⁶ s. f = 1 / (25 × 10⁻⁶) = **40 000 Hz**. C'est plus que 20 000 Hz : l'oreille humaine ne l'entend pas, c'est un **ultrason**.\n4. Plus la fréquence est grande, plus le son est aigu : le son du **sifflet** est le plus aigu (même s'il est inaudible pour nous)."
+    },
+    {
+      "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+      "difficulte": 2,
+      "titre": "Violon et flûte jouent la même note",
+      "consigne": "Exploite les mesures, détaille les calculs, puis explique avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Nina enregistre avec un micro un violon puis une flûte qui jouent la même note. Sur l'écran, les deux signaux sont périodiques mais de formes différentes. Pour chacun, on compte **5 motifs** sur une durée de **11,4 ms**.\n\n1. Calcule la période du signal, puis sa fréquence (arrondie à l'unité).\n2. Quelle est la sensation associée à la fréquence ? Pourquoi dit-on que les deux instruments jouent la même note ?\n3. On reconnaît pourtant chaque instrument. Quelle qualité du son les distingue ? À quoi est-elle liée ?\n4. Le son du violon contient des harmoniques. Calcule les fréquences des deux premiers harmoniques après le fondamental.",
+      "bareme": [
+        { "critere": "T = 11,4 / 5 = 2,28 ms ; f = 1 / T ≈ 439 Hz (proche de 440 Hz)", "points": 6 },
+        { "critere": "Fréquence liée à la hauteur ; même fréquence donc même note", "points": 4 },
+        { "critere": "Timbre, lié à la forme du signal et aux harmoniques", "points": 5 },
+        { "critere": "Harmoniques multiples du fondamental : ≈ 878 Hz et ≈ 1 317 Hz", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. T = 11,4 / 5 = **2,28 ms** = 2,28 × 10⁻³ s. f = 1 / T = 1 / (2,28 × 10⁻³) ≈ **439 Hz** (c'est pratiquement le la à 440 Hz).\n2. La fréquence est liée à la **hauteur** du son (grave ou aigu). Les deux signaux ont la **même fréquence** : les instruments jouent la **même note**.\n3. Ils se distinguent par leur **timbre**, lié à la **forme du signal** et à la présence d'**harmoniques**.\n4. Les harmoniques ont des fréquences **multiples** du fondamental : 2 × 439 ≈ **878 Hz** et 3 × 439 ≈ **1 317 Hz**."
+    },
+    {
+      "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+      "difficulte": 3,
+      "titre": "Scooters, concert et audition",
+      "consigne": "Raisonne avec l'échelle des décibels, justifie chaque réponse, puis rédige un conseil argumenté.",
+      "enonce": "**Données.** Conversation : 60 dB ; rue passante : 80 dB ; concert : 100 dB ; seuil de douleur : vers 120 dB.\n\n1. Qu'est-ce que le niveau d'intensité sonore ? Dans quelle unité s'exprime-t-il ? Pourquoi dit-on que son échelle est logarithmique ?\n2. Un scooter produit un niveau de 80 dB au bord de la route. Un second scooter identique passe à côté du premier. Quel est le niveau total ? Un camarade répond 160 dB : explique son erreur.\n3. Par combien l'intensité sonore est-elle multipliée entre une conversation et un concert ?\n4. Pour un auditeur, un son de 90 dB paraît-il deux fois plus fort, ou dix fois plus fort, qu'un son de 80 dB ? Justifie.\n5. Rédige un court conseil à un ami qui passe ses soirées collé aux enceintes : explique ce que risque son oreille et comment s'en protéger.",
+      "bareme": [
+        { "critere": "Niveau L en décibels ; +10 dB multiplie l'intensité par 10", "points": 4 },
+        { "critere": "Deux sources identiques : +3 dB, soit 83 dB ; les décibels ne s'additionnent pas", "points": 4 },
+        { "critere": "40 dB d'écart : intensité multipliée par 10⁴ = 10 000", "points": 5 },
+        { "critere": "Son perçu deux fois plus fort (intensité ×10)", "points": 3 },
+        { "critere": "Cellules ciliées détruites définitivement, lésions irréversibles ; protections, pauses, distance", "points": 4 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Le **niveau d'intensité sonore** L se mesure en **décibels** (dB). Son échelle est **logarithmique** : chaque **+10 dB** multiplie l'**intensité** sonore (en W·m⁻²) par **10**.\n2. Deux sources identiques côte à côte n'ajoutent que **+3 dB** : le niveau total est **83 dB**. Le camarade a additionné les décibels comme des nombres ordinaires, ce qui est faux : 160 dB dépasserait largement le seuil de douleur.\n3. De 60 à 100 dB, l'écart est de 40 dB, soit quatre fois +10 dB : l'intensité est multipliée par 10 × 10 × 10 × 10 = **10 000**.\n4. +10 dB multiplie l'intensité par 10, mais le son **paraît seulement deux fois plus fort**.\n5. Conseil : une exposition prolongée à des niveaux élevés **détruit définitivement les cellules ciliées** de l'oreille interne, qui **ne se régénèrent pas** : acouphènes et perte d'audition sont **irréversibles**. Il faut porter des **protections auditives**, faire des **pauses** et se tenir **à distance des enceintes**."
+    },
+    {
+      "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+      "difficulte": 1,
+      "titre": "Deux lampes en série",
+      "consigne": "Justifie chaque réponse en citant la loi utilisée.",
+      "enonce": "**Situation.** Un générateur de **12 V** alimente deux lampes L₁ et L₂ montées **en série**. Un voltmètre indique **4,5 V** aux bornes de L₁, et l'ampèremètre placé près du générateur indique **0,30 A**.\n\n1. Comment branche-t-on un ampèremètre ? Un voltmètre ? Donne l'unité de chaque grandeur mesurée.\n2. Quelle est l'intensité du courant qui traverse L₂ ? Justifie.\n3. Calcule la tension aux bornes de L₂. Quelle loi utilises-tu ?",
+      "bareme": [
+        { "critere": "Ampèremètre en série (ampère), voltmètre en dérivation (volt)", "points": 6 },
+        { "critere": "0,30 A dans L₂ : intensité identique partout en série (loi des nœuds)", "points": 6 },
+        { "critere": "U₂ = 12 − 4,5 = 7,5 V par la loi des mailles", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**ampèremètre** se branche **en série** et mesure l'intensité, en **ampères** (A). Le **voltmètre** se branche **en dérivation** et mesure la tension, en **volts** (V).\n2. Dans un circuit série, l'intensité est la **même partout** (conséquence de la loi des nœuds) : L₂ est traversée par **0,30 A**.\n3. D'après la **loi des mailles**, en série la tension du générateur est la somme des tensions aux bornes des récepteurs : U = U₁ + U₂, donc U₂ = 12 − 4,5 = **7,5 V**."
+    },
+    {
+      "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+      "difficulte": 2,
+      "titre": "Trois appareils en dérivation",
+      "consigne": "Applique les lois des nœuds et des mailles en détaillant tes calculs.",
+      "enonce": "**Situation.** Un générateur de **6,0 V** alimente trois dipôles D₁, D₂ et D₃ montés **en dérivation**. On mesure : I₁ = **0,15 A** dans D₁, I₂ = **0,25 A** dans D₂, et le générateur débite **0,60 A**.\n\n1. Quelle est la tension aux bornes de chaque dipôle ? Justifie.\n2. Énonce la loi des nœuds, puis calcule l'intensité I₃ dans D₃.\n3. On retire D₂. Que devient la tension aux bornes de D₁ ? D₁ continue-t-il de fonctionner ?\n4. Pourquoi l'éclairage d'une maison est-il câblé en dérivation ?",
+      "bareme": [
+        { "critere": "6,0 V aux bornes de chaque dipôle (branches entre les mêmes nœuds)", "points": 5 },
+        { "critere": "Loi des nœuds énoncée ; I₃ = 0,60 − 0,15 − 0,25 = 0,20 A", "points": 7 },
+        { "critere": "Tension de D₁ inchangée (6,0 V), il fonctionne toujours", "points": 4 },
+        { "critere": "Chaque appareil reçoit la même tension et fonctionne indépendamment", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les branches en dérivation entre deux mêmes nœuds ont la **même tension** (loi des mailles) : chaque dipôle est soumis à **6,0 V**.\n2. **Loi des nœuds** : la somme des intensités qui arrivent à un nœud est égale à la somme de celles qui en repartent. I = I₁ + I₂ + I₃, donc I₃ = 0,60 − 0,15 − 0,25 = **0,20 A**.\n3. Retirer une branche ne modifie pas la tension des autres : D₁ reste sous **6,0 V** et **continue de fonctionner**.\n4. En dérivation, chaque appareil reçoit la **même tension** et fonctionne **indépendamment** : éteindre ou retirer une lampe n'éteint pas les autres."
+    },
+    {
+      "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+      "difficulte": 3,
+      "titre": "Un circuit mixte",
+      "consigne": "Identifie les nœuds et les mailles, puis applique les deux lois en justifiant chaque étape.",
+      "enonce": "**Situation.** Un générateur de tension **9,0 V** est relié à une lampe L₁. En sortie de L₁, le circuit se divise en deux branches en dérivation : l'une contient la lampe L₂, l'autre la lampe L₃ ; les deux branches se rejoignent avant de revenir au générateur.\n\nMesures : tension aux bornes de L₁ : **U₁ = 3,0 V** ; intensité débitée par le générateur : **I = 0,40 A** ; intensité dans L₂ : **I₂ = 0,15 A**.\n\n1. Combien ce circuit compte-t-il de nœuds ? Quels dipôles sont en série, lesquels en dérivation ?\n2. Quelle est l'intensité I₁ dans L₁ ? Justifie.\n3. Calcule l'intensité I₃ dans L₃.\n4. Calcule les tensions U₂ et U₃ aux bornes de L₂ et L₃. Justifie avec la loi des mailles.\n5. Où et comment faut-il brancher l'ampèremètre pour mesurer I₃, et le voltmètre pour mesurer U₃ ? Que risquerait-on en branchant l'ampèremètre en dérivation aux bornes de L₃ ?",
+      "bareme": [
+        { "critere": "Deux nœuds ; L₁ en série avec l'ensemble (L₂ // L₃)", "points": 3 },
+        { "critere": "I₁ = I = 0,40 A (même intensité dans la partie série)", "points": 3 },
+        { "critere": "I₃ = 0,40 − 0,15 = 0,25 A par la loi des nœuds", "points": 4 },
+        { "critere": "U₂ = U₃ = 9,0 − 3,0 = 6,0 V par la loi des mailles", "points": 5 },
+        { "critere": "Ampèremètre en série dans la branche de L₃, voltmètre en dérivation ; risque de court-circuit et de destruction", "points": 5 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Le circuit compte **deux nœuds** (où les branches se séparent et se rejoignent). **L₁** est **en série** avec le générateur et avec l'ensemble formé par **L₂ et L₃**, qui sont **en dérivation** entre eux.\n2. L₁ est sur la partie série, traversée par tout le courant du générateur : **I₁ = I = 0,40 A**.\n3. Loi des nœuds : I₁ = I₂ + I₃, donc I₃ = 0,40 − 0,15 = **0,25 A**.\n4. Dans la maille générateur – L₁ – L₂ : U = U₁ + U₂, donc U₂ = 9,0 − 3,0 = **6,0 V**. L₂ et L₃ sont branchées entre les deux mêmes nœuds : **U₃ = U₂ = 6,0 V**.\n5. Pour I₃ : l'ampèremètre se branche **en série** dans la branche de L₃, pour être traversé par son courant. Pour U₃ : le voltmètre se branche **en dérivation** aux bornes de L₃. Un ampèremètre en dérivation **court-circuiterait** la lampe et pourrait être **détruit**."
+    },
+    {
+      "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+      "difficulte": 1,
+      "titre": "Appliquer la loi d'Ohm",
+      "consigne": "Écris la relation utilisée, convertis si besoin, puis donne le résultat avec son unité.",
+      "enonce": "1. Énonce la loi d'Ohm et donne l'unité de chaque grandeur.\n2. Un résistor de **220 Ω** est traversé par un courant de **50 mA**. Calcule la tension à ses bornes.\n3. Un résistor de **150 Ω** est soumis à une tension de **4,5 V**. Calcule l'intensité qui le traverse, en ampères puis en milliampères.\n4. Pourquoi une lampe à filament n'est-elle pas un conducteur ohmique ?",
+      "bareme": [
+        { "critere": "U = R × I ; U en V, R en Ω, I en A", "points": 5 },
+        { "critere": "U = 220 × 0,050 = 11 V (conversion des mA)", "points": 5 },
+        { "critere": "I = 4,5 / 150 = 0,030 A = 30 mA", "points": 5 },
+        { "critere": "Résistance de la lampe qui augmente avec la température : U et I non proportionnelles", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **U = R × I** : U en **volts** (V), R en **ohms** (Ω), I en **ampères** (A). La tension et l'intensité sont proportionnelles.\n2. I = 50 mA = 0,050 A. U = 220 × 0,050 = **11 V**.\n3. I = U / R = 4,5 / 150 = **0,030 A**, soit **30 mA**.\n4. La résistance d'une lampe **augmente avec la température** de son filament : U n'est pas proportionnelle à I, sa caractéristique est une **courbe** et non une droite passant par l'origine."
+    },
+    {
+      "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+      "difficulte": 2,
+      "titre": "Tracer une caractéristique",
+      "consigne": "Exploite les mesures, justifie tes conclusions et détaille les calculs.",
+      "enonce": "**Situation.** Sofia relève la tension U aux bornes de deux dipôles en fonction de l'intensité I.\n\n**Dipôle A**\n\n| I (A) | 0 | 0,010 | 0,020 | 0,030 | 0,040 |\n| U (V) | 0 | 1,0 | 2,0 | 3,0 | 4,0 |\n\n**Dipôle B**\n\n| I (A) | 0 | 0,050 | 0,10 | 0,15 |\n| U (V) | 0 | 0,5 | 2,0 | 5,0 |\n\n1. Décris l'allure de la caractéristique U = f(I) de chaque dipôle. Lequel est un conducteur ohmique ? Justifie.\n2. Détermine la résistance du dipôle ohmique.\n3. Calcule la puissance reçue par le dipôle A quand I = 0,040 A.\n4. Le dipôle B pourrait-il être une lampe ? Justifie.",
+      "bareme": [
+        { "critere": "A : droite par l'origine, U proportionnelle à I, donc ohmique ; B : courbe, non ohmique", "points": 6 },
+        { "critere": "R = U / I = 100 Ω (coefficient directeur)", "points": 5 },
+        { "critere": "P = U × I = 4,0 × 0,040 = 0,16 W", "points": 5 },
+        { "critere": "B : rapport U / I qui augmente (résistance croissante) comme une lampe qui chauffe", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Dipôle A : U / I vaut toujours 100 V·A⁻¹ ; U est **proportionnelle** à I, la caractéristique est une **droite passant par l'origine** : A est un **conducteur ohmique**. Dipôle B : U / I vaut 10, puis 20, puis 33 : pas de proportionnalité, la caractéristique est une **courbe** : B n'est **pas ohmique**.\n2. R est le coefficient directeur de la droite : R = U / I = 4,0 / 0,040 = **100 Ω**.\n3. P = U × I = 4,0 × 0,040 = **0,16 W** (ou P = R × I² = 100 × 0,040² = 0,16 W).\n4. Oui, c'est plausible : le rapport U / I, c'est-à-dire la **résistance**, **augmente** avec l'intensité. C'est le comportement d'une **lampe**, dont la résistance augmente quand son filament chauffe."
+    },
+    {
+      "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+      "difficulte": 3,
+      "titre": "La bouilloire et les mains mouillées",
+      "consigne": "Mène les calculs avec les unités, puis rédige une explication argumentée pour la question de sécurité.",
+      "enonce": "**Situation.** Une bouilloire porte l'indication **230 V – 2 000 W**. Sa résistance chauffante se comporte comme un conducteur ohmique. Elle chauffe l'eau du thé pendant **3,0 min**.\n\n1. Calcule l'intensité du courant qui traverse la bouilloire.\n2. Déduis-en la valeur de sa résistance.\n3. Calcule l'énergie consommée, en joules puis en kilowattheures.\n4. Comment s'appelle l'effet utilisé par la bouilloire ? Est-il ici recherché ou subi ? Donne un exemple où il est subi.\n5. Dans un modèle très simplifié, on admet que la résistance du corps humain entre les deux mains vaut **5 000 Ω** peau sèche et **1 000 Ω** peau mouillée. Calcule l'intensité qui traverserait le corps sous 230 V dans chaque cas, et explique pourquoi on ne doit jamais toucher un appareil électrique les mains mouillées.",
+      "bareme": [
+        { "critere": "I = P / U = 2 000 / 230 ≈ 8,7 A", "points": 4 },
+        { "critere": "R = U / I ≈ 26 Ω", "points": 3 },
+        { "critere": "E = P × Δt = 2 000 × 180 = 3,6 × 10⁵ J = 0,10 kWh", "points": 5 },
+        { "critere": "Effet Joule recherché ; exemple subi : composants électroniques à refroidir", "points": 3 },
+        { "critere": "I = 0,046 A puis 0,23 A : la résistance diminue avec l'humidité, l'intensité est cinq fois plus grande", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. P = U × I donc I = P / U = 2 000 / 230 ≈ **8,7 A**.\n2. U = R × I donc R = U / I = 230 / 8,7 ≈ **26 Ω**.\n3. Δt = 3,0 min = 180 s. E = P × Δt = 2 000 × 180 = **3,6 × 10⁵ J**. Avec 1 kWh = 3,6 × 10⁶ J : E = **0,10 kWh** (ou 2,0 kW × 0,050 h).\n4. C'est l'**effet Joule** : un conducteur parcouru par un courant s'échauffe. Ici il est **recherché**. Il est **subi** dans les **composants électroniques** (ordinateur, téléphone), qu'il faut refroidir.\n5. I = U / R :\n- peau sèche : 230 / 5 000 ≈ **0,046 A** ;\n- peau mouillée : 230 / 1 000 = **0,23 A**.\nÀ tension donnée, l'intensité qui traverse le corps dépend de sa **résistance**, très **diminuée par l'humidité** : ici l'intensité est **cinq fois plus grande** les mains mouillées. D'où l'interdiction absolue de manipuler un appareil électrique les mains mouillées."
+    },
+    {
+      "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+      "difficulte": 1,
+      "titre": "Voir les objets",
+      "consigne": "Réponds par des phrases complètes en utilisant le vocabulaire du cours.",
+      "enonce": "1. Dans quel type de milieu la lumière se propage-t-elle en ligne droite ? Comment modélise-t-on son trajet ?\n2. Cite deux phénomènes expliqués par la propagation rectiligne de la lumière.\n3. Classe les objets suivants en **sources primaires** et **objets diffusants** : le Soleil, la Lune, une page de livre, l'écran d'un téléphone allumé, une flamme de bougie, un mur blanc.\n4. Pourquoi ne voit-on pas un mur dans une pièce totalement obscure ?",
+      "bareme": [
+        { "critere": "Milieu transparent et homogène ; modèle du rayon lumineux", "points": 5 },
+        { "critere": "Deux phénomènes parmi ombres, chambre noire, éclipses, viseur", "points": 4 },
+        { "critere": "Classement correct des six objets", "points": 6 },
+        { "critere": "Un objet diffusant renvoie la lumière reçue : sans éclairage, il est invisible", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. La lumière se propage en ligne droite dans un milieu **transparent et homogène**. On modélise son trajet par des **rayons lumineux**.\n2. Par exemple : les **ombres** nettes (un objet opaque intercepte les rayons) et les **éclipses** (un astre entre dans l'ombre d'un autre) ; aussi la chambre noire, le viseur.\n3. **Sources primaires** : le Soleil, l'écran allumé, la flamme de bougie. **Objets diffusants** : la Lune, la page de livre, le mur blanc.\n4. Le mur est un **objet diffusant** : il ne produit pas de lumière, il **renvoie** celle qu'il reçoit. Sans éclairage, il n'a rien à renvoyer : il est **invisible**."
+    },
+    {
+      "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+      "difficulte": 2,
+      "titre": "Voir loin, c'est voir tôt",
+      "consigne": "Détaille tes calculs en notation scientifique, avec les unités.",
+      "enonce": "> Données : c = 3,00 × 10⁸ m·s⁻¹ ; distance Terre-Soleil : 1,50 × 10¹¹ m ; une année vaut environ 3,16 × 10⁷ s.\n\n1. Calcule la durée que met la lumière du Soleil pour atteindre la Terre. Exprime-la en minutes et secondes.\n2. Qu'est-ce qu'une année-lumière ? Calcule sa valeur en mètres.\n3. L'étoile Proxima du Centaure est à **4,2 années-lumière**. Calcule cette distance en mètres.\n4. Explique la phrase : « voir loin, c'est voir tôt ».",
+      "bareme": [
+        { "critere": "Δt = 1,50 × 10¹¹ / 3,00 × 10⁸ = 500 s = 8 min 20 s", "points": 5 },
+        { "critere": "Définition (distance parcourue par la lumière en un an) et 9,5 × 10¹⁵ m", "points": 6 },
+        { "critere": "4,2 × 9,5 × 10¹⁵ ≈ 4,0 × 10¹⁶ m", "points": 4 },
+        { "critere": "La lumière met du temps : on voit l'astre tel qu'il était au départ de la lumière", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Δt = d / c = 1,50 × 10¹¹ / 3,00 × 10⁸ = **500 s**, soit **8 min 20 s**.\n2. Une **année-lumière** est la **distance parcourue par la lumière dans le vide en un an**. d = c × Δt = 3,00 × 10⁸ × 3,16 × 10⁷ ≈ **9,5 × 10¹⁵ m**.\n3. d = 4,2 × 9,5 × 10¹⁵ ≈ **4,0 × 10¹⁶ m**.\n4. La lumière met un certain temps à nous parvenir : nous voyons un astre **tel qu'il était quand la lumière l'a quitté**. Le Soleil observé est celui d'il y a environ huit minutes, Proxima du Centaure celle d'il y a 4,2 ans : plus un astre est loin, plus on voit son passé."
+    },
+    {
+      "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+      "difficulte": 3,
+      "titre": "Lire les spectres d'une nébuleuse",
+      "consigne": "Exploite les documents, classe les spectres et rédige une conclusion argumentée.",
+      "enonce": "**Document 1.** Trois sources :\n- **S₁** : une lampe à filament très chaud ;\n- **S₂** : un pointeur laser qui émet une seule radiation, de longueur d'onde 650 nm ;\n- **S₃** : un gaz chaud sous basse pression, qui émet des raies.\n\n**Document 2.** Raies d'émission de deux éléments (en nm) :\n\n| Hydrogène | 410 | 434 | 486 | 656 |\n| Hélium | 447 | 502 | 588 | 668 |\n\n**Document 3.** La lumière d'une nébuleuse (nuage de gaz chaud et peu dense) présente des raies d'émission à 434 nm, 486 nm et 656 nm.\n\n1. Décris le spectre de chaque source S₁, S₂ et S₃. Laquelle émet une lumière monochromatique ?\n2. À quel domaine (UV, visible, IR) appartiennent les radiations de 350 nm, 650 nm et 950 nm ?\n3. Comment Newton a-t-il montré que la lumière blanche est composite ?\n4. Quel élément la nébuleuse contient-elle ? Contient-elle de l'hélium ? Argumente à partir des documents.\n5. Pourquoi cette méthode est-elle précieuse pour les astronomes ?",
+      "bareme": [
+        { "critere": "S₁ spectre continu, S₂ une seule radiation (monochromatique), S₃ raies d'émission", "points": 4 },
+        { "critere": "350 nm UV, 650 nm visible (rouge), 950 nm IR", "points": 4 },
+        { "critere": "Dispersion par un prisme puis recombinaison du spectre en blanc", "points": 3 },
+        { "critere": "Raies de l'hydrogène présentes ; aucune raie de l'hélium : pas d'hélium détecté", "points": 6 },
+        { "critere": "Raies propres à chaque élément : identifier la composition sans y aller", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **S₁** (solide chaud) : **spectre continu**, dont l'aspect dépend de la température. **S₂** (laser) : une **seule radiation**, c'est une lumière **monochromatique**. **S₃** (gaz chaud à basse pression) : un **spectre de raies d'émission**.\n2. 350 nm < 400 nm : **ultraviolet** ; 650 nm, entre 400 et 800 nm : **visible** (rouge) ; 950 nm > 800 nm : **infrarouge**.\n3. Il a **dispersé** la lumière blanche avec un prisme, obtenant un spectre continu, puis l'a **recombiné** pour retrouver du blanc : le blanc est une **superposition** de radiations.\n4. Les raies de la nébuleuse (434, 486 et 656 nm) coïncident avec des raies de l'**hydrogène** : elle contient de l'**hydrogène**. Aucune raie de l'hélium (447, 502, 588, 668 nm) n'apparaît : ces mesures ne permettent pas de détecter d'hélium.\n5. Chaque élément possède ses **raies propres** : on identifie la composition d'un astre **sans y aller**, seulement en analysant sa lumière."
+    },
+    {
+      "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+      "difficulte": 1,
+      "titre": "Le rayon sur le miroir",
+      "consigne": "Justifie chaque réponse en précisant par rapport à quoi les angles sont mesurés.",
+      "enonce": "**Situation.** Un rayon lumineux arrive sur un miroir plan. Victor mesure un angle de **50°** entre le rayon incident et la **surface** du miroir.\n\n1. Qu'est-ce que la normale ? Par rapport à quoi mesure-t-on les angles en optique ?\n2. Quel est l'angle d'incidence ?\n3. Énonce les lois de la réflexion et donne l'angle de réflexion.\n4. Quelle différence y a-t-il entre la réflexion sur un miroir et la réflexion sur une feuille de papier ?",
+      "bareme": [
+        { "critere": "Normale : perpendiculaire à la surface au point d'incidence ; angles mesurés par rapport à elle", "points": 5 },
+        { "critere": "i = 90° − 50° = 40°", "points": 5 },
+        { "critere": "Angle de réflexion égal à l'angle d'incidence (40°), rayon réfléchi dans le plan d'incidence", "points": 5 },
+        { "critere": "Miroir poli : réflexion spéculaire ; papier rugueux : réflexion diffuse", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **normale** est la **perpendiculaire à la surface** au point d'incidence. Tous les angles se mesurent **par rapport à la normale**, jamais par rapport à la surface.\n2. La normale fait 90° avec la surface : i = 90° − 50° = **40°**.\n3. L'angle de réflexion est **égal** à l'angle d'incidence : **r = 40°** ; le rayon réfléchi appartient au **plan d'incidence**.\n4. Le miroir est une surface **polie** : la réflexion est **spéculaire**, dans une seule direction. Le papier est **rugueux** : la réflexion est **diffuse**, dans toutes les directions, ce qui le rend visible de partout."
+    },
+    {
+      "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+      "difficulte": 2,
+      "titre": "Le rayon qui plonge dans l'eau",
+      "consigne": "Écris la loi utilisée, détaille le calcul et conclus par une phrase.",
+      "enonce": "**Situation.** Un rayon laser passe de l'air dans l'eau d'un aquarium. L'angle d'incidence vaut **i₁ = 45°**.\n\n> Données : n(air) = 1,00 ; n(eau) = 1,33 ; sin 45° ≈ 0,707.\n\n1. Écris la loi de Snell-Descartes pour la réfraction.\n2. Calcule le sinus de l'angle de réfraction i₂, puis i₂ (à la calculatrice).\n3. Le rayon s'est-il rapproché ou écarté de la normale ? Était-ce prévisible ? Justifie.\n4. Explique pourquoi un bâton plongé dans l'eau semble brisé.",
+      "bareme": [
+        { "critere": "n₁ × sin i₁ = n₂ × sin i₂", "points": 4 },
+        { "critere": "sin i₂ = 0,707 / 1,33 ≈ 0,532 et i₂ ≈ 32°", "points": 7 },
+        { "critere": "Rapproché de la normale, car l'eau est plus réfringente que l'air", "points": 5 },
+        { "critere": "Bâton brisé : la lumière qui sort de l'eau est déviée par réfraction", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **n₁ × sin i₁ = n₂ × sin i₂**, les angles étant mesurés par rapport à la normale.\n2. sin i₂ = n₁ × sin i₁ / n₂ = 1,00 × 0,707 / 1,33 ≈ **0,532**, d'où **i₂ ≈ 32°**.\n3. i₂ (32°) < i₁ (45°) : le rayon s'est **rapproché de la normale**. C'était prévisible : en passant dans un milieu **plus réfringent** (n plus grand), le rayon se rapproche de la normale.\n4. La lumière qui vient de la partie immergée **change de direction** en sortant de l'eau (réfraction) : l'œil la reçoit comme si elle venait d'un autre endroit, et la partie immergée paraît décalée : le bâton semble brisé."
+    },
+    {
+      "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+      "difficulte": 3,
+      "titre": "Sortir de l'eau, ou rester prisonnier",
+      "consigne": "Mène les calculs avec la loi de Snell-Descartes et justifie chaque conclusion.",
+      "enonce": "**Situation.** Au fond d'une piscine, un projecteur envoie des rayons vers la surface de l'eau, qui débouchent dans l'air.\n\n> Données : n(eau) = 1,33 ; n(air) = 1,00.\n\n1. Un rayon arrive sur la surface avec un angle d'incidence de **30°**. Calcule l'angle de réfraction dans l'air. Le rayon se rapproche-t-il ou s'écarte-t-il de la normale ?\n2. On augmente l'angle d'incidence. L'angle limite est l'angle d'incidence pour lequel le rayon réfracté fait **90°** avec la normale. Calcule cet angle limite.\n3. Que se passe-t-il pour un rayon qui arrive sous **60°** ? Nomme le phénomène.\n4. Explique comment ce phénomène permet à une fibre optique de guider la lumière.\n5. Si le projecteur émettait de la lumière blanche à travers un prisme de verre, quelle radiation serait la plus déviée ? Pourquoi ?",
+      "bareme": [
+        { "critere": "sin i₂ = 1,33 × 0,5 = 0,665, i₂ ≈ 42° ; le rayon s'écarte de la normale", "points": 5 },
+        { "critere": "sin i(lim) = 1,00 / 1,33 ≈ 0,752, i(lim) ≈ 49°", "points": 5 },
+        { "critere": "60° > angle limite : réflexion totale, aucun rayon réfracté", "points": 4 },
+        { "critere": "Fibre : réflexions totales successives qui guident la lumière", "points": 3 },
+        { "critere": "Violet le plus dévié : l'indice dépend de la longueur d'onde (dispersion)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. n(eau) × sin 30° = n(air) × sin i₂ : sin i₂ = 1,33 × 0,500 = **0,665**, d'où **i₂ ≈ 42°**. Le rayon passe dans un milieu **moins réfringent** : il **s'écarte** de la normale (42° > 30°).\n2. Pour i₂ = 90° : 1,33 × sin i(lim) = 1,00 × sin 90° = 1,00, donc sin i(lim) = 1,00 / 1,33 ≈ 0,752 et **i(lim) ≈ 49°**.\n3. 60° dépasse l'angle limite : il n'y a **plus de rayon réfracté**, toute la lumière est **réfléchie** dans l'eau. C'est la **réflexion totale**.\n4. Dans une fibre optique, la lumière se propage dans un cœur plus réfringent que ce qui l'entoure et frappe la paroi au-delà de l'angle limite : elle subit des **réflexions totales successives** et reste guidée sur des kilomètres.\n5. L'indice de réfraction **dépend de la longueur d'onde** : le **violet** est plus dévié que le rouge. C'est la **dispersion**, qui sépare les radiations de la lumière blanche (comme dans l'arc-en-ciel)."
+    },
+    {
+      "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+      "difficulte": 1,
+      "titre": "Vergence et distance focale",
+      "consigne": "Détaille tes calculs en convertissant les longueurs en mètres.",
+      "enonce": "1. Comment reconnaît-on une lentille convergente au toucher ?\n2. Écris la relation entre la vergence C et la distance focale f′, avec leurs unités.\n3. Calcule la vergence d'une lentille de distance focale **25 cm**.\n4. Des lunettes de lecture portent l'indication **+2**. Que signifie ce nombre ? Calcule la distance focale correspondante.\n5. Que devient un rayon qui passe par le centre optique ? Un rayon qui arrive parallèlement à l'axe optique ?",
+      "bareme": [
+        { "critere": "Plus épaisse au centre qu'aux bords", "points": 3 },
+        { "critere": "C = 1 / f′, C en dioptries, f′ en mètres", "points": 4 },
+        { "critere": "C = 1 / 0,25 = 4 δ", "points": 4 },
+        { "critere": "+2 est une vergence de 2 δ ; f′ = 0,50 m", "points": 5 },
+        { "critere": "Non dévié par O ; parallèle à l'axe : repart par F′", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Une lentille convergente est **plus épaisse au centre qu'aux bords**.\n2. **C = 1 / f′**, avec C en **dioptries** (δ) et f′ en **mètres**.\n3. f′ = 25 cm = 0,25 m. C = 1 / 0,25 = **4 δ**.\n4. « +2 » est une **vergence** : C = +2 δ (lentille convergente). f′ = 1 / C = 1 / 2 = **0,50 m**.\n5. Un rayon passant par le **centre optique O** n'est **pas dévié**. Un rayon arrivant **parallèlement à l'axe** repart en passant par le **foyer image F′**."
+    },
+    {
+      "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+      "difficulte": 2,
+      "titre": "La lentille qui brûle le papier",
+      "consigne": "Exploite l'expérience et réponds en justifiant chaque étape par le cours.",
+      "enonce": "**Situation.** Lors d'une sortie, Noé tient une lentille face au Soleil. Les rayons du Soleil arrivent parallèlement à l'axe optique. En éloignant une feuille, il obtient un petit point très lumineux quand la feuille est à **12,5 cm** de la lentille.\n\n1. Comment appelle-t-on le point lumineux obtenu ? Justifie.\n2. Déduis-en la distance focale, puis la vergence de la lentille.\n3. Où se trouve le foyer objet F de cette lentille ?\n4. Une deuxième lentille, plus bombée, a une vergence de 20 δ. Laquelle des deux est la plus convergente ? À quelle distance de cette deuxième lentille faudrait-il placer la feuille ?",
+      "bareme": [
+        { "critere": "Foyer image F′ : point de convergence des rayons parallèles à l'axe", "points": 5 },
+        { "critere": "f′ = 0,125 m ; C = 1 / 0,125 = 8 δ", "points": 6 },
+        { "critere": "F symétrique de F′ par rapport à O, à 12,5 cm de l'autre côté", "points": 4 },
+        { "critere": "La lentille de 20 δ est la plus convergente ; f′ = 0,050 m = 5,0 cm", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les rayons du Soleil arrivent **parallèlement à l'axe** : ils convergent au **foyer image F′**.\n2. f′ = OF′ = 12,5 cm = **0,125 m**. C = 1 / f′ = 1 / 0,125 = **8 δ**.\n3. Le foyer objet F est le **symétrique de F′ par rapport au centre optique O** : à **12,5 cm** de la lentille, **de l'autre côté**.\n4. La vergence la plus grande correspond à la lentille la **plus convergente** : celle de **20 δ** (plus bombée). Sa distance focale : f′ = 1 / 20 = **0,050 m = 5,0 cm** ; c'est là qu'il faudrait placer la feuille."
+    },
+    {
+      "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+      "difficulte": 3,
+      "titre": "L'œil de Margot",
+      "consigne": "Utilise le modèle de l'œil réduit et argumente chaque réponse à l'aide du cours.",
+      "enonce": "**Situation.** On modélise l'œil de Margot par une lentille convergente (le cristallin), un diaphragme et un écran. Quand Margot regarde un objet très lointain, les rayons arrivent parallèlement à l'axe, et son cristallin a une distance focale de **17 mm**.\n\n1. Associe chaque élément de l'œil (cristallin, iris et pupille, rétine) à son équivalent dans le modèle.\n2. Calcule la vergence du cristallin quand Margot regarde au loin.\n3. Pour que l'image d'un objet lointain soit nette, où doit se trouver la rétine ? Justifie avec un rayon particulier.\n4. Margot lit maintenant un livre proche. Comment son œil garde-t-il une image nette ? Comment s'appelle ce phénomène ?\n5. Le frère de Margot est myope : chez lui, l'image d'un objet lointain se forme en avant de la rétine. Quel type de lentille corrige ce défaut ? Quel signe a sa vergence ? Et pour leur grand-père, dont le cristallin a perdu sa souplesse, comment s'appelle le défaut ?",
+      "bareme": [
+        { "critere": "Cristallin = lentille convergente ; iris et pupille = diaphragme ; rétine = écran", "points": 3 },
+        { "critere": "C = 1 / 0,017 ≈ 59 δ", "points": 4 },
+        { "critere": "Rétine au foyer image F′, à 17 mm : rayons parallèles à l'axe repartent par F′", "points": 4 },
+        { "critere": "Accommodation : déformation du cristallin qui garde l'image nette", "points": 4 },
+        { "critere": "Myopie corrigée par une lentille divergente (vergence négative) ; presbytie", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. **Cristallin** → lentille convergente ; **iris et pupille** → diaphragme ; **rétine** → écran.\n2. f′ = 17 mm = 0,017 m. C = 1 / 0,017 ≈ **59 δ**.\n3. Les rayons venant d'un objet lointain arrivent **parallèlement à l'axe** : ils repartent en passant par le **foyer image F′**. L'image se forme donc en F′ : pour qu'elle soit nette, la **rétine** doit se trouver **au foyer image**, à 17 mm du cristallin.\n4. Quand l'objet se rapproche, le **cristallin se déforme** (il devient plus bombé, donc plus convergent) pour garder l'image nette sur la rétine : c'est l'**accommodation**.\n5. La **myopie** (image en avant de la rétine) se corrige par une lentille **divergente**, de vergence **négative**. Le défaut du grand-père, dû à la perte de souplesse du cristallin avec l'âge, est la **presbytie**, corrigée pour la vision de près."
+    },
+    {
+      "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+      "difficulte": 1,
+      "titre": "Construire une image",
+      "consigne": "Décris les étapes de la construction avec précision, puis caractérise l'image.",
+      "enonce": "**Situation.** Un objet AB est placé perpendiculairement à l'axe optique d'une lentille convergente, avec A sur l'axe, **au-delà du foyer objet F**.\n\n1. Décris, étape par étape, la construction de l'image A′B′ à l'aide de deux rayons particuliers issus de B.\n2. L'image obtenue est-elle réelle ou virtuelle ? Droite ou renversée ? Peut-on l'observer sur un écran ?\n3. Si l'on place maintenant l'objet entre F et la lentille, quelle image obtient-on ? Quel instrument fonctionne ainsi ?",
+      "bareme": [
+        { "critere": "Rayon par O non dévié, rayon parallèle à l'axe qui repart par F′, B′ à l'intersection, A′ sur l'axe", "points": 9 },
+        { "critere": "Image réelle, renversée, observable sur un écran", "points": 6 },
+        { "critere": "Objet entre F et O : image virtuelle, droite, agrandie ; la loupe", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Construction :\n- depuis B, tracer le rayon qui passe par le **centre optique O** : il n'est **pas dévié** ;\n- depuis B, tracer le rayon **parallèle à l'axe** : il repart en passant par **F′** ;\n- leur **intersection** donne **B′** ;\n- **A′** est sur l'axe, à la verticale de B′.\n2. Objet au-delà de F : l'image est **réelle** et **renversée** ; elle se forme de l'autre côté de la lentille et peut être **projetée sur un écran**.\n3. Objet entre F et la lentille : l'image est **virtuelle**, **droite** et **agrandie** ; on la regarde à travers la lentille. C'est le fonctionnement de la **loupe**."
+    },
+    {
+      "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+      "difficulte": 2,
+      "titre": "Calculer la position de l'image",
+      "consigne": "Utilise les relations de conjugaison avec les mesures algébriques, en détaillant les calculs.",
+      "enonce": "**Situation.** Une lentille convergente a une distance focale **OF′ = +5,0 cm**. Un objet AB de hauteur **2,0 cm** est placé à **15 cm** avant la lentille : **OA = −15 cm**.\n\n1. Écris la relation de conjugaison et calcule OA′.\n2. Écris la relation du grandissement et calcule γ.\n3. Calcule la hauteur algébrique A′B′ de l'image.\n4. Décris l'image : réelle ou virtuelle, droite ou renversée, agrandie ou réduite. Justifie avec les signes et les valeurs obtenus.",
+      "bareme": [
+        { "critere": "1/OA′ − 1/OA = 1/OF′ ; OA′ = +7,5 cm", "points": 7 },
+        { "critere": "γ = OA′ / OA = −0,50", "points": 5 },
+        { "critere": "A′B′ = γ × AB = −1,0 cm", "points": 3 },
+        { "critere": "Réelle (OA′ > 0), renversée (γ < 0), réduite (|γ| < 1)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **1/OA′ − 1/OA = 1/OF′**, donc 1/OA′ = 1/OF′ + 1/OA = 1/5,0 + 1/(−15) = 3/15 − 1/15 = 2/15. D'où **OA′ = +7,5 cm**.\n2. **γ = A′B′/AB = OA′/OA** = 7,5 / (−15) = **−0,50**.\n3. A′B′ = γ × AB = −0,50 × 2,0 = **−1,0 cm**.\n4. OA′ > 0 : l'image est de l'autre côté de la lentille, elle est **réelle**. γ < 0 : elle est **renversée**. |γ| = 0,50 < 1 : elle est **réduite**, deux fois plus petite que l'objet."
+    },
+    {
+      "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+      "difficulte": 3,
+      "titre": "Vidéoprojecteur et loupe",
+      "consigne": "Applique les relations de conjugaison dans les deux situations, puis argumente sur la nature des images.",
+      "enonce": "**Situation 1.** Dans un vidéoprojecteur simplifié, une lentille convergente de distance focale **OF′ = +10 cm** forme sur un écran, placé à **3,0 m** de la lentille, l'image d'une petite plaque lumineuse de hauteur **2,4 cm**.\n\n**Situation 2.** Adèle observe un timbre à travers une loupe de distance focale **OF′ = +5,0 cm**, le timbre étant placé à **3,0 cm** de la lentille : **OA = −3,0 cm**.\n\n1. Situation 1 : quelle est la valeur de OA′ ? Calcule OA (arrondi au millimètre) : à quelle distance de la lentille faut-il placer la plaque ?\n2. Calcule le grandissement et la hauteur de l'image sur l'écran.\n3. Dans quel sens faut-il placer la plaque pour que l'image apparaisse à l'endroit ? Justifie.\n4. Situation 2 : calcule OA′ et γ. Caractérise l'image obtenue.\n5. Explique pourquoi l'image du vidéoprojecteur se « projette » alors que celle de la loupe se « regarde ».",
+      "bareme": [
+        { "critere": "OA′ = +300 cm ; 1/OA = 1/300 − 1/10 d'où OA ≈ −10,3 cm", "points": 5 },
+        { "critere": "γ ≈ −29 ; image d'environ 70 cm", "points": 4 },
+        { "critere": "γ < 0 : image renversée, donc plaque placée à l'envers", "points": 3 },
+        { "critere": "OA′ = −7,5 cm ; γ = +2,5 : image virtuelle, droite, agrandie", "points": 5 },
+        { "critere": "Image réelle projetable sur un écran ; image virtuelle visible seulement à travers la lentille", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. L'écran est de l'autre côté de la lentille : **OA′ = +300 cm**. Relation de conjugaison : 1/OA = 1/OA′ − 1/OF′ = 1/300 − 1/10 = (1 − 30)/300 = −29/300, donc **OA ≈ −10,3 cm** : la plaque est à environ **10,3 cm** avant la lentille, juste au-delà du foyer objet F.\n2. γ = OA′/OA = 300 / (−10,34) ≈ **−29**. A′B′ = γ × AB ≈ −29 × 2,4 ≈ **−70 cm** : l'image mesure environ **70 cm**.\n3. γ < 0 : l'image est **renversée**. Pour qu'elle apparaisse à l'endroit sur l'écran, il faut placer la plaque **à l'envers**.\n4. 1/OA′ = 1/OF′ + 1/OA = 1/5,0 + 1/(−3,0) = 3/15 − 5/15 = −2/15, donc **OA′ = −7,5 cm**. γ = OA′/OA = (−7,5) / (−3,0) = **+2,5**. OA′ < 0 : l'image est du même côté que l'objet, **virtuelle** ; γ > 0 : **droite** ; |γ| > 1 : **agrandie** 2,5 fois. C'est le fonctionnement de la loupe (objet entre F et la lentille).\n5. L'image du vidéoprojecteur est **réelle** : les rayons se croisent vraiment en A′B′, on peut la **projeter** sur un écran. L'image de la loupe est **virtuelle** : les rayons ne s'y croisent pas, on ne peut que la **regarder** à travers la lentille."
+    }
+  ]
+}

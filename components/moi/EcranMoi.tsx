@@ -6,7 +6,7 @@ import Vitrine from '@/components/moi/Vitrine'
 import BadgesVitrine from '@/components/moi/BadgesVitrine'
 import Palmares from '@/components/moi/Palmares'
 import BoutonRythme from '@/components/moi/BoutonRythme'
-import MatieresRevisees from '@/components/moi/MatieresRevisees'
+import ClassementAmis from '@/components/moi/ClassementAmis'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import OngletsMoi from '@/components/moi/OngletsMoi'
 import type { Standing } from '@/lib/percentile'
@@ -14,7 +14,8 @@ import type { FiltreClassement } from '@/lib/moi/classement'
 import type { BilanCouronnes, Couronne } from '@/lib/moi/couronnes'
 import type { BilanMoyenne } from '@/lib/moi/moyenne'
 import type { SemaineTravail } from '@/lib/moi/temps'
-import type { MatiereRevisee } from '@/lib/moi/matieres-revisees'
+import type { AmiClasse } from '@/lib/moi/classement-amis'
+import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import type { LignePalmares } from '@/lib/palmares/palmares'
 import type { BacTrajectory, TermPoint } from '@/lib/trajectoire-bac'
 
@@ -59,8 +60,8 @@ export type EcranMoiProps = {
   couronnes: { liste: readonly Couronne[]; bilan: BilanCouronnes }
   /** Null : le journal quotidien (084) n'est pas en base — pas de graphique qui ment. */
   rythme: { semaines: readonly SemaineTravail[]; phrase: string } | null
-  /** Les matières révisées, de la plus travaillée à la moins travaillée (lib/moi/matieres-revisees). */
-  matieres: readonly MatiereRevisee[]
+  /** Moi et mes amis, aux trophées et au temps de travail (lib/moi/classement-amis). */
+  amis: { joueurs: readonly AmiClasse[]; complet: boolean; monAvatar: AvatarAffiche | null }
   /** Null : aucune note, rien à projeter. */
   trajectoire: { trajectory: BacTrajectory; needsMigration: boolean } | null
 }
@@ -72,7 +73,7 @@ export default function EcranMoi({
   palmares,
   couronnes,
   rythme,
-  matieres,
+  amis,
   trajectoire,
 }: EcranMoiProps) {
   const badges = carte?.data.badges ?? []
@@ -90,7 +91,15 @@ export default function EcranMoi({
           abonne={carte.abonne}
           soudee
           compteurs={carte.compteurs}
-          boutonGauche={rythme ? <BoutonRythme semaines={rythme.semaines} phrase={rythme.phrase} /> : null}
+          tuileTravail={
+            rythme ? (
+              <BoutonRythme
+                semaines={rythme.semaines}
+                phrase={rythme.phrase}
+                valeur={carte.compteurs.find((c) => c.legende === 'travail')?.valeur}
+              />
+            ) : null
+          }
           // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
           // quelque chose (la saisie des moyennes de trimestre).
           tuileNotes={
@@ -120,8 +129,12 @@ export default function EcranMoi({
                   grade={classement.grade}
                   initiale={classement.initiale}
                 />
-                {/* Les matières que je révise le plus : une colonne chacune. */}
-                <MatieresRevisees matieres={matieres} />
+                {/* Moi face à mes amis : une colonne chacun, couronne au n° 1. */}
+                <ClassementAmis
+                  joueurs={amis.joueurs}
+                  complet={amis.complet}
+                  monAvatar={amis.monAvatar}
+                />
                 {trajectoire ? (
                   <TrajectoryCard
                     trajectory={trajectoire.trajectory}

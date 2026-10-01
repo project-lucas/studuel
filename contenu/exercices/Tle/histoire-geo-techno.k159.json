@@ -1,0 +1,3066 @@
+{
+ "niveau": "Tle",
+ "matiere": "histoire-geo-techno",
+ "exercices": [
+  {
+   "chapitre": "b84652fa-0cb6-5467-9b29-c4096f276169",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Centres, périphéries et marges",
+   "competence": "lire-tableau",
+   "situation": "Yanis prépare une fiche de révision sur la mondialisation : il range les territoires selon leur place dans les flux.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois types de territoires",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Type",
+      "Exemple",
+      "Place dans les flux"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Centre",
+       "New York",
+       "Commande et reçoit de très nombreux flux"
+      ],
+      [
+       "Périphérie intégrée",
+       "Chine côtière",
+       "Usines et ports tournés vers l’exportation"
+      ],
+      [
+       "Marge",
+       "Sahel",
+       "Très peu de ports, d’aéroports et de câbles"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui décrit le territoire le moins connecté aux flux.",
+     "aide": "Cherche la ligne du type « Marge ».",
+     "explication": "Une **marge** comme le Sahel a très peu de ports, d’aéroports et de câbles : elle reste à l’écart des flux."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Centres",
+      "Périphéries intégrées",
+      "Marges"
+     ],
+     "items": [
+      [
+       "Londres",
+       0
+      ],
+      [
+       "Tokyo",
+       0
+      ],
+      [
+       "Mexique du Nord",
+       1
+      ],
+      [
+       "Inde des métropoles",
+       1
+      ],
+      [
+       "Sahel",
+       2
+      ],
+      [
+       "Régions enclavées ou en guerre",
+       2
+      ]
+     ],
+     "enonce": "Range chaque territoire dans la bonne catégorie.",
+     "aide": "Appuie-toi sur les exemples du tableau : grandes métropoles, régions d’usines, régions isolées.",
+     "explication": "Les grandes **métropoles** (Londres, Tokyo) sont des centres ; le Mexique du Nord et l’Inde des métropoles sont des **périphéries intégrées** ; le Sahel et les régions enclavées ou en guerre sont des **marges**."
+    },
+    {
+     "type": "trous",
+     "texte": "Les pays les moins avancés pèsent environ ___ % du commerce mondial.",
+     "reponses": [
+      [
+       "1"
+      ]
+     ],
+     "banque": [
+      "1",
+      "10",
+      "25",
+      "50"
+     ],
+     "enonce": "Complète la phrase avec le bon chiffre.",
+     "aide": "C’est très peu : ces pays sont des marges.",
+     "explication": "Les pays les moins avancés ne représentent qu’environ **1 %** du commerce mondial."
+    }
+   ]
+  },
+  {
+   "chapitre": "b84652fa-0cb6-5467-9b29-c4096f276169",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La jupe de Casablanca",
+   "competence": "analyser-document",
+   "situation": "Une marque de vêtements imaginaire, Modélia, veut livrer ses boutiques européennes plus vite. Un article raconte sa décision, une carte la situe.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Modélia rapproche ses usines",
+     "auteur": "Article imaginé pour l’exercice, d’après le cours",
+     "blocs": [
+      "La marque Modélia fabrique ses jupes à Shanghai. Mais les bateaux mettent des semaines à rejoindre l’Europe et les [[d|délais]] de livraison inquiètent ses boutiques.",
+      "En 2024, la direction décide de produire une partie de sa collection à Casablanca, au Maroc : le coût du travail y reste bas, l’Europe est toute proche et les ports sont modernes."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux lieux de production et un marché",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      15,
+      135,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": -7.59,
+       "lat": 33.57,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit ce que Modélia veut raccourcir.",
+     "aide": "Cherche ce qui inquiète les boutiques dans la première phrase.",
+     "explication": "Modélia veut réduire les **délais** de livraison : c’est la raison du changement de lieu de production."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la lettre qui repère la nouvelle usine, à Casablanca.",
+     "aide": "Casablanca est sur la côte atlantique du Maroc, au nord-ouest de l’Afrique.",
+     "explication": "Casablanca est repérée par la lettre **B** : tout près de l’Europe, ce qui raccourcit le trajet."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le nearshoring : rapprocher la production du marché",
+      "Le protectionnisme : relever les droits de douane",
+      "La déréglementation : supprimer des règles aériennes",
+      "Le hub : concentrer les vols sur une plateforme"
+     ],
+     "reponse": 0,
+     "enonce": "Comment s’appelle la stratégie de Modélia ?",
+     "aide": "Elle rapproche l’usine de ses clients, sans quitter tout à fait l’étranger.",
+     "explication": "C’est le **nearshoring** : une entreprise rapproche une partie de sa production de son marché, comme les usines qui partent vers le Maroc ou le Mexique."
+    },
+    {
+     "type": "trous",
+     "texte": "Une entreprise choisit ses implantations selon le coût du ___, la taille du ___ et la qualité des ___.",
+     "reponses": [
+      [
+       "travail"
+      ],
+      [
+       "marché"
+      ],
+      [
+       "infrastructures"
+      ]
+     ],
+     "banque": [
+      "travail",
+      "marché",
+      "infrastructures",
+      "climat",
+      "drapeau"
+     ],
+     "enonce": "Complète avec les trois critères de choix des firmes transnationales.",
+     "aide": "Un des critères est cité dans le second paragraphe de l’article.",
+     "explication": "Les firmes regardent le coût du **travail**, la taille du **marché** et la qualité des **infrastructures** (ports, routes, réseaux)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b84652fa-0cb6-5467-9b29-c4096f276169",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui décide ? États, régions, firmes",
+   "competence": "raisonner",
+   "situation": "Lina compare les acteurs qui orientent la mondialisation : elle lit un texte, puis trie des décisions selon leur effet sur les échanges.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les règles du jeu changent",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Les États peuvent attirer les investisseurs, par des zones franches ou une fiscalité avantageuse, mais aussi fermer leurs frontières : en 2018, puis fortement en 2025, les États-Unis relèvent leurs droits de douane.",
+      "Les organisations régionales, comme l’ASEAN ou l’Union européenne, facilitent les échanges entre leurs membres. Les firmes, elles, se [[f|relocalisent]] parfois près de leurs clients."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois acteurs",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Acteur",
+      "Exemple de décision"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "États",
+       "Zone franche, droits de douane, sanctions"
+      ],
+      [
+       "Organisations régionales",
+       "Libre circulation des marchandises entre membres"
+      ],
+      [
+       "Firmes transnationales",
+       "Choix d’une usine selon le coût du travail"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Attire les flux",
+      "Freine les flux"
+     ],
+     "items": [
+      [
+       "Créer une zone franche",
+       0
+      ],
+      [
+       "Offrir une fiscalité avantageuse",
+       0
+      ],
+      [
+       "Supprimer les douanes entre membres",
+       0
+      ],
+      [
+       "Relever les droits de douane",
+       1
+      ],
+      [
+       "Sanctionner un pays (Russie, depuis 2022)",
+       1
+      ]
+     ],
+     "enonce": "Classe chaque décision selon son effet sur les échanges.",
+     "aide": "Une barrière gêne les échanges ; une facilité les encourage.",
+     "explication": "Zone franche, fiscalité avantageuse et suppression des douanes **attirent** les flux ; droits de douane et sanctions les **freinent** : c’est du protectionnisme."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui désigne le choix d’une firme de rapprocher sa production de ses clients.",
+     "aide": "C’est un verbe de la dernière phrase.",
+     "explication": "Les firmes se **relocalisent** : elles déplacent une partie de leur production, par exemple vers le Mexique ou le Maroc."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui décrit ce que font les organisations régionales.",
+     "aide": "Cherche la ligne « Organisations régionales ».",
+     "explication": "Les organisations régionales (UE, ASEAN, ACEUM) **facilitent les échanges entre leurs membres**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "En couleur claire, avec des symboles pour les conflits et les sanctions",
+      "En couleur foncée, comme les pôles, avec des flèches vers eux",
+      "En cercles proportionnels à la population de chaque pays",
+      "En couleur intermédiaire, reliés aux pôles par des flèches"
+     ],
+     "reponse": 0,
+     "enonce": "Sur le croquis de la mondialisation, comment représente-t-on les marges ?",
+     "aide": "Les marges sont les territoires les moins intégrés : leur couleur est la plus discrète.",
+     "explication": "Les **marges** (Sahel, Asie centrale, Afrique centrale) sont en couleur claire ; des symboles signalent les barrières, les sanctions et les conflits."
+    }
+   ]
+  },
+  {
+   "chapitre": "41f83a50-11c4-50c8-a05f-92b02cf8fee7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur l’île de Manhattan",
+   "competence": "observer-schema",
+   "situation": "Sacha prépare un croquis de New York : il repère sur un plan de Manhattan les quartiers qui font de la ville un centre de la mondialisation.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan simplifié de Manhattan",
+     "largeur": 320,
+     "hauteur": 400,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         360
+        ],
+        [
+         100,
+         300
+        ],
+        [
+         112,
+         240
+        ],
+        [
+         138,
+         170
+        ],
+        [
+         162,
+         100
+        ],
+        [
+         192,
+         48
+        ],
+        [
+         226,
+         34
+        ],
+        [
+         238,
+         62
+        ],
+        [
+         216,
+         124
+        ],
+        [
+         192,
+         192
+        ],
+        [
+         172,
+         252
+        ],
+        [
+         152,
+         316
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 52,
+       "y": 200,
+       "texte": "Hudson",
+       "italique": true,
+       "taille": "petit",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 274,
+       "y": 240,
+       "texte": "East River",
+       "italique": true,
+       "taille": "petit",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 132,
+       "cy": 338,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "wall",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 62,
+       "y": 372,
+       "texte": "Wall Street",
+       "vers": [
+        122,
+        345
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 228,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "midtown",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 62,
+       "y": 262,
+       "texte": "Midtown",
+       "vers": [
+        140,
+        237
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 214,
+       "r": 10,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "onu",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 268,
+       "y": 290,
+       "texte": "Siège de l’ONU",
+       "vers": [
+        191,
+        219
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 168,
+       "cy": 136,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "parc",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 268,
+       "y": 150,
+       "texte": "Central Park",
+       "vers": [
+        180,
+        138
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 70,
+       "r": 12,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "harlem",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 88,
+       "y": 60,
+       "texte": "Harlem",
+       "vers": [
+        188,
+        68
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "wall"
+     ],
+     "enonce": "Touche le quartier où se trouvent les deux premières bourses du monde (NYSE et Nasdaq).",
+     "aide": "Les bourses sont à la pointe sud de l’île.",
+     "explication": "**Wall Street**, au sud de Manhattan, abrite le New York Stock Exchange et le Nasdaq."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "onu"
+     ],
+     "enonce": "Touche le lieu où l’Assemblée générale réunit chaque automne les chefs d’État.",
+     "aide": "Ce siège se trouve au bord de l’East River.",
+     "explication": "L’**ONU** a son siège à New York depuis 1952, au bord de l’East River."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Wall Street",
+       "Fonction financière"
+      ],
+      [
+       "Siège de l’ONU",
+       "Fonction politique"
+      ],
+      [
+       "Broadway",
+       "Fonction culturelle"
+      ]
+     ],
+     "enonce": "Associe chaque lieu à la fonction qu’il incarne.",
+     "aide": "Bourse, organisation internationale, théâtres : trois fonctions différentes.",
+     "explication": "**Wall Street** est le cœur financier, l’**ONU** le lieu du pouvoir politique mondial et **Broadway** celui des spectacles."
+    }
+   ]
+  },
+  {
+   "chapitre": "41f83a50-11c4-50c8-a05f-92b02cf8fee7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les chiffres d’une ville-monde",
+   "competence": "lire-graphique",
+   "situation": "Clara lit trois chiffres sur New York : les habitants de la ville, ceux de l’aire métropolitaine et les visiteurs de chaque année.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "New York en millions de personnes",
+     "source": "Chiffres arrondis d’après le cours.",
+     "categories": [
+      "Habitants de la ville",
+      "Habitants de l’aire métropolitaine",
+      "Visiteurs chaque année"
+     ],
+     "series": [
+      {
+       "nom": "Personnes",
+       "valeurs": [
+        8.3,
+        19,
+        60
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Personnes",
+      "unite": "en millions",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "valeurs": false
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les trois fonctions d’une ville-monde",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Fonction",
+      "Exemples à New York"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Financière",
+       "NYSE, Nasdaq, grandes banques"
+      ],
+      [
+       "Politique",
+       "Siège de l’ONU, Assemblée générale"
+      ],
+      [
+       "Culturelle",
+       "Met, MoMA, Broadway, universités"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche la barre qui montre le chiffre le plus élevé.",
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Les **visiteurs** sont les plus nombreux : environ 60 millions chaque année."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "enonce": "Combien de fois y a-t-il plus de visiteurs par an que d’habitants dans la ville ? (Arrondis à l’unité.)",
+     "aide": "Divise 60 par 8,3.",
+     "explication": "60 ÷ 8,3 ≈ 7,2, soit environ **7 fois** plus : la ville accueille bien plus de visiteurs qu’elle n’a d’habitants.",
+     "tolerance": 0.3
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "enonce": "Combien de millions d’habitants de l’aire métropolitaine vivent hors de la ville de New York ? (Arrondis à l’unité.)",
+     "aide": "Soustrais les habitants de la ville aux habitants de l’aire.",
+     "explication": "19 − 8,3 = 10,7, soit environ **11 millions** : l’aire métropolitaine déborde largement de la ville.",
+     "unite": "millions",
+     "tolerance": 0.5
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Financière",
+      "Politique",
+      "Culturelle"
+     ],
+     "items": [
+      [
+       "New York Stock Exchange",
+       0
+      ],
+      [
+       "Goldman Sachs",
+       0
+      ],
+      [
+       "Assemblée générale de l’ONU",
+       1
+      ],
+      [
+       "Siège de l’ONU",
+       1
+      ],
+      [
+       "Metropolitan Museum",
+       2
+      ],
+      [
+       "Théâtres de Broadway",
+       2
+      ]
+     ],
+     "enonce": "Range chaque élément dans la fonction qu’il illustre.",
+     "aide": "Bourse et banques d’un côté, organisation internationale de l’autre, musées et spectacles enfin.",
+     "explication": "La **bourse** et la banque relèvent de la fonction financière, l’**ONU** de la fonction politique, le musée et les théâtres de la fonction culturelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "41f83a50-11c4-50c8-a05f-92b02cf8fee7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ville puissante, mais fragile",
+   "competence": "analyser-document",
+   "situation": "Noa veut montrer que New York cumule les pouvoirs mais reste vulnérable et inégalitaire : elle croise une frise et un texte.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois dates new-yorkaises",
+     "debut": 1940,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "onu",
+       "date": 1952,
+       "nom": "Siège de l’ONU"
+      },
+      {
+       "id": "att",
+       "date": 2001,
+       "nom": "11 septembre"
+      },
+      {
+       "id": "sandy",
+       "date": 2012,
+       "nom": "Ouragan Sandy"
+      }
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une ville sous tension",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Bâtie au bord de l’océan, la ville est vulnérable : l’ouragan de 2012 a inondé des quartiers entiers, et la montée du niveau de la mer menace ses côtes.",
+      "Dans le même temps, les loyers s’envolent. La [[g|gentrification]] gagne Brooklyn et Harlem, tandis que des dizaines de milliers de personnes n’ont pas de logement."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "Installation du siège de l’ONU",
+      "Attentats du 11 septembre",
+      "Passage de l’ouragan Sandy"
+     ],
+     "enonce": "Range ces trois événements du plus ancien au plus récent.",
+     "aide": "Regarde leur position sur la frise, de gauche à droite.",
+     "explication": "**1952**, **2001**, **2012** : le pouvoir politique mondial s’installe d’abord, les fragilités de la ville apparaissent ensuite."
+    },
+    {
+     "type": "nombre",
+     "reponse": 49,
+     "enonce": "Combien d’années séparent l’installation du siège de l’ONU des attentats du 11 septembre ?",
+     "aide": "Soustrais 1952 à 2001.",
+     "explication": "2001 − 1952 = **49 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot qui désigne l’arrivée d’habitants plus aisés dans un quartier populaire.",
+     "aide": "C’est le mot qui suit « La » dans le second paragraphe.",
+     "explication": "La **gentrification** remplace peu à peu des habitants modestes par des habitants plus riches, ce qui fait monter les loyers."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une ville-monde très puissante reste vulnérable et très inégalitaire",
+      "Une ville-monde puissante est à l’abri des catastrophes naturelles",
+      "Une ville-monde riche ne connaît aucune inégalité entre quartiers",
+      "Une ville-monde perd son rôle dès qu’elle subit une seule crise"
+     ],
+     "reponse": 0,
+     "enonce": "Que montrent ensemble la frise et le texte ?",
+     "aide": "Relis les deux documents : que dit-on de la puissance, et que dit-on des fragilités ?",
+     "explication": "New York cumule les **pouvoirs** mais reste **vulnérable** (attentats, ouragan, mer qui monte) et **inégalitaire** (loyers, sans-abri)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e37cb5a-befa-52f4-974d-cae4e9415561",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le moyeu et les rayons",
+   "competence": "observer-schema",
+   "situation": "Hugo découvre le modèle « hub and spokes » : les passagers de villes moyennes changent d’avion sur une grande plateforme pour partir loin.",
+   "documents": [
+    {
+     "id": "hub",
+     "type": "schema",
+     "titre": "Un hub et ses rayons",
+     "largeur": 320,
+     "hauteur": 280,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        50
+       ],
+       "a": [
+        130,
+        112
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        140
+       ],
+       "a": [
+        120,
+        140
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        230
+       ],
+       "a": [
+        130,
+        168
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        112
+       ],
+       "a": [
+        250,
+        50
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        140
+       ],
+       "a": [
+        250,
+        140
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        168
+       ],
+       "a": [
+        250,
+        230
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 50,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Brest",
+       "id": "v1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 140,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Metz",
+       "id": "v2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 230,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Pau",
+       "id": "v3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 140,
+       "r": 38,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Roissy",
+       "id": "cdg",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 50,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Tokyo",
+       "id": "d1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 140,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Dakar",
+       "id": "d2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 230,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Lima",
+       "id": "d3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 266,
+       "texte": "Villes moyennes",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 266,
+       "texte": "Destinations lointaines",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hub",
+     "reponse": [
+      "cdg"
+     ],
+     "enonce": "Touche la plateforme où les passagers changent d’avion.",
+     "aide": "Toutes les flèches arrivent à cet endroit, puis repartent.",
+     "explication": "C’est **Roissy** : le hub rassemble les passagers de nombreuses villes et les redistribue vers le monde entier."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il change d’avion au hub pour rejoindre sa destination lointaine",
+      "Il reste dans le même avion jusqu’à sa destination finale",
+      "Il prend le train depuis Brest jusqu’à Tokyo sans escale",
+      "Il attend à Brest qu’une ligne directe soit ouverte"
+     ],
+     "reponse": 0,
+     "enonce": "Un passager part de Brest pour Tokyo via Roissy. Que fait-il au hub ?",
+     "aide": "Regarde le sens des flèches : elles arrivent au hub puis repartent vers d’autres avions.",
+     "explication": "Le passager **change d’avion au hub** : c’est ce qu’on appelle une correspondance."
+    },
+    {
+     "type": "trous",
+     "texte": "Dans le modèle « hub and ___ », les compagnies concentrent leurs vols sur un pôle ___.",
+     "reponses": [
+      [
+       "spokes",
+       "spoke"
+      ],
+      [
+       "unique"
+      ]
+     ],
+     "banque": [
+      "spokes",
+      "unique",
+      "multiple",
+      "wall"
+     ],
+     "enonce": "Complète la phrase qui décrit ce modèle.",
+     "aide": "« Moyeu et rayons » : tout part d’un seul centre.",
+     "explication": "C’est le modèle **hub and spokes** : les vols sont concentrés sur un pôle **unique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e37cb5a-befa-52f4-974d-cae4e9415561",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Correspondance TGV-avion",
+   "competence": "lire-carte",
+   "situation": "Léa habite à Lille. Elle rejoint Roissy en TGV pour y prendre un avion : une carte montre les villes reliées à la gare, une fiche donne ses horaires.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Villes reliées à la gare TGV de Roissy",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lieu": "rennes",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      },
+      {
+       "id": "p",
+       "lieu": "paris",
+       "nom": "Paris",
+       "symbole": "point",
+       "teinte": "encre"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Le voyage de Léa",
+     "sousTitre": "Situation imaginée pour l’exercice",
+     "emoji": "✈️",
+     "lignes": [
+      {
+       "texte": "Arrivée du TGV à Roissy",
+       "valeur": "10 h 20"
+      },
+      {
+       "texte": "Fin de l’enregistrement",
+       "valeur": "1 h avant le départ"
+      },
+      {
+       "texte": "Décollage de l’avion",
+       "valeur": "13 h 20",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la lettre qui repère Lille, la ville de départ de Léa.",
+     "aide": "Lille est la grande ville du nord de la France, près de la frontière belge.",
+     "explication": "Lille est repérée par la lettre **A** : la gare de Roissy est reliée à Lille et à Bruxelles au nord."
+    },
+    {
+     "type": "nombre",
+     "reponse": 120,
+     "enonce": "Combien de minutes Léa a-t-elle entre son arrivée à Roissy et la fin de l’enregistrement ?",
+     "aide": "Calcule d’abord l’heure de fin de l’enregistrement : 1 h avant 13 h 20.",
+     "explication": "L’enregistrement ferme à 12 h 20. De 10 h 20 à 12 h 20, il y a **2 heures**, soit **120 minutes**.",
+     "unite": "minutes"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle relie plusieurs modes de transport : avion, train, route",
+      "Elle ne sert qu’aux marchandises et jamais aux voyageurs",
+      "Elle relie seulement deux avions entre eux sur la piste",
+      "Elle remplace les lignes de train par des lignes d’avion"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi Roissy est-il une plateforme multimodale ?",
+     "aide": "Pense au voyage de Léa : elle arrive par un mode de transport et repart par un autre.",
+     "explication": "Roissy est **multimodal** : le RER, le TGV, les autoroutes et l’avion s’y rejoignent."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e37cb5a-befa-52f4-974d-cae4e9415561",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un hub, des atouts et des débats",
+   "competence": "argumenter",
+   "situation": "Tom prépare un débat sur Roissy : il lit un article sur le projet de nouveau terminal et confronte les atouts et les limites de la plateforme.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un terminal abandonné",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Le projet d’un quatrième terminal devait accueillir encore plus de passagers. Mais les riverains subissent déjà le bruit des avions, et l’aviation doit réduire ses émissions.",
+      "En [[a|2021]], le projet est abandonné, alors que les hubs du Golfe et d’Istanbul concurrencent Roissy."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quelques grands hubs européens et proches",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Hub",
+      "Compagnie principale"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Paris-CDG",
+       "Air France"
+      ],
+      [
+       "Londres-Heathrow",
+       "British Airways"
+      ],
+      [
+       "Francfort",
+       "Lufthansa"
+      ],
+      [
+       "Amsterdam-Schiphol",
+       "KLM"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche l’année où le projet de quatrième terminal est abandonné.",
+     "aide": "L’année est dans le dernier paragraphe.",
+     "explication": "Le projet est abandonné en **2021**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Atouts de la plateforme",
+      "Limites et débats"
+     ],
+     "items": [
+      [
+       "Environ 90 000 emplois directs",
+       0
+      ],
+      [
+       "Une des premières places de fret en Europe",
+       0
+      ],
+      [
+       "Gare TGV au cœur du terminal 2",
+       0
+      ],
+      [
+       "Bruit pour les riverains",
+       1
+      ],
+      [
+       "Émissions de gaz à effet de serre",
+       1
+      ],
+      [
+       "Concurrence des hubs du Golfe",
+       1
+      ]
+     ],
+     "enonce": "Trie ces éléments : atouts ou limites de Roissy ?",
+     "aide": "Emplois, fret et gare sont des avantages ; bruit, climat et concurrence sont des inconvénients.",
+     "explication": "Emplois, **fret** et gare TGV sont des atouts ; **bruit**, émissions et concurrence sont des limites."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Paris-CDG",
+       "Air France"
+      ],
+      [
+       "Londres-Heathrow",
+       "British Airways"
+      ],
+      [
+       "Francfort",
+       "Lufthansa"
+      ],
+      [
+       "Amsterdam-Schiphol",
+       "KLM"
+      ]
+     ],
+     "enonce": "Associe chaque hub à sa compagnie principale.",
+     "aide": "Le tableau donne la réponse : relis chaque ligne.",
+     "explication": "Chaque grand hub repose sur une **compagnie principale** qui y concentre ses vols."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elles peuvent offrir de nombreuses correspondances en peu de temps",
+      "Elles sont toutes plus proches de Paris que Roissy",
+      "Elles interdisent aux compagnies européennes d’y atterrir",
+      "Elles ne transportent que du fret et aucun voyageur"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi les hubs du Golfe et d’Istanbul concurrencent-ils Roissy ?",
+     "aide": "Le succès d’un hub dépend du nombre de connexions possibles en peu de temps.",
+     "explication": "Un hub réussit grâce à ses **correspondances** nombreuses et rapides : les hubs du Golfe et d’Istanbul en proposent beaucoup vers l’Asie et l’Afrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e6c121-19f0-51b1-becd-68ee080e9425",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les repères de la guerre froide",
+   "competence": "se-reperer-temps",
+   "situation": "Maya révise la guerre froide : elle dispose de cinq repères à connaître.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Cinq repères",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Événement",
+      "Date"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Doctrine Truman",
+       "1947"
+      ],
+      [
+       "Crise des missiles de Cuba",
+       "1962"
+      ],
+      [
+       "Chute du mur de Berlin",
+       "1989"
+      ],
+      [
+       "Disparition de l’URSS",
+       "1991"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la date de la crise des missiles de Cuba.",
+     "aide": "Cherche la ligne « Crise des missiles de Cuba ».",
+     "explication": "La crise des missiles de Cuba a lieu en **1962** : le monde est alors au bord de la guerre nucléaire."
+    },
+    {
+     "type": "nombre",
+     "reponse": 44,
+     "enonce": "La guerre froide dure de la doctrine Truman à la disparition de l’URSS. Combien d’années cela fait-il ?",
+     "aide": "Soustrais 1947 à 1991.",
+     "explication": "1991 − 1947 = **44 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Doctrine Truman",
+      "Crise des missiles de Cuba",
+      "Chute du mur de Berlin",
+      "Disparition de l’URSS"
+     ],
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "aide": "Lis la colonne des dates.",
+     "explication": "**1947**, **1962**, **1989**, **1991** : le mur tombe deux ans avant la fin de l’URSS."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e6c121-19f0-51b1-becd-68ee080e9425",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Endiguement et deux blocs",
+   "competence": "analyser-document",
+   "situation": "Jules compare les deux camps de la guerre froide : un court texte explique l’endiguement, un tableau oppose les deux blocs.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux camps face à face",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "En 1947, les États-Unis adoptent la doctrine Truman : ils s’engagent à aider les pays menacés par le communisme. Cette politique s’appelle l’[[e|endiguement]].",
+      "De son côté, l’URSS répond par la doctrine Jdanov, qui partage le monde en deux camps. Les deux Grands s’affrontent sans jamais se faire la guerre directement."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les deux blocs",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Bloc de l’Ouest",
+      "Bloc de l’Est"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Chef de file",
+       "États-Unis",
+       "URSS"
+      ],
+      [
+       "Alliance militaire",
+       "OTAN",
+       "Pacte de Varsovie"
+      ],
+      [
+       "Aide économique",
+       "Plan Marshall",
+       "CAEM"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui désigne la politique américaine visant à empêcher l’extension du communisme.",
+     "aide": "C’est le mot entre crochets du premier paragraphe, après « s’appelle l’ ».",
+     "explication": "Cette politique s’appelle l’**endiguement** : empêcher le communisme de s’étendre."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case de l’alliance militaire du bloc de l’Est.",
+     "aide": "Cherche la ligne « Alliance militaire », colonne du bloc de l’Est.",
+     "explication": "Le bloc de l’Est s’appuie sur le **Pacte de Varsovie**, créé en 1955."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "enonce": "L’OTAN est créée en 1949 et le Pacte de Varsovie en 1955. Combien d’années les séparent ?",
+     "aide": "Soustrais 1949 à 1955.",
+     "explication": "1955 − 1949 = **6 ans** : le bloc de l’Est répond à l’alliance occidentale.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La menace nucléaire rendrait une guerre directe trop destructrice",
+      "Les deux pays ont signé la paix dès 1945 pour toujours",
+      "Leurs armées sont trop petites pour se faire la guerre",
+      "L’ONU leur interdit toute action militaire dans le monde"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi les deux Grands ne se font-ils jamais la guerre directement ?",
+     "aide": "Pense à l’arme que les deux possèdent.",
+     "explication": "Les deux superpuissances possèdent l’arme **nucléaire** : un affrontement direct serait trop destructeur, d’où les conflits indirects."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e6c121-19f0-51b1-becd-68ee080e9425",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les indépendances et le tiers monde",
+   "competence": "analyser-document",
+   "situation": "Inès étudie la décolonisation : une frise donne les grandes indépendances, un texte présente la conférence de Bandung.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques indépendances",
+     "debut": 1945,
+     "fin": 1965,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "inde",
+       "date": 1947,
+       "nom": "Inde"
+      },
+      {
+       "id": "indo",
+       "date": 1949,
+       "nom": "Indonésie"
+      },
+      {
+       "id": "ic",
+       "date": 1954,
+       "nom": "Indochine"
+      },
+      {
+       "id": "afr",
+       "date": 1960,
+       "nom": "Afrique (1960)"
+      },
+      {
+       "id": "alg",
+       "date": 1962,
+       "nom": "Algérie"
+      }
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Bandung, 1955",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "En 1955, à Bandung, les pays d’Asie et d’Afrique se réunissent. Ils forment le [[t|tiers monde]] et refusent de choisir entre les deux blocs.",
+      "En 1961, ils fondent le mouvement des non-alignés."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "afr"
+     ],
+     "enonce": "Touche l’événement qui marque l’année où la plupart des pays d’Afrique subsaharienne deviennent indépendants.",
+     "aide": "Cherche la date 1960.",
+     "explication": "**1960** est souvent appelée « l’année de l’Afrique » : de nombreux pays deviennent indépendants."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "enonce": "Combien d’années séparent la conférence de Bandung de l’indépendance de l’Algérie ?",
+     "aide": "Soustrais 1955 à 1962.",
+     "explication": "1962 − 1955 = **7 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le nom que reçoivent les pays d’Asie et d’Afrique qui ne choisissent aucun des deux blocs.",
+     "aide": "Ce sont deux mots du premier paragraphe.",
+     "explication": "Ces pays forment le **tiers monde**, qui refuse de choisir entre les États-Unis et l’URSS."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Ne choisir ni le bloc américain ni le bloc soviétique",
+      "Rejoindre l’OTAN pour se protéger de l’URSS",
+      "Rejoindre le Pacte de Varsovie contre les États-Unis",
+      "Rester colonie d’un pays européen le plus longtemps possible"
+     ],
+     "reponse": 0,
+     "enonce": "Que veulent dire les non-alignés, fondés en 1961 ?",
+     "aide": "Le mot « aligné » veut dire « rangé du côté de ».",
+     "explication": "Les **non-alignés** refusent de s’aligner sur l’un des deux blocs de la guerre froide."
+    }
+   ]
+  },
+  {
+   "chapitre": "886b5d68-7d94-5686-8aea-7f530bc5a49d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les premiers dans l’espace",
+   "competence": "se-reperer-temps",
+   "situation": "Nina prépare une affiche sur la conquête spatiale : elle place les grands événements sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La course à l’espace",
+     "debut": 1955,
+     "fin": 1985,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "spout",
+       "date": 1957,
+       "nom": "Spoutnik 1"
+      },
+      {
+       "id": "gaga",
+       "date": 1961,
+       "nom": "Gagarine"
+      },
+      {
+       "id": "tere",
+       "date": 1963,
+       "nom": "Terechkova"
+      },
+      {
+       "id": "apo",
+       "date": 1969,
+       "nom": "Apollo 11"
+      },
+      {
+       "id": "soy",
+       "date": 1975,
+       "nom": "Apollo-Soyouz"
+      },
+      {
+       "id": "ids",
+       "date": 1983,
+       "nom": "IDS"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "gaga"
+     ],
+     "enonce": "Touche l’événement qui marque le premier homme dans l’espace.",
+     "aide": "Il est soviétique et son vol date de 1961.",
+     "explication": "Youri **Gagarine** est le premier homme dans l’espace, le 12 avril 1961, à bord de Vostok 1."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Combien d’années séparent le premier satellite, Spoutnik 1, du vol de Gagarine ?",
+     "aide": "Soustrais 1957 à 1961.",
+     "explication": "1961 − 1957 = **4 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Youri Gagarine",
+       "Premier homme dans l’espace"
+      ],
+      [
+       "Valentina Terechkova",
+       "Première femme dans l’espace"
+      ],
+      [
+       "Alexeï Leonov",
+       "Première sortie dans l’espace"
+      ],
+      [
+       "Neil Armstrong",
+       "Premier pas sur la Lune"
+      ]
+     ],
+     "enonce": "Associe chaque personne à son exploit.",
+     "aide": "Trois sont soviétiques et un est américain.",
+     "explication": "**Gagarine** (1961), **Terechkova** (1963), **Leonov** (1965) : trois premières soviétiques ; **Armstrong** marche sur la Lune en 1969."
+    }
+   ]
+  },
+  {
+   "chapitre": "886b5d68-7d94-5686-8aea-7f530bc5a49d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le choc de Spoutnik",
+   "competence": "analyser-document",
+   "situation": "Emma étudie la réaction américaine au premier satellite soviétique : un article explique le choc, un tableau donne la riposte.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un satellite qui inquiète",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Le 4 octobre 1957, l’URSS lance Spoutnik 1, le premier satellite artificiel. Aux États-Unis, c’est un choc.",
+      "Car la fusée capable de mettre un satellite en orbite peut aussi lancer des [[m|missiles]] nucléaires sur l’Amérique."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "La riposte américaine",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Décision ou exploit"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1958",
+       "Création de la NASA"
+      ],
+      [
+       "1961",
+       "Kennedy vise la Lune avant la fin de la décennie"
+      ],
+      [
+       "1969",
+       "Apollo 11 : premiers pas sur la Lune"
+      ],
+      [
+       "1975",
+       "Apollo-Soyouz : arrimage en orbite"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi le satellite soviétique inquiète les Américains.",
+     "aide": "Une fusée peut transporter autre chose qu’un satellite.",
+     "explication": "Les États-Unis craignent que la fusée de Spoutnik ne lance des **missiles** nucléaires sur leur territoire."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "enonce": "Combien d’années s’écoulent entre l’objectif fixé par Kennedy et les premiers pas sur la Lune ?",
+     "aide": "Soustrais 1961 à 1969.",
+     "explication": "1969 − 1961 = **8 ans** : Kennedy avait promis la Lune avant la fin de la décennie.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La même fusée peut lancer un satellite ou un missile nucléaire",
+      "Un satellite peut tomber sur une ville et la détruire",
+      "Les satellites soviétiques portent tous des bombes atomiques",
+      "Les États-Unis n’avaient alors aucune fusée en construction"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi dit-on que la conquête spatiale est inséparable de la course aux armements ?",
+     "aide": "Relis la dernière phrase de l’article.",
+     "explication": "Un lanceur de satellite est aussi un **missile** en puissance : la technique spatiale sert à la guerre."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Création de la NASA",
+      "Objectif de la Lune fixé par Kennedy",
+      "Premiers pas sur la Lune",
+      "Arrimage d’Apollo et de Soyouz"
+     ],
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "aide": "Les dates sont dans la colonne de gauche du tableau.",
+     "explication": "**1958**, **1961**, **1969**, **1975** : les États-Unis passent de la riposte à la détente."
+    }
+   ]
+  },
+  {
+   "chapitre": "886b5d68-7d94-5686-8aea-7f530bc5a49d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la détente à la « guerre des étoiles »",
+   "competence": "raisonner",
+   "situation": "Adam compare deux moments de l’espace pendant la guerre froide : la coopération des années 1970 et le projet de bouclier de 1983.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un bouclier dans l’espace",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "En mars 1983, le président américain Ronald Reagan lance l’Initiative de défense stratégique : un bouclier de satellites et de lasers pour détruire les missiles soviétiques en vol.",
+      "Le projet est techniquement [[i|irréalisable]] à l’époque, mais l’URSS, en crise économique, ne peut pas suivre la nouvelle course."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux visages de l’espace",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1967",
+       "Traité de l’espace : pas d’armes nucléaires en orbite"
+      ],
+      [
+       "1975",
+       "Apollo et Soyouz s’arriment en orbite"
+      ],
+      [
+       "1983",
+       "Initiative de défense stratégique"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Coopération et limites",
+      "Rivalité et course"
+     ],
+     "items": [
+      [
+       "Traité de l’espace (1967)",
+       0
+      ],
+      [
+       "Arrimage Apollo-Soyouz (1975)",
+       0
+      ],
+      [
+       "Lancement de Spoutnik 1 (1957)",
+       1
+      ],
+      [
+       "Bouclier de Reagan (1983)",
+       1
+      ]
+     ],
+     "enonce": "Classe chaque événement : coopération ou rivalité ?",
+     "aide": "Les deux Grands se serrent la main en 1975, mais se défient en 1957 et en 1983.",
+     "explication": "Le traité de 1967 et l’arrimage de 1975 relèvent de la **détente** ; Spoutnik et le bouclier de 1983 relancent la **rivalité**."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui montre que le bouclier ne pouvait pas fonctionner à l’époque.",
+     "aide": "Cherche un adjectif dans la dernière phrase.",
+     "explication": "Le projet est **irréalisable** avec les techniques de 1983 : il sert surtout à faire pression sur l’URSS."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "enonce": "Combien d’années séparent l’arrimage d’Apollo et de Soyouz de l’annonce du bouclier de Reagan ?",
+     "aide": "Soustrais 1975 à 1983.",
+     "explication": "1983 − 1975 = **8 ans** : la détente laisse vite la place à une nouvelle tension.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il relance une course aux armements que l’économie soviétique ne peut plus suivre",
+      "Il installe de vrais lasers dans l’espace qui détruisent les missiles",
+      "Il oblige l’URSS à quitter l’ONU et à fermer ses frontières",
+      "Il coûte plus cher aux États-Unis qu’à l’URSS et les ruine"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ce projet contribue-t-il à affaiblir l’URSS ?",
+     "aide": "L’URSS est déjà en crise économique : que peut-elle faire face à une nouvelle course ?",
+     "explication": "L’URSS, déjà en crise, ne peut financer cette **nouvelle course aux armements** : la pression contribue à son affaiblissement."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a0f5507-a01d-5d69-b994-dd822af1ed30",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une matinée à New York et à Washington",
+   "competence": "lire-tableau",
+   "situation": "Lina reconstitue la chronologie du 11 septembre 2001 à partir d’un tableau d’heures (heure de New York).",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "La matinée du 11 septembre 2001",
+     "source": "D’après le cours. Heures de New York.",
+     "colonnes": [
+      "Heure",
+      "Événement"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "8 h 46",
+       "Un avion percute la tour nord du World Trade Center"
+      ],
+      [
+       "9 h 03",
+       "Un deuxième avion percute la tour sud"
+      ],
+      [
+       "9 h 37",
+       "Un troisième avion s’écrase sur le Pentagone"
+      ],
+      [
+       "9 h 59",
+       "La tour sud s’effondre"
+      ],
+      [
+       "10 h 28",
+       "La tour nord s’effondre"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’événement qui se produit à 9 h 37.",
+     "aide": "Cherche la ligne de 9 h 37.",
+     "explication": "À 9 h 37, un avion s’écrase sur le **Pentagone**, à Washington : un symbole militaire de la puissance américaine."
+    },
+    {
+     "type": "nombre",
+     "reponse": 17,
+     "enonce": "Combien de minutes séparent le premier avion du deuxième ?",
+     "aide": "Passe de 8 h 46 à 9 h 03.",
+     "explication": "De 8 h 46 à 9 h 03, il s’écoule **17 minutes**.",
+     "unite": "minutes"
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Un avion percute la tour nord",
+      "Un avion s’écrase sur le Pentagone",
+      "La tour sud s’effondre",
+      "La tour nord s’effondre"
+     ],
+     "enonce": "Range ces événements du plus tôt au plus tard.",
+     "aide": "Lis la colonne des heures.",
+     "explication": "**8 h 46**, **9 h 37**, **9 h 59**, **10 h 28** : la tour touchée en premier est la dernière à tomber."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a0f5507-a01d-5d69-b994-dd822af1ed30",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Afghanistan, Irak : deux interventions",
+   "competence": "lire-carte",
+   "situation": "Sami suit les suites du 11 septembre sur une carte : trois lieux marquent l’événement et ses conséquences.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux liés au 11 septembre",
+     "fond": "monde",
+     "cadrage": [
+      -90,
+      10,
+      80,
+      55
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "new-york",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": 69.17,
+       "lat": 34.53,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "bagdad",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b",
+      "c"
+     ],
+     "enonce": "Touche les deux capitales où les États-Unis font tomber un régime (Kaboul, en 2001, et Bagdad, en 2003).",
+     "aide": "Elles se trouvent en Asie, loin de New York.",
+     "explication": "Les États-Unis renversent le régime des talibans à **Kaboul** (B) en 2001 puis celui de Saddam Hussein à **Bagdad** (C) en 2003.",
+     "multiple": true
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "2001",
+       "Intervention en Afghanistan"
+      ],
+      [
+       "2003",
+       "Guerre d’Irak"
+      ],
+      [
+       "2011",
+       "Mort de Ben Laden"
+      ],
+      [
+       "2021",
+       "Retour des talibans au pouvoir"
+      ]
+     ],
+     "enonce": "Associe chaque année à son événement.",
+     "aide": "Deux dates sont proches de 2001 : l’une concerne l’Afghanistan, l’autre l’Irak.",
+     "explication": "**2001** : l’Afghanistan ; **2003** : l’Irak ; **2011** : Ben Laden est tué ; **2021** : les talibans reviennent après le départ américain."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "enonce": "Combien d’années séparent le début de l’intervention en Afghanistan du retrait américain de 2021 ?",
+     "aide": "Soustrais 2001 à 2021.",
+     "explication": "2021 − 2001 = **20 ans** : la plus longue guerre des États-Unis se termine par le retour des talibans.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle est lancée sans mandat de l’ONU, au nom d’armes qui n’existaient pas",
+      "Elle est lancée après une attaque de l’Irak contre les États-Unis",
+      "Elle est approuvée à l’unanimité par le Conseil de sécurité",
+      "Elle est menée par la France aux côtés des États-Unis"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi la guerre d’Irak de 2003 est-elle si contestée ?",
+     "aide": "La France s’y est opposée : pourquoi ?",
+     "explication": "Les États-Unis agissent **sans mandat de l’ONU**, au nom d’armes de destruction massive qui n’existaient pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a0f5507-a01d-5d69-b994-dd822af1ed30",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sécurité et libertés",
+   "competence": "analyser-document",
+   "situation": "Ilyès étudie les conséquences du 11 septembre : un texte présente les mesures américaines, un tableau rappelle que l’Europe est frappée à son tour.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Après les attentats",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Les États-Unis renforcent leur sécurité : contrôles dans les aéroports, surveillance par le [[p|Patriot]] [[p|Act]] en 2001, création d’un département de la Sécurité intérieure.",
+      "Mais des atteintes aux droits apparaissent : la prison de [[g|Guantánamo]] et la torture pendant des interrogatoires sont dénoncées."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Des attentats djihadistes en Europe",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Ville",
+      "Année"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Madrid",
+       "2004"
+      ],
+      [
+       "Londres",
+       "2005"
+      ],
+      [
+       "Paris",
+       "2015"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Renforcer la sécurité",
+      "Atteindre les droits"
+     ],
+     "items": [
+      [
+       "Contrôles dans les aéroports",
+       0
+      ],
+      [
+       "Département de la Sécurité intérieure",
+       0
+      ],
+      [
+       "Prison de Guantánamo",
+       1
+      ],
+      [
+       "Torture pendant les interrogatoires",
+       1
+      ]
+     ],
+     "enonce": "Classe chaque mesure ou pratique dans la bonne catégorie.",
+     "aide": "Une mesure de protection n’est pas une atteinte aux droits : relis le texte.",
+     "explication": "Contrôles et département de la Sécurité intérieure **renforcent la sécurité** ; Guantánamo et la torture **portent atteinte aux droits**."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui nomment la loi de surveillance adoptée en 2001.",
+     "aide": "Le nom est en anglais, dans la première phrase.",
+     "explication": "Le **Patriot Act** (2001) renforce la surveillance."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche l’année de l’attentat de Londres.",
+     "aide": "Cherche la ligne « Londres ».",
+     "explication": "L’attentat de Londres date de **2005**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "enonce": "Combien d’années séparent l’attentat de Madrid de celui de Paris ?",
+     "aide": "Soustrais 2004 à 2015.",
+     "explication": "2015 − 2004 = **11 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le terrorisme djihadiste frappe aussi l’Europe, pas seulement les États-Unis",
+      "Les attentats djihadistes cessent en Europe après l’année 2001",
+      "Seuls les États-Unis sont visés par le terrorisme djihadiste",
+      "Le terrorisme disparaît après la mort de Ben Laden en 2011"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre la série Madrid, Londres, Paris ?",
+     "aide": "Regarde les lieux et les dates du tableau.",
+     "explication": "Le terrorisme djihadiste est une menace **mondiale** : l’Europe est frappée en 2004, 2005 et 2015."
+    }
+   ]
+  },
+  {
+   "chapitre": "9629fdae-4e5c-55b3-a84b-da49553231ae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois régimes en quinze ans",
+   "competence": "lire-tableau",
+   "situation": "Camille prépare une fiche sur les régimes politiques français après 1944 : elle résume chacun dans un tableau.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois régimes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Régime",
+      "Dates",
+      "Caractère"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "GPRF",
+       "1944-1946",
+       "Gouvernement provisoire dirigé par de Gaulle"
+      ],
+      [
+       "IVe République",
+       "1946-1958",
+       "Régime parlementaire instable"
+      ],
+      [
+       "Ve République",
+       "Depuis 1958",
+       "Exécutif fort, président arbitre"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui décrit le régime le plus instable.",
+     "aide": "Cherche le mot « instable ».",
+     "explication": "La **IVe République** est un régime parlementaire instable : plus de 20 gouvernements en 12 ans."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "enonce": "Combien d’années dure la IVe République ?",
+     "aide": "Soustrais 1946 à 1958.",
+     "explication": "1958 − 1946 = **12 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La guerre d’Algérie et la crise de mai 1958",
+      "La défaite de la France face à l’Allemagne en 1940",
+      "Le référendum de 1962 sur l’élection du président",
+      "La fin de la guerre d’Indochine à Genève en 1954"
+     ],
+     "reponse": 0,
+     "enonce": "Quel événement fait tomber la IVe République ?",
+     "aide": "Regarde la date de fin du régime dans le tableau.",
+     "explication": "La **guerre d’Algérie** et la crise de mai 1958 font tomber la IVe République ; de Gaulle fonde la Ve."
+    }
+   ]
+  },
+  {
+   "chapitre": "9629fdae-4e5c-55b3-a84b-da49553231ae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Paulette, ouvrière en 1946",
+   "competence": "analyser-texte",
+   "situation": "Un court récit imaginaire suit Paulette, ouvrière chez Renault : on y retrouve les grandes réformes de la Libération.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une vie qui change",
+     "auteur": "Récit imaginé pour l’exercice, d’après le cours",
+     "blocs": [
+      "Paulette travaille à l’usine Renault de Boulogne-Billancourt, nationalisée depuis 1945. En avril 1945, elle a voté pour la première fois.",
+      "Dans l’usine, un comité d’entreprise réunit des représentants des salariés. Quand Paulette tombe malade, la [[s|Sécurité]] [[s|sociale]], créée en octobre 1945, rembourse ses soins."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mots qui nomment l’institution qui rembourse les soins de Paulette.",
+     "aide": "Elle a été créée en octobre 1945.",
+     "explication": "C’est la **Sécurité sociale**, créée en octobre 1945 : une des grandes réformes du programme du CNR."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Nationalisations",
+       "L’État prend le contrôle d’entreprises comme Renault ou EDF"
+      ],
+      [
+       "Sécurité sociale",
+       "Protection contre la maladie et les accidents de la vie"
+      ],
+      [
+       "Comités d’entreprise",
+       "Représentants des salariés dans l’entreprise"
+      ],
+      [
+       "Droit de vote des femmes",
+       "Les femmes votent pour la première fois en 1945"
+      ]
+     ],
+     "enonce": "Associe chaque réforme de la Libération à ce qu’elle change.",
+     "aide": "Repère dans le texte ce que vit Paulette.",
+     "explication": "Chaque réforme change la vie quotidienne : **nationalisations**, **Sécurité sociale**, **comités d’entreprise** et **vote des femmes** viennent du programme de 1944-1946."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Plus de solidarité et un rôle accru de l’État dans l’économie",
+      "Un retour complet au système économique d’avant la guerre",
+      "La fin de toute intervention de l’État dans les entreprises",
+      "Un pouvoir confié à un parti unique à la tête du pays"
+     ],
+     "reponse": 0,
+     "enonce": "Quel principe inspire ces réformes du programme du CNR ?",
+     "aide": "Pense à ce que l’État fait pour les salariés dans le récit.",
+     "explication": "Le programme du CNR veut plus de **solidarité** et un **État** qui intervient : protection sociale, nationalisations, représentation des salariés."
+    }
+   ]
+  },
+  {
+   "chapitre": "9629fdae-4e5c-55b3-a84b-da49553231ae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les institutions de la Ve République",
+   "competence": "se-reperer-temps",
+   "situation": "Manon retrace les grandes évolutions de la Ve République : elle lit une frise et un texte sur la cohabitation.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Repères de la Ve République",
+     "debut": 1955,
+     "fin": 2010,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cst",
+       "date": 1958,
+       "nom": "Ve République"
+      },
+      {
+       "id": "sud",
+       "date": 1962,
+       "nom": "Suffrage direct"
+      },
+      {
+       "id": "alt",
+       "date": 1981,
+       "nom": "Alternance"
+      },
+      {
+       "id": "coh",
+       "date": 1986,
+       "nom": "Cohabitation"
+      },
+      {
+       "id": "qui",
+       "date": 2000,
+       "nom": "Quinquennat"
+      },
+      {
+       "id": "qpc",
+       "date": 2008,
+       "nom": "Réforme 2008"
+      }
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un président de gauche, une majorité de droite",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "En 1986, la droite gagne les élections législatives alors que le président, François Mitterrand, est de gauche.",
+      "Il doit nommer [[p|Premier]] [[p|ministre]] un homme de l’opposition : c’est la première cohabitation."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "Élection du président au suffrage universel direct",
+      "Première alternance à gauche",
+      "Première cohabitation",
+      "Passage au quinquennat"
+     ],
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "aide": "Observe la frise de gauche à droite.",
+     "explication": "**1962**, **1981**, **1986**, **2000** : l’élection directe précède l’alternance, puis la cohabitation et le quinquennat."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui désignent le chef du gouvernement que le président doit nommer.",
+     "aide": "C’est un titre de deux mots dans la dernière phrase.",
+     "explication": "Le président doit nommer **Premier ministre** un homme issu de la nouvelle majorité, même s’il est dans l’opposition."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Un président et un gouvernement issus de camps politiques opposés",
+      "Un gouvernement qui réunit tous les partis sans aucune opposition",
+      "Deux présidents qui se partagent le pouvoir pendant un an",
+      "Un président remplacé par le Premier ministre pendant sa maladie"
+     ],
+     "reponse": 0,
+     "enonce": "Qu’appelle-t-on une cohabitation ?",
+     "aide": "Relis le texte : qui gagne les législatives, et qui est le président ?",
+     "explication": "La **cohabitation**, c’est un président d’un camp et un gouvernement de l’autre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "enonce": "Combien d’années séparent la première alternance de la première cohabitation ?",
+     "aide": "Soustrais 1981 à 1986.",
+     "explication": "1986 − 1981 = **5 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Institutions",
+      "Société"
+     ],
+     "items": [
+      [
+       "Quinquennat (2000)",
+       0
+      ],
+      [
+       "Question prioritaire de constitutionnalité (2008)",
+       0
+      ],
+      [
+       "Élection du président par tous les électeurs (1962)",
+       0
+      ],
+      [
+       "Baby-boom (1946-1974)",
+       1
+      ],
+      [
+       "Regroupement familial (1976)",
+       1
+      ],
+      [
+       "Mariage pour tous (2013)",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément : évolution des institutions ou de la société ?",
+     "aide": "Les institutions, ce sont les règles du pouvoir ; la société, ce sont les habitants et leurs droits.",
+     "explication": "Quinquennat, QPC et élection directe changent les **institutions** ; baby-boom, regroupement familial et mariage pour tous transforment la **société**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e839613f-9133-5a94-ba10-70b806bb7b26",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Huit ans de guerre",
+   "competence": "se-reperer-temps",
+   "situation": "Rayan place les grands repères de la guerre d’Algérie sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La guerre d’Algérie",
+     "debut": 1950,
+     "fin": 1965,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "tou",
+       "date": 1954,
+       "nom": "Toussaint rouge"
+      },
+      {
+       "id": "bat",
+       "date": 1957,
+       "nom": "Bataille d’Alger"
+      },
+      {
+       "id": "dg",
+       "date": 1958,
+       "nom": "Retour de Gaulle"
+      },
+      {
+       "id": "put",
+       "date": 1961,
+       "nom": "Putsch des généraux"
+      },
+      {
+       "id": "ind",
+       "date": 1962,
+       "nom": "Indépendance"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "tou"
+     ],
+     "enonce": "Touche l’événement qui marque le début de l’insurrection du FLN.",
+     "aide": "Cherche le premier événement de la frise.",
+     "explication": "Le **1er novembre 1954**, la « Toussaint rouge » lance l’insurrection du FLN."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "enonce": "Combien d’années durent la guerre, de la Toussaint rouge à l’indépendance ?",
+     "aide": "Soustrais 1954 à 1962.",
+     "explication": "1962 − 1954 = **8 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une insurrection contre la présence française en Algérie",
+      "Un référendum sur l’indépendance de l’Algérie",
+      "Un cessez-le-feu conclu avec le gouvernement français",
+      "Un coup d’État contre le général de Gaulle à Paris"
+     ],
+     "reponse": 0,
+     "enonce": "Que déclenche le FLN le 1er novembre 1954 ?",
+     "aide": "Le FLN est le Front de libération nationale.",
+     "explication": "Le FLN lance une **insurrection** contre la présence française : c’est le début de la guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "e839613f-9133-5a94-ba10-70b806bb7b26",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une société à deux vitesses",
+   "competence": "analyser-document",
+   "situation": "Wassim étudie la situation de l’Algérie avant l’insurrection, puis les sigles des camps qui s’affrontent.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La population de l’Algérie avant la guerre",
+     "source": "Ordres de grandeur arrondis, d’après le cours.",
+     "categories": [
+      "Européens",
+      "Algériens musulmans"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        1,
+        8.5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en millions",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Groupes"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quelques sigles de la guerre",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Sigle",
+      "Nom complet"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "FLN",
+       "Front de libération nationale"
+      ],
+      [
+       "ALN",
+       "Armée de libération nationale"
+      ],
+      [
+       "GPRA",
+       "Gouvernement provisoire de la République algérienne"
+      ],
+      [
+       "OAS",
+       "Organisation de l’armée secrète"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k1"
+     ],
+     "enonce": "Touche la barre du groupe qui n’a pas les mêmes droits que l’autre.",
+     "aide": "Le cours parle d’Algériens musulmans aux droits différents.",
+     "explication": "Les **Algériens musulmans**, bien plus nombreux, n’ont pas les mêmes droits que les Européens."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8.5,
+     "enonce": "Environ combien d’Algériens musulmans y a-t-il pour un Européen ?",
+     "aide": "Divise la hauteur de la grande barre par celle de la petite.",
+     "explication": "8,5 millions pour 1 million : environ **8 à 9** Algériens musulmans pour un Européen.",
+     "tolerance": 1
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le sigle de l’organisation qui multiplie les attentats en 1961-1962 pour garder l’Algérie française.",
+     "aide": "Elle est secrète et s’oppose à de Gaulle.",
+     "explication": "L’**OAS** (Organisation de l’armée secrète) commet des attentats en 1961-1962."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Nationalistes algériens",
+      "Armée française et supplétifs",
+      "Partisans de l’Algérie française"
+     ],
+     "items": [
+      [
+       "FLN",
+       0
+      ],
+      [
+       "GPRA",
+       0
+      ],
+      [
+       "Appelés du contingent",
+       1
+      ],
+      [
+       "Harkis",
+       1
+      ],
+      [
+       "OAS",
+       2
+      ],
+      [
+       "Généraux du putsch de 1961",
+       2
+      ]
+     ],
+     "enonce": "Range chaque acteur dans son camp.",
+     "aide": "Les harkis servent dans l’armée française comme supplétifs ; les généraux de 1961 veulent garder l’Algérie.",
+     "explication": "**FLN** et **GPRA** veulent l’indépendance ; **appelés** et **harkis** servent dans l’armée française ; **OAS** et putschistes défendent l’Algérie française."
+    }
+   ]
+  },
+  {
+   "chapitre": "e839613f-9133-5a94-ba10-70b806bb7b26",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Après 1962 : des mémoires qui divisent",
+   "competence": "argumenter",
+   "situation": "Sarah étudie les conséquences de la guerre : un texte sur les mémoires, un tableau sur le sort des groupes en 1962.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une guerre sans nom",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Longtemps, la France a parlé des « événements d’Algérie ». Ce n’est qu’en [[r|1999]] qu’elle reconnaît officiellement une guerre.",
+      "Appelés, pieds-noirs, harkis, immigrés algériens : chacun garde un souvenir différent. En 2021, le rapport Stora propose des gestes pour rapprocher ces mémoires."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Ce qui arrive après l’indépendance",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Groupe",
+      "Après 1962"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Pieds-noirs",
+       "Environ 800 000 quittent l’Algérie pour la métropole"
+      ],
+      [
+       "Harkis",
+       "Beaucoup sont massacrés, d’autres accueillis dans des camps"
+      ],
+      [
+       "FLN",
+       "Devient le parti unique en Algérie"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’année où la France reconnaît officiellement la guerre d’Algérie.",
+     "aide": "C’est la seule année écrite en toutes lettres dans le premier paragraphe.",
+     "explication": "La France reconnaît officiellement la guerre en **1999**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 37,
+     "enonce": "Combien d’années séparent la fin de la guerre de sa reconnaissance officielle ?",
+     "aide": "Soustrais 1962 à 1999.",
+     "explication": "1999 − 1962 = **37 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Pieds-noirs",
+       "Rapatriés en métropole"
+      ],
+      [
+       "Harkis",
+       "Massacrés ou installés dans des camps"
+      ],
+      [
+       "FLN",
+       "Parti unique en Algérie"
+      ]
+     ],
+     "enonce": "Associe chaque groupe à ce qui lui arrive après 1962.",
+     "aide": "Le tableau donne le sort de chaque groupe.",
+     "explication": "Les **pieds-noirs** deviennent des rapatriés, les **harkis** sont massacrés ou logés en camps, le **FLN** devient parti unique."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Toussaint rouge",
+      "Retour de de Gaulle au pouvoir",
+      "Accords d’Évian",
+      "Indépendance de l’Algérie"
+     ],
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "aide": "Les accords d’Évian ont lieu en mars 1962, l’indépendance en juillet.",
+     "explication": "**1954**, **1958**, **mars 1962**, **juillet 1962** : la guerre s’achève par les accords d’Évian puis l’indépendance."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Appelés, pieds-noirs, harkis et immigrés gardent des souvenirs différents",
+      "Tous les témoins de la guerre en gardent exactement le même souvenir",
+      "La guerre n’a laissé aucune trace dans la société française",
+      "Seuls les historiens s’intéressent encore à cette période"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi parle-t-on de mémoires conflictuelles ?",
+     "aide": "Regarde les groupes cités dans le second paragraphe.",
+     "explication": "Chaque groupe a **vécu** la guerre autrement : les souvenirs diffèrent et parfois s’opposent."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c32ce8-48a3-5e92-87fa-0580ea9e741c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre-vingts ans de conquêtes",
+   "competence": "se-reperer-temps",
+   "situation": "Jade prépare un exposé sur les droits des femmes : elle place les grandes lois sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les droits des femmes depuis 1944",
+     "debut": 1940,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "vote",
+       "date": 1944,
+       "nom": "Droit de vote"
+      },
+      {
+       "id": "neu",
+       "date": 1967,
+       "nom": "Loi Neuwirth"
+      },
+      {
+       "id": "veil",
+       "date": 1975,
+       "nom": "Loi Veil"
+      },
+      {
+       "id": "par",
+       "date": 2000,
+       "nom": "Parité"
+      },
+      {
+       "id": "ivg",
+       "date": 2024,
+       "nom": "IVG et Constitution"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "ivg"
+     ],
+     "enonce": "Touche l’événement le plus récent de la frise.",
+     "aide": "Regarde tout à droite.",
+     "explication": "En **2024**, la liberté de recourir à l’IVG est inscrite dans la Constitution."
+    },
+    {
+     "type": "nombre",
+     "reponse": 31,
+     "enonce": "Combien d’années séparent le droit de vote des femmes de la loi Veil ?",
+     "aide": "Soustrais 1944 à 1975.",
+     "explication": "1975 − 1944 = **31 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Loi Veil",
+      "Loi Neuwirth",
+      "Loi sur la parité",
+      "Droit de vote des femmes"
+     ],
+     "enonce": "Range ces quatre repères du plus ancien au plus récent.",
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1944**, **1967**, **1975**, **2000** : le vote précède la contraception, l’IVG et la parité."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c32ce8-48a3-5e92-87fa-0580ea9e741c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le compte en banque de Mme Martin",
+   "competence": "analyser-document",
+   "situation": "En 1960, Mme Martin (personnage imaginaire) veut ouvrir un compte bancaire. Un court récit et un tableau de lois éclairent sa situation.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un refus à la banque",
+     "auteur": "Récit imaginé pour l’exercice, d’après le cours",
+     "blocs": [
+      "En 1960, Mme Martin, mariée et employée de bureau, veut ouvrir un compte à son nom.",
+      "Le banquier lui répond qu’il lui faut l’[[a|autorisation]] de son mari. Elle devra patienter jusqu’à une réforme du Code civil."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois réformes du Code civil",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Réforme",
+      "Date",
+      "Ce qu’elle change"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Régimes matrimoniaux",
+       "1965",
+       "Une femme mariée peut travailler et ouvrir un compte sans l’accord de son mari"
+      ],
+      [
+       "Autorité parentale",
+       "1970",
+       "Les deux parents décident ensemble"
+      ],
+      [
+       "Divorce par consentement mutuel",
+       "1975",
+       "Le divorce n’est plus seulement une sanction"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit ce dont Mme Martin a besoin pour ouvrir un compte.",
+     "aide": "C’est ce que le banquier réclame.",
+     "explication": "Il lui faut l’**autorisation** de son mari : c’est le droit de l’époque."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui décrit la réforme qui résout le problème de Mme Martin.",
+     "aide": "Cherche « compte » dans la dernière colonne.",
+     "explication": "La réforme de **1965** permet à une femme mariée d’ouvrir un compte sans l’accord de son mari."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "enonce": "Combien d’années Mme Martin doit-elle attendre entre son refus de 1960 et la réforme ?",
+     "aide": "Soustrais 1960 à la date de la réforme.",
+     "explication": "1965 − 1960 = **5 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Droits politiques",
+      "Droits civils",
+      "Disposer de son corps"
+     ],
+     "items": [
+      [
+       "Droit de vote (1944)",
+       0
+      ],
+      [
+       "Parité en politique (2000)",
+       0
+      ],
+      [
+       "Autorité parentale (1970)",
+       1
+      ],
+      [
+       "Divorce par consentement mutuel (1975)",
+       1
+      ],
+      [
+       "Loi Neuwirth sur la contraception (1967)",
+       2
+      ],
+      [
+       "Loi Veil sur l’IVG (1975)",
+       2
+      ]
+     ],
+     "enonce": "Range chaque avancée dans la bonne catégorie.",
+     "aide": "Voter, élire : politique. Famille, mariage : droits civils. Contraception, IVG : corps.",
+     "explication": "**Vote** et **parité** sont des droits politiques ; **autorité parentale** et **divorce** des droits civils ; **contraception** et **IVG** concernent le corps."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c32ce8-48a3-5e92-87fa-0580ea9e741c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’égalité réelle reste inachevée",
+   "competence": "lire-graphique",
+   "situation": "Louna mesure où en est l’égalité entre les femmes et les hommes : elle lit la part des femmes parmi les actifs et l’écart de salaire.",
+   "documents": [
+    {
+     "id": "actifs",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les actifs en France",
+     "source": "Chiffres arrondis d’après le cours.",
+     "categories": [
+      "Femmes",
+      "Hommes"
+     ],
+     "series": [
+      {
+       "nom": "Part des actifs",
+       "valeurs": [
+        48,
+        52
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "valeurs": true
+    },
+    {
+     "id": "ecart",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Écart de salaire moyen entre femmes et hommes",
+     "source": "Ordres de grandeur arrondis, milieu des années 2020.",
+     "categories": [
+      "À temps de travail égal",
+      "Tous temps de travail confondus"
+     ],
+     "series": [
+      {
+       "nom": "Écart",
+       "valeurs": [
+        14,
+        22
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Écart",
+      "unite": "en %",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ecart",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre qui donne l’écart de salaire à temps de travail égal.",
+     "aide": "Lis le nom sous chaque barre.",
+     "explication": "À temps de travail égal, l’écart est d’environ **14 %**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 86,
+     "enonce": "Un homme gagne 100 € en moyenne. Combien gagne une femme à temps de travail égal ?",
+     "aide": "Retire l’écart de 14 % à 100.",
+     "explication": "100 − 14 = **86 €** : l’inégalité persiste même à temps de travail égal.",
+     "unite": "€"
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les femmes travaillent plus souvent à temps partiel",
+      "Les femmes travaillent toujours plus d’heures que les hommes",
+      "Les lois interdisent aux femmes d’occuper certains métiers",
+      "Les femmes représentent une très faible part des actifs"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi l’écart est-il plus grand tous temps de travail confondus ?",
+     "aide": "Compare les deux barres : qu’ajoute-t-on à la seconde ?",
+     "explication": "Les femmes sont plus souvent à **temps partiel** : en comparant tous les temps de travail, l’écart monte à plus de 20 %."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Droits conquis",
+      "Égalité encore inachevée"
+     ],
+     "items": [
+      [
+       "Droit de vote (1944)",
+       0
+      ],
+      [
+       "Loi Neuwirth (1967)",
+       0
+      ],
+      [
+       "Loi Veil (1975)",
+       0
+      ],
+      [
+       "Écart de salaire",
+       1
+      ],
+      [
+       "Partage des tâches domestiques",
+       1
+      ],
+      [
+       "Plafond de verre",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément : droit conquis ou égalité encore inachevée ?",
+     "aide": "Une loi adoptée est un droit conquis ; un écart qui persiste est un combat à poursuivre.",
+     "explication": "Vote, contraception et IVG sont des **droits conquis** ; écart de salaire, partage des tâches et plafond de verre montrent une égalité **encore inachevée**."
+    }
+   ]
+  }
+ ]
+}

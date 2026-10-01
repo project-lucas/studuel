@@ -31,6 +31,9 @@ const DEMI: Record<Composant, number> = {
 }
 
 /** Les signes + et − de la pile, posés droits (le texte ne tourne pas avec le symbole). */
+/** Les composants qui ont un sens : leur symbole suit la branche. */
+const POLARISES = new Set(['pile', 'del', 'diode'])
+
 function SignesPile({ angle }: { angle: number }) {
   const r = (angle * Math.PI) / 180
   const tourner = ([x, y]: [number, number]) => [x * Math.cos(r) - y * Math.sin(r), x * Math.sin(r) + y * Math.cos(r)]
@@ -189,8 +192,10 @@ export function Circuit({ doc, zones }: { doc: DocCircuit; zones?: ZonesDoc }) {
               >
                 {zones?.actif && b.id ? <circle r={20} fill="transparent" /> : null}
                 {etat ? <circle r={20} style={{ fill: fondCible(etat), ...traitCible(etat) }} /> : null}
-                {/* La pile garde son sens : on ne la retourne pas, on la tourne. */}
-                <g transform={`rotate(${b.composant === 'pile' ? angle : horizontal ? 0 : 90})`}>
+                {/* Les composants POLARISÉS (pile, DEL, diode) gardent leur sens, de
+                    `de` vers `a` : on les tourne de l'angle de la branche. Une DEL
+                    posée de bas en haut pointait vers le bas (30/09/2026). */}
+                <g transform={`rotate(${POLARISES.has(b.composant) ? angle : horizontal ? 0 : 90})`}>
                   <Symbole c={b.composant} allume={b.allume} trait={{}} />
                 </g>
                 {b.composant === 'pile' ? <SignesPile angle={angle} /> : null}

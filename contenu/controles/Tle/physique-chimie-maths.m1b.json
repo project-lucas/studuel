@@ -1,0 +1,370 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie-maths",
+  "sujets": [
+    {
+      "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+      "difficulte": 1,
+      "titre": "Lire un pH",
+      "consigne": "Justifie chaque réponse par une relation ou une définition du cours.",
+      "enonce": "**Questions.**\n\n1. Une eau de pluie a une concentration [H3O⁺] = **1,0 × 10⁻⁴ mol/L**. Calcule son pH. Est-elle acide, neutre ou basique à 25 °C ?\n2. Une eau de mer a un pH de **8,5**. Calcule sa concentration en ions H3O⁺. Est-elle acide, neutre ou basique ?\n3. Donne la base conjuguée de l'ion ammonium NH4⁺ et écris la relation qui relie l'acide et la base de ce couple. Selon Brønsted, qu'est-ce qu'un acide ?",
+      "bareme": [
+        { "critere": "pH = −log [H3O⁺] = 4,0 : solution acide", "points": 6 },
+        { "critere": "[H3O⁺] = 10^(−8,5) ≈ 3,2 × 10⁻⁹ mol/L : solution basique", "points": 7 },
+        { "critere": "NH3, NH4⁺ = NH3 + H⁺ ; un acide cède un ion H⁺", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. pH = −log [H3O⁺] = −log(1,0 × 10⁻⁴) = **4,0**. Comme pH < 7 à 25 °C, l'eau de pluie est **acide**.\n2. [H3O⁺] = 10^(−pH) = 10^(−8,5) ≈ **3,2 × 10⁻⁹ mol/L**. Comme pH > 7, l'eau de mer est **basique**.\n3. La base conjuguée de NH4⁺ est l'**ammoniac NH3** : **NH4⁺ = NH3 + H⁺**. Selon Brønsted, un **acide** est une espèce capable de **céder** un ion H⁺ (un proton)."
+    },
+    {
+      "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+      "difficulte": 2,
+      "titre": "Préparer une solution diluée",
+      "consigne": "Rédige le calcul et le protocole, en nommant la verrerie précise.",
+      "enonce": "**Situation.** Au laboratoire, on dispose d'une solution mère d'acide chlorhydrique à **0,50 mol/L**. On veut préparer **250 mL** d'une solution fille à **0,020 mol/L**.\n\n1. Quelle grandeur se conserve lors d'une dilution ? Écris la relation correspondante.\n2. Calcule le volume de solution mère à prélever.\n3. Rédige le protocole de préparation en nommant la verrerie.\n4. Une autre solution d'acide fort a un pH de **1,5**. Quel est son pH après une dilution par 10 ? par 100 ? Peut-on, en diluant encore, dépasser pH 7 ?",
+      "bareme": [
+        { "critere": "Conservation de la quantité de matière : C mère × V mère = C fille × V fille", "points": 4 },
+        { "critere": "V = 0,020 × 250 / 0,50 = 10 mL", "points": 5 },
+        { "critere": "Protocole : pipette jaugée de 10 mL, fiole jaugée de 250 mL, eau distillée au trait de jauge, homogénéiser", "points": 6 },
+        { "critere": "pH 2,5 puis 3,5 ; le pH d'un acide dilué ne dépasse jamais 7", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La **quantité de matière** de soluté se conserve : **C mère × V mère = C fille × V fille**.\n2. V mère = C fille × V fille / C mère = 0,020 × 250 / 0,50 = **10 mL**.\n3. Protocole :\n- prélever **10 mL** de solution mère avec une **pipette jaugée** de 10 mL ;\n- les verser dans une **fiole jaugée** de **250 mL** ;\n- compléter avec de l'**eau distillée** jusqu'au **trait de jauge** ;\n- boucher et **homogénéiser**.\n4. Pour un acide fort, diluer 10 fois augmente le pH d'une unité : **pH 2,5** après une dilution par 10, **pH 3,5** après une dilution par 100. Diluer fait monter le pH **vers 7**, mais le pH d'un acide dilué **ne dépasse jamais 7**."
+    },
+    {
+      "chapitre": "7f89de1e-0ef4-542f-a5a7-3e6c0f834204",
+      "difficulte": 3,
+      "titre": "Piscine, vinaigre et océans",
+      "consigne": "Justifie chaque réponse par une relation du cours et interprète chaque résultat.",
+      "enonce": "**Partie A — La piscine.** Le pH d'une piscine est mesuré à **7,8**. On veut le ramener à **7,3**.\n1. Faut-il ajouter un produit acide ou basique ? Par combien la concentration en ions H3O⁺ doit-elle être multipliée ?\n2. Pourquoi maintient-on le pH d'une piscine vers 7,2 – 7,4 ? Quel appareil permet de le mesurer au dixième ?\n\n**Partie B — Réactions acide-base.**\n3. Écris la réaction entre l'acide éthanoïque CH3COOH (vinaigre) et l'ion hydroxyde HO⁻ (soude). Identifie les deux couples mis en jeu.\n4. Écris la réaction entre l'ion ammonium NH4⁺ et l'ion hydroxyde HO⁻, et identifie les couples.\n\n**Partie C — L'océan.** Des modèles prévoient que le pH moyen des océans pourrait passer de **8,1** à **7,8**.\n5. De quel pourcentage la concentration en ions H3O⁺ augmenterait-elle ? D'où vient cette acidification ?",
+      "bareme": [
+        { "critere": "Produit acide ; [H3O⁺] multipliée par 10^0,5 ≈ 3,2", "points": 4 },
+        { "critere": "Confort et efficacité du chlore ; pH-mètre étalonné", "points": 3 },
+        { "critere": "CH3COOH + HO⁻ → CH3COO⁻ + H2O ; couples CH3COOH/CH3COO⁻ et H2O/HO⁻", "points": 5 },
+        { "critere": "NH4⁺ + HO⁻ → NH3 + H2O ; couples NH4⁺/NH3 et H2O/HO⁻", "points": 4 },
+        { "critere": "Facteur 10^0,3 ≈ 2,0, soit environ +100 % ; CO2 dissous qui forme un acide", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Il faut faire **baisser** le pH, donc ajouter un produit **acide**. [H3O⁺] = 10^(−pH) : le rapport vaut 10^(−7,3) / 10^(−7,8) = 10^0,5 ≈ **3,2**. La concentration en H3O⁺ doit être multipliée par environ 3,2.\n2. On maintient le pH vers 7,2 – 7,4 pour le **confort** des baigneurs et l'**efficacité du chlore**. Le **pH-mètre**, étalonné avec des solutions tampons, donne le pH au dixième ou mieux (le papier pH ne donne qu'une valeur approchée).\n3. **CH3COOH + HO⁻ → CH3COO⁻ + H2O**. Couples : **CH3COOH / CH3COO⁻** (l'acide éthanoïque cède un H⁺) et **H2O / HO⁻** (l'ion hydroxyde capte un H⁺). Forme générale : acide 1 + base 2 → base 1 + acide 2.\n4. **NH4⁺ + HO⁻ → NH3 + H2O**. Couples : **NH4⁺ / NH3** et **H2O / HO⁻**.\n5. Le rapport des concentrations vaut 10^(8,1 − 7,8) = 10^0,3 ≈ **2,0** : la concentration en H3O⁺ **doublerait**, soit environ **+100 %**. Cette acidification vient du **CO2 dissous**, qui forme un acide dans l'eau."
+    },
+    {
+      "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+      "difficulte": 1,
+      "titre": "Lire un spectre",
+      "consigne": "Exploite le document et justifie chaque réponse.",
+      "enonce": "**Document.** Le spectre d'amplitude d'un signal périodique comporte quatre raies :\n\n| Fréquence | 0 Hz | 200 Hz | 400 Hz | 600 Hz |\n|---|---|---|---|---|\n| Amplitude | 1 V | 4 V | 2 V | 1 V |\n\n1. Que représente la raie à 0 Hz ? Donne sa valeur.\n2. Quelle est la fréquence du fondamental ? Donne le rang des deux autres raies.\n3. Ce signal est-il un son pur ? Si c'était un son, quelle fréquence fixerait sa hauteur ?\n4. Quelle bande de fréquences un canal doit-il laisser passer pour transmettre toutes ces composantes ?",
+      "bareme": [
+        { "critere": "Composante continue (valeur moyenne) de 1 V", "points": 4 },
+        { "critere": "Fondamental 200 Hz ; harmoniques de rangs 2 et 3", "points": 7 },
+        { "critere": "Pas un son pur (plusieurs raies) ; hauteur fixée par le fondamental, 200 Hz", "points": 5 },
+        { "critere": "Bande de 0 à 600 Hz", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La raie à 0 Hz est la **composante continue**, c'est-à-dire la **valeur moyenne** du signal : **1 V**.\n2. Le **fondamental** est à **200 Hz** (amplitude 4 V). Rangs : n = f n / f1, soit 400 / 200 = **2** et 600 / 200 = **3** : ce sont les **harmoniques de rangs 2 et 3**.\n3. Ce n'est **pas un son pur** : un son pur n'a qu'une seule raie. Sa **hauteur** serait fixée par la fréquence du **fondamental**, **200 Hz**.\n4. Il faut laisser passer les fréquences de **0 à 600 Hz**."
+    },
+    {
+      "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+      "difficulte": 2,
+      "titre": "Le bruit de l'atelier",
+      "consigne": "Rédige chaque calcul et compare les résultats aux seuils du cours.",
+      "enonce": "**Situation.** Dans un atelier, une machine produit, au poste de travail, une intensité acoustique **I = 1,0 × 10⁻⁴ W/m²**. Donnée : I0 = 10⁻¹² W/m².\n\n1. Calcule le niveau sonore au poste de travail. Compare-le au seuil de danger.\n2. On installe une deuxième machine identique : l'intensité double. Quel est le nouveau niveau ? Justifie sans refaire tout le calcul.\n3. L'atelier finit par compter **dix** machines identiques. Quel est le niveau sonore ? Conclus sur la santé des ouvriers.\n4. Pour protéger le bureau voisin, faut-il plutôt un matériau lourd et étanche ou un matériau poreux ? Et pour réduire l'écho dans l'atelier ? Justifie.",
+      "bareme": [
+        { "critere": "L = 10 × log(I / I0) = 80 dB, sous le seuil de danger de 85 dB", "points": 5 },
+        { "critere": "Intensité doublée : +3 dB, soit 83 dB", "points": 5 },
+        { "critere": "Intensité × 10 : +10 dB, soit 90 dB, au-dessus du seuil de danger", "points": 5 },
+        { "critere": "Lourd et étanche pour la transmission, poreux pour l'absorption", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L = 10 × log(I / I0) = 10 × log(1,0 × 10⁻⁴ / 10⁻¹²) = 10 × log(10⁸) = **80 dB**. C'est sous le seuil de danger (**85 dB**), mais proche.\n2. Quand l'intensité double, le niveau augmente de **3 dB** : **83 dB** (et non 160 dB : les décibels ne s'additionnent pas).\n3. Dix machines identiques : l'intensité est multipliée par 10, le niveau augmente de **10 dB** : **90 dB**. C'est **au-dessus du seuil de danger** : il faut protéger les ouvriers.\n4. Pour limiter la **transmission** vers le bureau voisin, il faut un matériau **lourd et étanche** (béton, plâtre épais). Pour réduire l'**écho** dans l'atelier, il faut un matériau **poreux** (laine, mousse) qui **absorbe** le son. Une bonne isolation combine les deux."
+    },
+    {
+      "chapitre": "57e46688-4748-5c15-9921-7c987711ec24",
+      "difficulte": 3,
+      "titre": "Des ondes pour communiquer",
+      "consigne": "Justifie chaque réponse par une relation du cours et donne les résultats avec leur unité.",
+      "enonce": "**Données.** c = 3,00 × 10⁸ m/s. La taille d'une antenne est de l'ordre d'une fraction de la longueur d'onde (souvent λ/4).\n\n1. Calcule la longueur d'onde d'un Wi-Fi à **5,0 GHz**, puis la taille d'une antenne λ/4.\n2. Même question pour une radio FM à **100 MHz**. Explique pourquoi un téléphone peut loger une antenne Wi-Fi mais pas une antenne FM de cette taille.\n3. Une fibre optique transporte une lumière infrarouge de longueur d'onde **1,55 µm**. Calcule sa fréquence. Par quel phénomène la lumière est-elle guidée ? Donne deux avantages de la fibre.\n4. Un microcontrôleur produit un signal carré de **1,0 kHz**, dont le spectre ne contient que les harmoniques de rang impair. Quelle bande de fréquences faut-il transmettre pour conserver les composantes jusqu'au rang 7 ?\n5. Comment fait-on passer plusieurs émissions radio dans le même milieu sans qu'elles se mélangent ?",
+      "bareme": [
+        { "critere": "Wi-Fi : λ = 6,0 cm, antenne 1,5 cm", "points": 4 },
+        { "critere": "FM : λ = 3,0 m, antenne 75 cm ; plus la fréquence est haute, plus l'antenne est petite", "points": 4 },
+        { "critere": "f ≈ 1,9 × 10¹⁴ Hz ; réflexion totale ; faibles pertes, haut débit, insensible aux perturbations", "points": 5 },
+        { "critere": "Rangs 1, 3, 5, 7 : bande jusqu'à 7,0 kHz", "points": 4 },
+        { "critere": "Chaque émission transposée dans sa propre bande (modulation d'une porteuse)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. λ = c / f = 3,00 × 10⁸ / 5,0 × 10⁹ = **0,060 m = 6,0 cm**. Antenne λ/4 = **1,5 cm**.\n2. λ = 3,00 × 10⁸ / 100 × 10⁶ = **3,0 m** ; antenne λ/4 = **75 cm**. Plus la fréquence est **haute**, plus la longueur d'onde est courte et plus l'antenne est **petite** : 1,5 cm tient dans un téléphone, 75 cm non.\n3. f = c / λ = 3,00 × 10⁸ / 1,55 × 10⁻⁶ ≈ **1,9 × 10¹⁴ Hz**. La lumière est guidée par **réflexion totale**. Avantages : **faibles pertes**, **très haut débit**, **insensible aux perturbations électromagnétiques** (deux au choix).\n4. Harmoniques présents : rangs 1, 3, 5, 7, soit 1,0 ; 3,0 ; 5,0 ; 7,0 kHz. Il faut transmettre les fréquences jusqu'à **7,0 kHz** (bande de 0 à 7,0 kHz si le signal a une composante continue).\n5. Chaque émission est **transposée** dans sa **propre bande de fréquences** : on module une **porteuse** différente pour chacune."
+    },
+    {
+      "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+      "difficulte": 1,
+      "titre": "Dériver des fonctions emboîtées",
+      "consigne": "Pour chaque fonction, identifie la fonction intérieure u, annonce la formule utilisée et donne la dérivée simplifiée.",
+      "enonce": "**Calcule la dérivée de chacune des fonctions suivantes.**\n\n1. f(x) = (2x − 5)³\n2. g(t) = e^(4t)\n3. h(x) = ln(3x + 1), pour 3x + 1 > 0\n4. k(t) = cos(5t)\n\n5. On pose u(x) = x² − 3 et v(X) = X⁵. Écris v(u(x)) puis u(v(x)). Sont-elles égales ?",
+      "bareme": [
+        { "critere": "f’(x) = 6 (2x − 5)² et g’(t) = 4 e^(4t)", "points": 8 },
+        { "critere": "h’(x) = 3 / (3x + 1) et k’(t) = −5 sin(5t)", "points": 8 },
+        { "critere": "v(u(x)) = (x² − 3)⁵ et u(v(x)) = x¹⁰ − 3, différentes", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "Formule générale : (v ∘ u)’ = u’ × (v’ ∘ u).\n1. u(x) = 2x − 5, u’ = 2 ; (uⁿ)’ = n u’ uⁿ⁻¹ : f’(x) = 3 × 2 × (2x − 5)² = **6 (2x − 5)²**.\n2. u(t) = 4t, u’ = 4 ; (e^u)’ = u’ e^u : g’(t) = **4 e^(4t)**.\n3. u(x) = 3x + 1, u’ = 3 ; (ln u)’ = u’ / u : h’(x) = **3 / (3x + 1)**.\n4. u(t) = 5t, u’ = 5 ; (cos u)’ = −u’ sin u : k’(t) = **−5 sin(5t)**.\n5. v(u(x)) = **(x² − 3)⁵** ; u(v(x)) = (x⁵)² − 3 = **x¹⁰ − 3**. Elles sont **différentes** : en général, v ∘ u ≠ u ∘ v."
+    },
+    {
+      "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+      "difficulte": 2,
+      "titre": "Pente et variations",
+      "consigne": "Annonce la formule de dérivation utilisée, puis réponds à chaque question.",
+      "enonce": "**Partie A.** On considère la fonction f définie sur ℝ par f(x) = √(x² + 9).\n1. Calcule f’(x) et simplifie.\n2. Calcule f’(4). Que représente ce nombre pour la courbe de f ?\n\n**Partie B.** Une grandeur physique décroît selon g(t) = 5 e^(−0,2 t), pour t ≥ 0.\n3. Calcule g’(t). Justifie que g est décroissante sur [0 ; +∞[.\n\n**Partie C.** Une tension vaut u(t) = 12 sin(100π t).\n4. Calcule u’(t).",
+      "bareme": [
+        { "critere": "f’(x) = 2x / (2√(x² + 9)) = x / √(x² + 9)", "points": 6 },
+        { "critere": "f’(4) = 4 / 5 = 0,8 : pente de la tangente au point d'abscisse 4", "points": 4 },
+        { "critere": "g’(t) = −e^(−0,2 t) < 0 car l'exponentielle est positive : g décroissante", "points": 6 },
+        { "critere": "u’(t) = 1 200π cos(100π t)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. f = √u avec u(x) = x² + 9, u’(x) = 2x. (√u)’ = u’ / (2√u) : f’(x) = 2x / (2√(x² + 9)) = **x / √(x² + 9)**.\n2. f’(4) = 4 / √(16 + 9) = 4 / √25 = 4 / 5 = **0,8**. C'est le **coefficient directeur (la pente) de la tangente** à la courbe de f au point d'abscisse 4.\n3. g(t) = 5 e^u avec u(t) = −0,2 t, u’ = −0,2 : g’(t) = 5 × (−0,2) × e^(−0,2 t) = **−e^(−0,2 t)**. Une exponentielle est toujours **strictement positive**, donc g’(t) < 0 : g est **décroissante** sur [0 ; +∞[.\n4. (sin u)’ = u’ cos u avec u(t) = 100π t, u’ = 100π : u’(t) = 12 × 100π × cos(100π t) = **1 200π cos(100π t)**."
+    },
+    {
+      "chapitre": "6de0f126-170c-5ac2-a0bc-85034f6d7084",
+      "difficulte": 3,
+      "titre": "Retrouver des primitives",
+      "consigne": "Pour chaque fonction, reconnais la forme du tableau des primitives, ajuste le facteur si nécessaire, puis vérifie en dérivant.",
+      "enonce": "**Donne une primitive de chacune des fonctions suivantes.**\n\n1. f(x) = 4x (x² + 3)³\n2. g(x) = e^(−3x + 1)\n3. h(x) = 2x / (x² + 1)\n4. k(t) = sin(2t)\n5. m(x) = 3 / (x + 2)², pour x > −2\n\n6. Vérifie par dérivation la primitive trouvée pour f.\n7. Un élève affirme qu'une primitive de e^(x²) est e^(x²) / (2x). Explique pourquoi c'est faux, en dérivant sa proposition.",
+      "bareme": [
+        { "critere": "F(x) = (x² + 3)⁴ / 2 (forme u’ uⁿ avec facteur ajusté)", "points": 4 },
+        { "critere": "G(x) = −(1/3) e^(−3x + 1) et H(x) = ln(x² + 1)", "points": 5 },
+        { "critere": "K(t) = −½ cos(2t) et M(x) = −3 / (x + 2)", "points": 5 },
+        { "critere": "Vérification de F par dérivation", "points": 3 },
+        { "critere": "Erreur de l'élève montrée : la dérivée de sa proposition n'est pas e^(x²)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. u = x² + 3, u’ = 2x : 4x (x² + 3)³ = 2 × u’ u³. Une primitive de u’ u³ est u⁴ / 4, donc **F(x) = 2 × (x² + 3)⁴ / 4 = (x² + 3)⁴ / 2**.\n2. Forme f(ax + b) avec a = −3 : **G(x) = −(1/3) e^(−3x + 1)**.\n3. Forme u’ / u avec u = x² + 1 > 0 : **H(x) = ln(x² + 1)**.\n4. sin(2t) = ½ × 2 sin(2t), forme ½ × u’ sin u : **K(t) = −½ cos(2t)**.\n5. Forme 3 × u’ / u² avec u = x + 2, u’ = 1 ; une primitive de u’ / u² est −1 / u : **M(x) = −3 / (x + 2)**.\n6. F’(x) = ½ × 4 × 2x × (x² + 3)³ = 4x (x² + 3)³ = f(x) : vérifié.\n7. Le tableau ne donne une primitive de la forme e^u que pour **u’ × e^u**. Ici, e^(x²) n'a pas le facteur 2x, et on ne peut pas « diviser par u’ ». En dérivant la proposition de l'élève comme un produit e^(x²) × 1/(2x), on obtient e^(x²) − e^(x²) / (2x²), qui n'est pas e^(x²) : la proposition est **fausse**. (On retient : on vérifie toujours une primitive en la dérivant.)"
+    },
+    {
+      "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+      "difficulte": 1,
+      "titre": "Une aire sous une droite",
+      "consigne": "Calcule chaque intégrale à l'aide d'une primitive et présente la réponse avec les crochets.",
+      "enonce": "**On considère la fonction f définie par f(x) = 2x + 1.**\n\n1. Calcule ∫ de 0 à 3 de f(x) dx à l'aide d'une primitive.\n2. f est positive sur [0 ; 3] : que représente cette intégrale ? Retrouve le résultat en calculant l'aire d'un trapèze.\n3. Calcule la valeur moyenne de f sur [0 ; 3].\n4. Que vaut ∫ de 3 à 0 de f(x) dx ? Justifie.",
+      "bareme": [
+        { "critere": "F(x) = x² + x ; intégrale = F(3) − F(0) = 12", "points": 7 },
+        { "critere": "Aire sous la courbe ; trapèze de bases 1 et 7, hauteur 3 : aire 12", "points": 5 },
+        { "critere": "Valeur moyenne = 12 / 3 = 4", "points": 4 },
+        { "critere": "Bornes échangées : −12", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Une primitive de f est F(x) = x² + x. ∫ de 0 à 3 de (2x + 1) dx = [x² + x] entre 0 et 3 = (9 + 3) − 0 = **12**.\n2. f est positive sur [0 ; 3] : l'intégrale est l'**aire** du domaine entre la courbe, l'axe des abscisses et les droites x = 0 et x = 3, en unités d'aire. f étant affine, ce domaine est un **trapèze** de bases f(0) = 1 et f(3) = 7 et de hauteur 3 : aire = (1 + 7) / 2 × 3 = **12**.\n3. μ = (1 / (3 − 0)) × 12 = **4**.\n4. Échanger les bornes change le signe : ∫ de 3 à 0 de f(x) dx = **−12**."
+    },
+    {
+      "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+      "difficulte": 2,
+      "titre": "L'énergie d'un démarrage",
+      "consigne": "Rédige chaque calcul d'intégrale et interprète le résultat.",
+      "enonce": "**Partie A.** Au démarrage, la puissance d'un moteur vaut P(t) = 300 t (en W), pour t de 0 à 5 s.\n1. Calcule l'énergie consommée pendant ces 5 s. Justifie le lien entre l'intégrale et l'énergie.\n2. Calcule la puissance moyenne sur cette durée.\n\n**Partie B.** On veut approcher ∫ de 0 à 2 de x² dx par la méthode des rectangles.\n3. Avec 4 rectangles « à gauche » de même largeur, calcule la valeur approchée.\n4. Calcule la valeur exacte. Explique pourquoi l'approximation est inférieure.",
+      "bareme": [
+        { "critere": "E = ∫ P(t) dt car P = dE/dt ; E = [150 t²] = 3 750 J", "points": 6 },
+        { "critere": "Puissance moyenne = 3 750 / 5 = 750 W", "points": 4 },
+        { "critere": "Rectangles : Δx = 0,5, somme 0,5 × (0 + 0,25 + 1 + 2,25) = 1,75", "points": 5 },
+        { "critere": "Valeur exacte 8/3 ≈ 2,67 ; fonction croissante : rectangles à gauche sous-estiment", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Comme P = dE/dt, l'énergie est l'intégrale de la puissance : E = ∫ de 0 à 5 de 300 t dt = [150 t²] entre 0 et 5 = 150 × 25 = **3 750 J**.\n2. P moyenne = E / Δt = 3 750 / 5 = **750 W** (c'est la valeur moyenne de P sur [0 ; 5]).\n3. Δx = (2 − 0) / 4 = 0,5. Rectangles à gauche aux abscisses 0 ; 0,5 ; 1 ; 1,5 : hauteurs 0 ; 0,25 ; 1 ; 2,25. Somme : 0,5 × (0 + 0,25 + 1 + 2,25) = 0,5 × 3,5 = **1,75**.\n4. Une primitive de x² est x³ / 3 : ∫ de 0 à 2 de x² dx = 8/3 ≈ **2,67**. La fonction x² est **croissante** sur [0 ; 2] : chaque rectangle à gauche prend la hauteur du début de sa bande, la plus petite, et reste **sous** la courbe. Les rectangles à gauche **sous-estiment** donc l'aire ; en augmentant le nombre de rectangles, on se rapproche de 8/3."
+    },
+    {
+      "chapitre": "0fe425f7-5e91-5d4b-bb53-4c02d142c990",
+      "difficulte": 3,
+      "titre": "Aires, signes et moyenne",
+      "consigne": "Justifie chaque étape (primitive, propriété utilisée) et interprète les signes obtenus.",
+      "enonce": "**On considère les fonctions f(x) = 4x − x² et g(x) = x.**\n\n1. Montre que f(x) − g(x) = x (3 − x) et en déduire que f ≥ g sur [0 ; 3].\n2. Calcule l'aire du domaine compris entre les deux courbes sur [0 ; 3].\n3. Calcule ∫ de 0 à 4 de f(x) dx, puis la valeur moyenne de f sur [0 ; 4].\n4. Calcule ∫ de 4 à 5 de f(x) dx. Pourquoi est-elle négative ?\n5. Déduis-en ∫ de 0 à 5 de f(x) dx en nommant la propriété utilisée, puis vérifie par un calcul direct.",
+      "bareme": [
+        { "critere": "f − g = 3x − x² = x (3 − x) ≥ 0 sur [0 ; 3]", "points": 3 },
+        { "critere": "Aire = ∫ (3x − x²) dx = 13,5 − 9 = 4,5", "points": 5 },
+        { "critere": "∫ de 0 à 4 de f = 32/3 ; moyenne 8/3 ≈ 2,67", "points": 5 },
+        { "critere": "∫ de 4 à 5 de f = −7/3, f négative sur [4 ; 5]", "points": 4 },
+        { "critere": "Chasles : 32/3 − 7/3 = 25/3, vérifié directement", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f(x) − g(x) = 4x − x² − x = 3x − x² = **x (3 − x)**. Sur [0 ; 3], x ≥ 0 et 3 − x ≥ 0, donc le produit est positif : **f ≥ g**.\n2. Aire = ∫ de 0 à 3 de (3x − x²) dx = [3x²/2 − x³/3] entre 0 et 3 = 27/2 − 9 = 13,5 − 9 = **4,5** unités d'aire.\n3. Une primitive de f est F(x) = 2x² − x³/3. ∫ de 0 à 4 de f = F(4) − F(0) = 32 − 64/3 = **32/3** ≈ 10,67. Valeur moyenne : (1/4) × 32/3 = **8/3 ≈ 2,67**.\n4. ∫ de 4 à 5 de f = F(5) − F(4) = (50 − 125/3) − (32 − 64/3) = 25/3 − 32/3 = **−7/3**. Elle est négative car f(x) = x (4 − x) est **négative** pour x > 4 : l'intégrale est l'opposé de l'aire.\n5. **Relation de Chasles** : ∫ de 0 à 5 = ∫ de 0 à 4 + ∫ de 4 à 5 = 32/3 − 7/3 = **25/3**. Calcul direct : F(5) − F(0) = 50 − 125/3 = 25/3 : vérifié."
+    },
+    {
+      "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+      "difficulte": 1,
+      "titre": "Règles de calcul et équations",
+      "consigne": "Justifie chaque étape par une règle de calcul du cours.",
+      "enonce": "**Questions.**\n\n1. Simplifie A = e^(x + 3) × e^(−x).\n2. Écris ln 12 en fonction de ln 2 et ln 3.\n3. Résous e^(2x) = 7. Donne la valeur exacte, puis une valeur approchée au centième.\n4. Résous ln x = 3. Donne la valeur exacte, puis une valeur approchée au centième.\n5. Résous ln x > 1.",
+      "bareme": [
+        { "critere": "A = e³ et ln 12 = 2 ln 2 + ln 3", "points": 6 },
+        { "critere": "x = ln 7 / 2 ≈ 0,97", "points": 5 },
+        { "critere": "x = e³ ≈ 20,09", "points": 5 },
+        { "critere": "x > e, car ln est croissante (et x > 0)", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. e^a × e^b = e^(a + b) : A = e^(x + 3 − x) = **e³**.\n2. 12 = 2² × 3, donc ln 12 = ln(2²) + ln 3 = **2 ln 2 + ln 3**.\n3. e^(2x) = 7 ⇔ 2x = ln 7 ⇔ **x = ln 7 / 2 ≈ 0,97**.\n4. ln x = 3 ⇔ **x = e³ ≈ 20,09**.\n5. ln x > 1 ⇔ ln x > ln e ⇔ **x > e** (ln est strictement croissante et n'est définie que pour x > 0)."
+    },
+    {
+      "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+      "difficulte": 2,
+      "titre": "L'élimination d'un médicament",
+      "consigne": "Rédige chaque calcul avec la valeur exacte, puis une valeur approchée.",
+      "enonce": "**Situation.** Après une injection, la concentration d'un médicament dans le sang vaut C(t) = 20 e^(−0,3 t), en mg/L, où t est en heures (t ≥ 0).\n\n1. Calcule C(0) et C(2) (au centième).\n2. Calcule C’(t) et étudie le sens de variation de C. Quelle est la limite de C(t) quand t tend vers +∞ ?\n3. Au bout de combien de temps la concentration est-elle divisée par 2 ? (Donne la valeur exacte et une valeur approchée.)\n4. Au bout de combien de temps la concentration atteint-elle 5 mg/L ?",
+      "bareme": [
+        { "critere": "C(0) = 20 mg/L ; C(2) = 20 e^(−0,6) ≈ 10,98 mg/L", "points": 4 },
+        { "critere": "C’(t) = −6 e^(−0,3 t) < 0, C décroissante, limite 0", "points": 6 },
+        { "critere": "Demi-durée : t = ln 2 / 0,3 ≈ 2,31 h", "points": 5 },
+        { "critere": "C(t) = 5 ⇔ t = ln 4 / 0,3 ≈ 4,62 h", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. C(0) = 20 × e⁰ = **20 mg/L**. C(2) = 20 e^(−0,6) ≈ **10,98 mg/L**.\n2. (e^(kt))’ = k e^(kt) : C’(t) = 20 × (−0,3) e^(−0,3 t) = **−6 e^(−0,3 t)**. L'exponentielle étant strictement positive, C’(t) < 0 : C est **décroissante**. Quand t tend vers +∞, −0,3 t tend vers −∞ et e^(−0,3 t) tend vers 0 : **C(t) tend vers 0**.\n3. C(t) = 10 ⇔ e^(−0,3 t) = ½ ⇔ −0,3 t = ln(½) = −ln 2 ⇔ **t = ln 2 / 0,3 ≈ 2,31 h** (environ 2 h 19 min).\n4. C(t) = 5 ⇔ e^(−0,3 t) = 1/4 ⇔ −0,3 t = −ln 4 ⇔ **t = ln 4 / 0,3 ≈ 4,62 h**. On retrouve deux fois la durée précédente, puisque ln 4 = 2 ln 2 : la concentration est divisée par 4 après deux « demi-durées »."
+    },
+    {
+      "chapitre": "323f82fe-4200-538b-bbd2-37df74f73364",
+      "difficulte": 3,
+      "titre": "Étude d'une fonction exponentielle",
+      "consigne": "Justifie chaque limite en nommant la propriété utilisée, et chaque signe par un argument.",
+      "enonce": "**Partie A.** On considère f(x) = (x + 1) e^(−x) sur [0 ; +∞[.\n1. Montre que f’(x) = −x e^(−x).\n2. Étudie le signe de f’(x) et dresse le tableau de variations de f sur [0 ; +∞[.\n3. Détermine la limite de f en +∞ en nommant la propriété utilisée.\n\n**Partie B.** Une grandeur décroît selon G(t) = e^(−0,3 t).\n4. Résous l'inéquation e^(−0,3 t) < 0,1 et interprète : à partir de quand la grandeur est-elle inférieure au dixième de sa valeur initiale ?\n5. Le logarithme décimal vérifie log x = ln x / ln 10. Calcule log 1 000 à l'aide de cette relation et de la règle ln(aⁿ) = n ln a.",
+      "bareme": [
+        { "critere": "Dérivée d'un produit : f’(x) = e^(−x) − (x + 1) e^(−x) = −x e^(−x)", "points": 4 },
+        { "critere": "f’ ≤ 0 sur [0 ; +∞[, f décroissante, f(0) = 1", "points": 4 },
+        { "critere": "Limite 0 par croissances comparées (x e^(−x) → 0) et e^(−x) → 0", "points": 4 },
+        { "critere": "t > ln 10 / 0,3 ≈ 7,68, avec changement de sens en divisant par un négatif", "points": 5 },
+        { "critere": "log 1 000 = 3 ln 10 / ln 10 = 3", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. f = u × v avec u(x) = x + 1 (u’ = 1) et v(x) = e^(−x) (v’ = −e^(−x)). f’(x) = 1 × e^(−x) + (x + 1) × (−e^(−x)) = e^(−x) (1 − x − 1) = **−x e^(−x)**.\n2. e^(−x) > 0 et −x ≤ 0 sur [0 ; +∞[ : **f’(x) ≤ 0** (nulle seulement en 0). f est **décroissante** sur [0 ; +∞[, de f(0) = 1 vers sa limite en +∞.\n3. f(x) = x e^(−x) + e^(−x). Par **croissances comparées**, x e^(−x) tend vers 0 en +∞ ; et e^(−x) tend vers 0. Donc **f(x) tend vers 0** en +∞.\n4. e^(−0,3 t) < 0,1 ⇔ −0,3 t < ln 0,1 (ln est croissante) ⇔ t > ln 0,1 / (−0,3) — on divise par un nombre **négatif**, le sens **change** — ⇔ **t > ln 10 / 0,3 ≈ 7,68**. La grandeur est inférieure au dixième de sa valeur initiale G(0) = 1 à partir de t ≈ 7,68.\n5. log 1 000 = ln 1 000 / ln 10 = ln(10³) / ln 10 = 3 ln 10 / ln 10 = **3**."
+    },
+    {
+      "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+      "difficulte": 1,
+      "titre": "Solutions de y’ = a y",
+      "consigne": "Justifie chaque réponse en citant la forme des solutions donnée par le cours.",
+      "enonce": "**Questions.**\n\n1. Vérifie que la fonction y = 5 e^(−3x) est solution de l'équation différentielle y’ = −3y.\n2. Donne toutes les solutions de l'équation y’ = 4y, puis celle qui vérifie y(0) = 2.\n3. Quelle est la solution constante de l'équation y’ = 2y + 6 ? Donne ensuite la forme générale de ses solutions.",
+      "bareme": [
+        { "critere": "y’ = −15 e^(−3x) = −3 × 5 e^(−3x) : vérifié", "points": 6 },
+        { "critere": "y = C e^(4x) ; avec y(0) = 2 : y = 2 e^(4x)", "points": 7 },
+        { "critere": "Solution constante −b/a = −3 ; y = C e^(2x) − 3", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. y’ = 5 × (−3) e^(−3x) = −15 e^(−3x), et −3y = −3 × 5 e^(−3x) = −15 e^(−3x). Les deux membres sont égaux pour tout x : **y est solution**.\n2. Les solutions de y’ = a y sont y(x) = C e^(a x) : ici **y(x) = C e^(4x)**, C réel. y(0) = C = 2, donc **y(x) = 2 e^(4x)**.\n3. a = 2, b = 6. La solution constante vaut **−b/a = −3** (sa dérivée est nulle et 2 × (−3) + 6 = 0). Forme générale : **y(x) = C e^(2x) − 3**, C réel."
+    },
+    {
+      "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+      "difficulte": 2,
+      "titre": "Le thé qui refroidit",
+      "consigne": "Suis la méthode du cours : identifier a et b, écrire la forme générale, utiliser la condition initiale, répondre.",
+      "enonce": "**Situation.** Un thé à **80 °C** refroidit dans une pièce. Sa température θ (en °C), en fonction du temps t (en minutes), vérifie :\n\nθ’ = −0,05 θ + 1, avec θ(0) = 80.\n\n1. Identifie a et b. Calcule la solution constante et interprète-la.\n2. Donne l'expression de θ(t).\n3. Calcule la température au bout de 10 min (au dixième).\n4. Au bout de combien de temps le thé atteint-il 40 °C ? Donne la valeur exacte et une valeur approchée.",
+      "bareme": [
+        { "critere": "a = −0,05, b = 1 ; solution constante 20 °C = température de la pièce", "points": 5 },
+        { "critere": "θ(t) = 60 e^(−0,05 t) + 20", "points": 5 },
+        { "critere": "θ(10) = 60 e^(−0,5) + 20 ≈ 56,4 °C", "points": 4 },
+        { "critere": "60 e^(−0,05 t) = 20 ⇔ t = 20 ln 3 ≈ 22 min", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a = −0,05 et b = 1. Solution constante : −b/a = −1 / (−0,05) = **20 °C** : c'est la **température de la pièce**, la solution d'équilibre.\n2. θ(t) = C e^(−0,05 t) + 20. θ(0) = C + 20 = 80, donc C = 60 : **θ(t) = 60 e^(−0,05 t) + 20**.\n3. θ(10) = 60 e^(−0,5) + 20 ≈ 60 × 0,607 + 20 ≈ **56,4 °C**.\n4. θ(t) = 40 ⇔ 60 e^(−0,05 t) = 20 ⇔ e^(−0,05 t) = 1/3 ⇔ −0,05 t = −ln 3 ⇔ **t = 20 ln 3 ≈ 22 min** (21,97 min)."
+    },
+    {
+      "chapitre": "ddf5b8e4-405c-527e-a891-672cee15e037",
+      "difficulte": 3,
+      "titre": "La montée en température du four",
+      "consigne": "Rédige chaque étape, puis compare la méthode d'Euler à la solution exacte.",
+      "enonce": "**Situation.** Un four électrique, allumé à t = 0 à **20 °C**, chauffe selon l'équation θ’ = −0,02 θ + 5, où θ est en °C et t en minutes.\n\n1. Calcule la solution constante. Que représente-t-elle pour le four ?\n2. Détermine θ(t).\n3. Calcule la température au bout de 30 min (au dixième). Quelle est la limite de θ(t) en +∞ ?\n4. Au bout de combien de temps le four atteint-il 200 °C ? (valeur exacte, puis approchée au dixième)\n5. Applique la méthode d'Euler avec un pas h = 10 min, à partir de θ(0) = 20, pour estimer θ(10) et θ(20). Compare aux valeurs exactes θ(10) ≈ 61,7 °C et θ(20) ≈ 95,8 °C. Comment améliorer l'approximation ?",
+      "bareme": [
+        { "critere": "−b/a = 250 °C : température d'équilibre vers laquelle tend le four", "points": 3 },
+        { "critere": "θ(t) = 250 − 230 e^(−0,02 t)", "points": 4 },
+        { "critere": "θ(30) ≈ 123,8 °C ; limite 250 °C", "points": 4 },
+        { "critere": "t = 50 ln(23/5) ≈ 76,3 min", "points": 4 },
+        { "critere": "Euler : θ(10) ≈ 66, θ(20) ≈ 102,8 ; écart expliqué, pas plus petit", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. a = −0,02, b = 5 : −b/a = 5 / 0,02 = **250 °C**. C'est la **température d'équilibre** : le four s'en approche sans la dépasser.\n2. θ(t) = C e^(−0,02 t) + 250. θ(0) = C + 250 = 20, donc C = −230 : **θ(t) = 250 − 230 e^(−0,02 t)**.\n3. θ(30) = 250 − 230 e^(−0,6) ≈ 250 − 230 × 0,549 ≈ **123,8 °C**. Quand t tend vers +∞, e^(−0,02 t) tend vers 0 : **θ(t) tend vers 250 °C**.\n4. θ(t) = 200 ⇔ 230 e^(−0,02 t) = 50 ⇔ e^(−0,02 t) = 5/23 ⇔ −0,02 t = ln(5/23) ⇔ **t = 50 ln(23/5) ≈ 76,3 min**.\n5. y(x + h) ≈ y(x) + h × y’(x), avec θ’ = −0,02 θ + 5 :\n- θ’(0) = −0,4 + 5 = 4,6 → θ(10) ≈ 20 + 10 × 4,6 = **66 °C** ;\n- θ’(10) ≈ −0,02 × 66 + 5 = 3,68 → θ(20) ≈ 66 + 10 × 3,68 = **102,8 °C**.\nLes valeurs exactes sont 61,7 °C et 95,8 °C : la méthode d'Euler **surestime** ici, car elle garde sur tout le pas la pente du début, alors que la vitesse de chauffe diminue. Pour améliorer l'approximation, on prend un **pas plus petit** (un tableur ou une boucle Python fait des milliers de pas)."
+    },
+    {
+      "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+      "difficulte": 1,
+      "titre": "Passer d'une forme à l'autre",
+      "consigne": "Justifie chaque passage par le calcul du module et d'un argument, ou par la formule e^(iθ) = cos θ + i sin θ.",
+      "enonce": "**Questions.**\n\n1. Écris z = √3 + i sous forme exponentielle.\n2. Donne la forme algébrique de 4 e^(iπ/2) et de 3 e^(iπ).\n3. Calcule 2 e^(iπ/6) × e^(iπ/3) et donne le résultat sous forme algébrique.\n4. Calcule (e^(iπ/4))⁴.",
+      "bareme": [
+        { "critere": "r = 2, cos θ = √3/2 et sin θ = 1/2, θ = π/6 : z = 2 e^(iπ/6)", "points": 7 },
+        { "critere": "4 e^(iπ/2) = 4i ; 3 e^(iπ) = −3", "points": 5 },
+        { "critere": "Produit : modules multipliés, arguments additionnés : 2 e^(iπ/2) = 2i", "points": 5 },
+        { "critere": "(e^(iπ/4))⁴ = e^(iπ) = −1", "points": 3 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. r = √(3 + 1) = **2** ; cos θ = √3/2 et sin θ = 1/2, donc θ = π/6 : **√3 + i = 2 e^(iπ/6)**.\n2. 4 e^(iπ/2) = 4 (cos π/2 + i sin π/2) = 4 (0 + i) = **4i**. 3 e^(iπ) = 3 (cos π + i sin π) = **−3**.\n3. On multiplie les modules et on additionne les arguments : 2 e^(iπ/6) × 1 e^(iπ/3) = 2 e^(i(π/6 + π/3)) = 2 e^(iπ/2) = **2i**.\n4. (e^(iθ))ⁿ = e^(inθ) : (e^(iπ/4))⁴ = e^(iπ) = **−1**."
+    },
+    {
+      "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+      "difficulte": 2,
+      "titre": "Sinusoïdes et trigonométrie",
+      "consigne": "Annonce chaque formule utilisée avant de l'appliquer.",
+      "enonce": "**Questions.**\n\n1. Écris le signal s(t) = cos t + √3 sin t sous la forme A cos(t + φ), avec A > 0. Vérifie ton résultat pour t = 0.\n2. Linéarise sin² t, puis donne une primitive de sin² t.\n3. Justifie que la valeur moyenne de sin²(ω t) sur une période vaut ½.\n4. Résous dans ℂ l'équation z² = −16.",
+      "bareme": [
+        { "critere": "A = 2, cos φ = 1/2, sin φ = −√3/2, φ = −π/3 : s(t) = 2 cos(t − π/3), vérifié en t = 0", "points": 7 },
+        { "critere": "sin² t = (1 − cos 2t) / 2 ; primitive t/2 − sin(2t)/4", "points": 5 },
+        { "critere": "Moyenne ½ : la moyenne de cos(2ω t) sur une période est nulle", "points": 4 },
+        { "critere": "z = 4i ou z = −4i", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. a = 1, b = √3 : A = √(1 + 3) = **2**. cos φ = a/A = 1/2 et sin φ = −b/A = −√3/2, donc **φ = −π/3** : **s(t) = 2 cos(t − π/3)**. Vérification en t = 0 : cos 0 + √3 sin 0 = 1 et 2 cos(−π/3) = 2 × 1/2 = 1.\n2. cos 2a = 1 − 2 sin² a, donc **sin² t = (1 − cos 2t) / 2**. Une primitive : **t/2 − sin(2t)/4** (car une primitive de cos(2t) est sin(2t)/2).\n3. sin²(ω t) = ½ − ½ cos(2ω t). Sur une période, le terme cos(2ω t) oscille autant au-dessus qu'en dessous de 0 : sa valeur moyenne est **nulle**. Il reste la moyenne de la constante ½ : **½**.\n4. z² = a avec a = −16 < 0 : z = ± i √16, soit **z = 4i ou z = −4i**."
+    },
+    {
+      "chapitre": "2eef7713-d7c9-5191-ae2f-ca4ee3c0c49a",
+      "difficulte": 3,
+      "titre": "Rotations et courants",
+      "consigne": "Justifie chaque étape et interprète géométriquement ou physiquement les résultats.",
+      "enonce": "**Partie A — Géométrie.**\n1. Résous (1 − i) z = 4 et donne la solution sous forme algébrique.\n2. Écris cette solution sous forme exponentielle.\n3. On multiplie la solution par i. Quelle transformation cela représente-t-il ? Donne le point obtenu sous forme algébrique et exponentielle.\n4. Quelle transformation est associée à z ↦ 3z ? à z ↦ z + 2 ?\n\n**Partie B — Électricité.** Deux courants de même fréquence arrivent sur un même nœud : i1(t) = 3√2 cos(ω t) et i2(t) = 3√2 cos(ω t + π/2) (en A). Un courant I √2 cos(ω t + φ) est représenté par le complexe I e^(iφ).\n5. Donne les complexes associés à i1 et i2, puis le complexe associé au courant total i = i1 + i2 sous forme exponentielle. Déduis-en l'expression de i(t).",
+      "bareme": [
+        { "critere": "z = 4 / (1 − i) = 2 + 2i", "points": 4 },
+        { "critere": "2 + 2i = 2√2 e^(iπ/4)", "points": 4 },
+        { "critere": "Rotation d'un quart de tour : −2 + 2i = 2√2 e^(i3π/4)", "points": 4 },
+        { "critere": "Homothétie de rapport 3 ; translation de vecteur d'affixe 2", "points": 3 },
+        { "critere": "3 + 3i = 3√2 e^(iπ/4) ; i(t) = 6 cos(ω t + π/4)", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. z = 4 / (1 − i) = 4 (1 + i) / ((1 − i)(1 + i)) = 4 (1 + i) / 2 = **2 + 2i**.\n2. r = √(4 + 4) = 2√2 ; cos θ = 2 / (2√2) = √2/2 et sin θ = √2/2, donc θ = π/4 : **2 + 2i = 2√2 e^(iπ/4)**.\n3. i = e^(iπ/2) : multiplier par i est une **rotation de centre O et d'angle π/2** (un quart de tour). i (2 + 2i) = 2i + 2i² = **−2 + 2i** = 2√2 e^(i(π/4 + π/2)) = **2√2 e^(i3π/4)**.\n4. z ↦ 3z : **homothétie** de centre O et de rapport 3. z ↦ z + 2 : **translation** de vecteur d'affixe 2.\n5. i1 : I = 3, φ = 0, complexe **3**. i2 : I = 3, φ = π/2, complexe **3 e^(iπ/2) = 3i**. Courant total : 3 + 3i = 3 (1 + i) = **3√2 e^(iπ/4)**. Donc I = 3√2 et φ = π/4 : i(t) = 3√2 × √2 cos(ω t + π/4) = **6 cos(ω t + π/4)**. La somme de deux courants de même fréquence est un courant sinusoïdal de même fréquence."
+    },
+    {
+      "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+      "difficulte": 1,
+      "titre": "Rédiger un calcul complet",
+      "consigne": "Rédige chaque calcul dans l'ordre du cours : expression littérale, application numérique, résultat avec unité et chiffres significatifs, phrase de conclusion.",
+      "enonce": "**Situation.** Un moteur est alimenté sous **230 V** ; il absorbe **6,5 A** avec un facteur de puissance **cos φ = 0,85**. Il fonctionne pendant **2,0 h**.\n\n1. Calcule la puissance active P = U × I × cos φ. Combien de chiffres significatifs faut-il garder ? Justifie.\n2. Calcule l'énergie consommée E = P × Δt, en kWh puis en joules.\n3. Un élève a écrit : « P = 1270,75 ». Relève les deux défauts de sa réponse.",
+      "bareme": [
+        { "critere": "P = 230 × 6,5 × 0,85 ≈ 1,3 × 10³ W, 2 chiffres significatifs (données les moins précises)", "points": 8 },
+        { "critere": "E ≈ 2,5 kWh ≈ 9,1 × 10⁶ J, rédaction complète", "points": 7 },
+        { "critere": "Défauts : pas d'unité, trop de chiffres significatifs", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **P = U × I × cos φ** ; application numérique : P = 230 × 6,5 × 0,85 = 1 270,75 W. Les données les moins précises (6,5 et 0,85) ont **2 chiffres significatifs** : on écrit **P ≈ 1,3 × 10³ W**. Le moteur consomme une puissance active d'environ 1,3 kW.\n2. **E = P × Δt** = 1,27 kW × 2,0 h ≈ **2,5 kWh**. En joules : E = 1 270,75 × 2,0 × 3 600 ≈ **9,1 × 10⁶ J**. Le moteur consomme environ 2,5 kWh en deux heures.\n3. Deux défauts : le résultat n'a **pas d'unité** (un résultat sans unité est un résultat faux) ; et il garde **trop de chiffres significatifs** (six, alors que les données en imposent deux)."
+    },
+    {
+      "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+      "difficulte": 2,
+      "titre": "Montrer, calculer, estimer",
+      "consigne": "Respecte ce que demande chaque verbe de consigne ; rédige chaque calcul avec son unité.",
+      "enonce": "**Situation.** Une voiture de masse **1,2 × 10³ kg** roule à **25 m/s**. Elle freine jusqu'à l'arrêt en **5,0 s**.\n\n1. **Montrer que** son énergie cinétique vaut 3,75 × 10⁵ J.\n2. **Calculer** la puissance moyenne de freinage, en supposant que toute l'énergie cinétique est dissipée pendant les 5,0 s. (Si tu n'as pas réussi la question 1, utilise la valeur donnée.)\n3. **Estimer** l'ordre de grandeur de l'énergie cinétique d'un cycliste (masse 80 kg avec son vélo) roulant à environ 5 m/s, et comparer à celle de la voiture.\n4. Un élève trouve qu'un son de fréquence **440 Hz**, se propageant à **3,4 × 10² m/s**, a une longueur d'onde de 150 km. Sans refaire le calcul, dis pourquoi ce résultat doit l'alerter, puis **calcule** λ = v / f.",
+      "bareme": [
+        { "critere": "Ec = ½ × m × v² = ½ × 1 200 × 25² = 375 000 J : démonstration complète", "points": 6 },
+        { "critere": "P = E / Δt = 7,5 × 10⁴ W, en utilisant la valeur donnée", "points": 5 },
+        { "critere": "Ordre de grandeur ≈ 10³ J, environ 400 fois moins que la voiture, raisonnement visible", "points": 4 },
+        { "critere": "Valeur absurde repérée ; λ ≈ 0,77 m", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Ec = ½ × m × v²** = ½ × 1,2 × 10³ × 25² = ½ × 1 200 × 625 = **375 000 J = 3,75 × 10⁵ J**. On a bien retrouvé la valeur annoncée : « montrer que » exige ce raisonnement complet, pas seulement le résultat.\n2. **E = P × Δt**, donc P = E / Δt = 3,75 × 10⁵ / 5,0 = **7,5 × 10⁴ W** (75 kW). Même sans avoir réussi la question 1, on utilise la valeur donnée : la question reste faisable.\n3. « Estimer » demande un ordre de grandeur avec un raisonnement : Ec ≈ ½ × 80 × 5² = 1 000 J, soit **de l'ordre de 10³ J**. C'est environ 3,75 × 10⁵ / 10³ ≈ **400 fois moins** que la voiture.\n4. Une longueur d'onde de 150 km pour un son audible est **absurde** : cela doit alerter (erreur d'unité ou de puissance de 10). **λ = v / f** = 3,4 × 10² / 440 ≈ **0,77 m**."
+    },
+    {
+      "chapitre": "af8ffd05-0395-5657-b7b9-963ee72fe09c",
+      "difficulte": 3,
+      "titre": "Un exercice qui croise les disciplines",
+      "consigne": "Rédige le passage de la phrase physique à l'écriture mathématique, puis chaque calcul avec son unité et un nombre cohérent de chiffres significatifs.",
+      "enonce": "**Situation.** Un composant électronique, à **85 °C** à l'instant t = 0 où on l'éteint, refroidit dans un boîtier à **25 °C**. On admet que **la vitesse de variation de sa température θ est proportionnelle à l'écart θ − 25**, avec un coefficient k = 0,2 min⁻¹ (t en minutes).\n\n1. Traduis cette phrase par une équation différentielle vérifiée par θ.\n2. On admet que la solution est θ(t) = 60 e^(−0,2 t) + 25. **Vérifie** qu'elle convient, en la réinjectant dans l'équation et en contrôlant la condition initiale.\n3. **Montrer que** θ(5) ≈ 47 °C.\n4. On rappelle que e^x = a ⇔ x = ln a (a > 0). **Déterminer** l'instant où la température atteint 30 °C.\n5. En fonctionnement, ce composant dissipait une puissance de **15 W** pendant **2,0 h**. **Calculer** l'énergie dissipée en joules.",
+      "bareme": [
+        { "critere": "θ’ = −k (θ − 25) = −0,2 θ + 5, signe justifié (la température baisse)", "points": 4 },
+        { "critere": "Vérification : θ’ = −12 e^(−0,2 t) = −0,2 (θ − 25) et θ(0) = 85", "points": 4 },
+        { "critere": "θ(5) = 60 e^(−1) + 25 ≈ 47,1 °C", "points": 4 },
+        { "critere": "60 e^(−0,2 t) = 5 ⇔ t = 5 ln 12 ≈ 12 min", "points": 4 },
+        { "critere": "E = P × Δt = 15 × 7 200 ≈ 1,1 × 10⁵ J", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. La vitesse de variation de θ est θ’ ; elle est proportionnelle à l'écart θ − 25. Comme la température **baisse** tant que θ > 25, le coefficient est négatif : **θ’ = −0,2 (θ − 25)**, soit θ’ = −0,2 θ + 5.\n2. θ’(t) = 60 × (−0,2) e^(−0,2 t) = −12 e^(−0,2 t). Et −0,2 (θ − 25) = −0,2 × 60 e^(−0,2 t) = −12 e^(−0,2 t) : les deux membres sont égaux. θ(0) = 60 + 25 = 85 °C : la condition initiale est vérifiée.\n3. θ(5) = 60 e^(−0,2 × 5) + 25 = 60 e^(−1) + 25 ≈ 60 × 0,368 + 25 ≈ **47,1 °C**, soit environ 47 °C.\n4. θ(t) = 30 ⇔ 60 e^(−0,2 t) = 5 ⇔ e^(−0,2 t) = 1/12 ⇔ −0,2 t = ln(1/12) = −ln 12 ⇔ **t = 5 ln 12 ≈ 12 min** (12,4 min).\n5. **E = P × Δt** = 15 × 2,0 × 3 600 = 108 000 J ≈ **1,1 × 10⁵ J** (2 chiffres significatifs, comme les données). Le composant a dissipé environ 1,1 × 10⁵ J."
+    }
+  ]
+}

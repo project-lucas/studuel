@@ -8,6 +8,7 @@ import SubjectHeader from '@/components/reviser/SubjectHeader'
 import SubjectStickyBar from '@/components/reviser/SubjectStickyBar'
 import ModeTabs from '@/components/reviser/ModeTabs'
 import ChapterList from '@/components/reviser/ChapterList'
+import ProgrammeMondes from '@/components/reviser/ProgrammeMondes'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
 import CarteDictee from '@/components/francais/dictee/CarteDictee'
 import ExamBanner from '@/components/reviser/ExamBanner'
@@ -24,6 +25,7 @@ import {
 import { examYearFor } from '@/lib/annales'
 import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { afficheEcusson, gardienVue } from '@/lib/reviser/gardien'
+import { afficheEnMondes, jaugeDesFiches } from '@/lib/reviser/programme'
 
 // Template GÉNÉRIQUE de page matière : valable pour toutes les matières, tout
 // vient de Supabase (via le vue-modèle sérialisable calculé côté serveur).
@@ -82,6 +84,16 @@ export default function SubjectTemplate({
   // Une matière rangée sous les chapitres du programme compte ses lignes en
   // FICHES : le mot « chapitre » y désigne les en-têtes de la liste.
   const unit = chapterUnit(chapters)
+  // La barre de l'en-tête suit la courbe d'encouragement (Lucas, 01/10/2026 :
+  // « elle doit se remplir même si l'élève a fait un chapitre ») ; le compte
+  // écrit à côté reste exact.
+  const jauge = jaugeDesFiches(chapters)
+  // Un programme rangé en plusieurs thèmes s'affiche en GRILLE de tuiles ; une
+  // liste à plat ou un rayon d'un seul bloc garde sa liste.
+  const enMondes = afficheEnMondes(chapters)
+  const nomAffiche = active.discipline
+    ? disciplineLabel(active.discipline)
+    : data.subject.name
 
   // LE GARDIEN. Un seul modèle de vue, lu par l'écusson du header, par celui de
   // la barre collante, par la bulle de l'onglet et par le billet : quatre
@@ -112,6 +124,7 @@ export default function SubjectTemplate({
         subject={data.subject}
         grade={data.grade}
         progress={progress}
+        jauge={jauge}
         unit={unit}
         discipline={
           active.discipline ? disciplineLabel(active.discipline) : null
@@ -140,6 +153,7 @@ export default function SubjectTemplate({
       <SubjectStickyBar
         name={data.subject.name}
         progress={progress}
+        jauge={jauge}
         gardien={
           afficheEcusson(gardien) ? (
             <GardienBadge
@@ -172,17 +186,23 @@ export default function SubjectTemplate({
               {!exam && data.examOnTop ? (
                 <ExamBanner subject={data.subject} />
               ) : null}
-              <ChapterList
-                chapters={chapters}
-                resume={resume}
-                subjectSlug={data.subject.slug}
-                subjectName={
-                  active.discipline
-                    ? disciplineLabel(active.discipline)
-                    : data.subject.name
-                }
-                grade={data.grade}
-              />
+              {enMondes ? (
+                <ProgrammeMondes
+                  chapters={chapters}
+                  resume={resume}
+                  subjectSlug={data.subject.slug}
+                  subjectName={nomAffiche}
+                  grade={data.grade}
+                />
+              ) : (
+                <ChapterList
+                  chapters={chapters}
+                  resume={resume}
+                  subjectSlug={data.subject.slug}
+                  subjectName={nomAffiche}
+                  grade={data.grade}
+                />
+              )}
               {!exam && !data.examOnTop ? (
                 <div className="mt-6">
                   <ExamBanner subject={data.subject} />
@@ -194,6 +214,7 @@ export default function SubjectTemplate({
               subject={data.subject}
               exam={exam}
               papers={data.papers}
+              annales={data.annalesCorrigees}
             />
           ) : (
             // L'onglet « Mode de jeu » porte DEUX familles, dans cet ordre :

@@ -42,6 +42,7 @@ const row = (
   discipline: null,
   aQuiz: true,
   quizTeste,
+  xpRestant: 135,
 })
 
 const anglais = [

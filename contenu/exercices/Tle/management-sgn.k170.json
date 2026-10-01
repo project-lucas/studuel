@@ -1,0 +1,2612 @@
+{
+  "niveau": "Tle",
+  "matiere": "management-sgn",
+  "exercices": [
+    {
+      "chapitre": "d1a45a7f-0049-5e74-90af-091ce2dc2a24",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La lessive « 100 % naturelle »",
+      "competence": "analyser-document",
+      "situation": "FleurVerte est une marque de lessive imaginaire. Son affiche vante ses engagements ; le tableau donne la composition réelle d’un flacon de 1 000 g.",
+      "documents": [
+        {
+          "id": "aff",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Lessive FleurVerte",
+          "sousTitre": "Notre engagement pour la planète",
+          "emoji": "🌿",
+          "lignes": [
+            {
+              "texte": "Formule 100 % naturelle",
+              "id": "nat"
+            },
+            {
+              "texte": "Flacon en plastique recyclé à 30 %",
+              "id": "fl"
+            },
+            {
+              "texte": "Fabriquée avec soin",
+              "id": "soin"
+            }
+          ],
+          "source": "Affiche imaginée pour l’exercice."
+        },
+        {
+          "id": "compo",
+          "type": "tableau",
+          "titre": "Composition d’un flacon",
+          "colonnes": [
+            "Élément",
+            "Mesure"
+          ],
+          "lignes": [
+            [
+              "Ingrédients d’origine végétale",
+              "350 g"
+            ],
+            [
+              "Ingrédients de synthèse",
+              "650 g"
+            ],
+            [
+              "Plastique recyclé dans le flacon",
+              "30 %"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "aff",
+          "enonce": "Touche l’affirmation de l’affiche que contredit le tableau de composition.",
+          "reponse": [
+            "nat"
+          ],
+          "aide": "Compare chaque phrase de l’affiche avec les chiffres du tableau.",
+          "explication": "La formule est faite de 650 g d’ingrédients de synthèse sur 1 000 g : elle n’est pas « 100 % naturelle ». Le flacon, lui, contient bien **30 % de plastique recyclé**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un flacon contient 1 000 g de lessive. Quel pourcentage des ingrédients est d’origine synthétique ?",
+          "reponse": 65,
+          "unite": "%",
+          "aide": "Divise les grammes de synthèse par 1 000, puis multiplie par 100.",
+          "explication": "650 ÷ 1 000 × 100 = **65 %** d’ingrédients de synthèse."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque partie prenante au préjudice qu’elle subit à cause de cette affiche.",
+          "paires": [
+            [
+              "Clients",
+              "Sont trompés sur ce qu’ils achètent"
+            ],
+            [
+              "Concurrents honnêtes",
+              "Perdent des ventes face à une promesse fausse"
+            ],
+            [
+              "Salariés de la marque",
+              "Voient leur emploi menacé si la confiance disparaît"
+            ]
+          ],
+          "aide": "Demande-toi ce que chacun perd quand une promesse est fausse.",
+          "explication": "Une promesse fausse **trompe les clients**, **désavantage les concurrents honnêtes** et, si le scandale éclate, met en danger **les salariés** de la marque."
+        }
+      ]
+    },
+    {
+      "chapitre": "d1a45a7f-0049-5e74-90af-091ce2dc2a24",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’index d’Alpha Logistique",
+      "competence": "analyser-document",
+      "situation": "Alpha Logistique, entreprise imaginaire de 300 salariés, publie son index de l’égalité professionnelle entre les femmes et les hommes. Il est noté sur 100 points.",
+      "documents": [
+        {
+          "id": "index",
+          "type": "tableau",
+          "titre": "Les cinq indicateurs de l’index",
+          "colonnes": [
+            "Indicateur",
+            "Points obtenus",
+            "Maximum"
+          ],
+          "lignes": [
+            [
+              "Écart de rémunération entre femmes et hommes",
+              28,
+              40
+            ],
+            [
+              "Écart de taux d’augmentations individuelles",
+              20,
+              20
+            ],
+            [
+              "Écart de taux de promotions",
+              8,
+              15
+            ],
+            [
+              "Augmentations au retour d’un congé de maternité",
+              15,
+              15
+            ],
+            [
+              "Femmes parmi les dix plus hautes rémunérations",
+              0,
+              10
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "regle",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La règle",
+          "blocs": [
+            "Une entreprise d’au moins 50 salariés publie son index chaque année. Sous 75 points sur 100, elle doit adopter des mesures correctrices, sous peine de pénalité financière."
+          ],
+          "source": "Règle résumée pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "index",
+          "enonce": "Touche l’indicateur sur lequel Alpha Logistique perd le plus de points par rapport au maximum.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Pour chaque ligne, calcule maximum moins points obtenus.",
+          "explication": "La perte est de 12 points pour la rémunération, contre 7 pour les promotions et 10 pour les hautes rémunérations : c’est l’**écart de rémunération** qui pèse le plus."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’index d’Alpha Logistique, c’est-à-dire le total des points obtenus ?",
+          "reponse": 71,
+          "unite": "points",
+          "aide": "Additionne la colonne « Points obtenus ».",
+          "explication": "28 + 20 + 8 + 15 + 0 = **71 points** sur 100."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que doit faire Alpha Logistique au vu de son index ?",
+          "options": [
+            "Adopter des mesures correctrices, car 71 points est en dessous du seuil de 75",
+            "Ne rien changer, car 71 points dépasse la moyenne de 50 points sur 100",
+            "Attendre la prochaine année, car le seuil ne s’applique qu’au-delà de 500 salariés",
+            "Cacher son index, car seules les entreprises de moins de 50 salariés le publient"
+          ],
+          "reponse": 0,
+          "aide": "Compare l’index au seuil donné dans le document « La règle ».",
+          "explication": "71 < 75 : l’entreprise doit adopter des **mesures correctrices**, sous peine de pénalité. L’index se publie dès 50 salariés."
+        }
+      ]
+    },
+    {
+      "chapitre": "d1a45a7f-0049-5e74-90af-091ce2dc2a24",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Polybat : des comptes trop beaux",
+      "competence": "analyser-texte",
+      "situation": "Polybat, entreprise imaginaire du bâtiment, publie des comptes flatteurs. Son commissaire aux comptes refuse pourtant de les certifier. À toi de comprendre pourquoi.",
+      "documents": [
+        {
+          "id": "art",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le commissaire aux comptes dit non",
+          "blocs": [
+            "Le commissaire aux comptes de Polybat a refusé de certifier les comptes de l’exercice. Dans son rapport, il relève que des matériaux invendables sont restés dans les stocks à leur prix d’achat, alors qu’ils auraient dû être [[s|dépréciés]].",
+            "La direction espérait ainsi annoncer un bénéfice de 2,5 millions d’euros. Les matériaux concernés figurent au bilan pour 9 millions d’euros, mais leur valeur réelle n’atteint que 5 millions.",
+            "Les actionnaires, la banque qui finance l’entreprise et les salariés, dont la prime dépend du résultat, avaient fondé leurs décisions sur ces chiffres."
+          ],
+          "source": "Article imaginé pour l’exercice."
+        },
+        {
+          "id": "chiffres",
+          "type": "tableau",
+          "titre": "Les chiffres en jeu",
+          "colonnes": [
+            "Élément",
+            "Montant (M€)"
+          ],
+          "lignes": [
+            [
+              "Résultat annoncé",
+              "2,5"
+            ],
+            [
+              "Valeur des matériaux au bilan",
+              "9"
+            ],
+            [
+              "Valeur réelle des matériaux",
+              "5"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "art",
+          "enonce": "Touche le mot qui dit ce qu’aurait dû subir la valeur des matériaux invendables.",
+          "reponse": [
+            "s"
+          ],
+          "aide": "Cherche le verbe qui décrit une baisse de valeur comptable.",
+          "explication": "Les matériaux auraient dû être **dépréciés** : leur valeur au bilan devait baisser pour refléter leur valeur réelle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de millions d’euros les matériaux sont-ils surévalués au bilan ?",
+          "reponse": 4,
+          "unite": "M€",
+          "aide": "Compare la valeur au bilan et la valeur réelle.",
+          "explication": "9 − 5 = **4 millions d’euros** de surévaluation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En corrigeant cette erreur, quelle perte Polybat aurait-elle dû annoncer, en millions d’euros ?",
+          "reponse": 1.5,
+          "unite": "M€",
+          "aide": "Retranche la surévaluation du résultat annoncé : le résultat devient négatif.",
+          "explication": "2,5 − 4 = −1,5 : Polybat aurait dû annoncer une **perte de 1,5 million d’euros**, et non un bénéfice."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel principe comptable Polybat a-t-elle violé en gardant ces matériaux à leur prix d’achat ?",
+          "options": [
+            "La prudence : les pertes probables doivent être anticipées",
+            "La permanence des méthodes : on ne change pas de méthode d’un exercice à l’autre",
+            "La continuité de l’exploitation : l’entreprise est supposée poursuivre son activité",
+            "L’indépendance des exercices : les charges se rattachent à la bonne année"
+          ],
+          "reponse": 0,
+          "aide": "Un principe demande d’anticiper les pertes probables sans anticiper les gains.",
+          "explication": "Ne pas déprécier des stocks invendables, c’est ignorer une perte probable : c’est contraire au principe de **prudence**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque partie prenante au risque qu’elle court à cause de ces comptes truqués.",
+          "paires": [
+            [
+              "Actionnaires",
+              "Acheter des titres à un prix gonflé"
+            ],
+            [
+              "Banque prêteuse",
+              "Prêter à une entreprise en réalité déficitaire"
+            ],
+            [
+              "Salariés",
+              "Toucher une prime calculée sur un bénéfice fictif"
+            ]
+          ],
+          "aide": "Pense à ce que chacun fait à partir du résultat annoncé.",
+          "explication": "Des comptes truqués **trompent les actionnaires, les prêteurs et les salariés** : tous décident à partir de chiffres faux."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a60e7b4-021b-5709-96b1-d4f5df521f4c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Combien de jours à la maison ?",
+      "competence": "lire-graphique",
+      "situation": "L’entreprise imaginaire Kalys a interrogé ses 220 salariés : combien de jours par semaine souhaitent-ils télétravailler ?",
+      "documents": [
+        {
+          "id": "enq",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Jours de télétravail souhaités par semaine",
+          "categories": [
+            "0 jour",
+            "1 jour",
+            "2 jours",
+            "3 jours",
+            "4 jours ou plus"
+          ],
+          "series": [
+            {
+              "nom": "Salariés",
+              "valeurs": [
+                20,
+                35,
+                90,
+                55,
+                20
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Salariés",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Jours souhaités"
+          },
+          "valeurs": false,
+          "source": "Enquête imaginée pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "enq",
+          "enonce": "Touche la réponse choisie par le plus grand nombre de salariés.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "La barre la plus haute est celle de **2 jours** : 90 salariés sur 220."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage des 220 salariés souhaite télétravailler au moins 2 jours par semaine ?",
+          "reponse": 75,
+          "unite": "%",
+          "aide": "Additionne les barres « 2 jours », « 3 jours » et « 4 jours ou plus », puis divise par 220.",
+          "explication": "90 + 55 + 20 = 165 salariés ; 165 ÷ 220 × 100 = **75 %**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque évolution du rapport au travail à une réponse possible de Kalys.",
+          "paires": [
+            [
+              "Envie d’équilibre entre vie privée et vie professionnelle",
+              "Horaires flexibles"
+            ],
+            [
+              "Essor du télétravail",
+              "Accord de télétravail et équipements"
+            ],
+            [
+              "Sollicitations permanentes en ligne",
+              "Droit à la déconnexion"
+            ]
+          ],
+          "aide": "Relie le temps, le lieu et la vie connectée à leur réponse.",
+          "explication": "Le **temps** appelle des horaires flexibles, le **lieu** un accord de télétravail, la **vie connectée** le droit à la déconnexion."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a60e7b4-021b-5709-96b1-d4f5df521f4c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les conditions de VitaPas",
+      "competence": "analyser-document",
+      "situation": "VitaPas, application imaginaire de santé connectée, ne sert qu’à compter les pas de ses utilisateurs. Voici ses conditions d’utilisation et quelques chiffres sur le groupe qui l’édite.",
+      "documents": [
+        {
+          "id": "cgu",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "VitaPas",
+          "sousTitre": "Conditions d’utilisation",
+          "emoji": "📱",
+          "lignes": [
+            {
+              "texte": "Nous collectons vos pas, votre rythme cardiaque et votre sommeil.",
+              "id": "c1"
+            },
+            {
+              "texte": "Vos données peuvent être transmises à nos partenaires publicitaires.",
+              "id": "c2"
+            },
+            {
+              "texte": "En ouvrant l’application, vous acceptez automatiquement ces conditions.",
+              "id": "c3"
+            },
+            {
+              "texte": "Pour supprimer votre compte, écrivez-nous par courrier recommandé.",
+              "id": "c4"
+            }
+          ],
+          "source": "Conditions imaginées pour l’exercice."
+        },
+        {
+          "id": "groupe",
+          "type": "tableau",
+          "titre": "Le groupe VitaPas",
+          "colonnes": [
+            "Élément",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Chiffre d’affaires mondial",
+              "2 000 M€"
+            ],
+            [
+              "Utilisateurs de l’application",
+              "3 millions"
+            ],
+            [
+              "Plafond de l’amende RGPD",
+              "4 % du chiffre d’affaires mondial"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cgu",
+          "enonce": "Touche la clause qui ne respecte pas l’exigence de consentement.",
+          "reponse": [
+            "c3"
+          ],
+          "aide": "Le consentement doit être libre et explicite : un simple usage suffit-il ?",
+          "explication": "Accepter « automatiquement » n’est pas un consentement : il doit être **libre et explicite**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque clause à l’obligation du RGPD qu’elle ne respecte pas.",
+          "paires": [
+            [
+              "Collecter le sommeil et le rythme cardiaque",
+              "Minimisation : seulement les données utiles"
+            ],
+            [
+              "Transmettre aux partenaires publicitaires",
+              "Finalité : un usage annoncé et précis"
+            ],
+            [
+              "Accepter automatiquement",
+              "Consentement : un accord libre et explicite"
+            ],
+            [
+              "Supprimer par courrier recommandé",
+              "Droits des personnes : les exercer facilement"
+            ]
+          ],
+          "aide": "L’application ne sert qu’à compter les pas : qu’est-ce qui dépasse ce but ?",
+          "explication": "Le **sommeil** dépasse le besoin (minimisation), la **publicité** détourne le but annoncé (finalité), l’**acceptation automatique** n’est pas un consentement et le **courrier recommandé** freine l’exercice des droits."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le montant maximal de l’amende, en millions d’euros, pour ce groupe ?",
+          "reponse": 80,
+          "unite": "M€",
+          "aide": "Calcule 4 % du chiffre d’affaires mondial.",
+          "explication": "4 % de 2 000 M€ = 2 000 × 0,04 = **80 M€**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Le rythme cardiaque et le sommeil sont des données de santé : ce sont des données ___ qui exigent un consentement ___ et une sécurité renforcée.",
+          "reponses": [
+            [
+              "sensibles"
+            ],
+            [
+              "explicite"
+            ]
+          ],
+          "banque": [
+            "sensibles",
+            "explicite",
+            "ouvertes",
+            "implicite"
+          ],
+          "aide": "Une donnée de santé touche à l’intimité de la personne.",
+          "explication": "Les données de santé sont des données **sensibles** : elles exigent un consentement **explicite** et une sécurité renforcée."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a60e7b4-021b-5709-96b1-d4f5df521f4c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une place en crèche décidée par un algorithme",
+      "competence": "analyser-document",
+      "situation": "La mairie imaginaire de Valbourg attribue l’unique place de sa crèche grâce à un algorithme. Quatre familles ont déposé un dossier.",
+      "documents": [
+        {
+          "id": "regles",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les règles de l’algorithme",
+          "blocs": [
+            "Chaque famille reçoit un score : 3 points par parent qui travaille, 2 points si un enfant de la famille fréquente déjà la crèche, 4 points si elle habite la commune, 1 point si ses revenus sont inférieurs à 25 000 € par an.",
+            "La famille qui a le score le plus élevé obtient la place."
+          ],
+          "source": "Règles imaginées pour l’exercice."
+        },
+        {
+          "id": "fam",
+          "type": "tableau",
+          "titre": "Les dossiers reçus",
+          "colonnes": [
+            "Famille",
+            "Parents qui travaillent",
+            "Enfant déjà accueilli",
+            "Habite la commune",
+            "Revenus < 25 000 €"
+          ],
+          "lignes": [
+            [
+              "A",
+              2,
+              "Oui",
+              "Oui",
+              "Non"
+            ],
+            [
+              "B",
+              1,
+              "Oui",
+              "Oui",
+              "Non"
+            ],
+            [
+              "C",
+              2,
+              "Non",
+              "Non",
+              "Oui"
+            ],
+            [
+              "D",
+              2,
+              "Oui",
+              "Non",
+              "Non"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le score de la famille D ?",
+          "reponse": 8,
+          "unite": "points",
+          "aide": "Applique chaque règle : 3 points par parent qui travaille, puis les autres critères qui valent « Oui ».",
+          "explication": "Famille D : 2 parents × 3 = 6, plus 2 points pour l’enfant déjà accueilli : **8 points**."
+        },
+        {
+          "type": "zone",
+          "document": "fam",
+          "enonce": "Touche la famille qui obtient la place.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Calcule le score de chaque famille, puis garde le plus élevé.",
+          "explication": "Scores : A = 12, B = 9, C = 7, D = 8. C’est la **famille A** qui obtient la place."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points la famille A devance-t-elle la deuxième famille ?",
+          "reponse": 3,
+          "unite": "points",
+          "aide": "Repère la deuxième meilleure famille, puis fais la différence.",
+          "explication": "La deuxième est la famille B (9 points) : 12 − 9 = **3 points** d’écart."
+        },
+        {
+          "type": "choix",
+          "enonce": "La famille C demande pourquoi sa demande a été refusée. Que doit faire la mairie ?",
+          "options": [
+            "Lui dire qu’un algorithme a été utilisé et lui expliquer les règles de calcul du score",
+            "Lui répondre que les règles de l’algorithme sont confidentielles et ne s’expliquent pas",
+            "Lui envoyer la liste des scores de toutes les autres familles avec leurs noms",
+            "Lui proposer de recalculer son score à la main sans lui donner les critères"
+          ],
+          "reponse": 0,
+          "aide": "Une décision individuelle prise par algorithme doit pouvoir s’expliquer à la personne concernée.",
+          "explication": "Une administration doit **informer** la personne qu’un traitement algorithmique a été utilisé et pouvoir lui **expliquer les règles** : c’est la transparence des algorithmes."
+        }
+      ]
+    },
+    {
+      "chapitre": "4bcb3795-1e8c-5d14-8db9-9b9b33565a6e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une usine, des milliers d’emplois",
+      "competence": "lire-carte",
+      "situation": "Aéro-Sud, constructeur aéronautique imaginaire, est installé au cœur de la grande grappe d’entreprises de l’aéronautique française. Le tableau donne les emplois liés à son usine.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quelques grandes villes de France",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "tls",
+              "lieu": "toulouse",
+              "symbole": "point",
+              "nom": "Toulouse"
+            },
+            {
+              "id": "lil",
+              "lieu": "lille",
+              "symbole": "point",
+              "nom": "Lille"
+            },
+            {
+              "id": "lyo",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "nan",
+              "lieu": "nantes",
+              "symbole": "point",
+              "nom": "Nantes"
+            }
+          ]
+        },
+        {
+          "id": "emplois",
+          "type": "tableau",
+          "titre": "Les emplois liés à l’usine",
+          "colonnes": [
+            "Type d’emplois",
+            "Nombre"
+          ],
+          "lignes": [
+            [
+              "Emplois directs (salariés d’Aéro-Sud)",
+              "4 000"
+            ],
+            [
+              "Emplois indirects : sous-traitants locaux",
+              "2 500"
+            ],
+            [
+              "Emplois indirects : commerces et services du quartier",
+              "1 500"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville qui est le cœur de la grande grappe aéronautique française.",
+          "reponse": [
+            "tls"
+          ],
+          "aide": "Pense à la ville où l’on assemble des avions de ligne.",
+          "explication": "La grappe aéronautique française est centrée sur **Toulouse**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’emplois l’usine fait-elle vivre au total, emplois directs et indirects confondus ?",
+          "reponse": 8000,
+          "unite": "emplois",
+          "aide": "Additionne les trois lignes du tableau.",
+          "explication": "4 000 + 2 500 + 1 500 = **8 000 emplois**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque effet de l’usine sur son territoire dans la bonne colonne.",
+          "categories": [
+            "Effet économique",
+            "Effet culturel",
+            "Effet environnemental"
+          ],
+          "items": [
+            [
+              "Commandes aux entreprises locales",
+              0
+            ],
+            [
+              "Impôts locaux versés",
+              0
+            ],
+            [
+              "Festival de musique financé par l’entreprise",
+              1
+            ],
+            [
+              "Mécénat pour le musée de la ville",
+              1
+            ],
+            [
+              "Nuisances sonores pour les riverains",
+              2
+            ],
+            [
+              "Friche industrielle dépolluée et reconvertie",
+              2
+            ]
+          ],
+          "aide": "Demande-toi si l’effet touche l’argent, la vie culturelle ou la nature.",
+          "explication": "Les **commandes et impôts** sont économiques ; le **festival et le mécénat** sont culturels ; le **bruit** et la **friche dépolluée** sont environnementaux."
+        }
+      ]
+    },
+    {
+      "chapitre": "4bcb3795-1e8c-5d14-8db9-9b9b33565a6e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Où installer l’usine de batteries ?",
+      "competence": "raisonner",
+      "situation": "Le fabricant de batteries imaginaire VoltaNord hésite entre trois sites. Chaque critère a un coefficient, chaque site une note sur 10. Le score pondéré est la somme des notes multipliées par leur coefficient.",
+      "documents": [
+        {
+          "id": "sites",
+          "type": "tableau",
+          "titre": "Notes des trois sites",
+          "colonnes": [
+            "Critère",
+            "Coefficient",
+            "Site A (Nord)",
+            "Site B (Est)",
+            "Site C (Ouest)"
+          ],
+          "lignes": [
+            [
+              "Main-d’œuvre qualifiée",
+              3,
+              8,
+              6,
+              7
+            ],
+            [
+              "Aides et fiscalité",
+              2,
+              7,
+              9,
+              5
+            ],
+            [
+              "Infrastructures",
+              2,
+              9,
+              6,
+              8
+            ],
+            [
+              "Proximité des clients",
+              3,
+              5,
+              8,
+              9
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Notes imaginées pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le score pondéré du site A ?",
+          "reponse": 71,
+          "unite": "points",
+          "aide": "Multiplie chaque note par son coefficient, puis additionne.",
+          "explication": "8 × 3 + 7 × 2 + 9 × 2 + 5 × 3 = 24 + 14 + 18 + 15 = **71 points**."
+        },
+        {
+          "type": "zone",
+          "document": "sites",
+          "enonce": "Touche la note pour laquelle le site B devance les deux autres sites.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Cherche une ligne où la note de la colonne « Site B » est la plus haute.",
+          "explication": "Pour les **aides et la fiscalité**, le site B obtient 9 contre 7 et 5 : c’est son point fort."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel site obtient le meilleur score pondéré ?",
+          "options": [
+            "Le site C (Ouest), avec 74 points",
+            "Le site B (Est), avec 72 points",
+            "Le site A (Nord), avec 71 points",
+            "Aucun : les trois sites sont à égalité"
+          ],
+          "reponse": 0,
+          "aide": "Calcule les trois scores avant de comparer.",
+          "explication": "Scores : A = 71, B = 72, C = 74. Le **site C** l’emporte grâce à sa proximité des clients et à sa main-d’œuvre."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque élément à la catégorie de critère d’implantation qu’il illustre.",
+          "paires": [
+            [
+              "Écoles d’ingénieurs à proximité",
+              "Ressources humaines"
+            ],
+            [
+              "Subvention de la région",
+              "Financier et fiscal"
+            ],
+            [
+              "Gare TGV et autoroute",
+              "Infrastructures"
+            ],
+            [
+              "Clients à moins d’une heure",
+              "Marché"
+            ]
+          ],
+          "aide": "Relis le tableau des critères d’implantation du cours.",
+          "explication": "Les **écoles** relèvent des ressources humaines, la **subvention** du financier, **gare et autoroute** des infrastructures, les **clients proches** du marché."
+        }
+      ]
+    },
+    {
+      "chapitre": "4bcb3795-1e8c-5d14-8db9-9b9b33565a6e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Faut-il rapatrier la fabrication ?",
+      "competence": "argumenter",
+      "situation": "Dom’Ô, fabricant imaginaire de bouilloires, produit 250 000 appareils par an. Elle compare deux modes de fabrication et lit un article sur la relocalisation.",
+      "documents": [
+        {
+          "id": "art",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le retour des usines ?",
+          "blocs": [
+            "Pendant la crise sanitaire de 2020, un conteneur de pièces est resté bloqué sept mois avant d’arriver à l’usine asiatique de Dom’Ô. La direction étudie désormais la [[r|relocalisation]] de la fabrication en Mayenne.",
+            "Elle créerait 60 emplois directs et passerait de nouvelles commandes aux sous-traitants locaux."
+          ],
+          "source": "Article imaginé pour l’exercice."
+        },
+        {
+          "id": "couts",
+          "type": "tableau",
+          "titre": "Coût d’une bouilloire selon le lieu de fabrication",
+          "colonnes": [
+            "Coût par bouilloire",
+            "Fabrication en Asie",
+            "Fabrication en France"
+          ],
+          "lignes": [
+            [
+              "Fabrication",
+              "11 €",
+              "14 €"
+            ],
+            [
+              "Transport et douane",
+              "3,50 €",
+              "0,50 €"
+            ],
+            [
+              "Stockage de sécurité",
+              "1,50 €",
+              "0,30 €"
+            ],
+            [
+              "Délai de livraison",
+              "10 semaines",
+              "1 semaine"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "art",
+          "enonce": "Touche le mot qui désigne le retour de la fabrication en France.",
+          "reponse": [
+            "r"
+          ],
+          "aide": "Cherche le mot opposé à « délocalisation ».",
+          "explication": "Le retour d’une activité sur son territoire d’origine s’appelle la **relocalisation**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le coût complet d’une bouilloire fabriquée en Asie, en euros ?",
+          "reponse": 16,
+          "unite": "€",
+          "aide": "Additionne fabrication, transport et stockage (ignore le délai).",
+          "explication": "11 + 3,50 + 1,50 = **16 €** par bouilloire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle économie annuelle la fabrication en France permettrait-elle, en euros ?",
+          "reponse": 300000,
+          "unite": "€",
+          "aide": "Calcule d’abord l’écart de coût complet par bouilloire, puis multiplie par 250 000.",
+          "explication": "Coût en France : 14 + 0,50 + 0,30 = 14,80 €. Écart : 16 − 14,80 = 1,20 € ; 1,20 × 250 000 = **300 000 €** par an."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quels effets Dom’Ô peut-elle attendre de la relocalisation ? Plusieurs réponses sont justes.",
+          "options": [
+            "Des emplois créés en France",
+            "De nouvelles commandes pour les sous-traitants locaux",
+            "Une meilleure sécurité d’approvisionnement",
+            "Des emplois supprimés sur le territoire",
+            "Des délais d’approvisionnement allongés"
+          ],
+          "reponse": [
+            0,
+            1,
+            2
+          ],
+          "aide": "Pense à l’emploi, aux commandes et aux délais.",
+          "explication": "La relocalisation **recrée des emplois**, apporte des **commandes locales** et renforce la **sécurité d’approvisionnement** : le délai passe de 10 semaines à 1."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "La crise sanitaire de ___ a montré la fragilité des chaînes d’approvisionnement lointaines et relancé le débat sur la ___ industrielle.",
+          "reponses": [
+            [
+              "2020"
+            ],
+            [
+              "souveraineté"
+            ]
+          ],
+          "banque": [
+            "2020",
+            "1929",
+            "souveraineté",
+            "concurrence"
+          ],
+          "aide": "C’est l’année qui a manqué de masques et de médicaments.",
+          "explication": "La crise de **2020** a relancé le débat sur la **souveraineté** industrielle."
+        }
+      ]
+    },
+    {
+      "chapitre": "6bd17d64-ebc5-583d-8d85-7c6c7cfb86ed",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La facture du four",
+      "competence": "calculer",
+      "situation": "La boulangerie La Fournée, imaginaire, achète un four. Voici la facture du fournisseur et la TVA du mois.",
+      "documents": [
+        {
+          "id": "fac",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Four & Co — Facture n° 2031",
+          "sousTitre": "Client : boulangerie La Fournée",
+          "emoji": "🧾",
+          "lignes": [
+            {
+              "texte": "Four à pain professionnel (HT)",
+              "valeur": "15 000 €",
+              "id": "ht"
+            },
+            {
+              "texte": "TVA à 20 %",
+              "valeur": "3 000 €",
+              "id": "tva"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "TOTAL TTC",
+              "valeur": "18 000 €",
+              "gras": true,
+              "id": "ttc"
+            },
+            {
+              "texte": "Durée d’utilisation prévue",
+              "valeur": "6 ans",
+              "id": "duree"
+            }
+          ],
+          "source": "Facture imaginée pour l’exercice."
+        },
+        {
+          "id": "tvamois",
+          "type": "tableau",
+          "titre": "La TVA du mois",
+          "colonnes": [
+            "Élément",
+            "Montant"
+          ],
+          "lignes": [
+            [
+              "TVA collectée sur les ventes",
+              "4 200 €"
+            ],
+            [
+              "TVA déductible sur l’achat du four",
+              "3 000 €"
+            ],
+            [
+              "TVA déductible sur les autres achats",
+              "600 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fac",
+          "enonce": "Touche la ligne de la facture qui correspond à la TVA.",
+          "reponse": [
+            "tva"
+          ],
+          "aide": "Cherche le taux de 20 %.",
+          "explication": "La ligne **TVA à 20 %** : 3 000 €, soit 20 % de 15 000 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’amortissement du four se calcule sur quelle base ?",
+          "options": [
+            "Le prix HT de 15 000 €, car la TVA est récupérable",
+            "Le prix TTC de 18 000 €, car c’est la somme payée",
+            "La TVA seule de 3 000 €, car elle est déductible",
+            "La valeur du stock de farine de la boulangerie"
+          ],
+          "reponse": 0,
+          "aide": "La TVA payée sur un achat est récupérée : elle n’appauvrit pas l’entreprise.",
+          "explication": "La TVA étant déductible, le coût réel du four est son **prix HT, 15 000 €** : c’est lui qu’on amortit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la dotation annuelle à l’amortissement linéaire du four, en euros ?",
+          "reponse": 2500,
+          "unite": "€",
+          "aide": "Coût d’acquisition ÷ durée d’utilisation.",
+          "explication": "15 000 ÷ 6 = **2 500 €** par an."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle TVA la boulangerie doit-elle reverser à l’État ce mois-ci, en euros ?",
+          "reponse": 600,
+          "unite": "€",
+          "aide": "TVA collectée moins toute la TVA déductible.",
+          "explication": "4 200 − 3 000 − 600 = **600 €** à reverser."
+        }
+      ]
+    },
+    {
+      "chapitre": "6bd17d64-ebc5-583d-8d85-7c6c7cfb86ed",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les comptes des Délices du Sud",
+      "competence": "calculer",
+      "situation": "Les Délices du Sud, épicerie fine imaginaire, veulent mesurer la richesse créée et sa rentabilité. Ils comparent aussi leur activité au coût d’un emprunt.",
+      "documents": [
+        {
+          "id": "sig",
+          "type": "tableau",
+          "titre": "Extrait des comptes de l’année",
+          "colonnes": [
+            "Poste",
+            "Montant"
+          ],
+          "lignes": [
+            [
+              "Marge commerciale",
+              "200 000 €"
+            ],
+            [
+              "Autres charges externes",
+              "50 000 €"
+            ],
+            [
+              "Impôts et taxes",
+              "10 000 €"
+            ],
+            [
+              "Charges de personnel",
+              "90 000 €"
+            ],
+            [
+              "Résultat d’exploitation",
+              "30 000 €"
+            ],
+            [
+              "Capitaux investis",
+              "300 000 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "pret",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Banque du Sud — Offre de prêt",
+          "sousTitre": "Document imaginé pour l’exercice",
+          "emoji": "🏦",
+          "lignes": [
+            {
+              "texte": "Montant emprunté",
+              "valeur": "100 000 €"
+            },
+            {
+              "texte": "Durée",
+              "valeur": "7 ans"
+            },
+            {
+              "texte": "Taux d’intérêt annuel",
+              "valeur": "4 %",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sig",
+          "enonce": "Touche le poste qui sert de point de départ au calcul de la valeur ajoutée.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "La valeur ajoutée commence par ce que rapporte la vente de marchandises.",
+          "explication": "Pour une entreprise commerciale, la valeur ajoutée part de la **marge commerciale**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La valeur ajoutée est égale à la marge commerciale moins les autres charges externes. Que vaut-elle, en euros ?",
+          "reponse": 150000,
+          "unite": "€",
+          "aide": "Retranche les charges externes de la marge.",
+          "explication": "200 000 − 50 000 = **150 000 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "EBE = valeur ajoutée + subventions d’exploitation − impôts et taxes − charges de personnel. Ici, il n’y a aucune subvention. Que vaut l’EBE, en euros ?",
+          "reponse": 50000,
+          "unite": "€",
+          "aide": "Pars de la valeur ajoutée et retranche les deux postes.",
+          "explication": "150 000 − 10 000 − 90 000 = **50 000 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La rentabilité économique est égale au résultat d’exploitation divisé par les capitaux investis. Calcule-la, en pourcentage.",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Divise le résultat d’exploitation par les capitaux investis.",
+          "explication": "30 000 ÷ 300 000 × 100 = **10 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’entreprise peut emprunter à 4 %. Que peut-on conclure ?",
+          "options": [
+            "L’effet de levier est favorable : l’emprunt peut augmenter la rentabilité financière",
+            "L’effet de levier est défavorable : chaque euro emprunté fait perdre de l’argent",
+            "Il n’y a pas d’effet de levier, puisque l’entreprise est déjà rentable",
+            "L’emprunt fait baisser la rentabilité économique de 10 % à 4 %"
+          ],
+          "reponse": 0,
+          "aide": "Compare la rentabilité économique au taux d’intérêt.",
+          "explication": "La rentabilité économique (**10 %**) dépasse le taux de l’emprunt (**4 %**) : l’**effet de levier joue en faveur des associés**, avec plus de risque."
+        }
+      ]
+    },
+    {
+      "chapitre": "6bd17d64-ebc5-583d-8d85-7c6c7cfb86ed",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Faut-il accepter la commande spéciale ?",
+      "competence": "raisonner",
+      "situation": "L’Atelier Kraft, fabricant imaginaire de cartons, tourne à 70 % de ses capacités. Une chaîne de magasins lui propose une commande à prix réduit : le gérant doit décider.",
+      "documents": [
+        {
+          "id": "kraft",
+          "type": "tableau",
+          "titre": "Données annuelles de l’atelier",
+          "colonnes": [
+            "Élément",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Prix de vente d’un carton",
+              "25 €"
+            ],
+            [
+              "Coût variable d’un carton (matière, énergie)",
+              "15 €"
+            ],
+            [
+              "Charges fixes (loyer, machines, salaires fixes)",
+              "60 000 €"
+            ],
+            [
+              "Capacité de production",
+              "10 000 cartons"
+            ],
+            [
+              "Production habituelle",
+              "7 000 cartons"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "offre",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "L’offre de la chaîne de magasins",
+          "blocs": [
+            "Commande de 1 000 cartons au prix de 18 € l’unité. L’atelier peut les produire avec ses machines actuelles, sans aucune charge fixe supplémentaire."
+          ],
+          "source": "Offre imaginée pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "kraft",
+          "enonce": "Touche la charge qui ne dépend pas du nombre de cartons fabriqués.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Une charge fixe reste la même, que l’atelier produise peu ou beaucoup.",
+          "explication": "Les **charges fixes** (loyer, machines, salaires fixes) ne varient pas avec la production."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La marge sur coût variable d’un carton est égale au prix de vente moins le coût variable. Que vaut-elle, en euros ?",
+          "reponse": 10,
+          "unite": "€",
+          "aide": "Soustrais le coût variable du prix de vente.",
+          "explication": "25 − 15 = **10 €** par carton."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le seuil de rentabilité, en nombre de cartons, est égal aux charges fixes divisées par la marge sur coût variable unitaire. Que vaut-il ?",
+          "reponse": 6000,
+          "unite": "cartons",
+          "aide": "Divise 60 000 € par la marge sur coût variable d’un carton.",
+          "explication": "60 000 ÷ 10 = **6 000 cartons** : au-delà, l’atelier gagne de l’argent."
+        },
+        {
+          "type": "choix",
+          "enonce": "Faut-il accepter la commande à 18 € le carton ?",
+          "options": [
+            "Oui : chaque carton supplémentaire coûte 15 € et rapporte 18 €, soit 3 € de gain",
+            "Non : 18 € est inférieur au prix habituel de 25 €, donc l’atelier perdrait de l’argent",
+            "Non : 18 € ne suffit pas à couvrir les charges fixes de 60 000 €",
+            "Oui : 18 € dépasse le seuil de rentabilité de 6 000 cartons de l’atelier"
+          ],
+          "reponse": 0,
+          "aide": "Compare le prix proposé au coût marginal d’un carton supplémentaire.",
+          "explication": "Les charges fixes sont déjà couvertes : le **coût marginal** d’un carton est son coût variable, 15 €. À 18 €, chaque carton rapporte **3 €** de plus : 1 000 × 3 = 3 000 €."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel serait le résultat annuel de l’atelier en acceptant la commande, en euros ?",
+          "reponse": 13000,
+          "unite": "€",
+          "aide": "Résultat actuel (7 000 × 10 − 60 000) plus le gain de la commande.",
+          "explication": "Résultat actuel : 7 000 × 10 − 60 000 = 10 000 €. Gain de la commande : 3 000 €. Total : **13 000 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "53dbb27a-4444-525f-9572-63bf3aec6c25",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois formules pour trois clientèles",
+      "competence": "analyser-document",
+      "situation": "Pédalo, loueur de vélos imaginaire, a découpé le marché de sa ville en trois groupes de clients et propose une formule à chacun.",
+      "documents": [
+        {
+          "id": "seg",
+          "type": "tableau",
+          "titre": "Les segments de Pédalo",
+          "colonnes": [
+            "Segment",
+            "Habitants (milliers)",
+            "Offre de Pédalo"
+          ],
+          "lignes": [
+            [
+              "Actifs urbains",
+              45,
+              "Formule Ville : vélo électrique, abonnement mensuel"
+            ],
+            [
+              "Étudiants",
+              30,
+              "Formule Campus : vélo simple à tarif réduit"
+            ],
+            [
+              "Seniors",
+              25,
+              "Formule Sérénité : vélo électrique léger et prise en main"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "seg",
+          "enonce": "Touche le segment qui compte le plus d’habitants.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Compare les nombres de la colonne « Habitants ».",
+          "explication": "Les **actifs urbains** sont les plus nombreux : 45 milliers d’habitants."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de milliers d’habitants comptent les actifs urbains et les étudiants réunis ?",
+          "reponse": 75,
+          "unite": "milliers",
+          "aide": "Additionne les deux lignes concernées.",
+          "explication": "45 + 30 = **75 milliers** d’habitants."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle stratégie marketing Pédalo applique-t-elle ?",
+          "options": [
+            "Marketing différencié : une offre adaptée à chaque segment",
+            "Marketing de masse : une seule offre pour tous les clients",
+            "Marketing concentré : une offre pour un seul segment",
+            "Marketing individualisé : une offre personnalisée pour chaque client"
+          ],
+          "reponse": 0,
+          "aide": "Compte le nombre de segments visés et le nombre d’offres.",
+          "explication": "Trois segments, trois offres : c’est un **marketing différencié**."
+        }
+      ]
+    },
+    {
+      "chapitre": "53dbb27a-4444-525f-9572-63bf3aec6c25",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le prix d’une place de train",
+      "competence": "lire-graphique",
+      "situation": "Sur une ligne imaginaire, la compagnie Rapido fait varier le prix d’une place selon la date de réservation. Le train compte 400 places et il part complet.",
+      "documents": [
+        {
+          "id": "prix",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Prix d’une place selon la date de réservation",
+          "categories": [
+            "60 jours avant",
+            "30 jours avant",
+            "15 jours avant",
+            "7 jours avant",
+            "La veille"
+          ],
+          "series": [
+            {
+              "nom": "Prix",
+              "valeurs": [
+                20,
+                30,
+                40,
+                60,
+                100
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Prix d’une place",
+            "unite": "€",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Date de réservation"
+          },
+          "valeurs": false,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "vente",
+          "type": "tableau",
+          "titre": "Places vendues",
+          "colonnes": [
+            "Date de réservation",
+            "Places vendues"
+          ],
+          "lignes": [
+            [
+              "60 jours avant",
+              80
+            ],
+            [
+              "30 jours avant",
+              120
+            ],
+            [
+              "15 jours avant",
+              100
+            ],
+            [
+              "7 jours avant",
+              70
+            ],
+            [
+              "La veille",
+              30
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prix",
+          "enonce": "Touche la période de réservation où une place coûte 40 €.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Lis l’axe vertical en face du haut de chaque barre.",
+          "explication": "Une place coûte 40 € quand on réserve **15 jours avant**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel chiffre d’affaires le train rapporte-t-il, en euros ?",
+          "reponse": 16400,
+          "unite": "€",
+          "aide": "Pour chaque période, multiplie les places vendues par leur prix, puis additionne.",
+          "explication": "80 × 20 + 120 × 30 + 100 × 40 + 70 × 60 + 30 × 100 = 1 600 + 3 600 + 4 000 + 4 200 + 3 000 = **16 400 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le prix moyen d’une place, en euros ?",
+          "reponse": 41,
+          "unite": "€",
+          "aide": "Divise le chiffre d’affaires par le nombre de places.",
+          "explication": "16 400 ÷ 400 = **41 €** par place."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la compagnie fait-elle varier le prix selon la date de réservation ?",
+          "options": [
+            "Pour remplir le train en vendant moins cher tôt et plus cher tard",
+            "Pour réduire le nombre de trains, car tous réservent au même moment",
+            "Pour que chaque voyageur paie exactement le coût de sa propre place",
+            "Pour supprimer les places bon marché dès l’ouverture de la vente"
+          ],
+          "reponse": 0,
+          "aide": "Ce procédé s’appelle la gestion des capacités (yield management).",
+          "explication": "Le **yield management** ajuste le prix à la demande : des places abordables pour remplir tôt, des places plus chères pour ceux qui décident tard."
+        }
+      ]
+    },
+    {
+      "chapitre": "53dbb27a-4444-525f-9572-63bf3aec6c25",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Combien vaut un abonné ?",
+      "competence": "modeliser",
+      "situation": "Bouquet&Co, service imaginaire de fleurs en abonnement, veut savoir si offrir un bouquet d’essai pour recruter un abonné est rentable.",
+      "documents": [
+        {
+          "id": "abo",
+          "type": "tableau",
+          "titre": "Les données de Bouquet&Co",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Prix d’un bouquet mensuel",
+              "30 €"
+            ],
+            [
+              "Durée moyenne d’un abonnement",
+              "3 ans"
+            ],
+            [
+              "Marge sur chaque bouquet",
+              "40 % du prix"
+            ],
+            [
+              "Coût pour recruter un abonné (publicité, bouquet d’essai)",
+              "150 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Un message entre une cliente et la boutique",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👧",
+              "cote": "droite"
+            },
+            {
+              "nom": "Boutique",
+              "emoji": "💐",
+              "cote": "gauche"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "Je viens de commander mon bouquet sur l’appli."
+            },
+            {
+              "qui": "Boutique",
+              "texte": "Parfait, il sera prêt à 17 h !"
+            },
+            {
+              "qui": "Inès",
+              "texte": "Super, je le retire ce soir dans votre boutique."
+            }
+          ],
+          "source": "Dialogue imaginé pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "La valeur vie client est ce qu’un client rapporte sur toute sa relation avec la marque. Combien d’euros de chiffre d’affaires un abonné rapporte-t-il en moyenne ?",
+          "reponse": 1080,
+          "unite": "€",
+          "aide": "Multiplie le prix mensuel par 12 mois, puis par le nombre d’années.",
+          "explication": "30 × 12 × 3 = **1 080 €** de chiffre d’affaires par abonné."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle marge Bouquet&Co réalise-t-elle sur un abonné pendant toute sa durée d’abonnement, en euros ?",
+          "reponse": 432,
+          "unite": "€",
+          "aide": "Applique les 40 % de marge à la valeur vie client.",
+          "explication": "1 080 × 0,40 = **432 €** de marge par abonné."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment appelle-t-on le parcours d’Inès (commande sur l’appli, retrait en boutique) ?",
+          "options": [
+            "La distribution cross-canal : on passe d’un canal à l’autre",
+            "Le ROPO : on se renseigne en ligne puis on achète en magasin",
+            "La distribution collaborative : on achète à un particulier",
+            "La distribution exclusive : un seul distributeur par zone"
+          ],
+          "reponse": 0,
+          "aide": "Inès commande en ligne puis passe en magasin : elle change de canal.",
+          "explication": "Commander en ligne et retirer en magasin, c’est de la distribution **cross-canal**. Dans le ROPO, c’est la recherche qui est en ligne, pas la commande."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel gain net un abonné rapporte-t-il après déduction du coût de recrutement, en euros ?",
+          "reponse": 282,
+          "unite": "€",
+          "aide": "Retranche les 150 € de recrutement de la marge totale.",
+          "explication": "432 − 150 = **282 €** de gain net par abonné."
+        },
+        {
+          "type": "choix",
+          "enonce": "Faut-il continuer à offrir un bouquet d’essai pour recruter des abonnés ?",
+          "options": [
+            "Oui : un abonné rapporte 432 € de marge pour 150 € dépensés",
+            "Non : 150 € dépassent le prix d’un bouquet mensuel de 30 €",
+            "Non : un client ne rapporte de l’argent qu’à son premier achat",
+            "Oui : la valeur vie client est égale au coût de recrutement"
+          ],
+          "reponse": 0,
+          "aide": "Compare ce que rapporte un abonné à ce qu’il coûte à recruter.",
+          "explication": "L’abonné rapporte **432 € de marge** pour 150 € de recrutement : l’investissement est rentable, même si 150 € dépasse le prix d’un seul bouquet."
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f09051-fbb4-5439-a786-e298f13a7af4",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’absentéisme de l’entrepôt",
+      "competence": "analyser-document",
+      "situation": "L’entrepôt Logi’Nord, imaginaire, compte 8 000 heures de travail théoriques ce mois-ci. Le tableau donne les heures d’absence selon leur cause.",
+      "documents": [
+        {
+          "id": "abs",
+          "type": "tableau",
+          "titre": "Heures d’absence du mois",
+          "colonnes": [
+            "Cause",
+            "Heures d’absence"
+          ],
+          "lignes": [
+            [
+              "Maladie",
+              400
+            ],
+            [
+              "Accidents du travail",
+              200
+            ],
+            [
+              "Autres motifs",
+              120
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "abs",
+          "enonce": "Touche la cause d’absence qui représente le plus d’heures.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Compare les nombres de la colonne des heures.",
+          "explication": "La **maladie** pèse 400 heures, plus que les accidents (200) et les autres motifs (120)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le taux d’absentéisme est égal aux heures d’absence divisées par les heures théoriques, multipliées par 100. Que vaut-il ce mois-ci, en pourcentage ?",
+          "reponse": 9,
+          "unite": "%",
+          "aide": "Additionne d’abord les heures d’absence des trois lignes.",
+          "explication": "400 + 200 + 120 = 720 heures ; 720 ÷ 8 000 × 100 = **9 %**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque situation dans la bonne famille de risques professionnels.",
+          "categories": [
+            "Troubles musculo-squelettiques",
+            "Risques psychosociaux",
+            "Accident du travail"
+          ],
+          "items": [
+            [
+              "Épaules douloureuses après des gestes répétés",
+              0
+            ],
+            [
+              "Mal de dos après des charges portées à bout de bras",
+              0
+            ],
+            [
+              "Stress permanent et épuisement professionnel",
+              1
+            ],
+            [
+              "Harcèlement moral d’un collègue",
+              1
+            ],
+            [
+              "Chute d’une échelle pendant le rangement",
+              2
+            ]
+          ],
+          "aide": "Les TMS viennent des gestes et des postures, les RPS du stress et des relations.",
+          "explication": "Les **TMS** viennent de gestes répétés et de charges lourdes ; les **risques psychosociaux** du stress, de l’épuisement et du harcèlement ; la **chute** est un accident du travail."
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f09051-fbb4-5439-a786-e298f13a7af4",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Primes et partages chez Brisset",
+      "competence": "analyser-document",
+      "situation": "L’Atelier Brisset, entreprise imaginaire, a signé un accord de rémunération collective. Café Lumière, plus petit, se demande ce qu’il doit mettre en place.",
+      "documents": [
+        {
+          "id": "ent",
+          "type": "tableau",
+          "titre": "Deux entreprises",
+          "colonnes": [
+            "Entreprise",
+            "Nombre de salariés"
+          ],
+          "lignes": [
+            [
+              "Atelier Brisset",
+              120
+            ],
+            [
+              "Café Lumière",
+              35
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "accord",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "L’accord d’intéressement de l’Atelier Brisset",
+          "blocs": [
+            "Une enveloppe de 96 000 € est répartie à parts égales entre les 120 salariés si le taux d’accidents baisse de 10 % dans l’année."
+          ],
+          "source": "Accord imaginé pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ent",
+          "enonce": "Touche l’entreprise qui est tenue de mettre en place la participation aux bénéfices.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "La participation est obligatoire à partir d’un certain nombre de salariés.",
+          "explication": "La participation est obligatoire à partir de **50 salariés** : c’est le cas de l’Atelier Brisset (120), pas de Café Lumière (35)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle somme chaque salarié de l’Atelier Brisset recevra-t-il si l’objectif est atteint, en euros ?",
+          "reponse": 800,
+          "unite": "€",
+          "aide": "Divise l’enveloppe par le nombre de salariés.",
+          "explication": "96 000 ÷ 120 = **800 €** par salarié."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément dans la bonne famille de rémunération.",
+          "categories": [
+            "Rémunération individualisée",
+            "Rémunération collective"
+          ],
+          "items": [
+            [
+              "Prime pour avoir atteint ses objectifs personnels",
+              0
+            ],
+            [
+              "Véhicule de fonction d’un commercial",
+              0
+            ],
+            [
+              "Téléphone réservé au directeur commercial",
+              0
+            ],
+            [
+              "Intéressement lié aux résultats de l’entreprise",
+              1
+            ],
+            [
+              "Participation aux bénéfices",
+              1
+            ],
+            [
+              "Plan d’épargne salariale",
+              1
+            ]
+          ],
+          "aide": "Demande-toi si l’avantage dépend d’une personne ou de toute l’équipe.",
+          "explication": "Primes et avantages **personnels** sont individualisés ; **intéressement, participation et épargne salariale** sont collectifs."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’accord lie l’intéressement à la baisse des accidents. Quel effet la direction recherche-t-elle ?",
+          "options": [
+            "Motiver tous les salariés à travailler en sécurité, puisque la prime est partagée",
+            "Récompenser seulement les salariés qui ont eu le moins d’accidents personnels",
+            "Remplacer les salaires par une prime variable versée une seule fois par an",
+            "Supprimer l’obligation de sécurité de l’employeur envers ses salariés"
+          ],
+          "reponse": 0,
+          "aide": "Une prime collective dépend du résultat de toute l’équipe.",
+          "explication": "La prime dépend du résultat **de tous** : chacun a intérêt à la sécurité de chacun. L’obligation de sécurité de l’employeur, elle, demeure."
+        }
+      ]
+    },
+    {
+      "chapitre": "c3f09051-fbb4-5439-a786-e298f13a7af4",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Transpor’Est au bord de la grève",
+      "competence": "analyser-document",
+      "situation": "Transpor’Est, entreprise imaginaire de 300 salariés, traverse des tensions sociales. Un article raconte la situation et le tableau donne quelques indicateurs sociaux.",
+      "documents": [
+        {
+          "id": "art",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Un climat social dégradé",
+          "blocs": [
+            "Chez Transpor’Est, les conducteurs ont déposé un préavis de [[g|grève]] après un an de tensions. Les élus du comité social et économique demandent des informations sur les départs et les absences.",
+            "La direction propose d’ouvrir une médiation, puis une négociation avec les délégués syndicaux sur les conditions de travail."
+          ],
+          "source": "Article imaginé pour l’exercice."
+        },
+        {
+          "id": "ind",
+          "type": "tableau",
+          "titre": "Indicateurs sociaux",
+          "colonnes": [
+            "Année",
+            "Effectif moyen",
+            "Départs",
+            "Taux d’absentéisme"
+          ],
+          "lignes": [
+            [
+              "Il y a deux ans",
+              300,
+              24,
+              "5 %"
+            ],
+            [
+              "L’an dernier",
+              300,
+              36,
+              "7 %"
+            ],
+            [
+              "Cette année",
+              300,
+              54,
+              "9 %"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "art",
+          "enonce": "Touche le mot qui désigne l’arrêt collectif du travail.",
+          "reponse": [
+            "g"
+          ],
+          "aide": "Les conducteurs ont déposé un préavis pour cet arrêt.",
+          "explication": "L’arrêt collectif de travail est une **grève**, forme de conflit social."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le taux de rotation est égal aux départs divisés par l’effectif moyen, multipliés par 100. Que vaut-il cette année, en pourcentage ?",
+          "reponse": 18,
+          "unite": "%",
+          "aide": "Lis la ligne « Cette année » : départs et effectif.",
+          "explication": "54 ÷ 300 × 100 = **18 %** de rotation, contre 8 % il y a deux ans."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points le taux d’absentéisme a-t-il augmenté en deux ans ?",
+          "reponse": 4,
+          "unite": "points",
+          "aide": "Compare la première et la dernière ligne.",
+          "explication": "9 % − 5 % = **4 points** de hausse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Transpor’Est compte 300 salariés. Quel outil du dialogue social, obligatoire à partir de cet effectif, rassemble des indicateurs sociaux comme ceux du tableau ?",
+          "options": [
+            "Le bilan social",
+            "Le compte personnel de formation",
+            "Le contrat d’intéressement",
+            "La charte éthique"
+          ],
+          "reponse": 0,
+          "aide": "Cet outil porte le nom d’un bilan, obligatoire à partir de 300 salariés.",
+          "explication": "Le **bilan social**, obligatoire à partir de 300 salariés, présente des indicateurs sociaux : absentéisme, départs, accidents."
+        }
+      ]
+    },
+    {
+      "chapitre": "2f958091-bc90-559e-919f-03d2bae57b3e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La requête de la librairie",
+      "competence": "comprendre-langue",
+      "situation": "La librairie imaginaire Les Quatre Vents gère ses livres dans une base de données. Le tableau montre la table LIVRE ; une requête SQL l’interroge.",
+      "documents": [
+        {
+          "id": "livre",
+          "type": "tableau",
+          "titre": "Table LIVRE",
+          "colonnes": [
+            "idLivre",
+            "titre",
+            "prix",
+            "stock"
+          ],
+          "lignes": [
+            [
+              1,
+              "Le phare",
+              "12,50 €",
+              4
+            ],
+            [
+              2,
+              "Nuits d’été",
+              "7,90 €",
+              9
+            ],
+            [
+              3,
+              "Petit atlas",
+              "9,50 €",
+              4
+            ],
+            [
+              4,
+              "Carnets de voyage",
+              "12,50 €",
+              2
+            ],
+            [
+              5,
+              "Fables modernes",
+              "6,50 €",
+              9
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Titres et prix imaginés pour l’exercice."
+        },
+        {
+          "id": "req",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La requête",
+          "blocs": [
+            "SELECT titre, prix",
+            "FROM LIVRE",
+            "WHERE prix < 10",
+            "ORDER BY prix ;"
+          ],
+          "source": "Requête écrite pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de lignes cette requête affiche-t-elle ?",
+          "reponse": 3,
+          "unite": "lignes",
+          "aide": "Garde les livres dont le prix est strictement inférieur à 10 €.",
+          "explication": "Trois livres coûtent moins de 10 € : Nuits d’été (7,90), Petit atlas (9,50) et Fables modernes (6,50) : **3 lignes**."
+        },
+        {
+          "type": "zone",
+          "document": "livre",
+          "enonce": "Touche le titre qui s’affiche en premier dans le résultat de la requête.",
+          "reponse": [
+            "r4c1"
+          ],
+          "aide": "ORDER BY prix trie du prix le plus bas au prix le plus haut.",
+          "explication": "Le tri par prix met d’abord le moins cher : **Fables modernes**, à 6,50 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle colonne de la table LIVRE peut servir de clé primaire ?",
+          "options": [
+            "La colonne idLivre, dont chaque valeur est différente",
+            "La colonne prix, car chaque livre a un prix",
+            "La colonne stock, car elle compte les exemplaires",
+            "Aucune colonne : une clé primaire ne se trouve pas dans une table"
+          ],
+          "reponse": 0,
+          "aide": "Une clé primaire identifie chaque ligne : aucune valeur ne doit se répéter.",
+          "explication": "Seul **idLivre** ne se répète jamais : le prix 12,50 € et le stock 9 apparaissent deux fois."
+        }
+      ]
+    },
+    {
+      "chapitre": "2f958091-bc90-559e-919f-03d2bae57b3e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui a commandé quoi ?",
+      "competence": "modeliser",
+      "situation": "Une boutique en ligne imaginaire relie deux tables, CLIENT et COMMANDE, par une jointure. Une requête cherche les commandes des clients de Lyon.",
+      "documents": [
+        {
+          "id": "cli",
+          "type": "tableau",
+          "titre": "Table CLIENT",
+          "colonnes": [
+            "idClient",
+            "nom",
+            "ville"
+          ],
+          "lignes": [
+            [
+              1,
+              "Nora Haddad",
+              "Lyon"
+            ],
+            [
+              2,
+              "Hugo Lenoir",
+              "Nantes"
+            ],
+            [
+              3,
+              "Sana Keita",
+              "Lille"
+            ],
+            [
+              4,
+              "Paul Girard",
+              "Lyon"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice."
+        },
+        {
+          "id": "com",
+          "type": "tableau",
+          "titre": "Table COMMANDE",
+          "colonnes": [
+            "idCommande",
+            "idClient",
+            "montant (€)"
+          ],
+          "lignes": [
+            [
+              101,
+              1,
+              45
+            ],
+            [
+              102,
+              3,
+              120
+            ],
+            [
+              103,
+              1,
+              60
+            ],
+            [
+              104,
+              4,
+              30
+            ],
+            [
+              105,
+              3,
+              80
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice."
+        },
+        {
+          "id": "req",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La requête",
+          "blocs": [
+            "SELECT nom, montant",
+            "FROM CLIENT",
+            "JOIN COMMANDE ON CLIENT.idClient = COMMANDE.idClient",
+            "WHERE ville = 'Lyon' ;"
+          ],
+          "source": "Requête écrite pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelle colonne de la table COMMANDE est la clé étrangère qui la relie à CLIENT ?",
+          "options": [
+            "idClient, qui renvoie à un client de la table CLIENT",
+            "idCommande, qui identifie chaque commande de la table",
+            "montant, qui donne la somme payée pour la commande",
+            "ville, qui indique l’adresse de livraison du client"
+          ],
+          "reponse": 0,
+          "aide": "Une clé étrangère fait référence à la clé primaire d’une autre table.",
+          "explication": "**idClient** fait référence à un client de la table CLIENT : c’est la clé étrangère. idCommande est la clé primaire de COMMANDE."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de lignes la requête affiche-t-elle ?",
+          "reponse": 3,
+          "unite": "lignes",
+          "aide": "Garde les commandes des clients qui habitent Lyon : repère leurs idClient.",
+          "explication": "Les clients de Lyon sont 1 (Nora) et 4 (Paul) : commandes 101, 103 et 104, soit **3 lignes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la somme des montants affichés par la requête, en euros ?",
+          "reponse": 135,
+          "unite": "€",
+          "aide": "Additionne les montants des trois lignes du résultat.",
+          "explication": "45 + 60 + 30 = **135 €**."
+        },
+        {
+          "type": "zone",
+          "document": "cli",
+          "enonce": "Touche le nom du client qui a passé deux commandes mais que la requête ne retient pas.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Compte les commandes par idClient, puis regarde sa ville.",
+          "explication": "**Sana Keita** a passé deux commandes (102 et 105) mais habite Lille : elle est exclue par la condition sur la ville."
+        }
+      ]
+    },
+    {
+      "chapitre": "2f958091-bc90-559e-919f-03d2bae57b3e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un site marchand et son transporteur",
+      "competence": "analyser-document",
+      "situation": "La librairie en ligne Pages&Co, imaginaire, a confié son informatique à un prestataire. Son site interroge aussi le transporteur pour suivre les colis.",
+      "documents": [
+        {
+          "id": "contrat",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Contrat d’infogérance HébergTech",
+          "sousTitre": "Document imaginé pour l’exercice",
+          "emoji": "🖥️",
+          "lignes": [
+            {
+              "texte": "Redevance mensuelle",
+              "valeur": "3 200 €"
+            },
+            {
+              "texte": "Objectif de disponibilité",
+              "valeur": "99,5 %"
+            },
+            {
+              "texte": "Pénalité : 5 % de la redevance par tranche complète de 0,5 point manquant"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Mesure du mois : 7,2 h d’arrêt sur 720 h",
+              "gras": true
+            }
+          ]
+        },
+        {
+          "id": "flux",
+          "type": "schema",
+          "titre": "Le suivi d’un colis",
+          "largeur": 320,
+          "hauteur": 170,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 10,
+              "y": 45,
+              "l": 95,
+              "h": 42,
+              "texte": "Site marchand",
+              "id": "site",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 130,
+              "y": 45,
+              "l": 60,
+              "h": 42,
+              "texte": "API",
+              "id": "api",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 215,
+              "y": 45,
+              "l": 95,
+              "h": 42,
+              "texte": "Transporteur",
+              "id": "trans",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                105,
+                66
+              ],
+              "a": [
+                130,
+                66
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                190,
+                66
+              ],
+              "a": [
+                215,
+                66
+              ],
+              "fleche": "fin"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 120,
+              "texte": "Le site demande où est le colis",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 138,
+              "texte": "et reçoit la réponse du transporteur",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Le taux de disponibilité est égal au temps de fonctionnement divisé par le temps total, multiplié par 100. Que vaut-il ce mois-ci, en pourcentage ?",
+          "reponse": 99,
+          "unite": "%",
+          "aide": "Le site a fonctionné 720 h moins 7,2 h.",
+          "explication": "(720 − 7,2) ÷ 720 × 100 = **99 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle pénalité HébergTech doit-elle payer ce mois-ci, en euros ?",
+          "reponse": 160,
+          "unite": "€",
+          "aide": "Compte les tranches complètes de 0,5 point manquantes sous l’objectif.",
+          "explication": "Objectif 99,5 %, mesure 99 % : il manque 0,5 point, soit **une tranche**. Pénalité : 5 % × 3 200 = **160 €**."
+        },
+        {
+          "type": "zone",
+          "document": "flux",
+          "enonce": "Touche l’API, l’interface qui permet au site de dialoguer avec le transporteur.",
+          "reponse": [
+            "api"
+          ],
+          "aide": "L’API est l’élément placé entre les deux organisations.",
+          "explication": "L’**API** est l’interface qui permet à deux applications d’échanger des données."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel risque l’infogérance fait-elle courir à Pages&Co ?",
+          "options": [
+            "Dépendre du prestataire pour le bon fonctionnement de son site",
+            "Perdre la propriété de tous les livres vendus sur son site",
+            "Devoir recruter un administrateur réseau supplémentaire",
+            "Ne plus pouvoir utiliser d’interface avec ses partenaires"
+          ],
+          "reponse": 0,
+          "aide": "Confier son informatique à un tiers crée un lien de dépendance.",
+          "explication": "L’infogérance confie l’informatique à un prestataire : si son service est en panne, le site l’est aussi. C’est la **dépendance** au prestataire."
+        }
+      ]
+    },
+    {
+      "chapitre": "97aba00c-62d7-5859-af2a-3283c7cb8e4c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Montrer que Covoitou est collaborative",
+      "competence": "analyser-texte",
+      "situation": "Question du dossier : « Montrez que l’application Covoitou relève de l’économie collaborative. » Tu repères un indice dans le document, puis tu rédiges en trois temps.",
+      "documents": [
+        {
+          "id": "cov",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le document",
+          "blocs": [
+            "Covoitou est une application imaginaire. Les conducteurs y proposent leurs places libres à d’autres [[p|particuliers]], qui paient leur part des frais du trajet.",
+            "L’entreprise ne possède aucun véhicule : elle met seulement les personnes en relation et prélève une commission de 12 %."
+          ],
+          "source": "Texte écrit pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cov",
+          "enonce": "Touche le mot du texte qui montre que l’échange se fait entre personnes ordinaires et non avec une entreprise.",
+          "reponse": [
+            "p"
+          ],
+          "aide": "Cherche qui sont les personnes qui reçoivent la proposition.",
+          "explication": "L’échange se fait avec des **particuliers** : c’est l’indice de l’économie collaborative."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les trois temps d’une bonne réponse.",
+          "items": [
+            "L’économie collaborative est le partage de biens ou de services entre particuliers.",
+            "Dans le document, les conducteurs proposent leurs places libres « à d’autres particuliers ».",
+            "Covoitou relève donc de l’économie collaborative."
+          ],
+          "aide": "Notion, puis indice du document, puis conclusion.",
+          "explication": "On **définit** la notion, on l’**applique** avec un indice du document, puis on **conclut**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque type de question à ce que l’on attend dans la copie.",
+          "paires": [
+            [
+              "Calculer",
+              "Formule, calcul posé, résultat avec unité et interprétation"
+            ],
+            [
+              "Justifier",
+              "Des arguments tirés du contexte"
+            ],
+            [
+              "Caractériser",
+              "Nommer la notion exacte avec un indice du document"
+            ],
+            [
+              "Question de réflexion",
+              "Une réponse structurée : introduction, arguments, conclusion"
+            ]
+          ],
+          "aide": "Relis le tableau des types de questions de la fiche.",
+          "explication": "Chaque verbe appelle son **attendu** : le calcul demande une interprétation, la réflexion une réponse structurée."
+        }
+      ]
+    },
+    {
+      "chapitre": "97aba00c-62d7-5859-af2a-3283c7cb8e4c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Gérer les quatre heures",
+      "competence": "raisonner",
+      "situation": "Noé prépare l’épreuve écrite de 4 heures. Il a construit un plan de temps, puis regarde les questions d’un dossier d’entraînement imaginaire.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "tableau",
+          "titre": "Le plan de Noé",
+          "colonnes": [
+            "Étape",
+            "Durée"
+          ],
+          "lignes": [
+            [
+              "Lire les questions des dossiers",
+              "10 min"
+            ],
+            [
+              "Dossier 1",
+              "80 min"
+            ],
+            [
+              "Dossier 2",
+              "80 min"
+            ],
+            [
+              "Dossier 3",
+              "70 min"
+            ],
+            [
+              "Relecture",
+              "0 min"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Plan imaginé pour l’exercice."
+        },
+        {
+          "id": "q",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les questions du dossier 2",
+          "blocs": [
+            "a. Calculez le taux de marge et interprétez-le.",
+            "b. Caractérisez le style de direction.",
+            "c. Justifiez le choix de la relocalisation.",
+            "d. Les transformations numériques sont-elles une chance ?",
+            "e. Calculez la variation du chiffre d’affaires.",
+            "f. Identifiez la stratégie de l’entreprise."
+          ],
+          "source": "Questions écrites pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche la durée que le plan de Noé a oubliée de prévoir pour la méthode.",
+          "reponse": [
+            "r4c1"
+          ],
+          "aide": "Cherche une étape à zéro minute.",
+          "explication": "La **relecture** est à 0 minute : or elle sert à corriger l’orthographe, les unités et les calculs."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Noé garde 10 minutes de lecture et 20 minutes de relecture. Combien de minutes peut-il consacrer à chacun des 3 dossiers, à temps égal ?",
+          "reponse": 70,
+          "unite": "min",
+          "aide": "Retranche lecture et relecture de 240 minutes, puis partage entre les 3 dossiers.",
+          "explication": "240 − 10 − 20 = 210 minutes ; 210 ÷ 3 = **70 minutes** par dossier."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque question du dossier 2 dans la bonne colonne.",
+          "categories": [
+            "Calculer",
+            "Caractériser ou identifier",
+            "Justifier",
+            "Réflexion"
+          ],
+          "items": [
+            [
+              "Calculez le taux de marge et interprétez-le",
+              0
+            ],
+            [
+              "Caractérisez le style de direction",
+              1
+            ],
+            [
+              "Justifiez le choix de la relocalisation",
+              2
+            ],
+            [
+              "Les transformations numériques sont-elles une chance ?",
+              3
+            ],
+            [
+              "Calculez la variation du chiffre d’affaires",
+              0
+            ],
+            [
+              "Identifiez la stratégie de l’entreprise",
+              1
+            ]
+          ],
+          "aide": "Repère le verbe de chaque question.",
+          "explication": "Le **verbe** donne le type : calculer, caractériser ou identifier, justifier. Une question ouverte appelle une **réflexion** structurée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les 2 points d’orthographe et de syntaxe représentent quel pourcentage de la note sur 20 ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "Divise 2 par 20, puis multiplie par 100.",
+          "explication": "2 ÷ 20 × 100 = **10 %** de la note : une relecture rapporte."
+        }
+      ]
+    },
+    {
+      "chapitre": "97aba00c-62d7-5859-af2a-3283c7cb8e4c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Un calcul juste, une copie complète",
+      "competence": "raisonner",
+      "situation": "Question du dossier : « Calculez le taux de marge sur coût variable de Vélocité, entreprise imaginaire, et interprétez-le. » Quatre élèves ont rendu une copie. Marge sur coût variable = chiffre d’affaires − charges variables.",
+      "documents": [
+        {
+          "id": "velo",
+          "type": "tableau",
+          "titre": "Les données de Vélocité",
+          "colonnes": [
+            "Donnée annuelle",
+            "Montant"
+          ],
+          "lignes": [
+            [
+              "Chiffre d’affaires",
+              "480 000 €"
+            ],
+            [
+              "Charges variables",
+              "288 000 €"
+            ],
+            [
+              "Charges fixes",
+              "120 000 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres imaginés pour l’exercice."
+        },
+        {
+          "id": "copies",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les quatre copies",
+          "blocs": [
+            "Copie A : « Taux = 192 000 ÷ 480 000 = 40 %. »",
+            "Copie B : « Taux = 288 000 ÷ 480 000 = 60 %. Sur 100 € de ventes, 60 € restent pour couvrir les charges fixes. »",
+            "Copie C : « Taux = 192 000 ÷ 480 000 = 40 %. Sur 100 € de ventes, il reste 40 € pour couvrir les charges fixes et dégager un résultat. »",
+            "Copie D : « Taux = 192 000 ÷ 480 000 = 40 %. C’est un bon taux, donc l’entreprise gagne sûrement de l’argent. »"
+          ],
+          "source": "Copies écrites pour l’exercice."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le taux de marge sur coût variable (marge sur coût variable ÷ chiffre d’affaires), en pourcentage.",
+          "reponse": 40,
+          "unite": "%",
+          "aide": "Calcule d’abord la marge sur coût variable : chiffre d’affaires moins charges variables.",
+          "explication": "480 000 − 288 000 = 192 000 € ; 192 000 ÷ 480 000 × 100 = **40 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle copie obtiendrait tous les points ?",
+          "options": [
+            "La copie A",
+            "La copie B",
+            "La copie C",
+            "La copie D"
+          ],
+          "reponse": 2,
+          "aide": "Un bon calcul doit être juste ET interprété, sans conclusion hasardeuse.",
+          "explication": "La copie **C** a le bon calcul et une interprétation exacte. A ne donne aucune interprétation, B se trompe de numérateur, D conclut sans connaître les charges fixes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le seuil de rentabilité en valeur est égal aux charges fixes divisées par le taux de marge sur coût variable. Que vaut-il, en euros ?",
+          "reponse": 300000,
+          "unite": "€",
+          "aide": "Divise 120 000 € par 0,40.",
+          "explication": "120 000 ÷ 0,40 = **300 000 €** de chiffre d’affaires pour couvrir toutes les charges."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le chiffre d’affaires réel est de 480 000 €. Que conclure par rapport au seuil de rentabilité ?",
+          "options": [
+            "L’entreprise dégage un bénéfice : son chiffre d’affaires dépasse le seuil",
+            "L’entreprise est en perte : son chiffre d’affaires dépasse le seuil",
+            "L’entreprise est à l’équilibre : son chiffre d’affaires égale le seuil",
+            "On ne peut rien conclure sans connaître le chiffre d’affaires des concurrents"
+          ],
+          "reponse": 0,
+          "aide": "Compare 480 000 € à 300 000 €.",
+          "explication": "Au-delà du seuil de rentabilité (300 000 €), l’entreprise dégage un **bénéfice**. Une conclusion claire fait partie de la réponse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le résultat annuel de Vélocité, en euros ?",
+          "reponse": 72000,
+          "unite": "€",
+          "aide": "Résultat = marge sur coût variable moins charges fixes.",
+          "explication": "192 000 − 120 000 = **72 000 €** de bénéfice."
+        }
+      ]
+    }
+  ]
+}

@@ -280,7 +280,7 @@ La France est une **puissance maritime par son domaine et par sa marine**, mais 
 | Type de territoire | Ce qu’il concentre | Exemples |
 | **Centres d’impulsion** | Capitaux, décisions, innovation | Amérique du Nord, Europe occidentale, Asie orientale |
 | **Périphéries intégrées** | Main-d’œuvre, matières premières ; une part de la valeur | Pays émergents, ateliers d’Asie du Sud-Est, pays pétroliers |
-| **Périphéries en marge** | Rien, ou presque | La plupart des **46 PMA**, souvent enclavés ou en conflit |
+| **Périphéries en marge** | Rien, ou presque | La plupart des **44 PMA**, souvent enclavés ou en conflit |
 
 Les centres forment l’**archipel mégalopolitain mondial** : un chapelet de métropoles **mieux reliées entre elles qu’à leur propre arrière-pays**.
 
@@ -305,7 +305,7 @@ Aucun ne suffit seul : l’IDH d’un pays pétrolier peut masquer de très fort
           },
           questions: [
             ['Que désigne l’archipel mégalopolitain mondial ?', ['Le réseau des grandes métropoles mieux reliées entre elles qu’à leur arrière-pays', 'Un ensemble d’îles très peuplées', 'Les pays du G7', 'Les grands ports mondiaux'], 0, 'L’image dit l’essentiel : des îlots de richesse reliés par-dessus les territoires.'],
-            ['Combien y a-t-il de pays les moins avancés (PMA) ?', ['46', '12', '80', '25'], 0, 'Ce statut ONU ouvre des aides et des tarifs préférentiels.'],
+            ['Combien y a-t-il de pays les moins avancés (PMA) ?', ['44', '12', '80', '25'], 0, 'Ils sont 44 depuis 2024 ; ce statut de l’ONU ouvre des aides et des tarifs préférentiels.'],
             ['La grille Nord / Sud suffit encore à décrire le monde actuel.', ['Vrai', 'Faux'], 1, 'La Chine est le premier exportateur mondial, et chaque pays est traversé de fractures internes.'],
             ['Que sont les IDE ?', ['Les investissements directs étrangers', 'Les indices de développement économique', 'Les industries de défense européennes', 'Les importations de denrées essentielles'], 0, 'Leur stock mesure l’attractivité d’un territoire.'],
             ['Quel handicap pèse sur de nombreux PMA ?', ['L’enclavement, sans accès à la mer', 'Un excès de main-d’œuvre qualifiée', 'Un climat trop tempéré', 'Une monnaie trop forte'], 0, 'Sans façade maritime, le coût d’accès au marché mondial explose.'],
@@ -504,7 +504,7 @@ Elle conserve des leviers : arme nucléaire, siège au Conseil de sécurité, in
 ## L’Asie du Sud-Est : l’atelier qui monte
 | Fait | Chiffre |
 | L’**ASEAN**, créée en | **1967** |
-| Nombre d’États membres | **10** |
+| Nombre d’États membres | **11**, depuis l’entrée du Timor oriental en 2025 |
 | Population | Plus de **650 millions** d’habitants |
 
 Elle bénéficie de sa position sur les grandes routes maritimes — Malacca — et d’une main-d’œuvre nombreuse. Le Vietnam, l’Indonésie et la Malaisie profitent aujourd’hui du report des chaînes de production hors de Chine.
@@ -519,7 +519,7 @@ Elle bénéficie de sa position sur les grandes routes maritimes — Malacca —
             ['De quoi la Russie tire-t-elle l’essentiel de ses devises ?', ['Des hydrocarbures et des matières premières', 'De l’industrie automobile', 'Des services financiers', 'Du tourisme'], 0, 'Une économie de rente, peu diversifiée.'],
             ['Depuis quand la Russie fait-elle l’objet de sanctions occidentales ?', ['Depuis 2014, massivement depuis 2022', 'Depuis 1991', 'Depuis 2008', 'Depuis 2000'], 0, 'Annexion de la Crimée d’abord, invasion de l’Ukraine ensuite.'],
             ['Vers quelle région la Russie a-t-elle réorienté ses exportations d’énergie ?', ['L’Asie', 'L’Afrique', 'L’Amérique latine', 'Le Moyen-Orient'], 0, 'Vers la Chine et l’Inde surtout, souvent avec de fortes décotes.'],
-            ['En quelle année l’ASEAN a-t-elle été créée ?', ['1967', '1995', '1957', '1980'], 0, 'Elle réunit aujourd’hui 10 États et plus de 650 millions d’habitants.'],
+            ['En quelle année l’ASEAN a-t-elle été créée ?', ['1967', '1995', '1957', '1980'], 0, 'Elle réunit aujourd’hui 11 États et plus de 650 millions d’habitants.'],
             ['Comment l’Asie du Sud-Est s’est-elle insérée dans la mondialisation ?', ['Par les investissements étrangers et la sous-traitance industrielle', 'Par l’exportation de pétrole', 'Par les services financiers', 'Par le tourisme uniquement'], 0, 'Textile, électronique et assemblage y ont attiré les capitaux.'],
             ['L’Asie du Sud-Est est un ensemble homogène sur le plan du développement.', ['Vrai', 'Faux'], 1, 'Singapour est parmi les pays les plus riches du monde, le Laos parmi les plus pauvres de la région.'],
             ['Quel accord commercial de la région est le plus vaste du monde ?', ['Le RCEP', 'L’ACEUM', 'Le Mercosur', 'La ZLECAf'], 0, 'Il associe l’ASEAN à la Chine, au Japon, à la Corée du Sud, à l’Australie et à la Nouvelle-Zélande.'],
@@ -794,7 +794,7 @@ Elle concentre les sièges sociaux, la recherche, les hubs aériens et ferroviai
 
 ## Les réformes institutionnelles
 | Date | La réforme | Ce qu’elle change |
-| **2014** | Loi MAPTAM | Crée le statut de **métropole** — 21 aujourd’hui, dont Grand Paris, Lyon et Aix-Marseille à statut particulier |
+| **2014** | Loi MAPTAM | Crée le statut de **métropole** — 22 aujourd’hui, dont Grand Paris, Lyon et Aix-Marseille à statut particulier |
 | **2015-2016** | Fusion des régions | De **22 à 13** régions métropolitaines |
 | En continu | Montée des **intercommunalités** | Elles exercent l’essentiel des compétences d’aménagement du quotidien |
 
@@ -819,7 +819,7 @@ L’**ANCT** — Agence nationale de la cohésion des territoires, 2020 — pilo
           },
           questions: [
             ['De combien de régions métropolitaines la France est-elle passée en 2016 ?', ['De 22 à 13', 'De 26 à 18', 'De 13 à 22', 'De 20 à 15'], 0, 'Des ensembles plus vastes, censés atteindre une taille européenne.'],
-            ['Quelle loi de 2014 crée le statut de métropole ?', ['La loi MAPTAM', 'La loi NOTRe', 'La loi SRU', 'La loi Chevènement'], 0, 'On compte aujourd’hui 21 métropoles, dont trois à statut particulier.'],
+            ['Quelle loi de 2014 crée le statut de métropole ?', ['La loi MAPTAM', 'La loi NOTRe', 'La loi SRU', 'La loi Chevènement'], 0, 'On compte aujourd’hui 22 métropoles (Métropole de Lyon comprise), dont trois à statut particulier.'],
             ['Que vise le ZAN ?', ['Zéro artificialisation nette des sols', 'Zéro accident sur les routes', 'Zone d’activité nationale', 'Zéro apport nutritif'], 0, 'Il contraint désormais tous les projets d’aménagement.'],
             ['Quel programme cible la dévitalisation des centres de villes moyennes ?', ['Action cœur de ville', 'Grand Paris Express', 'Territoires zéro chômeur', 'Plan très haut débit'], 0, 'Il répond aux commerces vacants et à la vacance des logements de centre-ville.'],
             ['La gentrification des centres métropolitains repousse les ménages modestes vers le périurbain.', ['Vrai', 'Faux'], 0, 'C’est l’un des mécanismes des fractures territoriales récentes.'],

@@ -1,0 +1,403 @@
+{
+  "niveau": "1re",
+  "matiere": "nsi",
+  "sujets": [
+    {
+      "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+      "difficulte": 1,
+      "titre": "Types et opérateurs de Python",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Donne le type Python de chacune de ces valeurs : **42**, **3.5**, **True**, **'bonjour'**, **[1, 2]**, **(1, 2)**.\n2. Parmi les valeurs de type chaîne, liste et tuple, lesquelles sont modifiables en place ?\n3. Quelle différence y a-t-il entre les deux lignes suivantes ? Que produit chacune ?\n\n```\nx = 5\nx == 5\n```\n\n4. Parmi les types int et float, lequel est exact et lequel est approché ?",
+      "bareme": [
+        { "critere": "Les six types justes : int, float, bool, str, list, tuple", "points": 7 },
+        { "critere": "Seule la liste est modifiable en place ; chaîne et tuple non", "points": 4 },
+        { "critere": "Le simple égal affecte, le double égal compare et rend un booléen (True)", "points": 6 },
+        { "critere": "int exact, float approché", "points": 3 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 42 → **int** ; 3.5 → **float** ; True → **bool** ; 'bonjour' → **str** ; [1, 2] → **list** ; (1, 2) → **tuple**.\n\n2. Seule la **liste** est modifiable en place. La **chaîne** et le **tuple** ne le sont pas.\n\n3. **x = 5** est une **affectation** : elle range la valeur 5 dans la variable x. **x == 5** est une **comparaison** : elle ne modifie rien et rend un **booléen**, ici **True** puisque x vaut 5. Confondre les deux est l'erreur d'entrée en programmation.\n\n4. Le type **int** est **exact** (et sans limite de taille en Python) ; le type **float** est **approché**."
+    },
+    {
+      "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+      "difficulte": 2,
+      "titre": "Les notes qui changent toutes seules",
+      "consigne": "Exécute mentalement chaque programme, puis réponds en justifiant.",
+      "enonce": "**Programme 1.**\n\n```\nnotes = [12, 15]\ncopie = notes\ncopie.append(8)\nprint(notes)\n```\n\n1. Qu'affiche ce programme ? Explique pourquoi la liste notes a changé alors qu'on n'a modifié que copie.\n\n**Programme 2.**\n\n```\nage = 16\ntexte = 'Âge : ' + age\n```\n\n2. Ce programme s'arrête sur une erreur. Laquelle, et quelle propriété du typage de Python l'explique ?\n\n**Programme 3.**\n\n```\nx = 5\nx = 'cinq'\n```\n\n3. Ce programme est-il accepté par Python ? Quelle propriété du typage de Python l'explique ?",
+      "bareme": [
+        { "critere": "Affiche [12, 15, 8] : les deux variables désignent la même liste, modifiable en place", "points": 7 },
+        { "critere": "Erreur : addition d'une chaîne et d'un entier ; typage fort, sans conversion silencieuse", "points": 7 },
+        { "critere": "Accepté : typage dynamique, une variable peut changer de type", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le programme affiche **[12, 15, 8]**. L'affectation copie = notes ne crée **pas de copie** : les deux variables désignent **la même liste**. Une liste est **modifiable en place** ; en ajoutant 8 par copie, on modifie l'objet unique, que l'on voit aussi par notes. La variable désigne un objet, non une copie.\n\n2. On tente d'additionner une **chaîne** ('Âge : ') et un **entier** (16) : Python lève une **erreur**. Son typage est **fort** : il ne convertit pas silencieusement l'entier en chaîne. Il faut convertir explicitement l'entier en chaîne avant de l'ajouter au texte.\n\n3. **Oui.** Le typage de Python est **dynamique** : une variable peut changer de type. x désigne d'abord un entier, puis une chaîne."
+    },
+    {
+      "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+      "difficulte": 3,
+      "titre": "Deux façons d'ajouter, trois projets",
+      "consigne": "Analyse les programmes et les situations en justifiant chaque réponse par le cours.",
+      "enonce": "**Deux fonctions.**\n\n```\ndef ajoute_a(liste, x):\n    liste.append(x)\n\ndef ajoute_b(liste, x):\n    return liste + [x]\n```\n\n1. On exécute : `l = [1, 2]`, puis `ajoute_a(l, 3)`. Que vaut l ? On repart de `l = [1, 2]` et on exécute `m = ajoute_b(l, 3)`. Que valent l et m ?\n2. Laquelle de ces deux fonctions relève du paradigme **fonctionnel** ? Laquelle modifie un état, comme dans le paradigme **impératif** ? Justifie.\n3. Anissa écrit `if x = 3:` et Python refuse d'exécuter la ligne. Est-ce un problème de **syntaxe** ou de **sémantique** ? Explique la différence.\n4. Quel langage conseilles-tu pour chacun de ces projets, et pourquoi ? (a) analyser des mesures d'un TP de physique avec des outils scientifiques ; (b) programmer un petit circuit embarqué qui doit être très rapide, au plus près de la machine ; (c) animer une page vue dans n'importe quel navigateur.",
+      "bareme": [
+        { "critere": "ajoute_a : l vaut [1, 2, 3] ; ajoute_b : l reste [1, 2] et m vaut [1, 2, 3]", "points": 5 },
+        { "critere": "ajoute_b fonctionnelle (sans effet de bord), ajoute_a modifie un état", "points": 5 },
+        { "critere": "Erreur de syntaxe : le simple égal affecte, il faut le double égal pour comparer", "points": 4 },
+        { "critere": "Python, C, JavaScript, justifiés par bibliothèques, performance, navigateur", "points": 6 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. - ajoute_a modifie la liste reçue en place : l vaut **[1, 2, 3]** (la fonction ne rend rien).\n- ajoute_b construit une **nouvelle** liste : l reste **[1, 2]** et m vaut **[1, 2, 3]**.\n\n2. **ajoute_b** relève du paradigme **fonctionnel** : pas d'effet de bord, son résultat ne dépend que de ses arguments. **ajoute_a** modifie un **état** (la liste passée), à la manière **impérative** : une instruction qui modifie un état.\n\n3. C'est une erreur de **syntaxe** : la syntaxe dit ce qui est bien écrit, la sémantique ce que cela signifie. Dans un test, il faut **comparer** avec le double signe égal (**if x == 3:**) ; le simple signe égal **affecte** et n'a pas sa place dans une condition.\n\n4. (a) **Python** : lisible, très fourni en bibliothèques scientifiques.\n(b) **C** : rapide, proche de la machine.\n(c) **JavaScript** : il s'exécute dans tout navigateur.\n\nCe n'est pas une question de goût : bibliothèques disponibles, lisibilité pour l'équipe et contraintes de performance décident."
+    },
+    {
+      "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+      "difficulte": 1,
+      "titre": "Paramètres, arguments et retour",
+      "consigne": "Lis le programme puis réponds à chaque question.",
+      "enonce": "**Programme.**\n\n```\ndef aire_rectangle(longueur, largeur):\n    return longueur * largeur\n\na = aire_rectangle(4, 3)\n```\n\n1. Quels sont les **paramètres** de la fonction ? Quels sont les **arguments** de l'appel ?\n2. Que vaut la variable a après l'exécution ?\n3. Que rend, en Python, une fonction qui ne contient aucune instruction return ?\n4. Cite deux bénéfices du découpage d'un programme en fonctions.",
+      "bareme": [
+        { "critere": "Paramètres longueur et largeur ; arguments 4 et 3", "points": 7 },
+        { "critere": "a vaut 12 ; sans return, la fonction rend None", "points": 7 },
+        { "critere": "Deux bénéfices parmi réutiliser, tester, lire, répartir", "points": 6 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Les **paramètres** sont les noms de la **définition** : **longueur** et **largeur**. Les **arguments** sont les valeurs passées à l'**appel** : **4** et **3**.\n\n2. a vaut 4 × 3 = **12**, la valeur rendue par return.\n\n3. Elle rend **None**.\n\n4. Deux parmi :\n- **réutiliser** : une correction faite une fois vaut partout ;\n- **tester** chaque morceau séparément ;\n- **lire** : un nom bien choisi remplace dix lignes à déchiffrer ;\n- **répartir** le travail entre plusieurs personnes."
+    },
+    {
+      "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+      "difficulte": 2,
+      "titre": "La moyenne qui s'affiche mais ne sert à rien",
+      "consigne": "Exécute mentalement le programme, puis corrige-le en justifiant.",
+      "enonce": "**Programme de Jules.**\n\n```\ndef moyenne(a, b):\n    print((a + b) / 2)\n\nm = moyenne(12, 16)\nbonus = m + 1\n```\n\n1. Qu'affiche ce programme avant de s'arrêter ? Que vaut m ? Pourquoi la dernière ligne provoque-t-elle une erreur ?\n2. Réécris la fonction pour qu'elle soit réutilisable dans un calcul. Que vaut alors bonus ?\n3. Les notes doivent être comprises entre 0 et 20. Complète ta fonction par une **docstring** qui précise ce qu'elle fait, ce qu'elle reçoit, ce qu'elle rend et ce qui est garanti, puis par une **assertion** qui vérifie la précondition.",
+      "bareme": [
+        { "critere": "Affiche 14.0 ; m vaut None ; None + 1 provoque l'erreur", "points": 6 },
+        { "critere": "Fonction qui retourne (a + b) / 2 ; bonus vaut 15.0", "points": 6 },
+        { "critere": "Docstring complète : objet, préconditions, retour, postcondition", "points": 4 },
+        { "critere": "Assertion juste sur 0 ≤ a ≤ 20 et 0 ≤ b ≤ 20", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La fonction **affiche 14.0** ((12 + 16) / 2). Mais elle n'a pas d'instruction return : elle rend **None**, donc **m vaut None**. La ligne bonus = m + 1 tente d'ajouter 1 à None : **erreur**. La valeur est partie à l'écran, elle n'est plus disponible pour un calcul : c'est l'erreur classique « afficher au lieu de retourner ».\n\n2. \n\n```\ndef moyenne(a, b):\n    return (a + b) / 2\n```\n\nm vaut 14.0 et **bonus vaut 15.0**.\n\n3. \n\n```\ndef moyenne(a, b):\n    '''Calcule la moyenne de deux notes.\n    Reçoit : a et b, deux nombres compris entre 0 et 20.\n    Rend : un flottant, la moyenne de a et b.\n    Garantit : le résultat est compris entre 0 et 20.'''\n    assert 0 <= a <= 20 and 0 <= b <= 20\n    return (a + b) / 2\n```\n\nL'assertion vérifie la **précondition** à l'exécution : si une note est hors bornes, le programme s'arrête **au bon endroit**, au lieu de produire un résultat faux plus loin."
+    },
+    {
+      "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+      "difficulte": 3,
+      "titre": "Le bonus qui modifie toute la classe",
+      "consigne": "Analyse le programme en mobilisant plusieurs notions du chapitre, et justifie chaque réponse.",
+      "enonce": "**Programme.**\n\n```\ndef ajoute_bonus(notes):\n    for i in range(len(notes)):\n        notes[i] = notes[i] + 1\n    return notes\n\nclasse = [10, 14, 19]\nnouvelles = ajoute_bonus(classe)\nprint(classe)\nprint(nouvelles)\n```\n\n1. Qu'affichent les deux print ? Explique pourquoi la liste classe a été modifiée.\n2. Cette fonction a-t-elle un **effet de bord** ? Est-ce interdit ? Pourquoi est-ce ici dangereux ?\n3. Réécris la fonction pour qu'elle n'ait **aucun effet de bord** : elle doit rendre une nouvelle liste et laisser l'originale intacte.\n4. Après l'exécution, peut-on afficher la variable i en dehors de la fonction ? Justifie avec la notion de **portée**.\n5. Écris la spécification de ta fonction : ce qu'elle reçoit (avec une précondition qui garantit qu'aucune note ne dépasse 20 après le bonus), ce qu'elle rend, et une assertion.",
+      "bareme": [
+        { "critere": "Les deux print affichent [11, 15, 20] : la liste reçue est modifiée en place", "points": 5 },
+        { "critere": "Effet de bord non interdit mais à vouloir et documenter ; bug difficile à localiser", "points": 4 },
+        { "critere": "Version sans effet de bord qui construit et retourne une nouvelle liste", "points": 5 },
+        { "critere": "i est locale : elle n'existe pas hors de la fonction", "points": 2 },
+        { "critere": "Spécification avec précondition (notes entre 0 et 19), retour et assertion", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Les deux lignes affichent **[11, 15, 20]**. La fonction reçoit **la même liste** que classe (pas une copie) et la modifie **en place** ; nouvelles désigne elle aussi cette même liste.\n\n2. **Oui** : elle modifie autre chose que sa valeur de retour, la liste reçue en argument. Ce n'est **pas interdit**, mais cela doit être **voulu et documenté**. Ici, l'appelant croit obtenir de nouvelles notes et perd les anciennes sans le savoir : une fonction qui modifie sournoisement la liste qu'on lui passe produit des bugs **très difficiles à localiser**.\n\n3. \n\n```\ndef ajoute_bonus(notes):\n    resultat = []\n    for n in notes:\n        resultat.append(n + 1)\n    return resultat\n```\n\nAvec classe = [10, 14, 19], la fonction rend [11, 15, 20] et classe reste [10, 14, 19].\n\n4. **Non.** i est une variable **locale** : elle n'existe que dans la fonction. Une fonction reçoit ce dont elle a besoin par ses paramètres et rend son résultat par son retour.\n\n5. Par exemple :\n\n```\ndef ajoute_bonus(notes):\n    '''Ajoute un point à chaque note.\n    Reçoit : une liste de nombres compris entre 0 et 19.\n    Rend : une nouvelle liste, chaque note augmentée de 1.\n    Garantit : la liste reçue n'est pas modifiée,\n    et chaque note rendue est comprise entre 1 et 20.'''\n    for n in notes:\n        assert 0 <= n <= 19\n    resultat = []\n    for n in notes:\n        resultat.append(n + 1)\n    return resultat\n```"
+    },
+    {
+      "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+      "difficulte": 1,
+      "titre": "Un bon jeu de tests",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "On veut tester une fonction **maximum(liste)** qui doit rendre le plus grand élément d'une liste de nombres.\n\n1. Propose un jeu de tests : **un cas courant**, **deux cas limites** et **un cas interdit**. Pour chacun, donne l'entrée et le comportement attendu.\n2. La fonction passe tous tes tests. Peut-on affirmer qu'elle n'a aucun bug ? Justifie.\n3. Qu'est-ce qu'une **régression** ? Comment la détecte-t-on ?",
+      "bareme": [
+        { "critere": "Un cas courant, deux cas limites et un cas interdit pertinents, avec résultat attendu", "points": 9 },
+        { "critere": "Non : les tests montrent la présence de bugs, jamais leur absence", "points": 6 },
+        { "critere": "Régression = bug réintroduit ; détectée en rejouant les tests à chaque modification", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Par exemple :\n- **courant** : maximum([4, 9, 2, 7]) doit rendre **9** ;\n- **limite** : un seul élément, maximum([5]) doit rendre **5** ;\n- **limite** : que des nombres négatifs, maximum([-8, -3, -12]) doit rendre **-3** (ou : le maximum en première ou en dernière position) ;\n- **interdit** : la liste vide, maximum([]) ; on vérifie que la fonction **refuse proprement** (par exemple par une assertion), au lieu de rendre un résultat absurde.\n\nCe sont les cas limites qui trouvent les bugs.\n\n2. **Non.** Les tests montrent la **présence** de bugs, **jamais leur absence** : une fonction qui passe cent tests peut échouer au cent-unième. Pour garantir, il faut **prouver** (invariant, variant).\n\n3. Une **régression** est un **bug réintroduit dans du code qui marchait**. On la détecte en **rejouant** tous les tests à chaque modification : un test qui passait et échoue désormais la signale."
+    },
+    {
+      "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+      "difficulte": 2,
+      "titre": "La moyenne d'une liste vide",
+      "consigne": "Lis la fonction et le compte rendu de tests, puis réponds en suivant la démarche de débogage du cours.",
+      "enonce": "**Fonction de Maya.**\n\n```\ndef moyenne(notes):\n    total = 0\n    for n in notes:\n        total = total + n  # ajoute n à total\n    return total / len(notes)\n```\n\n**Tests.** moyenne([10, 20]) rend 15.0, comme attendu. moyenne([12, 8, 16]) rend 12.0, comme attendu. Mais l'application plante chez un professeur dont la classe n'a encore aucune note.\n\n1. Quelle entrée provoque le plantage ? Explique l'erreur. De quel type de cas de test s'agit-il ?\n2. Applique les **quatre étapes** du débogage à ce bug.\n3. Propose une correction qui fait respecter une précondition, et écris le test à ajouter.\n4. Le commentaire de la ligne 4 est-il utile ? Justifie et propose mieux.",
+      "bareme": [
+        { "critere": "Liste vide : len vaut 0, division par zéro ; c'est un cas limite", "points": 5 },
+        { "critere": "Reproduire, localiser, comprendre, ajouter un test, appliqués au bug", "points": 6 },
+        { "critere": "Assertion len(notes) > 0 et test sur la liste vide", "points": 5 },
+        { "critere": "Commentaire inutile : il dit le quoi ; il faut commenter le pourquoi", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'entrée est la **liste vide** []. total vaut 0 et len(notes) vaut **0** : la dernière ligne divise par zéro, d'où l'erreur. C'est un **cas limite**, justement celui que les tests courants n'avaient pas couvert.\n\n2. - **Reproduire** : appeler moyenne([]), la plus petite entrée qui déclenche l'erreur.\n- **Localiser** : l'erreur survient sur la ligne du return, au moment de la division.\n- **Comprendre** : pour une liste vide, len(notes) vaut 0 ; la moyenne d'aucune note n'a pas de sens.\n- **Ajouter un test** qui échouait avant la correction.\n\n3. \n\n```\ndef moyenne(notes):\n    assert len(notes) > 0\n    total = 0\n    for n in notes:\n        total = total + n\n    return total / len(notes)\n```\n\nL'assertion arrête le programme **au bon endroit** avec un message clair. Test à ajouter : vérifier que moyenne([]) est **refusé proprement** (l'assertion échoue), et le rejouer à chaque modification.\n\n4. **Non** : il dit le **quoi**, que le code dit déjà. Un commentaire doit expliquer le **pourquoi**. On le supprime, ou on commente plutôt l'assertion : « une classe sans note n'a pas de moyenne »."
+    },
+    {
+      "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+      "difficulte": 3,
+      "titre": "Le compte à rebours qui ne finit jamais",
+      "consigne": "Analyse la fonction en combinant tests et preuve, et justifie chaque réponse.",
+      "enonce": "**Fonction.**\n\n```\ndef compte_a_rebours(n):\n    while n != 0:\n        n = n - 2\n    return 'fini'\n```\n\nRayan l'a testée avec n = 4 et n = 10 : les deux appels rendent 'fini'. Il en conclut que sa fonction est correcte.\n\n1. Que montrent vraiment ces deux tests réussis ?\n2. Exécute mentalement compte_a_rebours(3). Que se passe-t-il ?\n3. Propose au moins trois autres cas limites que Rayan aurait dû tester.\n4. Pour garantir la terminaison, on cherche un **variant**. Rappelle ce que c'est, puis explique pourquoi n n'en est pas un pour cette boucle.\n5. Corrige la condition de la boucle et montre, à l'aide d'un variant, que la nouvelle version termine pour tout entier n.",
+      "bareme": [
+        { "critere": "Des tests réussis ne montrent pas l'absence de bug", "points": 3 },
+        { "critere": "Pour 3 : 1, −1, −3… n ne vaut jamais 0, la boucle ne s'arrête pas", "points": 5 },
+        { "critere": "Trois cas limites pertinents : 0, 1, un impair, un négatif", "points": 3 },
+        { "critere": "Variant défini ; n n'est pas positif à chaque tour pour un n impair", "points": 4 },
+        { "critere": "Condition n > 0 et preuve : n entier positif dans la boucle, qui décroît de 2", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Ils montrent seulement que la fonction marche **pour 4 et 10**. Les tests montrent la **présence** de bugs, jamais leur **absence**.\n\n2. n prend les valeurs 3, 1, -1, -3, -5… Il saute par-dessus 0 et ne vaut **jamais 0** : la condition n != 0 reste vraie, la boucle **ne s'arrête jamais**.\n\n3. Par exemple : **n = 0** (aucun tour), **n = 1** ou **n = 3** (impairs), **n = -2** (négatif). Ce sont les cas limites qui trouvent les bugs.\n\n4. Un **variant** est une quantité **entière**, **positive**, qui **décroît strictement** à chaque tour ; une telle suite ne peut pas être infinie, donc la boucle s'arrête. Ici n décroît bien de 2 à chaque tour, mais pour un n impair (ou négatif) il devient **négatif** sans que la boucle s'arrête : il n'est pas positif à chaque tour, ce n'est donc pas un variant.\n\n5. \n\n```\ndef compte_a_rebours(n):\n    while n > 0:\n        n = n - 2\n    return 'fini'\n```\n\nÀ chaque entrée dans la boucle, n est un entier **strictement positif** (c'est la condition) et il **décroît strictement** de 2 à chaque tour : n est un variant. Une suite d'entiers positifs strictement décroissante est finie : la boucle **termine** pour tout entier n (immédiatement si n ≤ 0). Avec n = 3 : 3, 1, puis -1, la condition est fausse, la fonction rend 'fini'."
+    },
+    {
+      "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+      "difficulte": 1,
+      "titre": "S'arrête-t-il, et en combien de temps ?",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Donne la classe de complexité de chacun de ces traitements, sur un tableau de taille n : (a) accéder à la case d'indice i ; (b) chercher un élément dans une liste non triée ; (c) rechercher par dichotomie dans un tableau trié ; (d) trier par sélection.\n2. Pourquoi la terminaison d'une boucle bornée (pour) est-elle assurée, alors que celle d'une boucle non bornée (tant que) doit être prouvée ?\n3. À quelle question répond un **variant** ? un **invariant** ?",
+      "bareme": [
+        { "critere": "Constant, linéaire, logarithmique, quadratique", "points": 8 },
+        { "critere": "Nombre de tours fixé d'avance pour la boucle bornée, à prouver sinon", "points": 6 },
+        { "critere": "Variant : est-ce que ça s'arrête ; invariant : est-ce que c'est juste", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. (a) **constant** ; (b) **linéaire** ; (c) **logarithmique** ; (d) **quadratique** (deux boucles imbriquées).\n\n2. Dans une **boucle bornée**, le nombre de tours est **fixé d'avance** : la terminaison est assurée par construction. Dans une **boucle non bornée**, le nombre de tours dépend d'une condition qui pourrait ne jamais devenir fausse : il faut **prouver** qu'elle s'arrête, en exhibant un **variant**.\n\n3. Le **variant** (quantité entière, positive, strictement décroissante) répond à : **est-ce que ça s'arrête ?** L'**invariant** (propriété vraie avant la boucle et conservée à chaque tour) répond à : **est-ce que c'est juste ?**"
+    },
+    {
+      "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+      "difficulte": 2,
+      "titre": "Compter les doublons",
+      "consigne": "Exécute mentalement la fonction, puis évalue son coût en justifiant.",
+      "enonce": "**Fonction.**\n\n```\ndef compte_doublons(liste):\n    n = len(liste)\n    c = 0\n    for i in range(n):\n        for j in range(n):\n            if i != j and liste[i] == liste[j]:\n                c = c + 1\n    return c\n```\n\n1. Que rend compte_doublons([3, 1, 3]) ? Détaille les couples (i, j) qui augmentent c.\n2. Combien de fois le test de la ligne 6 est-il exécuté pour une liste de taille n ? pour n = 1 000 ? Quelle est la classe de complexité ?\n3. On suppose que la machine exécute **un million** de tours de boucle par seconde. Estime la durée pour une liste d'un million d'éléments.\n4. Lina propose de ne parcourir que les j supérieurs à i, ce qui divise le nombre de tours par deux environ. La classe de complexité change-t-elle ? Justifie.",
+      "bareme": [
+        { "critere": "Rend 2, grâce aux couples (0, 2) et (2, 0)", "points": 5 },
+        { "critere": "n × n tours, 1 000 000 pour n = 1 000 : quadratique", "points": 5 },
+        { "critere": "10^12 tours ÷ 10^6 par seconde = 10^6 s, environ 12 jours", "points": 5 },
+        { "critere": "Toujours quadratique : on ne garde que l'ordre de grandeur, pas les constantes", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Les couples (i, j) avec i ≠ j et liste[i] == liste[j] : **(0, 2)** (3 == 3) et **(2, 0)**. Tous les autres couples comparent 3 et 1. La fonction rend **2**.\n\n2. Deux boucles imbriquées de n tours chacune : le test est exécuté **n × n = n²** fois. Pour n = 1 000 : **1 000 000** de fois. Complexité **quadratique**.\n\n3. Pour n = 1 000 000 : n² = 10^12 tours (mille milliards). À 10^6 tours par seconde : 10^12 ÷ 10^6 = **10^6 secondes**, soit environ 1 000 000 ÷ 86 400 ≈ **11,6 jours**, près de deux semaines. Un algorithme linéaire ferait le même travail en une seconde environ : améliorer l'algorithme bat toujours l'achat d'une machine plus rapide.\n\n4. **Non.** Le nombre de tours devient environ n² / 2 : il reste proportionnel à n². En complexité, on ne retient que l'**ordre de grandeur** et on **ne garde pas les constantes multiplicatives** : l'algorithme reste **quadratique**. Le gain est réel mais ne change pas la classe."
+    },
+    {
+      "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+      "difficulte": 3,
+      "titre": "Diviser par deux jusqu'à 1",
+      "consigne": "Analyse la fonction : exécution, terminaison, correction et coût. Justifie chaque réponse.",
+      "enonce": "**Fonction.** On rappelle que n // 2 est le quotient de la division entière de n par 2 (par exemple 5 // 2 vaut 2).\n\n```\ndef nb_divisions(n):\n    # précondition : n est un entier, n >= 1\n    k = 0\n    while n > 1:\n        n = n // 2\n        k = k + 1\n    return k\n```\n\n1. Exécute nb_divisions(20) en donnant les valeurs de n et de k à chaque tour. Que rend nb_divisions(64) ? nb_divisions(1) ?\n2. Montre que la boucle termine pour tout entier n ≥ 1, à l'aide d'un variant.\n3. Combien de tours fait la boucle pour n = 1 000 000 ? (On donne 2^19 = 524 288 et 2^20 = 1 048 576.) Quelle est la classe de complexité ? Compare avec un algorithme linéaire.\n4. Emma remplace la condition par while n > 0. Sa fonction termine-t-elle ? Que rend-elle pour 20 ? Qu'en conclus-tu sur le lien entre terminaison et correction ?",
+      "bareme": [
+        { "critere": "Trace de 20 juste (10, 5, 2, 1) et résultat 4 ; 6 pour 64 ; 0 pour 1", "points": 6 },
+        { "critere": "Variant n : entier positif qui décroît strictement car n // 2 < n pour n > 1", "points": 5 },
+        { "critere": "19 tours pour un million : logarithmique, contre un million d'opérations en linéaire", "points": 5 },
+        { "critere": "Termine mais rend 5 : un algorithme qui termine peut être faux", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. nb_divisions(20) :\n\n| Tour | n | k |\n| départ | 20 | 0 |\n| 1 | 10 | 1 |\n| 2 | 5 | 2 |\n| 3 | 2 | 3 |\n| 4 | 1 | 4 |\n\nn vaut 1, la condition n > 1 est fausse : la fonction rend **4**. Pour 64 : 32, 16, 8, 4, 2, 1, soit **6**. Pour 1 : la boucle ne s'exécute pas, elle rend **0**.\n\n2. **Variant : n.** Dans la boucle, n est un **entier positif** (il vaut au moins 2). À chaque tour, n devient n // 2, **strictement plus petit** que n puisque n > 1. Une suite d'entiers positifs strictement décroissante ne peut pas être infinie : la boucle **termine**.\n\n3. Chaque tour divise n par deux (environ). 2^19 = 524 288 ≤ 1 000 000 < 2^20 = 1 048 576 : il faut **19 tours** pour descendre jusqu'à 1. La complexité est **logarithmique**, comme la dichotomie. Un algorithme linéaire ferait de l'ordre d'**un million** d'opérations pour la même taille.\n\n4. Avec while n > 0 : 20 → 10 → 5 → 2 → 1 → 0, soit 5 tours. La fonction **termine** (n entier positif strictement décroissant, variant encore valable), mais elle rend **5** au lieu de 4. Conclusion : un algorithme peut **terminer et rendre un résultat faux**. Terminaison (variant) et correction (invariant) sont deux questions **indépendantes**."
+    },
+    {
+      "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+      "difficulte": 1,
+      "titre": "Indices et compréhension",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "On considère la liste **t = [8, 3, 12, 5]**.\n\n1. Que valent t[0] et t[3] ? Que provoque t[4] ? Quel est l'indice du dernier élément d'un tableau de n éléments ?\n2. L'accès à t[i] est-il plus long sur un tableau d'un million d'éléments que sur t ? Justifie avec la notion de coût.\n3. Que contient la liste construite par compréhension **[i * i for i in range(5)]** ? Donne un avantage de la compréhension sur un ajout successif dans une boucle.",
+      "bareme": [
+        { "critere": "t[0] = 8, t[3] = 5, t[4] provoque une erreur ; dernier indice n − 1", "points": 8 },
+        { "critere": "Non : accès par indice à coût constant", "points": 5 },
+        { "critere": "[0, 1, 4, 9, 16] ; compréhension plus lisible et plus rapide", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. t[0] vaut **8** (le premier élément a l'indice 0) et t[3] vaut **5**. t a 4 éléments, d'indices 0 à 3 : **t[4] sort des bornes et provoque une erreur**. Le dernier élément d'un tableau de n éléments a l'indice **n − 1**.\n\n2. **Non.** L'accès par indice est **immédiat** quelle que soit la taille : son coût est **constant**.\n\n3. i prend les valeurs 0, 1, 2, 3, 4 : la liste vaut **[0, 1, 4, 9, 16]**. La compréhension tient en une ligne, **plus lisible et plus rapide** qu'un ajout successif dans une boucle, plus verbeux."
+    },
+    {
+      "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+      "difficulte": 2,
+      "titre": "Les températures de la semaine",
+      "consigne": "Exécute mentalement le programme, puis corrige-le en justifiant.",
+      "enonce": "**Programme d'Ethan.** Il veut afficher chaque température plus élevée que celle de la veille.\n\n```\ntemp = [14, 17, 16, 21, 19]\nfor i in range(len(temp)):\n    if temp[i + 1] > temp[i]:\n        print(temp[i + 1])\n```\n\n1. Qu'affiche ce programme avant de s'arrêter sur une erreur ? À quel tour de boucle l'erreur survient-elle, et pourquoi ?\n2. Corrige le programme.\n3. Pourquoi Ethan doit-il ici parcourir le tableau **par indice** plutôt que **par élément** ?",
+      "bareme": [
+        { "critere": "Affiche 17 puis 21 ; erreur pour i = 4 car temp[5] n'existe pas", "points": 7 },
+        { "critere": "Correction : range(len(temp) - 1), bornes respectées", "points": 7 },
+        { "critere": "Par indice car on compare un élément à son voisin", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. - i = 0 : 17 > 14, affiche **17** ;\n- i = 1 : 16 > 17 faux ;\n- i = 2 : 21 > 16, affiche **21** ;\n- i = 3 : 19 > 21 faux ;\n- i = 4 : temp[5] est demandé, or le dernier indice est 4 (n − 1) : **erreur d'indice hors bornes**.\n\nLa boucle va « jusqu'à n » au lieu de « jusqu'à n − 1 », pour l'élément suivant : c'est le bug le plus fréquent du chapitre.\n\n2. \n\n```\ntemp = [14, 17, 16, 21, 19]\nfor i in range(len(temp) - 1):\n    if temp[i + 1] > temp[i]:\n        print(temp[i + 1])\n```\n\ni va de 0 à 3, donc i + 1 de 1 à 4 : on reste dans les bornes. Le programme affiche 17 puis 21, sans erreur.\n\n3. On doit **comparer chaque élément à son voisin** : il faut connaître sa position pour atteindre temp[i + 1]. Le parcours par élément ne donne pas la position."
+    },
+    {
+      "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+      "difficulte": 3,
+      "titre": "La grille de morpion piégée",
+      "consigne": "Analyse chaque programme en mobilisant plusieurs notions du chapitre, et justifie.",
+      "enonce": "**Programme 1.** Clara crée la grille d'un jeu de morpion.\n\n```\ngrille = [[0] * 3] * 3\ngrille[0][1] = 5\nprint(grille)\n```\n\n1. Qu'affiche ce programme ? Explique pourquoi.\n2. Réécris la création de la grille pour que chaque ligne soit indépendante. Qu'affiche alors le programme ?\n\n**Programme 2.** Avec la grille corrigée, Clara écrit :\n\n```\ndef somme(grille):\n    s = 0\n    for i in range(len(grille)):\n        for j in range(len(grille[i])):\n            s = s + grille[i][j]\n    return s\n```\n\n3. Après grille[0][1] = 5 et grille[2][0] = 4, que rend somme(grille) ? Quelle est la complexité de ce parcours pour une grille carrée de côté n ?\n\n**Programme 3.**\n\n```\nligne = grille[0][:]\nligne[0] = 7\n```\n\n4. Ce programme modifie-t-il grille ? Et si l'on avait écrit ligne = grille[0] ? Justifie.",
+      "bareme": [
+        { "critere": "[[0, 5, 0], [0, 5, 0], [0, 5, 0]] : trois références vers la même ligne", "points": 5 },
+        { "critere": "Création par compréhension, lignes indépendantes, seule la première change", "points": 5 },
+        { "critere": "somme rend 9 ; parcours quadratique", "points": 5 },
+        { "critere": "Le tranchage copie : grille intacte ; l'affectation ne copie pas : grille modifiée", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le programme affiche **[[0, 5, 0], [0, 5, 0], [0, 5, 0]]**. Multiplier une liste par un entier fabrique **trois références vers la même ligne** : il n'y a qu'une ligne, vue trois fois. Modifier une case en modifie donc une par ligne.\n\n2. On construit chaque ligne **séparément, par compréhension** :\n\n```\ngrille = [[0, 0, 0] for i in range(3)]\ngrille[0][1] = 5\nprint(grille)\n```\n\nLa liste [0, 0, 0] est recréée à chaque tour : les lignes sont indépendantes. Affichage : **[[0, 5, 0], [0, 0, 0], [0, 0, 0]]**.\n\n3. La grille vaut [[0, 5, 0], [0, 0, 0], [4, 0, 0]] : somme rend 5 + 4 = **9**. Deux boucles imbriquées sur une grille carrée de côté n : n × n cases, complexité **quadratique**.\n\n4. grille[0][:] est un **tranchage** : il produit une **nouvelle liste**, indépendante. ligne[0] = 7 ne modifie donc **pas** grille. Avec ligne = grille[0], l'**affectation ne copie rien** : ligne et grille[0] désignent le même objet, et grille[0][0] deviendrait 7."
+    },
+    {
+      "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+      "difficulte": 1,
+      "titre": "Chercher le maximum",
+      "consigne": "Écris la fonction demandée, puis réponds en justifiant.",
+      "enonce": "1. Écris en Python une fonction **maximum(t)** qui rend le plus grand élément d'une liste non vide t, en suivant la méthode du cours (un candidat que l'on remplace dès qu'on trouve mieux).\n2. Exécute-la sur t = [4, 9, 2, 11, 7] en donnant la valeur du candidat après chaque élément examiné.\n3. Quelle est sa complexité ? Énonce son **invariant**.",
+      "bareme": [
+        { "critere": "Fonction juste : candidat initialisé au premier élément, remplacé si plus grand", "points": 8 },
+        { "critere": "Trace du candidat : 4, 9, 9, 11, 11 ; résultat 11", "points": 6 },
+        { "critere": "Coût linéaire ; invariant : le candidat est le maximum des éléments déjà vus", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. \n\n```\ndef maximum(t):\n    m = t[0]\n    for x in t:\n        if x > m:\n            m = x\n    return m\n```\n\n2. Candidat de départ : 4. Puis : 4 (4 n'est pas plus grand), **9**, 9 (2), **11**, 11 (7). La fonction rend **11**.\n\n3. Un seul parcours : coût **linéaire**. **Invariant** : après i tours, le candidat est le **maximum des i premiers éléments**. À la fin du parcours, c'est donc le maximum de tout le tableau."
+    },
+    {
+      "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+      "difficulte": 2,
+      "titre": "Trouver 23 par dichotomie",
+      "consigne": "Suis l'algorithme pas à pas, puis réponds en justifiant.",
+      "enonce": "**Fonction.**\n\n```\ndef dichotomie(t, x):\n    g = 0\n    d = len(t) - 1\n    while g <= d:\n        m = (g + d) // 2\n        if t[m] == x:\n            return True\n        elif t[m] < x:\n            g = m + 1\n        else:\n            d = m - 1\n    return False\n```\n\n(m = (g + d) // 2 est le quotient entier de g + d par 2.)\n\n1. Exécute dichotomie(t, 23) avec **t = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]**, en donnant g, d, m et t[m] à chaque tour. Combien de tours ?\n2. Combien de comparaisons aurait faites une recherche séquentielle qui part du début ?\n3. Exécute dichotomie([8, 2, 23, 5], 8). Que rend-elle ? Qu'en conclus-tu ?\n4. Quel est le variant de cette boucle ?",
+      "bareme": [
+        { "critere": "Trace juste : m = 4, puis 7, puis 5 ; trouvé en 3 tours", "points": 6 },
+        { "critere": "6 comparaisons en recherche séquentielle", "points": 4 },
+        { "critere": "Rend False alors que 8 est présent : il faut un tableau trié, faux sans le signaler", "points": 6 },
+        { "critere": "Variant : taille de l'intervalle, divisée par deux à chaque tour", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. \n\n| Tour | g | d | m | t[m] | Décision |\n| 1 | 0 | 9 | 4 | 16 | 16 < 23 : g = 5 |\n| 2 | 5 | 9 | 7 | 56 | 56 > 23 : d = 6 |\n| 3 | 5 | 6 | 5 | 23 | trouvé : True |\n\nLa fonction rend **True** en **3 tours**.\n\n2. 23 est à l'indice 5, le sixième élément : **6 comparaisons**.\n\n3. g = 0, d = 3 : m = 1, t[1] = 2 < 8, donc g = 2. Puis g = 2, d = 3 : m = 2, t[2] = 23 > 8, donc d = 1. g > d : la boucle s'arrête et la fonction rend **False**, alors que 8 est dans le tableau (indice 0). La dichotomie exige un tableau **trié** : sinon elle rend un résultat **faux sans le signaler**.\n\n4. Le variant est la **taille de l'intervalle de recherche** (d − g + 1), un entier positif **divisé par deux** (au moins) à chaque tour : c'est ce qui prouve la terminaison."
+    },
+    {
+      "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+      "difficulte": 3,
+      "titre": "Sélection ou insertion",
+      "consigne": "Déroule les deux tris puis analyse leurs coûts, en justifiant chaque réponse.",
+      "enonce": "On veut trier le tableau **[7, 3, 9, 1]** par ordre croissant.\n\n1. Déroule le **tri par sélection** : donne l'état du tableau après chaque tour, en précisant l'élément placé à sa position définitive.\n2. Déroule le **tri par insertion** : donne l'état du tableau après l'insertion de chaque élément dans la partie déjà triée.\n3. Un professeur reçoit chaque semaine une liste de 30 élèves déjà presque dans l'ordre alphabétique, à deux noms près. Quel tri conseilles-tu ? Justifie.\n4. Quelle est la complexité de ces deux tris dans le pire cas ? Pourquoi, sur un million d'éléments, utilise-t-on plutôt le tri d'une bibliothèque ? Donne les ordres de grandeur du cours.\n5. Sophie veut le minimum et le maximum d'un tableau : elle écrit deux boucles, une pour chacun. Que lui conseilles-tu ?",
+      "bareme": [
+        { "critere": "Sélection : [1, 3, 9, 7], [1, 3, 9, 7], [1, 3, 7, 9]", "points": 5 },
+        { "critere": "Insertion : [3, 7, 9, 1], [3, 7, 9, 1], [1, 3, 7, 9]", "points": 5 },
+        { "critere": "Insertion : quasi linéaire sur un tableau presque trié", "points": 3 },
+        { "critere": "Quadratiques ; n log n : une seconde contre plusieurs jours pour n²", "points": 4 },
+        { "critere": "Un seul parcours avec deux candidats", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Tri par sélection** (chercher le plus petit du reste et le placer) :\n- tour 1 : le plus petit est 1, échangé avec 7 : **[1, 3, 9, 7]** (1 est placé) ;\n- tour 2 : le plus petit de [3, 9, 7] est 3, déjà en place : **[1, 3, 9, 7]** (3 est placé) ;\n- tour 3 : le plus petit de [9, 7] est 7, échangé avec 9 : **[1, 3, 7, 9]** (7 est placé, 9 aussi).\n\n2. **Tri par insertion** (insérer chaque élément dans la partie triée, comme des cartes en main) :\n- insérer 3 avant 7 : **[3, 7, 9, 1]** ;\n- insérer 9 : il est déjà à sa place : **[3, 7, 9, 1]** ;\n- insérer 1 tout au début : **[1, 3, 7, 9]**.\n\n3. Le **tri par insertion** : sur un tableau **presque trié**, il est **quasi linéaire**, car chaque élément est déjà près de sa place et ne se déplace presque pas. Le tri par sélection, lui, cherche toujours le minimum de tout le reste.\n\n4. Tous deux sont **quadratiques** dans le pire cas. Sur un million d'éléments, un tri en **n log n** (celui des bibliothèques) prend de l'ordre d'**une seconde**, un tri en **n²** **plusieurs jours**. C'est l'écart qui justifie de connaître la complexité avant d'écrire le code.\n\n5. Faire **un seul parcours** en mémorisant **deux candidats**, le plus petit et le plus grand, remplacés dès qu'on trouve mieux. Deux parcours sont un gaspillage évitable."
+    },
+    {
+      "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+      "difficulte": 1,
+      "titre": "Lire un fichier CSV",
+      "consigne": "Observe le fichier, puis réponds à chaque question.",
+      "enonce": "**Document.** Le fichier eleves.csv :\n\n```\nnom;classe;moyenne\nAlice;1reA;14,5\nBilal;1reB;11\nChloé;1reA;16\n```\n\n1. Quels sont les **descripteurs** de cette table ? Combien contient-elle d'**enregistrements** ?\n2. Quel est le séparateur de valeurs ? Pourquoi une virgule aurait-elle posé problème dans ce fichier ?\n3. Représente l'enregistrement de Chloé sous forme de **dictionnaire** Python, puis sous forme de **liste**. Quelle représentation le cours recommande-t-il, et pourquoi ?",
+      "bareme": [
+        { "critere": "Descripteurs nom, classe, moyenne ; 3 enregistrements", "points": 6 },
+        { "critere": "Point-virgule ; la virgule décimale aurait été prise pour un séparateur", "points": 6 },
+        { "critere": "Dictionnaire et liste justes ; dictionnaire préféré : accès par nom, robuste", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les **descripteurs** sont donnés par la première ligne : **nom**, **classe**, **moyenne**. La table contient **3 enregistrements** (Alice, Bilal, Chloé) : la première ligne n'en est pas un.\n\n2. Le séparateur est le **point-virgule**. Les moyennes sont écrites avec une **virgule décimale** (14,5) : avec la virgule comme séparateur, 14,5 serait lu comme deux colonnes, 14 et 5.\n\n3. - Dictionnaire : {'nom': 'Chloé', 'classe': '1reA', 'moyenne': 16}\n- Liste : ['Chloé', '1reA', 16]\n\nLe cours recommande la **liste de dictionnaires** : on accède à une colonne par son **nom** (e['moyenne']) et non par un numéro. Le code se lit tout seul et **résiste au changement d'ordre** des colonnes, alors qu'avec une liste de listes tout se casse si une colonne se déplace."
+    },
+    {
+      "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+      "difficulte": 2,
+      "titre": "Sélectionner et agréger par classe",
+      "consigne": "Exécute mentalement les programmes et écris le code demandé.",
+      "enonce": "**Table en mémoire.**\n\n```\neleves = [\n    {'nom': 'Alice', 'classe': '1reA', 'moyenne': 14.5},\n    {'nom': 'Bilal', 'classe': '1reB', 'moyenne': 11.0},\n    {'nom': 'Chloé', 'classe': '1reA', 'moyenne': 16.0},\n    {'nom': 'Dylan', 'classe': '1reB', 'moyenne': 9.5},\n]\n```\n\n1. Que contient la liste **[e['nom'] for e in eleves if e['classe'] == '1reA']** ? De quel traitement s'agit-il ?\n2. Écris une fonction **moyenne_classe(table, classe)** qui rend la moyenne des moyennes des élèves d'une classe donnée.\n3. Que rendent moyenne_classe(eleves, '1reA') et moyenne_classe(eleves, '1reB') ? De quel traitement s'agit-il ?",
+      "bareme": [
+        { "critere": "['Alice', 'Chloé'] : une sélection (recherche) de lignes", "points": 6 },
+        { "critere": "Fonction juste : sélection par classe, somme et effectif, division", "points": 8 },
+        { "critere": "15.25 et 10.25 : un agrégat par groupe", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On ne garde que les lignes dont la classe vaut '1reA' et on en prend le nom : **['Alice', 'Chloé']**. C'est une **sélection** (rechercher : ne garder que les lignes vérifiant une condition).\n\n2. \n\n```\ndef moyenne_classe(table, classe):\n    total = 0\n    nb = 0\n    for e in table:\n        if e['classe'] == classe:\n            total = total + e['moyenne']\n            nb = nb + 1\n    return total / nb\n```\n\n3. - 1reA : (14.5 + 16.0) / 2 = **15.25** ;\n- 1reB : (11.0 + 9.5) / 2 = **10.25**.\n\nC'est un **agrégat par groupe** : agréger par groupe revient à faire une sélection pour chaque valeur du descripteur de regroupement (ici la classe), puis à moyenner."
+    },
+    {
+      "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+      "difficulte": 3,
+      "titre": "Fusionner les résultats du cross",
+      "consigne": "Analyse les deux tables et justifie chacune de tes décisions.",
+      "enonce": "**Table 1 : inscrits.csv**\n\n| id | nom | classe |\n| 1 | Martin | 1reA |\n| 2 | Martin | 1reC |\n| 3 | Sow | 1reA |\n| 4 | Petit | 1reB |\n\n**Table 2 : temps.csv** (temps au 1 000 m, saisis par deux professeurs)\n\n| nom | temps |\n| Martin | 4 min 10 s |\n| Sow | 245 |\n| Petit | |\n| Martin | 232 |\n\n1. On fusionne les deux tables en prenant **nom** comme clé. Combien de lignes obtient-on pour « Martin » ? Explique le problème.\n2. Quelle clé faudrait-il utiliser, et que faut-il changer dans la table 2 ?\n3. Relève les deux autres problèmes de la table 2 et, pour chacun, propose une décision de nettoyage. Convertis 4 min 10 s dans l'unité de référence que tu choisis.\n4. On suppose les deux Martin correctement identifiés. Calcule la moyenne des temps (en secondes) si l'on **écarte** Petit, puis si l'on **remplace** son temps manquant par 0. Que montre cette comparaison ?",
+      "bareme": [
+        { "critere": "4 lignes Martin (2 × 2) : la clé nom n'est pas unique, doublons silencieux", "points": 5 },
+        { "critere": "Clé id, unique ; ajouter l'id de l'élève dans la table 2", "points": 4 },
+        { "critere": "Unités mélangées et valeur manquante, chacun avec une décision ; 4 min 10 s = 250 s", "points": 6 },
+        { "critere": "242,33 s contre 181,75 s : la décision change le résultat, il faut la documenter", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Chaque « Martin » de la table 1 est rapproché de chaque « Martin » de la table 2 : 2 × 2 = **4 lignes**. La clé **nom** n'**identifie pas de façon unique** un enregistrement : la fusion produit des **doublons silencieux**, et l'on ne sait plus quel temps appartient à quel Martin.\n\n2. Il faut une clé unique : l'**id** de l'élève. La table 2 doit porter la colonne **id** (et non le seul nom), pour que chaque temps désigne un élève et un seul.\n\n3. - **Unités mélangées** : « 4 min 10 s » face à des nombres qui sont des secondes. Décision : une **unité de référence**, la seconde. 4 min 10 s = 4 × 60 + 10 = **250 s**.\n- **Valeur manquante** (Petit) : l'écarter, la remplacer ou la signaler. Le plus honnête est de l'**écarter du calcul et de le signaler** (élève absent ou temps non saisi).\n\n4. Temps : 250, 245, 232 (et Petit).\n- En écartant Petit : (250 + 245 + 232) ÷ 3 = 727 ÷ 3 ≈ **242,33 s**.\n- En remplaçant par 0 : 727 ÷ 4 = **181,75 s**.\n\nLa décision de nettoyage **change fortement le résultat** (un 0 fait croire à un temps impossible). Sur des données réelles, le difficile est le **nettoyage**, et chaque décision doit être **documentée**, parce qu'elle influence le résultat."
+    },
+    {
+      "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+      "difficulte": 1,
+      "titre": "Rendre la monnaie en euros",
+      "consigne": "Applique l'algorithme glouton et réponds en justifiant.",
+      "enonce": "Un commerçant dispose de pièces et billets de **20, 10, 5, 2 et 1 euros**, en quantité illimitée.\n\n1. Décris la règle de choix de l'algorithme glouton de rendu de monnaie.\n2. Applique-le pour rendre **38 €** : donne chaque choix et ce qui reste à rendre. Combien de pièces et billets rend-il ?\n3. Rappelle les **quatre étapes** du schéma général d'un algorithme glouton, et ses deux qualités.",
+      "bareme": [
+        { "critere": "Plus grosse valeur qui n'excède pas le reste à rendre", "points": 5 },
+        { "critere": "20, 10, 5, 2, 1 avec les restes 18, 8, 3, 1, 0 : 5 pièces et billets", "points": 8 },
+        { "critere": "Trier selon un critère, prendre le meilleur admissible, l'ajouter définitivement, recommencer ; rapide et simple", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. À chaque étape, on prend **la plus grosse valeur qui n'excède pas ce qui reste à rendre**, sans jamais revenir en arrière.\n\n2. - 20 : reste 18 ;\n- 10 : reste 8 ;\n- 5 : reste 3 ;\n- 2 : reste 1 ;\n- 1 : reste 0.\n\nLe glouton rend **5** pièces et billets : 20 + 10 + 5 + 2 + 1 = 38. Avec le système européen, cette solution est optimale.\n\n3. - Trier ou évaluer les candidats selon un **critère** ;\n- prendre le meilleur candidat encore **admissible** ;\n- l'ajouter à la solution, **définitivement** ;\n- recommencer jusqu'à épuisement.\n\nSes deux qualités : il est **rapide** (souvent n log n, tri compris) et **simple à écrire**."
+    },
+    {
+      "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+      "difficulte": 2,
+      "titre": "La monnaie du pays imaginaire",
+      "consigne": "Exécute mentalement la fonction et compare avec la solution optimale, en justifiant.",
+      "enonce": "**Situation.** Dans un jeu, la monnaie n'existe qu'en pièces de **10, 6 et 1**. Zoé écrit :\n\n```\ndef rendu(somme, pieces):\n    # pieces : valeurs triées par ordre décroissant\n    resultat = []\n    for p in pieces:\n        while somme >= p:\n            resultat.append(p)\n            somme = somme - p\n    return resultat\n```\n\n1. Que rend rendu(12, [10, 6, 1]) ? Détaille l'exécution.\n2. Trouve une façon de rendre 12 avec moins de pièces. Le glouton est-il optimal ici ?\n3. Compare de même le glouton et l'optimal pour **13** et pour **20**.\n4. Zoé conclut : « mon algorithme est faux ». Réponds-lui en expliquant pourquoi il est optimal en euros et pas ici.",
+      "bareme": [
+        { "critere": "rendu(12, …) rend [10, 1, 1] avec les étapes justes", "points": 5 },
+        { "critere": "6 + 6 = 2 pièces : le glouton n'est pas optimal", "points": 5 },
+        { "critere": "13 : 4 pièces contre 3 (6 + 6 + 1) ; 20 : 10 + 10 optimal", "points": 5 },
+        { "critere": "L'algorithme donne une solution ; l'optimalité est une propriété du système de pièces", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. - p = 10 : 12 ≥ 10, on ajoute 10, somme = 2 ; 2 < 10, on passe.\n- p = 6 : 2 < 6, rien.\n- p = 1 : on ajoute 1 (somme = 1), puis 1 (somme = 0).\n\nLa fonction rend **[10, 1, 1]**, soit 3 pièces.\n\n2. **6 + 6** : **2 pièces**. Le glouton n'est **pas optimal** ici.\n\n3. - **13** : glouton 10 + 1 + 1 + 1 = **4 pièces** ; optimal 6 + 6 + 1 = **3 pièces**.\n- **20** : glouton 10 + 10 = **2 pièces**, et c'est optimal.\n\nLe glouton est donc parfois optimal, parfois non.\n\n4. L'algorithme n'est pas « faux » : il donne toujours **une** solution correcte (la somme est bien rendue), mais **rarement la garantie que c'est la meilleure**. Qu'il soit optimal pour les euros est une **propriété du système de pièces**, pas de l'algorithme. Avec 10, 6 et 1, cette propriété disparaît ; pour garantir l'optimum, il faudrait une méthode exacte, bien plus coûteuse."
+    },
+    {
+      "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+      "difficulte": 3,
+      "titre": "Le planning de la salle polyvalente",
+      "consigne": "Applique les deux critères, compare-les et justifie tes conclusions par le cours.",
+      "enonce": "**Situation.** La salle polyvalente du lycée ne peut accueillir qu'une activité à la fois. Voici les demandes du samedi (une activité peut commencer à l'heure exacte où la précédente finit) :\n\n| Activité | Début | Fin |\n| A | 8 h | 10 h |\n| B | 9 h | 11 h |\n| C | 10 h | 12 h |\n| D | 11 h | 13 h |\n| E | 12 h | 13 h |\n| F | 8 h | 9 h |\n| G | 7 h 30 | 13 h |\n\nOn veut accueillir **le plus grand nombre d'activités**.\n\n1. Applique le glouton qui choisit à chaque fois l'activité compatible qui **commence le plus tôt**. Quelles activités retient-il ?\n2. Applique le glouton qui choisit l'activité compatible qui **finit le plus tôt**. Donne l'ordre de tri, puis les activités retenues.\n3. Lequel des deux critères faut-il retenir ? Que dit le cours de ce critère ?\n4. Quelle est la complexité de ce glouton pour n activités, tri compris ? Pourquoi n'essaie-t-on pas toutes les combinaisons d'activités ?",
+      "bareme": [
+        { "critere": "Début le plus tôt : G seule, 1 activité", "points": 5 },
+        { "critere": "Fin la plus tôt : tri F, A, B, C, D ou E, G ; retient F, B, D (3 activités)", "points": 6 },
+        { "critere": "Critère de fin la plus tôt, prouvé optimal pour le choix d'activités", "points": 5 },
+        { "critere": "n log n avec le tri ; toutes les combinaisons : exponentiel, impraticable", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Par début croissant : G (7 h 30) est la première ; on la prend. Elle occupe la salle jusqu'à 13 h, donc **toutes les autres sont incompatibles**. Résultat : **G seule, 1 activité**.\n\n2. Tri par fin croissante : F (9 h), A (10 h), B (11 h), C (12 h), puis D, E et G (13 h).\n- F (8 h–9 h) : retenue.\n- A commence à 8 h, avant 9 h : refusée.\n- B commence à 9 h : **retenue** (9 h–11 h).\n- C commence à 10 h, avant 11 h : refusée.\n- D commence à 11 h : **retenue** (11 h–13 h).\n- E (12 h) et G (7 h 30) commencent avant 13 h : refusées.\n\nRésultat : **F, B, D, soit 3 activités** (si E est examinée avant D, on obtient F, B, E, également 3 activités).\n\n3. Il faut retenir le critère de l'activité qui **finit le plus tôt** : il libère la salle au plus vite pour les suivantes. Le cours indique que, pour le choix d'activités, ce glouton est **prouvé optimal**. Le critère du début le plus tôt montre qu'un glouton mal choisi peut donner une très mauvaise solution.\n\n4. Le tri coûte **n log n**, puis un seul parcours : complexité **n log n**. Essayer toutes les combinaisons serait **exponentiel** : impraticable au-delà de quelques dizaines d'activités. Ici la structure du problème garantit l'optimalité du glouton, qui est donc à la fois rapide et exact."
+    },
+    {
+      "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+      "difficulte": 1,
+      "titre": "Apprendre à partir d'exemples",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "1. Quelle différence y a-t-il entre l'apprentissage **supervisé** et l'apprentissage **non supervisé** ?\n2. Classe chaque tâche : (a) prédire si un courriel est indésirable à partir de milliers de courriels déjà marqués ; (b) regrouper les clients d'un site en groupes semblables, sans catégories prévues ; (c) prédire le prix d'un logement à partir de ventes passées. Pour les tâches supervisées, précise s'il s'agit de classification ou de régression.\n3. Décris les **trois étapes** de l'algorithme des k plus proches voisins.",
+      "bareme": [
+        { "critere": "Supervisé : exemples étiquetés ; non supervisé : sans étiquette, cherche une structure", "points": 6 },
+        { "critere": "(a) supervisé, classification ; (b) non supervisé, partitionnement ; (c) supervisé, régression", "points": 7 },
+        { "critere": "Distances à tous les points, k plus proches, classe majoritaire", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. L'apprentissage **supervisé** part d'exemples **étiquetés** et cherche à prédire l'étiquette de données nouvelles. Le **non supervisé** part de données **sans étiquette** et cherche une **structure**.\n\n2. (a) **Supervisé**, **classification** (indésirable ou non).\n(b) **Non supervisé** : c'est un **partitionnement**, qui regroupe les données semblables.\n(c) **Supervisé**, **régression** (on prédit un nombre, le prix).\n\n3. - Calculer la **distance** du point nouveau à **tous** les points d'apprentissage ;\n- retenir les **k plus proches** ;\n- lui attribuer la classe **majoritaire** parmi ces k voisins."
+    },
+    {
+      "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+      "difficulte": 2,
+      "titre": "Quelle espèce pour cette feuille ?",
+      "consigne": "Fais les calculs demandés et justifie chaque classement.",
+      "enonce": "**Situation.** Nathan a mesuré des feuilles de deux espèces d'arbres, notées **R** et **V**. Chaque feuille est décrite par deux nombres (x, y) : longueur et largeur en cm.\n\n| Feuille | x | y | Espèce |\n| F1 | 3 | 2 | R |\n| F2 | 4 | 4 | V |\n| F3 | 1 | 3 | R |\n| F4 | 5 | 4 | V |\n| F5 | 6 | 5 | V |\n\nIl trouve une nouvelle feuille **P (3, 3)**. On utilise la distance d = √((x₁ − x₂)² + (y₁ − y₂)²).\n\n1. Calcule la distance de P à chacune des cinq feuilles (arrondis au centième) et range les feuilles de la plus proche à la plus lointaine.\n2. Quelle espèce l'algorithme attribue-t-il à P avec **k = 1**, **k = 3**, **k = 5** ?\n3. Que montre ce résultat sur le choix de k ? Explique les deux risques du cours.\n4. Nathan a en réalité 10 000 feuilles mesurées et 1 000 feuilles nouvelles à classer. Combien de calculs de distance faut-il ? Pourquoi dit-on que cet algorithme n'a pas d'entraînement ?",
+      "bareme": [
+        { "critere": "Distances 1 ; 1,41 ; 2 ; 2,24 ; 3,61 et ordre F1, F2, F3, F4, F5", "points": 6 },
+        { "critere": "k = 1 : R ; k = 3 : R ; k = 5 : V, par vote majoritaire", "points": 5 },
+        { "critere": "k trop petit : suit le bruit ; k trop grand : frontières lissées", "points": 4 },
+        { "critere": "10 000 000 de distances ; tout le travail se fait à la prédiction", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. - F1 : √(0² + 1²) = **1** ;\n- F2 : √(1² + 1²) = √2 ≈ **1,41** ;\n- F3 : √(2² + 0²) = **2** ;\n- F4 : √(2² + 1²) = √5 ≈ **2,24** ;\n- F5 : √(3² + 2²) = √13 ≈ **3,61**.\n\nOrdre : **F1, F2, F3, F4, F5**.\n\n2. - **k = 1** : F1 (R) → **R**.\n- **k = 3** : F1 (R), F2 (V), F3 (R) : 2 R contre 1 V → **R**.\n- **k = 5** : 2 R et 3 V → **V**.\n\n3. La prédiction **dépend de k**. Si k est **trop petit**, la prédiction suit le **bruit** (une seule feuille atypique décide). Si k est **trop grand**, les frontières entre classes sont **lissées jusqu'à s'effacer** : avec k = 5, on vote avec toutes les feuilles, même les plus lointaines, et la classe la plus nombreuse l'emporte partout.\n\n4. Pour chaque feuille nouvelle, il faut calculer la distance à toutes les feuilles d'apprentissage : 1 000 × 10 000 = **10 000 000** de calculs. Il n'y a pas d'entraînement : **tout le travail se fait à la prédiction**, avec un coût **linéaire** en le nombre d'exemples pour **chaque** point à classer."
+    },
+    {
+      "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+      "difficulte": 3,
+      "titre": "Le modèle de prêt de la banque",
+      "consigne": "Analyse la situation en mobilisant plusieurs notions du chapitre et justifie chaque réponse.",
+      "enonce": "**Situation.**\n\n> Une banque veut prédire si un client remboursera un prêt. Elle utilise les k plus proches voisins sur ses dossiers des vingt dernières années, avec deux descripteurs : le **revenu annuel** (entre 15 000 et 80 000 €) et le **taux d'endettement** (entre 0 et 1). L'étiquette de chaque dossier est la décision prise à l'époque par un conseiller : prêt accordé ou refusé.\n\n1. On compare le client X (30 000 € ; 0,10) aux clients Y (31 000 € ; 0,10) et Z (30 000 € ; 0,90). Calcule les deux distances, sans normalisation. Lequel est le plus proche de X ? Est-ce raisonnable ? Quelle correction faut-il apporter ?\n2. Le modèle obtient **99 %** de bonnes réponses sur les dossiers qui ont servi à l'apprentissage, et **71 %** sur des dossiers mis de côté. Quel chiffre faut-il annoncer ? Comment s'appelle le phénomène ?\n3. Autrefois, certains conseillers refusaient plus souvent les prêts aux habitants de certains quartiers. Que risque de faire le modèle ? Pourquoi est-ce particulièrement trompeur ?\n4. Le modèle constate que les clients qui possèdent une voiture récente remboursent mieux. Le directeur veut conseiller aux clients d'acheter une voiture récente. Qu'en penses-tu ?",
+      "bareme": [
+        { "critere": "d(X, Y) = 1 000 et d(X, Z) = 0,8 : le revenu écrase l'endettement ; normaliser", "points": 6 },
+        { "critere": "Annoncer 71 %, mesuré sur des données jamais vues ; surapprentissage", "points": 5 },
+        { "critere": "Le modèle perpétue le biais avec une apparence d'objectivité", "points": 5 },
+        { "critere": "Une corrélation n'est pas une cause", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. - d(X, Y) = √(1 000² + 0²) = **1 000**.\n- d(X, Z) = √(0² + 0,8²) = **0,8**.\n\nZ est jugé **bien plus proche** de X que Y, alors que Z est très endetté (0,90) et que Y ressemble presque en tout à X. Ce n'est **pas raisonnable** : le revenu, qui se compte en milliers, **écrase** le taux d'endettement, compris entre 0 et 1, dans le calcul de distance. Il faut **normaliser les descripteurs**, c'est-à-dire les ramener à une même échelle, avant de calculer les distances.\n\n2. Il faut annoncer **71 %**, mesuré sur des données **jamais vues** pendant l'apprentissage. Le 99 % est flatteur et faux : évaluer sur les données d'apprentissage mesure la capacité du modèle à **retenir ses exemples**, pas à en tirer une règle. C'est le **surapprentissage**.\n\n3. Les étiquettes sont les **décisions passées** des conseillers : si elles étaient inégalitaires, le modèle apprend et **perpétue ce biais**. C'est trompeur car la décision prend alors **l'apparence de l'objectivité** d'un calcul.\n\n4. Le modèle **corrèle sans expliquer** : **une corrélation n'est pas une cause**. Posséder une voiture récente est peut-être lié à d'autres facteurs (revenus, stabilité) ; acheter une voiture à crédit pourrait même augmenter l'endettement. D'où l'exigence du cours : dire d'où viennent les données, ce qu'elles ne couvrent pas, et ce que le modèle ne permet pas de conclure."
+    }
+  ]
+}

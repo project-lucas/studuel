@@ -1,0 +1,642 @@
+{
+  "niveau": "1re",
+  "matiere": "ingenierie-dd",
+  "sujets": [
+    {
+      "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+      "difficulte": 1,
+      "titre": "Les trois piliers et la trottinette électrique",
+      "consigne": "Réponds à chaque question en phrases courtes, avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Nora présente en classe une trottinette électrique de location. Elle a relevé les éléments suivants :\n\n- un plateau et une potence en aluminium ;\n- une batterie lithium-ion ;\n- un moteur électrique dans la roue arrière ;\n- une manette de frein équipée d'un capteur qui coupe le moteur au freinage ;\n- un petit écran qui affiche la vitesse ;\n- deux pneus pleins.\n\n1. Donne la définition du développement durable, puis nomme ses trois piliers.\n2. Classe chacun des six éléments dans l'un des trois champs du triptyque MEI (matière, énergie, information). Justifie en une phrase deux de tes choix.",
+      "bareme": [
+        { "critere": "Définition du développement durable (besoins du présent sans compromettre les générations futures)", "points": 4 },
+        { "critere": "Trois piliers nommés : environnemental, économique, social", "points": 4 },
+        { "critere": "Six éléments correctement classés dans le triptyque MEI", "points": 9 },
+        { "critere": "Deux justifications claires qui s'appuient sur le rôle de l'élément", "points": 3 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le développement durable est un développement qui **répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs**. Il repose sur trois piliers : **environnemental** (ressources consommées, rejets), **économique** (viable pour l'entreprise, abordable pour l'usager) et **social** (utile, sûr, fabriqué dans de bonnes conditions).\n\n2. Classement attendu :\n- **Matière** : le plateau et la potence en aluminium, les pneus pleins (structure, matériaux) ;\n- **Énergie** : la batterie (stockage), le moteur (conversion) ;\n- **Information** : le capteur de la manette de frein (acquérir une information), l'écran (communiquer une information).\n\nExemples de justifications : la batterie **stocke** l'énergie électrique, donc elle relève du champ énergie ; le capteur de frein **prélève une information** (le frein est actionné) qui sert à commander le moteur, donc il relève du champ information."
+    },
+    {
+      "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+      "difficulte": 2,
+      "titre": "L'éclairage du gymnase",
+      "consigne": "Réponds en détaillant chaque calcul (formule, application numérique, unité).",
+      "enonce": "**Situation.** Le gymnase du lycée est éclairé par **20 tubes fluorescents de 36 W**, allumés **10 h par jour**, même quand la salle est vide. Le gestionnaire propose :\n\n- de remplacer les tubes par **20 panneaux LED de 18 W** qui éclairent autant ;\n- d'ajouter un **détecteur de présence** : la durée d'allumage tombe alors à **4 h par jour**.\n\n1. Calcule l'énergie consommée chaque jour par l'éclairage actuel, en Wh puis en kWh.\n2. Calcule l'énergie consommée chaque jour après les deux modifications. Par combien l'énergie consommée est-elle divisée ?\n3. Le gymnase est utilisé **200 jours par an**. Calcule l'énergie économisée en un an, en kWh.\n4. Explique quelle modification relève d'un meilleur composant et laquelle relève de la chaîne d'information, en utilisant la notion d'efficacité énergétique.",
+      "bareme": [
+        { "critere": "Énergie actuelle : 20 × 36 × 10 = 7 200 Wh = 7,2 kWh", "points": 5 },
+        { "critere": "Énergie après modification : 1 440 Wh = 1,44 kWh, énergie divisée par 5", "points": 6 },
+        { "critere": "Économie annuelle : 5,76 × 200 = 1 152 kWh", "points": 4 },
+        { "critere": "Deux leviers identifiés (composant à meilleur rendement, commande par l'information) et lien avec l'efficacité énergétique", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. E = nombre de tubes × puissance × durée = 20 × 36 × 10 = **7 200 Wh**, soit **7,2 kWh par jour**.\n\n2. E = 20 × 18 × 4 = **1 440 Wh**, soit **1,44 kWh par jour**. Rapport : 7 200 / 1 440 = **5** : l'énergie consommée est divisée par 5.\n\n3. Économie par jour : 7,2 − 1,44 = 5,76 kWh. Sur un an : 5,76 × 200 = **1 152 kWh**.\n\n4. L'efficacité énergétique est le rapport entre le **service rendu** (ici l'éclairage de la salle) et l'**énergie consommée**. Le service reste le même, l'énergie baisse : l'efficacité augmente.\n- Les **panneaux LED** sont un meilleur composant, à plus haut rendement : pour le même éclairage, la puissance passe de 36 W à 18 W (champs matière et énergie).\n- Le **détecteur de présence** ajoute une **chaîne d'information** qui n'allume que quand c'est utile : la durée passe de 10 h à 4 h. C'est souvent le levier le moins cher.\n\nCalcul complémentaire accepté : les LED seules divisent par 2, le détecteur seul divise par 2,5 ; ensemble 2 × 2,5 = 5."
+    },
+    {
+      "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+      "difficulte": 3,
+      "titre": "Chauffer une salle de classe durablement",
+      "consigne": "Analyse la situation et justifie chaque réponse avec les notions du cours (piliers du développement durable, triptyque MEI, efficacité énergétique, production d'énergie).",
+      "enonce": "**Situation.** Une salle de classe est chauffée par un radiateur électrique de **2 000 W** qui fonctionne **9 h par jour**, y compris pendant les heures où la salle est vide. Le lycée étudie deux propositions.\n\n> **Proposition A.** Garder le radiateur, mais ajouter un thermostat programmable et un détecteur de présence. Le radiateur ne fonctionnerait plus que **5 h par jour**. Coût : 150 €.\n>\n> **Proposition B.** Un nouveau radiateur très performant, vendu 4 000 €, fabriqué dans une usine où les ouvriers travaillent sans équipement de protection.\n\nLe lycée envisage aussi d'installer des **panneaux solaires sur le toit** du gymnase pour alimenter une partie de ses besoins.\n\n1. Calcule l'énergie consommée par jour par le radiateur actuel, puis avec la proposition A. Quelle économie par jour, en kWh et en pourcentage ?\n2. Dans la proposition A, à quel champ du triptyque MEI appartiennent le thermostat et le détecteur ? Pourquoi dit-on que ce champ est souvent le levier le moins cher ?\n3. Évalue la proposition B pilier par pilier. Peut-on dire que c'est un produit durable ? Justifie.\n4. Les panneaux solaires relèvent-ils d'une production centralisée ou locale ? Donne un avantage et une limite de ce type de production.",
+      "bareme": [
+        { "critere": "Énergies justes : 18 kWh puis 10 kWh, économie de 8 kWh soit environ 44 %", "points": 5 },
+        { "critere": "Thermostat et détecteur rattachés au champ information, avec l'idée de commande intelligente peu coûteuse", "points": 4 },
+        { "critere": "Proposition B analysée sur les trois piliers, conclusion : non durable car le pilier social (et économique) n'est pas tenu", "points": 6 },
+        { "critere": "Production locale identifiée, un avantage (proche des consommateurs, moins de transport) et une limite (intermittence)", "points": 3 },
+        { "critere": "Réponses justifiées et vocabulaire du cours employé", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Actuellement : E = 2 000 × 9 = **18 000 Wh = 18 kWh par jour**. Avec A : E = 2 000 × 5 = **10 000 Wh = 10 kWh par jour**. Économie : 18 − 10 = **8 kWh par jour**, soit 8 / 18 ≈ **44 %**.\n\n2. Le thermostat et le détecteur **acquièrent et traitent une information** (température, présence) pour commander le radiateur : ils relèvent du champ **information**. Ce levier est peu cher car on ne change pas le composant de puissance : on ajoute une commande qui n'allume que quand c'est utile et module la puissance au besoin. Pour 150 €, on réduit fortement la consommation.\n\n3. Analyse de B :\n- **Environnemental** : il est très performant, donc il consomme peu d'énergie à service égal (point positif) ;\n- **Économique** : 4 000 € est très cher pour l'usager par rapport aux 150 € de la proposition A, alors que A apporte déjà une forte économie (point faible) ;\n- **Social** : il est fabriqué dans de mauvaises conditions de travail (ouvriers sans protection) : ce pilier n'est pas tenu.\n\nConclusion : un produit durable doit tenir **les trois piliers à la fois**. Performant sur le plan environnemental, B ne l'est pas sur le plan social (et reste discutable sur le plan économique) : **ce n'est pas un produit durable**.\n\n4. Des panneaux sur un toit relèvent de la **production locale**. Avantage : elle est **proche des consommateurs**, donc on évite une partie du transport de l'énergie, qui a un coût et des pertes. Limite : elle est **intermittente** (pas de production la nuit, faible par temps couvert)."
+    },
+    {
+      "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+      "difficulte": 1,
+      "titre": "Le bon diagramme pour la bonne question",
+      "consigne": "Réponds à chaque question de façon précise. Une ligne de justification suffit pour chaque exigence.",
+      "enonce": "**Situation.** Pour décrire un store banne motorisé, une équipe doit répondre à plusieurs questions.\n\n1. Pour chaque question, nomme le diagramme SysML qui y répond (nom et abréviation) :\n   a. À quoi sert le store pour ses utilisateurs ?\n   b. De quels constituants est-il fait ?\n   c. Comment passe-t-il de « replié » à « déployé » ?\n   d. Quelles énergies et informations circulent entre ses constituants ?\n2. Parmi ces phrases, lesquelles sont des exigences correctes ? Justifie.\n   - 1.1 « Le store doit se déployer complètement en moins de 40 s. »\n   - 1.2 « Le store doit être joli. »\n   - 1.3 « Le store doit se replier si le vent dépasse 40 km/h. »\n3. Dans le cycle en V, que fait la branche descendante, et que fait la branche montante ?",
+      "bareme": [
+        { "critere": "Quatre diagrammes justes : uc, bdd, stm, ibd", "points": 8 },
+        { "critere": "Exigences 1.1 et 1.3 correctes, 1.2 refusée car invérifiable", "points": 7 },
+        { "critere": "Rôle des deux branches du cycle en V : définir puis vérifier", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. Diagramme de **cas d'utilisation (uc)** : les services rendus aux acteurs.\n   b. Diagramme de **définition de blocs (bdd)** : les constituants et leur hiérarchie.\n   c. Diagramme d'**états (stm)** : les états successifs et les transitions.\n   d. Diagramme de **blocs internes (ibd)** : les flux (matière, énergie, information) entre constituants.\n\n2. **1.1** est correcte : elle a un identifiant et un texte vérifiable, avec un niveau chiffré (40 s). **1.3** est correcte : on peut la vérifier (seuil de 40 km/h). **1.2** n'est pas une exigence : « joli » ne se mesure pas, on ne peut pas la vérifier.\n\n3. La branche **descendante définit** le système (analyse du besoin, spécifications, conception). La branche **montante le vérifie** (intégration, vérification, validation) : chaque étape montante répond à une étape descendante, et le produit final est validé par rapport au besoin initial."
+    },
+    {
+      "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+      "difficulte": 2,
+      "titre": "Le distributeur de croquettes connecté",
+      "consigne": "Lis la description du système, puis réponds en utilisant le vocabulaire de l'ingénierie système.",
+      "enonce": "**Situation.** Léo conçoit un distributeur automatique de croquettes pour chat.\n\n> Le distributeur contient un réservoir de croquettes. À heures programmées, une carte de commande met en marche un petit moteur qui fait tourner une vis sans fin : les croquettes tombent dans la gamelle. Un capteur de niveau signale quand le réservoir est presque vide, et le propriétaire reçoit alors un message sur son téléphone. Le distributeur est alimenté par un adaptateur branché sur une prise. Le propriétaire règle les horaires et la quantité avec une application. Le chat se sert dans la gamelle. De temps en temps, le propriétaire nettoie la vis et le réservoir.\n\n1. Délimite le système : cite trois éléments qui sont dans le système et trois éléments de son environnement.\n2. Cite les parties prenantes du système.\n3. Propose deux cas d'utilisation, puis écris deux exigences correctes (avec identifiant et texte vérifiable) pour ce distributeur.\n4. Décris la structure du distributeur comme on le ferait dans un bdd (le bloc principal et ses constituants).",
+      "bareme": [
+        { "critere": "Frontière correcte : constituants dans le système, utilisateurs et milieu dans l'environnement", "points": 5 },
+        { "critere": "Parties prenantes citées (propriétaire, chat, personne qui entretient, réglementation…)", "points": 3 },
+        { "critere": "Deux cas d'utilisation pertinents et deux exigences vérifiables avec identifiant et niveau chiffré", "points": 7 },
+        { "critere": "Décomposition en blocs cohérente avec la description", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Dans le système** : le réservoir, la vis sans fin, le moteur, la carte de commande, le capteur de niveau (la gamelle peut y être rattachée). **Dans l'environnement** : le chat, le propriétaire, son téléphone et l'application, la prise du réseau électrique, les croquettes, la pièce (poussière, humidité).\n\n2. **Parties prenantes** : le propriétaire (utilisateur et client), le chat (bénéficiaire du service), le propriétaire quand il fait l'entretien (mainteneur), la réglementation (sécurité électrique, contact alimentaire).\n\n3. Cas d'utilisation possibles : **distribuer une ration**, **programmer les horaires**, **alerter d'un réservoir presque vide**, **nettoyer le distributeur**.\nExemples d'exigences :\n| Id | Texte |\n| 1.1 | Le distributeur doit délivrer une ration de 20 g à ± 2 g près. |\n| 1.2 | Le distributeur doit envoyer une alerte quand il reste moins de 100 g de croquettes. |\n| 1.3 | Le réservoir doit contenir au moins 1 kg de croquettes. |\nToute exigence chiffrée et vérifiable est acceptée ; « le distributeur doit être pratique » serait refusée.\n\n4. **bdd** : Distributeur = réservoir + vis sans fin + moteur + carte de commande + capteur de niveau + adaptateur secteur (+ gamelle). On peut regrouper moteur et vis dans un sous-système « distribution »."
+    },
+    {
+      "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+      "difficulte": 3,
+      "titre": "La barrière de parking",
+      "consigne": "Exploite la description et réponds en construisant, en mots ou en tableaux, les éléments SysML demandés. Justifie chaque réponse.",
+      "enonce": "**Situation.** Une barrière levante équipe l'entrée du parking d'une résidence.\n\n> Le résident présente un badge devant un lecteur. La carte de commande vérifie le badge, puis commande le moteur, alimenté par le réseau 230 V. Un réducteur entraîne la lisse (le bras de la barrière) qui se lève. Un capteur de fin de course indique que la lisse est levée. La lisse reste levée tant qu'une boucle magnétique détecte un véhicule, puis redescend. Si un véhicule est détecté pendant la descente, la lisse remonte. Un technicien vient régler la barrière une fois par an.\n\nExtrait du cahier des charges :\n| Id | Texte |\n| 1.1 | La lisse doit se lever en moins de 3 s. |\n| 1.2 | La lisse doit remonter si un véhicule est détecté pendant la descente. |\n\n1. Cite les acteurs et deux cas d'utilisation.\n2. Décris les flux que montrerait le diagramme ibd : pour chaque flux, précise sa nature (énergie ou information), son départ et son arrivée.\n3. Décris le diagramme d'états : liste les états et les transitions, avec l'événement qui déclenche chacune.\n4. Classe ces trois diagrammes (uc, ibd, stm) selon ce qu'ils décrivent : besoin, structure ou comportement.\n5. En fin de projet, on chronomètre la levée de la lisse montée seule sur banc, puis on fait utiliser la barrière complète par des résidents. Relie chaque essai à la branche montante du cycle en V (vérification ou validation) et justifie.",
+      "bareme": [
+        { "critere": "Acteurs (résident, véhicule, technicien) et deux cas d'utilisation pertinents", "points": 3 },
+        { "critere": "Flux de l'ibd : au moins deux flux d'énergie et deux flux d'information, avec départ et arrivée corrects", "points": 5 },
+        { "critere": "Diagramme d'états complet, y compris la remontée si véhicule détecté pendant la descente", "points": 6 },
+        { "critere": "uc = besoin, ibd = structure, stm = comportement", "points": 3 },
+        { "critere": "Distinction justifiée : vérification d'un sous-ensemble par rapport à la spécification, validation du produit par rapport au besoin", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Acteurs** : le résident (avec son badge), le véhicule (détecté par la boucle), le technicien (mainteneur). **Cas d'utilisation** : entrer dans le parking (lever la barrière), refermer l'accès, régler la barrière.\n\n2. Flux de l'**ibd** :\n| Flux | Nature | Départ → arrivée |\n| Énergie électrique | énergie | réseau 230 V → carte de commande → moteur |\n| Énergie mécanique | énergie | moteur → réducteur → lisse |\n| Code du badge | information | lecteur de badge → carte |\n| Présence d'un véhicule | information | boucle magnétique → carte |\n| Lisse levée | information | capteur de fin de course → carte |\n\n3. Diagramme d'**états (stm)** :\n| État | Événement | État suivant |\n| Baissée | badge valide | Montée |\n| Montée | fin de course levée | Levée |\n| Levée | plus de véhicule détecté | Descente |\n| Descente | lisse en bas | Baissée |\n| Descente | véhicule détecté | Montée |\nLa dernière transition est la **sécurité** de l'exigence 1.2.\n\n4. **uc** décrit le **besoin** ; **ibd** la **structure** ; **stm** le **comportement**.\n\n5. Chronométrer la lisse sur banc, c'est **vérifier** un sous-ensemble par rapport à sa **spécification** (exigence 1.1 : moins de 3 s). Faire utiliser la barrière complète par des résidents, c'est **valider** le produit final par rapport au **besoin** initial (entrer facilement et en sécurité). Les deux se situent sur la branche montante, qui répond aux étapes de la branche descendante."
+    },
+    {
+      "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+      "difficulte": 1,
+      "titre": "Flux ou stock ?",
+      "consigne": "Réponds à chaque question en justifiant brièvement.",
+      "enonce": "**Situation.** Ibrahim étudie une station de lavage de vélos alimentée par une citerne d'eau de pluie et une batterie.\n\n1. Pour chaque grandeur, dis s'il s'agit d'un **flux** ou d'un **stock** :\n   a. les 2 000 L d'eau dans la citerne ;\n   b. l'eau qui sort du pistolet de lavage ;\n   c. l'énergie contenue dans la batterie ;\n   d. la puissance électrique fournie à la pompe ;\n   e. les données envoyées au téléphone de l'exploitant.\n2. Donne une unité adaptée pour chacun des flux de la question 1.\n3. Un jour de pluie, la citerne reçoit 30 L/min et le pistolet en consomme 20 L/min. Le stock d'eau augmente-t-il ou diminue-t-il ? De combien varie-t-il en 10 minutes ?",
+      "bareme": [
+        { "critere": "Cinq classements justes (a, c : stocks ; b, d, e : flux)", "points": 8 },
+        { "critere": "Unités justes : L/min ou m³/s, W, bit/s", "points": 6 },
+        { "critere": "Stock qui augmente, variation de +100 L en 10 min", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Stock** : une accumulation mesurée à un instant.\n   b. **Flux** : un déplacement de matière par unité de temps.\n   c. **Stock** : l'énergie accumulée dans la batterie.\n   d. **Flux** : une puissance est un flux d'énergie (1 W = 1 J par seconde).\n   e. **Flux** : un flux d'information.\n\n2. b. débit volumique en **L/min** (ou m³/s) ; d. puissance en **W** ; e. débit binaire en **bit/s**.\n\n3. Un stock varie selon la différence entre ce qui entre et ce qui sort : 30 − 20 = 10 L/min entrent en plus. Le stock **augmente** de 10 × 10 = **100 L** en 10 minutes."
+    },
+    {
+      "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+      "difficulte": 2,
+      "titre": "Le vélo cargo électrique",
+      "consigne": "Détaille chaque calcul et conclus par une phrase.",
+      "enonce": "**Situation.** Un vélo cargo de livraison est assisté par un moteur électrique. En montée :\n\n- la batterie fournit **600 W** au variateur ;\n- le variateur a un rendement de **0,90** ;\n- le moteur a un rendement de **0,75** et fournit sa puissance mécanique à la roue.\n\n1. Calcule la puissance transmise par le variateur au moteur, puis la puissance mécanique fournie par le moteur.\n2. Calcule les pertes de chaque étage, et vérifie que l'énergie entrante est égale à l'énergie utile plus les pertes.\n3. Calcule le rendement global de la chaîne.\n4. Décris le diagramme de Sankey correspondant (flèche principale, flèches de pertes, largeurs) et dis quel étage il faut améliorer en priorité.",
+      "bareme": [
+        { "critere": "Puissances : 540 W en sortie du variateur, 405 W en sortie du moteur", "points": 6 },
+        { "critere": "Pertes : 60 W et 135 W, bilan 600 = 405 + 60 + 135 vérifié", "points": 5 },
+        { "critere": "Rendement global : 405 / 600 = 0,675", "points": 4 },
+        { "critere": "Sankey décrit (largeurs proportionnelles) et moteur désigné comme étage à améliorer", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Variateur : 600 × 0,90 = **540 W** transmis au moteur. Moteur : 540 × 0,75 = **405 W** mécaniques à la roue.\n\n2. Pertes du variateur : 600 − 540 = **60 W**. Pertes du moteur : 540 − 405 = **135 W**. Bilan : 405 + 60 + 135 = 600 W : l'énergie entrante est bien égale à l'énergie utile plus les pertes.\n\n3. Rendement global : 405 / 600 = **0,675** (on retrouve 0,90 × 0,75 = 0,675).\n\n4. Diagramme de Sankey : une flèche de largeur 600 part de la batterie ; après le variateur elle se réduit à 540, et une flèche de pertes de largeur 60 part vers le bas ; après le moteur elle se réduit à 405, et une flèche de pertes de largeur 135 part vers le bas. Les largeurs sont **proportionnelles** aux puissances. La flèche de pertes du **moteur** est plus de deux fois plus large que celle du variateur : c'est **le moteur** qu'il faut améliorer en priorité."
+    },
+    {
+      "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+      "difficulte": 3,
+      "titre": "Le chauffe-eau solaire de la maison Martin",
+      "consigne": "Analyse les données, fais les calculs demandés en détaillant, et justifie tes conclusions.",
+      "enonce": "**Situation.** La maison Martin est équipée d'un chauffe-eau solaire. Par une belle journée, on relève :\n\n- le soleil apporte **2 000 W** sur les capteurs solaires ;\n- les capteurs transmettent **1 200 W** de chaleur à l'eau qui circule vers le ballon ;\n- le ballon perd **100 W** de chaleur à travers ses parois ;\n- l'eau chaude puisée par la famille emporte **500 W** de chaleur ;\n- l'eau froide qui remplace l'eau puisée arrive avec un débit de **6 L/min** ;\n- une sonde de température envoie la température du ballon à une carte de régulation, qui commande la pompe du circuit solaire.\n\n1. Calcule les pertes des capteurs et leur rendement.\n2. Fais le bilan de flux du ballon : le stock d'énergie du ballon augmente-t-il ou diminue-t-il ? À quel rythme ?\n3. Si cette situation dure 2 h, de combien varie l'énergie stockée dans le ballon ? Donne le résultat en joules.\n4. Exprime le débit d'eau froide en m³/s.\n5. Dans le diagramme ibd du chauffe-eau, cite un flux de chacun des trois champs (matière, énergie, information), avec les deux blocs qu'il relie.",
+      "bareme": [
+        { "critere": "Pertes des capteurs 800 W, rendement 0,6", "points": 4 },
+        { "critere": "Bilan du ballon : 1 200 − 100 − 500 = 600 W, stock qui augmente", "points": 5 },
+        { "critere": "Variation d'énergie : 600 × 7 200 = 4 320 000 J", "points": 4 },
+        { "critere": "Conversion du débit : 6 L/min = 0,1 L/s = 0,0001 m³/s", "points": 3 },
+        { "critere": "Trois flux MEI pertinents, chacun avec les deux blocs reliés", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Pertes des capteurs : 2 000 − 1 200 = **800 W**. Rendement : 1 200 / 2 000 = **0,6**.\n\n2. Le ballon reçoit 1 200 W et perd 100 + 500 = 600 W. Différence : 1 200 − 600 = **600 W** : les flux entrants dépassent les flux sortants, le **stock d'énergie augmente** au rythme de 600 W, c'est-à-dire 600 J par seconde.\n\n3. Durée : 2 h = 2 × 3 600 = 7 200 s. Variation : 600 × 7 200 = **4 320 000 J** (4,32 MJ) en plus dans le ballon.\n\n4. 6 L/min = 6 / 60 = 0,1 L/s ; 1 L = 0,001 m³, donc 0,1 L/s = **0,0001 m³/s** (1 × 10⁻⁴ m³/s).\n\n5. Exemples de flux dans l'ibd :\n- **Matière** : eau froide, du réseau d'eau vers le ballon (ou eau chaude, du ballon vers les robinets) ;\n- **Énergie** : chaleur (énergie thermique), des capteurs solaires vers le ballon (par l'eau du circuit solaire) ;\n- **Information** : température du ballon, de la sonde vers la carte de régulation (ou ordre de marche, de la carte vers la pompe).\n\nChaque flux est porté par un connecteur entre deux blocs, avec sa nature."
+    },
+    {
+      "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+      "difficulte": 1,
+      "titre": "La chaîne de puissance d'un portail",
+      "consigne": "Réponds à chaque question en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Un portail battant motorisé fonctionne ainsi : il est alimenté par le **réseau 230 V** ; un **relais** met le moteur en marche dans un sens ou dans l'autre ; un **moteur électrique** fait tourner un **réducteur** ; un **bras articulé** pousse le vantail.\n\n1. Rappelle, dans l'ordre, les fonctions de la chaîne de puissance.\n2. Associe chaque constituant du portail (réseau, relais, moteur, réducteur) à sa fonction.\n3. Quel est le rôle du réducteur ?\n4. Qui donne les ordres au relais ? La modulation est-elle tout ou rien ou progressive ? Justifie.",
+      "bareme": [
+        { "critere": "Fonctions dans l'ordre : alimenter/stocker, distribuer/moduler, convertir, adapter/transmettre, agir", "points": 5 },
+        { "critere": "Quatre constituants associés à la bonne fonction", "points": 8 },
+        { "critere": "Rôle du réducteur : diminuer la vitesse, augmenter le couple", "points": 3 },
+        { "critere": "Ordres venus de la chaîne d'information, modulation TOR justifiée", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Alimenter / stocker → Distribuer / moduler → Convertir → Adapter / transmettre → Agir**.\n\n2. Réseau 230 V : **alimenter** ; relais : **distribuer** ; moteur : **convertir** (énergie électrique en énergie mécanique) ; réducteur (et bras) : **adapter / transmettre**. Le vantail qui s'ouvre est l'**action**.\n\n3. Le réducteur **diminue la vitesse** de rotation du moteur et **augmente le couple**, pour pouvoir pousser le vantail.\n\n4. Les ordres viennent de la **chaîne d'information** (carte de commande qui reçoit la télécommande) : la chaîne de puissance obéit. La modulation est **tout ou rien** : le relais met le moteur en marche ou à l'arrêt, dans un sens ou dans l'autre, à vitesse fixe ; il ne règle pas la vitesse."
+    },
+    {
+      "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+      "difficulte": 2,
+      "titre": "Quatre convertisseurs dans l'atelier",
+      "consigne": "Pour chaque cas, nomme le type de modulation et justifie à partir de la nature de l'énergie en entrée et en sortie.",
+      "enonce": "**Situation.** Dans l'atelier du lycée, Chloé repère quatre appareils.\n\n- **A.** Le chargeur de la perceuse sans fil, branché sur une prise 230 V, recharge une batterie de 18 V.\n- **B.** La gâchette de la perceuse règle la vitesse du moteur, alimenté par la batterie.\n- **C.** Les panneaux solaires du toit produisent du courant continu, envoyé sur le réseau électrique alternatif.\n- **D.** Un variateur règle la luminosité des lampes de l'atelier, alimentées en 230 V alternatif.\n\n1. Pour chaque appareil, indique le type de conversion (AC/DC, DC/AC, DC/DC ou AC/AC) et le nom du convertisseur.\n2. Parmi ces modulations, lesquelles sont progressives ? Pourquoi une modulation progressive est-elle nécessaire pour la perceuse ?\n3. Dans la perceuse, sous quelle forme l'énergie est-elle stockée ? Cite une autre forme de stockage et un exemple.",
+      "bareme": [
+        { "critere": "Quatre conversions et convertisseurs justes (redresseur, hacheur, onduleur, gradateur)", "points": 10 },
+        { "critere": "Modulations progressives identifiées (B et D) et intérêt pour la perceuse", "points": 5 },
+        { "critere": "Stockage chimique dans la batterie, autre forme de stockage avec exemple", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **A** : alternatif → continu, **AC/DC** (redresseur), comme un chargeur de téléphone.\n**B** : continu → continu réglable, **DC/DC** (hacheur), comme le variateur d'une trottinette.\n**C** : continu → alternatif, **DC/AC** (onduleur).\n**D** : alternatif → alternatif réglable, **AC/AC** (gradateur).\n\n2. Les modulations **B** et **D** sont **progressives** : elles règlent finement la vitesse ou la luminosité. Pour la perceuse, on a besoin de vitesses différentes (démarrer doucement un perçage, visser sans abîmer la vis) : une simple marche/arrêt (TOR) ne le permettrait pas.\n\n3. La batterie stocke l'énergie sous forme **chimique**. Autres formes : **électrique** (condensateur, supercondensateur), **mécanique** (ressort, volant d'inertie, barrage), **thermique** (ballon d'eau chaude)."
+    },
+    {
+      "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+      "difficulte": 3,
+      "titre": "L'ascenseur qui récupère son énergie",
+      "consigne": "Analyse la chaîne de puissance décrite et justifie chaque réponse avec les notions du cours.",
+      "enonce": "**Situation.** Un immeuble est équipé d'un ascenseur moderne.\n\n> Le réseau alternatif 230 V alimente un variateur qui règle la vitesse du moteur électrique. Le moteur entraîne un réducteur, puis une poulie sur laquelle s'enroulent les câbles de la cabine. Au démarrage et à l'arrêt, la cabine accélère et ralentit en douceur. Quand la cabine lourdement chargée descend, le moteur est entraîné par la charge : il freine la cabine et renvoie de l'énergie électrique, stockée dans des supercondensateurs, puis réutilisée à la montée suivante.\n\n1. Écris la chaîne de puissance de l'ascenseur et place chaque fonction.\n2. Pourquoi utilise-t-on ici un variateur plutôt qu'un simple relais ?\n3. Que devient le moteur pendant la descente freinée ? Quelle propriété du convertisseur cela illustre-t-il ? Une résistance chauffante pourrait-elle faire de même ?\n4. Sous quelle forme les supercondensateurs stockent-ils l'énergie ? Cite une autre solution de stockage mécanique qui pourrait jouer ce rôle.\n5. Quel est le rôle du réducteur entre le moteur et la poulie ?\n6. Qui pilote le variateur ? Explique.",
+      "bareme": [
+        { "critere": "Chaîne complète et fonctions bien placées (alimenter, distribuer/moduler, convertir, adapter/transmettre, agir)", "points": 5 },
+        { "critere": "Variateur justifié par la modulation progressive (accélération et freinage en douceur)", "points": 3 },
+        { "critere": "Moteur en génératrice, conversion réversible, résistance non réversible", "points": 5 },
+        { "critere": "Stockage électrique, autre stockage mécanique cité (volant d'inertie)", "points": 3 },
+        { "critere": "Rôle du réducteur et pilotage par la chaîne d'information", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Réseau 230 V (**alimenter**) → variateur (**distribuer / moduler**) → moteur électrique (**convertir** l'énergie électrique en mécanique) → réducteur et poulie (**adapter / transmettre**) → cabine déplacée (**agir**). Les supercondensateurs assurent une fonction **stocker**.\n\n2. Un relais ne fait que du **tout ou rien** : le moteur démarrerait et s'arrêterait brutalement, ce qui secouerait les passagers. Le variateur réalise une modulation **progressive** : il règle la vitesse et permet d'accélérer et de ralentir en douceur.\n\n3. Pendant la descente freinée, le moteur fonctionne en **génératrice** : il convertit l'énergie mécanique de la cabine en énergie électrique (freinage récupératif). Cela montre que la conversion électrique ↔ mécanique d'un moteur est **réversible**. Une résistance chauffante ne le peut pas : sa conversion électrique → thermique n'est pas réversible.\n\n4. Les supercondensateurs stockent l'énergie sous forme **électrique**. Solution mécanique possible : un **volant d'inertie** (ou le contrepoids, qui stocke de l'énergie potentielle comme un barrage).\n\n5. Le réducteur **diminue la vitesse** du moteur et **augmente le couple** pour entraîner la poulie qui soulève la cabine.\n\n6. Le variateur est piloté par la **chaîne d'information** (la carte de commande de l'ascenseur, qui reçoit les appels des étages) : la chaîne de puissance obéit, ce sont ses ordres qui pilotent la fonction « distribuer »."
+    },
+    {
+      "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+      "difficulte": 1,
+      "titre": "Reconnaître les liaisons du quotidien",
+      "consigne": "Pour chaque objet, nomme la liaison et donne les mouvements qu'elle autorise.",
+      "enonce": "**Situation.** Lina repère des liaisons autour d'elle.\n\n1. Combien de degrés de liberté possède un solide libre dans l'espace ? Détaille-les.\n2. Nomme la liaison et les mouvements possibles pour :\n   a. un tiroir dans son meuble ;\n   b. une porte sur ses gonds (on considère une seule liaison équivalente) ;\n   c. le bouchon vissé d'une bouteille pendant qu'on le visse ;\n   d. un livre posé à plat sur une table ;\n   e. la boule d'un joystick dans son boîtier.\n3. Qu'appelle-t-on une liaison parfaite ?",
+      "bareme": [
+        { "critere": "Six degrés de liberté : trois translations et trois rotations", "points": 4 },
+        { "critere": "Cinq liaisons justes avec leurs mouvements (glissière, pivot, hélicoïdale, appui plan, rotule)", "points": 12 },
+        { "critere": "Liaison parfaite : jeux et frottements négligés", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un solide libre a **6 degrés de liberté** : **3 translations** (selon x, y, z) et **3 rotations** (autour de x, y, z).\n\n2. a. **Glissière** : 1 translation.\n   b. **Pivot** : 1 rotation (autour de l'axe des gonds).\n   c. **Hélicoïdale** : 1 rotation et 1 translation liées (le bouchon avance quand il tourne).\n   d. **Appui plan** : 2 translations et 1 rotation (on fait glisser et tourner le livre à plat).\n   e. **Rotule** (sphérique) : 3 rotations.\n\n3. Une liaison est **parfaite** quand on néglige les **jeux** et les **frottements** : c'est l'hypothèse du schéma cinématique."
+    },
+    {
+      "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+      "difficulte": 2,
+      "titre": "Le vérin électrique à vis",
+      "consigne": "Suis la démarche en quatre étapes du cours et justifie chaque liaison par le mouvement relatif possible.",
+      "enonce": "**Situation.** Un vérin électrique ouvre une fenêtre de toit. Il est composé de :\n\n- un **corps** tubulaire, sur lequel est vissé le **moteur** ;\n- une **vis** entraînée par le moteur : elle tourne dans le corps, sans avancer ;\n- une **tige** creuse, sur laquelle est fixé un **écrou** : la tige coulisse dans le corps sans pouvoir tourner, grâce à une rainure ;\n- la vis traverse l'écrou.\n\n(Le rotor du moteur est considéré comme faisant partie de la vis.)\n\n1. Détermine les classes d'équivalence cinématique.\n2. Identifie la liaison entre chaque couple de classes, en justifiant.\n3. Décris le graphe des liaisons.\n4. Explique comment la rotation de la vis se transforme en mouvement de la tige.",
+      "bareme": [
+        { "critere": "Trois classes justes : corps + stator du moteur ; vis ; tige + écrou", "points": 5 },
+        { "critere": "Trois liaisons justes et justifiées : pivot, glissière, hélicoïdale", "points": 9 },
+        { "critere": "Graphe des liaisons : trois cercles reliés en boucle, liaisons nommées", "points": 3 },
+        { "critere": "Transformation rotation → translation expliquée", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Classes d'équivalence (pièces sans mouvement relatif entre elles) :\n- **Classe 1** : corps + moteur (vissé sur le corps) ;\n- **Classe 2** : vis (avec le rotor) ;\n- **Classe 3** : tige + écrou (fixé sur la tige).\n\n2. Liaisons :\n| Entre | Liaison | Pourquoi |\n| 1 et 2 | **Pivot** | La vis tourne dans le corps sans avancer : 1 rotation |\n| 1 et 3 | **Glissière** | La tige coulisse dans le corps sans tourner : 1 translation |\n| 2 et 3 | **Hélicoïdale** | La rotation de la vis fait avancer l'écrou : rotation et translation liées |\n\n3. Graphe : trois cercles (1, 2, 3) et trois traits : 1–2 pivot, 1–3 glissière, 2–3 hélicoïdale. Le graphe forme une **boucle**.\n\n4. Le moteur fait tourner la vis (pivot par rapport au corps). L'écrou ne peut pas tourner, car la tige est guidée en glissière dans le corps. La liaison hélicoïdale transforme donc la **rotation** de la vis en **translation** de la tige, qui sort ou rentre selon le sens de rotation. C'est le même principe que l'étau."
+    },
+    {
+      "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+      "difficulte": 3,
+      "titre": "La pompe à vélo et le portillon",
+      "consigne": "Justifie chaque liaison par les surfaces en contact et les mouvements relatifs. Rédige des réponses complètes.",
+      "enonce": "**Situation 1 — La pompe à vélo.** Le corps de la pompe est un cylindre creux. La tige porte à une extrémité un piston cylindrique qui coulisse à l'intérieur du corps, et à l'autre extrémité la poignée. En pompant, on constate que la poignée peut aussi tourner sur elle-même, indépendamment de son mouvement d'aller-retour.\n\n**Situation 2 — Le portillon.** Un portillon de jardin est accroché à un poteau par **deux gonds** placés l'un au-dessus de l'autre, sur le même axe vertical. Le portillon ne peut que tourner autour de cet axe.\n\n1. Pompe : détermine les classes d'équivalence, puis identifie la liaison entre elles. Combien de mouvements autorise-t-elle, et combien en supprime-t-elle parmi les 6 degrés de liberté ?\n2. Pourquoi ne s'agit-il pas d'une glissière ? Qu'est-ce qui distingue cette liaison d'une liaison hélicoïdale ?\n3. Portillon : combien y a-t-il de classes d'équivalence ? Décris le graphe des liaisons si l'on dessine chaque gond, puis le schéma minimal. Quelle liaison équivalente garde-t-on ?\n4. Explique pourquoi, dans ces deux études, on suppose les liaisons parfaites, et ce que cette hypothèse néglige.\n5. À quoi servira ensuite le schéma cinématique de ces mécanismes ?",
+      "bareme": [
+        { "critere": "Pompe : deux classes, liaison pivot glissant, 2 mouvements autorisés, 4 supprimés", "points": 6 },
+        { "critere": "Différence avec la glissière (rotation possible) et avec l'hélicoïdale (mouvements indépendants et non liés)", "points": 4 },
+        { "critere": "Portillon : deux classes, deux liaisons dans le graphe, une seule pivot dans le schéma minimal", "points": 5 },
+        { "critere": "Hypothèse de liaison parfaite expliquée (jeux et frottements négligés)", "points": 3 },
+        { "critere": "Usage du schéma : comprendre, calculer, simuler", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Deux classes : **classe 1** = corps de la pompe ; **classe 2** = tige + piston + poignée. Le piston cylindrique dans le cylindre peut **coulisser** et **tourner indépendamment** : c'est une liaison **pivot glissant**. Elle autorise **2 mouvements** (1 rotation et 1 translation indépendantes), donc elle en supprime 6 − 2 = **4**.\n\n2. Ce n'est pas une **glissière**, car une glissière n'autorise qu'une translation : ici la rotation est aussi possible. Dans une **hélicoïdale**, la rotation et la translation sont **liées** (tourner fait avancer, comme une vis) ; dans la pivot glissant, elles sont **indépendantes** : on peut pousser sans tourner, ou tourner sans pousser.\n\n3. Deux classes : **poteau** (avec les gonds fixés) et **portillon**. Si l'on dessine chaque gond, le graphe comporte deux traits entre les deux mêmes cercles (deux liaisons entre poteau et portillon). Le **schéma minimal** ne garde qu'**une liaison équivalente** entre deux classes : ici une **liaison pivot** d'axe vertical, puisque le portillon ne peut que tourner autour de cet axe.\n\n4. On suppose les liaisons **parfaites** : on **néglige les jeux et les frottements** (le petit jeu du piston dans le corps, le frottement dans les gonds). C'est l'hypothèse du schéma cinématique : elle permet de raisonner uniquement sur les mouvements possibles.\n\n5. Le schéma cinématique sert à **comprendre** le fonctionnement et la transformation de mouvement, puis à **calculer** vitesses et efforts, et à **simuler** le mécanisme."
+    },
+    {
+      "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+      "difficulte": 1,
+      "titre": "La chaîne d'information d'une alarme",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Une alarme de maison comprend : un **détecteur d'ouverture** sur la porte, un **clavier** pour saisir le code, une **centrale** à microcontrôleur, une **sirène** et un **message** envoyé sur le téléphone du propriétaire.\n\n1. Rappelle les trois fonctions de la chaîne d'information.\n2. Associe chaque élément de l'alarme à sa fonction.\n3. Le détecteur d'ouverture est-il un capteur analogique ou un détecteur ? Quelle information fournit-il ?\n4. Définis la sensibilité et l'étendue de mesure d'un capteur.",
+      "bareme": [
+        { "critere": "Trois fonctions : acquérir, traiter, communiquer", "points": 4 },
+        { "critere": "Éléments associés à la bonne fonction", "points": 8 },
+        { "critere": "Détecteur TOR, information binaire (ouvert / fermé)", "points": 4 },
+        { "critere": "Définitions justes de la sensibilité et de l'étendue de mesure", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Acquérir → Traiter → Communiquer**.\n\n2. Détecteur d'ouverture et clavier : **acquérir** (un état, une consigne) ; centrale à microcontrôleur : **traiter** (comparer le code, décider) ; sirène et message sur le téléphone : **communiquer** (transmettre un message ou un ordre).\n\n3. C'est un **détecteur** (capteur TOR) : il ne donne qu'une information **binaire**, porte ouverte ou porte fermée.\n\n4. **Sensibilité** : variation du signal pour une variation de la grandeur mesurée (par exemple 10 mV/°C). **Étendue de mesure** : la plage des valeurs mesurables (par exemple de −40 à 125 °C)."
+    },
+    {
+      "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+      "difficulte": 2,
+      "titre": "8 bits ou 10 bits pour le thermomètre ?",
+      "consigne": "Détaille chaque calcul et arrondis au dixième de mV ou au centième de °C quand c'est utile.",
+      "enonce": "**Situation.** Yanis fabrique un thermomètre. Son capteur délivre **10 mV/°C** (0 V à 0 °C). Il hésite entre deux convertisseurs analogique-numérique, tous deux de pleine échelle **5 V** : un CAN **8 bits** et un CAN **10 bits**. Il veut distinguer des écarts de **0,5 °C**.\n\n1. Pour chaque CAN, calcule le nombre de valeurs possibles et le quantum.\n2. Pour chaque CAN, calcule la résolution en température.\n3. À 30 °C, quelle tension délivre le capteur ? Quel nombre renvoie le CAN 8 bits ?\n4. Quel CAN Yanis doit-il choisir ? Justifie. Cite une autre solution pour améliorer la finesse de la mesure.",
+      "bareme": [
+        { "critere": "8 bits : 256 valeurs, q ≈ 19,5 mV ; 10 bits : 1 024 valeurs, q ≈ 4,9 mV", "points": 6 },
+        { "critere": "Résolutions : environ 1,95 °C et 0,49 °C", "points": 5 },
+        { "critere": "300 mV à 30 °C, nombre 15 avec le CAN 8 bits", "points": 4 },
+        { "critere": "Choix du CAN 10 bits justifié, autre solution (amplifier le signal ou plus de bits)", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **8 bits** : 2⁸ = **256** valeurs ; q = 5 / 256 ≈ 0,0195 V = **19,5 mV**.\n**10 bits** : 2¹⁰ = **1 024** valeurs ; q = 5 / 1 024 ≈ 0,0049 V = **4,9 mV**.\n\n2. Résolution en température = quantum / sensibilité.\n8 bits : 19,5 / 10 ≈ **1,95 °C**. 10 bits : 4,9 / 10 ≈ **0,49 °C**.\n\n3. À 30 °C : 30 × 10 = **300 mV**. Avec le CAN 8 bits : 300 / 19,5 ≈ 15,4, soit le nombre **15**.\n\n4. Il faut distinguer 0,5 °C : le CAN 8 bits ne distingue que des écarts d'environ 2 °C, c'est insuffisant. Le CAN **10 bits** (≈ 0,49 °C) convient, de justesse. Chaque bit ajouté divise le quantum par deux. Autre solution : **amplifier** le signal du capteur (conditionnement) pour utiliser toute la pleine échelle, ou prendre un CAN de plus de bits."
+    },
+    {
+      "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+      "difficulte": 3,
+      "titre": "La serre connectée",
+      "consigne": "Analyse la chaîne d'information, fais les calculs demandés en les détaillant et justifie tes choix.",
+      "enonce": "**Situation.** Une serre de lycée agricole est pilotée par un microcontrôleur.\n\n- Un capteur de température délivre **10 mV/°C** (0 V à 0 °C), étendue de mesure **0 à 100 °C**.\n- Le signal est relié à un CAN **12 bits** de pleine échelle **3,3 V**.\n- Le signal du capteur est perturbé par des parasites rapides venant du moteur du ventilateur.\n- Si la température dépasse la consigne de 28 °C, le microcontrôleur envoie l'ordre de mettre en marche le ventilateur (par un relais) et affiche une alerte sur un écran.\n\n1. Décris la chaîne d'information de la serre en plaçant chaque élément dans sa fonction.\n2. Calcule le nombre de valeurs du CAN, son quantum, et la résolution en température.\n3. À 22 °C, quelle tension délivre le capteur, et quel nombre renvoie le CAN ?\n4. À 100 °C, quelle tension délivre le capteur ? Quelle part de la pleine échelle est utilisée ? Propose un conditionnement pour mieux l'utiliser, en donnant la nouvelle sensibilité, puis calcule la nouvelle résolution.\n5. Que faut-il ajouter pour éliminer les parasites ? Explique son principe.",
+      "bareme": [
+        { "critere": "Chaîne décrite : acquérir (capteur, CAN), traiter (microcontrôleur, comparaison à la consigne), communiquer (ordre au relais, écran)", "points": 4 },
+        { "critere": "4 096 valeurs, q ≈ 0,81 mV, résolution ≈ 0,08 °C", "points": 5 },
+        { "critere": "220 mV à 22 °C, nombre ≈ 273", "points": 3 },
+        { "critere": "1 V à 100 °C, environ 30 % de la pleine échelle, amplification (×3 : 30 mV/°C) et résolution ≈ 0,03 °C", "points": 5 },
+        { "critere": "Filtre passe-bas : il laisse passer les variations lentes et atténue le bruit rapide", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Acquérir** : capteur de température (et consigne de 28 °C), puis conditionnement et **CAN** qui transforme la tension en nombre. **Traiter** : le **microcontrôleur** compare la température mesurée à la consigne et décide. **Communiquer** : ordre de marche vers le **relais** du ventilateur (chaîne de puissance) et **alerte** sur l'écran.\n\n2. Nombre de valeurs : 2¹² = **4 096**. Quantum : q = 3,3 / 4 096 ≈ 0,000 806 V ≈ **0,81 mV**. Résolution : 0,81 / 10 ≈ **0,08 °C**.\n\n3. À 22 °C : 22 × 10 = **220 mV**. Nombre : 220 / 0,806 ≈ **273**.\n\n4. À 100 °C : 100 × 10 = 1 000 mV = **1 V**. Part utilisée : 1 / 3,3 ≈ **30 %** de la pleine échelle : les deux tiers des valeurs du CAN ne servent jamais. On **amplifie** le signal, par exemple par **3** : la sensibilité devient **30 mV/°C**, et 100 °C donne 3 V, toujours inférieur à 3,3 V. Nouvelle résolution : 0,806 / 30 ≈ **0,03 °C**. (Une amplification par 3,3 est aussi acceptée : 33 mV/°C, résolution ≈ 0,024 °C.)\n\n5. On ajoute un **filtre passe-bas** au conditionnement : il laisse passer les **variations lentes** (la vraie évolution de la température) et **atténue les variations rapides** (le bruit parasite du moteur)."
+    },
+    {
+      "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+      "difficulte": 1,
+      "titre": "Conversions de base",
+      "consigne": "Détaille chaque conversion (puissances de 2, divisions successives ou groupes de 4 bits).",
+      "enonce": "**Situation.** Sur la carte électronique d'une station météo, Emma lit plusieurs valeurs.\n\n1. Convertis en décimal le nombre binaire **1101 0110**.\n2. Convertis en binaire le nombre décimal **25**, en détaillant les divisions successives par 2.\n3. Écris **1101 0110** en hexadécimal, puis vérifie en reconvertissant ce nombre hexadécimal en décimal.\n4. Combien de valeurs un octet peut-il prendre ? Quelle est la plus grande ?",
+      "bareme": [
+        { "critere": "1101 0110 = 128 + 64 + 16 + 4 + 2 = 214", "points": 5 },
+        { "critere": "25 = 11001 avec les divisions successives détaillées", "points": 5 },
+        { "critere": "Hexadécimal D6, vérification 13 × 16 + 6 = 214", "points": 6 },
+        { "critere": "256 valeurs, de 0 à 255", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 1101 0110 : bits à 1 de poids 128, 64, 16, 4 et 2. 128 + 64 + 16 + 4 + 2 = **214**.\n\n2. 25 = 2 × 12 + **1** ; 12 = 2 × 6 + **0** ; 6 = 2 × 3 + **0** ; 3 = 2 × 1 + **1** ; 1 = 2 × 0 + **1**. On lit les restes de bas en haut : **11001**. Vérification : 16 + 8 + 1 = 25.\n\n3. On groupe par 4 bits : 1101 → 13 → **D** ; 0110 → 6. Donc **D6**. Vérification : 13 × 16 + 6 = 208 + 6 = **214**.\n\n4. Un octet = 8 bits : 2⁸ = **256** valeurs, de 0 à **255**."
+    },
+    {
+      "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+      "difficulte": 2,
+      "titre": "Le compteur de passages qui déborde",
+      "consigne": "Réponds en justifiant, et détaille les calculs.",
+      "enonce": "**Situation.** À l'entrée du CDI, un capteur compte les élèves qui passent. Le programme range le nombre de passages dans une variable entière de **8 bits non signée**, remise à zéro chaque matin.\n\n1. Quelle est la plus grande valeur que cette variable peut contenir ? Que se passe-t-il au passage suivant ?\n2. Un jour d'affluence, 300 élèves passent. Quelle valeur affiche le compteur en fin de journée ? Explique.\n3. Le CDI veut compter jusqu'à 1 000 passages par jour. Combien de bits faut-il au minimum ? Justifie. Pourquoi ne pas prendre une variable énorme « au cas où » ?\n4. Le compteur affiche aussi un message. On donne : « A » = 65 en ASCII, et les lettres majuscules se suivent dans l'ordre alphabétique. Quel est le code de « C » ? Combien de bits faut-il pour coder un caractère ASCII ?",
+      "bareme": [
+        { "critere": "Valeur maximale 255, dépassement : 255 + 1 donne 0", "points": 5 },
+        { "critere": "300 passages : le compteur affiche 44 (300 − 256), explication du dépassement", "points": 5 },
+        { "critere": "10 bits nécessaires (2¹⁰ = 1 024 ≥ 1 000 > 512), compromis mémoire et temps", "points": 6 },
+        { "critere": "« C » = 67, ASCII sur 7 bits", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Sur 8 bits non signés, la plus grande valeur est **255**. Au passage suivant, 255 + 1 donne **0** : c'est un **dépassement**.\n\n2. Le compteur revient à 0 au 256ᵉ passage, puis recompte. Après 300 passages : 300 − 256 = **44**. Le compteur affiche 44 au lieu de 300 : la mesure est fausse.\n\n3. Avec n bits, on a 2ⁿ valeurs. 2⁹ = 512 ne suffit pas pour aller jusqu'à 1 000 ; 2¹⁰ = 1 024 suffit (valeurs de 0 à 1 023). Il faut donc **10 bits** au minimum (en pratique, une variable de 16 bits). On ne prend pas une variable énorme, car une variable trop grande **occupe de la mémoire et du temps** de calcul : choisir la taille est un vrai choix de conception.\n\n4. « A » = 65, « B » = 66, donc « C » = **67**. Le code ASCII tient sur **7 bits**."
+    },
+    {
+      "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+      "difficulte": 3,
+      "titre": "L'arrosage automatique et ses photos",
+      "consigne": "Écris l'algorithme ligne par ligne comme dans le cours, puis réponds aux questions en justifiant.",
+      "enonce": "**Situation.** Un jardin partagé est équipé d'un arrosage automatique et d'une caméra.\n\n> Le système surveille en permanence. Toutes les 10 minutes, il lit l'humidité du sol (un nombre de 0 à 100). Si l'humidité est inférieure à 30 **et** qu'il ne pleut pas, il ouvre la vanne ; sinon il la ferme. Un pluviomètre indique s'il pleut (vrai ou faux).\n\n1. Écris l'algorithme du système sous forme de tableau (ligne, code), en utilisant une boucle, une condition et des fonctions comme lire_humidite() ou ouvrir_vanne().\n2. Indique le type de chacune de ces variables : l'humidité, l'état du pluviomètre, le nom du jardin affiché sur l'écran.\n3. Le seuil 30 est enregistré dans la carte en hexadécimal. Convertis 30 en binaire, puis en hexadécimal.\n4. La caméra prend chaque jour une photo de **12 Mo**, compressée en jpeg à **3 Mo**. Calcule le taux de compression. La compression est-elle avec ou sans perte ? Pourquoi est-ce acceptable ici ?\n5. La carte mémoire a 900 Mo libres. Combien de photos compressées peut-on stocker ? Et sans compression ? Pour le fichier des mesures d'humidité, quel type de compression faut-il choisir ? Justifie.",
+      "bareme": [
+        { "critere": "Algorithme correct : boucle infinie, lecture, condition avec ET, attente de 10 min", "points": 5 },
+        { "critere": "Types des variables : entier, booléen, chaîne", "points": 3 },
+        { "critere": "30 = 11110 en binaire = 1E en hexadécimal", "points": 4 },
+        { "critere": "Taux 0,25, compression avec perte acceptable pour une photo", "points": 4 },
+        { "critere": "300 photos compressées contre 75, compression sans perte pour les mesures", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Algorithme attendu :\n| Ligne | Code |\n| 1 | tant que vrai : |\n| 2 | hum ← lire_humidite() |\n| 3 | pluie ← lire_pluviometre() |\n| 4 | si hum < 30 et pluie = faux alors ouvrir_vanne() |\n| 5 | sinon fermer_vanne() |\n| 6 | attendre(10 min) |\nLa **boucle infinie** est typique d'un système embarqué qui surveille en permanence ; la **condition** combine deux tests avec « et ».\n\n2. Humidité : **entier** (0 à 100) ; état du pluviomètre : **booléen** (vrai / faux) ; nom du jardin : **chaîne** de caractères.\n\n3. 30 = 2 × 15 + 0 ; 15 = 2 × 7 + 1 ; 7 = 2 × 3 + 1 ; 3 = 2 × 1 + 1 ; 1 = 2 × 0 + 1 → **11110**. Sur un octet : 0001 1110 → 1 et E → **1E**. Vérification : 16 + 14 = 30.\n\n4. Taux = taille compressée / taille initiale = 3 / 12 = **0,25** (25 %). Le jpeg est une compression **avec perte** : il supprime des détails peu perceptibles. C'est acceptable pour une photo de suivi du jardin, où ces détails ne servent à rien.\n\n5. Compressées : 900 / 3 = **300 photos**. Sans compression : 900 / 12 = **75 photos**. Pour les mesures d'humidité, il faut une compression **sans perte** (type zip) : chaque valeur doit être restituée exactement, une donnée modifiée fausserait le suivi."
+    },
+    {
+      "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+      "difficulte": 1,
+      "titre": "Le modèle OSI et les adresses",
+      "consigne": "Réponds précisément à chaque question.",
+      "enonce": "**Situation.** Le technicien du lycée explique le réseau à un groupe d'élèves.\n\n1. Combien de couches compte le modèle OSI ? Cite la couche la plus haute et la plus basse, avec leur rôle.\n2. À quelle couche est liée l'adresse **MAC** ? Et l'adresse **IP** ?\n3. Voici deux adresses : **3C:52:82:1A:0F:7B** et **192.168.1.20**. Laquelle est une adresse MAC, laquelle une adresse IPv4 ? Justifie par leur forme.\n4. Donne un exemple de liaison filaire et un exemple de liaison sans fil.",
+      "bareme": [
+        { "critere": "7 couches, couche 7 application et couche 1 physique avec leur rôle", "points": 6 },
+        { "critere": "MAC à la couche 2 (liaison), IP à la couche 3 (réseau)", "points": 4 },
+        { "critere": "Adresses reconnues par leur forme (6 octets hexadécimaux, 4 octets décimaux)", "points": 6 },
+        { "critere": "Un exemple juste de liaison filaire et un de liaison sans fil", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le modèle OSI compte **7 couches**. La plus haute, la couche 7 **Application**, rend le service à l'utilisateur (web, messagerie). La plus basse, la couche 1 **Physique**, transmet les bits sur le support (tensions, ondes, lumière).\n\n2. Adresse **MAC** : couche **2** (liaison). Adresse **IP** : couche **3** (réseau).\n\n3. **3C:52:82:1A:0F:7B** est une adresse **MAC** : 6 octets écrits en hexadécimal, gravée dans la carte réseau. **192.168.1.20** est une adresse **IPv4** : 4 octets écrits en décimal, attribuée selon le réseau.\n\n4. Filaire : câble Ethernet, USB, fibre optique. Sans fil : Wi-Fi, Bluetooth, LoRa, 4G/5G."
+    },
+    {
+      "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+      "difficulte": 2,
+      "titre": "Le réseau de la maison de Sofia",
+      "consigne": "Justifie chaque réponse à partir des adresses et du masque.",
+      "enonce": "**Situation.** Chez Sofia, tous les appareils sont reliés à une box, qui joue le rôle d'équipement central. Le masque est **255.255.255.0** pour tous.\n\n| Appareil | Adresse IP |\n| Ordinateur | 192.168.1.10 |\n| Imprimante | 192.168.1.35 |\n| Caméra du garage | 192.168.2.7 |\n\n1. Pour chaque appareil, indique la partie réseau et la partie machine de l'adresse.\n2. L'ordinateur peut-il communiquer directement avec l'imprimante ? Avec la caméra ? Quel équipement faut-il sinon ?\n3. Quand Sofia branche une nouvelle tablette, elle obtient automatiquement une adresse. Quel serveur la lui attribue ?\n4. Sofia tape www.exemple.fr dans son navigateur. Quel serveur traduit ce nom ? Qui est le client, qui est le serveur ?\n5. Quelle est la topologie de ce réseau ? Quel est son défaut ?",
+      "bareme": [
+        { "critere": "Parties réseau et machine justes pour les trois adresses", "points": 5 },
+        { "critere": "Ordinateur et imprimante dans le même réseau, caméra dans un autre, routeur nécessaire", "points": 5 },
+        { "critere": "DHCP pour l'adresse, DNS pour le nom, rôles client et serveur", "points": 6 },
+        { "critere": "Topologie en étoile, défaut : panne du centre coupe tout", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Avec le masque 255.255.255.0, les trois premiers octets désignent le **réseau** et le dernier la **machine** :\n- ordinateur : réseau **192.168.1**, machine **10** ;\n- imprimante : réseau **192.168.1**, machine **35** ;\n- caméra : réseau **192.168.2**, machine **7**.\n\n2. L'ordinateur et l'imprimante sont dans le **même réseau** (192.168.1) : ils communiquent **directement**. La caméra est dans un **autre réseau** (192.168.2) : il faut un **routeur** pour faire le lien.\n\n3. Le serveur **DHCP** attribue automatiquement une adresse IP.\n\n4. Le serveur **DNS** traduit www.exemple.fr en adresse IP. Le navigateur de Sofia est le **client** : il envoie la requête ; le serveur **web** répond en envoyant la page.\n\n5. Tous les appareils sont reliés à un équipement central : topologie en **étoile**. Défaut : **si le centre tombe en panne, tout le réseau est coupé**."
+    },
+    {
+      "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+      "difficulte": 3,
+      "titre": "La borne de recharge connectée",
+      "consigne": "Analyse le fonctionnement décrit et justifie chaque réponse avec les notions du cours.",
+      "enonce": "**Situation.** Une borne de recharge pour voitures électriques est installée sur un parking.\n\n> Le conducteur lance la recharge depuis l'application de son téléphone, relié à Internet en 4G. La borne est reliée par un câble Ethernet à un routeur du parking. L'application envoie une requête au serveur de l'opérateur, dont elle connaît seulement le nom : bornes.operateur.fr. Le serveur répond en envoyant à la borne l'autorisation de démarrer la charge. La carte réseau de la borne porte l'adresse 00:1B:44:11:3A:B7, et elle a reçu l'adresse IP 10.0.5.12 à sa mise en service.\n\n1. Cite les liaisons utilisées et classe-les en filaire ou sans fil.\n2. Décris l'ordre des échanges : que se passe-t-il avant que l'application puisse joindre le serveur ? Nomme les serveurs impliqués.\n3. Explique ce qu'est l'encapsulation, en suivant le message « démarrer la charge » de la couche application jusqu'au câble, puis à la réception.\n4. Combien de bits compte l'adresse MAC de la borne ? Pourquoi l'adresse IP de la borne peut-elle changer si on la déplace sur un autre parking, et pas son adresse MAC ?\n5. Le parking compte 12 bornes. Un technicien propose de les brancher toutes sur un même câble plutôt qu'en étoile autour d'un commutateur. Donne un argument pour et un argument contre, puis conclus.",
+      "bareme": [
+        { "critere": "Liaisons identifiées : 4G sans fil, Ethernet filaire (Internet entre les deux)", "points": 3 },
+        { "critere": "Ordre des échanges : DNS pour traduire le nom, requête client, réponse du serveur ; DHCP pour l'adresse de la borne", "points": 5 },
+        { "critere": "Encapsulation expliquée : chaque couche ajoute son en-tête à l'envoi, le retire à la réception", "points": 5 },
+        { "critere": "MAC sur 48 bits, gravée dans la carte ; IP logique attribuée selon le réseau", "points": 4 },
+        { "critere": "Comparaison bus / étoile argumentée avec une conclusion", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Téléphone ↔ Internet : **4G**, liaison **sans fil**. Borne ↔ routeur : **câble Ethernet**, liaison **filaire**. Entre les deux, les données traversent Internet.\n\n2. L'application ne connaît que le nom : elle interroge d'abord un serveur **DNS**, qui traduit bornes.operateur.fr en adresse IP. Ensuite, l'application (**client**) envoie sa requête au serveur de l'opérateur, qui **répond** en envoyant l'autorisation à la borne. La borne, elle, a obtenu son adresse IP 10.0.5.12 à la mise en service, en principe par un serveur **DHCP**.\n\n3. **Encapsulation** : à l'envoi, chaque couche **ajoute son en-tête** aux données reçues de la couche du dessus, comme une lettre glissée dans une enveloppe, elle-même dans un colis. Le message « démarrer la charge » (couche 7) reçoit un en-tête de transport (couche 4, découpage en segments), puis un en-tête réseau avec les adresses IP (couche 3), puis un en-tête de liaison avec les adresses MAC (couche 2), et enfin il part en bits sur le support (couche 1). À la réception, chaque couche **retire** l'en-tête qui la concerne, jusqu'à ce que l'application de la borne lise l'ordre.\n\n4. L'adresse MAC compte 6 octets, soit 6 × 8 = **48 bits**. Elle est **gravée dans la carte réseau** : elle suit la borne partout. L'adresse IP est une adresse **logique**, **attribuée selon le réseau** : sur un autre parking, le réseau est différent, donc la borne reçoit une autre adresse.\n\n5. **Pour le bus** : un seul câble, moins de matériel. **Contre** : risque de **collisions**, et **une coupure isole une partie** des bornes. En étoile, si le commutateur tombe, tout tombe, mais une coupure d'un câble n'isole qu'une seule borne. Conclusion attendue : on garde l'**étoile**, comme la plupart des réseaux locaux, en choisissant un commutateur fiable (toute conclusion argumentée est acceptée)."
+    },
+    {
+      "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+      "difficulte": 1,
+      "titre": "Effort, flux et types de modèles",
+      "consigne": "Réponds à chaque question avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Maël découvre la modélisation en STI2D.\n\n1. Associe chaque besoin au type de modèle adapté (volumique, multiphysique, schéma-bloc, comportemental, de régression) :\n   a. vérifier que deux pièces ne se chevauchent pas ;\n   b. tirer une loi d'une série de mesures dans un tableur ;\n   c. décrire les états d'un portail ;\n   d. relier un moteur, sa batterie et sa charge par leurs grandeurs physiques.\n2. Pour les domaines électrique et mécanique en rotation, donne la grandeur effort, la grandeur flux et l'expression de la puissance.\n3. Une force de 50 N déplace un chariot à 2 m/s. Calcule la puissance.",
+      "bareme": [
+        { "critere": "Quatre associations justes : volumique, régression, comportemental, multiphysique", "points": 8 },
+        { "critere": "Effort et flux justes pour les deux domaines, avec P = U × I et P = C × ω", "points": 8 },
+        { "critere": "P = 50 × 2 = 100 W", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. Modèle **volumique** (CAO) : formes, masses, interférences.\n   b. Modèle **de régression** (tableur).\n   c. Modèle **comportemental** (diagramme d'états).\n   d. Modèle **multiphysique** : composants reliés par leurs grandeurs physiques.\n\n2. **Électrique** : effort = tension U (V), flux = intensité I (A), **P = U × I**.\n**Mécanique en rotation** : effort = couple C (N·m), flux = vitesse angulaire ω (rad/s), **P = C × ω**.\n\n3. En translation, P = F × v = 50 × 2 = **100 W**."
+    },
+    {
+      "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+      "difficulte": 2,
+      "titre": "Quatre puissances dans une station de pompage",
+      "consigne": "Pour chaque domaine, identifie l'effort et le flux, puis calcule la puissance en détaillant les conversions d'unités.",
+      "enonce": "**Situation.** Dans une petite station de pompage, on relève :\n\n- **Batterie** : elle alimente le variateur sous **24 V** avec un courant de **5 A**.\n- **Moteur** : il tourne à **200 rad/s** avec un couple de **0,5 N·m**.\n- **Pompe** : elle crée une pression de **2 bar** (1 bar = 100 000 Pa) avec un débit de **0,5 L/s**.\n- **Chariot de maintenance** : il est poussé avec une force de **40 N** à **1,5 m/s**.\n\n1. Pour chaque élément, nomme la grandeur effort et la grandeur flux.\n2. Calcule chaque puissance.\n3. Classe les puissances de la batterie, du moteur et de la pompe. Que peut-on en déduire sur la chaîne batterie → variateur → moteur → pompe ?\n4. Martin affirme : « l'eau qui circule dans la pompe et le débit Qv, c'est la même chose ». Explique la nuance.",
+      "bareme": [
+        { "critere": "Efforts et flux justes pour les quatre éléments", "points": 4 },
+        { "critere": "Puissances justes : 120 W, 100 W, 100 W, 60 W, avec conversions de pression et de débit", "points": 8 },
+        { "critere": "Classement et déduction : pertes entre batterie et moteur, pas de perte comptée entre moteur et pompe dans ces données", "points": 4 },
+        { "critere": "Distinction flux MEI / grandeur flux du modèle", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Batterie : effort **U**, flux **I**. Moteur : effort **couple C**, flux **vitesse angulaire ω**. Pompe : effort **pression p**, flux **débit Qv**. Chariot : effort **force F**, flux **vitesse v**.\n\n2. Batterie : P = U × I = 24 × 5 = **120 W**.\nMoteur : P = C × ω = 0,5 × 200 = **100 W**.\nPompe : p = 2 × 100 000 = 200 000 Pa ; Qv = 0,5 L/s = 0,0005 m³/s ; P = p × Qv = 200 000 × 0,0005 = **100 W**.\nChariot : P = F × v = 40 × 1,5 = **60 W**.\n\n3. Batterie 120 W > moteur 100 W = pompe 100 W. Entre la batterie et la sortie du moteur, 20 W sont perdus (variateur et moteur). Avec ces valeurs, la puissance hydraulique est égale à la puissance mécanique du moteur : le modèle suppose une pompe sans pertes (en réalité, elle en a, et la puissance hydraulique serait plus faible).\n\n4. L'eau qui circule est un **flux MEI** (flux de matière, ce qui circule dans le produit). Le débit Qv est la **grandeur flux** du modèle hydraulique : le facteur qui, multiplié par la grandeur effort (la pression), donne la puissance. Ce sont deux notions différentes à ne pas confondre."
+    },
+    {
+      "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+      "difficulte": 3,
+      "titre": "Simuler le démarrage d'un tapis roulant",
+      "consigne": "Exploite les résultats de simulation et de mesure, fais les calculs demandés et justifie ta conclusion.",
+      "enonce": "**Situation.** Un bureau d'études modélise le tapis roulant d'une caisse de supermarché : un moteur alimenté en 24 V entraîne un rouleau et la bande chargée d'articles.\n\n> **Paramètres du modèle** : résistance du moteur, masse des articles (10 kg), rendement du réducteur (0,9), frottement de la bande.\n> **Entrée** : un échelon de tension de 24 V.\n> **Solveur** : pas fixe de 0,1 s.\n> **Simulation** : courant de démarrage 8 A, courant en régime établi 2 A ; la bande atteint sa vitesse en **1,5 s**.\n> **Mesure sur le tapis réel** : courant de démarrage 7,5 A ; vitesse atteinte en **1,8 s**.\n> **Cahier des charges** : la bande doit atteindre sa vitesse en moins de 2 s.\n\n1. Classe les éléments suivants en variables internes (paramètres), variables externes ou sorties : la masse des articles, la tension de 24 V, le rendement du réducteur, le courant, la vitesse de la bande.\n2. Calcule la puissance électrique absorbée au démarrage et en régime établi (modèle).\n3. Calcule l'écart relatif entre le temps simulé et le temps mesuré. Que suggère-t-il ? Que fait-on ?\n4. Le technicien veut un résultat plus précis en passant à un pas fixe de 0,001 s. Qu'y gagne-t-il, qu'y perd-il ? Quelle autre solution de solveur proposes-tu ?\n5. Conclus : la solution convient-elle au cahier des charges ? Pourquoi un résultat de simulation n'a-t-il de valeur que si l'on connaît ses hypothèses ?",
+      "bareme": [
+        { "critere": "Classement juste : masse et rendement internes, 24 V externe, courant et vitesse en sorties", "points": 4 },
+        { "critere": "Puissances : 192 W au démarrage, 48 W en régime établi", "points": 3 },
+        { "critere": "Écart de 20 %, paramètre sous-estimé (frottement, inertie), recalage du modèle", "points": 5 },
+        { "critere": "Compromis précision / temps et solveur à pas variable proposé", "points": 4 },
+        { "critere": "Conclusion : 1,8 s < 2 s, conforme ; importance des hypothèses", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Variables internes (paramètres)** : la masse des articles, le rendement du réducteur (caractéristiques des constituants et de la charge). **Variable externe** : la tension de 24 V, imposée au modèle (échelon). **Sorties** : le courant et la vitesse de la bande, relevés par des blocs de mesure. (La masse peut aussi être vue comme une charge imposée : accepté si justifié.)\n\n2. P = U × I. Démarrage : 24 × 8 = **192 W**. Régime établi : 24 × 2 = **48 W**.\n\n3. Écart relatif = (1,8 − 1,5) / 1,5 = 0,3 / 1,5 = **0,20, soit 20 %**. Le modèle est optimiste : le tapis réel met plus de temps. Cela suggère qu'un paramètre est **sous-estimé** : le frottement de la bande ou l'inertie des pièces en rotation. On **recale** ce paramètre pour que la simulation colle aux mesures.\n\n4. Avec un pas plus petit, le résultat est **plus précis**, mais le calcul est **beaucoup plus long** (100 fois plus d'instants) : c'est le compromis **précision / temps**. On peut utiliser un **solveur à pas variable** : il réduit le pas quand les grandeurs varient vite (au démarrage) et l'agrandit quand c'est calme (régime établi).\n\n5. Mesuré : 1,8 s < 2 s : la solution est **conforme** au cahier des charges, avec peu de marge. La simulation seule annonçait 1,5 s : elle reposait sur des **hypothèses** (frottement choisi, rendement de 0,9, masse de 10 kg). Si l'on ne les connaît pas, on ne sait pas dans quelles conditions le résultat est valable : avec 15 kg d'articles, par exemple, la conclusion pourrait changer."
+    },
+    {
+      "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+      "difficulte": 1,
+      "titre": "Moments et stabilité",
+      "consigne": "Détaille chaque calcul avec son unité et justifie les réponses.",
+      "enonce": "**Situation.** Hugo installe du matériel dans l'atelier.\n\n1. Rappelle les deux conditions d'équilibre d'un solide.\n2. Une force de **150 N** agit à **0,4 m** d'un point. Calcule son moment par rapport à ce point.\n3. Pour desserrer un écrou, Hugo applique **80 N** au bout d'une clé de **0,25 m**. Il prend ensuite une clé de **0,5 m**. Quelle force suffit pour obtenir le même moment ?\n4. Une armoire haute risque de basculer quand on ouvre ses portes. Donne la condition de stabilité d'un objet posé, puis deux moyens de rendre l'armoire plus stable.",
+      "bareme": [
+        { "critere": "Deux conditions : somme des forces nulle, somme des moments nulle", "points": 4 },
+        { "critere": "Moment : 150 × 0,4 = 60 N·m", "points": 4 },
+        { "critere": "Moment de 20 N·m, force de 40 N avec la clé de 0,5 m", "points": 6 },
+        { "critere": "Condition de stabilité et deux moyens (élargir la base, abaisser le centre de gravité, fixer au mur)", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un solide est en équilibre si la **somme des forces extérieures est nulle** et si la **somme des moments** de ces forces par rapport à un point **est nulle**.\n\n2. M = F × d = 150 × 0,4 = **60 N·m**.\n\n3. Moment avec la première clé : 80 × 0,25 = **20 N·m**. Avec la clé de 0,5 m : F = 20 / 0,5 = **40 N**. Plus le bras de levier est grand, plus la force nécessaire est petite.\n\n4. Un objet posé est stable tant que la **verticale de son centre de gravité tombe à l'intérieur de sa base d'appui**. Pour l'armoire : **élargir la base** (pieds plus écartés), **abaisser le centre de gravité** (objets lourds en bas), ou la fixer au mur."
+    },
+    {
+      "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+      "difficulte": 2,
+      "titre": "L'étagère de la médiathèque",
+      "consigne": "Détaille chaque calcul (formule, application numérique, unité) et conclus.",
+      "enonce": "**Situation.** Une étagère en console porte une charge de **300 N** placée à **0,25 m** du mur. La console est fixée au mur par une vis haute, placée **0,15 m** au-dessus d'un appui bas.\n\n1. Calcule le moment de la charge par rapport à l'appui bas.\n2. Déduis la force que doit fournir la vis.\n3. On éloigne la vis pour avoir **0,25 m** entre vis et appui. Quelle est la nouvelle force dans la vis ? Conclus.\n4. Dans le premier montage, la vis a une section résistante de **20 mm²** et sa limite élastique vaut Re = **235 MPa**. Calcule la contrainte dans la vis. Avec un coefficient de sécurité s = 3, la vis est-elle conforme ?",
+      "bareme": [
+        { "critere": "Moment : 300 × 0,25 = 75 N·m", "points": 4 },
+        { "critere": "Force dans la vis : 75 / 0,15 = 500 N", "points": 5 },
+        { "critere": "Nouvelle force 300 N et conclusion sur l'écartement des fixations", "points": 4 },
+        { "critere": "Contrainte 25 MPa, limite admissible ≈ 78,3 MPa, vis conforme", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. M = F × d = 300 × 0,25 = **75 N·m**.\n\n2. La vis doit fournir un moment opposé : F × 0,15 = 75, donc F = 75 / 0,15 = **500 N**. La vis est plus sollicitée que la charge elle-même.\n\n3. F × 0,25 = 75, donc F = **300 N**. Écarter les points de fixation augmente le bras de levier de la vis : la force nécessaire diminue (de 500 N à 300 N).\n\n4. σ = F / S = 500 / 20 = **25 MPa**. Limite admissible : Re / s = 235 / 3 ≈ **78,3 MPa**. 25 MPa ≤ 78,3 MPa : la vis est **conforme**, avec une large marge."
+    },
+    {
+      "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+      "difficulte": 3,
+      "titre": "La potence d'atelier",
+      "consigne": "Étudie l'équilibre puis la résistance de la potence. Détaille chaque calcul et justifie tes conclusions.",
+      "enonce": "**Situation.** Une potence de levage est fixée sur une colonne verticale. Son bras horizontal porte une charge de **2 000 N** à **1,5 m** de l'axe de la colonne. De l'autre côté, un contrepoids est placé à **0,6 m** de l'axe. On néglige le poids du bras. Le bras est retenu par un tirant en acier de section **80 mm²** (Re = **235 MPa**) qui supporte **6 000 N**.\n\n1. Calcule le moment de la charge par rapport à l'axe de la colonne.\n2. Quel poids doit avoir le contrepoids pour que les moments s'équilibrent ?\n3. En appliquant la condition sur les forces, calcule la force verticale que la colonne doit supporter.\n4. Calcule la contrainte dans le tirant. Est-il conforme avec s = 2 ? Avec s = 4 ?\n5. Nomme la sollicitation principale du tirant, de la colonne, et de l'axe qui relie le crochet au chariot.\n6. Pourquoi la structure du bras est-elle triangulée ? Quel outil utiliserait-on pour étudier les contraintes dans le nœud complexe entre bras et colonne ?",
+      "bareme": [
+        { "critere": "Moment de la charge 3 000 N·m et contrepoids de 5 000 N", "points": 5 },
+        { "critere": "Force sur la colonne : 2 000 + 5 000 = 7 000 N", "points": 3 },
+        { "critere": "Contrainte 75 MPa ; conforme avec s = 2 (117,5 MPa), non conforme avec s = 4 (58,75 MPa)", "points": 5 },
+        { "critere": "Sollicitations : traction (tirant), compression (colonne), cisaillement (axe)", "points": 4 },
+        { "critere": "Triangulation expliquée et simulation par éléments finis citée", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. M = F × d = 2 000 × 1,5 = **3 000 N·m**.\n\n2. Le contrepoids doit créer un moment opposé : P × 0,6 = 3 000, donc P = 3 000 / 0,6 = **5 000 N**.\n\n3. Les forces verticales extérieures appliquées au bras sont la charge (2 000 N vers le bas), le contrepoids (5 000 N vers le bas) et l'action de la colonne. Leur somme est nulle : la colonne supporte **2 000 + 5 000 = 7 000 N**.\n\n4. σ = F / S = 6 000 / 80 = **75 MPa**.\n- s = 2 : limite admissible 235 / 2 = **117,5 MPa** ; 75 ≤ 117,5 → **conforme**.\n- s = 4 : limite admissible 235 / 4 = **58,75 MPa** ; 75 > 58,75 → **non conforme** : il faudrait une section plus grande (au moins 6 000 / 58,75 ≈ 102 mm²).\n\n5. Tirant : **traction** (il s'allonge). Colonne : **compression** (elle se raccourcit sous 7 000 N ; la flexion due à un déséquilibre des moments est aussi acceptée). Axe du crochet : **cisaillement** (deux sections glissent l'une sur l'autre).\n\n6. Triangulée, la structure ne peut pas se déformer comme un **parallélogramme** : elle reste rigide. Pour le nœud complexe, on utilise une **simulation par éléments finis** : le logiciel découpe la pièce en petits éléments (le maillage) et calcule contraintes et déplacements ; les zones rouges montrent où la pièce risque de céder."
+    },
+    {
+      "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+      "difficulte": 1,
+      "titre": "Rendement et énergie",
+      "consigne": "Détaille chaque calcul avec son unité.",
+      "enonce": "**Situation.** Camille étudie deux appareils de sa chambre.\n\n1. Le moteur de son ventilateur absorbe **50 W** et fournit **40 W** mécaniques. Calcule son rendement et ses pertes. Sous quelle forme sont surtout perdues ces pertes ?\n2. Sa lampe de bureau de **40 W** reste allumée **6 h**. Calcule l'énergie consommée en Wh, puis en joules.\n3. Que mesure la puissance ? Pourquoi le rendement d'un convertisseur réel est-il toujours inférieur à 1 ?",
+      "bareme": [
+        { "critere": "Rendement 0,8 et pertes 10 W, surtout en chaleur", "points": 7 },
+        { "critere": "Énergie : 240 Wh = 864 000 J", "points": 7 },
+        { "critere": "Puissance = vitesse de transfert de l'énergie ; pertes toujours présentes donc η < 1", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. η = P utile / P absorbée = 40 / 50 = **0,8**. Pertes : 50 − 40 = **10 W**, le plus souvent sous forme de **chaleur** (effet Joule, frottements).\n\n2. E = P × t = 40 × 6 = **240 Wh**. En joules : 240 × 3 600 = **864 000 J** (ou 40 W × 21 600 s).\n\n3. La puissance mesure la **vitesse** à laquelle l'énergie est transférée. L'énergie se conserve, mais une partie se transforme toujours en formes inutiles (les **pertes**) : l'énergie utile est donc toujours plus petite que l'énergie absorbée, et η < 1."
+    },
+    {
+      "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+      "difficulte": 2,
+      "titre": "L'autonomie de la trottinette",
+      "consigne": "Détaille chaque étape du calcul et arrondis intelligemment.",
+      "enonce": "**Situation.** Une trottinette électrique a une batterie de **36 V** et **7,5 Ah**. La chaîne est : batterie → variateur (η = **0,95**) → moteur (η = **0,80**) → roue.\n\n1. Calcule l'énergie stockée dans la batterie.\n2. Calcule le rendement global de la chaîne, puis l'énergie utile disponible à la roue.\n3. En roulant, la trottinette a besoin de **250 W** utiles à la roue. Quelle puissance est tirée de la batterie ?\n4. Calcule l'autonomie en heures, puis en minutes. À **20 km/h**, quelle distance peut-on parcourir ?",
+      "bareme": [
+        { "critere": "Énergie stockée : 36 × 7,5 = 270 Wh", "points": 4 },
+        { "critere": "Rendement global 0,76 et énergie utile ≈ 205 Wh", "points": 5 },
+        { "critere": "Puissance batterie : 250 / 0,76 ≈ 329 W", "points": 4 },
+        { "critere": "Autonomie ≈ 0,82 h soit environ 49 min, distance ≈ 16 km", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. E = U × Q = 36 × 7,5 = **270 Wh**.\n\n2. η global = 0,95 × 0,80 = **0,76**. Énergie utile : 270 × 0,76 = **205,2 Wh** ≈ 205 Wh.\n\n3. P batterie = P utile / η global = 250 / 0,76 ≈ **329 W**.\n\n4. Autonomie : t = 270 / 329 ≈ **0,82 h**, soit 0,82 × 60 ≈ **49 min** (on retrouve 205,2 / 250 ≈ 0,82 h). Distance : 20 × 0,82 ≈ **16 km** (16,4 km)."
+    },
+    {
+      "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+      "difficulte": 3,
+      "titre": "Le bilan énergétique du monte-charge",
+      "consigne": "Fais le bilan énergétique complet, étage par étage, en détaillant les calculs, puis argumente tes propositions.",
+      "enonce": "**Situation.** Un monte-charge d'entrepôt soulève une charge de **5 000 N** à la vitesse de **0,5 m/s**. Sa chaîne de puissance est : réseau → variateur (η = **0,96**) → moteur (η = **0,88**) → réducteur (η = **0,85**) → tambour et câble.\n\n1. Calcule la puissance utile fournie à la charge.\n2. Calcule le rendement global de la chaîne.\n3. Calcule la puissance absorbée sur le réseau et les pertes totales.\n4. Calcule la puissance en sortie de chaque étage et les pertes de chaque étage. Présente le résultat dans un tableau, puis décris le diagramme de Sankey.\n5. Quel étage faut-il améliorer en priorité ? Propose une action pour cet étage.\n6. Une montée de 10 m dure 20 s. Calcule l'énergie absorbée sur le réseau, en joules puis en Wh.\n7. À la descente, la charge pourrait restituer de l'énergie. Quelle solution de réduction des pertes du cours cela évoque-t-il ?",
+      "bareme": [
+        { "critere": "P utile = 2 500 W et η global ≈ 0,718", "points": 4 },
+        { "critere": "P absorbée ≈ 3 482 W et pertes totales ≈ 982 W", "points": 4 },
+        { "critere": "Tableau étage par étage juste (pertes ≈ 139 W, 401 W, 442 W) et Sankey décrit", "points": 5 },
+        { "critere": "Réducteur désigné comme étage prioritaire, action pertinente (lubrification, roulements)", "points": 3 },
+        { "critere": "Énergie ≈ 69 600 J ≈ 19,3 Wh et freinage récupératif", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. P utile = F × v = 5 000 × 0,5 = **2 500 W**.\n\n2. η global = 0,96 × 0,88 × 0,85 ≈ **0,718**.\n\n3. P absorbée = 2 500 / 0,718 ≈ **3 482 W**. Pertes totales : 3 482 − 2 500 ≈ **982 W**.\n\n4. Étage par étage :\n| Étage | Entrée | Sortie | Pertes |\n| Variateur (0,96) | 3 482 W | 3 343 W | 139 W |\n| Moteur (0,88) | 3 343 W | 2 942 W | 401 W |\n| Réducteur (0,85) | 2 942 W | 2 500 W | 442 W |\nVérification : 139 + 401 + 442 = 982 W. Dans le **Sankey**, la flèche principale passe de 3 482 à 3 343, puis à 2 942, puis à 2 500, et trois flèches de pertes (139, 401 et 442 W) partent vers le bas, de largeur proportionnelle.\n\n5. Les plus grosses pertes sont celles du **réducteur** (442 W), juste devant le moteur (401 W) : c'est l'étage le plus coûteux, à améliorer en priorité. Actions : **lubrifier**, choisir des **roulements** pour réduire les frottements, ou un réducteur à meilleur rendement.\n\n6. E = P × t = 3 482 × 20 ≈ **69 600 J**. En Wh : 69 640 / 3 600 ≈ **19,3 Wh**.\n\n7. C'est la **récupération** d'énergie : le **freinage récupératif**, où le moteur fonctionne en génératrice pendant la descente et renvoie de l'énergie au lieu de la dissiper."
+    },
+    {
+      "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+      "difficulte": 1,
+      "titre": "Le vocabulaire du diagramme d'états",
+      "consigne": "Réponds à chaque question avec précision.",
+      "enonce": "**Situation.** Inès décrit le comportement d'une lampe à détecteur de présence.\n\n1. Définis : un état, une transition, un événement, une condition de garde. Comment s'écrit une condition de garde ?\n2. Pour chaque information, indique si elle est logique (TOR), analogique ou numérique :\n   a. le bouton marche / arrêt de la lampe ;\n   b. la tension délivrée par le capteur de luminosité ;\n   c. la valeur de luminosité lue par le CAN toutes les 10 ms.\n3. Quelle différence y a-t-il entre une commande en boucle ouverte et une commande en boucle fermée ? Donne un exemple de chaque.",
+      "bareme": [
+        { "critere": "Quatre définitions justes, garde écrite entre crochets", "points": 8 },
+        { "critere": "Trois natures d'information justes : TOR, analogique, numérique", "points": 6 },
+        { "critere": "Boucle ouverte et boucle fermée distinguées avec un exemple chacune", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **État** : situation stable du système (Éteinte, Allumée). **Transition** : passage d'un état à un autre. **Événement** : ce qui déclenche la transition (présence détectée). **Condition de garde** : condition qui doit être vraie pour que la transition ait lieu ; elle s'écrit **entre crochets**, par exemple [luminosité < 300].\n\n2. a. **Logique (TOR)** : 0 ou 1. b. **Analogique** : valeur continue. c. **Numérique** : des nombres, à des instants précis.\n\n3. En **boucle ouverte**, on envoie un ordre sans vérifier le résultat (grille-pain minuté). En **boucle fermée**, un capteur mesure le résultat et on corrige l'écart avec la consigne (four à thermostat, régulateur de vitesse)."
+    },
+    {
+      "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+      "difficulte": 2,
+      "titre": "Le sèche-mains automatique",
+      "consigne": "Construis le tableau des transitions, puis justifie chaque réponse.",
+      "enonce": "**Situation.** Un sèche-mains automatique fonctionne ainsi :\n\n> Au repos, il est en veille. Quand un capteur détecte des mains, il se met à souffler (moteur et résistance chauffante en marche). Quand les mains sont retirées, il s'arrête et revient en veille. Par sécurité, s'il souffle depuis 60 s sans interruption, il s'arrête et se met en défaut ; il ne revient en veille qu'après un appui du personnel sur le bouton de réarmement.\n\n1. Liste les états du sèche-mains.\n2. Construis le tableau des transitions (état, événement ou garde, état suivant).\n3. Quelle action le sèche-mains réalise-t-il en entrant dans l'état où il souffle ?\n4. Le sèche-mains règle aussi la température de l'air soufflé : un capteur mesure la température de l'air, et la carte augmente ou réduit le chauffage pour rester à 45 °C. S'agit-il d'une boucle ouverte ou fermée ? Nomme les éléments de cette boucle.",
+      "bareme": [
+        { "critere": "Trois états : Veille, Soufflage, Défaut", "points": 3 },
+        { "critere": "Tableau complet des quatre transitions, y compris la sécurité des 60 s et le réarmement", "points": 8 },
+        { "critere": "Action d'entrée : moteur et résistance en marche", "points": 3 },
+        { "critere": "Boucle fermée justifiée, éléments nommés (consigne, comparateur, correcteur, actionneur, système, capteur)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. États : **Veille**, **Soufflage**, **Défaut**.\n\n2. Transitions :\n| État | Événement / garde | État suivant |\n| Veille | mains détectées | Soufflage |\n| Soufflage | mains retirées | Veille |\n| Soufflage | après 60 s de soufflage | Défaut |\n| Défaut | appui sur le réarmement | Veille |\nLa transition vers Défaut est une **sécurité**.\n\n3. En entrant dans l'état Soufflage : **moteur en marche et résistance chauffante en marche** (en sortant de l'état : arrêt des deux).\n\n4. C'est une **boucle fermée** : un capteur mesure le résultat (la température de l'air) et on corrige l'écart avec la consigne. Éléments : **consigne** 45 °C → **comparateur** (écart entre consigne et mesure) → **correcteur** (la carte décide de plus ou moins chauffer) → **actionneur** (la résistance) → **système** (l'air soufflé) → **capteur** de température → retour au comparateur."
+    },
+    {
+      "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+      "difficulte": 3,
+      "titre": "Le portail coulissant et sa sécurité",
+      "consigne": "Analyse le comportement du portail. Construis les éléments demandés et justifie chaque choix.",
+      "enonce": "**Situation.** Un portail coulissant fonctionne ainsi :\n\n> Fermé, il s'ouvre sur un appui de la télécommande. Il s'arrête en fin de course ouvert, reste ouvert 30 s, puis se referme jusqu'à la fin de course fermé. Pendant la fermeture, si la cellule photoélectrique détecte un obstacle, il repart en ouverture. Nouveauté : un appui sur la télécommande pendant l'ouverture ou la fermeture arrête le portail (état Arrêt) ; un nouvel appui le fait repartir en ouverture, mais seulement si aucun obstacle n'est détecté.\n\n1. Liste les états et construis le tableau des transitions. Écris la condition de garde de la dernière règle avec la bonne notation.\n2. Construis le diagramme de séquence de l'obstacle en fermeture : acteurs, constituants, messages dans l'ordre.\n3. Un ancien modèle ne possédait pas de fin de course : il faisait tourner le moteur pendant 15 s puis l'arrêtait. Boucle ouverte ou fermée ? Quel défaut cela pose-t-il si le portail est ralenti par du gravier ?\n4. Pourquoi la détection d'obstacle doit-elle être traitée en temps réel ? Quel mécanisme du programme le permet ?\n5. La cellule transmet son information à la carte par une liaison série. Explique ce que cela signifie.",
+      "bareme": [
+        { "critere": "États (Fermé, Ouverture, Ouvert, Fermeture, Arrêt) et tableau complet des transitions", "points": 6 },
+        { "critere": "Condition de garde écrite entre crochets : [obstacle = faux]", "points": 2 },
+        { "critere": "Diagramme de séquence cohérent, messages dans l'ordre chronologique", "points": 4 },
+        { "critere": "Ancien modèle en boucle ouverte, défaut expliqué (portail pas complètement fermé)", "points": 4 },
+        { "critere": "Temps réel (délai garanti) et interruptions ; liaison série expliquée (bits un par un)", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. États : **Fermé, Ouverture, Ouvert, Fermeture, Arrêt**.\n| État | Événement / garde | État suivant |\n| Fermé | appui télécommande | Ouverture |\n| Ouverture | fin de course ouvert | Ouvert |\n| Ouvert | après 30 s | Fermeture |\n| Fermeture | fin de course fermé | Fermé |\n| Fermeture | obstacle détecté | Ouverture |\n| Ouverture | appui télécommande | Arrêt |\n| Fermeture | appui télécommande | Arrêt |\n| Arrêt | appui télécommande **[obstacle = faux]** | Ouverture |\nLa garde s'écrit **entre crochets**.\n\n2. Diagramme de séquence (de haut en bas) : Carte → Moteur : marche sens fermeture ; Cellule → Carte : obstacle ; Carte → Moteur : arrêt ; Carte → Moteur : marche sens ouverture ; Fin de course ouvert → Carte : portail ouvert ; Carte → Moteur : arrêt.\n\n3. L'ancien modèle est en **boucle ouverte** : il envoie un ordre (15 s de marche) sans vérifier le résultat. Si du gravier ralentit le portail, il n'a pas parcouru toute la course en 15 s : il s'arrête **sans être complètement fermé**, et rien ne le détecte. Avec les fins de course, on vérifie le résultat réel.\n\n4. Il s'agit de sécurité des personnes : le portail doit réagir **dans un délai garanti** (quelques dizaines de millisecondes), pas « dès que possible », sinon il écrase l'obstacle : c'est un système **temps réel**. Le programme utilise une **interruption** : il s'interrompt pour traiter immédiatement l'événement urgent « obstacle ».\n\n5. Dans une **liaison série**, les bits passent **un par un** sur un fil (UART, I2C, SPI), au lieu d'être envoyés tous en même temps."
+    },
+    {
+      "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+      "difficulte": 1,
+      "titre": "Les familles de matériaux",
+      "consigne": "Réponds à chaque question en justifiant.",
+      "enonce": "**Situation.** Dans l'atelier, Tom trie des chutes de matériaux : acier, PLA, verre, fibre de carbone, bambou, aluminium.\n\n1. Classe chacun de ces six matériaux dans sa famille.\n2. Donne un point fort et un point faible des céramiques et minéraux, puis des composites.\n3. Explique la différence entre la rigidité et la résistance d'un matériau, en nommant la grandeur qui mesure chacune.",
+      "bareme": [
+        { "critere": "Six matériaux classés dans la bonne famille", "points": 9 },
+        { "critere": "Point fort et point faible justes pour les deux familles", "points": 5 },
+        { "critere": "Rigidité = module d'Young E, résistance = limite élastique Re, avec la nuance expliquée", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Métaux** : acier, aluminium. **Polymères** : PLA. **Céramiques et minéraux** : verre. **Composites** : fibre de carbone. **Naturels (biosourcés)** : bambou.\n\n2. **Céramiques et minéraux** : durs, résistent à la chaleur et à la compression ; mais **fragiles**, ils cassent sans prévenir. **Composites** : très bonne résistance pour leur masse ; mais **chers** et **difficiles à recycler**.\n\n3. La **rigidité** est l'aptitude à **se déformer peu** : elle est mesurée par le **module d'Young E** (en GPa). La **résistance** est l'aptitude à **ne pas céder** : elle est mesurée par la **limite élastique Re** (en MPa). Ce sont deux choses différentes : une pièce peut être peu déformable mais céder sous une forte contrainte, ou l'inverse."
+    },
+    {
+      "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+      "difficulte": 2,
+      "titre": "Le support mural et la poignée de casserole",
+      "consigne": "Détaille chaque calcul et justifie tes choix à l'aide des propriétés du cours.",
+      "enonce": "**Situation.** Deux petites études de matériaux.\n\n**Partie A.** Un support mural a un volume de matière de **0,0004 m³**. On hésite entre l'acier (7 850 kg/m³), l'aluminium (2 700 kg/m³) et le bois (500 kg/m³).\n\n1. Calcule la masse du support dans chacun des trois matériaux.\n2. Le support doit se déformer très peu. Classe les trois matériaux par rigidité (acier 210 GPa, aluminium 70 GPa, bois 10 GPa).\n\n**Partie B.** On conçoit la poignée d'une casserole. On compare le cuivre (λ = 390 W/(m·K)), l'acier (λ = 50) et le bois (λ = 0,15).\n\n3. Quelle propriété faut-il regarder ? Quel matériau choisir pour la poignée ? Justifie.\n4. Le fond de la casserole doit au contraire bien transmettre la chaleur : quel matériau choisir ? Cite une propriété physico-chimique qui compte aussi pour une casserole.",
+      "bareme": [
+        { "critere": "Masses justes : 3,14 kg, 1,08 kg, 0,2 kg", "points": 6 },
+        { "critere": "Classement de rigidité : acier > aluminium > bois", "points": 3 },
+        { "critere": "Conductivité thermique identifiée, bois choisi pour la poignée (isolant)", "points": 6 },
+        { "critere": "Cuivre (ou acier) pour le fond, propriété physico-chimique citée (corrosion, humidité, feu)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. m = ρ × V.\n- Acier : 7 850 × 0,0004 = **3,14 kg** ;\n- Aluminium : 2 700 × 0,0004 = **1,08 kg** ;\n- Bois : 500 × 0,0004 = **0,2 kg**.\n\n2. Rigidité (module d'Young) : **acier** (210 GPa) > **aluminium** (70 GPa) > **bois** (10 GPa). À forme égale, l'acier se déforme le moins, mais c'est aussi le plus lourd.\n\n3. On regarde la **conductivité thermique λ**. La poignée ne doit pas brûler la main : il faut un **isolant**, donc un λ faible. Le **bois** (λ = 0,15) conduit environ 2 600 fois moins la chaleur que le cuivre : c'est le bon choix.\n\n4. Le fond doit bien conduire la chaleur : on choisit un λ élevé, le **cuivre** (390) — l'acier (50) est aussi acceptable. Pour une casserole, compte aussi la **résistance à la corrosion** (contact avec l'eau et les aliments), la tenue à l'**humidité** et à la chaleur ou au **feu**."
+    },
+    {
+      "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+      "difficulte": 3,
+      "titre": "Choisir le matériau d'un plateau de trottinette",
+      "consigne": "Suis la démarche de choix du cours, fais les calculs demandés et argumente ta décision finale.",
+      "enonce": "**Situation.** Une entreprise conçoit le plateau d'une trottinette électrique de ville, utilisée dehors, sous la pluie. Le plateau doit être **léger et rigide**, supporter le poids d'un adulte, rester bon marché et être recyclable en fin de vie.\n\n| Matériau | ρ (kg/m³) | E (GPa) |\n| Acier | 7 850 | 210 |\n| Aluminium | 2 700 | 70 |\n| Bois | 500 | 10 |\n| PLA | 1 240 | 3,5 |\n\n1. Traduis la fonction du plateau en exigences sur le matériau.\n2. Calcule l'indice E / ρ de chaque matériau, en MN·m/kg (1 GPa = 1 000 MN/m²). Classe-les.\n3. À volume égal (0,0006 m³), calcule la masse d'un plateau en acier et en aluminium.\n4. Élimine les candidats qui ne conviennent pas, en justifiant par au moins une propriété pour chacun.\n5. Choisis entre les candidats restants en intégrant l'usage dehors, le coût et l'environnement. Quel traitement proposes-tu ?",
+      "bareme": [
+        { "critere": "Exigences traduites : léger, rigide, résistant, tenue à l'humidité, coût, recyclable", "points": 3 },
+        { "critere": "Indices justes : acier ≈ 26,8, aluminium ≈ 25,9, bois 20, PLA ≈ 2,8, et classement", "points": 5 },
+        { "critere": "Masses à volume égal : 4,71 kg et 1,62 kg", "points": 3 },
+        { "critere": "Éliminations justifiées (PLA peu rigide et sensible à la chaleur, bois sensible à l'humidité)", "points": 4 },
+        { "critere": "Choix final argumenté sur plusieurs critères, avec un traitement (anodisation) et l'intérêt de l'aluminium recyclé", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Exigences : **léger** (ρ faible), **rigide** (E élevé, grand E / ρ), **résistant** (ne pas céder sous un adulte : Re suffisante), **tenue à l'humidité et à la corrosion** (usage dehors), **coût** modéré, **recyclable**.\n\n2. E / ρ (1 GPa = 1 000 MN/m², donc E / ρ en MN·m/kg = E en GPa × 1 000 / ρ) :\n- Acier : 210 000 / 7 850 ≈ **26,8** ;\n- Aluminium : 70 000 / 2 700 ≈ **25,9** ;\n- Bois : 10 000 / 500 = **20** ;\n- PLA : 3 500 / 1 240 ≈ **2,8**.\nClassement : acier ≈ aluminium > bois >> PLA.\n\n3. Acier : 7 850 × 0,0006 = **4,71 kg**. Aluminium : 2 700 × 0,0006 = **1,62 kg**.\n\n4. **PLA** éliminé : indice environ dix fois plus faible (peu rigide), polymère peu résistant à la chaleur. **Bois** éliminé : sensible à l'**humidité**, propriétés variables, alors que le plateau est utilisé sous la pluie.\n\n5. Acier et aluminium ont une rigidité **par kilo** presque identique ; à volume égal, l'aluminium est près de trois fois plus léger (on gagne en légèreté avec des formes plus épaisses). L'acier est moins cher mais lourd et sensible à la corrosion. Choix attendu : l'**aluminium**, léger et excellent au recyclage, **anodisé** pour résister à la corrosion ; de préférence de l'**aluminium recyclé**, pour réduire l'énergie de fabrication. Un choix de l'acier protégé contre la corrosion, justifié par le coût, est accepté s'il est argumenté."
+    },
+    {
+      "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+      "difficulte": 1,
+      "titre": "Préparer un essai en sécurité",
+      "consigne": "Réponds à chaque question avec précision.",
+      "enonce": "**Situation.** Anaïs doit tester le moteur d'un prototype de volet roulant.\n\n1. Remets dans l'ordre du cours les éléments d'un protocole d'essai : le montage, les consignes de sécurité, l'objectif, le traitement des résultats, les conditions, le mode opératoire.\n2. Cite trois règles de sécurité à respecter pendant l'essai.\n3. Parmi ces écritures, laquelle est correcte ? Pourquoi ? « v = 0,32 m/s environ » ; « v = 0,32 ± 0,01 m/s » ; « v ≈ 0,3 ».\n4. Pourquoi répète-t-on une mesure plusieurs fois ?",
+      "bareme": [
+        { "critere": "Ordre juste : objectif, montage, conditions, mode opératoire, sécurité, traitement", "points": 6 },
+        { "critere": "Trois règles de sécurité pertinentes", "points": 6 },
+        { "critere": "Écriture correcte identifiée : valeur ± incertitude et unité", "points": 4 },
+        { "critere": "Répétition : réduire l'influence des erreurs aléatoires (moyenne)", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **L'objectif → le montage → les conditions → le mode opératoire → les consignes de sécurité → le traitement des résultats**.\n\n2. Règles possibles : **couper l'alimentation avant de câbler** ; vérifier le montage avant de mettre sous tension ; porter les équipements adaptés (lunettes, gants selon le risque) ; protéger les pièces en mouvement ; connaître l'emplacement de l'**arrêt d'urgence** ; augmenter progressivement tension et charge.\n\n3. **« v = 0,32 ± 0,01 m/s »** : elle donne la valeur, l'**incertitude** et l'**unité**. Les deux autres n'ont pas d'incertitude (et la dernière pas d'unité).\n\n4. Toute mesure est entachée d'erreurs ; répéter la mesure et prendre la **moyenne** réduit l'influence des **erreurs aléatoires**."
+    },
+    {
+      "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+      "difficulte": 2,
+      "titre": "Le volet roulant est-il conforme ?",
+      "consigne": "Détaille les calculs, puis rédige une conclusion d'essai complète.",
+      "enonce": "**Situation.** Exigence du cahier des charges : « le volet doit se lever complètement en moins de 20 s ». La simulation annonce **15 s**. On réalise cinq essais sur le prototype :\n\n| Essai | 1 | 2 | 3 | 4 | 5 |\n| Durée (s) | 17,2 | 17,8 | 17,5 | 17,4 | 17,6 |\n\n1. Calcule la durée moyenne.\n2. Calcule l'écart 3 et conclus sur la conformité du volet.\n3. Calcule l'écart 2 en pourcentage (par rapport à la valeur simulée). Que révèle-t-il ? Le volet est-il mauvais pour autant ?\n4. Rédige la conclusion de l'essai : réponse chiffrée, explication de l'écart et amélioration.",
+      "bareme": [
+        { "critere": "Moyenne : 87,5 / 5 = 17,5 s", "points": 4 },
+        { "critere": "Écart 3 : 17,5 s < 20 s, volet conforme", "points": 4 },
+        { "critere": "Écart 2 ≈ 16,7 %, modèle optimiste à corriger, produit pas mauvais pour autant", "points": 6 },
+        { "critere": "Conclusion complète : réponse chiffrée, explication, amélioration", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Somme : 17,2 + 17,8 + 17,5 + 17,4 + 17,6 = 87,5 s. Moyenne : 87,5 / 5 = **17,5 s**.\n\n2. L'écart 3 compare le réel mesuré au cahier des charges : 17,5 s < 20 s. Le volet est **conforme**, avec 2,5 s de marge.\n\n3. Écart 2 = (17,5 − 15) / 15 = 2,5 / 15 ≈ **0,167, soit environ 17 %**. Il compare le modèle et le réel : le modèle est **optimiste**, ses hypothèses sont imparfaites (frottements dans les coulisses ou masse du tablier sous-estimés, par exemple). Cela ne veut **pas** dire que le volet est mauvais : c'est le **modèle** qui doit être corrigé.\n\n4. Exemple de conclusion : « Sur cinq essais, le volet se lève en 17,5 s en moyenne, en dessous des 20 s exigés : il est conforme. La simulation annonçait 15 s : l'écart d'environ 17 % s'explique sans doute par des frottements sous-estimés dans le modèle. Nous proposons de recaler le coefficient de frottement du modèle pour qu'il serve aux prochaines conceptions. »"
+    },
+    {
+      "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+      "difficulte": 3,
+      "titre": "La pompe de l'arrosage n'atteint pas son débit",
+      "consigne": "Exploite les trois écarts, tiens compte de l'incertitude et rédige une conclusion argumentée.",
+      "enonce": "**Situation.** Exigence : « la pompe doit débiter **au moins 12 L/min** ». Le modèle de simulation annonce **13 L/min**. Cinq mesures sur le prototype :\n\n| Essai | 1 | 2 | 3 | 4 | 5 |\n| Débit (L/min) | 11,6 | 11,9 | 11,7 | 11,8 | 12,0 |\n\nL'équipe estime l'incertitude de mesure à **± 0,2 L/min**.\n\n1. Calcule le débit moyen et écris le résultat sous la forme du cours.\n2. Étudie l'écart 1 : la solution répondait-elle au besoin sur le papier ?\n3. Étudie l'écart 3 en tenant compte de l'incertitude : le produit est-il conforme ? Justifie.\n4. Calcule l'écart 2 en pourcentage, par rapport à la valeur simulée. Qu'en déduis-tu sur le modèle ?\n5. Distingue ce que l'équipe doit faire pour le modèle et pour le produit. Précise si le contrôle du débit de la pompe seule relève de la vérification, de la validation ou de la qualification.\n6. Rédige la conclusion de l'essai.",
+      "bareme": [
+        { "critere": "Moyenne 11,8 L/min, résultat écrit 11,8 ± 0,2 L/min", "points": 3 },
+        { "critere": "Écart 1 : 13 ≥ 12, la solution répondait au besoin sur le papier", "points": 3 },
+        { "critere": "Écart 3 : intervalle 11,6–12,0, exigence non garantie, non conforme", "points": 5 },
+        { "critere": "Écart 2 ≈ 9 %, modèle optimiste à recaler", "points": 4 },
+        { "critere": "Actions distinctes modèle / produit, vérification identifiée, conclusion complète", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Somme : 11,6 + 11,9 + 11,7 + 11,8 + 12,0 = 59,0. Moyenne : 59,0 / 5 = **11,8 L/min**. Résultat : **Qv = 11,8 ± 0,2 L/min**.\n\n2. **Écart 1** (cahier des charges / modèle) : le modèle annonce 13 L/min ≥ 12 L/min : sur le papier, la solution **répondait au besoin**.\n\n3. **Écart 3** (réel / cahier des charges) : la valeur vraie se situe entre 11,6 et 12,0 L/min. Même la borne haute atteint à peine 12 L/min : l'exigence « au moins 12 L/min » **n'est pas garantie**. Le produit est **non conforme**.\n\n4. **Écart 2** = (11,8 − 13) / 13 = −1,2 / 13 ≈ **−0,092, soit environ 9 %** en dessous. Le modèle est **optimiste** : une hypothèse est fausse (pertes ou frottements dans la pompe et les tuyaux sous-estimés, par exemple). Il faut le **recaler**.\n\n5. Pour le **modèle** : recaler le paramètre en cause pour qu'il colle aux mesures et serve aux prochaines conceptions. Pour le **produit** : modifier la solution (pompe plus puissante, tuyaux de plus grand diamètre…), puis refaire les essais. Contrôler le débit de la pompe seule par rapport à sa spécification, c'est **vérifier**.\n\n6. Exemple : « Sur cinq essais, la pompe débite 11,8 ± 0,2 L/min : l'exigence de 12 L/min n'est pas garantie, le produit n'est pas conforme. Le modèle annonçait 13 L/min, soit un écart d'environ 9 %, sans doute dû à des pertes sous-estimées. Nous proposons de recaler le modèle, puis de choisir une pompe plus puissante et de refaire les essais. »"
+    }
+  ]
+}

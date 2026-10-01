@@ -77,6 +77,27 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   fiscalite: Receipt,
   entrepreneuriat: Rocket,
   'figures-historiques': Crown,
+  // La voie technologique (migration 383) : l'icône de la discipline dont
+  // chaque enseignement relève.
+  'philosophie-techno': Brain,
+  'maths-techno': Calculator,
+  'histoire-geo-techno': Landmark,
+  'sciences-gestion-numerique': LineChart,
+  management: TrendingUp,
+  'droit-economie': Scale,
+  'management-sgn': TrendingUp,
+  'innovation-technologique': Lightbulb,
+  'ingenierie-dd': Cog,
+  i2d: Cog,
+  'physique-chimie-maths': Atom,
+  'physique-chimie-sante': Atom,
+  'biologie-physiopathologie': Microscope,
+  'sciences-sanitaires-sociales': Scale,
+  'chimie-biologie-physiopathologie': Microscope,
+  'biochimie-biologie': Leaf,
+  biotechnologies: FlaskConical,
+  spcl: FlaskConical,
+  'biochimie-biologie-biotechnologie': Microscope,
 }
 
 export function subjectIcon(slug: string): LucideIcon {
@@ -338,6 +359,28 @@ const VIGNETTE_ALIASES: Record<string, string> = {
   hlp: 'philosophie',
   'llcer-anglais': 'anglais',
   'finances-personnelles': 'economie',
+  // La voie technologique (migration 383) : ses enseignements propres portent
+  // le dessin de la discipline dont ils relèvent. Même logique : ce sont les
+  // mêmes études, sous l'intitulé de la série.
+  'philosophie-techno': 'philosophie',
+  'maths-techno': 'maths',
+  'histoire-geo-techno': 'histoire-geo',
+  'sciences-gestion-numerique': 'economie',
+  management: 'economie',
+  'droit-economie': 'economie',
+  'management-sgn': 'economie',
+  'innovation-technologique': 'technologie',
+  'ingenierie-dd': 'technologie',
+  i2d: 'technologie',
+  'physique-chimie-maths': 'physique-chimie',
+  'physique-chimie-sante': 'physique-chimie',
+  'biologie-physiopathologie': 'svt',
+  'sciences-sanitaires-sociales': 'ses',
+  'chimie-biologie-physiopathologie': 'svt',
+  'biochimie-biologie': 'svt',
+  biotechnologies: 'svt',
+  spcl: 'physique-chimie',
+  'biochimie-biologie-biotechnologie': 'svt',
 }
 
 export function subjectVignette(slug: string): string | undefined {

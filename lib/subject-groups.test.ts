@@ -21,13 +21,17 @@ function sub(
 }
 
 describe('usesTrackGroups', () => {
-  it('ne sous-groupe ni au primaire ni dans la voie technologique', () => {
-    // La techno a des spécialités, mais elles dépendent de sa série (STMG,
-    // STI2D…) que le profil ne demande pas encore : le catalogue ne lui en
-    // déclare aucune. La sous-grouper afficherait « Tronc commun » seul,
-    // au-dessus de deux sections vides.
-    for (const g of ['CP', 'CM2', '1re techno', 'Tle techno']) {
+  it('ne sous-groupe pas au primaire', () => {
+    for (const g of ['CP', 'CM2']) {
       expect(usesTrackGroups(g), g).toBe(false)
+    }
+  })
+
+  it('sous-groupe la voie technologique, qui a ses spécialités (migration 383)', () => {
+    // STMG, STI2D, ST2S, STL : leurs spécialités se rangent sous
+    // « Spécialités », à part du tronc commun, comme dans la voie générale.
+    for (const g of ['1re techno', 'Tle techno']) {
+      expect(usesTrackGroups(g), g).toBe(true)
     }
   })
 

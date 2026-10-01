@@ -1,0 +1,370 @@
+{
+  "niveau": "Tle",
+  "matiere": "chimie-biologie-physiopathologie",
+  "sujets": [
+    {
+      "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+      "difficulte": 1,
+      "titre": "Bactérie ou virus ?",
+      "consigne": "Réponds à chaque question par des phrases précises, avec le vocabulaire du cours.",
+      "enonce": "**Situation.** Le même jour, Jade a une **angine à streptocoque** (une bactérie) et son frère Tom a la **grippe** (un virus).\n\n1. Compare une bactérie et un virus : taille, organisation, mode de reproduction.\n2. Le médecin prescrit un antibiotique à Jade mais pas à Tom. Explique pourquoi un antibiotique n'a aucune prise sur un virus.\n3. Cite deux autres catégories d'agents pathogènes, avec un exemple de maladie pour chacune.",
+      "bareme": [
+        { "critere": "Comparaison juste : taille (µm / nm), cellule procaryote contre acide nucléique dans une capside, division contre reproduction dans une cellule hôte", "points": 10 },
+        { "critere": "Virus sans paroi, sans ribosome ni métabolisme propre : cibles des antibiotiques absentes", "points": 6 },
+        { "critere": "Deux catégories justes avec un exemple (champignon, parasite, prion)", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. | | Bactérie | Virus |\n| Taille | Environ 1 à 10 µm (microscope optique) | Environ 20 à 300 nm (microscope électronique) |\n| Organisation | **Cellule procaryote** : paroi, membrane, cytoplasme, ribosomes, ADN libre sans noyau | **Pas une cellule** : un acide nucléique (ADN ou ARN) dans une **capside** protéique, parfois une enveloppe |\n| Reproduction | Seule, par **division** : une bactérie en donne deux | Seulement **dans une cellule hôte** : parasite intracellulaire obligatoire |\n2. Un antibiotique vise des structures bactériennes (paroi, ribosomes, ADN, membrane) absentes des cellules humaines. Un virus n'a **ni paroi, ni ribosome, ni métabolisme propre** : l'antibiotique n'a **aucune prise** sur lui. La grippe de Tom ne se soigne donc pas par antibiotique.\n3. Par exemple : **champignons** (candidose, pied d'athlète) ; **parasites** (paludisme, gale, ténia) ; **prions** (maladie de Creutzfeldt-Jakob)."
+    },
+    {
+      "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+      "difficulte": 2,
+      "titre": "L'antibiogramme de Mme Blanchard",
+      "consigne": "Exploite le document, compare les valeurs aux seuils et justifie le choix du traitement.",
+      "enonce": "**Situation.** Mme Blanchard a une infection urinaire. Le laboratoire isole la bactérie et réalise un antibiogramme.\n\n**Document – Résultats et seuils fournis par le laboratoire**\n\n| L'antibiotique (famille, cible) | Diamètre mesuré | Sensible si | Résistante si |\n| Amoxicilline (pénicilline, paroi) | 10 mm | ≥ 19 mm | < 16 mm |\n| Gentamicine (aminoside, ribosomes) | 20 mm | ≥ 18 mm | < 15 mm |\n| Ciprofloxacine (quinolone, ADN) | 16 mm | ≥ 25 mm | < 22 mm |\n\n1. Décris brièvement le principe de l'antibiogramme. Que représente le diamètre mesuré ?\n2. Classe la souche comme sensible ou résistante à chaque antibiotique, en justifiant par les valeurs.\n3. Quel antibiotique le médecin doit-il choisir ? Explique comment il agit sur la bactérie.\n4. Dans de bonnes conditions, cette bactérie se divise toutes les 20 minutes. Combien de bactéries une seule bactérie donne-t-elle en 3 heures ? Qu'en conclus-tu sur l'intérêt d'un traitement adapté rapidement ?",
+      "bareme": [
+        { "critere": "Principe : culture sur gélose, disques d'antibiotiques, incubation, zone d'inhibition si la bactérie est sensible", "points": 4 },
+        { "critere": "Classement justifié : résistante à l'amoxicilline (10 < 16) et à la ciprofloxacine (16 < 22), sensible à la gentamicine (20 ≥ 18)", "points": 6 },
+        { "critere": "Choix de la gentamicine, qui agit sur les ribosomes (synthèse des protéines)", "points": 5 },
+        { "critere": "9 divisions en 3 h : 2⁹ = 512 bactéries, conclusion sur la rapidité de multiplication", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. On étale la bactérie de la patiente sur une **gélose**, on dépose des **disques** imprégnés de différents antibiotiques, on **incube**. Autour d'un disque, une **zone d'inhibition** (sans bactéries) se forme si la bactérie est sensible : son diamètre est comparé à des valeurs critiques.\n2. - Amoxicilline : 10 mm < 16 mm : souche **résistante**.\n- Gentamicine : 20 mm ≥ 18 mm : souche **sensible**.\n- Ciprofloxacine : 16 mm < 22 mm : souche **résistante**.\n3. Le médecin choisit la **gentamicine**, seul antibiotique auquel la souche est sensible. C'est un **aminoside** qui cible les **ribosomes** : il bloque la **synthèse des protéines** de la bactérie. L'antibiogramme guide ainsi le choix du traitement le plus efficace.\n4. 3 h = 180 min = 9 × 20 min : **9 divisions**. Une bactérie donne 2⁹ = **512 bactéries**. La population augmente très vite : un antibiotique inefficace (ici l'amoxicilline) laisserait l'infection progresser ; il faut un traitement **adapté** et **rapide**."
+    },
+    {
+      "chapitre": "baf14f01-e74c-54bb-a10d-5b1ff44bb209",
+      "difficulte": 3,
+      "titre": "Les antibiotiques, c'est pas automatique",
+      "consigne": "Exploite les données, fais le calcul demandé, puis rédige une argumentation structurée qui s'appuie sur le mécanisme de sélection.",
+      "enonce": "**Document 1 – Une population bactérienne.** Dans une infection, un patient héberge **10⁹ bactéries** d'une même espèce. Par **mutation**, environ **une bactérie sur 10⁷** est résistante à l'antibiotique prescrit. Les bactéries se divisent toutes les 20 minutes.\n\n**Document 2 – Deux comportements**\n\n> Karim a une grippe. Il prend les antibiotiques qui restaient à sa sœur « pour guérir plus vite ».\n> Anaïs se sent mieux au troisième jour d'un traitement de sept jours et arrête ses antibiotiques.\n\n1. Combien de bactéries résistantes le patient du document 1 héberge-t-il au départ ? Que deviennent les bactéries sensibles et les résistantes au cours du traitement ?\n2. S'il ne reste que les bactéries résistantes et qu'elles se divisent sans frein, combien seront-elles au bout de 4 heures ? Conclus sur l'évolution de la population.\n3. Distingue résistance naturelle et résistance acquise. Par quels deux mécanismes une souche acquiert-elle une résistance ?\n4. Analyse les comportements de Karim et d'Anaïs : en quoi chacun est-il inutile ou dangereux ?\n5. Explique pourquoi une infection nosocomiale à bactérie résistante est particulièrement grave.",
+      "bareme": [
+        { "critere": "10⁹ ÷ 10⁷ = 100 résistantes ; sensibles tuées, résistantes survivantes", "points": 4 },
+        { "critere": "12 divisions en 4 h : 100 × 2¹² = 409 600 ≈ 4 × 10⁵, population devenue résistante (sélection)", "points": 5 },
+        { "critere": "Naturelle (toute l'espèce) contre acquise (une souche), par mutation ou transfert de gènes (plasmides)", "points": 4 },
+        { "critere": "Karim : grippe virale, antibiotique inutile et sélection de résistances, médicament d'un autre ; Anaïs : arrêt de soi-même", "points": 5 },
+        { "critere": "Nosocomiale : contractée en établissement de santé, peu d'antibiotiques efficaces restants", "points": 2 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. 10⁹ ÷ 10⁷ = **100 bactéries résistantes** au départ. Sous traitement, les bactéries **sensibles meurent** ; les rares **résistantes survivent**.\n2. 4 h = 240 min = 12 × 20 min : **12 divisions**. 100 × 2¹² = 100 × 4 096 = **409 600**, soit environ **4 × 10⁵** bactéries, toutes résistantes. L'antibiotique n'a pas créé la résistance : il a **sélectionné** les bactéries résistantes, qui se multiplient et forment une **population résistante**.\n3. - **Résistance naturelle** : **toutes les souches** d'une espèce échappent à l'antibiotique (par exemple une bactérie sans paroi face aux pénicillines).\n- **Résistance acquise** : **une souche** devient résistante, par **mutation** de son ADN ou par **transfert de gènes** d'une bactérie à une autre, souvent portés par des **plasmides**.\n4. - **Karim** : la grippe est due à un **virus**, sur lequel l'antibiotique n'a **aucune prise** ; il ne guérira pas plus vite. En revanche, il expose ses propres bactéries à l'antibiotique et favorise la **sélection de souches résistantes**. De plus, il ne faut **jamais prendre les antibiotiques d'un autre**.\n- **Anaïs** : elle **arrête de soi-même** un traitement prescrit ; il faut aller au bout de la prescription.\nCes gestes justifient la campagne « Les antibiotiques, c'est pas automatique ».\n5. Une infection **nosocomiale** est contractée lors d'un séjour dans un **établissement de santé**, chez des patients souvent fragiles ; si la bactérie est résistante, il reste **peu d'antibiotiques efficaces** pour la traiter."
+    },
+    {
+      "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+      "difficulte": 1,
+      "titre": "Les marqueurs du soi",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Définis le **soi** et le **non-soi**. Donne un exemple de « soi modifié ».\n2. Recopie et complète :\n\n| Le marqueur | Où le trouve-t-on ? |\n| Molécules du CMH de classe I | … |\n| Molécules du CMH de classe II | … |\n| Antigènes des groupes sanguins | … |\n\n3. Définis **antigène** et **épitope**.\n4. Pourquoi faut-il chercher un donneur compatible avant une greffe ?",
+      "bareme": [
+        { "critere": "Soi toléré, non-soi reconnu comme étranger ou soi modifié (cellule infectée ou cancéreuse)", "points": 5 },
+        { "critere": "CMH I : toutes les cellules nucléées ; CMH II : macrophages, cellules dendritiques, lymphocytes B ; groupes sanguins : globules rouges", "points": 7 },
+        { "critere": "Antigène et épitope correctement définis", "points": 5 },
+        { "critere": "Greffe : marqueurs du soi différents reconnus comme non-soi, risque de rejet", "points": 3 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le **soi** est l'ensemble des molécules propres à un individu, que son système immunitaire **tolère**. Le **non-soi** est tout ce qui est reconnu comme **étranger** (micro-organismes, cellules d'un autre individu) ou comme un **soi modifié** : par exemple une **cellule infectée** par un virus ou une **cellule cancéreuse**.\n2. - CMH de classe I (système HLA) : à la surface de **toutes les cellules nucléées**.\n- CMH de classe II : sur certaines cellules immunitaires, **macrophages, cellules dendritiques, lymphocytes B**.\n- Antigènes des groupes sanguins (A, B, Rhésus) : à la surface des **globules rouges**.\n3. Un **antigène** est une molécule reconnue comme étrangère, capable de déclencher une réponse immunitaire. Un **épitope** (déterminant antigénique) est la petite partie de l'antigène effectivement reconnue.\n4. Les marqueurs du soi du donneur, s'ils sont différents, sont reconnus comme **non-soi** par le receveur : le greffon est attaqué, c'est le **rejet de greffe**. Un donneur compatible limite ce risque."
+    },
+    {
+      "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+      "difficulte": 2,
+      "titre": "L'écharde d'Ethan",
+      "consigne": "Relie chaque observation à son mécanisme, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Ethan s'est planté une écharde dans le doigt en jardinant. Quelques heures plus tard, le doigt est **rouge**, **chaud**, **gonflé** et **douloureux**. Le lendemain, un peu de pus apparaît : il contient de nombreux leucocytes et des débris de bactéries.\n\n1. Quelle barrière naturelle l'écharde a-t-elle franchie ? De quel type de barrière s'agit-il ?\n2. Nomme la réaction déclenchée et explique chacun des quatre symptômes.\n3. Comment les leucocytes arrivent-ils jusqu'au foyer infectieux ?\n4. Décris les étapes de la phagocytose et nomme les deux principaux phagocytes.\n5. Cette réaction est-elle spécifique des bactéries apportées par l'écharde ? Justifie.",
+      "bareme": [
+        { "critere": "Peau (kératine) franchie, barrière mécanique", "points": 2 },
+        { "critere": "Réaction inflammatoire ; rougeur et chaleur par vasodilatation, œdème par perméabilité des capillaires, douleur par médiateurs et compression", "points": 7 },
+        { "critere": "Diapédèse : les leucocytes quittent les vaisseaux", "points": 3 },
+        { "critere": "Adhésion, ingestion, digestion par les enzymes des lysosomes, rejet des débris ; neutrophiles et macrophages", "points": 6 },
+        { "critere": "Non spécifique : immunité innée, rapide", "points": 2 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'écharde a franchi la **peau**, dont la **kératine** forme une barrière **mécanique**.\n2. C'est la **réaction inflammatoire** (immunité innée) :\n- **Rougeur et chaleur** : **vasodilatation**, plus de sang arrive ;\n- **Gonflement (œdème)** : les capillaires deviennent **plus perméables**, du plasma passe dans les tissus ;\n- **Douleur** : **médiateurs chimiques** (histamine, prostaglandines) et **compression** des terminaisons nerveuses par l'œdème.\n3. Les leucocytes **quittent les vaisseaux** en se faufilant entre les cellules de leur paroi : c'est la **diapédèse** ; ils rejoignent le foyer infectieux.\n4. Phagocytose : **adhésion** du phagocyte à la bactérie → **ingestion** (la bactérie est enfermée dans une vésicule) → **digestion** par les enzymes des **lysosomes** → **rejet des débris** (et présentation de fragments d'antigène aux lymphocytes). Principaux phagocytes : **polynucléaires neutrophiles** et **macrophages**. Le pus est fait de ces leucocytes et des débris.\n5. Non : la réaction inflammatoire est **non spécifique**. Elle se déclenche de la même façon quel que soit le pathogène, en quelques minutes à quelques heures : c'est l'**immunité innée**."
+    },
+    {
+      "chapitre": "ca087cd7-d740-5423-8da9-642ebee4035d",
+      "difficulte": 3,
+      "titre": "La grippe de Mme Moreau",
+      "consigne": "Analyse le cas en reliant les observations au virus et aux défenses de l'organisme ; rédige des réponses argumentées.",
+      "enonce": "**Situation.** En janvier, Mme Moreau, 45 ans, se réveille avec une **fièvre à 39,5 °C**, des **frissons**, des **courbatures**, des **maux de tête**, une **fatigue intense** et une **toux sèche**. Trois collègues de son bureau ont eu les mêmes symptômes la semaine précédente. Son médecin diagnostique une grippe.\n\n**Examen** : leucocytes 6 500 par mm³ (valeurs de référence : 4 000 à 10 000 par mm³).\n\n1. Présente l'agent de la grippe : nature, matériel génétique, protéines de surface.\n2. Comment Mme Moreau a-t-elle probablement été contaminée ? Quelles cellules le virus infecte-t-il ?\n3. Donne le terme médical pour sa fatigue intense. Comment expliquer que la fièvre et les courbatures ne soient pas causées directement par le virus ?\n4. Interprète le résultat de l'examen sanguin.\n5. Mme Moreau réclame des antibiotiques. Que lui répond le médecin ? Dans quel cas un antibiotique pourrait-il être utile ?\n6. Cite deux défenses de la première barrière des voies respiratoires qui tentent d'arrêter le virus, en précisant leur type.",
+      "bareme": [
+        { "critere": "Virus influenza, à ARN, enveloppé, protéines H et N", "points": 3 },
+        { "critere": "Contamination respiratoire (gouttelettes, aérosols) et par les mains au bureau ; cellules épithéliales des voies respiratoires", "points": 4 },
+        { "critere": "Asthénie ; fièvre et courbatures dues à la réponse immunitaire ; leucocytes normaux (6 500, entre 4 000 et 10 000)", "points": 6 },
+        { "critere": "Maladie virale : antibiotique inutile, traitement symptomatique ; utile seulement en cas de surinfection bactérienne", "points": 4 },
+        { "critere": "Deux défenses justes : mucus qui piège et cils qui balaient (mécaniques), lysozyme (chimique)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La grippe est due au **virus influenza**, un **virus à ARN enveloppé**, qui porte deux protéines de surface : l'**hémagglutinine H** et la **neuraminidase N**.\n2. Plusieurs collègues étaient malades : elle a été contaminée par **voie respiratoire** (gouttelettes, aérosols émis en toussant ou en parlant) et/ou par les **mains** (surfaces partagées). Le virus infecte les **cellules épithéliales** des voies respiratoires.\n3. La fatigue intense s'appelle l'**asthénie**. La fièvre et les courbatures sont des **effets de la réponse immunitaire elle-même** : ce sont les défenses de l'organisme contre le virus qui les provoquent.\n4. 6 500 par mm³ est compris entre 4 000 et 10 000 : le nombre de **leucocytes est normal**.\n5. La grippe est une maladie **virale** : les antibiotiques n'ont aucune prise sur un virus, le traitement est surtout **symptomatique** (repos, contre la fièvre). Un antibiotique ne servirait qu'en cas de **surinfection bactérienne** (par exemple une pneumonie bactérienne compliquant la grippe).\n6. - **Mucus** qui piège les particules et **cils** qui les balaient vers l'extérieur : barrière **mécanique**.\n- **Lysozyme** de la salive : barrière **chimique**."
+    },
+    {
+      "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+      "difficulte": 1,
+      "titre": "L'usine à anticorps",
+      "consigne": "Réponds à chaque question par des phrases précises ; tu peux t'aider d'un petit schéma légendé pour la question 2.",
+      "enonce": "1. Compare l'ultrastructure d'un lymphocyte B et celle d'un plasmocyte (cytoplasme, réticulum endoplasmique granuleux, appareil de Golgi). Relie ces différences à la fonction du plasmocyte.\n2. Décris la structure d'une immunoglobuline G : forme, chaînes, paratopes, pied.\n3. Explique ce qu'est la **neutralisation** d'un virus par un anticorps.",
+      "bareme": [
+        { "critere": "Plasmocyte : cytoplasme abondant, REG et Golgi très développés, organites de fabrication et d'export des anticorps", "points": 8 },
+        { "critere": "IgG en Y, deux chaînes lourdes et deux légères, ponts disulfure, deux paratopes identiques au bout des bras, pied à sites de fixation", "points": 8 },
+        { "critere": "Neutralisation : fixation sur l'antigène, complexe immun, virus qui ne peut plus agir", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. | | Lymphocyte B | Plasmocyte |\n| Cytoplasme | Peu abondant | **Abondant** |\n| REG | Peu développé | **Très développé** |\n| Golgi | Peu développé | **Très développé** |\nLe réticulum endoplasmique granuleux et l'appareil de Golgi **fabriquent et exportent des protéines** : le plasmocyte, qui sécrète des **anticorps en grande quantité**, a l'ultrastructure d'une **usine à anticorps**.\n2. Une IgG a une forme en **Y** : **quatre chaînes**, deux **lourdes** et deux **légères**, reliées par des **ponts disulfure**. Au bout de chaque bras, les parties **variables** forment deux **paratopes identiques**, qui fixent l'épitope. Le **pied** (fragment constant) porte le **site de fixation du complément** et le **site de fixation au phagocyte**.\n3. L'anticorps se fixe sur l'antigène du virus et forme un **complexe immun** : le virus **ne peut plus agir** (il ne peut plus se fixer sur ses cellules cibles). C'est la **neutralisation**."
+    },
+    {
+      "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+      "difficulte": 2,
+      "titre": "Pourquoi un rappel de vaccin ?",
+      "consigne": "Exploite le document : décris avec des valeurs, compare, puis interprète avec tes connaissances.",
+      "enonce": "**Document – Concentration d'anticorps (unités arbitraires) chez Lou après deux injections du même vaccin**\n\n| Jour | 0 | 7 | 14 | 30 | 60 | 63 | 67 | 90 |\n| Anticorps | 0 | 2 | 10 | 3 | 1 | 80 | 200 | 150 |\n\nLa première injection a lieu au jour 0, la seconde (le rappel) au jour 60.\n\n1. Décris et compare les deux réponses : délai, quantité maximale d'anticorps, durée.\n2. Nomme ces deux réponses et explique la différence entre elles. Quelles cellules sont responsables de cette différence ?\n3. Quelles cellules produisent les anticorps ? De quelles cellules dérivent-elles, et quel lymphocyte est nécessaire à leur activation ?\n4. Explique le principe de la vaccination à partir de ce document.",
+      "bareme": [
+        { "critere": "Description chiffrée : maximum 10 à J14 puis baisse ; maximum 200 à J67, quelques jours après le rappel, 20 fois plus, encore 150 à J90", "points": 6 },
+        { "critere": "Réponse primaire et secondaire ; plus rapide, plus forte, plus durable grâce aux cellules mémoire", "points": 5 },
+        { "critere": "Plasmocytes issus des lymphocytes B activés, avec l'aide des LT4 (interleukines)", "points": 5 },
+        { "critere": "Vaccination : réponse primaire sans la maladie, infection ultérieure combattue par une réponse secondaire", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. - **Première injection** : les anticorps apparaissent lentement (2 à J7), atteignent un **maximum faible de 10** vers J14, puis diminuent (3 à J30, 1 à J60).\n- **Rappel** : en **quelques jours** les anticorps atteignent 80 (J63) puis **200** (J67), soit **20 fois plus** qu'à la première réponse, et ils restent élevés (150 à J90).\n2. La première est la **réponse primaire** (premier contact), la seconde la **réponse secondaire** : **plus rapide**, **plus forte** et **plus durable**. Cette différence est due aux **cellules mémoire** (lymphocytes B mémoire notamment) formées lors du premier contact.\n3. Les anticorps sont sécrétés par les **plasmocytes**, issus de la **différenciation des lymphocytes B** activés et multipliés (expansion clonale). Leur activation nécessite l'aide des **lymphocytes T4 auxiliaires**, qui sécrètent des **interleukines**.\n4. Vacciner, c'est provoquer une **réponse primaire sans la maladie**, avec un antigène rendu inoffensif ; le rappel renforce la mémoire. En cas de vraie infection, la réponse sera **secondaire** : rapide et efficace, avant que la maladie s'installe."
+    },
+    {
+      "chapitre": "8634131c-57d5-5321-bde9-15cce95742ac",
+      "difficulte": 3,
+      "titre": "Le bilan sanguin de M. Rousseau",
+      "consigne": "Analyse les résultats, puis explique les mécanismes de défense en jeu dans des réponses rédigées et argumentées.",
+      "enonce": "**Situation.** M. Rousseau, 30 ans, a de la fièvre depuis cinq jours. Son médecin prescrit un bilan.\n\n**Document 1 – Numération formule sanguine** : polynucléaires neutrophiles normaux ; **lymphocytes nettement augmentés**.\n\n**Document 2 – Marqueur de l'inflammation** : protéine C réactive (CRP) augmentée.\n\n**Document 3 – Sérodiagnostic** du virus X : **IgM spécifiques présentes**, IgG spécifiques absentes.\n\n1. Que suggère la numération formule sanguine ? Que montre la CRP ?\n2. Que permet de conclure le sérodiagnostic ? Justifie.\n3. Le virus X se multiplie à l'intérieur de cellules. Explique comment elles sont éliminées : cellule effectrice, molécule du soi qui présente l'antigène, mode d'action.\n4. Pourquoi les anticorps seuls ne suffiraient-ils pas à éliminer ce virus ? Quel rôle gardent-ils ?\n5. Explique pourquoi le rôle du lymphocyte T4 est central dans ces deux réponses, en t'appuyant sur l'exemple du VIH.",
+      "bareme": [
+        { "critere": "Lymphocytes augmentés : orientation vers une infection virale ; CRP augmentée : inflammation", "points": 3 },
+        { "critere": "IgM spécifiques : infection récente (IgG seules = ancienne ou vaccination)", "points": 3 },
+        { "critere": "LT8 qui reconnaît le fragment d'antigène associé au CMH I, activé, devenu LT cytotoxique, cytolyse de la cellule infectée", "points": 6 },
+        { "critere": "Anticorps sans accès à l'intérieur des cellules ; neutralisation des virus libres, opsonisation", "points": 4 },
+        { "critere": "LT4 : reconnaissance via CMH II, interleukines activant LB et LT8 ; le VIH détruit les LT4 et effondre les défenses", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Une **augmentation des lymphocytes** oriente vers une **infection virale** (une augmentation des neutrophiles orienterait vers une infection bactérienne). La **CRP augmentée** signe une **inflammation** en cours (elle augmente en quelques heures).\n2. La présence d'**IgM spécifiques** du virus X signe une **infection récente** par ce virus ; des IgG seules auraient indiqué une infection ancienne ou une vaccination.\n3. C'est la **réponse à médiation cellulaire**. Le **LT8** spécifique reconnaît un **fragment d'antigène** viral associé au **CMH de classe I** à la surface de la cellule infectée. Activé grâce aux interleukines des LT4, il se multiplie et se différencie en **LT cytotoxique**, qui **détruit la cellule infectée** (**cytolyse**) : il libère des protéines qui **percent sa membrane** et déclenchent sa mort.\n4. Les anticorps agissent dans le plasma et les liquides : ils n'ont **pas accès à l'intérieur des cellules**, où le virus se multiplie. Ils gardent un rôle contre les **virus libres** : **neutralisation** (complexe immun), **opsonisation** (phagocytose facilitée), activation du complément.\n5. Le **LT4** reconnaît un fragment d'antigène présenté avec le **CMH II** par un macrophage ou une cellule dendritique, se multiplie et devient **LT auxiliaire** : ses **interleukines activent** à la fois les **lymphocytes B** (réponse humorale) et les **LT8** (réponse cellulaire). Sans LT4, **ni l'une ni l'autre** n'est efficace : c'est pourquoi le **VIH**, qui **détruit les LT4**, effondre les défenses."
+    },
+    {
+      "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+      "difficulte": 1,
+      "titre": "Des gamètes à la cellule-œuf",
+      "consigne": "Réponds à chaque question par des phrases précises et des nombres justes.",
+      "enonce": "1. Combien de chromosomes possède une cellule du corps humain ? Et un gamète ? Nomme le mécanisme qui permet ce passage.\n2. Recopie les étapes de la spermatogenèse dans l'ordre, en indiquant pour chaque cellule si elle possède 2n ou n chromosomes : spermatide, spermatogonie, spermatozoïde, spermatocyte II, spermatocyte I.\n3. Où a lieu la fécondation ? Vers quel jour a lieu la nidation, et où ?",
+      "bareme": [
+        { "critere": "Cellule diploïde 2n = 46, gamète haploïde n = 23, méiose", "points": 6 },
+        { "critere": "Ordre juste avec 2n/n : spermatogonie (2n), spermatocyte I (2n), spermatocyte II (n), spermatide (n), spermatozoïde (n)", "points": 8 },
+        { "critere": "Fécondation dans le tiers externe de la trompe (ampoule), nidation dans l'endomètre vers le 7e jour", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les cellules du corps sont **diploïdes** : **2n = 46** chromosomes. Les gamètes sont **haploïdes** : **n = 23**. C'est la **méiose** qui permet ce passage.\n2. **Spermatogonie (2n)** → **spermatocyte I (2n)** → **spermatocyte II (n)** → **spermatide (n)** → **spermatozoïde (n)**.\n3. La fécondation a lieu dans le **tiers externe de la trompe** (l'ampoule). La cellule-œuf se divise en migrant vers l'utérus, puis la **nidation** a lieu dans l'**endomètre** (muqueuse utérine), vers le **7e jour** après la fécondation."
+    },
+    {
+      "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+      "difficulte": 2,
+      "titre": "La première consultation de Léa",
+      "consigne": "Réponds en t'appuyant sur les données du dossier et sur le cours ; justifie chaque conseil.",
+      "enonce": "**Situation.** Léa est enceinte. Le premier jour de ses dernières règles était le **1er mars**. Sa **sérologie de la toxoplasmose est négative**. Elle fume quelques cigarettes par jour et boit « juste un verre de vin le week-end ».\n\n1. En quelle unité les médecins datent-ils la grossesse ? À quelle date aura lieu sa première échographie, prévue à **12 SA** ?\n2. Cite trois intérêts de l'échographie pour le suivi de la grossesse et trois avantages de cette technique.\n3. Que signifie une sérologie négative à la toxoplasmose ? Quelles précautions Léa doit-elle prendre, et quel suivi est prévu ?\n4. Présente les échanges au niveau du placenta (dans les deux sens). Les sangs maternel et fœtal se mélangent-ils ?\n5. Que conseilles-tu à Léa pour l'alcool et le tabac ? Justifie.",
+      "bareme": [
+        { "critere": "Semaines d'aménorrhée comptées depuis le 1er jour des dernières règles ; 12 SA = 84 jours, soit le 24 mai", "points": 4 },
+        { "critere": "Intérêts (datation, nombre d'embryons, croissance, morphologie) et avantages (sans rayonnement ionisant, non invasive, temps réel, peu coûteuse)", "points": 4 },
+        { "critere": "Sérologie négative = non immunisée : viande bien cuite, crudités lavées, pas de litière ; sérologie refaite chaque mois", "points": 4 },
+        { "critere": "Échanges justes dans les deux sens, sangs qui ne se mélangent pas", "points": 4 },
+        { "critere": "Zéro alcool (syndrome d'alcoolisation fœtale) et pas de tabac (petit poids, prématurité), passage à travers le placenta", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. En **semaines d'aménorrhée (SA)**, comptées depuis le **premier jour des dernières règles**. 12 SA = 12 × 7 = **84 jours** après le 1er mars : 30 jours jusqu'au 31 mars, 30 jusqu'au 30 avril, puis 24 jours : **le 24 mai**.\n2. Intérêts : **datation**, **nombre d'embryons**, **croissance**, **morphologie**, placenta. Avantages : **sans rayonnement ionisant**, **non invasive**, **en temps réel**, **peu coûteuse**.\n3. Aucun anticorps contre la toxoplasmose : Léa **n'est pas immunisée**. Précautions : **viande bien cuite**, **crudités bien lavées**, **pas de contact avec la litière du chat**. Sa sérologie sera **refaite chaque mois**.\n4. - Mère → fœtus : **dioxygène, glucose, acides aminés, eau, ions, anticorps (IgG)**.\n- Fœtus → mère : **dioxyde de carbone, urée** et autres déchets.\nLes deux sangs **ne se mélangent pas** : le sang fœtal circule dans les villosités baignées par le sang maternel.\n5. **Zéro alcool** : même un verre, car l'alcool **franchit le placenta** ; le **syndrome d'alcoolisation fœtale** est la première cause évitable de handicap mental de l'enfant. **Pas de tabac** : la nicotine et le monoxyde de carbone franchissent aussi le placenta, avec un risque de **petit poids** et de **prématurité**."
+    },
+    {
+      "chapitre": "187144dd-5550-51c0-9858-de1b06adec58",
+      "difficulte": 3,
+      "titre": "Le dépistage de la trisomie 21",
+      "consigne": "Analyse les documents, puis rédige des réponses argumentées qui pèsent les avantages et les risques de chaque examen.",
+      "enonce": "**Situation.** Mme Caron, 39 ans, est enceinte. L'échographie montre une clarté de la nuque augmentée ; associé aux marqueurs sanguins et à son âge, le calcul donne un risque élevé de trisomie 21. L'analyse de l'ADN fœtal dans son sang va dans le même sens. On lui propose une **amniocentèse**.\n\n**Document – Résultat du caryotype fœtal** : 47 chromosomes ; 22 paires d'autosomes, dont la paire 21 qui compte **trois** chromosomes ; deux chromosomes X.\n\n1. Explique la démarche de dépistage suivie avant l'amniocentèse. Pourquoi commence-t-on par ces examens ?\n2. Qu'est-ce qu'une amniocentèse et que permet-elle d'obtenir ? Le risque de fausse couche est de l'ordre de 0,5 à 1 % : sur 400 amniocentèses, combien de fausses couches cela représente-t-il ?\n3. Analyse le caryotype : quel est le diagnostic ? Quel est le sexe du fœtus ? Justifie.\n4. Sachant que la cellule-œuf provient de la fusion de deux gamètes, propose une explication chiffrée du nombre de chromosomes du fœtus.",
+      "bareme": [
+        { "critere": "Dépistage en étapes : calcul d'un risque (nuque, marqueurs, âge) puis ADN fœtal, examens sans risque pour le fœtus", "points": 4 },
+        { "critere": "Amniocentèse : ponction de liquide amniotique pour établir le caryotype ; 2 à 4 fausses couches sur 400", "points": 5 },
+        { "critere": "Diagnostic : trisomie 21 (trois chromosomes 21, 47 au total) ; fille (XX)", "points": 5 },
+        { "critere": "Explication : un gamète normal à 23 + un gamète anormal à 24 portant deux chromosomes 21 = 47", "points": 4 },
+        { "critere": "Rédaction argumentée pesant bénéfice et risque", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On commence par **calculer un risque** à partir de la **clarté de la nuque** à l'échographie, des **marqueurs sanguins** maternels et de l'**âge** ; si le risque est élevé, on analyse l'**ADN fœtal dans le sang maternel**. Ces examens sont **non invasifs** : ils ne font courir aucun risque au fœtus, alors que l'amniocentèse en comporte un. On réserve donc l'examen invasif aux grossesses à risque élevé.\n2. L'**amniocentèse** est une **ponction** (-centèse) de **liquide amniotique**, à partir de 15 SA, qui permet d'établir le **caryotype** du fœtus. Risque : 0,5 % de 400 = **2**, 1 % de 400 = **4** : environ **2 à 4 fausses couches sur 400** examens. C'est pourquoi on ne la propose que lorsque le risque de trisomie est élevé.\n3. Le caryotype compte **47 chromosomes** au lieu de 46, avec **trois chromosomes 21** : c'est une **trisomie 21**. Les gonosomes sont **XX** : le fœtus est une **fille**.\n4. Normalement, chaque gamète apporte **n = 23** chromosomes : 23 + 23 = 46. Ici, 47 = 23 + 24 : l'un des gamètes était **anormal** et portait **deux chromosomes 21** au lieu d'un ; associé au chromosome 21 de l'autre gamète, cela donne **trois chromosomes 21** dans la cellule-œuf, puis dans toutes les cellules du fœtus."
+    },
+    {
+      "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+      "difficulte": 1,
+      "titre": "Une régulation constante chez l'homme",
+      "consigne": "Réponds par des phrases précises ; tu peux compléter ta réponse 2 par un schéma fléché.",
+      "enonce": "1. Quelle hormone l'hypothalamus sécrète-t-il ? Comment ? Sur quelle glande agit-elle ?\n2. Décris l'axe hypothalamo-hypophyso-testiculaire : hormones sécrétées par l'hypophyse, action de chacune sur les testicules.\n3. Pourquoi le taux de testostérone reste-t-il à peu près constant ? Cite deux rôles de la testostérone.",
+      "bareme": [
+        { "critere": "GnRH sécrétée de façon pulsatile, qui stimule l'antéhypophyse", "points": 5 },
+        { "critere": "LH → testostérone ; FSH et testostérone → spermatogenèse", "points": 7 },
+        { "critere": "Rétrocontrôle négatif de la testostérone sur hypothalamus et hypophyse ; deux rôles justes", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'hypothalamus sécrète la **GnRH**, **de façon pulsatile**, qui stimule l'**antéhypophyse**.\n2. L'antéhypophyse sécrète deux gonadostimulines : la **LH**, qui stimule la sécrétion de **testostérone** par les testicules (cellules de Leydig), et la **FSH**, qui, avec la testostérone, permet la **spermatogenèse**.\n3. La testostérone **freine l'hypothalamus et l'hypophyse** : c'est un **rétrocontrôle négatif**. Si elle augmente, GnRH et LH diminuent, donc la testostérone baisse, et inversement : son taux reste **à peu près constant**.\nRôles : développement des **organes génitaux** et des **caractères sexuels secondaires** (pilosité, voix, masse musculaire), maintien de la **spermatogenèse**, **libido**."
+    },
+    {
+      "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+      "difficulte": 2,
+      "titre": "Le cycle de Sarah",
+      "consigne": "Exploite le document : décris des valeurs précises, relie-les à l'ovaire et à l'utérus, puis explique le fonctionnement de la pilule.",
+      "enonce": "**Document – Taux d'hormones dans le sang au cours d'un cycle de 28 jours**\n\n| Jour | 2 | 8 | 12 | 13 | 20 | 27 |\n| Œstrogènes (pg/mL) | 40 | 100 | 300 | 250 | 180 | 50 |\n| LH (UI/L) | 5 | 6 | 15 | 60 | 5 | 3 |\n| Progestérone (ng/mL) | 0,5 | 0,5 | 0,8 | 1 | 15 | 1 |\n\n1. À quel moment a lieu l'ovulation ? Justifie à l'aide du document et explique ce qui la déclenche.\n2. Quelle structure de l'ovaire sécrète la progestérone entre J15 et J28 ? Quel est son effet sur l'utérus ?\n3. Que se passe-t-il vers J27-J28 en l'absence de fécondation ?\n4. Les deux rétrocontrôles du cycle : lequel s'exerce la plupart du temps, lequel juste avant l'ovulation ?\n5. Sarah prend une pilule œstroprogestative. Explique pourquoi elle n'ovule pas.",
+      "bareme": [
+        { "critere": "Ovulation vers J13-J14 : pic de LH (60 UI/L à J13) déclenché par le pic d'œstrogènes (300 pg/mL à J12)", "points": 5 },
+        { "critere": "Corps jaune ; progestérone (15 ng/mL à J20) qui rend l'endomètre sécrétoire, prêt pour une nidation", "points": 4 },
+        { "critere": "Régression du corps jaune, chute des hormones, endomètre qui se détache : règles", "points": 4 },
+        { "critere": "Rétrocontrôle négatif la plupart du temps, positif juste avant l'ovulation", "points": 3 },
+        { "critere": "Pilule : hormones de synthèse, rétrocontrôle négatif, pas de pic de LH donc pas d'ovulation, glaire épaissie", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. L'ovulation a lieu **vers J13-J14**. Les œstrogènes montent de 40 (J2) à **300 pg/mL à J12** : ce **pic d'œstrogènes** déclenche un **pic de LH** (de 15 à **60 UI/L à J13**), qui provoque l'ovulation : le follicule mûr libère l'ovocyte II.\n2. Après l'ovulation, le follicule rompu devient le **corps jaune**, qui sécrète la **progestérone** (15 ng/mL à J20) et des œstrogènes. L'**endomètre devient sécrétoire**, prêt pour une nidation.\n3. Sans fécondation, le **corps jaune régresse** : progestérone et œstrogènes **chutent** (1 ng/mL et 50 pg/mL à J27). L'**endomètre se détache** : ce sont les nouvelles **règles**, début d'un nouveau cycle.\n4. **Négatif** la plupart du temps : les hormones ovariennes freinent FSH et LH. **Positif** juste avant l'ovulation : le pic d'œstrogènes déclenche le pic de LH.\n5. Les hormones de synthèse de la pilule exercent en permanence un **rétrocontrôle négatif** sur l'hypothalamus et l'hypophyse : **pas de pic de LH**, donc **pas d'ovulation** ; de plus, la glaire du col s'épaissit."
+    },
+    {
+      "chapitre": "31ca182d-6662-5a01-9334-b6966de2a089",
+      "difficulte": 3,
+      "titre": "Quatre couples au centre d'AMP",
+      "consigne": "Pour chaque couple, analyse la situation, puis propose et justifie une technique d'aide médicale à la procréation ou une autre conduite à tenir.",
+      "enonce": "**Situation.** Une gynécologue reçoit quatre couples.\n\n- **Couple A** : ils essaient d'avoir un enfant depuis **7 mois**, sans contraception.\n- **Couple B** : depuis 2 ans sans grossesse. Madame a eu une infection à chlamydia il y a quelques années ; l'examen montre des **trompes bouchées**. Le spermogramme de Monsieur est normal.\n- **Couple C** : depuis 18 mois sans grossesse. Le spermogramme de Monsieur montre **très peu de spermatozoïdes, peu mobiles**. Madame ovule normalement.\n- **Couple D** : depuis 3 ans sans grossesse. Le spermogramme de Monsieur montre une **azoospermie**.\n\n1. Définis l'infertilité. Le couple A est-il concerné ? Que lui conseilles-tu ?\n2. Couple B : quelle technique proposer ? Explique en quoi elle contourne le problème.\n3. Couple C : quelle technique proposer ? Décris-la.\n4. Couple D : traduis « azoospermie ». L'ICSI est-elle possible ? Quelle solution reste-t-il ?\n5. Le couple B aurait pu éviter son infertilité. Explique comment, en citant le seul moyen de contraception adapté.",
+      "bareme": [
+        { "critere": "Infertilité après 12 mois de rapports réguliers sans contraception ; couple A pas encore concerné, patienter", "points": 4 },
+        { "critere": "Couple B : FIV, fécondation en laboratoire puis transfert d'embryon dans l'utérus, sans passer par les trompes", "points": 4 },
+        { "critere": "Couple C : ICSI, injection d'un spermatozoïde dans l'ovocyte, adaptée à une infertilité masculine sévère", "points": 4 },
+        { "critere": "Couple D : absence de spermatozoïdes, ICSI impossible, don de gamètes (sperme)", "points": 4 },
+        { "critere": "Prévention : préservatifs, seuls à protéger des IST comme la chlamydia", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. On parle d'**infertilité** après **douze mois** de rapports réguliers **sans contraception** et sans grossesse. Le couple A n'essaie que depuis 7 mois : il **n'est pas encore concerné**. Conseil : continuer et reconsulter si aucune grossesse ne survient au bout d'un an.\n2. Couple B : **fécondation in vitro (FIV)**. Les trompes bouchées empêchent la rencontre des gamètes. En FIV, les ovocytes sont prélevés, la **fécondation a lieu en laboratoire**, puis l'**embryon est transféré dans l'utérus** : les trompes ne sont plus nécessaires.\n3. Couple C : **ICSI** : on **injecte un spermatozoïde directement dans l'ovocyte**, puis l'embryon est transféré. Elle convient à une **infertilité masculine sévère** : un seul spermatozoïde suffit, même peu mobile.\n4. **Azoospermie** : **absence de spermatozoïdes** dans le sperme (a- : absence). L'ICSI est **impossible**, puisqu'il n'y a aucun spermatozoïde à injecter. Il reste le **don de gamètes** (don de sperme), par exemple avec une insémination artificielle.\n5. Les trompes de Madame se sont bouchées **après une infection à chlamydia**, une infection sexuellement transmissible. Les **préservatifs** (externe ou interne) sont les **seuls moyens de contraception qui protègent des IST** : leur usage aurait pu éviter l'infection, donc cette infertilité."
+    },
+    {
+      "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+      "difficulte": 1,
+      "titre": "Du brin d'ADN à la protéine",
+      "consigne": "Réponds à chaque question en montrant chaque étape de ta réponse.",
+      "enonce": "**Situation.** On étudie le début d'un gène. Voici la séquence du **brin d'ADN transcrit** :\n\n> TAC GGA TTT ATT\n\n**Extrait du code génétique** : AUG = méthionine (début) ; CCU = proline ; AAA = lysine ; UAA = stop.\n\n1. Écris la séquence du brin d'ADN complémentaire, en rappelant la règle d'appariement.\n2. Où a lieu la transcription ? Écris l'ARN messager obtenu.\n3. Où a lieu la traduction ? Traduis cet ARNm en séquence d'acides aminés. Que se passe-t-il au quatrième codon ?",
+      "bareme": [
+        { "critere": "Complémentarité A-T, G-C : brin complémentaire ATG CCT AAA TAA", "points": 5 },
+        { "critere": "Transcription dans le noyau, ARNm AUG CCU AAA UAA (U à la place de T)", "points": 7 },
+        { "critere": "Traduction dans le cytoplasme sur les ribosomes : méthionine – proline – lysine, puis codon stop qui arrête la traduction", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les bases sont **complémentaires** : A face à T, G face à C. Brin complémentaire : **ATG CCT AAA TAA**.\n2. La transcription a lieu dans le **noyau** : le brin transcrit est copié en ARN messager, avec l'**uracile (U)** à la place de la thymine. ARNm : **AUG CCU AAA UAA**.\n3. La traduction a lieu dans le **cytoplasme**, sur les **ribosomes** : l'ARNm est lu trois bases par trois bases (codons).\nAUG → **méthionine** ; CCU → **proline** ; AAA → **lysine** ; UAA → **codon stop** : il ne code aucun acide aminé et **arrête la traduction**.\nSéquence obtenue : **méthionine – proline – lysine**."
+    },
+    {
+      "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+      "difficulte": 2,
+      "titre": "Quatre mutations sur le même gène",
+      "consigne": "Pour chaque allèle, écris l'ARNm, traduis-le avec l'extrait du code, puis nomme le type de mutation et son effet.",
+      "enonce": "**Document 1 – Brin transcrit de l'allèle normal et de quatre allèles mutés (début du gène)**\n\n| L'allèle | Le brin transcrit |\n| Normal | TAC CTC TTT |\n| Muté 1 | TAC CAC TTT |\n| Muté 2 | TAC CTT TTT |\n| Muté 3 | TAC ATC TTT |\n| Muté 4 | TAC TCT TT… (le C en 4e position a disparu) |\n\n**Document 2 – Extrait du code génétique** : AUG = méthionine ; GAG et GAA = acide glutamique ; GUG = valine ; AAA = lysine ; AGA = arginine ; UAG = stop.\n\n1. Écris l'ARNm et la séquence d'acides aminés de l'allèle normal.\n2. Fais de même pour les allèles mutés 1, 2 et 3, puis nomme le type de mutation et son effet sur la protéine.\n3. Allèle muté 4 : nomme la mutation et explique pourquoi ses conséquences sont en général plus graves.",
+      "bareme": [
+        { "critere": "Allèle normal : AUG GAG AAA, méthionine – acide glutamique – lysine", "points": 4 },
+        { "critere": "Muté 1 : GUG, valine à la place de l'acide glutamique (substitution, un acide aminé changé)", "points": 4 },
+        { "critere": "Muté 2 : GAA, même acide aminé (substitution sans effet, codon synonyme)", "points": 4 },
+        { "critere": "Muté 3 : UAG stop prématuré, protéine raccourcie", "points": 4 },
+        { "critere": "Muté 4 : délétion d'une base, décalage de la lecture, tous les codons suivants changent (AUG AGA …)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Allèle normal : ARNm **AUG GAG AAA** → **méthionine – acide glutamique – lysine**.\n2. - **Muté 1** : ARNm AUG **GUG** AAA → méthionine – **valine** – lysine. **Substitution** d'une base : **un acide aminé est changé** (c'est le même changement que dans la drépanocytose).\n- **Muté 2** : ARNm AUG **GAA** AAA → méthionine – acide glutamique – lysine. **Substitution** sans effet : GAA et GAG codent le **même acide aminé** (codon synonyme) ; la protéine est inchangée.\n- **Muté 3** : ARNm AUG **UAG** … → méthionine puis **stop**. **Substitution** qui crée un **codon stop prématuré** : la protéine est **raccourcie**.\n3. **Muté 4** : **délétion** d'une base. Le brin transcrit devient TAC TCT TT…, l'ARNm AUG **AGA** AA… : méthionine – **arginine** – … La lecture se fait trois bases par trois bases : la délétion **décale la lecture**, et **tous les codons suivants changent**. Toute la suite de la protéine est modifiée (et un codon stop peut apparaître plus loin), alors qu'une substitution ne touche qu'un codon : l'effet est en général bien plus grave."
+    },
+    {
+      "chapitre": "f8ec801c-6bcc-5030-b966-81971defa07c",
+      "difficulte": 3,
+      "titre": "La drépanocytose dans la famille Diallo",
+      "consigne": "Analyse l'arbre généalogique, raisonne étape par étape et justifie chaque conclusion ; construis l'échiquier de croisement demandé.",
+      "enonce": "**Document 1 – La famille Diallo** : les parents, Aminata et Ousmane, sont **sains**. Ils ont trois enfants : **Fatou**, une fille **malade** ; **Ibrahim**, un garçon **sain** ; **Moussa**, un garçon **malade**. Le couple attend un quatrième enfant.\n\n**Document 2 – La maladie** : dans la drépanocytose, une substitution A → T dans le gène de la bêta-globine change un seul acide aminé de la protéine (acide glutamique → valine). L'hémoglobine anormale déforme les globules rouges en faucille.\n\nOn note N l'allèle normal et d l'allèle de la maladie.\n\n1. L'allèle d est-il dominant ou récessif ? Justifie à partir de l'arbre.\n2. Le gène est-il porté par un autosome ou par le chromosome X ? Justifie.\n3. Donne le génotype des parents et celui de Fatou. Justifie.\n4. Construis l'échiquier de croisement des deux parents et donne le risque que le quatrième enfant soit malade. Aminata pense que ce risque est plus faible « puisqu'on a déjà eu deux enfants malades » : a-t-elle raison ?\n5. Explique comment une mutation d'une seule base aboutit aux globules rouges en faucille (du gène au phénotype).",
+      "bareme": [
+        { "critere": "Récessif : parents sains ayant des enfants malades", "points": 3 },
+        { "critere": "Autosome : maladie qui touche fille et garçon, pas surtout des garçons", "points": 3 },
+        { "critere": "Parents N//d (hétérozygotes, porteurs sains), Fatou d//d, justifiés", "points": 4 },
+        { "critere": "Échiquier juste : 1/4 malade, 1/2 porteur sain, 1/4 sain non porteur ; risque identique à chaque grossesse", "points": 6 },
+        { "critere": "Du gène au phénotype : substitution, codon modifié, un acide aminé changé, hémoglobine anormale, hématies en faucille", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Aminata et Ousmane sont **sains** mais ont des enfants **malades** : l'allèle de la maladie était présent chez eux sans s'exprimer. L'allèle d est **récessif**.\n2. La maladie touche **une fille** (Fatou) **et un garçon** (Moussa) : elle ne touche pas presque seulement des garçons. Le gène est porté par un **autosome** (la drépanocytose est autosomique récessive).\n3. Fatou est malade et l'allèle est récessif : elle est **homozygote d//d**. Elle a reçu un allèle d de chaque parent ; or les parents sont sains, ils portent donc aussi un allèle N : ils sont **hétérozygotes N//d** (porteurs sains).\n4. | | N | d |\n| **N** | N//N (sain) | N//d (sain, porteur) |\n| **d** | N//d (sain, porteur) | d//d (**malade**) |\nRisque pour chaque enfant : **1/4 malade**, 1/2 porteur sain, 1/4 sain non porteur. Aminata a **tort** : ce risque est **le même à chaque grossesse** (1/4), quel que soit l'état des enfants précédents.\n5. La **substitution** d'une base (A → T) dans le gène modifie un **codon** de l'ARNm ; à la traduction, **un seul acide aminé** de la bêta-globine est changé (acide glutamique → **valine**). L'**hémoglobine** obtenue est **anormale** : elle **déforme les globules rouges en faucille**. Chez l'homozygote d//d, toute l'hémoglobine est anormale : c'est le **phénotype** malade."
+    },
+    {
+      "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+      "difficulte": 1,
+      "titre": "Bénigne ou maligne ?",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "**Situation.** On a retiré à M. Perrin une tumeur de la peau. Le compte rendu indique : « tumeur bien limitée, entourée d'une capsule, à croissance lente, formée de cellules proches des cellules normales ».\n\n1. Cette tumeur est-elle bénigne ou maligne ? Justifie par trois critères.\n2. Qu'est-ce qu'une métastase ? Quelle sorte de tumeur peut en donner ?\n3. Pourquoi le risque de cancer augmente-t-il avec l'âge ?",
+      "bareme": [
+        { "critere": "Tumeur bénigne, justifiée par trois critères (limites nettes, capsule, croissance lente, cellules proches des normales)", "points": 8 },
+        { "critere": "Métastase = tumeur secondaire à distance, formée par des cellules passées dans le sang ou la lymphe ; seulement les tumeurs malignes", "points": 7 },
+        { "critere": "Il faut en général accumuler plusieurs mutations", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. C'est une tumeur **bénigne** : ses **limites sont nettes**, elle est **entourée d'une capsule**, sa **croissance est lente** et ses **cellules sont proches des cellules normales**. Une tumeur maligne serait mal limitée, envahirait les tissus voisins, avec des cellules anormales.\n2. Une **métastase** est une **tumeur secondaire**, **à distance** de la tumeur primitive : des cellules cancéreuses envahissent les tissus voisins, passent dans le **sang** ou la **lymphe**, et forment ailleurs de nouvelles tumeurs. Seules les tumeurs **malignes** peuvent en donner ; une tumeur bénigne jamais.\n3. Un cancer résulte en général de l'**accumulation de plusieurs mutations** dans une même cellule (gènes qui accélèrent la division devenus trop actifs, gènes qui la freinent ou réparent l'ADN devenus inactifs). Il faut du temps pour les accumuler : le risque **augmente avec l'âge**."
+    },
+    {
+      "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+      "difficulte": 2,
+      "titre": "Les risques de la famille Lambert",
+      "consigne": "Classe les facteurs de risque, puis argumente sur la prévention en t'appuyant sur le cours.",
+      "enonce": "**Situation.** M. Lambert, 52 ans, fume un paquet par jour depuis l'âge de 16 ans. Pendant dix ans, il a travaillé au désamiantage de bâtiments. Il passe ses étés au soleil sans protection. Sa fille Clara, 11 ans, n'a reçu aucun vaccin contre les papillomavirus. Sa sœur a appris qu'elle porte une mutation du gène BRCA1.\n\n1. Classe les facteurs de risque de cancer présents dans cette famille selon les quatre catégories du cours (comportements, environnement, infections, génétique).\n2. Distingue un agent mutagène et un agent cancérogène.\n3. Quelle part des cancers est attribuable à des facteurs évitables ? Propose, pour cette famille, trois mesures de prévention précises et justifiées.",
+      "bareme": [
+        { "critere": "Classement juste : tabac et soleil sans protection (comportements), amiante et UV (environnement), papillomavirus (infections), BRCA1 (génétique)", "points": 8 },
+        { "critere": "Mutagène : provoque des mutations ; cancérogène : favorise le cancer", "points": 4 },
+        { "critere": "Environ 40 % évitables ; trois mesures justifiées (arrêt du tabac, protection solaire, vaccination de Clara contre les papillomavirus)", "points": 8 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. - **Comportements** : le **tabac** (première cause de cancer évitable) ; l'exposition au soleil **sans protection**.\n- **Environnement** : l'**amiante** (exposition professionnelle au désamiantage) ; les **ultraviolets**.\n- **Infections** : les **papillomavirus**, responsables des cancers du col de l'utérus, contre lesquels Clara n'est pas vaccinée.\n- **Génétique** : la mutation du gène **BRCA1** de sa sœur, prédisposition héréditaire rare au cancer du sein et de l'ovaire.\n2. Un agent **mutagène** provoque des **mutations** de l'ADN ; un agent **cancérogène** **favorise le cancer**.\n3. Environ **40 %** des cancers sont attribuables à des facteurs **évitables**. Mesures :\n- **arrêter le tabac** : c'est la première cause évitable, et chaque année d'exposition en moins réduit l'accumulation de mutations ;\n- **se protéger du soleil** (vêtements, crème, heures chaudes évitées) : moins d'UV mutagènes ;\n- **vacciner Clara contre les papillomavirus** : prévient les infections à l'origine de la plupart des cancers du col de l'utérus.\n(Accepté aussi : limiter l'alcool, activité physique, alimentation équilibrée.)"
+    },
+    {
+      "chapitre": "5b732eb5-bc03-52cd-b111-02db1c4d0249",
+      "difficulte": 3,
+      "titre": "Le parcours de Mme Girard",
+      "consigne": "Analyse le parcours de soins étape par étape, relie chaque effet secondaire au mécanisme du traitement, et utilise le vocabulaire médical.",
+      "enonce": "**Situation.** Mme Girard, 56 ans, reçoit un courrier du dépistage organisé et passe une mammographie. Une anomalie est vue dans le sein gauche. Une échographie puis une **biopsie** sont réalisées ; le compte rendu anatomopathologique conclut à un cancer. Un scanner et une scintigraphie osseuse ne montrent aucune métastase. Elle est opérée (**tumorectomie**), puis reçoit une **chimiothérapie** et une **radiothérapie**.\n\n**Bilan pendant la chimiothérapie** : leucocytes **2 500 par mm³** (valeurs de référence : 4 000 à 10 000). Elle a perdu ses cheveux et a des aphtes.\n\n1. Mme Girard est-elle dans la population du dépistage organisé ? Précise le principe de ce dépistage.\n2. Quel examen affirme le diagnostic ? Pourquoi une imagerie ne suffit-elle pas ?\n3. Quel est le but du scanner et de la scintigraphie ? Traduis « tumorectomie » et « mastectomie ».\n4. Nomme l'anomalie de son bilan sanguin et explique-la, ainsi que la perte des cheveux et les aphtes, par le mécanisme de la chimiothérapie. Quel risque la leucopénie lui fait-elle courir ?\n5. Explique le principe de la radiothérapie. Pendant le suivi, son marqueur tumoral est normal : peut-on affirmer qu'elle est guérie ?",
+      "bareme": [
+        { "critere": "Dépistage organisé de 50 à 74 ans, mammographie tous les deux ans", "points": 3 },
+        { "critere": "Examen anatomopathologique de la biopsie, seul à affirmer le cancer", "points": 3 },
+        { "critere": "Bilan d'extension (recherche de métastases) ; tumorectomie = ablation de la tumeur, mastectomie = ablation du sein", "points": 4 },
+        { "critere": "Leucopénie (2 500 < 4 000) ; chimiothérapie qui touche toutes les cellules à division rapide : alopécie, aphtes, risque d'infection", "points": 6 },
+        { "critere": "Radiothérapie : rayonnements ionisants concentrés qui lèsent l'ADN ; marqueur normal n'exclut pas un cancer", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Oui : le **dépistage organisé** du cancer du sein concerne les femmes de **50 à 74 ans** ; il repose sur une **mammographie tous les deux ans**. Détecté tôt, ce cancer guérit dans une grande majorité des cas.\n2. Seul l'**examen anatomopathologique** du tissu prélevé par **biopsie**, observé au microscope, **affirme le cancer**. L'imagerie (mammographie, échographie) montre une anomalie mais ne permet pas de savoir si les cellules sont cancéreuses.\n3. Le scanner et la scintigraphie osseuse constituent le **bilan d'extension** : on **cherche des métastases** (ici aucune). **Tumorectomie** : ablation chirurgicale (-ectomie) de la **tumeur** ; **mastectomie** : ablation du **sein**.\n4. 2 500 < 4 000 par mm³ : c'est une **leucopénie** (baisse des globules blancs, -pénie : diminution). La chimiothérapie **bloque la division des cellules** : elle frappe les cellules cancéreuses mais aussi **toutes les cellules saines qui se divisent vite** : cellules produisant les globules blancs (leucopénie), follicules pileux (**chute des cheveux**, alopécie), muqueuse de la bouche (**aphtes**). La leucopénie l'expose à un **risque d'infection**.\n5. La **radiothérapie** utilise des **rayonnements ionisants concentrés sur la zone tumorale** : ils **lèsent l'ADN** des cellules cancéreuses. Non : un **marqueur tumoral normal n'exclut pas un cancer** ; les marqueurs servent au **suivi**, et seul l'examen anatomopathologique fait le diagnostic. La surveillance continue (examens cliniques, imagerie)."
+    },
+    {
+      "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+      "difficulte": 1,
+      "titre": "Décoder le vocabulaire médical",
+      "consigne": "Découpe chaque terme en préfixe, racine et suffixe, puis donne son sens. Réponds ensuite aux questions de méthode.",
+      "enonce": "**Données** : cardi- = cœur ; gastr- = estomac ; hém- = sang ; splén- = rate ; leuc- = blanc (globules blancs) ; glyc- = glucose.\n\n1. Découpe et définis : **bradycardie**, **gastrite**, **hyperglycémie**, **leucopénie**, **splénomégalie**, **hémorragie**, **anurie**.\n2. Qu'est-ce qu'un **signe clinique** ? un **signe paraclinique** ? Donne un exemple de chaque.\n3. Que désigne l'**étiologie** d'une maladie ?",
+      "bareme": [
+        { "critere": "Sept termes justement découpés et définis", "points": 12 },
+        { "critere": "Signe clinique et paraclinique définis, avec un exemple juste de chaque", "points": 6 },
+        { "critere": "Étiologie = cause de la maladie", "points": 2 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. - **Brady-cardie** : cœur lent.\n- **Gastr-ite** : inflammation de l'estomac.\n- **Hyper-glyc-émie** : excès de glucose dans le sang.\n- **Leuco-pénie** : diminution des globules blancs.\n- **Spléno-mégalie** : augmentation de volume de la rate.\n- **Hémo-rragie** : écoulement de sang.\n- **An-urie** : absence d'urine.\n2. Un **signe clinique** est ce que le patient **ressent** ou ce que le médecin **constate à l'examen** (soif, fatigue, fièvre). Un **signe paraclinique** est un **résultat d'examen complémentaire** : analyse, imagerie (une glycémie à 2,3 g/L, une radiographie).\n3. L'**étiologie** est la **cause** de la maladie."
+    },
+    {
+      "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+      "difficulte": 2,
+      "titre": "Corriger la copie de Nathan",
+      "consigne": "Repère les erreurs de méthode de Nathan, explique-les, puis rédige la réponse attendue.",
+      "enonce": "**Exercice 1 (chimie).** « Calculer la quantité de matière de gaz contenue dans un flacon de 500 mL, à la pression de 2,0 × 10⁵ Pa et à 27 °C. Donnée : R = 8,314 J/(mol·K). »\n\n> Copie de Nathan : n = 2,0 × 10⁵ × 500 ÷ (8,314 × 27) = 445 478\n\n**Exercice 2 (biologie).** « Exploiter le document pour expliquer l'évolution de la glycémie de Mme Vidal après un repas. »\n\n> Document : glycémie 0,9 g/L à jeun, 1,6 g/L une heure après le repas, 1,0 g/L deux heures après.\n> Donnée : après un repas, le glucose absorbé par l'intestin passe dans le sang ; l'insuline fait ensuite entrer le glucose dans les cellules.\n\n> Copie de Nathan : « La courbe monte puis descend. »\n\n1. Relève les erreurs de méthode de l'exercice 1 et refais le calcul correctement.\n2. Pourquoi la réponse de l'exercice 2 est-elle insuffisante ? Rédige la réponse attendue en suivant les étapes d'exploitation d'un document.",
+      "bareme": [
+        { "critere": "Erreurs relevées : formule littérale absente, mL et °C non convertis, pas d'unité, ordre de grandeur non commenté", "points": 6 },
+        { "critere": "Calcul juste : V = 5,00 × 10⁻⁴ m³, T = 300 K, n ≈ 4,0 × 10⁻² mol", "points": 5 },
+        { "critere": "Exercice 2 : décrire n'est pas interpréter, valeurs absentes", "points": 3 },
+        { "critere": "Réponse rédigée : description chiffrée, interprétation par l'absorption du glucose puis l'insuline, conclusion", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Erreurs de Nathan :\n- il n'a **pas écrit la formule littérale** (P × V = n × R × T, donc n = P × V ÷ (R × T)) ;\n- il n'a **pas converti les unités** : V doit être en **m³** (500 mL = 5,00 × 10⁻⁴ m³) et T en **kelvins** (27 + 273 = 300 K) ;\n- son résultat n'a **pas d'unité** et trop de chiffres ;\n- il n'a **pas commenté l'ordre de grandeur** : 445 478 mol dans un flacon de 500 mL est absurde.\nCalcul correct : n = P × V ÷ (R × T) = 2,0 × 10⁵ × 5,00 × 10⁻⁴ ÷ (8,314 × 300) = 100 ÷ 2 494 ≈ **4,0 × 10⁻² mol**, un ordre de grandeur plausible pour un petit flacon.\n2. « La courbe monte puis descend » **décrit** sans valeurs et **n'interprète pas** : il faut dire **pourquoi**.\nRéponse attendue : **Présentation** : le document donne la glycémie de Mme Vidal à jeun puis une et deux heures après un repas. **Description** : elle passe de **0,9 g/L** à jeun à **1,6 g/L** une heure après le repas, puis revient à **1,0 g/L** au bout de deux heures. **Comparaison** : elle retrouve presque sa valeur de départ. **Interprétation** : la hausse s'explique par le **glucose absorbé par l'intestin** qui passe dans le sang ; la baisse, par l'**insuline**, qui fait entrer le glucose dans les cellules. **Conclusion** : la glycémie de Mme Vidal s'élève après le repas puis est ramenée vers sa valeur initiale en deux heures."
+    },
+    {
+      "chapitre": "a727c1eb-c7d2-571a-ae72-2be239d226de",
+      "difficulte": 3,
+      "titre": "Mettre en ordre un cas clinique",
+      "consigne": "Applique la démarche attendue à l'épreuve : relève et classe les signes, compare-les aux références, nomme les anomalies, puis rédige une explication structurée qui relie signes et mécanisme.",
+      "enonce": "**Document 1 – Le cas.** Mme Laurent, 68 ans, consulte pour une **fatigue intense** depuis un mois, un **essoufflement** à l'effort, une **pâleur** et de petits **saignements des gencives**. Elle a eu deux infections ces dernières semaines.\n\n**Document 2 – Numération sanguine**\n\n| Les cellules | Le résultat | La référence |\n| Hématies | 3,1 millions par mm³ | 4 à 5,5 millions par mm³ |\n| Leucocytes | 2 600 par mm³ | 4 000 à 10 000 par mm³ |\n| Plaquettes | 70 000 par mm³ | 150 000 à 400 000 par mm³ |\n\n**Document 3 – L'explication du médecin** : « La moelle osseuse rouge de Mme Laurent produit moins de cellules sanguines. Le manque d'hématies réduit le transport du dioxygène ; le manque de leucocytes affaiblit les défenses ; le manque de plaquettes gêne l'arrêt des saignements. »\n\n**Données** : thrombo- = plaquette ; érythro- = rouge (globules rouges).\n\n1. Classe les signes du document 1 et du document 2 en signes cliniques et paracliniques.\n2. Compare chaque résultat à sa référence et nomme les trois anomalies avec le vocabulaire médical.\n3. Traduis le terme médical de la fatigue intense.\n4. Rédige un paragraphe structuré qui relie chaque signe clinique à une anomalie paraclinique, en t'appuyant sur le document 3.\n5. Donne deux conseils de méthode pour réussir ce type de question le jour de l'épreuve.",
+      "bareme": [
+        { "critere": "Classement juste : cliniques (fatigue, essoufflement, pâleur, saignements, infections) et paracliniques (trois numérations)", "points": 4 },
+        { "critere": "Comparaison chiffrée et termes : érythropénie, leucopénie, thrombopénie", "points": 5 },
+        { "critere": "Asthénie", "points": 2 },
+        { "critere": "Paragraphe reliant fatigue, essoufflement et pâleur aux hématies, infections aux leucocytes, saignements aux plaquettes, avec l'origine médullaire", "points": 6 },
+        { "critere": "Deux conseils de méthode justes (lire tout le sujet, citer les valeurs, décrire puis interpréter, relire)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **Signes cliniques** : fatigue intense, essoufflement à l'effort, pâleur, saignements des gencives, infections répétées. **Signes paracliniques** : les trois résultats de la numération sanguine.\n2. - Hématies : 3,1 millions < 4 millions par mm³ : diminution, **érythropénie** (manque de globules rouges).\n- Leucocytes : 2 600 < 4 000 par mm³ : **leucopénie**.\n- Plaquettes : 70 000 < 150 000 par mm³ : **thrombopénie**.\n(-pénie : diminution.)\n3. **Asthénie**.\n4. Exemple : « Mme Laurent présente une baisse des trois lignées de cellules sanguines, car sa **moelle osseuse rouge** en produit moins. Le manque d'**hématies** (3,1 millions par mm³) réduit le **transport du dioxygène** vers les organes : cela explique sa **fatigue**, son **essoufflement** à l'effort et sa **pâleur**. La **leucopénie** (2 600 par mm³) **affaiblit ses défenses** : elle explique ses **infections répétées**. La **thrombopénie** (70 000 par mm³) **gêne l'arrêt des saignements** : elle explique les **saignements des gencives**. Tous les signes cliniques s'expliquent donc par un même mécanisme. »\n5. Conseils : **lire tout le sujet** avant de commencer (un document plus loin peut aider) ; **citer des valeurs précises** et les **comparer à la référence** ; **décrire puis interpréter** (dire pourquoi) ; garder **dix minutes pour relire** (orthographe des termes médicaux, réponses oubliées)."
+    }
+  ]
+}

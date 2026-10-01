@@ -1,0 +1,3788 @@
+{
+ "niveau": "Tle",
+ "matiere": "hggsp",
+ "exercices": [
+  {
+   "chapitre": "1683bd00-52dd-565e-8dc3-e9e68af1b05e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq marches vers le savoir",
+   "competence": "se-reperer-temps",
+   "situation": "Lina prépare un exposé sur la longue histoire de la diffusion des savoirs. Elle a placé quatre étapes sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre étapes de la diffusion des savoirs",
+     "source": "Dates principales.",
+     "debut": 1400,
+     "fin": 1900,
+     "pas": 100,
+     "evenements": [
+      {
+       "id": "gut",
+       "date": 1450,
+       "nom": "Gutenberg"
+      },
+      {
+       "id": "enc",
+       "date": 1751,
+       "nom": "Encyclopédie"
+      },
+      {
+       "id": "hum",
+       "date": 1810,
+       "nom": "Humboldt"
+      },
+      {
+       "id": "fer",
+       "date": 1881,
+       "nom": "Lois Ferry"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’étape qui rend l’instruction primaire obligatoire en France.",
+     "reponse": [
+      "fer"
+     ],
+     "aide": "Cherche le nom du ministre de l’Instruction publique.",
+     "explication": "Les **lois Ferry** (1881-1882) rendent l’école primaire gratuite puis obligatoire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape à ce qu’elle élargit.",
+     "paires": [
+      [
+       "Gutenberg",
+       "La reproduction du texte"
+      ],
+      [
+       "Encyclopédie",
+       "L’ambition de tout rassembler"
+      ],
+      [
+       "Humboldt",
+       "L’université de recherche"
+      ],
+      [
+       "Lois Ferry",
+       "L’instruction pour tous"
+      ]
+     ],
+     "aide": "Reprends l’idée de chaque nom : imprimer, rassembler, chercher, instruire.",
+     "explication": "**Gutenberg** multiplie les textes, l’**Encyclopédie** veut tout rassembler, le modèle **Humboldt** joint enseignement et recherche, les **lois Ferry** ouvrent l’école à tous."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le modèle Humboldt (1810) des premières lois Ferry (1881) ?",
+     "reponse": 71,
+     "unite": "ans",
+     "aide": "Soustrais 1810 de 1881.",
+     "explication": "1881 − 1810 = **71 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1683bd00-52dd-565e-8dc3-e9e68af1b05e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lisbonne : l’objectif et le réel",
+   "competence": "lire-graphique",
+   "situation": "En 2000, l’Union européenne se donne un but ambitieux : devenir l’économie de la connaissance la plus compétitive du monde. Maël regarde où en sont quelques pays.",
+   "documents": [
+    {
+     "id": "rd",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Dépense de recherche et développement",
+     "source": "Chiffres arrondis, vers 2021. La cible européenne est de 3 % du PIB.",
+     "categories": [
+      "Corée du Sud",
+      "États-Unis",
+      "Allemagne",
+      "Chine",
+      "France",
+      "Union européenne"
+     ],
+     "series": [
+      {
+       "nom": "R&D",
+       "valeurs": [
+        4.9,
+        3.5,
+        3.1,
+        2.4,
+        2.2,
+        2.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du PIB",
+      "unite": "%",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "valeurs": true
+    },
+    {
+     "id": "lisb",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La stratégie de Lisbonne",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "En 2000, les dirigeants européens veulent faire de l’Union « l’économie de la connaissance la plus compétitive du monde ». Deux ans plus tard, à Barcelone, ils fixent une cible : consacrer 3 % du PIB à la recherche.",
+      "Vingt ans après, l’Union dans son ensemble n’a pas atteint cette cible."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rd",
+     "enonce": "Touche les trois pays qui dépassent la cible des 3 % du PIB.",
+     "reponse": [
+      "k0",
+      "k1",
+      "k2"
+     ],
+     "multiple": true,
+     "aide": "Compare chaque barre à 3.",
+     "explication": "La **Corée du Sud** (4,9), les **États-Unis** (3,5) et l’**Allemagne** (3,1) dépassent 3 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de PIB la France est-elle en dessous de la cible de 3 % ?",
+     "reponse": 0.8,
+     "unite": "point",
+     "aide": "Soustrais la valeur de la France à 3.",
+     "explication": "3 − 2,2 = **0,8 point** de PIB."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le graphique sur la stratégie de Lisbonne ?",
+     "options": [
+      "L’Union, en moyenne, reste sous la cible qu’elle s’était fixée",
+      "L’Union dépasse aujourd’hui la Corée du Sud et les États-Unis",
+      "Tous les pays de l’Union ont atteint la cible de 3 % du PIB",
+      "La Chine consacre une part du PIB plus forte que l’Allemagne"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la barre « Union européenne ».",
+     "explication": "L’Union est à **2,2 %**, sous les 3 % visés : l’objectif de Barcelone n’est **pas atteint**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le constat du document.",
+     "texte": "L’objectif de ___ % du PIB consacrés à la recherche a été fixé à ___ en 2002.",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "Barcelone"
+      ]
+     ],
+     "banque": [
+      "3",
+      "Barcelone",
+      "Lisbonne",
+      "10"
+     ],
+     "aide": "Relis le texte.",
+     "explication": "La cible de **3 %** a été fixée à **Barcelone** en 2002 dans le cadre de la stratégie de Lisbonne."
+    }
+   ]
+  },
+  {
+   "chapitre": "1683bd00-52dd-565e-8dc3-e9e68af1b05e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le départ d’Amina",
+   "competence": "analyser-document",
+   "situation": "Amina, physicienne, doit choisir entre son pays et un laboratoire étranger. Théo compare ce que disent le récit et les chiffres de trois pays imaginaires.",
+   "documents": [
+    {
+     "id": "amina",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une chercheuse face au choix",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Amina a soutenu sa thèse dans l’université de sa ville, avec un seul ordinateur pour dix doctorants et une connexion qui tombe chaque après-midi.",
+      "Un laboratoire européen lui propose un salaire cinq fois plus élevé et des [[e|équipements]] de pointe. Elle accepte. Son département perd sa seule spécialiste du domaine."
+     ]
+    },
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Trois pays imaginaires",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "R&D (% du PIB)",
+      "Foyers connectés (%)"
+     ],
+     "lignes": [
+      [
+       "Pays A",
+       "3,2",
+       "95"
+      ],
+      [
+       "Pays B",
+       "1,1",
+       "60"
+      ],
+      [
+       "Pays C",
+       "0,4",
+       "25"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "amina",
+     "enonce": "Touche le mot qui désigne ce qui manque à Amina pour chercher dans son pays.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche ce que le laboratoire européen met à sa disposition.",
+     "explication": "Ce sont les **équipements** : sans eux, produire du savoir est très difficile."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche le pourcentage de foyers connectés du pays où la fracture numérique est la plus forte.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La fracture numérique est l’accès le plus inégal : cherche le plus petit nombre.",
+     "explication": "Dans le pays C, seuls **25 %** des foyers sont connectés : c’est là que la fracture est la plus forte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la dépense de R&D du pays A est-elle plus élevée que celle du pays C, en part du PIB ?",
+     "reponse": 8,
+     "unite": "fois",
+     "aide": "Divise 3,2 par 0,4.",
+     "explication": "3,2 ÷ 0,4 = **8** : le pays A investit huit fois plus que le pays C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel phénomène illustre le départ d’Amina pour le laboratoire européen ?",
+     "options": [
+      "La fuite des cerveaux vers des pays mieux dotés",
+      "La massification de l’enseignement supérieur",
+      "La fracture numérique entre pays voisins",
+      "L’ouverture gratuite des publications"
+     ],
+     "reponse": 0,
+     "aide": "Une chercheuse qualifiée quitte son pays pour un autre.",
+     "explication": "C’est la **fuite des cerveaux** : des chercheurs qualifiés partent vers les pays qui leur offrent de meilleurs moyens, ce qui creuse l’écart."
+    }
+   ]
+  },
+  {
+   "chapitre": "fca0de59-dae1-5ffe-bff0-79e91284e66f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voyage d’un article",
+   "competence": "observer-schema",
+   "situation": "Léna, chercheuse, vient de terminer une expérience. Elle veut la faire connaître. Voici le parcours de son article.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "lab",
+       "texte": "Expériences au laboratoire",
+       "emoji": "🔬"
+      },
+      {
+       "id": "envoi",
+       "texte": "Article envoyé à une revue",
+       "emoji": "📨"
+      },
+      {
+       "id": "pairs",
+       "texte": "?",
+       "emoji": "🧐"
+      },
+      {
+       "id": "pub",
+       "texte": "Publication",
+       "emoji": "📰"
+      }
+     ],
+     "liens": [
+      {
+       "de": "lab",
+       "a": "envoi"
+      },
+      {
+       "de": "envoi",
+       "a": "pairs"
+      },
+      {
+       "de": "pairs",
+       "a": "pub"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parcours",
+     "enonce": "Touche l’étape où d’autres chercheurs jugent la qualité de l’article avant sa publication.",
+     "reponse": [
+      "pairs"
+     ],
+     "aide": "C’est l’étape cachée par le point d’interrogation.",
+     "explication": "Les revues à comité de lecture font **évaluer** l’article par des **pairs** avant de le publier."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de la recherche à son rôle.",
+     "paires": [
+      [
+       "Laboratoires",
+       "Le lieu du travail"
+      ],
+      [
+       "Financements sur projet",
+       "La sélection des recherches"
+      ],
+      [
+       "Revues à comité de lecture",
+       "L’évaluation par les pairs"
+      ],
+      [
+       "Grands équipements",
+       "Accélérateurs, télescopes, supercalculateurs"
+      ]
+     ],
+     "aide": "Pense au rôle de chacun dans le parcours d’un article.",
+     "explication": "Le **laboratoire** accueille le travail, le **financement sur projet** sélectionne, la **revue** fait évaluer, les **grands équipements** fournissent les instruments."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la publication est-elle indispensable au chercheur ?",
+     "options": [
+      "Un savoir non publié n’existe pas pour la communauté scientifique",
+      "Une publication suffit à rendre le résultat définitivement exact",
+      "Sans publication, le laboratoire perd son financement public",
+      "La revue garde seule les droits de toute la discipline"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ceux qui pourraient utiliser le résultat.",
+     "explication": "Un savoir **non publié n’existe pas** pour la communauté : les autres ne peuvent ni le vérifier ni s’en servir."
+    }
+   ]
+  },
+  {
+   "chapitre": "fca0de59-dae1-5ffe-bff0-79e91284e66f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vaccins : à qui les brevets ?",
+   "competence": "analyser-texte",
+   "situation": "En 2020, des pays demandent de suspendre certains brevets sur les vaccins contre le Covid-19. Yanis étudie les arguments des deux camps.",
+   "documents": [
+    {
+     "id": "omc",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La demande de 2020",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "En octobre 2020, l’Inde et l’Afrique du Sud demandent à l’Organisation mondiale du commerce de suspendre temporairement certains brevets sur les vaccins.",
+      "Les laboratoires qui les ont mis au point refusent : le [[b|brevet]] finance, disent-ils, la recherche de demain. Les pays demandeurs répondent que des vies en dépendent."
+     ]
+    },
+    {
+     "id": "tension",
+     "type": "tableau",
+     "titre": "Brevet : deux logiques",
+     "source": "Tableau de synthèse.",
+     "colonnes": [
+      "Logique",
+      "Ce qu’elle défend"
+     ],
+     "lignes": [
+      [
+       "Protéger",
+       "Récompenser et financer l’innovation"
+      ],
+      [
+       "Ouvrir",
+       "Partager vite un savoir utile à tous"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "omc",
+     "enonce": "Touche le mot qui désigne le droit exclusif que les laboratoires veulent garder.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le texte en parle à propos de la recherche de demain.",
+     "explication": "Le **brevet** réserve l’usage d’une invention à son détenteur pendant une durée donnée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument dans le bon camp.",
+     "categories": [
+      "Suspendre les brevets",
+      "Les maintenir"
+     ],
+     "items": [
+      [
+       "Des vies dépendent de l’accès aux doses",
+       0
+      ],
+      [
+       "Le brevet finance la recherche de demain",
+       1
+      ],
+      [
+       "Produire localement permettrait de vacciner plus vite",
+       0
+      ],
+      [
+       "Sans profit, les laboratoires investiront moins",
+       1
+      ]
+     ],
+     "aide": "Demande-toi qui parle : les pays demandeurs ou les laboratoires.",
+     "explication": "Les **pays demandeurs** insistent sur l’urgence et l’accès ; les **laboratoires** sur le financement de l’innovation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule qui résume la tension.",
+     "texte": "Un savoir non ___ n’existe pas pour la communauté scientifique ; un savoir publié ___ à celui qui l’a produit.",
+     "reponses": [
+      [
+       "publié"
+      ],
+      [
+       "échappe"
+      ]
+     ],
+     "banque": [
+      "publié",
+      "échappe",
+      "gratuit",
+      "appartient"
+     ],
+     "aide": "Pense aux deux risques : le secret et la diffusion.",
+     "explication": "Un savoir non **publié** n’existe pas ; un savoir publié **échappe** à celui qui l’a produit : toute politique de recherche arbitre entre les deux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle tension ce débat met-il en évidence ?",
+     "options": [
+      "Protéger l’innovation et la partager avec le plus grand nombre",
+      "Publier en anglais et publier dans toutes les langues nationales",
+      "Financer la recherche publique et la recherche militaire privée",
+      "Évaluer les articles et laisser les auteurs les diffuser seuls"
+     ],
+     "reponse": 0,
+     "aide": "Relis le tableau « Brevet : deux logiques ».",
+     "explication": "C’est la tension entre **protéger** l’innovation (le brevet) et la **partager** : c’est ce que le débat sur les vaccins a porté à l’échelle mondiale."
+    }
+   ]
+  },
+  {
+   "chapitre": "fca0de59-dae1-5ffe-bff0-79e91284e66f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on encore se fier à cette étude ?",
+   "competence": "analyser-document",
+   "situation": "Sofia reçoit un message étrange, puis compare trois études imaginaires. Pour chacune, elle doit dire ce qui menace la confiance dans la science.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Revue Quantix",
+       "emoji": "📧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sofia",
+       "emoji": "👩‍🔬",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Revue Quantix",
+       "texte": "Bonjour ! Publiez votre article sous 48 h, sans relecture, pour 900 €."
+      },
+      {
+       "qui": "Sofia",
+       "texte": "Sans relecture par d’autres chercheurs ?"
+      },
+      {
+       "qui": "Revue Quantix",
+       "texte": "Exactement, c’est plus rapide !"
+      }
+     ]
+    },
+    {
+     "id": "etudes",
+     "type": "tableau",
+     "titre": "Trois études imaginaires",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Étude",
+      "Qui la finance ?",
+      "Ce qu’elle conclut"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Un fabricant de sodas",
+       "Le sucre n’a aucun effet sur la santé"
+      ],
+      [
+       "2",
+       "Un organisme public",
+       "Un médicament réduit les symptômes"
+      ],
+      [
+       "3",
+       "Un chercheur seul",
+       "Résultats retirés : les données étaient inventées"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la menace qu’elle illustre.",
+     "paires": [
+      [
+       "Publier contre argent sans relecture",
+       "Revue prédatrice"
+      ],
+      [
+       "Étude payée par un fabricant concerné",
+       "Conflit d’intérêts"
+      ],
+      [
+       "Résultats retirés car inventés",
+       "Fraude et rétractation"
+      ],
+      [
+       "Semer le doute sur un consensus établi",
+       "Mise en doute organisée"
+      ]
+     ],
+     "aide": "Relis le message de la revue, puis les trois lignes du tableau.",
+     "explication": "Une **revue prédatrice** publie sans relecture réelle ; un financeur intéressé crée un **conflit d’intérêts** ; des données inventées sont une **fraude** ; la **mise en doute organisée** a servi pour le tabac puis le climat."
+    },
+    {
+     "type": "zone",
+     "document": "etudes",
+     "enonce": "Touche la case qui révèle un possible conflit d’intérêts.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Regarde qui paie.",
+     "explication": "Un fabricant de sodas qui finance une étude sur le sucre a un **intérêt** dans la conclusion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la proposition de la revue Quantix doit-elle alerter Sofia ?",
+     "options": [
+      "Il n’y a aucune évaluation réelle par des pairs",
+      "Le délai de 48 heures est toujours trop long",
+      "Les revues sérieuses ne demandent jamais d’argent",
+      "Une revue payante ne peut pas être lue ensuite"
+     ],
+     "reponse": 0,
+     "aide": "Que fait normalement une revue sérieuse avant de publier ?",
+     "explication": "Sans **relecture par les pairs**, rien ne garantit la qualité de l’article : c’est le signe d’une revue **prédatrice**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet d’ensemble de ces trois menaces ?",
+     "options": [
+      "Elles abaissent la confiance dans la science, devenue un enjeu politique",
+      "Elles prouvent que la science n’a jamais produit de résultats fiables",
+      "Elles ne concernent que les pays sans recherche publique",
+      "Elles disparaissent dès qu’un article est publié en accès libre"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que perdent les citoyens qui ne savent plus qui croire.",
+     "explication": "La **confiance** dans la science est devenue un enjeu politique à part entière : c’est ce que ces trois menaces fragilisent."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef07c168-327c-54c8-a698-98f271068279",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand le pouvoir décide du vrai",
+   "competence": "analyser-document",
+   "situation": "Clara prépare une fiche sur la science sous contrainte politique. Elle a réuni trois cas célèbres.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Trois cas de science sous contrainte",
+     "source": "Dates arrondies.",
+     "colonnes": [
+      "Cas",
+      "Lieu et époque",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "Lyssenkisme",
+       "URSS, années 1930-1960",
+       "La génétique est condamnée"
+      ],
+      [
+       "« Science aryenne »",
+       "Allemagne nazie, années 1930",
+       "Des savants juifs sont chassés"
+      ],
+      [
+       "Procès de Galilée",
+       "Italie, 1633",
+       "Un savant doit se rétracter"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche la case qui dit ce qui arrive aux savants sous le régime nazi.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne de la « science aryenne ».",
+     "explication": "Sous le régime nazi, des **savants juifs sont chassés** des universités."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche la case qui donne la date du procès de Galilée.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "C’est la seule ligne du XVIIe siècle.",
+     "explication": "Le procès de Galilée date de **1633**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cas à ce qu’il montre.",
+     "paires": [
+      [
+       "Lyssenkisme",
+       "Une discipline ruinée pendant vingt ans"
+      ],
+      [
+       "« Science aryenne »",
+       "Des savants chassés pour leur origine"
+      ],
+      [
+       "Procès de Galilée",
+       "Un conflit entre autorité et démonstration"
+      ]
+     ],
+     "aide": "Relis la troisième colonne.",
+     "explication": "Le **lyssenkisme** ruine la génétique soviétique, la **science aryenne** chasse des savants, **Galilée** incarne le conflit entre autorité et démonstration."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces trois cas pris ensemble ?",
+     "options": [
+      "Un pouvoir qui décide de ce qui est vrai fait reculer la science",
+      "Un pouvoir politique finance toujours mieux la recherche libre",
+      "Les savants ont toujours gagné contre les autorités en place",
+      "Seuls les régimes religieux ont contrôlé la recherche"
+     ],
+     "reponse": 0,
+     "aide": "Qui décide de la vérité dans chaque cas ?",
+     "explication": "Quand un régime décide de **ce qui est vrai**, la science recule : c’est la leçon commune."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef07c168-327c-54c8-a698-98f271068279",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La guerre des puces",
+   "competence": "analyser-document",
+   "situation": "Les semi-conducteurs, ces puces électroniques, sont au cœur d’une rivalité entre grandes puissances. Jules démêle qui fait quoi.",
+   "documents": [
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Quatre instruments de la rivalité",
+     "source": "D’après le cours ; montant arrondi.",
+     "colonnes": [
+      "Instrument",
+      "Acteur",
+      "But"
+     ],
+     "lignes": [
+      [
+       "Contrôles à l’exportation",
+       "États-Unis",
+       "Priver un rival de technologies sensibles"
+      ],
+      [
+       "CHIPS Act (2022)",
+       "États-Unis",
+       "Financer des usines de puces, environ 52 milliards de dollars"
+      ],
+      [
+       "Restrictions sur Huawei",
+       "États-Unis",
+       "Limiter l’entrée du groupe dans les réseaux 5G"
+      ],
+      [
+       "Plans de développement",
+       "Chine",
+       "Produire ses propres puces"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une usine pour ne plus dépendre",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Un pays imaginaire dépend à 90 % de puces importées. Son gouvernement annonce une aide publique pour bâtir une [[u|usine]] sur son sol.",
+      "« Nous ne voulons plus qu’un blocage à l’exportation arrête nos industries », explique le ministre imaginaire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "outils",
+     "enonce": "Touche le but du CHIPS Act américain.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne du CHIPS Act.",
+     "explication": "Le CHIPS Act finance des usines de puces : environ **52 milliards de dollars**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instrument à sa logique.",
+     "paires": [
+      [
+       "Contrôles à l’exportation",
+       "Bloquer l’accès d’un rival"
+      ],
+      [
+       "CHIPS Act",
+       "Produire sur son propre sol"
+      ],
+      [
+       "Plans chinois",
+       "Rattraper son retard technologique"
+      ]
+     ],
+     "aide": "Demande-toi si l’acteur bloque, finance ou rattrape.",
+     "explication": "Les **contrôles** privent un rival, le **CHIPS Act** relocalise la production, les **plans chinois** visent l’autonomie."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "enonce": "Touche le mot qui désigne ce que le pays imaginaire veut construire pour réduire sa dépendance.",
+     "reponse": [
+      "u"
+     ],
+     "aide": "C’est un lieu de production.",
+     "explication": "L’**usine** doit réduire la dépendance aux importations de puces."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les semi-conducteurs sont-ils un enjeu géopolitique ?",
+     "options": [
+      "Ils conditionnent l’économie, l’IA et les capacités militaires",
+      "Ils ne servent qu’à fabriquer des appareils de loisirs grand public",
+      "Ils sont produits dans un seul pays qui les offre à tous",
+      "Ils sont protégés par une convention de l’ONU sur le commerce"
+     ],
+     "reponse": 0,
+     "aide": "Pense à tout ce qui fonctionne grâce aux puces.",
+     "explication": "Les puces conditionnent l’**économie**, l’**intelligence artificielle** et les **armées** : celui qui les maîtrise a un avantage stratégique."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef07c168-327c-54c8-a698-98f271068279",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Protéger ou projeter ?",
+   "competence": "raisonner",
+   "situation": "Le savoir est à la fois une ressource qu’on protège et une influence qu’on projette. Inès classe des politiques d’États imaginaires.",
+   "documents": [
+    {
+     "id": "bourse",
+     "type": "chaine",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "b1",
+       "texte": "Bourse d’études",
+       "emoji": "🎓"
+      },
+      {
+       "id": "b2",
+       "texte": "Études dans le pays d’accueil",
+       "emoji": "🏫"
+      },
+      {
+       "id": "b3",
+       "texte": "Carrière dans son pays",
+       "emoji": "💼"
+      },
+      {
+       "id": "b4",
+       "texte": "Lien durable avec le pays d’accueil",
+       "emoji": "🤝"
+      }
+     ],
+     "liens": [
+      {
+       "de": "b1",
+       "a": "b2"
+      },
+      {
+       "de": "b2",
+       "a": "b3"
+      },
+      {
+       "de": "b3",
+       "a": "b4"
+      },
+      {
+       "de": "b4",
+       "a": "b1",
+       "texte": "invite d’autres étudiants"
+      }
+     ]
+    },
+    {
+     "id": "soft",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un pilier d’influence",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "Les États-Unis ont fait de l’attractivité de leurs universités un pilier de leur influence. La Chine ouvre des instituts Confucius. Les classements internationaux, comme celui de [[s|Shanghai]], orientent les flux d’étudiants."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bourse",
+     "enonce": "Touche l’étape qui explique pourquoi une bourse sert l’influence du pays d’accueil.",
+     "reponse": [
+      "b4"
+     ],
+     "aide": "Cherche ce qui reste après la fin des études.",
+     "explication": "Le **lien durable** avec le pays d’accueil est l’effet de soft power recherché."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure : protéger un savoir ou projeter une influence ?",
+     "categories": [
+      "Protéger",
+      "Projeter"
+     ],
+     "items": [
+      [
+       "Renforcer la cybersécurité des laboratoires",
+       0
+      ],
+      [
+       "Interdire l’exportation d’une machine de pointe",
+       0
+      ],
+      [
+       "Offrir des bourses à des étudiants étrangers",
+       1
+      ],
+      [
+       "Ouvrir des instituts à l’étranger",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si l’État ferme l’accès ou cherche à attirer.",
+     "explication": "**Protéger** : cybersécurité, interdiction d’exporter. **Projeter** : bourses, instituts culturels."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la connaissance est un enjeu géopolitique à double statut ?",
+     "options": [
+      "C’est une ressource à protéger et une influence à projeter",
+      "C’est une ressource gratuite et une dépense sans retour",
+      "C’est un bien mondial et un secret absolu de chaque État",
+      "C’est une science neutre et un outil sans usage militaire"
+     ],
+     "reponse": 0,
+     "aide": "Relis la conclusion du cours.",
+     "explication": "La connaissance est à la fois une **ressource que l’on protège** et une **influence que l’on projette**."
+    },
+    {
+     "type": "zone",
+     "document": "soft",
+     "enonce": "Touche le mot qui désigne le classement qui oriente les flux d’étudiants.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche le nom d’une ville chinoise.",
+     "explication": "Le classement de **Shanghai** oriente les flux d’étudiants."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec5cfa19-af23-5c7b-b424-f7f3651310eb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "D’ARPANET au RGPD",
+   "competence": "se-reperer-temps",
+   "situation": "Noé reconstitue les grandes dates du cyberespace, des origines militaires à la régulation européenne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq dates du cyberespace",
+     "source": "Dates principales.",
+     "debut": 1960,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "arpa",
+       "date": 1969,
+       "nom": "ARPANET"
+      },
+      {
+       "id": "web",
+       "date": 1989,
+       "nom": "Le web proposé"
+      },
+      {
+       "id": "est",
+       "date": 2007,
+       "nom": "Estonie"
+      },
+      {
+       "id": "snow",
+       "date": 2013,
+       "nom": "Snowden"
+      },
+      {
+       "id": "rgpd",
+       "date": 2018,
+       "nom": "RGPD"
+      }
+     ]
+    },
+    {
+     "id": "couches",
+     "type": "tableau",
+     "titre": "Les trois couches",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Couche",
+      "Ce que c’est"
+     ],
+     "lignes": [
+      [
+       "Matérielle",
+       "Ce qu’on peut toucher et localiser"
+      ],
+      [
+       "Logicielle",
+       "Les règles et programmes qui font circuler les données"
+      ],
+      [
+       "Sémantique",
+       "Ce que l’on lit et partage"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui révèle la surveillance de masse.",
+     "reponse": [
+      "snow"
+     ],
+     "aide": "Cherche le nom de l’ancien agent américain.",
+     "explication": "**Snowden** révèle en 2013 une surveillance de masse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent ARPANET (1969) de la cyberattaque contre l’Estonie (2007) ?",
+     "reponse": 38,
+     "unite": "ans",
+     "aide": "Soustrais 1969 de 2007.",
+     "explication": "2007 − 1969 = **38 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans sa couche.",
+     "categories": [
+      "Matérielle",
+      "Logicielle",
+      "Sémantique"
+     ],
+     "items": [
+      [
+       "Un câble sous-marin",
+       0
+      ],
+      [
+       "Un data center",
+       0
+      ],
+      [
+       "Un système d’exploitation",
+       1
+      ],
+      [
+       "Un protocole de communication",
+       1
+      ],
+      [
+       "Une campagne de désinformation",
+       2
+      ],
+      [
+       "Un réseau social",
+       2
+      ]
+     ],
+     "aide": "Touchable, programme ou contenu.",
+     "explication": "Câbles et data centers sont **matériels**, systèmes et protocoles **logiciels**, désinformation et réseaux sociaux **sémantiques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec5cfa19-af23-5c7b-b424-f7f3651310eb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Attaques sur la carte",
+   "competence": "lire-carte",
+   "situation": "Plusieurs lieux ont marqué l’histoire des cyberconflits ou de la coopération numérique. Lou les situe.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux du cyberespace",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -15,
+      25,
+      75,
+      65
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "tallinn",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 51.73,
+       "lat": 33.72,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 6.05,
+       "lat": 46.23,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Quatre types de menaces",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Menace",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Cyberattaque d’État",
+       "Estonie (2007)"
+      ],
+      [
+       "Cybercriminalité",
+       "Rançongiciel contre un hôpital"
+      ],
+      [
+       "Ingérence",
+       "Désinformation avant une élection"
+      ],
+      [
+       "Surveillance de masse",
+       "Révélations de 2013"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de l’Estonie, visée par une cyberattaque en 2007.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "L’Estonie est un pays de la mer Baltique.",
+     "explication": "**Tallinn**, capitale de l’Estonie, a été visée en 2007."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le site nucléaire iranien visé par le ver Stuxnet.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il est en Iran, au sud-est de la mer Caspienne.",
+     "explication": "Stuxnet visait le site d’enrichissement de **Natanz**, en Iran."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu où le web a été inventé, au CERN.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Le CERN est en Suisse, près de la frontière française.",
+     "explication": "Le web est né au **CERN**, près de Genève, sous la plume de Tim Berners-Lee."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exemple à la menace correspondante.",
+     "paires": [
+      [
+       "Estonie (2007)",
+       "Cyberattaque d’État"
+      ],
+      [
+       "Rançongiciel contre un hôpital",
+       "Cybercriminalité"
+      ],
+      [
+       "Désinformation avant un vote",
+       "Ingérence"
+      ],
+      [
+       "Révélations de 2013",
+       "Surveillance de masse"
+      ]
+     ],
+     "aide": "Relis le tableau.",
+     "explication": "Chaque exemple illustre un type de menace du cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec5cfa19-af23-5c7b-b424-f7f3651310eb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un Internet, ou plusieurs ?",
+   "competence": "analyser-document",
+   "situation": "Une entreprise imaginaire veut vendre son application dans trois zones. Elle découvre que chacune applique ses propres règles : c’est la fragmentation d’Internet.",
+   "documents": [
+    {
+     "id": "strat",
+     "type": "tableau",
+     "titre": "Trois stratégies",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Acteur",
+      "Stratégie"
+     ],
+     "lignes": [
+      [
+       "Chine",
+       "Un Internet contrôlé : la « Grande Muraille numérique »"
+      ],
+      [
+       "Russie",
+       "Un réseau autonome qu’elle teste"
+      ],
+      [
+       "Union européenne",
+       "Légiférer : RGPD (2018), DSA et DMA"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "pdg",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les trois marchés",
+     "source": "Texte imaginé pour l’exercice.",
+     "blocs": [
+      "Mira dirige une application de messagerie. « En Europe, je dois respecter des règles strictes sur les [[d|données]] personnelles. En Chine, mon service est filtré. En Russie, on me demande d’héberger mes serveurs sur place. Je n’ai plus un seul Internet, j’en ai plusieurs. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à sa stratégie.",
+     "paires": [
+      [
+       "Chine",
+       "Contrôler le réseau"
+      ],
+      [
+       "Russie",
+       "Se doter d’un réseau autonome"
+      ],
+      [
+       "Union européenne",
+       "Imposer des normes aux plateformes"
+      ]
+     ],
+     "aide": "Relis le tableau.",
+     "explication": "La **Chine** contrôle, la **Russie** teste un réseau autonome, l’**Union** légifère pour imposer ses normes."
+    },
+    {
+     "type": "zone",
+     "document": "pdg",
+     "enonce": "Touche le mot qui désigne ce que le RGPD protège.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est ce que les utilisateurs confient aux applications.",
+     "explication": "Le RGPD (2018) protège les **données** personnelles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle le phénomène décrit par Mira ?",
+     "options": [
+      "La fragmentation de l’Internet, ou splinternet",
+      "La convergence de tous les réseaux mondiaux",
+      "La privatisation complète des câbles sous-marins",
+      "La gratuité généralisée des services numériques"
+     ],
+     "reponse": 0,
+     "aide": "Plusieurs Internet au lieu d’un seul.",
+     "explication": "On parle de **fragmentation**, ou *splinternet*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque action : coopération ou fermeture ?",
+     "categories": [
+      "Coopération",
+      "Fermeture"
+     ],
+     "items": [
+      [
+       "Convention de Budapest contre la cybercriminalité (2001)",
+       0
+      ],
+      [
+       "Discussions à l’ONU sur le comportement des États",
+       0
+      ],
+      [
+       "Filtrage de l’Internet national",
+       1
+      ],
+      [
+       "Réseau autonome isolé du reste du monde",
+       1
+      ]
+     ],
+     "aide": "Se rapprocher ou se couper ?",
+     "explication": "La **convention de Budapest** et l’**ONU** relèvent de la coopération ; le **filtrage** et le **réseau autonome** de la fermeture."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7d9924e-50cf-5cdf-9ba9-cfb86153d49a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre jalons de la prise de conscience",
+   "competence": "se-reperer-temps",
+   "situation": "Hugo range dans l’ordre les grandes étapes qui ont fait entrer l’environnement dans le débat public.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre jalons",
+     "source": "Dates principales.",
+     "debut": 1850,
+     "fin": 2000,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "yel",
+       "date": 1872,
+       "nom": "Yellowstone"
+      },
+      {
+       "id": "sto",
+       "date": 1972,
+       "nom": "Stockholm"
+      },
+      {
+       "id": "bru",
+       "date": 1987,
+       "nom": "Brundtland"
+      },
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Rio"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la conférence mondiale qui crée le PNUE.",
+     "reponse": [
+      "sto"
+     ],
+     "aide": "C’est en 1972, dans la capitale suédoise.",
+     "explication": "La conférence de **Stockholm** (1972) est la première conférence mondiale sur l’environnement ; elle crée le **PNUE**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque jalon à ce qu’il apporte.",
+     "paires": [
+      [
+       "Yellowstone",
+       "Le premier parc national"
+      ],
+      [
+       "Brundtland",
+       "La définition du développement durable"
+      ],
+      [
+       "Rio",
+       "Biodiversité, climat et Agenda 21"
+      ],
+      [
+       "Stockholm",
+       "La première conférence mondiale"
+      ]
+     ],
+     "aide": "Reprends la date de chaque jalon.",
+     "explication": "**Yellowstone** (1872) est le premier parc national, **Stockholm** (1972) la première conférence, **Brundtland** (1987) définit le développement durable, **Rio** (1992) installe le vocabulaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la conférence de Stockholm du sommet de Rio ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais 1972 de 1992.",
+     "explication": "1992 − 1972 = **20 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7d9924e-50cf-5cdf-9ba9-cfb86153d49a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand commence l’anthropocène ?",
+   "competence": "analyser-document",
+   "situation": "Les scientifiques débattent : à quelle date l’humanité est-elle devenue une force géologique ? Zoé compare les réponses proposées.",
+   "documents": [
+    {
+     "id": "crutzen",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un mot pour une époque",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "En 2000, le chimiste Paul Crutzen popularise le mot « anthropocène » pour désigner une époque où l’humanité est devenue une [[f|force]] géologique : elle modifie le climat, les cycles du carbone et de l’azote, la biodiversité."
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Trois dates de départ proposées",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date de départ",
+      "Ce qu’elle implique"
+     ],
+     "lignes": [
+      [
+       "Le Néolithique",
+       "Une responsabilité diffuse, très ancienne"
+      ],
+      [
+       "La Révolution industrielle",
+       "Une responsabilité d’abord des pays industrialisés"
+      ],
+      [
+       "La « grande accélération » de 1950",
+       "Une responsabilité contemporaine, mesurable"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crutzen",
+     "enonce": "Touche le mot qui dit ce que l’humanité est devenue pour la planète.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Le texte parle d’une force géologique.",
+     "explication": "L’humanité est devenue une **force** géologique."
+    },
+    {
+     "type": "zone",
+     "document": "dates",
+     "enonce": "Touche la case qui met en cause d’abord les pays industrialisés.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Pense au pays qui s’industrialisent en premier.",
+     "explication": "Dater le début à la **Révolution industrielle** désigne d’abord les **pays industrialisés**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date de départ à sa conséquence sur les responsabilités.",
+     "paires": [
+      [
+       "Néolithique",
+       "Responsabilité diffuse"
+      ],
+      [
+       "Révolution industrielle",
+       "Pays industrialisés en premier"
+      ],
+      [
+       "Grande accélération de 1950",
+       "Responsabilité contemporaine"
+      ]
+     ],
+     "aide": "Relis la colonne de droite du tableau.",
+     "explication": "Plus la date est ancienne, plus la responsabilité est **diffuse** ; plus elle est récente, plus elle est **mesurable**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le débat sur la date de l’anthropocène est-il aussi politique ?",
+     "options": [
+      "Il revient à désigner qui porte la responsabilité",
+      "Il décide de la longueur des programmes scolaires",
+      "Il fixe le prix mondial des matières premières",
+      "Il détermine le nombre de parcs nationaux à créer"
+     ],
+     "reponse": 0,
+     "aide": "Qui est responsable selon chaque date ?",
+     "explication": "Choisir une date, c’est choisir **qui est responsable** : le débat est donc aussi un débat sur les responsabilités."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7d9924e-50cf-5cdf-9ba9-cfb86153d49a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La même rivière, trois échelles",
+   "competence": "raisonner",
+   "situation": "Une rivière imaginaire concentre des enjeux à plusieurs niveaux. Alex doit dire à quelle échelle chaque acteur agit.",
+   "documents": [
+    {
+     "id": "riv",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La rivière des tanneries",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Depuis des années, une tannerie rejette des produits chimiques dans la [[r|rivière]]. Les habitants de la vallée alertent la mairie.",
+      "Le gouvernement du pays impose de nouvelles normes aux usines. Mais la pollution finit à la mer, où les courants la portent au-delà des frontières : aucun pays ne peut régler seul le problème."
+     ]
+    },
+    {
+     "id": "echelles",
+     "type": "tableau",
+     "titre": "Trois échelles",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Échelle",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Local",
+       "Un fleuve, une forêt"
+      ],
+      [
+       "National",
+       "Les politiques publiques"
+      ],
+      [
+       "Mondial",
+       "Le climat, les océans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "riv",
+     "enonce": "Touche le mot qui désigne le milieu pollué à l’échelle locale.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est le lieu où vivent les habitants de la vallée.",
+     "explication": "La **rivière** est le milieu local touché par la pollution."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur ou situation à la bonne échelle.",
+     "categories": [
+      "Local",
+      "National",
+      "Mondial"
+     ],
+     "items": [
+      [
+       "Les habitants alertent la mairie",
+       0
+      ],
+      [
+       "Le gouvernement impose des normes aux usines",
+       1
+      ],
+      [
+       "La pollution est portée par les courants au-delà des frontières",
+       2
+      ],
+      [
+       "Une loi nationale sur l’eau",
+       1
+      ]
+     ],
+     "aide": "Commune, pays ou planète ?",
+     "explication": "Les habitants sont à l’échelle **locale**, le gouvernement à l’échelle **nationale**, la circulation de la pollution à l’échelle **mondiale**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette situation est-elle difficile à gouverner ?",
+     "options": [
+      "Le problème se joue en même temps à trois échelles",
+      "Il est trop récent pour être étudié par les scientifiques",
+      "Il ne concerne que les habitants de la vallée",
+      "Il relève d’un seul pays qui décide pour tous"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que disent les deux paragraphes.",
+     "explication": "Un même problème se joue **simultanément** à plusieurs échelles, d’où la difficulté à le gouverner."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de conclusion.",
+     "texte": "Un problème environnemental se joue à l’échelle ___, nationale et ___.",
+     "reponses": [
+      [
+       "locale",
+       "local"
+      ],
+      [
+       "mondiale",
+       "mondial"
+      ]
+     ],
+     "banque": [
+      "locale",
+      "mondiale",
+      "régionale",
+      "urbaine"
+     ],
+     "aide": "Regarde le tableau.",
+     "explication": "À l’échelle **locale**, **nationale** et **mondiale** : ce sont les trois échelles indissociables."
+    }
+   ]
+  },
+  {
+   "chapitre": "e091345c-d6d3-5f5a-9ac0-867814367b97",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un tiers des poissons en danger",
+   "competence": "lire-graphique",
+   "situation": "Sacha découvre que l’on pêche certains stocks de poissons plus vite qu’ils ne se renouvellent.",
+   "documents": [
+    {
+     "id": "stocks",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Stocks de poissons marins",
+     "source": "Ordre de grandeur arrondi.",
+     "categories": [
+      "Pêchés au-delà de leur renouvellement",
+      "Autres stocks"
+     ],
+     "series": [
+      {
+       "nom": "Part",
+       "valeurs": [
+        33,
+        67
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stocks",
+     "enonce": "Touche la part des stocks pêchés au-delà de leur renouvellement.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la plus petite des deux parts.",
+     "explication": "Environ **un tiers** des stocks est pêché au-delà de son renouvellement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 300 stocks de poissons, combien sont pêchés au-delà de leur renouvellement ?",
+     "reponse": 99,
+     "unite": "stocks",
+     "tolerance": 2,
+     "aide": "Calcule 33 % de 300.",
+     "explication": "33 % de 300 = **99 stocks**, soit environ un tiers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une ressource renouvelable comme le poisson peut-elle s’épuiser ?",
+     "options": [
+      "On la prélève plus vite qu’elle ne se renouvelle",
+      "Elle disparaît d’elle-même avec le temps qui passe",
+      "Elle n’est renouvelable que dans les eaux froides",
+      "Elle se transforme en ressource non renouvelable"
+     ],
+     "reponse": 0,
+     "aide": "Pense au rythme de la pêche et à celui de la reproduction.",
+     "explication": "Une ressource renouvelable s’épuise quand on la prélève **plus vite qu’elle ne se renouvelle** : c’est la surpêche."
+    }
+   ]
+  },
+  {
+   "chapitre": "e091345c-d6d3-5f5a-9ac0-867814367b97",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois grandes forêts tropicales",
+   "competence": "lire-carte",
+   "situation": "La déforestation touche trois grands massifs forestiers tropicaux. Chloé les situe, puis regarde l’effort de protection d’un pays imaginaire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre repères",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -90,
+      -30,
+      150,
+      35
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -60,
+       "lat": -4,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 22,
+       "lat": 0,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 113,
+       "lat": 0,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 12,
+       "lat": 24,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "aires",
+     "type": "tableau",
+     "titre": "Aires protégées d’un pays imaginaire",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Espace",
+      "Part protégée (%)",
+      "Objectif 2030 (%)"
+     ],
+     "lignes": [
+      [
+       "Terres",
+       "12",
+       "30"
+      ],
+      [
+       "Mers",
+       "4",
+       "30"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois massifs forestiers tropicaux : Amazonie, bassin du Congo, Indonésie.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "L’un est en Amérique du Sud, l’un en Afrique centrale, l’un en Asie du Sud-Est.",
+     "explication": "**A** est l’Amazonie, **B** le bassin du Congo, **C** l’Indonésie. **D** est le Sahara, un désert."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque massif à son continent.",
+     "paires": [
+      [
+       "Amazonie",
+       "Amérique du Sud"
+      ],
+      [
+       "Bassin du Congo",
+       "Afrique"
+      ],
+      [
+       "Indonésie",
+       "Asie du Sud-Est"
+      ]
+     ],
+     "aide": "Repère chaque lettre sur la carte.",
+     "explication": "L’**Amazonie** est en Amérique du Sud, le **bassin du Congo** en Afrique, l’**Indonésie** en Asie du Sud-Est."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Il manque combien de points de pourcentage au pays imaginaire pour atteindre l’objectif de 30 % pour ses mers ?",
+     "reponse": 26,
+     "unite": "points",
+     "aide": "Soustrais 4 à 30.",
+     "explication": "30 − 4 = **26 points** pour ses mers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel objectif mondial a été fixé à Kunming-Montréal en 2022 ?",
+     "options": [
+      "Protéger 30 % des terres et des mers d’ici 2030",
+      "Planter un arbre par habitant avant 2030",
+      "Interdire toute pêche industrielle avant 2030",
+      "Doubler la surface des forêts tropicales en 2030"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne du tableau.",
+     "explication": "Kunming-Montréal (2022) vise **30 % des terres et des mers protégées en 2030**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e091345c-d6d3-5f5a-9ac0-867814367b97",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’ozone, un accord qui a marché",
+   "competence": "analyser-document",
+   "situation": "Pourquoi le protocole de Montréal a-t-il réussi là où les négociations climatiques peinent ? Nour compare les deux dossiers.",
+   "documents": [
+    {
+     "id": "compar",
+     "type": "tableau",
+     "titre": "Deux dossiers mondiaux",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Condition",
+      "Ozone",
+      "Climat"
+     ],
+     "lignes": [
+      [
+       "Substances en cause",
+       "Identifiées : quelques gaz",
+       "Partout dans l’économie"
+      ],
+      [
+       "Alternatives",
+       "Disponibles",
+       "Partielles"
+      ],
+      [
+       "Industriels concernés",
+       "Peu nombreux",
+       "Innombrables"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cinq accords",
+     "source": "Dates principales.",
+     "debut": 1980,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "vie",
+       "date": 1985,
+       "nom": "Vienne (ozone)"
+      },
+      {
+       "id": "mon",
+       "date": 1987,
+       "nom": "Montréal"
+      },
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Rio"
+      },
+      {
+       "id": "kyo",
+       "date": 1997,
+       "nom": "Kyoto"
+      },
+      {
+       "id": "par",
+       "date": 2015,
+       "nom": "Paris"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’accord qui protège la couche d’ozone en interdisant certains gaz.",
+     "reponse": [
+      "mon"
+     ],
+     "aide": "C’est en 1987, dans une ville canadienne.",
+     "explication": "Le protocole de **Montréal** (1987) vise les gaz destructeurs de la couche d’ozone."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque condition : favorable à l’accord sur l’ozone ou défavorable au climat ?",
+     "categories": [
+      "Favorable à l’ozone",
+      "Défavorable au climat"
+     ],
+     "items": [
+      [
+       "Quelques substances identifiées",
+       0
+      ],
+      [
+       "Alternatives disponibles",
+       0
+      ],
+      [
+       "Industriels peu nombreux",
+       0
+      ],
+      [
+       "Émissions présentes dans toute l’économie",
+       1
+      ]
+     ],
+     "aide": "Relis le tableau colonne par colonne.",
+     "explication": "L’ozone réunit trois conditions favorables ; le climat en réunit rarement, car les émissions touchent **toute l’économie**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le protocole de Montréal de l’accord de Paris ?",
+     "reponse": 28,
+     "unite": "ans",
+     "aide": "Soustrais 1987 de 2015.",
+     "explication": "2015 − 1987 = **28 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le cas de l’ozone ?",
+     "options": [
+      "Un accord mondial peut réussir quand trois conditions sont réunies",
+      "Un accord mondial réussit toujours sans aucune condition préalable",
+      "Un accord mondial est impossible dès qu’il touche l’environnement",
+      "Un accord mondial n’a d’effet que dans les régions désertiques"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’ozone et climat n’ont pas en commun.",
+     "explication": "L’ozone prouve qu’un accord **peut** fonctionner : substances identifiées, alternatives disponibles, industriels peu nombreux."
+    }
+   ]
+  },
+  {
+   "chapitre": "975a2e9d-0c96-541b-a0a2-36bd3ef604c7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment on a su",
+   "competence": "analyser-document",
+   "situation": "Le réchauffement n’est pas une hypothèse : il s’appuie sur un savoir construit pas à pas. Tom retrace les étapes.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Trois étapes du savoir climatique",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Étape",
+      "Date",
+      "Ce qu’elle établit"
+     ],
+     "lignes": [
+      [
+       "Arrhenius et ses prédécesseurs",
+       "XIXe siècle",
+       "L’effet de serre"
+      ],
+      [
+       "Charles Keeling à Mauna Loa",
+       "1958",
+       "La mesure continue du CO₂"
+      ],
+      [
+       "Création du GIEC",
+       "1988",
+       "La synthèse des travaux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche la date de création du GIEC.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne du GIEC.",
+     "explication": "Le **GIEC** est créé en **1988**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape à ce qu’elle établit.",
+     "paires": [
+      [
+       "Arrhenius",
+       "L’effet de serre"
+      ],
+      [
+       "Keeling",
+       "La mesure du CO₂ dans l’air"
+      ],
+      [
+       "GIEC",
+       "La synthèse des travaux scientifiques"
+      ]
+     ],
+     "aide": "Relis la dernière colonne.",
+     "explication": "**Arrhenius** décrit l’effet de serre, **Keeling** mesure le CO₂, le **GIEC** fait la synthèse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le début des mesures de Keeling (1958) de la création du GIEC (1988) ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais 1958 de 1988.",
+     "explication": "1988 − 1958 = **30 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "975a2e9d-0c96-541b-a0a2-36bd3ef604c7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Kyoto ou Paris ?",
+   "competence": "analyser-document",
+   "situation": "Deux traités majeurs encadrent la lutte contre le réchauffement. Inès les compare pour choisir lequel contraint le plus.",
+   "documents": [
+    {
+     "id": "traites",
+     "type": "tableau",
+     "titre": "Kyoto et Paris",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Kyoto (1997)",
+      "Paris (2015)"
+     ],
+     "lignes": [
+      [
+       "Nature",
+       "Contraignant",
+       "Fondé sur des engagements volontaires"
+      ],
+      [
+       "Pays concernés",
+       "Pays développés seulement",
+       "Tous les pays"
+      ],
+      [
+       "Particularité",
+       "Les États-Unis ne le ratifient pas",
+       "Objectif de 1,5 °C à viser"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "obj",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’objectif de Paris",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "L’accord de Paris vise à contenir le réchauffement « nettement en dessous de 2 °C », en poursuivant l’effort pour le limiter à [[v|1,5]] °C."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : Kyoto ou Paris ?",
+     "categories": [
+      "Kyoto",
+      "Paris"
+     ],
+     "items": [
+      [
+       "Contraignant pour les pays concernés",
+       0
+      ],
+      [
+       "Limité aux pays développés",
+       0
+      ],
+      [
+       "Universel, tous les pays s’engagent",
+       1
+      ],
+      [
+       "Engagements volontaires",
+       1
+      ]
+     ],
+     "aide": "Relis le tableau ligne par ligne.",
+     "explication": "**Kyoto** est contraignant mais limité aux pays développés ; **Paris** est universel mais volontaire."
+    },
+    {
+     "type": "zone",
+     "document": "obj",
+     "enonce": "Touche la valeur que l’accord de Paris cherche à viser en priorité.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Elle est plus basse que 2 °C.",
+     "explication": "L’effort vise **1,5 °C**, en restant nettement sous 2 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart, en degrés, y a-t-il entre la limite de 2 °C et la visée de 1,5 °C ?",
+     "reponse": 0.5,
+     "unite": "°C",
+     "aide": "Soustrais 1,5 à 2.",
+     "explication": "2 − 1,5 = **0,5 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la principale faiblesse de Kyoto ?",
+     "options": [
+      "Il ne concerne que les pays développés, sans les États-Unis",
+      "Il s’applique à tous les pays sans contrainte réelle",
+      "Il oublie l’objectif de limiter le réchauffement",
+      "Il est voté avant la création du GIEC en 1988"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Pays concernés » et la dernière ligne.",
+     "explication": "Kyoto est **contraignant**, mais limité aux pays développés, et les **États-Unis ne le ratifient pas**."
+    }
+   ]
+  },
+  {
+   "chapitre": "975a2e9d-0c96-541b-a0a2-36bd3ef604c7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui doit payer ?",
+   "competence": "raisonner",
+   "situation": "Un même pays n’a pas la même responsabilité selon qu’on compte les émissions d’hier ou d’aujourd’hui. Emma croise deux lectures.",
+   "documents": [
+    {
+     "id": "em",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des émissions mondiales de CO₂",
+     "source": "Ordres de grandeur arrondis (émissions annuelles récentes, émissions cumulées depuis 1850).",
+     "categories": [
+      "États-Unis",
+      "Chine",
+      "Inde"
+     ],
+     "series": [
+      {
+       "nom": "Émissions annuelles",
+       "valeurs": [
+        13,
+        31,
+        8
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Émissions cumulées",
+       "valeurs": [
+        25,
+        14,
+        3
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du total mondial",
+      "unite": "%",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "valeurs": true
+    },
+    {
+     "id": "fonds",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une idée et un fonds",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "Le principe des « responsabilités communes mais différenciées » dit que tous les pays sont concernés, mais pas au même degré. En 2022, un fonds « pertes et dommages » est créé pour aider les pays les plus touchés par les effets du réchauffement."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "em",
+     "enonce": "Touche le pays qui émet aujourd’hui la plus grande part des émissions annuelles.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare les barres corail.",
+     "explication": "La **Chine** émet aujourd’hui la plus grande part des émissions annuelles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart, en points de pourcentage, y a-t-il pour les États-Unis entre leur part cumulée et leur part annuelle ?",
+     "reponse": 12,
+     "unite": "points",
+     "aide": "Soustrais 13 à 25.",
+     "explication": "25 − 13 = **12 points** : les États-Unis pèsent plus par leur histoire que par leur production actuelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque groupe de pays à sa position.",
+     "paires": [
+      [
+       "Pays développés",
+       "Une grande part des émissions historiques"
+      ],
+      [
+       "Pays émergents",
+       "Une part croissante des émissions actuelles"
+      ],
+      [
+       "États insulaires",
+       "Ils subissent les effets les plus violents"
+      ]
+     ],
+     "aide": "Pense au passé, au présent et aux victimes.",
+     "explication": "Les **développés** portent l’histoire, les **émergents** le présent, les **insulaires** subissent les effets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le principe des responsabilités communes mais différenciées se justifie-t-il ?",
+     "options": [
+      "Parce que les pays n’ont ni pollué ni subi de la même façon",
+      "Parce que tous les pays ont émis exactement autant",
+      "Parce que seuls les pays riches subissent les effets",
+      "Parce que les émissions passées n’ont plus d’effet"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’écart entre les deux séries de barres.",
+     "explication": "Les pays n’ont **pas pollué** ni **subi** de la même façon : d’où des responsabilités **différenciées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "24e70e6a-859b-577a-915d-bb8131f1d918",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pionniers de la protection",
+   "competence": "lire-carte",
+   "situation": "Les États-Unis ont inventé la protection de la nature. Léo situe trois lieux qui racontent cette histoire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -135,
+      20,
+      -60,
+      55
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -110.5,
+       "lat": 44.6,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": -77.04,
+       "lat": 38.91,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": -122.42,
+       "lat": 37.77,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le premier parc national du monde, Yellowstone, dans les montagnes Rocheuses.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est au nord-ouest du pays, loin des côtes.",
+     "explication": "**Yellowstone** (1872) est le premier parc national du monde."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale fédérale, Washington, où siège l’EPA.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle est sur la côte est.",
+     "explication": "**Washington** est la capitale fédérale ; l’EPA y siège depuis 1970."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces jalons du plus ancien au plus récent.",
+     "items": [
+      "Création de Yellowstone (1872)",
+      "Printemps silencieux de Rachel Carson (1962)",
+      "Création de l’EPA (1970)",
+      "Accord de Paris (2015)"
+     ],
+     "aide": "Retiens les décennies : 1870, 1960, 1970, 2010.",
+     "explication": "**1872** Yellowstone, **1962** *Printemps silencieux*, **1970** EPA, **2015** accord de Paris."
+    }
+   ]
+  },
+  {
+   "chapitre": "24e70e6a-859b-577a-915d-bb8131f1d918",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Très émettrice, très consommatrice",
+   "competence": "lire-graphique",
+   "situation": "Les États-Unis sont une puissance très émettrice. Malo regarde les émissions par habitant.",
+   "documents": [
+    {
+     "id": "hab",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Émissions de CO₂ par habitant",
+     "source": "Ordres de grandeur arrondis, vers 2022.",
+     "categories": [
+      "États-Unis",
+      "Chine",
+      "Union européenne",
+      "Inde"
+     ],
+     "series": [
+      {
+       "nom": "t CO₂",
+       "valeurs": [
+        15,
+        8,
+        6,
+        2
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Tonnes par habitant",
+      "unite": "t",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "valeurs": false
+    },
+    {
+     "id": "vie",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un mode de vie",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "Un mode de vie fondé sur l’[[a|automobile]], l’étalement urbain, la climatisation et l’abondance d’énergie explique des émissions par habitant parmi les plus élevées. La révolution du gaz de schiste a même fait du pays un exportateur d’hydrocarbures."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hab",
+     "enonce": "Touche la barre du pays qui émet le plus par habitant.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **États-Unis** émettent le plus par habitant, environ 15 tonnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de fois un habitant des États-Unis émet-il plus qu’un habitant de l’Inde ?",
+     "reponse": 7.5,
+     "unite": "fois",
+     "tolerance": 1,
+     "aide": "Divise 15 par 2.",
+     "explication": "15 ÷ 2 = **7,5** : l’écart est énorme."
+    },
+    {
+     "type": "zone",
+     "document": "vie",
+     "enonce": "Touche le moyen de transport qui symbolise ce mode de vie.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est un véhicule individuel.",
+     "explication": "L’**automobile** est le symbole de ce mode de vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le graphique sur les États-Unis par rapport à la Chine ?",
+     "options": [
+      "Par habitant, un Américain émet près du double d’un Chinois",
+      "Par habitant, un Chinois émet plus qu’un Américain",
+      "Par habitant, les deux pays émettent à peu près autant",
+      "Par habitant, l’Union émet plus que les États-Unis"
+     ],
+     "reponse": 0,
+     "aide": "Compare les barres États-Unis et Chine.",
+     "explication": "15 t contre 8 t : un Américain émet **presque deux fois** plus qu’un Chinois."
+    }
+   ]
+  },
+  {
+   "chapitre": "24e70e6a-859b-577a-915d-bb8131f1d918",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Washington recule, la Californie avance",
+   "competence": "analyser-document",
+   "situation": "La politique climatique américaine change avec les présidents. Mais le pays agit aussi sans Washington. Pia croise chronologie et récit.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Une position en dents de scie",
+     "source": "Dates principales.",
+     "debut": 2015,
+     "fin": 2023,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "par",
+       "date": 2015,
+       "nom": "Accord de Paris"
+      },
+      {
+       "id": "ann",
+       "date": 2017,
+       "nom": "Retrait annoncé"
+      },
+      {
+       "id": "eff",
+       "date": 2020,
+       "nom": "Retrait effectif"
+      },
+      {
+       "id": "ret",
+       "date": 2021,
+       "nom": "Retour"
+      },
+      {
+       "id": "ira",
+       "date": 2022,
+       "nom": "IRA"
+      }
+     ]
+    },
+    {
+     "id": "cal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La Californie tient bon",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Quand la Maison Blanche annonce son retrait de l’accord, la [[e|Californie]] maintient ses propres normes sur les voitures et signe des accords climatiques avec d’autres régions du monde. Des villes et de grandes entreprises font de même."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année où le retrait des États-Unis de l’accord de Paris devient effectif.",
+     "reponse": [
+      "eff"
+     ],
+     "aide": "Il est annoncé en 2017, mais n’est effectif que trois ans après.",
+     "explication": "Le retrait devient **effectif en 2020**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le retrait annoncé (2017) du retour dans l’accord (2021) ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais 2017 de 2021.",
+     "explication": "2021 − 2017 = **4 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "cal",
+     "enonce": "Touche l’État fédéré qui poursuit sa politique climatique malgré Washington.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "C’est un État de la côte ouest.",
+     "explication": "La **Californie** agit même quand Washington recule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui explique l’instabilité de la position américaine ?",
+     "options": [
+      "Le fédéralisme et l’alternance entre majorités politiques",
+      "Un traité qui change de texte à chaque élection locale",
+      "L’absence totale de normes environnementales nationales",
+      "Un pouvoir exercé uniquement par les entreprises"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux présidents successifs et aux États fédérés.",
+     "explication": "La politique change **avec les majorités** ; le **fédéralisme** permet aussi aux États et aux villes d’agir à part."
+    }
+   ]
+  },
+  {
+   "chapitre": "3147c759-6bb7-5a30-a3bb-5d472e771a46",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du bien du père au bien de l’humanité",
+   "competence": "se-reperer-temps",
+   "situation": "Hana suit l’histoire d’un mot : « patrimoine » était un héritage privé, il est devenu un bien commun. Elle place les jalons sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Six jalons du patrimoine",
+     "source": "Dates principales.",
+     "debut": 1790,
+     "fin": 1980,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "gre",
+       "date": 1794,
+       "nom": "Grégoire"
+      },
+      {
+       "id": "mer",
+       "date": 1834,
+       "nom": "Mérimée"
+      },
+      {
+       "id": "loi",
+       "date": 1913,
+       "nom": "Loi de 1913"
+      },
+      {
+       "id": "une",
+       "date": 1945,
+       "nom": "UNESCO"
+      },
+      {
+       "id": "abou",
+       "date": 1960,
+       "nom": "Abou Simbel"
+      },
+      {
+       "id": "con",
+       "date": 1972,
+       "nom": "Convention"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi qui organise le classement et la protection des monuments.",
+     "reponse": [
+      "loi"
+     ],
+     "aide": "Elle date de la veille de la Première Guerre mondiale.",
+     "explication": "La **loi de 1913** organise le classement et la protection des monuments historiques."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque jalon à ce qu’il apporte.",
+     "paires": [
+      [
+       "Grégoire",
+       "Le mot forgé face au vandalisme"
+      ],
+      [
+       "Mérimée",
+       "La charge des Monuments historiques"
+      ],
+      [
+       "Convention de 1972",
+       "La liste du patrimoine mondial"
+      ]
+     ],
+     "aide": "Relis le nom et la date de chaque jalon.",
+     "explication": "**Grégoire** forge le mot en 1794, **Mérimée** prend la charge des Monuments historiques en 1834, la **convention de 1972** crée la liste du patrimoine mondial."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi de 1913 de la convention de 1972 ?",
+     "reponse": 59,
+     "unite": "ans",
+     "aide": "Soustrais 1913 de 1972.",
+     "explication": "1972 − 1913 = **59 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3147c759-6bb7-5a30-a3bb-5d472e771a46",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une liste très inégale",
+   "competence": "lire-graphique",
+   "situation": "La liste du patrimoine mondial compte plus de 1 200 biens. Dylan regarde comment ils se répartissent entre les régions du monde.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition des biens inscrits",
+     "source": "Ordres de grandeur arrondis, en pourcentage des inscriptions.",
+     "categories": [
+      "Europe",
+      "Asie-Pacifique",
+      "Amérique latine",
+      "Afrique",
+      "États arabes",
+      "Amérique du Nord"
+     ],
+     "series": [
+      {
+       "nom": "Part",
+       "valeurs": [
+        45,
+        23,
+        10,
+        9,
+        8,
+        5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "valeurs": true
+    },
+    {
+     "id": "vue",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un critère",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "Pour être inscrit, un bien doit avoir une « valeur universelle exceptionnelle ». Mais il faut aussi qu’un État présente un dossier solide : cela demande des experts, du temps et de l’argent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "enonce": "Touche la région qui détient la plus grande part des inscriptions.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part.",
+     "explication": "L’**Europe** détient près de la moitié des inscriptions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de fois l’Europe compte-t-elle plus d’inscriptions que l’Afrique ?",
+     "reponse": 5,
+     "unite": "fois",
+     "aide": "Divise 45 par 9.",
+     "explication": "45 ÷ 9 = **5** : l’Europe en a environ cinq fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle nuance critique le programme attend-il sur cette répartition ?",
+     "options": [
+      "La liste reflète aussi les capacités administratives des États",
+      "La liste reflète seulement la richesse réelle du patrimoine",
+      "La liste est réservée aux monuments d’un seul continent",
+      "La liste est établie sans aucun dossier d’État"
+     ],
+     "reponse": 0,
+     "aide": "Relis le texte : que faut-il pour présenter un dossier ?",
+     "explication": "La liste reflète autant les **capacités administratives et diplomatiques** des États que la richesse patrimoniale réelle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Pour être inscrit, un bien doit avoir une « valeur ___ exceptionnelle ».",
+     "reponses": [
+      [
+       "universelle"
+      ]
+     ],
+     "banque": [
+      "universelle",
+      "nationale",
+      "locale",
+      "commerciale"
+     ],
+     "aide": "Relis le texte.",
+     "explication": "Le critère est la **valeur universelle exceptionnelle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3147c759-6bb7-5a30-a3bb-5d472e771a46",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sauver les temples d’Abou Simbel",
+   "competence": "analyser-document",
+   "situation": "Dans les années 1960, un barrage menace des temples égyptiens. Leur sauvetage est le geste fondateur du patrimoine mondial. Adam reconstitue l’histoire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La vallée du Nil en Égypte",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      22,
+      18,
+      42,
+      33
+     ],
+     "fleuves": [
+      "nil"
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 31.62,
+       "lat": 22.34,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 32.9,
+       "lat": 24.09,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 31.24,
+       "lat": 30.04,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "sauv",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un sauvetage",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "Le barrage d’Assouan, construit sur le Nil, doit noyer la vallée où se dressent les temples d’Abou Simbel. En 1960, l’UNESCO lance un appel mondial. Entre 1964 et 1968, les temples sont découpés en blocs puis remontés plus haut. Ce geste conduit à la convention de 1972."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le site des temples d’Abou Simbel, près de la frontière avec le Soudan.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est tout au sud de l’Égypte, sur le lac Nasser.",
+     "explication": "**Abou Simbel** est le site le plus au sud de l’Égypte."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville du barrage qui menaçait les temples.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle est plus au nord qu’Abou Simbel, sur le Nil.",
+     "explication": "Le barrage est à **Assouan**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes dans l’ordre.",
+     "items": [
+      "Le barrage menace les temples",
+      "L’UNESCO lance un appel (1960)",
+      "Les temples sont déplacés (1964-1968)",
+      "La convention de 1972 crée la liste du patrimoine mondial"
+     ],
+     "aide": "Commence par la menace, finis par le texte de 1972.",
+     "explication": "Menace, **appel de 1960**, **déplacement** de 1964 à 1968, puis **convention de 1972**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Abou Simbel est-il un geste fondateur ?",
+     "options": [
+      "L’humanité s’y est mobilisée pour un bien situé dans un seul État",
+      "Un seul État a payé seul le déplacement de tous les temples",
+      "Le barrage a été abandonné pour conserver les temples en place",
+      "Les temples ont été classés avant toute décision de l’UNESCO"
+     ],
+     "reponse": 0,
+     "aide": "Qui a participé au sauvetage ?",
+     "explication": "Un bien situé dans **un seul pays** est sauvé par la **coopération internationale** : l’idée de patrimoine de l’humanité est née."
+    }
+   ]
+  },
+  {
+   "chapitre": "60e5b1e9-cbb5-5a46-905b-a41bbd8a5e55",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Détruire pour nier",
+   "competence": "lire-carte",
+   "situation": "Quatre sites du patrimoine ont été visés par des destructions : Emma les situe et comprend pourquoi on les attaque.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre sites détruits",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -15,
+      5,
+      80,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 17.81,
+       "lat": 43.34,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 38.27,
+       "lat": 34.55,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 67.82,
+       "lat": 34.82,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": -3,
+       "lat": 16.77,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le site des bouddhas de Bamiyan, détruits en 2001.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Bamiyan est en Afghanistan, à l’est de l’Iran.",
+     "explication": "Les bouddhas de **Bamiyan** sont en Afghanistan."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche Palmyre, site syrien visé en 2015.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche au bord de la Méditerranée orientale, dans les terres.",
+     "explication": "**Palmyre** est en Syrie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque site à son pays actuel.",
+     "paires": [
+      [
+       "Mostar",
+       "Bosnie-Herzégovine"
+      ],
+      [
+       "Bamiyan",
+       "Afghanistan"
+      ],
+      [
+       "Palmyre",
+       "Syrie"
+      ],
+      [
+       "Tombouctou",
+       "Mali"
+      ]
+     ],
+     "aide": "Repère chaque lettre sur la carte.",
+     "explication": "**Mostar** est en Bosnie-Herzégovine, **Bamiyan** en Afghanistan, **Palmyre** en Syrie, **Tombouctou** au Mali."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la condamnation d’al-Mahdi par la CPI en 2016 est-elle une première ?",
+     "options": [
+      "La destruction du patrimoine est jugée comme un crime de guerre",
+      "Un État est condamné pour avoir construit un barrage sur un site classé",
+      "Un musée est condamné pour avoir vendu des objets volés à des collectionneurs",
+      "Un chef d’État est condamné pour l’achat de fausses œuvres d’art"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit des mausolées de Tombouctou.",
+     "explication": "Pour la **première fois**, la destruction du patrimoine est jugée comme un **crime de guerre** à part entière."
+    }
+   ]
+  },
+  {
+   "chapitre": "60e5b1e9-cbb5-5a46-905b-a41bbd8a5e55",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une ville d’art sous les visiteurs",
+   "competence": "analyser-document",
+   "situation": "Une ville patrimoniale imaginaire vit du tourisme, mais ses habitants se plaignent. Noa pèse le pour et le contre.",
+   "documents": [
+    {
+     "id": "ville",
+     "type": "tableau",
+     "titre": "Une ville imaginaire",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Habitants",
+       "50 000"
+      ],
+      [
+       "Visiteurs par an",
+       "3 000 000"
+      ],
+      [
+       "Hausse des loyers en dix ans",
+       "40 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une habitante",
+     "source": "Témoignage imaginé pour l’exercice.",
+     "blocs": [
+      "« Les touristes font vivre la ville, mais je ne peux plus y loger. Les loyers montent, les commerces de quartier ferment pour des boutiques de [[s|souvenirs]]. Mon centre-ville est devenu un musée. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de visiteurs par habitant et par an la ville accueille-t-elle ?",
+     "reponse": 60,
+     "unite": "visiteurs",
+     "aide": "Divise 3 000 000 par 50 000.",
+     "explication": "3 000 000 ÷ 50 000 = **60 visiteurs** par habitant."
+    },
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche les objets qui remplacent les commerces de quartier.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Ce sont les produits vendus aux touristes.",
+     "explication": "Les boutiques de **souvenirs** remplacent les commerces de quartier."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque effet : avantage ou coût du tourisme patrimonial ?",
+     "categories": [
+      "Avantage",
+      "Coût"
+     ],
+     "items": [
+      [
+       "Il fait vivre des régions entières",
+       0
+      ],
+      [
+       "Il finance la restauration",
+       0
+      ],
+      [
+       "La surfréquentation des lieux",
+       1
+      ],
+      [
+       "La hausse des loyers",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si l’effet aide ou gêne la ville.",
+     "explication": "Le tourisme **finance** la restauration et fait vivre la région, mais crée **surfréquentation** et **hausse des loyers**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie la « muséification » d’un centre-ville ?",
+     "options": [
+      "Il se transforme en décor pour visiteurs, au détriment des habitants",
+      "Il est entièrement transformé en musées par décision de l’État",
+      "Il perd son label UNESCO après une restauration",
+      "Il devient un quartier réservé aux résidents"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de l’habitante.",
+     "explication": "Le centre devient un **décor** pour les visiteurs, les habitants et les commerces de quartier disparaissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "60e5b1e9-cbb5-5a46-905b-a41bbd8a5e55",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Restituer ou conserver ?",
+   "competence": "analyser-document",
+   "situation": "Des objets pris pendant la colonisation dorment dans des musées européens. Que faire ? Samir compare les arguments.",
+   "documents": [
+    {
+     "id": "rest",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un débat",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "En 2018, le rapport Sarr-Savoy recommande de restituer aux pays africains les objets acquis en contexte colonial. En 2021, la France rend au Bénin vingt-six œuvres venues du palais d’Abomey."
+     ]
+    },
+    {
+     "id": "args",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Position",
+      "Argument"
+     ],
+     "lignes": [
+      [
+       "Inaliénabilité",
+       "Les collections publiques ne peuvent pas être cédées"
+      ],
+      [
+       "Réparation",
+       "Il s’agit de réparer une histoire de domination"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "args",
+     "enonce": "Touche la case qui défend l’idée de réparation historique.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Réparation ».",
+     "explication": "L’argument de **réparation** vise à réparer une histoire de domination."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le rapport Sarr-Savoy (2018) des restitutions au Bénin (2021) ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais 2018 de 2021.",
+     "explication": "2021 − 2018 = **3 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument dans le bon camp.",
+     "categories": [
+      "Restituer",
+      "Conserver"
+     ],
+     "items": [
+      [
+       "Les objets ont été pris dans un rapport de domination",
+       0
+      ],
+      [
+       "Les collections publiques sont inaliénables",
+       1
+      ],
+      [
+       "Les pays d’origine réclament leur histoire",
+       0
+      ],
+      [
+       "Le musée garde le bien pour tous les publics",
+       1
+      ]
+     ],
+     "aide": "Qui parle : les pays d’origine ou les musées ?",
+     "explication": "**Restituer** : domination, réclamation d’histoire. **Conserver** : inaliénabilité et accès du public."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce débat sur le patrimoine ?",
+     "options": [
+      "Il engage des rapports de domination hérités du passé",
+      "Il n’a aucun lien avec l’histoire coloniale européenne",
+      "Il se règle par un simple classement au patrimoine mondial",
+      "Il ne concerne que les objets d’art contemporain"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne du cours.",
+     "explication": "Le patrimoine engage des **rapports de domination hérités** : c’est un **choix collectif**, toujours révisable."
+    }
+   ]
+  },
+  {
+   "chapitre": "e6d97e93-92d0-59de-af59-dc5246795f6e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Restaurer ou laisser vieillir ?",
+   "competence": "analyser-document",
+   "situation": "Deux grands penseurs s’opposent sur la façon de traiter un monument ancien. Jade compare leurs doctrines.",
+   "documents": [
+    {
+     "id": "doct",
+     "type": "tableau",
+     "titre": "Deux doctrines",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Critère",
+      "Viollet-le-Duc",
+      "John Ruskin"
+     ],
+     "lignes": [
+      [
+       "Position",
+       "Rétablir l’édifice dans un état complet",
+       "Refuser la restauration"
+      ],
+      [
+       "Argument",
+       "L’unité de style prime",
+       "Chaque ajout falsifie le témoignage"
+      ],
+      [
+       "Exemple",
+       "Carcassonne",
+       "—"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "doct",
+     "enonce": "Touche la case qui défend l’unité de style.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Argument », colonne de Viollet-le-Duc.",
+     "explication": "**Viollet-le-Duc** défend l’**unité de style** plutôt que l’état réel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée chez le bon penseur.",
+     "categories": [
+      "Viollet-le-Duc",
+      "Ruskin"
+     ],
+     "items": [
+      [
+       "Restaurer pour rendre l’édifice complet",
+       0
+      ],
+      [
+       "Entretenir et laisser vieillir",
+       1
+      ],
+      [
+       "Carcassonne comme exemple",
+       0
+      ],
+      [
+       "Un ajout falsifie le témoignage",
+       1
+      ]
+     ],
+     "aide": "Restaurer ou ne pas restaurer ?",
+     "explication": "**Viollet-le-Duc** restaure jusqu’à l’unité ; **Ruskin** refuse, car chaque ajout fausse le témoignage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que décide la charte de Venise de 1964 ?",
+     "options": [
+      "Respecter l’authenticité des matériaux et signaler toute intervention",
+      "Reconstruire tous les monuments dans leur style d’origine complet",
+      "Interdire toute intervention sur les monuments historiques classés",
+      "Remplacer les matériaux anciens par des matériaux plus modernes"
+     ],
+     "reponse": 0,
+     "aide": "C’est un compromis entre les deux doctrines.",
+     "explication": "La charte de Venise **tranche partiellement** : authenticité des matériaux et interventions nouvelles **visibles**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e6d97e93-92d0-59de-af59-dc5246795f6e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La sanction existe",
+   "competence": "lire-carte",
+   "situation": "Un site peut être retiré de la liste du patrimoine mondial. Louise repère deux cas en Europe, et un incendie célèbre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes européennes",
+     "source": "Carte schématique.",
+     "fond": "europe",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 13.74,
+       "lat": 51.05,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": -2.98,
+       "lat": 53.41,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 2.35,
+       "lat": 48.85,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "retraits",
+     "type": "tableau",
+     "titre": "Deux retraits",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Ville",
+      "Retirée en"
+     ],
+     "lignes": [
+      [
+       "Dresde",
+       "2009"
+      ],
+      [
+       "Liverpool",
+       "2021"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche Liverpool, retirée de la liste en 2021.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est un grand port de l’ouest de l’Angleterre.",
+     "explication": "**Liverpool** a été retirée de la liste en 2021."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche Paris, où l’incendie de Notre-Dame a lancé une souscription en 2019.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est la capitale de la France.",
+     "explication": "**Paris** : la souscription qui a suivi l’incendie de **Notre-Dame** est un outil de financement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le retrait de Dresde du retrait de Liverpool ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais 2009 de 2021.",
+     "explication": "2021 − 2009 = **12 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le retrait de la liste est-il une sanction ?",
+     "options": [
+      "Le site perd son label et l’attention internationale qui l’accompagne",
+      "Le site est détruit sur ordre de l’UNESCO et de ses experts",
+      "Le site devient propriété de l’UNESCO et de son directeur général",
+      "Le site est fermé définitivement à tous les visiteurs du monde"
+     ],
+     "reponse": 0,
+     "aide": "Que perd un site qui n’est plus sur la liste ?",
+     "explication": "Le retrait montre que la **sanction existe** : le site perd son label."
+    }
+   ]
+  },
+  {
+   "chapitre": "e6d97e93-92d0-59de-af59-dc5246795f6e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un arbitrage budgétaire",
+   "competence": "raisonner",
+   "situation": "Une commune imaginaire doit choisir quels monuments restaurer avec un budget limité. Malik calcule, puis arbitre.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Trois chantiers d’une commune imaginaire",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Chantier",
+      "Coût (millions d’euros)",
+      "Visiteurs par an"
+     ],
+     "lignes": [
+      [
+       "Château",
+       "6",
+       "80 000"
+      ],
+      [
+       "Église rurale",
+       "3",
+       "2 000"
+      ],
+      [
+       "Halles",
+       "4",
+       "15 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "maire",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le conseil municipal",
+     "source": "Texte imaginé pour l’exercice.",
+     "blocs": [
+      "La commune dispose de 10 millions d’euros. « Chaque euro dépensé ici est un euro [[n|non]] dépensé ailleurs », rappelle la maire. Certains élus veulent tout sauver ; d’autres réclament des crèches et des routes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien coûterait la restauration des trois chantiers en tout, en millions d’euros ?",
+     "reponse": 13,
+     "unite": "M€",
+     "aide": "Additionne 6, 3 et 4.",
+     "explication": "6 + 3 + 4 = **13 millions** d’euros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’euros manque-t-il pour tout financer ?",
+     "reponse": 3,
+     "unite": "M€",
+     "aide": "Soustrais le budget de 10 au total.",
+     "explication": "13 − 10 = **3 millions** d’euros."
+    },
+    {
+     "type": "zone",
+     "document": "maire",
+     "enonce": "Touche le mot qui résume qu’un choix en écarte d’autres.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Il s’agit d’un euro dépensé sur un site, donc pas ailleurs.",
+     "explication": "Le mot **non** exprime l’arbitrage : chaque euro investi ici ne l’est pas ailleurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette situation sur la préservation du patrimoine ?",
+     "options": [
+      "C’est un arbitrage politique, car conserver coûte",
+      "Les monuments se financent tous seuls grâce aux visiteurs",
+      "La préservation ne concerne jamais les élus locaux",
+      "Les experts décident seuls, sans aucun budget à respecter"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase de la maire.",
+     "explication": "Conserver **coûte** : la préservation est un **arbitrage politique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdb98d9-bfd5-5217-974c-24706206d051",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une longue tradition d’État",
+   "competence": "analyser-document",
+   "situation": "La France protège son patrimoine depuis longtemps. Yann lit un tableau de jalons pour comprendre le rôle de l’État.",
+   "documents": [
+    {
+     "id": "jal",
+     "type": "tableau",
+     "titre": "Quatre jalons",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Jalon"
+     ],
+     "lignes": [
+      [
+       "1913",
+       "Loi sur les monuments historiques"
+      ],
+      [
+       "1959",
+       "Ministère des Affaires culturelles d’André Malraux"
+      ],
+      [
+       "1962",
+       "Loi Malraux et secteurs sauvegardés"
+      ],
+      [
+       "1984",
+       "Première édition des Journées du patrimoine en France"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jal",
+     "enonce": "Touche la date de création du ministère d’André Malraux.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la ligne du ministère.",
+     "explication": "Le ministère des Affaires culturelles de **Malraux** est créé en **1959**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi de 1913 de la loi Malraux de 1962 ?",
+     "reponse": 49,
+     "unite": "ans",
+     "aide": "Soustrais 1913 de 1962.",
+     "explication": "1962 − 1913 = **49 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à son jalon.",
+     "paires": [
+      [
+       "1913",
+       "Loi sur les monuments historiques"
+      ],
+      [
+       "1962",
+       "Secteurs sauvegardés"
+      ],
+      [
+       "1984",
+       "Journées du patrimoine"
+      ]
+     ],
+     "aide": "Relis chaque ligne du tableau.",
+     "explication": "**1913** : monuments historiques ; **1962** : secteurs sauvegardés ; **1984** : Journées du patrimoine."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdb98d9-bfd5-5217-974c-24706206d051",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un patrimoine élargi",
+   "competence": "lire-carte",
+   "situation": "La France protège aussi des paysages, des usines et des savoir-faire. Rose situe quatre sites sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre sites",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 2.83,
+       "lat": 50.43,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 1.34,
+       "lat": 47.59,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 3.08,
+       "lat": 44.1,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": -1.51,
+       "lat": 48.64,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le bassin minier du Nord-Pas-de-Calais, inscrit en 2012.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est tout au nord du pays.",
+     "explication": "Le bassin minier est un patrimoine **industriel** inscrit en 2012."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le Mont-Saint-Michel.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Il est sur la côte de la Manche, à la limite entre Normandie et Bretagne.",
+     "explication": "Le **Mont-Saint-Michel** est l’un des sites les plus visités."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque site à sa catégorie de patrimoine.",
+     "paires": [
+      [
+       "Bassin minier",
+       "Patrimoine industriel"
+      ],
+      [
+       "Val de Loire",
+       "Paysage culturel fluvial"
+      ],
+      [
+       "Causses et Cévennes",
+       "Paysage culturel agropastoral"
+      ],
+      [
+       "Baguette",
+       "Patrimoine immatériel"
+      ]
+     ],
+     "aide": "Usine, paysage ou savoir-faire ?",
+     "explication": "Le **bassin minier** est industriel, le **Val de Loire** et les **Causses** des paysages culturels, la **baguette** un savoir-faire immatériel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel site de la carte est un paysage culturel de la vallée d’un grand fleuve ?",
+     "options": [
+      "Le Val de Loire, lettre B",
+      "Le bassin minier, lettre A",
+      "Les Causses, lettre C",
+      "Le Mont-Saint-Michel, lettre D"
+     ],
+     "reponse": 0,
+     "aide": "Pense au nom du fleuve.",
+     "explication": "Le **Val de Loire** est un paysage culturel : c’est la lettre **B**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdb98d9-bfd5-5217-974c-24706206d051",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Patrimoine et soft power",
+   "competence": "raisonner",
+   "situation": "Le patrimoine projette une image de la France à l’étranger, mais il fait aussi débat. Théa relie leviers et enjeux.",
+   "documents": [
+    {
+     "id": "lev",
+     "type": "tableau",
+     "titre": "Quatre leviers",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Levier",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Siège de l’UNESCO à Paris",
+       "Une centralité institutionnelle"
+      ],
+      [
+       "Fonds ALIPH (2017)",
+       "Protéger le patrimoine en zone de conflit"
+      ],
+      [
+       "Instituts français",
+       "Un réseau mondial"
+      ],
+      [
+       "Louvre Abou Dabi (2017)",
+       "Le nom du musée est loué"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "abou",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le musée du désert",
+     "source": "Résumé rédigé pour l’exercice.",
+     "blocs": [
+      "En 2007, la France et les Émirats arabes unis signent un accord : le [[n|nom]] du Louvre est loué pour trente ans à Abou Dabi, avec l’aide d’experts français. Le musée ouvre en 2017."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque levier à sa fonction.",
+     "paires": [
+      [
+       "UNESCO à Paris",
+       "Une centralité institutionnelle"
+      ],
+      [
+       "ALIPH",
+       "Sauver le patrimoine en zone de guerre"
+      ],
+      [
+       "Louvre Abou Dabi",
+       "Le nom du musée est loué"
+      ]
+     ],
+     "aide": "Relis le tableau.",
+     "explication": "Le **siège de l’UNESCO** donne une centralité, l’**ALIPH** protège en zone de conflit, le **Louvre Abou Dabi** est la forme la plus commerciale."
+    },
+    {
+     "type": "zone",
+     "document": "abou",
+     "enonce": "Touche ce qui est loué à Abou Dabi pour trente ans.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "C’est ce qui identifie le musée.",
+     "explication": "C’est le **nom** du Louvre qui est loué."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument dans le débat sur les restitutions.",
+     "categories": [
+      "Inaliénabilité",
+      "Réparation historique"
+     ],
+     "items": [
+      [
+       "Les collections publiques ne peuvent être cédées",
+       0
+      ],
+      [
+       "Il faut réparer une histoire coloniale",
+       1
+      ],
+      [
+       "Les musées doivent préserver leur patrimoine pour tous",
+       0
+      ],
+      [
+       "Les pays d’origine réclament leurs œuvres",
+       1
+      ]
+     ],
+     "aide": "Conserver dans les musées ou réparer ?",
+     "explication": "L’**inaliénabilité** protège les collections publiques ; la **réparation** répond à l’histoire coloniale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que le patrimoine est un soft power pour la France ?",
+     "options": [
+      "Il projette une image, ouvre des relations et rapporte",
+      "Il remplace entièrement la diplomatie militaire",
+      "Il n’a aucun effet hors des frontières nationales",
+      "Il est géré par les seuls organismes internationaux"
+     ],
+     "reponse": 0,
+     "aide": "Relis la conclusion du cours.",
+     "explication": "Le patrimoine **projette une image**, ouvre des **relations** et **rapporte** : c’est un levier d’influence."
+    }
+   ]
+  }
+ ]
+}

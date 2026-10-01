@@ -1,0 +1,2708 @@
+{
+ "niveau": "Tle",
+ "matiere": "i2d",
+ "exercices": [
+  {
+   "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tirant du portique",
+   "competence": "calculer",
+   "situation": "Un tirant en acier retient la poutre d’un petit portique de stockage. Le technicien relève ses caractéristiques avant de vérifier qu’il ne se déforme pas de façon permanente.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données du tirant",
+     "colonnes": [
+      "Longueur L0",
+      "Section S",
+      "Effort F",
+      "Matériau"
+     ],
+     "lignes": [
+      [
+       "1 500 mm",
+       "80 mm²",
+       "12 kN",
+       "Acier S235 (Re = 235 MPa, E = 210 000 MPa)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "don",
+     "enonce": "Touche la section du tirant.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "La section s’exprime en mm².",
+     "explication": "La section est **S = 80 mm²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la contrainte normale σ dans le tirant (F en newtons, S en mm²).",
+     "reponse": 150,
+     "unite": "MPa",
+     "tolerance": 0,
+     "aide": "σ = F / S, avec F = 12 000 N.",
+     "explication": "σ = 12 000 / 80 = **150 MPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’allongement ΔL du tirant, arrondi au centième de millimètre.",
+     "reponse": 1.07,
+     "unite": "mm",
+     "tolerance": 0.01,
+     "aide": "ε = σ / E puis ΔL = ε × L0.",
+     "explication": "ε = 150 / 210 000 ≈ 7,14 × 10⁻⁴ ; ΔL = 7,14 × 10⁻⁴ × 1 500 ≈ **1,07 mm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le tirant reste-t-il dans le domaine élastique ?",
+     "options": [
+      "Oui : σ = 150 MPa reste inférieure à Re = 235 MPa",
+      "Non : σ = 150 MPa dépasse largement la limite Re",
+      "Non : l’allongement de 1,07 mm est déjà une rupture",
+      "Non : le module d’Young de 210 000 MPa dépasse largement σ"
+     ],
+     "reponse": 0,
+     "aide": "Compare σ à la limite d’élasticité Re.",
+     "explication": "σ = 150 MPa est **inférieure à Re = 235 MPa** : la déformation est élastique, le tirant reprend sa longueur une fois déchargé."
+    }
+   ]
+  },
+  {
+   "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel rond pour soulever la charge ?",
+   "competence": "resoudre",
+   "situation": "Un atelier suspend une charge de 30 kN à un tirant rond en acier S355 (Re = 355 MPa). Le cahier des charges impose un coefficient de sécurité s ≥ 2,5. Il faut choisir le diamètre dans la gamme du fournisseur.",
+   "documents": [
+    {
+     "id": "gam",
+     "type": "tableau",
+     "titre": "Gamme de ronds du fournisseur",
+     "colonnes": [
+      "Diamètre (mm)",
+      "14",
+      "16",
+      "18",
+      "20"
+     ],
+     "lignes": [
+      [
+       "Section (mm²)",
+       "154",
+       "201",
+       "254",
+       "314"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Sections arrondies au mm²"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle contrainte maximale admissible σ = Re / s le cahier des charges autorise-t-il ?",
+     "reponse": 142,
+     "unite": "MPa",
+     "tolerance": 0,
+     "aide": "Divise Re = 355 MPa par le coefficient s = 2,5.",
+     "explication": "σ admissible = 355 / 2,5 = **142 MPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle section minimale S faut-il ? Arrondis au dixième de mm².",
+     "reponse": 211.3,
+     "unite": "mm²",
+     "tolerance": 0.1,
+     "aide": "S = F / σ admissible, avec F = 30 000 N.",
+     "explication": "S = 30 000 / 142 ≈ **211,3 mm²**."
+    },
+    {
+     "type": "zone",
+     "document": "gam",
+     "enonce": "Touche la section du plus petit rond qui convient.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la plus petite section supérieure à 211,3 mm².",
+     "explication": "Le rond de 16 mm (201 mm²) est trop juste ; celui de 18 mm a **254 mm²**, il convient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne faut-il pas choisir le rond de 16 mm ?",
+     "options": [
+      "Sa section de 201 mm² donne σ ≈ 149 MPa, en dessous des 142 MPa admissibles",
+      "Sa section de 201 mm² donne σ ≈ 149 MPa, au-dessus des 142 MPa admissibles",
+      "Sa section de 201 mm² est inférieure à Re = 355 MPa, donc trop petite",
+      "Un rond de 16 mm est toujours trop court, quelle que soit sa section"
+     ],
+     "reponse": 1,
+     "aide": "Calcule 30 000 / 201 et compare à 142 MPa.",
+     "explication": "30 000 / 201 ≈ **149 MPa > 142 MPa** : le coefficient de sécurité serait 355 / 149 ≈ 2,4, inférieur à 2,5."
+    }
+   ]
+  },
+  {
+   "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que dit la courbe de traction",
+   "competence": "modeliser",
+   "situation": "Un laboratoire a tracé la courbe d’un essai de traction sur l’acier S235, puis un bureau d’études prépare un tirant avec un cahier des charges précis.",
+   "documents": [
+    {
+     "id": "cb",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Essai de traction d’un acier S235",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3"
+     ],
+     "series": [
+      {
+       "nom": "Contrainte σ",
+       "valeurs": [
+        0,
+        105,
+        210,
+        235,
+        235,
+        240,
+        250
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Contrainte σ",
+      "unite": "MPa",
+      "min": 0,
+      "max": 300,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Déformation ε (en ‰)"
+     },
+     "source": "Essai imaginé pour l’exercice"
+    },
+    {
+     "id": "cdc",
+     "type": "tableau",
+     "titre": "Cahier des charges du tirant",
+     "colonnes": [
+      "Longueur L0",
+      "Coefficient de sécurité",
+      "Allongement maxi",
+      "Matériau"
+     ],
+     "lignes": [
+      [
+       "2 400 mm",
+       "s ≥ 2",
+       "1,5 mm",
+       "Acier S235 (Re = 235 MPa)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cb",
+     "enonce": "Touche la première mesure qui n’est plus sur la droite de Hooke.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Jusqu’à ε = 1 ‰, σ est proportionnelle à ε.",
+     "explication": "À 1,5 ‰, Hooke donnerait 315 MPa, mais la mesure s’arrête à 235 MPa : on a atteint **la limite d’élasticité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la mesure à ε = 1 ‰ (soit 0,001), calcule le module d’Young E de l’acier.",
+     "reponse": 210000,
+     "unite": "MPa",
+     "tolerance": 0,
+     "aide": "Dans le domaine élastique, E = σ / ε.",
+     "explication": "E = 210 / 0,001 = **210 000 MPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le tirant est chargé à la contrainte maximale admissible Re / s. Quel est son allongement, arrondi au centième de mm ?",
+     "reponse": 1.34,
+     "unite": "mm",
+     "tolerance": 0.01,
+     "aide": "σ admissible = 235 / 2 = 117,5 MPa, puis ΔL = σ × L0 / E.",
+     "explication": "σ = 117,5 MPa ; ΔL = 117,5 × 2 400 / 210 000 ≈ **1,34 mm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On charge le matériau jusqu’à ε = 2 ‰ puis on décharge. Que devient la pièce ?",
+     "options": [
+      "Elle retrouve exactement sa longueur initiale, car l’acier est élastique",
+      "Elle se casse obligatoirement dès que σ dépasse Re",
+      "Elle garde une déformation permanente, car elle a dépassé Re = 235 MPa",
+      "Elle devient plus souple, car E diminue à la décharge"
+     ],
+     "reponse": 2,
+     "aide": "À 2 ‰, σ est sur le palier à 235 MPa.",
+     "explication": "Au-delà de Re, la déformation devient **plastique** : elle ne disparaît pas à la décharge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le tirant chargé à Re / s respecte-t-il l’allongement maximal du cahier des charges ?",
+     "options": [
+      "Oui : 1,34 mm est inférieur aux 1,5 mm autorisés",
+      "Non : 1,34 mm est supérieur aux 1,5 mm autorisés",
+      "Non : le coefficient de sécurité vaut seulement 1,34",
+      "Oui : un allongement plastique est toujours acceptable"
+     ],
+     "reponse": 0,
+     "aide": "Compare ton allongement à 1,5 mm.",
+     "explication": "**1,34 mm < 1,5 mm** : les deux exigences (sécurité et rigidité) sont respectées."
+    }
+   ]
+  },
+  {
+   "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mur de la maison témoin",
+   "competence": "calculer",
+   "situation": "Une maison témoin a un mur composé de trois couches. L’architecte veut connaître la résistance thermique de l’isolant, puis celle de tout le mur.",
+   "documents": [
+    {
+     "id": "mur",
+     "type": "tableau",
+     "titre": "Composition du mur",
+     "colonnes": [
+      "Couche",
+      "Épaisseur e (cm)",
+      "λ (W/m·K)"
+     ],
+     "lignes": [
+      [
+       "Bloc béton",
+       "20",
+       "1"
+      ],
+      [
+       "Polystyrène",
+       "12",
+       "0,04"
+      ],
+      [
+       "Plâtre",
+       "1",
+       "0,25"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mur",
+     "enonce": "Touche la conductivité thermique λ du polystyrène.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "λ est dans la dernière colonne.",
+     "explication": "Le polystyrène a **λ = 0,04 W/m·K**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique de la couche de polystyrène (convertis e en mètres).",
+     "reponse": 3,
+     "unite": "m²·K/W",
+     "tolerance": 0,
+     "aide": "R = e / λ, avec e = 0,12 m.",
+     "explication": "R = 0,12 / 0,04 = **3 m²·K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique totale du mur (somme des trois couches).",
+     "reponse": 3.24,
+     "unite": "m²·K/W",
+     "tolerance": 0.01,
+     "aide": "Béton : 0,20 / 1 ; plâtre : 0,01 / 0,25.",
+     "explication": "R = 0,2 + 3 + 0,04 = **3,24 m²·K/W**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle couche apporte l’essentiel de la résistance thermique du mur ?",
+     "options": [
+      "Le bloc béton : c’est la couche la plus épaisse du mur",
+      "Le plâtre : c’est la couche la plus fine, donc la plus isolante",
+      "Le polystyrène : 3 m²·K/W sur 3,24 au total",
+      "Les trois couches : chacune apporte à peu près un tiers du total"
+     ],
+     "reponse": 2,
+     "aide": "Compare les trois R calculés.",
+     "explication": "Le béton ne donne que 0,2 et le plâtre 0,04 : **le polystyrène** fait presque tout le travail d’isolation."
+    }
+   ]
+  },
+  {
+   "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sous le poteau, la semelle",
+   "competence": "modeliser",
+   "situation": "Un poteau central d’une maison à étage reçoit les charges de trois niveaux, puis les transmet à une semelle isolée posée sur un sol qui admet 0,25 MPa. On néglige le poids du poteau et de la semelle.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "tableau",
+     "titre": "Charges reprises par le poteau",
+     "colonnes": [
+      "Charge",
+      "Valeur (kN)"
+     ],
+     "lignes": [
+      [
+       "Toiture et neige",
+       "30"
+      ],
+      [
+       "Plancher haut",
+       "45"
+      ],
+      [
+       "Plancher intermédiaire",
+       "55"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "dc",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le chemin des charges",
+     "noeuds": [
+      {
+       "id": "pl",
+       "texte": "Plancher"
+      },
+      {
+       "id": "po",
+       "texte": "Poutre"
+      },
+      {
+       "id": "pt",
+       "texte": "Poteau"
+      },
+      {
+       "id": "sem",
+       "texte": "Semelle isolée"
+      },
+      {
+       "id": "sol",
+       "texte": "Sol"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pl",
+       "a": "po"
+      },
+      {
+       "de": "po",
+       "a": "pt"
+      },
+      {
+       "de": "pt",
+       "a": "sem"
+      },
+      {
+       "de": "sem",
+       "a": "sol"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel effort total N le poteau transmet-il à sa semelle ?",
+     "reponse": 130,
+     "unite": "kN",
+     "tolerance": 0,
+     "aide": "Additionne les trois charges du tableau.",
+     "explication": "N = 30 + 45 + 55 = **130 kN**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle surface de semelle faut-il au minimum ? Réponds en m², arrondi au centième.",
+     "reponse": 0.52,
+     "unite": "m²",
+     "tolerance": 0.005,
+     "aide": "S = N / pression admissible, avec N = 130 000 N et 0,25 MPa = 0,25 N/mm².",
+     "explication": "S = 130 000 / 0,25 = 520 000 mm², soit **0,52 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La semelle est carrée. Quel côté minimal, arrondi au centimètre ?",
+     "reponse": 0.72,
+     "unite": "m",
+     "tolerance": 0.01,
+     "aide": "Le côté est la racine carrée de la surface.",
+     "explication": "c = √0,52 ≈ **0,72 m**."
+    },
+    {
+     "type": "zone",
+     "document": "dc",
+     "enonce": "Touche la fondation du bâtiment.",
+     "reponse": [
+      "sem"
+     ],
+     "aide": "Une fondation est l’élément en contact avec le sol.",
+     "explication": "La **semelle isolée** est la fondation : elle étale la charge sur le sol."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le sol est plus mou et n’admet que 0,1 MPa. Que devient la surface de semelle nécessaire ?",
+     "options": [
+      "Elle augmente : il faut 1,3 m² pour le même poteau",
+      "Elle diminue : un sol mou répartit mieux les charges",
+      "Elle reste de 0,52 m², car l’effort est identique",
+      "Elle devient nulle, car le sol se déforme sous la charge"
+     ],
+     "reponse": 0,
+     "aide": "Refais S = N / pression admissible avec 0,1 MPa.",
+     "explication": "S = 130 000 / 0,1 = 1 300 000 mm² = **1,3 m²** : plus le sol est faible, plus la semelle est large."
+    }
+   ]
+  },
+  {
+   "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Béton ou ossature bois ?",
+   "competence": "analyser-document",
+   "situation": "Une famille hésite entre deux parois pour son extension de 30 m². La température intérieure visée est de 20 °C, et il fait −5 °C dehors : l’écart de température est de 25 °C. Le maître d’œuvre compare les deux solutions.",
+   "documents": [
+    {
+     "id": "pa",
+     "type": "tableau",
+     "titre": "Paroi A : béton isolé",
+     "colonnes": [
+      "Couche",
+      "e (m)",
+      "λ (W/m·K)"
+     ],
+     "lignes": [
+      [
+       "Bloc béton",
+       "0,20",
+       "1"
+      ],
+      [
+       "Polystyrène",
+       "0,10",
+       "0,04"
+      ],
+      [
+       "Enduit",
+       "0,02",
+       "1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "pb",
+     "type": "tableau",
+     "titre": "Paroi B : ossature bois",
+     "colonnes": [
+      "Couche",
+      "e (m)",
+      "λ (W/m·K)"
+     ],
+     "lignes": [
+      [
+       "Laine de bois",
+       "0,20",
+       "0,04"
+      ],
+      [
+       "Panneau OSB",
+       "0,02",
+       "0,13"
+      ],
+      [
+       "Plâtre",
+       "0,013",
+       "0,25"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique totale de la paroi A.",
+     "reponse": 2.72,
+     "unite": "m²·K/W",
+     "tolerance": 0.01,
+     "aide": "Somme des e / λ des trois couches.",
+     "explication": "R = 0,2 + 2,5 + 0,02 = **2,72 m²·K/W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance thermique totale de la paroi B, arrondie au centième.",
+     "reponse": 5.21,
+     "unite": "m²·K/W",
+     "tolerance": 0.01,
+     "aide": "Laine : 0,20 / 0,04 ; OSB : 0,02 / 0,13 ; plâtre : 0,013 / 0,25.",
+     "explication": "R = 5 + 0,154 + 0,052 ≈ **5,21 m²·K/W**."
+    },
+    {
+     "type": "zone",
+     "document": "pb",
+     "enonce": "Touche la couche de la paroi B qui isole le moins.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Calcule e / λ pour l’OSB et pour le plâtre.",
+     "explication": "L’OSB donne 0,154, le plâtre seulement **0,052 m²·K/W** : c’est la couche la moins isolante."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel flux thermique traverse la paroi B (30 m², ΔT = 25 °C) ? Arrondi au watt.",
+     "reponse": 144,
+     "unite": "W",
+     "tolerance": 0.5,
+     "aide": "Φ = S × ΔT / R.",
+     "explication": "Φ = 30 × 25 / 5,21 ≈ **144 W**, contre environ 276 W pour la paroi A."
+    },
+    {
+     "type": "choix",
+     "enonce": "La famille vise la RE2020 et un faible impact carbone. Quelle paroi choisir ?",
+     "options": [
+      "La paroi A : elle est plus isolante, et le béton stocke du carbone",
+      "La paroi B : plus isolante, et son bois biosourcé stocke du carbone",
+      "La paroi A : le polystyrène est biosourcé, donc mieux noté",
+      "Aucune : la RE2020 interdit les parois à ossature bois"
+     ],
+     "reponse": 1,
+     "aide": "Compare les deux R et le type de matériaux.",
+     "explication": "La paroi B a **le R le plus élevé** et utilise des matériaux biosourcés, favorisés par la RE2020."
+    }
+   ]
+  },
+  {
+   "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le compteur de la pompe à chaleur",
+   "competence": "calculer",
+   "situation": "Clara a installé une pompe à chaleur. Après une journée d’hiver, elle relève sur son compteur l’électricité consommée et la chaleur fournie au logement.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Relevé de la journée",
+     "colonnes": [
+      "Énergie électrique consommée",
+      "Chaleur fournie au logement"
+     ],
+     "lignes": [
+      [
+       "8 kWh",
+       "26 kWh"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rel",
+     "enonce": "Touche l’énergie achetée au réseau électrique.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "C’est l’énergie électrique consommée.",
+     "explication": "Clara a acheté **8 kWh** d’électricité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le COP de la pompe à chaleur sur la journée.",
+     "reponse": 3.25,
+     "tolerance": 0.01,
+     "aide": "COP = chaleur fournie / énergie électrique consommée.",
+     "explication": "COP = 26 / 8 = **3,25**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de chaleur la pompe a-t-elle prélevée gratuitement à l’air extérieur ?",
+     "reponse": 18,
+     "unite": "kWh",
+     "tolerance": 0,
+     "aide": "Chaleur fournie − électricité consommée.",
+     "explication": "26 − 8 = **18 kWh** viennent de l’environnement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un radiateur électrique direct consommerait 8 kWh pour 8 kWh de chaleur. Que fournit la pompe avec ces mêmes 8 kWh ?",
+     "options": [
+      "Plus de trois fois plus de chaleur, grâce à l’énergie prélevée à l’air",
+      "Deux fois moins de chaleur, car le compresseur consomme de l’énergie",
+      "La même chaleur, car l’énergie se conserve sans rien prélever",
+      "Moins de chaleur, car un COP supérieur à 1 est impossible"
+     ],
+     "reponse": 0,
+     "aide": "Compare 26 kWh à 8 kWh.",
+     "explication": "26 kWh contre 8 kWh : la pompe fournit **3,25 fois plus de chaleur** pour la même électricité."
+    }
+   ]
+  },
+  {
+   "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi la ligne est en haute tension",
+   "competence": "modeliser",
+   "situation": "Une ligne de résistance R = 2 Ω transporte 200 kW vers un village. Un ingénieur compare deux tensions de transport avec un modèle simplifié où I = P / U.",
+   "documents": [
+    {
+     "id": "rs",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "De la centrale au village",
+     "noeuds": [
+      {
+       "id": "cen",
+       "texte": "Centrale"
+      },
+      {
+       "id": "elev",
+       "texte": "Transformateur élévateur"
+      },
+      {
+       "id": "lig",
+       "texte": "Ligne"
+      },
+      {
+       "id": "abai",
+       "texte": "Transformateur abaisseur"
+      },
+      {
+       "id": "vil",
+       "texte": "Village"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cen",
+       "a": "elev"
+      },
+      {
+       "de": "elev",
+       "a": "lig"
+      },
+      {
+       "de": "lig",
+       "a": "abai"
+      },
+      {
+       "de": "abai",
+       "a": "vil"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "lg",
+     "type": "tableau",
+     "titre": "Deux tensions de transport",
+     "colonnes": [
+      "Tension U",
+      "5 kV",
+      "20 kV"
+     ],
+     "lignes": [
+      [
+       "Puissance P",
+       "200 kW",
+       "200 kW"
+      ],
+      [
+       "Courant I",
+       "?",
+       "?"
+      ],
+      [
+       "Pertes R × I²",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Modèle simplifié, valeurs imaginées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rs",
+     "enonce": "Touche l’appareil qui augmente la tension avant la ligne.",
+     "reponse": [
+      "elev"
+     ],
+     "aide": "Il se trouve juste après la centrale.",
+     "explication": "Le **transformateur élévateur** monte la tension pour le transport."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel courant circule dans la ligne à 20 kV ?",
+     "reponse": 10,
+     "unite": "A",
+     "tolerance": 0,
+     "aide": "I = P / U avec P = 200 000 W et U = 20 000 V.",
+     "explication": "I = 200 000 / 20 000 = **10 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles sont les pertes en ligne à 5 kV ? (I = 40 A)",
+     "reponse": 3200,
+     "unite": "W",
+     "tolerance": 0,
+     "aide": "Pertes = R × I² avec R = 2 Ω.",
+     "explication": "2 × 40² = **3 200 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles sont les pertes en ligne à 20 kV ?",
+     "reponse": 200,
+     "unite": "W",
+     "tolerance": 0,
+     "aide": "Utilise I = 10 A.",
+     "explication": "2 × 10² = **200 W**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La tension est multipliée par 4. Par combien les pertes sont-elles divisées ?",
+     "options": [
+      "4, car les pertes sont proportionnelles au courant",
+      "2, car les pertes suivent la racine de la tension",
+      "16, car les pertes varient comme le carré du courant",
+      "1 : les pertes ne dépendent pas de la tension choisie"
+     ],
+     "reponse": 2,
+     "aide": "Compare 3 200 W et 200 W.",
+     "explication": "3 200 / 200 = **16** : le courant est divisé par 4, donc R × I² par 4²."
+    }
+   ]
+  },
+  {
+   "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La toiture solaire de la famille Diallo",
+   "competence": "lire-graphique",
+   "situation": "La famille Diallo relève, pour une journée d’été, l’énergie produite par ses panneaux et celle que consomme la maison, par tranches de trois heures.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Production et consommation sur une journée",
+     "categories": [
+      "6-9 h",
+      "9-12 h",
+      "12-15 h",
+      "15-18 h",
+      "18-21 h",
+      "21-24 h"
+     ],
+     "series": [
+      {
+       "nom": "Production",
+       "valeurs": [
+        1.5,
+        6,
+        9,
+        6.5,
+        1,
+        0
+       ],
+       "teinte": "jaune"
+      },
+      {
+       "nom": "Consommation",
+       "valeurs": [
+        1,
+        1.5,
+        2,
+        1.5,
+        3.5,
+        2.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie",
+      "unite": "kWh",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Tranche horaire"
+     },
+     "valeurs": false,
+     "source": "Relevé imaginé pour l’exercice"
+    },
+    {
+     "id": "vl",
+     "type": "tableau",
+     "titre": "Les valeurs relevées (kWh)",
+     "colonnes": [
+      "Tranche",
+      "6-9 h",
+      "9-12 h",
+      "12-15 h",
+      "15-18 h",
+      "18-21 h",
+      "21-24 h"
+     ],
+     "lignes": [
+      [
+       "Production",
+       "1,5",
+       "6",
+       "9",
+       "6,5",
+       "1",
+       "0"
+      ],
+      [
+       "Consommation",
+       "1",
+       "1,5",
+       "2",
+       "1,5",
+       "3,5",
+       "2,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "enonce": "Touche la tranche horaire de plus forte production.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre de production la plus haute.",
+     "explication": "La production culmine entre **12 h et 15 h** (9 kWh)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans chaque tranche, l’énergie autoconsommée est la plus petite des deux valeurs (production, consommation). Calcule le total de la journée.",
+     "reponse": 7,
+     "unite": "kWh",
+     "tolerance": 0,
+     "aide": "Tranche par tranche : 1 ; 1,5 ; 2 ; 1,5 ; 1 ; 0.",
+     "explication": "1 + 1,5 + 2 + 1,5 + 1 + 0 = **7 kWh** autoconsommés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’autoconsommation (énergie autoconsommée / production totale) ? Arrondi à l’unité.",
+     "reponse": 29,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Production totale : 1,5 + 6 + 9 + 6,5 + 1 + 0 = 24 kWh.",
+     "explication": "7 / 24 ≈ **29 %** : plus des deux tiers de la production partent sur le réseau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La famille décale le ballon d’eau chaude (2 kWh) de la tranche 21-24 h vers 12-15 h. Quelle énergie autoconsomme-t-elle alors ?",
+     "reponse": 9,
+     "unite": "kWh",
+     "tolerance": 0,
+     "aide": "Refais le min(production, consommation) des deux tranches changées.",
+     "explication": "À 12-15 h, la consommation passe à 4 kWh (autoconsommés) ; à 21-24 h, il n’y a pas de production. Total : 1 + 1,5 + 4 + 1,5 + 1 + 0 = **9 kWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La production couvre deux fois la consommation, mais le taux d’autoconsommation reste faible. Pourquoi ?",
+     "options": [
+      "La production se concentre à midi, alors que le foyer consomme surtout le soir",
+      "Les panneaux perdent leur énergie dans les câbles pendant la nuit",
+      "Le foyer consomme moins qu’il ne produit, donc tout est autoconsommé",
+      "Les panneaux produisent surtout le soir, après le retour du foyer"
+     ],
+     "reponse": 0,
+     "aide": "Compare les heures de production et de consommation.",
+     "explication": "Production et consommation **ne coïncident pas** : c’est pourquoi on pilote les appareils aux heures solaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le boîtier qui se creuse",
+   "competence": "observer-schema",
+   "situation": "Un boîtier en plastique est fabriqué par injection. Sur les premiers exemplaires, une des parois présente un creux à la surface. Le bureau d’études examine la coupe de la pièce.",
+   "documents": [
+    {
+     "id": "cp",
+     "type": "schema",
+     "titre": "Coupe du boîtier injecté",
+     "largeur": 320,
+     "hauteur": 240,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 50,
+       "l": 20,
+       "h": 140,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "pg",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 170,
+       "l": 200,
+       "h": 20,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "pf",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 50,
+       "l": 60,
+       "h": 140,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "pd",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 38,
+       "texte": "2 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 38,
+       "texte": "6 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 212,
+       "texte": "2 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    },
+    {
+     "id": "cout",
+     "type": "tableau",
+     "titre": "Coût de production",
+     "colonnes": [
+      "Coût du moule",
+      "Coût par pièce",
+      "Quantité"
+     ],
+     "lignes": [
+      [
+       "12 000 €",
+       "1,10 €",
+       "20 000"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cp",
+     "enonce": "Touche la paroi qui provoquera des retassures.",
+     "reponse": [
+      "pd"
+     ],
+     "aide": "Une paroi beaucoup plus épaisse que les autres refroidit plus lentement.",
+     "explication": "La paroi de droite, épaisse de 6 mm, refroidit plus lentement : c’est elle qui fait des **retassures**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la paroi de droite est-elle plus épaisse que celle de gauche ?",
+     "reponse": 3,
+     "unite": "fois",
+     "tolerance": 0,
+     "aide": "Divise 6 mm par 2 mm.",
+     "explication": "6 / 2 = **3 fois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle correction de forme convient le mieux ?",
+     "options": [
+      "Garder 6 mm et ralentir le refroidissement du moule",
+      "Ramener la paroi à 2 mm et la renforcer par des nervures",
+      "Épaissir aussi les autres parois jusqu’à 10 mm partout",
+      "Supprimer les congés pour faciliter l’écoulement du plastique"
+     ],
+     "reponse": 1,
+     "aide": "Une épaisseur constante évite les retassures.",
+     "explication": "On garde une **épaisseur constante** et on rigidifie avec des nervures, sans épaissir la paroi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total des 20 000 pièces (moule compris) ?",
+     "reponse": 34000,
+     "unite": "€",
+     "tolerance": 0,
+     "aide": "Coût total = moule + quantité × coût par pièce.",
+     "explication": "12 000 + 20 000 × 1,10 = **34 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel procédé pour la poignée ?",
+   "competence": "resoudre",
+   "situation": "Un fabricant de vélos doit produire une poignée de frein en plastique. Trois procédés sont possibles ; leur coût dépend du nombre de pièces à fabriquer.",
+   "documents": [
+    {
+     "id": "pr",
+     "type": "tableau",
+     "titre": "Les trois procédés",
+     "colonnes": [
+      "Procédé",
+      "Coût fixe",
+      "Coût par pièce"
+     ],
+     "lignes": [
+      [
+       "Usinage",
+       "1 500 €",
+       "12 €"
+      ],
+      [
+       "Fabrication additive",
+       "0 €",
+       "8 €"
+      ],
+      [
+       "Injection plastique",
+       "18 000 € (moule)",
+       "1,50 €"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "cr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût total selon la quantité",
+     "categories": [
+      "0",
+      "1 000",
+      "2 000",
+      "3 000",
+      "4 000"
+     ],
+     "series": [
+      {
+       "nom": "Injection plastique",
+       "valeurs": [
+        18000,
+        19500,
+        21000,
+        22500,
+        24000
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Fabrication additive",
+       "valeurs": [
+        0,
+        8000,
+        16000,
+        24000,
+        32000
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Coût total",
+      "unite": "€",
+      "min": 0,
+      "max": 35000,
+      "pas": 5000
+     },
+     "axeX": {
+      "titre": "Nombre de pièces"
+     },
+     "source": "Calculé avec les valeurs du tableau"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total de 500 pièces en fabrication additive ?",
+     "reponse": 4000,
+     "unite": "€",
+     "tolerance": 0,
+     "aide": "Coût total = coût fixe + quantité × coût par pièce.",
+     "explication": "0 + 500 × 8 = **4 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour 5 000 pièces, quel procédé est le moins cher ?",
+     "options": [
+      "L’injection plastique : 25 500 € au total pour 5 000 pièces",
+      "La fabrication additive : 40 000 € au total pour 5 000 pièces",
+      "L’usinage : 61 500 € au total pour 5 000 pièces",
+      "Les trois coûtent le même prix dès que la série dépasse 4 000 pièces"
+     ],
+     "reponse": 0,
+     "aide": "Calcule le coût total des trois procédés.",
+     "explication": "Injection : 18 000 + 5 000 × 1,5 = **25 500 €**, contre 40 000 € (additive) et 61 500 € (usinage)."
+    },
+    {
+     "type": "zone",
+     "document": "cr",
+     "enonce": "Touche la première quantité pour laquelle l’injection coûte moins cher que la fabrication additive.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche où la courbe de l’injection passe sous celle de l’additive.",
+     "explication": "À **3 000 pièces**, l’injection (22 500 €) passe sous l’additive (24 000 €)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de combien de pièces (nombre entier) l’injection devient-elle moins chère que la fabrication additive ?",
+     "reponse": 2770,
+     "unite": "pièces",
+     "tolerance": 0,
+     "aide": "Résous 18 000 + 1,5 × n < 8 × n.",
+     "explication": "18 000 / 6,5 ≈ 2 769,2 : dès **2 770 pièces**, l’injection est moins chère."
+    }
+   ]
+  },
+  {
+   "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Alléger le support de caméra",
+   "competence": "analyser-document",
+   "situation": "Un fabricant remplace un support de caméra en aluminium usiné par une version en polyamide injecté, conçue avec un logiciel d’optimisation topologique. Il veut chiffrer le gain pour 10 000 supports par an.",
+   "documents": [
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Les deux solutions",
+     "colonnes": [
+      "Critère",
+      "Solution A",
+      "Solution B"
+     ],
+     "lignes": [
+      [
+       "Matériau",
+       "Aluminium usiné",
+       "Polyamide injecté"
+      ],
+      [
+       "Masse",
+       "0,48 kg",
+       "0,30 kg"
+      ],
+      [
+       "Nombre de pièces",
+       "7",
+       "3"
+      ],
+      [
+       "Assemblage",
+       "6 vis",
+       "Clips démontables"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "emp",
+     "type": "tableau",
+     "titre": "Empreinte carbone des matériaux",
+     "colonnes": [
+      "Matériau",
+      "Empreinte (kg CO₂e par kg)"
+     ],
+     "lignes": [
+      [
+       "Aluminium usiné",
+       "9"
+      ],
+      [
+       "Polyamide injecté",
+       "6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cmp",
+     "enonce": "Touche le nombre de pièces de la solution B.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Lis la ligne « Nombre de pièces », colonne « Solution B ».",
+     "explication": "La solution B n’a que **3 pièces**, contre 7 pour la A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage la masse diminue-t-elle entre A et B ? Arrondi au dixième.",
+     "reponse": 37.5,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Gain = (0,48 − 0,30) / 0,48.",
+     "explication": "0,18 / 0,48 = **37,5 %** de masse en moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’empreinte carbone de la matière d’un support A ?",
+     "reponse": 4.32,
+     "unite": "kg CO₂e",
+     "tolerance": 0.01,
+     "aide": "Empreinte = masse × empreinte par kg.",
+     "explication": "0,48 × 9 = **4,32 kg CO₂e**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un support B a une empreinte de 1,8 kg CO₂e. Pour 10 000 supports, combien de tonnes de CO₂e évite-t-on par rapport à A ?",
+     "reponse": 25.2,
+     "unite": "t CO₂e",
+     "tolerance": 0.1,
+     "aide": "Gain par support × 10 000, puis divise par 1 000 pour passer en tonnes.",
+     "explication": "(4,32 − 1,8) × 10 000 = 25 200 kg, soit **25,2 tonnes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur le plan de l’éco-conception, que montre aussi le tableau en faveur de la solution B ?",
+     "options": [
+      "Un assemblage par six vis, jugé plus durable qu’un clip dans tous les cas",
+      "Un plus grand nombre de pièces, ce qui rend le démontage plus simple",
+      "Des clips démontables et peu de pièces facilitent réparation et recyclage",
+      "Un matériau plus lourd, donc plus facile à recycler en fin de vie"
+     ],
+     "reponse": 2,
+     "aide": "Regarde les lignes « Nombre de pièces » et « Assemblage ».",
+     "explication": "Moins de pièces et des **clips démontables** : la réparation et le tri en fin de vie sont plus simples."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du capteur au serveur",
+   "competence": "analyser-document",
+   "situation": "Un capteur de température est placé dans un champ. Sa mesure est traitée par une carte, puis envoyée par radio à un serveur qui garde l’historique.",
+   "documents": [
+    {
+     "id": "ob",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet de la mesure",
+     "noeuds": [
+      {
+       "id": "cap",
+       "texte": "Capteur de température"
+      },
+      {
+       "id": "can",
+       "texte": "Convertisseur analogique-numérique (CAN)"
+      },
+      {
+       "id": "mcu",
+       "texte": "Microcontrôleur"
+      },
+      {
+       "id": "rad",
+       "texte": "Module radio"
+      },
+      {
+       "id": "srv",
+       "texte": "Serveur"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cap",
+       "a": "can",
+       "texte": "tension"
+      },
+      {
+       "de": "can",
+       "a": "mcu",
+       "texte": "nombre"
+      },
+      {
+       "de": "mcu",
+       "a": "rad"
+      },
+      {
+       "de": "rad",
+       "a": "srv"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ob",
+     "enonce": "Touche le constituant qui transforme la tension du capteur en nombre.",
+     "reponse": [
+      "can"
+     ],
+     "aide": "Il passe de l’analogique au numérique.",
+     "explication": "Le **CAN** convertit une tension en un nombre binaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le CAN a 10 bits et mesure de 0 à 5 V. Il fournit n = 512. Quelle tension cela représente-t-il ?",
+     "reponse": 2.5,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "U = n × 5 / 1 024.",
+     "explication": "U = 512 × 5 / 1 024 = **2,5 V**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque composant à la bonne entrée-sortie de la carte.",
+     "paires": [
+      [
+       "Bouton poussoir",
+       "Entrée numérique (TOR)"
+      ],
+      [
+       "Thermistance",
+       "Entrée analogique (CAN)"
+      ],
+      [
+       "LED dimmable",
+       "Sortie MLI"
+      ],
+      [
+       "Écran OLED",
+       "Bus I2C"
+      ]
+     ],
+     "aide": "Pense à ce que chaque composant échange : 0/1, une tension, une intensité réglable, des données.",
+     "explication": "Le bouton donne du **tout ou rien**, la thermistance une tension qu’on convertit, la LED dimmable se règle en **MLI**, l’écran dialogue sur un **bus I2C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le capteur doit envoyer quelques octets toutes les 15 min, à 2 km, en fonctionnant sur piles. Quel module radio choisir ?",
+     "options": [
+      "LoRa : longue portée et très faible consommation pour de petits messages",
+      "Bluetooth : portée de 2 km garantie avec un très faible débit",
+      "Wi-Fi : portée de 2 km grâce à son débit élevé et sa consommation faible",
+      "Aucun : il faut obligatoirement un câble jusqu’au serveur"
+     ],
+     "reponse": 0,
+     "aide": "Portée, débit et consommation : que faut-il ici ?",
+     "explication": "**LoRa** est fait pour les petits messages envoyés loin avec très peu d’énergie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La pompe de la serre",
+   "competence": "programmer",
+   "situation": "Le programme d’une serre arrose quand le sol est sec. La mesure est faite toutes les heures, et la pompe est à l’arrêt au départ. Le technicien relève six mesures.",
+   "documents": [
+    {
+     "id": "pg",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme de la serre",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "tant que vrai :",
+      "    h ← lire_humidite()",
+      "    si h < [[b|40]] alors",
+      "        pompe ← MARCHE",
+      "    sinon si h > 60 alors",
+      "        pompe ← ARRET"
+     ]
+    },
+    {
+     "id": "me",
+     "type": "tableau",
+     "titre": "Les six mesures d’humidité",
+     "colonnes": [
+      "Mesure",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "h (%)",
+       "55",
+       "45",
+       "38",
+       "42",
+       "59",
+       "62"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pg",
+     "enonce": "Touche le seuil qui déclenche la mise en marche de la pompe.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "La pompe démarre quand le sol est trop sec.",
+     "explication": "La pompe démarre quand **h < 40**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie les mesures selon l’état de la pompe juste après le traitement de chacune.",
+     "categories": [
+      "Pompe en marche",
+      "Pompe à l’arrêt"
+     ],
+     "items": [
+      [
+       "Mesure 1 (55 %)",
+       1
+      ],
+      [
+       "Mesure 2 (45 %)",
+       1
+      ],
+      [
+       "Mesure 3 (38 %)",
+       0
+      ],
+      [
+       "Mesure 4 (42 %)",
+       0
+      ],
+      [
+       "Mesure 5 (59 %)",
+       0
+      ],
+      [
+       "Mesure 6 (62 %)",
+       1
+      ]
+     ],
+     "aide": "Entre 40 et 60 %, la pompe garde l’état qu’elle avait.",
+     "explication": "Elle démarre à **38 %**, reste en marche à **42 %** et **59 %**, puis s’arrête à **62 %** ; avant, elle était à l’arrêt."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le programme utilise-t-il deux seuils (40 et 60) plutôt qu’un seul à 50 ?",
+     "options": [
+      "Pour économiser de la mémoire du microcontrôleur en stockant moins de valeurs",
+      "Pour éviter que la pompe démarre et s’arrête sans cesse autour d’un seuil unique",
+      "Pour que le capteur d’humidité mesure avec plus de précision dans le sol",
+      "Pour obliger la pompe à fonctionner au moins une heure par jour"
+     ],
+     "reponse": 1,
+     "aide": "Imagine une humidité qui oscille autour de 50 %.",
+     "explication": "C’est une **hystérésis** : entre 40 et 60 %, on ne change rien, ce qui évite les démarrages répétés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le sol est à 59 % et sèche de 2 points par heure. Au bout de combien d’heures la pompe démarre-t-elle ?",
+     "reponse": 10,
+     "unite": "h",
+     "tolerance": 0,
+     "aide": "Il faut que h passe strictement sous 40.",
+     "explication": "Après 9 h, h = 41 ; après **10 h**, h = 39 < 40 : la pompe démarre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le portail qui doit s’arrêter",
+   "competence": "programmer",
+   "situation": "Un portail doit s’arrêter en moins de 0,5 s après avoir détecté un obstacle. L’arrêt du moteur prend 200 ms une fois l’ordre donné. Un tour de la boucle ci-dessous dure 350 ms à cause de l’affichage et du clavier.",
+   "documents": [
+    {
+     "id": "bc",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Version avec lecture dans la boucle",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "tant que vrai :",
+      "    obstacle ← [[c|lire_cellule()]]",
+      "    si obstacle alors",
+      "        arreter_moteur()",
+      "    afficher_etat()",
+      "    lire_clavier()"
+     ]
+    },
+    {
+     "id": "es",
+     "type": "tableau",
+     "titre": "Version avec interruption : 5 essais au banc",
+     "colonnes": [
+      "Essai",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Temps d’arrêt mesuré (s)",
+       "0,21",
+       "0,22",
+       "0,21",
+       "0,23",
+       "0,22"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bc",
+     "enonce": "Touche l’instruction qui lit la cellule de détection.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Le nom de la fonction dit ce qu’elle lit.",
+     "explication": "La cellule est lue par **lire_cellule()**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le pire cas, l’obstacle apparaît juste après la lecture : il faut attendre un tour de boucle complet. Quel est le temps d’arrêt ?",
+     "reponse": 550,
+     "unite": "ms",
+     "tolerance": 0,
+     "aide": "Un tour de boucle (350 ms) puis l’arrêt du moteur (200 ms).",
+     "explication": "350 + 200 = **550 ms**, donc plus de 0,5 s : cette version n’est pas conforme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec une interruption, la réaction prend 10 ms avant l’ordre d’arrêt. Quel est le temps d’arrêt ?",
+     "reponse": 210,
+     "unite": "ms",
+     "tolerance": 0,
+     "aide": "Réaction de 10 ms puis arrêt du moteur de 200 ms.",
+     "explication": "10 + 200 = **210 ms**, bien sous 500 ms."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure des cinq essais au banc avec interruption ?",
+     "options": [
+      "Conforme : le maximum mesuré de 0,23 s reste sous les 0,5 s exigés",
+      "Non conforme : les cinq mesures sont toutes différentes entre elles",
+      "Non conforme : 0,23 s dépasse la valeur calculée de 210 ms",
+      "Indéterminé : il faudrait au moins cent essais pour conclure"
+     ],
+     "reponse": 0,
+     "aide": "Compare la mesure la plus élevée à l’exigence.",
+     "explication": "La pire mesure, **0,23 s**, est inférieure à 0,5 s : l’exigence est satisfaite, avec une large marge."
+    }
+   ]
+  },
+  {
+   "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La batterie de la trottinette",
+   "competence": "calculer",
+   "situation": "Dans un sujet de bac, on demande de vérifier l’exigence d’autonomie d’une trottinette électrique. Voici les données du dossier technique.",
+   "documents": [
+    {
+     "id": "dt",
+     "type": "tableau",
+     "titre": "Extrait du dossier technique",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension de la batterie",
+       "36 V"
+      ],
+      [
+       "Capacité",
+       "10 Ah"
+      ],
+      [
+       "Consommation moyenne",
+       "250 W"
+      ],
+      [
+       "Autonomie exigée",
+       "2 h"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dt",
+     "enonce": "Touche la capacité de la batterie.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "La capacité s’exprime en ampères-heures.",
+     "explication": "La capacité est de **10 Ah**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la batterie stocke-t-elle ?",
+     "reponse": 360,
+     "unite": "Wh",
+     "tolerance": 0,
+     "aide": "E = U × Q : écris la formule, puis l’application numérique.",
+     "explication": "E = 36 × 10 = **360 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle autonomie cela donne-t-il à 250 W de consommation moyenne ? Arrondi au centième d’heure.",
+     "reponse": 1.44,
+     "unite": "h",
+     "tolerance": 0.01,
+     "aide": "Autonomie = énergie / puissance.",
+     "explication": "360 / 250 = **1,44 h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de conclusion rapporte tous les points ?",
+     "options": [
+      "Exigence non satisfaite : 1,44 h est inférieure aux 2 h exigées",
+      "Exigence satisfaite : 1,44 h est proche de 2 h, donc suffisante",
+      "Exigence non satisfaite : la batterie stocke 360 Wh et c’est peu",
+      "Exigence satisfaite : la trottinette consomme seulement 250 W"
+     ],
+     "reponse": 0,
+     "aide": "Compare ton résultat au critère du cahier des charges.",
+     "explication": "Une bonne conclusion **compare la valeur au critère** : 1,44 h < 2 h, l’exigence n’est pas satisfaite."
+    }
+   ]
+  },
+  {
+   "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Convertir avant de calculer",
+   "competence": "calculer",
+   "situation": "Un moteur entraîne un tapis roulant. Le sujet demande de calculer sa puissance mécanique, puis de choisir un moteur dans une gamme. Attention aux unités !",
+   "documents": [
+    {
+     "id": "mt",
+     "type": "tableau",
+     "titre": "Point de fonctionnement du tapis",
+     "colonnes": [
+      "Couple C",
+      "Vitesse N"
+     ],
+     "lignes": [
+      [
+       "8 N·m",
+       "3 000 tr/min"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "ga",
+     "type": "tableau",
+     "titre": "Gamme de moteurs",
+     "colonnes": [
+      "Moteur",
+      "M1",
+      "M2",
+      "M3"
+     ],
+     "lignes": [
+      [
+       "Puissance nominale",
+       "2,2 kW",
+       "3 kW",
+       "4 kW"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse en rad/s. Arrondi au dixième.",
+     "reponse": 314.2,
+     "unite": "rad/s",
+     "tolerance": 0.1,
+     "aide": "ω = N × 2π / 60.",
+     "explication": "ω = 3 000 × 2π / 60 ≈ **314,2 rad/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance mécanique P = C × ω. Arrondi au watt.",
+     "reponse": 2513,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Utilise ω en rad/s, pas N en tr/min.",
+     "explication": "P = 8 × 314,16 ≈ **2 513 W**."
+    },
+    {
+     "type": "zone",
+     "document": "ga",
+     "enonce": "Touche la puissance nominale du plus petit moteur qui convient.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "La puissance nominale doit dépasser 2,5 kW.",
+     "explication": "M1 (2,2 kW) est trop faible ; **M2 (3 kW)** est le plus petit qui convient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève trouve 24 kW. Quelle erreur a-t-il commise ?",
+     "options": [
+      "Il a multiplié C par N en tr/min sans convertir en rad/s",
+      "Il a converti la vitesse en rad/s deux fois de suite",
+      "Il a oublié de tenir compte du couple dans son calcul",
+      "Il a utilisé des kilowatts à la place des watts à la fin"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 8 × 3 000.",
+     "explication": "8 × 3 000 = 24 000 W : c’est **l’oubli de conversion** tr/min → rad/s, l’erreur classique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le tapis fonctionne 2 h à cette puissance. Quelle énergie consomme-t-il ? Arrondi au centième de kWh.",
+     "reponse": 5.03,
+     "unite": "kWh",
+     "tolerance": 0.01,
+     "aide": "E = P × t, avec P en kW.",
+     "explication": "2,513 kW × 2 h ≈ **5,03 kWh**."
+    }
+   ]
+  },
+  {
+   "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Découper les 3 h 30",
+   "competence": "modeliser",
+   "situation": "Un sujet de 3 h 30 se décompose en 15 min de lecture, 135 min pour le tronc commun (60 points) et 60 min pour l’enseignement spécifique (40 points). Léo prépare son plan de bataille à partir du barème.",
+   "documents": [
+    {
+     "id": "ba",
+     "type": "tableau",
+     "titre": "Barème du sujet",
+     "colonnes": [
+      "Partie",
+      "Points"
+     ],
+     "lignes": [
+      [
+       "Tronc commun : énergie",
+       "25"
+      ],
+      [
+       "Tronc commun : matière",
+       "20"
+      ],
+      [
+       "Tronc commun : information",
+       "15"
+      ],
+      [
+       "Enseignement spécifique",
+       "40"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "se",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition des points (en %)",
+     "categories": [
+      "Énergie",
+      "Matière",
+      "Information",
+      "Spécifique"
+     ],
+     "series": [
+      {
+       "nom": "Points",
+       "valeurs": [
+        25,
+        20,
+        15,
+        40
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "source": "Barème imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "se",
+     "enonce": "Touche la partie qui rapporte le plus de points.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "L’enseignement spécifique vaut **40 points** sur 100."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au prorata des points, combien de minutes consacrer à la partie « énergie » (25 points) du tronc commun ? Arrondi à la minute.",
+     "reponse": 56,
+     "unite": "min",
+     "tolerance": 0.5,
+     "aide": "Temps par point : 135 / 60 = 2,25 min.",
+     "explication": "25 × 2,25 = 56,25, soit environ **56 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes par point Léo a-t-il pour l’enseignement spécifique ?",
+     "reponse": 1.5,
+     "unite": "min",
+     "tolerance": 0,
+     "aide": "Divise 60 min par 40 points.",
+     "explication": "60 / 40 = **1,5 min par point**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léo passe 75 min sur la partie « matière » (20 points, prévue 45 min). À 2,25 min par point, combien de points de tronc commun n’aura-t-il pas le temps de traiter ? Arrondi à l’unité.",
+     "reponse": 13,
+     "unite": "points",
+     "tolerance": 0.5,
+     "aide": "Temps perdu : 75 − 45 = 30 min.",
+     "explication": "30 / 2,25 ≈ **13 points** perdus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison entre 2,25 et 1,5 min par point ?",
+     "options": [
+      "Le tronc commun laisse plus de temps par point que le spécifique",
+      "Le spécifique laisse plus de temps par point que le tronc commun",
+      "Les deux parties laissent exactement le même temps par point",
+      "Le tronc commun ne demande aucune lecture préalable du sujet"
+     ],
+     "reponse": 0,
+     "aide": "Un nombre de minutes par point plus grand signifie plus de temps.",
+     "explication": "2,25 > 1,5 : le **tronc commun** laisse plus de temps par point ; le spécifique se travaille plus vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux heures au laboratoire",
+   "competence": "se-reperer-temps",
+   "situation": "Inès passe l’épreuve pratique sur un portail automatique. La frise montre comment elle a réparti ses 120 minutes.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Les 120 minutes d’Inès",
+     "debut": 0,
+     "fin": 120,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "dec",
+       "debut": 0,
+       "fin": 20,
+       "nom": "Découverte"
+      },
+      {
+       "id": "con",
+       "debut": 20,
+       "fin": 55,
+       "nom": "Conception"
+      },
+      {
+       "id": "sim",
+       "debut": 55,
+       "fin": 90,
+       "nom": "Simulation"
+      },
+      {
+       "id": "exp",
+       "debut": 90,
+       "fin": 120,
+       "nom": "Expérimentation"
+      }
+     ],
+     "source": "Déroulement imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "enonce": "Inès modifie le programme du portail. Touche la phase où elle le fait.",
+     "reponse": [
+      "con"
+     ],
+     "aide": "Modifier un programme, c’est concevoir.",
+     "explication": "Modifier le programme est la compétence **Concevoir**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes Inès consacre-t-elle à la conception et à la simulation ensemble ?",
+     "reponse": 70,
+     "unite": "min",
+     "tolerance": 0,
+     "aide": "Conception : de 20 à 55 ; simulation : de 55 à 90.",
+     "explication": "35 + 35 = **70 min**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque activité d’Inès à la compétence évaluée.",
+     "paires": [
+      [
+       "Modifier le programme du portail",
+       "Concevoir"
+      ],
+      [
+       "Vérifier le diagramme d’états en simulation",
+       "Simuler"
+      ],
+      [
+       "Mesurer le temps d’arrêt sur un chronogramme",
+       "Expérimenter"
+      ]
+     ],
+     "aide": "Proposer, lancer un modèle, mesurer : trois verbes, trois compétences.",
+     "explication": "On **conçoit** en proposant ou modifiant, on **simule** sur un modèle, on **expérimente** en mesurant sur le système réel."
+    }
+   ]
+  },
+  {
+   "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire le chronogramme du portail",
+   "competence": "lire-graphique",
+   "situation": "Inès mesure la vitesse du portail après la détection d’un obstacle (t = 0). Le cahier des charges fixe deux exigences que son essai doit vérifier.",
+   "documents": [
+    {
+     "id": "vi",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du portail après détection",
+     "categories": [
+      "0",
+      "0,1",
+      "0,2",
+      "0,3",
+      "0,4",
+      "0,5"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        30,
+        30,
+        20,
+        10,
+        0,
+        0
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "cm/s",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Temps après détection (s)"
+     },
+     "source": "Essai imaginé pour l’exercice"
+    },
+    {
+     "id": "ex",
+     "type": "tableau",
+     "titre": "Exigences",
+     "colonnes": [
+      "Id",
+      "Exigence",
+      "Critère"
+     ],
+     "lignes": [
+      [
+       "1.1",
+       "Arrêt après détection",
+       "moins de 0,5 s"
+      ],
+      [
+       "1.2",
+       "Distance parcourue avant l’arrêt",
+       "moins de 10 cm"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vi",
+     "enonce": "Touche la première mesure pour laquelle le portail est à l’arrêt.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la première vitesse nulle.",
+     "explication": "La vitesse s’annule à **0,4 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Entre 0,1 s et 0,4 s, la vitesse baisse régulièrement de 30 à 0 cm/s. Quelle est la décélération ?",
+     "reponse": 100,
+     "unite": "cm/s²",
+     "tolerance": 0,
+     "aide": "Décélération = variation de vitesse / durée.",
+     "explication": "30 / 0,3 = **100 cm/s²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance totale le portail parcourt-il entre la détection et l’arrêt ? (0,1 s à 30 cm/s, puis un freinage régulier)",
+     "reponse": 7.5,
+     "unite": "cm",
+     "tolerance": 0.1,
+     "aide": "Freinage : distance = vitesse initiale × durée / 2.",
+     "explication": "0,1 × 30 = 3 cm, puis 30 × 0,3 / 2 = 4,5 cm : **7,5 cm** au total."
+    },
+    {
+     "type": "zone",
+     "document": "ex",
+     "enonce": "Touche le critère de l’exigence sur la distance.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne 1.2.",
+     "explication": "Le critère est **moins de 10 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Inès sur les deux exigences ?",
+     "options": [
+      "Les deux sont satisfaites : 0,4 s < 0,5 s et 7,5 cm < 10 cm",
+      "Seule la durée est satisfaite : 7,5 cm dépasse le critère de distance",
+      "Seule la distance est satisfaite : 0,4 s dépasse le critère de durée",
+      "Aucune n’est satisfaite : le portail roule encore à 0,3 s"
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque résultat à son critère.",
+     "explication": "Une conclusion **compare chaque valeur à son critère** : 0,4 s < 0,5 s et 7,5 cm < 10 cm."
+    }
+   ]
+  },
+  {
+   "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Reconcevoir le support",
+   "competence": "experimenter",
+   "situation": "Inès doit reconcevoir un support en aluminium qui casse trop souvent. Elle simule deux épaisseurs, choisit l’une d’elles, puis vérifie sa pièce au banc d’essai.",
+   "documents": [
+    {
+     "id": "si",
+     "type": "tableau",
+     "titre": "Résultats de simulation",
+     "colonnes": [
+      "Épaisseur",
+      "Contrainte maxi simulée",
+      "Masse"
+     ],
+     "lignes": [
+      [
+       "4 mm",
+       "180 MPa",
+       "43 g"
+      ],
+      [
+       "5 mm",
+       "115 MPa",
+       "54 g"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "cd",
+     "type": "tableau",
+     "titre": "Cahier des charges et essai au banc",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Matériau",
+       "Aluminium, Re = 240 MPa"
+      ],
+      [
+       "Coefficient de sécurité",
+       "s ≥ 2"
+      ],
+      [
+       "Masse",
+       "≤ 60 g"
+      ],
+      [
+       "Essai au banc (5 mm)",
+       "σ mesurée : 121 MPa"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle contrainte maximale admissible le cahier des charges autorise-t-il ?",
+     "reponse": 120,
+     "unite": "MPa",
+     "tolerance": 0,
+     "aide": "σ admissible = Re / s.",
+     "explication": "240 / 2 = **120 MPa**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle épaisseur retenir d’après la simulation ?",
+     "options": [
+      "5 mm : σ = 115 MPa ≤ 120 MPa et masse de 54 g ≤ 60 g",
+      "4 mm : la pièce la plus légère convient, car 43 g ≤ 60 g",
+      "Les deux : les deux masses respectent la limite de 60 g",
+      "Aucune : les contraintes simulées dépassent toutes les deux 120 MPa"
+     ],
+     "reponse": 0,
+     "aide": "Vérifie les deux critères pour chaque épaisseur.",
+     "explication": "À 4 mm, 180 MPa dépasse 120 MPa. À 5 mm, **115 MPa ≤ 120 MPa** et 54 g ≤ 60 g."
+    },
+    {
+     "type": "zone",
+     "document": "cd",
+     "enonce": "Touche la contrainte mesurée au banc d’essai.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Regarde la dernière ligne.",
+     "explication": "La mesure au banc donne **121 MPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart relatif entre la mesure (121 MPa) et la simulation (115 MPa) ? Arrondi au dixième de %.",
+     "reponse": 5.2,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Écart = (mesure − simulation) / simulation.",
+     "explication": "(121 − 115) / 115 ≈ **5,2 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur l’exigence de sécurité avec la valeur mesurée ?",
+     "options": [
+      "Non satisfaite de justesse : s ≈ 1,98 est inférieur à 2",
+      "Satisfaite : la simulation a donné 115 MPa, seule valeur valable",
+      "Satisfaite : 121 MPa est très proche de 120 MPa, donc acceptable",
+      "Non satisfaite : l’écart de 5 % prouve que la simulation est fausse"
+     ],
+     "reponse": 0,
+     "aide": "Calcule s = Re / σ mesurée.",
+     "explication": "240 / 121 ≈ **1,98 < 2** : on explique l’écart, puis on épaissit ou on ajoute un congé."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La barrière du parking",
+   "competence": "analyser-document",
+   "situation": "Un parking d’entreprise est fermé par une barrière automatique. Son cahier des charges contient trois exigences, dont la première est reliée à un bloc et à un essai.",
+   "documents": [
+    {
+     "id": "rq",
+     "type": "tableau",
+     "titre": "Exigences de la barrière",
+     "colonnes": [
+      "Id",
+      "Texte",
+      "Critère"
+     ],
+     "lignes": [
+      [
+       "1.1",
+       "Ouvrir la barrière",
+       "en moins de 6 s"
+      ],
+      [
+       "1.2",
+       "Protéger les piétons",
+       "effort de fermeture limité à 150 N"
+      ],
+      [
+       "1.3",
+       "Résister au vent",
+       "jusqu’à 60 km/h"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "di",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Autour de l’exigence 1.1",
+     "noeuds": [
+      {
+       "id": "bl",
+       "texte": "Motoréducteur"
+      },
+      {
+       "id": "rq",
+       "texte": "Exigence 1.1 : ouvrir en moins de 6 s"
+      },
+      {
+       "id": "es",
+       "texte": "Essai : chronométrer l’ouverture"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bl",
+       "a": "rq",
+       "texte": "satisfait"
+      },
+      {
+       "de": "es",
+       "a": "rq",
+       "texte": "vérifie"
+      }
+     ],
+     "source": "Diagramme imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "di",
+     "enonce": "Touche ce qui vérifie l’exigence 1.1.",
+     "reponse": [
+      "es"
+     ],
+     "aide": "Une vérification est un essai ou une simulation.",
+     "explication": "L’**essai de chronométrage** vérifie l’exigence par la relation « vérifie »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’essai donne 5,2 s pour ouvrir la barrière. De combien de secondes la valeur mesurée est-elle sous le critère ?",
+     "reponse": 0.8,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "Critère − valeur mesurée.",
+     "explication": "6 − 5,2 = **0,8 s** de marge : l’exigence 1.1 est satisfaite."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque relation SysML à son sens.",
+     "paires": [
+      [
+       "contient",
+       "Une exigence se décompose en sous-exigences"
+      ],
+      [
+       "deriveReqt",
+       "Une exigence découle d’une exigence de plus haut niveau"
+      ],
+      [
+       "satisfy",
+       "Un bloc répond à une exigence"
+      ],
+      [
+       "verify",
+       "Un essai contrôle une exigence"
+      ]
+     ],
+     "aide": "Décomposer, dériver, satisfaire, vérifier : quatre verbes différents.",
+     "explication": "**contient** décompose, **deriveReqt** descend d’un niveau supérieur, **satisfy** relie un bloc, **verify** relie un essai."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La station qui tient trois jours",
+   "competence": "analyser-document",
+   "situation": "Une station de recharge isolée doit fonctionner trois jours sans soleil. Le technicien vérifie l’exigence 1.2 avec les données de la batterie.",
+   "documents": [
+    {
+     "id": "re",
+     "type": "tableau",
+     "titre": "Exigences de la station",
+     "colonnes": [
+      "Id",
+      "Texte",
+      "Critère"
+     ],
+     "lignes": [
+      [
+       "1.1",
+       "Recharger un vélo",
+       "en moins de 4 h"
+      ],
+      [
+       "1.2",
+       "Fonctionner hors réseau",
+       "autonomie de 3 jours sans soleil"
+      ],
+      [
+       "1.3",
+       "Protéger l’usager",
+       "aucune partie sous tension accessible"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "dn",
+     "type": "tableau",
+     "titre": "Données du constructeur",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Batterie",
+       "12 V — 100 Ah"
+      ],
+      [
+       "Décharge maximale autorisée",
+       "50 %"
+      ],
+      [
+       "Consommation de la station",
+       "240 Wh par jour"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "re",
+     "enonce": "Touche le critère de l’exigence 1.2.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne 1.2, dernière colonne.",
+     "explication": "Le critère est **3 jours d’autonomie sans soleil**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie utilisable la batterie fournit-elle, sachant qu’on ne la décharge qu’à 50 % ?",
+     "reponse": 600,
+     "unite": "Wh",
+     "tolerance": 0,
+     "aide": "Énergie stockée = 12 × 100 = 1 200 Wh.",
+     "explication": "1 200 × 0,5 = **600 Wh** utilisables."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la station consomme-t-elle en trois jours ?",
+     "reponse": 720,
+     "unite": "Wh",
+     "tolerance": 0,
+     "aide": "Consommation journalière × 3.",
+     "explication": "240 × 3 = **720 Wh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur l’exigence 1.2 ?",
+     "options": [
+      "Non satisfaite : 600 Wh utilisables sont inférieurs aux 720 Wh nécessaires",
+      "Satisfaite : 1 200 Wh stockés dépassent largement les 720 Wh nécessaires",
+      "Satisfaite : la station consomme peu, donc l’autonomie est infinie",
+      "Non satisfaite : la batterie de 12 V est trop faible pour un vélo"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’énergie utilisable au besoin.",
+     "explication": "**600 Wh < 720 Wh** : avec une décharge limitée à 50 %, l’exigence n’est pas satisfaite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle capacité minimale (en Ah, sous 12 V) faudrait-il pour satisfaire l’exigence ?",
+     "reponse": 120,
+     "unite": "Ah",
+     "tolerance": 0,
+     "aide": "Énergie stockée mini = 720 / 0,5 = 1 440 Wh.",
+     "explication": "1 440 / 12 = **120 Ah**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fauteuil qui monte la rampe",
+   "competence": "modeliser",
+   "situation": "Un fauteuil roulant électrique doit gravir une pente de 10 % avec un usager. Le bureau d’études vérifie le couple des moteurs, puis l’équipe prépare les essais de l’IVVQ.",
+   "documents": [
+    {
+     "id": "fa",
+     "type": "tableau",
+     "titre": "Données du fauteuil",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse totale (fauteuil + usager)",
+       "120 kg"
+      ],
+      [
+       "Pente maximale à gravir",
+       "10 % (sin θ ≈ 0,0995)"
+      ],
+      [
+       "Rayon des roues motrices",
+       "0,15 m"
+      ],
+      [
+       "Nombre de moteurs",
+       "2"
+      ],
+      [
+       "Couple maximal d’un moteur",
+       "10 N·m"
+      ],
+      [
+       "Pesanteur",
+       "g = 9,81 m/s²"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    },
+    {
+     "id": "bs",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "De l’usager au constituant",
+     "noeuds": [
+      {
+       "id": "be",
+       "texte": "Besoin : monter une rampe seul"
+      },
+      {
+       "id": "ex",
+       "texte": "Exigence : gravir 10 % avec 120 kg"
+      },
+      {
+       "id": "mo",
+       "texte": "Motorisation : 2 moteurs de 10 N·m"
+      }
+     ],
+     "liens": [
+      {
+       "de": "be",
+       "a": "ex",
+       "texte": "se traduit en"
+      },
+      {
+       "de": "ex",
+       "a": "mo",
+       "texte": "est satisfaite par"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bs",
+     "enonce": "Touche l’exigence que la motorisation doit satisfaire.",
+     "reponse": [
+      "ex"
+     ],
+     "aide": "Une exigence contient un critère chiffré.",
+     "explication": "L’exigence est **« gravir 10 % avec 120 kg »**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel effort F = m × g × sin θ faut-il pour monter la pente ? Arrondi au dixième.",
+     "reponse": 117.1,
+     "unite": "N",
+     "tolerance": 0.1,
+     "aide": "m = 120 kg, g = 9,81 m/s², sin θ = 0,0995.",
+     "explication": "F = 120 × 9,81 × 0,0995 ≈ **117,1 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel couple chaque moteur doit-il fournir ? (C = F × R / 2 avec R = 0,15 m) Arrondi au centième.",
+     "reponse": 8.79,
+     "unite": "N·m",
+     "tolerance": 0.02,
+     "aide": "L’effort est partagé entre deux moteurs, à la distance R de l’axe.",
+     "explication": "C = 117,1 × 0,15 / 2 ≈ **8,79 N·m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure en comparant au couple maximal du moteur ?",
+     "options": [
+      "Satisfaite : 8,79 N·m est inférieur à 10 N·m, avec une marge d’environ 14 %",
+      "Non satisfaite : 8,79 N·m est inférieur à 10 N·m, donc insuffisant",
+      "Satisfaite : 117,1 N est supérieur à 10 N·m, donc largement suffisant",
+      "Indéterminée : il faudrait connaître la vitesse du fauteuil"
+     ],
+     "reponse": 0,
+     "aide": "Un moteur convient si le couple demandé est inférieur au couple maximal.",
+     "explication": "**8,79 < 10 N·m** : l’exigence est satisfaite, avec environ 14 % de marge."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces essais : vérifie-t-on une spécification, ou valide-t-on le besoin de l’usager ?",
+     "categories": [
+      "Vérification",
+      "Validation"
+     ],
+     "items": [
+      [
+       "Mesurer au banc que chaque moteur fournit 10 N·m",
+       0
+      ],
+      [
+       "Comparer le couple mesuré à la spécification du moteur",
+       0
+      ],
+      [
+       "Faire gravir une vraie rampe à un utilisateur et recueillir son avis",
+       1
+      ],
+      [
+       "Demander à l’usager si le fauteuil lui permet de rentrer chez lui",
+       1
+      ]
+     ],
+     "aide": "On vérifie par rapport aux spécifications, on valide par rapport au besoin.",
+     "explication": "On **vérifie** un constituant par rapport à sa spécification, on **valide** le système par rapport au besoin de l’usager."
+    }
+   ]
+  }
+ ]
+}

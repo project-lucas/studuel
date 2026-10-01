@@ -1,0 +1,1156 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "difficulte": 1,
+      "titre": "Substitution, addition ou élimination ?",
+      "consigne": "Classe chaque réaction en comparant réactif et produit, et justifie.",
+      "enonce": "1. Donne la catégorie de chacune des réactions suivantes. Justifie en comparant réactif et produit.\n- (a) CH₂=CH₂ + H₂O → CH₃–CH₂–OH\n- (b) CH₃–CH₂–OH → CH₂=CH₂ + H₂O\n- (c) CH₃–CH₂–Br + HO⁻ → CH₃–CH₂–OH + Br⁻\n2. Une synthèse comporte trois étapes de rendements respectifs 90 %, 80 % et 70 %. Calcule le rendement global.\n3. Déduis-en deux principes à respecter quand on conçoit une synthèse en plusieurs étapes.",
+      "bareme": [
+        {
+          "critere": "(a) addition : la double liaison disparaît ; (b) élimination : une double liaison apparaît ; (c) substitution : Br remplacé par OH",
+          "points": 9
+        },
+        {
+          "critere": "Rendement global = 0,90 × 0,80 × 0,70 ≈ 0,50 (50 %)",
+          "points": 6
+        },
+        {
+          "critere": "Le moins d'étapes possible ; étapes coûteuses le plus tard possible",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. (a) Une insaturation (la double liaison C=C) **disparaît** au profit de liaisons simples : **addition**.\n(b) Une double liaison C=C **apparaît** : **élimination**.\n(c) Le groupe –Br est **remplacé** par le groupe –OH, sans création ni disparition de liaison multiple : **substitution**.\n2. Le rendement global est le **produit** des rendements : 0,90 × 0,80 × 0,70 = **0,504**, soit environ **50 %**.\n3. Chaque étape fait perdre du produit : il faut **le moins d'étapes possible**, et placer les **étapes coûteuses le plus tard possible** (on y engage alors moins de matière)."
+    },
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "difficulte": 2,
+      "titre": "Protéger pour mieux transformer",
+      "consigne": "Lis la situation et justifie chaque réponse ; détaille les calculs.",
+      "enonce": "**Situation.** Zoé veut transformer le groupe aldéhyde d'une molécule qui porte aussi un groupe alcool. Le réactif dont elle dispose attaque **aussi bien** l'aldéhyde que l'alcool.\n\n- Voie directe : une seule étape, mais on obtient un mélange ; après séparation, le rendement en produit voulu n'est que de 40 %.\n- Voie avec protection : protection de l'alcool (rendement 90 %), transformation de l'aldéhyde (85 %), déprotection (95 %).\n\n1. Définis la chimiosélectivité. Le réactif de Zoé est-il chimiosélectif ?\n2. Décris les trois étapes de la voie avec protection et le rôle de chacune.\n3. Calcule le rendement global de la voie avec protection et compare-le à la voie directe.\n4. Quels inconvénients la protection présente-t-elle malgré tout ? Cite un domaine où elle est systématique.",
+      "bareme": [
+        {
+          "critere": "Chimiosélectivité : un seul type de groupe réagit ; ce réactif ne l'est pas",
+          "points": 4
+        },
+        {
+          "critere": "Protéger l'alcool (groupe inerte), transformer l'aldéhyde, déprotéger (restaurer l'alcool)",
+          "points": 5
+        },
+        {
+          "critere": "0,90 × 0,85 × 0,95 ≈ 0,73 (73 %) contre 40 % : voie protégée plus efficace",
+          "points": 6
+        },
+        {
+          "critere": "Deux étapes en plus : coût et perte de rendement ; systématique en synthèse peptidique",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Un réactif est **chimiosélectif** s'il ne fait réagir **qu'un seul type de groupe caractéristique** alors que plusieurs sont présents. Celui de Zoé attaque l'aldéhyde et l'alcool : il **n'est pas** chimiosélectif.\n2. Étape 1, **protection** : on transforme temporairement l'alcool en un groupe **inerte** vis-à-vis du réactif. Étape 2 : on réalise la **transformation voulue** de l'aldéhyde, seul groupe encore réactif. Étape 3, **déprotection** : on **restaure** le groupe alcool d'origine.\n3. Rendement global = 0,90 × 0,85 × 0,95 ≈ **0,73**, soit **73 %**, contre 40 % pour la voie directe : malgré trois étapes, la voie avec protection est **bien plus efficace**, et elle évite une séparation difficile.\n4. La protection ajoute **deux étapes** : du **coût** (réactifs, temps, solvants) et une **perte de rendement** à chacune. C'est pourtant souvent le seul chemin possible ; elle est **systématique en synthèse peptidique**, où seule la bonne extrémité de chaque acide aminé doit réagir."
+    },
+    {
+      "chapitre": "6c04d56f-52f5-5a5b-98e5-a05b5f0a765d",
+      "difficulte": 3,
+      "titre": "Deux voies vers l'éthanol",
+      "consigne": "Compare les deux stratégies à l'aide des critères du cours ; détaille les calculs.",
+      "enonce": "**Situation.** Une entreprise veut fabriquer de l'éthanol C₂H₅OH. Deux voies sont étudiées.\n\n- **Voie A** : CH₂=CH₂ + H₂O → C₂H₅OH, en une étape catalysée, rendement 95 %.\n- **Voie B** : C₂H₅Br + NaOH → C₂H₅OH + NaBr, rendement 90 % ; le bromoéthane C₂H₅Br doit lui-même être préparé à partir d'éthanol ou d'éthylène.\n\n**Définition.** L'économie d'atomes d'une réaction est le rapport entre la masse molaire du produit voulu et la somme des masses molaires des réactifs.\n**Données** (g·mol⁻¹) : M(C₂H₅OH) = 46,0 ; M(CH₂=CH₂) = 28,0 ; M(H₂O) = 18,0 ; M(C₂H₅Br) = 108,9 ; M(NaOH) = 40,0.\n\n1. Donne la catégorie de réaction de chaque voie. Justifie.\n2. Calcule l'économie d'atomes de chaque voie et commente.\n3. Un autre projet comporte 5 étapes de rendement 85 % chacune. Calcule son rendement global. Pourquoi est-il si faible ?\n4. Quelle voie répond le mieux aux principes de la chimie verte ? Donne deux arguments autres que l'économie d'atomes.\n5. Au laboratoire, un protocole prévoit un chauffage à reflux, une distillation, une CCM et un calcul de rendement. À quoi sert chaque opération ?",
+      "bareme": [
+        {
+          "critere": "A : addition (C=C disparaît) ; B : substitution (Br remplacé par OH)",
+          "points": 4
+        },
+        {
+          "critere": "A : 46,0/46,0 = 100 % ; B : 46,0/148,9 ≈ 31 %, le reste part en NaBr",
+          "points": 5
+        },
+        {
+          "critere": "0,85⁵ ≈ 0,44 : le rendement global est le produit des rendements",
+          "points": 4
+        },
+        {
+          "critere": "Voie A : catalyse, une seule étape, moins de réactifs et de déchets",
+          "points": 4
+        },
+        {
+          "critere": "Reflux : accélérer sans perte ; distillation : purifier ; CCM : vérifier ; rendement : mesurer",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Voie A** : la double liaison C=C **disparaît**, H et OH s'ajoutent : **addition**. **Voie B** : le groupe –Br est **remplacé** par –OH : **substitution**.\n2. Voie A : M(réactifs) = 28,0 + 18,0 = 46,0 g·mol⁻¹ ; économie d'atomes = 46,0/46,0 = **100 %** : tous les atomes des réactifs finissent dans le produit. Voie B : M(réactifs) = 108,9 + 40,0 = 148,9 g·mol⁻¹ ; économie d'atomes = 46,0/148,9 ≈ **31 %** : près de 70 % de la masse des réactifs part en sous-produit (NaBr).\n3. 0,85⁵ ≈ **0,44**, soit **44 %**. Le rendement global est le **produit** des rendements : même de bonnes étapes, multipliées, font perdre plus de la moitié du produit. D'où la règle : le moins d'étapes possible.\n4. La **voie A** : elle utilise un **catalyseur** plutôt qu'un réactif consommé en quantité stœchiométrique, elle se fait en **une seule étape** (la voie B exige de préparer d'abord le bromoéthane, soit au moins deux étapes), elle ne produit **pas de déchet** salin et consomme moins de réactifs.\n5. **Reflux** : accélérer la réaction en chauffant **sans perdre de matière** par évaporation. **Distillation** : **purifier** le produit. **CCM** : **vérifier** sa pureté ou l'avancement. **Rendement** : **mesurer** l'efficacité de la synthèse."
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "difficulte": 1,
+      "titre": "Des équations horaires aux vecteurs",
+      "consigne": "Détaille les dérivations et les calculs, avec les unités.",
+      "enonce": "Dans un repère (O ; x, y) lié au sol (référentiel terrestre), le mouvement d'une balle est décrit par les équations horaires (t en s, x et y en m) :\n\nx(t) = 2,0 t ; y(t) = −4,9 t² + 3,0 t\n\n1. Établis les coordonnées du vecteur vitesse, puis du vecteur accélération. Comment obtient-on chacun ?\n2. Calcule la valeur de la vitesse à t = 0,50 s.\n3. Quelle est la direction du vecteur vitesse par rapport à la trajectoire ?",
+      "bareme": [
+        {
+          "critere": "v_x = 2,0 ; v_y = −9,8 t + 3,0 (dérivée de la position) ; a_x = 0, a_y = −9,8 m·s⁻² (dérivée de v)",
+          "points": 9
+        },
+        {
+          "critere": "v(0,50) : v_y = −1,9 m·s⁻¹, v = √(2,0² + 1,9²) ≈ 2,8 m·s⁻¹",
+          "points": 7
+        },
+        {
+          "critere": "Vitesse tangente à la trajectoire, dans le sens du mouvement",
+          "points": 4
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le vecteur vitesse est la **dérivée** du vecteur position : **v_x = 2,0 m·s⁻¹** et **v_y = −9,8 t + 3,0** (en m·s⁻¹). Le vecteur accélération est la dérivée de la vitesse (dérivée **seconde** de la position) : **a_x = 0** et **a_y = −9,8 m·s⁻²**. L'accélération est constante et verticale, vers le bas.\n2. À t = 0,50 s : v_x = 2,0 m·s⁻¹ ; v_y = −9,8 × 0,50 + 3,0 = **−1,9 m·s⁻¹**. v = √(2,0² + 1,9²) = √(4,00 + 3,61) = √7,61 ≈ **2,8 m·s⁻¹**.\n3. Le vecteur vitesse est **tangent à la trajectoire**, orienté dans le **sens du mouvement**."
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "difficulte": 2,
+      "titre": "Le pointage vidéo du chariot",
+      "consigne": "Exploite le pointage et détaille chaque calcul avec ses unités.",
+      "enonce": "**Situation.** Adam filme un chariot qui descend un rail rectiligne et pointe ses positions successives à intervalle τ = 40 ms. Il repère l'abscisse x de chaque point le long du rail :\n\n| Point | M₃ | M₄ | M₅ | M₆ | M₇ |\n| x (cm) | 30,0 | 33,8 | 38,0 | 42,8 | 48,0 |\n\n1. Explique comment on estime la vitesse en un point à partir d'un pointage. Calcule v₄ (vitesse au point M₄) et v₆.\n2. Estime, par la même méthode, la valeur de l'accélération au point M₅.\n3. Qualifie le mouvement (rectiligne ou non, uniforme ou non). Justifie.\n4. Adam hésite à réduire τ à 10 ms. Quel en serait l'avantage et quel en serait l'inconvénient ?",
+      "bareme": [
+        {
+          "critere": "Différence finie centrée ; v₄ = 0,080/0,080 = 1,0 m·s⁻¹ et v₆ = 0,100/0,080 = 1,25 m·s⁻¹",
+          "points": 7
+        },
+        {
+          "critere": "a₅ ≈ (v₆ − v₄)/(2τ) ≈ 3,1 m·s⁻²",
+          "points": 5
+        },
+        {
+          "critere": "Rectiligne (rail droit) et accéléré, non uniforme : la vitesse augmente",
+          "points": 4
+        },
+        {
+          "critere": "τ petit : meilleure approximation de la dérivée, mais l'incertitude de pointage pèse plus",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. On approche la dérivée par une **différence finie centrée** : v(Mᵢ) ≈ M(ᵢ₋₁)M(ᵢ₊₁) / (2τ).\nv₄ = (x₅ − x₃)/(2τ) = (0,380 − 0,300) / 0,080 = 0,080/0,080 = **1,0 m·s⁻¹**.\nv₆ = (x₇ − x₅)/(2τ) = (0,480 − 0,380) / 0,080 = 0,100/0,080 = **1,25 m·s⁻¹**.\n2. L'accélération est la dérivée de la vitesse ; par la même méthode, entre M₄ et M₆ (intervalle 2τ) : a₅ ≈ (v₆ − v₄)/(2τ) = (1,25 − 1,0) / 0,080 ≈ **3,1 m·s⁻²**.\n3. Le chariot suit un rail droit : le mouvement est **rectiligne**. Les distances parcourues pendant chaque intervalle τ augmentent (3,8 ; 4,2 ; 4,8 ; 5,2 cm) et la vitesse passe de 1,0 à 1,25 m·s⁻¹ : le mouvement est **accéléré**, donc **non uniforme**.\n4. Avec τ plus petit, la différence finie approche **mieux la dérivée** (vitesse plus « instantanée »). Mais les déplacements mesurés deviennent petits, et l'**incertitude de pointage** (quelques millimètres) pèse alors beaucoup plus. C'est un **compromis**."
+    },
+    {
+      "chapitre": "c253d422-212b-5aa9-8ec9-7b34d79acbee",
+      "difficulte": 3,
+      "titre": "Manège et rond-point",
+      "consigne": "Utilise le repère de Frenet et justifie chaque réponse ; détaille les calculs.",
+      "enonce": "**Situation 1.** Une nacelle de manège tourne à vitesse constante sur un cercle de rayon R = 5,0 m ; elle fait un tour en 10 s.\n\n**Situation 2.** Une voiture aborde un rond-point de rayon R' = 20 m. Sa vitesse passe régulièrement de 10 m·s⁻¹ à 6,0 m·s⁻¹ en 4,0 s.\n\n1. Dans quel référentiel étudies-tu ces deux mouvements ? Un passager de la nacelle est-il en mouvement ? Discute.\n2. Situation 1 : calcule la vitesse v de la nacelle. Le mouvement est « uniforme » : l'accélération est-elle nulle ? Calcule-la et donne sa direction.\n3. Situation 2 : calcule la composante tangentielle aₜ de l'accélération. Que traduit son signe ?\n4. Situation 2 : à l'instant où v = 8,0 m·s⁻¹, calcule la composante normale aₙ, puis la valeur de l'accélération.\n5. Dessine ou décris l'orientation du vecteur accélération de la voiture par rapport au centre du rond-point.",
+      "bareme": [
+        {
+          "critere": "Référentiel terrestre ; passager immobile dans le référentiel de la nacelle, en mouvement par rapport au sol",
+          "points": 3
+        },
+        {
+          "critere": "v = 2πR/T ≈ 3,1 m·s⁻¹ ; a = v²/R ≈ 2,0 m·s⁻², vers le centre, non nulle",
+          "points": 6
+        },
+        {
+          "critere": "aₜ = dv/dt = −1,0 m·s⁻² : la valeur de la vitesse diminue",
+          "points": 4
+        },
+        {
+          "critere": "aₙ = v²/R' = 3,2 m·s⁻², a = √(aₜ² + aₙ²) ≈ 3,4 m·s⁻²",
+          "points": 4
+        },
+        {
+          "critere": "Accélération dirigée vers l'intérieur de la courbe, inclinée vers l'arrière du mouvement",
+          "points": 3
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. On étudie les deux mouvements dans le **référentiel terrestre** (le sol). Le passager est **immobile** dans le référentiel de la nacelle et **en mouvement circulaire** dans le référentiel terrestre : aucun mouvement n'existe dans l'absolu.\n2. v = 2πR/T = 2π × 5,0 / 10 ≈ **3,1 m·s⁻¹**. « Uniforme » ne parle que de la **valeur** de la vitesse : sa **direction** change sans cesse, donc l'accélération n'est **pas nulle**. aₜ = dv/dt = 0 et aₙ = v²/R = (3,14)² / 5,0 ≈ 9,87/5,0 ≈ **2,0 m·s⁻²**, dirigée **vers le centre** du cercle.\n3. aₜ = dv/dt = (6,0 − 10) / 4,0 = **−1,0 m·s⁻²**. Le signe négatif traduit une **diminution de la valeur** de la vitesse : la voiture freine.\n4. aₙ = v²/R' = 8,0² / 20 = 64/20 = **3,2 m·s⁻²**, vers le centre. a = √(aₜ² + aₙ²) = √(1,0 + 10,24) = √11,24 ≈ **3,4 m·s⁻²**.\n5. Le vecteur accélération a une composante **normale vers le centre** du rond-point (changement de direction) et une composante **tangentielle opposée au mouvement** (freinage) : il pointe vers l'**intérieur de la courbe**, incliné vers l'**arrière**."
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "difficulte": 1,
+      "titre": "Le palet et la pomme",
+      "consigne": "Réponds en citant la loi de Newton utilisée et en justifiant.",
+      "enonce": "1. Un palet glisse sur une patinoire horizontale ; on néglige tout frottement. Fais le bilan des forces qui s'exercent sur lui. Que peux-tu en déduire sur son mouvement ? Quelle loi utilises-tu ?\n2. Une pomme de 150 g tombe d'un arbre. La Terre exerce sur la pomme une force de 1,5 N. Quelle force la pomme exerce-t-elle sur la Terre ? Ces deux forces se compensent-elles ? Justifie.\n3. Énonce la deuxième loi de Newton. Sous quelle forme l'utilise-t-on quand la masse du système est constante ?",
+      "bareme": [
+        {
+          "critere": "Poids et réaction normale qui se compensent : palet pseudo-isolé, mouvement rectiligne uniforme (1re loi)",
+          "points": 7
+        },
+        {
+          "critere": "3e loi : 1,5 N de sens opposé, appliquée à la Terre ; ne se compensent pas (corps différents)",
+          "points": 7
+        },
+        {
+          "critere": "ΣF = dp/dt avec p = mv ; ΣF = m a à masse constante",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Forces extérieures : le **poids** P (vertical, vers le bas) et la **réaction normale** du support R (verticale, vers le haut), sans frottement. Elles se compensent : le palet est **pseudo-isolé**. D'après la **1re loi de Newton** (principe d'inertie), il est au repos ou en **mouvement rectiligne uniforme** : lancé, il glisse en ligne droite à vitesse constante.\n2. D'après la **3e loi** (actions réciproques), la pomme exerce sur la Terre une force de **même valeur, 1,5 N**, et de **sens opposé** (vers le haut, vers la pomme), quelles que soient les masses. Ces deux forces s'appliquent à **deux corps différents** : elles ne se compensent **jamais**.\n3. **ΣF = dp/dt**, avec p = m v la quantité de mouvement : la somme des forces extérieures égale la dérivée de la quantité de mouvement. Si m est constante : **ΣF = m a**."
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "difficulte": 2,
+      "titre": "La descente de Jade",
+      "consigne": "Applique la méthode en cinq gestes et détaille chaque calcul.",
+      "enonce": "**Situation.** Jade, skieuse de masse m = 70 kg avec son équipement, part sans vitesse du haut d'une piste rectiligne inclinée de α = 20° par rapport à l'horizontale. La neige et l'air exercent sur elle une force de frottement f = 60 N, constante, parallèle à la piste et opposée au mouvement. On prend g = 9,81 m·s⁻² ; sin 20° = 0,342.\n\n1. Définis le système et le référentiel. Fais le bilan des forces extérieures.\n2. Applique la deuxième loi de Newton et projette-la sur un axe parallèle à la piste, orienté vers le bas. Calcule l'accélération a.\n3. Établis l'expression de la vitesse v(t), puis de la distance parcourue d(t), en précisant l'origine des constantes.\n4. Calcule la vitesse de Jade et la distance parcourue au bout de 6,0 s.",
+      "bareme": [
+        {
+          "critere": "Système Jade, référentiel terrestre galiléen ; poids, réaction normale, frottement",
+          "points": 4
+        },
+        {
+          "critere": "m a = m g sin α − f, soit a ≈ 2,5 m·s⁻²",
+          "points": 7
+        },
+        {
+          "critere": "v(t) = a t et d(t) = ½ a t² (constantes nulles : départ sans vitesse, origine au départ)",
+          "points": 5
+        },
+        {
+          "critere": "v(6,0 s) ≈ 15 m·s⁻¹ et d ≈ 45 m",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Système** : Jade et son équipement. **Référentiel** : terrestre, supposé galiléen. **Forces extérieures** : le poids P (m g, vertical vers le bas), la réaction normale de la piste R (perpendiculaire à la piste), la force de frottement f (parallèle à la piste, vers le haut).\n2. ΣF = m a. Projection sur l'axe parallèle à la piste, orienté vers le bas : la composante du poids vaut m g sin α, R a une composante nulle, f compte négativement :\nm a = m g sin α − f, donc a = g sin α − f/m = 9,81 × 0,342 − 60/70 ≈ 3,36 − 0,86 ≈ **2,5 m·s⁻²**.\n3. On intègre : v(t) = a t + v₀ avec v₀ = 0 (départ sans vitesse), donc **v(t) = a t**. Puis d(t) = ½ a t² + d₀ avec d₀ = 0 (origine au point de départ), donc **d(t) = ½ a t²**. Les constantes viennent des **conditions initiales**.\n4. v(6,0) = 2,5 × 6,0 = **15 m·s⁻¹** (54 km/h). d(6,0) = ½ × 2,5 × 6,0² = 1,25 × 36 = **45 m**."
+    },
+    {
+      "chapitre": "1a786ff4-a1d3-5f58-9572-5a93bf601123",
+      "difficulte": 3,
+      "titre": "La chute du parachutiste",
+      "consigne": "Applique la deuxième loi de Newton, puis exploite-la sans et avec la méthode d'Euler. Détaille les calculs.",
+      "enonce": "**Situation.** Un parachutiste de masse m = 80 kg (équipement compris) saute d'un hélicoptère immobile, sans vitesse initiale. Avant l'ouverture du parachute, l'air exerce sur lui une force de frottement verticale, vers le haut, de valeur f = k v², avec k = 0,25 kg·m⁻¹. On néglige la poussée d'Archimède. g = 9,81 m·s⁻².\n\n1. Fais le bilan des forces et établis l'équation différentielle vérifiée par v (axe vertical orienté vers le bas).\n2. Explique qualitativement pourquoi l'accélération diminue au cours de la chute, et vers quoi tend la vitesse.\n3. Calcule la vitesse limite sans résoudre l'équation. Justifie la méthode.\n4. Parachute ouvert, k devient 25 kg·m⁻¹. Calcule la nouvelle vitesse limite et commente.\n5. Applique la méthode d'Euler avec un pas Δt = 1,0 s pour calculer v à t = 1,0 s puis à t = 2,0 s. Comment améliorer la précision ?",
+      "bareme": [
+        {
+          "critere": "Poids et frottement ; m dv/dt = m g − k v², soit dv/dt = g − (k/m) v²",
+          "points": 4
+        },
+        {
+          "critere": "f croît avec v, donc a diminue ; v tend vers une vitesse limite (ΣF = 0)",
+          "points": 4
+        },
+        {
+          "critere": "a = 0 : v_lim = √(m g/k) ≈ 56 m·s⁻¹ (environ 200 km/h)",
+          "points": 5
+        },
+        {
+          "critere": "Parachute : v_lim = √(784,8/25) ≈ 5,6 m·s⁻¹, dix fois plus faible",
+          "points": 3
+        },
+        {
+          "critere": "Euler : v(1,0) = 9,81 m·s⁻¹, v(2,0) ≈ 19,3 m·s⁻¹ ; pas plus petit pour plus de fidélité",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Système : le parachutiste ; référentiel terrestre supposé galiléen. Forces : le **poids** m g (vers le bas) et le **frottement** k v² (vers le haut). Deuxième loi de Newton projetée sur l'axe vertical vers le bas : m a = m g − k v², soit **dv/dt = g − (k/m) v²**.\n2. Au départ v = 0 : pas de frottement, a = g. Quand v augmente, le frottement k v² **grandit** et compense une part croissante du poids : l'accélération **diminue**. La vitesse tend vers une **vitesse limite**, atteinte quand le frottement compense exactement le poids (ΣF = 0).\n3. À la vitesse limite, v ne varie plus : on pose **a = 0** dans l'équation, sans la résoudre : g = (k/m) v_lim², donc v_lim = √(m g / k) = √(80 × 9,81 / 0,25) = √3 139 ≈ **56 m·s⁻¹** (environ 200 km/h).\n4. v_lim = √(784,8 / 25) = √31,4 ≈ **5,6 m·s⁻¹** (environ 20 km/h) : k est multiplié par 100, la vitesse limite est divisée par √100 = **10**, ce qui permet un atterrissage sans danger.\n5. Euler : v(t + Δt) = v(t) + a(t) × Δt, avec a(t) = g − (k/m) v(t)².\n- t = 0 : v = 0, a = 9,81 m·s⁻² → v(1,0) = 0 + 9,81 × 1,0 = **9,81 m·s⁻¹**.\n- t = 1,0 s : a = 9,81 − (0,25/80) × 9,81² = 9,81 − 0,30 ≈ 9,51 m·s⁻² → v(2,0) = 9,81 + 9,51 ≈ **19,3 m·s⁻¹**.\nPour une solution plus fidèle, il faut **réduire le pas Δt** (ce que fait un tableur ou un programme Python)."
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "difficulte": 1,
+      "titre": "La bille qui quitte la table",
+      "consigne": "Établis les équations horaires puis réponds en détaillant les calculs.",
+      "enonce": "Une bille roule sur une table et la quitte avec une vitesse horizontale v₀ = 2,0 m·s⁻¹, depuis une hauteur h = 1,25 m au-dessus du sol. On néglige les frottements ; g = 9,81 m·s⁻². On prend l'origine au sol, à la verticale du bord de la table ; x horizontal, y vertical vers le haut.\n\n1. Quelle est l'accélération de la bille ? Dépend-elle de sa masse ?\n2. Établis les équations horaires x(t) et y(t).\n3. Calcule la durée de la chute, puis la distance horizontale entre le pied de la table et le point d'impact.",
+      "bareme": [
+        {
+          "critere": "a = g, verticale vers le bas, indépendante de la masse",
+          "points": 5
+        },
+        {
+          "critere": "x(t) = v₀ t = 2,0 t et y(t) = −½ g t² + h",
+          "points": 7
+        },
+        {
+          "critere": "t = √(2h/g) ≈ 0,50 s et x ≈ 1,0 m",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La seule force est le poids : m a = m g, donc **a = g**, verticale et vers le bas. La masse se simplifie : le mouvement **ne dépend pas de la masse**.\n2. Selon x : a_x = 0, v_x = v₀, **x(t) = v₀ t = 2,0 t**. Selon y : a_y = −g, v_y = −g t (pas de vitesse verticale initiale), **y(t) = −½ g t² + h = −4,9 t² + 1,25** (en m).\n3. Au sol, y = 0 : ½ g t² = h, donc t = √(2h/g) = √(2 × 1,25 / 9,81) = √0,255 ≈ **0,50 s**. Distance : x = 2,0 × 0,50 ≈ **1,0 m**."
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "difficulte": 2,
+      "titre": "Le tir de Nathan",
+      "consigne": "Établis les équations du mouvement puis détaille chaque calcul, avec les unités.",
+      "enonce": "**Situation.** Nathan frappe un ballon posé au sol. Il part avec une vitesse v₀ = 15 m·s⁻¹ faisant un angle α = 40° avec l'horizontale. On néglige les frottements. g = 9,81 m·s⁻² ; cos 40° = 0,766 ; sin 40° = 0,643.\n\n1. Écris les coordonnées de la vitesse initiale et les équations horaires x(t) et y(t).\n2. À quelle condition le ballon atteint-il son altitude maximale ? Calcule la date correspondante, puis la flèche (altitude maximale).\n3. Calcule la portée du tir (distance horizontale au point de retombée au sol).\n4. Quelle est la vitesse du ballon au sommet de sa trajectoire ? Est-elle nulle ?\n5. Sans utiliser les équations horaires, détermine la vitesse du ballon quand il retombe au sol. Justifie.",
+      "bareme": [
+        {
+          "critere": "x = v₀ cos α t, y = −½ g t² + v₀ sin α t",
+          "points": 4
+        },
+        {
+          "critere": "Flèche quand v_y = 0 : t ≈ 0,98 s, h ≈ 4,7 m",
+          "points": 5
+        },
+        {
+          "critere": "Portée : y = 0 pour t ≈ 1,97 s, x ≈ 22,6 m",
+          "points": 5
+        },
+        {
+          "critere": "Au sommet v = v_x ≈ 11,5 m·s⁻¹, non nulle",
+          "points": 3
+        },
+        {
+          "critere": "Conservation de l'énergie mécanique : même altitude, v = 15 m·s⁻¹",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. v₀x = v₀ cos α = 15 × 0,766 ≈ 11,5 m·s⁻¹ ; v₀y = v₀ sin α = 15 × 0,643 ≈ 9,64 m·s⁻¹.\n**x(t) = v₀ cos α × t ≈ 11,5 t** ; **y(t) = −½ g t² + v₀ sin α × t ≈ −4,905 t² + 9,64 t**.\n2. L'altitude est maximale quand **v_y = 0** : −g t + v₀ sin α = 0, soit t = 9,64 / 9,81 ≈ **0,98 s**. Flèche : y = −4,905 × 0,983² + 9,64 × 0,983 ≈ −4,74 + 9,48 ≈ **4,7 m**.\n3. Retour au sol : y = 0 avec t ≠ 0 : t = 2 v₀ sin α / g = 2 × 9,64 / 9,81 ≈ 1,97 s. Portée : x = 11,5 × 1,97 ≈ **22,6 m**.\n4. Au sommet, v_y = 0 mais v_x = v₀ cos α ≈ **11,5 m·s⁻¹** reste inchangée (mouvement horizontal uniforme) : la vitesse **n'est pas nulle**.\n5. Sans frottement, l'**énergie mécanique se conserve** : ½ m v² + m g z = constante. Le ballon retombe à la même altitude qu'au départ (z = 0) : sa vitesse a la même valeur, **v = 15 m·s⁻¹**."
+    },
+    {
+      "chapitre": "70881697-e20b-5af4-ad14-baf7840783f7",
+      "difficulte": 3,
+      "titre": "Un électron entre deux plaques",
+      "consigne": "Analyse la situation, compare aux mouvements dans le champ de pesanteur et détaille les calculs.",
+      "enonce": "**Situation.** Dans un tube de laboratoire, un électron entre avec une vitesse horizontale v₀ = 2,0 × 10⁷ m·s⁻¹ entre deux plaques horizontales de longueur L = 5,0 cm, distantes de d = 4,0 cm, à égale distance des deux. La plaque du haut est chargée positivement ; la tension entre les plaques vaut U = 200 V.\n\n**Données.** e = 1,60 × 10⁻¹⁹ C ; mₑ = 9,11 × 10⁻³¹ kg ; g = 9,81 m·s⁻².\n\n1. Calcule la valeur du champ électrique E entre les plaques et donne son sens.\n2. Donne le sens de la force électrique sur l'électron. Compare sa valeur au poids de l'électron et conclus.\n3. Calcule l'accélération de l'électron.\n4. Calcule la durée de la traversée des plaques, puis la déviation verticale à la sortie. L'électron heurte-t-il une plaque ?\n5. Explique pourquoi la trajectoire est une portion de parabole, comme celle d'une balle lancée horizontalement, et ce qui distingue les deux situations.",
+      "bareme": [
+        {
+          "critere": "E = U/d = 5,0 × 10³ V·m⁻¹, du + vers le − (vers le bas)",
+          "points": 4
+        },
+        {
+          "critere": "Force vers la plaque + (vers le haut), eE = 8,0 × 10⁻¹⁶ N contre m g ≈ 8,9 × 10⁻³⁰ N : poids négligeable",
+          "points": 4
+        },
+        {
+          "critere": "a = eE/m ≈ 8,8 × 10¹⁴ m·s⁻²",
+          "points": 4
+        },
+        {
+          "critere": "t = L/v₀ = 2,5 × 10⁻⁹ s, déviation ½ a t² ≈ 2,7 mm < 2,0 cm : l'électron sort",
+          "points": 5
+        },
+        {
+          "critere": "Accélération constante et vitesse initiale perpendiculaire : parabole ; ici a dépend de la charge et de la masse",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. E = U / d = 200 / 4,0 × 10⁻² = **5,0 × 10³ V·m⁻¹**. Le champ est dirigé de la plaque **+** vers la plaque **−** : **vers le bas**.\n2. L'électron est chargé **négativement** : la force F = qE est de sens **opposé** à E, donc **vers le haut** (vers la plaque +). F = eE = 1,60 × 10⁻¹⁹ × 5,0 × 10³ = **8,0 × 10⁻¹⁶ N**. Poids : mₑ g = 9,11 × 10⁻³¹ × 9,81 ≈ 8,9 × 10⁻³⁰ N, soit environ 10¹⁴ fois moins : le poids est **totalement négligeable**.\n3. a = eE / mₑ = 8,0 × 10⁻¹⁶ / 9,11 × 10⁻³¹ ≈ **8,8 × 10¹⁴ m·s⁻²**, verticale vers le haut.\n4. Horizontalement, le mouvement est uniforme : t = L / v₀ = 5,0 × 10⁻² / 2,0 × 10⁷ = **2,5 × 10⁻⁹ s**. Verticalement, uniformément accéléré sans vitesse initiale : y = ½ a t² = 0,5 × 8,8 × 10¹⁴ × (2,5 × 10⁻⁹)² ≈ 0,5 × 8,8 × 10¹⁴ × 6,25 × 10⁻¹⁸ ≈ **2,7 × 10⁻³ m** (2,7 mm). L'électron part du milieu : il lui faudrait dévier de d/2 = 2,0 cm pour toucher la plaque. 2,7 mm < 2,0 cm : il **sort** sans la heurter.\n5. Dans les deux cas, l'accélération est **constante** et perpendiculaire à la vitesse initiale : mouvement uniforme selon v₀, uniformément accéléré selon la force. En éliminant t, on obtient une **parabole** : mêmes équations, seul le rapport force/masse change. Différence : pour la balle, a = g ne dépend **pas** de la masse ; pour l'électron, a = qE/m dépend de sa **charge** et de sa **masse** (c'est ce qui permet de trier des particules)."
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "difficulte": 1,
+      "titre": "La Station spatiale internationale",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec leurs unités.",
+      "enonce": "La Station spatiale internationale (ISS) tourne autour de la Terre sur une orbite considérée comme circulaire, à l'altitude h = 400 km.\n\n**Données.** G = 6,67 × 10⁻¹¹ N·m²·kg⁻² ; masse de la Terre M = 5,97 × 10²⁴ kg ; rayon de la Terre R_T = 6 370 km.\n\n1. Dans quel référentiel étudie-t-on ce mouvement ? Quelle force s'exerce sur l'ISS ?\n2. Calcule la vitesse de l'ISS avec v = √(G M / r). Dépend-elle de la masse de la station ?\n3. Calcule la période de révolution de l'ISS, en minutes.",
+      "bareme": [
+        {
+          "critere": "Référentiel géocentrique ; force de gravitation de la Terre, vers son centre",
+          "points": 5
+        },
+        {
+          "critere": "r = R_T + h = 6,77 × 10⁶ m, v ≈ 7,67 × 10³ m·s⁻¹, indépendante de la masse de l'ISS",
+          "points": 8
+        },
+        {
+          "critere": "T = 2πr/v ≈ 5,5 × 10³ s ≈ 92 min",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. On étudie un satellite de la Terre dans le **référentiel géocentrique**. L'ISS n'est soumise qu'à la **force de gravitation** exercée par la Terre, dirigée **vers le centre** de la Terre.\n2. Le rayon de l'orbite se compte depuis le centre : r = R_T + h = 6 370 + 400 = 6 770 km = **6,77 × 10⁶ m**.\nv = √(G M / r) = √(6,67 × 10⁻¹¹ × 5,97 × 10²⁴ / 6,77 × 10⁶) = √(5,88 × 10⁷) ≈ **7,67 × 10³ m·s⁻¹** (environ 27 600 km/h). La masse de l'ISS n'apparaît pas : la vitesse **ne dépend pas de la masse** du satellite.\n3. T = 2πr / v = 2π × 6,77 × 10⁶ / 7,67 × 10³ ≈ **5,5 × 10³ s**, soit environ **92 min**."
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "difficulte": 2,
+      "titre": "Rester au-dessus du même point",
+      "consigne": "Justifie chaque condition, puis détaille les calculs avec la troisième loi de Kepler.",
+      "enonce": "**Situation.** Un satellite de télévision doit rester en permanence à la verticale du même point de l'équateur : il est géostationnaire.\n\n**Données.** G = 6,67 × 10⁻¹¹ N·m²·kg⁻² ; M = 5,97 × 10²⁴ kg ; R_T = 6 370 km ; jour sidéral : 86 164 s. Troisième loi de Kepler pour une orbite circulaire : T² / r³ = 4π² / (G M).\n\n1. Énonce les trois conditions qu'il doit remplir et justifie chacune.\n2. Calcule le rayon r de son orbite, puis son altitude.\n3. Calcule sa vitesse sur l'orbite. Compare-la à celle d'un satellite en orbite basse (7,7 km·s⁻¹) et explique.\n4. Explique pourquoi ce rayon est unique.",
+      "bareme": [
+        {
+          "critere": "Orbite équatoriale, même sens que la rotation terrestre, période d'un jour sidéral, avec justifications",
+          "points": 6
+        },
+        {
+          "critere": "r³ = G M T²/(4π²), r ≈ 4,22 × 10⁷ m, altitude ≈ 3,58 × 10⁴ km",
+          "points": 7
+        },
+        {
+          "critere": "v = 2πr/T ≈ 3,07 km·s⁻¹, plus lent car v varie en 1/√r",
+          "points": 4
+        },
+        {
+          "critere": "T imposée donc r fixé par la troisième loi de Kepler",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Orbite équatoriale** : sinon le satellite oscillerait en latitude. **Même sens** que la rotation de la Terre : sinon il défilerait en sens inverse. **Période égale à un jour sidéral** (86 164 s) : pour rester à la verticale du même point.\n2. r³ = G M T² / (4π²) = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ × (86 164)² / 39,48 ≈ 3,98 × 10¹⁴ × 7,42 × 10⁹ / 39,48 ≈ 7,49 × 10²² m³. r ≈ **4,22 × 10⁷ m**, soit environ 42 200 km depuis le centre. Altitude : 42 200 − 6 370 ≈ **35 800 km** (environ 36 000 km).\n3. v = 2πr / T = 2π × 4,22 × 10⁷ / 86 164 ≈ **3,07 × 10³ m·s⁻¹**. C'est plus lent qu'en orbite basse : v = √(GM/r) décroît quand r augmente (en 1/√r) ; plus l'orbite est haute, plus le satellite est lent.\n4. La période est **imposée** (un jour sidéral) ; la troisième loi de Kepler relie T et r de façon univoque : il n'existe qu'**un seul rayon** possible."
+    },
+    {
+      "chapitre": "9bbea09c-6329-5421-935b-b29c81e1e51e",
+      "difficulte": 3,
+      "titre": "Peser Jupiter avec ses lunes",
+      "consigne": "Exploite les données d'observation, justifie chaque étape et détaille les calculs.",
+      "enonce": "**Document.** En 1610, Galilée découvre quatre satellites de Jupiter. On admet leurs orbites circulaires. Mesures actuelles :\n\n| Satellite | Rayon de l'orbite r | Période T |\n| Io | 4,22 × 10⁸ m | 1,769 jour |\n| Europe | 6,71 × 10⁸ m | à déterminer |\n\n**Données.** G = 6,67 × 10⁻¹¹ N·m²·kg⁻² ; 1 jour = 86 400 s ; T² / r³ = 4π² / (G M) pour un satellite en orbite circulaire autour d'un astre de masse M.\n\n1. Montre que le mouvement circulaire d'un satellite est uniforme.\n2. À partir des données d'Io, calcule la masse de Jupiter.\n3. Sans utiliser la valeur de G, prévois la période d'Europe.\n4. Lequel des deux satellites va le plus vite ? Justifie sans calcul.\n5. L'orbite réelle d'Io est très légèrement elliptique. Que disent les lois de Kepler sur sa forme et sur sa vitesse le long de l'orbite ?",
+      "bareme": [
+        {
+          "critere": "Seule force : l'attraction, centripète, sans composante tangentielle : v constante",
+          "points": 3
+        },
+        {
+          "critere": "M = 4π² r³/(G T²) avec T en s : M ≈ 1,90 × 10²⁷ kg",
+          "points": 6
+        },
+        {
+          "critere": "T²/r³ commun : T_Europe = T_Io × (r_E/r_Io)^(3/2) ≈ 3,55 jours",
+          "points": 5
+        },
+        {
+          "critere": "Io plus rapide : v = √(GM/r) décroît quand r augmente",
+          "points": 3
+        },
+        {
+          "critere": "Ellipse avec Jupiter à un foyer ; loi des aires : plus rapide au plus près de Jupiter",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La seule force est l'attraction de Jupiter, dirigée vers son centre : elle est **perpendiculaire** à la vitesse sur une orbite circulaire. N'ayant **aucune composante tangentielle**, elle ne modifie pas la valeur de la vitesse : le mouvement est **uniforme**.\n2. M = 4π² r³ / (G T²). T = 1,769 × 86 400 ≈ 1,528 × 10⁵ s ; T² ≈ 2,336 × 10¹⁰ s². r³ = (4,22 × 10⁸)³ ≈ 7,515 × 10²⁵ m³.\nM = 39,48 × 7,515 × 10²⁵ / (6,67 × 10⁻¹¹ × 2,336 × 10¹⁰) ≈ 2,967 × 10²⁷ / 1,558 ≈ **1,90 × 10²⁷ kg**.\n3. D'après la troisième loi de Kepler, T²/r³ est la **même constante** pour tous les satellites de Jupiter : T_E = T_Io × (r_E / r_Io)^(3/2) = 1,769 × (6,71 / 4,22)^1,5 = 1,769 × (1,590)^1,5 ≈ 1,769 × 2,005 ≈ **3,55 jours**.\n4. v = √(G M / r) diminue quand r augmente : **Io**, plus proche de Jupiter, va **le plus vite**.\n5. **1re loi** : l'orbite est une **ellipse** dont Jupiter occupe un **foyer**. **2e loi** (loi des aires) : le segment Jupiter-Io balaie des aires égales en des durées égales, donc Io va **plus vite quand il est plus près** de Jupiter et plus lentement quand il en est plus loin."
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "difficulte": 1,
+      "titre": "Le tuyau d'arrosage",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec leurs unités.",
+      "enonce": "L'eau circule dans un tuyau d'arrosage de diamètre intérieur D₁ = 2,0 cm, à la vitesse v₁ = 1,5 m·s⁻¹. L'eau est un fluide incompressible et l'écoulement est stationnaire.\n\n1. Calcule le débit volumique Dv, en m³·s⁻¹ puis en L·min⁻¹.\n2. Au bout du tuyau, un embout réduit le diamètre à D₂ = 1,0 cm. Énonce la relation de conservation du débit et calcule la vitesse de sortie v₂.\n3. Explique pourquoi pincer un tuyau permet d'envoyer l'eau plus loin.",
+      "bareme": [
+        {
+          "critere": "S₁ = π(D₁/2)² ≈ 3,1 × 10⁻⁴ m², Dv = S₁ v₁ ≈ 4,7 × 10⁻⁴ m³·s⁻¹ ≈ 28 L·min⁻¹",
+          "points": 8
+        },
+        {
+          "critere": "S₁ v₁ = S₂ v₂ ; section divisée par 4, v₂ = 6,0 m·s⁻¹",
+          "points": 8
+        },
+        {
+          "critere": "Section plus petite, même débit : vitesse plus grande",
+          "points": 4
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. S₁ = π × (D₁/2)² = π × (1,0 × 10⁻²)² ≈ 3,14 × 10⁻⁴ m². Dv = S₁ × v₁ = 3,14 × 10⁻⁴ × 1,5 ≈ **4,7 × 10⁻⁴ m³·s⁻¹**, soit 0,47 L·s⁻¹ ≈ **28 L·min⁻¹**.\n2. Pour un fluide incompressible en écoulement stationnaire, le débit est le même dans toutes les sections : **S₁ v₁ = S₂ v₂**. Le diamètre est divisé par 2, donc la section par 4 : v₂ = v₁ × S₁/S₂ = 1,5 × 4 = **6,0 m·s⁻¹**.\n3. En pinçant le tuyau, on **réduit la section** ; le débit se conservant, la **vitesse augmente** : l'eau sort plus vite et va plus loin."
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "difficulte": 2,
+      "titre": "Un débitmètre à Venturi",
+      "consigne": "Vérifie les hypothèses, puis applique les relations du cours en détaillant les calculs.",
+      "enonce": "**Situation.** De l'eau (ρ = 1,0 × 10³ kg·m⁻³) circule dans une conduite **horizontale** qui présente un rétrécissement. Dans la partie large (section S₁), la vitesse vaut v₁ = 2,0 m·s⁻¹ et la pression P₁ = 1,50 × 10⁵ Pa. Dans le rétrécissement, la section vaut S₂ = S₁/3.\n\n1. Énonce les hypothèses nécessaires pour appliquer la relation de Bernoulli. Sont-elles raisonnables ici ?\n2. Calcule la vitesse v₂ dans le rétrécissement.\n3. Écris la relation de Bernoulli entre les deux sections et calcule la pression P₂.\n4. Explique en une phrase le résultat, et pourquoi il semble contre-intuitif.",
+      "bareme": [
+        {
+          "critere": "Fluide incompressible, sans viscosité, écoulement stationnaire, même ligne de courant",
+          "points": 4
+        },
+        {
+          "critere": "v₂ = 3 v₁ = 6,0 m·s⁻¹ par conservation du débit",
+          "points": 5
+        },
+        {
+          "critere": "z identique : P₂ = P₁ + ½ρ(v₁² − v₂²) = 1,34 × 10⁵ Pa",
+          "points": 7
+        },
+        {
+          "critere": "Effet Venturi : là où la vitesse augmente, la pression diminue",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Bernoulli suppose un fluide **incompressible**, **sans viscosité** (pas de frottement), un écoulement **stationnaire**, et s'applique **le long d'une même ligne de courant**. L'eau est pratiquement incompressible, et sur la courte distance d'un rétrécissement à vitesse modérée, le modèle est excellent.\n2. Conservation du débit : S₁ v₁ = S₂ v₂, donc v₂ = v₁ × S₁/S₂ = 3 × 2,0 = **6,0 m·s⁻¹**.\n3. P₁ + ½ρv₁² + ρg z₁ = P₂ + ½ρv₂² + ρg z₂. La conduite est horizontale : z₁ = z₂.\nP₂ = P₁ + ½ρ(v₁² − v₂²) = 1,50 × 10⁵ + 0,5 × 1,0 × 10³ × (4,0 − 36) = 1,50 × 10⁵ − 1,6 × 10⁴ = **1,34 × 10⁵ Pa**.\n4. C'est l'**effet Venturi** : dans le rétrécissement, le fluide va **plus vite** et sa pression **diminue**. C'est contre-intuitif, car on s'attendrait à ce que le fluide soit plus « comprimé » là où il passe à l'étroit. Mesurer P₁ − P₂ permet d'en déduire le débit : c'est le principe du débitmètre."
+    },
+    {
+      "chapitre": "634e0522-3eb1-53cd-825d-ef382786a747",
+      "difficulte": 3,
+      "titre": "Vidanger la cuve de récupération d'eau",
+      "consigne": "Applique la relation de Bernoulli en justifiant chaque hypothèse, puis confronte le modèle à la mesure.",
+      "enonce": "**Situation.** Une cuve de récupération d'eau de pluie, de section S = 2,0 m², est ouverte à l'air libre. On ouvre un robinet situé à sa base, de diamètre d = 2,0 cm ; la surface libre de l'eau est à h = 5,0 m au-dessus du robinet. L'eau sort à l'air libre.\n\n**Données.** ρ = 1,0 × 10³ kg·m⁻³ ; g = 9,81 m·s⁻².\n\n1. Écris la relation de Bernoulli entre un point A de la surface libre et un point B à la sortie du robinet, sur une même ligne de courant. Que valent les pressions en A et en B ?\n2. On admet d'abord que la vitesse de la surface libre est négligeable. Montre que la vitesse de sortie vaut v_B = √(2 g h) et calcule-la.\n3. Calcule le débit volumique au robinet, en L·s⁻¹. Déduis-en la vitesse de descente de la surface libre et vérifie l'hypothèse de la question 2.\n4. Mathis mesure en réalité un débit de 2,4 L·s⁻¹. Propose une explication en t'appuyant sur les limites du modèle.\n5. Comment évolue le débit à mesure que la cuve se vide ? Justifie.",
+      "bareme": [
+        {
+          "critere": "P_A + ½ρv_A² + ρg z_A = P_B + ½ρv_B² + ρg z_B, avec P_A = P_B = pression atmosphérique",
+          "points": 4
+        },
+        {
+          "critere": "v_A ≈ 0 : v_B = √(2gh) ≈ 9,9 m·s⁻¹",
+          "points": 5
+        },
+        {
+          "critere": "Dv ≈ 3,1 × 10⁻³ m³·s⁻¹ = 3,1 L·s⁻¹ ; v_A = Dv/S ≈ 1,6 × 10⁻³ m·s⁻¹, bien négligeable",
+          "points": 5
+        },
+        {
+          "critere": "Écart dû à la viscosité et aux frottements (robinet, turbulences) que Bernoulli néglige",
+          "points": 3
+        },
+        {
+          "critere": "h diminue donc v_B et le débit diminuent",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le long d'une ligne de courant : **P_A + ½ρv_A² + ρg z_A = P_B + ½ρv_B² + ρg z_B**. La surface libre et le jet de sortie sont à l'air libre : **P_A = P_B = P_atm**.\n2. Les pressions se simplifient. Avec v_A ≈ 0 et z_A − z_B = h : ½ρv_B² = ρg h, donc **v_B = √(2 g h)** = √(2 × 9,81 × 5,0) = √98,1 ≈ **9,9 m·s⁻¹**.\n3. Section du robinet : s = π × (1,0 × 10⁻²)² ≈ 3,14 × 10⁻⁴ m². Dv = s × v_B ≈ 3,14 × 10⁻⁴ × 9,9 ≈ **3,1 × 10⁻³ m³·s⁻¹ = 3,1 L·s⁻¹**. Par conservation du débit, v_A = Dv / S = 3,1 × 10⁻³ / 2,0 ≈ **1,6 × 10⁻³ m·s⁻¹** : environ 6 000 fois moins que v_B, l'hypothèse est **justifiée** (½ρv_A² est tout à fait négligeable).\n4. Le débit réel (2,4 L·s⁻¹) est inférieur au débit prévu (3,1 L·s⁻¹). Le modèle suppose un fluide **sans viscosité** : en réalité, les **frottements** dans le robinet et sur les parois, et les **turbulences** à la sortie, dissipent de l'énergie et font chuter la vitesse. Vérifier les hypothèses avant d'appliquer Bernoulli fait partie de la réponse.\n5. À mesure que la cuve se vide, **h diminue** : v_B = √(2gh) diminue, donc le **débit diminue** (l'écoulement n'est d'ailleurs que quasi stationnaire)."
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "difficulte": 1,
+      "titre": "Systèmes, kelvins et énergie interne",
+      "consigne": "Réponds en justifiant à l'aide du cours.",
+      "enonce": "1. Classe chacun des systèmes suivants (ouvert, fermé ou isolé) et justifie : (a) de l'eau qui bout dans une casserole sans couvercle ; (b) une bouteille de soda bouchée posée au soleil ; (c) le contenu d'un calorimètre idéal.\n2. Convertis 37 °C en kelvins. Un écart de température de 20 °C correspond à combien de kelvins ? Justifie.\n3. Une bouteille d'eau est posée sur une table, une autre identique voyage dans un train lancé à 300 km/h. Ont-elles la même énergie interne ? Justifie en disant ce que comprend l'énergie interne.",
+      "bareme": [
+        {
+          "critere": "(a) ouvert : matière et énergie ; (b) fermé : énergie seulement ; (c) isolé : rien",
+          "points": 7
+        },
+        {
+          "critere": "37 °C = 310,15 K ; un écart de 20 °C = 20 K",
+          "points": 6
+        },
+        {
+          "critere": "Même U : U comprend l'agitation et les interactions, pas l'énergie cinétique d'ensemble",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. (a) La casserole sans couvercle échange de l'**énergie** et de la **matière** (vapeur qui s'échappe) : système **ouvert**. (b) La bouteille bouchée échange de l'énergie (elle chauffe au soleil) mais pas de matière : système **fermé**. (c) Le calorimètre idéal n'échange **rien** : système **isolé**.\n2. T(K) = θ(°C) + 273,15 = 37 + 273,15 = **310,15 K**. Un écart de 1 °C vaut exactement un écart de 1 K : un écart de 20 °C vaut **20 K**.\n3. **Oui**, si elles sont à la même température. L'énergie interne comprend l'énergie cinétique d'**agitation** des entités et leurs énergies d'**interaction** ; elle ne comprend **pas** l'énergie cinétique d'**ensemble** du système (le mouvement du train) ni son énergie potentielle de pesanteur."
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "difficulte": 2,
+      "titre": "Le chauffe-eau de la maison",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec leurs unités.",
+      "enonce": "**Situation.** Le chauffe-eau d'une maison contient 200 L d'eau (200 kg), qu'il faut chauffer de 15 °C à 60 °C.\n\n**Données.** c(eau liquide) = 4 185 J·kg⁻¹·K⁻¹ ; c(fer) ≈ 450 J·kg⁻¹·K⁻¹ ; 1 kWh = 3,6 × 10⁶ J.\n\n1. Calcule la capacité thermique C de l'eau du chauffe-eau.\n2. Calcule la variation d'énergie interne de l'eau, en joules puis en kWh.\n3. Avec la même énergie, de combien s'élèverait la température de 200 kg de fer ? Compare.\n4. Utilise ce résultat pour expliquer pourquoi l'eau est un bon fluide caloporteur, et pourquoi les climats côtiers sont plus doux.\n5. Interprète à l'échelle microscopique l'augmentation de température de l'eau.",
+      "bareme": [
+        {
+          "critere": "C = m c = 8,37 × 10⁵ J·K⁻¹",
+          "points": 3
+        },
+        {
+          "critere": "ΔU = C ΔT = 8,37 × 10⁵ × 45 ≈ 3,77 × 10⁷ J ≈ 10,5 kWh",
+          "points": 6
+        },
+        {
+          "critere": "ΔT(fer) = ΔU/(m c) ≈ 4,2 × 10² K, environ 9 fois plus que l'eau",
+          "points": 5
+        },
+        {
+          "critere": "Grande capacité thermique : l'eau stocke et transporte beaucoup d'énergie, les océans tamponnent la température",
+          "points": 3
+        },
+        {
+          "critere": "Température = agitation moyenne des molécules, qui augmente",
+          "points": 3
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. C = m × c = 200 × 4 185 = **8,37 × 10⁵ J·K⁻¹**.\n2. ΔT = 60 − 15 = 45 °C = 45 K. ΔU = C × ΔT = 8,37 × 10⁵ × 45 ≈ **3,77 × 10⁷ J**, soit 3,77 × 10⁷ / 3,6 × 10⁶ ≈ **10,5 kWh**.\n3. ΔT(fer) = ΔU / (m × c) = 3,77 × 10⁷ / (200 × 450) = 3,77 × 10⁷ / 9,0 × 10⁴ ≈ **4,2 × 10² K** : environ 9 fois plus que les 45 K de l'eau.\n4. La capacité thermique massique de l'eau est **remarquablement élevée** : pour une même énergie, sa température varie peu. Elle peut donc **stocker et transporter** beaucoup d'énergie (bon fluide caloporteur, chauffage central) ; et les océans absorbent l'été et restituent l'hiver de grandes quantités d'énergie en changeant peu de température, ce qui **adoucit les climats côtiers**.\n5. La température est liée à l'**énergie cinétique moyenne d'agitation** des molécules : en chauffant, on augmente leur agitation désordonnée."
+    },
+    {
+      "chapitre": "06b263a8-a016-5425-8096-439410d2cdfb",
+      "difficulte": 3,
+      "titre": "Chaleur, température et énergie interne",
+      "consigne": "Analyse chaque affirmation, dis si elle est juste ou fausse et justifie avec le cours ; détaille les calculs.",
+      "enonce": "**Situation.** En préparant des pâtes, Tom chauffe 1,5 L d'eau (1,5 kg) de 20 °C à 100 °C dans une casserole sans couvercle. Il discute avec sa sœur, qui fait les affirmations suivantes.\n\n**Donnée.** c(eau liquide) = 4 185 J·kg⁻¹·K⁻¹.\n\n1. « En passant de 20 °C à 40 °C, l'eau devient deux fois plus agitée. » Calcule le rapport des températures absolues et conclus. À quelle température (en °C) l'agitation aurait-elle vraiment doublé par rapport à 20 °C ?\n2. « L'eau chaude contient beaucoup de chaleur. » Corrige le vocabulaire.\n3. Calcule la variation d'énergie interne de l'eau entre 20 °C et 100 °C (sans ébullition).\n4. « Si j'avais chauffé plus lentement, sur une plaque moins puissante, ΔU aurait été plus grande. » Discute, en utilisant la notion de fonction d'état.\n5. La casserole est-elle un système ouvert, fermé ou isolé ? Pourquoi est-ce important si l'on veut faire un bilan précis ?\n6. Pourquoi la pression de la vapeur d'eau sur le couvercle, si on en mettait un, peut-elle s'interpréter à l'échelle microscopique ?",
+      "bareme": [
+        {
+          "critere": "313,15/293,15 ≈ 1,07 : faux ; doublement à 586,3 K soit environ 313 °C",
+          "points": 5
+        },
+        {
+          "critere": "On ne contient pas de chaleur : on contient de l'énergie interne ; la chaleur est un transfert",
+          "points": 3
+        },
+        {
+          "critere": "ΔU = m c ΔT = 1,5 × 4 185 × 80 ≈ 5,0 × 10⁵ J",
+          "points": 4
+        },
+        {
+          "critere": "U fonction d'état : ΔU ne dépend que des états initial et final, pas du chemin",
+          "points": 4
+        },
+        {
+          "critere": "Système ouvert (échange de matière par évaporation) ; pression = effet moyen des chocs des molécules",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Les formules et les comparaisons de température se font en **kelvins** : 20 °C = 293,15 K et 40 °C = 313,15 K. Rapport : 313,15 / 293,15 ≈ **1,07** : l'agitation moyenne n'augmente que d'environ 7 %. L'affirmation est **fausse**. L'agitation doublerait pour T = 2 × 293,15 = 586,3 K, soit environ **313 °C**.\n2. Un système **ne contient pas de chaleur** : il contient de l'**énergie interne**. La chaleur (transfert thermique) est un **échange** d'énergie ; la température est un **état**. Il faut dire : « l'eau chaude a une énergie interne plus grande ».\n3. ΔU = m × c × ΔT = 1,5 × 4 185 × (100 − 20) = 1,5 × 4 185 × 80 ≈ **5,0 × 10⁵ J**.\n4. **Faux.** L'énergie interne est une **fonction d'état** : ΔU ne dépend que de l'état initial et de l'état final, **jamais du chemin suivi**. Chauffer lentement ou vite de 20 °C à 100 °C donne la même ΔU (seule la durée, et les pertes vers l'extérieur, changent).\n5. Sans couvercle, la casserole échange de l'énergie **et de la matière** (vapeur) avec l'extérieur : c'est un système **ouvert**. Pour un bilan précis, il faut connaître ce qui entre et sort : la masse d'eau n'est pas constante.\n6. La pression d'un gaz est l'**effet moyen des chocs** des molécules sur les parois : la vapeur frappe sans cesse le couvercle, et la moyenne de ces chocs se mesure comme une pression."
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "difficulte": 1,
+      "titre": "Faire fondre, puis chauffer",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec leurs unités.",
+      "enonce": "On dispose de 200 g de glace à 0 °C.\n\n**Données.** L_fusion(eau) = 3,34 × 10⁵ J·kg⁻¹ ; c(eau liquide) = 4 185 J·kg⁻¹·K⁻¹.\n\n1. Calcule l'énergie que doit recevoir la glace pour fondre entièrement. Comment évolue la température pendant la fusion ? Justifie.\n2. Calcule l'énergie nécessaire pour porter ensuite l'eau liquide obtenue de 0 °C à 20 °C.\n3. Avec la convention du cours, ces énergies sont-elles comptées positivement ou négativement pour le système « eau » ?",
+      "bareme": [
+        {
+          "critere": "Q = m L = 0,200 × 3,34 × 10⁵ ≈ 6,68 × 10⁴ J ; température constante (rupture des interactions)",
+          "points": 8
+        },
+        {
+          "critere": "ΔU = m c ΔT = 0,200 × 4 185 × 20 ≈ 1,67 × 10⁴ J",
+          "points": 7
+        },
+        {
+          "critere": "Énergies reçues : comptées positivement",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Q = m × L_fusion = 0,200 × 3,34 × 10⁵ = **6,68 × 10⁴ J**. Pendant la fusion d'un corps pur, la température **reste constante** (0 °C) : l'énergie reçue sert à **rompre les interactions** entre molécules, pas à les agiter davantage.\n2. ΔU = m × c × ΔT = 0,200 × 4 185 × 20 = **1,67 × 10⁴ J**.\n3. Ces énergies sont **reçues** par le système : elles sont comptées **positivement** (convention du banquier)."
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "difficulte": 2,
+      "titre": "Le glaçon sorti du congélateur",
+      "consigne": "Découpe le calcul en étapes, justifie ce découpage et détaille chaque calcul.",
+      "enonce": "**Situation.** Léna sort un glaçon de 50 g du congélateur, à −10 °C. Elle veut savoir quelle énergie il faut lui fournir pour obtenir de l'eau liquide à 20 °C.\n\n**Données.** c(glace) = 2 100 J·kg⁻¹·K⁻¹ ; c(eau liquide) = 4 185 J·kg⁻¹·K⁻¹ ; L_fusion = 3,34 × 10⁵ J·kg⁻¹ ; la glace fond à 0 °C.\n\n1. Décris les trois étapes de la transformation et donne la relation utilisée pour chacune.\n2. Calcule l'énergie de chaque étape, puis l'énergie totale.\n3. Un camarade calcule directement 0,050 × 4 185 × 30. Quel résultat trouve-t-il ? Explique son erreur.\n4. Quelle étape coûte le plus d'énergie ? Qu'est-ce que cela montre ?",
+      "bareme": [
+        {
+          "critere": "Chauffer la glace (m c ΔT), fondre à 0 °C (m L), chauffer l'eau (m c ΔT)",
+          "points": 4
+        },
+        {
+          "critere": "1 050 J ; 1,67 × 10⁴ J ; 4 185 J ; total ≈ 2,19 × 10⁴ J",
+          "points": 8
+        },
+        {
+          "critere": "Calcul direct ≈ 6,3 × 10³ J : m c ΔT appliqué à travers un changement d'état, erreur",
+          "points": 5
+        },
+        {
+          "critere": "La fusion domine : un changement d'état coûte beaucoup sans changer la température",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Étape 1** : chauffer la glace de −10 °C à 0 °C : Q₁ = m × c(glace) × ΔT. **Étape 2** : faire fondre la glace à 0 °C, à température constante : Q₂ = m × L_fusion. **Étape 3** : chauffer l'eau liquide de 0 °C à 20 °C : Q₃ = m × c(eau) × ΔT.\n2. Q₁ = 0,050 × 2 100 × 10 = **1 050 J**.\nQ₂ = 0,050 × 3,34 × 10⁵ = **1,67 × 10⁴ J**.\nQ₃ = 0,050 × 4 185 × 20 = **4 185 J**.\nTotal : Q = 1 050 + 16 700 + 4 185 ≈ **2,19 × 10⁴ J**.\n3. Il trouve 0,050 × 4 185 × 30 ≈ **6,3 × 10³ J**, environ 3,5 fois trop peu. Il a appliqué ΔU = m c ΔT **à travers un changement d'état** : il oublie l'énergie de fusion et utilise en plus la capacité de l'eau liquide pour la glace. Il faut **découper** le calcul en tranches.\n4. C'est la **fusion** (1,67 × 10⁴ J, plus des trois quarts du total) : un changement d'état coûte beaucoup d'énergie **sans que le thermomètre bouge** (elle équivaut ici à chauffer l'eau liquide d'environ 80 °C)."
+    },
+    {
+      "chapitre": "88316c87-9f35-5129-8506-87d3abd77f26",
+      "difficulte": 3,
+      "titre": "Mesurer l'énergie de fusion de la glace",
+      "consigne": "Exploite l'expérience, écris le bilan énergétique et détaille les calculs.",
+      "enonce": "**Situation.** Pour mesurer l'énergie massique de fusion de la glace, Manon verse m₁ = 300 g d'eau à θ₁ = 30,0 °C dans un calorimètre dont la valeur en eau vaut μ = 20 g. Elle ajoute m₂ = 40,0 g de glace à 0 °C. Une fois toute la glace fondue et l'équilibre atteint, la température vaut θ_f = 17,8 °C.\n\n**Donnée.** c(eau liquide) = 4 185 J·kg⁻¹·K⁻¹.\n\n1. Pourquoi utilise-t-on un calorimètre ? Que modélise la valeur en eau ?\n2. Écris le transfert thermique Q₁ reçu par l'eau chaude et le calorimètre. Quel est son signe ?\n3. Écris le transfert thermique Q₂ reçu par la glace, en distinguant ses deux étapes.\n4. Écris le bilan énergétique et déduis-en la valeur de L_fusion.\n5. La transpiration refroidit le corps, et vaporiser de l'eau coûte près de sept fois plus que la fondre. Explique pourquoi la transpiration est un moyen efficace de refroidissement.\n6. Un élève dit que le travail et le transfert thermique sont deux énergies de natures différentes. Nuance cette affirmation.",
+      "bareme": [
+        {
+          "critere": "Calorimètre ≈ système isolé ; valeur en eau = capacité thermique du vase",
+          "points": 3
+        },
+        {
+          "critere": "Q₁ = (m₁ + μ) c (θ_f − θ₁) ≈ −1,63 × 10⁴ J, négatif (cédé)",
+          "points": 4
+        },
+        {
+          "critere": "Q₂ = m₂ L + m₂ c (θ_f − 0), positif",
+          "points": 4
+        },
+        {
+          "critere": "Q₁ + Q₂ = 0 donc L ≈ 3,34 × 10⁵ J·kg⁻¹",
+          "points": 5
+        },
+        {
+          "critere": "Transpiration : l'évaporation prélève beaucoup d'énergie à la peau ; W et Q diffèrent par l'ordre, pas par la nature (joules)",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le calorimètre approche un système **isolé** : les échanges se font entre les corps placés dedans, pas avec l'extérieur. La **valeur en eau** modélise la **capacité thermique du vase** lui-même : on fait comme s'il contenait 20 g d'eau de plus.\n2. Q₁ = (m₁ + μ) × c × (θ_f − θ₁) = 0,320 × 4 185 × (17,8 − 30,0) = 1 339,2 × (−12,2) ≈ **−1,63 × 10⁴ J**. Il est **négatif** : l'eau chaude et le calorimètre **cèdent** de l'énergie.\n3. La glace fond à 0 °C, puis l'eau de fusion se réchauffe jusqu'à θ_f : **Q₂ = m₂ × L_fusion + m₂ × c × (θ_f − 0)**, positif (énergie reçue).\n4. Système isolé : **Q₁ + Q₂ = 0**, donc m₂ × L = −Q₁ − m₂ c θ_f.\nm₂ c θ_f = 0,0400 × 4 185 × 17,8 ≈ 2,98 × 10³ J.\nL = (1,634 × 10⁴ − 2,98 × 10³) / 0,0400 = 1,336 × 10⁴ / 0,0400 ≈ **3,34 × 10⁵ J·kg⁻¹**.\n5. Pour s'évaporer, l'eau de la sueur doit recevoir une grande énergie de vaporisation (2,26 × 10⁶ J·kg⁻¹) : elle la **prélève sur la peau**, qui se refroidit. Même une petite masse de sueur évaporée emporte beaucoup d'énergie.\n6. Travail et transfert thermique se comptent tous deux en **joules** : ce sont deux **modes de transfert** d'une même énergie. La distinction n'est pas de nature mais d'**ordre** : le travail est un transfert **ordonné** (par une force), le transfert thermique un transfert **désordonné**."
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "difficulte": 1,
+      "titre": "Appliquer le premier principe",
+      "consigne": "Écris le premier principe, applique la convention de signe et justifie.",
+      "enonce": "1. Énonce le premier principe de la thermodynamique pour un système fermé au repos. Précise la convention de signe.\n2. Un gaz enfermé dans un cylindre reçoit un travail W = 500 J lors d'une compression et cède dans le même temps 200 J à l'extérieur par transfert thermique. Calcule sa variation d'énergie interne. Sa température augmente-t-elle ?\n3. Que devient le premier principe pour un système isolé ? pour une transformation adiabatique ? Justifie.",
+      "bareme": [
+        {
+          "critere": "ΔU = W + Q ; énergie reçue positive, cédée négative",
+          "points": 6
+        },
+        {
+          "critere": "W = +500 J, Q = −200 J, ΔU = +300 J : énergie interne et température augmentent",
+          "points": 8
+        },
+        {
+          "critere": "Isolé : W = Q = 0 donc ΔU = 0 ; adiabatique : Q = 0 donc ΔU = W",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **ΔU = W + Q** : la variation d'énergie interne égale la somme du travail et du transfert thermique **reçus**, comptés algébriquement : une énergie **reçue** est **positive**, une énergie **cédée** est **négative**.\n2. W = +500 J (reçu) ; Q = −200 J (cédé). ΔU = 500 + (−200) = **+300 J**. L'énergie interne augmente : pour un gaz dont la matière ne change pas, l'agitation augmente, la **température augmente**.\n3. **Système isolé** : il n'échange rien, W = Q = 0, donc **ΔU = 0**. **Transformation adiabatique** (parois calorifugées) : Q = 0, donc **ΔU = W**."
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "difficulte": 2,
+      "titre": "Refaire l'expérience de Joule",
+      "consigne": "Analyse l'expérience, applique le premier principe et détaille les calculs.",
+      "enonce": "**Situation.** Au club de sciences, Sofia reproduit l'expérience de Joule. Un récipient aux parois calorifugées contient 1,0 kg d'eau. Des palettes, entraînées par la chute d'une masse de 20 kg d'une hauteur de 2,0 m, agitent l'eau. On remonte la masse et on recommence 25 fois. On admet que tout le travail du poids, W = m g h à chaque chute, est transmis à l'eau.\n\n**Données.** g = 9,81 m·s⁻² ; c(eau) = 4 185 J·kg⁻¹·K⁻¹. On néglige la capacité thermique du récipient.\n\n1. Calcule le travail total reçu par l'eau.\n2. Quel type de transformation l'eau subit-elle ? Écris le premier principe dans ce cas.\n3. Calcule l'élévation de température de l'eau.\n4. Qu'a établi cette expérience historique ? Pourquoi est-elle surprenante ?",
+      "bareme": [
+        {
+          "critere": "W = 25 × 20 × 9,81 × 2,0 ≈ 9,81 × 10³ J",
+          "points": 5
+        },
+        {
+          "critere": "Adiabatique (Q = 0) : ΔU = W",
+          "points": 5
+        },
+        {
+          "critere": "ΔT = W/(m c) ≈ 2,3 K",
+          "points": 6
+        },
+        {
+          "critere": "Équivalence entre travail et chaleur : on réchauffe l'eau sans la chauffer",
+          "points": 4
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. À chaque chute : W₁ = m g h = 20 × 9,81 × 2,0 = 392,4 J. Pour 25 chutes : W = 25 × 392,4 ≈ **9,81 × 10³ J**.\n2. Les parois sont calorifugées : il n'y a **pas de transfert thermique**, Q = 0. La transformation est **adiabatique** : **ΔU = W**.\n3. ΔU = m c ΔT, donc ΔT = W / (m c) = 9,81 × 10³ / (1,0 × 4 185) ≈ **2,3 K** (soit 2,3 °C).\n4. L'expérience de Joule a établi l'**équivalence entre travail et chaleur** : on peut élever la température de l'eau par un travail mécanique, **sans jamais l'avoir chauffée**. C'est surprenant car on associait la hausse de température à un corps plus chaud ; ici, c'est l'agitation mécanique qui augmente l'énergie interne."
+    },
+    {
+      "chapitre": "db274792-3f37-516f-8ab1-9e58aefe5081",
+      "difficulte": 3,
+      "titre": "Le bilan de la bouilloire",
+      "consigne": "Construis le bilan énergétique, calcule le rendement et justifie chaque réponse.",
+      "enonce": "**Situation.** La bouilloire électrique de Karim a une puissance P = 2 000 W. Elle porte 1,0 L d'eau (1,0 kg) de 20 °C à 100 °C en 3 min 20 s. L'énergie électrique reçue vaut E = P × Δt.\n\n**Donnée.** c(eau) = 4 185 J·kg⁻¹·K⁻¹.\n\n1. Calcule l'énergie électrique reçue par la bouilloire, puis l'énergie utile reçue par l'eau.\n2. Calcule le rendement de la bouilloire. Où est passée l'énergie manquante ?\n3. Représente la chaîne énergétique de la bouilloire (réservoir, convertisseur, transferts) et vérifie que chaque bloc respecte le premier principe.\n4. Karim dit : « ma bouilloire consomme de l'énergie ». Reformule rigoureusement.\n5. Un camarade affirme : « d'après le premier principe, un réfrigérateur pourrait fonctionner sans électricité, en faisant passer la chaleur de l'intérieur froid vers la cuisine ». Le premier principe l'interdit-il ? Qu'est-ce qui l'interdit ?\n6. Pourquoi le rendement d'un convertisseur ne peut-il jamais dépasser 1 ?",
+      "bareme": [
+        {
+          "critere": "E = 2 000 × 200 = 4,0 × 10⁵ J ; E utile = 1,0 × 4 185 × 80 ≈ 3,35 × 10⁵ J",
+          "points": 5
+        },
+        {
+          "critere": "η ≈ 0,84 ; pertes ≈ 6,5 × 10⁴ J en transfert thermique vers l'extérieur",
+          "points": 4
+        },
+        {
+          "critere": "Chaîne : électrique → bouilloire → eau (utile) + pertes thermiques ; entrées = sorties",
+          "points": 4
+        },
+        {
+          "critere": "On ne consomme pas : on convertit en une forme moins utilisable",
+          "points": 3
+        },
+        {
+          "critere": "Le premier principe n'interdit rien sur le sens ; c'est le second principe ; η < 1 car une part part en pertes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Δt = 3 min 20 s = 200 s. E = P × Δt = 2 000 × 200 = **4,0 × 10⁵ J**. E utile = m c ΔT = 1,0 × 4 185 × 80 ≈ **3,35 × 10⁵ J**.\n2. η = E utile / E fournie = 3,35 × 10⁵ / 4,0 × 10⁵ ≈ **0,84** (84 %). L'énergie manquante, 4,0 × 10⁵ − 3,35 × 10⁵ ≈ **6,5 × 10⁴ J**, est partie en **pertes**, essentiellement par transfert thermique vers l'extérieur (air, parois de la bouilloire).\n3. Chaîne : **réseau électrique** → (travail électrique, 4,0 × 10⁵ J) → **bouilloire** (convertisseur) → énergie interne de l'**eau** (3,35 × 10⁵ J, utile) + **transfert thermique vers l'extérieur** (6,5 × 10⁴ J, pertes). Pour le bloc bouilloire, la somme des flèches entrantes (4,0 × 10⁵ J) égale la somme des sortantes (3,35 × 10⁵ + 0,65 × 10⁵) : c'est le premier principe dessiné.\n4. L'énergie n'est **pas consommée** : elle est **convertie** en une forme moins utilisable (énergie interne de l'eau et de l'air). Ce qu'on paie est une conversion, pas une disparition.\n5. Le premier principe impose seulement que le **total se conserve** ; il **n'interdit rien sur le sens** des transferts. C'est le **second principe** qui interdit à la chaleur de passer spontanément du corps froid au corps chaud. Le camarade a donc raison de dire que le premier principe seul ne l'interdit pas.\n6. L'énergie utile ne peut pas dépasser l'énergie fournie (conservation), et une part de l'énergie part toujours en pertes : **η < 1**."
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "difficulte": 1,
+      "titre": "Isoler les combles",
+      "consigne": "Réponds en justifiant ; donne les relations et les calculs avec leurs unités.",
+      "enonce": "1. Nomme le mode de transfert thermique principal dans chaque cas, et dis s'il nécessite un support matériel : (a) une cuillère qui chauffe dans une casserole ; (b) l'air chaud qui monte au-dessus d'un radiateur ; (c) le Soleil qui chauffe la Terre.\n2. Des combles sont isolés par une couche de laine de verre d'épaisseur e = 10 cm, de surface S = 20 m², de conductivité thermique λ = 0,04 W·m⁻¹·K⁻¹. Calcule la résistance thermique de cette couche.\n3. L'écart de température entre la maison et les combles vaut 20 °C. Calcule le flux thermique qui traverse la laine de verre.",
+      "bareme": [
+        {
+          "critere": "(a) conduction, (b) convection (fluide), (c) rayonnement, sans support matériel",
+          "points": 6
+        },
+        {
+          "critere": "R_th = e/(λ S) = 0,10/(0,04 × 20) = 0,125 K·W⁻¹",
+          "points": 7
+        },
+        {
+          "critere": "Φ = ΔT/R_th = 160 W",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. (a) **Conduction** : de proche en proche, sans déplacement de matière ; support matériel nécessaire. (b) **Convection** : par déplacement d'un **fluide** (l'air) ; support matériel nécessaire. (c) **Rayonnement** : par ondes électromagnétiques, **sans support matériel** (à travers le vide).\n2. R_th = e / (λ × S) = 0,10 / (0,04 × 20) = 0,10 / 0,80 = **0,125 K·W⁻¹**.\n3. Un écart de 20 °C vaut 20 K. Φ = ΔT / R_th = 20 / 0,125 = **160 W**."
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "difficulte": 2,
+      "titre": "Le mur de la chambre de Clara",
+      "consigne": "Utilise l'analogie électrique et détaille les calculs avec leurs unités.",
+      "enonce": "**Situation.** Le mur extérieur de la chambre de Clara a une surface S = 25 m². Il est fait d'une couche de béton (e₁ = 20 cm, λ₁ = 1,75 W·m⁻¹·K⁻¹) doublée d'une couche de laine de verre (e₂ = 10 cm, λ₂ = 0,04 W·m⁻¹·K⁻¹). Il fait 19 °C dans la chambre et −1 °C dehors ; on se place en régime stationnaire.\n\n1. Calcule la résistance thermique de chaque couche.\n2. Comment se combinent les résistances de deux couches en série ? Justifie par l'analogie électrique, puis calcule la résistance totale.\n3. Calcule le flux thermique à travers le mur isolé, puis à travers le béton seul. Compare.\n4. Calcule l'énergie perdue en 24 h à travers le mur isolé.\n5. La laine de verre a été tassée et mouillée par une fuite. Pourquoi isole-t-elle beaucoup moins bien ?",
+      "bareme": [
+        {
+          "critere": "R₁ ≈ 4,6 × 10⁻³ K·W⁻¹ et R₂ = 0,10 K·W⁻¹",
+          "points": 4
+        },
+        {
+          "critere": "En série, les résistances s'additionnent : R ≈ 0,105 K·W⁻¹",
+          "points": 4
+        },
+        {
+          "critere": "Φ ≈ 1,9 × 10² W isolé contre ≈ 4,4 × 10³ W béton seul, environ 23 fois moins",
+          "points": 6
+        },
+        {
+          "critere": "E = Φ × Δt ≈ 1,65 × 10⁷ J",
+          "points": 3
+        },
+        {
+          "critere": "C'est l'air immobile emprisonné qui isole : tassé ou mouillé, il n'y en a plus",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. R₁ = e₁ / (λ₁ S) = 0,20 / (1,75 × 25) ≈ **4,6 × 10⁻³ K·W⁻¹**. R₂ = e₂ / (λ₂ S) = 0,10 / (0,04 × 25) = **0,10 K·W⁻¹**.\n2. Le flux Φ joue le rôle de l'intensité, l'écart de température celui de la tension : deux couches traversées successivement par le **même flux** sont **en série**, et comme des résistances électriques en série, leurs résistances **s'additionnent**. R = R₁ + R₂ ≈ 0,0046 + 0,10 ≈ **0,105 K·W⁻¹**.\n3. ΔT = 19 − (−1) = 20 K. Mur isolé : Φ = 20 / 0,105 ≈ **1,9 × 10² W**. Béton seul : Φ = 20 / 4,6 × 10⁻³ ≈ **4,4 × 10³ W**. L'isolant divise le flux par environ **23**.\n4. E = Φ × Δt = 191 × 24 × 3 600 ≈ **1,65 × 10⁷ J**.\n5. Ce n'est pas la laine elle-même qui isole, c'est l'**air immobile** qu'elle emprisonne (λ ≈ 0,026 W·m⁻¹·K⁻¹). Tassée, elle en contient beaucoup moins ; mouillée, l'air est remplacé par de l'eau, bien plus conductrice : l'isolant **n'isole plus**."
+    },
+    {
+      "chapitre": "7d970219-3b78-50f5-895d-de0fe1a6065f",
+      "difficulte": 3,
+      "titre": "Le café qui refroidit",
+      "consigne": "Exploite la loi de refroidissement de Newton et justifie chaque réponse ; détaille les calculs.",
+      "enonce": "**Situation.** Une tasse contient 0,20 kg de café (assimilé à de l'eau, c = 4 185 J·kg⁻¹·K⁻¹) à 80 °C, dans une pièce à 20 °C. On modélise les pertes par la loi de Newton : Φ = h × S × (T − T_ext), avec h × S = 0,50 W·K⁻¹. On admet que l'écart de température suit la loi T − T_ext = (T₀ − T_ext) × e^(−t/τ), avec τ = m c / (h S).\n\n1. Calcule le flux thermique perdu par le café à 80 °C, puis à 50 °C. Commente.\n2. En faisant le bilan d'énergie du café, calcule la vitesse de refroidissement dT/dt à 80 °C, en K·min⁻¹.\n3. Calcule τ, puis la durée au bout de laquelle le café atteint 50 °C.\n4. À quelle autre loi du programme la décroissance de l'écart de température ressemble-t-elle ?\n5. Paul enveloppe la tasse dans un manchon isolant. Il dit : « le manchon garde la chaleur à l'intérieur, il en donne au café ». Corrige-le, et dis quel paramètre du modèle le manchon modifie.\n6. Nomme les trois modes de transfert par lesquels le café perd de l'énergie.",
+      "bareme": [
+        {
+          "critere": "Φ(80) = 30 W et Φ(50) = 15 W : le flux diminue avec l'écart",
+          "points": 4
+        },
+        {
+          "critere": "m c dT/dt = −Φ : dT/dt ≈ −3,6 × 10⁻² K·s⁻¹ ≈ −2,2 K·min⁻¹",
+          "points": 4
+        },
+        {
+          "critere": "τ = m c/(hS) ≈ 1,67 × 10³ s ; écart divisé par 2 en τ ln2 ≈ 1,16 × 10³ s ≈ 19 min",
+          "points": 5
+        },
+        {
+          "critere": "Même forme que la décroissance radioactive (ou décharge d’un condensateur) ; trois modes : conduction, convection, rayonnement",
+          "points": 4
+        },
+        {
+          "critere": "Le manchon ne donne rien : il freine le flux sortant (h S plus petit, résistance plus grande)",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. À 80 °C : Φ = 0,50 × (80 − 20) = **30 W**. À 50 °C : Φ = 0,50 × 30 = **15 W**. Le flux perdu est **proportionnel à l'écart** de température : il diminue à mesure que le café refroidit, d'où un refroidissement rapide au début, lent ensuite.\n2. Bilan d'énergie : la puissance perdue fait baisser l'énergie interne, m c dT/dt = −Φ. dT/dt = −30 / (0,20 × 4 185) = −30 / 837 ≈ **−3,6 × 10⁻² K·s⁻¹**, soit environ **−2,2 K·min⁻¹**.\n3. τ = m c / (h S) = 837 / 0,50 ≈ **1,67 × 10³ s** (environ 28 min). À 50 °C, l'écart vaut 30 K, moitié de l'écart initial (60 K) : e^(−t/τ) = 1/2, donc t = τ × ln 2 ≈ 1 674 × 0,693 ≈ **1,16 × 10³ s**, soit environ **19 min**.\n4. C'est une décroissance **exponentielle**, de même forme que la **décroissance radioactive** (ou la décharge d'un condensateur).\n5. Le manchon **ne donne pas** de chaleur : c'est une **résistance thermique** qui **freine le flux** sortant. Dans le modèle, il **diminue h × S** : le flux est plus faible pour un même écart, τ augmente et le café refroidit plus lentement.\n6. **Conduction** à travers la tasse, **convection** de l'air au-dessus et autour, **rayonnement** infrarouge ; dans la réalité, les trois coexistent (et l'évaporation s'y ajoute)."
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "difficulte": 1,
+      "titre": "Des watts aux décibels",
+      "consigne": "Donne la relation utilisée et détaille les calculs.",
+      "enonce": "**Donnée.** I₀ = 1,0 × 10⁻¹² W·m⁻².\n\n1. Calcule le niveau d'intensité sonore d'un son d'intensité I = 1,0 × 10⁻⁵ W·m⁻².\n2. Un concert produit un niveau de 90 dB. Calcule l'intensité sonore correspondante.\n3. Deux aspirateurs identiques produisent chacun 70 dB à l'endroit où tu te trouves. Quel niveau mesures-tu quand ils fonctionnent ensemble ? Justifie.",
+      "bareme": [
+        {
+          "critere": "L = 10 log(I/I₀) = 10 log(10⁷) = 70 dB",
+          "points": 6
+        },
+        {
+          "critere": "I = I₀ × 10^(L/10) = 1,0 × 10⁻³ W·m⁻²",
+          "points": 7
+        },
+        {
+          "critere": "Intensités qui s'ajoutent : intensité doublée, L = 73 dB (et non 140 dB)",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L = 10 × log(I / I₀) = 10 × log(1,0 × 10⁻⁵ / 1,0 × 10⁻¹²) = 10 × log(10⁷) = **70 dB**.\n2. I = I₀ × 10^(L/10) = 1,0 × 10⁻¹² × 10⁹ = **1,0 × 10⁻³ W·m⁻²**.\n3. Ce sont les **intensités** qui s'ajoutent, pas les niveaux : l'intensité est **doublée**. Doubler l'intensité ajoute 10 log 2 ≈ 3 dB : le niveau vaut **73 dB**, et non 140 dB."
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "difficulte": 2,
+      "titre": "S'éloigner de l'enceinte",
+      "consigne": "Détaille chaque calcul et justifie les résultats.",
+      "enonce": "**Situation.** À une fête, une enceinte assimilée à une source ponctuelle émet une puissance sonore P = 0,10 W, répartie dans toutes les directions. On néglige l'absorption par l'air. I₀ = 1,0 × 10⁻¹² W·m⁻².\n\n1. Explique pourquoi l'intensité sonore s'écrit I = P / (4π d²) à la distance d de la source.\n2. Calcule l'intensité et le niveau sonore à 2,0 m de l'enceinte.\n3. Sans refaire le calcul complet, donne le niveau à 4,0 m puis à 8,0 m. Justifie.\n4. Au-delà de 85 dB, une exposition prolongée abîme l'audition. À partir de quelle distance de l'enceinte Ambre est-elle sous ce seuil ?\n5. L'atténuation calculée ici correspond-elle à une perte d'énergie ? Justifie.",
+      "bareme": [
+        {
+          "critere": "L'énergie se répartit sur une sphère de surface 4π d²",
+          "points": 3
+        },
+        {
+          "critere": "I ≈ 2,0 × 10⁻³ W·m⁻² et L ≈ 93 dB à 2,0 m",
+          "points": 5
+        },
+        {
+          "critere": "Distance doublée : −6 dB ; 87 dB à 4 m et 81 dB à 8 m",
+          "points": 5
+        },
+        {
+          "critere": "I = 10^(−3,5) W·m⁻² ≈ 3,2 × 10⁻⁴ ; d = √(P/(4πI)) ≈ 5,0 m",
+          "points": 4
+        },
+        {
+          "critere": "Atténuation géométrique : l'énergie s'étale, elle n'est pas perdue",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La puissance émise se répartit uniformément sur une **sphère** centrée sur la source, de surface **4π d²** : l'intensité, puissance par unité de surface, vaut donc I = P / (4π d²).\n2. I = 0,10 / (4π × 2,0²) = 0,10 / 50,3 ≈ **2,0 × 10⁻³ W·m⁻²**. L = 10 log(2,0 × 10⁻³ / 10⁻¹²) = 10 log(2,0 × 10⁹) ≈ 10 × 9,30 ≈ **93 dB**.\n3. Doubler la distance divise l'intensité par 4 (d²), soit une perte de 10 log 4 ≈ **6 dB**. À 4,0 m : **87 dB** ; à 8,0 m : **81 dB**.\n4. L = 85 dB ⟺ I = I₀ × 10^8,5 = 10^(−3,5) ≈ 3,2 × 10⁻⁴ W·m⁻². d = √(P / (4π I)) = √(0,10 / (4π × 3,16 × 10⁻⁴)) = √(0,10 / 3,97 × 10⁻³) ≈ √25 ≈ **5,0 m**. Au-delà de 5 m, Ambre est sous le seuil.\n5. **Non.** C'est une atténuation **géométrique** : l'énergie **s'étale** sur une surface de plus en plus grande, elle n'est pas perdue. Seule l'**absorption** par le milieu convertit réellement l'énergie (en énergie interne)."
+    },
+    {
+      "chapitre": "f77fa20f-0176-5884-a099-fd8b8576acd8",
+      "difficulte": 3,
+      "titre": "Le bruit dans l'atelier",
+      "consigne": "Analyse la situation, détaille les calculs et justifie chaque recommandation.",
+      "enonce": "**Situation.** Dans un atelier, quatre machines identiques fonctionnent en même temps. Chacune, seule, produit un niveau de 80 dB au poste de travail d'Enzo. I₀ = 1,0 × 10⁻¹² W·m⁻².\n\n1. Calcule l'intensité sonore due à une machine au poste d'Enzo.\n2. Calcule le niveau sonore au poste quand les quatre machines fonctionnent. Enzo court-il un risque pour son audition ? Justifie.\n3. On propose d'arrêter deux machines. Quel niveau obtient-on ? Est-ce suffisant ?\n4. On propose plutôt d'installer, entre les machines et Enzo, un écran qui absorbe : A = 15 dB. Quel niveau mesure-t-on alors avec les quatre machines ? Explique la différence de nature entre cette atténuation et celle qu'on obtiendrait en éloignant le poste.\n5. Un autre employé propose d'éloigner le poste, qui est à 1,0 m des machines (assimilées à une source ponctuelle), jusqu'à 4,0 m. Quel niveau obtiendrait-on ? Compare les solutions.\n6. Le chef d'atelier affirme qu'un sonomètre affichant 0 dB signifierait un silence absolu. Corrige-le.",
+      "bareme": [
+        {
+          "critere": "I₁ = I₀ × 10⁸ = 1,0 × 10⁻⁴ W·m⁻²",
+          "points": 3
+        },
+        {
+          "critere": "4 I₁ : L = 10 log(4 × 10⁸) ≈ 86 dB, au-dessus de 85 dB : risque irréversible",
+          "points": 5
+        },
+        {
+          "critere": "Deux machines : 83 dB, sous le seuil mais de peu",
+          "points": 3
+        },
+        {
+          "critere": "Écran : 86 − 15 = 71 dB ; absorption = conversion d'énergie, éloignement = étalement géométrique",
+          "points": 4
+        },
+        {
+          "critere": "4 m : −12 dB soit environ 74 dB, comparaison des solutions ; 0 dB = seuil d’audibilité, pas absence de son",
+          "points": 5
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. I₁ = I₀ × 10^(L/10) = 1,0 × 10⁻¹² × 10⁸ = **1,0 × 10⁻⁴ W·m⁻²**.\n2. Les intensités s'ajoutent : I = 4 × 1,0 × 10⁻⁴ = 4,0 × 10⁻⁴ W·m⁻². L = 10 log(4,0 × 10⁸) = 80 + 10 log 4 ≈ **86 dB**. C'est au-dessus de **85 dB** : une exposition prolongée endommage l'audition de façon **irréversible** (les cellules ciliées ne se régénèrent pas).\n3. Deux machines : I = 2,0 × 10⁻⁴ W·m⁻², L = 80 + 3 = **83 dB**. C'est sous le seuil, mais de peu : la marge est faible, et la production est divisée par deux.\n4. L = 86 − 15 = **71 dB**. L'écran agit par **absorption** : il **convertit réellement** l'énergie sonore en énergie interne. Éloigner le poste ne détruit aucune énergie : elle s'**étale** sur une plus grande surface (atténuation géométrique).\n5. De 1,0 m à 4,0 m, la distance est multipliée par 4 : deux doublements, soit −6 − 6 = **−12 dB** : L ≈ 86 − 12 = **74 dB**. Les deux solutions (écran, éloignement) ramènent nettement sous le seuil, sans arrêter la production ; elles peuvent s'**additionner** en décibels (74 − 15 = 59 dB).\n6. Le décibel exprime un **rapport** transformé en logarithme : 0 dB correspond à I = I₀, le **seuil d'audibilité**, et non à l'absence de son."
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "difficulte": 1,
+      "titre": "La sirène de l'ambulance",
+      "consigne": "Donne les relations utilisées, détaille les calculs et justifie.",
+      "enonce": "La sirène d'une ambulance émet un son de fréquence f_e = 680 Hz. L'ambulance roule à v = 20 m·s⁻¹. La célérité du son dans l'air vaut c = 340 m·s⁻¹.\n\n1. Calcule la fréquence perçue par un piéton immobile quand l'ambulance s'approche de lui, puis quand elle s'éloigne.\n2. Le son perçu est-il plus aigu ou plus grave à l'approche ? Explique à l'aide des fronts d'onde.\n3. La fréquence émise par la sirène a-t-elle changé ? Et la célérité du son ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Approche : f_r = f_e c/(c − v) ≈ 723 Hz ; éloignement : f_r = f_e c/(c + v) ≈ 642 Hz",
+          "points": 8
+        },
+        {
+          "critere": "Plus aigu à l'approche : fronts d'onde resserrés",
+          "points": 6
+        },
+        {
+          "critere": "Fréquence émise inchangée ; célérité inchangée, ne dépend que du milieu",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. À l'approche : f_r = f_e × c / (c − v) = 680 × 340 / 320 ≈ **723 Hz**. En s'éloignant : f_r = f_e × c / (c + v) = 680 × 340 / 360 ≈ **642 Hz**.\n2. À l'approche, la source « rattrape » les fronts d'onde qu'elle émet : ils se **resserrent** et arrivent plus souvent au piéton. La fréquence perçue **augmente** : le son est **plus aigu**. Quand l'ambulance s'éloigne, les fronts s'écartent : le son est plus grave.\n3. La fréquence **émise** n'a **jamais changé** : c'est la fréquence **perçue** qui dépend du mouvement relatif. La **célérité** ne change pas non plus : elle ne dépend que du **milieu** (l'air), pas du mouvement de la source."
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "difficulte": 2,
+      "titre": "Contrôle radar sur la départementale",
+      "consigne": "Justifie la relation utilisée, puis détaille les calculs.",
+      "enonce": "**Situation.** Un radar routier fixe émet une onde de fréquence f = 24,0 GHz vers les véhicules qui s'approchent. L'onde réfléchie revient avec un décalage de fréquence Δf = 4,00 kHz. Célérité des ondes électromagnétiques : c = 3,00 × 10⁸ m·s⁻¹. Vitesse maximale autorisée : 80 km·h⁻¹.\n\n1. Pourquoi, pour un radar, le décalage relatif vaut-il Δf/f = 2v/c et non v/c ?\n2. Calcule la vitesse du véhicule, en m·s⁻¹ puis en km·h⁻¹. Est-il en infraction ?\n3. La fréquence reçue par le radar est-elle plus grande ou plus petite que la fréquence émise ? Justifie.\n4. Le radar est placé au bord de la route et vise la voiture avec un angle. Pourquoi faut-il en tenir compte ? Que mesurerait un radar visant perpendiculairement à la route ?",
+      "bareme": [
+        {
+          "critere": "Effet Doppler subi deux fois : véhicule récepteur puis source de l'onde réfléchie",
+          "points": 5
+        },
+        {
+          "critere": "v = c Δf/(2f) = 25 m·s⁻¹ = 90 km·h⁻¹ : infraction",
+          "points": 7
+        },
+        {
+          "critere": "Véhicule qui s'approche : fréquence reçue plus grande",
+          "points": 3
+        },
+        {
+          "critere": "Seule la composante radiale compte ; perpendiculairement, effet nul",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L'onde subit l'effet Doppler **deux fois** : le véhicule joue d'abord le rôle de **récepteur** (il reçoit une fréquence décalée), puis celui de **source** en mouvement quand il réfléchit l'onde vers le radar. Les deux décalages s'ajoutent : Δf/f = **2v/c**.\n2. v = c × Δf / (2f) = 3,00 × 10⁸ × 4,00 × 10³ / (2 × 24,0 × 10⁹) = 1,20 × 10¹² / 4,80 × 10¹⁰ = **25,0 m·s⁻¹**, soit 25,0 × 3,6 = **90 km·h⁻¹**. Le véhicule dépasse les 80 km·h⁻¹ : il est **en infraction**.\n3. Le véhicule **s'approche** : les fronts d'onde se resserrent, la fréquence reçue par le radar est **plus grande** que la fréquence émise.\n4. L'effet Doppler ne dépend pas de la vitesse elle-même mais de sa **composante radiale** (le long de la ligne de visée). Avec un angle, le radar mesure moins que la vitesse réelle : il faut corriger. Un radar visant **perpendiculairement** à la route mesurerait un effet **nul**."
+    },
+    {
+      "chapitre": "f051af51-287e-5c15-9c3c-668228558c87",
+      "difficulte": 3,
+      "titre": "Galaxies qui fuient et étoiles qui oscillent",
+      "consigne": "Analyse les documents, justifie chaque conclusion et détaille les calculs.",
+      "enonce": "**Données.** c = 3,00 × 10⁸ m·s⁻¹. Pour la lumière, on admet que la longueur d'onde perçue varie selon Δλ/λ₀ ≈ v/c, avec v la composante radiale de la vitesse de la source (petite devant c) ; λ augmente si la source s'éloigne.\n\n**Document 1.** Dans le spectre d'une galaxie lointaine, la raie de l'hydrogène émise à λ₀ = 656,3 nm est observée à λ = 662,9 nm.\n\n**Document 2.** Dans le spectre d'une étoile proche, la même raie oscille régulièrement de ±1,3 × 10⁻⁴ nm autour de 656,3 nm, avec une période de 4,2 jours.\n\n1. La galaxie s'approche-t-elle ou s'éloigne-t-elle de nous ? Comment appelle-t-on ce décalage ? Calcule sa vitesse radiale.\n2. Que ce décalage a-t-il permis d'établir pour l'Univers ?\n3. Calcule l'amplitude de la vitesse radiale de l'étoile du document 2. Propose une interprétation de son oscillation.\n4. Pourquoi cette méthode ne détecte-t-elle pas les planètes dont l'orbite est vue de face, perpendiculaire à la ligne de visée ?\n5. Pour une source sonore, f_r = f_e × c/(c − v). Que prévoit cette formule quand v tend vers c ? Quel phénomène annonce-t-elle ?",
+      "bareme": [
+        {
+          "critere": "λ augmente : la galaxie s'éloigne, décalage vers le rouge ; v ≈ 3,0 × 10⁶ m·s⁻¹",
+          "points": 6
+        },
+        {
+          "critere": "Décalage vers le rouge des galaxies : expansion de l'Univers",
+          "points": 3
+        },
+        {
+          "critere": "v ≈ 59 m·s⁻¹ ; étoile qui oscille sous l'effet d'une planète en orbite (période 4,2 j)",
+          "points": 5
+        },
+        {
+          "critere": "Mouvement perpendiculaire à la ligne de visée : composante radiale nulle, effet nul",
+          "points": 3
+        },
+        {
+          "critere": "La formule diverge : mur du son, onde de choc",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. λ observée (662,9 nm) > λ₀ : la longueur d'onde augmente, la galaxie **s'éloigne**. C'est le **décalage vers le rouge**. Δλ = 662,9 − 656,3 = 6,6 nm ; v = c × Δλ/λ₀ = 3,00 × 10⁸ × 6,6 / 656,3 ≈ **3,0 × 10⁶ m·s⁻¹** (3 000 km·s⁻¹, bien inférieure à c : l'approximation est justifiée).\n2. Le décalage vers le rouge des galaxies, d'autant plus grand qu'elles sont lointaines, a établi l'**expansion de l'Univers**.\n3. v = c × Δλ/λ₀ = 3,00 × 10⁸ × 1,3 × 10⁻⁴ / 656,3 ≈ **59 m·s⁻¹**. L'étoile s'approche et s'éloigne alternativement de nous, avec une période de 4,2 jours : on l'interprète comme l'**oscillation** de l'étoile sous l'effet d'une **planète** en orbite autour d'elle, dont la période orbitale serait de 4,2 jours. Le spectre oscille au rythme de la planète.\n4. Si l'étoile se déplace **perpendiculairement** à la ligne de visée, la composante **radiale** de sa vitesse est **nulle** : l'effet Doppler est nul, la méthode est **aveugle** à ces orbites.\n5. Quand v tend vers c, le dénominateur c − v tend vers 0 : la fréquence perçue **diverge**. La formule annonce le **mur du son** : les fronts d'onde s'accumulent en une seule surface, l'**onde de choc**."
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "difficulte": 1,
+      "titre": "Un laser à travers une fente",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec les conversions.",
+      "enonce": "On éclaire une fente de largeur a = 0,10 mm avec un laser de longueur d'onde λ = 633 nm. Un écran est placé à D = 2,0 m de la fente.\n\n1. Qu'observe-t-on sur l'écran ? À quelle condition ce phénomène est-il notable ?\n2. Calcule le demi-angle de diffraction θ, puis la largeur L de la tache centrale.\n3. On remplace la fente par une fente deux fois plus fine. Comment évolue la tache centrale ? Ce résultat te paraît-il intuitif ?",
+      "bareme": [
+        {
+          "critere": "Figure de diffraction étalée ; notable quand a est du même ordre que λ",
+          "points": 5
+        },
+        {
+          "critere": "θ = λ/a = 6,3 × 10⁻³ rad et L = 2λD/a ≈ 2,5 cm",
+          "points": 9
+        },
+        {
+          "critere": "Fente plus fine : tache deux fois plus large, contre-intuitif",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. On observe une **figure de diffraction** : une tache centrale étalée, perpendiculairement à la fente, bordée de taches plus faibles. La diffraction est notable quand la dimension a de l'ouverture est **du même ordre que λ**.\n2. θ = λ / a = 633 × 10⁻⁹ / 0,10 × 10⁻³ ≈ **6,3 × 10⁻³ rad**. L = 2 λ D / a = 2 × 633 × 10⁻⁹ × 2,0 / 1,0 × 10⁻⁴ ≈ **2,5 × 10⁻² m**, soit **2,5 cm**.\n3. L est inversement proportionnelle à a : une fente **deux fois plus fine** donne une tache **deux fois plus large** (environ 5,1 cm). C'est **contre-intuitif** : plus l'ouverture est petite, plus l'étalement est grand."
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "difficulte": 2,
+      "titre": "Mesurer un cheveu, entendre derrière une porte",
+      "consigne": "Détaille les calculs et justifie chaque explication.",
+      "enonce": "**Partie 1.** Lou tend un de ses cheveux devant un laser de longueur d'onde λ = 650 nm. Sur un écran placé à D = 2,50 m, elle mesure une tache centrale de largeur L = 4,2 cm. On admet qu'un cheveu diffracte la lumière comme une fente de même largeur a.\n\n1. Calcule le diamètre a du cheveu, en µm.\n2. La lumière qui sort de la zone du cheveu a-t-elle changé de couleur ou de vitesse ? Justifie.\n\n**Partie 2.** Une porte ouverte a une largeur de 0,90 m. Dans la pièce voisine, on joue de la musique. La célérité du son dans l'air vaut c = 340 m·s⁻¹.\n\n3. Calcule la longueur d'onde d'un son grave de 340 Hz, puis d'un son aigu de 3 400 Hz (λ = c/f).\n4. Explique pourquoi, loin de la porte et hors de l'axe, on entend surtout les basses.",
+      "bareme": [
+        {
+          "critere": "a = 2λD/L ≈ 7,7 × 10⁻⁵ m ≈ 77 µm",
+          "points": 6
+        },
+        {
+          "critere": "Ni la fréquence, ni λ, ni la célérité ne changent : seule la répartition dans l'espace",
+          "points": 4
+        },
+        {
+          "critere": "λ = 1,0 m pour 340 Hz et 0,10 m pour 3 400 Hz",
+          "points": 4
+        },
+        {
+          "critere": "Grave : λ du même ordre que la porte, forte diffraction ; aigu : λ petit devant la porte, peu diffracté",
+          "points": 6
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L = 2 λ D / a, donc a = 2 λ D / L = 2 × 650 × 10⁻⁹ × 2,50 / 4,2 × 10⁻² = 3,25 × 10⁻⁶ / 4,2 × 10⁻² ≈ **7,7 × 10⁻⁵ m**, soit environ **77 µm**.\n2. **Non.** La diffraction ne modifie ni la **fréquence** (donc la couleur), ni la **longueur d'onde**, ni la **célérité** : elle ne change que la **répartition de la lumière dans l'espace**.\n3. λ = c / f : pour 340 Hz, λ = 340 / 340 = **1,0 m** ; pour 3 400 Hz, λ = 340 / 3 400 = **0,10 m**.\n4. Pour le son grave, λ (1,0 m) est **du même ordre** que la largeur de la porte (0,90 m) : il est fortement **diffracté** et s'étale dans toute la pièce. Pour le son aigu, λ (0,10 m) est **petit devant** la porte : il est peu diffracté et continue presque tout droit. Hors de l'axe de la porte, on entend donc surtout les **basses**."
+    },
+    {
+      "chapitre": "10eea279-7e16-5250-b72c-c63cc8272137",
+      "difficulte": 3,
+      "titre": "Vérifier le modèle de la diffraction",
+      "consigne": "Exploite les mesures, justifie la démarche et détaille les calculs.",
+      "enonce": "**Situation.** Pour vérifier la relation L = 2λD/a, un groupe d'élèves éclaire plusieurs fentes avec le même laser, l'écran restant à D = 2,00 m.\n\n| a (mm) | 0,050 | 0,10 | 0,20 | 0,40 |\n| L (cm) | 5,2 | 2,6 | 1,3 | 0,65 |\n\n1. Quelle grandeur faut-il porter en abscisse pour obtenir une droite ? Calcule les valeurs correspondantes (en m⁻¹).\n2. Quelle allure doit avoir la courbe si le modèle est valide ? Vérifie-le sur les mesures.\n3. Détermine le coefficient directeur et déduis-en la longueur d'onde du laser.\n4. Pourquoi ce tracé est-il plus qu'une simple illustration ?\n5. Un télescope a un miroir de diamètre 2,4 m, une lunette d'amateur un objectif de 0,10 m. On admet que le plus petit écart angulaire qu'ils distinguent est de l'ordre de λ/a. Calcule-le pour chacun à λ = 550 nm et explique pourquoi on construit de grands télescopes.\n6. Les fentes d'Young donnent des franges dans une enveloppe. Quel rôle y joue la diffraction ?",
+      "bareme": [
+        {
+          "critere": "Abscisses 1/a calculées (2,0 × 10⁴ ; 1,0 × 10⁴ ; 5,0 × 10³ ; 2,5 × 10³ m⁻¹) et droite par l’origine : L × a constant",
+          "points": 7
+        },
+        {
+          "critere": "Pente 2λD = 2,6 × 10⁻⁶ m², λ = 650 nm",
+          "points": 5
+        },
+        {
+          "critere": "Vérification quantitative du modèle, pas une illustration",
+          "points": 2
+        },
+        {
+          "critere": "2,3 × 10⁻⁷ rad contre 5,5 × 10⁻⁶ rad : la résolution est limitée par la diffraction, d'où de grands miroirs",
+          "points": 4
+        },
+        {
+          "critere": "Franges d'interférences modulées par l'enveloppe de diffraction de chaque fente",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La relation L = 2λD × (1/a) est linéaire en **1/a** : on porte 1/a en abscisse. Avec a en mètres : 1/a = **2,0 × 10⁴ ; 1,0 × 10⁴ ; 5,0 × 10³ ; 2,5 × 10³ m⁻¹**.\n2. Si le modèle est valide, la courbe L = f(1/a) est une **droite passant par l'origine**. Vérification : L × a = 5,2 × 10⁻² × 5,0 × 10⁻⁵ = 2,6 × 10⁻⁶ m² ; 2,6 × 10⁻² × 1,0 × 10⁻⁴ = 2,6 × 10⁻⁶ m² ; de même pour les deux autres : le produit est **constant**, L est bien proportionnelle à 1/a.\n3. Coefficient directeur : k = L / (1/a) = L × a = **2,6 × 10⁻⁶ m²**. Or k = 2λD, donc λ = k / (2D) = 2,6 × 10⁻⁶ / 4,00 = **6,5 × 10⁻⁷ m = 650 nm**.\n4. C'est la **vérification quantitative** du modèle : on teste la proportionnalité prévue et on en tire une mesure de λ, ce n'est pas une simple illustration.\n5. Télescope : λ/a = 550 × 10⁻⁹ / 2,4 ≈ **2,3 × 10⁻⁷ rad**. Lunette : 550 × 10⁻⁹ / 0,10 = **5,5 × 10⁻⁶ rad**, environ 24 fois plus. Deux étoiles plus proches que cet angle se confondent : la **résolution est limitée par la diffraction** sur l'ouverture. C'est cette raison, et non le grossissement, qui pousse à construire de **grands** télescopes.\n6. La figure des fentes d'Young est faite de **franges d'interférences** **modulées** par l'**enveloppe de diffraction** de chaque fente : les deux phénomènes se produisent ensemble."
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "difficulte": 1,
+      "titre": "Frange brillante ou frange sombre ?",
+      "consigne": "Donne les conditions du cours et justifie chaque réponse par un calcul.",
+      "enonce": "Deux sources lumineuses cohérentes émettent une lumière de longueur d'onde λ = 600 nm.\n\n1. Quelles conditions deux sources doivent-elles remplir pour interférer de façon stable ? Comment les obtient-on en pratique ?\n2. En un point M de l'écran, la différence de marche vaut δ = 1,8 µm. Observe-t-on une frange brillante ou sombre ? Justifie.\n3. Même question en un point N où δ = 1,5 µm.",
+      "bareme": [
+        {
+          "critere": "Même fréquence et déphasage constant : on dédouble une même source",
+          "points": 6
+        },
+        {
+          "critere": "δ = 1,8 µm = 3λ : interférences constructives, frange brillante",
+          "points": 7
+        },
+        {
+          "critere": "δ = 1,5 µm = 2,5λ = (2 + ½)λ : destructives, frange sombre",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les sources doivent être **cohérentes** : **même fréquence** et **déphasage constant** dans le temps. En pratique, on n'y parvient qu'en **dédoublant une même source** (deux fentes éclairées par le même laser, une réflexion, une division du faisceau) : deux lampes distinctes ne donnent jamais d'interférences visibles.\n2. δ / λ = 1,8 × 10⁻⁶ / 600 × 10⁻⁹ = **3** : δ = kλ avec k = 3 entier. Les interférences sont **constructives** : **frange brillante**.\n3. δ / λ = 1,5 × 10⁻⁶ / 600 × 10⁻⁹ = **2,5** : δ = (k + ½)λ avec k = 2. Les interférences sont **destructives** : **frange sombre**."
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "difficulte": 2,
+      "titre": "Les fentes d'Young au laboratoire",
+      "consigne": "Donne les relations utilisées et détaille les calculs avec les conversions.",
+      "enonce": "**Situation.** Gabriel éclaire deux fentes distantes de b = 0,20 mm avec un laser vert (λ = 532 nm). L'écran est à D = 1,50 m des fentes.\n\n1. Calcule l'interfrange i. Pourquoi mesure-t-on en pratique la longueur de plusieurs interfranges plutôt qu'un seul ?\n2. Gabriel remplace le laser vert par un laser rouge (λ = 650 nm). Calcule le nouvel interfrange. Comment évoluent les franges ?\n3. Avec un troisième laser, de longueur d'onde inconnue, il mesure 10 interfranges sur 4,2 cm. Calcule λ.\n4. Il rapproche l'écran à 0,75 m. Comment évolue l'interfrange ?",
+      "bareme": [
+        {
+          "critere": "i = λD/b ≈ 4,0 mm ; mesurer plusieurs i réduit l'incertitude",
+          "points": 6
+        },
+        {
+          "critere": "Rouge : i ≈ 4,9 mm, franges plus espacées (i proportionnel à λ)",
+          "points": 5
+        },
+        {
+          "critere": "i = 4,2 mm, λ = i b/D = 5,6 × 10⁻⁷ m = 560 nm",
+          "points": 6
+        },
+        {
+          "critere": "D divisé par 2 : i divisé par 2",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. i = λ D / b = 532 × 10⁻⁹ × 1,50 / 0,20 × 10⁻³ ≈ **4,0 × 10⁻³ m = 4,0 mm**. On mesure plusieurs interfranges d'un coup, puis on divise : l'**incertitude** de lecture est répartie sur plusieurs franges, la mesure est plus précise.\n2. i = 650 × 10⁻⁹ × 1,50 / 0,20 × 10⁻³ ≈ **4,9 mm**. L'interfrange est **proportionnel à λ** : les franges sont **plus espacées** avec le laser rouge.\n3. i = 4,2 cm / 10 = 4,2 mm. λ = i × b / D = 4,2 × 10⁻³ × 0,20 × 10⁻³ / 1,50 = **5,6 × 10⁻⁷ m = 560 nm**. On mesure ainsi une longueur d'onde « avec une règle ».\n4. i est proportionnel à D : en passant de 1,50 m à 0,75 m, l'interfrange est **divisé par 2** (2,0 mm avec le laser vert)."
+    },
+    {
+      "chapitre": "634303eb-61ee-5bff-92ba-5f31627b1602",
+      "difficulte": 3,
+      "titre": "Des franges irisées au casque antibruit",
+      "consigne": "Analyse chaque situation, justifie à l'aide du cours et détaille les calculs.",
+      "enonce": "**Partie 1.** On éclaire des fentes d'Young (b = 0,50 mm) en **lumière blanche** (longueurs d'onde de 400 à 750 nm). L'écran est à D = 2,0 m.\n\n1. Calcule l'interfrange pour λ = 400 nm et pour λ = 750 nm. Explique pourquoi les franges sont irisées et pourquoi la frange centrale reste blanche.\n2. En un point de l'écran situé à x = 4,8 mm de la frange centrale, quelles radiations visibles donnent une frange brillante ? (Une frange brillante se trouve en x = k × i, k entier.)\n\n**Partie 2.** Un casque à réduction active capte un bruit de moteur de fréquence 100 Hz et émet une onde qui doit l'annuler. Célérité du son : c = 340 m·s⁻¹.\n\n3. Sur quel principe repose le casque ? Calcule la longueur d'onde du bruit, puis le décalage (en longueur, puis en temps) que doit présenter l'onde émise par rapport au bruit.\n4. Là où le bruit est annulé, l'énergie sonore est-elle détruite ? Justifie.\n\n**Partie 3.**\n5. Les couleurs d'une bulle de savon viennent-elles de pigments ? Explique leur origine et propose un test simple pour les distinguer de couleurs pigmentaires.",
+      "bareme": [
+        {
+          "critere": "i = 1,6 mm et 3,0 mm ; chaque couleur a son interfrange, δ = 0 au centre pour toutes : blanc",
+          "points": 5
+        },
+        {
+          "critere": "λ = x b/(k D) = 1,2 × 10⁻⁶/k m : 600 nm (k = 2) et 400 nm (k = 3)",
+          "points": 5
+        },
+        {
+          "critere": "Opposition de phase ; λ = 3,4 m, décalage λ/2 = 1,7 m soit une demi-période 5 ms",
+          "points": 4
+        },
+        {
+          "critere": "Énergie redistribuée, pas détruite",
+          "points": 3
+        },
+        {
+          "critere": "Interférences entre les rayons réfléchis sur les deux faces ; couleurs qui changent avec l'angle de vue",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. i = λ D / b. Pour 400 nm : i = 400 × 10⁻⁹ × 2,0 / 0,50 × 10⁻³ = **1,6 mm**. Pour 750 nm : i = 750 × 10⁻⁹ × 2,0 / 0,50 × 10⁻³ = **3,0 mm**. Chaque couleur a **son propre interfrange** : les franges des différentes couleurs ne coïncident pas, elles s'**irisent**. Au centre, δ = 0 pour toutes les longueurs d'onde : toutes y sont brillantes, la **frange centrale reste blanche**.\n2. x = k λ D / b, donc λ = x b / (k D) = 4,8 × 10⁻³ × 0,50 × 10⁻³ / (2,0 k) = 1,2 × 10⁻⁶ / k m. k = 1 : 1 200 nm (hors du visible) ; k = 2 : **600 nm** ✓ ; k = 3 : **400 nm** ✓ ; k = 4 : 300 nm (hors du visible). Les radiations de **600 nm et 400 nm** donnent une frange brillante en ce point.\n3. Le casque émet une onde en **opposition de phase** avec le bruit : les deux ondes se superposent et interfèrent **destructivement**. λ = c / f = 340 / 100 = **3,4 m**. L'onde émise doit être décalée d'une **demi-longueur d'onde**, λ/2 = **1,7 m**, soit une **demi-période** : T/2 = 1 / (2 × 100) = **5 ms**.\n4. **Non.** Les interférences destructives ne détruisent pas l'énergie : elle est **redistribuée** vers les zones d'interférences constructives. Le bilan énergétique total est inchangé.\n5. **Non**, ce ne sont pas des pigments. Les couleurs viennent d'**interférences** entre les rayons **réfléchis sur les deux faces** du film de savon. Test : les couleurs interférentielles **changent avec l'angle de vue**, ce qu'aucun pigment ne fait."
+    }
+  ]
+}

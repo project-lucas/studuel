@@ -31,7 +31,9 @@ import {
   niveauCoffre,
   contenuCoffre,
   progressionCoffre,
-  tronconsCoffre,
+  partsCoffre,
+  placesAmis,
+  LIBELLE_BONUS_AMI,
   lireOuvertureCoffre,
   gainsOuverture,
   annoncerCoffrePret,
@@ -439,10 +441,18 @@ describe('le coffre d’équipe', () => {
     expect(progressionCoffre(1200)).toEqual({ niveau: 5, suivant: null, part: 1, reste: 0 })
   })
 
-  it('remplit la jauge tronçon par tronçon', () => {
-    expect(tronconsCoffre(320)).toEqual([1, 1, 70 / 200, 0, 0])
-    expect(tronconsCoffre(0)).toEqual([0, 0, 0, 0, 0])
-    expect(tronconsCoffre(9999)).toEqual([1, 1, 1, 1, 1])
+  it('partage la barre entre ma part et celle de mes amis, vers le niveau suivant', () => {
+    // 310 XP sur 450 pour le niveau 3 : 120 à moi, 190 à mes amis.
+    expect(partsCoffre({ xpMoi: 120, partAmis: 190 })).toEqual({ moi: 26.7, amis: 42.2 })
+    expect(partsCoffre({ xpMoi: 0, partAmis: 0 })).toEqual({ moi: 0, amis: 0 })
+    // Seul : toute la barre remplie est la mienne.
+    expect(partsCoffre({ xpMoi: 50, partAmis: 0 })).toEqual({ moi: 50, amis: 0 })
+  })
+
+  it('au sommet, la barre est pleine et jamais plus', () => {
+    const { moi, amis } = partsCoffre({ xpMoi: 400, partAmis: 1200 })
+    expect(moi + amis).toBe(100)
+    expect(moi).toBe(25)
   })
 
   it('relit le coffre et les coffres prêts que rend ligue_etat', () => {
@@ -533,6 +543,34 @@ describe('le multiplicateur d’XP (miroir de xp_avec_bonus, migration 380)', ()
     expect(libelleMultiplicateur(multiplicateurXp(3, false))).toBe('×1,3')
     expect(libelleMultiplicateur(multiplicateurXp(3, true))).toBe('×2,6')
     expect(libelleMultiplicateur(4)).toBe('×4,0')
+  })
+
+  it('un ami = une place = +0,1, dix places au plus', () => {
+    expect(LIBELLE_BONUS_AMI).toBe('+0,1')
+    expect(placesAmis([])).toEqual({ occupees: [], anonymes: 0, libres: 10, enPlus: 0 })
+    expect(placesAmis(['a', 'b', 'c'])).toEqual({
+      occupees: ['a', 'b', 'c'],
+      anonymes: 0,
+      libres: 7,
+      enPlus: 0,
+    })
+    const douze = Array.from({ length: 12 }, (_, i) => `ami-${i}`)
+    const places = placesAmis(douze)
+    expect(places.occupees).toHaveLength(10)
+    expect(places.libres).toBe(0)
+    // Les deux derniers restent des amis, mais n'ajoutent plus rien.
+    expect(places.enPlus).toBe(2)
+  })
+
+  it('une place comptée par le serveur est occupée, même sans portrait', () => {
+    // Le serveur compte 5 amis, la liste reçue n'en porte que 2.
+    expect(placesAmis(['a', 'b'], 5)).toEqual({
+      occupees: ['a', 'b'],
+      anonymes: 3,
+      libres: 5,
+      enPlus: 0,
+    })
+    expect(placesAmis(['a'], 14)).toMatchObject({ anonymes: 9, libres: 0, enPlus: 4 })
   })
 
   it('rejoue le barème vérifié sur Postgres (20 XP)', () => {

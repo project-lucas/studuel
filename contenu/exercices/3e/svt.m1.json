@@ -1,0 +1,4102 @@
+{
+  "niveau": "3e",
+  "matiere": "svt",
+  "exercices": [
+    {
+      "chapitre": "704037d9-6f2a-5ac4-8824-00e4cff12d6e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le tableau de famille du système solaire",
+      "competence": "lire-tableau",
+      "situation": "Une revue d’astronomie publie une fiche d’identité des huit planètes. Tu t’en sers pour les ranger par famille.",
+      "documents": [
+        {
+          "id": "planetes",
+          "type": "tableau",
+          "titre": "Les huit planètes en chiffres",
+          "colonnes": [
+            "Planète",
+            "Diamètre (km)",
+            "Distance au Soleil (millions de km)",
+            "Densité (eau = 1)"
+          ],
+          "lignes": [
+            [
+              "Mercure",
+              "4 900",
+              58,
+              5.4
+            ],
+            [
+              "Vénus",
+              "12 100",
+              108,
+              5.2
+            ],
+            [
+              "Terre",
+              "12 700",
+              150,
+              5.5
+            ],
+            [
+              "Mars",
+              "6 800",
+              228,
+              3.9
+            ],
+            [
+              "Jupiter",
+              "139 800",
+              778,
+              1.3
+            ],
+            [
+              "Saturne",
+              "116 500",
+              "1 430",
+              0.7
+            ],
+            [
+              "Uranus",
+              "50 700",
+              "2 870",
+              1.3
+            ],
+            [
+              "Neptune",
+              "49 200",
+              "4 500",
+              1.6
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis dans le tableau la densité de la Terre.",
+          "reponse": 5.5,
+          "aide": "Cherche la ligne « Terre », dernière colonne.",
+          "explication": "La densité de la Terre est de **5,5** : c’est la planète la plus dense du système solaire."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que remarques-tu pour les quatre planètes les plus proches du Soleil ?",
+          "options": [
+            "Elles sont petites et denses (densité supérieure à 3,5)",
+            "Elles sont énormes et peu denses",
+            "Elles ont toutes la même taille",
+            "Elles sont toutes moins denses que l’eau"
+          ],
+          "reponse": 0,
+          "aide": "Compare leur diamètre et leur densité avec ceux de Jupiter.",
+          "explication": "Mercure, Vénus, la Terre et Mars sont **petites et denses** : ce sont les planètes **telluriques**, rocheuses."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque planète dans sa famille.",
+          "categories": [
+            "Tellurique",
+            "Géante gazeuse",
+            "Géante glacée"
+          ],
+          "items": [
+            [
+              "Mars",
+              0
+            ],
+            [
+              "Jupiter",
+              1
+            ],
+            [
+              "Neptune",
+              2
+            ],
+            [
+              "Vénus",
+              0
+            ],
+            [
+              "Saturne",
+              1
+            ],
+            [
+              "Uranus",
+              2
+            ]
+          ],
+          "aide": "Les géantes gazeuses sont Jupiter et Saturne ; les géantes glacées sont plus loin et plus froides.",
+          "explication": "Mars et Vénus sont **telluriques** ; Jupiter et Saturne **géantes gazeuses** ; Uranus et Neptune **géantes glacées**."
+        }
+      ]
+    },
+    {
+      "chapitre": "704037d9-6f2a-5ac4-8824-00e4cff12d6e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Pourquoi l’été est-il chaud à Paris ?",
+      "competence": "analyser-document",
+      "situation": "Chaque année, Paris connaît des étés chauds et des hivers froids. Un élève de 3e compare les durées du jour et la hauteur du Soleil à midi à quatre dates clés.",
+      "documents": [
+        {
+          "id": "jour",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Durée du jour à Paris",
+          "categories": [
+            "21 déc.",
+            "21 mars",
+            "21 juin",
+            "21 sept."
+          ],
+          "series": [
+            {
+              "nom": "Durée du jour",
+              "valeurs": [
+                8,
+                12,
+                16,
+                12
+              ],
+              "teinte": "jaune"
+            }
+          ],
+          "axeY": {
+            "titre": "Durée du jour",
+            "unite": "h",
+            "min": 0,
+            "max": 18,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Date"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies à l’heure"
+        },
+        {
+          "id": "soleil",
+          "type": "tableau",
+          "titre": "Hauteur du Soleil à midi à Paris",
+          "colonnes": [
+            "Date",
+            "Hauteur du Soleil à midi (°)",
+            "Saison commençant ce jour-là"
+          ],
+          "lignes": [
+            [
+              "21 déc.",
+              18,
+              "Hiver"
+            ],
+            [
+              "21 mars",
+              41,
+              "Printemps"
+            ],
+            [
+              "21 juin",
+              65,
+              "Été"
+            ],
+            [
+              "21 sept.",
+              41,
+              "Automne"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jour",
+          "enonce": "Touche la barre du jour le plus long de l’année.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "Le **21 juin** a le jour le plus long : 16 heures."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien d’heures le jour du 21 juin dépasse-t-il celui du 21 décembre ?",
+          "reponse": 8,
+          "unite": "h",
+          "aide": "Soustrais les deux durées lues sur le graphique.",
+          "explication": "16 − 8 = **8 heures** de jour en plus : le Soleil chauffe plus longtemps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment le tableau explique-t-il que l’été chauffe davantage ?",
+          "options": [
+            "Les rayons arrivent plus à la verticale (65°) et les jours sont plus longs",
+            "La Terre est plus proche du Soleil",
+            "Le Soleil produit plus d’énergie en été",
+            "La Terre tourne plus vite sur elle-même"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la hauteur du Soleil à midi : plus il est haut, plus les rayons sont verticaux.",
+          "explication": "En été, le Soleil est haut (**65°**) et reste longtemps : la même énergie est répartie sur une surface plus petite et pendant plus de temps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Début janvier, la Terre est un peu plus proche du Soleil qu’en juillet (147 contre 152 millions de km), et pourtant c’est l’hiver à Paris. Que conclure ?",
+          "options": [
+            "La distance au Soleil n’explique pas les saisons : c’est l’inclinaison de 23,5° de l’axe",
+            "Les mesures de distance sont fausses",
+            "Il fait froid car la Terre ralentit",
+            "Les saisons dépendent de la rotation en 24 h"
+          ],
+          "reponse": 0,
+          "aide": "Si la distance expliquait les saisons, il ferait chaud en janvier.",
+          "explication": "Ce sont **l’inclinaison de l’axe** et la révolution autour du Soleil qui créent les saisons, pas la distance."
+        }
+      ]
+    },
+    {
+      "chapitre": "704037d9-6f2a-5ac4-8824-00e4cff12d6e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois voisines, une seule habitable",
+      "competence": "raisonner",
+      "situation": "Vénus, la Terre et Mars sont toutes des planètes telluriques. Pourtant, seule la Terre accueille la vie. Tu croises deux documents pour comprendre pourquoi.",
+      "documents": [
+        {
+          "id": "voisines",
+          "type": "tableau",
+          "titre": "Vénus, la Terre et Mars",
+          "colonnes": [
+            "",
+            "Vénus",
+            "Terre",
+            "Mars"
+          ],
+          "lignes": [
+            [
+              "Distance au Soleil (millions de km)",
+              108,
+              150,
+              228
+            ],
+            [
+              "Température moyenne en surface",
+              "≈ 460 °C",
+              "15 °C",
+              "≈ −60 °C"
+            ],
+            [
+              "Pression atmosphérique (Terre = 1)",
+              "≈ 90",
+              "1",
+              "≈ 0,006"
+            ],
+            [
+              "Eau liquide en surface",
+              "non",
+              "oui",
+              "non"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "serre",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Température moyenne de la Terre",
+          "categories": [
+            "Sans effet de serre naturel",
+            "Avec effet de serre naturel"
+          ],
+          "series": [
+            {
+              "nom": "Température moyenne",
+              "valeurs": [
+                -18,
+                15
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": -20,
+            "max": 20,
+            "pas": 5
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "serre",
+          "enonce": "Touche la barre de la Terre sans effet de serre naturel.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre sous zéro.",
+          "explication": "Sans effet de serre naturel, la Terre serait à **−18 °C** en moyenne : un monde gelé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la hausse de température apportée par l’effet de serre naturel ?",
+          "reponse": 33,
+          "unite": "°C",
+          "aide": "Calcule 15 − (−18).",
+          "explication": "15 − (−18) = **33 °C** : l’effet de serre naturel rend la Terre habitable."
+        },
+        {
+          "type": "choix",
+          "enonce": "Vénus est plus proche du Soleil que la Terre, mais 460 °C est bien plus que sa distance ne l’explique. Quelle est la cause principale ?",
+          "options": [
+            "Un effet de serre qui s’est emballé dans une atmosphère très dense",
+            "Une absence totale d’atmosphère",
+            "Un champ magnétique trop faible",
+            "Une rotation plus rapide"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la pression atmosphérique de Vénus dans le tableau.",
+          "explication": "Avec **90 fois** la pression terrestre, l’atmosphère de Vénus retient la chaleur : l’effet de serre s’est **emballé**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Mars est-elle si froide et sans eau liquide ?",
+          "options": [
+            "Elle a perdu presque toute son atmosphère (pression de 0,006)",
+            "Elle est trop proche du Soleil",
+            "Elle a un effet de serre emballé",
+            "Elle est trop petite pour tourner"
+          ],
+          "reponse": 0,
+          "aide": "Compare sa pression atmosphérique à celle de la Terre.",
+          "explication": "Mars a perdu son atmosphère : trop mince pour garder la chaleur, elle est à **−60 °C**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque planète ou condition à ce qui la caractérise.",
+          "paires": [
+            [
+              "Vénus",
+              "Effet de serre emballé"
+            ],
+            [
+              "Mars",
+              "Atmosphère perdue"
+            ],
+            [
+              "Terre",
+              "Distance qui permet l’eau liquide"
+            ],
+            [
+              "Couche d’ozone",
+              "Filtre les ultraviolets"
+            ]
+          ],
+          "aide": "Pense aux conditions qui rendent la Terre habitable.",
+          "explication": "Vénus : emballement ; Mars : atmosphère perdue ; Terre : bonne distance au Soleil ; ozone : filtre les UV."
+        }
+      ]
+    },
+    {
+      "chapitre": "171ce417-ed06-5aa8-b7a7-bb6ac32075f2",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "À la vitesse des ongles",
+      "competence": "lire-graphique",
+      "situation": "Les plaques lithosphériques bougent, mais lentement. Un géologue compare la vitesse de déplacement de trois plaques.",
+      "documents": [
+        {
+          "id": "vitesses",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Vitesse de déplacement de deux plaques l’une par rapport à l’autre",
+          "categories": [
+            "Dorsale médio-atlantique (nord)",
+            "Inde vers Eurasie",
+            "Dorsale Pacifique-Est"
+          ],
+          "series": [
+            {
+              "nom": "Vitesse",
+              "valeurs": [
+                2,
+                5,
+                15
+              ],
+              "teinte": "brun"
+            }
+          ],
+          "axeY": {
+            "titre": "Vitesse",
+            "unite": "cm/an",
+            "min": 0,
+            "max": 16,
+            "pas": 2
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "vitesses",
+          "enonce": "Touche la barre du mouvement le plus rapide.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "La dorsale Pacifique-Est s’écarte à environ **15 cm/an** : la plus rapide."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 2 cm par an, de combien de kilomètres l’Atlantique s’élargit-il en 1 million d’années ?",
+          "reponse": 20,
+          "unite": "km",
+          "aide": "Rappel : 1 km = 100 000 cm. Calcule d’abord 2 cm × 1 000 000.",
+          "explication": "2 cm × 1 000 000 = 2 000 000 cm = **20 km**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi ressemble la vitesse des plaques ?",
+          "options": [
+            "À la vitesse de pousse des ongles",
+            "À la vitesse d’un piéton",
+            "À celle d’une voiture sur autoroute",
+            "À celle du son"
+          ],
+          "reponse": 0,
+          "aide": "On parle de quelques centimètres par an.",
+          "explication": "Quelques centimètres par an, c’est la vitesse de pousse des **ongles**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Les plaques se déplacent de ___ par an sur l’___.",
+          "reponses": [
+            [
+              "quelques centimètres"
+            ],
+            [
+              "asthénosphère"
+            ]
+          ],
+          "banque": [
+            "quelques centimètres",
+            "quelques mètres",
+            "quelques kilomètres",
+            "asthénosphère",
+            "croûte",
+            "atmosphère"
+          ],
+          "aide": "L’asthénosphère est la couche plus ductile du manteau.",
+          "explication": "Les plaques glissent de **quelques centimètres** par an sur l’**asthénosphère**, plus ductile."
+        }
+      ]
+    },
+    {
+      "chapitre": "171ce417-ed06-5aa8-b7a7-bb6ac32075f2",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre lieux, quatre frontières",
+      "competence": "lire-carte",
+      "situation": "Quatre lieux du globe sont repérés par une lettre sur une carte. Chacun se trouve sur un type de frontière de plaques différent.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre lieux sur des frontières de plaques",
+          "fond": "monde",
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "reykjavik",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "corail"
+            },
+            {
+              "id": "b",
+              "lieu": "tokyo",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "c",
+              "lieu": "mont-everest",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "brun"
+            },
+            {
+              "id": "d",
+              "lieu": "san-francisco",
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "vert"
+            }
+          ]
+        },
+        {
+          "id": "obs",
+          "type": "tableau",
+          "titre": "Ce qu’on y observe",
+          "colonnes": [
+            "Repère",
+            "Observations"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Volcans à lave fluide, séismes superficiels, roche neuve qui se forme"
+            ],
+            [
+              "B",
+              "Fosse océanique, séismes profonds, volcans explosifs"
+            ],
+            [
+              "C",
+              "Chaîne de montagnes, séismes, pas de volcans"
+            ],
+            [
+              "D",
+              "Séismes, pas de volcanisme, deux plaques qui glissent"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque repère au type de frontière.",
+          "paires": [
+            [
+              "A",
+              "Divergente (dorsale)"
+            ],
+            [
+              "B",
+              "Convergente : subduction"
+            ],
+            [
+              "C",
+              "Convergente : collision"
+            ],
+            [
+              "D",
+              "Coulissante (faille transformante)"
+            ]
+          ],
+          "aide": "Lis les observations : volcans ? fosse ? montagnes ? glissement ?",
+          "explication": "A : plaques qui s’écartent ; B : une plaque plonge ; C : deux plaques continentales se heurtent ; D : elles glissent."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le lieu où deux plaques s’écartent.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Cherche la lave fluide et la lithosphère neuve.",
+          "explication": "Le lieu **A** est sur une dorsale : les plaques s’écartent et de la lithosphère neuve se forme."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche le lieu où une plaque océanique plonge sous une autre.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Une fosse océanique marque l’endroit où elle plonge.",
+          "explication": "Le lieu **B** est une zone de **subduction** : fosse, séismes profonds, volcans explosifs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi n’y a-t-il pas de volcans au lieu D ?",
+          "options": [
+            "Les plaques glissent l’une contre l’autre sans faire remonter de magma",
+            "Les plaques s’écartent trop vite",
+            "La plaque plonge trop profondément",
+            "Il y a trop d’eau"
+          ],
+          "reponse": 0,
+          "aide": "Pense au mouvement des plaques en D.",
+          "explication": "Une frontière **coulissante** ne fait remonter aucun magma : séismes, mais pas de volcans."
+        }
+      ]
+    },
+    {
+      "chapitre": "171ce417-ed06-5aa8-b7a7-bb6ac32075f2",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le plancher de l’océan raconte son âge",
+      "competence": "raisonner",
+      "situation": "En 1912, Alfred Wegener propose que les continents dérivent. Cinquante ans plus tard, les mesures de l’âge du plancher océanique donnent raison à son idée.",
+      "documents": [
+        {
+          "id": "age",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Âge du plancher océanique selon la distance à la dorsale",
+          "categories": [
+            "0",
+            "250",
+            "500",
+            "750",
+            "1 000",
+            "1 250"
+          ],
+          "series": [
+            {
+              "nom": "Âge",
+              "valeurs": [
+                0,
+                5,
+                10,
+                15,
+                20,
+                25
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Âge",
+            "unite": "millions d’années",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Distance à la dorsale (km)"
+          },
+          "valeurs": false,
+          "source": "Valeurs simplifiées pour l’exercice"
+        },
+        {
+          "id": "wegener",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Une idée rejetée, puis confirmée",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "En 1912, Alfred Wegener propose que les continents se déplacent : les côtes de l’Amérique du Sud et de l’Afrique s’emboîtent, des fossiles identiques se retrouvent des deux côtés de l’Atlantique.",
+            "La plupart des géologues le rejettent : Wegener ne sait pas expliquer quelle force pourrait déplacer des continents entiers.",
+            "Dans les années 1960, la cartographie des fonds océaniques et les mesures magnétiques montrent que l’océan s’ouvre à la dorsale."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis l’âge du plancher océanique à 1 000 km de la dorsale.",
+          "reponse": 20,
+          "unite": "M. d’années",
+          "aide": "Repère 1 000 sur l’axe horizontal puis monte jusqu’à la courbe.",
+          "explication": "À 1 000 km de la dorsale, le plancher a **20 millions d’années**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la vitesse d’écartement en cm par an (1 000 km en 20 millions d’années).",
+          "reponse": 5,
+          "unite": "cm/an",
+          "aide": "Convertis : 1 km = 100 000 cm, donc 1 000 km = 100 000 000 cm. Divise par 20 000 000.",
+          "explication": "100 000 000 cm ÷ 20 000 000 ans = **5 cm/an**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’augmentation de l’âge quand on s’éloigne de la dorsale ?",
+          "options": [
+            "De la lithosphère neuve se forme à la dorsale puis s’écarte de part et d’autre",
+            "Le plancher a été formé d’un seul coup",
+            "Les roches vieillissent plus vite près de la dorsale",
+            "Les plaques ne bougent pas"
+          ],
+          "reponse": 0,
+          "aide": "Plus on est loin de la dorsale, plus la roche est vieille.",
+          "explication": "La roche la plus jeune est à la dorsale : c’est là que naît la lithosphère, qui s’écarte ensuite (**expansion océanique**)."
+        },
+        {
+          "type": "choix",
+          "enonce": "D’après le texte, pourquoi les géologues ont-ils d’abord rejeté l’idée de Wegener ?",
+          "options": [
+            "Il n’expliquait pas le moteur du déplacement",
+            "Les côtes ne s’emboîtaient pas",
+            "Les fossiles étaient différents",
+            "Il n’avait aucune observation"
+          ],
+          "reponse": 0,
+          "aide": "Relis le deuxième paragraphe.",
+          "explication": "Wegener avait des arguments, mais **aucun moteur** : il a fallu attendre la convection du manteau et l’expansion océanique."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes du recyclage de la lithosphère.",
+          "items": [
+            "Du magma remonte à la dorsale et forme de la lithosphère neuve",
+            "La plaque s’écarte de la dorsale en refroidissant",
+            "Elle rencontre une autre plaque",
+            "Elle plonge dans le manteau (subduction)"
+          ],
+          "aide": "Cela commence à la dorsale et finit à la fosse.",
+          "explication": "La lithosphère **naît** à la dorsale, voyage, puis **disparaît** en subduction : la surface se recycle."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8a8c587-11c9-50d2-9266-7705de781e3d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Où la roche casse",
+      "competence": "observer-schema",
+      "situation": "Lors d’un séisme, le sol vibre en surface alors que tout commence en profondeur. Un schéma en coupe montre deux points importants.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "Coupe du sol lors d’un séisme",
+          "largeur": 320,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 70,
+              "l": 280,
+              "h": 130,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                20,
+                70
+              ],
+              "a": [
+                300,
+                70
+              ],
+              "teinte": "encre"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                160,
+                70
+              ],
+              "a": [
+                160,
+                150
+              ],
+              "style": "pointilles",
+              "teinte": "encre"
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 70,
+              "r": 7,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "epi",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 160,
+              "cy": 150,
+              "r": 9,
+              "teinte": "violet",
+              "motif": "plein",
+              "id": "foyer",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 240,
+              "y": 35,
+              "texte": "A",
+              "vers": [
+                167,
+                66
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 240,
+              "y": 175,
+              "texte": "B",
+              "vers": [
+                169,
+                152
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 60,
+              "y": 90,
+              "texte": "Surface",
+              "taille": "petit",
+              "italique": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche le point où la roche se rompt en profondeur.",
+          "reponse": [
+            "foyer"
+          ],
+          "aide": "Il est en profondeur, sous la surface.",
+          "explication": "Le point **B** est le **foyer** (ou hypocentre) : là où la roche se rompt."
+        },
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche le point de la surface situé à la verticale du foyer.",
+          "reponse": [
+            "epi"
+          ],
+          "aide": "Suis la ligne pointillée vers le haut.",
+          "explication": "Le point **A** est l’**épicentre**, à la verticale du foyer."
+        },
+        {
+          "type": "choix",
+          "enonce": "Où les dégâts sont-ils en général les plus importants ?",
+          "options": [
+            "À l’épicentre",
+            "Au foyer, seulement",
+            "Le plus loin possible de l’épicentre",
+            "Partout de la même façon"
+          ],
+          "reponse": 0,
+          "aide": "L’épicentre est le point de la surface le plus proche du foyer.",
+          "explication": "En général, les dégâts sont maximaux à l’**épicentre**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8a8c587-11c9-50d2-9266-7705de781e3d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Même séisme, effets différents",
+      "competence": "analyser-document",
+      "situation": "Un séisme de magnitude 6,1 (événement imaginé) est ressenti dans trois villes situées à des distances différentes de l’épicentre.",
+      "documents": [
+        {
+          "id": "inten",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Intensité du séisme dans trois villes",
+          "categories": [
+            "Ville A (5 km)",
+            "Ville B (40 km)",
+            "Ville C (120 km)"
+          ],
+          "series": [
+            {
+              "nom": "Intensité",
+              "valeurs": [
+                8,
+                6,
+                3
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Intensité",
+            "unite": "degré",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "valeurs": false,
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "effets",
+          "type": "tableau",
+          "titre": "Ce qu’on observe",
+          "colonnes": [
+            "Ville",
+            "Effets observés"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Murs fissurés, bâtiments anciens très endommagés"
+            ],
+            [
+              "B",
+              "Objets tombés, fissures légères"
+            ],
+            [
+              "C",
+              "Ressenti par quelques personnes à l’intérieur"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "inten",
+          "enonce": "Touche la barre de la ville où les effets sont les plus forts.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "L’intensité la plus haute est celle où l’on ressent le plus.",
+          "explication": "La ville A, la plus proche, a l’intensité la plus forte : **8**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Combien de valeurs de magnitude ce séisme possède-t-il ?",
+          "options": [
+            "Une seule",
+            "Une par ville",
+            "Une par habitant",
+            "Aucune, seulement des intensités"
+          ],
+          "reponse": 0,
+          "aide": "La magnitude mesure l’énergie libérée à la source.",
+          "explication": "La **magnitude** est unique pour un séisme ; l’**intensité**, elle, dépend du lieu."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait l’intensité quand on s’éloigne de l’épicentre ?",
+          "options": [
+            "Elle diminue en général",
+            "Elle augmente",
+            "Elle reste identique",
+            "Elle devient négative"
+          ],
+          "reponse": 0,
+          "aide": "Compare A, B et C.",
+          "explication": "De A à C, l’intensité passe de 8 à 3 : elle **diminue** avec la distance."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un séisme de magnitude 7 libère environ 30 fois plus d’énergie qu’un séisme de magnitude 6. Combien de fois plus d’énergie qu’un séisme de magnitude 5 ?",
+          "reponse": 900,
+          "unite": "fois",
+          "aide": "De 5 à 7, il y a deux degrés : multiplie 30 par 30.",
+          "explication": "30 × 30 = **900 fois** plus d’énergie : l’échelle est logarithmique."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "La magnitude mesure l’___ libérée ; l’intensité mesure les ___ en un lieu donné.",
+          "reponses": [
+            [
+              "énergie"
+            ],
+            [
+              "effets"
+            ]
+          ],
+          "banque": [
+            "énergie",
+            "effets",
+            "durée",
+            "distance"
+          ],
+          "aide": "Une seule valeur contre une valeur par lieu.",
+          "explication": "Magnitude : **énergie** libérée. Intensité : **effets** ressentis et observés."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8a8c587-11c9-50d2-9266-7705de781e3d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le plus fort n’est pas le plus meurtrier",
+      "competence": "raisonner",
+      "situation": "Deux séismes (imaginés pour l’exercice) ont frappé deux régions du monde la même année. Leur bilan humain surprend : le plus puissant n’est pas le plus meurtrier.",
+      "documents": [
+        {
+          "id": "deux",
+          "type": "tableau",
+          "titre": "Deux séismes comparés",
+          "colonnes": [
+            "",
+            "Séisme X",
+            "Séisme Y"
+          ],
+          "lignes": [
+            [
+              "Magnitude",
+              "6,6",
+              "5,9"
+            ],
+            [
+              "Lieu",
+              "Région de montagne peu peuplée",
+              "Grande ville de 2 millions d’habitants"
+            ],
+            [
+              "Constructions",
+              "Normes parasismiques",
+              "Immeubles anciens, sans normes"
+            ],
+            [
+              "Bilan",
+              "Dégâts légers, aucune victime",
+              "Plusieurs centaines de victimes"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Deux événements imaginés"
+        },
+        {
+          "id": "normes",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Part des bâtiments construits aux normes",
+          "categories": [
+            "Séisme X",
+            "Séisme Y"
+          ],
+          "series": [
+            {
+              "nom": "Bâtiments aux normes",
+              "valeurs": [
+                95,
+                10
+              ],
+              "teinte": "vert"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des bâtiments",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "valeurs": false,
+          "source": "Données imaginées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Le séisme le plus puissant est-il le plus meurtrier ?",
+          "options": [
+            "Non : le séisme Y est moins puissant mais frappe une zone très vulnérable",
+            "Oui : plus la magnitude est forte, plus il y a de victimes",
+            "On ne peut pas comparer",
+            "Oui, car il y a moins de normes"
+          ],
+          "reponse": 0,
+          "aide": "Compare les magnitudes et les bilans.",
+          "explication": "Y est moins puissant (5,9) mais plus meurtrier : population dense et bâtiments fragiles. La **vulnérabilité** compte autant que l’énergie."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque notion à sa définition.",
+          "paires": [
+            [
+              "Aléa",
+              "Probabilité qu’un séisme se produise"
+            ],
+            [
+              "Vulnérabilité",
+              "Personnes, bâtiments et activités exposés"
+            ],
+            [
+              "Risque",
+              "Croisement de l’aléa et de la vulnérabilité"
+            ]
+          ],
+          "aide": "Une seule de ces notions dépend de ce que l’homme construit.",
+          "explication": "L’**aléa** est naturel, la **vulnérabilité** dépend de nous, le **risque** les croise."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque action.",
+          "categories": [
+            "Réduit la vulnérabilité",
+            "Impossible : on ne peut pas le faire"
+          ],
+          "items": [
+            [
+              "Construire selon les normes parasismiques",
+              0
+            ],
+            [
+              "Entraîner la population à se mettre à l’abri",
+              0
+            ],
+            [
+              "Empêcher le séisme de se produire",
+              1
+            ],
+            [
+              "Prédire le jour exact du prochain séisme",
+              1
+            ],
+            [
+              "Éviter de construire dans les zones les plus exposées",
+              0
+            ]
+          ],
+          "aide": "On ne peut agir ni sur l’aléa ni sur la date.",
+          "explication": "On agit sur la **vulnérabilité** ; on ne sait ni empêcher ni **prédire** un séisme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour réduire le risque dans la ville Y, sur quoi peut-on agir ?",
+          "options": [
+            "Sur la vulnérabilité : renforcer ou reconstruire les bâtiments",
+            "Sur l’aléa : calmer les failles",
+            "Sur la magnitude du prochain séisme",
+            "On ne peut rien faire"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le graphique des bâtiments aux normes.",
+          "explication": "Seule la **vulnérabilité** est modifiable : normes, rénovation, éducation."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les autorités de Y ne peuvent-elles pas évacuer la ville juste avant le prochain séisme ?",
+          "options": [
+            "On ne sait pas prédire la date d’un séisme",
+            "Les séismes ont toujours lieu la nuit",
+            "Les sismographes ne fonctionnent pas",
+            "L’évacuation est interdite"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la différence entre séisme et éruption.",
+          "explication": "On ne sait pas **prédire** la date d’un séisme : il faut prévenir (normes, éducation), pas prévoir."
+        }
+      ]
+    },
+    {
+      "chapitre": "b8f98dd3-2843-5f84-82b9-88c2d7212717",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le chemin du magma",
+      "competence": "observer-schema",
+      "situation": "Un volcan ne sort pas de nulle part : le magma qui jaillit a voyagé depuis la profondeur. Un schéma en coupe montre son trajet.",
+      "documents": [
+        {
+          "id": "volcan",
+          "type": "schema",
+          "titre": "Coupe d’un volcan",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  40,
+                  170
+                ],
+                [
+                  130,
+                  60
+                ],
+                [
+                  190,
+                  60
+                ],
+                [
+                  280,
+                  170
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 170,
+              "l": 280,
+              "h": 50,
+              "teinte": "brun",
+              "motif": "hachures"
+            },
+            {
+              "forme": "rect",
+              "x": 152,
+              "y": 64,
+              "l": 16,
+              "h": 120,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "cheminee",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 195,
+              "rx": 60,
+              "ry": 18,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "reservoir",
+              "zone": true
+            },
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 62,
+              "rx": 26,
+              "ry": 6,
+              "teinte": "encre",
+              "motif": "plein",
+              "id": "cratere",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 260,
+              "y": 40,
+              "texte": "A",
+              "vers": [
+                180,
+                60
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 260,
+              "y": 120,
+              "texte": "B",
+              "vers": [
+                170,
+                120
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 260,
+              "y": 215,
+              "texte": "C",
+              "vers": [
+                218,
+                198
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "volcan",
+          "enonce": "Touche l’endroit où le magma s’accumule en profondeur.",
+          "reponse": [
+            "reservoir"
+          ],
+          "aide": "Il est tout en bas, sous le volcan.",
+          "explication": "Le magma s’accumule dans le **réservoir** (C)."
+        },
+        {
+          "type": "zone",
+          "document": "volcan",
+          "enonce": "Touche l’ouverture par laquelle le magma sort.",
+          "reponse": [
+            "cratere"
+          ],
+          "aide": "Elle est au sommet.",
+          "explication": "Le magma sort par le **cratère** (A)."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range le trajet du magma.",
+          "items": [
+            "Il s’accumule dans le réservoir",
+            "Il remonte par la cheminée",
+            "Il sort par le cratère"
+          ],
+          "aide": "Il part du bas pour monter vers le haut.",
+          "explication": "Réservoir, puis **cheminée**, puis **cratère**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un magma fluide dont les gaz s’échappent facilement donne surtout…",
+          "options": [
+            "Des coulées de lave",
+            "Des nuées ardentes",
+            "Un tsunami",
+            "Des séismes sans éruption"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’éruption effusive.",
+          "explication": "Un magma **fluide** donne une éruption **effusive** : des coulées de lave et des fontaines."
+        }
+      ]
+    },
+    {
+      "chapitre": "b8f98dd3-2843-5f84-82b9-88c2d7212717",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux volcans, deux caractères",
+      "competence": "analyser-document",
+      "situation": "Le Piton de la Fournaise (La Réunion) et la Montagne Pelée (Martinique) sont deux volcans actifs français, mais leurs éruptions n’ont rien en commun.",
+      "documents": [
+        {
+          "id": "deux",
+          "type": "tableau",
+          "titre": "Deux volcans comparés",
+          "colonnes": [
+            "",
+            "Piton de la Fournaise",
+            "Montagne Pelée"
+          ],
+          "lignes": [
+            [
+              "Silice dans le magma",
+              "Peu",
+              "Beaucoup"
+            ],
+            [
+              "Viscosité du magma",
+              "Faible (fluide)",
+              "Forte (visqueux)"
+            ],
+            [
+              "Gaz",
+              "S’échappent facilement",
+              "Retenus jusqu’à la rupture"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "pelee",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Saint-Pierre, 8 mai 1902",
+          "auteur": "Texte écrit pour l’exercice, d’après des faits historiques",
+          "blocs": [
+            "Le 8 mai 1902, une nuée ardente dévale les pentes de la Montagne Pelée. Elle atteint la ville de Saint-Pierre, à environ 6 km du sommet, en quelques instants. La ville est détruite."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Classe chaque manifestation.",
+          "categories": [
+            "Éruption effusive",
+            "Éruption explosive"
+          ],
+          "items": [
+            [
+              "Coulées de lave",
+              0
+            ],
+            [
+              "Fontaines de lave",
+              0
+            ],
+            [
+              "Nuées ardentes",
+              1
+            ],
+            [
+              "Cendres et blocs projetés",
+              1
+            ]
+          ],
+          "aide": "Fluide : lave qui coule. Visqueux : explosion.",
+          "explication": "Un magma fluide produit des coulées ; un magma visqueux, riche en gaz retenus, des **nuées ardentes** et des cendres."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une nuée ardente dévale à 300 km/h. Combien de secondes met-elle à parcourir 6 km ?",
+          "reponse": 72,
+          "unite": "s",
+          "aide": "Calcule 6 ÷ 300 en heures, puis convertis en secondes (1 h = 3 600 s).",
+          "explication": "6 ÷ 300 = 0,02 h = **72 s** : impossible de fuir."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi peut-on souvent fuir une coulée de lave fluide, mais pas une nuée ardente ?",
+          "options": [
+            "La coulée est lente alors que la nuée ardente file à plusieurs centaines de km/h",
+            "La lave fluide est froide",
+            "La nuée ardente est invisible",
+            "Les coulées s’arrêtent toujours seules"
+          ],
+          "reponse": 0,
+          "aide": "Compare les vitesses.",
+          "explication": "La coulée avance lentement ; la nuée ardente, mélange brûlant de gaz et de particules, **file à plusieurs centaines de km/h**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le tableau, quelle propriété du magma explique que les gaz soient retenus jusqu’à la rupture ?",
+          "options": [
+            "Sa forte viscosité",
+            "Sa faible teneur en silice",
+            "Sa température basse",
+            "Sa couleur"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne « Viscosité ».",
+          "explication": "Un magma **visqueux**, riche en silice, retient ses gaz : la pression monte jusqu’à l’explosion."
+        }
+      ]
+    },
+    {
+      "chapitre": "b8f98dd3-2843-5f84-82b9-88c2d7212717",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le volcan qui se réveille",
+      "competence": "analyser-document",
+      "situation": "Un observatoire surveille un volcan imaginé, comme au Pinatubo en 1991 : des instruments mesurent en continu les signes d’une éruption.",
+      "documents": [
+        {
+          "id": "seismes",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Nombre de séismes volcaniques par jour",
+          "categories": [
+            "J-5",
+            "J-4",
+            "J-3",
+            "J-2",
+            "J-1"
+          ],
+          "series": [
+            {
+              "nom": "Séismes par jour",
+              "valeurs": [
+                4,
+                9,
+                25,
+                70,
+                160
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Séismes",
+            "unite": "par jour",
+            "min": 0,
+            "max": 180,
+            "pas": 20
+          },
+          "valeurs": false,
+          "source": "Données imaginées"
+        },
+        {
+          "id": "gonfle",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Gonflement de l’édifice volcanique",
+          "categories": [
+            "J-5",
+            "J-4",
+            "J-3",
+            "J-2",
+            "J-1"
+          ],
+          "series": [
+            {
+              "nom": "Gonflement",
+              "valeurs": [
+                0,
+                1,
+                3,
+                7,
+                15
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Gonflement cumulé",
+            "unite": "cm",
+            "min": 0,
+            "max": 16,
+            "pas": 2
+          },
+          "valeurs": false,
+          "source": "Données imaginées"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de séismes volcaniques sont enregistrés à J-2 ?",
+          "reponse": 70,
+          "unite": "séismes",
+          "aide": "Cherche J-2 sur le premier graphique.",
+          "explication": "À J-2, il y a **70 séismes** par jour."
+        },
+        {
+          "type": "zone",
+          "document": "seismes",
+          "enonce": "Touche le premier jour où l’on dépasse 100 séismes par jour.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Regarde la dernière valeur.",
+          "explication": "À **J-1**, le volcan enregistre 160 séismes par jour."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque signe précurseur à son instrument.",
+          "paires": [
+            [
+              "Petits séismes",
+              "Sismographes"
+            ],
+            [
+              "Gonflement de l’édifice",
+              "GPS et inclinomètres"
+            ],
+            [
+              "Changement des gaz",
+              "Analyseurs de gaz"
+            ],
+            [
+              "Hausse de température",
+              "Capteurs et imagerie thermique"
+            ]
+          ],
+          "aide": "Chaque instrument mesure un signe différent.",
+          "explication": "Séismes : sismographes ; gonflement : GPS ; gaz : analyseurs ; température : capteurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Deux signes précurseurs s’aggravent en même temps. Que doit faire l’observatoire ?",
+          "options": [
+            "Relever le niveau d’alerte et préparer l’évacuation",
+            "Attendre sans rien faire",
+            "Fermer les instruments",
+            "Annoncer une date exacte d’éruption dans un an"
+          ],
+          "reponse": 0,
+          "aide": "Pense au Pinatubo.",
+          "explication": "L’observatoire relève l’alerte et prépare l’**évacuation**, comme au Pinatubo, ce qui a sauvé des dizaines de milliers de vies."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi peut-on évacuer avant une éruption, mais pas avant un séisme ?",
+          "options": [
+            "Une éruption est souvent précédée de signes détectables, un séisme non prédictible",
+            "Les volcans sont toujours visibles",
+            "Les séismes sont plus rares",
+            "Il n’y a pas de signe précurseur avant une éruption"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les deux graphiques : un volcan « prévient ».",
+          "explication": "Contrairement aux séismes, une éruption est souvent **précédée de signes** que l’on mesure."
+        }
+      ]
+    },
+    {
+      "chapitre": "e846375f-64f9-5a0f-b33c-845aac278e36",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Pourquoi l’équateur est le plus chaud",
+      "competence": "lire-graphique",
+      "situation": "Le Soleil chauffe la Terre de façon inégale. Un graphique donne l’énergie solaire reçue à quatre latitudes, au sommet de l’atmosphère.",
+      "documents": [
+        {
+          "id": "energie",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Énergie solaire reçue selon la latitude",
+          "categories": [
+            "Équateur (0°)",
+            "30°",
+            "60°",
+            "Pôle (90°)"
+          ],
+          "series": [
+            {
+              "nom": "Énergie reçue",
+              "valeurs": [
+                410,
+                380,
+                250,
+                170
+              ],
+              "teinte": "jaune"
+            }
+          ],
+          "axeY": {
+            "titre": "Énergie reçue",
+            "unite": "W/m²",
+            "min": 0,
+            "max": 450,
+            "pas": 50
+          },
+          "valeurs": false,
+          "source": "Moyennes annuelles, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "energie",
+          "enonce": "Touche la barre de la latitude qui reçoit le plus d’énergie.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "L’**équateur** reçoit le plus d’énergie : 410 W/m²."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel écart d’énergie reçue y a-t-il entre l’équateur et le pôle ?",
+          "reponse": 240,
+          "unite": "W/m²",
+          "aide": "Soustrais 170 à 410.",
+          "explication": "410 − 170 = **240 W/m²** : excédent à l’équateur, déficit aux pôles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’équateur reçoit-il plus d’énergie que les pôles ?",
+          "options": [
+            "Les rayons y arrivent presque à la verticale, l’énergie est concentrée",
+            "Il est plus proche du Soleil",
+            "Il y a moins d’atmosphère aux pôles",
+            "La Terre y tourne plus vite"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’angle des rayons avec le sol.",
+          "explication": "À l’équateur, les rayons sont presque **verticaux** : l’énergie se concentre. Aux pôles, ils sont très inclinés et répartis sur une grande surface."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "L’air chaud est moins dense : il ___ et crée une zone de ___ pression.",
+          "reponses": [
+            [
+              "s’élève"
+            ],
+            [
+              "basse"
+            ]
+          ],
+          "banque": [
+            "s’élève",
+            "descend",
+            "basse",
+            "haute"
+          ],
+          "aide": "L’air chaud monte comme un ballon.",
+          "explication": "L’air chaud **s’élève** et crée une **dépression** (basse pression)."
+        }
+      ]
+    },
+    {
+      "chapitre": "e846375f-64f9-5a0f-b33c-845aac278e36",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du vent entre deux zones de pression",
+      "competence": "observer-schema",
+      "situation": "Sur une carte météo simplifiée, deux zones de pression sont séparées par quelques centaines de kilomètres.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "schema",
+          "titre": "Deux zones de pression",
+          "largeur": 320,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 100,
+              "r": 48,
+              "teinte": "bleu",
+              "motif": "clair",
+              "id": "haute",
+              "zone": true,
+              "texte": "1030 hPa"
+            },
+            {
+              "forme": "cercle",
+              "cx": 250,
+              "cy": 100,
+              "r": 48,
+              "teinte": "corail",
+              "motif": "clair",
+              "id": "basse",
+              "zone": true,
+              "texte": "1000 hPa"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                122,
+                100
+              ],
+              "a": [
+                198,
+                100
+              ],
+              "style": "pointilles",
+              "teinte": "encre"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 90,
+              "texte": "Vent ?",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la zone de basse pression.",
+          "reponse": [
+            "basse"
+          ],
+          "aide": "La pression la plus faible est la plus petite valeur.",
+          "explication": "La zone à **1000 hPa** est la **dépression**, la zone de basse pression."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la différence de pression entre les deux zones ?",
+          "reponse": 30,
+          "unite": "hPa",
+          "aide": "Soustrais la plus petite à la plus grande.",
+          "explication": "1030 − 1000 = **30 hPa**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans quel sens souffle le vent ?",
+          "options": [
+            "De la zone à 1030 hPa vers la zone à 1000 hPa",
+            "De la zone à 1000 hPa vers la zone à 1030 hPa",
+            "Il tourne sans direction",
+            "Il ne souffle pas"
+          ],
+          "reponse": 0,
+          "aide": "Le vent va de la haute vers la basse pression.",
+          "explication": "Le vent est de l’air qui va de la **haute** pression vers la **basse** pression."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque zone à son mouvement d’air.",
+          "paires": [
+            [
+              "Anticyclone",
+              "Haute pression, air froid qui descend"
+            ],
+            [
+              "Dépression",
+              "Basse pression, air chaud qui s’élève"
+            ]
+          ],
+          "aide": "L’air chaud monte, l’air froid descend.",
+          "explication": "Un **anticyclone** : air froid qui descend, haute pression. Une **dépression** : air chaud qui s’élève, basse pression."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un été très pluvieux à Paris, est-ce un changement de climat ?",
+          "options": [
+            "Non : c’est de la météo, le climat se mesure sur au moins trente ans",
+            "Oui : un seul été suffit",
+            "Oui : deux étés suffisent",
+            "Non : le climat ne change jamais"
+          ],
+          "reponse": 0,
+          "aide": "Combien d’années faut-il pour parler de climat ?",
+          "explication": "La météo décrit quelques jours ; le climat, des moyennes sur **trente ans au moins**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e846375f-64f9-5a0f-b33c-845aac278e36",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Brest, Montréal et le Gulf Stream",
+      "competence": "analyser-document",
+      "situation": "Brest, Montréal et Reykjavik sont à des latitudes différentes, mais leurs hivers ne suivent pas la logique de la latitude. Une carte et un tableau donnent des indices.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Un courant chaud dans l’Atlantique Nord",
+          "fond": "monde",
+          "cadrage": [
+            -100,
+            25,
+            20,
+            72
+          ],
+          "lieux": [
+            {
+              "id": "brest",
+              "lieu": "brest",
+              "nom": "Brest",
+              "symbole": "point",
+              "teinte": "corail"
+            },
+            {
+              "id": "montreal",
+              "lieu": "montreal",
+              "nom": "Montréal",
+              "symbole": "point",
+              "teinte": "violet"
+            },
+            {
+              "id": "reykjavik",
+              "lieu": "reykjavik",
+              "nom": "Reykjavik",
+              "symbole": "point",
+              "teinte": "bleu"
+            }
+          ],
+          "traits": [
+            {
+              "id": "gs",
+              "points": [
+                [
+                  -80,
+                  26
+                ],
+                [
+                  -75,
+                  35
+                ],
+                [
+                  -58,
+                  40
+                ],
+                [
+                  -40,
+                  47
+                ],
+                [
+                  -18,
+                  53
+                ]
+              ],
+              "style": "fleche",
+              "teinte": "corail",
+              "etiquette": "Gulf Stream"
+            }
+          ]
+        },
+        {
+          "id": "temp",
+          "type": "tableau",
+          "titre": "Températures moyennes en janvier",
+          "colonnes": [
+            "Ville",
+            "Latitude",
+            "Température (°C)"
+          ],
+          "lignes": [
+            [
+              "Montréal",
+              "45° N",
+              -10
+            ],
+            [
+              "Brest",
+              "48° N",
+              7
+            ],
+            [
+              "Reykjavik",
+              "64° N",
+              0
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel écart de température y a-t-il en janvier entre Brest et Montréal ?",
+          "reponse": 17,
+          "unite": "°C",
+          "aide": "Calcule 7 − (−10).",
+          "explication": "7 − (−10) = **17 °C**, alors que Brest est à peine plus au nord."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville la plus froide malgré sa latitude plus basse que Brest.",
+          "reponse": [
+            "montreal"
+          ],
+          "aide": "Compare les températures du tableau.",
+          "explication": "**Montréal** (45° N) est à −10 °C, bien plus froide que Brest (48° N)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la cause principale de la douceur à Brest et Reykjavik ?",
+          "options": [
+            "Le Gulf Stream, courant de surface chaud venu du sud",
+            "La proximité de l’équateur",
+            "Un volcan voisin",
+            "Les saisons inversées"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la flèche corail sur la carte.",
+          "explication": "Le **Gulf Stream** apporte de la chaleur vers l’Europe de l’Ouest et adoucit son climat."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui entraîne ce courant de surface ?",
+          "options": [
+            "Les vents",
+            "Les marées",
+            "Les volcans sous-marins",
+            "La Lune seule"
+          ],
+          "reponse": 0,
+          "aide": "Les courants de surface suivent la circulation de l’air.",
+          "explication": "Les courants de **surface** sont entraînés par les **vents**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le moteur des courants océaniques profonds ?",
+          "options": [
+            "Les différences de température et de salinité de l’eau",
+            "Les vents de surface",
+            "Les séismes",
+            "Les marées"
+          ],
+          "reponse": 0,
+          "aide": "Eau froide et salée = plus dense.",
+          "explication": "En profondeur, la **circulation thermohaline** dépend de la température et de la salinité."
+        }
+      ]
+    },
+    {
+      "chapitre": "f71c298c-e57f-5655-9a07-0da534baede9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le thermomètre de la planète",
+      "competence": "lire-graphique",
+      "situation": "Les scientifiques suivent la température moyenne mondiale depuis plus d’un siècle. Ils la comparent à celle de la fin du XIXe siècle.",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Écart de température moyenne mondiale",
+          "categories": [
+            "1900",
+            "1950",
+            "1980",
+            "2000",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Écart",
+              "valeurs": [
+                0,
+                0.2,
+                0.5,
+                0.8,
+                1.2
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Écart par rapport à 1850–1900",
+            "unite": "°C",
+            "min": 0,
+            "max": 1.5,
+            "pas": 0.25
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Lis l’écart de température en 2020.",
+          "reponse": 1.2,
+          "unite": "°C",
+          "aide": "Cherche le dernier point de la courbe.",
+          "explication": "En 2020, la planète est **1,2 °C** plus chaude qu’à la fin du XIXe siècle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la température a-t-elle augmenté entre 1980 et 2020 ?",
+          "reponse": 0.7,
+          "unite": "°C",
+          "aide": "Soustrais les deux valeurs.",
+          "explication": "1,2 − 0,5 = **0,7 °C** en 40 ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la cause principale du réchauffement observé depuis l’ère industrielle ?",
+          "options": [
+            "Les émissions humaines de gaz à effet de serre",
+            "Une hausse de l’activité du Soleil",
+            "Les volcans",
+            "Les paramètres de l’orbite terrestre"
+          ],
+          "reponse": 0,
+          "aide": "La vitesse du réchauffement est sans équivalent connu.",
+          "explication": "Ce sont les **gaz à effet de serre d’origine humaine** (charbon, pétrole, gaz) qui renforcent l’effet de serre."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Les gaz à effet de serre laissent passer le rayonnement ___ et retiennent une partie de l’___ renvoyé par le sol.",
+          "reponses": [
+            [
+              "solaire"
+            ],
+            [
+              "infrarouge"
+            ]
+          ],
+          "banque": [
+            "solaire",
+            "infrarouge",
+            "ultraviolet",
+            "sonore"
+          ],
+          "aide": "Le sol renvoie de la chaleur.",
+          "explication": "Ils laissent passer le rayonnement **solaire** et retiennent l’**infrarouge** du sol."
+        }
+      ]
+    },
+    {
+      "chapitre": "f71c298c-e57f-5655-9a07-0da534baede9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les bulles d’air de la glace",
+      "competence": "analyser-document",
+      "situation": "En forant la glace de l’Antarctique, des chercheurs récupèrent des bulles d’air vieilles de 800 000 ans et mesurent leur teneur en dioxyde de carbone.",
+      "documents": [
+        {
+          "id": "co2",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Teneur en CO₂ de l’atmosphère",
+          "categories": [
+            "Périodes glaciaires",
+            "Périodes interglaciaires",
+            "1850",
+            "2023"
+          ],
+          "series": [
+            {
+              "nom": "CO₂",
+              "valeurs": [
+                180,
+                280,
+                285,
+                420
+              ],
+              "teinte": "brun"
+            }
+          ],
+          "axeY": {
+            "titre": "Teneur en CO₂",
+            "unite": "ppm",
+            "min": 0,
+            "max": 450,
+            "pas": 50
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies, carottes de glace et mesures directes"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "co2",
+          "enonce": "Touche la barre de la teneur actuelle (2023).",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la plus haute.",
+          "explication": "En 2023, la teneur est d’environ **420 ppm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la teneur en CO₂ a-t-elle augmenté entre 1850 et 2023 ?",
+          "reponse": 135,
+          "unite": "ppm",
+          "aide": "Calcule 420 − 285.",
+          "explication": "420 − 285 = **135 ppm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que conclure en comparant 2023 aux périodes passées ?",
+          "options": [
+            "La teneur actuelle dépasse tout ce qu’on a connu depuis 800 000 ans",
+            "La teneur actuelle est normale pour une période interglaciaire",
+            "La teneur n’a jamais changé",
+            "Elle a baissé depuis 1850"
+          ],
+          "reponse": 0,
+          "aide": "Compare 420 aux maxima des périodes interglaciaires.",
+          "explication": "420 ppm est bien au-dessus des 280 ppm des périodes chaudes : c’est **inédit** depuis 800 000 ans."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque source dans le gaz qu’elle émet surtout.",
+          "categories": [
+            "CO₂",
+            "Méthane",
+            "Protoxyde d’azote"
+          ],
+          "items": [
+            [
+              "Combustibles fossiles",
+              0
+            ],
+            [
+              "Déforestation",
+              0
+            ],
+            [
+              "Élevage",
+              1
+            ],
+            [
+              "Rizières",
+              1
+            ],
+            [
+              "Engrais",
+              2
+            ]
+          ],
+          "aide": "Le méthane vient du vivant (élevage, rizières), le protoxyde d’azote des engrais.",
+          "explication": "CO₂ : combustibles fossiles, déforestation. Méthane : élevage, rizières. Protoxyde d’azote : engrais."
+        }
+      ]
+    },
+    {
+      "chapitre": "f71c298c-e57f-5655-9a07-0da534baede9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Saint-Mirval face à la mer",
+      "competence": "raisonner",
+      "situation": "La commune imaginée de Saint-Mirval, sur la côte atlantique, prépare un plan climat. Elle observe la hausse du niveau des mers et choisit plusieurs actions.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le plan climat de Saint-Mirval",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "La commune installe des panneaux solaires sur l’école et la mairie.",
+            "Elle construit une digue de 800 mètres pour protéger le front de mer.",
+            "Elle isole les bâtiments publics pour réduire leur chauffage.",
+            "Elle met en place un système d’alerte tempête, avec des exercices pour les habitants.",
+            "Elle replante une forêt de vingt hectares."
+          ]
+        },
+        {
+          "id": "mer",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Hausse du niveau moyen des mers",
+          "categories": [
+            "1900",
+            "1950",
+            "2000",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Hausse cumulée",
+              "valeurs": [
+                0,
+                6,
+                15,
+                21
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Hausse cumulée",
+            "unite": "cm",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "valeurs": false,
+          "source": "Ordre de grandeur, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien le niveau des mers a-t-il monté entre 1950 et 2020 ?",
+          "reponse": 15,
+          "unite": "cm",
+          "aide": "Soustrais les deux valeurs lues.",
+          "explication": "21 − 6 = **15 cm** en 70 ans."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque action de la commune.",
+          "categories": [
+            "Atténuation (réduire les émissions)",
+            "Adaptation (réduire la vulnérabilité)"
+          ],
+          "items": [
+            [
+              "Panneaux solaires",
+              0
+            ],
+            [
+              "Digue de 800 m",
+              1
+            ],
+            [
+              "Isolation des bâtiments",
+              0
+            ],
+            [
+              "Système d’alerte tempête",
+              1
+            ],
+            [
+              "Forêt de vingt hectares",
+              0
+            ]
+          ],
+          "aide": "Atténuer : émettre moins ou absorber du CO₂. S’adapter : se protéger des effets.",
+          "explication": "Solaire, isolation et forêt **atténuent** ; digue et alerte **adaptent**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelles sont les deux causes principales de la hausse du niveau des mers ?",
+          "options": [
+            "La dilatation de l’eau qui se réchauffe et la fonte des glaciers et des calottes",
+            "Les marées et la pluie",
+            "La fonte de la banquise seulement",
+            "Les rivières qui gonflent"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que devient l’eau chauffée et à ce qui fond sur les continents.",
+          "explication": "**Eau qui se dilate** en se réchauffant et **fonte des glaciers et calottes** : la banquise, elle, flotte déjà."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la commune doit-elle faire les deux types d’actions à la fois ?",
+          "options": [
+            "Une partie du réchauffement à venir est déjà engagée par les émissions passées",
+            "L’atténuation est inutile",
+            "L’adaptation est interdite",
+            "Les deux coûtent la même chose"
+          ],
+          "reponse": 0,
+          "aide": "Le climat ne réagit pas instantanément.",
+          "explication": "Le climat ne réagit pas tout de suite : il faut **atténuer** pour limiter l’avenir et **s’adapter** à ce qui est déjà engagé."
+        }
+      ]
+    },
+    {
+      "chapitre": "82e1f2db-4624-5bb5-af30-d8f85e544293",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui boit l’eau du monde ?",
+      "competence": "lire-graphique",
+      "situation": "L’eau douce prélevée dans le monde est utilisée par trois grands secteurs. Un diagramme circulaire donne leurs parts.",
+      "documents": [
+        {
+          "id": "usages",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Usages de l’eau prélevée dans le monde",
+          "categories": [
+            "Agriculture",
+            "Industrie",
+            "Usage domestique"
+          ],
+          "series": [
+            {
+              "nom": "Part",
+              "valeurs": [
+                70,
+                20,
+                10
+              ]
+            }
+          ],
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "usages",
+          "enonce": "Touche le secteur qui consomme le plus d’eau.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la plus grande part.",
+          "explication": "L’**agriculture** consomme environ 70 % de l’eau prélevée, surtout pour l’irrigation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de l’eau est utilisée par l’industrie et les particuliers ensemble ?",
+          "reponse": 30,
+          "unite": "%",
+          "aide": "Additionne 20 et 10.",
+          "explication": "20 + 10 = **30 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un Français utilise environ 150 litres d’eau par jour à la maison. Combien de litres en une semaine ?",
+          "reponse": 1050,
+          "unite": "L",
+          "aide": "Multiplie par 7.",
+          "explication": "150 × 7 = **1 050 litres**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle technique permettrait de réduire fortement la plus grosse part de consommation ?",
+          "options": [
+            "L’irrigation au goutte-à-goutte",
+            "Des douches plus longues",
+            "Plus de piscines",
+            "Le dessalement partout"
+          ],
+          "reponse": 0,
+          "aide": "Pense au secteur qui consomme 70 %.",
+          "explication": "Le **goutte-à-goutte** économise l’eau en agriculture, premier consommateur."
+        }
+      ]
+    },
+    {
+      "chapitre": "82e1f2db-4624-5bb5-af30-d8f85e544293",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du fleuve au robinet",
+      "competence": "analyser-document",
+      "situation": "Une usine de potabilisation prélève l’eau d’un fleuve. À chaque étape, des analyses mesurent les particules et les pesticides.",
+      "documents": [
+        {
+          "id": "analyses",
+          "type": "tableau",
+          "titre": "Analyses de l’eau à chaque étape",
+          "colonnes": [
+            "Étape",
+            "Particules (NTU)",
+            "Pesticides (µg/L)"
+          ],
+          "lignes": [
+            [
+              "Eau brute du fleuve",
+              40,
+              0.4
+            ],
+            [
+              "Après dégrillage",
+              38,
+              0.4
+            ],
+            [
+              "Après floculation-décantation",
+              5,
+              0.4
+            ],
+            [
+              "Après filtration sur sable",
+              0.5,
+              0.4
+            ],
+            [
+              "Après charbon actif",
+              0.3,
+              0.05
+            ],
+            [
+              "Après désinfection",
+              0.3,
+              0.05
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice. NTU : unité de turbidité"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de NTU la floculation-décantation fait-elle baisser les particules ?",
+          "reponse": 33,
+          "unite": "NTU",
+          "aide": "Compare la ligne « Après dégrillage » et la ligne suivante.",
+          "explication": "38 − 5 = **33 NTU** : c’est l’étape qui retire le plus de particules."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle étape retient les pesticides dissous ?",
+          "options": [
+            "La filtration sur charbon actif",
+            "Le dégrillage",
+            "La filtration sur sable",
+            "La désinfection"
+          ],
+          "reponse": 0,
+          "aide": "Regarde où la colonne « Pesticides » change.",
+          "explication": "Les pesticides sont **dissous** : seul le **charbon actif** les retient (0,4 puis 0,05 µg/L)."
+        },
+        {
+          "type": "choix",
+          "enonce": "La limite est de 0,1 µg/L par pesticide. L’eau finale la respecte-t-elle ?",
+          "options": [
+            "Oui : 0,05 µg/L est inférieur à 0,1 µg/L",
+            "Non : 0,05 µg/L est supérieur à 0,1 µg/L",
+            "On ne peut pas savoir",
+            "Non : l’eau brute est trop polluée"
+          ],
+          "reponse": 0,
+          "aide": "Compare 0,05 et 0,1.",
+          "explication": "0,05 < 0,1 : l’eau finale est **conforme** pour ce critère."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque étape à son rôle.",
+          "paires": [
+            [
+              "Dégrillage",
+              "Retirer les gros débris"
+            ],
+            [
+              "Floculation-décantation",
+              "Faire tomber les particules"
+            ],
+            [
+              "Filtration sur sable",
+              "Retenir les fines particules"
+            ],
+            [
+              "Désinfection",
+              "Détruire les micro-organismes avec chlore ou ozone"
+            ]
+          ],
+          "aide": "Chaque étape a un rôle précis dans l’ordre de la chaîne.",
+          "explication": "Dégrillage : gros débris ; floculation-décantation : particules ; sable : fines ; désinfection : micro-organismes."
+        }
+      ]
+    },
+    {
+      "chapitre": "82e1f2db-4624-5bb5-af30-d8f85e544293",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une nappe qui se vide",
+      "competence": "raisonner",
+      "situation": "Dans une région imaginée, une nappe phréatique alimente les villes et l’agriculture. Ses gestionnaires suivent les prélèvements, la recharge naturelle et la qualité de l’eau près de la côte.",
+      "documents": [
+        {
+          "id": "nappe",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prélèvements et recharge de la nappe",
+          "categories": [
+            "2000",
+            "2005",
+            "2010",
+            "2015",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Prélèvements",
+              "valeurs": [
+                40,
+                48,
+                55,
+                62,
+                70
+              ],
+              "teinte": "corail"
+            },
+            {
+              "nom": "Recharge naturelle",
+              "valeurs": [
+                50,
+                50,
+                50,
+                50,
+                50
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "millions de m³/an",
+            "min": 0,
+            "max": 80,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false,
+          "source": "Données imaginées"
+        },
+        {
+          "id": "sel",
+          "type": "tableau",
+          "titre": "Sel dans l’eau d’un forage côtier",
+          "colonnes": [
+            "Année",
+            "Chlorures (mg/L)"
+          ],
+          "lignes": [
+            [
+              "2000",
+              200
+            ],
+            [
+              "2010",
+              450
+            ],
+            [
+              "2020",
+              900
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées. Limite de potabilité : 250 mg/L"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "nappe",
+          "enonce": "Touche la première année où les prélèvements dépassent la recharge.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Compare les deux courbes année par année.",
+          "explication": "En **2010**, les prélèvements (55) dépassent la recharge (50)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le déficit de la nappe en 2020 ?",
+          "reponse": 20,
+          "unite": "millions de m³",
+          "aide": "Soustrais la recharge aux prélèvements.",
+          "explication": "70 − 50 = **20 millions de m³** prélevés en trop en un an."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment appelle-t-on un prélèvement plus rapide que la recharge naturelle ?",
+          "options": [
+            "La surexploitation",
+            "La désalinisation",
+            "L’infiltration",
+            "La condensation"
+          ],
+          "reponse": 0,
+          "aide": "Le niveau baisse quand on prélève trop.",
+          "explication": "Prélever plus vite que la recharge, c’est la **surexploitation**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’eau du forage côtier devient-elle salée ?",
+          "options": [
+            "Le pompage près du littoral attire l’eau de mer dans la nappe",
+            "La pluie est salée",
+            "Les rivières salent la nappe",
+            "Le sol est naturellement salé"
+          ],
+          "reponse": 0,
+          "aide": "La nappe côtière touche la mer.",
+          "explication": "Le **pompage littoral** fait avancer l’eau de mer : c’est la **salinisation** de la nappe."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque remède.",
+          "categories": [
+            "Réduire les prélèvements",
+            "Protéger la qualité de l’eau"
+          ],
+          "items": [
+            [
+              "Passer au goutte-à-goutte",
+              0
+            ],
+            [
+              "Réparer les fuites du réseau",
+              0
+            ],
+            [
+              "Protéger les zones de captage",
+              1
+            ],
+            [
+              "Interdire les pesticides autour des captages",
+              1
+            ]
+          ],
+          "aide": "Certains remèdes économisent l’eau, d’autres évitent de la polluer.",
+          "explication": "Goutte-à-goutte et réparation des fuites **réduisent les prélèvements** ; protéger les captages **préserve la qualité**."
+        }
+      ]
+    },
+    {
+      "chapitre": "df030cf8-5fb9-5bd7-a2ed-14a4a6ec9474",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le piège à pétrole",
+      "competence": "observer-schema",
+      "situation": "Le pétrole ne se trouve pas n’importe où dans le sous-sol. Un schéma montre les trois couches d’un gisement.",
+      "documents": [
+        {
+          "id": "gisement",
+          "type": "schema",
+          "titre": "Coupe d’un gisement de pétrole",
+          "largeur": 320,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 40,
+              "l": 240,
+              "h": 40,
+              "teinte": "gris",
+              "motif": "plein",
+              "id": "couverture",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 80,
+              "l": 240,
+              "h": 50,
+              "teinte": "ambre",
+              "motif": "points",
+              "id": "reservoir",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 30,
+              "y": 130,
+              "l": 240,
+              "h": 60,
+              "teinte": "brun",
+              "motif": "plein",
+              "id": "mere",
+              "zone": true
+            },
+            {
+              "forme": "etiquette",
+              "x": 295,
+              "y": 30,
+              "texte": "A",
+              "vers": [
+                270,
+                60
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 295,
+              "y": 105,
+              "texte": "B",
+              "vers": [
+                270,
+                105
+              ]
+            },
+            {
+              "forme": "etiquette",
+              "x": 295,
+              "y": 175,
+              "texte": "C",
+              "vers": [
+                270,
+                160
+              ]
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "gisement",
+          "enonce": "Touche la roche imperméable qui piège le pétrole.",
+          "reponse": [
+            "couverture"
+          ],
+          "aide": "Elle est au-dessus des autres.",
+          "explication": "La **roche couverture** (A) est imperméable : elle empêche les hydrocarbures de s’échapper."
+        },
+        {
+          "type": "zone",
+          "document": "gisement",
+          "enonce": "Touche la roche riche en matière organique, où se forme le pétrole.",
+          "reponse": [
+            "mere"
+          ],
+          "aide": "Elle est tout en bas.",
+          "explication": "La **roche mère** (C) contient la matière organique transformée en hydrocarbures."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes de la formation d’un gisement.",
+          "items": [
+            "Une roche mère riche en matière organique se dépose",
+            "Elle est enfouie : température et pression augmentent",
+            "Les hydrocarbures migrent à travers une roche réservoir poreuse",
+            "Une roche couverture imperméable les piège"
+          ],
+          "aide": "La matière organique d’abord, le piège à la fin.",
+          "explication": "Roche mère, **enfouissement**, **migration** dans le réservoir, **piégeage** sous la couverture."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il s’il n’y a pas de roche couverture ?",
+          "options": [
+            "Les hydrocarbures s’échappent : pas de gisement exploitable",
+            "Le gisement est plus grand",
+            "Le pétrole devient du gaz",
+            "Rien ne change"
+          ],
+          "reponse": 0,
+          "aide": "Sans piège, rien ne retient le pétrole.",
+          "explication": "Sans le piège, pas de gisement exploitable : les hydrocarbures remontent et se perdent."
+        }
+      ]
+    },
+    {
+      "chapitre": "df030cf8-5fb9-5bd7-a2ed-14a4a6ec9474",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un baril, mille usages",
+      "competence": "lire-graphique",
+      "situation": "Une fois raffiné, un pétrole brut donne des produits très différents. Un graphique en donne une répartition simplifiée.",
+      "documents": [
+        {
+          "id": "produits",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Produits tirés d’un pétrole brut",
+          "categories": [
+            "Essences",
+            "Gazole et fiouls",
+            "Kérosène",
+            "Gaz",
+            "Bitumes et autres",
+            "Pétrochimie"
+          ],
+          "series": [
+            {
+              "nom": "Part",
+              "valeurs": [
+                25,
+                40,
+                10,
+                5,
+                10,
+                10
+              ],
+              "teinte": "brun"
+            }
+          ],
+          "axeY": {
+            "titre": "Part du pétrole raffiné",
+            "unite": "%",
+            "min": 0,
+            "max": 45,
+            "pas": 5
+          },
+          "valeurs": false,
+          "source": "Répartition simplifiée, écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "produits",
+          "enonce": "Touche le produit le plus important en quantité.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "Le **gazole et les fiouls** pèsent 40 % : transport lourd et chauffage."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part du pétrole va aux essences et au kérosène réunis ?",
+          "reponse": 35,
+          "unite": "%",
+          "aide": "Additionne les deux barres.",
+          "explication": "25 + 10 = **35 %**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque produit à son usage.",
+          "paires": [
+            [
+              "Kérosène",
+              "Aviation"
+            ],
+            [
+              "Bitumes",
+              "Routes"
+            ],
+            [
+              "Gazole",
+              "Transport lourd et chauffage"
+            ],
+            [
+              "Produits de la pétrochimie",
+              "Plastiques et textiles synthétiques"
+            ]
+          ],
+          "aide": "Un produit peut servir à un seul secteur dominant.",
+          "explication": "Kérosène : avions ; bitumes : routes ; gazole : camions et chauffage ; pétrochimie : plastiques."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi sortir du pétrole ne concerne-t-il pas que les voitures ?",
+          "options": [
+            "Il sert aussi à produire plastiques, textiles synthétiques, engrais et médicaments",
+            "Les voitures ne consomment pas de pétrole",
+            "Le pétrole ne sert qu’à chauffer",
+            "Les plastiques viennent des arbres"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la barre de la pétrochimie.",
+          "explication": "La **pétrochimie** fabrique plastiques, textiles synthétiques, engrais, médicaments, peintures : le pétrole est partout."
+        }
+      ]
+    },
+    {
+      "chapitre": "df030cf8-5fb9-5bd7-a2ed-14a4a6ec9474",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Chercher sous la mer",
+      "competence": "raisonner",
+      "situation": "Une compagnie imaginaire explore une zone marine. Elle envoie des ondes sismiques dans le sous-sol et mesure le temps de retour de leurs échos, puis elle fore un puits.",
+      "documents": [
+        {
+          "id": "echos",
+          "type": "tableau",
+          "titre": "Échos de la sismique réflexion",
+          "colonnes": [
+            "Interface",
+            "Temps aller-retour (s)"
+          ],
+          "lignes": [
+            [
+              "Interface 1",
+              0.5
+            ],
+            [
+              "Interface 2",
+              1
+            ],
+            [
+              "Interface 3",
+              1.6
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Vitesse moyenne des ondes : 2 000 m/s. Données imaginées"
+        },
+        {
+          "id": "forage",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Rapport du forage Ouest-1",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "À 1 600 m, un sable poreux contient un peu d’huile.",
+            "Au-dessus, le sable est perméable : aucune couche imperméable ne ferme le sable.",
+            "À 2 500 m, des marnes très riches en matière organique sont présentes."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la profondeur de l’interface 2.",
+          "reponse": 1000,
+          "unite": "m",
+          "aide": "Le temps est un aller-retour. Calcule 2 000 × 1,0 puis divise par 2.",
+          "explication": "(2 000 × 1,0) ÷ 2 = **1 000 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la profondeur de l’interface 3.",
+          "reponse": 1600,
+          "unite": "m",
+          "aide": "Même méthode : vitesse × temps ÷ 2.",
+          "explication": "(2 000 × 1,6) ÷ 2 = **1 600 m** : c’est le niveau du sable à huile."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi divise-t-on par 2 ?",
+          "options": [
+            "L’onde fait un aller-retour",
+            "Le son va deux fois plus vite sous terre",
+            "Le temps est mesuré en demi-secondes",
+            "Pour obtenir des kilomètres"
+          ],
+          "reponse": 0,
+          "aide": "Que mesure le temps indiqué ?",
+          "explication": "L’écho a fait un **aller-retour** : la profondeur est la moitié du chemin parcouru."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce forage ne trouve-t-il pas de gisement exploitable ?",
+          "options": [
+            "Il n’y a pas de roche couverture imperméable pour piéger l’huile",
+            "Il n’y a pas de roche mère",
+            "Il n’y a pas de sable poreux",
+            "La mer est trop profonde"
+          ],
+          "reponse": 0,
+          "aide": "Il y a une roche mère, un réservoir… et la suite ?",
+          "explication": "La roche mère et le réservoir sont là, mais **sans roche couverture** l’huile ne reste pas piégée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle affirmation sur les alternatives au pétrole est exacte ?",
+          "options": [
+            "Aucune ne le remplace à elle seule : c’est leur combinaison qui compte",
+            "Le solaire suffit pour tout",
+            "Le recyclage des plastiques règle tout",
+            "Il n’existe aucune alternative"
+          ],
+          "reponse": 0,
+          "aide": "Pense à un « bouquet » de solutions.",
+          "explication": "Renouvelables, nucléaire, sobriété, recyclage, transports collectifs : c’est la **combinaison** qui compte."
+        }
+      ]
+    },
+    {
+      "chapitre": "7368682b-0167-5612-8ba8-311a33f65605",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’oiseau qui monte dans la montagne",
+      "competence": "lire-tableau",
+      "situation": "Des ornithologues suivent depuis cinquante ans une espèce d’oiseau de montagne (imaginée pour l’exercice) et notent l’altitude moyenne de ses nids.",
+      "documents": [
+        {
+          "id": "nids",
+          "type": "tableau",
+          "titre": "Altitude moyenne des nids",
+          "colonnes": [
+            "Année",
+            "Altitude moyenne des nids (m)"
+          ],
+          "lignes": [
+            [
+              "1970",
+              "1 200"
+            ],
+            [
+              "1995",
+              "1 320"
+            ],
+            [
+              "2020",
+              "1 450"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres l’altitude moyenne des nids a-t-elle augmenté entre 1970 et 2020 ?",
+          "reponse": 250,
+          "unite": "m",
+          "aide": "Soustrais 1 200 à 1 450.",
+          "explication": "1 450 − 1 200 = **250 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans quel sens se déplace l’aire de répartition de l’espèce avec le réchauffement ?",
+          "options": [
+            "Vers l’altitude, là où il fait plus frais",
+            "Vers la plaine",
+            "Elle ne bouge pas",
+            "Vers le sud"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’évolution des nids dans le tableau.",
+          "explication": "Avec le réchauffement, les espèces montent en **altitude** pour retrouver la fraîcheur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si l’espèce niche déjà à 2 900 m et que le sommet est à 3 000 m, que se passe-t-il quand il fait encore plus chaud ?",
+          "options": [
+            "Elle n’a plus d’endroit où monter et risque de disparaître localement",
+            "Elle monte encore de 250 m",
+            "Elle change de couleur",
+            "Rien"
+          ],
+          "reponse": 0,
+          "aide": "Combien de mètres reste-t-il avant le sommet ?",
+          "explication": "Il ne reste que 100 m : sans lieu plus frais, l’espèce risque une **disparition locale**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Face au réchauffement, une espèce peut se ___, s’___ ou disparaître localement.",
+          "reponses": [
+            [
+              "déplacer"
+            ],
+            [
+              "adapter"
+            ]
+          ],
+          "banque": [
+            "déplacer",
+            "adapter",
+            "cacher",
+            "reproduire"
+          ],
+          "aide": "Trois réponses possibles pour le vivant.",
+          "explication": "Trois réponses : se **déplacer**, s’**adapter**, ou **disparaître** localement."
+        }
+      ]
+    },
+    {
+      "chapitre": "7368682b-0167-5612-8ba8-311a33f65605",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Des chenilles trop tôt",
+      "competence": "analyser-document",
+      "situation": "Une mésange nourrit ses oisillons de chenilles. Des chercheurs comparent, en 1990 et en 2020, le jour de l’année du pic de chenilles et celui de l’éclosion des oisillons.",
+      "documents": [
+        {
+          "id": "decal",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Chenilles et oisillons",
+          "categories": [
+            "1990",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Pic de chenilles",
+              "valeurs": [
+                140,
+                125
+              ],
+              "teinte": "vert"
+            },
+            {
+              "nom": "Éclosion des oisillons",
+              "valeurs": [
+                140,
+                135
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Jour de l’année",
+            "unite": "jour",
+            "min": 100,
+            "max": 150,
+            "pas": 10
+          },
+          "valeurs": false,
+          "source": "Données simplifiées, écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "En 2020, de combien de jours l’éclosion des oisillons suit-elle le pic de chenilles ?",
+          "reponse": 10,
+          "unite": "jours",
+          "aide": "Soustrais les deux valeurs de 2020.",
+          "explication": "135 − 125 = **10 jours** : les oisillons éclosent après le pic de nourriture."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la conséquence pour la nichée en 2020 ?",
+          "options": [
+            "Les oisillons manquent de nourriture quand ils en ont le plus besoin",
+            "Les oisillons ont deux fois plus de nourriture",
+            "Les chenilles disparaissent à jamais",
+            "Rien ne change"
+          ],
+          "reponse": 0,
+          "aide": "Les chenilles sont déjà moins nombreuses à l’éclosion.",
+          "explication": "C’est une **désynchronisation** : les espèces dépendantes ne suivent plus le même calendrier."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque changement à un exemple.",
+          "paires": [
+            [
+              "Phénologie",
+              "Floraison plus précoce"
+            ],
+            [
+              "Désynchronisation",
+              "Chenilles avant les oisillons"
+            ],
+            [
+              "Aire de répartition",
+              "Espèces qui montent en altitude"
+            ],
+            [
+              "Blanchissement",
+              "Coraux qui expulsent leurs algues"
+            ]
+          ],
+          "aide": "Chaque mot désigne un effet précis du réchauffement.",
+          "explication": "Chaque terme correspond à un effet : calendrier, décalage, déplacement, coraux."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la vitesse du réchauffement est-elle un problème en soi ?",
+          "options": [
+            "Beaucoup d’espèces ne peuvent ni se déplacer ni s’adapter aussi vite",
+            "Toutes les espèces s’adaptent aussitôt",
+            "Le climat varie trop lentement",
+            "Les espèces ne dépendent pas les unes des autres"
+          ],
+          "reponse": 0,
+          "aide": "S’adapter prend plusieurs générations.",
+          "explication": "S’**adapter** demande plusieurs générations et se **déplacer** un chemin libre : tout va trop vite."
+        }
+      ]
+    },
+    {
+      "chapitre": "7368682b-0167-5612-8ba8-311a33f65605",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le récif qui blanchit",
+      "competence": "raisonner",
+      "situation": "Un récif corallien imaginé se réchauffe. Les chercheurs notent la température de l’eau en été et schématisent les conséquences. Au-delà de 29 °C, les coraux de ce récif blanchissent.",
+      "documents": [
+        {
+          "id": "temp",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Température de l’eau en été",
+          "categories": [
+            "2000",
+            "2005",
+            "2010",
+            "2015",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Température",
+              "valeurs": [
+                28.2,
+                28.6,
+                29.1,
+                29.4,
+                29.8
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 27,
+            "max": 30,
+            "pas": 0.5
+          },
+          "valeurs": false,
+          "source": "Données imaginées"
+        },
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Conséquences en chaîne",
+          "noeuds": [
+            {
+              "id": "chaud",
+              "texte": "Eau trop chaude",
+              "emoji": "🌡️"
+            },
+            {
+              "id": "algues",
+              "texte": "Les coraux expulsent leurs algues"
+            },
+            {
+              "id": "inconnu",
+              "texte": "?"
+            },
+            {
+              "id": "faim",
+              "texte": "Les coraux manquent de nourriture"
+            },
+            {
+              "id": "perte",
+              "texte": "Poissons et protection des côtes en danger"
+            }
+          ],
+          "liens": [
+            {
+              "de": "chaud",
+              "a": "algues"
+            },
+            {
+              "de": "algues",
+              "a": "inconnu"
+            },
+            {
+              "de": "inconnu",
+              "a": "faim"
+            },
+            {
+              "de": "faim",
+              "a": "perte"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "temp",
+          "enonce": "Touche la première année où la température dépasse le seuil de 29 °C.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la première valeur au-dessus de 29.",
+          "explication": "En **2010**, l’eau atteint 29,1 °C : au-dessus du seuil de blanchissement."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel mot complète la chaîne : ce que subissent les coraux quand ils expulsent leurs algues ?",
+          "reponse": [
+            "blanchissement",
+            "le blanchissement",
+            "blanchiment"
+          ],
+          "aide": "Les coraux perdent leur couleur.",
+          "explication": "Les coraux **blanchissent** : ils perdent leurs algues colorées qui les nourrissent."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque écosystème à un service qu’il rend.",
+          "paires": [
+            [
+              "Récifs et mangroves",
+              "Protection des côtes"
+            ],
+            [
+              "Forêts et océans",
+              "Stockage de carbone"
+            ],
+            [
+              "Zones humides",
+              "Épuration de l’eau"
+            ],
+            [
+              "Insectes pollinisateurs",
+              "Pollinisation des cultures"
+            ]
+          ],
+          "aide": "Un service écosystémique est un bénéfice pour les humains.",
+          "explication": "Chaque milieu rend un **service écosystémique** à nos sociétés."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment l’acidification des océans menace-t-elle les coraux ?",
+          "options": [
+            "Elle fragilise leurs squelettes calcaires",
+            "Elle augmente leur nourriture",
+            "Elle les protège du blanchissement",
+            "Elle refroidit l’eau"
+          ],
+          "reponse": 0,
+          "aide": "Le calcaire se dissout dans l’eau plus acide.",
+          "explication": "L’acidification, due au CO₂ dissous, **fragilise les squelettes calcaires** : une deuxième menace pour les coraux."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on faire d’autre que réduire les émissions pour aider le récif ?",
+          "options": [
+            "Réduire pollution et surexploitation pour lui laisser une chance de s’adapter",
+            "Ne rien faire",
+            "Remplacer les coraux par du plastique",
+            "Pêcher davantage"
+          ],
+          "reponse": 0,
+          "aide": "Moins de pressions, plus de chance de résister.",
+          "explication": "Réduire les **autres pressions** laisse aux écosystèmes une chance de s’adapter au climat."
+        }
+      ]
+    },
+    {
+      "chapitre": "af044f4f-758e-573f-adc4-5261889bd42f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinq pressions sur une île",
+      "competence": "analyser-texte",
+      "situation": "Un journal de voyage décrit les menaces pesant sur une île imaginée, Maraï. Chaque phrase correspond à une grande pression de l’humain sur la nature.",
+      "documents": [
+        {
+          "id": "marai",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Reportage à Maraï",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "La forêt est rasée pour planter des palmiers à huile.",
+            "Les chalutiers pêchent plus de poissons que la mer n’en renouvelle.",
+            "Des sacs en plastique s’accumulent sur les plages.",
+            "Des [[inv|rats]], arrivés dans les cales des cargos, dévorent les œufs des oiseaux marins.",
+            "L’eau devient plus chaude et les coraux blanchissent."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de grandes pressions différentes le texte cite-t-il ?",
+          "reponse": 5,
+          "aide": "Compte les paragraphes : chacun est une pression différente.",
+          "explication": "Le texte cite **5 pressions** : habitats, surexploitation, pollution, espèces invasives, climat."
+        },
+        {
+          "type": "zone",
+          "document": "marai",
+          "enonce": "Touche l’animal introduit sur l’île par le commerce mondial.",
+          "reponse": [
+            "inv"
+          ],
+          "aide": "Il est arrivé dans les cales des cargos.",
+          "explication": "Les **rats** sont une espèce **invasive**, transportée par le commerce mondial."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque phrase à sa pression.",
+          "paires": [
+            [
+              "Forêt rasée",
+              "Destruction des habitats"
+            ],
+            [
+              "Pêche excessive",
+              "Surexploitation"
+            ],
+            [
+              "Sacs en plastique",
+              "Pollution"
+            ],
+            [
+              "Eau plus chaude",
+              "Changement climatique"
+            ]
+          ],
+          "aide": "Cherche le mot-clé de chaque phrase.",
+          "explication": "Chaque phrase illustre une pression : habitats, surexploitation, pollution, climat."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ces pressions agissent-elles séparément ?",
+          "options": [
+            "Non : elles agissent ensemble et leurs effets se cumulent",
+            "Oui : elles s’annulent",
+            "Oui : une seule compte",
+            "Non : seul le climat compte"
+          ],
+          "reponse": 0,
+          "aide": "Un récif qui blanchit reste affaibli par la pêche et le plastique.",
+          "explication": "Elles agissent **ensemble** : leurs effets se **cumulent**."
+        }
+      ]
+    },
+    {
+      "chapitre": "af044f4f-758e-573f-adc4-5261889bd42f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une extinction qu’on ne rattrape pas",
+      "competence": "lire-graphique",
+      "situation": "Les scientifiques comparent le rythme actuel de disparition des espèces à celui qui existait avant les activités humaines. Ils parlent d’une sixième extinction de masse.",
+      "documents": [
+        {
+          "id": "extinction",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Taux d’extinction des espèces",
+          "categories": [
+            "Taux naturel",
+            "Taux actuel (minimum)",
+            "Taux actuel (maximum)"
+          ],
+          "series": [
+            {
+              "nom": "Taux",
+              "valeurs": [
+                1,
+                100,
+                1000
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Taux d’extinction",
+            "unite": "× taux naturel",
+            "min": 0,
+            "max": 1000,
+            "pas": 100
+          },
+          "valeurs": false,
+          "source": "Ordre de grandeur, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "extinction",
+          "enonce": "Touche la barre du taux d’extinction le plus élevé.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la plus haute.",
+          "explication": "Le taux actuel peut atteindre **1 000 fois** le taux naturel."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans un groupe où 3 espèces disparaissaient naturellement en un temps donné, combien disparaissent au minimum aujourd’hui ?",
+          "reponse": 300,
+          "unite": "espèces",
+          "aide": "Multiplie par le taux minimum lu sur le graphique.",
+          "explication": "3 × 100 = **300 espèces** au minimum."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque perte dans son niveau de biodiversité.",
+          "categories": [
+            "Écosystèmes",
+            "Espèces",
+            "Gènes"
+          ],
+          "items": [
+            [
+              "Une forêt entière disparaît",
+              0
+            ],
+            [
+              "Un oiseau s’éteint",
+              1
+            ],
+            [
+              "Une variante d’un gène disparaît",
+              2
+            ]
+          ],
+          "aide": "Du milieu entier à la molécule d’ADN.",
+          "explication": "On mesure la biodiversité aux niveaux des **écosystèmes**, des **espèces** et des **gènes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une rivière polluée peut être dépolluée et les poissons reviennent. Une espèce disparue, elle…",
+          "options": [
+            "Ne revient pas : la perte est irréversible",
+            "Revient toujours",
+            "Revient avec la pluie",
+            "Ne compte pas"
+          ],
+          "reponse": 0,
+          "aide": "Qu’est-ce qui ne peut pas être « réparé » ?",
+          "explication": "La disparition d’une espèce est **irréversible**, contrairement à une pollution."
+        }
+      ]
+    },
+    {
+      "chapitre": "af044f4f-758e-573f-adc4-5261889bd42f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Des succès, des défis",
+      "competence": "raisonner",
+      "situation": "Les décisions humaines peuvent faire reculer certains problèmes. Un graphique suit les substances qui détruisent l’ozone depuis 1990, un autre compare l’empreinte écologique de plusieurs pays.",
+      "documents": [
+        {
+          "id": "ozone",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Consommation de substances qui détruisent l’ozone",
+          "categories": [
+            "1990",
+            "1995",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Indice",
+              "valeurs": [
+                100,
+                60,
+                30,
+                5,
+                1
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Indice (100 en 1990)",
+            "unite": "",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "valeurs": false,
+          "source": "Valeurs indicatives arrondies"
+        },
+        {
+          "id": "empreinte",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Planètes nécessaires si tout le monde vivait comme…",
+          "categories": [
+            "Inde",
+            "Monde (moyenne)",
+            "France",
+            "États-Unis"
+          ],
+          "series": [
+            {
+              "nom": "Planètes",
+              "valeurs": [
+                0.8,
+                1.7,
+                2.8,
+                5.1
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre de planètes",
+            "unite": "",
+            "min": 0,
+            "max": 6,
+            "pas": 1
+          },
+          "valeurs": false,
+          "source": "Ordre de grandeur, valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage la consommation de ces substances a-t-elle baissé entre 1990 et 2020 ?",
+          "reponse": 99,
+          "unite": "%",
+          "aide": "Passe de l’indice 100 à l’indice 1.",
+          "explication": "100 − 1 = **99 %** de baisse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre le protocole de Montréal (1987) ?",
+          "options": [
+            "Que des décisions collectives produisent des effets mesurables",
+            "Que la couche d’ozone ne peut pas se reconstituer",
+            "Que l’ozone n’a aucun rôle",
+            "Que les décisions sont inutiles"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la courbe de l’ozone.",
+          "explication": "La couche d’**ozone** se reconstitue : les décisions collectives marchent."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque situation selon le pilier du développement durable.",
+          "categories": [
+            "Économique",
+            "Social",
+            "Environnemental"
+          ],
+          "items": [
+            [
+              "Une entreprise reste rentable",
+              0
+            ],
+            [
+              "Des conditions de travail décentes",
+              1
+            ],
+            [
+              "Une rivière est préservée",
+              2
+            ],
+            [
+              "Un commerce local trouve des clients",
+              0
+            ],
+            [
+              "Un logement abordable pour tous",
+              1
+            ]
+          ],
+          "aide": "Trois piliers : activité viable, conditions de vie décentes, milieux préservés.",
+          "explication": "Économique : activité viable. Social : vie décente. Environnemental : milieux préservés."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque geste de l’économie circulaire à un exemple.",
+          "paires": [
+            [
+              "Réduire",
+              "Acheter moins d’objets"
+            ],
+            [
+              "Réutiliser",
+              "Donner une seconde vie à un objet"
+            ],
+            [
+              "Réparer",
+              "Faire remettre en état un appareil"
+            ],
+            [
+              "Recycler",
+              "Transformer un déchet en matière nouvelle"
+            ]
+          ],
+          "aide": "Les quatre « R » de l’économie circulaire.",
+          "explication": "**Réduire**, **réutiliser**, **réparer**, **recycler** : les quatre gestes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si tout le monde vivait comme en France, combien de planètes faudrait-il à peu près ?",
+          "reponse": 2.8,
+          "unite": "planètes",
+          "tolerance": 0.1,
+          "aide": "Lis la barre « France ».",
+          "explication": "Il faudrait environ **2,8 planètes** : l’empreinte écologique dépasse ce que la Terre renouvelle."
+        }
+      ]
+    },
+    {
+      "chapitre": "67dde86d-d904-57e0-bd47-e4848cef0261",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du plus petit au plus grand",
+      "competence": "observer-schema",
+      "situation": "Le corps humain est organisé en niveaux emboîtés. Une chaîne les relie de la cellule à l’organisme.",
+      "documents": [
+        {
+          "id": "niveaux",
+          "type": "chaine",
+          "disposition": "colonne",
+          "titre": "Les niveaux d’organisation",
+          "noeuds": [
+            {
+              "id": "cellule",
+              "texte": "Cellule"
+            },
+            {
+              "id": "tissu",
+              "texte": "Tissu"
+            },
+            {
+              "id": "inconnu",
+              "texte": "?"
+            },
+            {
+              "id": "appareil",
+              "texte": "Appareil"
+            },
+            {
+              "id": "organisme",
+              "texte": "Organisme"
+            }
+          ],
+          "liens": [
+            {
+              "de": "cellule",
+              "a": "tissu"
+            },
+            {
+              "de": "tissu",
+              "a": "inconnu"
+            },
+            {
+              "de": "inconnu",
+              "a": "appareil"
+            },
+            {
+              "de": "appareil",
+              "a": "organisme"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "Quel niveau remplace le point d’interrogation (plusieurs tissus pour une fonction) ?",
+          "reponse": [
+            "organe",
+            "un organe",
+            "l’organe",
+            "l'organe"
+          ],
+          "aide": "Le cœur ou l’estomac en sont des exemples.",
+          "explication": "Le niveau manquant est l’**organe**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque exemple à son niveau.",
+          "paires": [
+            [
+              "Une cellule musculaire",
+              "Cellule"
+            ],
+            [
+              "Le tissu musculaire",
+              "Tissu"
+            ],
+            [
+              "L’estomac",
+              "Organe"
+            ],
+            [
+              "L’appareil digestif",
+              "Appareil"
+            ]
+          ],
+          "aide": "Du plus petit au plus grand.",
+          "explication": "Cellule, tissu, **organe**, appareil : chaque niveau en contient plusieurs du précédent."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la respiration cellulaire.",
+          "texte": "Glucose + dioxygène donne ___ + ___ + énergie.",
+          "reponses": [
+            [
+              "dioxyde de carbone"
+            ],
+            [
+              "eau"
+            ]
+          ],
+          "banque": [
+            "dioxyde de carbone",
+            "eau",
+            "amidon",
+            "dihydrogène"
+          ],
+          "aide": "La cellule libère l’énergie du glucose.",
+          "explication": "La cellule produit du **dioxyde de carbone**, de l’**eau** et de l’énergie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quels nutriments servent à fabriquer les protéines ?",
+          "options": [
+            "Les acides aminés",
+            "Les acides gras",
+            "Le glucose",
+            "Les sels minéraux"
+          ],
+          "reponse": 0,
+          "aide": "Les protéines sont des chaînes de petites molécules.",
+          "explication": "Les **acides aminés** servent à fabriquer les protéines."
+        }
+      ]
+    },
+    {
+      "chapitre": "67dde86d-d904-57e0-bd47-e4848cef0261",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un muscle, un cerveau, deux appétits",
+      "competence": "analyser-document",
+      "situation": "Pendant un effort, les muscles consomment davantage de dioxygène. Le cerveau, lui, consomme beaucoup toute la journée. Deux documents comparent leurs besoins.",
+      "documents": [
+        {
+          "id": "muscle",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Consommation de dioxygène d’un muscle de la jambe",
+          "categories": [
+            "Repos",
+            "Marche rapide",
+            "Course"
+          ],
+          "series": [
+            {
+              "nom": "Dioxygène consommé",
+              "valeurs": [
+                20,
+                120,
+                400
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Dioxygène consommé",
+            "unite": "mL/min",
+            "min": 0,
+            "max": 450,
+            "pas": 50
+          },
+          "valeurs": false,
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "cerveau",
+          "type": "tableau",
+          "titre": "Le cerveau et le glucose",
+          "colonnes": [
+            "Organe",
+            "Part de la masse du corps",
+            "Part du glucose consommé"
+          ],
+          "lignes": [
+            [
+              "Cerveau",
+              "2 %",
+              "20 %"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "muscle",
+          "enonce": "Touche la barre de la plus forte consommation de dioxygène.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la plus haute.",
+          "explication": "À la course, le muscle consomme le plus : **400 mL/min**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la consommation à la course dépasse-t-elle celle au repos ?",
+          "reponse": 20,
+          "aide": "Divise 400 par 20.",
+          "explication": "400 ÷ 20 = **20 fois** plus de dioxygène."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la respiration et le pouls s’accélèrent-ils à l’effort ?",
+          "options": [
+            "Les muscles ont besoin de plus de dioxygène et de glucose, à apporter plus vite",
+            "Les muscles produisent du dioxygène",
+            "Le cœur se repose",
+            "Les poumons rétrécissent"
+          ],
+          "reponse": 0,
+          "aide": "Les appareils respiratoire et circulatoire alimentent les cellules.",
+          "explication": "Les appareils **respiratoire** et **circulatoire** adaptent leur rythme aux besoins des cellules."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Par rapport à sa masse, le cerveau consomme combien de fois plus de glucose que si chaque organe consommait selon sa masse ? (part du glucose ÷ part de la masse)",
+          "reponse": 10,
+          "aide": "Divise 20 par 2.",
+          "explication": "20 ÷ 2 = **10 fois** : le cerveau est très gourmand, sans interruption possible."
+        }
+      ]
+    },
+    {
+      "chapitre": "67dde86d-d904-57e0-bd47-e4848cef0261",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Maximiser la surface",
+      "competence": "raisonner",
+      "situation": "Poumons et intestin grêle échangent avec le sang sur des surfaces immenses, bien plus grandes que celle de la peau. Un graphique et une chaîne en montrent le fonctionnement.",
+      "documents": [
+        {
+          "id": "surfaces",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Surfaces d’échange",
+          "categories": [
+            "Peau",
+            "Alvéoles pulmonaires",
+            "Villosités intestinales"
+          ],
+          "series": [
+            {
+              "nom": "Surface",
+              "valeurs": [
+                2,
+                100,
+                200
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Surface",
+            "unite": "m²",
+            "min": 0,
+            "max": 220,
+            "pas": 20
+          },
+          "valeurs": false,
+          "source": "Valeurs arrondies"
+        },
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Du dioxygène de l’air aux cellules",
+          "noeuds": [
+            {
+              "id": "air",
+              "texte": "Air",
+              "emoji": "🌬️"
+            },
+            {
+              "id": "alv",
+              "texte": "Alvéoles"
+            },
+            {
+              "id": "inconnu",
+              "texte": "?"
+            },
+            {
+              "id": "cell",
+              "texte": "Cellules"
+            }
+          ],
+          "liens": [
+            {
+              "de": "air",
+              "a": "alv"
+            },
+            {
+              "de": "alv",
+              "a": "inconnu"
+            },
+            {
+              "de": "inconnu",
+              "a": "cell"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "surfaces",
+          "enonce": "Touche la surface d’échange la plus étendue.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "Les **villosités intestinales** font environ 200 m²."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la surface des alvéoles dépasse-t-elle celle de la peau ?",
+          "reponse": 50,
+          "aide": "Divise 100 par 2.",
+          "explication": "100 ÷ 2 = **50 fois**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les alvéoles et les villosités ont-elles de telles surfaces ?",
+          "options": [
+            "Pour maximiser les échanges dans un volume réduit",
+            "Pour stocker de l’air",
+            "Pour protéger du froid",
+            "Pour augmenter le poids"
+          ],
+          "reponse": 0,
+          "aide": "La nature répète la même solution.",
+          "explication": "La solution commune : **maximiser la surface** d’échange dans un petit volume."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel liquide transporte le dioxygène jusqu’aux cellules, à la place du point d’interrogation ?",
+          "reponse": [
+            "sang",
+            "le sang"
+          ],
+          "aide": "Il circule dans les vaisseaux.",
+          "explication": "C’est le **sang** : l’appareil circulatoire transporte le dioxygène et les nutriments."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque appareil à ce qu’il fournit ou évacue.",
+          "paires": [
+            [
+              "Digestif",
+              "Nutriments"
+            ],
+            [
+              "Respiratoire",
+              "Dioxygène"
+            ],
+            [
+              "Circulatoire",
+              "Transport vers chaque cellule"
+            ],
+            [
+              "Excréteur",
+              "Élimination des déchets"
+            ]
+          ],
+          "aide": "Chaque appareil a un rôle propre et ils collaborent.",
+          "explication": "Digestif : nutriments ; respiratoire : dioxygène ; circulatoire : transport ; excréteur : déchets."
+        }
+      ]
+    }
+  ]
+}

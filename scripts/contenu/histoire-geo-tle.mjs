@@ -306,7 +306,7 @@ Les élections de 1986 sont perdues, ouvrant la **première cohabitation** — M
 
 ## Les grandes lois de société
 | Année | La loi | Ce qu’elle change |
-| 1974 | Majorité à **18 ans** | Un million d’électeurs de plus |
+| 1974 | Majorité à **18 ans** | Environ 2,4 millions d’électeurs de plus |
 | 1975 | Divorce par consentement mutuel | Le mariage devient dissoluble sans faute |
 | 1975 | **Loi Veil** | Dépénalisation de l’IVG, remboursée à partir de 1982 |
 | 1981 | Abolition de la **peine de mort** | Sous l’impulsion de Robert Badinter |
@@ -421,7 +421,7 @@ La puissance reste immense, mais elle ne suffit plus à imposer un ordre : c’e
 ## La justice et les droits
 | Institution ou texte | Date | Sa limite |
 | **Cour pénale internationale** | En fonction en 2002 | États-Unis, Chine et Russie n’en reconnaissent pas la compétence |
-| **Objectifs de développement durable** | 2015 | 17 cibles à l’horizon 2030, sans sanction |
+| **Objectifs de développement durable** | 2015 | 17 objectifs (169 cibles) à l’horizon 2030, sans sanction |
 
 ## Les limites structurelles
 | L’obstacle | Ce qu’il empêche |

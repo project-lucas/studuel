@@ -7,18 +7,9 @@ import {
   HeartHandshake,
   Wrench,
 } from 'lucide-react'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import SoundToggle from '@/components/ui/SoundToggle'
-import PageHeader from '@/components/PageHeader'
-import BackButton from '@/components/BackButton'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
 import { createClient } from '@/lib/supabase/server'
@@ -72,19 +63,18 @@ export default async function ComptePage() {
 
   return (
     <div>
-      <div className="mb-4">
-        <BackButton fallback="/reviser" />
-      </div>
-      <PageHeader title="Mon compte" />
+      {/* Une page à retour : l'en-tête commun (EnTetePage), et chaque bloc est
+          une `.carte` à titre de section — plus de Card shadcn à pied beige
+          ni de carte « jouet » à liseré violet au milieu (chantier
+          d'homogénéité, 24/09/2026). */}
+      <EnTetePage retour={{ fallback: '/moi' }} titre="Mon compte" />
 
-      <Card className="mx-auto w-full max-w-md">
-        <CardHeader>
-          <CardTitle>{profile?.full_name || user.email}</CardTitle>
-          <CardDescription>{user.email}</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2 text-sm">
+      <section aria-label="Mon profil" className="carte mx-auto w-full max-w-md p-4">
+        <h2 className="titre-section truncate">{profile?.full_name || user.email}</h2>
+        <p className="mt-0.5 truncate text-sm font-semibold text-muted-foreground">{user.email}</p>
+        <div className="mt-3 space-y-2 text-sm">
           <p className="flex items-center gap-2">
-            <BadgeCheck className="size-4 text-primary" />
+            <BadgeCheck className="size-4 text-primary" aria-hidden="true" />
             Abonnement : <strong>{TIER_LABELS[tier] ?? tier}</strong>
           </p>
           <p className="text-muted-foreground">
@@ -104,8 +94,8 @@ export default async function ComptePage() {
               Passe à Studuel+ pour débloquer tous les tests premium.
             </p>
           ) : null}
-        </CardContent>
-        <CardFooter className="flex flex-wrap gap-2">
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
           <form action={signOut}>
             <Button variant="outline" type="submit">
               <LogOut className="size-4" /> Se déconnecter
@@ -129,8 +119,8 @@ export default async function ComptePage() {
               </Link>
             </Button>
           ) : null}
-        </CardFooter>
-      </Card>
+        </div>
+      </section>
 
       {/* Choix de la classe : déplacé ici depuis l'onglet Moi (c'est un réglage
           de compte, pas un indicateur de progrès). Pilote tout le contenu. */}

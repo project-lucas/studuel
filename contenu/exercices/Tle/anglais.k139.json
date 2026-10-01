@@ -1,0 +1,2068 @@
+{
+ "niveau": "Tle",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "0f3d0948-f21a-543e-b556-0b791a9376f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux ados, deux parlements",
+   "competence": "comprendre-langue",
+   "situation": "Isla, de Glasgow, et Rhys, de Cardiff, se découvrent par messages avant un échange scolaire. Ils comparent leur façon d’être britanniques.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Isla",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Rhys",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Isla",
+       "texte": "Hi Rhys! I’m [[i|Scottish]], but I feel [[i|British]] too: I can be both."
+      },
+      {
+       "qui": "Rhys",
+       "texte": "Same here. In Wales, the Senedd decides on schools and hospitals, but defence and foreign policy stay in London."
+      },
+      {
+       "qui": "Isla",
+       "texte": "It works the same way for us: Holyrood runs our schools and our health service."
+      },
+      {
+       "qui": "Rhys",
+       "texte": "So Westminster has kept some powers and handed the others over to the nations."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les deux adjectifs qu’Isla emploie pour dire qui elle est.",
+     "aide": "Cherche dans son premier message deux mots qui disent son appartenance.",
+     "explication": "Isla se dit **Scottish** et **British** : on peut se sentir écossais et britannique à la fois."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après Rhys, quels domaines restent entre les mains de Londres ?",
+     "options": [
+      "La défense et la politique étrangère",
+      "Les programmes des écoles galloises",
+      "L’organisation des hôpitaux écossais",
+      "Le choix des règles dans les écoles"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin du deuxième message : « … stay in London ».",
+     "explication": "Rhys le dit : **defence and foreign policy** restent à Londres, alors que les écoles et les hôpitaux relèvent des parlements des nations."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "This transfer of powers from London to Scotland and Wales is called ___.",
+     "reponses": [
+      [
+       "devolution"
+      ]
+     ],
+     "banque": [
+      "devolution",
+      "secession",
+      "sovereignty",
+      "independence"
+     ],
+     "aide": "Londres délègue des compétences sans renoncer à sa souveraineté.",
+     "explication": "C’est la **devolution** : Westminster confie des compétences aux nations sans perdre sa souveraineté."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f3d0948-f21a-543e-b556-0b791a9376f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Brexit : ce que dit le vote écossais",
+   "competence": "lire-graphique",
+   "situation": "Le référendum de juin 2016 sur l’appartenance à l’Union européenne n’a pas donné le même résultat dans les quatre nations. Lis le graphique, puis la lettre d’une lectrice écossaise.",
+   "documents": [
+    {
+     "id": "vote",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Votes pour rester dans l’UE, 2016 (en %)",
+     "categories": [
+      "England",
+      "Wales",
+      "Scotland",
+      "N. Ireland"
+     ],
+     "series": [
+      {
+       "nom": "Remain",
+       "valeurs": [
+        47,
+        48,
+        62,
+        56
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Votes « Remain »",
+      "unite": "en %",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Nation"
+     },
+     "valeurs": false,
+     "source": "Résultats arrondis à l’unité, référendum de juin 2016"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Letter to the editor",
+     "blocs": [
+      "Sir, in June 2016, 62 % of Scots voted to remain in the European Union. Yet Scotland was taken out of the EU with the rest of the United Kingdom, where a small majority had voted to leave. Many of us feel that our voice was ignored. That is why the question of independence has come back.",
+      "A reader from Dundee"
+     ],
+     "source": "Lettre imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vote",
+     "multiple": true,
+     "reponse": [
+      "k2",
+      "k3"
+     ],
+     "enonce": "Touche les deux nations où une majorité a voté pour rester dans l’UE.",
+     "aide": "Une majorité, c’est plus de 50 %.",
+     "explication": "En **Écosse** (62 %) et en **Irlande du Nord** (56 %), plus de la moitié des votants ont choisi « Remain »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le « Remain » est-il plus haut en Écosse qu’en Angleterre ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Soustrais le score anglais du score écossais.",
+     "explication": "62 − 47 = **15** points d’écart."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la lectrice, pourquoi la question de l’indépendance est-elle revenue ?",
+     "options": [
+      "Parce que l’Écosse a voté pour rester dans l’UE mais en est sortie avec le reste du pays",
+      "Parce que l’Écosse a voté pour quitter l’UE et voudrait maintenant la réintégrer seule",
+      "Parce que l’Angleterre a voté pour rester dans l’UE contre l’avis des Écossais",
+      "Parce que la Cour suprême a ordonné un second référendum d’indépendance écossais"
+     ],
+     "reponse": 0,
+     "aide": "Relie le résultat écossais au résultat de l’ensemble du Royaume-Uni.",
+     "explication": "Elle l’explique : **Scotland voted to remain** mais a été **sortie de l’UE** avec tout le Royaume-Uni. Sa voix a été ignorée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé.",
+     "texte": "Scotland voted to ___ in the EU, but the United Kingdom as a whole voted to ___.",
+     "reponses": [
+      [
+       "remain"
+      ],
+      [
+       "leave"
+      ]
+     ],
+     "banque": [
+      "remain",
+      "leave",
+      "join",
+      "reject"
+     ],
+     "aide": "Regarde le graphique : l’Écosse et le Royaume-Uni ne sont pas du même avis.",
+     "explication": "L’Écosse a voté pour **remain**, le Royaume-Uni dans son ensemble pour **leave**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f3d0948-f21a-543e-b556-0b791a9376f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui décide ? La leçon de 2022",
+   "competence": "analyser-document",
+   "situation": "Les parlements des nations décident de beaucoup de choses, pas de tout. Croise le tableau des compétences et un article sur la décision de la Cour suprême en 2022.",
+   "documents": [
+    {
+     "id": "pouvoirs",
+     "type": "tableau",
+     "titre": "Who decides what?",
+     "colonnes": [
+      "Area",
+      "Who decides?"
+     ],
+     "lignes": [
+      [
+       "Health in Scotland",
+       "Scottish Government"
+      ],
+      [
+       "Schools in Wales",
+       "Welsh Government"
+      ],
+      [
+       "Defence",
+       "UK Government"
+      ],
+      [
+       "Foreign policy",
+       "UK Government"
+      ],
+      [
+       "The pound and the Bank of England",
+       "UK Government"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau simplifié écrit pour l’exercice"
+    },
+    {
+     "id": "arret",
+     "type": "texte",
+     "genre": "article",
+     "titre": "After the ruling",
+     "blocs": [
+      "In November 2022, the Supreme Court ruled that the Scottish Parliament could not hold a new independence referendum without the agreement of the UK Parliament.",
+      "Scottish nationalists said the ruling proved that Scotland’s consent was not enough. Unionists replied that the future of the Union concerns the whole country, not one nation alone."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouvoirs",
+     "multiple": true,
+     "reponse": [
+      "r2c0",
+      "r3c0",
+      "r4c0"
+     ],
+     "enonce": "Touche les trois domaines que Londres garde pour lui.",
+     "aide": "Regarde la colonne « Who decides? » : cherche « UK Government ».",
+     "explication": "La **défense**, la **politique étrangère** et la **monnaie** restent à Londres : ce sont des compétences que la dévolution n’a pas transférées."
+    },
+    {
+     "type": "choix",
+     "enonce": "En croisant le tableau et l’article, pourquoi le Parlement écossais ne peut-il pas organiser seul un référendum d’indépendance ?",
+     "options": [
+      "Parce que l’avenir de l’Union reste une question que Londres se réserve",
+      "Parce que la santé et l’éducation sont désormais gérées depuis Londres",
+      "Parce que le Parlement écossais n’a jamais eu le droit de voter une loi",
+      "Parce que le pays de Galles a posé son veto à un tel référendum"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau montre ce qui est dévolu, l’article dit ce que la Cour a jugé.",
+     "explication": "Les nations ont des compétences dévolues, mais **l’avenir de l’Union** reste du ressort du Parlement du Royaume-Uni : il faut son accord."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à la position que l’article lui prête.",
+     "paires": [
+      [
+       "Scottish nationalists",
+       "Scotland’s consent should be enough"
+      ],
+      [
+       "Unionists",
+       "The Union concerns the whole country"
+      ],
+      [
+       "The Supreme Court",
+       "The UK Parliament must agree first"
+      ]
+     ],
+     "aide": "Relis le deuxième paragraphe de l’article.",
+     "explication": "Les **nationalistes** veulent que l’avis de l’Écosse suffise, les **unionistes** parlent de tout le pays, et la **Cour** exige l’accord du Parlement britannique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Devolution means that London has ___ some powers to the nations without giving up its sovereignty.",
+     "reponses": [
+      [
+       "delegated"
+      ]
+     ],
+     "banque": [
+      "delegated",
+      "abolished",
+      "sold",
+      "lost"
+     ],
+     "aide": "Londres confie ces compétences mais reste souverain.",
+     "explication": "Londres a **delegated** (délégué) des compétences, sans renoncer à sa souveraineté."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d81b711-0f68-5128-9e6a-44ff64af99fb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Croeso i Gymru",
+   "competence": "comprendre-langue",
+   "situation": "Sur la route de Cardiff, un panneau affiche deux langues. Observe-le, puis lis un court article sur la langue galloise.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Croeso i Gymru",
+     "sousTitre": "Welcome to Wales",
+     "emoji": "🛣️",
+     "lignes": [
+      {
+       "texte": "Cardiff",
+       "valeur": "Caerdydd",
+       "id": "capitale"
+      },
+      {
+       "texte": "Swansea",
+       "valeur": "Abertawe",
+       "id": "swansea"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "SLOW",
+       "valeur": "ARAF",
+       "gras": true,
+       "id": "slow"
+      }
+     ],
+     "teinte": "vert",
+     "source": "Panneau imaginé pour l’exercice, noms gallois réels"
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "A language that came back",
+     "blocs": [
+      "Welsh, or Cymraeg, is a Celtic language spoken by about one person in six in Wales. For a long time it was losing speakers, but it has been revived thanks to bilingual signs, Welsh-medium schools and festivals such as the Eisteddfod. Today many families choose to bring up their children in Welsh."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "multiple": false,
+     "reponse": [
+      "capitale"
+     ],
+     "enonce": "Touche la ligne qui donne le nom gallois de Cardiff.",
+     "aide": "Cherche la ligne qui commence par « Cardiff ».",
+     "explication": "La ligne « Cardiff / **Caerdydd** » : le panneau donne le nom anglais puis le nom gallois."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle langue, autre que l’anglais, est écrite sur ce panneau ? (un mot en français)",
+     "reponse": [
+      "gallois",
+      "le gallois",
+      "welsh",
+      "cymraeg"
+     ],
+     "aide": "Le titre « Croeso i Gymru » est dans cette langue.",
+     "explication": "C’est le **gallois** (*Cymraeg*), langue celtique parlée au pays de Galles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel moyen de faire revivre le gallois n’est PAS cité dans l’article ?",
+     "options": [
+      "Une loi qui interdit l’usage de l’anglais",
+      "Des écoles où l’on enseigne en gallois",
+      "Des panneaux routiers et officiels bilingues",
+      "Des festivals comme l’Eisteddfod chaque année"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui commence par « For a long time ».",
+     "explication": "L’article cite les **panneaux bilingues**, les **écoles en gallois** et les **festivals**. Aucune loi n’interdit l’anglais."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Welsh is a ___ language: it is spoken by a small part of the population.",
+     "reponses": [
+      [
+       "minority"
+      ]
+     ],
+     "banque": [
+      "minority",
+      "dead",
+      "artificial",
+      "foreign"
+     ],
+     "aide": "Le texte dit « about one person in six ».",
+     "explication": "Le gallois est une langue **minority** (minoritaire) : une personne sur six environ la parle."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d81b711-0f68-5128-9e6a-44ff64af99fb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Glasgow contre Édimbourg",
+   "competence": "analyser-texte",
+   "situation": "À moins de cinquante miles l’une de l’autre, deux villes écossaises cultivent deux images très différentes. Lis cet article pour les comparer.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Two cities, one nation",
+     "blocs": [
+      "Glasgow and Edinburgh are less than fifty miles apart, yet they seem to belong to different countries.",
+      "Glasgow, which built [[i|ships]] on the Clyde for generations, still remembers its [[i|shipbuilding]] [[i|workers]] with pride. Its streets are lively, rebellious and proudly working-class, and in 2021 the city hosted the COP26 climate summit.",
+      "Edinburgh, by contrast, is the capital: its castle, its festival and its Fringe attract visitors every August, and the Scottish Parliament meets at Holyrood. Locals joke that Glasgow works while Edinburgh shows off."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villes",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les trois mots qui rappellent le passé industriel de Glasgow.",
+     "aide": "Regarde la phrase sur la Clyde : que fabriquait-on là-bas ?",
+     "explication": "Les mots **ships**, **shipbuilding** et **workers** évoquent les chantiers navals de la Clyde."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique dans la bonne ville.",
+     "categories": [
+      "Glasgow",
+      "Edinburgh"
+     ],
+     "items": [
+      [
+       "Hosted the COP26 summit",
+       0
+      ],
+      [
+       "Home of the Scottish Parliament",
+       1
+      ],
+      [
+       "A castle and a festival every August",
+       1
+      ],
+      [
+       "A proudly working-class image",
+       0
+      ]
+     ],
+     "aide": "Relis le deuxième paragraphe (Glasgow), puis le troisième (Édimbourg).",
+     "explication": "**Glasgow** : COP26 et image populaire. **Édimbourg** : le Parlement à Holyrood, le château et le festival."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère la dernière phrase de l’article ?",
+     "options": [
+      "Que les deux villes se taquinent en s’appuyant sur des clichés",
+      "Que les habitants de Glasgow refusent de travailler le week-end",
+      "Que les deux villes voudraient former deux États séparés",
+      "Que le festival d’Édimbourg rapporte moins que les usines"
+     ],
+     "reponse": 0,
+     "aide": "Les habitants « plaisantent » : que montre un trait d’humour ?",
+     "explication": "La phrase est une **plaisanterie** : chaque ville a son cliché sur l’autre, sans hostilité réelle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom relatif.",
+     "texte": "Glasgow, ___ built ships on the Clyde, hosted COP26.",
+     "reponses": [
+      [
+       "which"
+      ]
+     ],
+     "banque": [
+      "which",
+      "who",
+      "where",
+      "whose"
+     ],
+     "aide": "On parle d’une ville, donc d’une chose, pas d’une personne.",
+     "explication": "On emploie **which** pour une chose ou un lieu considéré comme sujet de la proposition."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d81b711-0f68-5128-9e6a-44ff64af99fb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les Troubles, de 1969 à aujourd’hui",
+   "competence": "se-reperer-temps",
+   "situation": "Un jeune Nord-Irlandais raconte son quartier. Croise ses mots et la frise pour comprendre ce qu’ont changé les accords de 1998.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Northern Ireland, 1960–2030",
+     "debut": 1960,
+     "fin": 2030,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "troubles",
+       "debut": 1969,
+       "fin": 1998,
+       "nom": "The Troubles",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "bloody",
+       "date": 1972,
+       "nom": "Bloody Sunday"
+      },
+      {
+       "id": "gfa",
+       "date": 1998,
+       "nom": "Good Friday"
+      },
+      {
+       "id": "oneill",
+       "date": 2024,
+       "nom": "Michelle O’Neill"
+      }
+     ],
+     "source": "Dates arrondies à l’année"
+    },
+    {
+     "id": "blog",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "A blog post",
+     "blocs": [
+      "My grandfather lived through the Troubles in Belfast. He never talked about them, but the peace walls were part of his street.",
+      "Today I can say that I am British, Irish or both, and nobody can tell me otherwise. Yet the walls are [[s|still]] there, and some of my friends have never crossed to the other side."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "troubles"
+     ],
+     "enonce": "Touche la période des Troubles sur la frise.",
+     "aide": "Cherche la bande qui porte le nom « The Troubles ».",
+     "explication": "Les **Troubles** couvrent la période de 1969 à 1998, jusqu’aux accords du Vendredi saint."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Bloody Sunday de la nomination de Michelle O’Neill ?",
+     "reponse": 52,
+     "unite": "ans",
+     "aide": "Soustrais 1972 de 2024.",
+     "explication": "2024 − 1972 = **52** ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la phrase « nobody can tell me otherwise » ?",
+     "options": [
+      "Que l’accord de 1998 permet à chacun de choisir librement son identité",
+      "Que l’auteur refuse de parler à ses voisins nationalistes",
+      "Que l’auteur a quitté l’Irlande du Nord pour vivre à Dublin",
+      "Que les murs de la paix ont été détruits dans tous les quartiers"
+     ],
+     "reponse": 0,
+     "aide": "L’auteur parle de ses droits : « British, Irish or both ».",
+     "explication": "L’auteur peut se dire **britannique, irlandais ou les deux** : c’est ce que garantissent les accords de 1998."
+    },
+    {
+     "type": "zone",
+     "document": "blog",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui montre que la paix n’est pas totalement achevée.",
+     "aide": "Cherche un adverbe dans la phrase sur les murs.",
+     "explication": "Le mot **still** (« encore ») montre que les murs de la paix existent toujours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Peace walls remain more than twenty-five years ___ the Good Friday Agreement.",
+     "reponses": [
+      [
+       "after"
+      ]
+     ],
+     "banque": [
+      "after",
+      "since",
+      "ago",
+      "during"
+     ],
+     "aide": "La phrase compare la date des accords et aujourd’hui.",
+     "explication": "On dit **more than twenty-five years after** l’accord : « après » introduit le point de départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649917-865a-5740-9688-a7853abc97a1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un vol pour Boston",
+   "competence": "manier-langue",
+   "situation": "Emma s’envole demain pour un séjour aux États-Unis. Elle échange des messages avec son père.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dad",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Big news, Dad! This time tomorrow, I’ll be [[f|flying]] to Boston!"
+      },
+      {
+       "qui": "Dad",
+       "texte": "Wow! Will you be [[f|using]] your phone on the plane?"
+      },
+      {
+       "qui": "Emma",
+       "texte": "No, I’ll be [[f|sleeping]], I hope. By June, I will have been [[f|studying]] English for ten years, so I’m ready!"
+      },
+      {
+       "qui": "Dad",
+       "texte": "Great. I’ll be [[f|thinking]] of you all day."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les cinq verbes en -ING.",
+     "aide": "Ils se terminent tous par -ing et suivent « be » ou « been ».",
+     "explication": "Les cinq formes en -ING : **flying, using, sleeping, studying, thinking**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années Emma aura-t-elle étudié l’anglais en juin ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Cherche « for ten years » dans ses messages.",
+     "explication": "Elle aura étudié l’anglais pendant **10** ans : *will have been studying… for ten years*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Tomorrow at noon, Emma ___ ___ flying over the Atlantic.",
+     "reponses": [
+      [
+       "will"
+      ],
+      [
+       "be"
+      ]
+     ],
+     "banque": [
+      "will",
+      "be",
+      "is",
+      "been"
+     ],
+     "aide": "Futur en cours : will + be + V-ING.",
+     "explication": "Futur de l’action en cours : **will be** flying."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces phrases selon ce qu’elles expriment.",
+     "categories": [
+      "Action en cours à un moment du futur",
+      "Durée jusqu’à un point du futur"
+     ],
+     "items": [
+      [
+       "She’ll be sleeping at noon.",
+       0
+      ],
+      [
+       "This time next week, we’ll be swimming.",
+       0
+      ],
+      [
+       "By July, he will have been living here for a year.",
+       1
+      ],
+      [
+       "By 2030, they will have been working here for ten years.",
+       1
+      ]
+     ],
+     "aide": "Cherche « by » + une durée (« for … ») : c’est la seconde valeur.",
+     "explication": "*will be* + V-ING montre une action **en cours** ; *will have been* + V-ING compte une **durée** jusqu’à une date future."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649917-865a-5740-9688-a7853abc97a1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Déductions à la bibliothèque",
+   "competence": "manier-langue",
+   "situation": "Ce soir, l’inspecteur Hale enquête sur un vol à la bibliothèque. Observe ses indices, puis lis son rapport.",
+   "documents": [
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "Clues",
+     "colonnes": [
+      "When",
+      "What the detective notices"
+     ],
+     "lignes": [
+      [
+       "Right now",
+       "A light is on in the library window."
+      ],
+      [
+       "Friday evening",
+       "The guard’s notebook is empty for three hours."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "rapport",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Inspector Hale’s report",
+     "blocs": [
+      "The door was locked from the inside, so the thief must have had a key.",
+      "A light is on in the library: someone [[p|might]] be hiding there.",
+      "The footprints are fresh, so the intruder [[p|could]] have been waiting for hours."
+     ],
+     "source": "Rapport écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la déduction sur ce qui se passe maintenant.",
+     "texte": "A light is on in the library window. Someone must ___ ___ in the library right now.",
+     "reponses": [
+      [
+       "be"
+      ],
+      [
+       "working"
+      ]
+     ],
+     "banque": [
+      "be",
+      "have",
+      "working",
+      "worked"
+     ],
+     "aide": "Déduction sur le présent : must + be + V-ING.",
+     "explication": "Pour le présent : **must be working** (il doit être en train de travailler)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Vendredi soir, le cahier du gardien reste vide trois heures. Quelle phrase exprime la déduction sur ce qu’il faisait ?",
+     "options": [
+      "He must have been sleeping for three hours.",
+      "He must be sleeping during those three hours.",
+      "He must had been sleeping for three hours.",
+      "He must have been sleep for three hours."
+     ],
+     "reponse": 0,
+     "aide": "C’est une déduction sur le passé, sur une action qui a duré.",
+     "explication": "Déduction sur une action passée qui a duré : **must have been** + V-ING."
+    },
+    {
+     "type": "zone",
+     "document": "rapport",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux modaux qui expriment une simple possibilité, pas une certitude.",
+     "aide": "La certitude, c’est « must » ; cherche deux autres modaux.",
+     "explication": "**might** et **could** marquent une possibilité ; **must** marque une quasi-certitude."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour dire « il a dû conduire toute la nuit ».",
+     "items": [
+      "He",
+      "must",
+      "have",
+      "been",
+      "driving",
+      "all",
+      "night"
+     ],
+     "aide": "Modal, puis « have been », puis le verbe en -ING.",
+     "explication": "**He must have been driving all night.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649917-865a-5740-9688-a7853abc97a1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Corriger la copie de Noah",
+   "competence": "manier-langue",
+   "situation": "Noah a rédigé six phrases pour un devoir. Son professeur lui a laissé une fiche de règles. Trouve les erreurs et corrige-les.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "tableau",
+     "titre": "Six sentences from Noah’s homework",
+     "colonnes": [
+      "N°",
+      "Sentence"
+     ],
+     "lignes": [
+      [
+       "1",
+       "This time next week, I will be knowing my exam results."
+      ],
+      [
+       "2",
+       "By 2030, scientists will have been working on this vaccine for twenty years."
+      ],
+      [
+       "3",
+       "You should have been listen to the teacher."
+      ],
+      [
+       "4",
+       "He must have been sleeping when we called."
+      ],
+      [
+       "5",
+       "They might have been waiting for hours."
+      ],
+      [
+       "6",
+       "By June, she will be working here for ten years."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Phrases écrites pour l’exercice"
+    },
+    {
+     "id": "regles",
+     "type": "tableau",
+     "titre": "The teacher’s rule sheet",
+     "colonnes": [
+      "Rule",
+      "Use"
+     ],
+     "lignes": [
+      [
+       "A",
+       "State verbs (know, believe, belong…) are never used with -ING."
+      ],
+      [
+       "B",
+       "modal + have been + V-ING: a past action in progress."
+      ],
+      [
+       "C",
+       "will have been + V-ING: duration up to a point in the future."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1",
+      "r5c1"
+     ],
+     "enonce": "Touche les trois phrases incorrectes.",
+     "aide": "Une phrase refuse le -ING, une oublie le -ING, une confond deux temps du futur.",
+     "explication": "Fautes aux phrases **1** (*know* n’a pas de -ING), **3** (il manque le -ING : *listening*) et **6** (il faut *will have been working*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase fautive à la règle qu’elle enfreint.",
+     "paires": [
+      [
+       "Phrase 1",
+       "Règle A : verbe d’état"
+      ],
+      [
+       "Phrase 3",
+       "Règle B : modal + have been + V-ING"
+      ],
+      [
+       "Phrase 6",
+       "Règle C : will have been + V-ING"
+      ]
+     ],
+     "aide": "Relis la fiche de règles : A, B, C.",
+     "explication": "Phrase 1 : **A** (verbe d’état). Phrase 3 : **B** (modal + have been + V-ING). Phrase 6 : **C** (durée jusqu’à un point du futur)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la phrase 3.",
+     "texte": "You should have been ___ to the teacher.",
+     "reponses": [
+      [
+       "listening"
+      ]
+     ],
+     "banque": [
+      "listening",
+      "listen",
+      "listened",
+      "listens"
+     ],
+     "aide": "Après « have been », on met la forme en -ING.",
+     "explication": "*You should have been **listening** to the teacher* : modal + have been + V-ING."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la phrase 6.",
+     "texte": "By June, she will ___ ___ working here for ten years.",
+     "reponses": [
+      [
+       "have"
+      ],
+      [
+       "been"
+      ]
+     ],
+     "banque": [
+      "have",
+      "been",
+      "be",
+      "being"
+     ],
+     "aide": "La durée jusqu’à un point du futur : will have been + V-ING.",
+     "explication": "*By June, she will **have been** working here for ten years.*"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la correction de la phrase 1 ?",
+     "options": [
+      "This time next week, I will know my exam results.",
+      "This time next week, I will be knowing my exam results.",
+      "This time next week, I will have been known my exam results.",
+      "This time next week, I will knowing my exam results."
+     ],
+     "reponse": 0,
+     "aide": "« Know » est un verbe d’état : pas de -ING.",
+     "explication": "*Know* est un verbe d’état : **I will know my exam results.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "3087b8d9-8bdb-5554-92ca-959a5bd04963",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Décoder un article sur les jeunes",
+   "competence": "manier-langue",
+   "situation": "Dans cet article, plusieurs mots sont construits avec des préfixes ou des suffixes. Découpe-les pour les comprendre.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Young and worried",
+     "blocs": [
+      "Many young people feel hopeless about the future. Their salaries are low, so even a small flat can be unaffordable, and [[p|overcrowded]] shared houses are common. Some employees are [[p|underpaid]], and the government promises to simplify the rules, but nothing changes quickly."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui portent un préfixe signifiant « trop » ou « pas assez ».",
+     "aide": "Cherche les préfixes over- et under-.",
+     "explication": "**overcrowded** (trop plein) et **underpaid** (pas assez payé) portent *over-* et *under-*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « hopeless » dans le texte ?",
+     "options": [
+      "Sans espoir, découragé",
+      "Plein d’espoir, confiant",
+      "Qui espère de nouveau",
+      "Trop optimiste"
+     ],
+     "reponse": 0,
+     "aide": "Le suffixe -less veut dire « sans ».",
+     "explication": "*hope* + *-less* = **sans espoir**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots selon leur nature, que le suffixe révèle.",
+     "categories": [
+      "Nom",
+      "Adjectif",
+      "Verbe"
+     ],
+     "items": [
+      [
+       "happiness",
+       0
+      ],
+      [
+       "careless",
+       1
+      ],
+      [
+       "widen",
+       2
+      ],
+      [
+       "hopeful",
+       1
+      ],
+      [
+       "government",
+       0
+      ],
+      [
+       "simplify",
+       2
+      ]
+     ],
+     "aide": "Regarde les terminaisons : -ness, -ment, -less, -ful, -en, -ify.",
+     "explication": "**Noms** : happiness (-ness), government (-ment). **Adjectifs** : careless, hopeful. **Verbes** : widen (-en), simplify (-ify)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "A person who has no home is ___.",
+     "reponses": [
+      [
+       "homeless"
+      ]
+     ],
+     "banque": [
+      "homeless",
+      "homely",
+      "homeward",
+      "homesick"
+     ],
+     "aide": "Le suffixe qui veut dire « sans ».",
+     "explication": "*home* + *-less* = **homeless** : sans domicile."
+    }
+   ]
+  },
+  {
+   "chapitre": "3087b8d9-8bdb-5554-92ca-959a5bd04963",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les titres de la presse",
+   "competence": "comprendre-langue",
+   "situation": "Les journaux adorent fabriquer des mots. Lis quatre titres, puis une conversation où l’on transforme des noms en verbes.",
+   "documents": [
+    {
+     "id": "titres",
+     "type": "tableau",
+     "titre": "Four headlines",
+     "colonnes": [
+      "N°",
+      "Headline"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Underfunded schools struggle as class sizes grow"
+      ],
+      [
+       "B",
+       "City council to ban cars from the centre"
+      ],
+      [
+       "C",
+       "Government plans to widen access to universities"
+      ],
+      [
+       "D",
+       "Residents fear rebuilding will make the area unaffordable"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Titres imaginés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noah",
+       "texte": "Did you [[c|text]] Zoe about tonight?"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Yes, and I [[c|googled]] the address. I also [[c|emailed]] her the map."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Perfect. See you there!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "titres",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche le titre qui contient un verbe formé à partir d’un adjectif avec le suffixe -en.",
+     "aide": "Cherche un verbe qui vient de « wide ».",
+     "explication": "Le titre **C** : *to widen* vient de l’adjectif *wide* + *-en*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « underfunded » dans le titre A ?",
+     "options": [
+      "Qui reçoit trop peu d’argent public",
+      "Qui reçoit trop d’argent public",
+      "Qui vient d’être financé de nouveau",
+      "Qui n’a jamais reçu un seul euro"
+     ],
+     "reponse": 0,
+     "aide": "under- veut dire « pas assez ».",
+     "explication": "*under-* + *funded* : **financé insuffisamment**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Rebuilding means building ___.",
+     "reponses": [
+      [
+       "again"
+      ]
+     ],
+     "banque": [
+      "again",
+      "before",
+      "less",
+      "together"
+     ],
+     "aide": "Le préfixe re- dit la répétition.",
+     "explication": "*re-* signifie **again** : rebuilding = construire de nouveau."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les trois verbes qui viennent d’un nom (conversion).",
+     "aide": "Un texto, Google, un e-mail : ce sont des noms à l’origine.",
+     "explication": "*text*, *google* et *email* sont des **noms devenus verbes**, sans changer de forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "3087b8d9-8bdb-5554-92ca-959a5bd04963",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le marché du travail décodé",
+   "competence": "analyser-texte",
+   "situation": "Cet article utilise plusieurs mots construits. Décode-les à l’aide du tableau, puis réponds aux questions.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Jobs for the young",
+     "blocs": [
+      "Jobs are scarce for young people. Many graduates, unable to find stable work, accept underpaid jobs and live in overcrowded shared flats. The government’s far-reaching reforms were meant to modernise the labour market, but critics call them overambitious. Most young workers feel [[l|powerless]], and some have even become [[l|homeless]]."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "decode",
+     "type": "tableau",
+     "titre": "Decoding three words",
+     "colonnes": [
+      "Word",
+      "Parts",
+      "Meaning"
+     ],
+     "lignes": [
+      [
+       "overambitious",
+       "over + ambitious",
+       "too ambitious"
+      ],
+      [
+       "underpaid",
+       "under + paid",
+       "?"
+      ],
+      [
+       "homeless",
+       "home + less",
+       "without a home"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux adjectifs formés avec le suffixe -less.",
+     "aide": "Cherche la terminaison -less.",
+     "explication": "**powerless** (impuissant) et **homeless** (sans domicile) se terminent par *-less*."
+    },
+    {
+     "type": "texte",
+     "enonce": "Écris en un mot le nom anglais de « chômage » : un préfixe négatif + employ + un suffixe de nom.",
+     "reponse": [
+      "unemployment"
+     ],
+     "aide": "Pense à un- + employ + -ment.",
+     "explication": "*un-* + *employ* + *-ment* = **unemployment**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire « far-reaching reforms » ?",
+     "options": [
+      "Des réformes de grande portée",
+      "Des réformes qui n’aboutissent pas",
+      "Des réformes lointaines dans le temps",
+      "Des réformes importées de l’étranger"
+     ],
+     "reponse": 0,
+     "aide": "Un mot composé : « far » + « reaching ».",
+     "explication": "*far-reaching* est un mot composé : **de grande portée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel jugement l’article rapporte-t-il sur les réformes ?",
+     "options": [
+      "Elles visaient trop haut et n’ont pas aidé les jeunes travailleurs",
+      "Elles ont permis à tous les diplômés de trouver un emploi stable",
+      "Elles ont été abandonnées avant d’être officiellement présentées",
+      "Elles étaient trop prudentes et ne changeaient presque rien"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le mot « overambitious ».",
+     "explication": "Les critiques les jugent **overambitious** et les jeunes se sentent **powerless** : elles visaient trop haut."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : adjectif → verbe.",
+     "texte": "wide → to ___ ; simple → to ___",
+     "reponses": [
+      [
+       "widen"
+      ],
+      [
+       "simplify"
+      ]
+     ],
+     "banque": [
+      "widen",
+      "simplify",
+      "widely",
+      "simplicity"
+     ],
+     "aide": "Suffixes de verbes : -en et -ify.",
+     "explication": "wide + -en = **widen** ; simple + -ify = **simplify**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Complète le tableau : que signifie « underpaid » ?",
+     "options": [
+      "Payé moins que ce qu’on devrait",
+      "Payé plus que ce qu’on devrait",
+      "Payé de nouveau une seconde fois",
+      "Payé avant d’avoir travaillé"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que veut dire under- dans le tableau.",
+     "explication": "*under-* + *paid* : **mal rémunéré**, payé trop peu."
+    }
+   ]
+  },
+  {
+   "chapitre": "07cfe4c0-994f-55e1-9a35-00c7d2c2f1be",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Léa à l’université",
+   "competence": "comprendre-langue",
+   "situation": "Léa, étudiante française, échange avec Tom, son correspondant anglais. Plusieurs mots de leur conversation sont des faux amis.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Hey Léa! Where are you?"
+      },
+      {
+       "qui": "Léa",
+       "texte": "I’m in the [[f|library]]. I’m going to [[f|attend]] a [[f|lecture]] in ten minutes."
+      },
+      {
+       "qui": "Tom",
+       "texte": "[[f|Actually]], I thought you never got up early!"
+      },
+      {
+       "qui": "Léa",
+       "texte": "Things change. It’s my first week at university."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les quatre mots qui ressemblent à un mot français mais n’ont pas le même sens.",
+     "aide": "Library, attend, lecture, actually : relis les messages.",
+     "explication": "**library**, **attend**, **lecture** et **actually** sont des faux amis."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot anglais à son vrai sens.",
+     "paires": [
+      [
+       "library",
+       "une bibliothèque"
+      ],
+      [
+       "to attend",
+       "assister à"
+      ],
+      [
+       "a lecture",
+       "un cours magistral"
+      ],
+      [
+       "actually",
+       "en fait"
+      ]
+     ],
+     "aide": "Aucun de ces mots ne veut dire ce que son cousin français suggère.",
+     "explication": "Un **library** est une bibliothèque, *to attend* = **assister à**, un **lecture** est un cours magistral, *actually* = **en fait**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Tom par « Actually, I thought you never got up early » ?",
+     "options": [
+      "En fait, je pensais le contraire de ce que je vois",
+      "Actuellement, je crois que tu ne te lèves jamais tôt",
+      "Éventuellement, tu ne te lèves jamais assez tôt",
+      "Sans doute, tu ne te lèves jamais avant midi"
+     ],
+     "reponse": 0,
+     "aide": "Tom est surpris : il croyait autre chose.",
+     "explication": "*Actually* = **en fait** : Tom croyait le contraire de ce qu’il découvre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "I moved to Paris two years ___.",
+     "reponses": [
+      [
+       "ago"
+      ]
+     ],
+     "banque": [
+      "ago",
+      "since",
+      "for",
+      "before"
+     ],
+     "aide": "« Il y a deux ans » se traduit sans « there is ».",
+     "explication": "« Il y a deux ans » = *two years **ago***."
+    }
+   ]
+  },
+  {
+   "chapitre": "07cfe4c0-994f-55e1-9a35-00c7d2c2f1be",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le mail de Julie",
+   "competence": "manier-langue",
+   "situation": "Julie, étudiante à Londres, écrit à son hôte. Son message contient des calques du français.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Julie’s email",
+     "blocs": [
+      "Dear Mr Brown,",
+      "I [[e|am]] in London since Monday. Currently, I attend lectures at the university library, and the city is wonderful. Please give me some [[e|advices]] about cheap restaurants.",
+      "Yours sincerely, Julie"
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux mots fautifs dans le message de Julie.",
+     "aide": "Une faute de temps après « since », une faute sur un nom indénombrable.",
+     "explication": "Fautes : **am** (il faut *have been* avec *since*) et **advices** (*advice* est indénombrable)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la première phrase.",
+     "texte": "I ___ ___ in London since Monday.",
+     "reponses": [
+      [
+       "have"
+      ],
+      [
+       "been"
+      ]
+     ],
+     "banque": [
+      "have",
+      "been",
+      "am",
+      "was"
+     ],
+     "aide": "Avec « since », on emploie le present perfect.",
+     "explication": "*I **have been** in London since Monday.*"
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dire « Il a assisté à un cours magistral » ?",
+     "options": [
+      "He attended a lecture.",
+      "He assisted at a lecture.",
+      "He attended a reading.",
+      "He waited for a lecture."
+     ],
+     "reponse": 0,
+     "aide": "« To assist » veut dire « aider ».",
+     "explication": "On dit **He attended a lecture** : *to attend* = assister à, *lecture* = cours magistral."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression française à sa traduction correcte.",
+     "paires": [
+      [
+       "Il y a deux ans",
+       "two years ago"
+      ],
+      [
+       "Je suis ici depuis lundi",
+       "I have been here since Monday"
+      ],
+      [
+       "Des conseils",
+       "some advice"
+      ],
+      [
+       "Plus de trente personnes",
+       "more than thirty people"
+      ]
+     ],
+     "aide": "Évite de traduire mot à mot.",
+     "explication": "Quatre pièges : **ago**, le present perfect avec **since**, **advice** sans -s, **more than**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07cfe4c0-994f-55e1-9a35-00c7d2c2f1be",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Version piégée",
+   "competence": "analyser-document",
+   "situation": "Un article de presse et un brouillon d’élève sont truffés de pièges de traduction. Croise-les pour ne pas tomber dedans.",
+   "documents": [
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "The reform debate",
+     "blocs": [
+      "The minister claims that the reform will [[f|eventually]] help families, but she [[f|actually]] [[f|supports]] a plan that was criticised last year.",
+      "Critics say the public will be disappointed, not because of any [[f|deception]], but because the [[f|chance]] of success is low."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "brouillon",
+     "type": "tableau",
+     "titre": "Student’s translations",
+     "colonnes": [
+      "N°",
+      "French",
+      "Student’s English"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Il y a deux ans, j’ai assisté à ce match.",
+       "Two years ago, I assisted at this match."
+      ],
+      [
+       "2",
+       "Je suis ici depuis lundi.",
+       "I am here since Monday."
+      ],
+      [
+       "3",
+       "Il m’a donné des conseils.",
+       "He gave me some advice."
+      ],
+      [
+       "4",
+       "Plus de trente personnes sont venues.",
+       "More than thirty people came."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Brouillon écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r1c2"
+     ],
+     "enonce": "Touche les deux traductions incorrectes.",
+     "aide": "Deux erreurs : un faux ami et un présent à la place du present perfect.",
+     "explication": "Erreurs : **assisted at** (il faut *attended*) et **I am here since** (il faut *I have been here since*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la traduction 1.",
+     "texte": "Two years ago, I ___ this match.",
+     "reponses": [
+      [
+       "attended"
+      ]
+     ],
+     "banque": [
+      "attended",
+      "assisted",
+      "waited",
+      "helped"
+     ],
+     "aide": "« Assister à » se dit autrement que « assist ».",
+     "explication": "*to attend* = assister à : *Two years ago, I **attended** this match.*"
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire la première phrase de l’article ?",
+     "options": [
+      "La ministre affirme que la réforme finira par aider les familles",
+      "La ministre fait semblant que la réforme aidera éventuellement les familles",
+      "La ministre attend que la réforme aide les familles",
+      "La ministre s’est rendu compte que la réforme aide les familles"
+     ],
+     "reponse": 0,
+     "aide": "« Eventually » = finalement, à terme.",
+     "explication": "*claims* = affirme, *eventually* = **finalement, à terme**, pas « éventuellement »."
+    },
+    {
+     "type": "zone",
+     "document": "presse",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les cinq faux amis de l’article.",
+     "aide": "Un adverbe, un verbe de soutien, une tromperie, une probabilité.",
+     "explication": "**eventually, actually, supports, deception, chance** : leur sens n’est pas celui des mots français proches."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque phrase fautive selon la nature de l’erreur.",
+     "categories": [
+      "Faux ami",
+      "Calque de structure"
+     ],
+     "items": [
+      [
+       "I assisted the lecture yesterday.",
+       0
+      ],
+      [
+       "I am here since Monday.",
+       1
+      ],
+      [
+       "She bought a book at the library.",
+       0
+      ],
+      [
+       "He gave me many advices.",
+       1
+      ]
+     ],
+     "aide": "Un faux ami trompe sur le sens ; un calque copie la structure du français.",
+     "explication": "**Faux amis** : *assisted* (aider), *library* (bibliothèque, pas librairie). **Calques** : *am since* et *advices*."
+    }
+   ]
+  },
+  {
+   "chapitre": "e57e3332-6f5c-5ed4-a8eb-c7ae36e9c1a4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un musée à Liverpool",
+   "competence": "comprendre-langue",
+   "situation": "Liverpool était un grand port de la traite négrière. Lis le panneau d’un musée et repère les dates sur une frise.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Museum panel",
+     "blocs": [
+      "This museum remembers the millions of [[e|enslaved]] [[e|people]] who were taken from Africa across the Atlantic between the sixteenth and the nineteenth centuries. Liverpool, once a major port of the slave trade, opened it in 2007 so that their stories would not be forgotten. Today, visitors can read the testimonies of descendants and discover how the city has come to terms with its past."
+     ],
+     "source": "Panneau écrit pour l’exercice"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Timeline",
+     "debut": 1800,
+     "fin": 2020,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "trade",
+       "date": 1807,
+       "nom": "Trade abolished"
+      },
+      {
+       "id": "act",
+       "date": 1833,
+       "nom": "Abolition Act"
+      },
+      {
+       "id": "amend",
+       "date": 1865,
+       "nom": "13th Amendment"
+      },
+      {
+       "id": "museum",
+       "date": 2007,
+       "nom": "Liverpool museum"
+      }
+     ],
+     "source": "Dates arrondies à l’année"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux mots qui forment l’expression actuelle pour dire « les esclaves ».",
+     "aide": "On insiste sur le fait qu’ils ont été réduits en esclavage.",
+     "explication": "**enslaved people** : l’expression rappelle que ces personnes ont été réduites en esclavage."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "amend"
+     ],
+     "enonce": "Touche l’événement de la frise qui se passe aux États-Unis.",
+     "aide": "Cherche le numéro d’un amendement.",
+     "explication": "Le **13e amendement** (1865) abolit l’esclavage aux États-Unis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Liverpool a-t-elle ouvert ce musée ?",
+     "options": [
+      "Pour garder vivante la mémoire des personnes réduites en esclavage",
+      "Pour célébrer la réussite économique du grand port au XIXe siècle",
+      "Pour fêter la fin de la traite dans les colonies de la France",
+      "Pour accueillir les archives de la marine marchande américaine"
+     ],
+     "reponse": 0,
+     "aide": "Cherche « so that… » dans le panneau.",
+     "explication": "Le panneau le dit : *so that their stories would **not be forgotten*** : le musée garde la mémoire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "We visit a memorial to ___ the victims.",
+     "reponses": [
+      [
+       "commemorate"
+      ]
+     ],
+     "banque": [
+      "commemorate",
+      "abolish",
+      "reclaim",
+      "control"
+     ],
+     "aide": "Un mémorial sert à se souvenir.",
+     "explication": "Un mémorial sert à **commemorate** (commémorer) les victimes."
+    }
+   ]
+  },
+  {
+   "chapitre": "e57e3332-6f5c-5ed4-a8eb-c7ae36e9c1a4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Juneteenth, une liberté qui arrive en retard",
+   "competence": "analyser-document",
+   "situation": "Le 19 juin est devenu une date nationale aux États-Unis. Lis l’article, puis repère la date dans un calendrier des commémorations.",
+   "documents": [
+    {
+     "id": "juneteenth",
+     "type": "texte",
+     "genre": "article",
+     "titre": "The story of Juneteenth",
+     "blocs": [
+      "On 19 June 1865, federal troops arrived in Galveston, Texas, and announced that all enslaved people were free, more than two years after the Emancipation Proclamation of 1 January 1863.",
+      "African Americans began to mark the date with parades, music and family picnics. In 2021, Juneteenth became a federal holiday."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "calendrier",
+     "type": "tableau",
+     "titre": "Commemoration calendar",
+     "colonnes": [
+      "Date",
+      "Commemoration",
+      "Where"
+     ],
+     "lignes": [
+      [
+       "11 November",
+       "Remembrance Day (poppy)",
+       "Commonwealth"
+      ],
+      [
+       "25 April",
+       "ANZAC Day",
+       "Australia, New Zealand"
+      ],
+      [
+       "19 June",
+       "Juneteenth",
+       "United States"
+      ],
+      [
+       "30 September",
+       "Truth and Reconciliation Day",
+       "Canada"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’annonce de Galveston (1865) du jour férié fédéral (2021) ?",
+     "reponse": 156,
+     "unite": "ans",
+     "aide": "Soustrais 1865 de 2021.",
+     "explication": "2021 − 1865 = **156** ans."
+    },
+    {
+     "type": "zone",
+     "document": "calendrier",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la date du calendrier qui correspond à l’événement raconté dans l’article.",
+     "aide": "L’article donne la date en toutes lettres : « 19 June ».",
+     "explication": "C’est le **19 juin** : Juneteenth, « June » + « nineteenth »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère « more than two years after the Emancipation Proclamation » ?",
+     "options": [
+      "Que la liberté est arrivée très tard pour les derniers esclaves du Texas",
+      "Que la proclamation a été signée à Galveston en 1865",
+      "Que les troupes fédérales ont refusé d’appliquer la proclamation",
+      "Que la fête est célébrée depuis plus de deux ans seulement"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1863 et 1865.",
+     "explication": "La proclamation date de **1863** mais n’a atteint le Texas qu’en **1865** : un long retard."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Juneteenth ___ a federal holiday in 2021.",
+     "reponses": [
+      [
+       "became"
+      ]
+     ],
+     "banque": [
+      "became",
+      "becomes",
+      "become",
+      "becoming"
+     ],
+     "aide": "La date est au passé.",
+     "explication": "Avec une date passée, on emploie le prétérit : **became**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e57e3332-6f5c-5ed4-a8eb-c7ae36e9c1a4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui garde la mémoire ?",
+   "competence": "argumenter",
+   "situation": "Musées, fêtes, traités : chaque société choisit comment se souvenir. Croise un article sur Waitangi et un tableau de lieux de mémoire.",
+   "documents": [
+    {
+     "id": "waitangi",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Waitangi Day",
+     "blocs": [
+      "In 1840, representatives of the British Crown and Māori chiefs signed the Treaty of Waitangi. There are two versions, one in English and one in Māori, and they do not say the same thing about [[s|sovereignty]].",
+      "Every 6 February, New Zealand marks Waitangi Day: some people celebrate the treaty, while others argue that its promises were not kept."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Places of memory",
+     "colonnes": [
+      "Place",
+      "Country",
+      "How memory is kept"
+     ],
+     "lignes": [
+      [
+       "Liverpool",
+       "United Kingdom",
+       "International Slavery Museum (2007)"
+      ],
+      [
+       "Robben Island",
+       "South Africa",
+       "World Heritage site (1999)"
+      ],
+      [
+       "Washington",
+       "United States",
+       "National museum of African American history (2016)"
+      ],
+      [
+       "Across the country",
+       "United States",
+       "Juneteenth, federal holiday (2021)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lieux",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les deux cases où la mémoire prend la forme d’un musée.",
+     "aide": "Cherche le mot « museum » dans la dernière colonne.",
+     "explication": "Liverpool et Washington ont un **musée** ; Robben Island est un site classé, Juneteenth un jour férié."
+    },
+    {
+     "type": "zone",
+     "document": "waitangi",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot anglais qui signifie « souveraineté ».",
+     "aide": "Il est dans la phrase qui parle des deux versions du traité.",
+     "explication": "Le mot est **sovereignty**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces lieux ou événements du plus ancien au plus récent.",
+     "items": [
+      "Robben Island, World Heritage site (1999)",
+      "International Slavery Museum (2007)",
+      "National museum of African American history (2016)",
+      "Juneteenth becomes a federal holiday (2021)"
+     ],
+     "aide": "Les années sont dans la dernière colonne du tableau.",
+     "explication": "**1999**, puis **2007**, puis **2016**, puis **2021**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon l’article, pourquoi Waitangi Day est-il vécu différemment selon les personnes ?",
+     "options": [
+      "Parce que les deux versions du traité ne disent pas la même chose sur la souveraineté",
+      "Parce que le traité n’a jamais été signé par les chefs maoris",
+      "Parce que la fête a lieu le même jour que la fête nationale britannique",
+      "Parce que le traité concerne seulement la colonisation de l’Australie"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase du premier paragraphe.",
+     "explication": "Les deux versions **diffèrent sur la souveraineté** : certains fêtent le traité, d’autres rappellent que ses promesses n’ont pas été tenues."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Museums give a voice to people ___ were silenced.",
+     "reponses": [
+      [
+       "who"
+      ]
+     ],
+     "banque": [
+      "who",
+      "which",
+      "whose",
+      "whom"
+     ],
+     "aide": "On parle de personnes, sujet de « were silenced ».",
+     "explication": "On emploie **who** pour des personnes, sujet de la proposition."
+    }
+   ]
+  }
+ ]
+}

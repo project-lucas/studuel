@@ -1,0 +1,371 @@
+{
+  "niveau": "1re",
+  "matiere": "physique-chimie-sante",
+  "sujets": [
+    {
+      "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+      "difficulte": 1,
+      "titre": "La perfusion de glucose",
+      "consigne": "Réponds à chaque question en écrivant d'abord la relation littérale, puis le calcul et le résultat avec son unité.",
+      "enonce": "**Situation.** Dans un service de soins, Maëlle, infirmière, doit préparer 250,0 mL d'une solution aqueuse de glucose C₆H₁₂O₆ de concentration massique Cm = 50 g/L.\n\n**Données :** M(C) = 12 g/mol ; M(H) = 1 g/mol ; M(O) = 16 g/mol.\n\n1. Dans cette solution, nomme le soluté, le solvant et la solution.\n2. Calcule la masse de glucose que Maëlle doit peser.\n3. Calcule la masse molaire du glucose, puis la quantité de matière de glucose contenue dans la solution.\n4. Calcule la concentration molaire C de la solution.",
+      "bareme": [
+        { "critere": "Soluté (glucose), solvant (eau) et solution correctement identifiés", "points": 4 },
+        { "critere": "Masse à peser : m = Cm × V = 12,5 g, avec conversion de V en litres", "points": 6 },
+        { "critere": "M(glucose) = 180 g/mol et n = m / M ≈ 6,9 × 10⁻² mol", "points": 6 },
+        { "critere": "C = n / V (ou Cm / M) ≈ 0,28 mol/L avec l'unité", "points": 4 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Le **soluté** est le glucose (l'espèce dissoute), le **solvant** est l'eau, la **solution** est le mélange homogène obtenu : c'est une solution aqueuse.\n2. m = Cm × V, avec V = 250,0 mL = 0,2500 L : m = 50 × 0,2500 = **12,5 g** de glucose.\n3. M(C₆H₁₂O₆) = 6 × 12 + 12 × 1 + 6 × 16 = 72 + 12 + 96 = **180 g/mol**.\nn = m / M = 12,5 / 180 ≈ **6,9 × 10⁻² mol** (0,069 mol).\n4. C = n / V = 0,0694 / 0,2500 ≈ **0,28 mol/L**. On retrouve la même valeur avec C = Cm / M = 50 / 180 ≈ 0,28 mol/L."
+    },
+    {
+      "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+      "difficulte": 2,
+      "titre": "Fabriquer du sérum physiologique par dilution",
+      "consigne": "Réponds en justifiant chaque calcul et en nommant précisément la verrerie utilisée.",
+      "enonce": "**Situation.** Au laboratoire du lycée, Yanis dispose d'une solution mère S₀ de chlorure de sodium NaCl de concentration molaire C₀ = 1,50 mol/L. Il veut préparer 100,0 mL d'une solution fille S₁ de concentration C₁ = 0,150 mol/L.\n\n**Donnée :** M(NaCl) = 58,5 g/mol.\n\n1. Calcule le facteur de dilution F.\n2. Calcule le volume de solution mère à prélever.\n3. Décris le protocole de la dilution en nommant la verrerie.\n4. Calcule la concentration massique de S₁. Le sérum physiologique est à 9,0 g/L : la solution de Yanis s'en approche-t-elle ?",
+      "bareme": [
+        { "critere": "F = C₀ / C₁ = 10", "points": 4 },
+        { "critere": "Volume prélevé V₀ = V₁ / F = 10,0 mL, ou par C₀ × V₀ = C₁ × V₁", "points": 5 },
+        { "critere": "Protocole : pipette jaugée de 10,0 mL, fiole jaugée de 100,0 mL, eau distillée jusqu'au trait de jauge, homogénéisation", "points": 6 },
+        { "critere": "Cm = C × M ≈ 8,8 g/L et comparaison argumentée avec 9,0 g/L", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. F = C₀ / C₁ = 1,50 / 0,150 = **10** : la solution est diluée 10 fois.\n2. Lors d'une dilution, la quantité de soluté ne change pas : C₀ × V₀ = C₁ × V₁, donc V₀ = C₁ × V₁ / C₀ = 0,150 × 100,0 / 1,50 = **10,0 mL** (ou V₀ = V₁ / F = 100,0 / 10).\n3. Protocole :\n- prélever 10,0 mL de solution mère avec une **pipette jaugée** de 10,0 mL ;\n- les verser dans une **fiole jaugée** de 100,0 mL ;\n- compléter avec de l'**eau distillée** jusqu'au **trait de jauge** ;\n- boucher et **homogénéiser**.\n4. Cm = C₁ × M = 0,150 × 58,5 ≈ **8,8 g/L**. C'est très proche de 9,0 g/L (écart d'environ 2 %) : la solution de Yanis a pratiquement la concentration du sérum physiologique, qui correspond à C ≈ 0,15 mol/L."
+    },
+    {
+      "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+      "difficulte": 3,
+      "titre": "Deux solutions de glucose pour le laboratoire",
+      "consigne": "Rédige chaque réponse : relation littérale, conversion éventuelle, calcul, résultat avec unité. Justifie les choix de verrerie.",
+      "enonce": "**Situation.** Une technicienne de laboratoire, Mme Keita, doit préparer :\n- une solution S₁ de glucose C₆H₁₂O₆ de volume 200,0 mL et de concentration molaire C₁ = 0,500 mol/L, par **dissolution** ;\n- à partir de S₁, une solution S₂ de volume 50,0 mL et de concentration C₂ = 0,0500 mol/L, par **dilution**.\n\n**Données :** M(C) = 12 g/mol ; M(H) = 1 g/mol ; M(O) = 16 g/mol.\n\n1. Calcule la masse de glucose à peser pour préparer S₁.\n2. Décris les étapes de la préparation de S₁ par dissolution.\n3. Calcule le volume de S₁ à prélever pour préparer S₂. Quelle verrerie utilises-tu pour ce prélèvement et pour S₂ ? Pourquoi pas un bécher ?\n4. Vérifie, en calculant les quantités de matière, que la quantité de glucose prélevée dans S₁ est bien celle que contient S₂.\n5. Calcule la concentration massique de S₂.",
+      "bareme": [
+        { "critere": "M = 180 g/mol puis m = C × V × M = 18,0 g", "points": 4 },
+        { "critere": "Protocole de dissolution complet : pesée, fiole jaugée, rinçage, dissolution, trait de jauge, homogénéisation", "points": 5 },
+        { "critere": "V prélevé = 5,0 mL avec pipette jaugée et fiole jaugée de 50,0 mL, choix justifié par la précision", "points": 5 },
+        { "critere": "Quantités de matière égales : 2,50 × 10⁻³ mol des deux côtés", "points": 3 },
+        { "critere": "Cm(S₂) = C₂ × M = 9,00 g/L", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. M(C₆H₁₂O₆) = 6 × 12 + 12 × 1 + 6 × 16 = 180 g/mol. n₁ = C₁ × V₁ = 0,500 × 0,2000 = 0,100 mol, donc m = n₁ × M = 0,100 × 180 = **18,0 g**.\n2. Dissolution :\n- peser 18,0 g de glucose dans une coupelle ;\n- l'introduire dans une **fiole jaugée de 200,0 mL** avec un entonnoir ;\n- rincer coupelle et entonnoir à l'eau distillée, remplir la fiole aux trois quarts, agiter pour dissoudre ;\n- compléter jusqu'au **trait de jauge**, boucher, homogénéiser.\n3. F = C₁ / C₂ = 0,500 / 0,0500 = 10, donc V prélevé = V₂ / F = 50,0 / 10 = **5,0 mL**. On le prélève avec une **pipette jaugée de 5,0 mL** et on prépare S₂ dans une **fiole jaugée de 50,0 mL**. Un bécher ne permet pas de mesurer un volume précis : la pipette jaugée et la fiole jaugée donnent un volume précis, donc une concentration fiable.\n4. Quantité prélevée : n = C₁ × V prélevé = 0,500 × 0,0050 = **2,50 × 10⁻³ mol**. Quantité dans S₂ : n = C₂ × V₂ = 0,0500 × 0,0500 = **2,50 × 10⁻³ mol**. Les deux sont égales : la quantité de soluté ne change pas lors d'une dilution.\n5. Cm(S₂) = C₂ × M = 0,0500 × 180 = **9,00 g/L**."
+    },
+    {
+      "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+      "difficulte": 1,
+      "titre": "Les produits du placard",
+      "consigne": "Réponds à chaque question en t'appuyant sur les valeurs du tableau et sur le cours.",
+      "enonce": "**Document.** pH mesurés à 25 °C sur des produits de la maison :\n\n| Produit | pH |\n| Vinaigre blanc | 3 |\n| Détartrant pour WC | 2 |\n| Eau pure | 7 |\n| Eau de Javel | 12 |\n| Déboucheur de canalisations | 13 |\n\n1. Classe ces produits en acides, neutres et basiques. Justifie.\n2. Calcule la concentration en ions oxonium [H₃O⁺] du vinaigre blanc.\n3. Combien de fois la concentration en H₃O⁺ du détartrant est-elle plus grande que celle du vinaigre ?\n4. Le déboucheur porte le pictogramme corrosif (SGH05). Cite l'équipement à porter pour le manipuler.",
+      "bareme": [
+        { "critere": "Classement correct avec la comparaison du pH à 7", "points": 6 },
+        { "critere": "[H₃O⁺] = 10⁻³ mol/L pour le vinaigre", "points": 5 },
+        { "critere": "Rapport de 10 entre pH 2 et pH 3, justifié", "points": 5 },
+        { "critere": "Blouse, gants et lunettes cités", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. À 25 °C : pH < 7 → **acide** : vinaigre (3), détartrant (2). pH = 7 → **neutre** : eau pure. pH > 7 → **basique** : eau de Javel (12), déboucheur (13).\n2. [H₃O⁺] = 10⁻ᵖᴴ = 10⁻³ = **1,0 × 10⁻³ mol/L**.\n3. Détartrant : [H₃O⁺] = 10⁻² mol/L ; vinaigre : 10⁻³ mol/L. Rapport : 10⁻² / 10⁻³ = **10**. Quand le pH diminue d'une unité, [H₃O⁺] est multipliée par 10.\n4. Pour un produit corrosif : **blouse, gants et lunettes** de protection (il brûle la peau et les yeux)."
+    },
+    {
+      "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+      "difficulte": 2,
+      "titre": "Du vinaigre et de l'ammoniac",
+      "consigne": "Réponds en utilisant les définitions de Brönsted et la relation entre pH et [H₃O⁺].",
+      "enonce": "**Situation.** Lors d'une séance de TP, Clara étudie deux espèces : l'acide éthanoïque CH₃COOH, présent dans le vinaigre, et l'ammoniac NH₃, présent dans l'ammoniaque ménagère.\n\n1. Rappelle la définition d'un acide et d'une base selon Brönsted.\n2. Écris la base conjuguée de l'acide éthanoïque, puis l'acide conjugué de l'ammoniac. Écris les deux couples acide/base.\n3. Écris l'équation de la réaction acido-basique entre l'acide éthanoïque et l'ammoniac. Indique quelle espèce cède un H⁺ et laquelle le capte.\n4. Clara mesure le pH d'une solution d'acide éthanoïque : pH = 4,0. Après ajout d'un peu d'ammoniaque, elle mesure pH = 6,0. Calcule [H₃O⁺] avant et après, puis dis par combien elle a été divisée.",
+      "bareme": [
+        { "critere": "Définitions : acide cède un H⁺, base capte un H⁺", "points": 4 },
+        { "critere": "Couples CH₃COOH / CH₃COO⁻ et NH₄⁺ / NH₃ correctement écrits", "points": 5 },
+        { "critere": "Équation CH₃COOH + NH₃ → CH₃COO⁻ + NH₄⁺ avec rôle de chaque espèce", "points": 6 },
+        { "critere": "[H₃O⁺] = 1,0 × 10⁻⁴ puis 1,0 × 10⁻⁶ mol/L, divisée par 100", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Selon Brönsted, un **acide** est une espèce capable de **céder** un ion H⁺ ; une **base** est une espèce capable de **capter** un ion H⁺.\n2. En cédant un H⁺, CH₃COOH devient **CH₃COO⁻** (ion éthanoate) : couple **CH₃COOH / CH₃COO⁻**. En captant un H⁺, NH₃ devient **NH₄⁺** (ion ammonium) : couple **NH₄⁺ / NH₃**.\n3. **CH₃COOH + NH₃ → CH₃COO⁻ + NH₄⁺**. L'acide éthanoïque (acide du premier couple) **cède** un H⁺ ; l'ammoniac (base du second couple) le **capte**. Il y a bien échange d'un H⁺ entre l'acide d'un couple et la base d'un autre.\n4. Avant : [H₃O⁺] = 10⁻⁴,⁰ = **1,0 × 10⁻⁴ mol/L**. Après : [H₃O⁺] = 10⁻⁶,⁰ = **1,0 × 10⁻⁶ mol/L**. Rapport : 10⁻⁴ / 10⁻⁶ = 100 : la concentration en H₃O⁺ a été **divisée par 100** (le pH a augmenté de 2 unités), car la base ajoutée a consommé de l'acide."
+    },
+    {
+      "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+      "difficulte": 3,
+      "titre": "Le grand ménage de Maxime",
+      "consigne": "Analyse la situation, fais les calculs demandés et justifie chaque conseil de sécurité par le cours.",
+      "enonce": "**Situation.** Maxime veut déboucher son évier et détartrer ses toilettes le même jour. Il dispose :\n- d'un **détartrant** acide de pH = 2,0 ;\n- d'un **déboucheur** à la soude (hydroxyde de sodium Na⁺ + HO⁻) de pH = 13,0.\n\nIl a l'idée de mélanger les deux « pour aller plus vite ». Il veut aussi diluer un acide concentré en versant de l'eau dans le flacon d'acide.\n\n**Donnée :** à 25 °C, Ke = [H₃O⁺] × [HO⁻] = 10⁻¹⁴.\n\n1. Calcule [H₃O⁺] et [HO⁻] dans le détartrant, puis dans le déboucheur. Commente.\n2. Écris l'équation de l'autoprotolyse de l'eau et explique pourquoi [HO⁻] diminue quand [H₃O⁺] augmente.\n3. Que penses-tu de l'idée de mélanger les deux produits ? Argumente avec le cours.\n4. Corrige la méthode de dilution de Maxime et explique le danger de la sienne.\n5. Maxime reçoit une projection de déboucheur sur l'avant-bras. Indique la conduite à tenir.\n6. Il veut jeter un reste de détartrant. Que doit-il faire avant ?",
+      "bareme": [
+        { "critere": "Calculs justes : détartrant 10⁻² et 10⁻¹² mol/L ; déboucheur 10⁻¹³ et 10⁻¹ mol/L", "points": 6 },
+        { "critere": "Équation 2 H₂O ⇌ H₃O⁺ + HO⁻ et explication par le produit ionique constant", "points": 3 },
+        { "critere": "Refus argumenté du mélange : règle du cours et réaction acide-base entre les deux produits", "points": 4 },
+        { "critere": "Dilution corrigée : verser l'acide dans l'eau, danger de chaleur et de projections", "points": 4 },
+        { "critere": "Rinçage abondant au moins 15 min, vêtements retirés, secours ; neutralisation avant rejet", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Détartrant** (pH 2,0) : [H₃O⁺] = 10⁻² = 1,0 × 10⁻² mol/L ; [HO⁻] = Ke / [H₃O⁺] = 10⁻¹⁴ / 10⁻² = **1,0 × 10⁻¹² mol/L**.\n**Déboucheur** (pH 13,0) : [H₃O⁺] = 1,0 × 10⁻¹³ mol/L ; [HO⁻] = 10⁻¹⁴ / 10⁻¹³ = **1,0 × 10⁻¹ mol/L**.\nDans l'acide, les H₃O⁺ dominent ; dans la base, les HO⁻ dominent, avec des écarts énormes (facteur 10¹¹ entre les deux [H₃O⁺]).\n2. **2 H₂O ⇌ H₃O⁺ + HO⁻**. Le produit ionique Ke = [H₃O⁺] × [HO⁻] reste égal à 10⁻¹⁴ à 25 °C : si l'un des facteurs augmente, l'autre doit diminuer.\n3. C'est une très mauvaise idée. Le cours est clair : **ne jamais mélanger deux produits ménagers**. De plus, l'acide du détartrant et la base du déboucheur réagissent l'un avec l'autre (réaction acido-basique, échange de H⁺) : ils se neutralisent et perdent leur efficacité, et Maxime manipulerait un mélange de produits corrosifs, avec risque de projections.\n4. On ne verse **jamais l'eau dans un acide concentré** : on verse **l'acide doucement dans l'eau**. La dilution dégage de la chaleur ; en versant l'eau dans l'acide, elle peut provoquer des **projections** d'acide concentré. Il faut aussi porter blouse, gants et lunettes.\n5. **Rincer immédiatement et abondamment à l'eau pendant au moins 15 minutes**, retirer les vêtements souillés, alerter les secours. On ne cherche pas à neutraliser sur la peau.\n6. Il doit d'abord le **neutraliser** par une base jusqu'à un pH proche de 7, pour limiter l'impact sur l'environnement."
+    },
+    {
+      "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+      "difficulte": 1,
+      "titre": "Oxydants de l'armoire à pharmacie",
+      "consigne": "Réponds avec le vocabulaire précis du cours.",
+      "enonce": "**Situation.** Dans l'armoire à pharmacie de la famille de Nour, on trouve de l'eau oxygénée, de la Bétadine (diiode), de l'alcool à 70 % ; sous l'évier, de l'eau de Javel.\n\n1. Définis un oxydant et un réducteur.\n2. On donne la demi-équation : I₂ + 2 e⁻ = 2 I⁻. Indique l'oxydant et le réducteur, puis écris le couple.\n3. Pour chacune des situations suivantes, dis si le produit est utilisé comme **désinfectant** ou comme **antiseptique**, et justifie :\n   a. l'eau de Javel sur le carrelage de la cuisine ;\n   b. la Bétadine sur un genou écorché ;\n   c. l'alcool à 70 % sur la peau avant une piqûre.",
+      "bareme": [
+        { "critere": "Définitions : l'oxydant capte des électrons, le réducteur en cède", "points": 6 },
+        { "critere": "I₂ oxydant, I⁻ réducteur, couple I₂/I⁻", "points": 6 },
+        { "critere": "Trois usages correctement classés, avec la distinction inerte / vivant", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un **oxydant** est une espèce capable de **capter** un ou plusieurs électrons ; un **réducteur** est une espèce capable d'en **céder**.\n2. Dans I₂ + 2 e⁻ = 2 I⁻, le diiode **I₂** capte des électrons : c'est l'**oxydant** ; l'ion iodure **I⁻** est le **réducteur**. Le couple s'écrit **I₂ / I⁻** (oxydant / réducteur).\n3. a. **Désinfectant** : la Javel agit sur une surface inerte.\nb. **Antiseptique** : la Bétadine s'applique sur un tissu vivant (la peau lésée).\nc. **Antiseptique** : l'alcool est appliqué sur la peau, tissu vivant.\nRègle : un désinfectant agit sur l'inerte, un antiseptique sur le vivant."
+    },
+    {
+      "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+      "difficulte": 2,
+      "titre": "Écrire une réaction d'oxydoréduction",
+      "consigne": "Suis la méthode du cours : demi-équations dans le bon sens, même nombre d'électrons, addition.",
+      "enonce": "**Données :** on considère les couples suivants et leurs demi-équations.\n- Couple Fe³⁺ / Fe²⁺ : Fe³⁺ + e⁻ = Fe²⁺\n- Couple I₂ / I⁻ : I₂ + 2 e⁻ = 2 I⁻\n- Couple Cl₂ / Cl⁻ : Cl₂ + 2 e⁻ = 2 Cl⁻\n\n1. **Réaction 1.** Le dichlore Cl₂ réagit avec les ions iodure I⁻. Écris les deux demi-équations dans le sens de la réaction, puis l'équation bilan.\n2. **Réaction 2.** Les ions fer(III) Fe³⁺ réagissent avec les ions iodure I⁻. Écris les deux demi-équations, puis l'équation bilan. Explique pourquoi tu as dû multiplier l'une d'elles.\n3. Dans chaque réaction, nomme l'espèce qui est oxydée et celle qui est réduite.\n4. Pourquoi les électrons n'apparaissent-ils pas dans l'équation bilan ?",
+      "bareme": [
+        { "critere": "Réaction 1 : Cl₂ + 2 I⁻ → 2 Cl⁻ + I₂ avec demi-équations correctes", "points": 5 },
+        { "critere": "Réaction 2 : 2 Fe³⁺ + 2 I⁻ → 2 Fe²⁺ + I₂, multiplication par 2 justifiée", "points": 7 },
+        { "critere": "Espèces oxydées (I⁻) et réduites (Cl₂, Fe³⁺) correctement nommées", "points": 4 },
+        { "critere": "Électrons transférés : autant cédés que captés, ils se compensent", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Cl₂ est l'oxydant qui réagit, I⁻ le réducteur qui réagit :\nCl₂ + 2 e⁻ = 2 Cl⁻\n2 I⁻ = I₂ + 2 e⁻\nBilan : **Cl₂ + 2 I⁻ → 2 Cl⁻ + I₂** (2 électrons de chaque côté, ils s'éliminent).\n2. Fe³⁺ est l'oxydant qui réagit, I⁻ le réducteur :\nFe³⁺ + e⁻ = Fe²⁺ (à multiplier par 2)\n2 I⁻ = I₂ + 2 e⁻\nBilan : **2 Fe³⁺ + 2 I⁻ → 2 Fe²⁺ + I₂**. On multiplie la première demi-équation par 2 car les ions iodure **cèdent 2 électrons** alors qu'un ion Fe³⁺ n'en **capte qu'un** : il faut le même nombre d'électrons dans les deux demi-équations.\n3. Dans les deux réactions, les ions **I⁻ sont oxydés** (ils perdent des électrons). **Cl₂** est réduit dans la réaction 1, **Fe³⁺** dans la réaction 2 (ils gagnent des électrons).\n4. Une réaction d'oxydoréduction est un **transfert d'électrons** : tous les électrons cédés par le réducteur sont captés par l'oxydant. Ils ne sont ni créés ni libres en solution : ils se compensent quand on additionne les demi-équations."
+    },
+    {
+      "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+      "difficulte": 3,
+      "titre": "Javel, détartrant et vieille eau oxygénée",
+      "consigne": "Analyse la situation en t'appuyant sur les équations. Justifie chaque conclusion par le cours.",
+      "enonce": "**Situation.** Inès nettoie ses toilettes. Pour « renforcer » l'eau de Javel, elle y ajoute du détartrant acide. Une odeur piquante se dégage et elle se met à tousser. Plus tard, elle soigne une coupure avec un flacon d'eau oxygénée ouvert depuis deux ans, rangé sur le rebord de la fenêtre : aucune mousse n'apparaît.\n\n**Données :**\n- Couple ClO⁻ / Cl₂ en milieu acide : 2 ClO⁻ + 4 H⁺ + 2 e⁻ = Cl₂ + 2 H₂O\n- Couple Cl₂ / Cl⁻ : Cl₂ + 2 e⁻ = 2 Cl⁻\n- L'eau de Javel contient des ions hypochlorite ClO⁻ et des ions chlorure Cl⁻ ; le détartrant apporte des ions H⁺.\n\n1. Dans la réaction qui se produit, quelle espèce joue le rôle d'oxydant ? de réducteur ? Écris la demi-équation du réducteur dans le sens de la réaction.\n2. Additionne les demi-équations, puis simplifie pour obtenir l'équation : ClO⁻ + Cl⁻ + 2 H⁺ → Cl₂ + H₂O. Vérifie la conservation des éléments et des charges.\n3. Explique le malaise d'Inès et formule la règle de sécurité.\n4. Explique pourquoi l'eau oxygénée d'Inès n'est plus efficace, en écrivant l'équation de sa décomposition. Indique comment elle aurait dû la conserver.\n5. Eau de Javel, eau oxygénée : lequel est un désinfectant, lequel un antiseptique ?",
+      "bareme": [
+        { "critere": "ClO⁻ oxydant, Cl⁻ réducteur, demi-équation 2 Cl⁻ = Cl₂ + 2 e⁻", "points": 4 },
+        { "critere": "Addition, simplification par 2 et vérification atomes et charges", "points": 5 },
+        { "critere": "Dégagement de dichlore toxique expliqué, règle : ne jamais mélanger Javel et produit acide", "points": 4 },
+        { "critere": "Décomposition 2 H₂O₂ → 2 H₂O + O₂, rôle de la lumière et de la chaleur, conservation au frais et à l'abri de la lumière", "points": 5 },
+        { "critere": "Javel désinfectant (inerte), eau oxygénée antiseptique (vivant)", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'ion hypochlorite **ClO⁻ est l'oxydant** (il capte des électrons) ; l'ion chlorure **Cl⁻ est le réducteur** (il en cède). Demi-équation du réducteur dans le sens de la réaction : **2 Cl⁻ = Cl₂ + 2 e⁻**.\n2. Addition :\n2 ClO⁻ + 4 H⁺ + 2 e⁻ = Cl₂ + 2 H₂O\n2 Cl⁻ = Cl₂ + 2 e⁻\n→ 2 ClO⁻ + 2 Cl⁻ + 4 H⁺ → 2 Cl₂ + 2 H₂O, soit en divisant par 2 : **ClO⁻ + Cl⁻ + 2 H⁺ → Cl₂ + H₂O**.\nVérification : Cl : 2 à gauche, 2 à droite ; O : 1 et 1 ; H : 2 et 2. Charges : (−1) + (−1) + 2 × (+1) = 0 à gauche, 0 à droite. L'équation est équilibrée.\n3. Il s'est formé du **dichlore Cl₂**, un **gaz très toxique** (odeur piquante, irritation des voies respiratoires). Règle : **ne jamais mélanger l'eau de Javel avec un détartrant acide** (ni avec un autre produit) ; aérer et sortir de la pièce.\n4. Le peroxyde d'hydrogène est à la fois oxydant et réducteur : il se **décompose** lentement, surtout à la **lumière** et à la **chaleur** : **2 H₂O₂ → 2 H₂O + O₂**. Après deux ans au soleil, il ne reste presque plus de H₂O₂ : le flacon a perdu son efficacité. Il faut le conserver **au frais et à l'abri de la lumière**, et surveiller sa date.\n5. L'eau de Javel est un **désinfectant** (surfaces inertes) ; l'eau oxygénée est un **antiseptique** (sur la peau, tissu vivant)."
+    },
+    {
+      "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+      "difficulte": 1,
+      "titre": "Lire l'oscillogramme du secteur",
+      "consigne": "Lis l'oscillogramme décrit, puis calcule en donnant la relation utilisée.",
+      "enonce": "**Situation.** Au lycée, on visualise sur un oscilloscope une tension proportionnelle à celle du secteur, puis on ramène les lectures à la tension réelle. On relève :\n- un motif complet s'étend sur **4 divisions** horizontales, avec une sensibilité horizontale de **5 ms/div** ;\n- la tension maximale correspond à **3,25 divisions** verticales, avec une sensibilité ramenée à **100 V/div**.\n\n1. Calcule la période T.\n2. Calcule la fréquence f.\n3. Calcule la tension maximale Umax, puis la tension efficace Ueff. Compare à la valeur indiquée par le fournisseur d'électricité.",
+      "bareme": [
+        { "critere": "T = 4 × 5 = 20 ms", "points": 5 },
+        { "critere": "f = 1 / T = 50 Hz avec T converti en secondes", "points": 6 },
+        { "critere": "Umax = 325 V et Ueff = Umax / √2 ≈ 230 V, comparaison", "points": 9 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. T = nombre de divisions × sensibilité horizontale = 4 × 5 = **20 ms** = 0,020 s.\n2. f = 1 / T = 1 / 0,020 = **50 Hz**.\n3. Umax = 3,25 × 100 = **325 V**. Ueff = Umax / √2 = 325 / 1,414 ≈ **230 V**. C'est bien la valeur annoncée pour le secteur en France (230 V, 50 Hz) : 230 V est la tension **efficace**, pas la tension maximale."
+    },
+    {
+      "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+      "difficulte": 2,
+      "titre": "La multiprise de la chambre d'Adam",
+      "consigne": "Réponds en justifiant par des calculs ou par le rôle de chaque dispositif de protection.",
+      "enonce": "**Situation.** Adam branche sur une même multiprise, prévue pour **16 A au maximum**, les appareils suivants, qui fonctionnent en même temps :\n\n| Appareil | Intensité du courant qui le traverse |\n| Radiateur d'appoint | 8,7 A |\n| Bouilloire | 9,0 A |\n| Lampe de bureau | 0,3 A |\n\nLes intensités s'ajoutent dans le câble de la multiprise.\n\n1. Calcule l'intensité totale dans le câble de la multiprise. Conclus.\n2. Quel est le risque ? Quel dispositif de l'installation est prévu pour couper le circuit dans ce cas, et que protège-t-il ?\n3. Plus tard, en touchant la carcasse d'un vieux grille-pain défectueux, Adam est traversé par un courant de 40 mA. Quels effets ce courant peut-il avoir ? Quel dispositif aurait dû couper le courant, et comment fonctionne-t-il ?\n4. Distingue électrisation et électrocution.",
+      "bareme": [
+        { "critere": "I = 18,0 A > 16 A : multiprise surchargée", "points": 5 },
+        { "critere": "Risque de surintensité et d'échauffement, rôle du disjoncteur (appareils, installation)", "points": 5 },
+        { "critere": "Effets de 40 mA (au-delà de 30 mA, respiration bloquée possible) et fonctionnement du différentiel 30 mA", "points": 6 },
+        { "critere": "Électrisation et électrocution correctement définies", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. I = 8,7 + 9,0 + 0,3 = **18,0 A**. C'est supérieur aux 16 A prévus : la multiprise est **surchargée**.\n2. Risque de **surintensité** : les fils s'échauffent, l'isolant se détériore, risque d'incendie. Le **disjoncteur** coupe le circuit en cas de surintensité ou de court-circuit : il protège **les appareils et l'installation**.\n3. 40 mA dépasse 10 mA (on ne peut plus lâcher) et 30 mA (la **respiration peut se bloquer**) ; la gravité dépend aussi de la durée, du trajet dans le corps et de l'humidité de la peau. Le **disjoncteur différentiel 30 mA** aurait dû couper : il compare le courant qui part par la phase et celui qui revient par le neutre ; s'il manque au moins 30 mA (courant qui fuit à travers une personne), il coupe. Il protège **les personnes**.\n4. **Électrisation** : passage d'un courant dans le corps, avec ses effets (brûlure, contraction). **Électrocution** : électrisation qui entraîne la **mort**."
+    },
+    {
+      "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+      "difficulte": 3,
+      "titre": "Le lave-linge en défaut",
+      "consigne": "Compare les deux situations en t'appuyant sur le rôle de chaque protection, puis rédige les consignes de sécurité.",
+      "enonce": "**Situation.** Dans deux maisons, un lave-linge à carcasse métallique présente le même défaut : un fil de **phase** dénudé touche la carcasse. Dans les deux cas, Léna, pieds nus sur le carrelage mouillé de la buanderie, pose la main sur l'appareil.\n\n- **Maison A** : la prise est reliée à la terre (fil vert et jaune) et le tableau comporte un disjoncteur différentiel 30 mA.\n- **Maison B** : installation ancienne, sans prise de terre ni disjoncteur différentiel, avec seulement un disjoncteur classique.\n\n1. Nomme les trois bornes d'une prise et indique la plus dangereuse.\n2. Décris ce qui se passe dans la maison A : où part le courant de fuite, quel dispositif réagit et pourquoi.\n3. Décris ce qui peut se passer dans la maison B. Le disjoncteur classique protège-t-il Léna ? Justifie.\n4. Pourquoi les pieds nus sur un sol mouillé aggravent-ils le danger ?\n5. Un voisin découvre Léna encore en contact avec l'appareil. Indique, dans l'ordre, ce qu'il doit faire et ne pas faire.\n6. La tension maximale du secteur vaut environ 325 V. Retrouve la valeur de la tension efficace.",
+      "bareme": [
+        { "critere": "Phase, neutre, terre ; la phase est la plus dangereuse", "points": 3 },
+        { "critere": "Maison A : fuite par la terre, différentiel qui détecte l'écart phase / neutre et coupe", "points": 5 },
+        { "critere": "Maison B : courant par le corps de Léna, disjoncteur classique inadapté (protège les appareils, pas les personnes)", "points": 5 },
+        { "critere": "Humidité, durée et trajet dans le corps ; conduite à tenir : couper le courant avant de toucher, alerter", "points": 4 },
+        { "critere": "Ueff = 325 / √2 ≈ 230 V", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Phase**, **neutre** et **terre** (fil vert et jaune). La **phase** est la plus dangereuse.\n2. Maison A : la carcasse est reliée à la Terre ; en cas de défaut, le **courant de fuite part par le fil de terre** plutôt que par Léna. Le courant qui revient par le neutre est alors inférieur à celui qui part par la phase : dès qu'il manque 30 mA, le **disjoncteur différentiel coupe** le circuit. Léna est protégée.\n3. Maison B : la carcasse est sous tension et rien ne l'évacue vers la Terre. En la touchant, Léna offre un chemin au courant, qui **traverse son corps** jusqu'au sol : **électrisation**, voire **électrocution** (au-delà d'environ 30 mA, respiration bloquée ; au-delà d'environ 75 mA, fibrillation ventriculaire). Le disjoncteur classique ne coupe qu'en cas de **surintensité** ou de court-circuit : il protège les **appareils et l'installation**, pas les personnes ; un courant de quelques dizaines de milliampères ne le déclenche pas.\n4. La gravité dépend de l'**humidité de la peau**, du trajet et de la durée : pieds nus sur un sol mouillé, le contact avec le sol est bien meilleur, le courant traverse plus facilement le corps (trajet main → pieds).\n5. **Ne pas toucher Léna** tant qu'elle est en contact ; **couper le courant** (disjoncteur général) ; puis alerter les secours et pratiquer les gestes de premiers secours. Ne jamais jeter d'eau.\n6. Ueff = Umax / √2 = 325 / 1,414 ≈ **230 V**."
+    },
+    {
+      "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+      "difficulte": 1,
+      "titre": "Ranger les rayonnements",
+      "consigne": "Justifie chaque classement par les limites des domaines vues en cours.",
+      "enonce": "**Situation.** Tom a noté les longueurs d'onde dans le vide de plusieurs rayonnements :\n\n| Source | Longueur d'onde |\n| Lampe de bronzage | 250 nm |\n| Lumière verte d'un laser | 532 nm |\n| Télécommande de télévision | 950 nm |\n| Rayonnement d'un mur à température ambiante | 10 µm |\n\n1. Classe chaque rayonnement dans son domaine : ultraviolet, visible ou infrarouge.\n2. Convertis 10 µm en nanomètres.\n3. Convertis la température du corps, 37 °C, en kelvins.\n4. Le rayonnement infrarouge émis par ton corps est-il dangereux ? Et les ultraviolets du Soleil ?",
+      "bareme": [
+        { "critere": "Quatre classements justes avec les limites 400 nm et 800 nm", "points": 8 },
+        { "critere": "10 µm = 10 000 nm", "points": 4 },
+        { "critere": "T = 37 + 273 = 310 K", "points": 4 },
+        { "critere": "IR du corps sans danger, UV du Soleil dangereux pour la peau et les yeux", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Limites : UV < 400 nm ; visible de 400 à 800 nm ; IR > 800 nm.\n- 250 nm : **ultraviolet** (< 400 nm) ;\n- 532 nm : **visible** (entre 400 et 800 nm) ;\n- 950 nm : **infrarouge** (> 800 nm) ;\n- 10 µm = 10 000 nm : **infrarouge**.\n2. 1 µm = 1 000 nm, donc 10 µm = **10 000 nm**.\n3. T = θ + 273 = 37 + 273 = **310 K**.\n4. Les infrarouges émis par le corps sont invisibles et **sans danger** pour l'homme. Les **ultraviolets** du Soleil, eux, sont **dangereux** pour la peau et les yeux : il ne faut pas confondre les deux."
+    },
+    {
+      "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+      "difficulte": 2,
+      "titre": "Le thermomètre frontal et la fièvre",
+      "consigne": "Utilise la loi de Wien en écrivant la relation, la conversion en kelvins et le calcul.",
+      "enonce": "**Situation.** Au cabinet médical, le docteur Benali utilise un thermomètre frontal sans contact. Il examine Jade, qui a de la fièvre : sa température corporelle est de 39 °C. Une personne en bonne santé est à 37 °C.\n\n**Donnée :** loi de Wien : λmax × T = 2,90 × 10⁻³ m·K.\n\n1. Calcule la longueur d'onde du maximum d'émission d'un corps à 37 °C, puis d'un corps à 39 °C. Donne les résultats en micromètres.\n2. À quel domaine appartiennent ces rayonnements ? Pourquoi le médecin ne voit-il pas Jade « briller » ?\n3. Comment évolue λmax quand la température augmente ? Tes résultats sont-ils cohérents avec la loi de Wien ?\n4. Explique le principe de fonctionnement du thermomètre frontal.",
+      "bareme": [
+        { "critere": "Conversions 310 K et 312 K, λmax ≈ 9,4 µm et ≈ 9,3 µm", "points": 8 },
+        { "critere": "Domaine infrarouge (> 800 nm), invisible à l'œil", "points": 4 },
+        { "critere": "λmax diminue quand T augmente, cohérence argumentée", "points": 4 },
+        { "critere": "Principe : mesure de l'intensité des IR émis par le front, déduction de la température", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. λmax = 2,90 × 10⁻³ / T, avec T en kelvins.\n- 37 °C : T = 310 K ; λmax = 2,90 × 10⁻³ / 310 ≈ 9,35 × 10⁻⁶ m ≈ **9,4 µm**.\n- 39 °C : T = 312 K ; λmax = 2,90 × 10⁻³ / 312 ≈ 9,29 × 10⁻⁶ m ≈ **9,3 µm**.\n2. Ces longueurs d'onde sont bien supérieures à 800 nm : c'est le domaine des **infrarouges**, **invisibles** à l'œil nu. Jade émet, mais pas de lumière visible.\n3. Plus le corps est chaud, plus λmax est **petite** : de 37 °C à 39 °C, λmax passe de 9,4 à 9,3 µm. C'est cohérent avec la loi de Wien (λmax × T constant).\n4. Le thermomètre **mesure l'intensité des infrarouges émis par le front** et en **déduit la température**, sans contact : pas de risque de transmettre des microbes, mesure rapide."
+    },
+    {
+      "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+      "difficulte": 3,
+      "titre": "La caméra thermique des pompiers",
+      "consigne": "Fais les calculs avec la loi de Wien, puis rédige une explication argumentée.",
+      "enonce": "**Situation.** Dans une maison enfumée, le sergent Morel utilise une caméra thermique pour chercher une victime. Dans son champ de vision :\n- la peau de la victime, à 34 °C ;\n- un mur de la pièce, à 20 °C ;\n- des flammes, dont la température est estimée à 1 000 °C.\n\n**Donnée :** λmax × T = 2,90 × 10⁻³ m·K.\n\n1. Calcule λmax pour la peau, le mur et les flammes. Donne chaque résultat en micromètres.\n2. Dans quel domaine se situe chaque maximum d'émission ?\n3. Explique pourquoi la caméra distingue la victime du mur, alors que l'œil ne voit rien dans la fumée et l'obscurité.\n4. Une étoile a son maximum d'émission à λmax = 290 nm. Calcule sa température de surface. Dans quel domaine est ce maximum ?\n5. Un pompier affirme : « Le rayonnement émis par la victime peut me brûler les yeux, comme les ultraviolets. » Réponds-lui.",
+      "bareme": [
+        { "critere": "Trois conversions en kelvins et λmax ≈ 9,45 µm, 9,90 µm et 2,28 µm", "points": 6 },
+        { "critere": "Domaines : infrarouge pour les trois, justifié par la limite de 800 nm", "points": 3 },
+        { "critere": "Explication : chaque corps émet des IR selon sa température, la caméra les capte et les colore", "points": 5 },
+        { "critere": "T = 2,90 × 10⁻³ / 290 × 10⁻⁹ = 1,0 × 10⁴ K, maximum dans l'ultraviolet", "points": 4 },
+        { "critere": "Réponse argumentée : IR du corps sans danger, à distinguer des UV", "points": 2 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. λmax = 2,90 × 10⁻³ / T, T = θ + 273.\n- Peau : T = 307 K ; λmax = 2,90 × 10⁻³ / 307 ≈ 9,45 × 10⁻⁶ m ≈ **9,45 µm**.\n- Mur : T = 293 K ; λmax ≈ 9,90 × 10⁻⁶ m ≈ **9,90 µm**.\n- Flammes : T = 1 273 K ; λmax ≈ 2,28 × 10⁻⁶ m ≈ **2,28 µm**.\n2. Les trois valeurs dépassent 800 nm (0,8 µm) : les trois maximums sont dans l'**infrarouge**. Les flammes émettent aussi du visible (on les voit), mais leur maximum reste dans l'IR.\n3. Tout corps émet un rayonnement qui dépend de sa **température**. La victime, plus chaude que le mur, émet davantage d'infrarouges, avec un maximum à une longueur d'onde plus courte. La caméra **capte ces IR** et forme une image où chaque zone est **colorée selon son émission** : la victime ressort nettement sur le mur. L'œil, lui, ne perçoit que le visible, et la fumée et l'obscurité le privent de lumière.\n4. T = 2,90 × 10⁻³ / λmax = 2,90 × 10⁻³ / (290 × 10⁻⁹) = **1,0 × 10⁴ K** (10 000 K). 290 nm < 400 nm : le maximum est dans l'**ultraviolet**.\n5. Non : les infrarouges émis par le corps humain sont **sans danger**. Il ne faut pas les confondre avec les **ultraviolets** du Soleil, qui sont dangereux pour la peau et les yeux."
+    },
+    {
+      "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+      "difficulte": 1,
+      "titre": "Le scooter de Hugo",
+      "consigne": "Écris la relation, convertis la vitesse en m/s, puis calcule.",
+      "enonce": "**Situation.** Hugo roule en scooter à 45 km/h. La masse de l'ensemble scooter + Hugo est de 150 kg. Son temps de réaction est de 1,0 s.\n\n1. Convertis la vitesse en m/s.\n2. Calcule l'énergie cinétique de l'ensemble.\n3. Calcule la distance de réaction de Hugo.\n4. Cite deux facteurs qui allongeraient cette distance de réaction.",
+      "bareme": [
+        { "critere": "v = 45 / 3,6 = 12,5 m/s", "points": 4 },
+        { "critere": "Ec = ½ × m × v² ≈ 1,2 × 10⁴ J avec l'unité", "points": 7 },
+        { "critere": "DR = v × tR = 12,5 m", "points": 5 },
+        { "critere": "Deux facteurs parmi fatigue, alcool, drogues, téléphone, vitesse plus élevée", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. v = 45 / 3,6 = **12,5 m/s**.\n2. Ec = ½ × m × v² = 0,5 × 150 × 12,5² = 0,5 × 150 × 156,25 ≈ **1,2 × 10⁴ J** (11 719 J).\n3. DR = v × tR = 12,5 × 1,0 = **12,5 m**, parcourus avant même le début du freinage.\n4. La **fatigue**, l'**alcool**, les **drogues**, le **téléphone** allongent le temps de réaction ; une **vitesse** plus grande allonge aussi la distance parcourue pendant ce temps."
+    },
+    {
+      "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+      "difficulte": 2,
+      "titre": "Un obstacle à 80 mètres",
+      "consigne": "Réponds en rédigeant chaque calcul et en concluant par une phrase.",
+      "enonce": "**Situation.** Sofia conduit une voiture de 1 000 kg à 90 km/h sur route sèche. Un cerf surgit sur la route à 80 m devant elle.\n\n**Données :** temps de réaction habituel de Sofia : 1,0 s ; à 90 km/h sur route sèche, la distance de freinage est d'environ 45 m.\n\n1. Calcule l'énergie cinétique de la voiture.\n2. Calcule la distance de réaction, puis la distance d'arrêt. Sofia s'arrête-t-elle avant le cerf ?\n3. Même situation, mais Sofia lisait un message sur son téléphone : son temps de réaction passe à 2,0 s. Recalcule la distance d'arrêt et conclus.\n4. Lors d'un choc, que devient l'énergie cinétique de la voiture ?",
+      "bareme": [
+        { "critere": "v = 25 m/s et Ec ≈ 3,1 × 10⁵ J", "points": 5 },
+        { "critere": "DR = 25 m, DA = 70 m < 80 m : arrêt avant l'obstacle", "points": 6 },
+        { "critere": "DR = 50 m, DA = 95 m > 80 m : collision, rôle du téléphone", "points": 6 },
+        { "critere": "Énergie dissipée en déformations (véhicule et corps)", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. v = 90 / 3,6 = 25 m/s. Ec = ½ × m × v² = 0,5 × 1 000 × 25² = **3,1 × 10⁵ J** (312 500 J).\n2. DR = v × tR = 25 × 1,0 = **25 m**. DA = DR + DF = 25 + 45 = **70 m**. 70 m < 80 m : Sofia **s'arrête avant le cerf**, avec une dizaine de mètres de marge.\n3. DR = 25 × 2,0 = **50 m** ; DA = 50 + 45 = **95 m**. 95 m > 80 m : Sofia **percute le cerf**. Le téléphone ne change pas la distance de freinage mais double la distance de réaction : la voiture parcourt 25 m de plus à pleine vitesse.\n4. Lors du choc, l'énergie cinétique est **dissipée en déformations** du véhicule et des corps (et en chaleur)."
+    },
+    {
+      "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+      "difficulte": 3,
+      "titre": "Doubler la vitesse, sous la pluie",
+      "consigne": "Fais les calculs, puis explique physiquement les résultats et rédige une recommandation argumentée.",
+      "enonce": "**Situation.** Pour une campagne de prévention, le lycée de Samuel prépare une affiche. On sait qu'une voiture qui roule à 50 km/h sur route sèche a une distance de freinage d'environ 14 m. On prend un temps de réaction de 1,0 s.\n\n1. Montre, à partir de l'expression de l'énergie cinétique, que l'énergie cinétique est multipliée par 4 quand la vitesse passe de 50 à 100 km/h.\n2. Explique pourquoi la distance de freinage varie comme le carré de la vitesse. Déduis-en la distance de freinage à 100 km/h sur route sèche.\n3. Calcule la distance d'arrêt à 100 km/h sur route sèche.\n4. Sur route mouillée, la distance de freinage est environ 1,5 fois plus grande. Calcule la distance d'arrêt à 100 km/h sous la pluie.\n5. Rédige, en quelques lignes, le message de l'affiche : pourquoi réduire sa vitesse sous la pluie et garder ses distances ?",
+      "bareme": [
+        { "critere": "Ec proportionnelle à v² : (100/50)² = 4", "points": 4 },
+        { "critere": "Freiner = dissiper Ec, donc DF ∝ v² ; DF ≈ 56 m à 100 km/h", "points": 5 },
+        { "critere": "v ≈ 27,8 m/s, DR ≈ 27,8 m, DA ≈ 84 m", "points": 4 },
+        { "critere": "DF mouillée ≈ 84 m, DA ≈ 112 m", "points": 3 },
+        { "critere": "Message argumenté : vitesse, pluie, distance de sécurité de 2 s, réflexes", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Ec = ½ × m × v². À masse égale, Ec est proportionnelle à v². Si v est multipliée par 100 / 50 = 2, Ec est multipliée par 2² = **4**.\n2. Freiner, c'est **dissiper toute l'énergie cinétique**. Comme Ec est proportionnelle à v², la distance nécessaire l'est aussi (à force de freinage égale). À vitesse doublée : DF × 4 = 14 × 4 ≈ **56 m**.\n3. v = 100 / 3,6 ≈ 27,8 m/s ; DR = 27,8 × 1,0 ≈ 27,8 m ; DA = 27,8 + 56 ≈ **84 m**.\n4. DF mouillée ≈ 56 × 1,5 = 84 m ; DA ≈ 27,8 + 84 ≈ **112 m**, soit presque 30 m de plus que sur route sèche.\n5. Exemple de message : « Rouler deux fois plus vite, c'est quatre fois plus d'énergie à dissiper et quatre fois plus de distance pour freiner. Sous la pluie, il faut encore la moitié de plus. À 100 km/h, il faut plus de 110 m pour s'arrêter sur route mouillée. Adapte ta vitesse à la météo, garde au moins 2 secondes avec le véhicule devant, et ne touche pas ton téléphone : ton temps de réaction s'allongerait. »"
+    },
+    {
+      "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+      "difficulte": 1,
+      "titre": "Du haut-parleur au cerveau",
+      "consigne": "Réponds par des phrases complètes et justifie les calculs.",
+      "enonce": "**Situation.** Rose écoute une note jouée par un haut-parleur. Sur l'enregistrement du son, la période du motif est T = 2,5 ms.\n\n1. Remets dans l'ordre le trajet du son : nerf auditif, tympan, cellules ciliées de la cochlée, pavillon, osselets, cerveau.\n2. Calcule la fréquence du son. Est-il audible par l'être humain ? Justifie.\n3. Rose affirme qu'un astronaute sur la Lune entendrait la musique d'un haut-parleur posé à dix mètres de lui, sans radio. A-t-elle raison ?",
+      "bareme": [
+        { "critere": "Ordre : pavillon, tympan, osselets, cellules ciliées, nerf auditif, cerveau", "points": 7 },
+        { "critere": "f = 1 / T = 400 Hz, audible car entre 20 et 20 000 Hz", "points": 7 },
+        { "critere": "Non : le son a besoin d'un milieu matériel, pas de propagation dans le vide", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Pavillon** (et conduit auditif) → **tympan** → **osselets** → **cellules ciliées de la cochlée** → **nerf auditif** → **cerveau**.\n2. f = 1 / T = 1 / (2,5 × 10⁻³) = **400 Hz**. Ce son est **audible** : 400 Hz est compris entre 20 Hz et 20 000 Hz.\n3. Non. Le son est une onde **mécanique** : il a besoin d'un **milieu matériel** pour se propager. Sur la Lune, il n'y a pratiquement pas d'air : le son ne se propage pas dans le vide, l'astronaute n'entendrait rien."
+    },
+    {
+      "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+      "difficulte": 2,
+      "titre": "Au premier rang du concert",
+      "consigne": "Exploite les données chiffrées, puis justifie tes conseils par le fonctionnement de l'oreille.",
+      "enonce": "**Situation.** Ethan va à un concert. Il enregistre une note de guitare avec son téléphone : on compte **3 périodes en 6,0 ms**. Un sonomètre installé près de la scène indique **100 dB** ; au bar, au fond de la salle, il indique **85 dB**.\n\n1. Calcule la période puis la fréquence de la note. Est-elle grave ou aiguë par rapport à un son de 100 Hz ?\n2. Situe les deux niveaux sonores par rapport aux repères du cours. Quel est le risque ?\n3. Pourquoi une perte auditive due à un traumatisme sonore est-elle souvent définitive ?\n4. Propose trois conseils concrets à Ethan pour protéger son audition.",
+      "bareme": [
+        { "critere": "T = 2,0 ms et f = 500 Hz, plus aigu qu'un son de 100 Hz", "points": 5 },
+        { "critere": "100 dB et 85 dB au-dessus du seuil de risque de 80–85 dB ; rôle de la durée", "points": 5 },
+        { "critere": "Cellules ciliées qui ne se régénèrent pas", "points": 5 },
+        { "critere": "Trois conseils : bouchons, pauses, distance aux enceintes", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. T = 6,0 / 3 = **2,0 ms** ; f = 1 / T = 1 / (2,0 × 10⁻³) = **500 Hz**. Un son de fréquence plus élevée est plus **aigu** : cette note est plus aiguë qu'un son de 100 Hz.\n2. 100 dB près de la scène : bien au-dessus du **seuil de risque (80–85 dB)** pour une exposition prolongée, et on se rapproche du seuil de douleur (≈ 120 dB). 85 dB au bar : au niveau du seuil de risque. Le danger dépend du **niveau** et de la **durée** : un concert de plusieurs heures près de la scène peut provoquer un traumatisme sonore.\n3. Dans la cochlée, les **cellules ciliées** transforment la vibration en message nerveux ; elles **ne se régénèrent pas** : une fois détruites, la perte est définitive.\n4. Porter des **bouchons d'oreille**, faire des **pauses** dans un endroit calme, se tenir **loin des enceintes** (éviter le premier rang)."
+    },
+    {
+      "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+      "difficulte": 3,
+      "titre": "L'audiogramme de M. Garnier",
+      "consigne": "Analyse le document, calcule quand c'est demandé et rédige des réponses argumentées.",
+      "enonce": "**Situation.** M. Garnier, 62 ans, a travaillé trente ans dans une usine bruyante. Il se plaint de mal comprendre les conversations. L'audioprothésiste réalise son audiogramme.\n\n**Document : niveau minimal entendu (en dB) selon la fréquence, oreille droite**\n\n| Fréquence (Hz) | 250 | 500 | 1 000 | 2 000 | 4 000 | 8 000 |\n| Seuil de M. Garnier (dB) | 10 | 15 | 20 | 35 | 60 | 65 |\n\nUne audition normale se situe entre 0 et 20 dB à toutes les fréquences.\n\n1. Que représente un audiogramme ?\n2. Pour quelles fréquences l'audition de M. Garnier est-elle normale ? Pour lesquelles y a-t-il une perte ? Ces fréquences correspondent-elles à des sons graves ou aigus ?\n3. Propose deux causes possibles de cette perte, à partir du document et de la situation.\n4. Calcule la période d'un son de 4 000 Hz.\n5. Explique comment une prothèse auditive peut aider M. Garnier et à quelles fréquences elle doit surtout agir.\n6. Un répulsif pour chiens émet un son de 25 000 Hz. M. Garnier pourrait-il l'entendre avec une prothèse ? Justifie.",
+      "bareme": [
+        { "critere": "Définition de l'audiogramme : niveau minimal entendu pour chaque fréquence", "points": 3 },
+        { "critere": "Lecture : normal jusqu'à 1 000 Hz, perte à 2 000, 4 000 et 8 000 Hz, dans les aigus", "points": 5 },
+        { "critere": "Deux causes : traumatisme sonore lié au bruit de l'usine, âge", "points": 3 },
+        { "critere": "T = 1 / 4 000 = 2,5 × 10⁻⁴ s", "points": 3 },
+        { "critere": "Prothèse : micro, amplification surtout dans les aigus, écouteur ; ultrasons inaudibles", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'**audiogramme** représente, pour chaque fréquence testée, le **niveau minimal** (en dB) que le patient entend.\n2. De 250 à 1 000 Hz, les seuils (10 à 20 dB) sont dans la zone **normale** (0 à 20 dB). À 2 000 Hz (35 dB), 4 000 Hz (60 dB) et 8 000 Hz (65 dB), la courbe descend nettement : **perte auditive**. Ce sont les fréquences élevées, donc les **sons aigus**.\n3. Une perte qui touche surtout les aigus est souvent le signe d'un **traumatisme sonore** (trente ans dans une usine bruyante) ou de l'**âge** (62 ans). Les deux peuvent s'additionner.\n4. T = 1 / f = 1 / 4 000 = **2,5 × 10⁻⁴ s** (0,25 ms).\n5. La prothèse capte le son par un **microphone**, l'**amplifie** — surtout aux fréquences où la perte est la plus forte, ici **2 000 à 8 000 Hz** — et le restitue dans le conduit auditif par un **écouteur**. Elle ne répare pas les cellules ciliées détruites, qui ne se régénèrent pas, mais compense la perte.\n6. Non. 25 000 Hz dépasse 20 000 Hz : c'est un **ultrason**, **inaudible** pour l'oreille humaine, même en parfaite santé. La prothèse amplifie les sons audibles, elle ne rend pas audibles les ultrasons."
+    },
+    {
+      "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+      "difficulte": 1,
+      "titre": "L'œil et ses lentilles",
+      "consigne": "Réponds en utilisant le modèle de l'œil et la relation de la vergence.",
+      "enonce": "**Situation.** En cours, Louise compare l'œil à un appareil photo simplifié.\n\n1. Associe chaque élément de l'œil à son équivalent dans le modèle : cornée et cristallin, iris, rétine. Donne le rôle de chacun.\n2. Une lentille a une distance focale f' = 20 cm. Calcule sa vergence. Est-elle convergente ou divergente ?\n3. Une autre lentille a une vergence V = − 2,5 δ. Est-elle convergente ou divergente ? Calcule sa distance focale.\n4. Comment reconnaît-on au toucher une lentille convergente ?",
+      "bareme": [
+        { "critere": "Cornée + cristallin = lentille convergente, iris = diaphragme, rétine = écran, rôles cités", "points": 6 },
+        { "critere": "V = 1 / 0,20 = + 5,0 δ, convergente", "points": 5 },
+        { "critere": "V < 0 donc divergente, f' = − 0,40 m", "points": 5 },
+        { "critere": "Bords minces pour une lentille convergente", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Cornée + cristallin** → **lentille convergente** : ils font converger la lumière. **Iris** → **diaphragme** : il règle la quantité de lumière qui entre. **Rétine** → **écran** : elle reçoit l'image et contient les photorécepteurs.\n2. V = 1 / f', avec f' en mètres : V = 1 / 0,20 = **+ 5,0 δ**. V > 0 : lentille **convergente**.\n3. V = − 2,5 δ < 0 : lentille **divergente**. f' = 1 / V = 1 / (− 2,5) = **− 0,40 m** (− 40 cm).\n4. Une lentille convergente a des **bords minces** (elle est plus épaisse au centre)."
+    },
+    {
+      "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+      "difficulte": 2,
+      "titre": "Léo ne voit plus le tableau",
+      "consigne": "Explique le défaut, puis justifie la correction par un calcul de vergence.",
+      "enonce": "**Situation.** Depuis la rentrée, Léo voit flou le tableau du fond de la classe, mais lit sans difficulté. L'ophtalmologiste diagnostique une myopie.\n\nDans un modèle simplifié, l'œil de Léo au repos se comporte comme une lentille de vergence **62 δ** ; pour que l'image d'un objet lointain se forme sur sa rétine, il faudrait une vergence de **60 δ**.\n\n1. Où se forme l'image d'un objet lointain dans l'œil de Léo ? Pourquoi voit-il flou ?\n2. On accole un verre correcteur à l'œil. Écris la relation entre les vergences et calcule la vergence du verre nécessaire.\n3. Quel type de lentille est-ce ? Est-ce cohérent avec la correction de la myopie vue en cours ?\n4. Calcule la distance focale du verre.",
+      "bareme": [
+        { "critere": "Image formée avant la rétine, œil trop convergent, vision de loin floue", "points": 5 },
+        { "critere": "V = V₁ + V₂ et V verre = 60 − 62 = − 2 δ", "points": 6 },
+        { "critere": "Lentille divergente, cohérente avec le cours", "points": 4 },
+        { "critere": "f' = 1 / V = − 0,50 m", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L'œil de Léo est **trop convergent** (62 δ au lieu de 60 δ) : l'image d'un objet lointain se forme **avant la rétine**. Sur la rétine, on obtient une tache floue : la vision de loin est floue.\n2. Deux lentilles accolées se comportent comme une lentille de vergence **V = V₁ + V₂**. On veut 60 = 62 + V verre, donc **V verre = − 2 δ**.\n3. V < 0 : c'est une lentille **divergente**. C'est cohérent : la myopie se corrige par une lentille **divergente**, qui diminue la vergence totale.\n4. f' = 1 / V = 1 / (− 2) = **− 0,50 m** (− 50 cm)."
+    },
+    {
+      "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+      "difficulte": 3,
+      "titre": "Mme Roy, ses lunettes et sa loupe",
+      "consigne": "Rédige des réponses argumentées, fais les calculs et décris les constructions avec les rayons particuliers.",
+      "enonce": "**Situation.** Mme Roy, 55 ans, voit toujours bien de loin, mais doit tenir son journal à bout de bras pour lire. Son opticien lui propose des lunettes de lecture de vergence **+ 2,5 δ**. Pour les très petits caractères d'une notice de médicament, elle utilise aussi une loupe de distance focale **f' = 10 cm**.\n\n1. Nomme le défaut de vision de Mme Roy et explique son origine à l'aide de la notion d'accommodation.\n2. Les lunettes de lecture sont-elles convergentes ou divergentes ? Calcule leur distance focale. Explique pourquoi ce type de verre l'aide à lire.\n3. Calcule la vergence de la loupe.\n4. Mme Roy place la loupe à 5 cm d'un caractère haut de 2,0 mm. Où se trouve le caractère par rapport au foyer objet F et au centre optique O ? Quelles sont les caractéristiques de l'image obtenue ?\n5. Décris la construction de l'image B' du haut B du caractère avec deux rayons particuliers.\n6. L'image du caractère mesure 4,0 mm. Calcule le grandissement.",
+      "bareme": [
+        { "critere": "Presbytie : cristallin moins élastique, accommodation insuffisante, vision de près floue", "points": 4 },
+        { "critere": "Verres convergents, f' = 0,40 m, ils augmentent la vergence de l'œil", "points": 4 },
+        { "critere": "V loupe = 1 / 0,10 = + 10 δ", "points": 3 },
+        { "critere": "Objet entre F et O : image virtuelle, droite, agrandie ; construction avec le rayon par O et le rayon parallèle à l'axe", "points": 6 },
+        { "critere": "γ = A'B' / AB = 2,0", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. C'est la **presbytie**. Pour voir net de près, les muscles ciliaires **bombent le cristallin**, ce qui augmente sa vergence : c'est l'**accommodation**. Avec l'âge, le cristallin **perd son élasticité** : l'accommodation devient insuffisante et la vision de près est floue.\n2. V = + 2,5 δ > 0 : verres **convergents**. f' = 1 / V = 1 / 2,5 = **0,40 m** (40 cm). Accolés à l'œil, ils **ajoutent de la vergence** (V = V₁ + V₂) et compensent l'accommodation qui manque : l'image d'un objet proche se forme à nouveau sur la rétine.\n3. V = 1 / f' = 1 / 0,10 = **+ 10 δ**.\n4. Le foyer objet F est à 10 cm de la loupe ; le caractère est à 5 cm : il est **entre F et O**. Les rayons divergent après la loupe : l'image est **virtuelle**, **droite** et **agrandie** (principe de la loupe).\n5. Depuis B : le rayon qui passe par **O n'est pas dévié** ; le rayon qui arrive **parallèle à l'axe** ressort en passant par **F'**. Après la lentille, ces deux rayons divergent : on les **prolonge vers l'arrière** (en pointillés) ; ils se coupent en **B'**, du même côté que l'objet, plus haut que B.\n6. γ = A'B' / AB = 4,0 / 2,0 = **2,0** : l'image est deux fois plus grande que le caractère."
+    }
+  ]
+}

@@ -532,6 +532,33 @@ describe('QuizPlayer — l’écran de question', () => {
     expect(vignette).not.toBeNull()
   })
 
+  it('l’illustration de la matière FÊTE une bonne réponse et tressaille sur une erreur', async () => {
+    const user = userEvent.setup()
+    const { container } = render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        subjectColor="red"
+        subjectSlug="allemand"
+        record={false}
+      />,
+    )
+    const illustration = () => container.querySelector('[data-illustration]')
+    // Pleine, au-dessus de l'énoncé, et au repos tant qu'on n'a pas répondu.
+    expect(illustration()?.querySelector('img[src*="vignettes"]')).not.toBeNull()
+    expect(illustration()).toHaveAttribute('data-reaction', 'attente')
+
+    await repondre(user, 'Paris')
+    expect(illustration()).toHaveAttribute('data-reaction', 'joie')
+
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    expect(illustration()).toHaveAttribute('data-reaction', 'attente')
+
+    await repondre(user, '5')
+    expect(illustration()).toHaveAttribute('data-reaction', 'rate')
+  })
+
   it('n’invente pas d’illustration pour un quiz sans matière', () => {
     const { container } = rendreQuestion()
     expect(container.querySelector('img[src*="vignettes"]')).toBeNull()

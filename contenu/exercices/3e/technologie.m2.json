@@ -1,0 +1,3502 @@
+{
+  "niveau": "3e",
+  "matiere": "technologie",
+  "exercices": [
+    {
+      "chapitre": "6beaa39b-0ba6-5305-9e5d-b5be53c8da7c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La LED qui clignote",
+      "competence": "programmer",
+      "situation": "Sur une carte programmable, Jules fait clignoter une LED pour signaler que son robot est prêt. Voici son programme.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le programme de Jules",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (3) fois",
+                "id": "boucle",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "allumer la LED",
+                    "id": "on"
+                  },
+                  {
+                    "categorie": "controle",
+                    "texte": "attendre (1) secondes",
+                    "id": "a1"
+                  },
+                  {
+                    "categorie": "apparence",
+                    "texte": "éteindre la LED",
+                    "id": "off"
+                  },
+                  {
+                    "categorie": "controle",
+                    "texte": "attendre (1) secondes",
+                    "id": "a2"
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc « allumer la LED », qui est **répété**.",
+          "reponse": [
+            "on"
+          ],
+          "aide": "Il est enfermé dans la boucle.",
+          "explication": "« **allumer la LED** » est dans le bloc « répéter 3 fois » : il s’exécute à chaque tour."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois la LED s’allume-t-elle ?",
+          "reponse": 3,
+          "aide": "Regarde le nombre de tours de la boucle.",
+          "explication": "La boucle fait **3** tours : la LED s’allume 3 fois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de secondes dure le programme en tout ?",
+          "reponse": 6,
+          "unite": "s",
+          "aide": "Chaque tour contient deux attentes d’une seconde.",
+          "explication": "Un tour dure 1 + 1 = 2 s ; trois tours : **6 s**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Cette boucle est…",
+          "options": [
+            "bornée : on connaît le nombre de tours",
+            "non bornée : on ne connaît pas le nombre de tours",
+            "infinie",
+            "une condition"
+          ],
+          "reponse": 0,
+          "aide": "On répète 3 fois.",
+          "explication": "Une boucle **bornée** a un nombre de tours connu d’avance."
+        }
+      ]
+    },
+    {
+      "chapitre": "6beaa39b-0ba6-5305-9e5d-b5be53c8da7c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le ventilateur du local",
+      "competence": "programmer",
+      "situation": "Un ventilateur se déclenche selon la température d’un local technique. Voici le programme et quatre relevés.",
+      "documents": [
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le programme du ventilateur",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter indéfiniment",
+                "interieur": [
+                  {
+                    "categorie": "controle",
+                    "texte": "si <(température) > (25)> alors",
+                    "id": "test",
+                    "interieur": [
+                      {
+                        "categorie": "mouvement",
+                        "texte": "allumer le ventilateur",
+                        "id": "on"
+                      }
+                    ],
+                    "sinon": [
+                      {
+                        "categorie": "mouvement",
+                        "texte": "éteindre le ventilateur",
+                        "id": "off"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "rel",
+          "type": "tableau",
+          "titre": "Quatre relevés",
+          "colonnes": [
+            "Moment",
+            "Température (°C)"
+          ],
+          "lignes": [
+            [
+              "9 h",
+              "22"
+            ],
+            [
+              "11 h",
+              "25"
+            ],
+            [
+              "14 h",
+              "27"
+            ],
+            [
+              "17 h",
+              "31"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui contient le **test**.",
+          "reponse": [
+            "test"
+          ],
+          "aide": "C’est le bloc « si … alors … sinon ».",
+          "explication": "Le bloc « **si température > 25** » contient la condition."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À combien de relevés le ventilateur est-il allumé ?",
+          "reponse": 2,
+          "aide": "Il faut une température strictement supérieure à 25.",
+          "explication": "27 et 31 : **2** relevés. À 25, la condition « > 25 » est fausse."
+        },
+        {
+          "type": "choix",
+          "enonce": "On remplace « > 25 » par « ≥ 25 ». Pour le relevé de 11 h (25 °C), le ventilateur…",
+          "options": [
+            "s’allume",
+            "reste éteint",
+            "tombe en panne",
+            "s’allume puis s’éteint"
+          ],
+          "reponse": 0,
+          "aide": "≥ signifie supérieur ou égal.",
+          "explication": "Avec « ≥ 25 », 25 °C vérifie la condition : le ventilateur **s’allume**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour qu’un portail s’ouvre seulement si la porte est fermée ET le code correct, on utilise…",
+          "options": [
+            "Un opérateur logique « et »",
+            "Un opérateur « ou »",
+            "Une variable",
+            "Une boucle bornée"
+          ],
+          "reponse": 0,
+          "aide": "Les deux conditions doivent être vraies.",
+          "explication": "L’opérateur **et** exige que les deux conditions soient vraies à la fois."
+        }
+      ]
+    },
+    {
+      "chapitre": "6beaa39b-0ba6-5305-9e5d-b5be53c8da7c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le compte à rebours",
+      "competence": "programmer",
+      "situation": "Deux élèves ont programmé un compte à rebours avec une boucle « répéter jusqu’à ». L’un des deux programmes ne s’arrête jamais.",
+      "documents": [
+        {
+          "id": "a",
+          "type": "scratch",
+          "titre": "Programme A",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [compte] à (10)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter jusqu’à <(compte) = (0)>",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire (compte)",
+                    "id": "dire"
+                  },
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (-2) à [compte]",
+                    "id": "moins"
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "b",
+          "type": "scratch",
+          "titre": "Programme B",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [compte] à (10)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter jusqu’à <(compte) = (0)>",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire (compte)"
+                  },
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (-3) à [compte]",
+                    "id": "moins3"
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Dans le programme A, combien de valeurs le lutin dit-il ?",
+          "reponse": 5,
+          "aide": "compte passe par 10, 8, 6, 4, 2…",
+          "explication": "Il dit 10, 8, 6, 4, 2 : **5** valeurs, puis compte vaut 0 et la boucle s’arrête."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la dernière valeur dite par le programme A ?",
+          "reponse": 2,
+          "aide": "Après 2, compte vaut 0 : on ne dit plus rien.",
+          "explication": "La dernière valeur dite est **2**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il avec le programme B ?",
+          "options": [
+            "Il ne s’arrête jamais : compte passe de 1 à −2 sans valoir 0",
+            "Il s’arrête quand compte vaut 0",
+            "Il dit 10 puis s’arrête",
+            "Il refuse de démarrer"
+          ],
+          "reponse": 0,
+          "aide": "10, 7, 4, 1, −2… vaut-il 0 un jour ?",
+          "explication": "compte vaut 10, 7, 4, 1, −2… sans jamais valoir 0 : c’est une **boucle infinie**."
+        },
+        {
+          "type": "zone",
+          "document": "b",
+          "enonce": "Touche le bloc responsable de l’erreur dans le programme B.",
+          "reponse": [
+            "moins3"
+          ],
+          "aide": "Un seul nombre est mal choisi.",
+          "explication": "« **ajouter −3** » saute par-dessus 0 : la condition d’arrêt n’est jamais vraie."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque élément à son rôle dans un programme.",
+          "paires": [
+            [
+              "Un capteur lu par le programme",
+              "Une entrée"
+            ],
+            [
+              "Un actionneur commandé par le programme",
+              "Une sortie"
+            ],
+            [
+              "Une case mémoire nommée",
+              "Une variable"
+            ],
+            [
+              "Un test « si … alors »",
+              "Une condition"
+            ]
+          ],
+          "aide": "Entrée, sortie, variable, condition.",
+          "explication": "Un **capteur** est une entrée, un **actionneur** une sortie ; la **variable** stocke, la **condition** décide."
+        }
+      ]
+    },
+    {
+      "chapitre": "830977f6-bd57-5ceb-bd17-11b717331c02",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Des blocs au texte",
+      "competence": "analyser-document",
+      "situation": "Voici le même petit programme écrit en blocs et en Python.",
+      "documents": [
+        {
+          "id": "blocs",
+          "type": "scratch",
+          "titre": "En blocs",
+          "scripts": [
+            [
+              {
+                "categorie": "controle",
+                "texte": "si <(température) > (25)> alors",
+                "id": "si",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire [Chaud]",
+                    "id": "chaud"
+                  }
+                ],
+                "sinon": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire [Frais]",
+                    "id": "frais"
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "py",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "En Python",
+          "blocs": [
+            "if temperature > 25 :",
+            "    print(\"Chaud\")",
+            "else :",
+            "    print(\"Frais\")"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque bloc à la ligne Python équivalente.",
+          "paires": [
+            [
+              "si … alors",
+              "if"
+            ],
+            [
+              "sinon",
+              "else"
+            ],
+            [
+              "dire",
+              "print"
+            ]
+          ],
+          "aide": "Compare les deux programmes ligne à ligne.",
+          "explication": "Les deux programmes suivent la **même logique** : « si » → **if**, « sinon » → **else**, « dire » → **print**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel signe termine la ligne qui ouvre un bloc en Python ?",
+          "options": [
+            "Le deux-points",
+            "Le point-virgule",
+            "Le point d’exclamation",
+            "Le guillemet"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la fin des lignes if et else.",
+          "explication": "Le **deux-points** ouvre le bloc ; l’indentation dit ce qui lui appartient."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que change-t-on à l’algorithme en passant des blocs au texte ?",
+          "options": [
+            "Rien : seule l’écriture change",
+            "La logique complète",
+            "La condition",
+            "Le résultat obtenu"
+          ],
+          "reponse": 0,
+          "aide": "Séquence, condition, boucle, variable : les mêmes.",
+          "explication": "Seule l’**écriture** change, pas l’algorithme."
+        }
+      ]
+    },
+    {
+      "chapitre": "830977f6-bd57-5ceb-bd17-11b717331c02",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trouver l’erreur de syntaxe",
+      "competence": "analyser-texte",
+      "situation": "Zélie écrit deux programmes en Python. Aucun ne démarre : il y a une erreur de syntaxe dans chacun.",
+      "documents": [
+        {
+          "id": "p1",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Programme 1",
+          "blocs": [
+            "temperature = 28",
+            "[[manque|if temperature > 25]]",
+            "    print(\"Chaud\")"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "p2",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Programme 2",
+          "blocs": [
+            "temperature = 28",
+            "if temperature > 25 :",
+            "[[retrait|print(\"Chaud\")]]"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "p1",
+          "enonce": "Dans le programme 1, touche la ligne où il manque un caractère.",
+          "reponse": [
+            "manque"
+          ],
+          "aide": "Une ligne qui ouvre un bloc doit finir par un signe.",
+          "explication": "Il manque le **deux-points** à la fin de la ligne « if »."
+        },
+        {
+          "type": "zone",
+          "document": "p2",
+          "enonce": "Dans le programme 2, touche la ligne qui devrait être décalée vers la droite.",
+          "reponse": [
+            "retrait"
+          ],
+          "aide": "Ce qui appartient au bloc est indenté.",
+          "explication": "Le « print » doit être **indenté** pour appartenir au bloc « if »."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque environnement dans sa famille.",
+          "categories": [
+            "Programmation graphique",
+            "Programmation textuelle"
+          ],
+          "items": [
+            [
+              "Scratch",
+              0
+            ],
+            [
+              "mBlock",
+              0
+            ],
+            [
+              "Blockly",
+              0
+            ],
+            [
+              "Python",
+              1
+            ],
+            [
+              "JavaScript",
+              1
+            ],
+            [
+              "C++ pour Arduino",
+              1
+            ]
+          ],
+          "aide": "Blocs d’un côté, lignes de code de l’autre.",
+          "explication": "Scratch, mBlock, Blockly sont graphiques ; Python, JavaScript, C++ sont textuels."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ces erreurs sont-elles impossibles en Scratch ?",
+          "options": [
+            "Les blocs incompatibles ne s’emboîtent pas",
+            "Scratch corrige tout seul la logique",
+            "Scratch n’a pas de condition",
+            "Scratch n’a pas de syntaxe du tout"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la forme des blocs.",
+          "explication": "En blocs, la **syntaxe** est guidée : les blocs incompatibles ne s’assemblent pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "830977f6-bd57-5ceb-bd17-11b717331c02",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Traduire de Scratch à Python",
+      "competence": "programmer",
+      "situation": "Une équipe a écrit un programme en blocs, puis l’a traduit en Python pour une carte programmable. À toi de vérifier la traduction.",
+      "documents": [
+        {
+          "id": "blocs",
+          "type": "scratch",
+          "titre": "Version en blocs",
+          "scripts": [
+            [
+              {
+                "categorie": "evenement",
+                "texte": "quand le drapeau vert est cliqué"
+              },
+              {
+                "categorie": "variable",
+                "texte": "mettre [x] à (0)"
+              },
+              {
+                "categorie": "controle",
+                "texte": "répéter (4) fois",
+                "interieur": [
+                  {
+                    "categorie": "variable",
+                    "texte": "ajouter (3) à [x]",
+                    "id": "ajout"
+                  }
+                ]
+              },
+              {
+                "categorie": "controle",
+                "texte": "si <(x) > (10)> alors",
+                "id": "test",
+                "interieur": [
+                  {
+                    "categorie": "apparence",
+                    "texte": "dire [Trop]"
+                  }
+                ]
+              }
+            ]
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "py",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Version en Python",
+          "blocs": [
+            "x = 0",
+            "[[boucle|for i in range(4) :]]",
+            "    x = x + 3",
+            "if x > 10 :",
+            "    print(\"Trop\")"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la valeur de x à la fin ?",
+          "reponse": 12,
+          "aide": "4 tours, on ajoute 3 à chaque fois.",
+          "explication": "0 + 4 × 3 = **12**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le programme dit-il « Trop » ?",
+          "options": [
+            "Oui, car 12 est supérieur à 10",
+            "Non, car 12 est inférieur à 10",
+            "Non, car x vaut 0",
+            "Seulement au premier tour"
+          ],
+          "reponse": 0,
+          "aide": "Teste la condition avec x = 12.",
+          "explication": "12 > 10 : la condition est vraie, donc il dit « **Trop** »."
+        },
+        {
+          "type": "zone",
+          "document": "py",
+          "enonce": "Touche la ligne Python qui correspond à « répéter 4 fois ».",
+          "reponse": [
+            "boucle"
+          ],
+          "aide": "Cherche le mot « for ».",
+          "explication": "« **for i in range(4)** » répète 4 fois : c’est la boucle bornée en texte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si l’on retire l’indentation de « x = x + 3 », que se passe-t-il ?",
+          "options": [
+            "Le programme refuse de démarrer : erreur de syntaxe",
+            "Il fonctionne comme avant",
+            "Il dit « Trop » deux fois",
+            "Il calcule 15"
+          ],
+          "reponse": 0,
+          "aide": "En Python, l’indentation fait partie du langage.",
+          "explication": "Sans indentation, le bloc de la boucle est vide : erreur de **syntaxe**, le programme ne démarre pas."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la programmation textuelle est-elle utile pour des programmes longs ?",
+          "options": [
+            "Elle n’a pas de limite de taille et se partage facilement",
+            "Elle supprime toute erreur",
+            "Elle ne demande aucune syntaxe",
+            "Elle remplace l’algorithme"
+          ],
+          "reponse": 0,
+          "aide": "Compare avec les blocs.",
+          "explication": "Le texte n’a pas de limite de taille et se **copie et se partage** facilement."
+        }
+      ]
+    },
+    {
+      "chapitre": "cfa07410-9b3c-5063-a71e-8d001fe3295a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le feu tricolore d’Élise",
+      "competence": "programmer",
+      "situation": "Élise doit programmer un feu pour les piétons. Voici les phrases de son journal de bord, notées dans le désordre.",
+      "documents": [
+        {
+          "id": "journal",
+          "type": "tableau",
+          "titre": "Le journal d’Élise (dans le désordre)",
+          "colonnes": [
+            "Repère",
+            "Ce qu’elle a fait"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Elle exécute son programme : le feu reste rouge"
+            ],
+            [
+              "B",
+              "Elle écrit en français ce que doit faire le feu"
+            ],
+            [
+              "C",
+              "Elle note le besoin : une entrée (bouton) et deux sorties (LED)"
+            ],
+            [
+              "D",
+              "Elle trouve l’erreur dans la condition et la corrige"
+            ],
+            [
+              "E",
+              "Elle traduit ses étapes en blocs"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Journal inventé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Remets les actions d’Élise dans l’ordre de la démarche.",
+          "items": [
+            "Elle note le besoin : une entrée (bouton) et deux sorties (LED)",
+            "Elle écrit en français ce que doit faire le feu",
+            "Elle traduit ses étapes en blocs",
+            "Elle exécute son programme : le feu reste rouge",
+            "Elle trouve l’erreur dans la condition et la corrige"
+          ],
+          "aide": "Analyser, algorithme, traduire, tester, corriger.",
+          "explication": "On **analyse** le besoin, on écrit l’**algorithme**, on **traduit**, on **teste**, on **corrige**."
+        },
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche l’étape de **débogage**.",
+          "reponse": [
+            "r3c0"
+          ],
+          "aide": "Corriger une erreur.",
+          "explication": "L’étape **D** est le débogage : trouver et corriger l’erreur."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Écrire l’___ avant de toucher au clavier, puis ___ le programme.",
+          "reponses": [
+            [
+              "algorithme"
+            ],
+            [
+              "tester"
+            ]
+          ],
+          "banque": [
+            "algorithme",
+            "tester",
+            "copier",
+            "supprimer"
+          ],
+          "aide": "Plan d’abord, essai ensuite.",
+          "explication": "On écrit l’**algorithme** avant de coder, puis on **teste**."
+        }
+      ]
+    },
+    {
+      "chapitre": "cfa07410-9b3c-5063-a71e-8d001fe3295a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quelle erreur ?",
+      "competence": "analyser-document",
+      "situation": "Quatre élèves décrivent ce qui leur arrive. Chaque situation correspond à un type d’erreur.",
+      "documents": [
+        {
+          "id": "symp",
+          "type": "tableau",
+          "titre": "Quatre symptômes",
+          "colonnes": [
+            "Élève",
+            "Ce qu’il observe"
+          ],
+          "lignes": [
+            [
+              "Lou",
+              "Le programme ne démarre pas : un message indique « ligne 4 »"
+            ],
+            [
+              "Eliott",
+              "Le programme affiche 12 au lieu de 15, sans aucun message"
+            ],
+            [
+              "Nina",
+              "Le programme s’arrête en cours de route : division par zéro"
+            ],
+            [
+              "Sami",
+              "Le programme dit « Bravo » même quand la réponse est fausse"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situations inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque situation dans le bon type d’erreur.",
+          "categories": [
+            "De syntaxe",
+            "De logique",
+            "D’exécution"
+          ],
+          "items": [
+            [
+              "Lou : message ligne 4",
+              0
+            ],
+            [
+              "Eliott : 12 au lieu de 15",
+              1
+            ],
+            [
+              "Nina : division par zéro",
+              2
+            ],
+            [
+              "Sami : « Bravo » à tort",
+              1
+            ]
+          ],
+          "aide": "Message d’erreur, mauvais résultat, arrêt en cours de route.",
+          "explication": "Lou : **syntaxe** (la ligne est signalée) ; Eliott et Sami : **logique** (aucun message) ; Nina : **exécution**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de situations relèvent d’une erreur de logique ?",
+          "reponse": 2,
+          "aide": "Le programme tourne mais fait autre chose.",
+          "explication": "**2** : Eliott et Sami."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel type d’erreur est le plus difficile à trouver ?",
+          "options": [
+            "L’erreur de logique, car aucun message ne guide",
+            "L’erreur de syntaxe",
+            "L’erreur d’exécution",
+            "Aucune, elles se valent"
+          ],
+          "reponse": 0,
+          "aide": "Un message d’erreur aide.",
+          "explication": "L’erreur de **logique** ne produit aucun message : il faut chercher soi-même."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle technique aide Eliott à voir où son calcul dévie ?",
+          "options": [
+            "Afficher les valeurs intermédiaires",
+            "Changer de langage",
+            "Supprimer les commentaires",
+            "Renommer le fichier"
+          ],
+          "reponse": 0,
+          "aide": "Il veut voir ce qui se passe à chaque étape.",
+          "explication": "**Afficher les valeurs intermédiaires** montre où le calcul s’éloigne du résultat attendu."
+        }
+      ]
+    },
+    {
+      "chapitre": "cfa07410-9b3c-5063-a71e-8d001fe3295a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les jeux d’essai du temps de trajet",
+      "competence": "programmer",
+      "situation": "Un programme calcule le temps de trajet pour 100 km, à partir de la vitesse. Théo prépare des jeux d’essai pour le valider.",
+      "documents": [
+        {
+          "id": "algo",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Pseudo-code du programme",
+          "blocs": [
+            "Lire la vitesse v (en km/h)",
+            "temps ← 100 ÷ v",
+            "Afficher temps (en heures)"
+          ],
+          "source": "Programme écrit pour l’exercice"
+        },
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Jeux d’essai",
+          "colonnes": [
+            "Entrée v",
+            "Résultat attendu",
+            "Résultat obtenu"
+          ],
+          "lignes": [
+            [
+              "50",
+              "2 h",
+              "2 h"
+            ],
+            [
+              "0",
+              "Un message d’erreur",
+              "Le programme s’arrête"
+            ],
+            [
+              "-20",
+              "Un message d’erreur",
+              "−5 h"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Essais inventés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures pour parcourir 100 km à 25 km/h ?",
+          "reponse": 4,
+          "unite": "h",
+          "aide": "100 ÷ 25.",
+          "explication": "100 ÷ 25 = **4 h**."
+        },
+        {
+          "type": "zone",
+          "document": "essais",
+          "enonce": "Touche l’entrée qui provoque une erreur **d’exécution**.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Une division par zéro est impossible.",
+          "explication": "Avec **v = 0**, on divise par zéro : le programme s’arrête."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque entrée au type de cas.",
+          "paires": [
+            [
+              "50",
+              "Cas normal"
+            ],
+            [
+              "0",
+              "Cas limite"
+            ],
+            [
+              "-20",
+              "Cas interdit"
+            ]
+          ],
+          "aide": "Normal, limite, interdit.",
+          "explication": "**50** est normal, **0** est un cas limite, **−20** un cas interdit : une vitesse négative n’a pas de sens."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour v = −20, le programme affiche −5 h. De quel type d’erreur s’agit-il ?",
+          "options": [
+            "Une erreur de logique : il accepte une valeur absurde",
+            "Une erreur de syntaxe",
+            "Une erreur d’exécution",
+            "Aucune erreur"
+          ],
+          "reponse": 0,
+          "aide": "Il tourne, mais le résultat n’a pas de sens.",
+          "explication": "Il tourne sans message mais accepte une valeur absurde : erreur de **logique**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment corriger le programme ?",
+          "options": [
+            "Ajouter un test : si v est supérieure à 0, calculer, sinon afficher un message",
+            "Supprimer le calcul",
+            "Remplacer 100 par 50",
+            "Écrire des commentaires"
+          ],
+          "reponse": 0,
+          "aide": "Il faut traiter les cas limites.",
+          "explication": "On **teste** la valeur de v avant de diviser, et on affiche un message sinon."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4ba3ef4-aa90-5628-b329-1bab857d18d2",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le fichier des élèves du club",
+      "competence": "analyser-document",
+      "situation": "Le club informatique garde un tableau de ses membres. Chaque ligne décrit un membre.",
+      "documents": [
+        {
+          "id": "club",
+          "type": "tableau",
+          "titre": "Fichier du club",
+          "colonnes": [
+            "N°",
+            "Nom",
+            "Classe",
+            "Délégué"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Dupont",
+              "3e A",
+              "Non"
+            ],
+            [
+              "2",
+              "Martin",
+              "3e B",
+              "Oui"
+            ],
+            [
+              "3",
+              "Garcia",
+              "3e A",
+              "Non"
+            ],
+            [
+              "4",
+              "Leroy",
+              "3e C",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": false,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’enregistrements le fichier contient-il ?",
+          "reponse": 4,
+          "aide": "Un enregistrement = une ligne.",
+          "explication": "Il y a **4** lignes, donc 4 enregistrements."
+        },
+        {
+          "type": "zone",
+          "document": "club",
+          "enonce": "Touche une case de la colonne qui sert de **clé**, celle qui identifie chaque ligne.",
+          "reponse": [
+            "r0c0",
+            "r1c0",
+            "r2c0",
+            "r3c0"
+          ],
+          "multiple": true,
+          "aide": "Quelle colonne n’a jamais deux fois la même valeur ?",
+          "explication": "La colonne **N°** est la clé : chaque ligne a un numéro unique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le type de données de la colonne « Délégué » ?",
+          "options": [
+            "Booléen : vrai ou faux",
+            "Nombre décimal",
+            "Date",
+            "Texte long"
+          ],
+          "reponse": 0,
+          "aide": "Oui ou non.",
+          "explication": "« Oui / Non » est un **booléen** (vrai / faux)."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4ba3ef4-aa90-5628-b329-1bab857d18d2",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les températures du local",
+      "competence": "lire-tableau",
+      "situation": "Un capteur relève la température d’un local technique chaque jour. On veut trier, filtrer et calculer.",
+      "documents": [
+        {
+          "id": "rel",
+          "type": "tableau",
+          "titre": "Relevés de la semaine",
+          "colonnes": [
+            "Jour",
+            "Température (°C)"
+          ],
+          "lignes": [
+            [
+              "Lundi",
+              "18"
+            ],
+            [
+              "Mardi",
+              "19"
+            ],
+            [
+              "Mercredi",
+              "21"
+            ],
+            [
+              "Jeudi",
+              "17"
+            ],
+            [
+              "Vendredi",
+              "20"
+            ],
+            [
+              "Samedi",
+              "19"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la température moyenne de la semaine ?",
+          "reponse": 19,
+          "unite": "°C",
+          "aide": "Additionne les 6 valeurs puis divise par 6.",
+          "explication": "18 + 19 + 21 + 17 + 20 + 19 = 114 ; 114 ÷ 6 = **19 °C**."
+        },
+        {
+          "type": "zone",
+          "document": "rel",
+          "enonce": "Touche le **minimum** relevé.",
+          "reponse": [
+            "r3c1"
+          ],
+          "aide": "Cherche la plus petite valeur.",
+          "explication": "Le minimum est **17 °C**, le jeudi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On filtre les jours à 19 °C ou plus. Combien de lignes reste-t-il ?",
+          "reponse": 4,
+          "aide": "Garde les lignes qui vérifient la condition.",
+          "explication": "Mardi, mercredi, vendredi, samedi : **4** lignes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel graphique montre le mieux l’évolution de la température au fil des jours ?",
+          "options": [
+            "Une courbe",
+            "Un camembert",
+            "Un histogramme de comparaison de classes",
+            "Un tableau"
+          ],
+          "reponse": 0,
+          "aide": "Une évolution dans le temps.",
+          "explication": "La **courbe** montre une évolution dans le temps."
+        }
+      ]
+    },
+    {
+      "chapitre": "c4ba3ef4-aa90-5628-b329-1bab857d18d2",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Des données à nettoyer",
+      "competence": "analyser-document",
+      "situation": "Un capteur a enregistré cinq relevés dans un fichier CSV. Avant de calculer, Léa vérifie la qualité des données.",
+      "documents": [
+        {
+          "id": "csv",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Fichier CSV",
+          "blocs": [
+            "date;temperature;unite",
+            "2026-03-01;18;C",
+            "2026-03-02;19;C",
+            "2026-03-03;[[aber|190]];C",
+            "2026-03-04;17;C",
+            "2026-03-05;64;F"
+          ],
+          "source": "Données inventées pour l’exercice"
+        },
+        {
+          "id": "json",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le même relevé en JSON",
+          "blocs": [
+            "{ \"date\": \"2026-03-01\", \"temperature\": 18, \"unite\": \"C\" }"
+          ],
+          "source": "Données inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’enregistrements le fichier CSV contient-il (sans l’en-tête) ?",
+          "reponse": 5,
+          "aide": "Une ligne de données = un enregistrement.",
+          "explication": "**5** lignes de données."
+        },
+        {
+          "type": "zone",
+          "document": "csv",
+          "enonce": "Touche la valeur **aberrante**.",
+          "reponse": [
+            "aber"
+          ],
+          "aide": "Une température de 190 °C dans un local ?",
+          "explication": "**190** est absurde : sans doute une erreur de saisie."
+        },
+        {
+          "type": "choix",
+          "enonce": "La dernière ligne est en degrés Fahrenheit. Que faut-il faire avant de calculer une moyenne ?",
+          "options": [
+            "Vérifier l’unité et convertir",
+            "L’ajouter telle quelle",
+            "La supprimer sans réfléchir",
+            "Remplacer 64 par 190"
+          ],
+          "reponse": 0,
+          "aide": "Une unité oubliée fausse tout le traitement.",
+          "explication": "Une unité différente **fausse** la moyenne : il faut la vérifier et convertir."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la moyenne des trois valeurs valides en degrés Celsius (18, 19, 17).",
+          "reponse": 18,
+          "unite": "°C",
+          "aide": "Additionne les trois puis divise par 3.",
+          "explication": "(18 + 19 + 17) ÷ 3 = **18 °C**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque graphique à ce qu’il raconte.",
+          "paires": [
+            [
+              "Courbe",
+              "Une évolution dans le temps"
+            ],
+            [
+              "Histogramme",
+              "Une comparaison"
+            ],
+            [
+              "Camembert",
+              "Une répartition"
+            ]
+          ],
+          "aide": "Se tromper de graphique, c’est raconter autre chose.",
+          "explication": "**Courbe** pour une évolution, **histogramme** pour comparer, **camembert** pour une répartition."
+        }
+      ]
+    },
+    {
+      "chapitre": "09d618b9-bd1a-58ae-a0d1-e7b64f37d1ec",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Où ranger les données ?",
+      "competence": "analyser-document",
+      "situation": "Le collège stocke ses fichiers à trois endroits différents. Chacun a ses atouts et ses limites.",
+      "documents": [
+        {
+          "id": "lieux",
+          "type": "tableau",
+          "titre": "Trois lieux de stockage",
+          "colonnes": [
+            "Lieu",
+            "Atout",
+            "Limite"
+          ],
+          "lignes": [
+            [
+              "Disque dur du PC",
+              "Accessible sans réseau",
+              "Fragile : panne, vol, incendie"
+            ],
+            [
+              "Serveur du collège",
+              "Partagé dans l’établissement",
+              "Il faut le réseau local"
+            ],
+            [
+              "Nuage",
+              "Accessible de partout",
+              "Dépend du réseau et du prestataire"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lieux",
+          "enonce": "Touche le lieu accessible **sans réseau**.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Lis la colonne « Atout ».",
+          "explication": "Le **disque dur du PC** est accessible sans réseau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une photo pèse 4 Mo. Combien de photos tiennent dans 1 Go ? (1 Go = 1 000 Mo)",
+          "reponse": 250,
+          "aide": "1 000 ÷ 4.",
+          "explication": "1 000 ÷ 4 = **250** photos."
+        },
+        {
+          "type": "choix",
+          "enonce": "« Le nuage » est-il immatériel ?",
+          "options": [
+            "Non : ce sont des centres de données bien réels",
+            "Oui : il n’existe nulle part",
+            "Oui : il ne consomme aucune énergie",
+            "Non : c’est un simple logiciel"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux serveurs.",
+          "explication": "Ce sont des **centres de données**, qui consomment électricité et eau de refroidissement."
+        }
+      ]
+    },
+    {
+      "chapitre": "09d618b9-bd1a-58ae-a0d1-e7b64f37d1ec",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La sauvegarde de Lina",
+      "competence": "analyser-document",
+      "situation": "Lina garde son projet de technologie sur trois copies. Un incendie pourrait-il tout détruire ?",
+      "documents": [
+        {
+          "id": "copies",
+          "type": "tableau",
+          "titre": "Les copies de Lina",
+          "colonnes": [
+            "Copie",
+            "Où elle est",
+            "Support"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Chez Lina",
+              "Disque dur du PC"
+            ],
+            [
+              "2",
+              "Chez Lina",
+              "Clé USB"
+            ],
+            [
+              "3",
+              "Chez Lina",
+              "Un second dossier sur le disque dur du PC"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de copies Lina possède-t-elle ?",
+          "reponse": 3,
+          "aide": "Compte les lignes.",
+          "explication": "**3** copies, comme le demande la règle 3-2-1."
+        },
+        {
+          "type": "zone",
+          "document": "copies",
+          "enonce": "Touche la copie qui n’apporte presque rien de plus (même support que la copie 1).",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "Un second dossier sur le même disque tomberait en panne en même temps.",
+          "explication": "La **copie 3** est sur le même disque dur que la copie 1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui manque à Lina selon la règle 3-2-1 ?",
+          "options": [
+            "Une copie hors du lieu principal",
+            "Un quatrième disque dur",
+            "Un mot de passe plus court",
+            "Un écran plus grand"
+          ],
+          "reponse": 0,
+          "aide": "Que se passe-t-il si la maison brûle ?",
+          "explication": "La règle demande **1** copie **hors du lieu principal**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mesure de sécurité à ce qu’elle protège.",
+          "paires": [
+            [
+              "Mot de passe long et unique",
+              "L’accès au compte"
+            ],
+            [
+              "Authentification à deux facteurs",
+              "Le mot de passe seul ne suffit plus"
+            ],
+            [
+              "Chiffrement",
+              "Les données restent illisibles sans la clé"
+            ],
+            [
+              "Mises à jour",
+              "Les failles connues sont corrigées"
+            ]
+          ],
+          "aide": "Chaque mesure a un rôle précis.",
+          "explication": "Chaque mesure protège une porte d’entrée différente."
+        }
+      ]
+    },
+    {
+      "chapitre": "09d618b9-bd1a-58ae-a0d1-e7b64f37d1ec",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’application Fitzen",
+      "competence": "analyser-texte",
+      "situation": "Une application imaginée pour l’exercice, Fitzen, se connecte à un bracelet. Un élève examine si elle respecte les principes du RGPD.",
+      "documents": [
+        {
+          "id": "appli",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Les pratiques de Fitzen",
+          "blocs": [
+            "L’application Fitzen se connecte à un bracelet de sport. Elle [[consent|active la collecte automatiquement, sans demander l’accord]] de l’utilisateur.",
+            "Elle enregistre aussi la position en continu, alors que son seul but affiché est de compter les pas. Les données sont [[duree|conservées sans limite de durée]].",
+            "Pour effacer son compte, l’utilisateur doit [[droit|envoyer un courrier recommandé à l’étranger]]."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "flux",
+          "type": "tableau",
+          "titre": "Données envoyées par le bracelet",
+          "colonnes": [
+            "Donnée",
+            "Volume par jour"
+          ],
+          "lignes": [
+            [
+              "Fréquence cardiaque",
+              "1 Mo"
+            ],
+            [
+              "Position",
+              "1 Mo"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "appli",
+          "enonce": "Touche le passage qui viole le principe du **consentement**.",
+          "reponse": [
+            "consent"
+          ],
+          "aide": "Le consentement doit être explicite.",
+          "explication": "Collecter **sans demander l’accord** viole le consentement explicite."
+        },
+        {
+          "type": "zone",
+          "document": "appli",
+          "enonce": "Touche le passage qui viole le principe de **durée limitée**.",
+          "reponse": [
+            "duree"
+          ],
+          "aide": "Les données ne se gardent pas indéfiniment.",
+          "explication": "Une conservation **sans limite** est contraire au RGPD."
+        },
+        {
+          "type": "zone",
+          "document": "appli",
+          "enonce": "Touche le passage qui empêche d’exercer le **droit de suppression**.",
+          "reponse": [
+            "droit"
+          ],
+          "aide": "Supprimer son compte doit rester simple.",
+          "explication": "Imposer un courrier recommandé à l’étranger rend la **suppression** difficile."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au total, combien de Mo le bracelet envoie-t-il par an (365 jours, 2 Mo par jour) ?",
+          "reponse": 730,
+          "unite": "Mo",
+          "aide": "2 × 365.",
+          "explication": "2 × 365 = **730 Mo**, soit 0,73 Go."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque principe du RGPD à son contenu.",
+          "paires": [
+            [
+              "Consentement",
+              "Explicite"
+            ],
+            [
+              "Finalité",
+              "Déclarée"
+            ],
+            [
+              "Durée de conservation",
+              "Limitée"
+            ],
+            [
+              "Droits",
+              "Accès, rectification, suppression"
+            ]
+          ],
+          "aide": "Quatre principes du cours.",
+          "explication": "Le RGPD encadre la collecte : consentement **explicite**, finalité **déclarée**, durée **limitée**, droits."
+        }
+      ]
+    },
+    {
+      "chapitre": "2d7d3f0b-6850-5c98-b3c2-62d4b6787f7c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le réseau de la salle informatique",
+      "competence": "observer-schema",
+      "situation": "Dans la salle informatique, trois ordinateurs partagent une connexion à Internet. Voici le schéma du réseau.",
+      "documents": [
+        {
+          "id": "res",
+          "type": "schema",
+          "titre": "Le réseau local de la salle",
+          "largeur": 340,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "ligne",
+              "de": [
+                60,
+                50
+              ],
+              "a": [
+                170,
+                100
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                50
+              ],
+              "a": [
+                170,
+                100
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                280,
+                50
+              ],
+              "a": [
+                170,
+                100
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                117
+              ],
+              "a": [
+                170,
+                150
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                184
+              ],
+              "a": [
+                170,
+                215
+              ],
+              "teinte": "gris"
+            },
+            {
+              "forme": "rect",
+              "x": 15,
+              "y": 16,
+              "l": 90,
+              "h": 34,
+              "arrondi": 10,
+              "teinte": "bleu",
+              "motif": "clair",
+              "texte": "PC 1",
+              "id": "pc1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 125,
+              "y": 16,
+              "l": 90,
+              "h": 34,
+              "arrondi": 10,
+              "teinte": "bleu",
+              "motif": "clair",
+              "texte": "PC 2",
+              "id": "pc2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 235,
+              "y": 16,
+              "l": 90,
+              "h": 34,
+              "arrondi": 10,
+              "teinte": "bleu",
+              "motif": "clair",
+              "texte": "PC 3",
+              "id": "pc3",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 100,
+              "l": 100,
+              "h": 34,
+              "arrondi": 10,
+              "teinte": "violet",
+              "motif": "clair",
+              "texte": "Équipement A",
+              "id": "a",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 150,
+              "l": 100,
+              "h": 34,
+              "arrondi": 10,
+              "teinte": "ambre",
+              "motif": "clair",
+              "texte": "Équipement B",
+              "id": "b",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 120,
+              "y": 215,
+              "l": 100,
+              "h": 28,
+              "arrondi": 10,
+              "teinte": "turquoise",
+              "motif": "clair",
+              "texte": "Internet",
+              "id": "net",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 250,
+              "y": 123,
+              "texte": "réseau local",
+              "taille": "petit",
+              "italique": true
+            }
+          ],
+          "source": "Schéma écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "res",
+          "enonce": "Touche l’équipement qui relie les ordinateurs **d’un même réseau local** (le switch).",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Il est directement relié aux trois ordinateurs.",
+          "explication": "L’**équipement A** est le switch : il relie les machines d’un même réseau."
+        },
+        {
+          "type": "zone",
+          "document": "res",
+          "enonce": "Touche l’équipement qui relie le réseau local à **Internet** (le routeur).",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Il se trouve entre le switch et Internet.",
+          "explication": "L’**équipement B** est le routeur : il relie deux réseaux différents."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ce réseau de salle, d’établissement ou de maison s’appelle…",
+          "options": [
+            "un LAN",
+            "un WAN",
+            "Internet",
+            "un DNS"
+          ],
+          "reponse": 0,
+          "aide": "Réseau local.",
+          "explication": "C’est un **LAN** (réseau local)."
+        }
+      ]
+    },
+    {
+      "chapitre": "2d7d3f0b-6850-5c98-b3c2-62d4b6787f7c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Du nom du site à la page",
+      "competence": "analyser-document",
+      "situation": "Léa tape l’adresse « www.exemple.fr » dans son navigateur. Plusieurs échanges ont lieu avant que la page s’affiche.",
+      "documents": [
+        {
+          "id": "echanges",
+          "type": "tableau",
+          "titre": "Les messages échangés (dans le désordre)",
+          "colonnes": [
+            "Repère",
+            "Message"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Le serveur du site renvoie la page"
+            ],
+            [
+              "B",
+              "« Voici l’adresse IP : 203.0.113.7 »"
+            ],
+            [
+              "C",
+              "« Envoie-moi la page de l’adresse 203.0.113.7 », en HTTPS"
+            ],
+            [
+              "D",
+              "« Quelle est l’adresse IP de www.exemple.fr ? »"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Adresse IP réservée à la documentation"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Remets les messages dans l’ordre.",
+          "items": [
+            "« Quelle est l’adresse IP de www.exemple.fr ? »",
+            "« Voici l’adresse IP : 203.0.113.7 »",
+            "« Envoie-moi la page de l’adresse 203.0.113.7 », en HTTPS",
+            "Le serveur du site renvoie la page"
+          ],
+          "aide": "D’abord on cherche l’adresse, puis on demande la page.",
+          "explication": "On interroge le **DNS**, il répond avec l’**adresse IP**, puis on demande la page au serveur."
+        },
+        {
+          "type": "zone",
+          "document": "echanges",
+          "enonce": "Touche le message qui contient une **adresse IP**.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche une suite de nombres séparés par des points.",
+          "explication": "Le message **B** donne l’adresse IP du serveur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le rôle du DNS ?",
+          "options": [
+            "Traduire un nom lisible en adresse IP",
+            "Chiffrer les messages",
+            "Relier deux réseaux",
+            "Stocker les pages"
+          ],
+          "reponse": 0,
+          "aide": "Sans lui, il faudrait retenir des suites de chiffres.",
+          "explication": "Le **DNS** traduit « www.exemple.fr » en adresse IP."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie le S de HTTPS ?",
+          "options": [
+            "L’échange est chiffré",
+            "L’échange est plus rapide",
+            "Le site est gratuit",
+            "Le site est en français"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la sécurité.",
+          "explication": "Le **S** indique un échange **chiffré**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2d7d3f0b-6850-5c98-b3c2-62d4b6787f7c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le message en paquets",
+      "competence": "modeliser",
+      "situation": "Un fichier de 1 000 octets est envoyé de Paris à Lyon. Il est découpé, envoyé, puis réassemblé. Voici l’état à l’arrivée.",
+      "documents": [
+        {
+          "id": "paq",
+          "type": "tableau",
+          "titre": "État des paquets à l’arrivée",
+          "colonnes": [
+            "Paquet n°",
+            "Chemin emprunté",
+            "Arrivé ?"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Chemin 1",
+              "Oui"
+            ],
+            [
+              "2",
+              "Chemin 2",
+              "Oui"
+            ],
+            [
+              "3",
+              "Chemin 2",
+              "Non"
+            ],
+            [
+              "4",
+              "Chemin 1",
+              "Oui"
+            ],
+            [
+              "5",
+              "Chemin 3",
+              "Oui"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        },
+        {
+          "id": "regle",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Données",
+          "blocs": [
+            "Chaque paquet contient 200 octets du fichier d’origine."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de paquets le message compte-t-il ?",
+          "reponse": 5,
+          "aide": "1 000 ÷ 200.",
+          "explication": "1 000 ÷ 200 = **5** paquets."
+        },
+        {
+          "type": "zone",
+          "document": "paq",
+          "enonce": "Touche le paquet **manquant**.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche « Non ».",
+          "explication": "Le **paquet 3** n’est pas arrivé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait-on du paquet manquant ?",
+          "options": [
+            "Il est redemandé",
+            "Le fichier est abandonné",
+            "Les autres paquets sont renvoyés",
+            "Il est ignoré"
+          ],
+          "reponse": 0,
+          "aide": "Les paquets sont numérotés.",
+          "explication": "Les paquets sont numérotés : le manquant est **redemandé**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les étapes dans l’ordre.",
+          "items": [
+            "Le message est découpé en paquets numérotés",
+            "Les paquets empruntent des chemins différents",
+            "Ils sont réassemblés à l’arrivée",
+            "Un paquet manquant est redemandé"
+          ],
+          "aide": "Découper, circuler, réassembler, redemander.",
+          "explication": "**Découper**, **circuler**, **réassembler**, **redemander** ce qui manque."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ce découpage rend-il Internet robuste ?",
+          "options": [
+            "Si un chemin est coupé, les paquets passent par un autre",
+            "Les paquets sont plus petits donc plus rapides",
+            "Il n’y a plus besoin de routeur",
+            "Les messages sont cachés"
+          ],
+          "reponse": 0,
+          "aide": "Plusieurs chemins existent.",
+          "explication": "Si un chemin est coupé, les paquets **passent par un autre**."
+        }
+      ]
+    },
+    {
+      "chapitre": "842de49d-6bb2-5aab-8416-11a52a5c68f4",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le chantier du support de téléphone",
+      "competence": "analyser-document",
+      "situation": "Un groupe prépare un support de téléphone. Il découpe son projet en quatre tâches.",
+      "documents": [
+        {
+          "id": "taches",
+          "type": "tableau",
+          "titre": "Découpage en tâches",
+          "colonnes": [
+            "Tâche",
+            "Durée",
+            "Antériorité"
+          ],
+          "lignes": [
+            [
+              "A : écrire le cahier des charges",
+              "2 jours",
+              "Aucune"
+            ],
+            [
+              "B : dessiner les plans",
+              "3 jours",
+              "A"
+            ],
+            [
+              "C : fabriquer le support",
+              "4 jours",
+              "B"
+            ],
+            [
+              "D : tester le support",
+              "1 jour",
+              "C"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Planning inventé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "taches",
+          "enonce": "Touche la tâche qui peut commencer en premier (aucune antériorité).",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Elle n’attend personne.",
+          "explication": "La tâche **A** n’a aucune antériorité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Si les tâches se font l’une après l’autre, combien de jours dure le projet ?",
+          "reponse": 10,
+          "unite": "jours",
+          "aide": "Additionne les durées.",
+          "explication": "2 + 3 + 4 + 1 = **10 jours**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie « antériorité B » pour la tâche C ?",
+          "options": [
+            "C ne peut commencer qu’une fois B terminée",
+            "C commence avant B",
+            "C dure autant que B",
+            "C est faite par la même personne que B"
+          ],
+          "reponse": 0,
+          "aide": "Ce qui doit être fini avant.",
+          "explication": "L’**antériorité** est ce qui doit être **fini avant** que la tâche commence."
+        }
+      ]
+    },
+    {
+      "chapitre": "842de49d-6bb2-5aab-8416-11a52a5c68f4",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le diagramme de Gantt",
+      "competence": "lire-tableau",
+      "situation": "Une équipe planifie un petit objet connecté sur six semaines. Chaque ■ indique une semaine de travail.",
+      "documents": [
+        {
+          "id": "gantt",
+          "type": "tableau",
+          "titre": "Planning (S = semaine)",
+          "colonnes": [
+            "Tâche",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "lignes": [
+            [
+              "Dessin",
+              "■",
+              "·",
+              "·",
+              "·",
+              "·",
+              "·"
+            ],
+            [
+              "Fabrication du boîtier",
+              "·",
+              "■",
+              "■",
+              "·",
+              "·",
+              "·"
+            ],
+            [
+              "Programmation",
+              "·",
+              "■",
+              "■",
+              "■",
+              "·",
+              "·"
+            ],
+            [
+              "Assemblage",
+              "·",
+              "·",
+              "·",
+              "·",
+              "■",
+              "·"
+            ],
+            [
+              "Test",
+              "·",
+              "·",
+              "·",
+              "·",
+              "·",
+              "■"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Planning inventé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de semaines dure le projet ?",
+          "reponse": 6,
+          "unite": "semaines",
+          "aide": "Regarde jusqu’où va le dernier ■.",
+          "explication": "Le test finit en **S6** : le projet dure 6 semaines."
+        },
+        {
+          "type": "zone",
+          "document": "gantt",
+          "enonce": "Touche les deux tâches qui se font **en parallèle** en S2 et S3.",
+          "reponse": [
+            "r1c0",
+            "r2c0"
+          ],
+          "multiple": true,
+          "aide": "Deux ■ dans les mêmes colonnes.",
+          "explication": "La **fabrication du boîtier** et la **programmation** se font en parallèle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle tâche dispose d’une marge, c’est-à-dire peut prendre un peu de retard sans décaler la fin ?",
+          "options": [
+            "La fabrication du boîtier",
+            "La programmation",
+            "Le dessin",
+            "Le test"
+          ],
+          "reponse": 0,
+          "aide": "Elle finit en S3 alors que l’assemblage n’a lieu qu’en S5.",
+          "explication": "La **fabrication** finit en S3 mais l’assemblage est en S5 : elle a de la marge."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La programmation prend une semaine de retard (elle finit en S5). En quelle semaine finit le projet ?",
+          "reponse": 7,
+          "aide": "L’assemblage et le test sont décalés.",
+          "explication": "Programmation en S5, assemblage en S6, test en S7 : fin en semaine **7**."
+        }
+      ]
+    },
+    {
+      "chapitre": "842de49d-6bb2-5aab-8416-11a52a5c68f4",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le carnet de bord du robot arroseur",
+      "competence": "analyser-texte",
+      "situation": "Une équipe construit un robot arroseur et tient un carnet de bord. On y lit les décisions et les essais ratés.",
+      "documents": [
+        {
+          "id": "carnet",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le carnet de bord",
+          "blocs": [
+            "Lundi : essai du moteur avec une pile. [[rate|Raté : la pile se vide en dix minutes.]]",
+            "Mardi : remplacement par une batterie rechargeable. Essai réussi.",
+            "Jeudi : le support imprimé se fissure. [[rate|Raté : trop fin à cet endroit.]] Épaisseur doublée."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        },
+        {
+          "id": "roles",
+          "type": "tableau",
+          "titre": "Les rôles dans l’équipe",
+          "colonnes": [
+            "Rôle",
+            "Ce dont il répond"
+          ],
+          "lignes": [
+            [
+              "Conception",
+              "Les plans et les choix"
+            ],
+            [
+              "Fabrication",
+              "La réalisation"
+            ],
+            [
+              "Programmation",
+              "Le code"
+            ],
+            [
+              "Documentation",
+              "Le dossier"
+            ],
+            [
+              "Coordination",
+              "Le planning et les revues"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carnet",
+          "enonce": "Touche les deux **essais ratés** documentés.",
+          "reponse": [
+            "rate"
+          ],
+          "multiple": true,
+          "aide": "Cherche « Raté ».",
+          "explication": "Les deux essais ratés sont notés avec leur raison : **pile vide** et **support fissuré**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi garder la trace des essais ratés ?",
+          "options": [
+            "Pour que personne ne refasse la même erreur",
+            "Pour allonger le dossier",
+            "Pour cacher les échecs",
+            "Pour supprimer des tâches"
+          ],
+          "reponse": 0,
+          "aide": "Un essai raté documenté vaut mieux qu’un succès inexpliqué.",
+          "explication": "Un essai raté **documenté** évite qu’un autre refasse la même erreur."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque rôle à ce dont il répond.",
+          "paires": [
+            [
+              "Conception",
+              "Les plans et les choix"
+            ],
+            [
+              "Programmation",
+              "Le code"
+            ],
+            [
+              "Documentation",
+              "Le dossier"
+            ],
+            [
+              "Coordination",
+              "Le planning et les revues"
+            ]
+          ],
+          "aide": "Relis le tableau.",
+          "explication": "Chaque **rôle** a sa responsabilité."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les phases du projet dans l’ordre.",
+          "items": [
+            "Analyse du besoin",
+            "Recherche de solutions",
+            "Conception",
+            "Réalisation",
+            "Tests et validation",
+            "Bilan"
+          ],
+          "aide": "Du besoin au bilan.",
+          "explication": "**Analyse**, **recherche**, **conception**, **réalisation**, **tests**, **bilan**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi servent les revues de projet régulières ?",
+          "options": [
+            "À faire le point et corriger la trajectoire",
+            "À fabriquer les pièces",
+            "À écrire le programme",
+            "À choisir le matériau"
+          ],
+          "reponse": 0,
+          "aide": "Un rendez-vous d’équipe.",
+          "explication": "Les revues **font le point** et corrigent la trajectoire."
+        }
+      ]
+    },
+    {
+      "chapitre": "ef65921a-9a3d-5f7f-bd7b-238ea0cd163c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre documents, quatre usages",
+      "competence": "analyser-document",
+      "situation": "Dans un projet de lampe de bureau, l’équipe produit quatre documents différents.",
+      "documents": [
+        {
+          "id": "docs",
+          "type": "tableau",
+          "titre": "Les documents du projet",
+          "colonnes": [
+            "Document",
+            "Description"
+          ],
+          "lignes": [
+            [
+              "Document 1",
+              "Dessin à main levée de plusieurs idées"
+            ],
+            [
+              "Document 2",
+              "Plan avec toutes les dimensions en millimètres"
+            ],
+            [
+              "Document 3",
+              "Schéma du circuit avec pile, interrupteur et lampe"
+            ],
+            [
+              "Document 4",
+              "Maquette numérique visible sous tous les angles"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque document à sa représentation.",
+          "paires": [
+            [
+              "Dessin à main levée",
+              "Croquis"
+            ],
+            [
+              "Plan coté",
+              "Dessin technique"
+            ],
+            [
+              "Schéma du circuit",
+              "Schéma électrique"
+            ],
+            [
+              "Maquette numérique",
+              "Modèle 3D"
+            ]
+          ],
+          "aide": "Chercher, expliquer, fabriquer, simuler.",
+          "explication": "**Croquis**, **dessin technique**, **schéma**, **modèle 3D** : quatre usages."
+        },
+        {
+          "type": "zone",
+          "document": "docs",
+          "enonce": "Touche le document qu’on remet à l’atelier pour **faire fabriquer** la pièce.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Il contient les dimensions exactes.",
+          "explication": "Le **dessin technique** est un document contractuel : on fabrique à partir de lui."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le croquis sert surtout à…",
+          "options": [
+            "chercher des idées en début de projet",
+            "faire fabriquer",
+            "simuler des efforts",
+            "mesurer des dimensions"
+          ],
+          "reponse": 0,
+          "aide": "À main levée.",
+          "explication": "Le **croquis** sert à chercher, en début de projet."
+        }
+      ]
+    },
+    {
+      "chapitre": "ef65921a-9a3d-5f7f-bd7b-238ea0cd163c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Lire un dessin technique",
+      "competence": "lire-graphique",
+      "situation": "Le plan d’une plaque porte des traits de plusieurs sortes. Il est dessiné à l’échelle 1:2.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "schema",
+          "titre": "Plaque percée (vue de face)",
+          "largeur": 340,
+          "hauteur": 210,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 40,
+              "l": 260,
+              "h": 120,
+              "teinte": "encre",
+              "motif": "aucun",
+              "id": "arete"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                130,
+                70
+              ],
+              "a": [
+                130,
+                130
+              ],
+              "style": "pointilles",
+              "teinte": "bleu",
+              "id": "cachee",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                200,
+                30
+              ],
+              "a": [
+                200,
+                170
+              ],
+              "teinte": "gris",
+              "id": "axe",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 190,
+              "texte": "Longueur dessinée : 45 mm",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ],
+          "source": "Dessin écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche l’**arête cachée**, dessinée en pointillés.",
+          "reponse": [
+            "cachee"
+          ],
+          "aide": "Interrompu = caché.",
+          "explication": "Un trait **interrompu** désigne une arête cachée."
+        },
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Touche l’**axe**, trait fin qui traverse la plaque.",
+          "reponse": [
+            "axe"
+          ],
+          "aide": "Un trait fin au centre.",
+          "explication": "Un trait mixte **fin** désigne un axe."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le dessin est à l’échelle 1:2 et mesure 45 mm de long. Quelle est la longueur réelle de la plaque ?",
+          "reponse": 90,
+          "unite": "mm",
+          "aide": "1:2 veut dire deux fois plus petit.",
+          "explication": "À l’échelle 1:2, la plaque réelle est deux fois plus grande : 45 × 2 = **90 mm**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque trait à ce qu’il désigne.",
+          "paires": [
+            [
+              "Continu fort",
+              "Une arête vue"
+            ],
+            [
+              "Interrompu",
+              "Une arête cachée"
+            ],
+            [
+              "Mixte fin",
+              "Un axe"
+            ]
+          ],
+          "aide": "Fort, interrompu, mixte fin.",
+          "explication": "Chaque type de **trait** a un sens normalisé."
+        }
+      ]
+    },
+    {
+      "chapitre": "ef65921a-9a3d-5f7f-bd7b-238ea0cd163c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Du croquis à l’imprimante 3D",
+      "competence": "modeliser",
+      "situation": "Pour fabriquer un porte-clés, une équipe passe de la représentation à main levée à la fabrication. La simulation lui évite des essais coûteux.",
+      "documents": [
+        {
+          "id": "moments",
+          "type": "tableau",
+          "titre": "Les moments du projet",
+          "colonnes": [
+            "Moment",
+            "Besoin"
+          ],
+          "lignes": [
+            [
+              "Au début",
+              "Chercher des idées"
+            ],
+            [
+              "Pour la classe",
+              "Expliquer le fonctionnement"
+            ],
+            [
+              "Pour l’atelier",
+              "Faire fabriquer avec les dimensions exactes"
+            ],
+            [
+              "Avant la production",
+              "Simuler et envoyer à l’imprimante 3D"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        },
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Essais avec ou sans simulation",
+          "colonnes": [
+            "Méthode",
+            "Prototypes imprimés",
+            "Prix d’un prototype"
+          ],
+          "lignes": [
+            [
+              "Sans simulation",
+              "5",
+              "12 €"
+            ],
+            [
+              "Avec simulation",
+              "2",
+              "12 €"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres inventés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque moment à la représentation adaptée.",
+          "paires": [
+            [
+              "Chercher des idées",
+              "Croquis"
+            ],
+            [
+              "Expliquer le fonctionnement",
+              "Schéma"
+            ],
+            [
+              "Faire fabriquer",
+              "Dessin technique"
+            ],
+            [
+              "Simuler et exporter",
+              "Modèle 3D"
+            ]
+          ],
+          "aide": "Chaque moment a sa représentation.",
+          "explication": "**Croquis**, **schéma**, **dessin technique**, **modèle 3D**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’euros la simulation fait-elle économiser ?",
+          "reponse": 36,
+          "unite": "€",
+          "aide": "Sans simulation : 5 × 12 € ; avec : 2 × 12 €.",
+          "explication": "60 − 24 = **36 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une pièce mesure 30 mm. Quelle longueur occupe-t-elle sur un dessin à l’échelle 2:1 ?",
+          "reponse": 60,
+          "unite": "mm",
+          "aide": "2:1 = deux fois plus grand.",
+          "explication": "À l’échelle 2:1, le dessin est deux fois plus grand : 30 × 2 = **60 mm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi vérifier les interférences entre pièces sur le modèle 3D ?",
+          "options": [
+            "Pour corriger avant toute fabrication",
+            "Pour changer le matériau",
+            "Pour dessiner à main levée",
+            "Pour réduire la taille du fichier"
+          ],
+          "reponse": 0,
+          "aide": "Mieux vaut détecter tôt.",
+          "explication": "Une erreur repérée **avant** la fabrication coûte bien moins cher."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un dessin technique est…",
+          "options": [
+            "un document contractuel, lu de la même façon par tous",
+            "un joli dessin d’artiste",
+            "un croquis rapide",
+            "une photographie"
+          ],
+          "reponse": 0,
+          "aide": "Concepteur et fabricant doivent se comprendre.",
+          "explication": "C’est un document **contractuel**, normalisé."
+        }
+      ]
+    },
+    {
+      "chapitre": "3fa26bb8-60f5-5520-a0a4-186cc0fae69a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les étapes du casier",
+      "competence": "modeliser",
+      "situation": "Une classe conçoit un casier de rangement. Voici ce que chaque étape de sa démarche a produit, dans le désordre.",
+      "documents": [
+        {
+          "id": "prod",
+          "type": "tableau",
+          "titre": "Ce que chaque étape a produit",
+          "colonnes": [
+            "Repère",
+            "Production"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Un modèle 3D et une nomenclature"
+            ],
+            [
+              "B",
+              "Un cahier des charges chiffré"
+            ],
+            [
+              "C",
+              "Des essais de charge sur le casier terminé"
+            ],
+            [
+              "D",
+              "Trois croquis de solutions"
+            ],
+            [
+              "E",
+              "Un tableau multicritère pondéré"
+            ],
+            [
+              "F",
+              "Une gamme de fabrication"
+            ],
+            [
+              "G",
+              "Les pièces assemblées"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Productions inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Remets les étapes dans l’ordre de la démarche.",
+          "items": [
+            "Un cahier des charges chiffré",
+            "Trois croquis de solutions",
+            "Un tableau multicritère pondéré",
+            "Un modèle 3D et une nomenclature",
+            "Une gamme de fabrication",
+            "Les pièces assemblées",
+            "Des essais de charge sur le casier terminé"
+          ],
+          "aide": "Analyser, rechercher, choisir, concevoir, préparer, fabriquer, tester.",
+          "explication": "**Analyser**, **rechercher**, **choisir**, **concevoir**, **préparer**, **fabriquer**, **tester**."
+        },
+        {
+          "type": "zone",
+          "document": "prod",
+          "enonce": "Touche la production qui permet de **choisir** une solution.",
+          "reponse": [
+            "r4c0"
+          ],
+          "aide": "Elle compare avec des coefficients.",
+          "explication": "Le **tableau multicritère pondéré** sert à choisir."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi produire plusieurs croquis à l’étape 2 ?",
+          "options": [
+            "Une seule idée n’est pas un choix",
+            "Pour allonger le projet",
+            "Pour fabriquer plusieurs casiers",
+            "Pour supprimer le cahier des charges"
+          ],
+          "reponse": 0,
+          "aide": "Choisir suppose de comparer.",
+          "explication": "Une seule idée n’est pas un choix : il faut **plusieurs solutions** à comparer."
+        }
+      ]
+    },
+    {
+      "chapitre": "3fa26bb8-60f5-5520-a0a4-186cc0fae69a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand tout ne se passe pas comme prévu",
+      "competence": "analyser-document",
+      "situation": "Pendant la réalisation d’une étagère, l’équipe rencontre trois blocages. La démarche est une boucle : chaque blocage renvoie à une étape.",
+      "documents": [
+        {
+          "id": "blocages",
+          "type": "tableau",
+          "titre": "Les blocages rencontrés",
+          "colonnes": [
+            "Blocage",
+            "Description"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Le test de charge échoue : l’étagère plie"
+            ],
+            [
+              "2",
+              "Le bois prévu n’existe plus en magasin"
+            ],
+            [
+              "3",
+              "Les trous des deux pièces ne tombent pas en face au montage"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Situations inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque blocage à l’étape où l’équipe doit revenir.",
+          "paires": [
+            [
+              "L’étagère plie au test",
+              "La conception"
+            ],
+            [
+              "Le bois n’existe plus",
+              "Le choix des solutions"
+            ],
+            [
+              "Les trous ne tombent pas en face",
+              "Le dessin de détail"
+            ]
+          ],
+          "aide": "Chaque blocage ramène à l’étape qui l’a créé.",
+          "explication": "Un **test raté** renvoie à la conception ; un **matériau indisponible** au choix ; un problème d’**assemblage** au dessin."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment décrire cette démarche ?",
+          "options": [
+            "Une boucle : on peut revenir en arrière",
+            "Une ligne droite sans retour",
+            "Un hasard",
+            "Une seule étape"
+          ],
+          "reponse": 0,
+          "aide": "Le projet recommence parfois.",
+          "explication": "La démarche est **itérative** : une boucle."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quand vaut-il mieux détecter une pièce hors cote ?",
+          "options": [
+            "Tôt, en cours de fabrication",
+            "À l’assemblage",
+            "Après la vente",
+            "Peu importe"
+          ],
+          "reponse": 0,
+          "aide": "Plus tôt, moins cher.",
+          "explication": "Une pièce hors cote détectée **tôt** coûte infiniment moins cher."
+        }
+      ]
+    },
+    {
+      "chapitre": "3fa26bb8-60f5-5520-a0a4-186cc0fae69a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La nomenclature du tabouret",
+      "competence": "modeliser",
+      "situation": "Un tabouret est conçu puis fabriqué. Sa nomenclature et sa gamme de fabrication résument le dossier de conception.",
+      "documents": [
+        {
+          "id": "nom",
+          "type": "tableau",
+          "titre": "Nomenclature",
+          "colonnes": [
+            "Repère",
+            "Désignation",
+            "Quantité",
+            "Matériau"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Plateau",
+              "1",
+              "Contreplaqué"
+            ],
+            [
+              "2",
+              "Pied",
+              "4",
+              "Pin"
+            ],
+            [
+              "3",
+              "Vis",
+              "8",
+              "Acier"
+            ],
+            [
+              "4",
+              "Équerre",
+              "4",
+              "Aluminium"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Nomenclature inventée pour l’exercice"
+        },
+        {
+          "id": "gamme",
+          "type": "tableau",
+          "titre": "Gamme de fabrication du plateau",
+          "colonnes": [
+            "Opération",
+            "Machine ou outil"
+          ],
+          "lignes": [
+            [
+              "Découper le plateau",
+              "Scie"
+            ],
+            [
+              "Percer les trous de fixation",
+              "Perceuse"
+            ],
+            [
+              "Poncer les bords",
+              "Ponceuse"
+            ],
+            [
+              "Assembler",
+              "Tournevis et vis"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Gamme inventée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de pièces la nomenclature compte-t-elle au total ?",
+          "reponse": 17,
+          "aide": "Additionne les quantités.",
+          "explication": "1 + 4 + 8 + 4 = **17** pièces."
+        },
+        {
+          "type": "zone",
+          "document": "nom",
+          "enonce": "Touche le matériau **composite**.",
+          "reponse": [
+            "r0c3"
+          ],
+          "aide": "Le contreplaqué associe des couches de bois.",
+          "explication": "Le **contreplaqué** est un composite."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les opérations de la gamme dans l’ordre.",
+          "items": [
+            "Découper le plateau",
+            "Percer les trous de fixation",
+            "Poncer les bords",
+            "Assembler"
+          ],
+          "aide": "On découpe avant de percer.",
+          "explication": "Découper, percer, poncer, **assembler** : l’assemblage est à la fin."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque document de la documentation finale à son contenu.",
+          "paires": [
+            [
+              "Plans et nomenclature",
+              "De quoi refabriquer"
+            ],
+            [
+              "Programme commenté",
+              "La partie logicielle"
+            ],
+            [
+              "Notice d’utilisation",
+              "Pour l’utilisateur"
+            ],
+            [
+              "Bilan environnemental",
+              "L’impact du cycle de vie"
+            ]
+          ],
+          "aide": "Quatre documents du dossier.",
+          "explication": "Le **dossier** prouve la maîtrise de la démarche autant que l’objet."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel document de la documentation finale permet à un autre groupe de refabriquer le tabouret ?",
+          "options": [
+            "Les plans et la nomenclature",
+            "La notice d’utilisation",
+            "Le bilan environnemental",
+            "Le carnet de rendez-vous"
+          ],
+          "reponse": 0,
+          "aide": "Il faut les dimensions et la liste des pièces.",
+          "explication": "Les **plans** et la **nomenclature** donnent de quoi refabriquer."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac1c3f05-e8b9-5078-9853-ac21fde7747a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre essais mécaniques",
+      "competence": "analyser-document",
+      "situation": "Au laboratoire, quatre pièces subissent des essais différents. Chacun correspond à une contrainte précise.",
+      "documents": [
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Les quatre pièces testées",
+          "colonnes": [
+            "Pièce",
+            "Ce qu’on lui fait subir"
+          ],
+          "lignes": [
+            [
+              "Un câble",
+              "On le tire jusqu’à la rupture"
+            ],
+            [
+              "Une colonne",
+              "On l’écrase sous une presse"
+            ],
+            [
+              "Une planche posée sur deux appuis",
+              "On la charge en son milieu"
+            ],
+            [
+              "Un tournevis",
+              "On le vrille"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque pièce à son essai.",
+          "paires": [
+            [
+              "Câble tiré jusqu’à la rupture",
+              "Traction"
+            ],
+            [
+              "Colonne écrasée",
+              "Compression"
+            ],
+            [
+              "Planche chargée en son milieu",
+              "Flexion"
+            ],
+            [
+              "Tournevis vrillé",
+              "Torsion"
+            ]
+          ],
+          "aide": "Tirer, écraser, plier, vriller.",
+          "explication": "**Traction**, **compression**, **flexion**, **torsion**."
+        },
+        {
+          "type": "zone",
+          "document": "essais",
+          "enonce": "Touche la pièce soumise à une **flexion**.",
+          "reponse": [
+            "r2c0"
+          ],
+          "aide": "On la charge au milieu, appuyée aux extrémités.",
+          "explication": "La **planche** sur deux appuis, chargée au milieu, subit une flexion."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un support est plié et déplié 10 000 fois avant de casser. Quel essai a-t-on réalisé ?",
+          "options": [
+            "Un essai de fatigue",
+            "Un essai de choc",
+            "Un essai de traction",
+            "Un essai de torsion"
+          ],
+          "reponse": 0,
+          "aide": "On répète un effort.",
+          "explication": "Répéter un effort des milliers de fois est un essai de **fatigue**."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac1c3f05-e8b9-5078-9853-ac21fde7747a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le verdict de validation",
+      "competence": "lire-tableau",
+      "situation": "Une équipe valide un robot de nettoyage. Pour chaque exigence, elle compare la mesure à ce qui est exigé.",
+      "documents": [
+        {
+          "id": "valid",
+          "type": "tableau",
+          "titre": "Exigences et mesures",
+          "colonnes": [
+            "Exigence",
+            "Niveau exigé",
+            "Valeur mesurée"
+          ],
+          "lignes": [
+            [
+              "Autonomie",
+              "8 h au minimum",
+              "7 h 30"
+            ],
+            [
+              "Charge supportée",
+              "40 kg au minimum",
+              "45 kg"
+            ],
+            [
+              "Niveau sonore",
+              "60 dB au maximum",
+              "58 dB"
+            ],
+            [
+              "Masse",
+              "2 kg au maximum",
+              "2,1 kg"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Mesures inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "valid",
+          "enonce": "Touche les deux mesures **non conformes**.",
+          "reponse": [
+            "r0c2",
+            "r3c2"
+          ],
+          "multiple": true,
+          "aide": "Compare chaque mesure au niveau exigé.",
+          "explication": "L’autonomie (**7 h 30** < 8 h) et la masse (**2,1 kg** > 2 kg) ne respectent pas le niveau."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’exigences sont conformes ?",
+          "reponse": 2,
+          "aide": "Charge et niveau sonore.",
+          "explication": "La charge (45 ≥ 40) et le bruit (58 ≤ 60) : **2** exigences conformes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le verdict global ?",
+          "options": [
+            "Non conforme : on revient à la conception",
+            "Conforme : on passe à la production",
+            "Conforme à moitié, donc validé",
+            "Impossible à dire"
+          ],
+          "reponse": 0,
+          "aide": "Une seule non-conformité suffit.",
+          "explication": "Une exigence non remplie suffit : **non conforme**, retour à la conception."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que doit-on noter pour qu’un résultat soit exploitable ?",
+          "options": [
+            "Les conditions de l’essai et l’incertitude",
+            "Seulement la valeur",
+            "Le nom de l’élève",
+            "La couleur de la pièce"
+          ],
+          "reponse": 0,
+          "aide": "Il doit pouvoir se refaire à l’identique.",
+          "explication": "Un résultat sans **conditions d’essai** ni incertitude n’est pas un résultat."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac1c3f05-e8b9-5078-9853-ac21fde7747a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le bras du robot et la fatigue",
+      "competence": "lire-graphique",
+      "situation": "La force qui casse un bras de robot diminue quand on répète l’effort. L’équipe a mesuré cette baisse avant de valider le bras.",
+      "documents": [
+        {
+          "id": "fat",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Force de rupture selon le nombre de cycles",
+          "categories": [
+            "1",
+            "1 000",
+            "10 000",
+            "100 000",
+            "1 000 000"
+          ],
+          "series": [
+            {
+              "nom": "Force de rupture",
+              "valeurs": [
+                800,
+                700,
+                500,
+                380,
+                350
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Force de rupture",
+            "unite": "en newtons",
+            "min": 0,
+            "max": 900,
+            "pas": 100
+          },
+          "axeX": {
+            "titre": "Nombre de cycles"
+          },
+          "source": "Mesures inventées pour l’exercice"
+        },
+        {
+          "id": "regle",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Cahier des charges",
+          "blocs": [
+            "Le bras supporte une charge de 400 N à chaque mouvement, et doit tenir 100 000 cycles."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la force de rupture après 10 000 cycles ?",
+          "reponse": 500,
+          "unite": "N",
+          "tolerance": 10,
+          "aide": "Lis la courbe au troisième point.",
+          "explication": "**500 N**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien la force de rupture a-t-elle baissé entre 1 et 100 000 cycles ?",
+          "reponse": 420,
+          "unite": "N",
+          "tolerance": 10,
+          "aide": "800 − 380.",
+          "explication": "800 − 380 = **420 N**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le bras est-il conforme à l’exigence de 100 000 cycles sous 400 N ?",
+          "options": [
+            "Non : à 100 000 cycles, il casse dès 380 N",
+            "Oui : 500 N est supérieur à 400 N",
+            "Oui : il tient un million de cycles",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la valeur à 100 000 cycles.",
+          "explication": "À 100 000 cycles, il casse à **380 N**, moins que 400 N : non conforme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi tester la fatigue et pas seulement un essai unique ?",
+          "options": [
+            "Beaucoup de pièces cassent par répétition, pas par un effort excessif",
+            "Pour allonger l’essai",
+            "Pour économiser du matériel",
+            "Parce que c’est plus joli"
+          ],
+          "reponse": 0,
+          "aide": "Un seul essai ne dit pas tout.",
+          "explication": "Beaucoup de pièces cassent par **répétition** de l’effort."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une simulation numérique indique que le bras tient. Que penser ?",
+          "options": [
+            "Elle repose sur des hypothèses : elle ne remplace jamais entièrement l’essai réel",
+            "Elle est toujours exacte",
+            "Elle remplace tous les essais",
+            "Elle ne sert à rien"
+          ],
+          "reponse": 0,
+          "aide": "Une simulation modélise.",
+          "explication": "La simulation **ne remplace pas** entièrement l’essai réel."
+        }
+      ]
+    },
+    {
+      "chapitre": "4cf1c8e1-1fa3-59d4-a89d-351f9a1e5f52",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois degrés de prototype",
+      "competence": "analyser-document",
+      "situation": "Une équipe fabrique trois objets au fil de son projet de lampe. Chacun a un rôle différent.",
+      "documents": [
+        {
+          "id": "proto",
+          "type": "tableau",
+          "titre": "Les trois objets fabriqués",
+          "colonnes": [
+            "Objet",
+            "Description"
+          ],
+          "lignes": [
+            [
+              "Objet 1",
+              "Une boîte en carton plume qui montre la taille de la lampe"
+            ],
+            [
+              "Objet 2",
+              "Un montage avec une carte programmable : la LED s’allume"
+            ],
+            [
+              "Objet 3",
+              "Cinquante lampes avec les matériaux définitifs"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque objet à son degré.",
+          "paires": [
+            [
+              "Boîte en carton plume",
+              "Maquette"
+            ],
+            [
+              "Montage avec la LED qui s’allume",
+              "Prototype fonctionnel"
+            ],
+            [
+              "Cinquante lampes en matériaux définitifs",
+              "Présérie"
+            ]
+          ],
+          "aide": "Forme, fonctionnement, procédé.",
+          "explication": "La **maquette** valide la forme, le **prototype fonctionnel** le fonctionnement, la **présérie** le procédé."
+        },
+        {
+          "type": "zone",
+          "document": "proto",
+          "enonce": "Touche l’objet qui ne sert qu’à valider la **forme et l’encombrement**.",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Matériaux non fonctionnels.",
+          "explication": "L’objet 1 est une **maquette**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un prototype sert surtout à…",
+          "options": [
+            "apprendre avant de fabriquer pour vendre",
+            "vendre rapidement",
+            "remplacer le cahier des charges",
+            "économiser le papier"
+          ],
+          "reponse": 0,
+          "aide": "Il ne sert pas à vendre.",
+          "explication": "Un prototype sert à **apprendre**, pas à vendre."
+        }
+      ]
+    },
+    {
+      "chapitre": "4cf1c8e1-1fa3-59d4-a89d-351f9a1e5f52",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le coût d’une erreur",
+      "competence": "lire-graphique",
+      "situation": "Une erreur de conception peut coûter très peu ou très cher selon le moment où on la détecte.",
+      "documents": [
+        {
+          "id": "cout",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Coût de correction d’une erreur (base 1 sur un prototype)",
+          "categories": [
+            "Sur un prototype",
+            "En présérie",
+            "Sur 10 000 exemplaires vendus"
+          ],
+          "series": [
+            {
+              "nom": "Coût relatif",
+              "valeurs": [
+                1,
+                10,
+                100
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Coût relatif",
+            "unite": "base 1",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Moment de la détection"
+          },
+          "source": "Valeurs inventées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cout",
+          "enonce": "Touche le moment où l’erreur coûte **le plus cher**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "Une erreur sur **10 000 exemplaires vendus** coûte le plus cher."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois plus cher est une erreur sur 10 000 exemplaires vendus qu’une erreur sur un prototype ?",
+          "reponse": 100,
+          "aide": "Compare 100 et 1.",
+          "explication": "**100** fois plus cher."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur un prototype, l’erreur coûte 50 €. Combien coûterait-elle sur 10 000 exemplaires vendus ?",
+          "reponse": 5000,
+          "unite": "€",
+          "aide": "50 × 100.",
+          "explication": "50 × 100 = **5 000 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion tirer ?",
+          "options": [
+            "Mieux vaut fabriquer des prototypes pour trouver les erreurs tôt",
+            "Mieux vaut ne jamais faire de prototype",
+            "Les erreurs coûtent toujours pareil",
+            "Un prototype raté est un échec"
+          ],
+          "reponse": 0,
+          "aide": "Un prototype détecte les erreurs avant la série.",
+          "explication": "Un prototype raté n’est pas un échec : c’est un **test**. Le vrai échec est de lancer la série sans avoir rien fabriqué."
+        }
+      ]
+    },
+    {
+      "chapitre": "4cf1c8e1-1fa3-59d4-a89d-351f9a1e5f52",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le support de téléphone, version après version",
+      "competence": "modeliser",
+      "situation": "Trois versions d’un support de téléphone sont fabriquées. Chaque version corrige le défaut de la précédente.",
+      "documents": [
+        {
+          "id": "journal",
+          "type": "tableau",
+          "titre": "Journal de prototypage",
+          "colonnes": [
+            "Version",
+            "Matériau",
+            "Constat"
+          ],
+          "lignes": [
+            [
+              "V1",
+              "Carton plume",
+              "Trop encombrant pour le bureau"
+            ],
+            [
+              "V2",
+              "Impression 3D",
+              "Tient bien, mais le téléphone glisse"
+            ],
+            [
+              "V3",
+              "Impression 3D et patin antidérapant",
+              "Conforme"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Journal inventé pour l’exercice"
+        },
+        {
+          "id": "couts",
+          "type": "tableau",
+          "titre": "Coût et temps",
+          "colonnes": [
+            "Version",
+            "Coût",
+            "Temps de fabrication"
+          ],
+          "lignes": [
+            [
+              "V1",
+              "2 €",
+              "1 h"
+            ],
+            [
+              "V2",
+              "6 €",
+              "4 h"
+            ],
+            [
+              "V3",
+              "7 €",
+              "5 h"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Chiffres inventés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche la version qui est une **maquette** (forme et encombrement).",
+          "reponse": [
+            "r0c0"
+          ],
+          "aide": "Elle est en carton plume.",
+          "explication": "**V1** est une maquette : elle valide la forme et l’encombrement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le coût total des trois prototypes ?",
+          "reponse": 15,
+          "unite": "€",
+          "aide": "2 + 6 + 7.",
+          "explication": "2 + 6 + 7 = **15 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures a-t-il fallu en tout ?",
+          "reponse": 10,
+          "unite": "h",
+          "aide": "1 + 4 + 5.",
+          "explication": "1 + 4 + 5 = **10 h**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets le cycle d’itération dans l’ordre.",
+          "items": [
+            "Prototype",
+            "Test",
+            "Analyse",
+            "Modification",
+            "Nouveau prototype"
+          ],
+          "aide": "On fabrique, on essaie, on comprend, on change.",
+          "explication": "**Prototype**, **test**, **analyse**, **modification**, **nouveau prototype**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi noter les modifications et leurs raisons ?",
+          "options": [
+            "C’est la mémoire du projet et la matière du dossier final",
+            "Pour remplir le carnet",
+            "Pour justifier un retard",
+            "C’est inutile"
+          ],
+          "reponse": 0,
+          "aide": "Un projet doit pouvoir se transmettre.",
+          "explication": "Le **journal** est la mémoire du projet : il évite de refaire les mêmes erreurs."
+        }
+      ]
+    }
+  ]
+}

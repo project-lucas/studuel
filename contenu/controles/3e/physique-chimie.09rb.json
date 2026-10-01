@@ -1,0 +1,646 @@
+{
+  "niveau": "3e",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "difficulte": 1,
+      "titre": "Immobile et en mouvement",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "**Situation.** Paul est assis dans un train qui roule en ligne droite à vitesse constante. Sa sœur Camille le regarde passer depuis le quai.\n\n1. Paul est-il immobile ou en mouvement ? Donne la réponse dans le référentiel du train, puis dans celui du quai.\n2. Nomme les trois formes de trajectoire étudiées et donne un exemple pour chacune.\n3. Écris la formule de la vitesse et précise les unités de chaque grandeur.\n4. Convertis 36 km/h en m/s.",
+      "bareme": [
+        { "critere": "Immobile dans le référentiel du train, en mouvement dans celui du quai", "points": 6 },
+        { "critere": "Trois trajectoires nommées avec un exemple chacune", "points": 5 },
+        { "critere": "v = d ÷ t avec les unités (m/s ou km/h)", "points": 5 },
+        { "critere": "36 ÷ 3,6 = 10 m/s", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Dans le **référentiel du train**, Paul est **immobile**. Dans le **référentiel du quai**, il est **en mouvement**. Les deux descriptions sont vraies : un mouvement ne se décrit jamais dans l'absolu.\n\n2.\n- **Rectiligne** (ligne droite) : le train sur une voie droite.\n- **Circulaire** (cercle) : un point d'une roue de manège.\n- **Curviligne** (courbe quelconque) : un ballon lancé.\n\n3. **v = d ÷ t** : d en mètres et t en secondes donnent v en **m/s** ; d en kilomètres et t en heures donnent v en **km/h**.\n\n4. Des km/h aux m/s, on divise par 3,6 : 36 ÷ 3,6 = **10 m/s**."
+    },
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "difficulte": 2,
+      "titre": "La sortie à vélo de Samia",
+      "consigne": "Détaille chaque calcul et précise les unités.",
+      "enonce": "**Situation.** Samia parcourt **18 km** à vélo en **45 minutes**. À un moment, son compteur affiche 30 km/h.\n\n1. Convertis la durée du trajet en heures.\n2. Calcule sa vitesse moyenne en km/h, puis en m/s (arrondie au dixième).\n3. Le compteur affiche 30 km/h. Est-ce une vitesse moyenne ou instantanée ? Explique la différence.\n4. Dans la dernière descente, sa vitesse augmente. Quel est le régime du mouvement ? À quoi ressemblerait une chronophotographie de cette descente ?",
+      "bareme": [
+        { "critere": "45 min = 0,75 h", "points": 3 },
+        { "critere": "Vitesse moyenne 24 km/h puis environ 6,7 m/s", "points": 7 },
+        { "critere": "Vitesse instantanée, différence avec la moyenne expliquée", "points": 5 },
+        { "critere": "Mouvement accéléré ; positions de plus en plus espacées", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 45 min = 45 ÷ 60 = **0,75 h**.\n\n2. v = d ÷ t = 18 ÷ 0,75 = **24 km/h**. En m/s : 24 ÷ 3,6 ≈ **6,7 m/s**.\n\n3. C'est une **vitesse instantanée** : celle du compteur, à un instant donné. La **vitesse moyenne** porte sur **tout le trajet** (24 km/h) : Samia est allée tantôt plus vite, tantôt moins vite.\n\n4. Sa vitesse augmente : le mouvement est **accéléré**. Sur une chronophotographie (photos à intervalles réguliers), les positions seraient **de plus en plus espacées**."
+    },
+    {
+      "chapitre": "1847b6a5-7bd1-5ce9-9946-a8eff2eb2a70",
+      "difficulte": 3,
+      "titre": "Analyse d'une chronophotographie",
+      "consigne": "Exploite les mesures, calcule et justifie chaque conclusion.",
+      "enonce": "**Situation.** Un palet glisse sur une table puis en tombe. On le photographie toutes les **0,5 s** et on mesure sa position le long de sa trajectoire.\n\n> | Instant (s) | 0 | 0,5 | 1,0 | 1,5 | 2,0 | 2,5 | 3,0 |\n> | Position (m) | 0 | 0,4 | 0,8 | 1,2 | 1,6 | 2,3 | 3,3 |\n\nEntre 0 et 2,0 s, le palet glisse en ligne droite sur la table ; ensuite il tombe.\n\n1. Calcule la distance parcourue pendant chaque intervalle de 0,5 s.\n2. Décris le mouvement entre 0 et 2,0 s (trajectoire et régime). Justifie.\n3. Calcule la vitesse du palet entre 0 et 2,0 s, en m/s.\n4. Décris le régime du mouvement après 2,0 s. Justifie.\n5. Calcule la vitesse moyenne sur tout l'enregistrement.\n6. Entre 0 et 2,0 s, que peut-on dire des forces qui s'exercent sur le palet ? Justifie.",
+      "bareme": [
+        { "critere": "Distances : 0,4 m quatre fois, puis 0,7 m et 1,0 m", "points": 4 },
+        { "critere": "Rectiligne uniforme : espacement constant", "points": 4 },
+        { "critere": "v = 1,6 ÷ 2,0 = 0,8 m/s", "points": 4 },
+        { "critere": "Accéléré après 2,0 s : espacement croissant ; vitesse moyenne 1,1 m/s", "points": 5 },
+        { "critere": "Aucune force résultante : forces qui se compensent", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Distances par intervalle : 0,4 ; 0,4 ; 0,4 ; 0,4 m, puis 2,3 − 1,6 = **0,7 m** et 3,3 − 2,3 = **1,0 m**.\n\n2. Entre 0 et 2,0 s, la trajectoire est **rectiligne** (ligne droite) et le palet parcourt **la même distance** pendant chaque intervalle de même durée : l'espacement est **constant**, le mouvement est **uniforme**. C'est un mouvement **rectiligne uniforme**.\n\n3. v = d ÷ t = 1,6 ÷ 2,0 = **0,8 m/s** (ou 0,4 ÷ 0,5 = 0,8 m/s par intervalle).\n\n4. Après 2,0 s, les distances parcourues pendant 0,5 s **augmentent** (0,7 m puis 1,0 m) : les positions s'espacent de plus en plus, le mouvement est **accéléré**.\n\n5. v moyenne = 3,3 ÷ 3,0 = **1,1 m/s**.\n\n6. Le mouvement rectiligne uniforme est le seul cas où l'objet ne subit **aucune force résultante** : les forces qui s'exercent sur le palet **se compensent**."
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "difficulte": 1,
+      "titre": "De contact ou à distance ?",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Classe ces actions en interactions de contact et interactions à distance : a) un aimant attire un trombone ; b) le vent pousse une voile ; c) la Terre attire la Lune ; d) un pied frappe un ballon ; e) une règle frottée attire des petits papiers.\n2. Cite les quatre informations que porte la flèche qui représente une force.\n3. Quelle est l'unité d'une force et quel instrument la mesure ?\n4. Cite trois effets qu'une force peut produire sur un objet.",
+      "bareme": [
+        { "critere": "Classement juste des cinq actions", "points": 6 },
+        { "critere": "Point d'application, direction, sens, valeur", "points": 6 },
+        { "critere": "Newton (N) et dynamomètre", "points": 4 },
+        { "critere": "Trois effets justes", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1.\n- **De contact** : b) le vent sur la voile, d) le pied sur le ballon.\n- **À distance** : a) l'aimant (magnétisme), c) la Terre et la Lune (gravitation), e) la règle frottée (électrostatique).\n\n2. Le **point d'application** (où la force s'exerce), la **direction** (la droite qui la porte), le **sens** (vers où elle pousse) et la **valeur** (la longueur de la flèche).\n\n3. Une force s'exprime en **newtons (N)** et se mesure avec un **dynamomètre**.\n\n4. Trois effets au choix : **mettre en mouvement**, **modifier la vitesse** (freiner, accélérer), **modifier la trajectoire**, **déformer** l'objet."
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "difficulte": 2,
+      "titre": "Le livre posé sur la table",
+      "consigne": "Décris chaque force avec ses caractéristiques et justifie.",
+      "enonce": "**Situation.** Un livre est posé, immobile, sur une table horizontale. La Terre l'attire vers le bas avec une force de **6 N** ; la table le soutient.\n\n1. Nomme les deux actions qui s'exercent sur le livre. Pour chacune, précise s'il s'agit d'une interaction de contact ou à distance.\n2. Donne la direction, le sens et la valeur de la force exercée par la table. Justifie à l'aide de l'état du livre.\n3. Avec l'échelle **1 cm pour 2 N**, quelle longueur aura chaque flèche ?\n4. D'après le principe des actions réciproques, quelle force le livre exerce-t-il sur la table ?",
+      "bareme": [
+        { "critere": "Attraction de la Terre (à distance) et action de la table (de contact)", "points": 5 },
+        { "critere": "Force de la table verticale, vers le haut, 6 N, justifiée par la compensation", "points": 6 },
+        { "critere": "Deux flèches de 3 cm", "points": 4 },
+        { "critere": "Le livre pousse la table vers le bas avec 6 N", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. L'**attraction de la Terre** : interaction **à distance** (gravitation). L'**action de la table** qui le soutient : interaction **de contact**.\n\n2. Le livre est **immobile** : les forces qui s'exercent sur lui **se compensent**. La force de la table a donc la même direction que l'attraction de la Terre, **verticale**, un sens opposé, **vers le haut**, et la même valeur, **6 N**. Son point d'application est la surface de contact entre le livre et la table.\n\n3. 6 N ÷ 2 N par cm = **3 cm** pour chacune des deux flèches.\n\n4. Si la table exerce une force sur le livre, le livre exerce sur la table une force de **même direction** (verticale), de **même valeur** (6 N) et de **sens opposé** (vers le bas)."
+    },
+    {
+      "chapitre": "7f4414a8-6338-5d96-ae3d-9a698e28fdea",
+      "difficulte": 3,
+      "titre": "Patineurs et palet sur la glace",
+      "consigne": "Argumente chaque réponse à l'aide des notions du cours.",
+      "enonce": "**Situation.** Sur une patinoire, Léo et Emma, immobiles face à face, se poussent mutuellement avec les mains. Tous deux reculent. Un peu plus loin, un palet de hockey, lancé une fois, glisse longtemps en ligne droite à vitesse presque constante.\n\n1. Léo affirme : « C'est moi qui ai poussé, Emma n'a rien fait, et pourtant je recule. » Explique ce qui s'est passé.\n2. Compare la direction, le sens et la valeur des deux forces échangées.\n3. Quels effets ces forces ont-elles produits sur les patineurs ?\n4. Emma dit : « Le palet avance encore, c'est qu'une force le pousse toujours vers l'avant. » Corrige son raisonnement.\n5. Qu'est-ce qui finira par arrêter le palet ? De quel type d'interaction s'agit-il ?",
+      "bareme": [
+        { "critere": "Principe des actions réciproques appliqué : Emma pousse aussi Léo", "points": 5 },
+        { "critere": "Même direction, même valeur, sens opposés", "points": 4 },
+        { "critere": "Mise en mouvement : la vitesse des patineurs change", "points": 3 },
+        { "critere": "Pas besoin de force pour continuer ; forces compensées : mouvement rectiligne uniforme", "points": 5 },
+        { "critere": "Frottements de la glace et de l'air, interactions de contact", "points": 3 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. D'après le **principe des actions réciproques**, si Léo exerce une force sur Emma, **Emma exerce sur Léo** une force opposée. Léo recule parce qu'il subit cette force, même s'il a l'impression d'être le seul à pousser (comme le nageur que l'eau pousse vers l'avant).\n\n2. Les deux forces ont la **même direction** (horizontale), la **même valeur**, et des **sens opposés** : Léo pousse Emma vers l'arrière d'Emma, Emma pousse Léo vers l'arrière de Léo.\n\n3. Elles ont **mis en mouvement** les patineurs, immobiles au départ : leur vitesse a changé.\n\n4. Un objet n'a **pas besoin d'une force pour continuer** d'avancer : il en a besoin pour **changer** de mouvement. Sur la glace, les forces qui s'exercent sur le palet se **compensent** presque (son poids et le soutien de la glace) : il garde un mouvement **rectiligne uniforme**.\n\n5. Les **frottements** de la glace et de l'air, même faibles, s'opposent au mouvement : ils finissent par le ralentir et l'arrêter. Ce sont des interactions **de contact**."
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "difficulte": 1,
+      "titre": "Masse ou poids ?",
+      "consigne": "Réponds par des phrases complètes et détaille le calcul.",
+      "enonce": "1. Recopie et complète pour la masse et pour le poids : ce que c'est, l'unité, l'instrument de mesure.\n2. Écris la formule du poids en précisant chaque grandeur et son unité.\n3. Calcule le poids sur Terre d'un sac de **5 kg** (g = 9,8 N/kg).\n4. Quelles sont la direction et le sens du poids ?",
+      "bareme": [
+        { "critere": "Masse (quantité de matière, kg, balance) et poids (force, N, dynamomètre)", "points": 7 },
+        { "critere": "P = m × g avec grandeurs et unités", "points": 5 },
+        { "critere": "P = 49 N", "points": 4 },
+        { "critere": "Verticale, vers le bas (vers le centre de l'astre)", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1.\n- **Masse** : quantité de matière ; en **kilogrammes (kg)** ; mesurée avec une **balance**.\n- **Poids** : force d'attraction exercée par un astre ; en **newtons (N)** ; mesuré avec un **dynamomètre**.\n\n2. **P = m × g** : P le poids en newtons (N), m la masse en kilogrammes (kg), g l'intensité de la pesanteur en N/kg (environ 9,8 N/kg sur Terre).\n\n3. P = 5 × 9,8 = **49 N**.\n\n4. Le poids est **vertical**, dirigé **vers le bas**, vers le centre de l'astre. Son point d'application est le centre de gravité de l'objet."
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "difficulte": 2,
+      "titre": "Un astronaute sur la Lune",
+      "consigne": "Détaille chaque calcul et justifie.",
+      "enonce": "**Données.** g sur Terre : 9,8 N/kg ; g sur la Lune : 1,6 N/kg.\n\n**Situation.** Une astronaute a une masse de **80 kg** avec sa combinaison.\n\n1. Calcule son poids sur Terre.\n2. Quelle est sa masse sur la Lune ? Justifie.\n3. Calcule son poids sur la Lune. Par combien environ est-il divisé ?\n4. Sur Terre, un caillou lunaire suspendu à un dynamomètre indique **4,9 N**. Calcule sa masse.",
+      "bareme": [
+        { "critere": "Poids sur Terre : 784 N", "points": 5 },
+        { "critere": "Masse inchangée (80 kg) : c'est la quantité de matière", "points": 5 },
+        { "critere": "Poids sur la Lune : 128 N, divisé par environ 6", "points": 5 },
+        { "critere": "m = P ÷ g = 0,5 kg", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. P = m × g = 80 × 9,8 = **784 N**.\n\n2. Sa masse reste **80 kg** : la masse est une **quantité de matière**, elle ne dépend pas de l'endroit où l'on se trouve.\n\n3. P = 80 × 1,6 = **128 N**. 784 ÷ 128 ≈ 6,1 : le poids est **divisé par environ 6**.\n\n4. P = m × g donc m = P ÷ g = 4,9 ÷ 9,8 = **0,5 kg** (500 g)."
+    },
+    {
+      "chapitre": "51237ce9-6536-519c-947e-51872280bc2d",
+      "difficulte": 3,
+      "titre": "Un robot sur Mars",
+      "consigne": "Calcule, puis argumente en t'appuyant sur le cours.",
+      "enonce": "**Données.** Le robot Perseverance, posé sur Mars en 2021, a une masse d'environ **1 025 kg**. Intensité de la pesanteur : Terre 9,8 N/kg ; Mars 3,7 N/kg ; Lune 1,6 N/kg.\n\n1. Calcule le poids du robot sur Terre, puis sur Mars.\n2. Un journaliste écrit : « Sur Mars, le robot ne pèse plus que 3 800 kg. » Relève et corrige l'erreur.\n3. Mars a une masse plus grande que la Lune. Est-ce cohérent avec les valeurs de g ? De quoi dépend la force d'attraction gravitationnelle ?\n4. Pourquoi Mars reste-t-elle en orbite autour du Soleil ? Que se passerait-il sans la gravitation ?\n5. La gravitation s'exerce aussi entre le robot et un ingénieur qui se tient à côté. Pourquoi ne la perçoit-on pas ?",
+      "bareme": [
+        { "critere": "Poids : environ 10 045 N sur Terre et 3 792,5 N sur Mars", "points": 5 },
+        { "critere": "Confusion masse / poids corrigée : environ 3 800 N, masse toujours 1 025 kg", "points": 4 },
+        { "critere": "Attraction qui dépend des masses et de la distance, cohérence avec g", "points": 4 },
+        { "critere": "Gravitation qui maintient l'orbite ; sinon mouvement en ligne droite", "points": 4 },
+        { "critere": "Masses ordinaires : attraction imperceptible", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Sur Terre : P = 1 025 × 9,8 = **10 045 N**. Sur Mars : P = 1 025 × 3,7 = **3 792,5 N** (environ 3 800 N).\n\n2. Le journaliste **confond masse et poids** : le poids s'exprime en **newtons**, pas en kilogrammes. Il faut écrire : « Sur Mars, le robot ne pèse plus qu'environ **3 800 N**. » Sa **masse** reste **1 025 kg** partout.\n\n3. Oui, c'est cohérent : g sur Mars (3,7 N/kg) est plus grand que sur la Lune (1,6 N/kg). La force d'attraction est d'autant plus grande que les **masses** des corps sont grandes et que la **distance** qui les sépare est petite. Une planète plus massive attire plus fort les objets posés à sa surface.\n\n4. C'est la **gravitation** exercée par le Soleil qui maintient Mars en **orbite**. Sans elle, Mars partirait **en ligne droite**.\n\n5. La gravitation est **universelle**, mais avec des **masses ordinaires** (un robot, une personne), la force est **imperceptible**. Elle ne devient importante qu'avec des masses énormes, comme celles des astres."
+    },
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "difficulte": 1,
+      "titre": "Les formes de l'énergie",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Donne la forme d'énergie principalement en jeu dans chaque cas : a) une voiture qui roule ; b) l'eau retenue en haut d'un barrage ; c) une barre de céréales ; d) le courant dans un câble ; e) le noyau des atomes d'uranium.\n2. Quelle est l'unité légale de l'énergie ? Combien de joules vaut 1 kWh ?\n3. Classe ces sources en renouvelables et non renouvelables : solaire, pétrole, éolien, charbon, biomasse, uranium.",
+      "bareme": [
+        { "critere": "Cinq formes justes : cinétique, de position, chimique, électrique, nucléaire", "points": 8 },
+        { "critere": "Joule ; 1 kWh = 3,6 × 10⁶ J", "points": 5 },
+        { "critere": "Classement juste des six sources", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1.\n- a) Énergie **cinétique** (liée au mouvement).\n- b) Énergie **de position** (liée à la hauteur).\n- c) Énergie **chimique** (liaisons entre atomes).\n- d) Énergie **électrique** (déplacement des charges).\n- e) Énergie **nucléaire** (noyau des atomes).\n\n2. L'unité légale est le **joule (J)**. **1 kWh = 3,6 × 10⁶ J**.\n\n3.\n- **Renouvelables** (elles se reconstituent à l'échelle humaine) : solaire, éolien, biomasse.\n- **Non renouvelables** (réserves limitées) : pétrole, charbon, uranium."
+    },
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "difficulte": 2,
+      "titre": "Du goûter au radiateur",
+      "consigne": "Détaille chaque conversion d'unités.",
+      "enonce": "**Données.** 1 cal ≈ 4,18 J ; 1 kWh = 3,6 × 10⁶ J ; 1 kcal = 1 000 cal.\n\n1. L'emballage d'une barre chocolatée indique **250 kcal**. Convertis cette énergie en joules. Compare à l'ordre de grandeur du cours.\n2. Un radiateur de **1 000 W** fonctionne pendant **3 heures**. Quelle énergie consomme-t-il, en kWh puis en joules ?\n3. Combien de barres chocolatées faudrait-il environ pour fournir la même énergie ?\n4. Nour dit : « Le pétrole est une forme d'énergie. » Corrige sa phrase.",
+      "bareme": [
+        { "critere": "250 kcal ≈ 1 045 000 J, de l'ordre de 10⁶ J", "points": 6 },
+        { "critere": "3 kWh soit 1,08 × 10⁷ J", "points": 6 },
+        { "critere": "Environ 10 barres", "points": 3 },
+        { "critere": "Distinction source (pétrole) / forme (énergie chimique)", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 250 kcal = 250 000 cal ; 250 000 × 4,18 = **1 045 000 J**, soit environ **10⁶ J** : c'est bien l'ordre de grandeur d'une barre chocolatée donné par le cours.\n\n2. Un radiateur de 1 000 W pendant une heure consomme 1 kWh. Pendant 3 h : **3 kWh**. En joules : 3 × 3,6 × 10⁶ = **1,08 × 10⁷ J**.\n\n3. 1,08 × 10⁷ ÷ 1 045 000 ≈ 10,3 : il faudrait environ **10 barres**.\n\n4. Le pétrole est une **source** d'énergie (ce d'où l'on tire l'énergie). La **forme** d'énergie qu'il contient est l'**énergie chimique**. Il faut dire : « Le pétrole est une source d'énergie ; il contient de l'énergie chimique. »"
+    },
+    {
+      "chapitre": "f92c560e-6d8f-509d-b902-28417486a187",
+      "difficulte": 3,
+      "titre": "L'énergie d'une randonnée",
+      "consigne": "Mène les calculs et commente-les à l'aide du cours.",
+      "enonce": "**Données.** g = 9,8 N/kg ; Epp = m × g × h ; Ec = ½ × m × v² ; énergie d'une barre chocolatée : environ 10⁶ J.\n\n**Situation.** Karim, **60 kg** avec son sac, monte de **500 m** de dénivelé jusqu'à un col. Au retour, il descend en VTT (70 kg avec le vélo) et atteint **10 m/s** en bas d'une pente.\n\n1. Calcule l'énergie de position gagnée par Karim en montant jusqu'au col.\n2. Compare avec l'énergie d'une barre chocolatée. Karim dit : « Avec une barre, j'ai de quoi monter trois cols. » Discute cette affirmation sachant que le corps humain ne convertit qu'une petite partie de l'énergie des aliments en mouvement.\n3. Calcule l'énergie cinétique de Karim et de son vélo en bas de la pente.\n4. Cite toutes les formes d'énergie rencontrées dans cette sortie.\n5. Soulever une pomme d'un mètre demande environ 1 J. Combien de fois plus d'énergie la montée du col représente-t-elle ?",
+      "bareme": [
+        { "critere": "Epp = 294 000 J", "points": 4 },
+        { "critere": "Comparaison chiffrée et discussion argumentée de l'affirmation", "points": 5 },
+        { "critere": "Ec = 3 500 J", "points": 4 },
+        { "critere": "Formes citées : chimique, de position, cinétique, thermique", "points": 4 },
+        { "critere": "Environ 294 000 fois (ordre de grandeur 3 × 10⁵)", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Epp = m × g × h = 60 × 9,8 × 500 = **294 000 J** (environ 3 × 10⁵ J).\n\n2. Une barre fournit environ 10⁶ J, soit environ 3 fois 294 000 J : sur le papier, cela semble suffire pour trois cols. Mais le corps humain ne convertit qu'une **petite partie** de l'énergie chimique des aliments en mouvement : le reste part surtout en chaleur. En réalité, une barre ne suffit pas à monter trois cols : l'affirmation est fausse.\n\n3. Ec = ½ × m × v² = 0,5 × 70 × 10² = 0,5 × 70 × 100 = **3 500 J**.\n\n4. Énergie **chimique** (aliments), énergie **de position** (au col), énergie **cinétique** (dans la descente), énergie **thermique** (chaleur du corps, freins qui chauffent).\n\n5. 294 000 J ÷ 1 J = **294 000 fois** plus, soit environ 3 × 10⁵."
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "difficulte": 1,
+      "titre": "Conduction, convection, rayonnement",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Explique la différence entre un transfert et une conversion d'énergie.\n2. Nomme le mode de transfert thermique dans chaque cas : a) la poignée d'une casserole en métal chauffe ; b) l'air chaud monte au-dessus d'un radiateur ; c) la chaleur du Soleil nous parvient à travers le vide.\n3. Donne la conversion réalisée par : une pile, un panneau photovoltaïque, un moteur électrique.",
+      "bareme": [
+        { "critere": "Transfert : déplace l'énergie ; conversion : change sa forme", "points": 5 },
+        { "critere": "Conduction, convection, rayonnement correctement attribués", "points": 7 },
+        { "critere": "Trois conversions justes", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Un **transfert** **déplace** l'énergie d'un objet à un autre. Une **conversion** **change sa forme**.\n\n2.\n- a) **Conduction** : de proche en proche, dans un solide.\n- b) **Convection** : par déplacement de matière, dans un fluide.\n- c) **Rayonnement** : sans support matériel.\n\n3.\n- Pile : **chimique → électrique**.\n- Panneau photovoltaïque : **lumineuse → électrique**.\n- Moteur électrique : **électrique → cinétique** (+ thermique)."
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "difficulte": 2,
+      "titre": "Deux lampes de bureau",
+      "consigne": "Construis la chaîne énergétique et détaille les calculs.",
+      "enonce": "**Situation.** Élodie compare deux lampes de bureau. Pour **100 J** d'énergie électrique reçue :\n- la lampe à incandescence fournit **5 J** d'énergie lumineuse ;\n- la lampe LED fournit **35 J** d'énergie lumineuse.\n\n1. Dessine (ou décris) la chaîne énergétique d'une lampe : source, convertisseur, énergie utile, pertes.\n2. Calcule le rendement de chaque lampe en pourcentage.\n3. Sous quelle forme part l'énergie non utile ? Calcule-la pour chaque lampe.\n4. Pourquoi un rendement est-il toujours inférieur à 100 % ?",
+      "bareme": [
+        { "critere": "Chaîne : électrique → lampe → lumineuse, avec pertes thermiques", "points": 5 },
+        { "critere": "Rendements : 5 % et 35 %", "points": 6 },
+        { "critere": "Énergie thermique : 95 J et 65 J", "points": 5 },
+        { "critere": "Une part de l'énergie part toujours en chaleur non désirée", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Énergie électrique** (source : le réseau) → **lampe** (convertisseur) → **énergie lumineuse** (utile). Une flèche de côté représente les **pertes**, sous forme **thermique**.\n\n2. rendement = énergie utile ÷ énergie reçue.\n- Incandescence : 5 ÷ 100 = 0,05, soit **5 %**.\n- LED : 35 ÷ 100 = 0,35, soit **35 %**.\n\n3. L'énergie non utile part sous forme **thermique** (chaleur) :\n- incandescence : 100 − 5 = **95 J** ;\n- LED : 100 − 35 = **65 J**.\n\n4. Aucun convertisseur n'est parfait : une part de l'énergie reçue est toujours transformée en **chaleur non désirée**. Le rendement est donc **toujours inférieur à 100 %**."
+    },
+    {
+      "chapitre": "d5ca2d31-c8e0-5449-b11f-8e16aae8e631",
+      "difficulte": 3,
+      "titre": "Dans une centrale au charbon",
+      "consigne": "Exploite les données et justifie chaque réponse.",
+      "enonce": "**Situation.** Dans une centrale thermique, le charbon brûle dans une chaudière ; la vapeur produite fait tourner une turbine reliée à un alternateur. En une seconde, la centrale reçoit **3 000 MJ** d'énergie chimique et fournit **1 050 MJ** d'énergie électrique au réseau.\n\n1. Donne la forme d'énergie à chaque étape : charbon, chaudière, turbine, alternateur.\n2. Représente la chaîne énergétique de la centrale, avec les pertes.\n3. Calcule le rendement de la centrale, puis l'énergie perdue en une seconde.\n4. Une partie de la chaleur perdue réchauffe l'eau d'une rivière voisine. Par quel mode de transfert la chaleur passe-t-elle d'un tuyau métallique chaud à l'eau qui le touche ? Dans quel sens va-t-elle, et pourquoi ?\n5. Un panneau photovoltaïque produit de l'électricité sans turbine. Écris sa conversion et explique en quoi sa chaîne diffère.",
+      "bareme": [
+        { "critere": "Chimique, thermique, cinétique, électrique", "points": 4 },
+        { "critere": "Chaîne complète avec flèche de pertes thermiques", "points": 4 },
+        { "critere": "Rendement 35 % ; 1 950 MJ perdus", "points": 5 },
+        { "critere": "Conduction ; du corps chaud vers le froid, jamais l'inverse spontanément", "points": 4 },
+        { "critere": "Lumineuse → électrique en une seule conversion", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Charbon : énergie **chimique** ; chaudière : énergie **thermique** ; turbine : énergie **cinétique** ; alternateur : énergie **électrique**.\n\n2. Charbon (chimique) → **chaudière** → (thermique) → **turbine** → (cinétique) → **alternateur** → énergie électrique utile. À chaque étape, une flèche de côté pour les **pertes**, presque toujours **thermiques**.\n\n3. rendement = 1 050 ÷ 3 000 = 0,35, soit **35 %**. Énergie perdue : 3 000 − 1 050 = **1 950 MJ** par seconde.\n\n4. Le métal et l'eau se touchent : c'est la **conduction** (transfert de proche en proche au contact). La chaleur va **du corps le plus chaud** (le tuyau) **vers le plus froid** (l'eau) : c'est toujours dans ce sens, **jamais l'inverse spontanément**. (Dans l'eau, la chaleur est ensuite emportée par convection.)\n\n5. Le panneau réalise directement la conversion **lumineuse → électrique**, en une seule étape, sans chaudière ni turbine ni alternateur. Sa chaîne est plus courte : une seule conversion, sans énergie cinétique intermédiaire. Elle a pourtant des pertes, elle aussi : une partie de la lumière reçue chauffe le panneau au lieu de devenir électrique."
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "difficulte": 1,
+      "titre": "L'énergie du cycliste",
+      "consigne": "Détaille le calcul en précisant les unités.",
+      "enonce": "**Situation.** Adam et son vélo ont une masse totale de **80 kg**. Il roule à **36 km/h**.\n\n1. Écris la formule de l'énergie cinétique, en précisant l'unité de chaque grandeur.\n2. Convertis la vitesse d'Adam en m/s.\n3. Calcule son énergie cinétique.\n4. Que devient cette énergie quand Adam freine ?",
+      "bareme": [
+        { "critere": "Ec = ½ × m × v² avec J, kg, m/s", "points": 5 },
+        { "critere": "36 ÷ 3,6 = 10 m/s", "points": 4 },
+        { "critere": "Ec = 4 000 J", "points": 6 },
+        { "critere": "Convertie en énergie thermique par les frottements des freins", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **Ec = ½ × m × v²** : Ec en **joules (J)**, m en **kilogrammes (kg)**, v en **mètres par seconde (m/s)**, jamais en km/h.\n\n2. v = 36 ÷ 3,6 = **10 m/s**.\n\n3. Ec = 0,5 × 80 × 10² = 0,5 × 80 × 100 = **4 000 J**.\n\n4. Elle est **convertie en énergie thermique** par les **frottements** des freins : les patins et la jante chauffent. L'énergie n'a pas disparu, elle a changé de forme."
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "difficulte": 2,
+      "titre": "Doubler la vitesse",
+      "consigne": "Détaille les calculs, puis conclus.",
+      "enonce": "**Situation.** Une voiture de **1 200 kg** roule d'abord à **54 km/h**, puis sur une voie rapide à **108 km/h**.\n\n1. Convertis les deux vitesses en m/s.\n2. Calcule l'énergie cinétique de la voiture à chaque vitesse.\n3. Par combien l'énergie cinétique est-elle multipliée quand la vitesse double ? Justifie avec la formule.\n4. Le temps de réaction du conducteur est d'environ 1 s. Calcule la distance de réaction à 54 km/h et à 108 km/h.",
+      "bareme": [
+        { "critere": "15 m/s et 30 m/s", "points": 4 },
+        { "critere": "Ec = 135 000 J et 540 000 J", "points": 6 },
+        { "critere": "Multipliée par 4, justifié par le carré de la vitesse", "points": 5 },
+        { "critere": "Distances de réaction : 15 m et 30 m", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. 54 ÷ 3,6 = **15 m/s** ; 108 ÷ 3,6 = **30 m/s**.\n\n2.\n- À 15 m/s : Ec = 0,5 × 1 200 × 15² = 0,5 × 1 200 × 225 = **135 000 J**.\n- À 30 m/s : Ec = 0,5 × 1 200 × 30² = 0,5 × 1 200 × 900 = **540 000 J**.\n\n3. 540 000 ÷ 135 000 = **4**. La vitesse est **au carré** dans la formule : si v double, v² est multiplié par 2² = 4. Doubler la vitesse **quadruple** l'énergie cinétique, donc la violence d'un choc.\n\n4. Pendant le temps de réaction, la voiture roule à vitesse constante : d = v × t.\n- À 15 m/s : 15 × 1 = **15 m**.\n- À 30 m/s : 30 × 1 = **30 m**."
+    },
+    {
+      "chapitre": "5e6b0b74-4b10-59cf-a061-1676445ad996",
+      "difficulte": 3,
+      "titre": "La distance d'arrêt",
+      "consigne": "Calcule, puis rédige une argumentation appuyée sur les résultats.",
+      "enonce": "**Situation.** Une voiture de **1 000 kg** roule à **90 km/h** sur route sèche. Pour cette voiture, la distance de freinage est de **10 m à 45 km/h**.\n\n1. Calcule l'énergie cinétique de la voiture à 90 km/h.\n2. La distance de freinage croît comme le carré de la vitesse. Déduis-en la distance de freinage à 90 km/h.\n3. Le conducteur, attentif, réagit en 1 s. Calcule la distance de réaction, puis la distance d'arrêt.\n4. Le même conducteur lit un message sur son téléphone : son temps de réaction passe à 2 s. Calcule la nouvelle distance d'arrêt.\n5. Un enfant traverse à 70 m devant la voiture. Compare les deux situations et conclus.\n6. Cite deux facteurs qui allongent la distance de freinage.",
+      "bareme": [
+        { "critere": "25 m/s et Ec = 312 500 J", "points": 4 },
+        { "critere": "Distance de freinage de 40 m justifiée (vitesse ×2, distance ×4)", "points": 4 },
+        { "critere": "Réaction 25 m, arrêt 65 m", "points": 4 },
+        { "critere": "Réaction 50 m, arrêt 90 m", "points": 3 },
+        { "critere": "Conclusion : arrêt avant l'enfant dans un cas, pas dans l'autre ; deux facteurs (pluie, pneus usés)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. v = 90 ÷ 3,6 = **25 m/s**. Ec = 0,5 × 1 000 × 25² = 0,5 × 1 000 × 625 = **312 500 J**.\n\n2. La vitesse double (45 → 90 km/h) : la distance de freinage est multipliée par 2² = 4. d = 10 × 4 = **40 m**.\n\n3. Distance de réaction : 25 × 1 = **25 m**. Distance d'arrêt = réaction + freinage = 25 + 40 = **65 m**.\n\n4. Distance de réaction : 25 × 2 = **50 m**. Distance d'arrêt : 50 + 40 = **90 m**.\n\n5. Attentif, le conducteur s'arrête en 65 m, **avant** l'enfant situé à 70 m. Distrait par son téléphone, il lui faut 90 m : il **ne peut pas s'arrêter** et percute l'enfant, alors qu'il roulait à la même vitesse. Pendant la seconde perdue, la voiture a parcouru 25 m sans freiner. Le téléphone (comme l'alcool ou la fatigue) allonge la distance de réaction.\n\n6. La **pluie** (route mouillée) et des **pneus usés** allongent la distance de freinage (ainsi que la vitesse, qui l'augmente comme son carré)."
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "difficulte": 1,
+      "titre": "Rien ne se perd",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Énonce le principe de conservation de l'énergie.\n2. Une bille tombe d'une table. Décris ce que deviennent son énergie de position et son énergie cinétique pendant la chute, si l'on néglige les frottements.\n3. Sous quelle forme apparaissent le plus souvent les « pertes » d'énergie ? Pourquoi dit-on que cette énergie est « dégradée » ?",
+      "bareme": [
+        { "critere": "L'énergie ne se crée pas, ne se détruit pas, elle se transforme", "points": 6 },
+        { "critere": "Énergie de position convertie en cinétique, somme constante", "points": 7 },
+        { "critere": "Forme thermique ; énergie diluée, non récupérable", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'énergie **ne se crée pas** et **ne se détruit pas** : elle **se transforme**. Dans un système isolé, la somme de toutes les formes d'énergie reste constante.\n\n2. En haut, la bille a un **maximum d'énergie de position**. En descendant, cette énergie **se convertit en énergie cinétique** : la bille va de plus en plus vite. La **somme** des deux ne varie pas si l'on néglige les frottements.\n\n3. Les pertes apparaissent le plus souvent sous forme **thermique** (frottements, effet Joule). Cette énergie n'a pas disparu : elle est **dissipée** dans l'environnement, **trop diluée** pour être récupérée et réutilisée. On dit qu'elle est **dégradée**."
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "difficulte": 2,
+      "titre": "Le bilan d'un moteur",
+      "consigne": "Complète les bilans et détaille les calculs.",
+      "enonce": "**Situation.** Un moteur thermique de voiture reçoit **1 000 kJ** d'énergie chimique du carburant ; il fournit **300 kJ** d'énergie cinétique utile. Un moteur électrique de trottinette reçoit **500 kJ** d'énergie électrique ; son rendement est de **90 %**.\n\n1. Écris la relation du bilan énergétique d'un convertisseur.\n2. Pour le moteur thermique : calcule l'énergie dissipée et le rendement.\n3. Pour le moteur électrique : calcule l'énergie utile et l'énergie dissipée.\n4. Lequel des deux moteurs dégrade le plus l'énergie qu'il reçoit ? Justifie.",
+      "bareme": [
+        { "critere": "Énergie reçue = énergie utile + énergie dissipée", "points": 4 },
+        { "critere": "700 kJ dissipés ; rendement 30 %", "points": 6 },
+        { "critere": "450 kJ utiles ; 50 kJ dissipés", "points": 6 },
+        { "critere": "Le moteur thermique : 70 % dissipés contre 10 %", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Énergie reçue = énergie utile + énergie dissipée**.\n\n2. Énergie dissipée = 1 000 − 300 = **700 kJ** (surtout sous forme thermique). Rendement = 300 ÷ 1 000 = 0,30, soit **30 %** : plus des deux tiers partent en chaleur.\n\n3. Énergie utile = 500 × 90 ÷ 100 = **450 kJ**. Énergie dissipée = 500 − 450 = **50 kJ**.\n\n4. Le **moteur thermique** : il dissipe **70 %** de l'énergie reçue, contre **10 %** pour le moteur électrique. Son rendement (30 %) est bien plus faible que celui du moteur électrique (90 %)."
+    },
+    {
+      "chapitre": "35325f85-764e-5cb5-9409-d6c7fb31ddba",
+      "difficulte": 3,
+      "titre": "La bille qui rebondit moins haut",
+      "consigne": "Exploite les mesures et construis une argumentation.",
+      "enonce": "**Situation.** Lina lâche une bille du haut d'un escalier. Juste avant de toucher le sol, elle calcule que l'énergie de position perdue vaut **2,0 J** et que l'énergie cinétique acquise vaut **1,8 J**. Après le rebond, la bille remonte moins haut qu'au départ.\n\n1. L'énergie cinétique est-elle égale à l'énergie de position perdue ? Calcule l'écart.\n2. Lina en conclut : « 0,2 J d'énergie a disparu. » Explique pourquoi c'est faux. Où est passée cette énergie ?\n3. Pourquoi la bille remonte-t-elle moins haut après le rebond ?\n4. Explique la phrase : « Perte est un mot d'ingénieur, pas de physicien. »\n5. Chez elle, Lina veut économiser l'énergie. Propose trois gestes du cours et explique ce que chacun évite.",
+      "bareme": [
+        { "critere": "Écart de 0,2 J calculé", "points": 3 },
+        { "critere": "Conservation : 0,2 J convertis en énergie thermique par les frottements de l'air", "points": 5 },
+        { "critere": "À chaque étape, une part d'énergie est dissipée : moins d'énergie de position au rebond", "points": 4 },
+        { "critere": "Rien ne manque au bilan, quelque chose manque à l'usage : énergie dégradée", "points": 4 },
+        { "critere": "Trois gestes justes avec ce qu'ils évitent", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Non : 2,0 − 1,8 = **0,2 J** d'écart.\n\n2. D'après le **principe de conservation**, l'énergie ne peut pas disparaître. Les 0,2 J ont été **convertis en énergie thermique** par les **frottements de l'air** : ils ont été dissipés dans l'environnement. Bilan : 2,0 J = 1,8 J (cinétique) + 0,2 J (thermique).\n\n3. Au choc avec le sol et pendant la remontée, une partie de l'énergie est encore **dissipée** sous forme thermique (déformation, frottements). La bille a donc moins d'énergie cinétique au départ de la remontée : elle retrouve moins d'énergie de position, et remonte **moins haut**.\n\n4. Pour le physicien, **rien ne manque au bilan** : toute l'énergie est toujours là. Pour l'ingénieur, **quelque chose manque à l'usage** : l'énergie thermique dissipée est **dégradée**, trop diluée pour être récupérée. On parle donc de « perte » du point de vue de l'utilisation.\n\n5. Trois gestes au choix :\n- **isoler** le logement : évite les transferts thermiques vers l'extérieur ;\n- choisir des appareils à bon **rendement** (étiquette énergie) : moins d'énergie dissipée ;\n- **éteindre les veilles** : évite une consommation continue ;\n- limiter la vitesse, préférer les transports collectifs : évite une énergie cinétique inutile."
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "difficulte": 1,
+      "titre": "Qu'est-ce qui circule ?",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Qu'est-ce que le courant électrique ? Quels sont les porteurs de charge dans un métal ? Dans une solution ionique ?\n2. À quelle condition le courant circule-t-il dans un circuit ? Quel est le rôle d'un interrupteur ouvert ?\n3. Quel est le sens conventionnel du courant à l'extérieur du générateur ? Dans quel sens se déplacent les électrons ?\n4. Classe en conducteurs et isolants : cuivre, verre, graphite, plastique, eau salée, bois sec.",
+      "bareme": [
+        { "critere": "Déplacement ordonné de charges ; électrons libres ; ions", "points": 5 },
+        { "critere": "Circuit fermé ; l'interrupteur ouvert coupe la boucle", "points": 5 },
+        { "critere": "De + vers − ; électrons en sens inverse", "points": 5 },
+        { "critere": "Classement juste des six matériaux", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Le courant électrique est un **déplacement ordonné de porteurs de charge**. Dans un **métal**, ce sont les **électrons libres** ; dans une **solution ionique**, ce sont les **ions**.\n\n2. Le courant ne circule que dans un **circuit fermé** : une boucle ininterrompue comprenant un générateur, des récepteurs et des fils. Un interrupteur ouvert **coupe la boucle** : plus rien ne circule.\n\n3. Le courant conventionnel va de la borne **+** vers la borne **−** du générateur, à l'extérieur de celui-ci. Les **électrons** se déplacent en **sens inverse**.\n\n4.\n- **Conducteurs** : cuivre, graphite, eau salée.\n- **Isolants** : verre, plastique, bois sec."
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "difficulte": 2,
+      "titre": "Le testeur de conduction",
+      "consigne": "Explique chaque résultat et justifie.",
+      "enonce": "**Situation.** Julien réalise un circuit avec une pile plate, un interrupteur, une lampe et deux pinces crocodiles entre lesquelles il place différents objets. L'interrupteur est fermé.\n\n> | Objet entre les pinces | Lampe |\n> | Clou en fer | Allumée |\n> | Mine de crayon (graphite) | Allumée |\n> | Règle en plastique | Éteinte |\n> | Gomme en caoutchouc | Éteinte |\n\n1. Nomme le générateur et le récepteur de ce circuit, et donne leur rôle.\n2. Classe les objets en conducteurs et isolants. Justifie.\n3. Avec le clou, Julien ouvre l'interrupteur : la lampe s'éteint. Explique.\n4. Décris le symbole normalisé de la pile et celui de la lampe, et la règle de tracé d'un schéma.",
+      "bareme": [
+        { "critere": "Pile (fournit l'énergie) et lampe (la consomme)", "points": 4 },
+        { "critere": "Fer et graphite conducteurs, plastique et caoutchouc isolants, justifié par la lampe", "points": 6 },
+        { "critere": "Circuit ouvert : le courant ne circule plus", "points": 5 },
+        { "critere": "Pile : deux traits inégaux ; lampe : cercle barré d'une croix ; traits droits, angles droits", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Le **générateur** est la **pile** : elle **fournit l'énergie**. Le **récepteur** est la **lampe** : elle la **consomme** (et la convertit en lumière et en chaleur).\n\n2. Quand la lampe s'allume, le circuit est fermé par l'objet, qui laisse passer le courant.\n- **Conducteurs** : le clou en fer, la mine de graphite.\n- **Isolants** : la règle en plastique, la gomme en caoutchouc (la lampe reste éteinte).\n\n3. L'interrupteur ouvert **coupe la boucle** : le circuit n'est plus **fermé**, le courant ne circule plus, la lampe s'éteint.\n\n4. La **pile** est représentée par **deux traits inégaux**, la **lampe** par un **cercle barré d'une croix**. Un schéma se dessine avec des **traits droits** et des **angles droits**."
+    },
+    {
+      "chapitre": "423017ca-31a6-5147-a316-b88d92a818ac",
+      "difficulte": 3,
+      "titre": "Court-circuit et sécurité",
+      "consigne": "Argumente chaque réponse à l'aide du cours.",
+      "enonce": "**Situation.** Dans un circuit comprenant une pile, un interrupteur fermé et une lampe allumée, Manon relie par erreur les deux bornes de la pile avec un fil de cuivre nu. La lampe s'éteint et, au bout de quelques secondes, le fil et la pile deviennent brûlants.\n\n1. Comment appelle-t-on ce branchement ? Pourquoi la lampe s'éteint-elle ?\n2. Pourquoi le fil et la pile chauffent-ils ? Quel danger cela représente-t-il ?\n3. Sur un schéma, Manon a fléché le courant de la borne − vers la borne + à l'extérieur de la pile, « parce que ce sont les électrons qui bougent ». Discute son choix.\n4. Pourquoi cette convention n'a-t-elle jamais été corrigée ?\n5. Le corps humain est-il conducteur ou isolant ? Explique pourquoi il est dangereux de manipuler un appareil branché au secteur avec les mains mouillées.",
+      "bareme": [
+        { "critere": "Court-circuit ; le courant passe par le fil au lieu de la lampe", "points": 4 },
+        { "critere": "Intensité énorme, fils qui chauffent : danger d'incendie", "points": 4 },
+        { "critere": "Électrons de − vers +, mais courant conventionnel de + vers − sur les schémas", "points": 5 },
+        { "critere": "Convention historique antérieure à la découverte de l'électron", "points": 3 },
+        { "critere": "Corps conducteur, davantage quand il est humide", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. C'est un **court-circuit** : un fil relie **directement les deux bornes** du générateur. Le courant passe par ce fil, très conducteur, plutôt que par la lampe : elle ne reçoit presque plus de courant et s'éteint.\n\n2. Dans un court-circuit, l'**intensité devient énorme** : les fils et la pile **chauffent** fortement. Il y a un **danger d'incendie** (et la pile peut être détruite).\n\n3. Manon a raison sur un point : les **électrons** se déplacent bien de la borne **−** vers la borne **+** à l'extérieur du générateur. Mais sur un schéma, on flèche le **courant conventionnel**, qui va de la borne **+** vers la borne **−** : les électrons circulent en sens inverse du courant conventionnel. Son schéma est donc faux.\n\n4. C'est une **convention historique**, choisie **avant qu'on ne connaisse l'électron**. Elle n'a jamais été corrigée et reste celle de tous les schémas.\n\n5. Le corps humain est **conducteur**, et d'autant plus qu'il est **humide**. Avec des mains mouillées, le courant peut traverser le corps plus facilement : risque d'électrisation grave. C'est toute la raison des règles de sécurité électrique."
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "difficulte": 1,
+      "titre": "Série ou dérivation ?",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Décris la structure d'un montage en série et celle d'un montage en dérivation.\n2. Dans chaque montage, que se passe-t-il si une lampe grille ?\n3. Comment se branchent un ampèremètre et un voltmètre ? Que se passe-t-il si l'on branche un ampèremètre en dérivation ?",
+      "bareme": [
+        { "critere": "Série : une seule boucle ; dérivation : branches entre deux nœuds", "points": 6 },
+        { "critere": "Série : tout s'éteint ; dérivation : les autres continuent", "points": 6 },
+        { "critere": "Ampèremètre en série, voltmètre en dérivation ; court-circuit", "points": 8 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. En **série**, les dipôles forment **une seule boucle**. En **dérivation**, le circuit comporte **plusieurs branches**, reliées entre deux **nœuds**.\n\n2. En série, si une lampe grille, la boucle est coupée : **tout s'éteint**. En dérivation, les **autres lampes continuent** de fonctionner.\n\n3. L'**ampèremètre** se branche **en série** : le courant doit le traverser. Le **voltmètre** se branche **en dérivation**, aux bornes du dipôle : il mesure entre deux points. Un ampèremètre branché en dérivation crée un **court-circuit**."
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "difficulte": 2,
+      "titre": "Deux lampes, deux montages",
+      "consigne": "Justifie chaque réponse par une loi du cours.",
+      "enonce": "**Situation.** Rose dispose d'un générateur de **6 V** et de deux lampes identiques.\n\n**Montage A** : les deux lampes en dérivation. Un ampèremètre mesure **0,3 A** dans la branche de la lampe 1 et **0,3 A** dans celle de la lampe 2.\n\n**Montage B** : les deux lampes en série.\n\n1. Dans le montage A, quelle intensité traverse le générateur ? Quelle loi utilises-tu ?\n2. Dans le montage A, quelle est la tension aux bornes de chaque lampe ?\n3. Dans le montage B, les deux lampes étant identiques, quelle est la tension aux bornes de chacune ? Justifie.\n4. Dans lequel des deux montages les lampes brillent-elles le moins ? Pourquoi les installations d'une maison sont-elles en dérivation ?",
+      "bareme": [
+        { "critere": "0,6 A par la loi des nœuds", "points": 5 },
+        { "critere": "6 V aux bornes de chaque lampe (même tension dans chaque branche)", "points": 5 },
+        { "critere": "3 V chacune : les tensions s'additionnent en série", "points": 5 },
+        { "critere": "Montage B ; avantages de la dérivation (même tension, indépendance, commande séparée)", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. D'après la **loi des nœuds**, en dérivation les intensités des branches **s'additionnent** : I = 0,3 + 0,3 = **0,6 A**.\n\n2. En dérivation, la tension est **la même dans chaque branche** : **6 V** aux bornes de chaque lampe.\n\n3. En série, les tensions **s'additionnent** : U générateur = U₁ + U₂. Les lampes étant identiques, elles se partagent la tension : 6 ÷ 2 = **3 V** chacune.\n\n4. Dans le **montage B** (série) : chaque lampe ne reçoit que 3 V, elles brillent moins. Une maison est en dérivation pour que chaque appareil reçoive **la même tension (230 V)**, fonctionne **indépendamment** des autres et ait **son propre interrupteur**. En série, éteindre la lampe du salon éteindrait le réfrigérateur."
+    },
+    {
+      "chapitre": "4afedaa7-1fc8-5681-a4bc-640d2f9a503c",
+      "difficulte": 3,
+      "titre": "La guirlande et la cuisine",
+      "consigne": "Analyse chaque situation et justifie par les lois des montages.",
+      "enonce": "**Situation 1.** La guirlande du sapin de Jules comporte 20 petites ampoules identiques branchées en série sur une prise qui fournit **230 V**. Une ampoule grille : toute la guirlande s'éteint.\n\n**Situation 2.** Dans la cuisine, trois appareils sont branchés en dérivation sur le secteur : un réfrigérateur (**1 A**), une bouilloire (**8,7 A**) et une lampe (**0,3 A**).\n\n1. Explique pourquoi toute la guirlande s'éteint. Quelle est la tension aux bornes de chaque ampoule quand elle fonctionne ?\n2. Jules ajoute une 21e ampoule à la guirlande. Que se passe-t-il pour l'éclat des ampoules ? Justifie.\n3. Dans la cuisine, calcule l'intensité dans le fil principal. Quelle tension reçoit chaque appareil ?\n4. On éteint la bouilloire. Les autres appareils fonctionnent-ils encore ? Que devient l'intensité dans le fil principal ?\n5. Pour vérifier l'intensité de la bouilloire et la tension à ses bornes, où Jules doit-il placer l'ampèremètre et le voltmètre ? Quelle erreur serait dangereuse ?",
+      "bareme": [
+        { "critere": "Une seule boucle coupée ; 230 ÷ 20 = 11,5 V par ampoule", "points": 4 },
+        { "critere": "Ampoules qui brillent moins en série quand on en ajoute", "points": 3 },
+        { "critere": "10 A par la loi des nœuds ; 230 V pour chaque appareil", "points": 5 },
+        { "critere": "Indépendance en dérivation ; intensité qui baisse à 1,3 A", "points": 4 },
+        { "critere": "Ampèremètre en série dans la branche, voltmètre aux bornes ; ampèremètre en dérivation = court-circuit", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. En série, les ampoules forment **une seule boucle** : une ampoule grillée **coupe la boucle**, le courant ne circule plus, **tout s'éteint**. Les tensions s'additionnent et les ampoules sont identiques : chacune reçoit 230 ÷ 20 = **11,5 V**.\n\n2. En série, **ajouter un dipôle** fait briller les lampes **moins** : la tension se partage entre plus d'ampoules (230 ÷ 21 ≈ 11 V chacune).\n\n3. En dérivation, les intensités **s'additionnent** (loi des nœuds) : I = 1 + 8,7 + 0,3 = **10 A**. Chaque appareil reçoit **la même tension**, **230 V**.\n\n4. Oui, en dérivation chaque appareil fonctionne **indépendamment** : le réfrigérateur et la lampe continuent. L'intensité principale **diminue** : I = 1 + 0,3 = **1,3 A**.\n\n5. L'**ampèremètre** se place **en série** dans la branche de la bouilloire (le courant doit le traverser) ; le **voltmètre** **en dérivation**, aux bornes de la bouilloire. Brancher l'ampèremètre **en dérivation** créerait un **court-circuit**, très dangereux sur le secteur."
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "difficulte": 1,
+      "titre": "Le voltmètre et ses valeurs",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Quelle est l'unité de la tension électrique ? Quelle lettre la représente ?\n2. Comment branche-t-on un voltmètre ? Où placer sa borne V et sa borne COM ?\n3. Associe chaque source à sa tension : pile bâton, pile plate, batterie de voiture, secteur domestique (valeurs : 4,5 V ; 230 V ; 1,5 V ; 12 V).\n4. Quelle tension du tableau est mortelle ? Quel est le seuil de sécurité ?",
+      "bareme": [
+        { "critere": "Volt (V), notée U", "points": 4 },
+        { "critere": "En dérivation ; V vers la borne + du dipôle, COM vers l'autre", "points": 6 },
+        { "critere": "Quatre associations justes", "points": 6 },
+        { "critere": "Secteur 230 V mortel ; seuil d'environ 25 V", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. La tension se mesure en **volts (V)** et se note **U**.\n\n2. Le voltmètre se branche **en dérivation**, aux bornes du dipôle, jamais en série. La borne **V** se place vers la borne **+** du dipôle, la borne **COM** vers l'autre.\n\n3. Pile bâton : **1,5 V** ; pile plate : **4,5 V** ; batterie de voiture : **12 V** ; secteur domestique : **230 V**.\n\n4. Le **secteur, 230 V**, est **mortel**. Le seuil de sécurité est d'environ **25 V**."
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "difficulte": 2,
+      "titre": "Les mesures de Timéo",
+      "consigne": "Justifie chaque réponse par une loi ou une propriété du cours.",
+      "enonce": "**Situation.** Timéo réalise un circuit en série : un générateur de **6,0 V**, une lampe L₁, une lampe L₂ et un interrupteur.\n\n1. Interrupteur fermé, il mesure **2,5 V** aux bornes de L₁. Calcule la tension aux bornes de L₂.\n2. Quelle tension mesure-t-il aux bornes de l'interrupteur fermé ? Et aux bornes de l'interrupteur ouvert ?\n3. Il inverse les fils de son voltmètre aux bornes de L₁ : l'écran affiche −2,5 V. Est-ce grave ? Explique.\n4. Il débranche la pile et mesure la tension à ses bornes, seule sur la table : **6,0 V**. Un camarade dit : « Impossible, aucun courant ne circule ! » Réponds-lui.",
+      "bareme": [
+        { "critere": "U₂ = 6,0 − 2,5 = 3,5 V par l'additivité en série", "points": 6 },
+        { "critere": "Environ 0 V fermé ; 6,0 V ouvert", "points": 5 },
+        { "critere": "Valeur négative sans danger : seul le signe change", "points": 4 },
+        { "critere": "Une tension existe même sans courant", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. En série, les tensions **s'additionnent** : U générateur = U₁ + U₂ + U interrupteur. L'interrupteur fermé a une tension d'environ 0 V, donc U₂ = 6,0 − 2,5 = **3,5 V**.\n\n2. Interrupteur **fermé** : environ **0 V** (il ne consomme rien). Interrupteur **ouvert** : **toute la tension du générateur**, **6,0 V**.\n\n3. Ce n'est pas grave : un branchement inversé affiche une valeur **négative**. Le circuit ne risque rien, **seul le signe change**. Il suffit de remettre la borne V du côté de la borne + du dipôle.\n\n4. Une **tension existe même sans courant** : une pile posée sur la table a bien 6,0 V à ses bornes, sans qu'aucun électron ne circule. Le courant n'apparaît que si l'on ferme un circuit."
+    },
+    {
+      "chapitre": "4b59d30f-438e-5ab1-a6cc-27351363037e",
+      "difficulte": 3,
+      "titre": "Un circuit mixte",
+      "consigne": "Raisonne par étapes et justifie chaque résultat par une loi.",
+      "enonce": "**Situation.** Un générateur de tension continue de **12 V** alimente une lampe L₁ placée en série avec un ensemble de deux lampes L₂ et L₃ montées en dérivation l'une de l'autre. Un voltmètre indique **4 V** aux bornes de L₁.\n\n1. Décris le schéma du circuit en quelques phrases (ou dessine-le avec les symboles normalisés).\n2. Calcule la tension aux bornes de l'ensemble L₂-L₃. Justifie.\n3. Déduis-en la tension aux bornes de L₂ et celle aux bornes de L₃.\n4. Explique comment brancher le voltmètre pour mesurer la tension aux bornes de L₃.\n5. Le générateur est remplacé par une prise du secteur à travers un transformateur. Quelle différence y a-t-il entre une tension continue et une tension alternative ? Donne leurs symboles et la fréquence du secteur en France. Quel appareil permet de voir l'allure de la tension alternative ?",
+      "bareme": [
+        { "critere": "Schéma : L₁ en série avec deux branches L₂ et L₃ entre deux nœuds", "points": 3 },
+        { "critere": "12 − 4 = 8 V aux bornes de l'ensemble, par l'additivité en série", "points": 5 },
+        { "critere": "8 V pour L₂ et pour L₃ (égalité en dérivation)", "points": 4 },
+        { "critere": "Voltmètre en dérivation aux bornes de L₃, V vers la borne +", "points": 3 },
+        { "critere": "Continu (=) constant, alternatif (~) qui change de signe, 50 Hz, oscilloscope", "points": 5 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Le générateur, la lampe L₁ et l'ensemble L₂-L₃ forment la boucle principale. Après L₁, un **nœud** sépare le circuit en **deux branches** : l'une contient L₂, l'autre L₃ ; elles se rejoignent à un second nœud avant de revenir au générateur. (Symboles : pile = deux traits inégaux, lampe = cercle barré d'une croix, traits droits et angles droits.)\n\n2. L₁ et l'ensemble L₂-L₃ sont **en série** : les tensions **s'additionnent**. U = 12 − 4 = **8 V** aux bornes de l'ensemble.\n\n3. L₂ et L₃ sont **en dérivation** : la tension est **la même** dans chaque branche. U₂ = U₃ = **8 V**.\n\n4. On branche le voltmètre **en dérivation**, directement **aux bornes de L₃**, sans ouvrir le circuit : la borne **V** du côté de la borne + de L₃, la borne **COM** de l'autre côté.\n\n5. Une tension **continue** (symbole **=**) est **constante** dans le temps : c'est celle d'une pile. Une tension **alternative** (symbole **~**) **change de signe** périodiquement ; celle du secteur en France a une fréquence de **50 Hz**. L'**oscilloscope** la rend visible sous forme de **sinusoïde**."
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "difficulte": 1,
+      "titre": "Mesurer une intensité",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Quelle est l'unité de l'intensité électrique ? Quelle lettre la représente ?\n2. Comment branche-t-on un ampèremètre ? Sur quel calibre commence-t-on la mesure ?\n3. Convertis : a) 250 mA en A ; b) 0,03 A en mA.\n4. Que peut-on dire de l'intensité en tout point d'un circuit en série ?",
+      "bareme": [
+        { "critere": "Ampère (A), notée I", "points": 4 },
+        { "critere": "En série, traversé par le courant ; plus grand calibre d'abord", "points": 6 },
+        { "critere": "0,25 A et 30 mA", "points": 5 },
+        { "critere": "La même partout, quel que soit l'ordre des dipôles", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. L'intensité se mesure en **ampères (A)** et se note **I**.\n\n2. L'ampèremètre se branche **en série** : le courant doit **le traverser** (borne A ou mA du côté de la borne + du générateur, COM de l'autre). On démarre sur le **plus grand calibre**, puis on descend.\n\n3. 1 mA = 0,001 A.\n- a) 250 mA = **0,25 A**.\n- b) 0,03 A = **30 mA**.\n\n4. En série, l'intensité est **la même en tout point** du circuit ; l'ordre des dipôles n'y change rien."
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "difficulte": 2,
+      "titre": "La loi des nœuds",
+      "consigne": "Justifie chaque calcul par une loi du cours.",
+      "enonce": "**Situation.** Dans un circuit, un générateur alimente un moteur M et une lampe L montés en dérivation. Un ampèremètre placé dans le fil principal indique **0,80 A** ; un second, dans la branche du moteur, indique **0,35 A**.\n\n1. Calcule l'intensité dans la branche de la lampe. Énonce la loi utilisée.\n2. On ajoute une troisième branche avec une DEL parcourue par **20 mA**. Calcule la nouvelle intensité dans le fil principal (les autres branches ne changent pas).\n3. Pour mesurer l'intensité dans la branche de la DEL, Sofia commence sur le calibre 200 mA puis passe sur 10 A. Qu'aurait-elle dû faire ? Pourquoi ?\n4. Quel dispositif coupe le circuit si l'intensité devient trop grande ? Donne la différence entre fusible et disjoncteur.",
+      "bareme": [
+        { "critere": "Loi des nœuds et I = 0,45 A", "points": 6 },
+        { "critere": "20 mA = 0,02 A ; nouvelle intensité 0,82 A", "points": 5 },
+        { "critere": "Commencer par le plus grand calibre puis descendre", "points": 4 },
+        { "critere": "Fusible qui fond (à remplacer) ; disjoncteur qui se réarme", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. **Loi des nœuds** : en dérivation, l'intensité principale est la **somme** des intensités des branches. I lampe = 0,80 − 0,35 = **0,45 A**.\n\n2. 20 mA = **0,020 A**. I = 0,35 + 0,45 + 0,02 = **0,82 A**.\n\n3. Elle a fait l'inverse de la règle : il faut **démarrer sur le plus grand calibre** (10 A), puis **descendre** vers un calibre plus précis (200 mA). Commencer sur un petit calibre risque d'endommager l'appareil si l'intensité est plus grande que prévu.\n\n4. Le **fusible** et le **disjoncteur** coupent le circuit au-delà d'une intensité limite, avant que les fils ne chauffent assez pour provoquer un incendie. Le **fusible fond** : il faut le **remplacer**. Le **disjoncteur** coupe le circuit et **se réarme**."
+    },
+    {
+      "chapitre": "e762ec11-c09a-53da-9b0e-2ea6d9a3d785",
+      "difficulte": 3,
+      "titre": "La multiprise surchargée",
+      "consigne": "Calcule, puis rédige une explication argumentée.",
+      "enonce": "**Situation.** Dans une chambre d'étudiant, Mehdi branche sur une seule multiprise : une bouilloire (**9 A**), un radiateur d'appoint (**6,5 A**) et un grille-pain (**4 A**). La prise murale est protégée par un disjoncteur de **16 A**. Les appareils sont branchés en dérivation sur le secteur.\n\n1. Quelle tension reçoit chaque appareil ? Justifie.\n2. Calcule l'intensité dans le câble de la multiprise quand les trois appareils fonctionnent ensemble.\n3. Que va-t-il se passer ? Explique le rôle du disjoncteur.\n4. Mehdi pense que brancher plusieurs appareils sur une multiprise « augmente la tension ». Corrige-le.\n5. Pourquoi un câble parcouru par une intensité trop grande est-il dangereux ?\n6. Propose une solution pour utiliser la bouilloire et le radiateur sans problème.",
+      "bareme": [
+        { "critere": "230 V pour chaque appareil, en dérivation", "points": 3 },
+        { "critere": "I = 19,5 A par la loi des nœuds", "points": 4 },
+        { "critere": "19,5 A > 16 A : le disjoncteur coupe", "points": 4 },
+        { "critere": "La tension ne change pas, les intensités s'additionnent", "points": 5 },
+        { "critere": "Échauffement des fils, risque d'incendie ; solution pertinente", "points": 4 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. En dérivation, la tension est **la même** dans chaque branche : chaque appareil reçoit **230 V**.\n\n2. D'après la **loi des nœuds**, les intensités **s'additionnent** : I = 9 + 6,5 + 4 = **19,5 A**.\n\n3. 19,5 A **dépasse** la limite de 16 A : le **disjoncteur coupe** le circuit. Son rôle est de couper le courant quand l'intensité dépasse une limite, **avant** que les fils ne chauffent dangereusement. Il suffira ensuite de le **réarmer**.\n\n4. Multiplier les appareils sur une même prise **ne change pas la tension** (toujours 230 V) : cela **additionne les intensités**. C'est ainsi que l'on dépasse la limite de l'installation.\n\n5. Une intensité trop grande fait **chauffer** les fils : l'isolant peut fondre et le câble peut **provoquer un incendie**.\n\n6. Ne pas faire fonctionner les appareils puissants **en même temps** (par exemple, la bouilloire puis le radiateur : 9 A ou 6,5 A, puis 15,5 A au plus s'ils tournent ensemble, sous 16 A), ou les brancher sur des **prises protégées par des disjoncteurs différents**."
+    },
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "difficulte": 1,
+      "titre": "La loi d'Ohm",
+      "consigne": "Détaille tes calculs et donne les unités.",
+      "enonce": "1. Écris la loi d'Ohm et donne l'unité de chaque grandeur.\n2. Une résistance de **100 Ω** est traversée par un courant de **0,05 A**. Calcule la tension à ses bornes.\n3. Une résistance est soumise à **9 V** et traversée par **0,03 A**. Calcule sa valeur.\n4. Qu'est-ce que l'effet Joule ? Cite un appareil où il est recherché.",
+      "bareme": [
+        { "critere": "U = R × I avec volt, ohm, ampère", "points": 5 },
+        { "critere": "U = 5 V", "points": 5 },
+        { "critere": "R = 300 Ω", "points": 5 },
+        { "critere": "Échauffement d'une résistance parcourue par un courant ; exemple juste", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **U = R × I** : U en **volts (V)**, R en **ohms (Ω)**, I en **ampères (A)**.\n\n2. U = R × I = 100 × 0,05 = **5 V**.\n\n3. R = U ÷ I = 9 ÷ 0,03 = **300 Ω**.\n\n4. L'**effet Joule** est l'**échauffement** de toute résistance parcourue par un courant. Il est recherché dans un **radiateur**, un **grille-pain**, un **sèche-cheveux** ou une ampoule à filament."
+    },
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "difficulte": 2,
+      "titre": "La caractéristique d'une résistance",
+      "consigne": "Exploite les mesures et justifie chaque conclusion.",
+      "enonce": "**Situation.** Ambre mesure la tension U aux bornes d'une résistance et l'intensité I qui la traverse, pour plusieurs réglages du générateur.\n\n> | I (A) | 0 | 0,010 | 0,020 | 0,030 | 0,040 |\n> | U (V) | 0 | 2,2 | 4,4 | 6,6 | 8,8 |\n\n1. Comment s'appelle cette méthode de mesure ? Comment Ambre branche-t-elle ses deux appareils ?\n2. Décris l'allure du graphique U en fonction de I. Que peux-tu en conclure ?\n3. Calcule la valeur de la résistance.\n4. Ambre veut vérifier avec un ohmmètre. Quelle précaution doit-elle prendre ?\n5. Si l'on remplace cette résistance par une plus grande, sous la même tension, que devient l'intensité ?",
+      "bareme": [
+        { "critere": "Méthode voltampèremétrique ; ampèremètre en série, voltmètre en dérivation", "points": 4 },
+        { "critere": "Droite passant par l'origine : conducteur ohmique", "points": 4 },
+        { "critere": "R = 220 Ω", "points": 5 },
+        { "critere": "Ohmmètre hors circuit, dipôle débranché", "points": 3 },
+        { "critere": "L'intensité diminue", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. C'est la méthode **voltampèremétrique** : on mesure U et I, puis on calcule R = U ÷ I. L'**ampèremètre** est branché **en série**, le **voltmètre** **en dérivation**, aux bornes de la résistance.\n\n2. U est **proportionnelle** à I (U double quand I double) : le graphique est une **droite passant par l'origine**. La résistance vérifie la **loi d'Ohm** (c'est un conducteur ohmique), et la **pente** de la droite vaut R.\n\n3. R = U ÷ I = 2,2 ÷ 0,010 = **220 Ω** (même résultat pour chaque ligne : 8,8 ÷ 0,040 = 220 Ω).\n\n4. L'ohmmètre s'utilise **hors circuit** : la résistance doit être **débranchée**.\n\n5. À tension constante, si R augmente, l'intensité **diminue** (I = U ÷ R)."
+    },
+    {
+      "chapitre": "dcc1163f-47c2-5efb-82de-4ed6a3f4e9a3",
+      "difficulte": 3,
+      "titre": "Protéger une DEL",
+      "consigne": "Raisonne par étapes et justifie chaque calcul.",
+      "enonce": "**Situation.** Nathalie veut allumer une DEL avec une pile de **9 V**. La DEL fonctionne correctement quand la tension à ses bornes est de **2 V** et qu'elle est traversée par **20 mA** ; au-delà d'environ 30 mA, elle grille. Elle place une résistance **en série** avec la DEL.\n\n1. Pourquoi ne faut-il pas brancher la DEL directement sur la pile ? Quel est le rôle de la résistance ?\n2. Quelle intensité traverse la résistance ? Justifie.\n3. Calcule la tension aux bornes de la résistance. Justifie.\n4. Calcule la valeur de la résistance nécessaire.\n5. La résistance chauffe légèrement. Comment s'appelle ce phénomène ? Est-il ici recherché ou subi ?\n6. Explique pourquoi l'effet Joule rend un court-circuit dangereux.",
+      "bareme": [
+        { "critere": "Intensité trop grande sans résistance ; la résistance limite l'intensité", "points": 3 },
+        { "critere": "20 mA = 0,02 A, même intensité en série", "points": 3 },
+        { "critere": "9 − 2 = 7 V par l'additivité des tensions", "points": 4 },
+        { "critere": "R = 7 ÷ 0,02 = 350 Ω", "points": 5 },
+        { "critere": "Effet Joule subi ; court-circuit : intensité très grande, fils qui s'enflamment", "points": 5 }
+      ],
+      "dureeMin": 17,
+      "corrige": "1. Branchée directement, la DEL serait traversée par une **intensité trop grande** : elle grillerait. Placée **en série**, la résistance **limite l'intensité** qui la traverse : c'est son usage le plus courant en électronique.\n\n2. En série, l'intensité est **la même en tout point** : la résistance est traversée par **20 mA = 0,02 A**.\n\n3. En série, les tensions **s'additionnent** : U pile = U DEL + U résistance. U résistance = 9 − 2 = **7 V**.\n\n4. Loi d'Ohm : R = U ÷ I = 7 ÷ 0,02 = **350 Ω**.\n\n5. C'est l'**effet Joule** : toute résistance parcourue par un courant s'échauffe. Ici, il est **subi** : c'est une perte d'énergie, on ne cherche pas à chauffer.\n\n6. Dans un **court-circuit**, l'intensité devient **très grande** ; l'énergie dissipée par effet Joule dans les fils suffit à les **enflammer** : risque d'incendie."
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "difficulte": 1,
+      "titre": "La plaque de la bouilloire",
+      "consigne": "Détaille tes calculs et donne les unités.",
+      "enonce": "**Situation.** La plaque signalétique d'une bouilloire indique : « 230 V — 2 300 W ».\n\n1. Que signifient ces deux indications ?\n2. Écris la relation entre puissance, tension et intensité, puis calcule l'intensité qui traverse la bouilloire.\n3. La bouilloire fonctionne **3 minutes**. Calcule l'énergie consommée en joules.",
+      "bareme": [
+        { "critere": "Tension de fonctionnement 230 V et puissance 2 300 W", "points": 5 },
+        { "critere": "P = U × I et I = 10 A", "points": 8 },
+        { "critere": "E = P × t = 414 000 J", "points": 7 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. **230 V** est la **tension** sous laquelle la bouilloire fonctionne (le secteur). **2 300 W** est sa **puissance** : l'énergie qu'elle convertit par seconde.\n\n2. **P = U × I**, donc I = P ÷ U = 2 300 ÷ 230 = **10 A**.\n\n3. t = 3 min = 180 s. E = P × t = 2 300 × 180 = **414 000 J** (environ 4,1 × 10⁵ J)."
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "difficulte": 2,
+      "titre": "Ce que coûte le radiateur",
+      "consigne": "Détaille chaque étape du calcul.",
+      "enonce": "**Situation.** Dans sa chambre, Chloé utilise un radiateur électrique de **1 500 W**, branché sur le secteur (230 V), **4 heures par jour** pendant **30 jours**. Le prix du kilowattheure est de **0,20 €**.\n\n1. Calcule l'intensité qui traverse le radiateur (arrondie au dixième).\n2. Calcule l'énergie consommée en un mois, en kWh.\n3. Calcule le coût de ce chauffage pour le mois.\n4. Explique la différence entre la puissance et l'énergie, à l'aide de cet exemple.",
+      "bareme": [
+        { "critere": "I = 1 500 ÷ 230 ≈ 6,5 A", "points": 4 },
+        { "critere": "E = 1,5 kW × 120 h = 180 kWh", "points": 6 },
+        { "critere": "Coût : 36 €", "points": 4 },
+        { "critere": "Puissance = vitesse de consommation ; énergie = quantité totale, dépend de la durée", "points": 6 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. I = P ÷ U = 1 500 ÷ 230 ≈ **6,5 A**.\n\n2. Durée totale : 4 × 30 = 120 h. P = 1 500 W = 1,5 kW. E = P × t = 1,5 × 120 = **180 kWh**.\n\n3. Coût = 180 × 0,20 = **36 €**.\n\n4. La **puissance** (1 500 W) dit la **vitesse** à laquelle le radiateur consomme l'énergie ; elle ne dépend pas de la durée. L'**énergie** (180 kWh) est la **quantité totale** consommée : elle dépend de la puissance **et** de la durée d'utilisation. Utilisé 2 h par jour au lieu de 4, le radiateur aurait la même puissance mais consommerait deux fois moins d'énergie."
+    },
+    {
+      "chapitre": "515df2ae-60bd-5c1a-ba72-23aa71320aad",
+      "difficulte": 3,
+      "titre": "Changer d'ampoule, éteindre les veilles",
+      "consigne": "Calcule, compare et conclus de façon argumentée.",
+      "enonce": "**Situation.** La famille de Hugo veut réduire sa facture. Prix du kWh : **0,20 €**. Données : 1 kWh = 3,6 × 10⁶ J.\n\n- Le salon est éclairé **5 h par jour** par une ampoule à filament de **60 W**, qu'on peut remplacer par une LED de **8 W** qui éclaire autant.\n- La télévision, le décodeur et la console restent en veille toute l'année : **5 W** au total, **24 h sur 24**.\n\n1. Calcule l'énergie consommée en un an (365 jours) par chaque ampoule, en kWh.\n2. Calcule l'économie réalisée en un an en passant à la LED, en kWh puis en euros.\n3. Pourquoi une LED de 8 W éclaire-t-elle autant qu'une ampoule de 60 W ?\n4. Calcule le coût annuel des veilles. Convertis cette énergie en joules.\n5. Une ampoule de 60 W allumée une heure consomme-t-elle plus qu'une ampoule de 6 W allumée dix heures ? Justifie.\n6. Conclus : quels gestes conseiller à cette famille ?",
+      "bareme": [
+        { "critere": "109,5 kWh et 14,6 kWh", "points": 4 },
+        { "critere": "94,9 kWh économisés, soit environ 18,98 €", "points": 4 },
+        { "critere": "Meilleur rapport lumière / puissance de la LED : moins d'énergie perdue en chaleur", "points": 3 },
+        { "critere": "Veilles : 43,8 kWh, 8,76 €, environ 1,6 × 10⁸ J", "points": 5 },
+        { "critere": "Même énergie (60 Wh) ; conseils argumentés", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Durée annuelle : 5 × 365 = 1 825 h.\n- Filament : 0,060 kW × 1 825 h = **109,5 kWh**.\n- LED : 0,008 kW × 1 825 h = **14,6 kWh**.\n\n2. Économie : 109,5 − 14,6 = **94,9 kWh**, soit 94,9 × 0,20 ≈ **18,98 €** par an.\n\n3. La LED a un **rapport lumière/puissance bien meilleur** : elle convertit une plus grande part de l'énergie électrique en lumière, alors que l'ampoule à filament en perd l'essentiel en chaleur.\n\n4. Durée : 24 × 365 = 8 760 h. E = 0,005 kW × 8 760 h = **43,8 kWh**. Coût : 43,8 × 0,20 = **8,76 €** par an. En joules : 43,8 × 3,6 × 10⁶ ≈ **1,6 × 10⁸ J**.\n\n5. Non, elles consomment **autant** : 60 W × 1 h = **60 Wh** et 6 W × 10 h = **60 Wh**. La puissance dit la vitesse de consommation, l'énergie la quantité totale.\n\n6. Conseils : **préférer les LED**, **éteindre les veilles** (multiprise à interrupteur), **comparer les étiquettes énergie** et **limiter la durée d'usage des appareils puissants** (four, chauffage, sèche-linge). Rien qu'avec l'ampoule et les veilles, la famille économise environ 27,74 € par an."
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "difficulte": 1,
+      "titre": "Émetteur, milieu, récepteur",
+      "consigne": "Réponds par des phrases complètes.",
+      "enonce": "1. Donne la définition d'un signal.\n2. Décris la chaîne de transmission d'une télécommande de télévision : émetteur, milieu de propagation, récepteur.\n3. Cite les trois familles de signaux et indique pour chacune si elle peut se propager dans le vide.\n4. Combien de bits contient un octet ?",
+      "bareme": [
+        { "critere": "Phénomène qui transporte une information sans transport de matière", "points": 5 },
+        { "critere": "Chaîne de la télécommande juste", "points": 5 },
+        { "critere": "Trois familles et propagation dans le vide", "points": 7 },
+        { "critere": "8 bits", "points": 3 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Un **signal** est un phénomène physique qui **transporte une information** d'un émetteur vers un récepteur, **sans transport de matière**.\n\n2. **Émetteur** : la télécommande (signal infrarouge) → **milieu de propagation** : l'air de la pièce → **récepteur** : la télévision.\n\n3.\n- Signaux **lumineux** : ils se propagent dans le vide (**oui**).\n- Signaux **sonores** : **non**, ils ont besoin d'un milieu matériel.\n- Signaux **électriques et électromagnétiques** (radio, Wi-Fi) : **oui**.\n\n4. Un octet contient **8 bits**."
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "difficulte": 2,
+      "titre": "Analogique ou numérique ?",
+      "consigne": "Justifie chaque réponse et détaille les calculs.",
+      "enonce": "**Situation.** Le grand-père d'Aline écoute ses disques vinyles ; Aline, elle, écoute des fichiers MP3 sur son téléphone.\n\n1. Lequel de ces supports porte un signal analogique ? Un signal numérique ? Explique la différence.\n2. Aline copie cent fois un morceau MP3 : la dernière copie est identique à l'original. Le grand-père fait une copie de copie d'une cassette : le son est moins bon. Explique.\n3. Le téléphone d'Aline a une mémoire de **64 Go**. Une photo occupe **4 Mo**. Combien de photos peut-elle stocker au maximum ? (1 Go = 10⁹ octets ; 1 Mo = 10⁶ octets)\n4. Combien de bits contient une photo de 4 Mo ?",
+      "bareme": [
+        { "critere": "Vinyle analogique (variation continue), MP3 numérique (suite de 0 et 1)", "points": 5 },
+        { "critere": "Numérique copié sans perte, analogique dégradé à chaque copie", "points": 5 },
+        { "critere": "16 000 photos", "points": 5 },
+        { "critere": "3,2 × 10⁷ bits", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Le **disque vinyle** porte un signal **analogique** : le sillon varie de façon **continue**. Le **fichier MP3** est **numérique** : c'est une suite de **0 et de 1**, les bits.\n\n2. Un signal **numérique** se copie **sans perte** : les 0 et les 1 sont recopiés à l'identique. Un signal **analogique** **se dégrade à chaque copie** : les petites imperfections s'accumulent. C'est cette robustesse qui a fait passer la musique au numérique.\n\n3. 64 Go = 64 × 10⁹ octets ; 4 Mo = 4 × 10⁶ octets. 64 × 10⁹ ÷ (4 × 10⁶) = 16 × 10³ = **16 000 photos**.\n\n4. 4 Mo = 4 × 10⁶ octets ; 1 octet = 8 bits. 4 × 10⁶ × 8 = **3,2 × 10⁷ bits** (32 millions de bits)."
+    },
+    {
+      "chapitre": "fb4b5c72-a4f1-5257-b732-10007d537280",
+      "difficulte": 3,
+      "titre": "Parler avec un robot sur Mars",
+      "consigne": "Calcule, puis argumente à l'aide des notions du cours.",
+      "enonce": "**Situation.** Des ingénieurs pilotent un robot posé sur Mars. Ce jour-là, Mars est à **225 millions de km** de la Terre. Le robot porte un capteur de température, un microcontrôleur et un moteur qui oriente une caméra.\n\n**Données.** Vitesse des ondes électromagnétiques dans le vide : 300 000 km/s. Vitesse du son dans l'air : environ 340 m/s.\n\n1. Pourquoi les ingénieurs utilisent-ils des ondes radio, et non un signal sonore, pour communiquer avec le robot ?\n2. Calcule la durée que met un ordre radio pour atteindre le robot, en secondes puis en minutes.\n3. Les ingénieurs voient sur leur écran un rocher droit devant le robot et envoient l'ordre de s'arrêter. Expliquer pourquoi le robot ne peut pas être piloté « en direct » comme une voiture télécommandée.\n4. Indique le rôle du capteur, du microcontrôleur et de l'actionneur à bord du robot.\n5. Pendant un orage sur Terre, Adèle voit l'éclair puis entend le tonnerre **3 s** plus tard. À quelle distance est tombée la foudre ? Pourquoi voit-on l'éclair avant d'entendre le tonnerre ?",
+      "bareme": [
+        { "critere": "Le son ne se propage pas dans le vide, les ondes radio si", "points": 4 },
+        { "critere": "t = 750 s, soit 12,5 min", "points": 5 },
+        { "critere": "Image et ordre retardés chacun de 12,5 min : pas de pilotage en direct", "points": 4 },
+        { "critere": "Capteur (grandeur → signal électrique), microcontrôleur (traite), actionneur (agit)", "points": 4 },
+        { "critere": "Environ 1 020 m ; lumière bien plus rapide que le son", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Le signal **sonore** a besoin d'un **milieu matériel** : il **ne se propage pas dans le vide** de l'espace. Les **ondes radio** (électromagnétiques) se propagent **dans le vide**, à environ 300 000 km/s : c'est ce qui rend les communications spatiales possibles.\n\n2. t = d ÷ v = 225 000 000 ÷ 300 000 = **750 s**, soit 750 ÷ 60 = **12,5 min**.\n\n3. L'image du rocher a mis 12,5 min pour arriver : elle montre la situation d'il y a 12,5 min. L'ordre d'arrêt met encore 12,5 min pour atteindre le robot : il réagit environ **25 min** après la prise de l'image. Un pilotage en direct est impossible ; le robot doit être en partie **autonome** (grâce à ses capteurs et à son microcontrôleur).\n\n4.\n- Le **capteur** transforme une grandeur physique (ici la température) en **signal électrique**.\n- Le **microcontrôleur** **traite** ce signal (et les ordres reçus).\n- L'**actionneur** (le moteur) **agit** : il oriente la caméra.\nC'est le principe de tout objet connecté.\n\n5. d = v × t = 340 × 3 = **1 020 m** (environ 1 km). La lumière (300 000 km/s) arrive presque instantanément, alors que le son ne va qu'à 340 m/s : on voit l'éclair avant d'entendre le tonnerre."
+    }
+  ]
+}

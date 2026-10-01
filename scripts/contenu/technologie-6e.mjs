@@ -460,7 +460,7 @@ La **conception assistée par ordinateur** (CAO) permet de dessiner en 3D, de te
 Une pièce hors tolérance est **refusée**.
 
 ## La sécurité
-!> Lunettes, gants, cheveux attachés, machine **arrêtée avant tout réglage**, un seul opérateur à la fois. Les consignes ne sont pas des formalités : les machines de l’atelier coupent, percent et chauffent.
+!> Lunettes, cheveux attachés, **jamais de gants près d’une pièce qui tourne** (ils peuvent être happés), machine **arrêtée avant tout réglage**, un seul opérateur à la fois. Les consignes ne sont pas des formalités : les machines de l’atelier coupent, percent et chauffent.
 
 ## Prototype et série
 | L’étape | Son rôle |

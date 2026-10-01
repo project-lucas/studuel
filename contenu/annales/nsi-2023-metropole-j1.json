@@ -1,0 +1,364 @@
+{
+  "id": "nsi-2023-metropole-j1",
+  "matiere": "nsi",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2023,
+  "centre": "Métropole",
+  "jour": 1,
+  "code": "23-NSIJ1ME1",
+  "titre": "Bac 2023 — NSI",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous obligatoires : bases de données (3 points), réseaux (3 points), programmation objet (6 points). Calculatrice interdite.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Bases de données relationnelles et SQL : les clients, les commandes et les meubles d'un grand magasin.",
+      "points": 3,
+      "minutes": 45,
+      "enBref": [
+        "Une clé primaire identifie chaque ligne de façon unique ; une clé étrangère pointe vers la clé primaire d'une autre relation.",
+        "La requête sur 'skap' renvoie deux lignes : (62, 2, 'Armoire blanche 3 portes') et (63, 3, 'Armoire noire 3 portes').",
+        "Mise à jour : `UPDATE Meubles SET stock = 50 WHERE id = 98;` ; ajout : `INSERT INTO Meubles VALUES (...)`.",
+        "Dernière question : une jointure `Clients JOIN Commandes ON Clients.id = Commandes.idClient` filtrée sur la date '30/04/2021'."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1.a",
+          "intitule": "Caractéristique d'un attribut pour être choisi comme clé primaire.",
+          "blocs": [
+            { "type": "texte", "texte": "Une clé primaire sert à **désigner une ligne sans ambiguïté**. Il faut donc que sa valeur soit **unique** dans la relation (deux lignes ne peuvent jamais avoir la même) et toujours renseignée." },
+            { "type": "reponse", "texte": "L'attribut doit prendre une valeur différente pour chaque enregistrement de la relation (unicité), et ne jamais être vide." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.b",
+          "intitule": "Rôle des deux clés étrangères de la relation Commandes.",
+          "blocs": [
+            { "type": "texte", "texte": "`idClient` fait référence à l'attribut `id` de `Clients` : il dit **qui** a passé la commande. `idMeuble` fait référence à l'attribut `id` de `Meubles` : il dit **quel meuble** est commandé." },
+            { "type": "texte", "texte": "Elles imposent aussi une **contrainte de référence** : le SGBD refuse une commande dont `idClient` ou `idMeuble` ne correspond à aucun client ou à aucun meuble existant, et refuse de supprimer un client ou un meuble encore cité dans une commande." },
+            { "type": "reponse", "texte": "Elles relient chaque commande à un client existant et à un meuble existant, et garantissent la cohérence de ces liens (intégrité référentielle)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1.c",
+          "intitule": "Schéma relationnel de la relation Meubles.",
+          "blocs": [
+            { "type": "texte", "texte": "On reprend les colonnes du tableau. `id` est unique pour chaque meuble (on voit 62 et 63 pour deux armoires de même intitulé : l'intitulé, lui, ne peut pas servir de clé). Meubles ne fait référence à aucune autre relation : pas de clé étrangère." },
+            { "type": "reponse", "texte": "Meubles (**id**, intitule, prix, stock, description) — clé primaire : `id` (à souligner sur ta copie) ; aucune clé étrangère. Types : `id` et `stock` entiers, `prix` flottant, `intitule` et `description` chaînes de caractères." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Résultat de SELECT id, stock, description FROM Meubles WHERE intitule = 'skap'.",
+          "blocs": [
+            { "type": "texte", "texte": "On garde les lignes dont l'intitulé vaut exactement 'skap' (ids 62 et 63), puis on ne projette que trois colonnes." },
+            {
+              "type": "tableau",
+              "entetes": ["id", "stock", "description"],
+              "lignes": [
+                ["62", "2", "'Armoire blanche 3 portes'"],
+                ["63", "3", "'Armoire noire 3 portes'"]
+              ]
+            },
+            { "type": "attendu", "texte": "Les deux lignes, et seulement les trois colonnes demandées dans l'ordre du SELECT." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Noms et prénoms des clients habitant à Paris.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "SELECT nom, prenom\nFROM Clients\nWHERE ville = 'Paris';" },
+            { "type": "piege", "texte": "Une chaîne de caractères s'écrit entre apostrophes en SQL : `ville = Paris` sans guillemets serait lu comme un nom de colonne." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Mettre le stock du meuble d'id 98 à 50.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "UPDATE Meubles\nSET stock = 50\nWHERE id = 98;" },
+            { "type": "texte", "texte": "On filtre sur la clé primaire `id` et non sur `intitule = 'hylla'` : si le magasin vend un jour une autre bibliothèque 'hylla' (une autre couleur, par exemple), seule la bonne ligne doit changer." },
+            { "type": "piege", "texte": "Oublier le `WHERE` mettrait le stock de **tous** les meubles à 50." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Ajouter le meuble 65 'matta' à la relation Meubles.",
+          "blocs": [
+            { "type": "code", "langage": "sql", "code": "INSERT INTO Meubles\nVALUES (65, 'matta', 95.99, 25, 'Tapis vert à pois rouges');" },
+            { "type": "texte", "texte": "Les valeurs sont données **dans l'ordre des attributs** du schéma (id, intitule, prix, stock, description). Le prix utilise un point décimal, comme dans la table." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Nom et prénom des clients ayant commandé le 30 avril 2021.",
+          "blocs": [
+            { "type": "texte", "texte": "Le nom est dans `Clients`, la date dans `Commandes` : il faut **joindre** les deux relations, en faisant correspondre la clé étrangère `Commandes.idClient` à la clé primaire `Clients.id`. La date est une chaîne au format 'JJ/MM/AAAA'." },
+            { "type": "code", "langage": "sql", "code": "SELECT DISTINCT Clients.nom, Clients.prenom\nFROM Clients\nJOIN Commandes ON Clients.id = Commandes.idClient\nWHERE Commandes.date = '30/04/2021';" },
+            { "type": "texte", "texte": "`DISTINCT` évite d'afficher plusieurs fois un client qui aurait passé plusieurs commandes ce jour-là (le sujet parle des « différents clients »). Sans ce mot-clé, qui n'est pas dans la liste proposée, la requête reste juste mais peut contenir des doublons." },
+            { "type": "piege", "texte": "Écrire la date '2021-04-30' ou 30/04/2021 sans apostrophes : le sujet précise le format exact de la chaîne, la comparaison se fait caractère par caractère." },
+            { "type": "attendu", "texte": "La jointure avec la bonne condition `ON`, le filtre sur la date, et les colonnes préfixées par leur table quand un nom pourrait être ambigu (`id` existe dans les deux relations)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Réseaux : routage statique, protocole RIP et protocole OSPF sur le réseau de cinq routeurs d'une entreprise.",
+      "points": 3,
+      "minutes": 45,
+      "enBref": [
+        "Chaque liaison appartient à une boucle du réseau : en couper une laisse toujours un autre chemin.",
+        "Routage manuel de SiteB à SiteC : SiteB → R2 → R3 → R4 → R5 → SiteC.",
+        "RIP (nombre de sauts) : R1 envoie vers SiteB par R2 (1), vers SiteC par R2 (2), vers SiteD par R3 (2) — au prix de la liaison lente Liaison2.",
+        "OSPF (coût) : le meilleur chemin de SiteA à SiteC est R1 → R3 → R4 → R5, de coût 50 015 ; R1 passe par R3 pour toutes les destinations."
+      ],
+      "blocs": [
+        {
+          "type": "texte",
+          "texte": "Relève d'abord les liaisons sur la figure 1 : Liaison1 = R1–R2, Liaison2 = R2–R5, Liaison3 = R2–R3, Liaison4 = R1–R3, Liaison5 = R3–R4, Liaison6 = R4–R5. SiteA est relié à R1, SiteB à R2, SiteC à R5, SiteD à R4."
+        },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Justifier que le réseau reste fonctionnel si une liaison est coupée.",
+          "blocs": [
+            { "type": "texte", "texte": "Le réseau contient deux boucles : R1–R2–R3 (Liaisons 1, 3, 4) et R2–R3–R4–R5 (Liaisons 3, 5, 6, 2). **Chaque liaison appartient à au moins une boucle.** Si on coupe une liaison, on peut toujours relier ses deux extrémités en faisant le tour de la boucle par l'autre côté. Par exemple, sans Liaison6 (R4–R5), on passe par R4 → R3 → R2 → R5." },
+            { "type": "reponse", "texte": "Il existe au moins deux chemins disjoints entre deux routeurs voisins : la coupure d'une seule liaison laisse tous les routeurs, donc tous les sites, reliés entre eux (les tables de routage devront simplement être mises à jour)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Chemin suivi de SiteB à SiteC avec les tables de la figure 2.",
+          "blocs": [
+            { "type": "texte", "texte": "On suit les tables pas à pas, en lisant à chaque fois la ligne « SiteC » : R2 dit R3, R3 dit R4, R4 dit R5, et R5 dit Local." },
+            { "type": "reponse", "texte": "SiteB → R2 → R3 → R4 → R5 → SiteC." },
+            { "type": "astuce", "texte": "Un routeur ne connaît que le **prochain saut**. Pour trouver un chemin, pars du routeur de départ et relis la table de chaque routeur rencontré : ne raisonne pas sur le dessin, les tables peuvent imposer un détour." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Compléter la table RIP du routeur R1.",
+          "blocs": [
+            { "type": "texte", "texte": "On compte le nombre de routeurs traversés après R1 (convention de la ligne SiteA : Local, 0). Vers SiteB : R2 directement, 1 saut. Vers SiteC : R1 → R2 → R5 (2 sauts) bat R1 → R3 → R4 → R5 (3 sauts). Vers SiteD : R1 → R3 → R4 (2 sauts) bat R1 → R2 → R5 → R4 (3 sauts)." },
+            {
+              "type": "tableau",
+              "entetes": ["Destination", "Suivant", "Nombre de sauts"],
+              "lignes": [
+                ["SiteA", "Local", "0"],
+                ["SiteB", "R2", "1"],
+                ["SiteC", "R2", "2"],
+                ["SiteD", "R3", "2"]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Pourquoi RIP n'est pas judicieux si Liaison2 a un débit très faible.",
+          "blocs": [
+            { "type": "texte", "texte": "RIP ne regarde que le nombre de sauts, jamais le débit. D'après la question 3, les paquets de SiteA vers SiteC passent par R1 → R2 → R5, donc **par Liaison2**, la liaison la plus lente, alors que le détour R1 → R3 → R4 → R5 n'ajoute qu'un saut et emprunte des liaisons rapides." },
+            { "type": "reponse", "texte": "RIP choisit le chemin le plus court en sauts, qui emprunte ici la liaison lente Liaison2 : le trafic est ralenti alors qu'un chemin plus rapide existe." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.a",
+          "intitule": "Liaison dont le débit est le plus faible.",
+          "blocs": [
+            { "type": "formule", "tex": "\\text{coût} = \\frac{10^{10}}{D} \\iff D = \\frac{10^{10}}{\\text{coût}}" },
+            { "type": "texte", "texte": "Le débit est inversement proportionnel au coût : le débit le plus faible correspond au coût le plus élevé, 1 000 000, soit $D = 10^{10} / 10^6 = 10^4$ bit/s." },
+            { "type": "reponse", "texte": "Liaison2 (coût 1 000 000, débit 10 kbit/s)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.b",
+          "intitule": "Les quatre chemins de SiteA à SiteC sans repasser par un routeur, et leur coût.",
+          "blocs": [
+            { "type": "texte", "texte": "On part de R1 et on énumère méthodiquement : d'abord par R2, puis par R3. Les liaisons site–routeur coûtent 0." },
+            {
+              "type": "tableau",
+              "entetes": ["Chemin", "Liaisons", "Coût"],
+              "lignes": [
+                ["SiteA → R1 → R2 → R5 → SiteC", "L1 + L2", "100 000 + 1 000 000 = 1 100 000"],
+                ["SiteA → R1 → R2 → R3 → R4 → R5 → SiteC", "L1 + L3 + L5 + L6", "100 000 + 5 + 5 + 10 = 100 020"],
+                ["SiteA → R1 → R3 → R2 → R5 → SiteC", "L4 + L3 + L2", "50 000 + 5 + 1 000 000 = 1 050 005"],
+                ["SiteA → R1 → R3 → R4 → R5 → SiteC", "L4 + L5 + L6", "50 000 + 5 + 10 = 50 015"]
+              ]
+            },
+            { "type": "reponse", "texte": "Le chemin de coût minimal est SiteA → R1 → R3 → R4 → R5 → SiteC, de coût 50 015." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5.c",
+          "intitule": "Compléter la table OSPF du routeur R1.",
+          "blocs": [
+            { "type": "texte", "texte": "Vers SiteB : direct par Liaison1 coûte 100 000, alors que R1 → R3 → R2 coûte 50 000 + 5 = 50 005. Vers SiteC : 50 015 (question 5.b). Vers SiteD : R1 → R3 → R4 coûte 50 000 + 5 = 50 005 (l'autre option passe par Liaison1 ou Liaison2 et coûte bien plus)." },
+            {
+              "type": "tableau",
+              "entetes": ["Destination", "Suivant", "Coût total du chemin"],
+              "lignes": [
+                ["SiteA", "Local", "0"],
+                ["SiteB", "R3", "50 005"],
+                ["SiteC", "R3", "50 015"],
+                ["SiteD", "R3", "50 005"]
+              ]
+            },
+            { "type": "piege", "texte": "Pour SiteB, le voisin direct R2 n'est **pas** le meilleur choix : Liaison1 coûte 100 000, le détour par R3 revient deux fois moins cher. En OSPF, le plus court en sauts n'est pas forcément le moins coûteux." },
+            { "type": "attendu", "texte": "Le routeur suivant et le coût total pour chaque ligne, avec le calcul qui le justifie." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Programmation orientée objet et algorithmique : colorier la carte des régions d'un pays sans que deux régions voisines aient la même couleur.",
+      "points": 6,
+      "minutes": 120,
+      "enBref": [
+        "`nom`, `tab_voisines`, `tab_couleurs_disponibles` et `couleur_attribuee` sont des attributs ; `nom_region` est une chaîne ; on crée la région par `ge = Region('Grand Est')`.",
+        "Les méthodes de Region tiennent en une ou quelques lignes : `self.tab_couleurs_disponibles[0]`, `len(self.tab_voisines)`, `self.couleur_attribuee is not None`, un `remove` protégé par un `in`, une boucle de recherche.",
+        "`renvoie_max` renvoie None quand toutes les régions sont coloriées ; sinon une région non coloriée ayant le plus de voisines (la première rencontrée en cas d'égalité).",
+        "`colorie` est un algorithme glouton : tant qu'il reste une région, on lui donne sa première couleur libre et on retire cette couleur à ses voisines."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie 1 : la classe Region" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Nature de nom, tab_voisines, tab_couleurs_disponibles et couleur_attribuee.",
+          "blocs": [
+            { "type": "texte", "texte": "Ils sont définis dans `__init__` sous la forme `self.xxx = ...` : ce sont des variables propres à chaque objet." },
+            { "type": "reponse", "texte": "Ce sont quatre **attributs** de la classe Region." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Type du paramètre nom_region.",
+          "blocs": [
+            { "type": "texte", "texte": "La documentation de `__init__` l'indique : `: param nom_region (str)`." },
+            { "type": "reponse", "texte": "Une chaîne de caractères (`str`)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Créer l'instance ge pour la région « Grand Est ».",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "ge = Region('Grand Est')" },
+            { "type": "texte", "texte": "On ne passe pas `self` : Python le fournit tout seul, c'est l'objet en cours de création." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Ligne 6 de renvoie_premiere_couleur_disponible.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def renvoie_premiere_couleur_disponible(self):\n    return self.tab_couleurs_disponibles[0]" },
+            { "type": "texte", "texte": "Le tableau est supposé non vide, l'indice 0 existe donc toujours." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Ligne 6 de renvoie_nb_voisines.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def renvoie_nb_voisines(self):\n    return len(self.tab_voisines)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Méthode est_coloriee.",
+          "blocs": [
+            { "type": "texte", "texte": "Au départ `couleur_attribuee` vaut `None` ; la région est coloriée dès que cet attribut a reçu une couleur." },
+            { "type": "code", "langage": "python", "code": "def est_coloriee(self):\n    return self.couleur_attribuee is not None" },
+            { "type": "astuce", "texte": "Renvoie directement la comparaison : `return condition` vaut mieux que `if condition: return True else: return False`, c'est plus court et aussi juste. Pour tester `None`, on écrit `is not None` (ou `!= None`, accepté au bac)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Méthode retire_couleur.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def retire_couleur(self, couleur):\n    if couleur in self.tab_couleurs_disponibles:\n        self.tab_couleurs_disponibles.remove(couleur)" },
+            { "type": "piege", "texte": "Sans le test `if couleur in ...`, `remove` lève une erreur quand la couleur a déjà été retirée (le sujet le rappelle). Or c'est un cas courant : deux régions coloriées en rouge peuvent avoir une voisine commune." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Méthode est_voisine, avec une boucle.",
+          "blocs": [
+            { "type": "texte", "texte": "On parcourt les voisines ; dès qu'on trouve la région cherchée, on renvoie `True`. Si la boucle se termine sans l'avoir trouvée, on renvoie `False`." },
+            { "type": "code", "langage": "python", "code": "def est_voisine(self, region):\n    for voisine in self.tab_voisines:\n        if voisine == region:\n            return True\n    return False" },
+            { "type": "piege", "texte": "Le `return False` doit être **après** la boucle, pas dans un `else` à l'intérieur : sinon la méthode répond dès la première voisine examinée." },
+            { "type": "texte", "texte": "La recherche est séquentielle : dans le pire cas, elle examine toutes les voisines, coût linéaire en leur nombre." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie 2 : la classe Pays" },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Méthode renvoie_tab_regions_non_coloriees.",
+          "blocs": [
+            { "type": "code", "langage": "python", "code": "def renvoie_tab_regions_non_coloriees(self):\n    non_coloriees = []\n    for region in self.tab_regions:\n        if not region.est_coloriee():\n            non_coloriees.append(region)\n    return non_coloriees" },
+            { "type": "texte", "texte": "Version équivalente en compréhension de liste : `return [region for region in self.tab_regions if not region.est_coloriee()]`." },
+            { "type": "astuce", "texte": "On réutilise la méthode `est_coloriee` de la partie 1 plutôt que de retester `couleur_attribuee` : si la représentation de la couleur change un jour, un seul endroit du code est à modifier." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10.a",
+          "intitule": "Dans quel cas renvoie_max renvoie None ?",
+          "blocs": [
+            { "type": "texte", "texte": "`region_max` n'est modifiée que dans la boucle. Si le tableau des régions non coloriées est vide, la boucle ne s'exécute pas et on renvoie la valeur initiale `None`. Dès qu'il y a une région non coloriée, son nombre de voisines (au moins 0) dépasse −1 et elle est retenue." },
+            { "type": "reponse", "texte": "Quand toutes les régions du pays sont déjà coloriées (ou que le pays n'a aucune région)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10.b",
+          "intitule": "Les deux particularités de la région renvoyée.",
+          "blocs": [
+            { "type": "reponse", "texte": "C'est une région **non coloriée**, et c'est, parmi les régions non coloriées, **celle qui a le plus de voisines** (la première rencontrée dans `tab_regions` en cas d'égalité, car la comparaison est stricte)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Méthode colorie de la classe Pays.",
+          "blocs": [
+            { "type": "texte", "texte": "On traduit l'algorithme ligne à ligne. « Tant que cette région existe » signifie : tant que `renvoie_max` ne renvoie pas `None`." },
+            { "type": "code", "langage": "python", "code": "def colorie(self):\n    region = self.renvoie_max()\n    while region is not None:\n        couleur = region.renvoie_premiere_couleur_disponible()\n        region.couleur_attribuee = couleur\n        for voisine in region.tab_voisines:\n            voisine.retire_couleur(couleur)\n        region = self.renvoie_max()" },
+            { "type": "texte", "texte": "`retire_couleur` fait déjà le test « si la couleur est présente », il est inutile de le répéter. La boucle termine : à chaque tour, une région de plus est coloriée, et `renvoie_max` finit par renvoyer `None`." },
+            { "type": "texte", "texte": "C'est un **algorithme glouton** : il fait à chaque étape le choix qui semble le meilleur (la région la plus contrainte, la première couleur libre) sans revenir en arrière. Il donne toujours une coloration correcte tant qu'il reste des couleurs, mais pas forcément avec le nombre minimal de couleurs." },
+            { "type": "piege", "texte": "Oublier de rappeler `self.renvoie_max()` à la fin du corps de boucle : `region` ne change plus et la boucle ne termine jamais." },
+            { "type": "attendu", "texte": "L'initialisation avant la boucle, la condition sur `None`, l'affectation de `couleur_attribuee`, la boucle sur les voisines et la mise à jour de la région en fin de tour." }
+          ]
+        }
+      ]
+    }
+  ]
+}

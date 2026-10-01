@@ -6,6 +6,7 @@ import { Check, GraduationCap, Pencil, School, Settings } from 'lucide-react'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import CompteurVerre, { type CompteurCarte } from '@/components/moi/CompteurVerre'
 import ProfileEditor from '@/components/defi/ProfileEditor'
+import ProfileBannerArt from '@/components/defi/ProfileBannerArt'
 import AtelierAvatarIa from '@/components/moi/AtelierAvatarIa'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import BadgeGallery from '@/components/defi/BadgeGallery'
@@ -13,6 +14,7 @@ import type { BadgeRank } from '@/components/defi/RankBadge'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { setEquippedBadges } from '@/app/defi/profile-actions'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
+import BadgeIcone from '@/components/BadgeIcone'
 import { avatarEstDessine, avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
@@ -99,9 +101,9 @@ function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
           key={b.id}
           title={b.title}
           aria-label={b.title}
-          className="flex size-[26px] items-center justify-center rounded-lg bg-white/14 text-[13px] ring-1 ring-white/18"
+          className="flex size-[26px] items-center justify-center rounded-lg bg-secondary text-[13px]"
         >
-          <span aria-hidden="true">{b.icon}</span>
+          <BadgeIcone slug={b.slug} icon={b.icon} tailleImage="size-5" />
         </li>
       ))}
     </ul>
@@ -130,7 +132,7 @@ function MonnaieVerre({
         sfx.tap()
       }}
       aria-label={`${valeur.toLocaleString('fr-FR')} ${legende} — ouvrir le Trésor`}
-      className="flex h-9 items-center gap-1.5 rounded-full border border-white/16 bg-white/12 pr-3 pl-1.5 backdrop-blur-[4px] transition active:scale-95"
+      className="flex h-9 items-center gap-1.5 rounded-full bg-white/90 pr-3 pl-1.5 text-foreground shadow-sm transition active:scale-95"
     >
       {icone}
       <span className="font-heading text-[15px] leading-none font-extrabold tabular-nums">
@@ -149,7 +151,7 @@ export default function CarteProfil({
   suite = null,
   soudee = false,
   abonne = false,
-  boutonGauche = null,
+  tuileTravail = null,
 }: {
   data: CarteProfilData
   /** Le titre d'assiduité (« Assidu »), sans numéro. */
@@ -169,8 +171,8 @@ export default function CarteProfil({
   suite?: ReactNode
   /** Studuel+ : Marcel dessine l'avatar (sinon, l'atelier montre ce qu'il ouvrirait). */
   abonne?: boolean
-  /** À gauche de la rangée du haut, en face des gemmes : le bouton du rythme. */
-  boutonGauche?: ReactNode
+  /** La pastille « travail », cliente : elle ouvre le rythme des huit semaines. */
+  tuileTravail?: ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [banner, setBanner] = useState(data.profileBanner)
@@ -221,7 +223,7 @@ export default function CarteProfil({
           bannière qui file jusqu'au bord de l'écran. */}
       <div
         className={cn(
-          'moi-carte relative overflow-hidden text-white',
+          'moi-carte relative overflow-hidden text-foreground',
           // Le rayon de LA carte (token) : le dégradé documenté reste le sien.
           soudee ? 'rounded-t-carte' : 'rounded-carte',
         )}
@@ -230,11 +232,24 @@ export default function CarteProfil({
         {/* Le reflet holographique. `key` relance l'animation à chaque toucher. */}
         {reflet > 0 ? <span key={reflet} className="moi-foil" aria-hidden="true" /> : null}
 
-        <div className="relative px-4 pt-3 pb-4">
-          {/* --- La rangée de ressources : le rythme à gauche, les monnaies à
-              droite, l'engrenage au bout. */}
-          <div className="flex items-center gap-1.5">
-            {boutonGauche}
+        {/* --- LA BANNIÈRE (25/09/2026, Lucas : « le visuel ici n'est pas au
+            niveau », « des illustrations en fond »). Celle que l'élève choisit
+            au crayon (lib/profile-banners) — elle ne s'affichait que sur la
+            fiche de l'arène. Elle coiffe la carte comme la couverture d'un
+            profil de jeu : le haut illustré, le reste blanc, l'avatar à
+            cheval sur la couture. Tant que son visuel n'est pas livré, son
+            dégradé la remplace. */}
+        <div className="relative h-[92px] overflow-hidden">
+          <ProfileBannerArt banner={banner} />
+          <span
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/20 to-transparent"
+          />
+          {/* --- La rangée de ressources, POSÉE SUR LA BANNIÈRE : les monnaies à
+              droite, l'engrenage au bout (le rythme est la pastille
+              « travail », plus bas). Pastilles blanches : sur une image, le
+              lavande disparaissait. */}
+          <div className="absolute inset-x-4 top-3 flex items-center gap-1.5">
             <span className="flex-1" />
             {monnaies ? (
               <MonnaieVerre
@@ -249,15 +264,18 @@ export default function CarteProfil({
                 e.stopPropagation()
                 sfx.tap()
               }}
-              className="flex size-9 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
+              className="flex size-9 items-center justify-center rounded-full bg-white/90 text-primary shadow-sm transition active:scale-90"
             >
               <Settings className="size-[18px]" strokeWidth={2.4} aria-hidden="true" />
               <span className="sr-only">Réglages du compte</span>
             </Link>
           </div>
+        </div>
 
-          {/* --- L'identité, sous la rangée : l'avatar en grand ------------- */}
-          <div className="mt-1 flex items-center gap-4">
+        <div className="relative px-4 pb-4">
+          {/* --- L'identité : l'avatar en grand, à cheval sur la couture ;
+              le nom commence sous la bannière. */}
+          <div className="-mt-11 flex items-start gap-4">
             <button
               type="button"
               onClick={(e) => {
@@ -277,7 +295,7 @@ export default function CarteProfil({
                 <AvatarRender
                   config={data.avatar}
                   forme="blason"
-                  className="w-full drop-shadow-[0_10px_16px_rgba(0,0,0,.45)]"
+                  className="w-full drop-shadow-[0_6px_10px_rgba(40,20,80,.28)]"
                 />
               ) : (
                 <>
@@ -297,7 +315,7 @@ export default function CarteProfil({
               </span>
             </button>
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 pt-12">
               <div className="flex items-start gap-2">
                 <h1 className="font-heading min-w-0 flex-1 truncate text-[22px] leading-[1.1] font-extrabold tracking-[0.2px]">
                   {data.displayName}
@@ -313,7 +331,7 @@ export default function CarteProfil({
                   }}
                   aria-expanded={editing}
                   aria-controls="moi-profil-edition"
-                  className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
+                  className="flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary text-primary transition active:scale-90"
                 >
                   {editing ? (
                     <Check className="size-4" strokeWidth={2.8} aria-hidden="true" />
@@ -325,7 +343,7 @@ export default function CarteProfil({
                   </span>
                 </button>
               </div>
-              <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-bold text-white/85">
+              <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-bold text-muted-foreground">
                 {data.gradeLabel ? (
                   <span className="flex items-center gap-1">
                     <GraduationCap className="size-3.5" aria-hidden="true" />
@@ -340,7 +358,7 @@ export default function CarteProfil({
                 ) : null}
               </p>
               <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/14 px-2.5 py-[3px] text-[10.5px] font-extrabold tracking-[0.06em] uppercase">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-2.5 py-[3px] text-[10.5px] font-extrabold tracking-[0.06em] text-primary uppercase">
                   {workTitle}
                   <span aria-hidden="true" className="opacity-60">
                     ·
@@ -359,9 +377,15 @@ export default function CarteProfil({
 
           {/* --- Les pastilles en verre, sur une rangée ---------------------- */}
           <div className="mt-4 grid grid-cols-4 gap-2">
-            {compteurs.map((c) => (
-              <CompteurVerre key={c.legende} {...c} />
-            ))}
+            {compteurs.map((c) =>
+              c.legende === 'travail' && tuileTravail ? (
+                <div key={c.legende} className="flex min-w-0">
+                  {tuileTravail}
+                </div>
+              ) : (
+                <CompteurVerre key={c.legende} {...c} />
+              ),
+            )}
             {tuileNotes ? (
               <div className="min-w-0" onClick={(e) => e.stopPropagation()}>
                 {tuileNotes}
@@ -375,7 +399,7 @@ export default function CarteProfil({
           <div
             id="moi-profil-edition"
             onClick={(e) => e.stopPropagation()}
-            className="relative border-t border-white/15 px-4 py-4"
+            className="carte-sombre relative mx-3 mb-3 p-4 text-white"
           >
             <ProfileEditor
               gamertag={data.gamertag}

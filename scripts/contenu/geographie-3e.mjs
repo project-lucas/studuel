@@ -569,7 +569,7 @@ S'y ajoutent un **chômage** deux à trois fois supérieur à celui de l'Hexagon
 | **1951** | La **CECA** | Le charbon et l'acier de six pays en commun |
 | **1957** | Le **traité de Rome** | La **CEE** : un marché commun à six |
 | **1992** | **Maastricht** | L'**Union européenne** et la **citoyenneté européenne** |
-| **2002** | L'**euro** en circulation | Aujourd'hui la monnaie de 20 États |
+| **2002** | L'**euro** en circulation | Aujourd'hui la monnaie de 21 États |
 | **2004** | Le grand élargissement à l'Est | Dix pays d'un coup |
 | **2020** | Le **Brexit** | De 28 à **27** membres |
 
@@ -598,7 +598,7 @@ S'y ajoutent un **chômage** deux à trois fois supérieur à celui de l'Hexagon
             ['Combien d’États membres compte l’Union européenne depuis 2020 ?', ['27', '25', '28', '30'], 0, 'Le Brexit a fait sortir le Royaume-Uni en 2020.'],
             ['Quel traité de 1957 crée le marché commun ?', ['Le traité de Rome', 'Le traité de Maastricht', 'Le traité de Lisbonne', 'Le traité de Versailles'], 0, 'Il donne naissance à la CEE, à six États.'],
             ['Que crée le traité de Maastricht en 1992 ?', ['L’Union européenne et la citoyenneté européenne', 'La CECA', 'L’espace Schengen', 'L’OTAN'], 0, 'Il pose aussi les bases de la monnaie unique.'],
-            ['En quelle année l’euro entre-t-il en circulation ?', ['2002', '1992', '1999', '2010'], 0, 'Il est aujourd’hui la monnaie de 20 des 27 États membres.'],
+            ['En quelle année l’euro entre-t-il en circulation ?', ['2002', '1992', '1999', '2010'], 0, 'Il est aujourd’hui la monnaie de 21 des 27 États membres.'],
             ['Qu’est-ce que l’espace Schengen ?', ['Un espace où l’on franchit les frontières intérieures sans contrôle', 'La zone qui utilise l’euro', 'Le siège du Parlement européen', 'La zone de libre-échange avec les États-Unis'], 0, 'Il ne se confond ni avec l’UE ni avec la zone euro.'],
             ['Quelle institution européenne est élue au suffrage universel direct ?', ['Le Parlement européen', 'La Commission européenne', 'Le Conseil européen', 'La Cour de justice'], 0, 'Les citoyens le renouvellent tous les cinq ans ; il siège à Strasbourg.'],
             ['Quel programme permet aux étudiants d’étudier dans un autre pays de l’Union ?', ['Erasmus', 'Schengen', 'Interreg', 'Horizon'], 0, 'C’est l’une des expériences les plus concrètes de la citoyenneté européenne.'],

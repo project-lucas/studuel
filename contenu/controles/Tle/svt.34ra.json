@@ -1,0 +1,483 @@
+{
+  "niveau": "Tle",
+  "matiere": "svt",
+  "sujets": [
+    {
+      "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+      "difficulte": 1,
+      "titre": "Copier l'ADN avant de diviser",
+      "consigne": "Réponds à chaque question en quelques phrases précises, avec le vocabulaire du cours.",
+      "enonce": "1. Nomme dans l'ordre les **quatre phases** du cycle cellulaire. Pour chacune, indique ce qui s'y passe et l'état des chromosomes (une ou deux chromatides).\n2. Explique pourquoi on dit que la réplication de l'ADN est **semi-conservative**. Quelle expérience l'a montré, et en quelle année ?\n3. Explique pourquoi deux cellules issues d'une mitose forment un **clone**.",
+      "bareme": [
+        { "critere": "Les quatre phases dans l'ordre (G1, S, G2, mitose) avec leur contenu et l'état des chromosomes", "points": 8 },
+        { "critere": "Réplication semi-conservative expliquée (brin matrice, complémentarité A-T / G-C, un brin ancien + un brin neuf) et Meselson et Stahl 1958", "points": 7 },
+        { "critere": "Notion de clone : cellules filles identiques entre elles et à la cellule mère", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **G1** : la cellule grandit, chaque chromosome a **une chromatide**. **S** : l'ADN est **répliqué**, chaque chromosome a désormais **deux chromatides sœurs identiques**. **G2** : contrôles avant la division, toujours deux chromatides. **Mitose** : les chromatides sœurs se séparent, chaque cellule fille reçoit **une chromatide** par chromosome.\n2. Chaque brin de la molécule d'ADN sert de **matrice** : l'ADN polymérase place en face de chaque nucléotide son complémentaire (A en face de T, G en face de C). Chaque molécule fille contient donc **un brin ancien et un brin neuf** : la moitié de la molécule mère est conservée. C'est l'expérience de **Meselson et Stahl (1958)** qui l'a montré.\n3. Grâce à la réplication, chaque chromatide sœur porte la même information ; la mitose en donne une à chaque cellule fille. Les deux cellules filles sont donc **génétiquement identiques** entre elles et à la cellule mère : elles forment un **clone**."
+    },
+    {
+      "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+      "difficulte": 2,
+      "titre": "La colonie de pucerons du rosier",
+      "consigne": "Lis la situation, puis réponds aux questions en t'appuyant sur les notions du cours.",
+      "enonce": "**Situation.** Au printemps, Chloé observe sur un rosier une seule femelle de puceron. Trois semaines plus tard, la tige est couverte de plusieurs centaines de pucerons. Tous sont nés par **parthénogenèse** : chaque femelle produit des descendantes sans fécondation.\n\n1. Quel mode de reproduction est illustré ici ? Que peut-on dire du génome des pucerons de la colonie par rapport à celui de la femelle fondatrice ? Justifie.\n2. Quel **avantage** ce mode de reproduction apporte-t-il au puceron dans ce rosier au printemps ?\n3. En été, le jardinier utilise pour la première fois un insecticide auquel la fondatrice n'était pas résistante. Explique le **risque** que court alors la colonie, en lien avec le coût de ce mode de reproduction.\n4. On trouve quand même, très rarement, un puceron un peu différent des autres dans la colonie. Propose une explication à partir de la fidélité de la copie de l'ADN.",
+      "bareme": [
+        { "critere": "Reproduction asexuée identifiée, descendants génétiquement identiques à la fondatrice (clone)", "points": 6 },
+        { "critere": "Avantage : coloniser vite un milieu favorable", "points": 4 },
+        { "critere": "Coût : aucune diversité nouvelle, population fragile face au changement (insecticide)", "points": 6 },
+        { "critere": "Explication par une erreur de copie non réparée (mutation), fidélité jamais parfaite", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. C'est une **reproduction asexuée** (la parthénogenèse du puceron est l'exemple du cours). Les descendantes sont en principe **génétiquement identiques** à la fondatrice : la colonie est un **clone**, puisqu'aucun brassage n'intervient.\n2. Avantage : **coloniser très vite un milieu favorable** : le rosier au printemps offre de la nourriture en abondance, et chaque femelle produit elle-même des descendantes sans avoir à trouver de partenaire.\n3. La reproduction asexuée ne crée **aucune diversité nouvelle** : si la fondatrice n'était pas résistante à l'insecticide, ses descendantes identiques ne le sont pas non plus. Toute la colonie risque d'être détruite d'un coup : la population est **fragile face à un changement** du milieu.\n4. La réplication de l'ADN a une fidélité **très haute mais jamais parfaite** : après relecture et réparation, il reste environ **une erreur sur 10⁹ nucléotides**. Une erreur qui échappe devient une **mutation**, transmise ensuite à toutes les descendantes de ce puceron : cela explique qu'un individu (et sa lignée) puisse différer légèrement des autres."
+    },
+    {
+      "chapitre": "59fdf13c-cb8f-5245-89c3-2d6aaa596ce1",
+      "difficulte": 3,
+      "titre": "Du taux d'erreur à l'évolution clonale",
+      "consigne": "Exploite les documents et tes connaissances pour répondre. Détaille tes calculs et justifie chaque affirmation.",
+      "enonce": "**Document 1 – La taille du génome.** Une cellule humaine contient environ **6 × 10⁹ nucléotides** à répliquer avant chaque mitose.\n\n**Document 2 – Fidélité de la copie.**\n\n| Étape | Taux d'erreur |\n|---|---|\n| ADN polymérase seule | environ 1 sur 10⁵ |\n| Après relecture et réparation | environ 1 sur 10⁹ |\n\n**Document 3 – Le cas de Paul.** Chez Paul, 50 ans, une cellule de l'épiderme acquiert une mutation dans un gène qui contrôle le cycle cellulaire. Des années plus tard, une tumeur de la peau est diagnostiquée : toutes ses cellules portent cette mutation.\n\n1. Calcule le nombre d'erreurs attendues par réplication complète du génome **sans** puis **avec** relecture et réparation. Conclus sur le rôle de ces systèmes.\n2. Explique, à partir du document 3, comment la tumeur s'est formée. Utilise les notions de clone et d'évolution clonale.\n3. Les enfants de Paul, nés avant sa maladie, peuvent-ils avoir hérité de cette mutation ? Justifie.\n4. Explique pourquoi on dit que les cellules d'un organisme portent « **en principe** » le même génome.",
+      "bareme": [
+        { "critere": "Calculs justes : 6 × 10⁴ erreurs sans réparation, environ 6 avec", "points": 6 },
+        { "critere": "Conclusion : relecture et réparation divisent les erreurs par 10⁴ sans les supprimer", "points": 2 },
+        { "critere": "Formation de la tumeur : mutation transmise aux cellules filles, clone muté qui prolifère car le contrôle du cycle est touché", "points": 6 },
+        { "critere": "Mutation somatique non transmise à la descendance de Paul", "points": 3 },
+        { "critere": "Synthèse : mitose clonale mais mutations inévitables, donc génomes légèrement différents", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Sans relecture ni réparation : 6 × 10⁹ / 10⁵ = **6 × 10⁴, soit 60 000 erreurs** par réplication. Avec : 6 × 10⁹ / 10⁹ = **environ 6 erreurs**. Relecture et réparation divisent donc le nombre d'erreurs par 10⁴ (10 000), mais **n'atteignent jamais zéro** : la fidélité est très haute, jamais parfaite. Les erreurs qui échappent deviennent des **mutations**.\n2. La mutation est apparue dans **une** cellule de l'épiderme. Par mitose, elle est transmise à **toutes les cellules filles** de cette cellule : il se forme un **clone de cellules mutées**, qui coexiste d'abord avec le reste de l'organisme. Comme la mutation touche le **contrôle du cycle cellulaire**, ce clone se divise plus que les cellules voisines et **prolifère** : c'est la **cancérisation**. La tumeur est une **évolution clonale** à l'intérieur du corps de Paul, d'où le fait que toutes ses cellules portent la mutation.\n3. **Non.** La mutation est **somatique** (cellule de la peau) : elle est transmise aux cellules filles de cette cellule, mais **pas à la descendance** de l'individu. De plus, elle est apparue chez un homme de 50 ans, après la naissance de ses enfants.\n4. Toutes les cellules descendent de la cellule-œuf par mitose, ce qui produit des clones. Mais chaque réplication laisse passer quelques erreurs (environ 6 par génome selon le calcul) : au fil des divisions, des mutations somatiques s'accumulent dans certaines lignées. Les cellules sont donc presque, mais pas rigoureusement, identiques."
+    },
+    {
+      "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+      "difficulte": 1,
+      "titre": "Méiose et fécondation : l'essentiel",
+      "consigne": "Réponds à chaque question en quelques phrases, avec le vocabulaire précis du cours.",
+      "enonce": "1. Décris le cycle de développement de l'espèce humaine : comment passe-t-on de 46 à 23 chromosomes, puis de nouveau à 46 ? Utilise les notations 2n et n.\n2. La méiose comprend **deux divisions**. Pour chacune, précise son nom, ce qui se sépare et le résultat.\n3. Présente les **trois brassages** du cycle sexué : à quel moment chacun intervient-il et combien de combinaisons produit-il chez l'humain ?",
+      "bareme": [
+        { "critere": "Cycle : méiose 2n → n (46 → 23), fécondation n + n → 2n (23 + 23 = 46)", "points": 5 },
+        { "critere": "Division I réductionnelle (homologues) et division II équationnelle (chromatides sœurs)", "points": 7 },
+        { "critere": "Les trois brassages avec leur moment et leurs ordres de grandeur (2²³, innombrables, 2⁴⁶)", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La **méiose** transforme une cellule **diploïde (2n = 46)** en **quatre gamètes haploïdes (n = 23)**. La **fécondation** réunit deux gamètes : n + n = 2n, soit 23 + 23 = **46** chromosomes dans la cellule-œuf.\n2. **Division I, réductionnelle** : ce sont les **chromosomes homologues** qui se séparent ; on passe de 2n à n. **Division II, équationnelle** : ce sont les **chromatides sœurs** qui se séparent, comme dans une mitose.\n3. **Brassage interchromosomique** : en **anaphase I**, chaque paire d'homologues se répartit indépendamment des autres : **2²³**, soit plus de 8 millions de gamètes différents. **Brassage intrachromosomique** : en **prophase I**, les **crossing-over** échangent des portions entre chromatides homologues : combinaisons **innombrables**. **Fécondation** : la rencontre **au hasard** de deux gamètes donne plus de **2⁴⁶** combinaisons par couple."
+    },
+    {
+      "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+      "difficulte": 2,
+      "titre": "Un croisement-test chez la drosophile",
+      "consigne": "Exploite les résultats du croisement, en détaillant tes calculs et ton raisonnement.",
+      "enonce": "**Situation.** On étudie chez la drosophile deux gènes : la couleur du corps (gris ou noir) et la forme des ailes (longues ou vestigiales). Une femelle **hétérozygote pour les deux gènes**, issue d'un parent gris à ailes longues et d'un parent noir à ailes vestigiales, est croisée avec un mâle **homozygote récessif pour les deux gènes** (noir à ailes vestigiales) : c'est un **croisement-test**. Le mâle ne transmet que des allèles récessifs : le phénotype de chaque descendant reflète directement le gamète fourni par la femelle.\n\n**Résultats (1 000 descendants)**\n\n| Phénotype | Effectif |\n|---|---|\n| Gris, ailes longues | 415 |\n| Noir, ailes vestigiales | 405 |\n| Gris, ailes vestigiales | 92 |\n| Noir, ailes longues | 88 |\n\n1. Calcule le pourcentage de chaque phénotype. Identifie les phénotypes **parentaux** et **recombinés**.\n2. Les deux gènes sont-ils indépendants ou liés ? Justifie en comparant avec ce qu'on obtiendrait dans l'autre cas.\n3. Explique l'origine des phénotypes recombinés : quel mécanisme, à quel moment de la méiose ?",
+      "bareme": [
+        { "critere": "Pourcentages justes (41,5 %, 40,5 %, 9,2 %, 8,8 %) et distinction parentaux / recombinés", "points": 6 },
+        { "critere": "Gènes liés, justifiés par 82 % de parentaux majoritaires et 18 % de recombinés minoritaires, au lieu de 4 × 25 %", "points": 8 },
+        { "critere": "Recombinés expliqués par des crossing-over en prophase I (brassage intrachromosomique)", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Gris-longues : 415 / 1 000 = **41,5 %** ; noir-vestigiales : **40,5 %** ; gris-vestigiales : **9,2 %** ; noir-longues : **8,8 %**. Les phénotypes **parentaux** (ceux des grands-parents) sont gris-longues et noir-vestigiales : 41,5 + 40,5 = **82 %**. Les phénotypes **recombinés** sont gris-vestigiales et noir-longues : 9,2 + 8,8 = **18 %**.\n2. Si les gènes étaient **indépendants**, le croisement-test donnerait **quatre phénotypes en proportions égales**, 25 % chacun (environ 250 individus par classe). Ici, on obtient **deux phénotypes parentaux majoritaires** et **deux recombinés minoritaires** : les deux gènes sont **liés**, c'est-à-dire situés sur le même chromosome.\n3. Les recombinés sont la **signature du crossing-over** : pendant la **prophase de la première division de méiose**, chez la femelle, des chromatides homologues échangent des portions ; certains gamètes portent alors une association d'allèles nouvelle (gris + vestigiales, noir + longues). C'est le **brassage intrachromosomique**. Ils sont rares (18 %) car un crossing-over ne se produit pas à chaque méiose entre ces deux gènes ; plus ils sont rares, plus les gènes sont proches."
+    },
+    {
+      "chapitre": "0e3dc8f8-ad81-592f-8039-c88b77388716",
+      "difficulte": 3,
+      "titre": "Brasser, déraper, innover",
+      "consigne": "Réponds en exploitant chaque document et en reliant les mécanismes de la méiose à leurs conséquences. Rédige des réponses argumentées.",
+      "enonce": "**Document 1 – La drosophile.** Chez la drosophile, 2n = 8 : ses cellules contiennent 4 paires de chromosomes.\n\n**Document 2 – Le caryotype de Léo.** Le caryotype de Léo compte **47 chromosomes**, dont **trois chromosomes 21**. Ses deux parents ont des caryotypes normaux.\n\n**Document 3 – La famille des globines.** Chez l'humain, plusieurs gènes de globines, très semblables mais non identiques, sont situés côte à côte sur un même chromosome. On pense qu'ils dérivent tous d'un gène ancestral unique.\n\n1. Calcule, chez la drosophile, le nombre de gamètes génétiquement différents produits par le seul brassage interchromosomique, puis le nombre de combinaisons de cellules-œufs obtenues par la fécondation d'un couple (sans tenir compte des crossing-over). Justifie.\n2. Explique comment le caryotype de Léo a pu se former. Précise le nombre de chromosomes des deux gamètes à l'origine de Léo.\n3. Explique comment une famille multigénique comme celle des globines a pu se former à partir d'un gène unique.\n4. Montre que ces « accidents » de la méiose peuvent être vus de deux façons selon l'échelle de temps.",
+      "bareme": [
+        { "critere": "Calculs justifiés : 2⁴ = 16 gamètes, 16 × 16 = 256 combinaisons", "points": 5 },
+        { "critere": "Trisomie 21 : non-disjonction en division I ou II, gamète à 24 chromosomes + gamète à 23", "points": 6 },
+        { "critere": "Famille multigénique : crossing-over inégal, duplication, mutations indépendantes des copies", "points": 6 },
+        { "critere": "Double lecture : erreur pour l'individu, source d'innovation pour l'évolution", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. En anaphase I, chaque paire d'homologues se répartit **indépendamment** des autres : pour chaque paire, 2 possibilités. Avec 4 paires : 2⁴ = **16 gamètes** différents (chez l'humain, le même raisonnement donne 2²³). La fécondation réunit **au hasard** un gamète parmi 16 de chaque parent : 16 × 16 = **256 combinaisons** par couple. Les crossing-over multiplient encore ce nombre.\n2. Léo est **trisomique 21**. Lors de la méiose chez l'un de ses parents, il y a eu une **non-disjonction** : soit la paire de chromosomes 21 ne s'est pas séparée en **division I**, soit les deux chromatides d'un chromosome 21 ne se sont pas séparées en **division II**. Un gamète a ainsi reçu deux chromosomes 21 : il contenait **24 chromosomes**. Fécondé par un gamète normal à **23 chromosomes**, il a donné une cellule-œuf à 47 chromosomes.\n3. Lors d'un **crossing-over inégal**, des chromatides homologues mal alignées échangent des portions de taille différente : l'une **gagne un segment** (et donc une deuxième copie du gène), l'autre le perd. Il y a **duplication génique**. Les copies dupliquées **mutent ensuite indépendamment** au fil des générations : elles deviennent semblables mais non identiques, et forment une **famille multigénique**, comme celle des globines.\n4. À l'échelle de **l'individu**, ce sont des **erreurs** (Léo porte une anomalie chromosomique). À l'échelle de **l'évolution**, ces accidents sont une **source d'innovation** : la duplication fournit de nouveaux gènes qui peuvent acquérir de nouvelles fonctions. C'est le même phénomène vu à deux échelles de temps."
+    },
+    {
+      "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+      "difficulte": 1,
+      "titre": "Quatre voies de diversification",
+      "consigne": "Réponds à chaque question en quelques phrases précises.",
+      "enonce": "1. Cite les **quatre voies** de diversification du vivant autres que la méiose et la fécondation. Pour chacune, indique si le génome est modifié et donne un exemple.\n2. Définis un **transfert horizontal de gènes** et cite deux façons dont il se produit chez les bactéries.\n3. Pourquoi le gène de la **syncytine** est-il un exemple célèbre de transfert horizontal chez les mammifères ?",
+      "bareme": [
+        { "critere": "Les quatre voies, génome modifié ou non, avec un exemple juste pour chacune", "points": 10 },
+        { "critere": "Définition du transfert horizontal et deux mécanismes (conjugaison, transformation, transduction)", "points": 5 },
+        { "critere": "Syncytine : gène d'origine virale, indispensable au placenta", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Transfert horizontal** : le génome change ; ex. la résistance aux antibiotiques chez les bactéries. **Hybridation et polyploïdisation** : le génome change ; ex. le blé tendre. **Symbiose** : le génome **ne change pas** ; ex. le lichen, les mycorhizes, le microbiote. **Transmission culturelle** : le génome **ne change pas** ; ex. la pêche aux termites des chimpanzés.\n2. Un transfert horizontal est le passage d'un gène d'un organisme à un autre **sans reproduction**. Chez les bactéries, il se fait par **conjugaison**, par **transformation** ou par **transduction** (par l'intermédiaire de virus). Deux de ces trois mécanismes sont attendus.\n3. Des **virus** ont inséré des séquences dans le génome des eucaryotes. Le gène de la syncytine, **indispensable à la formation du placenta** des mammifères, est **d'origine virale** : un gène acquis sans reproduction est devenu essentiel à toute une lignée."
+    },
+    {
+      "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+      "difficulte": 2,
+      "titre": "Le champ de lentilles d'Inès",
+      "consigne": "Lis la situation, puis réponds en t'appuyant sur les notions du cours.",
+      "enonce": "**Situation.** Inès, agricultrice, sème des lentilles (une légumineuse) sur une parcelle pauvre en azote, sans ajouter d'engrais azoté. En arrachant un pied en été, elle observe sur les racines de petites boules : des **nodosités**. À la lisière du champ, les racines des chênes sont entourées de filaments de champignon, et le muret de pierre est couvert de **lichens**.\n\n1. Explique ce que sont les nodosités et pourquoi les lentilles poussent bien malgré le sol pauvre en azote.\n2. Présente l'association observée sur les racines des chênes et ce qu'elle apporte à l'arbre, puis celle qui forme le lichen et ce qu'elle permet.\n3. Le voisin d'Inès affirme : « Ces associations ont modifié les gènes des lentilles et des chênes. » Discute cette affirmation.",
+      "bareme": [
+        { "critere": "Nodosités : symbiose Rhizobium + légumineuse qui fixe le diazote de l'air", "points": 7 },
+        { "critere": "Mycorhize (champignon + racines) et lichen (champignon + algue ou cyanobactérie, colonise la roche nue) correctement présentés", "points": 7 },
+        { "critere": "Réfutation argumentée : la symbiose ne change pas le génome, elle change les capacités (phénotype)", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les nodosités sont une **symbiose** entre des bactéries **Rhizobium** et une **légumineuse**. Les bactéries permettent de **fixer le diazote de l'air** : la lentille dispose ainsi d'azote même quand le sol en manque, ce qui explique qu'elle pousse sans engrais azoté.\n2. Autour des racines des chênes, il s'agit de **mycorhizes** : une symbiose entre un **champignon et les racines**. Le champignon augmente la surface d'absorption des racines ; plus de **80 % des plantes** dépendent de cette association. Le **lichen** associe un **champignon et une algue ou une cyanobactérie** : cette association permet de **coloniser la roche nue**, comme le muret.\n3. L'affirmation est **fausse**. La symbiose est une voie de diversification **sans modification du génome** : les gènes des lentilles et des chênes sont inchangés. Ce qui change, c'est ce que les partenaires sont **capables de faire** (fixer l'azote, mieux absorber) : c'est une diversification du **phénotype sans mutation**. À l'inverse, un transfert horizontal ou une polyploïdisation modifieraient le génome."
+    },
+    {
+      "chapitre": "1f1a4c9e-2100-5971-9a90-3a8534d95b27",
+      "difficulte": 3,
+      "titre": "Une espèce nouvelle en une génération",
+      "consigne": "Exploite les documents, fais les calculs demandés et rédige des réponses argumentées.",
+      "enonce": "**Document 1 – Deux graminées sauvages.** L'espèce A a 2n = 14 chromosomes, l'espèce B aussi 2n = 14. Elles se croisent parfois et donnent un hybride vigoureux mais **stérile** : ses chromosomes venus de A et ceux venus de B ne forment pas de paires, et la méiose échoue.\n\n**Document 2 – Un pied fertile.** Dans une population d'hybrides, on découvre un pied dont le stock chromosomique a **doublé**. Il est fertile ; ses descendants ne donnent plus de descendance fertile avec A ni avec B.\n\n**Document 3 – Deux autres nouveautés.**\n> a) Dans un hôpital, une bactérie acquiert par conjugaison un gène de résistance à un antibiotique, venu d'une autre bactérie.\n> b) Dans les années 1920, en Angleterre, des mésanges se mettent à percer les capsules des bouteilles de lait livrées devant les portes ; le comportement se répand de proche en proche.\n\n1. Donne le nombre de chromosomes de l'hybride (gamètes de A et de B) puis celui du pied du document 2.\n2. Explique pourquoi l'hybride est stérile et pourquoi le pied du document 2 est fertile.\n3. Justifie qu'on puisse parler d'une **espèce nouvelle apparue en une génération**. Cite un exemple de plante cultivée issue de ce mécanisme.\n4. Compare les trois nouveautés (hybridation-polyploïdisation, doc 3a, doc 3b) : le génome change-t-il ? comment la nouveauté se transmet-elle ?",
+      "bareme": [
+        { "critere": "Calculs : hybride 7 + 7 = 14 chromosomes, pied doublé 28", "points": 4 },
+        { "critere": "Stérilité (pas de paires, méiose impossible) et fertilité après doublement (méiose de nouveau possible)", "points": 5 },
+        { "critere": "Nouvelle espèce justifiée par l'isolement des parents ; exemple du blé tendre", "points": 4 },
+        { "critere": "Comparaison des trois cas : génome modifié ou non, transmission par reproduction, sans reproduction ou par apprentissage", "points": 7 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Les gamètes de A et de B contiennent chacun n = **7** chromosomes. L'hybride a donc 7 + 7 = **14 chromosomes** (7 venus de A, 7 venus de B). Le pied au stock doublé en a **28**.\n2. Chez l'hybride, les chromosomes de A et de B ne sont pas homologues : ils **ne forment pas de paires**, la méiose échoue et l'hybride est **stérile**, comme le mulet. Après **doublement** du stock chromosomique, chaque chromosome dispose d'un partenaire identique : **la méiose redevient possible** et le pied est fertile.\n3. Le pied doublé est fertile, mais ses descendants ne donnent plus de descendance fertile avec A ni avec B : selon le critère d'interfécondité, il constitue une **espèce distincte** de ses deux parents, apparue d'un coup, **en une génération**. Le **blé tendre** est le produit de deux hybridations-polyploïdisations successives entre graminées sauvages.\n4. **Hybridation-polyploïdisation** : le **génome change** (nouvelle combinaison et doublement des chromosomes) ; la nouveauté se transmet par la **reproduction** de la nouvelle espèce. **Doc 3a, transfert horizontal** : le **génome change** (un gène est ajouté) mais **sans reproduction**, d'une bactérie à une autre. **Doc 3b, transmission culturelle** : le **génome ne change pas** ; le comportement se transmet par **apprentissage** d'un individu à l'autre et crée de la diversité entre populations d'une même espèce."
+    },
+    {
+      "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+      "difficulte": 1,
+      "titre": "Hardy-Weinberg, sélection et dérive",
+      "consigne": "Réponds en quelques phrases précises, avec le vocabulaire du cours.",
+      "enonce": "1. Énonce les conditions d'une population idéale selon le modèle de **Hardy-Weinberg**. Que deviennent les fréquences alléliques dans une telle population ? Donne la répartition des génotypes en fonction de p et q.\n2. Compare la **sélection naturelle** et la **dérive génétique** : leur moteur, ce qui les amplifie, leur résultat.\n3. Un élève écrit : « L'antibiotique a créé la résistance chez les bactéries. » Corrige cette phrase.",
+      "bareme": [
+        { "critere": "Conditions de la population idéale, fréquences constantes, génotypes p², 2pq, q²", "points": 7 },
+        { "critere": "Comparaison sélection / dérive sur les trois points", "points": 8 },
+        { "critere": "Correction : l'antibiotique sélectionne des bactéries déjà résistantes, il ne crée pas la mutation", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Population **grande**, **sans migration**, **sans mutation**, **sans sélection**, à **croisements au hasard**. Dans ces conditions, les fréquences alléliques **ne changent pas** d'une génération à l'autre. Si p et q sont les fréquences des allèles A et a, les génotypes AA, Aa et aa ont pour fréquences **p², 2pq et q²**. Ce modèle sert de **référence nulle** : tout écart signale une force évolutive.\n2. **Sélection naturelle** : moteur = un **avantage reproductif** ; amplifiée par une **pression forte** ; résultat = les **allèles avantageux se répandent**. **Dérive génétique** : moteur = le **hasard** de l'échantillonnage des gamètes ; amplifiée par un **petit effectif** ; résultat = un allèle peut **disparaître sans être désavantageux** (ou se répandre).\n3. Correction : « L'antibiotique **n'a pas créé** la résistance : il a **sélectionné** les bactéries qui **portaient déjà** la mutation de résistance. Elles survivent et se multiplient, les autres sont éliminées. » La sélection est un **tri**, pas une création."
+    },
+    {
+      "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+      "difficulte": 2,
+      "titre": "Des escargots sur le continent et sur l'île",
+      "consigne": "Détaille tous tes calculs, puis interprète les résultats avec les notions du cours.",
+      "enonce": "**Situation.** Chez une espèce d'escargot, un gène possède deux allèles A et a. Sur le continent, dans une très grande population, on génotype un échantillon de **500 individus** : 180 AA, 240 Aa et 80 aa.\n\n1. Calcule les fréquences p (allèle A) et q (allèle a) dans l'échantillon.\n2. Calcule les effectifs de génotypes attendus si la population suit le modèle de Hardy-Weinberg. Compare avec les effectifs observés et conclus.\n3. Sur une petite île voisine vit une population de **20 escargots** de la même espèce. En dix générations, l'allèle a y a disparu, alors qu'il ne présente aucun désavantage connu. Quelle force évolutive peut l'expliquer ? Justifie.",
+      "bareme": [
+        { "critere": "Fréquences alléliques justes : p = 0,6 et q = 0,4, calcul détaillé", "points": 6 },
+        { "critere": "Effectifs attendus justes (180, 240, 80) et comparaison avec l'observé", "points": 6 },
+        { "critere": "Conclusion : population conforme au modèle, pas de force évolutive décelée", "points": 3 },
+        { "critere": "Dérive génétique identifiée, justifiée par le petit effectif et l'absence de désavantage", "points": 5 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Nombre total d'allèles : 2 × 500 = 1 000. Allèles A : 2 × 180 + 240 = 600, donc **p = 600 / 1 000 = 0,6**. Allèles a : 2 × 80 + 240 = 400, donc **q = 0,4** (on vérifie p + q = 1).\n2. Fréquences attendues : p² = 0,36 ; 2pq = 2 × 0,6 × 0,4 = 0,48 ; q² = 0,16. Effectifs attendus : 0,36 × 500 = **180 AA** ; 0,48 × 500 = **240 Aa** ; 0,16 × 500 = **80 aa**. Les effectifs observés sont **identiques** aux effectifs attendus : la population est **conforme au modèle de Hardy-Weinberg** ; aucune force évolutive n'est décelée sur ce gène.\n3. C'est la **dérive génétique** : la variation **au hasard** des fréquences alléliques, due à l'échantillonnage des gamètes d'une génération à l'autre. Elle est d'autant plus marquée que la population est **petite** (20 individus ici). Un allèle peut ainsi **disparaître sans désavantage** : ce n'est pas un tri, contrairement à la sélection naturelle."
+    },
+    {
+      "chapitre": "2cc1db92-945c-570b-aad3-fd28ab3137f0",
+      "difficulte": 3,
+      "titre": "La phalène du bouleau, chiffres à l'appui",
+      "consigne": "Exploite les données par le calcul, puis rédige une interprétation argumentée.",
+      "enonce": "**Document 1 – Deux échantillons.** Dans un bois proche d'une ville industrielle anglaise, la population de phalènes du bouleau compte plusieurs dizaines de milliers d'individus. Un gène a deux allèles : **A**, responsable de la forme **sombre**, et **a**, responsable de la forme claire. On a reconstitué la composition génotypique de deux échantillons de 1 000 papillons.\n\n| Date | AA | Aa | aa |\n|---|---|---|---|\n| Vers 1850, troncs clairs couverts de lichens | 10 | 180 | 810 |\n| Vers 1900, troncs noircis de suie | 490 | 420 | 90 |\n\n**Document 2 – Les prédateurs.** Les oiseaux repèrent plus facilement les papillons qui contrastent avec le tronc sur lequel ils se posent.\n\n1. Calcule la fréquence p de l'allèle A en 1850 puis en 1900.\n2. Vérifie qu'en 1850 les effectifs observés correspondent aux effectifs attendus selon le modèle de Hardy-Weinberg.\n3. Que montre la comparaison des deux dates ? Quelle force évolutive est en jeu ? Justifie ton choix en écartant l'autre force.\n4. Explique le mécanisme de ce changement à l'aide du document 2.\n5. Après les lois anti-pollution, les troncs sont redevenus clairs. Quelle évolution prévois-tu ? Que montre-t-elle sur la sélection ?",
+      "bareme": [
+        { "critere": "Fréquences justes : p = 0,1 en 1850 et p = 0,7 en 1900, calculs détaillés", "points": 5 },
+        { "critere": "Vérification Hardy-Weinberg en 1850 (10, 180, 810 attendus)", "points": 3 },
+        { "critere": "Changement de fréquence = écart au modèle, sélection naturelle retenue, dérive écartée par le grand effectif", "points": 5 },
+        { "critere": "Mécanisme : formes sombres moins repérées sur troncs noircis, meilleure survie et reproduction", "points": 5 },
+        { "critere": "Prévision de la régression de la forme sombre, sélection relative au milieu", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. En 1850 : allèles A = 2 × 10 + 180 = 200 sur 2 000, donc **p = 0,1** (q = 0,9). En 1900 : allèles A = 2 × 490 + 420 = 1 400 sur 2 000, donc **p = 0,7** (q = 0,3).\n2. Attendus en 1850 : p² = 0,01 → **10 AA** ; 2pq = 2 × 0,1 × 0,9 = 0,18 → **180 Aa** ; q² = 0,81 → **810 aa**. Les effectifs observés sont identiques : la répartition des génotypes est conforme au modèle.\n3. Le modèle de Hardy-Weinberg prévoit des fréquences alléliques **constantes**. Or p passe de 0,1 à 0,7 en cinquante ans : cet écart signale qu'une **force évolutive** a agi. La population compte plusieurs dizaines de milliers d'individus : la **dérive**, marquée en **petite** population, ne peut pas expliquer une variation aussi forte et orientée. C'est la **sélection naturelle**.\n4. Sur les troncs **noircis de suie**, les papillons **sombres** contrastent moins et sont moins repérés par les oiseaux ; les clairs sont davantage mangés. Les porteurs de l'allèle A survivent mieux et se reproduisent davantage : cet **avantage reproductif** fait augmenter la fréquence de A. La forme sombre, rare, devient majoritaire.\n5. Sur des troncs redevenus clairs, l'avantage s'inverse : la forme sombre doit **régresser** (c'est ce qui a été observé). La sélection n'est ni un projet ni un progrès : c'est un **tri relatif à un milieu** qui peut changer."
+    },
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "difficulte": 1,
+      "titre": "Les principes de la chronologie relative",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Énonce les **cinq principes** de la chronologie relative. Pour chacun, indique le piège ou la précaution qui l'accompagne.\n2. Quelles sont les trois qualités d'un bon **fossile stratigraphique** ? Explique à quoi sert chacune.\n3. Pourquoi le cœlacanthe, une espèce qui existe depuis des centaines de millions d'années, est-il un mauvais fossile stratigraphique ?",
+      "bareme": [
+        { "critere": "Les cinq principes correctement énoncés avec leur précaution", "points": 10 },
+        { "critere": "Les trois qualités du bon fossile et leur utilité", "points": 6 },
+        { "critere": "Cœlacanthe : durée d'existence trop longue, il ne découpe pas le temps", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Superposition** : une couche est plus récente que celle qu'elle recouvre ; vérifier que la série n'a pas été **renversée**. **Recoupement** : ce qui recoupe est **postérieur** (faille, filon, surface d'érosion). **Inclusion** : ce qui est inclus est **antérieur** (galet, enclave, cristal). **Continuité** : une même couche a le même âge sur toute son extension, **même si elle change de faciès**. **Identité paléontologique** : même assemblage de fossiles, même âge ; encore faut-il un **bon fossile**.\n2. **Large répartition géographique** : pour corréler des coupes éloignées. **Courte durée d'existence** : pour découper finement le temps. **Abondance** : pour avoir une chance de le trouver. Ammonites, trilobites et foraminifères remplissent ces conditions.\n3. Une espèce qui a vécu très longtemps se retrouve dans des couches d'âges très différents : sa présence ne permet pas de dire à quelle période précise une couche appartient. Elle **ne découpe rien** : le cœlacanthe ne date aucune couche."
+    },
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "difficulte": 2,
+      "titre": "La coupe de la carrière",
+      "consigne": "Reconstitue l'histoire de la coupe en justifiant chaque étape par un principe du cours.",
+      "enonce": "**Situation.** Lors d'une sortie, Samir décrit la paroi d'une carrière. La série n'est pas renversée : des rides de courant indiquent que le haut d'origine est bien en haut.\n\n> De bas en haut : une couche 1 de calcaire à ammonites, une couche 2 de grès, une couche 3 d'argile. Une faille F décale les couches 1, 2 et 3. Au-dessus, une couche 4 de conglomérat, horizontale, recouvre la faille **sans être décalée**. Le conglomérat contient des **galets de grès** identiques au grès de la couche 2.\n\n1. Range dans l'ordre chronologique les événements suivants : dépôt des couches 1, 2, 3 et 4 ; jeu de la faille F.\n2. Justifie chaque étape de ton classement en nommant le principe utilisé.\n3. Pourquoi Samir a-t-il vérifié l'orientation de la série avant d'appliquer le principe de superposition ?",
+      "bareme": [
+        { "critere": "Ordre juste : 1, 2, 3, puis faille F, puis 4", "points": 6 },
+        { "critere": "Justifications : superposition (1-2-3), recoupement (F après 3), faille scellée par 4, inclusion (galets de 2 antérieurs à 4)", "points": 10 },
+        { "critere": "Rôle des figures sédimentaires : une série renversée inverserait l'ordre", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Ordre : **dépôt de 1** → **dépôt de 2** → **dépôt de 3** → **jeu de la faille F** → **dépôt de 4**.\n2. **Superposition** : la série n'est pas renversée, chaque couche est plus récente que celle qu'elle recouvre, donc 1 puis 2 puis 3. **Recoupement** : la faille F décale les couches 1, 2 et 3 ; ce qui recoupe est postérieur, donc F est plus récente que la couche 3. La couche 4 recouvre la faille **sans être décalée** : la faille a joué **avant** le dépôt de 4 (4 est postérieure à F). **Inclusion** : le conglomérat 4 contient des galets du grès de la couche 2 ; ce qui est inclus est antérieur, donc la couche 2 existait et était déjà consolidée avant le dépôt de 4, ce qui confirme l'ordre.\n3. Le principe de superposition ne vaut que si la série n'a pas été **renversée**. Les **figures sédimentaires** (ici des rides de courant) indiquent le haut d'origine ; sans cette vérification, la superposition pourrait donner l'ordre **exactement à l'envers**."
+    },
+    {
+      "chapitre": "ac28148f-026b-5300-88ee-0495af4adf1d",
+      "difficulte": 3,
+      "titre": "Plis, érosion, filon et fossiles",
+      "consigne": "Exploite les trois documents et justifie chaque conclusion par un principe ou un critère du cours.",
+      "enonce": "**Document 1 – Une coupe.** Trois couches sédimentaires A, B et C (de la plus basse à la plus haute dans les flancs normaux) sont **plissées**. Une **surface d'érosion S** tronque les plis. Au-dessus, une couche D **horizontale** repose sur S. Un **filon de basalte V** traverse A, B, C et D.\n\n**Document 2 – Un flanc de pli.** Dans un flanc du pli, la couche B montre un **granoclassement** : les grains fins sont en bas et les grains grossiers en haut. Dans un dépôt normal, les grains les plus grossiers se déposent en premier (en bas) et les plus fins ensuite (en haut).\n\n**Document 3 – Trois fossiles candidats pour corréler cette coupe avec une coupe située à 800 km.**\n\n| Espèce | Répartition | Durée d'existence | Abondance |\n|---|---|---|---|\n| X | Tous les océans du globe | environ 1 million d'années | Très abondante |\n| Y | Tous les océans du globe | environ 150 millions d'années | Abondante |\n| Z | Une seule baie | environ 1 million d'années | Rare |\n\n1. Reconstitue l'histoire de la coupe du document 1 (dépôts, plissement, érosion, filon) en justifiant chaque étape.\n2. Que montre le document 2 sur ce flanc de pli ? Quelle erreur aurait-on commise en appliquant directement la superposition ?\n3. Quel fossile choisir pour corréler les deux coupes ? Justifie en écartant les deux autres.",
+      "bareme": [
+        { "critere": "Ordre juste : dépôt A, B, C → plissement → érosion S → dépôt D → filon V", "points": 6 },
+        { "critere": "Justifications par superposition, recoupement (S tronque les plis, V traverse D)", "points": 5 },
+        { "critere": "Flanc renversé déduit du granoclassement inversé, erreur d'ordre évitée", "points": 4 },
+        { "critere": "Choix de X justifié par les trois critères, Y et Z écartés", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Dépôt de A, puis B, puis C** (superposition, dans les flancs normaux). **Plissement** de l'ensemble A-B-C : il affecte les trois couches, il leur est donc postérieur. **Érosion S** : la surface tronque les plis ; ce qui recoupe est postérieur (**recoupement**), donc S est postérieure au plissement. **Dépôt de D** : D repose sur S et n'est pas plissée, elle est postérieure à S et au plissement (superposition). **Mise en place du filon V** : il traverse A, B, C **et D** ; par recoupement, il est postérieur à D. C'est l'événement le plus récent.\n2. Dans ce flanc, le granoclassement est **inversé** (fins en bas, grossiers en haut) : le haut d'origine est en bas, le flanc est **renversé**. En appliquant directement la superposition, on aurait conclu que les couches du dessus sont les plus récentes, c'est-à-dire l'ordre **exactement à l'envers**.\n3. Il faut choisir **X** : **large répartition** (tous les océans : on peut le retrouver à 800 km), **courte durée** (1 million d'années : il date finement), **abondance** (on a des chances de le trouver). **Y** vit trop longtemps (150 millions d'années) : il ne découpe pas le temps. **Z** est trop **local** (une seule baie) et **rare** : il ne permet pas de corréler des coupes éloignées."
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "difficulte": 1,
+      "titre": "L'horloge radioactive",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Définis la **demi-vie** d'un isotope radioactif. Quelle proportion d'atomes pères reste-t-il après une, deux puis trois demi-vies ?\n2. Pourquoi la désintégration radioactive est-elle une horloge fiable, contrairement aux autres indices géologiques ?\n3. Quelles sont les **deux conditions** d'une datation radiochronologique ? Que mesure-t-on exactement ?\n4. Que date-t-on exactement quand on date une roche magmatique ? Et un reste organique au carbone 14 ?",
+      "bareme": [
+        { "critere": "Demi-vie définie, 1/2, 1/4 et 1/8 des pères restants", "points": 6 },
+        { "critere": "Vitesse indépendante de la température, de la pression et de la chimie", "points": 4 },
+        { "critere": "Système fermé, fils initial connu (ou isochrone), rapport fils / père mesuré", "points": 5 },
+        { "critere": "Cristallisation pour la roche magmatique, mort de l'organisme pour le carbone 14", "points": 5 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. La demi-vie est la durée au bout de laquelle **la moitié des atomes pères** s'est désintégrée en atomes fils. Il reste **1/2** des pères après une demi-vie, **1/4** après deux, **1/8** après trois.\n2. La vitesse de désintégration ne dépend **ni de la température, ni de la pression, ni de la chimie** du milieu. Elle est donc constante quelle que soit l'histoire de la roche : c'est ce qui en fait une horloge fiable.\n3. On mesure le **rapport** fils accumulés sur pères restants. Conditions : le système doit être **fermé** (rien n'est entré ni sorti depuis sa fermeture) et la **quantité initiale de fils** doit être connue, ou l'on s'en affranchit par une **droite isochrone**.\n4. L'horloge date la **fermeture du système**. Pour une roche magmatique, c'est sa **cristallisation**. Pour un reste organique au carbone 14, c'est la **mort** de l'organisme, qui cesse alors d'échanger du carbone."
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "difficulte": 2,
+      "titre": "Le foyer de la grotte",
+      "consigne": "Détaille tes calculs, puis justifie tes choix par les notions du cours.",
+      "enonce": "**Situation.** Dans une grotte, des archéologues dégagent un foyer contenant du **charbon de bois**. L'analyse montre qu'il ne reste que **25 %** du carbone 14 initialement présent dans le bois. Le sol de la grotte repose sur une **coulée de basalte** qu'un géologue estime vieille d'environ 2 millions d'années.\n\nDonnées : demi-vie du carbone 14 = 5 730 ans ; demi-vie du potassium 40 = 1,3 milliard d'années.\n\n1. Calcule l'âge du charbon de bois. Détaille ton raisonnement.\n2. Quel événement cet âge date-t-il exactement ?\n3. Peut-on dater la coulée de basalte au carbone 14 ? Quel couple choisir ? Justifie en utilisant la règle de choix d'un couple.",
+      "bareme": [
+        { "critere": "25 % = deux demi-vies, âge de 11 460 ans calculé", "points": 8 },
+        { "critere": "L'âge date la mort de l'arbre (fin des échanges de carbone)", "points": 5 },
+        { "critere": "Carbone 14 exclu (plus d'atomes pères, matière non organique), couple potassium-argon justifié par la demi-vie adaptée et les roches volcaniques", "points": 7 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Après une demi-vie il reste 50 %, après deux demi-vies il reste **25 %**. Le charbon a donc vécu **2 demi-vies** : âge = 2 × 5 730 = **11 460 ans**.\n2. Le carbone 14 date la **mort de l'organisme** : c'est le moment où l'arbre a cessé d'échanger du carbone avec l'atmosphère. On date donc la mort de l'arbre dont provient le bois (et non le moment exact du feu, même si les deux sont souvent proches).\n3. **Non.** Le carbone 14 date la **matière organique de moins de 50 000 ans**. Au bout de 2 millions d'années, soit environ 350 demi-vies, il ne resterait plus **un seul atome père** mesurable ; et une coulée de basalte n'est pas de la matière organique. La demi-vie doit être **du même ordre** que l'âge cherché : on choisit le couple **potassium 40 → argon 40** (demi-vie 1,3 milliard d'années), utilisé pour les **roches volcaniques**. On date alors la **cristallisation** de la coulée."
+    },
+    {
+      "chapitre": "3a59bcf7-4502-55d9-a917-831722f59978",
+      "difficulte": 3,
+      "titre": "Encadrer des couches entre deux coulées",
+      "consigne": "Croise chronologie relative et chronologie absolue. Détaille les calculs et justifie chaque réponse.",
+      "enonce": "**Document 1 – Une coupe, de bas en haut.** Couche 1 de grès ; coulée basaltique B, datée à **12 millions d'années** (Ma) par potassium-argon ; couche 2 de calcaire ; couche 3 d'argile ; coulée basaltique C, datée à **8 Ma**. La série n'est pas renversée.\n\n**Document 2 – Trois objets à dater.**\n> a) Un os de mammouth trouvé dans une tourbière, dont l'âge supposé est d'environ 20 000 ans.\n> b) Un zircon d'une très vieille roche, dont l'âge supposé dépasse 4 milliards d'années.\n> c) Une nouvelle coulée de lave, dont l'âge supposé est de quelques millions d'années.\n\n**Document 3 – Un problème au laboratoire.** L'argon est un gaz. Le laboratoire découvre que la coulée C a été fortement réchauffée après sa mise en place, et qu'elle a alors **perdu une partie de son argon**.\n\n1. Que peut-on dire de l'âge des couches 1, 2 et 3 ? Justifie.\n2. Pour chaque objet du document 2, choisis le couple radioactif adapté et justifie.\n3. Dans le cas a), il reste 1/16 du carbone 14 initial dans l'os. Calcule son âge (demi-vie : 5 730 ans).\n4. D'après le document 3, l'âge de 8 Ma de la coulée C est-il fiable ? Est-il surestimé ou sous-estimé ? Quelle conséquence pour l'encadrement des couches 2 et 3 ?",
+      "bareme": [
+        { "critere": "Encadrement : couche 1 plus vieille que 12 Ma, couches 2 et 3 entre 12 et 8 Ma, par superposition", "points": 6 },
+        { "critere": "Couples justes et justifiés : carbone 14, uranium-plomb, potassium-argon", "points": 5 },
+        { "critere": "1/16 = quatre demi-vies, âge de 22 920 ans", "points": 4 },
+        { "critere": "Système non fermé : fils perdu, rapport fils / père trop faible, âge sous-estimé ; encadrement à revoir", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La série n'est pas renversée : par **superposition**, la couche 1, sous B, est **plus ancienne que 12 Ma** ; les couches 2 et 3, entre B et C, se sont déposées **entre 12 et 8 Ma** (2 avant 3). La datation absolue des coulées **encadre** ainsi les couches datées par la chronologie relative.\n2. a) Os d'environ 20 000 ans : **carbone 14 → azote 14** (demi-vie 5 730 ans), adapté à la matière organique de moins de 50 000 ans. b) Zircon de plus de 4 milliards d'années : **uranium → plomb** (demi-vie d'environ 4,5 milliards d'années), utilisé pour les zircons et les plus vieilles roches. c) Coulée de quelques millions d'années : **potassium 40 → argon 40** (demi-vie 1,3 milliard d'années), utilisé pour les roches volcaniques. Règle : la demi-vie doit être du même ordre que l'âge cherché (le carbone 14 n'aurait plus d'atome père, un couple trop lent ne produirait pas assez de fils mesurables).\n3. 1/16 = (1/2)⁴ : il s'est écoulé **4 demi-vies**. Âge = 4 × 5 730 = **22 920 ans**, cohérent avec l'âge supposé.\n4. **Non** : la datation suppose un **système fermé**, or de l'argon (le fils) est **sorti**. Le rapport fils / père mesuré est **plus faible** qu'il ne devrait : l'âge obtenu est **sous-estimé** ; la coulée C est en réalité **plus vieille que 8 Ma**. L'encadrement des couches 2 et 3 reste « plus jeunes que 12 Ma », mais leur limite récente n'est plus 8 Ma : elles sont plus anciennes que le vrai âge de C, inconnu. Il faudrait dater C par une autre méthode."
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "difficulte": 1,
+      "titre": "Le cycle de Wilson en cinq étapes",
+      "consigne": "Réponds à chaque question par des phrases précises ou un tableau.",
+      "enonce": "1. Nomme dans l'ordre les **cinq étapes** du cycle de Wilson. Pour chacune, indique ce qui se passe et un témoin qu'on en trouve dans les Alpes.\n2. Qu'est-ce qu'une **ophiolite** ? Décris sa séquence de roches de bas en haut et indique ce que chaque roche était à l'origine.",
+      "bareme": [
+        { "critere": "Les cinq étapes dans l'ordre avec leur contenu et leur témoin alpin", "points": 10 },
+        { "critere": "Définition de l'ophiolite et séquence péridotites, gabbros, basaltes en coussins, radiolarites avec leur origine", "points": 10 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Rifting** : la lithosphère continentale s'amincit et se casse ; témoins : failles normales, **blocs basculés**. **Ouverture** : la mer entre, une dorsale produit de la lithosphère océanique ; témoins : **marges passives** fossiles. **Expansion** : la croûte océanique s'étend ; témoins : les **ophiolites**. **Subduction** : la lithosphère océanique plonge ; témoin : le métamorphisme **haute pression - basse température** (glaucophane, éclogites). **Collision** : les deux continents se percutent ; témoins : **nappes de charriage**, racine crustale.\n2. Une ophiolite est un **fragment de lithosphère océanique charrié sur un continent**. De bas en haut : **péridotites** (le manteau), **gabbros** (magma refroidi lentement en profondeur), **basaltes en coussins** ou pillow-lavas (lave refroidie sous l'eau), **radiolarites** (sédiments marins profonds). Le Chenaillet, dans les Hautes-Alpes, en est un exemple presque intact."
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "difficulte": 2,
+      "titre": "Randonnée au Chenaillet",
+      "consigne": "Lis la situation, puis réponds en t'appuyant sur les notions du cours.",
+      "enonce": "**Situation.** Lors d'une randonnée vers 2 600 m d'altitude, dans les Hautes-Alpes, Léna observe en montant les roches suivantes, de bas en haut :\n\n> des roches vertes sombres issues du manteau (péridotites) ; des roches grenues à gros cristaux (gabbros) ; des laves en forme de gros coussins empilés ; enfin, de fines couches rouges siliceuses (radiolarites).\n\n1. Comment appelle-t-on cet ensemble de roches ? Explique ce que chaque roche indique sur son milieu de formation.\n2. Explique pourquoi la forme en coussins des laves est un indice précieux.\n3. À quelle(s) étape(s) du cycle de Wilson ces roches se sont-elles formées, puis retrouvées à 2 600 m d'altitude ? Explique.",
+      "bareme": [
+        { "critere": "Ophiolite identifiée, chaque roche reliée à son origine (manteau, magma profond, lave sous l'eau, sédiment marin profond)", "points": 8 },
+        { "critere": "Coussins = refroidissement de la lave sous l'eau, preuve d'un fond océanique", "points": 5 },
+        { "critere": "Formation à l'expansion, charriage sur le continent lors de la collision", "points": 7 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. C'est une **ophiolite** : un fragment de **lithosphère océanique** charrié sur un continent. Les **péridotites** représentent le **manteau** ; les **gabbros**, à gros cristaux, sont du **magma refroidi lentement en profondeur** ; les laves en coussins sont des **basaltes refroidis sous l'eau** ; les **radiolarites** sont des **sédiments marins profonds**. La séquence se lit de bas en haut comme une coupe de fond océanique.\n2. Les **basaltes en coussins** (pillow-lavas) se forment quand la lave **refroidit sous l'eau**. Les trouver en montagne prouve que ces roches se sont formées au **fond d'un océan**, aujourd'hui disparu.\n3. Ces roches se sont formées lors de l'**expansion** océanique (après l'ouverture), à la dorsale. L'océan s'est ensuite refermé par **subduction**, puis lors de la **collision**, ce fragment de lithosphère océanique a été **charrié sur le continent** (nappes) et soulevé avec la chaîne : c'est pourquoi on le trouve à 2 600 m d'altitude."
+    },
+    {
+      "chapitre": "eb8ac153-a8bd-5394-a2d6-a04e569edf3b",
+      "difficulte": 3,
+      "titre": "Reconstituer l'histoire des Alpes",
+      "consigne": "Exploite chaque document, relie-le à une étape du cycle de Wilson, puis rédige un récit ordonné et argumenté.",
+      "enonce": "**Document 1 – Dans les massifs subalpins.** On observe des **failles normales** qui délimitent des **blocs basculés**, entre lesquels se sont accumulés des sédiments détritiques.\n\n**Document 2 – Dans le Queyras et au mont Viso.** On trouve des **métagabbros à glaucophane** et des **éclogites** à grenat et jadéite. Ces minéraux se forment à **haute pression et basse température**.\n\n**Document 3 – Sous la chaîne.** Les études sismiques montrent une **racine crustale** qui atteint environ 50 à 70 km de profondeur. Des roches formées à 30 km de profondeur affleurent aujourd'hui en surface.\n\n1. Associe chaque document à une étape du cycle de Wilson et justifie.\n2. Explique pourquoi la lithosphère océanique a fini par plonger en subduction.\n3. Explique comment des roches formées en profondeur (documents 2 et 3) se retrouvent aujourd'hui en surface.\n4. Rédige en quelques lignes l'histoire de la chaîne alpine, de l'ouverture de l'océan à la chaîne actuelle.",
+      "bareme": [
+        { "critere": "Doc 1 = rifting, doc 2 = subduction (HP-BT), doc 3 = collision, avec justification", "points": 6 },
+        { "critere": "Subduction : lithosphère qui refroidit, s'épaissit et devient plus dense que l'asthénosphère (au-delà d'environ 30 Ma)", "points": 5 },
+        { "critere": "Remontée : isostasie qui fait remonter la chaîne à mesure que l'érosion la rabote", "points": 5 },
+        { "critere": "Récit chronologique complet et cohérent des cinq étapes", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Doc 1 → rifting** : failles normales et blocs basculés signent l'**amincissement et la cassure** de la lithosphère continentale. **Doc 2 → subduction** : glaucophane puis éclogites (grenat, jadéite) témoignent d'un **métamorphisme HP-BT** ; des gabbros océaniques sont descendus à plusieurs dizaines de kilomètres, puis sont remontés. **Doc 3 → collision** : la racine crustale traduit l'**épaississement** de la croûte quand les deux continents se sont percutés.\n2. En s'éloignant de la dorsale, la lithosphère océanique **refroidit et s'épaissit** ; au-delà d'environ **30 Ma**, elle devient **plus dense que l'asthénosphère** et **plonge** : c'est la subduction. En plongeant, elle subit le métamorphisme HP-BT.\n3. La croûte épaissie s'enfonce **comme un iceberg** (racine). L'**érosion** rabote aussitôt le relief ; par **isostasie**, la chaîne **remonte** à mesure qu'elle est allégée. Ainsi, des roches formées à 30 km de profondeur finissent par affleurer en surface.\n4. Récit attendu : un **rift** a cassé le continent (blocs basculés) ; un **océan** s'est ouvert, bordé de marges passives, et une dorsale a produit de la lithosphère océanique (dont les ophiolites sont des fragments) ; cette lithosphère, vieillie et dense, est entrée en **subduction** (métagabbros à glaucophane, éclogites) ; l'océan s'est refermé et les deux continents sont entrés en **collision** : nappes, chevauchements, racine crustale ; l'érosion et l'isostasie ont enfin fait remonter les roches profondes."
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "difficulte": 1,
+      "titre": "Vivre fixé entre sol et atmosphère",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Quelle contrainte majeure explique l'organisation d'une plante à fleurs ?\n2. Présente la **double interface** de la plante : ce que fournissent le sol et l'atmosphère, les organes concernés et leurs adaptations (dont les mycorhizes).\n3. Explique le **compromis** imposé par les stomates : que se passe-t-il quand ils sont ouverts, puis fermés ?",
+      "bareme": [
+        { "critere": "La vie fixée : ni fuir, ni chercher ses ressources", "points": 4 },
+        { "critere": "Double interface : racines, poils absorbants, mycorhizes (sol) ; feuilles larges et minces (atmosphère)", "points": 8 },
+        { "critere": "Compromis des stomates : CO₂ contre perte d'eau, photosynthèse arrêtée quand ils sont fermés", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. La **vie fixée** : la plante ne peut ni fuir la sécheresse, ni chercher sa nourriture, ni échapper à un herbivore. Toute son organisation en découle.\n2. Le **sol** fournit l'**eau et les ions minéraux**, absorbés par les **racines** ; leurs **poils absorbants** donnent une surface immense (plusieurs centaines de m² pour un plant de blé). Pour le **phosphore**, la plante s'associe à un champignon : les **mycorhizes** décuplent la surface d'absorption. L'**atmosphère** fournit le **CO₂ et la lumière**, captés par les **feuilles**, **larges et minces** : surface maximale pour une masse minimale.\n3. Les **stomates**, surtout sur la face inférieure des feuilles, règlent les échanges gazeux. **Ouverts**, ils laissent entrer le CO₂ mais laissent sortir la vapeur d'eau : c'est la **transpiration**. **Fermés**, rien n'entre ni ne sort : la plante ne perd plus d'eau mais la **photosynthèse s'arrête**. Aucune position n'est gagnante : la plante arbitre en permanence entre se nourrir et ne pas se dessécher."
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "difficulte": 2,
+      "titre": "Deux plantes, deux milieux",
+      "consigne": "Compare les deux plantes et relie chaque caractère à une contrainte du milieu, en utilisant le vocabulaire du cours.",
+      "enonce": "**Situation.** Maël compare deux plantes à fleurs.\n\n| | Plante A, sous-bois humide et ombragé | Plante B, désert chaud |\n|---|---|---|\n| Feuilles | Larges et très minces | Réduites à des épines |\n| Cuticule | Fine | Épaisse et cireuse |\n| Stomates | Nombreux, à la surface de la face inférieure | Peu nombreux, enfoncés dans des creux |\n| Tige | Longue, fine | Épaisse, gorgée d'eau |\n| Racines | Superficielles | Très profondes |\n\n1. Explique en quoi les caractères de la plante B limitent les pertes d'eau ou assurent son approvisionnement.\n2. La plante A pousse à l'ombre : explique la forme de ses feuilles et de sa tige en lien avec la lumière.\n3. Chez la plante B, les stomates sont souvent fermés en pleine journée. Explique la conséquence sur la photosynthèse et sur la montée de la sève brute.",
+      "bareme": [
+        { "critere": "Adaptations de B à la sécheresse reliées à la limitation des pertes d'eau et aux réserves", "points": 7 },
+        { "critere": "Plante A : feuilles larges et minces pour capter la lumière, tige allongée vers la lumière (développement modulable)", "points": 6 },
+        { "critere": "Stomates fermés : photosynthèse arrêtée, transpiration faible donc moteur de la sève brute affaibli", "points": 7 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Plante B, adaptée à la **sécheresse** : feuilles **en épines** (très peu de surface qui transpire), **cuticule cireuse** épaisse (imperméable), **stomates peu nombreux et enfoncés** (moins de vapeur d'eau perdue), tige gorgée d'eau (**réserves d'eau**), **racines profondes** (atteindre l'eau du sous-sol).\n2. Plante A : à l'ombre, la lumière est rare ; des feuilles **larges et minces** offrent une **surface maximale** pour capter la lumière avec une masse minimale. Sa tige longue et fine traduit un **développement modulaire** qui s'ajuste au milieu : grâce à ses **méristèmes**, la plante **s'allonge vers la lumière**.\n3. Stomates fermés : le **CO₂ n'entre plus**, la **photosynthèse s'arrête** ; c'est le prix payé pour ne pas perdre d'eau. La montée de la **sève brute** dans le **xylème** n'a pas de pompe : c'est la **transpiration** foliaire qui tire la colonne d'eau depuis les racines. Stomates fermés, la transpiration est très faible, donc la sève brute monte très peu."
+    },
+    {
+      "chapitre": "80525832-7394-5b89-8da4-855eaedb0e0e",
+      "difficulte": 3,
+      "titre": "Une journée dans la vie d'un pied de tomate",
+      "consigne": "Exploite les documents et rédige des réponses argumentées qui relient les mesures au fonctionnement de la plante.",
+      "enonce": "**Document 1 – Mesures sur un pied de tomate en pot, sol bien arrosé.**\n\n| Heure | Ouverture des stomates | Transpiration (g d'eau/h) | CO₂ absorbé (g/h) |\n|---|---|---|---|\n| 6 h | 20 % | 5 | 0,2 |\n| 12 h | 90 % | 40 | 1,5 |\n| 0 h (nuit) | 0 % | presque 0 | 0 |\n\n**Document 2 – Le lendemain, sol desséché.** À 12 h : ouverture 5 %, transpiration 2 g/h, CO₂ absorbé 0,05 g/h.\n\n**Document 3 – Les sucres.** En été, le saccharose produit par les feuilles gagne les fruits en formation, au sommet, et les racines, en bas.\n\n1. Décris et explique les variations du document 1, puis compare avec le document 2.\n2. Explique comment l'eau monte des racines aux feuilles, et pourquoi elle monte beaucoup plus vite à 12 h qu'à 6 h.\n3. Nomme le réseau et la sève en jeu dans le document 3. En quoi ce transport diffère-t-il de celui de la sève brute ?\n4. Montre que ces mesures illustrent une idée clé du chapitre : une plante fixée ne peut pas fuir, elle doit arbitrer.",
+      "bareme": [
+        { "critere": "Lecture des documents 1 et 2 : ouverture des stomates, transpiration et CO₂ varient ensemble ; fermeture en cas de sécheresse", "points": 6 },
+        { "critere": "Sève brute : xylème, transpiration qui tire la colonne, cohésion, aucune pompe", "points": 5 },
+        { "critere": "Phloème, sève élaborée (saccharose), feuilles vers organes consommateurs dans les deux sens", "points": 5 },
+        { "critere": "Synthèse : compromis permanent entre se nourrir et ne pas se dessécher", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Dans le document 1, les trois grandeurs **varient ensemble** : plus les stomates sont ouverts, plus la plante transpire et absorbe de CO₂ (maximum à 12 h : 90 %, 40 g/h, 1,5 g/h ; nuit : stomates fermés, ni transpiration ni absorption). Ouverts, les stomates laissent **entrer le CO₂** mais **sortir la vapeur d'eau**. Dans le document 2, sol sec, la plante **ferme ses stomates** en pleine journée : elle ne perd presque plus d'eau (2 g/h au lieu de 40) mais n'absorbe presque plus de CO₂ (0,05 g/h au lieu de 1,5) : sa photosynthèse est presque arrêtée.\n2. L'eau et les ions (la **sève brute**) montent dans le **xylème**, des racines vers les feuilles. Il n'y a **aucune pompe** : c'est l'**évaporation au sommet** (la transpiration) qui **tire** la colonne d'eau, la **cohésion** des molécules d'eau la maintenant continue. À 12 h, la transpiration est 8 fois plus forte qu'à 6 h (40 contre 5 g/h) : la traction est plus forte, l'eau monte plus vite.\n3. C'est le **phloème**, qui transporte la **sève élaborée** (saccharose) des feuilles vers les **organes consommateurs**. Le transport se fait **dans les deux sens** (vers les fruits en haut, vers les racines en bas), sous l'effet d'un **gradient de pression**, alors que la sève brute ne monte que des racines vers les feuilles, tirée par la transpiration.\n4. La plante ne peut ni fuir la sécheresse ni aller chercher l'eau : elle **arbitre en permanence** avec ses stomates entre **se nourrir** (faire entrer le CO₂) et **ne pas se dessécher**, selon la lumière (nuit, midi) et son état hydrique (sol sec). Aucune position n'est gagnante : c'est un compromis."
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "difficulte": 1,
+      "titre": "Le bilan et les deux phases de la photosynthèse",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Écris l'équation-bilan de la photosynthèse.\n2. Présente les **deux phases** de la photosynthèse : où chacune se déroule dans le chloroplaste, si elle exige la lumière, ce qui s'y passe et ce qui en sort.\n3. D'où provient le dioxygène rejeté par la plante ? Écris l'équation de la réaction qui le produit.",
+      "bareme": [
+        { "critere": "Équation-bilan juste : 6 CO₂ + 6 H₂O + lumière → C₆H₁₂O₆ + 6 O₂", "points": 4 },
+        { "critere": "Les deux phases : lieu, rôle de la lumière, réactions (photolyse, cycle de Calvin, RuBisCO), produits", "points": 10 },
+        { "critere": "O₂ issu de l'eau et équation de la photolyse", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **6 CO₂ + 6 H₂O + lumière → C₆H₁₂O₆ + 6 O₂**.\n2. **Phase photochimique** : dans les **thylakoïdes**, où sont les pigments ; la lumière y est **indispensable** ; on y réalise la **photolyse de l'eau** et la production d'**ATP** et de **RH₂** ; il en sort **O₂, ATP et RH₂**. **Phase non photochimique** : dans le **stroma** ; elle n'exige pas directement la lumière ; le **cycle de Calvin** y réduit le CO₂ grâce à l'ATP et aux RH₂, l'enzyme **RuBisCO** fixant le CO₂ sur un sucre à 5 carbones ; il en sort des **trioses phosphates**, précurseurs du glucose. Les deux phases sont couplées.\n3. Le dioxygène provient de **l'eau**, et non du CO₂ : il est produit par la **photolyse** : **2 H₂O → 4 H⁺ + 4 e⁻ + O₂**."
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "difficulte": 2,
+      "titre": "Pourquoi les feuilles sont vertes",
+      "consigne": "Exploite les données du document et rédige des réponses justifiées.",
+      "enonce": "**Document – Deux spectres mesurés sur une feuille d'épinard.**\n\n| Longueur d'onde (couleur) | Absorption par les pigments | Efficacité photosynthétique (O₂ dégagé) |\n|---|---|---|\n| 440 nm (bleu) | Très forte | Très forte |\n| 550 nm (vert) | Faible | Faible |\n| 600 nm (orangé) | Moyenne | Moyenne |\n| 670 nm (rouge) | Forte | Forte |\n\n1. Quels pigments absorbent le bleu ? Lesquels absorbent aussi le rouge ?\n2. Explique pourquoi les feuilles nous paraissent vertes.\n3. Comment appelle-t-on la colonne « efficacité photosynthétique » ? Que montre sa superposition avec la colonne d'absorption ?\n4. Sonia éclaire une plante uniquement en lumière verte. Prévois l'intensité de sa photosynthèse et justifie.",
+      "bareme": [
+        { "critere": "Chlorophylles a et b (bleu et rouge), caroténoïdes (bleu)", "points": 4 },
+        { "critere": "Vert réfléchi, car aucun pigment ne l'absorbe", "points": 5 },
+        { "critere": "Spectre d'action superposé au spectre d'absorption : ce sont ces pigments qui captent l'énergie utilisée", "points": 7 },
+        { "critere": "Prévision justifiée : photosynthèse faible en lumière verte", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Les **chlorophylles a et b** absorbent le **bleu et le rouge** ; les **caroténoïdes** (jaune-orangé) absorbent le **bleu**.\n2. Le vert est très peu absorbé par les pigments (absorption faible à 550 nm) : il est **réfléchi** et c'est lui qui parvient à notre œil. Les feuilles sont vertes parce que le vert est la couleur **qu'aucun pigment n'absorbe**, et non parce que la chlorophylle absorberait le vert.\n3. C'est le **spectre d'action** : l'efficacité photosynthétique selon la longueur d'onde. Il **se superpose au spectre d'absorption** : la photosynthèse est efficace là où les pigments absorbent (bleu, rouge) et faible là où ils n'absorbent pas (vert). C'est la preuve que ce sont **bien ces pigments** qui captent l'énergie lumineuse utilisée par la photosynthèse, et non d'autres molécules.\n4. En lumière verte, les pigments absorbent peu : la phase photochimique fonctionne mal, donc la photosynthèse de la plante de Sonia sera **faible** (comme le montre l'efficacité faible à 550 nm)."
+    },
+    {
+      "chapitre": "bd05a50e-5635-56b8-a412-e60c885945a1",
+      "difficulte": 3,
+      "titre": "Deux expériences sur des algues",
+      "consigne": "Exploite chaque expérience, puis rédige une synthèse du fonctionnement du chloroplaste.",
+      "enonce": "**Expérience 1 – Oxygène marqué.** Des algues chlorophylliennes sont éclairées dans deux milieux. Milieu 1 : eau contenant de l'oxygène lourd (H₂¹⁸O), CO₂ ordinaire. Milieu 2 : eau ordinaire, CO₂ contenant de l'oxygène lourd (C¹⁸O₂).\n\n| Milieu | Dioxygène dégagé |\n|---|---|\n| 1 | Contient de l'oxygène lourd ¹⁸O |\n| 2 | Ne contient pas d'oxygène lourd |\n\n**Expérience 2 – Lumière puis obscurité.** Des algues éclairées reçoivent du CO₂ contenant du carbone radioactif. On mesure la fixation du carbone dans des molécules organiques. À t = 0, on éteint la lumière : la fixation continue pendant **quelques secondes**, puis s'arrête.\n\n**Document 3 – Un tubercule.** Dans un tubercule de pomme de terre, le glucose issu de la photosynthèse est stocké sous forme d'un polymère qui se colore en bleu-noir à l'eau iodée.\n\n1. Que montre l'expérience 1 sur l'origine du dioxygène ? Écris la réaction correspondante et situe-la dans le chloroplaste.\n2. Explique les résultats de l'expérience 2 : pourquoi la fixation continue-t-elle quelques secondes, puis s'arrête-t-elle ?\n3. Quelle enzyme réalise la fixation du CO₂ ? Où agit-elle ?\n4. Nomme la molécule de réserve du document 3 et cite deux autres devenirs du glucose.",
+      "bareme": [
+        { "critere": "Expérience 1 : O₂ issu de l'eau et non du CO₂, photolyse 2 H₂O → 4 H⁺ + 4 e⁻ + O₂ dans les thylakoïdes", "points": 6 },
+        { "critere": "Expérience 2 : couplage des phases, ATP et RH₂ restants puis épuisés, cycle de Calvin arrêté", "points": 6 },
+        { "critere": "RuBisCO, dans le stroma, fixe le CO₂ sur un sucre à 5 carbones", "points": 4 },
+        { "critere": "Amidon, et deux devenirs parmi cellulose, saccharose exporté, respiration", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. L'oxygène lourd se retrouve dans le O₂ dégagé **seulement quand il est apporté par l'eau** (milieu 1), jamais quand il est dans le CO₂ (milieu 2). Le dioxygène rejeté **provient donc de l'eau**, et non du CO₂. Il est produit par la **photolyse de l'eau** : **2 H₂O → 4 H⁺ + 4 e⁻ + O₂**, au cours de la **phase photochimique**, dans les **thylakoïdes**.\n2. La fixation du CO₂ se fait dans le **cycle de Calvin** (phase non photochimique), qui consomme l'**ATP** et les **RH₂** produits par la phase photochimique. À l'extinction, il reste un peu d'ATP et de RH₂ : le cycle fonctionne encore **quelques secondes**. Sans lumière, la phase photochimique n'en produit plus : une fois ce stock épuisé, le **cycle de Calvin s'arrête**. Les deux phases sont **couplées**.\n3. C'est la **RuBisCO**, dans le **stroma** du chloroplaste : elle fixe le CO₂ sur un sucre à 5 carbones. C'est probablement la protéine la plus abondante de la biosphère.\n4. C'est l'**amidon**, forme de **réserve** du glucose (graines, tubercules, racines). Autres devenirs : la **cellulose** (paroi des cellules, charpente de la plante), le **saccharose** exporté par le phloème vers les organes non chlorophylliens, la consommation par la **respiration** qui fournit l'ATP de la plante."
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "difficulte": 1,
+      "titre": "La fleur et ses deux pollinisations",
+      "consigne": "Réponds à chaque question par des phrases précises ou un tableau.",
+      "enonce": "1. Nomme les **quatre verticilles** d'une fleur et le rôle de chacun.\n2. Que deviennent l'ovule et l'ovaire après la fécondation ?\n3. Compare l'**anémogamie** et la **zoogamie** : le pollen, l'aspect de la fleur, un exemple de plante, le bilan.",
+      "bareme": [
+        { "critere": "Sépales, pétales, étamines, pistil et leur rôle", "points": 7 },
+        { "critere": "Ovule → graine, ovaire → fruit", "points": 4 },
+        { "critere": "Comparaison anémogamie / zoogamie sur les quatre points", "points": 9 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. **Sépales** (calice) : protéger le bouton. **Pétales** (corolle) : attirer visuellement. **Étamines** : produire le **pollen**. **Pistil** (carpelles) : stigmate, style et **ovaire** contenant les ovules.\n2. L'**ovule** devient la **graine** (embryon + réserves) ; l'**ovaire** devient le **fruit**.\n3. **Anémogamie** (vent) : pollen **léger, en énormes quantités** ; fleur **discrète**, sans pétales voyants ni nectar ; ex. graminées, conifères, noisetier ; bilan : **beaucoup de gaspillage**, d'où les allergies. **Zoogamie** (animaux) : pollen **lourd et collant, en petite quantité** ; fleur **voyante, odorante, avec du nectar** ; ex. la grande majorité des plantes à fleurs ; bilan : **beaucoup plus économe**."
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "difficulte": 2,
+      "titre": "L'herbier de Jade",
+      "consigne": "Pour chaque plante, identifie le mode de pollinisation ou de dissémination en justifiant par des indices précis.",
+      "enonce": "**Situation.** Jade prépare un herbier et note ses observations.\n\n> **Noisetier** : longs chatons jaunâtres, sans pétales ni nectar ; au moindre souffle, un nuage de pollen s'en échappe.\n> **Sauge** : fleur violette très odorante, avec du nectar au fond ; pollen collant, peu abondant.\n> **Érable** : fruits munis d'une aile, qui tournoient en tombant.\n> **Cerisier** : fruits rouges, charnus et sucrés.\n> **Bardane** : fruits couverts de petits crochets qui s'accrochent aux vêtements.\n\n1. Identifie le mode de pollinisation du noisetier et de la sauge. Justifie.\n2. Identifie le mode de dissémination de l'érable, du cerisier et de la bardane. Justifie.\n3. Le frère de Jade est allergique au pollen au printemps. Lequel des deux modes de pollinisation est en cause ? Explique.",
+      "bareme": [
+        { "critere": "Noisetier = anémogamie, sauge = zoogamie, avec indices justes", "points": 7 },
+        { "critere": "Érable = anémochorie, cerisier = zoochorie, bardane = épizoochorie, avec indices", "points": 8 },
+        { "critere": "Allergies liées à l'anémogamie : pollen léger en énormes quantités dans l'air", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Noisetier : anémogamie** (pollinisation par le vent) : fleurs discrètes sans pétales ni nectar, pollen léger libéré en grande quantité au moindre souffle. **Sauge : zoogamie** (par les animaux) : fleur voyante, odorante, avec du nectar qui attire les pollinisateurs, pollen collant peu abondant qui s'accroche à leur corps.\n2. **Érable : anémochorie** : son fruit ailé (samare) est emporté par le vent. **Cerisier : zoochorie** : fruit charnu et sucré, mangé par un animal qui rejette la graine plus loin. **Bardane : épizoochorie** : les crochets s'accrochent au pelage des animaux (ou aux vêtements) qui transportent le fruit.\n3. C'est l'**anémogamie** : les plantes pollinisées par le vent libèrent du pollen **léger en énormes quantités**, qui flotte dans l'air et que l'on respire ; ce gaspillage explique les **allergies** (graminées, noisetier...). Le pollen lourd et collant des plantes zoogames reste sur les fleurs et les animaux."
+    },
+    {
+      "chapitre": "5701a36d-8175-5549-81bc-0f340a02f819",
+      "difficulte": 3,
+      "titre": "L'orchidée de Darwin et le fraisier",
+      "consigne": "Exploite les documents et rédige des réponses argumentées avec le vocabulaire du cours.",
+      "enonce": "**Document 1 – Une prédiction.** L'orchidée malgache *Angraecum sesquipedale* cache son nectar au fond d'un éperon long de **30 cm**. En 1862, Darwin en déduit l'existence d'un papillon à trompe aussi longue. Ce papillon est découvert une quarantaine d'années plus tard.\n\n**Document 2 – Deux dispositifs.**\n> a) Chez une plante, les étamines libèrent leur pollen trois jours avant que le stigmate de la même fleur soit réceptif.\n> b) Chez le kiwi, certains pieds ne portent que des fleurs mâles, d'autres que des fleurs femelles.\n\n**Document 3 – Le fraisier.** Un fraisier produit des fleurs puis des fruits, mais aussi de longs **stolons** qui s'enracinent et donnent de nouveaux pieds autour de lui.\n\n1. Explique la prédiction de Darwin à l'aide de la notion de coévolution. Pourquoi cette coévolution ne suppose-t-elle aucune intention ?\n2. Quel est l'effet commun des deux dispositifs du document 2 ? Nomme-les et explique l'intérêt de ce résultat.\n3. Compare les deux modes de reproduction du fraisier : leurs avantages et leurs limites respectives.",
+      "bareme": [
+        { "critere": "Coévolution : pressions de sélection réciproques, trompe et éperon ajustés ; pas d'intention, sélection naturelle sur des millions d'années", "points": 7 },
+        { "critere": "Maturation décalée et dioécie, qui évitent l'autofécondation ; l'allofécondation brasse davantage", "points": 6 },
+        { "critere": "Reproduction sexuée (innovation, dispersion lointaine) et multiplication végétative (occupation rapide, clone sans diversité)", "points": 7 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Chaque partenaire exerce une **pression de sélection** sur l'autre : seuls les papillons à trompe assez longue atteignent le nectar, et seules les orchidées à éperon assez long obligent le papillon à se frotter contre le pollen. Les deux lignées ont donc évolué **conjointement** : c'est la **coévolution**. Darwin en a déduit qu'un papillon à trompe d'environ 30 cm devait exister. Cette coévolution ne suppose **aucune intention** : c'est un **ajustement réciproque par sélection naturelle**, sur des millions d'années.\n2. Les deux dispositifs **évitent l'autofécondation**. a) **Maturation décalée** : étamines et pistil d'une même fleur ne sont pas mûrs en même temps. b) **Dioécie** : les sexes sont sur des pieds différents. Leur intérêt : favoriser l'**allofécondation**, qui **brasse davantage** les génomes et produit plus de diversité.\n3. **Reproduction sexuée** (fleurs, fruits, graines) : elle crée de la **diversité** (innovation) et permet la **dispersion lointaine** des graines ; mais elle est plus lente et dépend de la pollinisation. **Multiplication végétative** (stolons) : **rapide et sûre** pour occuper un milieu déjà favorable, mais elle produit un **clone**, sans diversité nouvelle. Les deux modes coexistent : le sexué pour l'innovation et la dispersion, le végétatif pour l'occupation locale."
+    },
+    {
+      "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+      "difficulte": 1,
+      "titre": "Aux origines de la domestication",
+      "consigne": "Réponds à chaque question par des phrases précises.",
+      "enonce": "1. Quand et où la domestication des plantes a-t-elle commencé ? Quel geste a suffi à enclencher une sélection ?\n2. Cite **quatre caractères** sélectionnés sans le savoir par les premiers agriculteurs, et explique pourquoi chacun a été retenu.\n3. Pourquoi dit-on que les plantes cultivées « dépendent désormais de nous » ?",
+      "bareme": [
+        { "critere": "Il y a environ 10 000 ans, plusieurs foyers indépendants, semer ce qu'on a récolté", "points": 5 },
+        { "critere": "Quatre caractères et la raison de leur sélection", "points": 10 },
+        { "critere": "Plantes incapables de se disséminer seules", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Il y a environ **10 000 ans**, au Néolithique, **indépendamment** au Proche-Orient, en Chine et en Mésoamérique. Des groupes humains cessent de seulement récolter : ils **sèment ce qu'ils ont récolté**. Ce geste suffit à enclencher une sélection.\n2. **Épis qui ne se désarticulent pas** : ceux qui perdent leurs graines au sol ne sont pas récoltés, donc pas ressemés. **Grains gros** : ils sont préférés à la récolte. **Germination simultanée** : elle permet une récolte unique. **Absence d'amertume** : elle rend la plante comestible.\n3. Les plantes domestiquées gardent leurs graines sur l'épi et ne se dispersent plus : elles sont plus productives mais **incapables de se disséminer seules**. Sans l'agriculteur qui sème, elles ne se maintiendraient pas : elles dépendent de nous, comme nous d'elles."
+    },
+    {
+      "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+      "difficulte": 2,
+      "titre": "Du maïs sauvage au maïs hybride",
+      "consigne": "Exploite les informations et justifie tes réponses avec les notions du cours.",
+      "enonce": "**Document 1 – Téosinte et maïs.**\n\n| | Téosinte sauvage | Maïs actuel |\n|---|---|---|\n| Grains par épi | Une dizaine, durs | Des centaines, tendres |\n| L'épi | Minuscule et cassant | Solide, enveloppé de bractées |\n\n**Document 2 – Le choix de Karim.** Karim, agriculteur, sème des semences de maïs **hybride F1** issues du croisement de deux lignées pures. Son champ est très homogène et productif. L'année suivante, pour économiser, il ressème les grains récoltés (génération F2) : les plants sont inégaux et le rendement baisse.\n\n1. Compare la téosinte et le maïs. Explique comment on est passé de l'une à l'autre, et en combien de temps.\n2. Pourquoi l'épi « cassant » de la téosinte a-t-il disparu chez le maïs cultivé ?\n3. Explique le succès de la première année de Karim, puis sa déception. Quelle conséquence économique en tire-t-il ?",
+      "bareme": [
+        { "critere": "Comparaison juste et sélection artificielle sur quelques milliers d'années, sur un petit nombre de gènes", "points": 6 },
+        { "critere": "Épi solide retenu car les épis qui se cassent perdent leurs grains avant la récolte", "points": 6 },
+        { "critere": "Vigueur hybride de la F1, perte d'homogénéité en F2, obligation de racheter des semences", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La téosinte a une dizaine de grains durs sur un épi minuscule et cassant ; le maïs a des centaines de grains tendres sur un épi solide enveloppé de bractées. On est passé de l'une à l'autre par une **sélection artificielle** : les agriculteurs ont ressemé les graines des plantes qui leur convenaient. **Quelques milliers d'années** de sélection sur un **très petit nombre de gènes** ont suffi.\n2. Un épi cassant perd ses grains au sol avant la récolte : ces grains ne sont **pas récoltés, donc pas ressemés**. Les épis solides, eux, sont récoltés puis semés : leur caractère a été sélectionné, **sans que les agriculteurs le cherchent**.\n3. La première année, les semences F1 issues du croisement de deux lignées pures montrent la **vigueur hybride** : l'hybride F1 est supérieur à ses deux lignées parentales, et tous les plants sont semblables (champ homogène). En ressemant la récolte, Karim obtient une génération **F2 qui perd l'homogénéité** : plants inégaux, rendement plus faible. Conséquence : pour garder les avantages de la F1, il doit **racheter des semences** chaque année."
+    },
+    {
+      "chapitre": "7a6ff29e-277d-5a73-8537-3ada8fa10f08",
+      "difficulte": 3,
+      "titre": "Le prix de l'uniformité",
+      "consigne": "Exploite les documents et rédige une argumentation structurée.",
+      "enonce": "**Document 1 – Irlande, 1845.** Une grande partie de la population irlandaise se nourrit de pommes de terre, cultivées à partir d'un très petit nombre de variétés multipliées par tubercules. En 1845, le **mildiou**, un parasite, ravage les cultures de toute l'île.\n\n**Document 2 – La domestication, un goulot.** La diversité génétique des plantes cultivées est très inférieure à celle de leurs ancêtres sauvages.\n\n**Document 3 – Le Svalbard.** Sur une île norvégienne, une banque de semences conserve près d'un million d'échantillons de plantes cultivées du monde entier.\n\n**Document 4 – Deux sélectionneurs.** Anna veut une variété de pomme de terre résistante au mildiou. Elle hésite entre une sélection **massale** et la **transgenèse**.\n\n1. Explique pourquoi la domestication a réduit la diversité génétique des plantes cultivées (document 2).\n2. Explique pourquoi l'épidémie du document 1 a pu ravager toute l'île.\n3. À quoi sert la banque du document 3 ? Cite deux autres réservoirs de diversité à préserver.\n4. Compare les deux techniques envisagées par Anna : principe et limite de chacune.",
+      "bareme": [
+        { "critere": "Goulot d'étranglement : quelques plantes sélectionnées, allèles perdus", "points": 5 },
+        { "critere": "Uniformité génétique : un seul parasite adapté atteint toute la culture", "points": 5 },
+        { "critere": "Banque de semences conservant des allèles pour les sélections futures ; variétés paysannes, apparentés sauvages", "points": 5 },
+        { "critere": "Massale (ressemer les meilleurs pieds, lente et imprécise) et transgenèse (gène précis, encadrement et débat)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La domestication part d'un **petit nombre** de plantes sauvages, puis ne ressème que celles qui présentent les caractères voulus : les allèles des autres sont perdus. C'est un **goulot d'étranglement** : la diversité des plantes cultivées est très inférieure à celle de leurs ancêtres sauvages.\n2. Les pommes de terre irlandaises provenaient de très peu de variétés, multipliées par tubercules (des clones) : la population cultivée était **génétiquement uniforme**. Une population uniforme est **vulnérable** : un parasite adapté à une plante l'est à toutes. Le mildiou a donc pu ravager **toute** la culture de l'île.\n3. Les **banques de semences**, comme celle du Svalbard, conservent des **allèles** qui pourront servir aux **sélections futures** (par exemple un allèle de résistance à un parasite). Autres réservoirs : les **variétés paysannes** et les **apparentés sauvages**, réservoir d'origine de la diversité.\n4. **Sélection massale** : ressemer (ou replanter) les meilleurs pieds, ici ceux qui résistent le mieux au mildiou ; limite : **lente et imprécise**. **Transgenèse** : introduire un **gène précis**, éventuellement d'une autre espèce, qui confère la résistance ; limite : un **encadrement réglementaire** et un **débat public** sur ses effets écologiques, sanitaires et économiques. Dans les deux cas, Anna a besoin de la diversité conservée pour trouver un allèle de résistance."
+    }
+  ]
+}

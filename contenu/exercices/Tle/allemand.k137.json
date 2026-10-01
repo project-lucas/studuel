@@ -1,0 +1,3674 @@
+{
+ "niveau": "Tle",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "ff33c871-1fdd-5899-9cf3-a995b1cb8ec5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Stopp, nicht teilen !",
+   "competence": "comprendre-langue",
+   "situation": "Lena reçoit une nouvelle alarmante sur son téléphone. Lis sa conversation avec Murat, puis réponds.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Murat",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Hast du die Nachricht gesehen? Die Schule soll ab Montag geschlossen werden!"
+      },
+      {
+       "qui": "Murat",
+       "texte": "Woher hast du das? Das ist bestimmt eine [[f|Falschmeldung]]."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Es steht in einem Post ohne Quelle."
+      },
+      {
+       "qui": "Murat",
+       "texte": "Dann teile es nicht! Erst die Quelle prüfen, dann weitersagen."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Stimmt. Auf der Schulwebsite steht nichts davon."
+      },
+      {
+       "qui": "Murat",
+       "texte": "Siehst du? Gut, dass du die Nachricht nicht geteilt hast."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche, dans la conversation, le mot qui veut dire « fausse information ».",
+     "aide": "Murat porte un jugement sur la nouvelle : cherche son mot composé.",
+     "explication": "**Falschmeldung** : « falsch » (faux) + « Meldung » (information). C’est le mot que Murat emploie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conseille Murat à Lena avant de transmettre une nouvelle ?",
+     "options": [
+      "Vérifier d’où vient la nouvelle avant de la relayer",
+      "La relayer tout de suite pour prévenir les autres",
+      "La supprimer puis quitter définitivement le réseau",
+      "L’envoyer d’abord à toute la classe pour avis"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de Murat qui commence par « Dann teile es nicht ».",
+     "explication": "Murat dit : « Erst die Quelle prüfen, dann weitersagen » : **vérifier la source, puis transmettre**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où Lena trouve-t-elle la preuve que la nouvelle est fausse ?",
+     "options": [
+      "Sur le site internet de son école",
+      "Dans un message de son professeur",
+      "Dans un article du journal Der Spiegel",
+      "Dans une vidéo envoyée par Murat"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’avant-dernière réplique de Lena.",
+     "explication": "« Auf der Schulwebsite steht nichts davon » : la preuve est **sur le site de l’école**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot allemand à son sens français.",
+     "paires": [
+      [
+       "die Quelle",
+       "la source"
+      ],
+      [
+       "teilen",
+       "partager"
+      ],
+      [
+       "die sozialen Netzwerke",
+       "les réseaux sociaux"
+      ],
+      [
+       "die Falschmeldung",
+       "la fausse information"
+      ]
+     ],
+     "aide": "« teilen » est aussi le verbe du bouton « partager ».",
+     "explication": "**die Quelle** = la source, **teilen** = partager, **die sozialen Netzwerke** = les réseaux sociaux, **die Falschmeldung** = la fausse information."
+    }
+   ]
+  },
+  {
+   "chapitre": "ff33c871-1fdd-5899-9cf3-a995b1cb8ec5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un clic ou un vrai engagement ?",
+   "competence": "analyser-document",
+   "situation": "Dans ton lycée, on débat de l’utilité des hashtags. Croise le tableau des mouvements et la discussion de deux élèves.",
+   "documents": [
+    {
+     "id": "mouv",
+     "type": "tableau",
+     "titre": "Drei Bewegungen im Netz",
+     "colonnes": [
+      "Bewegung",
+      "Thema"
+     ],
+     "lignes": [
+      [
+       "#aufschrei (2013)",
+       "Sexismus im Alltag"
+      ],
+      [
+       "#MeTwo (2018)",
+       "Rassismus im Alltag"
+      ],
+      [
+       "Fridays for Future",
+       "Klimaschutz und Demonstrationen"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "debatte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Die Diskussion",
+     "blocs": [
+      "Jonas findet: Ein Klick auf „Gefällt mir“ ist noch kein Engagement. Wer wirklich etwas ändern will, muss mehr tun.",
+      "Hannah widerspricht: Ein Hashtag eröffnet die Debatte, die dann auf der Straße und bei den Wahlen weitergeht. Sie hat selbst eine Online-Petition an den Bundestag unterschrieben."
+     ],
+     "source": "Discussion écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mouv",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche, dans le tableau, la case qui donne le thème du mouvement #MeTwo.",
+     "aide": "Cherche la ligne #MeTwo, puis la colonne « Thema ».",
+     "explication": "**Rassismus im Alltag** : #MeTwo rassemble des témoignages de racisme vécu au quotidien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’argument de Jonas ?",
+     "options": [
+      "Un simple clic ne remplace pas un véritable engagement",
+      "Les hashtags sont interdits par la loi allemande",
+      "Les pétitions envoyées au Bundestag ne sont pas reconnues",
+      "Les réseaux sociaux ne servent qu’à faire rire les élèves"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier paragraphe.",
+     "explication": "Pour Jonas, **un clic n’est pas un engagement** : il faut « mehr tun », faire davantage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse Hannah lui oppose-t-elle ?",
+     "options": [
+      "Le hashtag lance un débat que la rue et les urnes poursuivent",
+      "Le clic suffit à tout changer, la rue devient donc inutile",
+      "Les hashtags doivent disparaître pour protéger la démocratie",
+      "Seules les élections comptent, pas le débat public en ligne"
+     ],
+     "reponse": 0,
+     "aide": "Cherche ce que fait le hashtag selon elle : « eröffnet die Debatte ».",
+     "explication": "Hannah pense que le hashtag **ouvre le débat**, qui continue ensuite dans la rue et aux élections."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la pétition de Hannah.",
+     "texte": "Sie hat eine Online-Petition ___ den Bundestag unterschrieben.",
+     "reponses": [
+      [
+       "an"
+      ]
+     ],
+     "banque": [
+      "an",
+      "in",
+      "mit",
+      "nach"
+     ],
+     "aide": "On adresse une pétition « à » quelqu’un.",
+     "explication": "On écrit une pétition **an** den Bundestag (accusatif) : elle lui est adressée."
+    }
+   ]
+  },
+  {
+   "chapitre": "ff33c871-1fdd-5899-9cf3-a995b1cb8ec5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "NetzDG, Deepfakes : qui règle le jeu ?",
+   "competence": "analyser-texte",
+   "situation": "Un journal lycéen publie un dossier sur les règles d’Internet en Allemagne et en Europe. Lis-le attentivement.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Regeln für das Netz",
+     "blocs": [
+      "Seit 2017 verpflichtet das Netzwerkdurchsetzungsgesetz (NetzDG) große Plattformen dazu, offensichtlich rechtswidrige Inhalte schnell zu löschen.",
+      "Kritiker fürchten, dass die Plattformen im Zweifel zu viel löschen und damit die Meinungsfreiheit einschränken. Befürworter antworten, dass die [[h|Hassrede]] Menschen aus der Debatte vertreibt.",
+      "Inzwischen hat auch die Europäische Union das Thema übernommen. Künstlich erzeugte Bilder und Stimmen, sogenannte Deepfakes, müssen künftig gekennzeichnet werden."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche, dans l’article, le mot qui veut dire « discours de haine ».",
+     "aide": "C’est un mot composé : « Hass » signifie la haine.",
+     "explication": "**die Hassrede** : « Hass » (haine) + « Rede » (discours)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle crainte les critiques de la loi expriment-ils ?",
+     "options": [
+      "Que les plateformes suppriment trop de contenus par précaution",
+      "Que les plateformes ne suppriment plus aucun contenu du tout",
+      "Que l’État prenne le contrôle de tous les journaux du pays",
+      "Que les utilisateurs quittent massivement les réseaux sociaux"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le verbe « löschen » (supprimer) dans la deuxième phrase.",
+     "explication": "Les critiques craignent que les plateformes **suppriment trop** (« zu viel löschen ») et limitent la liberté d’expression."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les partisans de la loi la défendent-ils ?",
+     "options": [
+      "Parce que la haine éloigne certaines personnes du débat public",
+      "Parce que les plateformes gagneraient ainsi plus d’argent",
+      "Parce que les utilisateurs souhaitent rester anonymes en ligne",
+      "Parce que l’Union européenne l’a imposée à l’Allemagne en 2017"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin du deuxième paragraphe : que fait la Hassrede ?",
+     "explication": "La Hassrede « vertreibt Menschen aus der Debatte » : pour les partisans, **la haine chasse des gens du débat**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au passif.",
+     "texte": "Deepfakes ___ künftig gekennzeichnet ___.",
+     "reponses": [
+      [
+       "müssen"
+      ],
+      [
+       "werden"
+      ]
+     ],
+     "banque": [
+      "müssen",
+      "werden",
+      "sind",
+      "haben"
+     ],
+     "aide": "Passif : werden + participe II, avec un verbe modal devant.",
+     "explication": "Le passif avec modal : **müssen** … gekennzeichnet **werden** (« doivent être signalés »)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à sa traduction.",
+     "paires": [
+      [
+       "die Plattform",
+       "la plateforme"
+      ],
+      [
+       "löschen",
+       "supprimer"
+      ],
+      [
+       "rechtswidrig",
+       "illégal"
+      ],
+      [
+       "die Meinungsfreiheit",
+       "la liberté d’expression"
+      ]
+     ],
+     "aide": "Relis les deux premiers paragraphes pour retrouver ces mots.",
+     "explication": "**löschen** = supprimer, **rechtswidrig** = contraire au droit, donc illégal, **die Meinungsfreiheit** = la liberté d’expression."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b3bdc41-23b2-56c4-b8d8-1685a0f84532",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Kulturtag in Weimar",
+   "competence": "analyser-document",
+   "situation": "Ta classe d’allemand prépare une sortie à Weimar, la ville de Goethe et de Schiller. Lis l’affiche du programme.",
+   "documents": [
+    {
+     "id": "plakat",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Kulturtag in Weimar",
+     "sousTitre": "Samstag, 10 Uhr – Treffpunkt: Theaterplatz",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Führung: Auf den Spuren von Goethe und Schiller",
+       "id": "fuehrung"
+      },
+      {
+       "texte": "Besuch im Deutschen Nationaltheater",
+       "id": "theater"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Lesung: Gedichte der Romantik",
+       "id": "lesung"
+      },
+      {
+       "texte": "Eintritt: 8 €, Schüler 4 €",
+       "id": "preis"
+      }
+     ],
+     "pied": "Anmeldung bis Freitag im Sekretariat",
+     "teinte": "violet",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plakat",
+     "reponse": [
+      "lesung"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui annonce une lecture de poèmes.",
+     "aide": "« Gedichte » veut dire poèmes.",
+     "explication": "**Lesung: Gedichte der Romantik** : une lecture de poèmes romantiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien un élève paie-t-il l’entrée, en euros ?",
+     "reponse": 4,
+     "unite": "€",
+     "aide": "Regarde la ligne « Eintritt » : le plein tarif et le tarif élève.",
+     "explication": "« Schüler 4 € » : un élève paie **4 euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand et à quelle heure commence la sortie ?",
+     "options": [
+      "Le samedi, à dix heures",
+      "Le vendredi, à dix heures",
+      "Le samedi, à quatorze heures",
+      "Le dimanche, à dix heures"
+     ],
+     "reponse": 0,
+     "aide": "Attention : le vendredi est la date limite d’inscription.",
+     "explication": "« Samstag, 10 Uhr » : **le samedi à dix heures**. Le vendredi est seulement la date limite d’inscription."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot de l’affiche à son sens.",
+     "paires": [
+      [
+       "die Führung",
+       "la visite guidée"
+      ],
+      [
+       "die Lesung",
+       "la lecture publique"
+      ],
+      [
+       "der Eintritt",
+       "le prix d’entrée"
+      ],
+      [
+       "die Anmeldung",
+       "l’inscription"
+      ]
+     ],
+     "aide": "Pense à ce que tu fais avant d’entrer dans un musée.",
+     "explication": "**Führung** = visite guidée, **Lesung** = lecture publique, **Eintritt** = entrée (et son prix), **Anmeldung** = inscription."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b3bdc41-23b2-56c4-b8d8-1685a0f84532",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Brecht au lycée : faire réfléchir",
+   "competence": "analyser-texte",
+   "situation": "Le club de théâtre de ton lycée monte une pièce de Bertolt Brecht. Lis l’article du journal de l’établissement.",
+   "documents": [
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Eine Schulaufführung von Brecht",
+     "blocs": [
+      "Die Theater-AG unseres Gymnasiums führt „Mutter Courage und ihre Kinder“ von Bertolt Brecht auf. Die Schauspieler sprechen manchmal direkt zum Publikum, und Schilder erklären, was passiert. Das Publikum soll nicht weinen, sondern nachdenken.",
+      "Die Regisseurin erklärt, dass die Zuschauer immer daran denken sollen: Wir sind im Theater. Deshalb nennt man diese Technik den [[v|Verfremdungseffekt]]."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "presse",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot allemand qui désigne l’effet de distanciation.",
+     "aide": "C’est un très long mot composé, dans le deuxième paragraphe.",
+     "explication": "**der Verfremdungseffekt** : l’effet qui rend le théâtre « étrange » pour que le spectateur réfléchisse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les acteurs s’adressent-ils directement au public ?",
+     "options": [
+      "Pour rappeler aux spectateurs qu’ils sont au théâtre",
+      "Pour que les spectateurs oublient qu’ils sont au théâtre",
+      "Parce qu’ils ont oublié leur texte pendant la répétition",
+      "Pour demander de l’argent aux spectateurs à la sortie"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui commence par « Die Regisseurin erklärt ».",
+     "explication": "La metteuse en scène veut que les spectateurs pensent : « Wir sind im Theater ». Les acteurs **rappellent donc qu’on est au théâtre**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la conjonction qui oppose les deux idées.",
+     "texte": "Das Publikum soll nicht weinen, ___ nachdenken.",
+     "reponses": [
+      [
+       "sondern"
+      ]
+     ],
+     "banque": [
+      "sondern",
+      "aber",
+      "denn",
+      "weil"
+     ],
+     "aide": "Après une négation, on oppose avec « mais plutôt ».",
+     "explication": "**nicht … sondern** : « non pas pleurer, mais réfléchir »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique dans la bonne colonne.",
+     "categories": [
+      "Théâtre traditionnel",
+      "Théâtre de Brecht"
+     ],
+     "items": [
+      [
+       "Le spectateur s’identifie et pleure",
+       0
+      ],
+      [
+       "Les acteurs parlent au public",
+       1
+      ],
+      [
+       "Des pancartes expliquent l’action",
+       1
+      ],
+      [
+       "On veut faire oublier qu’on est au théâtre",
+       0
+      ]
+     ],
+     "aide": "Brecht veut faire réfléchir, pas faire pleurer.",
+     "explication": "Chez **Brecht** : adresse au public, pancartes, réflexion. Le **théâtre traditionnel** cherche l’identification et l’illusion."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b3bdc41-23b2-56c4-b8d8-1685a0f84532",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre artistes, quatre scènes",
+   "competence": "analyser-document",
+   "situation": "Tu prépares un exposé sur la culture allemande. Croise le tableau et le petit texte de présentation.",
+   "documents": [
+    {
+     "id": "kuenstler",
+     "type": "tableau",
+     "titre": "Vier Künstler",
+     "colonnes": [
+      "Name",
+      "Kunstform",
+      "Werk"
+     ],
+     "lignes": [
+      [
+       "Fritz Lang",
+       "Film",
+       "Metropolis (1927)"
+      ],
+      [
+       "Maren Ade",
+       "Film",
+       "Toni Erdmann (2016)"
+      ],
+      [
+       "Pina Bausch",
+       "Tanztheater",
+       "Tanztheater Wuppertal"
+      ],
+      [
+       "Bertolt Brecht",
+       "Theater",
+       "Mutter Courage (geschrieben 1939)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "steckbrief",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Wer ist wer ?",
+     "blocs": [
+      "Eine Choreografin leitete ab 1973 in Wuppertal ein Ensemble, in dem die Tänzer auch sprachen und lachten.",
+      "Ein Regisseur zeigte 1927 eine Stadt der Zukunft, in der die Arbeiter unter der Erde lebten.",
+      "Eine Regisseurin gewann 2016 mit einer Komödie über einen Vater und seine Tochter internationale Aufmerksamkeit."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque description à la bonne personne.",
+     "paires": [
+      [
+       "Elle dirige à Wuppertal un « théâtre dansé »",
+       "Pina Bausch"
+      ],
+      [
+       "Il montre des ouvriers qui vivent sous terre",
+       "Fritz Lang"
+      ],
+      [
+       "Elle réalise en 2016 une comédie père-fille",
+       "Maren Ade"
+      ],
+      [
+       "Il écrit une pièce sur une femme en temps de guerre",
+       "Bertolt Brecht"
+      ]
+     ],
+     "aide": "Croise les dates et les œuvres du tableau avec les trois phrases du texte.",
+     "explication": "Wuppertal et 1973 : **Pina Bausch** ; 1927, la ville du futur : **Fritz Lang** ; 2016, père et fille : **Maren Ade** ; *Mutter Courage* : **Brecht**."
+    },
+    {
+     "type": "zone",
+     "document": "kuenstler",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case du tableau qui donne l’œuvre de Fritz Lang.",
+     "aide": "Cherche la ligne de Fritz Lang, puis la colonne « Werk ».",
+     "explication": "**Metropolis (1927)** est le film de Fritz Lang."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « ein Ensemble, in dem die Tänzer auch sprachen », quel mot le pronom relatif « dem » reprend-il ?",
+     "options": [
+      "Ensemble",
+      "Wuppertal",
+      "Choreografin",
+      "Tänzer"
+     ],
+     "reponse": 0,
+     "aide": "« in dem » est masculin ou neutre au datif : quel nom convient ?",
+     "explication": "« dem » reprend **das Ensemble** (neutre, datif après « in ») : le groupe où les danseurs parlent aussi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la préposition qui convient.",
+     "texte": "Die Arbeiter lebten ___ der Erde.",
+     "reponses": [
+      [
+       "unter"
+      ]
+     ],
+     "banque": [
+      "unter",
+      "über",
+      "neben",
+      "hinter"
+     ],
+     "aide": "Dans le film, la ville est au-dessus, les ouvriers sont en dessous.",
+     "explication": "Les ouvriers de Metropolis vivent **unter** der Erde : sous la terre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le film Metropolis de l’écriture de Mutter Courage ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates du tableau.",
+     "explication": "1939 − 1927 = **12 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42ff1a4-10cd-5b56-a0d7-2b9b806b939c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Slogans : ce qu’ils racontent",
+   "competence": "analyser-document",
+   "situation": "Un professeur affiche trois slogans célèbres au tableau. Lis ce tableau.",
+   "documents": [
+    {
+     "id": "slogans",
+     "type": "tableau",
+     "titre": "Drei Slogans",
+     "colonnes": [
+      "Slogan",
+      "Wer / Wann"
+     ],
+     "lignes": [
+      [
+       "Vorsprung durch Technik",
+       "Werbung eines Autoherstellers"
+      ],
+      [
+       "Wir sind das Volk",
+       "Demonstrationen, 1989"
+      ],
+      [
+       "Mehr Demokratie wagen",
+       "Willy Brandt, 1969"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "slogans",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le slogan qui a été scandé lors des manifestations de 1989.",
+     "aide": "Regarde la colonne de droite : cherche « 1989 ».",
+     "explication": "**« Wir sind das Volk »** : slogan des manifestations de 1989 contre la RDA."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année Willy Brandt a-t-il lancé sa formule ?",
+     "reponse": 1969,
+     "aide": "La date est dans la dernière ligne du tableau.",
+     "explication": "Willy Brandt lance « Mehr Demokratie wagen » en **1969**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque slogan à son contexte.",
+     "paires": [
+      [
+       "Vorsprung durch Technik",
+       "une publicité automobile"
+      ],
+      [
+       "Wir sind das Volk",
+       "les manifestations de 1989"
+      ],
+      [
+       "Mehr Demokratie wagen",
+       "un programme politique de 1969"
+      ]
+     ],
+     "aide": "Relis la colonne « Wer / Wann ».",
+     "explication": "Publicité pour une marque de voitures, manifestations de 1989 et programme de Willy Brandt : chaque slogan a son contexte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de vocabulaire.",
+     "texte": "Ein guter Slogan ist kurz und soll die Leute ___.",
+     "reponses": [
+      [
+       "überzeugen"
+      ]
+     ],
+     "banque": [
+      "überzeugen",
+      "vergessen",
+      "ärgern",
+      "verbieten"
+     ],
+     "aide": "Un slogan doit convaincre.",
+     "explication": "**überzeugen** : convaincre. C’est le but d’un slogan."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42ff1a4-10cd-5b56-a0d7-2b9b806b939c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "9 novembre 1989 : une phrase, un Mur",
+   "competence": "analyser-texte",
+   "situation": "Une chronique imaginée revient sur la soirée du 9 novembre 1989. Lis-la.",
+   "documents": [
+    {
+     "id": "abend",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Der Abend des 9. November 1989",
+     "blocs": [
+      "Am Abend des 9. November 1989 gibt Günter Schabowski, Mitglied des Politbüros der SED, eine Pressekonferenz im Fernsehen. Ein Journalist fragt, ab wann die neue Reiseregelung gilt. Schabowski sucht in seinen Papieren und antwortet unsicher: „[[r|Sofort]], [[r|unverzüglich]].“",
+      "Noch in der Nacht öffnen sich die Grenzübergänge in Berlin, und tausende Ostberliner gehen nach Westberlin."
+     ],
+     "source": "Chronique écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abend",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui disent à quel moment la règle s’applique, selon Schabowski.",
+     "aide": "Il répond à la question « ab wann ? » (à partir de quand).",
+     "explication": "**Sofort** et **unverzüglich** : « tout de suite, sans délai »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Mur tombe-t-il cette nuit-là ?",
+     "options": [
+      "Les habitants comprennent que la frontière est ouverte immédiatement",
+      "L’armée reçoit l’ordre de démolir le Mur pendant la nuit",
+      "Les habitants de l’Ouest attaquent les postes de frontière",
+      "La Stasi ouvre ses archives aux journalistes étrangers"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Schabowski, puis le dernier paragraphe.",
+     "explication": "Avec « sofort, unverzüglich », beaucoup comprennent que **la frontière s’ouvre tout de suite** : ils se rendent aux postes-frontières."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les faits dans l’ordre de l’article.",
+     "items": [
+      "Un journaliste pose une question sur la date",
+      "Schabowski répond avec hésitation",
+      "Les postes-frontières s’ouvrent",
+      "Des milliers de gens passent à l’Ouest"
+     ],
+     "aide": "Suis le récit paragraphe par paragraphe.",
+     "explication": "Question du journaliste, réponse hésitante, ouverture des postes-frontières, puis passage de milliers de gens à l’Ouest."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la question indirecte.",
+     "texte": "Ein Journalist fragt, ___ wann die neue Regelung gilt.",
+     "reponses": [
+      [
+       "ab"
+      ]
+     ],
+     "banque": [
+      "ab",
+      "seit",
+      "bis",
+      "nach"
+     ],
+     "aide": "« À partir de quand » se dit avec une préposition qui marque le début.",
+     "explication": "**ab wann** : « à partir de quand ». Le verbe « gilt » part à la fin de la subordonnée interrogative."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « ab wann die neue Reiseregelung gilt », pourquoi « gilt » est-il à la fin ?",
+     "options": [
+      "Parce que c’est une question indirecte introduite par « ab wann »",
+      "Parce que la phrase est racontée au passé composé",
+      "Parce que « Reiseregelung » est un nom composé à l’accusatif",
+      "Parce que « gilt » est un verbe de modalité qui se place en dernier"
+     ],
+     "reponse": 0,
+     "aide": "Dans une subordonnée, où va le verbe conjugué ?",
+     "explication": "C’est une **subordonnée interrogative indirecte** : le verbe conjugué part à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42ff1a4-10cd-5b56-a0d7-2b9b806b939c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand une formule se retourne",
+   "competence": "analyser-document",
+   "situation": "En 1990, une promesse politique a fait date. Croise le tableau des formules célèbres et l’éditorial de la journaliste.",
+   "documents": [
+    {
+     "id": "formeln",
+     "type": "tableau",
+     "titre": "Drei berühmte Formeln",
+     "colonnes": [
+      "Formel",
+      "Wer",
+      "Jahr"
+     ],
+     "lignes": [
+      [
+       "Ich bin ein Berliner",
+       "John F. Kennedy",
+       "1963"
+      ],
+      [
+       "Mehr Demokratie wagen",
+       "Willy Brandt",
+       "1969"
+      ],
+      [
+       "blühende Landschaften",
+       "Helmut Kohl",
+       "1990"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "kommentar",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ein Kommentar",
+     "blocs": [
+      "Helmut Kohl versprach 1990 den Ostdeutschen „blühende Landschaften“. Viele Menschen glaubten ihm. Doch schon wenige Jahre später verloren Millionen Menschen ihre Arbeit, weil viele Fabriken schließen mussten.",
+      "Aus dem [[v|Versprechen]] wurde ein Spottwort: Wer heute von „blühenden Landschaften“ spricht, meint oft das Gegenteil."
+     ],
+     "source": "Commentaire écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "kommentar",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche, dans l’éditorial, le nom qui veut dire « promesse ».",
+     "aide": "Le verbe « versprach » du premier paragraphe est de la même famille.",
+     "explication": "**das Versprechen** : la promesse, devenue un sujet de moquerie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la formule « blühende Landschaften » est-elle devenue ironique ?",
+     "options": [
+      "Parce que le chômage a frappé l’Est malgré la promesse",
+      "Parce que le chancelier a retiré sa promesse en 1990",
+      "Parce que les paysages de l’Est ont été détruits",
+      "Parce que l’Ouest a refusé d’aider les régions de l’Est"
+     ],
+     "reponse": 0,
+     "aide": "Lis la fin du premier paragraphe : que perdent des centaines de milliers de gens ?",
+     "explication": "Des centaines de milliers de personnes ont perdu leur emploi : **la réalité contredit la promesse**, d’où l’ironie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque formule à son effet.",
+     "paires": [
+      [
+       "Ich bin ein Berliner",
+       "Solidarité avec Berlin-Ouest"
+      ],
+      [
+       "Mehr Demokratie wagen",
+       "Programme de réformes"
+      ],
+      [
+       "blühende Landschaften",
+       "Promesse devenue ironique"
+      ]
+     ],
+     "aide": "Utilise les dates du tableau et ton cours.",
+     "explication": "Kennedy (1963) : solidarité ; Brandt (1969) : réformes ; Kohl (1990) : promesse ensuite tournée en dérision."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière phrase.",
+     "texte": "Wer von „blühenden Landschaften“ spricht, meint oft das ___.",
+     "reponses": [
+      [
+       "Gegenteil"
+      ]
+     ],
+     "banque": [
+      "Gegenteil",
+      "Gleiche",
+      "Ziel",
+      "Ende"
+     ],
+     "aide": "Le sens de la formule s’est inversé.",
+     "explication": "Le **Gegenteil** : le contraire de ce que la formule disait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la formule de Brandt de celle de Kohl ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Utilise les deux années du tableau.",
+     "explication": "1990 − 1969 = **21 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e458f10b-13b6-5f04-85fd-86d036afb913",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les femmes et le droit : une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une affiche sur l’émancipation des femmes en Allemagne. Lis la frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Frauenrechte in Deutschland",
+     "debut": 1900,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "wahl",
+       "date": 1918,
+       "nom": "Frauenwahlrecht"
+      },
+      {
+       "id": "gg",
+       "date": 1949,
+       "nom": "Grundgesetz"
+      },
+      {
+       "id": "arbeit",
+       "date": 1977,
+       "nom": "Ehemann-Regel fällt"
+      },
+      {
+       "id": "merkel",
+       "date": 2005,
+       "nom": "Kanzlerin Merkel"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice. « Ehemann-Regel fällt » : la femme mariée n’a plus besoin de l’accord de son mari pour travailler (RFA)."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "wahl"
+     ],
+     "enonce": "Touche l’événement qui correspond au droit de vote des femmes.",
+     "aide": "« Wahlrecht » signifie droit de vote.",
+     "explication": "**Frauenwahlrecht, 1918** : les Allemandes obtiennent le droit de vote."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le droit de vote des femmes de l’élection de la première chancelière ?",
+     "reponse": 87,
+     "unite": "ans",
+     "aide": "Soustrais les deux années de la frise.",
+     "explication": "2005 − 1918 = **87 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui change en 1977 en RFA ?",
+     "options": [
+      "Une femme mariée peut travailler sans l’accord de son mari",
+      "Une femme mariée obtient le droit de vote aux élections",
+      "Une femme devient pour la première fois ministre fédérale",
+      "Une femme peut pour la première fois entrer à l’université"
+     ],
+     "reponse": 0,
+     "aide": "Lis la source sous la frise.",
+     "explication": "En 1977, la règle tombe : **une femme mariée n’a plus besoin de l’accord de son mari** pour travailler."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la Loi fondamentale.",
+     "texte": "Männer und Frauen sind ___.",
+     "reponses": [
+      [
+       "gleichberechtigt"
+      ]
+     ],
+     "banque": [
+      "gleichberechtigt",
+      "verheiratet",
+      "ähnlich",
+      "unterschiedlich"
+     ],
+     "aide": "L’article défend l’égalité des droits.",
+     "explication": "**gleichberechtigt** : « égaux en droits ». C’est la phrase de 1949."
+    }
+   ]
+  },
+  {
+   "chapitre": "e458f10b-13b6-5f04-85fd-86d036afb913",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ma fiche Stasi",
+   "competence": "analyser-texte",
+   "situation": "Anja a lu son dossier après la chute de la RDA. Lis son témoignage, imaginé pour l’exercice.",
+   "documents": [
+    {
+     "id": "zeugnis",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Anjas Geschichte",
+     "blocs": [
+      "Als ich 1992 meine [[a|Akte]] las, konnte ich es nicht glauben. Mein Nachbar und sogar ein Freund hatten der Stasi über mich berichtet. Ich wusste nicht, dass jemand so genau aufgeschrieben hatte, wann ich nach Hause kam und wer mich besuchte.",
+      "Heute achte ich sehr darauf, wer meine Daten hat."
+     ],
+     "source": "Témoignage imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zeugnis",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui veut dire « dossier, fiche ».",
+     "aide": "Anja lit quelque chose sur elle-même : qu’est-ce ?",
+     "explication": "**die Akte** : le dossier que la Stasi avait constitué sur Anja."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui choque le plus Anja dans son dossier ?",
+     "options": [
+      "Que des proches aient rapporté sa vie à la police politique",
+      "Que la police politique ait détruit toutes ses archives",
+      "Que son dossier soit resté secret pendant toute sa vie",
+      "Que ses voisins aient reçu de l’argent du gouvernement"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase.",
+     "explication": "Son **voisin et un ami** ont parlé d’elle à la Stasi : c’est la trahison de proches qui la bouleverse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel temps exprime « hatten … berichtet » ?",
+     "options": [
+      "Le plus-que-parfait",
+      "Le futur antérieur",
+      "Le parfait",
+      "Le prétérit"
+     ],
+     "reponse": 0,
+     "aide": "Repère l’auxiliaire : « hatten » est lui-même au prétérit.",
+     "explication": "**Hatten + participe II** = plus-que-parfait : ces rapports étaient antérieurs au moment où Anja lit son dossier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la préposition.",
+     "texte": "Mein Nachbar hat der Stasi ___ mich berichtet.",
+     "reponses": [
+      [
+       "über"
+      ]
+     ],
+     "banque": [
+      "über",
+      "für",
+      "gegen",
+      "auf"
+     ],
+     "aide": "« Rapporter sur quelqu’un ».",
+     "explication": "On dit « berichten **über** + accusatif » : rapporter sur quelqu’un."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à sa traduction.",
+     "paires": [
+      [
+       "die Akte",
+       "le dossier"
+      ],
+      [
+       "die Überwachung",
+       "la surveillance"
+      ],
+      [
+       "der Datenschutz",
+       "la protection des données"
+      ],
+      [
+       "die Stasi",
+       "la police politique de la RDA"
+      ]
+     ],
+     "aide": "Relis le témoignage et ton cours de vocabulaire.",
+     "explication": "**Akte** = dossier, **Überwachung** = surveillance, **Datenschutz** = protection des données, **Stasi** = police politique de la RDA."
+    }
+   ]
+  },
+  {
+   "chapitre": "e458f10b-13b6-5f04-85fd-86d036afb913",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Street View : pourquoi tant de méfiance ?",
+   "competence": "analyser-document",
+   "situation": "En 2010, beaucoup d’Allemands ont refusé que leur maison apparaisse sur Internet. Croise l’article et le tableau des repères.",
+   "documents": [
+    {
+     "id": "streetview",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Die Deutschen und ihre Daten",
+     "blocs": [
+      "2010 startete Google Street View in Deutschland. Hunderttausende Menschen beantragten, dass ihr Haus unkenntlich gemacht wird. Wer keinen Widerspruch einlegte, sah sein Haus im Internet.",
+      "Viele Deutsche erklären ihre Skepsis mit der Geschichte: Wer von der [[g|Gestapo]] oder der [[g|Stasi]] beobachtet wurde, weiß, was Daten wert sind."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "daten",
+     "type": "tableau",
+     "titre": "Drei Daten",
+     "colonnes": [
+      "Jahr",
+      "Was geschah ?"
+     ],
+     "lignes": [
+      [
+       "1983",
+       "Das Bundesverfassungsgericht erkennt das Recht auf informationelle Selbstbestimmung an"
+      ],
+      [
+       "2010",
+       "Häuser werden bei Street View unkenntlich gemacht"
+      ],
+      [
+       "2018",
+       "Die europäische DSGVO gilt"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "streetview",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux organisations de surveillance citées dans l’article.",
+     "aide": "Elles sont nommées dans la dernière phrase.",
+     "explication": "La **Gestapo** (police nazie) et la **Stasi** (police politique de la RDA)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle explication de leur méfiance beaucoup d’Allemands donnent-ils ?",
+     "options": [
+      "Leur histoire leur a appris la valeur des données privées",
+      "Leur pays a interdit Internet pendant plusieurs années",
+      "Leurs banques ont perdu des données importantes en 2010",
+      "Leur langue n’existe pas dans les services de Google"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de l’article.",
+     "explication": "Ceux qui ont été surveillés par la Gestapo ou la Stasi **savent ce que valent leurs données** : l’histoire explique la méfiance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Wer keinen Widerspruch einlegte, sah sein Haus im Internet », que représente « wer » ?",
+     "options": [
+      "« celui qui » : une relative sans antécédent",
+      "« qui ? » : une question directe",
+      "« pour que » : une subordonnée de but",
+      "« parce que » : une subordonnée de cause"
+     ],
+     "reponse": 0,
+     "aide": "Le verbe « einlegte » est à la fin : est-ce une question ?",
+     "explication": "« **Wer … einlegte** » = « celui qui n’a pas fait opposition » : une relative sans antécédent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la décision de 1983 de l’entrée en vigueur du RGPD (DSGVO) en 2018 ?",
+     "reponse": 35,
+     "unite": "ans",
+     "aide": "Utilise le tableau des trois dates.",
+     "explication": "2018 − 1983 = **35 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le nom du droit créé en 1983.",
+     "texte": "Das Recht auf informationelle ___ wurde 1983 anerkannt.",
+     "reponses": [
+      [
+       "Selbstbestimmung"
+      ]
+     ],
+     "banque": [
+      "Selbstbestimmung",
+      "Überwachung",
+      "Gleichberechtigung",
+      "Werbung"
+     ],
+     "aide": "C’est le droit de décider soi-même de ses données.",
+     "explication": "Le droit à l’autodétermination informationnelle : **informationelle Selbstbestimmung**."
+    }
+   ]
+  },
+  {
+   "chapitre": "70f21318-eef6-5f3a-b7b7-b1116b0f6db5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois héros, trois légendes",
+   "competence": "analyser-document",
+   "situation": "Un musée propose trois fiches sur des figures qui font rêver les Allemands. Lis le tableau et sépare la réalité de la légende.",
+   "documents": [
+    {
+     "id": "helden",
+     "type": "tableau",
+     "titre": "Helden und Legenden",
+     "colonnes": [
+      "Figur",
+      "Was wirklich geschah",
+      "Was die Legende erzählt"
+     ],
+     "lignes": [
+      [
+       "Arminius",
+       "Germanischer Anführer, besiegt im Jahr 9 drei römische Legionen",
+       "Er befreit Germanien von den Römern"
+      ],
+      [
+       "Barbarossa",
+       "Kaiser Friedrich I., stirbt 1190 auf einem Kreuzzug",
+       "Er schläft im Kyffhäuser-Berg und wacht eines Tages auf"
+      ],
+      [
+       "Siegfried",
+       "Keine historische Person, Figur im Nibelungenlied",
+       "Der Drachentöter, später von Wagner aufgegriffen"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "helden",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit que Siegfried n’a jamais existé.",
+     "aide": "Cherche la ligne de Siegfried, puis la colonne de ce qui s’est « wirklich » passé.",
+     "explication": "**Keine historische Person** : Siegfried est un personnage de fiction du Nibelungenlied."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année meurt l’empereur Barberousse ?",
+     "reponse": 1190,
+     "aide": "La date est dans la ligne de Barbarossa.",
+     "explication": "Il meurt en **1190**, pendant une croisade."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque figure à sa légende.",
+     "paires": [
+      [
+       "Arminius",
+       "le libérateur de la Germanie"
+      ],
+      [
+       "Barbarossa",
+       "l’empereur endormi dans la montagne"
+      ],
+      [
+       "Siegfried",
+       "le tueur de dragon"
+      ]
+     ],
+     "aide": "Regarde la colonne de droite du tableau.",
+     "explication": "**Arminius** libère la Germanie, **Barberousse** dort dans le Kyffhäuser, **Siegfried** tue un dragon."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Siegfried ist keine ___ Person, sondern eine Figur im Nibelungenlied.",
+     "reponses": [
+      [
+       "historische"
+      ]
+     ],
+     "banque": [
+      "historische",
+      "lebendige",
+      "römische",
+      "kleine"
+     ],
+     "aide": "Le tableau dit qu’il n’a jamais existé dans l’histoire.",
+     "explication": "Siegfried n’est pas une personne **historische** : c’est un personnage de légende."
+    }
+   ]
+  },
+  {
+   "chapitre": "70f21318-eef6-5f3a-b7b7-b1116b0f6db5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le miracle de Berne raconté par un grand-père",
+   "competence": "analyser-texte",
+   "situation": "Pour un exposé, Nico interroge son grand-père sur la finale de la Coupe du monde de 1954. Lis son récit, imaginé pour l’exercice.",
+   "documents": [
+    {
+     "id": "opa",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Opa erzählt",
+     "blocs": [
+      "Mein Großvater erinnert sich noch genau an den 4. Juli 1954. Die deutsche Mannschaft spielte in Bern im Finale der Weltmeisterschaft gegen Ungarn, den großen [[f|Favoriten]]. Nach einem 0:2 gewann Deutschland am Ende mit 3:2.",
+      "„Wir waren wieder wer“, sagt er. Nach dem Krieg hatten viele Menschen das Gefühl gehabt, nichts mehr zu sein. Der Sieg gab ihnen neues Selbstvertrauen."
+     ],
+     "source": "Récit imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "opa",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui désigne l’équipe que tout le monde donnait gagnante.",
+     "aide": "Ungarn était « le grand … » : quel nom suit l’adjectif « großen » ?",
+     "explication": "**der Favorit** : la Hongrie était l’équipe favorite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de buts l’Allemagne était-elle menée au plus fort du match ?",
+     "reponse": 2,
+     "aide": "Regarde le score « 0:2 ».",
+     "explication": "Elle était menée **2 à 0** avant de revenir pour gagner 3 à 2."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce match compte-t-il au-delà du football ?",
+     "options": [
+      "Il redonne confiance à un pays qui se sentait réduit à rien",
+      "Il fait oublier la défaite subie lors de la guerre de 1914",
+      "Il met fin à la division du pays en deux États allemands",
+      "Il prouve que l’Allemagne a désormais les meilleurs clubs"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe : comment se sentaient les gens après la guerre ?",
+     "explication": "Après la guerre, beaucoup se sentaient « nichts mehr » : la victoire leur rend du **Selbstvertrauen**, de la confiance en eux."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au plus-que-parfait.",
+     "texte": "Nach dem Krieg ___ viele Menschen das Gefühl ___, nichts mehr zu sein.",
+     "reponses": [
+      [
+       "hatten"
+      ],
+      [
+       "gehabt"
+      ]
+     ],
+     "banque": [
+      "hatten",
+      "gehabt",
+      "waren",
+      "gewesen"
+     ],
+     "aide": "Le verbe « haben » forme son plus-que-parfait avec lui-même.",
+     "explication": "**hatten … gehabt** : plus-que-parfait de « haben » (« avaient eu »)."
+    }
+   ]
+  },
+  {
+   "chapitre": "70f21318-eef6-5f3a-b7b7-b1116b0f6db5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sophie Scholl et Quex : deux figures opposées",
+   "competence": "analyser-document",
+   "situation": "Un professeur compare une résistante réelle et un héros fabriqué. Lis les deux présentations.",
+   "documents": [
+    {
+     "id": "scholl",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Sophie Scholl",
+     "blocs": [
+      "Sophie Scholl studierte in München. Mit der Weißen Rose verteilte sie Flugblätter gegen Hitler. Am 22. Februar 1943 wurde sie hingerichtet. Heute gilt sie als Vorbild für [[z|Zivilcourage]]."
+     ],
+     "source": "Présentation écrite pour l’exercice"
+    },
+    {
+     "id": "quex",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Hitlerjunge Quex",
+     "blocs": [
+      "Der Film „Hitlerjunge Quex“ kam 1933 in die Kinos. Er erzählt von einem Jungen, der für die Nazis stirbt, und macht ihn zum Märtyrer. Der Film sollte Jugendliche für die Hitlerjugend begeistern."
+     ],
+     "source": "Présentation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scholl",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le mot qui dit pourquoi Sophie Scholl est un modèle aujourd’hui.",
+     "aide": "C’est un mot qui désigne le courage d’un citoyen face à l’injustice.",
+     "explication": "**die Zivilcourage** : le courage civique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément sous la bonne figure.",
+     "categories": [
+      "Sophie Scholl",
+      "Hitlerjunge Quex"
+     ],
+     "items": [
+      [
+       "Étudiante de la Rose blanche",
+       0
+      ],
+      [
+       "Héros d’un film de 1933",
+       1
+      ],
+      [
+       "Exécutée en 1943",
+       0
+      ],
+      [
+       "Sert à attirer la jeunesse vers la HJ",
+       1
+      ],
+      [
+       "Modèle de courage civique aujourd’hui",
+       0
+      ],
+      [
+       "Devient un martyr pour le régime",
+       1
+      ]
+     ],
+     "aide": "Une seule des deux figures a réellement existé comme résistante.",
+     "explication": "**Scholl** : Rose blanche, exécution en 1943, modèle actuel. **Quex** : film de 1933 qui fabrique un martyr pour la Hitlerjugend."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la différence essentielle entre les deux figures ?",
+     "options": [
+      "L’une a réellement résisté, l’autre est une fiction de propagande",
+      "L’une a vécu avant 1933, l’autre après la Seconde Guerre mondiale",
+      "L’une est une figure de théâtre, l’autre une figure de sport",
+      "L’une défend la monarchie, l’autre défend la république"
+     ],
+     "reponse": 0,
+     "aide": "Croise ce que disent les deux présentations.",
+     "explication": "Sophie Scholl est **une résistante réelle** ; Quex est **une fiction fabriquée** pour embrigader la jeunesse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Der Film sollte Jugendliche ___ die Hitlerjugend begeistern.",
+     "reponses": [
+      [
+       "für"
+      ]
+     ],
+     "banque": [
+      "für",
+      "gegen",
+      "ohne",
+      "von"
+     ],
+     "aide": "« Enthousiasmer pour quelque chose ».",
+     "explication": "On dit « begeistern **für** » : enthousiasmer pour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le film Hitlerjunge Quex de l’exécution de Sophie Scholl ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Utilise 1933 et 1943.",
+     "explication": "1943 − 1933 = **10 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a3a898e-a0a2-5382-888c-542b748b51f9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Tipps für bessere Noten",
+   "competence": "manier-langue",
+   "situation": "Le foyer du lycée affiche des conseils pour bien apprendre. Lis l’affiche.",
+   "documents": [
+    {
+     "id": "tipps",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tipps für bessere Noten",
+     "sousTitre": "Vom Schülerrat",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "Man lernt Vokabeln, indem man sie in Sätzen benutzt.",
+       "id": "vok"
+      },
+      {
+       "texte": "Man verbessert sein Hören, indem man Podcasts hört.",
+       "id": "hoeren"
+      },
+      {
+       "texte": "Man bleibt fit, indem man jeden Tag spazieren geht.",
+       "id": "fit"
+      }
+     ],
+     "pied": "Probiert es aus!",
+     "teinte": "violet",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tipps",
+     "reponse": [
+      "vok"
+     ],
+     "enonce": "Touche le conseil qui concerne le vocabulaire.",
+     "aide": "« Vokabeln » signifie mots de vocabulaire.",
+     "explication": "**Man lernt Vokabeln, indem man sie in Sätzen benutzt** : on retient mieux les mots en les utilisant dans des phrases."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le conseil sur l’écoute.",
+     "texte": "Man verbessert sein Hören, indem man Podcasts ___.",
+     "reponses": [
+      [
+       "hört"
+      ]
+     ],
+     "banque": [
+      "hört",
+      "hören",
+      "gehört",
+      "hörte"
+     ],
+     "aide": "Après « indem », le verbe conjugué va à la fin : quelle forme avec « man » ?",
+     "explication": "Après « man », le verbe prend **-t** : « indem man Podcasts hört » (en écoutant des podcasts)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase dit la même chose que « Man bleibt fit, indem man jeden Tag spazieren geht » ?",
+     "options": [
+      "Man bleibt fit durch tägliches Spazierengehen.",
+      "Man bleibt fit, obwohl man jeden Tag spazieren geht.",
+      "Man bleibt fit, weil man nie draußen spazieren geht.",
+      "Man bleibt fit, bevor man jeden Tag spazieren geht."
+     ],
+     "reponse": 0,
+     "aide": "« indem » exprime le moyen, comme « durch » + nom.",
+     "explication": "« indem » = le moyen ; « **durch** tägliches Spazierengehen » dit la même chose avec un nom."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot de l’affiche à sa traduction.",
+     "paires": [
+      [
+       "der Tipp",
+       "le conseil"
+      ],
+      [
+       "die Vokabel",
+       "le mot de vocabulaire"
+      ],
+      [
+       "spazieren gehen",
+       "aller se promener"
+      ],
+      [
+       "verbessern",
+       "améliorer"
+      ]
+     ],
+     "aide": "Reprends les conseils ligne par ligne.",
+     "explication": "**Tipp** = conseil, **Vokabel** = mot de vocabulaire, **spazieren gehen** = se promener, **verbessern** = améliorer."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a3a898e-a0a2-5382-888c-542b748b51f9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une ville qui change l’air",
+   "competence": "analyser-texte",
+   "situation": "Un journal régional présente une ville imaginaire qui a réduit la pollution. Lis l’article.",
+   "documents": [
+    {
+     "id": "stadt",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Bessere Luft in der Mittelstadt",
+     "blocs": [
+      "Eine deutsche Mittelstadt hat die Luftqualität verbessert. Sie hatte [[m|dadurch]] Erfolg, dass sie den Autoverkehr im Zentrum begrenzt hat.",
+      "Die Bürger sparen Zeit, indem sie mit dem Fahrrad fahren, und die Geschäfte haben nicht weniger Kunden, ohne dass jemand dafür Geld bekommen hat."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stadt",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui annonce la subordonnée de moyen en « dass ».",
+     "aide": "Il commence par « da- » et contient « durch ».",
+     "explication": "**dadurch** : il annonce « dass … » et met le moyen en avant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment la ville a-t-elle amélioré la qualité de l’air ?",
+     "options": [
+      "En limitant la circulation automobile dans le centre",
+      "En interdisant toutes les voitures dans la ville entière",
+      "En offrant des vélos gratuits à tous les habitants",
+      "En construisant une grande route autour de la ville"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase avec « dadurch, dass ».",
+     "explication": "« dadurch, dass sie den Autoverkehr im Zentrum begrenzt hat » : **en limitant la circulation au centre**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de moyen.",
+     "texte": "Die Bürger sparen Zeit, ___ sie mit dem Fahrrad fahren.",
+     "reponses": [
+      [
+       "indem"
+      ]
+     ],
+     "banque": [
+      "indem",
+      "obwohl",
+      "bevor",
+      "seit"
+     ],
+     "aide": "Le moyen « en faisant quelque chose ».",
+     "explication": "**indem** exprime le moyen : « en allant à vélo »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « ohne dass jemand dafür Geld bekommen hat », pourquoi emploie-t-on « dass » plutôt que « ohne … zu » ?",
+     "options": [
+      "Parce que son sujet diffère de celui de la principale",
+      "Parce que la phrase est écrite au parfait et non au présent",
+      "Parce que le mot « Geld » est un nom neutre au datif pluriel",
+      "Parce que « ohne » exige toujours « dass » après une virgule"
+     ],
+     "reponse": 0,
+     "aide": "Compare le sujet de la principale et celui de la subordonnée.",
+     "explication": "Quand les sujets diffèrent, on emploie **ohne dass** ; « ohne … zu » suppose le même sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a3a898e-a0a2-5382-888c-542b748b51f9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fake News : mode d’emploi",
+   "competence": "manier-langue",
+   "situation": "La rédaction d’un journal lycéen publie un guide contre les infox. Lis-le, puis analyse ses constructions.",
+   "documents": [
+    {
+     "id": "ratgeber",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Wie erkennt man Fake News ?",
+     "blocs": [
+      "Man kann Fake News bekämpfen, indem man die Quellen überprüft. Wer eine Nachricht teilt, ohne sie gelesen zu haben, hilft der Falschmeldung, sich zu verbreiten.",
+      "Statt sofort auf „Teilen“ zu klicken, sollte man kurz nachdenken. Eine Redaktion gewinnt Vertrauen dadurch, dass sie ihre Fehler offen zugibt."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression du texte selon le sens qu’elle exprime.",
+     "categories": [
+      "Le moyen",
+      "Sans faire",
+      "Au lieu de faire"
+     ],
+     "items": [
+      [
+       "indem man die Quellen überprüft",
+       0
+      ],
+      [
+       "ohne sie gelesen zu haben",
+       1
+      ],
+      [
+       "Statt sofort auf „Teilen“ zu klicken",
+       2
+      ],
+      [
+       "dadurch, dass sie ihre Fehler offen zugibt",
+       0
+      ]
+     ],
+     "aide": "« indem » et « dadurch, dass » répondent à la même question : comment ?",
+     "explication": "**indem** et **dadurch, dass** : le moyen ; **ohne … zu** : sans faire ; **statt … zu** : au lieu de faire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase pour traduire « en comparant plusieurs journaux ».",
+     "texte": "Er schützt sich vor Falschmeldungen, ___ er mehrere Zeitungen ___.",
+     "reponses": [
+      [
+       "indem"
+      ],
+      [
+       "vergleicht"
+      ]
+     ],
+     "banque": [
+      "indem",
+      "vergleicht",
+      "vergleichen",
+      "ohne"
+     ],
+     "aide": "Après « indem », le verbe conjugué est en dernière position.",
+     "explication": "**indem** … **vergleicht** : le moyen, avec le verbe à la fin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase pour traduire « sans l’avoir lue ».",
+     "texte": "Er teilt die Nachricht, ___ sie gelesen ___ haben.",
+     "reponses": [
+      [
+       "ohne"
+      ],
+      [
+       "zu"
+      ]
+     ],
+     "banque": [
+      "ohne",
+      "zu",
+      "dass",
+      "indem"
+     ],
+     "aide": "Même sujet dans les deux propositions : « ohne … zu » + infinitif.",
+     "explication": "**ohne … zu haben** : « sans avoir lu », puisque le sujet est le même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte quand les deux sujets sont différents ?",
+     "options": [
+      "Die Nachricht verbreitet sich, ohne dass jemand sie prüft.",
+      "Die Nachricht verbreitet sich, ohne jemand sie zu prüfen.",
+      "Die Nachricht verbreitet sich, ohne dass jemand sie zu prüfen.",
+      "Die Nachricht verbreitet sich, indem niemand sie prüfen."
+     ],
+     "reponse": 0,
+     "aide": "Sujets différents : « ohne dass » + verbe conjugué en fin de phrase.",
+     "explication": "**ohne dass jemand sie prüft** : « dass » + verbe conjugué en dernière position."
+    }
+   ]
+  },
+  {
+   "chapitre": "097dce0a-cc15-54cf-84c9-50cc85c10e06",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Komm doch mit !",
+   "competence": "comprendre-langue",
+   "situation": "Mia essaie de convaincre Jan de sortir la veille d’un examen. Lis leurs messages.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Was ist denn los? Du bist so still."
+      },
+      {
+       "qui": "Jan",
+       "texte": "Ich habe ja morgen die Prüfung."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Komm [[d|doch]] mit ins Kino! Das lenkt dich ab."
+      },
+      {
+       "qui": "Jan",
+       "texte": "Ich sollte wohl lieber lernen."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Komm mal raus, nur zwei Stunden."
+      },
+      {
+       "qui": "Jan",
+       "texte": "Na gut. Aber nur kurz."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la particule qui transforme l’invitation en invitation insistante.",
+     "aide": "Mia dit « Komm … mit ins Kino ! » : quelle petite particule ajoute l’insistance ?",
+     "explication": "**doch** : « Komm doch mit ! » = « Viens donc ! », une invitation insistante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Ich sollte wohl lieber lernen », que montre « wohl » ?",
+     "options": [
+      "Une supposition, une hésitation de la part de Jan",
+      "Une certitude que Jan affirme sans aucun doute",
+      "Un ordre que Jan donne à son amie pour ce soir",
+      "Une question que Jan pose à son amie sur le film"
+     ],
+     "reponse": 0,
+     "aide": "« wohl » ajoute l’idée de « sans doute ».",
+     "explication": "**wohl** exprime la supposition : Jan hésite, « je ferais sans doute mieux de travailler »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à la nuance de sa particule.",
+     "paires": [
+      [
+       "Was ist denn los?",
+       "intérêt dans une question"
+      ],
+      [
+       "Komm doch mit!",
+       "invitation insistante"
+      ],
+      [
+       "Komm mal raus!",
+       "demande adoucie"
+      ],
+      [
+       "Ich habe ja morgen die Prüfung.",
+       "évidence que l’autre connaît"
+      ]
+     ],
+     "aide": "Reprends les messages un par un.",
+     "explication": "**denn** : intérêt ; **doch** : insistance ; **mal** : adoucit ; **ja** : « tu sais bien que »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est la plus naturelle pour demander poliment de l’aide ?",
+     "options": [
+      "Könnten Sie mir mal helfen?",
+      "Helfen Sie mir wohl sofort!",
+      "Sie helfen mir ja gar nicht.",
+      "Helfen Sie mir eben nicht?"
+     ],
+     "reponse": 0,
+     "aide": "Une particule qui adoucit la demande.",
+     "explication": "**Könnten Sie mir mal helfen ?** : « mal » et le conditionnel rendent la demande polie."
+    }
+   ]
+  },
+  {
+   "chapitre": "097dce0a-cc15-54cf-84c9-50cc85c10e06",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le même mot, plusieurs tons",
+   "competence": "comprendre-langue",
+   "situation": "Dans un cours d’allemand, le professeur note quatre phrases avec la situation qui les explique. Lis le tableau.",
+   "documents": [
+    {
+     "id": "toene",
+     "type": "tableau",
+     "titre": "Vier Situationen",
+     "colonnes": [
+      "Satz",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Das Wetter ist ja schön!",
+       "Die Sonne scheint plötzlich, niemand hat es erwartet."
+      ],
+      [
+       "Er kommt wohl nicht mehr.",
+       "Niemand weiß es genau, aber es ist schon spät."
+      ],
+      [
+       "Komm doch mal vorbei!",
+       "Eine Freundin lädt freundlich ein."
+      ],
+      [
+       "Es regnet eben.",
+       "Man kann nichts dagegen tun."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "toene",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la situation qui décrit une simple supposition.",
+     "aide": "Dans laquelle personne n’est sûr de rien ?",
+     "explication": "**« Niemand weiß es genau »** : c’est le terrain de « wohl », la supposition."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à la nuance exprimée.",
+     "paires": [
+      [
+       "Das Wetter ist ja schön!",
+       "la surprise"
+      ],
+      [
+       "Er kommt wohl nicht mehr.",
+       "la supposition"
+      ],
+      [
+       "Komm doch mal vorbei!",
+       "l’invitation amicale"
+      ],
+      [
+       "Es regnet eben.",
+       "la résignation"
+      ]
+     ],
+     "aide": "La colonne « Situation » donne les indices.",
+     "explication": "**ja** : surprise ; **wohl** : supposition ; **doch mal** : invitation amicale ; **eben** : résignation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la particule qui marque la supposition.",
+     "texte": "Niemand weiß es genau, der Zug hat ___ Verspätung.",
+     "reponses": [
+      [
+       "wohl"
+      ]
+     ],
+     "banque": [
+      "wohl",
+      "ja",
+      "mal",
+      "denn"
+     ],
+     "aide": "Personne n’est sûr : on suppose.",
+     "explication": "**wohl** : « le train a sans doute du retard »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle traduction rend le mieux « Es regnet eben » ?",
+     "options": [
+      "Il pleut, c’est comme ça, on n’y peut rien.",
+      "Il pleut enfin après une longue période sèche.",
+      "Il pleut donc, contrairement à ce que tu disais.",
+      "Il ne pleut pas, contrairement à ce que tu crois."
+     ],
+     "reponse": 0,
+     "aide": "La colonne « Situation » dit : « Man kann nichts dagegen tun ».",
+     "explication": "**eben** marque la résignation : « c’est comme ça »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne traduit-on pas les particules mot à mot ?",
+     "options": [
+      "Parce qu’elles changent le ton plus que l’information",
+      "Parce qu’elles sont toujours accentuées à l’oral",
+      "Parce qu’elles n’existent qu’à l’écrit formel",
+      "Parce qu’elles remplacent le verbe de la phrase"
+     ],
+     "reponse": 0,
+     "aide": "Que ajoutent-elles à la phrase : une information ou une attitude ?",
+     "explication": "Les particules ajoutent **un ton** (surprise, insistance, supposition), pas une information nouvelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "097dce0a-cc15-54cf-84c9-50cc85c10e06",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lire entre les lignes",
+   "competence": "analyser-texte",
+   "situation": "Dans un récit écrit pour l’exercice, une mère accueille son fils. Les petites particules disent ce qu’elle pense. Lis le texte.",
+   "documents": [
+    {
+     "id": "szene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "An der Tür",
+     "blocs": [
+      "Frau Keller öffnete die Tür. „Ach, du bist es!“, sagte sie. „Du hast [[p|ja]] den Schlüssel vergessen.“",
+      "Ihr Sohn zuckte mit den Schultern. „Es ist [[p|doch]] nicht so schlimm.“",
+      "„Das habe ich mir [[p|wohl]] gedacht“, antwortete sie und schüttelte den Kopf. „Komm, wir essen erst [[p|mal]].“"
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "szene",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre particules modales du texte.",
+     "aide": "Ce sont de petits mots qui ne changent pas l’information : cherche « ja », « doch », « wohl » et « mal ».",
+     "explication": "**ja**, **doch**, **wohl** et **mal** : les quatre particules qui donnent le ton de la scène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’attitude de Frau Keller face à la situation ?",
+     "options": [
+      "Elle s’y attendait, avec une pointe d’ironie",
+      "Elle est ravie et très surprise de la nouvelle",
+      "Elle se met en colère et punit immédiatement son fils",
+      "Elle n’a rien remarqué et reste indifférente"
+     ],
+     "reponse": 0,
+     "aide": "Regarde « ja » et « wohl » dans ses deux répliques.",
+     "explication": "« ja » (évidence) et « wohl gedacht » (je m’en doutais) montrent qu’**elle s’y attendait**, avec un peu d’ironie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Es ist doch nicht so schlimm », que fait « doch » ?",
+     "options": [
+      "Il insiste pour minimiser et contredire la remarque de sa mère",
+      "Il exprime une surprise joyeuse devant la remarque de sa mère",
+      "Il pose poliment une question à sa mère sur l’oubli de la clé",
+      "Il marque que le fils est sûr de sa supposition sur la clé"
+     ],
+     "reponse": 0,
+     "aide": "Le fils répond à un petit reproche.",
+     "explication": "**doch** insiste et contredit : « mais ce n’est pas si grave ! »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire au mieux « Du hast ja den Schlüssel vergessen » ?",
+     "options": [
+      "Tu as oublié la clé, je vois bien.",
+      "Tu as oublié la clé, peut-être ?",
+      "Tu n’as pas oublié la clé du tout.",
+      "Tu as oublié la clé, quelle chance !"
+     ],
+     "reponse": 0,
+     "aide": "« ja » montre ici une évidence que l’on constate.",
+     "explication": "**ja** marque l’évidence : « je vois bien que tu as oublié la clé »."
+    }
+   ]
+  },
+  {
+   "chapitre": "49bf2071-e993-57db-882d-a546aa90d5ae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la presse : participes en vue",
+   "competence": "manier-langue",
+   "situation": "Voici quelques phrases de presse sur le logement et la nature. Repère les participes.",
+   "documents": [
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Schlagzeilen",
+     "blocs": [
+      "Die [[p|steigenden]] Mieten machen vielen Familien Sorgen.",
+      "Der Preis für eine kleine Wohnung ist in zehn Jahren stark gestiegen.",
+      "Die gestiegenen Kosten treffen besonders Studenten.",
+      "Im Park sieht man ein [[p|lesendes]] Kind und die [[p|blühenden]] Bäume."
+     ],
+     "source": "Phrases écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "presse",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois participes présents (participes I) employés comme adjectifs.",
+     "aide": "Le participe I se termine par -d + la terminaison d’adjectif.",
+     "explication": "**steigenden**, **lesendes**, **blühenden** : infinitif + d, déclinés comme des adjectifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « die gestiegenen Kosten » ?",
+     "options": [
+      "les coûts qui ont augmenté",
+      "les coûts qui augmentent en ce moment",
+      "les coûts qu’il faudra augmenter",
+      "les coûts qui ont été supprimés"
+     ],
+     "reponse": 0,
+     "aide": "« gestiegen » est un participe II : action accomplie.",
+     "explication": "Le participe II exprime l’accompli : **les coûts qui ont augmenté**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque participe à sa traduction.",
+     "paires": [
+      [
+       "steigend",
+       "qui augmente"
+      ],
+      [
+       "blühend",
+       "qui fleurit"
+      ],
+      [
+       "lesend",
+       "qui lit"
+      ],
+      [
+       "gestiegen",
+       "qui a augmenté"
+      ]
+     ],
+     "aide": "Participe I = action en cours ; participe II = action terminée.",
+     "explication": "Les trois participes I disent l’action en cours ; **gestiegen** dit que l’augmentation est faite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Transforme la relative en groupe participial.",
+     "texte": "Die Mieten steigen. = Die ___ Mieten machen Sorgen.",
+     "reponses": [
+      [
+       "steigenden"
+      ]
+     ],
+     "banque": [
+      "steigenden",
+      "gestiegenen",
+      "steigen",
+      "gestiegen"
+     ],
+     "aide": "Action en cours → participe I + terminaison.",
+     "explication": "**steigenden** : infinitif + d + -en (pluriel après « die »)."
+    }
+   ]
+  },
+  {
+   "chapitre": "49bf2071-e993-57db-882d-a546aa90d5ae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un musée, des artistes bannis",
+   "competence": "analyser-texte",
+   "situation": "Un article de presse annonce l’ouverture d’un musée. Les groupes participiaux y sont nombreux. Lis-le.",
+   "documents": [
+    {
+     "id": "museum",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Neues Museum eröffnet",
+     "blocs": [
+      "Die Stadt hat ein neues Museum eröffnet. Die im Jahr 1920 gegründete Sammlung zeigt die von den Nazis verbannten [[n|Künstler]]. Die seit Jahren erwartete Ausstellung ist ein großer Erfolg."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "museum",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le nom noyau du groupe « die von den Nazis verbannten … ».",
+     "aide": "Saute le groupe participial : quel nom arrive après « verbannten » ?",
+     "explication": "**die Künstler** : les artistes bannis par les nazis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire « die seit Jahren erwartete Ausstellung » ?",
+     "options": [
+      "l’exposition attendue depuis des années",
+      "l’exposition qui attend depuis des années",
+      "l’exposition qu’il faudra attendre des années",
+      "l’exposition qui sera attendue un jour"
+     ],
+     "reponse": 0,
+     "aide": "« erwartete » est un participe II : on attend une idée d’accompli ou de passif.",
+     "explication": "**l’exposition attendue depuis des années** : participe II à sens passif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Transforme le groupe participial en relative.",
+     "texte": "Die im Jahr 1920 gegründete Sammlung = Die Sammlung, die im Jahr 1920 ___ ___.",
+     "reponses": [
+      [
+       "gegründet"
+      ],
+      [
+       "wurde"
+      ]
+     ],
+     "banque": [
+      "gegründet",
+      "wurde",
+      "gründete",
+      "hat"
+     ],
+     "aide": "Une relative passive : participe II + « wurde ».",
+     "explication": "**gegründet wurde** : « fondée en 1920 », passif au prétérit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque groupe selon le participe qu’il contient.",
+     "categories": [
+      "Participe I (en cours)",
+      "Participe II (accompli)"
+     ],
+     "items": [
+      [
+       "die steigenden Preise",
+       0
+      ],
+      [
+       "die verbannten Künstler",
+       1
+      ],
+      [
+       "die blühende Landschaft",
+       0
+      ],
+      [
+       "das verabschiedete Gesetz",
+       1
+      ],
+      [
+       "die schlafenden Kinder",
+       0
+      ]
+     ],
+     "aide": "Le participe I finit par -d, le participe II commence souvent par ge-.",
+     "explication": "**Participe I** : steigend, blühend, schlafend (action en cours). **Participe II** : verbannt, verabschiedet (accompli ou passif)."
+    }
+   ]
+  },
+  {
+   "chapitre": "49bf2071-e993-57db-882d-a546aa90d5ae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Décoder une phrase dense",
+   "competence": "analyser-texte",
+   "situation": "Un éditorial utilise de longs groupes participiaux. Lis-le en cherchant d’abord les noms.",
+   "documents": [
+    {
+     "id": "leitartikel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Leben in der Großstadt",
+     "blocs": [
+      "Die in den letzten Jahren stark gestiegene [[n|Zahl]] der in Großstädten lebenden Menschen stellt die Politik vor neue Probleme.",
+      "Besonders die seit Jahren steigenden Mieten sind ein nicht zu unterschätzendes Risiko für den sozialen Frieden."
+     ],
+     "source": "Éditorial écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "leitartikel",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le nom auquel se rapporte le groupe « in den letzten Jahren stark gestiegene ».",
+     "aide": "Après l’article « die », saute le groupe participial jusqu’au premier nom.",
+     "explication": "**die Zahl** : « le nombre (fortement augmenté ces dernières années) »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire « die in Großstädten lebenden Menschen » ?",
+     "options": [
+      "les gens qui vivent dans les grandes villes",
+      "les gens qui vivaient dans les grandes villes",
+      "les gens qu’on a fait vivre en ville",
+      "les gens qui vivront dans les grandes villes"
+     ],
+     "reponse": 0,
+     "aide": "« lebenden » est un participe I : action en cours.",
+     "explication": "Participe I : **les gens qui vivent dans les grandes villes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « ein nicht zu unterschätzendes Risiko » ?",
+     "options": [
+      "un risque à ne pas sous-estimer",
+      "un risque déjà sous-estimé",
+      "un risque qui sous-estime tout",
+      "un risque sans importance"
+     ],
+     "reponse": 0,
+     "aide": "« zu » + participe I exprime ce qui doit ou peut être fait.",
+     "explication": "**zu + participe I** : « un risque qu’il ne faut pas sous-estimer »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Transforme la relative en groupe participial.",
+     "texte": "Die Menschen, die in Großstädten leben = Die in Großstädten ___ Menschen.",
+     "reponses": [
+      [
+       "lebenden"
+      ]
+     ],
+     "banque": [
+      "lebenden",
+      "gelebten",
+      "leben",
+      "lebt"
+     ],
+     "aide": "Action en cours : participe I.",
+     "explication": "**lebenden** : infinitif « leben » + d + -en."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour dire « les loyers qui augmentent depuis des années ».",
+     "items": [
+      "die",
+      "seit",
+      "Jahren",
+      "steigenden",
+      "Mieten"
+     ],
+     "aide": "Le groupe s’intercale entre l’article et le nom.",
+     "explication": "**die seit Jahren steigenden Mieten** : article, complément, participe, nom."
+    }
+   ]
+  },
+  {
+   "chapitre": "a989aac1-5277-5abc-b828-75e21160ec96",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où est passé mon portable ?",
+   "competence": "comprendre-langue",
+   "situation": "Léa a perdu son téléphone. Lis ses messages avec Tim.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Lea",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lea",
+       "texte": "Hast du irgendwo mein Handy gesehen?"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Nein, ich habe es [[n|nirgends]] gesehen."
+      },
+      {
+       "qui": "Lea",
+       "texte": "Irgendjemand muss es doch haben!"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Hast du mit jemandem gesprochen?"
+      },
+      {
+       "qui": "Lea",
+       "texte": "Nein, mit niemandem. Ich habe nichts gehört."
+      },
+      {
+       "qui": "Tim",
+       "texte": "Vielleicht liegt es irgendwo im Bus."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui veut dire « nulle part ».",
+     "aide": "C’est l’opposé de « irgendwo » dans la première réplique.",
+     "explication": "**nirgends** : nulle part (synonyme : nirgendwo)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où Tim propose-t-il de chercher le téléphone ?",
+     "options": [
+      "Quelque part dans le bus",
+      "Dans le sac de Tim",
+      "Devant la porte du lycée",
+      "Chez les parents de Léa"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Tim.",
+     "explication": "« Vielleicht liegt es irgendwo im Bus » : **quelque part dans le bus**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à son sens.",
+     "paires": [
+      [
+       "irgendwo",
+       "quelque part"
+      ],
+      [
+       "niemand",
+       "personne"
+      ],
+      [
+       "nichts",
+       "rien"
+      ],
+      [
+       "irgendjemand",
+       "quelqu’un"
+      ]
+     ],
+     "aide": "Les mots en « irgend- » sont positifs ; les autres sont des négations.",
+     "explication": "**irgendwo** = quelque part, **niemand** = personne, **nichts** = rien, **irgendjemand** = quelqu’un."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase (« rien »).",
+     "texte": "Er hat ___ gehört.",
+     "reponses": [
+      [
+       "nichts"
+      ]
+     ],
+     "banque": [
+      "nichts",
+      "nicht",
+      "nie",
+      "kein"
+     ],
+     "aide": "Il faut un pronom : rien.",
+     "explication": "**nichts** : « il n’a rien entendu ». Une seule négation suffit en allemand."
+    }
+   ]
+  },
+  {
+   "chapitre": "a989aac1-5277-5abc-b828-75e21160ec96",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un exposé pas comme les autres",
+   "competence": "analyser-texte",
+   "situation": "Dans la classe de Terminale 12 b, chaque élève présente un sujet de son choix. Lis le compte rendu du délégué.",
+   "documents": [
+    {
+     "id": "bericht",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Etwas Neues in der 12 b",
+     "blocs": [
+      "In der 12 b wird etwas [[s|Neues]] ausprobiert: Jeder Schüler darf irgendwann ein Thema vorstellen, das ihn interessiert. Gestern sprach Emre über nichts [[s|Besonderes]], nur über sein Hobby, und trotzdem hörte ihm jeder zu.",
+      "Niemand langweilte sich, und irgendeine Schülerin stellte sogar noch eine Frage. Nirgends sonst in der Schule gibt es so etwas."
+     ],
+     "source": "Compte rendu imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bericht",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux adjectifs substantivés, écrits avec une majuscule.",
+     "aide": "Ils suivent « etwas » et « nichts » et se terminent en -es.",
+     "explication": "**Neues** (après etwas) et **Besonderes** (après nichts) : adjectifs devenus des noms neutres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « irgendeine Schülerin » ?",
+     "options": [
+      "une élève quelconque, on ne sait pas laquelle",
+      "toutes les élèves sans exception de la classe",
+      "aucune élève, car personne n’ose parler",
+      "toujours la même élève, la meilleure de la classe"
+     ],
+     "reponse": 0,
+     "aide": "Le préfixe « irgend- » ajoute l’idée d’indétermination.",
+     "explication": "**irgendeine** = « une … quelconque » : l’élève n’est pas nommée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase dit « Je n’ai rien vu de spécial » ?",
+     "options": [
+      "Ich habe nichts Besonderes gesehen.",
+      "Ich habe nicht nichts Besonderes gesehen.",
+      "Ich habe nichts besondere gesehen.",
+      "Ich habe kein Besonderes gesehen."
+     ],
+     "reponse": 0,
+     "aide": "Une seule négation, et l’adjectif prend une majuscule après « nichts ».",
+     "explication": "**nichts Besonderes** : majuscule et terminaison -es ; jamais deux négations."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot du texte à sa traduction.",
+     "paires": [
+      [
+       "irgendwann",
+       "un jour ou l’autre"
+      ],
+      [
+       "nirgends",
+       "nulle part"
+      ],
+      [
+       "nichts",
+       "rien"
+      ],
+      [
+       "niemand",
+       "personne"
+      ]
+     ],
+     "aide": "Reprends les mots du compte rendu.",
+     "explication": "**irgendwann** = un jour, **nirgends** = nulle part, **nichts** = rien, **niemand** = personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "a989aac1-5277-5abc-b828-75e21160ec96",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a sonné à la porte ?",
+   "competence": "analyser-texte",
+   "situation": "Un voisin raconte un petit mystère. Lis son témoignage, écrit pour l’exercice, puis analyse les indéfinis.",
+   "documents": [
+    {
+     "id": "zeugnis",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ein seltsamer Abend",
+     "blocs": [
+      "Gestern hat irgendwer bei mir geklingelt, aber niemand stand vor der Tür. Ich habe die Nachbarn gefragt, doch keiner wusste etwas.",
+      "Irgendwie ist das unheimlich. Später habe ich mit niemandem mehr darüber gesprochen. Heute habe ich im Flur nichts Auffälliges gefunden, und nirgendwo lag ein Zettel."
+     ],
+     "source": "Témoignage imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque mot du texte selon qu’il est indéfini positif ou négatif.",
+     "categories": [
+      "Indéfini positif",
+      "Négation"
+     ],
+     "items": [
+      [
+       "irgendwer",
+       0
+      ],
+      [
+       "niemand",
+       1
+      ],
+      [
+       "etwas",
+       0
+      ],
+      [
+       "nichts Auffälliges",
+       1
+      ],
+      [
+       "irgendwie",
+       0
+      ],
+      [
+       "nirgendwo",
+       1
+      ]
+     ],
+     "aide": "« irgend- » marque l’indétermination ; « nie-, nichts, nirgend- » marquent le rien.",
+     "explication": "**Positifs** : irgendwer, etwas, irgendwie. **Négations** : niemand, nichts, nirgendwo."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « mit niemandem » ?",
+     "options": [
+      "Parce que la préposition « mit » est toujours suivie du datif",
+      "Parce que « niemand » est un pluriel qui finit en -em",
+      "Parce que l’accusatif de « niemand » est « niemandem »",
+      "Parce que « niemand » est un adjectif devenu nom neutre"
+     ],
+     "reponse": 0,
+     "aide": "Quel cas gouverne la préposition « mit » ?",
+     "explication": "« mit » + **datif** : niemand devient « niemandem »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « nichts Auffälliges » avec une majuscule et la terminaison -es ?",
+     "options": [
+      "L’adjectif devient un nom neutre après « nichts »",
+      "L’adjectif est au datif pluriel après « nichts »",
+      "L’adjectif est un participe employé au passé après « nichts »",
+      "L’adjectif est au génitif masculin après « nichts »"
+     ],
+     "reponse": 0,
+     "aide": "Après « etwas », « nichts », « viel », l’adjectif change de nature.",
+     "explication": "Après nichts, etwas, viel, wenig : **adjectif substantivé neutre** (majuscule + -es)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Ich habe nichts ___ gefunden.",
+     "reponses": [
+      [
+       "Auffälliges"
+      ]
+     ],
+     "banque": [
+      "Auffälliges",
+      "Auffällige",
+      "auffällig",
+      "Auffälligen"
+     ],
+     "aide": "Adjectif neutre, avec majuscule.",
+     "explication": "**nichts Auffälliges** : « rien de remarquable »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire « Irgendwie ist das unheimlich » ?",
+     "options": [
+      "D’une manière ou d’une autre, c’est inquiétant.",
+      "Nulle part ailleurs, ce n’est aussi inquiétant.",
+      "Personne ne trouve cela vraiment inquiétant.",
+      "Un jour, tout cela deviendra inquiétant."
+     ],
+     "reponse": 0,
+     "aide": "« irgendwie » = « d’une manière ou d’une autre ».",
+     "explication": "**Irgendwie** = « d’une façon ou d’une autre » : le narrateur ne sait pas expliquer son malaise."
+    }
+   ]
+  },
+  {
+   "chapitre": "1146abd6-d386-5cb7-b33b-20ce7fb12896",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Hier, j’ai dû travailler",
+   "competence": "manier-langue",
+   "situation": "Sara et Paul échangent des messages. Observe les verbes composés.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Sara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sara",
+       "texte": "Warum warst du gestern nicht da?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Ich habe lange arbeiten [[m|müssen]]."
+      },
+      {
+       "qui": "Sara",
+       "texte": "Und warum hast du nicht angerufen?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Ich habe nicht anrufen [[m|können]], mein Handy war kaputt."
+      },
+      {
+       "qui": "Sara",
+       "texte": "Hast du es reparieren lassen?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Ja, ich habe es gestern reparieren lassen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux verbes de modalité qui restent à l’infinitif au parfait.",
+     "aide": "Ils sont en fin de phrase, après un autre infinitif.",
+     "explication": "**müssen** et **können** : au parfait, un modal suivi d’un infinitif ne prend pas de participe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au parfait.",
+     "texte": "Wir haben gestern helfen ___.",
+     "reponses": [
+      [
+       "wollen"
+      ]
+     ],
+     "banque": [
+      "wollen",
+      "gewollt",
+      "wollten",
+      "wollte"
+     ],
+     "aide": "Modal + infinitif : pas de participe.",
+     "explication": "**haben helfen wollen** : double infinitif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Ich habe es reparieren lassen » ?",
+     "options": [
+      "J’ai fait réparer cet objet",
+      "J’ai réparé cet objet moi-même",
+      "J’ai laissé cet objet cassé",
+      "J’ai voulu réparer cet objet"
+     ],
+     "reponse": 0,
+     "aide": "« lassen » + infinitif = faire faire.",
+     "explication": "**lassen** + infinitif : « faire faire » ; quelqu’un d’autre répare."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase au présent à sa forme au parfait.",
+     "paires": [
+      [
+       "Ich muss arbeiten.",
+       "Ich habe arbeiten müssen."
+      ],
+      [
+       "Er kann kommen.",
+       "Er hat kommen können."
+      ],
+      [
+       "Wir wollen helfen.",
+       "Wir haben helfen wollen."
+      ]
+     ],
+     "aide": "Le modal passe à l’infinitif, après l’autre infinitif.",
+     "explication": "Avec un modal suivi d’un infinitif, l’**auxiliaire haben** est suivi de **deux infinitifs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1146abd6-d386-5cb7-b33b-20ce7fb12896",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Désolée, Oma !",
+   "competence": "manier-langue",
+   "situation": "Clara écrit à sa grand-mère pour s’excuser. Lis son e-mail, écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "E-Mail an Oma",
+     "blocs": [
+      "Liebe Oma, es tut mir leid, dass ich nicht zu deinem Geburtstag kommen konnte. Du weißt, dass ich lange [[h|habe]] lernen müssen. Du hast mich bestimmt vermisst, weil ich dich nicht [[h|habe]] anrufen können.",
+      "Ich hätte dir gern gratuliert. Nächstes Mal will ich dich unbedingt besuchen. Deine Clara"
+     ],
+     "source": "E-mail imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux auxiliaires placés devant les deux infinitifs.",
+     "aide": "Ils sont à l’intérieur d’une subordonnée, avant « lernen müssen » et « anrufen können ».",
+     "explication": "**habe** … **habe** : l’auxiliaire se place devant les deux infinitifs dans la subordonnée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’auxiliaire précède-t-il les deux infinitifs dans « dass ich lange habe lernen müssen » ?",
+     "options": [
+      "C’est l’exception à la règle du verbe final de la subordonnée",
+      "C’est une faute d’inattention commise par l’élève dans son mail",
+      "C’est la règle normale de toutes les subordonnées en allemand",
+      "C’est parce que « lernen » est un verbe à particule séparable"
+     ],
+     "reponse": 0,
+     "aide": "Normalement, le verbe conjugué est en dernière position.",
+     "explication": "Avec un double infinitif, **l’auxiliaire conjugué passe devant** les deux infinitifs."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Du weißt, dass ich nicht habe kommen ___.",
+     "reponses": [
+      [
+       "können"
+      ]
+     ],
+     "banque": [
+      "können",
+      "gekonnt",
+      "konnte",
+      "kann"
+     ],
+     "aide": "Double infinitif : pas de participe.",
+     "explication": "**habe kommen können** : deux infinitifs, l’auxiliaire devant."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre.",
+     "items": [
+      "weil",
+      "ich",
+      "dich",
+      "nicht",
+      "habe",
+      "anrufen",
+      "können"
+     ],
+     "aide": "La conjonction ouvre la subordonnée, l’auxiliaire passe devant les infinitifs.",
+     "explication": "**weil ich dich nicht habe anrufen können** : auxiliaire avant les deux infinitifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte pour « Clara n’a pas pu venir » ?",
+     "options": [
+      "Clara hat nicht kommen können.",
+      "Clara hat nicht gekommen gekonnt.",
+      "Clara ist nicht kommen können.",
+      "Clara hat nicht kommen gekonnt."
+     ],
+     "reponse": 0,
+     "aide": "Auxiliaire « haben », puis deux infinitifs.",
+     "explication": "**hat nicht kommen können** : double infinitif avec « haben »."
+    }
+   ]
+  },
+  {
+   "chapitre": "1146abd6-d386-5cb7-b33b-20ce7fb12896",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "J’aurais dû…",
+   "competence": "manier-langue",
+   "situation": "Lena a raté un examen. Son professeur lui répond. Lis leurs messages, imaginés pour l’exercice.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Herr Braun",
+       "emoji": "👨‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Ich habe die Prüfung verpatzt."
+      },
+      {
+       "qui": "Herr Braun",
+       "texte": "Du hättest früher [[i|lernen]] [[i|sollen]]!"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ich hätte Sie um Hilfe bitten können."
+      },
+      {
+       "qui": "Herr Braun",
+       "texte": "Genau. Ich hätte dir helfen können, wenn du gefragt hättest."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux infinitifs de la phrase « Du hättest früher … ».",
+     "aide": "Ils sont à la fin, l’un derrière l’autre.",
+     "explication": "**lernen** et **sollen** : double infinitif au subjonctif II passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait M. Braun avec « Du hättest früher lernen sollen » ?",
+     "options": [
+      "Il adresse un reproche sur le passé",
+      "Il donne un ordre pour l’avenir",
+      "Il exprime un souhait irréel pour lui-même",
+      "Il pose une question sur le futur"
+     ],
+     "reponse": 0,
+     "aide": "« hättest … sollen » : « tu aurais dû ».",
+     "explication": "**hättest … sollen** : un reproche (« tu aurais dû »)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon qu’elle exprime un regret ou un reproche.",
+     "categories": [
+      "Regret (sur soi)",
+      "Reproche (à l’autre)"
+     ],
+     "items": [
+      [
+       "Ich hätte mehr lernen sollen.",
+       0
+      ],
+      [
+       "Du hättest mich anrufen sollen.",
+       1
+      ],
+      [
+       "Ich hätte es wissen können.",
+       0
+      ],
+      [
+       "Du hättest es mir sagen können.",
+       1
+      ]
+     ],
+     "aide": "Le sujet est « ich » pour un regret, « du » pour un reproche.",
+     "explication": "Avec **ich** : le regret. Avec **du** : le reproche."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Ich ___ dir helfen ___, wenn du gefragt hättest.",
+     "reponses": [
+      [
+       "hätte"
+      ],
+      [
+       "können"
+      ]
+     ],
+     "banque": [
+      "hätte",
+      "können",
+      "konnte",
+      "gekonnt"
+     ],
+     "aide": "Subjonctif II passé : hätte + deux infinitifs.",
+     "explication": "**hätte … helfen können** : « j’aurais pu t’aider »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour dire « j’aurais dû apprendre davantage ».",
+     "items": [
+      "Ich",
+      "hätte",
+      "mehr",
+      "lernen",
+      "sollen"
+     ],
+     "aide": "Sujet, auxiliaire, complément, puis deux infinitifs.",
+     "explication": "**Ich hätte mehr lernen sollen.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "bbc3f124-b18d-58cc-8cea-5aef3909bc4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que dit le journal",
+   "competence": "analyser-texte",
+   "situation": "Un article rapporte les propos d’un ministre. Lis-le, en repérant les verbes.",
+   "documents": [
+    {
+     "id": "zeitung",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Der Minister ist krank",
+     "blocs": [
+      "Der Minister sagte gestern, er [[s|sei]] krank. Seine Sprecherin erklärte, er [[s|habe]] Fieber und [[s|könne]] nicht kommen. Die Opposition meint, er [[s|habe]] die Sitzung nur vermeiden wollen.",
+      "Laut der Zeitung gab es im Saal viele leere Stühle."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zeitung",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre verbes au subjonctif I.",
+     "aide": "Ils suivent « er » dans des propos rapportés : sei, habe, könne…",
+     "explication": "**sei**, **habe**, **könne**, **habe** : subjonctif I, pour rapporter des paroles."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert le subjonctif I dans cet article ?",
+     "options": [
+      "À signaler qu’on rapporte des propos sans les garantir",
+      "À exprimer le souhait irréel du journaliste sur le ministre",
+      "À donner un ordre précis aux lecteurs de ce journal",
+      "À raconter des faits certains qui se sont passés hier"
+     ],
+     "reponse": 0,
+     "aide": "Le journaliste rapporte ce que d’autres disent.",
+     "explication": "Le **subjonctif I** signale un discours rapporté, sans garantie de la part du journaliste."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque parole d’origine à son discours rapporté.",
+     "paires": [
+      [
+       "Ich bin krank.",
+       "Er sagt, er sei krank."
+      ],
+      [
+       "Ich habe Fieber.",
+       "Er sagt, er habe Fieber."
+      ],
+      [
+       "Ich kann nicht kommen.",
+       "Er sagt, er könne nicht kommen."
+      ]
+     ],
+     "aide": "On reprend le verbe à la 3e personne du subjonctif I.",
+     "explication": "**sei**, **habe**, **könne** : 3e personne du subjonctif I de sein, haben, können."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Laut der Zeitung … » ?",
+     "options": [
+      "Selon le journal",
+      "Malgré le journal",
+      "À cause du journal",
+      "Au lieu du journal"
+     ],
+     "reponse": 0,
+     "aide": "« laut » + datif introduit une source.",
+     "explication": "**laut** + datif/génitif = « selon »."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbc3f124-b18d-58cc-8cea-5aef3909bc4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du direct au rapporté",
+   "competence": "manier-langue",
+   "situation": "Un professeur a noté des phrases du discours direct et leur version rapportée. Lis le tableau.",
+   "documents": [
+    {
+     "id": "rede",
+     "type": "tableau",
+     "titre": "Direkte und indirekte Rede",
+     "colonnes": [
+      "Direkte Rede",
+      "Indirekte Rede"
+     ],
+     "lignes": [
+      [
+       "„Ich komme morgen.“",
+       "Er sagt, er komme morgen."
+      ],
+      [
+       "„Ich war krank.“",
+       "Er sagt, er sei krank gewesen."
+      ],
+      [
+       "„Wir haben keine Zeit.“",
+       "Sie sagen, sie hätten keine Zeit."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rede",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la phrase rapportée qui utilise le subjonctif II parce que le subjonctif I serait identique à l’indicatif.",
+     "aide": "Cherche le pluriel : « sie haben » est la même forme à l’indicatif et au subjonctif I.",
+     "explication": "**Sie sagen, sie hätten keine Zeit** : « haben » (pluriel) = indicatif, donc on prend hätten."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le discours rapporté.",
+     "texte": "„Wir haben Hunger.“ → Sie sagen, sie ___ Hunger.",
+     "reponses": [
+      [
+       "hätten"
+      ]
+     ],
+     "banque": [
+      "hätten",
+      "haben",
+      "hatten",
+      "habe"
+     ],
+     "aide": "Le subjonctif I de « wir haben » = indicatif : on utilise le subjonctif II.",
+     "explication": "**hätten** : subjonctif II de remplacement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le discours rapporté au passé.",
+     "texte": "„Ich war krank.“ → Er sagt, er ___ krank ___.",
+     "reponses": [
+      [
+       "sei"
+      ],
+      [
+       "gewesen"
+      ]
+     ],
+     "banque": [
+      "sei",
+      "gewesen",
+      "war",
+      "ist"
+     ],
+     "aide": "Passé rapporté : sei/habe + participe II.",
+     "explication": "**sei … gewesen** : le passé se rapporte avec « sei » ou « habe » + participe II."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase rapporte correctement « Wir sind müde » (sie = pluriel) ?",
+     "options": [
+      "Sie sagen, sie seien müde.",
+      "Sie sagen, sie seid müde.",
+      "Sie sagen, sie sei müde.",
+      "Sie sagen, sie wären müde gewesen."
+     ],
+     "reponse": 0,
+     "aide": "Subjonctif I de « sein » à la 3e personne du pluriel.",
+     "explication": "**seien** : subjonctif I de « sein », distinct de « sind »."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbc3f124-b18d-58cc-8cea-5aef3909bc4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une dépêche, plusieurs voix",
+   "competence": "analyser-document",
+   "situation": "Un journal relate une crise politique. Identifie qui dit quoi. Lis la dépêche, écrite pour l’exercice.",
+   "documents": [
+    {
+     "id": "depesche",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Streit in der Partei",
+     "blocs": [
+      "Die Sprecherin der Partei erklärte am Dienstag, man habe alles richtig gemacht und werde weiterkämpfen. Der Parteichef soll bereits über einen Rücktritt nachdenken. Er selbst will von nichts gewusst haben.",
+      "[[a|Angeblich]] gibt es innerhalb der Partei Streit, doch laut der Zentrale sei alles in Ordnung."
+     ],
+     "source": "Dépêche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depesche",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui signifie « soi-disant ».",
+     "aide": "Le deuxième paragraphe commence par ce mot.",
+     "explication": "**angeblich** : soi-disant, à ce qu’on prétend."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque marqueur selon ce qu’il signale.",
+     "categories": [
+      "Rumeur (on dit que)",
+      "Affirmation de la personne (il prétend)",
+      "Source citée"
+     ],
+     "items": [
+      [
+       "Der Parteichef soll nachdenken",
+       0
+      ],
+      [
+       "Er will von nichts gewusst haben",
+       1
+      ],
+      [
+       "laut der Zentrale",
+       2
+      ],
+      [
+       "Angeblich gibt es Streit",
+       0
+      ]
+     ],
+     "aide": "« sollen » rapporte une rumeur, « wollen » une prétention, « laut » une source.",
+     "explication": "**sollen** : rumeur ; **wollen** : le sujet prétend ; **laut** : source citée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « werde weiterkämpfen » ?",
+     "options": [
+      "C’est le subjonctif I de « werden » : des propos rapportés",
+      "C’est le futur de certitude exprimé par le journaliste lui-même",
+      "C’est un impératif adressé aux membres du parti politique",
+      "C’est un prétérit qui raconte un fait déjà terminé"
+     ],
+     "reponse": 0,
+     "aide": "« werde » n’est pas la forme de l’indicatif « wird ».",
+     "explication": "**werde** : subjonctif I de « werden » ; le journaliste rapporte sans garantir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Er will von nichts gewusst haben » ?",
+     "options": [
+      "Il prétend n’avoir rien su",
+      "Il ne veut rien savoir du tout",
+      "Il voulait tout savoir à l’avance",
+      "Il n’a rien su, c’est prouvé"
+     ],
+     "reponse": 0,
+     "aide": "« wollen » + infinitif passé = prétendre.",
+     "explication": "**wollen** + infinitif passé : « il prétend n’avoir rien su »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque marqueur à sa traduction.",
+     "paires": [
+      [
+       "laut",
+       "selon"
+      ],
+      [
+       "angeblich",
+       "soi-disant"
+      ],
+      [
+       "sollen",
+       "on dit que"
+      ],
+      [
+       "wollen",
+       "prétendre"
+      ]
+     ],
+     "aide": "Ce sont les marqueurs du discours rapporté.",
+     "explication": "**laut** = selon, **angeblich** = soi-disant, **sollen** = on dit que, **wollen** = prétendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee5fe090-648b-57be-ad5c-463c95e99d5b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le 9 novembre, jour du destin",
+   "competence": "se-reperer-temps",
+   "situation": "Un professeur explique pourquoi une date revient souvent dans l’histoire allemande. Lis le tableau.",
+   "documents": [
+    {
+     "id": "datum",
+     "type": "tableau",
+     "titre": "Der 9. November",
+     "colonnes": [
+      "Jahr",
+      "Ereignis"
+     ],
+     "lignes": [
+      [
+       "1918",
+       "Ausrufung der Republik"
+      ],
+      [
+       "1923",
+       "Hitlerputsch in München"
+      ],
+      [
+       "1938",
+       "Novemberpogrome"
+      ],
+      [
+       "1989",
+       "Fall der Berliner Mauer"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "datum",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche l’année de la chute du Mur de Berlin.",
+     "aide": "Cherche « Fall der Berliner Mauer ».",
+     "explication": "**1989** : la chute du Mur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le putsch de Munich de la nuit de Cristal ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Utilise les lignes 1923 et 1938.",
+     "explication": "1938 − 1923 = **15 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque année à l’événement.",
+     "paires": [
+      [
+       "1918",
+       "proclamation de la République"
+      ],
+      [
+       "1923",
+       "putsch manqué d’Hitler"
+      ],
+      [
+       "1938",
+       "pogroms de la nuit de Cristal"
+      ],
+      [
+       "1989",
+       "chute du Mur"
+      ]
+     ],
+     "aide": "Reprends le tableau ligne par ligne.",
+     "explication": "Les quatre événements du 9 novembre : 1918, 1923, 1938 et 1989."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au parfait.",
+     "texte": "Am 9. November 1989 ist die Mauer ___.",
+     "reponses": [
+      [
+       "gefallen"
+      ]
+     ],
+     "banque": [
+      "gefallen",
+      "gebaut",
+      "gewesen",
+      "gegangen"
+     ],
+     "aide": "« Fall » est le nom : quel est le participe de « fallen » ?",
+     "explication": "**ist gefallen** : « le Mur est tombé »."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee5fe090-648b-57be-ad5c-463c95e99d5b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Visite à la East Side Gallery",
+   "competence": "analyser-texte",
+   "situation": "Un guide accueille des lycéens à Berlin. Lis son texte, écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "fuehrung",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Willkommen an der East Side Gallery",
+     "blocs": [
+      "Dieser 1,3 Kilometer lange Rest der Berliner Mauer wurde 1990 von Künstlern aus der ganzen Welt bemalt. Die Mauer, die 1961 gebaut wurde, trennte Berlin fast dreißig Jahre lang.",
+      "Ein Stück weiter, in der Bernauer Straße, steht die offizielle [[g|Gedenkstätte]]. Dort erinnert man an die Menschen, die bei der Flucht gestorben sind. Wer die Spur der Mauer in der Stadt sucht, folgt der doppelten Pflasterreihe."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fuehrung",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot qui signifie « mémorial ».",
+     "aide": "Il est composé de « gedenken » (commémorer) et de « Stätte » (lieu).",
+     "explication": "**die Gedenkstätte** : le mémorial officiel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du mur conservé à la East Side Gallery, en kilomètres ?",
+     "reponse": 1.3,
+     "unite": "km",
+     "aide": "Regarde le début du premier paragraphe.",
+     "explication": "**1,3 kilomètre** de mur peint."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui commémore-t-on à la Gedenkstätte de la Bernauer Straße ?",
+     "options": [
+      "Les personnes mortes en essayant de fuir",
+      "Les artistes qui ont peint le mur en 1990",
+      "Les soldats morts pendant la Première Guerre",
+      "Les habitants de Berlin-Ouest pendant l’été 1961"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase « Dort erinnert man an… ».",
+     "explication": "On y commémore **les personnes mortes pendant leur fuite**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu à sa fonction.",
+     "paires": [
+      [
+       "East Side Gallery",
+       "un mur peint par des artistes"
+      ],
+      [
+       "Bernauer Straße",
+       "le mémorial officiel"
+      ],
+      [
+       "la double rangée de pavés",
+       "le tracé du Mur dans la ville"
+      ]
+     ],
+     "aide": "Reprends les deux paragraphes.",
+     "explication": "**East Side Gallery** : mur peint ; **Bernauer Straße** : mémorial ; **pavés** : tracé du Mur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au passif.",
+     "texte": "Die Mauer, die 1961 gebaut ___, trennte Berlin.",
+     "reponses": [
+      [
+       "wurde"
+      ]
+     ],
+     "banque": [
+      "wurde",
+      "wird",
+      "hat",
+      "wurden"
+     ],
+     "aide": "Passif au prétérit : werden + participe II.",
+     "explication": "**wurde** : « qui fut construit en 1961 »."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee5fe090-648b-57be-ad5c-463c95e99d5b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Garder ou détruire ?",
+   "competence": "argumenter",
+   "situation": "Deux lycéens débattent du sort de Prora, l’immense complexe nazi de l’île de Rügen. Lis leurs points de vue, écrits pour l’exercice.",
+   "documents": [
+    {
+     "id": "debatte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Was tun mit Prora ?",
+     "blocs": [
+      "Jan: Prora, der riesige Bau der Nazis auf Rügen, sollte man abreißen. Was die Nazis gebaut haben, verdient keinen Platz in unserer Landschaft.",
+      "Mia: Ich finde, man muss ihn behalten und erklären. Wenn man alles zerstört, verschwinden auch die [[b|Beweise]]. Heute gibt es in Prora ein Dokumentationszentrum, in dem man lernt, wofür der Bau gedacht war."
+     ],
+     "source": "Débat imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debatte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui signifie « les preuves ».",
+     "aide": "Mia dit que détruire fait disparaître quelque chose.",
+     "explication": "**die Beweise** : les preuves."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse Mia défend-elle ?",
+     "options": [
+      "Il faut conserver le bâtiment et l’expliquer",
+      "Il faut détruire le bâtiment le plus vite possible",
+      "Il faut laisser le bâtiment sans aucune explication",
+      "Il faut vendre le bâtiment à une entreprise privée"
+     ],
+     "reponse": 0,
+     "aide": "Relis « man muss ihn behalten und erklären ».",
+     "explication": "Mia veut **garder et expliquer** : c’est le choix allemand."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’argument de Jan ?",
+     "options": [
+      "Les constructions nazies ne méritent pas une place dans le paysage",
+      "Les constructions nazies attirent trop de touristes chaque année",
+      "Les constructions nazies coûtent trop cher à entretenir",
+      "Les constructions nazies n’ont jamais été terminées"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase de Jan.",
+     "explication": "Jan pense qu’**un bâtiment nazi ne mérite pas sa place** dans le paysage."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase (condition).",
+     "texte": "___ man alles zerstört, verschwinden die Beweise.",
+     "reponses": [
+      [
+       "Wenn"
+      ]
+     ],
+     "banque": [
+      "Wenn",
+      "Obwohl",
+      "Damit",
+      "Bevor"
+     ],
+     "aide": "La condition : « si on détruit tout ».",
+     "explication": "**Wenn** : « si l’on détruit tout, les preuves disparaissent »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée sous le bon choix.",
+     "categories": [
+      "Abreißen (détruire)",
+      "Behalten und dokumentieren"
+     ],
+     "items": [
+      [
+       "On efface la preuve",
+       0
+      ],
+      [
+       "On transmet l’histoire aux générations suivantes",
+       1
+      ],
+      [
+       "Le bâtiment disparaît du paysage",
+       0
+      ],
+      [
+       "Un centre d’information explique l’histoire du lieu",
+       1
+      ]
+     ],
+     "aide": "Pense aux arguments de Jan et de Mia.",
+     "explication": "**Détruire** efface la preuve ; **garder et documenter** transmet l’histoire."
+    }
+   ]
+  }
+ ]
+}

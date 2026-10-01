@@ -456,7 +456,7 @@ Les gaz laissent passer le rayonnement solaire et retiennent une partie de l'inf
 ## Les conséquences
 | La conséquence | Son mécanisme |
 | La hausse du **niveau des mers** | Dilatation de l'eau, fonte des glaciers et des calottes |
-| La fonte de la **banquise** et du **permafrost** | Le réchauffement polaire, deux fois plus rapide |
+| La fonte de la **banquise** et du **permafrost** | Le réchauffement de l'Arctique, trois à quatre fois plus rapide que la moyenne mondiale |
 | L'**acidification** des océans | La dissolution du CO₂ |
 | Les **événements extrêmes** | Canicules, sécheresses, incendies, pluies diluviennes, cyclones plus intenses |
 | Le déplacement des **espèces** | Perte de récoltes, migrations |

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Bell, BellOff, BellRing } from 'lucide-react'
+import { BellOff, BellRing } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   desabonnerPush,
@@ -116,11 +116,8 @@ export default function NotificationsOptIn() {
 
   return (
     <section className="carte mx-auto mt-4 w-full max-w-md p-4">
-      <h2 className="titre-section mb-1 flex items-center gap-2">
-        <Bell className="text-primary size-4" aria-hidden="true" />
-        Rappels
-      </h2>
-      <p className="text-muted-foreground mb-3 text-sm">
+      <h2 className="titre-section">Rappels</h2>
+      <p className="text-muted-foreground mt-0.5 mb-3 text-sm font-semibold">
         Un rappel quand des cartes t’attendent, et un coup de pouce le soir pour
         garder ta série.
       </p>

@@ -1,0 +1,3865 @@
+{
+ "niveau": "Tle",
+ "matiere": "maths-expertes",
+ "exercices": [
+  {
+   "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les restes de 2 modulo 7",
+   "competence": "calculer",
+   "situation": "Maëlle calcule les premières puissances de 2 et ne garde que leur reste dans la division par 7. Elle veut deviner le reste de 2^2026.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Puissances de 2 modulo 7",
+     "colonnes": [
+      "n",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "2^n",
+       2,
+       4,
+       8,
+       16,
+       32,
+       64
+      ],
+      [
+       "Reste modulo 7",
+       2,
+       4,
+       1,
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs faits par Maëlle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la case du premier reste égal à 1.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Lis la ligne « Reste modulo 7 » de gauche à droite.",
+     "explication": "Le premier reste égal à 1 est celui de 2³ = 8 = 7 + 1 : **n = 3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 16 dans la division par 7 ?",
+     "reponse": 2,
+     "aide": "16 = 2 × 7 + …",
+     "explication": "16 = 2 × 7 + 2 : le reste est **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de puissances les restes se répètent-ils ? Donne la longueur du cycle 2, 4, 1.",
+     "reponse": 3,
+     "aide": "Les restes de n = 4, 5, 6 redonnent 2, 4, 1.",
+     "explication": "Le cycle 2, 4, 1 recommence après **3** puissances : la période est 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne le reste de 2^2026 modulo 7. On a 2026 = 3 × 675 + 1.",
+     "reponse": 2,
+     "aide": "Comme 2³ ≡ 1 [7], seul le reste de 2026 par 3 compte.",
+     "explication": "2^2026 = (2³)^675 × 2 ≡ 1 × 2 ≡ **2** [7]."
+    }
+   ]
+  },
+  {
+   "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La preuve par neuf de Malo",
+   "competence": "raisonner",
+   "situation": "Malo a posé 347 × 26 et trouvé 9 032. Son professeur lui conseille la preuve par neuf : un nombre est congru à la somme de ses chiffres modulo 9.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "tableau",
+     "titre": "La preuve par neuf",
+     "colonnes": [
+      "Nombre",
+      "Somme des chiffres",
+      "Reste modulo 9"
+     ],
+     "lignes": [
+      [
+       "347",
+       14,
+       "?"
+      ],
+      [
+       "26",
+       8,
+       "?"
+      ],
+      [
+       "Résultat annoncé : 9 032",
+       14,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau à compléter"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 347 modulo 9 ? Utilise la somme de ses chiffres.",
+     "reponse": 5,
+     "aide": "14 = 1 × 9 + …",
+     "explication": "14 = 9 + 5 : 347 ≡ 14 ≡ **5** [9]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 26 modulo 9 ?",
+     "reponse": 8,
+     "aide": "La somme des chiffres de 26 est 8, déjà inférieure à 9.",
+     "explication": "2 + 6 = 8, donc 26 ≡ **8** [9]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si le résultat était juste, 347 × 26 serait congru à 5 × 8 modulo 9. Quel est le reste de 40 modulo 9 ?",
+     "reponse": 4,
+     "aide": "40 = 4 × 9 + …",
+     "explication": "40 = 4 × 9 + 4 : le reste attendu est **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 9 032 modulo 9 ?",
+     "reponse": 5,
+     "aide": "Somme des chiffres : 9 + 0 + 3 + 2 = 14.",
+     "explication": "9 + 0 + 3 + 2 = 14 et 14 ≡ **5** [9]."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut-on en comparant les deux restes ?",
+     "options": [
+      "Le résultat 9 032 est juste : les deux restes sont tous deux plus petits que 9 et ils coïncident",
+      "Le résultat 9 032 est juste : un reste différent de zéro prouve que la multiplication est exacte",
+      "Le résultat 9 032 est faux : il devrait avoir pour reste 4, et il a pour reste 5",
+      "On ne peut rien dire : la preuve par neuf ne permet jamais de repérer une erreur"
+     ],
+     "reponse": 2,
+     "aide": "Compare le reste attendu (4) et le reste obtenu (5).",
+     "explication": "Les restes diffèrent (4 et 5) : **le résultat est faux** (347 × 26 = 9 022). Attention : si les restes avaient coïncidé, cela n’aurait pas prouvé que le résultat est juste."
+    }
+   ]
+  },
+  {
+   "chapitre": "174c7f92-4a3c-5300-8a4d-c9bb7cb2e902",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Six divise n³ − n",
+   "competence": "raisonner",
+   "situation": "Zoé veut démontrer que, pour tout entier n, le nombre n³ − n est divisible par 6. Elle étudie les six restes possibles de n modulo 6.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les six cas modulo 6",
+     "colonnes": [
+      "n modulo 6",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "n³ modulo 6",
+       0,
+       1,
+       2,
+       3,
+       "?",
+       5
+      ],
+      [
+       "n³ − n modulo 6",
+       0,
+       0,
+       0,
+       0,
+       0,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de Zoé"
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappel",
+     "blocs": [
+      "Si n ≡ r [6], alors n³ ≡ r³ [6] et n³ − n ≡ r³ − r [6].",
+      "Un entier est divisible par 6 lorsque son reste modulo 6 vaut 0."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Pour n ≡ 4 [6], quel est le reste de n³ modulo 6 ? (4³ = 64)",
+     "reponse": 4,
+     "aide": "64 = 10 × 6 + …",
+     "explication": "64 = 10 × 6 + 4 : le reste est **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n ≡ 5 [6], quel est le reste de n³ − n modulo 6 ? (5³ − 5 = 120)",
+     "reponse": 0,
+     "aide": "120 = 20 × 6 + …",
+     "explication": "120 = 20 × 6 : le reste est **0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 2 026 modulo 6 ? On a 6 × 337 = 2 022.",
+     "reponse": 4,
+     "aide": "2 026 − 2 022 = …",
+     "explication": "2 026 = 6 × 337 + 4 : le reste est **4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet de conclure le tableau complété ?",
+     "options": [
+      "Seuls les entiers pairs vérifient cette propriété, car les restes pairs donnent un reste nul dans le tableau",
+      "Pour tout entier n, 6 divise n³ − n, car les six restes possibles de n donnent tous un reste nul",
+      "Cette propriété n’est prouvée que pour n de 0 à 5, le tableau s’arrêtant au reste numéro 5",
+      "Le tableau ne prouve rien : il faudrait essayer chaque entier n un par un sans exception"
+     ],
+     "reponse": 1,
+     "aide": "Tout entier a l’un des six restes possibles modulo 6.",
+     "explication": "Tout entier est congru à l’un des restes 0 à 5, et chacun donne 0 : **6 divise n³ − n pour tout entier n**. C’est une démonstration complète."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des carreaux pour le salon",
+   "competence": "calculer",
+   "situation": "Clara veut carreler un sol de 252 cm sur 198 cm avec des carreaux carrés, tous identiques, les plus grands possible et sans aucune découpe. Elle déroule l’algorithme d’Euclide.",
+   "documents": [
+    {
+     "id": "e",
+     "type": "tableau",
+     "titre": "Algorithme d’Euclide",
+     "colonnes": [
+      "Étape",
+      "Division",
+      "Reste"
+     ],
+     "lignes": [
+      [
+       "1",
+       "252 = 1 × 198 + 54",
+       54
+      ],
+      [
+       "2",
+       "198 = 3 × 54 + …",
+       "?"
+      ],
+      [
+       "3",
+       "54 = 1 × 36 + 18",
+       18
+      ],
+      [
+       "4",
+       "36 = 2 × 18 + 0",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs de Clara"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète l’étape 2 : quel est le reste de 198 par 54 ?",
+     "reponse": 36,
+     "aide": "3 × 54 = 162.",
+     "explication": "198 − 162 = **36**."
+    },
+    {
+     "type": "zone",
+     "document": "e",
+     "enonce": "Touche le dernier reste non nul.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Descends la colonne des restes jusqu’au 0, puis remonte d’une ligne.",
+     "explication": "Le dernier reste non nul est celui de l’étape 3 : **18**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PGCD de 252 et 198, donc le côté du plus grand carreau en cm ?",
+     "reponse": 18,
+     "aide": "Le PGCD est le dernier reste non nul.",
+     "explication": "PGCD(252 ; 198) = **18** : des carreaux de 18 cm de côté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carreaux faut-il au total ? 252 ÷ 18 = 14 et 198 ÷ 18 = 11.",
+     "reponse": 154,
+     "aide": "Multiplie le nombre de carreaux en longueur par celui en largeur.",
+     "explication": "14 × 11 = **154** carreaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sept plus cinq égale trente-huit",
+   "competence": "resoudre",
+   "situation": "Dans un jeu, une carte bleue rapporte 7 points et une carte rouge 5 points. Yanis veut totaliser exactement 38 points : il cherche les entiers x et y tels que 7x + 5y = 38.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Essais pour x de 0 à 5",
+     "colonnes": [
+      "x",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "7x",
+       0,
+       7,
+       14,
+       21,
+       28,
+       35
+      ],
+      [
+       "38 − 7x",
+       38,
+       31,
+       24,
+       17,
+       "?",
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Il faut que 38 − 7x soit un multiple de 5"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case manquante : que vaut 38 − 7 × 4 ?",
+     "reponse": 10,
+     "aide": "7 × 4 = 28.",
+     "explication": "38 − 28 = **10**."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la seule case de la ligne « 38 − 7x » divisible par 5.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Cherche un nombre qui se termine par 0 ou 5.",
+     "explication": "Seule la case **10** est un multiple de 5 (38, 31, 24, 17 et 3 ne le sont pas)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de y correspondante ? On a 5y = 10.",
+     "reponse": 2,
+     "aide": "Divise 10 par 5.",
+     "explication": "y = 10 ÷ 5 = **2** : 7 × 4 + 5 × 2 = 38."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PGCD de 7 et 5 ? Il doit diviser 38 pour que l’équation ait des solutions.",
+     "reponse": 1,
+     "aide": "7 et 5 sont deux nombres premiers distincts.",
+     "explication": "PGCD(7 ; 5) = **1**, qui divise 38 : l’équation a bien des solutions."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’équation 14x + 21y = 38 a-t-elle des solutions entières ?",
+     "options": [
+      "Oui : 14 et 21 sont tous deux plus petits que 38, donc une solution entière existe",
+      "Oui : 14 et 21 sont tous deux strictement positifs, donc une solution entière existe",
+      "Non : 14 est pair et 21 est impair, donc leur somme ne peut jamais valoir 38",
+      "Non : le PGCD de 14 et 21 vaut 7, et 7 ne divise pas 38"
+     ],
+     "reponse": 3,
+     "aide": "Calcule d’abord PGCD(14 ; 21), puis regarde s’il divise 38.",
+     "explication": "PGCD(14 ; 21) = 7 et 38 = 5 × 7 + 3 : 7 ne divise pas 38, donc **l’équation n’a aucune solution entière**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c58026-ca18-576e-b077-b0cc7ef5f9ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bézout remonte, Gauss conclut",
+   "competence": "raisonner",
+   "situation": "Léo veut prouver que 35 et 12 sont premiers entre eux, puis résoudre un problème de divisibilité : pour quels entiers k le nombre 35k est-il multiple de 12 ?",
+   "documents": [
+    {
+     "id": "e",
+     "type": "tableau",
+     "titre": "Algorithme d’Euclide",
+     "colonnes": [
+      "Étape",
+      "Division",
+      "Reste"
+     ],
+     "lignes": [
+      [
+       "1",
+       "35 = 2 × 12 + 11",
+       11
+      ],
+      [
+       "2",
+       "12 = 1 × 11 + 1",
+       1
+      ],
+      [
+       "3",
+       "11 = 11 × 1 + 0",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs de Léo"
+    },
+    {
+     "id": "r",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Remontée de l’algorithme",
+     "blocs": [
+      "1 = 12 − 1 × 11",
+      "11 = 35 − 2 × 12",
+      "donc 1 = 12 − (35 − 2 × 12) = 35 × (−1) + 12 × v"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "e",
+     "enonce": "Touche le PGCD de 35 et 12 dans le tableau.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "C’est le dernier reste non nul.",
+     "explication": "Le dernier reste non nul est **1** : PGCD(35 ; 12) = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de v dans l’égalité 35 × (−1) + 12 × v = 1 ?",
+     "reponse": 3,
+     "aide": "1 = 12 − 35 + 2 × 12 : regroupe les 12.",
+     "explication": "1 = −35 + 3 × 12 : donc v = **3**. Vérification : −35 + 36 = 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve l’égalité 35 × (−1) + 12 × 3 = 1 ?",
+     "options": [
+      "Elle prouve que 35 et 12 sont premiers entre eux, d’après le théorème de Bézout",
+      "Elle prouve que 35 divise 12, puisque le reste de la première division est non nul",
+      "Elle prouve que 35 et 12 sont tous deux premiers, puisque leur combinaison vaut 1",
+      "Elle prouve que 12 divise 35, d’après le théorème de Gauss appliqué à 1"
+     ],
+     "reponse": 0,
+     "aide": "Un seul couple (u ; v) avec a u + b v = 1 suffit.",
+     "explication": "Un couple (u ; v) tel que a u + b v = 1 **prouve que a et b sont premiers entre eux** (Bézout). Attention : cela ne dit pas qu’ils sont premiers eux-mêmes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si 12 divise 35k, que peut-on affirmer sur k ?",
+     "options": [
+      "Que 35 divise k, car 35 est premier avec 12 (théorème de Bézout)",
+      "Que k est égal à 12, car 12 et 35 sont les deux seuls facteurs du produit",
+      "Que 12 divise k, car 12 est premier avec 35 (théorème de Gauss)",
+      "Rien de précis, car 12 et 35 ne sont pas des nombres premiers"
+     ],
+     "reponse": 2,
+     "aide": "Gauss : a divise bc et a est premier avec b, donc a divise c.",
+     "explication": "12 divise 35 × k et PGCD(12 ; 35) = 1 : d’après Gauss, **12 divise k**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le plus petit entier k strictement positif tel que 35k soit multiple de 12 ?",
+     "reponse": 12,
+     "aide": "k doit être un multiple de 12.",
+     "explication": "k est un multiple de 12 : le plus petit strictement positif est **12** (35 × 12 = 420 = 12 × 35)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le crible jusqu’à 50",
+   "competence": "calculer",
+   "situation": "Nina range les entiers de 2 à 50 dans une grille de 7 colonnes. Elle va chercher les nombres premiers, comme Ératosthène le faisait.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "tableau",
+     "titre": "Les entiers de 2 à 50",
+     "colonnes": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "lignes": [
+      [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      [
+       9,
+       10,
+       11,
+       12,
+       13,
+       14,
+       15
+      ],
+      [
+       16,
+       17,
+       18,
+       19,
+       20,
+       21,
+       22
+      ],
+      [
+       23,
+       24,
+       25,
+       26,
+       27,
+       28,
+       29
+      ],
+      [
+       30,
+       31,
+       32,
+       33,
+       34,
+       35,
+       36
+      ],
+      [
+       37,
+       38,
+       39,
+       40,
+       41,
+       42,
+       43
+      ],
+      [
+       44,
+       45,
+       46,
+       47,
+       48,
+       49,
+       50
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Grille de Nina"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche les trois nombres premiers de la ligne qui commence par 37.",
+     "reponse": [
+      "r5c0",
+      "r5c4",
+      "r5c6"
+     ],
+     "aide": "Cette ligne va de 37 à 43 : élimine les multiples de 2, de 3 et de 5.",
+     "explication": "Dans 37, 38, 39, 40, 41, 42, 43, seuls **37, 41 et 43** sont premiers.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Jusqu’à quel nombre premier faut-il rayer des multiples pour cribler les entiers jusqu’à 50 ? Pense à la racine carrée de 50.",
+     "reponse": 7,
+     "aide": "√50 est un peu plus grand que 7.",
+     "explication": "√50 ≈ 7,07 : il suffit de rayer les multiples de 2, 3, 5 et **7**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nombres premiers compte la grille entre 2 et 50 ?",
+     "reponse": 15,
+     "aide": "Il y en a 4 entre 2 et 10, puis 4 entre 11 et 20.",
+     "explication": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 : il y en a **15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le nombre 49 n’est pas premier. Quel est son plus petit diviseur premier ?",
+     "reponse": 7,
+     "aide": "49 est un carré.",
+     "explication": "49 = 7 × 7 : son plus petit diviseur premier est **7**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux paquets de cartes",
+   "competence": "calculer",
+   "situation": "Sacha a 360 cartes rouges et 252 cartes bleues. Il veut les répartir en paquets identiques, sans reste. Il décompose d’abord les deux nombres en facteurs premiers : 360 = 2³ × 3² × 5 et 252 = 2² × 3² × 7.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "tableau",
+     "titre": "Exposants des facteurs premiers",
+     "colonnes": [
+      "Nombre",
+      "Exposant de 2",
+      "Exposant de 3",
+      "Exposant de 5",
+      "Exposant de 7"
+     ],
+     "lignes": [
+      [
+       "360",
+       3,
+       2,
+       1,
+       0
+      ],
+      [
+       "252",
+       2,
+       2,
+       0,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Un exposant 0 signifie que le facteur est absent"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "enonce": "Touche l’exposant du facteur premier qui figure dans 252 mais pas dans 360.",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "Cherche un facteur avec l’exposant 0 pour 360 et non nul pour 252.",
+     "explication": "Le facteur 7 est présent dans 252 (exposant 1) mais absent de 360 : case **r1c4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien 360 a-t-il de diviseurs positifs ? Multiplie les exposants augmentés de 1.",
+     "reponse": 24,
+     "aide": "(3 + 1) × (2 + 1) × (1 + 1).",
+     "explication": "4 × 3 × 2 = **24** diviseurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PGCD de 360 et 252 ? Garde les facteurs communs aux plus petits exposants.",
+     "reponse": 36,
+     "aide": "Facteurs communs : 2 et 3, avec les exposants 2 et 2.",
+     "explication": "PGCD = 2² × 3² = **36** : on peut faire 36 paquets identiques au plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PPCM de 360 et 252 ? Garde tous les facteurs aux plus grands exposants.",
+     "reponse": 2520,
+     "aide": "2³ × 3² × 5 × 7.",
+     "explication": "PPCM = 8 × 9 × 5 × 7 = **2 520**. Vérification : 36 × 2 520 = 360 × 252."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c37de89-d66f-5e71-a32e-16b4dc746fbb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fermat contre quinze",
+   "competence": "raisonner",
+   "situation": "Adèle étudie les restes de 3^n modulo 11, puis applique le petit théorème de Fermat. Elle teste ensuite si 15 est premier avec a = 2.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Puissances de 3 modulo 11",
+     "colonnes": [
+      "n",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "3^n",
+       3,
+       9,
+       27,
+       81,
+       243
+      ],
+      [
+       "Reste modulo 11",
+       3,
+       9,
+       5,
+       "?",
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs d’Adèle"
+    },
+    {
+     "id": "f",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux énoncés",
+     "blocs": [
+      "Petit théorème de Fermat : si p est premier et ne divise pas a, alors a^(p−1) ≡ 1 [p].",
+      "Test : si a^(n−1) n’est pas congru à 1 modulo n, alors n n’est pas premier."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la case manquante : quel est le reste de 81 modulo 11 ?",
+     "reponse": 4,
+     "aide": "81 = 7 × 11 + …",
+     "explication": "81 = 7 × 11 + 4 : le reste est **4**."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la case où le reste vaut 1 pour la première fois.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Lis la ligne des restes de gauche à droite.",
+     "explication": "Le reste 1 apparaît pour **n = 5** : 243 = 22 × 11 + 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne le reste de 3^2026 modulo 11. Utilise 3^10 ≡ 1 [11] et 2026 = 10 × 202 + 6.",
+     "reponse": 3,
+     "aide": "3^2026 ≡ 3^6 [11] ; calcule 3^6 avec 3^5 ≡ 1.",
+     "explication": "3^2026 ≡ 3^6 = 3^5 × 3 ≡ 1 × 3 ≡ **3** [11]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de 2^14 modulo 15 ? Indice : 2⁴ = 16 ≡ 1 [15] et 14 = 4 × 3 + 2.",
+     "reponse": 4,
+     "aide": "2^14 = (2⁴)³ × 2².",
+     "explication": "2^14 ≡ 1 × 4 ≡ **4** [15]."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut-on pour n = 15 ?",
+     "options": [
+      "15 n’est pas premier, car 2^14 n’est pas congru à 1 modulo 15 : le test de Fermat échoue",
+      "15 est premier, car 2^14 est congru à 4 modulo 15, et le test de Fermat réussit alors",
+      "On ne peut rien conclure, car le test de Fermat ne s’applique jamais aux nombres impairs",
+      "15 est premier, car 15 est impair et 2 n’est pas un diviseur de 15, donc c’est bon"
+     ],
+     "reponse": 0,
+     "aide": "Compare le reste obtenu avec 1.",
+     "explication": "Le reste est 4 et non 1 : par contraposée, **15 n’est pas premier** (15 = 3 × 5)."
+    }
+   ]
+  },
+  {
+   "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les recettes de la boulangerie",
+   "competence": "calculer",
+   "situation": "Deux boulangeries vendent des baguettes, des croissants et des tartes. Le prix est de 1 € la baguette, 2 € le croissant et 5 € la tarte. La recette s’obtient en multipliant les quantités par les prix : c’est un produit de matrices.",
+   "documents": [
+    {
+     "id": "q",
+     "type": "tableau",
+     "titre": "Quantités vendues dans la journée",
+     "colonnes": [
+      "",
+      "Baguettes",
+      "Croissants",
+      "Tartes"
+     ],
+     "lignes": [
+      [
+       "Boulangerie 1",
+       4,
+       2,
+       1
+      ],
+      [
+       "Boulangerie 2",
+       3,
+       5,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix : baguette 1 €, croissant 2 €, tarte 5 €"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "q",
+     "enonce": "Touche le nombre de croissants vendus par la boulangerie 2.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Boulangerie 2 », puis la colonne « Croissants ».",
+     "explication": "La boulangerie 2 a vendu **5** croissants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la recette de la boulangerie 1, en euros ? Calcule 4 × 1 + 2 × 2 + 1 × 5.",
+     "reponse": 13,
+     "aide": "Multiplie chaque quantité par son prix, puis additionne.",
+     "explication": "4 + 4 + 5 = **13 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la recette de la boulangerie 2, en euros ?",
+     "reponse": 23,
+     "aide": "3 × 1 + 5 × 2 + 2 × 5.",
+     "explication": "3 + 10 + 10 = **23 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La matrice des quantités a 2 lignes et 3 colonnes, la matrice des prix 3 lignes et 1 colonne. Combien de lignes compte la matrice produit ?",
+     "reponse": 2,
+     "aide": "Le produit garde le nombre de lignes de la première matrice.",
+     "explication": "Une matrice 2 × 3 multipliée par une matrice 3 × 1 donne une matrice 2 × 1 : **2** lignes."
+    }
+   ]
+  },
+  {
+   "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le code de Nour",
+   "competence": "resoudre",
+   "situation": "Nour code deux nombres (x ; y) avec la matrice M : le système 3x + 2y = 7 et 4x + 3y = 10 s’écrit M X = B, avec X la colonne (x ; y) et B la colonne (7 ; 10). Elle veut inverser M.",
+   "documents": [
+    {
+     "id": "m",
+     "type": "tableau",
+     "titre": "La matrice M",
+     "colonnes": [
+      "Colonne 1",
+      "Colonne 2"
+     ],
+     "lignes": [
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "M a deux lignes et deux colonnes"
+    },
+    {
+     "id": "i",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Inverse d’une matrice 2 × 2",
+     "blocs": [
+      "Pour une matrice de coefficients a, b (première ligne) et c, d (seconde ligne), le déterminant vaut ad − bc.",
+      "Si ce déterminant est non nul, l’inverse s’obtient en échangeant a et d, en changeant le signe de b et de c, puis en divisant par le déterminant."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le déterminant de M ? Calcule 3 × 3 − 2 × 4.",
+     "reponse": 1,
+     "aide": "a = 3, b = 2, c = 4, d = 3.",
+     "explication": "3 × 3 − 2 × 4 = 9 − 8 = **1** : M est inversible."
+    },
+    {
+     "type": "zone",
+     "document": "m",
+     "enonce": "Touche le coefficient de M qui devient −4 dans l’inverse.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Dans l’inverse, b et c changent de signe : c est le coefficient de la seconde ligne, première colonne.",
+     "explication": "Le coefficient c = **4** devient −4 dans l’inverse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la première ligne de l’inverse, à gauche ? Donne son premier coefficient (le déterminant vaut 1).",
+     "reponse": 3,
+     "aide": "Le premier coefficient est d.",
+     "explication": "L’inverse a pour lignes (3 ; −2) et (−4 ; 3) : le premier coefficient est **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule x dans X = M⁻¹ B, avec B = (7 ; 10). On a x = 3 × 7 + (−2) × 10.",
+     "reponse": 1,
+     "aide": "3 × 7 = 21 et 2 × 10 = 20.",
+     "explication": "x = 21 − 20 = **1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule y avec y = (−4) × 7 + 3 × 10.",
+     "reponse": 2,
+     "aide": "−28 + 30.",
+     "explication": "y = −28 + 30 = **2**. Vérification : 3 × 1 + 2 × 2 = 7 et 4 × 1 + 3 × 2 = 10."
+    }
+   ]
+  },
+  {
+   "chapitre": "13e66d53-54b9-5467-a5e7-9792b1df485b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une puissance sans multiplier cent fois",
+   "competence": "calculer",
+   "situation": "La matrice A est fournie sous la forme A = P D P⁻¹, avec D diagonale. Grâce à cette écriture, Aⁿ = P Dⁿ P⁻¹ : on n’a pas besoin de multiplier A par elle-même n fois.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "tableau",
+     "titre": "Les matrices fournies",
+     "colonnes": [
+      "Matrice",
+      "Première ligne",
+      "Seconde ligne"
+     ],
+     "lignes": [
+      [
+       "P",
+       "1 ; 1",
+       "1 ; 2"
+      ],
+      [
+       "D",
+       "1 ; 0",
+       "0 ; 3"
+      ],
+      [
+       "P⁻¹",
+       "2 ; −1",
+       "−1 ; 1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "P × P⁻¹ = I : on peut le vérifier"
+    },
+    {
+     "id": "c",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Consigne",
+     "blocs": [
+      "Dⁿ s’obtient en élevant chaque coefficient diagonal de D à la puissance n.",
+      "Coefficient (i ; j) : ligne i, colonne j."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le second coefficient diagonal de D⁴ ?",
+     "reponse": 81,
+     "aide": "Élève 3 à la puissance 4.",
+     "explication": "3⁴ = **81** (le premier coefficient reste 1⁴ = 1)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient (1 ; 1) de A². On a P D² = lignes (1 ; 9) et (1 ; 18) : multiplie la première ligne par la première colonne de P⁻¹.",
+     "reponse": -7,
+     "aide": "Première ligne (1 ; 9) fois première colonne (2 ; −1) : 1 × 2 + 9 × (−1).",
+     "explication": "1 × 2 + 9 × (−1) = **−7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi calculer Aⁿ avec P Dⁿ P⁻¹ est-il bien plus rapide qu’en multipliant n fois ?",
+     "options": [
+      "Parce que Dⁿ s’obtient en élevant seulement deux nombres à la puissance n",
+      "Parce que P et P⁻¹ disparaissent du calcul, ce qui laisse uniquement la matrice D",
+      "Parce que le produit matriciel devient commutatif dès que l’on utilise une matrice D",
+      "Parce que A est égale à D, ce qui évite de multiplier les matrices entre elles"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que vaut Dⁿ quand D est diagonale.",
+     "explication": "Dans P D P⁻¹ P D P⁻¹ …, les P⁻¹ P se simplifient : Aⁿ = P Dⁿ P⁻¹, et **Dⁿ se calcule coefficient par coefficient**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient (2 ; 2) de A³. On a P D³ = lignes (1 ; 27) et (1 ; 54).",
+     "reponse": 53,
+     "aide": "Seconde ligne (1 ; 54) fois seconde colonne (−1 ; 1) : 1 × (−1) + 54 × 1.",
+     "explication": "−1 + 54 = **53**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient (1 ; 2) de A⁴. On a P D⁴ = lignes (1 ; 81) et (1 ; 162).",
+     "reponse": 80,
+     "aide": "Première ligne (1 ; 81) fois seconde colonne (−1 ; 1) : −1 + 81.",
+     "explication": "−1 + 81 = **80**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le réseau des quatre villages",
+   "competence": "modeliser",
+   "situation": "Quatre villages A, B, C et D sont reliés par des routes à double sens. On traduit le réseau par un graphe non orienté et par sa matrice d’adjacence M (1 s’il y a une route, 0 sinon).",
+   "documents": [
+    {
+     "id": "g",
+     "type": "schema",
+     "titre": "Le graphe des routes",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        72
+       ],
+       "a": [
+        70,
+        148
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85.20526224699857,
+        62.602631123499286
+       ],
+       "a": [
+        164.79473775300144,
+        102.39736887650072
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85.20526224699857,
+        157.3973688765007
+       ],
+       "a": [
+        164.79473775300144,
+        117.60263112349928
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        197,
+        110
+       ],
+       "a": [
+        268,
+        110
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 55,
+       "r": 17,
+       "texte": "A",
+       "id": "A",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 165,
+       "r": 17,
+       "texte": "B",
+       "id": "B",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 110,
+       "r": 17,
+       "texte": "C",
+       "id": "C",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 285,
+       "cy": 110,
+       "r": 17,
+       "texte": "D",
+       "id": "D",
+       "zone": true,
+       "motif": "clair"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "m",
+     "type": "tableau",
+     "titre": "Matrice d’adjacence M",
+     "colonnes": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "lignes": [
+      [
+       "A",
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       "B",
+       1,
+       0,
+       1,
+       0
+      ],
+      [
+       "C",
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       "D",
+       0,
+       0,
+       1,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Lignes et colonnes dans l’ordre A, B, C, D"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche le village qui est relié à trois routes.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Compte les routes qui partent de chaque village.",
+     "explication": "Le village **C** est relié à A, B et D : son degré est 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de routes compte le réseau ? Compte les arêtes du graphe.",
+     "reponse": 4,
+     "aide": "Les arêtes sont AB, AC, BC et CD.",
+     "explication": "Il y a **4** arêtes : AB, AC, BC et CD."
+    },
+    {
+     "type": "zone",
+     "document": "m",
+     "enonce": "Touche dans la matrice le coefficient de la ligne D et de la colonne C.",
+     "reponse": [
+      "r3c3"
+     ],
+     "aide": "Ligne D : la quatrième ligne ; colonne C : la troisième colonne de chiffres.",
+     "explication": "Le coefficient (D ; C) vaut **1** : la route CD existe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des coefficients de la ligne C ?",
+     "reponse": 3,
+     "aide": "Additionne 1 + 1 + 0 + 1.",
+     "explication": "1 + 1 + 0 + 1 = **3**, c’est le degré du sommet C."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des chemins à la trace",
+   "competence": "modeliser",
+   "situation": "Un petit jeu se joue sur quatre cases reliées par des flèches à sens unique. Le coefficient (i ; j) de la matrice M vaut 1 s’il existe une flèche de la case i vers la case j. Lou veut compter les parcours possibles.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "schema",
+     "titre": "Le graphe orienté",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        87,
+        50
+       ],
+       "a": [
+        253,
+        50
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        67
+       ],
+       "a": [
+        270,
+        153
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        253,
+        170
+       ],
+       "a": [
+        87,
+        170
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        153
+       ],
+       "a": [
+        70,
+        67
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        84.57737973711325,
+        58.74642784226795
+       ],
+       "a": [
+        255.42262026288674,
+        161.25357215773204
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 50,
+       "r": 17,
+       "texte": "1",
+       "id": "1",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 50,
+       "r": 17,
+       "texte": "2",
+       "id": "2",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 170,
+       "r": 17,
+       "texte": "3",
+       "id": "3",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 170,
+       "r": 17,
+       "texte": "4",
+       "id": "4",
+       "zone": true,
+       "motif": "clair"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "m",
+     "type": "tableau",
+     "titre": "Matrice M",
+     "colonnes": [
+      "",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "1",
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       "2",
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       "3",
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       "4",
+       1,
+       0,
+       0,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ligne = case de départ, colonne = case d’arrivée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la case d’où partent deux flèches.",
+     "reponse": [
+      "1"
+     ],
+     "aide": "Compte les flèches qui sortent de chaque case.",
+     "explication": "De la case **1** partent deux flèches : vers 2 et vers 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins de longueur 2 de la case 1 à la case 4 ?",
+     "reponse": 1,
+     "aide": "Un seul passage intermédiaire : 1 → ? → 4.",
+     "explication": "Seul 1 → 3 → 4 convient : **1** chemin (coefficient (1 ; 4) de M²)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins de longueur 2 de la case 4 à la case 3 ?",
+     "reponse": 1,
+     "aide": "Depuis 4, il n’y a qu’une flèche, vers 1.",
+     "explication": "Seul 4 → 1 → 3 convient : **1** chemin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins de longueur 3 de la case 3 à la case 2 ?",
+     "reponse": 1,
+     "aide": "Depuis 3, on va en 4, puis en 1, puis ailleurs.",
+     "explication": "Seul 3 → 4 → 1 → 2 convient : **1** chemin (coefficient (3 ; 2) de M³)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il de chemins de longueur 3 qui partent de la case 3, toutes arrivées confondues ?",
+     "reponse": 2,
+     "aide": "Depuis 1, deux flèches existent : 3 → 4 → 1 → ? et ?",
+     "explication": "Les chemins sont 3 → 4 → 1 → 2 et 3 → 4 → 1 → 3 : **2** chemins (somme de la ligne 3 de M³)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f4c6444-bea2-531f-b0be-371ee3ae4a65",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La maison d’un seul trait",
+   "competence": "raisonner",
+   "situation": "Mia veut dessiner cette « maison » sans lever le crayon, en suivant chaque arête une seule fois. Elle veut aussi colorier les sommets avec le moins de couleurs possible, deux sommets voisins ne devant jamais avoir la même couleur.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "schema",
+     "titre": "La maison",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        107,
+        95
+       ],
+       "a": [
+        233,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        112
+       ],
+       "a": [
+        250,
+        158
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233,
+        175
+       ],
+       "a": [
+        107,
+        175
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        158
+       ],
+       "a": [
+        90,
+        112
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        103.6,
+        84.8
+       ],
+       "a": [
+        156.4,
+        45.2
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236.4,
+        84.8
+       ],
+       "a": [
+        183.6,
+        45.2
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 95,
+       "r": 17,
+       "texte": "A",
+       "id": "A",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 95,
+       "r": 17,
+       "texte": "B",
+       "id": "B",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 175,
+       "r": 17,
+       "texte": "C",
+       "id": "C",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 175,
+       "r": 17,
+       "texte": "D",
+       "id": "D",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 35,
+       "r": 17,
+       "texte": "E",
+       "id": "E",
+       "zone": true,
+       "motif": "clair"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "d",
+     "type": "tableau",
+     "titre": "Degrés des sommets",
+     "colonnes": [
+      "Sommet",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "lignes": [
+      [
+       "Degré",
+       "?",
+       "?",
+       2,
+       2,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "À compléter en comptant les arêtes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le degré du sommet A ?",
+     "reponse": 3,
+     "aide": "A est relié à B, à D et à E.",
+     "explication": "A touche trois arêtes (AB, AD, AE) : son degré est **3**."
+    },
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche les deux sommets de degré impair.",
+     "reponse": [
+      "A",
+      "B"
+     ],
+     "aide": "Les trois autres sommets ont un degré égal à 2.",
+     "explication": "Seuls **A et B** ont un degré impair (3 chacun).",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Mia peut-elle tracer toutes les arêtes une seule fois, sans lever le crayon ?",
+     "options": [
+      "Oui, en partant de A pour finir en B (ou l’inverse), mais elle ne peut pas revenir à son point de départ",
+      "Oui, et elle peut même finir là où elle a commencé, n’importe quel sommet convenant pour partir",
+      "Non, car il y a deux sommets de degré impair, et il n’en faut jamais pour y parvenir",
+      "Non, car le graphe compte cinq sommets, ce qui est impair, donc aucun parcours n’existe"
+     ],
+     "reponse": 0,
+     "aide": "Compte les sommets de degré impair : théorème d’Euler.",
+     "explication": "Le graphe est connexe et compte exactement **2** sommets de degré impair : il possède une chaîne eulérienne entre A et B, mais pas de cycle eulérien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille du plus grand sous-graphe complet (des sommets tous reliés deux à deux) ? Cherche un triangle.",
+     "reponse": 3,
+     "aide": "A, B et E sont deux à deux reliés.",
+     "explication": "Le triangle A, B, E est complet : **3** sommets. C’est un minorant du nombre chromatique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre chromatique du graphe ? Le minorant est 3 ; vérifie qu’une coloration en 3 couleurs existe.",
+     "reponse": 3,
+     "aide": "Essaie : A en couleur 1, B en 2, E en 3, puis C et D.",
+     "explication": "A = 1, B = 2, E = 3, C = 1, D = 2 convient : le nombre chromatique est **3**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux opérateurs, un même mois",
+   "competence": "modeliser",
+   "situation": "Chaque mois, 10 % des abonnés de l’opérateur A passent chez B, et 20 % des abonnés de B passent chez A. Au mois 0, A compte 800 abonnés et B en compte 700. On note u(n) et v(n) leurs abonnés au mois n.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Abonnés mois après mois",
+     "colonnes": [
+      "n",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       800,
+       "?",
+       "?"
+      ],
+      [
+       "v(n)",
+       700,
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Nombres d’abonnés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche le nombre d’abonnés de B au mois 0.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Ligne v(n), colonne 0.",
+     "explication": "Au mois 0, B compte **700** abonnés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés A compte-t-il au mois 1 ? u(1) = 0,9 × 800 + 0,2 × 700.",
+     "reponse": 860,
+     "aide": "90 % de 800 restent, et 20 % de 700 arrivent.",
+     "explication": "720 + 140 = **860** abonnés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés B compte-t-il au mois 1 ? v(1) = 0,1 × 800 + 0,8 × 700.",
+     "reponse": 640,
+     "aide": "10 % de 800 arrivent, et 80 % de 700 restent.",
+     "explication": "80 + 560 = **640** abonnés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés A compte-t-il au mois 2 ? u(2) = 0,9 × 860 + 0,2 × 640.",
+     "reponse": 902,
+     "aide": "Utilise les valeurs du mois 1.",
+     "explication": "774 + 128 = **902** abonnés. (Au total il y en a toujours 1 500.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux réservoirs qui se stabilisent",
+   "competence": "modeliser",
+   "situation": "Deux réservoirs contiennent u(n) et v(n) litres au jour n. Chaque jour : u(n+1) = 0,6 u(n) + 0,2 v(n) et v(n+1) = 0,2 u(n) + 0,6 v(n) + 6. On écrit U(n+1) = A U(n) + B avec B = (0 ; 6). Au jour 0, il y a 30 litres et 20 litres.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Contenu des réservoirs (litres)",
+     "colonnes": [
+      "n",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       30,
+       "?",
+       "?"
+      ],
+      [
+       "v(n)",
+       20,
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "À compléter avec la relation de récurrence"
+    },
+    {
+     "id": "e",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "État stable",
+     "blocs": [
+      "On cherche C tel que C = A C + B. On propose C = (10 ; 20).",
+      "On pose V(n) = U(n) − C : alors V(n+1) = A V(n), et U(n) = Aⁿ (U(0) − C) + C."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres le premier réservoir contient-il au jour 1 ? u(1) = 0,6 × 30 + 0,2 × 20.",
+     "reponse": 22,
+     "aide": "Il n’y a pas de terme constant pour u.",
+     "explication": "18 + 4 = **22** litres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres le second réservoir contient-il au jour 1 ? v(1) = 0,2 × 30 + 0,6 × 20 + 6.",
+     "reponse": 24,
+     "aide": "N’oublie pas le terme constant 6.",
+     "explication": "6 + 12 + 6 = **24** litres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres le premier réservoir contient-il au jour 2 ? u(2) = 0,6 × 22 + 0,2 × 24.",
+     "reponse": 18,
+     "aide": "Utilise les valeurs du jour 1.",
+     "explication": "13,2 + 4,8 = **18** litres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie que C = (10 ; 20) est stable : calcule la seconde composante de A C + B, soit 0,2 × 10 + 0,6 × 20 + 6.",
+     "reponse": 20,
+     "aide": "2 + 12 + 6.",
+     "explication": "2 + 12 + 6 = **20**, ce qui redonne la seconde composante de C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Vers quoi U(n) converge-t-il ? Les puissances Aⁿ tendent vers la matrice nulle.",
+     "options": [
+      "Vers C = (10 ; 20), l’état stable, quelle que soit la situation initiale",
+      "Vers la situation initiale (30 ; 20), car les réservoirs gardent leur contenu de départ",
+      "Vers (0 ; 0), car chaque réservoir perd chaque jour une partie de son contenu",
+      "Nulle part : les contenus augmentent sans cesse, puisque le terme constant est ajouté"
+     ],
+     "reponse": 0,
+     "aide": "U(n) = Aⁿ (U(0) − C) + C.",
+     "explication": "Comme Aⁿ tend vers la matrice nulle, Aⁿ (U(0) − C) tend vers 0 : U(n) tend vers **C = (10 ; 20)**, quelle que soit la situation de départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00960b-90aa-57e1-a8bc-a93668c9e896",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux suites qui s’entrecroisent",
+   "competence": "modeliser",
+   "situation": "Deux suites vérifient u(n+1) = 4u(n) − 2v(n) et v(n+1) = u(n) + v(n), avec u(0) = 3 et v(0) = 2. On écrit U(n+1) = A U(n) et on dispose de la diagonalisation A = P D P⁻¹.",
+   "documents": [
+    {
+     "id": "m",
+     "type": "tableau",
+     "titre": "Les matrices fournies",
+     "colonnes": [
+      "Matrice",
+      "Première ligne",
+      "Seconde ligne"
+     ],
+     "lignes": [
+      [
+       "A",
+       "4 ; −2",
+       "1 ; 1"
+      ],
+      [
+       "P",
+       "1 ; 2",
+       "1 ; 1"
+      ],
+      [
+       "D",
+       "2 ; 0",
+       "0 ; 3"
+      ],
+      [
+       "P⁻¹",
+       "−1 ; 2",
+       "1 ; −1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Un produit P × P⁻¹ donne la matrice identité"
+    },
+    {
+     "id": "s",
+     "type": "tableau",
+     "titre": "Premiers termes",
+     "colonnes": [
+      "n",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       3,
+       8,
+       "?"
+      ],
+      [
+       "v(n)",
+       2,
+       5,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Termes calculés par Romain"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète le tableau : que vaut u(2) ? u(2) = 4 × 8 − 2 × 5.",
+     "reponse": 22,
+     "aide": "Utilise u(1) = 8 et v(1) = 5.",
+     "explication": "32 − 10 = **22**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient (1 ; 1) de A³. On a A³ = P D³ P⁻¹ et P D³ = lignes (8 ; 54) et (8 ; 27).",
+     "reponse": 46,
+     "aide": "Première ligne (8 ; 54) fois première colonne (−1 ; 1) de P⁻¹.",
+     "explication": "8 × (−1) + 54 × 1 = **46**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les calculs donnent u(n) = 2ⁿ + 2 × 3ⁿ. Que vaut u(5) ?",
+     "reponse": 518,
+     "aide": "2⁵ = 32 et 3⁵ = 243.",
+     "explication": "32 + 2 × 243 = **518**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand n devient grand, quel terme domine dans u(n) = 2ⁿ + 2 × 3ⁿ ?",
+     "options": [
+      "2ⁿ, car sa base est la plus petite des deux, donc la plus stable",
+      "Les deux termes restent comparables, car leurs bases sont toutes deux supérieures à 1",
+      "2 × 3ⁿ, car 3ⁿ croît bien plus vite que 2ⁿ",
+      "Aucun des deux : la somme tend vers zéro quand n devient très grand"
+     ],
+     "reponse": 2,
+     "aide": "Compare le rapport (3/2)ⁿ quand n grandit.",
+     "explication": "Le rapport (3/2)ⁿ tend vers l’infini : le terme **2 × 3ⁿ** domine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On a aussi v(n) = 2ⁿ + 3ⁿ. Vers quelle valeur se rapproche le quotient u(n) / v(n) quand n devient grand ?",
+     "reponse": 2,
+     "aide": "Seuls les termes en 3ⁿ comptent.",
+     "explication": "u(n) / v(n) ≈ (2 × 3ⁿ) / 3ⁿ = **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Beau temps, mauvais temps",
+   "competence": "modeliser",
+   "situation": "Dans une ville, la météo d’un jour ne dépend que de celle de la veille. B désigne « Beau » et P « Pluie ». Le graphe probabiliste donne les probabilités de passer d’un état au lendemain ; la probabilité de rester sous la pluie est notée « ? ».",
+   "documents": [
+    {
+     "id": "graphe",
+     "type": "schema",
+     "titre": "Graphe probabiliste de la météo",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 100,
+       "r": 28,
+       "texte": "B",
+       "id": "g",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 100,
+       "r": 28,
+       "texte": "P",
+       "id": "d",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        117,
+        90
+       ],
+       "a": [
+        223,
+        90
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 80,
+       "texte": "0,3",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        223,
+        112
+       ],
+       "a": [
+        117,
+        112
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 134,
+       "texte": "0,5",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 45,
+       "cy": 100,
+       "rx": 20,
+       "ry": 17,
+       "motif": "aucun"
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 68,
+       "texte": "0,7",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 295,
+       "cy": 100,
+       "rx": 20,
+       "ry": 17,
+       "motif": "aucun"
+      },
+      {
+       "forme": "texte",
+       "x": 295,
+       "y": 68,
+       "texte": "?",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’un jour de pluie soit suivi d’un jour de pluie ? Les probabilités qui sortent de P ont pour somme 1.",
+     "reponse": 0.5,
+     "aide": "Il y a un arc de P vers B qui porte 0,5.",
+     "explication": "1 − 0,5 = **0,5**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "zone",
+     "document": "graphe",
+     "enonce": "Touche l’état qui a la plus grande probabilité de rester le même d’un jour à l’autre.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Compare la boucle sur B et la boucle sur P.",
+     "explication": "L’état **B** se répète avec la probabilité 0,7, contre 0,5 pour P."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Aujourd’hui il fait beau. Quelle est la probabilité qu’il fasse beau après-demain ? Additionne B puis B, et B puis P puis B.",
+     "reponse": 0.64,
+     "aide": "0,7 × 0,7 + 0,3 × 0,5.",
+     "explication": "0,49 + 0,15 = **0,64**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Aujourd’hui il fait beau. Quelle est la probabilité d’avoir de la pluie demain, puis du beau temps le jour suivant ?",
+     "reponse": 0.15,
+     "aide": "Multiplie la probabilité de B vers P par celle de P vers B.",
+     "explication": "0,3 × 0,5 = **0,15**.",
+     "tolerance": 0.001
+    }
+   ]
+  },
+  {
+   "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vélo, bus ou à pied",
+   "competence": "modeliser",
+   "situation": "Chaque matin, des élèves choisissent un mode de transport selon celui de la veille. La matrice de transition T est donnée ci-dessous : le coefficient (i ; j) est la probabilité de passer du mode i au mode j. Ce lundi, 50 % des élèves prennent le bus, 30 % le vélo et 20 % vont à pied.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Matrice de transition T",
+     "colonnes": [
+      "Hier \\ Aujourd’hui",
+      "Bus",
+      "Vélo",
+      "À pied"
+     ],
+     "lignes": [
+      [
+       "Bus",
+       0.6,
+       0.3,
+       0.1
+      ],
+      [
+       "Vélo",
+       0.2,
+       0.5,
+       0.3
+      ],
+      [
+       "À pied",
+       0.1,
+       0.2,
+       0.7
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chaque ligne a pour somme 1"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la probabilité de passer du vélo à la marche.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Ligne « Vélo », colonne « À pied ».",
+     "explication": "La probabilité cherchée est **0,3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mardi, quelle proportion prend le bus ? Calcule 0,5 × 0,6 + 0,3 × 0,2 + 0,2 × 0,1.",
+     "reponse": 0.38,
+     "aide": "Multiplie la répartition de lundi par la colonne « Bus ».",
+     "explication": "0,30 + 0,06 + 0,02 = **0,38**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mardi, quelle proportion prend le vélo ? Calcule 0,5 × 0,3 + 0,3 × 0,5 + 0,2 × 0,2.",
+     "reponse": 0.34,
+     "aide": "Utilise la colonne « Vélo ».",
+     "explication": "0,15 + 0,15 + 0,04 = **0,34**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mardi, quelle proportion va à pied ? La somme des trois proportions vaut 1.",
+     "reponse": 0.28,
+     "aide": "1 − 0,38 − 0,34.",
+     "explication": "1 − 0,38 − 0,34 = **0,28**. Un calcul direct le confirme : 0,05 + 0,09 + 0,14.",
+     "tolerance": 0.001
+    }
+   ]
+  },
+  {
+   "chapitre": "b7ab3864-4462-5fb0-8134-d8b4c9d772d1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fidèle à sa marque",
+   "competence": "modeliser",
+   "situation": "Chaque mois, des clients choisissent entre les marques A et B. Le graphe donne les probabilités de changement. Au début, 20 % des clients sont chez A et 80 % chez B. La répartition P(n) s’écrit en ligne et P(n+1) = P(n) × T.",
+   "documents": [
+    {
+     "id": "graphe",
+     "type": "schema",
+     "titre": "Graphe probabiliste des deux marques",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 100,
+       "r": 28,
+       "texte": "A",
+       "id": "g",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 100,
+       "r": 28,
+       "texte": "B",
+       "id": "d",
+       "zone": true,
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        117,
+        90
+       ],
+       "a": [
+        223,
+        90
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 80,
+       "texte": "0,1",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        223,
+        112
+       ],
+       "a": [
+        117,
+        112
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 134,
+       "texte": "0,3",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 45,
+       "cy": 100,
+       "rx": 20,
+       "ry": 17,
+       "motif": "aucun"
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 68,
+       "texte": "0,9",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 295,
+       "cy": 100,
+       "rx": 20,
+       "ry": 17,
+       "motif": "aucun"
+      },
+      {
+       "forme": "texte",
+       "x": 295,
+       "y": 68,
+       "texte": "0,7",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "p",
+     "type": "tableau",
+     "titre": "Répartition des clients",
+     "colonnes": [
+      "n",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "Marque A",
+       0.2,
+       0.42,
+       "?"
+      ],
+      [
+       "Marque B",
+       0.8,
+       0.58,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Proportions de clients"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graphe",
+     "enonce": "Touche la marque dont les clients sont les plus fidèles.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Regarde la boucle de chaque sommet.",
+     "explication": "Les clients de **A** restent avec la probabilité 0,9, contre 0,7 pour B."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la proportion de clients chez A au mois 2 ? Calcule 0,42 × 0,9 + 0,58 × 0,3.",
+     "reponse": 0.552,
+     "aide": "Multiplie chaque part du mois 1 par la probabilité d’aller chez A.",
+     "explication": "0,378 + 0,174 = **0,552**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "On cherche l’état stable (a ; 1 − a). Résous 0,9a + 0,3(1 − a) = a. Quelle est la valeur de a ?",
+     "reponse": 0.75,
+     "aide": "0,3 + 0,6a = a.",
+     "explication": "0,3 = 0,4a, donc a = **0,75**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle proportion de clients chez B, à long terme ? La somme des composantes de l’état stable vaut 1.",
+     "reponse": 0.25,
+     "aide": "1 − 0,75.",
+     "explication": "1 − 0,75 = **0,25**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "choix",
+     "enonce": "La répartition finale dépend-elle de la répartition de départ ?",
+     "options": [
+      "Oui : celui qui part avec 80 % de clients chez B gardera toujours davantage de clients chez B",
+      "Non : T n’a aucun coefficient nul, donc P(n) tend vers 75 % chez A quelle que soit la situation initiale",
+      "Oui : la limite est la répartition du début, car les clients changent très rarement de marque",
+      "Non : T a des coefficients nuls, donc la limite est toujours un état où A détient tous les clients"
+     ],
+     "reponse": 1,
+     "aide": "Aucun coefficient de T n’est nul.",
+     "explication": "T n’a aucun coefficient nul : P(n) converge vers l’unique état stable (0,75 ; 0,25), **quelle que soit la répartition initiale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Partie réelle, partie imaginaire",
+   "competence": "calculer",
+   "situation": "Soient z1 = 3 + 2i et z2 = 1 − 4i. Un tableau range leur partie réelle, leur partie imaginaire et leur conjugué.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Deux nombres complexes",
+     "colonnes": [
+      "Nombre",
+      "Partie réelle",
+      "Partie imaginaire",
+      "Conjugué"
+     ],
+     "lignes": [
+      [
+       "z1 = 3 + 2i",
+       3,
+       2,
+       "3 − 2i"
+      ],
+      [
+       "z2 = 1 − 4i",
+       1,
+       -4,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Re(z) et Im(z) sont des nombres réels"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la partie imaginaire de z2.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "C’est le nombre devant i, avec son signe.",
+     "explication": "La partie imaginaire de z2 = 1 − 4i est **−4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire du conjugué de z2 ?",
+     "reponse": 4,
+     "aide": "Le conjugué change le signe de la partie imaginaire.",
+     "explication": "Le conjugué de z2 est 1 + 4i : sa partie imaginaire est **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de z1 + z2 ?",
+     "reponse": 4,
+     "aide": "Additionne les parties réelles : 3 + 1.",
+     "explication": "z1 + z2 = 4 − 2i : la partie réelle est **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de z1 × z2 ? Développe (3 + 2i)(1 − 4i) avec i² = −1.",
+     "reponse": 11,
+     "aide": "3 − 12i + 2i − 8i².",
+     "explication": "(3 + 2i)(1 − 4i) = 3 − 10i + 8 = 11 − 10i : la partie réelle est **11**."
+    }
+   ]
+  },
+  {
+   "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un quotient et une équation",
+   "competence": "calculer",
+   "situation": "Jade veut écrire (2 + 3i) / (1 − i) sous forme algébrique, en multipliant haut et bas par le conjugué du dénominateur. Elle résout aussi une équation d’inconnue z = a + ib.",
+   "documents": [
+    {
+     "id": "q",
+     "type": "tableau",
+     "titre": "Calcul du quotient",
+     "colonnes": [
+      "Étape",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Numérateur : (2 + 3i)(1 + i)",
+       "−1 + 5i"
+      ],
+      [
+       "Dénominateur : (1 − i)(1 + i)",
+       "2"
+      ],
+      [
+       "Quotient",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Méthode du conjugué"
+    },
+    {
+     "id": "e",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Équation",
+     "blocs": [
+      "Trouver le nombre complexe z = a + ib tel que z + 2 z̄ = 9 + 4i.",
+      "Indice : z + 2 z̄ = 3a − ib."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "q",
+     "enonce": "Touche le résultat qui est un nombre réel.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Un nombre réel n’a pas de partie imaginaire.",
+     "explication": "Le dénominateur vaut **2** : il est réel, ce qui permet de diviser."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle du quotient ? Divise −1 par 2.",
+     "reponse": -0.5,
+     "aide": "Divise la partie réelle du numérateur par le dénominateur.",
+     "explication": "Le quotient vaut (−1 + 5i) / 2 : sa partie réelle est **−0,5**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire du quotient ?",
+     "reponse": 2.5,
+     "aide": "Divise 5 par 2.",
+     "explication": "La partie imaginaire est 5 / 2 = **2,5**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour 3a − ib = 9 + 4i, quelle est la valeur de a ? Identifie les parties réelles.",
+     "reponse": 3,
+     "aide": "3a = 9.",
+     "explication": "Les parties réelles sont égales : 3a = 9, donc a = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de b ? Identifie les parties imaginaires : −b = 4.",
+     "reponse": -4,
+     "aide": "Attention au signe moins devant b.",
+     "explication": "Les parties imaginaires sont égales : −b = 4, donc b = **−4**. Ainsi z = 3 − 4i."
+    }
+   ]
+  },
+  {
+   "chapitre": "60bd8e40-bffc-568b-8e6d-1b2016be63d3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La racine carrée de −5 + 12i",
+   "competence": "resoudre",
+   "situation": "Hugo cherche les nombres complexes z = a + ib tels que z² = −5 + 12i. Il traduit l’égalité en trois équations réelles, en utilisant aussi le module.",
+   "documents": [
+    {
+     "id": "s",
+     "type": "tableau",
+     "titre": "Les équations d’Hugo",
+     "colonnes": [
+      "Équation",
+      "Expression"
+     ],
+     "lignes": [
+      [
+       "Parties réelles",
+       "a² − b² = −5"
+      ],
+      [
+       "Parties imaginaires",
+       "2ab = 12"
+      ],
+      [
+       "Modules : |z|² = |z²|",
+       "a² + b² = ?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "z² = (a² − b²) + 2ab i"
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappel",
+     "blocs": [
+      "Le module de −5 + 12i vaut √((−5)² + 12²).",
+      "On additionne puis on soustrait les équations pour isoler a² et b²."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de a² + b² ? C’est le module de −5 + 12i.",
+     "reponse": 13,
+     "aide": "Calcule 25 + 144, puis la racine carrée.",
+     "explication": "√(25 + 144) = √169 = **13**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de a² ? Additionne a² + b² = 13 et a² − b² = −5, puis divise par 2.",
+     "reponse": 4,
+     "aide": "13 + (−5) = 8.",
+     "explication": "2a² = 8, donc a² = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de b² ? Soustrais les deux équations : 13 − (−5), puis divise par 2.",
+     "reponse": 9,
+     "aide": "13 + 5 = 18.",
+     "explication": "2b² = 18, donc b² = **9**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’équation 2ab = 12 sur les signes de a et de b ?",
+     "options": [
+      "Que a et b ont le même signe, car leur produit 2ab est positif",
+      "Que a et b sont de signes contraires, car le nombre 12 est strictement positif",
+      "Que a et b sont tous deux positifs, car leur produit est égal à 12 exactement",
+      "Qu’aucune information n’est donnée, car les signes ne se lisent pas dans un produit"
+     ],
+     "reponse": 0,
+     "aide": "Un produit positif est obtenu avec deux nombres de même signe.",
+     "explication": "2ab = 12 > 0 : a et b ont le **même signe**. Il y a donc deux solutions : (a ; b) = (2 ; 3) et (−2 ; −3)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Parmi les deux solutions, celle dont la partie réelle est positive a pour partie imaginaire…",
+     "reponse": 3,
+     "aide": "a = 2 et b a le même signe que a.",
+     "explication": "Avec a = 2 et b du même signe, b = **3** : z = 2 + 3i (l’autre solution est −2 − 3i)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un triangle dans le plan complexe",
+   "competence": "geometrie",
+   "situation": "Dans le plan complexe, muni du repère d’origine O, un carreau représente une unité. Les points A, B et C ont pour affixes respectives 1 + 2i, 5 + 2i et 5 + 5i.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 1,
+       "y": 2,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point d’affixe 5 + 5i.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Abscisse 5, ordonnée 5.",
+     "explication": "Le point d’affixe 5 + 5i est **C** : abscisse 5, ordonnée 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur AB ? C’est le module de z(B) − z(A) = 4.",
+     "reponse": 4,
+     "aide": "z(B) − z(A) = 4 + 0i.",
+     "explication": "AB = |4| = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur AC ? z(C) − z(A) = 4 + 3i.",
+     "reponse": 5,
+     "aide": "Calcule √(4² + 3²).",
+     "explication": "AC = |4 + 3i| = √25 = **5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de l’affixe du milieu de [AC] ? Utilise (z(A) + z(C)) / 2.",
+     "reponse": 3.5,
+     "aide": "(2 + 5) / 2.",
+     "explication": "Le milieu a pour affixe (6 + 7i) / 2 = 3 + 3,5i : partie imaginaire **3,5**.",
+     "tolerance": 0.001
+    }
+   ]
+  },
+  {
+   "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle est la nature du triangle ?",
+   "competence": "geometrie",
+   "situation": "Dans le plan complexe, les points A, B et C ont pour affixes 1 + i, 4 + 2i et 2 + 4i. Tess veut déterminer la nature du triangle ABC en calculant le quotient Z = (z(C) − z(A)) / (z(B) − z(A)).",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Critères",
+     "blocs": [
+      "Si Z est réel, les points sont alignés ; si Z est imaginaire pur, les droites (AB) et (AC) sont perpendiculaires.",
+      "Le module de Z est égal au rapport AC / AB."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de z(B) − z(A) ? Lis les affixes.",
+     "reponse": 3,
+     "aide": "z(B) − z(A) = (4 + 2i) − (1 + i).",
+     "explication": "z(B) − z(A) = 3 + i : partie réelle **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de z(C) − z(A) ?",
+     "reponse": 3,
+     "aide": "z(C) − z(A) = (2 + 4i) − (1 + i).",
+     "explication": "z(C) − z(A) = 1 + 3i : partie imaginaire **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de Z = (1 + 3i) / (3 + i) ? Multiplie haut et bas par 3 − i.",
+     "reponse": 0.6,
+     "aide": "(1 + 3i)(3 − i) = 3 − i + 9i + 3 = 6 + 8i ; le dénominateur vaut 10.",
+     "explication": "Z = (6 + 8i) / 10 = 0,6 + 0,8i : partie réelle **0,6**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module de Z = 0,6 + 0,8i ?",
+     "reponse": 1,
+     "aide": "0,36 + 0,64.",
+     "explication": "|Z| = √(0,36 + 0,64) = **1**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire du triangle ABC ?",
+     "options": [
+      "Il est isocèle en A, car |Z| = 1 signifie AC = AB ; Z n’est ni réel ni imaginaire pur",
+      "Il est rectangle en A, car Z a une partie imaginaire non nulle, donc (AB) et (AC) sont perpendiculaires",
+      "Il est aplati, car Z a une partie réelle non nulle, donc A, B et C sont sur une même droite",
+      "Il est équilatéral, car |Z| = 1 suffit à garantir que les trois côtés ont la même longueur"
+     ],
+     "reponse": 0,
+     "aide": "Que signifie un module égal à 1 ?",
+     "explication": "|Z| = AC / AB = 1 : **ABC est isocèle en A**. Z n’étant ni réel ni imaginaire pur, il n’est ni aplati ni rectangle."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1992624-02b3-5928-a329-73901090f0b4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Module et argument d’un produit",
+   "competence": "calculer",
+   "situation": "Soient z1 = 1 + i et z2 = √3 + i, d’images M1 et M2 dans le plan complexe. Arthur compare leurs modules et leurs arguments, puis en déduit ceux de leur produit.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 4,
+      "ymin": 0,
+      "ymax": 3
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "M1",
+       "x": 1,
+       "y": 1,
+       "position": "no"
+      },
+      {
+       "id": "M2",
+       "x": 1.732,
+       "y": 1,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "M1"
+      },
+      {
+       "de": "O",
+       "a": "M2"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice (M2 a pour abscisse √3 ≈ 1,73)"
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Module et argument",
+     "colonnes": [
+      "Nombre",
+      "Module",
+      "Argument (rad)"
+     ],
+     "lignes": [
+      [
+       "z1 = 1 + i",
+       "?",
+       "π/4"
+      ],
+      [
+       "z2 = √3 + i",
+       2,
+       "π/6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Arguments à connaître"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point dont l’affixe a le plus grand module.",
+     "reponse": [
+      "M2"
+     ],
+     "aide": "Le module est la distance à l’origine O.",
+     "explication": "**M2** est plus éloigné de O : |z2| = 2 contre √2 ≈ 1,41."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module de z1 = 1 + i, arrondi au centième ?",
+     "reponse": 1.41,
+     "aide": "Calcule √(1² + 1²).",
+     "explication": "|z1| = √2 ≈ **1,41**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module de z1 × z2, arrondi au centième ? Le module d’un produit est le produit des modules.",
+     "reponse": 2.83,
+     "aide": "√2 × 2.",
+     "explication": "|z1 z2| = 2√2 ≈ **2,83**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est un argument de z1 × z2, en radians, arrondi au centième ? Additionne π/4 et π/6.",
+     "reponse": 1.31,
+     "aide": "π/4 + π/6 = 5π/12.",
+     "explication": "arg(z1 z2) = π/4 + π/6 = 5π/12 ≈ **1,31** rad.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut (z1)^8 ? On a |z1|^8 = 16 et un argument égal à 8 × π/4 = 2π.",
+     "reponse": 16,
+     "aide": "Un argument de 2π correspond à un nombre réel positif.",
+     "explication": "(z1)^8 = 16 e^(2iπ) = **16**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur le cercle trigonométrique",
+   "competence": "geometrie",
+   "situation": "Sur la figure, le cercle de centre O a pour rayon 4 carreaux : ce rayon représente l’unité. Les points A, B, C et D sont les images des nombres e^(iπ/6), e^(iπ/4), e^(iπ/3) et e^(iπ/2), dans un ordre que l’on retrouve en regardant les angles.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 5,
+      "ymin": -1,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 3.464,
+       "y": 2,
+       "position": "e"
+      },
+      {
+       "id": "B",
+       "x": 2.828,
+       "y": 2.828,
+       "position": "ne"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 3.464,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 4,
+       "position": "ne"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 4
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "A"
+      },
+      {
+       "de": "O",
+       "a": "B"
+      },
+      {
+       "de": "O",
+       "a": "C"
+      },
+      {
+       "de": "O",
+       "a": "D"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice (rayon = 4 carreaux = 1 unité)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point image de e^(iπ/3), situé à 60° de l’axe des abscisses.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "π/3 correspond à 60° ; π/6 à 30° et π/4 à 45°.",
+     "explication": "π/3 = 60° : le point à 60° de l’axe est **C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’abscisse de C : 2 carreaux sur 4. Quelle est la partie réelle de e^(iπ/3) ?",
+     "reponse": 0.5,
+     "aide": "Divise par le rayon 4.",
+     "explication": "Re(e^(iπ/3)) = 2 / 4 = **0,5**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’ordonnée de A : 2 carreaux sur 4. Quelle est la partie imaginaire de e^(iπ/6) ?",
+     "reponse": 0.5,
+     "aide": "Divise par le rayon 4.",
+     "explication": "Im(e^(iπ/6)) = 2 / 4 = **0,5**.",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’abscisse de B : environ 2,83 carreaux. Quelle est la partie réelle de e^(iπ/4), arrondie au centième ?",
+     "reponse": 0.71,
+     "aide": "Divise 2,83 par 4.",
+     "explication": "Re(e^(iπ/4)) = 2,83 / 4 ≈ **0,71** (c’est √2 / 2).",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Élever à la puissance par Moivre",
+   "competence": "calculer",
+   "situation": "Soit z = 1 + i√3. Plutôt que de développer (1 + i√3)⁶, Sacha passe en forme exponentielle z = r e^(iθ) et utilise la formule de Moivre.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Forme exponentielle de z",
+     "colonnes": [
+      "Nombre",
+      "Module",
+      "Argument (rad)"
+     ],
+     "lignes": [
+      [
+       "z = 1 + i√3",
+       "?",
+       "π/3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Arguments à connaître"
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Formule de Moivre",
+     "blocs": [
+      "(r e^(iθ))ⁿ = rⁿ e^(inθ).",
+      "Le module est élevé à la puissance n et l’argument est multiplié par n."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module de z = 1 + i√3 ? Calcule √(1² + 3).",
+     "reponse": 2,
+     "aide": "1 + 3 = 4.",
+     "explication": "|z| = √4 = **2**."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la case qu’il faut multiplier par 3 pour obtenir l’argument de z³.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Par la formule de Moivre, l’argument est multiplié par n.",
+     "explication": "Il faut multiplier l’**argument** π/3 par 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de z³ ? On a |z³| = 8 et un argument égal à π.",
+     "reponse": -8,
+     "aide": "e^(iπ) = −1.",
+     "explication": "z³ = 8 e^(iπ) = 8 × (−1) = **−8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de z⁶ ? On a |z⁶| = 64 et un argument égal à 2π.",
+     "reponse": 64,
+     "aide": "e^(2iπ) = 1.",
+     "explication": "z⁶ = 64 e^(2iπ) = **64**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e421518d-4b8a-5153-a24a-1d112167f269",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’hexagone des racines sixièmes",
+   "competence": "geometrie",
+   "situation": "Les solutions de z⁶ = 1 sont les six nombres z_k = e^(2ikπ/6), pour k de 0 à 5. Leurs images A, B, C, D, E, F forment un polygone régulier inscrit dans le cercle de centre O. Sur la figure, le rayon du cercle mesure 4 carreaux et représente l’unité.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": -5,
+      "xmax": 5,
+      "ymin": -5,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 4,
+       "y": 0,
+       "position": "e"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 3.464,
+       "position": "ne"
+      },
+      {
+       "id": "C",
+       "x": -2,
+       "y": 3.464,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": -4,
+       "y": 0,
+       "position": "o"
+      },
+      {
+       "id": "E",
+       "x": -2,
+       "y": -3.464,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 2,
+       "y": -3.464,
+       "position": "se"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 4
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+       ],
+       "motif": "clair"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "c",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Lecture",
+     "blocs": [
+      "A est l’image de z0 = 1. On parcourt l’hexagone dans le sens direct : A, B, C, D, E, F.",
+      "Les arguments des z_k sont 0°, 60°, 120°, 180°, 240° et 300°."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point image de e^(2iπ/3), c’est-à-dire le point à 120° de l’axe des abscisses.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Les points sont espacés de 60° : A, B, C à 0°, 60°, 120°.",
+     "explication": "120° est l’argument de z2 : il correspond au point **C**."
+    },
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche les deux solutions réelles de z⁶ = 1.",
+     "reponse": [
+      "A",
+      "D"
+     ],
+     "aide": "Un point est l’image d’un réel s’il est sur l’axe des abscisses.",
+     "explication": "Les deux solutions réelles sont 1 et −1 : les points **A et D**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du côté de l’hexagone, en unités ? Un côté mesure 4 carreaux, l’unité en vaut 4.",
+     "reponse": 1,
+     "aide": "Un côté de l’hexagone régulier est égal au rayon.",
+     "explication": "Le côté mesure 4 carreaux, soit **1** unité : |z1 − z0| = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien des six racines vérifient z³ = −1 ? Cherche celles dont l’argument multiplié par 3 est un angle plat (180° + un tour).",
+     "reponse": 3,
+     "aide": "Les arguments 60°, 180° et 300° conviennent.",
+     "explication": "Il y a **3** racines : celles d’argument 60°, 180° et 300°, soit B, D et F."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des six racines ? Le centre de gravité de l’hexagone est O.",
+     "reponse": 0,
+     "aide": "Les points opposés se compensent deux à deux.",
+     "explication": "La somme des racines n-ièmes de l’unité est **0** dès que n ≥ 2."
+    }
+   ]
+  },
+  {
+   "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand le discriminant est négatif",
+   "competence": "resoudre",
+   "situation": "Lola résout l’équation z² + 2z + 5 = 0 dans ℂ. Elle commence par relever les coefficients a, b et c dans un tableau, puis par calculer le discriminant.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Coefficients de z² + 2z + 5 = 0",
+     "colonnes": [
+      "Coefficient",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "a",
+       1
+      ],
+      [
+       "b",
+       2
+      ],
+      [
+       "c",
+       5
+      ],
+      [
+       "Δ = b² − 4ac",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Méthode du second degré"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche le coefficient c de l’équation.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "c est le terme constant, sans z.",
+     "explication": "Le terme constant est **5** : c = 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de Δ ? Calcule 2² − 4 × 1 × 5.",
+     "reponse": -16,
+     "aide": "4 − 20.",
+     "explication": "Δ = 4 − 20 = **−16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle commune aux deux solutions ? Utilise −b / (2a).",
+     "reponse": -1,
+     "aide": "Partie réelle : −2 divisé par 2.",
+     "explication": "Les solutions sont (−2 ± 4i) / 2 : partie réelle **−1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de la solution qui a une partie imaginaire positive ? Utilise √(−Δ) / (2a).",
+     "reponse": 2,
+     "aide": "√16 = 4.",
+     "explication": "Les solutions sont −1 + 2i et −1 − 2i : la partie imaginaire est **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une racine évidente",
+   "competence": "resoudre",
+   "situation": "Soit P(z) = z³ − 3z² + 4z − 2. Théo relève quelques valeurs de P, repère une racine évidente et factorise P par (z − 1) : P(z) = (z − 1)(z² + bz + c).",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Valeurs de P(z)",
+     "colonnes": [
+      "z",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "P(z)",
+       -10,
+       -2,
+       "?",
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "P(z) = z³ − 3z² + 4z − 2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que vaut P(1) ? Calcule 1 − 3 + 4 − 2.",
+     "reponse": 0,
+     "aide": "1 − 3 = −2, puis −2 + 4 = 2.",
+     "explication": "P(1) = 1 − 3 + 4 − 2 = **0** : 1 est racine."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "enonce": "Touche la case du tableau qui donne la racine évidente.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la colonne où P(z) s’annule.",
+     "explication": "C’est la colonne z = 1 : **P(1) = 0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de c ? En développant (z − 1)(z² + bz + c), le terme constant vaut −c, et il doit valoir −2.",
+     "reponse": 2,
+     "aide": "Compare avec le terme constant −2 de P.",
+     "explication": "−c = −2, donc c = **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le quotient est z² − 2z + 2. Quel est son discriminant ?",
+     "reponse": -4,
+     "aide": "Calcule (−2)² − 4 × 1 × 2.",
+     "explication": "Δ = 4 − 8 = **−4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de la racine 1 + i ? Les autres racines de P sont 1 + i et 1 − i ; donne la partie imaginaire de 1 + i.",
+     "reponse": 1,
+     "aide": "Les solutions du quotient sont (2 ± 2i) / 2.",
+     "explication": "Les racines de z² − 2z + 2 sont **1 + i** et 1 − i : partie imaginaire 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "304e6775-4a63-5e13-87c5-4f49b8d44219",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les trois racines cubiques de 8",
+   "competence": "geometrie",
+   "situation": "Les solutions de z³ = 8 forment un triangle équilatéral inscrit dans un cercle de centre O. Sur la figure, un carreau représente une unité, A est l’image de la solution réelle, et B est l’image de la solution d’argument 2π/3.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": -3,
+      "xmax": 3,
+      "ymin": -3,
+      "ymax": 3
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "B",
+       "x": -1,
+       "y": 1.732,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": -1,
+       "y": -1.732,
+       "position": "so"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 2
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "motif": "clair"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Méthode",
+     "blocs": [
+      "On écrit z = ρ e^(iφ) et 8 = 8 e^(i0) : l’équation devient ρ³ = 8 et 3φ = 2kπ.",
+      "Les trois solutions correspondent à k = 0, 1 et 2."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module commun des solutions ? Résous ρ³ = 8.",
+     "reponse": 2,
+     "aide": "2 × 2 × 2 = 8.",
+     "explication": "ρ³ = 8 donne ρ = **2** : les trois points sont sur le cercle de rayon 2."
+    },
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point image de la solution réelle.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Une solution réelle est sur l’axe des abscisses.",
+     "explication": "La solution réelle est 2 : c’est le point **A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’argument de B, en degrés ? Pour k = 1, φ = 2π/3.",
+     "reponse": 120,
+     "aide": "Convertis 2π/3 : π = 180°.",
+     "explication": "2π/3 = **120°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de B ? Utilise 2 cos(120°).",
+     "reponse": -1,
+     "aide": "cos(120°) = −1/2.",
+     "explication": "Re(B) = 2 × (−1/2) = **−1**, et B a pour affixe −1 + i√3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du côté du triangle ABC, arrondie au centième ? Calcule AB avec A(2 ; 0) et B(−1 ; 1,73).",
+     "reponse": 3.46,
+     "aide": "AB² = 3² + (√3)² = 12.",
+     "explication": "AB = √12 = 2√3 ≈ **3,46**.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Tourner en multipliant par i",
+   "competence": "geometrie",
+   "situation": "Dans le plan complexe, le point A a pour affixe 3 + i. Les points A′ et B sont deux images de A par des rotations de centre O, d’angle π/2 ou −π/2. Multiplier par i, c’est tourner de +π/2 autour de O.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 4,
+      "ymin": -4,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 3,
+       "y": 1,
+       "position": "ne"
+      },
+      {
+       "id": "A2",
+       "x": -1,
+       "y": 3,
+       "position": "no",
+       "nom": "A′"
+      },
+      {
+       "id": "B",
+       "x": 1,
+       "y": -3,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "A"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche l’image de A par la rotation de centre O et d’angle +π/2.",
+     "reponse": [
+      "A2"
+     ],
+     "aide": "Une rotation de +π/2 tourne dans le sens inverse des aiguilles d’une montre.",
+     "explication": "La rotation de +π/2 envoie A sur **A′** ; B est l’image par la rotation de −π/2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de i × (3 + i) ? Développe avec i² = −1.",
+     "reponse": -1,
+     "aide": "i × 3 + i × i = 3i − 1.",
+     "explication": "i(3 + i) = 3i + i² = −1 + 3i : partie réelle **−1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de i × (3 + i) ?",
+     "reponse": 3,
+     "aide": "i(3 + i) = −1 + 3i.",
+     "explication": "La partie imaginaire de −1 + 3i est **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur OA′, arrondie au centième ? OA′ = |−1 + 3i|.",
+     "reponse": 3.16,
+     "aide": "Calcule √((−1)² + 3²).",
+     "explication": "OA′ = √10 ≈ **3,16**, comme OA : une rotation conserve les longueurs.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une rotation de centre Ω",
+   "competence": "geometrie",
+   "situation": "Dans le plan complexe, la rotation r de centre Ω(2) et d’angle π/2 s’écrit z′ − 2 = i(z − 2). Anaïs cherche l’image de A(4 + 2i). Elle étudie ensuite l’homothétie de centre Ω et de rapport 3.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 5,
+      "ymin": -1,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "W",
+       "x": 2,
+       "y": 0,
+       "position": "se",
+       "nom": "Ω"
+      },
+      {
+       "id": "A",
+       "x": 4,
+       "y": 2,
+       "position": "ne"
+      },
+      {
+       "id": "A2",
+       "x": 0,
+       "y": 2,
+       "position": "no",
+       "nom": "A′"
+      },
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      }
+     ],
+     "segments": [
+      {
+       "de": "W",
+       "a": "A"
+      },
+      {
+       "de": "W",
+       "a": "A2"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Calcul de l’image de A",
+     "colonnes": [
+      "Étape",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "z_A − 2",
+       "2 + 2i"
+      ],
+      [
+       "i × (z_A − 2)",
+       "?"
+      ],
+      [
+       "z_A′ = i(z_A − 2) + 2",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "z_A = 4 + 2i"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie réelle de i(2 + 2i) ? Développe avec i² = −1.",
+     "reponse": -2,
+     "aide": "i × 2 + i × 2i = 2i + 2i².",
+     "explication": "i(2 + 2i) = 2i − 2 = −2 + 2i : partie réelle **−2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de z_A′ = (−2 + 2i) + 2 ?",
+     "reponse": 2,
+     "aide": "Seule la partie réelle change quand on ajoute 2.",
+     "explication": "z_A′ = 0 + 2i : la partie imaginaire est **2**."
+    },
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche l’image A′ de A par la rotation r.",
+     "reponse": [
+      "A2"
+     ],
+     "aide": "A′ a pour affixe 2i : abscisse 0, ordonnée 2.",
+     "explication": "A′ d’affixe 2i est le point de coordonnées (0 ; 2) : **A′**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur ΩA′, arrondie au centième ? Une rotation conserve ΩA = |2 + 2i|.",
+     "reponse": 2.83,
+     "aide": "Calcule √(2² + 2²).",
+     "explication": "ΩA′ = ΩA = √8 ≈ **2,83**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’homothétie de centre Ω et de rapport 3 envoie A sur A″ avec z″ − 2 = 3(2 + 2i). Quelle est la partie réelle de z″ ?",
+     "reponse": 8,
+     "aide": "3 × 2 = 6, puis on ajoute 2.",
+     "explication": "z″ = 6 + 6i + 2 = 8 + 6i : partie réelle **8**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20dcb551-34a5-5add-ac96-8e00ae5cbcb6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois points, un quotient",
+   "competence": "geometrie",
+   "situation": "Dans le plan complexe, on donne A, B et C. Raphaël calcule Z = (z(C) − z(A)) / (z(B) − z(A)) pour identifier la nature du triangle ABC. Un carreau représente une unité.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "figure",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 3,
+       "y": 3.464,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice (C a pour ordonnée 2√3 ≈ 3,46)"
+    },
+    {
+     "id": "a",
+     "type": "tableau",
+     "titre": "Les affixes",
+     "colonnes": [
+      "Point",
+      "Affixe"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1"
+      ],
+      [
+       "B",
+       "5"
+      ],
+      [
+       "C",
+       "3 + 2√3 i"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Affixes exactes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le sommet dont l’affixe n’est pas un nombre réel.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Cherche le point qui n’est pas sur l’axe des abscisses.",
+     "explication": "L’affixe 3 + 2√3 i a une partie imaginaire non nulle : c’est le point **C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur AC ? Utilise z(C) − z(A) = 2 + 2√3 i.",
+     "reponse": 4,
+     "aide": "Calcule √(2² + (2√3)²).",
+     "explication": "AC = √(4 + 12) = √16 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le module de Z ? Il vaut AC / AB.",
+     "reponse": 1,
+     "aide": "AB = |5 − 1| = 4.",
+     "explication": "|Z| = AC / AB = 4 / 4 = **1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’argument de Z en radians, arrondi au centième ? Z = 0,5 + i√3 / 2.",
+     "reponse": 1.05,
+     "aide": "Cherche θ tel que cos θ = 0,5 et sin θ = √3 / 2.",
+     "explication": "Z = e^(iπ/3) : l’argument est π/3 ≈ **1,05** rad.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature du triangle ABC ?",
+     "options": [
+      "Rectangle en A : Z a une partie imaginaire non nulle, donc les droites (AB) et (AC) sont perpendiculaires",
+      "Équilatéral : |Z| = 1 donne AC = AB, et un argument de π/3 donne un angle de 60° en A",
+      "Isocèle en A seulement : |Z| = 1 donne AC = AB, mais l’argument de Z ne renseigne pas sur les angles",
+      "Aplati : Z a une partie réelle non nulle, donc les trois points A, B et C sont alignés"
+     ],
+     "reponse": 1,
+     "aide": "Que signifient un module égal à 1 et un argument égal à π/3 ?",
+     "explication": "|Z| = 1 donne AB = AC, et l’angle en A vaut π/3 (60°) : **ABC est équilatéral**."
+    }
+   ]
+  }
+ ]
+}

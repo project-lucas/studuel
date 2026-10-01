@@ -2123,19 +2123,13 @@ a:hover > .wiggle-on-hover {
    avec le nombre de matières et l'ouverture du panneau d'édition), elle a
    toujours un dessus plus clair que son dessous. Un dégradé qui remonte au
    milieu, lui, finit toujours par montrer une bande. */
+/* Chantier d'homogénéité (24/09/2026, Lucas) : la carte de joueur est une
+   CARTE BLANCHE, comme la carte de série en tête de Réviser — le grand aplat
+   violet profond faisait de Moi un autre monde que les onglets voisins. Le
+   violet reste aux actions et aux pastilles (bg-secondary / text-primary). */
 .moi-carte {
-  background:
-    radial-gradient(105% 62% at 14% -6%, oklch(0.58 0.22 301 / 0.7), transparent 62%),
-    radial-gradient(58% 26% at 22% 33%, oklch(0.56 0.21 299 / 0.38), transparent 72%),
-    linear-gradient(
-      180deg,
-      oklch(0.45 0.21 297) 0%,
-      oklch(0.38 0.19 295) 52%,
-      oklch(0.28 0.13 293) 100%
-    );
-  box-shadow:
-    inset 0 1px 0 oklch(1 0 0 / 0.18),
-    0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
+  background: var(--card);
+  box-shadow: var(--carte-ombre);
 }
 
 /* Écriture à la craie : blanc cassé + halo poudreux léger. */
@@ -6159,43 +6153,11 @@ body {
   box-shadow: 0 1px 0 oklch(0.3 0.05 278 / 0.04);
 }
 
-/* --- invitation d'angle (onglet Amis) --- */
-/* Le bouton « Inviter un ami » du classement des amis se trémousse une fois
-   toutes les six secondes : assez pour attirer l'œil, trop rare pour agacer. */
-@keyframes invite-coin {
-  0%,
-  86%,
-  100% {
-    transform: rotate(0deg);
-  }
-  89% {
-    transform: rotate(-12deg) scale(1.06);
-  }
-  92% {
-    transform: rotate(10deg) scale(1.06);
-  }
-  95% {
-    transform: rotate(-6deg);
-  }
-}
-.invite-coin {
-  animation: invite-coin 6s ease-in-out 1.5s infinite;
-}
-.invite-coin:active {
-  animation: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .invite-coin {
-    animation: none;
-  }
-}
-
 /* --- onglets de Moi, soudés sous la carte --- */
 /* La teinte exacte où s'arrête le dégradé de .moi-carte : la barre
    prolonge la carte au lieu de se poser à côté. */
 .moi-onglets {
-  background: oklch(0.28 0.13 293);
-  box-shadow: 0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
+  background: var(--card);
 }
 /* Le premier bloc d'un panneau remonte sous la barre des onglets : pas
    d'écart entre la carte et sa section. Son haut gagne la hauteur cachée. */

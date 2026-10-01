@@ -1,0 +1,50 @@
+{
+  "niveau": "3e",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "difficulte": 1,
+      "titre": "Période et fréquence d'un diapason",
+      "consigne": "Réponds à chaque question en justifiant tes calculs et en précisant les unités.",
+      "enonce": "Un microphone relié à un oscilloscope enregistre le son d'un diapason. On lit sur l'écran une courbe sinusoïdale régulière dont un motif dure **T = 2 ms**.\n\n1. Quel est le rôle du microphone ?\n2. Le son du diapason est-il pur, composé ou un bruit ? Justifie.\n3. Convertis la période en secondes puis calcule la fréquence f de ce son.",
+      "bareme": [
+        { "critere": "Rôle du microphone : convertir la vibration de l'air en signal électrique", "points": 5 },
+        { "critere": "Son pur justifié par la courbe sinusoïdale régulière", "points": 5 },
+        { "critere": "Conversion T = 0,002 s et calcul f = 1 ÷ T = 500 Hz avec unité", "points": 10 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Le microphone **convertit la vibration de l'air en signal électrique**, que l'oscilloscope trace en fonction du temps.\n2. C'est un **son pur** : la courbe est une **sinusoïde régulière** (c'est le cas typique du diapason).\n3. T = 2 ms = **0,002 s**.\nf = 1 ÷ T = 1 ÷ 0,002 = **500 Hz**.\nLe diapason produit un son de fréquence 500 Hz."
+    },
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "difficulte": 2,
+      "titre": "Deux notes de guitare",
+      "consigne": "Exploite les mesures, justifie chaque réponse et donne les résultats avec leur unité.",
+      "enonce": "Chloé enregistre deux notes de sa guitare avec un microphone relié à un ordinateur. Les courbes obtenues sont périodiques mais plus complexes qu'une sinusoïde.\n\n| Note | Durée de 5 motifs | Amplitude sur l'écran |\n|---|---|---|\n| Note A | 25 ms | 2 carreaux |\n| Note B | 10 ms | 2 carreaux |\n\n1. S'agit-il de sons purs ? Justifie.\n2. Calcule la période puis la fréquence de chaque note.\n3. Quelle note est la plus aiguë ? Justifie.\n4. Les deux notes sont-elles jouées aussi fort l'une que l'autre ? Justifie.",
+      "bareme": [
+        { "critere": "Sons composés (courbe périodique mais complexe), non purs", "points": 3 },
+        { "critere": "Périodes 5 ms et 2 ms, fréquences 200 Hz et 500 Hz, calculs justifiés", "points": 9 },
+        { "critere": "Note B plus aiguë car fréquence plus grande (période plus courte)", "points": 4 },
+        { "critere": "Même amplitude donc même intensité (aussi fort)", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Non : les courbes sont **périodiques** mais **plus complexes** qu'une sinusoïde. Ce sont des **sons composés** (un instrument), pas des sons purs.\n2. **Note A** : T = 25 ms ÷ 5 = **5 ms = 0,005 s** ; f = 1 ÷ 0,005 = **200 Hz**.\n**Note B** : T = 10 ms ÷ 5 = **2 ms = 0,002 s** ; f = 1 ÷ 0,002 = **500 Hz**.\n3. La **note B** est la plus aiguë : sa période est plus **courte**, donc sa fréquence est plus **grande** (500 Hz > 200 Hz), et plus la fréquence est grande, plus le son est aigu.\n4. Oui : les deux courbes ont la **même amplitude** (2 carreaux). L'amplitude traduit l'**intensité** du son (fort ou faible) : les deux notes sont jouées aussi fort. Fréquence et amplitude sont deux caractéristiques indépendantes."
+    },
+    {
+      "chapitre": "88983844-4618-57ed-88ec-43d79d7e44d3",
+      "difficulte": 3,
+      "titre": "Le sonar du bateau de pêche",
+      "consigne": "Réponds en justifiant chaque étape. Détaille les calculs et donne les unités.",
+      "enonce": "**Document 1.** Un sonar placé sous la coque d'un bateau émet un son de période **T = 20 µs** (1 µs = 0,000 001 s). Le son se propage dans l'eau à **1 500 m/s**, se réfléchit sur le fond ou sur un banc de poissons, et revient au sonar : c'est l'écho.\n\n**Document 2.** Mesures du sonar :\n\n| Obstacle | Durée entre l'émission et le retour de l'écho |\n|---|---|\n| Fond marin | 0,08 s |\n| Banc de poissons | 0,02 s |\n\n**Document 3.** Un pêcheur affirme : « Si on augmente l'amplitude du sonar, le son deviendra audible pour nous. »\n\n1. Calcule la fréquence du son émis. Est-ce un infrason, un son audible ou un ultrason ? Justifie.\n2. Lequel des deux obstacles est le plus proche ? Justifie sans calcul, à l'aide du cours.\n3. Le son fait l'aller et le retour. Calcule la profondeur du fond marin et la distance du banc de poissons.\n4. Le pêcheur a-t-il raison ? Justifie.",
+      "bareme": [
+        { "critere": "f = 1 ÷ 0,000 02 = 50 000 Hz, ultrason car > 20 000 Hz", "points": 5 },
+        { "critere": "Banc de poissons plus proche : écho revenu plus tôt", "points": 3 },
+        { "critere": "Distances : aller-retour divisé par 2, fond 60 m et banc 15 m", "points": 7 },
+        { "critere": "Pêcheur a tort : l'amplitude change l'intensité, pas la fréquence (hauteur)", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. T = 20 µs = **0,000 02 s**. f = 1 ÷ T = 1 ÷ 0,000 02 = **50 000 Hz**. C'est un **ultrason** : sa fréquence est **supérieure à 20 000 Hz**, donc inaudible pour l'être humain.\n2. Le **banc de poissons** est le plus proche : l'**écho revient d'autant plus tôt que l'obstacle est proche**, et son écho revient au bout de 0,02 s contre 0,08 s pour le fond.\n3. Le son parcourt l'aller **et** le retour, donc la distance à l'obstacle est la moitié de la distance parcourue : d = v × t ÷ 2.\n- Fond : d = 1 500 × 0,08 ÷ 2 = 120 ÷ 2 = **60 m**.\n- Banc : d = 1 500 × 0,02 ÷ 2 = 30 ÷ 2 = **15 m**.\n4. Le pêcheur a **tort**. L'**amplitude** ne fait varier que l'**intensité** du son (plus fort ou plus faible) ; elle **ne change pas sa hauteur**, qui dépend de la **fréquence**. Le son resterait à 50 000 Hz, donc un ultrason inaudible, même plus fort."
+    }
+  ]
+}

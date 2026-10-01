@@ -64,10 +64,11 @@ export default function OngletsMoi({
           role="tablist"
           aria-label="Sections du profil"
           className={cn(
-            'moi-onglets grid grid-cols-3 gap-1 px-2.5 pb-2.5',
-            seule ? 'rounded-carte pt-2.5' : 'rounded-b-carte border-t border-white/10 pt-1.5',
+            'moi-onglets px-2.5 pb-2.5',
+            seule ? 'rounded-carte pt-2.5' : 'rounded-b-carte pt-0.5',
           )}
         >
+          <div className="grid grid-cols-3 gap-1 rounded-2xl bg-secondary p-1">
           {onglets.map((o) => {
             const Icone = ICONES[o.id] ?? Gem
             const selectionne = o.id === actif
@@ -87,8 +88,8 @@ export default function OngletsMoi({
                 className={cn(
                   'font-heading flex min-h-10 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-1 text-[13px] font-extrabold transition',
                   selectionne
-                    ? 'bg-white text-primary shadow-[0_3px_0_oklch(0_0_0/0.25)]'
-                    : 'text-white/75 hover:bg-white/10 active:scale-95',
+                    ? 'bg-card text-primary shadow-[0_3px_0_color-mix(in_oklch,var(--primary),transparent_70%)]'
+                    : 'text-secondary-foreground/70 hover:bg-card/60 active:scale-95',
                 )}
               >
                 <Icone className="size-4 shrink-0" strokeWidth={2.6} aria-hidden="true" />
@@ -96,6 +97,7 @@ export default function OngletsMoi({
               </button>
             )
           })}
+          </div>
         </div>
       </div>
 

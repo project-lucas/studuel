@@ -1,0 +1,2630 @@
+{
+ "niveau": "Tle",
+ "matiere": "management-sgn",
+ "exercices": [
+  {
+   "chapitre": "88acc2d9-6dc3-597b-9766-9128fb8b5501",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que pensent les parents du yaourt ?",
+   "competence": "analyser-document",
+   "situation": "Une marque imaginaire de yaourts pour enfants veut comprendre pourquoi ses ventes stagnent. Elle a mené trois études, puis interrogé 1 200 parents sur ce qui les freine.",
+   "documents": [
+    {
+     "id": "etudes",
+     "type": "tableau",
+     "titre": "Les trois études menées",
+     "source": "Études imaginées pour l’exercice.",
+     "colonnes": [
+      "Étude",
+      "Méthode",
+      "Personnes interrogées"
+     ],
+     "lignes": [
+      [
+       "Étude 1",
+       "8 entretiens d’une heure, à domicile",
+       "8"
+      ],
+      [
+       "Étude 2",
+       "Questionnaire en ligne, échantillon représentatif",
+       "1 200"
+      ],
+      [
+       "Étude 3",
+       "Lecture de rapports et de statistiques déjà publiés",
+       "—"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "freins",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Frein principal à l’achat (1 200 réponses)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Prix",
+      "Goût",
+      "Emballage",
+      "Autre raison"
+     ],
+     "series": [
+      {
+       "nom": "Réponses",
+       "valeurs": [
+        420,
+        300,
+        180,
+        300
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de réponses",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etudes",
+     "enonce": "Touche la méthode qui permet de chiffrer la part des parents concernés sur un large échantillon.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Pour chiffrer, il faut beaucoup de personnes interrogées.",
+     "explication": "Le **questionnaire auprès de 1 200 parents** est une étude quantitative : il mesure des proportions."
+    },
+    {
+     "type": "zone",
+     "document": "freins",
+     "enonce": "Touche le frein le plus souvent cité par les parents.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Le **prix** arrive en tête, avec 420 réponses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des 1 200 parents cite le prix comme frein principal ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Divise 420 par 1 200, puis multiplie par 100.",
+     "explication": "420 ÷ 1 200 = 0,35, soit **35 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi certains parents jugent-ils le goût décevant ? Quelle étude la marque doit-elle mener ?",
+     "options": [
+      "Une étude qualitative, avec des entretiens approfondis auprès de quelques parents",
+      "Une étude quantitative, avec un autre questionnaire rempli en quelques clics",
+      "Une étude documentaire, avec des statistiques nationales sur les ménages",
+      "Une étude comptable, avec l’analyse des charges de l’entreprise"
+     ],
+     "reponse": 0,
+     "aide": "Comprendre des motivations ou des freins demande des explications détaillées.",
+     "explication": "Pour comprendre le **pourquoi**, on écoute longuement : c’est le rôle de l’**étude qualitative**."
+    }
+   ]
+  },
+  {
+   "chapitre": "88acc2d9-6dc3-597b-9766-9128fb8b5501",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le vélo qu’on ne possède plus",
+   "competence": "analyser-document",
+   "situation": "L’entreprise imaginaire Pédale vendait des vélos de ville. Elle propose désormais de les louer au mois : elle se fait payer autrement, mais le vélo reste le même.",
+   "documents": [
+    {
+     "id": "modele",
+     "type": "tableau",
+     "titre": "Avant et après",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Offre",
+       "Vente d’un vélo",
+       "Location mensuelle du même vélo"
+      ],
+      [
+       "Paiement du client",
+       "600 € en une fois",
+       "25 € par mois"
+      ],
+      [
+       "Consommations intermédiaires",
+       "—",
+       "9 € par mois et par vélo loué"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modele",
+     "enonce": "Touche la case qui dit comment le client paie désormais.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Regarde la colonne « Après ».",
+     "explication": "Avec la location, le client paie **25 € par mois** au lieu de 600 € d’un coup."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien un client verse-t-il à Pédale en 36 mois de location ?",
+     "reponse": 900,
+     "unite": "€",
+     "aide": "Multiplie le prix mensuel par le nombre de mois.",
+     "explication": "25 × 36 = **900 €**, soit plus que les 600 € de la vente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur ajoutée Pédale dégage-t-elle chaque mois pour un vélo loué ?",
+     "reponse": 16,
+     "unite": "€",
+     "aide": "Valeur ajoutée = chiffre d’affaires − consommations intermédiaires.",
+     "explication": "25 − 9 = **16 €** par mois et par vélo."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel type d’innovation s’agit-il ?",
+     "options": [
+      "Une innovation de modèle économique : la façon dont l’entreprise se fait payer change",
+      "Une innovation de produit : le vélo vendu est nettement amélioré par l’entreprise",
+      "Une innovation de procédé : la méthode de fabrication des vélos est entièrement nouvelle",
+      "Aucune innovation : le client paie le même prix pour le même vélo qu’avant"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui change : l’objet, la fabrication ou la manière d’être payé ?",
+     "explication": "Le vélo et sa fabrication ne changent pas : c’est la **manière d’être payé** qui change. C’est une innovation de **modèle économique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "88acc2d9-6dc3-597b-9766-9128fb8b5501",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un jus de légumes, oui mais…",
+   "competence": "raisonner",
+   "situation": "La marque imaginaire Pulpe hésite à lancer un jus de légumes. Elle l’a fait goûter à 500 personnes en magasin, puis a chiffré la première année.",
+   "documents": [
+    {
+     "id": "test",
+     "type": "tableau",
+     "titre": "Test en magasin (500 personnes)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Réponse",
+      "Personnes"
+     ],
+     "lignes": [
+      [
+       "Je l’achèterais sûrement",
+       140
+      ],
+      [
+       "Je l’achèterais peut-être",
+       210
+      ],
+      [
+       "Je ne l’achèterais pas",
+       150
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "prev",
+     "type": "tableau",
+     "titre": "Prévisions de la première année",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Bouteilles vendues",
+       "60 000"
+      ],
+      [
+       "Prix de vente",
+       "2,00 € la bouteille"
+      ],
+      [
+       "Consommations intermédiaires",
+       "0,90 € par bouteille"
+      ],
+      [
+       "Autres charges de l’année (personnel, loyers)",
+       "50 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des testeurs déclare qu’elle achèterait sûrement le jus ?",
+     "reponse": 28,
+     "unite": "%",
+     "aide": "Divise 140 par 500.",
+     "explication": "140 ÷ 500 = 0,28, soit **28 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur ajoutée la marque prévoit-elle la première année ?",
+     "reponse": 66000,
+     "unite": "€",
+     "aide": "Chiffre d’affaires (60 000 × 2) moins consommations intermédiaires (60 000 × 0,90).",
+     "explication": "CA = 120 000 € ; consommations intermédiaires = 54 000 € ; valeur ajoutée = **66 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel résultat la marque peut-elle espérer, en retranchant les autres charges de la valeur ajoutée ?",
+     "reponse": 16000,
+     "unite": "€",
+     "aide": "Soustrais 50 000 € de la valeur ajoutée.",
+     "explication": "66 000 − 50 000 = **16 000 €** prévus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si elle ne vend que 45 000 bouteilles, quel serait ce résultat, en euros ?",
+     "reponse": -500,
+     "unite": "€",
+     "aide": "Valeur ajoutée par bouteille : 2 − 0,90 = 1,10 €.",
+     "explication": "45 000 × 1,10 = 49 500 € ; 49 500 − 50 000 = **− 500 €** : la valeur créée dépend des ventes réelles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de copie est la plus juste ?",
+     "options": [
+      "La valeur créée est prévisionnelle et incertaine : elle dépend de l’adoption réelle du produit",
+      "La valeur créée est garantie, puisque 28 % des testeurs l’achèteraient sûrement",
+      "La valeur créée est certaine dès que la bouteille est en rayon, quelles que soient les ventes",
+      "La valeur créée ne dépend que du prix de vente, jamais du nombre de bouteilles vendues"
+     ],
+     "reponse": 0,
+     "aide": "Compare les 60 000 bouteilles prévues et les 45 000 vendues.",
+     "explication": "Les chiffres sont des **prévisions** : avec 45 000 bouteilles, le lancement ne couvre plus ses charges. La création de valeur est **incertaine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "71777efb-52c9-5a2b-9992-b982cafbb2f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’inventaire de la boulangerie",
+   "competence": "analyser-document",
+   "situation": "Les Trois Épis est une boulangerie imaginaire. Sa gérante dresse la liste de ce qui lui permet de produire.",
+   "documents": [
+    {
+     "id": "inv",
+     "type": "tableau",
+     "titre": "Les ressources de la boulangerie",
+     "source": "Valeurs estimées, imaginées pour l’exercice.",
+     "colonnes": [
+      "Ressource",
+      "Valeur estimée"
+     ],
+     "lignes": [
+      [
+       "Four à pain professionnel",
+       "18 000 €"
+      ],
+      [
+       "Recette du levain maison, transmise depuis trois générations",
+       "—"
+      ],
+      [
+       "Marque « Les Trois Épis »",
+       "12 000 €"
+      ],
+      [
+       "Stock de farine et de beurre",
+       "1 500 €"
+      ],
+      [
+       "Bonne réputation dans le quartier",
+       "—"
+      ],
+      [
+       "Camionnette de livraison",
+       "9 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inv",
+     "enonce": "Touche la ressource qui relève du savoir-faire de la boulangerie.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche ce qui se transmet et ne s’achète pas en magasin.",
+     "explication": "La **recette du levain maison** est un savoir-faire : une ressource immatérielle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque ressource dans la bonne colonne.",
+     "categories": [
+      "Tangible",
+      "Intangible"
+     ],
+     "items": [
+      [
+       "Four à pain",
+       0
+      ],
+      [
+       "Recette du levain",
+       1
+      ],
+      [
+       "Marque « Les Trois Épis »",
+       1
+      ],
+      [
+       "Stock de farine",
+       0
+      ],
+      [
+       "Bonne réputation",
+       1
+      ],
+      [
+       "Camionnette",
+       0
+      ]
+     ],
+     "aide": "Peut-on la toucher ?",
+     "explication": "Four, stock et camionnette sont **tangibles**. Recette, marque et réputation sont **intangibles**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur totale des ressources tangibles, en euros ?",
+     "reponse": 28500,
+     "unite": "€",
+     "aide": "Additionne seulement le four, le stock et la camionnette.",
+     "explication": "18 000 + 1 500 + 9 000 = **28 500 €**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les ressources ___ sont souvent les plus difficiles à imiter : elles fondent les compétences ___.",
+     "reponses": [
+      [
+       "intangibles"
+      ],
+      [
+       "distinctives"
+      ]
+     ],
+     "banque": [
+      "intangibles",
+      "tangibles",
+      "distinctives",
+      "communes"
+     ],
+     "aide": "Pense à ce que la concurrente ne peut pas copier.",
+     "explication": "Les ressources **intangibles** fondent les compétences **distinctives** : une recette ou une réputation ne se copient pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "71777efb-52c9-5a2b-9992-b982cafbb2f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La menuiserie à court d’argent",
+   "competence": "calculer",
+   "situation": "La menuiserie Lacroix, entreprise imaginaire, a beaucoup de commandes mais son compte en banque se vide. Son comptable lui présente les éléments de son bilan.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Extrait de l’analyse fonctionnelle du bilan",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Ressources stables",
+       "620 000"
+      ],
+      [
+       "Emplois stables",
+       "540 000"
+      ],
+      [
+       "Stocks",
+       "85 000"
+      ],
+      [
+       "Créances clients",
+       "110 000"
+      ],
+      [
+       "Dettes fournisseurs",
+       "95 000"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la ligne qui fait baisser le besoin en fonds de roulement.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Ce que l’on doit aux fournisseurs finance une partie du cycle.",
+     "explication": "Les **dettes fournisseurs** diminuent le BFR : on paie plus tard ce que l’on a déjà reçu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le fonds de roulement net global (FRNG), en euros.",
+     "reponse": 80000,
+     "unite": "€",
+     "aide": "FRNG = ressources stables − emplois stables.",
+     "explication": "620 000 − 540 000 = **80 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le besoin en fonds de roulement (BFR), en euros.",
+     "reponse": 100000,
+     "unite": "€",
+     "aide": "BFR = stocks + créances clients − dettes fournisseurs.",
+     "explication": "85 000 + 110 000 − 95 000 = **100 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la trésorerie nette de la menuiserie, en euros ?",
+     "reponse": -20000,
+     "unite": "€",
+     "aide": "Trésorerie nette = FRNG − BFR.",
+     "explication": "80 000 − 100 000 = **− 20 000 €** : le FRNG ne couvre pas le BFR."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie cette trésorerie nette négative ?",
+     "options": [
+      "Le FRNG ne couvre pas le BFR : il faut trouver un financement à court terme",
+      "Le FRNG couvre largement le BFR : l’entreprise dispose d’un excédent de trésorerie",
+      "Les stocks sont trop faibles : il faut en acheter davantage pour équilibrer les comptes",
+      "Les dettes fournisseurs sont trop élevées : il faut toutes les rembourser demain"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qui finance (FRNG) et ce qu’il faut financer (BFR).",
+     "explication": "Quand le FRNG ne couvre pas le BFR, l’entreprise doit emprunter à court terme ou obtenir des paiements plus rapides de ses clients."
+    }
+   ]
+  },
+  {
+   "chapitre": "71777efb-52c9-5a2b-9992-b982cafbb2f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une machine à 120 000 €",
+   "competence": "raisonner",
+   "situation": "Une PME imaginaire doit acheter une machine de 120 000 €. Elle compare trois façons de la financer.",
+   "documents": [
+    {
+     "id": "options",
+     "type": "tableau",
+     "titre": "Les trois options",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Option",
+      "Ce que l’entreprise paie",
+      "Particularité"
+     ],
+     "lignes": [
+      [
+       "Emprunt bancaire sur 5 ans",
+       "120 000 € remboursés + 18 000 € d’intérêts",
+       "Mensualités à assurer"
+      ],
+      [
+       "Crédit-bail sur 5 ans",
+       "5 loyers annuels de 28 000 €, puis option d’achat à 4 000 €",
+       "Location avec option d’achat"
+      ],
+      [
+       "Augmentation de capital",
+       "Aucun remboursement",
+       "Un nouvel associé entre à 25 % du capital"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "tres",
+     "type": "tableau",
+     "titre": "Situation de la PME",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Trésorerie disponible",
+       "35 000 €"
+      ],
+      [
+       "Prix de la machine",
+       "120 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien manque-t-il à la PME pour payer la machine comptant ?",
+     "reponse": 85000,
+     "unite": "€",
+     "aide": "Soustrais la trésorerie du prix de la machine.",
+     "explication": "120 000 − 35 000 = **85 000 €** : elle doit se financer autrement."
+    },
+    {
+     "type": "zone",
+     "document": "options",
+     "enonce": "Touche l’option qui fait entrer un nouvel associé.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un associé apporte de l’argent en échange d’une part du capital.",
+     "explication": "L’**augmentation de capital** fait entrer un associé à 25 % du capital."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total de l’emprunt, intérêts compris, en euros ?",
+     "reponse": 138000,
+     "unite": "€",
+     "aide": "Additionne le capital remboursé et les intérêts.",
+     "explication": "120 000 + 18 000 = **138 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût total du crédit-bail, option d’achat comprise, en euros ?",
+     "reponse": 144000,
+     "unite": "€",
+     "aide": "Cinq loyers, puis l’option d’achat.",
+     "explication": "5 × 28 000 + 4 000 = **144 000 €**, soit 6 000 € de plus que l’emprunt."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la PME peut-elle choisir le crédit-bail malgré son coût plus élevé ?",
+     "options": [
+      "Parce qu’elle utilise la machine tout de suite sans décaisser 120 000 € au départ",
+      "Parce qu’il coûte moins cher que l’emprunt sur la durée totale des cinq ans",
+      "Parce qu’il la rend propriétaire de la machine dès le premier loyer versé",
+      "Parce qu’il ne demande aucun engagement de sa part pendant toute la durée"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la trésorerie disponible au départ.",
+     "explication": "Le crédit-bail évite un **décaissement initial** : c’est son avantage pour une trésorerie tendue, même si le coût total est plus élevé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un fondateur détient 100 % du capital. Quelle part garde-t-il après l’entrée du nouvel associé ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Retranche la part du nouvel associé.",
+     "explication": "100 − 25 = **75 %** : c’est la dilution du pouvoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "0efbf3ad-2544-5023-ba3f-62bd3c427ffb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre façons de produire",
+   "competence": "analyser-document",
+   "situation": "Quatre entreprises imaginaires fabriquent des choses très différentes. Leur façon de produire dépend de ce qu’elles fabriquent.",
+   "documents": [
+    {
+     "id": "prod",
+     "type": "tableau",
+     "titre": "Quatre ateliers",
+     "source": "Activités imaginées pour l’exercice.",
+     "colonnes": [
+      "Entreprise",
+      "Activité"
+     ],
+     "lignes": [
+      [
+       "Chantier naval",
+       "3 voiliers par an, chacun conçu selon les souhaits du client"
+      ],
+      [
+       "Usine de téléphones",
+       "2 400 téléphones par jour (ouverte 24 h sur 24), tous identiques"
+      ],
+      [
+       "Cimenterie",
+       "Four allumé en permanence, le ciment sort sans interruption"
+      ],
+      [
+       "Imprimerie",
+       "Lots successifs, machine à régler à chaque changement de commande"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prod",
+     "enonce": "Touche l’entreprise qui fabrique de grandes quantités de produits standardisés.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche les produits tous identiques.",
+     "explication": "L’**usine de téléphones** produit des téléphones identiques en grande quantité : c’est la production en série."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque entreprise à son mode de production.",
+     "paires": [
+      [
+       "Chantier naval",
+       "À l’unité"
+      ],
+      [
+       "Usine de téléphones",
+       "En série"
+      ],
+      [
+       "Cimenterie",
+       "En continu"
+      ],
+      [
+       "Imprimerie",
+       "En discontinu"
+      ]
+     ],
+     "aide": "Sur mesure, en série, sans arrêt, par lots.",
+     "explication": "Voiliers sur mesure : **à l’unité**. Téléphones identiques : **en série**. Four toujours allumé : **en continu**. Lots avec réglages : **en discontinu**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de téléphones l’usine fabrique-t-elle en moyenne par heure ?",
+     "reponse": 100,
+     "unite": "téléphones",
+     "aide": "Divise la production du jour par 24 heures.",
+     "explication": "2 400 ÷ 24 = **100 téléphones** par heure."
+    }
+   ]
+  },
+  {
+   "chapitre": "0efbf3ad-2544-5023-ba3f-62bd3c427ffb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La bière brune fait-elle vivre la brasserie ?",
+   "competence": "calculer",
+   "situation": "La brasserie imaginaire Marée fabrique deux bières. Ses charges fixes communes (direction, loyer) s’élèvent à 25 000 € par an. Son gérant veut savoir si chaque bière couvre ses propres charges.",
+   "documents": [
+    {
+     "id": "gammes",
+     "type": "tableau",
+     "titre": "Comptes de l’année par bière",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Bière blonde",
+      "Bière brune"
+     ],
+     "lignes": [
+      [
+       "Chiffre d’affaires",
+       "180 000 €",
+       "90 000 €"
+      ],
+      [
+       "Charges variables",
+       "110 000 €",
+       "65 000 €"
+      ],
+      [
+       "Charges fixes spécifiques",
+       "30 000 €",
+       "35 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gammes",
+     "enonce": "Touche le chiffre d’affaires de la bière brune.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Lis la première ligne, dans la colonne de la brune.",
+     "explication": "La bière brune réalise **90 000 €** de chiffre d’affaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la marge sur coût spécifique de la blonde, en euros.",
+     "reponse": 40000,
+     "unite": "€",
+     "aide": "Chiffre d’affaires − (charges variables + charges fixes spécifiques).",
+     "explication": "180 000 − (110 000 + 30 000) = **40 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la marge sur coût spécifique de la brune, en euros.",
+     "reponse": -10000,
+     "unite": "€",
+     "aide": "Additionne d’abord ses deux types de charges.",
+     "explication": "90 000 − (65 000 + 35 000) = **− 10 000 €** : elle ne couvre pas ses propres charges."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le résultat global de la brasserie, charges communes comprises ?",
+     "reponse": 5000,
+     "unite": "€",
+     "aide": "Additionne les deux marges, puis retranche les charges communes.",
+     "explication": "40 000 − 10 000 − 25 000 = **5 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passerait-il si la brasserie arrêtait la brune ?",
+     "options": [
+      "Le résultat passerait de 5 000 € à 15 000 € si ses charges fixes spécifiques disparaissaient",
+      "Le résultat resterait à 5 000 €, car les charges communes se répartissent sur les deux bières",
+      "Le résultat tomberait à − 5 000 €, car la brune contribue aux charges communes de l’entreprise",
+      "Le résultat passerait à 25 000 €, car toutes les charges communes disparaîtraient avec elle"
+     ],
+     "reponse": 0,
+     "aide": "Sans la brune, il reste la marge de la blonde moins les charges communes.",
+     "explication": "40 000 − 25 000 = **15 000 €**. Attention : cela suppose que les charges fixes de la brune disparaissent vraiment."
+    }
+   ]
+  },
+  {
+   "chapitre": "0efbf3ad-2544-5023-ba3f-62bd3c427ffb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Stocks pleins, stocks vides",
+   "competence": "raisonner",
+   "situation": "Deux entreprises imaginaires vendent chacune 10 000 objets par mois, mais l’une produit sur prévisions et l’autre à la commande. Une grève bloque les livraisons de matières pendant 10 jours.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "La chaîne logistique",
+     "noeuds": [
+      {
+       "id": "fourn",
+       "texte": "Fournisseur",
+       "emoji": "🏭"
+      },
+      {
+       "id": "usine",
+       "texte": "Usine",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "entrepot",
+       "texte": "Entrepôt",
+       "emoji": "📦"
+      },
+      {
+       "id": "magasin",
+       "texte": "Magasin",
+       "emoji": "🏬"
+      }
+     ],
+     "liens": [
+      {
+       "de": "fourn",
+       "a": "usine",
+       "texte": "matières"
+      },
+      {
+       "de": "usine",
+       "a": "entrepot",
+       "texte": "produits finis"
+      },
+      {
+       "de": "entrepot",
+       "a": "magasin",
+       "texte": "commandes"
+      }
+     ]
+    },
+    {
+     "id": "stocks",
+     "type": "tableau",
+     "titre": "Deux politiques de stock",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Entreprise A (flux poussés)",
+      "Entreprise B (flux tendus)"
+     ],
+     "lignes": [
+      [
+       "Stock moyen (unités)",
+       "40 000",
+       "1 500"
+      ],
+      [
+       "Ventes par mois (unités)",
+       "10 000",
+       "10 000"
+      ],
+      [
+       "Coût de stockage par unité et par an",
+       "2 €",
+       "2 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le maillon qui stocke les produits finis avant leur envoi aux magasins.",
+     "reponse": [
+      "entrepot"
+     ],
+     "aide": "Les produits finis attendent entre l’usine et les magasins.",
+     "explication": "L’**entrepôt** stocke les produits finis."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien de mois de ventes le stock de A suffit-il ?",
+     "reponse": 4,
+     "unite": "mois",
+     "aide": "Divise le stock par les ventes mensuelles.",
+     "explication": "40 000 ÷ 10 000 = **4 mois** de ventes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle économie annuelle de stockage B réalise-t-elle par rapport à A, en euros ?",
+     "reponse": 77000,
+     "unite": "€",
+     "aide": "Calcule le coût de stockage de chacune (stock × 2 €), puis compare.",
+     "explication": "A : 40 000 × 2 = 80 000 €. B : 1 500 × 2 = 3 000 €. Écart : **77 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours de rupture subit B pendant la grève ? (un mois = 30 jours)",
+     "reponse": 5.5,
+     "unite": "jours",
+     "aide": "Le stock de B couvre 1 500 ÷ 10 000 mois, soit quelques jours seulement.",
+     "explication": "1 500 ÷ 10 000 × 30 = 4,5 jours de stock ; 10 − 4,5 = **5,5 jours** de rupture.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tirer de cette comparaison ?",
+     "options": [
+      "B économise du stockage, mais une rupture d’approvisionnement la paralyse très vite",
+      "B est plus sûre que A, car son stock faible la protège de toute rupture d’approvisionnement",
+      "A est pénalisée, car ses gros stocks la rendent vulnérable aux ruptures d’approvisionnement",
+      "A et B ont les mêmes coûts, car elles vendent chacune 10 000 unités par mois"
+     ],
+     "reponse": 0,
+     "aide": "Les flux tendus réduisent les coûts mais fragilisent la chaîne.",
+     "explication": "Les **flux tendus** font gagner 77 000 € de stockage, mais exposent aux **ruptures** : A tient 4 mois, B moins de 5 jours."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c36fda0-88df-58a9-8572-9470f217411b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chemin d’une commande",
+   "competence": "observer-schema",
+   "situation": "Dans l’entreprise imaginaire Atelier Sud, une commande passe de main en main. Le diagramme des flux montre qui envoie quoi, et à qui.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "schema",
+     "titre": "Diagramme des flux d’informations",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 15,
+       "l": 100,
+       "h": 38,
+       "texte": "Client",
+       "id": "cli",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 150,
+       "l": 120,
+       "h": 40,
+       "texte": "Service commercial",
+       "id": "com",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 150,
+       "l": 110,
+       "h": 40,
+       "texte": "Atelier",
+       "id": "ate",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        53
+       ],
+       "a": [
+        80,
+        150
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        170
+       ],
+       "a": [
+        200,
+        170
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        150
+       ],
+       "a": [
+        190,
+        53
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 100,
+       "texte": "1",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 160,
+       "texte": "2",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 100,
+       "texte": "3",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 218,
+       "texte": "1 Commande · 2 Ordre de fabrication",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 236,
+       "texte": "3 Bon de livraison",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "ressaisie",
+     "type": "tableau",
+     "titre": "Le coût des ressaisies",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Commandes par semaine",
+       "150"
+      ],
+      [
+       "Ressaisies à la main par commande (commercial, atelier)",
+       "2"
+      ],
+      [
+       "Durée d’une ressaisie",
+       "4 minutes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flux",
+     "enonce": "Touche l’acteur qui reçoit la commande du client.",
+     "reponse": [
+      "com"
+     ],
+     "aide": "Suis la flèche numéro 1.",
+     "explication": "La commande (flux 1) va du client au **service commercial**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque flux à son destinataire.",
+     "paires": [
+      [
+       "Commande",
+       "Service commercial"
+      ],
+      [
+       "Ordre de fabrication",
+       "Atelier"
+      ],
+      [
+       "Bon de livraison",
+       "Client"
+      ]
+     ],
+     "aide": "Suis chaque flèche numérotée.",
+     "explication": "La commande arrive au **service commercial**, l’ordre de fabrication à l’**atelier**, le bon de livraison au **client**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures par semaine les ressaisies à la main font-elles perdre ?",
+     "reponse": 20,
+     "unite": "h",
+     "aide": "Commandes × ressaisies × minutes, puis convertis en heures.",
+     "explication": "150 × 2 × 4 = 1 200 minutes, soit **20 heures** par semaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permettrait un workflow sur ce circuit ?",
+     "options": [
+      "Faire passer automatiquement la commande d’un acteur à l’autre, sans la ressaisir",
+      "Faire disparaître le client du circuit, puisque la commande serait traitée seule",
+      "Remplacer l’atelier par le service commercial pour produire plus vite",
+      "Supprimer le bon de livraison, puisque plus aucune information ne circulerait"
+     ],
+     "reponse": 0,
+     "aide": "Un workflow automatise l’enchaînement des tâches.",
+     "explication": "Un **workflow** enchaîne les tâches automatiquement : plus de ressaisie, donc moins d’erreurs et de temps perdu."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c36fda0-88df-58a9-8572-9470f217411b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le moteur qui prévient",
+   "competence": "lire-graphique",
+   "situation": "Un capteur connecté mesure chaque semaine les vibrations d’un moteur d’une usine imaginaire. Une alerte est prévue dès qu’elles dépassent 7 mm/s.",
+   "documents": [
+    {
+     "id": "vib",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vibrations du moteur",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+     ],
+     "series": [
+      {
+       "nom": "Vibrations",
+       "valeurs": [
+        2,
+        2,
+        3,
+        3,
+        4,
+        6,
+        8,
+        11
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Vibrations",
+      "unite": "mm/s",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Semaine"
+     }
+    },
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Coût selon le scénario",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Scénario",
+      "Coût"
+     ],
+     "lignes": [
+      [
+       "Panne non prévue : arrêt de 3 jours et réparation en urgence",
+       "18 000 €"
+      ],
+      [
+       "Intervention programmée après l’alerte du capteur",
+       "2 500 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vib",
+     "enonce": "Touche la première semaine où le seuil d’alerte de 7 mm/s est dépassé.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "La semaine 6 reste sous le seuil.",
+     "explication": "En **semaine 7**, les vibrations atteignent 8 mm/s, au-dessus du seuil de 7."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien les vibrations ont-elles augmenté entre la semaine 5 et la semaine 8 ?",
+     "reponse": 7,
+     "unite": "mm/s",
+     "aide": "Lis les deux valeurs sur la courbe et soustrais.",
+     "explication": "11 − 4 = **7 mm/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle économie l’intervention programmée permet-elle par rapport à la panne, en euros ?",
+     "reponse": 15500,
+     "unite": "€",
+     "aide": "Compare les deux lignes du tableau.",
+     "explication": "18 000 − 2 500 = **15 500 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le capteur peut-il prévenir avant la panne ?",
+     "options": [
+      "Parce que l’évolution des mesures annonce l’usure avant l’arrêt de la machine",
+      "Parce que le capteur répare lui-même le moteur dès que les vibrations augmentent",
+      "Parce que la machine ne tombe en panne que lorsque le capteur est débranché",
+      "Parce que le capteur mesure le chiffre d’affaires que le moteur permet de réaliser"
+     ],
+     "reponse": 0,
+     "aide": "La courbe monte de semaine en semaine.",
+     "explication": "La hausse régulière des vibrations **annonce** l’usure : c’est le principe de la maintenance **prédictive**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c36fda0-88df-58a9-8572-9470f217411b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les demandes d’achat passent au numérique",
+   "competence": "raisonner",
+   "situation": "Une entreprise imaginaire automatise ses demandes d’achat avec un workflow : validation, bon de commande et rapprochement de la facture se font dans le même logiciel.",
+   "documents": [
+    {
+     "id": "avapres",
+     "type": "tableau",
+     "titre": "Avant et après le workflow",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Délai de traitement d’une demande (jours)",
+       6,
+       2
+      ],
+      [
+       "Erreurs de saisie pour 100 demandes",
+       12,
+       3
+      ],
+      [
+       "Demandes traitées par an",
+       "4 000",
+       "4 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "projet",
+     "type": "tableau",
+     "titre": "Coûts du projet",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Investissement initial (logiciel et formation)",
+       "60 000 €"
+      ],
+      [
+       "Licence annuelle du prestataire",
+       "8 000 €"
+      ],
+      [
+       "Coût moyen d’une erreur de saisie",
+       "120 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de % le délai de traitement a-t-il baissé ? (arrondi à l’unité)",
+     "reponse": 67,
+     "unite": "%",
+     "aide": "(6 − 2) ÷ 6 × 100.",
+     "explication": "(6 − 2) ÷ 6 ≈ 0,667, soit **67 %** de baisse.",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’erreurs de saisie le workflow évite-t-il chaque année ?",
+     "reponse": 360,
+     "unite": "erreurs",
+     "aide": "Erreurs évitées pour 100 demandes : 12 − 3. Applique-le à 4 000 demandes.",
+     "explication": "(12 − 3) × 4 000 ÷ 100 = **360 erreurs** évitées."
+    },
+    {
+     "type": "zone",
+     "document": "projet",
+     "enonce": "Touche le coût qui revient chaque année.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "L’investissement n’est payé qu’une fois.",
+     "explication": "La **licence annuelle** du prestataire est payée tous les ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel gain net annuel le projet apporte-t-il (erreurs évitées moins licence), en euros ?",
+     "reponse": 35200,
+     "unite": "€",
+     "aide": "360 erreurs × 120 €, puis retranche la licence.",
+     "explication": "360 × 120 = 43 200 € ; 43 200 − 8 000 = **35 200 €** par an."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque le projet fait-il peser sur l’organisation ?",
+     "options": [
+      "Une panne ou une cyberattaque de l’application bloquerait toutes les demandes d’achat",
+      "Le workflow supprime les erreurs de saisie, donc il supprime aussi tout risque pour l’organisation",
+      "Le workflow rend l’entreprise indépendante de son prestataire, qui n’aura plus aucun rôle",
+      "Le workflow automatise les tâches, donc il n’a aucun coût de formation ni de licence"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui se passe si le logiciel s’arrête.",
+     "explication": "Le numérique crée une **dépendance** : une panne ou une cyberattaque paralyse le processus. D’où l’intérêt d’une procédure de secours."
+    }
+   ]
+  },
+  {
+   "chapitre": "6de1bc3b-6ffe-523f-b02a-579eb92fb43c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment ces équipes se coordonnent-elles ?",
+   "competence": "analyser-document",
+   "situation": "Quatre organisations imaginaires coordonnent leur travail de quatre façons différentes.",
+   "documents": [
+    {
+     "id": "coord",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Lieu",
+      "Comment le travail est coordonné"
+     ],
+     "lignes": [
+      [
+       "Agence immobilière de 4 personnes",
+       "La gérante répartit les tâches chaque matin et vérifie le soir ce qui a été fait"
+      ],
+      [
+       "Crèches d’un réseau national",
+       "Le même protocole d’accueil, écrit à l’avance, s’applique dans toutes les crèches"
+      ],
+      [
+       "Commercial d’une société de matériel",
+       "Il doit signer 12 contrats par mois ; il choisit librement comment s’y prendre"
+      ],
+      [
+       "Association de protection de la nature",
+       "Les bénévoles agissent selon les valeurs que tous partagent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu au mécanisme de coordination.",
+     "paires": [
+      [
+       "Agence immobilière",
+       "Supervision directe"
+      ],
+      [
+       "Crèches du réseau",
+       "Standardisation des procédés"
+      ],
+      [
+       "Commercial",
+       "Standardisation des résultats"
+      ],
+      [
+       "Association",
+       "Standardisation des normes"
+      ]
+     ],
+     "aide": "Qui ordonne ? Quelle règle ? Quel objectif ? Quelles valeurs ?",
+     "explication": "Gérante qui contrôle : **supervision directe**. Protocole écrit : **procédés**. Objectif sans méthode : **résultats**. Valeurs partagées : **normes**."
+    },
+    {
+     "type": "zone",
+     "document": "coord",
+     "enonce": "Touche la situation où l’on fixe ce qu’il faut atteindre sans imposer la méthode.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche un objectif chiffré sans consigne de méthode.",
+     "explication": "Le **commercial** a un objectif (12 contrats) et choisit sa méthode : standardisation des résultats."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le commercial a signé 9 contrats ce mois-ci. Quel pourcentage de son objectif a-t-il atteint ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Divise 9 par 12.",
+     "explication": "9 ÷ 12 = 0,75, soit **75 %** de l’objectif."
+    }
+   ]
+  },
+  {
+   "chapitre": "6de1bc3b-6ffe-523f-b02a-579eb92fb43c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux ateliers, deux philosophies",
+   "competence": "analyser-document",
+   "situation": "Deux ateliers imaginaires fabriquent les mêmes pièces. L’un applique les principes de Taylor, l’autre ceux de Toyota.",
+   "documents": [
+    {
+     "id": "ateliers",
+     "type": "tableau",
+     "titre": "Comparaison des deux ateliers",
+     "source": "Ateliers imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Atelier A",
+      "Atelier B"
+     ],
+     "lignes": [
+      [
+       "Tâches",
+       "Chaque ouvrier répète le même geste, chronométré",
+       "Équipes qui échangent leurs postes et améliorent les méthodes"
+      ],
+      [
+       "Conception",
+       "Décidée par le bureau des méthodes",
+       "Discutée avec les ouvriers"
+      ],
+      [
+       "En cas de défaut",
+       "L’ouvrier continue, un contrôleur vérifie à la fin",
+       "Tout ouvrier peut arrêter la chaîne"
+      ],
+      [
+       "Rémunération",
+       "Au rendement : 0,80 € par pièce",
+       "Fixe, avec une prime d’équipe"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ateliers",
+     "enonce": "Touche la case qui décrit le droit d’arrêter la chaîne.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Regarde la ligne « En cas de défaut ».",
+     "explication": "Dans l’atelier B, **tout ouvrier peut arrêter la chaîne** : c’est un trait du toyotisme."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique dans le bon modèle.",
+     "categories": [
+      "Taylorisme",
+      "Toyotisme"
+     ],
+     "items": [
+      [
+       "Séparer la conception de l’exécution",
+       0
+      ],
+      [
+       "Ouvriers polyvalents",
+       1
+      ],
+      [
+       "Gestes simples et chronométrés",
+       0
+      ],
+      [
+       "Droit d’arrêter la chaîne en cas de défaut",
+       1
+      ],
+      [
+       "Paiement au rendement",
+       0
+      ],
+      [
+       "Amélioration continue par les équipes",
+       1
+      ]
+     ],
+     "aide": "Un modèle décompose et chronomètre, l’autre mise sur la polyvalence.",
+     "explication": "**Taylorisme** : conception séparée, gestes simples, rendement. **Toyotisme** : polyvalence, arrêt de chaîne, amélioration continue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un ouvrier de l’atelier A fait 45 pièces par heure pendant 7 heures. Combien gagne-t-il à la pièce, en euros ?",
+     "reponse": 252,
+     "unite": "€",
+     "aide": "Pièces de la journée × 0,80 €.",
+     "explication": "45 × 7 = 315 pièces ; 315 × 0,80 = **252 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la principale limite du taylorisme ?",
+     "options": [
+      "Un travail monotone qui laisse peu d’initiative aux ouvriers et peu de capacité d’adaptation",
+      "Une production trop lente pour des séries stables, faute de gestes simples à répéter",
+      "Des ouvriers trop polyvalents pour que l’entreprise puisse contrôler leur travail",
+      "Un arrêt fréquent de la chaîne dès qu’un défaut est repéré par un ouvrier"
+     ],
+     "reponse": 0,
+     "aide": "Que devient l’ouvrier qui répète le même geste toute la journée ?",
+     "explication": "Le taylorisme est très productif, mais il rend le travail **monotone** et laisse peu de place à l’initiative."
+    }
+   ]
+  },
+  {
+   "chapitre": "6de1bc3b-6ffe-523f-b02a-579eb92fb43c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trop d’agences pour un seul fondateur",
+   "competence": "raisonner",
+   "situation": "Le fondateur de Sourire & Co, réseau imaginaire d’agences d’aide à domicile, supervise lui-même le travail en visitant une agence par jour ouvré, soit 5 par semaine.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le réseau grandit",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "debut": 2015,
+     "fin": 2025,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "a15",
+       "date": 2015,
+       "nom": "4 agences"
+      },
+      {
+       "id": "a18",
+       "date": 2018,
+       "nom": "12 agences"
+      },
+      {
+       "id": "a21",
+       "date": 2021,
+       "nom": "30 agences"
+      },
+      {
+       "id": "a24",
+       "date": 2024,
+       "nom": "60 agences"
+      }
+     ]
+    },
+    {
+     "id": "report",
+     "type": "tableau",
+     "titre": "Reporting du mois",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Agence",
+      "Objectif du mois (€)",
+      "Réalisé (€)"
+     ],
+     "lignes": [
+      [
+       "Nord",
+       "50 000",
+       "54 000"
+      ],
+      [
+       "Sud",
+       "50 000",
+       "41 000"
+      ],
+      [
+       "Est",
+       "50 000",
+       "50 000"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la première étape où il ne peut plus visiter toutes les agences en une semaine.",
+     "reponse": [
+      "a18"
+     ],
+     "aide": "Il visite 5 agences par semaine.",
+     "explication": "Avec **12 agences**, il lui faudrait plus d’une semaine : la supervision directe ne suffit plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2024, combien de semaines lui faudrait-il pour visiter les 60 agences ?",
+     "reponse": 12,
+     "unite": "semaines",
+     "aide": "Divise le nombre d’agences par 5.",
+     "explication": "60 ÷ 5 = **12 semaines**."
+    },
+    {
+     "type": "zone",
+     "document": "report",
+     "enonce": "Touche l’agence qui n’a pas atteint son objectif.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare l’objectif et le réalisé de chaque ligne.",
+     "explication": "L’agence **Sud** a réalisé 41 000 € pour 50 000 € attendus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de son objectif l’agence Sud a-t-elle atteint ?",
+     "reponse": 82,
+     "unite": "%",
+     "aide": "Divise 41 000 par 50 000.",
+     "explication": "41 000 ÷ 50 000 = 0,82, soit **82 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mécanisme de coordination ce reporting illustre-t-il ?",
+     "options": [
+      "La standardisation des résultats : chaque agence a un objectif, sans méthode imposée",
+      "La supervision directe : le fondateur contrôle chaque geste de chaque agence",
+      "L’ajustement mutuel : les agences se mettent d’accord en se parlant librement",
+      "La standardisation des qualifications : tous les salariés ont suivi la même formation"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau fixe un objectif et compare le résultat obtenu.",
+     "explication": "Le fondateur **délègue** et fixe un objectif mensuel ; le **reporting** lui permet de contrôler sans visiter : standardisation des résultats."
+    }
+   ]
+  },
+  {
+   "chapitre": "68a546b8-1543-5849-875a-2e2933b8756b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre annonces, quatre styles",
+   "competence": "analyser-document",
+   "situation": "Le directeur d’une usine imaginaire doit changer le planning d’été. Chaque jour de la semaine, il s’y prend autrement. Jeudi, les salariés votent.",
+   "documents": [
+    {
+     "id": "annonces",
+     "type": "tableau",
+     "titre": "Les annonces du directeur",
+     "source": "Annonces imaginées pour l’exercice.",
+     "colonnes": [
+      "Jour",
+      "Annonce"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "« Le planning d’été change dès le 1er juillet : c’est décidé, inutile d’en discuter. »"
+      ],
+      [
+       "Mardi",
+       "« Je déciderai seul du planning, mais donnez-moi d’abord votre avis par écrit. »"
+      ],
+      [
+       "Mercredi",
+       "« Nous choisissons ensemble le planning : chaque équipe vote jeudi. »"
+      ],
+      [
+       "Jeudi",
+       "« Je fixe le planning seul, mais j’ai prévu un goûter pour que tout le monde se sente bien. »"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "vote",
+     "type": "tableau",
+     "titre": "Résultat du vote de jeudi (24 salariés)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Planning",
+      "Voix"
+     ],
+     "lignes": [
+      [
+       "Planning A (2 équipes de 8 h)",
+       9
+      ],
+      [
+       "Planning B (3 équipes de 8 h)",
+       15
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque jour au style de direction.",
+     "paires": [
+      [
+       "Lundi",
+       "Autoritaire"
+      ],
+      [
+       "Mardi",
+       "Consultatif"
+      ],
+      [
+       "Mercredi",
+       "Participatif"
+      ],
+      [
+       "Jeudi",
+       "Paternaliste"
+      ]
+     ],
+     "aide": "Qui décide ? Est-ce que l’on consulte ? Se soucie-t-on du bien-être ?",
+     "explication": "Lundi : **autoritaire**. Mardi : on consulte puis on décide seul, **consultatif**. Mercredi : **participatif**. Jeudi : décision seule mais attentionnée, **paternaliste**."
+    },
+    {
+     "type": "zone",
+     "document": "annonces",
+     "enonce": "Touche l’annonce où les salariés décident avec le directeur.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche le mot « ensemble » et le vote.",
+     "explication": "Le **mercredi**, l’équipe vote avec le directeur : c’est le style participatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des 24 salariés a voté pour le planning B ?",
+     "reponse": 62.5,
+     "unite": "%",
+     "aide": "Divise 15 par 24.",
+     "explication": "15 ÷ 24 = 0,625, soit **62,5 %**.",
+     "tolerance": 0.05
+    }
+   ]
+  },
+  {
+   "chapitre": "68a546b8-1543-5849-875a-2e2933b8756b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi les développeurs restent-ils ?",
+   "competence": "lire-graphique",
+   "situation": "Une entreprise de logiciels imaginaire a interrogé ses 200 développeurs : qu’est-ce qui leur donne le plus envie de rester ? Chacun a cité un seul facteur.",
+   "documents": [
+    {
+     "id": "enquete",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Facteur de motivation cité en premier (200 réponses)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Intérêt du travail",
+      "Salaire",
+      "Besoin d’accomplissement",
+      "Reconnaissance",
+      "Conditions de travail"
+     ],
+     "series": [
+      {
+       "nom": "Réponses",
+       "valeurs": [
+        70,
+        50,
+        40,
+        25,
+        15
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de réponses",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enquete",
+     "enonce": "Touche le facteur le plus souvent cité.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "L’**intérêt du travail** est cité par 70 développeurs sur 200."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque facteur dans la bonne colonne.",
+     "categories": [
+      "Facteur interne",
+      "Facteur externe"
+     ],
+     "items": [
+      [
+       "Intérêt du travail",
+       0
+      ],
+      [
+       "Besoin d’accomplissement",
+       0
+      ],
+      [
+       "Salaire",
+       1
+      ],
+      [
+       "Reconnaissance",
+       1
+      ],
+      [
+       "Conditions de travail",
+       1
+      ]
+     ],
+     "aide": "Interne : il vient du travail et de la personne. Externe : il vient de l’extérieur.",
+     "explication": "Intérêt du travail et accomplissement sont **internes**. Salaire, reconnaissance et conditions de travail sont **externes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des réponses concerne des facteurs internes ?",
+     "reponse": 55,
+     "unite": "%",
+     "aide": "Additionne les deux facteurs internes, puis divise par 200.",
+     "explication": "(70 + 40) ÷ 200 = 0,55, soit **55 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure répond au facteur le plus cité ?",
+     "options": [
+      "Confier aux développeurs le choix de leurs projets et enrichir le contenu de leur travail",
+      "Augmenter tous les salaires de 2 % et ne rien changer d’autre à leur quotidien",
+      "Rénover les locaux et remplacer les fauteuils pour améliorer leurs conditions de travail",
+      "Envoyer un message de félicitations à l’ensemble des équipes à chaque fin d’année"
+     ],
+     "reponse": 0,
+     "aide": "Quel levier agit sur l’intérêt du travail lui-même ?",
+     "explication": "Le facteur le plus cité est l’**intérêt du travail** : on y répond en enrichissant le **contenu du travail**, pas seulement la paie ou le cadre."
+    }
+   ]
+  },
+  {
+   "chapitre": "68a546b8-1543-5849-875a-2e2933b8756b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dividendes ou salaires ?",
+   "competence": "raisonner",
+   "situation": "Une entreprise imaginaire a dégagé 500 000 € de bénéfice. Elle compte 2 000 actions et 50 salariés. La direction hésite entre deux répartitions.",
+   "documents": [
+    {
+     "id": "attentes",
+     "type": "tableau",
+     "titre": "Ce que chacun attend",
+     "source": "Attentes simplifiées, imaginées pour l’exercice.",
+     "colonnes": [
+      "Acteur",
+      "Attente principale"
+     ],
+     "lignes": [
+      [
+       "Salariés",
+       "Une rémunération qui progresse et un emploi sûr"
+      ],
+      [
+       "Actionnaires",
+       "Des dividendes et des titres qui prennent de la valeur"
+      ],
+      [
+       "Dirigeants",
+       "Réussir et être reconnus pour leurs résultats"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "options",
+     "type": "tableau",
+     "titre": "Deux répartitions possibles",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Option A",
+      "Option B"
+     ],
+     "lignes": [
+      [
+       "Dividendes versés",
+       "400 000 €",
+       "250 000 €"
+      ],
+      [
+       "Augmentations de salaires",
+       "100 000 €",
+       "250 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "attentes",
+     "enonce": "Touche l’acteur qui attend avant tout des dividendes.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Les dividendes rémunèrent les titres détenus.",
+     "explication": "Les **actionnaires** attendent des dividendes et la valorisation de leurs titres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel dividende chaque action reçoit-elle avec l’option B, en euros ?",
+     "reponse": 125,
+     "unite": "€",
+     "aide": "Divise les dividendes de l’option B par le nombre d’actions.",
+     "explication": "250 000 ÷ 2 000 = **125 €** par action."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’option B plutôt que A, de combien l’augmentation moyenne par salarié est-elle supérieure, en euros ?",
+     "reponse": 3000,
+     "unite": "€",
+     "aide": "Calcule l’augmentation moyenne par salarié pour chaque option.",
+     "explication": "A : 100 000 ÷ 50 = 2 000 €. B : 250 000 ÷ 50 = 5 000 €. Écart : **3 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le management peut-il fédérer les deux groupes ?",
+     "options": [
+      "Présenter aux deux groupes un compromis, avec un intéressement des salariés aux résultats",
+      "Verser tout le bénéfice aux actionnaires, puisque les salariés sont déjà payés par leur salaire",
+      "Verser tout le bénéfice aux salariés, puisque les actionnaires n’ont aucun rôle dans l’entreprise",
+      "Décider seul sans en parler, car les intérêts des deux groupes sont forcément identiques"
+     ],
+     "reponse": 0,
+     "aide": "Les intérêts divergent : il faut un dispositif qui les rapproche.",
+     "explication": "Salaires et dividendes se partagent le même bénéfice : les intérêts **divergent**. Un **compromis** et l’**intéressement** donnent aux salariés une raison de viser la réussite commune."
+    }
+   ]
+  },
+  {
+   "chapitre": "a224fba3-c05a-56ad-a429-1a7b9ca4ce75",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le casque de Léa",
+   "competence": "analyser-document",
+   "situation": "Léa doit remplacer son casque audio. Elle raconte son achat à Noah, par messages.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Mon casque est mort, il m’en faut un nouveau."
+      },
+      {
+       "qui": "Léa",
+       "texte": "J’ai comparé trois sites et lu les avis des clients."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Tu prends lequel ?"
+      },
+      {
+       "qui": "Léa",
+       "texte": "Celui à 89 €. Sur l’autre site, il coûte 94 € + 4,90 € de livraison."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Je l’ai commandé ! Je mettrai cinq étoiles s’il est bon."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Moi j’ai le même : tout le monde en a un dans ma classe."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque message de Léa à l’étape du processus d’achat.",
+     "paires": [
+      [
+       "« Mon casque est mort »",
+       "Prise de conscience du besoin"
+      ],
+      [
+       "« J’ai comparé trois sites »",
+       "Recherche d’informations"
+      ],
+      [
+       "« Je l’ai commandé ! »",
+       "Décision d’achat"
+      ],
+      [
+       "« Je mettrai cinq étoiles »",
+       "Comportement après l’achat"
+      ]
+     ],
+     "aide": "Suis l’ordre des messages.",
+     "explication": "Besoin, **recherche d’informations**, **décision**, puis **comportement après l’achat** (l’avis laissé)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Léa aurait-elle payé de plus sur l’autre site, livraison comprise, en euros ?",
+     "reponse": 9.9,
+     "unite": "€",
+     "aide": "Additionne le prix et la livraison de l’autre site, puis retranche 89 €.",
+     "explication": "94 + 4,90 − 89 = **9,90 €** de plus.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Noah achète-t-il le même casque ?",
+     "options": [
+      "Un facteur social : l’influence du groupe de camarades sur ses choix",
+      "Un frein : une force qui retient l’acheteur avant qu’il se décide",
+      "Une attitude défavorable envers la marque du casque de ses camarades",
+      "Un besoin physiologique : la sensation de manque d’un objet vital"
+     ],
+     "reponse": 0,
+     "aide": "Relis le dernier message de Noah.",
+     "explication": "Noah suit son entourage : c’est un **facteur social**, qui s’ajoute au besoin et aux motivations personnelles."
+    }
+   ]
+  },
+  {
+   "chapitre": "a224fba3-c05a-56ad-a429-1a7b9ca4ce75",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les traces laissées chez Trail&Co",
+   "competence": "analyser-document",
+   "situation": "L’enseigne imaginaire Trail&Co collecte des données sur ses 8 000 clients pour personnaliser ses offres. Elle doit respecter le RGPD.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Les données collectées",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Donnée collectée",
+      "Moyen",
+      "Consentement demandé"
+     ],
+     "lignes": [
+      [
+       "Historique d’achats",
+       "Carte de fidélité",
+       "Oui"
+      ],
+      [
+       "Pages visitées sur le site",
+       "Cookies",
+       "Oui"
+      ],
+      [
+       "Position du téléphone en continu",
+       "Application mobile",
+       "Non"
+      ],
+      [
+       "Adresse e-mail",
+       "Inscription à la lettre d’information",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "donnees",
+     "enonce": "Touche la case qui révèle une collecte sans consentement.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la colonne du consentement.",
+     "explication": "La **position du téléphone en continu** est collectée sans consentement : cela ne respecte pas le RGPD."
+    },
+    {
+     "type": "nombre",
+     "enonce": "5 600 clients sur 8 000 acceptent les cookies. Quel est le taux de consentement ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Divise 5 600 par 8 000.",
+     "explication": "5 600 ÷ 8 000 = 0,70, soit **70 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les offres personnalisées déclenchent un achat chez 3 % des 5 600 clients consentants. Combien d’achats ?",
+     "reponse": 168,
+     "unite": "achats",
+     "aide": "Calcule 3 % de 5 600.",
+     "explication": "5 600 × 0,03 = **168 achats**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un client écrit : « Je ne veux plus recevoir d’offres personnalisées. » Quel droit exerce-t-il ?",
+     "options": [
+      "Son droit d’opposition à l’exploitation de ses données personnelles",
+      "Son droit d’auteur sur les données qu’il a laissées en naviguant",
+      "Son droit d’accès aux documents administratifs de l’organisation",
+      "Son droit à un remboursement de tous les achats déjà réalisés"
+     ],
+     "reponse": 0,
+     "aide": "Le RGPD donne des droits d’accès et d’…",
+     "explication": "Le client s’**oppose** à l’usage de ses données : c’est l’un des droits garantis par le **RGPD**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a224fba3-c05a-56ad-a429-1a7b9ca4ce75",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui recevra le bon de réduction ?",
+   "competence": "modeliser",
+   "situation": "L’enseigne imaginaire Trail&Co veut envoyer un bon de réduction. Son logiciel de gestion de la relation client contient une table Clients, interrogée par une requête.",
+   "documents": [
+    {
+     "id": "clients",
+     "type": "tableau",
+     "titre": "Table Clients (extrait)",
+     "source": "Données imaginées pour l’exercice.",
+     "colonnes": [
+      "Client",
+      "Ville",
+      "Achats (12 mois)",
+      "Consentement"
+     ],
+     "lignes": [
+      [
+       "Amel Benali",
+       "Lyon",
+       5,
+       "Oui"
+      ],
+      [
+       "Hugo Roche",
+       "Nantes",
+       2,
+       "Oui"
+      ],
+      [
+       "Sana Diallo",
+       "Lille",
+       7,
+       "Non"
+      ],
+      [
+       "Paul Martin",
+       "Lyon",
+       4,
+       "Oui"
+      ],
+      [
+       "Zoé Petit",
+       "Brest",
+       6,
+       "Oui"
+      ],
+      [
+       "Ilan Cohen",
+       "Nice",
+       1,
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La requête",
+     "source": "Requête écrite pour l’exercice.",
+     "blocs": [
+      "SELECT Client",
+      "FROM Clients",
+      "WHERE Achats > 3",
+      "AND Consentement = 'Oui' ;"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de clients cette requête sélectionne-t-elle ?",
+     "reponse": 3,
+     "unite": "clients",
+     "aide": "Garde les clients qui remplissent les deux conditions à la fois.",
+     "explication": "Amel (5 achats), Paul (4) et Zoé (6) : **3 clients**. Sana n’a pas consenti, Hugo et Ilan n’ont pas assez acheté."
+    },
+    {
+     "type": "zone",
+     "document": "clients",
+     "enonce": "Touche le client qui a beaucoup acheté mais que la requête exclut.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Regarde la colonne du consentement.",
+     "explication": "**Sana Diallo** a acheté 7 fois mais n’a pas donné son consentement : elle est exclue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre moyen d’achats des clients sélectionnés ?",
+     "reponse": 5,
+     "unite": "achats",
+     "aide": "Additionne les achats des clients retenus, puis divise par leur nombre.",
+     "explication": "(5 + 4 + 6) ÷ 3 = **5 achats** en moyenne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle requête cible les clients de Lyon qui ont accepté de recevoir des offres ?",
+     "options": [
+      "SELECT Client FROM Clients WHERE Ville = 'Lyon' AND Consentement = 'Oui' ;",
+      "SELECT Client FROM Clients WHERE Ville = 'Lyon' OR Consentement = 'Oui' ;",
+      "SELECT Client FROM Clients WHERE Achats = 'Lyon' AND Consentement = 'Oui' ;",
+      "SELECT Ville FROM Clients WHERE Client = 'Lyon' AND Consentement = 'Oui' ;"
+     ],
+     "reponse": 0,
+     "aide": "Les deux conditions doivent être remplies en même temps, et chaque colonne a son rôle.",
+     "explication": "Il faut **Ville = Lyon** ET **Consentement = Oui**. Avec OR, on retiendrait aussi des clients d’autres villes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f372e048-2b4a-5b3d-9f53-4177fe14429f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les messages de Vélo Vert",
+   "competence": "analyser-document",
+   "situation": "Vélo Vert, entreprise imaginaire de transport en car, fait circuler cinq messages en une semaine. Ils ne vont pas tous dans le même sens.",
+   "documents": [
+    {
+     "id": "msgs",
+     "type": "tableau",
+     "titre": "Les messages de la semaine",
+     "source": "Messages imaginés pour l’exercice.",
+     "colonnes": [
+      "Message",
+      "De",
+      "À"
+     ],
+     "lignes": [
+      [
+       "Fermeture exceptionnelle le 24 décembre",
+       "La directrice",
+       "Tous les salariés"
+      ],
+      [
+       "Proposition d’un nouvel arrêt sur la ligne 4",
+       "Un conducteur",
+       "La direction"
+      ],
+      [
+       "Astuce pour régler un moteur",
+       "Un technicien",
+       "Un collègue de l’atelier"
+      ],
+      [
+       "Nouvelles consignes de sécurité",
+       "La responsable d’exploitation",
+       "Tous les conducteurs"
+      ],
+      [
+       "Retour sur les horaires trop serrés",
+       "Une contrôleuse",
+       "La direction"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "msgs",
+     "enonce": "Touche le message qui circule entre deux collègues de même niveau.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche un émetteur et un destinataire qui sont collègues.",
+     "explication": "L’**astuce entre un technicien et un collègue** est une communication horizontale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque message selon le sens de la communication.",
+     "categories": [
+      "Descendante",
+      "Ascendante",
+      "Horizontale"
+     ],
+     "items": [
+      [
+       "Fermeture exceptionnelle le 24 décembre",
+       0
+      ],
+      [
+       "Proposition d’un nouvel arrêt sur la ligne 4",
+       1
+      ],
+      [
+       "Astuce pour régler un moteur",
+       2
+      ],
+      [
+       "Nouvelles consignes de sécurité",
+       0
+      ],
+      [
+       "Retour sur les horaires trop serrés",
+       1
+      ]
+     ],
+     "aide": "Regarde qui écrit et à qui.",
+     "explication": "**Descendante** : de la direction vers les salariés. **Ascendante** : des salariés vers la direction. **Horizontale** : entre collègues."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des cinq messages est descendante ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Compte les messages envoyés par la hiérarchie à ses équipes.",
+     "explication": "2 messages sur 5, soit 2 ÷ 5 = **40 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f372e048-2b4a-5b3d-9f53-4177fe14429f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les chiffres qui rassurent la banque",
+   "competence": "lire-tableau",
+   "situation": "La société imaginaire Horizon publie ses chiffres clés. Chaque partenaire y cherche ce qui l’intéresse.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "Chiffres clés (en millions d’euros)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Chiffre clé",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Chiffre d’affaires",
+       "10",
+       "12"
+      ],
+      [
+       "Résultat net",
+       "0,4",
+       "0,6"
+      ],
+      [
+       "Dettes financières",
+       "3",
+       "3"
+      ],
+      [
+       "Capitaux propres",
+       "4",
+       "4"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chiffres",
+     "enonce": "Touche la ligne qui indique ce que l’entreprise doit rembourser à ses prêteurs.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Ce que l’on doit rembourser est une dette.",
+     "explication": "Les **dettes financières** sont les sommes à rembourser aux prêteurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de marge nette de 2024 (résultat net ÷ chiffre d’affaires) ?",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "Divise 0,6 par 12, puis multiplie par 100.",
+     "explication": "0,6 ÷ 12 = 0,05, soit **5 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le ratio d’endettement de 2024 (dettes financières ÷ capitaux propres) ?",
+     "reponse": 0.75,
+     "unite": "ratio",
+     "aide": "Divise 3 par 4.",
+     "explication": "3 ÷ 4 = **0,75** : les dettes représentent les trois quarts des capitaux propres.",
+     "tolerance": 0.005
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque destinataire à ce qu’il cherche dans ces comptes.",
+     "paires": [
+      [
+       "Actionnaires",
+       "Rentabilité et perspectives"
+      ],
+      [
+       "Banque",
+       "Capacité à rembourser"
+      ],
+      [
+       "Salariés",
+       "Santé de l’entreprise"
+      ],
+      [
+       "État",
+       "Impôts à percevoir"
+      ]
+     ],
+     "aide": "Chacun regarde ses propres intérêts.",
+     "explication": "Actionnaires : **rentabilité**. Banque : **solvabilité**. Salariés : **santé** de l’entreprise. État : **impôts**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f372e048-2b4a-5b3d-9f53-4177fe14429f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand l’affiche ne suffit plus",
+   "competence": "raisonner",
+   "situation": "Le Bistrot Soleil, chaîne imaginaire de six restaurants, a lancé une campagne sur ses produits locaux. Sa note moyenne en ligne et un article permettent de comprendre ce qui s’est passé.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Note moyenne des avis en ligne",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Janv.",
+      "Févr.",
+      "Mars",
+      "Avr.",
+      "Mai",
+      "Juin"
+     ],
+     "series": [
+      {
+       "nom": "Note",
+       "valeurs": [
+        4.5,
+        4.5,
+        4.4,
+        3.6,
+        3.4,
+        3.7
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Note moyenne",
+      "unite": "sur 5",
+      "min": 3,
+      "max": 5,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Mois"
+     }
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le Bistrot Soleil sous le feu des critiques",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "En mars, le Bistrot Soleil lance une grande campagne d’affichage : « Cuisine 100 % locale, de la ferme à l’assiette ».",
+      "Début avril, un ancien cuisinier explique sur un réseau social que l’essentiel des produits vient d’un grossiste national.",
+      "Les avis négatifs se multiplient en ligne ; la direction ne répond d’abord à aucun commentaire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche le mois où la note moyenne chute le plus fortement.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la plus grande descente entre deux mois voisins.",
+     "explication": "La note tombe en **avril**, juste après les révélations sur l’origine des produits."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la note a-t-elle baissé entre mars et avril ?",
+     "reponse": 0.8,
+     "unite": "point",
+     "aide": "Soustrais la note d’avril à celle de mars.",
+     "explication": "4,4 − 3,6 = **0,8 point**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifier la campagne d’affichage de mars ?",
+     "options": [
+      "Une communication institutionnelle : elle valorise l’image de l’entreprise sans vendre un plat",
+      "Une communication interne descendante : elle s’adresse uniquement aux salariés",
+      "Une communication financière : elle informe les banques sur la solvabilité",
+      "Une communication ascendante : elle fait remonter les idées des clients"
+     ],
+     "reponse": 0,
+     "aide": "Elle met en avant des valeurs, pas un produit précis.",
+     "explication": "Elle vante l’engagement « local » de l’entreprise : c’est une communication **institutionnelle**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la note a-t-elle remonté entre mai et juin ?",
+     "reponse": 0.3,
+     "unite": "point",
+     "aide": "Soustrais la note de mai à celle de juin.",
+     "explication": "3,7 − 3,4 = **0,3 point**, une remontée encore loin des 4,4 de mars.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle leçon l’entreprise doit-elle en tirer ?",
+     "options": [
+      "Ce qui est dit à l’extérieur doit être vrai à l’intérieur : le discours doit rester cohérent",
+      "Il faut communiquer davantage à l’extérieur pour couvrir les avis négatifs publiés en ligne",
+      "L’e-réputation d’une entreprise dépend uniquement de la publicité qu’elle choisit de diffuser",
+      "Les salariés ne font pas partie des acteurs dont l’entreprise doit tenir compte en ligne"
+     ],
+     "reponse": 0,
+     "aide": "Un salarié a contredit le message de la campagne.",
+     "explication": "La **communication globale** harmonise interne et externe : un décalage entre discours et réalité se paie cher en ligne."
+    }
+   ]
+  }
+ ]
+}

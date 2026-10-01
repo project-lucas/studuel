@@ -1,0 +1,430 @@
+{
+  "id": "maths-anticipee-2026-techno-metropole",
+  "matiere": "maths",
+  "niveau": "1re",
+  "examen": "bac-anticipe",
+  "annee": 2026,
+  "centre": "Métropole · voie technologique",
+  "jour": null,
+  "code": "26-MATHTEME1",
+  "titre": "Épreuve anticipée de maths 2026",
+  "dureeMin": 120,
+  "coefficient": 2,
+  "consigne": "Voie technologique, toutes séries. Sans calculatrice : douze questions d'automatismes (6 points), puis trois exercices (14 points), tout est à traiter.",
+  "parties": [
+    {
+      "id": "automatismes",
+      "titre": "Automatismes",
+      "nature": "exercice",
+      "enonce": "Première partie : douze questions à choix multiples, sans justification. Une réponse fausse n'enlève rien.",
+      "points": 6,
+      "minutes": 30,
+      "enBref": [
+        "Les bonnes réponses : 1 C · 2 B · 3 A · 4 C · 5 D · 6 C · 7 A · 8 D · 9 C · 10 B · 11 B · 12 C.",
+        "Pourcentages, fractions, lecture de droite et de parabole, moyenne pondérée, tableau croisé, diagramme circulaire : les automatismes de base, sans piège caché mais avec des réponses-leurres.",
+        "Une réponse fausse ne coûte rien : ne laisse jamais une case vide."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "500 élèves, dont 20 % d'externes. Combien d'externes ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** 10 % de 500, c'est 50 ; donc 20 %, c'est $2 \\times 50 = 100$." },
+            { "type": "reponse", "texte": "Réponse **C** : 100." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "L'effectif augmente de 5 %. Par quoi est-il multiplié ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** augmenter de $t\\,\\%$, c'est multiplier par $1 + \\frac{t}{100}$, soit ici $1 + 0{,}05 = 1{,}05$." },
+            { "type": "reponse", "texte": "Réponse **B** : $1{,}05$." },
+            { "type": "piege", "texte": "$0{,}05$ donne seulement l'AUGMENTATION (25 élèves), pas le nouvel effectif." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Calculer $4 \\times \\frac{2}{3}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** un entier fois une fraction, on multiplie seulement le numérateur : $4 \\times \\frac{2}{3} = \\frac{4 \\times 2}{3} = \\frac{8}{3}$." },
+            { "type": "reponse", "texte": "Réponse **A** : $\\frac{8}{3}$." },
+            { "type": "piege", "texte": "Multiplier aussi le dénominateur ($\\frac{8}{12}$) revient à écrire $4 = \\frac{4}{4}$, ce qui est faux : $4 = \\frac{4}{1}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Quelle équation admet deux solutions réelles ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** les équations du premier degré (A et D) n'ont qu'une solution. Un carré n'est jamais négatif, donc $x^2 = -1$ n'en a aucune. Reste $x^2 = 4$, qui a deux solutions : $2$ et $-2$." },
+            { "type": "reponse", "texte": "Réponse **C** : $x^2 = 4$." },
+            { "type": "piege", "texte": "N'oublie pas la solution négative : $(-2)^2 = 4$ aussi." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "L'équation de la droite tracée.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** l'ordonnée à l'origine se lit là où la droite coupe l'axe vertical : $3$. Puis un pas à droite : de $(0 ; 3)$ à $(1 ; 1)$, la droite descend de 2. Le coefficient directeur vaut $-2$." },
+            { "type": "reponse", "texte": "Réponse **D** : $y = -2x + 3$." },
+            { "type": "piege", "texte": "$1{,}5$ est l'abscisse où la droite coupe l'axe horizontal, pas l'ordonnée à l'origine : les réponses A et B tombent dans ce piège." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Avec $f(x) = x(3x - 6)$, l'image de $-2$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** on remplace $x$ par $(-2)$, avec les parenthèses." },
+            { "type": "formule", "tex": "f(-2) = (-2) \\times (3 \\times (-2) - 6) = (-2) \\times (-12) = 24" },
+            { "type": "reponse", "texte": "Réponse **C** : 24." },
+            { "type": "astuce", "texte": "Moins par moins donne plus : un produit de deux nombres négatifs est positif. Un coup d'œil au signe élimine déjà A, B et D." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Avec $f(x) = x(3x - 6)$, les antécédents de 0.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** un produit est nul si et seulement si l'un de ses facteurs est nul." },
+            { "type": "formule", "tex": "x(3x - 6) = 0 \\iff x = 0 \\text{ ou } 3x - 6 = 0 \\iff x = 0 \\text{ ou } x = 2" },
+            { "type": "reponse", "texte": "Réponse **A** : deux antécédents, $0$ et $2$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Le tableau de signes du polynôme du second degré représenté.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** les zéros sont les abscisses où la courbe coupe l'axe horizontal, ici $2$ et $6$. La courbe est au-dessus de l'axe avant 2 et après 6, en dessous entre les deux." },
+            { "type": "reponse", "texte": "Réponse **D** : $+$ sur $]-\\infty ; 2[$, $-$ sur $]2 ; 6[$, $+$ sur $]6 ; +\\infty[$." },
+            { "type": "astuce", "texte": "Une parabole « en U » (tournée vers le haut) est toujours positive À L'EXTÉRIEUR de ses racines et négative entre elles. Le tableau C correspond à une parabole « en ∩ »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "20 tours d'une piste de 4 500 m : la distance totale.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** $20 \\times 4\\,500 = 90\\,000$ m, puis on convertit : $1$ km $= 1\\,000$ m, donc $90\\,000$ m $= 90$ km." },
+            { "type": "reponse", "texte": "Réponse **C** : 90 km." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "10",
+          "intitule": "10/20 coefficient 2 et 16/20 coefficient 1 : la moyenne.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** chaque note compte autant de fois que son coefficient, et on divise par la SOMME des coefficients." },
+            { "type": "formule", "tex": "\\frac{10 \\times 2 + 16 \\times 1}{2 + 1} = \\frac{36}{3} = 12" },
+            { "type": "reponse", "texte": "Réponse **B** : 12." },
+            { "type": "piege", "texte": "La réponse C (13) est la moyenne SANS coefficients : $\\frac{10 + 16}{2}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "11",
+          "intitule": "Parmi les acheteurs d'un aspirateur sans fil, probabilité d'un modèle avec sac.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** « parmi ceux qui… » fixe la ligne de référence. On se place dans la ligne « Sans fil » (90 clients), dont 20 ont un aspirateur avec sac." },
+            { "type": "reponse", "texte": "Réponse **B** : $\\frac{20}{90}$." },
+            { "type": "piege", "texte": "$\\frac{20}{250}$ serait la probabilité de « sans fil ET avec sac » parmi TOUS les clients, et $\\frac{20}{122}$ celle d'être sans fil parmi les modèles avec sac." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "12",
+          "intitule": "D'après le diagramme circulaire, quel pourcentage pour les cabriolets ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le réflexe :** repère les angles simples. Les berlines occupent la moitié du disque (50 %), les monospaces un quart (25 %). Il reste 25 % pour les cabriolets et les tout-terrains, et les tout-terrains n'en font qu'une petite partie." },
+            { "type": "reponse", "texte": "Réponse **C** : 18 % (les tout-terrains font alors 7 %)." },
+            { "type": "astuce", "texte": "Élimine d'abord les réponses impossibles : 52 % et 30 % dépassent les 25 % disponibles, et 12 % laisserait 13 % aux tout-terrains, une part presque aussi grande que les cabriolets, ce que le dessin contredit." }
+          ]
+        },
+        { "type": "attendu", "texte": "Sur la copie, le numéro de la question et la lettre suffisent : aucune justification n'est lue. Les douze questions se partagent les 6 points." }
+      ]
+    },
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Une parabole tracée sur $[-3 ; 4]$, deux tangentes : lecture graphique, puis vérification par le calcul avec $f(x) = -x^2 + 2x + 3$.",
+      "points": 5,
+      "minutes": 35,
+      "enBref": [
+        "Lecture : $f(-2) = -5$, $f(1) = 4$ ; $f'(-2) = 6$ (pente de $(d)$), $f'(1) = 0$ (tangente horizontale).",
+        "$f(x) = 0$ pour $x = -1$ et $x = 3$.",
+        "$f'(x) = -2x + 2$, positive avant 1, négative après : $f$ croît de $-12$ à $4$ sur $[-3 ; 1]$, puis décroît jusqu'à $-5$ sur $[1 ; 4]$.",
+        "La forme factorisée $(x + 1)(-x + 3)$ redonne les deux zéros."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Par lecture graphique" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Déterminer $f(-2)$ et $f(1)$.",
+          "blocs": [
+            { "type": "texte", "texte": "Les points $A$ et $B$ de la courbe ont pour coordonnées lues $A(-2 ; -5)$ et $B(1 ; 4)$." },
+            { "type": "reponse", "texte": "$f(-2) = -5$ et $f(1) = 4$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Déterminer $f'(-2)$ et $f'(1)$.",
+          "blocs": [
+            { "type": "texte", "texte": "$f'(a)$ est le coefficient directeur de la tangente au point d'abscisse $a$. La tangente en $A$ est la droite $(d)$, qui passe par $A(-2 ; -5)$ et $C(-1 ; 1)$ :" },
+            { "type": "formule", "tex": "f'(-2) = \\frac{y_C - y_A}{x_C - x_A} = \\frac{1 - (-5)}{-1 - (-2)} = \\frac{6}{1} = 6" },
+            { "type": "texte", "texte": "La tangente en $B$ est parallèle à l'axe des abscisses : son coefficient directeur est nul." },
+            { "type": "reponse", "texte": "$f'(-2) = 6$ et $f'(1) = 0$." },
+            { "type": "piege", "texte": "$f'(-2)$ n'est pas une ordonnée lue sur la courbe : c'est une PENTE, celle de la tangente. C'est pour la calculer que l'énoncé te donne le point $C$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Résoudre $f(x) = 0$.",
+          "blocs": [
+            { "type": "texte", "texte": "On lit les abscisses des points où la courbe coupe l'axe des abscisses." },
+            { "type": "reponse", "texte": "Les solutions sont $x = -1$ et $x = 3$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Dresser le tableau de variation de $f$.",
+          "blocs": [
+            { "type": "texte", "texte": "La courbe monte de $x = -3$ jusqu'au sommet $B$, puis redescend jusqu'à $x = 4$. On lit $f(-3) = -12$ et $f(4) = -5$." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$-3$", "", "$1$", "", "$4$"],
+              "lignes": [
+                ["variations de $f$", "$-12$", "croissante $\\nearrow$", "$4$", "décroissante $\\searrow$", "$-5$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$f$ est croissante sur $[-3 ; 1]$ et décroissante sur $[1 ; 4]$, avec un maximum égal à 4 atteint en $x = 1$." }
+          ]
+        },
+        { "type": "titre", "texte": "Par le calcul, avec $f(x) = -x^2 + 2x + 3$" },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Retrouver par le calcul les résultats de la question 1.",
+          "blocs": [
+            { "type": "formule", "tex": "f(-2) = -(-2)^2 + 2 \\times (-2) + 3 = -4 - 4 + 3 = -5" },
+            { "type": "formule", "tex": "f(1) = -1^2 + 2 \\times 1 + 3 = -1 + 2 + 3 = 4" },
+            { "type": "reponse", "texte": "On retrouve $f(-2) = -5$ et $f(1) = 4$." },
+            { "type": "piege", "texte": "$-(-2)^2$ vaut $-4$, pas $+4$ : le carré s'applique à $-2$ (entre parenthèses), puis le signe moins devant reste." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6.a",
+          "intitule": "Déterminer $f'(x)$ et retrouver les résultats de la question 2.",
+          "blocs": [
+            { "type": "texte", "texte": "On dérive terme à terme : la dérivée de $x^2$ est $2x$, celle de $x$ est $1$, celle d'une constante est $0$." },
+            { "type": "formule", "tex": "f'(x) = -2x + 2" },
+            { "type": "formule", "tex": "f'(-2) = -2 \\times (-2) + 2 = 6 \\qquad f'(1) = -2 + 2 = 0" },
+            { "type": "reponse", "texte": "$f'(x) = -2x + 2$, et on retrouve $f'(-2) = 6$ et $f'(1) = 0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6.b",
+          "intitule": "Vérifier que $f(x) = (x + 1)(-x + 3)$ et retrouver les résultats de la question 3.",
+          "blocs": [
+            { "type": "texte", "texte": "On développe la forme factorisée :" },
+            { "type": "formule", "tex": "(x + 1)(-x + 3) = -x^2 + 3x - x + 3 = -x^2 + 2x + 3 = f(x)" },
+            { "type": "texte", "texte": "Un produit est nul si et seulement si l'un des facteurs est nul : $x + 1 = 0$ ou $-x + 3 = 0$." },
+            { "type": "reponse", "texte": "$f(x) = 0 \\iff x = -1$ ou $x = 3$ : ce sont bien les solutions lues." },
+            { "type": "astuce", "texte": "Pour « vérifier » une factorisation, développe la forme factorisée : c'est toujours plus sûr que de factoriser soi-même." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6.c",
+          "intitule": "Tableau de signes de $f'(x)$ sur $[-3 ; 4]$, et variations de $f$.",
+          "blocs": [
+            { "type": "texte", "texte": "$-2x + 2 > 0 \\iff 2 > 2x \\iff x < 1$. La dérivée est donc positive avant 1, nulle en 1, négative après." },
+            {
+              "type": "tableau",
+              "entetes": ["$x$", "$-3$", "", "$1$", "", "$4$"],
+              "lignes": [
+                ["signe de $f'(x)$", "", "$+$", "$0$", "$-$", ""],
+                ["variations de $f$", "$-12$", "$\\nearrow$", "$4$", "$\\searrow$", "$-5$"]
+              ]
+            },
+            { "type": "reponse", "texte": "$f' \\geqslant 0$ sur $[-3 ; 1]$ : $f$ y est croissante ; $f' \\leqslant 0$ sur $[1 ; 4]$ : $f$ y est décroissante. C'est le tableau de la question 4." },
+            { "type": "attendu", "texte": "Le correcteur attend le lien explicite : « $f'$ positive, donc $f$ croissante », et les valeurs $f(-3) = -12$, $f(1) = 4$, $f(4) = -5$ calculées au bout des flèches." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Deux abonnements de salle de sport : 250 € puis +30 € par an, ou 200 € puis +10 % par an. Suites arithmétique et géométrique, et tableur.",
+      "points": 5,
+      "minutes": 30,
+      "enBref": [
+        "Abonnement n° 1 : $a_{n+1} = a_n + 30$, suite arithmétique de raison 30 ; $a_1 = 280$, $a_2 = 310$.",
+        "Abonnement n° 2 : $b_{n+1} = 1{,}1 \\, b_n$, suite géométrique de raison $1{,}1$ ; $b_1 = 220$.",
+        "Dans D2 : `=B2-C2`.",
+        "$c_n$ devient négatif pour $n = 12$ : l'abonnement n° 2 coûte plus cher à partir de 2038."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : abonnement n° 1" },
+        {
+          "type": "question",
+          "numero": "A.1.a",
+          "intitule": "Calculer le montant de l'abonnement pour 2027.",
+          "blocs": [
+            { "type": "formule", "tex": "a_1 = 250 + 30 = 280" },
+            { "type": "reponse", "texte": "En 2027, l'abonnement n° 1 coûte 280 €." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.1.b",
+          "intitule": "Calculer $a_2$ et interpréter.",
+          "blocs": [
+            { "type": "formule", "tex": "a_2 = 280 + 30 = 310" },
+            { "type": "reponse", "texte": "$a_2 = 310$ : en 2028 ($2026 + 2$), l'abonnement n° 1 coûte 310 €." },
+            { "type": "attendu", "texte": "« Interpréter », c'est traduire le nombre en phrase dans la situation : une année et un prix en euros." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.2",
+          "intitule": "Exprimer $a_{n+1}$ en fonction de $a_n$.",
+          "blocs": [
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $a_{n+1} = a_n + 30$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "A.3",
+          "intitule": "Nature de la suite $(a_n)$ et raison.",
+          "blocs": [
+            { "type": "reponse", "texte": "On ajoute toujours 30 : $(a_n)$ est **arithmétique** de raison $30$ et de premier terme $a_0 = 250$." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : abonnement n° 2" },
+        {
+          "type": "question",
+          "numero": "B.1",
+          "intitule": "Justifier que l'abonnement coûte 220 € en 2027.",
+          "blocs": [
+            { "type": "texte", "texte": "Augmenter de 10 %, c'est multiplier par $1 + \\frac{10}{100} = 1{,}1$." },
+            { "type": "formule", "tex": "b_1 = 200 \\times 1{,}1 = 200 + 20 = 220" },
+            { "type": "reponse", "texte": "$b_1 = 220$ € en 2027." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.2",
+          "intitule": "Exprimer $b_{n+1}$ en fonction de $b_n$.",
+          "blocs": [
+            { "type": "reponse", "texte": "Pour tout entier naturel $n$, $b_{n+1} = 1{,}1 \\times b_n$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "B.3",
+          "intitule": "Nature de la suite $(b_n)$ et raison.",
+          "blocs": [
+            { "type": "reponse", "texte": "On multiplie toujours par $1{,}1$ : $(b_n)$ est **géométrique** de raison $1{,}1$ et de premier terme $b_0 = 200$." },
+            { "type": "astuce", "texte": "« + 30 € par an » : on ajoute, suite arithmétique. « + 10 % par an » : on multiplie, suite géométrique. Souligne ces deux mots dans l'énoncé avant de commencer." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie C : comparaison des offres" },
+        {
+          "type": "question",
+          "numero": "C.1",
+          "intitule": "Quelle formule, à étirer vers le bas, écrire dans la cellule D2 ?",
+          "blocs": [
+            { "type": "texte", "texte": "$c_n = a_n - b_n$ : sur la ligne 2, $a_0$ est dans B2 et $b_0$ dans C2." },
+            { "type": "code", "langage": "texte", "code": "=B2-C2" },
+            { "type": "reponse", "texte": "On écrit `=B2-C2` ; étirée vers le bas, elle devient `=B3-C3`, `=B4-C4`…" },
+            { "type": "piege", "texte": "N'oublie pas le signe « = » au début : sans lui, le tableur affiche le texte au lieu de calculer. Et pas de référence absolue (bloquée par un dollar) ici : les références doivent glisser d'une ligne à l'autre." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "C.2",
+          "intitule": "À partir de quelle année l'abonnement n° 2 devient-il plus cher que le n° 1 ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'abonnement n° 2 est plus cher quand $b_n > a_n$, c'est-à-dire quand $c_n = a_n - b_n < 0$. Dans la colonne D, $c_{11} = 9{,}38 > 0$ et $c_{12} = -17{,}69 < 0$ ; les valeurs suivantes restent négatives." },
+            { "type": "reponse", "texte": "Le premier rang est $n = 12$ : l'abonnement n° 2 devient plus cher à partir de **2038** ($2026 + 12$)." },
+            { "type": "astuce", "texte": "Moins cher au départ ne veut pas dire moins cher toujours : une hausse en pourcentage finit toujours par dépasser une hausse fixe, parce qu'elle s'applique à un montant qui grandit." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Vrai ou faux, avec justification : l'équipement informatique des 400 élèves d'un collège, dans un tableau croisé.",
+      "points": 4,
+      "minutes": 25,
+      "enBref": [
+        "1. FAUX : 50 élèves sur 400, soit 12,5 %.",
+        "2. VRAI : 310 élèves sur 400, soit 77,5 %.",
+        "3. VRAI : 100 élèves sur 400, soit 25 %.",
+        "4. FAUX : $\\frac{50}{260} = \\frac{5}{26}$, un peu MOINS que $\\frac{1}{5}$."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "50 % des élèves possèdent une adresse mail et un équipement individuel.",
+          "blocs": [
+            { "type": "texte", "texte": "La case « équipement individuel » et « adresse mail » contient 50 élèves, sur 400." },
+            { "type": "formule", "tex": "\\frac{50}{400} = \\frac{1}{8} = 0{,}125 = 12{,}5\\,\\%" },
+            { "type": "reponse", "texte": "**FAUX** : seulement 12,5 % des élèves ont les deux." },
+            { "type": "piege", "texte": "Le nombre 50 de la case ressemble à « 50 % » : c'est un EFFECTIF, qu'il faut rapporter au total de 400." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Au moins 50 % des élèves ne possèdent pas d'adresse mail.",
+          "blocs": [
+            { "type": "texte", "texte": "310 élèves n'ont pas d'adresse mail. La moitié de 400 est 200, et $310 \\geqslant 200$." },
+            { "type": "formule", "tex": "\\frac{310}{400} = 0{,}775 = 77{,}5\\,\\% \\geqslant 50\\,\\%" },
+            { "type": "reponse", "texte": "**VRAI** : 77,5 % des élèves n'ont pas d'adresse mail." },
+            { "type": "astuce", "texte": "« Au moins 50 % » : compare simplement l'effectif à la moitié du total. Pas besoin de pourcentage exact pour conclure." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "La probabilité qu'un élève choisi au hasard n'ait ni adresse mail ni équipement individuel est 25 %.",
+          "blocs": [
+            { "type": "texte", "texte": "« Ni l'un ni l'autre » : la case « pas d'équipement » et « pas d'adresse mail », qui compte 100 élèves. L'élève est choisi au hasard : on est en équiprobabilité." },
+            { "type": "formule", "tex": "\\frac{100}{400} = \\frac{1}{4} = 25\\,\\%" },
+            { "type": "reponse", "texte": "**VRAI**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Au moins $\\frac{1}{5}$ des élèves ayant un équipement individuel possèdent aussi une adresse mail.",
+          "blocs": [
+            { "type": "texte", "texte": "On se place PARMI les 260 élèves équipés : 50 d'entre eux ont une adresse mail. Il faut comparer $\\frac{50}{260}$ à $\\frac{1}{5}$." },
+            { "type": "formule", "tex": "\\frac{1}{5} = \\frac{52}{260} \\qquad \\text{et} \\qquad \\frac{50}{260} < \\frac{52}{260}" },
+            { "type": "reponse", "texte": "**FAUX** : $\\frac{50}{260} = \\frac{5}{26}$, soit environ 19 %, un peu moins qu'un cinquième." },
+            { "type": "astuce", "texte": "Sans calculatrice, pour comparer deux fractions, mets-les au même dénominateur : un cinquième de 260, c'est 52. L'écart est petit, c'est exactement ce que l'affirmation cherche à cacher." },
+            { "type": "attendu", "texte": "Le correcteur attend le bon ensemble de référence (les 260 équipés, pas les 400 élèves) et une comparaison exacte, pas un « environ 20 % »." }
+          ]
+        }
+      ]
+    }
+  ]
+}

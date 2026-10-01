@@ -1,0 +1,3640 @@
+{
+ "niveau": "Tle",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "6257cf02-a1f3-52b1-9489-b90225443e6b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les portes d’entrée du territoire",
+   "competence": "lire-carte",
+   "situation": "Anaïs prépare un exposé sur les interfaces qui relient la France au monde. Elle les repère d’abord sur une carte, puis les range par type.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre interfaces françaises",
+     "source": "Carte schématique : les lettres marquent des sites, pas des frontières.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 2.55,
+       "lat": 49.01,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "le-havre",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le site du premier hub aérien français, Roissy-Charles-de-Gaulle.",
+     "aide": "Il se trouve au nord-est de Paris.",
+     "explication": "**A** est Roissy-Charles-de-Gaulle, principale porte d’entrée aérienne de la France."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le grand port de la façade Manche, à l’embouchure de la Seine.",
+     "aide": "Cherche un port de Normandie, sur la côte nord-ouest.",
+     "explication": "**B** est Le Havre, premier port à conteneurs français, à l’embouchure de la Seine."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la ville dont la gare Lille-Europe relie la France à Londres et à Bruxelles par le train à grande vitesse.",
+     "aide": "Cherche dans le nord du pays, près de la Belgique.",
+     "explication": "**D** est Lille : sa gare Lille-Europe est une interface ferroviaire internationale."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Interface maritime",
+      "Interface terrestre"
+     ],
+     "items": [
+      [
+       "Le port de Dunkerque",
+       0
+      ],
+      [
+       "Marseille-Fos",
+       0
+      ],
+      [
+       "Le tunnel sous la Manche",
+       1
+      ],
+      [
+       "La gare de Lille-Europe",
+       1
+      ]
+     ],
+     "enonce": "Range chaque interface dans le bon type.",
+     "aide": "Un port ouvre sur la mer ; un tunnel ou une gare relient par voie de terre.",
+     "explication": "Dunkerque et Marseille-Fos sont des **ports** ; le tunnel sous la Manche et la gare de Lille-Europe sont des interfaces **terrestres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6257cf02-a1f3-52b1-9489-b90225443e6b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Avec qui la France commerce-t-elle ?",
+   "competence": "lire-graphique",
+   "situation": "Le professeur d’Anaïs propose un graphique simplifié de la répartition des échanges de la France, puis un tableau des leviers de sa présence dans le monde.",
+   "documents": [
+    {
+     "id": "sect",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition des échanges de la France",
+     "source": "Répartition simplifiée et arrondie, écrite pour l’exercice ; l’UE pèse environ 60 % du commerce extérieur.",
+     "categories": [
+      "Union européenne",
+      "Reste de l’Europe et Amérique",
+      "Asie et autres régions"
+     ],
+     "series": [
+      {
+       "nom": "Part des échanges (%)",
+       "valeurs": [
+        60,
+        20,
+        20
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lev",
+     "type": "tableau",
+     "titre": "Les leviers de la présence mondiale",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Levier",
+      "Ce qu’il représente"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Le domaine maritime",
+       "De rang mondial, dans trois océans"
+      ],
+      [
+       "Les forces prépositionnées",
+       "Djibouti, Émirats arabes unis, Antilles, Pacifique"
+      ],
+      [
+       "Le réseau diplomatique et culturel",
+       "Deuxième rang mondial"
+      ],
+      [
+       "Les firmes transnationales",
+       "Luxe, aéronautique, énergie"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 240,
+     "unite": "Md€",
+     "enonce": "Sur 400 milliards d’euros d’échanges (valeur imaginée), quelle somme se fait avec l’Union européenne ?",
+     "aide": "Applique la part lue sur le graphique à 400.",
+     "explication": "L’UE pèse **60 %** : 400 × 0,60 = **240 milliards d’euros**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La France commerce surtout avec l’UE : environ trois échanges sur cinq",
+      "La France commerce surtout avec l’Asie : environ trois échanges sur cinq",
+      "Les échanges sont répartis à parts égales entre les trois zones",
+      "La France commerce d’abord avec le reste du monde, hors d’Europe"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle conclusion le graphique permet-il ?",
+     "aide": "Compare la part de l’UE aux deux autres.",
+     "explication": "L’UE représente **60 %** des échanges, soit trois sur cinq : le premier espace de commerce de la France."
+    },
+    {
+     "type": "zone",
+     "document": "lev",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le levier qui repose sur des entreprises comme celles du luxe et de l’aéronautique.",
+     "aide": "Lis la colonne de droite : quel levier cite le luxe ?",
+     "explication": "Ce sont les **firmes transnationales** qui portent le luxe, l’aéronautique et l’énergie à l’étranger."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Le réseau diplomatique et culturel",
+      "Les forces prépositionnées à Djibouti",
+      "Les forces déployées aux Antilles",
+      "Les bases françaises dans le Pacifique"
+     ],
+     "reponse": 0,
+     "enonce": "Lequel de ces leviers ne repose pas sur des forces militaires ?",
+     "aide": "Trois de ces leviers s’appuient sur des soldats stationnés loin de la métropole.",
+     "explication": "Le **réseau diplomatique et culturel** (ambassades, instituts, écoles) relève de l’influence, non de la force armée."
+    }
+   ]
+  },
+  {
+   "chapitre": "6257cf02-a1f3-52b1-9489-b90225443e6b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Branchée ici, déconnectée là",
+   "competence": "analyser-document",
+   "situation": "Mehdi compare deux images de la France face au monde : les grandes portes d’entrée, et un village lozérien qui exporte mais reste à l’écart.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les régions de la France",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "regionsCliquables": true
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un atelier au bout de la route",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "À Saint-Alban, en Lozère, l’atelier de Claire fabrique des pièces de précision vendues dans toute l’Europe.",
+      "Claire [[d|importe]] pourtant ses composants électroniques d’Asie, livrés par camion depuis un port lointain.",
+      "La gare TGV la plus proche est à deux heures de route et la fibre optique n’arrive qu’à la mairie : « Nous exportons, mais nous sommes loin de tout », dit-elle."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "IDF"
+     ],
+     "enonce": "Touche la région où se trouve le hub de Roissy-Charles-de-Gaulle.",
+     "aide": "C’est la région de la capitale.",
+     "explication": "Roissy est en **Île-de-France** : la première porte aérienne du pays."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "PAC"
+     ],
+     "enonce": "Touche la région du port de Marseille-Fos.",
+     "aide": "Cherche la côte méditerranéenne, à l’est du Rhône.",
+     "explication": "Marseille-Fos est en **Provence-Alpes-Côte d’Azur**, sur la façade méditerranéenne."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "OCC"
+     ],
+     "enonce": "Touche la région du village lozérien du document 2.",
+     "aide": "La Lozère est dans le sud du Massif central, pas sur la côte atlantique.",
+     "explication": "La Lozère appartient à l’**Occitanie** : l’atelier de Claire y vit à l’écart des grandes interfaces."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot du texte qui montre que l’atelier dépend de fournisseurs extérieurs.",
+     "aide": "Cherche le verbe qui parle des composants venus d’Asie.",
+     "explication": "**Importe** : malgré ses exportations, l’atelier reste dépendant de chaînes d’approvisionnement lointaines."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Quelques territoires sont très branchés sur le monde, d’autres en sont écartés",
+      "La mondialisation touche de la même façon tous les territoires français",
+      "Seules les frontières terrestres mettent la France en contact avec le monde",
+      "Les territoires ruraux sont les premiers branchés sur les flux mondiaux"
+     ],
+     "reponse": 0,
+     "enonce": "Que montrent ensemble les deux documents ?",
+     "aide": "Compare la situation de Roissy ou de Marseille-Fos à celle du village de Claire.",
+     "explication": "La France est intégrée au monde **de façon inégale** : les métropoles et les façades sont branchées, d’autres territoires restent à l’écart."
+    }
+   ]
+  },
+  {
+   "chapitre": "29b3c091-385e-5032-8df4-2bc62befc313",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux moteurs de l’Occitanie",
+   "competence": "lire-carte",
+   "situation": "Lina doit présenter l’Occitanie à sa classe. Elle place sur une carte deux métropoles et deux villes voisines, pour ne pas les confondre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes du Sud",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "cadrage": [
+      -3,
+      41.5,
+      8,
+      47
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "montpellier",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "perpignan",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la métropole de l’aéronautique, où travaillent Airbus et ses sous-traitants.",
+     "aide": "Elle est au bord de la Garonne, dans le sud-ouest.",
+     "explication": "**A** est Toulouse, premier pôle industriel de la région grâce à l’aéronautique et au spatial."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la métropole de la santé et des biotechnologies, l’une des plus dynamiques de France.",
+     "aide": "Elle se trouve près de la Méditerranée.",
+     "explication": "**B** est Montpellier : santé, biotechnologies, numérique et une croissance démographique parmi les plus fortes du pays."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la ville qui n’est pas en Occitanie.",
+     "aide": "Une de ces villes est au bord de la Gironde, en Nouvelle-Aquitaine.",
+     "explication": "**C** est Bordeaux, capitale de la Nouvelle-Aquitaine. Toulouse, Montpellier et Perpignan sont en Occitanie."
+    }
+   ]
+  },
+  {
+   "chapitre": "29b3c091-385e-5032-8df4-2bc62befc313",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi vient-on s’installer ici ?",
+   "competence": "analyser-document",
+   "situation": "Une étudiante en géographie analyse d’où vient la croissance démographique de l’Occitanie et recueille un témoignage.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "D’où vient la croissance annuelle",
+     "source": "Valeurs arrondies et schématiques, écrites pour l’exercice (ordre de grandeur : +50 000 habitants par an).",
+     "categories": [
+      "Solde migratoire",
+      "Solde naturel"
+     ],
+     "series": [
+      {
+       "nom": "Habitants en plus par an",
+       "valeurs": [
+        45,
+        5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants en plus",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     }
+    },
+    {
+     "id": "tem",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le témoignage de Julie",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Julie a quitté Paris pour Montpellier. Elle cherchait le [[s|soleil]], la mer à vingt minutes et un loyer plus bas que dans la région voisine.",
+      "Elle travaille à distance pour une entreprise du numérique : « Je suis venue pour le cadre de vie, l’emploi a suivi. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre qui montre le principal moteur de la croissance.",
+     "aide": "C’est la barre la plus haute.",
+     "explication": "Le **solde migratoire** fait l’essentiel de la croissance : on vient s’installer en Occitanie."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "milliers",
+     "enonce": "Combien d’habitants la région gagne-t-elle par an en tout ?",
+     "aide": "Additionne les deux barres.",
+     "explication": "45 + 5 = **50 milliers**, soit environ 50 000 habitants de plus par an."
+    },
+    {
+     "type": "zone",
+     "document": "tem",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot du texte qui illustre l’héliotropisme.",
+     "aide": "L’héliotropisme désigne l’attrait des régions ensoleillées.",
+     "explication": "Le **soleil** est le moteur de l’héliotropisme : le climat attire des habitants du nord du pays."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elle vient surtout d’habitants attirés par le cadre de vie",
+      "Elle vient surtout de naissances plus nombreuses que les décès",
+      "Elle vient surtout de la fermeture des entreprises industrielles",
+      "Elle vient surtout du départ des jeunes vers les métropoles du Nord"
+     ],
+     "reponse": 0,
+     "enonce": "Que disent ensemble le graphique et le témoignage ?",
+     "aide": "Regarde la barre la plus haute puis les raisons de Julie.",
+     "explication": "La croissance est d’abord **migratoire** : le cadre de vie attire, autant que l’emploi."
+    }
+   ]
+  },
+  {
+   "chapitre": "29b3c091-385e-5032-8df4-2bc62befc313",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Attractive, mais pas pour tous",
+   "competence": "raisonner",
+   "situation": "Malik étudie les contrastes de l’Occitanie : deux métropoles, des départements ruraux, et un tableau des oppositions internes.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Villes et départements d’Occitanie",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "cadrage": [
+      -1,
+      41.8,
+      5,
+      45
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "montpellier",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 3.5,
+       "lat": 44.52,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 0.59,
+       "lat": 43.65,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois portraits d’Occitanie",
+     "source": "Portraits qualitatifs, d’après le cours.",
+     "colonnes": [
+      "Territoire",
+      "Ce qui le caractérise"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Les métropoles",
+       "Emplois qualifiés, forte croissance"
+      ],
+      [
+       "Le littoral",
+       "Saturé, prix du logement qui flambent"
+      ],
+      [
+       "Les départements ruraux",
+       "Peu denses, vieillissants, loin des services"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux villes qui portent la croissance métropolitaine de la région.",
+     "aide": "L’une fait l’aéronautique, l’autre la santé.",
+     "explication": "**A** (Toulouse) et **B** (Montpellier) sont les deux moteurs métropolitains de l’Occitanie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche Mende, chef-lieu de la Lozère, un département peu dense.",
+     "aide": "Cherche dans les terres, au nord de Montpellier, vers le Massif central.",
+     "explication": "**C** est Mende, préfecture de la Lozère, département parmi les moins peuplés de France."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui décrit le problème du littoral.",
+     "aide": "Cherche le mot « saturé ».",
+     "explication": "Le littoral attire tant qu’il se **sature** : les prix du logement y flambent."
+    },
+    {
+     "type": "trous",
+     "texte": "Une région ___ n’est pas pour autant une région ___ : croissance et chômage élevé s’y côtoient.",
+     "reponses": [
+      [
+       "attractive"
+      ],
+      [
+       "homogène"
+      ]
+     ],
+     "banque": [
+      "attractive",
+      "homogène",
+      "industrielle",
+      "enclavée"
+     ],
+     "enonce": "Complète la phrase qui résume le cas de l’Occitanie.",
+     "aide": "Pense à deux adjectifs opposés : qui attire, et qui est partout pareil.",
+     "explication": "Une région **attractive** n’est pas **homogène** : métropoles et littoral croissent, l’arrière-pays peine."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "On y vient pour le cadre de vie autant que pour l’emploi",
+      "On y vient uniquement parce que les emplois y sont nombreux",
+      "On y vient surtout pour les loyers, plus élevés qu’ailleurs",
+      "On y vient pour échapper au climat des régions du nord"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi chômage élevé et croissance démographique peuvent-ils coexister ?",
+     "aide": "Relis la colonne de droite : tout le monde ne vient pas pour un emploi.",
+     "explication": "Parce qu’on y vient pour le **cadre de vie** autant que pour l’emploi : l’arrivée d’habitants ne crée pas assez d’emplois."
+    }
+   ]
+  },
+  {
+   "chapitre": "6483c698-0680-524b-9133-987a33be2e75",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Gorbatchev à la fin de l’URSS",
+   "competence": "se-reperer-temps",
+   "situation": "Jules construit une frise pour comprendre comment l’Europe de Yalta disparaît en quelques années.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Une Europe qui bascule",
+     "source": "Dates exactes.",
+     "debut": 1984,
+     "fin": 2000,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "gorb",
+       "date": 1985,
+       "nom": "Gorbatchev"
+      },
+      {
+       "id": "mur",
+       "date": 1989,
+       "nom": "Chute du mur"
+      },
+      {
+       "id": "all",
+       "date": 1990,
+       "nom": "Réunification"
+      },
+      {
+       "id": "urss",
+       "date": 1991,
+       "nom": "Fin de l’URSS"
+      },
+      {
+       "id": "otan",
+       "date": 1999,
+       "nom": "Élargissement OTAN"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "mur"
+     ],
+     "enonce": "Touche l’événement qui ouvre le mur de Berlin.",
+     "aide": "Il s’est produit à l’automne 1989.",
+     "explication": "Le **9 novembre 1989**, le mur de Berlin s’ouvre : c’est le symbole de la fin de la division de l’Europe."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Gorbatchev arrive au pouvoir",
+      "Le mur de Berlin s’ouvre",
+      "L’Allemagne se réunifie",
+      "L’URSS est dissoute"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1985**, **1989**, **1990**, **1991** : Gorbatchev, le mur, la réunification, puis la dissolution de l’URSS."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’arrivée de Gorbatchev au pouvoir de la dissolution de l’URSS ?",
+     "aide": "Soustrais 1985 de 1991.",
+     "explication": "1991 − 1985 = **6 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6483c698-0680-524b-9133-987a33be2e75",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une Europe recomposée",
+   "competence": "se-reperer-espace",
+   "situation": "Inès prépare un exposé sur l’Europe après 1991 : elle situe une capitale, range des pays selon leur entrée dans l’OTAN, et étudie les effets de la transition économique.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Capitales d’anciens États communistes",
+     "source": "Carte schématique ; les frontières sont celles d’aujourd’hui.",
+     "fond": "europe",
+     "cadrage": [
+      8,
+      40,
+      32,
+      56
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "berlin",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "varsovie",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "belgrade",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "bucarest",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "choc",
+     "type": "tableau",
+     "titre": "La « thérapie de choc »",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La mesure",
+      "Sa conséquence immédiate"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Privatisations massives",
+       "Concentration des actifs, corruption"
+      ],
+      [
+       "Fin des prix administrés",
+       "Inflation, chute du pouvoir d’achat"
+      ],
+      [
+       "Ouverture à la concurrence",
+       "Effondrement de la production"
+      ],
+      [
+       "Fin de l’emploi garanti",
+       "Chômage de masse"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la capitale de la Yougoslavie avant son éclatement en 1991.",
+     "aide": "Cherche dans les Balkans, au confluent du Danube et de la Save.",
+     "explication": "**C** est Belgrade, capitale de la Yougoslavie fédérale dont l’éclatement déclenche les guerres des années 1990."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Dans l’OTAN en 1999",
+      "Dans l’OTAN en 2004"
+     ],
+     "items": [
+      [
+       "La Pologne",
+       0
+      ],
+      [
+       "La Hongrie",
+       0
+      ],
+      [
+       "La République tchèque",
+       0
+      ],
+      [
+       "La Lituanie",
+       1
+      ],
+      [
+       "L’Estonie",
+       1
+      ]
+     ],
+     "enonce": "Range ces pays selon leur date d’entrée dans l’OTAN.",
+     "aide": "Trois pays d’Europe centrale entrent en 1999 ; les pays baltes en 2004.",
+     "explication": "**Pologne**, **Hongrie** et **République tchèque** entrent en 1999 ; les **pays baltes** (Lituanie, Estonie, Lettonie) en 2004."
+    },
+    {
+     "type": "zone",
+     "document": "choc",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la conséquence de l’ouverture à la concurrence.",
+     "aide": "Lis la ligne « Ouverture à la concurrence ».",
+     "explication": "L’ouverture à la concurrence provoque l’**effondrement de la production** : les usines d’État ne résistent pas."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La transition vers l’économie de marché est brutale et socialement coûteuse",
+      "La transition vers l’économie de marché est douce et profite à tous",
+      "La transition vers l’économie de marché améliore aussitôt le pouvoir d’achat",
+      "La transition vers l’économie de marché n’affecte que la Russie"
+     ],
+     "reponse": 0,
+     "enonce": "Que retire-t-on du tableau ?",
+     "aide": "Relis les conséquences : inflation, chômage, effondrement.",
+     "explication": "La « thérapie de choc » est **brutale** : inflation, chômage de masse et baisse de la production précèdent le redressement."
+    }
+   ]
+  },
+  {
+   "chapitre": "6483c698-0680-524b-9133-987a33be2e75",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Marek et la thérapie de choc",
+   "competence": "analyser-document",
+   "situation": "Dans un pays fictif d’Europe centrale, Marek, ouvrier, voit sa vie changer après 1989. Un graphique et son témoignage permettent de mesurer l’effet de la thérapie de choc.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Production industrielle d’un pays fictif",
+     "source": "Indice imaginé pour l’exercice : 100 = niveau de 1989.",
+     "categories": [
+      "1989",
+      "1990",
+      "1991",
+      "1992",
+      "1993"
+     ],
+     "series": [
+      {
+       "nom": "Indice de production",
+       "valeurs": [
+        100,
+        82,
+        68,
+        60,
+        62
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "tem",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le témoignage de Marek",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Marek est ouvrier dans une usine de tracteurs. « Avant, l’État fixait les prix et garantissait mon emploi. »",
+      "Depuis la [[m|libération]] des prix, le pain coûte trois fois plus cher. L’usine a licencié la moitié des ouvriers, et Marek cherche un travail."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche l’année où la production est la plus basse.",
+     "aide": "Cherche le point le plus bas de la courbe.",
+     "explication": "C’est en **1992** que l’indice est au plus bas : 60."
+    },
+    {
+     "type": "nombre",
+     "reponse": 40,
+     "unite": "points",
+     "enonce": "De combien de points l’indice baisse-t-il entre 1989 et 1992 ?",
+     "aide": "Soustrais la valeur de 1992 à celle de 1989.",
+     "explication": "100 − 60 = **40 points** : la production industrielle a perdu 40 % de son niveau de 1989."
+    },
+    {
+     "type": "zone",
+     "document": "tem",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne la mesure responsable de la hausse des prix.",
+     "aide": "Cherche ce qui est arrivé aux prix, autrefois fixés par l’État.",
+     "explication": "La **libération** des prix met fin aux prix administrés : c’est elle qui fait grimper le prix du pain."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La thérapie de choc",
+      "La perestroïka",
+      "La glasnost",
+      "La doctrine Brejnev"
+     ],
+     "reponse": 0,
+     "enonce": "Quel terme du cours désigne l’ensemble de ces mesures et de leurs effets ?",
+     "aide": "Il s’agit du passage brutal à l’économie de marché.",
+     "explication": "La **thérapie de choc** : privatisations, prix libérés, concurrence, fin de l’emploi garanti."
+    }
+   ]
+  },
+  {
+   "chapitre": "901a9412-49de-58b4-acdf-773de09f3aac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux passages vitaux pour le pétrole",
+   "competence": "lire-carte",
+   "situation": "Sacha étudie les lieux qui font du Proche-Orient un enjeu mondial : un canal, un détroit et un foyer de conflit.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Lieux clés du Proche-Orient",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      28,
+      20,
+      62,
+      40
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "jerusalem",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 32.55,
+       "lat": 30,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 56.5,
+       "lat": 26.6,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "bagdad",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le détroit d’Ormuz, par où passe environ un cinquième du pétrole mondial.",
+     "aide": "Il ferme le golfe Persique, à l’est de la péninsule arabique.",
+     "explication": "**C** est le détroit d’Ormuz, à l’entrée du golfe Persique : un cinquième du pétrole mondial y transite."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le canal de Suez, route la plus courte entre l’Europe et l’Asie.",
+     "aide": "Il relie la Méditerranée à la mer Rouge, en Égypte.",
+     "explication": "**B** est le canal de Suez : il évite le tour de l’Afrique aux navires entre l’Europe et l’Asie."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les chocs pétroliers de 1973 et 1979 ont dérégulé l’économie du monde entier",
+      "Les chocs pétroliers de 1973 et 1979 n’ont touché que les pays de la région",
+      "Les chocs pétroliers de 1973 et 1979 ont fait baisser le prix du baril",
+      "Les chocs pétroliers de 1973 et 1979 ont fermé le canal de Suez"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi un événement régional pèse-t-il sur toute l’économie mondiale ?",
+     "aide": "La région détient près de la moitié des réserves mondiales de pétrole.",
+     "explication": "Comme la région détient près de la moitié des réserves, un événement local peut **dérégler l’économie mondiale**, comme en 1973 et 1979."
+    }
+   ]
+  },
+  {
+   "chapitre": "901a9412-49de-58b4-acdf-773de09f3aac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Soixante ans de conflit",
+   "competence": "se-reperer-temps",
+   "situation": "Yanis compare deux guerres menées en Irak et place sur une frise les grandes dates du conflit israélo-palestinien.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le conflit israélo-palestinien",
+     "source": "Dates exactes.",
+     "debut": 1945,
+     "fin": 2005,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "g48",
+       "date": 1948,
+       "nom": "Guerre de 1948"
+      },
+      {
+       "id": "six",
+       "date": 1967,
+       "nom": "Six Jours"
+      },
+      {
+       "id": "kip",
+       "date": 1973,
+       "nom": "Guerre du Kippour"
+      },
+      {
+       "id": "int",
+       "date": 1987,
+       "nom": "Première Intifada"
+      },
+      {
+       "id": "oslo",
+       "date": 1993,
+       "nom": "Accords d’Oslo"
+      },
+      {
+       "id": "rabin",
+       "date": 1995,
+       "nom": "Mort de Rabin"
+      },
+      {
+       "id": "int2",
+       "date": 2000,
+       "nom": "Seconde Intifada"
+      }
+     ]
+    },
+    {
+     "id": "golfe",
+     "type": "tableau",
+     "titre": "Deux guerres en Irak",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Guerre du Golfe (1991)",
+      "Invasion de l’Irak (2003)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Le motif",
+       "Invasion du Koweït",
+       "Armes de destruction massive invoquées"
+      ],
+      [
+       "Mandat de l’ONU",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Position de la France",
+       "Elle participe",
+       "Elle s’y oppose"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "oslo"
+     ],
+     "enonce": "Touche l’événement qui crée l’Autorité palestinienne.",
+     "aide": "C’est un accord signé en 1993.",
+     "explication": "Les **accords d’Oslo** (1993) créent l’Autorité palestinienne et esquissent une solution à deux États."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Guerre des Six Jours",
+      "Guerre du Kippour",
+      "Première Intifada",
+      "Accords d’Oslo"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1967**, **1973**, **1987**, **1993**."
+    },
+    {
+     "type": "zone",
+     "document": "golfe",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit si l’ONU a donné son mandat à l’invasion de l’Irak de 2003.",
+     "aide": "Cherche la ligne « Mandat de l’ONU », colonne 2003.",
+     "explication": "Il n’y a **pas de mandat** de l’ONU en 2003 : la France, qui s’y oppose, le dit à l’ONU."
+    },
+    {
+     "type": "nombre",
+     "reponse": 26,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la guerre des Six Jours des accords d’Oslo ?",
+     "aide": "Soustrais 1967 de 1993.",
+     "explication": "1993 − 1967 = **26 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "901a9412-49de-58b4-acdf-773de09f3aac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le choc pétrolier, maillon après maillon",
+   "competence": "raisonner",
+   "situation": "Une professeure demande à Lola d’expliquer comment une guerre régionale en 1973, puis une révolution en 1979, ont frappé l’économie mondiale.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le prix du baril de pétrole",
+     "source": "Valeurs arrondies, en dollars courants, ordre de grandeur.",
+     "categories": [
+      "1972",
+      "1974",
+      "1978",
+      "1980"
+     ],
+     "series": [
+      {
+       "nom": "Prix du baril",
+       "valeurs": [
+        3,
+        12,
+        14,
+        36
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix du baril",
+      "unite": "en dollars",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "kip",
+       "texte": "Guerre du Kippour (1973)"
+      },
+      {
+       "id": "emb",
+       "texte": "?"
+      },
+      {
+       "id": "prix",
+       "texte": "Le prix du baril est multiplié par quatre"
+      },
+      {
+       "id": "eco",
+       "texte": "Inflation et ralentissement en Europe"
+      }
+     ],
+     "liens": [
+      {
+       "de": "kip",
+       "a": "emb"
+      },
+      {
+       "de": "emb",
+       "a": "prix"
+      },
+      {
+       "de": "prix",
+       "a": "eco"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la barre du prix le plus élevé.",
+     "aide": "C’est la barre la plus haute.",
+     "explication": "En **1980**, le baril atteint environ 36 dollars, après le second choc pétrolier."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "fois",
+     "enonce": "Environ combien de fois le baril est-il plus cher en 1974 qu’en 1972 ?",
+     "aide": "Divise 12 par 3.",
+     "explication": "12 ÷ 3 = **4** : le prix est multiplié par quatre."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Un embargo pétrolier décidé par des pays arabes",
+      "Une baisse de la production des pays occidentaux",
+      "La fermeture du détroit d’Ormuz par l’Iran",
+      "Un accord de paix signé entre Israël et l’Égypte"
+     ],
+     "reponse": 0,
+     "enonce": "Quel maillon manque dans la chaîne entre la guerre du Kippour et la hausse du prix ?",
+     "aide": "Après la guerre de 1973, des pays arabes utilisent le pétrole comme arme.",
+     "explication": "Les pays arabes décident un **embargo pétrolier** : l’offre baisse, les prix flambent."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "eco"
+     ],
+     "enonce": "Touche la conséquence de la hausse du prix pour les économies européennes.",
+     "aide": "Elle est au bout de la chaîne.",
+     "explication": "**Inflation et ralentissement** : la hausse de l’énergie renchérit tout et freine la croissance."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La révolution iranienne de 1979",
+      "La guerre des Six Jours de 1967",
+      "Les accords d’Oslo de 1993",
+      "La chute du mur de Berlin en 1989"
+     ],
+     "reponse": 0,
+     "enonce": "Quel événement de 1979 explique la hausse entre 1978 et 1980 ?",
+     "aide": "Il s’agit d’un changement de régime dans un grand pays pétrolier.",
+     "explication": "La **révolution iranienne** de 1979 installe une république islamique et déclenche le second choc pétrolier."
+    }
+   ]
+  },
+  {
+   "chapitre": "a38821a2-f818-58b3-a48d-4b8289602028",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La Chine s’ouvre, étape par étape",
+   "competence": "se-reperer-temps",
+   "situation": "Lou prépare une frise sur les réformes chinoises : de Deng Xiaoping à l’entrée dans l’OMC.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Vingt-trois ans de réformes",
+     "source": "Dates exactes.",
+     "debut": 1975,
+     "fin": 2005,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "mod",
+       "date": 1978,
+       "nom": "Quatre Modernisations"
+      },
+      {
+       "id": "zes",
+       "date": 1980,
+       "nom": "Zones économiques"
+      },
+      {
+       "id": "tian",
+       "date": 1989,
+       "nom": "Tian’anmen"
+      },
+      {
+       "id": "sud",
+       "date": 1992,
+       "nom": "Tournée dans le Sud"
+      },
+      {
+       "id": "hk",
+       "date": 1997,
+       "nom": "Retour de Hong Kong"
+      },
+      {
+       "id": "omc",
+       "date": 2001,
+       "nom": "Entrée à l’OMC"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "omc"
+     ],
+     "enonce": "Touche l’événement qui fait exploser les exportations chinoises.",
+     "aide": "C’est l’adhésion à une organisation du commerce mondial, en 2001.",
+     "explication": "L’adhésion à l’**OMC** (décembre 2001) fait de la Chine l’usine du monde."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Les Quatre Modernisations",
+      "La répression de Tian’anmen",
+      "Le retour de Hong Kong",
+      "L’entrée à l’OMC"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1978**, **1989**, **1997**, **2001**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Réforme économique",
+      "Verrouillage politique"
+     ],
+     "items": [
+      [
+       "Les zones économiques spéciales",
+       0
+      ],
+      [
+       "Le démantèlement des communes populaires",
+       0
+      ],
+      [
+       "La répression de la place Tian’anmen",
+       1
+      ],
+      [
+       "Le maintien du Parti unique",
+       1
+      ]
+     ],
+     "enonce": "Range chaque fait dans la bonne colonne.",
+     "aide": "Deux faits ouvrent l’économie, deux ferment la vie politique.",
+     "explication": "Les **zones économiques spéciales** et la fin des communes populaires réforment l’économie ; Tian’anmen et le maintien du Parti unique **verrouillent** le politique."
+    }
+   ]
+  },
+  {
+   "chapitre": "a38821a2-f818-58b3-a48d-4b8289602028",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Shenzhen, du village à la métropole",
+   "competence": "analyser-document",
+   "situation": "Une journaliste étudie les zones économiques spéciales : elle situe Shenzhen sur une carte et mesure la montée des exportations chinoises.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Littoral et intérieur de la Chine",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      100,
+      18,
+      128,
+      44
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "pekin",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "shenzhen",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 106.55,
+       "lat": 29.56,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de la Chine dans les exportations mondiales",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "1980",
+      "2001",
+      "2010"
+     ],
+     "series": [
+      {
+       "nom": "Part des exportations mondiales (%)",
+       "valeurs": [
+        1,
+        4,
+        10
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des exportations mondiales",
+      "unite": "en %",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche Shenzhen, village de pêcheurs en 1980 devenu zone économique spéciale.",
+     "aide": "Elle est sur la côte sud, face à Hong Kong.",
+     "explication": "**B** est Shenzhen, première zone économique spéciale, créée en 1980 face à Hong Kong."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la ville située à l’intérieur des terres, loin du littoral ouvert.",
+     "aide": "Cherche loin de la côte, à l’ouest de Shanghai.",
+     "explication": "**D** est Chongqing, dans l’intérieur du pays : le littoral est le moteur de la croissance, l’intérieur a mis plus de temps à suivre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "fois",
+     "enonce": "Combien de fois la part de la Chine dans les exportations mondiales est-elle plus grande en 2001 qu’en 1980 ?",
+     "aide": "Divise 4 par 1.",
+     "explication": "4 ÷ 1 = **4** : la part est multipliée par quatre en vingt et un ans."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La hausse continue et s’accélère après l’entrée dans l’OMC",
+      "La hausse s’arrête net après l’entrée dans l’OMC",
+      "La part de la Chine baisse entre 2001 et 2010",
+      "La part de la Chine est la même en 1980 et en 2010"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre le graphique entre 2001 et 2010 ?",
+     "aide": "Compare la hausse de 1980 à 2001 à celle de 2001 à 2010.",
+     "explication": "La part passe de 4 % à 10 % en neuf ans : la hausse **s’accélère** après l’adhésion à l’OMC."
+    }
+   ]
+  },
+  {
+   "chapitre": "a38821a2-f818-58b3-a48d-4b8289602028",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ouverture qui reste sous contrôle",
+   "competence": "raisonner",
+   "situation": "Un étudiant analyse une lettre imaginée d’un chef d’entreprise installé dans une zone économique spéciale, puis un tableau des avantages offerts par l’État chinois.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un chef d’entreprise à Shenzhen, 1986",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chère Hélène, l’usine tourne. Ici, les impôts sont réduits, les ouvriers sont nombreux et peu payés, et le cadre juridique est [[d|dérogatoire]] : les règles ne sont pas celles du reste du pays.",
+      "Mais rien ne change ailleurs : les décisions politiques restent au Parti, et la zone est isolée du reste de la Chine par une clôture surveillée."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Ce que les zones offrent",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "L’avantage offert",
+      "À qui il profite"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Avantages fiscaux",
+       "Aux capitaux étrangers"
+      ],
+      [
+       "Main-d’œuvre bon marché",
+       "Aux industries d’exportation"
+      ],
+      [
+       "Cadre juridique dérogatoire",
+       "À l’expérimentation, sans toucher au reste du pays"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot de la lettre qui montre que les règles de la zone diffèrent du reste du pays.",
+     "aide": "Cherche l’adjectif qui parle du cadre juridique.",
+     "explication": "Le cadre juridique est **dérogatoire** : la zone sert de laboratoire sans changer les règles ailleurs."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Avantages fiscaux",
+       "Les capitaux étrangers"
+      ],
+      [
+       "Main-d’œuvre bon marché",
+       "Les industries d’exportation"
+      ],
+      [
+       "Cadre juridique dérogatoire",
+       "L’expérimentation"
+      ]
+     ],
+     "enonce": "Associe chaque avantage à celui qui en profite.",
+     "aide": "Relis le tableau, ligne par ligne.",
+     "explication": "Les avantages fiscaux attirent les **capitaux étrangers** ; la main-d’œuvre bon marché sert l’**exportation** ; le cadre dérogatoire permet d’**expérimenter**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La répression de Tian’anmen",
+      "La tournée dans le Sud de Deng",
+      "Le retour de Hong Kong",
+      "L’entrée dans l’OMC"
+     ],
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "aide": "Ils s’étalent de 1989 à 2001.",
+     "explication": "**1989**, **1992**, **1997**, **2001**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La Chine ouvre son économie mais garde le contrôle politique du Parti",
+      "La Chine ouvre son économie et devient une démocratie pluraliste",
+      "La Chine ferme son économie et renforce la planification d’État",
+      "La Chine ouvre tout le pays en même temps aux capitaux étrangers"
+     ],
+     "reponse": 0,
+     "enonce": "Que signifie « réforme économique, pas politique » ?",
+     "aide": "Pense à Tian’anmen en 1989 et au maintien du Parti.",
+     "explication": "La Chine **ouvre l’économie** mais **verrouille la vie politique** : le Parti reste seul maître."
+    }
+   ]
+  },
+  {
+   "chapitre": "c182d0b0-2129-5cb6-ad2f-834cad408761",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les capitales de 1989",
+   "competence": "lire-carte",
+   "situation": "Ilyès repère sur une carte les capitales où se joue l’année 1989 en Europe centrale.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Cinq capitales en 1989",
+     "source": "Carte schématique ; les frontières sont celles d’aujourd’hui.",
+     "fond": "europe",
+     "cadrage": [
+      8,
+      40,
+      32,
+      56
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "varsovie",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "budapest",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "berlin",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "prague",
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lieu": "bucarest",
+       "symbole": "lettre",
+       "lettre": "E"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la capitale du pays qui ouvre le rideau de fer cet été-là.",
+     "aide": "Elle est sur le Danube, à la frontière de l’Autriche.",
+     "explication": "**B** est Budapest : la Hongrie ouvre sa frontière avec l’Autriche à l’été 1989."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche la capitale du seul pays où la chute du régime est sanglante.",
+     "aide": "Il est à l’est des Carpates, près de la mer Noire.",
+     "explication": "**E** est Bucarest : en décembre 1989, le régime de Ceaușescu tombe dans la violence."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Berlin",
+       "Chute du mur"
+      ],
+      [
+       "Prague",
+       "Révolution de velours"
+      ],
+      [
+       "Varsovie",
+       "Élections semi-libres"
+      ]
+     ],
+     "enonce": "Associe chaque capitale à son événement de 1989.",
+     "aide": "Relis le tableau du cours : les événements sont classés par mois.",
+     "explication": "**Berlin** : le 9 novembre ; **Prague** : la « révolution de velours » ; **Varsovie** : les élections semi-libres de juin."
+    }
+   ]
+  },
+  {
+   "chapitre": "c182d0b0-2129-5cb6-ad2f-834cad408761",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux routes en 1989",
+   "competence": "analyser-document",
+   "situation": "Zoé compare ce qui se passe en Chine et en Europe centrale durant l’année 1989, à partir d’un tableau chronologique.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "L’année 1989",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mois",
+      "L’événement",
+      "Pays"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "Avril-juin",
+       "Occupation puis répression de Tian’anmen",
+       "Chine"
+      ],
+      [
+       "Juin",
+       "Élections semi-libres",
+       "Pologne"
+      ],
+      [
+       "9 novembre",
+       "Chute du mur de Berlin",
+       "RDA"
+      ],
+      [
+       "Novembre-décembre",
+       "« Révolution de velours »",
+       "Tchécoslovaquie"
+      ],
+      [
+       "Décembre",
+       "Exécution de Ceaușescu",
+       "Roumanie"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case du pays dont le pouvoir choisit la répression.",
+     "aide": "Cherche l’événement de la place Tian’anmen.",
+     "explication": "La **Chine** écrase le mouvement étudiant de Tian’anmen, dans la nuit du 3 au 4 juin."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Les élections semi-libres en Pologne",
+      "La chute du mur de Berlin",
+      "La révolution de velours",
+      "L’exécution de Ceaușescu"
+     ],
+     "enonce": "Range ces quatre événements d’Europe centrale dans l’ordre du tableau.",
+     "aide": "Lis la colonne « Mois » de haut en bas.",
+     "explication": "Juin, **9 novembre**, novembre-décembre, décembre : l’automne des peuples s’accélère."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Elles se font presque sans violence, sauf en Roumanie",
+      "Elles se font toutes dans la violence, comme en Roumanie",
+      "Elles sont toutes écrasées par l’armée soviétique",
+      "Elles n’ont aucun effet sur les régimes communistes"
+     ],
+     "reponse": 0,
+     "enonce": "Que montrent les événements d’Europe centrale entre juin et décembre ?",
+     "aide": "Compare la Roumanie aux autres pays.",
+     "explication": "Les régimes d’Europe centrale s’effondrent **presque sans violence** ; seule la Roumanie connaît un dénouement sanglant."
+    },
+    {
+     "type": "trous",
+     "texte": "La Chine choisit la voie ___ de l’Europe : réformer l’___, verrouiller le ___.",
+     "reponses": [
+      [
+       "inverse"
+      ],
+      [
+       "économie"
+      ],
+      [
+       "politique"
+      ]
+     ],
+     "banque": [
+      "inverse",
+      "économie",
+      "politique",
+      "identique"
+     ],
+     "enonce": "Complète la phrase qui résume le choix chinois.",
+     "aide": "Elle fait l’inverse de ce qui se passe en Europe.",
+     "explication": "La Chine choisit la voie **inverse** : elle réforme l’**économie** mais verrouille le **politique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c182d0b0-2129-5cb6-ad2f-834cad408761",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fin de l’histoire ?",
+   "competence": "analyser-document",
+   "situation": "Après 1989, un auteur américain annonce le triomphe de la démocratie libérale. Hugo analyse ce texte, résumé pour l’exercice, avec un tableau du « consensus de Washington ».",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Le consensus de Washington (1989)",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le mot d’ordre",
+      "Ce qu’il impose"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Libéralisation",
+       "Ouverture des marchés"
+      ],
+      [
+       "Privatisations",
+       "Retrait de l’État de la production"
+      ],
+      [
+       "Discipline budgétaire",
+       "Réduction des déficits"
+      ],
+      [
+       "Ouverture aux capitaux",
+       "Libre circulation financière"
+      ]
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La thèse de Fukuyama, résumée",
+     "auteur": "D’après Francis Fukuyama, 1989 (résumé écrit pour l’exercice)",
+     "blocs": [
+      "Pour cet auteur, la chute des régimes communistes marque le [[t|triomphe]] définitif de la démocratie libérale et de l’économie de marché.",
+      "Il n’existerait plus de modèle capable de rivaliser : l’Histoire, comprise comme l’affrontement des idéologies, serait close."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le mot d’ordre qui demande de réduire les déficits.",
+     "aide": "Cherche le mot qui parle de budget.",
+     "explication": "La **discipline budgétaire** impose de réduire les déficits publics."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot du texte qui traduit l’optimisme de l’auteur.",
+     "aide": "Cherche le nom qui veut dire « victoire complète ».",
+     "explication": "Le **triomphe** résume la conviction de l’auteur : la démocratie libérale aurait gagné pour de bon."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les guerres yougoslaves des années 1990 en Europe",
+      "La signature du traité de Rome en 1957",
+      "La réunification de l’Allemagne en octobre 1990",
+      "L’entrée de la Pologne dans l’OTAN en 1999"
+     ],
+     "reponse": 0,
+     "enonce": "Quel événement ultérieur contredit la prophétie d’une histoire apaisée ?",
+     "aide": "Cherche une guerre qui éclate en Europe après 1991.",
+     "explication": "Les **guerres yougoslaves** montrent que l’Histoire continue : nationalismes et conflits armés reviennent en Europe."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Libéralisation",
+       "Ouverture des marchés"
+      ],
+      [
+       "Privatisations",
+       "Retrait de l’État de la production"
+      ],
+      [
+       "Ouverture aux capitaux",
+       "Libre circulation financière"
+      ]
+     ],
+     "enonce": "Associe chaque mot d’ordre à ce qu’il impose.",
+     "aide": "Relis le tableau du document 1.",
+     "explication": "Chaque mot d’ordre prolonge l’**économie de marché** : ouvrir, privatiser, laisser circuler les capitaux."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il dit l’euphorie de 1989, même si les faits l’ont ensuite démentie",
+      "Il décrit avec exactitude ce qui s’est passé après 1989",
+      "Il annonce la fin des régimes autoritaires dans le monde",
+      "Il prouve que la guerre a disparu pour toujours d’Europe"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ce texte reste-t-il un document utile à l’historien ?",
+     "aide": "Un texte faux peut pourtant témoigner d’un état d’esprit.",
+     "explication": "Démentie par les faits, la thèse dit l’**euphorie du moment** : c’est ce qui la rend précieuse comme document."
+    }
+   ]
+  },
+  {
+   "chapitre": "4361eebf-ed08-55b5-9460-fe32654b77cb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quarante ans de décentralisation",
+   "competence": "se-reperer-temps",
+   "situation": "Noa prépare une frise pour comprendre comment l’État a redistribué ses pouvoirs aux territoires.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De Defferre à la réforme des régions",
+     "source": "Dates exactes.",
+     "debut": 1980,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "def",
+       "date": 1982,
+       "nom": "Lois Defferre"
+      },
+      {
+       "id": "reg",
+       "date": 1986,
+       "nom": "Premières élections régionales"
+      },
+      {
+       "id": "rev",
+       "date": 2003,
+       "nom": "République décentralisée"
+      },
+      {
+       "id": "loi",
+       "date": 2015,
+       "nom": "Loi sur 13 régions"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "def"
+     ],
+     "enonce": "Touche l’événement qui met fin à la tutelle du préfet sur les collectivités.",
+     "aide": "Ce sont les lois portées par un ministre de l’Intérieur au début des années 1980.",
+     "explication": "Les **lois Defferre** (1982-1983) mettent fin à la tutelle du préfet sur les collectivités."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Les lois Defferre",
+      "Les premières élections régionales",
+      "La révision « République décentralisée »",
+      "La loi sur 13 régions"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1982**, **1986**, **2003**, **2015**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Départements",
+      "Régions",
+      "Communes"
+     ],
+     "items": [
+      [
+       "Les collèges",
+       0
+      ],
+      [
+       "Les lycées",
+       1
+      ],
+      [
+       "L’urbanisme",
+       2
+      ],
+      [
+       "Le permis de construire",
+       2
+      ]
+     ],
+     "enonce": "Range chaque compétence selon la collectivité qui la reçoit.",
+     "aide": "Les départements gèrent les collèges ; les régions, les lycées ; les communes, l’urbanisme.",
+     "explication": "Les **départements** reçoivent les collèges, les **régions** les lycées, les **communes** l’urbanisme (dont le permis de construire)."
+    }
+   ]
+  },
+  {
+   "chapitre": "4361eebf-ed08-55b5-9460-fe32654b77cb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une République décentralisée",
+   "competence": "analyser-document",
+   "situation": "Une élève de terminale étudie l’article premier de la Constitution, révisé en 2003, puis un tableau sur la carte territoriale.",
+   "documents": [
+    {
+     "id": "cons",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Article premier de la Constitution (révision de 2003)",
+     "auteur": "Extrait adapté de la Constitution",
+     "blocs": [
+      "La France est une République [[i|indivisible]], laïque, démocratique et sociale. […] Son organisation est [[d|décentralisée]]."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "tableau",
+     "titre": "La carte territoriale",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Échelon",
+      "Évolution"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Régions métropolitaines",
+       "De 22 à 13 (loi de 2015, effective au 1er janvier 2016)"
+      ],
+      [
+       "Intercommunalités et métropoles",
+       "Montée en puissance continue"
+      ],
+      [
+       "Communes",
+       "Plus de 34 000 : l’échelon le plus ancien et le plus nombreux"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cons",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot ajouté à l’article premier par la révision de 2003.",
+     "aide": "Il désigne la façon dont la République est organisée.",
+     "explication": "Le mot **décentralisée** est inscrit à l’article premier par la révision du 28 mars 2003."
+    },
+    {
+     "type": "nombre",
+     "reponse": 9,
+     "unite": "régions",
+     "enonce": "Combien de régions métropolitaines ont disparu en tant que telles avec la loi de 2015 ?",
+     "aide": "Soustrais 13 de 22.",
+     "explication": "22 − 13 = **9 régions** de moins, par fusion."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche l’échelon le plus nombreux de la carte territoriale.",
+     "aide": "Cherche la ligne qui compte plus de 34 000 unités.",
+     "explication": "Les **communes**, plus de 34 000, restent l’échelon le plus ancien et le plus nombreux."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Référendum local",
+       "Consulter les habitants sur un projet"
+      ],
+      [
+       "Droit à l’expérimentation",
+       "Tester une politique sur un territoire"
+      ],
+      [
+       "Autonomie financière",
+       "Une part garantie de ressources propres"
+      ]
+     ],
+     "enonce": "Associe chaque apport de l’acte II à ce qu’il permet.",
+     "aide": "Ces trois apports viennent de la révision de 2003.",
+     "explication": "Le **référendum local** consulte, l’**expérimentation** teste, l’**autonomie financière** garantit des ressources propres."
+    }
+   ]
+  },
+  {
+   "chapitre": "4361eebf-ed08-55b5-9460-fe32654b77cb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Décentraliser et présidentialiser",
+   "competence": "raisonner",
+   "situation": "Sarah compare deux réformes de la décentralisation et découvre un mouvement inverse : le renforcement du président.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux étapes de la décentralisation",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Acte I (1982-1983)",
+      "Acte II (2003)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Nature du texte",
+       "Lois ordinaires (lois Defferre)",
+       "Révision de la Constitution"
+      ],
+      [
+       "Idée centrale",
+       "Fin de la tutelle du préfet",
+       "La République « est décentralisée »"
+      ],
+      [
+       "Exemple concret",
+       "Élection de la région au suffrage universel (1986)",
+       "Référendum local"
+      ]
+     ]
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un contrepoint centralisateur",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "Dans le même temps, le passage au [[q|quinquennat]] en 2000 et l’inversion du calendrier électoral en 2001-2002 rapprochent l’élection présidentielle des législatives.",
+      "Le président dispose plus facilement d’une majorité : l’État se décentralise et se présidentialise en même temps."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui dit que l’acte II passe par une révision de la Constitution.",
+     "aide": "Cherche la ligne « Nature du texte », colonne « Acte II ».",
+     "explication": "L’acte II est une **révision de la Constitution** : la décentralisation devient un principe constitutionnel."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche le mot du texte qui désigne la réduction du mandat présidentiel à cinq ans.",
+     "aide": "Il commence par « quin ».",
+     "explication": "Le **quinquennat** (référendum de 2000) raccourcit le mandat présidentiel de sept à cinq ans."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Vers les territoires",
+      "Vers des autorités indépendantes",
+      "Vers le président"
+     ],
+     "items": [
+      [
+       "La région élue au suffrage universel",
+       0
+      ],
+      [
+       "Le transfert des lycées aux régions",
+       0
+      ],
+      [
+       "La création de la CNIL",
+       1
+      ],
+      [
+       "Le Défenseur des droits",
+       1
+      ],
+      [
+       "Le quinquennat",
+       2
+      ]
+     ],
+     "enonce": "Range chaque mesure selon le pouvoir qu’elle renforce.",
+     "aide": "Trois directions : les collectivités, les autorités indépendantes, l’Élysée.",
+     "explication": "Les régions élues et les lycées renforcent les **territoires** ; la CNIL et le Défenseur des droits les **autorités indépendantes** ; le quinquennat le **président**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Un mouvement contraire traverse la décentralisation : le pouvoir du président se renforce",
+      "Le président perd ses pouvoirs à mesure que les collectivités en gagnent",
+      "La décentralisation a supprimé le rôle de l’État dans les territoires",
+      "Le quinquennat a affaibli le président au profit des régions"
+     ],
+     "reponse": 0,
+     "enonce": "Que montre le document 2 ?",
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "Le texte décrit un **contrepoint centralisateur** : l’État se décentralise tout en se présidentialisant."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Les lois Defferre",
+      "La première élection régionale",
+      "Le quinquennat",
+      "La révision « République décentralisée »"
+     ],
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "aide": "Ils vont de 1982 à 2003.",
+     "explication": "**1982**, **1986**, **2000**, **2003**."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b7bdf4-6d8b-52a2-be47-0a9e00d30939",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De 1905 à 2024 : droits et principes",
+   "competence": "se-reperer-temps",
+   "situation": "Manon classe les grandes étapes de la laïcité et des nouveaux droits sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Laïcité et nouveaux droits",
+     "source": "Dates exactes.",
+     "debut": 1900,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "loi",
+       "date": 1905,
+       "nom": "Séparation Églises-État"
+      },
+      {
+       "id": "cc",
+       "date": 1971,
+       "nom": "Décision du Conseil"
+      },
+      {
+       "id": "pacs",
+       "date": 1999,
+       "nom": "PACS"
+      },
+      {
+       "id": "rel",
+       "date": 2004,
+       "nom": "Signes religieux"
+      },
+      {
+       "id": "mar",
+       "date": 2013,
+       "nom": "Mariage pour tous"
+      },
+      {
+       "id": "ivg",
+       "date": 2024,
+       "nom": "IVG dans la Constitution"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "mar"
+     ],
+     "enonce": "Touche l’événement qui ouvre le mariage aux couples de même sexe.",
+     "aide": "Il a lieu en 2013.",
+     "explication": "Le **mariage pour tous** est adopté en 2013."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "La loi de séparation des Églises et de l’État",
+      "Le PACS",
+      "La loi sur les signes religieux à l’école",
+      "Le mariage pour tous"
+     ],
+     "enonce": "Range ces quatre étapes de la plus ancienne à la plus récente.",
+     "aide": "Lis les dates sous chaque événement.",
+     "explication": "**1905**, **1999**, **2004**, **2013**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Laïcité",
+      "Égalité et nouveaux droits"
+     ],
+     "items": [
+      [
+       "La loi de 1905",
+       0
+      ],
+      [
+       "La loi de 2004 sur les signes religieux",
+       0
+      ],
+      [
+       "Le PACS",
+       1
+      ],
+      [
+       "Le mariage pour tous",
+       1
+      ],
+      [
+       "L’IVG inscrite dans la Constitution",
+       1
+      ]
+     ],
+     "enonce": "Range chaque texte dans la bonne colonne.",
+     "aide": "Deux textes parlent de la neutralité de l’État et de l’école ; les autres élargissent des droits.",
+     "explication": "Les lois de **1905** et **2004** relèvent de la laïcité ; le PACS, le mariage pour tous et l’IVG sont des **droits nouveaux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b7bdf4-6d8b-52a2-be47-0a9e00d30939",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une loi peut-elle être contestée ?",
+   "competence": "analyser-document",
+   "situation": "Un lycéen étudie la question prioritaire de constitutionnalité : d’abord ses dates, puis la marche à suivre d’un justiciable.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Le citoyen face à la loi",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "L’étape",
+      "Ce qu’elle change"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "1971",
+       "Décision du Conseil constitutionnel",
+       "Le préambule de 1946 et la Déclaration de 1789 entrent dans le bloc de constitutionnalité"
+      ],
+      [
+       "2008",
+       "Révision constitutionnelle",
+       "Création de la question prioritaire de constitutionnalité"
+      ],
+      [
+       "2010",
+       "Entrée en vigueur de la QPC",
+       "Tout justiciable peut faire contrôler une loi déjà en vigueur"
+      ]
+     ]
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Le parcours d’une QPC",
+     "noeuds": [
+      {
+       "id": "p",
+       "texte": "Un procès est en cours"
+      },
+      {
+       "id": "s",
+       "texte": "Le justiciable soulève une QPC"
+      },
+      {
+       "id": "f",
+       "texte": "?"
+      },
+      {
+       "id": "cc",
+       "texte": "Le Conseil constitutionnel tranche"
+      }
+     ],
+     "liens": [
+      {
+       "de": "p",
+       "a": "s"
+      },
+      {
+       "de": "s",
+       "a": "f"
+      },
+      {
+       "de": "f",
+       "a": "cc"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche l’étape de 1971.",
+     "aide": "Cherche la ligne qui commence par 1971.",
+     "explication": "En **1971**, une décision du Conseil constitutionnel fait entrer le préambule de 1946 et la Déclaration de 1789 dans le bloc de constitutionnalité."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "La Cour de cassation ou le Conseil d’État filtrent la demande",
+      "Le Parlement vote aussitôt l’abrogation de la loi contestée",
+      "Le Président de la République décide de promulguer la loi",
+      "Le juge du procès tranche seul la constitutionnalité de la loi"
+     ],
+     "reponse": 0,
+     "enonce": "Quel maillon manque dans le parcours d’une QPC ?",
+     "aide": "Deux hautes juridictions décident si la question est sérieuse avant le Conseil.",
+     "explication": "La **Cour de cassation** ou le **Conseil d’État** filtrent : ils ne transmettent au Conseil que les questions sérieuses."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "cc"
+     ],
+     "enonce": "Touche l’institution qui a le dernier mot sur la QPC.",
+     "aide": "Cherche le dernier maillon de la chaîne.",
+     "explication": "Le **Conseil constitutionnel** tranche : si la loi est contraire à la Constitution, elle est abrogée."
+    },
+    {
+     "type": "nombre",
+     "reponse": 39,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la décision de 1971 de l’entrée en vigueur de la QPC ?",
+     "aide": "Soustrais 1971 de 2010.",
+     "explication": "2010 − 1971 = **39 ans** : le Conseil est devenu un protecteur des droits en quarante ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b7bdf4-6d8b-52a2-be47-0a9e00d30939",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sécurité ou liberté ?",
+   "competence": "argumenter",
+   "situation": "Sarah et Hugo débattent de l’état d’urgence. Un tableau des tensions de la République éclaire leur désaccord.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Un débat en messages",
+     "source": "Dialogue écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "L’état d’urgence de 2015, c’est normal : après les attentats, il faut protéger les gens."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Oui, mais il limite nos [[l|libertés]] : perquisitions sans juge, manifestations interdites…"
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Donc tu préfères moins de sécurité ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non, je veux que la loi garde un équilibre."
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les tensions de la République",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La tension",
+      "Ce qui la manifeste"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Sécurité et libertés",
+       "États d’urgence de 2015 et de 2020"
+      ],
+      [
+       "Participation et défiance",
+       "Abstention élevée, mouvement des Gilets jaunes (2018)"
+      ],
+      [
+       "Unité et diversité",
+       "Place des outre-mer, reconnaissance des minorités"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot de Hugo qui désigne ce que limite l’état d’urgence.",
+     "aide": "Cherche ce que Hugo veut protéger.",
+     "explication": "Les **libertés** sont restreintes par l’état d’urgence : Hugo s’inquiète de cet équilibre."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Sécurité et libertés",
+      "Participation et défiance",
+      "Unité et diversité",
+      "Laïcité et égalité"
+     ],
+     "reponse": 0,
+     "enonce": "Quelle tension du tableau ce débat illustre-t-il ?",
+     "aide": "Sarah défend la protection, Hugo les droits individuels.",
+     "explication": "Le débat oppose **sécurité et libertés**, tension que manifestent les états d’urgence de 2015 et de 2020."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche ce qui manifeste la tension entre participation et défiance.",
+     "aide": "Cherche la ligne « Participation et défiance ».",
+     "explication": "L’**abstention élevée** et les **Gilets jaunes** (2018) manifestent la défiance envers les institutions."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Laïcité",
+      "Égalité",
+      "Tensions actuelles"
+     ],
+     "items": [
+      [
+       "La loi de 1905",
+       0
+      ],
+      [
+       "La loi de 2004 sur les signes religieux",
+       0
+      ],
+      [
+       "La loi sur la parité de 2000",
+       1
+      ],
+      [
+       "Le PACS",
+       1
+      ],
+      [
+       "Le mouvement des Gilets jaunes",
+       2
+      ],
+      [
+       "L’état d’urgence de 2015",
+       2
+      ]
+     ],
+     "enonce": "Range chaque fait dans la bonne catégorie.",
+     "aide": "Deux textes parlent de laïcité, deux d’égalité, deux de tensions.",
+     "explication": "1905 et 2004 relèvent de la **laïcité** ; la parité et le PACS de l’**égalité** ; les Gilets jaunes et l’état d’urgence de 2015 sont des **tensions**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "L’état d’urgence après les attentats",
+      "Le mouvement des Gilets jaunes",
+      "L’état d’urgence sanitaire",
+      "L’IVG inscrite dans la Constitution"
+     ],
+     "enonce": "Range ces quatre faits du plus ancien au plus récent.",
+     "aide": "Ils vont de 2015 à 2024.",
+     "explication": "**2015**, **2018**, **2020**, **2024**."
+    }
+   ]
+  },
+  {
+   "chapitre": "758ed06f-ba4c-5b11-8718-af3ad67c33a5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grands théâtres de la guerre",
+   "competence": "lire-carte",
+   "situation": "Théo repère sur une carte d’Europe trois lieux qui marquent la Seconde Guerre mondiale, avant de les ranger par phase.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux de la guerre en Europe",
+     "source": "Carte schématique ; les noms de villes sont ceux d’aujourd’hui.",
+     "fond": "europe",
+     "cadrage": [
+      -8,
+      44,
+      50,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "varsovie",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 44.52,
+       "lat": 48.71,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la capitale dont l’invasion, le 1er septembre 1939, déclenche la guerre.",
+     "aide": "Cherche en Europe centrale, sur la Vistule.",
+     "explication": "**A** est Varsovie : l’invasion de la Pologne par l’Allemagne, le 1er septembre 1939, ouvre la guerre."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la ville de Stalingrad, dont la bataille marque le tournant sur le front de l’Est.",
+     "aide": "Cherche très à l’est, sur la Volga.",
+     "explication": "**C** est Stalingrad (aujourd’hui Volgograd) : la victoire soviétique de février 1943 marque le tournant sur le front de l’Est."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Victoires de l’Axe",
+      "Victoire alliée"
+     ],
+     "items": [
+      [
+       "L’invasion de la Pologne",
+       0
+      ],
+      [
+       "L’armistice français de juin 1940",
+       0
+      ],
+      [
+       "Le débarquement de Normandie",
+       1
+      ],
+      [
+       "La capitulation allemande du 8 mai 1945",
+       1
+      ]
+     ],
+     "enonce": "Range ces événements selon la phase de la guerre.",
+     "aide": "Les victoires de l’Axe vont de 1939 à 1942 ; la victoire alliée de 1943 à 1945.",
+     "explication": "L’invasion de la Pologne et l’armistice de 1940 sont des **victoires de l’Axe** ; Normandie et la capitulation de 1945 appartiennent à la **victoire alliée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "758ed06f-ba4c-5b11-8718-af3ad67c33a5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tournant de la guerre",
+   "competence": "se-reperer-temps",
+   "situation": "Yasmine étudie l’année où l’Axe est arrêté sur trois théâtres, à partir d’une frise et d’un tableau.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la Pologne à la capitulation",
+     "source": "Dates exactes.",
+     "debut": 1939,
+     "fin": 1945,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "pol",
+       "date": 1939,
+       "nom": "Pologne envahie"
+      },
+      {
+       "id": "fr",
+       "date": 1940,
+       "nom": "France vaincue"
+      },
+      {
+       "id": "barb",
+       "date": 1941,
+       "nom": "Barbarossa"
+      },
+      {
+       "id": "pearl",
+       "date": 1942,
+       "nom": "Midway"
+      },
+      {
+       "id": "stal",
+       "date": 1943,
+       "nom": "Stalingrad"
+      },
+      {
+       "id": "norm",
+       "date": 1944,
+       "nom": "Normandie"
+      },
+      {
+       "id": "fin",
+       "date": 1945,
+       "nom": "Capitulations"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois batailles du tournant",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Bataille",
+      "Date",
+      "Théâtre"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Stalingrad",
+       "Février 1943",
+       "Front de l’Est"
+      ],
+      [
+       "El-Alamein",
+       "Novembre 1942",
+       "Afrique du Nord"
+      ],
+      [
+       "Midway",
+       "Juin 1942",
+       "Pacifique"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "barb"
+     ],
+     "enonce": "Touche l’événement de juin 1941 qui ouvre un nouveau front à l’Est.",
+     "aide": "C’est l’invasion de l’URSS par l’Allemagne.",
+     "explication": "**Barbarossa** (juin 1941) est l’invasion de l’URSS : la guerre s’étend à l’Est."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la bataille qui se déroule dans le Pacifique.",
+     "aide": "Cherche la colonne « Théâtre ».",
+     "explication": "**Midway** (juin 1942) oppose les États-Unis au Japon dans le Pacifique."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "batailles",
+     "enonce": "Combien de batailles du tableau ont lieu en 1942 ?",
+     "aide": "Lis la colonne « Date » et compte les 1942.",
+     "explication": "**El-Alamein** (novembre 1942) et **Midway** (juin 1942) : 2 batailles. Stalingrad se termine en 1943."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Les États-Unis produisent plus d’armes que l’Axe entier",
+      "L’Axe produit plus d’armes que tous les Alliés réunis",
+      "L’URSS ne produit aucune arme pendant toute la guerre",
+      "Les usines n’ont aucun rôle dans l’issue de la guerre"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi la supériorité industrielle alliée est-elle décisive ?",
+     "aide": "Cette guerre se gagne aussi dans les usines.",
+     "explication": "Les **États-Unis** produisent à eux seuls plus d’armes que les puissances de l’Axe réunies : la guerre se gagne dans les usines."
+    }
+   ]
+  },
+  {
+   "chapitre": "758ed06f-ba4c-5b11-8718-af3ad67c33a5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une guerre totale",
+   "competence": "raisonner",
+   "situation": "Un professeur demande à Gabriel de prouver que la Seconde Guerre mondiale est une guerre totale, à l’aide d’un graphique et d’un texte de définition.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Production d’avions de combat en 1944",
+     "source": "Valeurs arrondies au millier.",
+     "categories": [
+      "États-Unis",
+      "URSS",
+      "Royaume-Uni",
+      "Allemagne",
+      "Japon"
+     ],
+     "series": [
+      {
+       "nom": "Avions produits",
+       "valeurs": [
+        96,
+        40,
+        26,
+        40,
+        28
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Avions produits",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     }
+    },
+    {
+     "id": "def",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Qu’est-ce qu’une guerre totale ?",
+     "auteur": "Définition écrite pour l’exercice",
+     "blocs": [
+      "Dans une guerre totale, toute l’économie est mise au service de la guerre : usines converties en fabriques d’armes, main-d’œuvre mobilisée, propagande.",
+      "Les [[c|civils]] ne sont plus épargnés : ils sont bombardés, déplacés, parfois massacrés."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche le pays qui produit le plus d’avions de combat en 1944.",
+     "aide": "C’est la barre la plus haute.",
+     "explication": "Les **États-Unis** produisent environ 96 000 avions de combat en 1944."
+    },
+    {
+     "type": "nombre",
+     "reponse": 68,
+     "unite": "milliers",
+     "enonce": "Combien d’avions l’Allemagne et le Japon produisent-ils ensemble en 1944 ?",
+     "aide": "Additionne les barres de ces deux pays.",
+     "explication": "40 + 28 = **68 milliers** d’avions pour ces deux puissances de l’Axe, contre 162 milliers pour les trois grands Alliés."
+    },
+    {
+     "type": "zone",
+     "document": "def",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot du texte qui désigne les victimes que la guerre totale n’épargne plus.",
+     "aide": "Cherche les personnes qui ne portent pas l’uniforme.",
+     "explication": "Les **civils** sont au cœur de la guerre totale : la guerre fait 50 à 60 millions de morts, dont une majorité de civils."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Une guerre où l’économie et les civils sont entièrement engagés",
+      "Une guerre qui ne se déroule que sur un seul front",
+      "Une guerre limitée aux armées professionnelles des belligérants",
+      "Une guerre qui se règle par la diplomatie avant les combats"
+     ],
+     "reponse": 0,
+     "enonce": "Que signifie « guerre totale » ?",
+     "aide": "Relis la définition du document 2.",
+     "explication": "Dans une **guerre totale**, toutes les ressources et les civils sont engagés : la supériorité industrielle devient décisive."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Débarquement en Sicile",
+      "Débarquement de Normandie",
+      "Débarquement de Provence",
+      "Capitulation allemande"
+     ],
+     "enonce": "Range ces événements de la victoire alliée du plus ancien au plus récent.",
+     "aide": "Ils vont de juillet 1943 à mai 1945.",
+     "explication": "**Juillet 1943**, **6 juin 1944**, **août 1944**, **8 mai 1945**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6426d8de-b935-5199-be23-bd8741e29c14",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux France face à face",
+   "competence": "lire-carte",
+   "situation": "Camille place sur une carte quatre villes de 1940, puis range des actes en deux camps : Résistance et collaboration.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes de la France de 1940",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "vichy",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la ville où s’installe le gouvernement de Pétain en juillet 1940.",
+     "aide": "C’est une ville d’eau du centre du pays.",
+     "explication": "**B** est Vichy, siège de l’État français de Pétain à partir de l’été 1940."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la capitale, occupée dès juin 1940.",
+     "aide": "C’est la plus grande ville du pays.",
+     "explication": "**A** est Paris, occupée par l’armée allemande dès juin 1940."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Résistance",
+      "Collaboration"
+     ],
+     "items": [
+      [
+       "L’appel du 18 juin 1940",
+       0
+      ],
+      [
+       "La création du CNR en 1943",
+       0
+      ],
+      [
+       "L’entrevue de Montoire",
+       1
+      ],
+      [
+       "La création de la Milice",
+       1
+      ],
+      [
+       "La rafle du Vél d’Hiv",
+       1
+      ]
+     ],
+     "enonce": "Range chaque acte dans le bon camp.",
+     "aide": "Deux actes viennent de la Résistance, trois de la collaboration.",
+     "explication": "L’appel de de Gaulle et le **CNR** relèvent de la **Résistance** ; Montoire, la Milice et la rafle du Vél d’Hiv de la **collaboration**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6426d8de-b935-5199-be23-bd8741e29c14",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que Vichy a fait de son propre chef",
+   "competence": "analyser-document",
+   "situation": "Bastien analyse les actes du régime de Vichy : à quel moment ils surviennent, et ce qu’ils révèlent.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Une France défaite, puis libérée",
+     "source": "Dates exactes.",
+     "debut": 1940,
+     "fin": 1945,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "arm",
+       "date": 1940,
+       "nom": "Armistice"
+      },
+      {
+       "id": "vel",
+       "date": 1942,
+       "nom": "Vél d’Hiv"
+      },
+      {
+       "id": "cnr",
+       "date": 1943,
+       "nom": "CNR"
+      },
+      {
+       "id": "lib",
+       "date": 1944,
+       "nom": "Paris libéré"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les actes du régime de Vichy",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "L’acte de Vichy",
+      "Ce qu’il révèle"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "Octobre 1940",
+       "Statut des Juifs",
+       "Pris de sa propre initiative"
+      ],
+      [
+       "Juillet 1942",
+       "Rafle du Vél d’Hiv",
+       "Exécutée par la police française"
+      ],
+      [
+       "1943",
+       "STO",
+       "La France livre des travailleurs"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "arm"
+     ],
+     "enonce": "Touche l’événement du 22 juin 1940.",
+     "aide": "Il met fin aux combats avec l’Allemagne.",
+     "explication": "L’**armistice** du 22 juin 1940 met fin aux combats et précède l’installation du régime de Vichy."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche ce que révèle le statut des Juifs d’octobre 1940.",
+     "aide": "Cherche la ligne « Statut des Juifs ».",
+     "explication": "Le statut des Juifs est **pris de sa propre initiative** par Vichy, sans exigence de l’occupant."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le statut des Juifs de la rafle du Vél d’Hiv ?",
+     "aide": "Soustrais 1940 de 1942.",
+     "explication": "1942 − 1940 = **2 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Vichy a devancé certaines demandes de l’occupant",
+      "Vichy a seulement subi les ordres de l’occupant",
+      "Vichy a toujours résisté aux demandes allemandes",
+      "Vichy n’a pris aucune décision de sa propre initiative"
+     ],
+     "reponse": 0,
+     "enonce": "Que conclut-on sur le rôle de Vichy ?",
+     "aide": "Relis la colonne « Ce qu’il révèle ».",
+     "explication": "Vichy n’a pas seulement **subi** : il a **devancé** certaines demandes de l’occupant, ce que la France a reconnu en 1995."
+    }
+   ]
+  },
+  {
+   "chapitre": "6426d8de-b935-5199-be23-bd8741e29c14",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Paul, le STO et le maquis",
+   "competence": "analyser-texte",
+   "situation": "Dans ce journal imaginé, une lycéenne raconte l’hiver 1943. Un tableau chronologique de la Résistance éclaire ce que décide son frère.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Journal de Lucie, Lyon, février 1943",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mon frère Paul a reçu sa convocation pour le [[s|STO]] : il doit partir travailler en Allemagne. Maman pleure en silence.",
+      "Il dit qu’il ne partira pas. Un ami lui a parlé d’un maquis dans les montagnes, où l’on cache les réfractaires. Hier soir, il a préparé un sac."
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "L’organisation de la Résistance",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "L’étape"
+     ],
+     "enteteLignes": false,
+     "lignes": [
+      [
+       "18 juin 1940",
+       "Appel de de Gaulle depuis Londres"
+      ],
+      [
+       "1940-1942",
+       "Réseaux et mouvements en métropole"
+      ],
+      [
+       "Mai 1943",
+       "Jean Moulin unifie la Résistance et crée le CNR"
+      ],
+      [
+       "1944",
+       "Les FFI participent aux combats"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le sigle qui désigne ce qui oblige Paul à partir en Allemagne.",
+     "aide": "Il est écrit en majuscules dans la première phrase.",
+     "explication": "Le **STO** (Service du travail obligatoire, 1943) envoie des jeunes Français travailler en Allemagne."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’étape qui unifie la Résistance.",
+     "aide": "Cherche le nom de Jean Moulin.",
+     "explication": "En **mai 1943**, Jean Moulin unifie la Résistance et crée le **CNR**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "de Gaulle",
+       "Appel du 18 juin 1940"
+      ],
+      [
+       "Jean Moulin",
+       "Création du CNR"
+      ],
+      [
+       "Les FFI",
+       "Combats de 1944"
+      ],
+      [
+       "Pétain",
+       "Pleins pouvoirs en juillet 1940"
+      ]
+     ],
+     "enonce": "Associe chaque acteur à son rôle.",
+     "aide": "Relis le tableau et le cours.",
+     "explication": "**De Gaulle** lance l’appel ; **Moulin** unifie la Résistance ; les **FFI** combattent en 1944 ; **Pétain** reçoit les pleins pouvoirs le 10 juillet 1940."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Il devient réfractaire et rejoint les maquis de la Résistance",
+      "Il accepte de partir et travaille volontairement en Allemagne",
+      "Il s’engage dans la Milice pour rester en France",
+      "Il rejoint l’armée de Vichy dans la zone occupée"
+     ],
+     "reponse": 0,
+     "enonce": "Que choisit Paul, d’après le journal ?",
+     "aide": "Relis la deuxième phrase du deuxième paragraphe.",
+     "explication": "Paul choisit de devenir **réfractaire** au STO et rejoint un maquis, comme de nombreux jeunes en 1943."
+    }
+   ]
+  },
+  {
+   "chapitre": "153084d6-2382-55cc-ab4c-469b0d16fc8e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les lieux du crime et de la justice",
+   "competence": "lire-carte",
+   "situation": "Noémie situe sur une carte trois lieux liés à la Shoah et à sa justice, puis range des méthodes selon les deux temps du génocide.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux en Europe",
+     "source": "Carte schématique ; les noms sont ceux d’aujourd’hui.",
+     "fond": "europe",
+     "cadrage": [
+      0,
+      44,
+      32,
+      58
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 19.2,
+       "lat": 50.03,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 11.08,
+       "lat": 49.45,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 22.05,
+       "lat": 52.63,
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la ville allemande où s’ouvre en 1945 le procès des grands criminels nazis.",
+     "aide": "Cherche en Bavière, au sud de l’Allemagne.",
+     "explication": "**B** est Nuremberg, où se tient le procès de 1945-1946 qui forge les notions de crime contre l’humanité et de crime contre la paix."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche Auschwitz-Birkenau, où la mise à mort est la plus systématique.",
+     "aide": "Cherche dans le sud de la Pologne.",
+     "explication": "**A** est Auschwitz-Birkenau, le plus grand centre de mise à mort industrielle, dans le sud de la Pologne occupée."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Temps 1 : fusillades de masse",
+      "Temps 2 : mise à mort industrielle"
+     ],
+     "items": [
+      [
+       "Babi Yar",
+       0
+      ],
+      [
+       "Les Einsatzgruppen",
+       0
+      ],
+      [
+       "Treblinka",
+       1
+      ],
+      [
+       "Auschwitz-Birkenau",
+       1
+      ],
+      [
+       "Sobibor",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément dans le bon temps du génocide.",
+     "aide": "Le premier temps commence en 1941 à l’Est ; le second, en 1942, utilise des centres de mise à mort.",
+     "explication": "**Babi Yar** et les **Einsatzgruppen** relèvent des fusillades de 1941 ; **Treblinka, Auschwitz-Birkenau et Sobibor** sont des centres de mise à mort."
+    }
+   ]
+  },
+  {
+   "chapitre": "153084d6-2382-55cc-ab4c-469b0d16fc8e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Juger l’obéissance",
+   "competence": "analyser-document",
+   "situation": "Une étudiante en droit observe comment le procès de Nuremberg écarte l’argument « j’ai obéi aux ordres », puis comment la France juge tardivement ses criminels.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux procès d’après-guerre",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Procès",
+      "Dates",
+      "Ce qu’il forge"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Nuremberg",
+       "1945-1946",
+       "Crime contre l’humanité et crime contre la paix"
+      ],
+      [
+       "Tokyo",
+       "1946-1948",
+       "La même logique pour le Japon"
+      ]
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une scène de procès reconstituée",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Un accusé fictif déclare : « Je n’ai fait que suivre un [[o|ordre]] de mes supérieurs. »",
+      "Le tribunal répond qu’un ordre ne dédouane pas : chacun est responsable de ses actes, même en exécutant des instructions."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche les dates du procès de Nuremberg.",
+     "aide": "Cherche la ligne « Nuremberg », colonne « Dates ».",
+     "explication": "Le procès de Nuremberg se tient en **1945-1946**."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot que l’accusé fictif invoque pour se défendre.",
+     "aide": "Cherche ce qu’il dit avoir suivi.",
+     "explication": "Il invoque un **ordre** reçu : Nuremberg pose que « j’ai obéi » ne dédouane pas."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Un ordre ne dédouane pas l’exécutant de sa responsabilité",
+      "Un ordre supprime la responsabilité de celui qui l’exécute",
+      "Seuls les chefs peuvent être jugés pour les crimes commis",
+      "Seuls les soldats étrangers peuvent être jugés à Nuremberg"
+     ],
+     "reponse": 0,
+     "enonce": "Quel principe la scène illustre-t-elle ?",
+     "aide": "Le tribunal refuse l’argument de l’accusé.",
+     "explication": "Nuremberg pose un principe décisif : **l’obéissance à un ordre ne dédouane pas**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Imprescriptibilité des crimes contre l’humanité",
+       "1964"
+      ],
+      [
+       "Procès Barbie",
+       "1987"
+      ],
+      [
+       "Procès Touvier",
+       "1994"
+      ],
+      [
+       "Procès Papon",
+       "1998"
+      ]
+     ],
+     "enonce": "Associe chaque étape de la justice française à sa date.",
+     "aide": "Les procès de 1987 à 1998 jugent d’anciens responsables.",
+     "explication": "Imprescriptibilité en **1964** ; procès **Barbie** (1987), **Touvier** (1994), **Papon** (1998)."
+    }
+   ]
+  },
+  {
+   "chapitre": "153084d6-2382-55cc-ab4c-469b0d16fc8e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des crimes planifiés",
+   "competence": "raisonner",
+   "situation": "Un élève prépare un exposé sur la nature des crimes de la Seconde Guerre mondiale : quand ils sont planifiés, contre qui, et comment le droit les qualifie.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la Shoah au droit international",
+     "source": "Dates exactes.",
+     "debut": 1940,
+     "fin": 1950,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "ein",
+       "date": 1941,
+       "nom": "Einsatzgruppen"
+      },
+      {
+       "id": "wann",
+       "date": 1942,
+       "nom": "Wannsee"
+      },
+      {
+       "id": "nur",
+       "date": 1945,
+       "nom": "Procès de Nuremberg"
+      },
+      {
+       "id": "onu",
+       "date": 1948,
+       "nom": "Convention ONU"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les crimes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Crime",
+      "Victimes"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Le Porajmos",
+       "Les Tsiganes"
+      ],
+      [
+       "Le programme T4",
+       "Les personnes handicapées"
+      ],
+      [
+       "Oradour-sur-Glane",
+       "Des civils français, en représailles"
+      ],
+      [
+       "Nankin",
+       "Des civils chinois, massacrés par l’armée japonaise"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "wann"
+     ],
+     "enonce": "Touche la conférence qui planifie la coordination administrative de la Shoah.",
+     "aide": "Elle se tient en janvier 1942, près de Berlin.",
+     "explication": "La conférence de **Wannsee** (janvier 1942) planifie la coordination administrative du génocide."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Le Porajmos",
+       "Les Tsiganes"
+      ],
+      [
+       "Le programme T4",
+       "Les personnes handicapées"
+      ],
+      [
+       "Oradour-sur-Glane",
+       "Des civils français"
+      ]
+     ],
+     "enonce": "Associe chaque crime à ses victimes.",
+     "aide": "Relis le tableau du document 2.",
+     "explication": "Le **Porajmos** vise les Tsiganes ; le programme **T4**, les personnes handicapées ; **Oradour-sur-Glane**, des civils français."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le crime qui vise des personnes handicapées.",
+     "aide": "Cherche le sigle suivi d’un numéro.",
+     "explication": "Le programme **T4** organise le meurtre de personnes handicapées."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la conférence de Wannsee de la Convention de l’ONU sur le génocide ?",
+     "aide": "Soustrais 1942 de 1948.",
+     "explication": "1948 − 1942 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "options": [
+      "Ils sont planifiés par une administration, avec un budget et des horaires",
+      "Ils sont commis par des soldats livrés à eux-mêmes sans ordres",
+      "Ils résultent uniquement de combats menés entre armées régulières",
+      "Ils sont décidés au hasard par des chefs locaux isolés"
+     ],
+     "reponse": 0,
+     "enonce": "Pourquoi ces crimes ne sont-ils pas de simples dommages de guerre ?",
+     "aide": "Pense à Wannsee et à l’organisation décrite dans le cours.",
+     "explication": "Ce sont des crimes **planifiés**, avec une administration, un budget et des horaires : c’est ce caractère bureaucratique qui les distingue."
+    }
+   ]
+  }
+ ]
+}

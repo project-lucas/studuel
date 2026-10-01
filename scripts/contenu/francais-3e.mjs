@@ -1092,11 +1092,21 @@ Le **sonnet** compte deux quatrains et deux tercets.
 | **Harmonie imitative** | Les sons imitent ce qu'ils décrivent |
 | **Paronomase** | Des mots de sonorités proches |
 
-## Les formes et les registres
-| La forme | Le registre |
-| Sonnet, ode, ballade, fable | **Lyrique** : les sentiments personnels |
-| Calligramme, poème en prose, vers libre | **Élégiaque** : la plainte, le deuil |
-| — | **Épique** : il amplifie et grandit |
+## Les formes poétiques
+| La forme | Ce qui la définit |
+| **Sonnet** | 14 vers : deux quatrains puis deux tercets |
+| **Ode**, **ballade**, **fable** | Des formes fixes ou codées, héritées de la tradition |
+| **Calligramme** | Les vers dessinent ce dont ils parlent |
+| **Poème en prose** | Pas de vers : le rythme et les images font le poème |
+| **Vers libre** | Des vers sans mètre régulier ni rime obligée |
+
+## Les registres
+| Le registre | Ce qu'il exprime |
+| **Lyrique** | Les sentiments personnels du poète, souvent à la première personne |
+| **Élégiaque** | La plainte, le deuil, la nostalgie |
+| **Épique** | Il amplifie et grandit les actions et les héros |
+
+!> Une forme n'impose pas un registre : un sonnet peut être lyrique, élégiaque ou même comique.
 
 > Devant un poème : **compter** d'abord, **écouter** ensuite, **interpréter** enfin.`,
           },

@@ -1,0 +1,2593 @@
+{
+  "niveau": "3e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les livres de l’été",
+      "competence": "lire-graphique",
+      "situation": "Le professeur documentaliste a demandé à 20 élèves de 3e combien de livres ils ont lus pendant les vacances. Il a tracé le diagramme en bâtons des réponses.",
+      "documents": [
+        {
+          "id": "livres",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Livres lus pendant l’été",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Élèves",
+              "valeurs": [
+                3,
+                4,
+                6,
+                5,
+                2
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre d’élèves",
+            "min": 0,
+            "max": 8,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Livres lus"
+          },
+          "valeurs": true,
+          "source": "Enquête imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "livres",
+          "enonce": "Touche le bâton du nombre de livres lu par le plus grand nombre d’élèves.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le bâton le plus haut.",
+          "explication": "C’est le bâton de **2 livres** : 6 élèves, plus que pour toute autre valeur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves ont été interrogés en tout ?",
+          "reponse": 20,
+          "aide": "Additionne les effectifs de tous les bâtons.",
+          "explication": "3 + 4 + 6 + 5 + 2 = **20 élèves**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’étendue de cette série (nombre de livres lus).",
+          "reponse": 4,
+          "aide": "L’étendue, c’est la plus grande valeur moins la plus petite.",
+          "explication": "La plus grande valeur est 4, la plus petite est 0 : 4 − 0 = **4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le nombre moyen de livres lus par élève.",
+          "reponse": 1.95,
+          "aide": "Calcule 0 × 3 + 1 × 4 + 2 × 6 + … puis divise par l’effectif total.",
+          "explication": "(0 × 3 + 1 × 4 + 2 × 6 + 3 × 5 + 4 × 2) ÷ 20 = 39 ÷ 20 = **1,95 livre**."
+        }
+      ]
+    },
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le salaire de la boulangerie",
+      "competence": "analyser-document",
+      "situation": "Un article annonce : « Dans cette boulangerie, on gagne en moyenne 2 500 € par mois. » Les sept salariés trouvent ce chiffre étonnant. Voici leurs salaires nets.",
+      "documents": [
+        {
+          "id": "salaires",
+          "type": "tableau",
+          "titre": "Les sept salaires du mois (en euros)",
+          "colonnes": [
+            "Poste",
+            "Salaire net (€)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Boulanger",
+              "1 700"
+            ],
+            [
+              "Patron",
+              "7 500"
+            ],
+            [
+              "Apprenti",
+              "1 500"
+            ],
+            [
+              "Pâtissière",
+              "1 800"
+            ],
+            [
+              "Vendeuse",
+              "1 500"
+            ],
+            [
+              "Responsable",
+              "1 900"
+            ],
+            [
+              "Vendeur",
+              "1 600"
+            ]
+          ],
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "salaires",
+          "enonce": "Touche le salaire le plus élevé.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Parcours la colonne des salaires.",
+          "explication": "Le salaire le plus élevé est celui du patron : **7 500 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la moyenne des sept salaires.",
+          "reponse": 2500,
+          "unite": "€",
+          "aide": "Additionne les sept salaires puis divise par 7.",
+          "explication": "(1 700 + 7 500 + 1 500 + 1 800 + 1 500 + 1 900 + 1 600) ÷ 7 = 17 500 ÷ 7 = **2 500 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la médiane de cette série de salaires.",
+          "reponse": 1700,
+          "unite": "€",
+          "aide": "Commence par ranger les sept salaires dans l’ordre croissant, puis prends celui du milieu.",
+          "explication": "Rangés : 1 500 ; 1 500 ; 1 600 ; **1 700** ; 1 800 ; 1 900 ; 7 500. Le 4e salaire, celui du milieu, vaut **1 700 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel indicateur décrit le mieux le salaire d’un employé ordinaire de cette boulangerie ?",
+          "options": [
+            "La médiane, car un salaire très élevé ne la modifie pas",
+            "La moyenne, car elle tient compte de toutes les valeurs",
+            "L’étendue, car elle montre l’écart entre le plus haut et le plus bas salaire",
+            "Aucun : les trois indicateurs disent la même chose ici"
+          ],
+          "reponse": 0,
+          "aide": "Un seul salaire très élevé tire un des indicateurs vers le haut, sans toucher l’autre.",
+          "explication": "La **médiane** (1 700 €) décrit mieux le salarié ordinaire : le salaire du patron fait monter la moyenne à 2 500 €, alors que six salariés sur sept gagnent moins de 2 000 €."
+        }
+      ]
+    },
+    {
+      "chapitre": "79c5c857-1a5b-5c97-9bd8-ded2d74ef6a0",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le défi de calcul mental",
+      "competence": "raisonner",
+      "situation": "Deux classes de 25 élèves ont passé le même défi de calcul mental, noté sur 5. Les résultats de la 3eA sont dans un tableau, ceux de la 3eB dans un diagramme. Laquelle est « la meilleure » ?",
+      "documents": [
+        {
+          "id": "classeA",
+          "type": "tableau",
+          "titre": "Résultats de la 3eA",
+          "colonnes": [
+            "Note sur 5",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Effectif",
+              2,
+              5,
+              9,
+              6,
+              3
+            ]
+          ],
+          "source": "Résultats imaginés pour l’exercice"
+        },
+        {
+          "id": "classeB",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Résultats de la 3eB",
+          "categories": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Élèves",
+              "valeurs": [
+                9,
+                2,
+                1,
+                10,
+                3
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Nombre d’élèves",
+            "min": 0,
+            "max": 12,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Note sur 5"
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule la moyenne de la **3eA**.",
+          "reponse": 3.12,
+          "aide": "Additionne chaque note multipliée par son effectif, puis divise par 25.",
+          "explication": "(1 × 2 + 2 × 5 + 3 × 9 + 4 × 6 + 5 × 3) ÷ 25 = 78 ÷ 25 = **3,12**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la moyenne de la **3eB**.",
+          "reponse": 2.84,
+          "aide": "Même méthode : 1 × 9 + 2 × 2 + … puis divise par 25.",
+          "explication": "(1 × 9 + 2 × 2 + 3 × 1 + 4 × 10 + 5 × 3) ÷ 25 = 71 ÷ 25 = **2,84**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la médiane de la **3eB** ?",
+          "reponse": 4,
+          "aide": "Avec 25 élèves, la médiane est la note du 13e élève une fois les notes rangées.",
+          "explication": "Il y a 9 notes « 1 », 2 notes « 2 » et 1 note « 3 », soit 12 élèves avant les « 4 ». Le 13e élève a donc **4**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle affirmation est vraie ?",
+          "options": [
+            "La 3eA a la meilleure moyenne, donc plus de la moitié de ses élèves ont eu au moins 4",
+            "La 3eB a la meilleure médiane : au moins la moitié de ses élèves ont eu 4 ou plus",
+            "La 3eB a une moyenne plus élevée que la 3eA",
+            "La médiane de la 3eA est égale à 4"
+          ],
+          "reponse": 1,
+          "aide": "Compte combien d’élèves de chaque classe ont au moins 4 : dans la 3eB, 10 + 3 ; dans la 3eA, 6 + 3.",
+          "explication": "En 3eB, 10 + 3 = 13 élèves sur 25 ont au moins 4 : c’est **au moins la moitié**, ce que dit la médiane 4. La 3eA a la meilleure moyenne (3,12 contre 2,84) mais seulement 9 élèves sur 25 à 4 ou plus, et sa médiane vaut 3."
+        }
+      ]
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La roue de la kermesse",
+      "competence": "lire-graphique",
+      "situation": "À la kermesse, une roue est partagée en quatre types de secteurs. Le diagramme donne la probabilité de chaque résultat, en pourcentage.",
+      "documents": [
+        {
+          "id": "roue",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Les résultats possibles de la roue (en %)",
+          "categories": [
+            "Perdu",
+            "Bonbon",
+            "Stylo",
+            "Peluche"
+          ],
+          "series": [
+            {
+              "nom": "Probabilité (%)",
+              "valeurs": [
+                40,
+                30,
+                20,
+                10
+              ]
+            }
+          ],
+          "source": "Roue imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "roue",
+          "enonce": "Touche le secteur sur lequel la roue s’arrête le plus souvent.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la probabilité la plus grande.",
+          "explication": "Le secteur « Perdu » : **40 %**, c’est la probabilité la plus élevée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Écris sous forme décimale la probabilité de tomber sur « Stylo ».",
+          "reponse": 0.2,
+          "aide": "Un pourcentage se divise par 100.",
+          "explication": "20 % = 20 ÷ 100 = **0,2**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la probabilité de gagner un lot (bonbon, stylo ou peluche) ? Donne-la sous forme décimale.",
+          "reponse": 0.6,
+          "aide": "Passe par l’événement contraire « Perdu », ou additionne les trois probabilités.",
+          "explication": "P(gagner) = 1 − P(perdu) = 1 − 0,4 = **0,6**. Même résultat en additionnant : 0,3 + 0,2 + 0,1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur 200 tours, combien de fois environ la roue s’arrêtera-t-elle sur « Peluche » ?",
+          "options": [
+            "20",
+            "10",
+            "100",
+            "2"
+          ],
+          "reponse": 0,
+          "aide": "Prends 10 % de 200.",
+          "explication": "Sur un grand nombre de tours, la fréquence se rapproche de la probabilité : 10 % de 200 = 0,1 × 200 = **20 fois** environ."
+        }
+      ]
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le jeu des deux dés",
+      "competence": "raisonner",
+      "situation": "Léo et Mia lancent deux dés équilibrés à six faces et regardent la somme. Léo gagne si la somme vaut 7. Mia gagne si la somme vaut 10 ou plus. Le tableau donne toutes les sommes possibles.",
+      "documents": [
+        {
+          "id": "sommes",
+          "type": "tableau",
+          "titre": "Les 36 sommes possibles",
+          "colonnes": [
+            "Dé 1 / Dé 2",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "1",
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              "2",
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              "3",
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            [
+              "4",
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              "5",
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              "6",
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sommes",
+          "enonce": "Touche toutes les cases où **Léo** gagne.",
+          "reponse": [
+            "r0c6",
+            "r1c5",
+            "r2c4",
+            "r3c3",
+            "r4c2",
+            "r5c1"
+          ],
+          "multiple": true,
+          "aide": "Cherche les cases qui contiennent 7 : il y en a une par ligne.",
+          "explication": "Il y a **6 cases** qui valent 7 : 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2 et 6 + 1."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la probabilité que Léo gagne ?",
+          "options": [
+            "1/6",
+            "1/12",
+            "7/36",
+            "7/12"
+          ],
+          "reponse": 0,
+          "aide": "Les 36 cases sont équiprobables : compte les cases favorables.",
+          "explication": "P(Léo) = 6 cases sur 36 = **{{1/6}}**."
+        },
+        {
+          "type": "zone",
+          "document": "sommes",
+          "enonce": "Touche toutes les cases où **Mia** gagne.",
+          "reponse": [
+            "r3c6",
+            "r4c5",
+            "r4c6",
+            "r5c4",
+            "r5c5",
+            "r5c6"
+          ],
+          "multiple": true,
+          "aide": "Cherche les sommes égales à 10, 11 ou 12.",
+          "explication": "Six cases : **10** (4 + 6, 5 + 5, 6 + 4), **11** (5 + 6, 6 + 5) et **12** (6 + 6)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le jeu est-il équitable ?",
+          "options": [
+            "Oui : Léo et Mia ont chacun 6 chances sur 36",
+            "Non : Léo a plus de chances, car 7 est la somme la plus fréquente",
+            "Non : Mia a plus de chances, car elle gagne avec trois sommes différentes",
+            "On ne peut pas savoir avant de jouer"
+          ],
+          "reponse": 0,
+          "aide": "Compare le nombre de cases favorables à Léo et à Mia.",
+          "explication": "Les deux joueurs ont **6 cases favorables sur 36** : leurs probabilités sont égales à {{1/6}}. Le jeu est équitable, même si Mia gagne avec trois sommes différentes."
+        }
+      ]
+    },
+    {
+      "chapitre": "a2453e84-890c-5fab-884a-5184a789a481",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les jetons du forain",
+      "competence": "modeliser",
+      "situation": "Dans une fête foraine, une urne contient 10 jetons : 4 dorés et 6 gris. Le forain tire un jeton, le remet, puis en tire un second. L’arbre ci-dessous résume les deux tirages (D : doré, G : gris).",
+      "documents": [
+        {
+          "id": "arbre",
+          "type": "schema",
+          "titre": "L’arbre des deux tirages",
+          "largeur": 340,
+          "hauteur": 232,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 22,
+              "cy": 116,
+              "r": 5,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                28,
+                113
+              ],
+              "a": [
+                118,
+                62
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                28,
+                119
+              ],
+              "a": [
+                118,
+                170
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 52,
+              "y": 78,
+              "texte": "2/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 52,
+              "y": 166,
+              "texte": "3/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 118,
+              "y": 48,
+              "l": 34,
+              "h": 28,
+              "arrondi": 6,
+              "texte": "D"
+            },
+            {
+              "forme": "rect",
+              "x": 118,
+              "y": 156,
+              "l": 34,
+              "h": 28,
+              "arrondi": 6,
+              "texte": "G"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                152,
+                58
+              ],
+              "a": [
+                235,
+                28
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                152,
+                66
+              ],
+              "a": [
+                235,
+                88
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                152,
+                166
+              ],
+              "a": [
+                235,
+                148
+              ]
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                152,
+                174
+              ],
+              "a": [
+                235,
+                208
+              ]
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 34,
+              "texte": "2/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 98,
+              "texte": "3/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 144,
+              "texte": "2/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 178,
+              "y": 215,
+              "texte": "3/5",
+              "taille": "petit"
+            },
+            {
+              "forme": "rect",
+              "x": 235,
+              "y": 15,
+              "l": 95,
+              "h": 26,
+              "arrondi": 6,
+              "texte": "D puis D",
+              "id": "dd",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 235,
+              "y": 75,
+              "l": 95,
+              "h": 26,
+              "arrondi": 6,
+              "texte": "D puis G",
+              "id": "dg",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 235,
+              "y": 135,
+              "l": 95,
+              "h": 26,
+              "arrondi": 6,
+              "texte": "G puis D",
+              "id": "gd",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 235,
+              "y": 195,
+              "l": 95,
+              "h": 26,
+              "arrondi": 6,
+              "texte": "G puis G",
+              "id": "gg",
+              "zone": true
+            }
+          ]
+        },
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Tentez votre chance !",
+          "sousTitre": "Le jeu des jetons",
+          "emoji": "🎪",
+          "lignes": [
+            {
+              "texte": "Dans l’urne",
+              "valeur": "4 dorés · 6 gris"
+            },
+            {
+              "texte": "Tirage",
+              "valeur": "deux fois, avec remise"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Pour gagner un lot",
+              "valeur": "au moins un doré",
+              "gras": true
+            }
+          ],
+          "pied": "Affiche imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "arbre",
+          "enonce": "Touche l’issue « gris puis doré ».",
+          "reponse": [
+            "gd"
+          ],
+          "aide": "Lis les issues à l’extrémité des branches : le premier tirage vient en premier.",
+          "explication": "C’est l’issue **G puis D** : gris au premier tirage, doré au second."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la probabilité d’obtenir « gris puis doré ». Donne un nombre décimal.",
+          "reponse": 0.24,
+          "aide": "On multiplie les probabilités le long de la branche : {{3/5}} × {{2/5}}.",
+          "explication": "{{3/5}} × {{2/5}} = {{6/25}} = **0,24**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la probabilité d’obtenir deux jetons gris. Donne un nombre décimal.",
+          "reponse": 0.36,
+          "aide": "Multiplie le long de la branche « G puis G ».",
+          "explication": "{{3/5}} × {{3/5}} = {{9/25}} = **0,36**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la probabilité de gagner un lot ? Donne un nombre décimal.",
+          "reponse": 0.64,
+          "aide": "Gagner un lot, c’est avoir au moins un jeton doré : passe par l’événement contraire.",
+          "explication": "Le contraire de « au moins un doré » est « aucun doré », c’est-à-dire deux gris : 1 − 0,36 = **0,64**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le forain affirme : « Vous avez plus d’une chance sur deux de gagner un lot. » A-t-il raison ?",
+          "options": [
+            "Oui : 0,64 est supérieur à 0,5",
+            "Non : la probabilité d’un jeton doré est 0,4, inférieur à 0,5",
+            "Non : deux tirages ne suffisent pas pour gagner",
+            "On ne peut pas savoir avant de jouer"
+          ],
+          "reponse": 0,
+          "aide": "Compare la probabilité trouvée à 0,5.",
+          "explication": "**Oui** : 0,64 > 0,5. Attention à ne pas confondre avec la probabilité d’un seul jeton doré (0,4) : il y a deux tirages, donc davantage de chances."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La trottinette à louer",
+      "competence": "lire-tableau",
+      "situation": "Un loueur de trottinettes électriques affiche ses tarifs. La fonction f associe à la durée x de location, en heures, le prix f(x) à payer, en euros.",
+      "documents": [
+        {
+          "id": "tarifs",
+          "type": "tableau",
+          "titre": "Tableau de valeurs de f",
+          "colonnes": [
+            "Durée x (h)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Prix f(x) (€)",
+              5,
+              8,
+              11,
+              14,
+              17
+            ]
+          ],
+          "source": "Tarifs imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tarifs",
+          "enonce": "Touche la case qui contient l’image de 4.",
+          "reponse": [
+            "r0c4"
+          ],
+          "aide": "L’image de 4 se lit dans la ligne du bas, sous le nombre 4.",
+          "explication": "L’image de 4 est **14** : f(4) = 14, louer 4 heures coûte 14 €."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’antécédent de 17 ?",
+          "reponse": 5,
+          "aide": "Cherche 17 dans la ligne du bas, puis regarde le nombre au-dessus.",
+          "explication": "17 se trouve sous le 5 : l’antécédent de 17 est **5**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que signifie l’égalité f(2) = 8 ?",
+          "options": [
+            "8 est l’image de 2 : louer 2 heures coûte 8 €",
+            "2 est l’image de 8 : louer 8 heures coûte 2 €",
+            "8 est l’antécédent de 2",
+            "f est égale à 8 fois 2"
+          ],
+          "reponse": 0,
+          "aide": "Dans f(x), x est l’antécédent et f(x) son image.",
+          "explication": "f(2) = 8 se lit : l’image de 2 est 8, donc **2 est un antécédent de 8** et louer 2 heures coûte 8 €."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le lancer de ballon",
+      "competence": "lire-graphique",
+      "situation": "Sacha lance un ballon en l’air. On note h(t) sa hauteur, en mètres, au bout de t secondes : h(t) = 8t − 2t². Le graphique donne la hauteur aux instants 0, 1, 2, 3 et 4 secondes.",
+      "documents": [
+        {
+          "id": "ballon",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Hauteur du ballon",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Hauteur (m)",
+              "valeurs": [
+                0,
+                6,
+                8,
+                6,
+                0
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Hauteur",
+            "unite": "en mètres",
+            "min": 0,
+            "max": 8,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ballon",
+          "enonce": "Touche les deux points où le ballon est à 6 m de hauteur.",
+          "reponse": [
+            "k1",
+            "k3"
+          ],
+          "multiple": true,
+          "aide": "Pars de 6 sur l’axe vertical et regarde à quels instants la courbe est à cette hauteur.",
+          "explication": "La hauteur vaut 6 m à **1 s** (en montant) et à **3 s** (en descendant)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase est correcte ?",
+          "options": [
+            "6 a deux antécédents : 1 et 3",
+            "L’image de 6 est 1 et 3",
+            "1 a deux images : 6 et 3",
+            "6 est l’antécédent de 1 et de 3"
+          ],
+          "reponse": 0,
+          "aide": "Un nombre a une seule image, mais il peut avoir plusieurs antécédents.",
+          "explication": "h(1) = 6 et h(3) = 6 : le nombre **6 a deux antécédents, 1 et 3**. Chaque instant n’a qu’une seule hauteur (une seule image)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec la formule, calcule h(0,5), la hauteur à une demi-seconde.",
+          "reponse": 3.5,
+          "unite": "m",
+          "aide": "Remplace t par 0,5 : 8 × 0,5 − 2 × 0,5².",
+          "explication": "h(0,5) = 8 × 0,5 − 2 × 0,25 = 4 − 0,5 = **3,5 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec la formule, calcule h(4). Que dit ce résultat du ballon ?",
+          "reponse": 0,
+          "unite": "m",
+          "aide": "Calcule 8 × 4 − 2 × 4².",
+          "explication": "h(4) = 32 − 2 × 16 = 32 − 32 = **0** : à 4 secondes, le ballon est retombé au sol."
+        }
+      ]
+    },
+    {
+      "chapitre": "a99572c9-5b18-5235-bfc3-99c221e26a0c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La machine à carrés",
+      "competence": "raisonner",
+      "situation": "Une machine fabrique les nombres g(x) : elle élève x au carré, puis retranche 4. Un élève a rempli un tableau de valeurs avec cinq nombres.",
+      "documents": [
+        {
+          "id": "machine",
+          "type": "chaine",
+          "titre": "La machine g",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "x",
+              "texte": "Nombre x"
+            },
+            {
+              "id": "carre",
+              "texte": "Mettre au carré"
+            },
+            {
+              "id": "moins",
+              "texte": "Retrancher 4"
+            },
+            {
+              "id": "gx",
+              "texte": "Résultat g(x)"
+            }
+          ],
+          "liens": [
+            {
+              "de": "x",
+              "a": "carre"
+            },
+            {
+              "de": "carre",
+              "a": "moins"
+            },
+            {
+              "de": "moins",
+              "a": "gx"
+            }
+          ]
+        },
+        {
+          "id": "valeurs",
+          "type": "tableau",
+          "titre": "Tableau de valeurs de g",
+          "colonnes": [
+            "x",
+            "−2",
+            "−1",
+            "0",
+            "1",
+            "2"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "g(x)",
+              0,
+              -3,
+              -4,
+              -3,
+              0
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avec la machine, calcule g(3).",
+          "reponse": 5,
+          "aide": "Élève 3 au carré, puis retranche 4.",
+          "explication": "g(3) = 3² − 4 = 9 − 4 = **5**."
+        },
+        {
+          "type": "zone",
+          "document": "valeurs",
+          "enonce": "Le nombre 0 a deux antécédents dans ce tableau : touche les deux cases qui le montrent.",
+          "reponse": [
+            "r0c1",
+            "r0c5"
+          ],
+          "multiple": true,
+          "aide": "Cherche dans la ligne des images les cases qui valent 0.",
+          "explication": "Les images g(−2) et g(2) valent toutes les deux 0 : **−2 et 2** sont deux antécédents de 0."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’antécédent **positif** de 12 par g ?",
+          "reponse": 4,
+          "aide": "Résous x² − 4 = 12, donc x² = 16.",
+          "explication": "x² − 4 = 12 donne x² = 16, donc x = 4 ou x = −4. L’antécédent positif est **4**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le nombre −7 a-t-il un antécédent par g ?",
+          "options": [
+            "Non : x² est toujours positif ou nul, donc x² − 4 est toujours au moins −4",
+            "Oui, un seul antécédent : −3, car −3 − 4 = −7 en appliquant la règle",
+            "Oui, deux antécédents : les nombres −3 et 3, qui ont le même carré",
+            "On ne peut pas savoir sans tracer la courbe de g ou faire un tableau"
+          ],
+          "reponse": 0,
+          "aide": "Essaie de résoudre x² − 4 = −7 : que devrait valoir x² ?",
+          "explication": "x² − 4 = −7 donnerait x² = −3, impossible : un carré est toujours positif ou nul. **−7 n’a aucun antécédent** (g(x) est toujours supérieur ou égal à −4)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le point B(−3 ; 5) est-il sur la courbe de g ?",
+          "options": [
+            "Oui : g(−3) = (−3)² − 4 = 5",
+            "Non : g(−3) = −9 − 4 = −13",
+            "Non : −3 ne figure pas dans le tableau",
+            "Oui : car 5 est un nombre positif"
+          ],
+          "reponse": 0,
+          "aide": "Calcule l’image de l’abscisse −3 et compare avec l’ordonnée 5. Attention aux parenthèses.",
+          "explication": "g(−3) = (−3)² − 4 = 9 − 4 = 5 : l’image de −3 est l’ordonnée de B, donc **B est sur la courbe**. Le tableau n’a pas besoin de contenir −3."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les clémentines du marché",
+      "competence": "lire-graphique",
+      "situation": "Sur le marché, Noa achète des clémentines. Le graphique donne le prix à payer, en euros, en fonction de la masse achetée, en kilogrammes.",
+      "documents": [
+        {
+          "id": "prix",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prix des clémentines",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Prix (€)",
+              "valeurs": [
+                0,
+                3,
+                6,
+                9,
+                12,
+                15
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Prix à payer",
+            "unite": "en euros",
+            "min": 0,
+            "max": 15,
+            "pas": 3
+          },
+          "axeX": {
+            "titre": "Masse (kg)"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "prix",
+          "enonce": "Touche le point qui indique le prix de 4 kg de clémentines.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Repère 4 sur l’axe horizontal, puis lève les yeux vers la courbe.",
+          "explication": "Le point d’abscisse 4 est à 12 € : 4 kg coûtent **12 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le prix d’un kilogramme ? C’est le coefficient de la fonction linéaire.",
+          "reponse": 3,
+          "aide": "Regarde le prix pour 1 kg, ou divise un prix par la masse correspondante.",
+          "explication": "Pour 1 kg, on lit 3 € : le coefficient est **3** (par exemple 12 ÷ 4 = 3)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi cette situation est-elle une situation de proportionnalité ?",
+          "options": [
+            "La courbe est une droite qui passe par l’origine",
+            "La courbe monte de gauche à droite",
+            "Le prix est toujours un multiple de 3 euros",
+            "La courbe reste au-dessus de l’axe horizontal"
+          ],
+          "reponse": 0,
+          "aide": "Quelle est la signature graphique d’une fonction linéaire ?",
+          "explication": "Une **droite qui passe par l’origine** traduit la proportionnalité : si la masse double, le prix double."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec la formule f(x) = 3x, calcule le prix de 10 kg.",
+          "reponse": 30,
+          "unite": "€",
+          "aide": "Remplace x par 10.",
+          "explication": "f(10) = 3 × 10 = **30 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les soldes à −20 %",
+      "competence": "calculer",
+      "situation": "Un magasin solde tous ses articles. Le prix soldé se calcule à partir du prix affiché par une fonction linéaire f. Un employé a commencé à remplir le tableau de correspondance.",
+      "documents": [
+        {
+          "id": "soldes",
+          "type": "tableau",
+          "titre": "Du prix affiché au prix soldé",
+          "colonnes": [
+            "Prix affiché (€)",
+            "25",
+            "40",
+            "75",
+            "120"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Prix soldé (€)",
+              20,
+              32,
+              60,
+              "?"
+            ]
+          ],
+          "source": "Tarifs imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "soldes",
+          "enonce": "Touche le prix soldé d’un article affiché à 75 €.",
+          "reponse": [
+            "r0c3"
+          ],
+          "aide": "Repère la colonne 75, puis lis la ligne du bas.",
+          "explication": "Un article affiché à 75 € est soldé à **60 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le coefficient a de la fonction linéaire f.",
+          "reponse": 0.8,
+          "aide": "Divise un prix soldé par le prix affiché correspondant, par exemple 20 ÷ 25.",
+          "explication": "a = 20 ÷ 25 = **0,8** (on retrouve 32 ÷ 40 = 0,8 et 60 ÷ 75 = 0,8)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : quel est le prix soldé d’un article affiché 120 € ?",
+          "reponse": 96,
+          "unite": "€",
+          "aide": "Multiplie 120 par le coefficient.",
+          "explication": "120 × 0,8 = **96 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "De quel pourcentage les prix sont-ils soldés ?",
+          "options": [
+            "20 %",
+            "80 %",
+            "8 %",
+            "0,8 %"
+          ],
+          "reponse": 0,
+          "aide": "Multiplier par 0,8, c’est multiplier par 1 − 0,2.",
+          "explication": "Le coefficient 0,8 = 1 − 0,2 correspond à une **baisse de 20 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Un article soldé coûte 52 €. Quel était son prix affiché ?",
+          "reponse": 65,
+          "unite": "€",
+          "aide": "Pour remonter au prix de départ, on divise par le coefficient.",
+          "explication": "52 ÷ 0,8 = **65 €**. Vérification : 65 × 0,8 = 52."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3ee5a8-2e8b-5b5f-89f9-2a61ab0a6809",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois forfaits de location",
+      "competence": "raisonner",
+      "situation": "Trois clubs louent des vélos. Le tableau donne les prix de leurs forfaits pour 1 à 4 heures. Le graphique montre le forfait B depuis 0 heure. Quels forfaits sont proportionnels à la durée ?",
+      "documents": [
+        {
+          "id": "forfaits",
+          "type": "tableau",
+          "titre": "Prix des trois forfaits (en euros)",
+          "colonnes": [
+            "Durée (h)",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Forfait A",
+              5,
+              10,
+              15,
+              20
+            ],
+            [
+              "Forfait B",
+              8,
+              11,
+              14,
+              17
+            ],
+            [
+              "Forfait C",
+              6,
+              12,
+              18,
+              24
+            ]
+          ],
+          "source": "Tarifs imaginés pour l’exercice"
+        },
+        {
+          "id": "graphB",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Le forfait B depuis 0 heure",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Forfait B (€)",
+              "valeurs": [
+                5,
+                8,
+                11,
+                14,
+                17
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Prix",
+            "unite": "en euros",
+            "min": 0,
+            "max": 20,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Durée (h)"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque forfait : le prix est-il proportionnel à la durée ?",
+          "categories": [
+            "Proportionnel",
+            "Non proportionnel"
+          ],
+          "items": [
+            [
+              "Forfait A",
+              0
+            ],
+            [
+              "Forfait B",
+              1
+            ],
+            [
+              "Forfait C",
+              0
+            ]
+          ],
+          "aide": "Dans une situation de proportionnalité, le quotient prix ÷ durée est toujours le même.",
+          "explication": "A : 5 ÷ 1 = 10 ÷ 2 = 5 ; C : 6 ÷ 1 = 12 ÷ 2 = 6. Les quotients sont constants : **A et C sont proportionnels**. Pour B, 8 ÷ 1 = 8 mais 11 ÷ 2 = 5,5 : **B ne l’est pas**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le coefficient de proportionnalité du forfait C ?",
+          "reponse": 6,
+          "aide": "Divise un prix par la durée correspondante.",
+          "explication": "24 ÷ 4 = 12 ÷ 2 = 6 : le coefficient est **6 € par heure**."
+        },
+        {
+          "type": "zone",
+          "document": "graphB",
+          "enonce": "Touche le point du forfait B qui correspond à 0 heure.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "C’est le point situé sur l’axe vertical.",
+          "explication": "Le point d’abscisse 0 est à **5 €** : on paie déjà 5 € avant d’avoir roulé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre ce point ?",
+          "options": [
+            "La droite ne passe pas par l’origine : le forfait B n’est pas proportionnel",
+            "Le forfait B est toujours le moins cher, quelle que soit la durée",
+            "Le forfait B est proportionnel à la durée, avec un coefficient égal à 5",
+            "La courbe est mal tracée au départ : ce point est une simple erreur de mesure"
+          ],
+          "reponse": 0,
+          "aide": "Pour 0 heure, quel prix devrait-on payer dans une situation de proportionnalité ?",
+          "explication": "En proportionnalité, 0 heure coûterait 0 €. Ici, la droite ne passe pas par l’origine : **B n’est pas proportionnel** (c’est un forfait de départ plus un prix horaire)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel forfait est le moins cher pour 5 heures ?",
+          "options": [
+            "Le forfait B",
+            "Le forfait A",
+            "Le forfait C",
+            "Les trois coûtent le même prix"
+          ],
+          "reponse": 0,
+          "aide": "Prolonge chaque forfait : A et C sont proportionnels ; B augmente de 3 € par heure.",
+          "explication": "Pour 5 h : A = 5 × 5 = 25 €, C = 6 × 5 = 30 €, B = 17 + 3 = **20 €**. Le forfait B est le moins cher."
+        }
+      ]
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’abonnement à la piscine",
+      "competence": "lire-graphique",
+      "situation": "Un club de natation demande 10 € d’abonnement, puis 2 € par séance. Le graphique donne le prix total f(x) payé pour x séances.",
+      "documents": [
+        {
+          "id": "piscine",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prix total selon le nombre de séances",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Prix (€)",
+              "valeurs": [
+                10,
+                12,
+                14,
+                16,
+                18,
+                20
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Prix total",
+            "unite": "en euros",
+            "min": 0,
+            "max": 20,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Nombre de séances"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "piscine",
+          "enonce": "Touche le point qui correspond à 0 séance.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "C’est le point situé sur l’axe vertical.",
+          "explication": "Le point d’abscisse 0 est à **10 €** : c’est l’abonnement, payé avant la première séance."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien paie-t-on en tout pour 4 séances ?",
+          "reponse": 18,
+          "unite": "€",
+          "aide": "Repère 4 sur l’axe horizontal et lis la hauteur du point.",
+          "explication": "Pour 4 séances, le point est à **18 €** : 10 + 4 × 2 = 18."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’expression de la fonction f ?",
+          "options": [
+            "f(x) = 2x + 10",
+            "f(x) = 10x + 2",
+            "f(x) = 12x",
+            "f(x) = 2x"
+          ],
+          "reponse": 0,
+          "aide": "Le prix par séance est le coefficient de x ; l’abonnement est le nombre ajouté.",
+          "explication": "Le coefficient directeur est 2 (€ par séance) et l’ordonnée à l’origine est 10 (l’abonnement) : **f(x) = 2x + 10**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec la formule, calcule le prix de 10 séances.",
+          "reponse": 30,
+          "unite": "€",
+          "aide": "Remplace x par 10 dans 2x + 10.",
+          "explication": "f(10) = 2 × 10 + 10 = **30 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La course de taxi",
+      "competence": "modeliser",
+      "situation": "Un taxi fait payer une prise en charge fixe, puis un prix au kilomètre. Le prix f(x) d’une course de x km est une fonction affine f(x) = ax + b. On a relevé deux courses.",
+      "documents": [
+        {
+          "id": "taxi",
+          "type": "tableau",
+          "titre": "Trois courses, dont une à trouver",
+          "colonnes": [
+            "Distance x (km)",
+            "2",
+            "6",
+            "10"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Prix f(x) (€)",
+              6,
+              12,
+              "?"
+            ]
+          ],
+          "source": "Tarifs imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le coefficient directeur a, en utilisant les deux premières courses.",
+          "reponse": 1.5,
+          "aide": "a = (f(6) − f(2)) ÷ (6 − 2).",
+          "explication": "a = (12 − 6) ÷ (6 − 2) = 6 ÷ 4 = **1,5** : le kilomètre coûte 1,50 €."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’ordonnée à l’origine b.",
+          "reponse": 3,
+          "aide": "Utilise f(2) = 6 : 1,5 × 2 + b = 6.",
+          "explication": "1,5 × 2 + b = 6 donne 3 + b = 6, donc **b = 3** : la prise en charge coûte 3 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’expression de f ?",
+          "options": [
+            "f(x) = 1,5x + 3",
+            "f(x) = 3x + 1,5",
+            "f(x) = 1,5x",
+            "f(x) = 6x"
+          ],
+          "reponse": 0,
+          "aide": "Écris f(x) = ax + b avec les valeurs de a et de b trouvées.",
+          "explication": "Avec a = 1,5 et b = 3 : **f(x) = 1,5x + 3**. Vérification : f(6) = 9 + 3 = 12."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Complète la case « ? » : quel est le prix d’une course de 10 km ?",
+          "reponse": 18,
+          "unite": "€",
+          "aide": "Utilise la formule avec x = 10.",
+          "explication": "f(10) = 1,5 × 10 + 3 = **18 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une course a coûté 21 €. Quelle distance a-t-elle parcourue ?",
+          "reponse": 12,
+          "unite": "km",
+          "aide": "Résous l’équation 1,5x + 3 = 21.",
+          "explication": "1,5x + 3 = 21 donne 1,5x = 18, donc x = 18 ÷ 1,5 = **12 km**."
+        }
+      ]
+    },
+    {
+      "chapitre": "473ec628-85ca-5745-a85e-de1b974853e3",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Loisir ou Carte : quelle offre ?",
+      "competence": "modeliser",
+      "situation": "Le club d’escalade du lac propose deux offres. Marion se demande laquelle choisir selon le nombre de séances. Elle a tracé le prix des deux offres sur un même graphique.",
+      "documents": [
+        {
+          "id": "offres",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Club d’escalade du lac",
+          "sousTitre": "Nos deux offres",
+          "emoji": "🧗",
+          "lignes": [
+            {
+              "texte": "Offre Loisir",
+              "valeur": "7 € la séance"
+            },
+            {
+              "texte": "Offre Carte",
+              "valeur": "24 € puis 4 € la séance"
+            }
+          ],
+          "pied": "Offres imaginées pour l’exercice"
+        },
+        {
+          "id": "graphe",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prix selon le nombre de séances",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "series": [
+            {
+              "nom": "Offre Loisir",
+              "valeurs": [
+                0,
+                14,
+                28,
+                42,
+                56,
+                70,
+                84
+              ]
+            },
+            {
+              "nom": "Offre Carte",
+              "valeurs": [
+                24,
+                32,
+                40,
+                48,
+                56,
+                64,
+                72
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Prix",
+            "unite": "en euros",
+            "min": 0,
+            "max": 90,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Nombre de séances"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Complète les deux fonctions : A pour l’offre Loisir, B pour l’offre Carte.",
+          "texte": "A(x) = ___ x   et   B(x) = ___ x + ___",
+          "reponses": [
+            [
+              "7"
+            ],
+            [
+              "4"
+            ],
+            [
+              "24"
+            ]
+          ],
+          "banque": [
+            "7",
+            "4",
+            "24",
+            "28",
+            "11"
+          ],
+          "aide": "Dans A, on paie 7 € à chaque séance. Dans B, on paie d’abord une somme fixe, puis un prix par séance.",
+          "explication": "A est linéaire : **A(x) = 7x**. B est affine : **B(x) = 4x + 24** (prix par séance 4, carte 24 €)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Résous l’équation 7x = 4x + 24 : pour combien de séances les deux offres coûtent-elles le même prix ?",
+          "reponse": 8,
+          "aide": "Isole les x : 7x − 4x = 24.",
+          "explication": "7x = 4x + 24 donne 3x = 24, donc **x = 8 séances** (les deux offres coûtent alors 56 €)."
+        },
+        {
+          "type": "zone",
+          "document": "graphe",
+          "enonce": "Touche l’abscisse où les deux droites se croisent.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche le point où les deux lignes se rejoignent, puis regarde en dessous.",
+          "explication": "Les deux droites se croisent pour **8 séances**, ce qui confirme le calcul."
+        },
+        {
+          "type": "choix",
+          "enonce": "Marion fera 12 séances dans l’année. Quelle offre lui coûte le moins ?",
+          "options": [
+            "L’offre Carte : 72 €, contre 84 € pour l’offre Loisir",
+            "L’offre Loisir : 84 €, contre 72 € pour l’offre Carte",
+            "Les deux offres : 56 € chacune",
+            "L’offre Loisir, car elle n’a pas d’abonnement"
+          ],
+          "reponse": 0,
+          "aide": "Calcule A(12) et B(12), ou regarde l’ordre des deux droites à droite du point de croisement.",
+          "explication": "A(12) = 7 × 12 = 84 € et B(12) = 4 × 12 + 24 = 72 € : **l’offre Carte** est moins chère au-delà de 8 séances."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien Marion économise-t-elle en choisissant la meilleure offre ?",
+          "reponse": 12,
+          "unite": "€",
+          "aide": "Fais la différence entre les deux prix.",
+          "explication": "84 − 72 = **12 €** économisés."
+        }
+      ]
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le ticket de caisse",
+      "competence": "calculer",
+      "situation": "Léna achète trois articles dans un magasin de sport. Une remise de 20 % est appliquée sur tout le ticket.",
+      "documents": [
+        {
+          "id": "ticket",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Sport Express",
+          "sousTitre": "Ticket du 14/06",
+          "emoji": "🧾",
+          "lignes": [
+            {
+              "texte": "Sweat",
+              "valeur": "40,00 €",
+              "id": "sweat"
+            },
+            {
+              "texte": "Casquette",
+              "valeur": "25,00 €",
+              "id": "casquette"
+            },
+            {
+              "texte": "Baskets",
+              "valeur": "60,00 €",
+              "id": "baskets"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Total avant remise",
+              "valeur": "125,00 €",
+              "gras": true
+            },
+            {
+              "texte": "Remise sur tout le ticket",
+              "valeur": "−20 %"
+            }
+          ],
+          "pied": "Ticket imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ticket",
+          "enonce": "Touche l’article le plus cher.",
+          "reponse": [
+            "baskets"
+          ],
+          "aide": "Compare les trois prix.",
+          "explication": "Les baskets, à **60 €**, sont l’article le plus cher."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le montant de la remise sur les baskets ?",
+          "reponse": 12,
+          "unite": "€",
+          "aide": "Calcule 20 % de 60 €.",
+          "explication": "20 % de 60 = 60 × 0,2 = **12 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le prix de la casquette après la remise ?",
+          "reponse": 20,
+          "unite": "€",
+          "aide": "Multiplie par 0,8 (1 − 0,2).",
+          "explication": "25 × 0,8 = **20 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle somme Léna paie-t-elle en tout ?",
+          "reponse": 100,
+          "unite": "€",
+          "aide": "Applique le coefficient 0,8 au total avant remise.",
+          "explication": "125 × 0,8 = **100 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La ville qui change de taille",
+      "competence": "lire-graphique",
+      "situation": "Le graphique donne le nombre d’habitants de Saint-Valéry, une ville imaginée pour l’exercice, à trois dates de recensement.",
+      "documents": [
+        {
+          "id": "habitants",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Habitants de Saint-Valéry",
+          "categories": [
+            "2010",
+            "2015",
+            "2020"
+          ],
+          "series": [
+            {
+              "nom": "Habitants",
+              "valeurs": [
+                1200,
+                1500,
+                1350
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Habitants",
+            "min": 0,
+            "max": 1600,
+            "pas": 400
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": true,
+          "source": "Chiffres imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "habitants",
+          "enonce": "Touche l’année où la ville comptait le plus d’habitants.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "C’est **2015**, avec 1 500 habitants."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le taux d’évolution de 2010 à 2015, en pourcentage ?",
+          "reponse": 25,
+          "unite": "%",
+          "aide": "Calcule (valeur d’arrivée − valeur de départ) ÷ valeur de départ.",
+          "explication": "(1 500 − 1 200) ÷ 1 200 = 300 ÷ 1 200 = 0,25 : une **hausse de 25 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage la population a-t-elle baissé de 2015 à 2020 ?",
+          "reponse": 10,
+          "unite": "%",
+          "aide": "On divise toujours par la valeur de départ, ici 1 500.",
+          "explication": "(1 500 − 1 350) ÷ 1 500 = 150 ÷ 1 500 = 0,1 : une **baisse de 10 %**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’évolution globale de 2010 à 2020 ?",
+          "options": [
+            "Une hausse de 12,5 %",
+            "Une hausse de 15 %",
+            "Une hausse de 25 %",
+            "Une baisse de 10 %"
+          ],
+          "reponse": 0,
+          "aide": "Les pourcentages ne s’additionnent pas : compare directement 1 350 et 1 200.",
+          "explication": "(1 350 − 1 200) ÷ 1 200 = 150 ÷ 1 200 = 0,125 : une **hausse de 12,5 %**, et non 25 − 10 = 15 %. Avec les coefficients : 1,25 × 0,9 = 1,125."
+        }
+      ]
+    },
+    {
+      "chapitre": "666710c5-78f2-5911-a105-70ecff35268b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le smartphone en promo",
+      "competence": "modeliser",
+      "situation": "Jade veut acheter un smartphone. Elle s’enthousiasme devant les deux remises successives affichées en magasin, puis envoie un message à son ami Kévin.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Nova X · smartphone",
+          "sousTitre": "Prix affiché : 480 € TTC (TVA 20 % comprise)",
+          "emoji": "📱",
+          "lignes": [
+            {
+              "texte": "Soldes",
+              "valeur": "−15 %"
+            },
+            {
+              "texte": "Code promo en plus",
+              "valeur": "−10 %"
+            }
+          ],
+          "pied": "Les remises s’appliquent l’une après l’autre. Offre imaginée pour l’exercice"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Jade",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Kévin",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Jade",
+              "texte": "Super ! −15 % puis −10 %, ça fait [[e|−25]] % de baisse : je paie 360 € !"
+            },
+            {
+              "qui": "Kévin",
+              "texte": "Attention, les pourcentages ne s’additionnent pas…"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le nombre faux dans le message de Jade.",
+          "reponse": [
+            "e"
+          ],
+          "aide": "Jade additionne deux pourcentages : quel nombre est le résultat de cette addition ?",
+          "explication": "C’est **−25** : on ne peut pas additionner −15 % et −10 %, car la seconde baisse porte sur un prix déjà réduit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le coefficient multiplicateur global des deux baisses successives.",
+          "reponse": 0.765,
+          "aide": "Baisse de 15 % : × 0,85 ; baisse de 10 % : × 0,9. Multiplie les deux.",
+          "explication": "0,85 × 0,9 = **0,765**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel prix Jade paie-t-elle réellement ?",
+          "reponse": 367.2,
+          "unite": "€",
+          "aide": "Multiplie 480 € par le coefficient global.",
+          "explication": "480 × 0,765 = **367,20 €**, et non 360 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la baisse globale réelle ?",
+          "options": [
+            "Une baisse de 23,5 %",
+            "Une baisse de 25 %",
+            "Une baisse de 24 %",
+            "Une baisse de 22,5 %"
+          ],
+          "reponse": 0,
+          "aide": "Le coefficient 0,765 s’écrit 1 − … .",
+          "explication": "0,765 = 1 − 0,235 : la baisse globale est de **23,5 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le prix payé, 367,20 €, est un prix TTC avec une TVA de 20 %. Quel est le prix hors taxes ?",
+          "reponse": 306,
+          "unite": "€",
+          "aide": "Pour remonter à la valeur de départ, on divise par le coefficient 1,2.",
+          "explication": "367,2 ÷ 1,2 = **306 €** hors taxes."
+        }
+      ]
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La recharge du téléphone",
+      "competence": "lire-graphique",
+      "situation": "Noa branche son téléphone à la prise. Le graphique donne la charge de la batterie, en pourcentage, en fonction du temps de charge, en heures.",
+      "documents": [
+        {
+          "id": "charge",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Charge de la batterie",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Charge (%)",
+              "valeurs": [
+                20,
+                40,
+                60,
+                80,
+                100,
+                100
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Charge",
+            "unite": "en %",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Temps de charge (h)"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "charge",
+          "enonce": "Touche le point qui indique une charge de 80 %.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche 80 sur l’axe vertical, puis regarde l’instant correspondant.",
+          "explication": "La batterie est à 80 % au bout de **3 heures**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la charge de la batterie au bout de 2 heures ?",
+          "reponse": 60,
+          "unite": "%",
+          "aide": "Repère 2 sur l’axe horizontal, puis lis la hauteur du point.",
+          "explication": "Au bout de 2 heures, la charge est de **60 %**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au bout de combien d’heures la batterie est-elle pleine pour la première fois ?",
+          "reponse": 4,
+          "unite": "h",
+          "aide": "Cherche le premier point à 100 %.",
+          "explication": "La charge atteint 100 % au bout de **4 heures**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il entre la 4e et la 5e heure ?",
+          "options": [
+            "La charge reste à 100 % : la courbe est à l’horizontale",
+            "La charge diminue lentement : la courbe descend légèrement",
+            "La charge augmente plus vite : la courbe devient plus raide",
+            "Le téléphone s’éteint : la courbe retombe brutalement à 0 %"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la forme de la courbe entre les deux derniers points.",
+          "explication": "Entre 4 h et 5 h, la courbe est **horizontale** : la batterie est pleine, la charge ne change plus."
+        }
+      ]
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Comment vont-ils au collège ?",
+      "competence": "lire-graphique",
+      "situation": "Une enquête a été faite auprès des 240 élèves d’un collège sur leur moyen de transport. Les résultats sont représentés par un diagramme circulaire.",
+      "documents": [
+        {
+          "id": "transports",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Moyen de transport des 240 élèves (en %)",
+          "categories": [
+            "Bus",
+            "À pied",
+            "Vélo",
+            "Voiture"
+          ],
+          "series": [
+            {
+              "nom": "Part des élèves (%)",
+              "valeurs": [
+                40,
+                25,
+                15,
+                20
+              ]
+            }
+          ],
+          "source": "Enquête imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "transports",
+          "enonce": "Touche le secteur dont l’angle est un angle droit (90°).",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Un angle droit correspond à un quart du disque, soit quel pourcentage ?",
+          "explication": "Un angle de 90° est un quart de 360° : c’est **25 %**, le secteur « À pied »."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves viennent à vélo ?",
+          "reponse": 36,
+          "aide": "Calcule 15 % de 240.",
+          "explication": "15 % de 240 = 0,15 × 240 = **36 élèves**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’angle du secteur « Voiture », en degrés ?",
+          "reponse": 72,
+          "unite": "°",
+          "aide": "Angle = fréquence × 360°.",
+          "explication": "20 % = 0,2 et 0,2 × 360 = **72°**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves viennent à pied ou à vélo ?",
+          "reponse": 96,
+          "aide": "Additionne d’abord les deux pourcentages, puis calcule la part de 240.",
+          "explication": "25 % + 15 % = 40 %, et 40 % de 240 = 0,4 × 240 = **96 élèves**."
+        }
+      ]
+    },
+    {
+      "chapitre": "ebf41b9d-7a2b-5c17-a557-1471990e312a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux offres sur une feuille de tableur",
+      "competence": "analyser-document",
+      "situation": "Un club de sport propose deux offres. Léa a saisi leurs prix dans une feuille de tableur, en B2 la formule =5*A2 pour l’offre A et en C2 la formule =2*A2+12 pour l’offre B. Elle a recopié les deux formules vers le bas, puis tracé le graphique.",
+      "documents": [
+        {
+          "id": "feuille",
+          "type": "tableau",
+          "titre": "La feuille de calcul",
+          "colonnes": [
+            "",
+            "A",
+            "B",
+            "C"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "1",
+              "Séances",
+              "Offre A (€)",
+              "Offre B (€)"
+            ],
+            [
+              "2",
+              0,
+              0,
+              12
+            ],
+            [
+              "3",
+              1,
+              5,
+              14
+            ],
+            [
+              "4",
+              2,
+              10,
+              "?"
+            ],
+            [
+              "5",
+              3,
+              15,
+              18
+            ],
+            [
+              "6",
+              4,
+              "?",
+              20
+            ]
+          ]
+        },
+        {
+          "id": "courbes",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Prix des deux offres",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Offre A",
+              "valeurs": [
+                0,
+                5,
+                10,
+                15,
+                20,
+                25
+              ]
+            },
+            {
+              "nom": "Offre B",
+              "valeurs": [
+                12,
+                14,
+                16,
+                18,
+                20,
+                22
+              ]
+            }
+          ],
+          "axeY": {
+            "titre": "Prix",
+            "unite": "en euros",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Nombre de séances"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle valeur affiche la cellule **C4** ?",
+          "reponse": 16,
+          "aide": "C4 est sur la ligne des 2 séances : applique la formule 2 × 2 + 12.",
+          "explication": "En C4, la formule est =2*A4+12 et A4 vaut 2 : 2 × 2 + 12 = **16**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle valeur affiche la cellule **B6** ?",
+          "reponse": 20,
+          "aide": "B6 est sur la ligne des 4 séances : applique =5*A6.",
+          "explication": "En B6, la formule est =5*A6 et A6 vaut 4 : 5 × 4 = **20**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle formule se trouve en B4 après la recopie ?",
+          "options": [
+            "=5*A4",
+            "=5*A2",
+            "=2*A4+12",
+            "=A4+5"
+          ],
+          "reponse": 0,
+          "aide": "Lors de la recopie vers le bas, la référence suit la ligne.",
+          "explication": "Recopiée de B2 vers B4, la formule =5*A2 devient **=5*A4** : la référence A2 descend avec la cellule."
+        },
+        {
+          "type": "zone",
+          "document": "courbes",
+          "enonce": "Touche l’abscisse pour laquelle les deux offres coûtent le même prix.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche où les deux courbes se croisent.",
+          "explication": "Les courbes se croisent pour **4 séances** : les deux offres coûtent alors 20 €, comme le montrent B6 et C6."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À partir de combien de séances l’offre A devient-elle plus chère que l’offre B ?",
+          "reponse": 5,
+          "aide": "Regarde, après le croisement, quelle courbe passe au-dessus.",
+          "explication": "Pour 5 séances, A coûte 25 € et B coûte 22 € : A est plus chère **à partir de 5 séances**."
+        }
+      ]
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’emploi du temps du jour J",
+      "competence": "analyser-document",
+      "situation": "Mila découvre le déroulé de l’épreuve de maths du brevet. Elle lit la fiche d’horaires affichée à l’entrée de la salle.",
+      "documents": [
+        {
+          "id": "horaires",
+          "type": "fiche",
+          "modele": "horaires",
+          "entete": "Épreuve de mathématiques",
+          "sousTitre": "Brevet · 2 heures",
+          "emoji": "📐",
+          "lignes": [
+            {
+              "texte": "Partie 1 · Automatismes",
+              "valeur": "14 h 00 – 14 h 20",
+              "id": "p1"
+            },
+            {
+              "texte": "Partie 2 · Résolution de problèmes",
+              "valeur": "14 h 20 – 16 h 00",
+              "id": "p2"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Points de la partie 1",
+              "valeur": "6 sur 20"
+            },
+            {
+              "texte": "Points de la partie 2",
+              "valeur": "14 sur 20"
+            },
+            {
+              "texte": "Calculatrice",
+              "valeur": "partie 2 seulement"
+            }
+          ],
+          "pied": "Fiche imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "horaires",
+          "enonce": "Touche la partie où la calculatrice est interdite.",
+          "reponse": [
+            "p1"
+          ],
+          "aide": "Relis la ligne « Calculatrice ».",
+          "explication": "La calculatrice n’est autorisée qu’en partie 2 : elle est interdite pendant la **partie 1, les automatismes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes dure la partie 2 ?",
+          "reponse": 100,
+          "unite": "min",
+          "aide": "De 14 h 20 à 16 h 00, compte d’abord jusqu’à 15 h 00.",
+          "explication": "De 14 h 20 à 16 h 00, il y a 40 + 60 = **100 minutes** (1 h 40)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Mila obtient 4,5 points à la partie 1 et 11 points à la partie 2. Quelle est sa note sur 20 ?",
+          "reponse": 15.5,
+          "aide": "Additionne les points des deux parties.",
+          "explication": "4,5 + 11 = **15,5 sur 20**."
+        }
+      ]
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Rédiger avec Pythagore",
+      "competence": "geometrie",
+      "situation": "Sam doit calculer la longueur BC du triangle ABC rectangle en A. Il a trouvé le bon résultat, mais sa copie est très courte. Comment rédiger pour gagner tous les points ?",
+      "documents": [
+        {
+          "id": "triangle",
+          "type": "figure",
+          "titre": "Le triangle ABC",
+          "cadre": {
+            "xmin": 0,
+            "xmax": 9,
+            "ymin": 0,
+            "ymax": 10
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 1,
+              "y": 1,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 7,
+              "y": 1,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 1,
+              "y": 9,
+              "nom": "C",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B",
+              "longueur": "6 cm"
+            },
+            {
+              "id": "ac",
+              "de": "A",
+              "a": "C",
+              "longueur": "8 cm"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "A",
+              "de": "B",
+              "a": "C",
+              "droit": true
+            }
+          ]
+        },
+        {
+          "id": "copie",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La copie de Sam",
+          "blocs": [
+            "« BC² = 6² + 8², donc BC = 10. »"
+          ],
+          "source": "Copie imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "triangle",
+          "enonce": "Touche l’hypoténuse du triangle ABC.",
+          "reponse": [
+            "bc"
+          ],
+          "aide": "L’hypoténuse est le côté opposé à l’angle droit.",
+          "explication": "L’angle droit est en A : l’hypoténuse est le côté opposé, **[BC]**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les lignes d’une rédaction complète.",
+          "items": [
+            "Le triangle ABC est rectangle en A.",
+            "D’après le théorème de Pythagore : BC² = AB² + AC².",
+            "BC² = 6² + 8² = 36 + 64 = 100.",
+            "BC = √100 = 10 cm."
+          ],
+          "aide": "On commence par vérifier l’hypothèse, puis on écrit la propriété, on calcule, on conclut.",
+          "explication": "On écrit **l’hypothèse** (triangle rectangle en A), la **propriété** (Pythagore), le **calcul**, puis la **conclusion** avec son unité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur BC, en centimètres ?",
+          "reponse": 10,
+          "unite": "cm",
+          "aide": "BC² = 36 + 64 : quel nombre a pour carré 100 ?",
+          "explication": "BC² = 6² + 8² = 100, donc BC = √100 = **10 cm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que manque-t-il à la copie de Sam pour gagner tous les points de rédaction ?",
+          "options": [
+            "Préciser que ABC est rectangle en A, citer Pythagore, écrire l’unité et conclure par une phrase",
+            "Ajouter une valeur approchée de BC avec trois décimales pour être plus précis",
+            "Refaire le calcul à la calculatrice et écrire le résultat sans justification",
+            "Rien : le résultat est juste, donc la copie mérite tous les points de rédaction"
+          ],
+          "reponse": 0,
+          "aide": "Relis les lignes de la rédaction complète et compare-les à celle de Sam.",
+          "explication": "Il manque l’**hypothèse** (triangle rectangle en A), le **nom du théorème**, l’**unité** et une **phrase de conclusion** : c’est ce qui rapporte les points de rédaction, même quand le résultat est juste."
+        }
+      ]
+    },
+    {
+      "chapitre": "a3bd6544-b11b-5554-bf06-402ad9e5c119",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Gérer son temps en partie 2",
+      "competence": "raisonner",
+      "situation": "Lina prépare sa stratégie pour la partie 2 de l’épreuve, qui dure 1 h 40. Elle a dessiné la frise de sa matinée d’examen, et noté les exercices qu’elle prévoit de traiter avec le temps conseillé.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les 2 heures de l’épreuve, en minutes",
+          "debut": 0,
+          "fin": 120,
+          "pas": 10,
+          "periodes": [
+            {
+              "id": "auto",
+              "debut": 0,
+              "fin": 20,
+              "nom": "Automatismes"
+            },
+            {
+              "id": "lect",
+              "debut": 20,
+              "fin": 25,
+              "nom": "Lecture"
+            },
+            {
+              "id": "exo",
+              "debut": 25,
+              "fin": 110,
+              "nom": "Exercices"
+            },
+            {
+              "id": "rel",
+              "debut": 110,
+              "fin": 120,
+              "nom": "Relecture"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "ramasse",
+              "date": 20,
+              "nom": "Partie 1 ramassée"
+            }
+          ]
+        },
+        {
+          "id": "plan",
+          "type": "tableau",
+          "titre": "Le plan des exercices",
+          "colonnes": [
+            "Exercice",
+            "Points",
+            "Temps prévu (min)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Probabilités",
+              3,
+              20
+            ],
+            [
+              "Fonctions",
+              4,
+              25
+            ],
+            [
+              "Géométrie",
+              3,
+              25
+            ],
+            [
+              "Scratch",
+              2,
+              "?"
+            ]
+          ],
+          "source": "Plan imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche les trois périodes où la calculatrice est autorisée.",
+          "reponse": [
+            "lect",
+            "exo",
+            "rel"
+          ],
+          "multiple": true,
+          "aide": "La calculatrice est interdite en partie 1, autorisée en partie 2 : repère où la partie 2 commence.",
+          "explication": "La calculatrice est autorisée pendant toute la partie 2 : **Lecture, Exercices et Relecture**. Elle est interdite pendant les automatismes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes Lina consacre-t-elle à la phase « Exercices » ?",
+          "reponse": 85,
+          "unite": "min",
+          "aide": "Lis les deux bornes de la période sur la frise.",
+          "explication": "La phase commence à 25 min et finit à 110 min : 110 − 25 = **85 minutes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les quatre exercices se partagent ces 85 minutes. Complète la case « ? » : combien de minutes pour Scratch ?",
+          "reponse": 15,
+          "unite": "min",
+          "aide": "Soustrais du temps total les trois temps déjà notés.",
+          "explication": "85 − (20 + 25 + 25) = 85 − 70 = **15 minutes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel exercice rapporte le plus de points par minute de travail prévue ?",
+          "options": [
+            "Fonctions",
+            "Probabilités",
+            "Géométrie",
+            "Scratch"
+          ],
+          "reponse": 0,
+          "aide": "Calcule points ÷ minutes pour chaque ligne du tableau.",
+          "explication": "Fonctions : 4 ÷ 25 = 0,16 ; Probabilités : 3 ÷ 20 = 0,15 ; Scratch : 2 ÷ 15 ≈ 0,13 ; Géométrie : 3 ÷ 25 = 0,12. **Fonctions** est le plus « rentable »."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Nina a eu 4,5 points à la partie 1, 9 des 12 points d’exercices de la partie 2 et les 2 points de rédaction. Quelle est sa note sur 20 ?",
+          "reponse": 15.5,
+          "aide": "Additionne les trois totaux.",
+          "explication": "4,5 + 9 + 2 = **15,5 sur 20**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "id": "physique-chimie-2024-polynesie-j2",
+  "matiere": "physique-chimie",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2024,
+  "centre": "Polynésie",
+  "jour": 2,
+  "code": "24-PYCJ2PO1",
+  "titre": "Bac 2024 — Physique-chimie",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous à traiter (9 + 6 + 5 points).",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Suivi cinétique par conductimétrie de l'hydrolyse du chlorure de tertiobutyle.",
+      "points": 9,
+      "minutes": 95,
+      "enBref": [
+        "L'hydrolyse produit autant d'ions H₃O⁺ que d'ions Cl⁻ : la conductivité $\\sigma = (\\lambda_{\\mathrm{H_3O^+}} + \\lambda_{\\mathrm{Cl^-}})[\\mathrm{H_3O^+}]$ suit l'avancement.",
+        "On introduit $n_0 = 9{,}2 \\times 10^{-3}$ mol de RCl, soit $c_0 = 4{,}6 \\times 10^{-2} \\text{ mol·L}^{-1}$ ; [RCl] tend vers 0, donc la réaction est totale.",
+        "Graphiquement, $t_{1/2} \\approx 1{,}3 \\times 10^{3}$ s.",
+        "Pour une loi d'ordre 1, $[\\mathrm{RCl}](t) = c_0\\,e^{-kt}$ ; la pente de ln[RCl] donne $k \\approx 5{,}8 \\times 10^{-4} \\text{ s}^{-1}$ et $t_{1/2} = \\ln 2 / k \\approx 1{,}2 \\times 10^{3}$ s, cohérent avec la lecture graphique."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Suivi conductimétrique" },
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Formule semi-développée de l'alcool ROH ; groupe caractéristique.",
+          "blocs": [
+            { "type": "texte", "texte": "R est le groupe $\\mathrm{(CH_3)_3C-}$ : un carbone central lié à trois groupes méthyle. L'alcool s'obtient en remplaçant Cl par OH." },
+            { "type": "formule", "tex": "\\begin{array}{c} \\mathrm{CH_3} \\\\ | \\\\ \\mathrm{CH_3 - C - OH} \\\\ | \\\\ \\mathrm{CH_3} \\end{array}" },
+            { "type": "reponse", "texte": "2-méthylpropan-2-ol ; on entoure le groupe **hydroxyle** –OH, famille des **alcools** (ici un alcool tertiaire : le carbone qui porte OH est lié à trois autres carbones)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Expression de $\\sigma$ par la loi de Kohlrausch.",
+          "blocs": [
+            { "type": "texte", "texte": "Les seuls ions présents sont ceux produits par la réaction : $\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$ (on néglige l'autoprotolyse de l'eau)." },
+            { "type": "reponse", "texte": "$\\sigma = \\lambda_{\\mathrm{H_3O^+}}\\,[\\mathrm{H_3O^+}] + \\lambda_{\\mathrm{Cl^-}}\\,[\\mathrm{Cl^-}]$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Exprimer $\\sigma$ en fonction de $[\\mathrm{H_3O^+}]$ seulement.",
+          "blocs": [
+            { "type": "texte", "texte": "D'après l'équation, une mole de RCl consommée forme une mole de $\\mathrm{H_3O^+}$ et une mole de $\\mathrm{Cl^-}$, et il n'y en avait pas au départ : à chaque instant $[\\mathrm{H_3O^+}] = [\\mathrm{Cl^-}] = x/V$." },
+            { "type": "reponse", "texte": "$\\sigma = (\\lambda_{\\mathrm{H_3O^+}} + \\lambda_{\\mathrm{Cl^-}})\\,[\\mathrm{H_3O^+}]$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Justifier qu'un suivi conductimétrique est possible.",
+          "blocs": [
+            { "type": "texte", "texte": "La conductivité est **proportionnelle** à $[\\mathrm{H_3O^+}]$, elle-même égale à $x/V$ : mesurer $\\sigma$ au cours du temps, c'est suivre l'avancement de la réaction sans prélever ni perturber le milieu." },
+            { "type": "reponse", "texte": "$\\sigma$ est proportionnelle à l'avancement $x(t)$ : son évolution traduit celle de la transformation." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Quantité de matière initiale $n_0$ de chlorure de tertiobutyle.",
+          "blocs": [
+            { "type": "formule", "tex": "M(\\mathrm{C_4H_9Cl}) = 4 \\times 12{,}0 + 9 \\times 1{,}00 + 35{,}5 = 92{,}5 \\text{ g·mol}^{-1}" },
+            { "type": "formule", "tex": "n_0 = \\frac{\\rho\\,V}{M} = \\frac{0{,}850 \\times 1{,}0}{92{,}5} = 9{,}2 \\times 10^{-3} \\text{ mol}" },
+            { "type": "reponse", "texte": "$n_0 \\approx 9{,}2 \\times 10^{-3} \\text{ mol}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "Concentration initiale $c_0$ dans le mélange.",
+          "blocs": [
+            { "type": "texte", "texte": "Le volume total est $V_e + V = 200 + 1{,}0 = 201 \\text{ mL}$." },
+            { "type": "formule", "tex": "c_0 = \\frac{n_0}{V_e + V} = \\frac{9{,}19 \\times 10^{-3}}{0{,}201} = 4{,}6 \\times 10^{-2} \\text{ mol·L}^{-1}" },
+            { "type": "reponse", "texte": "$c_0 \\approx 4{,}6 \\times 10^{-2} \\text{ mol·L}^{-1}$, ce qui correspond bien au départ de la courbe 1 (0,046 mol·L⁻¹)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q7",
+          "intitule": "Associer les courbes 1 et 2 à RCl et à H₃O⁺.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "**Courbe 1** : part de $c_0$ et décroît. C'est un réactif consommé : **RCl**.",
+              "**Courbe 2** : part de 0 et croît. C'est un produit formé : **H₃O⁺**."
+            ] },
+            { "type": "reponse", "texte": "Courbe 1 : [RCl] ; courbe 2 : [H₃O⁺]." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q8",
+          "intitule": "Montrer que l'hydrolyse est totale.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur la courbe 1, [RCl] tend vers 0 (moins de 0,001 mol·L⁻¹ vers 5 000 s, quasiment nulle à 5 600 s) : le réactif limitant a entièrement disparu. De même, la courbe 2 tend vers 0,046 mol·L⁻¹ = $c_0$, soit l'avancement maximal." },
+            { "type": "reponse", "texte": "Le réactif RCl est totalement consommé ($x_f = x_{\\max}$) : la transformation est totale." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q9",
+          "intitule": "Définir le temps de demi-réaction.",
+          "blocs": [
+            { "type": "reponse", "texte": "Le temps de demi-réaction $t_{1/2}$ est la durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale : $x(t_{1/2}) = x_f / 2$. Ici, la réaction étant totale, c'est l'instant où la moitié du réactif limitant a été consommée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q10",
+          "intitule": "Estimer graphiquement $t_{1/2}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur la courbe 1, on cherche l'instant où $[\\mathrm{RCl}] = c_0 / 2 = 0{,}023 \\text{ mol·L}^{-1}$ (sur la courbe 2, la même valeur pour $[\\mathrm{H_3O^+}]$ donne le même instant). La lecture donne :" },
+            { "type": "reponse", "texte": "$t_{1/2} \\approx 1{,}3 \\times 10^{3} \\text{ s}$ (environ 21 min)." },
+            { "type": "astuce", "texte": "Trace les traits de lecture sur ta copie (horizontale à $c_0/2$, puis verticale jusqu'à l'axe des temps) : le correcteur voit ta méthode même si ta lecture diffère un peu de la sienne." }
+          ]
+        },
+        { "type": "titre", "texte": "Loi de vitesse" },
+        {
+          "type": "question",
+          "numero": "Q11",
+          "intitule": "Expression de la vitesse volumique de disparition de RCl.",
+          "blocs": [
+            { "type": "reponse", "texte": "$v_{\\mathrm{RCl}}(t) = -\\dfrac{d[\\mathrm{RCl}]}{dt}$ (en mol·L⁻¹·s⁻¹), positive puisque [RCl] diminue." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q12",
+          "intitule": "Évolution qualitative de $v_{\\mathrm{RCl}}$ au cours du temps.",
+          "blocs": [
+            { "type": "texte", "texte": "$v_{\\mathrm{RCl}}$ est l'opposé du coefficient directeur de la tangente à la courbe 1. Cette tangente est de moins en moins pentue au fil du temps." },
+            { "type": "reponse", "texte": "La vitesse de disparition **diminue** au cours du temps : la concentration du réactif, facteur cinétique, diminue." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q13",
+          "intitule": "Allure de $v_{\\mathrm{RCl}}$ en fonction de [RCl] pour une loi d'ordre 1.",
+          "blocs": [
+            { "type": "reponse", "texte": "$v_{\\mathrm{RCl}} = k\\,[\\mathrm{RCl}]$ : une **droite passant par l'origine**, de coefficient directeur $k > 0$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q14",
+          "intitule": "Équation différentielle vérifiée par [RCl](t).",
+          "blocs": [
+            { "type": "texte", "texte": "On égale les deux expressions de la vitesse (Q11 et loi d'ordre 1) :" },
+            { "type": "formule", "tex": "-\\frac{d[\\mathrm{RCl}]}{dt} = k\\,[\\mathrm{RCl}]" },
+            { "type": "reponse", "texte": "$\\dfrac{d[\\mathrm{RCl}]}{dt} + k\\,[\\mathrm{RCl}] = 0$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q15",
+          "intitule": "Déterminer A à partir des conditions initiales.",
+          "blocs": [
+            { "type": "texte", "texte": "À $t = 0$ : $[\\mathrm{RCl}](0) = A\\,e^{0} = A$. Or $[\\mathrm{RCl}](0) = c_0$." },
+            { "type": "reponse", "texte": "$A = c_0 \\approx 4{,}6 \\times 10^{-2} \\text{ mol·L}^{-1}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q16",
+          "intitule": "Coefficient directeur $a$ de la droite ln[RCl] = f(t).",
+          "blocs": [
+            { "type": "texte", "texte": "En passant au logarithme : $\\ln[\\mathrm{RCl}] = \\ln c_0 - k\\,t$, une droite de pente $-k$. On lit deux points éloignés de la figure 3 : $(0 \\text{ s} ; -3{,}09)$ et $(2\\,200 \\text{ s} ; -4{,}37)$." },
+            { "type": "formule", "tex": "a = \\frac{-4{,}37 - (-3{,}09)}{2\\,200 - 0} = -5{,}8 \\times 10^{-4} \\text{ s}^{-1}" },
+            { "type": "reponse", "texte": "$a \\approx -5{,}8 \\times 10^{-4} \\text{ s}^{-1}$" },
+            { "type": "texte", "texte": "Contrôle : l'ordonnée à l'origine $-3{,}09$ correspond à $e^{-3{,}09} = 0{,}046 \\text{ mol·L}^{-1} = c_0$. La droite est cohérente avec Q6." },
+            { "type": "piege", "texte": "Prends deux points de la **droite**, les plus éloignés possible, et non deux points proches : l'erreur de lecture relative sur la pente en est d'autant réduite." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q17",
+          "intitule": "Calculer $t_{1/2} = \\frac{\\ln 2}{k}$ et comparer à Q10.",
+          "blocs": [
+            { "type": "formule", "tex": "k = -a = 5{,}8 \\times 10^{-4} \\text{ s}^{-1} \\qquad t_{1/2} = \\frac{\\ln 2}{k} = \\frac{0{,}693}{5{,}8 \\times 10^{-4}} = 1{,}2 \\times 10^{3} \\text{ s}" },
+            { "type": "reponse", "texte": "$t_{1/2} \\approx 1{,}2 \\times 10^{3} \\text{ s}$, du même ordre que la lecture graphique ($1{,}3 \\times 10^{3}$ s) : l'écart, de l'ordre de 10 %, s'explique par la précision des lectures. Le modèle d'ordre 1 est validé." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "La masse de la Terre, mesurée par un satellite puis par un pendule.",
+      "points": 6,
+      "minutes": 65,
+      "enBref": [
+        "La deuxième loi de Newton appliquée à un satellite en orbite circulaire donne $v = \\sqrt{G M_T / r}$ puis la troisième loi de Kepler $T^2/r^3 = 4\\pi^2/(G M_T)$.",
+        "Pour Astérix, le demi-grand axe vaut $d = 7{,}48 \\times 10^{6}$ m et la période $T = 6{,}45 \\times 10^{3}$ s : on trouve $M_T \\approx 5{,}95 \\times 10^{24}$ kg.",
+        "Avec le pendule, $T = 2{,}0$ s donne $g \\approx 9{,}9 \\text{ m·s}^{-2}$, puis $M_T = g R_T^2 / G \\approx 6{,}0 \\times 10^{24}$ kg.",
+        "Les deux méthodes concordent."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Mesure à l'aide d'un satellite" },
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Représenter la force $\\vec{F}_{T/A}$ sur la figure 1.",
+          "blocs": [
+            { "type": "reponse", "texte": "Une flèche partant de A, dirigée vers le centre O de la Terre, donc dans le sens et la direction de $\\vec{u}_N$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Expression vectorielle de $\\vec{F}_{T/A}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Loi de la gravitation universelle** : force attractive, de valeur $G M_T m / r^2$, orientée de A vers O, c'est-à-dire selon $\\vec{u}_N$." },
+            { "type": "reponse", "texte": "$\\vec{F}_{T/A} = \\dfrac{G\\,M_T\\,m}{r^2}\\,\\vec{u}_N$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Établir $v = \\sqrt{\\frac{G M_T}{r}}$.",
+          "blocs": [
+            { "type": "texte", "texte": "**Système** : le satellite ; **référentiel** géocentrique galiléen ; une seule force. La **deuxième loi de Newton** donne :" },
+            { "type": "formule", "tex": "m\\,\\vec{a} = \\frac{G\\,M_T\\,m}{r^2}\\,\\vec{u}_N \\quad\\Rightarrow\\quad \\vec{a} = \\frac{G\\,M_T}{r^2}\\,\\vec{u}_N" },
+            { "type": "texte", "texte": "Pour un mouvement circulaire uniforme, l'accélération est centripète : $\\vec{a} = \\frac{v^2}{r}\\,\\vec{u}_N$. On identifie :" },
+            { "type": "formule", "tex": "\\frac{v^2}{r} = \\frac{G\\,M_T}{r^2} \\quad\\Rightarrow\\quad v = \\sqrt{\\frac{G\\,M_T}{r}}" },
+            { "type": "reponse", "texte": "$v = \\sqrt{\\dfrac{G\\,M_T}{r}}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Vérifier la troisième loi de Kepler.",
+          "blocs": [
+            { "type": "texte", "texte": "La période est la durée d'un tour : $T = \\frac{2\\pi r}{v}$. On élève au carré et on remplace $v^2$ :" },
+            { "type": "formule", "tex": "T^2 = \\frac{4\\pi^2 r^2}{v^2} = \\frac{4\\pi^2 r^2}{G M_T / r} = \\frac{4\\pi^2 r^3}{G\\,M_T}" },
+            { "type": "reponse", "texte": "$\\dfrac{T^2}{r^3} = \\dfrac{4\\pi^2}{G\\,M_T}$, constante qui ne dépend que de l'astre attracteur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Calculer le demi-grand axe $d$.",
+          "blocs": [
+            { "type": "texte", "texte": "Le grand axe BC passe par O : $BC = D_{OB} + D_{OC} = 2d$." },
+            { "type": "formule", "tex": "d = \\frac{D_{OB} + D_{OC}}{2} = \\frac{6{,}89 \\times 10^{6} + 8{,}07 \\times 10^{6}}{2} = 7{,}48 \\times 10^{6} \\text{ m}" },
+            { "type": "reponse", "texte": "$d = 7{,}48 \\times 10^{6} \\text{ m}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "Calculer la masse de la Terre à partir de l'orbite d'Astérix.",
+          "blocs": [
+            { "type": "formule", "tex": "T = \\frac{\\Delta t}{1\\,400} = \\frac{9{,}03 \\times 10^{6}}{1\\,400} = 6{,}45 \\times 10^{3} \\text{ s}" },
+            { "type": "texte", "texte": "De $\\frac{T^2}{d^3} = \\frac{4\\pi^2}{G M_T}$ on tire :" },
+            { "type": "formule", "tex": "M_T = \\frac{4\\pi^2 d^3}{G\\,T^2} = \\frac{4\\pi^2 \\times (7{,}48 \\times 10^{6})^3}{6{,}67 \\times 10^{-11} \\times (6{,}45 \\times 10^{3})^2} = 5{,}95 \\times 10^{24} \\text{ kg}" },
+            { "type": "reponse", "texte": "$M_T \\approx 5{,}95 \\times 10^{24} \\text{ kg}$ (la valeur de référence est $5{,}97 \\times 10^{24}$ kg)." },
+            { "type": "piege", "texte": "La durée donnée couvre 1 400 révolutions : oublier de la diviser fausse la masse d'un facteur $1\\,400^2 \\approx 2 \\times 10^{6}$." }
+          ]
+        },
+        { "type": "titre", "texte": "Mesure à l'aide d'un pendule" },
+        {
+          "type": "question",
+          "numero": "Q7",
+          "intitule": "Déterminer précisément la période du pendule.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour gagner en précision, on mesure **plusieurs périodes** : entre les maxima à $t = 0{,}5$ s et $t = 8{,}5$ s, il y a 4 périodes. (On peut aussi compter 5 périodes complètes entre 0 et 10,0 s.)" },
+            { "type": "formule", "tex": "4\\,T = 8{,}5 - 0{,}5 = 8{,}0 \\text{ s} \\quad\\Rightarrow\\quad T = 2{,}0 \\text{ s}" },
+            { "type": "reponse", "texte": "$T = 2{,}0 \\text{ s}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q8",
+          "intitule": "Calculer $g$.",
+          "blocs": [
+            { "type": "formule", "tex": "T = 2\\pi\\sqrt{\\frac{\\ell}{g}} \\quad\\Rightarrow\\quad g = \\frac{4\\pi^2\\,\\ell}{T^2} = \\frac{4\\pi^2 \\times 1{,}0}{2{,}0^2} = 9{,}9 \\text{ m·s}^{-2}" },
+            { "type": "reponse", "texte": "$g \\approx 9{,}9 \\text{ m·s}^{-2}$ (plus précisément 9,87)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q9",
+          "intitule": "En déduire la masse de la Terre.",
+          "blocs": [
+            { "type": "texte", "texte": "On égale le poids et la force gravitationnelle exercée par la Terre sur la masse $m$ du pendule, à la distance $R_T$ du centre :" },
+            { "type": "formule", "tex": "m\\,g = \\frac{G\\,M_T\\,m}{R_T^2} \\quad\\Rightarrow\\quad M_T = \\frac{g\\,R_T^2}{G} = \\frac{9{,}87 \\times (6{,}37 \\times 10^{6})^2}{6{,}67 \\times 10^{-11}} = 6{,}0 \\times 10^{24} \\text{ kg}" },
+            { "type": "reponse", "texte": "$M_T \\approx 6{,}0 \\times 10^{24} \\text{ kg}$, en accord avec la méthode du satellite ($5{,}95 \\times 10^{24}$ kg)." },
+            { "type": "piege", "texte": "$R_T$ est donné en km : convertis-le en mètres avant de l'élever au carré." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Étude de la caléfaction : mesurer l'épaisseur du coussin de vapeur par diffraction.",
+      "points": 5,
+      "minutes": 50,
+      "enBref": [
+        "Dans la zone B (100 à 180 °C), la goutte s'évapore en quelques secondes : il n'y a pas de caléfaction à étudier.",
+        "Le laser qui passe sous la goutte donne une figure de diffraction, observable quand l'espace $a$ est de l'ordre de grandeur de $\\lambda$ ou plus petit.",
+        "La géométrie donne $\\theta = L/(2D)$ et la diffraction $\\theta = \\lambda / a$, d'où $a = 2\\lambda D / L$.",
+        "Avec $L \\approx 3{,}1$ cm, on trouve $a \\approx 7 \\times 10^{-5}$ m, soit environ 70 µm."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "Q1",
+          "intitule": "Pourquoi la zone B ne présente-t-elle pas d'intérêt pour la caléfaction ?",
+          "blocs": [
+            { "type": "texte", "texte": "Figure 2 : entre 100 °C et 180 °C, la durée de vie de la goutte est quasi nulle (quelques secondes au plus), contre 90 à 140 s au-delà de 180 °C." },
+            { "type": "reponse", "texte": "Dans la zone B, la goutte se vaporise presque instantanément : elle ne flotte pas sur un coussin de vapeur, il n'y a pas de caléfaction à observer." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q2",
+          "intitule": "Nommer le phénomène observé sur la figure 4.",
+          "blocs": [
+            { "type": "reponse", "texte": "La **diffraction** de la lumière du laser par la fente étroite formée entre la goutte et la plaque : une tache centrale large et intense, encadrée de taches secondaires moins lumineuses." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q3",
+          "intitule": "Condition sur $a$ pour observer facilement le phénomène.",
+          "blocs": [
+            { "type": "reponse", "texte": "La diffraction est marquée quand la dimension de l'ouverture est **du même ordre de grandeur que la longueur d'onde, ou plus petite** : $a$ ne doit pas être très grand devant $\\lambda$ (en pratique, au plus quelques centaines de fois $\\lambda$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q4",
+          "intitule": "Montrer que $\\theta = \\frac{L}{2D}$.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur la figure 3, le triangle formé par la goutte, le centre de la tache et le bord de la tache centrale est rectangle. Le côté opposé à $\\theta$ vaut la demi-largeur $L/2$, le côté adjacent vaut $D$." },
+            { "type": "formule", "tex": "\\tan\\theta = \\frac{L/2}{D} = \\frac{L}{2D}" },
+            { "type": "reponse", "texte": "Pour un petit angle, $\\tan\\theta \\approx \\theta$ (en radians), d'où $\\theta = \\dfrac{L}{2D}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q5",
+          "intitule": "Expression de $a$.",
+          "blocs": [
+            { "type": "texte", "texte": "On égale les deux expressions de $\\theta$ :" },
+            { "type": "formule", "tex": "\\frac{\\lambda}{a} = \\frac{L}{2D} \\quad\\Rightarrow\\quad a = \\frac{\\lambda}{\\theta} = \\frac{2\\,\\lambda\\,D}{L}" },
+            { "type": "reponse", "texte": "$a = \\dfrac{\\lambda}{\\theta} = \\dfrac{2\\,\\lambda\\,D}{L}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q6",
+          "intitule": "Largeur $L$ de la tache centrale d'après la figure 5.",
+          "blocs": [
+            { "type": "texte", "texte": "La tache centrale est limitée par les **deux minima d'intensité** qui encadrent le pic principal : vers 0,121 m à gauche et vers 0,152 m à droite." },
+            { "type": "formule", "tex": "L = 0{,}152 - 0{,}121 = 3{,}1 \\times 10^{-2} \\text{ m}" },
+            { "type": "reponse", "texte": "$L \\approx 3{,}1 \\times 10^{-2} \\text{ m}$ (environ 3 cm)." },
+            { "type": "piege", "texte": "La largeur de la tache centrale se mesure entre les deux extinctions qui l'encadrent, pas à mi-hauteur du pic ni jusqu'aux pics secondaires." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q7",
+          "intitule": "Calculer l'épaisseur $a$ du coussin de vapeur.",
+          "blocs": [
+            { "type": "formule", "tex": "a = \\frac{2 \\times 532 \\times 10^{-9} \\times 2{,}00}{3{,}1 \\times 10^{-2}} = 6{,}9 \\times 10^{-5} \\text{ m}" },
+            { "type": "reponse", "texte": "$a \\approx 7 \\times 10^{-5} \\text{ m}$, soit environ 70 µm : environ 130 fois la longueur d'onde, ce qui reste compatible avec l'observation d'une diffraction nette." },
+            { "type": "astuce", "texte": "Termine toujours par un ordre de grandeur parlant : 70 µm, c'est l'épaisseur d'un cheveu. Un coussin de vapeur invisible à l'œil, mais bien mesurable par la lumière." }
+          ]
+        }
+      ]
+    }
+  ]
+}

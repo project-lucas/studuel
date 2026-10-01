@@ -24,15 +24,14 @@ import type { Subject, SubjectCategory } from '@/lib/types'
  * `specialite` parce qu'elles LE deviennent au cycle terminal) s'y retrouvaient
  * rangées à tort. On traite donc la 2de comme le collège — une grille unique.
  *
- * LA VOIE TECHNOLOGIQUE Y ÉCHAPPE AUSSI, et c'est délibéré. Elle a bien des
- * spécialités, mais elles dépendent de sa SÉRIE (STMG, STI2D, ST2S…) — que le
- * profil ne demande pas encore — et le catalogue ne lui en déclare donc aucune
- * (migration 241). Le sous-groupage lui donnerait un titre « Tronc commun »
- * seul au-dessus de sa grille, et deux sections vides : un rangement qui ne
- * range rien. Le primaire, lui, n'a jamais eu de spécialités.
+ * LA VOIE TECHNOLOGIQUE Y ENTRE depuis la migration 383, qui lui déclare ses
+ * spécialités (STMG, STI2D, ST2S, STL). Avant, le catalogue ne lui en
+ * connaissait aucune et le sous-groupage n'aurait rangé rien. Les sections
+ * vides sont retirées plus bas : sans spécialité cochée, la grille reste
+ * « Tronc commun » seul. Le primaire, lui, n'a jamais eu de spécialités.
  */
 export function usesTrackGroups(grade: string): boolean {
-  return grade === '1re' || grade === 'Tle'
+  return grade === '1re' || grade === 'Tle' || grade === '1re techno' || grade === 'Tle techno'
 }
 
 /** Sous-groupes du programme, au lycée uniquement. */

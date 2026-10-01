@@ -1,0 +1,3437 @@
+{
+  "niveau": "1re",
+  "matiere": "francais",
+  "exercices": [
+    {
+      "chapitre": "81b236ab-9380-5a11-9761-727d157acd9f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois pronoms, trois rôles",
+      "competence": "manier-langue",
+      "situation": "Tu prépares la question de grammaire de ton oral. Trois phrases courtes, trois pronoms relatifs : repère-les, puis dis le rôle de chacun.",
+      "documents": [
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois phrases",
+          "blocs": [
+            "La cousine [[p|qui]] habite à Lyon nous rend visite.",
+            "Le film [[p|que]] nous avons vu hier durait trois heures.",
+            "Voici la salle [[p|où]] se déroule l’oral."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": true,
+          "reponse": [
+            "p"
+          ],
+          "enonce": "Touche les trois pronoms relatifs du document.",
+          "aide": "Ils relient une proposition à un nom placé devant eux.",
+          "explication": "Les trois pronoms relatifs sont **qui**, **que** et **où** : chacun reprend un nom (cousine, film, salle)."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque pronom relatif à sa fonction dans la subordonnée.",
+          "paires": [
+            [
+              "qui (phrase 1)",
+              "Sujet de « habite »"
+            ],
+            [
+              "que (phrase 2)",
+              "COD de « avons vu »"
+            ],
+            [
+              "où (phrase 3)",
+              "Complément circonstanciel de lieu"
+            ]
+          ],
+          "aide": "Pose-toi la question : qui habite ? qu’est-ce que nous avons vu ?",
+          "explication": "**qui** est sujet de « habite », **que** est COD de « avons vu », **où** est complément circonstanciel de lieu."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est l’antécédent de « que » dans la phrase 2 ?",
+          "options": [
+            "film",
+            "nous",
+            "hier",
+            "trois heures"
+          ],
+          "reponse": 0,
+          "aide": "L’antécédent est le nom placé juste devant le pronom relatif.",
+          "explication": "L’antécédent est **film** : c’est le film que nous avons vu."
+        }
+      ]
+    },
+    {
+      "chapitre": "81b236ab-9380-5a11-9761-727d157acd9f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La virgule qui change tout",
+      "competence": "analyser-texte",
+      "situation": "Une seule virgule peut changer ce que dit une phrase. Trie des relatives, puis compare deux phrases presque identiques.",
+      "documents": [
+        {
+          "id": "rel",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Quatre phrases",
+          "blocs": [
+            "Mon frère, qui habite à Nantes, vient dimanche.",
+            "Les romans qui finissent mal me touchent le plus.",
+            "Paris, où nous sommes nés, a beaucoup changé.",
+            "Je cherche le livre [[d|dont]] tu m’as parlé."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        },
+        {
+          "id": "duo",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Deux versions",
+          "blocs": [
+            "A. Les touristes qui étaient fatigués sont rentrés.",
+            "B. Les touristes, qui étaient fatigués, sont rentrés."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque relative du document 1 : déterminative ou explicative ?",
+          "categories": [
+            "Déterminative",
+            "Explicative"
+          ],
+          "items": [
+            [
+              "Mon frère, qui habite à Nantes, vient dimanche.",
+              1
+            ],
+            [
+              "Les romans qui finissent mal me touchent le plus.",
+              0
+            ],
+            [
+              "Paris, où nous sommes nés, a beaucoup changé.",
+              1
+            ],
+            [
+              "Je cherche le livre dont tu m’as parlé.",
+              0
+            ]
+          ],
+          "aide": "L’explicative est détachée par des virgules et peut être supprimée.",
+          "explication": "Les relatives **entre virgules** sont explicatives ; celles qui restreignent le sens de l’antécédent, sans virgule, sont déterminatives."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque version du document 2 à son sens.",
+          "paires": [
+            [
+              "Version A (sans virgules)",
+              "Seuls les touristes fatigués sont rentrés"
+            ],
+            [
+              "Version B (avec virgules)",
+              "Tous les touristes étaient fatigués"
+            ]
+          ],
+          "aide": "Sans virgule, la relative restreint : elle trie dans le groupe.",
+          "explication": "**Sans virgules**, la relative trie : seuls les fatigués rentrent. **Avec virgules**, elle ajoute une information valable pour tous."
+        },
+        {
+          "type": "zone",
+          "document": "rel",
+          "multiple": false,
+          "reponse": [
+            "d"
+          ],
+          "enonce": "Dans le document 1, touche le pronom relatif qui complète le verbe « parler de ».",
+          "aide": "Tu dis « parler DE ce livre » : le pronom remplace un complément introduit par « de ».",
+          "explication": "C’est **dont** : il remplace « de ce livre » et complète « as parlé »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle relative du document 1 peut être supprimée sans perdre le sens de sa phrase ?",
+          "options": [
+            "qui habite à Nantes",
+            "qui finissent mal",
+            "dont tu m’as parlé",
+            "Aucune des trois"
+          ],
+          "reponse": 0,
+          "aide": "Cherche la relative détachée par des virgules.",
+          "explication": "On peut supprimer **« qui habite à Nantes »** : c’est une explicative, elle ajoute une information."
+        }
+      ]
+    },
+    {
+      "chapitre": "81b236ab-9380-5a11-9761-727d157acd9f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le notaire et sa place",
+      "competence": "analyser-texte",
+      "situation": "Une seule phrase de roman, cinq verbes, quatre pronoms relatifs : entraîne-toi à la démonter comme à l’oral, puis à dire ce qu’elle fait du personnage.",
+      "documents": [
+        {
+          "id": "notaire",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Une phrase en période",
+          "blocs": [
+            "Le vieux notaire, que tout le village saluait et dont personne ne connaissait le passé, habitait une maison qui donnait sur la [[a|place]] où se tenait le marché."
+          ],
+          "source": "Phrase écrite pour l’exercice, à la manière d’un roman"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de verbes conjugués compte cette phrase ?",
+          "reponse": 5,
+          "aide": "Les verbes sont : saluait, connaissait, habitait, donnait et un verbe pronominal.",
+          "explication": "Il y a **5** verbes conjugués (saluait, connaissait, habitait, donnait, se tenait) : donc cinq propositions."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque pronom relatif à sa fonction.",
+          "paires": [
+            [
+              "que",
+              "COD de « saluait »"
+            ],
+            [
+              "dont",
+              "Complément du nom « passé »"
+            ],
+            [
+              "qui",
+              "Sujet de « donnait »"
+            ],
+            [
+              "où",
+              "Complément circonstanciel de lieu de « se tenait »"
+            ]
+          ],
+          "aide": "Reconstitue la phrase sans relatif : tout le village saluait le notaire…",
+          "explication": "**que** = COD de saluait ; **dont** = le passé du notaire (complément du nom) ; **qui** = sujet de donnait ; **où** = lieu."
+        },
+        {
+          "type": "zone",
+          "document": "notaire",
+          "multiple": false,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Touche l’antécédent du pronom « où ».",
+          "aide": "C’est le nom placé juste devant « où ».",
+          "explication": "L’antécédent de « où » est **place**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les quatre relatives : déterminative ou explicative ?",
+          "categories": [
+            "Déterminative (sans virgule)",
+            "Explicative (entre virgules)"
+          ],
+          "items": [
+            [
+              "que tout le village saluait",
+              1
+            ],
+            [
+              "dont personne ne connaissait le passé",
+              1
+            ],
+            [
+              "qui donnait sur la place",
+              0
+            ],
+            [
+              "où se tenait le marché",
+              0
+            ]
+          ],
+          "aide": "Regarde la ponctuation autour de la relative.",
+          "explication": "Les deux relatives du notaire sont **entre virgules** (explicatives) ; celles de la maison et de la place sont **sans virgule** (déterminatives)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que nous apprennent les relatives sur le notaire ?",
+          "options": [
+            "Il est connu par le regard des autres : on le salue, on ignore son passé",
+            "Il est très riche et généreux, ce que tout le village reconnaît",
+            "Il est en colère contre tout le village et refuse de lui parler",
+            "Il raconte lui-même son passé à qui veut l’entendre, sans détour"
+          ],
+          "reponse": 0,
+          "aide": "Le personnage est décrit indirectement, par ce que les autres font de lui.",
+          "explication": "Les relatives le **caractérisent indirectement** : salué de tous, mais au passé inconnu, il reste un homme mystérieux."
+        }
+      ]
+    },
+    {
+      "chapitre": "23693833-c8df-578b-8a58-8d0b46307742",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "« Que » : relatif ou conjonction ?",
+      "competence": "manier-langue",
+      "situation": "Le petit mot « que » a plusieurs visages. Avant de le nommer à l’oral, teste s’il a un antécédent.",
+      "documents": [
+        {
+          "id": "q",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois phrases avec « que »",
+          "blocs": [
+            "Le professeur annonce [[q|que]] l’oral commencera à huit heures.",
+            "Je souhaite [[q|que]] tu réussisses.",
+            "La copie que tu rends est très soignée."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "q",
+          "multiple": true,
+          "reponse": [
+            "q"
+          ],
+          "enonce": "Touche les deux « que » qui sont des conjonctions de subordination.",
+          "aide": "Cherche un antécédent : s’il n’y en a pas, ce n’est pas un relatif.",
+          "explication": "Les **« que » des phrases 1 et 2** n’ont ni antécédent ni fonction ; celui de la phrase 3 reprend « copie » : c’est un relatif."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque phrase selon la valeur de « que ».",
+          "categories": [
+            "« que » conjonction (complétive)",
+            "« que » pronom relatif"
+          ],
+          "items": [
+            [
+              "Je sais que tu mens.",
+              0
+            ],
+            [
+              "Le livre que tu lis est beau.",
+              1
+            ],
+            [
+              "Il faut que tu partes.",
+              0
+            ],
+            [
+              "La photo que j’ai prise est floue.",
+              1
+            ]
+          ],
+          "aide": "Demande-toi : y a-t-il un nom devant « que » que le mot reprend ?",
+          "explication": "Avec un antécédent (livre, photo), « que » est **relatif** ; sans antécédent (je sais, il faut), c’est une **conjonction**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans la phrase 1, quelle est la fonction de la complétive « que l’oral commencera à huit heures » ?",
+          "options": [
+            "COD du verbe « annonce »",
+            "Sujet de « annonce »",
+            "Complément du nom « professeur »",
+            "Attribut du sujet"
+          ],
+          "reponse": 0,
+          "aide": "Le professeur annonce quoi ? On peut remplacer la subordonnée par « quelque chose ».",
+          "explication": "Le professeur annonce **quelque chose** : la complétive est **COD** de « annonce »."
+        }
+      ]
+    },
+    {
+      "chapitre": "23693833-c8df-578b-8a58-8d0b46307742",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une complétive, quatre métiers",
+      "competence": "manier-langue",
+      "situation": "Une complétive peut être sujet, attribut, COD ou complément d’un nom. Reconnais sa fonction, puis regarde le mode du verbe.",
+      "documents": [
+        {
+          "id": "fct",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Quatre phrases",
+          "blocs": [
+            "Qu’il soit venu m’étonne.",
+            "Mon souhait est qu’il guérisse.",
+            "La [[n|crainte]] qu’il échoue la ronge.",
+            "Je veux qu’il vienne."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        },
+        {
+          "id": "duo",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Deux phrases",
+          "blocs": [
+            "Je crois qu’il vient.",
+            "Je ne crois pas qu’il vienne."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque phrase à la fonction de sa complétive.",
+          "paires": [
+            [
+              "Phrase 1 : qu’il soit venu",
+              "Sujet de « étonne »"
+            ],
+            [
+              "Phrase 2 : qu’il guérisse",
+              "Attribut du sujet « souhait »"
+            ],
+            [
+              "Phrase 3 : qu’il échoue",
+              "Complément du nom « crainte »"
+            ],
+            [
+              "Phrase 4 : qu’il vienne",
+              "COD de « veux »"
+            ]
+          ],
+          "aide": "Remplace la complétive par « quelque chose » et observe la place.",
+          "explication": "Sujet (« quelque chose m’étonne »), attribut (après « est »), complément du nom (après « crainte »), COD (après « veux »)."
+        },
+        {
+          "type": "zone",
+          "document": "fct",
+          "multiple": false,
+          "reponse": [
+            "n"
+          ],
+          "enonce": "Dans la phrase 3, touche le nom que la complétive complète.",
+          "aide": "Le nom se trouve juste avant « qu’il échoue ».",
+          "explication": "La complétive complète le nom **crainte**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces amorces selon le mode qui suit.",
+          "categories": [
+            "Indicatif",
+            "Subjonctif"
+          ],
+          "items": [
+            [
+              "je sais que…",
+              0
+            ],
+            [
+              "je veux que…",
+              1
+            ],
+            [
+              "il faut que…",
+              1
+            ],
+            [
+              "je vois que…",
+              0
+            ],
+            [
+              "je doute que…",
+              1
+            ],
+            [
+              "je déclare que…",
+              0
+            ]
+          ],
+          "aide": "Déclaration, opinion, perception : indicatif. Volonté, sentiment, doute : subjonctif.",
+          "explication": "**Indicatif** après savoir, voir, déclarer ; **subjonctif** après vouloir, il faut, douter."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans le document 2, que révèle le passage de « vient » à « vienne » ?",
+          "options": [
+            "Un degré de certitude plus faible chez celui qui parle",
+            "Un changement de temps du récit, du présent au passé",
+            "Un changement de narrateur entre les deux phrases citées",
+            "Une simple variation de style, sans effet sur le sens"
+          ],
+          "reponse": 0,
+          "aide": "La négation fait basculer la complétive au subjonctif.",
+          "explication": "Le **subjonctif** après une négation dit le **doute** : celui qui parle n’est plus sûr."
+        }
+      ]
+    },
+    {
+      "chapitre": "23693833-c8df-578b-8a58-8d0b46307742",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le capitaine dans la tempête",
+      "competence": "analyser-texte",
+      "situation": "Un court récit, quatre subordonnées qui commencent presque toutes par « que » ou « si ». À toi de les nommer comme l’examinateur l’attend.",
+      "documents": [
+        {
+          "id": "mer",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le capitaine",
+          "blocs": [
+            "Le capitaine se demandait [[i|si]] l’orage passerait. Il savait que l’équipage avait peur. Il ne croyait pas qu’ils puissent tenir jusqu’à l’aube, mais il voulait qu’ils aient du courage."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mer",
+          "multiple": false,
+          "reponse": [
+            "i"
+          ],
+          "enonce": "Touche le mot qui introduit la subordonnée interrogative indirecte.",
+          "aide": "Elle répond à la question « l’orage passera-t-il ? ».",
+          "explication": "C’est **si** : « si l’orage passerait » est une interrogative indirecte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi « puissent » est-il au subjonctif ?",
+          "options": [
+            "La négation de « croyait » appelle le subjonctif : le capitaine doute",
+            "Parce que le récit est au passé et que le passé impose le subjonctif",
+            "Parce que « tenir » est un verbe d’action qui veut le subjonctif",
+            "Parce que la phrase est interrogative et appelle toujours le subjonctif"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le verbe de la principale : « ne croyait pas ».",
+          "explication": "La négation fait passer « croyait que » au **subjonctif** : le capitaine doute que l’équipage tienne."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque subordonnée à son analyse.",
+          "paires": [
+            [
+              "si l’orage passerait",
+              "Interrogative indirecte, COD de « se demandait »"
+            ],
+            [
+              "que l’équipage avait peur",
+              "Complétive COD de « savait », à l’indicatif"
+            ],
+            [
+              "qu’ils puissent tenir jusqu’à l’aube",
+              "Complétive COD de « croyait », au subjonctif (négation)"
+            ],
+            [
+              "qu’ils aient du courage",
+              "Complétive COD de « voulait », au subjonctif (volonté)"
+            ]
+          ],
+          "aide": "Nomme la subordonnée, donne sa fonction, puis le mode.",
+          "explication": "Chaque subordonnée est **COD** ; seul le **mode** change avec le sens du verbe principal."
+        },
+        {
+          "type": "choix",
+          "enonce": "Laquelle est la meilleure formulation à l’oral pour « qu’ils aient du courage » ?",
+          "options": [
+            "Complétive conjonctive, COD de « voulait », au subjonctif car elle exprime une volonté",
+            "Une subordonnée avec « que », sans plus de précision sur sa nature ni son mode",
+            "Une relative, complément de « courage », au subjonctif car elle exprime un souhait",
+            "Une circonstancielle de but, complément de « voulait », au subjonctif après « que »"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la formule complète : nature, fonction, mode.",
+          "explication": "La bonne formule donne la **nature**, la **fonction** et la **raison du mode**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e30f66ef-4568-58bd-b96b-54ef8abd1d95",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quand, puisque, afin que",
+      "competence": "manier-langue",
+      "situation": "Trois phrases, trois circonstancielles. Repère les mots qui les introduisent, puis dis le rapport qu’elles expriment.",
+      "documents": [
+        {
+          "id": "circ",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois phrases",
+          "blocs": [
+            "[[c|Quand]] la cloche sonne, les élèves sortent en rang.",
+            "Nous restons à la maison [[c|puisque]] la route est fermée.",
+            "Elle révise chaque soir [[c|afin]] [[c|que]] ses parents soient fiers."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "circ",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche les mots qui introduisent les subordonnées circonstancielles (la dernière locution compte deux mots).",
+          "aide": "Ce sont des conjonctions de subordination placées au début de chaque subordonnée.",
+          "explication": "Les subordonnants sont **quand**, **puisque** et la locution **afin que**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque conjonction au rapport qu’elle exprime.",
+          "paires": [
+            [
+              "quand",
+              "Le temps"
+            ],
+            [
+              "puisque",
+              "La cause"
+            ],
+            [
+              "afin que",
+              "Le but"
+            ]
+          ],
+          "aide": "Pose les questions : quand ? pourquoi ? dans quel but ?",
+          "explication": "**quand** = temps, **puisque** = cause, **afin que** = but."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans la phrase 3, pourquoi « soient » est-il au subjonctif ?",
+          "options": [
+            "Le but n’est pas encore réalisé au moment où l’on parle",
+            "Parce que la phrase est au passé, donc au subjonctif",
+            "Parce que la phrase est négative, donc au subjonctif",
+            "Par simple habitude de la langue, sans raison de sens"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que signifie un but : on veut l’atteindre.",
+          "explication": "Le but est **à venir**, non réalisé : il se dit au **subjonctif**."
+        }
+      ]
+    },
+    {
+      "chapitre": "e30f66ef-4568-58bd-b96b-54ef8abd1d95",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Si j’avais su…",
+      "competence": "manier-langue",
+      "situation": "Le petit mot « si » dessine trois mondes : ce qui est possible, ce qui ne l’est pas, ce qui n’est plus possible. Puis repère une concession.",
+      "documents": [
+        {
+          "id": "hyp",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois hypothèses",
+          "blocs": [
+            "Si je pars tôt, j’arriverai à l’heure.",
+            "Si je partais tôt, j’arriverais à l’heure.",
+            "Si j’étais parti tôt, je serais arrivé à l’heure."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        },
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois phrases de plaidoyer",
+          "blocs": [
+            "[[k|Bien]] [[k|que]] le chemin soit long, il marche jusqu’au soir.",
+            "Puisque tu insistes, je reste.",
+            "Si j’avais su, je serais venu plus tôt."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque phrase du document 1 à sa valeur.",
+          "paires": [
+            [
+              "Si je pars tôt, j’arriverai à l’heure.",
+              "Potentiel : la chose est possible"
+            ],
+            [
+              "Si je partais tôt, j’arriverais à l’heure.",
+              "Irréel du présent"
+            ],
+            [
+              "Si j’étais parti tôt, je serais arrivé à l’heure.",
+              "Irréel du passé"
+            ]
+          ],
+          "aide": "Regarde les temps : présent + futur, imparfait + conditionnel, plus-que-parfait + conditionnel passé.",
+          "explication": "Présent + futur : **potentiel** ; imparfait + conditionnel présent : **irréel du présent** ; plus-que-parfait + conditionnel passé : **irréel du passé**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase à l’irréel du passé.",
+          "texte": "Si nous ___ plus tôt, nous ___ à l’heure.",
+          "reponses": [
+            [
+              "étions partis"
+            ],
+            [
+              "serions arrivés"
+            ]
+          ],
+          "banque": [
+            "étions partis",
+            "serions arrivés",
+            "partions",
+            "arriverions",
+            "partirons",
+            "arriverons"
+          ],
+          "aide": "Plus-que-parfait dans la subordonnée, conditionnel passé dans la principale.",
+          "explication": "On écrit « Si nous **étions partis** plus tôt, nous **serions arrivés** à l’heure » : jamais de conditionnel après le « si » de condition."
+        },
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": true,
+          "reponse": [
+            "k"
+          ],
+          "enonce": "Dans le document 2, touche la locution de concession.",
+          "aide": "Elle exprime une opposition malgré laquelle l’action a lieu, et se construit avec le subjonctif.",
+          "explication": "La locution est **bien que** : le chemin est long, et pourtant il marche."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que trahit « Si j’avais su, je serais venu plus tôt » ?",
+          "options": [
+            "Le regret",
+            "Une promesse",
+            "Une menace",
+            "Une habitude"
+          ],
+          "reponse": 0,
+          "aide": "Une chose non réalisée dans le passé, qu’on ne peut plus changer.",
+          "explication": "L’irréel du passé dit le **regret** : on aurait voulu agir autrement."
+        }
+      ]
+    },
+    {
+      "chapitre": "e30f66ef-4568-58bd-b96b-54ef8abd1d95",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’accusé prend la parole",
+      "competence": "argumenter",
+      "situation": "Un accusé se défend en deux phrases. À l’oral, il faudrait nommer chaque subordonnée, puis dire ce qu’elle fait du discours.",
+      "documents": [
+        {
+          "id": "plaid",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Le plaidoyer",
+          "blocs": [
+            "Puisque vous m’accusez, je parlerai, bien que j’aie peur, pour que justice soit faite.",
+            "Si j’avais menti, je n’aurais pas osé venir ici."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de verbes conjugués compte la première phrase ?",
+          "reponse": 4,
+          "aide": "Compte : accusez, parlerai, aie, soit faite.",
+          "explication": "Il y a **4** verbes conjugués : donc une principale et trois subordonnées."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque subordonnée à son rapport.",
+          "paires": [
+            [
+              "puisque vous m’accusez",
+              "Cause"
+            ],
+            [
+              "bien que j’aie peur",
+              "Concession"
+            ],
+            [
+              "pour que justice soit faite",
+              "But"
+            ],
+            [
+              "si j’avais menti",
+              "Condition (irréel du passé)"
+            ]
+          ],
+          "aide": "Repère la conjonction : elle dit le rapport.",
+          "explication": "**puisque** = cause ; **bien que** = concession ; **pour que** = but ; **si** = condition."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait la concessive « bien que j’aie peur » dans le discours ?",
+          "options": [
+            "Elle anticipe l’objection : il avoue sa peur avant qu’on la lui reproche",
+            "Elle accélère le récit en résumant les faits que l’accusé a vécus",
+            "Elle indique un changement de lieu, de la salle au lieu du crime",
+            "Elle marque un retour en arrière vers les faits reprochés à l’accusé"
+          ],
+          "reponse": 0,
+          "aide": "C’est la seconde étape de l’analyse : interpréter.",
+          "explication": "La concessive **anticipe l’objection** : c’est ce que rapporte la seconde étape (l’interprétation)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Dans la phrase 2, le plus-que-parfait de la subordonnée appelle le conditionnel ___ dans la principale.",
+          "reponses": [
+            [
+              "passé"
+            ]
+          ],
+          "banque": [
+            "passé",
+            "présent",
+            "futur",
+            "imparfait"
+          ],
+          "aide": "Le système hypothétique se joue dans la principale.",
+          "explication": "Plus-que-parfait + conditionnel **passé** : c’est l’irréel du passé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit l’ensemble de ces subordonnées de la manière dont parle l’accusé ?",
+          "options": [
+            "Il se justifie avec méthode : cause, concession, but, hypothèse",
+            "Il s’emporte et enchaîne ses arguments sans ordre ni méthode",
+            "Il raconte longuement un souvenir d’enfance sans lien avec l’affaire",
+            "Il refuse de répondre et se contente de nier sans argument"
+          ],
+          "reponse": 0,
+          "aide": "Observe l’enchaînement des rapports logiques.",
+          "explication": "Les subordonnées forment un **raisonnement** : accusation, concession, but, hypothèse."
+        }
+      ]
+    },
+    {
+      "chapitre": "64bb365c-d4df-5458-8f9b-f559ca493f9a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un quatrain à scander",
+      "competence": "analyser-texte",
+      "situation": "Voici un quatrain écrit pour l’exercice. Avant de l’interpréter, apprends à décrire sa forme : rimes, richesse, mesure.",
+      "documents": [
+        {
+          "id": "quat",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Matin de plage",
+          "blocs": [
+            "Nous marchons vers la mer au lever du soleil,",
+            "Le sable est froid encor sous nos pieds fatigués,",
+            "Et les oiseaux chantaient, libres et rassurés.",
+            "Un ciel pâle s’étire et la mer [[r|s’émerveille]]."
+          ],
+          "source": "Quatrain écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Comment s’appellent les rimes de ce quatrain (soleil / fatigués / rassurés / s’émerveille) ?",
+          "options": [
+            "Rimes embrassées (ABBA)",
+            "Rimes croisées (ABAB)",
+            "Rimes plates (AABB)",
+            "Rimes suivies"
+          ],
+          "reponse": 0,
+          "aide": "Note les sons finals : A, B, B, A.",
+          "explication": "Les rimes suivent le schéma A B B A : ce sont des **rimes embrassées**."
+        },
+        {
+          "type": "zone",
+          "document": "quat",
+          "multiple": false,
+          "reponse": [
+            "r"
+          ],
+          "enonce": "Touche le mot qui rime avec « soleil » au vers 1.",
+          "aide": "Cherche dans le dernier vers un son final proche de « soleil ».",
+          "explication": "Le mot est **s’émerveille** : « soleil » et « émerveille » riment (les deux A)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de syllabes compte le vers 1 (aucun e muet à compter) ?",
+          "reponse": 12,
+          "aide": "Découpe : Nous / mar / chons / vers / la / mer…",
+          "explication": "Nous-mar-chons-vers-la-mer | au-le-ver-du-so-leil : **12** syllabes, c’est un alexandrin avec césure après « mer »."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque couple de mots à la richesse de sa rime.",
+          "paires": [
+            [
+              "vie / ici",
+              "Rime pauvre : un son commun"
+            ],
+            [
+              "été / beauté",
+              "Rime suffisante : deux sons communs"
+            ],
+            [
+              "cheval / rival",
+              "Rime riche : trois sons communs ou plus"
+            ]
+          ],
+          "aide": "Compte les sons identiques à la fin des deux mots.",
+          "explication": "**vie / ici** [i] : pauvre ; **été / beauté** [te] : suffisante ; **cheval / rival** [val] : riche."
+        }
+      ]
+    },
+    {
+      "chapitre": "64bb365c-d4df-5458-8f9b-f559ca493f9a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les sens se répondent",
+      "competence": "analyser-texte",
+      "situation": "Quatre vers célèbres de Baudelaire. Repère ce qui se répond, nomme la figure, puis explique l’effet comme à l’oral.",
+      "documents": [
+        {
+          "id": "corr",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Correspondances (extrait)",
+          "blocs": [
+            "Comme de longs échos qui de loin se confondent",
+            "Dans une ténébreuse et profonde unité,",
+            "Vaste comme la nuit et comme la clarté,",
+            "Les [[s|parfums]], les [[s|couleurs]] et les [[s|sons]] se répondent."
+          ],
+          "source": "Charles Baudelaire, Les Fleurs du mal, « Correspondances » (1857), vers 5 à 8"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "corr",
+          "multiple": true,
+          "reponse": [
+            "s"
+          ],
+          "enonce": "Touche les trois mots qui désignent des sensations de sens différents.",
+          "aide": "L’odorat, la vue, l’ouïe.",
+          "explication": "Les trois sensations sont **parfums**, **couleurs** et **sons** : elles « se répondent »."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque procédé à son effet.",
+          "paires": [
+            [
+              "Comparaison (« comme la nuit »)",
+              "Rapproche deux réalités pour les éclairer"
+            ],
+            [
+              "Synesthésie",
+              "Fait se répondre des sensations de sens différents"
+            ],
+            [
+              "Rimes embrassées (ABBA)",
+              "Referment le quatrain sur lui-même"
+            ]
+          ],
+          "aide": "Nommer ne suffit pas : pense à l’effet produit.",
+          "explication": "La **comparaison** rapproche, la **synesthésie** mêle les sens, les **rimes embrassées** referment le quatrain."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle interprétation nomme la figure ET en tire un sens ?",
+          "options": [
+            "La synesthésie unit le monde que le poète déchiffre : les sensations se répondent",
+            "C’est une synesthésie, donc une figure de style qui mélange des sensations",
+            "Baudelaire aime les parfums et les évoque pour le plaisir de les décrire",
+            "Le vers est un alexandrin, donc une forme fixe très régulière à l’oreille"
+          ],
+          "reponse": 0,
+          "aide": "À l’oral, une figure repérée doit être suivie d’un effet et d’une interprétation.",
+          "explication": "La bonne réponse **nomme puis interprète** : le monde est une unité que le poète déchiffre."
+        }
+      ]
+    },
+    {
+      "chapitre": "64bb365c-d4df-5458-8f9b-f559ca493f9a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux siècles de poèmes",
+      "competence": "se-reperer-temps",
+      "situation": "Trois œuvres du programme, quelques repères : place les œuvres dans le temps, rattache-les à leur parcours et à leur moment.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Quatre recueils",
+          "debut": 1850,
+          "fin": 2050,
+          "pas": 50,
+          "periodes": [],
+          "evenements": [
+            {
+              "id": "rim",
+              "date": 1870,
+              "nom": "Cahiers de Douai"
+            },
+            {
+              "id": "apo",
+              "date": 1913,
+              "nom": "Alcools"
+            },
+            {
+              "id": "pon",
+              "date": 1952,
+              "nom": "La rage (Ponge)"
+            },
+            {
+              "id": "dor",
+              "date": 2021,
+              "nom": "Mes forêts"
+            }
+          ],
+          "source": "Rimbaud (copie de 1870) ; Apollinaire (1913) ; Ponge (1952) ; Dorion (2021)"
+        },
+        {
+          "id": "prog",
+          "type": "tableau",
+          "titre": "Trois œuvres au programme",
+          "colonnes": [
+            "Auteur",
+            "Œuvre"
+          ],
+          "lignes": [
+            [
+              "Arthur Rimbaud",
+              "Les Cahiers de Douai"
+            ],
+            [
+              "Francis Ponge",
+              "La rage de l’expression"
+            ],
+            [
+              "Hélène Dorion",
+              "Mes forêts"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "multiple": false,
+          "reponse": [
+            "dor"
+          ],
+          "enonce": "Sur la frise, touche l’œuvre qui est la première d’une autrice vivante inscrite au programme.",
+          "aide": "C’est la plus récente des quatre.",
+          "explication": "C’est **Mes forêts** (2021), d’Hélène Dorion."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets ces moments de la poésie dans l’ordre chronologique.",
+          "items": [
+            "Le romantisme (Hugo, Lamartine)",
+            "Le symbolisme et la modernité (Baudelaire, Rimbaud, Mallarmé)",
+            "Le poème-atelier de Ponge",
+            "La traversée intime du monde naturel de Dorion"
+          ],
+          "aide": "Du XIXe siècle jusqu’au XXIe.",
+          "explication": "Ordre : **romantisme, symbolisme et modernité, Ponge, Dorion**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque œuvre du document 2 à son parcours.",
+          "paires": [
+            [
+              "Les Cahiers de Douai",
+              "Émancipations créatrices"
+            ],
+            [
+              "La rage de l’expression",
+              "Dans l’atelier du poète"
+            ],
+            [
+              "Mes forêts",
+              "La poésie, la nature, l’intime"
+            ]
+          ],
+          "aide": "Chaque parcours résume le fil de lecture de l’œuvre.",
+          "explication": "**Cahiers de Douai** : émancipations créatrices ; **La rage de l’expression** : dans l’atelier du poète ; **Mes forêts** : la poésie, la nature, l’intime."
+        },
+        {
+          "type": "choix",
+          "enonce": "Laquelle de ces phrases d’oral nomme un procédé ET l’interprète ?",
+          "options": [
+            "« L’allitération en [s] fait entendre le vent : le poème devient sensation. »",
+            "« Il y a une allitération en [s] qui revient plusieurs fois dans les deux strophes. »",
+            "« C’est une figure de style très utilisée en poésie, ce qui donne du rythme. »",
+            "« Le poète a écrit ce texte très jeune, et cela se voit à son style. »"
+          ],
+          "reponse": 0,
+          "aide": "Cherche la phrase qui donne un effet, pas seulement un nom.",
+          "explication": "Il faut **nommer puis interpréter** : seule la première phrase le fait."
+        }
+      ]
+    },
+    {
+      "chapitre": "41813cdd-0691-5f2e-a3ec-b78150d1191c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sensation, le poème de la fugue",
+      "competence": "analyser-texte",
+      "situation": "Le poème le plus célèbre de la veine « fugue » : un adolescent rêve de marcher dans la nature. Relis, repère, range.",
+      "documents": [
+        {
+          "id": "sens",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Sensation",
+          "blocs": [
+            "Par les soirs bleus d’été, j’irai dans les sentiers,",
+            "Picoté par les blés, fouler l’herbe menue :",
+            "Rêveur, j’en sentirai la fraîcheur à mes pieds.",
+            "Je laisserai le vent baigner ma tête nue.",
+            "",
+            "Je ne parlerai pas, je ne penserai rien :",
+            "Mais l’amour infini me montera dans l’âme,",
+            "Et j’irai loin, bien loin, comme un [[b|bohémien]],",
+            "Par la Nature, — heureux comme avec une femme."
+          ],
+          "source": "Arthur Rimbaud, « Sensation » (1870), Cahiers de Douai"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sens",
+          "multiple": false,
+          "reponse": [
+            "b"
+          ],
+          "enonce": "Touche le mot qui compare le poète à un vagabond.",
+          "aide": "Il est au vers 7, après « comme un ».",
+          "explication": "Le mot est **bohémien** : le poète se rêve en vagabond."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque strophe à ce qu’elle met en scène.",
+          "paires": [
+            [
+              "Strophe 1",
+              "Le corps qui marche et sent : sentiers, blés, fraîcheur, vent"
+            ],
+            [
+              "Strophe 2",
+              "Le silence, l’amour infini et la fuite loin avec la Nature"
+            ]
+          ],
+          "aide": "Regarde ce qui domine : les gestes du corps, puis l’élan vers l’infini.",
+          "explication": "La **strophe 1** dit les sensations du corps ; la **strophe 2** le silence, l’amour infini et la fuite."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel temps domine dans le poème, et que dit-il ?",
+          "options": [
+            "Le futur : le poète rêve une fugue qu’il n’a pas encore faite",
+            "Le passé simple : il raconte une fugue qu’il a déjà faite",
+            "L’imparfait : il décrit une habitude de promenade du poète",
+            "Le présent : il décrit ce qu’il voit en train de marcher"
+          ],
+          "reponse": 0,
+          "aide": "Relève « j’irai », « je sentirai », « je laisserai ».",
+          "explication": "Le **futur** projette un rêve : la fugue est promesse, pas encore vécue."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces poèmes selon la veine du recueil.",
+          "categories": [
+            "Fugue et sensation",
+            "Satire politique et sociale",
+            "Provocation et corps"
+          ],
+          "items": [
+            [
+              "Sensation",
+              0
+            ],
+            [
+              "Ma Bohème",
+              0
+            ],
+            [
+              "Rages de Césars",
+              1
+            ],
+            [
+              "Le Forgeron",
+              1
+            ],
+            [
+              "Vénus Anadyomène",
+              2
+            ],
+            [
+              "Les Reparties de Nina",
+              2
+            ]
+          ],
+          "aide": "Trois veines : la nature qui remplace la maison, le pouvoir attaqué, la beauté retournée.",
+          "explication": "**Sensation** et **Ma Bohème** : fugue ; **Rages de Césars** et **Le Forgeron** : satire ; **Vénus Anadyomène** et **Les Reparties de Nina** : provocation."
+        }
+      ]
+    },
+    {
+      "chapitre": "41813cdd-0691-5f2e-a3ec-b78150d1191c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La chute du Dormeur du val",
+      "competence": "analyser-texte",
+      "situation": "Treize vers de nature riante, puis la chute. Observe le dernier tercet : comment Rimbaud retarde la révélation.",
+      "documents": [
+        {
+          "id": "dorm",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Le Dormeur du val (dernier tercet)",
+          "blocs": [
+            "Les parfums ne font pas frissonner sa narine ;",
+            "Il dort dans le soleil, la main sur sa poitrine,",
+            "[[q|Tranquille]]. Il a [[t|deux]] [[t|trous]] [[t|rouges]] au côté droit."
+          ],
+          "source": "Arthur Rimbaud, « Le Dormeur du val » (1870), Cahiers de Douai"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dorm",
+          "multiple": false,
+          "reponse": [
+            "q"
+          ],
+          "enonce": "Touche le mot rejeté au début du dernier vers, juste avant la chute.",
+          "aide": "C’est un adjectif isolé par un point.",
+          "explication": "C’est **Tranquille** : ce rejet isole un mot calme juste avant la révélation."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produit ce rejet ?",
+          "options": [
+            "Il installe un calme trompeur qui prépare la chute",
+            "Il accélère le rythme du vers pour traduire l’action",
+            "Il exprime la colère violente du poète contre la guerre",
+            "Il marque une négation qui contredit le vers précédent"
+          ],
+          "reponse": 0,
+          "aide": "Le mot dit la paix, mais il est suivi d’un point.",
+          "explication": "Le rejet **suspend** la phrase : le calme apparent rend la chute plus violente."
+        },
+        {
+          "type": "zone",
+          "document": "dorm",
+          "multiple": true,
+          "reponse": [
+            "t"
+          ],
+          "enonce": "Touche les trois mots qui révèlent que le soldat est mort.",
+          "aide": "Un chiffre, un nom et un adjectif de couleur.",
+          "explication": "Ce sont **deux trous rouges** : les blessures que le soldat porte au côté droit."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les mouvements du poème dans l’ordre.",
+          "items": [
+            "Un val lumineux où chante une rivière",
+            "Un jeune soldat étendu dans l’herbe",
+            "Le soldat dort : la Nature est priée de le bercer",
+            "La chute : les deux trous rouges au côté droit"
+          ],
+          "aide": "Du décor vers le personnage, puis la révélation.",
+          "explication": "Le poème va du **décor** au **soldat**, puis à l’**appel à la Nature**, enfin à la **chute**."
+        }
+      ]
+    },
+    {
+      "chapitre": "41813cdd-0691-5f2e-a3ec-b78150d1191c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une triple émancipation",
+      "competence": "argumenter",
+      "situation": "Sujet de dissertation : comment le parcours « émancipations créatrices » se construit-il ? Range les exemples, complète le plan, trouve le fil.",
+      "documents": [
+        {
+          "id": "sujet",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Sujet de dissertation",
+          "blocs": [
+            "Dans les Cahiers de Douai, le poème est-il pour Rimbaud un lieu de liberté ?"
+          ],
+          "source": "Sujet écrit pour l’exercice"
+        },
+        {
+          "id": "plan",
+          "type": "tableau",
+          "titre": "Le plan : contre quoi, de qui",
+          "colonnes": [
+            "Contre quoi",
+            "De qui"
+          ],
+          "lignes": [
+            [
+              "La famille et la province",
+              "L’adolescent"
+            ],
+            [
+              "L’ordre impérial et clérical",
+              "Le citoyen"
+            ],
+            [
+              "Les formes héritées",
+              "Le poète"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Range chaque exemple dans la bonne partie du plan.",
+          "categories": [
+            "L’adolescent",
+            "Le citoyen",
+            "Le poète"
+          ],
+          "items": [
+            [
+              "La fugue à pied loin de Charleville",
+              0
+            ],
+            [
+              "La nature qui remplace la maison",
+              0
+            ],
+            [
+              "La satire des Césars et du pouvoir",
+              1
+            ],
+            [
+              "La critique de l’Église et de l’armée",
+              1
+            ],
+            [
+              "Les enjambements violents dans un sonnet régulier",
+              2
+            ],
+            [
+              "Le mot familier glissé dans un moule noble",
+              2
+            ]
+          ],
+          "aide": "Famille et province / ordre impérial et clérical / formes héritées.",
+          "explication": "Chaque exemple illustre une **émancipation** : celle de l’adolescent, du citoyen ou du poète."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le plan.",
+          "texte": "I. L’___ qui fuit sa famille ; II. Le ___ qui s’en prend à l’ordre impérial ; III. Le ___ qui bouscule les formes héritées.",
+          "reponses": [
+            [
+              "adolescent"
+            ],
+            [
+              "citoyen"
+            ],
+            [
+              "poète"
+            ]
+          ],
+          "banque": [
+            "adolescent",
+            "citoyen",
+            "poète",
+            "soldat",
+            "professeur"
+          ],
+          "aide": "Reprends le tableau du document 2.",
+          "explication": "Le plan suit la **triple émancipation** : **adolescent, citoyen, poète**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel fil relie ces trois émancipations ?",
+          "options": [
+            "La sensation : le monde est d’abord senti avant d’être pensé",
+            "La nostalgie de l’enfance, que le poète regrette dans chaque poème",
+            "Le retour à la tradition classique, que le poète retrouve peu à peu",
+            "Le refus de toute forme de poésie, jugée inutile par le poète"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la marche, au corps, à la nature dans les poèmes de fugue.",
+          "explication": "Le fil est la **sensation** : le poème libère d’abord le corps et les sens."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ne faut-il pas chercher une progression narrative dans le recueil ?",
+          "options": [
+            "Rimbaud n’a pas composé ce recueil : ce sont des poèmes recopiés à Douai",
+            "Parce que les poèmes sont tous écrits en prose et non en vers",
+            "Parce qu’ils ont tous été publiés et écrits après la mort du poète",
+            "Parce qu’ils n’ont aucun thème commun ni aucune unité d’inspiration"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’origine du recueil.",
+          "explication": "Les poèmes ont été **recopiés** chez Demeny : ce sont des textes de fugue, pas un récit composé."
+        }
+      ]
+    },
+    {
+      "chapitre": "1028abbf-0773-5eb2-8eb1-452e4f363721",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Fiche d’identité d’un carnet",
+      "competence": "analyser-document",
+      "situation": "La rage de l’expression ne ressemble à aucun autre recueil. Lis sa carte d’identité, calcule, puis trouve ce que cherche Ponge.",
+      "documents": [
+        {
+          "id": "id",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "La rage de l’expression",
+          "sousTitre": "Francis Ponge",
+          "emoji": "📓",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Écrit de 1938 à 1944"
+            },
+            {
+              "texte": "Publié en 1952"
+            },
+            {
+              "texte": "Sept ensembles de carnets"
+            },
+            {
+              "texte": "Parcours : dans l’atelier du poète"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice"
+        },
+        {
+          "id": "sept",
+          "type": "tableau",
+          "titre": "Les sept ensembles",
+          "colonnes": [
+            "Titre"
+          ],
+          "lignes": [
+            [
+              "Berges de la Loire"
+            ],
+            [
+              "Le Carnet du bois de pins"
+            ],
+            [
+              "La Mounine"
+            ],
+            [
+              "L’Œillet"
+            ],
+            [
+              "La Guêpe"
+            ],
+            [
+              "Le Mimosa"
+            ],
+            [
+              "Notes prises pour un oiseau"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Liste donnée par le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la fin de l’écriture de la publication ?",
+          "reponse": 8,
+          "aide": "Soustrais 1944 de 1952.",
+          "explication": "1952 − 1944 = **8** ans."
+        },
+        {
+          "type": "zone",
+          "document": "sept",
+          "multiple": false,
+          "reponse": [
+            "r6c0"
+          ],
+          "enonce": "Touche l’ensemble consacré à un oiseau.",
+          "aide": "Le mot « oiseau » est dans le titre.",
+          "explication": "C’est **Notes prises pour un oiseau**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque idée à ce qu’elle dit.",
+          "paires": [
+            [
+              "Le lyrisme romantique",
+              "La chose est un miroir des sentiments du poète"
+            ],
+            [
+              "Ponge",
+              "La chose est un défi posé au langage"
+            ],
+            [
+              "Le mot « rage »",
+              "L’acharnement du poète à reprendre son texte"
+            ]
+          ],
+          "aide": "Pense au « parti pris des choses ».",
+          "explication": "Pour le lyrisme, la chose est un **miroir** ; pour Ponge, un **défi** ; « rage » dit l’**acharnement**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un poète qui date ses séances, rature et avoue ses échecs : que montre-t-il ?",
+          "options": [
+            "Le poème comme processus plutôt que comme résultat",
+            "Un poème déjà achevé et parfait dès le premier jet",
+            "Un journal intime sentimental où il confie ses amours",
+            "Une imitation fidèle des poètes romantiques du siècle"
+          ],
+          "reponse": 0,
+          "aide": "L’échec est intégré à l’œuvre.",
+          "explication": "Il montre le **poème en train de se faire** : le processus compte plus que le résultat."
+        }
+      ]
+    },
+    {
+      "chapitre": "1028abbf-0773-5eb2-8eb1-452e4f363721",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une page du carnet de l’atelier",
+      "competence": "analyser-texte",
+      "situation": "Voici une page imaginée à la manière d’un carnet d’atelier. Repère ce qui la rend « pongienne », sans jamais chercher le miroir des sentiments.",
+      "documents": [
+        {
+          "id": "brouillon",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Mardi 3 mars",
+          "blocs": [
+            "Le galet. Première définition : le galet est un œuf de pierre. Non : trop joli, trop humain. Je [[r|barre]]. Seconde définition : le galet est ce que la mer a fini de dire. Non plus : c’est moi qui parle, pas le galet. Je [[r|reprends]] demain, le dictionnaire ouvert."
+          ],
+          "source": "Brouillon écrit pour l’exercice, à la manière d’un carnet d’atelier"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "brouillon",
+          "multiple": true,
+          "reponse": [
+            "r"
+          ],
+          "enonce": "Touche les deux verbes qui disent que l’auteur corrige et recommence.",
+          "aide": "Il rature, puis il revient au travail le lendemain.",
+          "explication": "Les verbes sont **barre** et **reprends** : le poète recommence."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque trait : atelier de Ponge ou lyrisme romantique ?",
+          "categories": [
+            "Écriture d’atelier",
+            "Lyrisme romantique"
+          ],
+          "items": [
+            [
+              "Une séance datée",
+              0
+            ],
+            [
+              "Une définition rayée",
+              0
+            ],
+            [
+              "Le dictionnaire ouvert",
+              0
+            ],
+            [
+              "Le galet est le miroir de ma tristesse",
+              1
+            ],
+            [
+              "Je dis mon chagrin à la mer",
+              1
+            ]
+          ],
+          "aide": "Atelier : dates, ratures, dictionnaire. Lyrisme : les sentiments du « je ».",
+          "explication": "Dates, ratures, dictionnaire : **atelier**. Confidences et miroir de la tristesse : **lyrisme**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’auteur rejette-t-il « un œuf de pierre » ?",
+          "options": [
+            "L’image est trop jolie et trop humaine : elle n’est pas fidèle à l’objet",
+            "Parce qu’elle est trop compliquée pour un lecteur pressé de comprendre",
+            "Parce qu’elle est trop scientifique et trop éloignée du langage courant",
+            "Parce qu’elle est recopiée telle quelle dans un dictionnaire de la langue"
+          ],
+          "reponse": 0,
+          "aide": "Relis : « trop joli, trop humain ».",
+          "explication": "Ponge refuse d’**humaniser** et d’embellir : il veut se laisser corriger par l’objet."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Pour Ponge, le poème n’est plus un ___ mais un ___.",
+          "reponses": [
+            [
+              "résultat"
+            ],
+            [
+              "processus"
+            ]
+          ],
+          "banque": [
+            "résultat",
+            "processus",
+            "message",
+            "chant"
+          ],
+          "aide": "Pense au mot « atelier ».",
+          "explication": "Le poème n’est plus un **résultat** mais un **processus**."
+        }
+      ]
+    },
+    {
+      "chapitre": "1028abbf-0773-5eb2-8eb1-452e4f363721",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Ponge et Dorion face à face",
+      "competence": "argumenter",
+      "situation": "La comparaison entre les deux œuvres est le meilleur angle de dissertation. Lis le tableau, trie les traits, complète la formule.",
+      "documents": [
+        {
+          "id": "comp",
+          "type": "tableau",
+          "titre": "Deux œuvres, deux manières",
+          "colonnes": [
+            "",
+            "La rage de l’expression",
+            "Mes forêts"
+          ],
+          "lignes": [
+            [
+              "Forme",
+              "Brouillons, prose et vers, notes",
+              "Vers libres, peu de ponctuation, blancs"
+            ],
+            [
+              "La chose",
+              "Un défi posé au langage",
+              "Un double du sujet"
+            ],
+            [
+              "Le « je »",
+              "Un « je » technicien, ouvrier au travail",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tableau écrit pour l’exercice"
+        },
+        {
+          "id": "sujet",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Sujet de dissertation",
+          "blocs": [
+            "Le poème peut-il dire le monde sans le transformer en miroir du moi ?"
+          ],
+          "source": "Sujet écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que met-on à la place du « ? » pour Dorion ?",
+          "options": [
+            "Un « je » fait de nature, qui se dit en décrivant le paysage",
+            "Un « je » de technicien, qui date ses séances et note ses ratures",
+            "Un « je » absent du texte, qui laisse parler seul l’objet décrit",
+            "Un « je » politique et militant, qui s’adresse à ses concitoyens"
+          ],
+          "reponse": 0,
+          "aide": "Pour Dorion, le paysage est intérieur autant qu’extérieur.",
+          "explication": "Chez Dorion, le poème montre un moi **fait de nature**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque trait selon l’œuvre.",
+          "categories": [
+            "Ponge",
+            "Dorion"
+          ],
+          "items": [
+            [
+              "Écrit avec le Littré ouvert",
+              0
+            ],
+            [
+              "Publie les brouillons et les reprises",
+              0
+            ],
+            [
+              "Vers libres, presque sans ponctuation",
+              1
+            ],
+            [
+              "La forêt est un double du sujet",
+              1
+            ],
+            [
+              "Définitions successives dont aucune n’est la bonne",
+              0
+            ],
+            [
+              "Blancs typographiques nombreux",
+              1
+            ]
+          ],
+          "aide": "Atelier et dictionnaire / silence et paysage intérieur.",
+          "explication": "Dictionnaire, brouillons, définitions : **Ponge** ; vers libres, blancs, forêt double du sujet : **Dorion**."
+        },
+        {
+          "type": "zone",
+          "document": "comp",
+          "multiple": false,
+          "reponse": [
+            "r1c1"
+          ],
+          "enonce": "Touche la case qui dit le rapport de Ponge à la chose.",
+          "aide": "Dans la ligne « La chose », colonne de Ponge.",
+          "explication": "C’est la case **« Un défi posé au langage »**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Le poème n’est plus un ___ mais un processus, et le lecteur est placé dans l’___ du poète.",
+          "reponses": [
+            [
+              "résultat"
+            ],
+            [
+              "atelier"
+            ]
+          ],
+          "banque": [
+            "résultat",
+            "atelier",
+            "message",
+            "salon"
+          ],
+          "aide": "Pense au parcours associé à Ponge.",
+          "explication": "Le poème n’est plus un **résultat** : le lecteur entre dans l’**atelier** du poète."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel angle de dissertation ce tableau prépare-t-il le mieux ?",
+          "options": [
+            "Ponge refuse le miroir des sentiments ; Dorion renouvelle le lyrisme",
+            "Les deux poètes racontent leur vie et leurs sentiments de la même façon",
+            "Les deux poètes écrivent surtout en alexandrins, à la rime riche",
+            "Ponge et Dorion sont tous les deux des poètes romantiques du XIXe siècle"
+          ],
+          "reponse": 0,
+          "aide": "Compare la place du moi et de la chose.",
+          "explication": "La comparaison éclaire deux manières de **dire le monde** : refuser le lyrisme, ou le renouveler."
+        }
+      ]
+    },
+    {
+      "chapitre": "a5942c93-fe4d-5144-8d81-47a8ff180c29",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’arbre qui dit l’humain",
+      "competence": "observer-schema",
+      "situation": "Dans Mes forêts, l’arbre n’est pas un décor : il dit aussi l’être humain. Regarde ce dessin d’arbre et associe chaque mot à ce qu’il dit de nous.",
+      "documents": [
+        {
+          "id": "arbre",
+          "type": "schema",
+          "titre": "Un arbre",
+          "largeur": 320,
+          "hauteur": 260,
+          "elements": [
+            {
+              "forme": "ellipse",
+              "cx": 160,
+              "cy": 60,
+              "rx": 100,
+              "ry": 45,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "cime",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 135,
+              "y": 100,
+              "l": 50,
+              "h": 90,
+              "teinte": "brun",
+              "motif": "plein",
+              "id": "tronc",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  135,
+                  190
+                ],
+                [
+                  185,
+                  190
+                ],
+                [
+                  230,
+                  235
+                ],
+                [
+                  205,
+                  235
+                ],
+                [
+                  160,
+                  210
+                ],
+                [
+                  115,
+                  235
+                ],
+                [
+                  90,
+                  235
+                ]
+              ],
+              "teinte": "brun",
+              "motif": "hachures",
+              "id": "racines",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 252,
+              "texte": "Un arbre, vu de côté",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "arbre",
+          "multiple": false,
+          "reponse": [
+            "racines"
+          ],
+          "enonce": "Touche la partie de l’arbre qui plonge dans le sol.",
+          "aide": "Elle est sous le tronc.",
+          "explication": "Ce sont les **racines**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque mot de l’arbre à ce qu’il dit aussi de l’humain.",
+          "paires": [
+            [
+              "Les racines",
+              "L’origine, la filiation"
+            ],
+            [
+              "Les cernes",
+              "Le temps accumulé"
+            ],
+            [
+              "L’écorce",
+              "La protection, la blessure"
+            ],
+            [
+              "Tomber et repousser",
+              "La perte et le recommencement"
+            ]
+          ],
+          "aide": "La forêt est un double du sujet.",
+          "explication": "**Racines** : origine ; **cernes** : temps accumulé ; **écorce** : protection et blessure ; **tomber et repousser** : perte et recommencement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans ce recueil, que représente la forêt ?",
+          "options": [
+            "Un double du sujet lui-même, et non un simple décor de fond",
+            "Un décor exotique, simple toile de fond des poèmes",
+            "Un lieu de vacances et de repos où le poète se délasse",
+            "Un discours militant sur la protection de la forêt"
+          ],
+          "reponse": 0,
+          "aide": "Le titre dit « mes » forêts.",
+          "explication": "La forêt est un **double du sujet** : le paysage est intérieur autant qu’extérieur."
+        }
+      ]
+    },
+    {
+      "chapitre": "a5942c93-fe4d-5144-8d81-47a8ff180c29",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un poème sans ponctuation",
+      "competence": "analyser-texte",
+      "situation": "Voici un poème écrit pour l’exercice, dans l’esprit du recueil. Repère ce qu’il partage avec lui, sans en recopier une ligne.",
+      "documents": [
+        {
+          "id": "poeme",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Forêt d’hiver",
+          "blocs": [
+            "la neige tient les branches",
+            "comme une main retient un souvenir",
+            "",
+            "dans le cercle des cernes",
+            "le temps s’est rangé sans bruit",
+            "",
+            "j’ai [[o|hérité]] d’une [[o|racine]]",
+            "et d’un secret que je ne sais pas dire",
+            "",
+            "quand l’arbre tombe",
+            "quelque chose en moi repousse"
+          ],
+          "source": "Poème écrit pour l’exercice, à la manière du recueil"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "poeme",
+          "multiple": true,
+          "reponse": [
+            "o"
+          ],
+          "enonce": "Touche les deux mots qui disent l’origine, la filiation.",
+          "aide": "Un verbe d’héritage et un mot d’arbre.",
+          "explication": "Les mots sont **hérité** et **racine**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Ces traits sont-ils présents dans ce poème ?",
+          "categories": [
+            "Présent dans ce poème",
+            "Absent de ce poème"
+          ],
+          "items": [
+            [
+              "Absence de ponctuation",
+              0
+            ],
+            [
+              "Blancs entre les strophes",
+              0
+            ],
+            [
+              "Image de l’arbre pour dire l’humain",
+              0
+            ],
+            [
+              "Rimes régulières",
+              1
+            ],
+            [
+              "Alexandrins",
+              1
+            ]
+          ],
+          "aide": "Relis les vers : longueur, rimes, ponctuation.",
+          "explication": "Le poème est en **vers libres**, sans ponctuation, avec des **blancs** ; il n’a ni rimes régulières ni alexandrins."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque procédé à son effet.",
+          "paires": [
+            [
+              "Absence de ponctuation",
+              "Le sens reste ouvert"
+            ],
+            [
+              "Blancs typographiques",
+              "Le silence fait partie du texte"
+            ],
+            [
+              "Vers libres courts",
+              "Une lecture qui respire"
+            ]
+          ],
+          "aide": "Pense à ce que le lecteur entend et voit.",
+          "explication": "Sans ponctuation, le **sens reste ouvert** ; les blancs font du **silence** une partie du texte ; les vers courts **respirent**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que dit « quand l’arbre tombe / quelque chose en moi repousse » ?",
+          "options": [
+            "La perte et le recommencement : le moi est fait de nature",
+            "Un simple constat sur les arbres abattus dans la forêt",
+            "Une leçon de jardinage : il faut couper pour que ça repousse",
+            "Un discours écologique militant contre la déforestation"
+          ],
+          "reponse": 0,
+          "aide": "L’arbre et le « moi » se répondent.",
+          "explication": "La chute de l’arbre dit la **perte**, la repousse dit le **recommencement** : le moi est fait de nature."
+        }
+      ]
+    },
+    {
+      "chapitre": "a5942c93-fe4d-5144-8d81-47a8ff180c29",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La forêt est-elle un décor ?",
+      "competence": "argumenter",
+      "situation": "Un sujet de dissertation, un tableau de thèmes : construis l’argument du plan et repère ce qui distingue Dorion de Ponge.",
+      "documents": [
+        {
+          "id": "themes",
+          "type": "tableau",
+          "titre": "Les thèmes du parcours",
+          "colonnes": [
+            "Thème",
+            "Ce qu’il recouvre"
+          ],
+          "lignes": [
+            [
+              "L’intime",
+              "Le deuil du père, l’enfance, le corps qui vieillit"
+            ],
+            [
+              "La nature",
+              "L’arbre, la lumière, l’eau, la neige, l’oiseau"
+            ],
+            [
+              "L’écologie",
+              "Une conscience d’appartenir au vivant, pas un discours militant"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "D’après le cours"
+        },
+        {
+          "id": "sujet",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Sujet de dissertation",
+          "blocs": [
+            "Dans Mes forêts, la nature est-elle seulement un décor pour dire le moi ?"
+          ],
+          "source": "Sujet écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quelle thèse répond le mieux au sujet ?",
+          "options": [
+            "Non : la forêt est un double du sujet, paysage intérieur et extérieur",
+            "Oui : la forêt n’est qu’un décor, un simple cadre pour les poèmes",
+            "Oui : le moi n’apparaît jamais dans le recueil, il est tout objectif",
+            "Non : le recueil est un manuel de botanique, la forêt y est décrite"
+          ],
+          "reponse": 0,
+          "aide": "Pense au possessif du titre.",
+          "explication": "La bonne thèse montre que le **paysage est intérieur** : la forêt est un double du sujet."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque exemple dans le bon thème.",
+          "categories": [
+            "L’intime",
+            "La nature",
+            "L’écologie"
+          ],
+          "items": [
+            [
+              "Le deuil du père",
+              0
+            ],
+            [
+              "L’enfance",
+              0
+            ],
+            [
+              "L’arbre, la lumière, l’eau",
+              1
+            ],
+            [
+              "La neige et l’oiseau",
+              1
+            ],
+            [
+              "Sentir que la perte de la forêt nous atteint",
+              2
+            ]
+          ],
+          "aide": "Regarde le tableau du document 1.",
+          "explication": "Deuil et enfance : **intime** ; arbre, lumière, neige, oiseau : **nature** ; perte de la forêt qui nous atteint : **écologie**."
+        },
+        {
+          "type": "zone",
+          "document": "themes",
+          "multiple": false,
+          "reponse": [
+            "r2c1"
+          ],
+          "enonce": "Touche la case qui dit comment l’écologie est présente dans le recueil.",
+          "aide": "Elle n’est pas militante.",
+          "explication": "C’est la case **« Une conscience d’appartenir au vivant, pas un discours militant »**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Le recueil refuse la ___ entre le sujet et le monde : il montre un moi ___ de nature.",
+          "reponses": [
+            [
+              "séparation"
+            ],
+            [
+              "fait"
+            ]
+          ],
+          "banque": [
+            "séparation",
+            "fusion",
+            "fait",
+            "coupé"
+          ],
+          "aide": "Le moi n’est pas devant la nature : il est dedans.",
+          "explication": "Le recueil **refuse la séparation** : il montre un moi **fait** de nature."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qu’est-ce qui distingue Dorion de Ponge dans une dissertation ?",
+          "options": [
+            "Dorion renouvelle le lyrisme sans le refuser ; Ponge en rejette le miroir",
+            "Dorion refuse tout moi lyrique alors que Ponge le célèbre sans réserve",
+            "Les deux poètes refusent la nature et n’y trouvent aucun sujet de poème",
+            "Les deux poètes écrivent tous leurs recueils en alexandrins rimés"
+          ],
+          "reponse": 0,
+          "aide": "Compare la place du moi et de la chose.",
+          "explication": "Dorion **renouvelle le lyrisme** ; Ponge refuse que la chose soit le miroir des sentiments."
+        }
+      ]
+    },
+    {
+      "chapitre": "d16dc2d7-40f8-5d2b-a388-3a6d8f725b7d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les quatre étapes du réflexe",
+      "competence": "manier-langue",
+      "situation": "À l’oral, la question de grammaire se gagne avec une méthode. Remets les étapes dans l’ordre, puis applique-les à une phrase.",
+      "documents": [
+        {
+          "id": "etapes",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "La méthode, en désordre",
+          "sousTitre": "Question de grammaire",
+          "emoji": "🎤",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Nommer : nature et fonction"
+            },
+            {
+              "texte": "Interpréter l’effet dans le texte"
+            },
+            {
+              "texte": "Relire la phrase en entier à voix haute"
+            },
+            {
+              "texte": "Identifier : compter les verbes conjugués"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice"
+        },
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "La phrase de l’examinateur",
+          "blocs": [
+            "Quand la nuit tombe, le vieux berger rentre ses moutons [[p|qui]] ont faim."
+          ],
+          "source": "Phrase écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Remets les quatre étapes de la méthode dans l’ordre.",
+          "items": [
+            "Relire la phrase en entier à voix haute",
+            "Identifier : compter les verbes conjugués",
+            "Nommer : nature et fonction",
+            "Interpréter l’effet dans le texte"
+          ],
+          "aide": "On relit avant de compter, on nomme avant d’interpréter.",
+          "explication": "Ordre : **relire, identifier, nommer, interpréter**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de verbes conjugués compte la phrase du document 2 ?",
+          "reponse": 3,
+          "aide": "Cherche tombe, rentre, ont.",
+          "explication": "Il y a **3** verbes conjugués (tombe, rentre, ont) : trois propositions."
+        },
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": false,
+          "reponse": [
+            "p"
+          ],
+          "enonce": "Touche le pronom relatif de la phrase.",
+          "aide": "Il reprend « moutons ».",
+          "explication": "C’est **qui**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la fonction de « qui » ?",
+          "options": [
+            "Sujet de « ont »",
+            "COD de « rentre »",
+            "Complément du nom « berger »",
+            "Attribut de « moutons »"
+          ],
+          "reponse": 0,
+          "aide": "Qui a faim ? Les moutons.",
+          "explication": "**qui** remplace « les moutons » : il est **sujet** de « ont »."
+        }
+      ]
+    },
+    {
+      "chapitre": "d16dc2d7-40f8-5d2b-a388-3a6d8f725b7d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une négation à analyser",
+      "competence": "manier-langue",
+      "situation": "Une phrase, cinq consignes possibles. Applique la méthode : compte, nomme, puis interprète.",
+      "documents": [
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "La phrase du texte",
+          "blocs": [
+            "Elle n’avait jamais avoué [[q|que]] le silence la protégeait."
+          ],
+          "source": "Phrase écrite pour l’exercice"
+        },
+        {
+          "id": "consignes",
+          "type": "tableau",
+          "titre": "Les consignes les plus fréquentes",
+          "colonnes": [
+            "La consigne",
+            "Ce qu’elle attend"
+          ],
+          "lignes": [
+            [
+              "Analysez la phrase",
+              "Un découpage complet en propositions"
+            ],
+            [
+              "Analysez la négation",
+              "Totale ou partielle, et sa portée"
+            ],
+            [
+              "Quelle est la fonction de la subordonnée ?",
+              "Nature puis fonction"
+            ],
+            [
+              "Quel est le mode employé, et pourquoi ?",
+              "La valeur du subjonctif ou de l’indicatif"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "D’après le cours"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": false,
+          "reponse": [
+            "q"
+          ],
+          "enonce": "Touche le mot qui introduit la subordonnée.",
+          "aide": "Une conjonction de subordination.",
+          "explication": "C’est **que**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de propositions compte la phrase ?",
+          "reponse": 2,
+          "aide": "Compte les verbes conjugués : avait avoué, protégeait.",
+          "explication": "Il y a **2** verbes conjugués : donc 2 propositions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Analysez la négation de la principale.",
+          "options": [
+            "Négation partielle (ne… jamais), qui porte sur le verbe « avait avoué »",
+            "Négation totale (ne… pas), qui porte sur toute la proposition principale",
+            "Restriction (ne… que), qui porte sur le complément du verbe « avait avoué »",
+            "Pas de négation, la principale est ici à la forme affirmative du verbe"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le second mot de la négation.",
+          "explication": "C’est une **négation partielle** : « jamais » ne nie pas toute la phrase, mais le temps."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque consigne à ce qu’elle attend.",
+          "paires": [
+            [
+              "Analysez la phrase",
+              "Un découpage complet en propositions"
+            ],
+            [
+              "Analysez la négation",
+              "Totale ou partielle, et sa portée"
+            ],
+            [
+              "Quelle est la fonction de la subordonnée ?",
+              "Nature puis fonction"
+            ]
+          ],
+          "aide": "Lis le tableau du document 2.",
+          "explication": "Chaque consigne appelle une réponse **précise**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle interprétation de « n’avait jamais avoué » est juste ?",
+          "options": [
+            "Elle insiste sur la durée du silence",
+            "Elle marque une explosion de colère",
+            "Elle annonce un futur proche",
+            "Elle exprime une restriction"
+          ],
+          "reponse": 0,
+          "aide": "Que dit « jamais » sur le temps ?",
+          "explication": "Le mot **jamais** fait durer le silence : c’est l’étape d’interprétation."
+        }
+      ]
+    },
+    {
+      "chapitre": "d16dc2d7-40f8-5d2b-a388-3a6d8f725b7d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La question de grammaire en entier",
+      "competence": "argumenter",
+      "situation": "Une phrase de plaidoyer, une analyse complète : découpe, nomme, puis interprète comme à l’oral.",
+      "documents": [
+        {
+          "id": "plaid",
+          "type": "texte",
+          "genre": "source",
+          "titre": "La phrase de l’examinateur",
+          "blocs": [
+            "Quoique vous me jugiez coupable, je ne crois pas que la vérité soit de votre côté, parce que vous n’avez rien écouté."
+          ],
+          "source": "Phrase écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de propositions compte cette phrase ?",
+          "reponse": 4,
+          "aide": "Compte : jugiez, crois, soit, avez écouté.",
+          "explication": "Il y a **4** verbes conjugués : 4 propositions."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque proposition à son analyse.",
+          "paires": [
+            [
+              "Quoique vous me jugiez coupable",
+              "Circonstancielle de concession, au subjonctif"
+            ],
+            [
+              "je ne crois pas",
+              "Proposition principale"
+            ],
+            [
+              "que la vérité soit de votre côté",
+              "Complétive COD de « crois », au subjonctif après une négation"
+            ],
+            [
+              "parce que vous n’avez rien écouté",
+              "Circonstancielle de cause, à l’indicatif"
+            ]
+          ],
+          "aide": "Chaque subordonnée se nomme puis se situe.",
+          "explication": "La phrase enchaîne une **concessive**, une **principale**, une **complétive** et une **causale**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Analysez la négation de « vous n’avez rien écouté ».",
+          "options": [
+            "Négation partielle (ne… rien), qui porte sur le COD du verbe",
+            "Négation totale (ne… pas), qui porte sur l’ensemble de la phrase",
+            "Restriction (ne… que), qui limite le sens du complément du verbe",
+            "Pas de négation : la phrase est à la forme affirmative du verbe"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le second mot de la négation.",
+          "explication": "C’est une **négation partielle** : « rien » nie l’objet de l’écoute."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la formule d’oral.",
+          "texte": "« Que la vérité soit de votre côté » est une subordonnée conjonctive ___, ___ du verbe « crois ».",
+          "reponses": [
+            [
+              "complétive"
+            ],
+            [
+              "COD"
+            ]
+          ],
+          "banque": [
+            "complétive",
+            "relative",
+            "COD",
+            "sujet",
+            "attribut"
+          ],
+          "aide": "Nature puis fonction.",
+          "explication": "C’est une **complétive**, **COD** du verbe « crois »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que produit le subjonctif après « je ne crois pas » ?",
+          "options": [
+            "Il révèle le doute et l’incertitude du locuteur",
+            "Il marque un ordre que le locuteur adresse à quelqu’un",
+            "Il accélère le récit en passant à un temps bref",
+            "Il marque la certitude totale du locuteur sur le fait"
+          ],
+          "reponse": 0,
+          "aide": "Le mode dit le degré de certitude.",
+          "explication": "Le **subjonctif** dit le **doute** de celui qui parle : c’est l’étape d’interprétation."
+        }
+      ]
+    },
+    {
+      "chapitre": "9d4097ae-07e6-5820-b3be-74ab409c3761",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pêcheur et ses filets",
+      "competence": "manier-langue",
+      "situation": "Une phrase simple, plusieurs fonctions. Cherche ce qui répond à « quoi ? » et ce qui donne le lieu.",
+      "documents": [
+        {
+          "id": "phr",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Une phrase",
+          "blocs": [
+            "Le vieux pêcheur répare [[c|ses]] [[c|filets]] [[l|au]] [[l|bord]] [[l|du]] [[l|quai]]."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": true,
+          "reponse": [
+            "c"
+          ],
+          "enonce": "Touche le COD du verbe « répare ».",
+          "aide": "Pose la question « qui ? quoi ? » après le verbe.",
+          "explication": "Le COD est **« ses filets »** : il répond à « il répare quoi ? »."
+        },
+        {
+          "type": "zone",
+          "document": "phr",
+          "multiple": true,
+          "reponse": [
+            "l"
+          ],
+          "enonce": "Touche le complément circonstanciel de lieu.",
+          "aide": "Il répond à « où ? » et peut se déplacer.",
+          "explication": "Le complément de lieu est **« au bord du quai »**."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque fonction à son test.",
+          "paires": [
+            [
+              "Sujet",
+              "« c’est… qui »"
+            ],
+            [
+              "COD",
+              "« qui ? quoi ? » après le verbe"
+            ],
+            [
+              "COI",
+              "« à qui ? de quoi ? »"
+            ]
+          ],
+          "aide": "Chaque fonction a son test.",
+          "explication": "Le sujet s’encadre par **« c’est… qui »**, le COD répond à **« qui ? quoi ? »**, le COI à **« à qui ? de quoi ? »**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans « le vieux pêcheur », quelle est la fonction de « vieux » ?",
+          "options": [
+            "Épithète",
+            "Attribut du sujet",
+            "Apposition",
+            "Complément du nom"
+          ],
+          "reponse": 0,
+          "aide": "Il est accolé au nom, sans verbe d’état.",
+          "explication": "« vieux » est **épithète** de « pêcheur »."
+        }
+      ]
+    },
+    {
+      "chapitre": "9d4097ae-07e6-5820-b3be-74ab409c3761",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Épithète ou attribut ?",
+      "competence": "manier-langue",
+      "situation": "Le piège le plus demandé : un adjectif peut être épithète ou attribut. Repère, trie, puis complète la règle.",
+      "documents": [
+        {
+          "id": "ph",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Trois phrases",
+          "blocs": [
+            "Cette nuit noire semblait [[a|interminable]].",
+            "Le voyageur fatigué attendait le jour.",
+            "Paul, [[z|le]] [[z|guide]] [[z|du]] [[z|village]], souriait."
+          ],
+          "source": "Phrases écrites pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ph",
+          "multiple": false,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Touche l’attribut du sujet dans la phrase 1.",
+          "aide": "Il suit le verbe d’état « semblait ».",
+          "explication": "L’attribut est **interminable**, après le verbe d’état « semblait »."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque adjectif : épithète ou attribut ?",
+          "categories": [
+            "Épithète",
+            "Attribut du sujet"
+          ],
+          "items": [
+            [
+              "Une route étroite",
+              0
+            ],
+            [
+              "La route paraît étroite",
+              1
+            ],
+            [
+              "Le vieux pont tremble",
+              0
+            ],
+            [
+              "Elle reste calme",
+              1
+            ],
+            [
+              "Un enfant calme",
+              0
+            ]
+          ],
+          "aide": "Verbe d’état = attribut ; adjectif accolé au nom = épithète.",
+          "explication": "Après un verbe d’état (paraît, reste) : **attribut** ; accolé au nom : **épithète**."
+        },
+        {
+          "type": "zone",
+          "document": "ph",
+          "multiple": true,
+          "reponse": [
+            "z"
+          ],
+          "enonce": "Dans la phrase 3, touche l’apposition à « Paul ».",
+          "aide": "Elle est détachée par des virgules.",
+          "explication": "L’apposition est **« le guide du village »** : elle désigne la même personne que Paul."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle.",
+          "texte": "Un même mot change de ___, jamais de ___.",
+          "reponses": [
+            [
+              "fonction"
+            ],
+            [
+              "nature"
+            ]
+          ],
+          "banque": [
+            "fonction",
+            "nature",
+            "sens",
+            "genre"
+          ],
+          "aide": "Pense à la différence entre nature et fonction.",
+          "explication": "Un mot change de **fonction**, jamais de **nature**."
+        }
+      ]
+    },
+    {
+      "chapitre": "9d4097ae-07e6-5820-b3be-74ab409c3761",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Marthe épie ses voisins",
+      "competence": "analyser-texte",
+      "situation": "Une phrase d’incipit, toutes les fonctions à nommer. Analyse d’abord, interprète ensuite.",
+      "documents": [
+        {
+          "id": "incipit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Incipit",
+          "blocs": [
+            "Au [[e|petit]] matin, dans la cour [[e|déserte]], Marthe, la concierge, épiait ses voisins ; elle semblait [[a|heureuse]] de ce qu’elle savait."
+          ],
+          "source": "Phrase écrite pour l’exercice, à la manière d’un roman"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque groupe à sa fonction.",
+          "paires": [
+            [
+              "Au petit matin",
+              "Complément circonstanciel de temps"
+            ],
+            [
+              "dans la cour déserte",
+              "Complément circonstanciel de lieu"
+            ],
+            [
+              "la concierge",
+              "Apposition à « Marthe »"
+            ],
+            [
+              "ses voisins",
+              "COD de « épiait »"
+            ],
+            [
+              "heureuse",
+              "Attribut du sujet"
+            ]
+          ],
+          "aide": "Utilise les tests : déplaçable, « quoi ? », verbe d’état…",
+          "explication": "Temps et lieu : **compléments circonstanciels** ; « la concierge » : **apposition** ; « ses voisins » : **COD** ; « heureuse » : **attribut**."
+        },
+        {
+          "type": "zone",
+          "document": "incipit",
+          "multiple": true,
+          "reponse": [
+            "e"
+          ],
+          "enonce": "Touche les deux épithètes de la phrase.",
+          "aide": "Deux adjectifs accolés à un nom.",
+          "explication": "Les épithètes sont **petit** et **déserte**."
+        },
+        {
+          "type": "zone",
+          "document": "incipit",
+          "multiple": false,
+          "reponse": [
+            "a"
+          ],
+          "enonce": "Touche l’attribut du sujet.",
+          "aide": "Il suit « semblait ».",
+          "explication": "L’attribut est **heureuse**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel effet produit l’enchaînement de deux compléments circonstanciels puis d’une apposition avant le verbe « épiait » ?",
+          "options": [
+            "Il retarde le verbe : cadre, puis portrait, avant l’action",
+            "Il accélère le récit en allant droit à l’action de la phrase",
+            "Il supprime le sujet pour rendre la phrase impersonnelle",
+            "Il marque une négation portée sur le verbe « épiait »"
+          ],
+          "reponse": 0,
+          "aide": "Le verbe arrive tard.",
+          "explication": "Les compléments **installent un cadre**, l’apposition un portrait : l’action est **retardée**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "« heureuse » est de nature ___ et de fonction ___.",
+          "reponses": [
+            [
+              "adjectif",
+              "adjectif qualificatif"
+            ],
+            [
+              "attribut du sujet",
+              "attribut"
+            ]
+          ],
+          "banque": [
+            "adjectif",
+            "attribut du sujet",
+            "épithète",
+            "verbe"
+          ],
+          "aide": "Nature : ce que le mot est. Fonction : son rôle.",
+          "explication": "Nature : **adjectif** ; fonction : **attribut du sujet**."
+        }
+      ]
+    },
+    {
+      "chapitre": "cc899fa0-5d9d-54ab-8133-bc73f95e75b6",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui raconte, et quand ?",
+      "competence": "analyser-texte",
+      "situation": "Trois questions à poser à tout récit : qui raconte, depuis quel point de vue, à quel moment ? Applique-les à un court extrait.",
+      "documents": [
+        {
+          "id": "soir",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Ce soir-là",
+          "blocs": [
+            "Ce soir-là, j’ai vu Léa pousser la porte du café. Elle cherchait quelqu’un ; je ne savais pas qui. [[r|Bien]] [[r|plus]] [[r|tard]], dans mon jardin, j’ai compris que c’était moi."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Qui raconte ?",
+          "options": [
+            "Un narrateur interne : un personnage qui dit « je »",
+            "Un narrateur externe, qui n’est pas un personnage",
+            "Un narrateur omniscient, qui sait tout des personnages",
+            "Un narrateur absent, le récit se racontant tout seul"
+          ],
+          "reponse": 0,
+          "aide": "Regarde « j’ai vu », « je ne savais pas ».",
+          "explication": "Le narrateur est **interne** : c’est un personnage qui dit « je »."
+        },
+        {
+          "type": "zone",
+          "document": "soir",
+          "multiple": true,
+          "reponse": [
+            "r"
+          ],
+          "enonce": "Touche les trois mots qui montrent que le récit est fait après coup.",
+          "aide": "Ils marquent un intervalle de temps.",
+          "explication": "Les mots sont **Bien plus tard** : le récit est **rétrospectif**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre « je ne savais pas qui » ?",
+          "options": [
+            "Le récit se limite à ce que le narrateur sait : focalisation interne",
+            "Le narrateur sait tout de Léa et le dit au lecteur : focalisation zéro",
+            "Le narrateur observe Léa de l’extérieur : focalisation externe",
+            "Le récit est enchâssé : un second narrateur raconte à l’intérieur"
+          ],
+          "reponse": 0,
+          "aide": "Il ne connaît pas les pensées de Léa.",
+          "explication": "La **focalisation interne** limite le savoir à celui du personnage."
+        }
+      ]
+    },
+    {
+      "chapitre": "cc899fa0-5d9d-54ab-8133-bc73f95e75b6",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le temps qui s’étire et se resserre",
+      "competence": "analyser-texte",
+      "situation": "Sommaire, scène, ellipse, pause, analepse, prolepse : reconnais chaque procédé du temps du récit.",
+      "documents": [
+        {
+          "id": "temps",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Six paragraphes",
+          "blocs": [
+            "Les années passèrent ainsi : dix hivers, dix étés, et Paul ne quitta jamais le village.",
+            "— Ouvre, dit-elle. — Non, répondit-il en retenant la porte. Elle resta sur le seuil, la main sur le bois.",
+            "Trois ans plus tard, il revint.",
+            "La maison se dressait au bout du chemin : toit de tuiles rousses, volets verts, jardin clos de murs bas.",
+            "Elle ignorait que, [[p|dans]] [[p|un]] [[p|an]], elle le retrouverait au même endroit.",
+            "Elle se souvint du jour où il lui avait offert la clé."
+          ],
+          "source": "Texte écrit pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque paragraphe à son procédé.",
+          "paires": [
+            [
+              "Paragraphe 1",
+              "Sommaire"
+            ],
+            [
+              "Paragraphe 2",
+              "Scène"
+            ],
+            [
+              "Paragraphe 3",
+              "Ellipse"
+            ],
+            [
+              "Paragraphe 4",
+              "Pause"
+            ],
+            [
+              "Paragraphe 5",
+              "Prolepse"
+            ],
+            [
+              "Paragraphe 6",
+              "Analepse"
+            ]
+          ],
+          "aide": "Sommaire : longue durée en peu de mots. Scène : dialogue. Pause : description.",
+          "explication": "**Sommaire**, **scène**, **ellipse**, **pause**, **prolepse** (annonce), **analepse** (retour en arrière)."
+        },
+        {
+          "type": "zone",
+          "document": "temps",
+          "multiple": true,
+          "reponse": [
+            "p"
+          ],
+          "enonce": "Touche les mots qui annoncent l’avenir dans le paragraphe 5.",
+          "aide": "Une durée à venir.",
+          "explication": "Les mots **dans un an** annoncent l’avenir : c’est une **prolepse**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Dans une ___, le temps du récit épouse celui de l’histoire ; dans un ___, vingt ans tiennent en trois lignes.",
+          "reponses": [
+            [
+              "scène"
+            ],
+            [
+              "sommaire"
+            ]
+          ],
+          "banque": [
+            "scène",
+            "sommaire",
+            "pause",
+            "ellipse"
+          ],
+          "aide": "Pense au dialogue et au résumé.",
+          "explication": "Dans une **scène**, le temps du récit épouse celui de l’histoire ; dans un **sommaire**, vingt ans tiennent en trois lignes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que juge important le récit quand il étire une scène et résume dix ans en une ligne ?",
+          "options": [
+            "Ce qu’il étire : la scène de la porte, en détail",
+            "Ce qu’il résume en une ligne : les dix années",
+            "Rien de précis : le rythme du récit n’a pas de sens",
+            "La description de la maison, détaillée au début"
+          ],
+          "reponse": 0,
+          "aide": "Ce qu’un roman étire, il le juge important.",
+          "explication": "Ce qu’un roman **étire**, il le juge **important** : ici, la scène de la porte."
+        }
+      ]
+    },
+    {
+      "chapitre": "cc899fa0-5d9d-54ab-8133-bc73f95e75b6",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois œuvres, trois âges du roman",
+      "competence": "se-reperer-temps",
+      "situation": "Les trois œuvres du bac 2027 et leurs repères : place-les, rattache-les à leur parcours, caractérise leur narration.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Cinq romans",
+          "debut": 1100,
+          "fin": 2000,
+          "pas": 100,
+          "periodes": [],
+          "evenements": [
+            {
+              "id": "che",
+              "date": 1180,
+              "nom": "Chevalier charrette"
+            },
+            {
+              "id": "cle",
+              "date": 1678,
+              "nom": "Princesse de Clèves"
+            },
+            {
+              "id": "lia",
+              "date": 1782,
+              "nom": "Liaisons dangereuses"
+            },
+            {
+              "id": "pot",
+              "date": 1882,
+              "nom": "Pot-Bouille"
+            },
+            {
+              "id": "tel",
+              "date": 1972,
+              "nom": "Télumée Miracle"
+            }
+          ],
+          "source": "Dates de publication ; Chrétien de Troyes : vers 1177-1181"
+        },
+        {
+          "id": "oeuvres",
+          "type": "tableau",
+          "titre": "Les trois œuvres du bac 2027",
+          "colonnes": [
+            "Auteur",
+            "Œuvre"
+          ],
+          "lignes": [
+            [
+              "Chrétien de Troyes",
+              "Le Chevalier de la charrette"
+            ],
+            [
+              "Émile Zola",
+              "Pot-Bouille"
+            ],
+            [
+              "Simone Schwarz-Bart",
+              "Pluie et vent sur Télumée Miracle"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Associe chaque œuvre du document 2 à son parcours.",
+          "paires": [
+            [
+              "Le Chevalier de la charrette",
+              "Le roman et l’invention de l’amour"
+            ],
+            [
+              "Pot-Bouille",
+              "Dévoiler les rouages de la société"
+            ],
+            [
+              "Pluie et vent sur Télumée Miracle",
+              "Tisser les mémoires, habiter le monde"
+            ]
+          ],
+          "aide": "Amour, société, mémoire.",
+          "explication": "Chaque œuvre répond à son **parcours** : amour, rouages de la société, mémoires."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "multiple": false,
+          "reponse": [
+            "lia"
+          ],
+          "enonce": "Sur la frise, touche le roman du XVIIIe siècle écrit en lettres fictives.",
+          "aide": "Il est de 1782.",
+          "explication": "C’est **Les Liaisons dangereuses** (1782)."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque caractéristique selon l’œuvre.",
+          "categories": [
+            "Chevalier de la charrette",
+            "Pot-Bouille",
+            "Télumée Miracle"
+          ],
+          "items": [
+            [
+              "Un récit en vers écrit en langue romane",
+              0
+            ],
+            [
+              "Un narrateur qui intervient dans son récit",
+              0
+            ],
+            [
+              "Un immeuble bourgeois ouvert comme une machine",
+              1
+            ],
+            [
+              "Un narrateur qui semble s’effacer derrière ce qu’il montre",
+              1
+            ],
+            [
+              "Une vieille femme qui raconte quatre générations",
+              2
+            ],
+            [
+              "Une narratrice qui dit « je » au soir de sa vie",
+              2
+            ]
+          ],
+          "aide": "Un conteur, un narrateur qui s’efface, une narratrice.",
+          "explication": "**Chrétien** : conteur, vers ; **Zola** : naturalisme, narrateur effacé ; **Schwarz-Bart** : narratrice à la première personne."
+        },
+        {
+          "type": "choix",
+          "enonce": "En voie technologique, quel est le parcours associé à Chrétien de Troyes ?",
+          "options": [
+            "Héroïsme et amour",
+            "Anatomie des passions",
+            "Dévoiler les rouages de la société",
+            "Tisser les mémoires, habiter le monde"
+          ],
+          "reponse": 0,
+          "aide": "Un autre intitulé pour la même œuvre.",
+          "explication": "En voie technologique : **« Héroïsme et amour »**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Une dissertation sur le roman peut-elle juger moralement un personnage ?",
+          "options": [
+            "Non : elle demande ce que le récit fait de lui",
+            "Oui : c’est la méthode principale",
+            "Oui, à condition de citer",
+            "Non : on ne parle jamais des personnages"
+          ],
+          "reponse": 0,
+          "aide": "On n’est pas le juge du personnage.",
+          "explication": "On **ne juge jamais** un personnage moralement : on demande **ce que le récit fait de lui**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2de5a0dc-2104-526b-877b-6a5959161c61",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La fiche du roman de Lancelot",
+      "competence": "analyser-document",
+      "situation": "Le Chevalier de la charrette est l’un des tout premiers romans en français. Lis sa fiche d’identité, puis range les étapes de l’intrigue.",
+      "documents": [
+        {
+          "id": "fiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Le Chevalier de la charrette",
+          "sousTitre": "Chrétien de Troyes",
+          "emoji": "🏰",
+          "teinte": "violet",
+          "lignes": [
+            {
+              "texte": "Écrit vers 1177-1181"
+            },
+            {
+              "texte": "Environ 7 000 octosyllabes à rimes plates",
+              "id": "forme"
+            },
+            {
+              "texte": "Commandé par Marie de Champagne"
+            },
+            {
+              "texte": "Parcours : le roman et l’invention de l’amour"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fiche",
+          "multiple": false,
+          "reponse": [
+            "forme"
+          ],
+          "enonce": "Touche la ligne qui dit comment le roman est écrit.",
+          "aide": "Cherche les mots « octosyllabes » et « rimes ».",
+          "explication": "C’est la ligne **« Environ 7 000 octosyllabes à rimes plates »**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets ces étapes de l’intrigue dans l’ordre.",
+          "items": [
+            "Méléagant enlève la reine Guenièvre",
+            "Le chevalier monte dans la charrette d’infamie",
+            "Il traverse le Pont de l’Épée",
+            "Il arrache les barreaux de la fenêtre de la reine",
+            "La reine lui fait dire de combattre « au pire », puis « au mieux »"
+          ],
+          "aide": "Commence par l’enlèvement, termine par le tournoi.",
+          "explication": "Ordre : **enlèvement, charrette, Pont de l’Épée, nuit d’amour, tournoi**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle idée reçue ce livre corrige-t-il : « un roman est forcément en prose » ?",
+          "options": [
+            "Le Chevalier de la charrette est un roman et pourtant il est en vers",
+            "Le roman est né en prose et il l’est resté jusqu’au XIIe siècle",
+            "Le roman n’existait pas encore au XIIe siècle, seulement l’épopée",
+            "Le roman est un genre moderne, apparu seulement au XVIIIe siècle"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne de la forme.",
+          "explication": "Le livre est un **roman en vers** : le mot « roman » désignait d’abord la langue."
+        }
+      ]
+    },
+    {
+      "chapitre": "2de5a0dc-2104-526b-877b-6a5959161c61",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui est qui au royaume de Gorre ?",
+      "competence": "analyser-texte",
+      "situation": "Un résumé écrit pour l’exercice, une fiche de personnages : retrouve chacun, puis dis ce que montre Gauvain.",
+      "documents": [
+        {
+          "id": "resume",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Résumé",
+          "blocs": [
+            "[[m|Méléagant]], fils du roi [[b|Bademagu]], enlève la reine Guenièvre et l’emmène au royaume de Gorre. Un chevalier sans nom la cherche ; Gauvain, le neveu d’Arthur, la cherche aussi, par un autre chemin. Le père protège la reine, tandis que son fils la retient. Le sénéchal Keu, qui s’était vanté, a été vaincu dès le début."
+          ],
+          "source": "Résumé écrit pour l’exercice"
+        },
+        {
+          "id": "perso",
+          "type": "tableau",
+          "titre": "Fiche des personnages",
+          "colonnes": [
+            "Personnage",
+            "Statut"
+          ],
+          "lignes": [
+            [
+              "Lancelot",
+              "Chevalier"
+            ],
+            [
+              "Guenièvre",
+              "Reine"
+            ],
+            [
+              "Méléagant",
+              "Fils de Bademagu"
+            ],
+            [
+              "Bademagu",
+              "Roi"
+            ],
+            [
+              "Gauvain",
+              "Neveu d’Arthur"
+            ],
+            [
+              "Keu",
+              "Sénéchal"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "resume",
+          "multiple": false,
+          "reponse": [
+            "m"
+          ],
+          "enonce": "Touche le traître orgueilleux qui enlève la reine.",
+          "aide": "Il est fils du roi.",
+          "explication": "C’est **Méléagant**, le contre-modèle du chevalier."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque personnage à son trait.",
+          "paires": [
+            [
+              "Lancelot",
+              "Le meilleur des chevaliers, soumis à sa dame"
+            ],
+            [
+              "Guenièvre",
+              "La dame qui ordonne et éprouve"
+            ],
+            [
+              "Méléagant",
+              "Le traître orgueilleux, sans loyauté"
+            ],
+            [
+              "Bademagu",
+              "Le roi sage et loyal"
+            ],
+            [
+              "Gauvain",
+              "Parfait chevalier, mais pas amoureux"
+            ],
+            [
+              "Keu",
+              "Le sénéchal vantard"
+            ]
+          ],
+          "aide": "Lis la fiche du document 2.",
+          "explication": "Chaque personnage a son **rôle** dans l’initiation de Lancelot."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre Gauvain, parfait chevalier mais pas amoureux ?",
+          "options": [
+            "Il échoue là où Lancelot réussit : l’amour est le moteur de l’exploit",
+            "L’amour est un obstacle à l’exploit : Gauvain est meilleur sans lui",
+            "Le roi Arthur préfère Gauvain à Lancelot et le dit à la cour",
+            "Gauvain est le héros du roman, puisqu’il est le parfait chevalier"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui manque à Gauvain.",
+          "explication": "Gauvain **échoue là où Lancelot réussit** : l’amour fait l’exploit."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète.",
+          "texte": "Plus Lancelot s’___ par amour, plus il devient ___.",
+          "reponses": [
+            [
+              "humilie"
+            ],
+            [
+              "invincible"
+            ]
+          ],
+          "banque": [
+            "humilie",
+            "invincible",
+            "vaniteux",
+            "prudent"
+          ],
+          "aide": "L’ordre du récit est un chemin d’initiation.",
+          "explication": "Plus Lancelot **s’humilie** par amour, plus il devient **invincible**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2de5a0dc-2104-526b-877b-6a5959161c61",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La honte, la douleur, la gloire",
+      "competence": "argumenter",
+      "situation": "Lancelot s’abaisse, souffre et triomphe par amour. Lis le tableau, range les épreuves, puis construis l’argument d’une dissertation.",
+      "documents": [
+        {
+          "id": "etapes",
+          "type": "tableau",
+          "titre": "Quatre étapes",
+          "colonnes": [
+            "Étape",
+            "Ce qui arrive"
+          ],
+          "lignes": [
+            [
+              "La charrette",
+              "Il hésite deux pas avant de monter dans la charrette des condamnés"
+            ],
+            [
+              "Le Pont de l’Épée",
+              "Il traverse une lame tranchante mains et pieds nus"
+            ],
+            [
+              "La nuit d’amour",
+              "Il arrache les barreaux de la fenêtre et se blesse"
+            ],
+            [
+              "Le tournoi",
+              "Il combat « au pire » puis « au mieux » sur l’ordre de la reine"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "situer",
+          "type": "tableau",
+          "titre": "Situer l’œuvre",
+          "colonnes": [
+            "Repère",
+            "Ce qu’il faut savoir"
+          ],
+          "lignes": [
+            [
+              "La commande",
+              "Marie de Champagne fournit la matière et le sens ; Chrétien y met son travail"
+            ],
+            [
+              "La forme",
+              "Environ 7 000 octosyllabes à rimes plates"
+            ],
+            [
+              "La fin",
+              "Godefroi de Leigni achève le roman"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Que montre l’ordre « au pire » puis « au mieux » du tournoi ?",
+          "options": [
+            "La reine l’éprouve : il obéit par amour jusqu’à la honte, puis triomphe",
+            "Lancelot désobéit à la reine et le tournoi le punit de sa faute",
+            "Le tournoi est une simple fête de cour, sans enjeu pour Lancelot",
+            "Keu prend la place de Lancelot au tournoi et en recueille toute la gloire"
+          ],
+          "reponse": 0,
+          "aide": "Qui donne les ordres ?",
+          "explication": "Le tournoi montre la **soumission** de Lancelot à sa dame : honte acceptée, puis victoire."
+        },
+        {
+          "type": "zone",
+          "document": "etapes",
+          "multiple": false,
+          "reponse": [
+            "r2c0"
+          ],
+          "enonce": "Touche l’étape dont le sang sur les draps fait accuser le sénéchal Keu.",
+          "aide": "Une nuit, une fenêtre, des barreaux.",
+          "explication": "C’est **La nuit d’amour** : Lancelot se blesse et le sang fait accuser Keu."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque épreuve : honte acceptée ou exploit ?",
+          "categories": [
+            "Honte acceptée",
+            "Exploit"
+          ],
+          "items": [
+            [
+              "Monter dans la charrette d’infamie",
+              0
+            ],
+            [
+              "Combattre « au pire » au tournoi",
+              0
+            ],
+            [
+              "Traverser le Pont de l’Épée mains et pieds nus",
+              1
+            ],
+            [
+              "Soulever la dalle du cimetière",
+              1
+            ],
+            [
+              "Arracher les barreaux de la fenêtre",
+              1
+            ],
+            [
+              "Tuer Méléagant",
+              1
+            ]
+          ],
+          "aide": "La honte est acceptée par obéissance ; l’exploit est une prouesse.",
+          "explication": "**Charrette** et **« au pire »** : honte ; **Pont**, **dalle**, **barreaux**, **Méléagant** : exploits."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle idée de dissertation s’appuie sur ces épreuves ?",
+          "options": [
+            "L’amour est le moteur de l’aventure : il pousse à s’humilier puis à se dépasser",
+            "L’amour est un obstacle à l’aventure : il détourne le chevalier de ses exploits",
+            "Le roman condamne l’amour, qui conduit le chevalier à sa perte et à la honte",
+            "Les épreuves n’ont aucun lien avec l’amour : elles relèvent seulement du devoir"
+          ],
+          "reponse": 0,
+          "aide": "Relie honte, douleur et gloire à la reine.",
+          "explication": "L’**amour** est le **moteur** de l’aventure : c’est la thèse du roman."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que nous dit le prologue sur la part de Chrétien de Troyes ?",
+          "options": [
+            "Marie de Champagne fournit la matière et le sens, lui y met son travail",
+            "Chrétien invente tout seul l’histoire et n’en doit rien à personne",
+            "Le roi Arthur dicte lui-même toute l’histoire à Chrétien de Troyes",
+            "Chrétien ne fait que traduire fidèlement un texte latin, sans rien ajouter"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne « La commande ».",
+          "explication": "Marie fournit la **matière** et le **sens** ; Chrétien y met son **travail**."
+        }
+      ]
+    }
+  ]
+}

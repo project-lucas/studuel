@@ -1,0 +1,435 @@
+{
+  "id": "physique-chimie-2025-amerique-nord-j1",
+  "matiere": "physique-chimie",
+  "niveau": "Tle",
+  "examen": "bac",
+  "annee": 2025,
+  "centre": "Amérique du Nord",
+  "jour": 1,
+  "code": "25-PYCJ1AN1",
+  "titre": "Bac 2025 — Physique-chimie",
+  "dureeMin": 210,
+  "coefficient": 16,
+  "consigne": "Trois exercices indépendants, tous à traiter (9 + 5 + 6 points). L'annexe de l'exercice 2 est à rendre avec la copie.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Étude d'un vernis à ongles : synthèse de l'éthanoate d'éthyle, puis dosage du pigment Fe₂O₃.",
+      "points": 9,
+      "minutes": 95,
+      "enBref": [
+        "L'éthanoate d'éthyle est un ester, obtenu par estérification de l'acide éthanoïque par l'éthanol, catalysée par l'acide sulfurique.",
+        "L'éthanol est limitant (0,200 mol) : les 12,0 mL d'ester obtenus (0,123 mol) donnent un rendement de 61 %. Éliminer l'eau ou mettre un réactif en excès déplace l'équilibre ; plus de catalyseur, non.",
+        "Le dosage se fait à 510 nm, au maximum d'absorption. La droite d'étalonnage $A = 0{,}0113\\,C$ (C en µmol·L⁻¹) donne $[\\mathrm{Fe^{2+}}] = 31{,}9 \\ \\mu\\text{mol·L}^{-1}$, soit $n(\\mathrm{Fe_2O_3}) = 0{,}80 \\times 10^{-6}$ mol.",
+        "Le vernis contient 1,2 % de Fe₂O₃ en masse, bien moins que les 5 % visés : son pouvoir couvrant n'est pas optimal."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "1. Synthèse d'un solvant pour vernis" },
+        {
+          "type": "question",
+          "numero": "Q.1",
+          "intitule": "Formule semi-développée de l'éthanoate d'éthyle, groupe caractéristique et famille.",
+          "blocs": [
+            { "type": "formule", "tex": "\\begin{array}{c} \\mathrm{O} \\\\ \\| \\\\ \\mathrm{CH_3 - C - O - CH_2 - CH_3} \\end{array}" },
+            { "type": "reponse", "texte": "On entoure le groupe $\\mathrm{-C(=O)-O-}$ : groupe caractéristique **ester**, famille des **esters**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.2",
+          "intitule": "Justifier le sens de la flèche courbe de la figure 2.",
+          "blocs": [
+            { "type": "texte", "texte": "Une flèche courbe représente le **déplacement d'un doublet d'électrons**, d'un site **donneur** (riche en électrons) vers un site **accepteur** (pauvre en électrons)." },
+            { "type": "liste", "items": [
+              "Donneur : l'atome d'oxygène du groupe C=O, qui porte des doublets non liants et est chargé partiellement négativement (O plus électronégatif que C).",
+              "Accepteur : l'ion $\\mathrm{H^+}$, qui n'a aucun électron et porte une charge positive."
+            ] },
+            { "type": "reponse", "texte": "La flèche part d'un doublet non liant de l'oxygène (site donneur) et pointe vers $\\mathrm{H^+}$ (site accepteur) : le doublet forme la nouvelle liaison O–H." },
+            { "type": "piege", "texte": "Une flèche courbe ne part jamais d'un $\\mathrm{H^+}$ ou d'une charge positive : elle part toujours des électrons." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.3",
+          "intitule": "Définir un catalyseur ; pourquoi l'acide sulfurique peut-il jouer ce rôle ?",
+          "blocs": [
+            { "type": "texte", "texte": "Un **catalyseur** est une espèce qui accélère une transformation chimique sans modifier son état final : il est consommé dans une étape du mécanisme puis régénéré, et n'apparaît pas dans l'équation bilan." },
+            { "type": "texte", "texte": "L'acide sulfurique est un acide fort : il apporte les ions $\\mathrm{H^+}$ qui sont consommés à la première étape du mécanisme (figure 2), puis libérés à la dernière." },
+            { "type": "reponse", "texte": "L'acide sulfurique fournit $\\mathrm{H^+}$, réactif de la première étape et régénéré en fin de mécanisme : il accélère la réaction sans être consommé globalement." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.4",
+          "intitule": "Quelle étape correspond à une extraction ?",
+          "blocs": [
+            { "type": "reponse", "texte": "L'**étape 2** : l'ajout d'eau salée dans l'ampoule à décanter réalise une extraction liquide-liquide. L'ester, presque insoluble dans l'eau salée, reste dans la phase organique ; l'éthanol, l'acide éthanoïque et l'acide sulfurique, très solubles dans l'eau salée, passent dans la phase aqueuse." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.5",
+          "intitule": "Schéma de l'ampoule après décantation ; espèces de chaque phase.",
+          "blocs": [
+            { "type": "texte", "texte": "La position des phases dépend de leur **masse volumique** : la moins dense flotte." },
+            { "type": "liste", "items": [
+              "**Phase supérieure (organique)** : $\\rho \\approx 0{,}902 \\text{ g·mL}^{-1}$, essentiellement l'éthanoate d'éthyle, avec des traces d'acide éthanoïque.",
+              "**Phase inférieure (aqueuse)** : eau salée, $\\rho = 1{,}15 \\text{ g·mL}^{-1}$, contenant l'eau formée, l'éthanol restant, l'essentiel de l'acide éthanoïque et l'acide sulfurique (tous très solubles dans l'eau salée)."
+            ] },
+            { "type": "reponse", "texte": "Schéma : ampoule à robinet, phase organique (ester) en haut, phase aqueuse salée en bas, car $0{,}902 < 1{,}15 \\text{ g·mL}^{-1}$ et l'ester est presque insoluble dans l'eau salée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.6",
+          "intitule": "Équation de la réaction entre $\\mathrm{HCO_3^-}$ et l'acide éthanoïque ; gaz formé.",
+          "blocs": [
+            { "type": "texte", "texte": "L'acide éthanoïque cède un proton (couple $\\mathrm{CH_3COOH/CH_3COO^-}$) à l'ion hydrogénocarbonate qui joue le rôle de base (couple $\\mathrm{CO_2,H_2O/HCO_3^-}$) :" },
+            { "type": "formule", "tex": "\\mathrm{CH_3COOH(aq)} + \\mathrm{HCO_3^-(aq)} \\longrightarrow \\mathrm{CH_3COO^-(aq)} + \\mathrm{CO_2,H_2O(aq)}" },
+            { "type": "reponse", "texte": "Le gaz formé est le **dioxyde de carbone** $\\mathrm{CO_2}$, d'où le dégazage." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.7",
+          "intitule": "Rendement de la synthèse (l'acide éthanoïque est en excès).",
+          "blocs": [
+            { "type": "texte", "texte": "**Démarche.** L'acide est en excès : l'éthanol est le réactif limitant. Avec des nombres stœchiométriques égaux à 1, la quantité maximale d'ester est égale à la quantité initiale d'éthanol. On calcule les quantités avec $n = \\frac{\\rho V}{M}$." },
+            { "type": "formule", "tex": "n_{\\text{éthanol}} = \\frac{0{,}789 \\times 11{,}7}{46{,}1} = 0{,}200 \\text{ mol} = n_{\\text{ester,max}}" },
+            { "type": "texte", "texte": "Vérification de l'excès : $n_{\\text{acide}} = \\frac{1{,}05 \\times 14{,}3}{60{,}0} = 0{,}250 \\text{ mol} > 0{,}200 \\text{ mol}$." },
+            { "type": "formule", "tex": "n_{\\text{ester,obtenu}} = \\frac{0{,}902 \\times 12{,}0}{88{,}1} = 0{,}123 \\text{ mol}" },
+            { "type": "formule", "tex": "\\eta = \\frac{n_{\\text{obtenu}}}{n_{\\max}} = \\frac{0{,}123}{0{,}200} = 0{,}61" },
+            { "type": "reponse", "texte": "Rendement $\\eta \\approx 61\\ \\%$." },
+            { "type": "attendu", "texte": "Identifier le réactif limitant, calculer $n_{\\max}$, convertir le volume d'ester en quantité de matière avec SA masse volumique, puis faire le rapport. Un rendement supérieur à 100 % doit t'alerter." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.8",
+          "intitule": "Quelle(s) proposition(s) augmentent le rendement ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'estérification est une transformation **non totale** qui conduit à un équilibre. Le rendement augmente si l'on déplace cet équilibre dans le sens direct, c'est-à-dire si le quotient de réaction devient inférieur à la constante d'équilibre K." },
+            { "type": "liste", "items": [
+              "**A (éthanol en excès)** : oui. Le rendement se calcule alors par rapport à l'acide devenu limitant ; l'excès d'un réactif diminue $Q_r$ et fait évoluer le système dans le sens direct.",
+              "**B (doubler le catalyseur)** : non. Un catalyseur accélère l'atteinte de l'équilibre mais ne modifie pas l'état final.",
+              "**C (éliminer l'eau formée)** : oui. Retirer un produit diminue $Q_r$, l'équilibre est déplacé dans le sens direct (c'est le principe du Dean-Stark)."
+            ] },
+            { "type": "reponse", "texte": "Propositions **A et C**." }
+          ]
+        },
+        { "type": "titre", "texte": "2. Pourcentage massique du pigment" },
+        {
+          "type": "question",
+          "numero": "Q.9",
+          "intitule": "Verrerie pour préparer S₅ et concentration $C_5$.",
+          "blocs": [
+            { "type": "texte", "texte": "On prélève $V_5 = 10{,}0 \\text{ mL}$ de S₀ avec une **pipette jaugée de 10,0 mL** (munie d'une propipette), on les verse dans une **fiole jaugée de 50,0 mL**, on ajoute l'orthophénantroline puis de l'eau distillée jusqu'au trait de jauge, et on homogénéise." },
+            { "type": "texte", "texte": "Au cours d'une dilution, la quantité de matière se conserve : $C_0 V_5 = C_5 V_{\\text{fiole}}$." },
+            { "type": "formule", "tex": "C_5 = C_0 \\times \\frac{V_5}{V_{\\text{fiole}}} = 3{,}58 \\times 10^{-4} \\times \\frac{10{,}0}{50{,}0} = 7{,}16 \\times 10^{-5} \\text{ mol·L}^{-1}" },
+            { "type": "reponse", "texte": "Pipette jaugée de 10,0 mL et fiole jaugée de 50,0 mL ; $C_5 = 7{,}16 \\times 10^{-5} \\text{ mol·L}^{-1}$ (soit 71,6 µmol·L⁻¹)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.10",
+          "intitule": "Longueur d'onde de réglage du spectrophotomètre.",
+          "blocs": [
+            { "type": "reponse", "texte": "$\\lambda \\approx 510 \\text{ nm}$, au **maximum d'absorption** du spectre : l'absorbance y est la plus grande, donc la mesure la plus sensible et la moins affectée par une petite erreur de réglage." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.11",
+          "intitule": "Justifier que la courbe d'étalonnage vérifie la loi de Beer-Lambert.",
+          "blocs": [
+            { "type": "texte", "texte": "La loi de Beer-Lambert affirme que l'absorbance est **proportionnelle** à la concentration de l'espèce absorbante : $A = k\\,C$." },
+            { "type": "reponse", "texte": "Les points sont alignés sur une droite passant par l'origine, de modèle $A = 0{,}0113\\,C$ avec $R^2 = 0{,}9992$ très proche de 1 : A est proportionnelle à C, la loi de Beer-Lambert est vérifiée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.12",
+          "intitule": "Montrer que $n(\\mathrm{Fe_2O_3}) = 0{,}80 \\times 10^{-6}$ mol.",
+          "blocs": [
+            { "type": "texte", "texte": "**1. Concentration en $\\mathrm{Fe^{2+}}$ de S** par le modèle (C en µmol·L⁻¹) :" },
+            { "type": "formule", "tex": "C_S = \\frac{A_S}{0{,}0113} = \\frac{0{,}360}{0{,}0113} = 31{,}9 \\ \\mu\\text{mol·L}^{-1}" },
+            { "type": "texte", "texte": "**2. Quantité de $\\mathrm{Fe^{2+}}$** dans la fiole de 50,0 mL :" },
+            { "type": "formule", "tex": "n(\\mathrm{Fe^{2+}}) = C_S \\times V = 31{,}9 \\times 10^{-6} \\times 50{,}0 \\times 10^{-3} = 1{,}59 \\times 10^{-6} \\text{ mol}" },
+            { "type": "texte", "texte": "**3. Stœchiométrie.** Une mole de $\\mathrm{Fe^{3+}}$ donne une mole de $\\mathrm{Fe^{2+}}$, et une mole de $\\mathrm{Fe_2O_3}$ donne **deux** moles de $\\mathrm{Fe^{3+}}$ :" },
+            { "type": "formule", "tex": "n(\\mathrm{Fe_2O_3}) = \\frac{n(\\mathrm{Fe^{2+}})}{2} = \\frac{1{,}59 \\times 10^{-6}}{2} = 0{,}80 \\times 10^{-6} \\text{ mol}" },
+            { "type": "reponse", "texte": "$n(\\mathrm{Fe_2O_3}) = 0{,}80 \\times 10^{-6} \\text{ mol}$" },
+            { "type": "piege", "texte": "Le coefficient 2 devant $\\mathrm{Fe^{3+}}$ : chaque unité $\\mathrm{Fe_2O_3}$ contient deux ions fer. Oublier de diviser par 2 double le résultat." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.13",
+          "intitule": "Le vernis a-t-il un pouvoir couvrant optimal ?",
+          "blocs": [
+            { "type": "formule", "tex": "m(\\mathrm{Fe_2O_3}) = n \\times M = 0{,}80 \\times 10^{-6} \\times 159{,}7 = 1{,}3 \\times 10^{-4} \\text{ g}" },
+            { "type": "formule", "tex": "P = \\frac{m(\\mathrm{Fe_2O_3})}{m_{\\text{vernis}}} = \\frac{1{,}28 \\times 10^{-4}}{0{,}0103} = 1{,}2 \\times 10^{-2} = 1{,}2\\ \\%" },
+            { "type": "reponse", "texte": "Le vernis contient environ 1,2 % de Fe₂O₃ en masse, loin des 5 % requis : son pouvoir couvrant n'est pas optimal." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Physique et raccordements routiers : clothoïde et virage de l'échangeur de Cronenbourg.",
+      "points": 5,
+      "minutes": 50,
+      "enBref": [
+        "Sur la ligne droite, l'accélération est nulle : mouvement rectiligne uniforme.",
+        "Sur la clothoïde, le rapport $a/t$ est constant (environ $0{,}107 \\text{ m·s}^{-3}$) : l'accélération croît linéairement avec le temps.",
+        "Sur l'arc de cercle parcouru à vitesse constante, l'accélération est centripète, $a = v^2/r = 3{,}00 \\text{ m·s}^{-2}$ ; seul le frottement, horizontal et dirigé vers le centre, peut la produire (schéma 5).",
+        "Le frottement $m v^2 / r$ ne doit pas dépasser 7 200 N sur route humide : $v \\leq 76$ km/h, donc le panneau 70."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "1. Mouvement sur l'arc de clothoïde" },
+        {
+          "type": "question",
+          "numero": "Q.1",
+          "intitule": "Accélération sur OP et nature du mouvement.",
+          "blocs": [
+            { "type": "texte", "texte": "Figure 2 : sur la ligne droite, l'accélération est nulle. $\\vec{a} = \\frac{d\\vec{v}}{dt} = \\vec{0}$, donc le vecteur vitesse est constant." },
+            { "type": "reponse", "texte": "$a = 0 \\text{ m·s}^{-2}$ : le mouvement sur OP est **rectiligne uniforme**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.2",
+          "intitule": "Lignes de programme calculant $a_x$ et $a_y$.",
+          "blocs": [
+            { "type": "texte", "texte": "On dérive la vitesse comme on a dérivé la position : différence de deux vitesses successives, divisée par la durée $dt$." },
+            { "type": "code", "langage": "python", "code": "    ax.append((vx[i+1]-vx[i])/dt)\n    ay.append((vy[i+1]-vy[i])/dt)" },
+            { "type": "reponse", "texte": "$a_x \\approx \\frac{v_{x,i+1} - v_{x,i}}{\\Delta t}$ et $a_y \\approx \\frac{v_{y,i+1} - v_{y,i}}{\\Delta t}$, écrites en lignes 18 et 19 dans la boucle." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.3",
+          "intitule": "Vérifier que l'accélération augmente linéairement avec le temps.",
+          "blocs": [
+            { "type": "texte", "texte": "**Méthode.** Si $a$ est proportionnelle à $t$ (droite passant par l'origine, l'accélération initiale étant nulle), le rapport $a/t$ doit être constant. On le calcule pour chaque valeur :" },
+            { "type": "tableau", "entetes": ["t (s)", "1,50", "3,00", "4,50", "6,00", "7,50", "9,00"], "lignes": [
+              ["a (m·s⁻²)", "0,1587", "0,3218", "0,4824", "0,6411", "0,8070", "0,9506"],
+              ["a/t (m·s⁻³)", "0,106", "0,107", "0,107", "0,107", "0,108", "0,106"]
+            ] },
+            { "type": "texte", "texte": "Les rapports sont égaux à 2 % près. (On peut aussi tracer $a$ en fonction de $t$ : les points s'alignent sur une droite passant par l'origine.)" },
+            { "type": "reponse", "texte": "$a/t \\approx 0{,}107 \\text{ m·s}^{-3}$ constant : $a = k\\,t$, l'accélération augmente bien linéairement avec le temps." }
+          ]
+        },
+        { "type": "titre", "texte": "2. Mouvement sur l'arc de cercle" },
+        {
+          "type": "question",
+          "numero": "Q.4",
+          "intitule": "Tracer $\\vec{u}_N$ et $\\vec{u}_T$ au point M.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "$\\vec{u}_T$ : tangent à la trajectoire en M, orienté dans le sens du mouvement (de S vers Q), soit vers la droite, horizontal sur l'annexe.",
+              "$\\vec{u}_N$ : perpendiculaire à $\\vec{u}_T$, dirigé de M vers le centre C du cercle, soit vers le bas."
+            ] },
+            { "type": "reponse", "texte": "Deux flèches de même longueur (vecteurs unitaires) partant de M : $\\vec{u}_T$ tangente vers Q, $\\vec{u}_N$ vers C." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.5",
+          "intitule": "Justifier que $\\vec{a} = \\frac{v^2}{r}\\,\\vec{u}_N$ entre S et Q.",
+          "blocs": [
+            { "type": "texte", "texte": "Dans le repère de Frenet, pour un mouvement circulaire de rayon $r$ :" },
+            { "type": "formule", "tex": "\\vec{a} = \\frac{dv}{dt}\\,\\vec{u}_T + \\frac{v^2}{r}\\,\\vec{u}_N" },
+            { "type": "texte", "texte": "La norme de la vitesse est constante (15,0 m·s⁻¹), donc $\\frac{dv}{dt} = 0$ : la composante tangentielle est nulle." },
+            { "type": "reponse", "texte": "Mouvement circulaire uniforme : $\\vec{a} = \\dfrac{v^2}{r}\\,\\vec{u}_N$, accélération centripète." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.6",
+          "intitule": "Représenter $\\vec{a}$ en M à l'échelle 1,0 cm pour 1,0 m·s⁻².",
+          "blocs": [
+            { "type": "formule", "tex": "a = \\frac{v^2}{r} = \\frac{15{,}0^2}{75{,}0} = 3{,}00 \\text{ m·s}^{-2}" },
+            { "type": "reponse", "texte": "Une flèche de **3,0 cm**, partant de M, dirigée vers C (selon $\\vec{u}_N$)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.7",
+          "intitule": "Quel schéma représente correctement $\\vec{P}$, $\\vec{R}$ et $\\vec{f}$ ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Deuxième loi de Newton** : $\\vec{P} + \\vec{R} + \\vec{f} = m\\,\\vec{a}$. Or $\\vec{a}$ est **horizontal et dirigé vers C**." },
+            { "type": "liste", "items": [
+              "Selon la verticale, l'accélération est nulle : $\\vec{P} + \\vec{R} = \\vec{0}$, les deux flèches doivent avoir la **même longueur**.",
+              "Selon l'horizontale, seule $\\vec{f}$ agit : elle doit être **dirigée vers C**, comme $\\vec{a}$."
+            ] },
+            { "type": "texte", "texte": "Les schémas 3 et 4 ont $\\vec{f}$ vers l'extérieur, le schéma 2 a $\\vec{f}$ vertical, le schéma 1 a $\\vec{R}$ plus court que $\\vec{P}$ (il resterait une accélération verticale)." },
+            { "type": "reponse", "texte": "**Schéma 5** : $\\vec{R}$ et $\\vec{P}$ opposés et de même norme, $\\vec{f}$ horizontale vers C." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.8",
+          "intitule": "Quel panneau de limitation placer avant O ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Démarche.** Dans le virage, c'est la force de frottement qui assure l'accélération centripète (Q.7) : $f = m\\,\\frac{v^2}{r}$. Le véhicule ne dérape pas tant que $f \\leq f_{\\max}$, soit :" },
+            { "type": "formule", "tex": "m\\,\\frac{v^2}{r} \\leq f_{\\max} \\quad\\Rightarrow\\quad v_{\\max} = \\sqrt{\\frac{f_{\\max}\\,r}{m}}" },
+            { "type": "texte", "texte": "**Chaussée sèche** :" },
+            { "type": "formule", "tex": "v_{\\max} = \\sqrt{\\frac{10\\,400 \\times 75{,}0}{1\\,200}} = 25{,}5 \\text{ m·s}^{-1} = 91{,}8 \\text{ km·h}^{-1}" },
+            { "type": "texte", "texte": "**Chaussée humide** :" },
+            { "type": "formule", "tex": "v_{\\max} = \\sqrt{\\frac{7\\,200 \\times 75{,}0}{1\\,200}} = 21{,}2 \\text{ m·s}^{-1} = 76{,}4 \\text{ km·h}^{-1}" },
+            { "type": "texte", "texte": "Le panneau doit garantir la sécurité par tous les temps : il faut une limite inférieure à 76 km/h. À 90 km/h, le véhicule déraperait sur route humide (il frôlerait même la limite sur route sèche) ; 70 km/h est la limite la plus élevée qui reste sûre. Vérification : à 70 km/h, $f = 1\\,200 \\times 19{,}4^2 / 75{,}0 \\approx 6{,}0 \\times 10^{3} \\text{ N} < 7\\,200 \\text{ N}$." },
+            { "type": "reponse", "texte": "Le panneau **70** : $v_{\\max} \\approx 76$ km/h sur chaussée humide, la limitation la plus haute qui reste en dessous est 70 km/h." },
+            { "type": "astuce", "texte": "Quand une donnée change avec les conditions (sèche/humide), le cas le plus défavorable fixe la règle de sécurité. Dis-le explicitement dans ta conclusion." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Traitement des eaux d'un bassin d'orage : flottabilité d'une bouée et aérateur à jet.",
+      "points": 6,
+      "minutes": 65,
+      "enBref": [
+        "À l'équilibre, la poussée d'Archimède compense le poids : $V_{\\text{imm}} = m / \\rho_{\\text{eau}} = 1{,}0 \\times 10^{-3} \\text{ m}^3$, soit 15 % du volume, sous la limite de 20 %.",
+        "Débit $D_V = S \\cdot v = 1{,}3 \\times 10^{-2} \\text{ m}^3\\text{·s}^{-1}$ ; sa conservation dans le rétrécissement donne $v_B = 16 \\text{ m·s}^{-1}$.",
+        "La relation de Bernoulli donne $\\Delta p = p_B - p_A \\approx -1{,}1 \\times 10^{5}$ Pa : la dépression en B (effet Venturi) aspire l'air.",
+        "Il faut apporter 344 g de dioxygène, donc brasser 57 m³ d'eau, ce qui prend environ 72 min : moins de deux heures."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "1. Surveillance de la qualité de l'eau" },
+        {
+          "type": "question",
+          "numero": "Q.1",
+          "intitule": "Nommer et représenter les deux forces exercées sur la bouée à l'équilibre.",
+          "blocs": [
+            { "type": "liste", "items": [
+              "Le **poids** $\\vec{P}$ : vertical, vers le bas, appliqué au centre de gravité de la bouée.",
+              "La **poussée d'Archimède** $\\vec{A}$ : verticale, vers le haut, appliquée au centre de la partie immergée."
+            ] },
+            { "type": "reponse", "texte": "Schéma : la bouée, la ligne d'eau, $\\vec{P}$ vers le bas et $\\vec{A}$ vers le haut, de **même longueur** puisque la bouée est à l'équilibre." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.2",
+          "intitule": "Volume immergé $V_{\\text{imm}}$ à l'équilibre.",
+          "blocs": [
+            { "type": "texte", "texte": "La bouée est immobile dans le référentiel terrestre galiléen : d'après le **principe d'inertie**, $\\vec{P} + \\vec{A} = \\vec{0}$, soit $A = P$." },
+            { "type": "formule", "tex": "\\rho_{\\text{eau}}\\,V_{\\text{imm}}\\,g = m\\,g \\quad\\Rightarrow\\quad V_{\\text{imm}} = \\frac{m}{\\rho_{\\text{eau}}} = \\frac{1{,}0}{1{,}00 \\times 10^{3}} = 1{,}0 \\times 10^{-3} \\text{ m}^3" },
+            { "type": "reponse", "texte": "$V_{\\text{imm}} = 1{,}0 \\times 10^{-3} \\text{ m}^3$ (1,0 L)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.3",
+          "intitule": "Proportion immergée ; commenter.",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{V_{\\text{imm}}}{V_{\\text{bouée}}} = \\frac{1{,}0 \\times 10^{-3}}{6{,}7 \\times 10^{-3}} = 0{,}15 = 15\\ \\%" },
+            { "type": "reponse", "texte": "15 % du volume est immergé, moins que la limite de 20 % : les instruments de communication restent hors de l'eau." }
+          ]
+        },
+        { "type": "titre", "texte": "2. Traitement de l'eau" },
+        {
+          "type": "question",
+          "numero": "Q.4",
+          "intitule": "Quelle formule donne le débit volumique ? Analyse des unités.",
+          "blocs": [
+            { "type": "texte", "texte": "Un débit volumique est un volume par unité de temps : il s'exprime en $\\text{m}^3\\text{·s}^{-1}$. On teste chaque proposition, avec $S$ en $\\text{m}^2$ et $v$ en $\\text{m·s}^{-1}$ :" },
+            { "type": "liste", "items": [
+              "$\\frac{v}{S}$ : $\\text{m·s}^{-1} / \\text{m}^2 = \\text{m}^{-1}\\text{·s}^{-1}$, faux.",
+              "$S \\cdot v$ : $\\text{m}^2 \\times \\text{m·s}^{-1} = \\text{m}^3\\text{·s}^{-1}$, juste.",
+              "$v^2 \\cdot S$ : $\\text{m}^2\\text{·s}^{-2} \\times \\text{m}^2 = \\text{m}^4\\text{·s}^{-2}$, faux."
+            ] },
+            { "type": "reponse", "texte": "$D_V = S \\cdot v$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.5",
+          "intitule": "Montrer que $D_V = 1{,}3 \\times 10^{-2} \\text{ m}^3\\text{·s}^{-1}$.",
+          "blocs": [
+            { "type": "texte", "texte": "On calcule au point A, où l'on connaît vitesse et diamètre ; la section est un disque de rayon $d_A / 2$ :" },
+            { "type": "formule", "tex": "D_V = S_A\\,v_A = \\pi\\left(\\frac{d_A}{2}\\right)^2 v_A = \\pi \\times (27{,}5 \\times 10^{-3})^2 \\times 5{,}6 = 1{,}3 \\times 10^{-2} \\text{ m}^3\\text{·s}^{-1}" },
+            { "type": "reponse", "texte": "$D_V = 1{,}3 \\times 10^{-2} \\text{ m}^3\\text{·s}^{-1}$ (13 litres par seconde)." },
+            { "type": "piege", "texte": "La formule de l'aire utilise le **rayon**, pas le diamètre : avec $d_A$ au lieu de $d_A/2$, on trouve un débit quatre fois trop grand." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.6",
+          "intitule": "Montrer que $v_B = 16 \\text{ m·s}^{-1}$.",
+          "blocs": [
+            { "type": "texte", "texte": "L'eau est incompressible et le régime permanent : le débit volumique se conserve, $S_A v_A = S_B v_B$." },
+            { "type": "formule", "tex": "v_B = v_A \\times \\frac{S_A}{S_B} = v_A \\left(\\frac{d_A}{d_B}\\right)^2 = 5{,}6 \\times \\left(\\frac{55}{33}\\right)^2 = 15{,}6 \\text{ m·s}^{-1} \\approx 16 \\text{ m·s}^{-1}" },
+            { "type": "reponse", "texte": "$v_B \\approx 16 \\text{ m·s}^{-1}$ : la vitesse augmente quand la section diminue." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.7",
+          "intitule": "Phénomène responsable de l'aspiration de l'air en B.",
+          "blocs": [
+            { "type": "reponse", "texte": "L'**effet Venturi** : dans le rétrécissement, la vitesse de l'eau augmente et sa pression diminue ; la dépression créée en B aspire l'air par la conduite verticale." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.8",
+          "intitule": "Montrer que $\\Delta p = p_B - p_A = \\frac{1}{2}\\rho\\,(v_A^2 - v_B^2)$.",
+          "blocs": [
+            { "type": "texte", "texte": "On applique la **relation de Bernoulli** entre A et B, sur une même ligne de courant, dans la conduite horizontale ($z_A = z_B$) :" },
+            { "type": "formule", "tex": "p_A + \\tfrac{1}{2}\\rho v_A^2 + \\rho g z_A = p_B + \\tfrac{1}{2}\\rho v_B^2 + \\rho g z_B" },
+            { "type": "texte", "texte": "Les termes $\\rho g z$ s'annulent, il reste :" },
+            { "type": "formule", "tex": "p_B - p_A = \\tfrac{1}{2}\\rho\\,(v_A^2 - v_B^2)" },
+            { "type": "reponse", "texte": "$\\Delta p = \\dfrac{1}{2}\\,\\rho\\,(v_A^2 - v_B^2)$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.9",
+          "intitule": "Valeur de $\\Delta p$ ; commenter.",
+          "blocs": [
+            { "type": "formule", "tex": "\\Delta p = \\tfrac{1}{2} \\times 1{,}00 \\times 10^{3} \\times (5{,}6^2 - 15{,}6^2) = -1{,}1 \\times 10^{5} \\text{ Pa}" },
+            { "type": "reponse", "texte": "$\\Delta p \\approx -1{,}1 \\times 10^{5} \\text{ Pa}$ : la pression chute d'environ 1 bar entre A et B, l'ordre de grandeur de la pression atmosphérique. En B, l'eau est nettement sous la pression de l'air de l'entrée : l'air est aspiré, ce qui confirme l'effet Venturi." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.10",
+          "intitule": "Montrer qu'il faut ajouter 344 g de dioxygène.",
+          "blocs": [
+            { "type": "texte", "texte": "Le taux doit passer de 4 à 6 mg·L⁻¹ : il faut apporter 2 mg de dioxygène par litre, dans $V_{\\text{eau}} = 172 \\text{ m}^3 = 1{,}72 \\times 10^{5} \\text{ L}$." },
+            { "type": "formule", "tex": "m = (6 - 4) \\times 1{,}72 \\times 10^{5} = 3{,}44 \\times 10^{5} \\text{ mg} = 344 \\text{ g}" },
+            { "type": "reponse", "texte": "$m(\\mathrm{O_2}) = 344 \\text{ g}$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.11",
+          "intitule": "Volume d'eau à brasser par l'aérateur.",
+          "blocs": [
+            { "type": "formule", "tex": "V_{\\text{brassé}} = \\frac{344 \\times 10^{3} \\text{ mg}}{6 \\text{ mg·L}^{-1}} = 5{,}7 \\times 10^{4} \\text{ L} = 57 \\text{ m}^3" },
+            { "type": "reponse", "texte": "$V_{\\text{brassé}} \\approx 57 \\text{ m}^3$" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "Q.12",
+          "intitule": "L'oxygénation peut-elle être faite en moins de deux heures ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'aérateur brasse l'eau au débit $D_V$ calculé en Q.5 :" },
+            { "type": "formule", "tex": "\\Delta t = \\frac{V_{\\text{brassé}}}{D_V} = \\frac{57{,}3}{1{,}33 \\times 10^{-2}} = 4{,}3 \\times 10^{3} \\text{ s} \\approx 72 \\text{ min}" },
+            { "type": "reponse", "texte": "Environ 1 h 12 min, moins que les deux heures imposées : l'oxygénation est possible dans le délai." },
+            { "type": "attendu", "texte": "Relier le volume à brasser au débit de l'aérateur, convertir la durée en minutes ou en heures, et répondre explicitement « oui, en moins de deux heures »." }
+          ]
+        }
+      ]
+    }
+  ]
+}

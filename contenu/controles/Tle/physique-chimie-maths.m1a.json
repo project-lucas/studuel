@@ -1,0 +1,361 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie-maths",
+  "sujets": [
+    {
+      "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+      "difficulte": 1,
+      "titre": "La batterie de la trottinette",
+      "consigne": "Réponds à chaque question en donnant l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** La fiche technique d'une trottinette électrique indique : batterie lithium-ion rechargeable, **36 V**, **10 Ah** ; moteur de **300 W**.\n\n1. S'agit-il d'une pile ou d'un accumulateur ? Justifie.\n2. La batterie est faite d'éléments lithium-ion de 3,6 V montés en série. Combien d'éléments faut-il pour obtenir 36 V ?\n3. Calcule la charge stockée Q en coulombs.\n4. Calcule l'énergie stockée E en Wh.\n5. Calcule l'autonomie de la trottinette si le moteur fonctionne en permanence à 300 W.",
+      "bareme": [
+        { "critere": "Accumulateur justifié (rechargeable, conversion réversible) et 10 éléments en série (tensions qui s'additionnent)", "points": 6 },
+        { "critere": "Q = 10 × 3 600 = 36 000 C et E = U × Q = 360 Wh, avec unités", "points": 8 },
+        { "critere": "Autonomie 360 / 300 = 1,2 h, soit 1 h 12 min", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. C'est un **accumulateur** : il est **rechargeable**. En charge il reçoit de l'énergie électrique, en décharge il la rend : la conversion est **réversible**.\n2. En série, les tensions **s'additionnent** : n = 36 / 3,6 = **10 éléments**.\n3. 1 Ah = 3 600 C, donc Q = 10 × 3 600 = **36 000 C** (3,6 × 10⁴ C).\n4. E = U × Q = 36 × 10 = **360 Wh**.\n5. Δt = E / P = 360 / 300 = **1,2 h**, soit **1 h 12 min** à pleine puissance."
+    },
+    {
+      "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+      "difficulte": 2,
+      "titre": "Pourquoi pas du plomb dans un téléphone ?",
+      "consigne": "Exploite les données et le tableau des technologies, et justifie chaque réponse par un calcul.",
+      "enonce": "**Données.** Un téléphone contient un accumulateur de **3,7 V** et de **4 000 mAh**, de masse **60 g**.\n\n| La technologie | Tension d'un élément | Énergie massique |\n|---|---|---|\n| Plomb | 2 V | 30 à 40 Wh/kg |\n| Nickel-métal hydrure | 1,2 V | 60 à 110 Wh/kg |\n| Lithium-ion | 3,6 à 3,7 V | 150 à 250 Wh/kg |\n\n1. Calcule la capacité en Ah puis en coulombs, et l'énergie stockée en Wh.\n2. Calcule l'énergie massique de cet accumulateur. Montre qu'elle est compatible avec la technologie lithium-ion.\n3. Entre quelles masses serait comprise une batterie au plomb stockant la même énergie ? Conclus.\n4. Un fabricant monte deux accumulateurs identiques en dérivation. Donne la tension et la capacité de l'ensemble.",
+      "bareme": [
+        { "critere": "Q = 4,0 Ah = 14 400 C ; E = 3,7 × 4,0 = 14,8 Wh", "points": 5 },
+        { "critere": "Énergie massique 14,8 / 0,060 ≈ 247 Wh/kg, compatible avec 150 à 250 Wh/kg", "points": 5 },
+        { "critere": "Masse au plomb entre 0,37 kg et 0,49 kg, conclusion sur l'importance de l'énergie massique", "points": 6 },
+        { "critere": "Dérivation : 3,7 V et 8 000 mAh", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Q = 4 000 mAh = **4,0 Ah** ; en coulombs, Q = 4,0 × 3 600 = **14 400 C**. E = U × Q = 3,7 × 4,0 = **14,8 Wh**.\n2. Énergie massique = E / m = 14,8 / 0,060 ≈ **247 Wh/kg**. Elle est dans la fourchette du **lithium-ion** (150 à 250 Wh/kg), et bien au-dessus du plomb et du nickel-métal hydrure. La tension de 3,7 V correspond aussi à un élément lithium-ion.\n3. m = E / énergie massique : avec 40 Wh/kg, m = 14,8 / 40 = **0,37 kg** ; avec 30 Wh/kg, m = 14,8 / 30 ≈ **0,49 kg**. Une batterie au plomb pèserait entre 370 g et 490 g, soit six à huit fois plus que l'accumulateur lithium-ion : impossible dans un téléphone. Pour un appareil portable, l'énergie massique (et volumique) est décisive.\n4. En **dérivation**, les **capacités s'additionnent** et la tension reste celle d'un élément : **3,7 V** et **8 000 mAh** (8,0 Ah)."
+    },
+    {
+      "chapitre": "c066ad0a-7bb2-5dbb-88a8-8b31f8d60970",
+      "difficulte": 3,
+      "titre": "La voiture à hydrogène",
+      "consigne": "Justifie chaque étape et donne les résultats avec un nombre de chiffres significatifs cohérent.",
+      "enonce": "**Situation.** La pile à combustible d'une voiture à hydrogène débite un courant constant de **200 A** pendant **1 h 30 min**.\n\nDonnées : une mole d'électrons porte une charge d'environ 96 500 C ; M(H2) = 2,0 g/mol ; M(H2O) = 18 g/mol.\n\nDemi-équations aux électrodes :\n- H2 → 2 H⁺ + 2 e⁻\n- O2 + 4 H⁺ + 4 e⁻ → 2 H2O\n\n1. À quelle électrode (anode ou cathode) et à quelle borne (+ ou −) se produit chaque demi-équation ? Identifie l'oxydant et le réducteur.\n2. Écris l'équation bilan de fonctionnement de la pile.\n3. Calcule la charge Q débitée, puis la quantité de matière d'électrons échangés.\n4. Déduis-en la masse de dihydrogène consommée.\n5. Calcule la masse d'eau produite. Cette voiture est-elle forcément « sans carbone » ? Justifie.",
+      "bareme": [
+        { "critere": "Anode (borne −) : H2 oxydé, réducteur ; cathode (borne +) : O2 réduit, oxydant", "points": 4 },
+        { "critere": "Bilan 2 H2 + O2 → 2 H2O", "points": 3 },
+        { "critere": "Q = 200 × 5 400 = 1,08 × 10⁶ C ; n(e⁻) ≈ 11,2 mol", "points": 5 },
+        { "critere": "n(H2) = n(e⁻) / 2 ≈ 5,60 mol ; m ≈ 11,2 g", "points": 4 },
+        { "critere": "m(H2O) ≈ 101 g ; bilan carbone qui dépend de la production du dihydrogène", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. H2 → 2 H⁺ + 2 e⁻ est une **oxydation** : elle a lieu à l'**anode**, **borne négative** ; H2 est le **réducteur**. O2 + 4 H⁺ + 4 e⁻ → 2 H2O est une **réduction** : elle a lieu à la **cathode**, **borne positive** ; O2 est l'**oxydant**. Les électrons partent de l'anode et traversent le circuit extérieur jusqu'à la cathode.\n2. On multiplie la première demi-équation par 2 pour échanger 4 électrons : **2 H2 + O2 → 2 H2O**.\n3. Δt = 1 h 30 min = 5 400 s. Q = I × Δt = 200 × 5 400 = **1,08 × 10⁶ C**. n(e⁻) = Q / 96 500 = 1,08 × 10⁶ / 96 500 ≈ **11,2 mol**.\n4. Chaque H2 cède 2 électrons : n(H2) = 11,2 / 2 ≈ **5,60 mol**. m(H2) = n × M = 5,60 × 2,0 ≈ **11,2 g**.\n5. D'après le bilan, n(H2O) = n(H2) ≈ 5,60 mol, donc m(H2O) = 5,60 × 18 ≈ **101 g** d'eau. La pile ne rejette que de l'eau, mais son **bilan carbone dépend de la façon dont on a produit le dihydrogène** : elle n'est pas forcément « sans carbone »."
+    },
+    {
+      "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+      "difficulte": 1,
+      "titre": "Le moteur de la pompe",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** Le moteur d'une pompe est alimenté sous **230 V** (valeur efficace). Il absorbe un courant de **5,0 A** (valeur efficace) et un wattmètre indique **920 W**.\n\n1. Calcule la puissance apparente S du moteur. Quelle est son unité ?\n2. Calcule le facteur de puissance k.\n3. Un radiateur de même puissance active serait alimenté sous la même tension. Quelle intensité absorberait-il ? Pourquoi est-elle plus faible ?",
+      "bareme": [
+        { "critere": "S = U × I = 1 150 VA, en voltampères", "points": 7 },
+        { "critere": "k = P / S = 0,80", "points": 6 },
+        { "critere": "Radiateur : k = 1, I = 920 / 230 = 4,0 A, explication", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. S = U × I = 230 × 5,0 = **1 150 VA** : la puissance apparente s'exprime en **voltampères** (VA).\n2. k = P / S = 920 / 1 150 = **0,80**.\n3. Un radiateur est une résistance pure : φ = 0 et **k = 1**, donc P = S = U × I et I = P / U = 920 / 230 = **4,0 A**. Le moteur absorbe 5,0 A pour la même puissance active parce que son facteur de puissance est inférieur à 1 : le câble du moteur doit supporter une intensité plus grande."
+    },
+    {
+      "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+      "difficulte": 2,
+      "titre": "Le chargeur et son transformateur",
+      "consigne": "Justifie chaque réponse et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Un chargeur contient un transformateur qui abaisse la tension du secteur, **230 V**, à **9,0 V**. Son primaire comporte **N1 = 920 spires**. En fonctionnement, il reçoit une puissance P1 = 19 W et fournit P2 = 18 W.\n\n1. Calcule le rapport de transformation m, puis le nombre de spires N2 du secondaire.\n2. Calcule le rendement du transformateur et compare-le aux valeurs habituelles.\n3. Pourquoi ce transformateur ne pourrait-il pas abaisser la tension d'une batterie de 12 V continue ?\n4. Quel autre rôle que l'abaissement de tension le transformateur joue-t-il pour la sécurité de l'utilisateur ?",
+      "bareme": [
+        { "critere": "m = U2 / U1 ≈ 0,039 et N2 = 920 × 9,0 / 230 = 36 spires", "points": 7 },
+        { "critere": "η = P2 / P1 ≈ 0,95, soit 95 %, dans la fourchette habituelle", "points": 5 },
+        { "critere": "Le transformateur ne fonctionne qu'en alternatif", "points": 4 },
+        { "critere": "Isolation galvanique : aucun contact électrique entre primaire et secondaire", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. m = U2 / U1 = 9,0 / 230 ≈ **0,039**. Comme m = N2 / N1 : N2 = N1 × U2 / U1 = 920 × 9,0 / 230 = **36 spires**.\n2. η = P2 / P1 = 18 / 19 ≈ **0,95**, soit environ **95 %**, en bas de la fourchette habituelle (souvent 95 à 99 %).\n3. Un transformateur **ne fonctionne qu'en alternatif** : il ne peut pas transformer la tension continue d'une batterie.\n4. Il assure l'**isolation galvanique** : il n'y a **aucun contact électrique** entre le primaire (relié au secteur) et le secondaire (relié à l'appareil), ce qui protège l'utilisateur."
+    },
+    {
+      "chapitre": "ef4d8945-31da-5366-87aa-407cdff047d4",
+      "difficulte": 3,
+      "titre": "Transporter 2 MW sans tout perdre",
+      "consigne": "Rédige chaque calcul (expression littérale, application numérique, résultat avec unité) et conclus par une phrase.",
+      "enonce": "**Situation.** Une ligne de résistance totale **R = 5,0 Ω** doit transporter une puissance active **P = 2,0 MW** vers une zone industrielle. On rappelle que I = P / (U × k).\n\n1. Le facteur de puissance vaut d'abord k = 1. Calcule l'intensité dans la ligne et les pertes par effet Joule si la tension vaut **20 kV**. Quelle fraction de la puissance transportée est perdue ?\n2. Reprends le calcul pour une tension de **400 kV**. Par combien les pertes ont-elles été divisées ? Relie ce résultat au rapport des tensions.\n3. Sous 20 kV, l'usine a en réalité un facteur de puissance **k = 0,80**. Calcule les nouvelles pertes. Pourquoi incite-t-on les gros consommateurs à relever leur facteur de puissance ?\n4. Dans l'usine, un technicien affirme que le disjoncteur du tableau suffit à protéger les personnes contre l'électrocution. Corrige cette affirmation à l'aide des seuils d'effet du courant sur le corps.",
+      "bareme": [
+        { "critere": "Sous 20 kV : I = 100 A, Pj = 5,0 × 10⁴ W, soit 2,5 % de la puissance", "points": 5 },
+        { "critere": "Sous 400 kV : I = 5,0 A, Pj = 125 W ; pertes divisées par 400 = 20²", "points": 5 },
+        { "critere": "k = 0,80 : I = 125 A, Pj ≈ 7,8 × 10⁴ W ; un mauvais k augmente I donc les pertes", "points": 5 },
+        { "critere": "Disjoncteur ordinaire (ampères) / différentiel 30 mA ; seuils 10 mA, 30 mA, 75 mA", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. I = P / (U × k) = 2,0 × 10⁶ / (20 × 10³ × 1) = **100 A**. Pj = R × I² = 5,0 × 100² = **5,0 × 10⁴ W** (50 kW). Fraction perdue : 5,0 × 10⁴ / 2,0 × 10⁶ = **2,5 %**.\n2. I = 2,0 × 10⁶ / 400 × 10³ = **5,0 A** ; Pj = 5,0 × 5,0² = **125 W**. Les pertes sont divisées par 5,0 × 10⁴ / 125 = **400**. La tension a été multipliée par 20, l'intensité divisée par 20, et les pertes, proportionnelles à I², divisées par 20² = 400.\n3. I = 2,0 × 10⁶ / (20 × 10³ × 0,80) = **125 A** ; Pj = 5,0 × 125² ≈ **7,8 × 10⁴ W** (78 kW), au lieu de 50 kW. Un mauvais facteur de puissance **augmente l'intensité**, donc les **pertes** en ligne pour une même puissance consommée : c'est pourquoi on incite les gros consommateurs à le relever.\n4. L'affirmation est fausse. Un disjoncteur ordinaire réagit à des **ampères** (surcharge, court-circuit) : il protège le **matériel**. Or dès **10 mA** on ne peut plus lâcher un conducteur, vers **30 mA** il y a un risque de paralysie respiratoire, et à partir de **75 mA** un risque de fibrillation cardiaque. Pour protéger les **personnes**, il faut un **disjoncteur différentiel 30 mA** (et l'isolation, la très basse tension de sécurité)."
+    },
+    {
+      "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+      "difficulte": 1,
+      "titre": "La cloison en bois de l'atelier",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** Une cloison en bois de **2,0 cm** d'épaisseur et de **5,0 m²** sépare un atelier chauffé à **20 °C** d'un garage à **5 °C**. Conductivité thermique du bois : λ = 0,15 W/(m·K). On se place en régime permanent.\n\n1. Calcule la résistance thermique de la cloison.\n2. Calcule le flux thermique qui la traverse. Dans quel sens se fait le transfert ?\n3. Quelle énergie traverse la cloison en une heure ?",
+      "bareme": [
+        { "critere": "Rth = e / (λ × S) = 0,020 / (0,15 × 5,0) ≈ 0,027 K/W", "points": 7 },
+        { "critere": "Φ = ΔT / Rth ≈ 5,6 × 10² W, de l'atelier vers le garage", "points": 7 },
+        { "critere": "Q = Φ × Δt ≈ 2,0 × 10⁶ J", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Rth = e / (λ × S) = 0,020 / (0,15 × 5,0) = 0,020 / 0,75 ≈ **0,027 K/W** (0,026 7 K/W).\n2. ΔT = 20 − 5 = 15 K (un écart en °C est le même en K). Φ = ΔT / Rth = 15 / 0,026 7 ≈ **5,6 × 10² W** (562 W). Le transfert va toujours du **côté chaud vers le côté froid** : de l'atelier vers le garage.\n3. Φ = Q / Δt, donc Q = Φ × Δt = 562 × 3 600 ≈ **2,0 × 10⁶ J** (2,0 MJ)."
+    },
+    {
+      "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+      "difficulte": 2,
+      "titre": "Isoler le plafond",
+      "consigne": "Justifie chaque étape et conclus par une phrase qui répond à la question posée.",
+      "enonce": "**Situation.** Le plafond d'une maison, de **50 m²**, est une dalle de béton de **15 cm** (λ = 1,75 W/(m·K)). Il fait **20 °C** dans la maison et **−5 °C** dans les combles. On envisage de poser **20 cm** de laine de verre (λ = 0,040 W/(m·K)). On néglige les échanges d'air sur les faces.\n\n1. Calcule la résistance thermique de la dalle seule, puis le flux qui la traverse.\n2. Calcule la résistance thermique de la couche de laine de verre.\n3. Comment se combinent les résistances des deux couches ? Calcule le flux à travers le plafond isolé.\n4. Par combien la fuite est-elle divisée ? Conclus.",
+      "bareme": [
+        { "critere": "Dalle : R ≈ 1,71 × 10⁻³ K/W et Φ ≈ 1,5 × 10⁴ W", "points": 5 },
+        { "critere": "Laine de verre : R = 0,20 / (0,040 × 50) = 0,10 K/W", "points": 4 },
+        { "critere": "Résistances qui s'additionnent (série) ; R ≈ 0,102 K/W et Φ ≈ 2,5 × 10² W", "points": 7 },
+        { "critere": "Fuite divisée par environ 60, conclusion", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. R béton = e / (λ × S) = 0,15 / (1,75 × 50) = 0,15 / 87,5 ≈ **1,71 × 10⁻³ K/W**. ΔT = 20 − (−5) = 25 K. Φ = ΔT / R = 25 / 1,71 × 10⁻³ ≈ **1,5 × 10⁴ W** (environ 14,6 kW).\n2. R laine = 0,20 / (0,040 × 50) = 0,20 / 2,0 = **0,10 K/W**.\n3. Les couches sont traversées l'une après l'autre : leurs résistances **s'additionnent**, comme des résistances en série. R totale = 0,001 71 + 0,10 ≈ **0,102 K/W**. Φ = 25 / 0,102 ≈ **2,5 × 10² W** (246 W).\n4. 14 600 / 246 ≈ **59** : la fuite est divisée par une soixantaine. L'isolant, qui piège de l'air immobile, apporte presque toute la résistance ; le béton seul isole très mal."
+    },
+    {
+      "chapitre": "6f9da11e-234c-5887-a3fb-81c88feb26e2",
+      "difficulte": 3,
+      "titre": "Simple ou double vitrage ?",
+      "consigne": "Rédige chaque calcul et interprète les résultats ; les réponses non justifiées ne rapportent pas de points.",
+      "enonce": "**Situation.** Une fenêtre de **2,0 m²** sépare une pièce à **20 °C** de l'extérieur à **0 °C**. On compare :\n- un **simple vitrage** : une vitre de 4 mm de verre (λ = 1,0 W/(m·K)) ;\n- un **double vitrage 4-16-4** : deux vitres de 4 mm séparées par 16 mm d'air immobile (λ = 0,025 W/(m·K)).\n\nOn néglige les échanges d'air sur les faces (modèle simplifié). Donnée : 1 kWh = 3,6 × 10⁶ J.\n\n1. Calcule la résistance thermique du simple vitrage et le flux qui le traverse.\n2. Calcule la résistance thermique du double vitrage. Quelle couche apporte l'essentiel de l'isolation ?\n3. Calcule le flux à travers le double vitrage et l'énergie perdue en 24 h, en kWh.\n4. Quelle épaisseur de laine de verre (λ = 0,040 W/(m·K)), sur la même surface, aurait la même résistance que la lame d'air ?\n5. Complète l'analogie électrique : à quoi correspondent ΔT, Φ et Rth ? Comment un technicien peut-il repérer, sur la façade, les endroits où la chaleur s'échappe ?",
+      "bareme": [
+        { "critere": "Simple vitrage : R = 0,002 0 K/W et Φ = 1,0 × 10⁴ W", "points": 4 },
+        { "critere": "Double vitrage : R ≈ 0,324 K/W ; la lame d'air (0,32 K/W) apporte l'essentiel", "points": 5 },
+        { "critere": "Φ ≈ 62 W et énergie ≈ 1,5 kWh en 24 h", "points": 4 },
+        { "critere": "Épaisseur de laine e = R × λ × S ≈ 2,6 cm", "points": 3 },
+        { "critere": "Analogie (tension, intensité, résistance) et caméra thermique qui repère les ponts thermiques", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. R simple = e / (λ × S) = 0,004 / (1,0 × 2,0) = **0,002 0 K/W**. Φ = ΔT / R = 20 / 0,002 0 = **1,0 × 10⁴ W**. Ce chiffre est très exagéré par le modèle (on néglige les échanges d'air sur les faces), mais il montre qu'une vitre seule isole très mal.\n2. Chaque vitre : 0,002 0 K/W. Lame d'air : 0,016 / (0,025 × 2,0) = **0,32 K/W**. Les couches sont en série : R = 0,002 0 + 0,32 + 0,002 0 ≈ **0,324 K/W**. C'est la **lame d'air immobile** qui apporte presque toute la résistance, pas le verre.\n3. Φ = 20 / 0,324 ≈ **62 W**. En 24 h : Q = Φ × Δt = 62 × 86 400 ≈ 5,3 × 10⁶ J, soit 5,3 × 10⁶ / 3,6 × 10⁶ ≈ **1,5 kWh**.\n4. e = R × λ × S = 0,32 × 0,040 × 2,0 ≈ **0,026 m**, soit environ **2,6 cm** de laine de verre.\n5. ΔT correspond à la **tension** U, Φ à l'**intensité** I, Rth à la **résistance** R : Φ = ΔT / Rth ressemble à I = U / R. Une **caméra thermique** (infrarouge) montre les surfaces extérieures plus chaudes : ce sont les **ponts thermiques** (tours de fenêtres, jonctions dalle-mur) par où la chaleur s'échappe."
+    },
+    {
+      "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+      "difficulte": 1,
+      "titre": "Le démarrage du scooter",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** Un scooter et son conducteur ont une masse totale de **150 kg**. Ils passent de 0 à **50 km/h** en **5,0 s** en ligne droite, avec une accélération supposée constante.\n\n1. Convertis 50 km/h en m/s, puis calcule l'accélération.\n2. Calcule la somme des forces extérieures nécessaire à ce démarrage.\n3. Une fois à 50 km/h, le scooter roule à vitesse constante en ligne droite. Que vaut alors la somme des forces ? Que peut-on dire de la force motrice ?",
+      "bareme": [
+        { "critere": "v ≈ 13,9 m/s et a = v / Δt ≈ 2,8 m/s²", "points": 6 },
+        { "critere": "Σ F = m × a ≈ 4,2 × 10² N", "points": 7 },
+        { "critere": "Vitesse constante : Σ F = 0, la force motrice compense exactement les frottements", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. v = 50 / 3,6 ≈ **13,9 m/s**. a = Δv / Δt = 13,9 / 5,0 ≈ **2,8 m/s²** (2,78 m/s²).\n2. D'après le principe fondamental de la dynamique, Σ F = m × a = 150 × 2,78 ≈ **4,2 × 10² N** (417 N), dans le sens du mouvement.\n3. À vitesse constante en ligne droite, le mouvement est **rectiligne uniforme** : **Σ F = 0**. La force motrice n'est pas nulle : elle **compense exactement les frottements**. Une force n'est pas nécessaire pour avancer à vitesse constante, elle l'est pour changer de vitesse."
+    },
+    {
+      "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+      "difficulte": 2,
+      "titre": "La moto face à l'air",
+      "consigne": "Justifie chaque étape par une loi du cours et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Une moto et son pilote présentent un produit S × Cx = **0,40 m²**. Ils roulent en ligne droite à vitesse constante dans l'air (ρ = 1,2 kg/m³). On ne tient compte que de la traînée de l'air.\n\n1. Calcule la traînée à **20 m/s** (72 km/h).\n2. Que vaut la force motrice à cette vitesse ? Justifie. Calcule la puissance nécessaire.\n3. Reprends les calculs à **40 m/s**. Par combien la traînée et la puissance ont-elles été multipliées ? Explique pourquoi.",
+      "bareme": [
+        { "critere": "F = ½ × ρ × S × Cx × v² = 96 N à 20 m/s", "points": 5 },
+        { "critere": "Vitesse constante : force motrice = traînée = 96 N ; P = F × v = 1,9 × 10³ W", "points": 7 },
+        { "critere": "À 40 m/s : F = 384 N, P ≈ 1,5 × 10⁴ W ; traînée × 4 (carré de v), puissance × 8", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. F = ½ × ρ × S × Cx × v² = 0,5 × 1,2 × 0,40 × 20² = **96 N**.\n2. La vitesse est constante en ligne droite : Σ F = 0, donc la force motrice **compense exactement** la traînée : **96 N**. P = F × v = 96 × 20 ≈ **1,9 × 10³ W** (1 920 W).\n3. À 40 m/s : F = 0,5 × 1,2 × 0,40 × 40² = **384 N** ; P = 384 × 40 ≈ **1,5 × 10⁴ W** (15,4 kW). La traînée est multipliée par **4** car elle croît avec le **carré** de la vitesse (2² = 4) ; la puissance, égale à F × v, est multipliée par 4 × 2 = **8**. Rouler deux fois plus vite demande huit fois plus de puissance."
+    },
+    {
+      "chapitre": "3e8438cc-b26b-5d18-9b41-3bfd2da65780",
+      "difficulte": 3,
+      "titre": "Distance de freinage",
+      "consigne": "Choisis la bonne méthode pour chaque question (principe fondamental ou théorème de l'énergie cinétique) et justifie ton choix.",
+      "enonce": "**Situation.** Une voiture de **1 000 kg** roule à **20 m/s** sur une route horizontale. Le conducteur freine : on modélise le freinage par une force de frottement **constante** de **5 000 N**, opposée au mouvement. On néglige les autres frottements ; le poids et la réaction de la route se compensent.\n\n1. Fais le bilan des forces qui s'exercent sur la voiture pendant le freinage.\n2. Avec le théorème de l'énergie cinétique, calcule la distance de freinage.\n3. Avec le principe fondamental de la dynamique, calcule l'accélération, puis la durée du freinage.\n4. Reprends la distance de freinage pour une vitesse initiale de **30 m/s**. Par combien la distance est-elle multipliée ? Explique.\n5. Pourquoi a-t-on choisi le théorème de l'énergie cinétique à la question 2 et le principe fondamental à la question 3 ?",
+      "bareme": [
+        { "critere": "Bilan : poids, réaction de la route, force de freinage ; somme = force de freinage", "points": 3 },
+        { "critere": "ΔEc = −2,0 × 10⁵ J = −f × d, d = 40 m", "points": 5 },
+        { "critere": "a = −5,0 m/s², durée 4,0 s", "points": 4 },
+        { "critere": "À 30 m/s : d = 90 m, distance × 2,25 car Ec proportionnelle à v²", "points": 5 },
+        { "critere": "Choix de méthode justifié (distances et vitesses / accélération)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Forces : le **poids** (vertical, vers le bas), la **réaction** de la route (verticale, vers le haut), qui se compensent, et la **force de freinage** f = 5 000 N, horizontale, opposée au mouvement. La somme des forces se réduit donc à la force de freinage.\n2. ΔEc = Σ W : Ec finale − Ec initiale = 0 − ½ × 1 000 × 20² = **−2,0 × 10⁵ J**. Seule la force de freinage travaille (le poids et la réaction sont perpendiculaires au déplacement) : W = −f × d. Donc −5 000 × d = −2,0 × 10⁵ et **d = 40 m**.\n3. Σ F = m × a : −5 000 = 1 000 × a, donc **a = −5,0 m/s²** (la voiture ralentit). La vitesse diminue de 5,0 m/s chaque seconde : v(t) = 20 − 5,0 t, qui s'annule pour **t = 4,0 s**.\n4. ΔEc = −½ × 1 000 × 30² = −4,5 × 10⁵ J, donc d = 4,5 × 10⁵ / 5 000 = **90 m**. La vitesse est multipliée par 1,5, l'énergie cinétique (proportionnelle à v²) par 1,5² = **2,25**, et la distance aussi : 40 × 2,25 = 90 m.\n5. Le **théorème de l'énergie cinétique** convient quand on relie des **vitesses** et des **distances** (question 2). Le **principe fondamental** convient quand on cherche une **accélération** (question 3), d'où l'on tire la durée."
+    },
+    {
+      "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+      "difficulte": 1,
+      "titre": "Le moteur de la perceuse",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Situation.** La fiche technique d'un moteur indique une fréquence de rotation de **3 000 tr/min** et un couple de **5,0 N·m**.\n\n1. Calcule la vitesse angulaire ω du moteur en rad/s.\n2. Calcule la puissance mécanique fournie.\n3. Pour démonter le mandrin, on pousse perpendiculairement au bout d'une clé de **30 cm** avec une force de **50 N**. Calcule le moment de cette force par rapport à l'axe. Que vaudrait-il si la force était dirigée vers l'axe ?",
+      "bareme": [
+        { "critere": "ω = 2π × N / 60 ≈ 314 rad/s", "points": 6 },
+        { "critere": "P = C × ω ≈ 1,6 × 10³ W", "points": 6 },
+        { "critere": "M = F × d = 15 N·m ; moment nul si la droite d'action passe par l'axe", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ω = 2π × N / 60 = 2π × 3 000 / 60 ≈ **314 rad/s**.\n2. P = C × ω = 5,0 × 314 ≈ **1,6 × 10³ W** (1 571 W).\n3. M = F × d = 50 × 0,30 = **15 N·m**, d étant le bras de levier (distance perpendiculaire entre l'axe et la droite d'action). Si la force était dirigée vers l'axe, sa **droite d'action passerait par l'axe** : le bras de levier serait nul et le **moment nul**, la clé ne tournerait pas."
+    },
+    {
+      "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+      "difficulte": 2,
+      "titre": "Pédaler, c'est faire tourner",
+      "consigne": "Justifie chaque étape et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Un cycliste appuie sur une pédale fixée au bout d'une manivelle de **17 cm**.\n\n1. Quand la manivelle est horizontale, il appuie verticalement avec une force de **300 N**. Calcule le moment de cette force par rapport à l'axe du pédalier.\n2. Quand la manivelle est verticale, pédale en bas, il appuie toujours verticalement vers le bas. Que vaut le moment ? Explique.\n3. La roue arrière, de rayon **0,34 m**, tourne à **180 tr/min**. Calcule sa vitesse angulaire, puis la vitesse d'un point de la bande de roulement en m/s et en km/h.",
+      "bareme": [
+        { "critere": "Manivelle horizontale : d = 0,17 m, M = 51 N·m", "points": 6 },
+        { "critere": "Manivelle verticale : droite d'action passant par l'axe, moment nul", "points": 6 },
+        { "critere": "ω ≈ 18,8 rad/s, v = R × ω ≈ 6,4 m/s ≈ 23 km/h", "points": 8 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La force verticale est perpendiculaire à la manivelle horizontale : le bras de levier vaut d = 0,17 m. M = F × d = 300 × 0,17 = **51 N·m**.\n2. Manivelle verticale, pédale en bas, force verticale : la **droite d'action de la force passe par l'axe** du pédalier. Le bras de levier est nul, donc le **moment est nul** : appuyer à ce moment-là ne fait pas tourner le pédalier (c'est le « point mort »).\n3. ω = 2π × N / 60 = 2π × 180 / 60 ≈ **18,8 rad/s**. v = R × ω = 0,34 × 18,85 ≈ **6,4 m/s**, soit 6,4 × 3,6 ≈ **23 km/h**."
+    },
+    {
+      "chapitre": "4af0b4c1-514c-5399-a37a-50f0536772b8",
+      "difficulte": 3,
+      "titre": "Le château d'eau du village",
+      "consigne": "Justifie chaque réponse par une loi du cours, et précise à chaque fois s'il s'agit d'une pression absolue ou relative.",
+      "enonce": "**Situation.** Le réservoir d'un château d'eau, ouvert à l'air libre, a sa surface libre à **40 m** au-dessus du pied de la colonne. L'eau est au repos. Données : ρ = 1 000 kg/m³ ; g = 9,81 N/kg ; pression atmosphérique ≈ 1,013 × 10⁵ Pa ; 1 bar = 10⁵ Pa.\n\n1. Calcule la différence de pression entre la surface libre et le pied de la colonne. Exprime-la en bars. Est-ce la pression relative ou absolue au pied ? Donne l'autre.\n2. Un robinet est situé à **10 m** au-dessus du pied. Quelle pression relative y règne-t-elle ?\n3. Au pied, une vanne a une surface de **0,020 m²**. L'autre face de la vanne est à l'air libre. Calcule la valeur de la force pressante que l'eau exerce en plus de l'atmosphère.\n4. Un élève affirme : « Si le réservoir était deux fois plus large, la pression au pied serait deux fois plus grande. » Discute cette affirmation.\n5. Quel appareil mesure la pression relative au robinet ? Et la pression absolue ?",
+      "bareme": [
+        { "critere": "Δp = ρ × g × h ≈ 3,9 × 10⁵ Pa ≈ 3,9 bars (relative) ; absolue ≈ 4,9 bars", "points": 5 },
+        { "critere": "Robinet : profondeur 30 m, p relative ≈ 2,9 bars", "points": 4 },
+        { "critere": "F = p relative × S ≈ 7,8 × 10³ N", "points": 4 },
+        { "critere": "La pression ne dépend que de la profondeur, pas de la forme du récipient", "points": 4 },
+        { "critere": "Manomètre (relative) et baromètre (absolue)", "points": 3 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Principe fondamental de l'hydrostatique : p pied − p surface = ρ × g × (z surface − z pied) = 1 000 × 9,81 × 40 ≈ **3,9 × 10⁵ Pa**, soit **3,9 bars**. La surface est à la pression atmosphérique : cette différence est donc la **pression relative** au pied. Pression absolue : 3,92 × 10⁵ + 1,013 × 10⁵ ≈ **4,9 × 10⁵ Pa**, environ **4,9 bars**.\n2. Le robinet est à 40 − 10 = 30 m sous la surface libre : p relative = 1 000 × 9,81 × 30 ≈ **2,9 × 10⁵ Pa**, environ **2,9 bars**.\n3. L'atmosphère agit sur les deux faces ; la force supplémentaire due à l'eau est F = p relative × S = 3,92 × 10⁵ × 0,020 ≈ **7,8 × 10³ N**.\n4. L'affirmation est **fausse** : dans un liquide au repos, la pression **ne dépend que de la profondeur**, quelle que soit la forme du récipient. Un réservoir plus large contient plus d'eau, mais la pression au pied reste la même tant que la hauteur d'eau est de 40 m.\n5. La pression **relative** se mesure au **manomètre** ; la pression **absolue**, par rapport au vide, au **baromètre**."
+    },
+    {
+      "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+      "difficulte": 1,
+      "titre": "Photon bleu, photon rouge",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité.",
+      "enonce": "**Données.** h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m/s ; 1 eV = 1,60 × 10⁻¹⁹ J.\n\n1. Une lumière bleue a une longueur d'onde de **450 nm**. Calcule la fréquence puis l'énergie d'un de ses photons, en joules et en électronvolts.\n2. Calcule l'énergie d'un photon rouge de **700 nm**, en eV. Lequel est le plus énergétique ? Justifie par la règle du cours.\n3. Un atome possède deux niveaux d'énergie séparés de **2,76 eV**. Peut-il absorber le photon bleu ? le photon rouge ? Justifie.",
+      "bareme": [
+        { "critere": "f ≈ 6,67 × 10¹⁴ Hz ; E ≈ 4,42 × 10⁻¹⁹ J ≈ 2,76 eV", "points": 8 },
+        { "critere": "Photon rouge ≈ 1,78 eV ; le bleu est plus énergétique (fréquence plus grande)", "points": 6 },
+        { "critere": "Absorption seulement si l'énergie égale l'écart : bleu oui, rouge non", "points": 6 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. f = c / λ = 3,00 × 10⁸ / 450 × 10⁻⁹ ≈ **6,67 × 10¹⁴ Hz**. E = h × f = 6,63 × 10⁻³⁴ × 6,67 × 10¹⁴ ≈ **4,42 × 10⁻¹⁹ J**, soit 4,42 × 10⁻¹⁹ / 1,60 × 10⁻¹⁹ ≈ **2,76 eV**.\n2. E = h × c / λ = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / 700 × 10⁻⁹ ≈ 2,84 × 10⁻¹⁹ J ≈ **1,78 eV**. Le photon **bleu** est le plus énergétique : plus la longueur d'onde est courte (plus la fréquence est grande), plus le photon est énergétique.\n3. Un atome n'absorbe un photon que si son énergie **égale l'écart entre deux niveaux**. Le photon bleu (2,76 eV) correspond exactement à l'écart : il **peut être absorbé**. Le photon rouge (1,78 eV) ne correspond pas : il **n'est pas absorbé** entre ces deux niveaux."
+    },
+    {
+      "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+      "difficulte": 2,
+      "titre": "Le panneau du toit",
+      "consigne": "Exploite les données, justifie chaque étape et donne les résultats avec leur unité.",
+      "enonce": "**Situation.** Un panneau photovoltaïque de **1,7 m²** reçoit un éclairement de **900 W/m²**. Branché sur une résistance, il fonctionne sous **30 V** et débite **8,5 A**.\n\n1. Que désignent Icc et Uco sur la caractéristique I = f(U) du panneau ?\n2. Comment détermine-t-on le point de fonctionnement du panneau branché sur une résistance ? Calcule la valeur de cette résistance.\n3. Calcule la puissance lumineuse reçue, la puissance électrique fournie, puis le rendement. Compare au rendement typique d'un panneau.",
+      "bareme": [
+        { "critere": "Icc : courant de court-circuit (U = 0) ; Uco : tension à vide (I = 0)", "points": 4 },
+        { "critere": "Point de fonctionnement à l'intersection des caractéristiques ; R = U / I ≈ 3,5 Ω", "points": 6 },
+        { "critere": "P reçue = 1 530 W ; P électrique = 255 W ; rendement ≈ 17 %, dans la fourchette 15 à 22 %", "points": 10 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **Icc** est le **courant de court-circuit** : le courant débité quand la tension est nulle (U = 0). **Uco** est la **tension à vide** : la tension quand le panneau ne débite aucun courant (I = 0).\n2. Le point de fonctionnement est l'**intersection** de la caractéristique du panneau avec celle de la charge (pour une résistance, une droite passant par l'origine, U = R × I). R = U / I = 30 / 8,5 ≈ **3,5 Ω**.\n3. P reçue = 900 × 1,7 = **1 530 W**. P électrique = U × I = 30 × 8,5 = **255 W**. Rendement η = 255 / 1 530 ≈ **0,17**, soit environ **17 %** : c'est dans la fourchette typique du photovoltaïque (15 à 22 %)."
+    },
+    {
+      "chapitre": "1e22ccfb-567a-5ce3-9cd9-cd7f0b46c526",
+      "difficulte": 3,
+      "titre": "Chauffer l'eau avec le Soleil",
+      "consigne": "Rédige chaque calcul, puis compare les deux solutions dans une conclusion argumentée.",
+      "enonce": "**Situation.** Une famille veut chauffer **150 L** d'eau de **20 °C** à **50 °C**. Le toit reçoit **700 W/m²**. Données : c eau = 4 180 J/(kg·°C) ; 1 L d'eau a une masse de 1 kg.\n\n**Solution A** : 3,0 m² de capteurs solaires thermiques, de rendement **55 %**.\n**Solution B** : 3,0 m² de panneaux photovoltaïques, de rendement **18 %**, qui alimentent une résistance plongée dans l'eau (on suppose que toute l'énergie électrique chauffe l'eau).\n\n1. Nomme la conversion d'énergie réalisée dans chaque solution.\n2. Calcule l'énergie nécessaire pour chauffer l'eau.\n3. Calcule la puissance utile de la solution A et la durée de chauffage.\n4. Calcule la puissance utile de la solution B et la durée de chauffage.\n5. Quelle solution est la plus efficace pour ce besoin ? Quel avantage garde pourtant le photovoltaïque ?",
+      "bareme": [
+        { "critere": "A : photothermique (lumineuse → thermique) ; B : photovoltaïque (lumineuse → électrique)", "points": 3 },
+        { "critere": "Q = m × c × Δθ ≈ 1,88 × 10⁷ J", "points": 4 },
+        { "critere": "A : P = 1 155 W, durée ≈ 1,6 × 10⁴ s ≈ 4 h 30", "points": 5 },
+        { "critere": "B : P = 378 W, durée ≈ 5,0 × 10⁴ s ≈ 14 h", "points": 4 },
+        { "critere": "Conclusion : le photothermique est plus efficace ; l'électricité est plus facile à transporter et à valoriser", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Solution A : conversion **photothermique** (énergie lumineuse → énergie thermique). Solution B : conversion **photovoltaïque** (énergie lumineuse → énergie électrique, avec une part thermique perdue), puis électrique → thermique dans la résistance.\n2. m = 150 kg ; Q = m × c × Δθ = 150 × 4 180 × 30 ≈ **1,88 × 10⁷ J** (18,8 MJ).\n3. Puissance reçue : 700 × 3,0 = 2 100 W ; puissance utile : 0,55 × 2 100 = **1 155 W**. Durée : Δt = Q / P = 1,88 × 10⁷ / 1 155 ≈ **1,6 × 10⁴ s**, soit environ **4 h 30 min**.\n4. Puissance utile : 0,18 × 2 100 = **378 W**. Durée : 1,88 × 10⁷ / 378 ≈ **5,0 × 10⁴ s**, soit environ **14 h** : plus qu'une journée d'ensoleillement.\n5. Pour chauffer de l'eau, la solution **photothermique** est nettement plus efficace (rendement plus élevé, durée trois fois plus courte). Mais elle produit de la **chaleur**, moins facile à transporter et à valoriser ; le photovoltaïque produit de l'**électricité**, utilisable pour n'importe quel appareil."
+    },
+    {
+      "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+      "difficulte": 1,
+      "titre": "Noyaux et rayonnements",
+      "consigne": "Réponds en justifiant chaque réponse à l'aide du cours.",
+      "enonce": "**Questions.**\n\n1. Le cobalt 60 a pour numéro atomique Z = 27. Donne la composition de son noyau (protons, neutrons). Le cobalt 59 est-il un isotope du cobalt 60 ? Justifie.\n2. Complète : la radioactivité α émet …, arrêtée par … ; la radioactivité γ émet …, arrêtée par … .\n3. L'iode 131 a une demi-vie de 8 jours. Quel pourcentage des noyaux d'iode 131 d'un échantillon reste-t-il au bout de 16 jours ? de 24 jours ?",
+      "bareme": [
+        { "critere": "27 protons et 33 neutrons ; isotopes : même Z, A différents", "points": 6 },
+        { "critere": "α : noyau d'hélium, feuille de papier ; γ : photon de très haute énergie, plomb ou béton épais", "points": 6 },
+        { "critere": "16 jours = 2 demi-vies : 25 % ; 24 jours = 3 demi-vies : 12,5 %", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. A = 60 nucléons et Z = 27 protons, donc 60 − 27 = **33 neutrons**. Le cobalt 59 a le même Z (27) mais un nombre de masse différent (59) : c'est un **isotope** du cobalt 60.\n2. La radioactivité **α** émet un **noyau d'hélium** (A = 4, Z = 2), arrêté par **une feuille de papier**. La radioactivité **γ** émet un **photon de très haute énergie**, arrêté par **plusieurs centimètres de plomb** ou du béton épais.\n3. Après n demi-vies, il reste N0 / 2ⁿ. 16 jours = 2 demi-vies : il reste 1/4, soit **25 %**. 24 jours = 3 demi-vies : il reste 1/8, soit **12,5 %**."
+    },
+    {
+      "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+      "difficulte": 2,
+      "titre": "Le fluor 18 de l'hôpital",
+      "consigne": "Justifie chaque étape et donne les résultats avec un nombre de chiffres significatifs cohérent.",
+      "enonce": "**Situation.** Pour un examen d'imagerie, on prépare une dose contenant **N0 = 8,0 × 10¹²** noyaux de fluor 18 (Z = 9), de demi-vie **110 min**. Le fluor 18 est un émetteur **β⁺** ; il se transforme en oxygène 18 (Z = 8). Le positon a pour nombre de masse 0 et pour charge Z = +1.\n\n1. Le fluor 18 est-il un noyau radioactif naturel ou artificiel ? Écris l'équation de sa désintégration et vérifie les lois de conservation.\n2. Combien de noyaux de fluor 18 reste-t-il au bout de 330 min ? Justifie sans calculatrice.\n3. Calcule la constante radioactive λ (en min⁻¹), puis le nombre de noyaux restants au bout de 60 min.",
+      "bareme": [
+        { "critere": "Artificiel ; équation fluor 18 → oxygène 18 + positon, conservation de A (18 = 18 + 0) et de Z (9 = 8 + 1)", "points": 7 },
+        { "critere": "330 min = 3 demi-vies : N = N0 / 8 = 1,0 × 10¹²", "points": 6 },
+        { "critere": "λ = ln 2 / t½ ≈ 6,3 × 10⁻³ min⁻¹ ; N(60) ≈ 5,5 × 10¹²", "points": 7 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Le fluor 18 est un noyau **artificiel** : il est créé en réacteur ou en accélérateur (le cours le cite comme exemple). Équation : **fluor 18 (A = 18, Z = 9) → oxygène 18 (A = 18, Z = 8) + positon (A = 0, Z = +1)**. Conservation du nombre de nucléons : 18 = 18 + 0 ; conservation de la charge : 9 = 8 + 1.\n2. 330 min = 3 × 110 min = **3 demi-vies**. Il reste N0 / 2³ = 8,0 × 10¹² / 8 = **1,0 × 10¹²** noyaux.\n3. λ = ln 2 / t½ = 0,693 / 110 ≈ **6,3 × 10⁻³ min⁻¹**. N(60) = N0 × e^(−λ × 60) = 8,0 × 10¹² × e^(−0,378) ≈ 8,0 × 10¹² × 0,685 ≈ **5,5 × 10¹²** noyaux. Cohérent : 60 min est moins d'une demi-vie, il reste donc plus de la moitié des noyaux (environ 68 %)."
+    },
+    {
+      "chapitre": "ab76b534-f184-5969-9ac7-8185f53665c0",
+      "difficulte": 3,
+      "titre": "Au cœur du réacteur",
+      "consigne": "Rédige chaque réponse et justifie par les lois du cours.",
+      "enonce": "**Situation.** Dans un réacteur, une fission possible de l'uranium 235 (Z = 92) s'écrit :\n\nuranium 235 + neutron → strontium 94 (Z = 38) + xénon 140 (Z = 54) + x neutrons\n\nLe défaut de masse de cette réaction vaut environ **3,1 × 10⁻²⁸ kg**. Donnée : c = 3,00 × 10⁸ m/s.\n\n1. Détermine x en utilisant les lois de conservation, et vérifie la conservation de la charge.\n2. Qu'est-ce que le défaut de masse ? Calcule l'énergie libérée par une fission.\n3. Le réacteur libère une puissance thermique de **3,0 × 10⁹ W**. Combien de fissions se produisent chaque seconde ?\n4. Explique ce qu'est la réaction en chaîne et pourquoi elle doit être contrôlée.\n5. En quoi la fusion diffère-t-elle de la fission ? Donne l'exemple du cours et dis où elle se produit naturellement.",
+      "bareme": [
+        { "critere": "Conservation de A : 236 = 94 + 140 + x, x = 2 ; Z : 92 = 38 + 54", "points": 4 },
+        { "critere": "Défaut de masse défini ; E = Δm × c² ≈ 2,8 × 10⁻¹¹ J", "points": 5 },
+        { "critere": "Nombre de fissions par seconde ≈ 1,1 × 10²⁰", "points": 4 },
+        { "critere": "Réaction en chaîne : les neutrons libérés provoquent d'autres fissions, contrôle nécessaire", "points": 3 },
+        { "critere": "Fusion : deux noyaux légers qui s'unissent (deutérium + tritium → hélium 4 + neutron), Soleil", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Conservation du nombre de nucléons : 235 + 1 = 94 + 140 + x, donc 236 = 234 + x et **x = 2**. Conservation de la charge : 92 + 0 = 38 + 54 = 92 : vérifiée.\n2. Le **défaut de masse** est la différence entre la masse des réactifs et celle des produits : les produits sont légèrement **moins lourds**. Cette masse disparue est libérée sous forme d'énergie : E = Δm × c² = 3,1 × 10⁻²⁸ × (3,00 × 10⁸)² ≈ **2,8 × 10⁻¹¹ J**.\n3. En une seconde, le réacteur libère 3,0 × 10⁹ J. Nombre de fissions : 3,0 × 10⁹ / 2,8 × 10⁻¹¹ ≈ **1,1 × 10²⁰ fissions par seconde**.\n4. Chaque fission libère des **neutrons** (ici 2), qui peuvent provoquer d'autres fissions, qui en libèrent d'autres : c'est la **réaction en chaîne**. Non contrôlée, elle s'emballe ; dans une centrale, elle est **contrôlée** pour que la puissance reste constante.\n5. La **fission** casse un noyau lourd en deux noyaux plus légers ; la **fusion** unit **deux noyaux légers** en un noyau plus lourd. Exemple : **deutérium + tritium → hélium 4 + neutron**. La fusion alimente le **Soleil** ; le projet ITER cherche à la maîtriser sur Terre."
+    },
+    {
+      "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+      "difficulte": 1,
+      "titre": "Fondre ou vaporiser ?",
+      "consigne": "Donne l'expression littérale, l'application numérique et le résultat avec son unité, puis explique.",
+      "enonce": "**Données.** Énergie de fusion de la glace : 334 kJ/kg ; énergie de vaporisation de l'eau : 2 260 kJ/kg.\n\n1. Calcule l'énergie nécessaire pour faire fondre **0,20 kg** de glace à 0 °C.\n2. Calcule l'énergie nécessaire pour vaporiser **0,20 kg** d'eau à 100 °C.\n3. Combien de fois la seconde est-elle plus grande que la première ? Explique cette différence à l'aide des liaisons hydrogène.",
+      "bareme": [
+        { "critere": "Fusion : Q = m × L = 66,8 kJ", "points": 5 },
+        { "critere": "Vaporisation : Q = 452 kJ", "points": 5 },
+        { "critere": "Rapport ≈ 6,8 ; la fusion rompt une partie des liaisons hydrogène, la vaporisation presque toutes", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Q fusion = m × L fusion = 0,20 × 334 = **66,8 kJ**.\n2. Q vaporisation = 0,20 × 2 260 = **452 kJ**.\n3. 452 / 66,8 ≈ **6,8** fois plus. Les molécules d'eau s'attirent par des **liaisons hydrogène** (un H d'une molécule attiré par un doublet non liant de l'O d'une molécule voisine). En **fondant**, la glace ne rompt qu'**une partie** de ces liaisons ; en se **vaporisant**, l'eau les rompt **presque toutes**. Rompre des liaisons coûte de l'énergie : la vaporisation en demande donc beaucoup plus."
+    },
+    {
+      "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+      "difficulte": 2,
+      "titre": "Les pâtes au refuge",
+      "consigne": "Rédige chaque calcul et exploite le diagramme d'état décrit dans le cours.",
+      "enonce": "**Situation.** Pour cuire des pâtes, on chauffe **2,0 kg** d'eau de **15 °C** jusqu'à l'ébullition sous 1 bar, puis on laisse bouillir : **0,20 kg** d'eau se vaporise pendant la cuisson. Données : c eau = 4 180 J/(kg·°C) ; énergie de vaporisation : 2 260 kJ/kg.\n\n1. Calcule l'énergie nécessaire pour porter l'eau à 100 °C.\n2. Calcule l'énergie consommée par la vaporisation, puis l'énergie totale.\n3. Dans un refuge de montagne, la pression vaut **0,7 bar**. À quelle température l'eau bout-elle ? Calcule l'énergie nécessaire pour atteindre l'ébullition, puis explique pourquoi les pâtes y cuisent pourtant plus lentement.\n4. Pourquoi un autocuiseur, à 2 bars, cuit-il plus vite ?",
+      "bareme": [
+        { "critere": "Q1 = m × c × Δθ ≈ 711 kJ", "points": 5 },
+        { "critere": "Q2 = 452 kJ ; total ≈ 1,16 × 10³ kJ", "points": 5 },
+        { "critere": "Montagne : ébullition vers 90 °C, Q ≈ 627 kJ ; cuisson à plus basse température donc plus lente", "points": 6 },
+        { "critere": "Autocuiseur : ébullition vers 120 °C, cuisson plus rapide", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Q1 = m × c × Δθ = 2,0 × 4 180 × (100 − 15) = 2,0 × 4 180 × 85 ≈ **7,11 × 10⁵ J** (711 kJ).\n2. Q2 = 0,20 × 2 260 = **452 kJ**. Total : 711 + 452 ≈ **1,16 × 10³ kJ** (1,16 MJ).\n3. D'après le diagramme d'état de l'eau, sous **0,7 bar** elle bout **vers 90 °C**. Énergie pour atteindre l'ébullition : 2,0 × 4 180 × (90 − 15) ≈ **627 kJ**, un peu moins qu'en plaine. Mais les pâtes cuisent dans une eau à 90 °C au lieu de 100 °C : la cuisson est **plus lente**, même si l'eau bout.\n4. Dans l'autocuiseur, la pression élevée (2 bars) fait bouillir l'eau **vers 120 °C** : les aliments cuisent à plus haute température, donc **plus vite**."
+    },
+    {
+      "chapitre": "115f0938-8cac-506b-a73f-76d925aa539b",
+      "difficulte": 3,
+      "titre": "Bilan d'une chaudière à gaz",
+      "consigne": "Pars du bilan de matière, rédige chaque calcul et conclus.",
+      "enonce": "**Situation.** Une chaudière brûle **2,0 m³** de méthane à 20 °C par jour. Données : volume molaire 24 L/mol à 20 °C ; énergie molaire de combustion du méthane ≈ 800 kJ/mol ; M(CO2) = 44 g/mol ; M(H2O) = 18 g/mol ; énergie de vaporisation de l'eau : 2 260 kJ/kg.\n\n1. Écris l'équation de la combustion complète du méthane.\n2. Calcule la quantité de matière de méthane brûlée, puis l'énergie libérée.\n3. Calcule la masse de CO2 rejetée par jour. Pourquoi ce rejet contribue-t-il au réchauffement climatique ?\n4. Calcule la masse d'eau produite par la combustion.\n5. Une chaudière **à condensation** liquéfie cette vapeur d'eau. Calcule l'énergie récupérée et compare-la à l'énergie de combustion. Explique pourquoi la condensation libère de l'énergie.",
+      "bareme": [
+        { "critere": "CH4 + 2 O2 → CO2 + 2 H2O", "points": 3 },
+        { "critere": "n ≈ 83,3 mol ; Q ≈ 6,7 × 10⁴ kJ (67 MJ)", "points": 5 },
+        { "critere": "m(CO2) ≈ 3,7 kg ; carbone fossile stocké depuis des millions d'années", "points": 4 },
+        { "critere": "n(H2O) = 2 n(CH4) ≈ 167 mol ; m ≈ 3,0 kg", "points": 4 },
+        { "critere": "Énergie récupérée ≈ 6,8 MJ, environ 10 % ; former des liaisons libère de l'énergie", "points": 4 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **CH4 + 2 O2 → CO2 + 2 H2O**.\n2. n = V / Vm = 2 000 L / 24 L/mol ≈ **83,3 mol**. Q = n × E molaire = 83,3 × 800 ≈ **6,7 × 10⁴ kJ**, soit environ **67 MJ**.\n3. Une mole de CO2 par mole de méthane : n(CO2) = 83,3 mol, m = 83,3 × 44 ≈ **3,7 × 10³ g**, soit **3,7 kg** par jour. Brûler un combustible **fossile** libère du carbone stocké depuis des **millions d'années** : c'est la cause principale du réchauffement climatique.\n4. Deux moles d'eau par mole de méthane : n(H2O) = 2 × 83,3 ≈ 167 mol ; m = 167 × 18 ≈ **3,0 × 10³ g**, soit **3,0 kg**.\n5. Énergie récupérée : 3,0 × 2 260 ≈ **6,8 × 10³ kJ** (6,8 MJ), soit 6,8 / 67 ≈ **10 %** de l'énergie de combustion, comme l'indique le cours. La condensation (gaz → liquide) **forme** des liaisons hydrogène entre molécules d'eau : former des liaisons **libère** de l'énergie, que la chaudière récupère au lieu de la laisser partir avec les fumées."
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "niveau": "1re",
+  "matiere": "maths",
+  "sujets": [
+    {
+      "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+      "difficulte": 1,
+      "titre": "Compter les termes, puis additionner",
+      "consigne": "Réponds à chaque question en justifiant tes calculs.",
+      "enonce": "1. Combien de termes compte la somme u(5) + u(6) + … + u(30) ?\n2. Calcule S₁ = 1 + 2 + 3 + … + 50.\n3. La suite (u) est arithmétique de premier terme u(0) = 4 et de raison 3.\n   a) Calcule u(19).\n   b) Calcule S₂ = u(0) + u(1) + … + u(19).",
+      "bareme": [
+        { "critere": "Nombre de termes : 30 − 5 + 1 = 26", "points": 5 },
+        { "critere": "S₁ = 50 × 51 / 2 = 1 275", "points": 5 },
+        { "critere": "u(19) = 61 et S₂ = 20 × (4 + 61) / 2 = 650, avec le bon nombre de termes", "points": 10 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. De u(p) à u(n) inclus, il y a n − p + 1 termes : 30 − 5 + 1 = **26 termes**.\n2. 1 + 2 + … + n = n (n + 1) / 2, donc S₁ = 50 × 51 / 2 = **1 275**.\n3. a) u(n) = u(0) + n × r, donc u(19) = 4 + 19 × 3 = 4 + 57 = **61**.\n   b) De u(0) à u(19), il y a 19 − 0 + 1 = 20 termes. S₂ = nombre de termes × (premier + dernier) / 2 = 20 × (4 + 61) / 2 = 20 × 65 / 2 = **650**.\n\nErreur classique à signaler : compter 19 termes au lieu de 20 (oubli du « + 1 »)."
+    },
+    {
+      "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+      "difficulte": 2,
+      "titre": "Deux contrats d'argent de poche",
+      "consigne": "Modélise chaque contrat par une suite, puis réponds en justifiant.",
+      "enonce": "**Situation.** Ses parents proposent à Yanis deux contrats pour les 12 mois de l'année.\n- **Contrat A** : 100 € le 1er mois, puis 20 € de plus chaque mois.\n- **Contrat B** : 1 € le 1er mois, puis le double du mois précédent chaque mois.\n\n1. On note a(1) la somme du 1er mois du contrat A, a(2) celle du 2e mois, etc. Quelle est la nature de la suite (a) ? Calcule a(12).\n2. Calcule le total reçu sur 12 mois avec le contrat A.\n3. On note b(1), b(2)… les sommes du contrat B. Quelle est la nature de la suite (b) ? Calcule le total reçu sur 12 mois avec le contrat B (on donne 2¹² = 4 096).\n4. Quel contrat Yanis doit-il choisir ?",
+      "bareme": [
+        { "critere": "Suite arithmétique de raison 20 et a(12) = 320", "points": 4 },
+        { "critere": "Total A = 12 × (100 + 320) / 2 = 2 520 €", "points": 5 },
+        { "critere": "Suite géométrique de raison 2 et total B = (1 − 2¹²) / (1 − 2) = 4 095 €", "points": 8 },
+        { "critere": "Conclusion : le contrat B rapporte plus", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. On ajoute 20 € chaque mois : (a) est **arithmétique** de raison 20 et de premier terme a(1) = 100. a(12) = 100 + 11 × 20 = **320 €**.\n2. De a(1) à a(12), il y a 12 termes. Total A = 12 × (100 + 320) / 2 = 12 × 210 = **2 520 €**.\n3. On multiplie par 2 chaque mois : (b) est **géométrique** de raison q = 2 et de premier terme b(1) = 1. Pour 12 termes : total B = 1 × (1 − 2¹²) / (1 − 2) = (1 − 4 096) / (−1) = **4 095 €**. (Le 12e mois seul rapporte 2¹¹ = 2 048 €.)\n4. 4 095 € > 2 520 € : Yanis a intérêt à choisir le **contrat B**, même s'il rapporte beaucoup moins au début (il rapporte moins que A jusqu'au 9e mois : b(9) = 256 € contre a(9) = 260 €, puis b(10) = 512 € contre a(10) = 280 €)."
+    },
+    {
+      "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+      "difficulte": 3,
+      "titre": "Un puits de pétrole qui s'épuise",
+      "consigne": "Justifie chaque réponse. La calculatrice est autorisée ; on donne 0,9¹⁰ ≈ 0,3487.",
+      "enonce": "**Situation.** Un puits produit 1 000 barils la première année. Chaque année, sa production baisse de 10 %. On note u(0) = 1 000 la production de la première année, u(1) celle de la deuxième année, etc.\n\n1. Montre que (u) est une suite géométrique ; précise sa raison.\n2. Combien de termes compte la somme u(0) + u(1) + … + u(9) ? Que représente-t-elle ?\n3. Calcule cette somme, arrondie au baril près.\n4. On note S(N) la production totale des N premières années. Montre que S(N) = 10 000 × (1 − 0,9 puissance N), puis explique pourquoi le puits ne produira jamais 10 000 barils au total.\n5. Complète la fonction Python suivante pour qu'elle renvoie S(N) sans utiliser de formule :\n\n| Ligne | Code |\n|---|---|\n| 1 | def total(N): |\n| 2 | ····s = 0 |\n| 3 | ····u = 1000 |\n| 4 | ····for i in range(N): |\n| 5 | ········… |\n| 6 | ········… |\n| 7 | ····return s |",
+      "bareme": [
+        { "critere": "Suite géométrique de raison 0,9 justifiée par le coefficient multiplicateur", "points": 3 },
+        { "critere": "10 termes, production totale sur 10 ans", "points": 3 },
+        { "critere": "Somme = 1 000 × (1 − 0,9¹⁰) / (1 − 0,9) ≈ 6 513 barils", "points": 5 },
+        { "critere": "Formule de S(N) établie et argument : 0,9 puissance N > 0 donc S(N) < 10 000", "points": 5 },
+        { "critere": "Boucle complétée : s = s + u puis u = 0.9 * u, dans cet ordre", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Baisser de 10 %, c'est multiplier par 0,9 : u(n+1) = 0,9 u(n). La suite (u) est **géométrique** de raison **q = 0,9** et de premier terme u(0) = 1 000.\n2. De u(0) à u(9), il y a 9 − 0 + 1 = **10 termes** : c'est la production totale des **10 premières années**.\n3. q ≠ 1, donc S = premier terme × (1 − q puissance N) / (1 − q) = 1 000 × (1 − 0,9¹⁰) / (1 − 0,9) = 1 000 × (1 − 0,3487) / 0,1 = 10 000 × 0,6513 ≈ **6 513 barils**.\n4. S(N) = 1 000 × (1 − 0,9 puissance N) / 0,1 = **10 000 × (1 − 0,9 puissance N)**. Comme 0,9 puissance N est strictement positif, 1 − 0,9 puissance N < 1, donc **S(N) < 10 000** pour tout N : le total s'approche de 10 000 sans jamais l'atteindre (comme la somme 1 + 1/2 + 1/4 + … qui ne dépasse jamais 2).\n5. Lignes 5 et 6 :\n- ligne 5 : s = s + u (on ajoute la production de l'année) ;\n- ligne 6 : u = 0.9 * u (on calcule la production de l'année suivante).\nL'ordre compte : il faut ajouter u(0) avant de le transformer. Avec la boucle for i in range(N), on additionne bien N termes, de u(0) à u(N − 1)."
+    },
+    {
+      "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+      "difficulte": 1,
+      "titre": "Dériver avec le tableau",
+      "consigne": "Donne chaque dérivée en précisant l'ensemble sur lequel la fonction est dérivable.",
+      "enonce": "Calcule la dérivée de chacune des fonctions suivantes.\n\n1. f(x) = 5x⁴ − 3x² + 2x − 7, définie sur l'ensemble des réels.\n2. g(x) = √x, définie sur [0 ; +∞[. Sur quel intervalle g est-elle dérivable ?\n3. h(x) = e puissance (3x), définie sur l'ensemble des réels.\n4. k(x) = cos x + sin x, définie sur l'ensemble des réels.",
+      "bareme": [
+        { "critere": "f'(x) = 20x³ − 6x + 2", "points": 5 },
+        { "critere": "g'(x) = 1 / (2√x), dérivable sur ]0 ; +∞[ seulement (pas en 0)", "points": 6 },
+        { "critere": "h'(x) = 3 e puissance (3x)", "points": 5 },
+        { "critere": "k'(x) = −sin x + cos x", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. On dérive terme à terme avec (x puissance n)' = n x puissance (n − 1) : f'(x) = 5 × 4x³ − 3 × 2x + 2 = **20x³ − 6x + 2**, sur l'ensemble des réels.\n2. g'(x) = **1 / (2√x)**. La racine carrée est définie en 0 mais **n'y est pas dérivable** (tangente verticale) : g est dérivable sur **]0 ; +∞[**.\n3. Composée affine g(ax + b) avec a = 3 : h'(x) = 3 × e puissance (3x) = **3 e puissance (3x)**, sur l'ensemble des réels.\n4. (cos x)' = −sin x et (sin x)' = cos x, donc k'(x) = **−sin x + cos x**, sur l'ensemble des réels."
+    },
+    {
+      "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+      "difficulte": 2,
+      "titre": "Composées affines et un produit",
+      "consigne": "Repère d'abord la forme de chaque fonction, puis dérive. Justifie la dernière question.",
+      "enonce": "1. Dérive f(x) = (3x − 1)⁴ sur l'ensemble des réels.\n2. Dérive g(x) = √(2x + 5) sur ]−5/2 ; +∞[ et simplifie le résultat.\n3. On considère h(x) = x e puissance (−x) sur l'ensemble des réels.\n   a) Reconnais la forme de h et montre que h'(x) = (1 − x) e puissance (−x).\n   b) Sachant qu'une exponentielle est toujours strictement positive, étudie le signe de h'(x).\n   c) Déduis-en les variations de h et la valeur de son maximum.",
+      "bareme": [
+        { "critere": "f'(x) = 4 × 3 × (3x − 1)³ = 12 (3x − 1)³", "points": 4 },
+        { "critere": "g'(x) = 2 / (2√(2x + 5)) = 1 / √(2x + 5)", "points": 4 },
+        { "critere": "Produit u v reconnu et h'(x) = (1 − x) e puissance (−x) démontré", "points": 6 },
+        { "critere": "Signe de h', variations et maximum h(1) = e puissance (−1) = 1/e", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Forme g(ax + b) avec g(X) = X⁴ et a = 3 : f'(x) = 3 × 4 (3x − 1)³ = **12 (3x − 1)³**.\n2. Forme √(ax + b) avec a = 2 : g'(x) = 2 × 1 / (2√(2x + 5)) = **1 / √(2x + 5)**, pour 2x + 5 > 0.\n3. a) h est un **produit** u v avec u(x) = x, u'(x) = 1, et v(x) = e puissance (−x), v'(x) = −e puissance (−x) (composée affine avec a = −1). h'(x) = u'v + uv' = e puissance (−x) − x e puissance (−x) = **(1 − x) e puissance (−x)**.\n   b) e puissance (−x) > 0, donc h'(x) a le signe de 1 − x : **positif pour x < 1**, nul en 1, **négatif pour x > 1**.\n   c) h est **croissante sur ]−∞ ; 1]** et **décroissante sur [1 ; +∞[**. Son maximum est atteint en x = 1 : h(1) = 1 × e puissance (−1) = **1/e ≈ 0,37**."
+    },
+    {
+      "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+      "difficulte": 3,
+      "titre": "Formes, variations et pièges",
+      "consigne": "Justifie chaque réponse. Pour les affirmations, réponds « vrai » ou « faux » et justifie.",
+      "enonce": "**Partie A.** Soit f(x) = 1 / (x² + 4), définie sur l'ensemble des réels.\n1. Justifie que f est définie sur tous les réels, puis calcule f'(x).\n2. Étudie le signe de f'(x) et dresse le tableau de variations de f.\n3. Quel est le maximum de f ?\n\n**Partie B.** Soit g(x) = (2x + 1)³.\n4. Calcule g'(x) et montre que g est croissante sur l'ensemble des réels.\n\n**Partie C.** Vrai ou faux ? Justifie.\n5. « La fonction inverse est décroissante sur l'ensemble des réels non nuls, pris d'un seul bloc. »\n6. « La fonction racine carrée est dérivable sur [0 ; +∞[. »",
+      "bareme": [
+        { "critere": "x² + 4 > 0 et f'(x) = −2x / (x² + 4)² (forme 1/v)", "points": 5 },
+        { "critere": "Signe de f' (celui de −2x), variations et maximum f(0) = 1/4", "points": 5 },
+        { "critere": "g'(x) = 6 (2x + 1)² ≥ 0 et g croissante", "points": 4 },
+        { "critere": "Affirmation 5 fausse, avec un contre-exemple f(−1) < f(1)", "points": 3 },
+        { "critere": "Affirmation 6 fausse : pas dérivable en 0", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A.**\n1. x² ≥ 0 donc x² + 4 ≥ 4 > 0 : le dénominateur ne s'annule jamais, f est définie sur tous les réels. f est de la forme 1 / v avec v(x) = x² + 4 et v'(x) = 2x, donc f'(x) = −v' / v² = **−2x / (x² + 4)²**.\n2. (x² + 4)² > 0, donc f'(x) a le signe de −2x : **positif pour x < 0**, nul en 0, **négatif pour x > 0**. f est **croissante sur ]−∞ ; 0]** et **décroissante sur [0 ; +∞[**.\n3. Le maximum est atteint en 0 : f(0) = 1 / 4 = **0,25**.\n\n**Partie B.**\n4. Composée affine avec a = 2 : g'(x) = 2 × 3 (2x + 1)² = **6 (2x + 1)²**. Un carré est positif, donc g'(x) ≥ 0 (nul seulement en x = −1/2) : g est **croissante** sur l'ensemble des réels.\n\n**Partie C.**\n5. **Faux.** La fonction inverse est décroissante sur ]−∞ ; 0[ et sur ]0 ; +∞[ **séparément**. Contre-exemple : −1 < 1 et f(−1) = −1 < f(1) = 1, ce qui contredit une décroissance sur le bloc entier.\n6. **Faux.** La racine carrée est définie en 0 mais **n'y est pas dérivable** (tangente verticale) : elle est dérivable sur ]0 ; +∞[ seulement."
+    },
+    {
+      "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+      "difficulte": 1,
+      "titre": "Une tangente et un point à tangente horizontale",
+      "consigne": "Justifie chaque étape du calcul.",
+      "enonce": "Soit f(x) = x² + 2x − 3, définie sur l'ensemble des réels, et C sa courbe.\n\n1. Calcule f(1) et f'(1).\n2. Déduis-en l'équation réduite de la tangente à C au point d'abscisse 1.\n3. En quel point de C la tangente est-elle horizontale ? Donne ses coordonnées.",
+      "bareme": [
+        { "critere": "f(1) = 0, f'(x) = 2x + 2 et f'(1) = 4", "points": 6 },
+        { "critere": "Tangente y = f'(1)(x − 1) + f(1), soit y = 4x − 4", "points": 7 },
+        { "critere": "f'(a) = 0 résolu : a = −1, point (−1 ; −4)", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. f(1) = 1 + 2 − 3 = **0**. f'(x) = 2x + 2, donc f'(1) = **4**.\n2. La tangente au point d'abscisse a a pour équation y = f'(a)(x − a) + f(a). Ici : y = 4 (x − 1) + 0, soit **y = 4x − 4**.\n3. La tangente est horizontale quand f'(a) = 0 : 2a + 2 = 0, donc **a = −1**. f(−1) = 1 − 2 − 3 = −4. Le point cherché est **(−1 ; −4)**."
+    },
+    {
+      "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+      "difficulte": 2,
+      "titre": "Le bénéfice d'un atelier de bijoux",
+      "consigne": "Suis les quatre temps de l'optimisation et conclus avec l'unité.",
+      "enonce": "**Situation.** Un atelier fabrique entre 0 et 60 bracelets par semaine. Le bénéfice, en euros, pour q bracelets est B(q) = −q² + 80q − 700.\n\n1. Calcule B'(q).\n2. Étudie le signe de B'(q) sur [0 ; 60] et dresse le tableau de variations de B.\n3. Combien de bracelets l'atelier doit-il fabriquer pour que son bénéfice soit maximal ? Quel est ce bénéfice ?\n4. Calcule B(0) et B(60) : le maximum pourrait-il se trouver à une borne ? Conclus.",
+      "bareme": [
+        { "critere": "B'(q) = −2q + 80", "points": 4 },
+        { "critere": "Signe de B' (positif avant 40, négatif après) et variations", "points": 6 },
+        { "critere": "Maximum pour 40 bracelets, B(40) = 900 €", "points": 6 },
+        { "critere": "B(0) = −700 et B(60) = 500 comparés au maximum", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **B'(q) = −2q + 80**.\n2. −2q + 80 = 0 donne q = 40. B'(q) > 0 pour q < 40 et B'(q) < 0 pour q > 40. B est **croissante sur [0 ; 40]** et **décroissante sur [40 ; 60]**.\n3. B' s'annule en 40 **en changeant de signe** (du positif au négatif) : le bénéfice est maximal pour **40 bracelets**. B(40) = −1 600 + 3 200 − 700 = **900 €**.\n4. B(0) = **−700 €** (une perte) et B(60) = −3 600 + 4 800 − 700 = **500 €**. Les deux valeurs aux bornes sont inférieures à 900 € : le maximum sur [0 ; 60] est bien **900 €, pour 40 bracelets**."
+    },
+    {
+      "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+      "difficulte": 3,
+      "titre": "L'enclos du poney-club",
+      "consigne": "Rédige chaque étape de l'optimisation ; conclus en répondant à la question avec les unités.",
+      "enonce": "**Situation.** Un poney-club dispose de 60 m de clôture pour fermer un enclos rectangulaire adossé à un mur (le mur ferme un côté). On note x la largeur (les deux côtés perpendiculaires au mur), en mètres.\n\n1. Exprime la longueur du côté parallèle au mur en fonction de x, puis justifie que x appartient à ]0 ; 30[.\n2. Montre que l'aire de l'enclos vaut A(x) = 60x − 2x².\n3. Étudie les variations de A sur ]0 ; 30[ et détermine les dimensions de l'enclos d'aire maximale, ainsi que cette aire.\n4. Donne l'équation de la tangente à la courbe de A au point d'abscisse 10.\n5. Pour laisser passer le tracteur, la largeur doit finalement être comprise entre 18 m et 25 m. Quelle est alors l'aire maximale possible ? Justifie.",
+      "bareme": [
+        { "critere": "Longueur 60 − 2x et intervalle ]0 ; 30[ justifié", "points": 3 },
+        { "critere": "A(x) = x (60 − 2x) = 60x − 2x²", "points": 2 },
+        { "critere": "A'(x) = 60 − 4x, variations, maximum 450 m² pour 15 m sur 30 m", "points": 6 },
+        { "critere": "Tangente en 10 : A(10) = 400, A'(10) = 20, y = 20x + 200", "points": 4 },
+        { "critere": "Sur [18 ; 25], A décroissante : maximum à la borne 18, A(18) = 432 m²", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. La clôture forme deux largeurs et une longueur : longueur = **60 − 2x**. Une longueur est positive : x > 0 et 60 − 2x > 0, soit x < 30. Donc **x ∈ ]0 ; 30[**.\n2. A(x) = largeur × longueur = x (60 − 2x) = **60x − 2x²**.\n3. A'(x) = 60 − 4x, nul pour x = 15, positif avant, négatif après : A est croissante sur ]0 ; 15] et décroissante sur [15 ; 30[. L'aire est maximale pour **x = 15 m** : l'enclos mesure **15 m sur 30 m**, soit A(15) = 900 − 450 = **450 m²**.\n4. A(10) = 600 − 200 = 400 et A'(10) = 60 − 40 = 20. Tangente : y = 20 (x − 10) + 400, soit **y = 20x + 200**.\n5. Sur [18 ; 25], on est à droite de 15 : A y est **décroissante**. Le maximum est donc atteint **à la borne** x = 18 et non là où la dérivée s'annule : A(18) = 60 × 18 − 2 × 324 = 1 080 − 648 = **432 m²** (enclos de 18 m sur 24 m). Vérification : A(25) = 1 500 − 1 250 = 250 m² < 432 m²."
+    },
+    {
+      "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+      "difficulte": 1,
+      "titre": "Vecteurs normaux et tangente à un cercle",
+      "consigne": "Le repère est orthonormé. Justifie chaque réponse et vérifie tes équations.",
+      "enonce": "1. Détermine une équation cartésienne de la droite d de vecteur normal n(3 ; 2) passant par A(1 ; −2).\n2. Donne un vecteur normal et un vecteur directeur de la droite d' : 4x − y + 5 = 0.\n3. Le cercle C a pour centre Ω(2 ; 1) et passe par B(5 ; 5). Détermine une équation de la tangente à C en B.",
+      "bareme": [
+        { "critere": "3(x − 1) + 2(y + 2) = 0, soit 3x + 2y + 1 = 0, avec vérification", "points": 7 },
+        { "critere": "n(4 ; −1) normal et u(1 ; 4) directeur", "points": 5 },
+        { "critere": "ΩB(3 ; 4) normal à la tangente : 3x + 4y − 35 = 0", "points": 8 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. M(x ; y) est sur d si AM · n = 0 : 3 (x − 1) + 2 (y + 2) = 0, soit **3x + 2y + 1 = 0**. Contrôle : 3 × 1 + 2 × (−2) + 1 = 0, A est bien sur d.\n2. Pour ax + by + c = 0, n(a ; b) est normal et u(−b ; a) directeur : **n(4 ; −1)** et **u(1 ; 4)**.\n3. La tangente en B est perpendiculaire au rayon [ΩB] : ΩB(5 − 2 ; 5 − 1) = (3 ; 4) est normal à la tangente. Équation : 3 (x − 5) + 4 (y − 5) = 0, soit **3x + 4y − 35 = 0**. Contrôle : 15 + 20 − 35 = 0."
+    },
+    {
+      "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+      "difficulte": 2,
+      "titre": "Médiatrice, projeté et distance",
+      "consigne": "Le repère est orthonormé. Rédige chaque méthode.",
+      "enonce": "On donne A(−1 ; 2), B(3 ; 6) et M(1 ; 0).\n\n1. Détermine une équation de la médiatrice Δ du segment [AB].\n2. Donne un vecteur directeur u de Δ.\n3. Détermine les coordonnées du projeté orthogonal H de M sur Δ.\n4. Déduis-en la distance du point M à la droite Δ.",
+      "bareme": [
+        { "critere": "Milieu I(1 ; 4), AB(4 ; 4) normal : x + y − 5 = 0", "points": 6 },
+        { "critere": "Vecteur directeur u(−1 ; 1) ou tout vecteur colinéaire", "points": 3 },
+        { "critere": "H sur Δ et MH · u = 0 : H(3 ; 2)", "points": 7 },
+        { "critere": "Distance MH = 2√2", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. La médiatrice passe par le milieu I de [AB] : I((−1 + 3)/2 ; (2 + 6)/2) = **I(1 ; 4)**, et admet AB(4 ; 4) pour vecteur normal. 4 (x − 1) + 4 (y − 4) = 0, soit, en divisant par 4, **x + y − 5 = 0**. Contrôle : 1 + 4 − 5 = 0.\n2. Pour x + y − 5 = 0, a = 1 et b = 1 : **u(−1 ; 1)** (ou (1 ; −1)).\n3. H appartient à Δ : on l'écrit H(t ; 5 − t). MH(t − 1 ; 5 − t). Condition MH · u = 0 avec u(−1 ; 1) : −(t − 1) + (5 − t) = 0, soit 6 − 2t = 0, t = 3. Donc **H(3 ; 2)**. Contrôle : 3 + 2 − 5 = 0.\n4. La distance de M à Δ est MH = √((3 − 1)² + (2 − 0)²) = √8 = **2√2 ≈ 2,83**."
+    },
+    {
+      "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+      "difficulte": 3,
+      "titre": "Un cercle et trois droites",
+      "consigne": "Le repère est orthonormé. Justifie chaque résultat et vérifie les points trouvés dans les deux équations.",
+      "enonce": "Le cercle C a pour centre O(0 ; 0) et pour rayon 5 : son équation est x² + y² = 25.\n\n1. Détermine les points d'intersection de C et de la droite d : x + 2y − 5 = 0. (On pourra exprimer x en fonction de y.)\n2. On note A celui de ces points dont l'abscisse est négative. Détermine une équation de la tangente T à C en A.\n3. Détermine le projeté orthogonal H de O sur d, puis la distance de O à d. Ce résultat est-il cohérent avec la question 1 ?\n4. La droite d' : x + y − 8 = 0 coupe-t-elle le cercle C ? Justifie par le calcul.",
+      "bareme": [
+        { "critere": "Substitution et équation 5y² − 20y = 0 : points (5 ; 0) et (−3 ; 4), vérifiés", "points": 6 },
+        { "critere": "OA(−3 ; 4) normal : tangente 3x − 4y + 25 = 0", "points": 4 },
+        { "critere": "H(1 ; 2), distance √5 < 5, cohérence avec deux points d'intersection", "points": 5 },
+        { "critere": "Équation 2x² − 16x + 39 = 0, discriminant −56 < 0 : droite extérieure", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. x = 5 − 2y. On remplace : (5 − 2y)² + y² = 25, soit 25 − 20y + 4y² + y² = 25, donc 5y² − 20y = 0, 5y (y − 4) = 0 : y = 0 ou y = 4. Si y = 0, x = 5 ; si y = 4, x = −3. Points **(5 ; 0)** et **(−3 ; 4)**. Vérification : 25 + 0 = 25 et 5 + 0 − 5 = 0 ; 9 + 16 = 25 et −3 + 8 − 5 = 0.\n2. A(−3 ; 4). La tangente en A est perpendiculaire au rayon : OA(−3 ; 4) est normal. −3 (x + 3) + 4 (y − 4) = 0, soit −3x + 4y − 25 = 0, ou **3x − 4y + 25 = 0**. Contrôle : −9 − 16 + 25 = 0.\n3. Vecteur directeur de d : u(−2 ; 1). H sur d : H(5 − 2t ; t), et OH · u = 0 : −2 (5 − 2t) + t = 0, soit 5t − 10 = 0, t = 2. **H(1 ; 2)** (contrôle : 1 + 4 − 5 = 0). Distance OH = √(1 + 4) = **√5 ≈ 2,24**. Elle est inférieure au rayon 5 : la droite passe à l'intérieur du cercle, ce qui est cohérent avec les **deux** points d'intersection.\n4. y = 8 − x. x² + (8 − x)² = 25 donne 2x² − 16x + 64 − 25 = 0, soit **2x² − 16x + 39 = 0**. Δ = 256 − 4 × 2 × 39 = 256 − 312 = **−56 < 0** : aucune solution, la droite d' est **extérieure** au cercle."
+    },
+    {
+      "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+      "difficulte": 1,
+      "titre": "Simuler un succès en Python",
+      "consigne": "Réponds en justifiant brièvement.",
+      "enonce": "On a importé les fonctions random et randint et écrit :\n\n| Ligne | Code |\n|---|---|\n| 1 | def essai(p): |\n| 2 | ····if random() < p: |\n| 3 | ········return 1 |\n| 4 | ····return 0 |\n\n1. Quelles valeurs peut renvoyer randint(1, 4) ?\n2. Que renvoie essai(0.3) et avec quelle probabilité renvoie-t-elle 1 ?\n3. On appelle essai(0.3) 1 000 fois et on obtient 312 fois la valeur 1. Calcule la fréquence des succès.\n4. Cette fréquence prouve-t-elle que la probabilité vaut 0,312 ? Explique à l'aide de la loi des grands nombres.",
+      "bareme": [
+        { "critere": "randint(1, 4) : entiers 1, 2, 3, 4 (bornes comprises)", "points": 4 },
+        { "critere": "essai(0.3) renvoie 1 (succès) avec probabilité 0,3, sinon 0", "points": 5 },
+        { "critere": "Fréquence 312 / 1 000 = 0,312", "points": 4 },
+        { "critere": "Fluctuation, loi des grands nombres, la simulation estime sans démontrer", "points": 7 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. randint(1, 4) renvoie un entier au hasard entre 1 et 4, **bornes comprises** : 1, 2, 3 ou 4.\n2. random() renvoie un réel au hasard dans [0 ; 1[ ; le test random() < 0,3 est vrai avec la probabilité **0,3**. essai(0.3) renvoie donc **1 (succès) avec la probabilité 0,3** et 0 sinon.\n3. Fréquence = nombre de succès / n = 312 / 1 000 = **0,312**.\n4. **Non.** Une simulation **estime** une probabilité, elle ne la démontre pas : une autre série de 1 000 essais donnerait une autre fréquence (fluctuation d'échantillonnage). La loi des grands nombres dit que, plus n est grand, plus la fréquence a de chances d'être proche de la probabilité : 0,312 est proche de 0,3, ce qui est cohérent, mais la valeur exacte vient du calcul (ici p = 0,3 par construction)."
+    },
+    {
+      "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+      "difficulte": 2,
+      "titre": "Des moyennes de dés qui se resserrent",
+      "consigne": "Justifie tes calculs ; arrondis au millième.",
+      "enonce": "**Situation.** Pour un dé équilibré à six faces, l'espérance vaut μ = 3,5 et l'écart type σ ≈ 1,71. Des élèves lancent des échantillons de n = 100 dés et calculent la moyenne m de chaque échantillon.\n\n1. Donne une valeur approchée de l'écart type des moyennes des échantillons de taille 100.\n2. Détermine l'intervalle [μ − 2σ/√n ; μ + 2σ/√n] pour n = 100. Quelle part des échantillons doit, en général, avoir une moyenne dans cet intervalle ?\n3. Lina obtient une moyenne de 3,9 sur son échantillon de 100 dés. Commente.\n4. On passe à des échantillons de 400 dés. Par combien est divisée la dispersion des moyennes ? Donne le nouvel intervalle.",
+      "bareme": [
+        { "critere": "σ / √n = 1,71 / 10 = 0,171", "points": 4 },
+        { "critere": "Intervalle [3,158 ; 3,842] et grande majorité, autour de 95 %", "points": 6 },
+        { "critere": "3,9 hors de l'intervalle : résultat rare mais possible, sans conclure avec certitude", "points": 5 },
+        { "critere": "Dispersion divisée par √4 = 2 et intervalle [3,329 ; 3,671]", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. L'écart type des moyennes est proche de σ / √n = 1,71 / √100 = 1,71 / 10 = **0,171**.\n2. 2σ / √n = 0,342. Intervalle : [3,5 − 0,342 ; 3,5 + 0,342] = **[3,158 ; 3,842]**. En général, la **grande majorité** des échantillons, le plus souvent **autour de 95 %**, ont une moyenne dans cet intervalle.\n3. 3,9 est **en dehors** de l'intervalle : un tel écart est **rare** pour un dé équilibré, mais pas impossible (environ 5 % des échantillons sortent de l'intervalle). On peut s'interroger sur le dé ou recommencer l'expérience, mais un seul échantillon ne **démontre** pas que le dé est truqué.\n4. n est multiplié par 4, donc la dispersion est divisée par **√4 = 2**. 2σ / √400 = 3,42 / 20 = 0,171. Nouvel intervalle : **[3,329 ; 3,671]**."
+    },
+    {
+      "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+      "difficulte": 3,
+      "titre": "Une pièce suspecte",
+      "consigne": "Justifie chaque réponse. Les calculs se font sans calculatrice.",
+      "enonce": "**Situation.** Théo pense que sa pièce tombe trop souvent sur « pile ». On code « pile » par 1 et « face » par 0. Pour une pièce équilibrée, cette variable a pour espérance μ = 0,5, et on admet que son écart type vaut σ = 0,5.\n\n1. Écris une fonction Python frequence(n) qui simule n lancers d'une pièce équilibrée (avec random) et renvoie la fréquence de « pile ».\n2. Pour des échantillons de n = 400 lancers, calcule σ / √n puis l'intervalle [μ − 2σ/√n ; μ + 2σ/√n].\n3. Théo lance réellement sa pièce 400 fois et obtient 232 « pile ». Calcule la fréquence observée et situe-la par rapport à l'intervalle.\n4. Que peut-on en penser ? Théo a-t-il démontré que sa pièce est truquée ?\n5. Combien de lancers faudrait-il pour que la dispersion des moyennes soit deux fois plus petite qu'avec 400 lancers ?",
+      "bareme": [
+        { "critere": "Fonction correcte : compteur, boucle de n tours, test random() < 0.5, renvoi de la fréquence", "points": 5 },
+        { "critere": "σ / √400 = 0,025 et intervalle [0,45 ; 0,55]", "points": 4 },
+        { "critere": "Fréquence 232 / 400 = 0,58, hors de l'intervalle", "points": 3 },
+        { "critere": "Conclusion nuancée : résultat rare pour une pièce équilibrée, doute justifié mais pas de démonstration", "points": 4 },
+        { "critere": "Diviser la dispersion par 2 : multiplier n par 4, soit 1 600 lancers", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Une version possible :\n\n| Ligne | Code |\n|---|---|\n| 1 | def frequence(n): |\n| 2 | ····c = 0 |\n| 3 | ····for i in range(n): |\n| 4 | ········if random() < 0.5: |\n| 5 | ············c = c + 1 |\n| 6 | ····return c / n |\n\n2. σ / √n = 0,5 / √400 = 0,5 / 20 = **0,025**. 2σ / √n = 0,05. Intervalle : **[0,45 ; 0,55]**.\n3. Fréquence observée : 232 / 400 = **0,58**. Elle est **en dehors** de l'intervalle (0,58 > 0,55).\n4. Pour une pièce équilibrée, la grande majorité des échantillons de 400 lancers (autour de 95 %) donnent une fréquence dans [0,45 ; 0,55]. Obtenir 0,58 est donc **rare** : le doute de Théo est raisonnable. Mais ce n'est **pas une démonstration** : un échantillon peut sortir de l'intervalle par hasard. Il faudrait recommencer avec d'autres échantillons ; une simulation ou une expérience **estime**, seul un calcul démontre.\n5. La dispersion vaut environ σ / √n : pour la diviser par 2, il faut diviser par √4, donc multiplier n par **4** : **1 600 lancers**."
+    },
+    {
+      "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+      "difficulte": 1,
+      "titre": "Suivre un programme à la main",
+      "consigne": "Donne chaque résultat en expliquant le déroulement du programme.",
+      "enonce": "1. On exécute : x = 4, puis x = x * 3, puis x = x − 5. Que vaut x à la fin ?\n2. Quelles valeurs parcourt range(3, 7) ?\n3. Que vaut 17 % 5 ?\n4. Que vaut s à la fin du programme suivant ?\n\n| Ligne | Code |\n|---|---|\n| 1 | s = 0 |\n| 2 | for i in range(5): |\n| 3 | ····s = s + 2 * i |",
+      "bareme": [
+        { "critere": "x vaut 12 puis 7", "points": 4 },
+        { "critere": "range(3, 7) : 3, 4, 5, 6", "points": 4 },
+        { "critere": "17 % 5 = 2 (reste de la division)", "points": 4 },
+        { "critere": "Trace de la boucle : s = 0 + 2 + 4 + 6 + 8 = 20", "points": 8 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. x = 4 ; x = x * 3 range 12 dans x ; x = x − 5 range 7. À la fin, **x vaut 7**.\n2. range(3, 7) parcourt **3, 4, 5, 6** (7 n'en fait pas partie).\n3. % donne le reste de la division : 17 = 3 × 5 + 2, donc **17 % 5 vaut 2**.\n4. i prend les valeurs 0, 1, 2, 3, 4 ; on ajoute 2 × i à chaque tour : s = 0 + 0 + 2 + 4 + 6 + 8 = **20**."
+    },
+    {
+      "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+      "difficulte": 2,
+      "titre": "Une fonction pour une suite",
+      "consigne": "Écris le code en respectant les retraits (note-les « ···· ») et justifie les valeurs demandées.",
+      "enonce": "La suite (u) est définie par u(0) = 2 et u(n+1) = 3 u(n) − 1.\n\n1. Calcule à la main u(1), u(2) et u(3).\n2. Écris une fonction terme(n) qui renvoie u(n).\n3. Que renvoie terme(3) ? Détaille l'évolution de la variable u.\n4. Un élève remplace return u par print(u). Explique la différence entre les deux instructions.",
+      "bareme": [
+        { "critere": "u(1) = 5, u(2) = 14, u(3) = 41", "points": 5 },
+        { "critere": "Fonction correcte : def, initialisation, boucle for, affectation, return après la boucle", "points": 8 },
+        { "critere": "terme(3) renvoie 41 avec la trace 2, 5, 14, 41", "points": 3 },
+        { "critere": "return renvoie une valeur réutilisable, print l'affiche seulement", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. u(1) = 3 × 2 − 1 = **5** ; u(2) = 3 × 5 − 1 = **14** ; u(3) = 3 × 14 − 1 = **41**.\n2.\n\n| Ligne | Code |\n|---|---|\n| 1 | def terme(n): |\n| 2 | ····u = 2 |\n| 3 | ····for i in range(n): |\n| 4 | ········u = 3 * u − 1 |\n| 5 | ····return u |\n\n(le signe − s'écrit - dans le code).\n3. range(3) fait 3 tours : u passe de 2 à 5, puis à 14, puis à 41. terme(3) renvoie **41**.\n4. **return** renvoie la valeur au programme, qui peut la réutiliser (par exemple terme(3) + 1). **print** se contente de l'afficher à l'écran : la fonction ne renvoie alors rien d'utilisable dans un calcul."
+    },
+    {
+      "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+      "difficulte": 3,
+      "titre": "Boucle while, test et fonctions",
+      "consigne": "Justifie chaque réponse par une trace d'exécution ou une explication ; écris le code avec des retraits notés « ···· ».",
+      "enonce": "**Programme 1**\n\n| Ligne | Code |\n|---|---|\n| 1 | n = 0 |\n| 2 | u = 2 |\n| 3 | while u < 100: |\n| 4 | ····u = 3 * u - 1 |\n| 5 | ····n = n + 1 |\n\n1. Fais la trace du programme 1 (valeurs de u et n à chaque tour). Que valent n et u à la fin ?\n2. Pourquoi a-t-on utilisé while et non for ici ?\n3. Que se passerait-il si l'on écrivait while u > 100 ? Explique.\n4. Écris une fonction mention(note) qui renvoie « Très bien » si note ≥ 16, « Bien » si 14 ≤ note < 16, et « Autre » sinon, avec if, elif et else.\n5. Écris une fonction est_pair(n) qui renvoie True si l'entier n est pair et False sinon, en utilisant %.",
+      "bareme": [
+        { "critere": "Trace complète : u = 5, 14, 41, 122 ; à la fin n = 4 et u = 122", "points": 6 },
+        { "critere": "while justifié : nombre de tours inconnu à l'avance", "points": 3 },
+        { "critere": "while u > 100 : condition fausse dès le départ, aucun tour, n = 0 et u = 2", "points": 3 },
+        { "critere": "Fonction mention correcte (conditions, ordre des tests, return)", "points": 4 },
+        { "critere": "Fonction est_pair correcte avec n % 2 == 0", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Trace :\n\n| Tour | u | n |\n|---|---|---|\n| départ | 2 | 0 |\n| 1 | 5 | 1 |\n| 2 | 14 | 2 |\n| 3 | 41 | 3 |\n| 4 | 122 | 4 |\n\nAprès le 4e tour, u = 122 n'est plus < 100 : la boucle s'arrête. **n = 4 et u = 122**.\n2. On ne sait pas **à l'avance** combien de tours seront nécessaires pour dépasser 100 : on répète **tant que** la condition est vraie.\n3. Au départ u = 2, donc u > 100 est **faux** : la boucle ne s'exécute **pas une seule fois**, n reste à 0 et u à 2. La condition d'un while est celle pour **continuer**.\n4.\n\n| Ligne | Code |\n|---|---|\n| 1 | def mention(note): |\n| 2 | ····if note >= 16: |\n| 3 | ········return \"Très bien\" |\n| 4 | ····elif note >= 14: |\n| 5 | ········return \"Bien\" |\n| 6 | ····else: |\n| 7 | ········return \"Autre\" |\n\nLe elif n'est testé que si note < 16 : note >= 14 suffit donc.\n5.\n\n| Ligne | Code |\n|---|---|\n| 1 | def est_pair(n): |\n| 2 | ····if n % 2 == 0: |\n| 3 | ········return True |\n| 4 | ····return False |\n\n(ou directement return n % 2 == 0). On utilise == pour tester l'égalité, pas =."
+    },
+    {
+      "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+      "difficulte": 1,
+      "titre": "Lire une liste",
+      "consigne": "Donne chaque résultat et justifie en une phrase.",
+      "enonce": "On définit L = [3, 8, 2, 10, 5].\n\n1. Que valent L[1], L[0] et L[-1] ?\n2. Que vaut len(L) ? Quels sont les indices valides ?\n3. Que devient L après L.append(7) ?\n4. Quelle liste obtient-on avec [k * k for k in range(1, 5)] ?",
+      "bareme": [
+        { "critere": "L[1] = 8, L[0] = 3, L[-1] = 5", "points": 6 },
+        { "critere": "len(L) = 5, indices de 0 à 4", "points": 5 },
+        { "critere": "[3, 8, 2, 10, 5, 7]", "points": 4 },
+        { "critere": "[1, 4, 9, 16]", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Les indices commencent à 0 : **L[1] = 8** (deuxième élément), **L[0] = 3** (premier), **L[-1] = 5** (dernier).\n2. **len(L) = 5**. Les indices valides vont de 0 à len(L) − 1, soit **de 0 à 4** ; L[5] provoquerait une erreur.\n3. append ajoute à la fin : L devient **[3, 8, 2, 10, 5, 7]**.\n4. k parcourt 1, 2, 3, 4 : la liste est **[1, 4, 9, 16]**."
+    },
+    {
+      "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+      "difficulte": 2,
+      "titre": "La liste des termes d'une suite",
+      "consigne": "Écris le code avec des retraits notés « ···· » et justifie les résultats.",
+      "enonce": "La suite (u) est définie par u(0) = 2 et u(n+1) = u(n) + 3.\n\n1. Écris une fonction termes(n) qui renvoie la liste [u(0), u(1), …, u(n)], en partant d'une liste qui contient u(0) et en ajoutant chaque terme avec append.\n2. Que renvoie termes(4) ?\n3. Écris les lignes qui calculent la somme des éléments d'une liste L par un parcours de ses éléments. Que vaut cette somme pour L = termes(4) ?\n4. Quelle liste donne [k for k in range(20) if k % 4 == 0] ?",
+      "bareme": [
+        { "critere": "Fonction correcte : liste initiale [u], boucle, append dans la boucle, return après", "points": 7 },
+        { "critere": "termes(4) renvoie [2, 5, 8, 11, 14]", "points": 4 },
+        { "critere": "Parcours for x in L avec accumulation, somme 40", "points": 5 },
+        { "critere": "[0, 4, 8, 12, 16]", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1.\n\n| Ligne | Code |\n|---|---|\n| 1 | def termes(n): |\n| 2 | ····u = 2 |\n| 3 | ····L = [u] |\n| 4 | ····for i in range(n): |\n| 5 | ········u = u + 3 |\n| 6 | ········L.append(u) |\n| 7 | ····return L |\n\nL'append est **dans** la boucle, le return **après** elle.\n2. termes(4) renvoie **[2, 5, 8, 11, 14]** : le terme de départ, puis quatre termes calculés.\n3.\n\n| Ligne | Code |\n|---|---|\n| 1 | s = 0 |\n| 2 | for x in L: |\n| 3 | ····s = s + x |\n\nPour [2, 5, 8, 11, 14] : s = 2 + 5 + 8 + 11 + 14 = **40** (contrôle : 5 termes, 5 × (2 + 14) / 2 = 40).\n4. Les k de 0 à 19 dont le reste par 4 est nul : **[0, 4, 8, 12, 16]**."
+    },
+    {
+      "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+      "difficulte": 3,
+      "titre": "Les notes du contrôle de la classe",
+      "consigne": "Écris le code avec des retraits notés « ···· ». Justifie les résultats par le calcul.",
+      "enonce": "Les notes d'un petit groupe sont rangées dans L = [12, 15, 8, 17, 10, 14].\n\n1. Écris les lignes qui calculent la moyenne des notes à l'aide d'une boucle et de len. Quelle valeur obtient-on (arrondie au centième) ?\n2. Écris une fonction nb_au_dessus(L, seuil) qui renvoie le nombre de notes strictement supérieures à seuil. Que renvoie nb_au_dessus(L, 12) ?\n3. Le professeur veut remplacer dans L toute note inférieure à 10 par 10. Quel type de parcours faut-il utiliser ? Écris le code.\n4. Un élève écrit for i in range(len(L) + 1): print(L[i]). Que se passe-t-il ?\n5. Écris une liste en compréhension qui contient les notes de L augmentées d'un point.",
+      "bareme": [
+        { "critere": "Somme 76 par boucle, moyenne 76 / 6 ≈ 12,67", "points": 4 },
+        { "critere": "Fonction avec compteur et test, résultat 3", "points": 5 },
+        { "critere": "Parcours par les indices et modification de L[i]", "points": 5 },
+        { "critere": "Erreur à i = 6 : indice hors de la liste", "points": 3 },
+        { "critere": "[x + 1 for x in L]", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1.\n\n| Ligne | Code |\n|---|---|\n| 1 | s = 0 |\n| 2 | for x in L: |\n| 3 | ····s = s + x |\n| 4 | moyenne = s / len(L) |\n\ns = 12 + 15 + 8 + 17 + 10 + 14 = 76 ; moyenne = 76 / 6 ≈ **12,67**.\n2.\n\n| Ligne | Code |\n|---|---|\n| 1 | def nb_au_dessus(L, seuil): |\n| 2 | ····c = 0 |\n| 3 | ····for x in L: |\n| 4 | ········if x > seuil: |\n| 5 | ············c = c + 1 |\n| 6 | ····return c |\n\nNotes strictement supérieures à 12 : 15, 17, 14. nb_au_dessus(L, 12) renvoie **3**.\n3. Pour **modifier** L[i], on a besoin de la position : parcours **par les indices**.\n\n| Ligne | Code |\n|---|---|\n| 1 | for i in range(len(L)): |\n| 2 | ····if L[i] < 10: |\n| 3 | ········L[i] = 10 |\n\nL devient [12, 15, 10, 17, 10, 14].\n4. range(7) va jusqu'à i = 6, or les indices valides vont de 0 à 5 : L[6] n'existe pas, le programme affiche les six notes puis s'arrête sur une **erreur** d'indice.\n5. **[x + 1 for x in L]**, qui donne [13, 16, 9, 18, 11, 15] (avec la liste de départ)."
+    },
+    {
+      "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+      "difficulte": 1,
+      "titre": "Un algorithme de seuil",
+      "consigne": "Complète l'algorithme puis justifie le résultat.",
+      "enonce": "**Situation.** Une population de 500 abeilles augmente de 10 % par mois : u(0) = 500 et u(n+1) = 1,1 u(n). On veut savoir au bout de combien de mois elle dépasse 1 000 abeilles.\n\n| Ligne | Code |\n|---|---|\n| 1 | def seuil(): |\n| 2 | ····n = 0 |\n| 3 | ····u = 500 |\n| 4 | ····while … : |\n| 5 | ········n = n + 1 |\n| 6 | ········u = 1.1 * u |\n| 7 | ····return n |\n\n1. Complète la condition de la ligne 4 et explique ce choix.\n2. On donne 1,1⁷ ≈ 1,949 et 1,1⁸ ≈ 2,144. Que renvoie seuil() ? Justifie.",
+      "bareme": [
+        { "critere": "Condition u < 1000 (condition pour continuer)", "points": 8 },
+        { "critere": "u(n) = 500 × 1,1 puissance n ; u(7) ≈ 974,5 < 1 000 et u(8) ≈ 1 072 > 1 000", "points": 8 },
+        { "critere": "seuil() renvoie 8", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Ligne 4 : **while u < 1000:**. La condition d'un while est celle pour **continuer** : on continue tant que la population n'a pas dépassé 1 000, c'est-à-dire le contraire de ce que l'on attend.\n2. u(n) = 500 × 1,1 puissance n. u(7) ≈ 500 × 1,949 ≈ 974,5 < 1 000 : la boucle continue. u(8) ≈ 500 × 2,144 ≈ 1 072 > 1 000 : la boucle s'arrête. seuil() renvoie **8** : la population dépasse 1 000 abeilles au bout de **8 mois**."
+    },
+    {
+      "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+      "difficulte": 2,
+      "titre": "Approcher √3 par la méthode de Newton",
+      "consigne": "Détaille chaque étape ; arrondis à 10⁻⁵ près.",
+      "enonce": "On veut approcher √3, solution positive de f(x) = 0 avec f(x) = x² − 3.\n\n1. Calcule f'(x) et rappelle la formule de la méthode de Newton.\n2. Explique ce que fait géométriquement la méthode.\n3. En partant de x0 = 2, calcule x1 puis x2.\n4. Compare x2 à √3 ≈ 1,73205. Pourquoi ne pourrait-on pas partir de x0 = 0 ?",
+      "bareme": [
+        { "critere": "f'(x) = 2x et x(n+1) = x(n) − f(x(n)) / f'(x(n))", "points": 5 },
+        { "critere": "Explication : la courbe est remplacée par sa tangente, qui coupe l'axe des abscisses", "points": 3 },
+        { "critere": "x1 = 1,75 et x2 ≈ 1,73214", "points": 8 },
+        { "critere": "Comparaison et f'(0) = 0 : division par zéro", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. f'(x) = **2x**. Formule : **x(n+1) = x(n) − f(x(n)) / f'(x(n))**.\n2. On remplace la courbe par sa **tangente** au point d'abscisse x(n) : là où cette tangente coupe l'axe des abscisses se trouve la valeur suivante x(n+1).\n3. x1 = 2 − f(2) / f'(2) = 2 − (4 − 3) / 4 = 2 − 0,25 = **1,75**.\nx2 = 1,75 − (1,75² − 3) / (2 × 1,75) = 1,75 − (3,0625 − 3) / 3,5 = 1,75 − 0,0625 / 3,5 ≈ 1,75 − 0,017857 ≈ **1,73214**.\n4. x2 ≈ 1,73214 et √3 ≈ 1,73205 : l'écart est d'environ 0,0001 après seulement deux étapes. Avec x0 = 0, f'(0) = 0 : la formule demanderait de **diviser par zéro**, la méthode exige f'(x(n)) non nul."
+    },
+    {
+      "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+      "difficulte": 3,
+      "titre": "Sécantes et méthode d'Euler",
+      "consigne": "Justifie chaque calcul ; écris le code avec des retraits notés « ···· ».",
+      "enonce": "**Partie A – Les sécantes.** Soit f(x) = x² et a = 1.\n1. Montre que, pour h ≠ 0, (f(1 + h) − f(1)) / h = 2 + h.\n2. Calcule ce coefficient pour h = 0,1 ; 0,01 ; 0,001. Vers quelle valeur se rapproche-t-il ? Que représente cette valeur ?\n\n**Partie B – La méthode d'Euler.** On construit une fonction f telle que f' = f et f(0) = 1 avec la suite y(0) = 1 et y(k+1) = (1 + h) y(k).\n3. Explique d'où vient la relation y(k+1) = (1 + h) y(k).\n4. Avec h = 0,25, combien de pas faut-il pour atteindre x = 1 ? Calcule la valeur approchée de e obtenue.\n5. Avec h = 0,1 on obtient environ 2,59. Sachant que e ≈ 2,718, que constates-tu ?\n6. Écris une fonction euler(h, N) qui renvoie y(N).",
+      "bareme": [
+        { "critere": "(1 + h)² − 1 = 2h + h², divisé par h : 2 + h", "points": 4 },
+        { "critere": "2,1 ; 2,01 ; 2,001 → 2 = f'(1)", "points": 3 },
+        { "critere": "Approximation f(x + h) ≈ (1 + h) f(x) expliquée ; 4 pas et 1,25⁴ ≈ 2,4414", "points": 7 },
+        { "critere": "Pas plus petit, meilleure approximation ; fonction euler correcte", "points": 6 }
+      ],
+      "dureeMin": 20,
+      "corrige": "**Partie A.**\n1. f(1 + h) − f(1) = (1 + h)² − 1 = 1 + 2h + h² − 1 = 2h + h². Pour h ≠ 0 : (2h + h²) / h = **2 + h**.\n2. h = 0,1 : **2,1** ; h = 0,01 : **2,01** ; h = 0,001 : **2,001**. Les coefficients directeurs des sécantes se rapprochent de **2**, qui est le nombre dérivé **f'(1)** (en effet f'(x) = 2x).\n\n**Partie B.**\n3. Sur un petit pas h, f(x + h) ≈ f(x) + h f'(x). Comme f' = f, f(x + h) ≈ f(x) + h f(x) = **(1 + h) f(x)**.\n4. Il faut 1 / 0,25 = **4 pas**. y(4) = 1,25⁴ = 1,5625² = **2,44140625 ≈ 2,44**.\n5. 2,44 (h = 0,25) puis 2,59 (h = 0,1) se rapprochent de e ≈ 2,718 : **plus le pas est petit, meilleure est l'approximation**.\n6.\n\n| Ligne | Code |\n|---|---|\n| 1 | def euler(h, N): |\n| 2 | ····y = 1 |\n| 3 | ····for k in range(N): |\n| 4 | ········y = (1 + h) * y |\n| 5 | ····return y |\n\neuler(0.25, 4) renvoie environ 2,44."
+    },
+    {
+      "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+      "difficulte": 1,
+      "titre": "Quatre réflexes de proportions",
+      "consigne": "Sans calculatrice. Écris le calcul qui mène à chaque résultat.",
+      "enonce": "1. Calcule 20 % de 45.\n2. Écris 3/5 sous forme de pourcentage.\n3. 27 élèves sur 36 sont demi-pensionnaires. Quelle proportion cela représente-t-il, en pourcentage ?\n4. Quelle fraction simple est égale à 12,5 % ?\n5. Calcule 5 % de 240.",
+      "bareme": [
+        { "critere": "20 % de 45 = 9", "points": 4 },
+        { "critere": "3/5 = 0,6 = 60 %", "points": 4 },
+        { "critere": "27/36 = 3/4 = 75 %", "points": 4 },
+        { "critere": "12,5 % = 1/8", "points": 4 },
+        { "critere": "5 % de 240 = 12 (moitié de 10 %)", "points": 4 }
+      ],
+      "dureeMin": 5,
+      "corrige": "1. 20 % de 45 = 0,2 × 45 = **9** (ou 10 % = 4,5, donc 20 % = 9).\n2. 3/5 = 0,6 = **60 %**.\n3. proportion = partie / tout = 27 / 36 = 3 / 4 = **75 %** (on simplifie par 9).\n4. 12,5 % = 0,125 = **1/8**.\n5. 10 % de 240 = 24, donc 5 % = la moitié = **12**."
+    },
+    {
+      "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+      "difficulte": 2,
+      "titre": "Les élèves du lycée Condorcet",
+      "consigne": "Sans calculatrice. Justifie chaque calcul.",
+      "enonce": "**Situation.** Le lycée Condorcet compte 800 élèves ; 35 % sont en Terminale. Parmi les élèves de Terminale, 40 % suivent la voie technologique.\n\n1. Combien d'élèves sont en Terminale ?\n2. Quelle proportion des élèves du lycée est en Terminale technologique ? Donne-la en pourcentage, puis calcule leur nombre de deux façons.\n3. Les 30 élèves de Seconde inscrits au club théâtre représentent 25 % des élèves de Seconde du lycée. Combien le lycée compte-t-il d'élèves de Seconde ?\n4. Lequel est le plus grand : 9/25 ou 0,35 ?",
+      "bareme": [
+        { "critere": "35 % de 800 = 280", "points": 4 },
+        { "critere": "0,35 × 0,4 = 0,14 = 14 %, soit 112 élèves (0,4 × 280 et 0,14 × 800)", "points": 7 },
+        { "critere": "Tout = 30 / 0,25 = 120", "points": 5 },
+        { "critere": "9/25 = 0,36 > 0,35", "points": 4 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. 10 % de 800 = 80, donc 30 % = 240 et 5 % = 40 : 35 % de 800 = **280 élèves**.\n2. Proportion d'une proportion : on **multiplie**. 0,35 × 0,4 = **0,14 = 14 %**. Nombre : 40 % de 280 = 0,4 × 280 = **112** ; ou 14 % de 800 = 0,14 × 800 = **112**. Les deux calculs concordent.\n3. On retrouve le tout : tout = partie / proportion = 30 / 0,25 = 30 × 4 = **120 élèves de Seconde**.\n4. 9/25 = 36/100 = **0,36**, qui est plus grand que 0,35 : **9/25 est le plus grand**."
+    },
+    {
+      "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+      "difficulte": 3,
+      "titre": "Les cadres d'une entreprise",
+      "consigne": "Sans calculatrice. Justifie chaque résultat et relève le piège de la dernière question.",
+      "enonce": "**Situation.** Une entreprise emploie 250 salariés : 60 % sont des femmes. 30 % des femmes sont cadres, et 20 % des hommes sont cadres.\n\n1. Calcule le nombre de femmes et le nombre d'hommes.\n2. Calcule le nombre de femmes cadres et le nombre d'hommes cadres.\n3. Quelle proportion de l'ensemble des salariés est formée de femmes cadres ? Donne-la en pourcentage de deux façons.\n4. Quelle proportion de l'ensemble des salariés est cadre ?\n5. Un journaliste écrit : « 30 % des femmes et 20 % des hommes sont cadres, donc 50 % des salariés sont cadres. » Explique son erreur.\n6. Parmi les cadres, les femmes sont-elles plus ou moins de la moitié ? Justifie sans calculer de valeur décimale précise.",
+      "bareme": [
+        { "critere": "150 femmes et 100 hommes", "points": 3 },
+        { "critere": "45 femmes cadres et 20 hommes cadres", "points": 4 },
+        { "critere": "0,6 × 0,3 = 0,18 = 18 % et 45 / 250 = 18 %", "points": 4 },
+        { "critere": "65 / 250 = 26 % de cadres", "points": 3 },
+        { "critere": "Erreur expliquée (pourcentages de populations différentes) et femmes plus de la moitié des cadres (45 > 32,5)", "points": 6 }
+      ],
+      "dureeMin": 15,
+      "corrige": "1. Femmes : 60 % de 250 = 0,6 × 250 = **150**. Hommes : 250 − 150 = **100**.\n2. Femmes cadres : 30 % de 150 = **45**. Hommes cadres : 20 % de 100 = **20**.\n3. Proportion d'une proportion : 0,6 × 0,3 = 0,18 = **18 %**. Vérification : 45 / 250 = 18 / 100 = **18 %**.\n4. Cadres : 45 + 20 = 65. 65 / 250 = 26 / 100 = **26 %**.\n5. 30 % et 20 % ne portent **pas sur le même tout** (les femmes d'un côté, les hommes de l'autre) : on ne peut pas les additionner. Les pourcentages de sous-populations se multiplient par la part de chaque sous-population ; on obtient 26 %, pas 50 %.\n6. Parmi les 65 cadres, 45 sont des femmes. La moitié de 65 vaut 32,5 et 45 > 32,5 : les femmes sont **plus de la moitié** des cadres (45/65 = 9/13, environ 69 %)."
+    },
+    {
+      "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+      "difficulte": 1,
+      "titre": "Le coefficient multiplicateur",
+      "consigne": "Sans calculatrice. Écris le coefficient multiplicateur utilisé à chaque fois.",
+      "enonce": "1. Donne le coefficient multiplicateur associé à une hausse de 30 %, puis à une baisse de 12 %.\n2. Un vélo à 60 € augmente de 25 %. Quel est son nouveau prix ?\n3. Un abonnement passe de 40 € à 50 €. Calcule le taux d'évolution.\n4. Un effectif passe de 80 à 60. Calcule le taux d'évolution.",
+      "bareme": [
+        { "critere": "× 1,3 et × 0,88", "points": 5 },
+        { "critere": "60 × 1,25 = 75 €", "points": 5 },
+        { "critere": "(50 − 40) / 40 = +25 %", "points": 5 },
+        { "critere": "(60 − 80) / 80 = −25 %", "points": 5 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Hausse de 30 % : × (1 + 30/100) = **× 1,3**. Baisse de 12 % : × (1 − 12/100) = **× 0,88**.\n2. 60 × 1,25 = **75 €** (60 + le quart de 60).\n3. taux = (valeur finale − valeur initiale) / valeur initiale = (50 − 40) / 40 = 10 / 40 = 0,25, soit **+25 %**.\n4. (60 − 80) / 80 = −20 / 80 = −0,25, soit **−25 %**."
+    },
+    {
+      "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+      "difficulte": 2,
+      "titre": "Soldes et remontées de prix",
+      "consigne": "Sans calculatrice. Justifie avec les coefficients multiplicateurs.",
+      "enonce": "**Situation.** Chez un vendeur de baskets :\n\n1. Un modèle augmente de 20 % en mars, puis baisse de 10 % en juin. Quelle est l'évolution globale, en pourcentage ?\n2. Pendant les soldes, un autre modèle est vendu 90 € après une baisse de 25 %. Quel était son prix avant les soldes ? Un client propose de calculer 90 × 1,25 : que trouve-t-il et pourquoi se trompe-t-il ?\n3. Après les soldes, de quel pourcentage faut-il augmenter un prix qui a baissé de 20 % pour qu'il revienne à sa valeur de départ ?",
+      "bareme": [
+        { "critere": "1,2 × 0,9 = 1,08, soit +8 %", "points": 6 },
+        { "critere": "Prix initial 90 / 0,75 = 120 €", "points": 5 },
+        { "critere": "90 × 1,25 = 112,50 € : erreur expliquée (le pourcentage ne porte pas sur le même prix)", "points": 4 },
+        { "critere": "Coefficient réciproque 1 / 0,8 = 1,25 : +25 %", "points": 5 }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Les coefficients se **multiplient** : 1,2 × 0,9 = 1,08. Évolution globale : **+8 %** (et non +10 %).\n2. Valeur initiale = valeur finale / CM = 90 / 0,75 = **120 €** (contrôle : 120 × 0,75 = 90). Le client trouve 90 × 1,25 = 112,50 € : il se trompe car la baisse de 25 % portait sur le prix **de départ** (120 €), pas sur le prix soldé ; on ne revient pas en arrière en ajoutant le même pourcentage.\n3. Le coefficient réciproque est l'**inverse** : 1 / 0,8 = 1,25. Il faut une hausse de **25 %**."
+    },
+    {
+      "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+      "difficulte": 3,
+      "titre": "La population de Saint-Lucien et son taux de chômage",
+      "consigne": "Sans calculatrice. Justifie chaque réponse ; distingue soigneusement pourcentages et points.",
+      "enonce": "**Situation.** En 2020, la commune de Saint-Lucien compte 5 000 habitants. Sa population augmente de 10 % en 2021, puis encore de 10 % en 2022.\n\n1. Calcule la population fin 2022, puis l'évolution globale en pourcentage.\n2. En 2023, la population baisse et revient exactement à 5 000 habitants. Quel est le taux d'évolution de 2023 ? Donne-le arrondi à l'unité, sachant que 1 / 1,21 ≈ 0,826.\n3. Dans une commune voisine, la population baisse de 40 % puis augmente de 40 %. Revient-elle à sa valeur de départ ? Justifie.\n4. Le taux de chômage de Saint-Lucien passe de 8 % à 6 %. Un élu dit : « Le chômage a baissé de 2 %. » Corrige sa phrase en donnant la baisse en points et en pourcentage.\n5. À quelle évolution en pourcentage correspond le fait de multiplier une grandeur par 3 ?",
+      "bareme": [
+        { "critere": "5 000 × 1,21 = 6 050 habitants, soit +21 %", "points": 5 },
+        { "critere": "Coefficient 1 / 1,21 ≈ 0,826 : environ −17 %", "points": 4 },
+        { "critere": "0,6 × 1,4 = 0,84 : baisse globale de 16 %, pas de retour au départ", "points": 4 },
+        { "critere": "−2 points, soit une baisse de 25 % (2 / 8)", "points": 4 },
+        { "critere": "× 3 : hausse de 200 %", "points": 3 }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Coefficient global : 1,1 × 1,1 = 1,21. Population fin 2022 : 5 000 × 1,21 = **6 050 habitants**. Évolution globale : **+21 %** (et non +20 %).\n2. Pour revenir à 5 000, il faut le coefficient réciproque 1 / 1,21 ≈ 0,826, soit une évolution d'environ **−17 %** (0,826 − 1 = −0,174). Contrôle : (5 000 − 6 050) / 6 050 = −1 050 / 6 050 ≈ −0,17.\n3. 0,6 × 1,4 = 0,84 : la population a globalement **baissé de 16 %**. Elle ne revient **pas** à sa valeur de départ : la hausse de 40 % s'applique à une population plus petite.\n4. De 8 % à 6 %, le taux baisse de **2 points** de pourcentage ; en pourcentage, la baisse est de 2 / 8 = 0,25, soit **25 %**. L'élu devrait dire : « Le taux de chômage a baissé de 2 points. »\n5. Multiplier par 3, c'est multiplier par 1 + t/100 avec 1 + t/100 = 3, donc t = 200 : une **hausse de 200 %**."
+    },
+    {
+      "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+      "difficulte": 1,
+      "titre": "Fractions, puissances, identités",
+      "consigne": "Sans calculatrice. Donne chaque résultat sous la forme la plus simple.",
+      "enonce": "1. Calcule 3/4 − 1/6.\n2. Calcule (5/2) × (4/15).\n3. Calcule 2⁵ × 2 puissance (−3).\n4. Développe (x + 4)².\n5. Factorise x² − 49.",
+      "bareme": [
+        { "critere": "3/4 − 1/6 = 9/12 − 2/12 = 7/12", "points": 4 },
+        { "critere": "(5/2) × (4/15) = 20/30 = 2/3", "points": 4 },
+        { "critere": "2 puissance 2 = 4", "points": 4 },
+        { "critere": "x² + 8x + 16", "points": 4 },
+        { "critere": "(x − 7)(x + 7)", "points": 4 }
+      ],
+      "dureeMin": 6,
+      "corrige": "1. Même dénominateur d'abord : 3/4 − 1/6 = 9/12 − 2/12 = **7/12**.\n2. (5 × 4) / (2 × 15) = 20/30 = **2/3**.\n3. a puissance m × a puissance n = a puissance (m + n) : 2 puissance (5 − 3) = 2² = **4**.\n4. (a + b)² = a² + 2ab + b² : (x + 4)² = **x² + 8x + 16**.\n5. a² − b² = (a − b)(a + b) : x² − 49 = **(x − 7)(x + 7)**. Contrôle en redéveloppant : x² + 7x − 7x − 49 = x² − 49."
+    },
+    {
+      "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+      "difficulte": 2,
+      "titre": "Équations et conversions",
+      "consigne": "Sans calculatrice. Justifie chaque étape.",
+      "enonce": "1. Résous les équations suivantes :\n   a) (3x + 2)(x − 5) = 0\n   b) x² = 81\n   c) 4x − 7 = x + 8\n   d) 12 / x = 4\n2. La puissance électrique vérifie P = U × I. Exprime I en fonction de P et U.\n3. Convertis 90 km/h en m/s, puis 2 h 45 min en heures (écriture décimale).\n4. Sans poser l'opération, estime 51 × 19 et dis si le résultat 969 est plausible.",
+      "bareme": [
+        { "critere": "Quatre équations résolues : −2/3 et 5 ; −9 et 9 ; 5 ; 3", "points": 10 },
+        { "critere": "I = P / U", "points": 3 },
+        { "critere": "25 m/s et 2,75 h", "points": 4 },
+        { "critere": "Ordre de grandeur 50 × 20 = 1 000, 969 plausible", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. a) Produit nul : 3x + 2 = 0 ou x − 5 = 0, donc **x = −2/3 ou x = 5**.\n   b) x² = 81 : **x = −9 ou x = 9** (deux solutions).\n   c) 4x − x = 8 + 7, 3x = 15, **x = 5**.\n   d) x ≠ 0 ; x = 12 / 4 = **3**.\n2. On divise les deux membres par U : **I = P / U**.\n3. 90 km/h = 90 / 3,6 = **25 m/s**. 45 min = 3/4 h = 0,75 h, donc 2 h 45 min = **2,75 h**.\n4. 51 × 19 est proche de 50 × 20 = 1 000 : **969 est plausible** (le calcul exact donne 51 × 19 = 969)."
+    },
+    {
+      "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+      "difficulte": 3,
+      "titre": "Choisir la bonne forme d'une expression",
+      "consigne": "Sans calculatrice. Justifie chaque étape et vérifie tes factorisations en redéveloppant.",
+      "enonce": "Soit A(x) = (2x − 3)² − (x + 1)².\n\n1. Développe et réduis A(x).\n2. Factorise A(x) à l'aide d'une identité remarquable.\n3. Vérifie ta factorisation en la redéveloppant.\n4. En choisissant à chaque fois la forme la plus adaptée :\n   a) calcule A(0) ;\n   b) résous A(x) = 0 ;\n   c) résous A(x) = 8.\n5. Détermine le signe de l'expression 3x − 2 selon les valeurs de x.",
+      "bareme": [
+        { "critere": "Forme développée 3x² − 14x + 8", "points": 4 },
+        { "critere": "Factorisation (x − 4)(3x − 2) par a² − b², vérifiée", "points": 5 },
+        { "critere": "A(0) = 8 avec la forme développée", "points": 2 },
+        { "critere": "A(x) = 0 : x = 4 ou x = 2/3 ; A(x) = 8 : x = 0 ou x = 14/3", "points": 6 },
+        { "critere": "3x − 2 négatif pour x < 2/3, positif pour x > 2/3", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. (2x − 3)² = 4x² − 12x + 9 et (x + 1)² = x² + 2x + 1. A(x) = 4x² − 12x + 9 − x² − 2x − 1 = **3x² − 14x + 8**.\n2. A(x) est de la forme a² − b² avec a = 2x − 3 et b = x + 1 : A(x) = (2x − 3 − x − 1)(2x − 3 + x + 1) = **(x − 4)(3x − 2)**. Attention au signe : −(x + 1) = −x − 1.\n3. (x − 4)(3x − 2) = 3x² − 2x − 12x + 8 = 3x² − 14x + 8 : on retrouve la forme développée.\n4. a) Forme développée : A(0) = **8**.\n   b) Forme factorisée, produit nul : x − 4 = 0 ou 3x − 2 = 0, donc **x = 4 ou x = 2/3**.\n   c) Forme développée : 3x² − 14x + 8 = 8 équivaut à 3x² − 14x = 0, soit x (3x − 14) = 0 : **x = 0 ou x = 14/3**.\n5. 3x − 2 s'annule en x = 2/3 ; il est du signe de a = 3 (positif) à droite de cette valeur : **négatif pour x < 2/3**, nul en 2/3, **positif pour x > 2/3**."
+    },
+    {
+      "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+      "difficulte": 1,
+      "titre": "Une droite par deux points",
+      "consigne": "Sans calculatrice. Justifie chaque réponse.",
+      "enonce": "1. Détermine l'équation réduite de la droite (AB) avec A(1 ; 3) et B(4 ; 9).\n2. Le point C(−2 ; −3) appartient-il à (AB) ?\n3. On considère la fonction f(x) = −3x + 6.\n   a) Est-elle croissante ou décroissante ? Pourquoi ?\n   b) Pour quelle valeur de x s'annule-t-elle ?\n   c) Pour quelles valeurs de x est-elle positive ?",
+      "bareme": [
+        { "critere": "m = 2, p = 1 : y = 2x + 1", "points": 7 },
+        { "critere": "C vérifie l'équation : 2 × (−2) + 1 = −3, oui", "points": 4 },
+        { "critere": "Décroissante car m = −3 < 0", "points": 3 },
+        { "critere": "Zéro en x = 2, positive pour x < 2", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. m = (yB − yA) / (xB − xA) = (9 − 3) / (4 − 1) = 6 / 3 = **2**. p = yA − m xA = 3 − 2 = **1**. Équation : **y = 2x + 1**.\n2. 2 × (−2) + 1 = −3 = yC : les coordonnées de C vérifient l'équation, **C appartient à (AB)**.\n3. a) Son coefficient directeur m = −3 est négatif : f est **décroissante**.\n   b) −3x + 6 = 0 donne **x = 2**.\n   c) f(x) s'annule en 2 et est du signe de a = −3 (négatif) à droite de 2 : f(x) est **positive pour x < 2** (et négative pour x > 2)."
+    },
+    {
+      "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+      "difficulte": 2,
+      "titre": "Deux tarifs de location de trottinettes",
+      "consigne": "Sans calculatrice. Justifie par le calcul ; tu peux t'aider d'un schéma.",
+      "enonce": "**Situation.** Pour louer une trottinette pendant x heures :\n- **Tarif A** : 10 € d'inscription puis 2 € par heure, soit f(x) = 2x + 10 ;\n- **Tarif B** : 4 € par heure, sans inscription, soit g(x) = 4x.\n\n1. Laquelle des deux fonctions est linéaire ? Que peut-on dire de sa courbe ?\n2. Calcule l'image de 3 par f. Interprète.\n3. Détermine l'antécédent de 30 par f. Interprète.\n4. Résous f(x) = g(x). Que représente la solution sur un graphique ?\n5. Pour quelles durées le tarif A est-il le moins cher ? Justifie.",
+      "bareme": [
+        { "critere": "g linéaire, sa droite passe par l'origine", "points": 3 },
+        { "critere": "f(3) = 16 € interprété", "points": 4 },
+        { "critere": "Antécédent de 30 : x = 10 heures", "points": 4 },
+        { "critere": "f(x) = g(x) pour x = 5, abscisse du point d'intersection des droites", "points": 5 },
+        { "critere": "Tarif A moins cher pour x > 5, justifié", "points": 4 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. **g** est linéaire (g(x) = m x, avec m = 4) : sa droite passe par l'**origine** du repère. f est affine (ordonnée à l'origine 10).\n2. f(3) = 2 × 3 + 10 = **16** : 3 heures coûtent 16 € au tarif A.\n3. On résout f(x) = 30 : 2x + 10 = 30, 2x = 20, **x = 10** : avec 30 €, on loue 10 heures au tarif A.\n4. 2x + 10 = 4x donne 10 = 2x, **x = 5**. Sur un graphique, c'est l'**abscisse du point d'intersection** des deux droites : pour 5 heures, les deux tarifs coûtent 20 €.\n5. f(x) < g(x) équivaut à 2x + 10 < 4x, soit 10 < 2x, **x > 5** : le tarif A est le moins cher pour une location de **plus de 5 heures** (sa droite est alors en dessous de celle de B)."
+    },
+    {
+      "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+      "difficulte": 3,
+      "titre": "Une parabole et une droite",
+      "consigne": "Justifie chaque réponse par le calcul et interprète graphiquement.",
+      "enonce": "On considère f(x) = −x² + 4x + 1 sur [0 ; 6] et la droite d passant par A(0 ; 1) et B(5 ; −4).\n\n**Tableau de valeurs de f**\n\n| x | 0 | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|---|\n| f(x) | 1 | 4 | 5 | 4 | 1 | −4 | −11 |\n\n1. Quelle est l'image de 2 par f ? Quels sont les antécédents de 4 ? Justifie par le calcul qu'il n'y en a pas d'autres sur [0 ; 6].\n2. Détermine l'équation réduite de la droite d.\n3. Vérifie par le calcul que A et B sont sur la courbe de f.\n4. Résous f(x) = −x + 1 et interprète graphiquement.\n5. On admet que la courbe de f est au-dessus de d entre ses deux points d'intersection avec d, et en dessous ailleurs. Donne l'ensemble des solutions de f(x) > −x + 1 sur [0 ; 6].\n6. D'après le tableau, où semble se situer le maximum de f ? Sur quel intervalle f semble-t-elle croissante ?",
+      "bareme": [
+        { "critere": "f(2) = 5 ; antécédents de 4 : 1 et 3, justifiés par x² − 4x + 3 = 0", "points": 5 },
+        { "critere": "d : m = −1, p = 1, y = −x + 1", "points": 3 },
+        { "critere": "Vérification de A et B sur la courbe", "points": 2 },
+        { "critere": "f(x) = −x + 1 : x = 0 ou x = 5, points A et B", "points": 5 },
+        { "critere": "Solutions ]0 ; 5[ ; maximum 5 en x = 2, croissante sur [0 ; 2]", "points": 5 }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. **f(2) = 5**. Antécédents de 4 : on lit **1 et 3**. Par le calcul : −x² + 4x + 1 = 4 équivaut à x² − 4x + 3 = 0, soit (x − 1)(x − 3) = 0 (contrôle : x² − 3x − x + 3) : les seules solutions sont 1 et 3.\n2. m = (−4 − 1) / (5 − 0) = −1 et p = 1 (A est sur l'axe des ordonnées). **d : y = −x + 1**.\n3. f(0) = 1 : A(0 ; 1) est sur la courbe. f(5) = −25 + 20 + 1 = −4 : B(5 ; −4) aussi.\n4. −x² + 4x + 1 = −x + 1 équivaut à −x² + 5x = 0, soit x (5 − x) = 0 : **x = 0 ou x = 5**. Ce sont les abscisses des points d'intersection de la courbe et de la droite : **A et B**.\n5. f(x) > −x + 1 là où la courbe est **au-dessus** de la droite : entre les points d'intersection, soit **x ∈ ]0 ; 5[** (bornes exclues, car l'inégalité est stricte).\n6. Le tableau suggère un maximum de **5 en x = 2** (la courbe monte de 1 à 5 puis redescend) : f semble **croissante sur [0 ; 2]** et décroissante sur [2 ; 6]. (Ce n'est qu'une lecture : un tableau de valeurs ne prouve pas les variations entre deux valeurs.)"
+    },
+    {
+      "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+      "difficulte": 1,
+      "titre": "Les indicateurs d'une série",
+      "consigne": "Sans calculatrice. Justifie le rang utilisé pour la médiane et les quartiles.",
+      "enonce": "Voici le nombre de livres lus en un an par 8 élèves, rangés dans l'ordre :\n\n4 ; 6 ; 7 ; 9 ; 11 ; 12 ; 14 ; 17\n\n1. Calcule la moyenne de la série.\n2. Détermine la médiane.\n3. Détermine le premier quartile Q1 et le troisième quartile Q3.\n4. Calcule l'étendue et l'écart interquartile.",
+      "bareme": [
+        { "critere": "Moyenne 80 / 8 = 10", "points": 4 },
+        { "critere": "Médiane 10 (entre la 4e et la 5e valeur)", "points": 5 },
+        { "critere": "Q1 = 6 (rang 2) et Q3 = 12 (rang 6)", "points": 7 },
+        { "critere": "Étendue 13 et écart interquartile 6", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Somme : 4 + 6 + 7 + 9 + 11 + 12 + 14 + 17 = 80. Moyenne = 80 / 8 = **10**.\n2. L'effectif est pair (8) : la médiane partage la série en deux moitiés de 4 valeurs, entre la 4e (9) et la 5e (11) : médiane = (9 + 11) / 2 = **10**.\n3. Q1 : 8 / 4 = 2, rang 2 : **Q1 = 6**. Q3 : 3 × 8 / 4 = 6, rang 6 : **Q3 = 12**.\n4. Étendue = 17 − 4 = **13**. Écart interquartile = Q3 − Q1 = 12 − 6 = **6**."
+    },
+    {
+      "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+      "difficulte": 2,
+      "titre": "Le pop-corn du cinéma",
+      "consigne": "Sans calculatrice. Complète le tableau, puis justifie chaque probabilité en précisant la population de référence.",
+      "enonce": "**Situation.** Un soir, un cinéma accueille 300 spectateurs : 180 adultes et 120 jeunes. 54 adultes et 66 jeunes achètent du pop-corn. On choisit un spectateur au hasard. On note A : « le spectateur est un adulte », J : « le spectateur est un jeune », P : « il achète du pop-corn ».\n\n1. Recopie et complète le tableau croisé d'effectifs (lignes Adultes, Jeunes, Total ; colonnes Pop-corn, Pas de pop-corn, Total).\n2. Calcule P(A inter P).\n3. Calcule la probabilité que le spectateur achète du pop-corn sachant que c'est un adulte.\n4. Calcule la probabilité que le spectateur soit un jeune sachant qu'il achète du pop-corn.\n5. Calcule P(non P).",
+      "bareme": [
+        { "critere": "Tableau complet et juste", "points": 5 },
+        { "critere": "P(A inter P) = 54 / 300 = 0,18", "points": 4 },
+        { "critere": "P(A)(P) = 54 / 180 = 0,3", "points": 4 },
+        { "critere": "P(P)(J) = 66 / 120 = 0,55", "points": 4 },
+        { "critere": "P(non P) = 180 / 300 = 0,6", "points": 3 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1.\n\n| | Pop-corn | Pas de pop-corn | Total |\n|---|---|---|---|\n| Adultes | 54 | 126 | 180 |\n| Jeunes | 66 | 54 | 120 |\n| Total | 120 | 180 | 300 |\n\n2. Adulte **et** pop-corn, parmi **tous** : P(A inter P) = 54 / 300 = **0,18**.\n3. Pop-corn **parmi les adultes** : P(A)(P) = 54 / 180 = **0,3**.\n4. Jeune **parmi les acheteurs de pop-corn** : P(P)(J) = 66 / 120 = **0,55**.\n5. P(non P) = 1 − P(P) = 1 − 120 / 300 = 1 − 0,4 = **0,6** (ou 180 / 300)."
+    },
+    {
+      "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+      "difficulte": 3,
+      "titre": "Deux classes comparées",
+      "consigne": "Sans calculatrice. Justifie chaque résultat et rédige une comparaison argumentée.",
+      "enonce": "**Classe A** – notes d'un devoir (11 élèves, rangées) :\n\n5 ; 7 ; 8 ; 9 ; 10 ; 11 ; 12 ; 12 ; 14 ; 15 ; 18\n\n**Classe B** – résumé des notes au même devoir : minimum 2, Q1 = 6, médiane 11, Q3 = 16, maximum 20.\n\n1. Calcule la moyenne, la médiane, Q1 et Q3 de la classe A.\n2. Calcule l'écart interquartile de chaque classe et compare la dispersion des deux séries. Quel graphique permettrait de les comparer d'un coup d'œil ?\n3. Dans la classe A, on remplace la note 18 par 20. Quels indicateurs changent ? Justifie.\n4. On choisit au hasard un élève de la classe A. Quelle est la probabilité que sa note soit strictement supérieure à 12 ?\n5. Léo a eu 11 à ce devoir (coefficient 3) et 14 à un oral (coefficient 2). Calcule sa moyenne pondérée.",
+      "bareme": [
+        { "critere": "Moyenne 11, médiane 11 (rang 6), Q1 = 8 (rang 3), Q3 = 14 (rang 9)", "points": 6 },
+        { "critere": "Écarts interquartiles 6 et 10, comparaison, boîte à moustaches", "points": 4 },
+        { "critere": "Seules la moyenne (et l'étendue) changent, pas la médiane ni les quartiles", "points": 3 },
+        { "critere": "Probabilité 3 / 11", "points": 3 },
+        { "critere": "Moyenne pondérée (33 + 28) / 5 = 12,2", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Somme : 5 + 7 + 8 + 9 + 10 + 11 + 12 + 12 + 14 + 15 + 18 = 121. Moyenne = 121 / 11 = **11**. Médiane : 6e valeur sur 11 = **11**. Q1 : 11 / 4 = 2,75, rang 3 : **Q1 = 8**. Q3 : 33 / 4 = 8,25, rang 9 : **Q3 = 14**.\n2. Classe A : 14 − 8 = **6**. Classe B : 16 − 6 = **10**. Les médianes sont égales (11), mais les notes de la classe B sont **plus dispersées** (écart interquartile et étendue plus grands : 18 contre 13). La **boîte à moustaches** permet de comparer les deux séries d'un coup d'œil.\n3. La somme passe à 123 : la **moyenne** change (123 / 11 ≈ 11,2), ainsi que l'étendue (15). La **médiane et les quartiles ne changent pas** : les rangs des valeurs ne bougent pas. La médiane résiste aux valeurs extrêmes, la moyenne non.\n4. Notes strictement supérieures à 12 : 14, 15, 18, soit 3 élèves sur 11 (équiprobabilité) : probabilité **3/11**.\n5. (11 × 3 + 14 × 2) / (3 + 2) = (33 + 28) / 5 = 61 / 5 = **12,2**."
+    },
+    {
+      "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+      "difficulte": 1,
+      "titre": "Automatismes en temps limité",
+      "consigne": "Sans calculatrice. Pour chaque question, donne le résultat et une phrase de contrôle de vraisemblance.",
+      "enonce": "Traite ces cinq automatismes comme à l'épreuve anticipée, en contrôlant la vraisemblance de chaque résultat.\n\n1. Calcule 25 × 36 en décomposant.\n2. Simplifie 45 / 120.\n3. Un jean à 50 € baisse de 20 %. Quel est son nouveau prix ?\n4. Avec un dé équilibré, quelle est la probabilité d'obtenir 5 ou 6 ?\n5. Estime 49 × 21 puis dis si 1 029 est plausible.",
+      "bareme": [
+        { "critere": "25 × 36 = 25 × 4 × 9 = 900", "points": 4 },
+        { "critere": "45 / 120 = 3 / 8", "points": 4 },
+        { "critere": "50 × 0,8 = 40 €, inférieur au prix de départ", "points": 4 },
+        { "critere": "2 / 6 = 1/3, comprise entre 0 et 1", "points": 4 },
+        { "critere": "Estimation 50 × 20 = 1 000, 1 029 plausible", "points": 4 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. 25 × 36 = 25 × 4 × 9 = 100 × 9 = **900**. Contrôle : 25 × 40 = 1 000, un peu plus grand, c'est cohérent.\n2. On simplifie par 15 : 45 / 120 = **3/8** (= 0,375, entre 0 et 1, cohérent car 45 < 120).\n3. 50 × 0,8 = **40 €**. Contrôle : un prix après une **baisse** doit être plus petit que 50 €.\n4. Issues favorables 5 et 6 : P = 2 / 6 = **1/3**. Contrôle : une probabilité est comprise entre 0 et 1.\n5. 49 × 21 ≈ 50 × 20 = **1 000** : **1 029 est plausible** (le calcul exact donne bien 1 029)."
+    },
+    {
+      "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+      "difficulte": 2,
+      "titre": "Corriger la copie de Maxime",
+      "consigne": "Repère chaque erreur, explique comment un contrôle de vraisemblance permettait de la voir, puis corrige-la. Sans calculatrice.",
+      "enonce": "Voici les réponses de Maxime à cinq automatismes.\n\n1. « Un prix de 80 € baisse de 25 %. Nouveau prix : 100 €. »\n2. « P(A) = 0,4 et P(B) = 0,8 avec A et B contraires, donc P(A) + P(B) = 1,2. »\n3. « 51 × 19 = 9 690. »\n4. « Une hausse de 10 % suivie d'une baisse de 10 % ne change rien. »\n5. « 1/3 ≈ 0,3, donc 1/3 + 1/3 + 1/3 ≈ 0,9 et non 1. »\n\nPour chaque réponse, dis si elle est juste ; si elle est fausse, explique quel contrôle de vraisemblance aurait alerté Maxime, et donne la bonne réponse.",
+      "bareme": [
+        { "critere": "Question 1 : prix après baisse plus grand, impossible ; bonne réponse 60 €", "points": 4 },
+        { "critere": "Question 2 : contraires, la somme vaut 1 ; P(B) = 0,6", "points": 4 },
+        { "critere": "Question 3 : ordre de grandeur 50 × 20 = 1 000 ; 969", "points": 4 },
+        { "critere": "Question 4 : 1,1 × 0,9 = 0,99, baisse de 1 %", "points": 4 },
+        { "critere": "Question 5 : garder les fractions, la somme vaut exactement 1", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. **Faux.** Un prix après une **baisse** ne peut pas être plus élevé qu'avant. 80 × 0,75 = **60 €**.\n2. **Faux.** Pour deux événements contraires, P(A) + P(B) = 1 ; et une somme de 1,2 signale une erreur. P(B) = P(non A) = 1 − 0,4 = **0,6**.\n3. **Faux.** Ordre de grandeur : 51 × 19 ≈ 50 × 20 = 1 000 ; 9 690 est dix fois trop grand. 51 × 19 = 51 × 20 − 51 = 1 020 − 51 = **969**.\n4. **Faux.** Les coefficients se multiplient : 1,1 × 0,9 = 0,99, soit une **baisse de 1 %**.\n5. **Faux.** L'arrondi fausse le calcul : il faut **garder les fractions**. 1/3 + 1/3 + 1/3 = 3/3 = **1** exactement."
+    },
+    {
+      "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+      "difficulte": 3,
+      "titre": "Un exercice où l'on admet un résultat",
+      "consigne": "Sans calculatrice. Si tu ne réussis pas une question, admets son résultat et continue : c'est la méthode attendue. Rédige tous les raisonnements.",
+      "enonce": "Soit f(x) = x³ − 3x + 1 sur l'intervalle [−2 ; 2].\n\n1. Calcule f'(x) et montre que f'(x) = 3 (x − 1)(x + 1).\n2. On admet que f'(x) est négatif sur [−1 ; 1] et positif sur [−2 ; −1] et sur [1 ; 2]. Dresse le tableau de variations de f en calculant f(−2), f(−1), f(1) et f(2).\n3. Quel est le maximum de f sur [−2 ; 2] ? En quelle(s) valeur(s) est-il atteint ? Que remarques-tu sur l'une d'elles ?\n4. Une élève trouve f(1) = 5. Sans refaire le calcul, explique pourquoi ce résultat n'est pas vraisemblable, à l'aide de f(−1) et du sens de variation.\n5. Explique en une ou deux phrases pourquoi la question 2 pouvait être traitée même sans avoir réussi la question 1.",
+      "bareme": [
+        { "critere": "f'(x) = 3x² − 3 = 3 (x² − 1) = 3 (x − 1)(x + 1)", "points": 4 },
+        { "critere": "f(−2) = −1, f(−1) = 3, f(1) = −1, f(2) = 3 et tableau de variations", "points": 6 },
+        { "critere": "Maximum 3 atteint en −1 et en 2 (une borne)", "points": 4 },
+        { "critere": "Invraisemblance : f décroissante sur [−1 ; 1] impose f(1) ≤ f(−1) = 3", "points": 4 },
+        { "critere": "Le résultat utile est admis dans l'énoncé : on continue sans bloquer", "points": 2 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. f'(x) = 3x² − 3 = 3 (x² − 1) = **3 (x − 1)(x + 1)** (identité a² − b²).\n2. f(−2) = −8 + 6 + 1 = **−1** ; f(−1) = −1 + 3 + 1 = **3** ; f(1) = 1 − 3 + 1 = **−1** ; f(2) = 8 − 6 + 1 = **3**.\nf est **croissante sur [−2 ; −1]** (de −1 à 3), **décroissante sur [−1 ; 1]** (de 3 à −1), **croissante sur [1 ; 2]** (de −1 à 3).\n3. Le maximum vaut **3**, atteint en **x = −1** et en **x = 2**. La valeur 2 est une **borne** de l'intervalle : sur un intervalle fermé, le maximum peut se trouver à une borne, il faut toujours la regarder. (Le minimum vaut −1, en −2 et en 1.)\n4. f est **décroissante** sur [−1 ; 1], donc f(1) ≤ f(−1) = 3. Trouver f(1) = 5 > 3 contredit le sens de variation : le résultat **n'est pas vraisemblable**, il faut revérifier le calcul.\n5. Le signe de f' utile à la question 2 est **donné (admis)** par l'énoncé : on peut l'utiliser directement. À l'épreuve, quand une question résiste, on **admet** son résultat et on **continue** au lieu de bloquer."
+    }
+  ]
+}

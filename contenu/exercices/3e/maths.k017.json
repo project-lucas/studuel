@@ -1,0 +1,3336 @@
+{
+  "niveau": "3e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le TER de Zoé",
+      "competence": "calculer",
+      "situation": "Zoé prend le train pour rendre visite à sa cousine. Le tableau donne l’horaire et la distance de son trajet.",
+      "documents": [
+        {
+          "id": "trajet",
+          "type": "tableau",
+          "titre": "Le trajet de Zoé",
+          "colonnes": [
+            "Départ",
+            "Arrivée",
+            "Distance"
+          ],
+          "lignes": [
+            [
+              "14 h 20",
+              "16 h 50",
+              "450 km"
+            ]
+          ],
+          "source": "Horaires imaginés pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "trajet",
+          "enonce": "Touche la case qui donne la **distance** parcourue.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Cherche la case qui s’exprime en kilomètres.",
+          "explication": "La distance parcourue est **450 km**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la durée du trajet ? Écris-la en **heures décimales**.",
+          "reponse": 2.5,
+          "unite": "h",
+          "aide": "De 14 h 20 à 16 h 50, il s’écoule 2 h et 30 min. Combien d’heures font 30 min ?",
+          "explication": "De 14 h 20 à 16 h 50, il s’écoule 2 h 30 min. 30 min = 0,5 h : la durée est **2,5 h** (et non 2,30 h : une heure compte 60 min)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la **vitesse moyenne** du train, en km/h.",
+          "reponse": 180,
+          "unite": "km/h",
+          "aide": "v = d ÷ t, avec d = 450 km et t = 2,5 h.",
+          "explication": "v = 450 ÷ 2,5 = **180 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Exprime cette vitesse en **m/s**.",
+          "reponse": 50,
+          "unite": "m/s",
+          "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+          "explication": "180 ÷ 3,6 = **50 m/s** : le train avance de 50 mètres chaque seconde."
+        }
+      ]
+    },
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le robinet de la baignoire",
+      "competence": "lire-graphique",
+      "situation": "Le robinet de la salle de bain de Malo coule toujours au même rythme. Le graphique montre le volume d’eau dans la baignoire depuis l’ouverture du robinet.",
+      "documents": [
+        {
+          "id": "volume",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Le volume d’eau dans la baignoire",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "series": [
+            {
+              "nom": "Volume d’eau",
+              "valeurs": [
+                0,
+                15,
+                30,
+                45,
+                60,
+                75
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "en litres",
+            "min": 0,
+            "max": 80,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Temps écoulé (min)"
+          },
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel volume d’eau la baignoire contient-elle après **4 minutes** ?",
+          "reponse": 60,
+          "unite": "L",
+          "aide": "Repère 4 minutes sur l’axe horizontal, puis monte jusqu’à la courbe.",
+          "explication": "Après 4 minutes, la baignoire contient **60 L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **débit** du robinet, en L/min ?",
+          "reponse": 15,
+          "unite": "L/min",
+          "aide": "Regarde de combien de litres la courbe monte à chaque minute.",
+          "explication": "Le volume augmente de 15 L chaque minute : le débit est de **15 L/min** (60 ÷ 4 = 15)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La baignoire pleine contient **180 L**. Combien de minutes faut-il pour la remplir ?",
+          "reponse": 12,
+          "unite": "min",
+          "aide": "t = volume ÷ débit.",
+          "explication": "t = 180 ÷ 15 = **12 min**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Malo oublie le robinet ouvert pendant **1 h**. Quel volume d’eau s’écoule ? Donne-le en **m³**.",
+          "reponse": 0.9,
+          "unite": "m³",
+          "aide": "1 h = 60 min. Puis 1 000 L = 1 m³.",
+          "explication": "15 × 60 = 900 L, et 1 000 L = 1 m³ : 900 L = **0,9 m³**."
+        }
+      ]
+    },
+    {
+      "chapitre": "ce9a2b67-d865-5b81-af76-c78124a4c042",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le vélo et la voiture",
+      "competence": "resoudre",
+      "situation": "Samedi, Sacha part à vélo à 9 h 00 pour la plage. À 9 h 30, sa mère part de la même maison, en voiture, par la même route. Chacun roule à vitesse constante. Le graphique donne la distance parcourue par chacun.",
+      "documents": [
+        {
+          "id": "course",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Distance parcourue depuis la maison",
+          "categories": [
+            "9 h 00",
+            "9 h 15",
+            "9 h 30",
+            "9 h 45",
+            "10 h 00"
+          ],
+          "series": [
+            {
+              "nom": "Sacha (vélo)",
+              "valeurs": [
+                0,
+                4,
+                8,
+                12,
+                16
+              ],
+              "teinte": "ambre"
+            },
+            {
+              "nom": "Sa mère (voiture)",
+              "valeurs": [
+                0,
+                0,
+                0,
+                12,
+                24
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Distance",
+            "unite": "en km",
+            "min": 0,
+            "max": 25,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Heure"
+          },
+          "source": "Données imaginées pour l’exercice"
+        },
+        {
+          "id": "panneau",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "Plage des Mouettes",
+          "sousTitre": "Route de la maison",
+          "emoji": "🏖️",
+          "lignes": [
+            {
+              "texte": "Distance depuis la maison",
+              "valeur": "24 km"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "course",
+          "enonce": "Touche l’instant où la voiture **rattrape** le vélo.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Les deux courbes se croisent : les deux ont alors parcouru la même distance.",
+          "explication": "Les courbes se croisent à **9 h 45** : Sacha et sa mère sont au même endroit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle distance de la maison la voiture rattrape-t-elle le vélo ?",
+          "reponse": 12,
+          "unite": "km",
+          "aide": "Lis la distance au point où les courbes se croisent.",
+          "explication": "Au croisement, les deux ont parcouru **12 km**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **vitesse** de Sacha, en km/h ?",
+          "reponse": 16,
+          "unite": "km/h",
+          "aide": "Il parcourt 4 km tous les quarts d’heure. Combien de quarts d’heure dans 1 h ?",
+          "explication": "4 km en 15 min, donc 4 × 4 = **16 km/h**. Autre calcul : 16 km en 1 h."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **vitesse** de la voiture entre 9 h 30 et 10 h 00, en km/h ?",
+          "reponse": 48,
+          "unite": "km/h",
+          "aide": "Elle passe de 0 km à 24 km en une demi-heure (0,5 h).",
+          "explication": "v = 24 ÷ 0,5 = **48 km/h**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quelle heure Sacha arrive-t-il à la plage, en gardant sa vitesse ?",
+          "options": [
+            "10 h 00",
+            "10 h 15",
+            "10 h 30",
+            "10 h 45"
+          ],
+          "reponse": 2,
+          "ordreFixe": true,
+          "aide": "Le panneau donne la distance à parcourir. Durée = distance ÷ vitesse.",
+          "explication": "t = 24 ÷ 16 = 1,5 h, soit 1 h 30 min après 9 h 00 : Sacha arrive à **10 h 30**, une demi-heure après sa mère."
+        }
+      ]
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Repeindre le mur",
+      "competence": "calculer",
+      "situation": "Jade repeint un mur de sa chambre : un rectangle de 6 m sur 2,5 m, qui comporte une fenêtre et une porte. Le schéma donne leurs dimensions.",
+      "documents": [
+        {
+          "id": "mur",
+          "type": "schema",
+          "titre": "Le mur à repeindre",
+          "largeur": 320,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 20,
+              "texte": "Mur : 6 m × 2,5 m",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 30,
+              "l": 280,
+              "h": 117,
+              "teinte": "sable",
+              "motif": "clair",
+              "id": "paroi"
+            },
+            {
+              "forme": "rect",
+              "x": 90,
+              "y": 55,
+              "l": 70,
+              "h": 47,
+              "teinte": "ciel",
+              "motif": "clair",
+              "id": "fenetre",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 220,
+              "y": 54,
+              "l": 42,
+              "h": 93,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "porte",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 125,
+              "y": 82,
+              "texte": "1,5 × 1 m",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 241,
+              "y": 168,
+              "texte": "Porte",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 241,
+              "y": 184,
+              "texte": "0,9 × 2 m",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 125,
+              "y": 120,
+              "texte": "Fenêtre",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mur",
+          "enonce": "Touche la **porte**.",
+          "reponse": [
+            "porte"
+          ],
+          "aide": "La porte descend jusqu’au sol.",
+          "explication": "La **porte** est le rectangle qui touche le sol : 0,9 m de large sur 2 m de haut."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire du mur entier (6 m sur 2,5 m) ?",
+          "reponse": 15,
+          "unite": "m²",
+          "aide": "Aire d’un rectangle : longueur × largeur.",
+          "explication": "6 × 2,5 = **15 m²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire totale de la fenêtre **et** de la porte ?",
+          "reponse": 3.3,
+          "unite": "m²",
+          "aide": "Fenêtre : 1,5 × 1. Porte : 0,9 × 2. Additionne les deux.",
+          "explication": "Fenêtre : 1,5 × 1 = 1,5 m². Porte : 0,9 × 2 = 1,8 m². Total : **3,3 m²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle aire Jade doit-elle réellement peindre ?",
+          "reponse": 11.7,
+          "unite": "m²",
+          "aide": "On ne peint ni la fenêtre ni la porte : retire leur aire à celle du mur.",
+          "explication": "15 − 3,3 = **11,7 m²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le bassin de la colonie",
+      "competence": "calculer",
+      "situation": "Le bassin d’une colonie de vacances a la forme d’un pavé droit. On veut calculer sa contenance, puis la surface de carrelage nécessaire pour recouvrir le fond et les quatre parois.",
+      "documents": [
+        {
+          "id": "bassin",
+          "type": "solide",
+          "titre": "Le bassin",
+          "longueur": 8,
+          "largeur": 4,
+          "hauteur": 2,
+          "cotes": true,
+          "unite": "m"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Calcule le **volume** du bassin.",
+          "reponse": 64,
+          "unite": "m³",
+          "aide": "Volume d’un pavé droit : longueur × largeur × hauteur.",
+          "explication": "8 × 4 × 2 = **64 m³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est sa contenance en **litres** ?",
+          "reponse": 64000,
+          "unite": "L",
+          "aide": "1 m³ = 1 000 L.",
+          "explication": "64 m³ = 64 × 1 000 = **64 000 L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le bassin est rempli aux **{{3/4}}**. Combien de litres d’eau contient-il ?",
+          "reponse": 48000,
+          "unite": "L",
+          "aide": "Prends les trois quarts de 64 000 L.",
+          "explication": "64 000 ÷ 4 × 3 = **48 000 L**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule l’aire à carreler : le fond plus les **quatre parois** (le dessus reste ouvert).",
+          "reponse": 80,
+          "unite": "m²",
+          "aide": "Fond : 8 × 4. Deux grandes parois : 8 × 2 chacune. Deux petites parois : 4 × 2 chacune.",
+          "explication": "Fond : 32 m². Grandes parois : 2 × 16 = 32 m². Petites parois : 2 × 8 = 16 m². Total : 32 + 32 + 16 = **80 m²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une fuite fait baisser le niveau de l’eau de **10 cm**. Combien de litres sont perdus ?",
+          "reponse": 3200,
+          "unite": "L",
+          "aide": "10 cm = 0,1 m. Calcule le volume de cette tranche d’eau : 8 × 4 × 0,1.",
+          "explication": "8 × 4 × 0,1 = 3,2 m³, soit **3 200 L**."
+        }
+      ]
+    },
+    {
+      "chapitre": "26df8931-ef42-5729-81b2-0cc629f01e4b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le silo à grains",
+      "competence": "modeliser",
+      "situation": "Un silo à grains est formé d’un cylindre de rayon 2 m et de hauteur 5 m, surmonté d’un cône de même base et de hauteur 3 m. On le remplit de blé.",
+      "documents": [
+        {
+          "id": "silo",
+          "type": "schema",
+          "titre": "Le silo (schéma non à l’échelle)",
+          "largeur": 340,
+          "hauteur": 300,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 100,
+              "y": 110,
+              "l": 120,
+              "h": 150,
+              "teinte": "brun",
+              "motif": "clair",
+              "id": "cylindre",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  100,
+                  110
+                ],
+                [
+                  220,
+                  110
+                ],
+                [
+                  160,
+                  20
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "clair",
+              "id": "cone",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                20
+              ],
+              "a": [
+                250,
+                110
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 278,
+              "y": 68,
+              "texte": "3 m",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                250,
+                110
+              ],
+              "a": [
+                250,
+                260
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 278,
+              "y": 188,
+              "texte": "5 m",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                100,
+                274
+              ],
+              "a": [
+                220,
+                274
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 292,
+              "texte": "diamètre : 4 m",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        },
+        {
+          "id": "grains",
+          "type": "tableau",
+          "titre": "Masse volumique de quelques grains",
+          "colonnes": [
+            "Grain",
+            "Masse volumique (t/m³)"
+          ],
+          "lignes": [
+            [
+              "Blé",
+              "0,8"
+            ],
+            [
+              "Maïs",
+              "0,75"
+            ],
+            [
+              "Orge",
+              "0,65"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "silo",
+          "enonce": "Touche la partie en forme de **cône**.",
+          "reponse": [
+            "cone"
+          ],
+          "aide": "Le cône se termine en pointe.",
+          "explication": "Le **cône** est la partie pointue, au sommet du silo."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume du **cylindre**, arrondi au dixième de m³ (π × r² × h).",
+          "reponse": 62.8,
+          "tolerance": 0.1,
+          "unite": "m³",
+          "aide": "Le rayon est la moitié du diamètre : r = 2 m. V = π × 2² × 5.",
+          "explication": "V = π × 2² × 5 = 20π ≈ **62,8 m³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le volume du **cône**, arrondi au dixième de m³ (π × r² × h ÷ 3).",
+          "reponse": 12.6,
+          "tolerance": 0.1,
+          "unite": "m³",
+          "aide": "Même base, hauteur 3 m, et on divise par 3.",
+          "explication": "V = π × 2² × 3 ÷ 3 = 4π ≈ **12,6 m³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume **total** du silo, arrondi au dixième de m³ ?",
+          "reponse": 75.4,
+          "tolerance": 0.1,
+          "unite": "m³",
+          "aide": "Additionne les deux volumes : 20π + 4π.",
+          "explication": "20π + 4π = 24π ≈ **75,4 m³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle masse de **blé** contient le silo plein ? Arrondis au dixième de tonne.",
+          "reponse": 60.3,
+          "tolerance": 0.1,
+          "unite": "t",
+          "aide": "Masse = masse volumique × volume. Cherche la masse volumique du blé dans le tableau.",
+          "explication": "m = 0,8 × 24π ≈ **60,3 t**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La randonnée au 1/50 000",
+      "competence": "calculer",
+      "situation": "Samedi, Hugo prépare une randonnée sur une carte à l’échelle 1/50 000. Il a mesuré chaque étape à la règle.",
+      "documents": [
+        {
+          "id": "etapes",
+          "type": "tableau",
+          "titre": "Les étapes mesurées sur la carte",
+          "colonnes": [
+            "Étape",
+            "Distance sur la carte (cm)"
+          ],
+          "lignes": [
+            [
+              "Refuge → Lac",
+              6
+            ],
+            [
+              "Lac → Col",
+              4
+            ],
+            [
+              "Col → Sommet",
+              5
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Carte imaginée pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Sur cette carte, **1 cm** représente combien de **mètres** en réalité ?",
+          "reponse": 500,
+          "unite": "m",
+          "aide": "1 cm sur la carte = 50 000 cm en vrai. Et 100 cm = 1 m.",
+          "explication": "50 000 cm = 500 m : 1 cm sur la carte représente **500 m**."
+        },
+        {
+          "type": "zone",
+          "document": "etapes",
+          "enonce": "Touche la distance de l’étape la **plus longue** en réalité.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Plus la distance sur la carte est grande, plus l’étape est longue.",
+          "explication": "C’est l’étape Refuge → Lac : **6 cm** sur la carte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la distance réelle de l’étape Refuge → Lac, en **km** ?",
+          "reponse": 3,
+          "unite": "km",
+          "aide": "6 cm sur la carte, à 500 m par cm.",
+          "explication": "6 × 500 = 3 000 m = **3 km**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la longueur réelle de la randonnée entière, en **km** ?",
+          "reponse": 7.5,
+          "unite": "km",
+          "aide": "Additionne d’abord les trois distances sur la carte.",
+          "explication": "6 + 4 + 5 = 15 cm sur la carte, soit 15 × 500 = 7 500 m = **7,5 km**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La maquette du phare",
+      "competence": "modeliser",
+      "situation": "Un club de modélisme construit une maquette d’un petit phare. Le tableau compare le phare réel et sa maquette : certaines cases sont à compléter.",
+      "documents": [
+        {
+          "id": "phare",
+          "type": "tableau",
+          "titre": "Le phare et sa maquette",
+          "colonnes": [
+            "",
+            "Phare réel",
+            "Maquette"
+          ],
+          "lignes": [
+            [
+              "Hauteur",
+              "20 m",
+              "50 cm"
+            ],
+            [
+              "Diamètre de la lanterne",
+              "2,4 m",
+              "?"
+            ],
+            [
+              "Surface à peindre",
+              "300 m²",
+              "?"
+            ],
+            [
+              "Volume de la lanterne",
+              "12 m³",
+              "?"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Dimensions imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "phare",
+          "enonce": "Touche la case qui donne la **hauteur de la maquette**.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Cherche la ligne « Hauteur », dans la colonne « Maquette ».",
+          "explication": "La hauteur de la maquette est de **50 cm**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est l’**échelle** de la maquette ?",
+          "options": [
+            "1/40",
+            "1/4",
+            "1/400",
+            "1/20"
+          ],
+          "reponse": 0,
+          "aide": "Compare deux longueurs dans la même unité : 20 m = 2 000 cm.",
+          "explication": "k = 50 ÷ 2 000 = {{1/40}}. La maquette est au **1/40**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **diamètre** de la lanterne sur la maquette, en cm ?",
+          "reponse": 6,
+          "unite": "cm",
+          "aide": "2,4 m = 240 cm. Les longueurs sont multipliées par k.",
+          "explication": "240 ÷ 40 = **6 cm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle **surface** faut-il peindre sur la maquette, en cm² ?",
+          "reponse": 1875,
+          "unite": "cm²",
+          "aide": "300 m² = 3 000 000 cm². Les aires sont multipliées par k², donc divisées par 40² = 1 600.",
+          "explication": "3 000 000 ÷ 1 600 = **1 875 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **volume** de la lanterne de la maquette, en cm³ ?",
+          "reponse": 187.5,
+          "unite": "cm³",
+          "aide": "12 m³ = 12 000 000 cm³. Les volumes sont divisés par 40³ = 64 000.",
+          "explication": "12 000 000 ÷ 64 000 = **187,5 cm³**."
+        }
+      ]
+    },
+    {
+      "chapitre": "c23f999e-131f-5edb-8231-851eec079083",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La pyramide coupée",
+      "competence": "geometrie",
+      "situation": "Une pyramide en verre de hauteur 15 cm et de volume 450 cm³ est coupée par un plan parallèle à sa base, à 6 cm de son sommet. Elle se partage en une petite pyramide et un tronc.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "La pyramide vue de côté",
+          "largeur": 340,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  160,
+                  20
+                ],
+                [
+                  112,
+                  92
+                ],
+                [
+                  208,
+                  92
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "clair",
+              "id": "petite",
+              "zone": true
+            },
+            {
+              "forme": "polygone",
+              "points": [
+                [
+                  112,
+                  92
+                ],
+                [
+                  208,
+                  92
+                ],
+                [
+                  280,
+                  200
+                ],
+                [
+                  40,
+                  200
+                ]
+              ],
+              "teinte": "sable",
+              "motif": "clair",
+              "id": "tronc",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                300,
+                20
+              ],
+              "a": [
+                300,
+                200
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 322,
+              "y": 112,
+              "texte": "15 cm",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                72,
+                20
+              ],
+              "a": [
+                72,
+                92
+              ],
+              "fleche": "deux"
+            },
+            {
+              "forme": "texte",
+              "x": 45,
+              "y": 58,
+              "texte": "6 cm",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 222,
+              "texte": "Base : 90 cm²",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        },
+        {
+          "id": "fiche",
+          "type": "tableau",
+          "titre": "La grande pyramide",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Hauteur",
+              "15 cm"
+            ],
+            [
+              "Aire de la base",
+              "90 cm²"
+            ],
+            [
+              "Volume",
+              "450 cm³"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche la **petite pyramide**.",
+          "reponse": [
+            "petite"
+          ],
+          "aide": "C’est celle qui contient le sommet de la grande pyramide.",
+          "explication": "La **petite pyramide** est la partie du haut, celle qui contient le sommet."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La petite pyramide est une réduction de la grande. Calcule le **coefficient** k.",
+          "reponse": 0.4,
+          "aide": "Compare les hauteurs : 6 cm pour la petite, 15 cm pour la grande.",
+          "explication": "k = 6 ÷ 15 = **0,4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est l’aire de la **section** (la face de coupe) ?",
+          "reponse": 14.4,
+          "unite": "cm²",
+          "aide": "La section est une réduction de la base : les aires sont multipliées par k².",
+          "explication": "90 × 0,4² = 90 × 0,16 = **14,4 cm²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume de la **petite pyramide** ?",
+          "reponse": 28.8,
+          "unite": "cm³",
+          "aide": "Les volumes sont multipliés par k³ = 0,4 × 0,4 × 0,4 = 0,064.",
+          "explication": "450 × 0,064 = **28,8 cm³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le volume du **tronc** ?",
+          "reponse": 421.2,
+          "unite": "cm³",
+          "aide": "Le tronc est ce qui reste quand on retire la petite pyramide de la grande.",
+          "explication": "450 − 28,8 = **421,2 cm³**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les planètes et le Soleil",
+      "competence": "lire-tableau",
+      "situation": "Un exposé sur le Système solaire donne les distances de quatre planètes au Soleil, en écriture scientifique.",
+      "documents": [
+        {
+          "id": "planetes",
+          "type": "tableau",
+          "titre": "Distance moyenne au Soleil",
+          "colonnes": [
+            "Planète",
+            "Distance (km)"
+          ],
+          "lignes": [
+            [
+              "Terre",
+              "1,5 × 10⁸"
+            ],
+            [
+              "Mars",
+              "2,3 × 10⁸"
+            ],
+            [
+              "Jupiter",
+              "7,8 × 10⁸"
+            ],
+            [
+              "Neptune",
+              "4,5 × 10⁹"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "planetes",
+          "enonce": "Touche la **plus grande** distance du tableau.",
+          "reponse": [
+            "r3c1"
+          ],
+          "aide": "Compare d’abord les exposants : le plus grand l’emporte.",
+          "explication": "Neptune est à **4,5 × 10⁹ km** : son exposant 9 est le plus grand."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Écris la distance Terre-Soleil **en nombre entier**.",
+          "reponse": 150000000,
+          "unite": "km",
+          "aide": "10⁸ = 100 000 000. Multiplie 1,5 par 100 millions.",
+          "explication": "1,5 × 10⁸ = 1,5 × 100 000 000 = **150 000 000 km**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Laquelle de ces planètes est la plus éloignée : Mars ou Jupiter ?",
+          "options": [
+            "Jupiter : même exposant, et 7,8 est plus grand que 2,3",
+            "Mars : 2,3 s’écrit avec moins de chiffres",
+            "Aucune : les deux distances sont égales",
+            "On ne peut pas comparer deux écritures scientifiques"
+          ],
+          "reponse": 0,
+          "aide": "Les deux distances ont le même exposant : regarde alors le premier facteur.",
+          "explication": "Les exposants sont égaux (8) : on compare 7,8 et 2,3. **Jupiter** est plus loin."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Neptune est à 4,5 × 10⁹ km. Combien cela fait-il de **milliards** de kilomètres ?",
+          "reponse": 4.5,
+          "unite": "milliards de km",
+          "aide": "Un milliard, c’est 10⁹.",
+          "explication": "10⁹ = un milliard, donc 4,5 × 10⁹ km = **4,5 milliards de km**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Plus petit que petit",
+      "competence": "lire-tableau",
+      "situation": "En SVT, Yanis observe des objets très petits au microscope. Il relève leur taille dans un tableau, dans le désordre, en écriture scientifique.",
+      "documents": [
+        {
+          "id": "tailles",
+          "type": "tableau",
+          "titre": "Quelques tailles",
+          "colonnes": [
+            "Objet",
+            "Taille (m)"
+          ],
+          "lignes": [
+            [
+              "Épaisseur d’un cheveu",
+              "7 × 10⁻⁵"
+            ],
+            [
+              "Virus de la grippe",
+              "1 × 10⁻⁷"
+            ],
+            [
+              "Globule rouge",
+              "7 × 10⁻⁶"
+            ],
+            [
+              "Bactérie",
+              "2 × 10⁻⁶"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "ordre",
+          "enonce": "Range ces objets du **plus petit** au plus grand.",
+          "items": [
+            "Virus de la grippe",
+            "Bactérie",
+            "Globule rouge",
+            "Épaisseur d’un cheveu"
+          ],
+          "aide": "Avec des exposants négatifs, c’est le plus petit exposant (le plus « négatif ») qui donne le plus petit nombre.",
+          "explication": "10⁻⁷ < 2 × 10⁻⁶ < 7 × 10⁻⁶ < 7 × 10⁻⁵ : **virus, bactérie, globule rouge, cheveu**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **virus** alignés tiennent dans l’épaisseur d’un cheveu ?",
+          "reponse": 700,
+          "aide": "Divise 7 × 10⁻⁵ par 1 × 10⁻⁷ : 7 × 10⁻⁵ ÷ 10⁻⁷ = 7 × 10⁻⁵⁺⁷.",
+          "explication": "(7 × 10⁻⁵) ÷ (1 × 10⁻⁷) = 7 × 10² = **700**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **bactéries** alignées tiennent dans l’épaisseur d’un cheveu ?",
+          "reponse": 35,
+          "aide": "Divise 7 par 2, puis 10⁻⁵ par 10⁻⁶ : le résultat est 3,5 × 10¹.",
+          "explication": "(7 × 10⁻⁵) ÷ (2 × 10⁻⁶) = 3,5 × 10¹ = **35**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Écris la taille d’un **globule rouge** sous forme **décimale**, en mètres.",
+          "reponse": 0.000007,
+          "unite": "m",
+          "aide": "10⁻⁶ = 0,000001 : le 1 est au sixième rang après la virgule.",
+          "explication": "7 × 10⁻⁶ = 7 × 0,000001 = **0,000007 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0f21911f-5b9f-5109-8ad8-c82a8479ea99",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "À la vitesse de la lumière",
+      "competence": "resoudre",
+      "situation": "La lumière met du temps à voyager : combien, entre le Soleil et la Terre, ou entre la Lune et la Terre ? Le tableau donne les données, en écriture scientifique.",
+      "documents": [
+        {
+          "id": "donnees",
+          "type": "tableau",
+          "titre": "Les données",
+          "colonnes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Vitesse de la lumière",
+              "3 × 10⁵ km/s"
+            ],
+            [
+              "Distance Terre – Soleil",
+              "1,5 × 10⁸ km"
+            ],
+            [
+              "Distance Terre – Lune",
+              "3,84 × 10⁵ km"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Valeurs arrondies"
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel calcul donne la durée, en secondes, du trajet de la lumière du Soleil à la Terre ?",
+          "options": [
+            "Distance divisée par la vitesse : (1,5 × 10⁸) ÷ (3 × 10⁵)",
+            "Vitesse divisée par la distance : (3 × 10⁵) ÷ (1,5 × 10⁸)",
+            "Distance multipliée par la vitesse : (1,5 × 10⁸) × (3 × 10⁵)",
+            "Distance moins la vitesse : (1,5 × 10⁸) − (3 × 10⁵)"
+          ],
+          "reponse": 0,
+          "aide": "Durée = distance ÷ vitesse.",
+          "explication": "Une durée, c’est une distance divisée par une vitesse : **(1,5 × 10⁸) ÷ (3 × 10⁵)**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Donne le résultat de ce calcul en **écriture scientifique**.",
+          "options": [
+            "5 × 10² (soit 500)",
+            "5 × 10¹³ (soit 50 000 000 000 000)",
+            "0,5 × 10³ (soit 500)",
+            "2 × 10⁻³ (soit 0,002)"
+          ],
+          "reponse": 0,
+          "aide": "1,5 ÷ 3 = 0,5 et 10⁸ ÷ 10⁵ = 10³. Mais 0,5 est-il compris entre 1 et 10 ?",
+          "explication": "0,5 × 10³ n’est pas une écriture scientifique (0,5 < 1). On écrit 0,5 × 10³ = 5 × 10⁻¹ × 10³ = **5 × 10²** (soit 500 s)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **minutes** cela fait-il ? Arrondis au dixième.",
+          "reponse": 8.3,
+          "tolerance": 0.05,
+          "unite": "min",
+          "aide": "Divise 500 s par 60.",
+          "explication": "500 ÷ 60 ≈ 8,33 : la lumière du Soleil met environ **8,3 min** pour nous atteindre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de secondes la lumière met-elle pour aller de la **Lune** à la Terre ?",
+          "reponse": 1.28,
+          "unite": "s",
+          "aide": "(3,84 × 10⁵) ÷ (3 × 10⁵) : les puissances de 10 s’annulent.",
+          "explication": "3,84 × 10⁵ ÷ (3 × 10⁵) = 3,84 ÷ 3 = **1,28 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le Soleil est environ combien de fois plus loin de la Terre que la Lune ? Arrondis à la **dizaine**.",
+          "reponse": 390,
+          "tolerance": 5,
+          "aide": "Divise 1,5 × 10⁸ par 3,84 × 10⁵ : 1,5 ÷ 3,84 ≈ 0,39 puis 10⁸ ÷ 10⁵ = 10³.",
+          "explication": "(1,5 × 10⁸) ÷ (3,84 × 10⁵) ≈ 0,39 × 10³ ≈ **390**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "À la chasse aux nombres premiers",
+      "competence": "raisonner",
+      "situation": "Kenza cherche les nombres premiers entre 12 et 29. Elle les a rangés par trois dans un tableau.",
+      "documents": [
+        {
+          "id": "grille",
+          "type": "tableau",
+          "titre": "Les nombres de 12 à 29",
+          "colonnes": [
+            "n",
+            "n + 1",
+            "n + 2"
+          ],
+          "lignes": [
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              18,
+              19,
+              20
+            ],
+            [
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "grille",
+          "multiple": true,
+          "enonce": "Touche **tous** les nombres premiers du tableau.",
+          "reponse": [
+            "r0c1",
+            "r1c2",
+            "r2c1",
+            "r3c2",
+            "r5c2"
+          ],
+          "aide": "Un nombre premier n’a que deux diviseurs : 1 et lui-même. Élimine les pairs, puis les multiples de 3 et de 5.",
+          "explication": "Les nombres premiers sont **13, 17, 19, 23 et 29**. Tous les autres ont un diviseur de plus : 15 = 3 × 5, 21 = 3 × 7, 25 = 5 × 5, 27 = 3 × 9."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi **21** n’est-il pas premier ?",
+          "options": [
+            "21 = 3 × 7 : il a d’autres diviseurs que 1 et 21",
+            "21 est impair, et un nombre impair n’est jamais premier",
+            "21 est plus grand que 20, limite des nombres premiers",
+            "21 se termine par un 1, chiffre qui interdit d’être premier"
+          ],
+          "reponse": 0,
+          "aide": "Cherche deux nombres plus petits que 21 dont le produit vaut 21.",
+          "explication": "21 = 3 × 7 : il est divisible par 3 et par 7. **Il a plus de deux diviseurs.**"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le plus petit **diviseur premier** de 91 ? (Teste 2, 3, 5, 7…)",
+          "reponse": 7,
+          "aide": "91 n’est pas pair. Somme des chiffres : 10, donc pas divisible par 3. Il ne finit ni par 0 ni par 5.",
+          "explication": "91 = 7 × 13 : le plus petit diviseur premier de 91 est **7**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le carrelage de la salle",
+      "competence": "resoudre",
+      "situation": "Une salle rectangulaire mesure 252 cm sur 180 cm. Malik veut la carreler avec des carreaux carrés tous identiques, les plus grands possible, sans en couper aucun.",
+      "documents": [
+        {
+          "id": "salle",
+          "type": "figure",
+          "titre": "La salle (pas à l’échelle)",
+          "cadre": {
+            "xmin": -1,
+            "xmax": 15,
+            "ymin": -1,
+            "ymax": 11
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 0,
+              "y": 0,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 14,
+              "y": 0,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 14,
+              "y": 10,
+              "nom": "C",
+              "position": "ne"
+            },
+            {
+              "id": "D",
+              "x": 0,
+              "y": 10,
+              "nom": "D",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B",
+              "longueur": "252 cm"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C",
+              "longueur": "180 cm"
+            },
+            {
+              "id": "cd",
+              "de": "C",
+              "a": "D"
+            },
+            {
+              "id": "da",
+              "de": "D",
+              "a": "A"
+            }
+          ]
+        },
+        {
+          "id": "decomp",
+          "type": "tableau",
+          "titre": "Les décompositions en facteurs premiers",
+          "colonnes": [
+            "Nombre",
+            "Décomposition"
+          ],
+          "lignes": [
+            [
+              "180",
+              "2² × 3² × 5"
+            ],
+            [
+              "252",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "salle",
+          "enonce": "Touche le côté qui mesure **252 cm**.",
+          "reponse": [
+            "ab"
+          ],
+          "aide": "Regarde l’étiquette posée contre chaque côté.",
+          "explication": "Le côté [AB] mesure **252 cm**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la décomposition de 252.",
+          "texte": "252 = 2² × 3² × ___",
+          "reponses": [
+            [
+              "7"
+            ]
+          ],
+          "banque": [
+            "2",
+            "5",
+            "7",
+            "13"
+          ],
+          "aide": "2² × 3² = 4 × 9 = 36. Par quel nombre faut-il multiplier 36 pour obtenir 252 ?",
+          "explication": "252 = 36 × 7, donc 252 = 2² × 3² × **7**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **longueur du côté** des plus grands carreaux possibles ?",
+          "reponse": 36,
+          "unite": "cm",
+          "aide": "Le côté divise 180 et 252 : garde les facteurs communs des deux décompositions.",
+          "explication": "Facteurs communs : 2² × 3² = **36 cm** (le plus grand diviseur commun de 180 et 252)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de carreaux faut-il au total ?",
+          "reponse": 35,
+          "aide": "Dans la longueur : 252 ÷ 36. Dans la largeur : 180 ÷ 36. Puis multiplie.",
+          "explication": "252 ÷ 36 = 7 carreaux en longueur et 180 ÷ 36 = 5 en largeur : 7 × 5 = **35 carreaux**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la **forme irréductible** de la fraction {{180/252}} ?",
+          "options": [
+            "{{5/7}}",
+            "{{10/14}}",
+            "{{15/21}}",
+            "{{90/126}}"
+          ],
+          "reponse": 0,
+          "aide": "Divise le numérateur et le dénominateur par 36.",
+          "explication": "180 ÷ 36 = 5 et 252 ÷ 36 = 7 : {{180/252}} = **{{5/7}}**, et 5 et 7 n’ont aucun diviseur commun autre que 1."
+        }
+      ]
+    },
+    {
+      "chapitre": "b4bba752-f4ab-521d-bd11-34c41ca92a2b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les deux engrenages",
+      "competence": "raisonner",
+      "situation": "Deux roues dentées s’engrènent dans une machine. La petite roue a 84 dents et la grande en a 126. On s’intéresse à leur rapport et à leurs tours.",
+      "documents": [
+        {
+          "id": "roues",
+          "type": "schema",
+          "titre": "Les deux roues",
+          "largeur": 340,
+          "hauteur": 200,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 90,
+              "cy": 100,
+              "r": 56,
+              "teinte": "ambre",
+              "motif": "clair",
+              "id": "roueA",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 232,
+              "cy": 100,
+              "r": 84,
+              "teinte": "ambre",
+              "motif": "clair",
+              "id": "roueB",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 90,
+              "y": 104,
+              "texte": "84 dents",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 232,
+              "y": 104,
+              "texte": "126 dents",
+              "ancre": "milieu",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "roues",
+          "enonce": "Touche la roue qui a le **plus de dents**.",
+          "reponse": [
+            "roueB"
+          ],
+          "aide": "Lis le nombre de dents écrit sur chaque roue.",
+          "explication": "La grande roue a **126 dents**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Décompose en facteurs premiers.",
+          "texte": "84 = 2² × ___ × 7     et     126 = 2 × 3² × ___",
+          "reponses": [
+            [
+              "3"
+            ],
+            [
+              "7"
+            ]
+          ],
+          "banque": [
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "aide": "84 = 4 × 21 = 4 × 3 × 7. Et 126 = 2 × 63 = 2 × 9 × 7.",
+          "explication": "84 = 2² × **3** × 7 et 126 = 2 × 3² × **7**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **plus grand diviseur commun** de 84 et 126 ?",
+          "reponse": 42,
+          "aide": "Garde les facteurs communs avec le plus petit exposant : 2, 3 et 7.",
+          "explication": "Facteurs communs : 2 × 3 × 7 = **42**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la forme **irréductible** de {{84/126}} ?",
+          "options": [
+            "{{2/3}}",
+            "{{42/63}}",
+            "{{4/6}}",
+            "{{3/2}}"
+          ],
+          "reponse": 0,
+          "aide": "Divise le haut et le bas par 42.",
+          "explication": "84 ÷ 42 = 2 et 126 ÷ 42 = 3 : {{84/126}} = **{{2/3}}**. Les fractions {{42/63}} et {{4/6}} se simplifient encore."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand la **grande roue** fait 2 tours, combien de tours fait la petite roue ?",
+          "reponse": 3,
+          "unite": "tours",
+          "aide": "La grande roue a fait passer 2 × 126 dents. Combien de tours de 84 dents cela fait-il ?",
+          "explication": "2 × 126 = 252 dents, et 252 ÷ 84 = **3 tours**. Le rapport {{84/126}} = {{2/3}} le dit : 2 tours de la grande pour 3 tours de la petite."
+        }
+      ]
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le rectangle de Lina",
+      "competence": "modeliser",
+      "situation": "Lina dessine un rectangle dont la largeur est x cm et dont la longueur dépasse la largeur de 3 cm.",
+      "documents": [
+        {
+          "id": "rect",
+          "type": "figure",
+          "titre": "Le rectangle (pas à l’échelle)",
+          "cadre": {
+            "xmin": -1,
+            "xmax": 11,
+            "ymin": -1,
+            "ymax": 7
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 0,
+              "y": 0,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 9,
+              "y": 0,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 9,
+              "y": 5,
+              "nom": "C",
+              "position": "ne"
+            },
+            {
+              "id": "D",
+              "x": 0,
+              "y": 5,
+              "nom": "D",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B",
+              "longueur": "x + 3"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C",
+              "longueur": "x"
+            },
+            {
+              "id": "cd",
+              "de": "C",
+              "a": "D"
+            },
+            {
+              "id": "da",
+              "de": "D",
+              "a": "A"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "A",
+              "de": "B",
+              "a": "D",
+              "droit": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rect",
+          "enonce": "Touche le côté qui mesure **x + 3**.",
+          "reponse": [
+            "ab"
+          ],
+          "aide": "Lis l’étiquette contre chaque côté.",
+          "explication": "Le côté [AB] est la longueur : **x + 3**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle expression **réduite** donne le périmètre du rectangle ?",
+          "options": [
+            "4x + 6",
+            "4x + 3",
+            "2x + 6",
+            "x² + 3x"
+          ],
+          "reponse": 0,
+          "aide": "Périmètre = 2 × (x + 3) + 2 × x. Développe, puis regroupe les termes en x.",
+          "explication": "2(x + 3) + 2x = 2x + 6 + 2x = **4x + 6**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le périmètre vaut **26 cm**. Résous l’équation 4x + 6 = 26 : que vaut x ?",
+          "reponse": 5,
+          "unite": "cm",
+          "aide": "Retire 6 des deux côtés, puis divise par 4.",
+          "explication": "4x + 6 = 26, donc 4x = 20 et **x = 5**. Vérification : 4 × 5 + 6 = 26."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec x = 5, quelle est l’**aire** du rectangle ?",
+          "reponse": 40,
+          "unite": "cm²",
+          "aide": "La longueur vaut 5 + 3 = 8 cm et la largeur 5 cm.",
+          "explication": "8 × 5 = **40 cm²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux programmes de calcul",
+      "competence": "raisonner",
+      "situation": "Tom et Zoé testent chacun un programme de calcul à partir du même nombre de départ x. Les deux programmes sont représentés ci-dessous.",
+      "documents": [
+        {
+          "id": "progA",
+          "type": "chaine",
+          "titre": "Le programme de Tom",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "a0",
+              "texte": "Nombre x"
+            },
+            {
+              "id": "a1",
+              "texte": "× 3"
+            },
+            {
+              "id": "a2",
+              "texte": "+ 5"
+            },
+            {
+              "id": "a3",
+              "texte": "× 2"
+            }
+          ],
+          "liens": [
+            {
+              "de": "a0",
+              "a": "a1"
+            },
+            {
+              "de": "a1",
+              "a": "a2"
+            },
+            {
+              "de": "a2",
+              "a": "a3"
+            }
+          ]
+        },
+        {
+          "id": "progB",
+          "type": "chaine",
+          "titre": "Le programme de Zoé",
+          "disposition": "ligne",
+          "noeuds": [
+            {
+              "id": "b0",
+              "texte": "Nombre x"
+            },
+            {
+              "id": "b1",
+              "texte": "+ 7"
+            },
+            {
+              "id": "b2",
+              "texte": "× 4"
+            }
+          ],
+          "liens": [
+            {
+              "de": "b0",
+              "a": "b1"
+            },
+            {
+              "de": "b1",
+              "a": "b2"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel résultat obtient Tom avec **x = 4** ?",
+          "reponse": 34,
+          "aide": "4 × 3 = 12, puis + 5, puis × 2.",
+          "explication": "4 × 3 = 12 ; 12 + 5 = 17 ; 17 × 2 = **34**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle expression donne le résultat du programme de Tom pour un nombre x ?",
+          "options": [
+            "2(3x + 5)",
+            "3x + 5 × 2",
+            "3(x + 5) × 2",
+            "2x + 3 + 5"
+          ],
+          "reponse": 0,
+          "aide": "La multiplication par 2 porte sur tout ce qui précède : il faut des parenthèses.",
+          "explication": "On multiplie par 3, on ajoute 5, puis on multiplie le tout par 2 : **2(3x + 5)**, soit 6x + 10."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Tom obtient **52**. Quel nombre de départ a-t-il choisi ?",
+          "reponse": 7,
+          "aide": "Résous 6x + 10 = 52.",
+          "explication": "6x + 10 = 52, donc 6x = 42 et **x = 7**. Vérification : (7 × 3 + 5) × 2 = 52."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle équation traduit : « Tom et Zoé obtiennent **le même résultat** » ? (Le programme de Zoé donne 4(x + 7) = 4x + 28.)",
+          "options": [
+            "6x + 10 = 4x + 28",
+            "2(3x + 5) = 4x + 7",
+            "6x + 10 = 4x",
+            "3x + 5 = x + 7"
+          ],
+          "reponse": 0,
+          "aide": "Écris le résultat de Tom (6x + 10) égal au résultat de Zoé (4x + 28).",
+          "explication": "Tom : 2(3x + 5) = 6x + 10. Zoé : 4(x + 7) = 4x + 28. On écrit donc **6x + 10 = 4x + 28**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Résous cette équation : pour quel nombre x les deux programmes donnent-ils le même résultat ?",
+          "reponse": 9,
+          "aide": "Retire 4x et 10 des deux côtés, puis divise par 2.",
+          "explication": "6x + 10 = 4x + 28, donc 2x = 18 et **x = 9**. Vérification : Tom obtient 64 et Zoé 4 × 16 = 64."
+        }
+      ]
+    },
+    {
+      "chapitre": "cabdf00b-be7a-58b4-94c0-5375b6ebbd9e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’allée du jardin",
+      "competence": "modeliser",
+      "situation": "Jade aménage son jardin : une pelouse carrée de côté x (en m), entourée d’une allée de 1 m de large. Elle note dans un tableau l’aire de l’allée pour quelques valeurs de x.",
+      "documents": [
+        {
+          "id": "jardin",
+          "type": "schema",
+          "titre": "Le jardin (vu de dessus)",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 20,
+              "l": 200,
+              "h": 200,
+              "teinte": "sable",
+              "motif": "clair",
+              "id": "allee",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 70,
+              "y": 50,
+              "l": 140,
+              "h": 140,
+              "teinte": "vert",
+              "motif": "clair",
+              "id": "pelouse",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 38,
+              "texte": "1 m",
+              "ancre": "milieu",
+              "taille": "petit"
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 125,
+              "texte": "Pelouse",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 140,
+              "y": 145,
+              "texte": "côté x",
+              "ancre": "milieu",
+              "taille": "petit"
+            }
+          ]
+        },
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Les essais de Jade",
+          "colonnes": [
+            "x (en m)",
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "lignes": [
+            [
+              "Aire de l’allée (en m²)",
+              24,
+              44,
+              64,
+              84
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jardin",
+          "enonce": "Touche la **pelouse**.",
+          "reponse": [
+            "pelouse"
+          ],
+          "aide": "La pelouse est au centre, entourée par l’allée.",
+          "explication": "La **pelouse** est le carré central, de côté x."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle expression donne l’aire de l’**allée** ?",
+          "options": [
+            "(x + 2)² − x²",
+            "(x + 1)² − x²",
+            "x² − (x + 2)²",
+            "4 × (x + 2)"
+          ],
+          "reponse": 0,
+          "aide": "Le grand carré a pour côté x + 1 + 1. Retire l’aire de la pelouse.",
+          "explication": "Le grand carré (pelouse + allée) a pour côté x + 2. L’aire de l’allée est l’aire du grand carré moins celle de la pelouse : **(x + 2)² − x²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Développe et réduis : (x + 2)² − x² = ___ x + 4. Quel est le coefficient de x ?",
+          "reponse": 4,
+          "aide": "(x + 2)² = x² + 4x + 4. Puis retire x².",
+          "explication": "(x + 2)² − x² = x² + 4x + 4 − x² = **4x** + 4. L’aire de l’allée vaut 4x + 4."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’allée a une aire de **60 m²**. Résous 4x + 4 = 60 : que vaut x ?",
+          "reponse": 14,
+          "unite": "m",
+          "aide": "Retire 4 des deux côtés puis divise par 4. Le tableau montre que x est entre 10 et 15.",
+          "explication": "4x + 4 = 60, donc 4x = 56 et **x = 14**. Cohérent avec le tableau : 44 (x = 10) < 60 < 64 (x = 15)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est alors l’aire de la **pelouse** ?",
+          "reponse": 196,
+          "unite": "m²",
+          "aide": "La pelouse est un carré de côté x = 14 m.",
+          "explication": "14² = **196 m²**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le carré de Mia",
+      "competence": "geometrie",
+      "situation": "Mia découpe un carré de côté x + 3 (en cm) en quatre morceaux, comme sur le schéma.",
+      "documents": [
+        {
+          "id": "carre",
+          "type": "schema",
+          "titre": "Le carré découpé",
+          "largeur": 280,
+          "hauteur": 250,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 30,
+              "l": 130,
+              "h": 130,
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "grand",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 170,
+              "y": 30,
+              "l": 60,
+              "h": 130,
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "r1",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 40,
+              "y": 160,
+              "l": 130,
+              "h": 60,
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "r2",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 170,
+              "y": 160,
+              "l": 60,
+              "h": 60,
+              "teinte": "violet",
+              "motif": "clair",
+              "id": "petit",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 105,
+              "y": 22,
+              "texte": "x",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 22,
+              "texte": "3",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 24,
+              "y": 100,
+              "texte": "x",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 24,
+              "y": 195,
+              "texte": "3",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 105,
+              "y": 100,
+              "texte": "x²",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 100,
+              "texte": "3x",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 105,
+              "y": 195,
+              "texte": "3x",
+              "ancre": "milieu",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 200,
+              "y": 195,
+              "texte": "9",
+              "ancre": "milieu",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carre",
+          "enonce": "Touche le **petit carré**, d’aire 9 cm².",
+          "reponse": [
+            "petit"
+          ],
+          "aide": "Il a 3 cm de côté : 3 × 3 = 9.",
+          "explication": "Le petit carré est celui de côté 3 cm : son aire vaut **9 cm²**."
+        },
+        {
+          "type": "zone",
+          "document": "carre",
+          "multiple": true,
+          "enonce": "Touche les **deux rectangles** qui ont la même aire 3x.",
+          "reponse": [
+            "r1",
+            "r2"
+          ],
+          "aide": "Ils mesurent 3 cm sur x cm.",
+          "explication": "Les deux rectangles de dimensions 3 et x ont chacun une aire de **3x**."
+        },
+        {
+          "type": "choix",
+          "enonce": "En additionnant les aires des quatre morceaux, que vaut (x + 3)² développé ?",
+          "options": [
+            "x² + 6x + 9",
+            "x² + 9",
+            "x² + 3x + 9",
+            "2x + 6"
+          ],
+          "reponse": 0,
+          "aide": "x² + 3x + 3x + 9. Regroupe les deux rectangles.",
+          "explication": "x² + 3x + 3x + 9 = **x² + 6x + 9**. Le double produit 2 × x × 3 = 6x vient des deux rectangles."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour x = 5, quelle est l’aire du grand carré de côté x + 3 ?",
+          "reponse": 64,
+          "unite": "cm²",
+          "aide": "Le côté vaut 5 + 3 = 8 cm.",
+          "explication": "8² = **64 cm²**. Avec la formule : 25 + 30 + 9 = 64."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le calcul mental de Noa",
+      "competence": "calculer",
+      "situation": "Noa calcule de tête des carrés et des produits qui semblent difficiles. Ali lui demande son secret par SMS.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le SMS d’Ali",
+          "participants": [
+            {
+              "nom": "Ali",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Noa",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Ali",
+              "texte": "Comment tu as trouvé 102² = 10 404 sans calculatrice ?"
+            },
+            {
+              "qui": "Noa",
+              "texte": "J’ai écrit 102 = 100 + 2, puis j’ai utilisé une [[ir|identité]] [[ir|remarquable]] !"
+            },
+            {
+              "qui": "Ali",
+              "texte": "Et pour 59 × 61, ça marche aussi ?"
+            },
+            {
+              "qui": "Noa",
+              "texte": "Oui : 59 = 60 − 1 et 61 = 60 + 1."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche les deux mots qui nomment l’**outil** utilisé par Noa.",
+          "reponse": [
+            "ir"
+          ],
+          "aide": "Cherche, dans le premier message de Noa, le nom de la méthode.",
+          "explication": "Noa utilise une **identité remarquable**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle écriture correspond à la méthode de Noa pour 102² ?",
+          "options": [
+            "(100 + 2)² = 100² + 2 × 100 × 2 + 2²",
+            "(100 + 2)² = 100² + 2²",
+            "102² = 100 × 2",
+            "(100 − 2)² = 100² − 2 × 100 × 2 + 2², qui donne 98²"
+          ],
+          "reponse": 0,
+          "aide": "Pense à (a + b)² = a² + 2ab + b² avec a = 100 et b = 2.",
+          "explication": "(100 + 2)² = 10 000 + 400 + 4 = **10 404**. Sans le double produit 2 × 100 × 2 = 400, on se tromperait."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule **59 × 61** de tête, avec l’astuce de Noa.",
+          "reponse": 3599,
+          "aide": "C’est (60 − 1)(60 + 1) : une différence de deux carrés.",
+          "explication": "(60 − 1)(60 + 1) = 60² − 1² = 3 600 − 1 = **3 599**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Calcule **98²** en complétant.",
+          "texte": "98² = (100 − ___)² = 10 000 − ___ + 4",
+          "reponses": [
+            [
+              "2"
+            ],
+            [
+              "400"
+            ]
+          ],
+          "banque": [
+            "2",
+            "4",
+            "200",
+            "400"
+          ],
+          "aide": "98 = 100 − 2. Le double produit vaut 2 × 100 × 2.",
+          "explication": "98² = (100 − **2**)² = 10 000 − **400** + 4 = 9 604."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Noa propose maintenant **998²**. Que trouve-t-elle ?",
+          "reponse": 996004,
+          "aide": "998 = 1 000 − 2. Le double produit vaut 2 × 1 000 × 2 = 4 000.",
+          "explication": "(1 000 − 2)² = 1 000 000 − 4 000 + 4 = **996 004**."
+        }
+      ]
+    },
+    {
+      "chapitre": "6ce27644-5fff-5750-aa4a-a35d8918c0dd",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le tour de magie de Tom",
+      "competence": "raisonner",
+      "situation": "Tom présente un tour de magie à sa classe : « Quel que soit le nombre que vous choisissez, je devine le résultat de mon programme ! » Il a testé trois nombres.",
+      "documents": [
+        {
+          "id": "programme",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Le programme de Tom",
+          "blocs": [
+            "Choisis un nombre x.",
+            "Ajoute-lui 3.",
+            "Retire 3 au nombre de départ.",
+            "Multiplie les deux résultats obtenus.",
+            "Ajoute 9."
+          ]
+        },
+        {
+          "id": "essais",
+          "type": "tableau",
+          "titre": "Les essais de Tom",
+          "colonnes": [
+            "Nombre choisi",
+            "2",
+            "5",
+            "10"
+          ],
+          "lignes": [
+            [
+              "Résultat",
+              4,
+              25,
+              100
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Applique le programme à **x = 6**. Quel résultat obtiens-tu ?",
+          "reponse": 36,
+          "aide": "6 + 3 = 9 ; 6 − 3 = 3 ; 9 × 3 = 27 ; puis ajoute 9.",
+          "explication": "9 × 3 = 27, puis 27 + 9 = **36**."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les étapes d’une **démonstration** pour un nombre x quelconque.",
+          "items": [
+            "On appelle x le nombre de départ",
+            "On traduit le programme : (x + 3)(x − 3) + 9",
+            "On développe : x² − 9 + 9",
+            "On conclut : le résultat est toujours x²"
+          ],
+          "aide": "On commence par nommer le nombre, puis on traduit, on calcule, et on conclut.",
+          "explication": "Démonstration : x, puis (x + 3)(x − 3) + 9 = x² − 9 + 9 = **x²**. (x + 3)(x − 3) est l’identité (a + b)(a − b) = a² − b²."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Teste **x = −7**. Quel résultat Tom devine-t-il ?",
+          "reponse": 49,
+          "aide": "−7 + 3 = −4 ; −7 − 3 = −10 ; le produit de deux nombres négatifs est positif.",
+          "explication": "(−4) × (−10) = 40, puis 40 + 9 = **49** = (−7)². Le résultat est bien x²."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les trois essais du tableau ne **prouvent-ils pas** que le résultat est toujours x² ?",
+          "options": [
+            "Trois exemples ne prouvent rien : il faut un calcul avec une lettre",
+            "Parce que le nombre 10 est trop grand pour servir d’essai valable",
+            "Parce que le nombre 2 est pair, donc il ne convient pas aux essais",
+            "Parce que le tableau n’a que trois colonnes et qu’il en faudrait dix"
+          ],
+          "reponse": 0,
+          "aide": "Que se passerait-il avec un quatrième nombre ? Seule la lettre x couvre tous les cas.",
+          "explication": "Tester quelques nombres n’est qu’une **conjecture**. Seul le calcul littéral, avec une lettre, démontre un résultat pour tous les nombres."
+        },
+        {
+          "type": "choix",
+          "enonce": "Tom invente un second programme, qui donne (x + 3)² − 9. Quelle est sa forme **factorisée** ?",
+          "options": [
+            "x(x + 6)",
+            "x² + 6x + 18",
+            "(x + 6)²",
+            "(x − 3)(x + 3)"
+          ],
+          "reponse": 0,
+          "aide": "(x + 3)² − 9 = (x + 3)² − 3² : différence de deux carrés (a − b)(a + b), avec a = x + 3 et b = 3.",
+          "explication": "(x + 3)² − 3² = (x + 3 − 3)(x + 3 + 3) = **x(x + 6)**. On retrouve x² + 6x en développant."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Sur la droite graduée",
+      "competence": "raisonner",
+      "situation": "Amel repère des solutions d’équations et d’inéquations sur une droite graduée. Touche les graduations qui conviennent.",
+      "documents": [
+        {
+          "id": "droite",
+          "type": "droite",
+          "titre": "La droite graduée",
+          "min": -5,
+          "max": 5,
+          "pas": 1,
+          "division": 1,
+          "graduationsCliquables": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "droite",
+          "multiple": true,
+          "enonce": "Touche les **deux solutions** de l’équation (x − 2)(x + 3) = 0.",
+          "reponse": [
+            "v2",
+            "v-3"
+          ],
+          "aide": "Un produit est nul si l’un de ses facteurs est nul : x − 2 = 0 ou x + 3 = 0.",
+          "explication": "x − 2 = 0 donne **x = 2** et x + 3 = 0 donne **x = −3**."
+        },
+        {
+          "type": "zone",
+          "document": "droite",
+          "enonce": "Touche la solution **non nulle** de l’équation x(x − 4) = 0.",
+          "reponse": [
+            "v4"
+          ],
+          "aide": "x = 0 ou x − 4 = 0.",
+          "explication": "x(x − 4) = 0 donne x = 0 ou **x = 4**. La solution non nulle est 4."
+        },
+        {
+          "type": "zone",
+          "document": "droite",
+          "multiple": true,
+          "enonce": "Touche tous les **nombres entiers** de la droite qui vérifient l’inéquation x ≤ −3.",
+          "reponse": [
+            "v-5",
+            "v-4",
+            "v-3"
+          ],
+          "aide": "« ≤ » veut dire « plus petit ou égal » : −3 est inclus.",
+          "explication": "Les entiers inférieurs ou égaux à −3, sur cette droite, sont **−5, −4 et −3**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Résous 2x − 1 < 7. Quel est le **plus grand entier** solution ?",
+          "reponse": 3,
+          "aide": "Ajoute 1 des deux côtés puis divise par 2 : x < ... Le nombre trouvé est-il inclus ?",
+          "explication": "2x < 8 donc x < 4. Le nombre 4 est exclu : le plus grand entier solution est **3**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux formules au cinéma",
+      "competence": "modeliser",
+      "situation": "Un cinéma propose deux formules. Nour se demande à partir de combien de séances la formule B devient la plus avantageuse.",
+      "documents": [
+        {
+          "id": "tarifs",
+          "type": "tableau",
+          "titre": "Les deux formules",
+          "colonnes": [
+            "Formule",
+            "Tarif"
+          ],
+          "lignes": [
+            [
+              "A : sans abonnement",
+              "9 € la séance"
+            ],
+            [
+              "B : avec abonnement",
+              "30 € d’abonnement, puis 6 € la séance"
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Tarifs imaginés pour l’exercice"
+        },
+        {
+          "id": "couts",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Le coût total selon le nombre de séances",
+          "categories": [
+            "0",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "series": [
+            {
+              "nom": "Formule A",
+              "valeurs": [
+                0,
+                18,
+                36,
+                54,
+                72,
+                90,
+                108,
+                126
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "Formule B",
+              "valeurs": [
+                30,
+                42,
+                54,
+                66,
+                78,
+                90,
+                102,
+                114
+              ],
+              "teinte": "ambre"
+            }
+          ],
+          "axeY": {
+            "titre": "Coût total",
+            "unite": "en €",
+            "min": 0,
+            "max": 130,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Nombre de séances"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "couts",
+          "enonce": "Touche le nombre de séances pour lequel les deux formules coûtent **le même prix**.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "Cherche où les deux courbes se croisent.",
+          "explication": "Les courbes se croisent pour **10 séances**, où les deux coûtent 90 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "Avec x séances, quelle équation traduit « les deux formules coûtent le même prix » ?",
+          "options": [
+            "9x = 30 + 6x",
+            "9x = 30x + 6",
+            "9 + x = 30 + 6",
+            "9x + 6x = 30"
+          ],
+          "reponse": 0,
+          "aide": "Formule A : 9 € par séance, soit 9x. Formule B : 30 € plus 6x.",
+          "explication": "Coût de A : 9x. Coût de B : 30 + 6x. On écrit **9x = 30 + 6x**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Résous cette équation : pour combien de séances les prix sont-ils égaux ?",
+          "reponse": 10,
+          "unite": "séances",
+          "aide": "Retire 6x des deux côtés : 3x = 30.",
+          "explication": "9x − 6x = 30, donc 3x = 30 et **x = 10**. C’est ce que montre le graphique."
+        },
+        {
+          "type": "choix",
+          "enonce": "La formule B est **plus avantageuse** quand elle coûte moins cher que A. Quelle inéquation et quelle conclusion ?",
+          "options": [
+            "B moins chère que A : 30 + 6x < 9x, donc x supérieur à 10",
+            "B moins chère que A : 30 + 6x < 9x, donc x inférieur à 10",
+            "B plus chère que A : 30 + 6x > 9x, donc x supérieur à 10",
+            "A moins chère que B : 9x < 6x, donc x négatif"
+          ],
+          "reponse": 0,
+          "aide": "On veut 30 + 6x < 9x. Retire 6x des deux côtés, puis divise par 3 (positif : le sens ne change pas).",
+          "explication": "30 + 6x < 9x donne 30 < 3x, donc **x > 10** : au-delà de 10 séances, B est plus avantageuse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien coûtent **12 séances** avec la formule B ?",
+          "reponse": 102,
+          "unite": "€",
+          "aide": "30 + 6 × 12.",
+          "explication": "30 + 6 × 12 = 30 + 72 = **102 €**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da8ba73-e59b-5e4b-8716-85dfaa3c8613",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le ballon de Kylian",
+      "competence": "modeliser",
+      "situation": "Kylian lance un ballon en l’air. On admet que, t secondes après le lancer, la hauteur du ballon (en m) est h = 3t(4 − t), tant que le ballon n’a pas touché le sol.",
+      "documents": [
+        {
+          "id": "formule",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "La formule de la hauteur",
+          "blocs": [
+            "h = 3t(4 − t)",
+            "t est le temps en secondes, h la hauteur en mètres."
+          ]
+        },
+        {
+          "id": "trajet",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "La hauteur du ballon",
+          "categories": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "series": [
+            {
+              "nom": "Hauteur",
+              "valeurs": [
+                0,
+                9,
+                12,
+                9,
+                0
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Hauteur",
+            "unite": "en m",
+            "min": 0,
+            "max": 14,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Temps (s)"
+          },
+          "source": "Courbe tracée d’après la formule, points relevés toutes les secondes"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "trajet",
+          "enonce": "Touche l’instant où le ballon **retombe au sol**.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Au sol, la hauteur est nulle. Cherche un instant, après le lancer, où la courbe revient à 0.",
+          "explication": "Le ballon retombe au sol à **t = 4 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la hauteur du ballon à **t = 2 s** ?",
+          "reponse": 12,
+          "unite": "m",
+          "aide": "Lis la courbe, ou calcule 3 × 2 × (4 − 2).",
+          "explication": "h = 3 × 2 × 2 = **12 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Résous 3t(4 − t) = 0.",
+          "options": [
+            "t = 0 ou t = 4",
+            "t = 4 seulement",
+            "t = 0 ou t = −4 (en oubliant le signe de t)",
+            "t = 3 ou t = 4"
+          ],
+          "reponse": 0,
+          "aide": "Un produit est nul si l’un de ses facteurs est nul : 3t = 0 ou 4 − t = 0.",
+          "explication": "3t = 0 donne t = 0 (le lancer) et 4 − t = 0 donne t = 4 (l’arrivée au sol) : **t = 0 ou t = 4**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pendant quelle durée le ballon est-il à **9 m de haut ou plus** ?",
+          "options": [
+            "De t = 1 s à t = 3 s",
+            "De t = 0 s à t = 1 s",
+            "De t = 2 s à t = 4 s",
+            "Seulement à t = 2 s"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "La hauteur vaut 9 m à t = 1 s et à t = 3 s, et elle est plus grande entre les deux.",
+          "explication": "h = 9 à t = 1 s puis à t = 3 s, avec un maximum de 12 m entre les deux : le ballon est à 9 m ou plus **de 1 s à 3 s**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la hauteur du ballon à **t = 3,5 s**.",
+          "reponse": 5.25,
+          "unite": "m",
+          "aide": "h = 3 × 3,5 × (4 − 3,5).",
+          "explication": "h = 3 × 3,5 × 0,5 = **5,25 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quatre jardins carrés",
+      "competence": "lire-tableau",
+      "situation": "Quatre jardins carrés sont alignés le long d’un sentier. Le tableau donne l’aire de chacun.",
+      "documents": [
+        {
+          "id": "jardins",
+          "type": "tableau",
+          "titre": "L’aire des jardins",
+          "colonnes": [
+            "Jardin",
+            "Aire (m²)"
+          ],
+          "lignes": [
+            [
+              "A",
+              16
+            ],
+            [
+              "B",
+              36
+            ],
+            [
+              "C",
+              64
+            ],
+            [
+              "D",
+              121
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Données imaginées pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jardins",
+          "enonce": "Touche l’aire du jardin dont le **côté mesure 8 m**.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche l’aire qui vaut 8 × 8.",
+          "explication": "8² = 64 : c’est le jardin C, d’aire **64 m²**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le côté du **jardin D** ?",
+          "reponse": 11,
+          "unite": "m",
+          "aide": "Cherche le nombre positif dont le carré vaut 121.",
+          "explication": "√121 = **11 m**, car 11² = 121."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **périmètre** du jardin B ?",
+          "reponse": 24,
+          "unite": "m",
+          "aide": "Trouve d’abord son côté, puis multiplie par 4.",
+          "explication": "Côté : √36 = 6 m. Périmètre : 4 × 6 = **24 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un cinquième jardin E a une aire de **40 m²**. Entre quelles deux valeurs entières se trouve son côté ?",
+          "options": [
+            "Entre 6 m et 7 m",
+            "Entre 5 m et 6 m",
+            "Entre 7 m et 8 m",
+            "Entre 20 m et 21 m"
+          ],
+          "reponse": 0,
+          "aide": "Encadre 40 entre deux carrés parfaits du tableau ou de ta table.",
+          "explication": "6² = 36 < 40 < 49 = 7², donc **6 < √40 < 7**."
+        }
+      ]
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’échelle contre le mur",
+      "competence": "geometrie",
+      "situation": "Une échelle de 2,5 m de long est posée contre un mur vertical. Son pied est à 1,5 m du mur. À quelle hauteur touche-t-elle le mur ?",
+      "documents": [
+        {
+          "id": "echelle",
+          "type": "figure",
+          "titre": "L’échelle et le mur (pas à l’échelle)",
+          "cadre": {
+            "xmin": -1,
+            "xmax": 9,
+            "ymin": -1,
+            "ymax": 10
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "M",
+              "x": 0,
+              "y": 0,
+              "nom": "M",
+              "position": "so"
+            },
+            {
+              "id": "P",
+              "x": 6,
+              "y": 0,
+              "nom": "P",
+              "position": "se"
+            },
+            {
+              "id": "S",
+              "x": 0,
+              "y": 8,
+              "nom": "S",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "id": "sol",
+              "de": "M",
+              "a": "P",
+              "longueur": "1,5 m"
+            },
+            {
+              "id": "mur",
+              "de": "M",
+              "a": "S"
+            },
+            {
+              "id": "echelle",
+              "de": "P",
+              "a": "S",
+              "longueur": "2,5 m"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "M",
+              "de": "P",
+              "a": "S",
+              "droit": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echelle",
+          "enonce": "Touche l’**hypoténuse** du triangle SMP.",
+          "reponse": [
+            "echelle"
+          ],
+          "aide": "L’hypoténuse est le côté opposé à l’angle droit.",
+          "explication": "L’angle droit est en M : l’hypoténuse est le côté [PS], c’est-à-dire **l’échelle**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "D’après le théorème de Pythagore, que vaut **SM²** ?",
+          "reponse": 4,
+          "unite": "m²",
+          "aide": "SM² = SP² − MP² = 2,5² − 1,5².",
+          "explication": "SM² = 6,25 − 2,25 = **4**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle hauteur du mur l’échelle atteint-elle ?",
+          "reponse": 2,
+          "unite": "m",
+          "aide": "La longueur SM est le nombre positif dont le carré vaut 4.",
+          "explication": "SM = √4 = **2 m**."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’équation SM² = 4 a deux solutions, 2 et −2. Pourquoi ne garde-t-on que 2 ?",
+          "options": [
+            "Une longueur est toujours positive",
+            "Parce que −2 est pair",
+            "Parce que 2 est plus grand",
+            "Parce que 4 est un carré parfait"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que représente SM dans la figure.",
+          "explication": "SM est une **longueur**, donc un nombre positif : on écarte −2."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le pied de l’échelle est placé plus près du mur : l’échelle touche alors le mur à **2,4 m** de hauteur. À quelle distance du mur est son pied ?",
+          "reponse": 0.7,
+          "unite": "m",
+          "aide": "MP² = 2,5² − 2,4² = 6,25 − 5,76.",
+          "explication": "MP² = 6,25 − 5,76 = 0,49, donc MP = √0,49 = **0,7 m**."
+        }
+      ]
+    },
+    {
+      "chapitre": "47b0f612-8842-5a6d-b171-84e895e77c05",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La diagonale du carré",
+      "competence": "geometrie",
+      "situation": "Éloïse étudie un carré ABCD de côté 5 cm et sa diagonale [AC]. Elle dispose d’un petit tableau de valeurs approchées de racines carrées.",
+      "documents": [
+        {
+          "id": "carre",
+          "type": "figure",
+          "titre": "Le carré ABCD (pas à l’échelle)",
+          "cadre": {
+            "xmin": -1,
+            "xmax": 7,
+            "ymin": -1,
+            "ymax": 7
+          },
+          "quadrillage": false,
+          "points": [
+            {
+              "id": "A",
+              "x": 0,
+              "y": 0,
+              "nom": "A",
+              "position": "so"
+            },
+            {
+              "id": "B",
+              "x": 5,
+              "y": 0,
+              "nom": "B",
+              "position": "se"
+            },
+            {
+              "id": "C",
+              "x": 5,
+              "y": 5,
+              "nom": "C",
+              "position": "ne"
+            },
+            {
+              "id": "D",
+              "x": 0,
+              "y": 5,
+              "nom": "D",
+              "position": "no"
+            }
+          ],
+          "segments": [
+            {
+              "id": "ab",
+              "de": "A",
+              "a": "B",
+              "longueur": "5 cm"
+            },
+            {
+              "id": "bc",
+              "de": "B",
+              "a": "C"
+            },
+            {
+              "id": "cd",
+              "de": "C",
+              "a": "D"
+            },
+            {
+              "id": "da",
+              "de": "D",
+              "a": "A"
+            },
+            {
+              "id": "ac",
+              "de": "A",
+              "a": "C"
+            }
+          ],
+          "angles": [
+            {
+              "sommet": "B",
+              "de": "A",
+              "a": "C",
+              "droit": true
+            }
+          ]
+        },
+        {
+          "id": "valeurs",
+          "type": "tableau",
+          "titre": "Valeurs approchées",
+          "colonnes": [
+            "Nombre",
+            "Valeur approchée"
+          ],
+          "lignes": [
+            [
+              "√2",
+              "1,414"
+            ],
+            [
+              "√3",
+              "1,732"
+            ],
+            [
+              "√5",
+              "2,236"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carre",
+          "enonce": "Touche la **diagonale** [AC].",
+          "reponse": [
+            "ac"
+          ],
+          "aide": "Une diagonale relie deux sommets opposés du carré.",
+          "explication": "La diagonale [AC] relie les sommets opposés A et C."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans le triangle ABC, rectangle en B, que vaut **AC²** ?",
+          "reponse": 50,
+          "unite": "cm²",
+          "aide": "Pythagore : AC² = AB² + BC², avec AB = BC = 5.",
+          "explication": "AC² = 5² + 5² = 25 + 25 = **50**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la **valeur exacte** de AC ?",
+          "options": [
+            "√50 cm",
+            "√10 cm",
+            "√25 cm",
+            "7,5 cm"
+          ],
+          "reponse": 0,
+          "aide": "AC est le nombre positif dont le carré vaut 50.",
+          "explication": "AC² = 50 et AC > 0, donc AC = **√50 cm** (soit 5√2 cm)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "On sait que √50 = 5 × √2. Utilise le tableau pour donner une valeur approchée de AC, **arrondie au centième**.",
+          "reponse": 7.07,
+          "tolerance": 0.01,
+          "unite": "cm",
+          "aide": "Cherche √2 dans le tableau puis multiplie par 5.",
+          "explication": "5 × 1,414 = **7,07 cm** environ."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces affirmations : sont-elles vraies ou fausses ?",
+          "categories": [
+            "Vraie",
+            "Fausse"
+          ],
+          "items": [
+            [
+              "√64 = 8",
+              0
+            ],
+            [
+              "√(9 + 16) = 3 + 4",
+              1
+            ],
+            [
+              "x² = 36 a pour solutions 6 et −6",
+              0
+            ],
+            [
+              "x² = −9 a une solution",
+              1
+            ],
+            [
+              "(√13)² = 13",
+              0
+            ]
+          ],
+          "aide": "Attention : √(9 + 16) = √25, et un carré n’est jamais négatif.",
+          "explication": "√(9 + 16) = √25 = 5, alors que 3 + 4 = 7 : fausse. Et **x² = −9 n’a aucune solution**, car un carré est positif ou nul. Les trois autres sont vraies."
+        }
+      ]
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les billes de Naël",
+      "competence": "calculer",
+      "situation": "Naël a 157 billes. Il les range dans des sacs qui contiennent chacun 8 billes. Il effectue la division euclidienne de 157 par 8.",
+      "documents": [
+        {
+          "id": "div",
+          "type": "tableau",
+          "titre": "La division euclidienne de 157 par 8",
+          "colonnes": [
+            "Dividende a",
+            "Diviseur b",
+            "Quotient q",
+            "Reste r"
+          ],
+          "lignes": [
+            [
+              "157",
+              "8",
+              "?",
+              "?"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "div",
+          "enonce": "Touche le **diviseur** b.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Le diviseur est le nombre par lequel on divise.",
+          "explication": "Le diviseur est **8** : c’est le nombre de billes par sac."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **quotient** q ?",
+          "reponse": 19,
+          "aide": "8 × 19 = 152. Essaie aussi 8 × 20.",
+          "explication": "8 × 19 = 152 ≤ 157 < 160 = 8 × 20 : le quotient est **19** (19 sacs pleins)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **reste** r ?",
+          "reponse": 5,
+          "aide": "157 − 152.",
+          "explication": "157 = 8 × 19 + **5**, avec 0 ≤ 5 < 8."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de sacs faut-il pour ranger **toutes** les billes ?",
+          "reponse": 20,
+          "unite": "sacs",
+          "aide": "19 sacs sont pleins. Que fait-on des billes restantes ?",
+          "explication": "19 sacs pleins et 5 billes en plus : il faut un sac de plus, donc **20 sacs**."
+        }
+      ]
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les feux d’artifice",
+      "competence": "resoudre",
+      "situation": "Lors d’un spectacle, deux types de feux partent ensemble à l’instant t = 0 : les bleus toutes les 12 secondes, les rouges toutes les 18 secondes. Le tableau donne les dates des premiers tirs.",
+      "documents": [
+        {
+          "id": "tirs",
+          "type": "tableau",
+          "titre": "Les dates de tir (en secondes)",
+          "colonnes": [
+            "Feu",
+            "1er tir",
+            "2e tir",
+            "3e tir",
+            "4e tir",
+            "5e tir"
+          ],
+          "lignes": [
+            [
+              "Bleu (toutes les 12 s)",
+              12,
+              24,
+              36,
+              48,
+              60
+            ],
+            [
+              "Rouge (toutes les 18 s)",
+              18,
+              36,
+              54,
+              72,
+              90
+            ]
+          ],
+          "enteteLignes": true,
+          "source": "Spectacle imaginé pour l’exercice"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "tirs",
+          "multiple": true,
+          "enonce": "Touche les deux cases qui montrent un **tir simultané**.",
+          "reponse": [
+            "r0c3",
+            "r1c2"
+          ],
+          "aide": "Cherche une même date dans les deux lignes.",
+          "explication": "À t = **36 s**, le 3e tir bleu et le 2e tir rouge ont lieu en même temps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel nombre cherche-t-on quand on veut la date du prochain tir simultané ?",
+          "options": [
+            "Le plus petit multiple commun de 12 et 18",
+            "Le plus grand diviseur commun de 12 et 18",
+            "Le reste de la division de 18 par 12",
+            "La somme de 12 et 18"
+          ],
+          "reponse": 0,
+          "aide": "Les dates de tir sont des multiples de 12 et des multiples de 18.",
+          "explication": "Les dates sont des multiples de 12 (bleus) et de 18 (rouges). Les deux tirent ensemble aux **multiples communs**, et le prochain est le plus petit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pendant les **2 premières minutes** (de t = 0 à t = 120 s), combien de fois les deux feux partent-ils ensemble, départ compris ?",
+          "reponse": 4,
+          "unite": "fois",
+          "aide": "Les tirs simultanés ont lieu à 0, 36, 72… Continue la liste sans dépasser 120.",
+          "explication": "Tirs simultanés à 0, 36, 72 et 108 s. Le suivant, 144 s, dépasse 120 s : **4 fois**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À t = **100 s**, combien de tirs rouges ont eu lieu depuis le départ (sans compter t = 0) ?",
+          "reponse": 5,
+          "unite": "tirs",
+          "aide": "Fais la division euclidienne de 100 par 18 : le quotient compte les tirs.",
+          "explication": "100 = 18 × 5 + 10 : cinq tirs rouges, aux dates 18, 36, 54, 72 et 90 s. Le reste 10 s est le temps écoulé depuis le dernier : **5 tirs**."
+        }
+      ]
+    },
+    {
+      "chapitre": "841e23da-8dde-59c6-9ca5-782b8f289fa5",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le tournoi inter-classes",
+      "competence": "resoudre",
+      "situation": "Un professeur d’EPS organise un tournoi. Il veut former le plus grand nombre possible d’équipes identiques, en faisant jouer tous les élèves inscrits.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Tournoi inter-classes",
+          "sousTitre": "Sport collectif",
+          "emoji": "🏆",
+          "lignes": [
+            {
+              "texte": "Élèves de 6e inscrits",
+              "valeur": "72"
+            },
+            {
+              "texte": "Élèves de 5e inscrits",
+              "valeur": "108"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Équipes identiques, tout le monde joue"
+            }
+          ]
+        },
+        {
+          "id": "decomp",
+          "type": "tableau",
+          "titre": "Les décompositions en facteurs premiers",
+          "colonnes": [
+            "Nombre",
+            "Décomposition"
+          ],
+          "lignes": [
+            [
+              "72",
+              "2³ × 3²"
+            ],
+            [
+              "108",
+              "?"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Le professeur hésite entre plusieurs nombres d’équipes. Lesquels sont **possibles** (même nombre d’élèves de 6e et de 5e dans chaque équipe) ?",
+          "categories": [
+            "Possible",
+            "Impossible"
+          ],
+          "items": [
+            [
+              "6 équipes",
+              0
+            ],
+            [
+              "12 équipes",
+              0
+            ],
+            [
+              "18 équipes",
+              0
+            ],
+            [
+              "24 équipes",
+              1
+            ],
+            [
+              "36 équipes",
+              0
+            ],
+            [
+              "40 équipes",
+              1
+            ]
+          ],
+          "aide": "Le nombre d’équipes doit diviser 72 **et** 108. Teste par exemple 24 sur 108.",
+          "explication": "Possibles : 6, 12, 18 et 36, qui divisent 72 et 108. **24** divise 72 mais pas 108 (108 ÷ 24 = 4,5) et **40** ne divise aucun des deux."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la décomposition en facteurs premiers de **108** ?",
+          "options": [
+            "2² × 3³ (soit 4 × 27)",
+            "2³ × 3² (soit 8 × 9)",
+            "2 × 3⁴ (soit 2 × 81)",
+            "2² × 27, en s’arrêtant à 27"
+          ],
+          "reponse": 0,
+          "aide": "108 = 4 × 27, et 27 = 3 × 3 × 3. Attention : 27 n’est pas un nombre premier.",
+          "explication": "108 = 4 × 27 = 2² × 3³ = **2² × 3³**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’équipes au **maximum** peut-il former ?",
+          "reponse": 36,
+          "unite": "équipes",
+          "aide": "Garde les facteurs communs de 72 = 2³ × 3² et 108 = 2² × 3³, avec le plus petit exposant.",
+          "explication": "Facteurs communs : 2² × 3² = 4 × 9 = **36 équipes**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’élèves de 6e y a-t-il dans chaque équipe ?",
+          "reponse": 2,
+          "aide": "Divise 72 par le nombre d’équipes.",
+          "explication": "72 ÷ 36 = **2 élèves de 6e** (et 108 ÷ 36 = 3 élèves de 5e)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Un élève de 6e de plus s’inscrit (73 élèves de 6e). Peut-on encore former 36 équipes identiques ?",
+          "options": [
+            "Non : 73 n’est pas divisible par 36, car 73 = 2 × 36 + 1",
+            "Oui : 73 est proche de 72, donc on peut arrondir",
+            "Oui : 73 est un nombre premier, donc on peut le partager",
+            "Non : 73 est un nombre pair, donc impossible à répartir"
+          ],
+          "reponse": 0,
+          "aide": "36 est-il un diviseur de 73 ? Fais la division euclidienne.",
+          "explication": "73 = 36 × 2 + 1 : le reste n’est pas nul, donc 36 **ne divise pas** 73. On ne peut plus former 36 équipes identiques."
+        }
+      ]
+    }
+  ]
+}

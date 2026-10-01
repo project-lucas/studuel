@@ -199,7 +199,7 @@ Chaque molécule d'ADN fille est formée d'un **brin parental** conservé et d'u
 
 La synthèse est **orientée** : la polymérase ne travaille que dans un sens, d'où un brin copié en continu et l'autre par fragments. Chez les eucaryotes, la réplication démarre en **de nombreuses origines simultanées**.
 
-> Sans ces origines multiples, copier 3 milliards de paires de bases prendrait des semaines.
+> Sans ces origines multiples, copier un seul chromosome prendrait des semaines, et les 3 milliards de paires de bases du génome, de l'ordre d'un an.
 
 ## La fidélité, et ses limites
 La polymérase corrige la plupart de ses erreurs, des systèmes de **réparation** interviennent ensuite. Il subsiste environ **une erreur par milliard de nucléotides** copiés : c'est une **mutation**.
@@ -216,7 +216,7 @@ La polymérase corrige la plupart de ses erreurs, des systèmes de **réparation
             ['Que signifie « réplication semi-conservative » ?', ['Chaque molécule fille garde un brin parental et un brin néoformé', 'Une molécule fille est ancienne, l’autre entièrement neuve', 'Les deux molécules filles sont entièrement neuves', 'Les brins parentaux se fragmentent au hasard'], 0, 'C’est ce que l’expérience de Meselson et Stahl a établi.'],
             ['Quelle enzyme synthétise le brin complémentaire lors de la réplication ?', ['L’ADN polymérase', 'L’ARN polymérase', 'L’ADN hélicase', 'La ligase seule'], 0, 'Elle respecte l’appariement A-T et C-G.'],
             ['L’ADN hélicase ouvre la double hélice au niveau des origines de réplication.', ['Vrai', 'Faux'], 0, 'Elle forme un œil de réplication bordé de deux fourches.'],
-            ['Pourquoi la réplication démarre-t-elle en de multiples origines chez les eucaryotes ?', ['Pour copier un génome très long en un temps compatible avec le cycle cellulaire', 'Parce que l’ADN polymérase est lente à démarrer', 'Pour éviter les mutations', 'Parce que les chromosomes sont circulaires'], 0, 'Trois milliards de paires de bases à partir d’une seule origine prendraient des semaines.'],
+            ['Pourquoi la réplication démarre-t-elle en de multiples origines chez les eucaryotes ?', ['Pour copier un génome très long en un temps compatible avec le cycle cellulaire', 'Parce que l’ADN polymérase est lente à démarrer', 'Pour éviter les mutations', 'Parce que les chromosomes sont circulaires'], 0, 'Trois milliards de paires de bases à partir d’une seule origine prendraient de l’ordre d’un an.'],
             ['La réplication de l’ADN est parfaitement fidèle.', ['Vrai', 'Faux'], 1, 'Il subsiste environ une erreur par milliard de nucléotides : c’est une mutation.'],
             ['Quel agent mutagène provoque la soudure de deux bases voisines d’un même brin ?', ['Les rayons ultraviolets', 'Les rayons X uniquement', 'La chaleur', 'Le froid'], 0, 'Les dimères de thymine ainsi formés bloquent la réplication.'],
             ['Quelle base s’apparie avec la cytosine ?', ['La guanine', 'L’adénine', 'La thymine', 'L’uracile'], 0, 'C-G d’un côté, A-T de l’autre : l’appariement est strict.'],
@@ -644,7 +644,7 @@ En vieillissant, la lithosphère océanique se refroidit et s'épaissit ; sa den
 | **Fosse océanique** | Celle des Mariannes approche 11 000 m |
 | **Prisme d'accrétion** | Sédiments raclés sur la plaque plongeante |
 | **Anomalie thermique négative** | La plaque plongeante est froide |
-| **Arc volcanique** | Insulaire (Japon, Antilles) ou continental (Andes), à 100-150 km au-dessus du plan de subduction |
+| **Arc volcanique** | Insulaire (Japon, Antilles) ou continental (Andes), là où le plan de subduction atteint 100-150 km de profondeur |
 
 ## Le plan de Wadati-Benioff
 Les foyers sismiques se répartissent sur un **plan incliné** qui matérialise la plaque plongeante, de la surface jusqu'à environ 700 km. C'est la preuve directe de la plongée.

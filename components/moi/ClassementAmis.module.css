@@ -1,0 +1,206 @@
+/* ==========================================================================
+   TOI ET TES AMIS (ClassementAmis.tsx) — des colonnes qui poussent, une par
+   personne, façon podium de Clash Royale / Brawl Stars : des piliers brillants
+   qui montent à l'ouverture, la couronne sur celui de tête, les portraits
+   posés au pied de chacun. Le langage de l'ancien bloc « Tes matières », dont
+   ce classement a pris la place (01/10/2026).
+
+   Règles de lecture (une seule série) : UNE teinte — le violet de la marque.
+   MA colonne est pleine, celles de mes amis plus claires : c'est moi que je
+   cherche d'abord. 26 px de large au plus, 4 px d'arrondi au sommet et une base
+   carrée sur UNE ligne de sol, la valeur posée sur le chapiteau. L'or ne sert
+   qu'à la couronne.
+
+   Animations : transform et opacity seulement, valeurs littérales ; rien ne
+   bouge en mouvement réduit.
+   ========================================================================== */
+
+/* La rangée défile de côté quand les amis ne tiennent pas. */
+.scene {
+  margin: 12px -4px 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.scene::-webkit-scrollbar {
+  display: none;
+}
+/* Plus de colonnes qu'il n'en tient : le bord droit s'efface, on voit que
+   la rangée continue. */
+.scene[data-defile] {
+  mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+}
+
+.colonnes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(54px, 1fr);
+  align-items: end;
+  padding: 0 4px;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* La piste : toute la hauteur est la cible du doigt, pas seulement la barre. */
+.piste {
+  display: flex;
+  width: 100%;
+  height: 138px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.piste:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* La hauteur utile d'une colonne : la piste moins la place de la valeur et de
+   la couronne. */
+.fut {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: flex-end;
+  justify-content: center;
+  /* La ligne de sol : les colonnes se touchent, les fûts la tracent d'un
+     bout à l'autre, et tous les piliers poussent d'elle. */
+  border-bottom: 1px solid var(--border);
+}
+
+.valeur {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--muted-foreground);
+  font-variant-numeric: tabular-nums;
+  animation: apparait 0.3s ease-out both;
+}
+.colonne[data-moi] .valeur,
+.colonne[data-choisie] .valeur {
+  color: var(--foreground);
+}
+
+.couronne {
+  width: 18px;
+  height: 18px;
+  color: color-mix(in oklch, var(--highlight), var(--warning) 55%);
+  fill: var(--highlight);
+  animation: apparait 0.3s ease-out both;
+}
+
+/* Le pilier : violet clair pour un ami, violet plein pour moi, un reflet sur
+   le chapiteau. */
+.barre {
+  width: 26px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 62%) 0%,
+    color-mix(in oklch, var(--primary), white 50%) 100%
+  );
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.45);
+  transform-origin: 50% 100%;
+  animation: pousse 0.7s cubic-bezier(0.22, 1.2, 0.36, 1) both;
+}
+.colonne[data-choisie] .barre {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 42%) 0%,
+    color-mix(in oklch, var(--primary), white 28%) 100%
+  );
+}
+.colonne[data-moi] .barre {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 18%) 0%,
+    var(--primary) 100%
+  );
+}
+
+/* Le portrait, au pied de la colonne ; cerclé de violet quand c'est moi. */
+.portrait {
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px var(--card), 0 0 0 3.5px var(--border);
+}
+.colonne[data-moi] .portrait {
+  box-shadow: 0 0 0 2px var(--card), 0 0 0 4.5px var(--primary);
+}
+
+/* Les épées du challenger : une pastille violette accrochée au portrait. */
+.challenger {
+  position: absolute;
+  right: -6px;
+  bottom: -4px;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 0 0 2px var(--card);
+}
+.challengerLegende {
+  position: static;
+  width: 15px;
+  height: 15px;
+  box-shadow: none;
+}
+
+.nom {
+  max-width: 100%;
+  margin-top: 5px;
+  overflow: hidden;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted-foreground);
+}
+.colonne[data-moi] .nom,
+.colonne[data-choisie] .nom {
+  color: var(--foreground);
+}
+
+@keyframes pousse {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes apparait {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barre,
+  .valeur,
+  .couronne {
+    animation: none;
+  }
+}

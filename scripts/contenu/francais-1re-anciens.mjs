@@ -670,7 +670,7 @@ Ses deux raisons : le **devoir envers le mort** et la **certitude que la passion
 | L’**ironie** stendhalienne | Une voix narrative à distance |
 | La **focalisation interne serrée** | On suit les **calculs** du personnage |
 
-> Et la définition restée célèbre : « **Un roman est un miroir que l’on promène le long d’un chemin.** »`,
+> Et la formule restée célèbre, en épigraphe d’un chapitre (Stendhal l’attribue à Saint-Réal) : « **Un roman : c’est un miroir qu’on promène le long d’un chemin.** »`,
           },
           questions: [
             ['Que désignent le rouge et le noir du titre ?', ['L’armée et l’Église, les deux voies d’ascension possibles', 'La passion et la mort', 'La révolution et la monarchie', 'Le sang et l’encre'], 0, 'Julien aurait été officier sous Napoléon ; sous la Restauration, il ne reste que la soutane.'],
@@ -680,7 +680,7 @@ Ses deux raisons : le **devoir envers le mort** et la **certitude que la passion
             ['Où Julien tire-t-il sur Madame de Rênal ?', ['Dans l’église de Verrières, pendant la messe', 'Dans le jardin des Rênal', 'À Paris, chez les La Mole', 'Au séminaire de Besançon'], 0, 'Le lieu et le moment donnent au geste sa portée de scandale.'],
             ['Que fait Julien lors de son procès ?', ['Il accuse la société de le condamner comme paysan sorti de sa classe', 'Il plaide la folie', 'Il nie les faits', 'Il demande la clémence du jury'], 0, 'Il refuse de se défendre : le discours de tribunal est le sommet politique du roman.'],
             ['Mathilde de La Mole et Madame de Rênal aiment Julien de la même façon.', ['Vrai', 'Faux'], 1, 'L’une l’aime par orgueil et romanesque, l’autre par tendresse : le roman oppose deux amours.'],
-            ['Quelle définition du roman Stendhal donne-t-il ?', ['« Un miroir que l’on promène le long d’un chemin »', '« Une machine à explorer le temps »', '« Une tranche de vie »', '« Un art de la mémoire »'], 0, 'Elle justifie le sous-titre : Chronique de 1830.'],
+            ['Quelle définition du roman Stendhal place-t-il en épigraphe ?', ['« Un miroir qu’on promène le long d’un chemin »', '« Une machine à explorer le temps »', '« Une tranche de vie »', '« Un art de la mémoire »'], 0, 'Elle justifie le sous-titre : Chronique de 1830.'],
           ],
         },
         {
@@ -946,7 +946,7 @@ Dans le livre III, Hugo est **déjà** le poète social des *Misérables*.
 | La découverte, en promenade | Un cadavre d’animal **en décomposition**, décrit avec une précision **insoutenable** |
 | La chute | Une **promesse d’immortalité** à la femme aimée |
 
-> La pourriture attend le corps — mais le poète aura « gardé la **forme et l’essence divine** » de ses amours décomposées.
+> La pourriture attend le corps — mais le poète aura « gardé la **forme et l’essence divine** » de ses « amours décomposés ».
 
 > **Le sujet le plus repoussant produit l’un des plus beaux poèmes du recueil** : la démonstration est faite.
 
@@ -1491,9 +1491,9 @@ La Bruyère **revendique le fragment** — « **Tout est dit, et l’on vient tr
 | **V. De la société et de la conversation** | Les fâcheux, les bavards, les **vaniteux du langage** | La parole comme parade |
 | **VI. Des biens de fortune** | L’argent, les partisans, les financiers enrichis | **Giton** le riche et **Phédon** le pauvre : **le corps même dit la condition sociale** |
 | **VII. De la ville** | La **bourgeoisie qui singe la cour** | L’imitation ridicule |
-| **VIII. De la cour** | Le **chef-d’œuvre du livre** | « L’on **s’élève** à la cour, mais on n’y **monte** pas » |
+| **VIII. De la cour** | Le **chef-d’œuvre du livre** | « La cour **ne rend pas content** ; elle empêche qu’on ne le soit ailleurs » |
 | **IX. Des grands** | Les puissants | Leur mépris, leur **inutilité** |
-| **X. Du souverain ou de la république** | Le pouvoir, la guerre | Les paysans « **animaux farouches** » qui **deviennent des hommes quand ils se lèvent** |
+| **X. Du souverain ou de la république** | Le pouvoir, la guerre | Le bon prince, **berger** de son peuple (les paysans « **animaux farouches** » sont, eux, au livre **XI, « De l’homme »**) |
 
 > La cour est décrite comme un **pays étranger**, aux **mœurs codées** — c’est le regard de l’ethnographe avant l’heure.
 
@@ -1505,12 +1505,12 @@ La Bruyère **montre** au lieu de **démontrer** : un **geste**, un **vêtement*
           questions: [
             ['Quelle forme prennent Les Caractères ?', ['Des remarques brèves : maximes, portraits, anecdotes', 'Un traité systématique', 'Un roman à intrigue', 'Un recueil de lettres'], 0, 'Le livre se lit dans le désordre et se compose pourtant.'],
             ['Que montre le portrait de Giton et Phédon ?', ['Que le corps et les manières trahissent la condition sociale', 'Que la richesse rend vertueux', 'Que la pauvreté est un choix', 'Que les nobles sont ridicules'], 0, 'Giton est riche : il tousse, il occupe l’espace. Phédon est pauvre : il s’efface.'],
-            ['Quelle formule résume la cour selon La Bruyère ?', ['« L’on s’élève à la cour, mais on n’y monte pas »', '« Tout est dit »', '« Le cœur a ses raisons »', '« Rien de trop »'], 0, 'La cour est un pays étranger avec ses codes et ses langues.'],
+            ['Quelle formule résume la cour selon La Bruyère ?', ['« La cour ne rend pas content ; elle empêche qu’on ne le soit ailleurs »', '« Tout est dit »', '« Le cœur a ses raisons »', '« Rien de trop »'], 0, 'La cour est un pays étranger avec ses codes et ses langues.'],
             ['Quels livres le programme retient-il ?', ['Les livres V à X', 'Les livres I à IV', 'Le livre XI seul', 'Tous les livres'], 0, 'De « De la société » à « Du souverain ou de la république ».'],
             ['Pourquoi La Bruyère donne-t-il des noms grecs à ses personnages ?', ['Pour se protéger, tout en laissant reconnaître ses modèles', 'Par goût de l’Antiquité seule', 'Pour imiter Homère', 'Parce qu’il traduit des textes grecs'], 0, 'Des « clés » circulaient pour identifier les modèles réels.'],
             ['Quelle phrase ouvre l’œuvre ?', ['« Tout est dit, et l’on vient trop tard »', '« Je chante l’homme »', '« Le monde est un théâtre »', '« Les hommes naissent libres »'], 0, 'Elle justifie le choix du fragment et de la brièveté frappante.'],
             ['La Bruyère démontre ses thèses par des raisonnements suivis.', ['Vrai', 'Faux'], 1, 'Il montre plutôt qu’il ne démontre : un geste ou un vêtement suffisent à faire un caractère.'],
-            ['Quelle image saisissante La Bruyère donne-t-il des paysans ?', ['Des « animaux farouches » qui se révèlent hommes en se levant', 'Des enfants heureux', 'Des soldats en puissance', 'Des ombres invisibles'], 0, 'C’est l’une des pages les plus fortes du livre X.'],
+            ['Quelle image saisissante La Bruyère donne-t-il des paysans ?', ['Des « animaux farouches » qui se révèlent hommes en se levant', 'Des enfants heureux', 'Des soldats en puissance', 'Des ombres invisibles'], 0, 'C’est l’une des pages les plus fortes du livre XI, « De l’homme ».'],
           ],
         },
         {

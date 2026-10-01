@@ -51,7 +51,7 @@ export default function PourTonProfil({
 
   return (
     <section aria-labelledby="profil-titre" className="flex flex-col gap-3">
-      <BandeauSection id="profil-titre" variante="ruban-clair">
+      <BandeauSection id="profil-titre" variante="ruban">
         Pour ton profil
       </BandeauSection>
       <Link href="/moi" className="self-end px-1 text-xs font-extrabold text-primary">

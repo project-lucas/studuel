@@ -19,6 +19,11 @@ import styles from './BandeauSection.module.css'
  * neuf tranches (BandeauSection.module.css) : ses deux bouts gardent leurs
  * proportions, seul son centre uni s'allonge à la largeur de l'écran (pour le
  * parchemin, une tranche centrale de 2 % seulement).
+ *
+ * UN SEUL RUBAN DEPUIS LE 24/09/2026 (chantier d'homogénéité, Lucas : « rien
+ * n'est homogène ») : les quatre catégories portent le ruban violet — plaque
+ * dorée, parchemin et ruban lavande faisaient quatre objets différents sur une
+ * seule page. Les trois autres variantes restent disponibles, sans usage.
  */
 export type VarianteBandeau = 'plaque' | 'parchemin' | 'ruban' | 'ruban-clair'
 

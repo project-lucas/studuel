@@ -1,6 +1,8 @@
-import { Award, Lock } from 'lucide-react'
+import { Lock } from 'lucide-react'
 import type { BadgeState } from '@/lib/badges'
 import { cn } from '@/lib/utils'
+import BadgeIcone from '@/components/BadgeIcone'
+import EnTeteBloc from '@/components/moi/EnTeteBloc'
 
 // -----------------------------------------------------------------------------
 // LES BADGES, ENFIN À LA VUE — onglet Collection de Moi (17/09/2026).
@@ -30,19 +32,14 @@ export default function BadgesVitrine({
 
   return (
     <section aria-label="Tes badges" className="carte p-4">
-      <div className="flex items-center gap-2.5">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
-          <Award className="size-5" strokeWidth={2.4} aria-hidden="true" />
-        </span>
-        <div className="min-w-0 flex-1">
-          <h2 className="titre-section">Tes badges</h2>
-          <p className="surtitre mt-0.5">
-            {gagnes.length === 0
-              ? 'Le premier se gagne en jouant'
-              : `${gagnes.length} gagné${gagnes.length > 1 ? 's' : ''} sur ${badges.length}`}
-          </p>
-        </div>
-      </div>
+      <EnTeteBloc
+        titre="Tes badges"
+        sousTitre={
+          gagnes.length === 0
+            ? 'Le premier se gagne en jouant'
+            : `${gagnes.length} gagné${gagnes.length > 1 ? 's' : ''} sur ${badges.length}`
+        }
+      />
 
       <ul role="list" className="mt-3 grid grid-cols-4 gap-2">
         {ranges.map((b) => (
@@ -56,12 +53,12 @@ export default function BadgesVitrine({
                 : 'border-2 border-dashed border-border',
             )}
           >
-            <span
-              aria-hidden="true"
-              className={cn('text-[26px] leading-none', !b.earned && 'opacity-30 grayscale')}
-            >
-              {b.icon}
-            </span>
+            <BadgeIcone
+              slug={b.slug}
+              icon={b.icon}
+              tailleImage="size-9"
+              className={cn('text-[26px]', !b.earned && 'opacity-30 grayscale')}
+            />
             <span
               className={cn(
                 'line-clamp-2 text-[9.5px] leading-tight font-extrabold',

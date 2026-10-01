@@ -1,0 +1,97 @@
+{
+  "niveau": "Tle",
+  "matiere": "physique-chimie",
+  "sujets": [
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "difficulte": 1,
+      "titre": "La lunette de Camille",
+      "consigne": "Réponds à chaque question en rédigeant des phrases complètes et en détaillant tes calculs.",
+      "enonce": "**Situation.** Camille reçoit une lunette astronomique. La notice indique : objectif de distance focale f′₁ = 900 mm, oculaire de distance focale f′₂ = 25 mm, montage afocal.\n\n1. Pour une lentille mince convergente, que devient : a) un rayon passant par le centre optique O ? b) un rayon parallèle à l’axe optique ? c) un rayon passant par le foyer objet F ?\n2. Que signifie « montage afocal » ? Où se forme alors l’image finale, et quel est l’intérêt pour l’œil ?\n3. Calcule le grossissement G de la lunette de Camille.\n4. Camille remarque que la Lune apparaît « à l’envers » dans l’instrument. Est-ce un défaut ? Justifie.",
+      "bareme": [
+        { "critere": "Les trois rayons particuliers correctement décrits (non dévié, passe par F′, ressort parallèle à l’axe)", "points": 6 },
+        { "critere": "Définition du montage afocal (F′₁ = F₂), image à l’infini, observation sans accommoder", "points": 6 },
+        { "critere": "Calcul G = f′₁ / f′₂ = 36, formule et unités cohérentes", "points": 5 },
+        { "critere": "Image renversée identifiée comme normale et sans importance en astronomie", "points": 3 }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. a) Un rayon passant par le **centre optique O** n’est **pas dévié**.\nb) Un rayon **parallèle à l’axe** ressort en passant par le **foyer image F′**.\nc) Un rayon passant par le **foyer objet F** ressort **parallèle à l’axe**.\n\n2. Le montage est **afocal** lorsque le **foyer image de l’objectif est confondu avec le foyer objet de l’oculaire** : F′₁ = F₂. L’image finale est alors rejetée **à l’infini**, ce qui permet à l’œil d’observer **sans accommoder**, donc sans fatigue pendant de longues observations.\n\n3. G = f′₁ / f′₂ = 900 mm / 25 mm = **36** (grandeur sans unité : les deux focales doivent être dans la même unité).\n\n4. Ce n’est **pas un défaut** : l’image finale d’une lunette astronomique est **renversée** par construction. En astronomie, cela n’a aucune importance (il n’y a ni haut ni bas pour un astre)."
+    },
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "difficulte": 2,
+      "titre": "Observer la Lune depuis le jardin",
+      "consigne": "Réponds aux questions en justifiant chaque étape de calcul. Donne les résultats avec un nombre de chiffres significatifs adapté.",
+      "enonce": "**Situation.** Malik observe la Lune avec une lunette afocale : objectif de focale f′₁ = 1,20 m, oculaire de focale f′₂ = 20 mm. Depuis la Terre, la Lune est vue sous un diamètre apparent θ = 9,0 × 10⁻³ rad.\n\n1. Pourquoi peut-on considérer que les rayons issus de la Lune arrivent parallèles sur l’objectif ? Dans quel plan se forme l’image intermédiaire A₁B₁ donnée par l’objectif ?\n2. Calcule la taille de l’image intermédiaire A₁B₁.\n3. Calcule le grossissement G de la lunette, puis l’angle θ′ sous lequel Malik voit la Lune dans l’oculaire.\n4. Malik dispose aussi d’un oculaire de focale 10 mm. Quel sera le nouveau grossissement ? Explique pourquoi on change d’oculaire, et non d’objectif, pour changer de grossissement.",
+      "bareme": [
+        { "critere": "Objet à l’infini : rayons parallèles, image dans le plan focal image de l’objectif", "points": 4 },
+        { "critere": "A₁B₁ = f′₁ × θ = 1,1 × 10⁻² m (environ 11 mm), θ en radians", "points": 5 },
+        { "critere": "G = 60 et θ′ = G × θ = 0,54 rad, calculs justifiés", "points": 6 },
+        { "critere": "Nouveau grossissement G = 120 et rôle de l’oculaire expliqué", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. La Lune est **très éloignée** par rapport aux dimensions de la lunette : on la considère comme un objet **à l’infini**, dont les rayons arrivent **parallèles**. L’image intermédiaire A₁B₁ se forme donc **dans le plan focal image** de l’objectif.\n\n2. A₁B₁ = f′₁ × θ = 1,20 × 9,0 × 10⁻³ = 1,08 × 10⁻² m, soit **environ 1,1 × 10⁻² m (11 mm)**. L’angle θ doit être exprimé en **radians**.\n\n3. G = f′₁ / f′₂ = 1,20 m / 0,020 m = **60**.\nComme G = θ′ / θ : θ′ = G × θ = 60 × 9,0 × 10⁻³ = **0,54 rad**. La Lune paraît vue sous un angle 60 fois plus grand.\n\n4. Avec f′₂ = 10 mm : G = 1,20 / 0,010 = **120**. Le grossissement est inversement proportionnel à la focale de l’oculaire : un oculaire de **courte focale** grossit davantage. L’objectif est la pièce fixe et coûteuse de l’instrument ; c’est **en changeant d’oculaire** qu’on change facilement de grossissement."
+    },
+    {
+      "chapitre": "b871cc0d-ec23-5929-b049-a037dd850591",
+      "difficulte": 3,
+      "titre": "Lentille, image et publicité trompeuse",
+      "consigne": "Traite les deux parties. Utilise les mesures algébriques et justifie chaque conclusion par une relation ou un argument du cours.",
+      "enonce": "**Partie A — Une lentille au banc d’optique.** Inès place un objet AB de hauteur 1,5 cm devant une lentille mince convergente de distance focale f′ = 20 cm. L’objet est situé à 30 cm avant la lentille : OA = −30 cm.\n\n1. Calcule la vergence V de la lentille, en dioptries.\n2. À l’aide de la relation de conjugaison, calcule la position OA′ de l’image.\n3. Calcule le grandissement γ puis la taille algébrique A′B′. Décris l’image (sens, taille).\n\n**Partie B — Deux lunettes en vitrine.**\n\n| | Lunette A | Lunette B |\n| Diamètre de l’objectif | 60 mm | 100 mm |\n| Focale de l’objectif | 700 mm | 1 000 mm |\n| Oculaire fourni | 4 mm | 10 mm |\n| Slogan | « Grossissement 175 ! » | aucun |\n\n4. Vérifie par le calcul le grossissement annoncé pour A, puis calcule celui de B.\n5. Hugo veut observer des galaxies peu lumineuses et distinguer des détails fins. Quelle lunette lui conseilles-tu ? Argumente en expliquant ce qui limite vraiment une lunette et ce qu’on appelle le « grossissement vide ».",
+      "bareme": [
+        { "critere": "V = 1/f′ = 5,0 δ avec f′ en mètres", "points": 2 },
+        { "critere": "Relation de conjugaison appliquée avec les signes : OA′ = +60 cm", "points": 5 },
+        { "critere": "γ = −2,0 et A′B′ = −3,0 cm ; image renversée, deux fois plus grande", "points": 4 },
+        { "critere": "G(A) = 175 vérifié et G(B) = 100 calculé", "points": 3 },
+        { "critere": "Choix de B argumenté : diamètre, lumière collectée, diffraction, grossissement vide", "points": 6 }
+      ],
+      "dureeMin": 18,
+      "corrige": "**Partie A**\n1. V = 1/f′ = 1 / 0,20 m = **5,0 δ** (dioptries).\n\n2. Relation de conjugaison : 1/OA′ − 1/OA = 1/f′, donc 1/OA′ = 1/f′ + 1/OA = 1/20 + 1/(−30) = 3/60 − 2/60 = 1/60 (en cm⁻¹).\nD’où **OA′ = +60 cm** : l’image se forme 60 cm **après** la lentille (image réelle).\n\n3. γ = OA′ / OA = 60 / (−30) = **−2,0**.\nA′B′ = γ × AB = −2,0 × 1,5 = **−3,0 cm**.\nLe grandissement est **négatif** : l’image est **renversée** ; |γ| = 2 : elle est **deux fois plus grande** que l’objet.\n\n**Partie B**\n4. G = f′₁ / f′₂. Lunette A : 700 / 4 = **175** (le slogan est exact). Lunette B : 1 000 / 10 = **100**.\n\n5. Il faut conseiller la **lunette B**. Ce qui limite réellement une lunette n’est pas le grossissement mais le **diamètre de l’objectif** :\n- il fixe la **quantité de lumière collectée** : un objectif de 100 mm recueille beaucoup plus de lumière qu’un objectif de 60 mm, ce qui permet de voir des objets **faibles** comme les galaxies ;\n- il fixe la limite de **diffraction**, donc le **pouvoir séparateur** : un plus grand diamètre permet de distinguer des détails plus fins.\nGrossir au-delà de ce que permet le diamètre ne fait qu’**agrandir une image floue** : c’est le « **grossissement vide** ». Le slogan de A met en avant un chiffre séduisant mais peu pertinent ; d’ailleurs, on peut changer l’oculaire de B pour grossir davantage si besoin."
+    },
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "difficulte": 1,
+      "titre": "L’énergie d’un photon orange",
+      "consigne": "Réponds en rédigeant et en détaillant chaque calcul. Données : h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m·s⁻¹ ; 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "enonce": "**Situation.** Une lampe émet une lumière orange de longueur d’onde λ = 600 nm.\n\n1. Calcule la fréquence ν de cette radiation.\n2. Calcule l’énergie E d’un photon de cette lumière, en joules puis en électronvolts.\n3. Nora augmente l’intensité de la lampe. L’énergie de chaque photon change-t-elle ? Justifie à l’aide du cours.",
+      "bareme": [
+        { "critere": "ν = c/λ = 5,00 × 10¹⁴ Hz avec λ converti en mètres", "points": 5 },
+        { "critere": "E = hc/λ ≈ 3,32 × 10⁻¹⁹ J puis ≈ 2,07 eV, conversion correcte", "points": 9 },
+        { "critere": "L’énergie d’un photon dépend de la seule fréquence, pas de l’intensité", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. λ = 600 nm = 6,00 × 10⁻⁷ m. ν = c / λ = 3,00 × 10⁸ / 6,00 × 10⁻⁷ = **5,00 × 10¹⁴ Hz**.\n\n2. E = h ν = h c / λ = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / 6,00 × 10⁻⁷ = 1,989 × 10⁻²⁵ / 6,00 × 10⁻⁷ ≈ **3,32 × 10⁻¹⁹ J**.\nEn électronvolts : E = 3,32 × 10⁻¹⁹ / 1,60 × 10⁻¹⁹ ≈ **2,07 eV** (valeur logique, entre le rouge ≈ 1,8 eV et le bleu ≈ 2,8 eV).\n\n3. **Non.** L’énergie d’un photon dépend **uniquement de la fréquence** (donc de la longueur d’onde), jamais de l’intensité. Augmenter l’intensité augmente le **nombre de photons** émis, pas l’énergie de chacun."
+    },
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "difficulte": 2,
+      "titre": "Rouge intense ou ultraviolet faible ?",
+      "consigne": "Réponds en justifiant par des calculs et par le modèle corpusculaire. Données : h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m·s⁻¹ ; 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "enonce": "**Situation.** En TP, Yanis éclaire une plaque de sodium, dont le travail d’extraction vaut W₀ = 2,3 eV.\n- Expérience 1 : une lumière rouge (λ = 700 nm) **très intense**.\n- Expérience 2 : une lumière ultraviolette (λ = 300 nm) **très faible**.\n\n1. Calcule, en eV, l’énergie d’un photon dans chacune des deux expériences.\n2. Dans quelle expérience des électrons sont-ils arrachés ? Justifie avec la condition de seuil.\n3. Montre que le modèle ondulatoire ne permet pas d’expliquer ces deux observations, alors que le modèle corpusculaire le permet.\n4. Calcule la longueur d’onde maximale λ₀ au-delà de laquelle aucun électron n’est arraché au sodium.",
+      "bareme": [
+        { "critere": "E(700 nm) ≈ 1,78 eV et E(300 nm) ≈ 4,14 eV, calculs justes", "points": 6 },
+        { "critere": "Condition hν > W₀ appliquée : seule l’expérience 2 arrache des électrons", "points": 4 },
+        { "critere": "Opposition des prédictions ondulatoire / corpusculaire, « un photon entier ou rien »", "points": 6 },
+        { "critere": "λ₀ = hc/W₀ ≈ 5,4 × 10⁻⁷ m (environ 540 nm)", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. hc = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ = 1,989 × 10⁻²⁵ J·m.\n- Rouge : E = 1,989 × 10⁻²⁵ / 7,00 × 10⁻⁷ ≈ 2,84 × 10⁻¹⁹ J, soit 2,84 / 1,60 ≈ **1,78 eV**.\n- UV : E = 1,989 × 10⁻²⁵ / 3,00 × 10⁻⁷ = 6,63 × 10⁻¹⁹ J, soit 6,63 / 1,60 ≈ **4,14 eV**.\n\n2. Un électron n’est arraché que si **hν > W₀**. Rouge : 1,78 eV < 2,3 eV → **aucun électron**, quelle que soit l’intensité. UV : 4,14 eV > 2,3 eV → **des électrons sont arrachés**, même en lumière faible.\n\n3. Le modèle **ondulatoire** prévoit qu’une lumière très intense finit par apporter assez d’énergie (le rouge devrait réussir) et qu’une lumière faible devrait mettre longtemps (l’UV ne devrait pas agir aussitôt) : c’est l’inverse de l’observation. Le modèle **corpusculaire** l’explique : un électron reçoit **un photon entier, ou rien**. Un photon rouge est trop peu énergétique, et en envoyer beaucoup n’y change rien ; un seul photon UV suffit. C’est la **condition de seuil** que le modèle ondulatoire ne peut pas produire.\n\n4. Au seuil, hc/λ₀ = W₀, donc λ₀ = hc / W₀ avec W₀ = 2,3 × 1,60 × 10⁻¹⁹ = 3,68 × 10⁻¹⁹ J.\nλ₀ = 1,989 × 10⁻²⁵ / 3,68 × 10⁻¹⁹ ≈ **5,4 × 10⁻⁷ m, soit environ 540 nm**. Toute radiation de longueur d’onde plus grande (photons moins énergétiques) n’arrache rien."
+    },
+    {
+      "chapitre": "b5920b02-7a95-5d73-bcee-57be389a7914",
+      "difficulte": 3,
+      "titre": "Lire la lumière d’une étoile",
+      "consigne": "Traite toutes les questions en justifiant. Données : h = 6,63 × 10⁻³⁴ J·s ; c = 3,00 × 10⁸ m·s⁻¹ ; 1 eV = 1,60 × 10⁻¹⁹ J.",
+      "enonce": "**Document — Quelques niveaux d’énergie de l’atome d’hydrogène**\n\n| Niveau | Énergie |\n| n = 1 | −13,6 eV |\n| n = 2 | −3,40 eV |\n| n = 3 | −1,51 eV |\n\n1. Calcule l’énergie libérée lors de la transition du niveau 3 vers le niveau 2, puis la longueur d’onde du photon émis. Dans quel domaine se situe-t-il ?\n2. Même question pour la transition du niveau 2 vers le niveau 1.\n3. Un atome d’hydrogène dans le niveau n = 1 reçoit un photon de 2,0 eV. Peut-il l’absorber ? Justifie.\n4. Expliquer pourquoi l’analyse des raies du spectre d’une étoile permet de connaître sa composition « sans y aller ».\n5. Dans l’expérience des fentes d’Young réalisée photon par photon, qu’observe-t-on au début puis après l’accumulation de milliers d’impacts ? Que montre cette expérience sur la nature de la lumière ?",
+      "bareme": [
+        { "critere": "Transition 3 → 2 : ΔE = 1,89 eV et λ ≈ 658 nm, lumière visible rouge", "points": 5 },
+        { "critere": "Transition 2 → 1 : ΔE = 10,2 eV et λ ≈ 122 nm, ultraviolet", "points": 4 },
+        { "critere": "Absorption refusée : 2,0 eV ne correspond à aucune différence de niveaux", "points": 3 },
+        { "critere": "Niveaux quantifiés propres à chaque élément, spectre de raies comme signature", "points": 4 },
+        { "critere": "Fentes d’Young : impacts ponctuels puis franges, dualité onde-corpuscule", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. ΔE = E₃ − E₂ = −1,51 − (−3,40) = **1,89 eV** = 1,89 × 1,60 × 10⁻¹⁹ = 3,024 × 10⁻¹⁹ J.\nλ = hc / ΔE = 1,989 × 10⁻²⁵ / 3,024 × 10⁻¹⁹ ≈ **6,58 × 10⁻⁷ m, soit environ 658 nm** : lumière **visible, rouge**.\n\n2. ΔE = E₂ − E₁ = −3,40 − (−13,6) = **10,2 eV** ≈ 1,63 × 10⁻¹⁸ J.\nλ = 1,989 × 10⁻²⁵ / 1,63 × 10⁻¹⁸ ≈ **1,22 × 10⁻⁷ m, soit environ 122 nm** : **ultraviolet** (non visible).\n\n3. **Non.** Un atome ne peut absorber qu’une énergie égale à la **différence entre deux de ses niveaux**. Depuis n = 1, les transitions possibles demandent 10,2 eV (vers n = 2) ou 12,09 eV (vers n = 3) : 2,0 eV ne correspond à aucune. Le photon n’est pas absorbé.\n\n4. Les niveaux d’énergie d’un atome sont **quantifiés** et **propres à chaque élément** : chaque élément absorbe ou émet un jeu de longueurs d’onde qui lui est propre, via ΔE = hν. Les raies du spectre d’une étoile sont donc une **signature** : en les comparant aux raies connues des éléments (comme les raies de Fraunhofer du spectre solaire), on identifie les éléments présents dans son atmosphère sans s’y rendre.\n\n5. Au début, chaque photon arrive en **un point unique** de l’écran : comportement de **corpuscule**. Après des milliers d’impacts, leur accumulation reconstitue des **franges d’interférences** : comportement d’**onde**. La lumière relève donc des deux descriptions : c’est la **dualité onde-corpuscule** ; les deux modèles décrivent des aspects différents d’un même objet et sont tous deux indispensables."
+    }
+  ]
+}

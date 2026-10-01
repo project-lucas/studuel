@@ -5,12 +5,11 @@ import { cn } from '@/lib/utils'
 import { type Subject } from '@/lib/types'
 import { GRADE_CYCLES } from '@/lib/grades'
 import {
-  DAILY_GOALS,
   GOALS,
   GRADE_LABELS,
   SOURCES,
   gradeReassurance,
-  subjectsForGrade,
+  sectionsMatieres,
   type DailyGoalMinutes,
   type Goal,
   type OnboardingAnswers,
@@ -20,6 +19,9 @@ import {
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
 import { PORTRAIT_KEYS, portraitSrc, type PortraitKey } from '@/lib/portraits'
 import PencilLogo from './PencilLogo'
+import ChoixMatieres from './ChoixMatieres'
+import { titreAChoisir } from '@/lib/programme-classes'
+import ObjectifQuotidien from './ObjectifQuotidien'
 import OnbButton from './OnbButton'
 import {
   Bubble,
@@ -500,44 +502,6 @@ export function SchoolStep({
 // ---------------------------------------------------------------------------
 // Écran 7 — Matières (choix multiple)
 // ---------------------------------------------------------------------------
-function SubjectChip({
-  name,
-  selected,
-  onToggle,
-}: {
-  name: string
-  selected: boolean
-  onToggle: () => void
-}) {
-  const { pop, onPress, onAnimationEnd } = usePressFx()
-  return (
-    <button
-      type="button"
-      role="checkbox"
-      aria-checked={selected}
-      onClick={() => {
-        onPress()
-        onToggle()
-      }}
-      onAnimationEnd={onAnimationEnd}
-      className={cn(
-        'rounded-[18px] border-2 px-[16px] py-[11px] text-[14.5px] font-extrabold transition-colors active:translate-y-[2px]',
-        pop && 'onb-pop',
-      )}
-      style={{
-        borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
-        background: selected ? 'var(--onb-pp)' : '#fff',
-        color: selected ? '#fff' : 'var(--onb-ink)',
-        boxShadow: selected
-          ? '0 3px 0 var(--onb-ppd)'
-          : '0 3px 0 var(--onb-line-d)',
-      }}
-    >
-      {name}
-    </button>
-  )
-}
-
 export function SubjectsStep({
   subjects,
   answers,
@@ -547,23 +511,24 @@ export function SubjectsStep({
   answers: OnboardingAnswers
   onToggle: (slug: string) => void
 }) {
-  const ofLevel = subjectsForGrade(subjects, answers.grade)
+  const { obligatoires, aChoisir } = sectionsMatieres(subjects, answers.grade)
   return (
     <div className="flex flex-1 flex-col">
       <StepHead
-        title="Quelles matières bosser ?"
-        subtitle="Choisis-en autant que tu veux."
+        title="Tes matières"
+        subtitle={
+          aChoisir.length > 0
+            ? 'Celles de ta classe sont déjà cochées. Ajoute celles que tu as choisies.'
+            : 'Celles de ta classe sont déjà cochées. Vérifie et continue.'
+        }
       />
-      <div className="flex flex-wrap content-start gap-[10px] pt-6">
-        {ofLevel.map((s) => (
-          <SubjectChip
-            key={s.slug}
-            name={s.name}
-            selected={answers.subjects.includes(s.slug)}
-            onToggle={() => onToggle(s.slug)}
-          />
-        ))}
-      </div>
+      <ChoixMatieres
+        obligatoires={obligatoires}
+        aChoisir={aChoisir}
+        titreAChoisir={titreAChoisir(answers.grade)}
+        selected={answers.subjects}
+        onToggle={onToggle}
+      />
     </div>
   )
 }
@@ -581,46 +546,10 @@ export function DailyGoalStep({
   return (
     <div className="flex flex-1 flex-col">
       <StepHead
-        title="Ton objectif quotidien ?"
-        subtitle="Tu pourras le changer plus tard."
+        title="Combien de temps par jour ?"
+        subtitle="10 minutes chaque jour valent mieux que 2 heures la veille du contrôle."
       />
-      <div className="pt-6">
-        <OptionGroup label="Ton objectif quotidien">
-          {DAILY_GOALS.map((g) => {
-            const selected = answers.dailyGoalMinutes === g.minutes
-            return (
-              <OptionRow
-                key={g.minutes}
-                selected={selected}
-                onClick={() => onPick(g.minutes)}
-                label={g.label}
-                trailing={
-                  <div className="flex items-center gap-3">
-                    <span
-                      className="text-[13px] font-bold"
-                      style={{
-                        color: selected ? 'var(--onb-pp)' : 'var(--onb-mut)',
-                      }}
-                    >
-                      {g.hint}
-                    </span>
-                    <span
-                      className="shrink-0 rounded-full border-2"
-                      style={{
-                        width: 26,
-                        height: 26,
-                        borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
-                        background: selected ? 'var(--onb-pp)' : '#fff',
-                        boxShadow: selected ? 'inset 0 0 0 4px #fff' : undefined,
-                      }}
-                    />
-                  </div>
-                }
-              />
-            )
-          })}
-        </OptionGroup>
-      </div>
+      <ObjectifQuotidien choisi={answers.dailyGoalMinutes} onPick={onPick} />
     </div>
   )
 }

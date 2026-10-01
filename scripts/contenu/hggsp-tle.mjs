@@ -310,7 +310,7 @@ Le « **rêve chinois** » de Xi Jinping vise le « grand renouveau de la nation
 | Sonde sur la **face cachée de la Lune** | 2019 |
 | Retour d’**échantillons lunaires** (Chang’e 5) | 2020 |
 | **Rover** sur Mars | 2021 |
-| Station **Tiangong** habitée en continu | Depuis 2021 |
+| Station **Tiangong** habitée en continu | Depuis fin 2022 |
 | Système de navigation **Beidou** | Concurrent du GPS |
 
 > La Chine dispose d’une **chaîne complète** : lanceurs, satellites, station, programme lunaire habité. Ce que peu d’États peuvent dire.
@@ -1191,7 +1191,7 @@ Depuis les années 1990, la croissance repose de plus en plus sur l’**immatér
 
 | L’objectif européen | Son résultat |
 | Stratégie de **Lisbonne**, **2000** : devenir « l’économie de la connaissance la plus compétitive du monde » | — |
-| Une cible de **3 % du PIB** consacrés à la R&D | **Rarement atteinte** |
+| Une cible de **3 % du PIB** consacrés à la R&D, fixée à Barcelone en **2002** dans ce cadre | **Rarement atteinte** |
 
 ## Massification et inégalités
 | Constat | Sa portée |
@@ -1211,7 +1211,7 @@ Universités et États, mais aussi **entreprises** — les géants du numérique
           questions: [
             ['Quelle invention du milieu du XVe siècle accélère la diffusion des savoirs en Europe ?', ['L’imprimerie de Gutenberg', 'Le télescope', 'La machine à vapeur', 'Le papier'], 0, 'Elle rend possible une circulation des textes sans précédent.'],
             ['Quel modèle universitaire, né en 1810, associe enseignement et recherche ?', ['Le modèle Humboldt', 'Le modèle napoléonien', 'Le modèle d’Oxford', 'Le modèle jésuite'], 0, 'Il inspire les universités de recherche du monde entier.'],
-            ['Quel objectif de R&D la stratégie de Lisbonne fixe-t-elle en 2000 ?', ['3 % du PIB consacrés à la recherche', '10 % du PIB', '1 % du PIB', 'Aucun objectif chiffré'], 0, 'Un objectif que la plupart des États européens n’ont pas atteint.'],
+            ['Quel objectif de R&D l’Union se fixe-t-elle dans le cadre de la stratégie de Lisbonne ?', ['3 % du PIB consacrés à la recherche', '10 % du PIB', '1 % du PIB', 'Aucun objectif chiffré'], 0, 'Fixé au Conseil européen de Barcelone (2002), un objectif que la plupart des États européens n’ont pas atteint.'],
             ['Qu’est-ce que la fuite des cerveaux ?', ['Le départ de chercheurs qualifiés vers les pays les mieux dotés', 'La perte d’archives scientifiques', 'L’abandon des études supérieures', 'La fermeture de laboratoires'], 0, 'Elle prive les pays de départ du bénéfice de la formation qu’ils ont financée.'],
             ['Quelles lois rendent l’école primaire obligatoire et gratuite en France ?', ['Les lois Ferry (1881-1882)', 'La loi Guizot (1833)', 'La loi Haby (1975)', 'La loi Debré (1959)'], 0, 'Un jalon décisif de la diffusion du savoir à toute une société.'],
             ['Dans une économie de la connaissance, la croissance repose surtout sur l’immatériel.', ['Vrai', 'Faux'], 0, 'R&D, brevets, logiciels et formation en sont les principaux moteurs.'],
@@ -1336,7 +1336,7 @@ Les États-Unis en ont fait un **pilier** de leur influence.
 ## Une origine militaire devenue mondiale
 | Date | L’étape |
 | **1969** | **ARPANET**, issu d’un programme de recherche militaire américain |
-| **1989-1991** | Le **web**, inventé au CERN par Tim Berners-Lee et **donné au domaine public** |
+| **1989-1993** | Le **web**, inventé au CERN par Tim Berners-Lee (1989) et **versé au domaine public en 1993** |
 
 > Cette histoire explique le **poids durable des États-Unis** dans la gouvernance technique : ICANN, standards, entreprises dominantes.
 
@@ -1366,7 +1366,7 @@ Normes techniques partagées, coopération policière contre la cybercriminalit�
           },
           questions: [
             ['Quel réseau, ancêtre d’Internet, naît en 1969 d’un programme militaire américain ?', ['ARPANET', 'Minitel', 'Usenet', 'Ethernet'], 0, 'Cette origine explique le poids durable des États-Unis dans la gouvernance du réseau.'],
-            ['Qui invente le World Wide Web au CERN entre 1989 et 1991 ?', ['Tim Berners-Lee', 'Vinton Cerf', 'Steve Jobs', 'Alan Turing'], 0, 'Il choisit de le placer dans le domaine public, ce qui accélère sa diffusion.'],
+            ['Qui invente le World Wide Web au CERN entre 1989 et 1991 ?', ['Tim Berners-Lee', 'Vinton Cerf', 'Steve Jobs', 'Alan Turing'], 0, 'Le CERN verse ensuite le web dans le domaine public, en 1993, ce qui accélère sa diffusion.'],
             ['Quelles sont les trois couches du cyberespace ?', ['Matérielle, logicielle et sémantique', 'Publique, privée et militaire', 'Locale, nationale et mondiale', 'Fixe, mobile et satellitaire'], 0, 'La couche matérielle rappelle que le « virtuel » repose sur des câbles bien réels.'],
             ['Quel règlement européen de 2018 encadre la protection des données personnelles ?', ['Le RGPD', 'Le DSA', 'Le DMA', 'Le Cloud Act'], 0, 'L’Union européenne impose par la norme ce qu’elle ne domine pas par la technique.'],
             ['Qu’a révélé Edward Snowden en 2013 ?', ['Un système de surveillance de masse des communications', 'Une cyberattaque russe', 'Le code source de Windows', 'Un trafic de données médicales'], 0, 'Les révélations ont durablement pesé sur les relations entre alliés.'],

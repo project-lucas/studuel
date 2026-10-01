@@ -1,0 +1,2713 @@
+{
+ "niveau": "Tle",
+ "matiere": "biochimie-biologie-biotechnologie",
+ "exercices": [
+  {
+   "chapitre": "909b428e-56d4-5fee-a203-ad88d20f1681",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les notes de Samia",
+   "competence": "lire-tableau",
+   "situation": "Samia a passé l’écrit et l’épreuve pratique de la spécialité biotechnologies. Le tableau donne le poids de chaque partie et ses deux notes sur 20.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "La spécialité de Samia",
+     "colonnes": [
+      "Partie",
+      "Durée",
+      "Coefficient",
+      "Note /20"
+     ],
+     "lignes": [
+      [
+       "Écrite",
+       "3 h",
+       "7",
+       "12"
+      ],
+      [
+       "Pratique (ECE)",
+       "3 h",
+       "9",
+       "14"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche le coefficient de la partie qui pèse le plus dans la spécialité.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare les deux coefficients de la colonne du milieu.",
+     "explication": "L’épreuve pratique a le coefficient **9**, contre 7 pour l’écrit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des coefficients de la spécialité ?",
+     "reponse": 16,
+     "aide": "Additionne les deux coefficients du tableau.",
+     "explication": "7 + 9 = **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la note de spécialité de Samia : (12 × 7 + 14 × 9) ÷ 16. Arrondis au dixième.",
+     "reponse": 13.1,
+     "unite": "/20",
+     "tolerance": 0.05,
+     "aide": "Multiplie chaque note par son coefficient, additionne, puis divise par 16.",
+     "explication": "(84 + 126) ÷ 16 = 210 ÷ 16 = 13,125, soit **13,1** sur 20."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi sa note de spécialité est-elle plus proche de 14 que de 12 ?",
+     "options": [
+      "Le coefficient de la pratique est plus grand, donc sa note pèse davantage dans la moyenne",
+      "La pratique dure plus longtemps que l’écrit, donc elle compte davantage dans le total",
+      "La moyenne est toujours arrondie vers la note la plus haute des deux épreuves passées",
+      "Les deux notes ont le même coefficient, donc la moyenne tombe exactement entre les deux"
+     ],
+     "reponse": 0,
+     "aide": "Regarde comment le coefficient agit sur la moyenne.",
+     "explication": "Dans une moyenne pondérée, la note au **coefficient le plus fort** attire le résultat. Ici la pratique (9) l’emporte sur l’écrit (7) ; les durées sont pourtant égales (3 h)."
+    }
+   ]
+  },
+  {
+   "chapitre": "909b428e-56d4-5fee-a203-ad88d20f1681",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois heures, pas une minute de plus",
+   "competence": "resoudre",
+   "situation": "En ECE, tu disposes de 3 h pour tout faire. Yanis compare deux façons de s’organiser pour un dosage avec une incubation pendant laquelle il n’a rien à surveiller.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Les étapes du sujet de Yanis",
+     "colonnes": [
+      "Étape",
+      "Durée (min)",
+      "Présent à la paillasse ?"
+     ],
+     "lignes": [
+      [
+       "Préparer le milieu et les échantillons",
+       "20",
+       "Oui"
+      ],
+      [
+       "Incubation",
+       "40",
+       "Non"
+      ],
+      [
+       "Calculs de préparation (dilutions)",
+       "25",
+       "Oui"
+      ],
+      [
+       "Mesure",
+       "15",
+       "Oui"
+      ],
+      [
+       "Rangement et déchets",
+       "10",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’étape pendant laquelle Yanis peut faire autre chose.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Regarde la dernière colonne : cherche l’étape sans présence obligatoire.",
+     "explication": "Pendant l’**incubation**, rien ne demande sa présence : c’est le moment de faire les calculs de préparation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Yanis enchaîne toutes les étapes l’une après l’autre. Quelle est la durée totale, en minutes ?",
+     "reponse": 110,
+     "unite": "min",
+     "aide": "Additionne les cinq durées de la colonne du milieu.",
+     "explication": "20 + 40 + 25 + 15 + 10 = **110 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Il lance l’incubation et fait ses calculs de préparation pendant l’attente. Quelle est alors la durée totale, en minutes ?",
+     "reponse": 85,
+     "unite": "min",
+     "aide": "Les 25 min de calculs se passent à l’intérieur des 40 min d’incubation : elles ne s’ajoutent plus.",
+     "explication": "20 + 40 + 15 + 10 = **85 min** : il gagne 25 min."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la meilleure règle d’organisation à retenir pour l’ECE ?",
+     "options": [
+      "Lancer d’abord l’étape qui demande du temps, puis travailler pendant l’attente",
+      "Faire les étapes les plus courtes en premier pour avancer vite dans le sujet",
+      "Attendre la fin de l’incubation avant de commencer à lire le reste du sujet",
+      "Ranger la paillasse d’abord pour pouvoir travailler ensuite dans de bonnes conditions"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui se passe pendant que l’incubation tourne toute seule.",
+     "explication": "**Lancer en premier ce qui demande du temps** (incubation, cinétique) : on peut alors avancer sur les calculs pendant l’attente."
+    }
+   ]
+  },
+  {
+   "chapitre": "909b428e-56d4-5fee-a203-ad88d20f1681",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La grille de l’examinateur",
+   "competence": "analyser-document",
+   "situation": "Léa sort de son ECE. Elle a noté ce qu’elle a fait dans son carnet, et l’examinateur a rempli une grille sur 20. Croise les deux documents pour comprendre où elle a perdu des points.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le carnet de Léa",
+     "blocs": [
+      "Léa a lancé sa cinétique en premier, puis a préparé ses dilutions pendant l’attente. Elle a manipulé la culture sans ses [[e|lunettes]], a placé un témoin dans chaque série, puis a noté dans son compte rendu : concentration = [[r|0,45]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "grille",
+     "type": "tableau",
+     "titre": "La grille de l’examinateur",
+     "colonnes": [
+      "Compétence",
+      "Barème",
+      "Points de Léa"
+     ],
+     "lignes": [
+      [
+       "Prévention des risques",
+       "4",
+       "1"
+      ],
+      [
+       "Réalisation en autonomie",
+       "6",
+       "6"
+      ],
+      [
+       "Résultat et métrologie",
+       "5",
+       "3"
+      ],
+      [
+       "Interprétation",
+       "5",
+       "4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Barème inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche l’équipement de protection que Léa a oublié de porter.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche l’objet qui protège les yeux.",
+     "explication": "Les **lunettes** : la prévention s’annonce et se met en place avant de manipuler."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le résultat que Léa a écrit sans son unité.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Un résultat sans unité est incomplet : cherche le nombre seul.",
+     "explication": "**0,45** n’a pas d’unité (ni d’incertitude) : il lui manque sa dimension métrologique."
+    },
+    {
+     "type": "zone",
+     "document": "grille",
+     "enonce": "Touche la compétence où Léa perd le plus de points.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Pour chaque ligne, calcule barème − points de Léa.",
+     "explication": "Prévention : 4 − 1 = **3 points perdus**, contre 0, 2 et 1 pour les autres. Cela colle avec les lunettes oubliées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la note de Léa à la grille, sur 20 ?",
+     "reponse": 14,
+     "unite": "/20",
+     "aide": "Additionne la dernière colonne.",
+     "explication": "1 + 6 + 3 + 4 = **14** sur 20."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel conseil l’aiderait le plus pour son prochain ECE ?",
+     "options": [
+      "Annoncer ses mesures de prévention avant d’agir, puis écrire chaque résultat avec son unité",
+      "Travailler moins vite pour éviter toute erreur et vérifier chaque geste deux fois de suite",
+      "Supprimer le témoin pour gagner du temps et se concentrer sur la mesure principale",
+      "Ne noter les résultats qu’à la fin pour ne pas perdre de temps pendant les manipulations"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les deux oublis repérés dans son carnet.",
+     "explication": "Les deux points perdus viennent de la **prévention** et de l’**unité** : on les annonce et on les note dès le départ. Le témoin, lui, est indispensable."
+    }
+   ]
+  },
+  {
+   "chapitre": "db450763-6653-5ad5-bbf3-40a5d0ae5fde",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le coup de pouce de l’ATP",
+   "competence": "lire-tableau",
+   "situation": "La synthèse de la glutamine est une étape d’anabolisme. Le tableau donne l’enthalpie libre standard de trois réactions.",
+   "documents": [
+    {
+     "id": "dg",
+     "type": "tableau",
+     "titre": "Enthalpies libres standard",
+     "colonnes": [
+      "Réaction",
+      "ΔrG’° (kJ·mol⁻¹)"
+     ],
+     "lignes": [
+      [
+       "Glutamate + NH₄⁺ → glutamine",
+       "+14,2"
+      ],
+      [
+       "ATP + H₂O → ADP + Pi",
+       "−30,5"
+      ],
+      [
+       "Glucose-6-phosphate + H₂O → glucose + Pi",
+       "−13,8"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, conditions standard biologiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dg",
+     "enonce": "Touche la valeur de la réaction endergonique.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Une réaction endergonique a un ΔrG’° positif.",
+     "explication": "Seule la synthèse de la glutamine a un ΔrG’° **positif** (+14,2) : elle est endergonique, impossible seule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On couple la synthèse de la glutamine à l’hydrolyse de l’ATP. Quel est le ΔrG’° de la réaction couplée, en kJ·mol⁻¹ ?",
+     "reponse": -16.3,
+     "unite": "kJ·mol⁻¹",
+     "tolerance": 0.05,
+     "aide": "Additionne les deux ΔrG’° en gardant leur signe.",
+     "explication": "+14,2 + (−30,5) = **−16,3 kJ·mol⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire de la réaction couplée ?",
+     "options": [
+      "Elle est spontanée, car la somme des deux ΔrG’° est négative",
+      "Elle reste impossible, car l’un des deux ΔrG’° est positif au départ",
+      "Elle est spontanée, car l’ATP est consommé sans rien produire à la fin",
+      "Elle est impossible, car il faut toujours deux ΔrG’° de même signe"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le signe de la somme.",
+     "explication": "La somme est négative : la réaction couplée est **spontanée**. L’ATP « paie » l’endergonique."
+    }
+   ]
+  },
+  {
+   "chapitre": "db450763-6653-5ad5-bbf3-40a5d0ae5fde",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui donne ses électrons à qui ?",
+   "competence": "calculer",
+   "situation": "Les couples d’oxydoréduction du métabolisme se classent par potentiel standard apparent E’°. Les électrons vont spontanément du E’° le plus bas vers le E’° le plus haut. On prend F = 96 500 C·mol⁻¹ et n = 2.",
+   "documents": [
+    {
+     "id": "eo",
+     "type": "tableau",
+     "titre": "Potentiels standard apparents",
+     "colonnes": [
+      "Couple",
+      "E’° (V)"
+     ],
+     "lignes": [
+      [
+       "NAD⁺ / NADH",
+       "−0,32"
+      ],
+      [
+       "FAD / FADH₂ (libre)",
+       "−0,22"
+      ],
+      [
+       "Pyruvate / lactate",
+       "−0,19"
+      ],
+      [
+       "O₂ / H₂O",
+       "+0,82"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies à pH 7"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eo",
+     "enonce": "Touche le couple qui est le meilleur accepteur d’électrons.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Le meilleur accepteur a le E’° le plus haut.",
+     "explication": "Le couple **O₂ / H₂O** (+0,82 V) est le plus haut : c’est l’accepteur final de la respiration."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces couples dans l’ordre des E’° croissants : du meilleur donneur au meilleur accepteur.",
+     "items": [
+      "NAD⁺ / NADH",
+      "FAD / FADH₂",
+      "Pyruvate / lactate",
+      "O₂ / H₂O"
+     ],
+     "aide": "Compare les nombres : −0,32 est plus petit que −0,22.",
+     "explication": "Du plus bas au plus haut : −0,32 < −0,22 < −0,19 < +0,82."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le NADH réduit le pyruvate en lactate (ΔE’° = +0,13 V). Calcule ΔrG’° = −n × F × ΔE’°, en kJ·mol⁻¹, arrondi au dixième.",
+     "reponse": -25.1,
+     "unite": "kJ·mol⁻¹",
+     "tolerance": 0.2,
+     "aide": "Convertis les joules en kilojoules : −2 × 96 500 × 0,13 = … J.",
+     "explication": "−2 × 96 500 × 0,13 = −25 090 J ≈ **−25,1 kJ·mol⁻¹** : spontanée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le NADH cède ses électrons au dioxygène. ΔE’° = 0,82 − (−0,32). Calcule ΔrG’°, en kJ·mol⁻¹ arrondi à l’unité.",
+     "reponse": -220,
+     "unite": "kJ·mol⁻¹",
+     "tolerance": 1,
+     "aide": "Commence par ΔE’° = 1,14 V.",
+     "explication": "−2 × 96 500 × 1,14 ≈ −220 000 J = **−220 kJ·mol⁻¹** : bien plus exergonique que le pyruvate."
+    }
+   ]
+  },
+  {
+   "chapitre": "db450763-6653-5ad5-bbf3-40a5d0ae5fde",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien d’énergie récupère-t-on ?",
+   "competence": "modeliser",
+   "situation": "Un même glucose peut être oxydé par respiration ou par fermentation lactique. On compare l’énergie libérée et l’ATP fabriqué. L’énergie stockée par l’ATP se calcule à 30,5 kJ par mole d’ATP.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilans pour une mole de glucose",
+     "colonnes": [
+      "Voie",
+      "Énergie libérée (kJ)",
+      "ATP formés (mol)"
+     ],
+     "lignes": [
+      [
+       "Respiration",
+       "2840",
+       "30"
+      ],
+      [
+       "Fermentation lactique",
+       "196",
+       "2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies de manuels"
+    },
+    {
+     "id": "g",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Énergie libérée par mole de glucose",
+     "categories": [
+      "Respiration",
+      "Fermentation lactique"
+     ],
+     "series": [
+      {
+       "nom": "Énergie libérée",
+       "valeurs": [
+        2840,
+        196
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie libérée",
+      "unite": "kJ",
+      "min": 0,
+      "max": 3000,
+      "pas": 500
+     },
+     "axeX": {
+      "titre": "Voie métabolique"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la voie qui libère le plus d’énergie par glucose.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **respiration** libère 2 840 kJ, contre 196 kJ pour la fermentation : l’oxydation est complète."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est stockée dans l’ATP par la respiration (30 mol d’ATP × 30,5 kJ·mol⁻¹), en kJ ?",
+     "reponse": 915,
+     "unite": "kJ",
+     "tolerance": 1,
+     "aide": "Multiplie le nombre de moles d’ATP par 30,5.",
+     "explication": "30 × 30,5 = **915 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement de la respiration : énergie stockée ÷ énergie libérée ? Donne un pourcentage arrondi à l’unité.",
+     "reponse": 32,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise 915 par 2 840, puis multiplie par 100.",
+     "explication": "915 ÷ 2 840 ≈ 0,322, soit **32 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même calcul pour la fermentation lactique (2 mol d’ATP × 30,5 kJ·mol⁻¹ sur 196 kJ). Pourcentage arrondi à l’unité.",
+     "reponse": 31,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Énergie stockée : 2 × 30,5 = 61 kJ.",
+     "explication": "61 ÷ 196 ≈ 0,311, soit **31 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de la comparaison ?",
+     "options": [
+      "Les rendements sont voisins ; la respiration rapporte bien plus d’ATP car elle libère bien plus d’énergie",
+      "La fermentation a un bien meilleur rendement, car elle produit le moins de déchets à la fin",
+      "La respiration a un rendement deux fois plus grand, car elle fabrique trente fois plus d’ATP",
+      "Les deux voies libèrent la même énergie, mais la respiration en stocke beaucoup plus"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux pourcentages, puis les deux énergies libérées.",
+     "explication": "Rendements proches (**32 % et 31 %**) : la respiration gagne en **quantité** d’ATP parce que le glucose y est oxydé jusqu’au bout."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cd43b9-deac-5cc7-aab6-0a4a2b184a54",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la mitochondrie",
+   "competence": "observer-schema",
+   "situation": "Chez un eucaryote, l’oxydation du glucose commence hors de la mitochondrie et s’achève à l’intérieur. Le schéma montre une mitochondrie en coupe, avec trois repères lettrés.",
+   "documents": [
+    {
+     "id": "mito",
+     "type": "schema",
+     "titre": "Une mitochondrie en coupe (schéma simplifié)",
+     "largeur": 360,
+     "hauteur": 225,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 190,
+       "cy": 105,
+       "rx": 140,
+       "ry": 80,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 190,
+       "cy": 105,
+       "rx": 112,
+       "ry": 52,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 105,
+       "r": 11,
+       "texte": "A",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 40,
+       "r": 11,
+       "texte": "B",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 24,
+       "cy": 105,
+       "r": 11,
+       "texte": "C",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 205,
+       "texte": "Mitochondrie (coupe)",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mito",
+     "enonce": "Touche la lettre qui marque le lieu du cycle de Krebs.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le cycle de Krebs se déroule dans la matrice, à l’intérieur de la membrane interne.",
+     "explication": "Le cycle de Krebs a lieu dans la **matrice** (repère A), au cœur de la mitochondrie."
+    },
+    {
+     "type": "zone",
+     "document": "mito",
+     "enonce": "Touche la lettre qui marque l’espace où s’accumulent les protons pompés par la chaîne respiratoire.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cet espace est pris entre les deux membranes.",
+     "explication": "Les protons s’accumulent dans l’**espace intermembranaire** (repère B) : ce gradient fait ensuite tourner l’ATP synthase."
+    },
+    {
+     "type": "zone",
+     "document": "mito",
+     "enonce": "Touche la lettre qui marque le lieu de la glycolyse.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "La glycolyse se passe hors de la mitochondrie.",
+     "explication": "La glycolyse a lieu dans le **cytoplasme** (repère C), à l’extérieur de la mitochondrie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les protons refluent-ils vers la matrice par l’ATP synthase ?",
+     "options": [
+      "Ils suivent leur gradient et cette descente fournit l’énergie qui fabrique l’ATP",
+      "Ils sont attirés par le dioxygène, qui les consomme pour fabriquer de l’ATP directement",
+      "Ils sont chassés par le cycle de Krebs, qui les libère en grande quantité dans la matrice",
+      "Ils repartent vers la matrice pour y être transformés en CO₂ par l’ATP synthase"
+     ],
+     "reponse": 0,
+     "aide": "Un gradient est une réserve d’énergie qu’on libère en le laissant se vider.",
+     "explication": "Le reflux des protons selon leur **gradient électrochimique** actionne l’ATP synthase : c’est le couplage chimio-osmotique."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cd43b9-deac-5cc7-aab6-0a4a2b184a54",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La levure et le bioréacteur",
+   "competence": "calculer",
+   "situation": "Une brasserie et une fabrique de levure de boulanger utilisent la même levure. Le tableau donne les bilans pour 1 mol de glucose consommé selon la présence d’air.",
+   "documents": [
+    {
+     "id": "lev",
+     "type": "tableau",
+     "titre": "Bilan pour 1 mol de glucose",
+     "colonnes": [
+      "Conditions",
+      "ATP (mol)",
+      "CO₂ (mol)",
+      "Éthanol (mol)"
+     ],
+     "lignes": [
+      [
+       "Avec air",
+       "30",
+       "6",
+       "0"
+      ],
+      [
+       "Sans air",
+       "2",
+       "2",
+       "2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lev",
+     "enonce": "Touche la quantité d’éthanol produite sans air.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Lis la ligne « Sans air », dernière colonne.",
+     "explication": "Sans air, 1 mol de glucose donne **2 mol d’éthanol** (et 2 mol de CO₂)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour obtenir 6 mol d’éthanol, combien de moles de glucose faut-il fermenter ?",
+     "reponse": 3,
+     "unite": "mol",
+     "aide": "1 mol de glucose donne 2 mol d’éthanol.",
+     "explication": "6 ÷ 2 = **3 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une cuve respire 3 mol de glucose avec de l’air. Combien de moles d’ATP forme-t-elle ?",
+     "reponse": 90,
+     "unite": "mol",
+     "aide": "Multiplie 3 par la valeur de la ligne « Avec air ».",
+     "explication": "3 × 30 = **90 mol** d’ATP."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour fabriquer de l’éthanol, que fait le brasseur de l’alimentation en air ?",
+     "options": [
+      "Il la coupe, car la fermentation n’a pas besoin de dioxygène et donne de l’éthanol",
+      "Il l’augmente, car l’éthanol est un produit de l’oxydation complète du glucose",
+      "Il la maintient, car sans air la levure meurt et ne produit plus rien du tout",
+      "Il la règle au minimum, car le CO₂ est indispensable à la formation d’éthanol"
+     ],
+     "reponse": 0,
+     "aide": "Regarde dans le tableau quelle ligne produit de l’éthanol.",
+     "explication": "Sans air, la levure **fermente** et produit de l’éthanol. Avec air, elle respire : beaucoup d’ATP, donc de la biomasse."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cd43b9-deac-5cc7-aab6-0a4a2b184a54",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "À ATP égal, combien de glucose ?",
+   "competence": "raisonner",
+   "situation": "Pour vivre, une culture de levure a besoin de 30 mmol d’ATP par heure. On mesure ce qu’elle consomme avec et sans air. Les mêmes besoins en énergie : les consommations de glucose diffèrent-elles ?",
+   "documents": [
+    {
+     "id": "cult",
+     "type": "tableau",
+     "titre": "Mesures sur une heure",
+     "colonnes": [
+      "Conditions",
+      "Glucose consommé (mmol)",
+      "Éthanol produit (mmol)"
+     ],
+     "lignes": [
+      [
+       "Avec air",
+       "1",
+       "0"
+      ],
+      [
+       "Sans air",
+       "15",
+       "30"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures idéalisées"
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Rappels",
+     "blocs": [
+      "Respiration : environ 30 ATP par glucose.",
+      "Fermentation : 2 ATP par glucose."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cult",
+     "enonce": "Touche la consommation de glucose de la levure sans air.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Lis la ligne « Sans air », colonne du glucose.",
+     "explication": "Sans air, elle consomme **15 mmol** de glucose par heure, contre 1 mmol avec air."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ATP la culture forme-t-elle en une heure sans air, en mmol ?",
+     "reponse": 30,
+     "unite": "mmol",
+     "aide": "Multiplie les 15 mmol de glucose par 2 ATP.",
+     "explication": "15 × 2 = **30 mmol** : elle couvre tout juste ses besoins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ATP forme-t-elle avec air, en mmol ?",
+     "reponse": 30,
+     "unite": "mmol",
+     "aide": "Multiplie 1 mmol de glucose par 30 ATP.",
+     "explication": "1 × 30 = **30 mmol** : les mêmes besoins en énergie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la levure consomme-t-elle quinze fois plus de glucose sans air ?",
+     "options": [
+      "L’oxydation est partielle : chaque glucose rapporte bien moins d’ATP, il en faut donc beaucoup plus",
+      "Le glucose se dégrade plus vite sans air, donc une partie se perd sans être utilisée",
+      "Sans air, la levure fabrique de l’éthanol, qui consomme lui-même l’ATP formé en route",
+      "La glycolyse s’arrête sans air, et la cellule doit compenser en consommant plus de sucre"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les deux bilans : 2 ATP contre environ 30 ATP par glucose.",
+     "explication": "La fermentation n’oxyde **que partiellement** le glucose : 2 ATP par molécule au lieu de 30. À besoins égaux, il faut 15 fois plus de sucre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments dans la bonne voie.",
+     "categories": [
+      "Respiration",
+      "Fermentation"
+     ],
+     "items": [
+      [
+       "Le NADH est réoxydé par le dioxygène",
+       0
+      ],
+      [
+       "Le NADH est réoxydé par un dérivé du pyruvate",
+       1
+      ],
+      [
+       "Le carbone part en CO₂ dans le cycle de Krebs",
+       0
+      ],
+      [
+       "L’ATP synthase tourne grâce à un gradient de protons",
+       0
+      ],
+      [
+       "Le produit final est de l’éthanol ou du lactate",
+       1
+      ]
+     ],
+     "aide": "Demande-toi qui reçoit les électrons du NADH.",
+     "explication": "**Respiration** : accepteur externe (O₂), Krebs, chaîne respiratoire et ATP synthase. **Fermentation** : accepteur interne, produit final éthanol ou lactate."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e845b7-69a0-593a-b5bb-7dab619a02a8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans le chloroplaste",
+   "competence": "observer-schema",
+   "situation": "La photosynthèse se déroule en deux étapes, dans deux endroits différents du chloroplaste. Le schéma en montre une coupe, avec deux repères lettrés.",
+   "documents": [
+    {
+     "id": "chloro",
+     "type": "schema",
+     "titre": "Un chloroplaste en coupe (schéma simplifié)",
+     "largeur": 380,
+     "hauteur": 225,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 190,
+       "cy": 105,
+       "rx": 155,
+       "ry": 85,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 82,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 94,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 106,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 118,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 82,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 94,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 106,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 118,
+       "l": 70,
+       "h": 9,
+       "arrondi": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 106,
+       "r": 11,
+       "texte": "A",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 172,
+       "r": 11,
+       "texte": "B",
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 212,
+       "texte": "Chloroplaste (coupe)",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chloro",
+     "enonce": "Touche la lettre qui marque la membrane des thylakoïdes, où se déroule la chaîne photosynthétique.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Les thylakoïdes sont les petits sacs aplatis et empilés.",
+     "explication": "Le repère **A** est posé sur un empilement de **thylakoïdes** : la chaîne photosynthétique y fabrique O₂, NADPH et ATP."
+    },
+    {
+     "type": "zone",
+     "document": "chloro",
+     "enonce": "Touche la lettre qui marque le lieu du cycle de Calvin.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le cycle de Calvin se déroule dans le liquide qui entoure les thylakoïdes.",
+     "explication": "Le cycle de Calvin a lieu dans le **stroma** (repère B) : il fixe le CO₂."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque molécule à son rôle dans la photosynthèse.",
+     "paires": [
+      [
+       "O₂",
+       "libéré par l’oxydation de l’eau"
+      ],
+      [
+       "NADPH et ATP",
+       "fournis au cycle de Calvin"
+      ],
+      [
+       "CO₂",
+       "fixé dans le cycle de Calvin"
+      ]
+     ],
+     "aide": "Demande-toi ce qui entre et ce qui sort de chaque étape.",
+     "explication": "Le **dioxygène** vient de l’eau ; **NADPH et ATP** sortent de la chaîne photosynthétique ; le **CO₂** est fixé par le cycle de Calvin."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e845b7-69a0-593a-b5bb-7dab619a02a8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel est son type trophique ?",
+   "competence": "analyser-document",
+   "situation": "Trois micro-organismes sont étudiés pour choisir leur milieu de culture. On décrit un organisme par sa source d’énergie, sa source d’électrons et sa source de carbone.",
+   "documents": [
+    {
+     "id": "trop",
+     "type": "tableau",
+     "titre": "Trois micro-organismes",
+     "colonnes": [
+      "Organisme",
+      "Énergie",
+      "Électrons",
+      "Carbone"
+     ],
+     "lignes": [
+      [
+       "Cyanobactérie",
+       "lumière",
+       "eau (minéral)",
+       "CO₂"
+      ],
+      [
+       "Bactérie nitrifiante",
+       "réactions chimiques",
+       "ammonium (minéral)",
+       "CO₂"
+      ],
+      [
+       "Levure de boulanger",
+       "réactions chimiques",
+       "glucose (organique)",
+       "glucose"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trop",
+     "enonce": "Touche la source de carbone de la levure de boulanger.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Lis la ligne de la levure, dernière colonne.",
+     "explication": "La levure puise son carbone dans le **glucose** : c’est une molécule organique, donc la levure est hétérotrophe."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque organisme à son type trophique.",
+     "paires": [
+      [
+       "Cyanobactérie",
+       "photolithoautotrophe"
+      ],
+      [
+       "Bactérie nitrifiante",
+       "chimiolithoautotrophe"
+      ],
+      [
+       "Levure de boulanger",
+       "chimioorganohétérotrophe"
+      ]
+     ],
+     "aide": "Énergie (photo- ou chimio-), électrons (litho- ou organo-), carbone (auto- ou hétéro-).",
+     "explication": "La cyanobactérie utilise **la lumière**, l’eau et le CO₂ ; la nitrifiante, des réactions chimiques, un minéral et le CO₂ ; la levure, tout de la matière organique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la consigne pour cultiver la bactérie nitrifiante.",
+     "texte": "On lui donne de l’ammonium pour son ___ et du ___ pour son carbone, sans aucun sucre.",
+     "reponses": [
+      [
+       "énergie"
+      ],
+      [
+       "CO₂"
+      ]
+     ],
+     "banque": [
+      "énergie",
+      "CO₂",
+      "glucose",
+      "lumière"
+     ],
+     "aide": "Regarde sa ligne dans le tableau : énergie, puis carbone.",
+     "explication": "Elle tire son **énergie** de l’oxydation de l’ammonium et son carbone du **CO₂** : le sucre est inutile."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quel milieu la bactérie nitrifiante poussera-t-elle ?",
+     "options": [
+      "Un milieu minéral avec ammonium et CO₂, sans aucune source organique de carbone",
+      "Un milieu riche en glucose et en peptone, comme pour la levure de boulanger",
+      "Un milieu minéral sans ammonium, avec une forte lumière pour remplacer l’énergie",
+      "Un milieu sans CO₂ ni sucre, enrichi en ammonium et en extraits organiques"
+     ],
+     "reponse": 0,
+     "aide": "Elle est autotrophe : elle fabrique sa matière organique elle-même.",
+     "explication": "Une bactérie autotrophe se cultive sur un **milieu minéral** : l’ammonium sert d’énergie et de donneur d’électrons, le CO₂ de source de carbone."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0e845b7-69a0-593a-b5bb-7dab619a02a8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’azote d’un aquarium neuf",
+   "competence": "lire-graphique",
+   "situation": "Dans un aquarium neuf, on dose chaque semaine l’ammonium, les nitrites et les nitrates. Au-dessus de 0,5 mg·L⁻¹ de nitrites, les poissons sont en danger : on choisit ce seuil pour l’exercice.",
+   "documents": [
+    {
+     "id": "azote",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Formes de l’azote dans l’eau",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25",
+      "30"
+     ],
+     "series": [
+      {
+       "nom": "Ammonium NH₄⁺",
+       "valeurs": [
+        1,
+        4,
+        3,
+        1,
+        0.3,
+        0,
+        0
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Nitrites NO₂⁻",
+       "valeurs": [
+        0,
+        0.2,
+        3,
+        4,
+        2,
+        0.3,
+        0
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Nitrates NO₃⁻",
+       "valeurs": [
+        0,
+        0,
+        1,
+        5,
+        10,
+        15,
+        20
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "mg·L⁻¹",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Jours"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    },
+    {
+     "id": "seuil",
+     "type": "tableau",
+     "titre": "Repères pour les poissons",
+     "colonnes": [
+      "Forme",
+      "Jugement"
+     ],
+     "lignes": [
+      [
+       "Ammonium",
+       "toxique"
+      ],
+      [
+       "Nitrites",
+       "toxiques au-dessus de 0,5 mg·L⁻¹"
+      ],
+      [
+       "Nitrates",
+       "peu toxiques, absorbés par les plantes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Seuil choisi pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "azote",
+     "enonce": "Touche le jour où les nitrites sont à leur maximum.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Suis la courbe des nitrites : cherche son sommet.",
+     "explication": "Les nitrites culminent à **4 mg·L⁻¹ au jour 15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de relevés montrent des nitrites au-dessus du seuil de 0,5 mg·L⁻¹ ?",
+     "reponse": 3,
+     "aide": "Lis la courbe des nitrites aux jours 10, 15 et 20.",
+     "explication": "Aux jours **10, 15 et 20** (3 ; 4 ; 2 mg·L⁻¹) : trois relevés dépassent le seuil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en nitrates au jour 30 ?",
+     "reponse": 20,
+     "unite": "mg·L⁻¹",
+     "aide": "Lis la dernière valeur de la courbe des nitrates.",
+     "explication": "Les nitrates atteignent **20 mg·L⁻¹**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de ce démarrage dans l’ordre où elles se produisent dans l’aquarium.",
+     "items": [
+      "Les déjections sont minéralisées en ammonium",
+      "Des bactéries oxydent l’ammonium en nitrites",
+      "D’autres bactéries oxydent les nitrites en nitrates",
+      "Les plantes absorbent les nitrates"
+     ],
+     "aide": "Suis l’ordre des pics : ammonium, nitrites, nitrates.",
+     "explication": "L’ammonium apparaît d’abord (minéralisation), puis la **nitrification** en deux temps (NH₄⁺ → NO₂⁻ → NO₃⁻), enfin l’assimilation par les plantes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ajouter des bactéries nitrifiantes raccourcit-il la phase dangereuse ?",
+     "options": [
+      "Elles transforment plus vite l’ammonium et les nitrites toxiques en nitrates moins toxiques",
+      "Elles absorbent directement les nitrites toxiques qu’elles stockent ensuite dans leurs cellules",
+      "Elles libèrent des nitrites supplémentaires qui diluent la concentration d’ammonium toxique",
+      "Elles fixent le diazote de l’air, ce qui fait baisser la concentration d’ammonium toxique"
+     ],
+     "reponse": 0,
+     "aide": "Relie les bactéries nitrifiantes aux deux transformations de la courbe.",
+     "explication": "Les bactéries nitrifiantes accélèrent **NH₄⁺ → NO₂⁻ → NO₃⁻** : la zone dangereuse (ammonium, nitrites) est franchie plus vite. C’est de la bioremédiation."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8a92fb3-4576-57b0-a742-24749249c272",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vitesse initiale de la catalase",
+   "competence": "lire-graphique",
+   "situation": "Dans un extrait de foie, la catalase décompose le peroxyde d’hydrogène en dioxygène. On mesure la quantité de dioxygène formée au cours du temps.",
+   "documents": [
+    {
+     "id": "cine",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Dioxygène formé au cours du temps",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "O₂ formé",
+       "valeurs": [
+        0,
+        10,
+        20,
+        30,
+        38,
+        43,
+        46,
+        47
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité de O₂",
+      "unite": "µmol",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cine",
+     "enonce": "Touche le dernier point où la courbe est encore une droite.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "La courbe commence droite puis se courbe : cherche où elle s’infléchit.",
+     "explication": "Les points de 0 à 3 min sont alignés (+10 µmol par minute) : à partir de 4 min, la courbe s’infléchit. Dernier point droit : **3 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse initiale v₀ sur la partie droite, en µmol par minute.",
+     "reponse": 10,
+     "unite": "µmol·min⁻¹",
+     "aide": "v₀ = quantité formée ÷ durée, entre 0 et 3 min.",
+     "explication": "v₀ = 30 ÷ 3 = **10 µmol·min⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la vitesse diminue-t-elle après 3 minutes ?",
+     "options": [
+      "Le substrat se raréfie et le produit s’accumule, ce qui ralentit la réaction",
+      "L’enzyme se dénature dès la troisième minute, ce qui arrête peu à peu la réaction",
+      "Le produit formé devient un nouveau substrat qui entre en compétition avec l’enzyme",
+      "La température baisse spontanément, ce qui ralentit la réaction dans le tube de mesure"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui change dans le tube entre le début et la fin.",
+     "explication": "Le **substrat est consommé** et le produit s’accumule : la pente diminue. C’est pourquoi on ne mesure que la vitesse **initiale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8a92fb3-4576-57b0-a742-24749249c272",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Km et Vmax d’une enzyme",
+   "competence": "modeliser",
+   "situation": "On mesure la vitesse initiale d’une enzyme pour des concentrations croissantes de substrat. L’enzyme A est comparée à une enzyme B, de Km égal à 20 mmol·L⁻¹.",
+   "documents": [
+    {
+     "id": "mm",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse initiale selon la concentration en substrat",
+     "categories": [
+      "1",
+      "2",
+      "4",
+      "8",
+      "16",
+      "32",
+      "64"
+     ],
+     "series": [
+      {
+       "nom": "v₀",
+       "valeurs": [
+        12,
+        20,
+        30,
+        40,
+        48,
+        53,
+        56
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "v₀",
+      "unite": "µmol·min⁻¹",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "[S] (mmol·L⁻¹)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Estime Vmax, arrondie à la dizaine, à partir du plateau.",
+     "reponse": 60,
+     "unite": "µmol·min⁻¹",
+     "tolerance": 3,
+     "aide": "La courbe tend vers une valeur qu’elle n’atteint pas tout à fait.",
+     "explication": "La courbe se rapproche de **60 µmol·min⁻¹** : c’est Vmax."
+    },
+    {
+     "type": "zone",
+     "document": "mm",
+     "enonce": "Km est la concentration pour laquelle v₀ = Vmax ÷ 2. Touche le point qui correspond à Km.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Vmax ÷ 2 = 30 : cherche ce niveau sur la courbe.",
+     "explication": "v₀ = 30 µmol·min⁻¹ pour [S] = **4 mmol·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle concentration de substrat faut-il au moins pour être en substrat saturant (dix fois Km), en mmol·L⁻¹ ?",
+     "reponse": 40,
+     "unite": "mmol·L⁻¹",
+     "aide": "Km = 4 mmol·L⁻¹ : multiplie par 10.",
+     "explication": "10 × 4 = **40 mmol·L⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle enzyme a la plus grande affinité pour son substrat, A (Km = 4) ou B (Km = 20) ?",
+     "options": [
+      "L’enzyme A : un Km plus petit signifie qu’elle atteint Vmax ÷ 2 avec moins de substrat",
+      "L’enzyme B : un Km plus grand signifie qu’elle se fixe à son substrat avec plus de force",
+      "Les deux ont la même affinité, car elles ont la même vitesse maximale en saturation",
+      "On ne peut pas savoir, car l’affinité ne dépend pas de la valeur de Km de l’enzyme"
+     ],
+     "reponse": 0,
+     "aide": "Plus il faut de substrat pour atteindre Vmax ÷ 2, moins l’affinité est grande.",
+     "explication": "L’enzyme **A** a le plus petit Km : elle est à moitié saturée pour 4 mmol·L⁻¹ seulement, contre 20 pour B."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8a92fb3-4576-57b0-a742-24749249c272",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Chaleur, froid ou inhibiteur ?",
+   "competence": "experimenter",
+   "situation": "Un laboratoire étudie une enzyme. Il mesure son activité à plusieurs températures, puis teste quatre traitements. Chaque activité est donnée par rapport au témoin de même concentration en substrat.",
+   "documents": [
+    {
+     "id": "temp",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Activité selon la température",
+     "categories": [
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60",
+      "70"
+     ],
+     "series": [
+      {
+       "nom": "Activité",
+       "valeurs": [
+        20,
+        40,
+        70,
+        100,
+        60,
+        10,
+        0
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Activité relative",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Température (°C)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    },
+    {
+     "id": "trait",
+     "type": "tableau",
+     "titre": "Quatre traitements",
+     "colonnes": [
+      "Tube",
+      "Traitement",
+      "Activité (% du témoin)"
+     ],
+     "lignes": [
+      [
+       "B",
+       "Inhibiteur analogue du substrat, [S] faible",
+       "35"
+      ],
+      [
+       "C",
+       "Même inhibiteur, [S] très élevée",
+       "95"
+      ],
+      [
+       "D",
+       "10 min à 70 °C, puis retour à 40 °C",
+       "0"
+      ],
+      [
+       "E",
+       "10 min à 4 °C, puis retour à 40 °C",
+       "100"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’activité relative de l’enzyme à 60 °C ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Lis la courbe au-dessus de 60 °C.",
+     "explication": "À 60 °C l’activité est tombée à **10 %**."
+    },
+    {
+     "type": "zone",
+     "document": "trait",
+     "enonce": "Touche le tube qui montre qu’une chaleur excessive dénature l’enzyme de façon irréversible.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche le tube où l’activité ne revient pas après retour à 40 °C.",
+     "explication": "Le tube **D** reste à 0 % après retour à 40 °C : l’enzyme chauffée à 70 °C est dénaturée, pas seulement ralentie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tube E ?",
+     "options": [
+      "Le froid ralentit l’enzyme sans la détruire : l’activité revient à 40 °C",
+      "Le froid dénature l’enzyme, qui retrouve pourtant son activité grâce au substrat",
+      "Le froid active l’enzyme, qui devient plus efficace après un passage à 4 °C",
+      "Le froid fige l’enzyme définitivement, mais l’activité revient par un autre effet"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’activité du tube E au témoin à 100 %.",
+     "explication": "Après 4 °C puis retour à 40 °C, l’activité est **intacte** : le froid ralentit sans détruire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’inhibiteur agit-il beaucoup moins dans le tube C que dans le tube B ?",
+     "options": [
+      "Beaucoup de substrat supplante l’inhibiteur qui se fixe au même site actif que lui",
+      "Beaucoup de substrat dénature l’inhibiteur, qui ne peut plus se fixer sur l’enzyme",
+      "Beaucoup de substrat modifie la forme de l’enzyme, qui ne reconnaît plus l’inhibiteur",
+      "Beaucoup de substrat fait monter la température, ce qui détruit l’inhibiteur dans le tube"
+     ],
+     "reponse": 0,
+     "aide": "L’inhibiteur ressemble au substrat : tous deux visent la même poche.",
+     "explication": "Un analogue structural **entre en compétition** pour le site actif. Avec beaucoup de substrat, celui-ci gagne presque toujours : l’inhibition est levée (95 %)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan de l’étude.",
+     "texte": "Le froid ___ l’enzyme de façon réversible, la chaleur excessive la ___ de façon irréversible, et un analogue structural du substrat agit en ___ avec lui.",
+     "reponses": [
+      [
+       "ralentit"
+      ],
+      [
+       "dénature"
+      ],
+      [
+       "compétition"
+      ]
+     ],
+     "banque": [
+      "ralentit",
+      "dénature",
+      "compétition",
+      "active",
+      "hydrolyse",
+      "coopération"
+     ],
+     "aide": "Reprends les tubes E, D puis B et C.",
+     "explication": "Le froid **ralentit**, la chaleur **dénature**, l’inhibiteur analogue est en **compétition** avec le substrat."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee771525-1107-5fad-a399-111b7b16d496",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’écharde de Lina",
+   "competence": "analyser-texte",
+   "situation": "Une écharde dans le doigt : quelques heures plus tard, la zone change. Chaque signe de l’inflammation a une cause précise dans la réponse immunitaire innée.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le doigt de Lina",
+     "blocs": [
+      "Lina a une écharde sous la peau du doigt. Quelques heures plus tard, la zone est [[v|rouge]] et [[v|chaude]], elle est aussi [[o|gonflée]] et douloureuse."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les deux signes dus à la vasodilatation.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "La vasodilatation augmente l’afflux de sang : que voit-on, que sent-on ?",
+     "explication": "La vasodilatation amène plus de sang : la zone est **rouge** et **chaude**."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le signe dû à l’exsudation du plasma.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Le plasma sort des vaisseaux et s’accumule dans les tissus.",
+     "explication": "Le plasma qui s’accumule provoque le **gonflement** (œdème)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phénomène à son rôle dans la réaction inflammatoire.",
+     "paires": [
+      [
+       "Vasodilatation",
+       "rougeur et chaleur"
+      ],
+      [
+       "Exsudation",
+       "œdème"
+      ],
+      [
+       "Diapédèse",
+       "sortie des phagocytes des vaisseaux"
+      ],
+      [
+       "Chimiotactisme",
+       "attraction des phagocytes vers le foyer"
+      ]
+     ],
+     "aide": "Pense au sang, au plasma, puis aux cellules qui passent la paroi.",
+     "explication": "Vasodilatation → rougeur, chaleur ; exsudation → œdème ; diapédèse → traversée de la paroi ; chimiotactisme → attraction vers le foyer."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee771525-1107-5fad-a399-111b7b16d496",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sort des bactéries",
+   "competence": "lire-graphique",
+   "situation": "On mélange des macrophages et 100 000 bactéries, puis on compte les bactéries restées à l’extérieur des cellules et celles qui sont à l’intérieur (phagocytées), en milliers.",
+   "documents": [
+    {
+     "id": "phago",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Bactéries comptées au cours du temps",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Extérieur des macrophages",
+       "valeurs": [
+        100,
+        70,
+        40,
+        20,
+        10
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Intérieur des macrophages",
+       "valeurs": [
+        0,
+        20,
+        35,
+        25,
+        10
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Bactéries",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures idéalisées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phago",
+     "enonce": "Touche l’instant où les bactéries à l’intérieur des macrophages sont les plus nombreuses.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Suis la courbe des bactéries intérieures et cherche son sommet.",
+     "explication": "Le maximum est à **60 min** (35 milliers) : avant, l’endocytose l’emporte ; après, la digestion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des bactéries de départ a disparu de l’extérieur à 120 min ?",
+     "reponse": 90,
+     "unite": "%",
+     "aide": "De 100 à 10 milliers : calcule la baisse sur 100.",
+     "explication": "(100 − 10) ÷ 100 = **90 %** ont quitté le milieu extérieur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 120 min, combien de milliers de bactéries ont été détruites (départ − extérieur − intérieur) ?",
+     "reponse": 80,
+     "unite": "milliers",
+     "aide": "Calcule 100 − 10 − 10.",
+     "explication": "100 − 10 − 10 = **80 milliers** détruites."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les bactéries intérieures diminuent-elles après 60 minutes ?",
+     "options": [
+      "Les lysosomes fusionnent avec les phagosomes et leurs enzymes digèrent les bactéries",
+      "Les bactéries ressortent des macrophages par exocytose et rejoignent le milieu extérieur",
+      "Les macrophages se divisent, ce qui partage les bactéries entre leurs cellules filles",
+      "Les bactéries s’adaptent et quittent le macrophage en traversant la membrane sans dommage"
+     ],
+     "reponse": 0,
+     "aide": "Après l’endocytose vient l’étape de digestion.",
+     "explication": "Dans le phagosome, les **enzymes des lysosomes** digèrent les bactéries : c’est la phase de digestion de la phagocytose."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee771525-1107-5fad-a399-111b7b16d496",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une mycose après les antibiotiques",
+   "competence": "raisonner",
+   "situation": "Après dix jours d’antibiotiques, une patiente se plaint d’une mycose buccale. On compte les micro-organismes de sa bouche avant et après le traitement (unités formant colonies par mL de salive), puis on revoit les barrières de l’organisme.",
+   "documents": [
+    {
+     "id": "flore",
+     "type": "tableau",
+     "titre": "Comptages de la flore buccale",
+     "colonnes": [
+      "Micro-organisme",
+      "Avant (UFC/mL)",
+      "Après (UFC/mL)"
+     ],
+     "lignes": [
+      [
+       "Bactéries commensales",
+       "1 000 000",
+       "10 000"
+      ],
+      [
+       "Levure Candida albicans",
+       "100",
+       "100 000"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs inventées pour l’exercice"
+    },
+    {
+     "id": "barr",
+     "type": "tableau",
+     "titre": "Barrières de l’organisme",
+     "colonnes": [
+      "Barrière",
+      "Mode d’action"
+     ],
+     "lignes": [
+      [
+       "Épithélium",
+       "cellules jointives"
+      ],
+      [
+       "Mucus et cils",
+       "piègent et évacuent"
+      ],
+      [
+       "pH acide",
+       "milieu défavorable"
+      ],
+      [
+       "Lysozyme",
+       "hydrolyse le peptidoglycane"
+      ],
+      [
+       "Microbiote",
+       "occupe place et nutriments"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flore",
+     "enonce": "Touche le comptage de Candida albicans après le traitement.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne de la levure, colonne « Après ».",
+     "explication": "Après le traitement, on compte **100 000 UFC/mL** de Candida."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le nombre de Candida a-t-il été multiplié ?",
+     "reponse": 1000,
+     "aide": "Divise 100 000 par 100.",
+     "explication": "100 000 ÷ 100 = **1 000**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque barrière dans sa famille.",
+     "categories": [
+      "Physique",
+      "Chimique",
+      "Biologique"
+     ],
+     "items": [
+      [
+       "Épithélium aux cellules jointives",
+       0
+      ],
+      [
+       "Mucus qui piège les particules",
+       0
+      ],
+      [
+       "pH acide",
+       1
+      ],
+      [
+       "Lysozyme",
+       1
+      ],
+      [
+       "Microbiote",
+       2
+      ]
+     ],
+     "aide": "Demande-toi : obstacle matériel, molécule ou milieu, ou autres êtres vivants ?",
+     "explication": "**Physique** : épithélium, mucus. **Chimique** : pH acide, lysozyme. **Biologique** : le microbiote, qui occupe la place."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer la mycose ?",
+     "options": [
+      "Les antibiotiques ont réduit le microbiote, et la levure opportuniste a profité de la place libre",
+      "Les antibiotiques ont rendu la levure résistante, donc elle se multiplie malgré le microbiote",
+      "Les antibiotiques ont supprimé le lysozyme, donc la levure peut attaquer la paroi bactérienne",
+      "Les antibiotiques ont activé les phagocytes, qui ont favorisé la multiplication de la levure"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que devient la flore bactérienne dans le tableau.",
+     "explication": "Les antibiotiques ont fait chuter le **microbiote** (÷ 100) : la levure, **opportuniste**, occupe la place. Les antibiotiques ne visent pas les levures."
+    }
+   ]
+  },
+  {
+   "chapitre": "74c25b99-580c-55e5-b64c-b83beac9c879",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un anticorps en Y",
+   "competence": "observer-schema",
+   "situation": "Un anticorps est une molécule en Y. Le schéma en montre la forme simplifiée : les deux extrémités des bras portent les points de reconnaissance de l’antigène.",
+   "documents": [
+    {
+     "id": "anticorps",
+     "type": "schema",
+     "titre": "Un anticorps (schéma simplifié)",
+     "largeur": 340,
+     "hauteur": 225,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        195
+       ],
+       "a": [
+        170,
+        115
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        115
+       ],
+       "a": [
+        110,
+        50
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        115
+       ],
+       "a": [
+        230,
+        50
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 50,
+       "r": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 50,
+       "r": 10,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 215,
+       "texte": "Anticorps (vue simplifiée)",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "anticorps",
+     "enonce": "Touche les deux extrémités qui se lient à l’antigène (les paratopes).",
+     "reponse": [
+      "p1",
+      "p2"
+     ],
+     "multiple": true,
+     "aide": "Les paratopes sont au bout des bras du Y.",
+     "explication": "Les **paratopes** sont à l’extrémité des deux bras : chacun se lie à un épitope de l’antigène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chaque anticorps porte deux paratopes. Combien d’antigènes au maximum peuvent être liés par 50 anticorps ?",
+     "reponse": 100,
+     "aide": "Multiplie le nombre d’anticorps par celui de paratopes.",
+     "explication": "50 × 2 = **100** points de liaison."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un virus recouvert d’anticorps ne peut plus se fixer sur sa cellule cible. De quel rôle s’agit-il ?",
+     "options": [
+      "La neutralisation, car les anticorps masquent les molécules du virus utiles à l’infection",
+      "L’opsonisation, car les anticorps détruisent eux-mêmes le virus qu’ils ont reconnu",
+      "La lyse, car les anticorps percent la membrane du virus avec la perforine qu’ils portent",
+      "La présentation antigénique, car les anticorps exposent le virus sur le CMH des cellules"
+     ],
+     "reponse": 0,
+     "aide": "Le virus est couvert : il ne peut plus se fixer. Comment appelle-t-on ce blocage ?",
+     "explication": "C’est la **neutralisation** : l’anticorps bloque le virus. L’opsonisation, elle, facilite la phagocytose."
+    }
+   ]
+  },
+  {
+   "chapitre": "74c25b99-580c-55e5-b64c-b83beac9c879",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chef d’orchestre des lymphocytes",
+   "competence": "analyser-document",
+   "situation": "Une cellule dendritique vient de phagocyter un virus. Le schéma en chaîne résume les premières étapes de la réponse adaptative, et le tableau donne les marqueurs des lymphocytes.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La dendritique présente un peptide au CMH"
+      },
+      {
+       "id": "n2",
+       "texte": "Le TCR d’un lymphocyte T4 reconnaît le complexe"
+      },
+      {
+       "id": "n3",
+       "texte": "Le T4 se multiplie : un clone"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "lym",
+     "type": "tableau",
+     "titre": "Les lymphocytes",
+     "colonnes": [
+      "Lymphocyte",
+      "Marqueur",
+      "Devient"
+     ],
+     "lignes": [
+      [
+       "B",
+       "—",
+       "plasmocyte"
+      ],
+      [
+       "T4",
+       "CD4",
+       "T auxiliaire"
+      ],
+      [
+       "T8",
+       "CD8",
+       "T cytotoxique"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lym",
+     "enonce": "Touche le marqueur du lymphocyte T4.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Lis la ligne du T4, colonne « Marqueur ».",
+     "explication": "Le T4 porte le marqueur **CD4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remplace le « ? » dans la chaîne ?",
+     "options": [
+      "Il sécrète des messagers qui activent les lymphocytes T8 et B",
+      "Il sécrète des anticorps qui neutralisent directement le virus",
+      "Il lyse lui-même les cellules infectées avec la perforine qu’il produit",
+      "Il phagocyte le virus libre, qu’il présente ensuite sur le CMH"
+     ],
+     "reponse": 0,
+     "aide": "Le T4 devient « T auxiliaire » : que fait-il pour aider ?",
+     "explication": "Le T auxiliaire sécrète des **interleukines** qui aident les T8 à devenir cytotoxiques et les B à devenir plasmocytes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cellule à son action.",
+     "paires": [
+      [
+       "Cellule dendritique",
+       "présente le peptide sur le CMH"
+      ],
+      [
+       "T auxiliaire",
+       "sécrète des messagers"
+      ],
+      [
+       "T cytotoxique",
+       "lyse les cellules infectées"
+      ],
+      [
+       "Plasmocyte",
+       "sécrète des anticorps"
+      ]
+     ],
+     "aide": "Une cellule présente, une aide, une tue, une fabrique des anticorps.",
+     "explication": "Dendritique → présente ; T4 → messagers ; T8 → lyse par perforine-granzymes ; plasmocyte → anticorps."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le lymphocyte T reconnaît un peptide présenté par le ___ grâce à son ___ ; seul le lymphocyte adapté se multiplie : l’activation est ___.",
+     "reponses": [
+      [
+       "CMH"
+      ],
+      [
+       "TCR"
+      ],
+      [
+       "monoclonale"
+      ]
+     ],
+     "banque": [
+      "CMH",
+      "TCR",
+      "monoclonale",
+      "BCR",
+      "polyclonale",
+      "lysozyme"
+     ],
+     "aide": "Le peptide est présenté sur une glycoprotéine ; le T a son propre récepteur.",
+     "explication": "Peptide présenté par le **CMH**, reconnu par le **TCR** ; un seul clone se multiplie : activation **monoclonale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "74c25b99-580c-55e5-b64c-b83beac9c879",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lire un sérodiagnostic",
+   "competence": "lire-graphique",
+   "situation": "Après une infection, on dose dans le sang deux types d’anticorps spécifiques (unités arbitraires). Trois patients sont ensuite testés : on veut dater leur infection.",
+   "documents": [
+    {
+     "id": "sero",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Anticorps après un premier contact",
+     "categories": [
+      "0",
+      "7",
+      "14",
+      "21",
+      "28",
+      "35",
+      "42"
+     ],
+     "series": [
+      {
+       "nom": "IgM",
+       "valeurs": [
+        0,
+        30,
+        80,
+        50,
+        20,
+        5,
+        0
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "IgG",
+       "valeurs": [
+        0,
+        2,
+        30,
+        70,
+        90,
+        95,
+        95
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Anticorps spécifiques",
+      "unite": "unités arbitraires",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Jours après l’infection"
+     },
+     "valeurs": false,
+     "source": "Courbes idéalisées"
+    },
+    {
+     "id": "pat",
+     "type": "tableau",
+     "titre": "Trois patients",
+     "colonnes": [
+      "Patient",
+      "IgM",
+      "IgG"
+     ],
+     "lignes": [
+      [
+       "A",
+       "élevées",
+       "faibles"
+      ],
+      [
+       "B",
+       "absentes",
+       "élevées"
+      ],
+      [
+       "C",
+       "absentes",
+       "absentes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sero",
+     "enonce": "Touche le jour où les IgM sont à leur maximum.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Suis la courbe des IgM et cherche son sommet.",
+     "explication": "Les IgM culminent au jour **14** (80 unités), puis diminuent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le niveau des IgG au jour 28 ?",
+     "reponse": 90,
+     "unite": "unités",
+     "aide": "Lis la courbe des IgG au-dessus du jour 28.",
+     "explication": "Au jour 28, les IgG sont à **90 unités**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque patient à son interprétation.",
+     "paires": [
+      [
+       "Patient A",
+       "infection récente"
+      ],
+      [
+       "Patient B",
+       "infection ancienne ou vaccination"
+      ],
+      [
+       "Patient C",
+       "aucun contact avec l’antigène"
+      ]
+     ],
+     "aide": "Les IgM apparaissent d’abord et disparaissent ; les IgG durent.",
+     "explication": "A : IgM élevées → **infection récente**. B : IgG seules → **ancienne ou vaccinale**. C : rien → **pas de contact**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il si le patient B rencontre de nouveau l’antigène ?",
+     "options": [
+      "Une réponse secondaire rapide et forte, grâce aux lymphocytes mémoire, avec surtout des IgG",
+      "Une réponse identique à la première, aussi lente, car chaque contact repart de zéro",
+      "Aucune réponse, car les IgG déjà présentes bloquent l’entrée de tout nouvel antigène",
+      "Une réponse rapide mais faible, car seul le lysozyme est mis en œuvre à ce moment"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux lymphocytes mémoire formés au premier contact.",
+     "explication": "Les **lymphocytes mémoire** déclenchent en quelques jours une réponse secondaire plus forte, à base d’IgG."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e8a9e4f-b724-518f-bb49-0cede682381a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un outil souillé de terre",
+   "competence": "analyser-texte",
+   "situation": "Tom se coupe avec une bêche sale. Il n’a jamais été vacciné contre le tétanos. Le médecin lui parle au téléphone avec sa mère.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Médecin",
+       "emoji": "🧑‍⚕️",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maman",
+       "texte": "Tom s’est coupé avec une bêche rouillée et il n’est jamais vacciné contre le tétanos."
+      },
+      {
+       "qui": "Médecin",
+       "texte": "Je lui injecte tout de suite des [[s|immunoglobulines]] : elles protègent immédiatement."
+      },
+      {
+       "qui": "Médecin",
+       "texte": "Je fais aussi une première dose de [[v|vaccin]] pour le protéger durablement."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui désigne la protection immédiate.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Ce sont des anticorps prêtés, pas un vaccin.",
+     "explication": "Les **immunoglobulines** sont des anticorps injectés : protection immédiate mais courte (sérothérapie)."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui désigne ce qui construit une mémoire immunitaire.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Ce qui fait produire ses propres anticorps à l’enfant.",
+     "explication": "Le **vaccin** (une anatoxine) fait fabriquer des anticorps et des lymphocytes mémoire à Tom."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque propriété dans la bonne méthode.",
+     "categories": [
+      "Vaccination",
+      "Sérothérapie"
+     ],
+     "items": [
+      [
+       "Protection durable",
+       0
+      ],
+      [
+       "Effet immédiat",
+       1
+      ],
+      [
+       "L’enfant fabrique ses anticorps",
+       0
+      ],
+      [
+       "Anticorps prêtés, éliminés en quelques semaines",
+       1
+      ],
+      [
+       "Laisse des lymphocytes mémoire",
+       0
+      ]
+     ],
+     "aide": "Demande-toi : qui fabrique les anticorps ?",
+     "explication": "**Vaccination** : active, durable, mémoire. **Sérothérapie** : passive, immédiate, courte, sans mémoire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le médecin fait-il les deux ?",
+     "options": [
+      "Les anticorps protègent tout de suite ; le vaccin prendra le relais avec une protection durable",
+      "Les anticorps remplacent le vaccin, qui est injecté pour vérifier que l’enfant le supporte",
+      "Le vaccin agit immédiatement, tandis que les anticorps assurent une protection pour dix ans",
+      "Les deux ont le même effet, donc un seul suffirait, mais on double pour plus de sécurité"
+     ],
+     "reponse": 0,
+     "aide": "Un sérum est rapide mais court ; un vaccin est lent mais long.",
+     "explication": "Les immunoglobulines couvrent le **délai** des premières semaines, le vaccin construit la **protection durable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e8a9e4f-b724-518f-bb49-0cede682381a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Que contient le vaccin ?",
+   "competence": "analyser-document",
+   "situation": "Un centre de santé publique affiche la composition de quelques vaccins. On veut les classer par type et comprendre pourquoi certains demandent un adjuvant.",
+   "documents": [
+    {
+     "id": "vacc",
+     "type": "tableau",
+     "titre": "Composition de cinq vaccins",
+     "colonnes": [
+      "Vaccin",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Rougeole-oreillons-rubéole",
+       "virus vivants affaiblis"
+      ],
+      [
+       "Poliomyélite injectable",
+       "virus entiers tués"
+      ],
+      [
+       "Hépatite B",
+       "une protéine de surface du virus"
+      ],
+      [
+       "Tétanos",
+       "toxine rendue inoffensive"
+      ],
+      [
+       "Covid-19 à ARNm",
+       "ARN messager du pathogène"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Composition simplifiée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vacc",
+     "enonce": "Touche le vaccin qui contient des micro-organismes vivants.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche « vivants » dans la colonne Contenu.",
+     "explication": "Le vaccin **rougeole-oreillons-rubéole** contient des virus vivants affaiblis (vaccin vivant atténué)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque vaccin à son type.",
+     "paires": [
+      [
+       "Rougeole-oreillons-rubéole",
+       "vivant atténué"
+      ],
+      [
+       "Poliomyélite injectable",
+       "inactivé"
+      ],
+      [
+       "Hépatite B",
+       "sous-unitaire"
+      ],
+      [
+       "Tétanos",
+       "anatoxine"
+      ]
+     ],
+     "aide": "Le type dit si le pathogène est entier, vivant, partiel ou sa toxine.",
+     "explication": "Virus vivants affaiblis → **atténué** ; virus tués → **inactivé** ; une protéine → **sous-unitaire** ; toxine inactivée → **anatoxine**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ajoute-t-on souvent un adjuvant au vaccin de l’hépatite B ?",
+     "options": [
+      "Une seule protéine déclenche une réponse faible : l’adjuvant stimule l’immunité innée",
+      "Une seule protéine est toxique : l’adjuvant en atténue les effets avant l’injection",
+      "Une seule protéine se dégrade vite : l’adjuvant la conserve au froid pendant un an",
+      "Une seule protéine est vivante : l’adjuvant la tue avant qu’elle ne se multiplie"
+     ],
+     "reponse": 0,
+     "aide": "Une molécule seule est peu immunogène.",
+     "explication": "Un antigène seul est **peu immunogène** : l’adjuvant renforce la réponse en stimulant l’immunité innée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le vaccin à ARNm.",
+     "texte": "Un vaccin à ARNm apporte l’___ qui fait produire l’___ par nos propres cellules.",
+     "reponses": [
+      [
+       "information"
+      ],
+      [
+       "antigène"
+      ]
+     ],
+     "banque": [
+      "information",
+      "antigène",
+      "anticorps",
+      "adjuvant"
+     ],
+     "aide": "Il n’apporte pas l’antigène lui-même.",
+     "explication": "Il apporte l’**information** (l’ARNm) qui fait fabriquer l’**antigène** par nos cellules."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e8a9e4f-b724-518f-bb49-0cede682381a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La rougeole revient",
+   "competence": "raisonner",
+   "situation": "Dans une région imaginaire, on suit six années la couverture vaccinale contre la rougeole et le nombre de cas déclarés. Comment relier les deux ?",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Cas de rougeole déclarés",
+     "categories": [
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+     ],
+     "series": [
+      {
+       "nom": "Cas",
+       "valeurs": [
+        40,
+        70,
+        160,
+        420,
+        900,
+        1500
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de cas",
+      "unite": "cas par an",
+      "min": 0,
+      "max": 1600,
+      "pas": 400
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Données inventées pour l’exercice"
+    },
+    {
+     "id": "couv",
+     "type": "tableau",
+     "titre": "Couverture vaccinale",
+     "colonnes": [
+      "Année",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+     ],
+     "lignes": [
+      [
+       "Couverture (%)",
+       "95",
+       "93",
+       "90",
+       "86",
+       "82",
+       "80"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche la première année où le nombre de cas dépasse 1 000.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche la barre qui dépasse le niveau 1 000.",
+     "explication": "En **2022**, 1 500 cas : c’est la seule barre au-dessus de 1 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la couverture vaccinale a-t-elle baissé entre 2017 et 2022 ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Soustrais la couverture de 2022 à celle de 2017.",
+     "explication": "95 − 80 = **15 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le nombre de cas a-t-il été multiplié entre 2017 et 2022 ? Arrondis au dixième.",
+     "reponse": 37.5,
+     "tolerance": 0.05,
+     "aide": "Divise 1 500 par 40.",
+     "explication": "1 500 ÷ 40 = **37,5** fois plus de cas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment interpréter ces deux documents ?",
+     "options": [
+      "Quand la couverture baisse, le virus circule mieux et la maladie réapparaît : c’est une résurgence",
+      "Quand la couverture baisse, le virus perd sa virulence et le nombre de cas devrait diminuer",
+      "La couverture n’a aucun lien avec le nombre de cas, qui évolue pour des raisons indépendantes",
+      "La hausse des cas prouve que le vaccin ne protège pas ceux qui l’ont reçu, même à jour"
+     ],
+     "reponse": 0,
+     "aide": "Mets côte à côte les deux tendances.",
+     "explication": "Couverture en baisse, cas en hausse : c’est la **résurgence** d’une maladie qu’on croyait maîtrisée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un nourrisson trop jeune pour être vacciné est-il mieux protégé quand la couverture est de 95 % ou de 80 % ?",
+     "options": [
+      "À 95 %, car le virus circule mal et il rencontre donc beaucoup moins souvent le virus",
+      "À 80 %, car il est alors plus souvent exposé et développe lui-même ses anticorps",
+      "Aucune différence, car seule la vaccination personnelle compte pour sa protection",
+      "À 80 %, car un virus qui circule beaucoup s’affaiblit et devient moins dangereux"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la protection collective.",
+     "explication": "Plus la couverture est haute, plus le virus circule mal : la **protection collective** protège ceux qui ne peuvent pas être vaccinés."
+    }
+   ]
+  }
+ ]
+}

@@ -1,4 +1,5 @@
 import type { DocGraphique, Teinte } from '@/lib/exercices/types'
+import { cheminLisse } from '@/lib/exercices/courbe-lisse'
 import { cn } from '@/lib/utils'
 import { couleur, etatCible, fondCible, nombreFr, propsCible, traitCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
@@ -137,7 +138,8 @@ export function Graphique({ doc, zones }: { doc: DocGraphique; zones?: ZonesDoc 
               const teinte = serie.teinte ?? TEINTES_SERIES[k]
               const pts = serie.valeurs
                 .map((v, i) => (v === null ? null : ([px(i), y(v)] as const)))
-              const d = pts.reduce((acc, p, i) => (p ? `${acc}${acc && pts[i - 1] ? 'L' : 'M'}${p[0]} ${p[1]}` : acc), '')
+              // Tracé lisse et monotone : 9 points d'oscillogramme ne font plus des dents de scie.
+              const d = cheminLisse(pts)
               return (
                 <g key={k}>
                   <path d={d} fill="none" style={{ stroke: couleur(teinte) }} strokeWidth={2.6} strokeLinejoin="round" strokeLinecap="round" />

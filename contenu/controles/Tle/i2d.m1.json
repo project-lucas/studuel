@@ -1,0 +1,1310 @@
+{
+  "niveau": "Tle",
+  "matiere": "i2d",
+  "sujets": [
+    {
+      "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+      "difficulte": 1,
+      "titre": "Le lampadaire solaire du chemin piéton",
+      "consigne": "Lis l'extrait du cahier des charges, puis réponds à chaque question en t'appuyant sur le vocabulaire du cours.",
+      "enonce": "**Situation.** Une commune veut équiper un chemin piéton de lampadaires solaires autonomes. Voici un extrait du diagramme d'exigences (req) et de ses relations.\n\n> **Exigence 1** « Éclairer le chemin piéton »\n> - contient **1.1** « Éclairer toute la nuit » — critère : 12 h d'éclairage\n> - contient **1.2** « Résister aux intempéries » — critère : fonctionner de −10 °C à 40 °C\n>\n> **Exigence 1.1.1** « Stocker 240 Wh » — relation **deriveReqt** vers 1.1\n> Bloc **Batterie 12 V** — relation **satisfy** vers 1.1.1\n> Essai **Test en chambre climatique** — relation **verify** vers 1.2\n\n1. Explique le sens de chacune des quatre relations présentes dans l'extrait (contient, deriveReqt, satisfy, verify), en t'appuyant sur les éléments du lampadaire.\n2. Deux essais sont prévus : (a) on mesure au banc que la batterie stocke bien 240 Wh ; (b) on fait marcher des promeneurs de nuit sur le chemin pour savoir s'ils se sentent suffisamment éclairés. Pour chacun, dis s'il s'agit d'une **vérification** ou d'une **validation**, et justifie.\n3. Cite deux parties prenantes autres que l'usager dont il faut tenir compte, et donne pour chacune une exigence qu'elle pourrait imposer.",
+      "bareme": [
+        {
+          "critere": "Sens correct des quatre relations, illustré par les éléments du lampadaire",
+          "points": 8
+        },
+        {
+          "critere": "Essai (a) classé en vérification et essai (b) en validation, avec justification spécification / besoin",
+          "points": 6
+        },
+        {
+          "critere": "Deux parties prenantes pertinentes avec une exigence plausible pour chacune",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les relations :\n- **contient** : l'exigence 1 se décompose en sous-exigences 1.1 et 1.2 ;\n- **deriveReqt** : l'exigence technique 1.1.1 (stocker 240 Wh) découle de l'exigence de plus haut niveau 1.1 (éclairer toute la nuit) ;\n- **satisfy** : le bloc Batterie 12 V répond à l'exigence 1.1.1 ;\n- **verify** : l'essai en chambre climatique contrôle l'exigence 1.2.\n2. (a) C'est une **vérification** : on contrôle qu'un constituant (la batterie) respecte sa **spécification** (240 Wh). (b) C'est une **validation** : on regarde si le système répond au **besoin** de l'usager (se sentir éclairé sur le chemin). On vérifie par rapport aux spécifications, on valide par rapport au besoin.\n3. Exemples attendus (deux suffisent) :\n- le **mainteneur** : changer la batterie sans outil spécial, en moins de 15 min ;\n- le **gestionnaire** (la commune) : coût d'entretien limité, suivi du fonctionnement ;\n- la **réglementation** : aucune partie sous tension accessible, normes électriques ;\n- l'**environnement** : résister au vandalisme et aux intempéries.\nOublier une partie prenante, c'est oublier une exigence."
+    },
+    {
+      "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+      "difficulte": 2,
+      "titre": "Quel chargeur pour la station de trottinettes ?",
+      "consigne": "Pour chaque calcul, écris la formule, l'application numérique avec les unités, puis compare le résultat au critère en citant l'identifiant de l'exigence.",
+      "enonce": "**Situation.** Une station de recharge de trottinettes en libre-service doit respecter l'exigence suivante :\n\n> **Id 2.1** — « Recharger une batterie de 360 Wh » — critère : **en moins de 3 h**.\n\nDeux chargeurs sont proposés :\n\n| Chargeur | Puissance absorbée | Rendement |\n| A | 150 W | 0,85 |\n| B | 120 W | 0,9 |\n\nOn considère que la puissance fournie à la batterie est constante pendant toute la charge.\n\n1. Calcule la puissance réellement fournie à la batterie par chacun des deux chargeurs.\n2. Calcule la durée de charge avec chaque chargeur.\n3. Justifie, pour chaque chargeur, si l'exigence 2.1 est satisfaite.\n4. Quelle puissance absorbée minimale faudrait-il à un chargeur de rendement 0,9 pour satisfaire tout juste l'exigence ?",
+      "bareme": [
+        {
+          "critere": "Puissances fournies à la batterie justes : 127,5 W pour A et 108 W pour B",
+          "points": 5
+        },
+        {
+          "critere": "Durées de charge justes : environ 2,8 h pour A et 3,3 h pour B",
+          "points": 5
+        },
+        {
+          "critere": "Conclusion citant l'identifiant 2.1 et comparant chaque durée au critère de 3 h",
+          "points": 5
+        },
+        {
+          "critere": "Puissance minimale calculée : 120 W en sortie, soit environ 133 W absorbés",
+          "points": 5
+        }
+      ],
+      "dureeMin": 10,
+      "corrige": "1. Puissance fournie = rendement × puissance absorbée.\n- A : 0,85 × 150 = **127,5 W**.\n- B : 0,9 × 120 = **108 W**.\n2. Durée = énergie / puissance.\n- A : 360 / 127,5 ≈ **2,8 h** (environ 2 h 50 min).\n- B : 360 / 108 ≈ **3,3 h** (environ 3 h 20 min).\n3. Exigence **2.1** (moins de 3 h) :\n- chargeur A : 2,8 h < 3 h → l'exigence est **satisfaite**, avec une faible marge ;\n- chargeur B : 3,3 h > 3 h → l'exigence **n'est pas satisfaite** : chargeur non conforme.\n4. Pour charger 360 Wh en 3 h, il faut fournir à la batterie au moins 360 / 3 = **120 W**. Avec un rendement de 0,9, la puissance absorbée doit valoir au moins 120 / 0,9 ≈ **133 W**. Un chargeur de 120 W absorbés ne suffit donc pas, comme le montre la question 3."
+    },
+    {
+      "chapitre": "6cb7aadf-41e1-552f-82c2-e653fd402ea7",
+      "difficulte": 3,
+      "titre": "Une borne de recharge hors réseau pour un parc naturel",
+      "consigne": "Analyse le cahier des charges et réponds en justifiant chaque réponse : identifiant de l'exigence, valeur calculée, comparaison au critère, conclusion.",
+      "enonce": "**Situation.** Un parc naturel installe à l'entrée d'un sentier une borne solaire de recharge de vélos, sans raccordement au réseau.\n\n**Extrait du diagramme d'exigences**\n\n| Id | Texte | Critère |\n| 1 | Recharger les vélos des visiteurs | — |\n| 1.1 | Recharger une batterie de vélo | En moins de 4 h |\n| 1.2 | Fonctionner hors réseau | Autonomie de 3 jours sans soleil |\n| 1.3 | Protéger l'usager | Aucune partie sous tension accessible |\n\n**Données.** Consommation moyenne de la borne : **1,2 kWh par jour**. Le bloc Batterie de stockage annonce **4,2 kWh utilisables**. Un essai de trois jours sans recharge solaire a été mené sur site.\n\n1. Justifie que la solution satisfait (ou non) l'exigence 1.2. Donne la marge obtenue en pourcentage.\n2. Quelle relation relie le bloc Batterie de stockage à l'exigence 1.2 ? Et l'essai de trois jours sur site ?\n3. Après un été d'utilisation, toutes les exigences sont respectées, mais les visiteurs se plaignent de devoir attendre longtemps car la borne ne recharge que deux vélos à la fois. Le système est-il **vérifié** ? Est-il **validé** ? Explique. Que désignerait la **qualification** de cette borne ?\n4. Des câbles ont été arrachés par des personnes malveillantes. Quelle partie prenante a été oubliée ? Rédige une exigence nouvelle, avec un identifiant et un critère vérifiable, pour corriger cet oubli.",
+      "bareme": [
+        {
+          "critere": "Exigence 1.2 vérifiée : 3 × 1,2 = 3,6 kWh comparé à 4,2 kWh, conclusion et marge d'environ 17 %",
+          "points": 5
+        },
+        {
+          "critere": "Relations satisfy (batterie → 1.2) et verify (essai → 1.2) correctement attribuées",
+          "points": 4
+        },
+        {
+          "critere": "Distinction vérifié / non validé argumentée par spécification et besoin ; qualification définie",
+          "points": 5
+        },
+        {
+          "critere": "Partie prenante « environnement » identifiée et exigence nouvelle avec identifiant et critère chiffré ou vérifiable",
+          "points": 4
+        },
+        {
+          "critere": "Rédaction structurée : identifiant cité, calcul posé, conclusion explicite",
+          "points": 2
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Énergie nécessaire pour 3 jours sans soleil : 3 × 1,2 = **3,6 kWh**. Énergie utilisable : 4,2 kWh. 4,2 kWh > 3,6 kWh : l'exigence **1.2 est satisfaite**. Marge : (4,2 − 3,6) / 3,6 ≈ 0,17, soit environ **17 %**.\n2. Le bloc Batterie de stockage **satisfait** (satisfy) l'exigence 1.2. L'essai de trois jours **vérifie** (verify) l'exigence 1.2.\n3. Le système est **vérifié** : chaque exigence du cahier des charges, donc chaque spécification, est respectée. Il n'est pas **validé** : il ne répond pas pleinement au **besoin** des visiteurs, qui veulent recharger sans attendre. On vérifie par rapport aux spécifications, on valide par rapport au besoin : ici le cahier des charges a oublié une exigence sur le nombre de vélos rechargés en même temps. La **qualification** consisterait à mesurer les performances réelles de la borne produite et installée (durée réelle de charge, autonomie réelle).\n4. La partie prenante oubliée est l'**environnement** (vandalisme, intempéries). Exemple d'exigence : **1.4** « Résister au vandalisme » — critère : aucun câble ni connecteur accessible sans outil spécial, ou câbles sous gaine métallique résistant à un arrachement donné. Toute exigence est acceptée si elle a un identifiant et un critère que l'on peut contrôler par un essai. Oublier une partie prenante, c'est oublier une exigence."
+    },
+    {
+      "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+      "difficulte": 1,
+      "titre": "Gourde ou bouteilles jetables : poser l'ACV",
+      "consigne": "Réponds à chaque question en utilisant le vocabulaire de l'analyse de cycle de vie.",
+      "enonce": "**Situation.** Maëlle veut comparer, pour sa classe, l'impact environnemental d'une gourde en inox et celui de bouteilles d'eau en plastique jetables. Son premier brouillon compare « 1 gourde » à « 1 bouteille ».\n\n1. Cite, dans l'ordre, les quatre étapes d'une analyse de cycle de vie normalisée.\n2. Explique pourquoi comparer « 1 gourde » à « 1 bouteille » n'a pas de sens, puis propose une **unité fonctionnelle** adaptée à cette comparaison.\n3. Associe chacun des indicateurs suivants à son unité : réchauffement climatique, épuisement des ressources, consommation d'eau, énergie primaire consommée.",
+      "bareme": [
+        {
+          "critere": "Les quatre étapes citées dans l'ordre : objectif et champ, inventaire, évaluation des impacts, interprétation",
+          "points": 6
+        },
+        {
+          "critere": "Critique de la comparaison objet contre objet et unité fonctionnelle quantifiée proposée",
+          "points": 7
+        },
+        {
+          "critere": "Quatre indicateurs associés à la bonne unité",
+          "points": 7
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les quatre étapes : **objectif et champ** (dont l'unité fonctionnelle) → **inventaire** (matières, énergie, transports, rejets à chaque phase) → **évaluation des impacts** → **interprétation** (quelle phase et quel choix pèsent le plus).\n2. Une gourde sert des centaines de fois, une bouteille une seule fois : elles ne rendent pas le même service. On compare des **services rendus**, pas des objets. Unité fonctionnelle possible : « fournir 1 L d'eau à boire par jour pendant 1 an » (soit 365 L). On compte alors une gourde contre environ 365 bouteilles de 1 L.\n3. Associations :\n- réchauffement climatique → **kg éq. CO2** ;\n- épuisement des ressources → **kg éq. antimoine** ;\n- consommation d'eau → **m³** ;\n- énergie primaire consommée → **MJ ou kWh**."
+    },
+    {
+      "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+      "difficulte": 2,
+      "titre": "Relamper l'atelier du lycée",
+      "consigne": "Pose chaque calcul (formule, application numérique, unité) puis conclus en citant la phase du cycle de vie concernée.",
+      "enonce": "**Situation.** L'atelier du lycée est éclairé par des tubes fluorescents. On étudie leur remplacement par des tubes LED.\n\n**Unité fonctionnelle** : éclairer un poste de travail pendant **30 000 h**.\n\n| | Tube fluorescent | Tube LED |\n| Puissance | 36 W | 18 W |\n| Durée de vie | 10 000 h | 30 000 h |\n| Fabrication d'un tube | 0,4 kg éq. CO2 | 1,5 kg éq. CO2 |\n\nFacteur d'émission de l'électricité : **60 g de CO2 par kWh**.\n\n1. Combien de tubes de chaque type faut-il pour assurer l'unité fonctionnelle ?\n2. Calcule l'énergie consommée pendant l'usage par chaque solution, en kWh.\n3. Calcule les émissions de l'usage, puis le total (usage + fabrication) pour chaque solution.\n4. Par combien la solution LED divise-t-elle l'impact sur le climat ? Quelle phase domine ? Conclus.",
+      "bareme": [
+        {
+          "critere": "Nombre de tubes juste (3 fluorescents, 1 LED) et énergies de 1 080 kWh et 540 kWh",
+          "points": 6
+        },
+        {
+          "critere": "Émissions de l'usage justes : 64,8 kg et 32,4 kg éq. CO2",
+          "points": 5
+        },
+        {
+          "critere": "Totaux justes : environ 66 kg et 34 kg éq. CO2",
+          "points": 5
+        },
+        {
+          "critere": "Rapport d'environ 2, phase d'usage dominante et conclusion argumentée",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Fluorescent : 30 000 / 10 000 = **3 tubes**. LED : 30 000 / 30 000 = **1 tube**.\n2. E = P × t.\n- Fluorescent : 36 W × 30 000 h = 1 080 000 Wh = **1 080 kWh**.\n- LED : 18 W × 30 000 h = 540 000 Wh = **540 kWh**.\n3. Émissions de l'usage (0,06 kg/kWh) :\n- fluorescent : 1 080 × 0,06 = **64,8 kg éq. CO2** ; fabrication : 3 × 0,4 = 1,2 kg ; total ≈ **66,0 kg éq. CO2** ;\n- LED : 540 × 0,06 = **32,4 kg éq. CO2** ; fabrication : 1 × 1,5 = 1,5 kg ; total ≈ **33,9 kg éq. CO2**.\n4. 66,0 / 33,9 ≈ **1,9** : la LED divise l'impact climatique par environ **2**. Dans les deux cas, la phase d'**usage** domine très largement (plus de 95 % du total) : la fabrication plus lourde du tube LED est largement compensée par sa plus faible consommation et sa plus longue durée de vie. Le remplacement est justifié par le calcul."
+    },
+    {
+      "chapitre": "f947ad8e-255e-5af6-a101-00ba1a63ed2a",
+      "difficulte": 3,
+      "titre": "Alléger le cadre d'une trottinette : fausse bonne idée ?",
+      "consigne": "Analyse les données, pose chaque calcul et justifie ton choix par des nombres et par la phase du cycle de vie qu'il améliore.",
+      "enonce": "**Situation.** Un fabricant de trottinettes électriques veut alléger le cadre, aujourd'hui en acier. Un ingénieur propose l'aluminium.\n\n| Solution | Masse du cadre | Fabrication de la matière |\n| Acier | 6 kg | 2 kg éq. CO2 par kg |\n| Aluminium primaire | 3,5 kg | 9 kg éq. CO2 par kg |\n| Aluminium recyclé | 3,5 kg | 1 kg éq. CO2 par kg |\n\n**Usage.** Sur toute la durée de vie de la trottinette (10 000 km), chaque kilogramme transporté ajoute **1 kWh** de consommation électrique.\n\n1. Calcule, pour chaque solution, les émissions dues à la fabrication de la matière du cadre.\n2. Calcule, pour chaque solution, les émissions de l'usage attribuables à la masse du cadre, avec un mix à **60 g de CO2 par kWh**. Fais le total.\n3. Quelle solution retenir ? Justifie en citant la phase qui pèse le plus.\n4. Refais le calcul de l'usage pour l'acier et l'aluminium primaire avec un mix très carboné à **500 g/kWh**. Ton classement change-t-il ?\n5. Propose un autre levier d'éco-conception pour ce cadre et précise son point de vigilance.",
+      "bareme": [
+        {
+          "critere": "Émissions de fabrication justes : 12 kg, 31,5 kg et 3,5 kg éq. CO2",
+          "points": 5
+        },
+        {
+          "critere": "Émissions d'usage (0,36 kg ; 0,21 kg) et totaux justes pour les trois solutions",
+          "points": 4
+        },
+        {
+          "critere": "Choix de l'aluminium recyclé justifié par le calcul et la phase de fabrication dominante",
+          "points": 5
+        },
+        {
+          "critere": "Calcul avec le mix à 500 g/kWh (15 kg contre 33,25 kg) et conclusion sur le classement",
+          "points": 3
+        },
+        {
+          "critere": "Levier supplémentaire pertinent avec son point de vigilance",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Fabrication :\n- acier : 6 × 2 = **12 kg éq. CO2** ;\n- aluminium primaire : 3,5 × 9 = **31,5 kg éq. CO2** ;\n- aluminium recyclé : 3,5 × 1 = **3,5 kg éq. CO2**.\n2. Usage : masse × 1 kWh/kg × 0,06 kg/kWh.\n- acier : 6 × 0,06 = 0,36 kg → total ≈ **12,4 kg éq. CO2** ;\n- aluminium primaire : 3,5 × 0,06 = 0,21 kg → total ≈ **31,7 kg éq. CO2** ;\n- aluminium recyclé : 0,21 kg → total ≈ **3,7 kg éq. CO2**.\n3. Avec l'électricité française peu carbonée, l'allègement ne fait gagner que 0,15 kg à l'usage : c'est la **fabrication de la matière** qui pèse le plus. L'aluminium primaire est **plus de 2,5 fois pire** que l'acier (l'aluminium primaire demande beaucoup d'énergie à produire). On retient l'**aluminium recyclé** (≈ 3,7 kg contre 12,4 kg pour l'acier), à condition de garantir l'approvisionnement en matière recyclée ; à défaut, on garde l'acier.\n4. Mix à 500 g/kWh : acier 12 + 6 × 0,5 = **15 kg** ; aluminium primaire 31,5 + 3,5 × 0,5 = **33,25 kg**. L'écart d'usage grandit, mais le classement **ne change pas** : l'aluminium primaire reste le plus mauvais choix.\n5. Exemples : **allonger la durée de vie** (cadre et pièces vissés, pièces détachées) — vigilance : coût de fabrication un peu plus élevé ; **prévoir la fin de vie** (cadre monomatériau, marquage) — vigilance : contraintes de conception."
+    },
+    {
+      "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+      "difficulte": 1,
+      "titre": "Quatre convertisseurs, un hacheur",
+      "consigne": "Réponds à chaque question ; pour les calculs, écris la formule puis l'application numérique.",
+      "enonce": "**Situation.** Dans la maison de Samir, on trouve plusieurs convertisseurs statiques.\n\n1. Nomme le convertisseur utilisé dans chaque cas et la conversion qu'il réalise (AC ou DC en entrée, AC ou DC en sortie) :\n   a. le chargeur de téléphone branché sur une prise du secteur ;\n   b. le variateur qui règle la luminosité d'une lampe halogène alimentée par le secteur ;\n   c. l'appareil qui injecte sur le réseau l'électricité des panneaux solaires du toit ;\n   d. le variateur de vitesse de la trottinette électrique de Samir, alimentée par une batterie.\n2. Le hacheur de la trottinette est alimenté par une batterie de **36 V**. Calcule la tension moyenne de sortie pour un rapport cyclique α = 0,4.\n3. Quel rapport cyclique faut-il pour obtenir **27 V** moyens ?",
+      "bareme": [
+        {
+          "critere": "Quatre convertisseurs identifiés avec la bonne conversion : redresseur, gradateur, onduleur, hacheur",
+          "points": 8
+        },
+        {
+          "critere": "Tension moyenne juste : 0,4 × 36 = 14,4 V",
+          "points": 6
+        },
+        {
+          "critere": "Rapport cyclique juste : 27 / 36 = 0,75",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Les convertisseurs :\n- a. **redresseur** : AC → DC ;\n- b. **gradateur** : AC → AC, valeur efficace réglable ;\n- c. **onduleur** : DC → AC ;\n- d. **hacheur** : DC → DC réglable.\n2. U moy = α × U alim = 0,4 × 36 = **14,4 V**.\n3. α = U moy / U alim = 27 / 36 = **0,75** (le transistor est passant pendant les trois quarts de la période)."
+    },
+    {
+      "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+      "difficulte": 2,
+      "titre": "Le variateur du chariot de manutention",
+      "consigne": "Pose chaque calcul avec les unités et justifie les réponses qualitatives avec le cours.",
+      "enonce": "**Situation.** Un petit chariot de manutention électrique est entraîné par un moteur à courant continu, alimenté par une batterie de **48 V** à travers un hacheur piloté en MLI. Pour la vitesse de croisière, le moteur doit recevoir **30 V** moyens. La fréquence de découpage est de **25 kHz**.\n\n1. Calcule le rapport cyclique α nécessaire.\n2. Calcule la période T du découpage, puis la durée t_on pendant laquelle le transistor est passant.\n3. Justifie le choix d'une fréquence de 25 kHz.\n4. Le constructeur annonce un rendement du hacheur supérieur à 95 %. Explique pourquoi ce convertisseur dissipe si peu d'énergie.\n5. Le chariot doit pouvoir reculer et freiner en renvoyant de l'énergie vers la batterie. Quelle structure faut-il ? Explique comment elle inverse le sens de rotation.",
+      "bareme": [
+        {
+          "critere": "Rapport cyclique juste : α = 30 / 48 = 0,625",
+          "points": 5
+        },
+        {
+          "critere": "Période de 40 µs et t_on de 25 µs justes",
+          "points": 5
+        },
+        {
+          "critere": "Choix de la fréquence et fort rendement expliqués (hors audible, lissage, transistor bloqué ou saturé)",
+          "points": 5
+        },
+        {
+          "critere": "Pont en H : diagonales, inversion du courant et freinage récupératif expliqués",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. α = U moy / U alim = 30 / 48 = **0,625**.\n2. T = 1 / f = 1 / 25 000 = 0,000 04 s = **40 µs**. t_on = α × T = 0,625 × 40 = **25 µs**.\n3. 25 kHz est au-dessus des fréquences audibles : le moteur ne siffle pas. C'est aussi assez élevé pour que l'inductance du moteur lisse le courant.\n4. Le transistor est soit **bloqué** (aucun courant ne le traverse), soit **saturé** (presque aucune tension à ses bornes) : dans les deux cas la puissance qu'il dissipe est très faible. D'où un rendement qui dépasse souvent 95 %.\n5. Il faut un **pont en H** (hacheur réversible) : quatre interrupteurs autour du moteur. En fermant la diagonale T1-T4 ou la diagonale T2-T3, on inverse le sens du courant dans le moteur, donc son **sens de rotation**. Le pont permet aussi le **freinage** ; comme la batterie accepte d'être rechargée, l'énergie de freinage peut lui être renvoyée : c'est la réversibilité du convertisseur."
+    },
+    {
+      "chapitre": "1e93d6ee-75bb-5f4f-bf3b-11f57521c6a1",
+      "difficulte": 3,
+      "titre": "La chaîne de traction d'une citadine électrique",
+      "consigne": "Analyse la chaîne de puissance, pose chaque calcul et argumente tes choix avec le cours.",
+      "enonce": "**Situation.** Une citadine électrique possède une batterie de **400 V** (continu) et un moteur synchrone à **4 paires de pôles**. Le moteur est piloté par un convertisseur placé entre la batterie et le moteur.\n\n1. Quel convertisseur faut-il entre la batterie et le moteur ? Précise la conversion réalisée et ce qu'il permet de régler.\n2. Un stagiaire propose un gradateur. Explique pourquoi c'est impossible.\n3. Calcule la fréquence d'alimentation nécessaire pour que le moteur tourne à **3 000 tr/min**, puis à **1 200 tr/min**.\n4. Que se passerait-il si l'on alimentait ce moteur directement en 50 Hz ? Calcule sa vitesse.\n5. Sans récupération d'énergie, l'autonomie en ville est de **240 km**. Le freinage récupératif fait gagner 10 à 25 % d'autonomie en ville. Donne la fourchette d'autonomie obtenue et explique quelle propriété du convertisseur rend ce gain possible.",
+      "bareme": [
+        {
+          "critere": "Onduleur identifié (DC → AC) réglant fréquence et amplitude ; gradateur écarté car il demande une source alternative",
+          "points": 4
+        },
+        {
+          "critere": "Fréquences justes : 200 Hz pour 3 000 tr/min et 80 Hz pour 1 200 tr/min, formule écrite",
+          "points": 6
+        },
+        {
+          "critere": "Vitesse en 50 Hz juste (750 tr/min) et conséquence expliquée",
+          "points": 4
+        },
+        {
+          "critere": "Fourchette de 264 à 300 km et réversibilité de l'onduleur expliquée",
+          "points": 6
+        }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Il faut un **onduleur** : il transforme le continu de la batterie en alternatif (DC → AC) et permet de régler **la fréquence et l'amplitude** de la tension, donc la vitesse du moteur.\n2. Un gradateur réalise une conversion **AC → AC** : il a besoin d'une source alternative en entrée. Or la batterie fournit du continu : le gradateur ne peut pas fonctionner ici.\n3. N = 60 × f / p, donc f = N × p / 60.\n- 3 000 tr/min : f = 3 000 × 4 / 60 = **200 Hz** ;\n- 1 200 tr/min : f = 1 200 × 4 / 60 = **80 Hz**.\n4. En 50 Hz : N = 60 × 50 / 4 = **750 tr/min**, une seule vitesse, impossible à faire varier. Il faudrait de toute façon une source alternative. C'est parce que la vitesse dépend de la fréquence qu'on utilise un onduleur à fréquence réglable.\n5. 10 % de 240 = 24 km ; 25 % de 240 = 60 km. Autonomie : **de 264 à 300 km**. Ce gain repose sur la **réversibilité** de l'onduleur : au freinage, le moteur fonctionne en générateur et l'onduleur renvoie l'énergie vers la batterie (un redresseur à diodes, non réversible, ne le permettrait pas)."
+    },
+    {
+      "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+      "difficulte": 1,
+      "titre": "Batteries et cellules du camping-car",
+      "consigne": "Réponds à chaque question ; pour les calculs, écris la formule, l'application numérique et l'unité.",
+      "enonce": "**Situation.** Léo prépare l'équipement électrique du camping-car familial.\n\n1. La batterie auxiliaire porte l'inscription **12 V – 80 Ah**. Calcule l'énergie qu'elle stocke, en Wh.\n2. Classe chacun des stockages suivants dans sa forme (chimique, électrostatique, mécanique, thermique) : le ballon d'eau chaude du camping-car ; la batterie lithium-ion du vélo ; un supercondensateur ; une STEP (barrage de pompage).\n3. Léo dispose de quatre cellules identiques de **3,7 V – 2,5 Ah**. Donne la tension et la capacité du pack obtenu s'il les associe toutes les quatre en **série**, puis toutes les quatre en **parallèle**. Que remarques-tu sur l'énergie stockée dans les deux cas ?",
+      "bareme": [
+        {
+          "critere": "Énergie juste : E = U × Q = 12 × 80 = 960 Wh",
+          "points": 6
+        },
+        {
+          "critere": "Quatre stockages classés dans la bonne forme",
+          "points": 6
+        },
+        {
+          "critere": "Série (14,8 V ; 2,5 Ah) et parallèle (3,7 V ; 10 Ah) justes, énergie identique de 37 Wh",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. E = U × Q = 12 × 80 = **960 Wh**.\n2. Classement :\n- ballon d'eau chaude → **thermique** (chaleur sensible) ;\n- batterie lithium-ion → **chimique** ;\n- supercondensateur → **électrostatique** ;\n- STEP → **mécanique** (énergie potentielle de l'eau).\n3. En **série** : les tensions s'additionnent, la capacité reste celle d'une cellule : 4 × 3,7 = **14,8 V** et **2,5 Ah**.\nEn **parallèle** : les capacités s'additionnent, la tension reste celle d'une cellule : **3,7 V** et 4 × 2,5 = **10 Ah**.\nÉnergie : 14,8 × 2,5 = 37 Wh et 3,7 × 10 = 37 Wh. L'énergie est **la même** (quatre fois celle d'une cellule, 9,25 Wh) : seul le couple tension-capacité change."
+    },
+    {
+      "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+      "difficulte": 2,
+      "titre": "Dimensionner la batterie d'une tondeuse robot",
+      "consigne": "Pose chaque calcul (formule, application numérique, unité) et justifie le choix du pack.",
+      "enonce": "**Situation.** Une tondeuse robot consomme en moyenne **45 W** et doit tondre pendant **3 h** sans recharge. Pour préserver la batterie, on ne la décharge qu'à **80 %**. On fabrique le pack avec des cellules lithium-ion de **3,6 V – 2,5 Ah**. Le moteur demande une tension d'environ **25 V**.\n\n1. Calcule l'énergie nécessaire pour une tonte, puis l'énergie à installer.\n2. Combien de cellules faut-il en série pour atteindre environ 25 V ? Quelle est alors la tension du pack ?\n3. Calcule la capacité minimale du pack, puis le nombre de branches en parallèle nécessaire. Donne la désignation du pack (du type « xSyP »), son nombre de cellules et l'énergie qu'il stocke.\n4. Estime la masse du pack avec une énergie massique de **180 Wh/kg**.",
+      "bareme": [
+        {
+          "critere": "Énergie nécessaire de 135 Wh et énergie à installer d'environ 169 Wh",
+          "points": 5
+        },
+        {
+          "critere": "Sept cellules en série, tension de 25,2 V",
+          "points": 4
+        },
+        {
+          "critere": "Capacité minimale d'environ 6,7 Ah, pack 7S3P de 21 cellules stockant 189 Wh, choix justifié",
+          "points": 6
+        },
+        {
+          "critere": "Masse estimée juste : environ 1,05 kg",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Énergie nécessaire : E = P × t = 45 × 3 = **135 Wh**. Décharge limitée à 80 % : énergie à installer = 135 / 0,8 ≈ **169 Wh** (168,75 Wh).\n2. 25 / 3,6 ≈ 6,9 → **7 cellules en série** : 7 × 3,6 = **25,2 V**.\n3. Capacité minimale : Q = E / U = 168,75 / 25,2 ≈ **6,7 Ah**. Une branche fournit 2,5 Ah : 2 branches donnent 5 Ah (insuffisant), **3 branches** donnent 7,5 Ah ≥ 6,7 Ah. Pack **7S3P** : 7 × 3 = **21 cellules**, 25,2 V et 7,5 Ah, soit 25,2 × 7,5 = **189 Wh** ≥ 169 Wh : le pack convient.\n4. Masse ≈ 189 / 180 ≈ **1,05 kg**."
+    },
+    {
+      "chapitre": "21fc23b8-7d0a-5cee-8284-3fad6af886e5",
+      "difficulte": 3,
+      "titre": "Stocker le surplus solaire d'une maison",
+      "consigne": "Analyse les deux solutions, pose chaque calcul et argumente ta conclusion avec les notions du cours.",
+      "enonce": "**Situation.** La toiture solaire d'une famille produit à midi plus qu'elle ne consomme. Deux solutions sont envisagées pour mettre ce surplus de côté :\n\n- **Solution A** : une batterie domestique lithium-ion de **5 kWh** ;\n- **Solution B** : piloter le ballon d'eau chaude de **300 L** pour le chauffer de **20 à 55 °C** aux heures de production (c eau = 4 185 J/(kg·°C), 1 L d'eau = 1 kg).\n\n1. Indique la forme de stockage de chaque solution.\n2. Calcule l'énergie stockée par le ballon, en joules puis en kWh.\n3. Estime la masse de la batterie A en lithium-ion (200 Wh/kg), puis celle qu'aurait une batterie au plomb de même énergie (35 Wh/kg).\n4. Compare les deux solutions : quantité stockée, forme de l'énergie restituée, usages possibles. Laquelle conseilles-tu en premier, et pourquoi ?\n5. La batterie A est livrée avec un BMS. Explique son rôle.\n6. Le fabricant propose d'ajouter un supercondensateur à la batterie pour démarrer un gros moteur (pompe de piscine). Justifie cette association.",
+      "bareme": [
+        {
+          "critere": "Formes identifiées et énergie du ballon juste : environ 43,9 MJ, soit 12,2 kWh",
+          "points": 6
+        },
+        {
+          "critere": "Masses justes : 25 kg en lithium-ion et environ 143 kg en plomb",
+          "points": 4
+        },
+        {
+          "critere": "Comparaison argumentée : chaleur seulement pour le ballon, électricité pour la batterie, conseil justifié",
+          "points": 4
+        },
+        {
+          "critere": "Rôle du BMS : surveiller tensions, courants, températures, équilibrer, couper en cas de danger",
+          "points": 3
+        },
+        {
+          "critere": "Association batterie et supercondensateur justifiée par énergie contre puissance",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. A : stockage **chimique** (réaction d'oxydoréduction réversible). B : stockage **thermique** (chaleur sensible).\n2. Q = m × c × ΔT = 300 × 4 185 × (55 − 20) = 300 × 4 185 × 35 ≈ **43 900 000 J** (43,9 MJ). En kWh : 43 942 500 / 3 600 000 ≈ **12,2 kWh**.\n3. Lithium-ion : 5 000 / 200 = **25 kg**. Plomb : 5 000 / 35 ≈ **143 kg**.\n4. Le ballon stocke plus (12,2 kWh contre 5 kWh), pour un appareil déjà présent : il suffit de piloter son chauffage aux heures solaires. Mais il ne restitue que de la **chaleur** (eau chaude sanitaire), alors que la batterie restitue de l'**électricité** utilisable par tous les appareils, le soir. Conseil attendu : commencer par piloter le ballon (peu coûteux, grande quantité), puis envisager la batterie si le surplus reste important. Toute conclusion argumentée par les chiffres est acceptée.\n5. Le **BMS** (battery management system) surveille la tension, le courant et la température de chaque cellule, équilibre leurs charges et coupe en cas de danger. C'est la chaîne d'information au service de la chaîne de puissance.\n6. La batterie stocke beaucoup d'**énergie** mais fournit une puissance limitée ; le supercondensateur stocke peu d'énergie (5 à 10 Wh/kg) mais a une **puissance massique très élevée** : il fournit le pic de puissance du démarrage, la batterie assure la durée. On associe ainsi énergie et puissance."
+    },
+    {
+      "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+      "difficulte": 1,
+      "titre": "Vitesses d'une petite transmission",
+      "consigne": "Pour chaque calcul, écris la formule, l'application numérique avec les unités, puis le résultat.",
+      "enonce": "**Situation.** Inès étudie la transmission d'un robot éducatif.\n\n1. Le moteur tourne à **3 000 tr/min**. Convertis cette vitesse en rad/s.\n2. Le moteur entraîne un engrenage : un pignon de **15 dents** mène une roue de **45 dents**. Calcule le rapport de transmission k, puis la vitesse angulaire de la roue en rad/s. S'agit-il d'un réducteur ? Justifie.\n3. Une roue du robot, de rayon **0,25 m**, tourne à **20 rad/s**. Calcule la vitesse d'avance du robot.",
+      "bareme": [
+        {
+          "critere": "Conversion juste : ω = 2π × 3 000 / 60 ≈ 314 rad/s",
+          "points": 6
+        },
+        {
+          "critere": "Rapport k = 15/45 = 1/3, vitesse de sortie d'environ 105 rad/s, réducteur justifié par k < 1",
+          "points": 7
+        },
+        {
+          "critere": "Vitesse d'avance juste : v = R × ω = 0,25 × 20 = 5 m/s",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. ω = 2π × N / 60 = 2π × 3 000 / 60 ≈ **314 rad/s**.\n2. k = Z entrée / Z sortie = 15 / 45 = **1/3** (≈ 0,33). ω sortie = k × ω entrée = 314 / 3 ≈ **105 rad/s**. Comme k < 1, c'est un **réducteur** : il réduit la vitesse (et augmente le couple).\n3. v = R × ω = 0,25 × 20 = **5 m/s**."
+    },
+    {
+      "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+      "difficulte": 2,
+      "titre": "Le convoyeur de colis",
+      "consigne": "Pose chaque étape : formule, application numérique avec unités, résultat arrondi raisonnablement.",
+      "enonce": "**Situation.** Un convoyeur de colis est entraîné par un moteur de **0,75 kW** tournant à **1 450 tr/min**. La transmission comporte deux étages :\n\n- une transmission poulies-courroie : poulie motrice de **80 mm** de diamètre, poulie réceptrice de **240 mm** ;\n- un engrenage : pignon de **20 dents**, roue de **60 dents**.\n\nLe tambour qui entraîne la bande a un rayon de **0,1 m**. Le rendement global de la transmission est de **0,85**. On suppose que le moteur fonctionne à sa puissance nominale.\n\n1. Calcule la vitesse angulaire du moteur en rad/s.\n2. Calcule le rapport de transmission de chaque étage, puis le rapport global.\n3. Calcule la vitesse angulaire du tambour et la vitesse de la bande.\n4. Calcule la puissance disponible au tambour et le couple sur le tambour.\n5. Déduis-en l'effort que la bande peut exercer pour tirer les colis.",
+      "bareme": [
+        {
+          "critere": "Vitesse du moteur juste : environ 151,8 rad/s",
+          "points": 4
+        },
+        {
+          "critere": "Rapports justes : 1/3 pour chaque étage, 1/9 au total",
+          "points": 4
+        },
+        {
+          "critere": "Vitesse du tambour (≈ 16,9 rad/s) et de la bande (≈ 1,69 m/s) justes",
+          "points": 4
+        },
+        {
+          "critere": "Puissance de 637,5 W et couple d'environ 37,8 N·m justes",
+          "points": 5
+        },
+        {
+          "critere": "Effort de la bande juste : environ 378 N",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. ω moteur = 2π × 1 450 / 60 ≈ **151,8 rad/s**.\n2. Poulies-courroie : k1 = D entrée / D sortie = 80 / 240 = **1/3**. Engrenage : k2 = Z entrée / Z sortie = 20 / 60 = **1/3**. Rapport global : k = k1 × k2 = **1/9**.\n3. ω tambour = 151,8 / 9 ≈ **16,9 rad/s**. Vitesse de la bande : v = R × ω = 0,1 × 16,9 ≈ **1,69 m/s**.\n4. P tambour = η × P moteur = 0,85 × 750 = **637,5 W**. C = P / ω = 637,5 / 16,87 ≈ **37,8 N·m**.\n5. F = C / R = 37,8 / 0,1 ≈ **378 N**."
+    },
+    {
+      "chapitre": "fd328438-8bb9-54d5-95ca-16027500a4eb",
+      "difficulte": 3,
+      "titre": "Le moteur du portail coulissant convient-il ?",
+      "consigne": "Pose chaque calcul avec formule, application numérique et unités, puis compare les résultats aux critères du cahier des charges.",
+      "enonce": "**Situation.** Un portail coulissant de **300 kg** est entraîné par un système pignon-crémaillère.\n\n**Chaîne de transmission.** Moteur : **1 400 tr/min**, couple disponible **0,5 N·m** → réducteur de rapport **k = 1/25**, rendement **0,7** → pignon de rayon **0,03 m** → crémaillère fixée au portail.\n\n**Cahier des charges.** Vitesse d'ouverture d'au moins **0,15 m/s** ; le portail doit atteindre sa vitesse en **0,5 s**. La résistance au roulement du portail vaut **150 N**.\n\n1. Calcule la vitesse de translation du portail en régime établi. L'exigence de vitesse est-elle respectée ?\n2. Calcule l'accélération au démarrage, la force d'accélération, puis l'effort total que la crémaillère doit transmettre au démarrage.\n3. Calcule le couple nécessaire sur le pignon au démarrage.\n4. Calcule le couple que doit fournir le moteur au démarrage (utilise C sortie = η × C entrée / k). Le moteur convient-il ?\n5. Pourquoi est-ce le démarrage, et non le régime établi, qui dimensionne le moteur ? Appuie-toi sur tes résultats.",
+      "bareme": [
+        {
+          "critere": "Vitesse du portail juste (≈ 0,176 m/s) comparée à 0,15 m/s",
+          "points": 5
+        },
+        {
+          "critere": "Accélération (≈ 0,35 m/s²), force d'accélération (≈ 106 N) et effort au démarrage (≈ 256 N) justes",
+          "points": 5
+        },
+        {
+          "critere": "Couple sur le pignon juste : environ 7,7 N·m",
+          "points": 3
+        },
+        {
+          "critere": "Couple moteur d'environ 0,44 N·m calculé et comparé aux 0,5 N·m disponibles",
+          "points": 4
+        },
+        {
+          "critere": "Rôle du démarrage expliqué en comparant effort au démarrage et en régime établi",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. ω moteur = 2π × 1 400 / 60 ≈ 146,6 rad/s. ω pignon = k × ω moteur = 146,6 / 25 ≈ 5,86 rad/s. v = R × ω = 0,03 × 5,86 ≈ **0,176 m/s**. 0,176 m/s > 0,15 m/s : exigence de vitesse **respectée**.\n2. a = Δv / Δt = 0,176 / 0,5 ≈ **0,35 m/s²**. Force d'accélération : F = m × a = 300 × 0,352 ≈ **106 N**. Effort total au démarrage : 150 + 106 ≈ **256 N**.\n3. C pignon = F × R = 256 × 0,03 ≈ **7,7 N·m**.\n4. C entrée = C sortie × k / η = 7,7 × (1/25) / 0,7 = 7,7 / 17,5 ≈ **0,44 N·m**. 0,44 N·m < 0,5 N·m : le moteur **convient**, avec une marge d'environ 12 %.\n5. En régime établi, il suffit de vaincre les 150 N de résistance : C pignon = 150 × 0,03 = 4,5 N·m, soit un couple moteur de 4,5 / 17,5 ≈ 0,26 N·m. Au démarrage, il faut en plus fournir l'effort d'accélération : 256 N contre 150 N, et 0,44 N·m contre 0,26 N·m. C'est donc le démarrage qui impose le couple le plus élevé et qui dimensionne le moteur."
+    },
+    {
+      "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+      "difficulte": 1,
+      "titre": "Le hauban d'un auvent",
+      "consigne": "Écris chaque formule, l'application numérique avec les unités, puis le résultat.",
+      "enonce": "**Situation.** Un auvent est retenu par un hauban (tirant) en acier de **1 500 mm** de long et de section **50 mm²**, qui supporte un effort de traction de **8 kN**. Module d'Young de l'acier : E = 210 000 MPa.\n\n1. Calcule la contrainte normale dans le hauban.\n2. Calcule la déformation, puis l'allongement du hauban.\n3. Associe chaque pièce à sa sollicitation principale (traction, compression, flexion, torsion, cisaillement) : l'étagère chargée de livres ; l'axe d'une chape qui relie deux pièces ; l'arbre de transmission d'une voiture ; le poteau d'un préau.",
+      "bareme": [
+        {
+          "critere": "Contrainte juste : σ = 8 000 / 50 = 160 MPa",
+          "points": 5
+        },
+        {
+          "critere": "Déformation (≈ 7,6 × 10⁻⁴) et allongement (≈ 1,1 mm) justes",
+          "points": 7
+        },
+        {
+          "critere": "Quatre pièces associées à la bonne sollicitation",
+          "points": 8
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. σ = N / S = 8 000 / 50 = **160 MPa**.\n2. ε = σ / E = 160 / 210 000 ≈ **7,6 × 10⁻⁴**. ΔL = ε × L0 = 7,6 × 10⁻⁴ × 1 500 ≈ **1,1 mm**.\n3. Associations :\n- étagère chargée → **flexion** ;\n- axe de chape → **cisaillement** ;\n- arbre de transmission → **torsion** ;\n- poteau de préau → **compression**."
+    },
+    {
+      "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+      "difficulte": 2,
+      "titre": "Choisir le diamètre d'une suspente",
+      "consigne": "Pose chaque calcul et justifie ton choix en comparant au critère du cahier des charges.",
+      "enonce": "**Situation.** Une passerelle est suspendue par des suspentes en acier S235 (Re = 235 MPa, E = 210 000 MPa), de section circulaire pleine et de longueur **3 m**. Chaque suspente supporte **24 kN**. Le cahier des charges impose un coefficient de sécurité **s ≥ 2**.\n\nDiamètres disponibles : 12, 14, 16, 18 et 20 mm. Aire d'un disque de diamètre d : S = π × d² / 4.\n\n1. Calcule la contrainte maximale admissible dans une suspente.\n2. Calcule la section minimale nécessaire.\n3. Choisis le plus petit diamètre disponible qui convient. Justifie.\n4. Calcule la contrainte réelle et le coefficient de sécurité obtenu avec ce diamètre.\n5. Calcule l'allongement de la suspente.",
+      "bareme": [
+        {
+          "critere": "Contrainte admissible juste : 235 / 2 = 117,5 MPa",
+          "points": 4
+        },
+        {
+          "critere": "Section minimale juste : environ 204 mm²",
+          "points": 5
+        },
+        {
+          "critere": "Diamètre de 18 mm choisi, en montrant que 16 mm (≈ 201 mm²) ne suffit pas",
+          "points": 5
+        },
+        {
+          "critere": "Contrainte réelle (≈ 94 MPa) et coefficient de sécurité (≈ 2,5) justes",
+          "points": 3
+        },
+        {
+          "critere": "Allongement juste : environ 1,35 mm",
+          "points": 3
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. σ adm = Re / s = 235 / 2 = **117,5 MPa**.\n2. S ≥ N / σ adm = 24 000 / 117,5 ≈ **204 mm²**.\n3. d = 16 mm : S = π × 16² / 4 ≈ 201 mm² < 204 mm² → **insuffisant**. d = 18 mm : S = π × 18² / 4 ≈ **254,5 mm²** ≥ 204 mm² → on choisit **18 mm**.\n4. σ = 24 000 / 254,5 ≈ **94 MPa**. s = Re / σ = 235 / 94,3 ≈ **2,5** ≥ 2 : exigence respectée.\n5. ε = σ / E = 94,3 / 210 000 ≈ 4,5 × 10⁻⁴. ΔL = ε × L0 = 4,5 × 10⁻⁴ × 3 000 ≈ **1,35 mm**."
+    },
+    {
+      "chapitre": "29435005-8b98-5af4-a25a-226f6b969d8b",
+      "difficulte": 3,
+      "titre": "Simulation d'une poutre de rayonnage",
+      "consigne": "Interprète les résultats de simulation, pose chaque calcul et justifie chaque conclusion par une comparaison chiffrée au cahier des charges.",
+      "enonce": "**Situation.** Une poutre de rayonnage en acier S235 (Re = 235 MPa, E = 210 000 MPa) repose sur deux appuis distants de **1,2 m** et porte des cartons. Le cahier des charges impose un coefficient de sécurité **s ≥ 2** et une flèche inférieure à **portée / 300**.\n\n**Résultats de simulation par éléments finis**\n\n| Version | Détail de forme | Contrainte de Von Mises maximale | Flèche maximale |\n| V1 | Angle vif au raccord avec le support | 180 MPa (dans l'angle vif) | 3,2 mm |\n| V2 | Congé de raccordement à la place de l'angle vif | 110 MPa | 3,2 mm |\n\n1. Avant de lancer le calcul, quelles données a-t-il fallu fournir au logiciel en plus du maillage ?\n2. Calcule le coefficient de sécurité de chaque version et conclus. Explique pourquoi la contrainte est plus forte en V1.\n3. Vérifie l'exigence de flèche.\n4. Un collègue propose de refaire la poutre V2 en aluminium (E = 70 000 MPa), même forme, mêmes charges. En t'appuyant sur la loi de Hooke, estime la nouvelle flèche et conclus.\n5. Dans cette poutre chargée, quelle fibre est comprimée, laquelle est tendue ? Propose une forme de section qui la rendrait plus rigide à quantité de matière égale, et explique pourquoi.",
+      "bareme": [
+        {
+          "critere": "Matériau, liaisons et chargements cités",
+          "points": 2
+        },
+        {
+          "critere": "Coefficients justes (≈ 1,3 pour V1, ≈ 2,1 pour V2), conclusion et rôle de la concentration de contraintes",
+          "points": 6
+        },
+        {
+          "critere": "Flèche limite de 4 mm calculée et comparée à 3,2 mm",
+          "points": 4
+        },
+        {
+          "critere": "Flèche en aluminium estimée à environ 9,6 mm et jugée non conforme, raisonnement par E trois fois plus faible",
+          "points": 4
+        },
+        {
+          "critere": "Fibre supérieure comprimée, inférieure tendue ; section en I ou tube justifiée par la matière loin de la fibre neutre",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. En plus du maillage, il faut définir le **matériau** (acier S235 : E, Re), les **liaisons** (les deux appuis) et les **chargements** (poids des cartons).\n2. V1 : s = 235 / 180 ≈ **1,3** < 2 → **non conforme**. V2 : s = 235 / 110 ≈ **2,1** ≥ 2 → **conforme**. En V1, l'angle vif crée une **concentration de contraintes** : la contrainte y est bien plus forte qu'ailleurs. Le congé de raccordement la réduit fortement.\n3. Flèche limite : 1 200 / 300 = **4 mm**. 3,2 mm < 4 mm : exigence **respectée**.\n4. Avec la même forme et les mêmes charges, les contraintes sont les mêmes. D'après σ = E × ε, la déformation est inversement proportionnelle à E : l'aluminium (70 000 MPa) se déforme 210 000 / 70 000 = **3 fois plus**. Flèche estimée : 3 × 3,2 ≈ **9,6 mm** > 4 mm → **non conforme**, la rigidité est insuffisante.\n5. Poutre sur deux appuis chargée : la fibre **supérieure est comprimée**, la fibre **inférieure est tendue**, la fibre neutre ne change pas de longueur. Une section **en I** (ou un tube) place la matière **loin de la fibre neutre**, là où les contraintes sont les plus fortes : à quantité de matière égale, elle résiste et se déforme bien mieux en flexion qu'une section pleine et plate."
+    },
+    {
+      "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+      "difficulte": 1,
+      "titre": "Le rendement de la pompe d'arrosage",
+      "consigne": "Écris chaque formule, l'application numérique avec les unités, puis le résultat.",
+      "enonce": "**Situation.** Une pompe d'arrosage est alimentée par la chaîne suivante : variateur (rendement **0,97**) → moteur (rendement **0,9**) → pompe (rendement **0,7**). L'ensemble absorbe **2 kW** au réseau.\n\n1. Calcule le rendement global de la chaîne.\n2. Calcule la puissance utile fournie à l'eau, puis les pertes totales.\n3. La pompe fonctionne **3 h** par jour. Calcule l'énergie absorbée au réseau chaque jour, en kWh.",
+      "bareme": [
+        {
+          "critere": "Rendement global juste : 0,97 × 0,9 × 0,7 ≈ 0,61",
+          "points": 7
+        },
+        {
+          "critere": "Puissance utile (≈ 1,22 kW) et pertes (≈ 0,78 kW) justes",
+          "points": 7
+        },
+        {
+          "critere": "Énergie journalière juste : 2 × 3 = 6 kWh",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. η global = η1 × η2 × η3 = 0,97 × 0,9 × 0,7 ≈ **0,61**.\n2. P utile = η global × P absorbée = 0,611 × 2 ≈ **1,22 kW**. Pertes = P absorbée − P utile = 2 − 1,22 ≈ **0,78 kW**.\n3. E = P × t = 2 kW × 3 h = **6 kWh** par jour."
+    },
+    {
+      "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+      "difficulte": 2,
+      "titre": "Le monte-charge de la boulangerie",
+      "consigne": "Suis l'énergie de la source à l'effecteur : pose chaque calcul avec les unités, puis identifie l'étage à améliorer en chiffrant le gain.",
+      "enonce": "**Situation.** Le monte-charge d'une boulangerie hisse une charge de **300 kg** (sans contrepoids) sur **6 m** en **12 s**, à vitesse constante. On prend g = 9,81 N/kg.\n\n**Chaîne de puissance.** Variateur (**0,95**) → moteur (**0,85**) → réducteur à roue et vis sans fin (**0,65**) → tambour (**0,95**).\n\n1. Calcule l'énergie utile pour une montée, puis la puissance utile.\n2. Calcule le rendement global de la chaîne.\n3. Calcule la puissance absorbée au réseau et les pertes totales.\n4. Quel étage faut-il améliorer en priorité ? Calcule la nouvelle puissance absorbée si on le remplace par un réducteur à engrenages hélicoïdaux de rendement **0,95**.",
+      "bareme": [
+        {
+          "critere": "Énergie utile (≈ 17,7 kJ) et puissance utile (≈ 1,47 kW) justes",
+          "points": 5
+        },
+        {
+          "critere": "Rendement global juste : environ 0,50",
+          "points": 4
+        },
+        {
+          "critere": "Puissance absorbée (≈ 2,95 kW) et pertes (≈ 1,48 kW) justes",
+          "points": 5
+        },
+        {
+          "critere": "Réducteur désigné comme étage prioritaire et nouvelle puissance absorbée d'environ 2,02 kW",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. E = m × g × h = 300 × 9,81 × 6 ≈ **17 660 J** (17,7 kJ). P utile = E / t = 17 658 / 12 ≈ **1 470 W** (1,47 kW).\n2. η global = 0,95 × 0,85 × 0,65 × 0,95 ≈ **0,50**.\n3. P absorbée = P utile / η = 1 471,5 / 0,4986 ≈ **2 950 W** (2,95 kW). Pertes = 2 950 − 1 470 ≈ **1 480 W**, soit la moitié de la puissance absorbée.\n4. L'étage de plus faible rendement est le **réducteur à roue et vis sans fin** (0,65) : à lui seul, il perd environ 830 W. Avec un réducteur hélicoïdal : η global = 0,95 × 0,85 × 0,95 × 0,95 ≈ **0,73**. P absorbée = 1 471,5 / 0,729 ≈ **2 020 W**, soit environ 930 W de moins (−32 %)."
+    },
+    {
+      "chapitre": "5f404260-52cc-59e5-9e87-b461a7634711",
+      "difficulte": 3,
+      "titre": "Le cycle d'une presse d'atelier",
+      "consigne": "Analyse la courbe et les mesures, pose chaque calcul, puis interprète les écarts et propose des pistes d'optimisation.",
+      "enonce": "**Situation.** Un moteur entraîne une presse d'atelier. Un wattmètre relève la puissance électrique absorbée pendant un cycle :\n\n| Phase | Durée | Puissance absorbée |\n| Démarrage | 5 s | monte linéairement de 0 à 3 kW |\n| Travail | 40 s | constante, 3 kW |\n| Arrêt | 5 s | descend linéairement de 3 kW à 0 |\n\nLa presse réalise **200 cycles par jour**. Pendant la phase de travail, un couplemètre et un tachymètre mesurent en sortie du moteur **25 N·m** à **1 000 tr/min**. Le constructeur annonce un rendement du moteur de **0,92**.\n\n1. Classe chaque phase en régime transitoire ou établi.\n2. Calcule l'énergie absorbée pendant un cycle (aire sous la courbe P(t)), en joules puis en Wh.\n3. Calcule l'énergie absorbée par jour, en kWh.\n4. Calcule la puissance mécanique mesurée en sortie du moteur pendant le travail, puis le rendement mesuré. Compare-le au rendement annoncé et propose une interprétation de l'écart.\n5. Propose deux pistes pour réduire la consommation de cette presse, en précisant le levier (réduire les pertes, récupérer, piloter, stocker).",
+      "bareme": [
+        {
+          "critere": "Démarrage et arrêt classés en transitoire, travail en régime établi",
+          "points": 3
+        },
+        {
+          "critere": "Énergie par cycle juste : 7,5 kJ + 120 kJ + 7,5 kJ = 135 kJ, soit 37,5 Wh",
+          "points": 5
+        },
+        {
+          "critere": "Énergie journalière juste : 7,5 kWh",
+          "points": 3
+        },
+        {
+          "critere": "Puissance mécanique (≈ 2,62 kW) et rendement mesuré (≈ 0,87) justes, écart interprété",
+          "points": 5
+        },
+        {
+          "critere": "Deux pistes d'optimisation pertinentes rattachées à un levier",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Démarrage et arrêt : **régime transitoire** (les grandeurs varient). Travail : **régime établi** (puissance stable).\n2. Aire sous la courbe :\n- démarrage : ½ × 3 000 × 5 = 7 500 J ;\n- travail : 3 000 × 40 = 120 000 J ;\n- arrêt : ½ × 3 000 × 5 = 7 500 J.\nTotal : **135 000 J**, soit 135 000 / 3 600 = **37,5 Wh**.\n3. 200 × 37,5 = 7 500 Wh = **7,5 kWh** par jour.\n4. ω = 2π × 1 000 / 60 ≈ 104,7 rad/s. P méca = C × ω = 25 × 104,7 ≈ **2 620 W**. η mesuré = 2 620 / 3 000 ≈ **0,87**, contre 0,92 annoncé. L'écart peut venir de l'**état du moteur** (usure, échauffement, mauvaise lubrification) ou d'un **point de fonctionnement** éloigné de celui du rendement maximal, ou encore de l'imprécision des mesures : il faut refaire la mesure et vérifier le moteur.\n5. Exemples : **réduire les pertes** (moteur à haut rendement, lubrification) ; **piloter** (couper le moteur entre deux cycles au lieu de le laisser tourner, faire travailler le moteur près de son rendement maximal) ; **récupérer** l'énergie de freinage à l'arrêt si le variateur est réversible."
+    },
+    {
+      "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+      "difficulte": 1,
+      "titre": "La chaîne d'acquisition d'une station météo",
+      "consigne": "Réponds à chaque question ; pour les calculs, écris la formule et l'application numérique.",
+      "enonce": "**Situation.** Une station météo mesure la température extérieure et l'affiche sur un écran.\n\n1. Remets dans l'ordre les étages de la chaîne d'acquisition et donne le rôle de chacun : CAN, traitement numérique, capteur, conditionnement.\n2. Le CAN de la station a une résolution de **10 bits** et une pleine échelle de **5 V**. Calcule son quantum.\n3. Le capteur conditionné délivre **2 V**. Quel nombre N le CAN transmet-il au programme ?",
+      "bareme": [
+        {
+          "critere": "Ordre capteur → conditionnement → CAN → traitement, avec le rôle de chaque étage",
+          "points": 6
+        },
+        {
+          "critere": "Quantum juste : q = 5 / 1 024 ≈ 4,88 mV",
+          "points": 7
+        },
+        {
+          "critere": "Nombre juste : N = partie entière de 2 / 0,004 88, soit 409",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Capteur** (traduit la température en signal électrique) → **conditionnement** (amplifie, filtre, décale pour utiliser toute la plage du CAN) → **CAN** (transforme la tension en nombre entier) → **traitement numérique** (convertit en °C, compare, décide, affiche).\n2. q = pleine échelle / 2ⁿ = 5 / 2¹⁰ = 5 / 1 024 ≈ **4,88 mV**.\n3. N = partie entière de (U / q) = partie entière de (2 / 0,004 883) = partie entière de 409,6 = **409**."
+    },
+    {
+      "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+      "difficulte": 2,
+      "titre": "Surveiller l'eau d'un chauffe-eau d'atelier",
+      "consigne": "Pose chaque calcul avec les unités et compare tes résultats à l'exigence.",
+      "enonce": "**Situation.** Pour surveiller l'eau d'un chauffe-eau d'atelier, on utilise un capteur de température à caractéristique linéaire : il délivre **0,4 V à 0 °C** et **2,4 V à 100 °C**. Il est relié à un CAN **12 bits** de pleine échelle **3,3 V**. Exigence : la résolution de la mesure doit être meilleure que **0,5 °C**.\n\n1. Calcule la sensibilité du capteur, en V/°C.\n2. Calcule le quantum du CAN, puis la résolution de la mesure en °C. L'exigence est-elle satisfaite ?\n3. Le programme lit **N = 1 500**. Calcule la tension correspondante, puis la température mesurée.\n4. Pour réduire le coût, on propose un CAN **8 bits** de même pleine échelle. Recalcule la résolution et conclus.",
+      "bareme": [
+        {
+          "critere": "Sensibilité juste : 2 V / 100 °C = 0,02 V/°C (20 mV/°C)",
+          "points": 4
+        },
+        {
+          "critere": "Quantum (≈ 0,81 mV) et résolution (≈ 0,04 °C) justes, comparaison à 0,5 °C",
+          "points": 5
+        },
+        {
+          "critere": "Conversion juste : U ≈ 1,21 V puis T ≈ 40 °C",
+          "points": 6
+        },
+        {
+          "critere": "Résolution en 8 bits (≈ 0,64 °C) jugée non conforme",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Sensibilité = (2,4 − 0,4) / (100 − 0) = 2 / 100 = **0,02 V/°C** (20 mV/°C).\n2. q = 3,3 / 4 096 ≈ **0,81 mV**. Résolution en température : 0,81 mV ÷ 20 mV/°C ≈ **0,04 °C**. 0,04 °C < 0,5 °C : exigence **satisfaite**, largement.\n3. U ≈ N × q = 1 500 × 3,3 / 4 096 ≈ **1,21 V**. T = (1,21 − 0,4) / 0,02 ≈ **40 °C** (40,4 °C).\n4. En 8 bits : q = 3,3 / 256 ≈ 12,9 mV. Résolution : 12,9 / 20 ≈ **0,64 °C** > 0,5 °C : exigence **non satisfaite**. Le CAN 8 bits ne convient pas."
+    },
+    {
+      "chapitre": "fb970bea-7672-5c00-a72a-415c3426f942",
+      "difficulte": 3,
+      "titre": "Le pèse-personne connecté qui affiche n'importe quoi",
+      "consigne": "Analyse chaque étage de la chaîne d'acquisition, pose les calculs et justifie chaque proposition avec le cours.",
+      "enonce": "**Situation.** Un pèse-personne connecté mesure une force. Le signal utile varie lentement (fréquences inférieures à **2 Hz**), mais il est pollué par un bruit à **50 Hz** venant du secteur. Plusieurs utilisateurs signalent des défauts.\n\n1. On place un filtre passe-bas RC avec **R = 4,7 kΩ** et **C = 10 µF**. Calcule sa fréquence de coupure. Ce filtre convient-il ? Justifie.\n2. Quelle fréquence d'échantillonnage minimale faut-il choisir pour le signal utile ? Le programme échantillonne à 1 Hz : est-ce correct ?\n3. Le programme stocke la masse **en grammes** dans un entier **16 bits signé** (valeurs de −32 768 à 32 767). Que se passe-t-il quand un adulte de 80 kg monte sur la balance ? Propose une correction.\n4. Pour stabiliser l'affichage, le programme calcule la moyenne des quatre dernières mesures en kilogrammes, stockées en entiers : 80, 79, 80, 79. Il obtient 79 au lieu de 79,5. Explique l'erreur, et nomme ce type de filtrage.\n5. La balance affiche 1 kg de plus quand elle reste en plein soleil. Comment appelle-t-on la température dans ce cas ?",
+      "bareme": [
+        {
+          "critere": "Fréquence de coupure juste (≈ 3,4 Hz) et filtre jugé adapté : laisse passer 2 Hz, atténue 50 Hz",
+          "points": 5
+        },
+        {
+          "critere": "Shannon appliqué : au moins 4 Hz, échantillonnage à 1 Hz jugé trop lent",
+          "points": 4
+        },
+        {
+          "critere": "Débordement de l'entier identifié (80 000 > 32 767) et correction proposée",
+          "points": 4
+        },
+        {
+          "critere": "Division entière identifiée (318 / 4 = 79) et moyenne glissante nommée",
+          "points": 4
+        },
+        {
+          "critere": "Grandeur d'influence nommée",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. fc = 1 / (2π × R × C) = 1 / (2π × 4 700 × 0,000 01) ≈ 1 / 0,295 ≈ **3,4 Hz**. Le signal utile (< 2 Hz) passe, le bruit à 50 Hz, bien au-dessus de fc, est atténué : le filtre **convient**.\n2. D'après le théorème de Shannon, il faut échantillonner à au moins deux fois la plus haute fréquence utile : 2 × 2 = **4 Hz** au minimum. 1 Hz est **trop lent** : le signal reconstruit serait faux. On peut choisir par exemple 10 Hz.\n3. 80 kg = 80 000 g > 32 767 : l'entier **déborde** et la valeur stockée devient fausse. Corrections possibles : un entier plus grand (32 bits), un flottant, ou stocker la masse dans une unité plus grande (en hectogrammes : 800).\n4. Somme : 80 + 79 + 80 + 79 = 318. En **division entière**, 318 / 4 donne **79** : la partie décimale (0,5) est perdue. Il faut faire le calcul en flottant (ou en grammes). Ce calcul est un **filtrage numérique** par **moyenne glissante**.\n5. La température est ici une **grandeur d'influence** : elle perturbe la mesure du capteur de force (dérive)."
+    },
+    {
+      "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+      "difficulte": 1,
+      "titre": "Le réseau de la salle de technologie",
+      "consigne": "Réponds à chaque question en justifiant avec le cours.",
+      "enonce": "**Situation.** Dans la salle de technologie, un serveur a l'adresse **10.0.5.77** avec le masque **255.255.255.0** (/24).\n\n1. Donne l'adresse du réseau et l'adresse de diffusion. Combien de machines peut-on adresser dans ce réseau ?\n2. Deux équipements veulent dialoguer avec le serveur sans passer par un routeur : une imprimante en **10.0.5.200/24** et une caméra en **10.0.6.3/24**. Lesquels le peuvent ? Justifie.\n3. Sur la carte d'un robot, on veut relier trois capteurs à un microcontrôleur avec seulement deux fils de signal, chaque capteur ayant sa propre adresse. Quelle liaison choisir ? Comment s'appellent ses deux fils ?",
+      "bareme": [
+        {
+          "critere": "Adresse réseau 10.0.5.0, diffusion 10.0.5.255 et 254 machines",
+          "points": 8
+        },
+        {
+          "critere": "Imprimante dans le même réseau, caméra dans le réseau 10.0.6.0, passerelle nécessaire",
+          "points": 7
+        },
+        {
+          "critere": "Bus I2C choisi, fils SDA et SCL nommés",
+          "points": 5
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Adresse réseau = adresse IP ET masque : **10.0.5.0**. Adresse de diffusion : **10.0.5.255**. Machines de 10.0.5.1 à 10.0.5.254 : **254 adresses** utilisables.\n2. L'**imprimante** (10.0.5.200/24) a la même adresse réseau 10.0.5.0 : elle communique **directement** avec le serveur. La **caméra** (10.0.6.3/24) est dans le réseau **10.0.6.0**, différent : elle ne peut pas communiquer directement, il faut passer par une **passerelle** (routeur) ou changer son adresse en 10.0.5.x.\n3. Le bus **I2C** : deux fils, **SDA** (données) et **SCL** (horloge), plusieurs esclaves adressés sur le même bus."
+    },
+    {
+      "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+      "difficulte": 2,
+      "titre": "Connecter une exploitation agricole",
+      "consigne": "Justifie chaque choix par les critères du cours : portée, débit, consommation.",
+      "enonce": "**Situation.** Une agricultrice, Mme Duval, veut connecter trois équipements :\n\n- **A** : un capteur d'humidité du sol, alimenté par pile, au fond d'un champ situé à **3 km** de la ferme, qui envoie une mesure toutes les 30 minutes ;\n- **B** : une caméra de surveillance dans le hangar, qui transmet une vidéo en continu vers la box de la ferme, à 30 m ;\n- **C** : un bracelet porté par l'agricultrice, qui transmet son rythme de pas à son smartphone, dans sa poche.\n\n1. Choisis une technologie sans fil pour chaque équipement et justifie.\n2. Le capteur A publie ses mesures en **MQTT** sur le sujet « ferme/champ3/humidite ». Explique le fonctionnement de ce protocole : qui publie, par où passe le message, qui le reçoit ?\n3. Pour mettre à jour le logiciel de la caméra, faut-il utiliser TCP ou UDP ? Justifie.",
+      "bareme": [
+        {
+          "critere": "LoRa ou Sigfox pour A, Wi-Fi pour B, Bluetooth Low Energy pour C",
+          "points": 4
+        },
+        {
+          "critere": "Chaque choix justifié par la portée, le débit et la consommation",
+          "points": 5
+        },
+        {
+          "critere": "MQTT expliqué : publication sur un sujet, serveur broker, réception par les abonnés",
+          "points": 6
+        },
+        {
+          "critere": "TCP choisi et justifié par la garantie de réception (accusés de réception)",
+          "points": 5
+        }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Choix attendus :\n- **A** : **LoRa ou Sigfox** (LPWAN) : portée de plusieurs km, très faible consommation (pile), le très faible débit suffit pour une mesure toutes les 30 min ;\n- **B** : **Wi-Fi** : débit élevé nécessaire pour la vidéo, portée d'environ 50 m suffisante ; la consommation élevée n'est pas gênante (caméra branchée sur le secteur) ;\n- **C** : **Bluetooth Low Energy** : portée d'environ 10 m suffisante (bracelet près du smartphone), très faible consommation pour une petite batterie.\n2. MQTT fonctionne par **publication / abonnement** : le capteur **publie** sa valeur (par exemple « ferme/champ3/humidite = 32 ») sur un serveur appelé **broker** ; toutes les applications **abonnées** à ce sujet (tableau de bord, smartphone) reçoivent la valeur. Le capteur n'a pas à connaître les destinataires.\n3. **TCP** : c'est un protocole **fiable**, avec accusés de réception ; une mise à jour logicielle ne doit perdre aucune donnée. UDP est rapide mais sans garantie."
+    },
+    {
+      "chapitre": "2b0aee15-572b-5419-a50f-08da8108987e",
+      "difficulte": 3,
+      "titre": "La supervision de l'atelier ne voit plus l'automate",
+      "consigne": "Analyse le dysfonctionnement, pose les calculs et justifie chaque proposition avec le cours.",
+      "enonce": "**Situation.** Dans un atelier, on installe une nouvelle supervision. Voici la configuration relevée :\n\n| Équipement | Adresse IP |\n| Automate de la ligne | 172.16.4.10/24 |\n| Poste de supervision | 172.16.5.20/24 |\n| Capteur connecté (Wi-Fi) | 172.16.4.35/24, mot de passe « admin », pages web en HTTP |\n\nIl n'y a pas de routeur entre les équipements. Le capteur est branché sur le même réseau que les ordinateurs du bureau.\n\n1. Calcule l'adresse réseau de chaque équipement. Explique pourquoi la supervision ne voit pas l'automate.\n2. Propose deux corrections possibles, dont une avec une adresse précise.\n3. L'automate dialogue aussi avec un module par une liaison série UART à **9 600 bit/s**. Chaque trame comporte 1 bit de start, 8 bits de données, 1 bit de parité et 1 bit de stop. Calcule la durée d'une trame et le nombre maximal d'octets de données transmis par seconde.\n4. Relève trois faiblesses de sécurité du capteur connecté et propose une mesure pour chacune.\n5. Quel protocole de transport faut-il pour les commandes envoyées à l'automate ? Justifie.",
+      "bareme": [
+        {
+          "critere": "Adresses réseau 172.16.4.0 et 172.16.5.0 calculées, réseaux différents sans routeur",
+          "points": 5
+        },
+        {
+          "critere": "Deux corrections : adresse 172.16.4.x libre (différente de 10 et 35) ou passerelle",
+          "points": 3
+        },
+        {
+          "critere": "Trame de 11 bits, durée d'environ 1,15 ms et environ 872 octets par seconde",
+          "points": 5
+        },
+        {
+          "critere": "Trois faiblesses de sécurité et une mesure pour chacune",
+          "points": 4
+        },
+        {
+          "critere": "TCP choisi et justifié",
+          "points": 3
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Adresse réseau = IP ET masque /24 : automate **172.16.4.0**, supervision **172.16.5.0**, capteur 172.16.4.0. L'automate et la supervision sont dans deux **réseaux différents** et aucun routeur ne les relie : ils ne peuvent pas communiquer directement.\n2. Corrections : donner à la supervision une adresse **172.16.4.x** libre, par exemple **172.16.4.50/24** (x différent de 10 et de 35) ; ou installer et configurer une **passerelle** (routeur) entre les deux réseaux.\n3. Trame : 1 + 8 + 1 + 1 = **11 bits**. Durée : 11 / 9 600 ≈ **1,15 ms**. Nombre de trames par seconde : 9 600 / 11 ≈ **872**, chacune portant un octet de données : environ **872 octets par seconde**.\n4. Faiblesses et mesures :\n- mot de passe par défaut « admin » → le remplacer par un **mot de passe robuste** ;\n- pages en HTTP, non chiffrées → passer en **HTTPS / TLS** (chiffrement) ;\n- capteur sur le réseau du bureau → **séparer** le réseau des objets du réseau principal.\nOn peut aussi citer les **mises à jour** du logiciel.\n5. **TCP** : il garantit la bonne réception des données grâce aux accusés de réception. Une commande perdue ou incomplète vers un automate pourrait provoquer un fonctionnement dangereux."
+    },
+    {
+      "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+      "difficulte": 1,
+      "titre": "La régulation du four à pain",
+      "consigne": "Réponds à chaque question avec le vocabulaire de la boucle fermée.",
+      "enonce": "**Situation.** Un four de boulangerie doit rester à **180 °C** pendant la cuisson. Une sonde mesure la température, un programme calcule l'écart, et un contacteur alimente les résistances chauffantes. Quand le boulanger ouvre la porte, la température chute.\n\n1. Identifie dans ce four : la consigne, le capteur, le comparateur, le correcteur, l'actionneur, une perturbation.\n2. S'agit-il d'une régulation ou d'un asservissement ? Justifie.\n3. Le four fonctionne en tout ou rien avec une hystérésis de **± 5 °C**. À quelles températures les résistances s'allument-elles et s'éteignent-elles ? À quoi sert cette hystérésis ?",
+      "bareme": [
+        {
+          "critere": "Six éléments de la boucle correctement identifiés",
+          "points": 8
+        },
+        {
+          "critere": "Régulation justifiée par une consigne fixe et la lutte contre les perturbations",
+          "points": 6
+        },
+        {
+          "critere": "Seuils de 175 °C et 185 °C justes et rôle de l'hystérésis expliqué",
+          "points": 6
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Éléments :\n- **consigne** : 180 °C ;\n- **capteur** : la sonde de température ;\n- **comparateur** : la partie du programme qui calcule ε = consigne − mesure ;\n- **correcteur** : le programme qui élabore la commande à partir de l'écart ;\n- **actionneur** : les résistances chauffantes (commandées par le contacteur) ;\n- **perturbation** : l'ouverture de la porte.\n2. C'est une **régulation** : la consigne est **fixe** (180 °C) et le système lutte contre les perturbations. Un asservissement ferait suivre à la sortie une consigne qui change.\n3. Les résistances s'allument quand T < **175 °C** et s'éteignent quand T > **185 °C** ; la température oscille entre environ 175 et 185 °C. Sans hystérésis, le contacteur commuterait sans cesse autour de 180 °C et s'userait."
+    },
+    {
+      "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+      "difficulte": 2,
+      "titre": "Le tapis roulant de la salle de sport",
+      "consigne": "Lis la réponse indicielle, calcule chaque critère de performance et compare-le au cahier des charges.",
+      "enonce": "**Situation.** La vitesse du tapis d'un tapis roulant est asservie. On applique un échelon de consigne de **0 à 2,0 m/s** et on relève la réponse :\n\n- la vitesse monte jusqu'à **2,25 m/s**, puis oscille et se stabilise à **1,9 m/s** ;\n- à partir de **t = 1,6 s**, la vitesse reste à ± 5 % de sa valeur finale.\n\n**Cahier des charges** : erreur statique ≤ **2 %** ; dépassement ≤ **15 %** ; temps de réponse à 5 % ≤ **2 s**.\n\nLe correcteur actuel est un correcteur proportionnel.\n\n1. Calcule le dépassement en %.\n2. Calcule l'erreur statique, en m/s et en %.\n3. Donne l'intervalle de ± 5 % autour de la valeur finale, puis le temps de réponse à 5 %.\n4. Pour chaque critère, dis si le cahier des charges est respecté.\n5. Quelle modification du correcteur proposes-tu pour corriger les défauts ? Explique l'effet attendu et le compromis à respecter.",
+      "bareme": [
+        {
+          "critere": "Dépassement juste : (2,25 − 1,9) / 1,9 ≈ 18 %",
+          "points": 4
+        },
+        {
+          "critere": "Erreur statique juste : 0,1 m/s, soit 5 %",
+          "points": 4
+        },
+        {
+          "critere": "Intervalle de 1,805 à 1,995 m/s et temps de réponse de 1,6 s",
+          "points": 3
+        },
+        {
+          "critere": "Conformité jugée pour les trois critères",
+          "points": 4
+        },
+        {
+          "critere": "Action intégrale proposée pour l'erreur statique et gain réduit ou action dérivée pour le dépassement, compromis expliqué",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Dépassement = (2,25 − 1,9) / 1,9 ≈ **18 %**.\n2. Erreur statique = 2,0 − 1,9 = **0,1 m/s**, soit 0,1 / 2,0 = **5 %** de la consigne.\n3. ± 5 % de 1,9 m/s : de 1,9 × 0,95 = **1,805 m/s** à 1,9 × 1,05 = **1,995 m/s**. Temps de réponse à 5 % : **1,6 s**.\n4. Conformité :\n- erreur statique 5 % > 2 % → **non conforme** ;\n- dépassement 18 % > 15 % → **non conforme** ;\n- temps de réponse 1,6 s ≤ 2 s → **conforme**.\n5. Ajouter une **action intégrale** (correcteur PI ou PID) : elle ajoute la somme des écarts passés et **annule l'erreur statique**, mais elle ralentit. Pour réduire le dépassement, on peut **diminuer le gain Kp** ou ajouter une **action dérivée**, qui amortit. Il faut respecter le **compromis rapidité / stabilité** : en ralentissant le système, on doit garder un temps de réponse inférieur à 2 s. Le réglage se fait par simulation puis par essais."
+    },
+    {
+      "chapitre": "0ba3cb40-87a4-5764-8631-67cef5de82e4",
+      "difficulte": 3,
+      "titre": "Choisir le correcteur d'une couveuse",
+      "consigne": "Analyse les trois essais, calcule les critères de performance, puis choisis et justifie un correcteur en comparant chaque résultat au cahier des charges.",
+      "enonce": "**Situation.** Une couveuse d'œufs doit maintenir **37,5 °C**. Le correcteur est un programme dans un microcontrôleur qui commande une résistance chauffante. Quand on soulève le couvercle pour retourner les œufs, la température baisse.\n\n**Cahier des charges** : erreur statique ≤ **0,2 °C** ; la température ne doit **jamais dépasser 38,5 °C** ; temps de réponse à 5 % ≤ **20 min**.\n\n**Essais** (échelon de consigne jusqu'à 37,5 °C)\n\n| Essai | Correcteur | Température maximale | Valeur finale | Temps de réponse à 5 % |\n| A | P, gain faible | 36,9 °C (aucun dépassement) | 36,9 °C | 25 min |\n| B | P, gain fort | 39,0 °C | 37,2 °C | 12 min |\n| C | PI | 38,1 °C | 37,5 °C | 15 min |\n\n1. Ce système est-il une régulation ou un asservissement ? Nomme la perturbation principale.\n2. Pour chaque essai, calcule l'erreur statique et, s'il y en a un, le dépassement en %. Vérifie chaque critère du cahier des charges.\n3. Quel correcteur retiens-tu ? Justifie.\n4. Compare les essais A et B : que montrent-ils sur l'effet du gain proportionnel ?\n5. Décris ce que fait le programme du microcontrôleur à chaque période d'échantillonnage.",
+      "bareme": [
+        {
+          "critere": "Régulation identifiée et perturbation (couvercle soulevé) nommée",
+          "points": 3
+        },
+        {
+          "critere": "Erreurs statiques (0,6 ; 0,3 ; 0 °C) et dépassements (≈ 4,8 % ; 1,6 %) justes, chaque critère vérifié",
+          "points": 7
+        },
+        {
+          "critere": "Correcteur PI retenu et justifié par les trois critères",
+          "points": 4
+        },
+        {
+          "critere": "Compromis rapidité / stabilité expliqué à partir des essais A et B",
+          "points": 3
+        },
+        {
+          "critere": "Boucle du programme décrite : lecture du capteur, calcul de l'écart, calcul et envoi de la commande",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. C'est une **régulation** : la consigne est fixe (37,5 °C) et le système lutte contre les perturbations. Perturbation principale : l'**ouverture du couvercle**.\n2. Analyse :\n- **A** : erreur statique = 37,5 − 36,9 = **0,6 °C** > 0,2 → non conforme ; pas de dépassement, maximum 36,9 °C ≤ 38,5 → conforme ; 25 min > 20 min → non conforme.\n- **B** : erreur statique = 37,5 − 37,2 = **0,3 °C** > 0,2 → non conforme ; dépassement = (39,0 − 37,2) / 37,2 ≈ **4,8 %**, mais surtout 39,0 °C > 38,5 °C → **non conforme** (danger pour les œufs) ; 12 min ≤ 20 → conforme.\n- **C** : erreur statique **0 °C** → conforme ; dépassement = (38,1 − 37,5) / 37,5 ≈ **1,6 %**, maximum 38,1 °C ≤ 38,5 → conforme ; 15 min ≤ 20 → conforme.\n3. On retient le **correcteur PI (essai C)** : c'est le seul qui respecte les trois critères. L'action intégrale **annule l'erreur statique**.\n4. Augmenter le gain (A → B) rend la réponse **plus rapide** (25 → 12 min) et réduit l'erreur statique, mais la rend **plus oscillante** (dépassement jusqu'à 39 °C). C'est le **compromis rapidité / stabilité** ; un correcteur P seul laisse une erreur statique.\n5. À chaque période d'échantillonnage, le programme **lit le capteur** de température, **calcule l'écart** ε = consigne − mesure, **calcule la commande** (terme proportionnel + somme des écarts passés), puis l'envoie à la résistance (par exemple sous forme de rapport cyclique MLI)."
+    },
+    {
+      "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+      "difficulte": 1,
+      "titre": "Comment tient et isole une maison",
+      "consigne": "Réponds à chaque question ; pour le calcul, écris la formule, l'application numérique et l'unité.",
+      "enonce": "**Situation.** Nora suit la construction de la maison de ses parents.\n\n1. Remets dans l'ordre le chemin des charges, du haut vers le bas : fondation, poteau, sol, plancher, poutre. Dans quel cas utilise-t-on des fondations profondes ?\n2. Les combles sont isolés avec **12 cm** de laine de verre de conductivité **λ = 0,035 W/(m·K)**. Calcule la résistance thermique de cette couche.\n3. Cite trois principes de la conception bioclimatique que les architectes auraient pu appliquer à cette maison.",
+      "bareme": [
+        {
+          "critere": "Ordre plancher → poutre → poteau → fondation → sol et cas des fondations profondes",
+          "points": 6
+        },
+        {
+          "critere": "Résistance thermique juste : R = 0,12 / 0,035 ≈ 3,4 m²·K/W",
+          "points": 7
+        },
+        {
+          "critere": "Trois principes bioclimatiques corrects et expliqués",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. **Plancher → poutre → poteau → fondation → sol**. On utilise des **fondations profondes** (pieux, micropieux) quand le sol porteur est **profond** ; sinon, des fondations superficielles suffisent.\n2. R = e / λ = 0,12 / 0,035 ≈ **3,4 m²·K/W** (attention : e en mètres).\n3. Trois principes parmi :\n- **orienter** : grandes baies au sud, peu au nord ;\n- **capter** le soleil l'hiver et s'en **protéger** l'été (casquettes, brise-soleil, végétation caduque) ;\n- **stocker** la chaleur dans une masse (inertie thermique) ;\n- **ventiler** naturellement l'été ;\n- **isoler** et supprimer les ponts thermiques."
+    },
+    {
+      "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+      "difficulte": 2,
+      "titre": "La semelle et le mur de l'extension",
+      "consigne": "Pose chaque calcul (formule, application numérique, unité) et conclus.",
+      "enonce": "**Situation.** On construit l'extension d'une médiathèque.\n\n**Fondation.** Un poteau transmet **450 kN** au sol, qui admet une pression de **0,25 MPa**.\n\n**Mur.** Un mur de **25 m²** est composé de :\n\n| Couche | Épaisseur | λ en W/(m·K) |\n| Brique | 20 cm | 0,5 |\n| Isolant | 14 cm | 0,035 |\n\nTempérature intérieure : 20 °C ; température extérieure : 1 °C.\n\n1. Calcule la surface de semelle nécessaire, en m², puis le côté d'une semelle carrée.\n2. Calcule la résistance thermique de chaque couche, puis la résistance totale du mur.\n3. Calcule le flux de chaleur qui traverse le mur.\n4. Calcule ce flux sans l'isolant et commente.",
+      "bareme": [
+        {
+          "critere": "Surface de semelle (1,8 m²) et côté (≈ 1,35 m) justes",
+          "points": 6
+        },
+        {
+          "critere": "Résistances justes : 0,4 ; 4 ; total 4,4 m²·K/W",
+          "points": 5
+        },
+        {
+          "critere": "Flux juste : Φ = 25 × 19 / 4,4 ≈ 108 W",
+          "points": 5
+        },
+        {
+          "critere": "Flux sans isolant (≈ 1 190 W) et commentaire sur le rôle de l'isolant",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. S = N / p = 450 000 / 0,25 = 1 800 000 mm² = **1,8 m²**. Semelle carrée : côté = √1,8 ≈ **1,35 m**.\n2. Brique : R = 0,20 / 0,5 = **0,4 m²·K/W**. Isolant : R = 0,14 / 0,035 = **4 m²·K/W**. R total = 0,4 + 4 = **4,4 m²·K/W**.\n3. ΔT = 20 − 1 = 19 °C. Φ = S × ΔT / R total = 25 × 19 / 4,4 ≈ **108 W**.\n4. Sans isolant : Φ = 25 × 19 / 0,4 ≈ **1 190 W**, soit environ **11 fois plus**. Presque toute la résistance thermique du mur vient de l'isolant : la brique seule isole très mal."
+    },
+    {
+      "chapitre": "33441d30-66aa-5411-92fd-8ea37d0f66de",
+      "difficulte": 3,
+      "titre": "Béton ou bois pour les murs de l'école ?",
+      "consigne": "Compare les deux solutions par le calcul, analyse le plan, puis rédige une conclusion argumentée pour le maître d'ouvrage.",
+      "enonce": "**Situation.** Une commune fait construire une école. Deux solutions de mur extérieur sont étudiées pour une façade de **80 m²**, avec un écart de température intérieur-extérieur de **18 °C**.\n\n| | Solution A | Solution B |\n| Composition | Béton 18 cm (λ = 2) + polystyrène 12 cm (λ = 0,032) | Ossature bois : fibre de bois 20 cm (λ = 0,04) + panneau OSB 1,2 cm (λ = 0,13) |\n| Empreinte carbone du mur | 55 kg éq. CO2 par m² | 20 kg éq. CO2 par m² |\n\n**Extrait de l'esquisse.** Les salles de classe ont de grandes baies vitrées **au nord**, pour « une lumière douce » ; la façade sud est presque aveugle. Au droit de chaque plancher, le béton de la dalle traverse le mur jusqu'à la façade.\n\n1. Calcule la résistance thermique totale de chaque solution (λ en W/(m·K)).\n2. Calcule le flux de chaleur à travers la façade pour chaque solution.\n3. Calcule l'empreinte carbone de chaque façade. Pourquoi la solution B est-elle avantagée par la RE2020 ?\n4. Critique l'esquisse du point de vue bioclimatique et propose deux améliorations.\n5. Qu'est-ce qui se produit au droit des planchers ? Propose une solution.\n6. Rédige une conclusion de quelques lignes pour le maître d'ouvrage.",
+      "bareme": [
+        {
+          "critere": "Résistances justes : environ 3,84 m²·K/W pour A et 5,09 m²·K/W pour B",
+          "points": 5
+        },
+        {
+          "critere": "Flux justes : environ 375 W pour A et 283 W pour B",
+          "points": 4
+        },
+        {
+          "critere": "Empreintes de 4 400 kg et 1 600 kg, avantage biosourcé et stockage du carbone expliqués",
+          "points": 4
+        },
+        {
+          "critere": "Critique bioclimatique (baies au nord) et pont thermique identifiés, solutions proposées",
+          "points": 4
+        },
+        {
+          "critere": "Conclusion argumentée reprenant les résultats chiffrés",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. A : R = 0,18 / 2 + 0,12 / 0,032 = 0,09 + 3,75 = **3,84 m²·K/W**. B : R = 0,20 / 0,04 + 0,012 / 0,13 = 5 + 0,09 ≈ **5,09 m²·K/W**.\n2. Φ = S × ΔT / R. A : 80 × 18 / 3,84 = 1 440 / 3,84 = **375 W**. B : 1 440 / 5,09 ≈ **283 W** (environ 25 % de moins).\n3. A : 80 × 55 = **4 400 kg éq. CO2**. B : 80 × 20 = **1 600 kg éq. CO2**, près de trois fois moins. La RE2020 fixe des seuils d'empreinte carbone sur le cycle de vie : le bois est un matériau **biosourcé** qui **stocke du carbone**, alors que le ciment du béton a une forte empreinte.\n4. Les grandes baies au **nord** ne captent pas le soleil l'hiver et font perdre de la chaleur ; la façade sud aveugle se prive des apports solaires. Améliorations : placer les **grandes baies au sud**, avec des **casquettes ou brise-soleil** pour se protéger l'été ; réduire les ouvertures au nord ; prévoir une ventilation traversante nocturne l'été.\n5. La dalle qui traverse le mur interrompt l'isolation : c'est un **pont thermique**, par lequel la chaleur fuit. Il faut assurer la **continuité de l'isolant** autour du plancher, sans interruption.\n6. Conclusion attendue : la solution **B** isole mieux (283 W contre 375 W) et divise presque par trois l'empreinte carbone (1 600 kg contre 4 400 kg) : elle est préférable pour la RE2020, à condition de protéger le bois de l'humidité et du feu. L'orientation des baies doit être revue et les ponts thermiques traités."
+    },
+    {
+      "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+      "difficulte": 1,
+      "titre": "Panneaux et pompe à chaleur",
+      "consigne": "Réponds à chaque question ; pour les calculs, écris la formule et l'application numérique.",
+      "enonce": "**Situation.** La famille de Hugo équipe sa maison.\n\n1. Elle installe **12 panneaux de 375 Wc** dans une région où l'on produit **1 100 kWh par kWc et par an**. Calcule la puissance crête installée, puis la production annuelle.\n2. Elle installe aussi une pompe à chaleur de COP **3**. Pour **1 kWh** électrique consommé, combien de kWh de chaleur sont fournis au logement, et combien sont pris à l'environnement ?\n3. L'électricité des centrales arrive par des lignes à **400 kV**. Explique pourquoi on transporte l'électricité en très haute tension.",
+      "bareme": [
+        {
+          "critere": "Puissance crête (4,5 kWc) et production annuelle (4 950 kWh) justes",
+          "points": 7
+        },
+        {
+          "critere": "3 kWh de chaleur fournis, dont 2 kWh pris à l'environnement",
+          "points": 6
+        },
+        {
+          "critere": "Haute tension expliquée : courant plus faible à puissance égale, pertes par effet Joule réduites",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Puissance crête : 12 × 375 = 4 500 Wc = **4,5 kWc**. Production : 4,5 × 1 100 = **4 950 kWh/an**.\n2. COP = chaleur fournie / énergie électrique consommée, donc chaleur fournie = 3 × 1 = **3 kWh**, dont 3 − 1 = **2 kWh** prélevés gratuitement à l'environnement (air, sol ou eau).\n3. À puissance égale, plus la tension est élevée, plus le **courant est faible**. Or les pertes par **effet Joule** valent R × I² : elles chutent fortement quand le courant diminue. Les transformateurs permettent de changer de niveau de tension."
+    },
+    {
+      "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+      "difficulte": 2,
+      "titre": "Autoconsommer le soleil de la ferme",
+      "consigne": "Pose chaque calcul avec les unités, puis conclus.",
+      "enonce": "**Situation.** Une ferme installe **20 panneaux de 400 Wc** dans une région à **1 300 kWh/kWc/an**. Elle consomme **7 000 kWh/an**, dont **35 %** pendant les heures de production solaire.\n\n1. Calcule la puissance crête installée et la production annuelle.\n2. Calcule l'énergie autoconsommée et l'énergie injectée sur le réseau.\n3. En pilotant le ballon d'eau chaude et le lave-linge aux heures solaires, la ferme déplace **1 000 kWh** de consommation par an vers ces heures. Calcule la nouvelle autoconsommation et la part de la production consommée sur place avant et après.\n4. La ferme veut aussi chauffer son logement, qui a besoin de **9 000 kWh** de chaleur par an, avec une pompe à chaleur de COP **3,2**. Calcule l'électricité consommée par la pompe à chaleur. Pourquoi le COP sera-t-il plus faible en plein hiver ?",
+      "bareme": [
+        {
+          "critere": "Puissance crête (8 kWc) et production (10 400 kWh/an) justes",
+          "points": 4
+        },
+        {
+          "critere": "Autoconsommation de 2 450 kWh et injection de 7 950 kWh justes",
+          "points": 5
+        },
+        {
+          "critere": "Nouvelle autoconsommation de 3 450 kWh et parts d'environ 24 % puis 33 %",
+          "points": 5
+        },
+        {
+          "critere": "Électricité de la pompe à chaleur (≈ 2 810 kWh) et baisse du COP par grand froid expliquée",
+          "points": 6
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Puissance crête : 20 × 400 = 8 000 Wc = **8 kWc**. Production : 8 × 1 300 = **10 400 kWh/an**.\n2. Autoconsommation : 0,35 × 7 000 = **2 450 kWh**. Injection : 10 400 − 2 450 = **7 950 kWh**.\n3. Nouvelle autoconsommation : 2 450 + 1 000 = **3 450 kWh** (injection : 6 950 kWh). Part de la production consommée sur place : avant 2 450 / 10 400 ≈ **24 %**, après 3 450 / 10 400 ≈ **33 %**.\n4. Électricité = chaleur / COP = 9 000 / 3,2 ≈ **2 810 kWh**. Le COP baisse quand l'écart de température entre la source (l'air extérieur) et le logement augmente : par grand froid, la pompe consomme plus d'électricité pour la même chaleur."
+    },
+    {
+      "chapitre": "2774fa37-70aa-5c10-a20f-72e35dc083a9",
+      "difficulte": 3,
+      "titre": "Le mix d'un territoire de montagne",
+      "consigne": "Pose chaque calcul, puis analyse le rôle du réseau et de l'information dans la gestion de l'énergie du territoire.",
+      "enonce": "**Situation.** Une vallée de montagne veut produire une partie de son électricité.\n\n**Données**\n- Une éolienne fournit **2 MW** avec un vent de **12 m/s** (en dessous de sa puissance maximale, sa puissance est proportionnelle au cube de la vitesse du vent).\n- Une microcentrale sur le torrent : débit **Qv = 2 m³/s**, hauteur de chute **h = 15 m**, rendement **η = 0,85**, ρ = 1 000 kg/m³, g = 9,81 N/kg.\n- L'électricité produite est élevée de **20 kV à 400 kV** pour rejoindre le réseau de transport.\n\n1. Calcule la puissance de l'éolienne quand le vent tombe à **6 m/s**. Commente.\n2. Calcule la puissance de la microcentrale (P = ρ × g × Qv × h × η).\n3. À puissance transportée égale, par combien le courant est-il divisé en passant de 20 kV à 400 kV ? Et les pertes par effet Joule (R × I²), à résistance de ligne égale ?\n4. Un soir sans vent, la consommation de la vallée dépasse la production disponible. Que risque-t-il de se passer sur le réseau si rien n'est fait ?\n5. Explique comment un réseau intelligent (smart grid) peut aider la vallée : donne deux actions concrètes.",
+      "bareme": [
+        {
+          "critere": "Puissance à 6 m/s juste : 2 MW / 8 = 250 kW, forte sensibilité au vent commentée",
+          "points": 5
+        },
+        {
+          "critere": "Puissance de la microcentrale juste : environ 250 kW",
+          "points": 4
+        },
+        {
+          "critere": "Courant divisé par 20 et pertes divisées par 400, raisonnement justifié",
+          "points": 4
+        },
+        {
+          "critere": "Équilibre production-consommation et dérive de la fréquence de 50 Hz expliqués",
+          "points": 3
+        },
+        {
+          "critere": "Deux actions de réseau intelligent pertinentes",
+          "points": 4
+        }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. La vitesse est divisée par 2 : la puissance est divisée par 2³ = **8**. P = 2 000 / 8 = **250 kW**. Un vent deux fois plus faible fait perdre 87,5 % de la puissance : l'éolien est très sensible au vent, donc **intermittent**.\n2. P = 1 000 × 9,81 × 2 × 15 × 0,85 ≈ **250 000 W**, soit environ **250 kW**, de façon plus régulière que l'éolien.\n3. À puissance égale, le courant est inversement proportionnel à la tension : 400 / 20 = 20, le courant est **divisé par 20**. Les pertes R × I² sont divisées par 20² = **400**.\n4. Le réseau doit à chaque instant **équilibrer production et consommation**. Sinon, la **fréquence** (50 Hz) dérive, ce qui peut entraîner des coupures. Il faut importer de l'électricité par le réseau de transport, produire davantage ou réduire la consommation.\n5. Exemples : **piloter les usages** (recharger les véhicules électriques et chauffer les ballons aux heures de production, effacer certaines consommations aux heures de pointe) ; **prévoir** la production éolienne et hydraulique ; **compteurs communicants** pour connaître la consommation en temps réel ; **stocker** (ballons pilotés, batteries) ; autoconsommation collective. L'information s'ajoute à l'énergie : elle évite de gaspiller."
+    },
+    {
+      "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+      "difficulte": 1,
+      "titre": "Quel procédé pour quelle pièce ?",
+      "consigne": "Réponds à chaque question en justifiant avec le cours.",
+      "enonce": "**Situation.** Un bureau d'études doit fabriquer plusieurs pièces.\n\n1. Associe à chaque pièce la famille de procédés la plus adaptée (moulage par injection, usinage, déformation, fabrication additive, découpe) et justifie en une phrase :\n   a. une coque de télécommande en plastique, 200 000 exemplaires ;\n   b. un prototype unique de support à la forme très complexe ;\n   c. une platine plane en tôle d'acier, avec un contour découpé ;\n   d. une pièce en aluminium à 20 exemplaires, avec des alésages précis.\n2. Pour la coque injectée, cite quatre règles de forme à respecter et explique l'utilité de deux d'entre elles.\n3. Pourquoi dit-on que forme, matériau et procédé sont des choix interdépendants ? Donne un exemple.",
+      "bareme": [
+        {
+          "critere": "Quatre procédés adaptés et justifiés : injection, fabrication additive, découpe, usinage",
+          "points": 7
+        },
+        {
+          "critere": "Quatre règles de forme citées (épaisseur constante, dépouilles, congés, nervures) et deux expliquées",
+          "points": 7
+        },
+        {
+          "critere": "Interdépendance expliquée avec un exemple",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Associations :\n- a. **moulage par injection** : grande série, le coût du moule est amorti ;\n- b. **fabrication additive** : unité et forme complexe, aucun outillage ;\n- c. **découpe** (laser, jet d'eau, poinçonnage) : pièce plane dans une tôle ;\n- d. **usinage** (tournage, fraisage) : unité à moyenne série, bonne précision.\n2. Règles : **épaisseur constante** (sinon retassures), **dépouilles** de 1 à 2° (pour démouler la pièce), **congés** partout, **nervures** (pour rigidifier sans épaissir).\n3. Le matériau conditionne les procédés possibles ; le procédé conditionne les formes réalisables et le coût selon la quantité ; la forme conditionne la résistance et la fonction. Exemple : une pièce injectée en plastique n'a pas la même forme qu'une pièce usinée en aluminium qui remplit la même fonction (épaisseurs constantes, nervures, dépouilles d'un côté ; formes accessibles à l'outil de l'autre)."
+    },
+    {
+      "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+      "difficulte": 2,
+      "titre": "Le boîtier du capteur de parking",
+      "consigne": "Pose chaque calcul avec les unités, puis conclus sur le choix du procédé selon la quantité.",
+      "enonce": "**Situation.** Une start-up conçoit le boîtier d'un capteur de place de parking. Trois procédés sont possibles :\n\n| Procédé | Coût fixe | Coût par pièce |\n| Impression 3D | 0 € | 4,50 € |\n| Usinage | 1 500 € | 7 € |\n| Injection plastique | 18 000 € (moule) | 0,60 € |\n\n1. Calcule le coût total de chaque procédé pour une première série de **2 000 boîtiers**. Lequel choisir ?\n2. Calcule le coût total de chaque procédé pour **20 000 boîtiers**. Lequel choisir ?\n3. Calcule le seuil de rentabilité entre l'impression 3D et l'injection.\n4. La start-up prévoit 2 000 boîtiers la première année, puis 20 000 par an. Quelle stratégie lui conseilles-tu ?",
+      "bareme": [
+        {
+          "critere": "Coûts pour 2 000 pièces justes (9 000 € ; 15 500 € ; 19 200 €) et impression 3D choisie",
+          "points": 6
+        },
+        {
+          "critere": "Coûts pour 20 000 pièces justes (90 000 € ; 141 500 € ; 30 000 €) et injection choisie",
+          "points": 5
+        },
+        {
+          "critere": "Seuil de rentabilité juste : environ 4 616 pièces",
+          "points": 5
+        },
+        {
+          "critere": "Stratégie argumentée par les résultats",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Pour 2 000 pièces :\n- impression 3D : 4,50 × 2 000 = **9 000 €** ;\n- usinage : 1 500 + 7 × 2 000 = **15 500 €** ;\n- injection : 18 000 + 0,60 × 2 000 = **19 200 €**.\nL'**impression 3D** est la moins chère.\n2. Pour 20 000 pièces :\n- impression 3D : 4,50 × 20 000 = **90 000 €** ;\n- usinage : 1 500 + 7 × 20 000 = **141 500 €** ;\n- injection : 18 000 + 0,60 × 20 000 = **30 000 €**.\nL'**injection** s'impose.\n3. 18 000 + 0,6 × n = 4,5 × n → 3,9 × n = 18 000 → n ≈ 4 615,4, soit **4 616 pièces** environ. Au-delà, l'injection est moins chère.\n4. Stratégie : imprimer en 3D la première série (2 000 < 4 616), ce qui permet aussi de corriger la conception sans avoir payé de moule ; puis investir dans le moule d'injection pour les séries de 20 000, une fois la forme stabilisée (en respectant les règles de l'injection : épaisseur constante, dépouilles, congés)."
+    },
+    {
+      "chapitre": "51252a34-afd8-53d2-9c80-a37caf268eb9",
+      "difficulte": 3,
+      "titre": "Reconcevoir une lampe torche",
+      "consigne": "Analyse la solution actuelle, propose une reconception et justifie chaque choix par un gain chiffré ou une règle du cours.",
+      "enonce": "**Situation.** Une lampe torche est aujourd'hui fabriquée ainsi : corps en aluminium **usiné**, **7 pièces** au total, dont 2 collées entre elles, masse **180 g**. Une molette permet de régler la luminosité ; elle tourne lentement, quelques fois par jour, et supporte un effort très faible. L'entreprise veut produire **100 000 lampes par an**.\n\n**Données de coût**\n\n| Procédé | Coût fixe | Coût par corps |\n| Usinage de l'aluminium | 0 € | 12 € |\n| Injection d'un plastique recyclé | 40 000 € (moule) | 1,20 € |\n\n**Proposition de reconception** : corps injecté en plastique recyclé, avec **charnière et clips intégrés** ; **3 pièces** au total, toutes du même plastique ; masse **95 g**.\n\n1. Calcule le coût annuel des corps pour chaque procédé et conclus.\n2. Quelles règles de forme faudra-t-il respecter pour le nouveau corps injecté ? Cite-en trois.\n3. En quoi la reconception améliore-t-elle la fin de vie et la réparation ? Critique l'assemblage collé actuel.\n4. Pour guider la molette en rotation, faut-il un coussinet ou un roulement à billes ? Justifie.\n5. Chiffre les gains de la reconception (nombre de pièces, masse en %). Nomme la démarche d'innovation utilisée.",
+      "bareme": [
+        {
+          "critere": "Coûts annuels justes (1 200 000 € contre 160 000 €) et injection retenue",
+          "points": 5
+        },
+        {
+          "critere": "Trois règles de forme de l'injection citées",
+          "points": 4
+        },
+        {
+          "critere": "Monomatériau et assemblage démontable reliés à la fin de vie ; collage critiqué",
+          "points": 4
+        },
+        {
+          "critere": "Coussinet choisi et justifié par la faible vitesse et le faible effort",
+          "points": 3
+        },
+        {
+          "critere": "Gains chiffrés (4 pièces de moins, ≈ 47 % de masse) et intégration de fonctions nommée",
+          "points": 4
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Usinage : 12 × 100 000 = **1 200 000 €**. Injection : 40 000 + 1,20 × 100 000 = **160 000 €**. À 100 000 pièces par an, l'**injection** est de loin la moins chère : le moule est amorti par la grande série.\n2. **Épaisseur constante** (sinon retassures), **dépouilles** de 1 à 2° pour démouler, **congés** partout, **nervures** pour rigidifier sans épaissir.\n3. Toutes les pièces sont du **même plastique** (monomatériau) : la lampe se recycle sans tri. Les **clips** forment un assemblage **démontable** : on peut ouvrir la lampe pour la réparer. Le collage actuel est un assemblage **permanent** : il empêche le démontage et, s'il unit des matériaux différents, gêne le recyclage.\n4. Un **coussinet** (bague de frottement) suffit : la molette tourne lentement, rarement, sous un effort très faible ; il est plus simple et moins cher. Le roulement à billes, qui réduit le frottement, se justifie pour des vitesses ou des charges plus élevées.\n5. Pièces : 7 → 3, soit **4 pièces de moins**. Masse : (180 − 95) / 180 ≈ **47 %** de moins. La démarche est l'**intégration de fonctions** (charnière et clips dans la même pièce plastique), avec un matériau **recyclé**."
+    },
+    {
+      "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+      "difficulte": 1,
+      "titre": "Quelle carte, quelles entrées-sorties ?",
+      "consigne": "Réponds à chaque question en justifiant avec le cours.",
+      "enonce": "**Situation.** Le club de robotique du lycée prépare deux projets.\n\n1. Choisis entre un **microcontrôleur** et un **nano-ordinateur** pour chaque projet, et justifie :\n   a. un détecteur d'ouverture de porte sur pile, qui allume une LED et envoie une alerte ;\n   b. une borne qui héberge un site web local et analyse les images d'une caméra.\n2. Pour chaque composant, indique le type d'entrée ou de sortie utilisé : un bouton-poussoir ; un capteur de luminosité qui délivre une tension variable ; un moteur à courant continu dont on veut régler la vitesse ; un capteur de température relié par deux fils SDA et SCL.\n3. Décris la structure générale du programme principal d'une carte programmable.",
+      "bareme": [
+        {
+          "critere": "Microcontrôleur pour a et nano-ordinateur pour b, justifiés",
+          "points": 6
+        },
+        {
+          "critere": "Types justes : TOR, analogique (CAN), MLI, bus I2C",
+          "points": 8
+        },
+        {
+          "critere": "Structure décrite : initialisation puis boucle infinie",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Microcontrôleur** : il pilote des entrées-sorties en temps réel avec une **faible consommation**, idéal sur pile. b. **Nano-ordinateur** : il dispose d'un système d'exploitation, peut héberger un **serveur web**, gérer une **caméra** et faire des calculs lourds.\n2. Types :\n- bouton-poussoir → entrée **numérique TOR** ;\n- capteur de luminosité → entrée **analogique** (CAN) ;\n- moteur à courant continu → sortie **MLI** ;\n- capteur sur SDA et SCL → **bus I2C**.\n3. Le programme principal commence par une **initialisation** (capteurs, sorties, communication), puis exécute une **boucle infinie** qui lit les entrées, traite et commande les sorties, en appelant des fonctions."
+    },
+    {
+      "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+      "difficulte": 2,
+      "titre": "La ventilation de la salle de classe",
+      "consigne": "Analyse le pseudo-code, repère le défaut et propose une version corrigée, puis prépare les tests.",
+      "enonce": "**Situation.** Un capteur de CO2 pilote le ventilateur d'une salle de classe. Cahier des charges : ventiler au-dessus de **1 000 ppm**, arrêter sous **800 ppm**, publier la mesure toutes les **5 minutes**.\n\n| Ligne | Pseudo-code |\n| 1 | initialiser capteur, ventilateur, wifi |\n| 2 | tant que vrai : |\n| 3 | co2 ← lire_co2() |\n| 4 | si co2 > 1000 alors ventilateur ← MARCHE |\n| 5 | si co2 < 800 alors ventilateur ← ARRET |\n| 6 | publier(\"salle12/co2\", co2) |\n| 7 | attendre 300 s |\n\n1. Que fait le programme pour une mesure de **900 ppm** ? Comment s'appelle ce type de régulation, et quel est son intérêt ?\n2. Quel est le défaut de la ligne 7 ? Décris ce qui peut se passer dans la salle.\n3. Réécris les lignes 6 et 7 (tu peux ajouter une variable initialisée avant la boucle) pour publier toutes les 5 minutes sans bloquer la régulation.\n4. Propose des valeurs de test pour vérifier les lignes 4 et 5, et justifie leur choix.",
+      "bareme": [
+        {
+          "critere": "900 ppm : l'état du ventilateur ne change pas ; tout ou rien avec hystérésis et intérêt expliqués",
+          "points": 5
+        },
+        {
+          "critere": "Défaut identifié : l'attente bloque la régulation pendant cinq minutes",
+          "points": 5
+        },
+        {
+          "critere": "Réécriture correcte avec une variable de dernier envoi et une comparaison de temps",
+          "points": 5
+        },
+        {
+          "critere": "Valeurs de test autour des deux seuils, justifiées",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. À 900 ppm, aucune des deux conditions n'est vraie : le ventilateur **garde son état** (marche s'il était en marche, arrêt sinon). C'est une régulation **tout ou rien avec hystérésis** : entre 800 et 1 000 ppm, on ne change rien, ce qui évite que le ventilateur démarre et s'arrête sans cesse.\n2. « attendre 300 s » **bloque** tout le programme pendant cinq minutes : le CO2 n'est pas relu, le ventilateur n'est ni démarré ni arrêté pendant ce temps. Le taux peut dépasser largement 1 000 ppm sans réaction.\n3. Version corrigée :\n- avant la boucle : dernier_envoi ← 0 ;\n- ligne 6 : si temps() − dernier_envoi ≥ 300 alors publier(\"salle12/co2\", co2) ; dernier_envoi ← temps() ;\n- ligne 7 supprimée.\nLa boucle tourne en permanence et ne publie que toutes les 5 minutes.\n4. Tests autour des seuils : **999, 1 000, 1 001** ppm pour la ligne 4 (le ventilateur ne démarre qu'à 1 001), **799, 800, 801** ppm pour la ligne 5 (il ne s'arrête qu'à 799). On teste les valeurs juste autour de chaque seuil, là où une erreur de signe (< au lieu de ≤) se voit."
+    },
+    {
+      "chapitre": "7cb44eba-8094-52a0-80ca-2c337dfe27f0",
+      "difficulte": 3,
+      "titre": "Le distributeur de croquettes connecté",
+      "consigne": "Analyse le comportement, l'architecture logicielle et la sécurité du produit ; justifie chaque proposition avec le cours.",
+      "enonce": "**Situation.** Un distributeur de croquettes connecté sert un chat trois fois par jour. Il fonctionne selon trois modes : **Auto** (distribution aux heures programmées), **Manuel** (distribution à la demande depuis l'application), **Défaut** (réservoir vide ou vis bloquée). Un bouton d'arrêt d'urgence doit couper le moteur de la vis en moins de **0,05 s**.\n\nLa boucle principale lit le capteur de poids du bol (0,3 s), puis envoie les données au serveur (0,1 s). Un compteur de distributions est stocké dans une variable entière non signée sur **8 bits** (valeurs de 0 à 255). L'application demande à l'inscription : nom, adresse postale, position GPS du téléphone en permanence, nom et poids du chat.\n\n1. Quel diagramme décrit ces trois modes ? Décris les transitions possibles entre les modes, avec une condition pour chacune.\n2. Si le bouton d'arrêt d'urgence est lu à chaque tour de boucle, l'exigence de 0,05 s est-elle respectée ? Que proposes-tu ?\n3. Au bout de combien de jours le compteur de distributions pose-t-il problème ? Comment s'appelle ce défaut et comment l'éviter ?\n4. L'objet est livré avec l'identifiant « admin » / « 0000 ». Propose trois mesures de sécurité.\n5. Quelles données demandées ne sont pas nécessaires au service ? Justifie avec le principe du RGPD.",
+      "bareme": [
+        {
+          "critere": "Diagramme d'états nommé et transitions Auto, Manuel, Défaut décrites avec leurs conditions",
+          "points": 5
+        },
+        {
+          "critere": "Temps de boucle de 0,4 s comparé à 0,05 s et interruption proposée",
+          "points": 4
+        },
+        {
+          "critere": "Débordement après 85 jours identifié et correction proposée",
+          "points": 4
+        },
+        {
+          "critere": "Trois mesures de sécurité pertinentes",
+          "points": 4
+        },
+        {
+          "critere": "Données non nécessaires identifiées et principe du RGPD cité",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Un **diagramme d'états**. Transitions possibles :\n- Auto → Manuel : demande de distribution depuis l'application ; Manuel → Auto : distribution terminée ;\n- Auto ou Manuel → Défaut : réservoir détecté vide ou vis bloquée ;\n- Défaut → Auto : réservoir rempli et défaut acquitté par l'utilisateur.\nToute description cohérente, avec une condition par transition, est acceptée.\n2. Un tour de boucle dure 0,3 + 0,1 = **0,4 s** : l'appui peut attendre jusqu'à 0,4 s avant d'être lu, bien plus que 0,05 s → exigence **non respectée**. Il faut traiter le bouton par **interruption** : l'événement urgent est traité immédiatement, sans attendre la fin de la boucle.\n3. Trois distributions par jour : 255 / 3 = **85 jours**. Au-delà de 255, la variable **déborde** et le compteur devient faux : c'est un **effet de bord** (dépassement de capacité). Solution : une variable plus grande (16 ou 32 bits) ; on le repère par un test unitaire avec une valeur proche de 255.\n4. **Changer les identifiants par défaut** (mot de passe robuste imposé à l'installation), **chiffrer** les échanges (HTTPS, TLS), **mettre à jour** le logiciel de l'objet.\n5. L'**adresse postale** et surtout la **position GPS permanente** ne servent pas à nourrir un chat. Le RGPD impose de ne collecter que les **données nécessaires** au service : le nom (ou un pseudonyme) et les informations sur le chat suffisent."
+    },
+    {
+      "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+      "difficulte": 1,
+      "titre": "Rédiger une vérification qui rapporte tous les points",
+      "consigne": "Rédige ta réponse comme sur une copie : formule, application numérique, résultat avec unité, phrase de conclusion.",
+      "enonce": "**Situation.** Dans un sujet, on lit la question suivante :\n\n> « Vérifier que la batterie **36 V – 15 Ah** du fauteuil roulant permet **2 h** de fonctionnement pour une consommation moyenne de **240 W**. »\n\nOn rappelle : E = U × Q pour l'énergie stockée et E = P × t pour l'énergie consommée.\n\n1. Calcule l'énergie stockée dans la batterie en suivant les étapes d'un calcul bien rédigé.\n2. Calcule l'énergie nécessaire pour 2 h de fonctionnement.\n3. Rédige la phrase de conclusion, en comparant au critère et en donnant la marge.",
+      "bareme": [
+        {
+          "critere": "Énergie stockée rédigée en étapes : formule, application numérique, 540 Wh",
+          "points": 8
+        },
+        {
+          "critere": "Énergie nécessaire juste : 240 × 2 = 480 Wh",
+          "points": 5
+        },
+        {
+          "critere": "Conclusion comparant 540 Wh à 480 Wh, exigence satisfaite, marge d'environ 12,5 %",
+          "points": 7
+        }
+      ],
+      "dureeMin": 8,
+      "corrige": "1. Formule : E = U × Q. Application numérique : E = 36 V × 15 Ah. Résultat : **E = 540 Wh**.\n2. Formule : E = P × t. Application numérique : E = 240 W × 2 h. Résultat : **E = 480 Wh**.\n3. Conclusion : « 540 Wh > 480 Wh : la batterie permet bien 2 h de fonctionnement, l'exigence est **satisfaite**, avec une marge de (540 − 480) / 480 = **12,5 %**, sous réserve de ne pas décharger complètement la batterie. » Un résultat seul rapporte peu : c'est la **comparaison au critère** et la conclusion qui rapportent tous les points."
+    },
+    {
+      "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+      "difficulte": 2,
+      "titre": "Corriger la copie de Théo",
+      "consigne": "Repère l'erreur dans chaque réponse, explique-la, puis rédige la réponse corrigée complète.",
+      "enonce": "**Situation.** Théo a rendu les trois réponses ci-dessous. Chacune contient une erreur classique.\n\n**Données utiles** : ω (rad/s) = 2π × N / 60 avec N en tr/min ; 1 Wh = 3 600 J ; η = P utile / P absorbée.\n\n> **Réponse A.** « Le moteur fournit un couple de 12 N·m à 1 500 tr/min. P = C × ω = 12 × 1 500 = 18 000 W. Le moteur de 2,2 kW ne convient pas. »\n>\n> **Réponse B.** « La batterie stocke 0,5 kWh, soit 500 J. »\n>\n> **Réponse C.** « P absorbée = 3 kW et P utile = 2 400 W, donc η = 2 400 / 3 = 800. »\n\n1. Pour la réponse A, explique l'erreur, refais le calcul et rédige la bonne conclusion.\n2. Pour la réponse B, explique l'erreur et donne l'énergie correcte en joules.\n3. Pour la réponse C, explique l'erreur et donne le bon rendement. Quel indice aurait dû alerter Théo ?\n4. Donne un conseil de méthode pour éviter ces trois erreurs.",
+      "bareme": [
+        {
+          "critere": "A : conversion oubliée, ω ≈ 157 rad/s, P ≈ 1,9 kW et conclusion corrigée",
+          "points": 6
+        },
+        {
+          "critere": "B : conversion kWh en J expliquée, 1 800 000 J",
+          "points": 5
+        },
+        {
+          "critere": "C : unités non homogènes, η = 0,8 et indice d'un rendement supérieur à 1",
+          "points": 5
+        },
+        {
+          "critere": "Conseil de méthode : poser les unités et convertir à chaque étape",
+          "points": 4
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Théo a utilisé la vitesse en **tr/min** au lieu de rad/s. ω = 2π × 1 500 / 60 ≈ **157 rad/s**. P = C × ω = 12 × 157 ≈ **1 885 W ≈ 1,9 kW**. Conclusion : « 1,9 kW < 2,2 kW : le moteur **convient**. » L'oubli de conversion inversait la conclusion.\n2. Il a confondu kWh et J. 0,5 kWh = 500 Wh = 500 × 3 600 = **1 800 000 J** (1,8 MJ).\n3. Il a divisé des watts par des kilowatts. 3 kW = 3 000 W, donc η = 2 400 / 3 000 = **0,8** (80 %). Indice : un rendement est toujours **inférieur à 1** ; 800 est impossible.\n4. Écrire les **unités à chaque étape** et **convertir** avant l'application numérique (tr/min en rad/s, kWh en J, kW en W) ; vérifier que le résultat est vraisemblable."
+    },
+    {
+      "chapitre": "82d9a027-dbaa-5e47-97a0-a779dce9af6a",
+      "difficulte": 3,
+      "titre": "Mini-sujet : le vélo cargo de livraison",
+      "consigne": "Traite ce mini-sujet comme une partie d'épreuve écrite : relève les données utiles, rédige chaque calcul complètement et conclus sur la problématique.",
+      "enonce": "**Mise en situation.** Une coopérative livre des colis en ville avec des vélos cargos à assistance électrique. **Problématique** : « La batterie actuelle permet-elle d'assurer une tournée complète ? »\n\n**Extrait du cahier des charges**\n\n| Id | Exigence | Critère |\n| 1.1 | Assister le livreur | Puissance d'assistance adaptée à la charge |\n| 1.3 | Assurer une tournée | 3 h d'assistance sans recharge |\n| 1.4 | Limiter la masse | Batterie de moins de 5 kg |\n\n**Dossier technique**\n- Batterie actuelle : **48 V – 14 Ah**.\n- Batterie proposée : **48 V – 17 Ah**.\n- Le fabricant garantit que **90 %** de l'énergie nominale est utilisable.\n- Consommation moyenne mesurée pendant une tournée : **220 W**.\n\n**Rappels** : E = U × Q ; E = P × t.\n\n1. Relève l'exigence liée à la problématique (identifiant et critère).\n2. Calcule l'énergie utilisable de la batterie actuelle.\n3. Calcule l'énergie nécessaire pour une tournée, puis conclus sur la batterie actuelle.\n4. Vérifie si la batterie proposée satisfait l'exigence ; donne la marge.\n5. Il te manque une donnée pour vérifier l'exigence 1.4 avec la batterie proposée : laquelle ? Que ferais-tu à l'examen face à une question bloquante ?\n6. Rédige la conclusion sur la problématique, en reprenant tes résultats.",
+      "bareme": [
+        {
+          "critere": "Exigence 1.3 relevée avec son critère de 3 h",
+          "points": 3
+        },
+        {
+          "critere": "Énergie utilisable actuelle juste : 672 Wh puis 604,8 Wh",
+          "points": 4
+        },
+        {
+          "critere": "Énergie nécessaire de 660 Wh et conclusion : batterie actuelle non conforme",
+          "points": 5
+        },
+        {
+          "critere": "Batterie proposée : 816 Wh puis 734,4 Wh utilisables, conforme avec une marge d'environ 11 %",
+          "points": 5
+        },
+        {
+          "critere": "Donnée manquante (masse) identifiée et conclusion rédigée sur la problématique",
+          "points": 3
+        }
+      ],
+      "dureeMin": 16,
+      "corrige": "1. Exigence **1.3** « Assurer une tournée » — critère : **3 h d'assistance sans recharge**.\n2. E nominale = U × Q = 48 × 14 = **672 Wh**. E utilisable = 0,9 × 672 ≈ **605 Wh** (604,8 Wh).\n3. E nécessaire = P × t = 220 × 3 = **660 Wh**. 605 Wh < 660 Wh : la batterie actuelle **ne satisfait pas** l'exigence 1.3 (elle tient environ 605 / 220 ≈ 2,7 h).\n4. E nominale = 48 × 17 = **816 Wh** ; utilisable = 0,9 × 816 ≈ **734 Wh**. 734 Wh > 660 Wh : exigence 1.3 **satisfaite**, marge (734,4 − 660) / 660 ≈ **11 %**.\n5. Il manque la **masse** de la batterie proposée pour la comparer aux 5 kg de l'exigence 1.4. À l'examen, on signale la donnée manquante, on **passe à la question suivante** (les questions sont souvent indépendantes) et on y revient à la relecture.\n6. Conclusion : « Avec 605 Wh utilisables pour 660 Wh nécessaires, la batterie actuelle ne permet pas une tournée complète de 3 h. La batterie de 48 V – 17 Ah, avec 734 Wh utilisables, satisfait l'exigence 1.3 avec une marge d'environ 11 % ; il reste à vérifier sa masse (exigence 1.4) avant de la retenir. »"
+    },
+    {
+      "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+      "difficulte": 1,
+      "titre": "Concevoir, simuler ou expérimenter ?",
+      "consigne": "Réponds à chaque question en t'appuyant sur la démarche du cours.",
+      "enonce": "**Situation.** Au laboratoire, Yanis travaille sur un volet roulant motorisé.\n\n1. Classe chaque activité dans la bonne compétence (concevoir, simuler, expérimenter) :\n   a. il modifie le programme pour que le volet s'arrête dès qu'un obstacle est détecté ;\n   b. il mesure au chronomètre le temps de descente du volet ;\n   c. il lance un modèle numérique du moteur pour prévoir le courant de démarrage ;\n   d. il dessine en modeleur 3D une nouvelle pièce de fixation.\n2. Yanis doit câbler un capteur sur la carte de commande. Cite trois règles de sécurité à respecter avant et pendant la mise sous tension.\n3. Son temps de descente mesuré (22 s) ne correspond pas à celui prévu par la simulation (18 s). Yanis pense avoir échoué. Que lui conseilles-tu ?",
+      "bareme": [
+        {
+          "critere": "Quatre activités correctement classées (a et d concevoir, b expérimenter, c simuler)",
+          "points": 8
+        },
+        {
+          "critere": "Trois règles de sécurité citées",
+          "points": 6
+        },
+        {
+          "critere": "Écart présenté comme une occasion d'explication, avec une hypothèse",
+          "points": 6
+        }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Concevoir** (modifier un algorithme et un programme). b. **Expérimenter** (mettre en œuvre une mesure). c. **Simuler** (lancer une simulation pour prévoir une performance). d. **Concevoir** (définir une pièce en modeleur 3D).\n2. Règles : **câbler hors tension** ; **vérifier le câblage** avant la mise sous tension ; **repérer l'arrêt d'urgence** ; lire tout le sujet avant de toucher au matériel.\n3. Une mesure qui contredit la simulation n'est **pas un échec** : c'est l'occasion d'**expliquer l'écart**. Yanis doit le signaler, noter ses mesures avec leurs unités et proposer une **hypothèse** (frottements plus forts que dans le modèle, masse réelle du tablier différente, tension d'alimentation plus faible), puis la tester si possible."
+    },
+    {
+      "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+      "difficulte": 2,
+      "titre": "Le portail s'arrête-t-il assez vite ?",
+      "consigne": "Exploite le tableau de mesures, conclus sur la conformité et propose une modification argumentée.",
+      "enonce": "**Situation.** Problématique : « Le portail doit s'arrêter en **moins de 0,5 s** après la détection d'un obstacle. » Dans le programme actuel, la cellule de détection est lue à chaque tour de la boucle principale. La simulation prévoyait un temps d'arrêt de **0,30 s**. Au laboratoire, cinq essais donnent :\n\n| Essai | 1 | 2 | 3 | 4 | 5 |\n| Temps d'arrêt mesuré (s) | 0,42 | 0,38 | 0,55 | 0,40 | 0,45 |\n\n1. Calcule la moyenne des cinq mesures et relève la valeur maximale.\n2. Le portail est-il conforme à l'exigence ? Justifie : faut-il juger sur la moyenne ou sur le pire cas ?\n3. Propose deux hypothèses qui expliquent l'écart entre la simulation (0,30 s) et les mesures.\n4. Propose une modification de conception pour rendre le temps d'arrêt plus court et plus régulier, et décris comment tu vérifierais son effet.",
+      "bareme": [
+        {
+          "critere": "Moyenne juste (0,44 s) et maximum relevé (0,55 s)",
+          "points": 5
+        },
+        {
+          "critere": "Non-conformité justifiée par le pire cas de 0,55 s supérieur à 0,5 s",
+          "points": 5
+        },
+        {
+          "critere": "Deux hypothèses d'écart plausibles",
+          "points": 5
+        },
+        {
+          "critere": "Traitement de la cellule par interruption proposé et protocole de vérification décrit",
+          "points": 5
+        }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Moyenne = (0,42 + 0,38 + 0,55 + 0,40 + 0,45) / 5 = 2,20 / 5 = **0,44 s**. Maximum : **0,55 s** (essai 3).\n2. La moyenne (0,44 s) respecte le critère, mais l'essai 3 (0,55 s > 0,5 s) ne le respecte pas. Pour une exigence de **sécurité**, il faut juger sur le **pire cas** : le portail n'est **pas conforme**.\n3. Hypothèses : la cellule n'est lue qu'une fois par tour de boucle, et la durée d'un tour **varie** selon les tâches exécutées (d'où la dispersion des mesures) ; l'**inertie** mécanique du portail (sa masse) ou les frottements ne sont pas modélisés fidèlement dans la simulation.\n4. Traiter la cellule par **interruption** au lieu de la lire à chaque tour de boucle : l'événement est traité immédiatement. Vérification : vérifier d'abord le comportement en simulation (diagramme d'états), puis refaire au moins cinq essais, mesurer le temps de réaction avec un **chronogramme**, noter les résultats dans un tableau et vérifier que **toutes** les mesures restent sous 0,5 s."
+    },
+    {
+      "chapitre": "32a3eb6f-ae4f-54c5-85c0-9590d2c4f453",
+      "difficulte": 3,
+      "titre": "Reconception d'un lampadaire : du protocole à la conclusion",
+      "consigne": "Construis la démarche complète de reconception : protocole de mesure, exploitation des résultats, analyse de l'écart et conclusion argumentée.",
+      "enonce": "**Situation.** Projet d'équipe : reconcevoir un lampadaire solaire pour **réduire sa consommation nocturne d'au moins 50 %**. L'équipe ajoute un détecteur de présence : la lampe reste à 20 % de sa puissance et passe à 100 % quand quelqu'un approche.\n\n**Matériel disponible** : maquette du lampadaire, wattmètre enregistreur, détecteur de présence, alimentation de laboratoire, ordinateur de simulation.\n\n**Résultats**\n\n| | Consommation sur une nuit |\n| Lampadaire d'origine (mesuré) | 480 Wh |\n| Lampadaire avec détecteur (simulé) | 190 Wh |\n| Lampadaire avec détecteur (mesuré) | 230 Wh |\n\n1. Rédige un protocole de mesure de la consommation nocturne (étapes, appareil, grandeur mesurée, conditions à garder identiques entre les deux essais).\n2. Calcule la réduction de consommation prévue par la simulation, puis la réduction mesurée, en %.\n3. Calcule l'écart entre mesure et simulation (en Wh et en % de la valeur simulée). Propose deux hypothèses pour l'expliquer.\n4. L'exigence du projet est-elle satisfaite ? Conclus.\n5. Montre que ce projet mobilise bien la matière, l'énergie et l'information.",
+      "bareme": [
+        {
+          "critere": "Protocole complet : étapes, wattmètre, grandeur mesurée, conditions identiques",
+          "points": 5
+        },
+        {
+          "critere": "Réductions justes : environ 60 % simulée et 52 % mesurée",
+          "points": 5
+        },
+        {
+          "critere": "Écart de 40 Wh (≈ 21 %) calculé et deux hypothèses plausibles",
+          "points": 4
+        },
+        {
+          "critere": "Conclusion sur l'exigence fondée sur la valeur mesurée",
+          "points": 3
+        },
+        {
+          "critere": "Matière, énergie et information identifiées dans le projet",
+          "points": 3
+        }
+      ],
+      "dureeMin": 20,
+      "corrige": "1. Protocole attendu : **câbler hors tension** le wattmètre enregistreur entre l'alimentation et le lampadaire, vérifier, mettre sous tension ; enregistrer l'**énergie consommée (Wh)** sur une durée de nuit identique (par exemple 12 h) ; faire l'essai sans détecteur, puis avec détecteur, **dans les mêmes conditions** (même durée, même tension d'alimentation, même scénario de passages simulés) ; noter les résultats dans un tableau avec les unités.\n2. Simulation : (480 − 190) / 480 ≈ **60 %**. Mesure : (480 − 230) / 480 ≈ **52 %**.\n3. Écart : 230 − 190 = **40 Wh**, soit 40 / 190 ≈ **21 %** de la valeur simulée. Hypothèses : la **consommation propre du détecteur** (veille) n'a pas été modélisée ; les **passages** ont été plus nombreux ou plus longs pendant l'essai que dans le scénario simulé ; le temps de maintien à 100 % après détection est plus long que prévu. Un écart n'est pas un échec : il permet d'améliorer le modèle.\n4. On conclut sur la **mesure** : réduction de 52 % ≥ 50 % → l'exigence est **satisfaite**, mais avec une faible marge ; il faudrait confirmer sur plusieurs nuits.\n5. **Matière** : la maquette, le boîtier et la fixation du détecteur ; **énergie** : la consommation de la lampe et son stockage solaire ; **information** : le détecteur de présence et la commande qui règle la puissance de la lampe. Le projet est bien pluritechnologique."
+    }
+  ]
+}

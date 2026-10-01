@@ -15,10 +15,13 @@
 // tenues sont une couleur (asset_key hexadécimal, lib/avatar) ; les accessoires
 // sont des SVG dessinés en code (components/avatar/vestiaire-assets.tsx).
 // `image` vaut donc `null` tant qu'aucun fichier n'existe — l'écran dessine
-// alors son repli, jamais une image cassée.
+// alors son repli, jamais une image cassée. Les vignettes dessinées (famille
+// des icônes de navigation) se déclarent dans lib/illustrations.ts.
 //
 // Pur et testable : la lecture vit dans boosts-server.ts.
 // -----------------------------------------------------------------------------
+
+import { imageObjet } from '@/lib/illustrations'
 
 export type CategorieObjet = 'banniere' | 'tenue' | 'accessoire'
 
@@ -73,7 +76,7 @@ export function normaliserObjetsProfil(
       id,
       categorie,
       nom,
-      image: null,
+      image: imageObjet(id),
       cle: typeof r.asset_key === 'string' && r.asset_key.trim() ? r.asset_key.trim() : null,
       prixGemmes: Math.round(prix),
       possede: possedes.has(id),

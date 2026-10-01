@@ -1,0 +1,3331 @@
+{
+ "niveau": "Tle",
+ "matiere": "llcer-anglais",
+ "exercices": [
+  {
+   "chapitre": "ad15b82e-d413-5ee2-9631-49ba82ebfcc7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La chanson de l’usine",
+   "competence": "analyser-texte",
+   "situation": "Tu prépares un commentaire sur l’art engagé. Voici les quatre vers d’une chanson de protestation : cherche qui elle accuse et comment elle le fait.",
+   "documents": [
+    {
+     "id": "chanson",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "The Factory Whistle",
+     "blocs": [
+      "The whistle blows at dawn, the whistle blows at night,",
+      "The [[o|owner]] counts his coins, we work by candlelight.",
+      "They call it progress, but we call it a [[c|chain]],",
+      "They call it progress, and we’re the ones in pain."
+     ],
+     "source": "Chanson écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chanson",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui désigne la personne que la chanson accuse.",
+     "aide": "C’est celui qui compte son argent pendant que les autres travaillent.",
+     "explication": "C’est **owner** : le propriétaire de l’usine, cible de la chanson (étape 1 de la méthode : la cible)."
+    },
+    {
+     "type": "zone",
+     "document": "chanson",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot que les travailleurs emploient à la place de « progress ».",
+     "aide": "Cherche le mot qui montre qu’ils se sentent prisonniers.",
+     "explication": "Les ouvriers disent **chain** (une chaîne) : pour eux, ce que les patrons appellent le progrès est une entrave."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que pense le chanteur du mot « progress » ?",
+     "options": [
+      "Il l’admire car les usines créent des richesses pour tout le monde à la fois",
+      "Il le reprend pour montrer qu’il enrichit le patron et enchaîne les ouvriers",
+      "Il le juge trop compliqué pour que les ouvriers puissent le comprendre un jour",
+      "Il pense que le progrès est inévitable et qu’il faut donc l’accepter en silence"
+     ],
+     "reponse": 1,
+     "aide": "Lis le vers 3 : « They call it progress, but we call it… ».",
+     "explication": "Le chanteur répète le mot des patrons pour le **retourner** : le progrès dont ils parlent ne profite qu’à eux."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad15b82e-d413-5ee2-9631-49ba82ebfcc7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Swift expliqué par deux amis",
+   "competence": "comprendre-langue",
+   "situation": "Maya et Jack discutent de *A Modest Proposal*. Suis leur échange, puis utilise le petit tableau pour reconnaître trois autres œuvres engagées.",
+   "documents": [
+    {
+     "id": "swift",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Un échange sur Swift",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jack",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "I’ve just read A Modest Proposal. Swift suggests that poor families should sell their babies as food!"
+      },
+      {
+       "qui": "Jack",
+       "texte": "Seriously? Does he really want that?"
+      },
+      {
+       "qui": "Maya",
+       "texte": "No! He is being [[i|ironic]]. He says the opposite of what he thinks."
+      },
+      {
+       "qui": "Jack",
+       "texte": "So who is he attacking?"
+      },
+      {
+       "qui": "Maya",
+       "texte": "The rich landlords who ignore the poor. The narrator stays [[k|calm]], and that’s what makes it horrifying."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "Trois œuvres, trois indices",
+     "colonnes": [
+      "Clue",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "A farm where the pigs become the new masters",
+       1945
+      ],
+      [
+       "Chicago slaughterhouses seen through an immigrant family",
+       1906
+      ],
+      [
+       "An enslaved man’s suffering shown from the inside",
+       1852
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Indices rédigés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "swift",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot anglais qui nomme le procédé utilisé par Swift.",
+     "aide": "Il consiste à dire le contraire de ce qu’on pense.",
+     "explication": "Le procédé est l’**ironie** (*ironic*) : Swift ne pense pas ce qu’il écrit, il veut faire honte."
+    },
+    {
+     "type": "zone",
+     "document": "swift",
+     "multiple": false,
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche l’adjectif qui décrit le ton du narrateur.",
+     "aide": "Le narrateur ne s’énerve jamais.",
+     "explication": "Le narrateur reste **calm** (calme) : ce sang-froid rend la proposition encore plus choquante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui Swift attaque-t-il vraiment dans le texte évoqué ?",
+     "options": [
+      "Les familles irlandaises qui ne savent pas gérer leur budget",
+      "Les lecteurs français de son époque qui ignorent l’Irlande",
+      "Les riches propriétaires qui se désintéressent du sort des pauvres",
+      "Les enfants pauvres que personne n’envoie à l’école"
+     ],
+     "reponse": 2,
+     "aide": "Relis la dernière réplique de Maya.",
+     "explication": "La cible est celle des **riches propriétaires (landlords)** : Swift retourne l’horreur contre eux."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indice du document 2 à l’œuvre correspondante.",
+     "paires": [
+      [
+       "A farm where the pigs become the new masters",
+       "Animal Farm"
+      ],
+      [
+       "Chicago slaughterhouses seen through an immigrant family",
+       "The Jungle"
+      ],
+      [
+       "An enslaved man’s suffering shown from the inside",
+       "Uncle Tom’s Cabin"
+      ]
+     ],
+     "aide": "Les cochons, Chicago, l’esclavage : trois univers très différents.",
+     "explication": "*Animal Farm* (Orwell, 1945) met en scène des cochons, *The Jungle* (Sinclair, 1906) les abattoirs de Chicago, *Uncle Tom’s Cabin* (Stowe, 1852) l’esclavage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le roman sur les abattoirs de celui sur les cochons ?",
+     "reponse": 39,
+     "aide": "Soustrais les deux dates du tableau.",
+     "explication": "1945 − 1906 = **39** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "ad15b82e-d413-5ee2-9631-49ba82ebfcc7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le mur de Mill Street",
+   "competence": "analyser-document",
+   "situation": "Un article et un panneau officiel racontent le même événement. Croise-les pour mesurer l’effet d’une œuvre qui dénonce.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "A Wall That Would Not Stay Silent",
+     "blocs": [
+      "Last Tuesday, a stencilled mural appeared on the wall of the closed Mill Street factory. It shows a smiling boss with enormous hands giving a single coin to a long line of workers, beneath the words “SHARE THE PROFIT”.",
+      "The mural is a [[c|caricature]]: the boss’s hands are huge, his head is tiny and his smile never changes. The workers, by contrast, are drawn with great care.",
+      "The factory owner, who has just closed two workshops, called it “[[v|vandalism]]”. Residents, however, have started to leave flowers at the foot of the wall.",
+      "“Art should not flatter power,” said a local teacher. “It should ask questions.”"
+     ],
+     "source": "Article imaginé pour l’exercice"
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "NOTICE — Mill Street Council",
+     "sousTitre": "Public walls",
+     "emoji": "⚠️",
+     "lignes": [
+      {
+       "texte": "Unauthorised paintings on public walls",
+       "id": "l1"
+      },
+      {
+       "texte": "will be removed on Friday at 8 a.m.",
+       "id": "l2"
+      },
+      {
+       "texte": "Offenders may be fined up to £500",
+       "id": "l3"
+      }
+     ],
+     "pied": "By order of the Council"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot par lequel le propriétaire qualifie la fresque.",
+     "aide": "Il est entre guillemets, dans le troisième paragraphe.",
+     "explication": "Le propriétaire parle de **vandalism** (dégradation) : il refuse de voir une œuvre dans ce dessin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la cible de la fresque ?",
+     "options": [
+      "Les habitants qui déposent des fleurs au pied du mur de l’usine",
+      "La mairie qui veut effacer toutes les peintures des murs publics",
+      "Les ouvriers qui refusent de changer d’atelier quand on le leur demande",
+      "Le patron qui ferme des ateliers et garde les profits pour lui"
+     ],
+     "reponse": 3,
+     "aide": "Regarde ce que fait le personnage dessiné avec sa pièce.",
+     "explication": "La fresque vise le **patron** : il garde presque tout et ne donne qu’une pièce, d’où le slogan « SHARE THE PROFIT »."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui nomme le procédé du dessin : des traits exagérés pour faire rire et faire honte.",
+     "aide": "Ce mot ressemble beaucoup au français « caricature ».",
+     "explication": "C’est une **caricature** : mains énormes, tête minuscule, sourire figé, l’exagération rend le patron ridicule."
+    },
+    {
+     "type": "zone",
+     "document": "panneau",
+     "multiple": false,
+     "reponse": [
+      "l2"
+     ],
+     "enonce": "Sur le panneau, touche la ligne qui annonce ce qui arrivera à la fresque.",
+     "aide": "Cherche le verbe « removed ».",
+     "explication": "La ligne « will be removed on Friday at 8 a.m. » annonce que la fresque sera **effacée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’opposition entre le panneau de la mairie et les fleurs des habitants ?",
+     "options": [
+      "Que les habitants n’ont pas compris l’ironie de la fresque peinte",
+      "Que l’œuvre a un effet réel : elle oppose l’autorité aux habitants",
+      "Que la mairie soutient discrètement l’artiste contre le propriétaire",
+      "Que la fresque est sans intérêt puisqu’elle sera bientôt effacée"
+     ],
+     "reponse": 1,
+     "aide": "Méthode, étape 4 : l’effet. Qu’a déclenché l’œuvre ?",
+     "explication": "Les fleurs et le panneau prouvent que la fresque a provoqué un **conflit public** : c’est l’effet d’une œuvre qui dénonce."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d8ff6f5-24d4-508e-ad5e-f6d97cc33e79",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq procès, un siècle",
+   "competence": "se-reperer-temps",
+   "situation": "Sur une frise, cinq affaires ont mis la liberté des artistes à l’épreuve. Repère les dates avant de conclure.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Five trials that tested the limits",
+     "debut": 1890,
+     "fin": 1990,
+     "pas": 10,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "wilde",
+       "date": 1895,
+       "nom": "Wilde convicted"
+      },
+      {
+       "id": "ulysses",
+       "date": 1933,
+       "nom": "Ulysses cleared"
+      },
+      {
+       "id": "howl",
+       "date": 1957,
+       "nom": "Howl trial"
+      },
+      {
+       "id": "chat",
+       "date": 1960,
+       "nom": "Chatterley trial"
+      },
+      {
+       "id": "fatwa",
+       "date": 1989,
+       "nom": "Rushdie fatwa"
+      }
+     ],
+     "source": "Dates arrondies à l’année, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "howl"
+     ],
+     "enonce": "Touche le procès qui a eu lieu en 1957.",
+     "aide": "Repère la graduation 1957, entre 1930 et 1960.",
+     "explication": "Le procès de *Howl*, le poème d’Allen Ginsberg, s’est tenu en **1957** à San Francisco."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "fatwa"
+     ],
+     "enonce": "Touche l’événement le plus récent de la frise.",
+     "aide": "Le plus récent est le plus à droite.",
+     "explication": "Le plus récent est la **fatwa contre Rushdie** (1989), après *The Satanic Verses*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la condamnation d’Oscar Wilde du jugement qui blanchit *Ulysses* ?",
+     "reponse": 38,
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1933 − 1895 = **38** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "0d8ff6f5-24d4-508e-ad5e-f6d97cc33e79",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le censeur de 1936",
+   "competence": "analyser-texte",
+   "situation": "Dans les années 1930, un studio hollywoodien reçoit cette lettre. Lis-la comme un cinéaste : que doit-on changer, et comment contourner l’interdit ?",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "A letter from the Production Code Office",
+     "blocs": [
+      "Dear Mr Harlow,",
+      "We have read your script, *The Last Train*. Three changes are required:",
+      "1. The gangster must not escape without [[p|punishment]].",
+      "2. The kiss on the platform must be shorter.",
+      "3. The bedroom scene must be replaced by something more suitable.",
+      "With kind regards, The Production Code Office, 1936"
+     ],
+     "source": "Lettre imaginée pour l’exercice, dans l’esprit du Code Hays"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui exprime la règle morale : le crime ne doit pas rester impuni.",
+     "aide": "Cherche ce que doit subir le gangster.",
+     "explication": "Le mot **punishment** (punition) traduit la règle : à Hollywood, le crime ne paie pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de modifications le censeur exige-t-il ?",
+     "reponse": 3,
+     "aide": "Les demandes sont numérotées.",
+     "explication": "Trois demandes sont numérotées : **3** modifications."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque demande du censeur à sa traduction.",
+     "paires": [
+      [
+       "The gangster must not escape without punishment",
+       "Le criminel doit être puni"
+      ],
+      [
+       "The kiss on the platform must be shorter",
+       "Le baiser doit être raccourci"
+      ],
+      [
+       "The bedroom scene must be replaced",
+       "La scène de la chambre doit disparaître"
+      ]
+     ],
+     "aide": "Traduis mot à mot : escape, kiss, bedroom.",
+     "explication": "Le censeur impose une **punition**, un baiser **plus court** et la **disparition** de la scène de chambre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment un cinéaste peut-il montrer la scène de chambre sans enfreindre le Code ?",
+     "options": [
+      "En la tournant en couleurs pour qu’elle paraisse plus artistique aux censeurs",
+      "En la montrant en entier mais avec un narrateur qui condamne les personnages",
+      "En la suggérant, par exemple avec un fondu enchaîné sur la scène suivante",
+      "En la remplaçant par un long discours du gangster face à la caméra"
+     ],
+     "reponse": 2,
+     "aide": "Le cours dit que les cinéastes apprennent à « suggérer ».",
+     "explication": "Les cinéastes ont appris à **suggérer** : un fondu enchaîné remplace la scène et laisse le spectateur imaginer."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d8ff6f5-24d4-508e-ad5e-f6d97cc33e79",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une soupe, un urinoir, un débat",
+   "competence": "argumenter",
+   "situation": "Deux amis se disputent sur le pop art. Lis leur échange, puis compare leurs arguments au tableau du débat.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nora et Sam",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "A soup can on a wall? That’s not art, it’s shopping!"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Warhol, 1962. He shows what [[c|consumer]] society puts in every kitchen, and it makes you look at it."
+      },
+      {
+       "qui": "Nora",
+       "texte": "But anyone could have painted it."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Then why did nobody? Duchamp put a urinal in a gallery in 1917 and asked the same question: is it art because the artist says so?"
+      },
+      {
+       "qui": "Nora",
+       "texte": "Well, some things should be banned if they shock children."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Every censor ends up looking foolish tomorrow. Ulysses was banned, and now it’s on every reading list."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "args",
+     "type": "tableau",
+     "titre": "Arguments in the debate",
+     "colonnes": [
+      "To limit",
+      "To protect"
+     ],
+     "lignes": [
+      [
+       "Protect young people",
+       "Freedom of speech (First Amendment)"
+      ],
+      [
+       "Respect beliefs",
+       "Art may shock in order to make us think"
+      ],
+      [
+       "Public order",
+       "Yesterday’s censor looks ridiculous today"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui montre que, pour Sam, le pop art regarde la société de consommation.",
+     "aide": "C’est l’adjectif qui qualifie « society ».",
+     "explication": "Le mot **consumer** (de consommation) résume ce que Warhol montre : les objets du quotidien."
+    },
+    {
+     "type": "zone",
+     "document": "args",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui correspond à l’argument de Sam dans sa dernière réplique.",
+     "aide": "Sam parle de la censure d’*Ulysses*, ridicule avec le recul.",
+     "explication": "Sam reprend « **Yesterday’s censor looks ridiculous today** » (colonne « To protect »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rapport y a-t-il entre la question de Duchamp (1917) et celle de Warhol (1962) ?",
+     "options": [
+      "Toutes deux dénoncent la guerre par l’ironie d’un objet banal du quotidien",
+      "Toutes deux ont été interdites par le Code Hays à Hollywood dans les années 1930",
+      "Toutes deux sont des chansons engagées contre la censure d’État en Amérique",
+      "Toutes deux demandent si un objet du quotidien devient art parce que l’artiste le décide"
+     ],
+     "reponse": 3,
+     "aide": "Relis la réplique de Sam sur l’urinoir.",
+     "explication": "Pour Duchamp (*Fountain*) comme pour Warhol (*Campbell’s Soup Cans*), la question est : **qu’est-ce qui fait qu’un objet est de l’art ?**"
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases selon le camp dont elles relèvent, d’après le document 2.",
+     "categories": [
+      "Pour limiter",
+      "Pour protéger"
+     ],
+     "items": [
+      [
+       "Some things should be banned if they shock young people",
+       0
+      ],
+      [
+       "Every censor looks foolish with hindsight",
+       1
+      ],
+      [
+       "Art may shock in order to make us think",
+       1
+      ],
+      [
+       "Public order must come first",
+       0
+      ]
+     ],
+     "aide": "Une colonne du tableau défend la limite, l’autre la liberté.",
+     "explication": "« Protéger la jeunesse » et « l’ordre public » sont des arguments **pour limiter** ; la liberté d’expression et le recul du temps sont des arguments **pour protéger** l’art."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion nuancée est la plus juste ?",
+     "options": [
+      "Il faut interdire toute œuvre qui choque, car l’ordre public prime sur tout le reste du débat",
+      "Ce qui choque change avec les époques : il faut peser l’ordre public et la liberté d’expression",
+      "Il ne faut jamais limiter une œuvre, quelles que soient ses conséquences pour autrui",
+      "Le pop art n’a jamais fait débat, car il reprend seulement des objets très familiers"
+     ],
+     "reponse": 1,
+     "aide": "Méthode, étape 4 : conclure en nuançant.",
+     "explication": "On conclut en **nuançant** : les critères changent, et le débat oppose deux valeurs qu’il faut peser."
+    }
+   ]
+  },
+  {
+   "chapitre": "4536204e-6ca9-5503-a353-90734005fe75",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une infirmière prend la parole",
+   "competence": "analyser-texte",
+   "situation": "Une infirmière prononce un discours sur l’hôpital. Retrouve dans ses trois phrases les trois leviers d’Aristote.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Hospital speech",
+     "blocs": [
+      "1. As a [[e|nurse]] for twenty years, I know what a hospital needs.",
+      "2. Last winter, a [[p|frightened]] little boy waited six hours in a corridor, holding my hand.",
+      "3. The figures are clear: waiting times have risen by thirty [[l|percent]] in five years."
+     ],
+     "source": "Discours imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase du discours au levier qu’elle mobilise.",
+     "paires": [
+      [
+       "As a nurse for twenty years…",
+       "Ethos"
+      ],
+      [
+       "A frightened little boy waited six hours…",
+       "Pathos"
+      ],
+      [
+       "Waiting times have risen by thirty percent",
+       "Logos"
+      ]
+     ],
+     "aide": "Crédibilité, émotion, logique : à toi de les reconnaître.",
+     "explication": "La première phrase donne de la **crédibilité** (ethos), la deuxième touche les **émotions** (pathos), la troisième s’appuie sur des **faits chiffrés** (logos)."
+    },
+    {
+     "type": "zone",
+     "document": "discours",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui établit la crédibilité de l’oratrice.",
+     "aide": "Quel métier lui donne le droit de parler ?",
+     "explication": "Le mot **nurse** montre qu’elle parle en connaissance de cause : c’est l’ethos."
+    },
+    {
+     "type": "zone",
+     "document": "discours",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui cherche à émouvoir le public.",
+     "aide": "Cherche un adjectif qui exprime la peur.",
+     "explication": "Le mot **frightened** (effrayé) vise l’émotion du public : c’est le pathos."
+    },
+    {
+     "type": "zone",
+     "document": "discours",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui renvoie à un raisonnement chiffré.",
+     "aide": "Il est attaché à un nombre.",
+     "explication": "Le mot **percent** (pour cent) appartient au registre des chiffres : c’est le logos."
+    }
+   ]
+  },
+  {
+   "chapitre": "4536204e-6ca9-5503-a353-90734005fe75",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Clean Water Now",
+   "competence": "analyser-document",
+   "situation": "Un discours célèbre et un discours d’élève : repère les figures qui les rendent mémorables.",
+   "documents": [
+    {
+     "id": "lincoln",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Gettysburg Address (1863), fin du discours",
+     "blocs": [
+      "…that government [[t|of]] the people, [[t|by]] the people, [[t|for]] the people, shall not perish from the earth."
+     ],
+     "source": "Abraham Lincoln, *Gettysburg Address* (1863), dernière phrase"
+    },
+    {
+     "id": "eau",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un discours d’élève",
+     "blocs": [
+      "[[a|We]] need clean water. [[a|We]] need it in our schools. [[a|We]] need it in our villages. [[a|We]] need it now.",
+      "Water gives life, and life needs water.",
+      "Is it too much to ask for a right that every child deserves?"
+     ],
+     "source": "Discours imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lincoln",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les trois petits mots qui rythment la série de trois dans la phrase de Lincoln.",
+     "aide": "Ce sont trois prépositions suivies de « the people ».",
+     "explication": "Les mots **of, by, for** construisent le tricolon : trois groupes qui se suivent et scandent la phrase."
+    },
+    {
+     "type": "zone",
+     "document": "eau",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les quatre mots répétés au début des phrases du premier paragraphe.",
+     "aide": "Ils ouvrent chaque phrase.",
+     "explication": "« **We** need… » est répété quatre fois : c’est une anaphore."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la figure qu’elle contient.",
+     "categories": [
+      "Tricolon",
+      "Anaphore",
+      "Chiasme",
+      "Question rhétorique"
+     ],
+     "items": [
+      [
+       "of the people, by the people, for the people",
+       0
+      ],
+      [
+       "We need it in our schools. We need it in our villages.",
+       1
+      ],
+      [
+       "Water gives life, and life needs water.",
+       2
+      ],
+      [
+       "Is it too much to ask for a right that every child deserves?",
+       3
+      ]
+     ],
+     "aide": "Une série de trois, une répétition en tête de phrase, une structure croisée A-B / B-A, une question sans réponse attendue.",
+     "explication": "**Tricolon** : série de trois ; **anaphore** : répétition de « We need » ; **chiasme** : life / water / water / life ; **question rhétorique** : on n’attend pas de réponse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de l’anaphore « We need… » ?",
+     "options": [
+      "Elle ajoute des chiffres qui prouvent l’ampleur du problème avec précision",
+      "Elle retourne le sens d’une phrase pour se moquer de l’adversaire en public",
+      "Elle martèle l’urgence et donne au discours un rythme qui s’imprime dans l’esprit",
+      "Elle cache la demande principale pour ménager le public de l’assemblée"
+     ],
+     "reponse": 2,
+     "aide": "Que produit une répétition au début de chaque phrase ?",
+     "explication": "L’anaphore **martèle** la demande : le public retient le rythme et sent l’urgence."
+    }
+   ]
+  },
+  {
+   "chapitre": "4536204e-6ca9-5503-a353-90734005fe75",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Douter ou retourner la foule",
+   "competence": "analyser-texte",
+   "situation": "Deux façons de persuader : poser des questions à douze jurés, ou faire dire à un mot son contraire. Compare-les.",
+   "documents": [
+    {
+     "id": "jury",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Jury room",
+     "blocs": [
+      {
+       "didascalie": "A small, hot room. Twelve chairs. One juror has not raised his hand."
+      },
+      {
+       "personnage": "Juror 1",
+       "replique": "Eleven of us say guilty. Why are you waiting?"
+      },
+      {
+       "personnage": "Juror 2",
+       "replique": "I don’t say he’s innocent. I say I have a [[d|doubt]]."
+      },
+      {
+       "personnage": "Juror 1",
+       "replique": "A doubt? The witness saw everything!"
+      },
+      {
+       "personnage": "Juror 2",
+       "replique": "From forty metres, at night? Let us ask ourselves whether she could."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, dans l’esprit de *12 Angry Men*"
+    },
+    {
+     "id": "antoine",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Julius Caesar, Acte III, scène 2 (Marc Antoine)",
+     "blocs": [
+      "But Brutus says he was ambitious;",
+      "And Brutus is an [[h|honourable]] man."
+     ],
+     "source": "William Shakespeare, *Julius Caesar* (vers 1599)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jury",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui résume la position du juré qui hésite.",
+     "aide": "Il ne dit pas « innocent », il dit autre chose.",
+     "explication": "Le juré dit qu’il a un **doubt** : il ne prétend pas savoir, il refuse de condamner sans certitude."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quoi le juré fonde-t-il son doute ?",
+     "options": [
+      "Sur l’âge du témoin, jugé trop élevé pour que son avis soit pris au sérieux",
+      "Sur l’amitié entre le témoin et l’accusé, révélée par un avocat adverse",
+      "Sur l’absence de l’accusé à l’audience, qui rend le procès irrégulier",
+      "Sur les conditions dans lesquelles le témoin a vu la scène : la nuit et de loin"
+     ],
+     "reponse": 3,
+     "aide": "Relis la dernière réplique : « From forty metres, at night? »",
+     "explication": "Son doute vient des **conditions d’observation** (quarante mètres, la nuit) : il interroge les faits."
+    },
+    {
+     "type": "zone",
+     "document": "antoine",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche l’adjectif qui, dans la bouche d’Antoine, finit par signifier son contraire.",
+     "aide": "Il qualifie Brutus et il est répété dans tout le discours.",
+     "explication": "Antoine répète **honourable** jusqu’à ce qu’il sonne comme une accusation : c’est de l’ironie."
+    },
+    {
+     "type": "choix",
+     "enonce": "En quoi les deux manières de persuader diffèrent-elles ?",
+     "options": [
+      "Le juré utilise l’ironie, Antoine s’appuie sur des chiffres très précis",
+      "Le juré convainc en questionnant des faits, Antoine en retournant un mot par l’ironie",
+      "Les deux orateurs mobilisent surtout l’émotion et des souvenirs personnels",
+      "Le juré s’adresse à une foule entière, Antoine à douze hommes dans une salle"
+     ],
+     "reponse": 1,
+     "aide": "L’un parle de preuves, l’autre joue avec le sens d’un mot.",
+     "explication": "Le juré s’appuie sur le **logos** (les faits) ; Antoine sur l’**ironie** d’un mot répété."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moyen de persuasion à son exemple dans les documents.",
+     "paires": [
+      [
+       "Le logos (les faits)",
+       "« From forty metres, at night? »"
+      ],
+      [
+       "L’ironie",
+       "« Brutus is an honourable man »"
+      ],
+      [
+       "Le doute méthodique",
+       "« I don’t say he’s innocent. I say I have a doubt. »"
+      ]
+     ],
+     "aide": "Un exemple vient de la pièce de Shakespeare, deux de la scène du jury.",
+     "explication": "Le doute sur le témoin relève des **faits** ; la formule d’Antoine de l’**ironie** ; la réplique du juré du **doute méthodique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c30cae9-94e2-54bc-b83f-fb92f04ce3ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche de Gilead",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *The Handmaid’s Tale*. Voici la carte d’identité du roman : lis-la avant de répondre.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "BOOK FILE",
+     "sousTitre": "The Handmaid’s Tale",
+     "emoji": "📕",
+     "lignes": [
+      {
+       "texte": "Author",
+       "valeur": "Margaret Atwood"
+      },
+      {
+       "texte": "First published",
+       "valeur": "1985"
+      },
+      {
+       "texte": "Regime",
+       "valeur": "The Republic of Gilead",
+       "id": "reg"
+      },
+      {
+       "texte": "Narrator",
+       "valeur": "Offred"
+      },
+      {
+       "texte": "The Handmaids wear",
+       "valeur": "red dresses",
+       "id": "rob"
+      },
+      {
+       "texte": "Last chapter",
+       "valeur": "Historical Notes, a symposium in 2195",
+       "id": "fin"
+      }
+     ],
+     "pied": "A dystopia",
+     "source": "Fiche rédigée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "reg"
+     ],
+     "enonce": "Touche la ligne qui donne le nom du régime qui a remplacé les États-Unis.",
+     "aide": "Cherche le mot « Regime ».",
+     "explication": "Le régime s’appelle **la République de Gilead**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "rob"
+     ],
+     "enonce": "Touche la ligne qui dit ce que portent les servantes.",
+     "aide": "Une couleur et un vêtement.",
+     "explication": "Les servantes portent des **robes rouges** (*red dresses*), devenues un symbole de manifestation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du roman du colloque évoqué dans le dernier chapitre ?",
+     "reponse": 210,
+     "aide": "Soustrais la date de parution à la date du colloque.",
+     "explication": "2195 − 1985 = **210** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "1c30cae9-94e2-54bc-b83f-fb92f04ce3ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre dystopies, un avertissement",
+   "competence": "analyser-document",
+   "situation": "Un tableau compare quatre romans anglophones ; un billet de blog en tire une leçon. Croise-les.",
+   "documents": [
+    {
+     "id": "dyst",
+     "type": "tableau",
+     "titre": "Four dystopias",
+     "colonnes": [
+      "Author",
+      "Novel",
+      "Year",
+      "The threat"
+     ],
+     "lignes": [
+      [
+       "Aldous Huxley",
+       "Brave New World",
+       1932,
+       "Happiness imposed by drugs"
+      ],
+      [
+       "George Orwell",
+       "Nineteen Eighty-Four",
+       1949,
+       "Total surveillance and a poor language"
+      ],
+      [
+       "Ray Bradbury",
+       "Fahrenheit 451",
+       1953,
+       "Books burned by firemen"
+      ],
+      [
+       "Margaret Atwood",
+       "The Handmaid’s Tale",
+       1985,
+       "Women’s bodies controlled by a religious regime"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau rédigé pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "blog",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Why do we still read dystopias?",
+     "blocs": [
+      "Dystopias do not predict the future; they [[w|warn]] us. Atwood has often said that nothing in her novel had not already happened somewhere in human history.",
+      "That is why these books stay alive: they take a real danger and push it to the extreme, so that we can see it clearly."
+     ],
+     "source": "Billet imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dyst",
+     "multiple": false,
+     "reponse": [
+      "r2c3"
+     ],
+     "enonce": "Touche la case qui décrit la menace du roman paru en 1953.",
+     "aide": "Repère la ligne de l’année 1953.",
+     "explication": "Le roman de 1953 est *Fahrenheit 451* : la menace, ce sont des **livres brûlés par des pompiers**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le plus ancien roman du tableau du plus récent ?",
+     "reponse": 53,
+     "aide": "Repère la plus petite et la plus grande date.",
+     "explication": "1985 − 1932 = **53** ans.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "blog",
+     "multiple": false,
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le verbe du billet qui résume la fonction d’une dystopie.",
+     "aide": "Il commence par « w » et ressemble au français « avertir » dans l’idée.",
+     "explication": "Une dystopie **warns** : elle avertit, elle ne prédit pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel point commun les quatre romans du tableau partagent-ils, d’après le billet ?",
+     "options": [
+      "Ils racontent tous une guerre mondiale réelle, vue par un soldat",
+      "Ils imaginent tous un monde meilleur où les problèmes ont disparu",
+      "Un danger réel y est poussé à l’extrême pour que le lecteur le reconnaisse",
+      "Ils sont tous écrits par des historiens qui décrivent une époque passée"
+     ],
+     "reponse": 2,
+     "aide": "Lis la phrase qui suit « That is why these books stay alive ».",
+     "explication": "Chaque dystopie **grossit un danger réel** (drogue, surveillance, censure, contrôle des corps) pour avertir le lecteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c30cae9-94e2-54bc-b83f-fb92f04ce3ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Offred, une voix qui résiste",
+   "competence": "analyser-texte",
+   "situation": "Un passage écrit pour l’exercice reprend la manière d’Atwood : une narratrice, des souvenirs, le danger de se souvenir. Croise-le avec la liste des personnages.",
+   "documents": [
+    {
+     "id": "offred",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une chambre, une voix",
+     "blocs": [
+      "The room is small. A white curtain, a bed, a window that does not open. I am [[n|Offred]] now. My real name is something I whisper only at night, like a coin hidden under a tongue.",
+      "Sometimes I remember my old house, and [[l|Luke]] laughing, and my daughter’s shoes by the door. Then I stop. Remembering is dangerous, and it is also how I stay alive."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Atwood"
+    },
+    {
+     "id": "qui",
+     "type": "tableau",
+     "titre": "Who is who?",
+     "colonnes": [
+      "Clue",
+      "Character"
+     ],
+     "lignes": [
+      [
+       "Her friend who tries to escape",
+       "Moira"
+      ],
+      [
+       "Her shopping partner, linked to the resistance",
+       "Ofglen"
+      ],
+      [
+       "The Commander’s wife, a former singer",
+       "Serena Joy"
+      ],
+      [
+       "The man she begins a relationship with",
+       "Nick"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "offred",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le nom que la narratrice doit porter « maintenant ».",
+     "aide": "Le nom qui signifie « celle qui appartient à Fred ».",
+     "explication": "Elle s’appelle **Offred** : son vrai nom lui a été retiré."
+    },
+    {
+     "type": "zone",
+     "document": "offred",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le prénom du mari dont elle se souvient.",
+     "aide": "Il rit dans ses souvenirs.",
+     "explication": "Elle se souvient de **Luke**, son mari d’avant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la fin du passage du rôle du souvenir ?",
+     "options": [
+      "Se souvenir est sans danger, car personne ne peut l’entendre dans sa chambre",
+      "Se souvenir est inutile, car sa vie d’avant est oubliée pour toujours",
+      "Se souvenir est interdit, donc elle y renonce définitivement dès le premier jour",
+      "Se souvenir est dangereux, mais c’est aussi ce qui la garde en vie"
+     ],
+     "reponse": 3,
+     "aide": "Relis les deux dernières phrases.",
+     "explication": "Le passage joue sur deux faces : le souvenir est un **danger** et une **survie**, ce qui reflète le projet du roman (*se raconter pour survivre*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit un récit à la première personne et au présent ?",
+     "options": [
+      "Le lecteur sait déjà comment l’histoire finit, grâce à une narratrice âgée",
+      "Le lecteur vit l’enfermement avec elle, sans recul ni sécurité",
+      "Le lecteur observe la scène de loin, comme un historien resté neutre",
+      "Le lecteur est tenu à distance par un narrateur qui dit toujours « il »"
+     ],
+     "reponse": 1,
+     "aide": "Que change « I » au lieu de « she », et le présent au lieu du passé ?",
+     "explication": "Le « I » et le présent font vivre la scène **de l’intérieur**, sans recul d’adulte ni promesse de salut."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indice du document 2 au personnage correspondant.",
+     "paires": [
+      [
+       "Her friend who tries to escape",
+       "Moira"
+      ],
+      [
+       "Her shopping partner, linked to the resistance",
+       "Ofglen"
+      ],
+      [
+       "The Commander’s wife, a former singer",
+       "Serena Joy"
+      ],
+      [
+       "The man she begins a relationship with",
+       "Nick"
+      ]
+     ],
+     "aide": "Les indices décrivent le rôle de chacun dans l’histoire.",
+     "explication": "**Moira** tente de s’évader, **Ofglen** appartient au réseau Mayday, **Serena Joy** est l’épouse du Commandant, **Nick** est l’homme avec qui Offred noue une liaison."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ab42e25-fe1b-5f8c-8cb9-e2cd780f2fdf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois voix américaines",
+   "competence": "lire-tableau",
+   "situation": "Trois auteurs fondent, au XIXe siècle, l’idée d’un « moi » américain. Lis le tableau avant de répondre.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "tableau",
+     "titre": "The American self",
+     "colonnes": [
+      "Author",
+      "Work",
+      "Year",
+      "Idea"
+     ],
+     "lignes": [
+      [
+       "Walt Whitman",
+       "Song of Myself",
+       1855,
+       "One voice for a whole nation"
+      ],
+      [
+       "Ralph Waldo Emerson",
+       "Self-Reliance",
+       1841,
+       "Trust yourself"
+      ],
+      [
+       "Henry David Thoreau",
+       "Walden",
+       1854,
+       "Live alone in the woods to find yourself"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voix",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui donne la date de *Self-Reliance*.",
+     "aide": "Repère la ligne d’Emerson.",
+     "explication": "*Self-Reliance* date de **1841**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel auteur défend l’idée « Live alone in the woods to find yourself » ?",
+     "options": [
+      "Walt Whitman",
+      "Ralph Waldo Emerson",
+      "Henry David Thoreau",
+      "Langston Hughes"
+     ],
+     "reponse": 2,
+     "aide": "La colonne « Idea » te donne l’indice.",
+     "explication": "C’est **Thoreau**, l’auteur de *Walden* : se retirer pour se retrouver."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois œuvres de la plus ancienne à la plus récente.",
+     "items": [
+      "Self-Reliance",
+      "Walden",
+      "Song of Myself"
+     ],
+     "aide": "Compare 1841, 1854 et 1855.",
+     "explication": "*Self-Reliance* (1841), *Walden* (1854), *Song of Myself* (1855)."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ab42e25-fe1b-5f8c-8cb9-e2cd780f2fdf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dire « je » à sa manière",
+   "competence": "analyser-document",
+   "situation": "Une narratrice raconte le jour où on lui a demandé de se taire. Relie son histoire aux auteurs qui ont fait de la voix un acte politique.",
+   "documents": [
+    {
+     "id": "memoire",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "My grandmother’s words",
+     "blocs": [
+      "When I was nine, my teacher said my way of speaking was “wrong”. At home we talked with the words of my grandmother; at school I was told to [[h|hide]] them.",
+      "That evening I wrote my first poem in my grandmother’s words. It was the first time the page belonged to me."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Three books",
+     "colonnes": [
+      "Work",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "Their Eyes Were Watching God",
+       1937
+      ],
+      [
+       "I Know Why the Caged Bird Sings",
+       1969
+      ],
+      [
+       "Beloved",
+       1987
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Dates d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "memoire",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le verbe qui montre qu’on lui demandait de cacher sa langue.",
+     "aide": "Ce verbe ressemble à « cacher ».",
+     "explication": "On lui demande de **hide** (cacher) les mots de sa grand-mère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dire « je » est-il ici un acte politique ?",
+     "options": [
+      "Parce qu’elle veut devenir présidente et doit convaincre tous les électeurs",
+      "Parce qu’elle écrit contre son école et veut la voir fermée définitivement",
+      "Parce qu’un éditeur lui a demandé d’écrire uniquement sur la politique",
+      "Parce qu’on lui avait refusé le droit de parler avec sa propre voix"
+     ],
+     "reponse": 3,
+     "aide": "Relis ce que dit l’enseignante.",
+     "explication": "Écrire dans sa propre langue, alors qu’on la lui avait refusée, revient à **revendiquer une place** : c’est un acte politique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque œuvre du document 2 à son enjeu.",
+     "paires": [
+      [
+       "Their Eyes Were Watching God",
+       "La langue vernaculaire comme littérature"
+      ],
+      [
+       "I Know Why the Caged Bird Sings",
+       "Le récit de soi comme survie"
+      ],
+      [
+       "Beloved",
+       "La mémoire de l’esclavage"
+      ]
+     ],
+     "aide": "Hurston, Angelou, Morrison : trois enjeux différents.",
+     "explication": "Hurston (1937) fait de la **langue vernaculaire** une littérature, Angelou (1969) un **récit de survie**, Morrison (1987) porte la **mémoire de l’esclavage**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la plus ancienne et la plus récente des trois œuvres du document 2 ?",
+     "reponse": 50,
+     "aide": "Repère la plus petite et la plus grande date du tableau.",
+     "explication": "1987 − 1937 = **50** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "6ab42e25-fe1b-5f8c-8cb9-e2cd780f2fdf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois discours, une voix",
+   "competence": "argumenter",
+   "situation": "Une jeune fille prend la parole devant des ministres. Compare son discours à ceux de trois orateurs célèbres.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Speech to the ministers",
+     "blocs": [
+      "I [[a|am]] sixteen. I [[a|am]] not a minister. I [[a|am]] a girl who lost her school.",
+      "My friends are still waiting. I have the right to learn, and so do they. I speak for them."
+     ],
+     "source": "Discours écrit pour l’exercice"
+    },
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Three speeches",
+     "colonnes": [
+      "Speaker",
+      "Year",
+      "What makes the speech strong"
+     ],
+     "lignes": [
+      [
+       "Martin Luther King",
+       1963,
+       "Anaphora, preaching rhythm, founding texts"
+      ],
+      [
+       "Barack Obama",
+       2008,
+       "A personal story tied to the national story"
+      ],
+      [
+       "Malala Yousafzai",
+       2013,
+       "Testimony as authority"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "discours",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les trois mots répétés qui forment l’anaphore.",
+     "aide": "La même forme verbale ouvre trois phrases de suite.",
+     "explication": "« I **am**… » est répété trois fois : c’est l’anaphore qui installe la voix de l’oratrice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quoi repose l’autorité de cette oratrice ?",
+     "options": [
+      "Sur sa fonction officielle et le titre qui l’accompagne aux yeux de tous",
+      "Sur son témoignage : elle parle de ce qu’elle a elle-même vécu",
+      "Sur une série de chiffres et de statistiques très précis sur l’éducation",
+      "Sur la citation d’un texte religieux ou juridique connu de l’assemblée"
+     ],
+     "reponse": 1,
+     "aide": "Elle dit qu’elle n’est pas ministre.",
+     "explication": "Son autorité vient de son **témoignage** : elle a perdu son école, comme le dit la phrase."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque orateur du document 2 à ce qui fait la force de son discours.",
+     "paires": [
+      [
+       "Martin Luther King (1963)",
+       "Anaphore et appel aux textes fondateurs"
+      ],
+      [
+       "Barack Obama (2008)",
+       "Récit personnel adossé au récit national"
+      ],
+      [
+       "Malala Yousafzai (2013)",
+       "Le témoignage comme autorité"
+      ]
+     ],
+     "aide": "Traduis la troisième colonne du tableau.",
+     "explication": "King use de l’**anaphore**, Obama lie **récit personnel et récit national**, Malala s’appuie sur le **témoignage**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le discours de Martin Luther King de celui de Malala Yousafzai ?",
+     "reponse": 50,
+     "aide": "Soustrais les deux dates du tableau.",
+     "explication": "2013 − 1963 = **50** ans.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel orateur du tableau ressemble le plus à la jeune fille du document 1 ?",
+     "options": [
+      "Martin Luther King, qui s’appuie sur les textes fondateurs du pays",
+      "Barack Obama, qui lie son histoire personnelle au récit national",
+      "Malala Yousafzai, dont la force vient de ce qu’elle raconte elle-même",
+      "Aucun des trois, car ils n’emploient jamais la première personne"
+     ],
+     "reponse": 2,
+     "aide": "Compare la source de l’autorité dans les deux cas.",
+     "explication": "Comme Malala, la jeune fille parle au nom de ce qu’elle a **vécu** : c’est la force du **témoignage**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3edc9320-5552-5631-a8ef-50658c242b78",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sonnet, par le chiffre",
+   "competence": "comprendre-langue",
+   "situation": "Une affiche présente le recueil des Sonnets de Shakespeare, et un extrait ouvre le Sonnet 18. Lis-les pour calculer et comprendre.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SHAKESPEARE’S SONNETS",
+     "sousTitre": "First published in 1609",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Number of poems",
+       "valeur": "154"
+      },
+      {
+       "texte": "Length of each poem",
+       "valeur": "14 lines"
+      },
+      {
+       "texte": "Structure",
+       "valeur": "three quatrains and a final couplet"
+      }
+     ],
+     "pied": "Love, time and poetry",
+     "source": "Affiche imaginée pour l’exercice"
+    },
+    {
+     "id": "s18",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Sonnet 18",
+     "blocs": [
+      "Shall I compare thee to a [[s|summer’s]] day?",
+      "Thou art more lovely and more temperate:"
+     ],
+     "source": "William Shakespeare, *Sonnets* (1609), vers 1 et 2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "s18",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui nomme ce à quoi le poète compare la personne aimée.",
+     "aide": "Il s’agit d’une saison.",
+     "explication": "Le poète compare la personne aimée à un jour d’**été** (*summer’s day*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « more lovely and more temperate » ?",
+     "options": [
+      "Plus brillante et d’un caractère plus fier",
+      "Plus célèbre et d’une origine plus noble",
+      "Plus jeune et d’une beauté plus éclatante",
+      "Plus charmante et d’un caractère plus doux"
+     ],
+     "reponse": 3,
+     "aide": "« Lovely » parle du charme, « temperate » de la douceur du climat.",
+     "explication": "« Lovely » veut dire **charmant**, « temperate » **tempéré, doux** : la personne aimée est plus douce que l’été."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après l’affiche, combien de vers compte l’ensemble du recueil ?",
+     "reponse": 2156,
+     "aide": "154 poèmes, 14 vers chacun.",
+     "explication": "154 × 14 = **2 156** vers.",
+     "unite": "vers"
+    }
+   ]
+  },
+  {
+   "chapitre": "3edc9320-5552-5631-a8ef-50658c242b78",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une émotion, puis un souvenir",
+   "competence": "analyser-texte",
+   "situation": "Wordsworth définit la poésie dans une préface, puis l’applique dans un poème. Lis les deux extraits pour comprendre sa méthode.",
+   "documents": [
+    {
+     "id": "nuage",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "I Wandered Lonely as a Cloud",
+     "blocs": [
+      "I wandered lonely as a [[c|cloud]]",
+      "That floats on high o’er vales and hills,"
+     ],
+     "source": "William Wordsworth, « I Wandered Lonely as a Cloud » (1807), vers 1 et 2"
+    },
+    {
+     "id": "preface",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une définition de la poésie",
+     "blocs": [
+      "…poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in [[t|tranquillity]]."
+     ],
+     "source": "Wordsworth, préface des *Lyrical Ballads* (édition de 1800)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "preface",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit que l’émotion est reprise dans le calme, à distance.",
+     "aide": "C’est le dernier mot de la phrase.",
+     "explication": "Le mot **tranquillity** (calme) montre que l’émotion est reprise avec recul."
+    },
+    {
+     "type": "zone",
+     "document": "nuage",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui compare le poète à un élément de la nature.",
+     "aide": "C’est un nom qui flotte dans le ciel.",
+     "explication": "Le poète se compare à un **cloud** (nuage) qui flotte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Wordsworth par « recollected in tranquillity » ?",
+     "options": [
+      "Que le poète doit écrire dans un silence complet, sans aucune émotion",
+      "Que l’émotion est d’abord ressentie, puis reprise calmement par le souvenir",
+      "Que le poème naît au moment précis du choc, sans aucun recul",
+      "Que le poète doit recopier un souvenir dans l’ordre exact des faits"
+     ],
+     "reponse": 1,
+     "aide": "« Recollected » vient de « se souvenir ».",
+     "explication": "L’émotion est **ressentie d’abord**, puis **reprise à distance** : la poésie naît du souvenir apaisé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le recueil des *Lyrical Ballads* du poème sur le nuage ?",
+     "reponse": 9,
+     "aide": "Les deux dates sont dans les sources des documents.",
+     "explication": "1807 − 1798 = **9** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "3edc9320-5552-5631-a8ef-50658c242b78",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand les mains parlent",
+   "competence": "analyser-document",
+   "situation": "Dans un film, une musicienne ne parle pas. Un passage imaginé et un tableau d’analyse montrent ce qui parle à sa place.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "A silent scene",
+     "blocs": [
+      "A close-up: Clara’s hands on the keyboard. Nothing is said. The music says it all: [[e|grief]] and [[e|longing]].",
+      "When her brother comes in, she closes the lid and looks away."
+     ],
+     "source": "Scène imaginée pour l’exercice, dans l’esprit de *The Piano*"
+    },
+    {
+     "id": "voix",
+     "type": "tableau",
+     "titre": "What speaks instead of words",
+     "colonnes": [
+      "Element",
+      "What it does"
+     ],
+     "lignes": [
+      [
+       "The piano",
+       "It is Ada’s voice (music by Michael Nyman)"
+      ],
+      [
+       "The hands",
+       "She signs, plays and writes"
+      ],
+      [
+       "The landscape",
+       "Mud, forest, sea: a world that stifles or frees"
+      ],
+      [
+       "Flora’s gaze",
+       "The child translates, then betrays"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours sur *The Piano* (Jane Campion, 1993)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux mots qui nomment ce que ressent Clara.",
+     "aide": "Le chagrin et le désir nostalgique.",
+     "explication": "**Grief** (le chagrin) et **longing** (le désir, la nostalgie) nomment précisément son émotion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel procédé de mise en scène décrit « A close-up: Clara’s hands… » ?",
+     "options": [
+      "Une voix off : une narratrice explique ce qu’elle ressent",
+      "Un champ-contrechamp entre deux personnages qui se répondent",
+      "Un gros plan : la caméra isole les mains pour montrer l’émotion",
+      "Un plan large qui montre le paysage tout entier"
+     ],
+     "reponse": 2,
+     "aide": "« Close-up » se traduit par « gros plan ».",
+     "explication": "Un **gros plan** isole les mains : c’est par elles que passe l’émotion, à la place des mots."
+    },
+    {
+     "type": "zone",
+     "document": "voix",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui dit ce qui joue le rôle de voix d’Ada.",
+     "aide": "Cherche le mot « voice ».",
+     "explication": "Le **piano** est la voix d’Ada : la musique de Michael Nyman parle pour elle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le geste de Clara, qui « closes the lid and looks away » ?",
+     "options": [
+      "Une colère violente qui la pousse à détruire son instrument",
+      "Un départ définitif : elle quitte la pièce et le pays",
+      "Une surprise : elle découvre que l’instrument est cassé",
+      "Un refus : sans parole, elle met fin à l’échange avec son frère"
+     ],
+     "reponse": 3,
+     "aide": "Elle ne dit rien : que font ses gestes ?",
+     "explication": "Fermer le couvercle et détourner les yeux est un **refus silencieux** : le silence est un choix, comme chez Campion."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du tableau à ce qu’il exprime.",
+     "paires": [
+      [
+       "The hands",
+       "Elle signe, joue, écrit"
+      ],
+      [
+       "The landscape",
+       "Un monde qui étouffe ou libère"
+      ],
+      [
+       "Flora’s gaze",
+       "L’enfant traduit, puis trahit"
+      ]
+     ],
+     "aide": "Traduis la seconde colonne.",
+     "explication": "Les **mains** remplacent la parole, le **paysage** traduit le monde autour d’Ada, le **regard de Flora** traduit puis trahit."
+    }
+   ]
+  },
+  {
+   "chapitre": "940e8774-a42c-592e-8728-65c6f8a7bd87",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui porte quel masque ?",
+   "competence": "lire-tableau",
+   "situation": "*Much Ado About Nothing* repose sur des masques. Lis ce tableau, en anglais, pour situer les personnages.",
+   "documents": [
+    {
+     "id": "masques",
+     "type": "tableau",
+     "titre": "Masks in Much Ado About Nothing",
+     "colonnes": [
+      "Character",
+      "The mask"
+     ],
+     "lignes": [
+      [
+       "Beatrice and Benedick",
+       "They fight with words to hide their love"
+      ],
+      [
+       "Don John",
+       "A jealous brother who stages a false scene"
+      ],
+      [
+       "Dogberry",
+       "A ridiculous constable who finds the truth"
+      ],
+      [
+       "Claudio and Hero",
+       "A young couple broken by slander"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "masques",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le personnage qui monte une fausse mise en scène.",
+     "aide": "Cherche « stages ».",
+     "explication": "C’est **Don John**, le frère jaloux, qui monte une fausse preuve contre Hero."
+    },
+    {
+     "type": "zone",
+     "document": "masques",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case où apparaît le mot « slander ».",
+     "aide": "Le mot signifie « calomnie ».",
+     "explication": "Le mot **slander** se trouve dans la ligne de Claudio et Hero : la calomnie brise le couple."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Beatrice and Benedick",
+       "Ils se battent à coups de mots pour cacher leur amour"
+      ],
+      [
+       "Don John",
+       "Un frère jaloux qui monte une fausse scène"
+      ],
+      [
+       "Dogberry",
+       "Un chef de la garde ridicule qui découvre la vérité"
+      ]
+     ],
+     "aide": "Traduis la colonne « The mask ».",
+     "explication": "Beatrice et Benedick se livrent une **guerre de mots**, Don John une **fausse scène**, Dogberry **découvre la vérité** malgré son ridicule."
+    }
+   ]
+  },
+  {
+   "chapitre": "940e8774-a42c-592e-8728-65c6f8a7bd87",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une conversation arrangée",
+   "competence": "analyser-texte",
+   "situation": "Une scène imaginée reprend un ressort de la pièce de Shakespeare : des amis qui parlent pour être entendus. Puis remets dans l’ordre les mises en scène de la pièce.",
+   "documents": [
+    {
+     "id": "gulling",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "A garden",
+     "blocs": [
+      {
+       "didascalie": "Max [[h|hides]] behind a bush. His friends walk past, speaking loudly."
+      },
+      {
+       "personnage": "Tom",
+       "replique": "Poor Lily! She loves Max so much, but she will never say it."
+      },
+      {
+       "personnage": "Sam",
+       "replique": "Yes, she lies awake at night. Hush, let us walk on."
+      },
+      {
+       "didascalie": "Max, alone."
+      },
+      {
+       "personnage": "Max",
+       "replique": "Lily loves me? And I called her proud! I must change my mind."
+      }
+     ],
+     "source": "Scène imaginée pour l’exercice, dans l’esprit de *Much Ado About Nothing*"
+    },
+    {
+     "id": "moments",
+     "type": "tableau",
+     "titre": "Four staged moments in the play",
+     "colonnes": [
+      "Moment",
+      "What happens"
+     ],
+     "lignes": [
+      [
+       "A fake death",
+       "Hero pretends to be dead"
+      ],
+      [
+       "A masked ball",
+       "Everyone speaks behind a mask"
+      ],
+      [
+       "A false proof",
+       "Don John makes everyone think Hero is unfaithful"
+      ],
+      [
+       "Eavesdropping scenes",
+       "Friends speak on purpose to be overheard"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gulling",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le verbe qui montre que Max se cache pour écouter.",
+     "aide": "Il se met derrière un buisson.",
+     "explication": "Max **hides** (se cache) : il espionne sans être vu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Tom et Sam parlent-ils fort ?",
+     "options": [
+      "Pour se disputer avec Lily devant tout le village",
+      "Pour que Max les entende et croie que Lily l’aime",
+      "Pour avertir Max qu’un danger approche du jardin",
+      "Pour couvrir le bruit d’un orage qui gronde au loin"
+     ],
+     "reponse": 1,
+     "aide": "Ils savent que Max est caché.",
+     "explication": "Les amis **parlent exprès** pour être entendus : c’est la mise en scène d’un « espionnage arrangé »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le dernier monologue de Max ?",
+     "options": [
+      "Son entêtement : il refuse de croire ce qu’il vient d’entendre",
+      "Sa colère : il veut se venger de ses amis qui l’ont trompé",
+      "Son masque tombe : il avoue seul ce qu’il cachait à tous",
+      "Son indifférence : il ne se soucie pas des paroles de Lily"
+     ],
+     "reponse": 2,
+     "aide": "Regarde sa dernière phrase : « I must change my mind. »",
+     "explication": "Seul, Max reconnaît son erreur : c’est le **moment où le masque tombe**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre mises en scène de la pièce, dans l’ordre de l’intrigue.",
+     "items": [
+      "Le bal masqué",
+      "Les scènes d’espionnage arrangé",
+      "La fausse preuve contre Hero",
+      "La fausse mort de Hero"
+     ],
+     "aide": "Le bal ouvre la pièce, la fausse mort la conclut.",
+     "explication": "Dans l’ordre : **bal masqué**, **espionnage arrangé**, **fausse preuve**, **fausse mort**."
+    }
+   ]
+  },
+  {
+   "chapitre": "940e8774-a42c-592e-8728-65c6f8a7bd87",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La photo, le duc et la scène",
+   "competence": "analyser-document",
+   "situation": "Un duc montre un tableau à un visiteur ; une adolescente publie une photo souriante. Qui se met en scène, et devant qui ?",
+   "documents": [
+    {
+     "id": "duchess",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "My Last Duchess",
+     "blocs": [
+      "That’s my last Duchess [[p|painted]] on the wall,",
+      "Looking as if she were alive."
+     ],
+     "source": "Robert Browning, « My Last Duchess » (1842), vers 1 et 2"
+    },
+    {
+     "id": "photo",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Zoe et Ben",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "Did you see my new photo? Forty likes in ten minutes!"
+      },
+      {
+       "qui": "Ben",
+       "texte": "It’s nice. But you were crying in the car before, and in the photo you have a huge smile."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "That’s the point. Nobody needs to see [[b|backstage]]."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "duchess",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui montre que le duc parle d’un tableau.",
+     "aide": "Un portrait, c’est quelque chose de…",
+     "explication": "Le mot **painted** (peinte) montre que la duchesse est sur un tableau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle le début du poème sur sa forme ?",
+     "options": [
+      "Un poète raconte sa propre vie amoureuse en son nom propre, sans détour",
+      "Un narrateur extérieur décrit un tableau sans jamais porter de jugement",
+      "Deux amants se répondent en alternant vers et répliques tout au long",
+      "Un duc parle à un visiteur silencieux et montre sans le savoir qui il est"
+     ],
+     "reponse": 3,
+     "aide": "« That’s my last Duchess » : qui parle, et à qui ?",
+     "explication": "C’est un **monologue dramatique** : un personnage parle à un auditeur muet et se trahit."
+    },
+    {
+     "type": "zone",
+     "document": "photo",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot de Zoe qui renvoie aux coulisses.",
+     "aide": "Un mot de théâtre, en anglais.",
+     "explication": "**Backstage** désigne les coulisses : ce que Zoe ne montre pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel concept de Goffman la photo de Zoe illustre-t-elle ?",
+     "options": [
+      "Le monologue dramatique : elle parle à un auditeur qui se tait",
+      "La scène : elle montre une image choisie et garde les coulisses cachées",
+      "Le self-made man : elle s’est construite toute seule",
+      "La double conscience : elle se voit à travers un regard hostile"
+     ],
+     "reponse": 1,
+     "aide": "Goffman parle de scène et de coulisses.",
+     "explication": "Pour Goffman, la vie sociale a une **scène** (l’image montrée) et des **coulisses** (ce qu’on cache) : la photo est la scène."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à l’exemple qui l’illustre dans les documents.",
+     "paires": [
+      [
+       "La scène",
+       "La photo souriante publiée en ligne"
+      ],
+      [
+       "Les coulisses",
+       "Les larmes de Zoe dans la voiture"
+      ],
+      [
+       "Le monologue dramatique",
+       "Le duc qui parle à un visiteur silencieux"
+      ]
+     ],
+     "aide": "Un exemple vient de chaque document.",
+     "explication": "La **scène** est la photo, les **coulisses** les larmes cachées, le **monologue dramatique** le discours du duc."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8c7e280-6eae-5f02-a681-ffd3244a5fbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq romans de formation",
+   "competence": "se-reperer-temps",
+   "situation": "Sur une frise, cinq romans anglophones racontent une jeunesse. Repère les dates avant de répondre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Five coming-of-age novels",
+     "debut": 1840,
+     "fin": 1970,
+     "pas": 10,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "jane",
+       "date": 1847,
+       "nom": "Jane Eyre"
+      },
+      {
+       "id": "pip",
+       "date": 1861,
+       "nom": "Great Expectations"
+      },
+      {
+       "id": "joyce",
+       "date": 1916,
+       "nom": "Portrait (Joyce)"
+      },
+      {
+       "id": "holden",
+       "date": 1951,
+       "nom": "Catcher (Salinger)"
+      },
+      {
+       "id": "scout",
+       "date": 1960,
+       "nom": "Mockingbird"
+      }
+     ],
+     "source": "Dates d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pip"
+     ],
+     "enonce": "Touche le roman paru en 1861.",
+     "aide": "Repère la graduation 1861, entre 1850 et 1870.",
+     "explication": "*Great Expectations* de Dickens paraît en **1861**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "joyce"
+     ],
+     "enonce": "Touche le premier roman de la frise paru au XXe siècle.",
+     "aide": "Le XXe siècle commence en 1901.",
+     "explication": "Le premier roman paru après 1900 est *A Portrait of the Artist as a Young Man* de Joyce (**1916**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Jane Eyre* de *Great Expectations* ?",
+     "reponse": 14,
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1861 − 1847 = **14** ans.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "d8c7e280-6eae-5f02-a681-ffd3244a5fbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le mensonge de l’écolier",
+   "competence": "analyser-texte",
+   "situation": "Un passage écrit pour l’exercice reprend la manière du récit *Boyhood* : un enfant, un « il », le présent. Puis ordonne les étapes d’une initiation.",
+   "documents": [
+    {
+     "id": "ecole",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "At school",
+     "blocs": [
+      "[[h|He]] sits at the back of the classroom. The teacher asks each boy to say his religion. When his turn comes, he hears himself say “Catholic”. He has no idea why.",
+      "Now he must remember the lie every Friday."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de *Boyhood*"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Four stages of a coming-of-age story",
+     "colonnes": [
+      "Stage",
+      "What happens"
+     ],
+     "lignes": [
+      [
+       "An epiphany",
+       "A sudden revelation"
+      ],
+      [
+       "Departure",
+       "Leaving family, village, childhood"
+      ],
+      [
+       "Trials",
+       "Humiliation, injustice"
+      ],
+      [
+       "A new outlook",
+       "The hero sees what he did not see"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ecole",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le pronom qui montre que le récit est à la troisième personne.",
+     "aide": "C’est le premier mot du texte.",
+     "explication": "Le pronom **He** (il) installe la troisième personne : l’enfant est tenu à distance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel temps domine dans le passage, et quel effet a-t-il ?",
+     "options": [
+      "Le passé, qui permet à un adulte de juger avec sagesse l’enfant qu’il était",
+      "Le futur, qui annonce tout ce que l’enfant deviendra plus tard dans la vie",
+      "Le présent, qui garde l’enfant dans l’instant, sans recul d’adulte",
+      "Le conditionnel, qui rend toutes les actions de l’enfant incertaines"
+     ],
+     "reponse": 2,
+     "aide": "Regarde « sits », « asks », « hears ».",
+     "explication": "Le **présent** enferme le lecteur dans l’instant de l’enfant, sans la sagesse de l’adulte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle le mot « Catholic » prononcé sans raison ?",
+     "options": [
+      "Un enfant très pieux qui défend sa religion avec fierté devant ses camarades",
+      "Un enfant qui imite son père pour lui faire plaisir et lui ressembler",
+      "Un enfant qui ne comprend pas la question posée par son enseignant",
+      "Un enfant qui ne se sent chez lui dans aucun camp et improvise une appartenance"
+     ],
+     "reponse": 3,
+     "aide": "Il dit le mot sans savoir pourquoi, puis doit « tenir » le mensonge.",
+     "explication": "Le mot est lâché au hasard : l’enfant **improvise une appartenance** et doit ensuite tenir son secret."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre étapes d’une initiation.",
+     "items": [
+      "Le départ",
+      "Les épreuves",
+      "L’épiphanie",
+      "Le nouveau regard"
+     ],
+     "aide": "On part, on souffre, on comprend, on voit autrement.",
+     "explication": "**Départ**, **épreuves**, **épiphanie**, **nouveau regard** : l’ordre de la méthode du cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8c7e280-6eae-5f02-a681-ffd3244a5fbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jane, Pip, Holden : ce qu’on apprend",
+   "competence": "analyser-document",
+   "situation": "Un vers célèbre de *Jane Eyre* et une conversation de lecteurs sur *Great Expectations* : deux façons de grandir. Croise-les.",
+   "documents": [
+    {
+     "id": "jane",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Jane Eyre",
+     "blocs": [
+      "I am no bird; and no [[n|net]] ensnares me."
+     ],
+     "source": "Charlotte Brontë, *Jane Eyre* (1847), début d’une réplique de Jane"
+    },
+    {
+     "id": "pip",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Lena et Omar",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Omar",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Pip is so ashamed of Joe when he becomes a gentleman."
+      },
+      {
+       "qui": "Omar",
+       "texte": "Then he learns that his secret benefactor is a [[c|convict]]. His idea of a gentleman collapses."
+      },
+      {
+       "qui": "Lena",
+       "texte": "So true worth isn’t about rank."
+      },
+      {
+       "qui": "Omar",
+       "texte": "Exactly. That’s his turning point."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jane",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui désigne le piège que Jane refuse.",
+     "aide": "Un piège qui attrape les oiseaux.",
+     "explication": "Le mot **net** (filet) désigne le piège : aucun filet ne la retiendra."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que revendique Jane Eyre avec cette phrase ?",
+     "options": [
+      "Sa richesse : elle veut récupérer l’héritage perdu de sa famille",
+      "Son indépendance : elle refuse d’être retenue ou possédée",
+      "Sa beauté : elle veut qu’on la reconnaisse enfin comme une princesse",
+      "Sa religion : elle veut qu’on respecte sa foi dans la maison"
+     ],
+     "reponse": 1,
+     "aide": "« I am no bird » : elle refuse d’être un oiseau en cage.",
+     "explication": "Jane revendique sa **liberté** : c’est la phrase de la jeune orpheline qui conquiert son indépendance."
+    },
+    {
+     "type": "zone",
+     "document": "pip",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne l’ancien forçat, bienfaiteur de Pip.",
+     "aide": "Il est dans la réplique d’Omar.",
+     "explication": "Le bienfaiteur de Pip est un **convict** (un forçat)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape de l’initiation le dialogue sur Pip décrit-il ?",
+     "options": [
+      "Le départ : Pip quitte son village pour Londres sans regret",
+      "Le retour : Pip retrouve Joe et se fait pardonner par lui",
+      "L’épiphanie : Pip comprend que son idée du gentleman était fausse",
+      "L’épreuve finale : Pip est condamné pour un crime grave"
+     ],
+     "reponse": 2,
+     "aide": "Omar parle d’un « turning point ».",
+     "explication": "Pip découvre que **la vraie valeur n’est pas le rang** : c’est l’épiphanie, le moment de révélation."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque roman à ce que son héros apprend.",
+     "paires": [
+      [
+       "Jane Eyre",
+       "À conquérir son indépendance"
+      ],
+      [
+       "Great Expectations",
+       "Que la vraie valeur n’est pas le rang"
+      ],
+      [
+       "The Catcher in the Rye",
+       "À refuser le monde « phony » des adultes"
+      ]
+     ],
+     "aide": "Brontë, Dickens, Salinger : trois leçons.",
+     "explication": "Jane conquiert son **indépendance**, Pip découvre que la vraie valeur n’est pas le **rang**, Holden refuse le monde **« phony »** des adultes."
+    }
+   ]
+  },
+  {
+   "chapitre": "1382e2f0-889e-5964-9811-4f6ca0e5db11",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une phrase qui ne dit pas ce qu’elle dit",
+   "competence": "analyser-texte",
+   "situation": "La première phrase de *Pride and Prejudice* est célèbre. Lis-la lentement : qui cherche qui ?",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La première phrase",
+     "blocs": [
+      "It is a truth universally acknowledged, that a [[s|single]] man in possession of a good [[f|fortune]], must be in want of a [[w|wife]]."
+     ],
+     "source": "Jane Austen, *Pride and Prejudice* (1813), première phrase"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot qui désigne ce dont l’homme est censé avoir besoin.",
+     "aide": "C’est le dernier mot de la phrase.",
+     "explication": "Selon la phrase, l’homme riche a besoin d’une **wife** (une épouse)."
+    },
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui désigne l’argent, dans la phrase.",
+     "aide": "Il est en rapport avec « a good… ».",
+     "explication": "Le mot **fortune** désigne la richesse de l’homme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon l’ironie de la phrase, qui cherche en réalité un mari riche ?",
+     "options": [
+      "Les hommes seuls et riches, qui cherchent une épouse dans la région",
+      "Les pasteurs et les aristocrates du comté, qui veulent des héritiers",
+      "Les servantes de la maison, qui espèrent devenir riches par mariage",
+      "Les familles qui ont des filles à marier, à l’époque de l’auteur"
+     ],
+     "reponse": 3,
+     "aide": "Ce que la phrase dit est le contraire de ce qu’elle pense.",
+     "explication": "Le narrateur retourne la phrase : ce sont les **familles avec des filles** qui cherchent un riche mari."
+    }
+   ]
+  },
+  {
+   "chapitre": "1382e2f0-889e-5964-9811-4f6ca0e5db11",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui est qui, et qui arrive quand ?",
+   "competence": "analyser-document",
+   "situation": "Un tableau identifie quatre personnages, un autre les étapes de l’intrigue. Lis-les en anglais pour répondre.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Four characters",
+     "colonnes": [
+      "Character",
+      "Clue"
+     ],
+     "lignes": [
+      [
+       "Mr Wickham",
+       "A charming officer who lies"
+      ],
+      [
+       "Mr Collins",
+       "A cousin and clergyman, servile and ridiculous"
+      ],
+      [
+       "Charlotte Lucas",
+       "Marries Collins for security"
+      ],
+      [
+       "Lady Catherine de Bourgh",
+       "An arrogant aristocrat"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "The plot in four stages",
+     "colonnes": [
+      "Stage",
+      "What happens"
+     ],
+     "lignes": [
+      [
+       "The repair",
+       "Darcy saves the Bennets after Lydia’s flight"
+      ],
+      [
+       "The letter",
+       "Darcy tells Elizabeth the truth about Wickham"
+      ],
+      [
+       "The first impression",
+       "At the ball, Darcy judges Elizabeth “tolerable”"
+      ],
+      [
+       "The first proposal",
+       "Darcy insults her family, Elizabeth refuses"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le personnage qui épouse Mr Collins par raison.",
+     "aide": "Cherche « for security ».",
+     "explication": "C’est **Charlotte Lucas**, qui épouse Collins par raison."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à son trait.",
+     "paires": [
+      [
+       "Mr Wickham",
+       "Un séducteur charmant et menteur"
+      ],
+      [
+       "Mr Collins",
+       "Un cousin pasteur, servile et ridicule"
+      ],
+      [
+       "Lady Catherine de Bourgh",
+       "Une aristocrate arrogante"
+      ]
+     ],
+     "aide": "Traduis la colonne « Clue ».",
+     "explication": "Wickham est un **menteur charmant**, Collins un **pasteur servile**, Lady Catherine une **aristocrate arrogante**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre étapes de l’intrigue.",
+     "items": [
+      "La mauvaise première impression",
+      "La première demande, refusée",
+      "La lettre de Darcy",
+      "La réparation après la fuite de Lydia"
+     ],
+     "aide": "Le bal ouvre le roman, la réparation le conclut.",
+     "explication": "Dans l’ordre : **première impression**, **première demande**, **lettre**, **réparation**."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche l’étape après laquelle Elizabeth dit « Till this moment I never knew myself ».",
+     "aide": "Elle relit un document que Darcy lui remet.",
+     "explication": "Elizabeth prononce la phrase après **la lettre** : elle comprend qu’elle s’est trompée."
+    }
+   ]
+  },
+  {
+   "chapitre": "1382e2f0-889e-5964-9811-4f6ca0e5db11",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Elizabeth relit la lettre",
+   "competence": "analyser-texte",
+   "situation": "Un passage écrit pour l’exercice imite la manière d’Austen. Observe le procédé, puis rapproche-le du tableau des techniques.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "After the letter",
+     "blocs": [
+      "Elizabeth read the letter twice. Had she really been so clever? She had trusted Wickham’s smile and despised Darcy’s silence. How [[b|blind]] she had been, she who had always prided herself on her judgement."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Austen"
+    },
+    {
+     "id": "procedes",
+     "type": "tableau",
+     "titre": "Austen’s techniques",
+     "colonnes": [
+      "Technique",
+      "Effect"
+     ],
+     "lignes": [
+      [
+       "The narrator’s irony",
+       "The first sentence mocks families looking for rich husbands"
+      ],
+      [
+       "Free indirect speech",
+       "We hear Elizabeth’s thoughts without quotation marks"
+      ],
+      [
+       "Sharp dialogue",
+       "Character is revealed in speech"
+      ],
+      [
+       "Social satire",
+       "Collins and Lady Catherine are ridiculous in their own words"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui montre qu’Elizabeth juge son propre aveuglement.",
+     "aide": "Un adjectif qui signifie « aveugle ».",
+     "explication": "Le mot **blind** exprime son aveuglement : elle reconnaît s’être trompée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase du passage est au discours indirect libre ?",
+     "options": [
+      "Elizabeth read the letter twice.",
+      "Had she really been so clever?",
+      "She had trusted Wickham’s smile and despised Darcy’s silence.",
+      "She had always prided herself on her judgement."
+     ],
+     "reponse": 1,
+     "aide": "Cherche la phrase qui reproduit une pensée sans « she wondered ».",
+     "explication": "« **Had she really been so clever?** » rend la pensée d’Elizabeth sans guillemets ni verbe introducteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape de l’intrigue ce passage illustre-t-il ?",
+     "options": [
+      "La première demande : elle refuse Darcy avec éclat devant lui",
+      "La fuite de Lydia : elle apprend ce que Darcy a fait pour les Bennet",
+      "La lettre : Elizabeth comprend qu’elle s’est trompée sur Wickham et Darcy",
+      "Le bal : elle entend Darcy la juger « tolerable » devant elle"
+     ],
+     "reponse": 2,
+     "aide": "Elle relit un document écrit par Darcy.",
+     "explication": "Le passage correspond à la **lettre** : Elizabeth relit et comprend qu’elle a mal jugé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque technique du tableau à son effet.",
+     "paires": [
+      [
+       "The narrator’s irony",
+       "La première phrase se moque des familles qui cherchent un riche mari"
+      ],
+      [
+       "Free indirect speech",
+       "On entend les pensées d’Elizabeth sans guillemets"
+      ],
+      [
+       "Social satire",
+       "Collins et Lady Catherine sont ridicules par leurs propres mots"
+      ]
+     ],
+     "aide": "Traduis la colonne « Effect ».",
+     "explication": "Ironie, discours indirect libre et satire sociale : **trois procédés** qui forment l’art d’Austen."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que le roman est un « apprentissage du jugement » ?",
+     "options": [
+      "Parce que seul Darcy doit changer, car il est le seul à être orgueilleux",
+      "Parce que les juges de la ville condamnent les héros dans un procès",
+      "Parce qu’Elizabeth apprend à obéir au jugement de sa mère sans discuter",
+      "Parce que chacun doit corriger son propre regard, pas seulement celui des autres"
+     ],
+     "reponse": 3,
+     "aide": "Elizabeth croit bien juger, puis comprend qu’elle se trompait.",
+     "explication": "L’orgueil et le préjugé sont **partagés** : Elizabeth comme Darcy doivent corriger **leur propre regard**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc890172-e120-5718-9825-d10397ef290e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les chiffres de l’épreuve",
+   "competence": "lire-tableau",
+   "situation": "Voici l’organisation de l’épreuve, présentée en anglais comme sur une fiche de révision. Lis-la pour organiser ton travail.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "LLCER — THE EXAM",
+     "sousTitre": "Final year",
+     "emoji": "🗓️",
+     "lignes": [
+      {
+       "texte": "Written exam",
+       "valeur": "3 h 30",
+       "id": "ecrit"
+      },
+      {
+       "texte": "Part 1",
+       "valeur": "Synthesis of a dossier, about 500 words",
+       "id": "p1"
+      },
+      {
+       "texte": "Part 2",
+       "valeur": "Translation or transposition into French",
+       "id": "p2"
+      },
+      {
+       "texte": "Oral exam",
+       "valeur": "20 minutes",
+       "id": "oral"
+      }
+     ],
+     "pied": "Read the instructions first",
+     "source": "Fiche rédigée pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "oral"
+     ],
+     "enonce": "Touche la ligne qui donne la durée de l’oral.",
+     "aide": "Cherche « Oral exam ».",
+     "explication": "L’oral dure **20 minutes**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "p2"
+     ],
+     "enonce": "Touche la ligne qui décrit la seconde partie de l’écrit.",
+     "aide": "Cherche « Part 2 ».",
+     "explication": "La seconde partie est une **traduction ou une transposition** en français."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure l’épreuve écrite ?",
+     "reponse": 210,
+     "aide": "3 h 30 = 3 × 60 + 30.",
+     "explication": "3 h 30 = 180 + 30 = **210** minutes.",
+     "unite": "minutes"
+    }
+   ]
+  },
+  {
+   "chapitre": "bc890172-e120-5718-9825-d10397ef290e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux débuts de copie",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves commencent leur synthèse sur le même dossier. Compare leurs introductions.",
+   "documents": [
+    {
+     "id": "copieA",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Copie A",
+     "blocs": [
+      "Document A is a poem. Document B is a newspaper article. Document C is a painting. First, I will present document A, then document B, then document C."
+     ],
+     "source": "Copie imaginée pour l’exercice"
+    },
+    {
+     "id": "copieB",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Copie B",
+     "blocs": [
+      "[[c|While]] the poem (doc. A) presents exile as a loss, the article (doc. B) shows it as a fresh start; [[c|yet]] both suggest that leaving home changes who we are."
+     ],
+     "source": "Copie imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces deux copies construit une vraie synthèse ?",
+     "options": [
+      "La copie A, qui présente calmement chaque document à son tour",
+      "La copie B, qui fait dialoguer deux documents dès la première phrase",
+      "Les deux, car elles citent toutes les deux les trois documents",
+      "Aucune, car ni l’une ni l’autre ne donne son opinion personnelle"
+     ],
+     "reponse": 1,
+     "aide": "Une synthèse croise les documents.",
+     "explication": "La copie B **croise** les documents (« While… yet… ») ; la copie A les présente un par un."
+    },
+    {
+     "type": "zone",
+     "document": "copieB",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux connecteurs logiques de la copie B.",
+     "aide": "L’un oppose, l’autre nuance.",
+     "explication": "**While** et **yet** relient les documents : le premier oppose, le second nuance."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque connecteur à sa fonction.",
+     "paires": [
+      [
+       "whereas",
+       "Opposer"
+      ],
+      [
+       "therefore",
+       "Conclure"
+      ],
+      [
+       "likewise",
+       "Comparer"
+      ],
+      [
+       "moreover",
+       "Ajouter"
+      ]
+     ],
+     "aide": "Pense à leur traduction : tandis que, donc, de même, de plus.",
+     "explication": "**Whereas** oppose, **therefore** conclut, **likewise** compare, **moreover** ajoute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la copie A est-elle hors sujet, même si elle est bien écrite ?",
+     "options": [
+      "Elle dépasse largement les 500 mots demandés pour la synthèse",
+      "Elle ne cite aucun document et ne donne aucune source",
+      "Elle présente les documents l’un après l’autre sans les faire dialoguer",
+      "Elle est écrite dans un français trop soutenu pour l’épreuve"
+     ],
+     "reponse": 2,
+     "aide": "Observe l’organisation : « First… then… then… ».",
+     "explication": "Un devoir en **blocs successifs** est hors sujet : le jury attend une **problématique commune**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc890172-e120-5718-9825-d10397ef290e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plan de Malik",
+   "competence": "analyser-document",
+   "situation": "Malik prépare sa synthèse et te montre son plan. Relis la consigne, analyse son plan et propose des corrections.",
+   "documents": [
+    {
+     "id": "consigne",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La consigne",
+     "blocs": [
+      "[[v|Show]] how the documents present the experience of leaving home."
+     ],
+     "source": "Consigne imaginée pour l’exercice"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le plan de Malik",
+     "colonnes": [
+      "Partie",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Introduction",
+       "Il présente le document A"
+      ],
+      [
+       "Partie 1",
+       "Document A"
+      ],
+      [
+       "Partie 2",
+       "Document B"
+      ],
+      [
+       "Partie 3",
+       "Document C"
+      ],
+      [
+       "Conclusion",
+       "Il dit qu’il a aimé le poème"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "consigne",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe qui donne la tâche à accomplir.",
+     "aide": "C’est le premier mot de la consigne.",
+     "explication": "**Show** (montrer) est le verbe de la consigne : il faut démontrer quelque chose."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case de l’introduction qui ne pose pas de problématique.",
+     "aide": "Cherche la ligne « Introduction ».",
+     "explication": "L’introduction de Malik se contente de **présenter le document A** : elle ne pose aucune problématique sur le dossier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le défaut principal du plan de Malik ?",
+     "options": [
+      "Une conclusion trop longue qui reprend toute la synthèse",
+      "Un nombre de parties trop élevé pour l’épreuve",
+      "Un manque de citations directes dans chaque partie",
+      "Un bloc par document, sans aucune mise en relation"
+     ],
+     "reponse": 3,
+     "aide": "Regarde la colonne « Partie ».",
+     "explication": "Le plan est un **résumé successif** : or une synthèse doit croiser les documents."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la méthode de préparation.",
+     "items": [
+      "Lire les consignes",
+      "Identifier chaque document",
+      "Surligner les idées utiles",
+      "Trouver les liens entre documents",
+      "Bâtir le plan"
+     ],
+     "aide": "On lit d’abord ce qu’on cherche, on bâtit le plan en dernier.",
+     "explication": "Dans l’ordre : **consignes**, **documents**, **surlignage**, **liens**, **plan**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle correction apporter à la conclusion de Malik ?",
+     "options": [
+      "La supprimer car une synthèse n’en a pas besoin",
+      "Ouvrir sur une idée tirée du dossier plutôt que donner ses goûts",
+      "La rallonger en racontant le poème qu’il a aimé",
+      "La remplacer par une citation longue du poème choisi"
+     ],
+     "reponse": 1,
+     "aide": "Une conclusion ouvre, elle ne raconte pas ses préférences.",
+     "explication": "La conclusion doit **ouvrir** à partir du dossier ; son opinion personnelle est hors de propos."
+    }
+   ]
+  },
+  {
+   "chapitre": "d29170a6-b507-5a0d-abeb-bdf01882733d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un paragraphe qui relie",
+   "competence": "analyser-texte",
+   "situation": "Voici un paragraphe de synthèse écrit pour l’exercice. Repère comment il relie les documents.",
+   "documents": [
+    {
+     "id": "para",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un paragraphe de synthèse",
+     "blocs": [
+      "[[c|While]] the poem (doc. A) describes arriving as a loss, the photograph (doc. B) shows a confident crowd. [[c|Yet]] both documents suggest that the first days abroad are a time of vulnerability, as doc. C makes clear."
+     ],
+     "source": "Paragraphe imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "para",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux connecteurs qui mettent les documents en relation.",
+     "aide": "Le premier ouvre la phrase, le second ouvre la suivante.",
+     "explication": "**While** oppose A et B, **Yet** ouvre la nuance commune."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de documents sont mis en relation dans ce paragraphe ?",
+     "reponse": 3,
+     "aide": "Ils sont nommés doc. A, doc. B et doc. C.",
+     "explication": "Les documents A, B et C sont nommés : **3** documents."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque connecteur à sa fonction.",
+     "paires": [
+      [
+       "while",
+       "Opposer"
+      ],
+      [
+       "moreover",
+       "Ajouter"
+      ],
+      [
+       "therefore",
+       "Conclure"
+      ],
+      [
+       "likewise",
+       "Comparer"
+      ]
+     ],
+     "aide": "Tandis que, de plus, donc, de même.",
+     "explication": "**While** oppose, **moreover** ajoute, **therefore** conclut, **likewise** compare."
+    }
+   ]
+  },
+  {
+   "chapitre": "d29170a6-b507-5a0d-abeb-bdf01882733d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un dossier de 1912",
+   "competence": "analyser-document",
+   "situation": "Voici le brouillon d’un dossier de trois documents et ses deux consignes. Prépare les liens avant d’écrire.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "tableau",
+     "titre": "Le brouillon du dossier",
+     "colonnes": [
+      "Doc",
+      "Nature",
+      "Date",
+      "Ton"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Letter from a new arrival in New York",
+       "1912",
+       "Homesick"
+      ],
+      [
+       "B",
+       "Photograph of a crowd at the port",
+       "1912",
+       "Hopeful"
+      ],
+      [
+       "C",
+       "Article from a local newspaper",
+       "1912",
+       "Suspicious of newcomers"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Dossier imaginé pour l’exercice"
+    },
+    {
+     "id": "consignes",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les consignes",
+     "blocs": [
+      "1. Show how newcomers feel.",
+      "2. Show how the city receives them."
+     ],
+     "source": "Consignes imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "multiple": false,
+     "reponse": [
+      "r2c3"
+     ],
+     "enonce": "Touche la case qui montre le point de vue hostile aux arrivants.",
+     "aide": "Cherche « suspicious ».",
+     "explication": "Le document C est **suspicious of newcomers** : le journal se méfie des arrivants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel lien forme-t-on en croisant les documents A et B ?",
+     "options": [
+      "A et B disent exactement la même chose, donc l’un peut être ignoré",
+      "A prouve que B est faux, car la lettre est plus personnelle",
+      "Même lieu et même date, mais la nostalgie de A contraste avec l’espoir de B",
+      "A et B n’ont aucun rapport et doivent être traités séparément"
+     ],
+     "reponse": 2,
+     "aide": "Compare la colonne « Ton » des deux documents.",
+     "explication": "A (nostalgie) et B (espoir) **s’opposent** sur un même moment : c’est un lien à exploiter."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque consigne aux documents qui y répondent le mieux.",
+     "paires": [
+      [
+       "Consigne 1 : how newcomers feel",
+       "Docs A et B"
+      ],
+      [
+       "Consigne 2 : how the city receives them",
+       "Docs B et C"
+      ]
+     ],
+     "aide": "Lettre et foule montrent des sentiments ; foule et article, l’accueil.",
+     "explication": "La consigne 1 s’appuie sur **A et B**, la consigne 2 sur **B et C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle introduction est la meilleure ?",
+     "options": [
+      "Document A is a letter, document B is a photograph and document C is an article, and I will describe each in turn.",
+      "In this essay, I will talk about immigration because it is an important topic and I have many ideas about it.",
+      "Immigration has always existed and it is a very complicated subject that many people have discussed for years.",
+      "Three documents from 1912 show how newcomers feel and how the city receives them, asking whether welcome is possible without trust."
+     ],
+     "reponse": 3,
+     "aide": "Une bonne introduction présente le dossier et pose une problématique.",
+     "explication": "La première phrase **présente le dossier** et pose une **problématique** ; les autres listent ou restent vagues."
+    }
+   ]
+  },
+  {
+   "chapitre": "d29170a6-b507-5a0d-abeb-bdf01882733d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Corriger un paragraphe",
+   "competence": "argumenter",
+   "situation": "Un élève a rédigé un paragraphe de synthèse, avec des défauts. Repère-les, puis choisis les bons connecteurs.",
+   "documents": [
+    {
+     "id": "eleve",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un paragraphe d’élève",
+     "blocs": [
+      "1. In document A, the poet says that the sea is cold.",
+      "2. In document B, the writer says that the harbour is crowded.",
+      "3. [[y|Yet]] document C, unlike the poem, presents the newcomers as useful workers.",
+      "4. I think we should welcome everybody, because I like travelling."
+     ],
+     "source": "Paragraphe imaginé pour l’exercice"
+    },
+    {
+     "id": "conn",
+     "type": "tableau",
+     "titre": "Connectors",
+     "colonnes": [
+      "Function",
+      "Connectors"
+     ],
+     "lignes": [
+      [
+       "Add",
+       "moreover, furthermore"
+      ],
+      [
+       "Oppose",
+       "whereas, while, however"
+      ],
+      [
+       "Concede",
+       "although, admittedly"
+      ],
+      [
+       "Conclude",
+       "therefore, thus"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase de l’élève selon ce qu’elle fait.",
+     "categories": [
+      "Un document commenté seul",
+      "Deux documents mis en relation",
+      "Un avis personnel hors sujet"
+     ],
+     "items": [
+      [
+       "In document A, the poet says that the sea is cold.",
+       0
+      ],
+      [
+       "In document B, the writer says that the harbour is crowded.",
+       0
+      ],
+      [
+       "Yet document C, unlike the poem, presents the newcomers as useful workers.",
+       1
+      ],
+      [
+       "I think we should welcome everybody, because I like travelling.",
+       2
+      ]
+     ],
+     "aide": "Une phrase relie deux documents, une donne une opinion sans lien avec le dossier.",
+     "explication": "Les phrases 1 et 2 commentent **un document seul**, la 3 **relie C au poème**, la 4 donne un **avis personnel hors de propos**."
+    },
+    {
+     "type": "zone",
+     "document": "eleve",
+     "multiple": false,
+     "reponse": [
+      "y"
+     ],
+     "enonce": "Touche le connecteur qui amorce la mise en relation.",
+     "aide": "Il ouvre la phrase 3.",
+     "explication": "**Yet** introduit le contraste entre C et le poème : c’est le seul lien du paragraphe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel conseil donner pour améliorer les phrases 1 et 2 ?",
+     "options": [
+      "Les recopier deux fois en gras pour que le correcteur les remarque",
+      "Les fondre en une phrase qui compare les deux documents sur une même idée",
+      "Les supprimer entièrement et ne parler que du document C",
+      "Y ajouter une longue citation du poème pour les allonger"
+     ],
+     "reponse": 1,
+     "aide": "Une synthèse croise les documents.",
+     "explication": "Il faut **fondre** les phrases 1 et 2 en une seule qui **compare** les deux documents."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le bon connecteur.",
+     "texte": "Doc A is pessimistic, ___ doc B is hopeful.",
+     "reponses": [
+      [
+       "whereas"
+      ]
+     ],
+     "banque": [
+      "whereas",
+      "therefore",
+      "moreover",
+      "likewise"
+     ],
+     "aide": "Les deux documents s’opposent.",
+     "explication": "**Whereas** exprime l’opposition entre A et B (tandis que)."
+    },
+    {
+     "type": "zone",
+     "document": "conn",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui contient les connecteurs pour conclure.",
+     "aide": "Cherche la ligne « Conclude ».",
+     "explication": "Pour conclure, on emploie **therefore** ou **thus**."
+    }
+   ]
+  }
+ ]
+}

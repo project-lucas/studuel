@@ -36,6 +36,18 @@ describe('styleExercice — ce que la matière demande vraiment en classe', () =
     expect(styleExercice('philosophie')).toBe('redaction')
   })
 
+  test('la voie technologique : le suffixe « techno » ne fait pas une science', () => {
+    expect(styleExercice('histoire-geo-techno')).toBe('redaction')
+    expect(styleExercice('philosophie-techno')).toBe('redaction')
+    expect(styleExercice('sciences-sanitaires-sociales')).toBe('redaction')
+    expect(styleExercice('maths-techno')).toBe('probleme')
+    expect(styleExercice('spcl')).toBe('application')
+    expect(styleExercice('i2d')).toBe('application')
+    expect(styleExercice('ingenierie-dd')).toBe('application')
+    expect(styleExercice('si')).toBe('application')
+    expect(styleExercice('innovation-technologique')).toBe('application')
+  })
+
   test('chaque style a un nom pour l’élève et une consigne pour le modèle, sans QCM', () => {
     for (const style of ['probleme', 'traduction', 'redaction', 'application'] as const) {
       expect(libelleStyle(style).length).toBeGreaterThan(0)

@@ -60,6 +60,7 @@ import {
 } from '@/lib/carnet-cours'
 import { examHeroUrgency, type SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
+import { estDansLaClasse } from '@/lib/programme-classes'
 
 
 // Les colonnes du profil dont cet écran a besoin, toutes migrations confondues.
@@ -346,7 +347,10 @@ export default async function OngletReviser() {
   //
   // Le Défi, lui, garde le filtre : là une matière sans question ne donne pas
   // une page vide mais un duel qui ne peut pas se jouer.
-  const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+  // Le PROGRAMME de la classe, pas seulement le contenu rattaché au niveau :
+  // la base rattachait les arts plastiques à la Terminale, le Grand oral à la
+  // 1re… (lib/programme-classes). La culture générale reste, à part.
+  const ofLevel = allSubjects.filter((s) => estDansLaClasse(s, grade))
 
   // LES GARDIENS SORTIS, par matière. Un boss débusqué ne se voyait QUE sur
   // l'arène : l'élève apprenait qu'il rôdait sur un onglet, et devait deviner

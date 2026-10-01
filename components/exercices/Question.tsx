@@ -1,7 +1,8 @@
 'use client'
 
 import { useMemo, useState, type ReactNode } from 'react'
-import { Check, Lightbulb, LoaderCircle, RotateCcw, X } from 'lucide-react'
+import { createPortal } from 'react-dom'
+import { ArrowUp, Check, Lightbulb, LoaderCircle, RotateCcw, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { lireNombre } from '@/lib/exercices/normaliser'
 import type { Cle, Document, QuestionPublique, Reponse } from '@/lib/exercices/types'
@@ -61,7 +62,8 @@ function reponseDe(q: QuestionPublique, b: Brouillon): Reponse | null {
 function consigneGeste(q: QuestionPublique): string | null {
   switch (q.type) {
     case 'zone':
-      return q.multiple ? 'Touche toutes les bonnes réponses sur le document.' : 'Touche la bonne réponse sur le document.'
+      // Le rappel violet dit déjà où toucher : on ne précise que le cas à plusieurs réponses.
+      return q.multiple ? 'Plusieurs réponses à toucher.' : null
     case 'choix':
       return q.multiple ? 'Plusieurs réponses possibles.' : null
     case 'ordre':
@@ -82,6 +84,7 @@ export default function Question({
   statut,
   enCours,
   active,
+  cibleDocument,
   onVerifier,
 }: {
   q: QuestionPublique
@@ -90,6 +93,9 @@ export default function Question({
   statut: StatutQuestion
   enCours: boolean
   active: boolean
+  /** Question « zone » : l'emplacement du document du haut, où dessiner sa
+   *  version touchable (undefined = le document ne lui appartient pas). */
+  cibleDocument?: HTMLElement | null
   onVerifier: (r: Reponse) => void
 }) {
   const [b, setB] = useState<Brouillon>(VIERGE)
@@ -124,7 +130,7 @@ export default function Question({
       </div>
 
       <div className="mt-3">
-        <Widget q={q} b={b} setB={setB} verrou={verrou} basculer={basculer} documents={documents} statut={statut} cle={cle} />
+        <Widget q={q} b={b} setB={setB} verrou={verrou} basculer={basculer} documents={documents} statut={statut} cle={cle} cibleDocument={cibleDocument} />
       </div>
 
       {/* Le retour : juste, le coup de pouce, ou la correction. */}
@@ -192,6 +198,7 @@ function Widget({
   documents,
   statut,
   cle,
+  cibleDocument,
 }: {
   q: QuestionPublique
   b: Brouillon
@@ -201,6 +208,7 @@ function Widget({
   documents: Document[]
   statut: StatutQuestion
   cle?: Cle
+  cibleDocument?: HTMLElement | null
 }) {
   const justes = cle && 'ids' in cle ? new Set(cle.ids) : undefined
   switch (q.type) {
@@ -243,7 +251,23 @@ function Widget({
         basculer: (id) => basculer(id, q.multiple),
         justes: statut.fini ? justes : undefined,
       }
-      return <DocumentVue doc={doc} numero={index + 1} zones={zones} portee={q.portee} compact />
+      // Le document n'est dessiné qu'une fois : en haut, là où la question
+      // active le rend touchable. La carte ne garde qu'un rappel qui y ramène.
+      const allerAuDocument = () =>
+        document.getElementById(`doc-${doc.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return (
+        <>
+          {cibleDocument ? createPortal(<DocumentVue doc={doc} numero={index + 1} zones={zones} portee={q.portee} />, cibleDocument) : null}
+          <button type="button" onClick={allerAuDocument} className={s.renvoiDocument}>
+            <ArrowUp className="size-4 shrink-0" aria-hidden="true" />
+            {statut.fini
+              ? `Revoir la correction sur le document ${index + 1}`
+              : cibleDocument !== undefined
+                ? `Touche ta réponse sur le document ${index + 1}, au-dessus`
+                : `Le document ${index + 1} se touche quand tu arrives à cette question`}
+          </button>
+        </>
+      )
     }
 
     case 'nombre':

@@ -1,0 +1,2722 @@
+{
+ "niveau": "Tle",
+ "matiere": "sciences-sanitaires-sociales",
+ "exercices": [
+  {
+   "chapitre": "64ab8cb9-6149-53aa-b70e-8aaee7bd07f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les cinq soignants de M. Durand",
+   "competence": "analyser-document",
+   "situation": "M. Durand, 71 ans, est diabétique. Au fil du mois, cinq acteurs différents interviennent auprès de lui : un tableau les présente.",
+   "documents": [
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Autour de M. Durand",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Acteur",
+      "Catégorie",
+      "Ce qu’il fait pour M. Durand"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Dr Lambert",
+       "Médecin généraliste",
+       "Le suit depuis dix ans et coordonne ses soins"
+      ],
+      [
+       "Mme Petit",
+       "Infirmière libérale",
+       "Passe chaque matin pour l’insuline"
+      ],
+      [
+       "Pharmacie des Tilleuls",
+       "Officine",
+       "Délivre ses traitements et le conseille"
+      ],
+      [
+       "Centre hospitalier de Valmont",
+       "Hôpital public",
+       "Soigne une plaie au pied pendant six jours"
+      ],
+      [
+       "Service de soins à domicile",
+       "Secteur médico-social",
+       "Prend le relais après l’hospitalisation"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acteurs",
+     "enonce": "Touche la catégorie qui désigne un auxiliaire médical.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "L’infirmier, le kinésithérapeute et l’orthophoniste en font partie.",
+     "explication": "Une infirmière libérale est un **auxiliaire médical**, comme les kinésithérapeutes ou les orthophonistes. Le médecin et le pharmacien forment d’autres catégories."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur dans son secteur.",
+     "categories": [
+      "Soins de ville",
+      "Établissement de santé",
+      "Secteur médico-social"
+     ],
+     "items": [
+      [
+       "Médecin généraliste libéral",
+       0
+      ],
+      [
+       "Cabinet d’infirmiers",
+       0
+      ],
+      [
+       "Pharmacie d’officine",
+       0
+      ],
+      [
+       "Centre hospitalier public",
+       1
+      ],
+      [
+       "Clinique privée",
+       1
+      ],
+      [
+       "EHPAD",
+       2
+      ],
+      [
+       "Service de soins infirmiers à domicile",
+       2
+      ]
+     ],
+     "aide": "Les soins de ville se font hors de l’hôpital ; le médico-social accompagne au long cours.",
+     "explication": "Médecins, infirmiers et pharmaciens relèvent des **soins de ville**, hôpitaux et cliniques des **établissements de santé**, EHPAD et soins à domicile du **secteur médico-social**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que ces cinq acteurs sont complémentaires ?",
+     "options": [
+      "Chacun intervient au bon niveau et ils échangent entre eux",
+      "Chacun fait le même travail, pour que M. Durand ait le choix",
+      "L’hôpital remplace les autres dès que la maladie s’aggrave",
+      "Le médecin traitant décide seul, sans échanger avec les autres"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que fait chacun dans la dernière colonne : ce sont des tâches différentes.",
+     "explication": "Chacun fait ce qu’il sait faire le mieux, **au bon niveau**, en lien avec les autres : c’est la complémentarité."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ab8cb9-6149-53aa-b70e-8aaee7bd07f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un canton sans médecin",
+   "competence": "lire-graphique",
+   "situation": "Quatre territoires d’un même département n’ont pas le même accès à un médecin généraliste. Un graphique donne la densité de médecins, un tableau la population.",
+   "documents": [
+    {
+     "id": "dens",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Médecins généralistes pour 10 000 habitants",
+     "source": "Données imaginées pour l’exercice.",
+     "categories": [
+      "Littoral",
+      "Plaine",
+      "Vallée",
+      "Haut-pays"
+     ],
+     "series": [
+      {
+       "nom": "Densité",
+       "valeurs": [
+        9,
+        7,
+        5,
+        3
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Médecins",
+      "unite": "pour 10 000 habitants",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Territoire"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "Population des territoires",
+     "source": "Données imaginées pour l’exercice.",
+     "colonnes": [
+      "Territoire",
+      "Habitants"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Littoral",
+       "30 000"
+      ],
+      [
+       "Plaine",
+       "40 000"
+      ],
+      [
+       "Vallée",
+       "25 000"
+      ],
+      [
+       "Haut-pays",
+       "20 000"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dens",
+     "enonce": "Touche le territoire le plus exposé au risque de désert médical.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "Le **Haut-pays** a la densité la plus faible : 3 généralistes pour 10 000 habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de médecins généralistes exercent dans le Haut-pays ?",
+     "reponse": 6,
+     "unite": "médecins",
+     "aide": "Le Haut-pays compte 20 000 habitants, soit deux fois 10 000.",
+     "explication": "20 000 habitants = 2 × 10 000, donc 2 × 3 = **6 médecins**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de généralistes de plus faudrait-il au Haut-pays pour atteindre la densité de la Plaine ?",
+     "reponse": 8,
+     "unite": "médecins",
+     "aide": "Calcule d’abord combien la Plaine aurait de médecins pour 20 000 habitants.",
+     "explication": "Avec la densité de la Plaine, le Haut-pays aurait 2 × 7 = 14 médecins. Il en a 6 : il en manque **8**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure agit directement sur cette inégalité de répartition ?",
+     "options": [
+      "Des aides à l’installation pour les médecins en zone sous-dense",
+      "Une hausse du ticket modérateur pour les patients du littoral",
+      "La fermeture des centres de santé pour réduire les dépenses",
+      "La suppression du tiers payant pour toutes les consultations"
+     ],
+     "reponse": 0,
+     "aide": "Il faut inciter des médecins à s’installer là où il en manque.",
+     "explication": "Les **aides à l’installation en zone sous-dense** visent à mieux répartir l’offre de soins. Les autres mesures ne changent pas la répartition des médecins."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ab8cb9-6149-53aa-b70e-8aaee7bd07f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la chute au retour chez soi",
+   "competence": "analyser-document",
+   "situation": "Un samedi à 23 h, Mme Roux, 82 ans, chute chez elle. Un tableau présente les établissements du secteur, un récit raconte son histoire.",
+   "documents": [
+    {
+     "id": "etab",
+     "type": "tableau",
+     "titre": "Les établissements autour de Valmont",
+     "source": "Établissements imaginés pour l’exercice.",
+     "colonnes": [
+      "Établissement",
+      "Gestion",
+      "Ce qu’il propose"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Centre hospitalier de Valmont",
+       "Hôpital public, regroupé avec d’autres hôpitaux publics du territoire",
+       "Urgences ouvertes 24 h sur 24, chirurgie"
+      ],
+      [
+       "Clinique du Parc",
+       "Société privée qui cherche à dégager un bénéfice",
+       "Chirurgie programmée"
+      ],
+      [
+       "Centre Saint-Élie",
+       "Association sans but lucratif, qui participe au service public",
+       "Rééducation après une hospitalisation"
+      ],
+      [
+       "CHU de la métropole",
+       "Hôpital public",
+       "Soins, enseignement et recherche, cas complexes"
+      ]
+     ]
+    },
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’histoire de Mme Roux",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Samedi, à 23 h, Mme Roux chute dans son salon et ne peut plus se relever. À 82 ans, elle est exposée au risque de fracture. Son fils appelle le 15.",
+      "Au centre hospitalier de Valmont, qui dispose de 12 lits de chirurgie orthopédique, elle est opérée. Trois semaines de rééducation plus tard, elle rentre chez elle avec le passage d’une infirmière libérale."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etab",
+     "enonce": "Mme Roux chute à 23 h. Touche la case qui explique qu’elle puisse être accueillie à cette heure au centre hospitalier.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Regarde la colonne « Ce qu’il propose » de la première ligne.",
+     "explication": "L’hôpital public accueille tout le monde **24 h sur 24** : ses urgences sont ouvertes la nuit."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque établissement à son statut.",
+     "paires": [
+      [
+       "Centre hospitalier de Valmont",
+       "Établissement public"
+      ],
+      [
+       "Clinique du Parc",
+       "Privé à but lucratif"
+      ],
+      [
+       "Centre Saint-Élie",
+       "ESPIC, privé à but non lucratif"
+      ]
+     ],
+     "aide": "Lis la colonne « Gestion » : qui gère, et avec quel but ?",
+     "explication": "Le centre hospitalier est **public**, la clinique est **privée à but lucratif**, le centre Saint-Élie est un **ESPIC** : privé à but non lucratif, il participe au service public."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un groupement hospitalier de territoire réunit des hôpitaux publics. Quels établissements du tableau pourraient en faire partie ensemble ?",
+     "options": [
+      "Le centre hospitalier de Valmont et le CHU de la métropole",
+      "La clinique du Parc et le centre Saint-Élie",
+      "Le CHU de la métropole et la clinique du Parc",
+      "Le centre Saint-Élie et le centre hospitalier de Valmont"
+     ],
+     "reponse": 0,
+     "aide": "Un GHT ne rassemble que des établissements publics.",
+     "explication": "Seuls **le centre hospitalier et le CHU**, tous deux publics, peuvent partager un projet médical dans un GHT. La clinique et l’ESPIC sont privés."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : besoin, demande ou offre ?",
+     "categories": [
+      "Besoin",
+      "Demande",
+      "Offre"
+     ],
+     "items": [
+      [
+       "À 82 ans, Mme Roux est exposée au risque de fracture",
+       0
+      ],
+      [
+       "Son fils appelle le 15 pour obtenir de l’aide",
+       1
+      ],
+      [
+       "Le centre hospitalier dispose de 12 lits de chirurgie orthopédique",
+       2
+      ],
+      [
+       "Le centre Saint-Élie propose de la rééducation",
+       2
+      ],
+      [
+       "La famille réclame un retour à domicile rapide",
+       1
+      ],
+      [
+       "L’âge avancé de la population du secteur augmente les risques de chute",
+       0
+      ]
+     ],
+     "aide": "Besoin = établi par les professionnels ; demande = exprimée ; offre = disponible.",
+     "explication": "Le **besoin** est repéré par les professionnels, la **demande** est exprimée par les personnes, l’**offre** est ce qui existe déjà sur le territoire."
+    }
+   ]
+  },
+  {
+   "chapitre": "116fa56e-3178-53ed-8f89-088c7cc6b529",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le rendez-vous de Nour",
+   "competence": "analyser-document",
+   "situation": "Nour, 17 ans, a mal à l’oreille. Elle en discute avec sa mère, qui connaît les règles du parcours de soins.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Nour",
+     "source": "Dialogue écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Nour",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nour",
+       "texte": "J’ai mal à l’oreille depuis trois jours."
+      },
+      {
+       "qui": "Maman",
+       "texte": "Appelle d’abord ton [[m|médecin]] [[m|traitant]] pour avoir un rendez-vous."
+      },
+      {
+       "qui": "Nour",
+       "texte": "Et si je vais directement chez un spécialiste de l’oreille ?"
+      },
+      {
+       "qui": "Maman",
+       "texte": "Sans passer par lui, tu serais moins bien remboursée."
+      },
+      {
+       "qui": "Nour",
+       "texte": "Et pour mes règles douloureuses ?"
+      },
+      {
+       "qui": "Maman",
+       "texte": "Là, tu peux voir directement une [[g|gynécologue]] : c’est un accès direct."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche les deux mots qui désignent le professionnel qui coordonne le parcours de soins de Nour.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Il suit la patiente, l’oriente et tient son dossier à jour.",
+     "explication": "Le **médecin traitant** coordonne le parcours de soins : il suit le patient et l’oriente vers les spécialistes."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le spécialiste que Nour peut consulter sans passer par son médecin traitant.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Un seul spécialiste de la conversation est en accès direct.",
+     "explication": "La **gynécologue** fait partie des spécialistes en accès direct, avec l’ophtalmologue, le dentiste et, jusqu’à 25 ans, le psychiatre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un spécialiste a un tarif de base de 50 € (chiffre simplifié). De combien d’euros le remboursement baisse-t-il quand Nour consulte hors du parcours de soins ? On ignore les forfaits.",
+     "reponse": 20,
+     "unite": "€",
+     "aide": "Dans le parcours, l’assurance maladie rembourse 70 % du tarif de base ; hors parcours, 30 %.",
+     "explication": "Dans le parcours : 70 % de 50 € = 35 €. Hors parcours : 30 % de 50 € = 15 €. Le remboursement baisse de **20 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "116fa56e-3178-53ed-8f89-088c7cc6b529",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le 15, le 116 117 ou lundi matin ?",
+   "competence": "analyser-document",
+   "situation": "Le samedi soir, les cabinets sont fermés. Un tableau rappelle qui appeler ; à toi de trier les situations.",
+   "documents": [
+    {
+     "id": "numeros",
+     "type": "tableau",
+     "titre": "Qui appeler ?",
+     "colonnes": [
+      "Service",
+      "Numéro",
+      "Pour quoi faire"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "SAMU",
+       "15",
+       "Urgences vitales ; régulation médicale à toute heure"
+      ],
+      [
+       "Médecin de garde",
+       "116 117",
+       "Soins non programmés quand les cabinets sont fermés ; régulation par téléphone"
+      ],
+      [
+       "Cabinet du médecin traitant",
+       "—",
+       "Consultations aux heures d’ouverture, du lundi au vendredi"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "numeros",
+     "enonce": "Un adulte ressent une douleur violente dans la poitrine, avec des sueurs. Touche le numéro à composer.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Il s’agit d’une urgence vitale.",
+     "explication": "Une douleur thoracique avec malaise est une **urgence vitale** : on appelle le **15**, le numéro du SAMU."
+    },
+    {
+     "type": "categories",
+     "enonce": "Samedi, 22 h. Range chaque situation selon la bonne réponse.",
+     "categories": [
+      "Urgence vitale : le 15",
+      "Soin non programmé : régulation",
+      "Sans urgence : attendre l’ouverture"
+     ],
+     "items": [
+      [
+       "Douleur violente dans la poitrine avec malaise",
+       0
+      ],
+      [
+       "Personne inconsciente qui ne respire plus",
+       0
+      ],
+      [
+       "Enfant fiévreux qui joue encore mais inquiète ses parents",
+       1
+      ],
+      [
+       "Mal de dos aigu que les antidouleurs n’apaisent pas",
+       1
+      ],
+      [
+       "Renouvellement d’une ordonnance de vitamines",
+       2
+      ],
+      [
+       "Rhume sans fièvre depuis deux jours",
+       2
+      ]
+     ],
+     "aide": "Demande-toi : la vie est-elle en danger ? Sinon, faut-il un avis rapide ou peut-on attendre ?",
+     "explication": "Les **urgences vitales** relèvent du 15. Les soins non programmés passent par la **régulation** (15 ou 116 117) qui oriente. Le reste peut **attendre l’ouverture** du cabinet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi appelle-t-on avant d’aller voir le médecin de garde ?",
+     "options": [
+      "La régulation oriente vers la bonne réponse : conseil, garde, urgences ou ambulance",
+      "Pour payer la consultation à l’avance et obtenir un meilleur remboursement",
+      "Pour que le médecin traitant soit prévenu et signe l’ordonnance à distance",
+      "Parce que le médecin de garde ne reçoit jamais les patients en personne"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que le tableau dit de la régulation par téléphone.",
+     "explication": "La **régulation** téléphonique évalue la situation et oriente : conseil, médecin de garde, urgences ou ambulance. Elle évite d’engorger les urgences."
+    }
+   ]
+  },
+  {
+   "chapitre": "116fa56e-3178-53ed-8f89-088c7cc6b529",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le parcours de Mme Diallo",
+   "competence": "analyser-document",
+   "situation": "Mme Diallo, 58 ans, apprend qu’elle a un diabète de type 2. Son carnet de bord raconte sa prise en charge ; un tableau rappelle les outils de la coordination.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le carnet de Mme Diallo",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mon médecin traitant établit le protocole de soins qui ouvre mon affection de longue durée : les soins liés au diabète seront pris en charge à 100 % du tarif de base.",
+      "Je suis un atelier où j’apprends à surveiller ma glycémie, à adapter mon alimentation et à reconnaître les signes d’alerte.",
+      "Mes résultats d’analyses et mes ordonnances sont rangés dans mon espace numérique, où j’échange par messagerie sécurisée avec mes soignants.",
+      "Une assistante sociale m’aide aussi à aménager mes horaires avec mon [[e|employeur]] et à reprendre une activité physique."
+     ]
+    },
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Les outils de la coordination",
+     "colonnes": [
+      "Outil",
+      "Son rôle"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Mon espace santé",
+       "Espace numérique personnel : dossier médical partagé et messagerie sécurisée"
+      ],
+      [
+       "Protocole de soins en ALD",
+       "Plan de soins établi par le médecin traitant, pris en charge à 100 %"
+      ],
+      [
+       "Dispositif d’appui à la coordination",
+       "Aide les professionnels face aux situations complexes"
+      ],
+      [
+       "Éducation thérapeutique du patient",
+       "Rend le malade chronique autonome dans la gestion de sa maladie"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque passage du carnet à l’outil qu’il illustre.",
+     "paires": [
+      [
+       "Les soins du diabète sont pris en charge à 100 %",
+       "Protocole de soins en ALD"
+      ],
+      [
+       "J’apprends à surveiller ma glycémie",
+       "Éducation thérapeutique du patient"
+      ],
+      [
+       "J’échange par messagerie sécurisée avec mes soignants",
+       "Mon espace santé"
+      ]
+     ],
+     "aide": "Cherche, dans le tableau, le rôle qui correspond à chaque passage.",
+     "explication": "Le **protocole de soins** ouvre la prise en charge à 100 %, l’**éducation thérapeutique** rend autonome, **Mon espace santé** réunit le dossier médical partagé et la messagerie."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le mot qui montre que le parcours de Mme Diallo dépasse le soin et touche sa vie professionnelle.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche, dans le dernier paragraphe, la personne avec qui elle aménage ses horaires.",
+     "explication": "Aménager ses horaires avec son **employeur** relève du parcours de **vie** : il englobe le travail, le logement et la vie sociale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le même jour, Mme Diallo paie deux soins au tarif de base : une prise de sang pour son diabète (20 €) et une consultation pour une angine (30 €, dans le parcours de soins). Combien l’assurance maladie rembourse-t-elle en tout ? On ignore les forfaits.",
+     "reponse": 41,
+     "unite": "€",
+     "aide": "Les soins liés à l’ALD sont à 100 % ; la consultation dans le parcours est remboursée à 70 %.",
+     "explication": "Prise de sang : 100 % de 20 € = 20 €. Consultation : 70 % de 30 € = 21 €. Total : **41 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mme Diallo choisit avec son médecin entre deux traitements, après une explication claire. Quelle place la personne occupe-t-elle ?",
+     "options": [
+      "Elle est usagère-actrice : informée, elle prend part à la décision médicale partagée",
+      "Elle est patiente passive : le médecin choisit seul puis l’informe de sa décision",
+      "Elle est remplacée par une association qui décide à sa place pour les usagers",
+      "Elle est écartée du parcours, que les professionnels organisent entre eux seuls"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la décision médicale partagée.",
+     "explication": "La personne est **usagère-actrice** : informée, elle consent, choisit et participe aux décisions qui la concernent."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2143bb3-3acd-5197-94e3-f7faaba041c3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien reste-t-il à payer ?",
+   "competence": "calculer",
+   "situation": "Lina va chez un spécialiste du parcours de soins : la consultation est facturée 50 € au tarif de base. Un schéma suit le chemin de la dépense.",
+   "documents": [
+    {
+     "id": "chemin",
+     "type": "chaine",
+     "titre": "Le chemin d’une dépense de santé",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "soin",
+       "texte": "Le soin : consultation à 50 €"
+      },
+      {
+       "id": "tarif",
+       "texte": "Tarif de base : 50 €"
+      },
+      {
+       "id": "amo",
+       "texte": "Assurance maladie obligatoire : 70 %"
+      },
+      {
+       "id": "compl",
+       "texte": "Complémentaire santé, si elle existe"
+      },
+      {
+       "id": "reste",
+       "texte": "Reste à charge du patient"
+      }
+     ],
+     "liens": [
+      {
+       "de": "soin",
+       "a": "tarif"
+      },
+      {
+       "de": "tarif",
+       "a": "amo"
+      },
+      {
+       "de": "amo",
+       "a": "compl"
+      },
+      {
+       "de": "compl",
+       "a": "reste"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chemin",
+     "enonce": "Lina n’a pas de complémentaire santé. Touche l’étape où elle paie elle-même ce qui n’est pas remboursé.",
+     "reponse": [
+      "reste"
+     ],
+     "aide": "C’est la dernière étape du schéma.",
+     "explication": "Ce qui n’est remboursé par personne reste à la charge du patient : le **reste à charge**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien l’assurance maladie obligatoire rembourse-t-elle à Lina ?",
+     "reponse": 35,
+     "unite": "€",
+     "aide": "Applique le taux du schéma au tarif de base.",
+     "explication": "70 % de 50 € = **35 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans complémentaire, combien Lina doit-elle payer elle-même ? On ignore les forfaits.",
+     "reponse": 15,
+     "unite": "€",
+     "aide": "Soustrais le remboursement du tarif de base.",
+     "explication": "50 € − 35 € = **15 €** : c’est le ticket modérateur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion.",
+     "texte": "L’assurance maladie rembourse une part du ___ de base ; la complémentaire santé peut prendre en charge le ticket ___ .",
+     "reponses": [
+      [
+       "tarif"
+      ],
+      [
+       "modérateur"
+      ]
+     ],
+     "banque": [
+      "tarif",
+      "modérateur",
+      "forfait",
+      "prix",
+      "hospitalier"
+     ],
+     "aide": "Le ticket est la part qui reste après le remboursement.",
+     "explication": "Le remboursement porte sur le **tarif** de base ; la part qui reste est le ticket **modérateur**, que la complémentaire peut couvrir."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2143bb3-3acd-5197-94e3-f7faaba041c3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre raisons de ne pas se soigner",
+   "competence": "analyser-document",
+   "situation": "Quatre personnes expliquent pourquoi elles ont retardé ou abandonné un soin. Un second tableau mesure un autre frein : le non-recours.",
+   "documents": [
+    {
+     "id": "temoins",
+     "type": "tableau",
+     "titre": "Quatre témoignages",
+     "source": "Témoignages imaginés pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Ce qu’elle raconte"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Samia, 29 ans",
+       "Le cabinet le plus proche est à 45 km et le prochain rendez-vous est dans deux mois."
+      ],
+      [
+       "Karim, 52 ans",
+       "Mes lunettes coûtent plus que ce que je peux payer, et je n’ai pas de mutuelle."
+      ],
+      [
+       "Élodie, 34 ans",
+       "Je ne savais pas que j’avais droit à une aide, et les formulaires m’ont découragée."
+      ],
+      [
+       "Yusuf, 67 ans",
+       "Je ne comprends pas bien les explications du médecin et je n’ose pas redemander."
+      ]
+     ]
+    },
+    {
+     "id": "c2s",
+     "type": "tableau",
+     "titre": "Complémentaire santé solidaire dans un département",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Nombre de foyers"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Foyers qui ont droit à la C2S",
+       400
+      ],
+      [
+       "Foyers qui l’ont demandée",
+       260
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temoins",
+     "enonce": "Touche le témoignage qui illustre le non-recours : un droit existe, mais on ne l’utilise pas.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la personne qui ne connaissait pas son droit.",
+     "explication": "Élodie avait **droit à une aide** qu’elle n’a pas demandée : c’est du non-recours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personne selon l’obstacle principal à l’accès aux soins.",
+     "categories": [
+      "Financier",
+      "Géographique",
+      "Administratif",
+      "Culturel et social"
+     ],
+     "items": [
+      [
+       "Samia",
+       1
+      ],
+      [
+       "Karim",
+       0
+      ],
+      [
+       "Élodie",
+       2
+      ],
+      [
+       "Yusuf",
+       3
+      ]
+     ],
+     "aide": "Distance, argent, démarches, compréhension : quel obstacle chacun évoque-t-il ?",
+     "explication": "Samia rencontre un obstacle **géographique**, Karim un obstacle **financier**, Élodie un obstacle **administratif**, Yusuf un obstacle **culturel et social** (faible littératie en santé)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des foyers qui ont droit à la C2S ne l’ont pas demandée ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Calcule d’abord combien de foyers ne l’ont pas demandée.",
+     "explication": "400 − 260 = 140 foyers, soit 140 ÷ 400 = **35 %** : c’est le non-recours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle aide répond le mieux à la situation de Karim ?",
+     "options": [
+      "La complémentaire santé solidaire, si ses ressources sont assez modestes",
+      "L’aide médicale de l’État, réservée aux étrangers en situation irrégulière",
+      "Une aide à l’installation d’un médecin près de son domicile",
+      "Un protocole de soins qui le place en affection de longue durée"
+     ],
+     "reponse": 0,
+     "aide": "Son frein est financier : il lui manque une complémentaire.",
+     "explication": "La **C2S** offre une complémentaire gratuite ou à moins d’un euro par jour aux personnes aux ressources modestes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2143bb3-3acd-5197-94e3-f7faaba041c3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plus on est modeste, plus on renonce",
+   "competence": "argumenter",
+   "situation": "Un département imaginaire mesure le renoncement aux soins pour raisons financières, puis étudie des mesures pour y répondre.",
+   "documents": [
+    {
+     "id": "renonce",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Renoncement à au moins un soin pour raisons financières",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "20 % les plus modestes",
+      "Niveau 2",
+      "Niveau 3",
+      "Niveau 4",
+      "20 % les plus aisés"
+     ],
+     "series": [
+      {
+       "nom": "Part de personnes",
+       "valeurs": [
+        28,
+        19,
+        12,
+        8,
+        4
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Personnes ayant renoncé",
+      "unite": "en %",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Niveau de vie"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Quatre mesures possibles",
+     "colonnes": [
+      "Mesure",
+      "Public visé",
+      "Ce qu’elle change"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Complémentaire santé solidaire",
+       "Ressources modestes",
+       "Complémentaire gratuite ou à moins d’un euro par jour"
+      ],
+      [
+       "Aide à l’installation en zone sous-dense",
+       "Médecins",
+       "Plus de professionnels là où l’offre est faible"
+      ],
+      [
+       "Permanence d’accès aux soins de santé",
+       "Personnes en précarité",
+       "Soins à l’hôpital et aide pour ouvrir ses droits"
+      ],
+      [
+       "Téléconsultation remboursée",
+       "Tous les assurés",
+       "Consultation à distance, remboursée"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "renonce",
+     "enonce": "Touche le groupe qui renonce le plus souvent aux soins.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **20 % les plus modestes** renoncent le plus : 28 % d’entre eux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les plus modestes renoncent combien de fois plus souvent que les plus aisés ?",
+     "reponse": 7,
+     "unite": "fois",
+     "aide": "Divise la valeur des plus modestes par celle des plus aisés.",
+     "explication": "28 ÷ 4 = **7** : c’est le gradient social de santé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie ici l’universalisme proportionné ?",
+     "options": [
+      "Proposer l’aide à tous, avec une intensité plus forte pour les plus modestes",
+      "Réserver toute l’aide aux seuls 20 % les plus modestes, sans exception",
+      "Verser la même somme à chaque assuré, quel que soit son niveau de vie",
+      "Supprimer toute aide pour éviter de créer de nouvelles inégalités"
+     ],
+     "reponse": 0,
+     "aide": "Tout le monde est concerné, mais pas avec la même intensité.",
+     "explication": "L’**universalisme proportionné** agit pour tous, avec une intensité qui augmente avec le désavantage."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à l’obstacle qu’elle vise.",
+     "paires": [
+      [
+       "Complémentaire santé solidaire",
+       "Le reste à charge"
+      ],
+      [
+       "Aide à l’installation en zone sous-dense",
+       "Les déserts médicaux"
+      ],
+      [
+       "Permanence d’accès aux soins de santé",
+       "Le non-recours aux droits"
+      ]
+     ],
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "La **C2S** réduit le **reste à charge**, les aides à l’installation luttent contre les **déserts médicaux**, la **PASS** aide à ouvrir ses droits et réduit le **non-recours**."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b2eae3-72c4-5451-99a6-7b5b6787be96",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois invitations dans la boîte aux lettres",
+   "competence": "lire-tableau",
+   "situation": "En France, trois cancers font l’objet d’un dépistage organisé : les personnes concernées reçoivent une invitation par courrier.",
+   "documents": [
+    {
+     "id": "depistages",
+     "type": "tableau",
+     "titre": "Les dépistages organisés",
+     "source": "Programmes nationaux de dépistage.",
+     "colonnes": [
+      "Dépistage",
+      "Public invité",
+      "Test"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Cancer du sein",
+       "Femmes de 50 à 74 ans",
+       "Mammographie tous les deux ans"
+      ],
+      [
+       "Cancer colorectal",
+       "Femmes et hommes de 50 à 74 ans",
+       "Recherche de sang dans les selles, tous les deux ans"
+      ],
+      [
+       "Cancer du col de l’utérus",
+       "Femmes de 25 à 65 ans",
+       "Examen cytologique, puis test HPV tous les cinq ans à partir de 30 ans"
+      ]
+     ]
+    },
+    {
+     "id": "commune",
+     "type": "tableau",
+     "titre": "Dépistage colorectal dans une commune",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Nombre de personnes"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Personnes invitées",
+       200
+      ],
+      [
+       "Personnes qui ont fait le test",
+       84
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depistages",
+     "enonce": "Inès a 27 ans. Touche la case du public auquel elle appartient.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un seul dépistage invite des femmes de moins de 50 ans.",
+     "explication": "À 27 ans, Inès est invitée au dépistage du **cancer du col de l’utérus** (femmes de 25 à 65 ans)."
+    },
+    {
+     "type": "choix",
+     "enonce": "M. Garnier a 58 ans. À quel dépistage organisé est-il invité ?",
+     "options": [
+      "Seulement au dépistage du cancer colorectal",
+      "Au dépistage du cancer du sein et du cancer colorectal",
+      "Aux trois dépistages organisés du tableau",
+      "Seulement au dépistage du cancer du col de l’utérus"
+     ],
+     "reponse": 0,
+     "aide": "Deux dépistages ne concernent que les femmes.",
+     "explication": "Le dépistage du sein et celui du col ne concernent que les femmes. M. Garnier est invité au **dépistage colorectal**, ouvert aux hommes de 50 à 74 ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de participation au dépistage colorectal dans cette commune ?",
+     "reponse": 42,
+     "unite": "%",
+     "aide": "Divise le nombre de tests réalisés par le nombre d’invités.",
+     "explication": "84 ÷ 200 × 100 = **42 %** : moins de la moitié des invités participent."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b2eae3-72c4-5451-99a6-7b5b6787be96",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mois sans tabac : que mesurer ?",
+   "competence": "analyser-document",
+   "situation": "Une ville reprend Mois sans tabac à son échelle. Une fiche présente l’action nationale, un tableau donne le bilan local.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Mois sans tabac en bref",
+     "colonnes": [
+      "Question de la grille",
+      "Réponse"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Problème",
+       "Le tabagisme, première cause de mortalité évitable en France"
+      ],
+      [
+       "Public",
+       "Les fumeurs qui veulent arrêter"
+      ],
+      [
+       "Acteurs",
+       "Santé publique France et l’assurance maladie, avec les pharmacies et les entreprises"
+      ],
+      [
+       "Stratégie",
+       "Un défi collectif de trente jours chaque novembre, avec un kit d’aide, une application et Tabac info service (39 89)"
+      ]
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan d’une déclinaison locale",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Budget de l’opération",
+       "150 000 €"
+      ],
+      [
+       "Pharmaciens formés",
+       "120"
+      ],
+      [
+       "Fumeurs du territoire",
+       "42 000"
+      ],
+      [
+       "Inscrits au défi",
+       "8 400"
+      ],
+      [
+       "Inscrits encore sans tabac à six mois",
+       "2 940"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la case qui indique qui pilote l’action.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « Acteurs ».",
+     "explication": "Les **acteurs** de l’action sont Santé publique France et l’assurance maladie, avec des relais locaux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque indicateur : moyens, processus ou résultats ?",
+     "categories": [
+      "Moyens",
+      "Processus",
+      "Résultats"
+     ],
+     "items": [
+      [
+       "Budget alloué à l’opération",
+       0
+      ],
+      [
+       "Nombre de pharmaciens formés",
+       0
+      ],
+      [
+       "Nombre d’inscrits au défi",
+       1
+      ],
+      [
+       "Taux de participation des fumeurs du territoire",
+       1
+      ],
+      [
+       "Nombre d’inscrits sans tabac à six mois",
+       2
+      ],
+      [
+       "Part des inscrits qui ont arrêté durablement",
+       2
+      ]
+     ],
+     "aide": "Moyens : ce qu’on investit. Processus : qui est touché. Résultats : ce qui change.",
+     "explication": "Les **moyens** sont le budget et les professionnels, le **processus** mesure les personnes touchées, les **résultats** mesurent l’évolution des comportements."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de participation : quelle part des fumeurs du territoire s’est inscrite au défi ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Divise le nombre d’inscrits par le nombre de fumeurs.",
+     "explication": "8 400 ÷ 42 000 × 100 = **20 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des inscrits est encore sans tabac à six mois ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Divise 2 940 par le nombre d’inscrits.",
+     "explication": "2 940 ÷ 8 400 × 100 = **35 %** : c’est un indicateur de résultat."
+    }
+   ]
+  },
+  {
+   "chapitre": "28b2eae3-72c4-5451-99a6-7b5b6787be96",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Vacciner là où sont les élèves",
+   "competence": "analyser-document",
+   "situation": "Depuis 2023, la vaccination contre les papillomavirus est proposée aux élèves de cinquième. Un département imaginaire compare deux types de quartiers avant et après la campagne.",
+   "documents": [
+    {
+     "id": "couv",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Élèves vaccinés contre les HPV",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Quartiers favorisés",
+      "Quartiers défavorisés"
+     ],
+     "series": [
+      {
+       "nom": "Avant la campagne au collège",
+       "valeurs": [
+        45,
+        20
+       ]
+      },
+      {
+       "nom": "Après deux ans de campagne",
+       "valeurs": [
+        60,
+        52
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Élèves vaccinés",
+      "unite": "en %",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Type de quartier"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "campagne",
+     "type": "tableau",
+     "titre": "La campagne en bref",
+     "source": "D’après la campagne nationale de vaccination.",
+     "colonnes": [
+      "Rubrique",
+      "Contenu"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Public",
+       "Élèves de cinquième, filles et garçons, depuis 2023"
+      ],
+      [
+       "Lieu",
+       "Dans les collèges"
+      ],
+      [
+       "Stratégie",
+       "Aller vers les élèves plutôt qu’attendre une consultation chez le médecin"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couv",
+     "enonce": "Touche le groupe où la couverture vaccinale a le plus progressé.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Calcule la hausse de chaque groupe : après moins avant.",
+     "explication": "Dans les quartiers défavorisés, la hausse est de 32 points (contre 15) : c’est là qu’elle a **le plus progressé**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points l’écart de couverture entre les deux groupes a-t-il diminué ?",
+     "reponse": 17,
+     "unite": "points",
+     "aide": "Calcule l’écart avant (45 − 20), puis l’écart après (60 − 52).",
+     "explication": "Écart avant : 25 points. Écart après : 8 points. Il a diminué de **17 points**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de l’évaluation de cette action.",
+     "items": [
+      "Vacciner les élèves dans les collèges",
+      "Compter les élèves vaccinés",
+      "Mesurer l’évolution de la couverture vaccinale",
+      "Mesurer, des années plus tard, la baisse des cancers du col"
+     ],
+     "aide": "On évalue d’abord ce qu’on fait, puis les effets, du plus rapide au plus lointain.",
+     "explication": "On **réalise** l’action, on mesure la **participation**, puis l’effet sur les **comportements**, enfin l’effet sur la **santé**, à long terme."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans la grille d’analyse.",
+     "categories": [
+      "Public",
+      "Stratégie",
+      "Résultat"
+     ],
+     "items": [
+      [
+       "Élèves de cinquième, filles et garçons",
+       0
+      ],
+      [
+       "Familles des quartiers défavorisés, moins vaccinées",
+       0
+      ],
+      [
+       "Proposer la vaccination sur place, dans les collèges",
+       1
+      ],
+      [
+       "Aller vers les élèves plutôt qu’attendre une consultation",
+       1
+      ],
+      [
+       "Hausse de la couverture vaccinale",
+       2
+      ],
+      [
+       "Réduction de l’écart entre les quartiers",
+       2
+      ]
+     ],
+     "aide": "Le public dit à qui l’on s’adresse, la stratégie comment, le résultat ce qui change.",
+     "explication": "Le **public** ce sont les élèves et les familles moins vaccinées, la **stratégie** est d’aller vers eux, le **résultat** est la hausse de la couverture et la réduction de l’écart."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d6a620e-3d0a-5c9c-a042-7e8b942c8481",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle de protection sociale",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis 1945, la France a construit sa protection sociale et son aide sociale, étape après étape. Une frise en retrace quelques repères.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères, de 1945 à 2024",
+     "debut": 1940,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "e1945",
+       "date": 1945,
+       "nom": "Sécurité sociale"
+      },
+      {
+       "id": "e1953",
+       "date": 1953,
+       "nom": "Aide sociale"
+      },
+      {
+       "id": "e1975",
+       "date": 1975,
+       "nom": "Loi handicap"
+      },
+      {
+       "id": "e1982",
+       "date": 1982,
+       "nom": "Décentralisation"
+      },
+      {
+       "id": "e1988",
+       "date": 1988,
+       "nom": "RMI"
+      },
+      {
+       "id": "e2002",
+       "date": 2002,
+       "nom": "Droits des usagers"
+      },
+      {
+       "id": "e2005",
+       "date": 2005,
+       "nom": "Égalité des chances"
+      },
+      {
+       "id": "e2009",
+       "date": 2009,
+       "nom": "RSA"
+      },
+      {
+       "id": "e2024",
+       "date": 2024,
+       "nom": "France Travail"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui date de 1982.",
+     "reponse": [
+      "e1982"
+     ],
+     "aide": "Cette année-là, les lois donnent de nouveaux pouvoirs aux collectivités locales.",
+     "explication": "**1982** : les lois de décentralisation confient largement l’aide sociale aux départements."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création du RMI de celle du RSA ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "2009 − 1988 = **21 ans** : le RSA remplace le RMI en 2009."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le texte sur l’aide sociale.",
+     "texte": "En 1953, l’assistance, longtemps fondée sur la ___, devient l’___ : l’aide n’est plus une faveur, c’est un ___ .",
+     "reponses": [
+      [
+       "charité"
+      ],
+      [
+       "aide sociale"
+      ],
+      [
+       "droit"
+      ]
+     ],
+     "banque": [
+      "charité",
+      "aide sociale",
+      "droit",
+      "cotisation",
+      "mérite"
+     ],
+     "aide": "Avant 1953, on aidait par bonté ; ensuite, la loi définit des droits.",
+     "explication": "En 1953, la **charité** laisse place à l’**aide sociale** : l’aide devient un **droit** défini par la loi."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d6a620e-3d0a-5c9c-a042-7e8b942c8481",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois façons d’aider",
+   "competence": "analyser-document",
+   "situation": "Aider les plus fragiles a pris des formes très différentes au fil de l’histoire. Un tableau décrit trois situations d’aide.",
+   "documents": [
+    {
+     "id": "situations",
+     "type": "tableau",
+     "titre": "Trois situations d’aide",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Situation",
+      "Ce qui se passe"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "A",
+       "Une dame de la paroisse distribue du pain aux pauvres qu’elle choisit, selon son bon vouloir."
+      ],
+      [
+       "B",
+       "Un ouvrier malade est indemnisé grâce aux cotisations prélevées sur les salaires."
+      ],
+      [
+       "C",
+       "Une mère seule reçoit le RSA, financé par l’impôt, avec un accompagnement vers l’emploi."
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "situations",
+     "enonce": "Touche la situation où l’aide ouvre un droit grâce à des cotisations.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche l’aide qui dépend de ce qu’on a versé grâce à son travail.",
+     "explication": "La situation **B** relève de l’**assurance** : les droits sont ouverts par des cotisations."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon la logique dont il relève.",
+     "categories": [
+      "Charité, assistance",
+      "Assurance",
+      "Solidarité nationale, insertion"
+     ],
+     "items": [
+      [
+       "Situation A",
+       0
+      ],
+      [
+       "Situation B",
+       1
+      ],
+      [
+       "Situation C",
+       2
+      ],
+      [
+       "Bureaux de bienfaisance",
+       0
+      ],
+      [
+       "Sécurité sociale de 1945",
+       1
+      ],
+      [
+       "Revenu de solidarité active",
+       2
+      ]
+     ],
+     "aide": "Charité : bon vouloir. Assurance : cotisations. Solidarité : impôt et accompagnement.",
+     "explication": "La situation A relève de la **charité**, la B de l’**assurance**, la C de la **solidarité nationale** et de l’insertion. Les bureaux de bienfaisance, la Sécurité sociale et le RSA en sont des exemples."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la situation C ne relève-t-elle pas de la logique d’assurance ?",
+     "options": [
+      "Les droits ne dépendent pas de cotisations : l’aide est financée par l’impôt",
+      "La personne n’a droit à aucun accompagnement, seulement à une somme",
+      "La personne ne reçoit aucun argent, seulement des aides en nature",
+      "L’aide dépend du bon vouloir d’une bienfaitrice qui choisit ses pauvres"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit le tableau du financement de la situation C.",
+     "explication": "Le RSA est financé par l’**impôt** et non par des cotisations : c’est la logique de **solidarité nationale**, avec accompagnement."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d6a620e-3d0a-5c9c-a042-7e8b942c8481",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jade, étudiante en fauteuil",
+   "competence": "analyser-texte",
+   "situation": "Jade, 28 ans, étudie le droit et se déplace en fauteuil. Son histoire montre ce que la loi de 2005 a changé par rapport à celle de 1975.",
+   "documents": [
+    {
+     "id": "jade",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’histoire de Jade",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "En 1975, raconte son grand-père, Jade aurait surtout trouvé une place dans un établissement spécialisé.",
+      "Aujourd’hui, elle a déposé son dossier à la [[m|MDPH]] de son département, qui lui a ouvert un droit à compensation : une aide financière pour un fauteuil adapté.",
+      "À la faculté, une rampe et un ascenseur rendent toutes les salles accessibles. Jade est aussi consultée sur le projet d’accessibilité de l’université."
+     ]
+    },
+    {
+     "id": "lois",
+     "type": "tableau",
+     "titre": "Deux lois, deux logiques",
+     "colonnes": [
+      "",
+      "Loi de 1975",
+      "Loi de 2005"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Logique",
+       "Protection",
+       "Citoyenneté"
+      ],
+      [
+       "Mots-clés",
+       "Établissements, allocations",
+       "Compensation, accessibilité, participation"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jade",
+     "enonce": "Touche le mot qui désigne la structure créée en 2005 où Jade a déposé sa demande de compensation.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Ce sigle désigne la maison du handicap de chaque département.",
+     "explication": "La **MDPH** (maison départementale des personnes handicapées) a été créée par la loi de 2005."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de l’histoire de Jade à la notion qu’il illustre.",
+     "paires": [
+      [
+       "Une aide financière pour un fauteuil adapté",
+       "Le droit à compensation"
+      ],
+      [
+       "Une rampe et un ascenseur à la faculté",
+       "L’accessibilité"
+      ],
+      [
+       "Jade consultée sur le projet de l’université",
+       "La participation"
+      ]
+     ],
+     "aide": "Les trois notions sont dans la dernière ligne du tableau.",
+     "explication": "L’aide financière est la **compensation**, la rampe et l’ascenseur relèvent de l’**accessibilité**, la consultation de Jade relève de la **participation**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : loi de 1975 ou loi de 2005 ?",
+     "categories": [
+      "Loi de 1975",
+      "Loi de 2005"
+     ],
+     "items": [
+      [
+       "Des établissements spécialisés et des allocations",
+       0
+      ],
+      [
+       "Une logique de protection",
+       0
+      ],
+      [
+       "La prestation de compensation du handicap",
+       1
+      ],
+      [
+       "L’obligation d’accessibilité des lieux",
+       1
+      ],
+      [
+       "Les maisons départementales des personnes handicapées",
+       1
+      ],
+      [
+       "Une allocation pour adultes handicapés instituée par la loi",
+       0
+      ]
+     ],
+     "aide": "Observe le tableau : quelle loi parle de protection, laquelle de citoyenneté ?",
+     "explication": "La loi de **1975** organise établissements et allocations, dans une logique de protection. La loi de **2005** crée la compensation, l’accessibilité, la participation et les MDPH."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle évolution l’histoire de Jade illustre-t-elle entre 1975 et 2005 ?",
+     "options": [
+      "D’une logique de protection à une logique de citoyenneté",
+      "D’une logique de citoyenneté à une logique de protection",
+      "D’une logique d’assurance à une logique d’assistance",
+      "D’une aide locale facultative à une aide uniquement privée"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux colonnes du tableau, ligne « Logique ».",
+     "explication": "On passe d’une **logique de protection** à une **logique de citoyenneté** : la personne n’est plus prise en charge, elle est accompagnée dans son propre projet."
+    }
+   ]
+  },
+  {
+   "chapitre": "674e470f-a24f-54b1-8d62-9d9919974a61",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les jeunes des Églantiers",
+   "competence": "analyser-texte",
+   "situation": "Dans une commune imaginaire, une situation difficile devient peu à peu un sujet pour les élus. Un article raconte comment.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Quartier des Églantiers, Saint-Ardent",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Dans le quartier des Églantiers, beaucoup de jeunes de 18 à 25 ans n’ont ni emploi ni formation.",
+      "Une [[e|enquête]] de la mission locale, menée au printemps, en compte 90 sur les 300 jeunes du quartier.",
+      "Une association de quartier et des parents d’élèves alertent la mairie lors d’une réunion publique.",
+      "Le conseil municipal inscrit la question à son ordre du jour, puis vote la création d’un point d’accueil et d’accompagnement vers l’emploi."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "enonce": "Touche le mot qui montre comment la situation est rendue visible.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Quel travail permet de compter les jeunes concernés ?",
+     "explication": "Une **enquête** chiffre la situation : c’est ainsi qu’elle devient visible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des jeunes du quartier n’a ni emploi ni formation ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Divise 90 par 300.",
+     "explication": "90 ÷ 300 × 100 = **30 %** : presque un jeune sur trois."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape du problème social au passage de l’article.",
+     "paires": [
+      [
+       "Situation",
+       "Beaucoup de jeunes n’ont ni emploi ni formation"
+      ],
+      [
+       "Rendue visible",
+       "Une enquête les chiffre"
+      ],
+      [
+       "Portée par des acteurs",
+       "Une association et des parents alertent la mairie"
+      ],
+      [
+       "Mise sur l’agenda",
+       "Le conseil municipal inscrit la question à l’ordre du jour"
+      ],
+      [
+       "Politique décidée",
+       "Le vote d’un point d’accueil vers l’emploi"
+      ]
+     ],
+     "aide": "Les étapes se suivent dans l’ordre de l’article.",
+     "explication": "Une situation est **rendue visible** par des chiffres, **portée** par des acteurs, **mise à l’agenda**, puis traduite en **politique** et en dispositif."
+    }
+   ]
+  },
+  {
+   "chapitre": "674e470f-a24f-54b1-8d62-9d9919974a61",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre aides, quatre visages",
+   "competence": "lire-tableau",
+   "situation": "Les politiques sociales ne se ressemblent pas : public, cadre légal, nature de l’aide. Un tableau compare quatre dispositifs.",
+   "documents": [
+    {
+     "id": "dispos",
+     "type": "tableau",
+     "titre": "Quatre dispositifs",
+     "source": "Tableau simplifié pour l’exercice.",
+     "colonnes": [
+      "Dispositif",
+      "Public",
+      "Cadre",
+      "Nature de l’aide"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "RSA",
+       "Personnes aux ressources très faibles",
+       "Légal : fixé par la loi",
+       "Allocation en espèces"
+      ],
+      [
+       "Allocations familiales",
+       "Familles avec enfants",
+       "Légal : fixé par la loi",
+       "Allocation en espèces"
+      ],
+      [
+       "Colis alimentaire du CCAS",
+       "Habitants de la commune en difficulté",
+       "Facultatif : décidé par la commune",
+       "Aide en nature"
+      ],
+      [
+       "Hébergement d’urgence",
+       "Personnes sans abri",
+       "Légal : fixé par la loi",
+       "Hébergement, aide en nature"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dispos",
+     "enonce": "Touche la case qui montre qu’une aide est facultative.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Une aide facultative n’est pas imposée par la loi : elle est décidée localement.",
+     "explication": "Le colis du CCAS est **facultatif** : la commune décide de l’offrir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque dispositif selon la nature de l’aide.",
+     "categories": [
+      "Prestation en espèces",
+      "Prestation en nature"
+     ],
+     "items": [
+      [
+       "RSA",
+       0
+      ],
+      [
+       "Allocations familiales",
+       0
+      ],
+      [
+       "Colis alimentaire du CCAS",
+       1
+      ],
+      [
+       "Hébergement d’urgence",
+       1
+      ]
+     ],
+     "aide": "Espèces : on verse de l’argent. Nature : on fournit un bien ou un service.",
+     "explication": "Le RSA et les allocations familiales sont des **prestations en espèces**. Le colis et l’hébergement sont des **prestations en nature**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment caractériser le RSA à partir du tableau ?",
+     "options": [
+      "Légal et sélectif : fixé par la loi, pour des ressources très faibles",
+      "Légal et universel : fixé par la loi, pour toutes les familles",
+      "Facultatif et sélectif : décidé par chaque commune selon ses moyens",
+      "Facultatif et universel : offert à tous par certaines associations"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les colonnes « Public » et « Cadre » de la ligne du RSA.",
+     "explication": "Le RSA est **légal** (fixé par la loi) et **sélectif** (sous condition de ressources)."
+    }
+   ]
+  },
+  {
+   "chapitre": "674e470f-a24f-54b1-8d62-9d9919974a61",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lire la pauvreté",
+   "competence": "lire-graphique",
+   "situation": "Un pays imaginaire mesure sa pauvreté : le seuil est fixé à 60 % du revenu médian. Un graphique donne les taux, un tableau quelques réponses publiques.",
+   "documents": [
+    {
+     "id": "taux",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Taux de pauvreté selon le type de ménage",
+     "source": "Chiffres imaginés pour l’exercice. Revenu médian : 2 100 € par mois.",
+     "categories": [
+      "Ensemble",
+      "Familles monoparentales",
+      "Couples avec enfants",
+      "Personnes seules",
+      "Moins de 30 ans"
+     ],
+     "series": [
+      {
+       "nom": "Taux de pauvreté",
+       "valeurs": [
+        14,
+        36,
+        12,
+        20,
+        24
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Taux de pauvreté",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Type de ménage"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Quelques réponses publiques",
+     "source": "Tableau simplifié pour l’exercice.",
+     "colonnes": [
+      "Dispositif",
+      "Public",
+      "Nature"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Allocation du RSA",
+       "Personnes aux ressources très faibles",
+       "Allocation en espèces"
+      ],
+      [
+       "Repas à un euro au restaurant universitaire",
+       "Étudiants",
+       "Aide en nature"
+      ],
+      [
+       "Petit-déjeuner à l’école",
+       "Écoliers",
+       "Aide en nature"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taux",
+     "enonce": "Touche le type de ménage le plus touché par la pauvreté.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **familles monoparentales** ont le taux le plus élevé : 36 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les familles monoparentales sont combien de fois plus touchées que les couples avec enfants ?",
+     "reponse": 3,
+     "unite": "fois",
+     "aide": "Divise 36 par 12.",
+     "explication": "36 ÷ 12 = **3** : elles sont trois fois plus touchées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À combien d’euros par mois se situe le seuil de pauvreté de ce pays ?",
+     "reponse": 1260,
+     "unite": "€",
+     "aide": "Applique 60 % au revenu médian indiqué sous le graphique.",
+     "explication": "60 % de 2 100 € = **1 260 €** par mois."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque aide selon sa nature.",
+     "categories": [
+      "Prestation en espèces",
+      "Prestation en nature"
+     ],
+     "items": [
+      [
+       "Allocation du RSA",
+       0
+      ],
+      [
+       "Allocation aux adultes handicapés",
+       0
+      ],
+      [
+       "Allocations familiales",
+       0
+      ],
+      [
+       "Repas à un euro au restaurant universitaire",
+       1
+      ],
+      [
+       "Petit-déjeuner à l’école",
+       1
+      ],
+      [
+       "Hébergement d’urgence",
+       1
+      ]
+     ],
+     "aide": "Espèces : de l’argent versé. Nature : un repas, un hébergement, un service.",
+     "explication": "Le RSA, l’allocation aux adultes handicapés et les allocations familiales sont versés en **espèces**. Repas, petit-déjeuner et hébergement sont des aides **en nature**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la lutte contre la pauvreté est une politique transversale ?",
+     "options": [
+      "Elle traverse plusieurs publics : familles, jeunes, étudiants, personnes seules",
+      "Elle ne concerne que les familles monoparentales, qui sont les plus touchées",
+      "Elle est décidée par chaque commune, sans aucun cadre national commun",
+      "Elle repose uniquement sur les cotisations des salariés et de leurs familles"
+     ],
+     "reponse": 0,
+     "aide": "Regarde combien de publics différents apparaissent dans les deux documents.",
+     "explication": "Une politique **transversale** traverse plusieurs publics : le graphique et le tableau montrent familles, jeunes, étudiants, personnes seules."
+    }
+   ]
+  },
+  {
+   "chapitre": "278c240a-4349-590d-9f2f-3cfaa138c18f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le mois de Mme Benali",
+   "competence": "analyser-document",
+   "situation": "Mme Benali élève seule ses enfants. En un mois, plusieurs acteurs de l’action sociale interviennent auprès d’elle.",
+   "documents": [
+    {
+     "id": "mois",
+     "type": "tableau",
+     "titre": "Un mois d’aides",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Quand",
+      "Ce qui se passe"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Lundi",
+       "Rendez-vous avec l’assistante de service social de la maison des solidarités"
+      ],
+      [
+       "Mercredi",
+       "Versement mensuel du RSA sur son compte"
+      ],
+      [
+       "Jeudi",
+       "Secours d’urgence pour payer une facture d’énergie, accordé par la mairie"
+      ],
+      [
+       "Samedi",
+       "Colis alimentaire remis par une association"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mois",
+     "enonce": "Touche la ligne où intervient le centre communal d’action sociale.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Le CCAS dépend de la commune.",
+     "explication": "Le **CCAS** accorde des aides facultatives, comme ce secours d’urgence : il relève de la mairie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque action à l’acteur qui la mène.",
+     "paires": [
+      [
+       "Suivi par l’assistante de service social de la maison des solidarités",
+       "Le département"
+      ],
+      [
+       "Versement du RSA",
+       "La CAF ou la MSA"
+      ],
+      [
+       "Secours d’urgence pour une facture d’énergie",
+       "Le CCAS"
+      ],
+      [
+       "Colis alimentaire",
+       "Une association"
+      ]
+     ],
+     "aide": "Quatre actions, quatre acteurs différents.",
+     "explication": "Le **département** emploie les travailleurs sociaux de la maison des solidarités, la **CAF ou la MSA** verse le RSA, le **CCAS** accorde les secours, une **association** distribue le colis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le RSA arrive sur le compte de Mme Benali depuis la CAF. Qui le finance ?",
+     "options": [
+      "Le département : la CAF ne fait que le verser",
+      "La CAF, qui le finance avec ses ressources propres",
+      "Les associations caritatives, grâce aux dons reçus",
+      "L’Union européenne, par l’intermédiaire du FSE+"
+     ],
+     "reponse": 0,
+     "aide": "Ne confonds pas le payeur et l’opérateur.",
+     "explication": "Le **département** finance le RSA ; la **CAF ou la MSA** est l’**opérateur** qui le verse."
+    }
+   ]
+  },
+  {
+   "chapitre": "278c240a-4349-590d-9f2f-3cfaa138c18f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où va l’argent du département ?",
+   "competence": "lire-graphique",
+   "situation": "Un département imaginaire dépense 600 millions d’euros en action sociale. Un graphique répartit cette somme ; un tableau dit qui finance quoi.",
+   "documents": [
+    {
+     "id": "depenses",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les dépenses d’action sociale du département",
+     "source": "Chiffres imaginés pour l’exercice : 600 millions d’euros en tout.",
+     "categories": [
+      "RSA",
+      "Aide sociale à l’enfance",
+      "APA (personnes âgées)",
+      "Handicap",
+      "Protection maternelle et infantile"
+     ],
+     "series": [
+      {
+       "nom": "Part des dépenses",
+       "valeurs": [
+        35,
+        30,
+        20,
+        10,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "id": "financeurs",
+     "type": "tableau",
+     "titre": "Qui finance quoi ?",
+     "colonnes": [
+      "Source",
+      "Dépense financée"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "État",
+       "Hébergement d’urgence"
+      ],
+      [
+       "Sécurité sociale (CAF)",
+       "Crèches et centres sociaux"
+      ],
+      [
+       "Union européenne (FSE+)",
+       "Actions d’insertion"
+      ],
+      [
+       "CNSA",
+       "Une partie de l’APA et de la PCH"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depenses",
+     "enonce": "Touche le poste de dépense le plus lourd.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la part la plus grande.",
+     "explication": "Le **RSA** représente 35 % des dépenses, le poste le plus lourd."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’euros le département consacre-t-il au RSA ?",
+     "reponse": 210,
+     "unite": "millions d’euros",
+     "aide": "Applique la part du RSA aux 600 millions d’euros.",
+     "explication": "35 % de 600 = **210 millions d’euros**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’euros pour l’APA et le handicap réunis ?",
+     "reponse": 180,
+     "unite": "millions d’euros",
+     "aide": "Additionne d’abord les deux parts.",
+     "explication": "(20 % + 10 %) de 600 = 30 % de 600 = **180 millions d’euros**."
+    },
+    {
+     "type": "zone",
+     "document": "financeurs",
+     "enonce": "Touche la dépense financée par l’État.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Regarde la première ligne du tableau.",
+     "explication": "L’**État** finance l’hébergement d’urgence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans ce département, le RSA et l’APA pèsent 55 % des dépenses. Que peut-il en résulter pour ses aides facultatives ?",
+     "options": [
+      "Peu de marge pour les aides facultatives, d’où des écarts avec d’autres départements",
+      "Une hausse automatique des aides facultatives, financée par l’État sans limite",
+      "La disparition des associations, qui ne seraient plus jamais financées ensuite",
+      "Un transfert immédiat des dépenses d’action sociale vers les communes voisines"
+     ],
+     "reponse": 0,
+     "aide": "Additionne les parts du RSA et de l’APA, puis pense à ce qu’il reste.",
+     "explication": "35 % + 20 % = 55 % : il reste **peu de marge** pour le facultatif. C’est une limite de la décentralisation : des **inégalités entre départements**."
+    }
+   ]
+  },
+  {
+   "chapitre": "278c240a-4349-590d-9f2f-3cfaa138c18f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cinq acteurs, une seule famille",
+   "competence": "analyser-document",
+   "situation": "La famille Martel, dont le père vient de perdre son emploi, est accompagnée par plusieurs acteurs. Un récit les présente, un tableau rappelle deux mots clés.",
+   "documents": [
+    {
+     "id": "martel",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dossier de la famille Martel",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Privée de salaire, la famille Martel ne parvient plus à payer ses factures.",
+      "Un assistant de service social de la maison des [[m|solidarités]] du département étudie leur situation et les aide à ouvrir leurs droits au RSA, que verse la CAF.",
+      "Le centre communal d’action sociale accorde un secours d’urgence pour l’électricité.",
+      "Une association gère une épicerie solidaire où la famille fait ses courses à prix réduit.",
+      "M. Martel s’inscrit à France Travail, qui l’accompagne dans sa recherche d’emploi."
+     ]
+    },
+    {
+     "id": "termes",
+     "type": "tableau",
+     "titre": "Deux mots à ne pas confondre",
+     "colonnes": [
+      "Terme",
+      "Sens"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Payeur",
+       "Celui qui décide et finance"
+      ],
+      [
+       "Opérateur",
+       "Celui qui met en œuvre : il accueille, verse, accompagne"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "martel",
+     "enonce": "Touche le mot qui désigne le lieu du département où travaille l’assistant de service social.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "La maison des… quoi ?",
+     "explication": "Le département organise son territoire en **maisons des solidarités**, où travaillent assistants sociaux, éducateurs et puéricultrices."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque action à l’acteur qui la mène.",
+     "paires": [
+      [
+       "Étude de la situation et ouverture des droits au RSA",
+       "Le département"
+      ],
+      [
+       "Versement du RSA",
+       "La CAF"
+      ],
+      [
+       "Secours d’urgence pour l’électricité",
+       "Le centre communal d’action sociale"
+      ],
+      [
+       "Épicerie solidaire",
+       "Une association"
+      ],
+      [
+       "Accompagnement dans la recherche d’emploi",
+       "France Travail"
+      ]
+     ],
+     "aide": "Chaque passage du récit nomme un acteur.",
+     "explication": "Cinq acteurs, un seul accompagnement : c’est la **complémentarité** de l’action sociale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur : payeur ou opérateur ?",
+     "categories": [
+      "Payeur",
+      "Opérateur"
+     ],
+     "items": [
+      [
+       "Le département, qui finance le RSA",
+       0
+      ],
+      [
+       "La CAF, qui verse le RSA",
+       1
+      ],
+      [
+       "L’État, qui finance l’hébergement d’urgence",
+       0
+      ],
+      [
+       "Une association qui gère un centre d’hébergement",
+       1
+      ],
+      [
+       "La CNSA, qui verse un concours pour l’APA",
+       0
+      ],
+      [
+       "La maison des solidarités, où reçoit l’assistant social",
+       1
+      ]
+     ],
+     "aide": "Le payeur décide et finance ; l’opérateur met en œuvre.",
+     "explication": "Le département, l’État et la CNSA **financent**. La CAF, l’association et la maison des solidarités **mettent en œuvre**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cinq acteurs interviennent auprès de la même famille. Que doivent-ils faire pour que leur action soit complémentaire ?",
+     "options": [
+      "Se coordonner autour d’un même accompagnement, par des conventions",
+      "Laisser chaque acteur agir seul, sans échanger d’informations utiles",
+      "Confier tout l’accompagnement à l’État, qui remplacerait les autres",
+      "Réserver l’aide aux seules associations, dont les actions sont gratuites"
+     ],
+     "reponse": 0,
+     "aide": "Le partenariat et la contractualisation sont la règle.",
+     "explication": "Le **partenariat** et la **contractualisation** (conventions, contrats) coordonnent les acteurs autour d’un seul accompagnement."
+    }
+   ]
+  },
+  {
+   "chapitre": "331e40ae-1203-57c2-8645-4b576dc75abc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le diagnostic des Églantiers",
+   "competence": "lire-tableau",
+   "situation": "Avant de créer un dispositif, une commune imaginaire veut connaître les besoins de son quartier le plus fragile.",
+   "documents": [
+    {
+     "id": "quartier",
+     "type": "tableau",
+     "titre": "Le quartier comparé à la commune",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Quartier des Églantiers",
+      "Ensemble de la commune"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Jeunes de 18 à 25 ans sans emploi (%)",
+       32,
+       18
+      ],
+      [
+       "Familles monoparentales (%)",
+       28,
+       16
+      ],
+      [
+       "Logements sociaux (%)",
+       55,
+       25
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quartier",
+     "enonce": "Touche le chiffre qui mesure le chômage des jeunes dans le quartier.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne des jeunes de 18 à 25 ans, colonne du quartier.",
+     "explication": "Dans le quartier, **32 %** des jeunes de 18 à 25 ans sont sans emploi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le taux de chômage des jeunes du quartier dépasse-t-il celui de la commune ?",
+     "reponse": 14,
+     "unite": "points",
+     "aide": "Soustrais le taux de la commune à celui du quartier.",
+     "explication": "32 − 18 = **14 points** : un écart qui signale un besoin."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes d’un diagnostic.",
+     "items": [
+      "Recueil de données (INSEE, CAF, services sociaux)",
+      "Analyse des besoins",
+      "Repérage de l’offre existante",
+      "Écart entre les besoins et les réponses",
+      "Choix des priorités d’action"
+     ],
+     "aide": "On commence par rassembler des données, on finit par décider.",
+     "explication": "Le diagnostic va du **recueil de données** aux **priorités d’action**, en passant par l’analyse, le repérage de l’offre et l’écart avec les besoins."
+    }
+   ]
+  },
+  {
+   "chapitre": "331e40ae-1203-57c2-8645-4b576dc75abc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le RSA à la loupe",
+   "competence": "analyser-document",
+   "situation": "Le RSA est un dispositif de lutte contre l’exclusion. Un premier tableau détaille ce qu’il contient, un second dit qui peut le demander.",
+   "documents": [
+    {
+     "id": "volets",
+     "type": "tableau",
+     "titre": "Ce que contient le RSA",
+     "colonnes": [
+      "Élément",
+      "Contenu"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Allocation",
+       "Un montant forfaitaire qui complète des ressources très faibles"
+      ],
+      [
+       "Accompagnement",
+       "Un référent aide à l’insertion : emploi, logement, santé"
+      ],
+      [
+       "Contrat d’engagement (depuis 2025)",
+       "Un plan d’action, en principe au moins 15 heures d’activité par semaine, adapté à la situation"
+      ]
+     ]
+    },
+    {
+     "id": "acces",
+     "type": "tableau",
+     "titre": "Qui peut demander le RSA ?",
+     "colonnes": [
+      "Situation",
+      "Droit au RSA"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Personne de 25 ans ou plus aux ressources très faibles",
+       "Oui"
+      ],
+      [
+       "Personne de moins de 25 ans avec un enfant à charge",
+       "Oui"
+      ],
+      [
+       "Personne de moins de 25 ans ayant assez travaillé",
+       "Oui"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volets",
+     "enonce": "Touche la case qui décrit la contrepartie demandée à l’allocataire depuis 2025.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne du contrat d’engagement.",
+     "explication": "Depuis 2025, l’allocataire signe un **contrat d’engagement** avec un plan d’action d’au moins quinze heures par semaine en principe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son rôle dans le RSA.",
+     "paires": [
+      [
+       "Le département",
+       "Décide et finance"
+      ],
+      [
+       "La CAF ou la MSA",
+       "Verse l’allocation"
+      ],
+      [
+       "France Travail",
+       "Inscrit et accompagne l’allocataire"
+      ]
+     ],
+     "aide": "Distingue celui qui paie, celui qui verse et celui qui accompagne.",
+     "explication": "Le **département** décide et finance, la **CAF ou la MSA** verse, **France Travail** inscrit et accompagne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un allocataire suit un plan d’action de 15 heures par semaine. Combien d’heures d’activité cela représente-t-il sur 4 semaines ?",
+     "reponse": 60,
+     "unite": "heures",
+     "aide": "Multiplie les heures par semaine par le nombre de semaines.",
+     "explication": "15 × 4 = **60 heures**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lola a 22 ans, n’a pas d’enfant, n’a jamais travaillé et a des ressources très faibles. A-t-elle droit au RSA ?",
+     "options": [
+      "Non : elle n’entre dans aucune des trois situations du tableau",
+      "Oui : toute personne majeure aux ressources très faibles y a droit",
+      "Oui : à partir de 18 ans, si elle s’inscrit à France Travail",
+      "Non : le RSA est réservé aux personnes qui ont déjà un emploi"
+     ],
+     "reponse": 0,
+     "aide": "Compare sa situation aux trois lignes du second tableau.",
+     "explication": "Lola a moins de 25 ans, pas d’enfant et n’a pas assez travaillé : elle n’entre dans **aucune** des situations du tableau."
+    }
+   ]
+  },
+  {
+   "chapitre": "331e40ae-1203-57c2-8645-4b576dc75abc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le 115 saturé",
+   "competence": "analyser-document",
+   "situation": "Dans un département imaginaire, le 115 reçoit des demandes d’hébergement toute l’année. Un graphique les compare aux places attribuées, une fiche présente le SIAO.",
+   "documents": [
+    {
+     "id": "appels",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Demandes d’hébergement et places attribuées",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Trimestre 1",
+      "Trimestre 2",
+      "Trimestre 3",
+      "Trimestre 4"
+     ],
+     "series": [
+      {
+       "nom": "Demandes",
+       "valeurs": [
+        1200,
+        1000,
+        900,
+        1500
+       ]
+      },
+      {
+       "nom": "Places attribuées",
+       "valeurs": [
+        900,
+        800,
+        720,
+        960
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Demandes et places",
+      "unite": "nombre",
+      "min": 0,
+      "max": 1600,
+      "pas": 400
+     },
+     "axeX": {
+      "titre": "Trimestre"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "siao",
+     "type": "tableau",
+     "titre": "Le SIAO en bref",
+     "colonnes": [
+      "Rubrique",
+      "Contenu"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Politique de rattachement",
+       "Lutte contre l’exclusion"
+      ],
+      [
+       "Population",
+       "Personnes sans abri ou mal logées"
+      ],
+      [
+       "Mission",
+       "Une porte d’entrée unique par département pour orienter vers l’hébergement ou le logement"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appels",
+     "enonce": "Touche le trimestre où l’écart entre demandes et places attribuées est le plus grand.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Calcule l’écart de chaque trimestre : demandes moins places.",
+     "explication": "Au trimestre 4, l’écart est de 540 (1 500 − 960), le plus grand : les autres sont de 300, 200 et 180."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au trimestre 4, quelle part des demandes a obtenu une place ?",
+     "reponse": 64,
+     "unite": "%",
+     "aide": "Divise les places attribuées par les demandes.",
+     "explication": "960 ÷ 1 500 × 100 = **64 %** : plus d’une demande sur trois reste sans réponse."
+    },
+    {
+     "type": "zone",
+     "document": "siao",
+     "enonce": "Touche la case qui décrit la mission du SIAO.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « Mission ».",
+     "explication": "Le **SIAO** est une porte d’entrée unique par département : il coordonne l’orientation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : effet du dispositif ou limite ?",
+     "categories": [
+      "Effet",
+      "Limite"
+     ],
+     "items": [
+      [
+       "Une porte d’entrée unique par département",
+       0
+      ],
+      [
+       "Une vision d’ensemble des places disponibles",
+       0
+      ],
+      [
+       "Des demandes restées sans place en fin d’année",
+       1
+      ],
+      [
+       "Une offre de logements sociaux insuffisante",
+       1
+      ]
+     ],
+     "aide": "Un effet est un bénéfice du dispositif ; une limite est ce qu’il ne résout pas.",
+     "explication": "La **coordination** et la vision des places sont des effets ; les demandes sans réponse et le manque de logements sont des **limites**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de ces deux documents sur le SIAO ?",
+     "options": [
+      "Il coordonne mieux l’orientation, mais sans assez de places elle bute sur la pénurie",
+      "Il a supprimé le manque de places grâce à la coordination des demandes",
+      "Il est inutile, car aucune demande n’est orientée par son intermédiaire",
+      "Il crée lui-même les places manquantes en construisant des logements"
+     ],
+     "reponse": 0,
+     "aide": "Le SIAO oriente, il ne construit pas.",
+     "explication": "Le SIAO améliore la **coordination**, mais il **ne crée pas de places** : sans offre suffisante de logements, l’orientation bute sur la pénurie."
+    }
+   ]
+  }
+ ]
+}

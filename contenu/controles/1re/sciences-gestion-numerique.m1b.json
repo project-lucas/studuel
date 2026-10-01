@@ -1,0 +1,280 @@
+{
+  "niveau": "1re",
+  "matiere": "sciences-gestion-numerique",
+  "sujets": [
+    {
+      "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+      "difficulte": 1,
+      "titre": "Le processus de réservation du restaurant",
+      "consigne": "Réponds par des phrases complètes en utilisant les définitions du cours.",
+      "enonce": "**Situation (entreprise fictive).** Le restaurant La Bonne Table prend ses réservations en ligne. Voici les étapes : le client remplit le formulaire de réservation → le logiciel vérifie s'il reste des tables → si oui, une confirmation est envoyée au client ; si non, on lui propose un autre créneau → le jour venu, le client est accueilli et installé.\n\n1. Définis un processus.\n2. Identifie l'événement déclencheur et le résultat de ce processus. Pour qui est ce résultat ?\n3. Relève l'étape qui constitue une décision et écris-la sous la forme d'une question fermée.\n4. Que signifie PGI ? Quel est son principal avantage ?",
+      "bareme": [
+        { "critere": "Processus : enchaînement d'activités qui, à partir d'un événement déclencheur, produit un résultat pour un client", "points": 5 },
+        { "critere": "Déclencheur : la demande de réservation ; résultat : le client installé, pour le client externe", "points": 6 },
+        { "critere": "Décision : « Reste-t-il une table ? oui / non »", "points": 4 },
+        { "critere": "Progiciel de gestion intégré ; donnée saisie une seule fois disponible partout", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Un **processus** est un **enchaînement d'activités** qui, à partir d'un **événement déclencheur**, produit un **résultat** pour un client (interne ou externe).\n2. **Événement déclencheur** : le client remplit le formulaire de réservation. **Résultat** : le client a une table réservée et est accueilli ; ce résultat est pour un **client externe**.\n3. La vérification des tables est une **décision** : « **Reste-t-il une table libre à ce créneau ? oui / non** ».\n4. PGI signifie **progiciel de gestion intégré** (ERP en anglais). Son principal avantage : une donnée **saisie une seule fois** est **disponible dans tous les services**, grâce à une base de données commune."
+    },
+    {
+      "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+      "difficulte": 2,
+      "titre": "Le garage passe au PGI et au nuage",
+      "consigne": "Analyse la situation en mobilisant les avantages et les limites du PGI et de l'informatique en nuage.",
+      "enonce": "**Situation (entreprise fictive).** Le garage Martineau (15 salariés) utilisait trois logiciels séparés : un pour les rendez-vous, un pour le stock de pièces, un pour la facturation. Une réparation était donc saisie trois fois, avec des erreurs de prix fréquentes. Le garage adopte un PGI, hébergé dans le nuage chez un prestataire, payé par abonnement mensuel.\n\nAprès six mois : les factures partent automatiquement dès la fin de la réparation ; le stock se met à jour seul ; mais une panne de la connexion internet a bloqué l'atelier une demi-journée, et deux mécaniciens âgés ont eu du mal à utiliser le nouvel outil.\n\n1. Relève deux avantages du PGI que le garage a obtenus.\n2. Relève deux limites du PGI ou de son installation dans ce cas.\n3. Explique ce qu'est l'informatique en nuage. Présente un avantage et un risque que le document illustre.\n4. Comment le rôle des salariés administratifs peut-il évoluer avec l'automatisation ?",
+      "bareme": [
+        { "critere": "Deux avantages : saisie unique, cohérence des données, automatisation, traçabilité", "points": 5 },
+        { "critere": "Deux limites : formation nécessaire, coût, dépendance à l'éditeur, procédures standardisées", "points": 5 },
+        { "critere": "Nuage défini ; avantage (pas d'investissement lourd, abonnement) et risque (dépendance à la connexion)", "points": 5 },
+        { "critere": "Moins de saisie, plus de contrôle, d'analyse et de conseil", "points": 5 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Avantages : une réparation n'est **saisie qu'une seule fois** et elle est disponible partout ; l'information est **cohérente** (fin des erreurs de prix) ; l'**automatisation** (facture qui part seule, stock mis à jour).\n2. Limites : la **formation nécessaire** des utilisateurs (les deux mécaniciens en difficulté) ; le **coût** et la **dépendance** à l'éditeur ; des procédures standardisées, parfois contraignantes.\n3. L'**informatique en nuage** consiste à utiliser des ressources informatiques (stockage, logiciels) **hébergées à distance** chez un prestataire et accessibles par internet, souvent par **abonnement**. **Avantage** : pas d'investissement lourd, des coûts variables (l'abonnement mensuel), des mises à jour automatiques. **Risque** : la **dépendance à la connexion** et au prestataire (l'atelier bloqué une demi-journée).\n4. L'automatisation réduit les **saisies** ; les salariés administratifs **contrôlent**, **analysent** et **conseillent** davantage (vérifier les factures, suivre les marges, répondre aux clients)."
+    },
+    {
+      "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+      "difficulte": 3,
+      "titre": "La librairie, le click and collect et le télétravail",
+      "consigne": "Analyse les documents avec les notions du chapitre, puis rédige un paragraphe argumenté répondant à la question posée.",
+      "enonce": "**Document 1 (entreprise fictive).** La librairie Pages & Co (8 salariés) a lancé un site de commande en ligne avec retrait en magasin. Le processus : commande en ligne → vérification du stock → si le livre est absent, commande au distributeur → préparation → SMS « votre livre est prêt » → retrait et paiement en magasin.\n\n**Document 2.** Le logiciel choisi impose une règle : toute commande doit être payée en ligne avant préparation. Beaucoup de clients âgés, qui préféraient payer en magasin, ont renoncé. Les libraires ne peuvent pas modifier ce réglage.\n\n**Document 3.** La comptable travaille désormais deux jours par semaine à domicile. Elle apprécie de ne plus faire une heure de route, mais dit avoir du mal à « couper » le soir, et elle a déjà ouvert un fichier client sur son ordinateur personnel.\n\n1. Identifie l'événement déclencheur, les décisions et le résultat du processus du document 1.\n2. Montre en quoi le numérique a rendu la librairie plus agile.\n3. Montre en quoi le document 2 illustre une rigidité. Quelle solution le cours suggère-t-il ?\n4. Analyse les apports et les risques du télétravail présentés dans le document 3.\n5. Rédige un paragraphe argumenté : « Le numérique a-t-il rendu la librairie Pages & Co plus agile ? »",
+      "bareme": [
+        { "critere": "Déclencheur, décision sur le stock et résultat identifiés", "points": 3 },
+        { "critere": "Agilité : processus fluidifié, information en temps réel, service nouveau", "points": 4 },
+        { "critere": "Rigidité : travail adapté au logiciel ; solution : adapter le logiciel au travail (paramétrage)", "points": 4 },
+        { "critere": "Télétravail : souplesse, trajets réduits / frontière vie privée, sécurité des données", "points": 4 },
+        { "critere": "Paragraphe argumenté et nuancé, appuyé sur les documents", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Déclencheur** : la commande en ligne du client. **Décision** : « Le livre est-il en stock ? oui / non » (si non, commande au distributeur) ; le paiement peut aussi être vu comme une étape de contrôle. **Résultat** : le client retire son livre en magasin.\n2. Le numérique **fluidifie le processus** : le client commande à toute heure, le stock est vérifié rapidement, le SMS l'informe **en temps réel** ; la librairie offre un **service nouveau** face aux grands sites, ce qui la rend plus réactive, donc plus **agile**.\n3. La règle du paiement en ligne obligatoire est imposée par le logiciel : la librairie **adapte son travail au logiciel** au lieu d'adapter le logiciel au travail. Résultat : une partie de la clientèle renonce. Solution : **paramétrer** l'outil (ou en choisir un autre) pour permettre le paiement en magasin, comme la PME du cours avait paramétré un seuil de remise.\n4. **Apports** : **souplesse**, **trajets réduits**. **Risques** : **frontière vie privée / vie professionnelle** brouillée (difficulté à « couper »), **isolement** possible, **sécurité des données** (fichier client sur un ordinateur personnel).\n5. Exemple : Le numérique a rendu Pages & Co **plus agile** : le click and collect fluidifie la commande, informe le client en temps réel et apporte un service nouveau. Mais cette agilité est **incomplète** : le logiciel impose un paiement en ligne qui fait fuir une partie des clients, signe que la librairie s'est adaptée à l'outil plutôt que l'inverse. Le télétravail apporte aussi de la souplesse, au prix de risques pour la vie privée de la comptable et pour la sécurité des données. Le numérique rend donc l'organisation agile quand il est **paramétré et encadré** au service du travail ; il la rigidifie sinon."
+    },
+    {
+      "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+      "difficulte": 1,
+      "titre": "La valeur ajoutée de la biscuiterie",
+      "consigne": "Écris la formule, puis le calcul. Justifie les classements.",
+      "enonce": "**Situation (entreprise fictive).** La biscuiterie Doré a vendu cette année pour 600 000 € de biscuits. Voici quelques dépenses de l'année :\n\n| Dépense | Montant |\n| Farine, beurre, sucre | 150 000 € |\n| Emballages | 40 000 € |\n| Électricité des fours | 30 000 € |\n| Transport par un prestataire | 20 000 € |\n| Salaires et cotisations | 250 000 € |\n| Impôts et taxes | 25 000 € |\n\n1. Qu'est-ce qu'une consommation intermédiaire ? Relève, dans le tableau, les consommations intermédiaires.\n2. Calcule la valeur ajoutée de la biscuiterie.\n3. Pourquoi les salaires ne sont-ils pas des consommations intermédiaires ?",
+      "bareme": [
+        { "critere": "Définition des consommations intermédiaires et quatre éléments relevés", "points": 7 },
+        { "critere": "CI = 240 000 € et VA = 600 000 − 240 000 = 360 000 €", "points": 8 },
+        { "critere": "Les salaires sont une part de la valeur ajoutée versée aux salariés", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Les **consommations intermédiaires** sont les biens et services **achetés à d'autres entreprises** et **détruits ou transformés** dans la production. Ici : farine, beurre, sucre (150 000 €), emballages (40 000 €), électricité (30 000 €), transport (20 000 €).\n2. CI = 150 000 + 40 000 + 30 000 + 20 000 = 240 000 €. **Valeur ajoutée = production − consommations intermédiaires** = 600 000 − 240 000 = **360 000 €**.\n3. Les salaires ne sont pas achetés à une autre entreprise : ils rémunèrent le travail des salariés, c'est-à-dire une **part de la valeur ajoutée** créée par la biscuiterie qui est **répartie** aux salariés (comme les impôts reviennent à l'État)."
+    },
+    {
+      "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+      "difficulte": 2,
+      "titre": "Le partage de la valeur chez Doré",
+      "consigne": "Calcule chaque part, puis interprète la répartition avec les notions du cours.",
+      "enonce": "**Situation (entreprise fictive).** La biscuiterie Doré, société anonyme, a créé une valeur ajoutée de 360 000 €. Elle la répartit ainsi :\n\n| Bénéficiaire | Montant |\n| Salaires et cotisations | 216 000 € |\n| Impôts et taxes | 36 000 € |\n| Intérêts versés à la banque | 18 000 € |\n| Dividendes | 36 000 € |\n| Bénéfice mis en réserve | 54 000 € |\n\n1. Vérifie que la somme des parts est égale à la valeur ajoutée.\n2. Calcule la part de chaque bénéficiaire en pourcentage de la valeur ajoutée.\n3. Sous quelle forme chaque acteur reçoit-il sa part ? À quoi sert le bénéfice mis en réserve ?\n4. Les actionnaires demandent que les dividendes passent à 54 000 €, la valeur ajoutée restant la même. Quelle part pourrait baisser ? Pourquoi parle-t-on d'arbitrage ?",
+      "bareme": [
+        { "critere": "Somme vérifiée : 360 000 €", "points": 3 },
+        { "critere": "Pourcentages : 60 %, 10 %, 5 %, 10 %, 15 %", "points": 6 },
+        { "critere": "Formes : salaires, impôts, intérêts, dividendes ; réserve = autofinancement pour investir", "points": 5 },
+        { "critere": "Arbitrage : +18 000 € de dividendes pris sur une autre part, par exemple la réserve ou les salaires", "points": 6 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. 216 000 + 36 000 + 18 000 + 36 000 + 54 000 = **360 000 €** : c'est bien la valeur ajoutée.\n2. Salariés : 216 000 ÷ 360 000 × 100 = **60 %** ; État : 36 000 ÷ 360 000 × 100 = **10 %** ; banque : **5 %** ; actionnaires : **10 %** ; entreprise (réserve) : 54 000 ÷ 360 000 × 100 = **15 %**. Total : 100 %.\n3. Les **salariés** reçoivent des **salaires et cotisations sociales** ; l'**État et les collectivités** des **impôts et taxes** ; les **prêteurs** des **intérêts** ; les **actionnaires** des **dividendes** ; l'**entreprise** garde un **bénéfice mis en réserve**, qui lui permet d'**investir** par ses propres moyens : c'est l'**autofinancement**.\n4. Il faudrait trouver 18 000 € ailleurs : par exemple **réduire le bénéfice mis en réserve** (de 54 000 à 36 000 €), ce qui diminue l'autofinancement, ou limiter les hausses de salaires. On parle d'**arbitrage** : la valeur ajoutée étant donnée, augmenter la part d'un acteur oblige à faire des **choix** entre les attentes des acteurs."
+    },
+    {
+      "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+      "difficulte": 3,
+      "titre": "Une coutellerie cotée qui hésite",
+      "consigne": "Fais les calculs, puis rédige une analyse argumentée qui mobilise plusieurs formes de valeur.",
+      "enonce": "**Document 1 (entreprise fictive).** La coutellerie Thiernoise est une société cotée en Bourse : 400 000 actions, au cours de 25 €. Elle vend un couteau pliant 18 € ; son coût de revient est de 13,50 €.\n\n**Document 2.** Deux projets s'opposent en conseil d'administration :\n- **Projet A** : augmenter fortement les dividendes cette année ;\n- **Projet B** : mettre en réserve le bénéfice pour agrandir l'atelier local, embaucher six apprentis et continuer à acheter l'acier à une aciérie de la région, un peu plus chère qu'un fournisseur étranger.\n\n**Document 3.** Sur les sites d'avis, la marque est notée 4,7/5 ; les clients citent la « fabrication française » et la « transmission du savoir-faire ».\n\n1. Calcule la valeur boursière (capitalisation) de la coutellerie.\n2. Calcule la marge unitaire sur un couteau. Que se passerait-il si le prix descendait sous le coût de revient ?\n3. Quelle forme de valeur le projet A privilégie-t-il ? Et le projet B ? Justifie.\n4. Quelle forme de valeur le document 3 mesure-t-il ? En quoi le projet B pourrait-il la renforcer ?\n5. Rédige un paragraphe argumenté : quel projet conseillerais-tu au conseil d'administration ? Tiens compte des attentes des différents acteurs.",
+      "bareme": [
+        { "critere": "Capitalisation = 25 × 400 000 = 10 000 000 €", "points": 3 },
+        { "critere": "Marge = 18 − 13,50 = 4,50 € ; prix sous le coût : perte sur chaque couteau", "points": 3 },
+        { "critere": "A : valeur financière / actionnariale ; B : valeur partenariale (salariés, fournisseurs, territoire) et autofinancement", "points": 5 },
+        { "critere": "Document 3 : valeur perçue (avis, image) ; lien avec la fabrication locale", "points": 4 },
+        { "critere": "Paragraphe argumenté prenant en compte l'arbitrage entre acteurs", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Valeur boursière = cours de l'action × nombre d'actions = 25 × 400 000 = **10 000 000 €** (10 millions d'euros).\n2. **Marge = prix de vente − coût** = 18 − 13,50 = **4,50 €** par couteau. Un prix inférieur au coût ne couvrirait plus les charges : l'entreprise perdrait de l'argent sur chaque couteau vendu.\n3. Le **projet A** privilégie la **valeur financière (actionnariale)** : les dividendes rémunèrent directement les actionnaires. Le **projet B** privilégie la **valeur partenariale** : il profite aux **salariés** (apprentis), aux **fournisseurs** (aciérie régionale) et au **territoire** ; il repose sur l'**autofinancement** (bénéfice mis en réserve pour investir).\n4. Le document 3 mesure la **valeur perçue** par les clients : **avis en ligne**, **image de marque**, **réputation**. Le projet B, en maintenant la fabrication locale et en formant des apprentis, **entretient ce qui fait l'image** de la marque (« fabrication française », « savoir-faire »), donc sa valeur perçue.\n5. Exemple : Je conseillerais plutôt le **projet B**, ou un compromis. Les actionnaires attendent légitimement des dividendes, mais la répartition de la valeur est un **arbitrage** : distribuer beaucoup aujourd'hui réduit l'**autofinancement** et freine l'investissement. Le projet B crée de la **valeur partenariale** (emplois, fournisseur local) et protège la **valeur perçue**, qui fait vendre les couteaux à un prix qui laisse une bonne marge. À terme, cela peut aussi soutenir la **valeur boursière**. Un compromis — un dividende stable et le reste en réserve — permettrait de tenir compte des attentes de tous les acteurs."
+    },
+    {
+      "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+      "difficulte": 1,
+      "titre": "Efficace ou efficiente ?",
+      "consigne": "Justifie chaque réponse par les définitions du cours et écris les calculs.",
+      "enonce": "**Situation (entreprises fictives).**\n\na. Une entreprise de livraison devait livrer 5 000 colis en décembre : elle en a livré 5 000, mais en louant en urgence dix camions supplémentaires très chers.\nb. Une autre a livré ses 5 000 colis avec 15 % de carburant en moins que l'an dernier.\n\nPar ailleurs, la brasserie Houblonne a réalisé 4,5 M€ de ventes sur un marché régional de 30 M€.\n\n1. Définis l'efficacité et l'efficience.\n2. Les entreprises a et b sont-elles efficaces ? efficientes ? Justifie.\n3. Calcule la part de marché de la brasserie Houblonne. À quelle dimension de la performance cet indicateur appartient-il ?",
+      "bareme": [
+        { "critere": "Efficacité : objectif atteint ; efficience : avec quels moyens", "points": 6 },
+        { "critere": "a efficace mais pas efficiente ; b efficace et efficiente", "points": 7 },
+        { "critere": "Part de marché = 15 %, performance commerciale", "points": 7 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. L'**efficacité** mesure si l'**objectif est atteint** ; l'**efficience** mesure **avec quels moyens** il l'est (le rapport entre résultats et moyens).\n2. a. **Efficace** (5 000 colis livrés sur 5 000 prévus) mais **pas efficiente** : l'objectif est atteint en gaspillant des moyens (location coûteuse). b. **Efficace et efficiente** : même objectif atteint avec moins de carburant.\n3. **Part de marché** = ventes de l'entreprise ÷ ventes totales du marché × 100 = 4,5 ÷ 30 × 100 = **15 %**. C'est un indicateur de la performance **commerciale**."
+    },
+    {
+      "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+      "difficulte": 2,
+      "titre": "Les comptes de la fromagerie",
+      "consigne": "Calcule chaque indicateur avec sa formule, puis interprète-le en une phrase.",
+      "enonce": "**Situation (entreprise fictive).** La fromagerie des Alpes présente les chiffres suivants pour l'année :\n\n| Élément | Montant |\n| Chiffre d'affaires | 1 500 000 € |\n| Résultat (bénéfice) | 90 000 € |\n| Capitaux propres | 450 000 € |\n| Ventes totales du marché régional | 12 000 000 € |\n\n1. Calcule la part de marché de la fromagerie.\n2. Calcule son taux de profitabilité. Explique ce qu'il mesure.\n3. Calcule son taux de rentabilité financière. Explique ce qu'il mesure.\n4. À quelle dimension de la performance appartient chaque indicateur ? Cite un indicateur de la performance sociale et un de la performance environnementale que la fromagerie pourrait suivre.",
+      "bareme": [
+        { "critere": "Part de marché = 12,5 %", "points": 4 },
+        { "critere": "Profitabilité = 6 % : ce que rapporte chaque euro vendu", "points": 5 },
+        { "critere": "Rentabilité = 20 % : ce que rapporte chaque euro investi par les associés", "points": 5 },
+        { "critere": "Dimensions commerciale et financière ; un indicateur social et un environnemental pertinents", "points": 6 }
+      ],
+      "dureeMin": 11,
+      "corrige": "1. Part de marché = 1 500 000 ÷ 12 000 000 × 100 = **12,5 %**.\n2. Taux de profitabilité = résultat ÷ chiffre d'affaires × 100 = 90 000 ÷ 1 500 000 × 100 = **6 %**. Il mesure ce que rapporte **chaque euro vendu** : 6 centimes de bénéfice par euro de ventes.\n3. Taux de rentabilité financière = résultat ÷ capitaux propres × 100 = 90 000 ÷ 450 000 × 100 = **20 %**. Il mesure ce que rapporte **chaque euro investi par les associés** : 20 centimes par euro apporté.\n4. Part de marché : performance **commerciale** ; profitabilité et rentabilité : performance **financière**. Social (bilan social) : taux d'absentéisme, accidents du travail, heures de formation, égalité femmes-hommes. Environnemental : émissions de CO2, déchets, consommation d'eau (importante en fromagerie) ou d'énergie."
+    },
+    {
+      "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+      "difficulte": 3,
+      "titre": "Deux années chez Fournil Vert",
+      "consigne": "Calcule les indicateurs manquants du tableau de bord, puis rédige une analyse argumentée de la performance globale.",
+      "enonce": "**Document 1 (entreprise fictive).** Tableau de bord de la boulangerie industrielle Fournil Vert.\n\n| Indicateur | Année N−1 | Année N |\n| Chiffre d'affaires | 1 800 000 € | 2 100 000 € |\n| Résultat | 144 000 € | 105 000 € |\n| Capitaux propres | 600 000 € | 700 000 € |\n| Ventes du marché régional | 15 000 000 € | 15 000 000 € |\n| Taux d'absentéisme | 4 % | 7 % |\n| Émissions de CO2 | 520 t | 390 t |\n\nMoyenne du secteur pour l'absentéisme : 5 %.\n\n**Document 2.** En année N, la direction a baissé ses prix de 5 % pour gagner des clients et investi dans des fours électriques moins polluants. Pour tenir les nouvelles commandes, les équipes ont souvent fait des heures supplémentaires de nuit.\n\n1. Calcule, pour chaque année, la part de marché, le taux de profitabilité et le taux de rentabilité financière.\n2. Calcule l'évolution des émissions de CO2 en pourcentage.\n3. Compare chaque dimension de la performance entre N−1 et N, dans le temps et dans l'espace quand c'est possible.\n4. Relie les résultats aux décisions du document 2 : montre que certaines performances sont contradictoires.\n5. Rédige une conclusion : Fournil Vert est-il plus performant en N ? Propose une piste d'amélioration.",
+      "bareme": [
+        { "critere": "Parts de marché 12 % et 14 %, profitabilité 8 % et 5 %, rentabilité 24 % et 15 %", "points": 6 },
+        { "critere": "Baisse des émissions de CO2 de 25 %", "points": 2 },
+        { "critere": "Comparaison par dimension, dans le temps et avec la moyenne du secteur", "points": 4 },
+        { "critere": "Contradictions : prix / profitabilité, investissement / finance, cadences / social", "points": 4 },
+        { "critere": "Conclusion nuancée sur l'équilibre de la performance globale et piste d'amélioration", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **N−1** : part de marché = 1 800 000 ÷ 15 000 000 × 100 = **12 %** ; profitabilité = 144 000 ÷ 1 800 000 × 100 = **8 %** ; rentabilité = 144 000 ÷ 600 000 × 100 = **24 %**.\n**N** : part de marché = 2 100 000 ÷ 15 000 000 × 100 = **14 %** ; profitabilité = 105 000 ÷ 2 100 000 × 100 = **5 %** ; rentabilité = 105 000 ÷ 700 000 × 100 = **15 %**.\n2. (390 − 520) ÷ 520 × 100 = − 130 ÷ 520 × 100 = **− 25 %**.\n3. **Commerciale** : en progrès (part de marché de 12 à 14 %). **Financière** : en recul (profitabilité de 8 à 5 %, rentabilité de 24 à 15 %). **Sociale** : dégradée (absentéisme de 4 à 7 %), et désormais **au-dessus de la moyenne du secteur** (5 %), alors qu'il était en dessous. **Environnementale** : nette amélioration (− 25 % de CO2).\n4. La **baisse des prix** a fait gagner des parts de marché mais a réduit la **profitabilité**. L'**investissement** dans des fours moins polluants améliore la performance **environnementale** mais pèse à court terme sur la performance **financière**. Les **heures de nuit** pour tenir les commandes expliquent sans doute la hausse de l'**absentéisme**. Les performances sont **contradictoires** : progresser sur une dimension a coûté sur une autre.\n5. Exemple : Fournil Vert n'est pas simplement « plus » ou « moins » performant : il a déplacé son **équilibre**, gagnant en performance commerciale et environnementale, perdant en performance financière et sociale. La rentabilité reste correcte (15 %), mais l'absentéisme au-dessus du secteur est un signal d'alerte. Piste : **recruter** ou réorganiser les horaires pour supprimer le travail de nuit répété, afin de retrouver une performance sociale conforme au secteur ; la performance globale est l'équilibre que l'organisation choisit et doit pouvoir justifier."
+    },
+    {
+      "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+      "difficulte": 1,
+      "titre": "Horizons et charges du salon de coiffure",
+      "consigne": "Classe chaque élément et justifie en une phrase avec les définitions du cours.",
+      "enonce": "**Situation (entreprise fictive).** Mme Benoît dirige un salon de coiffure.\n\n1. Classe ses décisions selon leur horizon (court, moyen ou long terme) :\n   a. établir le planning des coiffeuses de la semaine prochaine ;\n   b. acheter de nouveaux fauteuils dans deux ans ;\n   c. devenir, d'ici dix ans, le salon de référence de la ville pour les coupes enfants.\n2. Classe ses charges en charges fixes ou variables : loyer du salon ; shampoings et colorations utilisés ; assurance ; commission versée aux coiffeuses sur chaque prestation.\n3. Pourquoi, selon le cours, l'information est-elle plus incertaine pour la décision c que pour la décision a ?\n4. Qu'est-ce que la veille informationnelle ? Donne un exemple utile pour Mme Benoît.",
+      "bareme": [
+        { "critere": "a court terme, b moyen terme, c long terme", "points": 6 },
+        { "critere": "Fixes : loyer, assurance ; variables : produits, commissions", "points": 6 },
+        { "critere": "Plus l'horizon est lointain, plus l'information est incertaine", "points": 3 },
+        { "critere": "Veille définie et exemple pertinent", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Court terme** (moins d'un an : planning). b. **Moyen terme** (un à cinq ans : investissement). c. **Long terme** (au-delà : stratégie).\n2. **Charges fixes** (ne dépendent pas de l'activité à court terme) : **loyer**, **assurance**. **Charges variables** (suivent l'activité) : **shampoings et colorations**, **commissions** sur les prestations.\n3. **Plus l'horizon est lointain, plus l'information est incertaine** : on connaît bien les rendez-vous de la semaine prochaine, beaucoup moins la concurrence, les goûts ou la population de la ville dans dix ans.\n4. La **veille informationnelle** consiste à **surveiller en continu** les sources utiles pour disposer d'une information **à jour**. Exemples : suivre les prix des fournisseurs de produits capillaires, les ouvertures de salons concurrents, les nouvelles tendances sur les réseaux, les évolutions de la réglementation."
+    },
+    {
+      "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+      "difficulte": 2,
+      "titre": "Le seuil de rentabilité de l'atelier de t-shirts",
+      "consigne": "Écris chaque formule avant de calculer, puis interprète les résultats.",
+      "enonce": "**Situation (entreprise fictive).** Inès et Malik lancent un atelier de t-shirts imprimés. Chaque t-shirt se vend 25 € ; il coûte 15 € en charges variables (t-shirt vierge, encre, emballage). Les charges fixes annuelles (loyer de l'atelier, machine, assurance) s'élèvent à 40 000 €.\n\n1. Calcule la marge sur coût variable unitaire et le taux de marge sur coût variable.\n2. Calcule le seuil de rentabilité en euros, puis en nombre de t-shirts.\n3. L'atelier est ouvert 250 jours par an. Combien de t-shirts faut-il vendre par jour, au minimum, pour ne pas perdre d'argent ?\n4. Ils prévoient de vendre 5 000 t-shirts. Calcule le résultat prévisionnel.\n5. Que représente le seuil de rentabilité ? Pourquoi cette prévision reste-t-elle incertaine ?",
+      "bareme": [
+        { "critere": "MCV unitaire = 10 € ; taux de MCV = 40 %", "points": 4 },
+        { "critere": "Seuil = 40 000 ÷ 0,40 = 100 000 €, soit 4 000 t-shirts", "points": 5 },
+        { "critere": "16 t-shirts par jour", "points": 3 },
+        { "critere": "Résultat = 5 000 × 10 − 40 000 = 10 000 €", "points": 4 },
+        { "critere": "Seuil = chiffre d'affaires pour un résultat nul ; incertitude de la prévision", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. MCV unitaire = prix − charges variables unitaires = 25 − 15 = **10 €**. Taux de MCV = MCV ÷ chiffre d'affaires = 10 ÷ 25 = **40 %**.\n2. Seuil de rentabilité = charges fixes ÷ taux de MCV = 40 000 ÷ 0,40 = **100 000 €**, soit 100 000 ÷ 25 = **4 000 t-shirts**.\n3. 4 000 ÷ 250 = **16 t-shirts par jour** au minimum.\n4. Résultat = MCV totale − charges fixes = 5 000 × 10 − 40 000 = 50 000 − 40 000 = **10 000 €** de bénéfice.\n5. Le **seuil de rentabilité** est le **chiffre d'affaires à partir duquel l'entreprise ne perd plus d'argent** (résultat nul). La prévision reste incertaine : les ventes de 5 000 t-shirts ne sont qu'une estimation, et les prix des fournisseurs peuvent changer ; il faudra suivre l'activité et mettre à jour les calculs."
+    },
+    {
+      "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+      "difficulte": 3,
+      "titre": "Trésorerie, placement et valeur du temps",
+      "consigne": "Complète le budget, fais les calculs financiers et rédige des conclusions argumentées.",
+      "enonce": "**Situation (entreprise fictive).** La jardinerie Les Glycines prépare son budget de trésorerie du deuxième trimestre.\n\n| | Avril | Mai | Juin |\n| Trésorerie de début | 4 000 | ? | ? |\n| + Encaissements | 15 000 | 12 000 | 25 000 |\n| − Décaissements | 16 000 | 18 000 | 17 000 |\n| Trésorerie de fin | ? | ? | ? |\n\nLe gérant, M. Roux, envisage aussi :\n- de placer 5 000 € pendant 3 ans au taux annuel de 2 % ;\n- d'accepter qu'un client lui verse 10 000 € dans 2 ans plutôt qu'aujourd'hui (taux retenu : 4 % par an).\n\n1. Complète le budget de trésorerie en détaillant les calculs.\n2. Quel problème le budget révèle-t-il ? Quand et comment M. Roux doit-il l'anticiper ?\n3. Calcule la valeur acquise des 5 000 € placés pendant 3 ans à 2 %.\n4. Calcule la valeur aujourd'hui (valeur actualisée) des 10 000 € reçus dans 2 ans au taux de 4 %. Explique pourquoi elle est inférieure à 10 000 €.\n5. Pourquoi la période du budget (le trimestre, l'année) est-elle une contrainte institutionnelle ou sectorielle pour une jardinerie ? Donne un exemple de chaque.",
+      "bareme": [
+        { "critere": "Budget complété : fin avril 3 000, fin mai − 3 000, fin juin 5 000", "points": 5 },
+        { "critere": "Trésorerie négative en mai, à anticiper dès avril (découvert négocié, décalage de dépenses)", "points": 4 },
+        { "critere": "Valeur acquise = 5 000 × 1,02³ ≈ 5 306,04 €", "points": 4 },
+        { "critere": "Valeur actualisée = 10 000 ÷ 1,04² ≈ 9 245,56 €, explication de la valeur du temps", "points": 4 },
+        { "critere": "Contraintes : exercice comptable d'un an (institutionnelle), saisons (sectorielle)", "points": 3 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Avril** : 4 000 + 15 000 − 16 000 = **3 000 €**. **Mai** : début 3 000 ; 3 000 + 12 000 − 18 000 = **− 3 000 €**. **Juin** : début − 3 000 ; − 3 000 + 25 000 − 17 000 = **5 000 €**.\n2. La trésorerie devient **négative en mai** (− 3 000 €). M. Roux doit l'**anticiper dès avril** : **négocier un découvert** avec sa banque, décaler certains achats ou accélérer des encaissements. En juin, l'excédent (5 000 €) pourra être placé.\n3. Valeur acquise = capital × (1 + taux)ⁿ = 5 000 × 1,02³ = 5 000 × 1,061208 ≈ **5 306,04 €**.\n4. Actualiser, c'est calculer la valeur aujourd'hui d'une somme future : 10 000 ÷ 1,04² = 10 000 ÷ 1,0816 ≈ **9 245,56 €**. Elle est inférieure à 10 000 € parce qu'**un euro aujourd'hui vaut plus qu'un euro dans deux ans** : aujourd'hui, on pourrait le placer et toucher des intérêts (9 245,56 € placés à 4 % pendant 2 ans redonnent 10 000 €).\n5. **Institutionnelle** : l'**exercice comptable d'un an** impose de découper l'activité en années (ou la durée légale du travail). **Sectorielle** : les **saisons** — une jardinerie vend beaucoup au printemps et peu en hiver, ce qui explique les fortes variations d'encaissements d'un mois à l'autre."
+    },
+    {
+      "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+      "difficulte": 1,
+      "titre": "Internes ou externes, et quelle parade ?",
+      "consigne": "Classe chaque risque et chaque décision en justifiant brièvement.",
+      "enonce": "**Situation (entreprise fictive).** La PME Bois & Déco fabrique des meubles.\n\n1. Classe ces facteurs de risque en internes ou externes :\n   a. la hausse brutale du prix de l'électricité ;\n   b. la décision de s'endetter fortement pour acheter une usine ;\n   c. l'arrivée d'une imprimante 3D capable de fabriquer des meubles à bas coût ;\n   d. 60 % du chiffre d'affaires réalisé avec un seul client.\n2. Associe chaque décision à une stratégie de traitement du risque (éviter, réduire, transférer, accepter) :\n   e. souscrire une assurance incendie ;\n   f. travailler avec deux fournisseurs de bois au lieu d'un ;\n   g. renoncer à exporter dans un pays en guerre.\n3. Comment évalue-t-on le niveau d'un risque ?",
+      "bareme": [
+        { "critere": "a et c externes, b et d internes", "points": 8 },
+        { "critere": "e transférer, f réduire, g éviter", "points": 7 },
+        { "critere": "Niveau de risque = probabilité × gravité", "points": 5 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. a. **Externe** : dépendance énergétique. b. **Interne** : il naît d'une décision de l'organisation (endettement excessif). c. **Externe** : rupture technologique. d. **Interne** : dépendance à un seul gros client, résultat des choix commerciaux de l'entreprise.\n2. e. **Transférer** (l'assureur supporte la perte). f. **Réduire** (diversifier ses fournisseurs). g. **Éviter** (renoncer à un marché trop instable).\n3. On évalue le niveau d'un risque par deux critères : **niveau de risque = probabilité × gravité**."
+    },
+    {
+      "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+      "difficulte": 2,
+      "titre": "La cartographie des risques du traiteur",
+      "consigne": "Calcule le niveau de chaque risque, classe-les, puis propose et justifie un traitement.",
+      "enonce": "**Situation (entreprise fictive).** Le traiteur Saveurs d'Ici (20 salariés) évalue ses risques. Probabilité et gravité sont notées de 1 (faible) à 4 (très forte).\n\n| Risque | Probabilité | Gravité |\n| A. Panne de la chambre froide | 2 | 4 |\n| B. Cyberattaque bloquant les commandes en ligne | 1 | 3 |\n| C. Retard ponctuel d'un livreur de légumes | 4 | 1 |\n| D. Perte du client principal (une cantine qui représente 45 % du CA) | 2 | 4 |\n\n1. Calcule le niveau de chaque risque.\n2. Classe les risques du plus élevé au plus faible. Lesquels sont prioritaires ?\n3. Distingue les risques internes et externes.\n4. Propose une stratégie de traitement adaptée pour chacun des quatre risques, en nommant la stratégie.\n5. Pourquoi le risque C, très probable, n'est-il pas prioritaire ?",
+      "bareme": [
+        { "critere": "Niveaux : A = 8, B = 3, C = 4, D = 8", "points": 4 },
+        { "critere": "Classement : A et D prioritaires, puis C, puis B", "points": 3 },
+        { "critere": "Classement interne / externe cohérent et justifié", "points": 4 },
+        { "critere": "Quatre traitements adaptés et nommés (réduire, transférer, accepter…)", "points": 6 },
+        { "critere": "C : gravité faible, niveau modéré, se surveille (accepter)", "points": 3 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. A : 2 × 4 = **8** ; B : 1 × 3 = **3** ; C : 4 × 1 = **4** ; D : 2 × 4 = **8**.\n2. **A et D (8)**, puis **C (4)**, puis **B (3)**. A et D sont **prioritaires**.\n3. **Externes** : B (une cyberattaque vient de l'extérieur, même si une faille de sécurité interne peut la faciliter), C (approvisionnement). **Internes** : D résulte d'un choix commercial (dépendre d'un seul gros client) ; A relève du fonctionnement de l'outil de production de l'entreprise (entretien du matériel). On accepte une autre classification bien justifiée.\n4. A : **réduire** (contrat d'entretien, alarme de température, second appareil de secours) et **transférer** (assurance perte de marchandises). B : **réduire** (sauvegardes régulières, mots de passe robustes) et éventuellement **transférer** (assurance). C : **accepter** en surveillant, ou réduire avec un second livreur. D : **réduire** en **diversifiant** la clientèle (entreprises, particuliers, événements).\n5. Le risque C est très probable mais **peu grave** : un retard ponctuel se rattrape. Son niveau (4) reste modéré : un risque probable mais bénin **se traite différemment** d'un risque rare mais grave."
+    },
+    {
+      "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+      "difficulte": 3,
+      "titre": "Des vélos électriques et une seule usine de batteries",
+      "consigne": "Analyse le cas avec la démarche de gestion des risques, puis rédige un paragraphe argumenté.",
+      "enonce": "**Document 1 (entreprise fictive).** La start-up Volto vend des vélos électriques. Pour réduire ses coûts, elle fait fabriquer toutes ses batteries par un fournisseur unique, à l'autre bout du monde, et ne garde que deux semaines de stock. Son logiciel de commandes n'a jamais été sauvegardé hors de ses locaux. Sa croissance a été de 80 % en un an.\n\n**Document 2.** Une nouvelle réglementation européenne impose aux fabricants de reprendre et recycler les batteries usagées. Plusieurs clients se plaignent sur les réseaux sociaux de batteries jetées dans la nature par un réparateur partenaire.\n\n**Document 3.** Le fondateur déclare : « Si on commence à s'assurer contre tout, on n'innovera plus. Le risque, c'est notre métier. »\n\n1. Identifie quatre facteurs de risque, en précisant s'ils sont internes ou externes.\n2. Applique la démarche de gestion des risques en quatre étapes au risque d'approvisionnement en batteries.\n3. Explique comment la recherche de performance (coûts bas, croissance) a pu générer des risques pour Volto, pour la société et pour l'environnement.\n4. Comment les conséquences écologiques décrites dans le document 2 peuvent-elles revenir vers l'entreprise ?\n5. Rédige un paragraphe argumenté discutant la déclaration du fondateur.",
+      "bareme": [
+        { "critere": "Quatre facteurs de risque justes et classés internes / externes", "points": 4 },
+        { "critere": "Démarche : identifier, évaluer, traiter, suivre, appliquée aux batteries", "points": 5 },
+        { "critere": "Lien performance / risques : coûts bas, croissance rapide, pollution", "points": 3 },
+        { "critere": "Retour vers l'entreprise : sanctions, coûts, boycott, image, attractivité", "points": 3 },
+        { "critere": "Paragraphe nuancé : ne prendre aucun risque est un risque, mais la performance durable vient de leur maîtrise", "points": 5 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. **Externes** : **dépendance technologique et d'approvisionnement** (fournisseur unique lointain) ; **empreinte environnementale** et réglementation plus stricte (document 2). **Internes** : **faille de sécurité informatique** (logiciel jamais sauvegardé hors site) ; **croissance trop rapide** ; stock de sécurité trop faible (décision de l'entreprise).\n2. **Identifier** : risque de rupture d'approvisionnement en batteries. **Évaluer** : probabilité moyenne (transport lointain, fournisseur unique), gravité très forte (sans batterie, pas de vente). **Traiter** : **réduire** (second fournisseur, stock de sécurité plus important), **transférer** (assurance perte d'exploitation). **Suivre** : indicateurs d'alerte (délais de livraison, niveau de stock), mise à jour régulière de la cartographie.\n3. Chercher les **coûts les plus bas** a conduit à dépendre d'un seul fournisseur lointain et à réduire les stocks ; la **croissance rapide** fragilise l'organisation. Pour la société et l'environnement : transport lointain, batteries usagées mal traitées, **pollution** et **déchets**.\n4. Ces effets **reviennent vers l'organisation** : **sanctions** si la réglementation n'est pas respectée, **coûts** de reprise et de recyclage, **boycott** et mauvaise **image** sur les réseaux sociaux, perte d'**attractivité** pour les salariés.\n5. Exemple : Le fondateur a raison sur un point : **ne prendre aucun risque est aussi un risque**, car une organisation qui n'innove pas se fait dépasser. Mais Volto confond prendre des risques et les ignorer : dépendre d'un seul fournisseur, ne pas sauvegarder ses données, négliger le recyclage ne sont pas des paris d'innovation, ce sont des risques non maîtrisés, dont la gravité pourrait arrêter l'entreprise. S'assurer ou diversifier ne freine pas l'innovation : cela protège l'entreprise pour qu'elle puisse continuer à innover. **La performance durable ne vient pas de l'absence de risque, mais de la maîtrise des risques qu'on choisit de prendre.**"
+    },
+    {
+      "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+      "difficulte": 1,
+      "titre": "Trois problématiques à trier",
+      "consigne": "Justifie chaque réponse avec les critères du cours.",
+      "enonce": "**Situation.** Trois élèves de 1re STMG proposent une problématique pour leur étude de gestion :\n\n- Zoé : « Les associations sportives. »\n- Rayan : « Le cinéma Le Rex a-t-il une application mobile ? »\n- Maëlys : « En quoi l'application mobile du cinéma Le Rex a-t-elle modifié la relation avec ses spectateurs ? »\n\n1. Classe chaque proposition : trop vague, trop fermée ou bonne problématique. Justifie.\n2. Cite les caractéristiques d'une bonne problématique.\n3. Classe ces sources en internes ou externes : le site du cinéma ; un article du journal local ; un entretien avec la directrice du cinéma ; des avis de spectateurs sur un site extérieur.",
+      "bareme": [
+        { "critere": "Zoé trop vague, Rayan trop fermée, Maëlys bonne, avec justification", "points": 9 },
+        { "critere": "Question ouverte, précise, reliée au programme, à laquelle on peut répondre", "points": 5 },
+        { "critere": "Internes : site, entretien ; externes : journal, avis", "points": 6 }
+      ],
+      "dureeMin": 7,
+      "corrige": "1. Zoé : **trop vague** (ce n'est même pas une question, et aucune organisation n'est ciblée). Rayan : **trop fermée** (on y répond par oui ou non, sans analyse). Maëlys : **bonne problématique** (question ouverte et précise, sur une organisation réelle, reliée au programme sur le numérique).\n2. Une bonne problématique est une **question**, **ouverte**, **précise**, **reliée au programme**, à laquelle on peut **répondre avec les informations disponibles**.\n3. **Internes** : le site du cinéma, l'entretien avec la directrice. **Externes** : l'article du journal local, les avis de spectateurs sur un site extérieur."
+    },
+    {
+      "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+      "difficulte": 2,
+      "titre": "Préparer l'étude sur la ressourcerie",
+      "consigne": "Construis les éléments demandés en appliquant la méthode du cours et justifie tes choix.",
+      "enonce": "**Situation.** Tom, élève de 1re STMG, veut faire son étude de gestion sur **La Recyclerie du Canal**, une association qui collecte des objets, les répare et les revend à petit prix. Il connaît un bénévole et l'association publie chaque année un rapport d'activité. Il hésite entre plusieurs questions de gestion du programme et choisit : « Comment mesurer la création de valeur ? »\n\n1. Formule une problématique précise pour Tom, reliée à cette question de gestion.\n2. Propose quatre sources d'information, en précisant si elles sont internes ou externes, et comment vérifier leur fiabilité.\n3. Rédige quatre questions ouvertes pour l'entretien avec un responsable de l'association, et deux règles à respecter pendant l'entretien.\n4. À quoi servira le carnet de bord de Tom ? Donne trois exemples de ce qu'il y notera.",
+      "bareme": [
+        { "critere": "Problématique ouverte, précise, sur l'association, reliée à la création de valeur", "points": 5 },
+        { "critere": "Quatre sources pertinentes, classées, avec une méthode de vérification (croiser, qui parle, quand, pourquoi)", "points": 5 },
+        { "critere": "Quatre questions ouvertes et deux règles (autorisation d'enregistrer, confidentialité, remerciements)", "points": 6 },
+        { "critere": "Rôle du carnet de bord et trois exemples concrets", "points": 4 }
+      ],
+      "dureeMin": 12,
+      "corrige": "1. Exemple : « **Comment La Recyclerie du Canal mesure-t-elle la valeur qu'elle crée pour ses adhérents, ses clients et son quartier ?** » (question ouverte, précise, sur une organisation réelle, reliée à la création de valeur).\n2. **Internes** : le **rapport d'activité** annuel, le **site** de l'association, un **entretien** avec un responsable. **Externes** : un article de la **presse locale**, des **avis de clients**, des **données publiques** (mairie, données ouvertes). Vérifier : **qui parle ? quand ? dans quel but ?** et **croiser au moins deux sources** (par exemple les chiffres du rapport et ceux cités dans la presse).\n3. Questions ouvertes : « Comment décririez-vous ce que la Recyclerie apporte au quartier ? » ; « Quels chiffres suivez-vous chaque année, et pourquoi ? » ; « Comment savez-vous si les clients sont satisfaits ? » ; « Quelles difficultés rencontrez-vous pour mesurer votre action ? ». Règles : **demander l'autorisation d'enregistrer** (ou prendre des notes), **respecter la confidentialité** de ce qui est confié, **remercier par écrit**.\n4. Le **carnet de bord** retrace la **démarche** : il prouve que l'étude est **la sienne** et sert d'**aide-mémoire à l'oral**. Tom y notera par exemple : la date et le contenu de l'entretien, les sources consultées, une difficulté rencontrée (un chiffre introuvable) et le choix qu'il a fait pour la contourner."
+    },
+    {
+      "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+      "difficulte": 3,
+      "titre": "Sauver l'étude de Jade",
+      "consigne": "Analyse le travail décrit, repère ses faiblesses avec le cours, puis propose une version améliorée argumentée.",
+      "enonce": "**Document : l'étude de gestion de Jade, trois semaines avant la soutenance**\n\n- Titre : « La boulangerie Pain d'Or ».\n- Contenu : trois pages sur l'histoire de la boulangerie (création en 1987, rachat en 2015, liste des produits), recopiées en partie du site de la boulangerie.\n- Une seule source : le site de la boulangerie.\n- Pas de carnet de bord.\n- Un paragraphe de conclusion rédigé par un outil d'IA, sans l'avoir signalé.\n- Un diaporama de 25 diapositives très chargées en texte, que Jade compte lire.\n- Information obtenue par une amie : la boulangerie a installé l'an dernier une borne de commande en ligne et un logiciel de gestion des stocks ; les invendus auraient baissé.\n\n1. Relève quatre erreurs de l'étude de Jade, en les nommant avec le vocabulaire du cours.\n2. À partir de l'information obtenue par son amie, propose une problématique reliée à une question de gestion du programme, et justifie ce lien.\n3. Propose un plan en deux ou trois parties pour répondre à cette problématique, en indiquant les notions du programme mobilisées.\n4. Indique les sources et démarches que Jade doit engager dans les trois semaines qui restent.\n5. Décris comment elle doit organiser sa soutenance (durée, déroulé, attitude), et ce que le jury attend vraiment.",
+      "bareme": [
+        { "critere": "Quatre erreurs nommées : étude descriptive, source unique, recopiage et IA non signalés, absence de carnet de bord, diaporama lu", "points": 4 },
+        { "critere": "Problématique ouverte et précise, liée à une question de gestion du programme", "points": 4 },
+        { "critere": "Plan cohérent mobilisant des notions du programme (processus, SI, agilité, performance, valeur)", "points": 5 },
+        { "critere": "Sources et démarches : entretien, sources externes, croisement, carnet de bord", "points": 3 },
+        { "critere": "Soutenance : exposé de dix minutes au plus puis entretien, parler au jury, raisonner avec les notions", "points": 4 }
+      ],
+      "dureeMin": 18,
+      "corrige": "1. Erreurs : une étude **purement descriptive** (histoire, produits) **sans analyse** ; **aucune notion du programme** mobilisée ; une **seule source**, non croisée ; un texte **recopié** et un paragraphe **rédigé par une IA sans le dire** ; **pas de carnet de bord** ; un **diaporama surchargé** qu'elle compte **lire**.\n2. Exemple : « **En quoi la borne de commande et le logiciel de stocks ont-ils rendu la boulangerie Pain d'Or plus agile et plus performante ?** » Lien : la question de gestion « Le numérique : agilité ou rigidité ? » (et la performance : baisse des invendus). La question est ouverte, précise, sur une organisation réelle.\n3. Exemple de plan :\n- I. Des **processus** transformés par le numérique : la commande (déclencheur, étapes, décisions) et la gestion des stocks, avant et après ; l'**automatisation** et le rôle des salariés.\n- II. Une boulangerie plus **agile** et plus **performante** ? La baisse des invendus (performance des processus, efficience), le service au client (performance commerciale).\n- III. Des **limites** : coût de l'outil, formation, dépendance au prestataire, clients qui préfèrent le comptoir (risque de **rigidité**).\n4. Obtenir un **entretien** avec le boulanger ou un vendeur (questions ouvertes préparées, autorisation, confidentialité) ; demander des **chiffres** (invendus avant / après) ; chercher des **sources externes** (presse locale, avis clients) et **croiser** au moins deux sources ; **citer** ses sources ; réécrire la conclusion elle-même ; tenir un **carnet de bord** dès maintenant (dates, contacts, difficultés, choix).\n5. La soutenance dure souvent une vingtaine de minutes : un **exposé de dix minutes au plus** (introduction : l'organisation en quelques chiffres, la question de gestion, la problématique ; deux ou trois parties ; conclusion : réponse, une limite, une ouverture), puis un **entretien** où elle justifie ses choix et définit les notions. Elle doit **parler au jury** et non lire, avec un diaporama allégé. Le jury n'attend pas qu'elle sache tout sur la boulangerie : il attend qu'elle **raisonne avec les notions du programme** sur un cas réel et qu'elle **explique sa démarche**."
+    }
+  ]
+}
